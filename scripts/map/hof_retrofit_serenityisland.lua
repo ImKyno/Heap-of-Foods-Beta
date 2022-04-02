@@ -137,8 +137,8 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 		return false
 	end
 	
-	local success = TryToAddLayout("hof_serenityisland", 60)
-		or TryToAddLayout("hof_serenityisland_retrofit", 60)
+	local success = TryToAddLayout("hof_serenityisland1", 52)
+		or TryToAddLayout("hof_serenityisland2", 52)
 	
 	if success then
 		print("Retrofitting for Heap of Foods Mod - Added the Serenity Archipelago to the world.")

@@ -36,6 +36,27 @@ LOCKS_KEYS[LOCKS.SERENITY_ISLAND]	= {KEYS.SERENITY_ISLAND}
 -- Our Custom Layouts.
 Layouts["Oasis"] 					= StaticLayout.Get("map/static_layouts/hof_oasis")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Spawn the Serenitea Archipelago in the world.
+_G.SERENITYISLAND_GROUNDS = {
+	GROUND.IMPASSABLE, GROUND.ROCKY, GROUND.SAVANNA, GROUND.QUAGMIRE_CITYSTONE, GROUND.QUAGMIRE_PARKFIELD
+	-- 1               -- 2          -- 3            -- 4                       -- 5
+}
+
+local retrofit_islands = {"hof_serenityisland1", "hof_serenityisland2"}	
+for i, layout in ipairs(retrofit_islands) do
+	Layouts[layout] = StaticLayout.Get("map/static_layouts/"..layout,
+	{
+		start_mask 					= _G.PLACE_MASK.IGNORE_IMPASSABLE,
+		fill_mask 					= _G.PLACE_MASK.IGNORE_IMPASSABLE,
+		add_topology 				= {room_id = "StaticLayoutIsland:Serenity Archipelago", tags = {"RoadPoison", "serenityisland", "not_mainland", "nohunt", "nohasslers"}},
+		areas =
+		{
+		},
+		min_dist_from_land 			= 0,
+	})
+	-- Layouts[layout].ground_types 	= _G.SERENITYISLAND_GROUNDS
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Since we already have the turfs and they can be dug, we are going to use them for make a custom prefab.
 -- Basically you're getting the original turfs from ground with a custom prefab i.e: the turf item.
 local GROUND_TURFS = 
@@ -56,29 +77,9 @@ else
 	ChangeTileTypeRenderOrder(GROUND.QUAGMIRE_CITYSTONE, 	GROUND.PINKSTONE, 			true)
 end
 
-_G.SERENITYISLAND_GROUNDS = {
-	GROUND.IMPASSABLE, GROUND.ROCKY, GROUND.SAVANNA, GROUND.QUAGMIRE_CITYSTONE, GROUND.QUAGMIRE_PARKFIELD
-}
-
 -- This does nothing. Mostly used for the Tiled only.
 -- QUAGMIRE_PARKFIELD_ID = 32
 -- QUAGMIRE_CITYSTONE_ID = 40
 -- ROCKY_ID				 = 3
 -- SAVANNA_ID			 = 5	
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Spawn the Serenitea Archipelago in the world.
-local retrofit_islands = {"hof_serenityisland", "hof_serenityisland_retrofit"}	
-for i, layout in ipairs(retrofit_islands) do
-	Layouts[layout] = StaticLayout.Get("map/static_layouts/"..layout,
-	{
-		start_mask 					= _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		fill_mask 					= _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		add_topology 				= {room_id = "StaticLayoutIsland:Serenity Archipelago", tags = {"RoadPoison", "serenityisland", "not_mainland", "nohunt", "nohasslers"}},
-		areas =
-		{
-		},
-		min_dist_from_land 			= 0,
-	})
-	Layouts[layout].ground_types 	= _G.SERENITYISLAND_GROUNDS
-end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
