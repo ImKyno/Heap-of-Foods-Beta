@@ -15,54 +15,30 @@ local prefabs =
 }
 
 local function ontalk(inst, script)
-    inst.SoundEmitter:PlaySound("dontstarve/pig/grunt")
+    inst.SoundEmitter:PlaySound("dontstarve/quagmire/creature/swamppig_elder/talk")
+end
+
+local function Say(inst, str)
+	inst.components.talker:Chatter(str, math.random(#STRINGS[str]))
+end
+
+local function SayBuy(inst)
+	Say(inst, "PIGELDER_TALK_BUY")
 end
 
 local function SayThanks(inst)
-	if math.random() < 0.6 then
-		inst.components.talker:Say(STRINGS.PIGELDER_TALK_BUY1)
-	elseif math.random() < 0.6 then
-		inst.components.talker:Say(STRINGS.PIGELDER_TALK_BUY2)
-	elseif math.random() < 0.6 then
-		inst.components.talker:Say(STRINGS.PIGELDER_TALK_BUY3)
-	elseif math.random() < 0.6 then
-		inst.components.talker:Say(STRINGS.PIGELDER_TALK_BUY4)
-	elseif math.random() < 0.6 then
-		inst.components.talker:Say(STRINGS.PIGELDER_TALK_BUY5)
-	elseif math.random() < 0.6 then
-		inst.components.talker:Say(STRINGS.PIGELDER_TALK_BUY6)
-	end
+	Say(inst, "PIGELDER_TALK_THANK")
 end
 
 local function SayFar(inst)
-	if math.random() < 0.6 then
-        inst.components.talker:Say(STRINGS.PIGELDER_TALK_FAR1)
-    elseif math.random() < 0.6 then
-        inst.components.talker:Say(STRINGS.PIGELDER_TALK_FAR2)
-    elseif math.random() < 0.6 then
-        inst.components.talker:Say(STRINGS.PIGELDER_TALK_FAR3)
-    elseif math.random() < 0.6 then
-        inst.components.talker:Say(STRINGS.PIGELDER_TALK_FAR4)
-    elseif math.random() < 0.6 then
-        inst.components.talker:Say(STRINGS.PIGELDER_TALK_FAR5)
-	elseif math.random() < 0.6 then
-		inst.components.talker:Say(STRINGS.PIGELDER_TALK_FAR5)
-    end
+	Say(inst, "PIGELDER_TALK_FAR")
 end
 
-local function SayNear(inst)
-	if math.random() < 0.6 then
-        inst.components.talker:Say(STRINGS.PIGELDER_TALK_NEAR1)
-    elseif math.random() < 0.6 then
-        inst.components.talker:Say(STRINGS.PIGELDER_TALK_NEAR2)
-    elseif math.random() < 0.6 then
-        inst.components.talker:Say(STRINGS.PIGELDER_TALK_NEAR3)
-    elseif math.random() < 0.6 then
-        inst.components.talker:Say(STRINGS.PIGELDER_TALK_NEAR4)
-    elseif math.random() < 0.6 then
-        inst.components.talker:Say(STRINGS.PIGELDER_TALK_NEAR5)
-	elseif math.random() < 0.6 then
-        inst.components.talker:Say(STRINGS.PIGELDER_TALK_NEAR6)
+local function SayNear(inst)   
+	if not inst:HasTag("pigelder_gifted") then
+		Say(inst, "PIGELDER_TALK_NEAR1")
+	else
+		Say(inst, "PIGELDER_TALK_NEAR2")
     end
 end
 
@@ -71,6 +47,7 @@ local function OnTurnOff(inst)
 	if not inst.AnimState:IsCurrentAnimation("sleep_loop", true) then
 		inst.AnimState:PlayAnimation("sleep_pre")
 		inst.AnimState:PushAnimation("sleep_loop", true)
+		inst.SoundEmitter:PlaySound("dontstarve/quagmire/creature/swamppig_elder/sleep_in")
 	end
 	inst:DoTaskInTime(1, function() SayFar(inst) end)
 end
@@ -80,13 +57,14 @@ local function OnTurnOn(inst)
 	if not inst.AnimState:IsCurrentAnimation("idle", true) then
 		inst.AnimState:PlayAnimation("sleep_pst")
 		inst.AnimState:PushAnimation("idle", true)
+		inst.SoundEmitter:PlaySound("dontstarve/quagmire/creature/swamppig_elder/sleep_out")
 	end
 	inst:DoTaskInTime(.5, function() SayNear(inst) end)
 end
 
 local function OnActivate(inst)
 	inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/friendship_music/3") -- Money sound?
-	SayThanks(inst)
+	SayBuy(inst)
 end
 
 local function OnIsNight(inst, isnight)
@@ -102,11 +80,37 @@ local function OnIsNight(inst, isnight)
 end
 
 local function TestItem(inst, item, giver)
-	-- 
+	if item.components.inventoryitem and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" and not inst:HasTag("pigelder_gifted") then
+		return true -- Accept the Item.
+	else
+		giver.components.talker:Say(GetString(giver, "ANNOUNCE_PIGELDER_FAIL"))
+	end
 end
 
 local function OnGetItemFromPlayer(inst, giver, item)
-	--
+	if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" and not inst:HasTag("pigelder_gifted") then
+		inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/friendship_music/10")
+		inst:DoTaskInTime(1, function() SayThanks(inst) end)
+		-- New Recipes available in the shop!
+		inst.components.craftingstation:LearnItem("turf_pinkpark_blueprint", "turf_pinkpark_p")
+		inst.components.craftingstation:LearnItem("turf_stonecity_blueprint", "turf_stonecity_p")
+		inst.components.craftingstation:LearnItem("dug_kyno_spotbush", "dug_kyno_spotbush_p")
+		inst.components.craftingstation:LearnItem("dug_kyno_wildwheat", "dug_kyno_wildwheat_p")
+		inst.components.craftingstation:LearnItem("kyno_sugartree_bud", "kyno_sugartree_bud_p")
+		
+		inst:AddTag("pigelder_gifted")
+		inst.foodgift = true
+	end
+end
+
+local function OnSave(inst, data)
+	data.foodgift = inst.foodgift
+end
+
+local function OnLoad(inst, data)
+    if data ~= nil and data.foodgift ~= nil then
+        inst:AddTag("pigelder_gifted")
+    end
 end
 
 local function fn()
@@ -133,6 +137,7 @@ local function fn()
     inst:AddTag("prototyper")
 	inst:AddTag("birdblocker")
     inst:AddTag("antlion_sinkhole_blocker")
+	inst:AddTag("serenity_pigelder") -- Using this as a flag for generating the island.
 
     inst:AddComponent("talker")
     inst.components.talker.fontsize = 35
@@ -160,12 +165,15 @@ local function fn()
     inst.components.prototyper.onturnoff = OnTurnOff
 	inst.components.prototyper.trees = TUNING.PROTOTYPER_TREES.SERENITYSHOP_TWO
 	
-	-- inst:AddComponent("trader")
-	-- inst.components.trader:SetAcceptTest(TestItem)
-    -- inst.components.trader.onaccept = OnGetItemFromPlayer
+	inst:AddComponent("trader")
+	inst.components.trader:SetAcceptTest(TestItem)
+    inst.components.trader.onaccept = OnGetItemFromPlayer
 	
 	inst:WatchWorldState("isnight", OnIsNight)
     OnIsNight(inst, TheWorld.state.isnight)
+	
+	inst.OnSave	= OnSave
+	inst.OnLoad = OnLoad
 
     return inst
 end

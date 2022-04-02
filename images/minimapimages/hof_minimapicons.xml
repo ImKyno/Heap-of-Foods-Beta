@@ -8,18 +8,19 @@
 		<Element name="kyno_coffeebush.tex" u1="0.126" u2="0.249" v2="0.749" v1="0.501" variant="" />
 		<Element name="kyno_crab_spawner.tex" u1="0.251" u2="0.374" v2="0.999" v1="0.751" variant="" />
 		<Element name="kyno_crabtrap_installer.tex" u1="0.376" u2="0.499" v2="0.999" v1="0.751" variant="" />
-		<Element name="kyno_kokonuttree.tex" u1="0.251" u2="0.374" v2="0.749" v1="0.501" variant="" />
-		<Element name="kyno_kokonuttree_burnt.tex" u1="0.376" u2="0.499" v2="0.749" v1="0.501" variant="" />
-		<Element name="kyno_kokonuttree_stump.tex" u1="0.001" u2="0.124" v2="0.499" v1="0.251" variant="" />
-		<Element name="kyno_limpetrock.tex" u1="0.126" u2="0.249" v2="0.499" v1="0.251" variant="" />
-		<Element name="kyno_lotus.tex" u1="0.251" u2="0.374" v2="0.499" v1="0.251" variant="" />
-		<Element name="kyno_musselstick.tex" u1="0.376" u2="0.499" v2="0.499" v1="0.251" variant="" />
-		<Element name="kyno_pond_rack.tex" u1="0.001" u2="0.124" v2="0.249" v1="0.001" variant="" />
-		<Element name="kyno_pond_salt.tex" u1="0.126" u2="0.249" v2="0.249" v1="0.001" variant="" />
-		<Element name="kyno_seaweeds.tex" u1="0.251" u2="0.374" v2="0.249" v1="0.001" variant="" />
-		<Element name="kyno_serenityisland_shop.tex" u1="0.376" u2="0.499" v2="0.249" v1="0.001" variant="" />
-		<Element name="kyno_taroroot.tex" u1="0.501" u2="0.624" v2="0.999" v1="0.751" variant="" />
-		<Element name="kyno_waterycress.tex" u1="0.626" u2="0.749" v2="0.999" v1="0.751" variant="" />
-		<Element name="kyno_wildwheat.tex" u1="0.751" u2="0.874" v2="0.999" v1="0.751" variant="" />
+		<Element name="kyno_fishfarmplot.tex" u1="0.251" u2="0.374" v2="0.749" v1="0.501" variant="" />
+		<Element name="kyno_kokonuttree.tex" u1="0.376" u2="0.499" v2="0.749" v1="0.501" variant="" />
+		<Element name="kyno_kokonuttree_burnt.tex" u1="0.001" u2="0.124" v2="0.499" v1="0.251" variant="" />
+		<Element name="kyno_kokonuttree_stump.tex" u1="0.126" u2="0.249" v2="0.499" v1="0.251" variant="" />
+		<Element name="kyno_limpetrock.tex" u1="0.251" u2="0.374" v2="0.499" v1="0.251" variant="" />
+		<Element name="kyno_lotus.tex" u1="0.376" u2="0.499" v2="0.499" v1="0.251" variant="" />
+		<Element name="kyno_musselstick.tex" u1="0.001" u2="0.124" v2="0.249" v1="0.001" variant="" />
+		<Element name="kyno_pond_rack.tex" u1="0.126" u2="0.249" v2="0.249" v1="0.001" variant="" />
+		<Element name="kyno_pond_salt.tex" u1="0.251" u2="0.374" v2="0.249" v1="0.001" variant="" />
+		<Element name="kyno_seaweeds.tex" u1="0.376" u2="0.499" v2="0.249" v1="0.001" variant="" />
+		<Element name="kyno_serenityisland_shop.tex" u1="0.501" u2="0.624" v2="0.999" v1="0.751" variant="" />
+		<Element name="kyno_taroroot.tex" u1="0.626" u2="0.749" v2="0.999" v1="0.751" variant="" />
+		<Element name="kyno_waterycress.tex" u1="0.751" u2="0.874" v2="0.999" v1="0.751" variant="" />
+		<Element name="kyno_wildwheat.tex" u1="0.876" u2="0.999" v2="0.999" v1="0.751" variant="" />
 	</Elements>
 </Atlas>

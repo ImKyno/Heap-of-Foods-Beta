@@ -1,6 +1,6 @@
 local assets =
 {
-	Asset("ANIM", "anim/roe.zip"),
+	Asset("ANIM", "anim/kyno_chicken_eggs.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -9,8 +9,9 @@ local assets =
 
 local prefabs = 
 {
-	"kyno_roe_cooked",
-	"spoiled_food",
+	"kyno_chicken_egg_cooked",
+	"rottenegg",
+	"kyno_chicken2",
 }
 
 local function fn()
@@ -23,14 +24,15 @@ local function fn()
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-	inst.AnimState:SetBank("roe")
-	inst.AnimState:SetBuild("roe")
+	inst.AnimState:SetBank("kyno_chicken_eggs")
+	inst.AnimState:SetBuild("kyno_chicken_eggs")
 	inst.AnimState:PlayAnimation("idle")
 	
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
 	inst:AddTag("saltbox_valid")
-	inst:AddTag("roe_fishfarmbait")
+	inst:AddTag("catfood")
+	inst:AddTag("chicken_egg")
 
 	inst.entity:SetPristine()
 
@@ -40,14 +42,13 @@ local function fn()
 	
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
-	inst:AddComponent("selfstacker")
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 1
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 4.6875
+	inst.components.edible.hungervalue = 9.375
 	inst.components.edible.sanityvalue = 0
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
@@ -55,20 +56,18 @@ local function fn()
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
 	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
+	inst.components.perishable.onperishreplacement = "rottenegg"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_roe"
+	inst.components.inventoryitem.imagename = "kyno_chicken_egg"
 
 	inst:AddComponent("cookable")
-	inst.components.cookable.product = "kyno_roe_cooked"
-
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
+	inst.components.cookable.product = "kyno_chicken_egg_cooked"
+	
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
@@ -84,11 +83,12 @@ local function fn_cooked()
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-	inst.AnimState:SetBank("roe")
-	inst.AnimState:SetBuild("roe")
+	inst.AnimState:SetBank("kyno_chicken_eggs")
+	inst.AnimState:SetBuild("kyno_chicken_eggs")
 	inst.AnimState:PlayAnimation("cooked")
 	
 	inst:AddTag("meat")
+	inst:AddTag("chicken_egg")
 
 	inst.entity:SetPristine()
 
@@ -98,14 +98,13 @@ local function fn_cooked()
 	
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
-	inst:AddComponent("selfstacker")
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 1
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 0
-	inst.components.edible.hungervalue = 4.6875
+	inst.components.edible.healthvalue = 3
+	inst.components.edible.hungervalue = 12.5
 	inst.components.edible.sanityvalue = 0
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
@@ -113,21 +112,19 @@ local function fn_cooked()
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
 	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
+	inst.components.perishable.onperishreplacement = "rottenegg"
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_roe_cooked"
+	inst.components.inventoryitem.imagename = "kyno_chicken_egg_cooked"
 
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
 end
 
-return Prefab("kyno_roe", fn, assets),
-Prefab("kyno_roe_cooked", fn_cooked, assets)
+return Prefab("kyno_chicken_egg", fn, assets),
+Prefab("kyno_chicken_egg_cooked", fn_cooked, assets)

@@ -35,5 +35,7 @@ SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 
 SetLoadingTipCategoryWeights(WEIGHT_END,   {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})
 
 -- Custom Icons for Loading Tips.
-SetLoadingTipCategoryIcon("TIPS_HOF", "images/tipsimages/hof_loadingtips_icon.xml", "hof_loadingtips_icon.tex") 
+if not _G.KnownModIndex:IsModEnabled("workshop-2428854303") then
+	SetLoadingTipCategoryIcon("OTHER", "images/tipsimages/hof_loadingtips_icon.xml", "hof_loadingtips_icon.tex") 
+end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

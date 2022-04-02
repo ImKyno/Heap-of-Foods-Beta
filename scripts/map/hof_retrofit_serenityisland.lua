@@ -49,7 +49,7 @@ local function AddSquareTopology(topology, left, top, size, room_id, tags)
 	topology.nodes[index] = node
 end
 
-local function SerenityIslandRetrofitting_SerenityIsland(map, savedata)
+local function HofRetrofitting_SerenityIsland(map, savedata)
 	local obj_layout = require("map/object_layout")
 	local topology = savedata.map.topology
 	local map_width = savedata.map.width
@@ -137,16 +137,16 @@ local function SerenityIslandRetrofitting_SerenityIsland(map, savedata)
 		return false
 	end
 	
-	local success = TryToAddLayout("retrofit_serenityisland", 92)
-		or TryToAddLayout("retrofit_serenityisland_small", 50)
+	local success = TryToAddLayout("hof_serenityisland", 60)
+		or TryToAddLayout("hof_serenityisland_retrofit", 60)
 	
 	if success then
-		print("Retrofitting for Heap of Foods - Added Serenity Archipelago to the world.")
+		print("Retrofitting for Heap of Foods Mod - Added the Serenity Archipelago to the world.")
 	else
-		print("Retrofitting for Heap of Foods - Failed to add Serenity Archipelago to the world!")
+		print("Retrofitting for Heap of Foods Mod - Failed to add the Serenity Archipelago to the world!")
 	end
 end
 
 return {
-	SerenityIslandRetrofitting_SerenityIsland = SerenityIslandRetrofitting_SerenityIsland,
+	HofRetrofitting_SerenityIsland = HofRetrofitting_SerenityIsland,
 }

@@ -34,6 +34,7 @@ local function fn()
 	
 	inst:AddTag("veggie")
 	inst:AddTag("cookable")
+	inst:AddTag("slugbug_fishfarmbait")
 
 	inst.entity:SetPristine()
 
@@ -141,6 +142,7 @@ local function gumfn()
 
 	inst:AddTag("veggie")
 	inst:AddTag("cookable")
+	inst:AddTag("gummybug_fishfarmbait")
 
 	inst.entity:SetPristine()
 

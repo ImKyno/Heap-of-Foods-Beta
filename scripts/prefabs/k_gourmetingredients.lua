@@ -192,6 +192,7 @@ local function sapfn()
 
 	inst:AddTag("gourmet_sap")
 	inst:AddTag("gourmet_ingredient")
+	inst:AddTag("sap_fishfarmbait")
 	inst:AddTag("show_spoilage")
 
     inst.entity:SetPristine()

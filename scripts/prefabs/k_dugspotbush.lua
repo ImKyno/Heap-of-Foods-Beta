@@ -25,8 +25,8 @@ local function make_plantable(data)
     {
 		Asset("ANIM", "anim/"..data.bank..".zip"),
 		
-		Asset("IMAGE", "images/inventoryimages/hof_spotbush.tex"),
-		Asset("ATLAS", "images/inventoryimages/hof_spotbush.xml"),
+		Asset("IMAGE", "images/inventoryimages/hof_buildingimages.tex"),
+		Asset("ATLAS", "images/inventoryimages/hof_buildingimages.xml"),
 		
 		Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 		Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),

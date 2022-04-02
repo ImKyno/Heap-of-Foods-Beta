@@ -116,51 +116,33 @@ configuration_options =
 	},
 	Title("World Options", "Options for the world."),
 	{
-		name = "worldfood",
-		label = "Natural Spawns",
-		hover = "Should Wild Wheats, Radishes and other plants spawn naturally in the world?",
-		options =
-		{
-			{description = "No", 
-			hover = "Nothing will spawn naturally.",
-			data = 0},
-            {description = "Yes", 
-			hover = "New plants will spawn naturally during world generation.",
-			data = 1},
-        },
-        default = 1,
-	},
-	{
 		name = "serenity_island",
 		label = "Serenity Archipelago",
-		hover = "Should the Serenity Archipelago spawn naturally in the ocean?",
+		hover = "If your world is missing the Serenity Archipelago enable this option.\nThis option will be disabled once the retrofitting is finished!",
 		options =
 		{
 			{description = "No", 
-			hover = "Serenity Archipelago will not spawn naturally in the ocean.",
+			hover = "Serenity Archipelago is already generated in your world!",
 			data = 0},
             {description = "Yes", 
-			hover = "Serenity Archipelago will spawn naturally during world generation.",
+			hover = "Serenity Archipelago will be generated during server initialization.",
 			data = 1},
         },
-        default = 1,
+        default = 0,
 	},
-	--[[
-	Title("Farming Options", "Options for the farming system."),
 	{
-		name = "new_watersources",
-		label = "Extra Water Sources",
-		hover = "Should Moon Dial be a valid water source for Watering Can?",
-		options = 
+		name = "serenity_cc",
+		label = "Serenity Archipelago CC",
+		hover = "Should the Serenity Archipelago have The Gorge Colour Cubes?",
+		options =
 		{
-			{description = "No",
-			hover = "Moon Dial will not be a valid water source for Watering Can.",
+			{description = "No", 
+			hover = "Serenity Archipelago will not have The Gorge Colour Cubes.",
 			data = 0},
-			{description = "Yes",
-			hover = "Moon Dial will be a valid water source for Watering Can.",
+            {description = "Yes", 
+			hover = "Serenity Archipelago will have The Gorge Colour Cubes.",
 			data = 1},
-		},
-		default = 0,
+        },
+        default = 0,
 	},
-	]]--
 }

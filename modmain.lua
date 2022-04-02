@@ -11,6 +11,7 @@ modimport("hof_init/hof_postinits")
 modimport("hof_init/hof_meatrackfix")
 modimport("hof_init/hof_farming")
 modimport("hof_init/hof_cooking")
+modimport("hof_init/hof_retrofit")
 modimport("hof_init/hof_loadingtips")
 modimport("hof_init/hof_icons")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -58,6 +59,11 @@ Assets =
 	Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_parznip.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
+	
+	Asset("IMAGE", "images/colourcubesimages/quagmire_cc.tex"),
+
+	Asset("IMAGE", "images/inventoryimages/hof_buildingimages.tex"),
+	Asset("ATLAS", "images/inventoryimages/hof_buildingimages.xml"),
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
@@ -67,15 +73,6 @@ Assets =
 	
 	Asset("IMAGE", "images/tabimages/hof_tabimages.tex"),
 	Asset("ATLAS", "images/tabimages/hof_tabimages.xml"),
-	
-	Asset("IMAGE", "images/inventoryimages/hof_mushroomstump.tex"),
-	Asset("ATLAS", "images/inventoryimages/hof_mushroomstump.xml"),
-	
-	Asset("IMAGE", "images/inventoryimages/hof_mealgrinder.tex"),
-	Asset("ATLAS", "images/inventoryimages/hof_mealgrinder.xml"),
-	
-	Asset("IMAGE", "images/inventoryimages/hof_spotbush.tex"),
-	Asset("ATLAS", "images/inventoryimages/hof_spotbush.xml"),
 	
 	Asset("IMAGE", "images/cookbookimages/hof_cookbook.tex"),
 	Asset("ATLAS", "images/cookbookimages/hof_cookbook.xml"),
@@ -397,15 +394,4 @@ for name, recipe in pairs(kynofoods) do
 		end)
 	end
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Since we already have the turfs and they can be dug, we are going to use them for make a custom prefab.
--- Basically you're getting the original turfs from ground with a custom prefab i.e: the turf item.
-local GROUND_TURFS = 
-{
-	[GROUND.QUAGMIRE_PARKFIELD]	= "turf_pinkpark",
-	[GROUND.QUAGMIRE_CITYSTONE] = "turf_stonecity",
-}
-
-require("worldtiledefs").turf[GROUND.QUAGMIRE_PARKFIELD] = { name = "pinkpark", 	bank_build = "kyno_turfs_events", anim = "pinkpark" 	}
-require("worldtiledefs").turf[GROUND.QUAGMIRE_CITYSTONE] = { name = "stonecity", 	bank_build = "kyno_turfs_events", anim = "stonecity" 	}
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

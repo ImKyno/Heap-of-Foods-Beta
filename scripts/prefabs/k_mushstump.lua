@@ -4,8 +4,8 @@ local assets =
 {
 	Asset("ANIM", "anim/kyno_mushroomstump.zip"),
 	
-	Asset("IMAGE", "images/inventoryimages/hof_mushroomstump.tex"),
-	Asset("ATLAS", "images/inventoryimages/hof_mushroomstump.xml"),
+	Asset("IMAGE", "images/inventoryimages/hof_buildingimages.tex"),
+	Asset("ATLAS", "images/inventoryimages/hof_buildingimages.xml"),
 }
 
 local prefabs = 

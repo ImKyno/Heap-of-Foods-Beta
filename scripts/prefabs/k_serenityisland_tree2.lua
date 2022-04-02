@@ -1,0 +1,319 @@
+local assets =
+{
+    Asset("ANIM", "anim/quagmire_sapbucket.zip"),
+	Asset("ANIM", "anim/quagmire_tree_cotton_short.zip"),
+	Asset("ANIM", "anim/quagmire_tree_cotton_normal.zip"),
+	Asset("ANIM", "anim/quagmire_tree_cotton_tall.zip"),
+    Asset("ANIM", "anim/quagmire_tree_cotton_build.zip"),
+    Asset("ANIM", "anim/quagmire_tree_cotton_trunk_build.zip"),
+	
+	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
+}
+
+local prefabs =
+{
+	"log",
+	"ash",
+	"charcoal",
+
+	"kyno_sap",
+	"kyno_sugartree_short_stump",
+	"kyno_sugartree_normal_stump",
+	"kyno_sugartree_bud",
+}
+
+local SHORT_GROW_TIME = 240 -- Half day.
+local NORMAL_GROW_TIME = 720 -- 1.5 Day.
+
+local function TestItem(inst, item, giver)
+	if item.components.inventoryitem and item:HasTag("sap_bucket_installer") then
+		giver.components.talker:Say(GetString(giver, "ANNOUNCE_SUGARTREE_TOOSMALL"))
+	end
+end
+
+local function setupstump_short(inst)
+    SpawnPrefab("kyno_sugartree_short_stump").Transform:SetPosition(inst.Transform:GetWorldPosition())
+    inst:Remove()
+end
+
+local function setupstump_normal(inst)
+    SpawnPrefab("kyno_sugartree_normal_stump").Transform:SetPosition(inst.Transform:GetWorldPosition())
+    inst:Remove()
+end
+
+local function stump_dug(inst)
+    inst.components.lootdropper:SpawnLootPrefab("log")
+    inst:Remove()
+end
+
+local function tree_chopped_short(inst, chopper)
+    if not (chopper ~= nil and chopper:HasTag("playerghost")) then
+        inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
+    end
+
+    inst.SoundEmitter:PlaySound("dontstarve/forest/treefall")
+	
+    local pt = Vector3(inst.Transform:GetWorldPosition())
+	local hispos = Vector3(chopper.Transform:GetWorldPosition())
+	local he_right = (hispos - pt):Dot(TheCamera:GetRightVec()) > 0
+
+	if he_right then
+		inst.AnimState:PlayAnimation("fallleft")
+		inst.components.lootdropper:DropLoot(pt - TheCamera:GetRightVec())
+	else
+		inst.AnimState:PlayAnimation("fallright")
+		inst.components.lootdropper:DropLoot(pt + TheCamera:GetRightVec())
+	end
+	
+    inst:ListenForEvent("animover", setupstump_short)
+end
+
+local function tree_chopped_normal(inst, chopper)
+    if not (chopper ~= nil and chopper:HasTag("playerghost")) then
+        inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
+    end
+
+    inst.SoundEmitter:PlaySound("dontstarve/forest/treefall")
+	
+    local pt = Vector3(inst.Transform:GetWorldPosition())
+	local hispos = Vector3(chopper.Transform:GetWorldPosition())
+	local he_right = (hispos - pt):Dot(TheCamera:GetRightVec()) > 0
+
+	if he_right then
+		inst.AnimState:PlayAnimation("fallleft")
+		inst.components.lootdropper:DropLoot(pt - TheCamera:GetRightVec())
+	else
+		inst.AnimState:PlayAnimation("fallright")
+		inst.components.lootdropper:DropLoot(pt + TheCamera:GetRightVec())
+	end
+	
+    inst:ListenForEvent("animover", setupstump_normal)
+end
+
+local function tree_chop(inst, chopper)
+    inst.AnimState:PlayAnimation("chop")
+	inst.AnimState:PushAnimation("sway2_loop", true)
+    if not (chopper ~= nil and chopper:HasTag("playerghost")) then
+        inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
+    end
+end
+
+local function GrowNormal(inst)
+	local normal = SpawnPrefab("kyno_sugartree_normal")
+	normal.SoundEmitter:PlaySound("dontstarve/forest/treeGrowFromWilt")
+	normal.Transform:SetPosition(inst.Transform:GetWorldPosition())
+	inst:Remove()
+end
+
+local function GrowTall(inst)
+	local tall = SpawnPrefab("kyno_sugartree")
+	tall.SoundEmitter:PlaySound("dontstarve/forest/treeGrow")
+	tall.Transform:SetPosition(inst.Transform:GetWorldPosition())
+	inst:Remove()
+end
+
+local function shortfn()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddAnimState()
+    inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
+	
+	inst.AnimState:SetScale(1, 1, 1)
+	
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("quagmire_sugarwoodtree.png")
+
+    MakeObstaclePhysics(inst, .25)
+
+    inst.AnimState:SetBank("quagmire_tree_cotton_short")
+    inst.AnimState:SetBuild("quagmire_tree_cotton_build")
+	inst.AnimState:AddOverrideBuild("quagmire_tree_cotton_trunk_build")
+    inst.AnimState:PlayAnimation("sway1_loop", true)
+	
+	inst.AnimState:Hide("swap_tapper")
+	inst.AnimState:Hide("sap")
+	
+	inst:AddTag("tree")
+    inst:AddTag("shelter")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+
+    inst.AnimState:SetTime(math.random() * 2)
+	
+	inst:AddComponent("timer")
+	inst.components.timer:StartTimer("kyno_sugartree_short_timer", SHORT_GROW_TIME)
+	
+	inst:AddComponent("lootdropper")
+	inst.components.lootdropper:SetLoot({"log", "kyno_sap"})
+	
+    inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	
+	inst:AddComponent("trader")
+	inst.components.trader:SetAcceptTest(TestItem)
+
+    inst:AddComponent("workable")
+    inst.components.workable:SetWorkAction(ACTIONS.CHOP)
+    inst.components.workable:SetWorkLeft(5)
+    inst.components.workable:SetOnFinishCallback(tree_chopped_short)
+    inst.components.workable:SetOnWorkCallback(tree_chop)
+	
+	inst:ListenForEvent("timerdone", function(inst, data)
+        if data.name == "kyno_sugartree_short_timer" then
+            GrowNormal(inst)
+        end
+    end)
+
+    return inst
+end
+
+local function normalfn()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddAnimState()
+    inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
+	
+	inst.AnimState:SetScale(1, 1, 1)
+	
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("quagmire_sugarwoodtree.png")
+
+    MakeObstaclePhysics(inst, .25)
+
+    inst.AnimState:SetBank("quagmire_tree_cotton_normal")
+    inst.AnimState:SetBuild("quagmire_tree_cotton_build")
+	inst.AnimState:AddOverrideBuild("quagmire_tree_cotton_trunk_build")
+    inst.AnimState:PlayAnimation("sway1_loop", true)
+	
+	inst.AnimState:Hide("swap_tapper")
+	inst.AnimState:Hide("sap")
+	
+	inst:AddTag("tree")
+    inst:AddTag("shelter")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+
+    inst.AnimState:SetTime(math.random() * 2)
+	
+	inst:AddComponent("timer")
+	inst.components.timer:StartTimer("kyno_sugartree_normal_timer", NORMAL_GROW_TIME)
+	
+	inst:AddComponent("lootdropper")
+	inst.components.lootdropper:SetLoot({"log", "log", "kyno_sugartree_bud", "kyno_sap"})
+	
+    inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	
+	inst:AddComponent("trader")
+	inst.components.trader:SetAcceptTest(TestItem)
+
+    inst:AddComponent("workable")
+    inst.components.workable:SetWorkAction(ACTIONS.CHOP)
+    inst.components.workable:SetWorkLeft(10)
+    inst.components.workable:SetOnFinishCallback(tree_chopped_normal)
+    inst.components.workable:SetOnWorkCallback(tree_chop)
+	
+	inst:ListenForEvent("timerdone", function(inst, data)
+        if data.name == "kyno_sugartree_normal_timer" then
+            GrowTall(inst)
+        end
+    end)
+
+    return inst
+end
+
+local function stump_shortfn()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddAnimState()
+    inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
+	
+	inst.AnimState:SetScale(1, 1, 1)
+
+	local minimap = inst.entity:AddMiniMapEntity()
+    minimap:SetIcon("kyno_bananatree_stump.tex") -- KEKW
+
+    inst.AnimState:SetBank("quagmire_tree_cotton_short")
+    inst.AnimState:SetBuild("quagmire_tree_cotton_build")
+	inst.AnimState:AddOverrideBuild("quagmire_tree_cotton_trunk_build")
+	inst.AnimState:PlayAnimation("stump")
+	
+	inst:AddTag("plant")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+
+    inst:AddComponent("lootdropper")
+	
+    inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+
+    inst:AddComponent("workable")
+    inst.components.workable:SetWorkAction(ACTIONS.DIG)
+    inst.components.workable:SetWorkLeft(1)
+    inst.components.workable:SetOnWorkCallback(stump_dug)
+
+    return inst
+end
+
+local function stump_normalfn()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddAnimState()
+    inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
+	
+	inst.AnimState:SetScale(1, 1, 1)
+
+	local minimap = inst.entity:AddMiniMapEntity()
+    minimap:SetIcon("kyno_bananatree_stump.tex") -- KEKW
+
+    inst.AnimState:SetBank("quagmire_tree_cotton_normal")
+    inst.AnimState:SetBuild("quagmire_tree_cotton_build")
+	inst.AnimState:AddOverrideBuild("quagmire_tree_cotton_trunk_build")
+	inst.AnimState:PlayAnimation("stump")
+	
+	inst:AddTag("plant")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+
+    inst:AddComponent("lootdropper")
+	
+    inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+
+    inst:AddComponent("workable")
+    inst.components.workable:SetWorkAction(ACTIONS.DIG)
+    inst.components.workable:SetWorkLeft(1)
+    inst.components.workable:SetOnWorkCallback(stump_dug)
+
+    return inst
+end
+
+return Prefab("kyno_sugartree_short", shortfn, assets, prefabs),
+Prefab("kyno_sugartree_normal", normalfn, assets, prefabs),
+Prefab("kyno_sugartree_short_stump", stump_shortfn, assets, prefabs),
+Prefab("kyno_sugartree_normal_stump", stump_normalfn, assets, prefabs)

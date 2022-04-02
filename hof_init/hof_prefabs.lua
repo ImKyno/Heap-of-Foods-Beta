@@ -53,10 +53,14 @@ PrefabFiles =
 	"k_serenityisland_rocks",
 	"k_serenityisland_birds",
 	"k_serenityisland_tree",
+	"k_serenityisland_tree2",
 	"k_serenityisland_shop",
 	"k_serenityisland_bud",
 	"k_serenityisland_sapling",
 	"k_serenityisland_crab",
-	"k_serenityisland_crabspawner",
+	"k_serenityisland_spawners",
+	"k_chicken2",
+	"k_chicken2_herd",
+	"k_chicken2_eggs",
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

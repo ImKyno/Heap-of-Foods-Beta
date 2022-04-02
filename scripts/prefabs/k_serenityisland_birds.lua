@@ -179,8 +179,8 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
 
     local prefabs = name == "quagmire_pigeon" and
     {
-        "quagmire_smallmeat",
-        "quagmire_cookedsmallmeat",
+        "kyno_bacon",
+        "kyno_bacon_cooked",
     } or
     {
         "seeds",
@@ -190,6 +190,7 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
         "twigs",
         "cutgrass",
 		"kyno_bacon",
+		"kyno_bacon_cooked",
     }
 
 	if not no_feather then

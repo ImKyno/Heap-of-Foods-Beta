@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Atlas>
+	<Texture filename="hof_buildingimages.tex" />
+	<Elements>
+		<Element name="hof_mealgrinder.tex" u1="0.001" u2="0.499" v2="0.999" v1="0.501" variant="" />
+		<Element name="hof_mushroomstump.tex" u1="0.501" u2="0.999" v2="0.999" v1="0.501" variant="" />
+		<Element name="hof_spotbush.tex" u1="0.001" u2="0.499" v2="0.499" v1="0.001" variant="" />
+		<Element name="hof_fishfarmplot.tex" u1="0.501" u2="0.999" v2="0.499" v1="0.001" variant="" />
+	</Elements>
+</Atlas>

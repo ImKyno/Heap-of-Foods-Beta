@@ -1,5 +1,6 @@
-local _G = GLOBAL
-local require = _G.require
+local _G 				= GLOBAL
+local require 			= _G.require
+local resolvefilepath 	= _G.resolvefilepath
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Favorite Mod Foods.
 AddPrefabPostInit("wilson", function(inst)
@@ -283,9 +284,15 @@ ACTIONS.GIVE.stroverridefn = function(act)
 	end
 end
 
-ACTIONS.PICKUP.stroverridefn = function(act)
+ACTIONS.PICK.stroverridefn = function(act)
 	if act.target.prefab == "kyno_sugartree_sapped" then
 		return STRINGS.KYNO_HARVEST_SUGARTREE
+	end
+	if act.target.prefab == "kyno_sugartree_ruined" then
+		return STRINGS.KYNO_HARVEST_SUGARTREE_RUINED
+	end
+	if act.target.prefab == "kyno_saltrack" then
+		return STRINGS.KYNO_HARVEST_SALTRACK
 	end
 end
 
@@ -1477,8 +1484,12 @@ AddPrefabPostInit("crow", function(inst)
 				return inst
 			end
 			
-			inst.sounds.takeoff = "dontstarve/birds/takeoff_quagmire_pigeon"
-			inst.sounds.chirp = "dontstarve/birds/chirp_quagmire_pigeon"
+			inst.sounds =
+			{
+				takeoff = "dontstarve/birds/takeoff_quagmire_pigeon",
+				chirp = "dontstarve/birds/chirp_quagmire_pigeon",
+				flyin = "dontstarve/birds/flyin",
+			}
 			
 			inst.components.inventoryitem.onpickupfn = function(inst, doer)
 				inst:Remove()
@@ -1508,6 +1519,7 @@ local slaughterable_animals = {
 	"koalefant_summer",
 	"beefalo",
 	"spat",
+	"lightninggoat",
 }
 
 for k,v in pairs(slaughterable_animals) do
@@ -1521,4 +1533,115 @@ for k,v in pairs(slaughterable_animals) do
 		inst:AddTag("slaughterable")
 	end)
 end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Colour Cubes and Music for the Serenitea Archipelago.
+-- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=2625422345
+local SERENITY_CC = GetModConfigData("serenity_cc")
+if SERENITY_CC == 1 then
+	local function MakeSerenityArea(inst)
+		_G.TheWorld:PushEvent("overrideambientlighting", Point(200 / 255, 200 / 255, 200 / 255))
+		_G.TheWorld:PushEvent("overridecolourcube", resolvefilepath("images/colourcubesimages/quagmire_cc.tex"))
+	end
+
+	local function RemoveSerenityArea(inst)
+		_G.TheWorld:PushEvent("overrideambientlighting", nil)
+		_G.TheWorld:PushEvent("overridecolourcube", nil)
+	end
+
+	AddPrefabPostInit("world", function(inst)
+		inst:DoTaskInTime(0, function(inst)
+			if _G.TheWorld.topology then
+				for i, node in ipairs(_G.TheWorld.topology.nodes) do
+					if table.contains(node.tags, "serenityarea") then
+						if node.area_emitter == nil then
+							if node.area == nil then
+								node.area = 1
+							end
+						end
+					end
+				end	
+			end
+		end)
+	end)
+
+	AddComponentPostInit("playervision", function(self)
+		self.inst:DoTaskInTime(0, function()
+			self.canchange = true
+			self.inst:ListenForEvent("changearea", function(inst, area)
+				if self.canchange then
+					if area and area.tags and table.contains(area.tags, "serenityarea") then
+						MakeSerenityArea(self.inst)
+					else
+						RemoveSerenityArea(self.inst)
+					end
+				end
+			end)
+
+			self.inst:DoTaskInTime(0, function()
+				local node, node_index = _G.TheWorld.Map:FindVisualNodeAtPoint(self.inst.Transform:GetWorldPosition())
+				if node_index then
+					self.inst:PushEvent("changearea", node and {
+						id = _G.TheWorld.topology.ids[node_index],
+						type = node.type,
+						center = node.cent,
+						poly = node.poly,
+						tags = node.tags,
+					}
+					or nil)
+				end
+			end)
+		end)
+	end)
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Retrofitting Stuff for old worlds.
+require("hof_settings")
+local SERENITYISLAND = GetModConfigData("serenity_island")
+
+local function RetrofitSerenityIsland()
+	local node_indices = {}
+	for k, v in ipairs(_G.TheWorld.topology.ids) do
+		if string.find(v, "Serenity Archipelago") then
+			table.insert(node_indices, k)
+		end
+	end
+	if #node_indices == 0 then
+		return false
+	end
+	
+	local tags = {"serenityarea"}
+	for k, v in ipairs(node_indices) do
+		if _G.TheWorld.topology.nodes[v].tags == nil then
+			_G.TheWorld.topology.nodes[v].tags = {}
+		end
+		for i, tag in ipairs(tags) do
+			if not table.contains(_G.TheWorld.topology.nodes[v].tags, tag) then
+				table.insert(_G.TheWorld.topology.nodes[v].tags, tag)
+			end
+		end
+	end
+	for i, node in ipairs(_G.TheWorld.topology.nodes) do
+		if table.contains(node.tags, "serenityarea") then
+			_G.TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
+		end
+	end
+	
+	return true
+end
+
+AddComponentPostInit("retrofitforestmap_anr", function(self)
+	oldonpostinit = self.OnPostInit
+	
+	function self:OnPostInit(...)
+		if SERENITYISLAND == 1 then
+			local success = RetrofitSerenityIsland()
+			if success then
+				_G.ChangeFoodConfigs("serenity_island", 0)
+				self.requiresreset = true
+			end
+		end
+		
+		return oldonpostinit(self, ...)
+	end
+end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

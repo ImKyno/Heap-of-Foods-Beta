@@ -311,8 +311,8 @@ return {
           properties = {}
         },
         {
-          name = "It reads: Toss an item to your well oh, Valley of Plenty\nMaybe gems...",
-          type = "gravestone",
+          name = "It reads: HRF! LITTLE WOBSTER WITH... FLYING YELLOW THING! OR... CARAMEL...",
+          type = "papyrus",
           shape = "rectangle",
           x = 32,
           y = 238,
@@ -320,7 +320,7 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.setepitaph"] = "Toss an item to your well oh, Valley of Plenty"
+            ["data.setepitaph"] = "It reads: HRF! LITTLE WOBSTER WITH... FLYING YELLOW THING! OR... CARAMEL..."
           }
         },
         {

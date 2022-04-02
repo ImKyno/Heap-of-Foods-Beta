@@ -4,8 +4,8 @@ local assets =
 {
 	Asset("ANIM", "anim/quagmire_mealingstone.zip"),
 	
-	Asset("IMAGE", "images/inventoryimages/hof_mealgrinder.tex"),
-	Asset("ATLAS", "images/inventoryimages/hof_mealgrinder.xml"),
+	Asset("IMAGE", "images/inventoryimages/hof_buildingimages.tex"),
+	Asset("ATLAS", "images/inventoryimages/hof_buildingimages.xml"),
 }
 
 local function onhammered(inst, worker)
@@ -23,11 +23,13 @@ end
 local function onturnoff(inst)
 	inst.components.prototyper.on = false
 	inst.AnimState:PlayAnimation("idle", true)
+	inst.SoundEmitter:KillSound("mealing")
 end
 
 local function onturnon(inst)
 	inst.components.prototyper.on = true
 	inst.AnimState:PlayAnimation("proximity_loop", true)
+	inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/mealing_stone/proximity_LP", "mealing")
 end
 
 local function onbuilt(inst)
