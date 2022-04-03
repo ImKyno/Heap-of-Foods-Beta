@@ -4,6 +4,10 @@ local assets =
 	Asset("ANIM", "anim/quagmire_sapbucket.zip"),
 	Asset("ANIM", "anim/quagmire_crab_trap.zip"),
 	Asset("ANIM", "anim/quagmire_slaughtertool.zip"),
+	Asset("ANIM", "anim/quagmire_pot.zip"),
+    Asset("ANIM", "anim/quagmire_pot_small.zip"),
+    Asset("ANIM", "anim/quagmire_pot_syrup.zip"),
+	Asset("ANIM", "anim/quagmire_pot_hanger.zip"),
 	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
@@ -18,7 +22,10 @@ local prefabs =
 	"kyno_saltrack_installer",
 	"kyno_sapbucket_installer",
 	"kyno_crabtrap_installer",
+	
 	"kyno_slaughtertool",
+	
+	"kyno_cookware_hanger_item",
 }
 
 local sounds =
@@ -220,7 +227,82 @@ local function slaughterfn()
 	return inst
 end
 
+local function hangerfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst, "small", 0.2, 0.95)
+
+	inst.AnimState:SetBank("quagmire_pot_hanger")
+	inst.AnimState:SetBuild("quagmire_pot_hanger")
+	inst.AnimState:PlayAnimation("item")
+
+	inst:AddTag("pot_hanger_installer")
+	inst:AddTag("serenity_installer")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("tradable")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "QUAGMIRE_POT_HANGER_ITEM"
+	
+	inst:AddComponent("stackable")
+    inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
+		
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+
+	return inst
+end
+
+local function potsyrupfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst, "small", 0.2, 0.95)
+
+	inst.AnimState:SetBank("quagmire_pot_syrup")
+	inst.AnimState:SetBuild("quagmire_pot_syrup")
+	inst.AnimState:PlayAnimation("idle")
+
+	inst:AddTag("pot_installer")
+	inst:AddTag("pot_syrup_installer")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("tradable")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "QUAGMIRE_POT_SYRUP"
+		
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+
+	return inst
+end
+
 return Prefab("kyno_saltrack_installer", rackfn, assets, prefabs),
 Prefab("kyno_sapbucket_installer", bucketfn, assets, prefabs),
 Prefab("kyno_crabtrap_installer", trapfn, assets, prefabs),
-Prefab("kyno_slaughtertool", slaughterfn, assets, prefabs)
+Prefab("kyno_slaughtertool", slaughterfn, assets, prefabs),
+Prefab("kyno_cookware_hanger_item", hangerfn, assets, prefabs),
+Prefab("kyno_cookware_syrup_pot", potsyrupfn, assets, prefabs)

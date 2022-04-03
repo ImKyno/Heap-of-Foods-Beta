@@ -59,7 +59,7 @@ local function fn()
 
     return inst
 end
-
+--[[ We're using a new system. see "modmain.lua" and "k_newveggies.lua" for more info. Just here for reference.
 local function fennel()
 	local inst = CreateEntity()
 
@@ -117,7 +117,7 @@ local function fennel()
 
 	return inst
 end
---[[ We're using a new system. see "modmain.lua" and "k_newveggies.lua" for more info. Just here for reference.
+
 local function fennel_cooked()
 	local inst = CreateEntity()
 

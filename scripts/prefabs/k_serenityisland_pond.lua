@@ -82,7 +82,6 @@ local function pondfn()
 	
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
-	inst.entity:AddMiniMapEntity()
 	inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
@@ -134,7 +133,6 @@ local function pondsaltfn()
 	
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
-	inst.entity:AddMiniMapEntity()
 	inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	

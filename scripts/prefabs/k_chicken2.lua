@@ -47,6 +47,12 @@ local function OnDropped(inst)
 	inst.components.periodicspawner:Start()
 end
 
+local function CanSpawnEgg(inst)
+	if inst.components.inventoryitem:IsHeld() or inst.components.sleeper:IsAsleep() then
+		return false
+	end
+end
+
 local function fn()
 	local inst = CreateEntity()
 	
@@ -69,6 +75,7 @@ local function fn()
 	inst:AddTag("animal")
 	inst:AddTag("prey")
 	inst:AddTag("smallcreature")
+	inst:AddTag("herdmember")
 	inst:AddTag("chicken")
 	
 	inst.entity:SetPristine()
@@ -78,9 +85,11 @@ local function fn()
 	end
 	
 	inst:AddComponent("knownlocations")
-	inst:AddComponent("lootdropper")
 	inst:AddComponent("inspectable")
 	inst:AddComponent("sleeper")
+	
+	inst:AddComponent("lootdropper")
+	inst.components.lootdropper:SetChanceLootTable('kyno_chicken2')
 
 	inst:AddComponent("locomotor")
 	inst.components.locomotor.runspeed = TUNING.RABBIT_RUN_SPEED
@@ -108,15 +117,15 @@ local function fn()
 	inst.components.inventoryitem.onputininventoryfn = OnInventory
 	inst.components.inventoryitem.ondropfn = OnDropped
 	inst.components.inventoryitem.nobounce = true
-	inst.components.inventoryitem.canbepickedup = false
 	inst.components.inventoryitem.longpickup = true
+	inst.components.inventoryitem.canbepickedup = false
 	inst.components.inventoryitem:SetSinks(true)
 	
 	inst:AddComponent("periodicspawner")
 	inst.components.periodicspawner:SetPrefab("kyno_chicken_egg")
-	inst.components.periodicspawner:SetRandomTimes(480, 480 * 2)
+	inst.components.periodicspawner:SetRandomTimes(240, 80)
 	inst.components.periodicspawner:SetDensityInRange(20, 2)
-	inst.components.periodicspawner:SetMinimumSpacing(12)
+	inst.components.periodicspawner:SetMinimumSpacing(8)
 	inst.components.periodicspawner:Start()
 	
 	inst:AddComponent("named")

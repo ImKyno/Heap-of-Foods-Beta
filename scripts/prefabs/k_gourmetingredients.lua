@@ -247,7 +247,7 @@ local function sap_ruinedfn()
     inst.AnimState:SetBuild("quagmire_sap")
     inst.AnimState:PlayAnimation("idle_spoiled")
 
-	inst:AddTag("gourmet_sap")
+	inst:AddTag("gourmet_sap_spoiled")
 	inst:AddTag("gourmet_ingredient")
 
     inst.entity:SetPristine()

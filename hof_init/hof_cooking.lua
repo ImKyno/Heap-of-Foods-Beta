@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- New Crock Pot Ingredients.
-AddIngredientValues({"slurtle_shellpieces"}, 	{inedible=1, 	shell=1})
+AddIngredientValues({"slurtle_shellpieces"}, 	{inedible=1, 					  shell=1})
 AddIngredientValues({"rabbit"}, 				{rabbit=1})
 AddIngredientValues({"firenettles"}, 			{veggie=0.5})
 AddIngredientValues({"foliage"}, 				{veggie=0.5}, 						  true)
@@ -8,7 +8,7 @@ AddIngredientValues({"succulent_picked"}, 		{veggie=0.5})
 AddIngredientValues({"robin_winter"}, 			{robin_winter=1})
 AddIngredientValues({"petals"}, 				{veggie=0.5})
 AddIngredientValues({"gears"}, 					{gears=1})
-AddIngredientValues({"rocks"}, 					{rocks=1, 		elemental=1, inedible=1})
+AddIngredientValues({"rocks"}, 					{rocks=1, 		elemental=1,   inedible=1})
 AddIngredientValues({"poop"}, 					{poop=1, 		glermz=1})
 AddIngredientValues({"guano"}, 					{poop=1, 		glermz=1})
 AddIngredientValues({"glommerfuel"}, 			{poop=1, 		glermz=1})
@@ -54,6 +54,7 @@ AddIngredientValues({"kyno_pierrotfish"},		{fish=0.5,		meat=0.5},			  true)
 AddIngredientValues({"kyno_salmonfish"},		{fish=0.5, 		meat=0.5},			  true)
 AddIngredientValues({"kyno_sugartree_petals"},	{sweetener=1})
 AddIngredientValues({"kyno_crabmeat"},			{meat=0.5,		crab=1},			  true)
+AddIngredientValues({"kyno_chicken_egg"},		{egg=1}, 							  true)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Icons For Cookbook.
 RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", "kyno_coffeebeans_cooked.tex")
@@ -127,4 +128,6 @@ RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", "ky
 RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", "kyno_sugartree_petals.tex")
 RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", "kyno_crabmeat.tex")
 RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", "kyno_crabmeat_cooked.tex")
+RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", "kyno_chicken_egg.tex")
+RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", "kyno_chicken_egg_cooked.tex")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -12,6 +12,7 @@ modimport("hof_init/hof_meatrackfix")
 modimport("hof_init/hof_farming")
 modimport("hof_init/hof_cooking")
 modimport("hof_init/hof_retrofit")
+modimport("hof_init/hof_containers")
 modimport("hof_init/hof_loadingtips")
 modimport("hof_init/hof_icons")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -94,6 +95,7 @@ if XMAS_FOODS == 1 then
 		if not v.tags then
 			AddCookerRecipe("cookpot", v)
 			AddCookerRecipe("archive_cookpot", v)
+			AddCookerRecipe("kyno_cookware_syrup", v)
 		end
 		AddCookerRecipe("portablecookpot", v)
 	end
@@ -108,6 +110,7 @@ else -- Do Not Import Winter's Feast Foods.
 		if not v.tags then
 			AddCookerRecipe("cookpot", v)
 			AddCookerRecipe("archive_cookpot", v)
+			AddCookerRecipe("kyno_cookware_syrup", v)
 		end
 		AddCookerRecipe("portablecookpot", v)
 	end
@@ -119,7 +122,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Spiced Foods and Potlevel.
 local spices  = { "chili", "garlic", "sugar", "salt" }
-local cookers = { "cookpot", "portablecookpot", "portablespicer", "archive_cookpot", "kyno_archive_cookpot" }
+local cookers = { "cookpot", "portablecookpot", "portablespicer", "archive_cookpot", "kyno_archive_cookpot", "kyno_cookware_syrup"}
 
 for i, cooker in ipairs(cookers) do 
 	if not cookerrecipes[cooker] then
@@ -383,6 +386,7 @@ for name, recipe in pairs(kynofoods) do
 	table.insert(cookerrecipes["portablecookpot"], name)
 	table.insert(cookerrecipes["archive_cookpot"], name)
 	table.insert(cookerrecipes["kyno_archive_cookpot"], name)
+	table.insert(cookerrecipes["kyno_cookware_syrup"], name)
 	AddPrefabPostInit(name, function(inst)
 		inst.AnimState:OverrideSymbol("swap_food", name, name)
 	end)

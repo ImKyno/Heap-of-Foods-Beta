@@ -32,9 +32,10 @@ end
 
 local function dig_up(inst, chopper)
 	if inst.components.pickable:CanBePicked() then
-            inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product)
+		inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product)
     end
 	inst.components.lootdropper:SpawnLootPrefab("dug_kyno_spotbush")
+	TheWorld:PushEvent("beginregrowth", inst)
 	inst:Remove()
 end
 

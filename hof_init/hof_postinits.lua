@@ -282,17 +282,23 @@ ACTIONS.GIVE.stroverridefn = function(act)
 	if act.target:HasTag("serenity_installable") and act.invobject:HasTag("serenity_installer") then
 		return subfmt(_G.STRINGS.KYNO_INSTALL_INSTALLER, {item = act.invobject:GetBasicDisplayName()})
 	end
+	if act.target:HasTag("cookingpot_hanger") and act.invobject:HasTag("pot_installer") then
+		return subfmt(_G.STRINGS.KYNO_INSTALL_POT, {item = act.invobject:GetBasicDisplayName()})
+	end
 end
 
 ACTIONS.PICK.stroverridefn = function(act)
 	if act.target.prefab == "kyno_sugartree_sapped" then
-		return STRINGS.KYNO_HARVEST_SUGARTREE
+		return _G.STRINGS.KYNO_HARVEST_SUGARTREE
 	end
 	if act.target.prefab == "kyno_sugartree_ruined" then
-		return STRINGS.KYNO_HARVEST_SUGARTREE_RUINED
+		return _G.STRINGS.KYNO_HARVEST_SUGARTREE_RUINED
 	end
 	if act.target.prefab == "kyno_saltrack" then
-		return STRINGS.KYNO_HARVEST_SALTRACK
+		return _G.STRINGS.KYNO_HARVEST_SALTRACK
+	end
+	if act.target.prefab == "kyno_cookware_syrup" then
+		return _G.STRINGS.KYNO_HARVEST_POTSYRUP
 	end
 end
 
@@ -1288,101 +1294,6 @@ AddPrefabPostInit("trident", function(inst)
 	inst.DoWaterExplosionEffect = DoWaterExplosionEffectNew
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Evergreens and Spiky Trees drops Sap when chopped. Moved from the prefab.
--- Reference Only. Sap can now be obtained via Sugarwood Trees in Serenity Archipelago. 
---[[
-local sap_trees = {
-	"evergreen",
-	"evergreen_normal",
-	"evergreen_tall",
-	"evergreen_short",
-	
-	"evergreen_sparse",
-	"evergreen_sparse_normal",
-	"evergreen_sparse_tall",
-	"evergreen_sparse_short",
-	
-	"marsh_tree",
-}
-
-for k,v in pairs(sap_trees) do
-	AddPrefabPostInit(v, function(inst)
-		if inst.components.workable ~= nil then
-			local onfinish_old = inst.components.workable.onfinish
-			inst.components.workable:SetOnFinishCallback(function(inst, chopper)
-				if inst.components.lootdropper ~= nil then
-					inst.components.lootdropper:AddChanceLoot("kyno_sap", 1.00)
-				--	inst.components.lootdropper:AddChanceLoot("kyno_sap", 0.40)
-				end
-				if onfinish_old ~= nil then
-					onfinish_old(inst, chopper)
-				end
-			end)
-		end
-	end)
-end
-]]--
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- New Water Sources for Watering Can.
---[[
-local WSOURCES = GetModConfigData("new_watersources")
-if WSOURCES == 1 then
-	AddPrefabPostInit("moondial", function(inst) -- Moon Dial.
-		local FINDMOONGLASS_TAGS = {"moonglass_piece"}
-		local function ModOnAlterAwake(inst, awake)
-			local was_glassed = inst.is_glassed
-
-			if not was_glassed and awake then
-				inst.is_glassed = true
-				inst.components.watersource.available = false
-				inst.sg:GoToState((POPULATING or not inst.entity:IsAwake()) and "glassed_idle" or "glassed_pre")
-			elseif was_glassed and not awake then
-				if POPULATING or not inst.entity:IsAwake() then
-					inst.sg:GoToState("idle")
-					local x, y, z = inst.Transform:GetWorldPosition()
-					local moonglass = TheSim:FindEntities(x, y, z, 4, FINDMOONGLASS_TAGS)[1]
-				if moonglass ~= nil and not moonglass.components.stackable:IsFull() then
-					moonglass.components.stackable:SetStackSize(moonglass.components.stackable:StackSize() + 1)
-				else
-					inst.components.lootdropper:FlingItem(SpawnPrefab("moonglass"))
-				end
-					inst.is_glassed = false
-					inst.components.watersource.available = true
-			else
-					inst.sg:GoToState("glassed_pst")
-				end
-			end
-		end
-			
-		local function OnSave(inst, data)
-			data.is_glassed = inst.is_glassed
-		end
-	
-		local function OnLoad(inst, data)
-			inst.is_glassed = nil
-			if data ~= nil and data.is_glassed then
-				ModOnAlterAwake(inst, true)
-			end
-		end
-
-		inst:AddTag("watersource")
-		
-		if not _G.TheWorld.ismastersim then
-			return inst
-		end
-			
-		inst:AddComponent("watersource")
-		
-		inst:WatchWorldState("isalterawake", ModOnAlterAwake)
-		
-		inst.is_glassed = _G.TheWorld.state.isalterawake
-		
-		inst.OnSave = OnSave
-		inst.OnLoad = OnLoad
-	end)
-end
-]]--
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Make some vanilla foods compatible with the mod ingredients.
 local VanillaFood = require("preparedfoods")
 VanillaFood.bananapop.test = function(cooker, names, tags) 
@@ -1539,12 +1450,10 @@ end
 local SERENITY_CC = GetModConfigData("serenity_cc")
 if SERENITY_CC == 1 then
 	local function MakeSerenityArea(inst)
-		_G.TheWorld:PushEvent("overrideambientlighting", Point(200 / 255, 200 / 255, 200 / 255))
 		_G.TheWorld:PushEvent("overridecolourcube", resolvefilepath("images/colourcubesimages/quagmire_cc.tex"))
 	end
 
 	local function RemoveSerenityArea(inst)
-		_G.TheWorld:PushEvent("overrideambientlighting", nil)
 		_G.TheWorld:PushEvent("overridecolourcube", nil)
 	end
 
@@ -1644,4 +1553,36 @@ AddComponentPostInit("retrofitforestmap_anr", function(self)
 		return oldonpostinit(self, ...)
 	end
 end)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- For Installing the new Cookware on the Fire Pits.
+AddPrefabPostInit("firepit", function(inst)
+	local function TestItem(inst, item, giver)
+		if item.components.inventoryitem and item:HasTag("pot_hanger_installer") then
+			return true -- Install the Hanger.
+		else
+			giver.components.talker:Say(GetString(giver, "ANNOUNCE_HANGER_FAIL"))
+		end
+	end
+
+	local function OnGetItemFromPlayer(inst, giver, item)
+		if item.components.inventoryitem ~= nil and item:HasTag("pot_hanger_installer") then
+			_G.SpawnPrefab("kyno_cookware_hanger").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/pot_hanger")
+			inst.components.trader.enabled = false -- Don't accept new items!
+		end
+	end
+	
+	inst:AddTag("serenity_installable")
+	
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst:AddComponent("trader")
+	inst.components.trader:SetAcceptTest(TestItem)
+    inst.components.trader.onaccept = OnGetItemFromPlayer
+end)
+
+-- Fix for fuel items, because the action was "Give" instead of "Add Fuel".
+ACTIONS.ADDFUEL.priority = 5
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

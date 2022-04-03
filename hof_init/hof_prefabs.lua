@@ -59,8 +59,10 @@ PrefabFiles =
 	"k_serenityisland_sapling",
 	"k_serenityisland_crab",
 	"k_serenityisland_spawners",
+	"k_serenityisland_decor",
 	"k_chicken2",
 	"k_chicken2_herd",
 	"k_chicken2_eggs",
+	"k_cookware_pot_hanger",
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
