@@ -277,10 +277,13 @@ AddComponentAction("USEITEM", "tool", function(inst, doer, target, actions, righ
 	end
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- String override for Salt Pond / Sugarwood Tree / Slaughter Tools.
+-- Action String overrides.
 ACTIONS.GIVE.stroverridefn = function(act)
 	if act.target:HasTag("serenity_installable") and act.invobject:HasTag("serenity_installer") then
 		return subfmt(_G.STRINGS.KYNO_INSTALL_INSTALLER, {item = act.invobject:GetBasicDisplayName()})
+	end
+	if act.target:HasTag("sugartree_installable") and act.invobject:HasTag("serenity_installer") then
+		return subfmt(_G.STRINGS.KYNO_INSTALL_TAPPER, {item = act.invobject:GetBasicDisplayName()})
 	end
 	if act.target:HasTag("cookingpot_hanger") and act.invobject:HasTag("pot_installer") then
 		return subfmt(_G.STRINGS.KYNO_INSTALL_POT, {item = act.invobject:GetBasicDisplayName()})
@@ -307,6 +310,13 @@ ACTIONS.FLAY.stroverridefn = function(act)
 	and act.invobject.GetSlaughterActionString ~= nil
 	and act.invobject:GetSlaughterActionString(act.target)
 	or nil
+end
+
+ACTIONS.EAT.stroverridefn = function(act)
+	local obj = act.target or act.invobject
+	if obj:HasTag("drinkable_food") then 
+		return _G.STRINGS.KYNO_DRINK_FOOD 
+	end
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Rockjaws Drops Shark Fin.
@@ -708,6 +718,7 @@ if KEEP_FOOD_K == 1 then
 		"archive_cookpot",
 		"portablecookpot",
 		"portablespicer",
+		"kyno_cookware_syrup",
 	}
 	
 	for k,v in pairs(cooking_stations) do
@@ -1379,6 +1390,25 @@ AddPrefabPostInit("twiggytree", function(inst)
 	end
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Foods that will have their action "Eat" replaced to "Drink".
+local drinkable_foods = {
+	"winter_food8",
+	"goatmilk",
+	"kyno_syrup",
+	"coffee",
+	"icedtea",
+	"bubbletea",
+	"tea",
+	"figjuice",
+	"coconutwater",
+}
+
+for k,v in pairs(drinkable_foods) do
+	AddPrefabPostInit(v, function(inst)
+		inst:AddTag("drinkable_food")
+	end)
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Crows transforms into Pigeons when landing on Pink Park Turf.
 AddPrefabPostInit("crow", function(inst)
 	inst:DoTaskInTime(1/30, function(inst)
@@ -1395,16 +1425,9 @@ AddPrefabPostInit("crow", function(inst)
 				return inst
 			end
 			
-			inst.sounds =
-			{
-				takeoff = "dontstarve/birds/takeoff_quagmire_pigeon",
-				chirp = "dontstarve/birds/chirp_quagmire_pigeon",
-				flyin = "dontstarve/birds/flyin",
-			}
-			
 			inst.components.inventoryitem.onpickupfn = function(inst, doer)
 				inst:Remove()
-				local bird = SpawnPrefab("quagmire_pigeon")
+				local bird = _G.SpawnPrefab("quagmire_pigeon")
 				doer.components.inventory:GiveItem(bird)
 				return true
 			end
@@ -1556,19 +1579,57 @@ end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- For Installing the new Cookware on the Fire Pits.
 AddPrefabPostInit("firepit", function(inst)
+	local function GetFirepit(inst)
+		if not inst.firepit or not inst.firepit:IsValid() or not inst.firepit.components.fueled then
+			local x,y,z = inst.Transform:GetWorldPosition()
+			local ents = _G.TheSim:FindEntities(x,y,z, 0.01)
+			inst.firepit = nil
+			for k,v in pairs(ents) do
+				if v.prefab == 'firepit' then
+					inst.firepit = v
+					break
+				end
+			end
+		end
+		return inst.firepit
+	end
+
+	local function ChangeGrillFireFX(inst)
+	local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("firepit_has_grill")
+			firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+		end
+	end
+
 	local function TestItem(inst, item, giver)
-		if item.components.inventoryitem and item:HasTag("pot_hanger_installer") then
-			return true -- Install the Hanger.
+		-- Hanger / Cookingpot / Large Cookingpot / Syrup Pot / Grill / Large Grill.
+		if item.components.inventoryitem and item:HasTag("firepit_installer") then
+			return true -- Install the contents.
 		else
-			giver.components.talker:Say(GetString(giver, "ANNOUNCE_HANGER_FAIL"))
+			giver.components.talker:Say(GetString(giver, "ANNOUNCE_FIREPITINSTALL_FAIL"))
 		end
 	end
 
 	local function OnGetItemFromPlayer(inst, giver, item)
+		-- Hanger / Cookingpot / Large Cookingpot / Syrup Pot.
 		if item.components.inventoryitem ~= nil and item:HasTag("pot_hanger_installer") then
 			_G.SpawnPrefab("kyno_cookware_hanger").Transform:SetPosition(inst.Transform:GetWorldPosition())
 			inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/pot_hanger")
 			inst.components.trader.enabled = false -- Don't accept new items!
+		end
+		-- Grill / Large Grill.
+		if item.components.inventoryitem ~= nil and item:HasTag("grill_big_installer") then
+			_G.SpawnPrefab("kyno_cookware_grill").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/grill_big")
+			inst.components.trader.enabled = false
+			ChangeGrillFireFX(inst)
+		end
+		if item.components.inventoryitem ~= nil and item:HasTag("grill_small_installer") then
+			_G.SpawnPrefab("kyno_cookware_small_grill").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/grill_small")
+			inst.components.trader.enabled = false
+			ChangeGrillFireFX(inst)
 		end
 	end
 	
@@ -1577,6 +1638,10 @@ AddPrefabPostInit("firepit", function(inst)
 	if not _G.TheWorld.ismastersim then
         return inst
     end
+	
+	if inst:HasTag("firepit_has_grill") then
+		inst.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+	end
 	
 	inst:AddComponent("trader")
 	inst.components.trader:SetAcceptTest(TestItem)

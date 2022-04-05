@@ -93,36 +93,65 @@ local XMAS_FOODS = GetModConfigData("xmas_foods")
 if XMAS_FOODS == 1 then
 	for k, v in pairs(require("hof_foodrecipes_optional")) do
 		if not v.tags then
-			AddCookerRecipe("cookpot", v)
-			AddCookerRecipe("archive_cookpot", v)
-			AddCookerRecipe("kyno_cookware_syrup", v)
+			AddCookerRecipe("cookpot",             			v)
+			AddCookerRecipe("archive_cookpot",     	     	v)
+			AddCookerRecipe("kyno_archive_cookpot",      	v) -- Compatibility with T.A.P!
+			AddCookerRecipe("kyno_cookware_syrup", 	     	v)
+			AddCookerRecipe("kyno_cookware_small", 	     	v)
+			AddCookerRecipe("kyno_cookware_big",   		 	v)
+			AddCookerRecipe("kyno_cookware_small_grill", 	v)
+			AddCookerRecipe("kyno_cookware_grill", 		 	v)
 		end
-		AddCookerRecipe("portablecookpot", v)
+		AddCookerRecipe("portablecookpot",         			v)
 	end
 
 	for k, v in pairs(require("hof_foodspicer_optional")) do
-		AddCookerRecipe("portablespicer", v)
+		AddCookerRecipe("portablespicer",          			v)
 	end
 	
 else -- Do Not Import Winter's Feast Foods.
 
 	for k, v in pairs(require("hof_foodrecipes")) do
 		if not v.tags then
-			AddCookerRecipe("cookpot", v)
-			AddCookerRecipe("archive_cookpot", v)
-			AddCookerRecipe("kyno_cookware_syrup", v)
+			AddCookerRecipe("cookpot",             			v)
+			AddCookerRecipe("archive_cookpot",     			v)
+			AddCookerRecipe("kyno_archive_cookpot", 		v)
+			AddCookerRecipe("kyno_cookware_syrup", 			v)
+			AddCookerRecipe("kyno_cookware_small", 			v)
+			AddCookerRecipe("kyno_cookware_big",   			v)
+			AddCookerRecipe("kyno_cookware_small_grill", 	v)
+			AddCookerRecipe("kyno_cookware_grill", 		 	v)
 		end
-		AddCookerRecipe("portablecookpot", v)
+		AddCookerRecipe("portablecookpot",         			v)
 	end
 
 	for k, v in pairs(require("hof_foodspicer")) do
-		AddCookerRecipe("portablespicer", v)
+		AddCookerRecipe("portablespicer",          			v)
 	end
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Spiced Foods and Potlevel.
-local spices  = { "chili", "garlic", "sugar", "salt" }
-local cookers = { "cookpot", "portablecookpot", "portablespicer", "archive_cookpot", "kyno_archive_cookpot", "kyno_cookware_syrup"}
+local spices  = 
+{ 
+	"chili", 
+	"garlic", 
+	"sugar", 
+	"salt" 
+}
+
+local cookers = 
+{ 
+	"cookpot", 
+	"portablecookpot", 
+	"portablespicer", 
+	"archive_cookpot", 
+	"kyno_archive_cookpot", -- Compatibility with T.A.P!
+	"kyno_cookware_syrup", 
+	"kyno_cookware_small", 
+	"kyno_cookware_big",
+	"kyno_cookware_small_grill",
+	"kyno_cookware_grill",
+}
 
 for i, cooker in ipairs(cookers) do 
 	if not cookerrecipes[cooker] then
@@ -382,19 +411,23 @@ kynofoods.festive_tourtiere.potlevel 		= "med"
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Food On Stations.
 for name, recipe in pairs(kynofoods) do
-	table.insert(cookerrecipes["cookpot"], name)
-	table.insert(cookerrecipes["portablecookpot"], name)
-	table.insert(cookerrecipes["archive_cookpot"], name)
-	table.insert(cookerrecipes["kyno_archive_cookpot"], name)
-	table.insert(cookerrecipes["kyno_cookware_syrup"], name)
+	table.insert(cookerrecipes["cookpot"], 					 		name)
+	table.insert(cookerrecipes["portablecookpot"],			 		name)
+	table.insert(cookerrecipes["archive_cookpot"], 					name)
+	table.insert(cookerrecipes["kyno_archive_cookpot"], 	 		name) -- Compatibility with T.A.P!
+	table.insert(cookerrecipes["kyno_cookware_syrup"], 		 		name)
+	table.insert(cookerrecipes["kyno_cookware_small"], 		 		name)
+	table.insert(cookerrecipes["kyno_cookware_big"], 		 		name)
+	table.insert(cookerrecipes["kyno_cookware_small_grill"], 		name)
+	table.insert(cookerrecipes["kyno_cookware_grill"], 				name)
 	AddPrefabPostInit(name, function(inst)
-		inst.AnimState:OverrideSymbol("swap_food", name, name)
+		inst.AnimState:OverrideSymbol("swap_food", name, 	 		name)
 	end)
 	for _, spicename in ipairs(spices) do
 		local spiced_name = name.."_spice_"..spicename
-		table.insert(cookerrecipes["portablespicer"], spiced_name)
+		table.insert(cookerrecipes["portablespicer"], 		 spiced_name)
 		AddPrefabPostInit(spiced_name, function(inst)
-			inst.AnimState:OverrideSymbol("swap_food", name, name)
+			inst.AnimState:OverrideSymbol("swap_food", 		  name, name)
 		end)
 	end
 end

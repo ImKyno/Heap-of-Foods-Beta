@@ -265,15 +265,6 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
             chirp = soundbank.."/birds/chirp_"..soundname,
             flyin = "dontstarve/birds/flyin",
         }
-		
-		if name == "quagmire_pigeon" then
-			inst.sounds =
-			{
-				takeoff = "dontstarve/birds/takeoff_quagmire_pigeon",
-				chirp = "dontstarve/birds/chirp_quagmire_pigeon",
-				flyin = "dontstarve/birds/flyin",
-			}
-		end
 
         inst.trappedbuild = name.."_build"
 

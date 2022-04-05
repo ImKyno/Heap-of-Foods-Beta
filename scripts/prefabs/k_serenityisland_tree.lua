@@ -25,7 +25,7 @@ local prefabs =
 }
 
 local SAP_REGROW_TIME = 1440 -- 3 Days.
-local SAP_SPOIL_TIME  = 1440 -- After 6 Days (3) The Sap in the tree spoils.
+local SAP_SPOIL_TIME  = 2880 -- After 6 Days the Sap in the tree spoils.
 
 local function SpoilSap(inst)
 	local ruined = SpawnPrefab("kyno_sugartree_ruined")
@@ -248,7 +248,6 @@ local function treefn()
 	inst:AddTag("tree")
     inst:AddTag("shelter")
 	inst:AddTag("sugartree_installable")
-	inst:AddTag("serenity_installable")
 
     inst.entity:SetPristine()
 
