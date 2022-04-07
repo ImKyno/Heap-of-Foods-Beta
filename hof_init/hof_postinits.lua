@@ -288,6 +288,9 @@ ACTIONS.GIVE.stroverridefn = function(act)
 	if act.target:HasTag("cookingpot_hanger") and act.invobject:HasTag("pot_installer") then
 		return subfmt(_G.STRINGS.KYNO_INSTALL_POT, {item = act.invobject:GetBasicDisplayName()})
 	end
+	if act.target:HasTag("elderpot_rubble") and act.invobject:HasTag("serenity_repairtool") then
+	return subfmt(_G.STRINGS.KYNO_REPAIR_TOOL, {item = act.invobject:GetBasicDisplayName()})
+	end
 end
 
 ACTIONS.PICK.stroverridefn = function(act)
@@ -404,37 +407,40 @@ AddPrefabPostInit("tea", function(inst)
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- It's Cursed. Players Have a Chance to Drop Long Pig. Except WX-78, Wurt, Wortox and Wormwood.
-local longpig_characters = {
-	"wilson",
-	"willow",
-	"wolfgang",
-	"wendy",
-	"wickerbottom",
-	"woodie",
-	"waxwell",
-	"wes",
-	"webber",
-	"wathgrithr",
-	"winona",
-	"warly",
-	"walter",
-	"wanda",
-}
+local HUMANMEATY = GetModConfigData("human_meaty")
+if HUMANMEATY == 1 then
+	local longpig_characters = {
+		"wilson",
+		"willow",
+		"wolfgang",
+		"wendy",
+		"wickerbottom",
+		"woodie",
+		"waxwell",
+		"wes",
+		"webber",
+		"wathgrithr",
+		"winona",
+		"warly",
+		"walter",
+		"wanda",
+	}
 
-for k,v in pairs(longpig_characters) do
-	AddPrefabPostInit(v, function(inst)
-		local function ondeath_longpig(inst)
-			if math.random()<0.35 then
-				_G.SpawnPrefab("kyno_humanmeat").Transform:SetPosition(inst.Transform:GetWorldPosition())
-			end
-		end		
+	for k,v in pairs(longpig_characters) do
+		AddPrefabPostInit(v, function(inst)
+			local function ondeath_longpig(inst)
+				if math.random()<0.90 then
+					_G.SpawnPrefab("kyno_humanmeat").Transform:SetPosition(inst.Transform:GetWorldPosition())
+				end
+			end		
 		
-		if not _G.TheWorld.ismastersim then
-			return inst
-		end
+			if not _G.TheWorld.ismastersim then
+				return inst
+			end
 	
-		inst:ListenForEvent("death", ondeath_longpig)
-	end)
+			inst:ListenForEvent("death", ondeath_longpig)
+		end)
+	end
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Pig King Trades Some Items.
@@ -719,6 +725,11 @@ if KEEP_FOOD_K == 1 then
 		"portablecookpot",
 		"portablespicer",
 		"kyno_cookware_syrup",
+		"kyno_cookware_small",
+		"kyno_cookware_big",
+		"kyno_cookware_elder",
+		"kyno_cookware_small_grill",
+		"kyno_cookware_grill",
 	}
 	
 	for k,v in pairs(cooking_stations) do
@@ -841,30 +852,27 @@ AddPrefabPostInit("duckyouglermz", function(inst)
 	inst.components.fertilizer.withered_cycles = TUNING.SOILAMENDER_WITHEREDCYCLES_HIGH
 	inst.components.fertilizer:SetNutrients(FERTILIZER_DEFS.soil_amender_fermented.nutrients)
 end)
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Some items are a bit huge when dropped...
+local function ResizeThisItem(inst)
+	inst.AnimState:SetScale(.75, .75, .75)
+end
+
+local resize_items = {
+	"kyno_radish_cooked",
+	"kyno_cucumber",
+	"kyno_parznip_cooked",
+	"kyno_turnip_cooked",
+	"kyno_turnip_ground",
+	"cucumbersalad",
+}
+
+for k,v in pairs(resize_items) do
+	AddPrefabPostInit(v, ResizeThisItem)
+end
+
 AddPrefabPostInit("cucumbersalad", function(inst)
 	inst.AnimState:SetScale(1.5, 1.5, 1.5)
-end)
-
-AddPrefabPostInit("kyno_radish_cooked", function(inst)
-	inst.AnimState:SetScale(.75, .75, .75)
-end)
-
-AddPrefabPostInit("kyno_cucumber", function(inst)
-	inst.AnimState:SetScale(.75, .75, .75)
-end)
-
-AddPrefabPostInit("kyno_parznip_cooked", function(inst)
-	inst.AnimState:SetScale(.75, .75, .75)
-end)
-
-AddPrefabPostInit("kyno_turnip_cooked", function(inst)
-	inst.AnimState:SetScale(.75, .75, .75)
-end)
-
-AddPrefabPostInit("kyno_turnip_ground", function(inst)
-	inst.AnimState:SetScale(.75, .75, .75)
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Spiced Tropical Bouillabaisse.
@@ -1601,6 +1609,14 @@ AddPrefabPostInit("firepit", function(inst)
 			firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 		end
 	end
+	
+	local function ChangeOvenFireFX(inst)
+	local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("firepit_has_oven")
+			firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+		end
+	end
 
 	local function TestItem(inst, item, giver)
 		-- Hanger / Cookingpot / Large Cookingpot / Syrup Pot / Grill / Large Grill.
@@ -1631,6 +1647,13 @@ AddPrefabPostInit("firepit", function(inst)
 			inst.components.trader.enabled = false
 			ChangeGrillFireFX(inst)
 		end
+		-- Oven / Small Casserole Dish / Large Casserole Dish.
+		if item.components.inventoryitem ~= nil and item:HasTag("oven_installer") then
+			_G.SpawnPrefab("kyno_cookware_oven").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/oven")
+			inst.components.trader.enabled = false
+			ChangeOvenFireFX(inst) -- Yeah, the same.
+		end
 	end
 	
 	inst:AddTag("serenity_installable")
@@ -1640,6 +1663,10 @@ AddPrefabPostInit("firepit", function(inst)
     end
 	
 	if inst:HasTag("firepit_has_grill") then
+		inst.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+	end
+	
+	if inst:HasTag("firepit_has_oven") then
 		inst.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 	end
 	

@@ -42,6 +42,10 @@ local function SayNear(inst)
     end
 end
 
+local function OnFar(inst)
+	SayNear(inst)
+end
+
 local function OnTurnOff(inst)
     inst.components.prototyper.on = false
 	if not inst.AnimState:IsCurrentAnimation("sleep_loop", true) then
@@ -49,7 +53,7 @@ local function OnTurnOff(inst)
 		inst.AnimState:PushAnimation("sleep_loop", true)
 		inst.SoundEmitter:PlaySound("dontstarve/quagmire/creature/swamppig_elder/sleep_in")
 	end
-	inst:DoTaskInTime(1, function() SayFar(inst) end)
+	-- inst:DoTaskInTime(1, function() SayFar(inst) end) -- OnFar instead is better.
 end
 
 local function OnTurnOn(inst)
@@ -103,14 +107,26 @@ local function OnGetItemFromPlayer(inst, giver, item)
 	end
 end
 
+local function SellKitchenStuff(inst)
+	-- inst:DoTaskInTime(1, function() SayNewItems(inst) end) -- Say there's new stuff available.
+	inst.components.craftingstation:LearnItem("kyno_cookware_kit_hanger", "kit_hanger_p")
+	
+	inst:AddTag("pigelder_pot_repaired")
+	inst.potrepaired = true
+end
+
 local function OnSave(inst, data)
 	data.foodgift = inst.foodgift
+	data.potrepaired = inst.potrepaired
 end
 
 local function OnLoad(inst, data)
     if data ~= nil and data.foodgift ~= nil then
         inst:AddTag("pigelder_gifted")
     end
+	if data ~= nil and data.potrepaired ~= nil then
+		inst:AddTag("pigelder_pot_repaired")
+	end
 end
 
 local function fn()
@@ -157,7 +173,8 @@ local function fn()
 	inst:AddComponent("craftingstation")
 	
 	inst:AddComponent("playerprox")
-	inst.components.playerprox:SetDist(4, 4)
+	inst.components.playerprox:SetDist(4, 7)
+	inst.components.playerprox:SetOnPlayerFar(OnFar)
 
     inst:AddComponent("prototyper")
     inst.components.prototyper.onactivate = OnActivate
@@ -171,6 +188,8 @@ local function fn()
 	
 	inst:WatchWorldState("isnight", OnIsNight)
     OnIsNight(inst, TheWorld.state.isnight)
+	
+	inst:ListenForEvent("elderpot_repaired", SellKitchenStuff)
 	
 	inst.OnSave	= OnSave
 	inst.OnLoad = OnLoad

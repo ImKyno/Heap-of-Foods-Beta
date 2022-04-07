@@ -34,8 +34,8 @@ local KIT_LOOT =
     },
 	[3] =
 	{
-		"kyno_cookware_oven",
-		"kyno_cookware_oven",
+		"kyno_cookware_oven_item",
+		"kyno_cookware_oven_item",
 		"kyno_cookware_small_casserole",
 		"kyno_cookware_casserole",
 	},
@@ -162,6 +162,47 @@ local function syruppotkitfn()
 	return inst
 end
 
+local function ovenkitfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst, "small", 0.2, 0.95)
+
+	inst.AnimState:SetBank("quagmire_crate")
+	inst.AnimState:SetBuild("quagmire_crate")
+	inst.AnimState:PlayAnimation("idle")
+	
+	inst.AnimState:OverrideSymbol("swap_logo", "quagmire_crate", "logo_oven")
+
+	inst:AddTag("oven_kit")
+	inst:AddTag("bundle")
+	inst:AddTag("unwrappable")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "KYNO_COOKWARE_KIT"
+		
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_cookware_kit_oven"
+	
+	inst:AddComponent("unwrappable")
+	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
+	inst.components.unwrappable.itemdata = GetItemData(3, KIT_LOOT)
+
+	return inst
+end
+
 local function grillsmallkitfn()
 	local inst = CreateEntity()
 
@@ -246,5 +287,6 @@ end
 
 return Prefab("kyno_cookware_kit_hanger", cookingpotkitfn, assets, prefabs),
 Prefab("kyno_cookware_kit_syrup", syruppotkitfn, assets, prefabs),
+Prefab("kyno_cookware_kit_oven", ovenkitfn, assets, prefabs),
 Prefab("kyno_cookware_kit_small_grill", grillsmallkitfn, assets, prefabs),
 Prefab("kyno_cookware_kit_grill", grillkitfn, assets, prefabs)

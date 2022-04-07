@@ -41,7 +41,6 @@ local prefabs =
 	"kyno_cookware_small",
 	"kyno_cookware_small_pot",
 	
-	"kyno_cookware_steam",
 	"kyno_cookware_fire",
 }
 -- Remember to update this function if Klei updates the stewer component.
@@ -400,8 +399,10 @@ end
 local function continuedonefn(inst)
     if not inst:HasTag("burnt") and inst:HasTag("pot_big") then
         inst.AnimState:PlayAnimation("cooking_boil_big", true)
-		inst._steam:push()
-		inst.steam_task = inst:DoPeriodicTask(2, function() OnPotSteam(inst) end)
+		inst.steam_task = inst:DoPeriodicTask(2, function() 
+			inst._steam:push()
+			OnPotSteam(inst) 
+		end)
     else
 		inst.AnimState:PlayAnimation("cooking_boil_small", true)
 		
@@ -732,7 +733,114 @@ local function potsmallfn()
     return inst
 end
 
+local pit_defs = {
+	pit = { { 0, 0, 0 } },
+}
+
+local function elderpotfn()
+	local inst = CreateEntity()
+	
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddLight()
+    inst.entity:AddNetwork()
+	
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("kyno_cookware_syrup.tex")
+	
+	inst.Light:Enable(false)
+	inst.Light:SetRadius(.6)
+	inst.Light:SetFalloff(1)
+	inst.Light:SetIntensity(.5)
+	inst.Light:SetColour(235/255,62/255,12/255)
+	
+	MakeObstaclePhysics(inst, .3)
+	
+    inst.AnimState:SetBank("quagmire_pot_hanger")
+    inst.AnimState:SetBuild("quagmire_pot_hanger")
+    inst.AnimState:PlayAnimation("idle_pot")
+	
+	inst.AnimState:AddOverrideBuild("quagmire_pot_syrup")
+	inst.AnimState:OverrideSymbol("pot", "quagmire_pot_syrup", "pot")
+	
+    inst.AnimState:Hide("mouseover")
+    inst.AnimState:Hide("goop")
+    inst.AnimState:Hide("goop_small")
+    inst.AnimState:Hide("goop_syrup")
+
+    inst.AnimState:SetFinalOffset(-2)
+    
+	inst:AddTag("structure")
+	inst:AddTag("stewer")
+	inst:AddTag("pot_syrup")
+	inst:AddTag("pot_elder")
+	
+	inst._steam = net_event(inst.GUID, "steampot")
+	
+	inst.entity:SetPristine()
+	
+    if not TheWorld.ismastersim then
+		inst:ListenForEvent("steampot", OnPotSteam)
+		inst.OnEntityReplicated = function(inst) 
+			inst.replica.container:WidgetSetup("syrup_pot") 
+		end
+        return inst
+    end
+	
+	local decor_items = pit_defs
+	inst.decor = {}
+	for item_name, data in pairs(decor_items) do
+		for l, offset in pairs(data) do
+			local item_inst = SpawnPrefab("firepit")
+			item_inst.components.burnable:OverrideBurnFXBuild("quagmire_pot_fire")
+			item_inst.components.workable:SetWorkable(false)
+			item_inst.components.trader.enabled = false
+			item_inst.entity:SetParent(inst.entity)
+			item_inst.Transform:SetPosition(offset[1], offset[2], offset[3])
+			table.insert(inst.decor, item_inst)
+		end
+	end
+	
+	inst:AddComponent("stewer")
+	inst.components.stewer.cooktimemult = .3
+	inst.components.stewer.onstartcooking = startcookfn
+	inst.components.stewer.oncontinuecooking = continuecookfn
+	inst.components.stewer.oncontinuedone = continuedonefn
+	inst.components.stewer.ondonecooking = donecookfn
+	inst.components.stewer.onharvest = harvestfn
+	inst.components.stewer.Harvest = ExtraHarvest -- Extra Syrup!
+	inst.components.stewer.onspoil = spoilfn
+	inst.components.stewer.CanCook = cancookfn
+
+	inst:AddComponent("container")
+	inst.components.container:WidgetSetup("syrup_pot")
+	inst.components.container.onopenfn = OnOpen
+	inst.components.container.onclosefn = OnClose
+	inst.components.container.skipclosesnd = true
+	inst.components.container.skipopensnd = true
+	
+	-- inst:AddComponent("lootdropper")
+	-- inst.components.lootdropper:SetLoot({"kyno_cookware_syrup_pot"})
+	
+    inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
+	
+	-- inst:AddComponent("workable")
+    -- inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
+	-- inst.components.workable:SetOnFinishCallback(OnHammeredPot)
+	-- inst.components.workable:SetOnWorkCallback(OnHitPotSmall)
+	-- inst.components.workable:SetWorkLeft(1)
+	
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
+	inst.OnLoadPostPass = OnLoadPostPass
+	
+    return inst
+end
+
 return Prefab("kyno_cookware_hanger", hangerfn, assets, prefabs),
 Prefab("kyno_cookware_syrup", syruppotfn, assets, prefabs),
 Prefab("kyno_cookware_big", potbigfn, assets, prefabs),
-Prefab("kyno_cookware_small", potsmallfn, assets, prefabs)
+Prefab("kyno_cookware_small", potsmallfn, assets, prefabs),
+Prefab("kyno_cookware_elder", elderpotfn, assets, prefabs) -- This pot is for the Pig Elder on Serenity Island.

@@ -334,7 +334,7 @@ local function onworkfinish(inst, chopper)
 	inst.SoundEmitter:PlaySound("dontstarve/forest/treeCrumble")
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
 	inst.components.lootdropper:DropLoot()
-	inst:DoPeriodicTask(0.2, function() TheWorld:PushEvent("beginregrowth", inst) inst:Remove() end)
+	inst:DoTaskInTime(1, function() TheWorld:PushEvent("beginregrowth", inst) inst:Remove() end)
 end
 
 local function parznip_big()

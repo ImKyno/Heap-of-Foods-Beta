@@ -222,6 +222,8 @@ local function OnLoad(inst, data)
 	end
 end
 
+local s = .85
+
 local function treefn()
     local inst = CreateEntity()
 
@@ -230,7 +232,7 @@ local function treefn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(1, 1, 1)
+	inst.AnimState:SetScale(s, s, s)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("quagmire_sugarwoodtree.png")
@@ -284,7 +286,7 @@ local function stumpfn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(1, 1, 1)
+	inst.AnimState:SetScale(s, s, s)
 
 	local minimap = inst.entity:AddMiniMapEntity()
     minimap:SetIcon("kyno_bananatree_stump.tex") -- KEKW
@@ -323,7 +325,7 @@ local function treesapfn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(1, 1, 1)
+	inst.AnimState:SetScale(s, s, s)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("quagmire_sugarwoodtree_tapped.png")
@@ -388,7 +390,7 @@ local function ruinedfn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(1, 1, 1)
+	inst.AnimState:SetScale(s, s, s)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("quagmire_sugarwoodtree_tapped.png")
@@ -447,7 +449,7 @@ local function ruined2fn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(1, 1, 1)
+	inst.AnimState:SetScale(s, s, s)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("quagmire_sugarwoodtree.png")
@@ -498,7 +500,7 @@ local function stump_ruinedfn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(1, 1, 1)
+	inst.AnimState:SetScale(s, s, s)
 
 	local minimap = inst.entity:AddMiniMapEntity()
     minimap:SetIcon("kyno_bananatree_stump.tex") -- KEKW

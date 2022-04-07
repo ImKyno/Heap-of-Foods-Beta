@@ -18,6 +18,7 @@ local prefabs =
 	"charcoal",
 
 	"kyno_sap",
+	"kyno_sap_spoiled",
 	"kyno_sugartree_short_stump",
 	"kyno_sugartree_normal_stump",
 	"kyno_sugartree_bud",
@@ -113,6 +114,8 @@ local function GrowTall(inst)
 	inst:Remove()
 end
 
+local s = .85
+
 local function shortfn()
     local inst = CreateEntity()
 
@@ -121,7 +124,7 @@ local function shortfn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(1, 1, 1)
+	inst.AnimState:SetScale(s, s, s)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("quagmire_sugarwoodtree.png")
@@ -182,7 +185,7 @@ local function normalfn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(1, 1, 1)
+	inst.AnimState:SetScale(s, s, s)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("quagmire_sugarwoodtree.png")
@@ -243,7 +246,7 @@ local function stump_shortfn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(1, 1, 1)
+	inst.AnimState:SetScale(s, s, s)
 
 	local minimap = inst.entity:AddMiniMapEntity()
     minimap:SetIcon("kyno_bananatree_stump.tex") -- KEKW
@@ -282,7 +285,7 @@ local function stump_normalfn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(1, 1, 1)
+	inst.AnimState:SetScale(s, s, s)
 
 	local minimap = inst.entity:AddMiniMapEntity()
     minimap:SetIcon("kyno_bananatree_stump.tex") -- KEKW

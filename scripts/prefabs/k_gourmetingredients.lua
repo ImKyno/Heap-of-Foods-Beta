@@ -22,7 +22,6 @@ local prefabs =
 	"spoiled_food",
 	"kyno_bacon_cooked",
 	"kyno_white_cap_cooked",
-	"kyno_sap_ruined",
 	"kyno_wheat_cooked",
 	"kyno_salt",
 	"kyno_crabmeat_cooked",

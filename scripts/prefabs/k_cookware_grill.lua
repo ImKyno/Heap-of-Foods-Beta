@@ -227,9 +227,9 @@ end
 local function continuedonefn(inst)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("cooking_grill_big", true)
-		inst._smoke:push()
 		
 		inst.smoke_task = inst:DoPeriodicTask(2, function() 
+			inst._smoke:push()
 			OnGrillSmoke(inst) 
 		end)
     end

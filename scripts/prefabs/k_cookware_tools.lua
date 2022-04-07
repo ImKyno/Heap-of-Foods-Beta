@@ -7,6 +7,10 @@ local assets =
 	
 	Asset("ANIM", "anim/quagmire_grill.zip"),
     Asset("ANIM", "anim/quagmire_grill_small.zip"),
+	
+	Asset("ANIM", "anim/quagmire_oven.zip"),
+	Asset("ANIM", "anim/quagmire_casseroledish.zip"),
+	Asset("ANIM", "anim/quagmire_casseroledish_small.zip"),
 		
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -198,9 +202,101 @@ local function grillsmallfn()
     return inst
 end
 
+local function ovenfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst, "small", 0.2, 0.95)
+
+	inst.AnimState:SetBank("quagmire_oven")
+	inst.AnimState:SetBuild("quagmire_oven")
+	inst.AnimState:PlayAnimation("item")
+
+	inst:AddTag("firepit_installer")
+	inst:AddTag("oven_installer")
+	inst:AddTag("serenity_installer")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("tradable")
+	inst:AddComponent("inspectable")
+	
+	inst:AddComponent("stackable")
+    inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
+		
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+
+	return inst
+end
+
+local function casserolefn(small)
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst, "small", 0.2, 0.95)
+	
+	if small then
+		inst.AnimState:SetBank("quagmire_casseroledish_small")
+		inst.AnimState:SetBuild("quagmire_casseroledish_small")
+	else
+		inst.AnimState:SetBank("quagmire_casseroledish")
+		inst.AnimState:SetBuild("quagmire_casseroledish")
+	end
+	inst.AnimState:PlayAnimation("idle")
+
+	inst:AddTag("casserole_installer")
+	if small then
+		inst:AddTag("casserole_small_installer")
+	else
+		inst:AddTag("casserole_big_installer")
+	end
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("tradable")
+	inst:AddComponent("inspectable")
+		
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+
+	return inst
+end
+
+local function casserolebigfn()
+	local inst = casserolefn(false)
+	return inst
+end
+
+local function casserolesmallfn()
+	local inst = casserolefn(true)
+	return inst
+end
+
 return Prefab("kyno_cookware_hanger_item", hangerfn, assets, prefabs),
 Prefab("kyno_cookware_syrup_pot", potsyrupfn, assets, prefabs),
 Prefab("kyno_cookware_big_pot", potbigfn, assets, prefabs),
 Prefab("kyno_cookware_small_pot", potsmallfn, assets, prefabs),
 Prefab("kyno_cookware_grill_item", grillbigfn, assets, prefabs),
-Prefab("kyno_cookware_small_grill_item", grillsmallfn, assets, prefabs)
+Prefab("kyno_cookware_small_grill_item", grillsmallfn, assets, prefabs),
+Prefab("kyno_cookware_oven_item", ovenfn, assets, prefabs),
+Prefab("kyno_cookware_casserole", casserolebigfn, assets, prefabs),
+Prefab("kyno_cookware_small_casserole", casserolesmallfn, assets, prefabs)

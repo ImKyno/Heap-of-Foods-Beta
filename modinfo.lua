@@ -1,6 +1,6 @@
 name = "Heap of Foods"
 version = "3.4-A"
-local myupdate = "Salty & Sweet Travels"
+local myupdate = "Salty & Sweetie Travels"
 
 description = "󰀄 Adds 117 brand new Crock Pot dishes alongside new ingredients to use!\n\n󰀦 Also features a brand new Biome somewhere in the Ocean!\n\n󰀌 Mod Version: "..version.."\n\󰀧 Update: "..myupdate..""
 author = "Kyno"
@@ -69,6 +69,7 @@ configuration_options =
         },
         default = 1,
     },
+	Title("Food Options", "Options for foods and ingredients."),
 	{
 		name = "frida_coffee",
 		label = "Wigfrid Drinks Coffee",
@@ -101,7 +102,7 @@ configuration_options =
 	},
 	{
 		name = "xmas_foods",
-		label = "Festive Foods",
+		label = "Optional Foods",
 		hover = "Should Winter's Feast \"craftable foods\" be cookable in the Crock Pot?\nWinter's Feast foods can't be cooked if this option is Disabled.",
 		options =
 		{
@@ -110,6 +111,21 @@ configuration_options =
 			data = 0},
 			{description = "Yes",
 			hover = "Winter's Feast foods can be cooked in the Crock Pot.",
+			data = 1},
+		},
+		default = 1,
+	},
+	{
+		name = "human_meaty",
+		label = "Long Pig From Players",
+		hover = "Should Players drop Long Pigs upon death?\nNote: If disabled, this will cause Deadly Feast to be uncookable.",
+		options =
+		{
+			{description = "No",
+			hover = "Players will not drop Long Pigs upon death.",
+			data = 0},
+			{description = "Yes",
+			hover = "Players will drop Long Pigs upon death.",
 			data = 1},
 		},
 		default = 1,

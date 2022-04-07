@@ -1,9 +1,13 @@
+UPGRADETYPES.KYNO_ELDERPOT = "kyno_elderpot_repairtool"
+
 local assets =
 {
 	Asset("ANIM", "anim/quagmire_salt_rack.zip"),
 	Asset("ANIM", "anim/quagmire_sapbucket.zip"),
 	Asset("ANIM", "anim/quagmire_crab_trap.zip"),
 	Asset("ANIM", "anim/quagmire_slaughtertool.zip"),
+	
+	Asset("ANIM", "anim/hammer.zip"),
 	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
@@ -221,7 +225,50 @@ local function slaughterfn()
 	return inst
 end
 
+local function repairtoolfn()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddAnimState()
+    inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
+
+    MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+    inst.AnimState:SetBank("hammer")
+    inst.AnimState:SetBuild("swap_hammer")
+    inst.AnimState:PlayAnimation("idle")
+
+    inst:AddTag("irreplaceable")
+    inst:AddTag("nonpotatable")
+	inst:AddTag("serenity_repairtool")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst:AddComponent("tradable")
+
+    inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "HAMMER"
+	
+    inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "hammer"
+
+    inst:ListenForEvent("floater_startfloating", function(inst) inst.AnimState:PlayAnimation("idle") end)
+    inst:ListenForEvent("floater_stopfloating", function(inst) inst.AnimState:PlayAnimation("idle") end)
+
+    MakeHauntableLaunch(inst)
+
+    return inst
+end
+
 return Prefab("kyno_saltrack_installer", rackfn, assets, prefabs),
 Prefab("kyno_sapbucket_installer", bucketfn, assets, prefabs),
 Prefab("kyno_crabtrap_installer", trapfn, assets, prefabs),
-Prefab("kyno_slaughtertool", slaughterfn, assets, prefabs)
+Prefab("kyno_slaughtertool", slaughterfn, assets, prefabs),
+Prefab("kyno_repairtool", repairtoolfn, assets, prefabs)

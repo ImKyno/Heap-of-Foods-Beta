@@ -99,6 +99,7 @@ if XMAS_FOODS == 1 then
 			AddCookerRecipe("kyno_cookware_syrup", 	     	v)
 			AddCookerRecipe("kyno_cookware_small", 	     	v)
 			AddCookerRecipe("kyno_cookware_big",   		 	v)
+			AddCookerRecipe("kyno_cookware_elder",          v)
 			AddCookerRecipe("kyno_cookware_small_grill", 	v)
 			AddCookerRecipe("kyno_cookware_grill", 		 	v)
 		end
@@ -119,6 +120,7 @@ else -- Do Not Import Winter's Feast Foods.
 			AddCookerRecipe("kyno_cookware_syrup", 			v)
 			AddCookerRecipe("kyno_cookware_small", 			v)
 			AddCookerRecipe("kyno_cookware_big",   			v)
+			AddCookerRecipe("kyno_cookware_elder",          v)
 			AddCookerRecipe("kyno_cookware_small_grill", 	v)
 			AddCookerRecipe("kyno_cookware_grill", 		 	v)
 		end
@@ -149,6 +151,7 @@ local cookers =
 	"kyno_cookware_syrup", 
 	"kyno_cookware_small", 
 	"kyno_cookware_big",
+	"kyno_cookware_elder",
 	"kyno_cookware_small_grill",
 	"kyno_cookware_grill",
 }
@@ -418,6 +421,7 @@ for name, recipe in pairs(kynofoods) do
 	table.insert(cookerrecipes["kyno_cookware_syrup"], 		 		name)
 	table.insert(cookerrecipes["kyno_cookware_small"], 		 		name)
 	table.insert(cookerrecipes["kyno_cookware_big"], 		 		name)
+	table.insert(cookerrecipes["kyno_cookware_elder"], 		 		name)
 	table.insert(cookerrecipes["kyno_cookware_small_grill"], 		name)
 	table.insert(cookerrecipes["kyno_cookware_grill"], 				name)
 	AddPrefabPostInit(name, function(inst)

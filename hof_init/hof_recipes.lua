@@ -224,6 +224,19 @@ local KynSlaughter			= AddRecipe2("kyno_slaughtertool_p", {Ingredient("kyno_crab
 	{"CRAFTING_STATION"}
 )
 
+local KynCookpotKit			= AddRecipe2("kit_hanger_p", {Ingredient("cutgrass", 1)}, TECH.LOST,
+	{
+		nounlock			= true,
+		actionstr			= "SERENITYSHOP",
+		sg_state			= "give",
+		product				= "kyno_cookware_kit_hanger",
+		numtogive			= 1,
+		atlas				= ModAtlas,
+		image				= "kyno_cookware_kit_hanger.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
 local KynSeedPotato 		= AddRecipe2("kyno_sweetpotato_seeds_p", {Ingredient("potato_seeds", 3)}, TECH.SERENITYSHOP_ONE,
 	{
 		nounlock 			= true, 
