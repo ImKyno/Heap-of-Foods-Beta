@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Atlas>
-	<Texture filename="hof_cookbook.tex" />
+	<Texture filename="hof_cookbookimages.tex" />
 	<Elements>
 		<Element name="bisque.tex" u1="0.001" u2="0.0615" v2="0.999" v1="0.876" variant="" />
 		<Element name="bowlofgears.tex" u1="0.0635" u2="0.124" v2="0.999" v1="0.876" variant="" />
@@ -114,10 +114,11 @@
 		<Element name="sharkfinsoup.tex" u1="0.8135" u2="0.874" v2="0.374" v1="0.251" variant="" />
 		<Element name="slaw.tex" u1="0.876" u2="0.9365" v2="0.374" v1="0.251" variant="" />
 		<Element name="snakebonesoup.tex" u1="0.9385" u2="0.999" v2="0.374" v1="0.251" variant="" />
-		<Element name="steamedhamsandwich.tex" u1="0.501" u2="0.5615" v2="0.249" v1="0.126" variant="" />
-		<Element name="sweetpotatosouffle.tex" u1="0.5635" u2="0.624" v2="0.249" v1="0.126" variant="" />
-		<Element name="tea.tex" u1="0.626" u2="0.6865" v2="0.249" v1="0.126" variant="" />
-		<Element name="tropicalbouillabaisse.tex" u1="0.6885" u2="0.749" v2="0.249" v1="0.126" variant="" />
-		<Element name="waterycressbowl.tex" u1="0.751" u2="0.8115" v2="0.249" v1="0.126" variant="" />
+		<Element name="soulstew.tex" u1="0.501" u2="0.5615" v2="0.249" v1="0.126" variant="" />
+		<Element name="steamedhamsandwich.tex" u1="0.5635" u2="0.624" v2="0.249" v1="0.126" variant="" />
+		<Element name="sweetpotatosouffle.tex" u1="0.626" u2="0.6865" v2="0.249" v1="0.126" variant="" />
+		<Element name="tea.tex" u1="0.6885" u2="0.749" v2="0.249" v1="0.126" variant="" />
+		<Element name="tropicalbouillabaisse.tex" u1="0.751" u2="0.8115" v2="0.249" v1="0.126" variant="" />
+		<Element name="waterycressbowl.tex" u1="0.8135" u2="0.874" v2="0.249" v1="0.126" variant="" />
 	</Elements>
 </Atlas>

@@ -41,7 +41,7 @@ end
 local function GetSlaughterActionString(inst, target)
     local t = GetTime()
     if target ~= inst._lasttarget or inst._lastactionstr == nil or inst._actionresettime < t then
-        inst._lastactionstr = GetRandomItem(STRINGS.ACTIONS.SLAUGHTER)
+        inst._lastactionstr = GetRandomItem(STRINGS.ACTIONS.SLAUGHTER2)
         inst._lasttarget = target
     end
     inst._actionresettime = t + .1

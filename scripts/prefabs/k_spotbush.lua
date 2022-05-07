@@ -35,7 +35,7 @@ local function dig_up(inst, chopper)
 		inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product)
     end
 	inst.components.lootdropper:SpawnLootPrefab("dug_kyno_spotbush")
-	TheWorld:PushEvent("beginregrowth", inst)
+	-- TheWorld:PushEvent("beginregrowth", inst)
 	inst:Remove()
 end
 

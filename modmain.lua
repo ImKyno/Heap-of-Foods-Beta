@@ -2,6 +2,8 @@
 -- Common Dependencies.
 local _G 			= GLOBAL
 local require 		= _G.require
+
+require("hof_constants")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Mod Dependencies.
 modimport("hof_init/hof_prefabs")
@@ -12,6 +14,7 @@ modimport("hof_init/hof_meatrackfix")
 modimport("hof_init/hof_farming")
 modimport("hof_init/hof_cooking")
 modimport("hof_init/hof_retrofit")
+modimport("hof_init/hof_regrowth")
 modimport("hof_init/hof_containers")
 modimport("hof_init/hof_loadingtips")
 modimport("hof_init/hof_icons")
@@ -75,9 +78,9 @@ Assets =
 	Asset("IMAGE", "images/tabimages/hof_tabimages.tex"),
 	Asset("ATLAS", "images/tabimages/hof_tabimages.xml"),
 	
-	Asset("IMAGE", "images/cookbookimages/hof_cookbook.tex"),
-	Asset("ATLAS", "images/cookbookimages/hof_cookbook.xml"),
-	Asset("ATLAS_BUILD", "images/cookbookimages/hof_cookbook.xml", 256),
+	Asset("IMAGE", "images/cookbookimages/hof_cookbookimages.tex"),
+	Asset("ATLAS", "images/cookbookimages/hof_cookbookimages.xml"),
+	Asset("ATLAS_BUILD", "images/cookbookimages/hof_cookbookimages.xml", 256),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -93,42 +96,44 @@ local XMAS_FOODS = GetModConfigData("xmas_foods")
 if XMAS_FOODS == 1 then
 	for k, v in pairs(require("hof_foodrecipes_optional")) do
 		if not v.tags then
-			AddCookerRecipe("cookpot",             			v)
-			AddCookerRecipe("archive_cookpot",     	     	v)
-			AddCookerRecipe("kyno_archive_cookpot",      	v) -- Compatibility with T.A.P!
-			AddCookerRecipe("kyno_cookware_syrup", 	     	v)
-			AddCookerRecipe("kyno_cookware_small", 	     	v)
-			AddCookerRecipe("kyno_cookware_big",   		 	v)
-			AddCookerRecipe("kyno_cookware_elder",          v)
-			AddCookerRecipe("kyno_cookware_small_grill", 	v)
-			AddCookerRecipe("kyno_cookware_grill", 		 	v)
+			AddCookerRecipe("cookpot",             					v)
+			AddCookerRecipe("archive_cookpot",     	     			v)
+			AddCookerRecipe("kyno_cookware_syrup", 	     			v)
+			AddCookerRecipe("kyno_cookware_small", 	     			v)
+			AddCookerRecipe("kyno_cookware_big",   		 			v)
+			AddCookerRecipe("kyno_cookware_elder",         		 	v)
+			AddCookerRecipe("kyno_cookware_small_grill", 			v)
+			AddCookerRecipe("kyno_cookware_grill", 		 			v)
+			AddCookerRecipe("kyno_cookware_oven_small_casserole", 	v)
+			AddCookerRecipe("kyno_cookware_oven_casserole", 		v)
 		end
-		AddCookerRecipe("portablecookpot",         			v)
+		AddCookerRecipe("portablecookpot",         					v)
 	end
 
 	for k, v in pairs(require("hof_foodspicer_optional")) do
-		AddCookerRecipe("portablespicer",          			v)
+		AddCookerRecipe("portablespicer",          					v)
 	end
 	
 else -- Do Not Import Winter's Feast Foods.
 
 	for k, v in pairs(require("hof_foodrecipes")) do
 		if not v.tags then
-			AddCookerRecipe("cookpot",             			v)
-			AddCookerRecipe("archive_cookpot",     			v)
-			AddCookerRecipe("kyno_archive_cookpot", 		v)
-			AddCookerRecipe("kyno_cookware_syrup", 			v)
-			AddCookerRecipe("kyno_cookware_small", 			v)
-			AddCookerRecipe("kyno_cookware_big",   			v)
-			AddCookerRecipe("kyno_cookware_elder",          v)
-			AddCookerRecipe("kyno_cookware_small_grill", 	v)
-			AddCookerRecipe("kyno_cookware_grill", 		 	v)
+			AddCookerRecipe("cookpot",             					v)
+			AddCookerRecipe("archive_cookpot",     					v)
+			AddCookerRecipe("kyno_cookware_syrup", 					v)
+			AddCookerRecipe("kyno_cookware_small", 					v)
+			AddCookerRecipe("kyno_cookware_big",   					v)
+			AddCookerRecipe("kyno_cookware_elder",          		v)
+			AddCookerRecipe("kyno_cookware_small_grill", 			v)
+			AddCookerRecipe("kyno_cookware_grill", 		 			v)
+			AddCookerRecipe("kyno_cookware_oven_small_casserole", 	v)
+			AddCookerRecipe("kyno_cookware_oven_casserole", 		v)
 		end
-		AddCookerRecipe("portablecookpot",         			v)
+		AddCookerRecipe("portablecookpot",         					v)
 	end
 
 	for k, v in pairs(require("hof_foodspicer")) do
-		AddCookerRecipe("portablespicer",          			v)
+		AddCookerRecipe("portablespicer",          					v)
 	end
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -146,14 +151,15 @@ local cookers =
 	"cookpot", 
 	"portablecookpot", 
 	"portablespicer", 
-	"archive_cookpot", 
-	"kyno_archive_cookpot", -- Compatibility with T.A.P!
+	"archive_cookpot",
 	"kyno_cookware_syrup", 
 	"kyno_cookware_small", 
 	"kyno_cookware_big",
 	"kyno_cookware_elder",
 	"kyno_cookware_small_grill",
 	"kyno_cookware_grill",
+	"kyno_cookware_oven_small_casserole",
+	"kyno_cookware_oven_casserole",
 }
 
 for i, cooker in ipairs(cookers) do 
@@ -206,6 +212,7 @@ local kynofoods =
 	figjuice                = require("hof_foodrecipes").figjuice,
 	coconutwater            = require("hof_foodrecipes").coconutwater,
 	eyeballsoup             = require("hof_foodrecipes").eyeballsoup,
+	soulstew             	= require("hof_foodrecipes").soulstew,
 	
 	-- The Gorge.
 	gorge_bread 			= require("hof_foodrecipes").gorge_bread,
@@ -393,6 +400,7 @@ kynofoods.bowlofpopcorn.potlevel            = "med"
 kynofoods.figjuice.potlevel                 = "med"
 kynofoods.coconutwater.potlevel             = "med"
 kynofoods.eyeballsoup.potlevel              = "med"
+kynofoods.soulstew.potlevel              	= "low"
 kynofoods.festive_berrysauce.potlevel 		= "med"
 kynofoods.festive_bibingka.potlevel 		= "med"
 kynofoods.festive_cabbagerolls.potlevel 	= "med"
@@ -414,25 +422,52 @@ kynofoods.festive_tourtiere.potlevel 		= "med"
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Food On Stations.
 for name, recipe in pairs(kynofoods) do
-	table.insert(cookerrecipes["cookpot"], 					 		name)
-	table.insert(cookerrecipes["portablecookpot"],			 		name)
-	table.insert(cookerrecipes["archive_cookpot"], 					name)
-	table.insert(cookerrecipes["kyno_archive_cookpot"], 	 		name) -- Compatibility with T.A.P!
-	table.insert(cookerrecipes["kyno_cookware_syrup"], 		 		name)
-	table.insert(cookerrecipes["kyno_cookware_small"], 		 		name)
-	table.insert(cookerrecipes["kyno_cookware_big"], 		 		name)
-	table.insert(cookerrecipes["kyno_cookware_elder"], 		 		name)
-	table.insert(cookerrecipes["kyno_cookware_small_grill"], 		name)
-	table.insert(cookerrecipes["kyno_cookware_grill"], 				name)
+	table.insert(cookerrecipes["cookpot"], 					 			name)
+	table.insert(cookerrecipes["portablecookpot"],			 			name)
+	table.insert(cookerrecipes["archive_cookpot"], 						name)
+	table.insert(cookerrecipes["kyno_cookware_syrup"], 		 			name)
+	table.insert(cookerrecipes["kyno_cookware_small"], 		 			name)
+	table.insert(cookerrecipes["kyno_cookware_big"], 		 			name)
+	table.insert(cookerrecipes["kyno_cookware_elder"], 		 			name)
+	table.insert(cookerrecipes["kyno_cookware_small_grill"], 			name)
+	table.insert(cookerrecipes["kyno_cookware_grill"], 					name)
+	table.insert(cookerrecipes["kyno_cookware_oven_small_casserole"], 	name)
+	table.insert(cookerrecipes["kyno_cookware_oven_casserole"], 		name)
 	AddPrefabPostInit(name, function(inst)
-		inst.AnimState:OverrideSymbol("swap_food", name, 	 		name)
+		inst.AnimState:OverrideSymbol("swap_food", name, 	 			name)
 	end)
 	for _, spicename in ipairs(spices) do
 		local spiced_name = name.."_spice_"..spicename
-		table.insert(cookerrecipes["portablespicer"], 		 spiced_name)
+		table.insert(cookerrecipes["portablespicer"], 		 	 spiced_name)
 		AddPrefabPostInit(spiced_name, function(inst)
-			inst.AnimState:OverrideSymbol("swap_food", 		  name, name)
+			inst.AnimState:OverrideSymbol("swap_food", 		  	  name, name)
 		end)
 	end
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Support for the Craft Pot Mod.
+--[[
+if _G.KnownModIndex:IsModEnabled("workshop-727774324") then	
+	require("cookingpots")
+	local COOKINGPOTS = _G.COOKINGPOTS
+
+	local modcookpots = 
+	{ 
+		"kyno_cookware_syrup", 
+		"kyno_cookware_small", 
+		"kyno_cookware_big",
+		"kyno_cookware_elder",
+		"kyno_cookware_small_grill",
+		"kyno_cookware_grill",
+		"kyno_cookware_oven_small_casserole",
+		"kyno_cookware_oven_casserole",
+	}
+
+	for k,v in pairs(modcookpots) do
+		if _G.AddCookingPot then
+			_G.AddCookingPot(v)
+		end
+	end
+end
+]]--
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	

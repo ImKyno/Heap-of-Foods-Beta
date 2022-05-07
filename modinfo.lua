@@ -1,8 +1,8 @@
 name = "Heap of Foods"
-version = "3.4-A"
-local myupdate = "Salty & Sweetie Travels"
+version = "4.1-A"
+local myupdate = "Souls and Cans"
 
-description = "󰀄 Adds 117 brand new Crock Pot dishes alongside new ingredients to use!\n\n󰀦 Also features a brand new Biome somewhere in the Ocean!\n\n󰀌 Mod Version: "..version.."\n\󰀧 Update: "..myupdate..""
+description = "󰀄 Adds 118 brand new Crock Pot dishes alongside new ingredients to use!\n\n󰀦 Also features a brand new Biome somewhere in the Ocean!\n\n󰀌 Mod Version: "..version.."\n\󰀧 Update: "..myupdate..""
 author = "Kyno"
 
 api_version = 10
@@ -101,6 +101,33 @@ configuration_options =
 		default = 1,
 	},
 	{
+		name = "coffee_duration",
+		label = "Speed Buff Duration",
+		hover = "How long the Speed Buff from foods will last?\n\This option applies to: Coffee and Tropical Bouillabaisse.",
+		options =
+		{
+			{description = "Super Fast",
+			hover = "Speed Buff will last for 2 Minutes.",
+			data = 120},
+			{description = "Fast",
+			hover = "Speed Buff will last for a Half Day.",
+			data = 240},
+			{description = "Default",
+			hover = "Speed Buff will last for 1 Day.",
+			data = 480},
+			{description = "Average",
+			hover = "Speed Buff will last for 1.5 Days.",
+			data = 640},
+			{description = "Long",
+			hover = "Speed Buff will last for 2 Days.",
+			data = 960},
+			{description = "Super Long",
+			hover = "Speed Buff will last for 4 Days.",
+			data = 1920},
+		},
+		default = 480,
+	},
+	{
 		name = "xmas_foods",
 		label = "Optional Foods",
 		hover = "Should Winter's Feast \"craftable foods\" be cookable in the Crock Pot?\nWinter's Feast foods can't be cooked if this option is Disabled.",
@@ -157,6 +184,22 @@ configuration_options =
 			data = 0},
             {description = "Yes", 
 			hover = "Serenity Archipelago will have The Gorge Colour Cubes.",
+			data = 1},
+        },
+        default = 0,
+	},
+	Title("Extra Options", "Extra Options for the Mod."),
+	{
+		name = "warly_mealgrinder",
+		label = "Portable Grinding Mill Recipes",
+		hover = "Should Warly's Portable Grinding Mill have the recipes from Mealing Stone?",
+		options =
+		{
+			{description = "No", 
+			hover = "Warly's Portable Grinding Mill will not have the recipes from Mealing Stone.",
+			data = 0},
+            {description = "Yes", 
+			hover = "Warly's Portable Grinding Mill will have the recipes from Mealing Stone.",
 			data = 1},
         },
         default = 0,

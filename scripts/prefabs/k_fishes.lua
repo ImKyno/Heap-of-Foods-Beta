@@ -1,5 +1,7 @@
 local assets =
 {
+	Asset("ANIM", "anim/hermit_bundle.zip"),
+	
     Asset("ANIM", "anim/koi.zip"),
 	Asset("ANIM", "anim/koi02.zip"),
 	Asset("ANIM", "anim/koi_cooked.zip"),
@@ -26,6 +28,15 @@ local assets =
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
+}
+
+local prefabs = 
+{
+	"kyno_koi",
+	"kyno_grouper",
+	"kyno_pierrotfish",
+	"kyno_neonfish",
+	"kyno_tropicalfish",
 }
 
 local fish_prefabs =
@@ -71,6 +82,79 @@ local function onpickup(inst)
         inst.flop_task:Cancel()
         inst.flop_task = nil
     end
+end
+
+local function OnOpenPackage(inst, pos, doer)
+	if doer ~= nil and doer.SoundEmitter ~= nil then
+		doer.SoundEmitter:PlaySound("dontstarve/common/together/packaged")
+	else
+		inst.SoundEmitter:PlaySound("dontstarve/common/together/packaged")
+	end
+
+	local fishloot = 
+	{ 
+		"kyno_koi",
+		"kyno_grouper",
+		"kyno_pierrotfish",
+		"kyno_neonfish",
+		"kyno_tropicalfish",
+	}
+
+	for k,v in pairs(fishloot) do
+		local fish = SpawnPrefab(v)
+	
+		if doer.components.inventory and doer:HasTag("player") and not doer.components.health:IsDead() 
+		and not doer:HasTag("playerghost") then 
+			doer.components.inventory:GiveItem(fish) 
+		else
+			fish.Transform:SetPosition(pos:Get())
+			fish.components.inventoryitem:OnDropped(false, .5)
+		end
+	end
+	
+	inst:Remove()
+end		
+
+local function packagefn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+	
+	inst.AnimState:SetScale(1.3, 1.3, 1.3) -- Bigger because fishes inside.
+
+    inst.AnimState:SetBank("hermit_bundle")
+    inst.AnimState:SetBuild("hermit_bundle")
+    inst.AnimState:PlayAnimation("idle_onesize")
+	
+	inst:AddTag("bundle")
+	inst:AddTag("unwrappable")
+    
+    inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+        
+    inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "HERMIT_BUNDLE"
+    
+    inst:AddComponent("inventoryitem")
+    inst.components.inventoryitem.atlasname = "images/inventoryimages1.xml"
+	inst.components.inventoryitem.imagename = "hermit_bundle"
+
+    inst:AddComponent("unwrappable")
+	inst.components.unwrappable:SetOnUnwrappedFn(OnOpenPackage)
+	
+	MakeSmallBurnable(inst, TUNING.SMALL_BURNTIME)
+	MakeSmallPropagator(inst)
+
+    return inst
 end
 
 local function commonfn(bank, build, char_anim_build, data)
@@ -334,7 +418,9 @@ local function cooked_salmonfn()
 	return cookedfn("salmonfish_cooked", "salmonfish_cooked", "cooked", salmon_data)
 end
 
-return Prefab("kyno_koi", koifn, assets, fish_prefabs),
+return Prefab("kyno_fishpackage", packagefn, assets, prefabs),
+
+Prefab("kyno_koi", koifn, assets, fish_prefabs),
 Prefab("kyno_koi_cooked", cooked_koifn, assets, fish_prefabs),
 
 Prefab("kyno_tropicalfish", tropicalfn, assets, fish_prefabs),

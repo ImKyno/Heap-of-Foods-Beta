@@ -1,99 +1,203 @@
--- Salt Ponds, Boulders, Flintless Boulders and Salt Crystals.
-AddRoom("SerenityIslandSalt", {
-	colour={r=0,g=0,b=0,a=0},
-	value = GROUND.QUAGMIRE_CITYSTONE,
-	tags = {"ExitPiece", "nohasslers", "nohunt"},
-	contents =  {
-		distributepercent = .2 ,
-		distributeprefabs = {
-			kyno_pond_salt = .1,
-			kyno_serenityisland_rock1 = .2,
-			kyno_serenityisland_rock3 = .1,
-			saltrock = .06,
-		},
-	}
-})
-
--- Pebble Crabs, Limpet Rocks and Rocks.
-AddRoom("SerenityIslandCrab", {
-	colour={r=0,g=0,b=0,a=0},
-	value = GROUND.QUAGMIRE_CITYSTONE,
+AddRoom("SerenityIsland_Crab", {
+    colour = {r=0.3,g=0.2,b=0.1,a=0.3},
+    value = GROUND.QUAGMIRE_CITYSTONE,
+    tags = {"RoadPoison"},
 	type = NODE_TYPE.SeparatedRoom,
-	tags = {"ForceDisconnected", "nohasslers", "nohunt"},
-	contents =  {
-		distributepercent = .2,
-		distributeprefabs = {
-			kyno_pebblecrab_spawner = .10,
-			kyno_limpetrock = .2,
-			kyno_serenityisland_rock3 = .1,
-			rocks = .06,
-		},
-	}
-})
-
--- Wild Wheats, Grass and Chickens.
-AddRoom("SerenityIslandChicken", {
-	colour={r=0,g=0,b=0,a=0},
-	value = GROUND.SAVANNA,
-	type = NODE_TYPE.SeparatedRoom,
-	tags = {"ForceDisconnected", "nohasslers", "nohunt"},
-	contents =  {
-		distributepercent = .2,
-		distributeprefabs = {
-			-- kyno_chicken2_spawner = .15,
-			kyno_wildwheat = .1,
-			grass = .1,
-		},
-	}
-})
-
--- More Sugarwood Trees and Sweet Flowers, Less Ferns and Spotty Shrubs.
-AddRoom("SerenityIsland", {
-	colour={r=0,g=0,b=0,a=0},
-	value = GROUND.QUAGMIRE_PARKFIELD,
-	tags = {"ExitPiece", "nohasslers", "nohunt"},
-	contents =  {
-		distributepercent = .2,
-		distributeprefabs = {
-			kyno_sugartree = .3,
-			kyno_sugartree_flower = .2,
-			kyno_spotbush = .1,
-			cave_fern = .1,
-		},
-	}
-})
-
-AddRoom("SerenityIslandEntrance", {
-	colour = {r=.010,g=.010,b=.10,a=.50},
-	value = GROUND.QUAGMIRE_PARKFIELD,
-	tags = {"ExitPiece", "nohasslers", "nohunt"},
 	contents = {
-		countstaticlayouts = {
-			["SerenityIslandShop"] = 1,
+		countprefabs =
+		{
 		},
-		distributepercent = .2,
-		distributeprefabs = {
-			kyno_spotbush = .1,
-			kyno_sugartree = .2,
-			kyno_sugartree_flower = .2,
-			cave_fern = .2,
+		distributepercent = 0.17,
+		distributeprefabs =
+		{
+			trap_starfish = 1.0,
+			bullkelp_beachedroot = 1.5,
+			moon_fissure = 0.5,
+			driftwood_log = 0.5,
+			driftwood_small1 = 0.5,
+			driftwood_small2 = 0.5,
+			dead_sea_bones = 0.75,
+			lunar_island_rocks = 1.0,
+			flint = 0.5,
+			reeds = 0.75,
+			twigs = 0.5,
+			moonglass_rock = 0.3,
+			moonglass = 0.1,
 		},
-	}
+	},
 })
 
--- More Spotty Shrubs and Ferns, Less Sugarwood Trees and Sweet Flowers.
-AddRoom("BGSerenityIsland", {
-	colour={r=0,g=0,b=0,a=0},
-	value = GROUND.QUAGMIRE_PARKFIELD,
+AddRoom("SerenityIsland_Chicken", {
+    colour = {r=0.3,g=0.2,b=0.1,a=0.3},
+    value = GROUND.SAVANNA,
+    tags = {"RoadPoison"},
 	type = NODE_TYPE.SeparatedRoom,
-	tags = {"ForceDisconnected", "nohasslers", "nohunt"},
-	contents = { 
-		distributepercent = .2,
-		distributeprefabs = {
-			kyno_spotbush = .2,
-			kyno_sugartree = .1,
-			kyno_sugartree_flower = .1,
-			cave_fern = .2,
+	contents = {
+		countprefabs =
+		{
 		},
-	}
+		distributepercent = 0.17,
+		distributeprefabs =
+		{
+			trap_starfish = 1.0,
+			bullkelp_beachedroot = 1.5,
+			moon_fissure = 0.5,
+			driftwood_log = 0.5,
+			driftwood_small1 = 0.5,
+			driftwood_small2 = 0.5,
+			dead_sea_bones = 0.75,
+			lunar_island_rocks = 1.0,
+			flint = 0.5,
+			reeds = 0.75,
+			twigs = 0.5,
+			moonglass_rock = 0.3,
+			moonglass = 0.1,
+		},
+	},
 })
+
+AddRoom("SerenityIsland_Salt", {
+    colour = {r=0.3,g=0.2,b=0.1,a=0.3},
+    value = GROUND.QUAGMIRE_CITYSTONE,
+	contents = {
+		distributepercent = 0.18,
+		distributeprefabs =
+		{
+			dead_sea_bones = 0.75,
+			trap_starfish = 0.75,
+			bullkelp_beachedroot = 1.25,
+			driftwood_small1 = 0.5,
+			driftwood_small2 = 0.5,
+			driftwood_tall = 0.25,
+			lunar_island_rocks = 0.5,
+			flint = 0.5,
+			lunar_island_rock1 = 0.5,
+			reeds = 0.75,
+			twigs = 0.25,
+		},
+	},
+})
+
+AddRoom("SerenityIsland_Blank", {
+    colour = {r=0.3,g=0.2,b=0.1,a=0.3},
+    value = GROUND.IMPASSABLE,
+    tags = {"ForceDisconnected", "RoadPoison"},
+    internal_type = NODE_INTERNAL_CONNECTION_TYPE.EdgeCentroid,
+})
+
+AddRoom("SerenityIsland_Forest1", {
+    colour = {r=0.3,g=0.2,b=0.1,a=0.3},
+    value = GROUND.QUAGMIRE_PARKFIELD,
+    internal_type = NODE_INTERNAL_CONNECTION_TYPE.EdgeCentroid,
+	contents = {
+		countstaticlayouts =
+		{
+            ["SerenityIslandShop"] = 1,
+		},
+		distributepercent = 0.22,
+		distributeprefabs =
+		{
+			moon_tree = 0.3,
+			sapling_moon = 0.3,
+			carrat_planted = 0.2,
+			moon_tree_blossom_worldgen = 0.2,
+			ground_twigs = 0.1,
+			rock_avocado_bush = 0.1,
+			moonglass_rock = 0.05,
+			moon_fissure = 0.2,
+		},
+	},
+})
+
+AddRoom("SerenityIsland_Forest2", {
+    colour = {r=0.3,g=0.2,b=0.1,a=0.3},
+    value = GROUND.QUAGMIRE_PARKFIELD,
+    internal_type = NODE_INTERNAL_CONNECTION_TYPE.EdgeCentroid,
+	contents = {
+		distributepercent = 0.12,
+		distributeprefabs =
+		{
+			moonglass_rock = 1,
+			lunar_island_rock1 = 0.4,
+			lunar_island_rock2 = 0.2,
+			rock_moon = 0.2,
+			moonglass = 0.2,
+			moonrocknugget = 0.1,
+			lunar_island_rocks = 0.1,
+			flint = 0.1,
+			moon_fissure = 0.5,
+		},
+	},
+})
+
+AddRoom("SerenityIsland_Forest3", {
+    colour = {r=0.3,g=0.2,b=0.1,a=0.3},
+    value = GROUND.QUAGMIRE_PARKFIELD,
+	tags = {"RoadPoison"},
+    internal_type = NODE_INTERNAL_CONNECTION_TYPE.EdgeCentroid,
+	random_node_entrance_weight = 0,
+	contents = {
+		distributepercent = 0.17,
+		distributeprefabs =
+		{
+			sapling_moon = 1.0,
+			rock_avocado_bush = 1.0,
+			moon_tree = 1.0,
+			moonglass_rock = 1.0,
+			moon_fissure = 1,
+			carrat_planted = .25,
+		},
+	},
+})
+
+AddRoom("SerenityIsland_Extra", {
+    colour = {r=0.3,g=0.2,b=0.1,a=0.3},
+    value = GROUND.QUAGMIRE_PARKFIELD,
+    type = NODE_TYPE.SeparatedRoom,
+	contents = {
+		distributepercent = 0.17,
+		distributeprefabs =
+		{
+			sapling_moon = 1.0,
+			rock_avocado_bush = 1.0,
+			moon_tree = 1.0,
+			moonglass_rock = 1.0,
+			moon_fissure = 1,
+			carrat_planted = .25,
+		},
+	},
+})
+
+AddRoom("SerenityIsland_Meadows", {
+    colour={r=0.3,g=0.2,b=0.1,a=0.3},
+    value = GROUND.QUAGMIRE_PARKFIELD,
+    internal_type = NODE_INTERNAL_CONNECTION_TYPE.EdgeCentroid,
+	random_node_exit_weight = 0,
+	contents = {
+		distributepercent = 0.12,
+		distributeprefabs =
+		{
+			moon_fissure = 1.5,
+			moon_tree = 1,
+			sapling_moon = 1,
+			ground_twigs = 1,
+			carrat_planted = 1,
+			rock_avocado_bush = 1,
+			moon_tree_blossom_worldgen = 0.5,
+			moonglass_rock = 0.5,
+			twigs = 0.5,
+		},
+	},
+})
+
+AddRoom("SerenityIsland_Cove",  {
+    colour = {r=1.0,g=1.0,b=1.0,a=0.3},
+    value = GROUND.IMPASSABLE,
+	type = NODE_TYPE.Blank,
+	tags = {"ForceDisconnected", "RoadPoison"},
+	random_node_entrance_weight = 0,
+	random_node_exit_weight = 0,
+	contents = {
+	},
+})
+

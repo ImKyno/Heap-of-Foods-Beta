@@ -144,14 +144,14 @@ local KynStick 				= AddRecipe2("kyno_musselstick_item", {Ingredient("twigs", 3)
 	{"COOKING"}
 )
 
-local KynMealing 			= AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2), Ingredient("flint", 2)}, TECH.SCIENCE_TWO, 
+local KynMealing 			= AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2), Ingredient("flint", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO, 
 	{
 		placer 				= "kyno_mealgrinder_placer", 
 		min_spacing 		= 1, 
 		atlas 				= ModBuildAtlas, 
 		image 				= "hof_mealgrinder.tex",
 	},
-	{"PROTOTYPERS"}
+	{"COOKING"}
 ) 
 
 local KynMusher 			= AddRecipe2("kyno_mushstump", {Ingredient("spoiled_food", 4), Ingredient("poop", 3), Ingredient("livinglog", 2)}, TECH.SCIENCE_TWO, 
@@ -171,7 +171,8 @@ local KynFloat      		= AddRecipe2("kyno_floatilizer", {Ingredient("poop", 3), I
 	},	
 	{"GARDENING"}
 )
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Pig Elder Shop.
 local KynSaltRack 			= AddRecipe2("kyno_saltrack_installer_p", {Ingredient("kyno_salmonfish", 2, ModAtlas)}, TECH.SERENITYSHOP_ONE, 
 	{
 		nounlock 			= true, 
@@ -224,7 +225,7 @@ local KynSlaughter			= AddRecipe2("kyno_slaughtertool_p", {Ingredient("kyno_crab
 	{"CRAFTING_STATION"}
 )
 
-local KynCookpotKit			= AddRecipe2("kit_hanger_p", {Ingredient("cutgrass", 1)}, TECH.LOST,
+local KynCookpotKit			= AddRecipe2("kyno_kit_hanger_p", {Ingredient("bonestew", 1), Ingredient("gorge_stone_soup", 1, ModAtlas), Ingredient("caviar", 1, ModAtlas)}, TECH.SERENITYSHOP_ONE,
 	{
 		nounlock			= true,
 		actionstr			= "SERENITYSHOP",
@@ -233,6 +234,58 @@ local KynCookpotKit			= AddRecipe2("kit_hanger_p", {Ingredient("cutgrass", 1)}, 
 		numtogive			= 1,
 		atlas				= ModAtlas,
 		image				= "kyno_cookware_kit_hanger.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+local KynSyrupKit			= AddRecipe2("kyno_kit_syrup_p", {Ingredient("taffy", 1), Ingredient("gorge_berry_tart", 1, ModAtlas), Ingredient("gummy_cake", 1, ModAtlas)}, TECH.SERENITYSHOP_ONE,
+	{
+		nounlock			= true,
+		actionstr			= "SERENITYSHOP",
+		sg_state			= "give",
+		product				= "kyno_cookware_kit_syrup",
+		numtogive			= 1,
+		atlas				= ModAtlas,
+		image				= "kyno_cookware_kit_hanger.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+local KynOvenKit			= AddRecipe2("kyno_kit_oven_p", {Ingredient("dragonpie", 1), Ingredient("gorge_bread", 1), Ingredient("gorge_carrot_cake", 1, ModAtlas)}, TECH.SERENITYSHOP_ONE,
+	{
+		nounlock			= true,
+		actionstr			= "SERENITYSHOP",
+		sg_state			= "give",
+		product				= "kyno_cookware_kit_oven",
+		numtogive			= 1,
+		atlas				= ModAtlas,
+		image				= "kyno_cookware_kit_oven.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+local KynSmallGrill			= AddRecipe2("kyno_kit_small_grill_p", {Ingredient("kabobs", 1), Ingredient("gorge_sliders", 1, ModAtlas), Ingredient("steamedhamsandwich", 1, ModAtlas)}, TECH.SERENITYSHOP_ONE,
+	{
+		nounlock			= true,
+		actionstr			= "SERENITYSHOP",
+		sg_state			= "give",
+		product				= "kyno_cookware_kit_small_grill",
+		numtogive			= 1,
+		atlas				= ModAtlas,
+		image				= "kyno_cookware_kit_small_grill.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+local KynGrill				= AddRecipe2("kyno_kit_grill_p", {Ingredient("frogglebunwich", 1), Ingredient("gorge_hamburger", 1, ModAtlas), Ingredient("hardshell_tacos", 1, ModAtlas)}, TECH.SERENITYSHOP_ONE,
+	{
+		nounlock			= true,
+		actionstr			= "SERENITYSHOP",
+		sg_state			= "give",
+		product				= "kyno_cookware_kit_grill",
+		numtogive			= 1,
+		atlas				= ModAtlas,
+		image				= "kyno_cookware_kit_grill.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -315,59 +368,20 @@ local KynSeedCucumb 		= AddRecipe2("kyno_cucumber_seeds_p", {Ingredient("waterme
 	{"CRAFTING_STATION"}
 )
 
-local KynElderTurf1			= AddRecipe2("turf_pinkpark_p", {Ingredient("turf_deciduous", 2)}, TECH.LOST,
+local KynSweetFlower		= AddRecipe2("kyno_sugartree_petals_p", {Ingredient("petals", 3)}, TECH.LOST,
 	{
 		nounlock 			= true, 
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
-		product				= "turf_pinkpark_blueprint",		
-		numtogive 			= 1, 
+		product				= "kyno_sugartree_petals",		
+		numtogive 			= 3, 
 		atlas 				= ModAtlas, 
-		image				= "turf_pinkpark.tex",
+		image				= "kyno_sugartree_petals.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-local KynElderTurf2			= AddRecipe2("turf_stonecity_p", {Ingredient("cutstone", 1), Ingredient("flint", 2)}, TECH.LOST,
-	{
-		nounlock 			= true, 
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "turf_stonecity_blueprint",		
-		numtogive 			= 1, 
-		atlas 				= ModAtlas, 
-		image				= "turf_stonecity.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-local KynElderSpotBush		= AddRecipe2("dug_kyno_spotbush_p", {Ingredient("kyno_spotspice_leaf", 2)}, TECH.LOST,
-	{
-		nounlock 			= true, 
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "dug_kyno_spotbush",		
-		numtogive 			= 2, 
-		atlas 				= ModAtlas, 
-		image				= "dug_kyno_spotbush.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-local KynElderWheatBush		= AddRecipe2("dug_kyno_wildwheat_p", {Ingredient("kyno_sap", 2)}, TECH.LOST,
-	{
-		nounlock 			= true, 
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "dug_kyno_wildwheat",		
-		numtogive 			= 2, 
-		atlas 				= ModAtlas, 
-		image				= "dug_kyno_wildwheat.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-local KynSugarTreeSeed		= AddRecipe2("kyno_sugartree_bud_p", {Ingredient("gorge_syrup", 1)}, TECH.LOST,
+local KynSugarTreeSeed		= AddRecipe2("kyno_sugartree_bud_p", {Ingredient("kyno_syrup", 3, ModAtlas)}, TECH.LOST,
 	{
 		nounlock 			= true, 
 		actionstr 			= "SERENITYSHOP",
@@ -380,24 +394,111 @@ local KynSugarTreeSeed		= AddRecipe2("kyno_sugartree_bud_p", {Ingredient("gorge_
 	{"CRAFTING_STATION"}
 )
 
--- Don't add the Turfs recipes if T.A.P or Not Enough Turfs is enabled.
-if not _G.KnownModIndex:IsModEnabled("workshop-2428854303") or _G.KnownModIndex:IsModEnabled("workshop-2528541304") then
-local KynTurfParkfiedl		= AddRecipe2("turf_pinkpark", {Ingredient("turf_deciduous", 1)}, TECH.TURFCRAFTING_ONE,
+local KynElderSpotBush		= AddRecipe2("dug_kyno_spotbush_p", {Ingredient("kyno_spotspice_leaf", 3)}, TECH.LOST,
 	{
+		nounlock 			= true, 
+		actionstr 			= "SERENITYSHOP",
+		sg_state    		= "give",
+		product				= "dug_kyno_spotbush",		
+		numtogive 			= 2, 
+		atlas 				= ModAtlas, 
+		image				= "dug_kyno_spotbush.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+local KynElderWheatBush		= AddRecipe2("dug_kyno_wildwheat_p", {Ingredient("kyno_sap", 3)}, TECH.LOST,
+	{
+		nounlock 			= true, 
+		actionstr 			= "SERENITYSHOP",
+		sg_state    		= "give",
+		product				= "dug_kyno_wildwheat",		
+		numtogive 			= 2, 
+		atlas 				= ModAtlas, 
+		image				= "dug_kyno_wildwheat.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+local KynElderTurf1			= AddRecipe2("turf_pinkpark_p", {Ingredient("turf_deciduous", 2)}, TECH.LOST,
+	{
+		nounlock 			= true, 
+		actionstr 			= "SERENITYSHOP",
+		sg_state    		= "give",
+		product				= "turf_pinkpark",		
 		numtogive 			= 4, 
 		atlas 				= ModAtlas, 
 		image				= "turf_pinkpark.tex",
 	},
-	{"DECOR"}
-)	
+	{"CRAFTING_STATION"}
+)
 
-local KynTurfParkfiedl		= AddRecipe2("turf_stonecity", {Ingredient("cutstone", 1), Ingredient("flint", 2)}, TECH.TURFCRAFTING_ONE,
+local KynElderTurf2			= AddRecipe2("turf_stonecity_p", {Ingredient("cutstone", 1), Ingredient("flint", 2)}, TECH.LOST,
 	{
+		nounlock 			= true, 
+		actionstr 			= "SERENITYSHOP",
+		sg_state    		= "give",
+		product				= "turf_stonecity",		
 		numtogive 			= 4, 
 		atlas 				= ModAtlas, 
 		image				= "turf_stonecity.tex",
 	},
-	{"DECOR"}
+	{"CRAFTING_STATION"}
 )
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
+local WARLY_MEALGRINDER = GetModConfigData("warly_mealgrinder")
+if WARLY_MEALGRINDER == 1 then
+	local WarlyFlour 			= AddRecipe2("kyno_flour_w", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE, 
+		{
+			nounlock 			= true, 
+			actionstr 			= "MEALGRINDER", 
+			product				= "kyno_flour",
+			builder_tag         = "professionalchef",
+			numtogive 			= 3, 
+			atlas 				= DefaultAtlas, 
+			image 				= "quagmire_flour.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
+
+	local WarlySpice 			= AddRecipe2("kyno_spotspice_w", {Ingredient("kyno_spotspice_leaf", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE, 
+		{
+			nounlock 			= true, 
+			actionstr 			= "MEALGRINDER", 
+			product				= "kyno_spotspice",
+			builder_tag         = "professionalchef",
+			numtogive 			= 3, 
+			atlas 				= DefaultAtlas, 
+			image 				= "quagmire_spotspice_ground.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
+
+	local WarlySalt 			= AddRecipe2("kyno_salt_w", {Ingredient("saltrock", 2)}, TECH.FOODPROCESSING_ONE, 
+		{
+			nounlock 			= true, 
+			actionstr 			= "MEALGRINDER", 
+			product				= "kyno_salt",
+			builder_tag         = "professionalchef",
+			numtogive 			= 3, 
+			atlas 				= DefaultAtlas, 
+			image 				= "quagmire_salt.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
+
+	local WarlyBacon 			= AddRecipe2("kyno_bacon_w", {Ingredient("smallmeat", 1)}, TECH.FOODPROCESSING_ONE, 
+		{
+			nounlock 			= true, 
+			actionstr 			= "MEALGRINDER", 
+			product				= "kyno_bacon",
+			builder_tag         = "professionalchef",
+			numtogive 			= 2, 
+			atlas 				= DefaultAtlas, 
+			image 				= "quagmire_smallmeat.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

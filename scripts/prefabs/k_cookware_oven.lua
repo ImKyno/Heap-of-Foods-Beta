@@ -79,9 +79,6 @@ local function OnHammeredCass(inst, worker)
     end
 	
 	inst.components.lootdropper:DropLoot()
-	local fx = SpawnPrefab("collapse_small")
-    fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
-    fx:SetMaterial("stone")
 	
 	local hng = SpawnPrefab("kyno_cookware_oven")
 	hng.Transform:SetPosition(inst.Transform:GetWorldPosition())
@@ -109,31 +106,10 @@ local function OnHitOven(inst, worker)
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_stone")
 end
 
-local function OnHitPotSmall(inst, worker)
+local function OnHitCass(inst, worker)
 	if inst.components.stewer:IsCooking() then
-		inst.AnimState:PlayAnimation("hit_cooking_loop")
-		inst.AnimState:PushAnimation("cooking_loop", true)
-		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
-	elseif inst.components.stewer:IsDone() then
-		inst.AnimState:PlayAnimation("hit_cooking_loop")
-		inst.AnimState:PushAnimation("cooking_boil_small", true)
-		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
-	else
-		if inst.components.container ~= nil and inst.components.container:IsOpen() then
-			inst.components.container:Close()
-		else
-			inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
-		end
-		inst.AnimState:PlayAnimation("hit_idle_loop")
-		inst.AnimState:PushAnimation("idle_pot")
-		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
-	end
-end
-
-local function OnHitPotBig(inst, worker)
-	if inst.components.stewer:IsCooking() then
-		inst.AnimState:PlayAnimation("hit_cooking_loop")
-		inst.AnimState:PushAnimation("cooking_loop", true)
+		inst.AnimState:PlayAnimation("hit")
+		inst.AnimState:PushAnimation("cooking_bake_small", true)
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 	elseif inst.components.stewer:IsDone() then
 		inst.AnimState:PlayAnimation("hit_cooking_loop")
@@ -145,8 +121,8 @@ local function OnHitPotBig(inst, worker)
 		else
 			inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 		end
-		inst.AnimState:PlayAnimation("hit_idle_loop")
-		inst.AnimState:PushAnimation("idle_pot")
+		inst.AnimState:PlayAnimation("hit")
+		inst.AnimState:PushAnimation("idle")
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 	end
 end
@@ -186,14 +162,6 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		big_cass.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		ChangeFireFX(inst)
 	end
-	inst:Remove()
-end
-
-local function OnPickedCasserole(inst)
-	local oven = SpawnPrefab("kyno_cookware_oven")
-	oven.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
-	oven.AnimState:PlayAnimation("place_casserole")
-	oven.Transform:SetPosition(inst.Transform:GetWorldPosition())
 	inst:Remove()
 end
 
@@ -247,30 +215,6 @@ local function OnOvenSteam(inst)
     fx.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 end
 
-local function OnOvenChimney()
-    local fx2 = CreateEntity()
-
-    fx2.entity:AddTransform()
-    fx2.entity:AddAnimState()
-    fx2.entity:AddSoundEmitter()
-	-- fx2.entity:AddNetwork()
-
-    fx2.AnimState:SetBank("quagmire_oven")
-    fx2.AnimState:SetBuild("quagmire_oven")
-    fx2.AnimState:PlayAnimation("chimney_fire", true)
-    fx2.AnimState:SetFinalOffset(1)
-	
-	fx2:AddTag("FX")
-    fx2:AddTag("NOCLICK")
-	
-    fx2.entity:SetCanSleep(false)
-    fx2.persists = false
-
-    fx2:ListenForEvent("animover", fx2.Remove)
-
-    fx2.Transform:SetPosition(inst.Transform:GetWorldPosition())
-end
-
 local function HideGoops(inst)
 	inst.AnimState:Hide("goop")
 	inst.AnimState:Hide("goop_small")
@@ -279,10 +223,14 @@ end
 local function startcookfn(inst)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("cooking_bake_small", true)
-		inst.components.pickable.canbepicked = false
         inst.SoundEmitter:KillSound("snd")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_rattle", "snd")
         inst.Light:Enable(true)
+		
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
     end
 	HideGoops(inst)
 end
@@ -324,25 +272,23 @@ local function spoilfn(inst)
 	inst.AnimState:PlayAnimation("burnt")
 	inst.AnimState:PushAnimation("idle")
 	inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/boiled_over")
-	inst.components.pickable.canbepicked = true
 end
 
 local function donecookfn(inst)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("cooking_bake_large", true)
-		inst.components.pickable.canbepicked = true
         inst.SoundEmitter:KillSound("snd")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_finish")
         inst.Light:Enable(false)
 		
-		inst.steamoven_task = inst:DoPeriodicTask(2, function() 
-			inst._steamoven:push()
-			OnOvenSteam(inst) 
-		end)
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
 		
-		inst.chimney_task = inst:DoPeriodicTask(2, function()
-			inst._chimneyoven:push()
-			OnOvenChimney(inst)
+		inst.steam_task = inst:DoPeriodicTask(2, function() 
+			inst._steamoven:push()
+			OnOvenSteam(inst)
 		end)
 	end
 	HideGoops(inst)
@@ -351,16 +297,15 @@ end
 local function continuedonefn(inst)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("cooking_bake_large", true)
-		inst.components.pickable.canbepicked = true
 		
-		inst.steamoven_task = inst:DoPeriodicTask(2, function() 
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
+		
+		inst.oven_task = inst:DoPeriodicTask(2, function() 
 			inst._steamoven:push()
-			OnOvenSteam(inst) 
-		end)
-		
-		inst.chimney_task = inst:DoPeriodicTask(2, function()
-			inst._chimneyoven:push()
-			OnOvenChimney(inst)
+			OnOvenSteam(inst)
 		end)
 	end
 	HideGoops(inst)
@@ -369,10 +314,14 @@ end
 local function continuecookfn(inst)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("cooking_bake_small", true)
-		inst.components.pickable.canbepicked = false
         inst.Light:Enable(true)
         inst.SoundEmitter:KillSound("snd")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_rattle", "snd")
+		
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
     end
 	HideGoops(inst)
 end
@@ -380,16 +329,17 @@ end
 local function harvestfn(inst, doer)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("idle")
-		inst.components.pickable.canbepicked = true
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
     end
-	if inst.steamoven_task then
-		inst.steamoven_task:Cancel()
-		inst.steamoven_task = nil
+	
+	local firepit = GetFirepit(inst)
+	if firepit then
+		firepit:RemoveTag("NOCLICK")
 	end
-	if inst.chimney_task then
-		inst.chimney_task:Cancel()
-		inst.chimney_task = nil
+	
+	if inst.steam_task then
+		inst.steam_task:Cancel()
+		inst.steam_task = nil
 	end
 	HideGoops(inst)
 end
@@ -466,7 +416,7 @@ local function ovenfn()
     end
 	
 	inst.back = SpawnPrefab("kyno_cookware_oven_back")
-	inst.back.AnimState:PlayAnimation("place")
+	-- inst.back.AnimState:PlayAnimation("place")
 	inst.back.AnimState:PushAnimation("idle")
 	inst.back.entity:SetParent(inst.entity)
 	inst.back.AnimState:SetFinalOffset(1)
@@ -573,13 +523,11 @@ local function casserolefn(small)
 	end
 	
 	inst._steamoven = net_event(inst.GUID, "steamoven")
-	inst._chimneyoven = net_event(inst.GUID, "chimneyoven")
 	
 	inst.entity:SetPristine()
 	
     if not TheWorld.ismastersim then
 		inst:ListenForEvent("steamoven", OnOvenSteam)
-		inst:ListenForEvent("chimneyoven", OnOvenChimney)
 		inst.OnEntityReplicated = function(inst) 
 			inst.replica.container:WidgetSetup("cooking_pot") 
 		end
@@ -612,14 +560,18 @@ local function casserolefn(small)
     inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
 	
-	inst:AddComponent("pickable")
+	inst:AddComponent("lootdropper")
 	if small then
-		inst.components.pickable:SetUp("kyno_cookware_small_casserole")
+		inst.components.lootdropper:SetLoot({"kyno_cookware_small_casserole"})
 	else
-		inst.components.pickable:SetUp("kyno_cookware_casserole")
+		inst.components.lootdropper:SetLoot({"kyno_cookware_casserole"})
 	end
-	inst.components.pickable:SetOnPickedFn(OnPickedCasserole)
-	inst.components.pickable.quickpick = true
+	
+	inst:AddComponent("workable")
+    inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
+	inst.components.workable:SetOnFinishCallback(OnHammeredCass)
+	inst.components.workable:SetOnWorkCallback(OnHitCass)
+	inst.components.workable:SetWorkLeft(1)
 	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad

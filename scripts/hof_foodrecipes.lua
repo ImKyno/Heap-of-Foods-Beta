@@ -500,7 +500,7 @@ local kyno_foods =
 	{
 		test = function(cooker, names, tags) return names.poop and names.guano and names.glommerfuel and names.kyno_salt end,
 		priority = 100,
-		foodtype = FOODTYPE.HORRIBLE,
+		foodtype = FOODTYPE.POOP,
 		perishtime = nil,
 		health = 0,
 		hunger = 0,
@@ -598,6 +598,20 @@ local kyno_foods =
 		cooktime = 2,
 		floater = {"med", nil, 0.65},
 		oneat_desc = "Calls the monster",
+	},
+	
+	soulstew = 
+	{
+		test = function(cooker, names, tags) return names.kyno_bottle_soul and (names.boneshard and names.boneshard >= 2) end,
+		priority = 1,
+		foodtype = FOODTYPE.PREPAREDSOUL,
+		perishtime = nil,
+		health = 10,
+		hunger = 62.5,
+		sanity = -10,
+		cooktime = 1.2,
+		floater = {"med", nil, 0.65},
+		oneat_desc = "Soul-starve killer",
 	},
 	
 	-- The Gorge Foods.
@@ -1475,7 +1489,7 @@ local kyno_foods =
 for k, recipe in pairs(kyno_foods) do
 	recipe.name = k
 	recipe.weight = 1
-	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbook.xml"
+	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages.xml"
 	recipe.cookbook_tex = k..".tex"
 end
 

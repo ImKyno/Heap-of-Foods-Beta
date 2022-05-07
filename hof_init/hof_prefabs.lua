@@ -2,6 +2,8 @@
 -- Prefabs.
 PrefabFiles =
 {	
+	"hermitcrab", -- I'll be using this until I find a better and clean way to do the things.
+
 	"k_foodcommands",
 	
 	"k_newfoods",
@@ -60,6 +62,7 @@ PrefabFiles =
 	"k_serenityisland_crab",
 	"k_serenityisland_spawners",
 	"k_serenityisland_decor",
+	"k_serenityisland_crate",
 	"k_chicken2",
 	"k_chicken2_herd",
 	"k_chicken2_eggs",
@@ -69,5 +72,11 @@ PrefabFiles =
 	"k_cookware_pot_hanger",
 	"k_cookware_oven",
 	"k_cookware_grill",
+	"k_rockflippable",
+	"k_tunacan",
+	"k_cannedfoods",
+	"k_pops",
+	"k_mysterymeat",
+	"k_bottle_soul",
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

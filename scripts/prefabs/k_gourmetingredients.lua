@@ -433,6 +433,7 @@ local function baconfn()
 	inst.AnimState:PlayAnimation("raw")
 
 	inst:AddTag("meat")
+	inst:AddTag("meat_bacon")
 	inst:AddTag("cookable")
 	inst:AddTag("gourmet_ingredient")
 

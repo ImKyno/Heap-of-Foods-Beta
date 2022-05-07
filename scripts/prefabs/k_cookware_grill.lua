@@ -175,6 +175,11 @@ local function startcookfn(inst)
         inst.SoundEmitter:KillSound("snd")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_rattle", "snd")
         inst.Light:Enable(true)
+		
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
     end
 end
 
@@ -217,6 +222,11 @@ local function donecookfn(inst)
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_finish")
 		inst.Light:Enable(false)
 		
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
+		
 		inst.smoke_task = inst:DoPeriodicTask(2, function() 
 			inst._smoke:push()
 			OnGrillSmoke(inst) 
@@ -227,6 +237,11 @@ end
 local function continuedonefn(inst)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("cooking_grill_big", true)
+		
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
 		
 		inst.smoke_task = inst:DoPeriodicTask(2, function() 
 			inst._smoke:push()
@@ -241,6 +256,11 @@ local function continuecookfn(inst)
         inst.Light:Enable(true)
         inst.SoundEmitter:KillSound("snd")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_rattle", "snd")
+		
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
     end
 end
 
@@ -249,6 +269,12 @@ local function harvestfn(inst, doer)
         inst.AnimState:PlayAnimation("idle")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
     end
+	
+	local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:RemoveTag("NOCLICK")
+		end
+	
 	if inst.smoke_task then
 		inst.smoke_task:Cancel()
 		inst.smoke_task = nil

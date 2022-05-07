@@ -2,29 +2,57 @@ local customizations =
 {
 	kyno_aloe_ground						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	kyno_radish_ground 						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"}, 
-	kyno_fennel_ground 						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	kyno_sweetpotato_ground 				= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	kyno_turnip_ground						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	kyno_cucumber_ground 					= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	
 	kyno_wildwheat							= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
+	kyno_rockflippable						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
+	kyno_mushstump_natural					= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	
 	kyno_lotus_ocean						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	kyno_seaweeds_ocean						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	kyno_taroroot_ocean						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	kyno_waterycress_ocean					= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	
+	kyno_fennel_ground 						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", world = {"cave"}, group = "hof_cave"},
 	kyno_parznip_ground						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", world = {"cave"}, group = "hof_cave"},
 	kyno_parznip_big						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", world = {"cave"}, group = "hof_cave"},
+	kyno_rockflippable_cave 				= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", world = {"cave"}, group = "hof_cave"},
+	kyno_mushstump_cave						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", world = {"cave"}, group = "hof_cave"},
+	kyno_turnip_cave						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", world = {"cave"}, group = "hof_cave"},
 }
 
 local map = require "map/forest_map"
 local TRANSLATE_TO_PREFABS 					= map.TRANSLATE_TO_PREFABS
 local TRANSLATE_AND_OVERRIDE 				= map.TRANSLATE_AND_OVERRIDE
-	
-TRANSLATE_TO_PREFABS["hof_plants"] 			= {"kyno_aloe_ground", "kyno_radish_ground", "kyno_fennel_ground", "kyno_sweetpotato_ground", "kyno_turnip_ground", "kyno_wildwheat"}
-TRANSLATE_TO_PREFABS["hof_plants_ocean"] 	= {"kyno_cucumber_ground", "kyno_seaweeds_ocean", "kyno_taroroot_ocean", "kyno_seaweeds_ocean", "kyno_waterycress_ocean"}
-TRANSLATE_TO_PREFABS["hof_plants_caves"] 	= {"kyno_parznip_ground", "kyno_parznip_big"}	
+
+TRANSLATE_TO_PREFABS["hof_plants"] 			= {
+	"kyno_aloe_ground", 
+	"kyno_radish_ground", 
+	"kyno_sweetpotato_ground", 
+	"kyno_turnip_ground", 
+	"kyno_wildwheat",
+	"kyno_rockflippable",
+	"kyno_mushstump_natural"
+}
+
+TRANSLATE_TO_PREFABS["hof_plants_ocean"] 	= {
+	"kyno_cucumber_ground", 
+	"kyno_seaweeds_ocean", 
+	"kyno_taroroot_ocean", 
+	"kyno_seaweeds_ocean", 
+	"kyno_waterycress_ocean"
+}
+
+TRANSLATE_TO_PREFABS["hof_plants_caves"] 	= {
+	"kyno_fennel_ground",
+	"kyno_parznip_ground", 
+	"kyno_parznip_big",
+	"kyno_rockflippable_cave",
+	"kyno_mushstump_cave",
+	"kyno_turnip_cave"
+}
 	
 local WSO = require("worldsettings_overrides")
 

@@ -140,6 +140,7 @@ local function shortfn()
 	inst.AnimState:Hide("sap")
 	
 	inst:AddTag("tree")
+	inst:AddTag("plant")
     inst:AddTag("shelter")
 
     inst.entity:SetPristine()
@@ -201,6 +202,7 @@ local function normalfn()
 	inst.AnimState:Hide("sap")
 	
 	inst:AddTag("tree")
+	inst:AddTag("plant")
     inst:AddTag("shelter")
 
     inst.entity:SetPristine()

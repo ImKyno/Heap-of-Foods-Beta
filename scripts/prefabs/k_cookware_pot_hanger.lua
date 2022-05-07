@@ -145,9 +145,6 @@ local function OnHammeredPot(inst, worker)
 	end
 	
 	inst.components.lootdropper:DropLoot()
-	local fx = SpawnPrefab("collapse_small")
-    fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
-    fx:SetMaterial("metal")
 	
 	local hng = SpawnPrefab("kyno_cookware_hanger")
 	hng.Transform:SetPosition(inst.Transform:GetWorldPosition())
@@ -318,6 +315,11 @@ local function startcookfn(inst)
         inst.SoundEmitter:KillSound("snd")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_rattle", "snd")
         inst.Light:Enable(true)
+		
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
     end
 	HideGoops(inst)
 end
@@ -378,6 +380,11 @@ local function donecookfn(inst)
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_finish")
         inst.Light:Enable(false)
 		
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
+		
 		inst.steam_task = inst:DoPeriodicTask(2, function() 
 			inst._steam:push()
 			OnPotSteam(inst) 
@@ -387,6 +394,11 @@ local function donecookfn(inst)
         inst.SoundEmitter:KillSound("snd")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_finish")
         inst.Light:Enable(false)
+		
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
 		
 		inst.steam_task = inst:DoPeriodicTask(2, function() 
 			inst._steam:push()
@@ -399,12 +411,23 @@ end
 local function continuedonefn(inst)
     if not inst:HasTag("burnt") and inst:HasTag("pot_big") then
         inst.AnimState:PlayAnimation("cooking_boil_big", true)
+		
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
+		
 		inst.steam_task = inst:DoPeriodicTask(2, function() 
 			inst._steam:push()
 			OnPotSteam(inst) 
 		end)
     else
 		inst.AnimState:PlayAnimation("cooking_boil_small", true)
+		
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
 		
 		inst.steam_task = inst:DoPeriodicTask(2, function() 
 			inst._steam:push()
@@ -420,6 +443,11 @@ local function continuecookfn(inst)
         inst.Light:Enable(true)
         inst.SoundEmitter:KillSound("snd")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_rattle", "snd")
+		
+		local firepit = GetFirepit(inst)
+		if firepit then
+			firepit:AddTag("NOCLICK")
+		end
     end
 	HideGoops(inst)
 end
@@ -429,6 +457,12 @@ local function harvestfn(inst, doer)
         inst.AnimState:PlayAnimation("idle_pot")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
     end
+	
+	local firepit = GetFirepit(inst)
+	if firepit then
+		firepit:RemoveTag("NOCLICK")
+	end
+	
 	if inst.steam_task then
 		inst.steam_task:Cancel()
 		inst.steam_task = nil

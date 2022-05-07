@@ -1,6 +1,7 @@
 local _G 				= GLOBAL
 local require 			= _G.require
 local resolvefilepath 	= _G.resolvefilepath
+local STRINGS			= _G.STRINGS
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Favorite Mod Foods.
 AddPrefabPostInit("wilson", function(inst)
@@ -85,12 +86,20 @@ AddPrefabPostInit("wortox", function(inst)
 	if inst.components.foodaffinity then
 		inst.components.foodaffinity:AddPrefabAffinity("jellyopop", TUNING.AFFINITY_15_CALORIES_HUGE)
 	end
+	
+	if inst.components.eater ~= nil then
+        inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODTYPE.PREPAREDSOUL, FOODGROUP.OMNI })
+    end
 end)
 
 AddPrefabPostInit("wormwood", function(inst)
 	if inst.components.foodaffinity then
 		inst.components.foodaffinity:AddPrefabAffinity("gummy_cake", TUNING.AFFINITY_15_CALORIES_HUGE)
 	end
+	
+	if inst.components.eater ~= nil then
+        inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODTYPE.POOP, FOODGROUP.OMNI })
+    end
 end)
 
 AddPrefabPostInit("wurt", function(inst)
@@ -113,6 +122,7 @@ end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Spiced Coffee. There you go Terra B. :glzSIP:
 local COFFEE_SPEED = GetModConfigData("coffee_speed")
+local COFFEE_DURATION = GetModConfigData("coffee_duration")
 if COFFEE_SPEED == 1 then
 	local coffee_speedbuff = {
 		"coffee",
@@ -129,7 +139,7 @@ if COFFEE_SPEED == 1 then
 				if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
 				return
 			elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-				eater.coffeebuff_duration = 480
+				eater.coffeebuff_duration = COFFEE_DURATION
 				eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
 			local spiced_buff = spiced_buffs[inst.components.edible.spice]
 				if spiced_buff then
@@ -140,7 +150,7 @@ if COFFEE_SPEED == 1 then
 				end
 			else
 				eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", 1.83)
-				eater:DoTaskInTime(480, function()
+				eater:DoTaskInTime(COFFEE_DURATION, function()
 					eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
 				end)
 			end
@@ -219,7 +229,7 @@ AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Action for the Salt.
-AddAction("SALT", "Salt", function(act)
+AddAction("SALT", STRINGS.ACTIONS.SALT, function(act)
 	local saltable = act.target and act.target.components.saltable or nil
 	if act.invobject and saltable ~= nil then
 		saltable:AddSalt()
@@ -229,6 +239,8 @@ AddAction("SALT", "Salt", function(act)
 	end
 end)
 
+ACTIONS.SALT.mount_valid = true
+
 AddComponentAction("USEITEM", "salter", function(inst, doer, target, actions)
 	if target:HasTag("saltable") then
 		table.insert(actions, ACTIONS.SALT)
@@ -236,7 +248,7 @@ AddComponentAction("USEITEM", "salter", function(inst, doer, target, actions)
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Action for the Slaughter Tools.
-AddAction("FLAY", "Flay", function(act)
+AddAction("FLAY", STRINGS.ACTIONS.FLAY, function(act)
 	if act.target and act.target.components.health and not act.target.components.health:IsDead() and act.target.components.lootdropper then
 		act.target.components.health.invincible = false
 	
@@ -256,6 +268,7 @@ end)
 
 ACTIONS.FLAY.distance = 2
 ACTIONS.FLAY.priority = 3
+ACTIONS.FLAY.mount_valid = true
 
 AddComponentAction("USEITEM", "slaughteritem", function(inst, doer, target, actions, right)
 	if target:HasTag("slaughterable") then
@@ -276,6 +289,39 @@ AddComponentAction("USEITEM", "tool", function(inst, doer, target, actions, righ
 		table.insert(actions, ACTIONS.CHOP)
 	end
 end)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Action for storing Souls inside bottles. (Only Wortox).
+AddPrefabPostInit("messagebottleempty", function(inst)
+	inst:AddTag("soul_storage")
+end)
+
+AddAction("STORESOUL", STRINGS.ACTIONS.STORESOUL, function(act)
+	local bottle = act.target and act.target.components.unwrappable or nil
+	if act.invobject:HasTag("soul") and act.target:HasTag("soul_storage") then
+		local bottle_soul = SpawnPrefab("kyno_bottle_soul")
+		act.doer.components.inventory:GiveItem(bottle_soul) 
+		act.doer.SoundEmitter:PlaySound("dontstarve/characters/wortox/soul/hop_out")
+		act.invobject.components.stackable:Get(1):Remove()
+		act.target.components.stackable:Get(1):Remove()
+		return true
+	end
+end)
+
+ACTIONS.STORESOUL.mount_valid = true
+ACTIONS.UNWRAP.mount_valid = true -- This is for unwrapping bundles while on beefalo.
+
+AddComponentAction("USEITEM", "soul", function(inst, doer, target, actions, right)
+	if target:HasTag("soul_storage") and doer:HasTag("soulstealer") then
+		table.insert(actions, ACTIONS.STORESOUL)
+	end
+end)
+
+AddStategraphActionHandler("wilson", _G.ActionHandler(ACTIONS.STORESOUL, function(inst, action)
+	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+end))
+AddStategraphActionHandler("wilson_client", _G.ActionHandler(ACTIONS.STORESOUL, function(inst, action)
+	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+end))
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Action String overrides.
 ACTIONS.GIVE.stroverridefn = function(act)
@@ -306,6 +352,12 @@ ACTIONS.PICK.stroverridefn = function(act)
 	if act.target.prefab == "kyno_cookware_syrup" then
 		return _G.STRINGS.KYNO_HARVEST_POTSYRUP
 	end
+	if act.target.prefab == "kyno_rockflippable" then
+		return _G.STRINGS.KYNO_PICKUP_ROCKFLIPPABLE
+	end
+	if act.target.prefab == "kyno_rockflippable_cave" then
+		return _G.STRINGS.KYNO_PICKUP_ROCKFLIPPABLE
+	end
 end
 
 ACTIONS.FLAY.stroverridefn = function(act)
@@ -319,6 +371,16 @@ ACTIONS.EAT.stroverridefn = function(act)
 	local obj = act.target or act.invobject
 	if obj:HasTag("drinkable_food") then 
 		return _G.STRINGS.KYNO_DRINK_FOOD 
+	end
+end
+
+ACTIONS.UNWRAP.stroverridefn = function(act)
+	local obj = act.target or act.invobject
+	if obj:HasTag("canned_food") then
+		return _G.STRINGS.KYNO_OPEN_CAN
+	end
+	if obj:HasTag("bottled_soul") then
+		return _G.STRINGS.KYNO_OPEN_BOTTLE_SOUL
 	end
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -752,6 +814,7 @@ if DF_COFFEE == 1 then
 		if not _G.TheWorld.ismastersim then
 			return inst
 		end	
+		
 		inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00) 
 		inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00) 
 		inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00) 
@@ -762,6 +825,7 @@ elseif DF_COFFEE == 2 then
 		if not _G.TheWorld.ismastersim then
 			return inst
 		end	
+		
 		inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00) 
 		inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00) 
 		inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00) 
@@ -776,6 +840,7 @@ elseif DF_COFFEE == 3 then
 		if not _G.TheWorld.ismastersim then
 			return inst
 		end	
+		
 		inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00) 
 		inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00) 
 		inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00) 
@@ -794,6 +859,7 @@ elseif DF_COFFEE == 4 then
 		if not _G.TheWorld.ismastersim then
 			return inst
 		end	
+		
 		inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00) 
 		inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00) 
 		inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00) 
@@ -893,7 +959,7 @@ if COFFEE_SPEED == 1 then
 				if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
 				return
 			elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-				eater.tropicalbuff_duration = 1440
+				eater.tropicalbuff_duration = COFFEE_DURATION
 				eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
 			local spiced_buff = spiced_buffs[inst.components.edible.spice]
 				if spiced_buff then
@@ -904,7 +970,7 @@ if COFFEE_SPEED == 1 then
 				end
 			else
 				eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", 1.83)
-				eater:DoTaskInTime(1440, function()
+				eater:DoTaskInTime(COFFEE_DURATION, function()
 					eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
 				end)
 			end
@@ -1677,4 +1743,114 @@ end)
 
 -- Fix for fuel items, because the action was "Give" instead of "Add Fuel".
 ACTIONS.ADDFUEL.priority = 5
+ACTIONS.ADDWETFUEL.priority = 5
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Small fix for the natural spawning Mushroom Stump.
+local mushstumps = {
+	"kyno_mushstump_natural",
+	"kyno_mushstump_cave",
+}
+
+for k,v in pairs(mushstumps) do
+	AddPrefabPostInit(v, function(inst)
+		inst:AddTag("mushroom_stump_natural")
+	end)
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Crab King and its claws Drops Crab Meat instead of Meat.
+-- Update this if Klei updates their counterparts!
+AddPrefabPostInit("crabking", function(inst)
+	_G.SetSharedLootTable("hof_crabking",
+	{
+		{"chesspiece_crabking_sketch",  1.00},
+		{"trident_blueprint",           1.00},
+		{"kyno_crabmeat",               1.00},
+		{"kyno_crabmeat",               1.00},
+		{"kyno_crabmeat",               1.00},
+		{"kyno_crabmeat",               1.00},
+		{"kyno_crabmeat",               1.00},
+		{"kyno_crabmeat",               1.00},
+		{"kyno_crabmeat",               1.00},
+		{"singingshell_octave5",        1.00},
+		{"singingshell_octave5",        1.00},
+		{"singingshell_octave5",        1.00},
+		{"singingshell_octave5",        1.00},
+		{"singingshell_octave5",        0.50},
+		{"singingshell_octave5",        0.25},
+		{"singingshell_octave4",        1.00},
+		{"singingshell_octave4",        1.00},
+		{"singingshell_octave4",        1.00},
+		{"singingshell_octave4",        0.50},
+		{"singingshell_octave4",        0.25},
+		{"singingshell_octave3",        1.00},
+		{"singingshell_octave3",        1.00},
+		{"singingshell_octave3",        0.50},
+		{"barnacle",                    1.00},
+		{"barnacle",                    1.00},
+		{"barnacle",                    1.00},
+		{"barnacle",                    0.25},
+		{"barnacle",                    0.25},
+		{"barnacle",                    0.25},
+		{"barnacle",                    0.25},
+	})
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end	
+	
+	inst.components.lootdropper:SetChanceLootTable("hof_crabking")
+end)
+
+AddPrefabPostInit("crabking_claw", function(inst)
+	_G.SetSharedLootTable("hof_crabking_claw",
+	{
+		{"kyno_crabmeat",               1.00},
+	})
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end	
+	
+	inst.components.lootdropper:SetChanceLootTable("hof_crabking_claw")
+end)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Small fix for the Watery Crate and Freshwater Fishing Rod.
+AddPrefabPostInit("kyno_watery_crate", function(inst)
+	inst:AddTag("not_serenity_crate")
+end)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Quick open Canned Items.
+AddStategraphActionHandler("wilson", _G.ActionHandler(ACTIONS.UNWRAP, function(inst, action)
+	local target = action.target or action.invobject
+	if target.components.unwrappable and target:HasTag("canned_food") then
+		return "doshortaction"
+	else
+		return "dolongaction"
+	end
+end))
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Wortox gets the full stats of Soul Stew.
+AddPrefabPostInit("soulstew", function(inst)
+	local function OnEatSoulStew(inst, eater)
+		if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
+			return
+		elseif eater:HasTag("soulstealer") then
+			-- Needs to be half because the food already give some stats.
+			eater.components.health:DoDelta(5)
+			eater.components.hunger:DoDelta(31.25)
+			eater.components.sanity:DoDelta(-5)
+		end
+	end
+
+	inst:AddTag("soulstew")
+	
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("soul") -- Required for eating.
+	if inst.components.edible then
+		inst.components.edible:SetOnEatenFn(OnEatSoulStew)
+	end
+end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

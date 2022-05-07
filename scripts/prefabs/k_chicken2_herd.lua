@@ -26,14 +26,14 @@ local function fn()
 
     inst:AddComponent("herd")
     inst.components.herd:SetMemberTag("chicken2")
-	inst.components.herd:SetMaxSize(2)
-    inst.components.herd:SetGatherRange(10)
+	inst.components.herd:SetMaxSize(3)
+    inst.components.herd:SetGatherRange(40)
     inst.components.herd:SetUpdateRange(20)
     inst.components.herd:SetOnEmptyFn(inst.Remove)
-    inst.components.herd.nomerging = false
+    inst.components.herd.nomerging = true
 
     inst:AddComponent("periodicspawner")
-    inst.components.periodicspawner:SetRandomTimes(960, 0.5*480)
+    inst.components.periodicspawner:SetRandomTimes(960, 0.5*960)
     inst.components.periodicspawner:SetPrefab("kyno_chicken2")
     inst.components.periodicspawner:SetOnSpawnFn(OnSpawned)
     inst.components.periodicspawner:SetSpawnTestFn(CanSpawn)

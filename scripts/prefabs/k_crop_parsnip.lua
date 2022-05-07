@@ -23,7 +23,7 @@ local prefabs =
 }
 
 local function onpicked(inst)
-    TheWorld:PushEvent("beginregrowth", inst)
+    -- TheWorld:PushEvent("beginregrowth", inst)
     inst:Remove()
 end
 --[[ -- Moved to "kyno_postinits.lua".

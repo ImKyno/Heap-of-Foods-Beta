@@ -78,7 +78,7 @@ local function fn()
 	inst:AddTag("animal")
 	inst:AddTag("prey")
 	inst:AddTag("smallcreature")
-    inst:AddTag("canbetrapped")
+    -- inst:AddTag("canbetrapped") This means the normal trap can work.
     inst:AddTag("cattoy")
 	inst:AddTag("serenitycrab")
 	

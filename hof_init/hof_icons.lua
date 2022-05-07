@@ -36,7 +36,8 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"kyno_koi", "kyno_koi_cooked", "kyno_saltrack_installer", "turf_pinkpark", "turf_stonecity", "kyno_sapbucket_installer", "kyno_crabtrap_installer", "kyno_sugartree_bud", "kyno_sugartree_petals", 
 	"kyno_pebblecrab", "kyno_crabmeat", "kyno_crabmeat_cooked", "kyno_chicken2", "kyno_chicken_egg", "kyno_chicken_egg_cooked", "kyno_cookware_hanger_item", "kyno_cookware_kit_hanger", "kyno_cookware_syrup_pot",
 	"kyno_cookware_kit_syrup", "kyno_cookware_big_pot", "kyno_cookware_small_pot", "kyno_cookware_grill_item", "kyno_cookware_small_grill_item", "kyno_cookware_kit_grill", "kyno_cookware_kit_small_grill",
-	"kyno_cookware_oven_item", "kyno_cookware_casserole", "kyno_cookware_small_casserole", "kyno_cookware_kit_oven"}) do
+	"kyno_cookware_oven_item", "kyno_cookware_casserole", "kyno_cookware_small_casserole", "kyno_cookware_kit_oven", "kyno_tunacan", "kyno_tunacan_open", "kyno_tomatocan", "kyno_tomatocan_open", "kyno_beancan",
+	"kyno_beancan_open", "kyno_meatcan", "kyno_meatcan_open", "kyno_sodacan", "kyno_cokecan", "kyno_energycan", "kyno_bottle_soul", "soulstew"}) do
         local foods_name = foods
         AddPrefabPostInit(foods_name, function(inst)
             inst.components.inventoryitem.imagename = foods_name

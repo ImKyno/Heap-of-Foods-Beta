@@ -2,18 +2,23 @@
 <Atlas>
 	<Texture filename="hof_customizationicons.tex" />
 	<Elements>
-		<Element name="worldgen_kyno_aloe_ground.tex" u1="0.001" u2="0.249" v2="0.999" v1="0.751" variant="" />
-		<Element name="worldgen_kyno_cucumber_ground.tex" u1="0.251" u2="0.499" v2="0.999" v1="0.751" variant="" />
-		<Element name="worldgen_kyno_fennel_ground.tex" u1="0.001" u2="0.249" v2="0.749" v1="0.501" variant="" />
-		<Element name="worldgen_kyno_lotus_ocean.tex" u1="0.251" u2="0.499" v2="0.749" v1="0.501" variant="" />
-		<Element name="worldgen_kyno_parznip_big.tex" u1="0.501" u2="0.749" v2="0.999" v1="0.751" variant="" />
-		<Element name="worldgen_kyno_parznip_ground.tex" u1="0.751" u2="0.999" v2="0.999" v1="0.751" variant="" />
-		<Element name="worldgen_kyno_radish_ground.tex" u1="0.501" u2="0.749" v2="0.749" v1="0.501" variant="" />
-		<Element name="worldgen_kyno_seaweeds_ocean.tex" u1="0.751" u2="0.999" v2="0.749" v1="0.501" variant="" />
-		<Element name="worldgen_kyno_sweetpotato_ground.tex" u1="0.001" u2="0.249" v2="0.499" v1="0.251" variant="" />
-		<Element name="worldgen_kyno_taroroot_ocean.tex" u1="0.251" u2="0.499" v2="0.499" v1="0.251" variant="" />
-		<Element name="worldgen_kyno_turnip_ground.tex" u1="0.501" u2="0.749" v2="0.499" v1="0.251" variant="" />
-		<Element name="worldgen_kyno_waterycress_ocean.tex" u1="0.751" u2="0.999" v2="0.499" v1="0.251" variant="" />
-		<Element name="worldgen_kyno_wildwheat.tex" u1="0.001" u2="0.249" v2="0.249" v1="0.001" variant="" />
+		<Element name="worldgen_kyno_aloe_ground.tex" u1="0.001" u2="0.124" v2="0.999" v1="0.751" variant="" />
+		<Element name="worldgen_kyno_cucumber_ground.tex" u1="0.126" u2="0.249" v2="0.999" v1="0.751" variant="" />
+		<Element name="worldgen_kyno_fennel_ground.tex" u1="0.001" u2="0.124" v2="0.749" v1="0.501" variant="" />
+		<Element name="worldgen_kyno_lotus_ocean.tex" u1="0.126" u2="0.249" v2="0.749" v1="0.501" variant="" />
+		<Element name="worldgen_kyno_mushstump_cave.tex" u1="0.251" u2="0.374" v2="0.999" v1="0.751" variant="" />
+		<Element name="worldgen_kyno_mushstump_natural.tex" u1="0.376" u2="0.499" v2="0.999" v1="0.751" variant="" />
+		<Element name="worldgen_kyno_parznip_big.tex" u1="0.251" u2="0.374" v2="0.749" v1="0.501" variant="" />
+		<Element name="worldgen_kyno_parznip_ground.tex" u1="0.376" u2="0.499" v2="0.749" v1="0.501" variant="" />
+		<Element name="worldgen_kyno_radish_ground.tex" u1="0.001" u2="0.124" v2="0.499" v1="0.251" variant="" />
+		<Element name="worldgen_kyno_rockflippable.tex" u1="0.126" u2="0.249" v2="0.499" v1="0.251" variant="" />
+		<Element name="worldgen_kyno_rockflippable_cave.tex" u1="0.251" u2="0.374" v2="0.499" v1="0.251" variant="" />
+		<Element name="worldgen_kyno_seaweeds_ocean.tex" u1="0.376" u2="0.499" v2="0.499" v1="0.251" variant="" />
+		<Element name="worldgen_kyno_sweetpotato_ground.tex" u1="0.001" u2="0.124" v2="0.249" v1="0.001" variant="" />
+		<Element name="worldgen_kyno_taroroot_ocean.tex" u1="0.126" u2="0.249" v2="0.249" v1="0.001" variant="" />
+		<Element name="worldgen_kyno_turnip_cave.tex" u1="0.251" u2="0.374" v2="0.249" v1="0.001" variant="" />
+		<Element name="worldgen_kyno_turnip_ground.tex" u1="0.376" u2="0.499" v2="0.249" v1="0.001" variant="" />
+		<Element name="worldgen_kyno_waterycress_ocean.tex" u1="0.501" u2="0.624" v2="0.999" v1="0.751" variant="" />
+		<Element name="worldgen_kyno_wildwheat.tex" u1="0.626" u2="0.749" v2="0.999" v1="0.751" variant="" />
 	</Elements>
 </Atlas>

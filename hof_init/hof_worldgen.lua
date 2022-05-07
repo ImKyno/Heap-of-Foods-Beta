@@ -78,6 +78,16 @@ local TurnipRooms = {
 	"SinkholeSwamp",
 }
 
+local TurnipCaveRooms = {
+	"SinkholeSwamp",
+	"DarkSwamp",
+	"TentacleMud",
+	"TentaclesAndTrees",
+	"SpiderSinkholeMarsh",
+	"BGSinkholeSwamp",
+	"BGSinkholeSwampRoom",
+}
+
 local OceanRooms = {
 	"OceanCoastal",
 	"OceanRough",
@@ -99,6 +109,69 @@ local ParznipBigRooms = {
 	"RuinedCityEntrance",
 	"RuinedCity",
 	"LightHut",
+}
+
+local StoneSlabRooms = {
+	"BGChessRocky",
+	"BGRocky",
+	"Rocky",
+	"RockyBuzzards",
+	"GenericRockyNoThreat",
+	"MolesvilleRocky",
+	"BGSavanna",
+	"CritterDen",
+	"BGDeciduous",
+	"DeepDeciduous",
+	"MagicalDeciduous",
+	"DeciduousMole",
+	"PondyGrass",
+}
+
+local StoneSlabCaveRooms = {
+	"SlurtleCanyon",
+	"BatsAndSlurtles",
+	"RockyPlains",
+	"RockyHatchingGrounds",
+	"BatsAndRocky",
+	"BGRockyCave",
+	"BGRockyCaveRoom",
+	"SpillagmiteForest",
+	"DropperCanyon",
+	"StalagmitesAndLights",
+	"SpidersAndBats",
+	"ThuleciteDebris",
+	"BGSpillagmite",
+	"BGSpillagmiteRoom",
+}
+
+local MushroomStumpRooms = {
+	"BGForest",
+	"DeepForest",
+	"Forest",
+	"BGCrappyForest",
+	"CrappyDeepForest",
+	"CrappyForest",
+	"SpiderForest",
+	"MoonbaseOne",
+}
+
+local MushroomStumpCaveRooms = {
+	"GreenMushForest",
+	"GreenMushPonds",
+	"GreenMushSinkhole",
+	"GreenMushMeadow",
+	"GreenMushRabbits",
+	"GreenMushNoise",
+	"BGGreenMush",
+	"BGGreenMushRoom",
+}
+
+local WateryCrateRooms = {
+	"OceanCoastalShore",
+	"OceanCoastal",
+	"OceanSwell",
+	"OceanRough",
+	"OceanHazardous",
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Add the Prefabs to the world.
@@ -143,6 +216,13 @@ for k, v in pairs(TurnipRooms) do
 	end)
 end
 _G.terrain.filter.kyno_turnip_ground 							= TERRAIN_FILTERS
+
+for k, v in pairs(TurnipCaveRooms) do
+	AddRoomPreInit(v, function(room)
+		room.contents.distributeprefabs.kyno_turnip_cave  		= TUNING.HOF_RESOURCES
+	end)
+end
+_G.terrain.filter.kyno_turnip_cave 								= TERRAIN_FILTERS
 
 for k, v in pairs(OceanRooms) do
 	AddRoomPreInit(v, function(room)
@@ -193,6 +273,62 @@ for k, v in pairs(ParznipBigRooms) do
 end
 _G.terrain.filter.kyno_parznip_big								= TERRAIN_FILTERS
 
+for k, v in pairs(StoneSlabRooms) do
+	AddRoomPreInit(v, function(room)
+		room.contents.distributeprefabs.kyno_rockflippable		= TUNING.HOF_RESOURCES
+	end)
+end
+_G.terrain.filter.kyno_rockflippable							= TERRAIN_FILTERS
+
+for k, v in pairs(StoneSlabCaveRooms) do
+	AddRoomPreInit(v, function(room)
+		room.contents.distributeprefabs.kyno_rockflippable_cave	= TUNING.HOF_RESOURCES
+	end)
+end
+_G.terrain.filter.kyno_rockflippable_cave						= TERRAIN_FILTERS
+
+for k, v in pairs(MushroomStumpRooms) do
+	AddRoomPreInit(v, function(room)
+		room.contents.distributeprefabs.kyno_mushstump_natural	= TUNING.HOF_RESOURCES
+	end)
+end
+_G.terrain.filter.kyno_mushstump_natural						= TERRAIN_FILTERS
+
+for k, v in pairs(MushroomStumpCaveRooms) do
+	AddRoomPreInit(v, function(room)
+		room.contents.distributeprefabs.kyno_mushstump_cave		= TUNING.HOF_RESOURCES
+	end)
+end
+_G.terrain.filter.kyno_mushstump_cave							= TERRAIN_FILTERS
+
+for k, v in pairs(WateryCrateRooms) do
+	AddRoomPreInit(v, function(room)
+		room.contents.distributeprefabs.kyno_watery_crate		= TUNING.HOF_RESOURCES
+	end)
+end
+_G.terrain.filter.kyno_watery_crate							    = TERRAIN_FILTERS
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Add the Serenity Archipelago to the world. Not using this, because the CC thingie doesn't work properly!!
+--[[
+AddTaskSetPreInitAny(function(tasksetdata)
+    if tasksetdata.location ~= "forest" then
+        return
+    end
+    
+    tasksetdata.ocean_prefill_setpieces["hof_serenityisland1"] = { count = 1 } 
+end)
+
+AddTaskSetPreInitAny(function(tasksetdata)
+	require("map/tasks/hof_serenityisland_tasks")
+	if tasksetdata.location == "forest" then
+		table.insert(tasksetdata.tasks, "SerenityIsland_Shards")
+		table.insert(tasksetdata.tasks, "SerenityIsland_Salt")
+		table.insert(tasksetdata.tasks, "SerenityIsland_Forest1")
+		table.insert(tasksetdata.tasks, "SerenityIsland_Forest2")
+		table.insert(tasksetdata.tasks, "SerenityIsland_Forest3")
+	end
+end)
+]]--
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- List of Rooms (Biomes).
 --[[

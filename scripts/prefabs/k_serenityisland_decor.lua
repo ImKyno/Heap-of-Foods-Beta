@@ -66,7 +66,7 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		pot_fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		
 		ElderSayThanks(inst)
-		TheWorld:PushEvent("elderpot_repaired")
+		-- inst:PushEvent("elderpot_repaired")
 	end
 	inst:Remove()
 end

@@ -42,8 +42,10 @@ local function SayNear(inst)
     end
 end
 
-local function OnFar(inst)
-	SayNear(inst)
+local function OnFar(inst, isnight)
+	if not TheWorld.state.isnight then
+		SayNear(inst)
+	end
 end
 
 local function OnTurnOff(inst)
@@ -100,19 +102,12 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		inst.components.craftingstation:LearnItem("turf_stonecity_blueprint", "turf_stonecity_p")
 		inst.components.craftingstation:LearnItem("dug_kyno_spotbush", "dug_kyno_spotbush_p")
 		inst.components.craftingstation:LearnItem("dug_kyno_wildwheat", "dug_kyno_wildwheat_p")
+		inst.components.craftingstation:LearnItem("kyno_sugartree_petals", "kyno_sugartree_petals_p")
 		inst.components.craftingstation:LearnItem("kyno_sugartree_bud", "kyno_sugartree_bud_p")
 		
 		inst:AddTag("pigelder_gifted")
 		inst.foodgift = true
 	end
-end
-
-local function SellKitchenStuff(inst)
-	-- inst:DoTaskInTime(1, function() SayNewItems(inst) end) -- Say there's new stuff available.
-	inst.components.craftingstation:LearnItem("kyno_cookware_kit_hanger", "kit_hanger_p")
-	
-	inst:AddTag("pigelder_pot_repaired")
-	inst.potrepaired = true
 end
 
 local function OnSave(inst, data)
@@ -124,9 +119,6 @@ local function OnLoad(inst, data)
     if data ~= nil and data.foodgift ~= nil then
         inst:AddTag("pigelder_gifted")
     end
-	if data ~= nil and data.potrepaired ~= nil then
-		inst:AddTag("pigelder_pot_repaired")
-	end
 end
 
 local function fn()
@@ -142,6 +134,7 @@ local function fn()
 	
 	local minimap = inst.entity:AddMiniMapEntity()
     minimap:SetIcon("kyno_serenityisland_shop.tex")
+	minimap:SetPriority(5)
 
     MakeObstaclePhysics(inst, 2, .5)
 
@@ -189,7 +182,7 @@ local function fn()
 	inst:WatchWorldState("isnight", OnIsNight)
     OnIsNight(inst, TheWorld.state.isnight)
 	
-	inst:ListenForEvent("elderpot_repaired", SellKitchenStuff)
+	-- inst:ListenForEvent("elderpot_repaired", SellKitchenStuff)
 	
 	inst.OnSave	= OnSave
 	inst.OnLoad = OnLoad

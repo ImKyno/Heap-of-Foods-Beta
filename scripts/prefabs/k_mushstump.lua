@@ -6,6 +6,9 @@ local assets =
 	
 	Asset("IMAGE", "images/inventoryimages/hof_buildingimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_buildingimages.xml"),
+	
+	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 }
 
 local prefabs = 
@@ -14,12 +17,13 @@ local prefabs =
 }
 
 local function dig_up(inst, chopper)
-	inst.components.lootdropper:SpawnLootPrefab("kyno_white_cap")
-	inst.components.lootdropper:SpawnLootPrefab("livinglog")
-	inst.components.lootdropper:SpawnLootPrefab("poop")
-	inst.components.lootdropper:SpawnLootPrefab("poop")
-	inst.components.lootdropper:SpawnLootPrefab("spoiled_food")
-	inst.components.lootdropper:SpawnLootPrefab("spoiled_food")
+	if inst:HasTag("mushroom_stump_natural") then
+		inst.components.lootdropper:SpawnLootPrefab("kyno_white_cap")
+		inst.components.lootdropper:SpawnLootPrefab("livinglog")
+	else
+		inst.components.lootdropper:DropLoot()
+	end
+	
 	inst:Remove()
 end
 
@@ -51,16 +55,21 @@ local function fn()
     inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(.8, .8, .8)
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("kyno_mushroomstump.tex")
+	minimap:SetPriority(-2)
 	
+	inst.AnimState:SetScale(.8, .8, .8)
 	MakeObstaclePhysics(inst, .5)
 	
 	inst.AnimState:SetBank("kyno_mushroomstump")
 	inst.AnimState:SetBuild("kyno_mushroomstump")
 	inst.AnimState:PlayAnimation("idle", true)
 	
-	inst:AddTag("structure")
 	inst:AddTag("mushroom_stump")
+	inst:AddTag("plant")
+	inst:AddTag("renewable")
+	inst:AddTag("silviculture")
 	
 	inst.entity:SetPristine()
 
@@ -92,6 +101,7 @@ local function fn()
 
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
+	MakeNoGrowInWinter(inst)
     MakeHauntableIgnite(inst)
 
 	return inst
@@ -102,4 +112,6 @@ local function mushplacefn(inst)
 end
 
 return Prefab("kyno_mushstump", fn, assets, prefabs),
+Prefab("kyno_mushstump_natural", fn, assets, prefabs),
+Prefab("kyno_mushstump_cave", fn, assets, prefabs),
 MakePlacer("kyno_mushstump_placer", "kyno_mushroomstump", "kyno_mushroomstump", "idle", false, nil, nil, nil, nil, nil, mushplacefn)

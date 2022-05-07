@@ -17,7 +17,7 @@ local prefabs =
 }
 
 local function onpicked(inst)
-    TheWorld:PushEvent("beginregrowth", inst)
+    -- TheWorld:PushEvent("beginregrowth", inst)
     inst:Remove()
 end
 
@@ -33,6 +33,8 @@ local function fn()
     inst.AnimState:SetBuild("kyno_turnip")
     inst.AnimState:PlayAnimation("planted")
     inst.AnimState:SetRayTestOnBB(true)
+	
+	inst:SetPrefabNameOverride("kyno_turnip_ground")
 
     inst.entity:SetPristine()
 
@@ -41,19 +43,19 @@ local function fn()
     end
 
     inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "KYNO_TURNIP_GROUND"
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/wilson/pickup_plants"
     inst.components.pickable:SetUp("kyno_turnip", 10)
     inst.components.pickable.onpickedfn = onpicked
-
     inst.components.pickable.quickpick = true
-
-    MakeSmallBurnable(inst)
-    MakeSmallPropagator(inst)
 
     inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
+	
+	MakeSmallBurnable(inst)
+    MakeSmallPropagator(inst)
 
     return inst
 end
@@ -251,4 +253,5 @@ local function turnip_seeds()
 	return inst
 end
 ]]--
-return Prefab("kyno_turnip_ground", fn, assets, prefabs)
+return Prefab("kyno_turnip_ground", fn, assets, prefabs),
+Prefab("kyno_turnip_cave", fn, assets, prefabs)

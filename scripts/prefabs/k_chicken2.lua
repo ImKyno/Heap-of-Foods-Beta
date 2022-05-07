@@ -76,7 +76,7 @@ local function fn()
 	inst:AddTag("prey")
 	inst:AddTag("smallcreature")
 	inst:AddTag("herdmember")
-	inst:AddTag("chicken")
+	inst:AddTag("chicken2")
 	
 	inst.entity:SetPristine()
 
@@ -123,9 +123,10 @@ local function fn()
 	
 	inst:AddComponent("periodicspawner")
 	inst.components.periodicspawner:SetPrefab("kyno_chicken_egg")
-	inst.components.periodicspawner:SetRandomTimes(240, 80)
+	inst.components.periodicspawner:SetRandomTimes(960, 80)
 	inst.components.periodicspawner:SetDensityInRange(20, 2)
-	inst.components.periodicspawner:SetMinimumSpacing(8)
+	inst.components.periodicspawner:SetMinimumSpacing(20)
+	inst.components.periodicspawner:SetOnlySpawnOffscreen(true)
 	inst.components.periodicspawner:Start()
 	
 	inst:AddComponent("named")

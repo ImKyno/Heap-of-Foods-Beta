@@ -36,7 +36,7 @@ local function dig_up(inst, worker)
 
         inst.components.lootdropper:SpawnLootPrefab(withered and "kyno_wheat" or "dug_kyno_wildwheat")
     end
-	TheWorld:PushEvent("beginregrowth", inst)
+	-- TheWorld:PushEvent("beginregrowth", inst)
     inst:Remove()
 end
 

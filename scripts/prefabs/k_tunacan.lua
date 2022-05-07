@@ -1,0 +1,125 @@
+local assets =
+{
+	Asset("ANIM", "anim/kyno_tuna.zip"),
+	
+	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
+	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
+	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
+}
+
+local prefabs =
+{
+    "fishmeat",
+	"fishmeat_cooked",
+	"spoiled_fish",
+	"kyno_tunacan_open",
+}    
+
+local function OnOpenCan(inst, pos, doer)
+	if doer ~= nil and doer.SoundEmitter ~= nil then
+		doer.SoundEmitter:PlaySound("hookline_2/characters/hermit/tacklebox/small_open")
+	else
+		inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/tacklebox/small_open")
+	end
+
+	local tunacan = SpawnPrefab("kyno_tunacan_open")
+	if doer.components.inventory and doer:HasTag("player") and not doer.components.health:IsDead() 
+	and not doer:HasTag("playerghost") then 
+		doer.components.inventory:GiveItem(tunacan) 
+	else
+		tunacan.Transform:SetPosition(pos:Get())
+		tunacan.components.inventoryitem:OnDropped(false, .5)
+	end
+	
+	inst:Remove()
+end		
+
+local function closed_fn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+    inst.AnimState:SetBank("kyno_tuna")
+    inst.AnimState:SetBuild("kyno_tuna")
+    inst.AnimState:PlayAnimation("idle")
+	
+	inst:AddTag("canned_food")
+	inst:AddTag("cattoy")
+    
+    inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+        
+    inst:AddComponent("inspectable")
+    
+    inst:AddComponent("inventoryitem")
+    inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_tunacan"
+    
+    inst:AddComponent("tradable")
+    inst.components.tradable.goldvalue = 1
+
+    inst:AddComponent("unwrappable")
+	inst.components.unwrappable:SetOnUnwrappedFn(OnOpenCan)
+
+    return inst
+end
+
+local function opened_fn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+    inst.AnimState:SetBank("kyno_tuna")
+    inst.AnimState:SetBuild("kyno_tuna")
+    inst.AnimState:PlayAnimation("opened")
+    
+    inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+        
+    inst:AddComponent("inspectable")
+	inst:AddComponent("bait")
+    
+    inst:AddComponent("inventoryitem")
+    inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_tunacan_open"
+    
+    inst:AddComponent("tradable")
+    inst.components.tradable.goldvalue = 1
+
+    inst:AddComponent("edible")
+	inst.components.edible.healthvalue = 10
+	inst.components.edible.hungervalue = 25
+	inst.components.edible.sanityvalue = 0
+	inst.components.edible.foodtype = FOODTYPE.MEAT
+	inst.components.edible.ismeat = true
+
+	inst:AddComponent("perishable")
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
+	inst.components.perishable:StartPerishing()
+	inst.components.perishable.onperishreplacement = "spoiled_fish"
+
+    return inst
+end
+
+return Prefab("kyno_tunacan", closed_fn, assets, prefabs),
+Prefab("kyno_tunacan_open", opened_fn, assets, prefabs)
+-- What should we do? When open give the fish like in SW, or just open the can?
+-- Well... Maybe open the can just to be different...
