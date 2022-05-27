@@ -1,5 +1,9 @@
-local STRINGS = GLOBAL.STRINGS
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Common Dependencies.
+local _G 			= GLOBAL
+local require 		= _G.require
+local STRINGS		= _G.STRINGS
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --[[ STRINGS SAMPLE TEXT
 STRINGS.NAMES.
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.
@@ -20,6 +24,128 @@ STRINGS.CHARACTERS.WURT.DESCRIBE.
 STRINGS.CHARACTERS.WALTER.DESCRIBE.
 STRINGS.CHARACTERS.WANDA.DESCRIBE.
 ]]--
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Mod Strings.
+STRINGS.UI.FOOD_TYPES.PREPAREDSOUL = "Soul"
+STRINGS.UI.FOOD_TYPES.POOP = "Horrible" -- Use horrible just to mimic the cookbook.
+STRINGS.UI.CRAFTING.RECIPEACTION.SERENITYSHOP = "Trade"
+STRINGS.UI.COOKBOOK.TAB_TITLE_KEG = "Wooden Keg Recipes"
+STRINGS.UI.COOKBOOK.TAB_TITLE_JAR = "Preserves Jar Recipes"
+STRINGS.UI.COOKBOOK.TAB_TITLE_ARTISAN = "Artisan Recipes"
+
+STRINGS.ACTIONS.SALT = "Add Salt"
+STRINGS.ACTIONS.STORESOUL = "Store Soul"
+STRINGS.ACTIONS.FLAY = "Flay" -- This doesn't matter, ACTIONS.SLAUGHTER2 overrides it. But it's necessary for the AddAction.
+STRINGS.ACTIONS.SAPHEAL = "Heal"
+STRINGS.ACTIONS.PULLMILK = "Milk"
+STRINGS.ACTIONS.BREWER = "Brew"
+STRINGS.ACTIONS.SLAUGHTER2 = {
+	DISEMBOWEL = "Gently Disembowel",
+	MURDER = "Tastefully Murder",
+	BUTCHER = "Politely Butcher",
+	KILL = "Delicately Kill",
+	EVISCERATE = "Softly Eviscerate",
+	SLAUGHTER = "Gingerly Slaughter",
+}
+
+STRINGS.PIGELDER_TALK_FAR = {
+	"..HRUMPF..",
+	"(SNORT) ...s...scales...",
+	"...zzzZZzzz...",
+	"...s-sky...",
+	"...g-GNAW...",
+	"...p...plague...",
+}
+
+STRINGS.PIGELDER_TALK_NEAR1 = {
+	"ELDER'S EYE FEEL HEAVY",
+	"HRF? YOU TRADE? SUPPLIES?",
+	"HRF! GNAW MAD AT PIGS",
+	"HRF? SLEEP... GIVE ELDER NIGHTMARES",
+	"LITTLE GOAT CAN YOU MY OLD POT IF YE WANT!",
+	"HRF! MOST GOATS NO HELP TO PIGS",
+	"HRF! ELDER WANTS LOBSTER WITH... YELLOW THING!",
+	"...c-CARAMEL...",
+}
+
+STRINGS.PIGELDER_TALK_NEAR2 = {
+	"ELDER'S EYE FEEL HEAVY",
+	"HRF? YOU TRADE? SUPPLIES?",
+	"HRF! GNAW MAD AT PIGS",
+	"HRF? SLEEP... GIVE ELDER NIGHTMARES",
+	"LITTLE GOAT CAN YOU MY OLD POT IF YE WANT!",
+	"HRF! MOST GOATS NO HELP TO PIGS",
+	"THANKS FOR THE GIFT, LITTLE GOAT",
+	"ELDER LIKES LITTLE GOAT, THANKS FOR THE GIFT!",
+}
+
+STRINGS.PIGELDER_TALK_BUY = {
+	"THANK-YOU",
+	"YES. YOU GOOD GOAT",
+	"THANK-YOU. NOW LET ELDER REST",
+	"THANK-YOU, LITTLE GOAT",
+	"HRF! THANKS!",
+	"ELDER'S EYE FEEL HEAVY",
+}
+
+STRINGS.PIGELDER_TALK_THANK = {
+	"THANK-YOU",
+	"YES. YOU GOOD GOAT",
+	"THANK-YOU. NOW LET ELDER REST",
+	"THANK-YOU, LITTLE GOAT",
+	"HRF! THANKS!",
+}
+
+STRINGS.PIGELDER_TALK_REPAIRPOT = {
+	"THANKS FOR REPAIRING MY OLD POT, LITTLE GOAT!",
+	"THANKS LITTLE GOAT!",
+	"VERY THANKS, THAT WILL HELP ME A LOT!",
+	"HRF! LITTLE GOAT FIXED ELDER'S OLD POT, THANKS!",
+}
+
+STRINGS.FORTUNE_COOKIE_QUOTES = {
+	"It says \"The fortune you seek is in another cookie.\"",
+	"It says \"A closed mouth gathers no feet.\"",
+	"It says \"A foolish man listens to his heart. A wise man listens to cookies.\"",
+	"It says \"If you look back, you’ll soon be going that way.\"",
+	"It says \"You will live long enough to open many fortune cookies.\"",
+	"It says \"Everyone should play Wigfrid instead of Wanda or Wolfgang.\"",
+	"It says \"He who laughs at himself never runs out of things to laugh at.\"",
+	"It says \"The forums is the best place to laugh at.\"",
+	"It says \"He who throws dirt is losing ground.\"",
+	"It says \"You will be hungry again in one hour.\"",
+	"It says \"You can always find happiness at work on Friday.\"",
+	"It says \"Fortune not found? Abort, Retry, Ignore.\"",
+	"It says \"Help! I am being held prisoner in a fortune cookie factory.\"",
+	"It says \"It’s about time I got out of that cookie.\"",
+	"It says \"Never forget a friend. Especially if he owes you.\"",
+	"It says \"I am worth a fortune.\"",
+	"It says \"You will receive a fortune cookie.\"",
+	"It says \"Some fortune cookies contain no fortune.\"",
+	"It says \"Avoid taking unnecessary gambles. Lucky numbers: 12, 15, 23, 28, 37.\"",
+	"It says \"This cookie contains 117 calories.\"",
+	"It says \"Ask your mom instead of a cookie.\"",
+	"It says \"Hard work pays off in the future. Laziness pays off now.\"",
+	"It says \"Don’t eat the paper.\"",
+	"It says \"If a turtle doesn’t have a shell, is it naked or homeless?\"",
+	"It says \"Alt+F4 to avoid death.\"",
+	"It says \"󰀅󰀆󰀅\"",
+	"It says \"12 Living Logs are missing, can you find them?\"",
+	"It says \"I know what you know, you can't hide it from me.\"",
+	"It says \"This cookie has another secret.\"",
+}
+
+STRINGS.FORTUNE_COOKIE_GOOD = {
+	"It says \"You're too lucky today, nice!\"",
+	"It says \"It's ya lucky day!\"",
+	"It says \"You should try lottery today. Lucky numbers: 1, 2, 3, 4, 5.\"",
+}
+
+STRINGS.FORTUNE_COOKIE_BAD = {
+	"It says \"Impeding doom approaches...\"",
+	"It says \"You're a bad kid.\"",
+	"It says \"Doomed.\"",
+}
 
 STRINGS.NAMES.KYNO_ROE = "Roe"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_ROE = "Fish babies."
@@ -3626,56 +3752,6 @@ STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "Something weird abo
 STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "He's so different, compared to the other pigs!"
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "I see what the time has done to you."
 
-STRINGS.UI.CRAFTING.RECIPEACTION.SERENITYSHOP = "Trade"
-
-STRINGS.PIGELDER_TALK_FAR = {
-	"..HRUMPF..",
-	"(SNORT) ...s...scales...",
-	"...zzzZZzzz...",
-	"...s-sky...",
-	"...g-GNAW...",
-	"...p...plague...",
-}
-
-STRINGS.PIGELDER_TALK_NEAR1 = {
-	"ELDER'S EYE FEEL HEAVY",
-	"HRF? YOU TRADE? SUPPLIES?",
-	"HRF! GNAW MAD AT PIGS",
-	"HRF? SLEEP... GIVE ELDER NIGHTMARES",
-	"LITTLE GOAT CAN YOU MY OLD POT IF YE WANT!",
-	"HRF! MOST GOATS NO HELP TO PIGS",
-	"HRF! ELDER WANTS LOBSTER WITH... YELLOW THING!",
-	"...c-CARAMEL...",
-}
-
-STRINGS.PIGELDER_TALK_NEAR2 = {
-	"ELDER'S EYE FEEL HEAVY",
-	"HRF? YOU TRADE? SUPPLIES?",
-	"HRF! GNAW MAD AT PIGS",
-	"HRF? SLEEP... GIVE ELDER NIGHTMARES",
-	"LITTLE GOAT CAN YOU MY OLD POT IF YE WANT!",
-	"HRF! MOST GOATS NO HELP TO PIGS",
-	"THANKS FOR THE GIFT, LITTLE GOAT",
-	"ELDER LIKES LITTLE GOAT, THANKS FOR THE GIFT!",
-}
-
-STRINGS.PIGELDER_TALK_BUY = {
-	"THANK-YOU",
-	"YES. YOU GOOD GOAT",
-	"THANK-YOU. NOW LET ELDER REST",
-	"THANK-YOU, LITTLE GOAT",
-	"HRF! THANKS!",
-	"ELDER'S EYE FEEL HEAVY",
-}
-
-STRINGS.PIGELDER_TALK_THANK = {
-	"THANK-YOU",
-	"YES. YOU GOOD GOAT",
-	"THANK-YOU. NOW LET ELDER REST",
-	"THANK-YOU, LITTLE GOAT",
-	"HRF! THANKS!",
-}
-
 STRINGS.NAMES.KYNO_SUGARTREE_BUD = "Sugar Bud"
 STRINGS.NAMES.KYNO_SUGARTREE_BUD_P = "Sugar Bud"
 STRINGS.RECIPE_DESC.KYNO_SUGARTREE_BUD = "HRF! PLANT THOSE TREES BEYOND HERE!"
@@ -4668,17 +4744,216 @@ STRINGS.CHARACTERS.WARLY.DESCRIBE.SOULSTEW = "I don't like where this is going."
 STRINGS.CHARACTERS.WURT.DESCRIBE.SOULSTEW = "Glurgh... What is it...?"
 STRINGS.CHARACTERS.WALTER.DESCRIBE.SOULSTEW = "Does souls always looked like that?"
 STRINGS.CHARACTERS.WANDA.DESCRIBE.SOULSTEW = "I've seen one before. Not like this, though."
+ 
+STRINGS.NAMES.FORTUNECOOKIE = "Fortune Cookie"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.FORTUNECOOKIE = "How is my luck today?"
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.FORTUNECOOKIE = "Let's see if I'm lucky today!"
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.FORTUNECOOKIE = "Little cookie with secrets."
+STRINGS.CHARACTERS.WENDY.DESCRIBE.FORTUNECOOKIE = "Secrets to be unraveled."
+STRINGS.CHARACTERS.WX78.DESCRIBE.FORTUNECOOKIE = "JUST SOME STUPID WORDS WITH NO MEANING"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.FORTUNECOOKIE = "It's supposed to tell one's lucky."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.FORTUNECOOKIE = "I don't believe in such things."
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.FORTUNECOOKIE = "Foolishness."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.FORTUNECOOKIE = "Ha! I can already tell my luck!"
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.FORTUNECOOKIE = "Let's see how is our lucky!"
+STRINGS.CHARACTERS.WINONA.DESCRIBE.FORTUNECOOKIE = "Hmph. I don't believe that works."
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.FORTUNECOOKIE = "I'm always lucky! Hyuyu!"
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.FORTUNECOOKIE = "Strange Belly Stuff"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.FORTUNECOOKIE = "A vague prophecy."
+STRINGS.CHARACTERS.WURT.DESCRIBE.FORTUNECOOKIE = "Little story inside of it, florp."
+STRINGS.CHARACTERS.WALTER.DESCRIBE.FORTUNECOOKIE = "How is your lucky today, Woby?"
+STRINGS.CHARACTERS.WANDA.DESCRIBE.FORTUNECOOKIE = "Crispy and sugary."
 
-STRINGS.ACTIONS.SALT = "Add Salt"
-STRINGS.ACTIONS.STORESOUL = "Store Soul"
-STRINGS.ACTIONS.FLAY = "Flay" -- This doesn't matter, ACTIONS.SLAUGHTER2 overrides it. But it's necessary for the AddAction.
-STRINGS.ACTIONS.SLAUGHTER2 = {
-	DISEMBOWEL = "Gently Disembowel",
-	MURDER = "Tastefully Murder",
-	BUTCHER = "Politely Butcher",
-	KILL = "Delicately Kill",
-	EVISCERATE = "Softly Eviscerate",
-	SLAUGHTER = "Gingerly Slaughter",
-}
-STRINGS.UI.FOOD_TYPES.PREPAREDSOUL = "Soul"
-STRINGS.UI.FOOD_TYPES.POOP = "Horrible" -- Use horrible just to mimic the cookbook.
+STRINGS.NAMES.KYNO_SAPHEALER = "Musty Antidote"
+STRINGS.RECIPE_DESC.KYNO_SAPHEALER = "CURES THAT NOT-SO-FRESH SUGAR!"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_SAPHEALER = "I'm not drinking that."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_SAPHEALER = "This'll help that poisoned trees!"
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_SAPHEALER = "Wolfgang will help out little trees!"
+STRINGS.CHARACTERS.WENDY.DESCRIBE.KYNO_SAPHEALER = "A potion to stave off the sickness."
+STRINGS.CHARACTERS.WX78.DESCRIBE.KYNO_SAPHEALER = "ERADICATES CONTAGIONS FROM MAIN SYSTEM FUNCTIONS"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.KYNO_SAPHEALER = "The contents should make a most useful antidote."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.KYNO_SAPHEALER = "Smells awful, but it works!"
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.KYNO_SAPHEALER = "A cure that ails trees."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.KYNO_SAPHEALER = "The source of the trees sickness."
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.KYNO_SAPHEALER = "This is medicine?"
+STRINGS.CHARACTERS.WINONA.DESCRIBE.KYNO_SAPHEALER = "This'll make the sickness go away."
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.KYNO_SAPHEALER = "Sickly bitter."
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.KYNO_SAPHEALER = "Sick Fixer"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_SAPHEALER = "Could come in very handy."
+STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_SAPHEALER = "Good for sweet tree boo boos, florp."
+STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_SAPHEALER = "A cure for too much sweetness."
+STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_SAPHEALER = "This will fix the trees in time."
+
+STRINGS.NAMES.KYNO_BUCKET_EMPTY = "Bucket"
+STRINGS.RECIPE_DESC.KYNO_BUCKET_EMPTY = "For storing liquids, or something else."
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_BUCKET_EMPTY = "A bucket."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_BUCKET_EMPTY = "Just a stupid wooden bucket, that looks burnable!"
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_BUCKET_EMPTY = "Tiny bucket helps Wolfgang tasks."
+STRINGS.CHARACTERS.WENDY.DESCRIBE.KYNO_BUCKET_EMPTY = "A tool to aid me."
+STRINGS.CHARACTERS.WX78.DESCRIBE.KYNO_BUCKET_EMPTY = "STORAGE MODULE FOR LIQUID-WARE"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.KYNO_BUCKET_EMPTY = "A wooden bucket to help me in my daily tasks."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.KYNO_BUCKET_EMPTY = "This can come in handy."
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.KYNO_BUCKET_EMPTY = "Well... even kings needs that, I think."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.KYNO_BUCKET_EMPTY = "A majestic tool for gathering!"
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.KYNO_BUCKET_EMPTY = "We used to grab buckets of water everyday, back at home."
+STRINGS.CHARACTERS.WINONA.DESCRIBE.KYNO_BUCKET_EMPTY = "Surely, this can come in handy!"
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.KYNO_BUCKET_EMPTY = "Mortals use this to gather stuff."
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.KYNO_BUCKET_EMPTY = "Wooden Thing"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_BUCKET_EMPTY = "This will help me out."
+STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_BUCKET_EMPTY = "Place thingies inside, florp."
+STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_BUCKET_EMPTY = "Now I can carry something inside it."
+STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_BUCKET_EMPTY = "Great!"
+
+STRINGS.NAMES.KYNO_BUCKET_MILK = "Bucket of Milk"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_BUCKET_MILK = "A bucket full of milk."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_BUCKET_MILK = "Just a stupid wooden bucket, that looks burnable!"
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_BUCKET_MILK = "Hehe, Wolfgang filled it with milk."
+STRINGS.CHARACTERS.WENDY.DESCRIBE.KYNO_BUCKET_MILK = "Full of milk."
+STRINGS.CHARACTERS.WX78.DESCRIBE.KYNO_BUCKET_MILK = "STORAGE FULL"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.KYNO_BUCKET_MILK = "It's filled with milk."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.KYNO_BUCKET_MILK = "Must not drink it... yet."
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.KYNO_BUCKET_MILK = "I need to get this milk out of here quickly."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.KYNO_BUCKET_MILK = "Needs better storage than this bucket."
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.KYNO_BUCKET_MILK = "Hehe, full of milk!"
+STRINGS.CHARACTERS.WINONA.DESCRIBE.KYNO_BUCKET_MILK = "Drive home now."
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.KYNO_BUCKET_MILK = "Full."
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.KYNO_BUCKET_MILK = "Moo Moo Inside"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_BUCKET_MILK = "Now I just need to prepare this milk."
+STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_BUCKET_MILK = "Milky, florp."
+STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_BUCKET_MILK = "Don't drink it, Woby!"
+STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_BUCKET_MILK = "Great!"
+
+STRINGS.NAMES.KYNO_BUCKET_WATER = "Bucket of Water"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_BUCKET_WATER = "A bucket full of water."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_BUCKET_WATER = "Just a stupid wooden bucket, that looks burnable!"
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_BUCKET_WATER = "Hehe, Wolfgang filled it with water."
+STRINGS.CHARACTERS.WENDY.DESCRIBE.KYNO_BUCKET_WATER = "Full of water."
+STRINGS.CHARACTERS.WX78.DESCRIBE.KYNO_BUCKET_WATER = "STORAGE FULL"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.KYNO_BUCKET_WATER = "It's filled with water."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.KYNO_BUCKET_WATER = "Water for my little plants."
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.KYNO_BUCKET_WATER = "Now I can water that stupid plants."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.KYNO_BUCKET_WATER = "Full of water!"
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.KYNO_BUCKET_WATER = "We can now water our plants."
+STRINGS.CHARACTERS.WINONA.DESCRIBE.KYNO_BUCKET_WATER = "Drive home now."
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.KYNO_BUCKET_WATER = "Full."
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.KYNO_BUCKET_WATER = "Water Inside"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_BUCKET_WATER = "Now I can water my garden!"
+STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_BUCKET_WATER = "Just water, glurp."
+STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_BUCKET_WATER = "Now that is full, we can water the garden together, Woby!"
+STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_BUCKET_WATER = "Water for my garden plants."
+
+STRINGS.NAMES.KYNO_MILK_BEEFALO = "Beefalo Milk"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_MILK_BEEFALO = "Fresh milk!"
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_MILK_BEEFALO = "Finally, some normal milk around here..."
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_MILK_BEEFALO = "Milk for muscles!"
+STRINGS.CHARACTERS.WENDY.DESCRIBE.KYNO_MILK_BEEFALO = "Is it safe?"
+STRINGS.CHARACTERS.WX78.DESCRIBE.KYNO_MILK_BEEFALO = "MILK FROM NATURAL SOURCES"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.KYNO_MILK_BEEFALO = "Tantalizing!"
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.KYNO_MILK_BEEFALO = "Do you want some, Lucy?"
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.KYNO_MILK_BEEFALO = "A source for nutrients."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.KYNO_MILK_BEEFALO = "This is powerful milk."
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.KYNO_MILK_BEEFALO = "A glass of milk."
+STRINGS.CHARACTERS.WINONA.DESCRIBE.KYNO_MILK_BEEFALO = "It feels tingly going down."
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.KYNO_MILK_BEEFALO = "Please, no thanks."
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.KYNO_MILK_BEEFALO = "Moo Moo?"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_MILK_BEEFALO = "Can I make this into cheese?"
+STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_MILK_BEEFALO = "Tasty, florp."
+STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_MILK_BEEFALO = "Do you want some milk, Woby?"
+STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_MILK_BEEFALO = "It has a nice flavor."
+
+STRINGS.NAMES.KYNO_MILK_KOALEFANT = "Koalefant Milk"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_MILK_KOALEFANT = "Fresh milk!"
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_MILK_KOALEFANT = "Finally, some normal milk around here..."
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_MILK_KOALEFANT = "Milk for muscles!"
+STRINGS.CHARACTERS.WENDY.DESCRIBE.KYNO_MILK_KOALEFANT = "Is it safe?"
+STRINGS.CHARACTERS.WX78.DESCRIBE.KYNO_MILK_KOALEFANT = "MILK FROM NATURAL SOURCES"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.KYNO_MILK_KOALEFANT = "Tantalizing!"
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.KYNO_MILK_KOALEFANT = "Do you want some, Lucy?"
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.KYNO_MILK_KOALEFANT = "A source for nutrients."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.KYNO_MILK_KOALEFANT = "This is powerful milk."
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.KYNO_MILK_KOALEFANT = "A glass of milk."
+STRINGS.CHARACTERS.WINONA.DESCRIBE.KYNO_MILK_KOALEFANT = "It feels tingly going down."
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.KYNO_MILK_KOALEFANT = "Please, no thanks."
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.KYNO_MILK_KOALEFANT = "Moo Moo?"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_MILK_KOALEFANT = "Can I make this into cheese?"
+STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_MILK_KOALEFANT = "Tasty, florp."
+STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_MILK_KOALEFANT = "Do you want some milk, Woby?"
+STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_MILK_KOALEFANT = "It has a nice flavor."
+
+STRINGS.NAMES.KYNO_KEG = "Wooden Keg"
+STRINGS.RECIPE_DESC.KYNO_KEG = "Ingredients will eventually turn into a beverage."
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_KEG = "I wonder what I can make using this."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_KEG = "Looks burnable, but I won't do it, yet..."
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_KEG = "Little barrel makes good stuff for Wolfgang!"
+STRINGS.CHARACTERS.WENDY.DESCRIBE.KYNO_KEG = "A barrel for making wine or other goodies."
+STRINGS.CHARACTERS.WX78.DESCRIBE.KYNO_KEG = "A LIQUOR HARDWARE"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.KYNO_KEG = "A perfect barrel for making beverages."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.KYNO_KEG = "Now I can enjoy the making of beers."
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.KYNO_KEG = "Sure, some wine will go nice around here."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.KYNO_KEG = "The gods liquor-maker!"
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.KYNO_KEG = "Does it makes juices too?"
+STRINGS.CHARACTERS.WINONA.DESCRIBE.KYNO_KEG = "Ahh, I miss those."
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.KYNO_KEG = "This machine makes the things that mortals likes."
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.KYNO_KEG = "Wooden Box?"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_KEG = "Can't wait to brew some Pale Ales!"
+STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_KEG = "Strange."
+STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_KEG = "What flavor of juice do you want, Woby?"
+STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_KEG = "This will sure take a long time to produce."
+
+STRINGS.NAMES.KYNO_PRESERVEJAR = "Preserves Jar"
+STRINGS.RECIPE_DESC.KYNO_PRESERVEJAR = "Turns vegetables into pickles and fruits into jam."
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_PRESERVEJAR = "For the making of jams."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_PRESERVEJAR = "Burnable, yet, important... Ugh."
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_PRESERVEJAR = "Little cask helps Wolfgang make sweet stuff!"
+STRINGS.CHARACTERS.WENDY.DESCRIBE.KYNO_PRESERVEJAR = "A cask for making preserved products."
+STRINGS.CHARACTERS.WX78.DESCRIBE.KYNO_PRESERVEJAR = "HARDWARE WITH PRESERVING CAPABILITIES"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.KYNO_PRESERVEJAR = "It has many uses, besides pickles or jams."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.KYNO_PRESERVEJAR = "I want some jam, but what flavor?"
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.KYNO_PRESERVEJAR = "Quality of ingredients makes no difference to the finished product."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.KYNO_PRESERVEJAR = "It's not my kind..."
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.KYNO_PRESERVEJAR = "Let's make some pickles with it!"
+STRINGS.CHARACTERS.WINONA.DESCRIBE.KYNO_PRESERVEJAR = "Now I just need the ingredients to start brewing."
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.KYNO_PRESERVEJAR = "They told me this make a good thing with pomegranates. I must try!"
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.KYNO_PRESERVEJAR = "Wooden Box?"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_PRESERVEJAR = "I can't decide what I should brew first!"
+STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_PRESERVEJAR = "Its smelly, florp."
+STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_PRESERVEJAR = "What about some jam, Woby?"
+STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_PRESERVEJAR = "This will sure take a long time to produce."
+
+STRINGS.NAMES.WETGOOP2 = "Sludge"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.WETGOOP2 = "It tastes like nothing."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.WETGOOP2 = "How did it go wrong? It was engulfed in fire and everything."
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.WETGOOP2 = "Wolfgang ruin food!"
+STRINGS.CHARACTERS.WENDY.DESCRIBE.WETGOOP2 = "A miserable mess, just like life."
+STRINGS.CHARACTERS.WX78.DESCRIBE.WETGOOP2 = "EDIBLE FILTH"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.WETGOOP2 = "Oh no. No, no, no. This won't do at all."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.WETGOOP2 = "Better than some of the things I've eaten!"
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.WETGOOP2 = "How uncultured."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.WETGOOP2 = "Slop."
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.WETGOOP2 = "Experimenting is fun!"
+STRINGS.CHARACTERS.WINONA.DESCRIBE.WETGOOP2 = "Is this the dry goop?"
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.WETGOOP2 = "Hyuyu! How repulsive."
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.WETGOOP2 = "Yum"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.WETGOOP2 = "I am thankful my sous chefs are not around to witness this abomination..."
+STRINGS.CHARACTERS.WURT.DESCRIBE.WETGOOP2 = "Usually like wet goopy things..."
+STRINGS.CHARACTERS.WALTER.DESCRIBE.WETGOOP2 = "Er... maybe Woby will want it..."
+STRINGS.CHARACTERS.WANDA.DESCRIBE.WETGOOP2 = "I never claimed to be good at cooking!"
+
+STRINGS.NAMES.BEER = "Beer"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.BEER = "Drink in moderation."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.BEER = "It smells delicious!"
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.BEER = "So refreshing! Wolfgang likes it!"
+STRINGS.CHARACTERS.WENDY.DESCRIBE.BEER = "I shouldn't be drinking that."
+STRINGS.CHARACTERS.WX78.DESCRIBE.BEER = "THE PERFECT DRINK"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.BEER = "An alcoholic beverage, drink in moderation."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.BEER = "It is so good to see they again!"
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.BEER = "I miss them, truly."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.BEER = "Aha! I found alcohol!"
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.BEER = "We shouldn't be drinking that."
+STRINGS.CHARACTERS.WINONA.DESCRIBE.BEER = "I used to drink them after a hard day at work."
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.BEER = "Why do mortals like that so much?"
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.BEER = "Funny Taste"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.BEER = "Refreshing!"
+STRINGS.CHARACTERS.WURT.DESCRIBE.BEER = "Glergh..."
+STRINGS.CHARACTERS.WALTER.DESCRIBE.BEER = "I'm not sure if I should drink that."
+STRINGS.CHARACTERS.WANDA.DESCRIBE.BEER = "Don't drink too much of it."

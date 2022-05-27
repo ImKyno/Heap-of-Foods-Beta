@@ -6,18 +6,21 @@ PrefabFiles =
 
 	"k_foodcommands",
 	
+	"k_coffeebuff",
+	"k_strengthbuff",
+	"k_hastebuff",
+	"k_hungerregenbuff",
+	"k_sanityregenbuff",
+	"k_superregenbuff",
+	
 	"k_newfoods",
 	"k_coffeebeans",
-	"k_coffeebuff",
 	"k_realcoffeebush",
 	"k_realdugcoffeebush",
 	"k_sharkfin",
 	"k_roe",
 	"k_mussel",
 	"k_bugs",
-	"k_hungerregenbuff",
-	"k_sanityregenbuff",
-	"k_superregenbuff",
 	"k_humanmeat",
 	"k_gourmetingredients",
 	"k_mushstump",
@@ -78,5 +81,10 @@ PrefabFiles =
 	"k_pops",
 	"k_mysterymeat",
 	"k_bottle_soul",
+	"k_saphealer",
+	"k_milks",
+	"k_buckets",
+	"k_newbrews",
+	"k_brewers",
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

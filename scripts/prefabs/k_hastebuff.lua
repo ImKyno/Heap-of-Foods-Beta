@@ -1,33 +1,37 @@
-local function OnTick(inst, target)
-    if target.components.health ~= nil and
-        not target.components.health:IsDead() and
-        not target:HasTag("playerghost") then
-        target.components.hunger:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
-    else
-        inst.components.debuff:Stop()
-    end
-end
-
+-- Winona doesn't benefit from this buff.
 local function OnAttached(inst, target)
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0) 
-	inst.task = inst:DoPeriodicTask(TUNING.JELLYBEAN_TICK_RATE, OnTick, nil, target)
+    
+	if not target:HasTag("handyperson") then
+		target:AddTag("fastbuilder")
+	end
+	
     inst:ListenForEvent("death", function()
         inst.components.debuff:Stop()
     end, target)
 end
 
 local function OnTimerDone(inst, data)
-    if data.name == "regenover" then
+    if data.name == "kyno_hastebuff" then
         inst.components.debuff:Stop()
     end
 end
 
+local function OnDetached(inst, target)
+	if not target:HasTag("handyperson") then
+		target:RemoveTag("fastbuilder")
+	end
+    inst:Remove()
+end
+
 local function OnExtended(inst, target)
-    inst.components.timer:StopTimer("regenover")
-    inst.components.timer:StartTimer("regenover", TUNING.JELLYBEAN_DURATION)
-    inst.task:Cancel()
-    inst.task = inst:DoPeriodicTask(TUNING.JELLYBEAN_TICK_RATE, OnTick, nil, target)
+    inst.components.timer:StopTimer("kyno_hastebuff")
+    inst.components.timer:StartTimer("kyno_hastebuff", 480)
+	if not target:HasTag("handyperson") then
+		target:RemoveTag("fastbuilder")
+		target:AddTag("fastbuilder")
+	end
 end
 
 local function fn()
@@ -46,15 +50,15 @@ local function fn()
 
     inst:AddComponent("debuff")
     inst.components.debuff:SetAttachedFn(OnAttached)
-    inst.components.debuff:SetDetachedFn(inst.Remove)
+    inst.components.debuff:SetDetachedFn(OnDetached)
     inst.components.debuff:SetExtendedFn(OnExtended)
     inst.components.debuff.keepondespawn = true
 
     inst:AddComponent("timer")
-    inst.components.timer:StartTimer("regenover", TUNING.JELLYBEAN_DURATION)
+    inst.components.timer:StartTimer("kyno_hastebuff", 480)
     inst:ListenForEvent("timerdone", OnTimerDone)
 
     return inst
 end
 
-return Prefab("kyno_hungerregenbuff", fn)
+return Prefab("kyno_hastebuff", fn)

@@ -171,6 +171,14 @@ local KynFloat      		= AddRecipe2("kyno_floatilizer", {Ingredient("poop", 3), I
 	},	
 	{"GARDENING"}
 )
+
+local KynBucket				= AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1), Ingredient("boards", 1)}, TECH.SCIENCE_ONE,
+	{
+		atlas				= ModAtlas,
+		image				= "kyno_bucket_empty.tex",
+	},
+	{"TOOLS"}
+)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Pig Elder Shop.
 local KynSaltRack 			= AddRecipe2("kyno_saltrack_installer_p", {Ingredient("kyno_salmonfish", 2, ModAtlas)}, TECH.SERENITYSHOP_ONE, 
@@ -368,6 +376,19 @@ local KynSeedCucumb 		= AddRecipe2("kyno_cucumber_seeds_p", {Ingredient("waterme
 	{"CRAFTING_STATION"}
 )
 
+local KynSugarAntidote		= AddRecipe2("kyno_saphealer_p", {Ingredient("kyno_sap_spoiled", 3, ModAtlas)}, TECH.LOST,
+	{
+		nounlock 			= true, 
+		actionstr 			= "SERENITYSHOP",
+		sg_state    		= "give",
+		product				= "kyno_saphealer",		
+		numtogive 			= 2, 
+		atlas 				= ModAtlas, 
+		image				= "kyno_saphealer.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
 local KynSweetFlower		= AddRecipe2("kyno_sugartree_petals_p", {Ingredient("petals", 3)}, TECH.LOST,
 	{
 		nounlock 			= true, 
@@ -499,6 +520,18 @@ if WARLY_MEALGRINDER == 1 then
 			image 				= "quagmire_smallmeat.tex",
 		},
 		{"CRAFTING_STATION"}
+	)
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Replace the Bucket-o-Poop recipe with ours.
+local BUCKETPOOPTWEAK = GetModConfigData("fertilizer_recipetweak")
+if BUCKETPOOPTWEAK == 1 then
+	local BucketPoot			= Recipe2("fertilizer",	{Ingredient("poop", 3), Ingredient("kyno_bucket_empty", 1, ModAtlas)}, TECH.SCIENCE_TWO,
+		{
+			atlas 				= DefaultAtlas,
+			image       		= "fertilizer.tex",
+		},	
+		{"GARDENING"}
 	)
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

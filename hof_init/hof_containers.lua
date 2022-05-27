@@ -4,12 +4,14 @@ local _G 					= GLOBAL
 local require 				= _G.require
 local Vector3    			= _G.Vector3
 local ACTIONS    			= _G.ACTIONS
+local STRINGS				= _G.STRINGS
 local cooking 				= require("cooking")
 local containers 			= require("containers")
 local params 				= {}
 
 require("hof_foodrecipes")
 require("hof_foodrecipes_optional")
+require("hof_brewrecipes")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Custom containers.
 local containers_widgetsetup_base = containers.widgetsetup
@@ -64,7 +66,7 @@ params.cooking_pot 			=
         },
         animbank 			= "quagmire_ui_pot_1x4",
         animbuild 			= "quagmire_ui_pot_1x4",
-        pos 				= Vector3(200, 0, 0), -- A bit closer!
+        pos 				= Vector3(200, 0, 0),
         side_align_tip 		= 100,
     },
     acceptsstacks 			= false,
@@ -73,5 +75,45 @@ params.cooking_pot 			=
 
 function params.cooking_pot.itemtestfn(container, item, slot)
     return cooking.IsCookingIngredient(item.prefab) and not container.inst:HasTag("burnt")
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Keg and Preserve Jar. (They use the same).
+params.brewer 				=
+{
+    widget 					=
+    {
+        slotpos 			=
+        {
+            Vector3(-1, 32 + 4, 0			 ),
+            Vector3(-1, -(32 + 4), 0		 ),
+        },
+        animbank 			= "ui_cookpot_1x2",
+        animbuild 			= "ui_cookpot_1x2",
+        pos 				= Vector3(150, 0, 0),
+        side_align_tip 		= 100,
+		buttoninfo =
+        {
+            text = STRINGS.ACTIONS.BREWER,
+            position = Vector3(0, -95, 0),
+        }
+    },
+    acceptsstacks 			= false,
+    type 					= "cooker",
+}
+
+function params.brewer.itemtestfn(container, item, slot)
+	return item:HasTag("brewer_ingredient") and not container.inst:HasTag("burnt")
+end
+
+function params.brewer.widget.buttoninfo.fn(inst, doer)
+    if inst.components.container ~= nil then
+        _G.BufferedAction(doer, inst, ACTIONS.COOK):Do()
+    elseif inst.replica.container ~= nil and not inst.replica.container:IsBusy() then
+        _G.SendRPCToServer(RPC.DoWidgetButtonAction, ACTIONS.COOK.code, inst, ACTIONS.COOK.mod_name)
+    end
+end
+
+function params.brewer.widget.buttoninfo.validfn(inst)
+    return inst.replica.container ~= nil and inst.replica.container:IsFull()
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

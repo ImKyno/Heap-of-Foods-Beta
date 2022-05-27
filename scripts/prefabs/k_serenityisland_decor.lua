@@ -44,10 +44,16 @@ local function FindElder(inst)
     return inst.elder
 end
 
+local function Say(inst, str)
+	inst.components.talker:Chatter(str, math.random(#STRINGS[str]))
+end
+
 local function ElderSayThanks(inst)
 	local pigelder = FindElder(inst)
 	if pigelder then
-		pigelder.components.talker:Say("THANKS FOR REPAIRING MY OLD POT, LITTLE GOAT!")
+		-- pigelder.components.talker:Say("THANKS FOR REPAIRING MY OLD POT, LITTLE GOAT!")
+		Say(pigelder, "PIGELDER_TALK_REPAIRPOT")
+		pigelder.components.craftingstation:LearnItem("kyno_saphealer", "kyno_saphealer_p")
 	end
 end
 

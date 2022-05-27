@@ -413,6 +413,8 @@ local function ruinedfn()
 	inst:AddTag("tree")
 	inst:AddTag("has_sap")
     inst:AddTag("shelter")
+	inst:AddTag("sap_healable")
+	inst:AddTag("sap_healable_bucket")
 
     inst.entity:SetPristine()
 
@@ -470,6 +472,7 @@ local function ruined2fn()
 	
 	inst:AddTag("tree")
     inst:AddTag("shelter")
+	inst:AddTag("sap_healable")
 
     inst.entity:SetPristine()
 
@@ -478,7 +481,7 @@ local function ruined2fn()
     end
 	
 	inst:AddComponent("lootdropper")
-	inst.components.lootdropper:SetLoot({"log", "log", "log", "kyno_sap_spoiled", "kyno_sap_spoiled"})
+	inst.components.lootdropper:SetLoot({"log", "log", "log", "kyno_sap_spoiled"})
 	
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"

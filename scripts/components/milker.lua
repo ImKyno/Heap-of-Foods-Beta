@@ -1,0 +1,5 @@
+local Milker = Class(function(self, inst)
+    self.inst = inst
+end)
+
+return Milker

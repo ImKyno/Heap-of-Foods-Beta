@@ -56,7 +56,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_TUNACAN_HERMIT",	"The Hermit Crabby might have
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_CRABKING_LOOT",	"Need more Crab Meat? The Crab King drops Seven of them, when killed. The hunt season is open!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_REGROWTH",		"Mod entities such as: Plants, Trees, etc. Will regrow overtime if there are a low amount of them in the world.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_BOTTLE_SOUL",		"Wortox can store Souls inside Empty Bottles. However, other survivors can't.")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_BOTTLE_SOUL2",	"Every survivors can carry the \"Soul in a Bottle\" on their inventory, but only Wortox can Release the Soul.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_BOTTLE_SOUL2",	"Every survivor can carry the \"Soul in a Bottle\" on their inventory, but only Wortox can Release the Soul.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SOULSTEW",		"If Wortox eats the \"Soul Stew\" he will get the full stats from the food, instead of the half, like every other foods.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_MYSTERYMEAT",		"\"Have you heard? There's something strange inside one of the Watery Crates. We should look for it, perhaps...\" -W.")
 

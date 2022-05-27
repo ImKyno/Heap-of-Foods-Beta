@@ -1,7 +1,11 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Common Dependencies.
 local _G 				= GLOBAL
 local require 			= _G.require
 local resolvefilepath 	= _G.resolvefilepath
+local ACTIONS 			= _G.ACTIONS
 local STRINGS			= _G.STRINGS
+local SpawnPrefab		= _G.SpawnPrefab
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Favorite Mod Foods.
 AddPrefabPostInit("wilson", function(inst)
@@ -146,7 +150,7 @@ if COFFEE_SPEED == 1 then
 					eater.components.debuffable:AddDebuff(spiced_buff, spiced_buff)
 				end
 				if eater.components.talker then 
-					eater.components.talker:Say(_G.GetString(eater,"ANNOUNCE_KYNO_COFFEEBUFF"))
+					eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF"))
 				end
 			else
 				eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", 1.83)
@@ -186,7 +190,6 @@ if COFFEE_SPEED == 1 then
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Ashes are Now a Fertilizer. Also using the Nutrients of Manure as placeholder for now, check "ash.lua".
-local ACTIONS = _G.ACTIONS
 AddPrefabPostInit("ash", function(inst)
 	local FERTILIZER_DEFS = require("prefabs/fertilizer_nutrient_defs").FERTILIZER_DEFS
 
@@ -220,169 +223,6 @@ AddPrefabPostInit("ash", function(inst)
 
     MakeDeployableFertilizer(inst)
 end)
-
--- Coffee Plant can be Only Fertilized by Ashes.
-AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions)
-    if actions[1] == ACTIONS.FERTILIZE and inst:HasTag("coffeefertilizer2") ~= target:HasTag("kyno_coffeebush") then
-        actions[1] = nil
-    end
-end)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Action for the Salt.
-AddAction("SALT", STRINGS.ACTIONS.SALT, function(act)
-	local saltable = act.target and act.target.components.saltable or nil
-	if act.invobject and saltable ~= nil then
-		saltable:AddSalt()
-		act.doer.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/salt_shake") -- Play a cool salting sound yay.
-		act.invobject.components.stackable:Get(1):Remove()
-		return true
-	end
-end)
-
-ACTIONS.SALT.mount_valid = true
-
-AddComponentAction("USEITEM", "salter", function(inst, doer, target, actions)
-	if target:HasTag("saltable") then
-		table.insert(actions, ACTIONS.SALT)
-	end
-end)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Action for the Slaughter Tools.
-AddAction("FLAY", STRINGS.ACTIONS.FLAY, function(act)
-	if act.target and act.target.components.health and not act.target.components.health:IsDead() and act.target.components.lootdropper then
-		act.target.components.health.invincible = false
-	
-		if act.doer.prefab == "wathgrithr" then -- Wigfrid gets 2 extra meats!
-			act.target.components.lootdropper:SpawnLootPrefab("meat")
-			act.target.components.lootdropper:SpawnLootPrefab("meat")
-		end
-			
-		if act.invobject ~= nil and act.invobject.components.finiteuses then
-			act.invobject.components.finiteuses:Use(1)
-		end					
-		
-		act.target.components.health:Kill()		
-		return true
-	end
-end)
-
-ACTIONS.FLAY.distance = 2
-ACTIONS.FLAY.priority = 3
-ACTIONS.FLAY.mount_valid = true
-
-AddComponentAction("USEITEM", "slaughteritem", function(inst, doer, target, actions, right)
-	if target:HasTag("slaughterable") then
-		table.insert(actions, ACTIONS.FLAY)
-	end
-end)
-
-AddStategraphActionHandler("wilson", _G.ActionHandler(ACTIONS.FLAY, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-AddStategraphActionHandler("wilson_client", _G.ActionHandler(ACTIONS.FLAY, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- For chopping items inside the inventory, such as Coconuts.
-AddComponentAction("USEITEM", "tool", function(inst, doer, target, actions, right)
-	if target:HasTag("crackable") then
-		table.insert(actions, ACTIONS.CHOP)
-	end
-end)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Action for storing Souls inside bottles. (Only Wortox).
-AddPrefabPostInit("messagebottleempty", function(inst)
-	inst:AddTag("soul_storage")
-end)
-
-AddAction("STORESOUL", STRINGS.ACTIONS.STORESOUL, function(act)
-	local bottle = act.target and act.target.components.unwrappable or nil
-	if act.invobject:HasTag("soul") and act.target:HasTag("soul_storage") then
-		local bottle_soul = SpawnPrefab("kyno_bottle_soul")
-		act.doer.components.inventory:GiveItem(bottle_soul) 
-		act.doer.SoundEmitter:PlaySound("dontstarve/characters/wortox/soul/hop_out")
-		act.invobject.components.stackable:Get(1):Remove()
-		act.target.components.stackable:Get(1):Remove()
-		return true
-	end
-end)
-
-ACTIONS.STORESOUL.mount_valid = true
-ACTIONS.UNWRAP.mount_valid = true -- This is for unwrapping bundles while on beefalo.
-
-AddComponentAction("USEITEM", "soul", function(inst, doer, target, actions, right)
-	if target:HasTag("soul_storage") and doer:HasTag("soulstealer") then
-		table.insert(actions, ACTIONS.STORESOUL)
-	end
-end)
-
-AddStategraphActionHandler("wilson", _G.ActionHandler(ACTIONS.STORESOUL, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-AddStategraphActionHandler("wilson_client", _G.ActionHandler(ACTIONS.STORESOUL, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Action String overrides.
-ACTIONS.GIVE.stroverridefn = function(act)
-	if act.target:HasTag("serenity_installable") and act.invobject:HasTag("serenity_installer") then
-		return subfmt(_G.STRINGS.KYNO_INSTALL_INSTALLER, {item = act.invobject:GetBasicDisplayName()})
-	end
-	if act.target:HasTag("sugartree_installable") and act.invobject:HasTag("serenity_installer") then
-		return subfmt(_G.STRINGS.KYNO_INSTALL_TAPPER, {item = act.invobject:GetBasicDisplayName()})
-	end
-	if act.target:HasTag("cookingpot_hanger") and act.invobject:HasTag("pot_installer") then
-		return subfmt(_G.STRINGS.KYNO_INSTALL_POT, {item = act.invobject:GetBasicDisplayName()})
-	end
-	if act.target:HasTag("elderpot_rubble") and act.invobject:HasTag("serenity_repairtool") then
-	return subfmt(_G.STRINGS.KYNO_REPAIR_TOOL, {item = act.invobject:GetBasicDisplayName()})
-	end
-end
-
-ACTIONS.PICK.stroverridefn = function(act)
-	if act.target.prefab == "kyno_sugartree_sapped" then
-		return _G.STRINGS.KYNO_HARVEST_SUGARTREE
-	end
-	if act.target.prefab == "kyno_sugartree_ruined" then
-		return _G.STRINGS.KYNO_HARVEST_SUGARTREE_RUINED
-	end
-	if act.target.prefab == "kyno_saltrack" then
-		return _G.STRINGS.KYNO_HARVEST_SALTRACK
-	end
-	if act.target.prefab == "kyno_cookware_syrup" then
-		return _G.STRINGS.KYNO_HARVEST_POTSYRUP
-	end
-	if act.target.prefab == "kyno_rockflippable" then
-		return _G.STRINGS.KYNO_PICKUP_ROCKFLIPPABLE
-	end
-	if act.target.prefab == "kyno_rockflippable_cave" then
-		return _G.STRINGS.KYNO_PICKUP_ROCKFLIPPABLE
-	end
-end
-
-ACTIONS.FLAY.stroverridefn = function(act)
-    return act.invobject ~= nil
-	and act.invobject.GetSlaughterActionString ~= nil
-	and act.invobject:GetSlaughterActionString(act.target)
-	or nil
-end
-
-ACTIONS.EAT.stroverridefn = function(act)
-	local obj = act.target or act.invobject
-	if obj:HasTag("drinkable_food") then 
-		return _G.STRINGS.KYNO_DRINK_FOOD 
-	end
-end
-
-ACTIONS.UNWRAP.stroverridefn = function(act)
-	local obj = act.target or act.invobject
-	if obj:HasTag("canned_food") then
-		return _G.STRINGS.KYNO_OPEN_CAN
-	end
-	if obj:HasTag("bottled_soul") then
-		return _G.STRINGS.KYNO_OPEN_BOTTLE_SOUL
-	end
-end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Rockjaws Drops Shark Fin.
 AddPrefabPostInit("shark", function(inst)
@@ -396,6 +236,7 @@ AddPrefabPostInit("cookiecutter", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
+	
 	inst.components.lootdropper:AddChanceLoot("kyno_mussel", 0.50) 
 end)
 
@@ -404,6 +245,7 @@ AddPrefabPostInit("beefalo", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
+	
 	inst.components.lootdropper:AddChanceLoot("kyno_beanbugs", 1.00) 
 	inst.components.lootdropper:AddChanceLoot("kyno_beanbugs", 0.50) 
 end)
@@ -412,6 +254,7 @@ AddPrefabPostInit("babybeefalo", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
+	
 	inst.components.lootdropper:AddChanceLoot("kyno_beanbugs", 0.10) 
 end)
 
@@ -420,6 +263,7 @@ AddPrefabPostInit("catcoon", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
+	
 	inst.components.lootdropper:AddChanceLoot("kyno_gummybug", 0.35) 
 end)
 
@@ -492,7 +336,7 @@ if HUMANMEATY == 1 then
 		AddPrefabPostInit(v, function(inst)
 			local function ondeath_longpig(inst)
 				if math.random()<0.90 then
-					_G.SpawnPrefab("kyno_humanmeat").Transform:SetPosition(inst.Transform:GetWorldPosition())
+					SpawnPrefab("kyno_humanmeat").Transform:SetPosition(inst.Transform:GetWorldPosition())
 				end
 			end		
 		
@@ -966,7 +810,7 @@ if COFFEE_SPEED == 1 then
 					eater.components.debuffable:AddDebuff(spiced_buff, spiced_buff)
 				end
 				if eater.components.talker then 
-					eater.components.talker:Say(_G.GetString(eater,"ANNOUNCE_KYNO_COFFEEBUFF"))
+					eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF"))
 				end
 			else
 				eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", 1.83)
@@ -995,8 +839,8 @@ local sharkfinsoup_debuff = {
 for k,v in pairs(sharkfinsoup_debuff) do
 	AddPrefabPostInit(v, function(inst)
 		local function OnEatSharkSoup(inst, eater)
-			_G.SpawnPrefab("krampuswarning_lvl3").Transform:SetPosition(inst.Transform:GetWorldPosition())
-			local krampus = _G.SpawnPrefab("krampus")
+			SpawnPrefab("krampuswarning_lvl3").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			local krampus = SpawnPrefab("krampus")
 			local pt = _G.Vector3(inst.Transform:GetWorldPosition()) + _G.Vector3(15,0,15)
 
 			krampus.Transform:SetPosition(pt:Get())
@@ -1433,14 +1277,20 @@ local eyeballsoup_debuff = {
 for k,v in pairs(eyeballsoup_debuff) do
 	AddPrefabPostInit(v, function(inst)
 		local function OnEatEyeballSoup(inst, eater)
-			_G.SpawnPrefab("deerclopswarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
-			local deer = _G.SpawnPrefab("deerclops")
-			local pt = _G.Vector3(inst.Transform:GetWorldPosition()) + _G.Vector3(25,0,25)
+			if not inst:IsOnValidGround() then
+				local splash = SpawnPrefab("splash_ocean")
+				local pt = _G.Vector3(inst.Transform:GetWorldPosition()) + _G.Vector3(20,0,20)
+				splash.Transform:SetPosition(pt:Get())
+			else
+				SpawnPrefab("deerclopswarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
+				local deer = SpawnPrefab("deerclops")
+				local pt = _G.Vector3(inst.Transform:GetWorldPosition()) + _G.Vector3(20,0,20)
 
-			deer.Transform:SetPosition(pt:Get())
-			local angle = eater.Transform:GetRotation()*(3.14159/180)
-			local sp = (math.random()+1) * -1
-			deer.Physics:SetVel(sp*math.cos(angle), math.random()*2+8, -sp*math.sin(angle))
+				deer.Transform:SetPosition(pt:Get())
+				local angle = eater.Transform:GetRotation()*(3.14159/180)
+				local sp = (math.random()+1) * -1
+				deer.Physics:SetVel(sp*math.cos(angle), math.random()*2+8, -sp*math.sin(angle))
+			end
 		end
 		
 		if inst.components.edible then
@@ -1448,6 +1298,15 @@ for k,v in pairs(eyeballsoup_debuff) do
 		end
 	end)
 end
+
+-- Just to make sure Deerclops drown if it spawns on water.
+AddPrefabPostInit("deerclops", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("drownable")
+end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Nuts drops from Twiggy Trees.
 AddPrefabPostInit("twiggytree", function(inst)
@@ -1501,7 +1360,7 @@ AddPrefabPostInit("crow", function(inst)
 			
 			inst.components.inventoryitem.onpickupfn = function(inst, doer)
 				inst:Remove()
-				local bird = _G.SpawnPrefab("quagmire_pigeon")
+				local bird = SpawnPrefab("quagmire_pigeon")
 				doer.components.inventory:GiveItem(bird)
 				return true
 			end
@@ -1535,8 +1394,8 @@ for k,v in pairs(slaughterable_animals) do
 		inst:RemoveTag("slaughterable")
 		
 		if not _G.TheWorld.ismastersim then
-				return inst
-			end
+			return inst
+		end
 		
 		inst:AddTag("slaughterable")
 	end)
@@ -1696,26 +1555,26 @@ AddPrefabPostInit("firepit", function(inst)
 	local function OnGetItemFromPlayer(inst, giver, item)
 		-- Hanger / Cookingpot / Large Cookingpot / Syrup Pot.
 		if item.components.inventoryitem ~= nil and item:HasTag("pot_hanger_installer") then
-			_G.SpawnPrefab("kyno_cookware_hanger").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			SpawnPrefab("kyno_cookware_hanger").Transform:SetPosition(inst.Transform:GetWorldPosition())
 			inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/pot_hanger")
 			inst.components.trader.enabled = false -- Don't accept new items!
 		end
 		-- Grill / Large Grill.
 		if item.components.inventoryitem ~= nil and item:HasTag("grill_big_installer") then
-			_G.SpawnPrefab("kyno_cookware_grill").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			SpawnPrefab("kyno_cookware_grill").Transform:SetPosition(inst.Transform:GetWorldPosition())
 			inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/grill_big")
 			inst.components.trader.enabled = false
 			ChangeGrillFireFX(inst)
 		end
 		if item.components.inventoryitem ~= nil and item:HasTag("grill_small_installer") then
-			_G.SpawnPrefab("kyno_cookware_small_grill").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			SpawnPrefab("kyno_cookware_small_grill").Transform:SetPosition(inst.Transform:GetWorldPosition())
 			inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/grill_small")
 			inst.components.trader.enabled = false
 			ChangeGrillFireFX(inst)
 		end
 		-- Oven / Small Casserole Dish / Large Casserole Dish.
 		if item.components.inventoryitem ~= nil and item:HasTag("oven_installer") then
-			_G.SpawnPrefab("kyno_cookware_oven").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			SpawnPrefab("kyno_cookware_oven").Transform:SetPosition(inst.Transform:GetWorldPosition())
 			inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/oven")
 			inst.components.trader.enabled = false
 			ChangeOvenFireFX(inst) -- Yeah, the same.
@@ -1740,10 +1599,6 @@ AddPrefabPostInit("firepit", function(inst)
 	inst.components.trader:SetAcceptTest(TestItem)
     inst.components.trader.onaccept = OnGetItemFromPlayer
 end)
-
--- Fix for fuel items, because the action was "Give" instead of "Add Fuel".
-ACTIONS.ADDFUEL.priority = 5
-ACTIONS.ADDWETFUEL.priority = 5
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Small fix for the natural spawning Mushroom Stump.
 local mushstumps = {
@@ -1819,16 +1674,6 @@ AddPrefabPostInit("kyno_watery_crate", function(inst)
 	inst:AddTag("not_serenity_crate")
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Quick open Canned Items.
-AddStategraphActionHandler("wilson", _G.ActionHandler(ACTIONS.UNWRAP, function(inst, action)
-	local target = action.target or action.invobject
-	if target.components.unwrappable and target:HasTag("canned_food") then
-		return "doshortaction"
-	else
-		return "dolongaction"
-	end
-end))
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Wortox gets the full stats of Soul Stew.
 AddPrefabPostInit("soulstew", function(inst)
 	local function OnEatSoulStew(inst, eater)
@@ -1851,6 +1696,160 @@ AddPrefabPostInit("soulstew", function(inst)
 	inst:AddComponent("soul") -- Required for eating.
 	if inst.components.edible then
 		inst.components.edible:SetOnEatenFn(OnEatSoulStew)
+	end
+end)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Make Whenever Someone Eats the Fortune Cookie, they say a quote.
+local fortunecookie_debuff = {
+	"fortunecookie",
+	"fortunecookie_spice_garlic",
+	"fortunecookie_spice_sugar",
+	"fortunecookie_spice_chili",
+	"fortunecookie_spice_salt",
+}
+
+for k,v in pairs(fortunecookie_debuff) do
+	AddPrefabPostInit(v, function(inst)
+		local function OnEatFortuneCookie(inst, eater)
+			if math.random() < 0.01 then
+				if math.random() < 0.50 then
+					eater.components.health:DoDelta(999)
+					eater.components.hunger:DoDelta(999)
+					eater.components.sanity:DoDelta(999)
+					if eater.components.talker then 
+						eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_GOOD)])
+					end
+				else 
+					eater.components.health:DoDelta(999)
+					eater.components.hunger:DoDelta(-999)
+					eater.components.sanity:DoDelta(-999)
+					if eater.components.talker then 
+						eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_BAD)])
+					end
+				end
+			else
+				if eater.components.talker then 
+					eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_QUOTES[math.random(#STRINGS.FORTUNE_COOKIE_QUOTES)])
+				end
+			end
+		end
+		
+		if inst.components.edible then
+			inst.components.edible:SetOnEatenFn(OnEatFortuneCookie)
+		end
+	end)
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Animals that can be milked with the Bucket.
+local milkable_animals = {
+	"koalefant_winter",
+	"koalefant_summer",
+	"beefalo",
+}
+
+for k,v in pairs(milkable_animals) do
+	AddPrefabPostInit(v, function(inst)
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+		
+		inst:AddComponent("milkable2")
+			
+		if inst.prefab == "beefalo" then
+			inst.components.milkable2:SetUp("kyno_milk_beefalo")
+		elseif inst.prefab == "koalefant_summer" or "koalefant_winter" then
+			inst.components.milkable2:SetUp("kyno_milk_koalefant")
+		end
+	end)
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Items that can go inside Kegs and Preserve Jars.
+local brewer_ingredients = {
+	"honey",
+	"honeycomb",
+	"pomegranate", 
+	"dragonfruit", 
+	"cave_banana",
+	"durian",
+	"watermelon",
+	"berries",
+	"berries_juicy",
+	"fig",
+	"carrot",
+	"corn",
+	"eggplant",
+	"pumpkin",
+	"foliage",
+	"succulent_picked",
+	"cutlichen",
+	"cactus_meat",
+	"cactus_flower",
+	"garlic",
+	"asparagus",
+	"onion",
+	"tomato",
+	"potato",
+	"pepper",
+	"red_cap",
+	"green_cap",
+	"blue_cap",
+	"moon_cap",
+	"kelp",
+	"mandrake",
+	"rock_avocado_fruit_ripe",
+	"kyno_wheat",
+	"kyno_syrup",
+	"kyno_banana",
+	"kyno_kokonut_halved",
+	"kyno_kokonut_cooked",
+	"kyno_white_cap",
+	"kyno_foliage",
+	"kyno_aloe",
+	"kyno_radish",
+	"kyno_sweetpotato",
+	"kyno_lotus_flower",
+	"kyno_seaweeds",
+	"kyno_taroroot",
+	"kyno_waterycress",
+	"kyno_cucumber",
+	"kyno_parznip",
+	"kyno_parznip_eaten",
+	"kyno_turnip",
+}
+
+for k,v in pairs(brewer_ingredients) do
+	AddPrefabPostInit(v, function(inst)
+		inst:AddTag("brewer_ingredient")
+	end)
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Beer and Pale Ale gives attack buff at the cost of lower speed.
+AddPrefabPostInit("beer", function(inst)
+	local function OnEatBeer(inst, eater)
+		if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
+			return
+		elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
+			eater.strengthbuff_duration = 480
+			eater.components.debuffable:AddDebuff("kyno_strengthbuff", "kyno_strengthbuff")
+			if eater.components.talker then 
+				eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_POPBUFF"))
+			end
+		else
+			eater:AddTag("groggy")
+			eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_strengthbuff", .70)
+			eater.components.combat.externaldamagemultipliers:SetModifier(eater, 1.2)
+			eater:DoTaskInTime(480, function()
+				eater:RemoveTag("groggy")
+				eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_strengthbuff")
+				eater.components.combat.externaldamagemultipliers:RemoveModifier(eater)
+			end)
+		end
+	end	
+	
+	inst:AddTag("drinkable_food")
+		
+	if inst.components.edible then
+		inst.components.edible:SetOnEatenFn(OnEatBeer)
 	end
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

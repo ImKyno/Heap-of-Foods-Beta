@@ -1,5 +1,5 @@
 name = "Heap of Foods"
-version = "4.1-A"
+version = "4.2-A"
 local myupdate = "Souls and Cans"
 
 description = "󰀄 Adds 118 brand new Crock Pot dishes alongside new ingredients to use!\n\n󰀦 Also features a brand new Biome somewhere in the Ocean!\n\n󰀌 Mod Version: "..version.."\n\󰀧 Update: "..myupdate..""
@@ -200,6 +200,21 @@ configuration_options =
 			data = 0},
             {description = "Yes", 
 			hover = "Warly's Portable Grinding Mill will have the recipes from Mealing Stone.",
+			data = 1},
+        },
+        default = 0,
+	},
+	{
+		name = "fertilizer_recipetweak",
+		label = "Bucket-o-Poop Recipe Tweak",
+		hover = "Should Bucket-o-Poop use the Bucket instead of the default recipe?",
+		options =
+		{
+			{description = "No", 
+			hover = "Bucket-o-Poop will not use the Bucket. (Default crafting recipe).",
+			data = 0},
+            {description = "Yes", 
+			hover = "Bucket-o-Poop will use the Bucket on its crafting recipe.",
 			data = 1},
         },
         default = 0,

@@ -614,6 +614,20 @@ local kyno_foods =
 		oneat_desc = "Soul-starve killer",
 	},
 	
+	fortunecookie =
+	{
+		test 		= function(cooker, names, tags) return names.kyno_flour and tags.sweetener and names.papyrus end,
+		priority 	= 35,
+		foodtype 	= FOODTYPE.GOODIES,
+		perishtime 	= TUNING.PERISH_SUPERSLOW,
+		health 		= 3, 
+		hunger		= 20,
+		sanity 		= 5,
+		cooktime	= 1,
+		floater		= {"med", nil, 0.65},
+		oneat_desc	= "Tells your fortune",
+	},
+	
 	-- The Gorge Foods.
 	
 	gorge_bread = 
@@ -1130,7 +1144,16 @@ local kyno_foods =
 		hunger = 20,
 		sanity = 33,
 		cooktime = .75,
+		oneat_desc = "Speeds the hands",
 		floater = {"med", nil, 0.65},
+		prefabs = { "kyno_hastebuff" },
+        oneatenfn = function(inst, eater)
+            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
+                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+                not eater:HasTag("playerghost") then
+                eater.components.debuffable:AddDebuff("kyno_hastebuff", "kyno_hastebuff")
+            end
+        end,
 	},
 	
 	gorge_bread_pudding = 
