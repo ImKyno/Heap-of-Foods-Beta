@@ -1,5 +1,6 @@
 local assets =
 {
+	Asset("ANIM", "anim/meat_rack_food.zip"),
 	Asset("ANIM", "anim/meat_human.zip"),
 	Asset("ANIM", "anim/kyno_humanmeat.zip"),
 	
@@ -148,8 +149,8 @@ local function fn_dried()
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-	inst.AnimState:SetBank("meat_human")
-	inst.AnimState:SetBuild("meat_human")
+	inst.AnimState:SetBank("meat_rack_food")
+	inst.AnimState:SetBuild("meat_rack_food")
 	inst.AnimState:PlayAnimation("idle_dried_human")
 	
 	inst:AddTag("meat")

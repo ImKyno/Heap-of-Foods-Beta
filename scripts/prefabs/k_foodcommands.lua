@@ -183,3 +183,18 @@ function c_hofrevealcookbook()
 		end
 	end	
 end
+
+function c_hofbrewbook()
+	local screen = TheFrontEnd:GetActiveScreen()
+	if not screen or not screen.name then 
+		return true 
+	end
+	if screen.name:find("HUD") then	
+		TheFrontEnd:PushScreen(require("screens/brewbookpopupscreen")(ThePlayer))
+		return true
+	else
+		if screen.name == "brewbookpopupscreen" then
+			screen:OnClose()
+		end
+	end
+end

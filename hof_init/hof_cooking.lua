@@ -1,8 +1,9 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Common Dependencies.
-local _G 			= GLOBAL
-local require 		= _G.require
+local _G 					= GLOBAL
+local require 				= _G.require
 
+require("cooking")
 require("hof_constants")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- New Crock Pot Ingredients.
@@ -192,12 +193,12 @@ else -- Do Not Import Winter's Feast Foods.
 	end
 end
 
--- Foods of the Keg and Preserve Jar.
-for k, v in pairs(require("hof_brewrecipes")) do
+-- Foods of the Wooden Keg and Preserve Jar.
+for k, v in pairs(require("hof_foodrecipes_brew")) do
 	if not v.tags then
-		AddCookerRecipe("kyno_keg",             					v)
+		AddCookerRecipe("kyno_woodenkeg",             		 		v, false)
 	end
-	--AddCookerRecipe("kyno_preservejar",         					v)
+	-- AddCookerRecipe("kyno_preservejar",							v)
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Spiced Foods and Potlevel.
@@ -223,7 +224,7 @@ local cookers =
 	"kyno_cookware_grill",
 	"kyno_cookware_oven_small_casserole",
 	"kyno_cookware_oven_casserole",
-	"kyno_keg",
+	"kyno_woodenkeg",
 	--"kyno_preservejar",
 }
 
@@ -367,8 +368,8 @@ local kynofoods =
 	festive_tourtiere 		= require("hof_foodrecipes_optional").festive_tourtiere,
 	
 	-- Keg and Preserve Jar.
-	wetgoop2				= require("hof_brewrecipes").wetgoop2,
-	beer					= require("hof_brewrecipes").beer,
+	wetgoop2				= require("hof_foodrecipes_brew").wetgoop2,
+	beer					= require("hof_foodrecipes_brew").beer,
 }
 
 kynofoods.coffee.potlevel 					= "med"
@@ -504,7 +505,8 @@ local cookerstations = {
 	"kyno_cookware_grill",
 	"kyno_cookware_oven_small_casserole",
 	"kyno_cookware_oven_casserole",
-	"kyno_keg",
+	"kyno_woodenkeg",
+	--"kyno_preservejar",
 } 
 
 for name, recipe in pairs(kynofoods) do

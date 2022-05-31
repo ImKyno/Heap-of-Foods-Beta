@@ -3,7 +3,7 @@
 -- These recipes don't appear in the Cookbook since they're "special" and not from the Crcok Pot.
 -- They took several days to produce, just like the real life / Stardew Valley mechanics.
 
-local kyno_brews =
+local kyno_foods_brew =
 {
 	-- Keg Recipes.
 	beer =
@@ -16,7 +16,8 @@ local kyno_brews =
 		hunger = 12.5,
 		sanity = -10,
 		cooktime = 24,
-		no_cookbook = true,
+		cookbook_category = "keg",
+		-- no_cookbook = true,
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -30,16 +31,17 @@ local kyno_brews =
 		hunger = 0,
 		sanity = 0,
 		cooktime = 2,
-		no_cookbook = true,
+		cookbook_category = "jar",
+		-- no_cookbook = true, -- Sludge will not be displayed.
         floater = {"small", nil, nil},
 	},
 }
 
-for k, recipe in pairs(kyno_brews) do
+for k, recipe in pairs(kyno_foods_brew) do
 	recipe.name = k
 	recipe.weight = 1
 	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages.xml"
 	recipe.cookbook_tex = k..".tex"
 end
 
-return kyno_brews
+return kyno_foods_brew

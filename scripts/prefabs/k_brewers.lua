@@ -19,7 +19,7 @@ local prefabs =
 	"spoiled_food",
 }
 
-for k, v in pairs(cooking.recipes.kyno_keg) do
+for k, v in pairs(cooking.recipes.kyno_woodenkeg) do
     table.insert(prefabs, v.name)
 
 	if v.overridebuild then
@@ -283,5 +283,5 @@ local function kegfn()
 	return inst
 end
 
-return Prefab("kyno_keg", kegfn, assets, prefabs)
+return Prefab("kyno_woodenkeg", kegfn, assets, prefabs)
 -- Prefab("kyno_preservejar", preservejarfn, assets, prefabs)

@@ -175,7 +175,7 @@ local kyno_foods =
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 3,
 		hunger = 12.5,
-		sanity = 50,
+		sanity = 33,
 		cooktime = 0.5,
 		floater = {"med", nil, 0.65},
 		prefabs = { "buff_sleepresistance" },
@@ -469,7 +469,7 @@ local kyno_foods =
 	
 	bowlofgears = 
 	{
-		test = function(cooker, names, tags) return (names.gears and names.gears >= 2) and not tags.frozen end,
+		test = function(cooker, names, tags) return (names.gears and names.gears >= 3) and not tags.frozen end,
 		priority = 1,
 		foodtype = FOODTYPE.GEARS,
 		perishtime = nil,

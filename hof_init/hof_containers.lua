@@ -11,7 +11,7 @@ local params 				= {}
 
 require("hof_foodrecipes")
 require("hof_foodrecipes_optional")
-require("hof_brewrecipes")
+require("hof_foodrecipes_brew")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Custom containers.
 local containers_widgetsetup_base = containers.widgetsetup
