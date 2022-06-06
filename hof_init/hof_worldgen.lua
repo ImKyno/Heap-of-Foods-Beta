@@ -5,7 +5,7 @@ local GROUND 		= _G.GROUND
 
 require("map/terrain")
 
-TUNING.HOF_RESOURCES = .08
+TUNING.HOF_RESOURCES = .06
 local TERRAIN_FILTERS = {_G.GROUND.ROAD, _G.GROUND.WOODFLOOR, _G.GROUND.CARPET, _G.GROUND.CHECKER}
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Prefab Rooms.
@@ -173,6 +173,27 @@ local WateryCrateRooms = {
 	"OceanRough",
 	"OceanHazardous",
 }
+
+local AspargosRooms = {
+	"BGForest",
+	"BGDeepForest",
+	"DeepForest",
+	"Forest",
+	"BGGrass",
+	"BGGrassBurnt",
+	"FlowerPatch",
+	"GrassyMoleColony",
+}
+
+local AspargosCaveRooms = {
+	"SinkholeForest",
+	"SinkholeCopses",
+	"SparseSinkholes",
+	"SinkholeOasis",
+	"GrasslandSinkhole",
+	"BGSinkhole",
+	"BGSinkholeRoom",
+}
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Add the Prefabs to the world.
 for k, v in pairs(AloeRooms) do
@@ -307,55 +328,27 @@ for k, v in pairs(WateryCrateRooms) do
 	end)
 end
 _G.terrain.filter.kyno_watery_crate							    = TERRAIN_FILTERS
+
+for k, v in pairs(AspargosRooms) do
+	AddRoomPreInit(v, function(room)
+		room.contents.distributeprefabs.kyno_aspargos_ground	= TUNING.HOF_RESOURCES
+	end)
+end
+_G.terrain.filter.kyno_aspargos_ground							= TERRAIN_FILTERS
+
+for k, v in pairs(AspargosCaveRooms) do
+	AddRoomPreInit(v, function(room)
+		room.contents.distributeprefabs.kyno_aspargos_cave		= TUNING.HOF_RESOURCES
+	end)
+end
+_G.terrain.filter.kyno_aspargos_cave							= TERRAIN_FILTERS
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Add the Serenity Archipelago to the world. Not using this, because the CC thingie doesn't work properly!!
---[[
 AddTaskSetPreInitAny(function(tasksetdata)
     if tasksetdata.location ~= "forest" then
         return
     end
     
-    tasksetdata.ocean_prefill_setpieces["hof_serenityisland1"] = { count = 1 } 
+	tasksetdata.ocean_prefill_setpieces["hof_serenityisland1"] = { count = 1 } 
 end)
-
-AddTaskSetPreInitAny(function(tasksetdata)
-	require("map/tasks/hof_serenityisland_tasks")
-	if tasksetdata.location == "forest" then
-		table.insert(tasksetdata.tasks, "SerenityIsland_Shards")
-		table.insert(tasksetdata.tasks, "SerenityIsland_Salt")
-		table.insert(tasksetdata.tasks, "SerenityIsland_Forest1")
-		table.insert(tasksetdata.tasks, "SerenityIsland_Forest2")
-		table.insert(tasksetdata.tasks, "SerenityIsland_Forest3")
-	end
-end)
-]]--
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- List of Rooms (Biomes).
---[[
-"BGBadlands","Badlands","Lightning","HoundyBadlands","BuzzardyBadlands","Moundfield",
-"BGDeciduous","DeepDeciduous","DeciduousMole","DeciduousClearing","PondyGrass","MolesvilleDeciduous","MagicalDeciduous",
-"BGGrassBurnt","BGGrass","MandrakeHome","GrassyMoleColony","FlowerPatch","EvilFlowerPatch","Waspnests","WalrusHut_Grassy","Walrusfield","PigTown","PigVillage","PigKingdom","PigCamp",
-"BGDirt","BGNoise",
-"BGCrappyForest","BGForest","BGDeepForest","BurntForest","CrappyDeepForest","DeepForest","Forest","ForestMole","CrappyForest","BurntClearing","Clearing","SpiderForest","SpiderCity","Graveyard",  
-"BGMarsh","Marsh","SpiderMarsh","SlightlyMermySwamp","SpiderVillageSwamp","Mermfield","Tentacleland",
-"BGRocky","Rocky","GenericRockyNoThreat","MolesvilleRocky","BGChessRocky","RockyBuzzards","SpiderVillage","WalrusHut_Rocky","Tallbirdfield","TallbirdNests","PigCity",
-"BGSavanna","Plain","BarePlain","WalrusHut_Plains","BeefalowPlain",
--- Common rooms for each mobs.
-Spiders = {"SpiderMarsh","SpiderForest","SpiderCity","SpiderVillage","SpiderVillageSwamp","SpiderfieldEasy","Spiderfield",},
-Wasps = {"BeeClearing","FlowerPatch","EvilFlowerPatch","Waspnests",}, -- everywhere were bees are
-Merms = {"SlightlyMermySwamp","MermTown","Mermfield",},
-Tentacles = {"BGMarsh","Marsh","Tentacleland",},
-Walrus = {"WalrusHut_Plains","WalrusHut_Grassy","WalrusHut_Rocky","Walrusfield",},
-Hounds = {"HoundyBadlands","Moundfield",},
-Clockworks = {"ChessArea","MarbleForest","ChessMarsh","ChessForest","ChessBarrens","BGChessRocky","Chessfield",},
-GuardPigs = {}, -- They don't have a room.
-Bees = {"BeeClearing","FlowerPatch","EvilFlowerPatch","Waspnests",},
-Tallbirds = {"TallbirdNests","Tallbirdfield",},
-Beefalos = {"BeefalowPlain",},
-Pigs = {"PigTown","PigVillage","PigKingdom","PigCity","PigCamp",},
-Rabbits = {"BGSavanna","Plain","BarePlain",},
-Moles = {"GrassyMoleColony","DeciduousMole","MolesvilleDeciduous","ForestMole","MolesvilleRocky",},
-Voaltgoats = {"Lightning",},
-Catcoons = {"BGDeciduous","DeepDeciduous","MagicalDeciduous","DeciduousMole","PondyGrass",}
-]]--
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

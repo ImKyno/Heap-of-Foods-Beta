@@ -6,6 +6,7 @@ local Vector3    			= _G.Vector3
 local ACTIONS    			= _G.ACTIONS
 local STRINGS				= _G.STRINGS
 local cooking 				= require("cooking")
+local brewing				= require("hof_brewing")
 local containers 			= require("containers")
 local params 				= {}
 
@@ -77,7 +78,7 @@ function params.cooking_pot.itemtestfn(container, item, slot)
     return cooking.IsCookingIngredient(item.prefab) and not container.inst:HasTag("burnt")
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Keg and Preserve Jar. (They use the same).
+-- Wooden Keg and Preserves Jar. (They use the same).
 params.brewer 				=
 {
     widget 					=
@@ -102,14 +103,15 @@ params.brewer 				=
 }
 
 function params.brewer.itemtestfn(container, item, slot)
-	return item:HasTag("brewer_ingredient") and not container.inst:HasTag("burnt")
+	-- return item:HasTag("brewer_ingredient") and not container.inst:HasTag("burnt")
+	return brewing.IsBrewingIngredient(item.prefab) and not container.inst:HasTag("burnt")
 end
 
 function params.brewer.widget.buttoninfo.fn(inst, doer)
     if inst.components.container ~= nil then
-        _G.BufferedAction(doer, inst, ACTIONS.COOK):Do()
+        _G.BufferedAction(doer, inst, ACTIONS.BREWER):Do()
     elseif inst.replica.container ~= nil and not inst.replica.container:IsBusy() then
-        _G.SendRPCToServer(RPC.DoWidgetButtonAction, ACTIONS.COOK.code, inst, ACTIONS.COOK.mod_name)
+        _G.SendRPCToServer(RPC.DoWidgetButtonAction, ACTIONS.BREWER.code, inst, ACTIONS.BREWER.mod_name)
     end
 end
 

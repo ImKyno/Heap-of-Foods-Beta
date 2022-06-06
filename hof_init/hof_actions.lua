@@ -150,9 +150,9 @@ AddComponentAction("USEITEM", "milker", function(inst, doer, target, actions)
 	if target and target:HasTag("milkable2") and not target:HasTag("sleeping") and inst:HasTag("bucket_empty")
 	and not target.components.freezable:IsFrozen() then
 		table.insert(actions, ACTIONS.PULLMILK)
-	elseif target and target:HasTag("milkable2") and target:HasTag("koalefant") and inst:HasTag("bucket_empty") 
+	elseif target and target:HasTag("milkable2") and target:HasTag("koalefant") or target:HasTag("spat") and inst:HasTag("bucket_empty") 
 	and not target.components.freezable:IsFrozen() then
-		table.insert(actions, ACTIONS.PULLMILK) -- Koalefants can be milked when they are sleeping.
+		table.insert(actions, ACTIONS.PULLMILK) -- Koalefants and Ewecuses can be milked when they are sleeping.
 	end
 end)
 
@@ -161,6 +161,171 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.PULLMILK, function(in
 end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.PULLMILK, function(inst, action)
 	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+end))
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Action for Brewing.
+AddAction("BREWER", STRINGS.ACTIONS.BREWER, function(act)
+	if act.target.components.cooker ~= nil then
+        local cook_pos = act.target:GetPosition()
+        local ingredient = act.doer.components.inventory:RemoveItem(act.invobject)
+
+        ingredient.Transform:SetPosition(cook_pos:Get())
+
+        if not act.target.components.cooker:CanCook(ingredient, act.doer) then
+            act.doer.components.inventory:GiveItem(ingredient, nil, cook_pos)
+            return false
+        end
+
+        if ingredient.components.health ~= nil and ingredient.components.combat ~= nil then
+            act.doer:PushEvent("killed", { victim = ingredient })
+        end
+
+        local product = act.target.components.cooker:CookItem(ingredient, act.doer)
+        if product ~= nil then
+            act.doer.components.inventory:GiveItem(product, nil, cook_pos)
+            return true
+        elseif ingredient:IsValid() then
+            act.doer.components.inventory:GiveItem(ingredient, nil, cook_pos)
+        end
+        return false
+    elseif act.target.components.brewer ~= nil then
+        if act.target.components.brewer:IsCooking() then
+            return true
+        end
+        local container = act.target.components.container
+        if container ~= nil and container:IsOpenedByOthers(act.doer) then
+            return false, "INUSE"
+        elseif not act.target.components.brewer:CanCook() then
+            return false
+        end
+        act.target.components.brewer:StartCooking(act.doer)
+        return true
+    elseif act.target.components.cookable ~= nil
+        and act.invobject ~= nil
+        and act.invobject.components.cooker ~= nil then
+
+        local cook_pos = act.target:GetPosition()
+
+        if act.doer:GetPosition():Dist(cook_pos) > 2 then
+            return false, "TOOFAR"
+        end
+
+        local owner = act.target.components.inventoryitem:GetGrandOwner()
+        local container = owner ~= nil and (owner.components.inventory or owner.components.container) or nil
+        local stacked = act.target.components.stackable ~= nil and act.target.components.stackable:IsStack()
+        local ingredient = stacked and act.target.components.stackable:Get() or act.target
+
+        if ingredient ~= act.target then
+            ingredient.Transform:SetPosition(cook_pos:Get())
+        end
+
+        if not act.invobject.components.cooker:CanCook(ingredient, act.doer) then
+            if container ~= nil then
+                container:GiveItem(ingredient, nil, cook_pos)
+            elseif stacked and ingredient ~= act.target then
+                act.target.components.stackable:SetStackSize(act.target.components.stackable:StackSize() + 1)
+                ingredient:Remove()
+            end
+            return false
+        end
+
+        if ingredient.components.health ~= nil and ingredient.components.combat ~= nil then
+            act.doer:PushEvent("killed", { victim = ingredient })
+        end
+
+        local product = act.invobject.components.cooker:CookItem(ingredient, act.doer)
+        if product ~= nil then
+            if container ~= nil then
+                container:GiveItem(product, nil, cook_pos)
+            else
+                product.Transform:SetPosition(cook_pos:Get())
+                if stacked and product.Physics ~= nil then
+                    local angle = math.random() * 2 * PI
+                    local speed = math.random() * 2
+                    product.Physics:SetVel(speed * math.cos(angle), GetRandomWithVariance(8, 4), speed * math.sin(angle))
+                end
+            end
+            return true
+        elseif ingredient:IsValid() then
+            if container ~= nil then
+                container:GiveItem(ingredient, nil, cook_pos)
+            elseif stacked and ingredient ~= act.target then
+                act.target.components.stackable:SetStackSize(act.target.components.stackable:StackSize() + 1)
+                ingredient:Remove()
+            end
+        end
+        return false
+    end
+end)
+
+AddAction("HARVESTBREWER", STRINGS.ACTIONS.HARVEST, function(act)
+	if act.target.components.brewer ~= nil then
+        return act.target.components.brewer:Harvest(act.doer)
+	end
+end)
+
+ACTIONS.BREWER.priority = 1
+ACTIONS.BREWER.mount_valid = true
+
+ACTIONS.HARVESTBREWER.priority = 1
+ACTIONS.HARVESTBREWER.mount_valid = true
+
+AddComponentAction("SCENE", "brewer", function(inst, doer, actions, right)
+	if not inst:HasTag("burnt") and not (doer.replica.rider ~= nil and doer.replica.rider:IsRiding()) then
+		if inst:HasTag("donecooking") then
+			table.insert(actions, ACTIONS.HARVESTBREWER)
+		elseif right and (
+		(   inst:HasTag("readytocook") and
+			(not inst:HasTag("mastercookware") or doer:HasTag("masterchef"))
+		) or
+			(   inst.replica.container ~= nil and
+				inst.replica.container:IsFull() and
+				inst.replica.container:IsOpenedBy(doer)
+			)
+		) then
+			table.insert(actions, ACTIONS.BREWER)
+		end
+	end
+end)
+
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.BREWER, function(inst, action)
+	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+end))
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.BREWER, function(inst, action)
+	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+end))
+
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.HARVESTBREWER, function(inst, action)
+	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+end))
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.HARVESTBREWER, function(inst, action)
+	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+end))
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Action for reading the Brewbook.
+-- I'm not using simplebook component/action because it has some problems.
+AddAction("READBREWBOOK", STRINGS.ACTIONS.READ, function(act)
+    local target = act.target or act.invobject
+    if target ~= nil and act.doer ~= nil then
+		if target.components.brewbook ~= nil then
+			target.components.brewbook:Read(act.doer)
+			return true
+		end
+	end
+end)
+
+ACTIONS.READBREWBOOK.priority = 1
+ACTIONS.READBREWBOOK.mount_valid = true
+
+AddComponentAction("INVENTORY", "brewbook", function(inst, doer, actions)
+	table.insert(actions, ACTIONS.READBREWBOOK)
+end)
+
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)
+	return "brewbook_open"
+end))
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)
+	return "brewbook_open"
 end))
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Action String overrides.
@@ -223,12 +388,6 @@ ACTIONS.UNWRAP.stroverridefn = function(act)
 		return STRINGS.KYNO_OPEN_BOTTLE_SOUL
 	end
 end
-
-ACTIONS.COOK.stroverridefn = function(act)
-	if act.target.prefab == "kyno_keg" or "kyno_preservesjar" then
-		return STRINGS.KYNO_COOK_BREWER
-	end
-end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix for fuel items, because the action was "Give" instead of "Add Fuel".
 ACTIONS.ADDFUEL.priority = 5
@@ -242,5 +401,13 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.UNWRAP, function(inst
 	else
 		return "dolongaction"
 	end
+end))
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Fix for when opening the Brewbook.
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READ, function(inst, action)
+	return (action.invobject ~= nil and action.invobject.components.simplebook ~= nil) and "cookbook_open"
+	or (action.invobject ~= nil and action.invobject.components.brewbook ~= nil) and "brewbook_open"
+	or inst:HasTag("aspiring_bookworm") and "book_peruse"
+	or "book"
 end))
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -6,22 +6,24 @@ local require 				= _G.require
 require("cooking")
 require("hof_constants")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- New Crock Pot Ingredients.
-AddIngredientValues({"slurtle_shellpieces"}, 	{inedible=1, 					  shell=1})
+-- New Vanilla Crock Pot Ingredients.
+AddIngredientValues({"slurtle_shellpieces"}, 	{inedible=1, 	elemental=1,	  shell=1})
 AddIngredientValues({"rabbit"}, 				{rabbit=1})
 AddIngredientValues({"firenettles"}, 			{veggie=0.5})
 AddIngredientValues({"foliage"}, 				{veggie=0.5}, 						  true)
 AddIngredientValues({"succulent_picked"}, 		{veggie=0.5})
 AddIngredientValues({"robin_winter"}, 			{robin_winter=1})
 AddIngredientValues({"petals"}, 				{veggie=0.5})
-AddIngredientValues({"gears"}, 					{gears=1})
+AddIngredientValues({"gears"}, 					{gears=1,		inedible=1})
 AddIngredientValues({"rocks"}, 					{rocks=1, 		elemental=1,   inedible=1})
-AddIngredientValues({"poop"}, 					{poop=1, 		glermz=1})
-AddIngredientValues({"guano"}, 					{poop=1, 		glermz=1})
-AddIngredientValues({"glommerfuel"}, 			{poop=1, 		glermz=1})
+AddIngredientValues({"poop"}, 					{poop=1, 		glermz=1,	   inedible=1})
+AddIngredientValues({"guano"}, 					{poop=1, 		glermz=1,	   inedible=1})
+AddIngredientValues({"glommerfuel"}, 			{poop=1, 		glermz=1,	   inedible=1})
 AddIngredientValues({"papyrus"},				{paper=1})
 AddIngredientValues({"deerclops_eyeball"},      {inedible=1, 	boss=1})
-AddIngredientValues({"kyno_coffeebeans"}, 		{seeds=1, 		fruit=0.5}, 		  true)
+AddIngredientValues({"horn"},					{horn=1})
+-- New Mod Crock Pot Ingredients.
+AddIngredientValues({"kyno_coffeebeans"}, 		{seeds=1}, 	 		  				  true)
 AddIngredientValues({"kyno_shark_fin"}, 		{fish=1})
 AddIngredientValues({"kyno_roe"}, 				{meat=0.5, 		roe=1}, 			  true)
 AddIngredientValues({"kyno_mussel"}, 			{fish=0.5, 		mussel=1}, 		  	  true)
@@ -64,10 +66,10 @@ AddIngredientValues({"kyno_sugartree_petals"},	{sweetener=1})
 AddIngredientValues({"kyno_crabmeat"},			{meat=0.5,		crab=1},			  true)
 AddIngredientValues({"kyno_chicken_egg"},		{egg=1}, 							  true)
 AddIngredientValues({"kyno_bottle_soul"},		{soul=1})
-AddIngredientValues({"kyno_wheat"},				{wheat=1})
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Icons For Cookbook.
-local cookbook_icons = {
+local cookbook_icons = 
+{
 	"kyno_coffeebeans_cooked.tex",
 	"kyno_coffeebeans.tex",
 	"kyno_shark_fin.tex",
@@ -192,14 +194,6 @@ else -- Do Not Import Winter's Feast Foods.
 		AddCookerRecipe("portablespicer",          					v)
 	end
 end
-
--- Foods of the Wooden Keg and Preserve Jar.
-for k, v in pairs(require("hof_foodrecipes_brew")) do
-	if not v.tags then
-		AddCookerRecipe("kyno_woodenkeg",             		 		v, false)
-	end
-	-- AddCookerRecipe("kyno_preservejar",							v)
-end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Spiced Foods and Potlevel.
 local spices  = 
@@ -224,8 +218,6 @@ local cookers =
 	"kyno_cookware_grill",
 	"kyno_cookware_oven_small_casserole",
 	"kyno_cookware_oven_casserole",
-	"kyno_woodenkeg",
-	--"kyno_preservejar",
 }
 
 for i, cooker in ipairs(cookers) do 
@@ -280,6 +272,7 @@ local kynofoods =
 	eyeballsoup             = require("hof_foodrecipes").eyeballsoup,
 	soulstew             	= require("hof_foodrecipes").soulstew,
 	fortunecookie			= require("hof_foodrecipes").fortunecookie,
+	hornocupia				= require("hof_foodrecipes").hornocupia,
 	
 	-- The Gorge.
 	gorge_bread 			= require("hof_foodrecipes").gorge_bread,
@@ -366,10 +359,6 @@ local kynofoods =
 	festive_sweetpotato 	= require("hof_foodrecipes_optional").festive_sweetpotato,
 	festive_tamales 		= require("hof_foodrecipes_optional").festive_tamales,
 	festive_tourtiere 		= require("hof_foodrecipes_optional").festive_tourtiere,
-	
-	-- Keg and Preserve Jar.
-	wetgoop2				= require("hof_foodrecipes_brew").wetgoop2,
-	beer					= require("hof_foodrecipes_brew").beer,
 }
 
 kynofoods.coffee.potlevel 					= "med"
@@ -380,6 +369,7 @@ kynofoods.sharkfinsoup.potlevel 			= "med"
 kynofoods.sweetpotatosouffle.potlevel 		= "med"
 kynofoods.caviar.potlevel 					= "med"
 kynofoods.tropicalbouillabaisse.potlevel 	= "med"
+
 kynofoods.feijoada.potlevel 				= "med"
 kynofoods.gummy_cake.potlevel 				= "high"
 kynofoods.hardshell_tacos.potlevel 			= "high"
@@ -388,6 +378,7 @@ kynofoods.tea.potlevel 						= "med"
 kynofoods.nettlelosange.potlevel 			= "med"
 kynofoods.snakebonesoup.potlevel 			= "med"
 kynofoods.steamedhamsandwich.potlevel 		= "med"
+
 kynofoods.bubbletea.potlevel 				= "med"
 kynofoods.frenchonionsoup.potlevel 			= "med"
 kynofoods.slaw.potlevel						= "high"
@@ -396,8 +387,7 @@ kynofoods.poi.potlevel 						= "med"
 kynofoods.jellybean_sanity.potlevel 		= "med"
 kynofoods.jellybean_hunger.potlevel 		= "med"
 kynofoods.jellybean_super.potlevel 			= "med"
-kynofoods.bowlofgears.potlevel 				= "med"
-kynofoods.longpigmeal.potlevel 				= "med"
+
 kynofoods.gorge_bread.potlevel 				= "med"
 kynofoods.gorge_potato_chips.potlevel 		= "med"
 kynofoods.gorge_vegetable_soup.potlevel 	= "med"
@@ -462,6 +452,9 @@ kynofoods.gorge_scone.potlevel 				= "med"
 kynofoods.gorge_trifle.potlevel 			= "med"
 kynofoods.gorge_cheesecake.potlevel 		= "med"
 kynofoods.kyno_syrup.potlevel 				= "med"
+
+kynofoods.bowlofgears.potlevel 				= "med"
+kynofoods.longpigmeal.potlevel 				= "med"
 kynofoods.duckyouglermz.potlevel 			= "med"
 kynofoods.cucumbersalad.potlevel 			= "med"
 kynofoods.waterycressbowl.potlevel 			= "med"
@@ -473,6 +466,8 @@ kynofoods.coconutwater.potlevel             = "med"
 kynofoods.eyeballsoup.potlevel              = "med"
 kynofoods.soulstew.potlevel              	= "low"
 kynofoods.fortunecookie.potlevel            = "high"
+kynofoods.hornocupia.potlevel				= "high"
+
 kynofoods.festive_berrysauce.potlevel 		= "med"
 kynofoods.festive_bibingka.potlevel 		= "med"
 kynofoods.festive_cabbagerolls.potlevel 	= "med"
@@ -505,8 +500,6 @@ local cookerstations = {
 	"kyno_cookware_grill",
 	"kyno_cookware_oven_small_casserole",
 	"kyno_cookware_oven_casserole",
-	"kyno_woodenkeg",
-	--"kyno_preservejar",
 } 
 
 for name, recipe in pairs(kynofoods) do

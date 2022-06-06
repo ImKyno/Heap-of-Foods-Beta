@@ -33,6 +33,24 @@ STRINGS.UI.COOKBOOK.TAB_TITLE_KEG = "Wooden Keg Recipes"
 STRINGS.UI.COOKBOOK.TAB_TITLE_JAR = "Preserves Jar Recipes"
 STRINGS.UI.COOKBOOK.TAB_TITLE_ARTISAN = "Artisan Recipes"
 
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED = "Speeds the body"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CAKE = "The cake is a lie"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NAUGHTINESS = "Increases naughtiness"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHEALTH = "Restores health over time"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER = "Restores hunger over time"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RESANITY = "Restores sanity over time"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GEARS = "Upgrades the chassis"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HURT = "Hurts the body"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLERMZ = "Glermz's special dish"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KYNO = "Kyno's favourite dish"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CAT = "For your little kitty"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KAT = "For your fluffly kitty"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOUL = "Soul-starve killer"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BOSS = "Calls the monster"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FORTUNE = "Tells your fortune"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HANDS = "Speed the hands"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ALCOHOL = "Increases strength\nDrink in moderation"
+
 STRINGS.ACTIONS.SALT = "Add Salt"
 STRINGS.ACTIONS.STORESOUL = "Store Soul"
 STRINGS.ACTIONS.FLAY = "Flay" -- This doesn't matter, ACTIONS.SLAUGHTER2 overrides it. But it's necessary for the AddAction.
@@ -107,7 +125,7 @@ STRINGS.FORTUNE_COOKIE_QUOTES = {
 	"It says \"The fortune you seek is in another cookie.\"",
 	"It says \"A closed mouth gathers no feet.\"",
 	"It says \"A foolish man listens to his heart. A wise man listens to cookies.\"",
-	"It says \"If you look back, you’ll soon be going that way.\"",
+	"It says \"If you look back, you'll soon be going that way.\"",
 	"It says \"You will live long enough to open many fortune cookies.\"",
 	"It says \"Everyone should play Wigfrid instead of Wanda or Wolfgang.\"",
 	"It says \"He who laughs at himself never runs out of things to laugh at.\"",
@@ -117,7 +135,7 @@ STRINGS.FORTUNE_COOKIE_QUOTES = {
 	"It says \"You can always find happiness at work on Friday.\"",
 	"It says \"Fortune not found? Abort, Retry, Ignore.\"",
 	"It says \"Help! I am being held prisoner in a fortune cookie factory.\"",
-	"It says \"It’s about time I got out of that cookie.\"",
+	"It says \"It's about time I got out of that cookie.\"",
 	"It says \"Never forget a friend. Especially if he owes you.\"",
 	"It says \"I am worth a fortune.\"",
 	"It says \"You will receive a fortune cookie.\"",
@@ -126,8 +144,8 @@ STRINGS.FORTUNE_COOKIE_QUOTES = {
 	"It says \"This cookie contains 117 calories.\"",
 	"It says \"Ask your mom instead of a cookie.\"",
 	"It says \"Hard work pays off in the future. Laziness pays off now.\"",
-	"It says \"Don’t eat the paper.\"",
-	"It says \"If a turtle doesn’t have a shell, is it naked or homeless?\"",
+	"It says \"Don't eat the paper.\"",
+	"It says \"If a turtle doesn't have a shell, is it naked or homeless?\"",
 	"It says \"Alt+F4 to avoid death.\"",
 	"It says \"󰀅󰀆󰀅\"",
 	"It says \"12 Living Logs are missing, can you find them?\"",
@@ -4764,6 +4782,25 @@ STRINGS.CHARACTERS.WURT.DESCRIBE.FORTUNECOOKIE = "Little story inside of it, flo
 STRINGS.CHARACTERS.WALTER.DESCRIBE.FORTUNECOOKIE = "How is your lucky today, Woby?"
 STRINGS.CHARACTERS.WANDA.DESCRIBE.FORTUNECOOKIE = "Crispy and sugary."
 
+STRINGS.NAMES.HORNOCUPIA = "Cornocupia"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.HORNOCUPIA = "Makes my stomach rumble just looking at it."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.HORNOCUPIA = "Ouchhh! I think I chipped a tooth."
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.HORNOCUPIA = "Full of food for mighty Wolfgang!"
+STRINGS.CHARACTERS.WENDY.DESCRIBE.HORNOCUPIA = "Food inside horn. How innovative."
+STRINGS.CHARACTERS.WX78.DESCRIBE.HORNOCUPIA = "THIS PIECE IS FOR TORTURING HUNGRY FLESHLINGS"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.HORNOCUPIA = "A symbol of abundance."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.HORNOCUPIA = "A feast!"
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.HORNOCUPIA = "It is dinner time."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.HORNOCUPIA = "Feasts, feasts, everywhere!"
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.HORNOCUPIA = "Let's eat!"
+STRINGS.CHARACTERS.WINONA.DESCRIBE.HORNOCUPIA = "I'm carving for it."
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.HORNOCUPIA = "What a funny use for a horn!"
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.HORNOCUPIA = "Belly Stuffs"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.HORNOCUPIA = "One can dream."
+STRINGS.CHARACTERS.WURT.DESCRIBE.HORNOCUPIA = "Full of yummies, florp!"
+STRINGS.CHARACTERS.WALTER.DESCRIBE.HORNOCUPIA = "I'm starting to get hungry just looking at it!"
+STRINGS.CHARACTERS.WANDA.DESCRIBE.HORNOCUPIA = "I suddenly feel hungry..."
+
 STRINGS.NAMES.KYNO_SAPHEALER = "Musty Antidote"
 STRINGS.RECIPE_DESC.KYNO_SAPHEALER = "CURES THAT NOT-SO-FRESH SUGAR!"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_SAPHEALER = "I'm not drinking that."
@@ -4879,6 +4916,26 @@ STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_MILK_KOALEFANT = "Can I make this into ch
 STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_MILK_KOALEFANT = "Tasty, florp."
 STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_MILK_KOALEFANT = "Do you want some milk, Woby?"
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_MILK_KOALEFANT = "It has a nice flavor."
+
+STRINGS.NAMES.KYNO_BREWBOOK = "Brewbook"
+STRINGS.RECIPE_DESC.KYNO_BREWBOOK = "Review your repertoire of beverage recipes."
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_BREWBOOK = "I've always been hungry for knowledge."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_BREWBOOK = "Uuugh, it's no fun brewing with instructions!"
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_BREWBOOK = "Is book of things to fill Wolfgang's mighty belly!"
+STRINGS.CHARACTERS.WENDY.DESCRIBE.KYNO_BREWBOOK = "What's the point of filling my stomach when my heart remains empty..."
+STRINGS.CHARACTERS.WX78.DESCRIBE.KYNO_BREWBOOK = "DIRECTORY OF BEVERAGES"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.KYNO_BREWBOOK = "A collection of brewing observations."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.KYNO_BREWBOOK = "Pretty handy. Luce, how aboot you read off the ingredients while I brew?"
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.KYNO_BREWBOOK = "Very well. If I can master the dark arts, how hard could brewing be?"
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.KYNO_BREWBOOK = "'Tis filled with too many non-meat dishes if you ask me."
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.KYNO_BREWBOOK = "Now we'll never forget a recipe!"
+STRINGS.CHARACTERS.WINONA.DESCRIBE.KYNO_BREWBOOK = "Havin' a blueprint sure makes brewing easier!"
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.KYNO_BREWBOOK = "Oh what shall I brew up next? Hyuyu!"
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.KYNO_BREWBOOK = "Belly Things"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_BREWBOOK = "Ah, a fine catalogue of wines."
+STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_BREWBOOK = "Like this one, has pictures of food!"
+STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_BREWBOOK = "Looks like I've got a new guide to memorize!"
+STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_BREWBOOK = "Brewing is so time consuming, look at all these ingredients and methods!"
 
 STRINGS.NAMES.KYNO_WOODENKEG = "Wooden Keg"
 STRINGS.RECIPE_DESC.KYNO_WOODENKEG = "Ingredients will eventually turn into a beverage."

@@ -6,7 +6,7 @@ local Text = require "widgets/text"
 local Grid = require "widgets/grid"
 local Spinner = require "widgets/spinner"
 local TEMPLATES = require "widgets/redux/templates"
-local brewing = require("cooking")
+local brewing = require("hof_brewing")
 
 require("util")
 local FILTER_ALL = "ALL"
@@ -467,7 +467,7 @@ function BrewbookPage:BuildRecipeBook()
 
 	local known_recipe_list = TheCookbook.preparedfoods or {}
 
-	local cookbook_recipes = brewing.cookbook_recipes[self.category]
+	local cookbook_recipes = brewing.brewbook_recipes[self.category]
 	for prefab, recipe_def in pairs(cookbook_recipes) do
 		local data = {
 			prefab = prefab,

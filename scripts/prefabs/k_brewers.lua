@@ -1,6 +1,6 @@
 require "prefabutil"
-local cooking = require("cooking")
-local cookpotfoods = cooking.recipes["hof_brewrecipes"]
+local brewing = require("hof_brewing")
+local cookpotfoods = brewing.recipes["hof_brewrecipes"]
 
 local assets =
 {
@@ -19,7 +19,7 @@ local prefabs =
 	"spoiled_food",
 }
 
-for k, v in pairs(cooking.recipes.kyno_woodenkeg) do
+for k, v in pairs(brewing.recipes.kyno_woodenkeg) do
     table.insert(prefabs, v.name)
 
 	if v.overridebuild then
@@ -31,8 +31,8 @@ local function OnHammered(inst, worker)
     if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
         inst.components.burnable:Extinguish()
     end
-    if not inst:HasTag("burnt") and inst.components.stewer.product ~= nil and inst.components.stewer:IsDone() then
-        inst.components.stewer:Harvest()
+    if not inst:HasTag("burnt") and inst.components.brewer.product ~= nil and inst.components.brewer:IsDone() then
+        inst.components.brewer:Harvest()
     end
     if inst.components.container ~= nil then
         inst.components.container:DropEverything()
@@ -49,11 +49,11 @@ end
 
 local function OnHit(inst, worker)
     if not inst:HasTag("burnt") then
-        if inst.components.stewer:IsCooking() then
+        if inst.components.brewer:IsCooking() then
             inst.AnimState:PlayAnimation("hit_cooking")
             inst.AnimState:PushAnimation("cooking_loop", true)
             inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
-        elseif inst.components.stewer:IsDone() then
+        elseif inst.components.brewer:IsDone() then
             inst.AnimState:PlayAnimation("hit_full")
             inst.AnimState:PushAnimation("idle_full", false)
         else
@@ -88,7 +88,7 @@ end
 
 local function OnClose(inst)
     if not inst:HasTag("burnt") then
-        if not inst.components.stewer:IsCooking() then
+        if not inst.components.brewer:IsCooking() then
             inst.AnimState:PlayAnimation("idle_empty")
             inst.SoundEmitter:KillSound("snd")
         end
@@ -97,7 +97,7 @@ local function OnClose(inst)
 end
 
 local function SetProductSymbol(inst, product, overridebuild)
-    local recipe = cooking.GetRecipe(inst.prefab, product)
+    local recipe = brewing.GetBrewing(inst.prefab, product)
     local potlevel = recipe ~= nil and recipe.potlevel or nil
     local build = (recipe ~= nil and recipe.overridebuild) or overridebuild or "cook_pot_food"
     local overridesymbol = (recipe ~= nil and recipe.overridesymbolname) or product
@@ -121,15 +121,15 @@ end
 
 local function SpoilFn(inst)
     if not inst:HasTag("burnt") then
-        inst.components.stewer.product = inst.components.stewer.spoiledproduct
-        SetProductSymbol(inst, inst.components.stewer.product)
+        inst.components.brewer.product = inst.components.brewer.spoiledproduct
+        SetProductSymbol(inst, inst.components.brewer.product)
     end
 end
 
 local function ShowProduct(inst)
     if not inst:HasTag("burnt") then
-        local product = inst.components.stewer.product
-        SetProductSymbol(inst, product, IsModCookingProduct(inst.prefab, product) and product or nil)
+        local product = inst.components.brewer.product
+        SetProductSymbol(inst, product, IsModBrewingProduct(inst.prefab, product) and product or nil)
     end
 end
 
@@ -171,9 +171,9 @@ end
 
 local function GetStatus(inst)
     return (inst:HasTag("burnt") and "BURNT")
-	or (inst.components.stewer:IsDone() and "DONE")
-	or (not inst.components.stewer:IsCooking() and "EMPTY")
-	or (inst.components.stewer:GetTimeToCook() > 15 and "COOKING_LONG")
+	or (inst.components.brewer:IsDone() and "DONE")
+	or (not inst.components.brewer:IsCooking() and "EMPTY")
+	or (inst.components.brewer:GetTimeToCook() > 15 and "COOKING_LONG")
 	or "COOKING_SHORT"
 end
 
@@ -230,7 +230,7 @@ local function kegfn()
     inst.AnimState:PlayAnimation("idle_empty")
 	
 	inst:AddTag("structure")
-	inst:AddTag("stewer")
+	inst:AddTag("brewer")
 	
 	inst.entity:SetPristine()
 	
@@ -243,13 +243,13 @@ local function kegfn()
 	
 	inst:AddComponent("lootdropper")
 	
-	inst:AddComponent("stewer")
-	inst.components.stewer.onstartcooking = StartCookFn
-	inst.components.stewer.oncontinuecooking = ContinueCookFn
-	inst.components.stewer.oncontinuedone = ContinueDoneFn
-	inst.components.stewer.ondonecooking = DoneCookFn
-	inst.components.stewer.onharvest = HarvestFn
-	inst.components.stewer.onspoil = SpoilFn
+	inst:AddComponent("brewer")
+	inst.components.brewer.onstartcooking = StartCookFn
+	inst.components.brewer.oncontinuecooking = ContinueCookFn
+	inst.components.brewer.oncontinuedone = ContinueDoneFn
+	inst.components.brewer.ondonecooking = DoneCookFn
+	inst.components.brewer.onharvest = HarvestFn
+	inst.components.brewer.onspoil = SpoilFn
 
 	inst:AddComponent("container")
 	inst.components.container:WidgetSetup("brewer")

@@ -1,10 +1,23 @@
 name = "Heap of Foods"
 version = "4.2-A"
-local myupdate = "Souls and Cans"
+local myupdate = "Artisan Goods"
 
-description = "󰀄 Adds 118 brand new Crock Pot dishes alongside new ingredients to use!\n\n󰀦 Also features a brand new Biome somewhere in the Ocean!\n\n󰀌 Mod Version: "..version.."\n\󰀧 Update: "..myupdate..""
+description = [[
+󰀄 Adds 118 brand new Crock Pot dishes alongside new ingredients to use!
+
+󰀠 Also features a brand new Biome somewhere in the Ocean!
+󰀦 Complete Recipe Sheet on the Mod Page!
+
+󰀏 Featuring the Artisan Goods Update
+This update brings two new structures that can be used to make a whole new category of recipes!
+The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jellies, Pickles, Mayonnaises, Teas and more!
+They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
+
+󰀌 Mod Version: 4.2-A
+󰀧 Update: Artisan Goods
+]]
+
 author = "Kyno"
-
 api_version = 10
 
 dst_compatible = true
@@ -173,6 +186,7 @@ configuration_options =
         },
         default = 0,
 	},
+	--[[
 	{
 		name = "serenity_cc",
 		label = "Serenity Archipelago CC",
@@ -187,6 +201,22 @@ configuration_options =
 			data = 1},
         },
         default = 0,
+	},
+	]]--
+	{
+		name = "do_regrowth",
+		label = "World Regrowth",
+		hover = "Should the Mod plants and objects regrow overtime in the world?",
+		options =
+		{
+			{description = "No", 
+			hover = "Mod Plants and objects will not regrow overtime in the world.",
+			data = 0},
+            {description = "Yes", 
+			hover = "Mod Plants and objects will regrow overtime in the world.",
+			data = 1},
+        },
+        default = 1,
 	},
 	Title("Extra Options", "Extra Options for the Mod."),
 	{

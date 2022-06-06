@@ -169,32 +169,3 @@ function c_hofserenityisland()
 		c_give("kyno_salmonfish",                nil, true)
 	end
 end
-
--- Unlocks the Cookbook
-function c_hofrevealcookbook()
-	TheCookbook.save_enabled = false
-
-	local cooking = require("cooking")
-	for cat, cookbook_recipes in pairs(cooking.cookbook_recipes) do
-		for prefab, recipe_def in pairs(cookbook_recipes) do
-			TheCookbook:LearnFoodStats(prefab)
-			TheCookbook:AddRecipe(prefab, {"meat", "meat", "meat", "meat"})
-			TheCookbook:AddRecipe(prefab, {"twigs", "berries", "ice", "meat"})
-		end
-	end	
-end
-
-function c_hofbrewbook()
-	local screen = TheFrontEnd:GetActiveScreen()
-	if not screen or not screen.name then 
-		return true 
-	end
-	if screen.name:find("HUD") then	
-		TheFrontEnd:PushScreen(require("screens/brewbookpopupscreen")(ThePlayer))
-		return true
-	else
-		if screen.name == "brewbookpopupscreen" then
-			screen:OnClose()
-		end
-	end
-end

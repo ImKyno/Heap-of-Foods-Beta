@@ -627,15 +627,21 @@ local KEEP_FOOD_K = GetModConfigData("keep_food_spoilage_k")
 if KEEP_FOOD_K == 1 then
 	local cooking_stations = {
 		"cookpot",
-		"archive_cookpot",
 		"portablecookpot",
-		"portablespicer",
+		"archive_cookpot",
 		"kyno_cookware_syrup",
 		"kyno_cookware_small",
 		"kyno_cookware_big",
 		"kyno_cookware_elder",
 		"kyno_cookware_small_grill",
 		"kyno_cookware_grill",
+		"kyno_cookware_oven_small_casserole",
+		"kyno_cookware_oven_casserole",
+	}
+	
+	local brewing_stations = {
+		"kyno_woodenkeg",
+		"kyno_preservesjar",
 	}
 	
 	for k,v in pairs(cooking_stations) do
@@ -649,6 +655,18 @@ if KEEP_FOOD_K == 1 then
 			end
 		end)
 	end 
+	
+	for k,v in pairs(brewing_stations) do
+		AddPrefabPostInit(v, function(inst)
+			if inst.components.brewer then
+				inst.components.brewer.onspoil = function() 
+					inst.components.brewer.spoiltime = 1
+					inst.components.brewer.targettime = _G.GetTime()
+					inst.components.brewer.product_spoilage = 0
+				end
+			end
+		end)
+	end
 end
 
 -- Dragonfly Drops Coffee Plants.
@@ -1403,6 +1421,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Colour Cubes and Music for the Serenitea Archipelago.
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=2625422345
+--[[
 local SERENITY_CC = GetModConfigData("serenity_cc")
 if SERENITY_CC == 1 then
 	local function MakeSerenityArea(inst)
@@ -1458,6 +1477,7 @@ if SERENITY_CC == 1 then
 		end)
 	end)
 end
+]]--
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Retrofitting Stuff for old worlds.
 require("hof_settings")
@@ -1720,7 +1740,7 @@ for k,v in pairs(fortunecookie_debuff) do
 						eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_GOOD)])
 					end
 				else 
-					eater.components.health:DoDelta(999)
+					eater.components.health:SetPercent(.2)
 					eater.components.hunger:DoDelta(-999)
 					eater.components.sanity:DoDelta(-999)
 					if eater.components.talker then 
@@ -1740,11 +1760,35 @@ for k,v in pairs(fortunecookie_debuff) do
 	end)
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+local hornocupia_debuff = {
+	"hornocupia",
+	"hornocupia_spice_garlic",
+	"hornocupia_spice_sugar",
+	"hornocupia_spice_chili",
+	"hornocupia_spice_salt",
+}
+
+for k,v in pairs(hornocupia_debuff) do
+	AddPrefabPostInit(v, function(inst)
+		local function OnEatenHornocupia(inst, eater)
+			local horn = SpawnPrefab("horn")
+			if eater.components.inventory and eater:HasTag("player") and not eater.components.health:IsDead() 
+			and not eater:HasTag("playerghost") then eater.components.inventory:GiveItem(horn) end
+		end
+
+		if inst.components.edible ~= nil then
+			inst.components.edible:SetOnEatenFn(OnEatenHornocupia)
+		end
+	end)
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Animals that can be milked with the Bucket.
 local milkable_animals = {
 	"koalefant_winter",
 	"koalefant_summer",
 	"beefalo",
+	"deer",
+	"spat",
 }
 
 for k,v in pairs(milkable_animals) do
@@ -1759,67 +1803,11 @@ for k,v in pairs(milkable_animals) do
 			inst.components.milkable2:SetUp("kyno_milk_beefalo")
 		elseif inst.prefab == "koalefant_summer" or "koalefant_winter" then
 			inst.components.milkable2:SetUp("kyno_milk_koalefant")
+		elseif inst.prefab == "deer" then
+			inst.components.milkable2:SetUp("kyno_milk_deer")
+		elseif inst.prefab == "spat" then
+			inst.components.milkable2:SetUp("kyno_milk_spat")
 		end
-	end)
-end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Items that can go inside Kegs and Preserve Jars.
-local brewer_ingredients = {
-	"honey",
-	"honeycomb",
-	"pomegranate", 
-	"dragonfruit", 
-	"cave_banana",
-	"durian",
-	"watermelon",
-	"berries",
-	"berries_juicy",
-	"fig",
-	"carrot",
-	"corn",
-	"eggplant",
-	"pumpkin",
-	"foliage",
-	"succulent_picked",
-	"cutlichen",
-	"cactus_meat",
-	"cactus_flower",
-	"garlic",
-	"asparagus",
-	"onion",
-	"tomato",
-	"potato",
-	"pepper",
-	"red_cap",
-	"green_cap",
-	"blue_cap",
-	"moon_cap",
-	"kelp",
-	"mandrake",
-	"rock_avocado_fruit_ripe",
-	"kyno_wheat",
-	"kyno_syrup",
-	"kyno_banana",
-	"kyno_kokonut_halved",
-	"kyno_kokonut_cooked",
-	"kyno_white_cap",
-	"kyno_foliage",
-	"kyno_aloe",
-	"kyno_radish",
-	"kyno_sweetpotato",
-	"kyno_lotus_flower",
-	"kyno_seaweeds",
-	"kyno_taroroot",
-	"kyno_waterycress",
-	"kyno_cucumber",
-	"kyno_parznip",
-	"kyno_parznip_eaten",
-	"kyno_turnip",
-}
-
-for k,v in pairs(brewer_ingredients) do
-	AddPrefabPostInit(v, function(inst)
-		inst:AddTag("brewer_ingredient")
 	end)
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1844,12 +1832,37 @@ AddPrefabPostInit("beer", function(inst)
 				eater.components.combat.externaldamagemultipliers:RemoveModifier(eater)
 			end)
 		end
-	end	
-	
-	inst:AddTag("drinkable_food")
+	end
 		
 	if inst.components.edible then
 		inst.components.edible:SetOnEatenFn(OnEatBeer)
+	end
+end)
+
+AddPrefabPostInit("paleale", function(inst)
+	local function OnEatPaleAle(inst, eater)
+		if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
+			return
+		elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
+			eater.strengthbuff_duration = 500
+			eater.components.debuffable:AddDebuff("kyno_strengthbuff", "kyno_strengthbuff")
+			if eater.components.talker then 
+				eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_POPBUFF"))
+			end
+		else
+			eater:AddTag("groggy")
+			eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_strengthbuff", .70)
+			eater.components.combat.externaldamagemultipliers:SetModifier(eater, 1.5)
+			eater:DoTaskInTime(500, function()
+				eater:RemoveTag("groggy")
+				eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_strengthbuff")
+				eater.components.combat.externaldamagemultipliers:RemoveModifier(eater)
+			end)
+		end
+	end
+		
+	if inst.components.edible then
+		inst.components.edible:SetOnEatenFn(OnEatPaleAle)
 	end
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

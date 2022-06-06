@@ -13,7 +13,7 @@ local kyno_foods =
 		hunger = 9.375,
 		sanity = -5,
 		cooktime = 0.5,
-		oneat_desc = "Speeds the body",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -73,7 +73,7 @@ local kyno_foods =
 		sanity = -10,
 		cooktime = 1,
 		potlevel = "med",
-		oneat_desc = "Increases naughtiness",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NAUGHTINESS,
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -119,7 +119,7 @@ local kyno_foods =
 		cooktime = 2,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
-		oneat_desc = "Speeds the body",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -364,7 +364,7 @@ local kyno_foods =
 		sanity = 5,
 		cooktime = 2.5,
 		stacksize = 3,
-		oneat_desc = "Restores sanity over time",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RESANITY,
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
         prefabs = { "kyno_sanityregenbuff" },
@@ -388,7 +388,7 @@ local kyno_foods =
 		sanity = 0,
 		cooktime = 2.5,
 		stacksize = 3,
-		oneat_desc = "Restores hunger over time",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
         prefabs = { "kyno_hungerregenbuff" },
@@ -413,7 +413,7 @@ local kyno_foods =
 		sanity = 2,
 		cooktime = 2.5,
 		stacksize = 3,
-		oneat_desc = "Restores all over time",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHEALTH,
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
         prefabs = { "kyno_superregenbuff" },
@@ -477,7 +477,7 @@ local kyno_foods =
 		hunger = 150,
 		sanity = 150,
 		cooktime = 2,
-		oneat_desc = "Upgrades the chassis",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GEARS,
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -492,7 +492,7 @@ local kyno_foods =
 		hunger = 150,
 		sanity = -300,
 		cooktime = 1,
-		oneat_desc = "Hurts the body",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HURT,
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -506,7 +506,7 @@ local kyno_foods =
 		hunger = 0,
 		sanity = 0,
 		cooktime = 5,
-		oneat_desc = "Glermz's special dish",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLERMZ,
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -520,7 +520,7 @@ local kyno_foods =
 		hunger = 25,
 		sanity = 15,
 		cooktime = 1,
-		oneat_desc = "For your little kitty",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CAT,
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -534,7 +534,7 @@ local kyno_foods =
 		hunger = 15,
 		sanity = 30,
 		cooktime = 1.5,
-		oneat_desc = "For your fluffy kitty",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KAT,
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -597,7 +597,7 @@ local kyno_foods =
 		sanity = -150,
 		cooktime = 2,
 		floater = {"med", nil, 0.65},
-		oneat_desc = "Calls the monster",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BOSS,
 	},
 	
 	soulstew = 
@@ -611,21 +611,34 @@ local kyno_foods =
 		sanity = -10,
 		cooktime = 1.2,
 		floater = {"med", nil, 0.65},
-		oneat_desc = "Soul-starve killer",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOUL,
 	},
 	
 	fortunecookie =
 	{
-		test 		= function(cooker, names, tags) return names.kyno_flour and tags.sweetener and names.papyrus end,
-		priority 	= 35,
-		foodtype 	= FOODTYPE.GOODIES,
-		perishtime 	= TUNING.PERISH_SUPERSLOW,
-		health 		= 3, 
-		hunger		= 20,
-		sanity 		= 5,
-		cooktime	= 1,
-		floater		= {"med", nil, 0.65},
-		oneat_desc	= "Tells your fortune",
+		test = function(cooker, names, tags) return names.kyno_flour and tags.sweetener and names.papyrus end,
+		priority = 35,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = 3, 
+		hunger = 20,
+		sanity = 5,
+		cooktime = 1,
+		floater = {"med", nil, 0.65},
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FORTUNE,
+	},
+	
+	hornocupia =
+	{
+		test = function(cooker, names, tags) return tags.meat and tags.veggie and tags.fruit and names.horn end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 12,
+		hunger = 75,
+		sanity = 25,
+		cooktime = 1.6,
+		floater = {"med", nil, 0.65},
 	},
 	
 	-- The Gorge Foods.
@@ -925,7 +938,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 5,
 		cooktime = .75,
-		oneat_desc = "The cake is a lie!",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CAKE,
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1144,7 +1157,7 @@ local kyno_foods =
 		hunger = 20,
 		sanity = 33,
 		cooktime = .75,
-		oneat_desc = "Speeds the hands",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HANDS,
 		floater = {"med", nil, 0.65},
 		prefabs = { "kyno_hastebuff" },
         oneatenfn = function(inst, eater)
@@ -1449,7 +1462,7 @@ local kyno_foods =
 		hunger = 20,
 		sanity = 100,
 		cooktime = 1,
-		oneat_desc = "Kyno's favourite dish",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KYNO,
 		floater = {"med", nil, 0.65},
 	},
 	

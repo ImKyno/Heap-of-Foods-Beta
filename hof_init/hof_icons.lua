@@ -38,7 +38,7 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"kyno_cookware_kit_syrup", "kyno_cookware_big_pot", "kyno_cookware_small_pot", "kyno_cookware_grill_item", "kyno_cookware_small_grill_item", "kyno_cookware_kit_grill", "kyno_cookware_kit_small_grill",
 	"kyno_cookware_oven_item", "kyno_cookware_casserole", "kyno_cookware_small_casserole", "kyno_cookware_kit_oven", "kyno_tunacan", "kyno_tunacan_open", "kyno_tomatocan", "kyno_tomatocan_open", "kyno_beancan",
 	"kyno_beancan_open", "kyno_meatcan", "kyno_meatcan_open", "kyno_sodacan", "kyno_cokecan", "kyno_energycan", "kyno_bottle_soul", "soulstew", "fortunecookie", "kyno_milk_beefalo", "kyno_milk_koalefant", 
-	"kyno_bucket_empty", "kyno_bucket_milk", "kyno_bucket_water", "beer"}) do
+	"kyno_milk_deer", "kyno_bucket_empty", "kyno_bucket_milk", "kyno_bucket_water", "hornocupia", "kyno_brewbook", "beer"}) do
         local foods_name = foods
         AddPrefabPostInit(foods_name, function(inst)
             inst.components.inventoryitem.imagename = foods_name

@@ -6,7 +6,7 @@ local Grid = require "widgets/grid"
 local Spinner = require "widgets/spinner"
 local TEMPLATES = require "widgets/redux/templates"
 local Page = require "widgets/redux/brewbookpage"
-local brewing = require("cooking")
+local brewing = require("hof_brewing")
 
 require("util")
 

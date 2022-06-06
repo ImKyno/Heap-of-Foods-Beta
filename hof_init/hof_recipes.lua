@@ -10,6 +10,38 @@ local Recipe2 		= _G.Recipe2
 local TechTree = require("techtree")
 local RecipeFilter		= require("recipes_filter")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- For sorting recipe.
+-- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
+local function SortRecipe(a, b, filter_name, offset)
+    local filter = _G.CRAFTING_FILTERS[filter_name]
+    if filter and filter.recipes then
+        for sortvalue, product in ipairs(filter.recipes) do
+            if product == a then
+                table.remove(filter.recipes, sortvalue)
+                break
+            end
+        end
+
+        local target_position = #filter.recipes + 1
+        for sortvalue, product in ipairs(filter.recipes) do
+            if product == b then
+                target_position = sortvalue + offset
+                break
+            end
+        end
+
+        table.insert(filter.recipes, target_position, a)
+    end
+end 
+ 
+local function SortBefore(a, b, filter_name)
+    SortRecipe(a, b, filter_name, 0)
+end 
+
+local function SortAfter(a, b, filter_name)
+    SortRecipe(a, b, filter_name, 1)
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Custom TechTree for Mealing Stone.
 table.insert(TechTree.AVAILABLE_TECH, "MEALING")
 table.insert(TechTree.AVAILABLE_TECH, "SERENITYSHOP")
@@ -171,6 +203,7 @@ local KynFloat      		= AddRecipe2("kyno_floatilizer", {Ingredient("poop", 3), I
 	},	
 	{"GARDENING"}
 )
+SortAfter("kyno_floatilizer", "fertilizer", "GARDENING")
 
 local KynBucket				= AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1), Ingredient("boards", 1)}, TECH.SCIENCE_ONE,
 	{
@@ -179,6 +212,16 @@ local KynBucket				= AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1)
 	},
 	{"TOOLS"}
 )
+SortAfter("kyno_bucket_empty", "golden_farm_hoe", "TOOLS")
+
+local KynBrewbook			= AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ingredient("kyno_wheat", 1, ModAtlas)}, TECH.SCIENCE_ONE,
+	{
+		atlas 				= ModAtlas,
+		image				= "kyno_brewbook.tex",
+	},
+	{"COOKING"}
+)
+SortAfter("kyno_brewbook", "cookbook", "COOKING")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Pig Elder Shop.
 local KynSaltRack 			= AddRecipe2("kyno_saltrack_installer_p", {Ingredient("kyno_salmonfish", 2, ModAtlas)}, TECH.SERENITYSHOP_ONE, 

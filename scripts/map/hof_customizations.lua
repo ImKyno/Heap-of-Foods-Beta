@@ -5,10 +5,12 @@ local customizations =
 	kyno_sweetpotato_ground 				= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	kyno_turnip_ground						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	kyno_cucumber_ground 					= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
+	kyno_aspargos_ground					= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	
 	kyno_wildwheat							= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	kyno_rockflippable						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	kyno_mushstump_natural					= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
+	-- kyno_pineapplebush					= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	
 	kyno_lotus_ocean						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
 	kyno_seaweeds_ocean						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions"},
@@ -21,6 +23,7 @@ local customizations =
 	kyno_rockflippable_cave 				= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", world = {"cave"}, group = "hof_cave"},
 	kyno_mushstump_cave						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", world = {"cave"}, group = "hof_cave"},
 	kyno_turnip_cave						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", world = {"cave"}, group = "hof_cave"},
+	kyno_aspargos_cave						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", world = {"cave"}, group = "hof_cave"},
 }
 
 local map = require "map/forest_map"
@@ -32,6 +35,7 @@ TRANSLATE_TO_PREFABS["hof_plants"] 			= {
 	"kyno_radish_ground", 
 	"kyno_sweetpotato_ground", 
 	"kyno_turnip_ground", 
+	"kyno_aspargos_ground",
 	"kyno_wildwheat",
 	"kyno_rockflippable",
 	"kyno_mushstump_natural"
@@ -51,7 +55,8 @@ TRANSLATE_TO_PREFABS["hof_plants_caves"] 	= {
 	"kyno_parznip_big",
 	"kyno_rockflippable_cave",
 	"kyno_mushstump_cave",
-	"kyno_turnip_cave"
+	"kyno_turnip_cave",
+	"kyno_aspargos_cave"
 }
 	
 local WSO = require("worldsettings_overrides")

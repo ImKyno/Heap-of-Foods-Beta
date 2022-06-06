@@ -8,7 +8,7 @@ local kyno_foods_brew =
 	-- Keg Recipes.
 	beer =
 	{
-		test = function(cooker, names, tags) return names.kyno_wheat and (names.kyno_wheat == 2) end,
+		test = function(brewer, names, tags) return names.kyno_wheat and (names.kyno_wheat == 2) end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
@@ -16,23 +16,23 @@ local kyno_foods_brew =
 		hunger = 12.5,
 		sanity = -10,
 		cooktime = 24,
-		cookbook_category = "keg",
-		-- no_cookbook = true,
+		brewbook_category = "keg",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ALCOHOL,
 		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food"},
 	},
 	
 	-- This recipe is for when brewing a invalid product, we need this to prevent a crash.
 	wetgoop2 =
 	{
-		test = function(cooker, names, tags) return true end,
+		test = function(brewer, names, tags) return true end,
 		priority = -2,
 		perishtime = TUNING.PERISH_FAST,
 		health = 0,
 		hunger = 0,
 		sanity = 0,
 		cooktime = 2,
-		cookbook_category = "jar",
-		-- no_cookbook = true, -- Sludge will not be displayed.
+		brewbook_category = "jar",
         floater = {"small", nil, nil},
 	},
 }

@@ -3,9 +3,8 @@
 local _G 			= GLOBAL
 local require 		= _G.require
 
-require("cooking")
 require("hof_constants")
-AddPopup("BREWBOOK")
+require("hof_brewing")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Mod Dependencies.
 local modimports = 
@@ -18,6 +17,9 @@ local modimports =
 	"hof_meatrackfix",
 	"hof_farming",
 	"hof_cooking",
+	"hof_bruwing",
+	"hof_brewbook",
+	"hof_stategraphs",
 	"hof_retrofit",
 	"hof_regrowth",
 	"hof_containers",
@@ -105,7 +107,7 @@ AddMinimapAtlas("images/minimapimages/hof_parsnipminimap.xml") -- The other icon
 --[[
 if _G.KnownModIndex:IsModEnabled("workshop-727774324") then	
 	require("cookingpots")
-	local COOKINGPOTS = _G.COOKINGPOTS
+	global("AddCookingPot")
 
 	local modcookpots = 
 	{ 
@@ -117,49 +119,15 @@ if _G.KnownModIndex:IsModEnabled("workshop-727774324") then
 		"kyno_cookware_grill",
 		"kyno_cookware_oven_small_casserole",
 		"kyno_cookware_oven_casserole",
+		"kyno_woodenkeg",
+		"kyno_preservesjar",
 	}
 
 	for k,v in pairs(modcookpots) do
-		if _G.AddCookingPot then
-			_G.AddCookingPot(v)
+		if AddCookingPot then
+			AddCookingPot(v)
 		end
 	end
 end
 ]]--
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
-AddSimPostInit(function()
-    _G.TheInput:AddKeyHandler(
-    function(key, down)
-        -- Only trigger on key down
-        if not down then return end
-        -- Push our screen
-        if key == _G.KEY_N then
-            local screen = TheFrontEnd:GetActiveScreen()
-            -- End if we can't find the screen name (e.g. asleep)
-            if not screen or not screen.name then return true end
-            -- If the hud exists, open the UI
-            if screen.name:find("HUD") then
-                -- We want to pass in the (clientside) player entity
-                TheFrontEnd:PushScreen(require("screens/brewbookpopupscreen")(_G.ThePlayer))
-                return true
-            else
-                -- If the screen is already open, close it
-                if screen.name == "brewbookpopupscreen" then
-                    screen:OnClose()
-                end
-            end
-        end
-        -- Require CTRL for any debug keybinds
-        if _G.TheInput:IsKeyDown(_G.KEY_CTRL) then
-             -- Load latest save and run latest scripts
-            if key == _G.KEY_R then
-                if _G.TheWorld.ismastersim then
-                    _G.c_reset()
-                else
-                    _G.TheNet:SendRemoteExecute("c_reset()")
-                end
-            end
-        end
-    end)
-end)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
