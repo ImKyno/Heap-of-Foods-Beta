@@ -1,6 +1,5 @@
 require "prefabutil"
 local brewing = require("hof_brewing")
-local cookpotfoods = brewing.recipes["hof_brewrecipes"]
 
 local assets =
 {
@@ -16,15 +15,16 @@ local prefabs =
 {
     "collapse_small",
 	"wetgoop",
+	"wetgoop2",
 	"spoiled_food",
 }
 
 for k, v in pairs(brewing.recipes.kyno_woodenkeg) do
     table.insert(prefabs, v.name)
+end
 
-	if v.overridebuild then
-        table.insert(assets, Asset("ANIM", "anim/"..v.overridebuild..".zip"))
-	end
+for k, v in pairs(brewing.recipes.kyno_preservesjar) do
+    table.insert(prefabs, v.name)
 end
 
 local function OnHammered(inst, worker)
@@ -283,5 +283,83 @@ local function kegfn()
 	return inst
 end
 
-return Prefab("kyno_woodenkeg", kegfn, assets, prefabs)
--- Prefab("kyno_preservejar", preservejarfn, assets, prefabs)
+local function preservejarfn()
+	local inst = CreateEntity()
+	
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddLight()
+    inst.entity:AddNetwork()
+	
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("cookpot.png")
+	
+	inst.Light:Enable(false)
+	inst.Light:SetRadius(.6)
+	inst.Light:SetFalloff(1)
+	inst.Light:SetIntensity(.5)
+	inst.Light:SetColour(235/255,62/255,12/255)
+	
+	MakeObstaclePhysics(inst, .3)
+	
+    inst.AnimState:SetBank("cook_pot")
+    inst.AnimState:SetBuild("cook_pot")
+    inst.AnimState:PlayAnimation("idle_empty")
+	
+	inst:AddTag("structure")
+	inst:AddTag("brewer")
+	
+	inst.entity:SetPristine()
+	
+    if not TheWorld.ismastersim then
+		inst.OnEntityReplicated = function(inst) 
+			inst.replica.container:WidgetSetup("brewer") 
+		end
+        return inst
+    end
+	
+	inst:AddComponent("lootdropper")
+	
+	inst:AddComponent("brewer")
+	inst.components.brewer.onstartcooking = StartCookFn
+	inst.components.brewer.oncontinuecooking = ContinueCookFn
+	inst.components.brewer.oncontinuedone = ContinueDoneFn
+	inst.components.brewer.ondonecooking = DoneCookFn
+	inst.components.brewer.onharvest = HarvestFn
+	inst.components.brewer.onspoil = SpoilFn
+
+	inst:AddComponent("container")
+	inst.components.container:WidgetSetup("brewer")
+	inst.components.container.onopenfn = OnOpen
+	inst.components.container.onclosefn = OnClose
+	inst.components.container.skipclosesnd = true
+	inst.components.container.skipopensnd = true
+
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
+
+	inst:AddComponent("workable")
+	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
+	inst.components.workable:SetWorkLeft(4)
+	inst.components.workable:SetOnFinishCallback(OnHammered)
+	inst.components.workable:SetOnWorkCallback(OnHit)
+
+	inst:AddComponent("hauntable")
+	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
+
+	inst:ListenForEvent("onbuilt", OnBuilt)
+
+	MakeMediumBurnable(inst, nil, nil, true)
+	MakeSmallPropagator(inst)
+	MakeSnowCovered(inst)
+
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
+	inst.OnLoadPostPass = OnLoadPostPass
+	
+	return inst
+end
+
+return Prefab("kyno_woodenkeg", kegfn, assets, prefabs),
+Prefab("kyno_preservesjar", preservejarfn, assets, prefabs)

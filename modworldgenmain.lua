@@ -12,12 +12,76 @@ local Layouts 						= require("map/layouts").Layouts
 local StaticLayout  				= require("map/static_layout")
 
 require("map/terrain")
+require("tilemanager")
 
-modimport("tile_adder")
 modimport("hof_init/hof_customize")
 modimport("hof_init/hof_worldgen")
 
 TUNING.HOF_RESOURCES = .08
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Custom Turfs.
+AddTile("STONECITY", "LAND", 
+	{
+		ground_name 	= "City Stone",
+		old_static_id 	= GROUND.QUAGMIRE_CITYSTONE,
+	},
+	{
+		name			= "cave",
+		noise_texture	= "levels/textures/events/quagmire_citystone_noise.tex",
+		runsound 		= "dontstarve/movement/run_dirt",
+        walksound 		= "dontstarve/movement/walk_dirt",
+		snowsound		= "dontstarve/movement/run_snow",
+		hard			= true,
+	},
+	{
+		name 			= "map_edge",
+		noise_texture	= "levels/textures/events/quagmire_citystone_mini.tex",
+	},
+	{
+		name			= "stonecity",
+		anim			= "stonecity",
+		bank_build		= "kyno_turfs_events",
+	}
+)
+
+AddTile("PINKPARK", "LAND", 
+	{
+		ground_name 	= "Pink Park",
+		old_static_id   = GROUND.QUAGMIRE_PARKFIELD,
+	},
+	{
+		name			= "deciduous",
+		noise_texture	= "levels/textures/events/quagmire_parkfield_noise.tex",
+		runsound 		= "dontstarve/movement/run_grass",
+        walksound 		= "dontstarve/movement/walk_grass",
+		snowsound		= "dontstarve/movement/run_snow",
+		hard			= false,
+	},
+	{
+		name 			= "map_edge",
+		noise_texture	= "levels/textures/events/quagmire_parkfield_mini.tex",
+	},
+	{
+		name			= "pinkpark",
+		anim			= "pinkpark",
+		bank_build		= "kyno_turfs_events",
+	}
+)
+
+-- To match The Architect Pack and Not Enough Turfs.
+if not _G.KnownModIndex:IsModEnabled("workshop-2428854303") or _G.KnownModIndex:IsModEnabled("workshop-2528541304") then
+	ChangeTileRenderOrder(WORLD_TILES.PINKPARK, 	WORLD_TILES.DECIDUOUS, 			true)
+	ChangeTileRenderOrder(WORLD_TILES.STONECITY, 	WORLD_TILES.ROCKY, 				true)
+else
+	ChangeTileRenderOrder(WORLD_TILES.PINKPARK, 	WORLD_TILES.SWIRLGRASSMONO, 	true)
+	ChangeTileRenderOrder(WORLD_TILES.STONECITY, 	WORLD_TILES.PINKSTONE, 			true)
+end
+
+-- This does nothing. Mostly used for the Tiled only.
+-- QUAGMIRE_PARKFIELD_ID = 32
+-- QUAGMIRE_CITYSTONE_ID = 40
+-- ROCKY_ID				 = 3
+-- SAVANNA_ID			 = 5
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Keys and Locks.
 local keycount 						= 1
@@ -40,9 +104,10 @@ Layouts["Oasis"] 					= StaticLayout.Get("map/static_layouts/hof_oasis")
 Layouts["SerenityIslandShop"] 		= StaticLayout.Get("map/static_layouts/hof_serenityisland_shop")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Retrofit the Serenity Archipelago in the world.
+-- The numbers below each turf represents them on the setpiece file.
 _G.SERENITYISLAND_GROUNDS = {
-	GROUND.IMPASSABLE, GROUND.ROCKY, GROUND.SAVANNA, GROUND.QUAGMIRE_CITYSTONE, GROUND.QUAGMIRE_PARKFIELD
-	-- 1               -- 2          -- 3            -- 4                       -- 5
+	WORLD_TILES.OCEAN_BRINEPOOL, WORLD_TILES.ROCKY, WORLD_TILES.SAVANNA, WORLD_TILES.STONECITY, WORLD_TILES.PINKPARK
+	-- 1              			 -- 2               -- 3                 -- 4                   -- 5
 }
 
 local retrofit_islands = {"hof_serenityisland1", "hof_serenityisland2"}	
@@ -57,32 +122,6 @@ for i, layout in ipairs(retrofit_islands) do
 		},
 		min_dist_from_land 			= 0,
 	})
-	-- Layouts[layout].ground_types = _G.SERENITYISLAND_GROUNDS
+	Layouts[layout].ground_types = _G.SERENITYISLAND_GROUNDS
 end
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Since we already have the turfs and they can be dug, we are going to use them for make a custom prefab.
--- Basically you're getting the original turfs from ground with a custom prefab i.e: the turf item.
-local GROUND_TURFS = 
-{
-	[GROUND.QUAGMIRE_PARKFIELD]	= "turf_pinkpark",
-	[GROUND.QUAGMIRE_CITYSTONE] = "turf_stonecity",
-}
-
-require("worldtiledefs").turf[GROUND.QUAGMIRE_PARKFIELD] 	= { name = "pinkpark", 	bank_build = "kyno_turfs_events", 	anim = "pinkpark" }
-require("worldtiledefs").turf[GROUND.QUAGMIRE_CITYSTONE] 	= { name = "stonecity", bank_build = "kyno_turfs_events", 	anim = "stonecity"}
-
--- To match The Architect Pack and Not Enough Turfs.
-if not _G.KnownModIndex:IsModEnabled("workshop-2428854303") or _G.KnownModIndex:IsModEnabled("workshop-2528541304") then
-	ChangeTileTypeRenderOrder(GROUND.QUAGMIRE_PARKFIELD, 	GROUND.ROCKY, 				true)
-	ChangeTileTypeRenderOrder(GROUND.QUAGMIRE_CITYSTONE, 	GROUND.ROAD, 				true)
-else
-	ChangeTileTypeRenderOrder(GROUND.QUAGMIRE_PARKFIELD, 	GROUND.SWIRLGRASSMONO, 		true)
-	ChangeTileTypeRenderOrder(GROUND.QUAGMIRE_CITYSTONE, 	GROUND.PINKSTONE, 			true)
-end
-
--- This does nothing. Mostly used for the Tiled only.
--- QUAGMIRE_PARKFIELD_ID = 32
--- QUAGMIRE_CITYSTONE_ID = 40
--- ROCKY_ID				 = 3
--- SAVANNA_ID			 = 5
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

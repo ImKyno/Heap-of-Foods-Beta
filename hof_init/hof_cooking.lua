@@ -66,6 +66,12 @@ AddIngredientValues({"kyno_sugartree_petals"},	{sweetener=1})
 AddIngredientValues({"kyno_crabmeat"},			{meat=0.5,		crab=1},			  true)
 AddIngredientValues({"kyno_chicken_egg"},		{egg=1}, 							  true)
 AddIngredientValues({"kyno_bottle_soul"},		{soul=1})
+AddIngredientValues({"kyno_milk_beefalo"},		{dairy=0.5,		rawmilk=1})
+AddIngredientValues({"kyno_milk_koalefant"},	{dairy=1,		rawmilk=1})
+AddIngredientValues({"kyno_milk_deer"},			{dairy=0.5,		rawmilk=1})
+AddIngredientValues({"kyno_milk_spat"},			{dairy=1,		rawmilk=1})
+AddIngredientValues({"cheese_yellow"},			{dairy=1,		cheese=1})
+AddIngredientValues({"cheese_white"},			{dairy=1,		cheese=1})
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Icons For Cookbook.
 local cookbook_icons = 
@@ -150,7 +156,7 @@ for k,v in pairs(cookbook_icons) do
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Import The Foods.
-local XMAS_FOODS = GetModConfigData("xmas_foods")
+local XMAS_FOODS = GetModConfigData("HOF_EXTRAFOODS")
 if XMAS_FOODS == 1 then
 	for k, v in pairs(require("hof_foodrecipes_optional")) do
 		if not v.tags then
@@ -273,6 +279,9 @@ local kynofoods =
 	soulstew             	= require("hof_foodrecipes").soulstew,
 	fortunecookie			= require("hof_foodrecipes").fortunecookie,
 	hornocupia				= require("hof_foodrecipes").hornocupia,
+	cheese_yellow			= require("hof_foodrecipes").cheese_yellow,
+	cheese_white 			= require("hof_foodrecipes").cheese_white,
+	watercup				= require("hof_foodrecipes").watercup,
 	
 	-- The Gorge.
 	gorge_bread 			= require("hof_foodrecipes").gorge_bread,
@@ -467,6 +476,9 @@ kynofoods.eyeballsoup.potlevel              = "med"
 kynofoods.soulstew.potlevel              	= "low"
 kynofoods.fortunecookie.potlevel            = "high"
 kynofoods.hornocupia.potlevel				= "high"
+kynofoods.cheese_yellow						= "med"
+kynofoods.cheese_white						= "med"
+kynofoods.watercup.potlevel 				= "med"
 
 kynofoods.festive_berrysauce.potlevel 		= "med"
 kynofoods.festive_bibingka.potlevel 		= "med"

@@ -1,6 +1,6 @@
 local _G 				= GLOBAL
 local oldretrofit 		= require("map/retrofit_savedata").DoRetrofitting
-local SERENITYISLAND 	= GetModConfigData("serenity_island")
+local SERENITYISLAND 	= GetModConfigData("HOF_SERENITYISLAND")
 
 require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, ...)
 	if SERENITYISLAND == 1 then

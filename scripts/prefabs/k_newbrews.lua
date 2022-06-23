@@ -127,7 +127,11 @@ end
 
 local prefs = {}
 
-for k, v in pairs(require("hof_foodrecipes_brew")) do
+for k, v in pairs(require("hof_foodrecipes_jar")) do
+	table.insert(prefs, MakePreparedBrew(v))
+end
+
+for k, v in pairs(require("hof_foodrecipes_keg")) do
 	table.insert(prefs, MakePreparedBrew(v))
 end
 

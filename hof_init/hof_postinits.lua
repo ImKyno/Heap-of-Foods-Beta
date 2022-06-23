@@ -125,8 +125,8 @@ AddPrefabPostInit("wanda", function(inst)
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Spiced Coffee. There you go Terra B. :glzSIP:
-local COFFEE_SPEED = GetModConfigData("coffee_speed")
-local COFFEE_DURATION = GetModConfigData("coffee_duration")
+local COFFEE_SPEED = GetModConfigData("HOF_COFFEESPEED")
+local COFFEE_DURATION = GetModConfigData("HOF_COFFEEDURATION")
 if COFFEE_SPEED == 1 then
 	local coffee_speedbuff = {
 		"coffee",
@@ -313,7 +313,7 @@ AddPrefabPostInit("tea", function(inst)
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- It's Cursed. Players Have a Chance to Drop Long Pig. Except WX-78, Wurt, Wortox and Wormwood.
-local HUMANMEATY = GetModConfigData("human_meaty")
+local HUMANMEATY = GetModConfigData("HOF_HUMANMEAT")
 if HUMANMEATY == 1 then
 	local longpig_characters = {
 		"wilson",
@@ -623,7 +623,7 @@ end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Mod Options.
 -- Prevent Food From Spoiling In Stations.
-local KEEP_FOOD_K = GetModConfigData("keep_food_spoilage_k")
+local KEEP_FOOD_K = GetModConfigData("HOF_KEEPFOOD")
 if KEEP_FOOD_K == 1 then
 	local cooking_stations = {
 		"cookpot",
@@ -670,7 +670,7 @@ if KEEP_FOOD_K == 1 then
 end
 
 -- Dragonfly Drops Coffee Plants.
-local DF_COFFEE = GetModConfigData("df_coffee")
+local DF_COFFEE = GetModConfigData("HOF_COFFEEDROPRATE")
 if DF_COFFEE == 1 then
 	AddPrefabPostInit("dragonfly", function(inst)
 		if not _G.TheWorld.ismastersim then
@@ -742,7 +742,7 @@ elseif DF_COFFEE == 4 then
 end
 
 -- Wigfrid Can't Drink Coffee.
-local FRIDA_COFFEE = GetModConfigData("frida_coffee")
+local FRIDA_COFFEE = GetModConfigData("HOF_COFFEEGOODIES")
 if FRIDA_COFFEE == 0 then
 	local coffee_wathgrithr = {
 		"coffee",
@@ -804,7 +804,7 @@ AddPrefabPostInit("cucumbersalad", function(inst)
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Spiced Tropical Bouillabaisse.
-local COFFEE_SPEED = GetModConfigData("coffee_speed")
+local COFFEE_SPEED = GetModConfigData("HOF_COFFEESPEED")
 if COFFEE_SPEED == 1 then
 	local bouillabaisse_speedbuff = {
 		"tropicalbouillabaisse",
@@ -1352,6 +1352,7 @@ local drinkable_foods = {
 	"tea",
 	"figjuice",
 	"coconutwater",
+	"watercup",
 }
 
 for k,v in pairs(drinkable_foods) do
@@ -1364,7 +1365,7 @@ end
 AddPrefabPostInit("crow", function(inst)
 	inst:DoTaskInTime(1/30, function(inst)
 	local TileAtPosition = _G.TheWorld.Map:GetTileAtPoint(inst:GetPosition():Get())
-		if TileAtPosition == GROUND.QUAGMIRE_PARKFIELD or TileAtPosition == GROUND.QUAGMIRE_CITYSTONE then
+		if TileAtPosition == WORLD_TILES.PINKPARK or TileAtPosition == WORLD_TILES.STONECITY then
 			
 			inst.AnimState:SetBuild("quagmire_pigeon_build")
 			
@@ -1392,7 +1393,7 @@ AddComponentPostInit("locomotor", function(inst)
 	inst.UpdateGroundSpeedMultiplier = function(self)
 		oldspeed(self)
 		if self.wasoncreep == false and self:FasterOnRoad() and 
-			_G.TheWorld.Map:GetTileAtPoint(self.inst.Transform:GetWorldPosition()) == GROUND.QUAGMIRE_CITYSTONE then
+			_G.TheWorld.Map:GetTileAtPoint(self.inst.Transform:GetWorldPosition()) == WORLD_TILES.STONECITY then
 			self.groundspeedmultiplier = self.fastmultiplier
 		end
 	end
@@ -1481,7 +1482,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Retrofitting Stuff for old worlds.
 require("hof_settings")
-local SERENITYISLAND = GetModConfigData("serenity_island")
+local SERENITYISLAND = GetModConfigData("HOF_SERENITYISLAND")
 
 local function RetrofitSerenityIsland()
 	local node_indices = {}
@@ -1521,7 +1522,7 @@ AddComponentPostInit("retrofitforestmap_anr", function(self)
 		if SERENITYISLAND == 1 then
 			local success = RetrofitSerenityIsland()
 			if success then
-				_G.ChangeFoodConfigs("serenity_island", 0)
+				_G.ChangeFoodConfigs("HOF_SERENITYISLAND", 0)
 				self.requiresreset = true
 			end
 		end
@@ -1760,6 +1761,7 @@ for k,v in pairs(fortunecookie_debuff) do
 	end)
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Cornocupia gives back the Beefalo Horn.
 local hornocupia_debuff = {
 	"hornocupia",
 	"hornocupia_spice_garlic",
@@ -1811,6 +1813,97 @@ for k,v in pairs(milkable_animals) do
 	end)
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Make every "same" recipe has the same quotes.
+local jelly_foods = {
+	"jelly_berries",
+	"jelly_berries_juicy",
+	"jelly_pomegranate",
+	"jelly_dragonfruit",
+	"jelly_cave_banana",
+	"jelly_durian",
+	"jelly_watermelon",
+	"jelly_fig",
+	"jelly_banana",
+	"jelly_kokonut",
+	"jelly_glowberry",
+}	
+
+local mayo_foods = {
+	"mayonnaise",
+	"mayonnaise_chicken",
+	"mayonnaise_tallbird",
+	"mayonnaise_nightmare",
+}
+
+local pickles_foods = {
+	"pickles_carrot",
+	"pickles_corn",
+	"pickles_eggplant",
+	"pickles_pumpkin",
+	"pickles_lichen",
+	"pickles_cactus",
+	"pickles_garlic",
+	"pickles_asparagus",
+	"pickles_onion",
+	"pickles_tomato",
+	"pickles_potato",
+	"pickles_pepper",
+	"pickles_redcap",
+	"pickles_greencap",
+	"pickles_bluecap",
+	"pickles_mooncap",
+	"pickles_kelp",
+	"pickles_avocado",
+	"pickles_whitecap",
+	"pickles_aloe",
+	"pickles_radish",
+	"pickles_sweetpotato",
+	"pickles_lotus",
+	"pickles_seaweeds",
+	"pickles_taroroot",
+	"pickles_waterycress",
+	"pickles_cucumber",
+	"pickles_parznip",
+	"pickles_turnip",
+	"pickles_fennel",
+}	
+
+for k,v in pairs(jelly_foods) do
+	AddPrefabPostInit(v, function(inst)
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+	
+		if inst.components.inspectable ~= nil then
+			inst.components.inspectable.nameoverride = "KYNO_JELLY"
+		end	
+	end)
+end
+
+for k,v in pairs(mayo_foods) do
+	AddPrefabPostInit(v, function(inst)
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+	
+		if inst.components.inspectable ~= nil then
+			inst.components.inspectable.nameoverride = "KYNO_MAYONNAISE"
+		end	
+	end)
+end
+
+for k,v in pairs(pickles_foods) do
+	AddPrefabPostInit(v, function(inst)
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+	
+		if inst.components.inspectable ~= nil then
+			inst.components.inspectable.nameoverride = "KYNO_PICKLES"
+		end	
+	end)
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Beer and Pale Ale gives attack buff at the cost of lower speed.
 AddPrefabPostInit("beer", function(inst)
 	local function OnEatBeer(inst, eater)
@@ -1844,7 +1937,7 @@ AddPrefabPostInit("paleale", function(inst)
 		if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
 			return
 		elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-			eater.strengthbuff_duration = 500
+			eater.strengthbuff_duration = 520
 			eater.components.debuffable:AddDebuff("kyno_strengthbuff", "kyno_strengthbuff")
 			if eater.components.talker then 
 				eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_POPBUFF"))
@@ -1853,7 +1946,7 @@ AddPrefabPostInit("paleale", function(inst)
 			eater:AddTag("groggy")
 			eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_strengthbuff", .70)
 			eater.components.combat.externaldamagemultipliers:SetModifier(eater, 1.5)
-			eater:DoTaskInTime(500, function()
+			eater:DoTaskInTime(520, function()
 				eater:RemoveTag("groggy")
 				eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_strengthbuff")
 				eater.components.combat.externaldamagemultipliers:RemoveModifier(eater)

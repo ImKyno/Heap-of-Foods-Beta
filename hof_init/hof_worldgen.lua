@@ -6,7 +6,7 @@ local GROUND 		= _G.GROUND
 require("map/terrain")
 
 TUNING.HOF_RESOURCES = .06
-local TERRAIN_FILTERS = {_G.GROUND.ROAD, _G.GROUND.WOODFLOOR, _G.GROUND.CARPET, _G.GROUND.CHECKER}
+local TERRAIN_FILTERS = {_G.WORLD_TILES.ROAD, _G.WORLD_TILES.WOODFLOOR, _G.WORLD_TILES.CARPET, _G.WORLD_TILES.CHECKER}
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Prefab Rooms.
 local AloeRooms = {

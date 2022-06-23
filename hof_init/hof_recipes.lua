@@ -511,7 +511,7 @@ local KynElderTurf2			= AddRecipe2("turf_stonecity_p", {Ingredient("cutstone", 1
 )
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
-local WARLY_MEALGRINDER = GetModConfigData("warly_mealgrinder")
+local WARLY_MEALGRINDER = GetModConfigData("HOF_WARLYMEALGRINDER")
 if WARLY_MEALGRINDER == 1 then
 	local WarlyFlour 			= AddRecipe2("kyno_flour_w", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE, 
 		{
@@ -567,7 +567,7 @@ if WARLY_MEALGRINDER == 1 then
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Replace the Bucket-o-Poop recipe with ours.
-local BUCKETPOOPTWEAK = GetModConfigData("fertilizer_recipetweak")
+local BUCKETPOOPTWEAK = GetModConfigData("HOF_FERTILIZERTWEAK")
 if BUCKETPOOPTWEAK == 1 then
 	local BucketPoot			= Recipe2("fertilizer",	{Ingredient("poop", 3), Ingredient("kyno_bucket_empty", 1, ModAtlas)}, TECH.SCIENCE_TWO,
 		{

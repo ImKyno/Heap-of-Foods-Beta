@@ -171,6 +171,12 @@ local function fn()
 	inst.components.workable:SetOnFinishCallback(OnFished)
     inst.components.workable:SetWorkLeft(1)
 	
+	inst:AddComponent("pickable")
+    inst.components.pickable.picksound = "dontstarve/wilson/pickup_reeds"
+    inst.components.pickable:SetUp(nil)
+    inst.components.pickable.onpickedfn = OnFished
+	inst.components.pickable.quickpick = true
+	
 	inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_SMALL)
 	

@@ -1,3 +1,4 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Gives all Mod Ingredients for the Mod recipes.
 function c_hofingredients()
     local player = ConsoleCommandPlayer()
@@ -31,7 +32,7 @@ function c_hofingredients()
 		c_give("kyno_coffeebeans",  40, true)
     end
 end
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Gives all the Shipwrecked foods.
 function c_hofswfoods()
 	local player = ConsoleCommandPlayer()
@@ -47,7 +48,7 @@ function c_hofswfoods()
 		c_give("tropicalbouillabaisse", 40, true)
 	end
 end
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Gives all the Hamlet foods.
 function c_hofhamfoods()
 	local player = ConsoleCommandPlayer()
@@ -63,7 +64,7 @@ function c_hofhamfoods()
 		c_give("steamedhamsandwich",	40, true)
 	end
 end
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Gives all the Other-related foods.
 function c_hofotherfoods()
 	local player = ConsoleCommandPlayer()
@@ -84,7 +85,7 @@ function c_hofotherfoods()
 		c_give("duckyouglermz",			40, true)
 	end
 end
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Quick command for testing Coffee Bushes and Coffee.
 function c_hoftestcoffee()
 	local player = ConsoleCommandPlayer()
@@ -97,7 +98,7 @@ function c_hoftestcoffee()
 		c_give("coffee",                    40, true)
 	end
 end
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Quick command for testing foods on Crock Pots.
 function c_hofcrockpots()
 	local player = ConsoleCommandPlayer()
@@ -111,7 +112,7 @@ function c_hofcrockpots()
 		end
 	end
 end
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Quick command for testing foods on Warly's Crock Pots.
 function c_hofwarlycrockpots()
 	local player = ConsoleCommandPlayer()
@@ -125,7 +126,7 @@ function c_hofwarlycrockpots()
 		end
 	end
 end
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Testing Setpieces.
 function c_hoflayout(name, offset)
 	local player = ConsoleCommandPlayer()
@@ -149,7 +150,7 @@ function c_hoflayout(name, offset)
     offset = offset or 3
     obj_layout.Place({math.floor(x) - 3, math.floor(z) - 3}, name, add_fn, nil, TheWorld.Map)
 end
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Quick Test on Serenity Archipelago Stuff.
 function c_hofserenityisland()
     local player = ConsoleCommandPlayer()
@@ -169,3 +170,31 @@ function c_hofserenityisland()
 		c_give("kyno_salmonfish",                nil, true)
 	end
 end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Quick command for testing foods on Wooden Kegs and Preserves Jars.
+function c_hofkegs()
+	local player = ConsoleCommandPlayer()
+	local x, y, z = player.Transform:GetWorldPosition()
+	local n = 12
+	local sector = 2*math.pi/n
+	for i = 1, n, 1 do
+		local crockpot = SpawnPrefab("kyno_woodenkeg")
+		if crockpot then
+			crockpot.Transform:SetPosition(x + 5 * math.cos(i * sector), y, z + 5 * math.sin(i * sector))
+		end
+	end
+end
+
+function c_hofjars()
+	local player = ConsoleCommandPlayer()
+	local x, y, z = player.Transform:GetWorldPosition()
+	local n = 12
+	local sector = 2*math.pi/n
+	for i = 1, n, 1 do
+		local crockpot = SpawnPrefab("kyno_preservesjar")
+		if crockpot then
+			crockpot.Transform:SetPosition(x + 5 * math.cos(i * sector), y, z + 5 * math.sin(i * sector))
+		end
+	end
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

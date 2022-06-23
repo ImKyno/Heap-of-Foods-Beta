@@ -258,22 +258,22 @@ AddAction("BREWER", STRINGS.ACTIONS.BREWER, function(act)
     end
 end)
 
-AddAction("HARVESTBREWER", STRINGS.ACTIONS.HARVEST, function(act)
-	if act.target.components.brewer ~= nil then
-        return act.target.components.brewer:Harvest(act.doer)
-	end
-end)
-
 ACTIONS.BREWER.priority = 1
 ACTIONS.BREWER.mount_valid = true
 
-ACTIONS.HARVESTBREWER.priority = 1
-ACTIONS.HARVESTBREWER.mount_valid = true
+local oldHARVESTfn = ACTIONS.HARVEST.fn
+function ACTIONS.HARVEST.fn(act, ...)
+    if act.target and act.target.components.brewer then
+        return act.target.components.brewer:Harvest(act.doer)
+    else
+        return oldHARVESTfn(act, ...)
+    end
+end
 
 AddComponentAction("SCENE", "brewer", function(inst, doer, actions, right)
 	if not inst:HasTag("burnt") and not (doer.replica.rider ~= nil and doer.replica.rider:IsRiding()) then
 		if inst:HasTag("donecooking") then
-			table.insert(actions, ACTIONS.HARVESTBREWER)
+			table.insert(actions, ACTIONS.HARVEST)
 		elseif right and (
 		(   inst:HasTag("readytocook") and
 			(not inst:HasTag("mastercookware") or doer:HasTag("masterchef"))
@@ -292,13 +292,6 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.BREWER, function(inst
 	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
 end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.BREWER, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-
-AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.HARVESTBREWER, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.HARVESTBREWER, function(inst, action)
 	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
 end))
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -386,6 +379,12 @@ ACTIONS.UNWRAP.stroverridefn = function(act)
 	end
 	if obj:HasTag("bottled_soul") then
 		return STRINGS.KYNO_OPEN_BOTTLE_SOUL
+	end
+end
+
+ACTIONS.STORE.stroverridefn = function(act)
+	if act.target:HasTag("brewer") then
+		return STRINGS.ACTIONS.BREWER
 	end
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

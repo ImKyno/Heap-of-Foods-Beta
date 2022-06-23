@@ -327,7 +327,7 @@ function BrewbookPage:PopulateRecipeDetailPanel(data)
 
 		if data.recipes ~= nil and #data.recipes > 0 then
 			y = y - title_font_size/2
-			title = details_root:AddChild(Text(HEADERFONT, title_font_size, STRINGS.UI.COOKBOOK.COOKINGTIME_TITLE, UICOLOURS.BROWN_DARK))
+			title = details_root:AddChild(Text(HEADERFONT, title_font_size, STRINGS.UI.COOKBOOK.BREWINGTIME_TITLE, UICOLOURS.BROWN_DARK))
 			title:SetPosition(0, y)
 			y = y - title_font_size/2
 			MakeDetailsLine(details_root, 0, y - 2, .49)
@@ -623,9 +623,9 @@ function BrewbookPage:BuildSpinners()
 
 	local filter_options = {
 		{text = STRINGS.UI.COOKBOOK.FILTER_ALL,			data = FILTER_ALL},
-		{text = STRINGS.UI.COOKBOOK.FILTER_MEAT,		data = FOODTYPE.MEAT},
+		{text = STRINGS.UI.COOKBOOK.FILTER_GOODIES,		data = "OTHER"},
 		{text = STRINGS.UI.COOKBOOK.FILTER_VEGGIE,		data = FOODTYPE.VEGGIE},
-		{text = STRINGS.UI.COOKBOOK.FILTER_OTHER,		data = "OTHER"},
+		-- {text = STRINGS.UI.COOKBOOK.FILTER_OTHER,		data = "OTHER"},
 		{text = STRINGS.UI.COOKBOOK.FILTER_SIDE_EFFECTS,data = "SIDEEFFECTS"},
 		{text = STRINGS.UI.COOKBOOK.FILTER_INCOMPLETE  ,data = "INCOMPLETE"},
 	}

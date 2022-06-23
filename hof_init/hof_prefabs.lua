@@ -12,6 +12,8 @@ PrefabFiles =
 	"k_hungerregenbuff",
 	"k_sanityregenbuff",
 	"k_superregenbuff",
+	"k_insanitybuff",
+	"k_waterbuff",
 	
 	"k_newfoods",
 	"k_coffeebeans",

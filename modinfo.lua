@@ -10,6 +10,7 @@ description = [[
 
 󰀏 Featuring the Artisan Goods Update
 This update brings two new structures that can be used to make a whole new category of recipes!
+
 The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jellies, Pickles, Mayonnaises, Teas and more!
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
@@ -29,21 +30,36 @@ server_filter_tags = {"Heap of Foods", "HOF", "Cooking", "Entertainment", "Kyno"
 icon = "ModiconHOF.tex"
 icon_atlas = "ModiconHOF.xml"
 
-local emptyoptions = {{description="", data=false}}
+local emptyoptions = {{description = "", data = false}}
 local function Title(title, hover)
 	return {
-		name=title,
-		hover=hover,
-		options={{description = "", data = 0}},
-		default=0,
+		name	= title,
+		hover   = hover,
+		options = {{description = "", data = 0}},
+		default = 0,
 	}
 end
 
 configuration_options =
 {
+	{
+        name = "HOF_LANGUAGE",
+        label = "Language",
+        hover = "Choose the language for the mod.\nYou can submit your translation in our Discord.",
+        options =
+        {
+            {description = "English", 
+			hover = "Translation by: Kyno.",
+			data = "hof_strings"},
+            {description = "繁體中文", 
+			hover = "Translation by: Djr.",
+			data = "hof_strings_chtw"},
+        },
+        default = "hof_strings",
+    },
 	Title("General Options", "General options for the entire mod."),
     {
-        name = "keep_food_spoilage_k",
+        name = "HOF_KEEPFOOD",
         label = "Keep Food Spoilage",
         hover = "Should food spoil if it's in the Crock Pot?",
         options =
@@ -58,7 +74,7 @@ configuration_options =
         default = 0,
     },
 	{
-        name = "df_coffee",
+        name = "HOF_COFFEEDROPRATE",
         label = "Coffee Plant Drop Rate",
         hover = "How many Coffee Plants Dragonfly should drop?",
         options =
@@ -84,7 +100,7 @@ configuration_options =
     },
 	Title("Food Options", "Options for foods and ingredients."),
 	{
-		name = "frida_coffee",
+		name = "HOF_COFFEEGOODIES",
 		label = "Wigfrid Drinks Coffee",
 		hover = "Should Wigfrid drink coffee?",
 		options =
@@ -99,7 +115,7 @@ configuration_options =
 		default = 1,
 	},
 	{
-		name = "coffee_speed",
+		name = "HOF_COFFEESPEED",
 		label = "Speed Buff",
 		hover = "Should the foods give the Speed Buff when eaten?\n\This option applies to: Coffee Beans, Coffee and Tropical Bouillabaisse.",
 		options =
@@ -114,7 +130,7 @@ configuration_options =
 		default = 1,
 	},
 	{
-		name = "coffee_duration",
+		name = "HOF_COFFEEDURATION",
 		label = "Speed Buff Duration",
 		hover = "How long the Speed Buff from foods will last?\n\This option applies to: Coffee and Tropical Bouillabaisse.",
 		options =
@@ -141,7 +157,7 @@ configuration_options =
 		default = 480,
 	},
 	{
-		name = "xmas_foods",
+		name = "HOF_EXTRAFOODS",
 		label = "Optional Foods",
 		hover = "Should Winter's Feast \"craftable foods\" be cookable in the Crock Pot?\nWinter's Feast foods can't be cooked if this option is Disabled.",
 		options =
@@ -156,7 +172,7 @@ configuration_options =
 		default = 1,
 	},
 	{
-		name = "human_meaty",
+		name = "HOF_HUMANMEAT",
 		label = "Long Pig From Players",
 		hover = "Should Players drop Long Pigs upon death?\nNote: If disabled, this will cause Deadly Feast to be uncookable.",
 		options =
@@ -172,7 +188,7 @@ configuration_options =
 	},
 	Title("World Options", "Options for the world."),
 	{
-		name = "serenity_island",
+		name = "HOF_SERENITYISLAND",
 		label = "Serenity Archipelago",
 		hover = "If your world is missing the Serenity Archipelago enable this option.\nThis option will be disabled once the retrofitting is finished!",
 		options =
@@ -204,7 +220,7 @@ configuration_options =
 	},
 	]]--
 	{
-		name = "do_regrowth",
+		name = "HOF_REGROWTH",
 		label = "World Regrowth",
 		hover = "Should the Mod plants and objects regrow overtime in the world?",
 		options =
@@ -220,7 +236,7 @@ configuration_options =
 	},
 	Title("Extra Options", "Extra Options for the Mod."),
 	{
-		name = "warly_mealgrinder",
+		name = "HOF_WARLYMEALGRINDER",
 		label = "Portable Grinding Mill Recipes",
 		hover = "Should Warly's Portable Grinding Mill have the recipes from Mealing Stone?",
 		options =
@@ -235,7 +251,7 @@ configuration_options =
         default = 0,
 	},
 	{
-		name = "fertilizer_recipetweak",
+		name = "HOF_FERTILIZERTWEAK",
 		label = "Bucket-o-Poop Recipe Tweak",
 		hover = "Should Bucket-o-Poop use the Bucket instead of the default recipe?",
 		options =

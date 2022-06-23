@@ -17,6 +17,8 @@ AddBrewingValues({"watermelon"},				{fruit=1,		watermelon=1})
 AddBrewingValues({"berries"},					{fruit=0.5,		berries=1})
 AddBrewingValues({"berries_juicy"},				{fruit=0.5,		berries_juicy=1})
 AddBrewingValues({"fig"},						{fruit=1,		fig=1})
+AddBrewingValues({"wormlight"}, 				{fruit=1,		wormlight=1})
+AddBrewingValues({"wormlight_lesser"}, 			{fruit=.5,		wormlight=1})
 AddBrewingValues({"carrot"},					{veggie=1,		carrot=1})
 AddBrewingValues({"corn"},						{veggie=1,		corn=1})
 AddBrewingValues({"eggplant"},					{veggie=1,		eggplant=1})
@@ -38,8 +40,12 @@ AddBrewingValues({"blue_cap"},					{veggie=0.5, 	mushroom=1})
 AddBrewingValues({"moon_cap"},					{veggie=0.5, 	mushroom=1})
 AddBrewingValues({"kelp"},						{veggie=1,		kelp=1})
 AddBrewingValues({"rock_avocado_fruit_ripe"},	{veggie=1,		avocado=1})
+AddBrewingValues({"tallbirdegg"},				{egg=4,			tallbirdegg=1})
+AddBrewingValues({"bird_egg"},					{egg=1})
+AddBrewingValues({"nightmarefuel"}, 			{inedible=1, 	magic=1})
 AddBrewingValues({"kyno_wheat"}, 				{veggie=1,		wheat=1})
-AddBrewingValues({"kyno_spotspice_leaf"}, 		{veggie=1,		spotspice=1})
+AddBrewingValues({"kyno_spotspice"}, 			{spotspice=1})
+AddBrewingValues({"kyno_spotspice_leaf"}, 		{spotspice=1})
 AddBrewingValues({"kyno_syrup"},				{syrup=1,		sweetener=1})
 AddBrewingValues({"kyno_banana"},				{fruit=1,		banana=1})
 AddBrewingValues({"kyno_kokonut_halved"},		{fruit=1,		kokonut=1})
@@ -57,16 +63,50 @@ AddBrewingValues({"kyno_cucumber"},				{veggie=1, 		cucumber=1})
 AddBrewingValues({"kyno_parznip"},				{veggie=1, 		parznip=1})
 AddBrewingValues({"kyno_parznip_eaten"},		{veggie=1, 		parznip=1})
 AddBrewingValues({"kyno_turnip"},				{veggie=1, 		turnip=1})
+AddBrewingValues({"kyno_fennel"},				{veggie=1, 		fennel=1})
 AddBrewingValues({"kyno_sugartree_petals"},		{sweetener=1,	sugarflower=1})
-AddBrewingValues({"tallbirdegg"},				{egg=4,			tallbirdegg=1})
-AddBrewingValues({"bird_egg"},					{egg=1})
 AddBrewingValues({"kyno_chicken_egg"},			{egg=1,			chicken_egg=1})
+AddBrewingValues({"mayonnaise"},				{mayonnaise=1})
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Icons For Brewbook.
 local brewbook_icons = 
 {
 	"kyno_wheat.tex",
 	"kyno_spotspice_leaf.tex",
+	"kyno_syrup.tex",
+	"kyno_banana.tex",
+	"kyno_banana_cooked.tex",
+	"kyno_kokonut_halved.tex",
+	"kyno_kokonut_cooked.tex",
+	"kyno_white_cap.tex",
+	"kyno_white_cap_cooked.tex",
+	"kyno_foliage.tex",
+	"kyno_foliage_cooked.tex",
+	"kyno_aloe.tex",
+	"kyno_aloe_cooked.tex",
+	"kyno_radish.tex",
+	"kyno_radish_cooked.tex",
+	"kyno_sweetpotato.tex",
+	"kyno_sweetpotato_cooked.tex",
+	"kyno_lotus_flower.tex",
+	"kyno_lotus_flower_cooked.tex",
+	"kyno_seaweeds.tex",
+	"kyno_seaweeds_cooked.tex",
+	"kyno_seaweeds_dried.tex",
+	"kyno_taroroot.tex",
+	"kyno_taroroot_cooked.tex",
+	"kyno_waterycress.tex",
+	"kyno_waterycress_cooked.tex",
+	"kyno_cucumber.tex",
+	"kyno_parznip.tex",
+	"kyno_parznip_cooked.tex",
+	"kyno_parznip_eaten.tex",
+	"kyno_turnip.tex",
+	"kyno_turnip_cooked.tex",
+	"kyno_sugartree_petals.tex",
+	"kyno_chicken_egg.tex",
+	"kyno_chicken_egg_cooked.tex",
+	"mayonnaise.tex",
 }
 
 for k,v in pairs(brewbook_icons) do
@@ -74,7 +114,11 @@ for k,v in pairs(brewbook_icons) do
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Import The Foods.
-for k, v in pairs(require("hof_foodrecipes_brew")) do
+for k, v in pairs(require("hof_foodrecipes_keg")) do
 	AddBrewerRecipe("kyno_woodenkeg", 			v)
+end
+
+for k, v in pairs(require("hof_foodrecipes_jar")) do
+	AddBrewerRecipe("kyno_preservesjar", 		v)
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

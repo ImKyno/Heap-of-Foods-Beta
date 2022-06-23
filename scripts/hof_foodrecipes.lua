@@ -641,6 +641,58 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 	},
 	
+	cheese_yellow = 
+	{
+		test = function(cooker, names, tags) return (names.goatmilk or (names.kyno_milk_beefalo and names.kyno_milk_beefalo == 2))
+		and names.kyno_spotspice and not names.kyno_milk_koalefant and not names.kyno_milk_spat and not names.kyno_milk_deer and not tags.meat end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 33,
+		hunger = 62.5,
+		sanity = 5,
+		cooktime = 2.3,
+		floater = {"med", nil, 0.65},
+	},
+	
+	cheese_white = 
+	{
+		test = function(cooker, names, tags) return (names.kyno_milk_deer or (names.kyno_milk_spat and names.kyno_milk_spat == 2))
+		and names.kyno_spotspice and not names.goatmilk and not names.kyno_milk_koalefant and not names.kyno_milk_beefalo and not tags.meat end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 5,
+		hunger = 62.5,
+		sanity = 33,
+		cooktime = 2.3,
+		floater = {"med", nil, 0.65},
+	},
+	
+	watercup =
+	{
+		test = function(cooker, names, tags) return (tags.frozen == 4) end,
+		priority = 1,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = 9000000,
+		health = 1,
+		hunger = 1,
+		sanity = 1,
+		cooktime = .2,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WATERBUFF,
+		floater = {"med", nil, 0.65},
+		prefabs = { "kyno_waterbuff" },
+        oneatenfn = function(inst, eater)
+            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
+                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+                not eater:HasTag("playerghost") then
+                eater.components.debuffable:AddDebuff("kyno_waterbuff", "kyno_waterbuff")
+            end
+        end,
+	},
+	
 	-- The Gorge Foods.
 	
 	gorge_bread = 
@@ -1226,7 +1278,8 @@ local kyno_foods =
 	
 	gorge_grilled_cheese =
 	{
-		test = function(cooker, names, tags) return names.gorge_bread and names.butter and names.goatmilk and not tags.fish and not tags.meat and not names.kyno_spotspice end,
+		test = function(cooker, names, tags) return names.gorge_bread and (names.cheese_yellow or names.cheese_white) and not tags.fish and not 
+		tags.meat and not names.kyno_spotspice end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
@@ -1267,7 +1320,8 @@ local kyno_foods =
 	
 	gorge_cheeseburger =
 	{
-		test = function(cooker, names, tags) return names.gorge_bread and tags.meat and tags.dairy and (names.foliage or names.kyno_foliage_cooked) end,
+		test = function(cooker, names, tags) return names.gorge_bread and tags.meat and (names.foliage or names.kyno_foliage_cooked)
+		and (tags.dairy or names.cheese_yellow or names.cheese_white) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,
