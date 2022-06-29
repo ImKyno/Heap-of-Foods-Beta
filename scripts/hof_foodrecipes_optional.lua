@@ -669,6 +669,48 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 	},
 	
+	cheese_koalefant =
+	{
+		test = function(cooker, names, tags) return (names.kyno_milk_koalefant and names.kyno_milk_koalefant == 2) and names.kyno_spotspice
+		and not names.kyno_milk_deer and not names.kyno_milk_beefalo and not names.kyno_milk_spat and not names.goatmilk and not tags.meat end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 8,
+		hunger = 75,
+		sanity = 40,
+		cooktime = 2.3,
+		floater = {"med", nil, 0.65},
+	},
+	
+	milk_box = 
+	{
+		test = function(cooker, names, tags) return (tags.frozen and tags.frozen == 2) and (names.goatmilk and names.goatmilk == 2 or 
+		(names.kyno_milk_beefalo and names.kyno_milk_beefalo == 2) or (names.kyno_milk_koalefant and names.kyno_milk_koalefant == 2) or  
+		(names.kyno_milk_deer and names.kyno_milk_deer == 2) or (names.kyno_milk_spat and names.kyno_milk_spat == 2)) end,
+		priority = 1,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 20,
+		hunger = 0,
+		sanity = 60,
+		cooktime = 1.1,
+		floater = {"med", nil, 0.65},
+	},
+	
+	honeyjar =
+	{
+		test = function(cooker, names, tags) return names.honeycomb and (names.honey and names.honey == 3) end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = 30,
+		hunger = 45,
+		sanity = 5,
+		cooktime = 1.6,
+		floater = {"med", nil, 0.65},
+	},
+	
 	watercup =
 	{
 		test = function(cooker, names, tags) return (tags.frozen == 4) end,
@@ -1278,8 +1320,8 @@ local kyno_foods =
 	
 	gorge_grilled_cheese =
 	{
-		test = function(cooker, names, tags) return names.gorge_bread and (names.cheese_yellow or names.cheese_white) and not tags.fish and not 
-		tags.meat and not names.kyno_spotspice end,
+		test = function(cooker, names, tags) return names.gorge_bread and (names.cheese_yellow or names.cheese_white or names.cheese_koalefant) 
+		and not tags.fish and not tags.meat and not names.kyno_spotspice end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
@@ -1321,7 +1363,7 @@ local kyno_foods =
 	gorge_cheeseburger =
 	{
 		test = function(cooker, names, tags) return names.gorge_bread and tags.meat and (names.foliage or names.kyno_foliage_cooked)
-		and (tags.dairy or names.cheese_yellow or names.cheese_white) end,
+		and (tags.dairy or names.cheese_yellow or names.cheese_white or names.cheese_koalefant) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,

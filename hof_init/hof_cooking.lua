@@ -72,6 +72,8 @@ AddIngredientValues({"kyno_milk_deer"},			{dairy=0.5,		rawmilk=1})
 AddIngredientValues({"kyno_milk_spat"},			{dairy=1,		rawmilk=1})
 AddIngredientValues({"cheese_yellow"},			{dairy=1,		cheese=1})
 AddIngredientValues({"cheese_white"},			{dairy=1,		cheese=1})
+AddIngredientValues({"cheese_koalefant"},		{dairy=1,		cheese=1})
+AddIngredientValues({"milk_box"},				{dairy=2})
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Icons For Cookbook.
 local cookbook_icons = 
@@ -149,6 +151,14 @@ local cookbook_icons =
 	"kyno_chicken_egg_cooked.tex",
 	"kyno_chicken_egg.tex",
 	"kyno_bottle_soul.tex",
+	"kyno_milk_beefalo.tex",
+	"kyno_milk_koalefant.tex",
+	"kyno_milk_deer.tex",
+	"kyno_milk_spat.tex",
+	"cheese_yellow.tex",
+	"cheese_white.tex",
+	"cheese_koalefant.tex",
+	"milk_box.tex",
 }
 
 for k,v in pairs(cookbook_icons) do
@@ -281,6 +291,8 @@ local kynofoods =
 	hornocupia				= require("hof_foodrecipes").hornocupia,
 	cheese_yellow			= require("hof_foodrecipes").cheese_yellow,
 	cheese_white 			= require("hof_foodrecipes").cheese_white,
+	cheese_koalefant		= require("hof_foodrecipes").cheese_koalefant,
+	milk_box				= require("hof_foodrecipes").milk_box,
 	watercup				= require("hof_foodrecipes").watercup,
 	
 	-- The Gorge.
@@ -478,6 +490,8 @@ kynofoods.fortunecookie.potlevel            = "high"
 kynofoods.hornocupia.potlevel				= "high"
 kynofoods.cheese_yellow						= "med"
 kynofoods.cheese_white						= "med"
+kynofoods.cheese_koalefant					= "med"
+kynofoods.milk_box 							= "med"
 kynofoods.watercup.potlevel 				= "med"
 
 kynofoods.festive_berrysauce.potlevel 		= "med"

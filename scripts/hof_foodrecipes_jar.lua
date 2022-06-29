@@ -689,7 +689,7 @@ local kyno_foods_jar =
 		health = 0,
 		hunger = 0,
 		sanity = 0,
-		cooktime = 2,
+		cooktime = 1,
 		no_brewbook = true,
         floater = {"small", nil, nil},
 	},

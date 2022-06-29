@@ -15,6 +15,9 @@ ReloadPreloadAssets() -- Reload it, so our loading assets can work properly.
 -- Assets.
 Assets =
 {	
+	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
+	Asset("SOUND", "sound/hof_sfx.fsb"),
+
 	Asset("ANIM", "anim/kyno_humanmeat.zip"),
 	Asset("ANIM", "anim/kyno_mushroomstump.zip"),
 	Asset("ANIM", "anim/kyno_spotbush.zip"),
@@ -46,9 +49,6 @@ Assets =
 	Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
 	
 	Asset("IMAGE", "images/colourcubesimages/quagmire_cc.tex"),
-
-	Asset("IMAGE", "images/inventoryimages/hof_buildingimages.tex"),
-	Asset("ATLAS", "images/inventoryimages/hof_buildingimages.xml"),
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),

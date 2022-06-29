@@ -147,11 +147,9 @@ ACTIONS.PULLMILK.mount_valid = true
 ACTIONS.PULLMILK.encumbered_valid = true
 
 AddComponentAction("USEITEM", "milker", function(inst, doer, target, actions)
-	if target and target:HasTag("milkable2") and not target:HasTag("sleeping") and inst:HasTag("bucket_empty")
-	and not target.components.freezable:IsFrozen() then
+	if target and target:HasTag("milkable2") and not target:HasTag("sleeping") and inst:HasTag("bucket_empty") then
 		table.insert(actions, ACTIONS.PULLMILK)
-	elseif target and target:HasTag("milkable2") and target:HasTag("koalefant") or target:HasTag("spat") and inst:HasTag("bucket_empty") 
-	and not target.components.freezable:IsFrozen() then
+	elseif target and target:HasTag("milkable2") and target:HasTag("koalefant") or target:HasTag("spat") and inst:HasTag("bucket_empty") then
 		table.insert(actions, ACTIONS.PULLMILK) -- Koalefants and Ewecuses can be milked when they are sleeping.
 	end
 end)

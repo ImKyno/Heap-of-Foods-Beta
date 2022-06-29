@@ -4,8 +4,8 @@ local assets =
 {
 	Asset("ANIM", "anim/quagmire_mealingstone.zip"),
 	
-	Asset("IMAGE", "images/inventoryimages/hof_buildingimages.tex"),
-	Asset("ATLAS", "images/inventoryimages/hof_buildingimages.xml"),
+	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
+	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 }
 
 local function onhammered(inst, worker)

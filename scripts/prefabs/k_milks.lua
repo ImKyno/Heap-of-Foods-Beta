@@ -10,10 +10,12 @@ local assets =
 local prefabs = 
 {
 	"kyno_bucket_empty",
+	
 	"kyno_milk_beefalo",
 	"kyno_milk_koalefant",
 	"kyno_milk_deer",
 	"kyno_milk_spat",
+	
 	"spoiled_food",
 }
 
@@ -164,7 +166,7 @@ local function deerfn()
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_deer_beefalo"
+	inst.components.inventoryitem.imagename = "kyno_milk_deer"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -216,7 +218,7 @@ local function spatfn()
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_spat_beefalo"
+	inst.components.inventoryitem.imagename = "kyno_milk_spat"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

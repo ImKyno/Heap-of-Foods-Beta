@@ -4,8 +4,8 @@ local assets =
 {
 	Asset("ANIM", "anim/kyno_mushroomstump.zip"),
 	
-	Asset("IMAGE", "images/inventoryimages/hof_buildingimages.tex"),
-	Asset("ATLAS", "images/inventoryimages/hof_buildingimages.xml"),
+	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
+	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),

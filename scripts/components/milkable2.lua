@@ -132,12 +132,20 @@ function Milkable2:Milk(milker)
 			kick_chance = 70
 		end
 		
-		if math.random(100) <= kick_chance and milker.components.combat then
-			milker.components.combat:GetAttacked(self.inst, self.damage)
-			self.inst.sg:GoToState("attack")
-			milker:PushEvent("kick")	
+		if math.random(100) <= kick_chance and milker.components.combat and self.inst:HasTag("beefalo") or self.inst:HasTag("koalefant") then
+			if self.inst.sg:HasStateTag("frozen") then 
+				self.inst.sg:GoToState("frozen")
+			else 
+				milker.components.combat:GetAttacked(self.inst, self.damage)
+				self.inst.sg:GoToState("attack")
+				milker:PushEvent("kick")
+			end
 		else
-			self.inst.sg:GoToState("bellow")
+			if self.inst.sg:HasStateTag("frozen") then 
+				self.inst.sg:GoToState("frozen")
+			else 
+				self.inst.sg:GoToState("idle")
+			end
 		end
 		
         local loot = nil

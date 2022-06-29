@@ -8,6 +8,7 @@ PrefabFiles =
 	
 	"k_coffeebuff",
 	"k_strengthbuff",
+	"k_dmgreductionbuff",
 	"k_hastebuff",
 	"k_hungerregenbuff",
 	"k_sanityregenbuff",

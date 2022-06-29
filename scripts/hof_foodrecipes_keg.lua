@@ -82,6 +82,21 @@ local kyno_foods_keg =
         end,
 	},
 	
+	mead =
+	{
+		test = function(brewer, names, tags) return (names.honey or (names.kyno_syrup and names.kyno_syrup == 2)) end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = -10,
+		hunger = 70,
+		sanity = 40,
+		cooktime = 72,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food"},
+	},
+	
 	-- This recipe is for when brewing a invalid product, we need this to prevent a crash.
 	wetgoop2 =
 	{
@@ -91,7 +106,7 @@ local kyno_foods_keg =
 		health = 0,
 		hunger = 0,
 		sanity = 0,
-		cooktime = 2,
+		cooktime = 1,
 		no_brewbook = true,
         floater = {"small", nil, nil},
 	},

@@ -118,7 +118,6 @@ AddPrototyperDef("kyno_serenityisland_shop",
 -- Ingredient and Structures Recipes.
 local DefaultAtlas 			= "images/inventoryimages.xml"
 local ModAtlas     			= "images/inventoryimages/hof_inventoryimages.xml"
-local ModBuildAtlas			= "images/inventoryimages/hof_buildingimages.xml"
 
 local KynFlour 				= AddRecipe2("kyno_flour_p", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.MEALING_ONE, 
 	{
@@ -180,18 +179,19 @@ local KynMealing 			= AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2),
 	{
 		placer 				= "kyno_mealgrinder_placer", 
 		min_spacing 		= 1, 
-		atlas 				= ModBuildAtlas, 
-		image 				= "hof_mealgrinder.tex",
+		atlas 				= ModAtlas, 
+		image 				= "kyno_mealgrinder.tex",
 	},
 	{"COOKING"}
 ) 
+SortAfter("kyno_mealgrinder", "wintersfeastoven", "COOKING")
 
 local KynMusher 			= AddRecipe2("kyno_mushstump", {Ingredient("spoiled_food", 4), Ingredient("poop", 3), Ingredient("livinglog", 2)}, TECH.SCIENCE_TWO, 
 	{
 		placer 				= "kyno_mushstump_placer", 
 		min_spacing			= 1, 
-		atlas 				= ModBuildAtlas, 
-		image 				= "hof_mushroomstump.tex",
+		atlas 				= ModAtlas, 
+		image 				= "kyno_mushroomstump.tex",
 	},
 	{"COOKING"}
 )
@@ -222,6 +222,28 @@ local KynBrewbook			= AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ing
 	{"COOKING"}
 )
 SortAfter("kyno_brewbook", "cookbook", "COOKING")
+
+local KynKeg				= AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 4), Ingredient("rope", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
+	{
+		placer 				= "kyno_woodenkeg_placer", 
+		min_spacing			= 1, 
+		atlas 				= ModAtlas, 
+		image 				= "kyno_woodenkeg.tex",
+	},
+	{"COOKING"}
+)
+SortAfter("kyno_woodenkeg", "cookpot", "COOKING")
+
+local KynJar				= AddRecipe2("kyno_preservesjar", {Ingredient("boards", 4), Ingredient("rope", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
+	{
+		placer 				= "kyno_preservesjar_placer", 
+		min_spacing			= 1, 
+		atlas 				= ModAtlas, 
+		image 				= "kyno_preservesjar.tex",
+	},
+	{"COOKING"}
+)
+SortAfter("kyno_preservesjar", "kyno_woodenkeg", "COOKING")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Pig Elder Shop.
 local KynSaltRack 			= AddRecipe2("kyno_saltrack_installer_p", {Ingredient("kyno_salmonfish", 2, ModAtlas)}, TECH.SERENITYSHOP_ONE, 

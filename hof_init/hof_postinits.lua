@@ -1252,6 +1252,10 @@ VanillaFood.frozenbananadaiquiri.test = function(cooker, names, tags)
 	return (names.cave_banana or names.cave_banana_cooked or names.kyno_banana or names.kyno_banana_cooked)
 	and (tags.frozen and tags.frozen >= 1)
 end
+
+VanillaFood.bananajuice.test = function(cooker, names, tags)
+	return ((names.cave_banana or names.kyno_banana or 0) + (names.cave_banana_cooked or names.kyno_banana_cooked or 0) >= 2)
+end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Splumonkeys and Splumonkey Pods drops Bananas.
 AddPrefabPostInit("monkey", function(inst)
@@ -1352,6 +1356,7 @@ local drinkable_foods = {
 	"tea",
 	"figjuice",
 	"coconutwater",
+	"milk_box",
 	"watercup",
 }
 
@@ -1792,7 +1797,6 @@ local milkable_animals = {
 	"deer",
 	"spat",
 }
-
 for k,v in pairs(milkable_animals) do
 	AddPrefabPostInit(v, function(inst)
 		if not _G.TheWorld.ismastersim then
@@ -1800,14 +1804,20 @@ for k,v in pairs(milkable_animals) do
 		end
 		
 		inst:AddComponent("milkable2")
-			
+		-- Beefalo.
 		if inst.prefab == "beefalo" then
 			inst.components.milkable2:SetUp("kyno_milk_beefalo")
-		elseif inst.prefab == "koalefant_summer" or "koalefant_winter" then
+		end
+		-- Koalefants.
+		if inst.prefab == "koalefant_summer" or "koalefant_winter" then
 			inst.components.milkable2:SetUp("kyno_milk_koalefant")
-		elseif inst.prefab == "deer" then
+		end
+		-- No-Eyed Deer.
+		if inst.prefab == "deer" then
 			inst.components.milkable2:SetUp("kyno_milk_deer")
-		elseif inst.prefab == "spat" then
+		end
+		-- Ewecus.
+		if inst.prefab == "spat" then
 			inst.components.milkable2:SetUp("kyno_milk_spat")
 		end
 	end)
@@ -1922,7 +1932,7 @@ AddPrefabPostInit("beer", function(inst)
 			eater:DoTaskInTime(480, function()
 				eater:RemoveTag("groggy")
 				eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_strengthbuff")
-				eater.components.combat.externaldamagemultipliers:RemoveModifier(eater)
+				eater.components.combat.externaldamagemultipliers:RemoveModifier(inst)
 			end)
 		end
 	end
@@ -1949,13 +1959,41 @@ AddPrefabPostInit("paleale", function(inst)
 			eater:DoTaskInTime(520, function()
 				eater:RemoveTag("groggy")
 				eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_strengthbuff")
-				eater.components.combat.externaldamagemultipliers:RemoveModifier(eater)
+				eater.components.combat.externaldamagemultipliers:RemoveModifier(inst)
 			end)
 		end
 	end
 		
 	if inst.components.edible then
 		inst.components.edible:SetOnEatenFn(OnEatPaleAle)
+	end
+end)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Mead gives damage reduction buff at the cost of lower speed.
+AddPrefabPostInit("mead", function(inst)
+	local function OnEatMead(inst, eater)
+		if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
+			return
+		elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
+			eater.dmgreductionbuff_duration = 480
+			eater.components.debuffable:AddDebuff("kyno_dmgreductionbuff", "kyno_dmgreductionbuff")
+			if eater.components.talker then 
+				eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_POPBUFF"))
+			end
+		else
+			eater:AddTag("groggy")
+			eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_dmgreductionbuff", .70)
+			eater.components.health.externalabsorbmodifiers:SetModifier(eater, TUNING.BUFF_PLAYERABSORPTION_MODIFIER)
+			eater:DoTaskInTime(480, function()
+				eater:RemoveTag("groggy")
+				eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_strengthbuff")
+				eater.components.health.externalabsorbmodifiers:RemoveModifier(eater)
+			end)
+		end
+	end
+		
+	if inst.components.edible then
+		inst.components.edible:SetOnEatenFn(OnEatMead)
 	end
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
