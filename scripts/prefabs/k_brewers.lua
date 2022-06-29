@@ -239,6 +239,9 @@ local function kegfn()
         return inst
     end
 	
+	local color = 0.5 + math.random() * 0.5
+	inst.AnimState:SetMultColour(color, color, color, 1)
+	
 	inst:AddComponent("lootdropper")
 	
 	inst:AddComponent("brewer")
@@ -310,6 +313,9 @@ local function preservejarfn()
 		end
         return inst
     end
+	
+	local color = 0.5 + math.random() * 0.5
+	inst.AnimState:SetMultColour(color, color, color, 1)
 	
 	inst:AddComponent("lootdropper")
 	

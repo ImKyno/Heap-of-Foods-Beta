@@ -1261,12 +1261,12 @@ end
 AddPrefabPostInit("monkey", function(inst)
 	_G.SetSharedLootTable('monkey',
 	{
-		{'smallmeat',     1.0},
-		{'cave_banana',   1.0},
-		{'beardhair',     1.0},
-		{'nightmarefuel', 0.5},
+		{"smallmeat",     1.0},
+		{"cave_banana",   1.0},
+		{"beardhair",     1.0},
+		{"nightmarefuel", 0.5},
 		-- 50% when in Nightmare.
-		{'kyno_banana',   0.5},
+		{"kyno_banana",   0.5},
 	})
 
 	local MONKEYLOOT = {"smallmeat", "cave_banana"}
@@ -1878,6 +1878,39 @@ local pickles_foods = {
 	"pickles_fennel",
 }	
 
+local juice_foods = {
+	"juice_carrot",
+	"juice_corn",
+	"juice_eggplant",
+	"juice_pumpkin",
+	"juice_lichen",
+	"juice_cactus",
+	"juice_garlic",
+	"juice_asparagus",
+	"juice_onion",
+	"juice_tomato",
+	"juice_potato",
+	"juice_pepper",
+	"juice_redcap",
+	"juice_greencap",
+	"juice_bluecap",
+	"juice_mooncap",
+	"juice_kelp",
+	"juice_avocado",
+	"juice_whitecap",
+	"juice_aloe",
+	"juice_radish",
+	"juice_sweetpotato",
+	"juice_lotus",
+	"juice_seaweeds",
+	"juice_taroroot",
+	"juice_waterycress",
+	"juice_cucumber",
+	"juice_parznip",
+	"juice_turnip",
+	"juice_fennel",
+}
+
 for k,v in pairs(jelly_foods) do
 	AddPrefabPostInit(v, function(inst)
 		if not _G.TheWorld.ismastersim then
@@ -1910,6 +1943,18 @@ for k,v in pairs(pickles_foods) do
 	
 		if inst.components.inspectable ~= nil then
 			inst.components.inspectable.nameoverride = "KYNO_PICKLES"
+		end	
+	end)
+end
+
+for k,v in pairs(juice_foods) do
+	AddPrefabPostInit(v, function(inst)
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+	
+		if inst.components.inspectable ~= nil then
+			inst.components.inspectable.nameoverride = "KYNO_JUICE"
 		end	
 	end)
 end

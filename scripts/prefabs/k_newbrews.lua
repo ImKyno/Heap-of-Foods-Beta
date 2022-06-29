@@ -118,6 +118,7 @@ local function MakePreparedBrew(data)
 		inst:AddComponent("bait")
 
 		inst:AddComponent("tradable")
+		inst.components.tradable.goldvalue = 8
 
 		return inst
 	end
