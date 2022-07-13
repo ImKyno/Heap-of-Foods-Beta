@@ -51,9 +51,14 @@ configuration_options =
             {description = "English", 
 			hover = "Translation by: Kyno.",
 			data = "hof_strings"},
+			
             {description = "繁體中文", 
 			hover = "Translation by: Djr.",
 			data = "hof_strings_chtw"},
+			
+			{description = "Português Brasileiro",
+			hover = "Translation by: Kyno.",
+			data = "hof_strings_ptbr"},
         },
         default = "hof_strings",
     },
@@ -67,6 +72,7 @@ configuration_options =
             {description = "No", 
 			hover = "Food will spoil in Crock Pot, Portable Crock Pot, etc.",
 			data = 0},
+			
             {description = "Yes", 
 			hover = "Food will not spoil in Crock Pot, Portable Crock Pot, etc.",
 			data = 1},
@@ -83,15 +89,19 @@ configuration_options =
             {description = "0", 
 			hover = "Dragonfly will not Coffee Plants.",
 			data = 0},
+			
             {description = "4", 
 			hover = "Dragonfly will drop 4 Coffee Plants.",
 			data = 1},
+			
             {description = "8", 
 			hover = "Dragonfly will drop 8 Coffee Plants.",
 			data = 2},
+			
 			{description = "12", 
 			hover = "Dragonfly will drop 12 Coffee Plants.",
 			data = 3},
+			
 			{description = "16", 
 			hover = "Dragonfly will drop 16 Coffee Plants.",
 			data = 4},
@@ -108,6 +118,7 @@ configuration_options =
 			{description = "No",
 			hover = "Wigfrid can't drink coffee.",
 			data = 0},
+			
 			{description = "Yes",
 			hover = "Wigfrid can drink coffee.",
 			data = 1},
@@ -123,6 +134,7 @@ configuration_options =
 			{description = "No",
 			hover = "Foods will not give the Speed Buff when eaten.",
 			data = 0},
+			
 			{description = "Yes",
 			hover = "Foods will give the Speed Buff when eaten.",
 			data = 1},
@@ -138,18 +150,23 @@ configuration_options =
 			{description = "Super Fast",
 			hover = "Speed Buff will last for 2 Minutes.",
 			data = 120},
+			
 			{description = "Fast",
 			hover = "Speed Buff will last for a Half Day.",
 			data = 240},
+			
 			{description = "Default",
 			hover = "Speed Buff will last for 1 Day.",
 			data = 480},
+			
 			{description = "Average",
 			hover = "Speed Buff will last for 1.5 Days.",
 			data = 640},
+			
 			{description = "Long",
 			hover = "Speed Buff will last for 2 Days.",
 			data = 960},
+			
 			{description = "Super Long",
 			hover = "Speed Buff will last for 4 Days.",
 			data = 1920},
@@ -165,6 +182,7 @@ configuration_options =
 			{description = "No",
 			hover = "Winter's Feast foods can't be cooked in the Crock Pot.",
 			data = 0},
+			
 			{description = "Yes",
 			hover = "Winter's Feast foods can be cooked in the Crock Pot.",
 			data = 1},
@@ -180,6 +198,7 @@ configuration_options =
 			{description = "No",
 			hover = "Players will not drop Long Pigs upon death.",
 			data = 0},
+			
 			{description = "Yes",
 			hover = "Players will drop Long Pigs upon death.",
 			data = 1},
@@ -196,6 +215,7 @@ configuration_options =
 			{description = "No", 
 			hover = "Serenity Archipelago is already generated in your world!",
 			data = 0},
+			
             {description = "Yes", 
 			hover = "Serenity Archipelago will be generated during server initialization.",
 			data = 1},
@@ -228,6 +248,7 @@ configuration_options =
 			{description = "No", 
 			hover = "Mod Plants and objects will not regrow overtime in the world.",
 			data = 0},
+			
             {description = "Yes", 
 			hover = "Mod Plants and objects will regrow overtime in the world.",
 			data = 1},
@@ -244,6 +265,7 @@ configuration_options =
 			{description = "No", 
 			hover = "Warly's Portable Grinding Mill will not have the recipes from Mealing Stone.",
 			data = 0},
+			
             {description = "Yes", 
 			hover = "Warly's Portable Grinding Mill will have the recipes from Mealing Stone.",
 			data = 1},
@@ -259,6 +281,7 @@ configuration_options =
 			{description = "No", 
 			hover = "Bucket-o-Poop will not use the Bucket. (Default crafting recipe).",
 			data = 0},
+			
             {description = "Yes", 
 			hover = "Bucket-o-Poop will use the Bucket on its crafting recipe.",
 			data = 1},
