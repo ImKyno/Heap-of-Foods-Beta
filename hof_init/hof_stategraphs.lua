@@ -18,7 +18,7 @@ AddStategraphState("wilson",
 
         onenter = function(inst)
             inst.components.locomotor:StopMoving()
-            inst.AnimState:OverrideSymbol("book_cook", "kyno_brewbook", "book_cook")
+            inst.AnimState:OverrideSymbol("book_cook", "kyno_brewbook", "book_brew")
             inst.AnimState:PlayAnimation("action_uniqueitem_pre")
             inst.AnimState:PushAnimation("reading_in", false)
             inst.AnimState:PushAnimation("reading_loop", true)

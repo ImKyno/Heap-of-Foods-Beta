@@ -18,7 +18,7 @@ local kyno_foods_keg =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ALCOHOL,
 		floater = {"med", nil, 0.65},
-		tags = {"drinkable_food"},
+		tags = {"drinkable_food", "alcoholic_drink"},
 	},
 	
 	paleale = 
@@ -33,7 +33,7 @@ local kyno_foods_keg =
 		cooktime = 48,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ALCOHOL,
 		floater = {"med", nil, 0.65},
-		tags = {"drinkable_food"},
+		tags = {"drinkable_food", "alcoholic_drink"},
 	},
 	
 	greentea = 
@@ -45,7 +45,7 @@ local kyno_foods_keg =
 		health = 12,
 		hunger = 32,
 		sanity = 1,
-		cooktime = 48,
+		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RESANITY,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
@@ -68,7 +68,7 @@ local kyno_foods_keg =
 		health = 1,
 		hunger = 32,
 		sanity = 12,
-		cooktime = 48,
+		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HEALTH_REGEN,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
@@ -94,7 +94,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION,
 		floater = {"med", nil, 0.65},
-		tags = {"drinkable_food"},
+		tags = {"drinkable_food", "alcoholic_drink"},
 	},
 	
 	juice_carrot =

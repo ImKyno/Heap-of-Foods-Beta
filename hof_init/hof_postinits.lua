@@ -1299,20 +1299,8 @@ local eyeballsoup_debuff = {
 for k,v in pairs(eyeballsoup_debuff) do
     AddPrefabPostInit(v, function(inst)
         local function OnEatEyeballSoup(inst, eater)
-            if not inst:IsOnValidGround() then
-                local splash = SpawnPrefab("splash_ocean")
-                local pt = _G.Vector3(inst.Transform:GetWorldPosition()) + _G.Vector3(20,0,20)
-                splash.Transform:SetPosition(pt:Get())
-            else
-                SpawnPrefab("deerclopswarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
-                local deer = SpawnPrefab("deerclops")
-                local pt = _G.Vector3(inst.Transform:GetWorldPosition()) + _G.Vector3(20,0,20)
-
-                deer.Transform:SetPosition(pt:Get())
-                local angle = eater.Transform:GetRotation()*(3.14159/180)
-                local sp = (math.random()+1) * -1
-                deer.Physics:SetVel(sp*math.cos(angle), math.random()*2+8, -sp*math.sin(angle))
-            end
+			SpawnPrefab("deerclopswarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			_G.TheWorld.components.deerclopsspawner:SummonMonster(eater)
         end
 
         if inst.components.edible then
@@ -1823,6 +1811,29 @@ for k,v in pairs(milkable_animals) do
     end)
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Make Banana Bushes give our Bananas instead.
+AddPrefabPostInit("bananabush", function(inst)
+    if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.pickable then
+        inst.components.pickable:SetUp("kyno_banana")
+    end
+end)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Monkey Queen also accepts our Bananas!
+local new_bananas = {
+    "kyno_banana",
+    "kyno_banana_cooked",
+}
+
+for k,v in pairs(new_bananas) do
+    AddPrefabPostInit(v, function(inst)
+        inst:AddTag("monkeyqueenbribe")
+    end)
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Make every "same" recipe has the same quotes.
 local jelly_foods = {
     "jelly_berries",
@@ -1949,6 +1960,8 @@ end
 
 for k,v in pairs(juice_foods) do
     AddPrefabPostInit(v, function(inst)
+		inst.AnimState:SetScale(1.20, 1.20, 1.20)
+	
         if not _G.TheWorld.ismastersim then
             return inst
         end
@@ -1957,6 +1970,50 @@ for k,v in pairs(juice_foods) do
             inst.components.inspectable.nameoverride = "KYNO_JUICE"
         end
     end)
+end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- This will prevent some characters from drinking Alcoholic-like drinks.
+local ALCOHOLIC_DRINKS = GetModConfigData("HOF_ALCOHOLICDRINKS")
+if ALCOHOLIC_DRINKS == 1 then
+	local restricted_characters = {
+		"wendy",
+		"webber",
+		"wurt",
+		"walter",
+		"wilba", -- What? Yeah, modded characters be like.
+	}
+	
+	for k,v in pairs(restricted_characters) do
+		AddPrefabPostInit(v, function(inst)
+			inst:AddTag("no_alcoholic_drinker")
+		end)
+	end
+	
+	AddComponentPostInit("eater", function(self)
+		local oldPrefersToEat = self.PrefersToEat
+		function self:PrefersToEat(inst)
+			print("Heap of Foods: Changing PrefersToEat Eater component function")
+			oldPrefersToEat(self, inst)
+			print("Heap of Foods: PrefersToEat changed")
+			if inst.prefab == "winter_food4" and self.inst:HasTag("player") then
+				return false
+			elseif inst:HasTag("alcoholic_drink") and self.inst:HasTag("no_alcoholic_drinker") then
+				return false
+			elseif self.preferseatingtags ~= nil then
+				local preferred = false
+				for i, v in ipairs(self.preferseatingtags) do
+					if inst:HasTag(v) then
+						preferred = true
+						break
+					end
+				end
+				if not preferred then
+					return false
+				end
+			end
+			return self:TestFood(inst, self.preferseating)
+		end
+	end)
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Beer and Pale Ale gives attack buff at the cost of lower speed.

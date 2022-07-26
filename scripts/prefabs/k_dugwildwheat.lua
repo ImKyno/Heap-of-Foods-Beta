@@ -18,7 +18,7 @@ local function make_plantable(data)
     local assets =
     {
 		Asset("ANIM", "anim/"..data.bank..".zip"),
-		
+
 		Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 		Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 		Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -40,8 +40,9 @@ local function make_plantable(data)
         inst.AnimState:SetBank("kyno_wheat")
         inst.AnimState:SetBuild("kyno_wheat")
         inst.AnimState:PlayAnimation("dropped")
-		
+
 		inst:AddTag("wildwheat")
+        inst:AddTag("deployedplant")
 
         inst.entity:SetPristine()
 
@@ -54,7 +55,7 @@ local function make_plantable(data)
 
         inst:AddComponent("inspectable")
 		inst.components.inspectable.nameoverride = "DUG_GRASS"
-        
+
         inst:AddComponent("inventoryitem")
 		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 		inst.components.inventoryitem.imagename = "dug_kyno_wildwheat"

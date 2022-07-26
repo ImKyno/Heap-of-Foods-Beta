@@ -205,6 +205,22 @@ configuration_options =
 		},
 		default = 1,
 	},
+	{
+		name = "HOF_ALCOHOLICDRINKS",
+		label = "Alcoholic Restriction",
+		hover = "Should some characters be unable to drink Alcoholic-like drinks?",
+		options =
+		{
+			{description = "No", 
+			hover = "All characters can drink Alcoholic-like drinks.",
+			data = 0},
+			
+            {description = "Yes", 
+			hover = "Some characters like Webber, Wendy, etc. can't drink Alcoholic-like drinks.",
+			data = 1},
+        },
+        default = 0,
+	},
 	Title("World Options", "Options for the world."),
 	{
 		name = "HOF_SERENITYISLAND",

@@ -109,6 +109,27 @@ local function OnWorkedInventory(inst, worker)
     OnRetrieve(inst, worker, loot)
 end
 
+local function OnIgnite(inst)
+	if inst.components.timer:TimerExists("replenish_crate") then
+		inst.components.timer:StopTimer("replenish_crate")
+	end
+
+    if inst.components.pickable ~= nil then
+        inst.components.pickable.caninteractwith = false
+    end
+end
+
+local function OnBurnt(inst, worker)
+	local pt = worker and worker:GetPosition() or nil
+	
+	inst.components.pickable.canbepicked = false
+	
+	inst.components.lootdropper:SpawnLootPrefab("charcoal", pt)
+	inst.components.lootdropper:DropLoot()
+	
+    inst:Remove()
+end
+
 local DAMAGE_SCALE = 0.2
 local function OnCollide(inst, data)
     local boat_physics = data.other.components.boatphysics
@@ -121,6 +142,10 @@ end
 local function OnSave(inst, data)
     data.sunkeninventory = inst.sunkeninventory
 	data.anim = inst.animname
+	
+	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
+        data.burnt = true
+	end
 end
 
 local function OnLoad(inst, data)
@@ -132,6 +157,10 @@ local function OnLoad(inst, data)
         inst.animname = data.anim
         inst.AnimState:PlayAnimation(inst.animname, true)
     end
+	
+	if data and data.burnt then
+		OnBurnt(inst)
+	end
 end
 
 local function fn()
@@ -234,11 +263,6 @@ local function fn()
 	inst.components.lootdropper.numrandomloot = 1
 	
     if math.random() < 0.20 then
-		-- inst.components.lootdropper:AddChanceLoot("kyno_neonfish", 		   1.00)
-		-- inst.components.lootdropper:AddChanceLoot("kyno_grouper",  	  	   1.00)
-		-- inst.components.lootdropper:AddChanceLoot("kyno_pierrotfish",       1.00)
-		-- inst.components.lootdropper:AddChanceLoot("kyno_tropicalfish",      1.00)
-		-- inst.components.lootdropper:AddChanceLoot("kyno_koi",               1.00)
 		inst.components.lootdropper:AddChanceLoot("kyno_fishpackage",		   1.00)
     end
 	
@@ -250,6 +274,11 @@ local function fn()
 	inst:ListenForEvent("timerdone", OnTimerDone)
 	
 	inst.sunkeninventory = {}
+	
+	MakeMediumBurnable(inst)
+    inst.components.burnable:SetOnIgniteFn(OnIgnite)
+    inst.components.burnable:SetOnBurntFn(OnBurnt)
+	MakeSmallPropagator(inst)
 
     inst.OnSave = OnSave
     inst.OnLoad = OnLoad

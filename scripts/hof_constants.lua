@@ -6,6 +6,7 @@ local NEW_CONSTANTS = {}
 NEW_CONSTANTS 		= {
 	PREPAREDSOUL 	= "PREPAREDSOUL",
 	POOP 			= "POOP",
+	ALCOHOLIC		= "ALCOHOLIC",
 }
 	
 for k, v in pairs(NEW_CONSTANTS) do

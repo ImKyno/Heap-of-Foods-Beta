@@ -78,6 +78,7 @@ local function banana()
 	inst:AddTag("deployedplant")
 	inst:AddTag("cattoy")
 	inst:AddTag("saltbox_valid")
+	inst:AddTag("surface_banana")
 
 	inst.entity:SetPristine()
 
@@ -138,6 +139,7 @@ local function banana_cooked()
 	inst.AnimState:PlayAnimation("cooked")
 	
 	inst:AddTag("fruit")
+	inst:AddTag("surface_banana")
 
 	inst.entity:SetPristine()
 

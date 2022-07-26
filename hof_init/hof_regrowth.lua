@@ -40,7 +40,7 @@ if DO_REGROWTH == 1 then
 		spawner_watery_crate_frequency			= 50,
 		spawner_aspargos_frequency				= 50,
 		spawner_aspargos_cave_frequency			= 50,
-		-- spawner_pineapple_frequency				= 50,
+		-- spawner_pineapple_frequency		    = 50,
 	}
 
 	local prefabcountonground, nonwinterspawners, winteronlyspawners = {}, {}, {}
@@ -57,14 +57,14 @@ if DO_REGROWTH == 1 then
 				end
 				ent.simpleregrowth.add_prefabcountonground = nil
 			end)
-		
+
 			ent:ListenForEvent("onremove", function()
 				if ent.simpleregrowth.onground then
 					prefabcountonground[prefab] = prefabcountonground[prefab] - 1
 				end
 				ent.simpleregrowth = nil
 			end)
-			
+
 			ent:ListenForEvent("ondropped", function()
 				if ent.simpleregrowth.add_prefabcountonground then
 					ent.simpleregrowth.add_prefabcountonground:Cancel()
@@ -76,7 +76,7 @@ if DO_REGROWTH == 1 then
 				ent.simpleregrowth.onground = true
 				ent.simpleregrowth.playerowned = true
 			end)
-		
+
 			ent:ListenForEvent("onpickup", function()
 				if ent.simpleregrowth.onground then
 					prefabcountonground[prefab] = prefabcountonground[prefab] - 1
@@ -87,7 +87,7 @@ if DO_REGROWTH == 1 then
 					end
 				end)
 			end
-		
+
 			local onsave, onload = ent.OnSave, ent.OnLoad
 				ent.OnSave = function(inst, data)
 				data.simpleregrowth = {}
@@ -101,9 +101,9 @@ if DO_REGROWTH == 1 then
 					onsave(inst, data)
 				end
 			end
-		
+
 			ent.OnLoad = function(inst, data)
-				if data and data.simpleregrowth then	
+				if data and data.simpleregrowth then
 					if data.simpleregrowth.playerowned then
 						ent.simpleregrowth.playerowned = data.simpleregrowth.playerowned
 					end
@@ -141,7 +141,7 @@ if DO_REGROWTH == 1 then
 				end
 			end
 		end
-	
+
 		deep_search(tilex, tiley)
 		return count
 	end
@@ -149,7 +149,7 @@ if DO_REGROWTH == 1 then
 -- Prefabs that will regrow in the world.
 	if simpleregrowth.spawner_aloe_frequency > 0 then
 		AddPrefabTracker("kyno_aloe_ground", true)
-		nonwinterspawners["kyno_aloe_ground"] = 
+		nonwinterspawners["kyno_aloe_ground"] =
 		{
 			frequency 	= simpleregrowth.spawner_aloe_frequency,
 			amount 		= 3,
@@ -160,7 +160,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_radish_frequency > 0 then
 		AddPrefabTracker("kyno_radish_ground", true)
-		nonwinterspawners["kyno_radish_ground"] = 
+		nonwinterspawners["kyno_radish_ground"] =
 		{
 			frequency 	= simpleregrowth.spawner_aloe_frequency,
 			amount 		= 3,
@@ -171,7 +171,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_sweetpotato_frequency > 0 then
 		AddPrefabTracker("kyno_sweetpotato_ground", true)
-		nonwinterspawners["kyno_sweetpotato_ground"] = 
+		nonwinterspawners["kyno_sweetpotato_ground"] =
 		{
 			frequency 	= simpleregrowth.spawner_aloe_frequency,
 			amount 		= 3,
@@ -182,7 +182,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_turnip_frequency > 0 then
 		AddPrefabTracker("kyno_turnip_ground", true)
-		nonwinterspawners["kyno_turnip_ground"] = 
+		nonwinterspawners["kyno_turnip_ground"] =
 		{
 			frequency 	= simpleregrowth.spawner_aloe_frequency,
 			amount 		= 3,
@@ -193,7 +193,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_cucumber_frequency > 0 then
 		AddPrefabTracker("kyno_cucumber_ground", true)
-		nonwinterspawners["kyno_cucumber_ground"] = 
+		nonwinterspawners["kyno_cucumber_ground"] =
 		{
 			frequency 	= simpleregrowth.spawner_aloe_frequency,
 			amount 		= 3,
@@ -204,7 +204,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_wildwheat_frequency > 0 then
 		AddPrefabTracker("kyno_wildwheat", true)
-		nonwinterspawners["kyno_wildwheat"] = 
+		nonwinterspawners["kyno_wildwheat"] =
 		{
 			frequency 	= simpleregrowth.spawner_wildwheat_frequency,
 			amount 		= 3,
@@ -215,7 +215,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_limpetrock_frequency > 0 then
 		AddPrefabTracker("kyno_limpetrock", true)
-		nonwinterspawners["kyno_limpetrock"] = 
+		nonwinterspawners["kyno_limpetrock"] =
 		{
 			frequency 	= simpleregrowth.spawner_limpetrock_frequency,
 			amount 		= 3,
@@ -226,7 +226,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_spotbush_frequency > 0 then
 		AddPrefabTracker("kyno_spotbush", true)
-		nonwinterspawners["kyno_spotbush"] = 
+		nonwinterspawners["kyno_spotbush"] =
 		{
 			frequency 	= simpleregrowth.spawner_spotbush_frequency,
 			amount 		= 3,
@@ -237,7 +237,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_sweetflower_frequency > 0 then
 		AddPrefabTracker("kyno_sugartree_flower", true)
-		nonwinterspawners["kyno_sugartree_flower"] = 
+		nonwinterspawners["kyno_sugartree_flower"] =
 		{
 			frequency 	= simpleregrowth.spawner_sweetflower_frequency,
 			amount 		= 3,
@@ -248,7 +248,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_cave_fern_frequency > 0 then
 		AddPrefabTracker("cave_fern", true)
-		nonwinterspawners["cave_fern"] = 
+		nonwinterspawners["cave_fern"] =
 		{
 			frequency 	= simpleregrowth.spawner_cave_fern_frequency,
 			amount 		= 3,
@@ -259,18 +259,18 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_rockflippable_frequency > 0 then
 		AddPrefabTracker("kyno_rockflippable", true)
-		nonwinterspawners["kyno_rockflippable"] = 
+		nonwinterspawners["kyno_rockflippable"] =
 		{
 			frequency 	= simpleregrowth.spawner_rockflippable_frequency,
 			amount 		= 3,
 			maxcount 	= 91,
-			tile 		= WORLD_TILES.SAVANNA, WORLD_TILES.ROCKY, WORLD_TILES.DECIDUOUS,
+			tile 		= WORLD_TILES.SAVANNA,
 		}
 	end
 
 	if simpleregrowth.spawner_mushstump_natural_frequency > 0 then
 		AddPrefabTracker("kyno_mushstump_natural", true)
-		nonwinterspawners["kyno_mushstump_natural"] = 
+		nonwinterspawners["kyno_mushstump_natural"] =
 		{
 			frequency 	= simpleregrowth.spawner_mushstump_natural_frequency,
 			amount 		= 3,
@@ -281,7 +281,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_lotus_frequency > 0 then
 		AddPrefabTracker("kyno_lotus_ocean", true)
-		nonwinterspawners["kyno_lotus_ocean"] = 
+		nonwinterspawners["kyno_lotus_ocean"] =
 		{
 			frequency 	= simpleregrowth.spawner_lotus_frequency,
 			amount 		= 3,
@@ -312,7 +312,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_fennel_frequency > 0 then
 		AddPrefabTracker("kyno_fennel_ground", true)
-		nonwinterspawners["kyno_fennel_ground"] = 
+		nonwinterspawners["kyno_fennel_ground"] =
 		{
 			frequency 	= simpleregrowth.spawner_fennel_frequency,
 			amount 		= 3,
@@ -323,7 +323,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_parznip_frequency > 0 then
 		AddPrefabTracker("kyno_parznip_ground", true)
-		nonwinterspawners["kyno_parznip_ground"] = 
+		nonwinterspawners["kyno_parznip_ground"] =
 		{
 			frequency 	= simpleregrowth.spawner_parznip_frequency,
 			amount 		= 3,
@@ -334,7 +334,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_parznip_big_frequency > 0 then
 		AddPrefabTracker("kyno_parznip_big", true)
-		nonwinterspawners["kyno_parznip_big"] = 
+		nonwinterspawners["kyno_parznip_big"] =
 		{
 			frequency 	= simpleregrowth.spawner_parznip_big_frequency,
 			amount 		= 3,
@@ -345,7 +345,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_rockflippable_cave_frequency > 0 then
 		AddPrefabTracker("kyno_rockflippable_cave", true)
-		nonwinterspawners["kyno_rockflippable_cave"] = 
+		nonwinterspawners["kyno_rockflippable_cave"] =
 		{
 			frequency 	= simpleregrowth.spawner_rockflippable_cave_frequency,
 			amount 		= 3,
@@ -356,7 +356,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_mushstump_cave_frequency > 0 then
 		AddPrefabTracker("kyno_mushstump_cave", true)
-		nonwinterspawners["kyno_mushstump_cave"] = 
+		nonwinterspawners["kyno_mushstump_cave"] =
 		{
 			frequency 	= simpleregrowth.spawner_mushstump_cave_frequency,
 			amount 		= 3,
@@ -367,7 +367,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_turnip_cave_frequency > 0 then
 		AddPrefabTracker("kyno_turnip_cave", true)
-		nonwinterspawners["kyno_turnip_cave"] = 
+		nonwinterspawners["kyno_turnip_cave"] =
 		{
 			frequency 	= simpleregrowth.spawner_turnip_cave_frequency,
 			amount 		= 3,
@@ -378,7 +378,7 @@ if DO_REGROWTH == 1 then
 
 	if simpleregrowth.spawner_watery_crate_frequency > 0 then
 		AddPrefabTracker("kyno_watery_crate", true)
-		nonwinterspawners["kyno_watery_crate"] = 
+		nonwinterspawners["kyno_watery_crate"] =
 		{
 			frequency 	= simpleregrowth.spawner_watery_crate_frequency,
 			amount 		= 3,
@@ -387,10 +387,10 @@ if DO_REGROWTH == 1 then
 			WORLD_TILES.OCEAN_BRINEPOOL_SHORE, WORLD_TILES.OCEAN_COASTAL, WORLD_TILES.OCEAN_WATERLOG,
 		}
 	end
-	
+
 	if simpleregrowth.spawner_aspargos_frequency > 0 then
 		AddPrefabTracker("kyno_aspargos_ground", true)
-		nonwinterspawners["kyno_aspargos_ground"] = 
+		nonwinterspawners["kyno_aspargos_ground"] =
 		{
 			frequency 	= simpleregrowth.spawner_aspargos_frequency,
 			amount 		= 3,
@@ -398,10 +398,10 @@ if DO_REGROWTH == 1 then
 			tile 		= WORLD_TILES.GRASS, WORLD_TILES.FOREST
 		}
 	end
-	
+
 	if simpleregrowth.spawner_aspargos_cave_frequency > 0 then
 		AddPrefabTracker("kyno_aspargos_cave", true)
-		nonwinterspawners["kyno_aspargos_cave"] = 
+		nonwinterspawners["kyno_aspargos_cave"] =
 		{
 			frequency 	= simpleregrowth.spawner_aspargos_cave_frequency,
 			amount 		= 3,
@@ -412,14 +412,14 @@ if DO_REGROWTH == 1 then
 	--[[
 	if simpleregrowth.spawner_pineapple_frequency > 0 then
 		AddPrefabTracker("kyno_pineapplebush", true)
-		nonwinterspawners["kyno_pineapplebush"] = 
+		nonwinterspawners["kyno_pineapplebush"] =
 		{
 			frequency 	= simpleregrowth.spawner_pineapple_frequency,
 			amount 		= 3,
 			maxcount 	= 101,
-			tile 		= WORLD_TILES.GRASS, WORLD_TILES.FOREST, 
+			tile 		= WORLD_TILES.GRASS, WORLD_TILES.FOREST,
 		}
-	end	
+	end
 	]]--
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Prefab Spawners.
@@ -433,12 +433,12 @@ if DO_REGROWTH == 1 then
 				segage = math.floor(tickage / TUNING.SEG_TIME + 0.5)
 				segtime = math.floor(ticktime / TUNING.SEG_TIME + 0.5)
 			end
-		
+
 			local function Spawn(prefab, amount, tile)
 				if amount == 0 or prefabcountonground[prefab] + amount >= maxprefabcount[prefab] or not tiles[tile] or #tiles[tile] <= 1 then
 					return
 				end
-			
+
 				local spawned = 0
 				while spawned < amount do
 					local idx = math.random(#tiles[tile])
@@ -446,13 +446,13 @@ if DO_REGROWTH == 1 then
 					if _G.TheWorld.Map:GetTile(tilex, tiley) ~= tile then
 						table.insert(tiles[_G.TheWorld.Map:GetTile(tilex, tiley)], { tilex = x, tiley = y })
 						repeat
-					
+
 						table.remove(tiles[tile], idx)
 						if #tiles[tile] <= 1 then
 							tiles[tile] = nil
 							break
 						end
-					
+
 						idx = math.random(#tiles[tile])
 						tilex, tiley = tiles[tile][idx].tilex, tiles[tile][idx].tiley
 						until _G.TheWorld.Map:GetTile(tilex, tiley) == tile
@@ -460,19 +460,19 @@ if DO_REGROWTH == 1 then
 							break
 						end
 					end
-				
+
 					tilex, tiley = tiles[tile][idx].tilex, tiles[tile][idx].tiley
 					local point = _G.Vector3((tilex - halfworldwidth) * TILE_SCALE - HALF_TILE_SCALE + math.random() * TILE_SCALE, 0, (tiley - halfworldheight) * TILE_SCALE - HALF_TILE_SCALE + math.random() * TILE_SCALE)
 					local ent = _G.SpawnPrefab(prefab)
 					ent.Transform:SetPosition(point:Get())
 					spawned = spawned + 1
 				end
-			
+
 				if spawned > 0 then
 					print("[Heap of Foods Regrowth] Spawned ".. spawned.."x of "..prefab.." at seg "..segtime.." (tick: "..ticktime..") of day "..math.floor(tickage / TUNING.TOTAL_DAY_TIME) + 1)
 				end
 			end
-		
+
 			local function DoNextTick()
 				UpdateTime()
 				if ticktime % TUNING.SEG_TIME == 0 and segage ~= lastsegused then
@@ -502,7 +502,7 @@ if DO_REGROWTH == 1 then
 					onsave(inst, data)
 				end
 			end
-		
+
 			ent.OnLoad = function(inst, data)
 			if data and data.lastsegused then
 				lastsegused = data.lastsegused or 0
@@ -527,7 +527,7 @@ if DO_REGROWTH == 1 then
 					end
 					print("[Heap of Foods Regrowth]")
 					print("   ...World: w: "..worldwidth..", h: "..worldheight..", square length: "..worldsquarelength)
-						
+
 					local function load_prefabs(spawners)
 						for prefab, spawner in pairs(spawners) do
 						if spawner.amount then

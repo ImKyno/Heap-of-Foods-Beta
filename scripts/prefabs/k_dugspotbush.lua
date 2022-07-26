@@ -24,7 +24,7 @@ local function make_plantable(data)
     local assets =
     {
 		Asset("ANIM", "anim/"..data.bank..".zip"),
-		
+
 		Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 		Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 		Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -42,14 +42,15 @@ local function make_plantable(data)
         inst.entity:AddNetwork()
 
         MakeInventoryPhysics(inst)
-		
+
 		inst.AnimState:SetScale(1.4, 1.4, 1.4)
 
         inst.AnimState:SetBank("kyno_spotbush")
         inst.AnimState:SetBuild("kyno_spotbush")
         inst.AnimState:PlayAnimation("dropped")
-		
+
 		inst:AddTag("spotbush")
+        inst:AddTag("deployedplant")
 
         inst.entity:SetPristine()
 
@@ -61,7 +62,7 @@ local function make_plantable(data)
         inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
 
         inst:AddComponent("inspectable")
-        
+
         inst:AddComponent("inventoryitem")
 		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 		inst.components.inventoryitem.imagename = "dug_kyno_spotbush"

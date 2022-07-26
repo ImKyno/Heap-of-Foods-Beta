@@ -31,6 +31,7 @@ STRINGS.BREWBOOK_DESC = "Teste"
 
 STRINGS.UI.FOOD_TYPES.PREPAREDSOUL = "Alma"
 STRINGS.UI.FOOD_TYPES.POOP = "Horrível" -- Use horrible just to mimic the cookbook.
+STRINGS.UI.FOOD_TYPES.ALCOHOLIC = "Goodies" -- Just to mimic.
 STRINGS.UI.CRAFTING.RECIPEACTION.SERENITYSHOP = "Trocar"
 STRINGS.UI.COOKBOOK.TAB_TITLE_KEG = "Receitas do Barril de Madeira"
 STRINGS.UI.COOKBOOK.TAB_TITLE_JAR = "Receitas da Jarra de Conservas"
@@ -56,7 +57,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FORTUNE = "Conta sua fortuna"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HANDS = "Acelera as mãos"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ALCOHOL = "Aumenta a força\nBeba com moderação"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DESANITY = "Drena sanidade com o tempo"
-STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION = "Diminui o dano recebido\nBeba com moderação"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION = "Aumenta a defesa\nBeba com moderação"
 
 STRINGS.ACTIONS.SALT = "Adicionar Sal"
 STRINGS.ACTIONS.STORESOUL = "Guardar Alma"

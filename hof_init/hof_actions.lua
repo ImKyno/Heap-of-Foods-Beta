@@ -401,10 +401,12 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.UNWRAP, function(inst
 end))
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix for when opening the Brewbook.
+--[[
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READ, function(inst, action)
 	return (action.invobject ~= nil and action.invobject.components.simplebook ~= nil) and "cookbook_open"
 	or (action.invobject ~= nil and action.invobject.components.brewbook ~= nil) and "brewbook_open"
 	or inst:HasTag("aspiring_bookworm") and "book_peruse"
 	or "book"
 end))
+]]--
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

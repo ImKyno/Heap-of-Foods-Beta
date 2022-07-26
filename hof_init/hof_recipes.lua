@@ -7,8 +7,8 @@ local RECIPETABS 	= _G.RECIPETABS
 local AllRecipes 	= _G.AllRecipes
 local Recipe 		= _G.Recipe
 local Recipe2 		= _G.Recipe2
-local TechTree = require("techtree")
-local RecipeFilter		= require("recipes_filter")
+local TechTree 		= require("techtree")
+local RecipeFilter	= require("recipes_filter")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- For sorting recipe.
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795

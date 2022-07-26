@@ -5,7 +5,7 @@ local assets =
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
-local prefabs = 
+local prefabs =
 {
 	"spoiled_food"
 }
@@ -48,13 +48,13 @@ local function MakePreparedBrew(data)
 			inst.AnimState:SetBank(data.name)
 			inst.AnimState:SetBuild(data.name)
 		end
-		
+
 		inst.AnimState:PlayAnimation("idle", false)
 		inst.AnimState:OverrideSymbol("swap_food", foodname, foodname)
 
 		inst:AddTag("preparedfood")
 		inst:AddTag("preparedbrew")
-		
+
 		if data.tags ~= nil then
 			for i,v in pairs(data.tags) do
 				inst:AddTag(v)
@@ -67,7 +67,7 @@ local function MakePreparedBrew(data)
 				inst.displaynamefn = DisplayNameFn
 			end
 		end
-	
+
 		MakeInventoryFloatable(inst)
 
 		inst.entity:SetPristine()
