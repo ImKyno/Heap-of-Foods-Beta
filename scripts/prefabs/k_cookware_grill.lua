@@ -50,6 +50,21 @@ local function GetFirepit(inst)
     return inst.firepit
 end
 
+local function GetBubble(inst)
+    if not inst.bubble or not inst.bubble:IsValid() then
+        local x,y,z = inst.Transform:GetWorldPosition()
+        local ents = TheSim:FindEntities(x,y,z, 0.01)
+        inst.bubble = nil
+        for k,v in pairs(ents) do
+            if v.prefab == 'kyno_product_bubble' then
+                inst.bubble = v
+                break
+            end
+        end
+    end
+    return inst.bubble
+end
+
 local function cancookfn(self)
     local function IsContainerFull(inst)
         return inst.components.container and inst.components.container:IsFull()
@@ -208,11 +223,31 @@ local function OnClose(inst, doer)
     end
 end
 
+local function SetProductSymbol(inst, product, overridebuild)
+    local recipe = cooking.GetRecipe(inst.prefab, product)
+    local potlevel = recipe ~= nil and recipe.potlevel or nil
+    local build = (recipe ~= nil and recipe.overridebuild) or overridebuild or "cook_pot_food"
+    local overridesymbol = (recipe ~= nil and recipe.overridesymbolname) or product
+	
+	local product_image = SpawnPrefab("kyno_product_bubble")
+	product_image.entity:SetParent(inst.entity)
+	
+	product_image.AnimState:OverrideSymbol("bubble_image", GetInventoryItemAtlas(overridesymbol..".tex"), overridesymbol..".tex")
+end
+
 local function spoilfn(inst)
     if not inst:HasTag("burnt") then
 		inst.components.stewer.product = "wetgoop"
 		inst.AnimState:PushAnimation("cooking_burnt_loop", true)
+		SetProductSymbol(inst, inst.components.stewer.product)
 	end
+end
+
+local function ShowProductImage(inst)
+    if not inst:HasTag("burnt") then
+        local product = inst.components.stewer.product
+        SetProductSymbol(inst, product, IsModCookingProduct(inst.prefab, product) and product or nil)
+    end
 end
 
 local function donecookfn(inst)
@@ -231,6 +266,8 @@ local function donecookfn(inst)
 			inst._smoke:push()
 			OnGrillSmoke(inst) 
 		end)
+		
+		ShowProductImage(inst)
 	end
 end
 
@@ -247,6 +284,8 @@ local function continuedonefn(inst)
 			inst._smoke:push()
 			OnGrillSmoke(inst) 
 		end)
+		
+		ShowProductImage(inst)
     end
 end
 
@@ -278,6 +317,11 @@ local function harvestfn(inst, doer)
 	if inst.smoke_task then
 		inst.smoke_task:Cancel()
 		inst.smoke_task = nil
+	end
+	
+	local bubble = GetBubble(inst)
+	if bubble then
+		bubble:Remove()
 	end
 end
 

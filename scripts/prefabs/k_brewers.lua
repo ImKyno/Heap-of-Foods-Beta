@@ -129,13 +129,14 @@ local function SetProductSymbol(inst, product, overridebuild)
 	local product_image = SpawnPrefab("kyno_product_bubble")
 	product_image.entity:SetParent(inst.entity)
 	
+	-- Spriter is hard. This make they fit better in their stations...
 	if inst:HasTag("woodenkeg") then
-		product_image.AnimState:PlayAnimation("idle_keg", false)
+		product_image.AnimState:PlayAnimation("idle_woodenkeg", false)
 	else
-		product_image.AnimState:PlayAnimation("idle_jar", false)
+		product_image.AnimState:PlayAnimation("idle_preservesjar", false)
 	end
+	
 	product_image.AnimState:OverrideSymbol("bubble_image", resolvefilepath("images/inventoryimages/hof_inventoryimages.xml"), overridesymbol..".tex")
-	-- inst.AnimState:OverrideSymbol("bubble_image", resolvefilepath("images/inventoryimages/hof_inventoryimages.xml"), overridesymbol..".tex")
 end
 
 local function SpoilFn(inst)

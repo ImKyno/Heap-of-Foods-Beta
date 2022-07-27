@@ -330,6 +330,9 @@ ACTIONS.GIVE.stroverridefn = function(act)
 	if act.target:HasTag("cookingpot_hanger") and act.invobject:HasTag("pot_installer") then
 		return subfmt(STRINGS.KYNO_INSTALL_POT, {item = act.invobject:GetBasicDisplayName()})
 	end
+	if act.target:HasTag("serenity_oven") and act.invobject:HasTag("casserole_installer") then
+		return subfmt(STRINGS.KYNO_INSTALL_POT, {item = act.invobject:GetBasicDisplayName()})
+	end
 	if act.target:HasTag("elderpot_rubble") and act.invobject:HasTag("serenity_repairtool") then
 		return subfmt(STRINGS.KYNO_REPAIR_TOOL, {item = act.invobject:GetBasicDisplayName()})
 	end

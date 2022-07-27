@@ -6,6 +6,8 @@ local assets =
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 }
 
+local s = 1.5
+
 local function fn()
     local inst = CreateEntity()
 
@@ -14,11 +16,11 @@ local function fn()
 	inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.Transform:SetScale(2, 2, 2)
+	inst.AnimState:SetScale(s, s, s)
 
     inst.AnimState:SetBank("kyno_product_bubble")
     inst.AnimState:SetBuild("kyno_product_bubble")
-    inst.AnimState:PlayAnimation("idle")
+    inst.AnimState:PlayAnimation("idle", false)
 	
 	inst:AddTag("NOCLICK")
     inst:AddTag("DECOR")

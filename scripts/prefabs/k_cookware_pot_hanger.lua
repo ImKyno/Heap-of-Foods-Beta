@@ -112,6 +112,21 @@ local function GetFirepit(inst)
     return inst.firepit
 end
 
+local function GetBubble(inst)
+    if not inst.bubble or not inst.bubble:IsValid() then
+        local x,y,z = inst.Transform:GetWorldPosition()
+        local ents = TheSim:FindEntities(x,y,z, 0.01)
+        inst.bubble = nil
+        for k,v in pairs(ents) do
+            if v.prefab == 'kyno_product_bubble' then
+                inst.bubble = v
+                break
+            end
+        end
+    end
+    return inst.bubble
+end
+
 local function cancookfn(self)
     local function IsContainerFull(inst)
         return inst.components.container and inst.components.container:IsFull()
@@ -351,6 +366,19 @@ local function OnClose(inst, doer)
 	HideGoops(inst)
 end
 
+local function SetProductSymbol(inst, product, overridebuild)
+    local recipe = cooking.GetRecipe(inst.prefab, product)
+    local potlevel = recipe ~= nil and recipe.potlevel or nil
+    local build = (recipe ~= nil and recipe.overridebuild) or overridebuild or "cook_pot_food"
+    local overridesymbol = (recipe ~= nil and recipe.overridesymbolname) or product
+	
+	local product_image = SpawnPrefab("kyno_product_bubble")
+	product_image.entity:SetParent(inst.entity)
+	product_image.AnimState:PlayAnimation("idle_pothanger", false)
+	
+	product_image.AnimState:OverrideSymbol("bubble_image", GetInventoryItemAtlas(overridesymbol..".tex"), overridesymbol..".tex")
+end
+
 local function spoilfn(inst)
     if inst:HasTag("pot_syrup") then
         inst.components.stewer.product = "kyno_sap_spoiled"
@@ -371,6 +399,14 @@ local function spoilfn(inst)
 		inst.AnimState:PushAnimation("idle_loop", true)
 		inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/boiled_over")
 	end
+	SetProductSymbol(inst, inst.components.stewer.product)
+end
+
+local function ShowProductImage(inst)
+    if not inst:HasTag("burnt") then
+        local product = inst.components.stewer.product
+        SetProductSymbol(inst, product, IsModCookingProduct(inst.prefab, product) and product or nil)
+    end
 end
 
 local function donecookfn(inst)
@@ -406,6 +442,7 @@ local function donecookfn(inst)
 		end)
 	end
 	HideGoops(inst)
+	ShowProductImage(inst)
 end
 
 local function continuedonefn(inst)
@@ -435,6 +472,7 @@ local function continuedonefn(inst)
 		end)
 	end
 	HideGoops(inst)
+	ShowProductImage(inst)
 end
 
 local function continuecookfn(inst)
@@ -467,6 +505,11 @@ local function harvestfn(inst, doer)
 		inst.steam_task:Cancel()
 		inst.steam_task = nil
 		-- print("Pot steam is gone!")
+	end
+	
+	local bubble = GetBubble(inst)
+	if bubble then
+		bubble:Remove()
 	end
 	HideGoops(inst)
 end
