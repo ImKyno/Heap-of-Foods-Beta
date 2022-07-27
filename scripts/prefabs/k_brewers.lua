@@ -29,6 +29,8 @@ local prefabs =
 	"wetgoop",
 	"wetgoop2",
 	"spoiled_food",
+	
+	"kyno_product_bubble",
 }
 
 for k, v in pairs(brewing.recipes.kyno_woodenkeg) do
@@ -37,6 +39,21 @@ end
 
 for k, v in pairs(brewing.recipes.kyno_preservesjar) do
     table.insert(prefabs, v.name)
+end
+
+local function GetBubble(inst)
+    if not inst.bubble or not inst.bubble:IsValid() then
+        local x,y,z = inst.Transform:GetWorldPosition()
+        local ents = TheSim:FindEntities(x,y,z, 0.01)
+        inst.bubble = nil
+        for k,v in pairs(ents) do
+            if v.prefab == 'kyno_product_bubble' then
+                inst.bubble = v
+                break
+            end
+        end
+    end
+    return inst.bubble
 end
 
 local function OnHammered(inst, worker)
@@ -108,22 +125,17 @@ local function SetProductSymbol(inst, product, overridebuild)
     local potlevel = recipe ~= nil and recipe.potlevel or nil
     local build = (recipe ~= nil and recipe.overridebuild) or overridebuild or "cook_pot_food"
     local overridesymbol = (recipe ~= nil and recipe.overridesymbolname) or product
-
-    if potlevel == "high" then
-        inst.AnimState:Show("swap_high")
-        inst.AnimState:Hide("swap_mid")
-        inst.AnimState:Hide("swap_low")
-    elseif potlevel == "low" then
-        inst.AnimState:Hide("swap_high")
-        inst.AnimState:Hide("swap_mid")
-        inst.AnimState:Show("swap_low")
-    else
-        inst.AnimState:Hide("swap_high")
-        inst.AnimState:Show("swap_mid")
-        inst.AnimState:Hide("swap_low")
-    end
-
-    inst.AnimState:OverrideSymbol("swap_cooked", build, overridesymbol)
+	
+	local product_image = SpawnPrefab("kyno_product_bubble")
+	product_image.entity:SetParent(inst.entity)
+	
+	if inst:HasTag("woodenkeg") then
+		product_image.AnimState:PlayAnimation("idle_keg", false)
+	else
+		product_image.AnimState:PlayAnimation("idle_jar", false)
+	end
+	product_image.AnimState:OverrideSymbol("bubble_image", resolvefilepath("images/inventoryimages/hof_inventoryimages.xml"), overridesymbol..".tex")
+	-- inst.AnimState:OverrideSymbol("bubble_image", resolvefilepath("images/inventoryimages/hof_inventoryimages.xml"), overridesymbol..".tex")
 end
 
 local function SpoilFn(inst)
@@ -133,7 +145,7 @@ local function SpoilFn(inst)
     end
 end
 
-local function ShowProduct(inst)
+local function ShowProductImage(inst)
     if not inst:HasTag("burnt") then
         local product = inst.components.brewer.product
         SetProductSymbol(inst, product, IsModBrewingProduct(inst.prefab, product) and product or nil)
@@ -145,7 +157,7 @@ local function DoneCookFn(inst)
         inst.AnimState:PlayAnimation("idle_empty")
         inst.AnimState:PushAnimation("idle_full", false)
 		
-        ShowProduct(inst)
+        ShowProductImage(inst)
 		
         inst.SoundEmitter:KillSound("brew_loop")
         inst.SoundEmitter:PlaySound("hof_sounds/common/brew_harvest")
@@ -154,8 +166,8 @@ end
 
 local function ContinueDoneFn(inst)
     if not inst:HasTag("burnt") then
-        inst.AnimState:PlayAnimation("idle_full")
-        ShowProduct(inst)
+        inst.AnimState:PlayAnimation("idle_full", false)
+        ShowProductImage(inst)
     end
 end
 
@@ -172,6 +184,11 @@ local function HarvestFn(inst)
         inst.AnimState:PlayAnimation("idle_empty")
         inst.SoundEmitter:PlaySound("hof_sounds/common/brew_start")
     end
+	
+	local bubble = GetBubble(inst)
+	if bubble then
+		bubble:Remove()
+	end
 end
 
 local function GetStatus(inst)
@@ -229,6 +246,7 @@ local function kegfn()
 	
 	inst:AddTag("structure")
 	inst:AddTag("brewer")
+	inst:AddTag("woodenkeg")
 	
 	inst.entity:SetPristine()
 	
@@ -238,9 +256,6 @@ local function kegfn()
 		end
         return inst
     end
-	
-	local color = 0.5 + math.random() * 0.5
-	inst.AnimState:SetMultColour(color, color, color, 1)
 	
 	inst:AddComponent("lootdropper")
 	
@@ -304,6 +319,7 @@ local function preservejarfn()
 	
 	inst:AddTag("structure")
 	inst:AddTag("brewer")
+	inst:AddTag("preservesjar")
 	
 	inst.entity:SetPristine()
 	
@@ -313,9 +329,6 @@ local function preservejarfn()
 		end
         return inst
     end
-	
-	local color = 0.5 + math.random() * 0.5
-	inst.AnimState:SetMultColour(color, color, color, 1)
 	
 	inst:AddComponent("lootdropper")
 	

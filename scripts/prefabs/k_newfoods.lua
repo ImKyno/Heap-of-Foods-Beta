@@ -55,6 +55,7 @@ local function MakePreparedFood(data)
 		inst.AnimState:OverrideSymbol("swap_food", foodname, foodname)
 
 		inst:AddTag("preparedfood")
+		inst:AddTag("preparedfood_hof")
 		
 		if data.tags ~= nil then
 			for i,v in pairs(data.tags) do
