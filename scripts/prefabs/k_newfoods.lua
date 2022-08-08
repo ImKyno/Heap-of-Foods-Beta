@@ -132,17 +132,19 @@ local prefs = {}
 for k, v in pairs(require("hof_foodrecipes")) do
 	table.insert(prefs, MakePreparedFood(v))
 end
--- For the optional recipes.
-for k, v in pairs(require("hof_foodrecipes_optional")) do
+
+for k, v in pairs(require("hof_foodspicer")) do
 	table.insert(prefs, MakePreparedFood(v))
 end
 
-for k, v in pairs(require("hof_foodspicer")) do
+--[[ For the optional recipes.
+for k, v in pairs(require("hof_foodrecipes_optional")) do
 	table.insert(prefs, MakePreparedFood(v))
 end
 
 for k, v in pairs(require("hof_foodspicer_optional")) do
 	table.insert(prefs, MakePreparedFood(v))
 end
+]]--
 
 return unpack(prefs)

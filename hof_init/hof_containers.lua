@@ -11,7 +11,6 @@ local containers 			= require("containers")
 local params 				= {}
 
 require("hof_foodrecipes")
-require("hof_foodrecipes_optional")
 require("hof_foodrecipes_keg")
 require("hof_foodrecipes_jar")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

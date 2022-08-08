@@ -70,6 +70,7 @@ AddIngredientValues({"kyno_milk_beefalo"},		{dairy=0.5,		rawmilk=1})
 AddIngredientValues({"kyno_milk_koalefant"},	{dairy=1,		rawmilk=1})
 AddIngredientValues({"kyno_milk_deer"},			{dairy=0.5,		rawmilk=1})
 AddIngredientValues({"kyno_milk_spat"},			{dairy=1,		rawmilk=1})
+AddIngredientValues({"kyno_sugarflywings"},     {decoration=2})
 AddIngredientValues({"cheese_yellow"},			{dairy=1,		cheese=1})
 AddIngredientValues({"cheese_white"},			{dairy=1,		cheese=1})
 AddIngredientValues({"cheese_koalefant"},		{dairy=1,		cheese=1})
@@ -166,49 +167,24 @@ for k,v in pairs(cookbook_icons) do
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Import The Foods.
-local XMAS_FOODS = GetModConfigData("HOF_EXTRAFOODS")
-if XMAS_FOODS == 1 then
-	for k, v in pairs(require("hof_foodrecipes_optional")) do
-		if not v.tags then
-			AddCookerRecipe("cookpot",             					v)
-			AddCookerRecipe("archive_cookpot",     	     			v)
-			AddCookerRecipe("kyno_cookware_syrup", 	     			v)
-			AddCookerRecipe("kyno_cookware_small", 	     			v)
-			AddCookerRecipe("kyno_cookware_big",   		 			v)
-			AddCookerRecipe("kyno_cookware_elder",         		 	v)
-			AddCookerRecipe("kyno_cookware_small_grill", 			v)
-			AddCookerRecipe("kyno_cookware_grill", 		 			v)
-			AddCookerRecipe("kyno_cookware_oven_small_casserole", 	v)
-			AddCookerRecipe("kyno_cookware_oven_casserole", 		v)
-		end
-		AddCookerRecipe("portablecookpot",         					v)
+for k, v in pairs(require("hof_foodrecipes")) do
+	if not v.tags then
+		AddCookerRecipe("cookpot",             					v)
+		AddCookerRecipe("archive_cookpot",     					v)
+		AddCookerRecipe("kyno_cookware_syrup", 					v)
+		AddCookerRecipe("kyno_cookware_small", 					v)
+		AddCookerRecipe("kyno_cookware_big",   					v)
+		AddCookerRecipe("kyno_cookware_elder",          		v)
+		AddCookerRecipe("kyno_cookware_small_grill", 			v)
+		AddCookerRecipe("kyno_cookware_grill", 		 			v)
+		AddCookerRecipe("kyno_cookware_oven_small_casserole", 	v)
+		AddCookerRecipe("kyno_cookware_oven_casserole", 		v)
 	end
+	AddCookerRecipe("portablecookpot",         					v)
+end
 
-	for k, v in pairs(require("hof_foodspicer_optional")) do
-		AddCookerRecipe("portablespicer",          					v)
-	end
-	
-else -- Do Not Import Winter's Feast Foods.
-
-	for k, v in pairs(require("hof_foodrecipes")) do
-		if not v.tags then
-			AddCookerRecipe("cookpot",             					v)
-			AddCookerRecipe("archive_cookpot",     					v)
-			AddCookerRecipe("kyno_cookware_syrup", 					v)
-			AddCookerRecipe("kyno_cookware_small", 					v)
-			AddCookerRecipe("kyno_cookware_big",   					v)
-			AddCookerRecipe("kyno_cookware_elder",          		v)
-			AddCookerRecipe("kyno_cookware_small_grill", 			v)
-			AddCookerRecipe("kyno_cookware_grill", 		 			v)
-			AddCookerRecipe("kyno_cookware_oven_small_casserole", 	v)
-			AddCookerRecipe("kyno_cookware_oven_casserole", 		v)
-		end
-		AddCookerRecipe("portablecookpot",         					v)
-	end
-
-	for k, v in pairs(require("hof_foodspicer")) do
-		AddCookerRecipe("portablespicer",          					v)
-	end
+for k, v in pairs(require("hof_foodspicer")) do
+	AddCookerRecipe("portablespicer",          					v)
 end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Spiced Foods and Potlevel.
@@ -263,37 +239,6 @@ local kynofoods =
 	nettlelosange 			= require("hof_foodrecipes").nettlelosange,
 	snakebonesoup 			= require("hof_foodrecipes").snakebonesoup,
 	steamedhamsandwich 		= require("hof_foodrecipes").steamedhamsandwich,
-	
-	-- Unimplemented.
-	bubbletea 				= require("hof_foodrecipes").bubbletea,
-	frenchonionsoup 		= require("hof_foodrecipes").frenchonionsoup,
-	slaw 					= require("hof_foodrecipes").slaw,
-	lotusbowl 				= require("hof_foodrecipes").lotusbowl,
-	poi 					= require("hof_foodrecipes").poi,
-	jellybean_sanity 		= require("hof_foodrecipes").jellybean_sanity,
-	jellybean_hunger 		= require("hof_foodrecipes").jellybean_hunger,
-	jellybean_super 		= require("hof_foodrecipes").jellybean_super,
-	cucumbersalad 			= require("hof_foodrecipes").cucumbersalad,
-	waterycressbowl 		= require("hof_foodrecipes").waterycressbowl,
-	
-	-- Secret / Custom.
-	bowlofgears 			= require("hof_foodrecipes").bowlofgears,
-	longpigmeal 			= require("hof_foodrecipes").longpigmeal,
-	duckyouglermz 			= require("hof_foodrecipes").duckyouglermz,
-	catfood 				= require("hof_foodrecipes").catfood,
-	katfood 				= require("hof_foodrecipes").katfood,
-	bowlofpopcorn			= require("hof_foodrecipes").bowlofpopcorn,
-	figjuice                = require("hof_foodrecipes").figjuice,
-	coconutwater            = require("hof_foodrecipes").coconutwater,
-	eyeballsoup             = require("hof_foodrecipes").eyeballsoup,
-	soulstew             	= require("hof_foodrecipes").soulstew,
-	fortunecookie			= require("hof_foodrecipes").fortunecookie,
-	hornocupia				= require("hof_foodrecipes").hornocupia,
-	cheese_yellow			= require("hof_foodrecipes").cheese_yellow,
-	cheese_white 			= require("hof_foodrecipes").cheese_white,
-	cheese_koalefant		= require("hof_foodrecipes").cheese_koalefant,
-	milk_box				= require("hof_foodrecipes").milk_box,
-	watercup				= require("hof_foodrecipes").watercup,
 	
 	-- The Gorge.
 	gorge_bread 			= require("hof_foodrecipes").gorge_bread,
@@ -362,24 +307,55 @@ local kynofoods =
 	kyno_syrup 				= require("hof_foodrecipes").kyno_syrup,
 	
 	-- Winter's Feast. 
-	festive_berrysauce 		= require("hof_foodrecipes_optional").festive_berrysauce,
-	festive_bibingka 		= require("hof_foodrecipes_optional").festive_bibingka,
-	festive_cabbagerolls 	= require("hof_foodrecipes_optional").festive_cabbagerolls,
-	festive_fishdish 		= require("hof_foodrecipes_optional").festive_fishdish,
-	festive_goodgravy 		= require("hof_foodrecipes_optional").festive_goodgravy,
-	festive_latkes 			= require("hof_foodrecipes_optional").festive_latkes,
-	festive_lutefisk 		= require("hof_foodrecipes_optional").festive_lutefisk,
-	festive_mulledpunch 	= require("hof_foodrecipes_optional").festive_mulledpunch,
-	festive_panettone 		= require("hof_foodrecipes_optional").festive_panettone,
-	festive_pavlova 		= require("hof_foodrecipes_optional").festive_pavlova,
-	festive_pickledherring 	= require("hof_foodrecipes_optional").festive_pickledherring,
-	festive_polishcookies 	= require("hof_foodrecipes_optional").festive_polishcookies,
-	festive_pumpkinpie 		= require("hof_foodrecipes_optional").festive_pumpkinpie,
-	festive_roastedturkey 	= require("hof_foodrecipes_optional").festive_roastedturkey,
-	festive_stuffing 		= require("hof_foodrecipes_optional").festive_stuffing,
-	festive_sweetpotato 	= require("hof_foodrecipes_optional").festive_sweetpotato,
-	festive_tamales 		= require("hof_foodrecipes_optional").festive_tamales,
-	festive_tourtiere 		= require("hof_foodrecipes_optional").festive_tourtiere,
+	festive_berrysauce 		= require("hof_foodrecipes").festive_berrysauce,
+	festive_bibingka 		= require("hof_foodrecipes").festive_bibingka,
+	festive_cabbagerolls 	= require("hof_foodrecipes").festive_cabbagerolls,
+	festive_fishdish 		= require("hof_foodrecipes").festive_fishdish,
+	festive_goodgravy 		= require("hof_foodrecipes").festive_goodgravy,
+	festive_latkes 			= require("hof_foodrecipes").festive_latkes,
+	festive_lutefisk 		= require("hof_foodrecipes").festive_lutefisk,
+	festive_mulledpunch 	= require("hof_foodrecipes").festive_mulledpunch,
+	festive_panettone 		= require("hof_foodrecipes").festive_panettone,
+	festive_pavlova 		= require("hof_foodrecipes").festive_pavlova,
+	festive_pickledherring 	= require("hof_foodrecipes").festive_pickledherring,
+	festive_polishcookies 	= require("hof_foodrecipes").festive_polishcookies,
+	festive_pumpkinpie 		= require("hof_foodrecipes").festive_pumpkinpie,
+	festive_roastedturkey 	= require("hof_foodrecipes").festive_roastedturkey,
+	festive_stuffing 		= require("hof_foodrecipes").festive_stuffing,
+	festive_sweetpotato 	= require("hof_foodrecipes").festive_sweetpotato,
+	festive_tamales 		= require("hof_foodrecipes").festive_tamales,
+	festive_tourtiere 		= require("hof_foodrecipes").festive_tourtiere,
+	
+	-- Unimplemented.
+	bubbletea 				= require("hof_foodrecipes").bubbletea,
+	frenchonionsoup 		= require("hof_foodrecipes").frenchonionsoup,
+	slaw 					= require("hof_foodrecipes").slaw,
+	lotusbowl 				= require("hof_foodrecipes").lotusbowl,
+	poi 					= require("hof_foodrecipes").poi,
+	jellybean_sanity 		= require("hof_foodrecipes").jellybean_sanity,
+	jellybean_hunger 		= require("hof_foodrecipes").jellybean_hunger,
+	jellybean_super 		= require("hof_foodrecipes").jellybean_super,
+	cucumbersalad 			= require("hof_foodrecipes").cucumbersalad,
+	waterycressbowl 		= require("hof_foodrecipes").waterycressbowl,
+	
+	-- Secret / Custom.
+	bowlofgears 			= require("hof_foodrecipes").bowlofgears,
+	longpigmeal 			= require("hof_foodrecipes").longpigmeal,
+	duckyouglermz 			= require("hof_foodrecipes").duckyouglermz,
+	catfood 				= require("hof_foodrecipes").catfood,
+	katfood 				= require("hof_foodrecipes").katfood,
+	bowlofpopcorn			= require("hof_foodrecipes").bowlofpopcorn,
+	figjuice                = require("hof_foodrecipes").figjuice,
+	coconutwater            = require("hof_foodrecipes").coconutwater,
+	eyeballsoup             = require("hof_foodrecipes").eyeballsoup,
+	soulstew             	= require("hof_foodrecipes").soulstew,
+	fortunecookie			= require("hof_foodrecipes").fortunecookie,
+	hornocupia				= require("hof_foodrecipes").hornocupia,
+	cheese_yellow			= require("hof_foodrecipes").cheese_yellow,
+	cheese_white 			= require("hof_foodrecipes").cheese_white,
+	cheese_koalefant		= require("hof_foodrecipes").cheese_koalefant,
+	milk_box				= require("hof_foodrecipes").milk_box,
+	watercup				= require("hof_foodrecipes").watercup,
 }
 
 kynofoods.coffee.potlevel 					= "med"
@@ -399,15 +375,6 @@ kynofoods.tea.potlevel 						= "med"
 kynofoods.nettlelosange.potlevel 			= "med"
 kynofoods.snakebonesoup.potlevel 			= "med"
 kynofoods.steamedhamsandwich.potlevel 		= "med"
-
-kynofoods.bubbletea.potlevel 				= "med"
-kynofoods.frenchonionsoup.potlevel 			= "med"
-kynofoods.slaw.potlevel						= "high"
-kynofoods.lotusbowl.potlevel 				= "med"
-kynofoods.poi.potlevel 						= "med"
-kynofoods.jellybean_sanity.potlevel 		= "med"
-kynofoods.jellybean_hunger.potlevel 		= "med"
-kynofoods.jellybean_super.potlevel 			= "med"
 
 kynofoods.gorge_bread.potlevel 				= "med"
 kynofoods.gorge_potato_chips.potlevel 		= "med"
@@ -474,6 +441,34 @@ kynofoods.gorge_trifle.potlevel 			= "med"
 kynofoods.gorge_cheesecake.potlevel 		= "med"
 kynofoods.kyno_syrup.potlevel 				= "med"
 
+kynofoods.festive_berrysauce.potlevel 		= "med"
+kynofoods.festive_bibingka.potlevel 		= "med"
+kynofoods.festive_cabbagerolls.potlevel 	= "med"
+kynofoods.festive_fishdish.potlevel 		= "med"
+kynofoods.festive_goodgravy.potlevel 		= "med"
+kynofoods.festive_latkes.potlevel 			= "med"
+kynofoods.festive_lutefisk.potlevel 		= "med"
+kynofoods.festive_mulledpunch.potlevel 		= "med"
+kynofoods.festive_panettone.potlevel 		= "med"
+kynofoods.festive_pavlova.potlevel 			= "med"
+kynofoods.festive_pickledherring.potlevel 	= "med"
+kynofoods.festive_polishcookies.potlevel 	= "med"
+kynofoods.festive_pumpkinpie.potlevel 		= "med"
+kynofoods.festive_roastedturkey.potlevel 	= "med"
+kynofoods.festive_stuffing.potlevel 		= "med"
+kynofoods.festive_sweetpotato.potlevel 		= "med"
+kynofoods.festive_tamales.potlevel 			= "med"
+kynofoods.festive_tourtiere.potlevel 		= "med"
+
+kynofoods.bubbletea.potlevel 				= "med"
+kynofoods.frenchonionsoup.potlevel 			= "med"
+kynofoods.slaw.potlevel						= "high"
+kynofoods.lotusbowl.potlevel 				= "med"
+kynofoods.poi.potlevel 						= "med"
+kynofoods.jellybean_sanity.potlevel 		= "med"
+kynofoods.jellybean_hunger.potlevel 		= "med"
+kynofoods.jellybean_super.potlevel 			= "med"
+
 kynofoods.bowlofgears.potlevel 				= "med"
 kynofoods.longpigmeal.potlevel 				= "med"
 kynofoods.duckyouglermz.potlevel 			= "med"
@@ -493,25 +488,6 @@ kynofoods.cheese_white						= "med"
 kynofoods.cheese_koalefant					= "med"
 kynofoods.milk_box 							= "med"
 kynofoods.watercup.potlevel 				= "med"
-
-kynofoods.festive_berrysauce.potlevel 		= "med"
-kynofoods.festive_bibingka.potlevel 		= "med"
-kynofoods.festive_cabbagerolls.potlevel 	= "med"
-kynofoods.festive_fishdish.potlevel 		= "med"
-kynofoods.festive_goodgravy.potlevel 		= "med"
-kynofoods.festive_latkes.potlevel 			= "med"
-kynofoods.festive_lutefisk.potlevel 		= "med"
-kynofoods.festive_mulledpunch.potlevel 		= "med"
-kynofoods.festive_panettone.potlevel 		= "med"
-kynofoods.festive_pavlova.potlevel 			= "med"
-kynofoods.festive_pickledherring.potlevel 	= "med"
-kynofoods.festive_polishcookies.potlevel 	= "med"
-kynofoods.festive_pumpkinpie.potlevel 		= "med"
-kynofoods.festive_roastedturkey.potlevel 	= "med"
-kynofoods.festive_stuffing.potlevel 		= "med"
-kynofoods.festive_sweetpotato.potlevel 		= "med"
-kynofoods.festive_tamales.potlevel 			= "med"
-kynofoods.festive_tourtiere.potlevel 		= "med"
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Fix For Food On Stations.
 local cookerstations = {

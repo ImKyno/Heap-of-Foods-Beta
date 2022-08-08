@@ -55,7 +55,7 @@ local function fn()
 	inst.AnimState:SetScale(1.2, 1.2, 1.2)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("kyno_waterycress_ocean.tex")
+	minimap:SetIcon("kyno_waterycress.tex")
 
     MakeInventoryPhysics(inst, nil, 0.7)
 

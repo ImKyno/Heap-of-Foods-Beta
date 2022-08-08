@@ -141,8 +141,12 @@ end
 
 local function SpoilFn(inst)
     if not inst:HasTag("burnt") then
-        inst.components.brewer.product = inst.components.brewer.spoiledproduct
-        SetProductSymbol(inst, inst.components.brewer.product)
+        -- inst.components.brewer.product = inst.components.brewer.spoiledproduct
+		inst.components.brewer.spoiltime = 1
+		inst.components.brewer.targettime = GetTime()
+		inst.components.brewer.product_spoilage = 0
+		
+		SetProductSymbol(inst, inst.components.brewer.product)
     end
 end
 

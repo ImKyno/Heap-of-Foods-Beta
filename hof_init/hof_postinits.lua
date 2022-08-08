@@ -639,11 +639,6 @@ if KEEP_FOOD_K == 1 then
         "kyno_cookware_oven_casserole",
     }
 
-    local brewing_stations = {
-        "kyno_woodenkeg",
-        "kyno_preservesjar",
-    }
-
     for k,v in pairs(cooking_stations) do
         AddPrefabPostInit(v, function(inst)
             if inst.components.stewer then
@@ -651,18 +646,6 @@ if KEEP_FOOD_K == 1 then
                     inst.components.stewer.spoiltime = 1
                     inst.components.stewer.targettime = _G.GetTime()
                     inst.components.stewer.product_spoilage = 0
-                end
-            end
-        end)
-    end
-
-    for k,v in pairs(brewing_stations) do
-        AddPrefabPostInit(v, function(inst)
-            if inst.components.brewer then
-                inst.components.brewer.onspoil = function()
-                    inst.components.brewer.spoiltime = 1
-                    inst.components.brewer.targettime = _G.GetTime()
-                    inst.components.brewer.product_spoilage = 0
                 end
             end
         end)
@@ -1256,6 +1239,10 @@ end
 VanillaFood.bananajuice.test = function(cooker, names, tags)
     return ((names.cave_banana or names.kyno_banana or 0) + (names.cave_banana_cooked or names.kyno_banana_cooked or 0) >= 2)
 end
+
+VanillaFood.butterflymuffin.test = function(cooker, names, tags)
+	return (names.butterflywings or names.moonbutterflywings or names.kyno_sugarflywings) and not tags.meat and tags.veggie and tags.veggie >= 0.5
+end 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Splumonkeys and Splumonkey Pods drops Bananas.
 AddPrefabPostInit("monkey", function(inst)
@@ -1833,6 +1820,15 @@ for k,v in pairs(new_bananas) do
         inst:AddTag("monkeyqueenbribe")
     end)
 end
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Make Sugarfly spawn on the Serenity Archipelago.
+AddPrefabPostInit("forest", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("sugarflyspawner")
+end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Make every "same" recipe has the same quotes.
 local jelly_foods = {

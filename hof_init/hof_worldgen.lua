@@ -1,12 +1,14 @@
 -- Common Dependencies.
-local _G 			= GLOBAL
-local require 		= _G.require
-local GROUND 		= _G.GROUND
+local _G 			       = GLOBAL
+local require 		       = _G.require
+local GROUND 		       = _G.GROUND
 
 require("map/terrain")
 
-TUNING.HOF_RESOURCES = .06
-local TERRAIN_FILTERS = {_G.WORLD_TILES.ROAD, _G.WORLD_TILES.WOODFLOOR, _G.WORLD_TILES.CARPET, _G.WORLD_TILES.CHECKER}
+TUNING.HOF_RESOURCES       = .06
+
+local TERRAIN_FILTERS      = {_G.WORLD_TILES.ROAD, _G.WORLD_TILES.WOODFLOOR, _G.WORLD_TILES.CARPET, _G.WORLD_TILES.CHECKER}
+local OCEANSETPIECE_COUNT  = GetModConfigData("HOF_OCEANSETPIECE_COUNT")
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Prefab Rooms.
 local AloeRooms = {
@@ -349,6 +351,12 @@ AddTaskSetPreInitAny(function(tasksetdata)
         return
     end
     
-	tasksetdata.ocean_prefill_setpieces["hof_serenityisland1"] = { count = 1 } 
+	tasksetdata.ocean_prefill_setpieces["hof_serenityisland1"]           = { count = 1 } 
+	-- I will let the players decide how many they want.
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates"]      = { count = OCEANSETPIECE_COUNT }
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates2"]     = { count = OCEANSETPIECE_COUNT }
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_waterycress"] = { count = OCEANSETPIECE_COUNT }
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_taroroot"]    = { count = OCEANSETPIECE_COUNT }
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_seaweeds"]    = { count = OCEANSETPIECE_COUNT }
 end)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

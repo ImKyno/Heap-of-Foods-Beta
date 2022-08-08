@@ -66,7 +66,7 @@ local function onpickedfn(inst, picker)
         TheWorld:PushEvent("beginregrowth", inst)
     end
 
-    TheWorld:PushEvent("plantkilled", { doer = picker, pos = pos }) --this event is pushed in other places too
+    TheWorld:PushEvent("plantkilled", { doer = picker, pos = pos })
 end
 
 local function OnBurnt(inst)
@@ -74,6 +74,26 @@ local function OnBurnt(inst)
 		TheWorld:PushEvent("beginregrowth", inst)
 	end
     DefaultBurntFn(inst)
+end
+
+local FINDLIGHT_MUST_TAGS = { "daylight", "lightsource" }
+local function DieInDarkness(inst)
+    local x,y,z = inst.Transform:GetWorldPosition()
+    local ents = TheSim:FindEntities(x,0,z, TUNING.DAYLIGHT_SEARCH_RANGE, FINDLIGHT_MUST_TAGS)
+    for i,v in ipairs(ents) do
+        local lightrad = v.Light:GetCalculatedRadius() * .7
+        if v:GetDistanceSqToPoint(x,y,z) < lightrad * lightrad then
+            return
+        end
+    end
+    inst:Remove()
+    SpawnPrefab("flower_withered").Transform:SetPosition(x,y,z)
+end
+
+local function OnIsCaveDay(inst, isday)
+    if isday then
+        inst:DoTaskInTime(5.0 + math.random()* 5.0, DieInDarkness)
+    end
 end
 
 local function OnSave(inst, data)
@@ -151,7 +171,7 @@ local function flowerfn()
 	inst.AnimState:PlayAnimation("idle_flower", false)
     inst.AnimState:SetRayTestOnBB(true)
 
-    inst:AddTag("flower")
+    -- inst:AddTag("flower")
 	inst:AddTag("sugarflower")
     inst:AddTag("cattoy")
 
@@ -175,6 +195,10 @@ local function flowerfn()
     inst.components.burnable:SetOnBurntFn(OnBurnt)
     MakeSmallPropagator(inst)
 	
+	if TheWorld:HasTag("cave") then
+        inst:WatchWorldState("iscaveday", OnIsCaveDay)
+    end
+	
 	inst.OnSave	= OnSave
 	inst.OnLoad = OnLoad
 
@@ -196,7 +220,6 @@ local function petalsfn()
 	inst.AnimState:SetBuild("kyno_serenityisland_bud")
 	inst.AnimState:PlayAnimation("idle_flower", false)
 	
-	inst:AddTag("sugarflower")
 	inst:AddTag("show_spoilage")
 	inst:AddTag("cattoy")
 

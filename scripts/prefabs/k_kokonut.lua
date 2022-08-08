@@ -15,7 +15,7 @@ local prefabs =
 	"kyno_kokonuttree_sapling",
 }
 
-local function plant(inst, growtime)
+local function OnPlant(inst, growtime)
     local sapling = SpawnPrefab("kyno_kokonuttree_sapling")
     sapling:StartGrowing()
     sapling.Transform:SetPosition(inst.Transform:GetWorldPosition())
@@ -24,11 +24,11 @@ local function plant(inst, growtime)
 end
 
 local LEIF_TAGS = { "leif" }
-local function ondeploy(inst, pt, deployer)
+local function OnDeploy(inst, pt, deployer)
     inst = inst.components.stackable:Get()
     inst.Physics:Teleport(pt:Get())
     local timeToGrow = GetRandomWithVariance(TUNING.PINECONE_GROWTIME.base, TUNING.PINECONE_GROWTIME.random)
-    plant(inst, timeToGrow)
+    OnPlant(inst, timeToGrow)
 
     local ents = TheSim:FindEntities(pt.x, pt.y, pt.z, TUNING.LEIF_PINECONE_CHILL_RADIUS, LEIF_TAGS)
 
@@ -51,17 +51,17 @@ local function ondeploy(inst, pt, deployer)
     end
 end
 
-local function onchopped(inst)
+local function OnChopped(inst, worker)
     local kokonut = inst 
     if inst.components.inventoryitem then 
-        local owner = inst.components.inventoryitem.owner
+		local owner = inst.components.inventoryitem.owner
         if inst.components.stackable and inst.components.stackable.stacksize > 1 then 
             kokonut = inst.components.stackable:Get()
             inst.components.workable:SetWorkLeft(1)
         end 
         if owner then 
             local cracked = SpawnPrefab("kyno_kokonut_halved")
-            cracked.components.stackable.stacksize = 2
+			cracked.components.stackable.stacksize = 2
             if owner.components.inventory and not owner.components.inventory:IsFull() then
                 owner.components.inventory:GiveItem(cracked)
             elseif owner.components.container and not owner.components.container:IsFull() then
@@ -73,14 +73,14 @@ local function onchopped(inst)
             inst.components.lootdropper:SpawnLootPrefab("kyno_kokonut_halved")
             inst.components.lootdropper:SpawnLootPrefab("kyno_kokonut_halved")
         end 
-        inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
+        worker.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree") -- inst.
     end
     kokonut:Remove()
 end 
 
 local function OnLoad(inst, data)
     if data ~= nil and data.growtime ~= nil then
-        plant(inst, data.growtime)
+        OnPlant(inst, data.growtime)
     end
 end
 
@@ -126,7 +126,7 @@ local function kokonut()
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
     inst.components.workable:SetWorkLeft(1)
-    inst.components.workable:SetOnFinishCallback(onchopped)
+    inst.components.workable:SetOnFinishCallback(OnChopped)
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -137,7 +137,7 @@ local function kokonut()
 	
 	inst:AddComponent("deployable")
 	inst.components.deployable:SetDeployMode(DEPLOYMODE.PLANT)
-	inst.components.deployable.ondeploy = ondeploy
+	inst.components.deployable.ondeploy = OnDeploy
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

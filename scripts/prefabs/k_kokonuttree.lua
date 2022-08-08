@@ -171,6 +171,7 @@ local function tree_fn()
 	end
 	
 	inst:AddTag("plant")
+	inst:AddTag("tree")
 	inst:AddTag("kokonuttree")
 
     inst.entity:SetPristine()

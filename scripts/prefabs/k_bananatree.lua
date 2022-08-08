@@ -135,6 +135,7 @@ local function tree_fn()
     inst.AnimState:PlayAnimation("idle_loop", true)
 	
 	inst:AddTag("plant")
+	inst:AddTag("tree")
 	inst:AddTag("realbananatree")
 
     inst.entity:SetPristine()

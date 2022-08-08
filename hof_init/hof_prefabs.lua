@@ -70,6 +70,8 @@ PrefabFiles =
 	"k_serenityisland_spawners",
 	"k_serenityisland_decor",
 	"k_serenityisland_crate",
+	"k_serenityisland_sugarfly",
+	"k_serenityisland_sugarflywings",
 	"k_chicken2",
 	"k_chicken2_herd",
 	"k_chicken2_eggs",
@@ -92,5 +94,6 @@ PrefabFiles =
 	"k_brewers",
 	"k_brewbook",
 	"k_product_bubble",
+	"k_ocean_wreck",
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

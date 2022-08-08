@@ -3,7 +3,7 @@ local foodrecipes =
 	"preparedfoods",
 	"preparednonfoods",
 	"hof_foodrecipes",
-	"hof_foodrecipes_optional",
+	-- "hof_foodrecipes_optional",
 }
 
 for k, v in pairs(foodrecipes) do
