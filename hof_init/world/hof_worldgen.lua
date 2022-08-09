@@ -9,7 +9,7 @@ TUNING.HOF_RESOURCES       = .06
 
 local TERRAIN_FILTERS      = {_G.WORLD_TILES.ROAD, _G.WORLD_TILES.WOODFLOOR, _G.WORLD_TILES.CARPET, _G.WORLD_TILES.CHECKER}
 local OCEANSETPIECE_COUNT  = GetModConfigData("HOF_OCEANSETPIECE_COUNT")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Prefab Rooms.
 local AloeRooms = {
 	"BGGrass",
@@ -196,7 +196,7 @@ local AspargosCaveRooms = {
 	"BGSinkhole",
 	"BGSinkholeRoom",
 }
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Add the Prefabs to the world.
 for k, v in pairs(AloeRooms) do
 	AddRoomPreInit(v, function(room)
@@ -344,7 +344,7 @@ for k, v in pairs(AspargosCaveRooms) do
 	end)
 end
 _G.terrain.filter.kyno_aspargos_cave							= TERRAIN_FILTERS
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Add the Serenity Archipelago to the world. Not using this, because the CC thingie doesn't work properly!!
 AddTaskSetPreInitAny(function(tasksetdata)
     if tasksetdata.location ~= "forest" then
@@ -359,4 +359,3 @@ AddTaskSetPreInitAny(function(tasksetdata)
 	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_taroroot"]    = { count = OCEANSETPIECE_COUNT }
 	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_seaweeds"]    = { count = OCEANSETPIECE_COUNT }
 end)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

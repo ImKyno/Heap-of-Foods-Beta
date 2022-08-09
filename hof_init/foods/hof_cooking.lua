@@ -1,11 +1,10 @@
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Common Dependencies.
 local _G 					= GLOBAL
 local require 				= _G.require
 
 require("cooking")
 require("hof_constants")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- New Vanilla Crock Pot Ingredients.
 AddIngredientValues({"slurtle_shellpieces"}, 	{inedible=1, 	elemental=1,	  shell=1})
 AddIngredientValues({"rabbit"}, 				{rabbit=1})
@@ -16,12 +15,13 @@ AddIngredientValues({"robin_winter"}, 			{robin_winter=1})
 AddIngredientValues({"petals"}, 				{veggie=0.5})
 AddIngredientValues({"gears"}, 					{gears=1,		inedible=1})
 AddIngredientValues({"rocks"}, 					{rocks=1, 		elemental=1,   inedible=1})
-AddIngredientValues({"poop"}, 					{poop=1, 		glermz=1,	   inedible=1})
-AddIngredientValues({"guano"}, 					{poop=1, 		glermz=1,	   inedible=1})
-AddIngredientValues({"glommerfuel"}, 			{poop=1, 		glermz=1,	   inedible=1})
+AddIngredientValues({"poop"}, 					{poop=1, 		inedible=1})
+AddIngredientValues({"guano"}, 					{poop=1, 		inedible=1})
+AddIngredientValues({"glommerfuel"}, 			{poop=1, 		inedible=1})
 AddIngredientValues({"papyrus"},				{paper=1})
 AddIngredientValues({"deerclops_eyeball"},      {inedible=1, 	boss=1})
 AddIngredientValues({"horn"},					{horn=1})
+
 -- New Mod Crock Pot Ingredients.
 AddIngredientValues({"kyno_coffeebeans"}, 		{seeds=1}, 	 		  				  true)
 AddIngredientValues({"kyno_shark_fin"}, 		{fish=1})
@@ -75,7 +75,7 @@ AddIngredientValues({"cheese_yellow"},			{dairy=1,		cheese=1})
 AddIngredientValues({"cheese_white"},			{dairy=1,		cheese=1})
 AddIngredientValues({"cheese_koalefant"},		{dairy=1,		cheese=1})
 AddIngredientValues({"milk_box"},				{dairy=2})
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Icons For Cookbook.
 local cookbook_icons = 
 {
@@ -165,7 +165,7 @@ local cookbook_icons =
 for k,v in pairs(cookbook_icons) do
 	RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", v)
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Import The Foods.
 for k, v in pairs(require("hof_foodrecipes")) do
 	if not v.tags then
@@ -186,7 +186,7 @@ end
 for k, v in pairs(require("hof_foodspicer")) do
 	AddCookerRecipe("portablespicer",          					v)
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Fix For Spiced Foods and Potlevel.
 local spices  = 
 { 
@@ -488,7 +488,7 @@ kynofoods.cheese_white						= "med"
 kynofoods.cheese_koalefant					= "med"
 kynofoods.milk_box 							= "med"
 kynofoods.watercup.potlevel 				= "med"
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Fix For Food On Stations.
 local cookerstations = {
 	"cookpot",
@@ -522,4 +522,3 @@ for name, recipe in pairs(kynofoods) do
 		end)
 	end
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

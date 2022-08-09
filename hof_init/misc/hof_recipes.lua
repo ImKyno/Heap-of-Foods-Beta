@@ -1,4 +1,3 @@
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Common Dependencies.
 local _G            = GLOBAL
 local TECH 			= _G.TECH
@@ -9,7 +8,7 @@ local Recipe 		= _G.Recipe
 local Recipe2 		= _G.Recipe2
 local TechTree 		= require("techtree")
 local RecipeFilter	= require("recipes_filter")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- For sorting recipe.
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 local function SortRecipe(a, b, filter_name, offset)
@@ -41,7 +40,7 @@ end
 local function SortAfter(a, b, filter_name)
     SortRecipe(a, b, filter_name, 1)
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Custom TechTree for Mealing Stone.
 table.insert(TechTree.AVAILABLE_TECH, "MEALING")
 table.insert(TechTree.AVAILABLE_TECH, "SERENITYSHOP")
@@ -93,7 +92,7 @@ for i, v in pairs(_G.AllRecipes) do
 		v.level.SERENITYSHOP = 0
 	end
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Custom Prototyper and Recipe Filters.
 AddPrototyperDef("kyno_mealgrinder", 
 	{ 
@@ -114,7 +113,7 @@ AddPrototyperDef("kyno_serenityisland_shop",
 		filter_text			= "Elder's Supplies",
 	}
 )
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Ingredient and Structures Recipes.
 local DefaultAtlas 			= "images/inventoryimages.xml"
 local ModAtlas     			= "images/inventoryimages/hof_inventoryimages.xml"
@@ -223,7 +222,7 @@ local KynBrewbook			= AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ing
 )
 SortAfter("kyno_brewbook", "cookbook", "COOKING")
 
-local KynKeg				= AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 4), Ingredient("rope", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
+local KynKeg				= AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 4), Ingredient("rope", 2), Ingredient("nitre", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
 	{
 		placer 				= "kyno_woodenkeg_placer", 
 		min_spacing			= 1, 
@@ -234,7 +233,7 @@ local KynKeg				= AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 4), Ingredi
 )
 SortAfter("kyno_woodenkeg", "cookpot", "COOKING")
 
-local KynJar				= AddRecipe2("kyno_preservesjar", {Ingredient("boards", 4), Ingredient("rope", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
+local KynJar				= AddRecipe2("kyno_preservesjar", {Ingredient("boards", 4), Ingredient("rope", 2), Ingredient("nitre", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
 	{
 		placer 				= "kyno_preservesjar_placer", 
 		min_spacing			= 1, 
@@ -244,7 +243,7 @@ local KynJar				= AddRecipe2("kyno_preservesjar", {Ingredient("boards", 4), Ingr
 	{"COOKING"}
 )
 SortAfter("kyno_preservesjar", "kyno_woodenkeg", "COOKING")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Pig Elder Shop.
 local KynSaltRack 			= AddRecipe2("kyno_saltrack_installer_p", {Ingredient("kyno_salmonfish", 2, ModAtlas)}, TECH.SERENITYSHOP_ONE, 
 	{
@@ -531,7 +530,7 @@ local KynElderTurf2			= AddRecipe2("turf_stonecity_p", {Ingredient("cutstone", 1
 	},
 	{"CRAFTING_STATION"}
 )
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 local WARLY_MEALGRINDER = GetModConfigData("HOF_WARLYMEALGRINDER")
 if WARLY_MEALGRINDER == 1 then
@@ -587,7 +586,7 @@ if WARLY_MEALGRINDER == 1 then
 		{"CRAFTING_STATION"}
 	)
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Replace the Bucket-o-Poop recipe with ours.
 local BUCKETPOOPTWEAK = GetModConfigData("HOF_FERTILIZERTWEAK")
 if BUCKETPOOPTWEAK == 1 then
@@ -599,4 +598,3 @@ if BUCKETPOOPTWEAK == 1 then
 		{"GARDENING"}
 	)
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

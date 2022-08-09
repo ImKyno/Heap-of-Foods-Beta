@@ -238,7 +238,7 @@ local function fn()
 	inst.components.named:PickNewName()
 
 	inst:AddComponent("lootdropper")
-	inst.components.lootdropper:SetLoot("boards")
+	inst.components.lootdropper:SetLoot({"boards", "boards", "kyno_limpets"})
 
 	SetType(inst, "random")
 	

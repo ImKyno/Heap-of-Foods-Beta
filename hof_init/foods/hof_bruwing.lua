@@ -1,11 +1,10 @@
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Common Dependencies.
 local _G 					= GLOBAL
 local require 				= _G.require
 
 require("hof_brewing")
 require("hof_constants")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- New Wooden Keg and Preserves Jar Ingredients.
 AddBrewingValues({"honey"},						{sweetener=1,	honey=1})
 AddBrewingValues({"honeycomb"},					{sweetener=1,	honeycomb=1})
@@ -67,7 +66,7 @@ AddBrewingValues({"kyno_fennel"},				{veggie=1, 		fennel=1})
 AddBrewingValues({"kyno_sugartree_petals"},		{sweetener=1,	sugarflower=1})
 AddBrewingValues({"kyno_chicken_egg"},			{egg=1,			chicken_egg=1})
 AddBrewingValues({"mayonnaise"},				{mayonnaise=1})
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Icons For Brewbook.
 local brewbook_icons = 
 {
@@ -112,7 +111,7 @@ local brewbook_icons =
 for k,v in pairs(brewbook_icons) do
 	RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", v)
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Import The Foods.
 for k, v in pairs(require("hof_foodrecipes_keg")) do
 	AddBrewerRecipe("kyno_woodenkeg", 			v)
@@ -121,4 +120,3 @@ end
 for k, v in pairs(require("hof_foodrecipes_jar")) do
 	AddBrewerRecipe("kyno_preservesjar", 		v)
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

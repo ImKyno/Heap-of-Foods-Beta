@@ -1,4 +1,3 @@
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Common Dependencies.
 local _G 					= GLOBAL
 local require 				= _G.require
@@ -13,7 +12,7 @@ local params 				= {}
 require("hof_foodrecipes")
 require("hof_foodrecipes_keg")
 require("hof_foodrecipes_jar")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Custom containers.
 local containers_widgetsetup_base = containers.widgetsetup
 function containers.widgetsetup(container, prefab, data, ...)
@@ -27,7 +26,7 @@ function containers.widgetsetup(container, prefab, data, ...)
         containers_widgetsetup_base(container, prefab, data, ...)
     end
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Syrup Pot.
 params.syrup_pot 			=
 {
@@ -52,7 +51,7 @@ params.syrup_pot 			=
 function params.syrup_pot.itemtestfn(container, item, slot)
     return item:HasTag("gourmet_sap") and not container.inst:HasTag("burnt")
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Small and Large Pot. (They use the same).
 params.cooking_pot 			=
 {
@@ -77,7 +76,7 @@ params.cooking_pot 			=
 function params.cooking_pot.itemtestfn(container, item, slot)
     return cooking.IsCookingIngredient(item.prefab) and not container.inst:HasTag("burnt")
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Wooden Keg and Preserves Jar. (They use the same).
 params.brewer 				=
 {
@@ -118,4 +117,3 @@ end
 function params.brewer.widget.buttoninfo.validfn(inst)
     return inst.replica.container ~= nil and inst.replica.container:IsFull()
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

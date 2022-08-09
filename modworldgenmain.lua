@@ -14,8 +14,8 @@ local StaticLayout   = require("map/static_layout")
 require("map/terrain")
 require("tilemanager")
 
-modimport("hof_init/hof_customize")
-modimport("hof_init/hof_worldgen")
+modimport("hof_init/world/hof_customize")
+modimport("hof_init/world/hof_worldgen")
 
 TUNING.HOF_RESOURCES = .08
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

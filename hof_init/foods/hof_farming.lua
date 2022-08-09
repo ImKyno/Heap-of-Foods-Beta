@@ -1,4 +1,3 @@
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- New Veggie System to match the R.W.Y.S update. Metatable Source: https://steamcommunity.com/workshop/filedetails/?id=2511339795
 local _G = GLOBAL
 
@@ -41,7 +40,7 @@ AddNewVeggie("kyno_parznip", 1, 6, 0, TUNING.PERISH_MED, 3, 18.5, 1, TUNING.PERI
 AddNewVeggie("kyno_turnip", 4, 9.375, 0, TUNING.PERISH_MED, 8, 18.5, 0, TUNING.PERISH_FAST, TUNING.SEED_CHANCE_UNCOMMON)
 AddNewVeggie("kyno_fennel", 1, 12.5, -5, TUNING.PERISH_MED, 3, 12.5, 5, TUNING.PERISH_FAST, TUNING.SEED_CHANCE_RARE)
 AddNewVeggie("kyno_aloe", 8, 9.375, 0, TUNING.PERISH_MED, 3, 12.5, 0, TUNING.PERISH_FAST, TUNING.SEED_CHANCE_RARE)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- New Farm Plants. Source: https://forums.kleientertainment.com/forums/topic/126286-template-adding-farm-plants-to-the-game/
 -- We're using a "re-skinned" version of the normal plants, because, uh, I suck at drawing.
 -- LIST: Aloe - Dragon Fruit | Fennel - Asparagus | Parsnip - Eggplant | Cucumber - Durian | Sweet Potato - Potato | Radish - Carrot 
@@ -661,7 +660,7 @@ PLANT_DEFS.kyno_turnip.plantregistryinfo = {
         hidden = true,
     },
 }
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Icons for the Plant Registry and Farm Plants.
 local old_GetInventoryItemAtlas = GetInventoryItemAtlas
 _G.GetInventoryItemAtlas = function(name, ...)
@@ -672,4 +671,3 @@ _G.GetInventoryItemAtlas = function(name, ...)
 
     return old_GetInventoryItemAtlas(name, ...)
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -2230,7 +2230,9 @@ return {
           width = 0,
           height = 0,
           visible = true,
-          properties = {}
+          properties = {
+		   ["data.savedrotation.rotation"] = "45"
+		  }
         },
         {
           name = "",
@@ -2252,7 +2254,9 @@ return {
           width = 0,
           height = 0,
           visible = true,
-          properties = {}
+          properties = {
+		   ["data.savedrotation.rotation"] = "30"
+		 }
         },
         {
           name = "",
@@ -2274,7 +2278,9 @@ return {
           width = 0,
           height = 0,
           visible = true,
-          properties = {}
+          properties = {
+		   ["data.savedrotation.rotation"] = "90"
+		 }
         },
         {
           name = "",
@@ -2285,7 +2291,9 @@ return {
           width = 0,
           height = 0,
           visible = true,
-          properties = {}
+          properties = {
+		  ["data.savedrotation.rotation"] = "60"
+		 }
         },
         {
           name = "",
@@ -2318,7 +2326,9 @@ return {
           width = 0,
           height = 0,
           visible = true,
-          properties = {}
+          properties = {
+		   ["data.savedrotation.rotation"] = "45"
+		  }
         },
         {
           name = "",
@@ -4485,7 +4495,9 @@ return {
           width = 0,
           height = 0,
           visible = true,
-          properties = {}
+          properties = {
+		   ["data.savedrotation.rotation"] = "45"
+		  }
         },
         {
           name = "",

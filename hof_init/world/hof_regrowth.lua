@@ -1,4 +1,3 @@
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Common Dependencies.
 local _G 				= GLOBAL
 local STRINGS 			= _G.STRINGS
@@ -8,7 +7,7 @@ local HALF_TILE_SCALE 	= TILE_SCALE / 2.0
 if not _G.TheNet:GetIsServer() then
     return
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Prefabs and Trackers.
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=2522835221
 -- All credtis to the original creator, I just implemented to here and updated, the original version is missing content.
@@ -145,7 +144,7 @@ if DO_REGROWTH == 1 then
 		deep_search(tilex, tiley)
 		return count
 	end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Prefabs that will regrow in the world.
 	if simpleregrowth.spawner_aloe_frequency > 0 then
 		AddPrefabTracker("kyno_aloe_ground", true)
@@ -421,7 +420,7 @@ if DO_REGROWTH == 1 then
 		}
 	end
 	]]--
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Prefab Spawners.
 	AddPrefabPostInit(STRINGS.NAMES.MIGRATION_PORTAL and "world" or "forest", function(ent)
 		if ent.ismastersim then
@@ -551,4 +550,3 @@ if DO_REGROWTH == 1 then
 		end
 	end)
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

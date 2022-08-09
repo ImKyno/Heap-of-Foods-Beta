@@ -1,4 +1,3 @@
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Common Dependencies.
 local _G 				= GLOBAL
 local require 			= _G.require
@@ -7,14 +6,14 @@ local STRINGS			= _G.STRINGS
 local ACTIONS 			= _G.ACTIONS
 local ActionHandler		= _G.ActionHandler
 local SpawnPrefab		= _G.SpawnPrefab
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Coffee Plant can be Only Fertilized by Ashes.
 AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions)
     if actions[1] == ACTIONS.FERTILIZE and inst:HasTag("coffeefertilizer2") ~= target:HasTag("kyno_coffeebush") then
         actions[1] = nil
     end
 end)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Action for the Salt.
 AddAction("SALT", STRINGS.ACTIONS.SALT, function(act)
 	local saltable = act.target and act.target.components.saltable or nil
@@ -33,7 +32,7 @@ AddComponentAction("USEITEM", "salter", function(inst, doer, target, actions)
 		table.insert(actions, ACTIONS.SALT)
 	end
 end)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Action for the Slaughter Tools.
 AddAction("FLAY", STRINGS.ACTIONS.FLAY, function(act)
 	if act.target and act.target.components.health and not act.target.components.health:IsDead() and act.target.components.lootdropper then
@@ -69,14 +68,14 @@ end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.FLAY, function(inst, action)
 	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
 end))
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- For chopping items inside the inventory, such as Coconuts.
 AddComponentAction("USEITEM", "tool", function(inst, doer, target, actions, right)
 	if target:HasTag("crackable") then
 		table.insert(actions, ACTIONS.CHOP)
 	end
 end)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Action for storing Souls inside bottles. (Only Wortox).
 AddPrefabPostInit("messagebottleempty", function(inst)
 	inst:AddTag("soul_storage")
@@ -109,7 +108,7 @@ end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.STORESOUL, function(inst, action)
 	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
 end))
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Action for healing Ruined Sugarwood Trees.
 AddAction("SAPHEAL", STRINGS.ACTIONS.SAPHEAL, function(act)
 	 if act.target ~= nil and act.target:HasTag("sap_healable") then
@@ -128,7 +127,7 @@ end)
 
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SAPHEAL, "give"))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SAPHEAL, "give"))
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Action for Milking animals. If Beefalo Milk mod is enabled, use their system instead?
 -- if not _G.KnownModIndex:IsModEnabled("workshop-436654027") or _G.KnownModIndex:IsModEnabled("workshop-1277605967") or
 -- _G.KnownModIndex:IsModEnabled("workshop-2431867642") or _G.KnownModIndex:IsModEnabled("workshop-1935156140") then
@@ -160,7 +159,7 @@ end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.PULLMILK, function(inst, action)
 	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
 end))
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Action for Brewing.
 AddAction("BREWER", STRINGS.ACTIONS.BREWER, function(act)
 	if act.target.components.cooker ~= nil then
@@ -292,7 +291,7 @@ end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.BREWER, function(inst, action)
 	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
 end))
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Action for reading the Brewbook.
 -- I'm not using simplebook component/action because it has some problems.
 AddAction("READBREWBOOK", STRINGS.ACTIONS.READ, function(act)
@@ -318,7 +317,7 @@ end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)
 	return "brewbook_open"
 end))
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Action String overrides.
 ACTIONS.GIVE.stroverridefn = function(act)
 	if act.target:HasTag("serenity_installable") and act.invobject:HasTag("serenity_installer") then
@@ -388,11 +387,11 @@ ACTIONS.STORE.stroverridefn = function(act)
 		return STRINGS.ACTIONS.BREWER
 	end
 end
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Fix for fuel items, because the action was "Give" instead of "Add Fuel".
 ACTIONS.ADDFUEL.priority = 5
 ACTIONS.ADDWETFUEL.priority = 5
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Quick open Canned Items.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.UNWRAP, function(inst, action)
 	local target = action.target or action.invobject
@@ -402,7 +401,7 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.UNWRAP, function(inst
 		return "dolongaction"
 	end
 end))
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Fix for when opening the Brewbook.
 --[[
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READ, function(inst, action)
@@ -412,4 +411,3 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READ, function(inst, 
 	or "book"
 end))
 ]]--
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -113,6 +113,7 @@ local function pondfn()
 	
 	inst:AddComponent("watersource")
 	inst:AddComponent("lootdropper")
+	inst:AddComponent("savedrotation")
 	
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "QUAGMIRE_POND_SALT"
@@ -162,6 +163,7 @@ local function pondsaltfn()
 	
 	inst:AddComponent("watersource")
 	inst:AddComponent("lootdropper")
+	inst:AddComponent("savedrotation")
 	
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "QUAGMIRE_POND_SALT"

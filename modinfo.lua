@@ -56,7 +56,7 @@ configuration_options =
             {
 				description = "繁體中文", 
 				hover = "Translation by: Djr.",
-				data = "hof_strings_cht"
+				data = "hof_strings_zht"
 			},
 			
 			{
