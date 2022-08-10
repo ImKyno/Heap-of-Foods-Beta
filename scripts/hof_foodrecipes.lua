@@ -1816,7 +1816,7 @@ local kyno_foods =
 		(names.kyno_milk_deer and names.kyno_milk_deer == 2) or (names.kyno_milk_spat and names.kyno_milk_spat == 2)) end,
 		priority = 1,
 		foodtype = FOODTYPE.GOODIES,
-		perishtime = TUNING.PERISH_PRESERVED,
+		perishtime = TUNING.PERISH_SUPERSLOW,
 		health = 20,
 		hunger = 0,
 		sanity = 60,
@@ -1829,7 +1829,7 @@ local kyno_foods =
 		test = function(cooker, names, tags) return names.honeycomb and (names.honey and names.honey == 3) end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
-		perishtime = TUNING.PERISH_SUPERSLOW,
+		perishtime = TUNING.PERISH_PRESERVED,
 		health = 30,
 		hunger = 45,
 		sanity = 5,
@@ -1839,7 +1839,8 @@ local kyno_foods =
 	
 	watercup =
 	{
-		test = function(cooker, names, tags) return (tags.frozen >= 2) end,
+		test = function(cooker, names, tags) return (tags.frozen and tags.frozen >= 2) and not tags.inedible and not tags.meat and not tags.fish
+		and not names.goatmilk and not names.kyno_milk_beefalo and not names.kyno_milk_koalefant and not names.kyno_milk_deer and not names.kyno_milk_spat end,
 		priority = 1,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = 9000000,
@@ -1849,10 +1850,10 @@ local kyno_foods =
 		cooktime = .1,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
-		-- IT IS JUST WATER MY MAN -- Vasp: Yeah, not just water, a cup of it.
+		floater = {"med", nil, 0.65},
+		-- ITS JUST WATER MY MAN -- Vasp: Yeah, not just water, a cup of it.
 		--[[ 
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WATERBUFF,
-		floater = {"med", nil, 0.65},
 		prefabs = { "kyno_waterbuff" },
         oneatenfn = function(inst, eater)
             if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and

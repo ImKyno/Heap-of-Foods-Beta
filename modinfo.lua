@@ -1,4 +1,4 @@
-name = "Heap of Foods"
+name = "Heap of Foods (Beta)"
 version = "4.2-A"
 local myupdate = "Artisan Goods"
 

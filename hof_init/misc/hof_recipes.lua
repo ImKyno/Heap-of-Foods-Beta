@@ -453,7 +453,7 @@ local KynSugarAntidote		= AddRecipe2("kyno_saphealer_p", {Ingredient("kyno_sap_s
 	{"CRAFTING_STATION"}
 )
 
-local KynSweetFlower		= AddRecipe2("kyno_sugartree_petals_p", {Ingredient("petals", 3)}, TECH.LOST,
+local KynSweetFlower		= AddRecipe2("kyno_sugartree_petals_p", {Ingredient("kyno_sugarfly", 3, ModAtlas)}, TECH.LOST,
 	{
 		nounlock 			= true, 
 		actionstr 			= "SERENITYSHOP",

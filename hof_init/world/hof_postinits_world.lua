@@ -185,7 +185,7 @@ if HUMANMEATY == 1 then
         "walter",
         "wanda",
     }
-	
+
 	local function LongPigPostinit(inst)
 		local function OnDeathLongPig(inst)
 			if math.random() < 0.90 then
@@ -595,7 +595,7 @@ end)
 local function StridentTridentPostinit(inst)
 	local INITIAL_LAUNCH_HEIGHT = 0.1
     local SPEED = 8
-	
+
     local function launch_away(inst, position)
         local ix, iy, iz = inst.Transform:GetWorldPosition()
         inst.Physics:Teleport(ix, iy + INITIAL_LAUNCH_HEIGHT, iz)
@@ -714,9 +714,9 @@ AddPrefabPostInit("trident", StridentTridentPostinit)
 -- Crows transforms into Pigeons when landing on Pink Park Turf.
 local function SerenityCrowPostinit(inst)
 	inst:DoTaskInTime(1/30, function(inst)
-	
+
     local TileAtPosition = _G.TheWorld.Map:GetTileAtPoint(inst:GetPosition():Get())
-        if TileAtPosition == WORLD_TILES.PINKPARK or TileAtPosition == WORLD_TILES.STONECITY then
+        if TileAtPosition == WORLD_TILES.HOF_PINKPARK or TileAtPosition == WORLD_TILES.HOF_STONECITY then
 
             inst.AnimState:SetBuild("quagmire_pigeon_build")
 
@@ -1100,6 +1100,6 @@ AddPrefabPostInit("forest", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("sugarflyspawner")
 end)

@@ -219,7 +219,7 @@ if DO_REGROWTH == 1 then
 			frequency 	= simpleregrowth.spawner_limpetrock_frequency,
 			amount 		= 3,
 			maxcount 	= 11,
-			tile 		= WORLD_TILES.STONECITY,
+			tile 		= WORLD_TILES.QUAGMIRE_CITYSTONE,
 		}
 	end
 
@@ -230,7 +230,7 @@ if DO_REGROWTH == 1 then
 			frequency 	= simpleregrowth.spawner_spotbush_frequency,
 			amount 		= 3,
 			maxcount 	= 55,
-			tile 		= WORLD_TILES.PINKPARK,
+			tile 		= WORLD_TILES.QUAGMIRE_PARKFIELD,
 		}
 	end
 
@@ -241,7 +241,7 @@ if DO_REGROWTH == 1 then
 			frequency 	= simpleregrowth.spawner_sweetflower_frequency,
 			amount 		= 3,
 			maxcount 	= 72,
-			tile 		= WORLD_TILES.PINKPARK,
+			tile 		= WORLD_TILES.QUAGMIRE_PARKFIELD,
 		}
 	end
 
@@ -252,7 +252,7 @@ if DO_REGROWTH == 1 then
 			frequency 	= simpleregrowth.spawner_cave_fern_frequency,
 			amount 		= 3,
 			maxcount 	= 63,
-			tile 		= WORLD_TILES.PINKPARK,
+			tile 		= WORLD_TILES.QUAGMIRE_PARKFIELD,
 		}
 	end
 

@@ -1,5 +1,5 @@
 function ChangeFoodConfigs(config, value)
-	local configs = KnownModIndex:LoadModConfigurationOptions("workshop-2334209327", false)
+	local configs = KnownModIndex:LoadModConfigurationOptions("Heap of Foods (Beta)", false)
 	-- local configs = KnownModIndex:LoadModConfigurationOptions("workshop-2334209327", false) -- Heap of Foods Workshop.
 	if configs ~= nil then
 		for i, v in ipairs(configs) do
@@ -8,6 +8,6 @@ function ChangeFoodConfigs(config, value)
 			end
 		end
 	end
-	KnownModIndex:SaveConfigurationOptions(function() end, "workshop-2334209327", configs, false)
+	KnownModIndex:SaveConfigurationOptions(function() end, "Heap of Foods (Beta)", configs, false)
 	-- KnownModIndex:SaveConfigurationOptions(function() end, "workshop-2334209327", configs, false)
 end

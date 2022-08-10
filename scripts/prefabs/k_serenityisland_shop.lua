@@ -1,10 +1,10 @@
 local assets =
 {
     Asset("ANIM", "anim/quagmire_elderswampig.zip"),
-	
+
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
-	
+
     Asset("SOUND", "sound/pig.fsb"),
 }
 
@@ -34,7 +34,7 @@ local function SayFar(inst)
 	Say(inst, "PIGELDER_TALK_FAR")
 end
 
-local function SayNear(inst)   
+local function SayNear(inst)
 	if not inst:HasTag("pigelder_gifted") then
 		Say(inst, "PIGELDER_TALK_NEAR1")
 	else
@@ -98,13 +98,13 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/friendship_music/10")
 		inst:DoTaskInTime(1, function() SayThanks(inst) end)
 		-- New Recipes available in the shop!
-		inst.components.craftingstation:LearnItem("turf_pinkpark_blueprint", "turf_pinkpark_p")
-		inst.components.craftingstation:LearnItem("turf_stonecity_blueprint", "turf_stonecity_p")
+		inst.components.craftingstation:LearnItem("turf_pinkpark_p", "turf_pinkpark_p")
+		inst.components.craftingstation:LearnItem("turf_stonecity_p", "turf_stonecity_p")
 		inst.components.craftingstation:LearnItem("dug_kyno_spotbush", "dug_kyno_spotbush_p")
 		inst.components.craftingstation:LearnItem("dug_kyno_wildwheat", "dug_kyno_wildwheat_p")
 		inst.components.craftingstation:LearnItem("kyno_sugartree_petals", "kyno_sugartree_petals_p")
 		inst.components.craftingstation:LearnItem("kyno_sugartree_bud", "kyno_sugartree_bud_p")
-		
+
 		inst:AddTag("pigelder_gifted")
 		inst.foodgift = true
 	end
@@ -128,10 +128,10 @@ local function fn()
     inst.entity:AddAnimState()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
-	
+
 	local shadow = inst.entity:AddDynamicShadow()
 	shadow:SetSize(1.5, .75)
-	
+
 	local minimap = inst.entity:AddMiniMapEntity()
     minimap:SetIcon("kyno_serenityisland_shop.tex")
 	minimap:SetPriority(5)
@@ -139,7 +139,7 @@ local function fn()
     MakeObstaclePhysics(inst, 2, .5)
 
     inst.AnimState:SetBank("quagmire_elderswampig")
-	inst.AnimState:SetBuild("quagmire_elderswampig") 
+	inst.AnimState:SetBuild("quagmire_elderswampig")
 	inst.AnimState:PlayAnimation("idle", true)
 
     inst:AddTag("trader")
@@ -159,12 +159,12 @@ local function fn()
     if not TheWorld.ismastersim then
         return inst
     end
-	
+
 	inst.components.talker.ontalk = ontalk
-	
+
     inst:AddComponent("inspectable")
 	inst:AddComponent("craftingstation")
-	
+
 	inst:AddComponent("playerprox")
 	inst.components.playerprox:SetDist(4, 7)
 	inst.components.playerprox:SetOnPlayerFar(OnFar)
@@ -174,16 +174,16 @@ local function fn()
     inst.components.prototyper.onturnon = OnTurnOn
     inst.components.prototyper.onturnoff = OnTurnOff
 	inst.components.prototyper.trees = TUNING.PROTOTYPER_TREES.SERENITYSHOP_TWO
-	
+
 	inst:AddComponent("trader")
 	inst.components.trader:SetAcceptTest(TestItem)
     inst.components.trader.onaccept = OnGetItemFromPlayer
-	
+
 	inst:WatchWorldState("isnight", OnIsNight)
     OnIsNight(inst, TheWorld.state.isnight)
-	
+
 	-- inst:ListenForEvent("elderpot_repaired", SellKitchenStuff)
-	
+
 	inst.OnSave	= OnSave
 	inst.OnLoad = OnLoad
 

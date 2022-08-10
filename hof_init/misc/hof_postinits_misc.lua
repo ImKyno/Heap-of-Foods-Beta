@@ -304,11 +304,11 @@ end)
 
 -- Speed boost for the White Stone Road.
 AddComponentPostInit("locomotor", function(inst)
-    local oldspeed = inst.UpdateGroundSpeedMultiplier
+    local OldSpeedHof = inst.UpdateGroundSpeedMultiplier
     inst.UpdateGroundSpeedMultiplier = function(self)
-        oldspeed(self)
+        OldSpeedHof(self)
         if self.wasoncreep == false and self:FasterOnRoad() and
-            _G.TheWorld.Map:GetTileAtPoint(self.inst.Transform:GetWorldPosition()) == WORLD_TILES.STONECITY then
+            _G.TheWorld.Map:GetTileAtPoint(self.inst.Transform:GetWorldPosition()) == WORLD_TILES.QUAGMIRE_CITYSTONE then
             self.groundspeedmultiplier = self.fastmultiplier
         end
     end
