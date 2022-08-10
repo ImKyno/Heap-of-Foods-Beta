@@ -38,7 +38,7 @@ local function fn()
 	inst.AnimState:SetBuild("kyno_floatilizer")
 	inst.AnimState:PlayAnimation("idle")
 
-	-- inst:AddTag("fertilizerresearchable")
+	inst:AddTag("fertilizerresearchable")
 
 	inst.GetFertilizerKey = GetFertilizerKey
 
@@ -53,19 +53,19 @@ local function fn()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 
-	-- inst:AddComponent("fertilizerresearchable")
-	-- inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)
+	inst:AddComponent("fertilizerresearchable")
+	inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)
 
 	inst:AddComponent("finiteuses")
-	inst.components.finiteuses:SetMaxUses(20)
-	inst.components.finiteuses:SetUses(20)
+	inst.components.finiteuses:SetMaxUses(TUNING.KYNO_FLOATILIZER_USES)
+	inst.components.finiteuses:SetUses(TUNING.KYNO_FLOATILIZER_USES)
 	inst.components.finiteuses:SetOnFinished(inst.Remove)
 
 	inst:AddComponent("fertilizer")
-	inst.components.fertilizer.fertilizervalue = TUNING.POOP_FERTILIZE * 2
-	inst.components.fertilizer.soil_cycles = TUNING.POOP_SOILCYCLES
-	inst.components.fertilizer.withered_cycles = TUNING.POOP_WITHEREDCYCLES
-	inst.components.fertilizer:SetNutrients({ 16, 0, 0 })
+	inst.components.fertilizer.fertilizervalue = TUNING.KYNO_FLOATILIZER_FERTILIZE
+	inst.components.fertilizer.soil_cycles = TUNING.KYNO_FLOATILIZER_SOILCYCLES
+	inst.components.fertilizer.withered_cycles = TUNING.KYNO_FLOATILIZER_WITHEREDCYCLES
+	inst.components.fertilizer:SetNutrients(FERTILIZER_DEFS.kyno_floatilizer.nutrients)
 
 	inst:AddComponent("smotherer")
 

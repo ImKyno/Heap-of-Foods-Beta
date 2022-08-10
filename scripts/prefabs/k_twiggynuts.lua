@@ -42,9 +42,9 @@ local function fn()
 	inst:AddComponent("tradable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 5
-	inst.components.edible.hungervalue = 0
-	inst.components.edible.sanityvalue = 5
+	inst.components.edible.healthvalue = TUNING.KYNO_TWIGGYNUTS_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_TWIGGYNUTS_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_TWIGGYNUTS_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
 	inst:AddComponent("perishable")

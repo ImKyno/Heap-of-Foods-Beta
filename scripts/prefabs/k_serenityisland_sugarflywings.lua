@@ -45,9 +45,9 @@ local function fn()
     inst.components.named:PickNewName()
 
     inst:AddComponent("edible")
-    inst.components.edible.healthvalue = 0
-    inst.components.edible.hungervalue = 9.375
-	inst.components.edible.sanityvalue = 8
+    inst.components.edible.healthvalue = TUNING.KYNO_SUGARFLYWINGS_HEALTH
+    inst.components.edible.hungervalue = TUNING.KYNO_SUGARFLYWINGS_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_SUGARFLYWINGS_SANITY
     inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
     inst:AddComponent("stackable")

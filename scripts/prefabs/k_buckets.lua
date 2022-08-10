@@ -124,8 +124,8 @@ local function emptyfn()
 	inst.components.fillable.acceptsoceanwater = true
 
 	inst:AddComponent("finiteuses")
-	inst.components.finiteuses:SetMaxUses(10)
-	inst.components.finiteuses:SetUses(10)
+	inst.components.finiteuses:SetMaxUses(TUNING.KYNO_BUCKET_EMPTY_USES)
+	inst.components.finiteuses:SetUses(TUNING.KYNO_BUCKET_EMPTY_USES)
 	inst.components.finiteuses:SetOnFinished(inst.Remove)
 
 	inst:AddComponent("inventoryitem")
@@ -214,8 +214,8 @@ local function waterfn()
 	inst.components.wateryprotection.onspreadprotectionfn = OnUse
 
 	inst:AddComponent("finiteuses")
-	inst.components.finiteuses:SetMaxUses(15)
-	inst.components.finiteuses:SetUses(15)
+	inst.components.finiteuses:SetMaxUses(TUNING.KYNO_BUCKET_WATER_USES)
+	inst.components.finiteuses:SetUses(TUNING.KYNO_BUCKET_WATER_USES)
 	inst.components.finiteuses:SetOnFinished(OnFinishedWater)
 
 	inst:AddComponent("inventoryitem")

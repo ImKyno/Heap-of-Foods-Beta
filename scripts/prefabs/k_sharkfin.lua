@@ -49,9 +49,9 @@ local function fn()
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 	
 	inst:AddComponent("edible")
-    inst.components.edible.healthvalue = 20
-	inst.components.edible.hungervalue = 25
-	inst.components.edible.sanityvalue = -15
+    inst.components.edible.healthvalue = TUNING.KYNO_SHARKFIN_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_SHARKFIN_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_SHARKFIN_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 

@@ -108,7 +108,7 @@ local function fn()
     inst.components.herdmember:SetHerdPrefab("kyno_chicken2_herd")
 
 	inst:AddComponent("health")
-	inst.components.health:SetMaxHealth(75)
+	inst.components.health:SetMaxHealth(TUNING.KYNO_CHICKEN2_HEALTH)
 	inst.components.health:StartRegen(1, 8)
 	
 	inst:AddComponent("inventoryitem")

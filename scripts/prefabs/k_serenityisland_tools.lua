@@ -165,8 +165,8 @@ local function trapfn()
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	
 	inst:AddComponent("finiteuses")
-    inst.components.finiteuses:SetMaxUses(5)
-    inst.components.finiteuses:SetUses(5)
+    inst.components.finiteuses:SetMaxUses(TUNING.KYNO_CRABTRAP_USES)
+    inst.components.finiteuses:SetUses(TUNING.KYNO_CRABTRAP_USES)
     inst.components.finiteuses:SetOnFinished(inst.Remove)
 	
 	inst:AddComponent("trap")
@@ -216,8 +216,8 @@ local function slaughterfn()
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	
 	inst:AddComponent("finiteuses")
-    inst.components.finiteuses:SetMaxUses(4)
-    inst.components.finiteuses:SetUses(4)
+    inst.components.finiteuses:SetMaxUses(TUNING.KYNO_SLAUGHTERTOOLS_USES)
+    inst.components.finiteuses:SetUses(TUNING.KYNO_SLAUGHTERTOOLS_USES)
     inst.components.finiteuses:SetOnFinished(inst.Remove)
 	
 	MakeHauntableLaunch(inst)

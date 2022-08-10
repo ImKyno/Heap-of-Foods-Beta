@@ -27,7 +27,7 @@ end
 
 local function OnExtended(inst, target)
     inst.components.timer:StopTimer("kyno_hastebuff")
-    inst.components.timer:StartTimer("kyno_hastebuff", 480)
+    inst.components.timer:StartTimer("kyno_hastebuff", TUNING.KYNO_HASTEBUFF_DURATION)
 	if not target:HasTag("handyperson") then
 		target:RemoveTag("fastbuilder")
 		target:AddTag("fastbuilder")
@@ -55,7 +55,7 @@ local function fn()
     inst.components.debuff.keepondespawn = true
 
     inst:AddComponent("timer")
-    inst.components.timer:StartTimer("kyno_hastebuff", 480)
+    inst.components.timer:StartTimer("kyno_hastebuff", TUNING.KYNO_HASTEBUFF_DURATION)
     inst:ListenForEvent("timerdone", OnTimerDone)
 
     return inst

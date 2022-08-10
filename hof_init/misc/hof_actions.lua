@@ -38,7 +38,8 @@ AddAction("FLAY", STRINGS.ACTIONS.FLAY, function(act)
 	if act.target and act.target.components.health and not act.target.components.health:IsDead() and act.target.components.lootdropper then
 		act.target.components.health.invincible = false
 	
-		if act.doer.prefab == "wathgrithr" then -- Wigfrid gets 2 extra meats!
+		-- if act.doer.prefab == "wathgrithr" then
+		if act.doer:HasTag("animal_butcher") then -- Characters with this tag gets 2 extra meats!
 			act.target.components.lootdropper:SpawnLootPrefab("meat")
 			act.target.components.lootdropper:SpawnLootPrefab("meat")
 		end
@@ -47,7 +48,7 @@ AddAction("FLAY", STRINGS.ACTIONS.FLAY, function(act)
 			act.invobject.components.finiteuses:Use(1)
 		end					
 		
-		act.target.components.health:Kill()		
+		act.target.components.health:Kill()
 		return true
 	end
 end)

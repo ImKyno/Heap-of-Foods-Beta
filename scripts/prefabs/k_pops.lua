@@ -74,9 +74,9 @@ local function soda_fn()
         return inst
     end
 
-	inst.components.edible.healthvalue = -8
-	inst.components.edible.hungervalue = 0
-	inst.components.edible.sanityvalue = 33
+	inst.components.edible.healthvalue = TUNING.KYNO_SODACAN_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_SODACAN_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_SODACAN_SANITY
 	
 	return inst
 end
@@ -88,9 +88,9 @@ local function coke_fn()
         return inst
     end
 
-	inst.components.edible.healthvalue = -8
-	inst.components.edible.hungervalue = 0
-	inst.components.edible.sanityvalue = 33
+	inst.components.edible.healthvalue = TUNING.KYNO_COKECAN_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_COKECAN_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_COKECAN_SANITY
 	
 	return inst
 end
@@ -102,9 +102,9 @@ local function energy_fn()
         return inst
     end
 
-	inst.components.edible.healthvalue = -8
-	inst.components.edible.hungervalue = 0
-	inst.components.edible.sanityvalue = 33
+	inst.components.edible.healthvalue = TUNING.KYNO_ENERGYCAN_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_ENERGYCAN_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_ENERGYCAN_SANITY
 	
 	return inst
 end

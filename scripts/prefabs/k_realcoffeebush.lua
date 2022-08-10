@@ -81,13 +81,13 @@ end
 
 local function getregentimefn_normal(inst)
     if inst.components.pickable == nil then
-        return TUNING.BERRY_REGROW_TIME
+        return TUNING.KYNO_COFFEEBUSH_GROWTIME
     end
 
     local max_cycles = inst.components.pickable.max_cycles
     local cycles_left = inst.components.pickable.cycles_left or max_cycles
     local num_cycles_passed = math.max(0, max_cycles - cycles_left)
-    return TUNING.BERRY_REGROW_TIME
+    return TUNING.KYNO_COFFEEBUSH_GROWTIME
         + TUNING.BERRY_REGROW_INCREASE * num_cycles_passed
         + TUNING.BERRY_REGROW_VARIANCE * math.random()
 end
@@ -191,7 +191,7 @@ local function createbush(name, inspectname, berryname, master_postinit)
 
         inst:AddComponent("workable")
         inst.components.workable:SetWorkAction(ACTIONS.DIG)
-        inst.components.workable:SetWorkLeft(1)
+        inst.components.workable:SetWorkLeft(TUNING.KYNO_COFFEEBUSH_WORKLEFT)
 
         inst:AddComponent("inspectable")
         if name ~= inspectname then
@@ -210,7 +210,7 @@ local function createbush(name, inspectname, berryname, master_postinit)
 end
 
 local function normal_postinit(inst)
-    inst.components.pickable:SetUp("kyno_coffeebeans", TUNING.BERRY_REGROW_TIME)
+    inst.components.pickable:SetUp("kyno_coffeebeans", TUNING.KYNO_COFFEEBUSH_GROWTIME)
     inst.components.pickable.getregentimefn = getregentimefn_normal
     inst.components.pickable.max_cycles = TUNING.BERRYBUSH_CYCLES + math.random(2)
     inst.components.pickable.cycles_left = inst.components.pickable.max_cycles

@@ -90,7 +90,7 @@ local function fn()
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
-    inst.components.pickable:SetUp("kyno_taroroot", TUNING.BULLKELP_REGROW_TIME)
+    inst.components.pickable:SetUp("kyno_taroroot", TUNING.KYNO_TAROSEA_GROWTIME)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
     inst.components.pickable.makeemptyfn = makeemptyfn
@@ -137,9 +137,9 @@ local function taroroot()
     inst.components.deployable:SetDeployMode(DEPLOYMODE.WATER)
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 8
-	inst.components.edible.hungervalue = 25
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_TAROROOT_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_TAROROOT_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_TAROROOT_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
 	inst:AddComponent("perishable")
@@ -191,9 +191,9 @@ local function taroroot_cooked()
 	inst:AddComponent("tradable")
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 20
-	inst.components.edible.hungervalue = 25
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_TAROROOT_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_TAROROOT_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_TAROROOT_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	
 	inst:AddComponent("perishable")

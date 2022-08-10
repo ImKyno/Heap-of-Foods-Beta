@@ -144,7 +144,7 @@ local function fn()
 	inst.components.inventoryitem.imagename = "kyno_sugarfly"
 
     inst:AddComponent("health")
-    inst.components.health:SetMaxHealth(1)
+    inst.components.health:SetMaxHealth(TUNING.KYNO_SUGARFLY_HEALTH)
 
     inst:AddComponent("combat")
     inst.components.combat.hiteffectsymbol = "butterfly_body"

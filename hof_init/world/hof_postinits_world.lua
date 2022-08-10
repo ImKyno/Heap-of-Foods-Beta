@@ -185,21 +185,23 @@ if HUMANMEATY == 1 then
         "walter",
         "wanda",
     }
+	
+	local function LongPigPostinit(inst)
+		local function OnDeathLongPig(inst)
+			if math.random() < 0.90 then
+				SpawnPrefab("kyno_humanmeat").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			end
+		end
+
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+
+		inst:ListenForEvent("death", OnDeathLongPig)
+	end
 
     for k,v in pairs(longpig_characters) do
-        AddPrefabPostInit(v, function(inst)
-            local function ondeath_longpig(inst)
-                if math.random()<0.90 then
-                    SpawnPrefab("kyno_humanmeat").Transform:SetPosition(inst.Transform:GetWorldPosition())
-                end
-            end
-
-            if not _G.TheWorld.ismastersim then
-                return inst
-            end
-
-            inst:ListenForEvent("death", ondeath_longpig)
-        end)
+        AddPrefabPostInit(v, LongPigPostinit)
     end
 end
 
@@ -590,9 +592,10 @@ AddPrefabPostInit("twiggytree", function(inst)
 end)
 
 -- Strident Trident Tweak for new ocean plants.
-AddPrefabPostInit("trident", function(inst)
-    local INITIAL_LAUNCH_HEIGHT = 0.1
+local function StridentTridentPostinit(inst)
+	local INITIAL_LAUNCH_HEIGHT = 0.1
     local SPEED = 8
+	
     local function launch_away(inst, position)
         local ix, iy, iz = inst.Transform:GetWorldPosition()
         inst.Physics:Teleport(ix, iy + INITIAL_LAUNCH_HEIGHT, iz)
@@ -704,11 +707,14 @@ AddPrefabPostInit("trident", function(inst)
     end
 
     inst.DoWaterExplosionEffect = DoWaterExplosionEffectNew
-end)
+end
+
+AddPrefabPostInit("trident", StridentTridentPostinit)
 
 -- Crows transforms into Pigeons when landing on Pink Park Turf.
-AddPrefabPostInit("crow", function(inst)
-    inst:DoTaskInTime(1/30, function(inst)
+local function SerenityCrowPostinit(inst)
+	inst:DoTaskInTime(1/30, function(inst)
+	
     local TileAtPosition = _G.TheWorld.Map:GetTileAtPoint(inst:GetPosition():Get())
         if TileAtPosition == WORLD_TILES.PINKPARK or TileAtPosition == WORLD_TILES.STONECITY then
 
@@ -730,7 +736,9 @@ AddPrefabPostInit("crow", function(inst)
             end
         end
     end)
-end)
+end
+
+AddPrefabPostInit("crow", SerenityCrowPostinit)
 
 -- Animals that can be killed with the Slaughter Tools.
 local slaughterable_animals = {
@@ -865,8 +873,8 @@ AddComponentPostInit("retrofitforestmap_anr", function(self)
 end)
 
 -- For Installing the new Cookware on the Fire Pits.
-AddPrefabPostInit("firepit", function(inst)
-    local function GetFirepit(inst)
+local function FirePitCookwarePostinit(inst)
+	local function GetFirepit(inst)
         if not inst.firepit or not inst.firepit:IsValid() or not inst.firepit.components.fueled then
             local x,y,z = inst.Transform:GetWorldPosition()
             local ents = _G.TheSim:FindEntities(x,y,z, 0.01)
@@ -952,7 +960,9 @@ AddPrefabPostInit("firepit", function(inst)
     inst:AddComponent("trader")
     inst.components.trader:SetAcceptTest(TestItem)
     inst.components.trader.onaccept = OnGetItemFromPlayer
-end)
+end
+
+AddPrefabPostInit("firepit", FirePitCookwarePostinit)
 
 -- Small fix for the natural spawning Mushroom Stump.
 local mushstumps = {

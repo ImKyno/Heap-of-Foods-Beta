@@ -27,7 +27,7 @@ end
 
 local function OnExtended(inst, target)
     inst.components.timer:StopTimer("regenover")
-    inst.components.timer:StartTimer("regenover", 60)
+    inst.components.timer:StartTimer("regenover", TUNING.KYNO_WATERBUFF_DURATION)
     inst.task:Cancel()
     inst.task = inst:DoPeriodicTask(TUNING.JELLYBEAN_TICK_RATE, OnTick, nil, target)
 end
@@ -53,7 +53,7 @@ local function fn()
     inst.components.debuff.keepondespawn = true
 
     inst:AddComponent("timer")
-    inst.components.timer:StartTimer("regenover", 60)
+    inst.components.timer:StartTimer("regenover", TUNING.KYNO_WATERBUFF_DURATION)
     inst:ListenForEvent("timerdone", OnTimerDone)
 
     return inst

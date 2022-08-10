@@ -24,9 +24,6 @@ local prefabs =
 	"kyno_sugartree_bud",
 }
 
-local SHORT_GROW_TIME = 240 -- Half day.
-local NORMAL_GROW_TIME = 720 -- 1.5 Day.
-
 local function TestItem(inst, item, giver)
 	if item.components.inventoryitem and item:HasTag("sap_bucket_installer") then
 		giver.components.talker:Say(GetString(giver, "ANNOUNCE_SUGARTREE_TOOSMALL"))
@@ -152,7 +149,7 @@ local function shortfn()
     inst.AnimState:SetTime(math.random() * 2)
 	
 	inst:AddComponent("timer")
-	inst.components.timer:StartTimer("kyno_sugartree_short_timer", SHORT_GROW_TIME)
+	inst.components.timer:StartTimer("kyno_sugartree_short_timer", TUNING.KYNO_SUGARTREE_SHORT_GROWTIME)
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"log", "kyno_sap"})
@@ -165,7 +162,7 @@ local function shortfn()
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
-    inst.components.workable:SetWorkLeft(5)
+    inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_SHORT_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(tree_chopped_short)
     inst.components.workable:SetOnWorkCallback(tree_chop)
 	
@@ -214,7 +211,7 @@ local function normalfn()
     inst.AnimState:SetTime(math.random() * 2)
 	
 	inst:AddComponent("timer")
-	inst.components.timer:StartTimer("kyno_sugartree_normal_timer", NORMAL_GROW_TIME)
+	inst.components.timer:StartTimer("kyno_sugartree_normal_timer", TUNING.KYNO_SUGARTREE_NORMAL_GROWTIME)
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"log", "log", "kyno_sugartree_bud", "kyno_sap"})
@@ -227,7 +224,7 @@ local function normalfn()
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
-    inst.components.workable:SetWorkLeft(10)
+    inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_NORMAL_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(tree_chopped_normal)
     inst.components.workable:SetOnWorkCallback(tree_chop)
 	
@@ -273,7 +270,7 @@ local function stump_shortfn()
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
-    inst.components.workable:SetWorkLeft(1)
+    inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
 
     return inst
@@ -312,7 +309,7 @@ local function stump_normalfn()
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
-    inst.components.workable:SetWorkLeft(1)
+    inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
 
     return inst

@@ -19,7 +19,6 @@ local prefabs =
 	"kyno_musselstick_item",
 }
 
-local MUSSEL_REGROW_TIME = 1440 -- Every 3 Days.
 local DAMAGE_SCALE = 0.5
 
 local function onpickedfn(inst)
@@ -116,17 +115,17 @@ local function fn()
 	inst:AddComponent("inspectable")
     inst:AddComponent("lootdropper")
 	
-    inst:AddComponent("workable")
-    inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
-	inst.components.workable:SetOnFinishCallback(onhammered)
-    inst.components.workable:SetWorkLeft(4)
-	
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
+	inst.components.pickable:SetUp("kyno_mussel", TUNING.KYNO_MUSSELSTICK_GROWTIME, 3)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
     inst.components.pickable.makeemptyfn = makeemptyfn
-	inst.components.pickable:SetUp("kyno_mussel", MUSSEL_REGROW_TIME, 3)
+	
+	inst:AddComponent("workable")
+    inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
+	inst.components.workable:SetOnFinishCallback(onhammered)
+    inst.components.workable:SetWorkLeft(TUNING.KYNO_MUSSELSTICK_WORKLEFT)
 	
     inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)

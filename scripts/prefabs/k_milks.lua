@@ -48,9 +48,9 @@ local function beefalofn()
 	inst:AddComponent("inspectable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 3
-	inst.components.edible.hungervalue = 3
-	inst.components.edible.sanityvalue = -10
+	inst.components.edible.healthvalue = TUNING.KYNO_MILK_BEEFALO_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_MILK_BEEFALO_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_MILK_BEEFALO_SANITY
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FASTISH)
@@ -100,9 +100,9 @@ local function koalefantfn()
 	inst:AddComponent("inspectable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 6
-	inst.components.edible.hungervalue = 6
-	inst.components.edible.sanityvalue = -10
+	inst.components.edible.healthvalue = TUNING.KYNO_MILK_KOALEFANT_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_MILK_KOALEFANT_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_MILK_KOALEFANT_SANITY
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FASTISH)
@@ -152,9 +152,9 @@ local function deerfn()
 	inst:AddComponent("inspectable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 3
-	inst.components.edible.hungervalue = 3
-	inst.components.edible.sanityvalue = -10
+	inst.components.edible.healthvalue = TUNING.KYNO_MILK_DEER_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_MILK_DEER_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_MILK_DEER_SANITY
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FASTISH)
@@ -204,9 +204,9 @@ local function spatfn()
 	inst:AddComponent("inspectable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 6
-	inst.components.edible.hungervalue = 6
-	inst.components.edible.sanityvalue = -10
+	inst.components.edible.healthvalue = TUNING.KYNO_MILK_SPAT_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_MILK_SPAT_HUNGER 
+	inst.components.edible.sanityvalue = TUNING.KYNO_MILK_SPAT_SANITY
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FASTISH)

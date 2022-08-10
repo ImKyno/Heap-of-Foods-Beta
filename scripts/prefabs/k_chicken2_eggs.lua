@@ -47,9 +47,9 @@ local function fn()
 	inst.components.tradable.goldvalue = 1
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 9.375
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_CHICKEN_EGG_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_CHICKEN_EGG_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_CHICKEN_EGG_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 
@@ -103,9 +103,9 @@ local function fn_cooked()
 	inst.components.tradable.goldvalue = 1
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 3
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_CHICKEN_EGG_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_CHICKEN_EGG_COOKED_HUNGER 
+	inst.components.edible.sanityvalue = TUNING.KYNO_CHICKEN_EGG_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 	

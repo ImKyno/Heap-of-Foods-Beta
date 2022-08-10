@@ -86,7 +86,7 @@ local function fn()
 
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
-    inst.components.pickable:SetUp("kyno_waterycress", TUNING.BULLKELP_REGROW_TIME)
+    inst.components.pickable:SetUp("kyno_waterycress", TUNING.KYNO_WATERYCRESS_GROWTIME)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
     inst.components.pickable.makeemptyfn = makeemptyfn
@@ -129,9 +129,9 @@ local function waterycress()
 	inst:AddComponent("tradable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = 5
+	inst.components.edible.healthvalue = TUNING.KYNO_WATERYCRESS_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_WATERYCRESS_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_WATERYCRESS_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	
 	inst:AddComponent("deployable")
@@ -188,9 +188,9 @@ local function waterycress_cooked()
 	inst:AddComponent("tradable")
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 3
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = 10
+	inst.components.edible.healthvalue = TUNING.KYNO_WATERYCRESS_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_WATERYCRESS_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_WATERYCRESS_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	
 	inst:AddComponent("perishable")

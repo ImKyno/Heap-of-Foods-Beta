@@ -177,9 +177,9 @@ local function kokonut_halved()
 	inst:AddComponent("tradable")
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 4.6875
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_KOKONUT_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_KOKONUT_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_KOKONUT_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	
 	inst:AddComponent("perishable")
@@ -232,9 +232,9 @@ local function kokonut_cooked()
 	inst:AddComponent("tradable")
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 3
-	inst.components.edible.hungervalue = 9.375
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_KOKONUT_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_KOKONUT_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_KOKONUT_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	
 	inst:AddComponent("perishable")

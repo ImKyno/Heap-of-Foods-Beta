@@ -91,9 +91,9 @@ local function banana()
 	inst:AddComponent("tradable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_BANANA_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_BANANA_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_BANANA_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
 	inst:AddComponent("perishable")
@@ -152,9 +152,9 @@ local function banana_cooked()
 	inst:AddComponent("tradable")
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 3
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_BANANA_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_BANANA_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_BANANA_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	
 	inst:AddComponent("perishable")

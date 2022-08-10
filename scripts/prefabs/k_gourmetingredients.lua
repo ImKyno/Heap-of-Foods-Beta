@@ -1,3 +1,5 @@
+local FERTILIZER_DEFS = require("prefabs/fertilizer_nutrient_defs").FERTILIZER_DEFS
+
 local assets =
 {
     Asset("ANIM", "anim/quagmire_flour.zip"),
@@ -20,12 +22,22 @@ local assets =
 local prefabs = 
 {
 	"spoiled_food",
+	"gridplacer_farmablesoil",
+	
 	"kyno_bacon_cooked",
 	"kyno_white_cap_cooked",
 	"kyno_wheat_cooked",
 	"kyno_salt",
 	"kyno_crabmeat_cooked",
 }
+
+local function GetFertilizerKey(inst)
+    return inst.prefab
+end
+
+local function fertilizerresearchfn(inst)
+    return inst:GetFertilizerKey()
+end
 
 local function wheatfn()
 	local inst = CreateEntity()
@@ -56,9 +68,9 @@ local function wheatfn()
 	inst:AddComponent("inspectable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 0
-	inst.components.edible.hungervalue = 4.6875
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_WHEAT_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_WHEAT_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_WHEAT_SANITY
 	inst.components.edible.foodtype = FOODTYPE.SEEDS
 
 	inst:AddComponent("perishable")
@@ -111,9 +123,9 @@ local function wheat_cookedfn()
 	inst:AddComponent("inspectable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 4.6875
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_WHEAT_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_WHEAT_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_WHEAT_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.SEEDS
 
 	inst:AddComponent("perishable")
@@ -220,9 +232,9 @@ local function sapfn()
 	inst.components.perishable.onperishreplacement = "kyno_sap_spoiled"
 	
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 3
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_SAP_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_SAP_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_SAP_SANITY
 	inst.components.edible.foodtype = FOODTYPE.GOODIES
 
 	MakeSmallBurnable(inst)
@@ -241,6 +253,7 @@ local function sap_ruinedfn()
 
     MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "small", 0.05)
+	MakeDeployableFertilizerPristine(inst)
 
     inst.AnimState:SetBank("quagmire_sap")
     inst.AnimState:SetBuild("quagmire_sap")
@@ -248,6 +261,9 @@ local function sap_ruinedfn()
 
 	inst:AddTag("gourmet_sap_spoiled")
 	inst:AddTag("gourmet_ingredient")
+	inst:AddTag("fertilizerresearchable")
+	
+	inst.GetFertilizerKey = GetFertilizerKey
 
     inst.entity:SetPristine()
 
@@ -268,9 +284,19 @@ local function sap_ruinedfn()
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 	
+	inst:AddComponent("fertilizerresearchable")
+	inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)
+	
+	inst:AddComponent("fertilizer")
+	inst.components.fertilizer.fertilizervalue = TUNING.GUANO_FERTILIZE
+	inst.components.fertilizer.soil_cycles = TUNING.GUANO_SOILCYCLES
+	inst.components.fertilizer.withered_cycles = TUNING.GUANO_WITHEREDCYCLES
+	inst.components.fertilizer:SetNutrients(FERTILIZER_DEFS.kyno_sap_spoiled.nutrients)
+	
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
+	MakeDeployableFertilizer(inst)
 
     return inst
 end
@@ -315,9 +341,9 @@ local function syrupfn()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 	
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 3
-	inst.components.edible.hungervalue = 9.375
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_SYRUP_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_SYRUP_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_SYRUP_SANITY
 	inst.components.edible.foodtype = FOODTYPE.GOODIES
 
 	MakeHauntableLaunchAndPerish(inst)
@@ -366,9 +392,9 @@ local function sprigfn()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 	
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 0
-	inst.components.edible.hungervalue = 4.6875
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_SPOTSPICE_LEAF_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_SPOTSPICE_LEAF_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_SPOTSPICE_LEAF_SANITY
 	inst.components.edible.foodtype = FOODTYPE.SEEDS
 	
 	MakeSmallBurnable(inst)
@@ -452,9 +478,9 @@ local function baconfn()
 	inst.components.tradable.goldvalue = 1
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 0
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = -10
+	inst.components.edible.healthvalue = TUNING.KYNO_BACON_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_BACON_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_BACON_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 
@@ -512,9 +538,9 @@ local function bacon_cookedfn()
 	inst.components.tradable.goldvalue = 1
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 3
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = 5
+	inst.components.edible.healthvalue = TUNING.KYNO_BACON_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_BACON_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_BACON_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 
@@ -568,9 +594,9 @@ local function mushfn()
 	inst.components.inspectable.nameoverride = "RED_CAP"
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = -10
-	inst.components.edible.hungervalue = 9.375
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_WHITE_CAP_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_WHITE_CAP_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_WHITE_CAP_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
 	inst:AddComponent("perishable")
@@ -625,9 +651,9 @@ local function mush_cookedfn()
 	inst.components.inspectable.nameoverride = "RED_CAP_COOKED"
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = -5
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_WHITE_CAP_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_WHITE_CAP_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_WHITE_CAP_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
 	inst:AddComponent("perishable")
@@ -689,9 +715,9 @@ local function foliagefn()
 	inst.components.inventoryitem.imagename = "kyno_foliage"
 
     inst:AddComponent("edible")
-    inst.components.edible.healthvalue = 1
-    inst.components.edible.hungervalue = 0
-	inst.components.edible.sanityvalue = 0
+    inst.components.edible.healthvalue = TUNING.KYNO_FOLIAGE_HEALTH
+    inst.components.edible.hungervalue = TUNING.KYNO_FOLIAGE_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_FOLIAGE_SANITY
     inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
     inst:AddComponent("perishable")
@@ -736,9 +762,9 @@ local function foliage_cookedfn()
 	inst.components.inspectable.nameoverride = "FOLIAGE"
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 1
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_FOLIAGE_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_FOLIAGE_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_FOLIAGE_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
 	inst:AddComponent("perishable")
@@ -834,9 +860,9 @@ local function crabmeatfn()
 	inst.components.tradable.goldvalue = 5
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 5
-	inst.components.edible.hungervalue = 5
-	inst.components.edible.sanityvalue = -10
+	inst.components.edible.healthvalue = TUNING.KYNO_CRABMEAT_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_CRABMEAT_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_CRABMEAT_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 
@@ -892,9 +918,9 @@ local function crabmeat_cookedfn()
 	inst.components.tradable.goldvalue = 5
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 10
-	inst.components.edible.hungervalue = 10
-	inst.components.edible.sanityvalue = 5
+	inst.components.edible.healthvalue = TUNING.KYNO_CRABMEAT_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_CRABMEAT_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_CRABMEAT_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 

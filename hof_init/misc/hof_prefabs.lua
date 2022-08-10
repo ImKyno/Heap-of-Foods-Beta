@@ -94,4 +94,5 @@ PrefabFiles =
 	"k_brewbook",
 	"k_product_bubble",
 	"k_ocean_wreck",
+	"k_fertilizer_nutrient_defs",
 }

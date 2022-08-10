@@ -40,8 +40,6 @@ SetSharedLootTable('limpetrockfull',
 	{'kyno_limpets', 1.00},
 })
 
-local LIMPET_REGROW_TIME = 1440
-
 local function makeemptyfn(inst)
 	if inst.components.pickable and inst.components.pickable.withered then
 		inst.AnimState:PlayAnimation("dead_to_empty")
@@ -137,7 +135,7 @@ local function fn()
 
 	inst:AddComponent("pickable")
 	inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
-	inst.components.pickable:SetUp("kyno_limpets", LIMPET_REGROW_TIME)
+	inst.components.pickable:SetUp("kyno_limpets", TUNING.KYNO_LIMPETROCK_GROWTIME)
 	inst.components.pickable.getregentimefn = getregentimefn
 	inst.components.pickable.onpickedfn = onpickedfn
 	inst.components.pickable.makeemptyfn = makeemptyfn
@@ -201,9 +199,9 @@ local function limpets()
 	inst:AddComponent("tradable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 0
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = -10
+	inst.components.edible.healthvalue = TUNING.KYNO_LIMPETS_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_LIMPETS_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_LIMPETS_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 
 	inst:AddComponent("perishable")
@@ -255,9 +253,9 @@ local function limpets_cooked()
 	inst:AddComponent("tradable")
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_LIMPETS_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_LIMPETS_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_LIMPETS_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	
 	inst:AddComponent("perishable")

@@ -19,7 +19,6 @@ local MAST       = 1
 local BOW        = 2
 local MIDSHIP    = 3
 local STERN      = 4
-local LIMPET_REGROW_TIME = 1440
 
 local anims      =
 {
@@ -217,7 +216,7 @@ local function fn()
 
 	inst:AddComponent("pickable")
 	inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
-	inst.components.pickable:SetUp("kyno_limpets", LIMPET_REGROW_TIME)
+	inst.components.pickable:SetUp("kyno_limpets", TUNING.KYNO_LIMPETROCK_GROWTIME)
 	inst.components.pickable.getregentimefn = getregentimefn
 	inst.components.pickable.onpickedfn = onpickedfn
 	inst.components.pickable.makeemptyfn = makeemptyfn
@@ -228,7 +227,7 @@ local function fn()
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
-	inst.components.workable:SetWorkLeft(3)
+	inst.components.workable:SetWorkLeft(TUNING.KYNO_OCEANWRECK_WORKLEFT)
 	inst.components.workable:SetOnWorkCallback(OnWorked)
 	inst.components.workable:SetOnFinishCallback(OnHammered)
 	

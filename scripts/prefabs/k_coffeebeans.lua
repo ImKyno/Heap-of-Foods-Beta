@@ -17,11 +17,11 @@ local function OnEatBeans(inst, eater)
     if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
         return
     elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-        eater.coffeebuff_duration = 30
+        eater.coffeebuff_duration = TUNING.KYNO_COFFEEBUFF_DURATION_SMALL
         eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
     else
-        eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", 1.83)
-        eater:DoTaskInTime(30, function()
+        eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
+        eater:DoTaskInTime(TUNING.KYNO_COFFEEBUFF_DURATION_SMALL, function()
             eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
         end)
     end
@@ -55,9 +55,9 @@ local function fn()
 	inst:AddComponent("tradable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 0
-	inst.components.edible.hungervalue = 9.375
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_COFFEEBEANS_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_COFFEEBEANS_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_COFFEEBEANS_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
 	inst:AddComponent("perishable")
@@ -109,9 +109,9 @@ local function fn_cooked()
 	inst:AddComponent("tradable")
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 0
-	inst.components.edible.hungervalue = 9.375
-	inst.components.edible.sanityvalue = -5
+	inst.components.edible.healthvalue = TUNING.KYNO_COFFEEBEANS_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_COFFEEBEANS_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_COFFEEBEANS_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	-- inst.components.edible:SetOnEatenFn(OnEatBeans)
 	

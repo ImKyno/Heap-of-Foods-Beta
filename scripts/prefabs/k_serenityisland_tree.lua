@@ -24,9 +24,6 @@ local prefabs =
 	"kyno_sugartree_bud",
 }
 
-local SAP_REGROW_TIME = 1440 -- 3 Days.
-local SAP_SPOIL_TIME  = 2880 -- After 6 Days the Sap in the tree spoils.
-
 local function SpoilSap(inst)
 	local ruined = SpawnPrefab("kyno_sugartree_ruined")
 	ruined.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/sap_extractor")
@@ -55,7 +52,7 @@ local function onregenfn(inst)
 	inst.sapped = true
 	inst:AddTag("sap_overflow")
 	
-	inst.components.timer:StartTimer("kyno_sugartree_timer", SAP_SPOIL_TIME)
+	inst.components.timer:StartTimer("kyno_sugartree_timer", TUNING.KYNO_SAP_SPOILTIME)
 end
 
 local function makeemptyfn(inst)
@@ -271,7 +268,7 @@ local function treefn()
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
-    inst.components.workable:SetWorkLeft(15)
+    inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(tree_chopped)
     inst.components.workable:SetOnWorkCallback(tree_chop)
 
@@ -311,7 +308,7 @@ local function stumpfn()
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
-    inst.components.workable:SetWorkLeft(1)
+    inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
 
     return inst
@@ -360,7 +357,7 @@ local function treesapfn()
 
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/quagmire/common/craft/sap_extractor"
-    inst.components.pickable:SetUp("kyno_sap", SAP_REGROW_TIME, 3)
+    inst.components.pickable:SetUp("kyno_sap", TUNING.KYNO_SAP_GROWTIME, 3)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
     inst.components.pickable.makeemptyfn = makeemptyfn
@@ -368,7 +365,7 @@ local function treesapfn()
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammered)
-	inst.components.workable:SetWorkLeft(3)
+	inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_TAPPED_WORKLEFT)
 	
 	-- Check if it's there any tree with sap to be picked and 
 	-- Make the Tree and Sap spoil after 2 Days (5 Days in total).
@@ -430,7 +427,7 @@ local function ruinedfn()
 
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/quagmire/common/craft/sap_extractor"
-    inst.components.pickable:SetUp("kyno_sap_spoiled", SAP_REGROW_TIME, 3)
+    inst.components.pickable:SetUp("kyno_sap_spoiled", TUNING.KYNO_SAP_GROWTIME, 3)
     inst.components.pickable.onregenfn = onregen_ruinedfn
     inst.components.pickable.onpickedfn = onpicked_ruinedfn
     inst.components.pickable.makeemptyfn = makeempty_ruinedfn
@@ -438,7 +435,7 @@ local function ruinedfn()
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammeredRuined)
-	inst.components.workable:SetWorkLeft(3)
+	inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_TAPPED_WORKLEFT)
 
     return inst
 end
@@ -488,7 +485,7 @@ local function ruined2fn()
 
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
-    inst.components.workable:SetWorkLeft(15)
+    inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(tree_chopped_ruined)
     inst.components.workable:SetOnWorkCallback(tree_chop)
 
@@ -529,7 +526,7 @@ local function stump_ruinedfn()
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
-    inst.components.workable:SetWorkLeft(1)
+    inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
 
     return inst

@@ -12,7 +12,7 @@ local function OnAttached(inst, target)
     inst.Transform:SetPosition(0, 0, 0)
 	
     target:AddTag("groggy")
-	target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_dmgreductionbuff", .70)
+	target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_dmgreductionbuff", TUNING.KYNO_DMGREDUCTIONBUFF_SPEED)
 	target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER)
 	
     inst:ListenForEvent("death", function()

@@ -50,9 +50,9 @@ local function fn()
 	inst.components.tradable.goldvalue = 1
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = -20
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = -33
+	inst.components.edible.healthvalue = TUNING.KYNO_HUMANMEAT_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_HUMANMEAT_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_HUMANMEAT_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 
@@ -114,9 +114,9 @@ local function fn_cooked()
 	inst.components.tradable.goldvalue = 1
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = -3
-	inst.components.edible.hungervalue = 18.75
-	inst.components.edible.sanityvalue = -20
+	inst.components.edible.healthvalue = TUNING.KYNO_HUMANMEAT_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_HUMANMEAT_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_HUMANMEAT_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 	
@@ -169,9 +169,9 @@ local function fn_dried()
 	inst.components.tradable.goldvalue = 1
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = -3
-	inst.components.edible.hungervalue = 25
-	inst.components.edible.sanityvalue = -15
+	inst.components.edible.healthvalue = TUNING.KYNO_HUMANMEAT_DRIED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_HUMANMEAT_DRIED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_HUMANMEAT_DRIED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 	

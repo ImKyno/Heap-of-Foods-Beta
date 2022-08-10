@@ -87,7 +87,7 @@ local function fn()
 	
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/wilson/pickup_plants"
-    inst.components.pickable:SetUp("kyno_white_cap", TUNING.LICHEN_REGROW_TIME, 2)
+    inst.components.pickable:SetUp("kyno_white_cap", TUNING.KYNO_MUSHSTUMP_GROWTIME, 2)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
     inst.components.pickable.makeemptyfn = makeemptyfn
@@ -95,7 +95,7 @@ local function fn()
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.DIG)
 	inst.components.workable:SetOnFinishCallback(dig_up)
-	inst.components.workable:SetWorkLeft(1)
+	inst.components.workable:SetWorkLeft(TUNING.KYNO_MUSHSTUMP_WORKLEFT)
 	
 	inst:ListenForEvent("onbuilt", onbuilt)
 

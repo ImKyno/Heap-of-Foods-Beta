@@ -209,9 +209,9 @@ local function parznip_eaten()
 	inst:AddComponent("tradable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 6
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_PARZNIP_EATEN_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_PARZNIP_EATEN_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_PARZNIP_EATEN_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
 	inst:AddComponent("perishable")
@@ -370,7 +370,7 @@ local function parznip_big()
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.CHOP)
-	inst.components.workable:SetWorkLeft(10)
+	inst.components.workable:SetWorkLeft(TUNING.KYNO_PARZNIP_BIG_WORKLEFT)
 	inst.components.workable:SetOnWorkCallback(onworked)
 	inst.components.workable:SetOnFinishCallback(onworkfinish)
 	

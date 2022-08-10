@@ -8,11 +8,13 @@ function SlaughterItem:Slaughter(doer, target)
 		doer.killer_task = nil
 	end
 	
+	--[[
 	if doer:HasTag("animal_butcher") then -- Extra Meat if Wigfrid kills the target.
 		if target.components.lootdropper then
 			target.components.lootdropper:AddChanceLoot("meat", 1)
 		end
 	end
+	]]--
 	
 	target.components.health.invincible = false
 	target.components.health:Kill()

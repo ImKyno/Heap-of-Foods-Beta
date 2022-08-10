@@ -92,7 +92,7 @@ local function fn()
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
-    inst.components.pickable:SetUp("kyno_seaweeds", TUNING.BULLKELP_REGROW_TIME)
+    inst.components.pickable:SetUp("kyno_seaweeds", TUNING.KYNO_WEEDSEA_GROWTIME)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
     inst.components.pickable.makeemptyfn = makeemptyfn
@@ -134,9 +134,9 @@ local function seaweed()
 	inst:AddComponent("tradable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 9.375
-	inst.components.edible.sanityvalue = -10
+	inst.components.edible.healthvalue = TUNING.KYNO_WEEDSEA_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_WEEDSEA_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_WEEDSEA_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	
 	inst:AddComponent("dryable")
@@ -194,9 +194,9 @@ local function seaweed_cooked()
 	inst:AddComponent("tradable")
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 3
-	inst.components.edible.hungervalue = 9.375
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_WEEDSEA_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_WEEDSEA_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_WEEDSEA_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	
 	inst:AddComponent("perishable")
@@ -245,9 +245,9 @@ local function seaweed_dried()
 	inst:AddComponent("tradable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 3
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = 5
+	inst.components.edible.healthvalue = TUNING.KYNO_WEEDSEA_DRIED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_WEEDSEA_DRIED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_WEEDSEA_DRIED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
 	inst:AddComponent("perishable")

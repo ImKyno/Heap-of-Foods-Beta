@@ -143,9 +143,9 @@ local function opened_tomato()
         return inst
     end
 	
-	inst.components.edible.healthvalue = 12.5
-	inst.components.edible.hungervalue = 20
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_TOMATOCAN_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_TOMATOCAN_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_TOMATOCAN_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	
 	return inst
@@ -169,9 +169,9 @@ local function opened_bean()
         return inst
     end
 	
-	inst.components.edible.healthvalue = 0
-	inst.components.edible.hungervalue = 20
-	inst.components.edible.sanityvalue = 10
+	inst.components.edible.healthvalue = TUNING.KYNO_BEANCAN_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_BEANCAN_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_BEANCAN_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	
 	return inst
@@ -199,9 +199,9 @@ local function opened_meat()
 	
 	inst.components.tradable.goldvalue = 1 -- Only meat is valuable!
 
-	inst.components.edible.healthvalue = 5
-	inst.components.edible.hungervalue = 25
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_MEATCAN_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_MEATCAN_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_MEATCAN_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 	

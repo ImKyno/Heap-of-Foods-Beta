@@ -104,14 +104,14 @@ local function fn()
 	inst.components.inventoryitem:SetSinks(true)
 	
 	inst:AddComponent("health")
-	inst.components.health:SetMaxHealth(40)
+	inst.components.health:SetMaxHealth(TUNING.KYNO_PEBBLECRAB_HEALTH)
 
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"kyno_crabmeat"})
 
 	inst:AddComponent("locomotor")
-	inst.components.locomotor.runspeed = 6
-	inst.components.locomotor.walkspeed = 1 
+	inst.components.locomotor.runspeed = TUNING.KYNO_PEBBLECRAB_RUNSPEED
+	inst.components.locomotor.walkspeed = TUNING.KYNO_PEBBLECRAB_WALKSPEED
 	
 	inst:AddComponent("eater")
 	inst.components.eater:SetDiet({ FOODTYPE.MEAT, FOODTYPE.FISH }, { FOODTYPE.MEAT, FOODTYPE.FISH })

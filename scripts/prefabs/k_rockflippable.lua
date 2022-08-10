@@ -101,9 +101,9 @@ end
 local function getregentimefn(inst)
 	if inst.components.pickable then
 		local num_cycles_passed = math.min(inst.components.pickable.max_cycles - inst.components.pickable.cycles_left, 0)
-		return FLIPPABLE_ROCK_REPOPULATE_TIME + FLIPPABLE_ROCK_REPOPULATE_INCREASE * num_cycles_passed + math.random() * FLIPPABLE_ROCK_REPOPULATE_VARIANCE
+		return TUNING.FLIPPABLE_ROCK_REPOPULATE_TIME + TUNING.FLIPPABLE_ROCK_REPOPULATE_INCREASE * num_cycles_passed + math.random() * TUNING.FLIPPABLE_ROCK_REPOPULATE_VARIANCE
 	else
-		return FLIPPABLE_ROCK_REPOPULATE_TIME
+		return TUNING.FLIPPABLE_ROCK_REPOPULATE_TIME
 	end
 end
 
@@ -194,20 +194,20 @@ local function fn()
 	inst:AddComponent("inspectable")
 
 	inst:AddComponent("pickable")
-	inst.components.pickable:SetUp(nil, TUNING.TOTAL_DAY_TIME * 7)
+	inst.components.pickable:SetUp(nil, TUNING.FLIPPABLE_GROWTIME)
 	inst.components.pickable.getregentimefn = getregentimefn
 	inst.components.pickable.onpickedfn = onpickedfn
 	inst.components.pickable.makeemptyfn = makeemptyfn
 	inst.components.pickable.makebarrenfn = makebarrenfn
 	inst.components.pickable.makefullfn = makefullfn
 	inst.components.pickable.ontransplantfn = ontransplantfn
-	inst.components.pickable.max_cycles = FLIPPABLE_ROCK_CYCLES + math.random(2)
+	inst.components.pickable.max_cycles = TUNING.FLIPPABLE_ROCK_CYCLES + math.random(2)
 	inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
 	inst.components.pickable.quickpick = true
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.MINE)
-	inst.components.workable:SetWorkLeft(3)
+	inst.components.workable:SetWorkLeft(TUNING.FLIPPABLE_WORKLEFT)
 	inst.components.workable:SetOnFinishCallback(OnWorked)
 
 	inst:AddComponent("lootdropper")

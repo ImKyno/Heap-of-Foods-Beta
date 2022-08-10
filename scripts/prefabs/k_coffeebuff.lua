@@ -8,7 +8,7 @@ local function OnAttached(inst, target)
     end
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0)
-    target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", 1.83)
+    target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
     inst:ListenForEvent("death", function()
         inst.components.debuff:Stop()
     end, target)

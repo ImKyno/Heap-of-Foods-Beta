@@ -105,9 +105,9 @@ local function opened_fn()
     inst.components.tradable.goldvalue = 1
 
     inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 10
-	inst.components.edible.hungervalue = 25
-	inst.components.edible.sanityvalue = 0
+	inst.components.edible.healthvalue = TUNING.KYNO_TUNACAN_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_TUNACAN_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_TUNACAN_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 

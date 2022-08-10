@@ -407,7 +407,7 @@ local function grillsmallfn()
     end
 	
 	inst:AddComponent("stewer")
-	inst.components.stewer.cooktimemult = .5 --TUNING.PORTABLE_COOK_POT_TIME_MULTIPLIER
+	inst.components.stewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT
 	inst.components.stewer.onstartcooking = startcookfn
 	inst.components.stewer.oncontinuecooking = continuecookfn
 	inst.components.stewer.oncontinuedone = continuedonefn
@@ -487,7 +487,7 @@ local function grillbigfn()
     end
 	
 	inst:AddComponent("stewer")
-	inst.components.stewer.cooktimemult = .5 --TUNING.PORTABLE_COOK_POT_TIME_MULTIPLIER
+	inst.components.stewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT
 	inst.components.stewer.onstartcooking = startcookfn
 	inst.components.stewer.oncontinuecooking = continuecookfn
 	inst.components.stewer.oncontinuedone = continuedonefn

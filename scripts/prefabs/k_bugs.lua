@@ -156,9 +156,9 @@ local function gumfn()
 	inst:AddComponent("tradable")
 
    	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 0
-	inst.components.edible.hungervalue = 9.375
-	inst.components.edible.sanityvalue = -10
+	inst.components.edible.healthvalue = TUNING.KYNO_BEANBUGS_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_BEANBUGS_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_BEANBUGS_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
 	inst:AddComponent("perishable")
@@ -210,9 +210,9 @@ local function gumfn_cooked()
 	inst:AddComponent("tradable")
 
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 12.5
-	inst.components.edible.sanityvalue = -5
+	inst.components.edible.healthvalue = TUNING.KYNO_BEANBUGS_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_BEANBUGS_COOKED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_BEANBUGS_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	
 	inst:AddComponent("perishable")

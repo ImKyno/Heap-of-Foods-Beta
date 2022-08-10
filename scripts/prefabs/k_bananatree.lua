@@ -151,7 +151,7 @@ local function tree_fn()
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/wilson/pickup_reeds"
-    inst.components.pickable:SetUp("kyno_banana", TUNING.CAVE_BANANA_GROW_TIME)
+    inst.components.pickable:SetUp("kyno_banana", TUNING.KYNO_BANANATREE_GROWTIME)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
     inst.components.pickable.makeemptyfn = makeemptyfn
@@ -159,7 +159,7 @@ local function tree_fn()
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
-    inst.components.workable:SetWorkLeft(3)
+    inst.components.workable:SetWorkLeft(TUNING.KYNO_BANANATREE_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(tree_chopped)
     inst.components.workable:SetOnWorkCallback(tree_chop)
 
@@ -231,7 +231,7 @@ local function stump_fn()
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
-    inst.components.workable:SetWorkLeft(1)
+    inst.components.workable:SetWorkLeft(TUNING.KYNO_BANANATREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
 
     MakeSmallBurnable(inst)
@@ -298,7 +298,7 @@ local function burnt_fn()
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
-    inst.components.workable:SetWorkLeft(1)
+    inst.components.workable:SetWorkLeft(TUNING.KYNO_BANANATREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(burnt_chopped)
 
     MakeHauntableWorkAndIgnite(inst)

@@ -28,6 +28,7 @@ local hof_init_misc =
 	"hof_brewbook",
 	"hof_stategraphs",
 	"hof_containers",
+	"hof_tuning",
 	"hof_postinits_misc",
 	"hof_icons",
 }
