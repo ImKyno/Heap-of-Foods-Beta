@@ -26,16 +26,27 @@ STRINGS.CHARACTERS.WANDA.DESCRIBE.
 
 -- Mod Strings.
 STRINGS.BREWBOOK_TITLE = "Livro de Fermentações"
-STRINGS.BREWBOOK_DESC = "Teste"
+STRINGS.BREWBOOK_DESC = "O Guia do Constante para fermentação"
+
+STRINGS.UI.CRAFTING.NEEDSMEALING_ONE = "Use a Mealing Stone para produzir este ingrediente!"
+STRINGS.UI.CRAFTING.NEEDSMEALING_TWO = "Use a Mealing Stone para produzir este ingrediente!"
+
+STRINGS.UI.CRAFTING.NEEDSSERENITYSHOP_ONE = "Encontre alguém amigável o suficiênte\npara fazer esta troca!"
+STRINGS.UI.CRAFTING.NEEDSSERENITYSHOP_TWO = "Encontre alguém amigável o suficiênte\npara fazer esta troca!"
 
 STRINGS.UI.FOOD_TYPES.PREPAREDSOUL = "Alma"
 STRINGS.UI.FOOD_TYPES.POOP = "Horrível" -- Use horrible just to mimic the cookbook.
 STRINGS.UI.FOOD_TYPES.ALCOHOLIC = "Goodies" -- Just to mimic.
+
 STRINGS.UI.CRAFTING.RECIPEACTION.SERENITYSHOP = "Trocar"
+STRINGS.ACTIONS.OPEN_CRAFTING.MEALING = "Produzir em"
+
 STRINGS.UI.COOKBOOK.TAB_TITLE_KEG = "Receitas do Barril de Madeira"
 STRINGS.UI.COOKBOOK.TAB_TITLE_JAR = "Receitas da Jarra de Conservas"
 STRINGS.UI.COOKBOOK.TAB_TITLE_ARTISAN = "Receitas de Artesanato"
+
 STRINGS.UI.COOKBOOK.BREWINGTIME_TITLE = "Tempo de Fermentação"
+
 STRINGS.UI.COOKBOOK.FILTER_GOODIES = "Guloseima"
 
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED = "Acelera o corpo"

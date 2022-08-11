@@ -205,11 +205,11 @@ local function waterfn()
 	inst:AddComponent("inspectable")
 	
 	inst:AddComponent("wateryprotection")
-	inst.components.wateryprotection.extinguishheatpercent = TUNING.WATERINGCAN_EXTINGUISH_HEAT_PERCENT
-	inst.components.wateryprotection.temperaturereduction = TUNING.WATERINGCAN_TEMP_REDUCTION
-	inst.components.wateryprotection.witherprotectiontime = TUNING.WATERINGCAN_PROTECTION_TIME
-	inst.components.wateryprotection.addwetness = TUNING.WATERINGCAN_WATER_AMOUNT
-	inst.components.wateryprotection.protection_dist = TUNING.WATERINGCAN_PROTECTION_DIST
+	inst.components.wateryprotection.extinguishheatpercent = TUNING.KYNO_BUCKET_WATER_EXTINGUISH_HEAT_PERCENT
+	inst.components.wateryprotection.temperaturereduction = TUNING.KYNO_BUCKET_WATER_TEMP_REDUCTION
+	inst.components.wateryprotection.witherprotectiontime = TUNING.KYNO_BUCKET_WATER_PROTECTION_TIME
+	inst.components.wateryprotection.addwetness = TUNING.KYNO_BUCKET_WATER_WATER_AMOUNT
+	inst.components.wateryprotection.protection_dist = TUNING.KYNO_BUCKET_WATER_PROTECTION_DIST
 	inst.components.wateryprotection:AddIgnoreTag("player")
 	inst.components.wateryprotection.onspreadprotectionfn = OnUse
 

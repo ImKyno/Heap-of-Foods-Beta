@@ -1705,6 +1705,7 @@ local kyno_foods =
 		hunger = 0,
 		sanity = 0,
 		cooktime = .5,
+		prefabs = { "buff_moistureimmunity" },
 		floater = {"med", nil, 0.65},
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DRY,
         oneatenfn = function(inst, eater)
@@ -1764,7 +1765,16 @@ local kyno_foods =
 		hunger = 75,
 		sanity = 25,
 		cooktime = 1.6,
+		prefabs = { "boneshard" },
 		floater = {"med", nil, 0.65},
+		oneatenfn = function(inst, eater)
+			local bones = SpawnPrefab("boneshard")
+			bones.components.stackable.stacksize = 2
+			if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost") 
+			and not eater.components.inventory:IsFull() then 
+				eater.components.inventory:GiveItem(bones)
+			end
+		end,
 	},
 	
 	cheese_yellow = 

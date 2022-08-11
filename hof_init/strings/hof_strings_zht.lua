@@ -26,16 +26,28 @@ STRINGS.CHARACTERS.WANDA.DESCRIBE.
 
 -- Mod Strings.
 STRINGS.BREWBOOK_TITLE = "Brewbook"
-STRINGS.BREWBOOK_DESC = "Test"
+STRINGS.BREWBOOK_DESC = "The Constant's guide to brewery"
+
+STRINGS.UI.CRAFTING.NEEDSMEALING_ONE = "Use a Mealing Stone to grind this ingredient!"
+STRINGS.UI.CRAFTING.NEEDSMEALING_TWO = "Use a Mealing Stone to grind this ingredient!"
+
+STRINGS.UI.CRAFTING.NEEDSSERENITYSHOP_ONE = "Find someone friendly enough to make this trade!"
+STRINGS.UI.CRAFTING.NEEDSSERENITYSHOP_TWO = "Find someone friendly enough to make this trade!"
 
 STRINGS.UI.FOOD_TYPES.PREPAREDSOUL = "Soul"
 STRINGS.UI.FOOD_TYPES.POOP = "Horrible" -- Use horrible just to mimic the cookbook.
 STRINGS.UI.FOOD_TYPES.ALCOHOLIC = "Goodies" -- Just to mimic.
+
 STRINGS.UI.CRAFTING.RECIPEACTION.SERENITYSHOP = "Trade"
+
+STRINGS.ACTIONS.OPEN_CRAFTING.MEALING = "Grind at"
+
 STRINGS.UI.COOKBOOK.TAB_TITLE_KEG = "Wooden Keg Recipes"
 STRINGS.UI.COOKBOOK.TAB_TITLE_JAR = "Preserves Jar Recipes"
 STRINGS.UI.COOKBOOK.TAB_TITLE_ARTISAN = "Artisan Recipes"
+
 STRINGS.UI.COOKBOOK.BREWINGTIME_TITLE = "Brewing Time"
+
 STRINGS.UI.COOKBOOK.FILTER_GOODIES = "Goodies"
 
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED = "Speeds the body"

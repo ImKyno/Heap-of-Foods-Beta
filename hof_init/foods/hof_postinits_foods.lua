@@ -556,6 +556,13 @@ for k,v in pairs(drinkable_foods) do
 end
 
 -- Wortox gets the full stats of Soul Stew.
+local soulstew_debuff = {
+	"soulstew",
+    "soulstew_spice_garlic",
+    "soulstew_spice_sugar",
+    "soulstew_spice_chili",
+    "soulstew_spice_salt",
+}
 
 local function SoulStewPostinit(inst)
 	local function OnEatSoulStew(inst, eater)
@@ -581,7 +588,9 @@ local function SoulStewPostinit(inst)
     end
 end
 
-AddPrefabPostInit("soulstew", SoulStewPostinit)
+for k,v in pairs(soulstew_debuff) do
+    AddPrefabPostInit(v, SoulStewPostinit)
+end
 
 -- Make Whenever Someone Eats the Fortune Cookie, they say a quote.
 local fortunecookie_debuff = {
@@ -631,6 +640,7 @@ for k,v in pairs(fortunecookie_debuff) do
 end
 
 -- Cornocupia gives back the Beefalo Horn.
+--[[
 local hornocupia_debuff = {
     "hornocupia",
     "hornocupia_spice_garlic",
@@ -659,6 +669,7 @@ end
 for k,v in pairs(hornocupia_debuff) do
     AddPrefabPostInit(v, HornocupiaPostinit)
 end
+]]--
 
 -- Make every "same" recipe has the same quotes.
 local jelly_foods = {

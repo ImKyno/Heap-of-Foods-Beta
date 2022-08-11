@@ -9,6 +9,9 @@ local Recipe2 		= _G.Recipe2
 local TechTree 		= require("techtree")
 local RecipeFilter	= require("recipes_filter")
 
+local TheArchitectPack = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
+local NotEnoughTurfs   = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
+
 -- For sorting recipe.
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 local function SortRecipe(a, b, filter_name, offset)
@@ -99,7 +102,7 @@ AddPrototyperDef("kyno_mealgrinder",
 		icon_atlas 			= "images/tabimages/hof_tabimages.xml", 
 		icon_image 			= "kyno_tab_mealing.tex", 
 		is_crafting_station = true, 
-		action_str 			= "MEALGRINDER", 
+		action_str 			= "MEALING", 
 		filter_text 		= "Food Ingredients",
 	}
 )
@@ -440,7 +443,7 @@ local KynSeedCucumb 		= AddRecipe2("kyno_cucumber_seeds_p", {Ingredient("waterme
 	{"CRAFTING_STATION"}
 )
 
-local KynSugarAntidote		= AddRecipe2("kyno_saphealer_p", {Ingredient("kyno_sap_spoiled", 3, ModAtlas)}, TECH.LOST,
+local KynSugarAntidote		= AddRecipe2("kyno_saphealer_p", {Ingredient("kyno_sap_spoiled", 3, ModAtlas)}, TECH.SERENITYSHOP_ONE,
 	{
 		nounlock 			= true, 
 		actionstr 			= "SERENITYSHOP",

@@ -152,7 +152,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_aloe_frequency,
 			amount 		= 3,
-			maxcount 	= 71,
+			maxcount 	= 41,
 			tile 		= WORLD_TILES.GRASS,
 		}
 	end
@@ -163,7 +163,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_aloe_frequency,
 			amount 		= 3,
-			maxcount 	= 71,
+			maxcount 	= 41,
 			tile 		= WORLD_TILES.DECIDUOUS,
 		}
 	end
@@ -174,7 +174,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_aloe_frequency,
 			amount 		= 3,
-			maxcount 	= 81,
+			maxcount 	= 41,
 			tile 		= WORLD_TILES.FOREST,
 		}
 	end
@@ -185,7 +185,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_aloe_frequency,
 			amount 		= 3,
-			maxcount 	= 81,
+			maxcount 	= 41,
 			tile 		= WORLD_TILES.MARSH,
 		}
 	end
@@ -207,7 +207,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_wildwheat_frequency,
 			amount 		= 3,
-			maxcount 	= 101,
+			maxcount 	= 51,
 			tile 		= WORLD_TILES.SAVANNA,
 		}
 	end
@@ -229,7 +229,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_spotbush_frequency,
 			amount 		= 3,
-			maxcount 	= 55,
+			maxcount 	= 35,
 			tile 		= WORLD_TILES.QUAGMIRE_PARKFIELD,
 		}
 	end
@@ -240,7 +240,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_sweetflower_frequency,
 			amount 		= 3,
-			maxcount 	= 72,
+			maxcount 	= 35,
 			tile 		= WORLD_TILES.QUAGMIRE_PARKFIELD,
 		}
 	end
@@ -251,7 +251,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_cave_fern_frequency,
 			amount 		= 3,
-			maxcount 	= 63,
+			maxcount 	= 33,
 			tile 		= WORLD_TILES.QUAGMIRE_PARKFIELD,
 		}
 	end
@@ -262,7 +262,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_rockflippable_frequency,
 			amount 		= 3,
-			maxcount 	= 91,
+			maxcount 	= 31,
 			tile 		= WORLD_TILES.SAVANNA,
 		}
 	end
@@ -273,7 +273,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_mushstump_natural_frequency,
 			amount 		= 3,
-			maxcount 	= 81,
+			maxcount 	= 41,
 			tile 		= WORLD_TILES.FOREST,
 		}
 	end
@@ -284,7 +284,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_lotus_frequency,
 			amount 		= 3,
-			maxcount 	= 101,
+			maxcount 	= 81,
 			tile 		= WORLD_TILES.OCEAN_COASTAL,
 		}
 	end
@@ -294,7 +294,7 @@ if DO_REGROWTH == 1 then
 		nonwinterspawners["kyno_seaweeds_ocean"] = {
 			frequency 	= simpleregrowth.spawner_seaweeds_frequency,
 			amount 		= 3,
-			maxcount 	= 131,
+			maxcount 	= 81,
 			tile 		= WORLD_TILES.OCEAN_COASTAL,
 		}
 	end
@@ -304,7 +304,7 @@ if DO_REGROWTH == 1 then
 		nonwinterspawners["kyno_taroroot_ocean"] = {
 			frequency 	= simpleregrowth.spawner_taroroot_frequency,
 			amount 		= 3,
-			maxcount 	= 101,
+			maxcount 	= 81,
 			tile = WORLD_TILES.OCEAN_SWELL,
 		}
 	end
@@ -326,7 +326,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_parznip_frequency,
 			amount 		= 3,
-			maxcount 	= 101,
+			maxcount 	= 81,
 			tile 		= WORLD_TILES.MUD, WORLD_TILES.CAVE,
 		}
 	end
@@ -348,7 +348,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_rockflippable_cave_frequency,
 			amount 		= 3,
-			maxcount 	= 85,
+			maxcount 	= 51,
 			tile 		= WORLD_TILES.UNDERROCK, WORLD_TILES.CAVE, WORLD_TILES.ROCKY,
 		}
 	end
@@ -359,7 +359,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_mushstump_cave_frequency,
 			amount 		= 3,
-			maxcount 	= 71,
+			maxcount 	= 41,
 			tile 		= WORLD_TILES.FUNGUSGREEN,
 		}
 	end
@@ -370,7 +370,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_turnip_cave_frequency,
 			amount 		= 3,
-			maxcount 	= 101,
+			maxcount 	= 41,
 			tile 		= WORLD_TILES.MARSH,
 		}
 	end
@@ -381,7 +381,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_watery_crate_frequency,
 			amount 		= 3,
-			maxcount 	= 131,
+			maxcount 	= 61,
 			tile 		= WORLD_TILES.OCEAN_COASTAL, WORLD_TILES.OCEAN_ROUGH, WORLD_TILES.OCEAN_SWELL, WORLD_TILES.OCEAN_COASTAL_SHORE, WORLD_TILES.OCEAN_HAZARDOUS,
 			WORLD_TILES.OCEAN_BRINEPOOL_SHORE, WORLD_TILES.OCEAN_COASTAL, WORLD_TILES.OCEAN_WATERLOG,
 		}
@@ -393,7 +393,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_aspargos_frequency,
 			amount 		= 3,
-			maxcount 	= 101,
+			maxcount 	= 41,
 			tile 		= WORLD_TILES.GRASS, WORLD_TILES.FOREST
 		}
 	end
@@ -404,7 +404,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_aspargos_cave_frequency,
 			amount 		= 3,
-			maxcount 	= 101,
+			maxcount 	= 41,
 			tile 		= WORLD_TILES.GRASS, WORLD_TILES.FOREST, WORLD_TILES.SINKHOLE,
 		}
 	end
@@ -415,7 +415,7 @@ if DO_REGROWTH == 1 then
 		{
 			frequency 	= simpleregrowth.spawner_pineapple_frequency,
 			amount 		= 3,
-			maxcount 	= 101,
+			maxcount 	= 41,
 			tile 		= WORLD_TILES.GRASS, WORLD_TILES.FOREST,
 		}
 	end

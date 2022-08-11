@@ -126,8 +126,12 @@ AddComponentAction("USEITEM", "saphealer", function(inst, doer, target, actions,
 	end
 end)
 
-AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SAPHEAL, "give"))
-AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SAPHEAL, "give"))
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SAPHEAL, function(inst, action)
+	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+end))
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SAPHEAL, function(inst, action)
+	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+end))
 
 -- Action for Milking animals. If Beefalo Milk mod is enabled, use their system instead?
 -- if not _G.KnownModIndex:IsModEnabled("workshop-436654027") or _G.KnownModIndex:IsModEnabled("workshop-1277605967") or
