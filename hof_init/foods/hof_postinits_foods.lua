@@ -639,37 +639,29 @@ for k,v in pairs(fortunecookie_debuff) do
     AddPrefabPostInit(v, FortuneCookiePostinit)
 end
 
--- Cornocupia gives back the Beefalo Horn.
---[[
-local hornocupia_debuff = {
-    "hornocupia",
-    "hornocupia_spice_garlic",
-    "hornocupia_spice_sugar",
-    "hornocupia_spice_chili",
-    "hornocupia_spice_salt",
+-- Mushrooms can be dried on Drying Racks.
+local dryable_caps = {
+	"red_cap",
+	"green_cap",
+	"blue_cap",
+	"moon_cap",
 }
 
-local function HornocupiaPostinit(inst)
-	local function OnEatenHornocupia(inst, eater)
-		local horn = SpawnPrefab("horn")
-		if eater.components.inventory and eater:HasTag("player") and not eater.components.health:IsDead()
-			and not eater:HasTag("playerghost") then eater.components.inventory:GiveItem(horn) 
-		end
-	end
+local function CapsPostinit(inst)
+	inst:AddTag("dryable")
 	
 	if not _G.TheWorld.ismastersim then
         return inst
     end
-
-	if inst.components.edible ~= nil then
-		inst.components.edible:SetOnEatenFn(OnEatenHornocupia)
-	end
+	
+    inst:AddComponent("dryable")
+	inst.components.dryable:SetProduct("kyno_".. inst.prefab .."_dried")
+    inst.components.dryable:SetDryTime(TUNING.DRY_FAST)
 end
 
-for k,v in pairs(hornocupia_debuff) do
-    AddPrefabPostInit(v, HornocupiaPostinit)
+for k,v in pairs(dryable_caps) do 
+	AddPrefabPostInit(v, CapsPostinit)	
 end
-]]--
 
 -- Make every "same" recipe has the same quotes.
 local jelly_foods = {

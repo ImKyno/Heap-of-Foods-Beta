@@ -349,7 +349,7 @@ configuration_options =
 				data = 1
 			},
         },
-        default = 1,
+        default = 0,
 	},
 	
 	Title("Extra Options", "Extra Options for the Mod."),

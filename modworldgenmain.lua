@@ -1,4 +1,3 @@
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Common Dependencies.
 local _G             = GLOBAL
 local require        = _G.require
@@ -19,7 +18,7 @@ modimport("hof_init/world/hof_worldgen")
 
 local TheArchitectPack = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
 local NotEnoughTurfs   = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Since we already have the turfs and they can be dug, we are going to use them for make a custom prefab.
 -- Basically you're getting the original turfs from ground with a custom prefab i.e: the turf item.
 local GROUND_TURFS = 
@@ -45,7 +44,7 @@ end
 -- QUAGMIRE_CITYSTONE_ID = 40
 -- ROCKY_ID				 = 3
 -- SAVANNA_ID			 = 5
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Keys and Locks.
 local keycount                    = 1
 for k, v in pairs(KEYS) do
@@ -61,18 +60,26 @@ end
 
 LOCKS["SERENITY_ISLAND"]          = lockcount
 LOCKS_KEYS[LOCKS.SERENITY_ISLAND] = {KEYS.SERENITY_ISLAND}
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Our Custom Layouts.
 Layouts["Oasis"]              = StaticLayout.Get("map/static_layouts/hof_oasis")
 Layouts["SerenityIslandShop"] = StaticLayout.Get("map/static_layouts/hof_serenityisland_shop")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Retrofit the Serenity Archipelago in the world.
 -- The numbers below each turf represents them on the setpiece file.
-_G.SERENITYISLAND_GROUNDS        = 
-{
-	WORLD_TILES.OCEAN_BRINEPOOL, WORLD_TILES.ROCKY, WORLD_TILES.SAVANNA, WORLD_TILES.QUAGMIRE_CITYSTONE, WORLD_TILES.QUAGMIRE_PARKFIELD
-	-- 1              			 -- 2               -- 3                 -- 4                            -- 5
-}
+if TheArchitectPack or NotEnoughTurfs then
+	_G.SERENITYISLAND_GROUNDS        = 
+	{
+		WORLD_TILES.OCEAN_BRINEPOOL, WORLD_TILES.ROCKY, WORLD_TILES.SAVANNA, WORLD_TILES.STONECITY, WORLD_TILES.PINKPARK
+		-- 1              			 -- 2               -- 3                 -- 4                            -- 5
+	}
+else
+	_G.SERENITYISLAND_GROUNDS        = 
+	{
+		WORLD_TILES.OCEAN_BRINEPOOL, WORLD_TILES.ROCKY, WORLD_TILES.SAVANNA, WORLD_TILES.QUAGMIRE_CITYSTONE, WORLD_TILES.QUAGMIRE_PARKFIELD
+		-- 1              			 -- 2               -- 3                 -- 4                            -- 5
+	}
+end
 
 local hof_ocean_islands          = 
 {
@@ -93,7 +100,7 @@ for i, layout in ipairs(hof_ocean_islands) do
 	})
 	Layouts[layout].ground_types = _G.SERENITYISLAND_GROUNDS
 end
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Ocean Wrecks Setpieces.
 _G.OCEANSETPIECE_GROUNDS         = 
 {
@@ -123,4 +130,3 @@ for i, layout in ipairs(hof_ocean_setpieces) do
 	})
 	Layouts[layout].ground_types = _G.OCEANSETPIECE_GROUNDS
 end
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

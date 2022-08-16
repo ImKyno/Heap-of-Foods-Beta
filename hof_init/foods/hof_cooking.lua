@@ -75,6 +75,10 @@ AddIngredientValues({"cheese_yellow"},			{dairy=1,		cheese=1})
 AddIngredientValues({"cheese_white"},			{dairy=1,		cheese=1})
 AddIngredientValues({"cheese_koalefant"},		{dairy=1,		cheese=1})
 AddIngredientValues({"milk_box"},				{dairy=2})
+AddIngredientValues({"kyno_red_cap_dried"}, 	{veggie=0.5, 	mushroom=1})
+AddIngredientValues({"kyno_green_cap_dried"}, 	{veggie=0.5, 	mushroom=1})
+AddIngredientValues({"kyno_blue_cap_dried"}, 	{veggie=0.5, 	mushroom=1})
+AddIngredientValues({"kyno_moon_cap_dried"}, 	{veggie=0.5, 	mushroom=1})
 
 -- Icons For Cookbook.
 local cookbook_icons = 
@@ -160,6 +164,10 @@ local cookbook_icons =
 	"cheese_white.tex",
 	"cheese_koalefant.tex",
 	"milk_box.tex",
+	"kyno_red_cap_dried.tex",
+	"kyno_green_cap_dried.tex",
+	"kyno_blue_cap_dried.tex",
+	"kyno_moon_cap_dried.tex",
 }
 
 for k,v in pairs(cookbook_icons) do
@@ -217,6 +225,21 @@ for i, cooker in ipairs(cookers) do
 		cookerrecipes[cooker] = {}
 	end
 end
+
+-- Fix For Food On Stations.
+local cookerstations = {
+	"cookpot",
+	"portablecookpot",
+	"archive_cookpot",
+	"kyno_cookware_syrup",
+	"kyno_cookware_small",
+	"kyno_cookware_big",
+	"kyno_cookware_elder",
+	"kyno_cookware_small_grill",
+	"kyno_cookware_grill",
+	"kyno_cookware_oven_small_casserole",
+	"kyno_cookware_oven_casserole",
+} 
 
 local kynofoods =
 {
@@ -357,152 +380,6 @@ local kynofoods =
 	milk_box				= require("hof_foodrecipes").milk_box,
 	watercup				= require("hof_foodrecipes").watercup,
 }
-
-kynofoods.coffee.potlevel 					= "med"
-kynofoods.bisque.potlevel 					= "high"
-kynofoods.jellyopop.potlevel 				= "med"
-kynofoods.musselbouillabaise.potlevel 		= "med"
-kynofoods.sharkfinsoup.potlevel 			= "med"
-kynofoods.sweetpotatosouffle.potlevel 		= "med"
-kynofoods.caviar.potlevel 					= "med"
-kynofoods.tropicalbouillabaisse.potlevel 	= "med"
-
-kynofoods.feijoada.potlevel 				= "med"
-kynofoods.gummy_cake.potlevel 				= "high"
-kynofoods.hardshell_tacos.potlevel 			= "high"
-kynofoods.icedtea.potlevel 					= "med"
-kynofoods.tea.potlevel 						= "med"
-kynofoods.nettlelosange.potlevel 			= "med"
-kynofoods.snakebonesoup.potlevel 			= "med"
-kynofoods.steamedhamsandwich.potlevel 		= "med"
-
-kynofoods.gorge_bread.potlevel 				= "med"
-kynofoods.gorge_potato_chips.potlevel 		= "med"
-kynofoods.gorge_vegetable_soup.potlevel 	= "med"
-kynofoods.gorge_jelly_sandwich.potlevel 	= "med"
-kynofoods.gorge_fish_stew.potlevel 			= "med"
-kynofoods.gorge_meat_stew.potlevel 			= "med"
-kynofoods.gorge_onion_cake.potlevel 		= "med"
-kynofoods.gorge_potato_pancakes.potlevel 	= "med"
-kynofoods.gorge_potato_soup.potlevel 		= "med"
-kynofoods.gorge_fishball_skewers.potlevel 	= "med"
-kynofoods.gorge_meat_skewers.potlevel 		= "med"
-kynofoods.gorge_stone_soup.potlevel 		= "med"
-kynofoods.gorge_croquette.potlevel 			= "med"
-kynofoods.gorge_roast_vegetables.potlevel 	= "med"
-kynofoods.gorge_meatloaf.potlevel 			= "low"
-kynofoods.gorge_carrot_soup.potlevel 		= "med"
-kynofoods.gorge_fishpie.potlevel 			= "med"
-kynofoods.gorge_fishchips.potlevel 			= "med"
-kynofoods.gorge_meatpie.potlevel 			= "med"
-kynofoods.gorge_sliders.potlevel 			= "med"
-kynofoods.gorge_jelly_roll.potlevel 		= "med"
-kynofoods.gorge_carrot_cake.potlevel 		= "med"
-kynofoods.gorge_garlicmashed.potlevel 		= "med"
-kynofoods.gorge_garlicbread.potlevel 		= "med"
-kynofoods.gorge_tomato_soup.potlevel 		= "med"
-kynofoods.gorge_sausage.potlevel 			= "med"
-kynofoods.gorge_candiedfish.potlevel 		= "low"
-kynofoods.gorge_stuffedmushroom.potlevel 	= "low"
-kynofoods.gorge_bruschetta.potlevel 		= "med"
-kynofoods.gorge_hamburger.potlevel 			= "med"
-kynofoods.gorge_fishburger.potlevel 		= "med"
-kynofoods.gorge_mushroomburger.potlevel 	= "med"
-kynofoods.gorge_fish_steak.potlevel 		= "med"
-kynofoods.gorge_curry.potlevel 				= "med"
-kynofoods.gorge_spaghetti.potlevel 			= "med"
-kynofoods.gorge_poachedfish.potlevel 		= "med"
-kynofoods.gorge_shepherd_pie.potlevel 		= "med"
-kynofoods.gorge_candy.potlevel 				= "med"
-kynofoods.gorge_bread_pudding.potlevel 		= "med"
-kynofoods.gorge_berry_tart.potlevel 		= "med"
-kynofoods.gorge_macaroni.potlevel 			= "med"
-kynofoods.gorge_bagel_and_fish.potlevel 	= "med"
-kynofoods.gorge_grilled_cheese.potlevel 	= "low"
-kynofoods.gorge_creammushroom.potlevel 		= "med"
-kynofoods.gorge_manicotti.potlevel 			= "med"
-kynofoods.gorge_cheeseburger.potlevel 		= "med"
-kynofoods.gorge_fettuccine.potlevel 		= "med"
-kynofoods.gorge_onion_soup.potlevel 		= "med"
-kynofoods.gorge_breaded_cutlet.potlevel 	= "low"
-kynofoods.gorge_creamy_fish.potlevel 		= "med"
-kynofoods.gorge_pizza.potlevel 				= "med"
-kynofoods.gorge_pot_roast.potlevel 			= "med"
-kynofoods.gorge_crab_cake.potlevel 			= "med"
-kynofoods.gorge_steak_frites.potlevel 		= "med"
-kynofoods.gorge_shooter_sandwich.potlevel 	= "med"
-kynofoods.gorge_bacon_wrapped.potlevel 		= "med"
-kynofoods.gorge_crab_roll.potlevel 			= "med"
-kynofoods.gorge_meat_wellington.potlevel 	= "med"
-kynofoods.gorge_crab_ravioli.potlevel 		= "med"
-kynofoods.gorge_caramel_cube.potlevel 		= "med"
-kynofoods.gorge_scone.potlevel 				= "med"
-kynofoods.gorge_trifle.potlevel 			= "med"
-kynofoods.gorge_cheesecake.potlevel 		= "med"
-kynofoods.kyno_syrup.potlevel 				= "med"
-
-kynofoods.festive_berrysauce.potlevel 		= "med"
-kynofoods.festive_bibingka.potlevel 		= "med"
-kynofoods.festive_cabbagerolls.potlevel 	= "med"
-kynofoods.festive_fishdish.potlevel 		= "med"
-kynofoods.festive_goodgravy.potlevel 		= "med"
-kynofoods.festive_latkes.potlevel 			= "med"
-kynofoods.festive_lutefisk.potlevel 		= "med"
-kynofoods.festive_mulledpunch.potlevel 		= "med"
-kynofoods.festive_panettone.potlevel 		= "med"
-kynofoods.festive_pavlova.potlevel 			= "med"
-kynofoods.festive_pickledherring.potlevel 	= "med"
-kynofoods.festive_polishcookies.potlevel 	= "med"
-kynofoods.festive_pumpkinpie.potlevel 		= "med"
-kynofoods.festive_roastedturkey.potlevel 	= "med"
-kynofoods.festive_stuffing.potlevel 		= "med"
-kynofoods.festive_sweetpotato.potlevel 		= "med"
-kynofoods.festive_tamales.potlevel 			= "med"
-kynofoods.festive_tourtiere.potlevel 		= "med"
-
-kynofoods.bubbletea.potlevel 				= "med"
-kynofoods.frenchonionsoup.potlevel 			= "med"
-kynofoods.slaw.potlevel						= "high"
-kynofoods.lotusbowl.potlevel 				= "med"
-kynofoods.poi.potlevel 						= "med"
-kynofoods.jellybean_sanity.potlevel 		= "med"
-kynofoods.jellybean_hunger.potlevel 		= "med"
-kynofoods.jellybean_super.potlevel 			= "med"
-
-kynofoods.bowlofgears.potlevel 				= "med"
-kynofoods.longpigmeal.potlevel 				= "med"
-kynofoods.duckyouglermz.potlevel 			= "med"
-kynofoods.cucumbersalad.potlevel 			= "med"
-kynofoods.waterycressbowl.potlevel 			= "med"
-kynofoods.catfood.potlevel 					= "low"
-kynofoods.katfood.potlevel 					= "med"
-kynofoods.bowlofpopcorn.potlevel            = "med"
-kynofoods.figjuice.potlevel                 = "med"
-kynofoods.coconutwater.potlevel             = "med"
-kynofoods.eyeballsoup.potlevel              = "med"
-kynofoods.soulstew.potlevel              	= "low"
-kynofoods.fortunecookie.potlevel            = "med"
-kynofoods.hornocupia.potlevel				= "high"
-kynofoods.cheese_yellow						= "med"
-kynofoods.cheese_white						= "med"
-kynofoods.cheese_koalefant					= "low"
-kynofoods.milk_box 							= "med"
-kynofoods.watercup.potlevel 				= "med"
-
--- Fix For Food On Stations.
-local cookerstations = {
-	"cookpot",
-	"portablecookpot",
-	"archive_cookpot",
-	"kyno_cookware_syrup",
-	"kyno_cookware_small",
-	"kyno_cookware_big",
-	"kyno_cookware_elder",
-	"kyno_cookware_small_grill",
-	"kyno_cookware_grill",
-	"kyno_cookware_oven_small_casserole",
-	"kyno_cookware_oven_casserole",
-} 
 
 for name, recipe in pairs(kynofoods) do
 	for i, station in ipairs(cookerstations) do 

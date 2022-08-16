@@ -14,6 +14,7 @@ local kyno_foods =
 		sanity = -5,
 		cooktime = 0.5,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -58,6 +59,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 15,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
 	},
@@ -72,8 +74,8 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = -10,
 		cooktime = 1,
-		potlevel = "med",
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NAUGHTINESS,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -89,6 +91,7 @@ local kyno_foods =
 		hunger = 50,
 		sanity = 15,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
 	},
@@ -103,6 +106,7 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 15,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -113,13 +117,14 @@ local kyno_foods =
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 60,
 		hunger = 37.5,
 		sanity = 15,
 		cooktime = 2,
-		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -134,6 +139,7 @@ local kyno_foods =
 		hunger = 75,
 		sanity = 15,
 		cooktime = 3.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -177,6 +183,7 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 33,
 		cooktime = 0.5,
+		potlevel = "high",
 		floater = {"med", nil, 0.65},
 		prefabs = { "buff_sleepresistance" },
         oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
@@ -207,6 +214,7 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 33,
 		cooktime = 0.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		prefabs = { "buff_sleepresistance" },
         oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
@@ -237,6 +245,7 @@ local kyno_foods =
 		hunger = 25,
 		sanity = -10,
 		cooktime = .5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -250,6 +259,7 @@ local kyno_foods =
 		hunger = 80,
 		sanity = 10,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -264,6 +274,7 @@ local kyno_foods =
 		hunger = 62.5,
 		sanity = 15,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -280,6 +291,7 @@ local kyno_foods =
 		sanity = 0,
 		cooktime = 1,
 		stacksize = 3,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -295,6 +307,7 @@ local kyno_foods =
 		sanity = 5,
 		cooktime = .75,
 		stacksize = 3,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -309,6 +322,7 @@ local kyno_foods =
 		hunger = 25,
 		sanity = 10,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -323,6 +337,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 15,
 		cooktime = .5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -337,6 +352,7 @@ local kyno_foods =
 		hunger = 100,
 		sanity = 5,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -350,6 +366,7 @@ local kyno_foods =
 		hunger = 200,
 		sanity = 10,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
 	},
@@ -364,6 +381,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 10,
 		cooktime = .75,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -377,6 +395,7 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 33,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -390,6 +409,7 @@ local kyno_foods =
 		hunger = 25,
 		sanity = 10,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -403,6 +423,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 20,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -416,6 +437,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 5,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -430,6 +452,7 @@ local kyno_foods =
 		hunger = 25,
 		sanity = 5,
 		cooktime = .60,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -443,6 +466,7 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 20,
 		cooktime = .75,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -456,6 +480,7 @@ local kyno_foods =
 		hunger = 40,
 		sanity = 20,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -483,6 +508,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 10,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -497,6 +523,7 @@ local kyno_foods =
 		hunger = 62.5,
 		sanity = 5,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 
@@ -510,6 +537,7 @@ local kyno_foods =
 		hunger = 100,
 		sanity = 0,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -524,6 +552,7 @@ local kyno_foods =
 		hunger = 50,
 		sanity = 25,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -537,6 +566,7 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 25,
 		cooktime = 0.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -551,6 +581,7 @@ local kyno_foods =
 		hunger = 25,
 		sanity = 15,
 		cooktime = .5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -565,6 +596,7 @@ local kyno_foods =
 		sanity = 5,
 		cooktime = .75,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CAKE,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -579,6 +611,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 15,
 		cooktime = .60,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -592,6 +625,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 5,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -606,6 +640,7 @@ local kyno_foods =
 		hunger = 50,
 		sanity = 15,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -619,6 +654,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 10,
 		cooktime = 0.8,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -661,6 +697,7 @@ local kyno_foods =
 		hunger = 50,
 		sanity = 5,
 		cooktime = 1.7,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -675,6 +712,7 @@ local kyno_foods =
 		hunger = 80,
 		sanity = 5,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -689,6 +727,7 @@ local kyno_foods =
 		hunger = 80,
 		sanity = 5,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -702,6 +741,7 @@ local kyno_foods =
 		hunger = 80,
 		sanity = 30,
 		cooktime = .70,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -716,6 +756,7 @@ local kyno_foods =
 		hunger = 150,
 		sanity = 15,
 		cooktime = 1.2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -730,6 +771,7 @@ local kyno_foods =
 		hunger = 75,
 		sanity = 15,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -743,6 +785,7 @@ local kyno_foods =
 		hunger = 80,
 		sanity = 25,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -757,6 +800,7 @@ local kyno_foods =
 		hunger = 25,
 		sanity = 25,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -770,6 +814,7 @@ local kyno_foods =
 		hunger = 150,
 		sanity = 10,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -784,6 +829,7 @@ local kyno_foods =
 		sanity = 33,
 		cooktime = .75,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HANDS,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		prefabs = { "kyno_hastebuff" },
         oneatenfn = function(inst, eater)
@@ -806,6 +852,7 @@ local kyno_foods =
 		hunger = 40,
 		sanity = 40,
 		cooktime = 1.2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -820,6 +867,7 @@ local kyno_foods =
 		hunger = 20,
 		sanity = 15,
 		cooktime = 1.2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -834,6 +882,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 50,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -847,6 +896,7 @@ local kyno_foods =
 		hunger = 75,
 		sanity = 50,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -876,6 +926,7 @@ local kyno_foods =
 		hunger = 50,
 		sanity = 25,
 		cooktime = .75,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -889,6 +940,7 @@ local kyno_foods =
 		hunger = 50,
 		sanity = 50,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -903,6 +955,7 @@ local kyno_foods =
 		hunger = 100,
 		sanity = 30,
 		cooktime = 1.2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
 	},
@@ -916,6 +969,7 @@ local kyno_foods =
 		health = 20,
 		hunger = 50,
 		sanity = 40,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -928,6 +982,7 @@ local kyno_foods =
 		health = 25,
 		hunger = 75,
 		sanity = -5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -954,6 +1009,7 @@ local kyno_foods =
 		health = 40,
 		hunger = 75,
 		sanity = 30,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -967,6 +1023,7 @@ local kyno_foods =
 		hunger = 150,
 		sanity = 20,
 		cooktime = 2.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
 	},
@@ -982,6 +1039,7 @@ local kyno_foods =
 		hunger = 150,
 		sanity = 5,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -996,6 +1054,7 @@ local kyno_foods =
 		hunger = 62.5,
 		sanity = 20,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1009,6 +1068,7 @@ local kyno_foods =
 		hunger = 100,
 		sanity = 0,
 		cooktime = .75,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1022,6 +1082,7 @@ local kyno_foods =
 		hunger = 100,
 		sanity = 15,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1036,6 +1097,7 @@ local kyno_foods =
 		hunger = 50,
 		sanity = 0,
 		cooktime = .75,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1050,6 +1112,7 @@ local kyno_foods =
 		hunger = 75,
 		sanity = 25,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1063,6 +1126,7 @@ local kyno_foods =
 		hunger = 150,
 		sanity = 10,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
 	},
@@ -1077,6 +1141,7 @@ local kyno_foods =
 		hunger = 40,
 		sanity = 50,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1091,6 +1156,7 @@ local kyno_foods =
 		sanity = 100,
 		cooktime = 1,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KYNO,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1104,6 +1170,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 40,
 		cooktime = 0.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1117,6 +1184,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 60,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
 	},
@@ -1132,6 +1200,7 @@ local kyno_foods =
 		hunger = 75,
 		sanity = 60,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1146,6 +1215,7 @@ local kyno_foods =
 		hunger = 9.375,
 		sanity = 0,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1161,6 +1231,7 @@ local kyno_foods =
 		hunger = 25,
 		sanity = 15,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1175,6 +1246,7 @@ local kyno_foods =
 		hunger = 20,
 		sanity = 0,
 		cooktime = 1.3,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1189,6 +1261,7 @@ local kyno_foods =
 		hunger = 32.5,
 		sanity = 15,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1203,6 +1276,7 @@ local kyno_foods =
 		hunger = 62.5,
 		sanity = 1,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1216,6 +1290,7 @@ local kyno_foods =
 		hunger = 62.5,
 		sanity = 20,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1229,6 +1304,7 @@ local kyno_foods =
 		hunger = 25,
 		sanity = 50,
 		cooktime = .8,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1243,6 +1319,7 @@ local kyno_foods =
 		hunger = 75,
 		sanity = 5,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1256,6 +1333,7 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 33,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1269,6 +1347,7 @@ local kyno_foods =
 		hunger = 32.5,
 		sanity = 15,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1282,6 +1361,7 @@ local kyno_foods =
 		hunger = 25,
 		sanity = 5,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1296,6 +1376,7 @@ local kyno_foods =
 		hunger = 62.5,
 		sanity = 0,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1309,6 +1390,7 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 5,
 		cooktime = .8,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1322,6 +1404,7 @@ local kyno_foods =
 		hunger = 75,
 		sanity = 15,
 		cooktime = 1.8,
+		potlevel = "med",
 		floater = {"med", nil, 0,65},
 	},
 	
@@ -1336,6 +1419,7 @@ local kyno_foods =
 		hunger = 150,
 		sanity = 20,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1349,6 +1433,7 @@ local kyno_foods =
 		hunger = 150,
 		sanity = 20,
 		cooktime = 1.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1363,6 +1448,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 50,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1376,6 +1462,7 @@ local kyno_foods =
 		hunger = 20,
 		sanity = 100,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1390,6 +1477,7 @@ local kyno_foods =
 		hunger = 75,
 		sanity = 15,
 		cooktime = 2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1406,6 +1494,7 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 33,
 		cooktime = 0.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
 		prefabs = { "buff_sleepresistance" },
@@ -1435,6 +1524,7 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 5,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
 	},
@@ -1463,6 +1553,7 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 50,
 		cooktime = 0.5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1476,6 +1567,7 @@ local kyno_foods =
 		hunger = 62.5,
 		sanity = 10,
 		cooktime = 1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1491,6 +1583,7 @@ local kyno_foods =
 		cooktime = 2.5,
 		stacksize = 3,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RESANITY,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
         prefabs = { "kyno_sanityregenbuff" },
@@ -1515,6 +1608,7 @@ local kyno_foods =
 		cooktime = 2.5,
 		stacksize = 3,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
         prefabs = { "kyno_hungerregenbuff" },
@@ -1540,6 +1634,7 @@ local kyno_foods =
 		cooktime = 2.5,
 		stacksize = 3,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHEALTH,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
         prefabs = { "kyno_superregenbuff" },
@@ -1563,9 +1658,10 @@ local kyno_foods =
 		hunger = 25,
 		sanity = 15,
 		cooktime = 1.2,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DRY,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		prefabs = { "buff_moistureimmunity" },
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DRY,
         oneatenfn = function(inst, eater)
             if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
                 not (eater.components.health ~= nil and eater.components.health:IsDead()) and
@@ -1582,12 +1678,13 @@ local kyno_foods =
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SLOW,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 20,
 		hunger = 37.5,
 		sanity = 5,
 		cooktime = 1,
-		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1604,6 +1701,7 @@ local kyno_foods =
 		sanity = 150,
 		cooktime = 2,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GEARS,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1619,6 +1717,7 @@ local kyno_foods =
 		sanity = -300,
 		cooktime = 1,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HURT,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1633,6 +1732,7 @@ local kyno_foods =
 		sanity = 0,
 		cooktime = 5,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLERMZ,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1647,6 +1747,7 @@ local kyno_foods =
 		sanity = 15,
 		cooktime = 1,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CAT,
+		potlevel = "low",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1661,6 +1762,7 @@ local kyno_foods =
 		sanity = 30,
 		cooktime = 1.5,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KAT,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1674,6 +1776,7 @@ local kyno_foods =
 		hunger = 75,
 		sanity = 33,
 		cooktime = 1.2,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1689,6 +1792,7 @@ local kyno_foods =
 		hunger = 15,
 		sanity = 50,
 		cooktime = .5,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1705,11 +1809,16 @@ local kyno_foods =
 		hunger = 0,
 		sanity = 0,
 		cooktime = .5,
-		prefabs = { "buff_moistureimmunity" },
-		floater = {"med", nil, 0.65},
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DRY,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		prefabs = { "buff_moistureimmunity" },
         oneatenfn = function(inst, eater)
-            eater:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
+            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
+                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+                not eater:HasTag("playerghost") then
+                eater.components.debuffable:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
+            end
        	end,
 	},
 	
@@ -1722,9 +1831,10 @@ local kyno_foods =
 		health = 150,
 		hunger = 150,
 		sanity = -150,
-		cooktime = 2,
-		floater = {"med", nil, 0.65},
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BOSS,
+		cooktime = 2,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
 	},
 	
 	soulstew = 
@@ -1737,8 +1847,9 @@ local kyno_foods =
 		hunger = 62.5,
 		sanity = -10,
 		cooktime = 1.2,
-		floater = {"med", nil, 0.65},
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOUL,
+		potlevel = "low",
+		floater = {"med", nil, 0.65},
 	},
 	
 	fortunecookie =
@@ -1751,8 +1862,9 @@ local kyno_foods =
 		hunger = 20,
 		sanity = 5,
 		cooktime = 1,
-		floater = {"med", nil, 0.65},
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FORTUNE,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
 	},
 	
 	hornocupia =
@@ -1765,8 +1877,9 @@ local kyno_foods =
 		hunger = 75,
 		sanity = 25,
 		cooktime = 1.6,
-		prefabs = { "boneshard" },
+		potlevel = "high",
 		floater = {"med", nil, 0.65},
+		prefabs = { "boneshard" },
 		oneatenfn = function(inst, eater)
 			local bones = SpawnPrefab("boneshard")
 			bones.components.stackable.stacksize = 2
@@ -1788,6 +1901,7 @@ local kyno_foods =
 		hunger = 62.5,
 		sanity = 5,
 		cooktime = 2.3,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1802,6 +1916,7 @@ local kyno_foods =
 		hunger = 62.5,
 		sanity = 33,
 		cooktime = 2.3,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1816,6 +1931,7 @@ local kyno_foods =
 		hunger = 75,
 		sanity = 40,
 		cooktime = 2.3,
+		potlevel = "low",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1831,6 +1947,7 @@ local kyno_foods =
 		hunger = 0,
 		sanity = 60,
 		cooktime = 1.1,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1844,6 +1961,7 @@ local kyno_foods =
 		hunger = 45,
 		sanity = 5,
 		cooktime = 1.6,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
 	
@@ -1854,12 +1972,13 @@ local kyno_foods =
 		priority = 1,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = 9000000,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 1,
 		hunger = 1,
 		sanity = 1,
 		cooktime = .1,
-		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		-- ITS JUST WATER MY MAN -- Vasp: Yeah, not just water, a cup of it.
 		--[[ 

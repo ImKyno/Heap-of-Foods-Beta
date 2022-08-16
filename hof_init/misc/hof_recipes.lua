@@ -225,7 +225,7 @@ local KynBrewbook			= AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ing
 )
 SortAfter("kyno_brewbook", "cookbook", "COOKING")
 
-local KynKeg				= AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 4), Ingredient("rope", 2), Ingredient("nitre", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
+local KynKeg				= AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
 	{
 		placer 				= "kyno_woodenkeg_placer", 
 		min_spacing			= 1, 
@@ -236,7 +236,7 @@ local KynKeg				= AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 4), Ingredi
 )
 SortAfter("kyno_woodenkeg", "cookpot", "COOKING")
 
-local KynJar				= AddRecipe2("kyno_preservesjar", {Ingredient("boards", 4), Ingredient("rope", 2), Ingredient("nitre", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
+local KynJar				= AddRecipe2("kyno_preservesjar", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
 	{
 		placer 				= "kyno_preservesjar_placer", 
 		min_spacing			= 1, 

@@ -15,7 +15,12 @@ PrefabFiles =
 	"k_insanitybuff",
 	"k_waterbuff",
 	
+	"k_product_bubble",
+	"k_fertilizer_nutrient_defs",
+	
+	"k_newbrews",
 	"k_newfoods",
+	
 	"k_coffeebeans",
 	"k_realcoffeebush",
 	"k_realdugcoffeebush",
@@ -88,11 +93,9 @@ PrefabFiles =
 	"k_bottle_soul",
 	"k_saphealer",
 	"k_milks",
-	"k_buckets",
-	"k_newbrews",
+	"k_bucket_empty",
 	"k_brewers",
 	"k_brewbook",
-	"k_product_bubble",
 	"k_ocean_wreck",
-	"k_fertilizer_nutrient_defs",
+	"k_dried_caps",
 }

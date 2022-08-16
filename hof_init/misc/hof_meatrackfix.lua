@@ -85,11 +85,27 @@ do
 
 	local my_build_name 	= "kyno_humanmeat"
 	local my_build_name2 	= "kyno_seaweeds"
-	local my_build_name3    = "kyno_meatrack_food"
+	local my_build_name3    = "kyno_meatrack_food" -- Deprecated.
+	local my_build_name4    = "kyno_driedcap_red"
+	local my_build_name5    = "kyno_driedcap_green"
+	local my_build_name6    = "kyno_driedcap_blue"
+	local my_build_name7    = "kyno_driedcap_moon"
 
 	anim_ondry_food["kyno_humanmeat"] 			= {build = my_build_name,  folder = "humanmeat"}
 	anim_ondone_food["kyno_humanmeat_dried"] 	= {build = my_build_name,  folder = "humanmeat_dried"}
 	
 	anim_ondry_food["kyno_seaweeds"] 			= {build = my_build_name2, folder = "seaweed"}
 	anim_ondone_food["kyno_seaweeds_dried"] 	= {build = my_build_name2, folder = "seaweed_dried"}
+	
+	anim_ondry_food["red_cap"] 			        = {build = my_build_name4, folder = "red"}
+	anim_ondone_food["kyno_red_cap_dried"] 	    = {build = my_build_name4, folder = "dry"}
+	
+	anim_ondry_food["green_cap"] 			    = {build = my_build_name5, folder = "green"}
+	anim_ondone_food["kyno_green_cap_dried"] 	= {build = my_build_name5, folder = "dry"}
+	
+	anim_ondry_food["blue_cap"] 			    = {build = my_build_name6, folder = "blue"}
+	anim_ondone_food["kyno_blue_cap_dried"] 	= {build = my_build_name6, folder = "dry"}
+	
+	anim_ondry_food["moon_cap"] 			    = {build = my_build_name7, folder = "moon"}
+	anim_ondone_food["kyno_moon_cap_dried"] 	= {build = my_build_name7, folder = "dry"}
 end
