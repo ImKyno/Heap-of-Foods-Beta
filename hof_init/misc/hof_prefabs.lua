@@ -20,6 +20,8 @@ PrefabFiles =
 	
 	"k_newbrews",
 	"k_newfoods",
+	"k_newveggies",
+	"k_newdryables",
 	
 	"k_coffeebeans",
 	"k_realcoffeebush",
@@ -49,7 +51,6 @@ PrefabFiles =
 	"k_cucumber",
 	"k_waterycress",
 	"k_crop_parsnip",
-	"k_newveggies",
 	"k_musselstick",
 	"k_banana",
 	"k_bananatree",
@@ -97,5 +98,4 @@ PrefabFiles =
 	"k_brewers",
 	"k_brewbook",
 	"k_ocean_wreck",
-	"k_dried_caps",
 }

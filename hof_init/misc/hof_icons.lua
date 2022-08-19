@@ -289,6 +289,8 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"kyno_green_cap_dried",
 	"kyno_blue_cap_dried",
 	"kyno_moon_cap_dried",
+	"kyno_plantmeat_dried",
+	"kyno_pigskin_dried",
 	"hornocupia", 
 	"cheese_yellow",
 	"cheese_white",

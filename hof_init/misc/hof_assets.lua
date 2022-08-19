@@ -17,7 +17,6 @@ Assets =
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 
-	Asset("ANIM", "anim/kyno_humanmeat.zip"),
 	Asset("ANIM", "anim/kyno_mushroomstump.zip"),
 	Asset("ANIM", "anim/kyno_spotbush.zip"),
 	Asset("ANIM", "anim/kyno_wheat.zip"),
@@ -25,7 +24,6 @@ Assets =
 	Asset("ANIM", "anim/kyno_radish.zip"),
 	Asset("ANIM", "anim/kyno_fennel.zip"),
 	Asset("ANIM", "anim/kyno_sweetpotato.zip"),
-	Asset("ANIM", "anim/kyno_seaweeds.zip"),
 	Asset("ANIM", "anim/kyno_cucumber.zip"),
 	Asset("ANIM", "anim/kyno_waterycress.zip"),
 	Asset("ANIM", "anim/kyno_turnip.zip"),

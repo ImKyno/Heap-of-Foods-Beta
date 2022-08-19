@@ -506,6 +506,23 @@ VanillaFood.butterflymuffin.test = function(cooker, names, tags)
 	return (names.butterflywings or names.moonbutterflywings or names.kyno_sugarflywings) and not tags.meat and tags.veggie and tags.veggie >= 0.5
 end 
 
+VanillaFood.leafloaf.test = function(cooker, names, tags)
+	return ((names.plantmeat or 0) + (names.plantmeat_cooked or 0) + (names.kyno_plantmeat_dried or 0) >= 2)
+end
+
+VanillaFood.leafymeatburger.test = function(cooker, names, tags)
+	return (names.plantmeat or names.plantmeat_cooked or names.kyno_plantmeat_dried) and (names.onion or names.onion_cooked) 
+	and tags.veggie and tags.veggie >= 2
+end
+
+VanillaFood.leafymeatsouffle.test = function(cooker, names, tags)
+	return ((names.plantmeat or 0) + (names.plantmeat_cooked or 0) + (names.kyno_plantmeat_dried or 0) >= 2) and tags.sweetener and tags.sweetener >= 2
+end
+
+VanillaFood.meatysalad.test = function(cooker, names, tags)
+	return (names.plantmeat or names.plantmeat_cooked or names.kyno_plantmeat_dried) and tags.veggie and tags.veggie >= 3
+end
+
 -- Make Whenever Someone Eats the Eyeball Soup a Deerclops Spawns.
 local eyeballsoup_debuff = {
     "eyeballsoup",
@@ -639,15 +656,16 @@ for k,v in pairs(fortunecookie_debuff) do
     AddPrefabPostInit(v, FortuneCookiePostinit)
 end
 
--- Mushrooms can be dried on Drying Racks.
-local dryable_caps = {
+-- New foods that can be dried on Drying Racks.
+local dryable_foods = {
 	"red_cap",
 	"green_cap",
 	"blue_cap",
 	"moon_cap",
+	"plantmeat",
 }
 
-local function CapsPostinit(inst)
+local function DryablePostinit(inst)
 	inst:AddTag("dryable")
 	
 	if not _G.TheWorld.ismastersim then
@@ -656,11 +674,11 @@ local function CapsPostinit(inst)
 	
     inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("kyno_".. inst.prefab .."_dried")
-    inst.components.dryable:SetDryTime(TUNING.DRY_FAST)
+    inst.components.dryable:SetDryTime(TUNING.DRY_MED)
 end
 
-for k,v in pairs(dryable_caps) do 
-	AddPrefabPostInit(v, CapsPostinit)	
+for k,v in pairs(dryable_foods) do 
+	AddPrefabPostInit(v, DryablePostinit)	
 end
 
 -- Make every "same" recipe has the same quotes.

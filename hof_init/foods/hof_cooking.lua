@@ -79,6 +79,7 @@ AddIngredientValues({"kyno_red_cap_dried"}, 	{veggie=0.5, 	mushroom=1})
 AddIngredientValues({"kyno_green_cap_dried"}, 	{veggie=0.5, 	mushroom=1})
 AddIngredientValues({"kyno_blue_cap_dried"}, 	{veggie=0.5, 	mushroom=1})
 AddIngredientValues({"kyno_moon_cap_dried"}, 	{veggie=0.5, 	mushroom=1})
+AddIngredientValues({"kyno_plantmeat_dried"},   {meat=1})
 
 -- Icons For Cookbook.
 local cookbook_icons = 

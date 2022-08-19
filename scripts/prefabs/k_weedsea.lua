@@ -4,7 +4,6 @@ local assets =
 {
     Asset("ANIM", "anim/seaweed.zip"),
 	Asset("ANIM", "anim/seaweed_seed.zip"),
-	Asset("ANIM", "anim/kyno_seaweeds.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -23,6 +22,7 @@ local prefabs =
 	"kyno_seaweeds_cooked",
 	"kyno_seaweeds_dried",
 	"kyno_seaweeds_root",
+	
 	"spoiled_food",
 }
 
@@ -218,57 +218,6 @@ local function seaweed_cooked()
 	return inst
 end
 
-local function seaweed_dried()
-	local inst = CreateEntity()
-
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst)
-
-	inst.AnimState:SetBank("kyno_seaweeds")
-	inst.AnimState:SetBuild("kyno_seaweeds")
-	inst.AnimState:PlayAnimation("idle_dried_seaweed")
-	
-	inst:AddTag("veggie")
-
-	inst.entity:SetPristine()
-
-	if not TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("inspectable")
-	inst:AddComponent("bait")
-	inst:AddComponent("tradable")
-
-   	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = TUNING.KYNO_WEEDSEA_DRIED_HEALTH
-	inst.components.edible.hungervalue = TUNING.KYNO_WEEDSEA_DRIED_HUNGER
-	inst.components.edible.sanityvalue = TUNING.KYNO_WEEDSEA_DRIED_SANITY
-	inst.components.edible.foodtype = FOODTYPE.VEGGIE
-
-	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
-	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
-
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_seaweeds_dried"
-
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
-	MakeHauntableLaunchAndPerish(inst)
-
-	return inst
-end
-
 local function seaweed_root()
 	local inst = CreateEntity()
 
@@ -317,6 +266,5 @@ end
 return Prefab("kyno_seaweeds_ocean", fn, assets, prefabs),
 Prefab("kyno_seaweeds", seaweed, assets, prefabs),
 Prefab("kyno_seaweeds_cooked", seaweed_cooked, assets, prefabs),
-Prefab("kyno_seaweeds_dried", seaweed_dried, assets, prefabs),
 Prefab("kyno_seaweeds_root", seaweed_root, assets, prefabs),
 MakePlacer("kyno_seaweeds_root_placer", "seaweed", "seaweed", "idle_plant", false, false, false, nil, nil, nil, nil, 2)
