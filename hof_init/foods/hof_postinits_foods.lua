@@ -942,7 +942,7 @@ local function MeadPostinit(inst)
             end
         else
             eater:AddTag("groggy")
-            eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_dmgreductionbuff", .70)
+            eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_dmgreductionbuff", TUNING.KYNO_ALCOHOL_SPEED)
             eater.components.health.externalabsorbmodifiers:SetModifier(eater, TUNING.BUFF_PLAYERABSORPTION_MODIFIER)
             eater:DoTaskInTime(TUNING.KYNO_ALCOHOL_DURATION_SMALL, function()
                 eater:RemoveTag("groggy")

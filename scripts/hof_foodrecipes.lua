@@ -1897,8 +1897,8 @@ local kyno_foods =
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_PRESERVED,
-		health = 33,
-		hunger = 62.5,
+		health = 10,
+		hunger = 25,
 		sanity = 5,
 		cooktime = 2.3,
 		potlevel = "med",
@@ -1912,9 +1912,9 @@ local kyno_foods =
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_PRESERVED,
-		health = 5,
-		hunger = 62.5,
-		sanity = 33,
+		health = 15,
+		hunger = 25,
+		sanity = 20,
 		cooktime = 2.3,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
@@ -1927,9 +1927,9 @@ local kyno_foods =
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_PRESERVED,
-		health = 8,
-		hunger = 75,
-		sanity = 40,
+		health = 20,
+		hunger = 25,
+		sanity = 5,
 		cooktime = 2.3,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
@@ -1943,9 +1943,9 @@ local kyno_foods =
 		priority = 1,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
-		health = 20,
+		health = 25,
 		hunger = 0,
-		sanity = 60,
+		sanity = 40,
 		cooktime = 1.1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
@@ -1992,6 +1992,22 @@ local kyno_foods =
             end
         end,
 		]]--
+	},
+
+	crab_artichoke =
+	{
+		test = function(cooker, names, tags) return ((names.kyno_crabmeat or 0) + (names.kyno_crabmeat_cooked or 0) == 2) and names.kyno_spotspice and
+		((names.kelp or 0) + (names.kelp_cooked or 0)) or ((names.kyno_seaweeds or 0) + (names.kyno_seaweeds_cooked or 0)) or (names.kyno_waterycress) 
+		and not names.kelp_dried and not kyno_seaweeds_dried and not tags.inedible end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FAST,
+		health = 40,
+		hunger = 12.5,
+		sanity = 60,
+		cooktime = 2.2,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
 	},
 }
 

@@ -228,7 +228,8 @@ for i, cooker in ipairs(cookers) do
 end
 
 -- Fix For Food On Stations.
-local cookerstations = {
+local cookerstations = 
+{
 	"cookpot",
 	"portablecookpot",
 	"archive_cookpot",
@@ -380,6 +381,7 @@ local kynofoods =
 	cheese_koalefant		= require("hof_foodrecipes").cheese_koalefant,
 	milk_box				= require("hof_foodrecipes").milk_box,
 	watercup				= require("hof_foodrecipes").watercup,
+	crab_artichoke          = require("hof_foodrecipes").crab_artichoke,
 }
 
 for name, recipe in pairs(kynofoods) do

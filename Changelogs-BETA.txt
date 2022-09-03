@@ -5,6 +5,8 @@ I suggest to you guys do not use this beta branch on actual worlds, I don't know
 
 A fix for The Architect Pack and Not Enough Turfs is being worked on.
 
+- Added New Foods.
+- Added New Mod fertilizers.
 - Added New Loading Tips.
 - Added Musty Antidote for healing Ruined Sugarwood Trees.
 - Added Planted Asparagus.
@@ -14,7 +16,6 @@ A fix for The Architect Pack and Not Enough Turfs is being worked on.
 - Added Brewbook to view the Artisan Goods recipes.
 - Added New ocean setpieces. (Only new worlds).
 - Added Sugarfly to the Serenity Archipelago environment. 
-- Added New Mod fertilizers.
 
 - Added Language option. (Currently we have Chinese (Traditional) and Portuguese).
 - Added Alcoholic Restriction option.
@@ -22,6 +23,7 @@ A fix for The Architect Pack and Not Enough Turfs is being worked on.
 - Added Ocean Setpieces option.
 - Added Bucket-o-Poop Recipe Tweak option.
 
+- Fixed Incompatibility with other mods that adds new Turfs.
 - Fixed Invisible Long Pig on ground.
 - Fixed Oven's steam FX not disappearing after harvesting foods.
 - Fixed Watercress minimap icon.
@@ -40,21 +42,14 @@ A fix for The Architect Pack and Not Enough Turfs is being worked on.
 - Banana Bushes now grows Bananas instead of Cave Bananas.
 - Monkey Queen will now accept Bananas too.
 - The Gorge Cookware now features the Product Bubble from Wooden Kegs and Preserves Jars too.
+- Prototypers and Items that requires a special station will now display a custom text in the Crafting Menu.
 - Caramel Candy now gives the Haste Buff that speeds the player actions. (Similar to Winona's perk).
 - Grilled Cheese and Cheeseburger now accepts White Cheese and Cheese in their recipes.
+- Mushrooms can be dried on the Drying Rack now.
 
+Food Recipes Changes:
 - Iced Tea sanity decreased from 50 to 33.
 - Symphony of the Gears recipe cost increased from 2 to 3.
-
-New Foods:
-- Fortune Cookie.
-- Cornocupia.
-- Cup of Water.
-- Cheese.
-- White Cheese.
-- Koalefant Cheese.
-- Milk Box.
-- Honey Jar.
 
 Informations about the Milking System:
 Beefalos, Koalefants, No-Eyed Deers and Ewecuses can be milked using the Bucket. They can only be milked when they're awake, except for Koalefants and Ewecuses that can be milked while sleeping or awake.

@@ -334,7 +334,13 @@ local function onworkfinish(inst, chopper)
 	inst.SoundEmitter:PlaySound("dontstarve/forest/treeCrumble")
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
 	inst.components.lootdropper:DropLoot()
-	inst:DoTaskInTime(1, function() TheWorld:PushEvent("beginregrowth", inst) inst:Remove() end)
+end
+
+local function onburnt(inst)
+    inst.components.lootdropper:SpawnLootPrefab("kyno_parznip_cooked")
+	inst.components.lootdropper:SpawnLootPrefab("kyno_parznip_cooked")
+	inst.components.lootdropper:SpawnLootPrefab("ash")
+    inst:Remove()
 end
 
 local function parznip_big()
@@ -379,6 +385,7 @@ local function parznip_big()
 
     MakeLargeBurnable(inst)
 	inst.components.burnable:SetFXLevel(4)
+	inst.components.burnable:SetOnBurntFn(onburnt)
     MakeLargePropagator(inst)
 	
 	return inst
