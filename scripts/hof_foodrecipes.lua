@@ -1889,7 +1889,7 @@ local kyno_foods =
 			end
 		end,
 	},
-	
+	--[[
 	cheese_yellow = 
 	{
 		test = function(cooker, names, tags) return (names.goatmilk or (names.kyno_milk_beefalo and names.kyno_milk_beefalo == 2))
@@ -1934,7 +1934,7 @@ local kyno_foods =
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
 	},
-	
+	]]--
 	milk_box = 
 	{
 		test = function(cooker, names, tags) return (tags.frozen and tags.frozen == 2) and (names.goatmilk and names.goatmilk == 2 or 

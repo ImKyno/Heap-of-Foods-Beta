@@ -28,6 +28,9 @@ STRINGS.CHARACTERS.WANDA.DESCRIBE.
 STRINGS.BREWBOOK_TITLE = "Livro de Fermentações"
 STRINGS.BREWBOOK_DESC = "O Guia do Constante para fermentação"
 
+STRINGS.UI.CRAFTING_FILTERS.MEALING = "Ingredientes Culinários"
+STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP = "Suprimentos do Ancião"
+
 STRINGS.UI.CRAFTING.NEEDSMEALING_ONE = "Use a Mealing Stone para produzir este ingrediente!"
 STRINGS.UI.CRAFTING.NEEDSMEALING_TWO = "Use a Mealing Stone para produzir este ingrediente!"
 

@@ -67,19 +67,11 @@ Layouts["SerenityIslandShop"] = StaticLayout.Get("map/static_layouts/hof_serenit
 
 -- Retrofit the Serenity Archipelago in the world.
 -- The numbers below each turf represents them on the setpiece file.
-if TheArchitectPack or NotEnoughTurfs then
-	_G.SERENITYISLAND_GROUNDS        = 
-	{
-		WORLD_TILES.OCEAN_BRINEPOOL, WORLD_TILES.ROCKY, WORLD_TILES.SAVANNA, WORLD_TILES.STONECITY, WORLD_TILES.PINKPARK
-		-- 1              			 -- 2               -- 3                 -- 4                            -- 5
-	}
-else
-	_G.SERENITYISLAND_GROUNDS        = 
-	{
-		WORLD_TILES.OCEAN_BRINEPOOL, WORLD_TILES.ROCKY, WORLD_TILES.SAVANNA, WORLD_TILES.QUAGMIRE_CITYSTONE, WORLD_TILES.QUAGMIRE_PARKFIELD
-		-- 1              			 -- 2               -- 3                 -- 4                            -- 5
-	}
-end
+_G.SERENITYISLAND_GROUNDS        = 
+{
+	WORLD_TILES.OCEAN_BRINEPOOL, WORLD_TILES.ROCKY, WORLD_TILES.SAVANNA, WORLD_TILES.QUAGMIRE_CITYSTONE, WORLD_TILES.QUAGMIRE_PARKFIELD
+	-- 1              			 -- 2               -- 3                 -- 4                            -- 5
+}
 
 local hof_ocean_islands          = 
 {

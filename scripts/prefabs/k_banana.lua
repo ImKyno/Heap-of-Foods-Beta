@@ -75,7 +75,7 @@ local function banana()
 	
 	inst:AddTag("fruit")
 	inst:AddTag("cookable")
-	inst:AddTag("deployedplant")
+	-- inst:AddTag("deployedplant")
 	inst:AddTag("cattoy")
 	inst:AddTag("saltbox_valid")
 	inst:AddTag("surface_banana")
@@ -111,9 +111,9 @@ local function banana()
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_banana_cooked"
 	
-	inst:AddComponent("deployable")
-	inst.components.deployable:SetDeployMode(DEPLOYMODE.PLANT)
-	inst.components.deployable.ondeploy = ondeploy
+	-- inst:AddComponent("deployable")
+	-- inst.components.deployable:SetDeployMode(DEPLOYMODE.PLANT)
+	-- inst.components.deployable.ondeploy = ondeploy
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

@@ -103,7 +103,7 @@ AddPrototyperDef("kyno_mealgrinder",
 		icon_image 			= "kyno_tab_mealing.tex", 
 		is_crafting_station = true, 
 		action_str 			= "MEALING", 
-		filter_text 		= "Food Ingredients",
+		filter_text 		= _G.STRINGS.UI.CRAFTING_FILTERS.MEALING,
 	}
 )
 
@@ -113,7 +113,7 @@ AddPrototyperDef("kyno_serenityisland_shop",
 		icon_image			= "kyno_tab_serenity.tex",
 		is_crafting_station	= true,
 		action_str			= "TRADE",
-		filter_text			= "Elder's Supplies",
+		filter_text			= _G.STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP,
 	}
 )
 
@@ -207,6 +207,7 @@ local KynFloat      		= AddRecipe2("kyno_floatilizer", {Ingredient("poop", 3), I
 )
 SortAfter("kyno_floatilizer", "fertilizer", "GARDENING")
 
+--[[
 local KynBucket				= AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1), Ingredient("boards", 1)}, TECH.SCIENCE_ONE,
 	{
 		atlas				= ModAtlas,
@@ -215,6 +216,7 @@ local KynBucket				= AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1)
 	{"TOOLS"}
 )
 SortAfter("kyno_bucket_empty", "golden_farm_hoe", "TOOLS")
+]]--
 
 local KynBrewbook			= AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ingredient("kyno_wheat", 1, ModAtlas)}, TECH.SCIENCE_ONE,
 	{

@@ -28,6 +28,9 @@ STRINGS.CHARACTERS.WANDA.DESCRIBE.
 STRINGS.BREWBOOK_TITLE = "Brewbook"
 STRINGS.BREWBOOK_DESC = "The Constant's guide to brewery"
 
+STRINGS.UI.CRAFTING_FILTERS.MEALING = "Food Ingredients"
+STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP = "Elder's Supplies"
+
 STRINGS.UI.CRAFTING.NEEDSMEALING_ONE = "Use a Mealing Stone to grind this ingredient!"
 STRINGS.UI.CRAFTING.NEEDSMEALING_TWO = "Use a Mealing Stone to grind this ingredient!"
 

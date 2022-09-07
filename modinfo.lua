@@ -1,6 +1,6 @@
-name = "Heap of Foods (Beta)"
+name = "Heap of Foods"
 version = "4.2-A"
-local myupdate = "Artisan Goods"
+local myupdate = "Artisan Goods (Part 1)"
 
 description = [[
 󰀄 Adds 118 brand new Crock Pot dishes alongside new ingredients to use!
@@ -15,7 +15,7 @@ The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jellies, P
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
 󰀌 Mod Version: 4.2-A
-󰀧 Update: Artisan Goods
+󰀧 Update: Artisan Goods (Part 1)
 ]]
 
 author = "Kyno"
@@ -58,7 +58,6 @@ configuration_options =
 				hover = "Translation by: Djr.",
 				data = "hof_strings_zht"
 			},
-			
 			{
 				description = "Português Brasileiro",
 				hover = "Translation by: Kyno.",
@@ -202,27 +201,6 @@ configuration_options =
 		},
 		default = 480,
 	},
-	--[[
-	{
-		name = "HOF_EXTRAFOODS",
-		label = "Optional Foods",
-		hover = "Should Winter's Feast \"craftable foods\" be cookable in the Crock Pot?\nWinter's Feast foods can't be cooked if this option is Disabled.",
-		options =
-		{
-			{
-				description = "No",
-				hover = "Winter's Feast foods can't be cooked in the Crock Pot.",
-				data = 0
-			},
-			{
-				description = "Yes",
-				hover = "Winter's Feast foods can be cooked in the Crock Pot.",
-				data = 1
-			},
-		},
-		default = 1,
-	},
-	]]--
 	{
 		name = "HOF_HUMANMEAT",
 		label = "Long Pig From Players",
@@ -262,7 +240,7 @@ configuration_options =
         default = 0,
 	},
 	
-	Title("World Options", "Options for the world."),
+	Title("World Options (Old Worlds)", "Options for the world."),
 	{
 		name = "HOF_SERENITYISLAND",
 		label = "Serenity Archipelago",
@@ -372,6 +350,7 @@ configuration_options =
         },
         default = 0,
 	},
+	--[[
 	{
 		name = "HOF_FERTILIZERTWEAK",
 		label = "Bucket-o-Poop Recipe Tweak",
@@ -391,4 +370,5 @@ configuration_options =
         },
         default = 0,
 	},
+	]]--
 }

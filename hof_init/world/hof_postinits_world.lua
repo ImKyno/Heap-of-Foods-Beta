@@ -538,6 +538,7 @@ elseif DF_COFFEE == 4 then
 end
 
 -- Splumonkeys and Splumonkey Pods drops Bananas.
+--[[
 AddPrefabPostInit("monkey", function(inst)
     _G.SetSharedLootTable('monkey',
     {
@@ -566,15 +567,7 @@ AddPrefabPostInit("monkeybarrel", function(inst)
 
     inst.components.lootdropper:AddChanceLoot("kyno_banana", 1.00)
 end)
-
--- Just to make sure Deerclops drown if it spawns on water.
-AddPrefabPostInit("deerclops", function(inst)
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst:AddComponent("drownable")
-end)
+]]--
 
 -- Nuts drops from Twiggy Trees.
 AddPrefabPostInit("twiggytree", function(inst)
@@ -1039,6 +1032,7 @@ AddPrefabPostInit("kyno_watery_crate", function(inst)
 end)
 
 -- Animals that can be milked with the Bucket.
+--[[
 local milkable_animals = {
     "koalefant_winter",
     "koalefant_summer",
@@ -1071,7 +1065,7 @@ for k,v in pairs(milkable_animals) do
         end
     end)
 end
-
+]]--
 -- Make Banana Bushes give our Bananas instead.
 AddPrefabPostInit("bananabush", function(inst)
     if not _G.TheWorld.ismastersim then
