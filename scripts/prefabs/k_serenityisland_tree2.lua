@@ -45,6 +45,10 @@ local function stump_dug(inst)
     inst:Remove()
 end
 
+local function ChopTreeShake(inst)
+    ShakeAllCameras(CAMERASHAKE.FULL, .25, .03, .5, inst, 6)
+end
+
 local function tree_chopped_short(inst, chopper)
     if not (chopper ~= nil and chopper:HasTag("playerghost")) then
         inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
@@ -64,6 +68,7 @@ local function tree_chopped_short(inst, chopper)
 		inst.components.lootdropper:DropLoot(pt + TheCamera:GetRightVec())
 	end
 	
+	inst:DoTaskInTime(14 * FRAMES, ChopTreeShake)
     inst:ListenForEvent("animover", setupstump_short)
 end
 
@@ -86,6 +91,7 @@ local function tree_chopped_normal(inst, chopper)
 		inst.components.lootdropper:DropLoot(pt + TheCamera:GetRightVec())
 	end
 	
+	inst:DoTaskInTime(14 * FRAMES, ChopTreeShake)
     inst:ListenForEvent("animover", setupstump_normal)
 end
 

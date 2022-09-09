@@ -340,6 +340,9 @@ ACTIONS.GIVE.stroverridefn = function(act)
 	if act.target:HasTag("elderpot_rubble") and act.invobject:HasTag("serenity_repairtool") then
 		return subfmt(STRINGS.KYNO_REPAIR_TOOL, {item = act.invobject:GetBasicDisplayName()})
 	end
+	if act.target:HasTag("infestable_tree") and act.invobject:HasTag("squirrel") then
+		return subfmt(STRINGS.KYNO_INFEST_TREE, {item = act.invobject:GetBasicDisplayName()})
+	end
 end
 
 ACTIONS.PICK.stroverridefn = function(act)

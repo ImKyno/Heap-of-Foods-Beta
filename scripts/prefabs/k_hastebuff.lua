@@ -5,6 +5,10 @@ local function OnAttached(inst, target)
     
 	if not target:HasTag("handyperson") then
 		target:AddTag("fastbuilder")
+		
+		if target.components.talker then 
+			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF"))
+		end
 	end
 	
     inst:ListenForEvent("death", function()

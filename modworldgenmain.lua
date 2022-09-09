@@ -19,24 +19,80 @@ modimport("hof_init/world/hof_worldgen")
 local TheArchitectPack = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
 local NotEnoughTurfs   = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
 
+AddTile("HOF_FIELDS", "LAND",
+	{
+		ground_name 	= "HOF Fields",
+		old_static_id   = 65,
+	},
+	{
+		name			= "jungle",
+		noise_texture	= "levels/textures/hof/fields_noise.tex",
+		runsound		= "dontstarve/movement/run_grass",
+		walksound		= "dontstarve/movement/walk_grass",
+		snowsound		= "dontstarve/movement/run_snow",
+		hard			= false,
+	},
+	{
+		name 			= "map_edge",
+		noise_texture	= "levels/textures/hof/fields_mini.tex",
+	},
+	{
+		name			= "fields",
+		anim			= "fields",
+		bank_build		= "kyno_turfs_hof",
+	}
+)
+
+AddTile("HOF_TIDALMARSH", "LAND",
+	{
+		ground_name 	= "HOF Tidal Marsh",
+		old_static_id 	= 80,
+	},
+	{
+		name			= "tidalmarsh",
+		noise_texture	= "levels/textures/hof/tidalmarsh_noise.tex",
+		runsound 		= "dontstarve/movement/run_marsh",
+        walksound 		= "dontstarve/movement/walk_marsh",
+		snowsound		= "dontstarve/movement/run_snow",
+		hard			= false,
+	},
+	{
+		name 			= "map_edge",
+		noise_texture	= "levels/textures/hof/tidalmarsh_mini.tex",
+	},
+	{
+		name			= "tidalmarsh",
+		anim			= "tidalmarsh",
+		bank_build		= "kyno_turfs_hof",
+	}
+)
+
 -- Since we already have the turfs and they can be dug, we are going to use them for make a custom prefab.
 -- Basically you're getting the original turfs from ground with a custom prefab i.e: the turf item.
 local GROUND_TURFS = 
 {
 	[WORLD_TILES.QUAGMIRE_PARKFIELD] = "turf_pinkpark",
 	[WORLD_TILES.QUAGMIRE_CITYSTONE] = "turf_stonecity",
+	[WORLD_TILES.HOF_FIELDS]         = "turf_fields",
+	[WORLD_TILES.HOF_TIDALMARSH]     = "turf_tidalmarsh",
 }
 
-require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_PARKFIELD] = { name = "pinkpark",  bank_build = "kyno_turfs_events", anim = "pinkpark"  }
-require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_CITYSTONE] = { name = "stonecity", bank_build = "kyno_turfs_events", anim = "stonecity" }
+require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_PARKFIELD] = { name = "pinkpark",   bank_build = "kyno_turfs_hof", anim = "pinkpark"   }
+require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_CITYSTONE] = { name = "stonecity",  bank_build = "kyno_turfs_hof", anim = "stonecity"  }
+require("worldtiledefs").turf[WORLD_TILES.HOF_FIELDS]         = { name = "fields",     bank_build = "kyno_turfs_hof", anim = "fields"     }
+require("worldtiledefs").turf[WORLD_TILES.HOF_TIDALMARSH]     = { name = "tidalmarsh", bank_build = "kyno_turfs_hof", anim = "tidalmarsh" }
 
 ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_PARKFIELD,  WORLD_TILES.DECIDUOUS, true)
 ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_CITYSTONE,  WORLD_TILES.ROCKY,     true)
+ChangeTileRenderOrder(WORLD_TILES.HOF_TIDALMARSH,      WORLD_TILES.MARSH,     true)
+ChangeTileRenderOrder(WORLD_TILES.HOF_FIELDS,          WORLD_TILES.DECIDUOUS, true)
 
 -- To match The Architect Pack and Not Enough Turfs.
 if TheArchitectPack or NotEnoughTurfs then
 	ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_PARKFIELD, WORLD_TILES.SWIRLGRASSMONO, true)
 	ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_CITYSTONE, WORLD_TILES.PINKSTONE,      true)
+	ChangeTileRenderOrder(WORLD_TILES.HOF_TIDALMARSH,     WORLD_TILES.TIDALMARSH,     true)
+	ChangeTileRenderOrder(WORLD_TILES.HOF_FIELDS,         WORLD_TILES.FIELDS,       true)
 end
 
 -- This does nothing. Mostly used for the Tiled only.
@@ -73,13 +129,13 @@ _G.SERENITYISLAND_GROUNDS        =
 	-- 1              			 -- 2               -- 3                 -- 4                            -- 5
 }
 
-local hof_ocean_islands          = 
+local hof_serenity_islands          = 
 {
 	"hof_serenityisland1", 
 	"hof_serenityisland2"
 }
 
-for i, layout in ipairs(hof_ocean_islands) do
+for i, layout in ipairs(hof_serenity_islands) do
 	Layouts[layout] = StaticLayout.Get("map/static_layouts/"..layout,
 	{
 		start_mask 			     = _G.PLACE_MASK.IGNORE_IMPASSABLE,
@@ -88,7 +144,7 @@ for i, layout in ipairs(hof_ocean_islands) do
 		areas =
 		{
 		},
-		min_dist_from_land       = 5,
+		min_dist_from_land       = 10,
 	})
 	Layouts[layout].ground_types = _G.SERENITYISLAND_GROUNDS
 end
@@ -118,7 +174,32 @@ for i, layout in ipairs(hof_ocean_setpieces) do
 		areas =
 		{
 		},
-		min_dist_from_land       = 5,
+		min_dist_from_land       = 10,
 	})
 	Layouts[layout].ground_types = _G.OCEANSETPIECE_GROUNDS
+end
+
+_G.MEADOWISLAND_GROUNDS          =
+{
+	WORLD_TILES.OCEAN_BRINEPOOL, WORLD_TILES.MONKEY_GROUND, WORLD_TILES.HOF_FIELDS, WORLD_TILES.HOF_TIDALMARSH,
+	-- 1              			 -- 2                       -- 3                    -- 4
+}
+
+local hof_meadow_setpieces       =
+{
+	"hof_meadowisland1",
+}
+
+for i, layout in ipairs(hof_meadow_setpieces) do
+	Layouts[layout] = StaticLayout.Get("map/static_layouts/"..layout,
+	{
+		start_mask 			     = _G.PLACE_MASK.IGNORE_IMPASSABLE,
+		fill_mask                = _G.PLACE_MASK.IGNORE_IMPASSABLE,
+		add_topology             = {room_id = "StaticLayoutIsland:Seaside Island", tags = {"RoadPoison", "meadowarea", "not_mainland"}},
+		areas =
+		{
+		},
+		min_dist_from_land       = 10,
+	})
+	Layouts[layout].ground_types = _G.MEADOWISLAND_GROUNDS
 end

@@ -43,6 +43,7 @@ local prefabs =
 	
 	"kyno_cookware_fire",
 }
+
 -- Remember to update this function if Klei updates the stewer component.
 local function ExtraHarvest(self, harvester)
     if self.done then
@@ -61,6 +62,61 @@ local function ExtraHarvest(self, harvester)
                 local stacksize = recipe and recipe.stacksize or 1
 
                 stacksize = stacksize + 2
+
+                if stacksize > 1 then
+                    loot.components.stackable:SetStackSize(stacksize)
+                end
+
+                if self.spoiltime ~= nil and loot.components.perishable ~= nil then
+                    local spoilpercent = self:GetTimeToSpoil() / self.spoiltime
+                    loot.components.perishable:SetPercent(self.product_spoilage * spoilpercent)
+                    loot.components.perishable:StartPerishing()
+                end
+                if harvester ~= nil and harvester.components.inventory ~= nil then
+                    harvester.components.inventory:GiveItem(loot, nil, self.inst:GetPosition())
+                else
+                    LaunchAt(loot, self.inst, nil, 1, 1)
+                end
+            end
+            self.product = nil
+        end
+
+        if self.task ~= nil then
+            self.task:Cancel()
+            self.task = nil
+        end
+        self.targettime = nil
+        self.done = nil
+        self.spoiltime = nil
+        self.product_spoilage = nil
+
+        if self.inst.components.container ~= nil then
+            self.inst.components.container.canbeopened = true
+        end
+
+        return true
+    end
+end
+
+local function DoubleHarvest(self, harvester)
+    if self.done then
+        if self.onharvest ~= nil then
+            self.onharvest(self.inst)
+        end
+
+        if self.product ~= nil then
+            local loot = SpawnPrefab(self.product)
+            if loot ~= nil then
+                if harvester ~= nil and self.chef_id == harvester.userid then
+                    harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
+                end
+
+                local recipe = cooking.GetRecipe(self.inst.prefab, self.product)
+                local stacksize = recipe and recipe.stacksize or 1
+
+				if math.random() < 0.30 then -- 30% of Extra food.
+					stacksize = stacksize + 1
+				end
 
                 if stacksize > 1 then
                     loot.components.stackable:SetStackSize(stacksize)
@@ -763,6 +819,7 @@ local function potfn(small)
 	inst.components.stewer.oncontinuedone = continuedonefn
 	inst.components.stewer.ondonecooking = donecookfn
 	inst.components.stewer.onharvest = harvestfn
+	inst.components.stewer.Harvest = DoubleHarvest
 	inst.components.stewer.onspoil = spoilfn
 	inst.components.stewer.CanCook = cancookfn
 

@@ -446,6 +446,36 @@ local function BananaTrader(inst)
     end
 end
 
+local function TidalTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "turf_tidalmarsh" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "turf_tidalmarsh" }
+    end
+end
+
+local function FieldsTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "turf_fields" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "turf_fields" }
+    end
+end
+
 AddPrefabPostInit("dug_berrybush", 			BushTrader)
 AddPrefabPostInit("dug_berrybush2", 		BushTrader)
 AddPrefabPostInit("dug_berrybush_juicy", 	BushTrader)
@@ -464,6 +494,8 @@ AddPrefabPostInit("pumpkin_seeds", 			ParsnipTrader)
 AddPrefabPostInit("garlic_seeds", 			TurnipTrader)
 AddPrefabPostInit("pomegranate_seeds",		KokonutTrader)
 AddPrefabPostInit("cave_banana",            BananaTrader)
+AddPrefabPostInit("turf_marsh",             TidalTrader)
+AddPrefabPostInit("turf_grass",             FieldsTrader)
 
 -- Dragonfly Drops Coffee Plants.
 local DF_COFFEE = GetModConfigData("HOF_COFFEEDROPRATE")
@@ -704,18 +736,24 @@ end
 
 AddPrefabPostInit("trident", StridentTridentPostinit)
 
--- Crows transforms into Pigeons when landing on Pink Park Turf.
-local function SerenityCrowPostinit(inst)
+-- Birds transforms into Pigeons when landing on Serenity Archipelago.
+local function SerenityBirdPostinit(inst)
 	inst:DoTaskInTime(1/30, function(inst)
 
     local TileAtPosition = _G.TheWorld.Map:GetTileAtPoint(inst:GetPosition():Get())
-        if TileAtPosition == WORLD_TILES.HOF_PINKPARK or TileAtPosition == WORLD_TILES.HOF_STONECITY then
+        if TileAtPosition == WORLD_TILES.QUAGMIRE_PARKFIELD or TileAtPosition == WORLD_TILES.QUAGMIRE_CITYSTONE then
 
             inst.AnimState:SetBuild("quagmire_pigeon_build")
 
             inst:SetPrefabName("quagmire_pigeon")
             inst.nameoverride = "quagmire_pigeon"
             inst.trappedbuild = "quagmire_pigeon_build"
+			inst.sounds =
+			{
+				takeoff = "dontstarve/birds/takeoff_quagmire_pigeon",
+				chirp = "dontstarve/birds/chirp_quagmire_pigeon",
+				flyin = "dontstarve/birds/flyin",
+			}
 
             if not _G.TheWorld.ismastersim then
                 return inst
@@ -731,7 +769,10 @@ local function SerenityCrowPostinit(inst)
     end)
 end
 
-AddPrefabPostInit("crow", SerenityCrowPostinit)
+AddPrefabPostInit("crow", SerenityBirdPostinit)
+AddPrefabPostInit("robin", SerenityBirdPostinit)
+AddPrefabPostInit("robin_winter", SerenityBirdPostinit)
+AddPrefabPostInit("puffin", SerenityBirdPostinit)
 
 -- Animals that can be killed with the Slaughter Tools.
 local slaughterable_animals = {
@@ -817,6 +858,7 @@ end
 -- Retrofitting Stuff for old worlds.
 require("hof_settings")
 local SERENITYISLAND = GetModConfigData("HOF_SERENITYISLAND")
+local MEADOWISLAND = GetModConfigData("HOF_MEADOWISLAND")
 
 local function RetrofitSerenityIsland()
     local node_indices = {}
@@ -849,6 +891,37 @@ local function RetrofitSerenityIsland()
     return true
 end
 
+local function RetrofitMeadowIsland()
+    local node_indices = {}
+    for k, v in ipairs(_G.TheWorld.topology.ids) do
+        if string.find(v, "Seaside Island") then
+            table.insert(node_indices, k)
+        end
+    end
+    if #node_indices == 0 then
+        return false
+    end
+
+    local tags = {"meadowarea"}
+    for k, v in ipairs(node_indices) do
+        if _G.TheWorld.topology.nodes[v].tags == nil then
+            _G.TheWorld.topology.nodes[v].tags = {}
+        end
+        for i, tag in ipairs(tags) do
+            if not table.contains(_G.TheWorld.topology.nodes[v].tags, tag) then
+                table.insert(_G.TheWorld.topology.nodes[v].tags, tag)
+            end
+        end
+    end
+    for i, node in ipairs(_G.TheWorld.topology.nodes) do
+        if table.contains(node.tags, "meadowarea") then
+            _G.TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
+        end
+    end
+
+    return true
+end
+
 AddComponentPostInit("retrofitforestmap_anr", function(self)
     oldonpostinit = self.OnPostInit
 
@@ -860,6 +933,14 @@ AddComponentPostInit("retrofitforestmap_anr", function(self)
                 self.requiresreset = true
             end
         end
+		
+		if MEADOWISLAND == 1 then
+			local success = RetrofitMeadowIsland()
+			if success then
+				_G.ChangeFoodConfigs("HOF_MEADOWISLAND", 0)
+                self.requiresreset = true
+			end
+		end
 
         return oldonpostinit(self, ...)
     end
@@ -1097,3 +1178,134 @@ AddPrefabPostInit("forest", function(inst)
 
 	inst:AddComponent("sugarflyspawner")
 end)
+
+-- Bee Queen drops the blueprint for the Honey Deposit.
+AddPrefabPostInit("beequeen", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst.components.lootdropper:AddChanceLoot("kyno_antchest_blueprint", 1.00)
+end)
+
+-- Grumble Bees, Killer Bees and Bees drops Nectar. Bees only during the Spring.
+AddPrefabPostInit("beeguard", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 0.20)
+end)
+
+AddPrefabPostInit("killerbee", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 1.00)
+end)
+
+AddPrefabPostInit("bee", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	if TheWorld.state.isspring then
+		inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 0.50)
+	end
+end)
+
+-- Purple Grouper can be caught on Swamp ponds.
+AddPrefabPostInit("pond_mos", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+
+	if inst.components.fishable ~= nil then
+		inst.components.fishable:AddFish("kyno_grouper")
+	end
+end)
+
+-- For trading turfs with the Elder.
+local function TurfTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+	end
+end
+
+AddPrefabPostInit("turf_road",      TurfTrader)
+AddPrefabPostInit("turf_deciduous", TurfTrader)
+
+-- Kingfisher drops Tropical Kois periodically.
+AddPrefabPostInit("kingfisher", function(inst)
+	if inst.components.periodicspawner ~= nil then
+		inst.components.periodicspawner:SetPrefab("kyno_koi")
+		inst.components.periodicspawner:SetDensityInRange(20, 2)
+		inst.components.periodicspawner:SetMinimumSpacing(15)
+	end
+end)
+
+-- Birds transforms into Kingfisher and Toucans when landing on Termagant Island.
+local function MeadowBirdPostinit(inst)
+	inst:DoTaskInTime(1/30, function(inst)
+
+    local TileAtPosition = _G.TheWorld.Map:GetTileAtPoint(inst:GetPosition():Get())
+        if TileAtPosition == WORLD_TILES.MONKEY_GROUND or TileAtPosition == WORLD_TILES.HOF_TIDALMARSH then
+
+            inst.AnimState:SetBuild("toucan_build")
+
+            inst:SetPrefabName("toucan")
+            inst.nameoverride = "toucan"
+            inst.trappedbuild = "toucan_build"
+			inst.sounds =
+			{
+				takeoff = "hof_sounds/creatures/toucan/take_off",
+				chirp = "hof_sounds/creatures/toucan/chirp",
+				flyin = "dontstarve/birds/flyin",
+			}
+		
+            if not _G.TheWorld.ismastersim then
+                return inst
+            end
+
+            inst.components.inventoryitem.onpickupfn = function(inst, doer)
+                inst:Remove()
+                local bird = SpawnPrefab("toucan")
+                doer.components.inventory:GiveItem(bird)
+                return true
+            end
+        elseif TileAtPosition == WORLD_TILES.HOF_FIELDS then
+			inst.AnimState:SetBuild("kingfisher_build")
+
+            inst:SetPrefabName("kingfisher")
+            inst.nameoverride = "kingfisher"
+            inst.trappedbuild = "kingfisher_build"
+			inst.sounds =
+			{
+				takeoff = "hof_sounds/creatures/kingfisher/take_off",
+				chirp = "hof_sounds/creatures/kingfisher/chirp",
+				flyin = "dontstarve/birds/flyin",
+			}
+		
+            if not _G.TheWorld.ismastersim then
+                return inst
+            end
+
+            inst.components.inventoryitem.onpickupfn = function(inst, doer)
+                inst:Remove()
+                local bird = SpawnPrefab("kingfisher")
+                doer.components.inventory:GiveItem(bird)
+                return true
+            end
+		end
+    end)
+end
+
+AddPrefabPostInit("crow", MeadowBirdPostinit)
+AddPrefabPostInit("robin", MeadowBirdPostinit)
+AddPrefabPostInit("robin_winter", MeadowBirdPostinit)
+AddPrefabPostInit("puffin", MeadowBirdPostinit)

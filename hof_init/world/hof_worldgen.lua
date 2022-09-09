@@ -349,7 +349,9 @@ AddTaskSetPreInitAny(function(tasksetdata)
         return
     end
     
-	tasksetdata.ocean_prefill_setpieces["hof_serenityisland1"]           = { count = 1 } 
+	tasksetdata.ocean_prefill_setpieces["hof_serenityisland1"]           = { count = 1 }
+	tasksetdata.ocean_prefill_setpieces["hof_meadowisland1"]             = { count = 1 }
+	
 	-- I will let the players decide how many they want.
 	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates"]      = { count = OCEANSETPIECE_COUNT }
 	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates2"]     = { count = OCEANSETPIECE_COUNT }

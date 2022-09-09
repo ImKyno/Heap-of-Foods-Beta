@@ -117,3 +117,31 @@ end
 function params.brewer.widget.buttoninfo.validfn(inst)
     return inst.replica.container ~= nil and inst.replica.container:IsFull()
 end
+
+params.honeydeposit =
+{
+    widget =
+    {
+        slotpos = 
+		{
+			Vector3(-37.5, 74 + 4, 0),
+            Vector3(37.5, 74 + 4, 0),
+			
+            Vector3(-(64 + 12), 3, 0),
+            Vector3(0, 3, 0),
+            Vector3(64 + 12, 3, 0),
+			
+			Vector3(-37.5, -(70 + 4), 0),
+            Vector3(37.5, -(70 + 4), 0),
+		},
+        animbank = "ui_antchest_honeycomb",
+        animbuild = "ui_antchest_honeycomb",
+        pos = Vector3(0, 200, 0),
+        side_align_tip = 160,
+    },
+    type = "chest",
+}
+
+function params.honeydeposit.itemtestfn(container, item, slot)
+    return item:HasTag("honeyed") and not container.inst:HasTag("burnt")
+end

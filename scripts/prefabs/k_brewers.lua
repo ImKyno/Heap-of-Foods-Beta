@@ -71,7 +71,7 @@ local function OnHammered(inst, worker)
 	
     local fx = SpawnPrefab("collapse_small")
     fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
-	inst.SoundEmitter:PlaySound("hof_sounds/common/brew_destroy")
+	inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_destroy")
 	
     inst:Remove()
 end
@@ -98,7 +98,7 @@ local function StartCookFn(inst)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("idle_empty", true)
         inst.SoundEmitter:KillSound("brew_loop")
-        inst.SoundEmitter:PlaySound("hof_sounds/common/brew_loop", "brew_loop")
+        inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_loop", "brew_loop")
     end
 end
 
@@ -106,7 +106,7 @@ local function OnOpen(inst)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("idle_empty")
         inst.SoundEmitter:KillSound("brew_loop")
-        inst.SoundEmitter:PlaySound("hof_sounds/common/brew_start")
+        inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
     end
 end
 
@@ -116,7 +116,7 @@ local function OnClose(inst)
             inst.AnimState:PlayAnimation("idle_empty")
             inst.SoundEmitter:KillSound("brew_loop")
         end
-        inst.SoundEmitter:PlaySound("hof_sounds/common/brew_start")
+        inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
     end
 end
 
@@ -165,7 +165,7 @@ local function DoneCookFn(inst)
         ShowProductImage(inst)
 		
         inst.SoundEmitter:KillSound("brew_loop")
-        inst.SoundEmitter:PlaySound("hof_sounds/common/brew_harvest")
+        inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_harvest")
     end
 end
 
@@ -180,14 +180,14 @@ local function ContinueCookFn(inst)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("idle_empty", true)
         inst.SoundEmitter:KillSound("brew_loop")
-        inst.SoundEmitter:PlaySound("hof_sounds/common/brew_loop", "brew_loop")
+        inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_loop", "brew_loop")
     end
 end
 
 local function HarvestFn(inst)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("idle_empty")
-        inst.SoundEmitter:PlaySound("hof_sounds/common/brew_start")
+        inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
     end
 	
 	local bubble = GetBubble(inst)
@@ -207,7 +207,7 @@ end
 local function OnBuilt(inst)
     inst.AnimState:PlayAnimation("idle_empty")
     inst.AnimState:PushAnimation("idle_empty", false)
-    inst.SoundEmitter:PlaySound("hof_sounds/common/brew_start")
+    inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
 end
 
 local function OnSave(inst, data)

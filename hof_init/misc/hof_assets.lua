@@ -32,7 +32,7 @@ Assets =
 	Asset("ANIM", "anim/kyno_bananatree_sapling.zip"),
 	Asset("ANIM", "anim/kyno_kokonut.zip"),
 	Asset("ANIM", "anim/kyno_weed_seeds.zip"),
-	Asset("ANIM", "anim/kyno_turfs_events.zip"),
+	Asset("ANIM", "anim/kyno_turfs_hof.zip"),
 	
 	Asset("ANIM", "anim/parsnip.zip"),
 	Asset("ANIM", "anim/grotto_parsnip_giant.zip"),

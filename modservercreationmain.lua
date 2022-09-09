@@ -10,3 +10,4 @@ ReloadFrontEndAssets()
 
 require("hof_settings")
 _G.ChangeFoodConfigs("HOF_SERENITYISLAND", 0)
+_G.ChangeFoodConfigs("HOF_MEADOWISLAND",   0)

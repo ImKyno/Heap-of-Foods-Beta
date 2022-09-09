@@ -72,6 +72,10 @@ local function setupstump(inst)
     inst:Remove()
 end
 
+local function ChopTreeShake(inst)
+    ShakeAllCameras(CAMERASHAKE.FULL, .25, .03, .5, inst, 6)
+end
+
 local function tree_chopped(inst, chopper)
     if not (chopper ~= nil and chopper:HasTag("playerghost")) then
         inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
@@ -99,6 +103,7 @@ local function tree_chopped(inst, chopper)
     inst.components.pickable.caninteractwith = false
     inst.components.workable:SetWorkable(false)
 	
+	inst:DoTaskInTime(14 * FRAMES, ChopTreeShake)
     inst:ListenForEvent("animover", setupstump)
 end
 
@@ -336,8 +341,6 @@ local function burnt_fn()
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
     inst.components.workable:SetWorkLeft(TUNING.KYNO_KOKONUTTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(burnt_chopped)
-
-    MakeHauntableWorkAndIgnite(inst)
 
     inst.OnSave = burnt_onsave
     inst.OnLoad = burnt_onload

@@ -173,64 +173,36 @@ local kyno_foods =
 	
 	icedtea = 
 	{
-		test = function(cooker, names, tags) return names.forgetmelots and (tags.frozen and tags.frozen >= 2) and names.kyno_syrup and not tags.meat and not tags.egg and not tags.fish end,
+		test = function(cooker, names, tags) return (names.kyno_piko_orange and names.kyno_piko_orange >= 2) and tags.sweetener and tags.frozen
+		and not tags.meat and not tags.egg and not tags.fish end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
-		health = 3,
+		health = 25,
 		hunger = 12.5,
 		sanity = 33,
 		cooktime = 0.5,
 		potlevel = "high",
 		floater = {"med", nil, 0.65},
-		prefabs = { "buff_sleepresistance" },
-        oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
-        oneatenfn = function(inst, eater)
-            if eater.components.grogginess ~= nil and
-				(eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled()) and
-					not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-					not eater:HasTag("playerghost") then
-                if eater.components.grogginess ~= nil then
-                    eater.components.grogginess:ResetGrogginess()
-                end
-                if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() then
-                    eater.components.debuffable:AddDebuff("shroomsleepresist", "buff_sleepresistance")
-                end
-            end
-        end,
 	},
 	
 	tea = 
 	{
-		test = function(cooker, names, tags) return (names.rabbit and names.rabbit >= 2) and tags.sweetener and not tags.frozen and not tags.meat and not tags.egg and not tags.fish end,
+		test = function(cooker, names, tags) return (names.kyno_piko_orange and names.kyno_piko_orange >= 2) and tags.sweetener 
+		and not tags.frozen and not tags.meat and not tags.egg and not tags.fish end,
 		priority = 25,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FAST,
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
-		health = 3,
+		health = 25,
 		hunger = 12.5,
 		sanity = 33,
-		cooktime = 0.5,
+		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		prefabs = { "buff_sleepresistance" },
-        oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
-        oneatenfn = function(inst, eater)
-            if eater.components.grogginess ~= nil and
-				(eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled()) and
-					not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-					not eater:HasTag("playerghost") then
-                if eater.components.grogginess ~= nil then
-                    eater.components.grogginess:ResetGrogginess()
-                end
-                if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() then
-                    eater.components.debuffable:AddDebuff("shroomsleepresist", "buff_sleepresistance")
-                end
-            end
-        end,
 	},
 	
 	nettlelosange = 
@@ -1485,7 +1457,7 @@ local kyno_foods =
 	
 	bubbletea = 
 	{
-		test = function(cooker, names, tags) return (names.moon_cap or names.moon_cap_cooked) and (tags.sweetener and tags.sweetener >= 2) and 
+		test = function(cooker, names, tags) return names.kyno_piko and (tags.sweetener and tags.sweetener >= 2) and 
 		tags.frozen and not tags.meat and not tags.egg and not tags.fish end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
@@ -1993,12 +1965,11 @@ local kyno_foods =
         end,
 		]]--
 	},
-
+	
 	crab_artichoke =
 	{
-		test = function(cooker, names, tags) return ((names.kyno_crabmeat or 0) + (names.kyno_crabmeat_cooked or 0) == 2) and names.kyno_spotspice and
-		((names.kelp or 0) + (names.kelp_cooked or 0)) or ((names.kyno_seaweeds or 0) + (names.kyno_seaweeds_cooked or 0)) or (names.kyno_waterycress) 
-		and not names.kelp_dried and not kyno_seaweeds_dried and not tags.inedible end,
+		test = function(cooker, names, tags) return ((names.kyno_crabmeat or 0) + (names.kyno_crabmeat_cooked or 0) >= 2) 
+		and names.kyno_spotspice and tags.algae and not tags.inedible end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FAST,

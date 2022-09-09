@@ -175,7 +175,7 @@ if DO_REGROWTH == 1 then
 			frequency 	= simpleregrowth.spawner_aloe_frequency,
 			amount 		= 3,
 			maxcount 	= 41,
-			tile 		= WORLD_TILES.FOREST,
+			tile 		= WORLD_TILES.FOREST, WORLD_TILES.HOF_FIELDS,
 		}
 	end
 

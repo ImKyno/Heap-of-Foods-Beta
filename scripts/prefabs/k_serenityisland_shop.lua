@@ -86,11 +86,19 @@ local function OnIsNight(inst, isnight)
 end
 
 local function TestItem(inst, item, giver)
-	if item.components.inventoryitem and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" and not inst:HasTag("pigelder_gifted") then
+	if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" and not inst:HasTag("pigelder_gifted") then
 		return true -- Accept the Item.
+	elseif item.components.inventoryitem ~= nil and item.prefab == "turf_road" or item.prefab == "turf_deciduous" then
+		return true
 	else
 		giver.components.talker:Say(GetString(giver, "ANNOUNCE_PIGELDER_FAIL"))
 	end
+end
+
+local function LaunchItem(item, angle)
+    local speed = math.random() * 4 + 2
+    angle = (angle + math.random() * 60 - 30) * DEGREES
+    item.Physics:SetVel(speed * math.cos(angle), math.random() * 2 + 8, speed * math.sin(angle))
 end
 
 local function OnGetItemFromPlayer(inst, giver, item)
@@ -98,8 +106,8 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/friendship_music/10")
 		inst:DoTaskInTime(1, function() SayThanks(inst) end)
 		-- New Recipes available in the shop!
-		inst.components.craftingstation:LearnItem("turf_pinkpark_p", "turf_pinkpark_p")
-		inst.components.craftingstation:LearnItem("turf_stonecity_p", "turf_stonecity_p")
+		-- inst.components.craftingstation:LearnItem("turf_pinkpark_p", "turf_pinkpark_p")
+		-- inst.components.craftingstation:LearnItem("turf_stonecity_p", "turf_stonecity_p")
 		inst.components.craftingstation:LearnItem("dug_kyno_spotbush", "dug_kyno_spotbush_p")
 		inst.components.craftingstation:LearnItem("dug_kyno_wildwheat", "dug_kyno_wildwheat_p")
 		inst.components.craftingstation:LearnItem("kyno_sugartree_petals", "kyno_sugartree_petals_p")
@@ -108,6 +116,30 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		inst:AddTag("pigelder_gifted")
 		inst.foodgift = true
 	end
+	
+	local x, y, z = inst.Transform:GetWorldPosition()
+    y = 4.5
+
+    local angle
+    if giver ~= nil and giver:IsValid() then
+        angle = 180 - giver:GetAngleToPoint(x, 0, z)
+    else
+        local down = TheCamera:GetDownVec()
+        angle = math.atan2(down.z, down.x) / DEGREES
+        giver = nil
+    end
+	
+	if item.components.inventoryitem ~= nil and item.prefab == "turf_road" then
+		local turf = SpawnPrefab("turf_stonecity")
+		turf.Transform:SetPosition(x, y, z)
+		LaunchItem(turf, angle)
+	end 
+	
+	if item.components.inventoryitem ~= nil and item.prefab == "turf_deciduous" then
+		local turf = SpawnPrefab("turf_pinkpark")
+		turf.Transform:SetPosition(x, y, z)
+		LaunchItem(turf, angle)
+	end 
 end
 
 local function OnSave(inst, data)

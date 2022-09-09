@@ -1,6 +1,6 @@
-require "constants"
-require "mathutil"
-require "map/terrain"
+require("constants")
+require("mathutil")
+require("map/terrain")
 
 local obj_layout = require("map/object_layout")
 

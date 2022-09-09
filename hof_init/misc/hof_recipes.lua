@@ -234,9 +234,10 @@ local KynKeg				= AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 3), Ingredi
 		atlas 				= ModAtlas, 
 		image 				= "kyno_woodenkeg.tex",
 	},
-	{"COOKING"}
+	{"COOKING", "STRUCTURES"}
 )
 SortAfter("kyno_woodenkeg", "cookpot", "COOKING")
+SortAfter("kyno_woodenkeg", "cookpot", "STRUCTURES")
 
 local KynJar				= AddRecipe2("kyno_preservesjar", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
 	{
@@ -245,9 +246,23 @@ local KynJar				= AddRecipe2("kyno_preservesjar", {Ingredient("boards", 3), Ingr
 		atlas 				= ModAtlas, 
 		image 				= "kyno_preservesjar.tex",
 	},
-	{"COOKING"}
+	{"COOKING", "STRUCTURES"}
 )
 SortAfter("kyno_preservesjar", "kyno_woodenkeg", "COOKING")
+SortAfter("kyno_preservesjar", "kyno_woodenkeg", "STRUCTURES")
+
+local KynHoneyDeposit       = AddRecipe2("kyno_antchest", {Ingredient("honeycomb", 1), Ingredient("honey", 6), Ingredient("boards", 2)}, TECH.LOST,
+	{
+		placer				= "kyno_antchest_placer",
+		min_spacing			= 1,
+		atlas				= ModAtlas,
+		image				= "kyno_antchest_honey.tex",
+	},
+	{"COOKING", "CONTAINERS", "STRUCTURES"}
+)
+SortAfter("kyno_antchest", "saltbox", "CONTAINERS")
+SortAfter("kyno_antchest", "saltbox", "STRUCTURES")
+SortAfter("kyno_antchest", "saltbox", "COOKING")
 
 -- Pig Elder Shop.
 local KynSaltRack 			= AddRecipe2("kyno_saltrack_installer_p", {Ingredient("kyno_salmonfish", 2, ModAtlas)}, TECH.SERENITYSHOP_ONE, 
@@ -510,6 +525,7 @@ local KynElderWheatBush		= AddRecipe2("dug_kyno_wildwheat_p", {Ingredient("kyno_
 	{"CRAFTING_STATION"}
 )
 
+--[[ -- Disabled. You trade directly with him now.
 local KynElderTurf1			= AddRecipe2("turf_pinkpark_p", {Ingredient("turf_deciduous", 2)}, TECH.LOST,
 	{
 		nounlock 			= true, 
@@ -535,6 +551,7 @@ local KynElderTurf2			= AddRecipe2("turf_stonecity_p", {Ingredient("cutstone", 1
 	},
 	{"CRAFTING_STATION"}
 )
+]]--
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 local WARLY_MEALGRINDER = GetModConfigData("HOF_WARLYMEALGRINDER")

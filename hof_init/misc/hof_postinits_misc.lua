@@ -16,6 +16,7 @@ AddPrefabPostInit("wilson", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("caviar", TUNING.AFFINITY_15_CALORIES_HUGE)
+		-- inst.components.foodaffinity:AddPrefabAffinity("wine_dragonfruit", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -26,6 +27,7 @@ AddPrefabPostInit("willow", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("feijoada", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("pickles_pepper", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -38,6 +40,7 @@ AddPrefabPostInit("wolfgang", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_potato_soup", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("pickles_potato", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -48,6 +51,7 @@ AddPrefabPostInit("wendy", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("icedtea", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("jelly_fig", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -68,6 +72,7 @@ AddPrefabPostInit("wickerbottom", function(inst)
 	
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("tea", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("greentea", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -78,6 +83,7 @@ AddPrefabPostInit("woodie", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_sliders", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("beer", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -88,6 +94,7 @@ AddPrefabPostInit("waxwell", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_crab_roll", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("redtea", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -98,6 +105,7 @@ AddPrefabPostInit("wes", function(inst)
 	
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("sharkfinsoup", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("tartarsauce", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -110,6 +118,7 @@ AddPrefabPostInit("wathgrithr", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_pot_roast", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("mead", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -120,6 +129,7 @@ AddPrefabPostInit("webber", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("steamedhamsandwich", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("mayonnaise", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -130,6 +140,7 @@ AddPrefabPostInit("winona", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("coffee", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("paleale", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -140,6 +151,7 @@ AddPrefabPostInit("wortox", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("jellyopop", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("jelly_pomegranate", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 
     if inst.components.eater ~= nil then
@@ -154,6 +166,7 @@ AddPrefabPostInit("wormwood", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gummy_cake", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("jelly_kokonut", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 
     if inst.components.eater ~= nil then
@@ -168,6 +181,7 @@ AddPrefabPostInit("wurt", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_vegetable_soup", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("pickles_cucumber", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -178,6 +192,7 @@ AddPrefabPostInit("walter", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_hamburger", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("mayonnaise_chicken", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -188,6 +203,18 @@ AddPrefabPostInit("wanda", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_candy", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("mayonnaise_nightmare", TUNING.AFFINITY_15_CALORIES_HUGE)
+    end
+end)
+
+AddPrefabPostInit("wonkey", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+
+    if inst.components.foodaffinity ~= nil then
+        inst.components.foodaffinity:AddPrefabAffinity("coconutwater", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("jelly_banana", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -313,3 +340,16 @@ AddComponentPostInit("locomotor", function(inst)
         end
     end
 end)
+
+-- Wurt is also faster while on Tidal Marsh ground.
+local function WurtSpeedPostinit(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	if inst.components.locomotor ~= nil then
+		inst.components.locomotor:SetFasterOnGroundTile(WORLD_TILES.HOF_TIDALMARSH, true)
+	end
+end
+
+AddPrefabPostInit("wurt", WurtSpeedPostinit)

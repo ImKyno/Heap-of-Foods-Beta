@@ -1,0 +1,186 @@
+local assets =
+{
+	Asset("ANIM", "anim/kyno_meadowisland_sandhill.zip"),
+}
+
+local prefabs =
+{
+	"slurtle_shellpieces",
+	"rock",
+	"feather_crow",
+	"feather_robin",
+	"feather_robin_winter",
+	"spidergland",
+	"gears",
+	"goldnugget",
+	"redgem",
+	"purplegem",
+	"greengem",
+	"yellowgem",
+	"kyno_kokonut",
+	"kyno_piko",
+	"kyno_piko_orange",
+}
+
+local anims = {"low", "med", "full"}
+
+local function GetVerb()
+    return "DESTROY"
+end
+
+local function OnRegen(inst)
+	inst.components.activatable.inactive = false
+	
+	if inst.components.workable.workleft < #anims-1 then
+		inst.components.workable:SetWorkLeft(inst.components.workable.workleft+1)
+		startregen(inst)
+	else
+		inst.targettime = nil
+	end
+end
+
+local function StartRegen(inst, regentime)
+	if inst.components.workable.workleft < #anims-1 then
+		regentime = regentime or (TUNING.KYNO_MEADOWISLAND_SAND_REGROW + math.random() * TUNING.KYNO_MEADOWISLAND_SAND_REGROW_VARIANCE)
+
+		if TheWorld.state.issummer then
+			regentime = regentime / 2
+		elseif TheWorld.state.isspring then
+			regentime = regentime * 2
+		end
+
+		if inst.task then
+			inst.task:Cancel()
+		end
+		
+		inst.task = inst:DoTaskInTime(regentime, OnRegen, "regen")
+		inst.targettime = GetTime() + regentime
+	else
+		if inst.task then
+			inst.task:Cancel()
+		end
+		
+		inst.targettime = nil
+	end
+
+	if inst.components.workable.workleft < 1 then
+		inst.AnimState:PlayAnimation(anims[1])
+	else
+		inst.AnimState:PlayAnimation(anims[inst.components.workable.workleft+1])
+	end
+end
+
+local function OnWorked(inst, worker, workleft)
+	if workleft <= 0 then
+		inst.components.activatable.inactive = true
+	end
+
+	inst.components.lootdropper.numrandomloot = 1
+	inst.components.lootdropper.chancerandomloot = 0.01
+
+	inst.components.lootdropper:AddRandomLoot("slurtle_shellpieces", 0.01)
+	inst.components.lootdropper:AddRandomLoot("rock", 0.01)
+	inst.components.lootdropper:AddRandomLoot("feather_crow", 0.01)
+	inst.components.lootdropper:AddRandomLoot("feather_robin", 0.01)
+	inst.components.lootdropper:AddRandomLoot("feather_robin_winter", 0.01)
+	inst.components.lootdropper:AddRandomLoot("spidergland", 0.001)
+	inst.components.lootdropper:AddRandomLoot("gears", 0.002)
+	inst.components.lootdropper:AddRandomLoot("goldnugget", 0.002)
+	inst.components.lootdropper:AddRandomLoot("redgem", 0.002)
+	inst.components.lootdropper:AddRandomLoot("purplegem", 0.001)
+	inst.components.lootdropper:AddRandomLoot("greengem", 0.001)
+	inst.components.lootdropper:AddRandomLoot("yellowgem", 0.001)
+	inst.components.lootdropper:AddRandomLoot("kyno_kokonut", 0.001)
+	inst.components.lootdropper:AddRandomLoot("kyno_piko", 0.001)
+	inst.components.lootdropper:AddRandomLoot("kyno_piko_orange", 0.001)
+
+	local pt = Vector3(inst.Transform:GetWorldPosition())
+	local hispos = Vector3(worker.Transform:GetWorldPosition())
+	local he_right = ((hispos - pt):Dot(TheCamera:GetRightVec()) > 0)
+	
+	if he_right then
+		inst.components.lootdropper:DropLoot(pt - (TheCamera:GetRightVec()*(.5 + math.random())))
+	else
+		inst.components.lootdropper:DropLoot(pt + (TheCamera:GetRightVec()*(.5 + math.random())))
+	end
+
+	StartRegen(inst)
+end
+
+local function OnSave(inst, data)
+	if inst.targettime then
+		local time = GetTime()
+		
+		if inst.targettime > time then
+			data.time = math.floor(inst.targettime - time)
+		end
+		
+		data.workleft = inst.components.workable.workleft
+	end
+end
+
+local function OnLoad(inst, data)
+	if data and data.workleft then
+		inst.components.workable.workleft = data.workleft
+
+		if data.workleft <= 0 then
+			inst.components.activatable.inactive = true
+		end
+	end
+		
+	if data and data.time then
+		StartRegen(inst, data.time)
+	end
+end
+
+local function OnWake(inst)
+	if TheWorld.state.isspring and TheWorld.state.israining then
+		if math.random() < TUNING.KYNO_MEADOWISLAND_SAND_DEPLETE and inst.components.workable.workleft > 0 then
+			inst.components.workable.workleft = inst.components.workable.workleft - math.random(0, inst.components.workable.workleft)
+			StartRegen(inst)
+		end
+	end
+end
+
+local function fn()
+	local inst = CreateEntity()
+	
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	inst.AnimState:SetBank("kyno_meadowisland_sandhill")
+	inst.AnimState:SetBuild("kyno_meadowisland_sandhill")
+	inst.AnimState:PlayAnimation(anims[#anims])
+	
+	inst:AddTag("sandhill")
+	
+	inst.GetActivateVerb = GetVerb
+
+	inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst:AddComponent("inspectable")
+	inst:AddComponent("lootdropper")
+
+	inst:AddComponent("workable")
+	inst.components.workable:SetWorkAction(ACTIONS.DIG)
+	inst.components.workable:SetOnWorkCallback(OnWorked)
+	inst.components.workable:SetWorkLeft(#anims-1)
+
+	inst:AddComponent("activatable")
+	inst.components.activatable.inactive = false
+	inst.components.activatable.OnActivate = function() inst:Remove() end
+	
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
+	inst.OnEntityWake = OnWake
+
+	return inst
+end
+
+return Prefab("kyno_meadowisland_sandhill", fn, assets, prefabs)

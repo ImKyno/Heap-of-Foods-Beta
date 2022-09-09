@@ -40,8 +40,6 @@ if COFFEE_SPEED == 1 then
 				end)
 			end
 		end
-
-		inst:AddTag("honeyed")
 		
 		if not _G.TheWorld.ismastersim then
 			return inst
@@ -962,3 +960,44 @@ local function MeadPostinit(inst)
 end
 
 AddPrefabPostInit("mead", MeadPostinit)
+
+-- Honey and Honey-based foods do not spoil inside Honey Deposits.
+local honeyed_foods = {
+	"honey",
+	"royal_jelly",
+    "honeynuggets",
+	"honeyham",
+	"powcake",
+	"freshfruitcrepes",
+	"taffy",
+	"icecream",
+	"leafymeatsouffle",
+	"voltgoatjelly",
+	"sweettea",
+	"coffee",
+	"gummy_cake",
+	"tea",
+	"icedtea",
+	"gorge_candy",
+	"gorge_berry_tart",
+	"kyno_syrup",
+	"festive_berrysauce",
+	"festive_mulledpunch",
+	"festive_pavlova",
+	"festive_polishcookies",
+	"festive_pumpkinpie",
+	"bubbletea",
+	"jellybean_hunger",
+	"jellybean_sanity",
+	"jellybean_super",
+	"fortunecookie",
+	"honeyjar",
+}
+
+local function HoneyFoodsPostinit(inst)
+	inst:AddTag("honeyed")
+end
+
+for k,v in pairs(honeyed_foods) do
+	AddPrefabPostInit(v, HoneyFoodsPostinit)
+end

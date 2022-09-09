@@ -265,12 +265,43 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
             chirp = soundbank.."/birds/chirp_"..soundname,
             flyin = "dontstarve/birds/flyin",
         }
+		
+		if name == "kingfisher" then
+			inst.sounds =
+			{
+				takeoff = "hof_sounds/creatures/kingfisher/take_off",
+				chirp = "hof_sounds/creatures/kingfisher/chirp",
+				flyin = "dontstarve/birds/flyin",
+			}
+		end
+		
+		if name == "toucan" then
+			inst.sounds =
+			{
+				takeoff = "hof_sounds/creatures/toucan/take_off",
+				chirp = "hof_sounds/creatures/toucan/chirp",
+				flyin = "dontstarve/birds/flyin",
+			}
+		end
+		
+		if name == "quagmire_pigeon" then
+			inst.sounds =
+			{
+				takeoff = "dontstarve/birds/takeoff_quagmire_pigeon",
+				chirp = "dontstarve/birds/chirp_quagmire_pigeon",
+				flyin = "dontstarve/birds/flyin",
+			}
+		end
 
         inst.trappedbuild = name.."_build"
+		
+		inst:AddComponent("occupier")
+		inst:AddComponent("inspectable")
 
         inst:AddComponent("locomotor")
         inst.components.locomotor:EnableGroundSpeedMultiplier(false)
         inst.components.locomotor:SetTriggersCreep(false)
+		
         inst:SetStateGraph("SGbird")
 
         inst:AddComponent("lootdropper")
@@ -283,8 +314,6 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
 			inst.components.lootdropper:AddRandomLoot(name == "quagmire_pigeon" and "kyno_bacon" or "smallmeat", 1)
 			inst.components.lootdropper.numrandomloot = 1
 		end
-
-        inst:AddComponent("occupier")
 
         inst:AddComponent("eater")
         inst.components.eater:SetDiet({ FOODTYPE.SEEDS }, { FOODTYPE.SEEDS })
@@ -299,6 +328,7 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
         if water_bank == nil then
             inst.components.inventoryitem:SetSinks(true)
         end
+		
 		if name == "toucan_hamlet" then
 			inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 		end
@@ -309,8 +339,6 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
         inst:AddComponent("health")
         inst.components.health:SetMaxHealth(TUNING.BIRD_HEALTH)
         inst.components.health.murdersound = "dontstarve/wilson/hit_animal"
-
-        inst:AddComponent("inspectable")
 
         if water_bank ~= nil then
             inst.flyawaydistance = TUNING.WATERBIRD_SEE_THREAT_DISTANCE
@@ -378,7 +406,7 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
     return Prefab(name, fn, assets, prefabs)
 end
 
-local function pigeon_loot_setup(inst, prefab_deps)
+local function PigeonSetup(inst, prefab_deps)
 	inst.components.lootdropper:AddRandomLoot("feather_robin_winter", 1)
 	inst.components.lootdropper:AddRandomLoot("kyno_bacon", 1)
 	inst.components.lootdropper.numrandomloot = 1
@@ -386,4 +414,22 @@ local function pigeon_loot_setup(inst, prefab_deps)
     table.insert(prefab_deps, "feather_robin_winter")
 end
 
-return makebird("quagmire_pigeon", "quagmire_pigeon", nil, nil, pigeon_loot_setup, nil, true)
+local function ToucanSetup(inst, prefab_deps)
+	inst.components.lootdropper:AddRandomLoot("feather_crow", 1)
+	inst.components.lootdropper:AddRandomLoot("smallmeat", 1)
+	inst.components.lootdropper.numrandomloot = 1
+
+    table.insert(prefab_deps, "feather_crow")
+end
+	
+local function KingfisherSetup(inst, prefab_deps)
+	inst.components.lootdropper:AddRandomLoot("feather_robin_winter", 1)
+	inst.components.lootdropper:AddRandomLoot("kyno_bacon", 1)
+	inst.components.lootdropper.numrandomloot = 1
+
+    table.insert(prefab_deps, "feather_robin_winter")
+end
+
+return makebird("quagmire_pigeon", "quagmire_pigeon", nil, nil, PigeonSetup, nil, true),
+makebird("toucan", "toucan", nil, nil, ToucanSetup, nil, true),
+makebird("kingfisher", "kingfisher", nil, nil, KingfisherSetup, nil, true)

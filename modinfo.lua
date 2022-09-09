@@ -1,6 +1,6 @@
 name = "Heap of Foods"
 version = "4.2-A"
-local myupdate = "Artisan Goods (Part 1)"
+local myupdate = "Artisan Goods (Part I)"
 
 description = [[
 󰀄 Adds 118 brand new Crock Pot dishes alongside new ingredients to use!
@@ -15,7 +15,7 @@ The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jellies, P
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
 󰀌 Mod Version: 4.2-A
-󰀧 Update: Artisan Goods (Part 1)
+󰀧 Update: Artisan Goods (Part I)
 ]]
 
 author = "Kyno"
@@ -240,7 +240,7 @@ configuration_options =
         default = 0,
 	},
 	
-	Title("World Options (Old Worlds)", "Options for the world."),
+	Title("World Options", "Options for the world."),
 	{
 		name = "HOF_SERENITYISLAND",
 		label = "Serenity Archipelago",
@@ -255,6 +255,25 @@ configuration_options =
             {
 				description = "Yes", 
 				hover = "Serenity Archipelago will be generated during server initialization.",
+				data = 1
+			},
+        },
+        default = 0,
+	},
+	{
+		name = "HOF_MEADOWISLAND",
+		label = "Seaside Island",
+		hover = "If your world is missing the Seaside Island enable this option.\nThis option will be disabled once the retrofitting is finished!",
+		options =
+		{
+			{
+				description = "No", 
+				hover = "Seaside Island is already generated in your world!",
+				data = 0
+			},
+            {
+				description = "Yes", 
+				hover = "Seaside Island will be generated during server initialization.",
 				data = 1
 			},
         },
