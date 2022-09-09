@@ -1950,6 +1950,7 @@ local kyno_foods =
 		hunger = 1,
 		sanity = 1,
 		cooktime = .1,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WATER,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		-- ITS JUST WATER MY MAN -- Vasp: Yeah, not just water, a cup of it.
@@ -1969,8 +1970,9 @@ local kyno_foods =
 	crab_artichoke =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_crabmeat or 0) + (names.kyno_crabmeat_cooked or 0) >= 2) 
-		and names.kyno_spotspice and tags.algae and not tags.inedible end,
-		priority = 30,
+		and names.kyno_spotspice and ((names.kelp or 0) + (names.kyno_seaweeds or 0) + (names.kyno_waterycress or 0) >= 1) 
+		and not names.kelp_cooked and not names.kelp_dried and not names.kyno_seaweeds_cooked and not names.kyno_seaweeds_dried end,
+		priority = 25,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FAST,
 		health = 40,

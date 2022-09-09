@@ -16,6 +16,13 @@ function SapHealer:Heal(target)
 		tree.Transform:SetPosition(pos:Get())
 		target:Remove()
 		
+		if self.inst.components.stackable ~= nil and self.inst.components.stackable:IsStack() then
+            self.inst.components.stackable:Get():Remove()
+        else
+            self.inst:Remove()
+        end
+		
+        return true
 	else
 		local pos = target:GetPosition()
 		local tree = SpawnPrefab("kyno_sugartree")

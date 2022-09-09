@@ -4,6 +4,7 @@ local require 		       = _G.require
 local GROUND 		       = _G.GROUND
 
 require("map/terrain")
+modimport("hof_init/misc/hof_tuning")
 
 local TERRAIN_FILTERS      = {_G.WORLD_TILES.ROAD, _G.WORLD_TILES.WOODFLOOR, _G.WORLD_TILES.CARPET, _G.WORLD_TILES.CHECKER}
 local OCEANSETPIECE_COUNT  = GetModConfigData("HOF_OCEANSETPIECE_COUNT")

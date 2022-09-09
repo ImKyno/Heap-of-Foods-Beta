@@ -21,23 +21,23 @@ local prefabs =
 	"flint",
 }   
 
-SetSharedLootTable('limpetrockempty',
+SetSharedLootTable("limpetrockempty",
 {
-	{'rocks', 1.00},
-	{'rocks', 1.00},
-	{'rocks', 1.00},
-	{'flint', 1.00},
-	{'flint', 0.60},
+	{"rocks", 1.00},
+	{"rocks", 1.00},
+	{"rocks", 1.00},
+	{"flint", 1.00},
+	{"flint", 0.60},
 })
 
-SetSharedLootTable('limpetrockfull',
+SetSharedLootTable("limpetrockfull",
 {
-	{'rocks', 1.00},
-	{'rocks', 1.00},
-	{'rocks', 1.00},
-	{'flint', 1.00},
-	{'flint', 0.60},
-	{'kyno_limpets', 1.00},
+	{"rocks", 1.00},
+	{"rocks", 1.00},
+	{"rocks", 1.00},
+	{"flint", 1.00},
+	{"flint", 0.60},
+	{"kyno_limpets", 1.00},
 })
 
 local function makeemptyfn(inst)
@@ -77,7 +77,7 @@ local function onpickedfn(inst, picker)
 end
 
 local function getregentimefn(inst)
-	return LIMPET_REGROW_TIME
+	return TUNING.KYNO_LIMPETROCK_GROWTIME
 end
 
 local function pickanim(inst)
@@ -131,7 +131,7 @@ local function fn()
 	inst:AddComponent("witherable")
 	
 	inst:AddComponent("lootdropper")
-	inst.components.lootdropper:SetChanceLootTable('limpetrockempty')
+	inst.components.lootdropper:SetChanceLootTable("limpetrockempty")
 
 	inst:AddComponent("pickable")
 	inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"

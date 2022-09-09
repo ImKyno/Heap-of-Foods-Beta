@@ -35,6 +35,7 @@ local function OnHammered(inst, worker)
 	SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_wood")
 	
+	local pt = worker and worker:GetPosition() or nil
 	inst.components.lootdropper:SpawnLootPrefab("boards", pt)
 	inst.components.lootdropper:DropLoot()
 
