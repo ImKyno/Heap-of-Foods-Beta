@@ -1,5 +1,3 @@
-require "prefabutil"
-
 local function makeemptyfn(inst)
     inst.AnimState:PlayAnimation("empty")
 	inst.components.pickable:MakeEmpty()

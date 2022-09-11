@@ -1,6 +1,6 @@
-require "behaviours/wander"
-require "behaviours/doaction"
-require "behaviours/panic"
+require("behaviours/wander")
+require("behaviours/doaction")
+require("behaviours/panic")
 
 local STOP_RUN_DIST = 10
 local SEE_PLAYER_DIST = 5

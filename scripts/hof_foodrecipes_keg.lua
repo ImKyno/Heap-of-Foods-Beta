@@ -547,6 +547,22 @@ local kyno_foods_keg =
 		no_brewbook = true,
         floater = {"small", nil, nil},
 	},
+	
+	-- This recipe is just for testing the brewing mechanics. Remember to turn this off when switching the builds.
+	brewertest =
+	{
+		test = function(brewer, names, tags) return names.red_cap and names.blue_cap end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = 480,
+		health = -10,
+		hunger = 0,
+		sanity = 10,
+		cooktime = 0.5,
+		oneat_desc = "Testing brewing",
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+	},
 }
 
 for k, recipe in pairs(kyno_foods_keg) do

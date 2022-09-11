@@ -27,9 +27,9 @@ local Brewer = Class(function(self, inst)
     self.targettime = nil
     self.task = nil
     self.product = nil
-    self.product_spoilage = nil
-    self.spoiledproduct = "spoiled_food"
-    self.spoiltime = nil
+    -- self.product_spoilage = nil
+    -- self.spoiledproduct = "spoiled_food"
+    -- self.spoiltime = nil
     self.cooktimemult = 1
 
 	self.chef_id = nil
@@ -72,7 +72,14 @@ local function dostew(inst, self)
     if self.ondonecooking ~= nil then
         self.ondonecooking(inst)
     end
+	
+	if self.product == self.spoiledproduct then
+        if self.onspoil ~= nil then
+            self.onspoil(inst)
+        end
+    end
 
+	--[[
     if self.product == self.spoiledproduct then
         if self.onspoil ~= nil then
             self.onspoil(inst)
@@ -87,7 +94,8 @@ local function dostew(inst, self)
 			self.task = self.inst:DoTaskInTime(self.spoiltime, dospoil, self)
 		end
     end
-
+	]]--
+	
     self.done = true
 end
 
@@ -96,7 +104,8 @@ function Brewer:IsDone()
 end
 
 function Brewer:IsSpoiling()
-    return self.done and self.targettime ~= nil
+    -- return self.done and self.targettime ~= nil
+	return false
 end
 
 function Brewer:IsCooking()
@@ -108,7 +117,8 @@ function Brewer:GetTimeToCook()
 end
 
 function Brewer:GetTimeToSpoil()
-    return self.done and self.targettime ~= nil and self.targettime - GetTime() or 0
+    -- return self.done and self.targettime ~= nil and self.targettime - GetTime() or 0
+	return 0
 end
 
 function Brewer:CanCook()
@@ -125,7 +135,7 @@ function Brewer:StartCooking(doer)
 		self.ingredient_prefabs = {}
 
         self.done = nil
-        self.spoiltime = nil
+        -- self.spoiltime = nil
 
         if self.onstartcooking ~= nil then
             self.onstartcooking(self.inst)
@@ -137,6 +147,8 @@ function Brewer:StartCooking(doer)
 
         local cooktime = 1
         self.product, cooktime = brewing.CalculateBrewing(self.inst.prefab, self.ingredient_prefabs)
+		
+		--[[
         local productperishtime = brewing.GetBrewing(self.inst.prefab, self.product).perishtime or 0
 
         if productperishtime > 0 then
@@ -155,6 +167,7 @@ function Brewer:StartCooking(doer)
 		else
 			self.product_spoilage = nil
 		end
+		]]--
 
         cooktime = TUNING.BASE_COOK_TIME * cooktime * self.cooktimemult
         self.targettime = GetTime() + cooktime
@@ -178,6 +191,7 @@ function Brewer:StopCooking(reason)
         self.task:Cancel()
         self.task = nil
     end
+	
     if self.product ~= nil and reason == "fire" then
         local prod = SpawnPrefab(self.product)
         if prod ~= nil then
@@ -185,9 +199,10 @@ function Brewer:StopCooking(reason)
             prod:DoTaskInTime(0, StopProductPhysics)
         end
     end
+	
     self.product = nil
-    self.product_spoilage = nil
-    self.spoiltime = nil
+    -- self.product_spoilage = nil
+    -- self.spoiltime = nil
     self.targettime = nil
     self.done = nil
 end
@@ -198,8 +213,8 @@ function Brewer:OnSave()
     {
         done = self.done,
         product = self.product,
-        product_spoilage = self.product_spoilage,
-        spoiltime = self.spoiltime,
+        -- product_spoilage = self.product_spoilage,
+        -- spoiltime = self.spoiltime,
         remainingtime = remainingtime > 0 and remainingtime or nil,
 
 		chef_id = self.chef_id,
@@ -214,19 +229,20 @@ function Brewer:OnLoad(data)
 
         self.done = data.done or nil
         self.product = data.product
-        self.product_spoilage = data.product_spoilage
-        self.spoiltime = data.spoiltime
+        -- self.product_spoilage = data.product_spoilage
+        -- self.spoiltime = data.spoiltime
 
         if self.task ~= nil then
             self.task:Cancel()
             self.task = nil
         end
+		
         self.targettime = nil
 
         if data.remainingtime ~= nil then
             self.targettime = GetTime() + math.max(0, data.remainingtime)
             if self.done then
-                self.task = self.inst:DoTaskInTime(data.remainingtime, dospoil, self)
+                -- self.task = self.inst:DoTaskInTime(data.remainingtime, dospoil, self)
                 if self.oncontinuedone ~= nil then
                     self.oncontinuedone(self.inst)
                 end
@@ -236,7 +252,7 @@ function Brewer:OnLoad(data)
                     self.oncontinuecooking(self.inst)
                 end
             end
-        elseif self.product ~= self.spoiledproduct and data.product_spoilage ~= nil then
+        elseif self.product ~= self.spoiledproduct then -- and data.product_spoilage ~= nil then
             self.targettime = GetTime()
             self.task = self.inst:DoTaskInTime(0, dostew, self)
             if self.oncontinuecooking ~= nil then
@@ -284,11 +300,18 @@ function Brewer:Harvest(harvester)
 					loot.components.stackable:SetStackSize(stacksize)
 				end
 
+				--[[
                 if self.spoiltime ~= nil and loot.components.perishable ~= nil then
                     local spoilpercent = self:GetTimeToSpoil() / self.spoiltime
                     loot.components.perishable:SetPercent(self.product_spoilage * spoilpercent)
                     loot.components.perishable:StartPerishing()
                 end
+				]]--
+				
+				if loot.components.perishable ~= nil then
+					loot.components.perishable:StartPerishing()
+				end
+				
                 if harvester ~= nil and harvester.components.inventory ~= nil then
                     harvester.components.inventory:GiveItem(loot, nil, self.inst:GetPosition())
                 else
@@ -302,10 +325,11 @@ function Brewer:Harvest(harvester)
             self.task:Cancel()
             self.task = nil
         end
+		
         self.targettime = nil
         self.done = nil
-        self.spoiltime = nil
-        self.product_spoilage = nil
+        -- self.spoiltime = nil
+        -- self.product_spoilage = nil
 
         if self.inst.components.container ~= nil then
             self.inst.components.container.canbeopened = true
@@ -330,6 +354,7 @@ function Brewer:LongUpdate(dt)
         end
     end
 
+	--[[
     if dt > 0 and self:IsSpoiling() then
         if self.task ~= nil then
             self.task:Cancel()
@@ -341,6 +366,7 @@ function Brewer:LongUpdate(dt)
             dospoil(self.inst, self)
         end
     end
+	]]--
 end
 
 return Brewer

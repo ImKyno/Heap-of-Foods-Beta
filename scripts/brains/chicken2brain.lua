@@ -1,8 +1,8 @@
-require "behaviours/wander"
-require "behaviours/leash"
-require "behaviours/runaway"
-require "behaviours/doaction"
-require "behaviours/panic"
+require("behaviours/wander")
+require("behaviours/leash")
+require("behaviours/runaway")
+require("behaviours/doaction")
+require("behaviours/panic")
 
 local SEE_BAIT_DIST = 20
 local MAX_LEASH_DIST = 10

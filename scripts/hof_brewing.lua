@@ -1,4 +1,4 @@
-require "tuning"
+require("tuning")
 
 local official_foods = {}
 local brewerrecipes = {}
@@ -81,12 +81,6 @@ IsModBrewingProduct = function(brewer, name)
     return false
 end
 
--- Ingredients.
---[[
-AddBrewingValues({"kyno_wheat"},     {wheat=1})
-AddBrewingValues({"kyno_spotspice"}, {spotspice=1})
-]]--
-
 local aliases =
 {
 	cookedsmallmeat = "smallmeat_cooked",
@@ -97,18 +91,6 @@ local aliases =
 local function IsBrewingIngredient(prefabname)
     return brewingredients[aliases[prefabname] or prefabname] ~= nil
 end
-
--- Brewing Stations.
---[[
-local brews = require("hof_foodrecipes_brew")
-for k, recipe in pairs (brews) do
-	if recipe.keg_product then
-		AddBrewerRecipe("kyno_woodenkeg", recipe)
-	else
-		AddBrewerRecipe("kyno_preservesjar", recipe)
-	end
-end
-]]--
 
 local function GetBrewingValues(prefablist)
     local prefabs = {}

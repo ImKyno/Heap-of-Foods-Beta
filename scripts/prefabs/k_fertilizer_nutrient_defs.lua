@@ -8,6 +8,7 @@ HOF_FERTILIZER_DEFS.kyno_sap_spoiled = {nutrients = TUNING.KYNO_SAP_SPOILED_NUTR
 HOF_FERTILIZER_DEFS.kyno_floatilizer = {nutrients = TUNING.KYNO_FLOATILIZER_NUTRIENTS, uses = TUNING.KYNO_FLOATILIZER_USES}
 HOF_FERTILIZER_DEFS.kyno_mysterymeat = {nutrients = TUNING.KYNO_MYSTERYMEAT_NUTRIENTS}
 HOF_FERTILIZER_DEFS.wetgoop2 = {nutrients = TUNING.WETGOOP2_NUTRIENTS}
+-- HOF_FERTILIZER_DEFS.duckyouglermz = {nutrients = TUNING.DUCKYOUGLERMZ_NUTRIENTS}
 
 local hof_sort_order =
 {
@@ -16,6 +17,7 @@ local hof_sort_order =
     kyno_mysterymeat = "spoiled_fish",
 	kyno_floatilizer = "fertilizer",
 	wetgoop2 = "glommerfuel",
+	-- duckyouglermz = "poop",
 }
 
 for fertilizer, data in pairs(HOF_FERTILIZER_DEFS) do

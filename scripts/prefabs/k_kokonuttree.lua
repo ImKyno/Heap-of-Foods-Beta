@@ -35,7 +35,9 @@ local function onregenfn(inst)
 	else
 		inst.AnimState:PushAnimation("sway2_loop", true)
 	end
+	
     inst.AnimState:Show("coconut")
+	inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 end
 
 local function makefullfn(inst)
@@ -44,18 +46,21 @@ local function makefullfn(inst)
 	else
 		inst.AnimState:PushAnimation("sway2_loop", true)
 	end
+	
     inst.AnimState:Show("coconut")
+	inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 end
 
 local function onpickedfn(inst)
-    inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
     inst.AnimState:PlayAnimation("chop")
 	if math.random() > .5 then
 		inst.AnimState:PushAnimation("sway1_loop", true)
 	else
 		inst.AnimState:PushAnimation("sway2_loop", true)
 	end
+	
 	inst.AnimState:Hide("coconut")
+	inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 end
 
 local function makeemptyfn(inst)
@@ -64,6 +69,7 @@ local function makeemptyfn(inst)
 	else
 		inst.AnimState:PushAnimation("sway2_loop", true)
 	end
+	
 	inst.AnimState:Hide("coconut")
 end
 
@@ -192,7 +198,7 @@ local function tree_fn()
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/wilson/pickup_reeds"
-    inst.components.pickable:SetUp("kyno_kokonut", TUNING.KYNO_KOKONUTTREE_GROWTIME, 2)
+    inst.components.pickable:SetUp("kyno_kokonut", TUNING.KYNO_KOKONUTTREE_GROWTIME, 1)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
     inst.components.pickable.makeemptyfn = makeemptyfn

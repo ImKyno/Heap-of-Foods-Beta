@@ -1,4 +1,4 @@
-require "prefabutil"
+require("prefabutil")
 local brewing = require("hof_brewing")
 
 local assets =
@@ -139,21 +139,25 @@ local function SetProductSymbol(inst, product, overridebuild)
 	product_image.AnimState:OverrideSymbol("bubble_image", resolvefilepath("images/inventoryimages/hof_inventoryimages.xml"), overridesymbol..".tex")
 end
 
-local function SpoilFn(inst)
-    if not inst:HasTag("burnt") then
-        -- inst.components.brewer.product = inst.components.brewer.spoiledproduct
-		inst.components.brewer.spoiltime = 1
-		inst.components.brewer.targettime = GetTime()
-		inst.components.brewer.product_spoilage = 0
-		
-		SetProductSymbol(inst, inst.components.brewer.product)
-    end
-end
-
 local function ShowProductImage(inst)
     if not inst:HasTag("burnt") then
         local product = inst.components.brewer.product
         SetProductSymbol(inst, product, IsModBrewingProduct(inst.prefab, product) and product or nil)
+    end
+end
+
+local function ShowSpoiledProductImage(inst)
+	if not inst:HasTag("burnt") then
+		local product = inst.components.brewer.spoiledproduct
+		SetProductSymbol(inst, product, IsModBrewingProduct(inst.prefab, product) and product or nil)
+	end
+end
+
+local function SpoilFn(inst)
+    if not inst:HasTag("burnt") then
+		inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_harvest")
+		
+		ShowSpoiledProductImage(inst)
     end
 end
 
@@ -162,16 +166,17 @@ local function DoneCookFn(inst)
         inst.AnimState:PlayAnimation("idle_empty")
         inst.AnimState:PushAnimation("idle_full", false)
 		
-        ShowProductImage(inst)
-		
         inst.SoundEmitter:KillSound("brew_loop")
         inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_harvest")
+		
+		ShowProductImage(inst)
     end
 end
 
 local function ContinueDoneFn(inst)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("idle_full", false)
+		
         ShowProductImage(inst)
     end
 end
@@ -184,7 +189,7 @@ local function ContinueCookFn(inst)
     end
 end
 
-local function HarvestFn(inst)
+local function HarvestFn(inst, harvester)
     if not inst:HasTag("burnt") then
         inst.AnimState:PlayAnimation("idle_empty")
         inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
@@ -270,7 +275,7 @@ local function kegfn()
 	inst.components.brewer.oncontinuedone = ContinueDoneFn
 	inst.components.brewer.ondonecooking = DoneCookFn
 	inst.components.brewer.onharvest = HarvestFn
-	inst.components.brewer.onspoil = SpoilFn
+	-- inst.components.brewer.onspoil = SpoilFn
 
 	inst:AddComponent("container")
 	inst.components.container:WidgetSetup("brewer")
@@ -343,7 +348,7 @@ local function preservejarfn()
 	inst.components.brewer.oncontinuedone = ContinueDoneFn
 	inst.components.brewer.ondonecooking = DoneCookFn
 	inst.components.brewer.onharvest = HarvestFn
-	inst.components.brewer.onspoil = SpoilFn
+	-- inst.components.brewer.onspoil = SpoilFn
 
 	inst:AddComponent("container")
 	inst.components.container:WidgetSetup("brewer")

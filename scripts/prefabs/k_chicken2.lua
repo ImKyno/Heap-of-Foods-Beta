@@ -1,4 +1,4 @@
-local brain = require "brains/chicken2brain"
+local brain = require("brains/chicken2brain")
 
 local assets =
 {

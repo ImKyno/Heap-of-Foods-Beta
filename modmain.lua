@@ -3,19 +3,23 @@ local _G 			= GLOBAL
 local require 		= _G.require
 
 require("hof_constants")
+require("hof_debugcommands")
 require("hof_brewing")
 
 -- Mod Languages. I need to make this one better if new translations are added...
 local HOF_LANGUAGE = GetModConfigData("HOF_LANGUAGE")
 modimport("hof_init/strings/"..HOF_LANGUAGE)
+modimport("hof_init/strings/hof_strings_loadingtips")
 
+--[[
 if HOF_LANGUAGE == "hof_strings_br" then
 	modimport("hof_init/strings/hof_strings_loadingtips_br")
 elseif HOF_LANGUAGE == "hof_strings_zht" then
 	modimport("hof_init/strings/hof_strings_loadingtips_zht")
 else
 	modimport("hof_init/strings/hof_strings_loadingtips")
-end 
+end
+]]--
 
 -- Mod Dependencies.
 local hof_init_misc =

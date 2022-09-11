@@ -1,12 +1,13 @@
-local Image = require "widgets/image"
-local ImageButton = require "widgets/imagebutton"
-local Widget = require "widgets/widget"
-local Text = require "widgets/text"
-local Grid = require "widgets/grid"
-local Spinner = require "widgets/spinner"
-local TEMPLATES = require "widgets/redux/templates"
-local Page = require "widgets/redux/brewbookpage"
+local Image = require("widgets/image")
+local ImageButton = require("widgets/imagebutton")
+local Widget = require("widgets/widget")
+local Text = require("widgets/text")
+local Grid = require("widgets/grid")
+local Spinner = require("widgets/spinner")
+local TEMPLATES = require("widgets/redux/templates")
+local Page = require("widgets/redux/brewbookpage")
 local brewing = require("hof_brewing")
+local cooking = require("cooking")
 
 require("util")
 
@@ -21,7 +22,7 @@ local BrewbookWidget = Class(Widget, function(self, parent)
     backdrop:ScaleToSize(900, 550)
 
 	if not TheCookbook:ApplyOnlineProfileData() then
-		local msg = (TheFrontEnd ~= nil and TheFrontEnd:GetIsOfflineMode() or not TheNet:IsOnlineMode()) and STRINGS.UI.COOKBOOK.ONLINE_DATA_USER_OFFLINE or STRINGS.UI.COOKBOOK.ONLINE_DATA_DOWNLOAD_FAILED
+		local msg = not TheInventory:HasSupportForOfflineSkins() and (TheFrontEnd ~= nil and TheFrontEnd:GetIsOfflineMode() or not TheNet:IsOnlineMode()) and STRINGS.UI.COOKBOOK.ONLINE_DATA_USER_OFFLINE or STRINGS.UI.COOKBOOK.ONLINE_DATA_DOWNLOAD_FAILED
 		self.sync_status = self.root:AddChild(Text(HEADERFONT, 18, msg, UICOLOURS.BROWN_DARK))
 		self.sync_status:SetPosition(0, -258)
 	end
@@ -32,6 +33,12 @@ local BrewbookWidget = Class(Widget, function(self, parent)
 		{text = STRINGS.UI.COOKBOOK.TAB_TITLE_KEG, build_panel_fn = function() return Page(parent, "keg") end},
 		{text = STRINGS.UI.COOKBOOK.TAB_TITLE_JAR, build_panel_fn = function() return Page(parent, "jar") end},
 	}
+	
+	--[[
+	if brewing.HasModBrewerFood() then
+		table.insert(button_data, {text = STRINGS.UI.COOKBOOK.TAB_TITLE_MOD_RECIPES, build_panel_fn = function() return Page(parent, "mod") end})
+	end
+	]]--
 
 	local function MakeTab(data, index)
 		local tab = ImageButton("images/quagmire_recipebook.xml", "quagmire_recipe_tab_inactive.tex", nil, nil, nil, "quagmire_recipe_tab_active.tex")

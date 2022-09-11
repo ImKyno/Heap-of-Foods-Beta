@@ -182,23 +182,24 @@ end
 
 -- Import The Foods.
 for k, v in pairs(require("hof_foodrecipes")) do
-	if not v.tags then
-		AddCookerRecipe("cookpot",             					v)
-		AddCookerRecipe("archive_cookpot",     					v)
-		AddCookerRecipe("kyno_cookware_syrup", 					v)
-		AddCookerRecipe("kyno_cookware_small", 					v)
-		AddCookerRecipe("kyno_cookware_big",   					v)
-		AddCookerRecipe("kyno_cookware_elder",          		v)
-		AddCookerRecipe("kyno_cookware_small_grill", 			v)
-		AddCookerRecipe("kyno_cookware_grill", 		 			v)
-		AddCookerRecipe("kyno_cookware_oven_small_casserole", 	v)
-		AddCookerRecipe("kyno_cookware_oven_casserole", 		v)
-	end
-	AddCookerRecipe("portablecookpot",         					v)
+	AddCookerRecipe("cookpot",             					v)
+	AddCookerRecipe("archive_cookpot",     					v)
+	AddCookerRecipe("kyno_cookware_syrup", 					v)
+	AddCookerRecipe("kyno_cookware_small", 					v)
+	AddCookerRecipe("kyno_cookware_big",   					v)
+	AddCookerRecipe("kyno_cookware_elder",          		v)
+	AddCookerRecipe("kyno_cookware_small_grill", 			v)
+	AddCookerRecipe("kyno_cookware_grill", 		 			v)
+	AddCookerRecipe("kyno_cookware_oven_small_casserole", 	v)
+	AddCookerRecipe("kyno_cookware_oven_casserole", 		v)
 end
 
+for k, v in pairs(require("hof_foodrecipes_warly")) do
+	AddCookerRecipe("portablecookpot",         				v)
+end 
+
 for k, v in pairs(require("hof_foodspicer")) do
-	AddCookerRecipe("portablespicer",          					v)
+	AddCookerRecipe("portablespicer",          				v)
 end
 
 -- Fix For Spiced Foods and Potlevel.
@@ -254,9 +255,7 @@ local kynofoods =
 	coffee 					= require("hof_foodrecipes").coffee,
 	bisque 					= require("hof_foodrecipes").bisque,
 	jellyopop 				= require("hof_foodrecipes").jellyopop,
-	musselbouillabaise 		= require("hof_foodrecipes").musselbouillabaise,
 	sharkfinsoup 			= require("hof_foodrecipes").sharkfinsoup,
-	sweetpotatosouffle 		= require("hof_foodrecipes").sweetpotatosouffle,
 	caviar 					= require("hof_foodrecipes").caviar,
 	tropicalbouillabaisse 	= require("hof_foodrecipes").tropicalbouillabaisse,
 	
@@ -276,7 +275,6 @@ local kynofoods =
 	gorge_vegetable_soup 	= require("hof_foodrecipes").gorge_vegetable_soup,
 	gorge_jelly_sandwich 	= require("hof_foodrecipes").gorge_jelly_sandwich,
 	gorge_fish_stew 		= require("hof_foodrecipes").gorge_fish_stew,
-	gorge_meat_stew			= require("hof_foodrecipes").gorge_meat_stew,
 	gorge_onion_cake 		= require("hof_foodrecipes").gorge_onion_cake,
 	gorge_potato_pancakes 	= require("hof_foodrecipes").gorge_potato_pancakes,
 	gorge_potato_soup 		= require("hof_foodrecipes").gorge_potato_soup,
@@ -316,23 +314,19 @@ local kynofoods =
 	gorge_grilled_cheese 	= require("hof_foodrecipes").gorge_grilled_cheese,
 	gorge_creammushroom 	= require("hof_foodrecipes").gorge_creammushroom,
 	gorge_manicotti 		= require("hof_foodrecipes").gorge_manicotti,
-	gorge_cheeseburger 		= require("hof_foodrecipes").gorge_cheeseburger,
 	gorge_fettuccine 		= require("hof_foodrecipes").gorge_fettuccine,
 	gorge_onion_soup 		= require("hof_foodrecipes").gorge_onion_soup,
 	gorge_breaded_cutlet 	= require("hof_foodrecipes").gorge_breaded_cutlet,
 	gorge_creamy_fish 		= require("hof_foodrecipes").gorge_creamy_fish,
-	gorge_pizza 			= require("hof_foodrecipes").gorge_pizza,
 	gorge_pot_roast 		= require("hof_foodrecipes").gorge_pot_roast,
 	gorge_crab_cake 		= require("hof_foodrecipes").gorge_crab_cake,
 	gorge_steak_frites 		= require("hof_foodrecipes").gorge_steak_frites,
 	gorge_shooter_sandwich 	= require("hof_foodrecipes").gorge_shooter_sandwich,
 	gorge_bacon_wrapped 	= require("hof_foodrecipes").gorge_bacon_wrapped,
 	gorge_crab_roll 		= require("hof_foodrecipes").gorge_crab_roll,
-	gorge_meat_wellington 	= require("hof_foodrecipes").gorge_meat_wellington,
 	gorge_crab_ravioli 		= require("hof_foodrecipes").gorge_crab_ravioli,
 	gorge_caramel_cube 		= require("hof_foodrecipes").gorge_caramel_cube,
 	gorge_scone 			= require("hof_foodrecipes").gorge_scone,
-	gorge_trifle 			= require("hof_foodrecipes").gorge_trifle,
 	gorge_cheesecake 		= require("hof_foodrecipes").gorge_cheesecake,
 	kyno_syrup 				= require("hof_foodrecipes").kyno_syrup,
 	
@@ -357,14 +351,9 @@ local kynofoods =
 	festive_tourtiere 		= require("hof_foodrecipes").festive_tourtiere,
 	
 	-- Unimplemented.
-	bubbletea 				= require("hof_foodrecipes").bubbletea,
-	frenchonionsoup 		= require("hof_foodrecipes").frenchonionsoup,
 	slaw 					= require("hof_foodrecipes").slaw,
 	lotusbowl 				= require("hof_foodrecipes").lotusbowl,
 	poi 					= require("hof_foodrecipes").poi,
-	jellybean_sanity 		= require("hof_foodrecipes").jellybean_sanity,
-	jellybean_hunger 		= require("hof_foodrecipes").jellybean_hunger,
-	jellybean_super 		= require("hof_foodrecipes").jellybean_super,
 	cucumbersalad 			= require("hof_foodrecipes").cucumbersalad,
 	waterycressbowl 		= require("hof_foodrecipes").waterycressbowl,
 	
@@ -387,6 +376,20 @@ local kynofoods =
 	milk_box				= require("hof_foodrecipes").milk_box,
 	watercup				= require("hof_foodrecipes").watercup,
 	crab_artichoke          = require("hof_foodrecipes").crab_artichoke,
+	
+	-- Warly Exclusives.
+	musselbouillabaise 		= require("hof_foodrecipes_warly").musselbouillabaise,
+	sweetpotatosouffle 		= require("hof_foodrecipes_warly").sweetpotatosouffle,
+	gorge_meat_stew			= require("hof_foodrecipes_warly").gorge_meat_stew,
+	gorge_cheeseburger 		= require("hof_foodrecipes_warly").gorge_cheeseburger,
+	gorge_pizza 			= require("hof_foodrecipes_warly").gorge_pizza,
+	gorge_meat_wellington 	= require("hof_foodrecipes_warly").gorge_meat_wellington,
+	gorge_trifle 			= require("hof_foodrecipes_warly").gorge_trifle,
+	bubbletea 				= require("hof_foodrecipes_warly").bubbletea,
+	frenchonionsoup 		= require("hof_foodrecipes_warly").frenchonionsoup,
+	jellybean_sanity 		= require("hof_foodrecipes_warly").jellybean_sanity,
+	jellybean_hunger 		= require("hof_foodrecipes_warly").jellybean_hunger,
+	jellybean_super 		= require("hof_foodrecipes_warly").jellybean_super,
 }
 
 for name, recipe in pairs(kynofoods) do

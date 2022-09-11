@@ -113,25 +113,23 @@ if FRIDA_COFFEE == 0 then
     end
 end
 
--- Lazy Fix for Glermz's special dish.
-AddPrefabPostInit("duckyouglermz", function(inst)
-    local FERTILIZER_DEFS = require("prefabs/fertilizer_nutrient_defs").FERTILIZER_DEFS
+local duckyouglermz_debuff = {
+	"duckyouglermz",
+    "duckyouglermz_spice_garlic",
+    "duckyouglermz_spice_sugar",
+    "duckyouglermz_spice_chili",
+    "duckyouglermz_spice_salt",
+}
 
+local function DuckYouGlermzPostinit(inst)
     inst.AnimState:SetScale(.95, .95, .95)
+	
+	inst:AddTag("preparedpoop")
+end
 
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst:AddTag("heal_fertilize")
-    inst:AddTag("slowfertilize")
-
-    inst:AddComponent("fertilizer")
-    inst.components.fertilizer.fertilizervalue = TUNING.SOILAMENDER_FERTILIZE_HIGH
-    inst.components.fertilizer.soil_cycles = TUNING.SOILAMENDER_SOILCYCLES_HIGH
-    inst.components.fertilizer.withered_cycles = TUNING.SOILAMENDER_WITHEREDCYCLES_HIGH
-    inst.components.fertilizer:SetNutrients(FERTILIZER_DEFS.soil_amender_fermented.nutrients)
-end)
+for k,v in pairs(duckyouglermz_debuff) do
+    AddPrefabPostInit(v, DuckYouGlermzPostinit)
+end
 
 -- Some items are a bit huge when dropped...
 local function ResizeThisItem(inst)
@@ -963,6 +961,7 @@ AddPrefabPostInit("mead", MeadPostinit)
 
 -- Honey and Honey-based foods do not spoil inside Honey Deposits.
 local honeyed_foods = {
+	"bandage",
 	"honey",
 	"royal_jelly",
     "honeynuggets",
@@ -974,6 +973,8 @@ local honeyed_foods = {
 	"leafymeatsouffle",
 	"voltgoatjelly",
 	"sweettea",
+	"pumpkincookie",
+	"leafymeatsouffle",
 	"coffee",
 	"gummy_cake",
 	"tea",
@@ -992,10 +993,18 @@ local honeyed_foods = {
 	"jellybean_super",
 	"fortunecookie",
 	"honeyjar",
+	"kyno_sap",
+	"kyno_syrup",
+	"kyno_sugarflywings",
+	"kyno_sugarfly",
+	"mead",
+	"kyno_saphealer",
 }
 
 local function HoneyFoodsPostinit(inst)
-	inst:AddTag("honeyed")
+	if not inst:HasTag("honeyed") then -- Just in case if they already have.
+		inst:AddTag("honeyed")
+	end
 end
 
 for k,v in pairs(honeyed_foods) do

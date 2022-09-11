@@ -33,7 +33,7 @@ local function OnRegen(inst)
 	
 	if inst.components.workable.workleft < #anims-1 then
 		inst.components.workable:SetWorkLeft(inst.components.workable.workleft+1)
-		startregen(inst)
+		StartRegen(inst)
 	else
 		inst.targettime = nil
 	end

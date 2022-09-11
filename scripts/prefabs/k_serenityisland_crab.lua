@@ -1,3 +1,5 @@
+local brain = require("brains/serenitycrabbrain")
+
 local assets =
 {
     Asset("ANIM", "anim/quagmire_pebble_crab.zip"),
@@ -121,8 +123,6 @@ local function fn()
 	inst.components.playerprox:SetOnPlayerNear(onnear)
 
 	inst:SetStateGraph("SGserenitycrab")
-	
-	local brain = require "brains/serenitycrabbrain"
 	inst:SetBrain(brain)
 	
 	inst:DoTaskInTime(0, SetHome)

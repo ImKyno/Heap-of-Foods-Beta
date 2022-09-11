@@ -10,8 +10,9 @@ local pinecone_prefabs =
 
 local function growtree(inst)
 	local tree = SpawnPrefab(inst.growprefab) 
-    if tree then 
+    if tree and tree.components.pickable ~= nil then 
 		tree.Transform:SetPosition(inst.Transform:GetWorldPosition()) 
+		tree.components.pickable:MakeEmpty()
         inst:Remove()
 	end
 end
@@ -30,7 +31,7 @@ end
 local function ontimerdone(inst, data)
     if data.name == "grow" then
         growtree(inst)
-	inst.SoundEmitter:PlaySound("dontstarve/forest/treeGrow")
+		inst.SoundEmitter:PlaySound("dontstarve/forest/treeGrow")
     end
 end
 

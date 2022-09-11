@@ -30,7 +30,6 @@ local function fn()
     inst.AnimState:SetBuild("kyno_brewbook")
     inst.AnimState:PlayAnimation("idle")
 
-	inst:AddTag("simplebook")
 	inst:AddTag("brewbook")
 
     inst.entity:SetPristine()

@@ -26,7 +26,7 @@ local customizations =
 	kyno_aspargos_cave						= {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", world = {"cave"}, group = "hof_cave"},
 }
 
-local map = require "map/forest_map"
+local map                                   = require("map/forest_map")
 local TRANSLATE_TO_PREFABS 					= map.TRANSLATE_TO_PREFABS
 local TRANSLATE_AND_OVERRIDE 				= map.TRANSLATE_AND_OVERRIDE
 

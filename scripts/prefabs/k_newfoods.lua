@@ -5,7 +5,7 @@ local assets =
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
-local prefabs = 
+local prefabs =
 {
 	"spoiled_food"
 }
@@ -34,7 +34,7 @@ local function MakePreparedFood(data)
 		inst.entity:AddNetwork()
 
 		MakeInventoryPhysics(inst)
-		
+
 		inst.AnimState:SetScale(1.1, 1.1, 1.1) -- For foods on ground.
 
 		if spicename ~= nil then
@@ -50,13 +50,13 @@ local function MakePreparedFood(data)
 			inst.AnimState:SetBank(data.name)
 			inst.AnimState:SetBuild(data.name)
 		end
-		
+
 		inst.AnimState:PlayAnimation("idle", false)
 		inst.AnimState:OverrideSymbol("swap_food", foodname, foodname)
 
 		inst:AddTag("preparedfood")
 		inst:AddTag("preparedfood_hof")
-		
+
 		if data.tags ~= nil then
 			for i,v in pairs(data.tags) do
 				inst:AddTag(v)
@@ -69,7 +69,7 @@ local function MakePreparedFood(data)
 				inst.displaynamefn = DisplayNameFn
 			end
 		end
-	
+
 		MakeInventoryFloatable(inst)
 
 		inst.entity:SetPristine()
@@ -130,6 +130,10 @@ end
 local prefs = {}
 
 for k, v in pairs(require("hof_foodrecipes")) do
+	table.insert(prefs, MakePreparedFood(v))
+end
+
+for k, v in pairs(require("hof_foodrecipes_warly")) do
 	table.insert(prefs, MakePreparedFood(v))
 end
 

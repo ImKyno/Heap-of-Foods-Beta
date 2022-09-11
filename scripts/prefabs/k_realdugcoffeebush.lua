@@ -1,5 +1,3 @@
-require "prefabutil"
-
 local function ondeploy(inst, pt, deployer)
 	local plant = SpawnPrefab("kyno_coffeebush")
 	if plant ~= nil then

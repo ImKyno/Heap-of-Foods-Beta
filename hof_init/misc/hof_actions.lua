@@ -313,7 +313,9 @@ ACTIONS.READBREWBOOK.priority = 1
 ACTIONS.READBREWBOOK.mount_valid = true
 
 AddComponentAction("INVENTORY", "brewbook", function(inst, doer, actions)
-	table.insert(actions, ACTIONS.READBREWBOOK)
+	if inst:HasTag("brewbook") then
+		table.insert(actions, ACTIONS.READBREWBOOK)
+	end
 end)
 
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)

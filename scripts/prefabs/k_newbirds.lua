@@ -1,4 +1,4 @@
-local brain = require "brains/birdbrain"
+local brain = require("brains/birdbrain")
 
 local function ShouldSleep(inst)
     return DefaultSleepTest(inst) and not inst.sg:HasStateTag("flight")

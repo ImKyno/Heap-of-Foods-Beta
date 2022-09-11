@@ -1,8 +1,8 @@
-require "behaviours/runaway"
-require "behaviours/wander"
-require "behaviours/doaction"
-require "behaviours/findflower"
-require "behaviours/panic"
+require("behaviours/runaway")
+require("behaviours/wander")
+require("behaviours/doaction")
+require("behaviours/findflower")
+require("behaviours/panic")
 
 local RUN_AWAY_DIST = 5
 local STOP_RUN_AWAY_DIST = 10

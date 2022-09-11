@@ -2,8 +2,6 @@
 PrefabFiles =
 {	
 	"hermitcrab", -- I'll be using this until I find a better and clean way to do the things.
-
-	"k_foodcommands",
 	
 	"k_coffeebuff",
 	"k_strengthbuff",

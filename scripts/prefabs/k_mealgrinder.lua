@@ -1,4 +1,4 @@
-require "prefabutil"
+require("prefabutil")
 
 local assets =
 {

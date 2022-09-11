@@ -10,6 +10,7 @@ local containers 			= require("containers")
 local params 				= {}
 
 require("hof_foodrecipes")
+require("hof_foodrecipes_warly")
 require("hof_foodrecipes_keg")
 require("hof_foodrecipes_jar")
 
@@ -98,7 +99,7 @@ params.brewer 				=
         }
     },
     acceptsstacks 			= false,
-    type 					= "cooker",
+    type 					= "brewer",
 }
 
 function params.brewer.itemtestfn(container, item, slot)
@@ -122,15 +123,15 @@ params.honeydeposit =
 {
     widget =
     {
-        slotpos = 
+        slotpos =
 		{
 			Vector3(-37.5, 74 + 4, 0),
             Vector3(37.5, 74 + 4, 0),
-			
+
             Vector3(-(64 + 12), 3, 0),
             Vector3(0, 3, 0),
             Vector3(64 + 12, 3, 0),
-			
+
 			Vector3(-37.5, -(70 + 4), 0),
             Vector3(37.5, -(70 + 4), 0),
 		},

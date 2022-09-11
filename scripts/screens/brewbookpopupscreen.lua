@@ -1,9 +1,9 @@
-local Screen = require "widgets/screen"
+local Screen = require("widgets/screen")
 local MapWidget = require("widgets/mapwidget")
-local Widget = require "widgets/widget"
-local ImageButton = require "widgets/imagebutton"
-local BrewbookWidget = require "widgets/redux/brewbookwidget"
-local TEMPLATES = require "widgets/redux/templates"
+local Widget = require("widgets/widget")
+local ImageButton = require("widgets/imagebutton")
+local BrewbookWidget = require("widgets/redux/brewbookwidget")
+local TEMPLATES = require("widgets/redux/templates")
 
 local BrewbookPopupScreen = Class(Screen, function(self, owner)
     self.owner = owner

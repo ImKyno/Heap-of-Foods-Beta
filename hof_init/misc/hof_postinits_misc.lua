@@ -6,6 +6,8 @@ local ACTIONS 			= _G.ACTIONS
 local STRINGS			= _G.STRINGS
 local SpawnPrefab		= _G.SpawnPrefab
 
+require("hof_debugcommands")
+
 -- Favorite Mod Foods.
 AddPrefabPostInit("wilson", function(inst)
     inst:AddTag("wislanhealer")
@@ -160,6 +162,8 @@ AddPrefabPostInit("wortox", function(inst)
 end)
 
 AddPrefabPostInit("wormwood", function(inst)
+	inst:AddTag("PREPAREDPOOP_eater")
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
@@ -170,7 +174,7 @@ AddPrefabPostInit("wormwood", function(inst)
     end
 
     if inst.components.eater ~= nil then
-        inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODTYPE.POOP, FOODGROUP.OMNI })
+        inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODGROUP.OMNI, FOODTYPE.PREPAREDPOOP })
     end
 end)
 
@@ -353,3 +357,28 @@ local function WurtSpeedPostinit(inst)
 end
 
 AddPrefabPostInit("wurt", WurtSpeedPostinit)
+
+-- Commands for testing.
+AddClassPostConstruct("screens/consolescreen", function(self)
+	if self.console_edit then
+		local hof_commands = 
+		{
+			"hofingredients", 
+			"hofswfoods",
+			"hofhamfoods",
+			"hofotherfoods",
+			"hoftestcoffee",
+			"hofcrockpots",
+			"hofwarlycrockpots",
+			"hoflayout",
+			"hofserenityisland",
+			"hofmeadowisland",
+			"hofkegs",
+			"hofjars",
+		}
+		local dictionary = self.console_edit.prediction_widget.word_predictor.dictionaries[3]
+		for k, word in pairs(hof_commands) do
+			table.insert(dictionary.words, word)
+		end
+	end
+end)
