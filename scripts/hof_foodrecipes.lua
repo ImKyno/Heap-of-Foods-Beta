@@ -1687,9 +1687,10 @@ local kyno_foods =
 	]]--
 	milk_box = 
 	{
-		test = function(cooker, names, tags) return (tags.frozen and tags.frozen == 2) and (names.goatmilk and names.goatmilk == 2 or 
-		(names.kyno_milk_beefalo and names.kyno_milk_beefalo == 2) or (names.kyno_milk_koalefant and names.kyno_milk_koalefant == 2) or  
-		(names.kyno_milk_deer and names.kyno_milk_deer == 2) or (names.kyno_milk_spat and names.kyno_milk_spat == 2)) end,
+		-- test = function(cooker, names, tags) return (tags.frozen and tags.frozen == 2) and (names.goatmilk and names.goatmilk == 2 or 
+		-- (names.kyno_milk_beefalo and names.kyno_milk_beefalo == 2) or (names.kyno_milk_koalefant and names.kyno_milk_koalefant == 2) or  
+		-- (names.kyno_milk_deer and names.kyno_milk_deer == 2) or (names.kyno_milk_spat and names.kyno_milk_spat == 2)) end,
+		test = function(cooker, names, tags) return (tags.frozen and tags.frozen == 2) and (names.goatmilk and names.goatmilk == 2) end,
 		priority = 1,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
@@ -1718,7 +1719,8 @@ local kyno_foods =
 	watercup =
 	{
 		test = function(cooker, names, tags) return (tags.frozen and tags.frozen >= 2) and not tags.inedible and not tags.meat and not tags.fish
-		and not names.goatmilk and not names.kyno_milk_beefalo and not names.kyno_milk_koalefant and not names.kyno_milk_deer and not names.kyno_milk_spat end,
+		and not tags.veggie and not tags.fruit and not names.goatmilk and not names.kyno_milk_beefalo and not names.kyno_milk_koalefant 
+		and not names.kyno_milk_deer and not names.kyno_milk_spat end,
 		priority = 1,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = 9000000,

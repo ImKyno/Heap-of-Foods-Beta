@@ -4,7 +4,7 @@ local official_foods = {}
 local brewerrecipes = {}
 local brewbook_recipes = {}
 
-local MOD_BREWBOOK_CATEGORY = "mod"
+local MOD_BREWBOOK_CATEGORY = {"keg", "jar"}
 
 global("AddBrewerRecipe")
 AddBrewerRecipe = function(brewer, recipe, is_mod_food)

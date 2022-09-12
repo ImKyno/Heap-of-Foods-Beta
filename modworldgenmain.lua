@@ -170,7 +170,7 @@ for i, layout in ipairs(hof_ocean_setpieces) do
 	{
 		start_mask 			     = _G.PLACE_MASK.IGNORE_IMPASSABLE,
 		fill_mask                = _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		add_topology             = {room_id = "StaticLayoutIsland:OceanSetpiece HoF", tags = {"RoadPoison", "not_mainland"}},
+		add_topology             = {room_id = "StaticLayoutIsland:OceanSetpiece HoF", tags = {"RoadPoison", "not_mainland", "wreckarea"}},
 		areas =
 		{
 		},

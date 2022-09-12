@@ -5,6 +5,24 @@
 
 local kyno_foods_keg =
 {
+	--[[
+	-- This recipe is just for testing the brewing mechanics. Remember to turn this off when switching the builds.
+	brewertest =
+	{
+		test = function(brewer, names, tags) return names.red_cap and names.blue_cap end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = 480,
+		health = -10,
+		hunger = 0,
+		sanity = 10,
+		cooktime = 0.5,
+		oneat_desc = "Testing brewing",
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+	},
+	]]--
+	
 	-- Keg Recipes.
 	juice_carrot =
 	{
@@ -473,7 +491,7 @@ local kyno_foods_keg =
 		tags = {"drinkable_food", "alcoholic_drink"},
 	},
 	
-	greentea = 
+	teagreen = 
 	{
 		test = function(brewer, names, tags) return names.green_cap and names.succulent_picked end,
 		priority = 30,
@@ -496,7 +514,7 @@ local kyno_foods_keg =
         end,
 	},
 	
-	redtea = 
+	teared = 
 	{
 		test = function(brewer, names, tags) return names.red_cap and names.foliage end,
 		priority = 30,
@@ -521,7 +539,7 @@ local kyno_foods_keg =
 	
 	mead =
 	{
-		test = function(brewer, names, tags) return (names.honey or (names.kyno_syrup and names.kyno_syrup == 2)) end,
+		test = function(brewer, names, tags) return ((names.honey or 0) + (names.kyno_syrup or 0) == 2) and not tags.veggie and not tags.fruit end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
@@ -546,22 +564,6 @@ local kyno_foods_keg =
 		cooktime = 1,
 		no_brewbook = true,
         floater = {"small", nil, nil},
-	},
-	
-	-- This recipe is just for testing the brewing mechanics. Remember to turn this off when switching the builds.
-	brewertest =
-	{
-		test = function(brewer, names, tags) return names.red_cap and names.blue_cap end,
-		priority = 30,
-		foodtype = FOODTYPE.GOODIES,
-		perishtime = 480,
-		health = -10,
-		hunger = 0,
-		sanity = 10,
-		cooktime = 0.5,
-		oneat_desc = "Testing brewing",
-		floater = {"med", nil, 0.65},
-		tags = {"drinkable_food", "alcoholic_drink"},
 	},
 }
 

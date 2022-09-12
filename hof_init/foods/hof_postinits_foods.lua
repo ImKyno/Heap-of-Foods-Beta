@@ -1010,3 +1010,10 @@ end
 for k,v in pairs(honeyed_foods) do
 	AddPrefabPostInit(v, HoneyFoodsPostinit)
 end
+
+-- Tweaks for Warly's foods.
+local WarlyFood = require("preparedfoods_warly")
+WarlyFood.monstertartare.health = 3
+WarlyFood.monstertartare.hunger = 37.5
+WarlyFood.monstertartare.sanity = 10
+WarlyFood.monstertartare.cooktime = 2

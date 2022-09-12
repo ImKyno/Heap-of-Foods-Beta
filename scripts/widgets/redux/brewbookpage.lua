@@ -226,7 +226,7 @@ function BrewbookPage:PopulateRecipeDetailPanel(data)
 
 	if not data.unlocked then
 		local msg = details_root:AddChild(Text(HEADERFONT, body_font_size, "", UICOLOURS.BROWN_DARK))
-		msg:SetMultilineTruncatedString(STRINGS.UI.COOKBOOK.LOCKED_RECIPE[self.category] or STRINGS.UI.COOKBOOK.LOCKED_RECIPE.COOKPOT, 20, 300)
+		msg:SetMultilineTruncatedString(STRINGS.UI.COOKBOOK.LOCKED_RECIPE[self.category] or STRINGS.UI.COOKBOOK.LOCKED_RECIPE.ARTISAN, 20, 300)
 		local _, msg_h = msg:GetRegionSize()
 		y = y - msg_h/2
 		msg:SetPosition(0, y)
@@ -288,7 +288,7 @@ function BrewbookPage:PopulateRecipeDetailPanel(data)
 			end
 		else
 			local msg = details_root:AddChild(Text(HEADERFONT, body_font_size, "", UICOLOURS.BROWN_DARK))
-			msg:SetMultilineTruncatedString(STRINGS.UI.COOKBOOK.LOCKED_STATS, 5, 180)
+			msg:SetMultilineTruncatedString(STRINGS.UI.COOKBOOK.LOCKED_STATS_ARTISAN, 5, 180)
 			local details_y = frame:GetPosition().y
 			msg:SetPosition(details_x, details_y)
 		end

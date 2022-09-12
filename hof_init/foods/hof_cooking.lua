@@ -184,6 +184,7 @@ end
 for k, v in pairs(require("hof_foodrecipes")) do
 	AddCookerRecipe("cookpot",             					v)
 	AddCookerRecipe("archive_cookpot",     					v)
+	AddCookerRecipe("portablecookpot",     					v)
 	AddCookerRecipe("kyno_cookware_syrup", 					v)
 	AddCookerRecipe("kyno_cookware_small", 					v)
 	AddCookerRecipe("kyno_cookware_big",   					v)
@@ -194,6 +195,7 @@ for k, v in pairs(require("hof_foodrecipes")) do
 	AddCookerRecipe("kyno_cookware_oven_casserole", 		v)
 end
 
+-- This file is only for Warly foods.
 for k, v in pairs(require("hof_foodrecipes_warly")) do
 	AddCookerRecipe("portablecookpot",         				v)
 end 

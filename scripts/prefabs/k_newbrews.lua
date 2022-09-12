@@ -35,6 +35,7 @@ local function MakePreparedBrew(data)
 
 		MakeInventoryPhysics(inst)
 
+		local food_symbol_build = nil
 		if spicename ~= nil then
 			inst.AnimState:SetBuild("plate_food")
 			inst.AnimState:SetBank("plate_food")
@@ -75,6 +76,9 @@ local function MakePreparedBrew(data)
 		if not TheWorld.ismastersim then
 			return inst
 		end
+		
+		inst.food_symbol_build = food_symbol_build or data.overridebuild
+		inst.food_basename = data.basename
 
 		inst:AddComponent("edible")
 		inst.components.edible.healthvalue = data.health

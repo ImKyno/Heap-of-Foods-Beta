@@ -82,6 +82,42 @@ local function ChopTreeShake(inst)
     ShakeAllCameras(CAMERASHAKE.FULL, .25, .03, .5, inst, 6)
 end
 
+local function CoconutChecker(inst)
+	local pt = Point(inst.Transform:GetWorldPosition())
+
+	if pt.y < 2 then
+		inst.fell = true
+		inst.Physics:SetMotorVel(0,0,0)
+    end
+
+	if pt.y <= 0.2 then
+		if inst.shadow then
+			inst.shadow:Remove()
+		end
+
+		local ents = TheSim:FindEntities(pt.x, 0, pt.z, 2, nil, {"smashable"})
+
+	    for k,v in pairs(ents) do
+	    	if v and v.components.combat and v ~= inst then
+	    		v.components.combat:GetAttacked(inst, 20, nil)
+	    	end
+	   	end
+
+	   	inst.Physics:SetDamping(0.9)	   	
+
+	    if inst.updatetask then
+			inst.updatetask:Cancel()
+			inst.updatetask = nil
+		end
+	end
+
+	if inst.last_y and pt.y > 2 and inst.last_y > 2 and (inst.last_y - pt.y  < 1) and inst:GetTimeAlive() > 1 and not inst.fell then
+		inst:Remove()
+	end
+	
+	inst.last_y = pt.y
+end
+
 local function tree_chopped(inst, chopper)
     if not (chopper ~= nil and chopper:HasTag("playerghost")) then
         inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
@@ -124,6 +160,20 @@ local function tree_chop(inst, chopper)
     if not (chopper ~= nil and chopper:HasTag("playerghost")) then
         inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
     end
+	
+	local fx = SpawnPrefab("pine_needles_chop")
+	local x, y, z= inst.Transform:GetWorldPosition()
+	fx.Transform:SetPosition(x, y + 2 + math.random() * 2, z)
+	
+	if math.random() <= TUNING.KYNO_KOKONUTTREE_KOKONUT_CHANCE then
+		local coconut = SpawnPrefab("kyno_kokonut")
+		local rad = chopper:GetPosition():Dist(inst:GetPosition())
+		local vec = (chopper:GetPosition() - inst:GetPosition()):Normalize()
+		local offset = Vector3(vec.x * rad, 4, vec.z * rad)
+
+		coconut.Transform:SetPosition((inst:GetPosition() + offset):Get())
+		coconut.updatetask = coconut:DoPeriodicTask(0.1, CoconutChecker, 0.05)
+	end
 end
 
 local function tree_startburn(inst)

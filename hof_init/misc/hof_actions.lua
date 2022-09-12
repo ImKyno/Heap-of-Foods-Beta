@@ -265,7 +265,7 @@ ACTIONS.BREWER.mount_valid = true
 
 local oldHARVESTfn = ACTIONS.HARVEST.fn
 function ACTIONS.HARVEST.fn(act, ...)
-    if act.target and act.target.components.brewer then
+    if act.target and act.target.components.brewer and act.target:HasTag("brewer") then
         return act.target.components.brewer:Harvest(act.doer)
     else
         return oldHARVESTfn(act, ...)

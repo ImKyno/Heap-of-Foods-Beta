@@ -289,9 +289,9 @@ local function kegfn()
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
-	inst.components.workable:SetWorkLeft(4)
 	inst.components.workable:SetOnFinishCallback(OnHammered)
 	inst.components.workable:SetOnWorkCallback(OnHit)
+	inst.components.workable:SetWorkLeft(4)
 
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
@@ -362,9 +362,9 @@ local function preservejarfn()
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
-	inst.components.workable:SetWorkLeft(4)
 	inst.components.workable:SetOnFinishCallback(OnHammered)
 	inst.components.workable:SetOnWorkCallback(OnHit)
+	inst.components.workable:SetWorkLeft(4)
 
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)

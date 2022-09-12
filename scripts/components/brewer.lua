@@ -290,11 +290,18 @@ function Brewer:Harvest(harvester)
         if self.product ~= nil then
             local loot = SpawnPrefab(self.product)
             if loot ~= nil then
-				if harvester ~= nil and self.chef_id == harvester.userid then
-					harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
-				end
-
 				local recipe = brewing.GetBrewing(self.inst.prefab, self.product)
+
+				if harvester ~= nil and
+					self.chef_id == harvester.userid and
+					recipe ~= nil and
+					recipe.brewbook_category ~= nil and
+					brewing.brewbook_recipes[recipe.brewbook_category] ~= nil and
+					brewing.brewbook_recipes[recipe.brewbook_category][self.product] ~= nil then
+					harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
+					-- print("#### RECIPE ADDED TO BREWBOOK ####")
+				end
+				
 				local stacksize = recipe and recipe.stacksize or 1
 				if stacksize > 1 then
 					loot.components.stackable:SetStackSize(stacksize)

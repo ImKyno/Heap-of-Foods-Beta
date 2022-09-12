@@ -37,6 +37,7 @@ local function MakePreparedFood(data)
 
 		inst.AnimState:SetScale(1.1, 1.1, 1.1) -- For foods on ground.
 
+		local food_symbol_build = nil
 		if spicename ~= nil then
 			inst.AnimState:SetBuild("plate_food")
 			inst.AnimState:SetBank("plate_food")
@@ -77,6 +78,9 @@ local function MakePreparedFood(data)
 		if not TheWorld.ismastersim then
 			return inst
 		end
+		
+		inst.food_symbol_build = food_symbol_build or data.overridebuild
+		inst.food_basename = data.basename
 
 		inst:AddComponent("edible")
 		inst.components.edible.healthvalue = data.health
@@ -140,15 +144,5 @@ end
 for k, v in pairs(require("hof_foodspicer")) do
 	table.insert(prefs, MakePreparedFood(v))
 end
-
---[[ For the optional recipes.
-for k, v in pairs(require("hof_foodrecipes_optional")) do
-	table.insert(prefs, MakePreparedFood(v))
-end
-
-for k, v in pairs(require("hof_foodspicer_optional")) do
-	table.insert(prefs, MakePreparedFood(v))
-end
-]]--
 
 return unpack(prefs)

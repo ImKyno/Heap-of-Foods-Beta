@@ -242,39 +242,25 @@ configuration_options =
 	
 	Title("World Options", "Options for the world."),
 	{
-		name = "HOF_SERENITYISLAND",
-		label = "Serenity Archipelago",
-		hover = "If your world is missing the Serenity Archipelago enable this option.\nThis option will be disabled once the retrofitting is finished!",
+		name = "HOF_RETROFIT",
+		label = "Retrofit Contents",
+		hover = "If your world is missing the Mod Contents enable this option.\nThis option will be set as \"Updated\" once the retrofitting is finished!",
 		options =
 		{
 			{
-				description = "No", 
-				hover = "Serenity Archipelago is already generated in your world!",
+				description = "Updated", 
+				hover = "Your world is already updated with the Mod Contents.",
 				data = 0
 			},
             {
-				description = "Yes", 
+				description = "Retrofit Serenity Archipelago", 
 				hover = "Serenity Archipelago will be generated during server initialization.",
 				data = 1
 			},
-        },
-        default = 0,
-	},
-	{
-		name = "HOF_MEADOWISLAND",
-		label = "Seaside Island",
-		hover = "If your world is missing the Seaside Island enable this option.\nThis option will be disabled once the retrofitting is finished!",
-		options =
-		{
 			{
-				description = "No", 
-				hover = "Seaside Island is already generated in your world!",
-				data = 0
-			},
-            {
-				description = "Yes", 
+				description = "Retrofit Seaside Island", 
 				hover = "Seaside Island will be generated during server initialization.",
-				data = 1
+				data = 2
 			},
         },
         default = 0,

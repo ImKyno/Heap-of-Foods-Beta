@@ -795,10 +795,10 @@ for k,v in pairs(slaughterable_animals) do
     end)
 end
 
+--[[
 -- Colour Cubes and Music for the Serenitea Archipelago.
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=2625422345
---[[
-local SERENITY_CC = GetModConfigData("serenity_cc")
+-- local SERENITY_CC = GetModConfigData("serenity_cc")
 if SERENITY_CC == 1 then
     local function MakeSerenityArea(inst)
         _G.TheWorld:PushEvent("overridecolourcube", resolvefilepath("images/colourcubesimages/quagmire_cc.tex"))
@@ -857,8 +857,6 @@ end
 
 -- Retrofitting Stuff for old worlds.
 require("hof_settings")
-local SERENITYISLAND = GetModConfigData("HOF_SERENITYISLAND")
-local MEADOWISLAND = GetModConfigData("HOF_MEADOWISLAND")
 
 local function RetrofitSerenityIsland()
     local node_indices = {}
@@ -923,26 +921,24 @@ local function RetrofitMeadowIsland()
 end
 
 AddComponentPostInit("retrofitforestmap_anr", function(self)
-    oldonpostinit = self.OnPostInit
+	OldOnPostinit = self.OnPostInit
 
     function self:OnPostInit(...)
-        if SERENITYISLAND == 1 then
-            local success = RetrofitSerenityIsland()
-            if success then
-                _G.ChangeFoodConfigs("HOF_SERENITYISLAND", 0)
-                self.requiresreset = true
-            end
-        end
-		
-		if MEADOWISLAND == 1 then
+		if GetModConfigData("HOF_RETROFIT") == 1 then
+			local success = RetrofitSerenityIsland()
+			if success then
+				_G.ChangeFoodConfigs("HOF_RETROFIT", 0)
+				self.requiresreset = true
+			end
+		elseif GetModConfigData("HOF_RETROFIT") == 2 then
 			local success = RetrofitMeadowIsland()
 			if success then
-				_G.ChangeFoodConfigs("HOF_MEADOWISLAND", 0)
-                self.requiresreset = true
+				_G.ChangeFoodConfigs("HOF_RETROFIT", 0)
+				self.requiresreset = true
 			end
-		end
+        end
 
-        return oldonpostinit(self, ...)
+        return OldOnPostinit(self, ...)
     end
 end)
 

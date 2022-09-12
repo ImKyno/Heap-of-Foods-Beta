@@ -74,7 +74,7 @@ AddPrefabPostInit("wickerbottom", function(inst)
 	
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("tea", TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("greentea", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("teagreen", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -96,7 +96,7 @@ AddPrefabPostInit("waxwell", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_crab_roll", TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("redtea", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("teared", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
