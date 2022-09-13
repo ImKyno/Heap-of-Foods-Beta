@@ -304,7 +304,7 @@ local states =
         tags = {"busy"},
         
         onenter = function(inst)
-            inst.SoundEmitter:PlaySound("dontstarve/rabbit/scream_short")
+            inst.SoundEmitter:PlaySound("hof_sounds/creatures/piko/attack")
             inst.AnimState:PlayAnimation("death")
             inst.Physics:Stop()
             RemovePhysicsColliders(inst)        
@@ -394,7 +394,7 @@ local states =
         tags = {"busy"},
         
         onenter = function(inst)
-            inst.SoundEmitter:PlaySound("dontstarve/rabbit/scream")
+            inst.SoundEmitter:PlaySound("hof_sounds/creatures/piko/attack")
             inst.AnimState:PlayAnimation("hit")
             inst.Physics:Stop()            
         end,

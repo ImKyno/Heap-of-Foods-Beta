@@ -26,8 +26,8 @@ local prefabs =
 
 local squirrel_sounds = 
 {
-	scream = "dontstarve/rabbit/scream",
-	hurt = "dontstarve/rabbit/scream_short",
+	scream = "hof_sounds/creatures/piko/steal",
+	hurt = "hof_sounds/creatures/piko/attack",
 }
 
 local function UpdateBuild(inst, cheeks)
@@ -58,7 +58,7 @@ local function OnDrop(inst)
 end
 
 local function OnCooked(inst)
-	inst.SoundEmitter:PlaySound("dontstarve/rabbit/scream_short")
+	inst.SoundEmitter:PlaySound("hof_sounds/creatures/piko/steal")
 end
 
 local function OnAttacked(inst, data)
@@ -91,6 +91,7 @@ local function OnWentHome(inst)
 end
 
 local function OnPickup(inst)
+	RefreshBuild(inst)
 	inst.UpdateBuild(inst, true)	
 end
 
@@ -110,12 +111,20 @@ local function KeepTarget(inst, target)
     return inst.components.combat:CanTarget(target)
 end
 
-local function OnBecomeOrange(inst, food)
+local function OnEat(inst, food)
 	if food ~= nil and food.components.edible ~= nil then
         if food:HasTag("honeyed") then
-			SpawnPrefab("sand_puff").Transform:SetPosition(inst.Transform:GetWorldPosition())
-			inst:AddTag("orange_piko")
-			UpdateBuild(inst)
+			if inst.components.inventoryitem:IsHeld() then
+				local owner = inst.components.inventoryitem:GetGrandOnwer()
+				owner.components.inventory:GiveItem("kyno_piko_orange")
+				inst:Remove()
+				-- print("EATING HONEYED FOOD")
+			else
+				SpawnPrefab("sand_puff").Transform:SetPosition(inst.Transform:GetWorldPosition())
+				SpawnPrefab("kyno_piko_orange").Transform:SetPosition(inst.Transform:GetWorldPosition())
+				inst:Remove()
+				-- print("EATING HONEYED FOOD")
+			end
 		end
 	end
 end
@@ -128,7 +137,7 @@ end
 
 local function OnLoad(inst, data)
 	if data ~= nil and data.orange then
-		OnBecomeOrange(inst)				          	
+		inst:AddTag("orange_piko")
 	end
 
 	if inst.spawntask then
@@ -194,8 +203,12 @@ local function fn()
 	inst:SetBrain(squirrelbrain)
 
 	inst:AddComponent("eater")
-	inst.components.eater:SetDiet({ FOODTYPE.OMNI }, { FOODTYPE.SEEDS })
-	inst.components.eater:SetOnEatFn(OnBecomeOrange)
+	inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODGROUP.OMNI })
+	inst.components.eater:SetCanEatHorrible()
+    inst.components.eater:SetCanEatRaw()
+	inst.components.eater:SetOnEatFn(OnEat)
+	inst.components.eater.strongstomach = true
+	inst.components.eater.foodprefs = {"SEEDS"}
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.nobounce = true
@@ -220,7 +233,7 @@ local function fn()
 
 	inst:AddComponent("health")
 	inst.components.health:SetMaxHealth(TUNING.KYNO_PIKO_HEALTH)
-	inst.components.health.murdersound = "dontstarve/rabbit/scream_short"
+	inst.components.health.murdersound = "hof_sounds/creatures/piko/attack"
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"smallmeat"})

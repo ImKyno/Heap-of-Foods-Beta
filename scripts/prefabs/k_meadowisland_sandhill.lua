@@ -39,7 +39,7 @@ local function OnRegen(inst)
 	end
 end
 
-local function StartRegen(inst, regentime)
+StartRegen = function(inst, regentime)
 	if inst.components.workable.workleft < #anims-1 then
 		regentime = regentime or (TUNING.KYNO_MEADOWISLAND_SAND_REGROW + math.random() * TUNING.KYNO_MEADOWISLAND_SAND_REGROW_VARIANCE)
 

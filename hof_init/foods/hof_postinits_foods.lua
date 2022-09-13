@@ -835,9 +835,9 @@ if ALCOHOLIC_DRINKS == 1 then
 	AddComponentPostInit("eater", function(self)
 		local oldPrefersToEat = self.PrefersToEat
 		function self:PrefersToEat(inst)
-			print("Heap of Foods: Changing PrefersToEat Eater component function")
+			-- print("Heap of Foods: Changing PrefersToEat Eater component function")
 			oldPrefersToEat(self, inst)
-			print("Heap of Foods: PrefersToEat changed")
+			-- print("Heap of Foods: PrefersToEat changed")
 			if inst.prefab == "winter_food4" and self.inst:HasTag("player") then
 				return false
 			elseif inst:HasTag("alcoholic_drink") and self.inst:HasTag("no_alcoholic_drinker") then
