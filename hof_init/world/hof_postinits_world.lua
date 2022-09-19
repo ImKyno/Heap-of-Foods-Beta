@@ -169,7 +169,8 @@ end
 -- It's Cursed. Players Have a Chance to Drop Long Pig. Except WX-78, Wurt, Wortox and Wormwood.
 local HUMANMEATY = GetModConfigData("HOF_HUMANMEAT")
 if HUMANMEATY == 1 then
-    local longpig_characters = {
+    local longpig_characters = 
+	{
         "wilson",
         "willow",
         "wolfgang",
@@ -188,7 +189,7 @@ if HUMANMEATY == 1 then
 
 	local function LongPigPostinit(inst)
 		local function OnDeathLongPig(inst)
-			if math.random() < 0.90 then
+			if math.random() < 0.50 then
 				SpawnPrefab("kyno_humanmeat").Transform:SetPosition(inst.Transform:GetWorldPosition())
 			end
 		end
@@ -775,7 +776,8 @@ AddPrefabPostInit("robin_winter", SerenityBirdPostinit)
 AddPrefabPostInit("puffin", SerenityBirdPostinit)
 
 -- Animals that can be killed with the Slaughter Tools.
-local slaughterable_animals = {
+local slaughterable_animals = 
+{
     "koalefant_winter",
     "koalefant_summer",
     "beefalo",
@@ -1035,7 +1037,8 @@ end
 AddPrefabPostInit("firepit", FirePitCookwarePostinit)
 
 -- Small fix for the natural spawning Mushroom Stump.
-local mushstumps = {
+local mushstumps = 
+{
     "kyno_mushstump_natural",
     "kyno_mushstump_cave",
 }
@@ -1109,40 +1112,33 @@ AddPrefabPostInit("kyno_watery_crate", function(inst)
 end)
 
 -- Animals that can be milked with the Bucket.
---[[
-local milkable_animals = {
-    "koalefant_winter",
-    "koalefant_summer",
-    "beefalo",
-    "deer",
-    "spat",
-}
-for k,v in pairs(milkable_animals) do
-    AddPrefabPostInit(v, function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
+AddPrefabPostInit("beefalo", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("milkable2")
+	inst.components.milkable2:SetUp("kyno_milk_beefalo")
+end)
 
-        inst:AddComponent("milkable2")
-        -- Beefalo.
-        if inst.prefab == "beefalo" then
-            inst.components.milkable2:SetUp("kyno_milk_beefalo")
-        end
-        -- Koalefants.
-        if inst.prefab == "koalefant_summer" or "koalefant_winter" then
-            inst.components.milkable2:SetUp("kyno_milk_koalefant")
-        end
-        -- No-Eyed Deer.
-        if inst.prefab == "deer" then
-            inst.components.milkable2:SetUp("kyno_milk_deer")
-        end
-        -- Ewecus.
-        if inst.prefab == "spat" then
-            inst.components.milkable2:SetUp("kyno_milk_spat")
-        end
-    end)
-end
-]]--
+AddPrefabPostInit("koalefant_summer", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("milkable2")
+	inst.components.milkable2:SetUp("kyno_milk_koalefant")
+end)
+
+AddPrefabPostInit("koalefant_winter", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("milkable2")
+	inst.components.milkable2:SetUp("kyno_milk_koalefant")
+end)
+
 -- Make Banana Bushes give our Bananas instead.
 AddPrefabPostInit("bananabush", function(inst)
     if not _G.TheWorld.ismastersim then
@@ -1155,7 +1151,8 @@ AddPrefabPostInit("bananabush", function(inst)
 end)
 
 -- Monkey Queen also accepts our Bananas!
-local new_bananas = {
+local new_bananas = 
+{
     "kyno_banana",
     "kyno_banana_cooked",
 }
@@ -1305,3 +1302,38 @@ AddPrefabPostInit("crow", MeadowBirdPostinit)
 AddPrefabPostInit("robin", MeadowBirdPostinit)
 AddPrefabPostInit("robin_winter", MeadowBirdPostinit)
 AddPrefabPostInit("puffin", MeadowBirdPostinit)
+
+-- Fix for when trying to milk a Frozen animal.
+local freezable_fix_animals = 
+{
+	"beefalo",
+	"koalefant_summer",
+	"koalefant_winter",
+}
+
+local function FreezablePostinit(inst)
+	local function OnFreeze(inst)
+		inst:AddTag("is_frozen")
+	end
+	
+	local function OnThaw(inst)
+		inst:AddTag("is_thawing")
+	end
+	
+	local function OnUnfreeze(inst)
+		inst:RemoveTag("is_frozen")
+		inst:RemoveTag("is_thawing")
+	end
+	
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:ListenForEvent("onthaw", OnThaw)
+	inst:ListenForEvent("freeze", OnFreeze)
+	inst:ListenForEvent("unfreeze", OnUnfreeze)
+end
+
+for k, v in pairs(freezable_fix_animals) do 
+	AddPrefabPostInit(v, FreezablePostinit)
+end

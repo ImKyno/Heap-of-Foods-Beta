@@ -151,10 +151,12 @@ ACTIONS.PULLMILK.mount_valid = true
 ACTIONS.PULLMILK.encumbered_valid = true
 
 AddComponentAction("USEITEM", "milker", function(inst, doer, target, actions)
-	if target and target:HasTag("milkable2") and not target:HasTag("sleeping") and inst:HasTag("bucket_empty") then
+	if target and target:HasTag("milkable2") and inst:HasTag("bucket_empty") and not inst:HasTag("sleeping") 
+	and not target:HasTag("is_frozen") and not target:HasTag("is_thawing") then
 		table.insert(actions, ACTIONS.PULLMILK)
-	elseif target and target:HasTag("milkable2") and target:HasTag("koalefant") or target:HasTag("spat") and inst:HasTag("bucket_empty") then
-		table.insert(actions, ACTIONS.PULLMILK) -- Koalefants and Ewecuses can be milked when they are sleeping.
+	elseif target and target:HasTag("milkable2") and target:HasTag("koalefant") and inst:HasTag("bucket_empty") 
+	and not target:HasTag("is_frozen") and not target:HasTag("is_thawing") then
+		table.insert(actions, ACTIONS.PULLMILK)
 	end
 end)
 
@@ -311,6 +313,7 @@ end)
 
 ACTIONS.READBREWBOOK.priority = 1
 ACTIONS.READBREWBOOK.mount_valid = true
+ACTIONS.READBREWBOOK.encumbered_valid = true
 
 AddComponentAction("INVENTORY", "brewbook", function(inst, doer, actions)
 	if inst:HasTag("brewbook") then
@@ -319,10 +322,10 @@ AddComponentAction("INVENTORY", "brewbook", function(inst, doer, actions)
 end)
 
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)
-	return "brewbook_open"
+	return (action.invobject ~= nil and action.invobject.components.brewbook ~= nil and "brewbook_open")
 end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)
-	return "brewbook_open"
+	return (action.invobject ~= nil and action.invobject:HasTag("brewbook")) and "brewbook_open"
 end))
 
 -- Action String overrides.
@@ -411,13 +414,3 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.UNWRAP, function(inst
 		return "dolongaction"
 	end
 end))
-
--- Fix for when opening the Brewbook.
---[[
-AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READ, function(inst, action)
-	return (action.invobject ~= nil and action.invobject.components.simplebook ~= nil) and "cookbook_open"
-	or (action.invobject ~= nil and action.invobject.components.brewbook ~= nil) and "brewbook_open"
-	or inst:HasTag("aspiring_bookworm") and "book_peruse"
-	or "book"
-end))
-]]--

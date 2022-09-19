@@ -50,8 +50,8 @@ local kyno_warly_foods =
 	
 	gorge_cheeseburger =
 	{
-		test = function(cooker, names, tags) return names.gorge_bread and tags.meat and (names.foliage or names.kyno_foliage_cooked)
-		and (tags.dairy or names.cheese_yellow or names.cheese_white or names.cheese_koalefant) and not names.kyno_bacon and not names.kyno_bacon_cooked end,
+		test = function(cooker, names, tags) return names.gorge_bread and tags.meat and tags.foliage and (tags.cheese or tags.dairy)
+		and not names.kyno_bacon and not names.kyno_bacon_cooked end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,
@@ -142,7 +142,7 @@ local kyno_warly_foods =
 	
 	frenchonionsoup = 
 	{
-		test = function(cooker, names, tags) return ((names.onion or 0) + (names.onion_cooked or 0) >= 2) and (tags.veggie and tags.veggie >= 3) and (names.foliage or names.kyno_foliage_cooked) end,
+		test = function(cooker, names, tags) return ((names.onion or 0) + (names.onion_cooked or 0) >= 2) and (tags.veggie and tags.veggie >= 3) and tags.foliage end,
 		priority = 5,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,

@@ -1,14 +1,12 @@
 local function SetupRegenTime(self)
 	if not TheWorld.state.isspring then
-		self.regentime = 2400
-		self.baseregentime = 2400
-		self.damage = 34
-		self.canbemilked = true
+		self.regentime     = TUNING.MILKABLE_SPRING_TIME
+		self.baseregentime = TUNING.MILKABLE_SPRING_TIME * 0.5
+		self.canbemilked   = true
 	else
-		self.regentime = 3840
-		self.baseregentime = 3840
-		self.damage = 68
-		self.canbemilked = true
+		self.regentime     = TUNING.MILKABLE_NORMAL_TIME
+		self.baseregentime = TUNING.MILKABLE_NORMAL_TIME * 0.5
+		self.canbemilked   = true
 	end	
 end
 
@@ -27,7 +25,7 @@ local Milkable2 = Class(function(self, inst)
 	self.baseregentime = nil
     self.product = nil
     self.numtoharvest = 1
-	self.damage = 34
+	self.damage = TUNING.MILKABLE_NORMAL_DAMAGE
 	self.caninteractwith = true
     self.targettime = nil
     self.task = nil
@@ -49,11 +47,11 @@ function Milkable2:SetUp(product, regen, number)
 	self.numtoharvest = number or 1
 
 	if not TheWorld.state.isspring then
-		self.regentime = 2400
-		self.baseregentime = 2400
+		self.regentime     = TUNING.MILKABLE_SPRING_TIME
+		self.baseregentime = TUNING.MILKABLE_SPRING_TIME * 0.5
 	else
-		self.regentime = 3840
-		self.baseregentime = 3840
+		self.regentime     = TUNING.MILKABLE_NORMAL_TIME
+		self.baseregentime = TUNING.MILKABLE_NORMAL_TIME * 0.5
 	end		
 end
 
@@ -123,28 +121,39 @@ function Milkable2:CanBeMilked()
 end
 
 function Milkable2:Milk(milker)
-
     if self.canbemilked and self.caninteractwith then
 		local kick_chance
-		if milker:HasTag("beefalo") then
+		
+		if self.inst:HasTag("domesticated") then
+			kick_chance = 0
+		elseif milker:HasTag("beefalo") then
 			kick_chance = 10
-		else 
+		else
 			kick_chance = 70
 		end
 		
-		if math.random(100) <= kick_chance and milker.components.combat and self.inst:HasTag("beefalo") or self.inst:HasTag("koalefant") then
-			if self.inst.sg:HasStateTag("frozen") then 
-				self.inst.sg:GoToState("frozen")
+		-- GoToState/Animations is really weird and makes them bugged when milking. I don't know how to fix this.
+		-- So for now, unless I figure out, just play some stupid sound and nothing more...
+		if math.random(100) <= kick_chance and milker.components.combat and not self.inst:HasTag("sleeping")
+		and not self.inst:HasTag("is_frozen") and not self.inst:HasTag("is_thawing") then
+			if self.inst:HasTag("koalefant") then
+				self.inst.SoundEmitter:PlaySound("dontstarve/creatures/koalefant/angry")
 			else 
-				milker.components.combat:GetAttacked(self.inst, self.damage)
-				self.inst.sg:GoToState("attack")
-				milker:PushEvent("kick")
+				self.inst.SoundEmitter:PlaySound("dontstarve/beefalo/angry")
+			end
+			milker.components.combat:GetAttacked(self.inst, self.damage)
+			milker:PushEvent("kick")
+		elseif self.inst:HasTag("domesticated") then
+			if self.inst:HasTag("koalefant") then 
+				self.inst.SoundEmitter:PlaySound("dontstarve/creatures/koalefant/grunt")
+			else
+				self.inst.SoundEmitter:PlaySound("dontstarve/beefalo/grunt")
 			end
 		else
-			if self.inst.sg:HasStateTag("frozen") then 
-				self.inst.sg:GoToState("frozen")
-			else 
-				self.inst.sg:GoToState("idle")
+			if self.inst:HasTag("koalefant") then 
+				self.inst.SoundEmitter:PlaySound("dontstarve/creatures/koalefant/grunt")
+			else
+				self.inst.SoundEmitter:PlaySound("dontstarve/beefalo/grunt")
 			end
 		end
 		
@@ -154,7 +163,9 @@ function Milkable2:Milk(milker)
 			if loot ~= nil then
 				milker:PushEvent("picksomething", { object = self.inst, loot = loot })
 				milker.components.inventory:GiveItem(loot, nil, self.inst:GetPosition())
-				if TheWorld.state.isspring then
+				
+				-- Extra loot if is Spring or is Domesticated!
+				if TheWorld.state.isspring or self.inst:HasTag("domesticated") then
 					local extraloot = SpawnPrefab(self.product)
 					milker.components.inventory:GiveItem(extraloot, nil, self.inst:GetPosition())
 				end
@@ -172,7 +183,7 @@ function Milkable2:Milk(milker)
         end
 
         self.inst:PushEvent("milked", { milker = milker, loot = loot, animal = self.inst })
-    end
+	end
 end
 
 return Milkable2

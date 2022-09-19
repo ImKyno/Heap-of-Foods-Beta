@@ -1,5 +1,5 @@
 name = "Heap of Foods"
-version = "4.6-A"
+version = "4.7-A"
 local myupdate = "Artisan Goods (Part I)"
 
 description = [[
@@ -14,7 +14,7 @@ This update brings two new structures that can be used to make a whole new categ
 The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jams, Pickles, Mayonnaises, Teas and more!
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
-󰀌 Mod Version: 4.6-A
+󰀌 Mod Version: 4.7-A
 󰀧 Update: Artisan Goods (Part I)
 ]]
 
@@ -355,25 +355,23 @@ configuration_options =
         },
         default = 0,
 	},
-	--[[
 	{
 		name = "HOF_FERTILIZERTWEAK",
-		label = "Bucket-o-Poop Recipe Tweak",
+		label = "Bucket-o-Poop Recipe",
 		hover = "Should Bucket-o-Poop use the Bucket instead of the default recipe?",
 		options =
 		{
 			{
-				description = "No", 
+				description = "Default", 
 				hover = "Bucket-o-Poop will not use the Bucket. (Default crafting recipe).",
 				data = 0
 			},
             {
-				description = "Yes", 
+				description = "Tweaked", 
 				hover = "Bucket-o-Poop will use the Bucket on its crafting recipe.",
 				data = 1
 			},
         },
         default = 0,
 	},
-	]]--
 }

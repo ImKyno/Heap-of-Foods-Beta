@@ -53,6 +53,6 @@ CookbookData.IsValidEntry = function(self, product)
         end
     end
 
-	print("#### Changed CookbookData:IsValidEntry to fix the Brewbook. ####")
+	-- print("#### Changed CookbookData:IsValidEntry to fix the Brewbook. ####")
     return ret
 end

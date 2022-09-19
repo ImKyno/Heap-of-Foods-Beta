@@ -669,7 +669,7 @@ local kyno_foods_jar =
 	
 	tartarsauce = 
 	{
-		test = function(brewer, names, tags) return names.mayonnaise and names.kyno_spotspice end,
+		test = function(brewer, names, tags) return tags.mayonnaise and names.kyno_spotspice and not names.mayonnaise_nightmare end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,

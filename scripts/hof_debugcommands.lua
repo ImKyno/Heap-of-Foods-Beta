@@ -1,7 +1,7 @@
-
 -- Gives all Mod Ingredients for the Mod recipes.
 function c_hofingredients()
     local player = ConsoleCommandPlayer()
+	
     if player ~= nil then
         c_select(player)
         player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
@@ -36,6 +36,7 @@ end
 -- Gives all the Shipwrecked foods.
 function c_hofswfoods()
 	local player = ConsoleCommandPlayer()
+	
     if player ~= nil then
         c_select(player)
 		c_give("coffee", 				40, true)
@@ -52,6 +53,7 @@ end
 -- Gives all the Hamlet foods.
 function c_hofhamfoods()
 	local player = ConsoleCommandPlayer()
+	
     if player ~= nil then
         c_select(player)
 		c_give("feijoada",				40, true)
@@ -68,6 +70,7 @@ end
 -- Gives all the Other-related foods.
 function c_hofotherfoods()
 	local player = ConsoleCommandPlayer()
+	
 	if player ~= nil then
 		c_select(player)
 		c_give("bubbletea",				40, true)
@@ -89,6 +92,7 @@ end
 -- Quick command for testing Coffee Bushes and Coffee.
 function c_hoftestcoffee()
 	local player = ConsoleCommandPlayer()
+	
     if player ~= nil then
         c_select(player)
 		c_give("shovel", 			   	   nil, true)
@@ -102,6 +106,7 @@ end
 -- Quick command for testing foods on Crock Pots.
 function c_hofcrockpots()
 	local player = ConsoleCommandPlayer()
+	
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
 	local sector = 2*math.pi/n
@@ -116,6 +121,7 @@ end
 -- Quick command for testing foods on Warly's Crock Pots.
 function c_hofwarlycrockpots()
 	local player = ConsoleCommandPlayer()
+	
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
 	local sector = 2*math.pi/n
@@ -130,6 +136,7 @@ end
 -- Testing Setpieces.
 function c_hoflayout(name, offset)
 	local player = ConsoleCommandPlayer()
+	
 	local obj_layout = require("map/object_layout")
     local entities = {}
     local map_width, map_height = TheWorld.Map:GetSize()
@@ -154,6 +161,7 @@ end
 -- Quick Test on Serenity Archipelago Stuff.
 function c_hofserenityisland()
     local player = ConsoleCommandPlayer()
+	
     if player ~= nil then
         c_select(player)
 		local islandshop = c_findnext("kyno_serenityisland_shop")
@@ -173,6 +181,7 @@ end
 
 function c_hofmeadowisland()
 	local player = ConsoleCommandPlayer()
+	
     if player ~= nil then
         c_select(player)
 		local islandpond = c_findnext("kyno_meadowisland_pond")
@@ -188,6 +197,7 @@ end
 -- Quick command for testing foods on Wooden Kegs and Preserves Jars.
 function c_hofkegs()
 	local player = ConsoleCommandPlayer()
+	
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
 	local sector = 2*math.pi/n
@@ -201,6 +211,7 @@ end
 
 function c_hofjars()
 	local player = ConsoleCommandPlayer()
+	
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
 	local sector = 2*math.pi/n
@@ -210,4 +221,71 @@ function c_hofjars()
 			crockpot.Transform:SetPosition(x + 5 * math.cos(i * sector), y, z + 5 * math.sin(i * sector))
 		end
 	end
+end
+
+-- Force spawn the static layouts.
+function c_hofretrofitserenityisland()
+	local player = ConsoleCommandPlayer()
+	
+	local node_indices = {}
+    for k, v in ipairs(TheWorld.topology.ids) do
+        if string.find(v, "Serenity Archipelago") then
+            table.insert(node_indices, k)
+        end
+    end
+    if #node_indices == 0 then
+        return false
+    end
+
+    local tags = {"serenityarea"}
+    for k, v in ipairs(node_indices) do
+        if TheWorld.topology.nodes[v].tags == nil then
+            TheWorld.topology.nodes[v].tags = {}
+        end
+        for i, tag in ipairs(tags) do
+            if not table.contains(TheWorld.topology.nodes[v].tags, tag) then
+                table.insert(TheWorld.topology.nodes[v].tags, tag)
+            end
+        end
+    end
+    for i, node in ipairs(TheWorld.topology.nodes) do
+        if table.contains(node.tags, "serenityarea") then
+            TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
+        end
+    end
+
+    return true
+end
+
+function c_hofretrofitmeadowisland()
+	local player = ConsoleCommandPlayer()
+	
+	local node_indices = {}
+    for k, v in ipairs(TheWorld.topology.ids) do
+        if string.find(v, "Seaside Island") then
+            table.insert(node_indices, k)
+        end
+    end
+    if #node_indices == 0 then
+        return false
+    end
+
+    local tags = {"meadowarea"}
+    for k, v in ipairs(node_indices) do
+        if TheWorld.topology.nodes[v].tags == nil then
+            TheWorld.topology.nodes[v].tags = {}
+        end
+        for i, tag in ipairs(tags) do
+            if not table.contains(TheWorld.topology.nodes[v].tags, tag) then
+                table.insert(TheWorld.topology.nodes[v].tags, tag)
+            end
+        end
+    end
+    for i, node in ipairs(TheWorld.topology.nodes) do
+        if table.contains(node.tags, "meadowarea") then
+            TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
+        end
+    end
+
+    return true
 end

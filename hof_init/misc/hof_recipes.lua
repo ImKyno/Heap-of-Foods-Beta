@@ -207,8 +207,7 @@ local KynFloat      		= AddRecipe2("kyno_floatilizer", {Ingredient("poop", 3), I
 )
 SortAfter("kyno_floatilizer", "fertilizer", "GARDENING")
 
---[[
-local KynBucket				= AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1), Ingredient("boards", 1)}, TECH.SCIENCE_ONE,
+local KynBucket				= AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1), Ingredient("boards", 1), Ingredient("rope", 1)}, TECH.SCIENCE_ONE,
 	{
 		atlas				= ModAtlas,
 		image				= "kyno_bucket_empty.tex",
@@ -216,7 +215,6 @@ local KynBucket				= AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1)
 	{"TOOLS"}
 )
 SortAfter("kyno_bucket_empty", "golden_farm_hoe", "TOOLS")
-]]--
 
 local KynBrewbook			= AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ingredient("kyno_wheat", 1, ModAtlas)}, TECH.SCIENCE_ONE,
 	{
@@ -612,7 +610,7 @@ end
 -- Replace the Bucket-o-Poop recipe with ours.
 local BUCKETPOOPTWEAK = GetModConfigData("HOF_FERTILIZERTWEAK")
 if BUCKETPOOPTWEAK == 1 then
-	local BucketPoot			= Recipe2("fertilizer",	{Ingredient("poop", 3), Ingredient("kyno_bucket_empty", 1, ModAtlas)}, TECH.SCIENCE_TWO,
+	local BucketPoop			= Recipe2("fertilizer",	{Ingredient("poop", 3), Ingredient("kyno_bucket_empty", 1, ModAtlas)}, TECH.SCIENCE_TWO,
 		{
 			atlas 				= DefaultAtlas,
 			image       		= "fertilizer.tex",

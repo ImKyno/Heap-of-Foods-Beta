@@ -493,7 +493,7 @@ local kyno_foods_keg =
 	
 	teagreen = 
 	{
-		test = function(brewer, names, tags) return names.green_cap and names.succulent_picked end,
+		test = function(brewer, names, tags) return names.kyno_piko_orange and names.green_cap end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
@@ -516,7 +516,7 @@ local kyno_foods_keg =
 	
 	teared = 
 	{
-		test = function(brewer, names, tags) return names.red_cap and names.foliage end,
+		test = function(brewer, names, tags) return names.kyno_piko and names.red_cap end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,

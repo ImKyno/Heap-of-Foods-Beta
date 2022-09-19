@@ -8,6 +8,33 @@ local SpawnPrefab		= _G.SpawnPrefab
 
 require("hof_debugcommands")
 
+-- Commands for testing.
+AddClassPostConstruct("screens/consolescreen", function(self)
+	if self.console_edit then
+		local hof_commands = 
+		{
+			"hofingredients", 
+			"hofswfoods",
+			"hofhamfoods",
+			"hofotherfoods",
+			"hoftestcoffee",
+			"hofcrockpots",
+			"hofwarlycrockpots",
+			"hoflayout",
+			"hofserenityisland",
+			"hofmeadowisland",
+			"hofkegs",
+			"hofjars",
+			"hofretrofitserenityisland",
+			"hofretrofitmeadowisland",
+		}
+		local dictionary = self.console_edit.prediction_widget.word_predictor.dictionaries[3]
+		for k, word in pairs(hof_commands) do
+			table.insert(dictionary.words, word)
+		end
+	end
+end)
+
 -- Favorite Mod Foods.
 AddPrefabPostInit("wilson", function(inst)
     inst:AddTag("wislanhealer")
@@ -357,28 +384,3 @@ local function WurtSpeedPostinit(inst)
 end
 
 AddPrefabPostInit("wurt", WurtSpeedPostinit)
-
--- Commands for testing.
-AddClassPostConstruct("screens/consolescreen", function(self)
-	if self.console_edit then
-		local hof_commands = 
-		{
-			"hofingredients", 
-			"hofswfoods",
-			"hofhamfoods",
-			"hofotherfoods",
-			"hoftestcoffee",
-			"hofcrockpots",
-			"hofwarlycrockpots",
-			"hoflayout",
-			"hofserenityisland",
-			"hofmeadowisland",
-			"hofkegs",
-			"hofjars",
-		}
-		local dictionary = self.console_edit.prediction_widget.word_predictor.dictionaries[3]
-		for k, word in pairs(hof_commands) do
-			table.insert(dictionary.words, word)
-		end
-	end
-end)
