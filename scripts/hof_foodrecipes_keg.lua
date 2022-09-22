@@ -252,16 +252,11 @@ local kyno_foods_keg =
 		prefabs = { "buff_sleepresistance" },
         oneatenfn = function(inst, eater)
             if eater.components.grogginess ~= nil and
-				(eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled()) and
-					not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-					not eater:HasTag("playerghost") then
-                if eater.components.grogginess ~= nil then
-                    eater.components.grogginess:ResetGrogginess()
-                end
-                if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() then
-                    eater.components.debuffable:AddDebuff("shroomsleepresist", "buff_sleepresistance")
-                end
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.grogginess:ResetGrogginess()
             end
+			eater:AddDebuff("shroomsleepresist", "buff_sleepresistance")
         end,
 	},
 	
@@ -474,6 +469,10 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ALCOHOL,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food", "alcoholic_drink"},
+		prefabs = { "kyno_strengthbuff" },
+		oneatenfn = function (inst, eater)
+			eater.components.debuffable:AddDebuff("kyno_strengthbuff", "kyno_strengthbuff")
+		end,
 	},
 	
 	paleale = 
@@ -489,6 +488,29 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ALCOHOL,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food", "alcoholic_drink"},
+		prefabs = { "kyno_strengthbuff_med" },
+		oneatenfn = function (inst, eater)
+			eater.components.debuffable:AddDebuff("kyno_strengthbuff_med", "kyno_strengthbuff_med")
+		end,
+	},
+	
+	mead =
+	{
+		test = function(brewer, names, tags) return ((names.honey or 0) + (names.kyno_syrup or 0) == 2) and not tags.veggie and not tags.fruit end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = -10,
+		hunger = 70,
+		sanity = 40,
+		cooktime = 72,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		prefabs = { "kyno_dmgreductionbuff" },
+		oneatenfn = function (inst, eater)
+			eater.components.debuffable:AddDebuff("kyno_dmgreductionbuff", "kyno_dmgreductionbuff")
+		end,
 	},
 	
 	teagreen = 
@@ -506,11 +528,7 @@ local kyno_foods_keg =
 		tags = {"drinkable_food"},
 		prefabs = { "kyno_sanityregenbuff" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("kyno_sanityregenbuff", "kyno_sanityregenbuff")
-            end
+            eater.components.debuffable:AddDebuff("kyno_sanityregenbuff", "kyno_sanityregenbuff")
         end,
 	},
 	
@@ -529,27 +547,8 @@ local kyno_foods_keg =
 		tags = {"drinkable_food"},
 		prefabs = { "healthregenbuff" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("healthregenbuff", "healthregenbuff")
-            end
+            eater.components.debuffable:AddDebuff("healthregenbuff", "healthregenbuff")
         end,
-	},
-	
-	mead =
-	{
-		test = function(brewer, names, tags) return ((names.honey or 0) + (names.kyno_syrup or 0) == 2) and not tags.veggie and not tags.fruit end,
-		priority = 30,
-		foodtype = FOODTYPE.GOODIES,
-		perishtime = TUNING.PERISH_SUPERSLOW,
-		health = -10,
-		hunger = 70,
-		sanity = 40,
-		cooktime = 72,
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION,
-		floater = {"med", nil, 0.65},
-		tags = {"drinkable_food", "alcoholic_drink"},
 	},
 	
 	-- This recipe is for when brewing a invalid product, we need this to prevent a crash.

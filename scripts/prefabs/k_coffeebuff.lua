@@ -2,10 +2,16 @@ local function OnAttached(inst, target)
     if target.coffeebuff_duration then
         inst.components.timer:StartTimer("kyno_coffeebuff_done", target.coffeebuff_duration)
     end
+	
     if not inst.components.timer:TimerExists("kyno_coffeebuff_done") then
         inst.components.debuff:Stop()
         return
     end
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
+	end
+	
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0)
     target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
@@ -16,6 +22,11 @@ end
 
 local function OnDetached(inst, target)
     target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_coffeebuff")
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
+	end
+	
     inst:Remove()
 end
 

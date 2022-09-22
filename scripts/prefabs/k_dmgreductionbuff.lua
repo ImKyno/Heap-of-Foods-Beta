@@ -1,12 +1,7 @@
 local function OnAttached(inst, target)
-    if target.dmgreductionbuff_duration then
-        inst.components.timer:StartTimer("kyno_dmgreductionbuff_done", target.dmgreductionbuff_duration)
-    end
-	
-    if not inst.components.timer:TimerExists("kyno_dmgreductionbuff_done") then
-        inst.components.debuff:Stop()
-        return
-    end
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_START"))
+	end
 	
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0)
@@ -23,17 +18,28 @@ end
 local function OnDetached(inst, target)
 	target:RemoveTag("groggy")
 	target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_dmgreductionbuff")
-	target.components.health.externalabsorbmodifiers:RemoveModifier(inst)
+	target.components.health.externalabsorbmodifiers:RemoveModifier(target)
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_END"))
+	end
 	
     inst:Remove()
 end
 
 local function OnExtended(inst, target)
-    local current_duration = inst.components.timer:GetTimeLeft("kyno_dmgreductionbuff_done")
-    local new_duration = math.max(current_duration, target.dmgreductionbuff_duration)
+    inst.components.timer:StopTimer("kyno_dmgreductionbuff")
+    inst.components.timer:StartTimer("kyno_dmgreductionbuff", TUNING.KYNO_ALCOHOL_DURATION_SMALL)
 	
-    inst.components.timer:StopTimer("kyno_dmgreductionbuff_done")
-    inst.components.timer:StartTimer("kyno_dmgreductionbuff_done", new_duration)
+	target:AddTag("groggy")
+	target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_dmgreductionbuff", TUNING.KYNO_DMGREDUCTIONBUFF_SPEED)
+	target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER)
+end
+
+local function OnTimerDone(inst, data)
+    if data.name == "kyno_dmgreductionbuff" then
+        inst.components.debuff:Stop()
+    end
 end
 
 local function fn()
@@ -56,11 +62,8 @@ local function fn()
     inst.components.debuff.keepondespawn = true
 
     inst:AddComponent("timer")
-    inst:ListenForEvent("timerdone", function(inst, data)
-        if data.name == "kyno_dmgreductionbuff_done" then
-            inst.components.debuff:Stop()
-        end
-    end)
+    inst.components.timer:StartTimer("kyno_dmgreductionbuff", TUNING.KYNO_ALCOHOL_DURATION_SMALL)
+    inst:ListenForEvent("timerdone", OnTimerDone)
 
     return inst
 end

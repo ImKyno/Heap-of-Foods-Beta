@@ -384,16 +384,11 @@ local kyno_foods_jar =
 		prefabs = { "buff_sleepresistance" },
         oneatenfn = function(inst, eater)
             if eater.components.grogginess ~= nil and
-				(eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled()) and
-					not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-					not eater:HasTag("playerghost") then
-                if eater.components.grogginess ~= nil then
-                    eater.components.grogginess:ResetGrogginess()
-                end
-                if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() then
-                    eater.components.debuffable:AddDebuff("shroomsleepresist", "buff_sleepresistance")
-                end
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.grogginess:ResetGrogginess()
             end
+			eater:AddDebuff("shroomsleepresist", "buff_sleepresistance")
         end,
 	},
 	
@@ -593,11 +588,7 @@ local kyno_foods_jar =
 		floater = {"med", nil, 0.65},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
-            end
+            eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
         end,
 	},
 	
@@ -615,11 +606,7 @@ local kyno_foods_jar =
 		floater = {"med", nil, 0.65},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
-            end
+            eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
         end,
 	},
 	
@@ -637,11 +624,7 @@ local kyno_foods_jar =
 		floater = {"med", nil, 0.65},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
-            end
+            eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
         end,
 	},
 	
@@ -659,11 +642,7 @@ local kyno_foods_jar =
 		floater = {"med", nil, 0.65},
 		prefabs = { "kyno_insanitybuff" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("kyno_insanitybuff", "kyno_insanitybuff")
-            end
+            eater.components.debuffable:AddDebuff("kyno_insanitybuff", "kyno_insanitybuff")
         end,
 	},
 	

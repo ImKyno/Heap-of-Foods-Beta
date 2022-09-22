@@ -3,15 +3,15 @@ PrefabFiles =
 {	
 	"hermitcrab", -- I'll be using this until I find a better and clean way to do the things.
 	
+	"k_hastebuff",
 	"k_coffeebuff",
 	"k_strengthbuff",
 	"k_dmgreductionbuff",
-	"k_hastebuff",
 	"k_hungerregenbuff",
 	"k_sanityregenbuff",
 	"k_superregenbuff",
 	"k_insanitybuff",
-	"k_waterbuff",
+	"k_frogbuff",
 	
 	"k_product_bubble",
 	"k_fertilizer_nutrient_defs",
@@ -108,4 +108,5 @@ PrefabFiles =
 	"k_meadowisland_mermhut",
 	"k_meadowisland_pond",
 	"k_meadowisland_sandhill",
+	"k_poison_froglegs",
 }

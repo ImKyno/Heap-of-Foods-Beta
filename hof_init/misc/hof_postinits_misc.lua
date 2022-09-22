@@ -214,6 +214,10 @@ AddPrefabPostInit("wurt", function(inst)
         inst.components.foodaffinity:AddPrefabAffinity("gorge_vegetable_soup", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("pickles_cucumber", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
+	
+	if inst.components.locomotor ~= nil then
+		inst.components.locomotor:SetFasterOnGroundTile(WORLD_TILES.HOF_TIDALMARSH, true)
+	end
 end)
 
 AddPrefabPostInit("walter", function(inst)
@@ -371,16 +375,3 @@ AddComponentPostInit("locomotor", function(inst)
         end
     end
 end)
-
--- Wurt is also faster while on Tidal Marsh ground.
-local function WurtSpeedPostinit(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	if inst.components.locomotor ~= nil then
-		inst.components.locomotor:SetFasterOnGroundTile(WORLD_TILES.HOF_TIDALMARSH, true)
-	end
-end
-
-AddPrefabPostInit("wurt", WurtSpeedPostinit)

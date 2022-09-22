@@ -127,16 +127,12 @@ local kyno_warly_foods =
         oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
         oneatenfn = function(inst, eater)
             if eater.components.grogginess ~= nil and
-				(eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled()) and
-					not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-					not eater:HasTag("playerghost") then
-                if eater.components.grogginess ~= nil then
-                    eater.components.grogginess:ResetGrogginess()
-                end
-                if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() then
-                    eater.components.debuffable:AddDebuff("shroomsleepresist", "buff_sleepresistance")
-                end
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.grogginess:ResetGrogginess()
             end
+
+			eater:AddDebuff("shroomsleepresist", "buff_sleepresistance")
         end,
 	},
 	
@@ -173,11 +169,7 @@ local kyno_warly_foods =
 		tags = {"masterfood"},
         prefabs = { "kyno_sanityregenbuff" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("kyno_sanityregenbuff", "kyno_sanityregenbuff")
-            end
+            eater.components.debuffable:AddDebuff("kyno_sanityregenbuff", "kyno_sanityregenbuff")
         end,
 	},
 	
@@ -198,11 +190,7 @@ local kyno_warly_foods =
 		tags = {"masterfood"},
         prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
-            end
+            eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
         end,
 	},
 	
@@ -224,11 +212,7 @@ local kyno_warly_foods =
 		tags = {"masterfood"},
         prefabs = { "kyno_superregenbuff" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("kyno_superregenbuff", "kyno_superregenbuff")
-            end
+            eater.components.debuffable:AddDebuff("kyno_superregenbuff", "kyno_superregenbuff")
         end,
 	},
 }

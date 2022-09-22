@@ -20,7 +20,7 @@ local kyno_foods =
 	
 	bisque =
 	{
-		test = function(cooker, names, tags) return names.kyno_limpets and names.kyno_limpets >= 3 and tags.frozen end,
+		test = function(cooker, names, tags) return (tags.limpets and tags.limpets >= 3) and tags.frozen end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
@@ -61,11 +61,21 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NAUGHTINESS,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		oneatenfn = function(inst, eater)
+			SpawnPrefab("krampuswarning_lvl3").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			local krampus = SpawnPrefab("krampus")
+			local pt = Vector3(inst.Transform:GetWorldPosition()) + Vector3(15,0,15)
+
+			krampus.Transform:SetPosition(pt:Get())
+			local angle = eater.Transform:GetRotation()*(3.14159/180)
+			local sp = (math.random()+1) * -1
+			krampus.Physics:SetVel(sp*math.cos(angle), math.random()*2+8, -sp*math.sin(angle))
+		end,
 	},
 	
 	caviar = 
 	{
-		test = function(cooker, names, tags) return (names.kyno_roe or names.kyno_roe_cooked) and tags.veggie and not tags.sweetener and not tags.dairy end,
+		test = function(cooker, names, tags) return tags.roe and tags.veggie and not tags.sweetener and not tags.dairy end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
@@ -98,7 +108,7 @@ local kyno_foods =
 	-- Hamlet Foods.
 	feijoada =
 	{
-		test = function(cooker, names, tags) return ((names.kyno_beanbugs or 0) + (names.kyno_beanbugs_cooked or 0) >= 3) and tags.meat end,
+		test = function(cooker, names, tags) return (tags.beanbug and tags.beanbug >= 3) and tags.meat end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,
@@ -112,7 +122,7 @@ local kyno_foods =
 	
 	gummy_cake =
 	{
-		test = function(cooker, names, tags) return (names.kyno_gummybug or names.kyno_gummybug_cooked) and tags.sweetener end,
+		test = function(cooker, names, tags) return tags.gummybug and tags.sweetener end,
 		priority = 1,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -266,7 +276,7 @@ local kyno_foods =
 	
 	gorge_jelly_sandwich = 
 	{
-		test = function(cooker, names, tags) return names.gorge_bread and (names.berries or names.berries_cooked or names.berries_juicy or names.berries_juicy_cooked) 
+		test = function(cooker, names, tags) return names.gorge_bread and tags.berries 
 		and not tags.inedible and not tags.veggie and not tags.meat and not tags.fish end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -495,7 +505,7 @@ local kyno_foods =
 	
 	gorge_jelly_roll = 
 	{
-		test = function(cooker, names, tags) return ((names.berries or 0) + (names.berries_cooked or 0) + (names.berries_juicy or 0) + (names.berries_juicy_cooked or 0) >= 3) and names.kyno_flour 
+		test = function(cooker, names, tags) return (tags.berries and tags.berries >= 3) and names.kyno_flour 
 		and not names.kyno_syrup and not tags.sweetener and not tags.dairy and not tags.meat end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -597,8 +607,8 @@ local kyno_foods =
 	
 	gorge_stuffedmushroom =
 	{
-		test = function(cooker, names, tags) return ((names.kyno_white_cap or 0) + (names.kyno_white_cap_cooked or 0) >= 2) and tags.veggie and tags.veggie >= 1.5 and not tags.foliage
-		and not names.succulent_picked and not tags.dairy end,
+		test = function(cooker, names, tags) return ((names.kyno_white_cap or 0) + (names.kyno_white_cap_cooked or 0) >= 2) 
+		and (tags.veggie and tags.veggie >= 1.5) and not tags.foliage and not names.succulent_picked and not tags.dairy end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -753,17 +763,13 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		prefabs = { "kyno_hastebuff" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("kyno_hastebuff", "kyno_hastebuff")
-            end
+            eater.components.debuffable:AddDebuff("kyno_hastebuff", "kyno_hastebuff")
         end,
 	},
 	
 	gorge_bread_pudding = 
 	{
-		test = function(cooker, names, tags) return (names.berries or names.berries_cooked or names.berries_juicy or names.berries_juicy_cooked) and (names.kyno_flour and names.kyno_flour >= 2)
+		test = function(cooker, names, tags) return tags.berries and (names.kyno_flour and names.kyno_flour >= 2)
 		and names.kyno_syrup end,
 		priority = 20,
 		foodtype = FOODTYPE.VEGGIE,
@@ -778,7 +784,7 @@ local kyno_foods =
 	
 	gorge_berry_tart =
 	{
-		test = function(cooker, names, tags) return ((names.berries or 0) + (names.berries_cooked or 0) + (names.berries_juicy or 0) + (names.berries_juicy_cooked or 0) >= 2) and names.kyno_flour
+		test = function(cooker, names, tags) return (tags.berries and tags.berries >= 2) and names.kyno_flour
 		and tags.sweetener and not names.kyno_syrup end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -1048,8 +1054,7 @@ local kyno_foods =
 	
 	gorge_cheesecake =
 	{
-		test = function(cooker, names, tags) return ((names.berries or 0) + (names.berries_cooked or 0) + (names.berries_juicy or 0) + (names.berries_juicy_cooked or 0) >= 2) and names.kyno_flour
-		and tags.dairy end,
+		test = function(cooker, names, tags) return (tags.berries and tags.berries >= 2) and names.kyno_flour and tags.dairy end,
 		priority = 20,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SUPERSLOW,
@@ -1079,8 +1084,7 @@ local kyno_foods =
 	-- Winter's Feast Foods.
 	festive_berrysauce =
 	{
-		test = function(cooker, names, tags) return ((names.berries or 0) + (names.berries_cooked or 0) + (names.berries_juicy or 0) 
-		+ (names.berries_juicy_cooked or 0) >= 2) and tags.sweetener == 2 end,
+		test = function(cooker, names, tags) return (tags.berries and tags.berries >= 2) and tags.sweetener == 2 end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
@@ -1398,11 +1402,7 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		prefabs = { "buff_moistureimmunity" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
-            end
+            eater.components.debuffable:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
        	end,
 	},
 	
@@ -1469,6 +1469,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLERMZ,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"preparedpoop"},
 		oneatenfn = function(inst, eater)
             if eater.components.bloomness ~= nil and eater:HasTag("plantkin")
 			and not (eater.components.health ~= nil and eater.components.health:IsDead()) and not eater:HasTag("playerghost") then
@@ -1558,11 +1559,7 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		prefabs = { "buff_moistureimmunity" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
-            end
+            eater.components.debuffable:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
        	end,
 	},
 	
@@ -1579,6 +1576,10 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		oneatenfn = function(inst, eater)
+			SpawnPrefab("deerclopswarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			TheWorld.components.deerclopsspawner:SummonMonster(eater)
+		end,
 	},
 	
 	soulstew = 
@@ -1594,6 +1595,14 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOUL,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
+		tags = {"soulstew"},
+		oneatenfn = function(inst, eater)
+			if eater:HasTag("soulstealer") then
+				eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH)
+				eater.components.hunger:DoDelta(TUNING.SOULSTEW_HUNGER)	
+				eater.components.sanity:DoDelta(TUNING.SOULSTEW_SANITY)
+			end
+		end,
 	},
 	
 	fortunecookie =
@@ -1609,6 +1618,29 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FORTUNE,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		oneatenfn = function(inst, eater)
+			if math.random() < 0.01 then
+				if math.random() < 0.50 then
+					eater.components.health:DoDelta(999)
+					eater.components.hunger:DoDelta(999)
+					eater.components.sanity:DoDelta(999)
+					if eater.components.talker and eater:HasTag("player") then
+						eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_GOOD)])
+					end
+				else
+					eater.components.health:SetPercent(.2)
+					eater.components.hunger:DoDelta(-999)
+					eater.components.sanity:DoDelta(-999)
+					if eater.components.talker and eater:HasTag("player") then
+						eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_BAD)])
+					end
+				end
+			else
+				if eater.components.talker and eater:HasTag("player") then
+					eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_QUOTES[math.random(#STRINGS.FORTUNE_COOKIE_QUOTES)])
+				end
+			end
+		end,
 	},
 	
 	hornocupia =
@@ -1636,8 +1668,8 @@ local kyno_foods =
 	
 	cheese_yellow = 
 	{
-		test = function(cooker, names, tags) return (names.goatmilk or (names.kyno_milk_beefalo and names.kyno_milk_beefalo >= 2))
-		and names.kyno_spotspice and not names.kyno_milk_koalefant and not names.kyno_milk_spat and not names.kyno_milk_deer and not tags.meat end,
+		test = function(cooker, names, tags) return (tags.milk and tags.milk == 2) and names.kyno_spotspice and not tags.meat 
+		and not (names.garlic or names.garlic_cooked) and not names.kyno_milk_koalefant end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -1651,8 +1683,8 @@ local kyno_foods =
 	
 	cheese_white = 
 	{
-		test = function(cooker, names, tags) return (names.kyno_milk_deer or (names.kyno_milk_spat and names.kyno_milk_spat >= 2))
-		and names.kyno_spotspice and not names.goatmilk and not names.kyno_milk_koalefant and not names.kyno_milk_beefalo and not tags.meat end,
+		test = function(cooker, names, tags) return (tags.milk and tags.milk == 2) and names.kyno_spotspice and (names.garlic or names.garlic_cooked)
+		and not tags.meat end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -1667,7 +1699,7 @@ local kyno_foods =
 	cheese_koalefant =
 	{
 		test = function(cooker, names, tags) return (names.kyno_milk_koalefant and names.kyno_milk_koalefant == 2) and names.kyno_spotspice
-		and not names.kyno_milk_deer and not names.kyno_milk_beefalo and not names.kyno_milk_spat and not names.goatmilk and not tags.meat end,
+		and not (names.garlic or names.garlic_cooked) and not names.kyno_milk_beefalo and not names.goatmilk and not tags.meat end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -1684,13 +1716,13 @@ local kyno_foods =
 		-- test = function(cooker, names, tags) return (tags.frozen and tags.frozen == 2) and (names.goatmilk and names.goatmilk == 2 or 
 		-- (names.kyno_milk_beefalo and names.kyno_milk_beefalo == 2) or (names.kyno_milk_koalefant and names.kyno_milk_koalefant == 2) or  
 		-- (names.kyno_milk_deer and names.kyno_milk_deer == 2) or (names.kyno_milk_spat and names.kyno_milk_spat == 2)) end,
-		test = function(cooker, names, tags) return (tags.frozen and tags.frozen >= 2) and (tags.milk and tags.milk >= 2) end,
+		test = function(cooker, names, tags) return (tags.frozen and tags.frozen >= 2) and (tags.milk and tags.milk >= 2) and not names.milk_box end,
 		priority = 1,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		health = 25,
 		hunger = 0,
-		sanity = 40,
+		sanity = 20,
 		cooktime = 1.1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
@@ -1731,11 +1763,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WATERBUFF,
 		prefabs = { "kyno_waterbuff" },
         oneatenfn = function(inst, eater)
-            if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-                not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-                not eater:HasTag("playerghost") then
-                eater.components.debuffable:AddDebuff("kyno_waterbuff", "kyno_waterbuff")
-            end
+            eater.components.debuffable:AddDebuff("kyno_waterbuff", "kyno_waterbuff")
         end,
 		]]--
 	},
@@ -1755,6 +1783,26 @@ local kyno_foods =
 		cooktime = 2.2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+	},
+	
+	poisonfrogglebunwich =
+	{
+		test = function(cooker, names, tags) return (names.kyno_poison_froglegs or names.kyno_poison_froglegs_cooked) and tags.veggie and tags.veggie >= 0.5 
+		and not (names.froglegs or names.froglegs_cooked) end,
+		priority = 1,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_SLOW,
+		health = -20,
+		hunger = 62.5,
+		sanity = 10,
+		cooktime = 2,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FROG,
+        potlevel = "med",
+        floater = {"med", nil, 0.55},
+		prefabs = { "kyno_frogbuff" },
+        oneatenfn = function(inst, eater)
+			eater.components.debuffable:AddDebuff("kyno_frogbuff", "kyno_frogbuff")
+       	end,
 	},
 }
 

@@ -13,6 +13,8 @@ local prefabs =
 	"spoiled_food",
 }
 
+local HOF_COFFEESPEED = GetModConfigData("HOF_COFFEESPEED", KnownModIndex:GetModActualName("Heap of Foods"))
+
 local function OnEatBeans(inst, eater)
     if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
         return
@@ -113,7 +115,9 @@ local function fn_cooked()
 	inst.components.edible.hungervalue = TUNING.KYNO_COFFEEBEANS_COOKED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_COFFEEBEANS_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
-	-- inst.components.edible:SetOnEatenFn(OnEatBeans)
+	if HOF_COFFEESPEED == 1 then
+		inst.components.edible:SetOnEatenFn(OnEatBeans)
+	end
 	
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)

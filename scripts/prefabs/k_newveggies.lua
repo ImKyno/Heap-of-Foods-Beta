@@ -188,6 +188,7 @@ local function MakeVeggie(name)
 
         inst.components.edible.healthvalue = TUNING.HEALING_TINY / 2
         inst.components.edible.hungervalue = TUNING.CALORIES_TINY
+		inst.components.edible.sanityvalue = 0
 
         inst:AddComponent("perishable")
         inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERSLOW)
@@ -249,8 +250,8 @@ local function MakeVeggie(name)
         end
 
         inst:AddComponent("edible")
-        inst.components.edible.healthvalue = KYNO_VEGGIES[name].health
-        inst.components.edible.hungervalue = KYNO_VEGGIES[name].hunger
+        inst.components.edible.healthvalue = KYNO_VEGGIES[name].health or 0
+        inst.components.edible.hungervalue = KYNO_VEGGIES[name].hunger or 0
         inst.components.edible.sanityvalue = KYNO_VEGGIES[name].sanity or 0
         inst.components.edible.foodtype = FOODTYPE.VEGGIE
         inst.components.edible.secondaryfoodtype = KYNO_VEGGIES[name].secondary_foodtype
@@ -312,8 +313,8 @@ local function MakeVeggie(name)
         inst.components.perishable.onperishreplacement = "spoiled_food"
 
         inst:AddComponent("edible")
-        inst.components.edible.healthvalue = KYNO_VEGGIES[name].cooked_health
-        inst.components.edible.hungervalue = KYNO_VEGGIES[name].cooked_hunger
+        inst.components.edible.healthvalue = KYNO_VEGGIES[name].cooked_health or 0
+        inst.components.edible.hungervalue = KYNO_VEGGIES[name].cooked_hunger or 0
         inst.components.edible.sanityvalue = KYNO_VEGGIES[name].cooked_sanity or 0
         inst.components.edible.foodtype = FOODTYPE.VEGGIE
         inst.components.edible.secondaryfoodtype = KYNO_VEGGIES[name].secondary_foodtype

@@ -6,206 +6,6 @@ local ACTIONS 			= _G.ACTIONS
 local STRINGS			= _G.STRINGS
 local SpawnPrefab		= _G.SpawnPrefab
 
--- Rockjaws Drops Shark Fin.
-AddPrefabPostInit("shark", function(inst)
-    if _G.TheWorld.ismastersim and not _G.KnownModIndex:IsModEnabled("workshop-2174681153") then
-        inst.components.lootdropper:AddChanceLoot("kyno_shark_fin", 1.00)
-    end
-end)
-
--- Cookie Cutters Drops Mussel.
-AddPrefabPostInit("cookiecutter", function(inst)
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:AddChanceLoot("kyno_mussel", 0.50)
-end)
-
--- Beefalos Drops Bean Bugs.
-AddPrefabPostInit("beefalo", function(inst)
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:AddChanceLoot("kyno_beanbugs", 1.00)
-    inst.components.lootdropper:AddChanceLoot("kyno_beanbugs", 0.50)
-end)
-
-AddPrefabPostInit("babybeefalo", function(inst)
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:AddChanceLoot("kyno_beanbugs", 0.10)
-end)
-
--- Catcoon Drops Gummy Slug
-AddPrefabPostInit("catcoon", function(inst)
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:AddChanceLoot("kyno_gummybug", 0.35)
-end)
-
--- Some Birds Spawns Roe Periodically.
-AddPrefabPostInit("puffin", function(inst)
-    if inst.components.periodicspawner ~= nil then
-        inst.components.periodicspawner:SetPrefab("kyno_roe")
-        inst.components.periodicspawner:SetDensityInRange(20, 2)
-        inst.components.periodicspawner:SetMinimumSpacing(8)
-    end
-end)
-
-AddPrefabPostInit("robin_winter", function(inst)
-    if inst.components.periodicspawner ~= nil then
-        inst.components.periodicspawner:SetPrefab("kyno_roe")
-        inst.components.periodicspawner:SetDensityInRange(20, 2)
-        inst.components.periodicspawner:SetMinimumSpacing(8)
-    end
-end)
-
-AddPrefabPostInit("canary", function(inst)
-    if inst.components.periodicspawner ~= nil then
-        inst.components.periodicspawner:SetPrefab("kyno_roe")
-        inst.components.periodicspawner:SetDensityInRange(20, 2)
-        inst.components.periodicspawner:SetMinimumSpacing(8)
-    end
-end)
-
--- If T.A.P is enabled, make sure Cormorant Spawns Roe too.
-if _G.KnownModIndex:IsModEnabled("workshop-2428854303") then
-    AddPrefabPostInit("cormorant", function(inst)
-        if inst.components.periodicspawner ~= nil then
-            inst.components.periodicspawner:SetPrefab("kyno_roe")
-            inst.components.periodicspawner:SetDensityInRange(20, 2)
-            inst.components.periodicspawner:SetMinimumSpacing(8)
-        end
-    end)
-end
-
--- Theorically Tea Cool Down and Turns into Iced Tea.
-AddPrefabPostInit("tea", function(inst)
-    if inst.components.perishable ~= nil then
-        inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
-        inst.components.perishable:StartPerishing()
-        inst.components.perishable.onperishreplacement = "icedtea"
-    end
-end)
-
--- Dragonfly Drops Coffee Plants.
-local DF_COFFEE = GetModConfigData("HOF_COFFEEDROPRATE")
-if DF_COFFEE == 1 then
-    AddPrefabPostInit("dragonfly", function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-    end)
-elseif DF_COFFEE == 2 then
-    AddPrefabPostInit("dragonfly", function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-    end)
-elseif DF_COFFEE == 3 then
-    AddPrefabPostInit("dragonfly", function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-    end)
-elseif DF_COFFEE == 4 then
-    AddPrefabPostInit("dragonfly", function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-    end)
-end
-
--- It's Cursed. Players Have a Chance to Drop Long Pig. Except WX-78, Wurt, Wortox and Wormwood.
-local HUMANMEATY = GetModConfigData("HOF_HUMANMEAT")
-if HUMANMEATY == 1 then
-    local longpig_characters = 
-	{
-        "wilson",
-        "willow",
-        "wolfgang",
-        "wendy",
-        "wickerbottom",
-        "woodie",
-        "waxwell",
-        "wes",
-        "webber",
-        "wathgrithr",
-        "winona",
-        "warly",
-        "walter",
-        "wanda",
-    }
-
-	local function LongPigPostinit(inst)
-		local function OnDeathLongPig(inst)
-			if math.random() < 0.50 then
-				SpawnPrefab("kyno_humanmeat").Transform:SetPosition(inst.Transform:GetWorldPosition())
-			end
-		end
-
-		if not _G.TheWorld.ismastersim then
-			return inst
-		end
-
-		inst:ListenForEvent("death", OnDeathLongPig)
-	end
-
-    for k,v in pairs(longpig_characters) do
-        AddPrefabPostInit(v, LongPigPostinit)
-    end
-end
-
 -- Pig King Trades Some Items.
 local function BushTrader(inst)
     if not _G.TheWorld.ismastersim then
@@ -498,110 +298,6 @@ AddPrefabPostInit("cave_banana",            BananaTrader)
 AddPrefabPostInit("turf_marsh",             TidalTrader)
 AddPrefabPostInit("turf_grass",             FieldsTrader)
 
--- Dragonfly Drops Coffee Plants.
-local DF_COFFEE = GetModConfigData("HOF_COFFEEDROPRATE")
-if DF_COFFEE == 1 then
-    AddPrefabPostInit("dragonfly", function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-    end)
-elseif DF_COFFEE == 2 then
-    AddPrefabPostInit("dragonfly", function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-    end)
-elseif DF_COFFEE == 3 then
-    AddPrefabPostInit("dragonfly", function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-    end)
-elseif DF_COFFEE == 4 then
-    AddPrefabPostInit("dragonfly", function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-    end)
-end
-
--- Splumonkeys and Splumonkey Pods drops Bananas.
---[[
-AddPrefabPostInit("monkey", function(inst)
-    _G.SetSharedLootTable('monkey',
-    {
-        {"smallmeat",     1.0},
-        {"cave_banana",   1.0},
-        {"beardhair",     1.0},
-        {"nightmarefuel", 0.5},
-        -- 50% when in Nightmare.
-        {"kyno_banana",   0.5},
-    })
-
-    local MONKEYLOOT = {"smallmeat", "cave_banana"}
-
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:SetLoot(MONKEYLOOT)
-    inst.components.lootdropper:AddChanceLoot("kyno_banana", 0.20)
-end)
-
-AddPrefabPostInit("monkeybarrel", function(inst)
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:AddChanceLoot("kyno_banana", 1.00)
-end)
-]]--
-
 -- Nuts drops from Twiggy Trees.
 AddPrefabPostInit("twiggytree", function(inst)
     if inst.components.workable ~= nil then
@@ -736,66 +432,6 @@ local function StridentTridentPostinit(inst)
 end
 
 AddPrefabPostInit("trident", StridentTridentPostinit)
-
--- Birds transforms into Pigeons when landing on Serenity Archipelago.
-local function SerenityBirdPostinit(inst)
-	inst:DoTaskInTime(1/30, function(inst)
-
-    local TileAtPosition = _G.TheWorld.Map:GetTileAtPoint(inst:GetPosition():Get())
-        if TileAtPosition == WORLD_TILES.QUAGMIRE_PARKFIELD or TileAtPosition == WORLD_TILES.QUAGMIRE_CITYSTONE then
-
-            inst.AnimState:SetBuild("quagmire_pigeon_build")
-
-            inst:SetPrefabName("quagmire_pigeon")
-            inst.nameoverride = "quagmire_pigeon"
-            inst.trappedbuild = "quagmire_pigeon_build"
-			inst.sounds =
-			{
-				takeoff = "dontstarve/birds/takeoff_quagmire_pigeon",
-				chirp = "dontstarve/birds/chirp_quagmire_pigeon",
-				flyin = "dontstarve/birds/flyin",
-			}
-
-            if not _G.TheWorld.ismastersim then
-                return inst
-            end
-
-            inst.components.inventoryitem.onpickupfn = function(inst, doer)
-                inst:Remove()
-                local bird = SpawnPrefab("quagmire_pigeon")
-                doer.components.inventory:GiveItem(bird)
-                return true
-            end
-        end
-    end)
-end
-
-AddPrefabPostInit("crow", SerenityBirdPostinit)
-AddPrefabPostInit("robin", SerenityBirdPostinit)
-AddPrefabPostInit("robin_winter", SerenityBirdPostinit)
-AddPrefabPostInit("puffin", SerenityBirdPostinit)
-
--- Animals that can be killed with the Slaughter Tools.
-local slaughterable_animals = 
-{
-    "koalefant_winter",
-    "koalefant_summer",
-    "beefalo",
-    "spat",
-    "lightninggoat",
-}
-
-for k,v in pairs(slaughterable_animals) do
-    AddPrefabPostInit(v, function(inst)
-        inst:RemoveTag("slaughterable")
-
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst:AddTag("slaughterable")
-    end)
-end
 
 --[[
 -- Colour Cubes and Music for the Serenitea Archipelago.
@@ -1049,94 +685,9 @@ for k,v in pairs(mushstumps) do
     end)
 end
 
--- Crab King and its claws Drops Crab Meat instead of Meat.
--- Update this if Klei updates their counterparts!
-AddPrefabPostInit("crabking", function(inst)
-    _G.SetSharedLootTable("hof_crabking",
-    {
-        {"chesspiece_crabking_sketch",  1.00},
-        {"trident_blueprint",           1.00},
-        {"kyno_crabmeat",               1.00},
-        {"kyno_crabmeat",               1.00},
-        {"kyno_crabmeat",               1.00},
-        {"kyno_crabmeat",               1.00},
-        {"kyno_crabmeat",               1.00},
-        {"kyno_crabmeat",               1.00},
-        {"kyno_crabmeat",               1.00},
-        {"singingshell_octave5",        1.00},
-        {"singingshell_octave5",        1.00},
-        {"singingshell_octave5",        1.00},
-        {"singingshell_octave5",        1.00},
-        {"singingshell_octave5",        0.50},
-        {"singingshell_octave5",        0.25},
-        {"singingshell_octave4",        1.00},
-        {"singingshell_octave4",        1.00},
-        {"singingshell_octave4",        1.00},
-        {"singingshell_octave4",        0.50},
-        {"singingshell_octave4",        0.25},
-        {"singingshell_octave3",        1.00},
-        {"singingshell_octave3",        1.00},
-        {"singingshell_octave3",        0.50},
-        {"barnacle",                    1.00},
-        {"barnacle",                    1.00},
-        {"barnacle",                    1.00},
-        {"barnacle",                    0.25},
-        {"barnacle",                    0.25},
-        {"barnacle",                    0.25},
-        {"barnacle",                    0.25},
-    })
-
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:SetChanceLootTable("hof_crabking")
-end)
-
-AddPrefabPostInit("crabking_claw", function(inst)
-    _G.SetSharedLootTable("hof_crabking_claw",
-    {
-        {"kyno_crabmeat",               1.00},
-    })
-
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:SetChanceLootTable("hof_crabking_claw")
-end)
-
 -- Small fix for the Watery Crate and Freshwater Fishing Rod.
 AddPrefabPostInit("kyno_watery_crate", function(inst)
     inst:AddTag("not_serenity_crate")
-end)
-
--- Animals that can be milked with the Bucket.
-AddPrefabPostInit("beefalo", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("milkable2")
-	inst.components.milkable2:SetUp("kyno_milk_beefalo")
-end)
-
-AddPrefabPostInit("koalefant_summer", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("milkable2")
-	inst.components.milkable2:SetUp("kyno_milk_koalefant")
-end)
-
-AddPrefabPostInit("koalefant_winter", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("milkable2")
-	inst.components.milkable2:SetUp("kyno_milk_koalefant")
 end)
 
 -- Make Banana Bushes give our Bananas instead.
@@ -1172,42 +723,6 @@ AddPrefabPostInit("forest", function(inst)
 	inst:AddComponent("sugarflyspawner")
 end)
 
--- Bee Queen drops the blueprint for the Honey Deposit.
-AddPrefabPostInit("beequeen", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst.components.lootdropper:AddChanceLoot("kyno_antchest_blueprint", 1.00)
-end)
-
--- Grumble Bees, Killer Bees and Bees drops Nectar. Bees only during the Spring.
-AddPrefabPostInit("beeguard", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 0.20)
-end)
-
-AddPrefabPostInit("killerbee", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 1.00)
-end)
-
-AddPrefabPostInit("bee", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	if TheWorld.state.isspring then
-		inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 0.50)
-	end
-end)
-
 -- Purple Grouper can be caught on Swamp ponds.
 AddPrefabPostInit("pond_mos", function(inst)
 	if not _G.TheWorld.ismastersim then
@@ -1233,107 +748,99 @@ end
 AddPrefabPostInit("turf_road",      TurfTrader)
 AddPrefabPostInit("turf_deciduous", TurfTrader)
 
--- Kingfisher drops Tropical Kois periodically.
-AddPrefabPostInit("kingfisher", function(inst)
-	if inst.components.periodicspawner ~= nil then
-		inst.components.periodicspawner:SetPrefab("kyno_koi")
-		inst.components.periodicspawner:SetDensityInRange(20, 2)
-		inst.components.periodicspawner:SetMinimumSpacing(15)
-	end
-end)
-
--- Birds transforms into Kingfisher and Toucans when landing on Termagant Island.
-local function MeadowBirdPostinit(inst)
-	inst:DoTaskInTime(1/30, function(inst)
-
-    local TileAtPosition = _G.TheWorld.Map:GetTileAtPoint(inst:GetPosition():Get())
-        if TileAtPosition == WORLD_TILES.MONKEY_GROUND or TileAtPosition == WORLD_TILES.HOF_TIDALMARSH then
-
-            inst.AnimState:SetBuild("toucan_build")
-
-            inst:SetPrefabName("toucan")
-            inst.nameoverride = "toucan"
-            inst.trappedbuild = "toucan_build"
-			inst.sounds =
-			{
-				takeoff = "hof_sounds/creatures/toucan/take_off",
-				chirp = "hof_sounds/creatures/toucan/chirp",
-				flyin = "dontstarve/birds/flyin",
-			}
-		
-            if not _G.TheWorld.ismastersim then
-                return inst
-            end
-
-            inst.components.inventoryitem.onpickupfn = function(inst, doer)
-                inst:Remove()
-                local bird = SpawnPrefab("toucan")
-                doer.components.inventory:GiveItem(bird)
-                return true
-            end
-        elseif TileAtPosition == WORLD_TILES.HOF_FIELDS then
-			inst.AnimState:SetBuild("kingfisher_build")
-
-            inst:SetPrefabName("kingfisher")
-            inst.nameoverride = "kingfisher"
-            inst.trappedbuild = "kingfisher_build"
-			inst.sounds =
-			{
-				takeoff = "hof_sounds/creatures/kingfisher/take_off",
-				chirp = "hof_sounds/creatures/kingfisher/chirp",
-				flyin = "dontstarve/birds/flyin",
-			}
-		
-            if not _G.TheWorld.ismastersim then
-                return inst
-            end
-
-            inst.components.inventoryitem.onpickupfn = function(inst, doer)
-                inst:Remove()
-                local bird = SpawnPrefab("kingfisher")
-                doer.components.inventory:GiveItem(bird)
-                return true
-            end
+-- Setup the container for the Potato Sack.
+local function PotatoSackPostinit(inst)
+	local function OnHammered(inst, worker)
+		if inst:HasTag("fire") and inst.components.burnable then
+			inst.components.burnable:Extinguish()
 		end
-    end)
-end
+		
+		inst.components.lootdropper:DropLoot()
+		
+		if inst.components.container then 
+			inst.components.container:DropEverything() 
+		end
+		
+		SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
+		inst.SoundEmitter:PlaySound("dontstarve/common/destroy_straw")
+		inst:Remove()
+	end
 
-AddPrefabPostInit("crow", MeadowBirdPostinit)
-AddPrefabPostInit("robin", MeadowBirdPostinit)
-AddPrefabPostInit("robin_winter", MeadowBirdPostinit)
-AddPrefabPostInit("puffin", MeadowBirdPostinit)
+	local function OnOpen(inst) 
+		if not inst:HasTag("burnt") then
+			inst.SoundEmitter:PlaySound("dontstarve/wilson/use_bedroll")
+		end
+	end
 
--- Fix for when trying to milk a Frozen animal.
-local freezable_fix_animals = 
-{
-	"beefalo",
-	"koalefant_summer",
-	"koalefant_winter",
-}
-
-local function FreezablePostinit(inst)
-	local function OnFreeze(inst)
-		inst:AddTag("is_frozen")
+	local function OnClose(inst, doer)
+		if not inst:HasTag("burnt") then
+			inst.SoundEmitter:PlaySound("dontstarve/wilson/use_bedroll")
+		end
 	end
 	
-	local function OnThaw(inst)
-		inst:AddTag("is_thawing")
+	local function OnHit(inst, worker)
+		if not inst:HasTag("burnt") then
+			inst.AnimState:PlayAnimation("hit")
+			inst.AnimState:PushAnimation("idle_full")
+		
+			if inst.components.container then 
+				inst.components.container:DropEverything() 
+				inst.components.container:Close()
+			end
+		end
 	end
 	
-	local function OnUnfreeze(inst)
-		inst:RemoveTag("is_frozen")
-		inst:RemoveTag("is_thawing")
+	local function OnPickup(inst)
+		if inst.components.container ~= nil and inst.components.container:IsOpen() then
+			inst.components.container:Close()
+		end
 	end
 	
 	if not _G.TheWorld.ismastersim then
-		return inst
+		inst.OnEntityReplicated = function(inst) inst.replica.container:WidgetSetup("potatosack") end
+        return inst
+    end
+	
+	if inst.components.workable ~= nil then
+		inst.components.workable:SetOnFinishCallback(OnHammered)
+		inst.components.workable:SetOnWorkCallback(OnHit)
 	end
 	
-	inst:ListenForEvent("onthaw", OnThaw)
-	inst:ListenForEvent("freeze", OnFreeze)
-	inst:ListenForEvent("unfreeze", OnUnfreeze)
+	inst:AddComponent("preserver")
+	inst.components.preserver:SetPerishRateMultiplier(0)
+	
+	inst:AddComponent("container")
+    inst.components.container:WidgetSetup("potatosack")
+    inst.components.container.onopenfn = OnOpen
+    inst.components.container.onclosefn = OnClose
+	inst.components.container.skipclosesnd = true
+	inst.components.container.skipopensnd = true
+	
+	inst:ListenForEvent("onputininventory", OnPickup)
 end
 
-for k, v in pairs(freezable_fix_animals) do 
-	AddPrefabPostInit(v, FreezablePostinit)
+AddPrefabPostInit("potatosack", PotatoSackPostinit)
+
+-- Items that can go inside the Potato Sack.
+local potatosack_items =
+{
+	"potato",
+	"potato_cooked",
+	
+	"kyno_sweetpotato",
+	"kyno_sweetpotato_cooked",
+	
+	"sweetpotato",
+	"sweetpotato_cooked",
+	
+	"potato_seeds",
+	"kyno_sweetpotato_seeds",
+}
+
+local function PotatoSackItemsPostinit(inst)
+	inst:AddTag("potatosack_valid")
+end
+
+for k, v in pairs(potatosack_items) do 
+	AddPrefabPostInit(v, PotatoSackItemsPostinit)
 end

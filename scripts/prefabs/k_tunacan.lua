@@ -5,6 +5,9 @@ local assets =
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
+	
+	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
+	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
 
 local prefabs =
@@ -17,9 +20,9 @@ local prefabs =
 
 local function OnOpenCan(inst, pos, doer)
 	if doer ~= nil and doer.SoundEmitter ~= nil then
-		doer.SoundEmitter:PlaySound("hookline_2/characters/hermit/tacklebox/small_open")
+		doer.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
 	else
-		inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/tacklebox/small_open")
+		inst.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
 	end
 
 	local tunacan = SpawnPrefab("kyno_tunacan_open")

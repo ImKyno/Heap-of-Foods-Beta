@@ -6,8 +6,8 @@ local function OnAttached(inst, target)
 	if not target:HasTag("handyperson") then
 		target:AddTag("fastbuilder")
 		
-		if target.components.talker then 
-			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF"))
+		if target.components.talker and target:HasTag("player") then 
+			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
 		end
 	end
 	
@@ -25,6 +25,10 @@ end
 local function OnDetached(inst, target)
 	if not target:HasTag("handyperson") then
 		target:RemoveTag("fastbuilder")
+		
+		if target.components.talker and target:HasTag("player") then 
+			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
+		end
 	end
     inst:Remove()
 end

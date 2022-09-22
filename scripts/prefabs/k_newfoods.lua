@@ -57,6 +57,10 @@ local function MakePreparedFood(data)
 
 		inst:AddTag("preparedfood")
 		inst:AddTag("preparedfood_hof")
+		
+		if inst:HasTag("preparedpoop") then
+			inst.AnimState:SetScale(.95, .95, .95)
+		end
 
 		if data.tags ~= nil then
 			for i,v in pairs(data.tags) do
@@ -116,6 +120,10 @@ local function MakePreparedFood(data)
 			inst.components.perishable:StartPerishing()
 			inst.components.perishable.onperishreplacement = "spoiled_food"
 		end
+		
+		if inst:HasTag("soulstew") then
+			inst:AddComponent("soul")
+		end 
 
 		MakeSmallBurnable(inst)
 		MakeSmallPropagator(inst)

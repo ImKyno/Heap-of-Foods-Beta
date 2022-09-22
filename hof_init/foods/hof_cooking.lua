@@ -23,14 +23,16 @@ AddIngredientValues({"deerclops_eyeball"},      {inedible   = 1, 	boss      = 1}
 AddIngredientValues({"horn"},					{horn       = 1})
 AddIngredientValues({"kelp"},                   {veggie     = 0.5,  algae     = 1},     true, true)
 AddIngredientValues({"goatmilk"},               {dairy      = 1,    milk      = 1})
+AddIngredientValues({"berries"},                {fruit      = 0.5,  berries   = 1},           true)
+AddIngredientValues({"berries_juicy"},          {fruit      = 0.5,  berries   = 1},           true)
 
 -- New Mod Crock Pot Ingredients.
 AddIngredientValues({"kyno_coffeebeans"}, 		{seeds      = 1}, 	 		  				  true)
 AddIngredientValues({"kyno_shark_fin"}, 		{fish       = 1})
 AddIngredientValues({"kyno_roe"}, 				{meat       = 0.5, 	roe       = 1}, 		  true)
 AddIngredientValues({"kyno_mussel"}, 			{fish       = 0.5, 	mussel    = 1}, 		  true)
-AddIngredientValues({"kyno_beanbugs"}, 			{bug        = 1, 	veggie    = 0.5}, 		  true)
-AddIngredientValues({"kyno_gummybug"}, 			{bug        = 1, 	veggie    = 0.5}, 		  true)
+AddIngredientValues({"kyno_beanbugs"}, 			{beanbug    = 1, 	veggie    = 0.5}, 		  true)
+AddIngredientValues({"kyno_gummybug"}, 			{gummybug   = 1, 	veggie    = 0.5}, 		  true)
 AddIngredientValues({"kyno_humanmeat"}, 		{meat       = 1, 	monster   = 1}, 	true, true)
 AddIngredientValues({"kyno_syrup"}, 			{sweetener  = 1,    syrup     = 1})
 AddIngredientValues({"kyno_flour"}, 			{inedible   = 1, 	flour     = 1})
@@ -47,7 +49,7 @@ AddIngredientValues({"kyno_fennel"}, 			{veggie     = 1}, 						      true)
 AddIngredientValues({"kyno_sweetpotato"}, 		{veggie     = 1}, 						      true)
 AddIngredientValues({"kyno_lotus_flower"}, 		{veggie     = 1}, 						      true)
 AddIngredientValues({"kyno_seaweeds"}, 			{veggie     = 1,   algae      = 1},     true, true)
-AddIngredientValues({"kyno_limpets"}, 			{fish       = 0.5}, 						  true)
+AddIngredientValues({"kyno_limpets"}, 			{fish       = 0.5, limpets    = 1}, 		  true)
 AddIngredientValues({"kyno_taroroot"}, 			{veggie     = 1},                             true)
 AddIngredientValues({"kyno_cucumber"}, 			{veggie     = 1})
 AddIngredientValues({"kyno_waterycress"}, 		{veggie     = 1,   algae      = 1})
@@ -69,15 +71,15 @@ AddIngredientValues({"kyno_sugartree_petals"},	{sweetener  = 1})
 AddIngredientValues({"kyno_crabmeat"},			{meat       = 0.5, crab       = 1},           true)
 AddIngredientValues({"kyno_chicken_egg"},		{egg        = 1},                             true)
 AddIngredientValues({"kyno_bottle_soul"},		{soul       = 1})
-AddIngredientValues({"kyno_milk_beefalo"},		{dairy      = 0.5, milk       = 0.5})
-AddIngredientValues({"kyno_milk_koalefant"},	{dairy      = 0.5, milk       = 0.5})
-AddIngredientValues({"kyno_milk_deer"},			{dairy      = 0.5, milk       = 0.5})
-AddIngredientValues({"kyno_milk_spat"},			{dairy      = 0.5, milk       = 0.5})
+AddIngredientValues({"kyno_milk_beefalo"},		{dairy      = 0.5, milk       = 1})
+AddIngredientValues({"kyno_milk_koalefant"},	{dairy      = 0.5, milk       = 1})
+AddIngredientValues({"kyno_milk_deer"},			{dairy      = 0.5, milk       = 1})
+AddIngredientValues({"kyno_milk_spat"},			{dairy      = 0.5, milk       = 1})
 AddIngredientValues({"kyno_sugarflywings"},     {decoration = 2})
 AddIngredientValues({"cheese_yellow"},			{dairy      = 1,   cheese     = 1})
 AddIngredientValues({"cheese_white"},			{dairy      = 1,   cheese     = 1})
 AddIngredientValues({"cheese_koalefant"},		{dairy      = 1,   cheese     = 1})
-AddIngredientValues({"milk_box"},				{dairy      = 1,   milk       = 1})
+AddIngredientValues({"milk_box"},				{dairy      = 1,   milk       = 2})
 AddIngredientValues({"kyno_red_cap_dried"}, 	{veggie     = 0.5, mushrooms  = 1})
 AddIngredientValues({"kyno_green_cap_dried"}, 	{veggie     = 0.5, mushrooms  = 1})
 AddIngredientValues({"kyno_blue_cap_dried"}, 	{veggie     = 0.5, mushrooms  = 1})
@@ -85,6 +87,7 @@ AddIngredientValues({"kyno_moon_cap_dried"}, 	{veggie     = 0.5, mushrooms  = 1}
 AddIngredientValues({"kyno_plantmeat_dried"},   {meat       = 1})
 AddIngredientValues({"kyno_piko"},              {piko       = 1})
 AddIngredientValues({"kyno_piko_orange"},       {piko       = 1})
+AddIngredientValues({"kyno_poison_froglegs"},   {meat       = 0.5},                    true, true) 
 
 -- Icons For Cookbook.
 local cookbook_icons = 
@@ -176,6 +179,8 @@ local cookbook_icons =
 	"kyno_moon_cap_dried.tex",
 	"kyno_piko.tex",
 	"kyno_piko_orange.tex",
+	"kyno_poison_froglegs.tex",
+	"kyno_poison_froglegs_cooked.tex",
 }
 
 for k,v in pairs(cookbook_icons) do
@@ -374,12 +379,13 @@ local kynofoods =
 	soulstew             	= require("hof_foodrecipes").soulstew,
 	fortunecookie			= require("hof_foodrecipes").fortunecookie,
 	hornocupia				= require("hof_foodrecipes").hornocupia,
-	-- cheese_yellow		= require("hof_foodrecipes").cheese_yellow,
-	-- cheese_white 		= require("hof_foodrecipes").cheese_white,
-	-- cheese_koalefant		= require("hof_foodrecipes").cheese_koalefant,
+	cheese_yellow		    = require("hof_foodrecipes").cheese_yellow,
+	cheese_white 		    = require("hof_foodrecipes").cheese_white,
+	cheese_koalefant		= require("hof_foodrecipes").cheese_koalefant,
 	milk_box				= require("hof_foodrecipes").milk_box,
 	watercup				= require("hof_foodrecipes").watercup,
 	crab_artichoke          = require("hof_foodrecipes").crab_artichoke,
+	poisonfrogglebunwich    = require("hof_foodrecipes").poisonfrogglebunwich,
 	
 	-- Warly Exclusives.
 	musselbouillabaise 		= require("hof_foodrecipes_warly").musselbouillabaise,

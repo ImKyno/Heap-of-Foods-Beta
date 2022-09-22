@@ -137,9 +137,9 @@ end))
 -- if not _G.KnownModIndex:IsModEnabled("workshop-436654027") or _G.KnownModIndex:IsModEnabled("workshop-1277605967") or
 -- _G.KnownModIndex:IsModEnabled("workshop-2431867642") or _G.KnownModIndex:IsModEnabled("workshop-1935156140") then
 AddAction("PULLMILK", STRINGS.ACTIONS.PULLMILK, function(act)
-	local milkable = act.target and act.target.components.milkable2 or nil
+	local milkable = act.target and act.target.components.milkableanimal or nil
 	if act.invobject and milkable ~= nil then
-		act.target.components.milkable2:Milk(act.doer)
+		act.target.components.milkableanimal:Milk(act.doer)
 		act.doer.SoundEmitter:PlaySound("turnoftides/common/together/water/emerge/small")
 		act.invobject.components.finiteuses:Use(1)
 		return true
@@ -151,10 +151,7 @@ ACTIONS.PULLMILK.mount_valid = true
 ACTIONS.PULLMILK.encumbered_valid = true
 
 AddComponentAction("USEITEM", "milker", function(inst, doer, target, actions)
-	if target and target:HasTag("milkable2") and inst:HasTag("bucket_empty") and not inst:HasTag("sleeping") 
-	and not target:HasTag("is_frozen") and not target:HasTag("is_thawing") then
-		table.insert(actions, ACTIONS.PULLMILK)
-	elseif target and target:HasTag("milkable2") and target:HasTag("koalefant") and inst:HasTag("bucket_empty") 
+	if target and target:HasTag("milkableanimal") and inst:HasTag("bucket_empty") 
 	and not target:HasTag("is_frozen") and not target:HasTag("is_thawing") then
 		table.insert(actions, ACTIONS.PULLMILK)
 	end

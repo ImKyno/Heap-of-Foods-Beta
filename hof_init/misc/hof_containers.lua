@@ -119,6 +119,7 @@ function params.brewer.widget.buttoninfo.validfn(inst)
     return inst.replica.container ~= nil and inst.replica.container:IsFull()
 end
 
+-- Honey Deposit.
 params.honeydeposit =
 {
     widget =
@@ -145,4 +146,28 @@ params.honeydeposit =
 
 function params.honeydeposit.itemtestfn(container, item, slot)
     return item:HasTag("honeyed") and not container.inst:HasTag("burnt")
+end
+
+-- Potato Sack.
+params.potatosack =
+{
+    widget =
+    {
+		slotpos = {},
+        animbank = "ui_chest_3x2",
+        animbuild = "ui_chest_3x2",
+        pos = Vector3(0, 200, 0),
+        side_align_tip = 160,
+    },
+    type = "chest",
+}
+
+for y = 1, 0, -1 do
+    for x = 0, 2 do
+        table.insert(params.potatosack.widget.slotpos, Vector3(80 * x - 80 * 2 + 80, 80 * y - 80 * 2 + 120, 0))
+    end
+end
+
+function params.potatosack.itemtestfn(container, item, slot)
+	return item:HasTag("potatosack_valid") and not container.inst:HasTag("burnt")
 end

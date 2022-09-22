@@ -39,11 +39,12 @@ local hof_init_misc =
 
 local hof_init_world =
 {
-	"hof_customize",
+	-- "hof_customize",
 	"hof_regrowth",
 	"hof_retrofit",
 	"hof_worldgen",
 	"hof_postinits_world",
+	"hof_postinits_mobs",
 }
 
 local hof_init_foods =
@@ -52,6 +53,7 @@ local hof_init_foods =
 	"hof_cooking",
 	"hof_bruwing",
 	"hof_postinits_foods",
+	"hof_postinits_buffs",
 }
 
 for _, v in pairs(hof_init_misc) do

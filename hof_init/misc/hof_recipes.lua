@@ -523,6 +523,21 @@ local KynElderWheatBush		= AddRecipe2("dug_kyno_wildwheat_p", {Ingredient("kyno_
 	{"CRAFTING_STATION"}
 )
 
+local KynPotatoSack        =  AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
+	{
+		builder_tag = "strongman",
+		product     = "potatosack",
+		atlas       = "images/inventoryimages2.xml",
+		image       = "potato_sack_full.tex",
+	},
+	{"CONTAINERS", "COOKING"}
+)
+SortAfter("potatosack2", "mighty_gym", "CHARACTER")
+SortBefore("potatosack2", "icebox", "CONTAINERS")
+SortBefore("potatosack2", "icebox", "COOKING")
+
+AddDeconstructRecipe("potatosack", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)})
+
 --[[ -- Disabled. You trade directly with him now.
 local KynElderTurf1			= AddRecipe2("turf_pinkpark_p", {Ingredient("turf_deciduous", 2)}, TECH.LOST,
 	{

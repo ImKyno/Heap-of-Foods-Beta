@@ -6,14 +6,13 @@ local GROUND         = _G.GROUND
 local LOCKS          = _G.LOCKS
 local KEYS           = _G.KEYS
 local LOCKS_KEYS     = _G.LOCKS_KEYS
-local LAYOUT         = _G.LAYOUT
 local Layouts        = require("map/layouts").Layouts
 local StaticLayout   = require("map/static_layout")
 
 require("map/terrain")
 require("tilemanager")
 
-modimport("hof_init/world/hof_customize")
+-- modimport("hof_init/world/hof_customize")
 modimport("hof_init/world/hof_worldgen")
 
 local TheArchitectPack = _G.KnownModIndex:IsModEnabled("workshop-2428854303")

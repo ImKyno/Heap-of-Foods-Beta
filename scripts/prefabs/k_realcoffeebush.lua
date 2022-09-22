@@ -25,7 +25,7 @@ local function pickanim(inst)
 		if inst.components.pickable:CanBePicked() then
 			local percent = 0
 			if inst.components.pickable then
-				percent = inst.components.pickable.cycles_left / inst.components.pickable.max_cycles
+				percent = inst.components.pickable.cycles_left / inst.components.pickable.max_cycles or 1
 			end
 			if percent >= .9 then
 				return "berriesmost"
@@ -57,7 +57,7 @@ end
 
 local function pickberries(inst)
 	if inst.components.pickable then
-		local old_percent = (inst.components.pickable.cycles_left+1) / inst.components.pickable.max_cycles
+		local old_percent = (inst.components.pickable.cycles_left + 1) / inst.components.pickable.max_cycles or 1
 
 		if old_percent >= .9 then
 			inst.AnimState:PlayAnimation("berriesmost_picked")
@@ -88,8 +88,8 @@ local function getregentimefn_normal(inst)
     local cycles_left = inst.components.pickable.cycles_left or max_cycles
     local num_cycles_passed = math.max(0, max_cycles - cycles_left)
     return TUNING.KYNO_COFFEEBUSH_GROWTIME
-        + TUNING.BERRY_REGROW_INCREASE * num_cycles_passed
-        + TUNING.BERRY_REGROW_VARIANCE * math.random()
+    + TUNING.BERRY_REGROW_INCREASE * num_cycles_passed
+    + TUNING.BERRY_REGROW_VARIANCE * math.random()
 end
 
 local function makefullfn(inst)
@@ -127,7 +127,6 @@ end
 
 local function OnHaunt(inst)
     if math.random() <= TUNING.HAUNT_CHANCE_ALWAYS then
-        shake(inst)
         inst.components.hauntable.hauntvalue = TUNING.HAUNT_COOLDOWN_TINY
         return true
     end
@@ -156,20 +155,21 @@ local function createbush(name, inspectname, berryname, master_postinit)
 
         inst.entity:AddTransform()
         inst.entity:AddAnimState()
+		inst.entity:AddSoundEmitter()
         inst.entity:AddNetwork()
-
-        MakeSmallObstaclePhysics(inst, .1)
-		
-		inst:AddTag("kyno_coffeebush")
-        inst:AddTag("plant")
-        inst:AddTag("renewable")
 		
 		local minimap = inst.entity:AddMiniMapEntity()
 		minimap:SetIcon("kyno_coffeebush.tex")
 
+        MakeSmallObstaclePhysics(inst, .1)
+
         inst.AnimState:SetBank("coffeebush")
         inst.AnimState:SetBuild("coffeebush")
         inst.AnimState:PlayAnimation("berriesmost", false)
+		
+		inst:AddTag("kyno_coffeebush")
+        inst:AddTag("plant")
+        inst:AddTag("renewable")
 
         inst.entity:SetPristine()
 
@@ -197,10 +197,8 @@ local function createbush(name, inspectname, berryname, master_postinit)
         if name ~= inspectname then
             inst.components.inspectable.nameoverride = inspectname
         end
-
-        inst:ListenForEvent("onwenthome", shake)
+		
         MakeSnowCovered(inst)
-
         master_postinit(inst)
 		
         return inst

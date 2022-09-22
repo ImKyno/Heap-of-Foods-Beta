@@ -6,80 +6,14 @@ local ACTIONS 			= _G.ACTIONS
 local STRINGS			= _G.STRINGS
 local SpawnPrefab		= _G.SpawnPrefab
 
--- Fix For Spiced Coffee. There you go Terra B. :glzSIP:
-local COFFEE_SPEED = GetModConfigData("HOF_COFFEESPEED")
-local COFFEE_DURATION = GetModConfigData("HOF_COFFEEDURATION")
-if COFFEE_SPEED == 1 then
-    local coffee_speedbuff = {
-        "coffee",
-        "coffee_spice_garlic",
-        "coffee_spice_sugar",
-        "coffee_spice_chili",
-        "coffee_spice_salt",
-    }
-	
-	local function CoffeePostinit(inst)
-		local spiced_buffs = {SPICE_CHILI = "buff_attack", SPICE_GARLIC = "buff_playerabsorption", SPICE_SUGAR = "buff_workeffectiveness"}
-			local function OnEatCoffee(inst, eater)
-				if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
-				return
-			elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-				eater.coffeebuff_duration = COFFEE_DURATION
-				eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
-			local spiced_buff = spiced_buffs[inst.components.edible.spice]
-				if spiced_buff then
-					eater.components.debuffable:AddDebuff(spiced_buff, spiced_buff)
-				end
-				if eater.components.talker then
-					eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF"))
-				end
-			else
-				eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
-				eater:DoTaskInTime(COFFEE_DURATION, function()
-					eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
-				end)
-			end
-		end
-		
-		if not _G.TheWorld.ismastersim then
-			return inst
-		end
-
-		if inst.components.edible ~= nil then
-			inst.components.edible:SetOnEatenFn(OnEatCoffee)
-		end
-	end 
-
-    for k,v in pairs(coffee_speedbuff) do
-        AddPrefabPostInit(v, CoffeePostinit)
+-- Theorically Tea Cool Down and Turns into Iced Tea.
+AddPrefabPostInit("tea", function(inst)
+    if inst.components.perishable ~= nil then
+        inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
+        inst.components.perishable:StartPerishing()
+        inst.components.perishable.onperishreplacement = "icedtea"
     end
-	
-	local function CoffeeBeansPostinit(inst)
-		local function OnEatBeans(inst, eater)
-            if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
-                return
-            elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-                eater.coffeebuff_duration = TUNING.KYNO_COFFEEBUFF_DURATION_SMALL
-                eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
-            else
-                eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
-                eater:DoTaskInTime(TUNING.KYNO_COFFEEBUFF_DURATION_SMALL, function()
-                    eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
-                end)
-            end
-        end
-		
-		if not _G.TheWorld.ismastersim then
-			return inst
-		end
-
-        if inst.components.edible ~= nil then
-            inst.components.edible:SetOnEatenFn(OnEatBeans)
-        end
-	end
-
-    AddPrefabPostInit("kyno_coffeebeans_cooked", CoffeeBeansPostinit)
-end
+end)
 
 -- Foliage can be cooked into Cooked Foliage.
 AddPrefabPostInit("foliage", function(inst)
@@ -113,24 +47,6 @@ if FRIDA_COFFEE == 0 then
     end
 end
 
-local duckyouglermz_debuff = {
-	"duckyouglermz",
-    "duckyouglermz_spice_garlic",
-    "duckyouglermz_spice_sugar",
-    "duckyouglermz_spice_chili",
-    "duckyouglermz_spice_salt",
-}
-
-local function DuckYouGlermzPostinit(inst)
-    inst.AnimState:SetScale(.95, .95, .95)
-	
-	inst:AddTag("preparedpoop")
-end
-
-for k,v in pairs(duckyouglermz_debuff) do
-    AddPrefabPostInit(v, DuckYouGlermzPostinit)
-end
-
 -- Some items are a bit huge when dropped...
 local function ResizeThisItem(inst)
     inst.AnimState:SetScale(.75, .75, .75)
@@ -152,88 +68,6 @@ end
 AddPrefabPostInit("cucumbersalad", function(inst)
     inst.AnimState:SetScale(1.5, 1.5, 1.5)
 end)
-
--- Fix For Spiced Tropical Bouillabaisse.
-local COFFEE_SPEED = GetModConfigData("HOF_COFFEESPEED")
-if COFFEE_SPEED == 1 then
-    local bouillabaisse_speedbuff = {
-        "tropicalbouillabaisse",
-        "tropicalbouillabaisse_spice_garlic",
-        "tropicalbouillabaisse_spice_sugar",
-        "tropicalbouillabaisse_spice_chili",
-        "tropicalbouillabaisse_spice_salt",
-    }
-	
-	local function BouillabaissePostinit(inst)
-		local spiced_buffs = {SPICE_CHILI = "buff_attack", SPICE_GARLIC = "buff_playerabsorption", SPICE_SUGAR = "buff_workeffectiveness"}
-		local function OnEatBouillabaisse(inst, eater)
-			if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
-			return
-		elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-			eater.tropicalbuff_duration = COFFEE_DURATION
-			eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
-		local spiced_buff = spiced_buffs[inst.components.edible.spice]
-			if spiced_buff then
-				eater.components.debuffable:AddDebuff(spiced_buff, spiced_buff)
-			end
-			if eater.components.talker then
-				eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF"))
-			end
-		else
-			eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
-			eater:DoTaskInTime(COFFEE_DURATION, function()
-				eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
-				end)
-			end
-        end
-		
-		if not _G.TheWorld.ismastersim then
-			return inst
-		end
-
-        if inst.components.edible ~= nil then
-			inst.components.edible:SetOnEatenFn(OnEatBouillabaisse)
-		end
-	end
-
-    for k,v in pairs(bouillabaisse_speedbuff) do
-        AddPrefabPostInit(v, BouillabaissePostinit)
-    end
-end
-
--- Make Whenever Someone Eats the Shark Fin Soup a Krampus Spawns.
-local sharkfinsoup_debuff = {
-    "sharkfinsoup",
-    "sharkfinsoup_spice_garlic",
-    "sharkfinsoup_spice_sugar",
-    "sharkfinsoup_spice_chili",
-    "sharkfinsoup_spice_salt",
-}
-
-local function SharkFinSoupPostinit(inst)
-	local function OnEatSharkSoup(inst, eater)
-		SpawnPrefab("krampuswarning_lvl3").Transform:SetPosition(inst.Transform:GetWorldPosition())
-		local krampus = SpawnPrefab("krampus")
-		local pt = _G.Vector3(inst.Transform:GetWorldPosition()) + _G.Vector3(15,0,15)
-
-		krampus.Transform:SetPosition(pt:Get())
-		local angle = eater.Transform:GetRotation()*(3.14159/180)
-		local sp = (math.random()+1) * -1
-		krampus.Physics:SetVel(sp*math.cos(angle), math.random()*2+8, -sp*math.sin(angle))
-	end
-	
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-
-	if inst.components.edible ~= nil then
-		inst.components.edible:SetOnEatenFn(OnEatSharkSoup)
-	end
-end
-
-for k,v in pairs(sharkfinsoup_debuff) do
-    AddPrefabPostInit(v, SharkFinSoupPostinit)
-end
 
 -- The Sea Cucumber doesn't have a proper "cooked" animation, so I'll just make it non cookable.
 AddPrefabPostInit("kyno_cucumber", function(inst)
@@ -519,34 +353,6 @@ VanillaFood.meatysalad.test = function(cooker, names, tags)
 	return (names.plantmeat or names.plantmeat_cooked or names.kyno_plantmeat_dried) and tags.veggie and tags.veggie >= 3
 end
 
--- Make Whenever Someone Eats the Eyeball Soup a Deerclops Spawns.
-local eyeballsoup_debuff = {
-    "eyeballsoup",
-    "eyeballsoup_spice_garlic",
-    "eyeballsoup_spice_sugar",
-    "eyeballsoup_spice_chili",
-    "eyeballsoup_spice_salt",
-}
-
-local function EyeballSoupPostinit(inst)
-	local function OnEatEyeballSoup(inst, eater)
-		SpawnPrefab("deerclopswarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
-		_G.TheWorld.components.deerclopsspawner:SummonMonster(eater)
-	end
-	
-	if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-	if inst.components.edible ~= nil then
-		inst.components.edible:SetOnEatenFn(OnEatEyeballSoup)
-	end
-end
-
-for k,v in pairs(eyeballsoup_debuff) do
-    AddPrefabPostInit(v, EyeballSoupPostinit)
-end
-
 -- Foods that will have their action "Eat" replaced to "Drink".
 local drinkable_foods = {
     "winter_food8",
@@ -566,90 +372,6 @@ for k,v in pairs(drinkable_foods) do
     AddPrefabPostInit(v, function(inst)
         inst:AddTag("drinkable_food")
     end)
-end
-
--- Wortox gets the full stats of Soul Stew.
-local soulstew_debuff = {
-	"soulstew",
-    "soulstew_spice_garlic",
-    "soulstew_spice_sugar",
-    "soulstew_spice_chili",
-    "soulstew_spice_salt",
-}
-
-local function SoulStewPostinit(inst)
-	local function OnEatSoulStew(inst, eater)
-        if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
-            return
-		elseif eater:HasTag("soulstealer") then
-            -- Needs to be half because the food already give some stats.
-            eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH)
-            eater.components.hunger:DoDelta(TUNING.SOULSTEW_HUNGER)
-            eater.components.sanity:DoDelta(TUNING.SOULSTEW_SANITY)
-        end
-    end
-
-    inst:AddTag("soulstew")
-
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst:AddComponent("soul") -- Required for eating.
-    if inst.components.edible ~= nil then
-        inst.components.edible:SetOnEatenFn(OnEatSoulStew)
-    end
-end
-
-for k,v in pairs(soulstew_debuff) do
-    AddPrefabPostInit(v, SoulStewPostinit)
-end
-
--- Make Whenever Someone Eats the Fortune Cookie, they say a quote.
-local fortunecookie_debuff = {
-    "fortunecookie",
-    "fortunecookie_spice_garlic",
-    "fortunecookie_spice_sugar",
-    "fortunecookie_spice_chili",
-    "fortunecookie_spice_salt",
-}
-
-local function FortuneCookiePostinit(inst)
-	local function OnEatFortuneCookie(inst, eater)
-		if math.random() < 0.01 then
-			if math.random() < 0.50 then
-				eater.components.health:DoDelta(999)
-				eater.components.hunger:DoDelta(999)
-				eater.components.sanity:DoDelta(999)
-				if eater.components.talker then
-					eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_GOOD)])
-				end
-			else
-				eater.components.health:SetPercent(.2)
-				eater.components.hunger:DoDelta(-999)
-				eater.components.sanity:DoDelta(-999)
-				if eater.components.talker then
-					eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_BAD)])
-				end
-			end
-		else
-			if eater.components.talker then
-				eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_QUOTES[math.random(#STRINGS.FORTUNE_COOKIE_QUOTES)])
-			end
-		end
-	end
-	
-	if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-	if inst.components.edible ~= nil then
-		inst.components.edible:SetOnEatenFn(OnEatFortuneCookie)
-	end
-end
-
-for k,v in pairs(fortunecookie_debuff) do
-    AddPrefabPostInit(v, FortuneCookiePostinit)
 end
 
 -- New foods that can be dried on Drying Racks.
@@ -859,109 +581,10 @@ if ALCOHOLIC_DRINKS == 1 then
 	end)
 end
 
--- Beer and Pale Ale gives attack buff at the cost of lower speed.
-local function BeerPostinit(inst)
-	local function OnEatBeer(inst, eater)
-        if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
-            return
-        elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-            eater.strengthbuff_duration = TUNING.KYNO_ALCOHOL_DURATION_SMALL
-            eater.components.debuffable:AddDebuff("kyno_strengthbuff", "kyno_strengthbuff")
-            if eater.components.talker then
-                eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_POPBUFF"))
-            end
-        else
-            eater:AddTag("groggy")
-            eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_strengthbuff", TUNING.KYNO_ALCOHOL_SPEED)
-            eater.components.combat.externaldamagemultipliers:SetModifier(eater, TUNING.KYNO_ALCOHOL_STRENGTH_SMALL)
-            eater:DoTaskInTime(TUNING.KYNO_ALCOHOL_DURATION_SMALL, function()
-                eater:RemoveTag("groggy")
-                eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_strengthbuff")
-                eater.components.combat.externaldamagemultipliers:RemoveModifier(inst)
-            end)
-        end
-    end
-	
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-
-    if inst.components.edible ~=nil then
-        inst.components.edible:SetOnEatenFn(OnEatBeer)
-    end
-end
-
-local function PaleAlePostinit(inst)
-	local function OnEatPaleAle(inst, eater)
-        if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
-            return
-        elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-            eater.strengthbuff_duration = TUNING.KYNO_ALCOHOL_DURATION_MEDSMALL
-            eater.components.debuffable:AddDebuff("kyno_strengthbuff", "kyno_strengthbuff")
-            if eater.components.talker then
-                eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_POPBUFF"))
-            end
-        else
-            eater:AddTag("groggy")
-            eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_strengthbuff", TUNING.KYNO_ALCOHOL_SPEED)
-            eater.components.combat.externaldamagemultipliers:SetModifier(eater, TUNING.KYNO_ALCOHOL_STRENGTH_MEDSMALL)
-            eater:DoTaskInTime(TUNING.KYNO_ALCOHOL_DURATION_MEDSMALL, function()
-                eater:RemoveTag("groggy")
-                eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_strengthbuff")
-                eater.components.combat.externaldamagemultipliers:RemoveModifier(inst)
-            end)
-        end
-    end
-	
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-
-    if inst.components.edible ~= nil then
-        inst.components.edible:SetOnEatenFn(OnEatPaleAle)
-    end
-end
-
-AddPrefabPostInit("beer", BeerPostinit)
-AddPrefabPostInit("paleale", PaleAlePostinit)
-
--- Mead gives damage reduction buff at the cost of lower speed.
-local function MeadPostinit(inst)
-	local function OnEatMead(inst, eater)
-        if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
-            return
-        elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-            eater.dmgreductionbuff_duration = TUNING.KYNO_ALCOHOL_DURATION_SMALL
-            eater.components.debuffable:AddDebuff("kyno_dmgreductionbuff", "kyno_dmgreductionbuff")
-            if eater.components.talker then
-                eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_POPBUFF"))
-            end
-        else
-            eater:AddTag("groggy")
-            eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_dmgreductionbuff", TUNING.KYNO_ALCOHOL_SPEED)
-            eater.components.health.externalabsorbmodifiers:SetModifier(eater, TUNING.BUFF_PLAYERABSORPTION_MODIFIER)
-            eater:DoTaskInTime(TUNING.KYNO_ALCOHOL_DURATION_SMALL, function()
-                eater:RemoveTag("groggy")
-                eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_strengthbuff")
-                eater.components.health.externalabsorbmodifiers:RemoveModifier(eater)
-            end)
-        end
-    end
-	
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-
-    if inst.components.edible ~= nil then
-        inst.components.edible:SetOnEatenFn(OnEatMead)
-    end
-end
-
-AddPrefabPostInit("mead", MeadPostinit)
-
 -- Honey and Honey-based foods do not spoil inside Honey Deposits.
 local honeyed_foods = {
 	"bandage",
+	"spice_sugar",
 	"honey",
 	"royal_jelly",
     "honeynuggets",

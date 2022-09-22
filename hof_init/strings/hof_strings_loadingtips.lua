@@ -55,7 +55,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_CRABKING_LOOT",	"Need more Crab Meat? The Crab
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_REGROWTH",		"Mod entities such as Plants, Trees, etc. Will regrow overtime if there are a low amount of them in the world.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_BOTTLE_SOUL",		"Wortox can store Souls inside Empty Bottles. However, other survivors can't.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_BOTTLE_SOUL2",	"Every survivor can carry the \"Soul in a Bottle\" on their inventory, but only Wortox can Release the Soul.")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_SOULSTEW",		"If Wortox eats the \"Soul Stew\" he will get the full stats from the food, instead of the half, like every other foods.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_SOULSTEW",		"If Wortox eats the Soul Stew he will gain the full stats from the food, instead of the half, like he does with every other food.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_MYSTERYMEAT",		"\"Have you heard? There's something strange inside one of the Watery Crates. We should look for it, perhaps...\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_KEGANDJAR",       "The Wooden Keg and the Preserves Jar can be used to produce special recipes. They take longer to produce than other recipes.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_ANTIDOTE",        "Ruined Sugarwood Trees can be healed! You must use the Musty Antidote in order to do that.")
@@ -69,6 +69,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_GROUPER",         "Purple Groupers can be fish
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_MEADOWISLAND",    "\"Sailing around the globe, I was capable of exploring almost everything... Except for a strange island full of Palm Trees.\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_INFESTTREE",      "Tea Trees can be infested with Pikos by simply giving them. Increasing your sources of getting those little guys!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWAREBONUS",   "Special Cookware stations have a small chance of giving an extra food when cooking.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_POISONBUNWICH",   "The Noxious Froggle Bunwich can be quite difficult to cook, but it has an interesting quirk. When eaten, frogs will be pacific towards you for a whole day!")
 
 -- We want that our custom tips appears more often.
 SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})

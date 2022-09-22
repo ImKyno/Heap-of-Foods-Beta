@@ -16,7 +16,7 @@ local prefabs =
 
 local function OnDrink(inst, eater)
 	if eater.components.talker and eater:HasTag("player") then 
-		eater.components.talker:Say(GetString(eater,"ANNOUNCE_KYNO_POPBUFF"))
+		eater.components.talker:Say(GetString(eater,"ANNOUNCE_KYNO_POPBUFF_START"))
 	end
 end
 
