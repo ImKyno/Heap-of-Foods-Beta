@@ -386,6 +386,7 @@ local kynofoods =
 	watercup				= require("hof_foodrecipes").watercup,
 	crab_artichoke          = require("hof_foodrecipes").crab_artichoke,
 	poisonfrogglebunwich    = require("hof_foodrecipes").poisonfrogglebunwich,
+	pepperrolls             = require("hof_foodrecipes").pepperrolls,
 	
 	-- Warly Exclusives.
 	musselbouillabaise 		= require("hof_foodrecipes_warly").musselbouillabaise,

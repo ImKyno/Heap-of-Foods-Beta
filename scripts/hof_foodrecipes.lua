@@ -38,12 +38,12 @@ local kyno_foods =
 		priority = 20,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SUPERFAST,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 20,
 		hunger = 12.5,
 		sanity = 0,
 		cooktime = 0.5,
-		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 	},
@@ -1176,6 +1176,8 @@ local kyno_foods =
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 5,
 		hunger = 75,
 		sanity = 5,
@@ -1744,9 +1746,9 @@ local kyno_foods =
 	
 	watercup =
 	{
-		test = function(cooker, names, tags) return (tags.frozen and tags.frozen >= 2) and not tags.inedible and not tags.meat and not tags.fish
+		test = function(cooker, names, tags) return (not tags.frozen or tags.frozen <= 2) and not tags.inedible and not tags.meat and not tags.fish
 		and not tags.veggie and not tags.fruit and not tags.milk end,
-		priority = 1,
+		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = 9000000,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
@@ -1758,14 +1760,6 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WATER,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		-- ITS JUST WATER MY MAN -- Vasp: Yeah, not just water, a cup of it.
-		--[[ 
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WATERBUFF,
-		prefabs = { "kyno_waterbuff" },
-        oneatenfn = function(inst, eater)
-            eater.components.debuffable:AddDebuff("kyno_waterbuff", "kyno_waterbuff")
-        end,
-		]]--
 	},
 	
 	crab_artichoke =
@@ -1803,6 +1797,22 @@ local kyno_foods =
         oneatenfn = function(inst, eater)
 			eater.components.debuffable:AddDebuff("kyno_frogbuff", "kyno_frogbuff")
        	end,
+	},
+	
+	pepperrolls = 
+	{
+		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_spotspice and ((names.pepper or 0) + (names.pepper_cooked or 0) >= 2) end,
+		priority = 30,
+		foods = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = 40,
+		hunger = 32.5,
+		sanity = -15,
+		cooktime = 1.6,
+		potlevel = "med",
+		floater = {"med", nil, 0.55},
 	},
 }
 
