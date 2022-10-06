@@ -200,11 +200,20 @@ for k, v in pairs(require("hof_foodrecipes")) do
 	AddCookerRecipe("kyno_cookware_grill", 		 			v)
 	AddCookerRecipe("kyno_cookware_oven_small_casserole", 	v)
 	AddCookerRecipe("kyno_cookware_oven_casserole", 		v)
+	
+	if v.card_def then
+		AddRecipeCard("cookpot",                            v)
+		AddRecipeCard("portablecookpot",                    v)
+	end
 end
 
 -- This file is only for Warly foods.
 for k, v in pairs(require("hof_foodrecipes_warly")) do
 	AddCookerRecipe("portablecookpot",         				v)
+	
+	if v.card_def then
+		AddRecipeCard("portablecookpot",                    v)
+	end
 end 
 
 for k, v in pairs(require("hof_foodspicer")) do

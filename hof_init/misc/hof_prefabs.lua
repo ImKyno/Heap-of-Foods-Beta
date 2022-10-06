@@ -3,15 +3,15 @@ PrefabFiles =
 {	
 	"hermitcrab", -- I'll be using this until I find a better and clean way to do the things.
 	
-	"k_hastebuff",
-	"k_coffeebuff",
-	"k_strengthbuff",
-	"k_dmgreductionbuff",
-	"k_hungerregenbuff",
-	"k_sanityregenbuff",
-	"k_superregenbuff",
-	"k_insanitybuff",
-	"k_frogbuff",
+	"k_foodbuff_haste",
+	"k_foodbuff_coffee",
+	"k_foodbuff_strength",
+	"k_foodbuff_defense",
+	"k_foodbuff_hunger",
+	"k_foodbuff_sanity",
+	"k_foodbuff_super",
+	"k_foodbuff_insanity",
+	"k_foodbuff_frog",
 	
 	"k_product_bubble",
 	"k_fertilizer_nutrient_defs",
@@ -21,6 +21,10 @@ PrefabFiles =
 	"k_newveggies",
 	"k_newdryables",
 	"k_newbirds",
+	
+	"k_tunacan",
+	"k_cannedfoods",
+	"k_canneddrinks",
 	
 	"k_coffeebeans",
 	"k_realcoffeebush",
@@ -85,9 +89,6 @@ PrefabFiles =
 	"k_cookware_oven",
 	"k_cookware_grill",
 	"k_rockflippable",
-	"k_tunacan",
-	"k_cannedfoods",
-	"k_pops",
 	"k_mysterymeat",
 	"k_bottle_soul",
 	"k_saphealer",
@@ -95,6 +96,7 @@ PrefabFiles =
 	"k_bucket_empty",
 	"k_brewers",
 	"k_brewbook",
+	"k_brewingrecipecard",
 	"k_ocean_wreck",
 	"k_antchest",
 	"k_nectar_pod",

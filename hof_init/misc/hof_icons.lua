@@ -310,6 +310,7 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"crab_artichoke",
 	"curledpepper",
 	"kyno_brewbook", 
+	"kyno_brewingrecipecard",
 	"brewertest",
 	"beer", 
 	"paleale",

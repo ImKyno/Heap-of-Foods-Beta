@@ -13,7 +13,8 @@ end
 -- All credtis to the original creator, I just implemented to here and updated, the original version is missing content.
 local DO_REGROWTH = GetModConfigData("HOF_REGROWTH")
 if DO_REGROWTH == 1 then
-	simpleregrowth = {
+	simpleregrowth = 
+	{
 		spawner_aloe_frequency 					= 50,
 		spawner_radish_frequency				= 50,
 		spawner_sweetpotato_frequency			= 50,
@@ -161,7 +162,7 @@ if DO_REGROWTH == 1 then
 		AddPrefabTracker("kyno_radish_ground", true)
 		nonwinterspawners["kyno_radish_ground"] =
 		{
-			frequency 	= simpleregrowth.spawner_aloe_frequency,
+			frequency 	= simpleregrowth.spawner_radish_frequency,
 			amount 		= 3,
 			maxcount 	= 41,
 			tile 		= WORLD_TILES.DECIDUOUS,
@@ -172,7 +173,7 @@ if DO_REGROWTH == 1 then
 		AddPrefabTracker("kyno_sweetpotato_ground", true)
 		nonwinterspawners["kyno_sweetpotato_ground"] =
 		{
-			frequency 	= simpleregrowth.spawner_aloe_frequency,
+			frequency 	= simpleregrowth.spawner_sweetpotato_frequency,
 			amount 		= 3,
 			maxcount 	= 41,
 			tile 		= WORLD_TILES.FOREST, WORLD_TILES.HOF_FIELDS,
@@ -183,7 +184,7 @@ if DO_REGROWTH == 1 then
 		AddPrefabTracker("kyno_turnip_ground", true)
 		nonwinterspawners["kyno_turnip_ground"] =
 		{
-			frequency 	= simpleregrowth.spawner_aloe_frequency,
+			frequency 	= simpleregrowth.spawner_turnip_frequency,
 			amount 		= 3,
 			maxcount 	= 41,
 			tile 		= WORLD_TILES.MARSH,
@@ -194,7 +195,7 @@ if DO_REGROWTH == 1 then
 		AddPrefabTracker("kyno_cucumber_ground", true)
 		nonwinterspawners["kyno_cucumber_ground"] =
 		{
-			frequency 	= simpleregrowth.spawner_aloe_frequency,
+			frequency 	= simpleregrowth.spawner_cucumber_frequency,
 			amount 		= 3,
 			maxcount 	= 81,
 			tile 		= WORLD_TILES.OCEAN_ROUGH,

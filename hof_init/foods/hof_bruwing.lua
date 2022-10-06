@@ -121,8 +121,16 @@ end
 -- Import The Foods.
 for k, v in pairs(require("hof_foodrecipes_keg")) do
 	AddBrewerRecipe("kyno_woodenkeg", 			v)
+	
+	if v.card_def then
+		AddBrewerCard("kyno_woodenkeg",         v)
+	end
 end
 
 for k, v in pairs(require("hof_foodrecipes_jar")) do
 	AddBrewerRecipe("kyno_preservesjar", 		v)
+	
+	if v.card_def then
+		AddBrewerCard("kyno_preservesjar",      v)
+	end
 end

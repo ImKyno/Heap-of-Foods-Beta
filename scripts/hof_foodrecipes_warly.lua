@@ -14,6 +14,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"kyno_mussel", 3}, {"carrot", 1}}},
 	},
 	
 	sweetpotatosouffle =
@@ -31,6 +32,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"kyno_sweetpotato", 2}, {"bird_egg", 2}}},
 	},
 	
 	gorge_meat_stew =
@@ -46,6 +48,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"meat", 3}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_cheeseburger =
@@ -62,6 +65,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"gorge_bread", 1}, {"meat", 1}, {"foliage", 1}, {"goatmilk", 1}}},
 	},
 	
 	gorge_pizza =
@@ -77,6 +81,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"meat", 1}, {"kyno_flour", 1}, {"goatmilk", 1}, {"tomato", 1}}},
 	},
 	
 	gorge_meat_wellington =
@@ -92,6 +97,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"meat", 2}, {"gorge_bread", 1}, {"carrot", 1}}},
 	},
 	
 	gorge_trifle =
@@ -107,6 +113,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"berries", 1}, {"kyno_flour", 1}, {"goatmilk", 2}}},
 	},
 	
 	bubbletea = 
@@ -123,6 +130,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"kyno_piko", 1}, {"honey", 2}, {"ice", 1}}},
 		prefabs = { "buff_sleepresistance" },
         oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
         oneatenfn = function(inst, eater)
@@ -149,6 +157,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"onion", 2}, {"kyno_waterycress", 1}, {"foliage", 1}}},
 	},
 	
 	jellybean_sanity =
@@ -167,6 +176,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"royal_jelly", 1}, {"green_cap", 3}}},
         prefabs = { "kyno_sanityregenbuff" },
         oneatenfn = function(inst, eater)
             eater.components.debuffable:AddDebuff("kyno_sanityregenbuff", "kyno_sanityregenbuff")
@@ -188,6 +198,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"royal_jelly", 1}, {"butter", 1}, {"honey", 2}}},
         prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
             eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
@@ -210,6 +221,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"royal_jelly", 2}, {"dragonfruit", 1}, {"pomegranate", 1}}},
         prefabs = { "kyno_superregenbuff" },
         oneatenfn = function(inst, eater)
             eater.components.debuffable:AddDebuff("kyno_superregenbuff", "kyno_superregenbuff")

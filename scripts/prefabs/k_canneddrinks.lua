@@ -5,6 +5,9 @@ local assets =
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
+	
+	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
+	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
 
 local prefabs =
@@ -15,6 +18,12 @@ local prefabs =
 }    
 
 local function OnDrink(inst, eater)
+	if eater ~= nil and eater.SoundEmitter ~= nil then
+		eater.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
+	else
+		inst.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
+	end
+
 	if eater.components.talker and eater:HasTag("player") then 
 		eater.components.talker:Say(GetString(eater,"ANNOUNCE_KYNO_POPBUFF_START"))
 	end
@@ -39,6 +48,7 @@ local function fn(bank, build, anim, name)
 	
 	inst:AddTag("refrigerante")
 	inst:AddTag("drinkable_food")
+	inst:AddTag("preparedfood") -- So warly can drink them.
     
     inst.entity:SetPristine()
 

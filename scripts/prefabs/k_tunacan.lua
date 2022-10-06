@@ -90,6 +90,9 @@ local function opened_fn()
     inst.AnimState:SetBank("kyno_tuna")
     inst.AnimState:SetBuild("kyno_tuna")
     inst.AnimState:PlayAnimation("opened")
+	
+	inst:AddTag("canned_food_open")
+	inst:AddTag("preparedfood") -- So warly can eat them.
     
     inst.entity:SetPristine()
 

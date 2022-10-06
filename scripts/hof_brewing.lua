@@ -30,6 +30,13 @@ AddBrewerRecipe = function(brewer, recipe, is_mod_food)
 	end
 end
 
+local recipe_cards = {}
+
+global("AddBrewerCard")
+function AddBrewerCard(brewer, recipe)
+	table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = brewer})
+end
+
 local function IsModBrewerFood(prefab)
 	return not official_foods[prefab]
 end
@@ -164,4 +171,4 @@ local function CalculateBrewing(brewer, names)
 	end
 end
 
-return { CalculateBrewing = CalculateBrewing, IsBrewingIngredient = IsBrewingIngredient, recipes = brewerrecipes, brewingredients = brewingredients, GetBrewing = GetBrewing, brewbook_recipes = brewbook_recipes, HasModBrewerFood = HasModBrewerFood, IsModBrewerFood = IsModBrewerFood}
+return { CalculateBrewing = CalculateBrewing, IsBrewingIngredient = IsBrewingIngredient, recipes = brewerrecipes, brewingredients = brewingredients, GetBrewing = GetBrewing, brewbook_recipes = brewbook_recipes, recipe_cards = recipe_cards, HasModBrewerFood = HasModBrewerFood, IsModBrewerFood = IsModBrewerFood}

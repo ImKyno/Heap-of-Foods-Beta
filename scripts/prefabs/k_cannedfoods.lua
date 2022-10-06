@@ -102,6 +102,7 @@ local function opened_fn(bank, build, anim, opened_name)
     inst.AnimState:PlayAnimation(anim)
 	
 	inst:AddTag("canned_food_open")
+	inst:AddTag("preparedfood") -- So warly can eat them.
     
     inst.entity:SetPristine()
 

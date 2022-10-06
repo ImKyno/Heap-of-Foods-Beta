@@ -17,6 +17,7 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"berries", 2}}},
 	},
 	
 	jelly_berries_juicy = 
@@ -30,6 +31,7 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"berries_juicy", 2}}},
 	},
 	
 	jelly_pomegranate = 
@@ -43,6 +45,7 @@ local kyno_foods_jar =
 		sanity = 30,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pomegranate", 2}}},
 	},
 	
 	jelly_dragonfruit = 
@@ -56,6 +59,7 @@ local kyno_foods_jar =
 		sanity = 40,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"dragonfruit", 2}}},
 	},
 	
 	jelly_cave_banana = 
@@ -69,6 +73,7 @@ local kyno_foods_jar =
 		sanity = 25,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"cave_banana", 2}}},
 	},
 	
 	jelly_durian = 
@@ -82,6 +87,7 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"durian", 2}}},
 	},
 	
 	jelly_watermelon = 
@@ -95,6 +101,7 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"watermelon", 2}}},
 	},
 	
 	jelly_fig = 
@@ -108,32 +115,7 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
-	},
-	
-	jelly_banana = 
-	{
-		test = function(brewer, names, tags) return names.kyno_banana and (names.kyno_banana == 2) end,
-		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
-		perishtime = TUNING.PERISH_MED,
-		health = 10,
-		hunger = 20,
-		sanity = 33,
-		cooktime = 48,
-		floater = {"med", nil, 0.65},
-	},
-	
-	jelly_kokonut = 
-	{
-		test = function(brewer, names, tags) return (names.kyno_kokonut_halved or (names.kyno_kokonut_cooked and names.kyno_kokonut_cooked == 2)) end,
-		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
-		perishtime = TUNING.PERISH_MED,
-		health = 10,
-		hunger = 20,
-		sanity = 33,
-		cooktime = 48,
-		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"fig", 2}}},
 	},
 	
 	jelly_glowberry = 
@@ -148,6 +130,7 @@ local kyno_foods_jar =
 		cooktime = 48,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLOW,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"wormlight_lesser", 2}}},
 		prefabs = { "wormlight_light_greater" },
         oneatenfn = function(inst, eater)
             if eater.wormlight ~= nil then
@@ -172,6 +155,34 @@ local kyno_foods_jar =
         end,
 	},
 	
+	jelly_banana = 
+	{
+		test = function(brewer, names, tags) return names.kyno_banana and (names.kyno_banana == 2) end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 33,
+		cooktime = 48,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_banana", 2}}},
+	},
+	
+	jelly_kokonut = 
+	{
+		test = function(brewer, names, tags) return (names.kyno_kokonut_halved or (names.kyno_kokonut_cooked and names.kyno_kokonut_cooked == 2)) end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 33,
+		cooktime = 48,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_kokonut_halved", 2}}},
+	},
+	
 	pickles_carrot = 
 	{
 		test = function(brewer, names, tags) return names.carrot and (names.carrot == 2) end,
@@ -183,6 +194,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"carrot", 2}}},
 	},
 	
 	pickles_corn = 
@@ -196,6 +208,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"corn", 2}}},
 	},
 	
 	pickles_eggplant = 
@@ -209,6 +222,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"eggplant", 2}}},
 	},
 	
 	pickles_pumpkin = 
@@ -222,6 +236,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pumpkin", 2}}},
 	},
 	
 	pickles_lichen = 
@@ -235,6 +250,7 @@ local kyno_foods_jar =
 		sanity = -15,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"cutlichen", 2}}},
 	},
 	
 	pickles_cactus = 
@@ -248,6 +264,7 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"cactus_meat", 2}}},
 	},
 	
 	pickles_garlic = 
@@ -261,6 +278,7 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"garlic", 2}}},
 	},
 	
 	pickles_asparagus = 
@@ -274,6 +292,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"asparagus", 2}}},
 	},
 	
 	pickles_onion = 
@@ -287,6 +306,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"onion", 2}}},
 	},
 	
 	pickles_tomato = 
@@ -300,6 +320,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"tomato", 2}}},
 	},
 	
 	pickles_potato = 
@@ -313,6 +334,7 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"potato", 2}}},
 	},
 	
 	pickles_pepper = 
@@ -328,6 +350,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pepper", 2}}},
 	},
 	
 	pickles_redcap = 
@@ -341,6 +364,7 @@ local kyno_foods_jar =
 		sanity = -15,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"red_cap", 2}}},
 	},
 	
 	pickles_greencap = 
@@ -354,6 +378,7 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"green_cap", 2}}},
 	},
 	
 	pickles_bluecap = 
@@ -367,6 +392,7 @@ local kyno_foods_jar =
 		sanity = -5,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"blue_cap", 2}}},
 	},
 	
 	pickles_mooncap = 
@@ -381,6 +407,7 @@ local kyno_foods_jar =
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"moon_cap", 2}}},
 		prefabs = { "buff_sleepresistance" },
         oneatenfn = function(inst, eater)
             if eater.components.grogginess ~= nil and
@@ -403,6 +430,7 @@ local kyno_foods_jar =
 		sanity = -5,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kelp", 2}}},
 	},
 	
 	pickles_avocado = 
@@ -416,6 +444,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"rock_avocado_fruit_ripe", 2}}},
 	},
 	
 	pickles_whitecap = 
@@ -429,6 +458,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_white_cap", 2}}},
 	},
 	
 	pickles_aloe = 
@@ -442,6 +472,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_aloe", 2}}},
 	},
 	
 	pickles_radish = 
@@ -455,6 +486,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_radish", 2}}},
 	},
 	
 	pickles_sweetpotato = 
@@ -468,6 +500,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_sweetpotato", 2}}},
 	},
 	
 	pickles_lotus = 
@@ -481,6 +514,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_lotus_flower", 2}}},
 	},
 	
 	pickles_seaweeds = 
@@ -494,6 +528,7 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_seaweeds", 2}}},
 	},
 	
 	pickles_taroroot = 
@@ -507,6 +542,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_taroroot", 2}}},
 	},
 	
 	pickles_waterycress = 
@@ -520,6 +556,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_waterycress", 2}}},
 	},
 	
 	pickles_cucumber = 
@@ -533,6 +570,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_cucumber", 2}}},
 	},
 	
 	pickles_parznip = 
@@ -546,6 +584,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_parznip", 2}}},
 	},
 	
 	pickles_turnip = 
@@ -559,6 +598,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_turnip", 2}}},
 	},
 	
 	pickles_fennel = 
@@ -572,6 +612,7 @@ local kyno_foods_jar =
 		sanity = -15,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_fennel", 2}}},
 	},
 	
 	mayonnaise = 
@@ -586,6 +627,7 @@ local kyno_foods_jar =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"bird_egg", 1}, {"carrot", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
             eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
@@ -604,6 +646,7 @@ local kyno_foods_jar =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_chicken_egg", 1}, {"carrot", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
             eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
@@ -622,6 +665,7 @@ local kyno_foods_jar =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"tallbirdegg", 1}, {"carrot", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
             eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
@@ -640,6 +684,7 @@ local kyno_foods_jar =
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DESANITY,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"bird_egg", 1}, {"nightmarefuel", 1}}},
 		prefabs = { "kyno_insanitybuff" },
         oneatenfn = function(inst, eater)
             eater.components.debuffable:AddDebuff("kyno_insanitybuff", "kyno_insanitybuff")
@@ -657,6 +702,7 @@ local kyno_foods_jar =
 		sanity = 5,
 		cooktime = 50,
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"mayonnaise", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	-- This recipe is for when brewing a invalid product, we need this to prevent a crash.

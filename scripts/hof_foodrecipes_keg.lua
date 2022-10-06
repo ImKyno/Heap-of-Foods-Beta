@@ -36,6 +36,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"carrot", 2}}},
 	},
 	
 	juice_corn =
@@ -50,6 +51,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"corn", 2}}},
 	},
 	
 	juice_eggplant =
@@ -64,6 +66,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"eggplant", 2}}},
 	},
 	
 	juice_pumpkin =
@@ -78,6 +81,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"pumpkin", 2}}},
 	},
 	
 	juice_lichen =
@@ -92,6 +96,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"cutlichen", 2}}},
 	},
 	
 	juice_cactus =
@@ -106,6 +111,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"cactus_meat", 2}}},
 	},
 	
 	juice_garlic =
@@ -120,6 +126,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"garlic", 2}}},
 	},
 	
 	juice_asparagus =
@@ -134,6 +141,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"asparagus", 2}}},
 	},
 	
 	juice_onion =
@@ -148,6 +156,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"onion", 2}}},
 	},
 	
 	juice_tomato =
@@ -162,6 +171,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"tomato", 2}}},
 	},
 	
 	juice_potato =
@@ -176,6 +186,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"potato", 2}}},
 	},
 	
 	juice_pepper =
@@ -192,6 +203,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"pepper", 2}}},
 	},
 	
 	juice_redcap =
@@ -206,6 +218,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"red_cap", 2}}},
 	},
 	
 	juice_greencap =
@@ -220,6 +233,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"green_cap", 2}}},
 	},
 	
 	juice_bluecap =
@@ -234,6 +248,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"blue_cap", 2}}},
 	},
 	
 	juice_mooncap =
@@ -249,6 +264,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"moon_cap", 2}}},
 		prefabs = { "buff_sleepresistance" },
         oneatenfn = function(inst, eater)
             if eater.components.grogginess ~= nil and
@@ -272,6 +288,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kelp", 2}}},
 	},
 	
 	juice_avocado =
@@ -286,6 +303,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"rock_avocado_fruit_ripe", 2}}},
 	},
 	
 	juice_whitecap =
@@ -300,6 +318,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_white_cap", 2}}},
 	},
 	
 	juice_aloe =
@@ -314,6 +333,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_aloe", 2}}},
 	},
 	
 	juice_radish =
@@ -328,6 +348,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_radish", 2}}},
 	},
 	
 	juice_sweetpotato =
@@ -342,6 +363,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_sweetpotato", 2}}},
 	},
 	
 	juice_lotus =
@@ -356,6 +378,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_lotus_flower", 2}}},
 	},
 	
 	juice_seaweeds =
@@ -370,6 +393,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_seaweeds", 2}}},
 	},
 	
 	juice_taroroot =
@@ -384,6 +408,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_taroroot", 2}}},
 	},
 	
 	juice_waterycress =
@@ -398,6 +423,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_waterycress", 2}}},
 	},
 	
 	juice_cucumber =
@@ -412,6 +438,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_cucumber", 2}}},
 	},
 	
 	juice_parznip =
@@ -426,6 +453,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_parznip", 2}}},
 	},
 	
 	juice_turnip =
@@ -440,6 +468,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_turnip", 2}}},
 	},
 	
 	juice_fennel =
@@ -454,6 +483,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_fennel", 2}}},
 	},
 	
 	beer =
@@ -469,6 +499,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ALCOHOL,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"kyno_wheat", 2}}},
 		prefabs = { "kyno_strengthbuff" },
 		oneatenfn = function (inst, eater)
 			eater.components.debuffable:AddDebuff("kyno_strengthbuff", "kyno_strengthbuff")
@@ -488,6 +519,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ALCOHOL,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"kyno_spotspice_leaf", 2}}},
 		prefabs = { "kyno_strengthbuff_med" },
 		oneatenfn = function (inst, eater)
 			eater.components.debuffable:AddDebuff("kyno_strengthbuff_med", "kyno_strengthbuff_med")
@@ -507,6 +539,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"kyno_honey", 2}}},
 		prefabs = { "kyno_dmgreductionbuff" },
 		oneatenfn = function (inst, eater)
 			eater.components.debuffable:AddDebuff("kyno_dmgreductionbuff", "kyno_dmgreductionbuff")
@@ -526,6 +559,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RESANITY,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_piko_orange", 1}, {"green_cap", 1}}},
 		prefabs = { "kyno_sanityregenbuff" },
         oneatenfn = function(inst, eater)
             eater.components.debuffable:AddDebuff("kyno_sanityregenbuff", "kyno_sanityregenbuff")
@@ -545,6 +579,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HEALTH_REGEN,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_piko", 1}, {"red_cap", 1}}},
 		prefabs = { "healthregenbuff" },
         oneatenfn = function(inst, eater)
             eater.components.debuffable:AddDebuff("healthregenbuff", "healthregenbuff")

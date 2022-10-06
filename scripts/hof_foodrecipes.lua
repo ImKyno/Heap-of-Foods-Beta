@@ -16,6 +16,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 3}, {"honey", 1}}},
 	},
 	
 	bisque =
@@ -30,6 +31,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "high",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_limpets", 3}, {"ice", 1}}},
 	},
 	
 	jellyopop = 
@@ -46,6 +48,7 @@ local kyno_foods =
 		cooktime = 0.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pondfish", 1}, {"ice", 1}, {"twigs", 1}}},
 	},
 	
 	sharkfinsoup = 
@@ -61,6 +64,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NAUGHTINESS,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"twigs", 3}}},
 		oneatenfn = function(inst, eater)
 			SpawnPrefab("krampuswarning_lvl3").Transform:SetPosition(inst.Transform:GetWorldPosition())
 			local krampus = SpawnPrefab("krampus")
@@ -85,6 +89,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_roe", 1}, {"corn", 3}}},
 	},
 	
 	tropicalbouillabaisse =
@@ -103,6 +108,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pondfish", 1}, {"pondeel", 1}, {"wobster_sheller_land", 1}, {"barnacle", 1}}},
 	},
 	
 	-- Hamlet Foods.
@@ -118,6 +124,7 @@ local kyno_foods =
 		cooktime = 3.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_beanbugs", 3}, {"monstermeat", 1}}},
 	},
 	
 	gummy_cake =
@@ -132,6 +139,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "high",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_gummybug", 1}, {"honey", 3}}},
 	},
 	
 	hardshell_tacos =
@@ -146,6 +154,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "high",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"slurtle_shellpieces", 2}, {"tomato", 2}}},
 	},
 	
 	icedtea = 
@@ -163,6 +172,7 @@ local kyno_foods =
 		cooktime = 0.5,
 		potlevel = "high",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_piko_orange", 2}, {"honey", 1}, {"ice", 1}}},
 	},
 	
 	tea = 
@@ -180,6 +190,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_piko_orange", 2}, {"honey", 2}}},
 	},
 	
 	nettlelosange = 
@@ -196,6 +207,7 @@ local kyno_foods =
 		cooktime = .5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"firenettles", 1}, {"twigs", 3}}},
 	},
 	
 	snakebonesoup = 
@@ -210,6 +222,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"boneshard", 2}, {"meat", 2}}},
 	},
 	
 	steamedhamsandwich = 
@@ -224,10 +237,10 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 2}, {"foliage", 1}, {"garlic", 1}}},
 	},
 	
 	-- The Gorge Foods.
-	
 	gorge_bread = 
 	{
 		test = function(cooker, names, tags) return (names.kyno_flour and names.kyno_flour == 3 or (names.kyno_flour and names.kyno_flour == 4)) end,
@@ -241,6 +254,7 @@ local kyno_foods =
 		stacksize = 3,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 4}}},
 	},
 	
 	gorge_potato_chips = 
@@ -257,6 +271,7 @@ local kyno_foods =
 		stacksize = 3,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"potato", 3}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_vegetable_soup =
@@ -272,6 +287,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"carrot", 1}, {"onion", 1}, {"corn", 1}, {"foliage", 1}}},
 	},
 	
 	gorge_jelly_sandwich = 
@@ -287,6 +303,7 @@ local kyno_foods =
 		cooktime = .5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"gorge_bread", 1}, {"berries", 3}}},
 	},
 	
 	gorge_fish_stew =
@@ -302,6 +319,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_salmonfish", 2}, {"asparagus", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_onion_cake =
@@ -316,6 +334,7 @@ local kyno_foods =
 		cooktime = .75,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_turnip", 3}, {"kyno_flour", 1}}},
 	},
 	
 	gorge_potato_pancakes = 
@@ -330,6 +349,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"potato", 3}, {"kyno_flour", 1}}},
 	},
 	
 	gorge_potato_soup = 
@@ -344,6 +364,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"potato", 3}, {"succulent_picked", 1}}},
 	},
 	
 	gorge_fishball_skewers = 
@@ -358,6 +379,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pondfish", 2}, {"twigs", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_meat_skewers =
@@ -372,6 +394,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_bacon", 2}, {"twigs", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_stone_soup = 
@@ -387,6 +410,7 @@ local kyno_foods =
 		cooktime = .60,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"rocks", 1}, {"carrot", 3}}},
 	},
 	
 	gorge_croquette = 
@@ -401,6 +425,7 @@ local kyno_foods =
 		cooktime = .75,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"potato", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 	},
 	
 	gorge_roast_vegetables = 
@@ -415,6 +440,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"onion_cooked", 1}, {"asparagus_cooked", 1}, {"garlic_cooked", 1}, {"carrot_cooked", 1}}},
 	},
 	
 	gorge_meatloaf =
@@ -429,6 +455,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_bacon", 2}, {"kyno_flour", 1}, {"onion", 1}}},
 	},
 	
 	gorge_carrot_soup =
@@ -443,6 +470,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"carrot", 3}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_fishpie =
@@ -458,6 +486,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_salmonfish", 1}, {"kyno_flour", 1}, {"kyno_radish", 2}}},
 	},
 
 	gorge_fishchips =
@@ -472,6 +501,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pondfish", 1}, {"kyno_flour", 1}, {"potato", 2}}},
 	},
 	
 	gorge_meatpie = 
@@ -487,6 +517,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 1}, {"kyno_flour", 2}, {"tomato", 1}}},
 	},
 	
 	gorge_sliders = 
@@ -501,6 +532,7 @@ local kyno_foods =
 		cooktime = 0.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_bacon", 2}, {"kyno_flour", 1}, {"foliage", 1}}},
 	},
 	
 	gorge_jelly_roll = 
@@ -516,6 +548,7 @@ local kyno_foods =
 		cooktime = .5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"berries", 3}, {"kyno_flour", 1}}},
 	},
 	
 	gorge_carrot_cake =
@@ -531,6 +564,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CAKE,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"carrot", 3}, {"kyno_flour", 1}}},
 	},
 	
 	gorge_garlicmashed =
@@ -546,6 +580,7 @@ local kyno_foods =
 		cooktime = .60,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"garlic", 2}, {"potato", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_garlicbread = 
@@ -560,6 +595,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"gorge_bread", 1}, {"garlic", 3}}},
 	},
 	
 	gorge_tomato_soup = 
@@ -575,6 +611,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"tomato", 3}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_sausage =
@@ -589,6 +626,7 @@ local kyno_foods =
 		cooktime = 0.8,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_bacon", 3}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_candiedfish =
@@ -603,6 +641,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_salmonfish", 2}, {"kyno_syrup", 2}}},
 	},
 	
 	gorge_stuffedmushroom =
@@ -618,6 +657,7 @@ local kyno_foods =
 		cooktime = 0.8,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_white_cap", 2}, {"kyno_aloe", 2}}},
 	},
 	
 	gorge_bruschetta = 
@@ -632,6 +672,7 @@ local kyno_foods =
 		cooktime = 1.7,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"gorge_bread", 1}, {"kyno_spotspice", 1}, {"tomato", 2}}},
 	},
 	
 	gorge_hamburger =
@@ -647,6 +688,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"gorge_bread", 1}, {"meat", 1}, {"kyno_bacon", 1}, {"foliage", 1}}},
 	},
 	
 	gorge_fishburger =
@@ -661,6 +703,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"gorge_bread", 1}, {"kyno_salmonfish", 1}, {"foliage", 2}}},
 	},
 	
 	gorge_mushroomburger =
@@ -675,6 +718,7 @@ local kyno_foods =
 		cooktime = .70,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"gorge_bread", 1}, {"foliage", 1}, {"kyno_white_cap", 2}}},
 	},
 	
 	gorge_fish_steak =
@@ -689,6 +733,7 @@ local kyno_foods =
 		cooktime = 1.2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_salmonfish_cooked", 1}, {"foliage", 1}, {"kyno_spotspice", 2}}},
 	},
 	
 	gorge_curry = 
@@ -704,6 +749,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 1}, {"carrot", 1}, {"kyno_spotspice", 2}}},
 	},
 	
 	gorge_spaghetti =
@@ -718,6 +764,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 1}, {"kyno_flour", 1}, {"kyno_spotspice", 1}, {"tomato", 1}}},
 	},
 	
 	gorge_poachedfish =
@@ -732,6 +779,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_salmonfish", 1}, {"foliage", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_shepherd_pie =
@@ -746,6 +794,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 1}, {"onion", 1}, {"garlic", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_candy =
@@ -761,6 +810,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HANDS,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_syrup", 1}, {"honey", 3}}},
 		prefabs = { "kyno_hastebuff" },
         oneatenfn = function(inst, eater)
             eater.components.debuffable:AddDebuff("kyno_hastebuff", "kyno_hastebuff")
@@ -780,6 +830,7 @@ local kyno_foods =
 		cooktime = 1.2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"berries", 1}, {"kyno_syrup", 1}, {"kyno_flour", 2}}},
 	},
 	
 	gorge_berry_tart =
@@ -795,6 +846,7 @@ local kyno_foods =
 		cooktime = 1.2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"berries", 2}, {"kyno_flour", 1}, {"honey", 1}}},
 	},
 	
 	gorge_macaroni =
@@ -810,6 +862,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 2}, {"goatmilk", 2}}},
 	},
 	
 	gorge_bagel_and_fish = 
@@ -824,6 +877,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"gorge_bread", 1}, {"goatmilk", 1}, {"kyno_salmonfish"}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_grilled_cheese =
@@ -839,6 +893,7 @@ local kyno_foods =
 		cooktime = 0.5,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"gorge_bread", 2}, {"cheese_yellow", 1}, {"twigs", 1}}},
 	},
 	
 	gorge_creammushroom = 
@@ -854,6 +909,7 @@ local kyno_foods =
 		cooktime = .75,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"goatmilk", 1}, {"succulent_picked", 1}, {"kyno_white_cap", 2}}},
 	},
 	
 	gorge_manicotti =
@@ -868,6 +924,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"goatmilk", 1}, {"kyno_spotspice", 1}, {"tomato", 1}}},
 	},
 	
 	gorge_fettuccine = 
@@ -881,6 +938,7 @@ local kyno_foods =
 		sanity = 40,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"garlic", 1}, {"succulent_picked", 1}, {"goatmilk", 1}}},
 	},
 	
 	gorge_onion_soup =
@@ -894,6 +952,7 @@ local kyno_foods =
 		sanity = -5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"goatmilk", 1}, {"onion", 2}}},
 	},
 	
 	gorge_breaded_cutlet =
@@ -907,6 +966,7 @@ local kyno_foods =
 		sanity = 15,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 2}, {"kyno_flour", 2}}},
 	},
 	
 	gorge_creamy_fish =
@@ -920,6 +980,7 @@ local kyno_foods =
 		sanity = 30,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_salmonfish", 1}, {"goatmilk", 1}, {"carrot", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_pot_roast =
@@ -935,6 +996,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 2}, {"kyno_aloe", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_crab_cake = 
@@ -950,6 +1012,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_crabmeat", 2}, {"succulent_picked", 1}, "kyno_flour", 1}},
 	},
 	
 	gorge_steak_frites =
@@ -964,6 +1027,7 @@ local kyno_foods =
 		cooktime = .75,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 2}, {"potato", 2}}},
 	},
 	
 	gorge_shooter_sandwich =
@@ -978,11 +1042,12 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 2}, {"gorge_bread", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_bacon_wrapped =
 	{
-		test = function(cooker, names, tags) return tags.meat and tags.meat > 1 and ((names.kyno_bacon or 0) + (names.kyno_bacon_cooked or 0) >= 2) and not tags.inedible and not names.gorge_bread 
+		test = function(cooker, names, tags) return (tags.meat and tags.meat > 1) and ((names.kyno_bacon or 0) + (names.kyno_bacon_cooked or 0) >= 2) and not tags.inedible and not names.gorge_bread 
 		and not names.kyno_spotspice end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -993,6 +1058,7 @@ local kyno_foods =
 		cooktime = .75,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 2}, {"kyno_bacon", 2}}},
 	},
 	
 	gorge_crab_roll =
@@ -1007,6 +1073,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_crabmeat", 1}, {"foliage", 1}, {"kyno_white_cap", 1}, {"kyno_flour", 1}}},
 	},
 	
 	gorge_crab_ravioli =
@@ -1021,6 +1088,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_crabmeat", 1}, {"kyno_flour", 1}, {"goatmilk", 1}, {"asparagus", 1}}},
 	},
 	
 	gorge_caramel_cube =
@@ -1036,6 +1104,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KYNO,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_syrup", 2}, {"goatmilk", 2}}},
 	},
 	
 	gorge_scone =
@@ -1050,6 +1119,7 @@ local kyno_foods =
 		cooktime = 0.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"berries", 1}, {"kyno_flour", 2}, {"goatmilk", 1}}},
 	},
 	
 	gorge_cheesecake =
@@ -1064,6 +1134,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"berries", 2}, {"kyno_flour", 1}, {"goatmilk", 1}}},
 	},
 	
 	kyno_syrup =
@@ -1079,6 +1150,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_sap", 4}}},
 	},
 	
 	-- Winter's Feast Foods.
@@ -1094,12 +1166,12 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"berries", 2}, {"honey", 2}}},
 	},
 	
 	festive_bibingka =
 	{
-		test = function(cooker, names, tags) return (names.succulent_picked and names.succulent_picked >= 2) and tags.foliage
-		and tags.veggie end,
+		test = function(cooker, names, tags) return (names.succulent_picked and names.succulent_picked >= 2) and tags.foliage and tags.veggie end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -1109,12 +1181,12 @@ local kyno_foods =
 		cooktime = 1.3,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"succulent_picked", 2}, {"foliage", 1}, {"carrot", 1}}},
 	},
 	
 	festive_cabbagerolls =
 	{
-		test = function(cooker, names, tags) return (names.kyno_waterycress and names.kyno_waterycress >= 2) and names.kyno_syrup 
-		and not names.kyno_flour end,
+		test = function(cooker, names, tags) return (names.kyno_waterycress and names.kyno_waterycress >= 2) and names.kyno_syrup and not names.kyno_flour end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -1124,12 +1196,12 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_waterycress", 2}, {"kyno_syrup", 2}}},
 	},
 	
 	festive_fishdish =
 	{
-		test = function(cooker, names, tags) return tags.fish and names.succulent_picked and not tags.sweetener and not
-		names.wobster_sheller_land end,
+		test = function(cooker, names, tags) return tags.fish and names.succulent_picked and not tags.sweetener and not names.wobster_sheller_land end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,
@@ -1139,6 +1211,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pondfish", 2}, {"succulent_picked", 2}}},
 	},
 	
 	festive_goodgravy =
@@ -1153,6 +1226,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_syrup", 1}, {"kyno_flour", 1}, {"meat", 1}}},
 	},
 	
 	festive_latkes =
@@ -1167,12 +1241,12 @@ local kyno_foods =
 		cooktime = .8,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"potato", 3}, {"goatmilk", 1}}},
 	},
 	
 	festive_lutefisk =
 	{
-		test = function(cooker, names, tags) return (tags.fish and tags.fish >= 2) and (names.pepper or names.pepper_cooked) 
-		and tags.foliage end,
+		test = function(cooker, names, tags) return (tags.fish and tags.fish >= 2) and (names.pepper or names.pepper_cooked) and tags.foliage end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,
@@ -1184,6 +1258,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pondfish", 2}, {"pepper", 1}, {"foliage", 1}}},
 	},
 	
 	festive_mulledpunch = 
@@ -1198,6 +1273,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_syrup", 1}, {"honey", 2}, {"ice", 1}}},
 	},
 	
 	festive_panettone = 
@@ -1212,6 +1288,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 2}, {"pomegranate", 2}}},
 	},
 	
 	festive_pavlova =
@@ -1226,12 +1303,12 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"honey", 1}, {"cave_banana", 2}}},
 	},
 	
 	festive_pickledherring =
 	{
-		test = function(cooker, names, tags) return tags.fish and (names.kyno_spotspice and names.kyno_spotspice >= 2) and not
-		names.kyno_flour end,
+		test = function(cooker, names, tags) return tags.fish and (names.kyno_spotspice and names.kyno_spotspice >= 2) and not names.kyno_flour end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,
@@ -1241,6 +1318,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pondfish", 2}, {"kyno_spotspice", 2}}},
 	},
 	
 	festive_polishcookies = 
@@ -1255,6 +1333,7 @@ local kyno_foods =
 		cooktime = .8,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"goatmilk", 1}, {"honey", 2}}},
 	},
 	
 	festive_pumpkinpie =
@@ -1269,6 +1348,7 @@ local kyno_foods =
 		cooktime = 1.8,
 		potlevel = "med",
 		floater = {"med", nil, 0,65},
+		card_def = {ingredients = {{"pumpkin", 1}, {"kyno_flour", 1}, {"honey", 1}}},
 	},
 	
 	festive_roastedturkey =
@@ -1284,6 +1364,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"drumstick", 1}, {"succulent_picked", 1}, {"kyno_spotspice", 2}}},
 	},
 	
 	festive_stuffing =
@@ -1298,6 +1379,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"carrot", 2}, {"berries", 1}}},
 	},
 	
 	festive_sweetpotato =
@@ -1313,6 +1395,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 2}, {"kyno_sweetpotato", 2}}},
 	},
 	
 	festive_tamales =
@@ -1327,6 +1410,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"goatmilk", 1}, {"corn", 2}}},
 	},
 	
 	festive_tourtiere =
@@ -1342,10 +1426,10 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 1}, {"kyno_flour", 1}, {"kyno_bacon", 1}, {"potato", 1}}},
 	},
 	
 	-- Unimplemented Foods. 
-	
 	slaw = 
 	{
 		test = function(cooker, names, tags) return ((names.kyno_fennel or 0) + (names.kyno_fennel_cooked or 0) >= 2) and (names.kyno_radish or names.kyno_radish_cooked) end,
@@ -1358,6 +1442,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "high",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_fennel", 2}, {"kyno_radish", 2}}},
 	},
 	
 	lotusbowl = 
@@ -1372,6 +1457,7 @@ local kyno_foods =
 		cooktime = 0.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_lotus_flower", 3}, {"twigs", 1}}},
 	},
 	
 	poi = 
@@ -1386,11 +1472,12 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_taroroot", 3}, {"carrot", 1}}},
 	},
 	
 	cucumbersalad =
 	{
-		test = function(cooker, names, tags) return names.kyno_cucumber and tags.veggie and tags.veggie >= 2 and not tags.meat and not tags.inedible 
+		test = function(cooker, names, tags) return names.kyno_cucumber and (tags.veggie and tags.veggie >= 2) and not tags.meat and not tags.inedible 
 		and not tags.egg and not tags.sweetener and not tags.fruit and not (names.kyno_taroroot or names.kyno_taroroot_cooked) end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -1402,6 +1489,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DRY,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_cucumber", 2}, {"kyno_seaweeds", 2}}},
 		prefabs = { "buff_moistureimmunity" },
         oneatenfn = function(inst, eater)
             eater.components.debuffable:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
@@ -1410,8 +1498,8 @@ local kyno_foods =
 	
 	waterycressbowl =
 	{
-		test = function(cooker, names, tags) return (names.kyno_waterycress and names.kyno_waterycress >= 2) and names.succulent_picked and tags.veggie and tags.veggie >= 3 and not tags.inedible and not tags.egg
-		and not tags.sweetener and not tags.fruit and not tags.meat end,
+		test = function(cooker, names, tags) return (names.kyno_waterycress and names.kyno_waterycress >= 2) and names.succulent_picked and
+		(tags.veggie and tags.veggie >= 3) and not tags.inedible and not tags.egg and not tags.sweetener and not tags.fruit and not tags.meat end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SLOW,
@@ -1423,10 +1511,10 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_waterycress", 2}, {"succulent_picked", 1}, {"kelp", 1}}},
 	},
 	
-	-- Secret / Custom Foods. Why are you here by the way?
-	
+	-- Secret / Custom Foods. Why are you here by the way?	
 	bowlofgears = 
 	{
 		test = function(cooker, names, tags) return (names.gears and names.gears >= 3) and not tags.frozen end,
@@ -1440,6 +1528,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GEARS,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"gears", 3}, {"twigs", 1}}},
 	},
 	
 	longpigmeal = 
@@ -1456,6 +1545,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HURT,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_humanmeat", 4}}},
 	},
 	
 	duckyouglermz = -- Keep this recipe updated in the postinit in case of changes!!
@@ -1471,6 +1561,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLERMZ,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"poop", 1}, {"guano", 1}, {"glommerfuel", 1}, {"kyno_salt", 1}}},
 		tags = {"preparedpoop"},
 		oneatenfn = function(inst, eater)
             if eater.components.bloomness ~= nil and eater:HasTag("plantkin")
@@ -1496,6 +1587,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CAT,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pondfish", 1}, {"kyno_flour", 1}, {"kyno_spotspice", 2}}},
 	},
 	
 	katfood =
@@ -1511,6 +1603,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KAT,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"goatmilk", 1}, {"kyno_syrup", 1}, {"kyno_syrup", 2}}},
 	},
 	
 	bowlofpopcorn =
@@ -1525,11 +1618,13 @@ local kyno_foods =
 		cooktime = 1.2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"corn", 3}, {"kyno_salt", 1}}},
 	},
 	
 	figjuice =
 	{
-		test = function(cooker, names, tags) return (names.fig or names.fig_cooked) and (tags.frozen and tags.frozen >= 2) and not tags.meat and not tags.fish and not tags.inedible end,
+		test = function(cooker, names, tags) return (names.fig or names.fig_cooked) and (tags.frozen and tags.frozen >= 2) and not tags.meat 
+		and not tags.fish and not tags.inedible end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
@@ -1541,12 +1636,13 @@ local kyno_foods =
 		cooktime = .5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"fig", 2}, {"ice", 2}}},
 	},
 	
 	coconutwater =
 	{
-		test = function(cooker, names, tags) return (names.kyno_kokonut_halved and names.kyno_kokonut_halved == 1) and (tags.frozen and tags.frozen >= 2) and names.twigs
-		and not names.kyno_kokonut_cooked and not tags.meat and not tags.fish end,
+		test = function(cooker, names, tags) return (names.kyno_kokonut_halved and names.kyno_kokonut_halved == 1) and (tags.frozen and tags.frozen >= 2) 
+		and names.twigs and not names.kyno_kokonut_cooked and not tags.meat and not tags.fish end,
 		priority = 20,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SLOW,
@@ -1559,6 +1655,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DRY,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_kokonut_halved", 1}, {"ice", 2}, {"twigs", 1}}},
 		prefabs = { "buff_moistureimmunity" },
         oneatenfn = function(inst, eater)
             eater.components.debuffable:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
@@ -1578,6 +1675,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"deerclops_eyeball", 1}, {"smallmeat", 3}}},
 		oneatenfn = function(inst, eater)
 			SpawnPrefab("deerclopswarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
 			TheWorld.components.deerclopsspawner:SummonMonster(eater)
@@ -1597,6 +1695,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOUL,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_bottle_soul", 2}, {"boneshard", 2}}},
 		tags = {"soulstew"},
 		oneatenfn = function(inst, eater)
 			if eater:HasTag("soulstealer") then
@@ -1620,6 +1719,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FORTUNE,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"papyrus", 1}, {"honey", 2}}},
 		oneatenfn = function(inst, eater)
 			if math.random() < 0.01 then
 				if math.random() < 0.50 then
@@ -1657,6 +1757,7 @@ local kyno_foods =
 		cooktime = 1.6,
 		potlevel = "high",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 1}, {"carrot", 1}, {"berries", 1}, {"horn", 1}}},
 		prefabs = { "boneshard" },
 		oneatenfn = function(inst, eater)
 			local bones = SpawnPrefab("boneshard")
@@ -1681,6 +1782,7 @@ local kyno_foods =
 		cooktime = 2.3,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"goatmilk", 2}, {"kyno_spotspice", 2}}},
 	},
 	
 	cheese_white = 
@@ -1696,6 +1798,7 @@ local kyno_foods =
 		cooktime = 2.3,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"goatmilk", 2}, {"kyno_spotspice", 1}, {"garlic", 1}}},
 	},
 	
 	cheese_koalefant =
@@ -1711,6 +1814,7 @@ local kyno_foods =
 		cooktime = 2.3,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_milk_koalefant", 2}, {"kyno_spotspice", 2}}},
 	},
 
 	milk_box = 
@@ -1728,6 +1832,7 @@ local kyno_foods =
 		cooktime = 1.1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"ice", 2}, {"goatmilk", 2}}},
 	},
 	
 	honeyjar =
@@ -1742,12 +1847,13 @@ local kyno_foods =
 		cooktime = 1.6,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"honeycomb", 1}, {"honey", 3}}},
 	},
 	
 	watercup =
 	{
-		test = function(cooker, names, tags) return (not tags.frozen or tags.frozen <= 2) and not tags.inedible and not tags.meat and not tags.fish
-		and not tags.veggie and not tags.fruit and not tags.milk end,
+		test = function(cooker, names, tags) return (tags.frozen and tags.frozen == 2) and not tags.meat and not tags.fish and not tags.veggie 
+		and not tags.fruit and not tags.milk end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = 9000000,
@@ -1758,8 +1864,9 @@ local kyno_foods =
 		sanity = 1,
 		cooktime = .1,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WATER,
-		potlevel = "med",
+		potlevel = "low",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"ice", 2}, {"twigs", 2}}},
 	},
 	
 	crab_artichoke =
@@ -1777,6 +1884,7 @@ local kyno_foods =
 		cooktime = 2.2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_crabmeat", 2}, {"kyno_seaweeds", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	poisonfrogglebunwich =
@@ -1793,6 +1901,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FROG,
         potlevel = "med",
         floater = {"med", nil, 0.55},
+		card_def = {ingredients = {{"kyno_poison_froglegs", 1}, {"kelp", 1}, {"twigs", 2}}},
 		prefabs = { "kyno_frogbuff" },
         oneatenfn = function(inst, eater)
 			eater.components.debuffable:AddDebuff("kyno_frogbuff", "kyno_frogbuff")
@@ -1813,6 +1922,7 @@ local kyno_foods =
 		cooktime = 1.6,
 		potlevel = "med",
 		floater = {"med", nil, 0.55},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_spotspice", 1}, {"pepper", 2}}},
 	},
 }
 
