@@ -13,8 +13,8 @@ local prefabs =
 	
 	"kyno_milk_beefalo",
 	"kyno_milk_koalefant",
-	"kyno_milk_deer",
-	"kyno_milk_spat",
+	-- "kyno_milk_deer",
+	-- "kyno_milk_spat",
 	
 	"spoiled_food",
 }
@@ -228,6 +228,6 @@ local function spatfn()
 end
 
 return Prefab("kyno_milk_beefalo", beefalofn, assets, prefabs),
-Prefab("kyno_milk_koalefant", koalefantfn, assets, prefabs),
-Prefab("kyno_milk_deer", deerfn, assets, prefabs),
-Prefab("kyno_milk_spat", spatfn, assets, prefabs)
+Prefab("kyno_milk_koalefant", koalefantfn, assets, prefabs)
+-- Prefab("kyno_milk_deer", deerfn, assets, prefabs),
+-- Prefab("kyno_milk_spat", spatfn, assets, prefabs)

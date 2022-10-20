@@ -260,7 +260,7 @@ local kyno_foods =
 	gorge_potato_chips = 
 	{
 		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 3) and names.kyno_spotspice 
-		and not (names.garlic or names.garlic_cooked) and not tags.fish and not tags.meat end,
+		and not (names.garlic or names.garlic_cooked) and not tags.fish and not tags.meat and not names.kyno_salt end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
@@ -1263,7 +1263,8 @@ local kyno_foods =
 	
 	festive_mulledpunch = 
 	{
-		test = function(cooker, names, tags) return names.kyno_syrup and tags.sweetener and tags.frozen and not names.forgetmelots end,
+		test = function(cooker, names, tags) return names.kyno_syrup and tags.sweetener and tags.frozen and not names.forgetmelots 
+		and not tags.meat and not tags.berries end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
@@ -1923,6 +1924,52 @@ local kyno_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.55},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_spotspice", 1}, {"pepper", 2}}},
+	},
+	
+	chocolatebar =
+	{
+		test = function(cooker, names, tags) return tags.milk and tags.sweetener and (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2)
+		and not tags.meat and not tags.fish and not tags.veggie and not tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SLOW,
+		health = -5,
+		hunger = 12.5,
+		sanity = 33,
+		cooktime = 2,
+		potlevel = "low",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"goatmilk", 1}, {"honey", 1}, {"kyno_twiggynuts", 2}}},
+	},
+	
+	tricolordango =
+	{
+		test = function(cooker, names, tags) return tags.milk and names.kyno_sugartree_petals and names.kyno_flour and names.twigs end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = 30,
+		hunger = 12.5,
+		sanity = 5,
+		cooktime = 1,
+		potlevel = "low",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"goatmilk", 1}, {"honey", 1}, {"kyno_flour", 1}, {"kyno_sugartree_petals", 1}}},
+	},
+	
+	friesfrench =
+	{
+		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 2) and names.kyno_oil and names.kyno_salt end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = 30,
+		hunger = 32.5,
+		sanity = 10,
+		cooktime = 1,
+		potlevel = "low",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"potato", 2}, {"kyno_oil", 1}, {"kyno_salt", 1}}},
 	},
 }
 

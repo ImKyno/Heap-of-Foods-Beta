@@ -121,11 +121,10 @@ AddPrototyperDef("kyno_serenityisland_shop",
 local DefaultAtlas 			= "images/inventoryimages.xml"
 local ModAtlas     			= "images/inventoryimages/hof_inventoryimages.xml"
 
-local KynFlour 				= AddRecipe2("kyno_flour_p", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.MEALING_ONE, 
+local KynFlour 				= AddRecipe2("kyno_flour", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.MEALING_ONE, 
 	{
 		nounlock 			= true, 
 		actionstr 			= "MEALGRINDER", 
-		product				= "kyno_flour",
 		numtogive 			= 3, 
 		atlas 				= DefaultAtlas, 
 		image 				= "quagmire_flour.tex",
@@ -133,11 +132,10 @@ local KynFlour 				= AddRecipe2("kyno_flour_p", {Ingredient("kyno_wheat", 2, Mod
 	{"CRAFTING_STATION"}
 )
 
-local KynSpice 				= AddRecipe2("kyno_spotspice_p", {Ingredient("kyno_spotspice_leaf", 2, ModAtlas)}, TECH.MEALING_ONE, 
+local KynSpice 				= AddRecipe2("kyno_spotspice", {Ingredient("kyno_spotspice_leaf", 2, ModAtlas)}, TECH.MEALING_ONE, 
 	{
 		nounlock 			= true, 
 		actionstr 			= "MEALGRINDER", 
-		product				= "kyno_spotspice",
 		numtogive 			= 3, 
 		atlas 				= DefaultAtlas, 
 		image 				= "quagmire_spotspice_ground.tex",
@@ -145,11 +143,10 @@ local KynSpice 				= AddRecipe2("kyno_spotspice_p", {Ingredient("kyno_spotspice_
 	{"CRAFTING_STATION"}
 )
 
-local KynSalt 				= AddRecipe2("kyno_salt_p", {Ingredient("saltrock", 2)}, TECH.MEALING_ONE, 
+local KynSalt 				= AddRecipe2("kyno_salt", {Ingredient("saltrock", 2)}, TECH.MEALING_ONE, 
 	{
 		nounlock 			= true, 
 		actionstr 			= "MEALGRINDER", 
-		product				= "kyno_salt",
 		numtogive 			= 3, 
 		atlas 				= DefaultAtlas, 
 		image 				= "quagmire_salt.tex",
@@ -165,6 +162,17 @@ local KynBacon 				= AddRecipe2("kyno_bacon_p", {Ingredient("smallmeat", 1)}, TE
 		numtogive 			= 2, 
 		atlas 				= DefaultAtlas, 
 		image 				= "quagmire_smallmeat.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+local KynOil				= AddRecipe2("kyno_oil", {Ingredient("corn", 1), Ingredient("seeds", 1), Ingredient("petals", 2)}, TECH.MEALING_ONE,
+	{
+		nounlock			= true,
+		actionstr			= "MEALGRINDER",
+		numtogive			= 3,
+		atlas				= ModAtlas,
+		image				= "kyno_oil.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -214,7 +222,7 @@ local KynBucket				= AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1)
 	},
 	{"TOOLS"}
 )
-SortAfter("kyno_bucket_empty", "golden_farm_hoe", "TOOLS")
+SortAfter("kyno_bucket_empty", "goldenpitchfork", "TOOLS")
 
 local KynBrewbook			= AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ingredient("kyno_wheat", 1, ModAtlas)}, TECH.SCIENCE_ONE,
 	{
@@ -619,6 +627,19 @@ if WARLY_MEALGRINDER == 1 then
 			image 				= "quagmire_smallmeat.tex",
 		},
 		{"CRAFTING_STATION"}
+	)
+	
+	local WarlyOil				= AddRecipe2("kyno_oil_w", {Ingredient("corn", 1), Ingredient("seeds", 1), Ingredient("petals", 2)}, TECH.FOODPROCESSING_ONE, 
+	    {
+			nounlock			= true,
+			actionstr			= "MEALGRINDER",
+			product				= "kyno_oil",
+			builder_tag			= "professionalchef",
+			numtogive			= 3,
+			atlas				= DefaultAtlas,
+			image				= "kyno_oil.tex",
+		},
+	{"CRAFTING_STATION"}
 	)
 end
 

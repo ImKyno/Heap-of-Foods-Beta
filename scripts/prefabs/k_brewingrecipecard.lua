@@ -74,6 +74,7 @@ local function fn()
 	
 	inst:AddComponent("named")
 	inst:AddComponent("erasablepaper")
+	inst:AddComponent("tradable")
 
     inst:AddComponent("inspectable")
 	inst.components.inspectable.getspecialdescription = GetDesc

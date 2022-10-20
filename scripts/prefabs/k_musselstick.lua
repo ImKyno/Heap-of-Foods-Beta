@@ -24,6 +24,8 @@ local DAMAGE_SCALE = 0.5
 local function onpickedfn(inst)
     inst.AnimState:PlayAnimation("idle_empty")
     inst.AnimState:PushAnimation("idle_empty", true)
+	
+	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant")
 	inst:RemoveTag("stick_full")
 end
 
@@ -31,6 +33,8 @@ local function onregenfn(inst)
     inst.AnimState:PlayAnimation("empty_to_small")
     inst.AnimState:PlayAnimation("small_to_full")
 	inst.AnimState:PushAnimation("idle_full", true)
+	
+	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant")
 	inst:AddTag("stick_full")
 end
 

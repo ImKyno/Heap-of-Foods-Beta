@@ -299,10 +299,13 @@ end))
 -- Action for reading the Brewbook.
 -- I'm not using simplebook component/action because it has some problems.
 AddAction("READBREWBOOK", STRINGS.ACTIONS.READ, function(act)
-    local target = act.target or act.invobject
-    if target ~= nil and act.doer ~= nil then
-		if target.components.brewbook ~= nil then
-			target.components.brewbook:Read(act.doer)
+    local targ = act.target or act.invobject
+    if targ ~= nil and act.doer ~= nil then
+		if targ.components.book ~= nil and act.doer.components.reader ~= nil then
+            local success, reason = act.doer.components.reader:Read(targ)
+	        return success, reason
+		elseif targ.components.brewbook ~= nil then
+			targ.components.brewbook:Read(act.doer)
 			return true
 		end
 	end
@@ -313,9 +316,7 @@ ACTIONS.READBREWBOOK.mount_valid = true
 ACTIONS.READBREWBOOK.encumbered_valid = true
 
 AddComponentAction("INVENTORY", "brewbook", function(inst, doer, actions)
-	if inst:HasTag("brewbook") then
-		table.insert(actions, ACTIONS.READBREWBOOK)
-	end
+	table.insert(actions, ACTIONS.READBREWBOOK)
 end)
 
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)

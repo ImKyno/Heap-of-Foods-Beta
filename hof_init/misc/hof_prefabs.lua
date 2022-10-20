@@ -18,6 +18,7 @@ PrefabFiles =
 	
 	"k_newbrews",
 	"k_newfoods",
+	"k_newingredients",
 	"k_newveggies",
 	"k_newdryables",
 	"k_newbirds",
@@ -34,7 +35,6 @@ PrefabFiles =
 	"k_mussel",
 	"k_bugs",
 	"k_humanmeat",
-	"k_gourmetingredients",
 	"k_mushstump",
 	"k_spotbush",
 	"k_dugspotbush",

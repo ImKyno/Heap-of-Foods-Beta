@@ -54,18 +54,24 @@ local function ExtraHarvest(self, harvester)
         if self.product ~= nil then
             local loot = SpawnPrefab(self.product)
             if loot ~= nil then
-                if harvester ~= nil and self.chef_id == harvester.userid then
-                    harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
-                end
+				local recipe = cooking.GetRecipe(self.inst.prefab, self.product)
 
-                local recipe = cooking.GetRecipe(self.inst.prefab, self.product)
-                local stacksize = recipe and recipe.stacksize or 1
+				if harvester ~= nil and
+					self.chef_id == harvester.userid and
+					recipe ~= nil and
+					recipe.cookbook_category ~= nil and
+					cooking.cookbook_recipes[recipe.cookbook_category] ~= nil and
+					cooking.cookbook_recipes[recipe.cookbook_category][self.product] ~= nil then
+					harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
+				end
 
-                stacksize = stacksize + 2
-
-                if stacksize > 1 then
-                    loot.components.stackable:SetStackSize(stacksize)
-                end
+				local stacksize = recipe and recipe.stacksize or 1
+				
+				stacksize = stacksize + 2
+				
+				if stacksize > 1 then
+					loot.components.stackable:SetStackSize(stacksize)
+				end
 
                 if self.spoiltime ~= nil and loot.components.perishable ~= nil then
                     local spoilpercent = self:GetTimeToSpoil() / self.spoiltime
@@ -107,20 +113,26 @@ local function DoubleHarvest(self, harvester)
         if self.product ~= nil then
             local loot = SpawnPrefab(self.product)
             if loot ~= nil then
-                if harvester ~= nil and self.chef_id == harvester.userid then
-                    harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
-                end
+				local recipe = cooking.GetRecipe(self.inst.prefab, self.product)
 
-                local recipe = cooking.GetRecipe(self.inst.prefab, self.product)
-                local stacksize = recipe and recipe.stacksize or 1
+				if harvester ~= nil and
+					self.chef_id == harvester.userid and
+					recipe ~= nil and
+					recipe.cookbook_category ~= nil and
+					cooking.cookbook_recipes[recipe.cookbook_category] ~= nil and
+					cooking.cookbook_recipes[recipe.cookbook_category][self.product] ~= nil then
+					harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
+				end
 
+				local stacksize = recipe and recipe.stacksize or 1
+				
 				if math.random() < 0.30 then -- 30% of Extra food.
 					stacksize = stacksize + 1
 				end
-
-                if stacksize > 1 then
-                    loot.components.stackable:SetStackSize(stacksize)
-                end
+				
+				if stacksize > 1 then
+					loot.components.stackable:SetStackSize(stacksize)
+				end
 
                 if self.spoiltime ~= nil and loot.components.perishable ~= nil then
                     local spoilpercent = self:GetTimeToSpoil() / self.spoiltime

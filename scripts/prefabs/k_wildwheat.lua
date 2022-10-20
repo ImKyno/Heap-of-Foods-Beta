@@ -36,13 +36,13 @@ local function dig_up(inst, worker)
 
         inst.components.lootdropper:SpawnLootPrefab(withered and "kyno_wheat" or "dug_kyno_wildwheat")
     end
-	-- TheWorld:PushEvent("beginregrowth", inst)
     inst:Remove()
 end
 
 local function onregenfn(inst)
     inst.AnimState:PlayAnimation("grow")
     inst.AnimState:PushAnimation("idle", true)
+	inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 end
 
 local function makeemptyfn(inst)
@@ -71,7 +71,6 @@ local function makebarrenfn(inst, wasempty)
 end
 
 local function onpickedfn(inst, picker)
-    inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
     inst.AnimState:PlayAnimation("picking")
 
     if inst.components.pickable:IsBarren() then
@@ -80,6 +79,7 @@ local function onpickedfn(inst, picker)
     else
         inst.AnimState:PushAnimation("picked", false)
     end
+	inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 end
 
 local function ontransplantfn(inst)
@@ -104,8 +104,7 @@ local function grass(name, stage)
 
 		inst:AddTag("plant")
         inst:AddTag("renewable")
-		inst:AddTag("silviculture") 
-        -- inst:AddTag("witherable")
+		inst:AddTag("silviculture")
 
         inst.entity:SetPristine()
 
@@ -119,7 +118,6 @@ local function grass(name, stage)
 
         inst:AddComponent("pickable")
         inst.components.pickable.picksound = "dontstarve/wilson/pickup_reeds"
-
         inst.components.pickable:SetUp("kyno_wheat", TUNING.KYNO_WILDWHEAT_GROWTIME)
         inst.components.pickable.onregenfn = onregenfn
         inst.components.pickable.onpickedfn = onpickedfn
@@ -128,8 +126,6 @@ local function grass(name, stage)
         inst.components.pickable.max_cycles = 20
         inst.components.pickable.cycles_left = 20
         inst.components.pickable.ontransplantfn = ontransplantfn
-
-        -- inst:AddComponent("witherable")
 
         if stage == 1 then
             inst.components.pickable:MakeBarren()
@@ -140,12 +136,10 @@ local function grass(name, stage)
         inst:AddComponent("inspectable")
 		inst.components.inspectable.nameoverride = "GRASS"
 
-		if not GetGameModeProperty("disable_transplanting") then
-			inst:AddComponent("workable")
-			inst.components.workable:SetWorkAction(ACTIONS.DIG)
-			inst.components.workable:SetOnFinishCallback(dig_up)
-			inst.components.workable:SetWorkLeft(1)
-		end
+		inst:AddComponent("workable")
+		inst.components.workable:SetWorkAction(ACTIONS.DIG)
+		inst.components.workable:SetOnFinishCallback(dig_up)
+		inst.components.workable:SetWorkLeft(1)
 
         MakeMediumBurnable(inst)
         MakeSmallPropagator(inst)

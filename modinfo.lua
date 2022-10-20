@@ -1,9 +1,9 @@
 name = "Heap of Foods"
 version = "4.7-A"
-local myupdate = "Artisan Goods (Part I)"
+local myupdate = "Artisan Goods (Part II)"
 
 description = [[
-󰀄 Adds 124 brand new Crock Pot dishes alongside new ingredients to use!
+󰀄 Adds over +100 brand new Crock Pot dishes alongside new ingredients to use!
 
 󰀠 Also features brand new Biomes somewhere in the Ocean!
 󰀦 Complete Recipe Sheet on the Mod Page!
@@ -15,7 +15,7 @@ The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jams, Pick
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
 󰀌 Mod Version: 4.7-A
-󰀧 Update: Artisan Goods (Part I)
+󰀧 Update: Artisan Goods (Part II)
 ]]
 
 author = "Kyno"

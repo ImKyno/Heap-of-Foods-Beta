@@ -37,7 +37,6 @@ local function emptyfn()
 		return inst
 	end
 	
-	inst:AddComponent("tradable")
 	inst:AddComponent("inspectable")
 	inst:AddComponent("milker")
 	

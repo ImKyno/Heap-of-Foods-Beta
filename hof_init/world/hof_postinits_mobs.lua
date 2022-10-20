@@ -58,14 +58,6 @@ AddPrefabPostInit("puffin", function(inst)
     end
 end)
 
-AddPrefabPostInit("robin_winter", function(inst)
-    if inst.components.periodicspawner ~= nil then
-        inst.components.periodicspawner:SetPrefab("kyno_roe")
-        inst.components.periodicspawner:SetDensityInRange(20, 2)
-        inst.components.periodicspawner:SetMinimumSpacing(8)
-    end
-end)
-
 AddPrefabPostInit("canary", function(inst)
     if inst.components.periodicspawner ~= nil then
         inst.components.periodicspawner:SetPrefab("kyno_roe")
@@ -169,7 +161,7 @@ end
 -- It's Cursed. Players Have a Chance to Drop Long Pig. Except WX-78, Wurt, Wortox and Wormwood.
 local HUMANMEATY = GetModConfigData("HOF_HUMANMEAT")
 if HUMANMEATY == 1 then
-    local longpig_characters = 
+    local longpig_characters =
 	{
         "wilson",
         "willow",
@@ -294,7 +286,7 @@ local function MeadowBirdPostinit(inst)
 				chirp = "hof_sounds/creatures/toucan/chirp",
 				flyin = "dontstarve/birds/flyin",
 			}
-		
+
             if not _G.TheWorld.ismastersim then
                 return inst
             end
@@ -317,7 +309,7 @@ local function MeadowBirdPostinit(inst)
 				chirp = "hof_sounds/creatures/kingfisher/chirp",
 				flyin = "dontstarve/birds/flyin",
 			}
-		
+
             if not _G.TheWorld.ismastersim then
                 return inst
             end
@@ -338,7 +330,7 @@ AddPrefabPostInit("robin_winter", MeadowBirdPostinit)
 AddPrefabPostInit("puffin", MeadowBirdPostinit)
 
 -- Animals that can be killed with the Slaughter Tools.
-local slaughterable_animals = 
+local slaughterable_animals =
 {
     "koalefant_winter",
     "koalefant_summer",
@@ -421,7 +413,7 @@ AddPrefabPostInit("beequeen", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst.components.lootdropper:AddChanceLoot("kyno_antchest_blueprint", 1.00)
 end)
 
@@ -430,7 +422,7 @@ AddPrefabPostInit("beeguard", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 0.20)
 end)
 
@@ -438,7 +430,7 @@ AddPrefabPostInit("killerbee", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 1.00)
 end)
 
@@ -446,14 +438,14 @@ AddPrefabPostInit("bee", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	if TheWorld.state.isspring then
 		inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 0.50)
 	end
 end)
 
 -- "Fix" players trying to milk frozen animals.
-local freezable_fix_animals = 
+local freezable_fix_animals =
 {
 	"beefalo",
 	"koalefant_summer",
@@ -465,26 +457,26 @@ local function FreezablePostinit(inst)
 	local function OnFreeze(inst)
 		inst:AddTag("is_frozen")
 	end
-	
+
 	local function OnThaw(inst)
 		inst:AddTag("is_thawing")
 	end
-	
+
 	local function OnUnfreeze(inst)
 		inst:RemoveTag("is_frozen")
 		inst:RemoveTag("is_thawing")
 	end
-	
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:ListenForEvent("onthaw", OnThaw)
 	inst:ListenForEvent("freeze", OnFreeze)
 	inst:ListenForEvent("unfreeze", OnUnfreeze)
 end
 
-for k, v in pairs(freezable_fix_animals) do 
+for k, v in pairs(freezable_fix_animals) do
 	AddPrefabPostInit(v, FreezablePostinit)
 end
 
@@ -492,7 +484,7 @@ end
 local function MilkableBeefaloPostinit(inst)
 	local function OnMilked(inst, milker)
 		local kick_chance
-		
+
 		if inst:HasTag("domesticated") then
 			kick_chance = 0
 		elseif milker:HasTag("beefalo") then
@@ -500,7 +492,7 @@ local function MilkableBeefaloPostinit(inst)
 		else
 			kick_chance = 70
 		end
-		
+
 		if math.random(100) <= kick_chance and milker.components.combat and not inst:HasTag("sleeping")
 		and not inst:HasTag("is_frozen") and not inst:HasTag("is_thawing") then
 			inst.AnimState:PlayAnimation("atk", false)
@@ -508,12 +500,12 @@ local function MilkableBeefaloPostinit(inst)
 			milker.components.combat:GetAttacked(inst, TUNING.MILKABLE_NORMAL_DAMAGE)
 			milker:PushEvent("kick")
 		elseif inst:HasTag("domesticated") then
-			if not inst:HasTag("sleeping") then 
+			if not inst:HasTag("sleeping") then
 				inst.AnimState:PlayAnimation("bellow", false)
 				inst.SoundEmitter:PlaySound("dontstarve/beefalo/grunt")
 			end
 		else
-			if not inst:HasTag("sleeping") then 
+			if not inst:HasTag("sleeping") then
 				inst.AnimState:PlayAnimation("bellow", false)
 				inst.SoundEmitter:PlaySound("dontstarve/beefalo/grunt")
 			end
@@ -523,7 +515,7 @@ local function MilkableBeefaloPostinit(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("milkableanimal")
 	inst.components.milkableanimal:SetUp("kyno_milk_beefalo")
 	inst.components.milkableanimal.onmilkedfn = OnMilked
@@ -532,13 +524,13 @@ end
 local function MilkableKoalefantPostinit(inst)
 	local function OnMilked(inst, milker)
 		local kick_chance
-		
+
 		if milker:HasTag("beefalo") then
 			kick_chance = 10
 		else
 			kick_chance = 70
 		end
-		
+
 		if math.random(100) <= kick_chance and milker.components.combat and not inst:HasTag("sleeping")
 		and not inst:HasTag("is_frozen") and not inst:HasTag("is_thawing") then
 			inst.AnimState:PlayAnimation("atk", false)
@@ -546,7 +538,7 @@ local function MilkableKoalefantPostinit(inst)
 			milker.components.combat:GetAttacked(inst, TUNING.MILKABLE_KOALEFANT_DAMAGE)
 			milker:PushEvent("kick")
 		else
-			if not inst:HasTag("sleeping") then 
+			if not inst:HasTag("sleeping") then
 				inst.AnimState:PlayAnimation("bellow", false)
 				inst.SoundEmitter:PlaySound("dontstarve/creatures/koalefant/grunt")
 			end
@@ -556,7 +548,7 @@ local function MilkableKoalefantPostinit(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("milkableanimal")
 	inst.components.milkableanimal:SetUp("kyno_milk_koalefant")
 	inst.components.milkableanimal.onmilkedfn = OnMilked
@@ -565,13 +557,13 @@ end
 local function MilkableVoltGoatPostinit(inst)
 	local function OnMilked(inst, milker)
 		local kick_chance
-		
+
 		if milker:HasTag("beefalo") then
 			kick_chance = 10
 		else
 			kick_chance = 70
 		end
-		
+
 		if math.random(100) <= kick_chance and milker.components.combat and not inst:HasTag("sleeping")
 		and not inst:HasTag("is_frozen") and not inst:HasTag("is_thawing") then
 			inst.AnimState:PlayAnimation("taunt", false)
@@ -579,7 +571,7 @@ local function MilkableVoltGoatPostinit(inst)
 			milker.components.combat:GetAttacked(inst, TUNING.MILKABLE_LIGHTNINGGOAT_DAMAGE)
 			milker:PushEvent("kick")
 		else
-			if not inst:HasTag("sleeping") then 
+			if not inst:HasTag("sleeping") then
 				inst.AnimState:PlayAnimation("bleet", false)
 				inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/lightninggoat/bleet")
 			end
@@ -589,7 +581,7 @@ local function MilkableVoltGoatPostinit(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("milkableanimal")
 	inst.components.milkableanimal:SetUp("goatmilk")
 	inst.components.milkableanimal.onmilkedfn = OnMilked
@@ -604,7 +596,7 @@ AddPrefabPostInit("lightninggoat", MilkableVoltGoatPostinit)
 local function FrogPostinit(inst)
 	local RESTARGET_MUST_TAGS = {"_combat", "_health"}
 	local RETARGET_CANT_TAGS = {"merm", "frogimmunity"}
-	
+
 	local function Retarget(inst)
     if not inst.components.health:IsDead() and not inst.components.sleeper:IsAsleep() then
         return FindEntity(inst, TUNING.FROG_TARGET_DIST, function(guy)
@@ -615,13 +607,13 @@ local function FrogPostinit(inst)
 		RESTARGET_MUST_TAGS, RETARGET_CANT_TAGS)
 		end
 	end
-	
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst.components.combat:SetRetargetFunction(3, Retarget)
-end 
+end
 
 AddPrefabPostInit("frog", FrogPostinit)
 

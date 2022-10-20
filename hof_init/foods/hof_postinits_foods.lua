@@ -59,6 +59,7 @@ local resize_items = {
     "kyno_turnip_cooked",
     "kyno_turnip_ground",
     "cucumbersalad",
+	"friesfrench",
 }
 
 for k,v in pairs(resize_items) do
@@ -316,7 +317,7 @@ AddPrefabPostInit("festive_tourtiere", function(inst)
     end
 end)
 
--- Make some vanilla foods compatible with the mod ingredients.
+-- Some changes for the Vanilla foods.
 local VanillaFood = require("preparedfoods")
 VanillaFood.bananapop.test = function(cooker, names, tags)
     return (names.cave_banana or names.cave_banana_cooked or names.kyno_banana or names.kyno_banana_cooked)
@@ -353,6 +354,11 @@ end
 VanillaFood.meatysalad.test = function(cooker, names, tags)
 	return (names.plantmeat or names.plantmeat_cooked or names.kyno_plantmeat_dried) and tags.veggie and tags.veggie >= 3
 end
+
+VanillaFood.icecream.test = function(cooker, names, tags)
+	return tags.frozen and tags.dairy and tags.sweetener and not tags.meat and not tags.veggie and not tags.inedible and not tags.egg
+	and not names.kyno_syrup
+end 
 
 -- Foods that will have their action "Eat" replaced to "Drink".
 local drinkable_foods = {

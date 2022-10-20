@@ -22,6 +22,8 @@ local prefabs =
 	"kyno_piko_orange",
 }
 
+local StartRegen
+
 local anims = {"low", "med", "full"}
 
 local function GetVerb()
@@ -32,7 +34,7 @@ local function OnRegen(inst)
 	inst.components.activatable.inactive = false
 	
 	if inst.components.workable.workleft < #anims-1 then
-		inst.components.workable:SetWorkLeft(inst.components.workable.workleft+1)
+		inst.components.workable:SetWorkLeft(inst.components.workable.workleft + 1)
 		StartRegen(inst)
 	else
 		inst.targettime = nil
@@ -66,10 +68,11 @@ StartRegen = function(inst, regentime)
 	if inst.components.workable.workleft < 1 then
 		inst.AnimState:PlayAnimation(anims[1])
 	else
-		inst.AnimState:PlayAnimation(anims[inst.components.workable.workleft+1])
+		inst.AnimState:PlayAnimation(anims[inst.components.workable.workleft + 1])
 	end
 end
 
+--[[
 local function OnWorked(inst, worker, workleft)
 	if workleft <= 0 then
 		inst.components.activatable.inactive = true
@@ -106,6 +109,31 @@ local function OnWorked(inst, worker, workleft)
 
 	StartRegen(inst)
 end
+]]--
+
+local function OnWorked(inst, worker, workleft, numworks)
+    if workleft <= 0 then
+        inst.components.activatable.inactive = true
+    end
+
+	local prevworkleft = numworks + workleft
+	local spawns = math.min(math.ceil(prevworkleft) - math.ceil(workleft), math.ceil(prevworkleft))
+        
+	if spawns > 0 then
+
+		local pt = Vector3(inst.Transform:GetWorldPosition())
+		local hispos = Vector3(worker.Transform:GetWorldPosition())
+		local he_right = ((hispos - pt):Dot(TheCamera:GetRightVec()) > 0)
+            
+		if he_right then
+			inst.components.lootdropper:DropLoot(pt - (TheCamera:GetRightVec()*(.5 + math.random())))
+		else
+			inst.components.lootdropper:DropLoot(pt + (TheCamera:GetRightVec()*(.5 + math.random())))
+		end
+	end
+
+    StartRegen(inst)
+end
 
 local function OnSave(inst, data)
 	if inst.targettime then
@@ -131,6 +159,18 @@ local function OnLoad(inst, data)
 	if data and data.time then
 		StartRegen(inst, data.time)
 	end
+end
+
+local function LongUpdate(inst, dt)
+    if inst.targettime then
+        local time = GetTime()
+        if inst.targettime > time + dt then
+			local time_to_regen = inst.targettime - time - dt
+			StartRegen(inst, time_to_regen)
+        else
+			OnRegen(inst)
+        end
+    end
 end
 
 local function OnWake(inst)
@@ -165,20 +205,39 @@ local function fn()
     end
 	
 	inst:AddComponent("inspectable")
-	inst:AddComponent("lootdropper")
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.DIG)
-	inst.components.workable:SetOnWorkCallback(OnWorked)
 	inst.components.workable:SetWorkLeft(#anims-1)
+	inst.components.workable:SetOnWorkCallback(OnWorked)
 
 	inst:AddComponent("activatable")
 	inst.components.activatable.inactive = false
 	inst.components.activatable.OnActivate = function() inst:Remove() end
 	
+	inst:AddComponent("lootdropper")
+	inst.components.lootdropper.numrandomloot = 1
+	inst.components.lootdropper.chancerandomloot = 0.01
+	inst.components.lootdropper:AddRandomLoot("slurtle_shellpieces", 0.01)
+	inst.components.lootdropper:AddRandomLoot("rock", 0.01)
+	inst.components.lootdropper:AddRandomLoot("feather_crow", 0.01)
+	inst.components.lootdropper:AddRandomLoot("feather_robin", 0.01)
+	inst.components.lootdropper:AddRandomLoot("feather_robin_winter", 0.01)
+	inst.components.lootdropper:AddRandomLoot("spidergland", 0.001)
+	inst.components.lootdropper:AddRandomLoot("gears", 0.002)
+	inst.components.lootdropper:AddRandomLoot("goldnugget", 0.002)
+	inst.components.lootdropper:AddRandomLoot("redgem", 0.002)
+	inst.components.lootdropper:AddRandomLoot("purplegem", 0.001)
+	inst.components.lootdropper:AddRandomLoot("greengem", 0.001)
+	inst.components.lootdropper:AddRandomLoot("yellowgem", 0.001)
+	inst.components.lootdropper:AddRandomLoot("kyno_kokonut", 0.001)
+	inst.components.lootdropper:AddRandomLoot("kyno_piko", 0.001)
+	inst.components.lootdropper:AddRandomLoot("kyno_piko_orange", 0.001)
+	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 	inst.OnEntityWake = OnWake
+	inst.OnLongUpdate = LongUpdate
 
 	return inst
 end

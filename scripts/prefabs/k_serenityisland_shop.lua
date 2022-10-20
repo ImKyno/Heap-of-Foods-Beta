@@ -11,7 +11,20 @@ local assets =
 local prefabs =
 {
     "meat",
+	"cookingrecipecard",
+	"lobsterdinner",
+	"turf_road",
+	"turf_deciduous",
     "splash_sink",
+	
+	"kyno_sugartree_bud",
+	"kyno_sugartree_petals",
+	"kyno_brewingrecipecard",
+	"turf_pinkpark",
+	"turf_stonecity",
+	"gorge_caramel_cube",
+	"dug_kyno_spotbush",
+	"dug_kyno_wildwheat",
 }
 
 local function ontalk(inst, script)
@@ -90,6 +103,8 @@ local function TestItem(inst, item, giver)
 		return true -- Accept the Item.
 	elseif item.components.inventoryitem ~= nil and item.prefab == "turf_road" or item.prefab == "turf_deciduous" then
 		return true
+	elseif item.components.inventoryitem ~= nil and item.prefab == "cookingrecipecard" then
+		return true
 	else
 		giver.components.talker:Say(GetString(giver, "ANNOUNCE_PIGELDER_FAIL"))
 	end
@@ -139,7 +154,13 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		local turf = SpawnPrefab("turf_pinkpark")
 		turf.Transform:SetPosition(x, y, z)
 		LaunchItem(turf, angle)
-	end 
+	end
+
+	if item.components.inventoryitem ~= nil and item.prefab == "cookingrecipecard" then
+		local card = SpawnPrefab("kyno_brewingrecipecard")
+		card.Transform:SetPosition(x, y, z)
+		LaunchItem(card, angle)
+	end
 end
 
 local function OnSave(inst, data)

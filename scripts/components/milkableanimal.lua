@@ -159,9 +159,15 @@ function MilkableAnimal:Milk(milker)
 				milker.components.inventory:GiveItem(loot, nil, self.inst:GetPosition())
 				
 				-- Extra loot if is Spring or is Domesticated!
-				if TheWorld.state.isspring or self.inst:HasTag("domesticated") then
+				if TheWorld.state.isspring then
 					local extraloot = SpawnPrefab(self.product)
 					milker.components.inventory:GiveItem(extraloot, nil, self.inst:GetPosition())
+				end
+				
+				if self.inst:HasTag("domesticated") then
+					local extraloot_domesticated = SpawnPrefab(self.product)
+					milker.components.inventory:GiveItem(extraloot_domesticated, nil, self.inst:GetPosition())
+					milker.components.inventory:GiveItem(extraloot_domesticated, nil, self.inst:GetPosition())
 				end
 			end
         end

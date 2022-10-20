@@ -10,13 +10,14 @@ local prefabs =
 }
 
 local function onpickedfn(inst)
-    inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
     inst.AnimState:PlayAnimation("picked")
+	inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 end
 
 local function onregenfn(inst)
     inst.AnimState:PlayAnimation("grow")
     inst.AnimState:PushAnimation("idle", true)
+	inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 end
 
 local function makeemptyfn(inst)
@@ -33,7 +34,6 @@ local function dig_up(inst, chopper)
 		inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product)
     end
 	inst.components.lootdropper:SpawnLootPrefab("dug_kyno_spotbush")
-	-- TheWorld:PushEvent("beginregrowth", inst)
 	inst:Remove()
 end
 

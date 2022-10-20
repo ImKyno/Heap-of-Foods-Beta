@@ -227,6 +227,25 @@ local kyno_warly_foods =
             eater.components.debuffable:AddDebuff("kyno_superregenbuff", "kyno_superregenbuff")
         end,
 	},
+	
+	berrysundae =
+	{
+		test = function(cooker, names, tags) return tags.berries and tags.dairy and tags.frozen and names.kyno_syrup
+		and not tags.meat and not tags.veggie and not tags.inedible and not tags.egg end,
+		priority = 10,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_FAST,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = 20,
+		hunger = 8,
+		sanity = 60,
+		cooktime = .10,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"masterfood"},
+		card_def = {ingredients = {{"berries", 1}, {"goatmilk", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
+	},
 }
 
 for k, recipe in pairs(kyno_warly_foods) do

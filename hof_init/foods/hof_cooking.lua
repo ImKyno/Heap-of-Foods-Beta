@@ -73,8 +73,6 @@ AddIngredientValues({"kyno_chicken_egg"},		{egg        = 1},                    
 AddIngredientValues({"kyno_bottle_soul"},		{soul       = 1})
 AddIngredientValues({"kyno_milk_beefalo"},		{dairy      = 0.5, milk       = 1})
 AddIngredientValues({"kyno_milk_koalefant"},	{dairy      = 0.5, milk       = 1})
-AddIngredientValues({"kyno_milk_deer"},			{dairy      = 0.5, milk       = 1})
-AddIngredientValues({"kyno_milk_spat"},			{dairy      = 0.5, milk       = 1})
 AddIngredientValues({"kyno_sugarflywings"},     {decoration = 2})
 AddIngredientValues({"cheese_yellow"},			{dairy      = 1,   cheese     = 1})
 AddIngredientValues({"cheese_white"},			{dairy      = 1,   cheese     = 1})
@@ -87,105 +85,8 @@ AddIngredientValues({"kyno_moon_cap_dried"}, 	{veggie     = 0.5, mushrooms  = 1}
 AddIngredientValues({"kyno_plantmeat_dried"},   {meat       = 1})
 AddIngredientValues({"kyno_piko"},              {piko       = 1})
 AddIngredientValues({"kyno_piko_orange"},       {piko       = 1})
-AddIngredientValues({"kyno_poison_froglegs"},   {meat       = 0.5},                    true, true) 
-
--- Icons For Cookbook.
-local cookbook_icons = 
-{
-	"kyno_coffeebeans_cooked.tex",
-	"kyno_coffeebeans.tex",
-	"kyno_shark_fin.tex",
-	"ecp_shark_fin.tex",
-	"kyno_roe_cooked.tex",
-	"kyno_roe.tex",
-	"kyno_mussel_cooked.tex",
-	"kyno_mussel.tex",
-	"kyno_beanbugs_cooked.tex",
-	"kyno_beanbugs.tex",
-	"kyno_gummybug_cooked.tex",
-	"kyno_gummybug.tex",
-	"kyno_humanmeat_cooked.tex",
-	"kyno_humanmeat.tex",
-	"kyno_humanmeat_dried.tex",
-	"kyno_syrup.tex",
-	"kyno_flour.tex",
-	"kyno_spotspice.tex",
-	"kyno_bacon_cooked.tex",
-	"kyno_bacon.tex",
-	"gorge_bread.tex",
-	"kyno_white_cap_cooked.tex",
-	"kyno_white_cap.tex",
-	"kyno_foliage_cooked.tex",
-	"kyno_foliage.tex",
-	"kyno_sap.tex",
-	"kyno_aloe_cooked.tex",
-	"kyno_aloe.tex",
-	"kyno_radish_cooked.tex",
-	"kyno_radish.tex",
-	"kyno_fennel_cooked.tex",
-	"kyno_fennel.tex",
-	"kyno_sweetpotato_cooked.tex",
-	"kyno_sweetpotato.tex",
-	"kyno_lotus_flower_cooked.tex",
-	"kyno_lotus_flower.tex",
-	"kyno_seaweeds_cooked.tex",
-	"kyno_seaweeds.tex",
-	"kyno_seaweeds_dried.tex",
-	"kyno_limpets_cooked.tex",
-	"kyno_limpets.tex",
-	"kyno_taroroot_cooked.tex",
-	"kyno_taroroot.tex",
-	"kyno_cucumber.tex",
-	"kyno_waterycress.tex",
-	"kyno_salt.tex",
-	"kyno_parznip_cooked.tex",
-	"kyno_parznip.tex",
-	"kyno_parznip_eaten.tex",
-	"kyno_turnip_cooked.tex",
-	"kyno_turnip.tex",
-	"kyno_banana_cooked.tex",
-	"kyno_banana.tex",
-	"kyno_kokonut_cooked.tex",
-	"kyno_kokonut_halved.tex",
-	"kyno_twiggynuts.tex",
-	"kyno_neonfish_cooked.tex",
-	"kyno_neonfish.tex",
-	"kyno_grouper_cooked.tex",
-	"kyno_grouper.tex",
-	"kyno_pierrotfish_cooked.tex",
-	"kyno_pierrotfish.tex",
-	"kyno_koi_cooked.tex",
-	"kyno_koi.tex",
-	"kyno_salmonfish_cooked.tex",
-	"kyno_salmonfish.tex",
-	"kyno_tropicalfish.tex",
-	"kyno_sugartree_petals.tex",
-	"kyno_crabmeat_cooked.tex",
-	"kyno_crabmeat.tex",
-	"kyno_chicken_egg_cooked.tex",
-	"kyno_chicken_egg.tex",
-	"kyno_bottle_soul.tex",
-	"kyno_milk_beefalo.tex",
-	"kyno_milk_koalefant.tex",
-	"kyno_milk_deer.tex",
-	"kyno_milk_spat.tex",
-	"cheese_yellow.tex",
-	"cheese_white.tex",
-	"cheese_koalefant.tex",
-	"milk_box.tex",
-	"kyno_red_cap_dried.tex",
-	"kyno_green_cap_dried.tex",
-	"kyno_blue_cap_dried.tex",
-	"kyno_moon_cap_dried.tex",
-	"kyno_piko.tex",
-	"kyno_piko_orange.tex",
-	"kyno_poison_froglegs.tex",
-	"kyno_poison_froglegs_cooked.tex",
-}
-
-for k,v in pairs(cookbook_icons) do
-	RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", v)
-end
+AddIngredientValues({"kyno_poison_froglegs"},   {meat       = 0.5},                    true, true)
+AddIngredientValues({"kyno_oil"},               {oil        = 1})
 
 -- Import The Foods.
 for k, v in pairs(require("hof_foodrecipes")) do
@@ -214,7 +115,7 @@ for k, v in pairs(require("hof_foodrecipes_warly")) do
 	if v.card_def then
 		AddRecipeCard("portablecookpot",                    v)
 	end
-end 
+end
 
 for k, v in pairs(require("hof_foodspicer")) do
 	AddCookerRecipe("portablespicer",          				v)
@@ -396,6 +297,9 @@ local kynofoods =
 	crab_artichoke          = require("hof_foodrecipes").crab_artichoke,
 	poisonfrogglebunwich    = require("hof_foodrecipes").poisonfrogglebunwich,
 	pepperrolls             = require("hof_foodrecipes").pepperrolls,
+	chocolatebar            = require("hof_foodrecipes").chocolatebar,
+	tricolordango           = require("hof_foodrecipes").tricolordango,
+	friesfrench             = require("hof_foodrecipes").friesfrench,
 	
 	-- Warly Exclusives.
 	musselbouillabaise 		= require("hof_foodrecipes_warly").musselbouillabaise,
@@ -410,6 +314,7 @@ local kynofoods =
 	jellybean_sanity 		= require("hof_foodrecipes_warly").jellybean_sanity,
 	jellybean_hunger 		= require("hof_foodrecipes_warly").jellybean_hunger,
 	jellybean_super 		= require("hof_foodrecipes_warly").jellybean_super,
+	berrysundae             = require("hof_foodrecipes_warly").berrysundae,
 }
 
 for name, recipe in pairs(kynofoods) do

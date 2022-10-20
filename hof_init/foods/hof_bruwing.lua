@@ -6,7 +6,7 @@ require("hof_constants")
 require("hof_brewing")
 require("craftpot/ingredienttags")
 
--- New Wooden Keg and Preserves Jar Ingredients.
+-- Vanilla Wooden Keg and Preserves Jar Ingredients.
 AddBrewingValues({"honey"},						{sweetener  = 1,   honey         = 1})
 AddBrewingValues({"honeycomb"},					{sweetener  = 1,   honeycomb     = 1})
 AddBrewingValues({"pomegranate"}, 				{fruit      = 1,   pomegranate   = 1})
@@ -44,6 +44,7 @@ AddBrewingValues({"tallbirdegg"},				{egg        = 4,   tallbirdegg   = 1})
 AddBrewingValues({"bird_egg"},					{egg        = 1})
 AddBrewingValues({"nightmarefuel"},             {inedible   = 1,   magic         = 1})
 
+-- Mod Wooden Keg and Preserves Jar Ingredients.
 AddBrewingValues({"kyno_wheat"}, 				{veggie     = 1,   wheat         = 1})
 AddBrewingValues({"kyno_spotspice"}, 			{spotspice  = 1})
 AddBrewingValues({"kyno_spotspice_leaf"}, 		{spotspice  = 1})
@@ -71,54 +72,7 @@ AddBrewingValues({"mayonnaise"},                {mayonnaise = 1})
 AddBrewingValues({"kyno_piko"},                 {piko       = 1})
 AddBrewingValues({"kyno_piko_orange"},          {piko       = 1})
 
--- Icons For Brewbook.
-local brewbook_icons = 
-{
-	"kyno_wheat.tex",
-	"kyno_spotspice_leaf.tex",
-	"kyno_syrup.tex",
-	"kyno_banana.tex",
-	"kyno_banana_cooked.tex",
-	"kyno_kokonut_halved.tex",
-	"kyno_kokonut_cooked.tex",
-	"kyno_white_cap.tex",
-	"kyno_white_cap_cooked.tex",
-	"kyno_foliage.tex",
-	"kyno_foliage_cooked.tex",
-	"kyno_aloe.tex",
-	"kyno_aloe_cooked.tex",
-	"kyno_radish.tex",
-	"kyno_radish_cooked.tex",
-	"kyno_sweetpotato.tex",
-	"kyno_sweetpotato_cooked.tex",
-	"kyno_lotus_flower.tex",
-	"kyno_lotus_flower_cooked.tex",
-	"kyno_seaweeds.tex",
-	"kyno_seaweeds_cooked.tex",
-	"kyno_seaweeds_dried.tex",
-	"kyno_taroroot.tex",
-	"kyno_taroroot_cooked.tex",
-	"kyno_waterycress.tex",
-	"kyno_waterycress_cooked.tex",
-	"kyno_cucumber.tex",
-	"kyno_parznip.tex",
-	"kyno_parznip_cooked.tex",
-	"kyno_parznip_eaten.tex",
-	"kyno_turnip.tex",
-	"kyno_turnip_cooked.tex",
-	"kyno_sugartree_petals.tex",
-	"kyno_chicken_egg.tex",
-	"kyno_chicken_egg_cooked.tex",
-	"kyno_piko.tex",
-	"kyno_piko_orange.tex",
-	"mayonnaise.tex",
-}
-
-for k,v in pairs(brewbook_icons) do
-	RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", v)
-end
-
--- Import The Foods.
+-- Import The Beverages.
 for k, v in pairs(require("hof_foodrecipes_keg")) do
 	AddBrewerRecipe("kyno_woodenkeg", 			v)
 	
