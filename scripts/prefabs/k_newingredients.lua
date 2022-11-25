@@ -13,7 +13,7 @@ local assets =
 	Asset("ANIM", "anim/quagmire_crop_wheat.zip"),
 	Asset("ANIM", "anim/quagmire_salt.zip"),
 	Asset("ANIM", "anim/foliage.zip"),
-	Asset("ANIM", "anim/kyno_oil.zip"),
+	Asset("ANIM", "anim/kyno_cookingoil.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -38,6 +38,15 @@ end
 
 local function fertilizerresearchfn(inst)
     return inst:GetFertilizerKey()
+end
+
+local function OilPickIdle(inst)
+	local x, y, z = inst.Transform:GetWorldPosition()
+	if TheWorld.Map:IsOceanAtPoint(x, y, z, false) then
+		inst.AnimState:PlayAnimation("idle_water")
+	else
+		inst.AnimState:PlayAnimation("idle")
+	end
 end
 
 local function wheatfn()
@@ -953,9 +962,11 @@ local function oilfn()
 
     MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
+	
+	-- inst.AnimState:SetScale(.8, .8, .8)
 
-    inst.AnimState:SetBank("kyno_oil")
-    inst.AnimState:SetBuild("kyno_oil")
+    inst.AnimState:SetBank("kyno_cookingoil")
+    inst.AnimState:SetBuild("kyno_cookingoil")
     inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("drinkable_food")
@@ -982,6 +993,8 @@ local function oilfn()
 	
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+	
+	inst:ListenForEvent("on_landed", OilPickIdle)
 	
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

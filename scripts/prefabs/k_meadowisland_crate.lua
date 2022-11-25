@@ -188,6 +188,7 @@ local function fn()
 	inst.components.lootdropper:AddRandomLoot("trinket_11",             rarity.high)
 	inst.components.lootdropper:AddRandomLoot("trinket_13",             rarity.high)
 	inst.components.lootdropper:AddRandomLoot("trinket_26",             rarity.high)
+	inst.components.lootdropper:AddRandomLoot("kyno_oil",           rarity.veryhigh)
 	inst.components.lootdropper:AddRandomLoot("kyno_banana",        rarity.veryhigh)
 	inst.components.lootdropper:AddRandomLoot("mandrake", 	         rarity.extreme)
 	

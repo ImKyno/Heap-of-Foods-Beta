@@ -813,7 +813,7 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_syrup", 1}, {"honey", 3}}},
 		prefabs = { "kyno_hastebuff" },
         oneatenfn = function(inst, eater)
-            eater.components.debuffable:AddDebuff("kyno_hastebuff", "kyno_hastebuff")
+            eater:AddDebuff("kyno_hastebuff", "kyno_hastebuff")
         end,
 	},
 	
@@ -1264,7 +1264,7 @@ local kyno_foods =
 	festive_mulledpunch = 
 	{
 		test = function(cooker, names, tags) return names.kyno_syrup and tags.sweetener and tags.frozen and not names.forgetmelots 
-		and not tags.meat and not tags.berries end,
+		and not tags.meat and not tags.berries and not tags.fruit and not names.cutlichen end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
@@ -1493,7 +1493,7 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_cucumber", 2}, {"kyno_seaweeds", 2}}},
 		prefabs = { "buff_moistureimmunity" },
         oneatenfn = function(inst, eater)
-            eater.components.debuffable:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
+            eater:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
        	end,
 	},
 	
@@ -1659,7 +1659,7 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_kokonut_halved", 1}, {"ice", 2}, {"twigs", 1}}},
 		prefabs = { "buff_moistureimmunity" },
         oneatenfn = function(inst, eater)
-            eater.components.debuffable:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
+            eater:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
        	end,
 	},
 	
@@ -1900,12 +1900,12 @@ local kyno_foods =
 		sanity = 10,
 		cooktime = 2,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FROG,
-        potlevel = "med",
+        potlevel = "low",
         floater = {"med", nil, 0.55},
 		card_def = {ingredients = {{"kyno_poison_froglegs", 1}, {"kelp", 1}, {"twigs", 2}}},
 		prefabs = { "kyno_frogbuff" },
         oneatenfn = function(inst, eater)
-			eater.components.debuffable:AddDebuff("kyno_frogbuff", "kyno_frogbuff")
+			eater:AddDebuff("kyno_frogbuff", "kyno_frogbuff")
        	end,
 	},
 	
@@ -1926,10 +1926,10 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_spotspice", 1}, {"pepper", 2}}},
 	},
 	
-	chocolatebar =
+	chocolate_black =
 	{
 		test = function(cooker, names, tags) return tags.milk and tags.sweetener and (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2)
-		and not tags.meat and not tags.fish and not tags.veggie and not tags.frozen end,
+		and not tags.meat and not tags.fish and not tags.veggie and not tags.frozen and not names.kyno_milk_beefalo end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -1937,9 +1937,25 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 33,
 		cooktime = 2,
-		potlevel = "low",
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"goatmilk", 1}, {"honey", 1}, {"kyno_twiggynuts", 2}}},
+	},
+	
+	chocolate_white =
+	{
+		test = function(cooker, names, tags) return names.kyno_milk_beefalo and tags.sweetener and (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2)
+		and not tags.meat and not tags.fish and not tags.veggie and not tags.frozen and not names.goatmilk end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SLOW,
+		health = -5,
+		hunger = 33,
+		sanity = 12.5,
+		cooktime = 2,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_milk_beefalo", 1}, {"honey", 1}, {"kyno_twiggynuts", 2}}},
 	},
 	
 	tricolordango =
@@ -1971,6 +1987,171 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"potato", 2}, {"kyno_oil", 1}, {"kyno_salt", 1}}},
 	},
+	
+	twistedtequile =
+	{
+		test = function(cooker, names, tags) return names.cutlichen and tags.frozen and names.kyno_syrup and (names.durian or names.durian_cooked) end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = 8,
+		hunger = 32.5,
+		sanity = -60,
+		cooktime = 2.2,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_TEQUILA,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"cutlichen", 1}, {"ice", 1}, {"kyno_syrup", 1}, {"durian", 1}}},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		oneatenfn = function(inst, eater)
+			local function GetRandomPosition(caster, teleportee, target_in_ocean)
+				if target_in_ocean then
+					local pt = TheWorld.Map:FindRandomPointInOcean(20)
+					if pt ~= nil then
+						return pt
+					end
+					
+				local from_pt = teleportee:GetPosition()
+				local offset = FindSwimmableOffset(from_pt, math.random() * 2 * PI, 90, 16)
+				or FindSwimmableOffset(from_pt, math.random() * 2 * PI, 60, 16)
+				or FindSwimmableOffset(from_pt, math.random() * 2 * PI, 30, 16)
+				or FindSwimmableOffset(from_pt, math.random() * 2 * PI, 15, 16)
+				if offset ~= nil then
+					return from_pt + offset
+				end
+				return teleportee:GetPosition()
+			else
+				local centers = {}
+				for i, node in ipairs(TheWorld.topology.nodes) do
+					if TheWorld.Map:IsPassableAtPoint(node.x, 0, node.y) and node.type ~= NODE_TYPE.SeparatedRoom then
+						table.insert(centers, {x = node.x, z = node.y})
+					end
+				end
+					if #centers > 0 then
+						local pos = centers[math.random(#centers)]
+						return Point(pos.x, 0, pos.z)
+					else
+						return eater:GetPosition()
+					end
+				end
+			end
+			
+			local function TeleportEnd(teleportee, locpos, loctarget, eater)
+				if loctarget ~= nil and loctarget:IsValid() and loctarget.onteleto ~= nil then
+					loctarget:onteleto()
+				end
+				
+				local teleportfx = SpawnPrefab("explode_reskin")
+				teleportfx.Transform:SetPosition(teleportee.Transform:GetWorldPosition())
+				
+				if teleportee.components.talker ~= nil then 
+					teleportee.components.talker:Say(GetString(teleportee, "ANNOUNCE_TOWNPORTALTELEPORT"))
+				end
+
+				if teleportee:HasTag("player") then
+					teleportee.sg.statemem.teleport_task = nil
+					teleportee.sg:GoToState(teleportee:HasTag("playerghost") and "appear" or "wakeup")
+				else
+					teleportee:Show()
+					if teleportee.DynamicShadow ~= nil then
+						teleportee.DynamicShadow:Enable(true)
+					end
+					if teleportee.components.health ~= nil then
+						teleportee.components.health:SetInvincible(false)
+					end
+					teleportee:PushEvent("teleported")
+				end
+			end
+			
+			local function TeleportContinue(teleportee, locpos, loctarget, eater)
+				if teleportee.Physics ~= nil then
+					teleportee.Physics:Teleport(locpos.x, 0, locpos.z)
+				else
+					teleportee.Transform:SetPosition(locpos.x, 0, locpos.z)
+				end
+
+				if teleportee:HasTag("player") then
+					teleportee:SnapCamera()
+					teleportee:ScreenFade(true, 1)
+					teleportee.sg.statemem.teleport_task = teleportee:DoTaskInTime(1, TeleportEnd, locpos, loctarget)
+				else
+					TeleportEnd(teleportee, locpos, loctarget)
+				end
+			end
+			
+			local function TeleportStart(teleportee, eater, caster, loctarget, target_in_ocean)
+				local ground = TheWorld
+
+				local locpos = teleportee.components.teleportedoverride ~= nil and teleportee.components.teleportedoverride:GetDestPosition()
+				or loctarget == nil and GetRandomPosition(eater, teleportee, target_in_ocean)
+				or loctarget.teletopos ~= nil and loctarget:teletopos()
+				or loctarget:GetPosition()
+
+				if teleportee.components.locomotor ~= nil then
+					teleportee.components.locomotor:StopMoving()
+				end
+
+				local teleportfx = SpawnPrefab("explode_reskin")
+				teleportfx.Transform:SetPosition(teleportee.Transform:GetWorldPosition())
+
+				local isplayer = teleportee:HasTag("player")
+				if isplayer then
+					teleportee.sg:GoToState("forcetele")
+				else
+					if teleportee.components.health ~= nil then
+						teleportee.components.health:SetInvincible(true)
+					end
+					if teleportee.DynamicShadow ~= nil then
+						teleportee.DynamicShadow:Enable(false)
+					end
+					teleportee:Hide()
+				end
+
+				if isplayer then
+					teleportee.sg.statemem.teleport_task = teleportee:DoTaskInTime(3, TeleportContinue, locpos, loctarget)
+				else
+					TeleportContinue(teleportee, locpos, loctarget)
+				end
+			end
+			
+			local TELEPORT_MUST_TAGS = { "locomotor" }
+			local TELEPORT_CANT_TAGS = { "playerghost", "INLIMBO" }
+			local function TeleportPlayer(inst, eater)
+				local caster = inst.components.inventoryitem.owner or eater
+				if eater == nil then
+					eater = caster
+				end
+
+				local x, y, z = eater.Transform:GetWorldPosition()
+				local target_in_ocean = eater.components.locomotor ~= nil and eater.components.locomotor:IsAquatic()
+
+				local loctarget = eater.components.minigame_participator ~= nil and eater.components.minigame_participator:GetMinigame()
+				or eater.components.teleportedoverride ~= nil and eater.components.teleportedoverride:GetDestTarget()
+                or eater.components.hitchable ~= nil and eater:HasTag("hitched") and eater.components.hitchable.hitched or nil
+				
+				if eater:HasTag("player") then 
+					TeleportStart(eater, inst, caster, loctarget, target_in_ocean)
+				end
+			end
+			
+			TeleportPlayer(inst, eater)
+		end,
+	},
+	--[[
+	monstermeatballs =
+	{
+		test = function(cooker, names, tags) return (tags.monster and tags.monster >= 1) and names.firenettles and not tags.inedible end,
+		priority = 1,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_MED,
+		health = -10,
+		hunger = 37.5,
+		sanity = -10,
+		cooktime = .75,
+        potlevel = "med",
+        floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"monstermeat", 1}, {"firenettles", 1}, {"carrot", 2}}},
+	},
+	]]--
 }
 
 for k, recipe in pairs(kyno_foods) do

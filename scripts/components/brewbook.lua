@@ -3,7 +3,7 @@ local Brewbook = Class(function(self, inst)
 
 	self.inst:AddTag("brewbook")
 
-	--self.onreadfn = nil
+	-- self.onreadfn = nil
 end)
 
 function Brewbook:OnRemoveFromEntity()

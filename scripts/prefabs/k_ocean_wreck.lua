@@ -92,7 +92,7 @@ local function onpickedfn(inst, picker)
 end
 
 local function getregentimefn(inst)
-	return LIMPET_REGROW_TIME
+	return TUNING.KYNO_LIMPETROCK_GROWTIME
 end
 
 local function makefullfn(inst)
@@ -125,7 +125,7 @@ local function OnHammered(inst, worker)
 	
 	if inst.components.pickable and inst.components.pickable:CanBePicked() then
 		for i = 1, inst.components.pickable.numtoharvest do
-			inst.components.lootdropper:AddLoot(inst.components.pickable.product)
+			inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product)
 		end
 	end
 	

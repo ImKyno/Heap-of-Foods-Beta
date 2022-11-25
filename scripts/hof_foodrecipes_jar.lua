@@ -630,7 +630,7 @@ local kyno_foods_jar =
 		card_def = {ingredients = {{"bird_egg", 1}, {"carrot", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
-            eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
+            eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
         end,
 	},
 	
@@ -649,7 +649,7 @@ local kyno_foods_jar =
 		card_def = {ingredients = {{"kyno_chicken_egg", 1}, {"carrot", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
-            eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
+            eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
         end,
 	},
 	
@@ -668,7 +668,7 @@ local kyno_foods_jar =
 		card_def = {ingredients = {{"tallbirdegg", 1}, {"carrot", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
-            eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
+            eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
         end,
 	},
 	
@@ -687,7 +687,7 @@ local kyno_foods_jar =
 		card_def = {ingredients = {{"bird_egg", 1}, {"nightmarefuel", 1}}},
 		prefabs = { "kyno_insanitybuff" },
         oneatenfn = function(inst, eater)
-            eater.components.debuffable:AddDebuff("kyno_insanitybuff", "kyno_insanitybuff")
+            eater:AddDebuff("kyno_insanitybuff", "kyno_insanitybuff")
         end,
 	},
 	

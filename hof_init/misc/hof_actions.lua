@@ -63,13 +63,6 @@ AddComponentAction("USEITEM", "slaughteritem", function(inst, doer, target, acti
 	end
 end)
 
-AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.FLAY, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.FLAY, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-
 -- For chopping items inside the inventory, such as Coconuts.
 AddComponentAction("USEITEM", "tool", function(inst, doer, target, actions, right)
 	if target:HasTag("crackable") then
@@ -103,13 +96,6 @@ AddComponentAction("USEITEM", "soul", function(inst, doer, target, actions, righ
 	end
 end)
 
-AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.STORESOUL, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.STORESOUL, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-
 -- Action for healing Ruined Sugarwood Trees.
 AddAction("SAPHEAL", STRINGS.ACTIONS.SAPHEAL, function(act)
 	 if act.target ~= nil and act.target:HasTag("sap_healable") then
@@ -125,13 +111,6 @@ AddComponentAction("USEITEM", "saphealer", function(inst, doer, target, actions,
 		table.insert(actions, ACTIONS.SAPHEAL)
 	end
 end)
-
-AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SAPHEAL, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SAPHEAL, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
 
 -- Action for Milking animals. If Beefalo Milk mod is enabled, use their system instead?
 -- if not _G.KnownModIndex:IsModEnabled("workshop-436654027") or _G.KnownModIndex:IsModEnabled("workshop-1277605967") or
@@ -156,13 +135,6 @@ AddComponentAction("USEITEM", "milker", function(inst, doer, target, actions)
 		table.insert(actions, ACTIONS.PULLMILK)
 	end
 end)
-
-AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.PULLMILK, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.PULLMILK, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
 
 -- Action for Brewing.
 AddAction("BREWER", STRINGS.ACTIONS.BREWER, function(act)
@@ -289,23 +261,12 @@ AddComponentAction("SCENE", "brewer", function(inst, doer, actions, right)
 	end
 end)
 
-AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.BREWER, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.BREWER, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-end))
-
 -- Action for reading the Brewbook.
--- I'm not using simplebook component/action because it has some problems.
-AddAction("READBREWBOOK", STRINGS.ACTIONS.READ, function(act)
-    local targ = act.target or act.invobject
-    if targ ~= nil and act.doer ~= nil then
-		if targ.components.book ~= nil and act.doer.components.reader ~= nil then
-            local success, reason = act.doer.components.reader:Read(targ)
-	        return success, reason
-		elseif targ.components.brewbook ~= nil then
-			targ.components.brewbook:Read(act.doer)
+AddAction("READBREWBOOK", STRINGS.ACTIONS.READBREWBOOK, function(act)
+    local target = act.target or act.invobject
+    if target ~= nil and act.doer ~= nil then
+		if target.components.brewbook ~= nil then
+			target.components.brewbook:Read(act.doer)
 			return true
 		end
 	end
@@ -318,13 +279,6 @@ ACTIONS.READBREWBOOK.encumbered_valid = true
 AddComponentAction("INVENTORY", "brewbook", function(inst, doer, actions)
 	table.insert(actions, ACTIONS.READBREWBOOK)
 end)
-
-AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)
-	return (action.invobject ~= nil and action.invobject.components.brewbook ~= nil and "brewbook_open")
-end))
-AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)
-	return (action.invobject ~= nil and action.invobject:HasTag("brewbook")) and "brewbook_open"
-end))
 
 -- Action String overrides.
 ACTIONS.GIVE.stroverridefn = function(act)
@@ -402,13 +356,3 @@ end
 -- Fix for fuel items, because the action was "Give" instead of "Add Fuel".
 ACTIONS.ADDFUEL.priority = 5
 ACTIONS.ADDWETFUEL.priority = 5
-
--- Quick open Canned Items.
-AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.UNWRAP, function(inst, action)
-	local target = action.target or action.invobject
-	if target.components.unwrappable and target:HasTag("canned_food") then
-		return "doshortaction"
-	else
-		return "dolongaction"
-	end
-end))

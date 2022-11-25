@@ -1,5 +1,5 @@
 local function SetupRegenTime(self)
-	if not TheWorld.state.isspring then
+	if TheWorld.state.isspring then
 		self.regentime     = TUNING.MILKABLE_SPRING_TIME
 		self.baseregentime = TUNING.MILKABLE_SPRING_TIME * 0.5
 		self.canbemilked   = true
@@ -38,7 +38,7 @@ local MilkableAnimal = Class(function(self, inst)
 })
 
 local function OnRegen(inst)
-    inst.components.MilkableAnimal:Regen()
+    inst.components.milkableanimal:Regen()
 end
 
 function MilkableAnimal:SetUp(product, regen, number)
@@ -46,7 +46,7 @@ function MilkableAnimal:SetUp(product, regen, number)
 	self.product = product
 	self.numtoharvest = number or 1
 
-	if not TheWorld.state.isspring then
+	if TheWorld.state.isspring then
 		self.regentime     = TUNING.MILKABLE_SPRING_TIME
 		self.baseregentime = TUNING.MILKABLE_SPRING_TIME * 0.5
 	else

@@ -6,9 +6,11 @@ local function OnAttached(inst, target)
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0)
 	
-    target:AddTag("groggy")
-	target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_strengthbuff", TUNING.KYNO_ALCOHOL_SPEED)
-	target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_SMALL)
+	if target.components.locomotor ~= nil and target:HasTag("player") then
+		target:AddTag("groggy")
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_strengthbuff", TUNING.KYNO_ALCOHOL_SPEED)
+		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_SMALL)
+	end
 	
     inst:ListenForEvent("death", function()
         inst.components.debuff:Stop()
@@ -16,9 +18,11 @@ local function OnAttached(inst, target)
 end
 
 local function OnDetached(inst, target)
-	target:RemoveTag("groggy")
-	target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_strengthbuff")
-	target.components.combat.externaldamagemultipliers:RemoveModifier(target)
+	if target.components.locomotor ~= nil and target:HasTag("player") then
+		target:RemoveTag("groggy")
+		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_strengthbuff")
+		target.components.combat.externaldamagemultipliers:RemoveModifier(target)
+	end
 	
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_END"))
@@ -31,9 +35,11 @@ local function OnExtended(inst, target)
     inst.components.timer:StopTimer("kyno_strengthbuff")
     inst.components.timer:StartTimer("kyno_strengthbuff", TUNING.KYNO_ALCOHOL_DURATION_SMALL)
 	
-	target:AddTag("groggy")
-	target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_strengthbuff", TUNING.KYNO_ALCOHOL_SPEED)
-	target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_SMALL)
+	if target.components.locomotor ~= nil and target:HasTag("player") then
+		target:AddTag("groggy")
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_strengthbuff", TUNING.KYNO_ALCOHOL_SPEED)
+		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_SMALL)
+	end
 end
 
 local function OnTimerDone(inst, data)

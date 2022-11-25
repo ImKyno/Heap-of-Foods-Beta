@@ -469,7 +469,7 @@ if DO_REGROWTH == 1 then
 				end
 
 				if spawned > 0 then
-					print("[Heap of Foods Regrowth] Spawned ".. spawned.."x of "..prefab.." at seg "..segtime.." (tick: "..ticktime..") of day "..math.floor(tickage / TUNING.TOTAL_DAY_TIME) + 1)
+					-- print("[Heap of Foods Regrowth] Spawned ".. spawned.."x of "..prefab.." at seg "..segtime.." (tick: "..ticktime..") of day "..math.floor(tickage / TUNING.TOTAL_DAY_TIME) + 1)
 				end
 			end
 
@@ -525,8 +525,8 @@ if DO_REGROWTH == 1 then
 							table.insert(tiles[tile], { tilex = x, tiley = y })
 						end
 					end
-					print("[Heap of Foods Regrowth]")
-					print("   ...World: w: "..worldwidth..", h: "..worldheight..", square length: "..worldsquarelength)
+					-- print("[Heap of Foods Regrowth]")
+					-- print("   ...World: w: "..worldwidth..", h: "..worldheight..", square length: "..worldsquarelength)
 
 					local function load_prefabs(spawners)
 						for prefab, spawner in pairs(spawners) do
@@ -538,7 +538,7 @@ if DO_REGROWTH == 1 then
 						end
 						if not maxprefabcount[prefab] then
 							maxprefabcount[prefab] = spawner.maxcount
-							print("   ...spawner: "..prefab..": maxcount: "..spawner.maxcount..", amount: "..(spawner.amount or "?")..", current: "..(prefabcountonground[prefab] or "?"))
+							-- print("   ...spawner: "..prefab..": maxcount: "..spawner.maxcount..", amount: "..(spawner.amount or "?")..", current: "..(prefabcountonground[prefab] or "?"))
 						end
 					end
 				end

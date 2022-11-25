@@ -14,14 +14,20 @@ local function OnAttached(inst, target)
 	
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0)
-    target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
+    
+	if target.components.locomotor ~= nil then
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
+	end
+	
     inst:ListenForEvent("death", function()
         inst.components.debuff:Stop()
     end, target)
 end
 
 local function OnDetached(inst, target)
-    target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_coffeebuff")
+	if target.components.locomotor ~= nil then
+		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_coffeebuff")
+	end
 	
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_END"))

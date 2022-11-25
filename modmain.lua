@@ -28,8 +28,8 @@ local hof_init_misc =
 	"hof_prefabs",
 	"hof_recipes",
 	"hof_brewbook",
-	"hof_stategraphs",
 	"hof_actions",
+	"hof_stategraphs",
 	"hof_meatrackfix",
 	"hof_containers",
 	"hof_tuning",
@@ -54,7 +54,6 @@ local hof_init_foods =
 	"hof_bruwing",
 	"hof_postinits_foods",
 	"hof_postinits_buffs",
-	"hof_icons_foods",
 }
 
 for _, v in pairs(hof_init_misc) do

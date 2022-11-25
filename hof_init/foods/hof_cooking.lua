@@ -297,9 +297,12 @@ local kynofoods =
 	crab_artichoke          = require("hof_foodrecipes").crab_artichoke,
 	poisonfrogglebunwich    = require("hof_foodrecipes").poisonfrogglebunwich,
 	pepperrolls             = require("hof_foodrecipes").pepperrolls,
-	chocolatebar            = require("hof_foodrecipes").chocolatebar,
+	chocolate_black         = require("hof_foodrecipes").chocolate_black,
+	chocolate_white         = require("hof_foodrecipes").chocolate_white,
 	tricolordango           = require("hof_foodrecipes").tricolordango,
 	friesfrench             = require("hof_foodrecipes").friesfrench,
+	twistedtequile          = require("hof_foodrecipes").twistedtequile,
+	-- monstermeatballs        = require("hof_foodrecipes").monstermeatballs,
 	
 	-- Warly Exclusives.
 	musselbouillabaise 		= require("hof_foodrecipes_warly").musselbouillabaise,

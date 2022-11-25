@@ -6,9 +6,11 @@ local function OnAttached(inst, target)
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0)
 	
-    target:AddTag("groggy")
-	target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_dmgreductionbuff", TUNING.KYNO_DMGREDUCTIONBUFF_SPEED)
-	target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER)
+	if target.components.locomotor ~= nil and target:HasTag("player") then
+		target:AddTag("groggy")
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_dmgreductionbuff", TUNING.KYNO_DMGREDUCTIONBUFF_SPEED)
+		target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER)
+	end
 	
     inst:ListenForEvent("death", function()
         inst.components.debuff:Stop()
@@ -16,9 +18,11 @@ local function OnAttached(inst, target)
 end
 
 local function OnDetached(inst, target)
-	target:RemoveTag("groggy")
-	target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_dmgreductionbuff")
-	target.components.health.externalabsorbmodifiers:RemoveModifier(target)
+	if target.components.locomotor ~= nil and target:HasTag("player") then
+		target:RemoveTag("groggy")
+		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_dmgreductionbuff")
+		target.components.health.externalabsorbmodifiers:RemoveModifier(target)
+	end
 	
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_END"))
@@ -31,9 +35,11 @@ local function OnExtended(inst, target)
     inst.components.timer:StopTimer("kyno_dmgreductionbuff")
     inst.components.timer:StartTimer("kyno_dmgreductionbuff", TUNING.KYNO_ALCOHOL_DURATION_SMALL)
 	
-	target:AddTag("groggy")
-	target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_dmgreductionbuff", TUNING.KYNO_DMGREDUCTIONBUFF_SPEED)
-	target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER)
+	if target.components.locomotor ~= nil and target:HasTag("player") then
+		target:AddTag("groggy")
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_dmgreductionbuff", TUNING.KYNO_DMGREDUCTIONBUFF_SPEED)
+		target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER)
+	end
 end
 
 local function OnTimerDone(inst, data)

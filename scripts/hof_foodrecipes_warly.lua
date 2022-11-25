@@ -179,7 +179,7 @@ local kyno_warly_foods =
 		card_def = {ingredients = {{"royal_jelly", 1}, {"green_cap", 3}}},
         prefabs = { "kyno_sanityregenbuff" },
         oneatenfn = function(inst, eater)
-            eater.components.debuffable:AddDebuff("kyno_sanityregenbuff", "kyno_sanityregenbuff")
+            eater:AddDebuff("kyno_sanityregenbuff", "kyno_sanityregenbuff")
         end,
 	},
 	
@@ -201,7 +201,7 @@ local kyno_warly_foods =
 		card_def = {ingredients = {{"royal_jelly", 1}, {"butter", 1}, {"honey", 2}}},
         prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
-            eater.components.debuffable:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
+            eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
         end,
 	},
 	
@@ -224,7 +224,7 @@ local kyno_warly_foods =
 		card_def = {ingredients = {{"royal_jelly", 2}, {"dragonfruit", 1}, {"pomegranate", 1}}},
         prefabs = { "kyno_superregenbuff" },
         oneatenfn = function(inst, eater)
-            eater.components.debuffable:AddDebuff("kyno_superregenbuff", "kyno_superregenbuff")
+            eater:AddDebuff("kyno_superregenbuff", "kyno_superregenbuff")
         end,
 	},
 	

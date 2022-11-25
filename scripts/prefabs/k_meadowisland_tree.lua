@@ -104,7 +104,7 @@ local function OnGetItemFromPlayer(inst, giver, item)
 	inst:Remove()
 end
 
-local function OnSave(inst)
+local function OnSave(inst, data)
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
         data.burnt = true
     end

@@ -12,7 +12,9 @@ end
 local function OnAttached(inst, target)
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0) 
+	
     inst.task = inst:DoPeriodicTask(2, OnTick, nil, target)
+	
     inst:ListenForEvent("death", function()
         inst.components.debuff:Stop()
     end, target)
@@ -27,6 +29,7 @@ end
 local function OnExtended(inst, target)
     inst.components.timer:StopTimer("regenover")
     inst.components.timer:StartTimer("regenover", TUNING.JELLYBEAN_DURATION)
+	
     inst.task:Cancel()
     inst.task = inst:DoPeriodicTask(2, OnTick, nil, target)
 end

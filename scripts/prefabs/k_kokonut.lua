@@ -58,22 +58,23 @@ local function OnChopped(inst, worker)
         if inst.components.stackable and inst.components.stackable.stacksize > 1 then 
             kokonut = inst.components.stackable:Get()
             inst.components.workable:SetWorkLeft(1)
-        end 
-        if owner then 
-            local cracked = SpawnPrefab("kyno_kokonut_halved")
-			cracked.components.stackable.stacksize = 2
-            if owner.components.inventory and not owner.components.inventory:IsFull() then
-                owner.components.inventory:GiveItem(cracked)
-            elseif owner.components.container and not owner.components.container:IsFull() then
-                owner.components.container:GiveItem(cracked)
-            else
-                inst.components.lootdropper:DropLootPrefab(cracked)
+        end
+		local cracked
+        if owner then
+			local container = owner.components.inventory or owner.components.container
+			if container then 
+				local cracked = SpawnPrefab("kyno_kokonut_halved")
+				cracked.components.stackable.stacksize = 2
+				container:GiveItem(cracked)
+            elseif owner.components.lootdropper then
+                cracked = owner.components.lootdropper:SpawnLootPrefab("kyno_kokonut_halved")
+                owner.components.lootdropper:SpawnLootPrefab("kyno_kokonut_halved")
             end
         else 
-            inst.components.lootdropper:SpawnLootPrefab("kyno_kokonut_halved")
+            cracked = inst.components.lootdropper:SpawnLootPrefab("kyno_kokonut_halved")
             inst.components.lootdropper:SpawnLootPrefab("kyno_kokonut_halved")
         end 
-        worker.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree") -- inst.
+        worker.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
     end
     kokonut:Remove()
 end 

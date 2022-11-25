@@ -260,10 +260,8 @@ local function kegfn()
 	
 	inst.entity:SetPristine()
 	
-    if not TheWorld.ismastersim then
-		inst.OnEntityReplicated = function(inst) 
-			inst.replica.container:WidgetSetup("brewer") 
-		end
+    if not TheWorld.ismastersim then 
+		inst.OnEntityReplicated = function(inst) inst.replica.container:WidgetSetup("brewer") end
         return inst
     end
 	
@@ -333,10 +331,8 @@ local function preservejarfn()
 	
 	inst.entity:SetPristine()
 	
-    if not TheWorld.ismastersim then
-		inst.OnEntityReplicated = function(inst) 
-			inst.replica.container:WidgetSetup("brewer") 
-		end
+    if not TheWorld.ismastersim then 
+		inst.OnEntityReplicated = function(inst) inst.replica.container:WidgetSetup("brewer") end
         return inst
     end
 	
