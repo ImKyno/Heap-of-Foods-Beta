@@ -6,6 +6,8 @@ local ACTIONS 			= _G.ACTIONS
 local STRINGS			= _G.STRINGS
 local SpawnPrefab		= _G.SpawnPrefab
 
+require("hof_mainfunctions")
+
 -- Pig King Trades Some Items.
 local function BushTrader(inst)
     if not _G.TheWorld.ismastersim then
@@ -433,10 +435,10 @@ end
 
 AddPrefabPostInit("trident", StridentTridentPostinit)
 
---[[
 -- Colour Cubes and Music for the Serenitea Archipelago.
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=2625422345
 -- local SERENITY_CC = GetModConfigData("serenity_cc")
+--[[
 if SERENITY_CC == 1 then
     local function MakeSerenityArea(inst)
         _G.TheWorld:PushEvent("overridecolourcube", resolvefilepath("images/colourcubesimages/quagmire_cc.tex"))
@@ -494,8 +496,6 @@ end
 ]]--
 
 -- Retrofitting Stuff for old worlds.
-require("hof_settings")
-
 local function RetrofitSerenityIsland()
     local node_indices = {}
     for k, v in ipairs(_G.TheWorld.topology.ids) do
@@ -673,7 +673,7 @@ end
 AddPrefabPostInit("firepit", FirePitCookwarePostinit)
 
 -- Small fix for the natural spawning Mushroom Stump.
-local mushstumps = 
+local mushstumps =
 {
     "kyno_mushstump_natural",
     "kyno_mushstump_cave",
@@ -702,7 +702,7 @@ AddPrefabPostInit("bananabush", function(inst)
 end)
 
 -- Monkey Queen also accepts our Bananas!
-local new_bananas = 
+local new_bananas =
 {
     "kyno_banana",
     "kyno_banana_cooked",
@@ -754,19 +754,19 @@ local function PotatoSackPostinit(inst)
 		if inst:HasTag("fire") and inst.components.burnable then
 			inst.components.burnable:Extinguish()
 		end
-		
+
 		inst.components.lootdropper:DropLoot()
-		
-		if inst.components.container then 
-			inst.components.container:DropEverything() 
+
+		if inst.components.container then
+			inst.components.container:DropEverything()
 		end
-		
+
 		SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
 		inst.SoundEmitter:PlaySound("dontstarve/common/destroy_straw")
 		inst:Remove()
 	end
 
-	local function OnOpen(inst) 
+	local function OnOpen(inst)
 		if not inst:HasTag("burnt") then
 			inst.SoundEmitter:PlaySound("dontstarve/wilson/use_bedroll")
 		end
@@ -777,45 +777,45 @@ local function PotatoSackPostinit(inst)
 			inst.SoundEmitter:PlaySound("dontstarve/wilson/use_bedroll")
 		end
 	end
-	
+
 	local function OnHit(inst, worker)
 		if not inst:HasTag("burnt") then
 			inst.AnimState:PlayAnimation("hit")
 			inst.AnimState:PushAnimation("idle_full")
-		
-			if inst.components.container then 
-				inst.components.container:DropEverything() 
+
+			if inst.components.container then
+				inst.components.container:DropEverything()
 				inst.components.container:Close()
 			end
 		end
 	end
-	
+
 	local function OnPickup(inst)
 		if inst.components.container ~= nil and inst.components.container:IsOpen() then
 			inst.components.container:Close()
 		end
 	end
-	
+
 	if not _G.TheWorld.ismastersim then
 		inst.OnEntityReplicated = function(inst) inst.replica.container:WidgetSetup("potatosack") end
         return inst
     end
-	
+
 	if inst.components.workable ~= nil then
 		inst.components.workable:SetOnFinishCallback(OnHammered)
 		inst.components.workable:SetOnWorkCallback(OnHit)
 	end
-	
+
 	inst:AddComponent("preserver")
 	inst.components.preserver:SetPerishRateMultiplier(0)
-	
+
 	inst:AddComponent("container")
     inst.components.container:WidgetSetup("potatosack")
     inst.components.container.onopenfn = OnOpen
     inst.components.container.onclosefn = OnClose
 	inst.components.container.skipclosesnd = true
 	inst.components.container.skipopensnd = true
-	
+
 	inst:ListenForEvent("onputininventory", OnPickup)
 end
 
@@ -826,13 +826,13 @@ local potatosack_items =
 {
 	"potato",
 	"potato_cooked",
-	
+
 	"sweetpotato",
 	"sweetpotato_cooked",
-	
+
 	"kyno_sweetpotato",
 	"kyno_sweetpotato_cooked",
-	
+
 	"potato_seeds",
 	"sweetpotato_seeds",
 	"kyno_sweetpotato_seeds",
@@ -842,7 +842,7 @@ local function PotatoSackItemsPostinit(inst)
 	inst:AddTag("potatosack_valid")
 end
 
-for k, v in pairs(potatosack_items) do 
+for k, v in pairs(potatosack_items) do
 	AddPrefabPostInit(v, PotatoSackItemsPostinit)
 end
 
@@ -860,7 +860,7 @@ local function TumbleweedPostinit(inst)
 				table.insert(inst.lootaggro, false)
 			end
 		end
-		
+
 		if math.random() < TUNING.KYNO_BREWINGRECIPECARD_CHANCE then
 			table.insert(inst.loot, "kyno_brewingrecipecard")
 			table.insert(inst.lootaggro, false)
@@ -870,13 +870,13 @@ local function TumbleweedPostinit(inst)
 		for i, v in ipairs(inst.loot) do
 			item = SpawnPrefab(v)
 			item.Transform:SetPosition(x, y, z)
-			
+
 			if item.components.inventoryitem ~= nil and item.components.inventoryitem.ondropfn ~= nil then
 				item.components.inventoryitem.ondropfn(item)
 			end
-			
+
 			if inst.lootaggro[i] and item.components.combat ~= nil and picker ~= nil then
-				if not (item:HasTag("spider") and (picker:HasTag("spiderwhisperer") or picker:HasTag("spiderdisguise") or 
+				if not (item:HasTag("spider") and (picker:HasTag("spiderwhisperer") or picker:HasTag("spiderdisguise") or
 				(picker:HasTag("monster") and not picker:HasTag("player"))) or item:HasTag("frog") and picker:HasTag("merm")) then
 					item.components.combat:SuggestTarget(picker)
 				end
@@ -887,11 +887,11 @@ local function TumbleweedPostinit(inst)
 
 		return true
 	end
-	
+
 	if not _G.TheWorld.ismastersim then
         return inst
     end
-	
+
 	inst.components.pickable.onpickedfn = onpickup
 end
 

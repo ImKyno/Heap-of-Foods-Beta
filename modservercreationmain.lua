@@ -8,5 +8,5 @@ FrontEndAssets = {
 
 ReloadFrontEndAssets()
 
-require("hof_settings")
+require("hof_mainfunctions")
 _G.ChangeFoodConfigs("HOF_RETROFIT", 0)

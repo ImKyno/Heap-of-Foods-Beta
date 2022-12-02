@@ -139,7 +139,7 @@ for i, layout in ipairs(hof_serenity_islands) do
 	{
 		start_mask 			     = _G.PLACE_MASK.IGNORE_IMPASSABLE,
 		fill_mask                = _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		add_topology             = {room_id = "StaticLayoutIsland:Serenity Archipelago", tags = {"RoadPoison", "serenityisland", "not_mainland", "nohunt", "nohasslers"}},
+		add_topology             = {room_id = "StaticLayoutIsland:Serenity Archipelago", tags = {"RoadPoison", "serenityarea", "not_mainland", "nohunt", "nohasslers"}},
 		areas =
 		{
 		},

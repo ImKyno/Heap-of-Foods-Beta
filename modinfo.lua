@@ -265,27 +265,6 @@ configuration_options =
         },
         default = 0,
 	},
-	--[[
-	{
-		name = "serenity_cc",
-		label = "Serenity Archipelago CC",
-		hover = "Should the Serenity Archipelago have The Gorge Colour Cubes?",
-		options =
-		{
-			{
-				description = "No", 
-				hover = "Serenity Archipelago will not have The Gorge Colour Cubes.",
-				data = 0
-			},
-            {
-				description = "Yes", 
-				hover = "Serenity Archipelago will have The Gorge Colour Cubes.",
-				data = 1
-			},
-        },
-        default = 0,
-	},
-	]]--
 	{
 		name = "HOF_OCEANSETPIECE_COUNT",
 		label = "Ocean Setpieces",
@@ -374,4 +353,25 @@ configuration_options =
         },
         default = 0,
 	},
+	--[[
+	{
+		name = "serenity_cc",
+		label = "Serenity Archipelago CC",
+		hover = "Should the Serenity Archipelago have The Gorge Colour Cubes?",
+		options =
+		{
+			{
+				description = "No", 
+				hover = "Serenity Archipelago will not have The Gorge Colour Cubes.",
+				data = 0
+			},
+            {
+				description = "Yes", 
+				hover = "Serenity Archipelago will have The Gorge Colour Cubes.",
+				data = 1
+			},
+        },
+        default = 0,
+	},
+	]]--
 }

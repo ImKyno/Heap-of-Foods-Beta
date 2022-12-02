@@ -6,6 +6,9 @@ local ACTIONS 			= _G.ACTIONS
 local STRINGS			= _G.STRINGS
 local SpawnPrefab		= _G.SpawnPrefab
 
+require("hof_mainfunctions")
+require("hof_upvaluehacker")
+
 -- Rockjaws Drops Shark Fin.
 AddPrefabPostInit("shark", function(inst)
     if _G.TheWorld.ismastersim and not _G.KnownModIndex:IsModEnabled("workshop-2174681153") then
@@ -590,47 +593,14 @@ AddPrefabPostInit("toadstool_dark", function(inst)
     inst.components.lootdropper:SetChanceLootTable("hof_toadstool_dark")
 end)
 
--- Common Birds turns into new birds when landing on our Islands.
-local common_birds = 
-{
-	"crow",
-	"canary",
-	"puffin",
-	"robin",
-}
-
-local function NewBirdsPostinit(inst)
-	local cage = inst.components.occupier ~= nil and inst.components.occupier:GetOwner()
-	if cage == nil and not inst.components.inventoryitem:IsHeld() and inst.sg.currentstate.name == "glide" then
-		local x, y, z = inst.Transform:GetWorldPosition()
-		if not _G.TheWorld.state.iswinter then
-			local map = _G.TheWorld.Map
-			local tile = map:GetTileAtPoint(x, y, z)
-			local name -- Bird type.
-			if tile ~= nil and (tile == WORLD_TILES.QUAGMIRE_PARKFIELD or tile == WORLD_TILES.QUAGMIRE_CITYSTONE) then
-				name = "quagmire_pigeon"
-			elseif tile ~= nil and (tile == WORLD_TILES.HOF_FIELDS) then
-				name = "kingfisher"
-			elseif tile ~= nil and (tile == WORLD_TILES.MONKEY_GROUND) then
-				name = "toucan"
-			end
-				
-			local bird = SpawnPrefab(name)
-			bird.Transform:SetPosition(x, y, z)
-			bird.sg:HasStateTag("glide")
-		end
-		inst:Remove()
-	end
-end
-
-for k, v in pairs(common_birds) do
-	AddPrefabPostInit(v, function(inst)
-		if not _G.TheWorld.ismastersim then
-			return inst
-		end
+-- New birds will spawn when landing on these turfs.
+AddClassPostConstruct("components/birdspawner", function(self) 
+	local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
 	
-		if inst:HasTag("bird") and not inst:HasTag("bird_mutant") then
-			inst:DoTaskInTime(0, NewBirdsPostinit)
-		end
-	end)
-end
+	BIRD_TYPES[WORLD_TILES.QUAGMIRE_PARKFIELD] = {"quagmire_pigeon"}
+	BIRD_TYPES[WORLD_TILES.QUAGMIRE_CITYSTONE] = {"quagmire_pigeon"}
+	
+	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = {"toucan"}
+	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = {"toucan"}
+	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = {"kingfisher"}
+end)
