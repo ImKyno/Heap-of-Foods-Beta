@@ -2136,22 +2136,6 @@ local kyno_foods =
 			TeleportPlayer(inst, eater)
 		end,
 	},
-	--[[
-	monstermeatballs =
-	{
-		test = function(cooker, names, tags) return (tags.monster and tags.monster >= 1) and names.firenettles and not tags.inedible end,
-		priority = 1,
-		foodtype = FOODTYPE.MEAT,
-		perishtime = TUNING.PERISH_MED,
-		health = -10,
-		hunger = 37.5,
-		sanity = -10,
-		cooktime = .75,
-        potlevel = "med",
-        floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"monstermeat", 1}, {"firenettles", 1}, {"carrot", 2}}},
-	},
-	]]--
 }
 
 for k, recipe in pairs(kyno_foods) do

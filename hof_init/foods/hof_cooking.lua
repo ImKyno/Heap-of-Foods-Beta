@@ -101,7 +101,7 @@ for k, v in pairs(require("hof_foodrecipes")) do
 	AddCookerRecipe("kyno_cookware_grill", 		 			v)
 	AddCookerRecipe("kyno_cookware_oven_small_casserole", 	v)
 	AddCookerRecipe("kyno_cookware_oven_casserole", 		v)
-	
+
 	if v.card_def then
 		AddRecipeCard("cookpot",                            v)
 		AddRecipeCard("portablecookpot",                    v)
@@ -111,7 +111,7 @@ end
 -- This file is only for Warly foods.
 for k, v in pairs(require("hof_foodrecipes_warly")) do
 	AddCookerRecipe("portablecookpot",         				v)
-	
+
 	if v.card_def then
 		AddRecipeCard("portablecookpot",                    v)
 	end
@@ -122,22 +122,22 @@ for k, v in pairs(require("hof_foodspicer")) do
 end
 
 -- Fix For Spiced Foods and Potlevel.
-local spices  = 
-{ 
-	"chili", 
-	"garlic", 
-	"sugar", 
-	"salt" 
+local spices  =
+{
+	"chili",
+	"garlic",
+	"sugar",
+	"salt"
 }
 
-local cookers = 
-{ 
-	"cookpot", 
-	"portablecookpot", 
-	"portablespicer", 
+local cookers =
+{
+	"cookpot",
+	"portablecookpot",
+	"portablespicer",
 	"archive_cookpot",
-	"kyno_cookware_syrup", 
-	"kyno_cookware_small", 
+	"kyno_cookware_syrup",
+	"kyno_cookware_small",
 	"kyno_cookware_big",
 	"kyno_cookware_elder",
 	"kyno_cookware_small_grill",
@@ -146,14 +146,14 @@ local cookers =
 	"kyno_cookware_oven_casserole",
 }
 
-for i, cooker in ipairs(cookers) do 
+for i, cooker in ipairs(cookers) do
 	if not cookerrecipes[cooker] then
 		cookerrecipes[cooker] = {}
 	end
 end
 
 -- Fix For Food On Stations.
-local cookerstations = 
+local cookerstations =
 {
 	"cookpot",
 	"portablecookpot",
@@ -166,7 +166,7 @@ local cookerstations =
 	"kyno_cookware_grill",
 	"kyno_cookware_oven_small_casserole",
 	"kyno_cookware_oven_casserole",
-} 
+}
 
 local kynofoods =
 {
@@ -177,7 +177,7 @@ local kynofoods =
 	sharkfinsoup 			= require("hof_foodrecipes").sharkfinsoup,
 	caviar 					= require("hof_foodrecipes").caviar,
 	tropicalbouillabaisse 	= require("hof_foodrecipes").tropicalbouillabaisse,
-	
+
 	-- Hamlet.
 	feijoada 				= require("hof_foodrecipes").feijoada,
 	gummy_cake 				= require("hof_foodrecipes").gummy_cake,
@@ -187,7 +187,7 @@ local kynofoods =
 	nettlelosange 			= require("hof_foodrecipes").nettlelosange,
 	snakebonesoup 			= require("hof_foodrecipes").snakebonesoup,
 	steamedhamsandwich 		= require("hof_foodrecipes").steamedhamsandwich,
-	
+
 	-- The Gorge.
 	gorge_bread 			= require("hof_foodrecipes").gorge_bread,
 	gorge_potato_chips 		= require("hof_foodrecipes").gorge_potato_chips,
@@ -248,8 +248,8 @@ local kynofoods =
 	gorge_scone 			= require("hof_foodrecipes").gorge_scone,
 	gorge_cheesecake 		= require("hof_foodrecipes").gorge_cheesecake,
 	kyno_syrup 				= require("hof_foodrecipes").kyno_syrup,
-	
-	-- Winter's Feast. 
+
+	-- Winter's Feast.
 	festive_berrysauce 		= require("hof_foodrecipes").festive_berrysauce,
 	festive_bibingka 		= require("hof_foodrecipes").festive_bibingka,
 	festive_cabbagerolls 	= require("hof_foodrecipes").festive_cabbagerolls,
@@ -268,14 +268,14 @@ local kynofoods =
 	festive_sweetpotato 	= require("hof_foodrecipes").festive_sweetpotato,
 	festive_tamales 		= require("hof_foodrecipes").festive_tamales,
 	festive_tourtiere 		= require("hof_foodrecipes").festive_tourtiere,
-	
+
 	-- Unimplemented.
 	slaw 					= require("hof_foodrecipes").slaw,
 	lotusbowl 				= require("hof_foodrecipes").lotusbowl,
 	poi 					= require("hof_foodrecipes").poi,
 	cucumbersalad 			= require("hof_foodrecipes").cucumbersalad,
 	waterycressbowl 		= require("hof_foodrecipes").waterycressbowl,
-	
+
 	-- Secret / Custom.
 	bowlofgears 			= require("hof_foodrecipes").bowlofgears,
 	longpigmeal 			= require("hof_foodrecipes").longpigmeal,
@@ -302,8 +302,7 @@ local kynofoods =
 	tricolordango           = require("hof_foodrecipes").tricolordango,
 	friesfrench             = require("hof_foodrecipes").friesfrench,
 	twistedtequile          = require("hof_foodrecipes").twistedtequile,
-	-- monstermeatballs        = require("hof_foodrecipes").monstermeatballs,
-	
+
 	-- Warly Exclusives.
 	musselbouillabaise 		= require("hof_foodrecipes_warly").musselbouillabaise,
 	sweetpotatosouffle 		= require("hof_foodrecipes_warly").sweetpotatosouffle,
@@ -321,18 +320,18 @@ local kynofoods =
 }
 
 for name, recipe in pairs(kynofoods) do
-	for i, station in ipairs(cookerstations) do 
+	for i, station in ipairs(cookerstations) do
 		table.insert(cookerrecipes[station], 				   name)
 	end
-	
+
 	AddPrefabPostInit(name, function(inst)
 		inst.AnimState:OverrideSymbol("swap_food", name, 	   name)
 	end)
-	
+
 	for _, spicename in ipairs(spices) do
 		local spiced_name = name.."_spice_"..spicename
 		table.insert(cookerrecipes["portablespicer"], 	spiced_name)
-		
+
 		AddPrefabPostInit(spiced_name, function(inst)
 			inst.AnimState:OverrideSymbol("swap_food",   name, name)
 		end)

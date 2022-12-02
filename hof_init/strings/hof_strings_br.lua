@@ -6450,6 +6450,7 @@ STRINGS.CHARACTERS.WURT.DESCRIBE.TWISTEDTEQUILE = "Glurgh, smells weird!"
 STRINGS.CHARACTERS.WALTER.DESCRIBE.TWISTEDTEQUILE = "I don't think this one is good for you to drink, girl."
 STRINGS.CHARACTERS.WANDA.DESCRIBE.TWISTEDTEQUILE = "Good, more of common drinks with strange powers."
 
+--[[
 STRINGS.NAMES.MONSTERMEATBALLS = "Almôndega de Monstro"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.MONSTERMEATBALLS = "I cooked it myself!"
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.MONSTERMEATBALLS = "Monster meat made into spheres and improved with fire."
@@ -6468,3 +6469,4 @@ STRINGS.CHARACTERS.WARLY.DESCRIBE.MONSTERMEATBALLS = "I'm having a ball!"
 STRINGS.CHARACTERS.WURT.DESCRIBE.MONSTERMEATBALLS = "Glurgh... hunks of yuck."
 STRINGS.CHARACTERS.WALTER.DESCRIBE.MONSTERMEATBALLS = "They're the best part of spaghetti anyway."
 STRINGS.CHARACTERS.WANDA.DESCRIBE.MONSTERMEATBALLS = "Monster meat in a ball, quick and to the point."
+]]--

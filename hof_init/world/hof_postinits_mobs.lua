@@ -230,105 +230,6 @@ AddPrefabPostInit("monkeybarrel", function(inst)
 end)
 ]]--
 
--- Birds transforms into Pigeons when landing on Serenity Archipelago.
-local function SerenityBirdPostinit(inst)
-	inst:DoTaskInTime(1/30, function(inst)
-
-    local TileAtPosition = _G.TheWorld.Map:GetTileAtPoint(inst:GetPosition():Get())
-        if TileAtPosition == WORLD_TILES.QUAGMIRE_PARKFIELD or TileAtPosition == WORLD_TILES.QUAGMIRE_CITYSTONE then
-
-            inst.AnimState:SetBuild("quagmire_pigeon_build")
-
-            inst:SetPrefabName("quagmire_pigeon")
-            inst.nameoverride = "quagmire_pigeon"
-            inst.trappedbuild = "quagmire_pigeon_build"
-			inst.sounds =
-			{
-				takeoff = "dontstarve/birds/takeoff_quagmire_pigeon",
-				chirp = "dontstarve/birds/chirp_quagmire_pigeon",
-				flyin = "dontstarve/birds/flyin",
-			}
-
-            if not _G.TheWorld.ismastersim then
-                return inst
-            end
-
-            inst.components.inventoryitem.onpickupfn = function(inst, doer)
-                inst:Remove()
-                local bird = SpawnPrefab("quagmire_pigeon")
-                doer.components.inventory:GiveItem(bird)
-                return true
-            end
-        end
-    end)
-end
-
-AddPrefabPostInit("crow", SerenityBirdPostinit)
-AddPrefabPostInit("robin", SerenityBirdPostinit)
-AddPrefabPostInit("robin_winter", SerenityBirdPostinit)
-AddPrefabPostInit("puffin", SerenityBirdPostinit)
-
--- Birds transforms into Kingfisher and Toucans when landing on Termagant Island.
-local function MeadowBirdPostinit(inst)
-	inst:DoTaskInTime(1/30, function(inst)
-
-    local TileAtPosition = _G.TheWorld.Map:GetTileAtPoint(inst:GetPosition():Get())
-        if TileAtPosition == WORLD_TILES.MONKEY_GROUND or TileAtPosition == WORLD_TILES.HOF_TIDALMARSH then
-
-            inst.AnimState:SetBuild("toucan_build")
-
-            inst:SetPrefabName("toucan")
-            inst.nameoverride = "toucan"
-            inst.trappedbuild = "toucan_build"
-			inst.sounds =
-			{
-				takeoff = "hof_sounds/creatures/toucan/take_off",
-				chirp = "hof_sounds/creatures/toucan/chirp",
-				flyin = "dontstarve/birds/flyin",
-			}
-
-            if not _G.TheWorld.ismastersim then
-                return inst
-            end
-
-            inst.components.inventoryitem.onpickupfn = function(inst, doer)
-                inst:Remove()
-                local bird = SpawnPrefab("toucan")
-                doer.components.inventory:GiveItem(bird)
-                return true
-            end
-        elseif TileAtPosition == WORLD_TILES.HOF_FIELDS then
-			inst.AnimState:SetBuild("kingfisher_build")
-
-            inst:SetPrefabName("kingfisher")
-            inst.nameoverride = "kingfisher"
-            inst.trappedbuild = "kingfisher_build"
-			inst.sounds =
-			{
-				takeoff = "hof_sounds/creatures/kingfisher/take_off",
-				chirp = "hof_sounds/creatures/kingfisher/chirp",
-				flyin = "dontstarve/birds/flyin",
-			}
-
-            if not _G.TheWorld.ismastersim then
-                return inst
-            end
-
-            inst.components.inventoryitem.onpickupfn = function(inst, doer)
-                inst:Remove()
-                local bird = SpawnPrefab("kingfisher")
-                doer.components.inventory:GiveItem(bird)
-                return true
-            end
-		end
-    end)
-end
-
-AddPrefabPostInit("crow", MeadowBirdPostinit)
-AddPrefabPostInit("robin", MeadowBirdPostinit)
-AddPrefabPostInit("robin_winter", MeadowBirdPostinit)
-AddPrefabPostInit("puffin", MeadowBirdPostinit)
-
 -- Animals that can be killed with the Slaughter Tools.
 local slaughterable_animals =
 {
@@ -688,3 +589,48 @@ AddPrefabPostInit("toadstool_dark", function(inst)
 
     inst.components.lootdropper:SetChanceLootTable("hof_toadstool_dark")
 end)
+
+-- Common Birds turns into new birds when landing on our Islands.
+local common_birds = 
+{
+	"crow",
+	"canary",
+	"puffin",
+	"robin",
+}
+
+local function NewBirdsPostinit(inst)
+	local cage = inst.components.occupier ~= nil and inst.components.occupier:GetOwner()
+	if cage == nil and not inst.components.inventoryitem:IsHeld() and inst.sg.currentstate.name == "glide" then
+		local x, y, z = inst.Transform:GetWorldPosition()
+		if not _G.TheWorld.state.iswinter then
+			local map = _G.TheWorld.Map
+			local tile = map:GetTileAtPoint(x, y, z)
+			local name -- Bird type.
+			if tile ~= nil and (tile == WORLD_TILES.QUAGMIRE_PARKFIELD or tile == WORLD_TILES.QUAGMIRE_CITYSTONE) then
+				name = "quagmire_pigeon"
+			elseif tile ~= nil and (tile == WORLD_TILES.HOF_FIELDS) then
+				name = "kingfisher"
+			elseif tile ~= nil and (tile == WORLD_TILES.MONKEY_GROUND) then
+				name = "toucan"
+			end
+				
+			local bird = SpawnPrefab(name)
+			bird.Transform:SetPosition(x, y, z)
+			bird.sg:HasStateTag("glide")
+		end
+		inst:Remove()
+	end
+end
+
+for k, v in pairs(common_birds) do
+	AddPrefabPostInit(v, function(inst)
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+	
+		if inst:HasTag("bird") and not inst:HasTag("bird_mutant") then
+			inst:DoTaskInTime(0, NewBirdsPostinit)
+		end
+	end)
+end

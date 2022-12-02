@@ -1,5 +1,4 @@
 local squirrelbrain = require("brains/squirrelbrain")
-require("stategraphs/SGsquirrel")
 
 local assets =
 {
@@ -159,8 +158,8 @@ local function fn()
 	local shadow = inst.entity:AddDynamicShadow()
 	shadow:SetSize(1, 0.75)
 
-	inst.Transform:SetFourFaced()
 	MakeCharacterPhysics(inst, 1, 0.12)
+	inst.Transform:SetFourFaced()
 
 	inst.AnimState:SetBank("squirrel")
 	inst.AnimState:SetBuild("squirrel_build")
@@ -248,7 +247,7 @@ local function fn()
 
 	inst:ListenForEvent("attacked", OnAttacked)
 	inst:ListenForEvent("onwenthome", OnWentHome)
-	inst:ListenForEvent("onpickup", OnPickup)
+	inst:ListenForEvent("onpickupitem", OnPickup)
 	inst:ListenForEvent("dropitem", OnDrop)
 
 	MakeFeedableSmallLivestock(inst, TUNING.KYNO_PIKO_PERISH_TIME, nil, OnDrop)
@@ -257,18 +256,110 @@ local function fn()
 end
 
 local function orangefn()
-	local inst = fn()
+	local inst = CreateEntity()
+	
+	inst.entity:AddTransform()
+    inst.entity:AddAnimState()
+    inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
 
+	local shadow = inst.entity:AddDynamicShadow()
+	shadow:SetSize(1, 0.75)
+
+	MakeCharacterPhysics(inst, 1, 0.12)
+	inst.Transform:SetFourFaced()
+
+	inst.AnimState:SetBank("squirrel")
+	inst.AnimState:SetBuild("orange_squirrel_build")
+	inst.AnimState:PlayAnimation("idle", true)
+	inst.AnimState:Hide("eye_red")
+	inst.AnimState:Hide("eye2_red")
+	
+	inst:AddTag("animal")
+	inst:AddTag("prey")
+	inst:AddTag("squirrel")
+	inst:AddTag("smallcreature")
+	inst:AddTag("canbetrapped")
+	inst:AddTag("cannotstealequipped") 
+	inst:AddTag("cookable")
 	inst:AddTag("orange_piko")
 	
-	if not TheWorld.ismastersim then
+	MakeFeedableSmallLivestockPristine(inst)
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
         return inst
     end
 	
+	inst.data = {}
+	inst.sounds = squirrel_sounds
+	inst.force_onwenthome_message = true
+	
+	inst:AddComponent("inventory")
+	inst:AddComponent("sanityaura")
+	inst:AddComponent("knownlocations")
+	inst:AddComponent("tradable")
+	inst:AddComponent("inspectable")
+	inst:AddComponent("sleeper")
+	inst:AddComponent("thief")
+
+	inst:AddComponent("locomotor")
+	inst.components.locomotor.runspeed = TUNING.KYNO_PIKO_RUN_SPEED
+
+	inst:SetStateGraph("SGsquirrel")
+	inst:SetBrain(squirrelbrain)
+
+	inst:AddComponent("eater")
+	inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODGROUP.OMNI })
+	inst.components.eater:SetCanEatHorrible()
+    inst.components.eater:SetCanEatRaw()
+	inst.components.eater:SetOnEatFn(OnEat)
+	inst.components.eater.strongstomach = true
+	inst.components.eater.foodprefs = {"SEEDS"}
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.nobounce = true
+    inst.components.inventoryitem.canbepickedup = false
+    inst.components.inventoryitem.canbepickedupalive = true
+    inst.components.inventoryitem:SetSinks(true)
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_piko_orange"
+
+	inst:AddComponent("cookable")
+	inst.components.cookable.product = "cookedsmallmeat"
+	inst.components.cookable:SetOnCookedFn(OnCooked)
 	
-	inst.UpdateBuild(inst)
+	inst:AddComponent("combat")
+	inst.components.combat:SetDefaultDamage(TUNING.KYNO_PIKO_DAMAGE)
+    inst.components.combat:SetAttackPeriod(TUNING.KYNO_PIKO_ATTACK_PERIOD)
+    inst.components.combat:SetRange(0.7)
+    inst.components.combat:SetRetargetFunction(3, Retarget)
+    inst.components.combat:SetKeepTargetFunction(KeepTarget)
+	inst.components.combat.hiteffectsymbol = "chest"
+	inst.components.combat.onhitotherfn = function(inst, other, damage) inst.components.thief:StealItem(other) end
+
+	inst:AddComponent("health")
+	inst.components.health:SetMaxHealth(TUNING.KYNO_PIKO_HEALTH)
+	inst.components.health.murdersound = "hof_sounds/creatures/piko/attack"
+	
+	inst:AddComponent("lootdropper")
+	inst.components.lootdropper:SetLoot({"smallmeat"})
+	
+	MakeSmallBurnableCharacter(inst, "chest")
+	MakeTinyFreezableCharacter(inst, "chest") 
+
+	inst.UpdateBuild = UpdateBuild
+
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
+
+	inst:ListenForEvent("attacked", OnAttacked)
+	inst:ListenForEvent("onwenthome", OnWentHome)
+	inst:ListenForEvent("onpickupitem", OnPickup)
+	inst:ListenForEvent("dropitem", OnDrop)
+
+	MakeFeedableSmallLivestock(inst, TUNING.KYNO_PIKO_PERISH_TIME, nil, OnDrop)
 
 	return inst
 end

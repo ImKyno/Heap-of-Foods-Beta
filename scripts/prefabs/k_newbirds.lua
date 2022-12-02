@@ -160,13 +160,13 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
     {
         Asset("ANIM", "anim/crow.zip"),
         Asset("ANIM", "anim/"..name.."_build.zip"),
-		
+
 		Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 		Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 		Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
-        
+
 		Asset("SOUND", "sound/birds.fsb"),
-		
+
     }
 
     if bank ~= nil then
@@ -200,7 +200,7 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
     if name == "canary" then
         table.insert(prefabs, "canary_poisoned")
     end
-	
+
 	if tacklesketch then
 		table.insert(prefabs, type(tacklesketch) == "string" and tacklesketch or ("oceanfishingbobber_"..name.."_tacklesketch"))
 	end
@@ -213,14 +213,14 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
 
     local function fn()
         local inst = CreateEntity()
-		
+
         inst.entity:AddTransform()
         inst.entity:AddPhysics()
         inst.entity:AddAnimState()
         inst.entity:AddDynamicShadow()
         inst.entity:AddSoundEmitter()
-        inst.entity:AddNetwork()
         inst.entity:AddLightWatcher()
+        inst.entity:AddNetwork()
 
         inst.Physics:SetCollisionGroup(COLLISION.CHARACTERS)
         inst.Physics:ClearCollisionMask()
@@ -250,7 +250,7 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
         MakeFeedableSmallLivestockPristine(inst)
 
         if water_bank ~= nil then
-            MakeInventoryFloatable(inst)                        
+            MakeInventoryFloatable(inst)
         end
 
         inst.entity:SetPristine()
@@ -265,7 +265,7 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
             chirp = soundbank.."/birds/chirp_"..soundname,
             flyin = "dontstarve/birds/flyin",
         }
-		
+
 		if name == "kingfisher" then
 			inst.sounds =
 			{
@@ -274,7 +274,7 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
 				flyin = "dontstarve/birds/flyin",
 			}
 		end
-		
+
 		if name == "toucan" then
 			inst.sounds =
 			{
@@ -283,7 +283,7 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
 				flyin = "dontstarve/birds/flyin",
 			}
 		end
-		
+
 		if name == "quagmire_pigeon" then
 			inst.sounds =
 			{
@@ -294,14 +294,14 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
 		end
 
         inst.trappedbuild = name.."_build"
-		
+
 		inst:AddComponent("occupier")
 		inst:AddComponent("inspectable")
 
         inst:AddComponent("locomotor")
         inst.components.locomotor:EnableGroundSpeedMultiplier(false)
         inst.components.locomotor:SetTriggersCreep(false)
-		
+
         inst:SetStateGraph("SGbird")
 
         inst:AddComponent("lootdropper")
@@ -328,10 +328,6 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
         if water_bank == nil then
             inst.components.inventoryitem:SetSinks(true)
         end
-		
-		if name == "toucan_hamlet" then
-			inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-		end
 
         inst:AddComponent("cookable")
         inst.components.cookable.product = name == "quagmire_pigeon" and "kyno_bacon_cooked" or "cookedsmallmeat"
@@ -421,7 +417,7 @@ local function ToucanSetup(inst, prefab_deps)
 
     table.insert(prefab_deps, "feather_crow")
 end
-	
+
 local function KingfisherSetup(inst, prefab_deps)
 	inst.components.lootdropper:AddRandomLoot("feather_robin_winter", 1)
 	inst.components.lootdropper:AddRandomLoot("kyno_bacon", 1)

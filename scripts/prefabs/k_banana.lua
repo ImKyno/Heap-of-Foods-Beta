@@ -2,13 +2,13 @@ local assets =
 {
 	Asset("ANIM", "anim/kyno_banana.zip"),
 	Asset("ANIM", "anim/kyno_bananatree_sapling.zip"),
-	
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
-local prefabs = 
+local prefabs =
 {
 	"kyno_banana",
 	"kyno_banana_cooked",
@@ -72,7 +72,7 @@ local function banana()
 	inst.AnimState:SetBank("kyno_banana")
 	inst.AnimState:SetBuild("kyno_banana")
 	inst.AnimState:PlayAnimation("idle")
-	
+
 	inst:AddTag("fruit")
 	inst:AddTag("cookable")
 	-- inst:AddTag("deployedplant")
@@ -85,7 +85,7 @@ local function banana()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
@@ -110,7 +110,7 @@ local function banana()
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_banana_cooked"
-	
+
 	-- inst:AddComponent("deployable")
 	-- inst.components.deployable:SetDeployMode(DEPLOYMODE.PLANT)
 	-- inst.components.deployable.ondeploy = ondeploy
@@ -118,8 +118,8 @@ local function banana()
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
-	
-	inst.OnLoad = OnLoad
+
+	-- inst.OnLoad = OnLoad
 
 	return inst
 end
@@ -137,7 +137,7 @@ local function banana_cooked()
 	inst.AnimState:SetBank("kyno_banana")
 	inst.AnimState:SetBuild("kyno_banana")
 	inst.AnimState:PlayAnimation("cooked")
-	
+
 	inst:AddTag("fruit")
 	inst:AddTag("surface_banana")
 
@@ -146,7 +146,7 @@ local function banana_cooked()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
@@ -156,12 +156,12 @@ local function banana_cooked()
 	inst.components.edible.hungervalue = TUNING.KYNO_BANANA_COOKED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_BANANA_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
-	
+
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
-	
+
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 

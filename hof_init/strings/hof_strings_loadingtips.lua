@@ -51,7 +51,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_WATERY_CRATE2",	"Watery Crates will always yie
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_TUNACAN",			"The \"Ballphin Free\" Tuna will never spoil, unless you open it.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_CANNED_SOURCE",	"You can get Canned Foods and Drinks from Watery Crates and Sunken Chests. Happy treasure hunting!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_TUNACAN_HERMIT",	"The Crabby Hermit might have a special reward, if you complete her tasks.")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_CRABKING_LOOT",	"Need more Crab Meat? The Crab King is a good source. The hunt season is open!")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_CRABKING_LOOT",	"Out of Crab Meat? Crab King can be a reliable source for it.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_REGROWTH",		"Mod entities such as Plants, Trees, etc. Will regrow overtime if there are a low amount of them in the world.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_BOTTLE_SOUL",		"Wortox can store Souls inside Empty Bottles. However, other survivors can't.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_BOTTLE_SOUL2",	"Every survivor can carry the Soul in a Bottle on their inventory, but only Wortox can Release the Soul.")

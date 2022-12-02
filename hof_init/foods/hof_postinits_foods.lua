@@ -69,12 +69,6 @@ AddPrefabPostInit("cucumbersalad", function(inst)
     inst.AnimState:SetScale(1.5, 1.5, 1.5)
 end)
 
---[[
-AddPrefabPostInit("monstermeatballs", function(inst)
-	inst.AnimState:SetScale(.98, .98, .98)
-end)
-]]--
-
 -- The Sea Cucumber doesn't have a proper "cooked" animation, so I'll just make it non cookable.
 AddPrefabPostInit("kyno_cucumber", function(inst)
     inst:RemoveTag("cookable")
