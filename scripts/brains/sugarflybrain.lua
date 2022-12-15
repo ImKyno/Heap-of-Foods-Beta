@@ -4,13 +4,13 @@ require("behaviours/doaction")
 require("behaviours/findflower")
 require("behaviours/panic")
 
-local RUN_AWAY_DIST = 5
-local STOP_RUN_AWAY_DIST = 10
+local RUN_AWAY_DIST         = 5
+local STOP_RUN_AWAY_DIST    = 10
 local POLLINATE_FLOWER_DIST = 10
-local SEE_FLOWER_DIST = 30
-local MAX_WANDER_DIST = 20
+local SEE_FLOWER_DIST       = 30
+local MAX_WANDER_DIST       = 20
 
-local FLOWER_TAGS = {"sugarflower"}
+local FLOWER_TAGS           = {"sugarflower"}
 
 local function NearestFlowerPos(inst)
     local flower = GetClosestInstWithTag(FLOWER_TAGS, inst, SEE_FLOWER_DIST)

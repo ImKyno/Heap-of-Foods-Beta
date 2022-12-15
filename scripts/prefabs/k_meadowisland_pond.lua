@@ -96,6 +96,7 @@ local function fn()
 	inst:AddTag("blocker")
 	inst:AddTag("birdblocker")
     inst:AddTag("antlion_sinkhole_blocker")
+	inst:AddTag("tidalpool")
 	
 	inst.no_wet_prefix = true
 	

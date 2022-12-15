@@ -4,10 +4,10 @@ require("behaviours/runaway")
 require("behaviours/doaction")
 require("behaviours/panic")
 
-local SEE_BAIT_DIST = 20
-local MAX_LEASH_DIST = 10
+local SEE_BAIT_DIST   = 20
+local MAX_LEASH_DIST  = 10
 local MAX_WANDER_DIST = 6
-local STOP_RUN_DIST = 7
+local STOP_RUN_DIST   = 7
 local SEE_PLAYER_DIST = 10
 
 local Chicken2Brain = Class(Brain, function(self, inst)
@@ -21,7 +21,7 @@ local function EatFoodAction(inst)
             item.components.bait and
             not item:HasTag("planted") and
             not (item.components.inventoryitem and
-                item.components.inventoryitem:IsHeld())
+			item.components.inventoryitem:IsHeld())
         end)
     if target then
         local act = BufferedAction(inst, target, ACTIONS.EAT)
@@ -35,9 +35,9 @@ local RUN_AWAY_PARAMS =
     tags = { "_combat", "_health" },
     notags = { "chickenfamily", "playerghost", "INLIMBO" },
     fn = function(guy)
-        return not guy.components.health:IsDead()
-            and (guy.components.combat.target ~= nil and
-                guy.components.combat.target:HasTag("chicken"))
+		return not guy.components.health:IsDead()
+		and (guy.components.combat.target ~= nil and
+		guy.components.combat.target:HasTag("chicken"))
     end,
 }
 local function GoHome(inst)

@@ -2,18 +2,16 @@ require("behaviours/wander")
 require("behaviours/doaction")
 require("behaviours/panic")
 
-local STOP_RUN_DIST = 10
-local SEE_PLAYER_DIST = 5
-
+local STOP_RUN_DIST     = 10
+local SEE_PLAYER_DIST   = 5
 local AVOID_PLAYER_DIST = 3
 local AVOID_PLAYER_STOP = 6
-
-local SEE_BAIT_DIST = 10
-local MAX_WANDER_DIST = 15
+local SEE_BAIT_DIST     = 10
+local MAX_WANDER_DIST    = 15
 
 local THREAT_MUST_HAVE_TAGS = {"_combat"}
-local THREAT_NO_TAGS = {"INLIMBO", "playerghost"}
-local THREAT_TAGS = {"scarytoprey", "hostile"}
+local THREAT_NO_TAGS        = {"INLIMBO", "playerghost"}
+local THREAT_TAGS           = {"scarytoprey", "hostile"}
 
 local SerenityCrabBrain = Class(Brain, function(self, inst)
     Brain._ctor(self, inst)

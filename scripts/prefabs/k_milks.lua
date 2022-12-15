@@ -19,6 +19,8 @@ local prefabs =
 	"spoiled_food",
 }
 
+local s = .85
+
 local function beefalofn()
 	local inst = CreateEntity()
 
@@ -29,6 +31,8 @@ local function beefalofn()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
+	
+	inst.AnimState:SetScale(s, s, s)
 
 	inst.AnimState:SetBank("kyno_milks")
 	inst.AnimState:SetBuild("kyno_milks")
@@ -64,8 +68,6 @@ local function beefalofn()
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_milk_beefalo"
 
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
@@ -81,6 +83,8 @@ local function koalefantfn()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
+	
+	inst.AnimState:SetScale(s, s, s)
 
 	inst.AnimState:SetBank("kyno_milks")
 	inst.AnimState:SetBuild("kyno_milks")
@@ -116,112 +120,6 @@ local function koalefantfn()
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_milk_koalefant"
 
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
-	MakeHauntableLaunchAndPerish(inst)
-
-	return inst
-end
-
-local function deerfn()
-	local inst = CreateEntity()
-
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddSoundEmitter()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst)
-
-	inst.AnimState:SetBank("kyno_milks")
-	inst.AnimState:SetBuild("kyno_milks")
-	inst.AnimState:PlayAnimation("idle_deer")
-
-	inst:AddTag("milk_raw")
-	inst:AddTag("milk_deer")
-	inst:AddTag("drinkable_food")
-
-	inst.entity:SetPristine()
-
-	if not TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("tradable")
-	inst:AddComponent("inspectable")
-
-   	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = TUNING.KYNO_MILK_DEER_HEALTH
-	inst.components.edible.hungervalue = TUNING.KYNO_MILK_DEER_HUNGER
-	inst.components.edible.sanityvalue = TUNING.KYNO_MILK_DEER_SANITY
-
-	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_FASTISH)
-	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
-
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_milk_deer"
-
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
-	MakeHauntableLaunchAndPerish(inst)
-
-	return inst
-end
-
-local function spatfn()
-	local inst = CreateEntity()
-
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddSoundEmitter()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst)
-
-	inst.AnimState:SetBank("kyno_milks")
-	inst.AnimState:SetBuild("kyno_milks")
-	inst.AnimState:PlayAnimation("idle_spat")
-
-	inst:AddTag("milk_raw")
-	inst:AddTag("milk_spat")
-	inst:AddTag("drinkable_food")
-
-	inst.entity:SetPristine()
-
-	if not TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("tradable")
-	inst:AddComponent("inspectable")
-
-   	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = TUNING.KYNO_MILK_SPAT_HEALTH
-	inst.components.edible.hungervalue = TUNING.KYNO_MILK_SPAT_HUNGER 
-	inst.components.edible.sanityvalue = TUNING.KYNO_MILK_SPAT_SANITY
-
-	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_FASTISH)
-	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
-
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_milk_spat"
-
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
@@ -229,5 +127,3 @@ end
 
 return Prefab("kyno_milk_beefalo", beefalofn, assets, prefabs),
 Prefab("kyno_milk_koalefant", koalefantfn, assets, prefabs)
--- Prefab("kyno_milk_deer", deerfn, assets, prefabs),
--- Prefab("kyno_milk_spat", spatfn, assets, prefabs)

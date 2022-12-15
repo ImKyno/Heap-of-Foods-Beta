@@ -253,12 +253,14 @@ for k, v in pairs(OceanRooms) do
 end
 _G.terrain.filter.kyno_cucumber_ground							= TERRAIN_FILTERS
 
+--[[ Lotus Flowers were moved to Waterlogged biomes.
 for k, v in pairs(OceanRooms) do
 	AddRoomPreInit(v, function(room)
 		room.contents.distributeprefabs.kyno_lotus_ocean  		= TUNING.HOF_RESOURCES
 	end)
 end
 _G.terrain.filter.kyno_lotus_ocean 								= TERRAIN_FILTERS
+]]--
 
 for k, v in pairs(OceanRooms) do
 	AddRoomPreInit(v, function(room)

@@ -1,5 +1,5 @@
 name = "Heap of Foods"
-version = "5.3-A"
+version = "5.4-A"
 local myupdate = "Artisan Goods (Part II)"
 
 description = [[
@@ -14,7 +14,7 @@ This update brings two new structures that can be used to make a whole new categ
 The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jams, Pickles, Mayonnaises, Teas and more!
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
-󰀌 Mod Version: 5.3-A
+󰀌 Mod Version: 5.4-A
 󰀧 Update: Artisan Goods (Part II)
 ]]
 

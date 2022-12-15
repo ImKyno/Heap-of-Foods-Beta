@@ -4,15 +4,15 @@ require("behaviours/doaction")
 require("behaviours/panic")
 require("behaviours/chaseandattack")
 
-local STOP_RUN_DIST = 10
-local SEE_PLAYER_DIST = 5
-local AVOID_PLAYER_DIST = 3
-local AVOID_PLAYER_STOP = 6
-local SEE_BAIT_DIST = 20
-local SEE_FOOD_DIST = 10
-local MAX_WANDER_DIST = 20
+local STOP_RUN_DIST        = 10
+local SEE_PLAYER_DIST      = 5
+local AVOID_PLAYER_DIST    = 3
+local AVOID_PLAYER_STOP    = 6
+local SEE_BAIT_DIST        = 20
+local SEE_FOOD_DIST        = 10
+local MAX_WANDER_DIST      = 20
 local SEE_STOLEN_ITEM_DIST = 10
-local MAX_CHASE_TIME = 8
+local MAX_CHASE_TIME       = 8
 
 local function GoHomeAction(inst)
     if inst.components.homeseeker and

@@ -194,12 +194,11 @@ local function fn()
 	MakeMediumBurnable(inst, nil, nil, true)
 	MakeLargePropagator(inst)
 	
-	inst:ListenForEvent("onignite", OnIgnite)
-	inst:ListenForEvent("burntup", OnBurnt)
-
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
-
+	
+	inst:ListenForEvent("onignite", OnIgnite)
+	inst:ListenForEvent("burntup", OnBurnt)
 	inst:ListenForEvent("onbuilt", OnBuilt)
 	
 	return inst
