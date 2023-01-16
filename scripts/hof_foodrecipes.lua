@@ -1913,7 +1913,7 @@ local kyno_foods =
 	{
 		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_spotspice and ((names.pepper or 0) + (names.pepper_cooked or 0) >= 2) end,
 		priority = 30,
-		foods = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,

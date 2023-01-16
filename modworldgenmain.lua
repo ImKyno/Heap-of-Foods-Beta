@@ -203,12 +203,12 @@ for i, layout in ipairs(hof_meadow_setpieces) do
 	Layouts[layout].ground_types = _G.MEADOWISLAND_GROUNDS
 end
 
--- Custom Layout for Waterlogged biome. Lotus Flowers only spawns there.
+-- Custom Layout for Waterlogged biome.
 local function HofWaterloggedArea()
 	local stuff = {}
 
 	table.insert(stuff, "oceantree")
-	for i=1,6 do
+	for i = 1, 6 do
 		if math.random() < 0.1 then
 			table.insert(stuff, "oceantree")
 		end
@@ -217,37 +217,37 @@ local function HofWaterloggedArea()
 	table.insert(stuff, "oceanvine")
 	table.insert(stuff, "oceanvine_deco")
 
-	if math.random()<0.2 then
+	if math.random() < 0.2 then
 		table.insert(stuff, "oceanvine")
 	end
 
-	for i=1,3 do
-		if math.random()<0.3 then
+	for i = 1, 3 do
+		if math.random() < 0.3 then
 			table.insert(stuff, "watertree_root")
 		end
 	end	
 
-	for i=1,3 do
-		if math.random()<0.3 then
+	for i = 1, 3 do
+		if math.random() < 0.3 then
 			table.insert(stuff, "oceanvine_deco")
 		end
 	end				
 	
-	for i=1,2 do
-		if math.random()<0.3 then
+	for i = 1, 2 do
+		if math.random() < 0.3 then
 			table.insert(stuff, "kyno_lotus_ocean")
 		end
 	end
 	
-	for i=1,2 do
-		if math.random()<0.3 then
+	for i = 1, 2 do
+		if math.random() < 0.3 then
 			table.insert(stuff, "oceanvine_cocoon")
 		end
 	end
 
 
-	for i=1,10 do
-		if math.random()<0.4 then
+	for i = 1, 10 do
+		if math.random() < 0.4 then
 			table.insert(stuff, "fireflies")
 		end
 	end
@@ -262,6 +262,7 @@ Layouts["Waterlogged1"] = StaticLayout.Get("map/static_layouts/hof_waterlogged1"
 		treearea = HofWaterloggedArea,
 	}
 })
+
 Layouts["Waterlogged2"] = StaticLayout.Get("map/static_layouts/hof_waterlogged2", 
 {
 	areas =
@@ -269,6 +270,7 @@ Layouts["Waterlogged2"] = StaticLayout.Get("map/static_layouts/hof_waterlogged2"
 		treearea = HofWaterloggedArea,
 	}
 })
+
 Layouts["Waterlogged3"] = StaticLayout.Get("map/static_layouts/hof_waterlogged3", 
 {
 	areas =
@@ -276,6 +278,7 @@ Layouts["Waterlogged3"] = StaticLayout.Get("map/static_layouts/hof_waterlogged3"
 		treearea = HofWaterloggedArea,
 	}
 })
+
 Layouts["Waterlogged4"] = StaticLayout.Get("map/static_layouts/hof_waterlogged4", 
 {
 	areas =
