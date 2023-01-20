@@ -32,7 +32,8 @@ icon_atlas = "ModiconHOF.xml"
 
 local emptyoptions = {{description = "", data = false}}
 local function Title(title, hover)
-	return {
+	return 
+	{
 		name	= title,
 		hover   = hover,
 		options = {{description = "", data = 0}},
