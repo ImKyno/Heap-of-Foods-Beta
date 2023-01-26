@@ -18,7 +18,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_WALRY",  			"Warly has exclusive recipes made 
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_JELLYBEANS",      "\"It seems that the Lusty Jellybeans makes my body feels super good!\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_INGREDIENTS",   	"There are new ingredients from the base game available to be used in the Crock Pot.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WX78",          	"\"WX-78 wants to make a dish with Gears. If we have some of them without use, maybe I should help him out.\" -W")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_HUMANMEAT",     	"There's a small chance whenever a Player dies, they can drop an suspicious ingredient for cooking...")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_HUMANMEAT",     	"There's a small chance whenever a Player dies, they can drop a suspicious ingredient for cooking...")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SALT",          	"Salt can be used to restore the spoilage of a prepared food. Not losing that sweet dish again!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_OLDMOD",        	"The very first version of Heap Of Foods was called The Foods Pack, it was discontinued due to errors. Later on, it was remade into this brand new mod.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WATHGRITHR",    	"Wigfrid can drink Coffee, if the option is enabled in mod configuration.")

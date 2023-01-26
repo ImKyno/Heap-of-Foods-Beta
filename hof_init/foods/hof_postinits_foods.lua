@@ -588,7 +588,8 @@ if ALCOHOLIC_DRINKS == 1 then
 end
 
 -- Honey and Honey-based foods do not spoil inside Honey Deposits.
-local honeyed_foods = {
+local honeyed_foods = 
+{
 	"bandage",
 	"spice_sugar",
 	"honey",
@@ -628,6 +629,15 @@ local honeyed_foods = {
 	"kyno_sugarfly",
 	"mead",
 	"kyno_saphealer",
+	"berrysundae",
+}
+
+local spices = 
+{
+	"chili",
+	"garlic",
+	"sugar",
+	"salt"
 }
 
 local function HoneyFoodsPostinit(inst)
@@ -638,6 +648,10 @@ end
 
 for k,v in pairs(honeyed_foods) do
 	AddPrefabPostInit(v, HoneyFoodsPostinit)
+	
+	for k,s in pairs(spices) do 
+		AddPrefabPostInit(v.."_spice_"..s, HoneyFoodsPostinit)
+	end
 end
 
 -- Tweaks for Warly's foods.

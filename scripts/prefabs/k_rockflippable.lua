@@ -120,6 +120,8 @@ end
 
 local function OnWorked(inst, worker, workleft)
 	local pt = Point(inst.Transform:GetWorldPosition())
+	SpawnPrefab("rock_break_fx").Transform:SetPosition(pt:Get())
+	
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/rock_break")
 	inst.components.lootdropper:SpawnLootPrefab("rocks")
 

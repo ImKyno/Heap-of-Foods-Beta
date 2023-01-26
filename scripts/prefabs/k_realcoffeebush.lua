@@ -8,16 +8,12 @@ local function makeemptyfn(inst)
 end
 
 local function makebarrenfn(inst)
-    if inst.components.pickable then
-		if not inst.components.pickable.hasbeenpicked then
-			inst.AnimState:PlayAnimation("full_to_dead")
-		else
-			inst.AnimState:PlayAnimation("empty_to_dead")
-		end
-		inst.AnimState:PushAnimation("idle_dead")
-	else
-		inst.AnimState:PlayAnimation("idle_dead")
-	end
+    if not POPULATING and (inst:HasTag("withered") or inst.AnimState:IsCurrentAnimation("idle")) then
+        inst.AnimState:PlayAnimation("empty_to_dead")
+        inst.AnimState:PushAnimation("idle_dead", false)
+    else
+        inst.AnimState:PlayAnimation("idle_dead")
+    end
 end
 
 local function pickanim(inst)
@@ -121,7 +117,7 @@ local function dig_up_normal(inst, worker)
 end
 
 local function ontransplantfn(inst)
-    inst.AnimState:PlayAnimation("idle_dead")
+    inst.AnimState:PushAnimation("idle_dead")
     inst.components.pickable:MakeBarren()
 end
 
@@ -161,7 +157,7 @@ local function createbush(name, inspectname, berryname, master_postinit)
 		local minimap = inst.entity:AddMiniMapEntity()
 		minimap:SetIcon("kyno_coffeebush.tex")
 
-        MakeSmallObstaclePhysics(inst, .1)
+        MakeSmallObstaclePhysics(inst, .01)
 
         inst.AnimState:SetBank("coffeebush")
         inst.AnimState:SetBuild("coffeebush")

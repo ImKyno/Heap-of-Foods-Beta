@@ -319,33 +319,24 @@ AddPrefabPostInit("beequeen", function(inst)
 	end
 
 	inst.components.lootdropper:AddChanceLoot("kyno_antchest_blueprint", 1.00)
+	inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod",         1.00)
+	inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod",         1.00)
+	inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod",         0.33)
+	inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod",         0.33)
 end)
 
--- Grumble Bees, Killer Bees and Bees drops Nectar. Bees only during the Spring.
-AddPrefabPostInit("beeguard", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
+-- Bees drops Nectar based on how much flowers they have pollinated.
+-- They can pollinate up to 5 flowers, so: 20%, 40%, 60%, 80%, 100% chance for each flower pollinated.
+AddStategraphPostInit("bee", function(sg)
+    local _death_onenter = sg.states["death"].onenter
 
-	inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 0.20)
-end)
+    sg.states["death"].onenter = function(inst, ...)
+        if inst.components.pollinator and inst.components.lootdropper then
+            inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 0.2 * #inst.components.pollinator.flowers)
+        end
 
-AddPrefabPostInit("killerbee", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-
-	inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 1.00)
-end)
-
-AddPrefabPostInit("bee", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-
-	if TheWorld.state.isspring then
-		inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod", 0.50)
-	end
+        _death_onenter(inst, ...)
+    end
 end)
 
 -- "Fix" players trying to milk frozen animals.

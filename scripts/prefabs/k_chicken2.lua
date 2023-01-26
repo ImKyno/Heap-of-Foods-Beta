@@ -124,20 +124,20 @@ local function fn()
 	inst:AddComponent("periodicspawner")
 	inst.components.periodicspawner:SetPrefab("kyno_chicken_egg")
 	inst.components.periodicspawner:SetRandomTimes(960, 80)
-	inst.components.periodicspawner:SetDensityInRange(20, 2)
-	inst.components.periodicspawner:SetMinimumSpacing(20)
-	inst.components.periodicspawner:SetOnlySpawnOffscreen(true)
+	inst.components.periodicspawner:SetDensityInRange(10, 3)
+	inst.components.periodicspawner:SetMinimumSpacing(4)
+	inst.components.periodicspawner:SetOnlySpawnOffscreen(false)
 	inst.components.periodicspawner:Start()
 	
 	inst:AddComponent("named")
     inst.components.named.possiblenames = 
 	{ 
-		"Drumstick", "Daisy", "Cah", "Noodle", "Potato",
+		"Drumstick", "Daisy", "Cah", "Noodles", "Potato",
 		"Curry", "Dinner", "Garibalda", "Marta", "Marina",
 		"Carrot", "Emilha", "Pintadinha", "Galinha", "Pipoca",
 		"Ruiva", "Canjica", "Magricela", "Isolda", "Pedrita",
 		"Isadora", "Ruivinha", "Karen", "Penosa", "Bicuda",
-		"Mel", "Sol", "Lua", "Outono", "Milharina",
+		"Mel", "Sol", "Lua", "Outono", "Milharina", "Lunch",
 		"Clementina", "Rejane", "Morena", "Flor", "Girasol",
 	}
     inst.components.named:PickNewName()

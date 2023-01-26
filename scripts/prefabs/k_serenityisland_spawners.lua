@@ -44,7 +44,7 @@ local function spawnerfn()
     inst.components.childspawner.childname = "kyno_pebblecrab"
     inst.components.childspawner:SetSpawnedFn(OnSpawn)
     inst.components.childspawner:SetOnAddChildFn(OnAddChild)
-    inst.components.childspawner:SetMaxChildren(2)
+    inst.components.childspawner:SetMaxChildren(3)
     inst.components.childspawner:SetSpawnPeriod(60)
     inst.components.childspawner:SetRegenPeriod(960)
     inst.components.childspawner:StartRegen()

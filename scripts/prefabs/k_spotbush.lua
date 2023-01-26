@@ -48,7 +48,7 @@ local function fn()
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("quagmire_spotspice_shrub.png")
 	
-	MakeObstaclePhysics(inst, .3)
+	MakeSmallObstaclePhysics(inst, .01)
 	
 	inst.AnimState:SetBank("quagmire_spiceshrub")
 	inst.AnimState:SetBuild("quagmire_spiceshrub")
