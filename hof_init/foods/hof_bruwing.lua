@@ -71,6 +71,7 @@ AddBrewingValues({"kyno_chicken_egg"},			{egg        = 1,   chicken_egg   = 1})
 AddBrewingValues({"mayonnaise"},                {mayonnaise = 1})
 AddBrewingValues({"kyno_piko"},                 {piko       = 1})
 AddBrewingValues({"kyno_piko_orange"},          {piko       = 1})
+AddBrewingValues({"kyno_oil"},                  {oil        = 1})
 
 -- Import The Beverages.
 for k, v in pairs(require("hof_foodrecipes_keg")) do

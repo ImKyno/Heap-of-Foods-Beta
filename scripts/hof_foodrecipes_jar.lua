@@ -617,7 +617,8 @@ local kyno_foods_jar =
 	
 	mayonnaise = 
 	{
-		test = function(brewer, names, tags) return tags.egg and tags.veggie end,
+		test = function(brewer, names, tags) return tags.egg and names.kyno_oil and not names.kyno_chicken_egg 
+		and not names.tallbirdegg and not names.nightmarefuel end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -627,7 +628,7 @@ local kyno_foods_jar =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"bird_egg", 1}, {"carrot", 1}}},
+		card_def = {ingredients = {{"bird_egg", 1}, {"kyno_oil", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
             eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
@@ -636,7 +637,7 @@ local kyno_foods_jar =
 	
 	mayonnaise_chicken = 
 	{
-		test = function(brewer, names, tags) return names.kyno_chicken_egg and tags.veggie end,
+		test = function(brewer, names, tags) return names.kyno_chicken_egg and names.kyno_oil and not names.nightmarefuel end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -646,7 +647,7 @@ local kyno_foods_jar =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_chicken_egg", 1}, {"carrot", 1}}},
+		card_def = {ingredients = {{"kyno_chicken_egg", 1}, {"kyno_oil", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
             eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
@@ -655,7 +656,7 @@ local kyno_foods_jar =
 	
 	mayonnaise_tallbird = 
 	{
-		test = function(brewer, names, tags) return names.tallbirdegg and tags.veggie end,
+		test = function(brewer, names, tags) return names.tallbirdegg and names.kyno_oil and not names.nightmarefuel end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -665,7 +666,7 @@ local kyno_foods_jar =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"tallbirdegg", 1}, {"carrot", 1}}},
+		card_def = {ingredients = {{"tallbirdegg", 1}, {"kyno_oil", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
             eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
@@ -674,8 +675,8 @@ local kyno_foods_jar =
 	
 	mayonnaise_nightmare =
 	{
-		test = function(brewer, names, tags) return names.nightmarefuel and tags.egg end,
-		priority = 30,
+		test = function(brewer, names, tags) return tags.egg and names.nightmarefuel end,
+		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		health = 30,
@@ -697,12 +698,16 @@ local kyno_foods_jar =
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
-		health = 15,
+		health = 20,
 		hunger = 62.5,
-		sanity = 5,
-		cooktime = 50,
+		sanity = 10,
+		cooktime = 72,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"mayonnaise", 1}, {"kyno_spotspice", 1}}},
+		oneatenfn = function(inst, eater)
+            eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
+        end,
 	},
 	
 	-- This recipe is for when brewing a invalid product, we need this to prevent a crash.
