@@ -1,13 +1,15 @@
 local function ondeploy(inst, pt, deployer)
 	local plant = SpawnPrefab("kyno_wildwheat")
+	
 	if plant ~= nil then
 		plant.Transform:SetPosition(pt:Get())
 		inst.components.stackable:Get():Remove()
 	if plant.components.pickable ~= nil then
 		plant.components.pickable:OnTransplant()
 	end
+	
 	if deployer ~= nil and deployer.SoundEmitter ~= nil then
-		deployer.SoundEmitter:PlaySound("dontstarve/common/plant")
+			deployer.SoundEmitter:PlaySound("dontstarve/common/plant")
 		end
 	end
 end

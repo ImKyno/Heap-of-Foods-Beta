@@ -78,6 +78,7 @@ AddFoodTag("gummybug",      {name = "Gummy Slug",       atlas = "images/ingredie
 AddFoodTag("berries",       {name = "Berries",          atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("bacon",         {name = "Bacon",            atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("limpet",        {name = "Limpets",          atlas = "images/ingredientimages/hof_ingredientimages.xml"})
+AddFoodTag("chocolate",     {name = "Chocolates",       atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 
 -- Brewers Tags.
 AddFoodTag("piko",          {name = "Pikos",            atlas = "images/ingredientimages/hof_ingredientimages.xml"})

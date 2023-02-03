@@ -70,3 +70,14 @@ end
 
 -- Fix For Inventory Icons.
 local atlas = (src and src.components.inventoryitem and src.components.inventoryitem.atlasname and resolvefilepath(src.components.inventoryitem.atlasname)) or "images/inventoryimages.xml"
+
+-- Everything below here belongs to the Accomplishments Mod.
+local hof_init_achievements =
+{
+	"hof_achievements_main",
+	"hof_achievements_strings",
+}
+
+for _, v in pairs(hof_init_achievements) do
+	modimport("hof_init/achievements/"..v)
+end

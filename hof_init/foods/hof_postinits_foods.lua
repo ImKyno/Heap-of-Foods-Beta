@@ -30,7 +30,8 @@ end)
 -- Wigfrid Can't Drink Coffee.
 local FRIDA_COFFEE = GetModConfigData("HOF_COFFEEGOODIES")
 if FRIDA_COFFEE == 0 then
-    local coffee_wathgrithr = {
+    local coffee_wathgrithr = 
+	{
         "coffee",
         "coffee_spice_garlic",
         "coffee_spice_sugar",
@@ -52,7 +53,8 @@ local function ResizeThisItem(inst)
     inst.AnimState:SetScale(.75, .75, .75)
 end
 
-local resize_items = {
+local resize_items = 
+{
     "kyno_radish_cooked",
     "kyno_cucumber",
     "kyno_parznip_cooked",
@@ -360,7 +362,8 @@ VanillaFood.icecream.test = function(cooker, names, tags)
 end 
 
 -- Foods that will have their action "Eat" replaced to "Drink".
-local drinkable_foods = {
+local drinkable_foods = 
+{
     "winter_food8",
     "goatmilk",
     "kyno_syrup",
@@ -381,7 +384,8 @@ for k,v in pairs(drinkable_foods) do
 end
 
 -- New foods that can be dried on Drying Racks.
-local dryable_foods = {
+local dryable_foods = 
+{
 	"red_cap",
 	"green_cap",
 	"blue_cap",
@@ -406,7 +410,8 @@ for k,v in pairs(dryable_foods) do
 end
 
 -- Make every "same" recipe has the same quotes.
-local jelly_foods = {
+local jelly_foods = 
+{
     "jelly_berries",
     "jelly_berries_juicy",
     "jelly_pomegranate",
@@ -420,14 +425,16 @@ local jelly_foods = {
     "jelly_glowberry",
 }
 
-local mayo_foods = {
+local mayo_foods = 
+{
     "mayonnaise",
     "mayonnaise_chicken",
     "mayonnaise_tallbird",
     "mayonnaise_nightmare",
 }
 
-local pickles_foods = {
+local pickles_foods = 
+{
     "pickles_carrot",
     "pickles_corn",
     "pickles_eggplant",
@@ -460,7 +467,8 @@ local pickles_foods = {
     "pickles_fennel",
 }
 
-local juice_foods = {
+local juice_foods = 
+{
     "juice_carrot",
     "juice_corn",
     "juice_eggplant",
@@ -546,7 +554,8 @@ end
 -- This will prevent some characters from drinking Alcoholic-like drinks.
 local ALCOHOLIC_DRINKS = GetModConfigData("HOF_ALCOHOLICDRINKS")
 if ALCOHOLIC_DRINKS == 1 then
-	local restricted_characters = {
+	local restricted_characters = 
+	{
 		"wendy",
 		"webber",
 		"wurt",
@@ -591,7 +600,6 @@ end
 local honeyed_foods = 
 {
 	"bandage",
-	"spice_sugar",
 	"honey",
 	"royal_jelly",
     "honeynuggets",
@@ -630,6 +638,22 @@ local honeyed_foods =
 	"mead",
 	"kyno_saphealer",
 	"berrysundae",
+	"gorge_candiedfish",
+	"beeswax",
+	"bee",
+	"killerbee",
+	"beemine",
+	"hivehat",
+	"kyno_sugartree_petals",
+	"gorge_caramel_cube",
+	"gorge_bread_pudding",
+	"katfood",
+	"donuts",
+	"donuts_chocolate_black",
+	"donuts_chocolate_white",
+	"cinnamonroll",
+	"festive_goodgravy",
+	"twistedtequile",
 }
 
 local spices = 

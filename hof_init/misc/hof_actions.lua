@@ -300,6 +300,9 @@ ACTIONS.GIVE.stroverridefn = function(act)
 	if act.target:HasTag("infestable_tree") and act.invobject:HasTag("squirrel") then
 		return subfmt(STRINGS.KYNO_INFEST_TREE, {item = act.invobject:GetBasicDisplayName()})
 	end
+	if act.target:HasTag("chicken2") then
+		return subfmt(STRINGS.KYNO_FEED_CHICKEN, {item = act.invobject:GetBasicDisplayName()})
+	end
 end
 
 ACTIONS.PICK.stroverridefn = function(act)

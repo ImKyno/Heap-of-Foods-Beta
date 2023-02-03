@@ -6,7 +6,7 @@ require("behaviours/panic")
 
 local SEE_BAIT_DIST   = 20
 local MAX_LEASH_DIST  = 10
-local MAX_WANDER_DIST = 6
+local MAX_WANDER_DIST = 20
 local STOP_RUN_DIST   = 7
 local SEE_PLAYER_DIST = 10
 

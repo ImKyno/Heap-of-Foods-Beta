@@ -49,7 +49,7 @@ AddIngredientValues({"kyno_fennel"}, 			{veggie     = 1}, 						      true)
 AddIngredientValues({"kyno_sweetpotato"}, 		{veggie     = 1}, 						      true)
 AddIngredientValues({"kyno_lotus_flower"}, 		{veggie     = 1}, 						      true)
 AddIngredientValues({"kyno_seaweeds"}, 			{veggie     = 1,   algae      = 1},     true, true)
-AddIngredientValues({"kyno_limpets"}, 			{fish       = 0.5, limpets    = 1}, 		  true)
+AddIngredientValues({"kyno_limpets"}, 			{fish       = 0.5, limpet     = 1}, 		  true)
 AddIngredientValues({"kyno_taroroot"}, 			{veggie     = 1},                             true)
 AddIngredientValues({"kyno_cucumber"}, 			{veggie     = 1})
 AddIngredientValues({"kyno_waterycress"}, 		{veggie     = 1,   algae      = 1})
@@ -87,6 +87,8 @@ AddIngredientValues({"kyno_piko"},              {piko       = 1})
 AddIngredientValues({"kyno_piko_orange"},       {piko       = 1})
 AddIngredientValues({"kyno_poison_froglegs"},   {meat       = 0.5},                    true, true)
 AddIngredientValues({"kyno_oil"},               {oil        = 1})
+AddIngredientValues({"chocolate_black"},        {sweetener  = 2,   chocolate  = 1})
+AddIngredientValues({"chocolate_white"},        {sweetener  = 2,   chocolate  = 1})
 
 -- Import The Foods.
 for k, v in pairs(require("hof_foodrecipes")) do
@@ -302,6 +304,10 @@ local kynofoods =
 	tricolordango           = require("hof_foodrecipes").tricolordango,
 	friesfrench             = require("hof_foodrecipes").friesfrench,
 	twistedtequile          = require("hof_foodrecipes").twistedtequile,
+	onionrings              = require("hof_foodrecipes").onionrings,
+	donuts                  = require("hof_foodrecipes").donuts,
+	donuts_chocolate_black  = require("hof_foodrecipes").donuts_chocolate_black,
+	donuts_chocolate_white  = require("hof_foodrecipes").donuts_chocolate_white,
 
 	-- Warly Exclusives.
 	musselbouillabaise 		= require("hof_foodrecipes_warly").musselbouillabaise,
@@ -317,6 +323,7 @@ local kynofoods =
 	jellybean_hunger 		= require("hof_foodrecipes_warly").jellybean_hunger,
 	jellybean_super 		= require("hof_foodrecipes_warly").jellybean_super,
 	berrysundae             = require("hof_foodrecipes_warly").berrysundae,
+	cinnamonroll            = require("hof_foodrecipes_warly").cinnamonroll,
 }
 
 for name, recipe in pairs(kynofoods) do

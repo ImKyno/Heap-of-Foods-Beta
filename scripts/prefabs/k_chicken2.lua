@@ -39,17 +39,32 @@ end
 
 local function OnInventory(inst)
 	inst:ClearBufferedAction()
-	inst.components.periodicspawner:Stop()
+	-- inst.components.periodicspawner:Stop()
 end
 
 local function OnDropped(inst)
 	inst.components.sleeper:GoToSleep()
-	inst.components.periodicspawner:Start()
+	-- inst.components.periodicspawner:Start()
 end
 
 local function CanSpawnEgg(inst)
 	if inst.components.inventoryitem:IsHeld() or inst.components.sleeper:IsAsleep() then
 		return false
+	end
+end
+
+local function TestItem(inst, item, giver)
+	if item.components.edible.foodtype == FOODTYPE.SEEDS and not inst.components.timer:TimerExists("kyno_chicken_egg_cooldown") then
+		return true
+	else
+		inst.sg:GoToState("honk")
+	end
+end
+
+local function OnGetItemFromPlayer(inst, giver, item)
+	if item.components.edible.foodtype == FOODTYPE.SEEDS and not inst.components.timer:TimerExists("kyno_chicken_egg_cooldown") then
+		inst.sg:GoToState("eat_seeds")
+		inst.components.timer:StartTimer("kyno_chicken_egg_cooldown", 480)
 	end
 end
 
@@ -87,6 +102,12 @@ local function fn()
 	inst:AddComponent("knownlocations")
 	inst:AddComponent("inspectable")
 	inst:AddComponent("sleeper")
+	inst:AddComponent("timer")
+	inst:AddComponent("inventory")
+	
+	inst:AddComponent("trader")
+	inst.components.trader:SetAcceptTest(TestItem)
+    inst.components.trader.onaccept = OnGetItemFromPlayer
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetChanceLootTable('kyno_chicken2')
@@ -121,13 +142,14 @@ local function fn()
 	inst.components.inventoryitem.canbepickedup = false
 	inst.components.inventoryitem:SetSinks(true)
 	
+	--[[
 	inst:AddComponent("periodicspawner")
 	inst.components.periodicspawner:SetPrefab("kyno_chicken_egg")
-	inst.components.periodicspawner:SetRandomTimes(860, 80)
-	inst.components.periodicspawner:SetDensityInRange(18, 2)
-	inst.components.periodicspawner:SetMinimumSpacing(8)
+	inst.components.periodicspawner:SetRandomTimes(500, 60)
+	inst.components.periodicspawner:SetDensityInRange(16, 4)
+	inst.components.periodicspawner:SetMinimumSpacing(6)
 	inst.components.periodicspawner:SetSpawnTestFn(CanSpawnEgg)
-	inst.components.periodicspawner:Start()
+	]]--
 	
 	inst:AddComponent("named")
     inst.components.named.possiblenames = 
@@ -153,12 +175,12 @@ local function fn()
 	
 	inst:ListenForEvent("gotosleep", function(inst) 
 		inst.components.inventoryitem.canbepickedup = true 
-		inst.components.periodicspawner:Stop()
+		-- inst.components.periodicspawner:Stop()
 	end)
 	
     inst:ListenForEvent("onwakeup", function(inst) 
     	inst.components.inventoryitem.canbepickedup = false
-		inst.components.periodicspawner:Start()
+		-- inst.components.periodicspawner:Start()
     end)
 
     inst:ListenForEvent("death", function(inst, data) 

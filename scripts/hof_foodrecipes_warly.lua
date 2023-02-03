@@ -246,6 +246,22 @@ local kyno_warly_foods =
 		tags = {"masterfood"},
 		card_def = {ingredients = {{"berries", 1}, {"goatmilk", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
 	},
+	
+	cinnamonroll =
+	{
+		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_syrup and names.kyno_spotspice and names.butter end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_FAST,
+		health = 80,
+		hunger = 50,
+		sanity = 20,
+		cooktime = 2,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"masterfood"},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_syrup", 1}, {"kyno_spotspice", 1}, {"butter", 1}}},
+	},
 }
 
 for k, recipe in pairs(kyno_warly_foods) do

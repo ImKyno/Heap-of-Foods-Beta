@@ -21,7 +21,7 @@ local kyno_foods =
 	
 	bisque =
 	{
-		test = function(cooker, names, tags) return (tags.limpets and tags.limpets >= 3) and tags.frozen end,
+		test = function(cooker, names, tags) return (tags.limpet and tags.limpet >= 3) and tags.frozen end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
@@ -2135,6 +2135,67 @@ local kyno_foods =
 			
 			TeleportPlayer(inst, eater)
 		end,
+	},
+	
+	onionrings =
+	{
+		test = function(cooker, names, tags) return ((names.onion or 0) + (names.onion_cooked or 0) >= 2) and names.kyno_oil and names.kyno_flour 
+		and not names.twigs and not tags.frozen and not tags.sweetener end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 15,
+		hunger = 25,
+		sanity = 20,
+		cooktime = 1,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"onion", 2}, {"kyno_flour", 1}, {"kyno_oil", 1}}},
+	},
+	
+	donuts =
+	{
+		test = function(cooker, names, tags) return (names.kyno_flour and names.kyno_flour >= 2) and names.kyno_syrup and names.kyno_oil end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SLOW,
+		health = -3,
+		hunger = 50,
+		sanity = 10,
+		cooktime = 1,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 2}, {"kyno_syrup", 1}, {"kyno_oil", 1}}},
+	},
+	
+	donuts_chocolate_black =
+	{
+		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_syrup and names.kyno_oil and names.chocolate_black end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SLOW,
+		health = -5,
+		hunger = 55,
+		sanity = 40,
+		cooktime = 1.5,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"chocolate_black", 1}, {"kyno_flour", 1}, {"kyno_syrup", 1}, {"kyno_oil", 1}}},
+	},
+	
+	donuts_chocolate_white =
+	{
+		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_syrup and names.kyno_oil and names.chocolate_white end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SLOW,
+		health = -5,
+		hunger = 75,
+		sanity = 15,
+		cooktime = 1.5,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"chocolate_white", 1}, {"kyno_flour", 1}, {"kyno_syrup", 1}, {"kyno_oil", 1}}},
 	},
 }
 

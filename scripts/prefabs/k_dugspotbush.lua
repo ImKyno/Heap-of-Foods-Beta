@@ -1,19 +1,15 @@
-local function makeemptyfn(inst)
-    inst.AnimState:PlayAnimation("empty")
-	inst.components.pickable:MakeEmpty()
-end
-
 local function ondeploy(inst, pt, deployer)
 	local plant = SpawnPrefab("kyno_spotbush")
+	
 	if plant ~= nil then
 		plant.Transform:SetPosition(pt:Get())
 		inst.components.stackable:Get():Remove()
 	if plant.components.pickable ~= nil then
 		plant.components.pickable:OnTransplant()
-		plant.components.pickable.makeemptyfn = makeemptyfn
 	end
+	
 	if deployer ~= nil and deployer.SoundEmitter ~= nil then
-		deployer.SoundEmitter:PlaySound("dontstarve/common/plant")
+			deployer.SoundEmitter:PlaySound("dontstarve/common/plant")
 		end
 	end
 end

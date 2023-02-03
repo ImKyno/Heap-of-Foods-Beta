@@ -67,6 +67,13 @@ Assets =
 	Asset("IMAGE", "images/ingredientimages/hof_ingredientimages.tex"),
 	Asset("ATLAS", "images/ingredientimages/hof_ingredientimages.xml"),
 	Asset("ATLAS_BUILD", "images/ingredientimages/hof_ingredientimages.xml", 256),
+	
+	-- Accomplishments Mod.
+	Asset("IMAGE", "images/achievements_images.tex"),
+    Asset("ATLAS", "images/achievements_images.xml"),
+
+    Asset("IMAGE", "images/achievementsimages/hof_achievements_buttons.tex"),
+    Asset("ATLAS", "images/achievementsimages/hof_achievements_buttons.xml"),
 }
 
 -- Minimap Icons.
