@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Atlas>
-	<Texture filename="hof_achievements_buttons.tex" />
-	<Elements>
-		<Element name="achievements_buttons_hof.tex" u1="0.001" u2="0.999" v2="0.999" v1="0.001" variant="" />
-	</Elements>
-</Atlas>

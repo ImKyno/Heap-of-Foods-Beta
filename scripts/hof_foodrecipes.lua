@@ -16,6 +16,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed", "drinkable_food"},
 		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 3}, {"honey", 1}}},
 	},
 	
@@ -67,13 +68,24 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"twigs", 3}}},
 		oneatenfn = function(inst, eater)
 			SpawnPrefab("krampuswarning_lvl3").Transform:SetPosition(inst.Transform:GetWorldPosition())
-			local krampus = SpawnPrefab("krampus")
-			local pt = Vector3(inst.Transform:GetWorldPosition()) + Vector3(15,0,15)
-
-			krampus.Transform:SetPosition(pt:Get())
-			local angle = eater.Transform:GetRotation()*(3.14159/180)
-			local sp = (math.random()+1) * -1
-			krampus.Physics:SetVel(sp*math.cos(angle), math.random()*2+8, -sp*math.sin(angle))
+			local function KrampusSpawnPoint(pt)
+				if not TheWorld.Map:IsAboveGroundAtPoint(pt:Get()) then
+					pt = FindNearbyLand(pt, 1) or pt
+				end
+				
+				local offset = FindWalkableOffset(pt, math.random() * 2 * PI, 15, 12, true)
+				if offset ~= nil then
+					offset.x = offset.x + pt.x
+					offset.z = offset.z + pt.z
+					return offset
+				end
+			end
+			
+			local spawn_pt = KrampusSpawnPoint(eater:GetPosition())
+			if spawn_pt ~= nil then
+				local krampus = SpawnPrefab("krampus")
+				krampus.Physics:Teleport(spawn_pt:Get())
+			end
 		end,
 	},
 	
@@ -139,6 +151,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "high",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_gummybug", 1}, {"honey", 3}}},
 	},
 	
@@ -172,6 +185,7 @@ local kyno_foods =
 		cooktime = 0.5,
 		potlevel = "high",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed", "drinkable_food"},
 		card_def = {ingredients = {{"kyno_piko_orange", 2}, {"honey", 1}, {"ice", 1}}},
 	},
 	
@@ -190,6 +204,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed", "drinkable_food"},
 		card_def = {ingredients = {{"kyno_piko_orange", 2}, {"honey", 2}}},
 	},
 	
@@ -641,6 +656,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_salmonfish", 2}, {"kyno_syrup", 2}}},
 	},
 	
@@ -810,6 +826,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HANDS,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_syrup", 1}, {"honey", 3}}},
 		prefabs = { "kyno_hastebuff" },
         oneatenfn = function(inst, eater)
@@ -830,6 +847,7 @@ local kyno_foods =
 		cooktime = 1.2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"berries", 1}, {"kyno_syrup", 1}, {"kyno_flour", 2}}},
 	},
 	
@@ -846,6 +864,7 @@ local kyno_foods =
 		cooktime = 1.2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"berries", 2}, {"kyno_flour", 1}, {"honey", 1}}},
 	},
 	
@@ -1104,6 +1123,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KYNO,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_syrup", 2}, {"goatmilk", 2}}},
 	},
 	
@@ -1150,6 +1170,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed", "drinkable_food"},
 		card_def = {ingredients = {{"kyno_sap", 4}}},
 	},
 	
@@ -1166,6 +1187,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"berries", 2}, {"honey", 2}}},
 	},
 	
@@ -1226,6 +1248,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_syrup", 1}, {"kyno_flour", 1}, {"meat", 1}}},
 	},
 	
@@ -1274,6 +1297,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_syrup", 1}, {"honey", 2}, {"ice", 1}}},
 	},
 	
@@ -1304,6 +1328,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"honey", 1}, {"cave_banana", 2}}},
 	},
 	
@@ -1334,6 +1359,7 @@ local kyno_foods =
 		cooktime = .8,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"goatmilk", 1}, {"honey", 2}}},
 	},
 	
@@ -1349,6 +1375,7 @@ local kyno_foods =
 		cooktime = 1.8,
 		potlevel = "med",
 		floater = {"med", nil, 0,65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"pumpkin", 1}, {"kyno_flour", 1}, {"honey", 1}}},
 	},
 	
@@ -1604,6 +1631,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KAT,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"goatmilk", 1}, {"kyno_syrup", 1}, {"kyno_syrup", 2}}},
 	},
 	
@@ -1637,6 +1665,7 @@ local kyno_foods =
 		cooktime = .5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food"},
 		card_def = {ingredients = {{"fig", 2}, {"ice", 2}}},
 	},
 	
@@ -1656,6 +1685,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DRY,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food"},
 		card_def = {ingredients = {{"kyno_kokonut_halved", 1}, {"ice", 2}, {"twigs", 1}}},
 		prefabs = { "buff_moistureimmunity" },
         oneatenfn = function(inst, eater)
@@ -1678,7 +1708,6 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"deerclops_eyeball", 1}, {"smallmeat", 3}}},
 		oneatenfn = function(inst, eater)
-			SpawnPrefab("deerclopswarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
 			TheWorld.components.deerclopsspawner:SummonMonster(eater)
 		end,
 	},
@@ -1720,6 +1749,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FORTUNE,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"papyrus", 1}, {"honey", 2}}},
 		oneatenfn = function(inst, eater)
 			if math.random() < 0.01 then
@@ -1833,6 +1863,7 @@ local kyno_foods =
 		cooktime = 1.1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food"},
 		card_def = {ingredients = {{"ice", 2}, {"goatmilk", 2}}},
 	},
 	
@@ -1848,6 +1879,7 @@ local kyno_foods =
 		cooktime = 1.6,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"honeycomb", 1}, {"honey", 3}}},
 	},
 	
@@ -1867,6 +1899,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WATER,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food"},
 		card_def = {ingredients = {{"ice", 2}, {"twigs", 2}}},
 	},
 	
@@ -2001,7 +2034,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_TEQUILA,
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"cutlichen", 1}, {"ice", 1}, {"kyno_syrup", 1}, {"durian", 1}}},
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"drinkable_food", "alcoholic_drink", "honeyed"},
 		oneatenfn = function(inst, eater)
 			local function GetRandomPosition(caster, teleportee, target_in_ocean)
 				if target_in_ocean then
@@ -2165,6 +2198,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_flour", 2}, {"kyno_syrup", 1}, {"kyno_oil", 1}}},
 	},
 	
@@ -2180,6 +2214,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"chocolate_black", 1}, {"kyno_flour", 1}, {"kyno_syrup", 1}, {"kyno_oil", 1}}},
 	},
 	
@@ -2195,7 +2230,78 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"chocolate_white", 1}, {"kyno_flour", 1}, {"kyno_syrup", 1}, {"kyno_oil", 1}}},
+	},
+	
+	gummybeargers =
+	{
+		test = function(cooker, names, tags) return names.bearger_fur and tags.gummybug and (tags.sweetener and tags.sweetener >= 2) end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = 5,
+		hunger = 30,
+		sanity = -5,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BOSS,
+		cooktime = 1.5,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
+		card_def = {ingredients = {{"bearger_fur", 1}, {"kyno_gummybug", 1}, {"honey", 2}}},
+		oneatenfn = function(inst, eater)
+			-- TheWorld.components.beargerspawner:SummonMonster(eater) -- It's not working?
+			SpawnPrefab("beargerwarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			local function BeargerSpawnPoint(pt)
+				if not TheWorld.Map:IsAboveGroundAtPoint(pt:Get()) then
+					pt = FindNearbyLand(pt, 1) or pt
+				end
+				
+				local offset = FindWalkableOffset(pt, math.random() * 2 * PI, 40, 12, true)
+				if offset ~= nil then
+					offset.x = offset.x + pt.x
+					offset.z = offset.z + pt.z
+					return offset
+				end
+			end
+			
+			local spawn_pt = BeargerSpawnPoint(eater:GetPosition())
+			if spawn_pt ~= nil then
+				local bearger = SpawnPrefab("bearger")
+				bearger.Physics:Teleport(spawn_pt:Get())
+			end
+		end,
+	},
+	
+	pretzel =
+	{
+		test = function(cooker, names, tags) return names.butter and names.kyno_salt and (names.kyno_flour and names.kyno_flour >= 2) end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_MED,
+		health = 40,
+		hunger = 60,
+		sanity = 15,
+		cooktime = 2.5,
+		potlevel = "low",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"butter", 1}, {"kyno_salt", 1}, {"kyno_flour", 2}}},
+	},
+	
+	cornincup =
+	{
+		test = function(cooker, names, tags) return names.kyno_salt and (names.butter or tags.cheese) and (names.pepper or names.pepper_cooked) and
+		(names.corn or names.corn_cooked) end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 50,
+		hunger = 50,
+		sanity = 50,
+		cooktime = 0.5,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"corn", 1}, {"pepper", 1}, {"kyno_salt", 1}, {"butter", 1}}},
 	},
 }
 

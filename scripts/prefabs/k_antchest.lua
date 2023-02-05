@@ -45,8 +45,13 @@ local function OnHammered(inst, worker)
     if inst:HasTag("fire") and inst.components.burnable then
         inst.components.burnable:Extinguish()
     end
+	
+	if inst.components.container then 
+		inst.components.container:DropEverything() 
+	end
+	
 	inst.components.lootdropper:DropLoot()
-	if inst.components.container then inst.components.container:DropEverything() end
+	
 	SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_wood")
 	inst:Remove()
@@ -69,6 +74,11 @@ local function OnBuilt(inst)
 	inst.AnimState:PlayAnimation("close")
 	inst.AnimState:PushAnimation("closed", true)
 	inst.SoundEmitter:PlaySound("hof_sounds/common/antchest/place")
+end
+
+local function OnBurnt(inst)
+	DefaultBurntStructureFn(inst)
+	inst:DoTaskInTime(1.2, inst.Remove)
 end
 
 local function RefreshAntChestBuild(inst, minimap)
@@ -125,7 +135,11 @@ local function fn()
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		inst.OnEntityReplicated = function(inst) inst.replica.container:WidgetSetup("honeydeposit") end
+		inst.OnEntityReplicated = function(inst) 
+			if not inst:HasTag("burnt") then
+				inst.replica.container:WidgetSetup("honeydeposit") 
+			end
+		end
         return inst
     end
 	
@@ -152,7 +166,9 @@ local function fn()
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 	
 	MakeMediumBurnable(inst, nil, nil, true)
+	inst.components.burnable.onburnt = OnBurnt
     MakeLargePropagator(inst)
+	
 	AddHauntableDropItemOrWork(inst)
    
 	inst:ListenForEvent("onbuilt", OnBuilt)

@@ -11,16 +11,6 @@ local HOF_LANGUAGE = GetModConfigData("HOF_LANGUAGE")
 modimport("hof_init/strings/"..HOF_LANGUAGE)
 modimport("hof_init/strings/hof_strings_loadingtips")
 
---[[
-if HOF_LANGUAGE == "hof_strings_br" then
-	modimport("hof_init/strings/hof_strings_loadingtips_br")
-elseif HOF_LANGUAGE == "hof_strings_zht" then
-	modimport("hof_init/strings/hof_strings_loadingtips_zht")
-else
-	modimport("hof_init/strings/hof_strings_loadingtips")
-end
-]]--
-
 -- Mod Dependencies.
 local hof_init_misc =
 {
@@ -69,15 +59,5 @@ for _, v in pairs(hof_init_foods) do
 end
 
 -- Fix For Inventory Icons.
-local atlas = (src and src.components.inventoryitem and src.components.inventoryitem.atlasname and resolvefilepath(src.components.inventoryitem.atlasname)) or "images/inventoryimages.xml"
-
--- Everything below here belongs to the Accomplishments Mod.
-local hof_init_achievements =
-{
-	"hof_achievements_main",
-	"hof_achievements_strings",
-}
-
-for _, v in pairs(hof_init_achievements) do
-	modimport("hof_init/achievements/"..v)
-end
+local atlas = (src and src.components.inventoryitem and src.components.inventoryitem.atlasname 
+and resolvefilepath(src.components.inventoryitem.atlasname)) or "images/inventoryimages.xml"

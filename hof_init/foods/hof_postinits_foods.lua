@@ -6,6 +6,14 @@ local ACTIONS 			= _G.ACTIONS
 local STRINGS			= _G.STRINGS
 local SpawnPrefab		= _G.SpawnPrefab
 
+local spices = 
+{
+	"chili",
+	"garlic",
+	"sugar",
+	"salt",
+}
+
 -- Theorically Tea Cool Down and Turns into Iced Tea.
 AddPrefabPostInit("tea", function(inst)
     if inst.components.perishable ~= nil then
@@ -27,16 +35,13 @@ AddPrefabPostInit("foliage", function(inst)
     inst.components.cookable.product = "kyno_foliage_cooked"
 end)
 
--- Wigfrid Can't Drink Coffee.
+-- Wigfrid Can't Drink Coffee. Deprecated.
+--[[
 local FRIDA_COFFEE = GetModConfigData("HOF_COFFEEGOODIES")
 if FRIDA_COFFEE == 0 then
     local coffee_wathgrithr = 
 	{
         "coffee",
-        "coffee_spice_garlic",
-        "coffee_spice_sugar",
-        "coffee_spice_chili",
-        "coffee_spice_salt",
     }
 
     for k,v in pairs(coffee_wathgrithr) do
@@ -45,8 +50,17 @@ if FRIDA_COFFEE == 0 then
                 inst.components.edible.foodtype = FOODTYPE.VEGGIE
             end
         end)
+		
+		for k,s in pairs(spices) do 
+			AddPrefabPostInit(v.."_spice_"..s, function(inst)
+				if inst.components.edible ~= nil then
+					inst.components.edible.foodtype = FOODTYPE.VEGGIE
+				end
+			end
+		end)
     end
 end
+]]--
 
 -- Some items are a bit huge when dropped...
 local function ResizeThisItem(inst)
@@ -366,15 +380,6 @@ local drinkable_foods =
 {
     "winter_food8",
     "goatmilk",
-    "kyno_syrup",
-    "coffee",
-    "icedtea",
-    "bubbletea",
-    "tea",
-    "figjuice",
-    "coconutwater",
-    "milk_box",
-    "watercup",
 }
 
 for k,v in pairs(drinkable_foods) do
@@ -613,55 +618,11 @@ local honeyed_foods =
 	"sweettea",
 	"pumpkincookie",
 	"leafymeatsouffle",
-	"coffee",
-	"gummy_cake",
-	"tea",
-	"icedtea",
-	"gorge_candy",
-	"gorge_berry_tart",
-	"kyno_syrup",
-	"festive_berrysauce",
-	"festive_mulledpunch",
-	"festive_pavlova",
-	"festive_polishcookies",
-	"festive_pumpkinpie",
-	"bubbletea",
-	"jellybean_hunger",
-	"jellybean_sanity",
-	"jellybean_super",
-	"fortunecookie",
-	"honeyjar",
-	"kyno_sap",
-	"kyno_syrup",
-	"kyno_sugarflywings",
-	"kyno_sugarfly",
-	"mead",
-	"kyno_saphealer",
-	"berrysundae",
-	"gorge_candiedfish",
 	"beeswax",
 	"bee",
 	"killerbee",
 	"beemine",
 	"hivehat",
-	"kyno_sugartree_petals",
-	"gorge_caramel_cube",
-	"gorge_bread_pudding",
-	"katfood",
-	"donuts",
-	"donuts_chocolate_black",
-	"donuts_chocolate_white",
-	"cinnamonroll",
-	"festive_goodgravy",
-	"twistedtequile",
-}
-
-local spices = 
-{
-	"chili",
-	"garlic",
-	"sugar",
-	"salt"
 }
 
 local function HoneyFoodsPostinit(inst)
@@ -684,3 +645,30 @@ WarlyFood.monstertartare.health = 3
 WarlyFood.monstertartare.hunger = 37.5
 WarlyFood.monstertartare.sanity = 10
 WarlyFood.monstertartare.cooktime = 2
+
+-- Easter Egg for Pretzel. @Pep drew 2 sprites for it, would be a waste to not utilize both.
+-- Basically Pretzel has a chance to be with a different sprite.
+local function PretzelHeartPostinit(inst)
+	local function ChangePretzelImage(inst)
+		inst.AnimState:PlayAnimation("idle2")
+		inst.AnimState:PushAnimation("idle2")
+	
+		if inst.components.inventoryitem ~= nil then 
+			inst.components.inventoryitem:ChangeImageName("pretzel_heart")
+		end
+	end
+	
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	if math.random() < 0.20 then 
+		inst:DoTaskInTime(0, ChangePretzelImage)
+	end
+end
+
+AddPrefabPostInit("pretzel", PretzelHeartPostinit)
+
+for k,s in pairs(spices) do 
+	AddPrefabPostInit("pretzel_spice_"..s, PretzelHeartPostinit)
+end

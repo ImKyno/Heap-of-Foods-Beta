@@ -60,9 +60,11 @@ local function OnHammered(inst, worker)
     if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
         inst.components.burnable:Extinguish()
     end
+	
     if not inst:HasTag("burnt") and inst.components.brewer.product ~= nil and inst.components.brewer:IsDone() then
         inst.components.brewer:Harvest()
     end
+	
     if inst.components.container ~= nil then
         inst.components.container:DropEverything()
     end
@@ -261,7 +263,11 @@ local function kegfn()
 	inst.entity:SetPristine()
 	
     if not TheWorld.ismastersim then 
-		inst.OnEntityReplicated = function(inst) inst.replica.container:WidgetSetup("brewer") end
+		inst.OnEntityReplicated = function(inst) 
+			if not inst:HasTag("burnt") then 
+				inst.replica.container:WidgetSetup("brewer") 
+			end
+		end
         return inst
     end
 	
@@ -298,6 +304,7 @@ local function kegfn()
 
 	MakeMediumBurnable(inst, nil, nil, true)
 	MakeSmallPropagator(inst)
+	
 	MakeSnowCovered(inst)
 
 	inst.OnSave = OnSave
@@ -332,7 +339,11 @@ local function preservejarfn()
 	inst.entity:SetPristine()
 	
     if not TheWorld.ismastersim then 
-		inst.OnEntityReplicated = function(inst) inst.replica.container:WidgetSetup("brewer") end
+		inst.OnEntityReplicated = function(inst) 
+			if not inst:HasTag("burnt") then 
+				inst.replica.container:WidgetSetup("brewer") 
+			end
+		end
         return inst
     end
 	
@@ -369,6 +380,7 @@ local function preservejarfn()
 
 	MakeMediumBurnable(inst, nil, nil, true)
 	MakeSmallPropagator(inst)
+	
 	MakeSnowCovered(inst)
 
 	inst.OnSave = OnSave

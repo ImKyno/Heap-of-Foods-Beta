@@ -27,6 +27,7 @@ local function fn()
     inst.AnimState:PlayAnimation("idle")
 
     inst:AddTag("cattoy")
+	inst:AddTag("honeyed")
 	inst:AddTag("_named")
 
     inst.entity:SetPristine()

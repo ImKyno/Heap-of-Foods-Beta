@@ -538,7 +538,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION,
 		floater = {"med", nil, 0.65},
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"drinkable_food", "alcoholic_drink", "honeyed"},
 		card_def = {ingredients = {{"kyno_honey", 2}}},
 		prefabs = { "kyno_dmgreductionbuff" },
 		oneatenfn = function (inst, eater)

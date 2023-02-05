@@ -127,6 +127,7 @@ local function budfn()
 	inst.AnimState:PlayAnimation("idle_nut")
 	
 	inst:AddTag("deployedplant")
+	inst:AddTag("honeyed")
 	inst:AddTag("cattoy")
 
 	inst.entity:SetPristine()
@@ -221,6 +222,7 @@ local function petalsfn()
 	inst.AnimState:PlayAnimation("idle_flower", false)
 	
 	inst:AddTag("show_spoilage")
+	inst:AddTag("honeyed")
 	inst:AddTag("cattoy")
 
 	inst.entity:SetPristine()

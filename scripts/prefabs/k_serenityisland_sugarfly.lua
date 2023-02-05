@@ -99,6 +99,7 @@ local function fn()
     inst.AnimState:PlayAnimation("idle")
     inst.AnimState:SetRayTestOnBB(true)
 	
+	inst:AddTag("honeyed")
 	inst:AddTag("sugarfly")
     inst:AddTag("flying")
     inst:AddTag("ignorewalkableplatformdrowning")

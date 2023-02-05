@@ -129,7 +129,7 @@ local kyno_warly_foods =
 		cooktime = 0.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+		tags = {"masterfood", "honeyed", "drinkable_food"},
 		card_def = {ingredients = {{"kyno_piko", 1}, {"honey", 2}, {"ice", 1}}},
 		prefabs = { "buff_sleepresistance" },
         oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
@@ -175,7 +175,7 @@ local kyno_warly_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RESANITY,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+		tags = {"masterfood", "honeyed"},
 		card_def = {ingredients = {{"royal_jelly", 1}, {"green_cap", 3}}},
         prefabs = { "kyno_sanityregenbuff" },
         oneatenfn = function(inst, eater)
@@ -197,7 +197,7 @@ local kyno_warly_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+		tags = {"masterfood", "honeyed"},
 		card_def = {ingredients = {{"royal_jelly", 1}, {"butter", 1}, {"honey", 2}}},
         prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
@@ -220,7 +220,7 @@ local kyno_warly_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REALL,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+		tags = {"masterfood", "honeyed"},
 		card_def = {ingredients = {{"royal_jelly", 2}, {"dragonfruit", 1}, {"pomegranate", 1}}},
         prefabs = { "kyno_superregenbuff" },
         oneatenfn = function(inst, eater)
@@ -243,7 +243,7 @@ local kyno_warly_foods =
 		cooktime = .10,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+		tags = {"masterfood", "honeyed"},
 		card_def = {ingredients = {{"berries", 1}, {"goatmilk", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
 	},
 	
@@ -259,7 +259,7 @@ local kyno_warly_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"masterfood"},
+		tags = {"masterfood", "honeyed"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_syrup", 1}, {"kyno_spotspice", 1}, {"butter", 1}}},
 	},
 }
