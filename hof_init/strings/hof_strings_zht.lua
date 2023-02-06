@@ -121,7 +121,8 @@ STRINGS.ACTIONS.SAPHEAL = "Heal"
 STRINGS.ACTIONS.PULLMILK = "Milk"
 STRINGS.ACTIONS.BREWER = "Brew"
 STRINGS.ACTIONS.READBREWBOOK = "Read"
-STRINGS.ACTIONS.SLAUGHTER2 = {
+STRINGS.ACTIONS.SLAUGHTER2 = 
+{
 	DISEMBOWEL = "Gently Disembowel",
 	MURDER = "Tastefully Murder",
 	BUTCHER = "Politely Butcher",
@@ -130,7 +131,8 @@ STRINGS.ACTIONS.SLAUGHTER2 = {
 	SLAUGHTER = "Gingerly Slaughter",
 }
 
-STRINGS.PIGELDER_TALK_FAR = {
+STRINGS.PIGELDER_TALK_FAR = 
+{
 	"..HRUMPF..",
 	"(SNORT) ...s...scales...",
 	"...zzzZZzzz...",
@@ -139,7 +141,8 @@ STRINGS.PIGELDER_TALK_FAR = {
 	"...p...plague...",
 }
 
-STRINGS.PIGELDER_TALK_NEAR1 = {
+STRINGS.PIGELDER_TALK_NEAR1 = 
+{
 	"ELDER'S EYE FEEL HEAVY",
 	"HRF? YOU TRADE? SUPPLIES?",
 	"HRF! GNAW MAD AT PIGS",
@@ -150,7 +153,8 @@ STRINGS.PIGELDER_TALK_NEAR1 = {
 	"...c-CARAMEL...",
 }
 
-STRINGS.PIGELDER_TALK_NEAR2 = {
+STRINGS.PIGELDER_TALK_NEAR2 = 
+{
 	"ELDER'S EYE FEEL HEAVY",
 	"HRF? YOU TRADE? SUPPLIES?",
 	"HRF! GNAW MAD AT PIGS",
@@ -161,7 +165,8 @@ STRINGS.PIGELDER_TALK_NEAR2 = {
 	"ELDER LIKES LITTLE GOAT, THANKS FOR THE GIFT!",
 }
 
-STRINGS.PIGELDER_TALK_BUY = {
+STRINGS.PIGELDER_TALK_BUY = 
+{
 	"THANK-YOU",
 	"YES. YOU GOOD GOAT",
 	"THANK-YOU. NOW LET ELDER REST",
@@ -170,7 +175,8 @@ STRINGS.PIGELDER_TALK_BUY = {
 	"ELDER'S EYE FEEL HEAVY",
 }
 
-STRINGS.PIGELDER_TALK_THANK = {
+STRINGS.PIGELDER_TALK_THANK = 
+{
 	"THANK-YOU",
 	"YES. YOU GOOD GOAT",
 	"THANK-YOU. NOW LET ELDER REST",
@@ -178,14 +184,16 @@ STRINGS.PIGELDER_TALK_THANK = {
 	"HRF! THANKS!",
 }
 
-STRINGS.PIGELDER_TALK_REPAIRPOT = {
+STRINGS.PIGELDER_TALK_REPAIRPOT = 
+{
 	"THANKS FOR REPAIRING MY OLD POT, LITTLE GOAT!",
 	"THANKS LITTLE GOAT!",
 	"VERY THANKS, THAT WILL HELP ME A LOT!",
 	"HRF! LITTLE GOAT FIXED ELDER'S OLD POT, THANKS!",
 }
 
-STRINGS.FORTUNE_COOKIE_QUOTES = {
+STRINGS.FORTUNE_COOKIE_QUOTES = 
+{
 	"It says \"The fortune you seek is in another cookie.\"",
 	"It says \"A closed mouth gathers no feet.\"",
 	"It says \"A foolish man listens to his heart. A wise man listens to cookies.\"",
@@ -217,13 +225,15 @@ STRINGS.FORTUNE_COOKIE_QUOTES = {
 	"It says \"This cookie has another secret.\"",
 }
 
-STRINGS.FORTUNE_COOKIE_GOOD = {
+STRINGS.FORTUNE_COOKIE_GOOD = 
+{
 	"It says \"You're too lucky today, nice!\"",
 	"It says \"It's ya lucky day!\"",
 	"It says \"You should try lottery today. Lucky numbers: 1, 2, 3, 4, 5.\"",
 }
 
-STRINGS.FORTUNE_COOKIE_BAD = {
+STRINGS.FORTUNE_COOKIE_BAD = 
+{
 	"It says \"Impeding doom approaches...\"",
 	"It says \"You're a bad kid.\"",
 	"It says \"Doomed.\"",
@@ -250,6 +260,7 @@ STRINGS.KYNO_WRECK_NAMES =
 	"Parmie",
 	"Dmitry",
 	"Straluz",
+	"Pep",
 }
 
 STRINGS.CHARACTERS.GENERIC.ANNOUNCE_KYNO_COFFEEBUFF_START = "Swift!"

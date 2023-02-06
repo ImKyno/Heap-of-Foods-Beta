@@ -49,6 +49,12 @@ AddAction("FLAY", STRINGS.ACTIONS.FLAY, function(act)
 		end					
 		
 		act.target.components.health:Kill()
+		
+		-- Needed for the Accomplishment.
+		local data = {doer = act.doer, target = act.target, tool = act.invobject}
+        act.doer:PushEvent("hof_FlayOther", data)
+        act.target:PushEvent("hof_Flayed", data)
+		
 		return true
 	end
 end)

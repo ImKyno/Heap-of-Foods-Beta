@@ -120,7 +120,8 @@ STRINGS.ACTIONS.SAPHEAL = "Curar"
 STRINGS.ACTIONS.PULLMILK = "Ordenhar"
 STRINGS.ACTIONS.BREWER = "Fermentar"
 STRINGS.ACTIONS.READBREWBOOK = "Ler"
-STRINGS.ACTIONS.SLAUGHTER2 = {
+STRINGS.ACTIONS.SLAUGHTER2 = 
+{
 	DISEMBOWEL = "Estripar Gentilmente",
 	MURDER = "Assassinar com Bom Gosto",
 	BUTCHER = "Abater Educadamente",
@@ -129,7 +130,8 @@ STRINGS.ACTIONS.SLAUGHTER2 = {
 	SLAUGHTER = "Massacrar Gentilmente",
 }
 
-STRINGS.PIGELDER_TALK_FAR = {
+STRINGS.PIGELDER_TALK_FAR = 
+{
 	"..HRUMPF..",
 	"(SNORT) ...e...escamas...",
 	"...zzzZZzzz...",
@@ -138,7 +140,8 @@ STRINGS.PIGELDER_TALK_FAR = {
 	"...p...praga...",
 }
 
-STRINGS.PIGELDER_TALK_NEAR1 = {
+STRINGS.PIGELDER_TALK_NEAR1 = 
+{
 	"OLHO DO ANCIÃO ESTÁ PESADO",
 	"HRF? VOCÊ TROCA? SUPRIMENTOS?",
 	"HRF! GNAW ZANGADO COM OS PORCOS",
@@ -149,7 +152,8 @@ STRINGS.PIGELDER_TALK_NEAR1 = {
 	"...c-CARAMELO...",
 }
 
-STRINGS.PIGELDER_TALK_NEAR2 = {
+STRINGS.PIGELDER_TALK_NEAR2 = 
+{
 	"OLHO DO ANCIÃO ESTÁ PESADO",
 	"HRF? VOCÊ TROCA? SUPRIMENTOS?",
 	"HRF! GNAW ZANGADO COM OS PORCOS",
@@ -160,7 +164,8 @@ STRINGS.PIGELDER_TALK_NEAR2 = {
 	"ANCIÃO GOSTAR DE PEQUENINO, OBRIGADO PELO PRESENTE!",
 }
 
-STRINGS.PIGELDER_TALK_BUY = {
+STRINGS.PIGELDER_TALK_BUY = 
+{
 	"OBRIGADO!",
 	"SIM. VOCÊ PEQUENINO BOM",
 	"OBRIGADO. AGORA DEIXE O ANCIÃO DESCANSAR",
@@ -169,7 +174,8 @@ STRINGS.PIGELDER_TALK_BUY = {
 	"OLHO DO ANCIÃO ESTÁ PESADO",
 }
 
-STRINGS.PIGELDER_TALK_THANK = {
+STRINGS.PIGELDER_TALK_THANK = 
+{
 	"OBRIGADO",
 	"YES. YOU GOOD GOAT",
 	"SIM. VOCÊ PEQUENINO BOM",
@@ -178,58 +184,62 @@ STRINGS.PIGELDER_TALK_THANK = {
 	"HRF! OBRIGADO!",
 }
 
-STRINGS.PIGELDER_TALK_REPAIRPOT = {
+STRINGS.PIGELDER_TALK_REPAIRPOT = 
+{
 	"OBRIGADO POR REPARAR MINHA PANELA VELHA, PEQUENINO!",
 	"OBRIGADO PEQUENINO!",
 	"MUITO OBRIGADO, VAI AJUDAR BASTANTE!",
 	"HRF! PEQUNINO REPAROU PANELHA VELHA DO ANCIÃO, OBRIGADO!",
 }
 
-STRINGS.FORTUNE_COOKIE_QUOTES = {
-	"Aqui diz \"The fortune you seek is in another cookie.\"",
-	"Aqui diz \"A closed mouth gathers no feet.\"",
-	"Aqui diz \"A foolish man listens to his heart. A wise man listens to cookies.\"",
-	"Aqui diz \"If you look back, you'll soon be going that way.\"",
-	"Aqui diz \"You will live long enough to open many fortune cookies.\"",
-	"Aqui diz \"Everyone should play Wigfrid instead of Wanda or Wolfgang.\"",
-	"Aqui diz \"He who laughs at himself never runs out of things to laugh at.\"",
-	"Aqui diz \"The forums is the best place to laugh at.\"",
-	"Aqui diz \"He who throws dirt is losing ground.\"",
-	"Aqui diz \"You will be hungry again in one hour.\"",
-	"Aqui diz \"You can always find happiness at work on Friday.\"",
-	"Aqui diz \"Fortune not found? Abort, Retry, Ignore.\"",
-	"Aqui diz \"Help! I am being held prisoner in a fortune cookie factory.\"",
-	"Aqui diz \"It's about time I got out of that cookie.\"",
-	"Aqui diz \"Never forget a friend. Especially if he owes you.\"",
-	"Aqui diz \"I am worth a fortune.\"",
-	"Aqui diz \"You will receive a fortune cookie.\"",
-	"Aqui diz \"Some fortune cookies contain no fortune.\"",
-	"Aqui diz \"Avoid taking unnecessary gambles. Lucky numbers: 12, 15, 23, 28, 37.\"",
-	"Aqui diz \"This cookie contains 117 calories.\"",
-	"Aqui diz \"Ask your mom instead of a cookie.\"",
-	"Aqui diz \"Hard work pays off in the future. Laziness pays off now.\"",
-	"Aqui diz \"Don't eat the paper.\"",
-	"Aqui diz \"If a turtle doesn't have a shell, is it naked or homeless?\"",
-	"Aqui diz \"Alt+F4 to avoid death.\"",
+STRINGS.FORTUNE_COOKIE_QUOTES = 
+{
+	"Aqui diz \"A sorte que você procura está em outro biscoito.\"",
+	"Aqui diz \"Uma boca fechada não diz nada.\"",
+	"Aqui diz \"Um homem tolo escuta seu coração. Um homem sábio escuta seu biscoito da sorte.\"",
+	"Aqui diz \"Se você olhar para trás, estará em breve indo naquela direção.\"",
+	"Aqui diz \"Você viverá o bastante para abrir muitos biscoitos da sorte.\"",
+	"Aqui diz \"Todos deveriam jogar de Wigfrid ao invés de Wanda ou Wolfgang.\"",
+	"Aqui diz \"Quem ri para si mesmo nunca ficará sem rir de outras coisas.\"",
+	"Aqui diz \"O fórum é o melhor lugar para se dar uma risada.\"",
+	"Aqui diz \"Quem atira terra está perdendo terreno.\"",
+	"Aqui diz \"Você estará com fome novamente, em uma hora.\"",
+	"Aqui diz \"Você sempre pode achar felicidade no trabalho as Sexta-feiras.\"",
+	"Aqui diz \"Sorte não encontrada? Abortar, repetir, ignorar.\"",
+	"Aqui diz \"Ajude! Estou sendo feito de refém em uma fábrica de biscoitos.\"",
+	"Aqui diz \"Já era tempo de eu sair de dentro daquele biscoito.\"",
+	"Aqui diz \"Nunca se esqueça de um amigo. Principalmente se ele te deve algo.\"",
+	"Aqui diz \"Eu valho uma fortuna.\"",
+	"Aqui diz \"Você receberá um biscoito da sorte.\"",
+	"Aqui diz \"Alguns biscoitos da fortuna não contém nenhuma fortuna.\"",
+	"Aqui diz \"Não faça apostas desnecessárias. Números da sorte: 12, 15, 23, 28, 37.\"",
+	"Aqui diz \"Este biscoito contém 117 calorias.\"",
+	"Aqui diz \"Pergunte para sua mãe ao invés de um biscoito.\"",
+	"Aqui diz \"Trabalho duro se paga em fortuna. Preguiça se paga agora.\"",
+	"Aqui diz \"Não coma o papel.\"",
+	"Aqui diz \"Se uma tartagura não tem a casca, ela está pelada ou sem casa?\"",
+	"Aqui diz \"Alt+F4 para evitar a morte.\"",
 	"Aqui diz \"󰀅󰀆󰀅\"",
-	"Aqui diz \"12 Living Logs are missing, can you find them?\"",
-	"Aqui diz \"I know what you know, you can't hide it from me.\"",
-	"Aqui diz \"This cookie has another secret.\"",
+	"Aqui diz \"12 Toras Vivas desapareceram, você pode encontrá-las?\"",
+	"Aqui diz \"Eu sei o que você sabe, você não pode esconder de mim.\"",
+	"Aqui diz \"Este biscoito tem outro segredo.\"",
 }
 
-STRINGS.FORTUNE_COOKIE_GOOD = {
+STRINGS.FORTUNE_COOKIE_GOOD = 
+{
 	"Aqui diz \"Você está com muita sorte hoje, que sortudo!\"",
 	"Aqui diz \"É o seu dia de sorte!\"",
 	"Aqui diz \"Você deveria tentar a loteria hoje. Números da sorte: 1, 2, 3, 4, 5.\"",
 }
 
-STRINGS.FORTUNE_COOKIE_BAD = {
+STRINGS.FORTUNE_COOKIE_BAD = 
+{
 	"Aqui diz \"Desgraça iminente se aproxima...\"",
 	"Aqui diz \"Você é uma criança má.\"",
 	"Aqui diz \"Condenado.\"",
 }
 
-STRINGS.NAMES.KYNO_WRECK_OF = "Wreck of the %s"
+STRINGS.NAMES.KYNO_WRECK_OF = "Naufrágio de %s"
 STRINGS.KYNO_WRECK_NAMES =
 {
     "Nautilus",
@@ -250,6 +260,7 @@ STRINGS.KYNO_WRECK_NAMES =
 	"Parmie",
 	"Dmitry",
 	"Straluz",
+	"Pep",
 }
 
 STRINGS.CHARACTERS.GENERIC.ANNOUNCE_KYNO_COFFEEBUFF_START = "Swift!"
