@@ -361,6 +361,6 @@ local stringTables =
 }
 
 -- Register the strings.
-KaRegisterTrophyStrings(categoryName, stringTables)
+_G.KaRegisterTrophyStrings(categoryName, stringTables)
 
 print(modName, "Loaded achievementsmain.lua")
