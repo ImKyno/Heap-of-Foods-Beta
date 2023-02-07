@@ -607,6 +607,7 @@ local honeyed_foods =
 	"bandage",
 	"honey",
 	"royal_jelly",
+	"spice_sugar",
     "honeynuggets",
 	"honeyham",
 	"powcake",

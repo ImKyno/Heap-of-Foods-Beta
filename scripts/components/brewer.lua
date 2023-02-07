@@ -299,6 +299,7 @@ function Brewer:Harvest(harvester)
 					brewing.brewbook_recipes[recipe.brewbook_category] ~= nil and
 					brewing.brewbook_recipes[recipe.brewbook_category][self.product] ~= nil then
 					harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
+					harvester:PushEvent("learnbrewbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs}) -- For Accomplishments Mod.
 					-- print("#### RECIPE ADDED TO BREWBOOK ####")
 				end
 				

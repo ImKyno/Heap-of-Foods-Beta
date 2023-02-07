@@ -61,3 +61,8 @@ end
 -- Fix For Inventory Icons.
 local atlas = (src and src.components.inventoryitem and src.components.inventoryitem.atlasname 
 and resolvefilepath(src.components.inventoryitem.atlasname)) or "images/inventoryimages.xml"
+
+-- This belongs to the Accomplishments Mod.
+if _G.KnownModIndex:IsModEnabled("Accomplishments-DST") then
+	modimport("achievementsmain")
+end
