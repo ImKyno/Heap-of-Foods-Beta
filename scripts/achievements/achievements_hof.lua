@@ -239,7 +239,7 @@ local function SetupPlayerFunctions(player)
             end
 		end
     end)
-	
+
 	player:ListenForEvent("learnbrewbookrecipe", function(inst, data)
         if data and type(data.product) == "string" then
             local varName = "hasBrewedHof_" .. data.product
@@ -350,23 +350,33 @@ end
 local registerEntriesFuncName = string.format("Register%sAchievementEntries", categoryName)
 _G[registerEntriesFuncName] = function(root)
     local function GetNumCookedFoods(data)
-        return KaGetNumDone(allHofFoods, function(k,v) return data["hasCookedHof_" .. k] end)
+        local numDone, maxNum, candidates = KaGetNumDone(allHofFoods, function(k,v) return data["hasCookedHof_" .. k] end)
+        candidates.extraAtlas = resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")
+        return numDone, maxNum, candidates
     end
 
     local function GetNumBrewedDrinks(data)
-        return KaGetNumDone(allHofDrinks, function(k,v) return data["hasBrewedHof_" .. k] end)
+        local numDone, maxNum, candidates = KaGetNumDone(allHofDrinks, function(k,v) return data["hasBrewedHof_" .. k] end)
+        candidates.extraAtlas = resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")
+        return numDone, maxNum, candidates
     end
 
     local function GetNumCraftedBooks(data)
-        return KaGetNumDone(hofbooks, function(k, v) return data["hasCraftedHofBook_" .. k] == true end)
+        local numDone, maxNum, candidates = KaGetNumDone(hofbooks, function(k, v) return data["hasCraftedHofBook_" .. k] == true end)
+        candidates.extraAtlas = resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")
+        return numDone, maxNum, candidates
     end
 
     local function GetNumEatenEdibleFoods(data)
-        return KaGetNumDone(edibleHofFoods, function(k, v) return data["hasEatenHof_" .. k] == true end)
+        local numDone, maxNum, candidates = KaGetNumDone(edibleHofFoods, function(k, v) return data["hasEatenHof_" .. k] == true end)
+        candidates.extraAtlas = resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")
+        return numDone, maxNum, candidates
     end
 
     local function GetNumCookedWarlyPreparedFoods(data)
-        return KaGetNumDone(preparedHofWarlyFoods, function(k, v) return data["hasCookedWarlyHof_" .. k] == true end)
+        local numDone, maxNum, candidates = KaGetNumDone(preparedHofWarlyFoods, function(k, v) return data["hasCookedWarlyHof_" .. k] == true end)
+        candidates.extraAtlas = resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")
+        return numDone, maxNum, candidates
     end
 
     local entries =
