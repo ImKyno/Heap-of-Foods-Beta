@@ -103,7 +103,7 @@ local stringTables =
             FLAYANIMAL_DESC = "Kill a poor animal using the Slaughter Tools.",
 
             CATCHPEBBLE_TITLE = "Crabby'ing my Boots",
-            CATCHPEBBLE_DESCC = "Catch an elusive Pebble Crab using the Crab Trap.",
+            CATCHPEBBLE_DESC = "Catch an elusive Pebble Crab using the Crab Trap.",
         },
 
         br =
@@ -166,7 +166,7 @@ local stringTables =
             FLAYANIMAL_DESC = "Mate um pobre animal indefeso usando a Ferramentas de Abate.",
 
             CATCHPEBBLE_TITLE = "Carangueijando",
-            CATCHPEBBLE_DESCC = "Capture um Carangueijo utilizando uma armadilha.",
+            CATCHPEBBLE_DESC = "Capture um Carangueijo utilizando uma armadilha.",
         },
 
         kr =
@@ -229,7 +229,7 @@ local stringTables =
             FLAYANIMAL_DESC = "Kill a poor animal using the Slaughter Tools.",
 
             CATCHPEBBLE_TITLE = "Crabby'ing my Boots",
-            CATCHPEBBLE_DESCC = "Catch an elusive Pebble Crab using the Crab Trap.",
+            CATCHPEBBLE_DESC = "Catch an elusive Pebble Crab using the Crab Trap.",
         },
 
         zh =
@@ -292,7 +292,7 @@ local stringTables =
             FLAYANIMAL_DESC = "Kill a poor animal using the Slaughter Tools.",
 
             CATCHPEBBLE_TITLE = "Crabby'ing my Boots",
-            CATCHPEBBLE_DESCC = "Catch an elusive Pebble Crab using the Crab Trap.",
+            CATCHPEBBLE_DESC = "Catch an elusive Pebble Crab using the Crab Trap.",
         },
 
         zht =
@@ -355,7 +355,7 @@ local stringTables =
             FLAYANIMAL_DESC = "Kill a poor animal using the Slaughter Tools.",
 
             CATCHPEBBLE_TITLE = "Crabby'ing my Boots",
-            CATCHPEBBLE_DESCC = "Catch an elusive Pebble Crab using the Crab Trap.",
+            CATCHPEBBLE_DESC = "Catch an elusive Pebble Crab using the Crab Trap.",
         }
     }
 }

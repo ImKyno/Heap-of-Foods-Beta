@@ -1,8 +1,8 @@
 local modName = "[HOF]"
 local _G = GLOBAL
 
-if (_G.KnownModIndex:IsModEnabled("Accomplishments-DST") and _G.KnownModIndex:IsModEnabled("Heap-of-Foods-Beta")) or
-   (_G.TheKaAchievementLoader ~= nil and _G.TheNet:GetServerGameMode() == "") then
+if (_G.KnownModIndex:IsModEnabled("Accomplishments-DST") and _G.KnownModIndex:IsModEnabled("Heap-of-Foods-Workshop")) or
+(_G.TheKaAchievementLoader ~= nil and _G.TheNet:GetServerGameMode() == "") then
     Assets =
     {
         -- For individual achievement

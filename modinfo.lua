@@ -55,13 +55,15 @@ configuration_options       =
 				hover       = "Translation by: Kyno.",
 				data        = "hof_strings"
 			},
+			--[[
             {
 				description = "繁體中文", 
 				hover       = "Translation by: Djr.",
 				data        = "hof_strings_zht"
 			},
+			]]--
 			{
-				description = "Português Brasileiro",
+				description = "Português (BR)",
 				hover       = "Translation by: Kyno.",
 				data        = "hof_strings_br"
 			},
@@ -126,27 +128,6 @@ configuration_options       =
     },
 	
 	Title("Food Options", "Options for foods and ingredients."),
-	--[[
-	{
-		name = "HOF_COFFEEGOODIES",
-		label = "Wigfrid Drinks Coffee",
-		hover = "Should Wigfrid drink coffee?",
-		options =
-		{
-			{
-				description = "No",
-				hover = "Wigfrid can't drink coffee.",
-				data = 0
-			},
-			{
-				description = "Yes",
-				hover = "Wigfrid can drink coffee.",
-				data = 1
-			},
-		},
-		default = 1,
-	},
-	]]--
 	{
 		name                = "HOF_COFFEESPEED",
 		label               = "Speed Buff",
@@ -245,6 +226,7 @@ configuration_options       =
 	},
 	
 	Title("World Options", "Options for the world."),
+	--[[
 	{
 		name                = "HOF_RETROFIT",
 		label               = "Retrofit Contents",
@@ -269,6 +251,7 @@ configuration_options       =
         },
         default             = 0,
 	},
+	]]--
 	{
 		name                = "HOF_OCEANSETPIECE_COUNT",
 		label               = "Ocean Setpieces",

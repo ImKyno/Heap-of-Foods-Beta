@@ -10,14 +10,16 @@ local TERRAIN_FILTERS      = {_G.WORLD_TILES.ROAD, _G.WORLD_TILES.WOODFLOOR, _G.
 local OCEANSETPIECE_COUNT  = GetModConfigData("HOF_OCEANSETPIECE_COUNT")
 
 -- Prefab Rooms.
-local AloeRooms = {
+local AloeRooms = 
+{
 	"BGGrass",
 	"BGGrassBurnt",
 	"FlowerPatch",
 	"GrassyMoleColony",
 }
 
-local WheatRooms = {
+local WheatRooms = 
+{
 	"BGSavanna",
 	"BeefalowPlain",
 	"WalrusHut_Plains",
@@ -25,7 +27,8 @@ local WheatRooms = {
 	"BarePlain",
 }
 
-local RadishRooms = {
+local RadishRooms = 
+{
 	"BGDeciduous",
 	"DeepDeciduous",
 	"MagicalDeciduous",
@@ -33,7 +36,8 @@ local RadishRooms = {
 	"PondyGrass",
 }
 
-local FennelRooms = {
+local FennelRooms = 
+{
 	"SinkholeForest",
 	"SinkholeCopses",
 	"SparseSinkholes",
@@ -43,7 +47,8 @@ local FennelRooms = {
 	"BGSinkholeRoom",
 }
 
-local SweetPotatoRooms = {
+local SweetPotatoRooms = 
+{
 	"BGForest",
 	"BGDeepForest",
 	"DeepForest",
@@ -59,7 +64,8 @@ local SweetPotatoRooms = {
 	"MandrakeHome",
 }
 
-local ParznipRooms = {
+local ParznipRooms = 
+{
 	"LightPlantField",
 	"WormPlantField",
 	"FernGully",
@@ -67,7 +73,8 @@ local ParznipRooms = {
 	"SlurtlePlains",
 }
 
-local TurnipRooms = {
+local TurnipRooms = 
+{
 	"BGMarsh",
 	"Marsh",
 	"SpiderMarsh",
@@ -79,7 +86,8 @@ local TurnipRooms = {
 	"SinkholeSwamp",
 }
 
-local TurnipCaveRooms = {
+local TurnipCaveRooms = 
+{
 	"SinkholeSwamp",
 	"DarkSwamp",
 	"TentacleMud",
@@ -89,19 +97,22 @@ local TurnipCaveRooms = {
 	"BGSinkholeSwampRoom",
 }
 
-local OceanRooms = {
+local OceanRooms = 
+{
 	"OceanCoastal",
 	"OceanRough",
 	"OceanHazardous",
 }
 
-local WaterycressRooms = {
+local WaterycressRooms = 
+{
 	"OceanSwell",
 	"OceanRough",
 	"OceanHazardous",
 }
 
-local ParznipBigRooms = {
+local ParznipBigRooms = 
+{
 	"WetWilds",
 	"LichenMeadow",
 	"CaveJungle",
@@ -112,7 +123,8 @@ local ParznipBigRooms = {
 	"LightHut",
 }
 
-local StoneSlabRooms = {
+local StoneSlabRooms = 
+{
 	"BGChessRocky",
 	"BGRocky",
 	"Rocky",
@@ -128,7 +140,8 @@ local StoneSlabRooms = {
 	"PondyGrass",
 }
 
-local StoneSlabCaveRooms = {
+local StoneSlabCaveRooms = 
+{
 	"SlurtleCanyon",
 	"BatsAndSlurtles",
 	"RockyPlains",
@@ -145,7 +158,8 @@ local StoneSlabCaveRooms = {
 	"BGSpillagmiteRoom",
 }
 
-local MushroomStumpRooms = {
+local MushroomStumpRooms = 
+{
 	"BGForest",
 	"DeepForest",
 	"Forest",
@@ -156,7 +170,8 @@ local MushroomStumpRooms = {
 	"MoonbaseOne",
 }
 
-local MushroomStumpCaveRooms = {
+local MushroomStumpCaveRooms = 
+{
 	"GreenMushForest",
 	"GreenMushPonds",
 	"GreenMushSinkhole",
@@ -167,7 +182,8 @@ local MushroomStumpCaveRooms = {
 	"BGGreenMushRoom",
 }
 
-local WateryCrateRooms = {
+local WateryCrateRooms = 
+{
 	"OceanCoastalShore",
 	"OceanCoastal",
 	"OceanSwell",
@@ -175,7 +191,8 @@ local WateryCrateRooms = {
 	"OceanHazardous",
 }
 
-local AspargosRooms = {
+local AspargosRooms = 
+{
 	"BGForest",
 	"BGDeepForest",
 	"DeepForest",
@@ -186,7 +203,8 @@ local AspargosRooms = {
 	"GrassyMoleColony",
 }
 
-local AspargosCaveRooms = {
+local AspargosCaveRooms = 
+{
 	"SinkholeForest",
 	"SinkholeCopses",
 	"SparseSinkholes",
