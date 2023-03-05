@@ -335,18 +335,15 @@ end)
 -- Some changes for the Vanilla foods.
 local VanillaFood = require("preparedfoods")
 VanillaFood.bananapop.test = function(cooker, names, tags)
-    return (names.cave_banana or names.cave_banana_cooked or names.kyno_banana or names.kyno_banana_cooked)
-    and tags.frozen and names.twigs and not tags.meat and not tags.fish
+    return tags.banana and tags.frozen and names.twigs and not tags.meat and not tags.fish
 end
 
 VanillaFood.frozenbananadaiquiri.test = function(cooker, names, tags)
-    return (names.cave_banana or names.cave_banana_cooked or names.kyno_banana or names.kyno_banana_cooked)
-    and (tags.frozen and tags.frozen >= 1) and not tags.meat and not tags.fish
+    return tags.banana and (tags.frozen and tags.frozen >= 1) and not tags.meat and not tags.fish
 end
 
 VanillaFood.bananajuice.test = function(cooker, names, tags)
-    return ((names.cave_banana or names.kyno_banana or 0) + (names.cave_banana_cooked or names.kyno_banana_cooked or 0) >= 2)
-	and not tags.meat and not tags.fish and not tags.monster
+    return (tags.banana and tags.banana >= 2) and not tags.meat and not tags.fish and not tags.monster
 end
 
 VanillaFood.butterflymuffin.test = function(cooker, names, tags)

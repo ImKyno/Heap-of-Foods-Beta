@@ -66,10 +66,10 @@ AddFoodTag("cactus",         {name = "Cactus",        atlas = "images/food_tags.
 -- Heap of Foods Ingredients Tags.
 -- Cookers Tags.
 AddFoodTag("algae",         {name = "Algaes",           atlas = "images/ingredientimages/hof_ingredientimages.xml"})
-AddFoodTag("cheese",        {name = "Cheeses",          atlas = "images/ingredientimages/hof_ingredientimages.xml"})
+AddFoodTag("cheese",        {name = "Cheese",           atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("crab",          {name = "Crab Meat",        atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("foliage",       {name = "Foliage",          atlas = "images/ingredientimages/hof_ingredientimages.xml"})
-AddFoodTag("milk",          {name = "Milks",            atlas = "images/ingredientimages/hof_ingredientimages.xml"})
+AddFoodTag("milk",          {name = "Milk",             atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("mussel",        {name = "Mussel",           atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("roe",           {name = "Roe",              atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("salmon",        {name = "Salmon",           atlas = "images/ingredientimages/hof_ingredientimages.xml"})
@@ -77,10 +77,12 @@ AddFoodTag("beanbug",       {name = "Bean Bugs",        atlas = "images/ingredie
 AddFoodTag("gummybug",      {name = "Gummy Slug",       atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("berries",       {name = "Berries",          atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("bacon",         {name = "Bacon",            atlas = "images/ingredientimages/hof_ingredientimages.xml"})
-AddFoodTag("limpet",        {name = "Limpets",          atlas = "images/ingredientimages/hof_ingredientimages.xml"})
-AddFoodTag("chocolate",     {name = "Chocolates",       atlas = "images/ingredientimages/hof_ingredientimages.xml"})
+AddFoodTag("limpet",        {name = "Limpet",           atlas = "images/ingredientimages/hof_ingredientimages.xml"})
+AddFoodTag("chocolate",     {name = "Chocolate",        atlas = "images/ingredientimages/hof_ingredientimages.xml"})
+AddFoodTag("banana",        {name = "Banana",           atlas = "images/ingredientimages/hof_ingredientimages.xml"})
+AddFoodTag("bread",         {name = "Bread",            atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 
 -- Brewers Tags.
-AddFoodTag("piko",          {name = "Pikos",            atlas = "images/ingredientimages/hof_ingredientimages.xml"})
-AddFoodTag("spotspice",     {name = "Spot Spices",      atlas = "images/ingredientimages/hof_ingredientimages.xml"})
-AddFoodTag("mayonnaise",    {name = "Mayonnaises",      atlas = "images/ingredientimages/hof_ingredientimages.xml"})
+AddFoodTag("piko",          {name = "Piko",             atlas = "images/ingredientimages/hof_ingredientimages.xml"})
+AddFoodTag("spotspice",     {name = "Spot Spice",       atlas = "images/ingredientimages/hof_ingredientimages.xml"})
+AddFoodTag("mayonnaise",    {name = "Mayonnaise",       atlas = "images/ingredientimages/hof_ingredientimages.xml"})

@@ -53,7 +53,7 @@ local kyno_warly_foods =
 	
 	gorge_cheeseburger =
 	{
-		test = function(cooker, names, tags) return names.gorge_bread and tags.meat and tags.foliage and (tags.cheese or tags.dairy)
+		test = function(cooker, names, tags) return tags.bread and tags.meat and tags.foliage and (tags.cheese or tags.dairy)
 		and not names.kyno_bacon and not names.kyno_bacon_cooked end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -86,7 +86,7 @@ local kyno_warly_foods =
 	
 	gorge_meat_wellington =
 	{
-		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and names.gorge_bread and tags.veggie end,
+		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and tags.bread and tags.veggie end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SUPERSLOW,
@@ -261,6 +261,40 @@ local kyno_warly_foods =
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood", "honeyed"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_syrup", 1}, {"kyno_spotspice", 1}, {"butter", 1}}},
+	},
+	
+	milkshake_prismatic =
+	{
+		test = function(cooker, names, tags) return tags.milk and tags.berries and (names.kyno_syrup and names.kyno_syrup >= 2) end,
+		priority = 10,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_FAST,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = 60,
+		hunger = 12.5,
+		sanity = 60,
+		cooktime = .10,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"masterfood", "honeyed"},
+		card_def = {ingredients = {{"goatmilk", 1}, {"berries", 1}, {"kyno_syrup", 2}}},
+	},
+	
+	nachos =
+	{
+		test = function(cooker, names, tags) return names.kyno_oil and names.kyno_spotspice and tags.cheese and names.corn and not names.corn_cooked end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 40,
+		hunger = 32.5,
+		sanity = 15,
+		cooktime = 2,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"masterfood"},
+		card_def = {ingredients = {{"kyno_oil", 1}, {"kyno_spotspice", 1}, {"cheese_yellow", 1}, {"corn", 1}}},
 	},
 }
 

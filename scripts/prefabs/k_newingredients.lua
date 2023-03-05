@@ -964,7 +964,7 @@ local function oilfn()
     MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 	
-	-- inst.AnimState:SetScale(.8, .8, .8)
+	inst.AnimState:SetScale(.8, .8, .8)
 
     inst.AnimState:SetBank("kyno_cookingoil")
     inst.AnimState:SetBuild("kyno_cookingoil")

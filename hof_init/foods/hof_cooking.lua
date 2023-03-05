@@ -26,6 +26,7 @@ AddIngredientValues({"kelp"},                   {veggie     = 0.5,  algae     = 
 AddIngredientValues({"goatmilk"},               {dairy      = 1,    milk      = 1})
 AddIngredientValues({"berries"},                {fruit      = 0.5,  berries   = 1},           true)
 AddIngredientValues({"berries_juicy"},          {fruit      = 0.5,  berries   = 1},           true)
+AddIngredientValues({"cave_banana"},            {fruit      = 1,    banana    = 1},           true)
 
 -- New Mod Crock Pot Ingredients.
 AddIngredientValues({"kyno_coffeebeans"}, 		{seeds      = 1}, 	 		  				  true)
@@ -58,7 +59,7 @@ AddIngredientValues({"kyno_salt"}, 				{inedible   = 1})
 AddIngredientValues({"kyno_parznip"}, 			{veggie     = 1},                             true)
 AddIngredientValues({"kyno_parznip_eaten"}, 	{veggie     = 1},                             true)
 AddIngredientValues({"kyno_turnip"}, 			{veggie     = 1},                             true)
-AddIngredientValues({"kyno_banana"}, 			{fruit      = 1},                             true)
+AddIngredientValues({"kyno_banana"}, 			{fruit      = 1,   banana     = 1},           true)
 AddIngredientValues({"kyno_kokonut_halved"}, 	{fruit      = 1})
 AddIngredientValues({"kyno_kokonut_cooked"}, 	{fruit      = 1})
 AddIngredientValues({"kyno_twiggynuts"}, 		{seeds      = 1,   fruit      = 0.5})
@@ -90,6 +91,7 @@ AddIngredientValues({"kyno_poison_froglegs"},   {meat       = 0.5},             
 AddIngredientValues({"kyno_oil"},               {oil        = 1})
 AddIngredientValues({"chocolate_black"},        {sweetener  = 2,   chocolate  = 1})
 AddIngredientValues({"chocolate_white"},        {sweetener  = 2,   chocolate  = 1})
+AddIngredientValues({"littlebread"}, 			{bread      = 1})
 
 -- Import The Foods.
 for k, v in pairs(require("hof_foodrecipes")) do
@@ -309,6 +311,16 @@ local kynofoods =
 	donuts                  = require("hof_foodrecipes").donuts,
 	donuts_chocolate_black  = require("hof_foodrecipes").donuts_chocolate_black,
 	donuts_chocolate_white  = require("hof_foodrecipes").donuts_chocolate_white,
+	gummybeargers           = require("hof_foodrecipes").gummybeargers,
+	pretzel                 = require("hof_foodrecipes").pretzel,
+	cornincup               = require("hof_foodrecipes").cornincup,
+	cottoncandy             = require("hof_foodrecipes").cottoncandy,
+	roastedhazelnuts        = require("hof_foodrecipes").roastedhazelnuts,
+	monstermuffin           = require("hof_foodrecipes").monstermuffin,
+	pinkcake                = require("hof_foodrecipes").pinkcake,
+	chipsbag                = require("hof_foodrecipes").chipsbag,
+	littlebread             = require("hof_foodrecipes").littlebread,
+	hothound                = require("hof_foodrecipes").hothound,
 
 	-- Warly Exclusives.
 	musselbouillabaise 		= require("hof_foodrecipes_warly").musselbouillabaise,
