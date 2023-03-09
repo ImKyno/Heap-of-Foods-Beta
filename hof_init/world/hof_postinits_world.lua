@@ -849,50 +849,18 @@ end
 -- Include the Brewing Recipe Card to the Tumbleweed.
 -- I'm not sure if this is the best way to do it, I'll change it later, maybe...
 local function TumbleweedPostinit(inst)
-	local function onpickup(inst, picker)
-		local x, y, z = inst.Transform:GetWorldPosition()
-
-		inst:PushEvent("detachchild")
-
-		if IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS) then
-			if math.random() < TUNING.HALLOWEEN_ORNAMENT_TUMBLEWEED_CHANCE then
-				table.insert(inst.loot, "halloween_ornament_" ..tostring(math.random(NUM_HALLOWEEN_ORNAMENTS)))
-				table.insert(inst.lootaggro, false)
-			end
-		end
-
+	local function OnInitBrewingCard(inst)
 		if math.random() < TUNING.KYNO_BREWINGRECIPECARD_CHANCE then
 			table.insert(inst.loot, "kyno_brewingrecipecard")
 			table.insert(inst.lootaggro, false)
 		end
-
-		local item = nil
-		for i, v in ipairs(inst.loot) do
-			item = SpawnPrefab(v)
-			item.Transform:SetPosition(x, y, z)
-
-			if item.components.inventoryitem ~= nil and item.components.inventoryitem.ondropfn ~= nil then
-				item.components.inventoryitem.ondropfn(item)
-			end
-
-			if inst.lootaggro[i] and item.components.combat ~= nil and picker ~= nil then
-				if not (item:HasTag("spider") and (picker:HasTag("spiderwhisperer") or picker:HasTag("spiderdisguise") or
-				(picker:HasTag("monster") and not picker:HasTag("player"))) or item:HasTag("frog") and picker:HasTag("merm")) then
-					item.components.combat:SuggestTarget(picker)
-				end
-			end
-		end
-
-		SpawnPrefab("tumbleweedbreakfx").Transform:SetPosition(x, y, z)
-
-		return true
 	end
-
+	
 	if not _G.TheWorld.ismastersim then
         return inst
     end
-
-	inst.components.pickable.onpickedfn = onpickup
+	
+	inst:DoTaskInTime(0, OnInitBrewingCard)
 end
 
 AddPrefabPostInit("tumbleweed", TumbleweedPostinit)

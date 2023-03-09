@@ -215,7 +215,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.FOOD_TEMP_LONG,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 20,
 		hunger = 25,
 		sanity = -10,
@@ -273,21 +273,20 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_flour", 4}}},
 	},
 	
-	gorge_potato_chips = 
+	gorge_sweet_chips = 
 	{
-		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 3) and names.kyno_spotspice 
-		and not (names.garlic or names.garlic_cooked) and not tags.fish and not tags.meat and not names.kyno_salt end,
+		test = function(cooker, names, tags) return ((names.kyno_sweetpotato or 0) + (names.kyno_sweetpotato_cooked or 0) >= 2) 
+		and names.kyno_oil and names.kyno_spotspice end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
 		health = 25,
 		hunger = 75,
-		sanity = 10,
-		cooktime = 3,
-		stacksize = 2,
+		sanity = 15,
+		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"potato", 3}, {"kyno_spotspice", 1}}},
+		card_def = {ingredients = {{"kyno_sweetpotato", 2}, {"kyno_oil", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_vegetable_soup =
@@ -1669,7 +1668,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+        temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 0,
 		hunger = 15,
 		sanity = 50,
@@ -1688,7 +1687,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SLOW,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+        temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 20,
 		hunger = 0,
 		sanity = 0,
@@ -1960,7 +1959,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.FOOD_TEMP_LONG,
 		health = 40,
 		hunger = 32.5,
 		sanity = -15,
@@ -2436,7 +2435,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FAST,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+        temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 30,
 		hunger = 12.5,
 		sanity = 30,
@@ -2445,6 +2444,114 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"goatmilk", 1}, {"berries", 1}, {"honey", 2}}},
+	},
+	
+	banana_pudding =
+	{
+		test = function(cooker, names, tags) return (tags.banana and tags.banana >= 2) and tags.milk and tags.sweetener end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_FAST,
+		health = 20,
+		hunger = 12.5,
+		sanity = 50,
+		cooktime = .8,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
+		card_def = {ingredients = {{"cave_banana", 2}, {"goatmilk", 1}, {"honey", 1}}},
+	},
+	
+	sea_pudding =
+	{
+		test = function(cooker, names, tags) return (names.eel or names.eel_cooked or names.pondeel) and (names.kyno_mussel or names.kyno_mussel_cooked)
+		and names.kyno_grouper and tags.algae end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_SUPERFAST,
+		health = 60,
+		hunger = 150,
+		sanity = 5,
+		cooktime = 1,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pondeel", 1}, {"kyno_mussel", 1}, {"kyno_grouper", 1}, {"kelp", 1}}},
+	},
+	
+	minertreat =
+	{
+		test = function(cooker, names, tags) return tags.fruit and (tags.sweetener and tags.sweetener >= 2) and names.twigs end,
+		priority = 35,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_MED,
+		health = -3,
+		hunger = 12.5,
+		sanity = 15,
+		cooktime = 0.8,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"honey", 2}, {"pomegranate", 1}, {"twigs", 1}}},
+	},
+	
+	radishsalad =
+	{
+		test = function(cooker, names, tags) return ((names.kyno_radish or 0) + (names.kyno_radish or 0) >= 3) and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 20,
+		hunger = 62.5,
+		sanity = 5,
+		cooktime = 1.2,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_radish", 3}, {"kyno_spotspice", 1}}},
+	},
+	
+	pumpkin_soup =
+	{
+		test = function(cooker, names, tags) return ((names.pumpkin or 0) + (names.pumpkin_cooked or 0) >= 2) and names.butter and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 40,
+		hunger = 100,
+		sanity = 33,
+		cooktime = 2,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pumpkin", 2}, {"goatmilk", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	algae_soup =
+	{
+		test = function(cooker, names, tags) return (tags.algae and tags.algae >= 3) and not tags.meat and not tags.fish end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 75,
+		sanity = 25,
+		cooktime = 1.5,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kelp", 2}, {"kyno_waterycress", 1}, {"kyno_seaweeds", 1}}},
+	},
+	
+	parznip_soup =
+	{
+		test = function(cooker, names, tags) return ((names.kyno_parznip or 0) + (names.kyno_parznip_cooked or 0) + (names.kyno_parznip_eaten or 0) >= 3) and
+		names.succulent_picked end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 20,
+		hunger = 62.5,
+		sanity = 5,
+		cooktime = 1,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_parznip", 3}, {"succulent_picked", 1}}},
 	},
 }
 

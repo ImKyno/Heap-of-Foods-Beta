@@ -296,6 +296,25 @@ local kyno_warly_foods =
 		tags = {"masterfood"},
 		card_def = {ingredients = {{"kyno_oil", 1}, {"kyno_spotspice", 1}, {"cheese_yellow", 1}, {"corn", 1}}},
 	},
+	
+	tom_kha_soup =
+	{
+		test = function(cooker, names, tags) return names.kyno_kokonut_halved and tags.mushrooms and names.succulent_picked and
+		(names.pepper or names.pepper_cooked) end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = 5,
+		hunger = 40,
+		sanity = 33,
+		cooktime = 2,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"masterfood"},
+		card_def = {ingredients = {{"kyno_kokonut_halved", 1}, {"green_cap", 1}, {"succulent_picked", 1}, {"pepper", 1}}},
+	},
 }
 
 for k, recipe in pairs(kyno_warly_foods) do

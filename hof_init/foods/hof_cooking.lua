@@ -27,6 +27,10 @@ AddIngredientValues({"goatmilk"},               {dairy      = 1,    milk      = 
 AddIngredientValues({"berries"},                {fruit      = 0.5,  berries   = 1},           true)
 AddIngredientValues({"berries_juicy"},          {fruit      = 0.5,  berries   = 1},           true)
 AddIngredientValues({"cave_banana"},            {fruit      = 1,    banana    = 1},           true)
+AddIngredientValues({"red_cap"},                {veggie     = 0.5,  mushrooms = 1},           true)
+AddIngredientValues({"green_cap"},              {veggie     = 0.5,  mushrooms = 1},           true)
+AddIngredientValues({"blue_cap"},               {veggie     = 0.5,  mushrooms = 1},           true)
+AddIngredientValues({"moon_cap"},               {veggie     = 0.5,  mushrooms = 1},           true)
 
 -- New Mod Crock Pot Ingredients.
 AddIngredientValues({"kyno_coffeebeans"}, 		{seeds      = 1}, 	 		  				  true)
@@ -195,7 +199,7 @@ local kynofoods =
 
 	-- The Gorge.
 	gorge_bread 			= require("hof_foodrecipes").gorge_bread,
-	gorge_potato_chips 		= require("hof_foodrecipes").gorge_potato_chips,
+	gorge_sweet_chips 		= require("hof_foodrecipes").gorge_sweet_chips,
 	gorge_vegetable_soup 	= require("hof_foodrecipes").gorge_vegetable_soup,
 	gorge_jelly_sandwich 	= require("hof_foodrecipes").gorge_jelly_sandwich,
 	gorge_fish_stew 		= require("hof_foodrecipes").gorge_fish_stew,
