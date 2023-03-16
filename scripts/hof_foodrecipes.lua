@@ -1703,9 +1703,9 @@ local kyno_foods =
        	end,
 	},
 	
-	eyeballsoup =
+	eyeballspaghetti =
 	{
-		test = function(cooker, names, tags) return names.deerclops_eyeball and (tags.meat and tags.meat >= 1.5) and not tags.veggie and not tags.fruit end,
+		test = function(cooker, names, tags) return names.deerclops_eyeball and (names.tomato or names.tomato_cooked) and names.kyno_flour end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = nil,
@@ -1716,7 +1716,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"deerclops_eyeball", 1}, {"smallmeat", 3}}},
+		card_def = {ingredients = {{"deerclops_eyeball", 1}, {"kyno_flour", 1}, {"tomato", 2}}},
 		oneatenfn = function(inst, eater)
 			TheWorld.components.deerclopsspawner:SummonMonster(eater)
 		end,
@@ -2329,7 +2329,7 @@ local kyno_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"honeyed"},
-		card_def = {ingredients = {{"kyno_sugartree_petals", 1}, {"twigs", 1}}},
+		card_def = {ingredients = {{"kyno_sugartree_petals", 3}, {"twigs", 1}}},
 	},
 	
 	roastedhazelnuts =
@@ -2357,7 +2357,7 @@ local kyno_foods =
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		health = -10,
 		hunger = 50,
-		sanity = -20,
+		sanity = -15,
 		cooktime = 2,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
@@ -2499,7 +2499,7 @@ local kyno_foods =
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
-		health = 20,
+		health = 15,
 		hunger = 62.5,
 		sanity = 5,
 		cooktime = 1.2,
@@ -2520,7 +2520,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"pumpkin", 2}, {"goatmilk", 1}, {"kyno_spotspice", 1}}},
+		card_def = {ingredients = {{"pumpkin", 2}, {"butter", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	algae_soup =
@@ -2545,8 +2545,8 @@ local kyno_foods =
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
-		health = 20,
-		hunger = 62.5,
+		health = 15,
+		hunger = 32.5,
 		sanity = 5,
 		cooktime = 1,
 		potlevel = "med",

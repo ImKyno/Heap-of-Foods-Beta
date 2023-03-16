@@ -1,6 +1,6 @@
 name                        = "Heap of Foods"
 version                     = "5.9-A"
-local myupdate              = "The High Calories"
+local myupdate              = "The High Calories (Part II)"
 
 description                 = 
 [[
@@ -16,7 +16,7 @@ The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jams, Pick
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
 󰀌 Mod Version: 5.9-A
-󰀧 Update: The High Calories
+󰀧 Update: The High Calories (Part II)
 ]]
 
 author                      = "Kyno"
