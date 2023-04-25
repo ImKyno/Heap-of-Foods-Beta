@@ -74,7 +74,12 @@ local function OnChopped(inst, worker)
             cracked = inst.components.lootdropper:SpawnLootPrefab("kyno_kokonut_halved")
             inst.components.lootdropper:SpawnLootPrefab("kyno_kokonut_halved")
         end 
-        worker.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
+		
+		if worker and worker.SoundEmitter then
+			worker.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
+		else
+			inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
+		end
     end
     kokonut:Remove()
 end 

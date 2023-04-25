@@ -538,7 +538,7 @@ local kyno_foods =
 	
 	gorge_sliders = 
 	{
-		test = function(cooker, names, tags) return ((names.kyno_bacon or 0) + (names.kyno_bacon_cooked or 0) >= 2) and tags.bread and tags.foliage end,
+		test = function(cooker, names, tags) return ((names.kyno_bacon or 0) + (names.kyno_bacon_cooked or 0) >= 2) and names.littlebread and tags.foliage end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
@@ -548,7 +548,7 @@ local kyno_foods =
 		cooktime = 0.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_bacon", 2}, {"kyno_flour", 1}, {"foliage", 1}}},
+		card_def = {ingredients = {{"kyno_bacon", 2}, {"littlebread", 1}, {"foliage", 1}}},
 	},
 	
 	gorge_jelly_roll = 
@@ -698,7 +698,7 @@ local kyno_foods =
 	gorge_hamburger =
 	{
 		test = function(cooker, names, tags) return tags.bread and tags.meat and (names.kyno_bacon or names.kyno_bacon_cooked) and 
-		tags.foliage and not tags.fish and not tags.dairy end,
+		tags.foliage and not tags.fish and not tags.dairy and not (tags.bacon and tags.bacon > 1) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,

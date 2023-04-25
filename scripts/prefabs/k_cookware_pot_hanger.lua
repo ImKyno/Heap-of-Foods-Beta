@@ -224,7 +224,6 @@ local function OnHammeredPot(inst, worker)
 	if firepit then
 		firepit:RemoveTag("firepit_has_pot")
 		firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
-		firepit.components.trader.enabled = true
 	end
 	
 	inst.components.lootdropper:DropLoot()
@@ -235,7 +234,13 @@ local function OnHammeredPot(inst, worker)
 end
 
 local function OnHammeredHanger(inst, worker)
-	inst.components.lootdropper:DropLoot()	
+	local firepit = GetFirepit(inst)
+	if firepit then
+		firepit.components.trader.enabled = true
+	end
+
+	inst.components.lootdropper:DropLoot()
+	
 	local fx = SpawnPrefab("collapse_small")
     fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
     fx:SetMaterial("metal")

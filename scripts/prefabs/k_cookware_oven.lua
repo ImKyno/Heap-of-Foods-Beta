@@ -170,7 +170,8 @@ local function OnHammeredOven(inst, worker)
 		firepit.components.trader.enabled = true
 	end
 
-	inst.components.lootdropper:DropLoot()	
+	inst.components.lootdropper:DropLoot()
+	
 	local fx = SpawnPrefab("collapse_small")
     fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
     fx:SetMaterial("stone")

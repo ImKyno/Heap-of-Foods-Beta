@@ -36,6 +36,7 @@ local function onregenfn(inst)
 		inst.AnimState:PushAnimation("sway2_loop", true)
 	end
 	
+	inst:AddTag("has_coconut")
     inst.AnimState:Show("coconut")
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 end
@@ -47,6 +48,7 @@ local function makefullfn(inst)
 		inst.AnimState:PushAnimation("sway2_loop", true)
 	end
 	
+	inst:AddTag("has_coconut")
     inst.AnimState:Show("coconut")
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 end
@@ -59,6 +61,7 @@ local function onpickedfn(inst)
 		inst.AnimState:PushAnimation("sway2_loop", true)
 	end
 	
+	inst:RemoveTag("has_coconut")
 	inst.AnimState:Hide("coconut")
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 end
@@ -70,6 +73,7 @@ local function makeemptyfn(inst)
 		inst.AnimState:PushAnimation("sway2_loop", true)
 	end
 	
+	inst:RemoveTag("has_coconut")
 	inst.AnimState:Hide("coconut")
 end
 
@@ -165,7 +169,7 @@ local function tree_chop(inst, chopper)
 	local x, y, z= inst.Transform:GetWorldPosition()
 	fx.Transform:SetPosition(x, y + 2 + math.random() * 2, z)
 	
-	if math.random() <= TUNING.KYNO_KOKONUTTREE_KOKONUT_CHANCE then
+	if math.random() <= TUNING.KYNO_KOKONUTTREE_KOKONUT_CHANCE and inst:HasTag("has_coconut") then
 		local coconut = SpawnPrefab("kyno_kokonut")
 		local rad = chopper:GetPosition():Dist(inst:GetPosition())
 		local vec = (chopper:GetPosition() - inst:GetPosition()):Normalize()
@@ -243,8 +247,10 @@ local function tree_fn()
 
     inst.AnimState:SetTime(math.random() * 2)
 	
-	inst:AddComponent("lootdropper")
     inst:AddComponent("inspectable")
+	
+	inst:AddComponent("lootdropper")
+	inst.components.lootdropper:SetLoot({"log", "log", "log"})
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/wilson/pickup_reeds"

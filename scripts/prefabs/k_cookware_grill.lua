@@ -140,6 +140,14 @@ local function cancookfn(self)
 end
 
 local function OnHammeredGrill(inst, worker)
+	local firepit = GetFirepit(inst)
+	if firepit then
+		firepit:RemoveTag("firepit_has_grill")
+		firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
+		firepit.components.burnable:OverrideBurnFXFinalOffset(3)
+		firepit.components.trader.enabled = true
+	end
+
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
         inst.components.burnable:Extinguish()
     end
@@ -151,16 +159,9 @@ local function OnHammeredGrill(inst, worker)
 	if inst.components.container ~= nil then
         inst.components.container:DropEverything()
     end
-	
-	local firepit = GetFirepit(inst)
-	if firepit then
-		firepit:RemoveTag("firepit_has_grill")
-		firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
-		firepit.components.burnable:OverrideBurnFXFinalOffset(3)
-		firepit.components.trader.enabled = true
-	end
-	
+		
 	inst.components.lootdropper:DropLoot()
+	
 	local fx = SpawnPrefab("collapse_small")
     fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
     fx:SetMaterial("metal")
