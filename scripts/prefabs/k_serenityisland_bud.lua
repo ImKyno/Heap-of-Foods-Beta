@@ -20,8 +20,10 @@ local prefabs =
 local function plant(inst, growtime)
     local sapling = SpawnPrefab("kyno_sugartree_sapling")
     sapling:StartGrowing()
+	
     sapling.Transform:SetPosition(inst.Transform:GetWorldPosition())
     sapling.SoundEmitter:PlaySound("dontstarve/wilson/plant_tree")
+	
     inst:Remove()
 end
 
@@ -29,6 +31,7 @@ local LEIF_TAGS = { "leif" }
 local function ondeploy(inst, pt, deployer)
     inst = inst.components.stackable:Get()
     inst.Physics:Teleport(pt:Get())
+	
     local timeToGrow = GetRandomWithVariance(TUNING.PINECONE_GROWTIME.base, TUNING.PINECONE_GROWTIME.random)
     plant(inst, timeToGrow)
 
@@ -62,17 +65,10 @@ local function onpickedfn(inst, picker)
 		end
 	end
 
-    if not inst.planted then
-        TheWorld:PushEvent("beginregrowth", inst)
-    end
-
     TheWorld:PushEvent("plantkilled", { doer = picker, pos = pos })
 end
 
 local function OnBurnt(inst)
-	if not inst.planted then
-		TheWorld:PushEvent("beginregrowth", inst)
-	end
     DefaultBurntFn(inst)
 end
 
@@ -86,7 +82,9 @@ local function DieInDarkness(inst)
             return
         end
     end
+	
     inst:Remove()
+	
     SpawnPrefab("flower_withered").Transform:SetPosition(x,y,z)
 end
 
@@ -104,6 +102,7 @@ local function OnLoad(inst, data)
     if data ~= nil and data.growtime ~= nil then
         plant(inst, data.growtime)
     end
+	
 	inst.planted = data ~= nil and data.planted or nil
 end
 

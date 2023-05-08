@@ -9,6 +9,7 @@ local assets =
 local prefabs =
 {
     "kyno_pebblecrab",
+	"kyno_serenityisland_crate",
 }
 
 local function OnSpawn(inst, child)
@@ -21,7 +22,18 @@ local function OnAddChild(inst)
     end
 end
 
-local function spawnerfn()
+local function OnInit(inst)
+	inst:DoTaskInTime(3360, function(inst)
+		local crate = SpawnPrefab("kyno_serenityisland_crate")
+	
+		crate.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		crate.SoundEmitter:PlaySound("dontstarve/common/fishingpole_fishcaught")
+		
+		inst:Remove()
+	end)
+end
+
+local function crabfn()
     local inst = CreateEntity()
 
     inst.entity:AddTransform()
@@ -31,8 +43,9 @@ local function spawnerfn()
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_crab_spawner.tex")
 	
-	inst:AddTag("serenitycrabspawner")
+	inst:AddTag("NOBLOCK")
 	inst:AddTag("CLASSIFIED")
+	inst:AddTag("serenitycrabspawner")
 
     inst.entity:SetPristine()
 
@@ -53,4 +66,27 @@ local function spawnerfn()
     return inst
 end
 
-return Prefab("kyno_pebblecrab_spawner", spawnerfn, assets, prefabs)
+local function cratefn()
+	local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
+	
+	inst:AddTag("NOBLOCK")
+	inst:AddTag("ignorewalkableplatforms")
+	inst:AddTag("serenitycratespawner")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	OnInit(inst)
+	
+	return inst
+end
+
+return Prefab("kyno_pebblecrab_spawner", crabfn, assets, prefabs),
+Prefab("kyno_serenityisland_crate_spawner", cratefn, assets, prefabs)

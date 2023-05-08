@@ -45,45 +45,26 @@ local names = {"idle1", "idle2", "idle3", "idle4", "idle5"}
 
 local function OnRetrieve(inst, worker)
 	SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
-	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_wood")
 	
+	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_wood")
 	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant")
 
 	if worker and worker.components.sanity then
 		worker.components.sanity:DoDelta(-TUNING.SANITY_SMALL)
 	end
 	
-	if not inst:HasTag("not_serenity_crate") then
-		if not inst.components.timer:TimerExists("replenish_crate") then
-			inst.components.timer:StartTimer("replenish_crate", 3360)
-		end
-		
-		inst:Hide() -- Hide from now on.
-		inst:SetPhysicsRadiusOverride(nil)
-		inst.Physics:SetActive(false)
-		
-		if inst.MiniMapEntity then
-			inst.MiniMapEntity:SetIcon("")
-		end
+	if inst:HasTag("not_serenity_crate") then
+		inst:Remove()
 	else
+		SpawnPrefab("kyno_serenityisland_crate_spawner").Transform:SetPosition(inst.Transform:GetWorldPosition())
 		inst:Remove()
 	end
-end
-
-local function OnTimerDone(inst, data)
-    if data.name == "replenish_crate" then
-        inst.SoundEmitter:PlaySound("dontstarve/common/fishingpole_fishcaught")
-		local crate = SpawnPrefab("kyno_serenityisland_crate")
-		crate.Transform:SetPosition(inst.Transform:GetWorldPosition())
-		
-		inst:Remove() -- Remove the last crate.
-    end
 end
 
 local function OnFished(inst, worker)
 	local pt = worker and worker:GetPosition() or nil
 	
-	inst.components.lootdropper:SpawnLootPrefab("kyno_seaweeds", pt)
+	inst.components.lootdropper:SpawnLootPrefab("kyno_seaweeds")
 	inst.components.lootdropper:DropLoot()
 	
 	if math.random() < 0.10 then
@@ -110,10 +91,6 @@ local function OnWorkedInventory(inst, worker)
 end
 
 local function OnIgnite(inst)
-	if inst.components.timer:TimerExists("replenish_crate") then
-		inst.components.timer:StopTimer("replenish_crate")
-	end
-
     if inst.components.pickable ~= nil then
         inst.components.pickable.caninteractwith = false
     end
@@ -124,7 +101,7 @@ local function OnBurnt(inst, worker)
 	
 	inst.components.pickable.canbepicked = false
 	
-	inst.components.lootdropper:SpawnLootPrefab("charcoal", pt)
+	inst.components.lootdropper:SpawnLootPrefab("charcoal")
 	inst.components.lootdropper:DropLoot()
 	
     inst:Remove()
@@ -135,7 +112,7 @@ local function OnCollide(inst, data)
     local boat_physics = data.other.components.boatphysics
     if boat_physics ~= nil then
         local hit_velocity = math.floor(math.abs(boat_physics:GetVelocity() * data.hit_dot_velocity) * DAMAGE_SCALE / boat_physics.max_velocity + 0.5)
-        inst.components.workable:WorkedBy(data.other, hit_velocity * TUNING.SEASTACK_MINE)
+        inst.components.workable:WorkedBy(data.other, hit_velocity * 9)
     end
 end
 
@@ -193,7 +170,6 @@ local function fn()
     inst.AnimState:PlayAnimation(inst.animname, true)
 
     inst:AddComponent("inspectable")
-	inst:AddComponent("timer")
 	
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
@@ -272,7 +248,6 @@ local function fn()
 	end
 	
 	inst:ListenForEvent("on_collide", OnCollide)
-	inst:ListenForEvent("timerdone", OnTimerDone)
 	
 	inst.sunkeninventory = {}
 	

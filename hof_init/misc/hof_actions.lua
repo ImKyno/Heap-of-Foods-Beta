@@ -365,3 +365,4 @@ end
 -- Fix for fuel items, because the action was "Give" instead of "Add Fuel".
 ACTIONS.ADDFUEL.priority = 5
 ACTIONS.ADDWETFUEL.priority = 5
+ACTIONS.COOK.canforce = true

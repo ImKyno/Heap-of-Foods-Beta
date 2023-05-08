@@ -2495,7 +2495,7 @@ local kyno_foods =
 	
 	radishsalad =
 	{
-		test = function(cooker, names, tags) return ((names.kyno_radish or 0) + (names.kyno_radish or 0) >= 3) and names.kyno_spotspice end,
+		test = function(cooker, names, tags) return ((names.kyno_radish or 0) + (names.kyno_radish_cooked or 0) >= 3) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
