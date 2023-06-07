@@ -133,6 +133,7 @@ local function OnWorked(inst, worker, workleft)
 		inst.components.lootdropper:DropLoot()
 	end
 
+	TheWorld:PushEvent("beginregrowth", inst)
 	inst:Remove()
 end
 

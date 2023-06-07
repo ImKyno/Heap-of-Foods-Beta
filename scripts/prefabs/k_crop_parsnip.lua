@@ -11,6 +11,7 @@ local assets =
 	Asset("IMAGE", "images/minimapimages/hof_parsnipminimap.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_parsnipminimap.xml"),
 }
+
 -- I'm going to use parznip because T.A.P has a parsnip prefab too.
 local prefabs = 
 {
@@ -23,16 +24,10 @@ local prefabs =
 }
 
 local function onpicked(inst)
-    -- TheWorld:PushEvent("beginregrowth", inst)
+    TheWorld:PushEvent("beginregrowth", inst)
     inst:Remove()
 end
---[[ -- Moved to "kyno_postinits.lua".
-local function OnEaten(inst, eater)
-	local parsnipeaten = SpawnPrefab("kyno_parznip_eaten")
-	if eater.components.inventory and eater:HasTag("player") and not eater.components.health:IsDead() 
-	and not eater:HasTag("playerghost") then eater.components.inventory:GiveItem(parsnipeaten) end
-end 
-]]--
+
 local function fn()
     local inst = CreateEntity()
 
@@ -69,117 +64,7 @@ local function fn()
 
     return inst
 end
---[[ We're using a new system. see "modmain.lua" and "k_newveggies.lua" for more info. Just here for reference.
-local function parznip()
-	local inst = CreateEntity()
 
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst)
-
-	inst.AnimState:SetBank("parsnip")
-	inst.AnimState:SetBuild("parsnip")
-	inst.AnimState:PlayAnimation("idle")
-	
-	inst:AddTag("veggie")
-	inst:AddTag("cookable")
-	inst:AddTag("modded_crop")
-
-	inst.entity:SetPristine()
-
-	if not TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("inspectable")
-	inst:AddComponent("bait")
-	inst:AddComponent("tradable")
-
-   	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 1
-	inst.components.edible.hungervalue = 6
-	inst.components.edible.sanityvalue = 0
-	inst.components.edible.foodtype = FOODTYPE.VEGGIE
-	inst.components.edible:SetOnEatenFn(OnEaten)
-
-	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
-	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
-
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_parznip"
-
-	inst:AddComponent("cookable")
-	inst.components.cookable.product = "kyno_parznip_cooked"
-
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
-	MakeHauntableLaunchAndPerish(inst)
-
-	return inst
-end
-
-local function parznip_cooked()
-	local inst = CreateEntity()
-
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst)
-	
-	inst.AnimState:SetScale(.8, .8, .8)
-
-	inst.AnimState:SetBank("parsnip")
-	inst.AnimState:SetBuild("parsnip")
-	inst.AnimState:PlayAnimation("cooked")
-	
-	inst:AddTag("veggie")
-
-	inst.entity:SetPristine()
-
-	if not TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("inspectable")
-	inst:AddComponent("bait")
-	inst:AddComponent("tradable")
-
-	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 3
-	inst.components.edible.hungervalue = 18.5
-	inst.components.edible.sanityvalue = 1
-	inst.components.edible.foodtype = FOODTYPE.VEGGIE
-	
-	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
-	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
-	
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_parznip_cooked"
-
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
-	MakeHauntableLaunchAndPerish(inst)
-
-	return inst
-end
-]]--
 local function parznip_eaten()
 	local inst = CreateEntity()
 
@@ -235,93 +120,7 @@ local function parznip_eaten()
 
 	return inst
 end
---[[
-local function can_plant_seed(inst, pt, mouseover, deployer)
-	local x, z = pt.x, pt.z
-	return TheWorld.Map:CanTillSoilAtPoint(x, 0, z, true)
-end
 
-local function OnDeploy(inst, pt, deployer, rot)
-    local plant = SpawnPrefab("plant_normal_ground")
-    plant.components.crop:StartGrowing(inst.components.plantable.product, inst.components.plantable.growtime)
-    plant.Transform:SetPosition(pt.x, 0, pt.z)
-    plant.SoundEmitter:PlaySound("dontstarve/wilson/plant_seeds")
-    inst:Remove()
-end
-
-local function parznip_seeds()
-	local inst = CreateEntity()
-
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst)
-
-	inst.AnimState:SetBank("kyno_crop_seeds")
-	inst.AnimState:SetBuild("kyno_crop_seeds")
-	inst.AnimState:PlayAnimation("parznip")
-	inst.AnimState:SetRayTestOnBB(true)
-	
-	inst:AddTag("deployedplant")
-	inst:AddTag("deployedfarmplant")
-	inst:AddTag("oceanfishing_lure")
-	inst:AddTag("cookable")
-
-	inst.overridedeployplacername = "seeds_placer"
-	inst._custom_candeploy_fn = can_plant_seed
-
-	inst.entity:SetPristine()
-
-	if not TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("inspectable")
-	inst:AddComponent("bait")
-	inst:AddComponent("tradable")
-
-	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 0
-	inst.components.edible.hungervalue = 4.6875
-	inst.components.edible.sanityvalue = 0
-	inst.components.edible.foodtype = FOODTYPE.SEEDS
-	
-	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERSLOW)
-	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
-	
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_parznip_seeds"
-	
-	inst:AddComponent("cookable")
-	inst.components.cookable.product = "seeds_cooked"
-	
-	inst:AddComponent("plantable")
-	inst.components.plantable.growtime = TUNING.SEEDS_GROW_TIME
-	inst.components.plantable.product = "kyno_parznip"
-	
-	inst:AddComponent("deployable")
-	inst.components.deployable:SetDeployMode(DEPLOYMODE.CUSTOM)
-	inst.components.deployable.restrictedtag = "plantkin"
-	inst.components.deployable.ondeploy = OnDeploy
-
-	inst:AddComponent("oceanfishingtackle")
-	inst.components.oceanfishingtackle:SetupLure({build = "oceanfishing_lure_mis", symbol = "hook_seeds", single_use = true, lure_data = TUNING.OCEANFISHING_LURE.SEED})
-
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
-	MakeHauntableLaunchAndPerish(inst)
-
-	return inst
-end
-]]--
 local function onworked(inst, chopper, workleft)
 	if chopper and chopper.components.beaverness and chopper.components.beaverness:IsBeaver() then
 		inst.SoundEmitter:PlaySound("dontstarve/characters/woodie/beaver_chop_tree")          
@@ -333,6 +132,8 @@ end
 local function onworkfinish(inst, chopper)
 	inst.SoundEmitter:PlaySound("dontstarve/forest/treeCrumble")
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
+	
+	TheWorld:PushEvent("beginregrowth", inst)
 	inst.components.lootdropper:DropLoot()
 end
 

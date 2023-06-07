@@ -36,9 +36,9 @@ if COFFEE_SPEED == 1 then
 	local function CoffeePostinit(inst)
 		local spiced_buffs = 
 		{
-			SPICE_CHILI = "buff_attack", 
-			SPICE_GARLIC = "buff_playerabsorption", 
-			SPICE_SUGAR = "buff_workeffectiveness"
+			SPICE_CHILI    = "buff_attack", 
+			SPICE_GARLIC   = "buff_playerabsorption", 
+			SPICE_SUGAR    = "buff_workeffectiveness"
 		}
 		
 		local function OnEatCoffee(inst, eater)
@@ -57,14 +57,16 @@ if COFFEE_SPEED == 1 then
 					eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
 				end
 			else
-				eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
-				eater:DoTaskInTime(COFFEE_DURATION, function(inst, eater)
-					eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
+				if inst.components.eater ~= nil then
+					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
+					eater:DoTaskInTime(COFFEE_DURATION, function(inst, eater)
+						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
 					
-					if eater.components.talker and eater:HasTag("player") then
-						eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
-					end
-				end)
+						if eater.components.talker and eater:HasTag("player") then
+							eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
+						end
+					end)
+				end
 			end
 		end
 		
@@ -84,9 +86,9 @@ if COFFEE_SPEED == 1 then
 	local function BouillabaissePostinit(inst)
 		local spiced_buffs = 
 		{
-			SPICE_CHILI = "buff_attack", 
-			SPICE_GARLIC = "buff_playerabsorption", 
-			SPICE_SUGAR = "buff_workeffectiveness"
+			SPICE_CHILI    = "buff_attack", 
+			SPICE_GARLIC   = "buff_playerabsorption", 
+			SPICE_SUGAR    = "buff_workeffectiveness"
 		}
 		
 		local function OnEatBouillabaisse(inst, eater)
@@ -105,14 +107,16 @@ if COFFEE_SPEED == 1 then
 					eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
 				end
 			else
-				eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
-				eater:DoTaskInTime(COFFEE_DURATION, function(inst, eater)
-					eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
+				if inst.components.eater ~= nil then
+					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
+					eater:DoTaskInTime(COFFEE_DURATION, function(inst, eater)
+						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
 					
-					if eater.components.talker and eater:HasTag("player") then
-						eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
-					end	
-				end)
+						if eater.components.talker and eater:HasTag("player") then
+							eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
+						end	
+					end)
+				end
 			end
 		end
 		

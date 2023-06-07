@@ -31,6 +31,7 @@ local function fn()
     inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("brewbook")
+	inst:AddTag("bookcabinet_item")
 
     inst.entity:SetPristine()
 

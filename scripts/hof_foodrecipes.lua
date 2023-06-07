@@ -210,7 +210,7 @@ local kyno_foods =
 	
 	nettlelosange = 
 	{
-		test = function(cooker, names, tags) return names.firenettles end,
+		test = function(cooker, names, tags) return names.firenettles and not tags.meat end,
 		priority = 1,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
@@ -223,6 +223,24 @@ local kyno_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"firenettles", 1}, {"twigs", 3}}},
+	},
+	
+	nettlemeated =
+	{
+		test = function(cooker, names, tags) return (names.firenettles and names.firenettles >= 2) and (tags.meat and tags.meat >= 1) 
+		and (not tags.monster or tags.monster <= 1) and not tags.inedible end,
+		priority = 1,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FASTISH,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = 20,
+		hunger = 37.5,
+		sanity = -5,
+		cooktime = 1,
+		potlevel = "high",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"firenettles", 2}, {"smallmeat", 2}}},
 	},
 	
 	snakebonesoup = 
@@ -666,18 +684,18 @@ local kyno_foods =
 	
 	gorge_stuffedmushroom =
 	{
-		test = function(cooker, names, tags) return ((names.kyno_white_cap or 0) + (names.kyno_white_cap_cooked or 0) >= 2) 
-		and (tags.veggie and tags.veggie >= 1.5) and not tags.foliage and not names.succulent_picked and not tags.dairy end,
+		test = function(cooker, names, tags) return ((names.kyno_white_cap or 0) + (names.kyno_white_cap_cooked or 0) >= 3) 
+		and not tags.foliage and not names.succulent_picked and not tags.dairy end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
-		health = 20,
+		health = 15,
 		hunger = 20,
-		sanity = 20,
+		sanity = 10,
 		cooktime = 0.8,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_white_cap", 2}, {"kyno_aloe", 2}}},
+		card_def = {ingredients = {{"kyno_white_cap", 3}, {"carrot", 1}}},
 	},
 	
 	gorge_bruschetta = 

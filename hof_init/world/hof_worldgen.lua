@@ -373,10 +373,10 @@ AddTaskSetPreInitAny(function(tasksetdata)
 	tasksetdata.ocean_prefill_setpieces["hof_serenityisland1"]           = { count = 1 }
 	tasksetdata.ocean_prefill_setpieces["hof_meadowisland1"]             = { count = 1 }
 	
-	-- I will let the players decide how many they want.
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates"]      = { count = OCEANSETPIECE_COUNT }
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates2"]     = { count = OCEANSETPIECE_COUNT }
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_waterycress"] = { count = OCEANSETPIECE_COUNT }
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_taroroot"]    = { count = OCEANSETPIECE_COUNT }
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_seaweeds"]    = { count = OCEANSETPIECE_COUNT }
+	-- I will let the players decide how many they want. -- Deprecated.
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates"]      = { count = 2 } -- OCEANSETPIECE_COUNT
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates2"]     = { count = 2 }
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_waterycress"] = { count = 2 }
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_taroroot"]    = { count = 2 }
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_seaweeds"]    = { count = 2 }
 end)

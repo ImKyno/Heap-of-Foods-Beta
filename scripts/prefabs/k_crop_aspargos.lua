@@ -18,7 +18,7 @@ local prefabs =
 local s = 1.1
 
 local function onpicked(inst)
-    -- TheWorld:PushEvent("beginregrowth", inst)
+    TheWorld:PushEvent("beginregrowth", inst)
     inst:Remove()
 end
 

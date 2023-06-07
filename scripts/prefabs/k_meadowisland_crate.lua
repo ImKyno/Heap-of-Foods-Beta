@@ -36,7 +36,8 @@ local function OnHammered(inst, worker)
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_wood")
 	
 	local pt = worker and worker:GetPosition() or nil
-	inst.components.lootdropper:SpawnLootPrefab("boards", pt)
+	
+	inst.components.lootdropper:SpawnLootPrefab("boards")
 	inst.components.lootdropper:DropLoot()
 
 	if not inst:HasTag("not_meadow_crate") then
@@ -59,6 +60,7 @@ end
 local function OnTimerDone(inst, data)
     if data.name == "replenish_crate" then
         inst.SoundEmitter:PlaySound("dontstarve/common/fishingpole_fishcaught")
+		
 		local crate = SpawnPrefab("kyno_meadowisland_crate")
 		crate.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		
@@ -93,9 +95,11 @@ end
 local function OnBurnt(inst, worker)
 	local pt = worker and worker:GetPosition() or nil
 	
-	inst.components.pickable.canbepicked = false
+	if inst.components.pickable ~= nil then
+		inst.components.pickable.canbepicked = false
+	end
 	
-	inst.components.lootdropper:SpawnLootPrefab("charcoal", pt)
+	inst.components.lootdropper:SpawnLootPrefab("charcoal")
 	inst.components.lootdropper:DropLoot()
 	
     inst:Remove()
@@ -150,6 +154,7 @@ local function fn()
     inst.AnimState:PlayAnimation(inst.animname, true)
 
     inst:AddComponent("inspectable")
+	inst:AddComponent("lootdropper")
 	inst:AddComponent("timer")
 	
 	inst:AddComponent("workable")
@@ -159,8 +164,6 @@ local function fn()
 	
 	inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_SMALL)
-	
-	inst:AddComponent("lootdropper")
 	
 	local rarity = 
 	{

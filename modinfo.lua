@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "6.2-A"
+version                     = "6.4-A"
 local myupdate              = "The High Calories (Part II)"
 
 description                 = 
@@ -15,7 +15,7 @@ This update brings two new structures that can be used to make a whole new categ
 The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jams, Pickles, Mayonnaises, Teas and more!
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
-󰀌 Mod Version: 6.2-A
+󰀌 Mod Version: 6.4-A
 󰀧 Update: The High Calories (Part II)
 ]]
 
@@ -55,13 +55,6 @@ configuration_options       =
 				hover       = "Translation by: Kyno.",
 				data        = "hof_strings"
 			},
-			--[[
-            {
-				description = "繁體中文", 
-				hover       = "Translation by: Djr.",
-				data        = "hof_strings_zht"
-			},
-			]]--
 			{
 				description = "Português (BR)",
 				hover       = "Translation by: Kyno.",
@@ -225,8 +218,8 @@ configuration_options       =
         default             = 0,
 	},
 	
-	Title("World Options", "Options for the world."),
 	--[[
+	Title("World Options", "Options for the world."),
 	{
 		name                = "HOF_RETROFIT",
 		label               = "Retrofit Contents",
@@ -251,7 +244,6 @@ configuration_options       =
         },
         default             = 0,
 	},
-	]]--
 	{
 		name                = "HOF_OCEANSETPIECE_COUNT",
 		label               = "Ocean Setpieces",
@@ -300,6 +292,7 @@ configuration_options       =
         },
         default             = 0,
 	},
+	]]--
 	
 	Title("Extra Options", "Extra Options for the Mod."),
 	{
@@ -340,25 +333,4 @@ configuration_options       =
         },
         default = 0,
 	},
-	--[[
-	{
-		name = "serenity_cc",
-		label = "Serenity Archipelago CC",
-		hover = "Should the Serenity Archipelago have The Gorge Colour Cubes?",
-		options =
-		{
-			{
-				description = "No", 
-				hover = "Serenity Archipelago will not have The Gorge Colour Cubes.",
-				data = 0
-			},
-            {
-				description = "Yes", 
-				hover = "Serenity Archipelago will have The Gorge Colour Cubes.",
-				data = 1
-			},
-        },
-        default = 0,
-	},
-	]]--
 }

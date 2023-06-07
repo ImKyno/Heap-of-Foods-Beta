@@ -20,6 +20,8 @@ local function dig_up(inst, chopper)
 	if inst:HasTag("mushroom_stump_natural") then
 		inst.components.lootdropper:SpawnLootPrefab("kyno_white_cap")
 		inst.components.lootdropper:SpawnLootPrefab("livinglog")
+		
+		TheWorld:PushEvent("beginregrowth", inst)
 	else
 		inst.components.lootdropper:DropLoot()
 	end

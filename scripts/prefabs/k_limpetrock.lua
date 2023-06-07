@@ -151,6 +151,8 @@ local function fn()
 			if inst.components.pickable:CanBePicked() and worker and worker.components.groundpounder and worker.components.groundpounder.burner == true then
 				inst.components.lootdropper:SpawnLootPrefab("kyno_limpets_cooked", pt)
 			end
+			
+			TheWorld:PushEvent("beginregrowth", inst)
 			inst:Remove()
 		else
 			if workleft < TUNING.ROCKS_MINE*(1/3) then

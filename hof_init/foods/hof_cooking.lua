@@ -194,6 +194,7 @@ local kynofoods =
 	icedtea 				= require("hof_foodrecipes").icedtea,
 	tea 					= require("hof_foodrecipes").tea,
 	nettlelosange 			= require("hof_foodrecipes").nettlelosange,
+	nettlemeated            = require("hof_foodrecipes").nettlemeated,
 	snakebonesoup 			= require("hof_foodrecipes").snakebonesoup,
 	steamedhamsandwich 		= require("hof_foodrecipes").steamedhamsandwich,
 
