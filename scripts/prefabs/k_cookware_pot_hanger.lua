@@ -447,9 +447,10 @@ local function SetProductSymbol(inst, product, overridebuild)
 	
 	local product_image = SpawnPrefab("kyno_product_bubble")
 	product_image.entity:SetParent(inst.entity)
-	product_image.AnimState:PlayAnimation("idle_pothanger", false)
+	product_image.AnimState:PlayAnimation("product_pothanger", false)
+	product_image.AnimState:SetFinalOffset(5)
 	
-	product_image.AnimState:OverrideSymbol("bubble_image", GetInventoryItemAtlas(overridesymbol..".tex"), overridesymbol..".tex")
+	product_image.AnimState:OverrideSymbol("product_image", GetInventoryItemAtlas(overridesymbol..".tex"), overridesymbol..".tex")
 end
 
 local function spoilfn(inst)

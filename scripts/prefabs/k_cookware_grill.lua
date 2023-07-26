@@ -294,8 +294,15 @@ local function SetProductSymbol(inst, product, overridebuild)
 	
 	local product_image = SpawnPrefab("kyno_product_bubble")
 	product_image.entity:SetParent(inst.entity)
+	product_image.AnimState:SetFinalOffset(5)
 	
-	product_image.AnimState:OverrideSymbol("bubble_image", GetInventoryItemAtlas(overridesymbol..".tex"), overridesymbol..".tex")
+	if inst:HasTag("grill_big") then
+		product_image.AnimState:PlayAnimation("product_grill", false)
+	else
+		product_image.AnimState:PlayAnimation("product_grill_small", false)
+	end
+	
+	product_image.AnimState:OverrideSymbol("product_image", GetInventoryItemAtlas(overridesymbol..".tex"), overridesymbol..".tex")
 end
 
 local function spoilfn(inst)

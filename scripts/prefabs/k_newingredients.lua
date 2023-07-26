@@ -892,8 +892,6 @@ local function crabmeatfn()
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_crabmeat_cooked"
 
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
@@ -947,8 +945,6 @@ local function crabmeat_cookedfn()
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_crabmeat_cooked"
 
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst

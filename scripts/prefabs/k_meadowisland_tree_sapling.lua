@@ -12,6 +12,7 @@ local function growtree(inst)
 	local tree = SpawnPrefab(inst.growprefab) 
     if tree then 
 		tree.Transform:SetPosition(inst.Transform:GetWorldPosition()) 
+		tree.SoundEmitter:PlaySound("dontstarve/forest/treeGrow")
         inst:Remove()
 	end
 end
@@ -30,7 +31,6 @@ end
 local function ontimerdone(inst, data)
     if data.name == "grow" then
         growtree(inst)
-	inst.SoundEmitter:PlaySound("dontstarve/forest/treeGrow")
     end
 end
 

@@ -81,8 +81,8 @@ end
 local function OnHit(inst, worker)
     if not inst:HasTag("burnt") then
         if inst.components.brewer:IsCooking() then
-            inst.AnimState:PlayAnimation("hit_empty")
-            inst.AnimState:PushAnimation("idle_empty", true)
+            inst.AnimState:PlayAnimation("hit_brewing")
+            inst.AnimState:PushAnimation("idle_brewing", true)
         elseif inst.components.brewer:IsDone() then
             inst.AnimState:PlayAnimation("hit_full")
             inst.AnimState:PushAnimation("idle_full", false)
@@ -98,7 +98,7 @@ end
 
 local function StartCookFn(inst)
     if not inst:HasTag("burnt") then
-        inst.AnimState:PlayAnimation("idle_empty", true)
+        inst.AnimState:PlayAnimation("idle_brewing", true)
         inst.SoundEmitter:KillSound("brew_loop")
         inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_loop", "brew_loop")
     end
@@ -130,15 +130,15 @@ local function SetProductSymbol(inst, product, overridebuild)
 	
 	local product_image = SpawnPrefab("kyno_product_bubble")
 	product_image.entity:SetParent(inst.entity)
+	product_image.AnimState:SetFinalOffset(5)
 	
-	-- Spriter is hard. This make they fit better in their stations...
 	if inst:HasTag("woodenkeg") then
-		product_image.AnimState:PlayAnimation("idle_woodenkeg", false)
+		product_image.AnimState:PlayAnimation("product_keg", false)
 	else
-		product_image.AnimState:PlayAnimation("idle_preservesjar", false)
+		product_image.AnimState:PlayAnimation("product_jar", false)
 	end
 	
-	product_image.AnimState:OverrideSymbol("bubble_image", resolvefilepath("images/inventoryimages/hof_inventoryimages.xml"), overridesymbol..".tex")
+	product_image.AnimState:OverrideSymbol("product_image", resolvefilepath("images/inventoryimages/hof_inventoryimages.xml"), overridesymbol..".tex")
 end
 
 local function ShowProductImage(inst)
@@ -185,7 +185,7 @@ end
 
 local function ContinueCookFn(inst)
     if not inst:HasTag("burnt") then
-        inst.AnimState:PlayAnimation("idle_empty", true)
+        inst.AnimState:PlayAnimation("idle_brewing", true)
         inst.SoundEmitter:KillSound("brew_loop")
         inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_loop", "brew_loop")
     end
