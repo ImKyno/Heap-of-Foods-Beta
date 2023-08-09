@@ -54,6 +54,8 @@ local function closed_fn()
 	
 	inst:AddTag("canned_food")
 	inst:AddTag("cattoy")
+	
+	inst.pickupsound = "metal"
     
     inst.entity:SetPristine()
 
@@ -93,6 +95,8 @@ local function opened_fn()
 	
 	inst:AddTag("canned_food_open")
 	inst:AddTag("preparedfood") -- So warly can eat them.
+	
+	inst.pickupsound = "metal"
     
     inst.entity:SetPristine()
 

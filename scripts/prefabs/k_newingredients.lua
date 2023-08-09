@@ -14,6 +14,7 @@ local assets =
 	Asset("ANIM", "anim/quagmire_salt.zip"),
 	Asset("ANIM", "anim/foliage.zip"),
 	Asset("ANIM", "anim/kyno_cookingoil.zip"),
+	-- Asset("ANIM", "anim/kyno_sugar.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -1000,6 +1001,45 @@ local function oilfn()
     return inst
 end
 
+local function sugarfn()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddAnimState()
+    inst.entity:AddNetwork()
+
+    MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+    inst.AnimState:SetBank("kyno_sugar")
+    inst.AnimState:SetBuild("kyno_sugar")
+    inst.AnimState:PlayAnimation("idle")
+
+	inst:AddTag("gourmet_ingredient")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+	
+    inst:AddComponent("inspectable")
+	inst:AddComponent("tradable")
+
+    inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_sugar"
+	
+    inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+	
+	MakeSmallBurnable(inst)
+	MakeSmallPropagator(inst)
+	MakeHauntableLaunchAndPerish(inst)
+
+    return inst
+end
+
 return Prefab("kyno_wheat", wheatfn, assets, prefabs),
 Prefab("kyno_wheat_cooked", wheat_cookedfn, assets, prefabs),
 Prefab("kyno_flour", flourfn, assets, prefabs),
@@ -1017,4 +1057,6 @@ Prefab("kyno_foliage_cooked", foliage_cookedfn, assets, prefabs),
 Prefab("kyno_salt", saltfn, assets, prefabs),
 Prefab("kyno_crabmeat", crabmeatfn, assets, prefabs),
 Prefab("kyno_crabmeat_cooked", crabmeat_cookedfn, assets, prefabs),
-Prefab("kyno_oil", oilfn, assets, prefabs)
+Prefab("kyno_oil", oilfn, assets, prefabs)--[[,
+Prefab("kyno_sugar", sugarfn, assets, prefabs)
+]]--

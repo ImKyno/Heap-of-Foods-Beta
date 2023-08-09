@@ -111,4 +111,5 @@ PrefabFiles =
 	"k_meadowisland_pond",
 	"k_meadowisland_sandhill",
 	"k_poison_froglegs",
+	--"k_bottlecap",
 }

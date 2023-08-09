@@ -30,6 +30,8 @@ local function emptyfn()
 
 	inst:AddTag("bucket")
 	inst:AddTag("bucket_empty")
+	
+	inst.pickupsound = "wood"
 
 	inst.entity:SetPristine()
 

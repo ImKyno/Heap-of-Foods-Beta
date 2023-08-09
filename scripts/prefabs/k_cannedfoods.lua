@@ -59,6 +59,8 @@ local function closed_fn(bank, build, anim, closed_name)
     inst.AnimState:PlayAnimation(anim)
 	
 	inst:AddTag("canned_food")
+	
+	inst.pickupsound = "metal"
     
     inst.entity:SetPristine()
 
@@ -103,6 +105,8 @@ local function opened_fn(bank, build, anim, opened_name)
 	
 	inst:AddTag("canned_food_open")
 	inst:AddTag("preparedfood") -- So warly can eat them.
+	
+	inst.pickupsound = "metal"
     
     inst.entity:SetPristine()
 

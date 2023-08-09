@@ -670,3 +670,23 @@ AddPrefabPostInit("pretzel", PretzelHeartPostinit)
 for k,s in pairs(spices) do 
 	AddPrefabPostInit("pretzel_spice_"..s, PretzelHeartPostinit)
 end
+
+local function LivingSandwichPostinit(inst)
+	local function FuelTaken(inst, taker)
+		if taker ~= nil and taker.SoundEmitter ~= nil then
+			taker.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
+		end
+	end
+	
+	inst.pickupsound = "wood"
+	
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("fuel")
+    inst.components.fuel.fuelvalue = TUNING.MED_FUEL
+    inst.components.fuel:SetOnTakenFn(FuelTaken)
+end
+
+AddPrefabPostInit("livingsandwich", LivingSandwichPostinit)

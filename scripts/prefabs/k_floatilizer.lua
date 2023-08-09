@@ -41,6 +41,8 @@ local function fn()
 	inst:AddTag("fertilizerresearchable")
 
 	inst.GetFertilizerKey = GetFertilizerKey
+	
+	inst.pickupsound = "rock"
 
 	inst.entity:SetPristine()
 

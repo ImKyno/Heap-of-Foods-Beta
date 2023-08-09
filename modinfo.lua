@@ -1,6 +1,6 @@
 name                        = "Heap of Foods"
-version                     = "6.5-A"
-local myupdate              = "The High Calories (Part II)"
+version                     = "6.6-A"
+local myupdate              = "Monster Extravaganza!"
 
 description                 = 
 [[
@@ -15,8 +15,8 @@ This update brings two new structures that can be used to make a whole new categ
 The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jams, Pickles, Mayonnaises, Teas and more!
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
-󰀌 Mod Version: 6.5-A
-󰀧 Update: The High Calories (Part II)
+󰀌 Mod Version: 6.6-A
+󰀧 Update: Monster Extravaganza!
 ]]
 
 author                      = "Kyno"

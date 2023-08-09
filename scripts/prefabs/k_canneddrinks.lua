@@ -49,6 +49,8 @@ local function fn(bank, build, anim, name)
 	inst:AddTag("refrigerante")
 	inst:AddTag("drinkable_food")
 	inst:AddTag("preparedfood") -- So warly can drink them.
+	
+	inst.pickupsound = "metal"
     
     inst.entity:SetPristine()
 

@@ -18,6 +18,15 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		tags = {"honeyed", "drinkable_food"},
 		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 3}, {"honey", 1}}},
+		oneatenfn = function(inst, eater)
+            if eater.components.grogginess ~= nil and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.grogginess:ResetGrogginess()
+            end
+
+			eater:AddDebuff("shroomsleepresist", "buff_sleepresistance")
+        end,
 	},
 	
 	bisque =
@@ -1933,9 +1942,6 @@ local kyno_foods =
 	
 	crab_artichoke =
 	{
-		-- test = function(cooker, names, tags) return ((names.kyno_crabmeat or 0) + (names.kyno_crabmeat_cooked or 0) >= 2) 
-		-- and names.kyno_spotspice and ((names.kelp or 0) + (names.kyno_seaweeds or 0) + (names.kyno_waterycress or 0) >= 1) 
-		-- and not names.kelp_cooked and not names.kelp_dried and not names.kyno_seaweeds_cooked and not names.kyno_seaweeds_dried end,
 		test = function(cooker, names, tags) return (tags.crab and tags.crab >= 2) and (tags.algae and tags.algae >= 1) and names.kyno_spotspice end,
 		priority = 25,
 		foodtype = FOODTYPE.MEAT,
@@ -2570,6 +2576,171 @@ local kyno_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"kyno_parznip", 3}, {"succulent_picked", 1}}},
+	},
+	
+	--[[
+	nukacola =
+	{
+		test = function(cooker, names, tags) return names.kyno_sugartree_petals and names.kyno_syrup and tags.frozen end,
+		priority = 1,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = -5,
+		hunger = 12.5,
+		sanity = 60,
+		cooktime = 2,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_sugartree_petals", 1}, {"kyno_syrup", 1}, {"ice", 2}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater.SoundEmitter ~= nil then
+				eater.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
+			else
+				inst.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
+			end
+			
+			if math.random() < 0.01 then 
+				local cap = SpawnPrefab("kyno_bottlecap")
+				if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost") 
+				and not eater.components.inventory:IsFull() then 
+					eater.components.inventory:GiveItem(cap)
+				end
+			end
+		end
+	},
+	
+	nukacola_quantum =
+	{
+		test = function(cooker, names, tags) return names.kyno_sugartree_petals and names.kyno_syrup and tags.frozen and 
+		(names.wormlight or names.wormlight_lesser) end,
+		priority = 1,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = -10,
+		hunger = 20,
+		sanity = 60,
+		cooktime = 2,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLOW,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_sugartree_petals", 1}, {"kyno_syrup", 1}, {"ice", 1}, {"wormlight_lesser", 1}}},
+		prefabs = { "wormlight_light_greater" },
+        oneatenfn = function(inst, eater)
+			if eater ~= nil and eater.SoundEmitter ~= nil then
+				eater.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
+			else
+				inst.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
+			end
+			
+			if math.random() < 0.01 then 
+				local cap = SpawnPrefab("kyno_bottlecap")
+				if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost") 
+				and not eater.components.inventory:IsFull() then 
+					eater.components.inventory:GiveItem(cap)
+				end
+			end
+		
+            if eater.wormlight ~= nil then
+                if eater.wormlight.prefab == "wormlight_light_greater" then
+                    eater.wormlight.components.spell.lifetime = 0
+                    eater.wormlight.components.spell:ResumeSpell()
+                    return
+                else
+                    eater.wormlight.components.spell:OnFinish()
+                end
+            end
+
+            local light = SpawnPrefab("wormlight_light_greater")
+            light.components.spell:SetTarget(eater)
+            if light:IsValid() then
+                if light.components.spell.target == nil then
+                    light:Remove()
+                else
+                    light.components.spell:StartSpell()
+                end
+            end
+        end,
+	},
+	]]--
+	livingsandwich =
+	{
+		test = function(cooker, names, tags) return (names.livinglog and names.livinglog >= 2) and 
+		((names.monstermeat or 0) + (names.monstermeat_cooked or 0) >= 2) end,
+		priority = 1,
+		foodtype = FOODTYPE.MEAT,
+		secondaryfoodtype = FOODTYPE.MONSTER,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = 20,
+		hunger = 150,
+		sanity = 0,
+		cooktime = 1,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CURSE,
+		potlevel = "low",
+		floater = {"med", nil, 0.65},
+		tags = {"wereitem"},
+		card_def = {ingredients = {{"livinglog", 2}, {"monstermeat", 2}}},
+		oneatenfn = function(inst, eater)
+			local WEREMODE_NAMES =
+			{
+				"beaver",
+				"moose",
+				"goose",
+			}
+			
+			if eater ~= nil and eater.components.wereeater ~= nil 
+			and not (eater.components.health ~= nil and eater.components.health:IsDead()) and not eater:HasTag("playerghost") then
+				eater.components.wereeater:ForceTransformToWere(math.random(#WEREMODE_NAMES))
+			elseif eater ~= nil and eater:HasTag("player") and not (eater.components.health ~= nil and eater.components.health:IsDead()) 
+			and not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(-20)
+				eater.components.hunger:DoDelta(18.75)
+				eater.components.sanity:DoDelta(-15)
+				if eater ~= nil and eater.SoundEmitter ~= nil then
+					eater.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
+				else
+					inst.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
+				end
+			end
+		end
+	},
+	
+	duriansplit =
+	{
+		test = function(cooker, names, tags) return (names.durian or names.durian_cooked) and tags.banana and tags.frozen and tags.fruit end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		secondaryfoodtype = FOODTYPE.MONSTER,
+		perishtime = TUNING.PERISH_FAST,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 5,
+		hunger = 30,
+		sanity = 10,
+		cooktime = 1,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"durian", 1}, {"ice", 1}, {"banana", 2}}},
+	},
+	
+	duriansoup =
+	{
+		test = function(cooker, names, tags) return (names.durian or names.durian_cooked) and (tags.veggie and tags.veggie >= 3) and not tags.inedible end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		secondaryfoodtype = FOODTYPE.MONSTER,
+		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 15,
+		hunger = 35,
+		sanity = 5,
+		cooktime = 1.5,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"durian", 1}, {"carrot", 3}}},
 	},
 }
 
