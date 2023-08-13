@@ -305,7 +305,8 @@ local kynofoods =
 	cheese_white 		    = require("hof_foodrecipes").cheese_white,
 	cheese_koalefant		= require("hof_foodrecipes").cheese_koalefant,
 	milk_box				= require("hof_foodrecipes").milk_box,
-	watercup				= require("hof_foodrecipes").watercup,
+	honeyjar                = require("hof_foodrecipes").honeyjar,
+	watercup                = require("hof_foodrecipes").watercup,
 	crab_artichoke          = require("hof_foodrecipes").crab_artichoke,
 	poisonfrogglebunwich    = require("hof_foodrecipes").poisonfrogglebunwich,
 	pepperrolls             = require("hof_foodrecipes").pepperrolls,
@@ -331,6 +332,11 @@ local kynofoods =
 	livingsandwich          = require("hof_foodrecipes").livingsandwich,
 	duriansplit             = require("hof_foodrecipes").duriansplit,
 	duriansoup              = require("hof_foodrecipes").duriansoup,
+	lunarsoup               = require("hof_foodrecipes").lunarsoup,
+	purplewobstersoup       = require("hof_foodrecipes").purplewobstersoup,
+	wobstermonster          = require("hof_foodrecipes").wobstermonster,
+	durianmeated            = require("hof_foodrecipes").durianmeated,
+	durianchicken           = require("hof_foodrecipes").durianchicken,
 
 	-- Warly Exclusives.
 	musselbouillabaise 		= require("hof_foodrecipes_warly").musselbouillabaise,

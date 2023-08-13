@@ -8,7 +8,7 @@ local kyno_foods_jar =
 	-- Preserves Jar Recipes.
 	jelly_berries = 
 	{
-		test = function(brewer, names, tags) return names.berries and (names.berries == 2) end,
+		test = function(brewer, names, tags) return names.berries and (names.berries == 2) and tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -17,12 +17,12 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"berries", 2}}},
+		card_def = {ingredients = {{"berries", 2}, {"honey", 1}}},
 	},
 	
 	jelly_berries_juicy = 
 	{
-		test = function(brewer, names, tags) return names.berries_juicy and (names.berries_juicy == 2) end,
+		test = function(brewer, names, tags) return names.berries_juicy and (names.berries_juicy == 2) and tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -31,12 +31,12 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"berries_juicy", 2}}},
+		card_def = {ingredients = {{"berries_juicy", 2}, {"honey", 1}}},
 	},
 	
 	jelly_pomegranate = 
 	{
-		test = function(brewer, names, tags) return names.pomegranate and (names.pomegranate == 2) end,
+		test = function(brewer, names, tags) return names.pomegranate and (names.pomegranate == 2) and tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -45,12 +45,12 @@ local kyno_foods_jar =
 		sanity = 30,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"pomegranate", 2}}},
+		card_def = {ingredients = {{"pomegranate", 2}, {"honey", 1}}},
 	},
 	
 	jelly_dragonfruit = 
 	{
-		test = function(brewer, names, tags) return names.dragonfruit and (names.dragonfruit == 2) end,
+		test = function(brewer, names, tags) return names.dragonfruit and (names.dragonfruit == 2) and tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -59,12 +59,12 @@ local kyno_foods_jar =
 		sanity = 40,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"dragonfruit", 2}}},
+		card_def = {ingredients = {{"dragonfruit", 2}, {"honey", 1}}},
 	},
 	
 	jelly_cave_banana = 
 	{
-		test = function(brewer, names, tags) return names.cave_banana and (names.cave_banana == 2) end,
+		test = function(brewer, names, tags) return names.cave_banana and (names.cave_banana == 2) and tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -73,12 +73,12 @@ local kyno_foods_jar =
 		sanity = 25,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"cave_banana", 2}}},
+		card_def = {ingredients = {{"cave_banana", 2}, {"honey", 1}}},
 	},
 	
 	jelly_durian = 
 	{
-		test = function(brewer, names, tags) return names.durian and (names.durian == 2) end,
+		test = function(brewer, names, tags) return names.durian and (names.durian == 2) and tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -87,12 +87,12 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"durian", 2}}},
+		card_def = {ingredients = {{"durian", 2}, {"honey", 1}}},
 	},
 	
 	jelly_watermelon = 
 	{
-		test = function(brewer, names, tags) return names.watermelon and (names.watermelon == 2) end,
+		test = function(brewer, names, tags) return names.watermelon and (names.watermelon == 2) and tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -101,12 +101,12 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"watermelon", 2}}},
+		card_def = {ingredients = {{"watermelon", 2}, {"honey", 1}}},
 	},
 	
 	jelly_fig = 
 	{
-		test = function(brewer, names, tags) return names.fig and (names.fig == 2) end,
+		test = function(brewer, names, tags) return names.fig and (names.fig == 2) and tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -115,12 +115,12 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"fig", 2}}},
+		card_def = {ingredients = {{"fig", 2}, {"honey", 1}}},
 	},
 	
 	jelly_glowberry = 
 	{
-		test = function(brewer, names, tags) return (names.wormlight or (names.wormlight_lesser and names.wormlight_lesser == 2)) end,
+		test = function(brewer, names, tags) return (names.wormlight or (names.wormlight_lesser and names.wormlight_lesser == 2)) and tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -130,7 +130,7 @@ local kyno_foods_jar =
 		cooktime = 48,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLOW,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"wormlight_lesser", 2}}},
+		card_def = {ingredients = {{"wormlight_lesser", 2}, {"honey", 1}}},
 		prefabs = { "wormlight_light_greater" },
         oneatenfn = function(inst, eater)
             if eater.wormlight ~= nil then
@@ -157,7 +157,7 @@ local kyno_foods_jar =
 	
 	jelly_banana = 
 	{
-		test = function(brewer, names, tags) return names.kyno_banana and (names.kyno_banana == 2) end,
+		test = function(brewer, names, tags) return names.kyno_banana and (names.kyno_banana == 2) and tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -166,12 +166,13 @@ local kyno_foods_jar =
 		sanity = 33,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_banana", 2}}},
+		card_def = {ingredients = {{"kyno_banana", 2}, {"honey", 1}}},
 	},
 	
 	jelly_kokonut = 
 	{
-		test = function(brewer, names, tags) return (names.kyno_kokonut_halved or (names.kyno_kokonut_cooked and names.kyno_kokonut_cooked == 2)) end,
+		test = function(brewer, names, tags) return (names.kyno_kokonut_halved or 
+		(names.kyno_kokonut_cooked and names.kyno_kokonut_cooked == 2)) and tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -180,12 +181,12 @@ local kyno_foods_jar =
 		sanity = 33,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_kokonut_halved", 2}}},
+		card_def = {ingredients = {{"kyno_kokonut_halved", 2}, {"honey", 1}}},
 	},
 	
 	pickles_carrot = 
 	{
-		test = function(brewer, names, tags) return names.carrot and (names.carrot == 2) end,
+		test = function(brewer, names, tags) return names.carrot and (names.carrot == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -194,12 +195,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"carrot", 2}}},
+		card_def = {ingredients = {{"carrot", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_corn = 
 	{
-		test = function(brewer, names, tags) return names.corn and (names.corn == 2) end,
+		test = function(brewer, names, tags) return names.corn and (names.corn == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -208,12 +209,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"corn", 2}}},
+		card_def = {ingredients = {{"corn", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_eggplant = 
 	{
-		test = function(brewer, names, tags) return names.eggplant and (names.eggplant == 2) end,
+		test = function(brewer, names, tags) return names.eggplant and (names.eggplant == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -222,12 +223,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"eggplant", 2}}},
+		card_def = {ingredients = {{"eggplant", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_pumpkin = 
 	{
-		test = function(brewer, names, tags) return names.pumpkin and (names.pumpkin == 2) end,
+		test = function(brewer, names, tags) return names.pumpkin and (names.pumpkin == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -236,12 +237,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"pumpkin", 2}}},
+		card_def = {ingredients = {{"pumpkin", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_lichen = 
 	{
-		test = function(brewer, names, tags) return names.cutlichen and (names.cutlichen == 2) end,
+		test = function(brewer, names, tags) return names.cutlichen and (names.cutlichen == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -250,12 +251,12 @@ local kyno_foods_jar =
 		sanity = -15,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"cutlichen", 2}}},
+		card_def = {ingredients = {{"cutlichen", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_cactus = 
 	{
-		test = function(brewer, names, tags) return (names.cactus_meat or (names.cactus_flower and names.cactus_flower == 2)) end,
+		test = function(brewer, names, tags) return (names.cactus_meat or (names.cactus_flower and names.cactus_flower == 2)) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -264,12 +265,12 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"cactus_meat", 2}}},
+		card_def = {ingredients = {{"cactus_meat", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_garlic = 
 	{
-		test = function(brewer, names, tags) return names.garlic and (names.garlic == 2) end,
+		test = function(brewer, names, tags) return names.garlic and (names.garlic == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -278,12 +279,12 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"garlic", 2}}},
+		card_def = {ingredients = {{"garlic", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_asparagus = 
 	{
-		test = function(brewer, names, tags) return names.asparagus and (names.asparagus == 2) end,
+		test = function(brewer, names, tags) return names.asparagus and (names.asparagus == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -292,12 +293,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"asparagus", 2}}},
+		card_def = {ingredients = {{"asparagus", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_onion = 
 	{
-		test = function(brewer, names, tags) return names.onion and (names.onion == 2) end,
+		test = function(brewer, names, tags) return names.onion and (names.onion == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -306,12 +307,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"onion", 2}}},
+		card_def = {ingredients = {{"onion", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_tomato = 
 	{
-		test = function(brewer, names, tags) return names.tomato and (names.tomato == 2) end,
+		test = function(brewer, names, tags) return names.tomato and (names.tomato == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -320,12 +321,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"tomato", 2}}},
+		card_def = {ingredients = {{"tomato", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_potato = 
 	{
-		test = function(brewer, names, tags) return names.potato and (names.potato == 2) end,
+		test = function(brewer, names, tags) return names.potato and (names.potato == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -334,12 +335,12 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"potato", 2}}},
+		card_def = {ingredients = {{"potato", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_pepper = 
 	{
-		test = function(brewer, names, tags) return names.pepper and (names.pepper == 2) end,
+		test = function(brewer, names, tags) return names.pepper and (names.pepper == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -350,12 +351,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"pepper", 2}}},
+		card_def = {ingredients = {{"pepper", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_redcap = 
 	{
-		test = function(brewer, names, tags) return names.red_cap and (names.red_cap == 2) end,
+		test = function(brewer, names, tags) return names.red_cap and (names.red_cap == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -364,12 +365,12 @@ local kyno_foods_jar =
 		sanity = -15,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"red_cap", 2}}},
+		card_def = {ingredients = {{"red_cap", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_greencap = 
 	{
-		test = function(brewer, names, tags) return names.green_cap and (names.green_cap == 2) end,
+		test = function(brewer, names, tags) return names.green_cap and (names.green_cap == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -378,12 +379,12 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"green_cap", 2}}},
+		card_def = {ingredients = {{"green_cap", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_bluecap = 
 	{
-		test = function(brewer, names, tags) return names.blue_cap and (names.blue_cap == 2) end,
+		test = function(brewer, names, tags) return names.blue_cap and (names.blue_cap == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -392,12 +393,12 @@ local kyno_foods_jar =
 		sanity = -5,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"blue_cap", 2}}},
+		card_def = {ingredients = {{"blue_cap", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_mooncap = 
 	{
-		test = function(brewer, names, tags) return names.moon_cap and (names.moon_cap == 2) end,
+		test = function(brewer, names, tags) return names.moon_cap and (names.moon_cap == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -407,7 +408,7 @@ local kyno_foods_jar =
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"moon_cap", 2}}},
+		card_def = {ingredients = {{"moon_cap", 2}, {"kyno_spotspice", 1}}},
 		prefabs = { "buff_sleepresistance" },
         oneatenfn = function(inst, eater)
             if eater.components.grogginess ~= nil and
@@ -421,7 +422,7 @@ local kyno_foods_jar =
 	
 	pickles_kelp = 
 	{
-		test = function(brewer, names, tags) return names.kelp and (names.kelp == 2) end,
+		test = function(brewer, names, tags) return names.kelp and (names.kelp == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -430,12 +431,12 @@ local kyno_foods_jar =
 		sanity = -5,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kelp", 2}}},
+		card_def = {ingredients = {{"kelp", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_avocado = 
 	{
-		test = function(brewer, names, tags) return names.rock_avocado_fruit_ripe and (names.rock_avocado_fruit_ripe == 2) end,
+		test = function(brewer, names, tags) return names.rock_avocado_fruit_ripe and (names.rock_avocado_fruit_ripe == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -444,12 +445,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"rock_avocado_fruit_ripe", 2}}},
+		card_def = {ingredients = {{"rock_avocado_fruit_ripe", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_whitecap = 
 	{
-		test = function(brewer, names, tags) return names.kyno_white_cap and (names.kyno_white_cap == 2) end,
+		test = function(brewer, names, tags) return names.kyno_white_cap and (names.kyno_white_cap == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -458,12 +459,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_white_cap", 2}}},
+		card_def = {ingredients = {{"kyno_white_cap", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_aloe = 
 	{
-		test = function(brewer, names, tags) return names.kyno_aloe and (names.kyno_aloe == 2) end,
+		test = function(brewer, names, tags) return names.kyno_aloe and (names.kyno_aloe == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -472,12 +473,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_aloe", 2}}},
+		card_def = {ingredients = {{"kyno_aloe", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_radish = 
 	{
-		test = function(brewer, names, tags) return names.kyno_radish and (names.kyno_radish == 2) end,
+		test = function(brewer, names, tags) return names.kyno_radish and (names.kyno_radish == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -486,12 +487,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_radish", 2}}},
+		card_def = {ingredients = {{"kyno_radish", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_sweetpotato = 
 	{
-		test = function(brewer, names, tags) return names.kyno_sweetpotato and (names.kyno_sweetpotato == 2) end,
+		test = function(brewer, names, tags) return names.kyno_sweetpotato and (names.kyno_sweetpotato == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -500,12 +501,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_sweetpotato", 2}}},
+		card_def = {ingredients = {{"kyno_sweetpotato", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_lotus = 
 	{
-		test = function(brewer, names, tags) return names.kyno_lotus_flower and (names.kyno_lotus_flower == 2) end,
+		test = function(brewer, names, tags) return names.kyno_lotus_flower and (names.kyno_lotus_flower == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -514,12 +515,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_lotus_flower", 2}}},
+		card_def = {ingredients = {{"kyno_lotus_flower", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_seaweeds = 
 	{
-		test = function(brewer, names, tags) return names.kyno_seaweeds and (names.kyno_seaweeds == 2) end,
+		test = function(brewer, names, tags) return names.kyno_seaweeds and (names.kyno_seaweeds == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -528,12 +529,12 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_seaweeds", 2}}},
+		card_def = {ingredients = {{"kyno_seaweeds", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_taroroot = 
 	{
-		test = function(brewer, names, tags) return names.kyno_taroroot and (names.kyno_taroroot == 2) end,
+		test = function(brewer, names, tags) return names.kyno_taroroot and (names.kyno_taroroot == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -542,12 +543,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_taroroot", 2}}},
+		card_def = {ingredients = {{"kyno_taroroot", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_waterycress = 
 	{
-		test = function(brewer, names, tags) return names.kyno_waterycress and (names.kyno_waterycress == 2) end,
+		test = function(brewer, names, tags) return names.kyno_waterycress and (names.kyno_waterycress == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -556,12 +557,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_waterycress", 2}}},
+		card_def = {ingredients = {{"kyno_waterycress", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_cucumber = 
 	{
-		test = function(brewer, names, tags) return names.kyno_cucumber and (names.kyno_cucumber == 2) end,
+		test = function(brewer, names, tags) return names.kyno_cucumber and (names.kyno_cucumber == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -570,12 +571,13 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_cucumber", 2}}},
+		card_def = {ingredients = {{"kyno_cucumber", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_parznip = 
 	{
-		test = function(brewer, names, tags) return (names.kyno_parznip or (names.kyno_parznip_eaten and names.kyno_parznip_eaten == 2)) end,
+		test = function(brewer, names, tags) return (names.kyno_parznip or 
+		(names.kyno_parznip_eaten and names.kyno_parznip_eaten == 2)) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -584,12 +586,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_parznip", 2}}},
+		card_def = {ingredients = {{"kyno_parznip", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_turnip = 
 	{
-		test = function(brewer, names, tags) return names.kyno_turnip and (names.kyno_turnip == 2) end,
+		test = function(brewer, names, tags) return names.kyno_turnip and (names.kyno_turnip == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -598,12 +600,12 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_turnip", 2}}},
+		card_def = {ingredients = {{"kyno_turnip", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	pickles_fennel = 
 	{
-		test = function(brewer, names, tags) return names.kyno_fennel and (names.kyno_fennel == 2) end,
+		test = function(brewer, names, tags) return names.kyno_fennel and (names.kyno_fennel == 2) and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -612,13 +614,13 @@ local kyno_foods_jar =
 		sanity = -15,
 		cooktime = 72,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_fennel", 2}}},
+		card_def = {ingredients = {{"kyno_fennel", 2}, {"kyno_spotspice", 1}}},
 	},
 	
 	mayonnaise = 
 	{
-		test = function(brewer, names, tags) return tags.egg and names.kyno_oil and not names.kyno_chicken_egg 
-		and not names.tallbirdegg and not names.nightmarefuel end,
+		test = function(brewer, names, tags) return tags.egg and names.kyno_oil and names.kyno_salt
+		and not names.kyno_chicken_egg and not names.tallbirdegg and not names.nightmarefuel end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -628,7 +630,7 @@ local kyno_foods_jar =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"bird_egg", 1}, {"kyno_oil", 1}}},
+		card_def = {ingredients = {{"bird_egg", 1}, {"kyno_oil", 1}, {"kyno_salt", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
             eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
@@ -637,7 +639,7 @@ local kyno_foods_jar =
 	
 	mayonnaise_chicken = 
 	{
-		test = function(brewer, names, tags) return names.kyno_chicken_egg and names.kyno_oil and not names.nightmarefuel end,
+		test = function(brewer, names, tags) return names.kyno_chicken_egg and names.kyno_oil and names.kyno_salt and not names.nightmarefuel end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -647,7 +649,7 @@ local kyno_foods_jar =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_chicken_egg", 1}, {"kyno_oil", 1}}},
+		card_def = {ingredients = {{"kyno_chicken_egg", 1}, {"kyno_oil", 1}, {"kyno_salt", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
             eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
@@ -656,7 +658,7 @@ local kyno_foods_jar =
 	
 	mayonnaise_tallbird = 
 	{
-		test = function(brewer, names, tags) return names.tallbirdegg and names.kyno_oil and not names.nightmarefuel end,
+		test = function(brewer, names, tags) return names.tallbirdegg and names.kyno_oil and names.kyno_salt and not names.nightmarefuel end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -666,7 +668,7 @@ local kyno_foods_jar =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"tallbirdegg", 1}, {"kyno_oil", 1}}},
+		card_def = {ingredients = {{"tallbirdegg", 1}, {"kyno_oil", 1}, {"kyno_salt", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
             eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
@@ -675,7 +677,7 @@ local kyno_foods_jar =
 	
 	mayonnaise_nightmare =
 	{
-		test = function(brewer, names, tags) return tags.egg and names.nightmarefuel end,
+		test = function(brewer, names, tags) return tags.egg and names.nightmarefuel and names.kyno_salt end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
@@ -685,7 +687,7 @@ local kyno_foods_jar =
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DESANITY,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"bird_egg", 1}, {"nightmarefuel", 1}}},
+		card_def = {ingredients = {{"bird_egg", 1}, {"nightmarefuel", 1}, {"kyno_salt", 1}}},
 		prefabs = { "kyno_insanitybuff" },
         oneatenfn = function(inst, eater)
             eater:AddDebuff("kyno_insanitybuff", "kyno_insanitybuff")
@@ -694,7 +696,7 @@ local kyno_foods_jar =
 	
 	tartarsauce = 
 	{
-		test = function(brewer, names, tags) return tags.mayonnaise and names.kyno_spotspice and not names.mayonnaise_nightmare end,
+		test = function(brewer, names, tags) return tags.mayonnaise and names.kyno_spotspice and names.kyno_cucumber and not names.mayonnaise_nightmare end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -704,7 +706,7 @@ local kyno_foods_jar =
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"mayonnaise", 1}, {"kyno_spotspice", 1}}},
+		card_def = {ingredients = {{"mayonnaise", 1}, {"kyno_spotspice", 1}, {"kyno_cucumber", 1}}},
 		oneatenfn = function(inst, eater)
             eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
         end,

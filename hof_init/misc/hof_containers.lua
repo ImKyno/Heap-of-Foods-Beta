@@ -22,6 +22,7 @@ function containers.widgetsetup(container, prefab, data, ...)
         for k, v in pairs(t) do
             container[k]	= v
         end
+		
         container:SetNumSlots(container.widget.slotpos ~= nil and #container.widget.slotpos or 0)
     else
         containers_widgetsetup_base(container, prefab, data, ...)
@@ -45,6 +46,7 @@ params.syrup_pot 			=
         pos 				= Vector3(200, 0, 0), -- A bit closer!
         side_align_tip 		= 100,
     },
+	
     acceptsstacks 			= false,
     type 					= "cooker",
 }
@@ -65,11 +67,13 @@ params.cooking_pot 			=
             Vector3(-1, -(32 + 4), 0		 ),
             Vector3(-1, -(64 + 32 + 8 + 4), 0),
         },
+		
         animbank 			= "quagmire_ui_pot_1x4",
         animbuild 			= "quagmire_ui_pot_1x4",
         pos 				= Vector3(200, 0, 0),
         side_align_tip 		= 100,
     },
+	
     acceptsstacks 			= false,
     type 					= "cooker",
 }
@@ -87,17 +91,20 @@ params.brewer 				=
         {
             Vector3(-1, 32 + 4, 0			 ),
             Vector3(-1, -(32 + 4), 0		 ),
+			Vector3(-1, -(64 + 32 + 8 + 4), 0),
         },
-        animbank 			= "ui_cookpot_1x2",
-        animbuild 			= "ui_cookpot_1x2",
+		
+        animbank 			= "ui_brewer_1x3",
+        animbuild 			= "ui_brewer_1x3",
         pos 				= Vector3(150, 0, 0),
         side_align_tip 		= 100,
 		buttoninfo =
         {
             text = STRINGS.ACTIONS.BREWER,
-            position = Vector3(0, -95, 0),
+            position = Vector3(0, -170, 0),
         }
     },
+	
     acceptsstacks 			= false,
     type 					= "brewer",
 }
@@ -136,11 +143,13 @@ params.honeydeposit =
 			Vector3(-37.5, -(70 + 4), 0),
             Vector3(37.5, -(70 + 4), 0),
 		},
+		
         animbank = "ui_antchest_honeycomb",
         animbuild = "ui_antchest_honeycomb",
         pos = Vector3(0, 200, 0),
         side_align_tip = 160,
     },
+	
     type = "chest",
 }
 
@@ -159,6 +168,7 @@ params.potatosack =
         pos = Vector3(0, 200, 0),
         side_align_tip = 160,
     },
+	
     type = "chest",
 }
 
@@ -170,4 +180,15 @@ end
 
 function params.potatosack.itemtestfn(container, item, slot)
 	return item:HasTag("potatosack_valid") and not container.inst:HasTag("burnt")
+end
+
+-- Hack for portablespicer to not accept items with "nospice" tag.
+function containers.params.portablespicer.itemtestfn(container, item, slot)
+    return item.prefab ~= "wetgoop"
+	and (
+			(slot == 1 and item:HasTag("preparedfood") and not item:HasTag("spicedfood") and not item:HasTag("nospice")) or
+			(slot == 2 and item:HasTag("spice")) or
+			(slot == nil and (item:HasTag("spice") or (item:HasTag("preparedfood") and not item:HasTag("spicedfood") and not item:HasTag("nospice"))))
+		)
+	and not container.inst:HasTag("burnt")
 end

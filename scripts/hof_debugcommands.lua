@@ -222,3 +222,21 @@ function c_hofjars()
 		end
 	end
 end
+
+function c_hofmonsterfoods()
+	local player = ConsoleCommandPlayer()
+	
+    if player ~= nil then
+        c_select(player)
+        player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
+		c_give("cookbook",         nil, true)
+        c_give("monsterlasagna", 	40, true)
+        c_give("monstertartare", 	40, true)
+        c_give("monstermuffin", 	40, true)
+        c_give("duriansoup", 		40, true)
+        c_give("duriansplit", 		40, true)
+		c_give("durianchicken",     40, true)
+		c_give("durianmeated",      40, true)
+		c_give("wobstermonster",    40, true)
+    end
+end

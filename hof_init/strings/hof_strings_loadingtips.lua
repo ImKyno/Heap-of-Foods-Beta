@@ -61,7 +61,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_KEGANDJAR",       "The Wooden Keg and the Pres
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_ANTIDOTE",        "Your Sugarwood Trees got ruined? Don't worry, they can be healed! You just need to use the Musty Antidote on them and voilà!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_MILKABLEANIMALS", "Some animals such as Beefalos and Koalefants can be milked using the Bucket. Be careful, though!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_FORTUNECOOKIE",   "\"Do you really believe that stupid cookies tells your luck? Huh? W-what about me?! I-I don't believe on them, I swear!\" -W")
--- AddLoadingTip(TIPS_HOF, "TIPS_HOF_PINEAPPLEBUSH",   "Pineapples Bushes grows faster during the Summer. And slower during the other Seasons.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_PINEAPPLEBUSH",   "Pineapples Bushes grows faster during the Summer. And slower during other Seasons.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_BREWBOOK",        "Recipes made in the Wooden Keg or Preserves Jar will not appear in the Cookbook. Instead you can view them at the Brewbook!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_PIKOS",           "Be aware of Pikos! These little creatures enjoy stealing food from easy preys.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_TIDALPOOL",       "The Tidal Pool has an array of fishes that can be fished throughout the Seasons! Make sure to bring your Freshwater Fishing Rod!")
@@ -71,6 +71,9 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_INFESTTREE",      "Tea Trees can be infested w
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWAREBONUS",   "Special Cookware stations have a small chance of giving an extra food when cooking. Cross your fingers and hope that sweet meal comes in double trouble!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_POISONBUNWICH",   "The Noxious Froggle Bunwich can be quite difficult to cook, but it has an interesting quirk. When eaten, frogs will be pacific towards you for a whole day!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_TWISTEDTEQUILE",  "\"Last night in the party, when I drank that drink, I think it's called Tequila, right? That thing made me so dizzy that in the next day, I found myself in another place!\" -W")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_WATERCUP",        "Want to get rid of your debuffs? Drink a Cup of Water and stay hydrated!")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKACOLA",        "\See that bottle of... \"Nuka-Cola\", that's the name, right? I think Wortox brought that thing from other dimension in one of his travels.\" -W")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_LUNARSOUP",       "\I fear nothing when that Lunar Soup goes down in my belly!\" -W")
 
 -- We want that our custom tips appears more often.
 SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})

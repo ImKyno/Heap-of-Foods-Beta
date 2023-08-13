@@ -3,6 +3,10 @@ local brain = require("brains/chicken2brain")
 local assets =
 {
 	Asset("ANIM", "anim/chicken.zip"),
+	
+	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
+	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
+	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
 local prefabs =
@@ -70,6 +74,10 @@ local function OnGetItemFromPlayer(inst, giver, item)
 	end
 end
 
+local function OnCooked(inst, cooker, chef)
+	inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/buzzard/hurt")
+end
+
 local function fn()
 	local inst = CreateEntity()
 	
@@ -83,12 +91,13 @@ local function fn()
 	shadow:SetSize(1, 0.75)
 	
 	inst.Transform:SetFourFaced()
-	MakeCharacterPhysics(inst, 1, 0.12)
+	MakeCharacterPhysics(inst, 100, .5)
 
 	inst.AnimState:SetBank("chicken")
 	inst.AnimState:SetBuild("chicken")
 	inst.AnimState:PlayAnimation("idle", true)
 	
+	inst:AddTag("cookable")
 	inst:AddTag("animal")
 	inst:AddTag("prey")
 	inst:AddTag("smallcreature")
@@ -110,6 +119,10 @@ local function fn()
 	inst:AddComponent("trader")
 	inst.components.trader:SetAcceptTest(TestItem)
     inst.components.trader.onaccept = OnGetItemFromPlayer
+	
+	inst:AddComponent("cookable")
+	inst.components.cookable.product = "drumstick_cooked"
+	inst.components.cookable:SetOnCookedFn(OnCooked)
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetChanceLootTable('kyno_chicken2')

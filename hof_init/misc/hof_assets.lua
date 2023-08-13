@@ -18,7 +18,9 @@ Assets =
 {
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
-
+	
+	Asset("ANIM", "anim/ui_brewer_1x3.zip"),
+	
 	Asset("ANIM", "anim/kyno_mushroomstump.zip"),
 	Asset("ANIM", "anim/kyno_spotbush.zip"),
 	Asset("ANIM", "anim/kyno_wheat.zip"),

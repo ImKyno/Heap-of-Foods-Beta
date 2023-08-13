@@ -1,6 +1,6 @@
 name                        = "Heap of Foods"
 version                     = "6.6-A"
-local myupdate              = "Monster Extravaganza!"
+local myupdate              = "Monster Extravaganza"
 
 description                 = 
 [[
@@ -16,7 +16,7 @@ The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jams, Pick
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
 󰀌 Mod Version: 6.6-A
-󰀧 Update: Monster Extravaganza!
+󰀧 Update: Monster Extravaganza
 ]]
 
 author                      = "Kyno"

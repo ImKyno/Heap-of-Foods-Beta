@@ -1,4 +1,4 @@
-local modName = "[HOF]"
+local modName = "Heap-of-Foods"
 local _G = GLOBAL
 
 --[[

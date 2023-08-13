@@ -18,6 +18,7 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		tags = {"honeyed", "drinkable_food"},
 		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 3}, {"honey", 1}}},
+		prefabs = { "buff_sleepresistance" },
 		oneatenfn = function(inst, eater)
             if eater.components.grogginess ~= nil and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
@@ -1887,9 +1888,6 @@ local kyno_foods =
 
 	milk_box = 
 	{
-		-- test = function(cooker, names, tags) return (tags.frozen and tags.frozen == 2) and (names.goatmilk and names.goatmilk == 2 or 
-		-- (names.kyno_milk_beefalo and names.kyno_milk_beefalo == 2) or (names.kyno_milk_koalefant and names.kyno_milk_koalefant == 2) or  
-		-- (names.kyno_milk_deer and names.kyno_milk_deer == 2) or (names.kyno_milk_spat and names.kyno_milk_spat == 2)) end,
 		test = function(cooker, names, tags) return (tags.frozen and tags.frozen >= 2) and (tags.milk and tags.milk >= 2) and not names.milk_box end,
 		priority = 1,
 		foodtype = FOODTYPE.GOODIES,
@@ -1922,9 +1920,9 @@ local kyno_foods =
 	
 	watercup =
 	{
-		test = function(cooker, names, tags) return (tags.frozen and tags.frozen == 2) and not tags.meat and not tags.fish and not tags.veggie 
-		and not tags.fruit and not tags.milk end,
-		priority = 35,
+		test = function(cooker, names, tags) return (tags.frozen and tags.frozen >= 2) and not tags.meat and not tags.fish and not tags.veggie 
+		and not tags.fruit and not tags.milk and not tags.sweetener end,
+		priority = -5,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = 9000000,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
@@ -1933,11 +1931,16 @@ local kyno_foods =
 		hunger = 1,
 		sanity = 1,
 		cooktime = .1,
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WATER,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CLEAR,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
-		tags = {"drinkable_food"},
-		card_def = {ingredients = {{"ice", 2}, {"twigs", 2}}},
+		tags = {"drinkable_food", "nospice"},
+		card_def = {ingredients = {{"ice", 4}}},
+		oneatenfn = function(inst, eater)
+			if eater.components.debuffable ~= nil then 
+				eater.components.debuffable:RemoveAllDebuffs()	
+			end
+		end
 	},
 	
 	crab_artichoke =
@@ -2053,155 +2056,6 @@ local kyno_foods =
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"potato", 2}, {"kyno_oil", 1}, {"kyno_salt", 1}}},
-	},
-	
-	twistedtequile =
-	{
-		test = function(cooker, names, tags) return names.cutlichen and tags.frozen and names.kyno_syrup and (names.durian or names.durian_cooked) end,
-		priority = 30,
-		foodtype = FOODTYPE.GOODIES,
-		perishtime = TUNING.PERISH_SUPERSLOW,
-		health = 8,
-		hunger = 32.5,
-		sanity = -60,
-		cooktime = 2.2,
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_TEQUILA,
-		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"cutlichen", 1}, {"ice", 1}, {"kyno_syrup", 1}, {"durian", 1}}},
-		tags = {"drinkable_food", "alcoholic_drink", "honeyed"},
-		oneatenfn = function(inst, eater)
-			local function GetRandomPosition(caster, teleportee, target_in_ocean)
-				if target_in_ocean then
-					local pt = TheWorld.Map:FindRandomPointInOcean(20)
-					if pt ~= nil then
-						return pt
-					end
-					
-				local from_pt = teleportee:GetPosition()
-				local offset = FindSwimmableOffset(from_pt, math.random() * 2 * PI, 90, 16)
-				or FindSwimmableOffset(from_pt, math.random() * 2 * PI, 60, 16)
-				or FindSwimmableOffset(from_pt, math.random() * 2 * PI, 30, 16)
-				or FindSwimmableOffset(from_pt, math.random() * 2 * PI, 15, 16)
-				if offset ~= nil then
-					return from_pt + offset
-				end
-				return teleportee:GetPosition()
-			else
-				local centers = {}
-				for i, node in ipairs(TheWorld.topology.nodes) do
-					if TheWorld.Map:IsPassableAtPoint(node.x, 0, node.y) and node.type ~= NODE_TYPE.SeparatedRoom then
-						table.insert(centers, {x = node.x, z = node.y})
-					end
-				end
-					if #centers > 0 then
-						local pos = centers[math.random(#centers)]
-						return Point(pos.x, 0, pos.z)
-					else
-						return eater:GetPosition()
-					end
-				end
-			end
-			
-			local function TeleportEnd(teleportee, locpos, loctarget, eater)
-				if loctarget ~= nil and loctarget:IsValid() and loctarget.onteleto ~= nil then
-					loctarget:onteleto()
-				end
-				
-				local teleportfx = SpawnPrefab("explode_reskin")
-				teleportfx.Transform:SetPosition(teleportee.Transform:GetWorldPosition())
-				
-				if teleportee.components.talker ~= nil then 
-					teleportee.components.talker:Say(GetString(teleportee, "ANNOUNCE_TOWNPORTALTELEPORT"))
-				end
-
-				if teleportee:HasTag("player") then
-					teleportee.sg.statemem.teleport_task = nil
-					teleportee.sg:GoToState(teleportee:HasTag("playerghost") and "appear" or "wakeup")
-				else
-					teleportee:Show()
-					if teleportee.DynamicShadow ~= nil then
-						teleportee.DynamicShadow:Enable(true)
-					end
-					if teleportee.components.health ~= nil then
-						teleportee.components.health:SetInvincible(false)
-					end
-					teleportee:PushEvent("teleported")
-				end
-			end
-			
-			local function TeleportContinue(teleportee, locpos, loctarget, eater)
-				if teleportee.Physics ~= nil then
-					teleportee.Physics:Teleport(locpos.x, 0, locpos.z)
-				else
-					teleportee.Transform:SetPosition(locpos.x, 0, locpos.z)
-				end
-
-				if teleportee:HasTag("player") then
-					teleportee:SnapCamera()
-					teleportee:ScreenFade(true, 1)
-					teleportee.sg.statemem.teleport_task = teleportee:DoTaskInTime(1, TeleportEnd, locpos, loctarget)
-				else
-					TeleportEnd(teleportee, locpos, loctarget)
-				end
-			end
-			
-			local function TeleportStart(teleportee, eater, caster, loctarget, target_in_ocean)
-				local ground = TheWorld
-
-				local locpos = teleportee.components.teleportedoverride ~= nil and teleportee.components.teleportedoverride:GetDestPosition()
-				or loctarget == nil and GetRandomPosition(eater, teleportee, target_in_ocean)
-				or loctarget.teletopos ~= nil and loctarget:teletopos()
-				or loctarget:GetPosition()
-
-				if teleportee.components.locomotor ~= nil then
-					teleportee.components.locomotor:StopMoving()
-				end
-
-				local teleportfx = SpawnPrefab("explode_reskin")
-				teleportfx.Transform:SetPosition(teleportee.Transform:GetWorldPosition())
-
-				local isplayer = teleportee:HasTag("player")
-				if isplayer then
-					teleportee.sg:GoToState("forcetele")
-				else
-					if teleportee.components.health ~= nil then
-						teleportee.components.health:SetInvincible(true)
-					end
-					if teleportee.DynamicShadow ~= nil then
-						teleportee.DynamicShadow:Enable(false)
-					end
-					teleportee:Hide()
-				end
-
-				if isplayer then
-					teleportee.sg.statemem.teleport_task = teleportee:DoTaskInTime(3, TeleportContinue, locpos, loctarget)
-				else
-					TeleportContinue(teleportee, locpos, loctarget)
-				end
-			end
-			
-			local TELEPORT_MUST_TAGS = { "locomotor" }
-			local TELEPORT_CANT_TAGS = { "playerghost", "INLIMBO" }
-			local function TeleportPlayer(inst, eater)
-				local caster = inst.components.inventoryitem.owner or eater
-				if eater == nil then
-					eater = caster
-				end
-
-				local x, y, z = eater.Transform:GetWorldPosition()
-				local target_in_ocean = eater.components.locomotor ~= nil and eater.components.locomotor:IsAquatic()
-
-				local loctarget = eater.components.minigame_participator ~= nil and eater.components.minigame_participator:GetMinigame()
-				or eater.components.teleportedoverride ~= nil and eater.components.teleportedoverride:GetDestTarget()
-                or eater.components.hitchable ~= nil and eater:HasTag("hitched") and eater.components.hitchable.hitched or nil
-				
-				if eater:HasTag("player") then 
-					TeleportStart(eater, inst, caster, loctarget, target_in_ocean)
-				end
-			end
-			
-			TeleportPlayer(inst, eater)
-		end,
 	},
 	
 	onionrings =
@@ -2379,9 +2233,9 @@ local kyno_foods =
 		foodtype = FOODTYPE.GOODIES,
         secondaryfoodtype = FOODTYPE.MONSTER,
 		perishtime = TUNING.PERISH_SUPERSLOW,
-		health = -10,
+		health = 10,
 		hunger = 50,
-		sanity = -15,
+		sanity = 15,
 		cooktime = 2,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
@@ -2578,94 +2432,6 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_parznip", 3}, {"succulent_picked", 1}}},
 	},
 	
-	--[[
-	nukacola =
-	{
-		test = function(cooker, names, tags) return names.kyno_sugartree_petals and names.kyno_syrup and tags.frozen end,
-		priority = 1,
-		foodtype = FOODTYPE.GOODIES,
-		perishtime = TUNING.PERISH_SUPERSLOW,
-		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
-		health = -5,
-		hunger = 12.5,
-		sanity = 60,
-		cooktime = 2,
-		floater = {"med", nil, 0.65},
-		tags = {"drinkable_food"},
-		card_def = {ingredients = {{"kyno_sugartree_petals", 1}, {"kyno_syrup", 1}, {"ice", 2}}},
-		oneatenfn = function(inst, eater)
-			if eater ~= nil and eater.SoundEmitter ~= nil then
-				eater.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
-			else
-				inst.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
-			end
-			
-			if math.random() < 0.01 then 
-				local cap = SpawnPrefab("kyno_bottlecap")
-				if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost") 
-				and not eater.components.inventory:IsFull() then 
-					eater.components.inventory:GiveItem(cap)
-				end
-			end
-		end
-	},
-	
-	nukacola_quantum =
-	{
-		test = function(cooker, names, tags) return names.kyno_sugartree_petals and names.kyno_syrup and tags.frozen and 
-		(names.wormlight or names.wormlight_lesser) end,
-		priority = 1,
-		foodtype = FOODTYPE.GOODIES,
-		perishtime = TUNING.PERISH_SUPERSLOW,
-		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
-		health = -10,
-		hunger = 20,
-		sanity = 60,
-		cooktime = 2,
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLOW,
-		floater = {"med", nil, 0.65},
-		tags = {"drinkable_food"},
-		card_def = {ingredients = {{"kyno_sugartree_petals", 1}, {"kyno_syrup", 1}, {"ice", 1}, {"wormlight_lesser", 1}}},
-		prefabs = { "wormlight_light_greater" },
-        oneatenfn = function(inst, eater)
-			if eater ~= nil and eater.SoundEmitter ~= nil then
-				eater.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
-			else
-				inst.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
-			end
-			
-			if math.random() < 0.01 then 
-				local cap = SpawnPrefab("kyno_bottlecap")
-				if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost") 
-				and not eater.components.inventory:IsFull() then 
-					eater.components.inventory:GiveItem(cap)
-				end
-			end
-		
-            if eater.wormlight ~= nil then
-                if eater.wormlight.prefab == "wormlight_light_greater" then
-                    eater.wormlight.components.spell.lifetime = 0
-                    eater.wormlight.components.spell:ResumeSpell()
-                    return
-                else
-                    eater.wormlight.components.spell:OnFinish()
-                end
-            end
-
-            local light = SpawnPrefab("wormlight_light_greater")
-            light.components.spell:SetTarget(eater)
-            if light:IsValid() then
-                if light.components.spell.target == nil then
-                    light:Remove()
-                else
-                    light.components.spell:StartSpell()
-                end
-            end
-        end,
-	},
-	]]--
 	livingsandwich =
 	{
 		test = function(cooker, names, tags) return (names.livinglog and names.livinglog >= 2) and 
@@ -2674,9 +2440,9 @@ local kyno_foods =
 		foodtype = FOODTYPE.MEAT,
 		secondaryfoodtype = FOODTYPE.MONSTER,
 		perishtime = TUNING.PERISH_SUPERSLOW,
-		health = 20,
-		hunger = 150,
-		sanity = 0,
+		health = 5,
+		hunger = 40,
+		sanity = 5,
 		cooktime = 1,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CURSE,
 		potlevel = "low",
@@ -2694,16 +2460,12 @@ local kyno_foods =
 			if eater ~= nil and eater.components.wereeater ~= nil 
 			and not (eater.components.health ~= nil and eater.components.health:IsDead()) and not eater:HasTag("playerghost") then
 				eater.components.wereeater:ForceTransformToWere(math.random(#WEREMODE_NAMES))
-			elseif eater ~= nil and eater:HasTag("player") and not (eater.components.health ~= nil and eater.components.health:IsDead()) 
-			and not eater:HasTag("playerghost") then
-				eater.components.health:DoDelta(-20)
-				eater.components.hunger:DoDelta(18.75)
-				eater.components.sanity:DoDelta(-15)
-				if eater ~= nil and eater.SoundEmitter ~= nil then
-					eater.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
-				else
-					inst.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
-				end
+			end
+				
+			if eater ~= nil and eater.SoundEmitter ~= nil then
+				eater.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
+			else
+				inst.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
 			end
 		end
 	},
@@ -2717,8 +2479,8 @@ local kyno_foods =
 		perishtime = TUNING.PERISH_FAST,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
-		health = 5,
-		hunger = 30,
+		health = -5,
+		hunger = 25,
 		sanity = 10,
 		cooktime = 1,
 		potlevel = "med",
@@ -2735,12 +2497,105 @@ local kyno_foods =
 		perishtime = TUNING.PERISH_MED,
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
-		health = 15,
-		hunger = 35,
-		sanity = 5,
+		health = 10,
+		hunger = 37.5,
+		sanity = -10,
 		cooktime = 1.5,
+		potlevel = "high",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"durian", 1}, {"carrot", 3}}},
+	},
+	
+	lunarsoup =
+	{
+		test = function(cooker, names, tags) return (names.carrot or names.carrot_cooked) and (names.moon_cap or names.moon_cap_cooked) 
+		and ((names.rock_avocado_fruit_ripe or 0) + (names.rock_avocado_fruit_ripe_cooked or 0) >= 2) and not tags.meat end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 25,
+		hunger = 18.75,
+		sanity = 0,
+		cooktime = 1,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FEARSLEEP,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"moon_cap", 1}, {"carrot", 1}, {"rock_avocado_fruit_ripe", 2}}},
+		prefabs = { "buff_sleepresistance", "kyno_mindbuff" },
+		oneatenfn = function(inst, eater)
+            if eater.components.grogginess ~= nil and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.grogginess:ResetGrogginess()
+            end
+
+			eater:AddDebuff("shroomsleepresist", "buff_sleepresistance")
+			eater:AddDebuff("kyno_fearbuff", "kyno_fearbuff")
+        end,
+	},
+	
+	purplewobstersoup =
+	{
+		test = function(cooker, names, tags) return names.wobster_sheller_land and names.kyno_grouper and (names.kyno_turnip or names.kyno_turnip_cooked) end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 60,
+		hunger = 62.5,
+		sanity = 5,
+		cooktime = 2,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"kyno_grouper", 1}, {"kyno_turnip", 1}}},
+	},
+	
+	wobstermonster =
+	{
+		test = function(cooker, names, tags) return names.wobster_sheller_land and (names.monstermeat or names.monstermeat_cooked) and
+		(tags.veggie and tags.veggie >= 2) end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		secondaryfoodtype = FOODTYPE.MONSTER,
+		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 60,
+		hunger = 37.5,
+		sanity = -20,
+		cooktime = 2,
+		potlevel = "high",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"monstermeat", 1}, {"carrot", 2}}},
+	},
+	
+	durianmeated =
+	{
+		test = function(cooker, names, tags) return ((names.monstermeat or 0) + (names.monstermeat_cooked or 0) >= 2) and 
+		((names.durian or 0) + (names.durian_cooked or 0) >= 2) end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		secondaryfoodtype = FOODTYPE.MONSTER,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 5,
+		hunger = 62.5,
+		sanity = -20,
+		cooktime = 1.2,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"monstermeat", 2}, {"durian", 2}}},
+	},
+	
+	durianchicken =
+	{
+		test = function(cooker, names, tags) return names.durian and (names.cactus_meat and names.cactus_meat >= 2) 
+		and names.cactus_flower and not names.durian_cooked and not names.cactus_meat_cooked end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		secondaryfoodtype = FOODTYPE.MONSTER,
+		perishtime = TUNING.PERISH_FASTISH,
+		health = 20,
+		hunger = 37.5,
+		sanity = 33,
+		cooktime = 1,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"durian", 1}, {"cactus_meat", 2}, {"cactus_flower", 1}}},
 	},
 }
 

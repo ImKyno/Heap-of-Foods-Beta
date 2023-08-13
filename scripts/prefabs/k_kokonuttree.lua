@@ -190,9 +190,11 @@ local function tree_burnt(inst)
     local burnt_tree = SpawnPrefab("kyno_kokonuttree_burnt")
     burnt_tree.Transform:SetPosition(inst.Transform:GetWorldPosition())
     burnt_tree.no_kokonut = inst.components.pickable == nil or not inst.components.pickable.canbepicked
+	
     if burnt_tree.no_kokonut then
         burnt_tree.AnimState:Hide("coconut")
     end
+	
     inst:Remove()
 end
 
@@ -340,7 +342,6 @@ local function stump_fn()
     MakeSmallBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(stump_startburn)
     inst.components.burnable:SetOnBurntFn(stump_burnt)
-	
 	MakeSmallPropagator(inst)
 
     inst.OnSave = stump_onsave

@@ -157,7 +157,7 @@ local function createbush(name, inspectname, berryname, master_postinit)
 		local minimap = inst.entity:AddMiniMapEntity()
 		minimap:SetIcon("kyno_coffeebush.tex")
 
-        MakeSmallObstaclePhysics(inst, .01)
+        MakeSmallObstaclePhysics(inst, .1)
 
         inst.AnimState:SetBank("coffeebush")
         inst.AnimState:SetBuild("coffeebush")

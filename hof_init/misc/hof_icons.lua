@@ -437,7 +437,12 @@ if _G.TheNet:GetIsMasterSimulation() then
 	--"nukacola_quantum"
 	"livingsandwich",
 	"duriansplit",
-	"duriansoup"}) do
+	"duriansoup",
+	"lunarsoup",
+	"purplewobstersoup",
+	"wobstermonster",
+	"durianmeated",
+	"durianchicken"}) do
         local foods_name = foods
         AddPrefabPostInit(foods_name, function(inst)
             inst.components.inventoryitem.imagename = foods_name

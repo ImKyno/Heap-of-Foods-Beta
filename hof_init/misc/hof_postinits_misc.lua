@@ -27,6 +27,7 @@ AddClassPostConstruct("screens/consolescreen", function(self)
 			"hofjars",
 			"hofretrofitserenityisland",
 			"hofretrofitmeadowisland",
+			"hofmonsterfoods",
 		}
 		local dictionary = self.console_edit.prediction_widget.word_predictor.dictionaries[3]
 		for k, word in pairs(hof_commands) do
@@ -375,4 +376,13 @@ AddComponentPostInit("locomotor", function(inst)
 			self.groundspeedmultiplier = self.fastmultiplier
 		end
 	end
+end)
+
+-- inst.components.debuffable:RemoveAllDebuffs()
+AddComponentPostInit("debuffable", function(self)
+    function self:RemoveAllDebuffs()
+        for name, _ in pairs(self.debuffs) do
+            self:RemoveDebuff(name)
+        end
+    end
 end)
