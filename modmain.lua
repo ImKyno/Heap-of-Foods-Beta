@@ -63,9 +63,4 @@ local atlas = (src and src.components.inventoryitem and src.components.inventory
 and resolvefilepath(src.components.inventoryitem.atlasname)) or "images/inventoryimages.xml"
 
 -- This belongs to the Accomplishments Mod.
---[[
-if (_G.KnownModIndex:IsModEnabled("Accomplishments-DST") and _G.KnownModIndex:IsModEnabled("Heap-of-Foods-Workshop")) or
-(_G.TheKaAchievementLoader ~= nil and TheNet:GetServerGameMode() == "") then
-	modimport("achievementsmain")
-end
-]]--
+modimport("achievementsmain")

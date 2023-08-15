@@ -5,11 +5,12 @@ local resolvefilepath 	= _G.resolvefilepath
 local ACTIONS 			= _G.ACTIONS
 local STRINGS			= _G.STRINGS
 local SpawnPrefab		= _G.SpawnPrefab
+local cooking           = require("cooking")
 
 require("hof_debugcommands")
 
 -- Commands for testing.
-AddClassPostConstruct("screens/consolescreen", function(self)
+local function HofCommandsPostConstruct(self)
 	if self.console_edit then
 		local hof_commands = 
 		{
@@ -34,7 +35,9 @@ AddClassPostConstruct("screens/consolescreen", function(self)
 			table.insert(dictionary.words, word)
 		end
 	end
-end)
+end
+
+AddClassPostConstruct("screens/consolescreen", HofCommandsPostConstruct)
 
 -- Favorite Mod Foods.
 AddPrefabPostInit("wilson", function(inst)
