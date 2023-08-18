@@ -28,7 +28,7 @@ end)
 ACTIONS.SALT.mount_valid = true
 
 AddComponentAction("USEITEM", "salter", function(inst, doer, target, actions)
-	if target:HasTag("saltable") then
+	if target:HasTag("saltable") and not target:HasTag("saltedfood") then
 		table.insert(actions, ACTIONS.SALT)
 	end
 end)

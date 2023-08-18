@@ -70,6 +70,7 @@ function Saltable:AddSalt()
     local inc = 1 / (stackable and stackable.stacksize or 1)
     self.saltlevel = math.min(self.saltlevel + inc, 1)
     self:UpdatePerishable()
+	self.inst:AddTag("saltedfood")
 end
 
 function Saltable:GetSanityModifier(eater, basevalue)
@@ -89,6 +90,26 @@ end
 
 function Saltable:CanSalt()
     return self.saltlevel == 0
+end
+
+function Saltable:OnSave()
+	local data =
+	{
+		issalted = self.inst:HasTag("saltedfood"),
+	}
+	return data 
+end
+
+function Saltable:OnLoad(data)
+	if data == nil then
+        return
+    end
+	
+	self.issalted = data.issalted
+	
+	if self.issalted then
+		self.inst:AddTag("saltedfood")
+	end
 end
 
 return Saltable

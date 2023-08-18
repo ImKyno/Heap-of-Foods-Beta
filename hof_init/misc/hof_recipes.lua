@@ -133,19 +133,7 @@ AddRecipe2("kyno_flour", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.MEALING_O
 	},
 	{"CRAFTING_STATION"}
 )
---[[
-AddRecipe2("kyno_sugar", {Ingredient("kyno_sugartree_petals", 2, ModAtlas)}, TECH.MEALING_ONE,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,		
-		actionstr 			= "MEALGRINDER", 
-		numtogive 			= 3, 
-		atlas 				= ModAtlas, 
-		image 				= "kyno_sugar.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-]]--
+
 AddRecipe2("kyno_spotspice", {Ingredient("kyno_spotspice_leaf", 2, ModAtlas)}, TECH.MEALING_ONE, 
 	{
 		nounlock 			= true,
@@ -191,6 +179,18 @@ AddRecipe2("kyno_oil", {Ingredient("corn", 1), Ingredient("seeds", 1), Ingredien
 		numtogive			= 3,
 		atlas				= ModAtlas,
 		image				= "kyno_oil.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+AddRecipe2("kyno_sugar", {Ingredient("kyno_sugartree_petals", 2, ModAtlas)}, TECH.MEALING_ONE,
+	{
+		nounlock 			= true,
+		no_deconstruction   = true,		
+		actionstr 			= "MEALGRINDER", 
+		numtogive 			= 3, 
+		atlas 				= ModAtlas, 
+		image 				= "kyno_sugar.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -616,21 +616,7 @@ if WARLY_MEALGRINDER == 1 then
 		},
 		{"CRAFTING_STATION"}
 	)
-	--[[
-	AddRecipe2("kyno_sugar_w", {Ingredient("kyno_sugartree_petals", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE,
-		{
-			nounlock 			= true,
-			no_deconstruction   = true,
-			actionstr 			= "MEALGRINDER", 
-			product				= "kyno_sugar",
-			builder_tag         = "professionalchef",
-			numtogive 			= 3, 
-			atlas 				= ModAtlas, 
-			image 				= "kyno_sugar.tex",
-		},
-		{"CRAFTING_STATION"}
-	)
-	]]--
+	
 	AddRecipe2("kyno_spotspice_w", {Ingredient("kyno_spotspice_leaf", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE, 
 		{
 			nounlock 			= true,
@@ -685,6 +671,20 @@ if WARLY_MEALGRINDER == 1 then
 			image				= "kyno_oil.tex",
 		},
 	{"CRAFTING_STATION"}
+	)
+	
+	AddRecipe2("kyno_sugar_w", {Ingredient("kyno_sugartree_petals", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+		{
+			nounlock 			= true,
+			no_deconstruction   = true,
+			actionstr 			= "MEALGRINDER", 
+			product				= "kyno_sugar",
+			builder_tag         = "professionalchef",
+			numtogive 			= 3, 
+			atlas 				= ModAtlas, 
+			image 				= "kyno_sugar.tex",
+		},
+		{"CRAFTING_STATION"}
 	)
 end
 

@@ -4,7 +4,7 @@
 <version>4</version>
 <eventgroup_nextid>0</eventgroup_nextid>
 <soundbank_nextid>1</soundbank_nextid>
-<sounddef_nextid>19</sounddef_nextid>
+<sounddef_nextid>21</sounddef_nextid>
 <build_project>1</build_project>
 <build_headerfile>0</build_headerfile>
 <build_banklists>0</build_banklists>
@@ -164,7 +164,7 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/Antchest_Place.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/Antchest_Place.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -203,49 +203,49 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_1.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_1.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_2.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_2.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_3.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_3.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_4.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_4.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_5.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_5.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_6.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_6.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_7.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_7.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_8.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_8.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -284,61 +284,61 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_01.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_02.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_03.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_04.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_05.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_05.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_06.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_06.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_07.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_07.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_08.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_08.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_09.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_09.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_10.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_10.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -377,31 +377,31 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_Takeoff_DS_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_Takeoff_DS_01.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/Kingfisher_TakeOff_DS_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/Kingfisher_TakeOff_DS_01.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/Kingfisher_TakeOff_DS_02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/Kingfisher_TakeOff_DS_02.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/Kingfisher_TakeOff_DS_03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/Kingfisher_TakeOff_DS_03.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/Kingfisher_TakeOff_DS_04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/Kingfisher_TakeOff_DS_04.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -440,37 +440,37 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_DS_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_DS_01.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_DS_02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_DS_02.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_DS_03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_DS_03.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_DS_04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_DS_04.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_DS_05.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_DS_05.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_DS_06.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_DS_06.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -509,97 +509,97 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_01.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_02.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_03.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_04.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_05.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_05.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_06.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_06.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_07.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_07.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_08.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_08.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_09.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_09.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_10.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_10.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_11.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_11.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_12.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_12.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_13.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_13.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_14.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_14.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_15.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_15.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_16.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_16.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -638,61 +638,61 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_01.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_02.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_03.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_04.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_05.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_05.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_06.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_06.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_07.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_07.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_08.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_08.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_09.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_09.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_10.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_10.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -731,73 +731,73 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko01.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko02.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko03.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko04.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko05.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko05.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko06.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko06.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko07.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko07.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko08.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko08.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko09.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko09.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko10.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko10.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko11.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko11.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko12.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko12.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -836,73 +836,73 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko01.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko02.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko03.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko04.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko05.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko05.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko06.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko06.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko07.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko07.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko08.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko08.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko09.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko09.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko10.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko10.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko11.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko11.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko12.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko12.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -941,61 +941,61 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_01.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_02.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_03.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_04.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_05.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_05.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_06.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_06.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_07.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_07.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_08.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_08.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_09.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_09.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_10.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_10.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -1034,7 +1034,7 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/DSS_tuna_can.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/DSS_tuna_can.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -1073,13 +1073,91 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/GP_LAUGH_1.mp3</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/GP_LAUGH_1.mp3</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/GP_LAUGH_2.mp3</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/GP_LAUGH_2.mp3</filename>
+<soundbankname>hof_sfx</soundbankname>
+<weight>100</weight>
+<percentagelocked>0</percentagelocked>
+</waveform>
+</sounddef>
+<sounddef>
+<name>/__simpleevent_sounddef__/drink1_19</name>
+<guid>{fb784451-be8c-4586-bb38-b5801cc33e73}</guid>
+<type>randomnorepeat</type>
+<playlistmode>0</playlistmode>
+<randomrepeatsounds>0</randomrepeatsounds>
+<randomrepeatsilences>0</randomrepeatsilences>
+<shuffleglobal>0</shuffleglobal>
+<sequentialrememberposition>0</sequentialrememberposition>
+<sequentialglobal>0</sequentialglobal>
+<spawntime_min>0</spawntime_min>
+<spawntime_max>0</spawntime_max>
+<spawn_max>1</spawn_max>
+<mode>0</mode>
+<pitch>0</pitch>
+<pitch_randmethod>1</pitch_randmethod>
+<pitch_random_min>0</pitch_random_min>
+<pitch_random_max>0</pitch_random_max>
+<pitch_randomization>0</pitch_randomization>
+<pitch_recalculate>0</pitch_recalculate>
+<volume_db>0</volume_db>
+<volume_randmethod>1</volume_randmethod>
+<volume_random_min>0</volume_random_min>
+<volume_random_max>0</volume_random_max>
+<volume_randomization>0</volume_randomization>
+<position_randomization_min>0</position_randomization_min>
+<position_randomization>0</position_randomization>
+<trigger_delay_min>0</trigger_delay_min>
+<trigger_delay_max>0</trigger_delay_max>
+<spawncount>0</spawncount>
+<notes></notes>
+<entrylistmode>1</entrylistmode>
+<waveform>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/drink_nuka1.mp3</filename>
+<soundbankname>hof_sfx</soundbankname>
+<weight>100</weight>
+<percentagelocked>0</percentagelocked>
+</waveform>
+</sounddef>
+<sounddef>
+<name>/__simpleevent_sounddef__/drink2_20</name>
+<guid>{4cdfdd8f-342b-4cdd-92ef-eb7b723cfe82}</guid>
+<type>randomnorepeat</type>
+<playlistmode>0</playlistmode>
+<randomrepeatsounds>0</randomrepeatsounds>
+<randomrepeatsilences>0</randomrepeatsilences>
+<shuffleglobal>0</shuffleglobal>
+<sequentialrememberposition>0</sequentialrememberposition>
+<sequentialglobal>0</sequentialglobal>
+<spawntime_min>0</spawntime_min>
+<spawntime_max>0</spawntime_max>
+<spawn_max>1</spawn_max>
+<mode>0</mode>
+<pitch>0</pitch>
+<pitch_randmethod>1</pitch_randmethod>
+<pitch_random_min>0</pitch_random_min>
+<pitch_random_max>0</pitch_random_max>
+<pitch_randomization>0</pitch_randomization>
+<pitch_recalculate>0</pitch_recalculate>
+<volume_db>0</volume_db>
+<volume_randmethod>1</volume_randmethod>
+<volume_random_min>0</volume_random_min>
+<volume_random_max>0</volume_random_max>
+<volume_randomization>0</volume_randomization>
+<position_randomization_min>0</position_randomization_min>
+<position_randomization>0</position_randomization>
+<trigger_delay_min>0</trigger_delay_min>
+<trigger_delay_max>0</trigger_delay_max>
+<spawncount>0</spawncount>
+<notes></notes>
+<entrylistmode>1</entrylistmode>
+<waveform>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/drink_nuka2.mp3</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -1119,13 +1197,13 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/drawer1.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/drawer1.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/drawer2.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/drawer2.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -1164,7 +1242,7 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/dwop.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/dwop.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -1203,13 +1281,13 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/water_scoop1.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/water_scoop1.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/water_scoop2.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/water_scoop2.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -1248,13 +1326,13 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/water_scoop2.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/water_scoop2.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/water_scoop1.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/water_scoop1.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -1293,7 +1371,7 @@
 <notes></notes>
 <entrylistmode>1</entrylistmode>
 <waveform>
-<filename>../backup/thumper sounds/barrelBreak.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/barrelBreak.wav</filename>
 <soundbankname>hof_sfx</soundbankname>
 <weight>100</weight>
 <percentagelocked>0</percentagelocked>
@@ -2687,6 +2765,392 @@
 <priority>-1</priority>
 <sound>
 <name>/__simpleevent_sounddef__/laugh_18</name>
+<x>0</x>
+<width>1</width>
+<startmode>0</startmode>
+<loopmode>1</loopmode>
+<loopcount2>-1</loopcount2>
+<autopitchenabled>0</autopitchenabled>
+<autopitchparameter>0</autopitchparameter>
+<autopitchreference>0</autopitchreference>
+<autopitchatzero>0</autopitchatzero>
+<finetune>0</finetune>
+<volume>1</volume>
+<fadeintype>0</fadeintype>
+<fadeouttype>0</fadeouttype>
+</sound>
+<_PC_enable>1</_PC_enable>
+<_XBOX360_enable>1</_XBOX360_enable>
+<_PSP_enable>1</_PSP_enable>
+<_PS3_enable>1</_PS3_enable>
+<_WII_enable>1</_WII_enable>
+<_WiiU_enable>1</_WiiU_enable>
+<_3DS_enable>1</_3DS_enable>
+<_NGP_enable>1</_NGP_enable>
+<_ANDROID_enable>1</_ANDROID_enable>
+<_IOS_enable>1</_IOS_enable>
+</layer>
+<car_rpm>0</car_rpm>
+<car_rpmsmooth>0.075</car_rpmsmooth>
+<car_loadsmooth>0.05</car_loadsmooth>
+<car_loadscale>6</car_loadscale>
+<volume_db>-7</volume_db>
+<pitch>0</pitch>
+<pitch_units>Octaves</pitch_units>
+<pitch_randomization>0</pitch_randomization>
+<pitch_randomization_units>Octaves</pitch_randomization_units>
+<volume_randomization>0</volume_randomization>
+<priority>128</priority>
+<maxplaybacks>100000</maxplaybacks>
+<maxplaybacks_behavior>Steal_oldest</maxplaybacks_behavior>
+<stealpriority>10000</stealpriority>
+<mode>x_2d</mode>
+<ignoregeometry>No</ignoregeometry>
+<rolloff>Logarithmic</rolloff>
+<mindistance>1</mindistance>
+<maxdistance>10000</maxdistance>
+<auto_distance_filtering>Off</auto_distance_filtering>
+<distance_filter_centre_freq>1500</distance_filter_centre_freq>
+<headrelative>World_relative</headrelative>
+<oneshot>Yes</oneshot>
+<istemplate>No</istemplate>
+<usetemplate></usetemplate>
+<notes></notes>
+<category>master</category>
+<position_randomization_min>0</position_randomization_min>
+<position_randomization>0</position_randomization>
+<speaker_l>1</speaker_l>
+<speaker_c>0</speaker_c>
+<speaker_r>1</speaker_r>
+<speaker_ls>0</speaker_ls>
+<speaker_rs>0</speaker_rs>
+<speaker_lb>0</speaker_lb>
+<speaker_rb>0</speaker_rb>
+<speaker_lfe>0</speaker_lfe>
+<speaker_config>0</speaker_config>
+<speaker_pan_r>1</speaker_pan_r>
+<speaker_pan_theta>0</speaker_pan_theta>
+<cone_inside_angle>360</cone_inside_angle>
+<cone_outside_angle>360</cone_outside_angle>
+<cone_outside_volumedb>0</cone_outside_volumedb>
+<doppler_scale>1</doppler_scale>
+<reverbdrylevel_db>0</reverbdrylevel_db>
+<reverblevel_db>0</reverblevel_db>
+<speaker_spread>0</speaker_spread>
+<panlevel3d>1</panlevel3d>
+<fadein_time>0</fadein_time>
+<fadeout_time>0</fadeout_time>
+<spawn_intensity>1</spawn_intensity>
+<spawn_intensity_randomization>0</spawn_intensity_randomization>
+<TEMPLATE_PROP_LAYERS>1</TEMPLATE_PROP_LAYERS>
+<TEMPLATE_PROP_KEEP_EFFECTS_PARAMS>1</TEMPLATE_PROP_KEEP_EFFECTS_PARAMS>
+<TEMPLATE_PROP_VOLUME>0</TEMPLATE_PROP_VOLUME>
+<TEMPLATE_PROP_PITCH>1</TEMPLATE_PROP_PITCH>
+<TEMPLATE_PROP_PITCH_RANDOMIZATION>1</TEMPLATE_PROP_PITCH_RANDOMIZATION>
+<TEMPLATE_PROP_VOLUME_RANDOMIZATION>1</TEMPLATE_PROP_VOLUME_RANDOMIZATION>
+<TEMPLATE_PROP_PRIORITY>1</TEMPLATE_PROP_PRIORITY>
+<TEMPLATE_PROP_MAX_PLAYBACKS>1</TEMPLATE_PROP_MAX_PLAYBACKS>
+<TEMPLATE_PROP_MAX_PLAYBACKS_BEHAVIOR>1</TEMPLATE_PROP_MAX_PLAYBACKS_BEHAVIOR>
+<TEMPLATE_PROP_STEAL_PRIORITY>1</TEMPLATE_PROP_STEAL_PRIORITY>
+<TEMPLATE_PROP_MODE>1</TEMPLATE_PROP_MODE>
+<TEMPLATE_PROP_IGNORE_GEOMETRY>1</TEMPLATE_PROP_IGNORE_GEOMETRY>
+<TEMPLATE_PROP_X_3D_ROLLOFF>1</TEMPLATE_PROP_X_3D_ROLLOFF>
+<TEMPLATE_PROP_X_3D_MIN_DISTANCE>1</TEMPLATE_PROP_X_3D_MIN_DISTANCE>
+<TEMPLATE_PROP_X_3D_MAX_DISTANCE>1</TEMPLATE_PROP_X_3D_MAX_DISTANCE>
+<TEMPLATE_PROP_X_3D_POSITION>1</TEMPLATE_PROP_X_3D_POSITION>
+<TEMPLATE_PROP_X_3D_MIN_POSITION_RANDOMIZATION>1</TEMPLATE_PROP_X_3D_MIN_POSITION_RANDOMIZATION>
+<TEMPLATE_PROP_X_3D_POSITION_RANDOMIZATION>1</TEMPLATE_PROP_X_3D_POSITION_RANDOMIZATION>
+<TEMPLATE_PROP_X_3D_CONE_INSIDE_ANGLE>1</TEMPLATE_PROP_X_3D_CONE_INSIDE_ANGLE>
+<TEMPLATE_PROP_X_3D_CONE_OUTSIDE_ANGLE>1</TEMPLATE_PROP_X_3D_CONE_OUTSIDE_ANGLE>
+<TEMPLATE_PROP_X_3D_CONE_OUTSIDE_VOLUME>1</TEMPLATE_PROP_X_3D_CONE_OUTSIDE_VOLUME>
+<TEMPLATE_PROP_X_3D_DOPPLER_FACTOR>1</TEMPLATE_PROP_X_3D_DOPPLER_FACTOR>
+<TEMPLATE_PROP_REVERB_WET_LEVEL>1</TEMPLATE_PROP_REVERB_WET_LEVEL>
+<TEMPLATE_PROP_REVERB_DRY_LEVEL>1</TEMPLATE_PROP_REVERB_DRY_LEVEL>
+<TEMPLATE_PROP_X_3D_SPEAKER_SPREAD>1</TEMPLATE_PROP_X_3D_SPEAKER_SPREAD>
+<TEMPLATE_PROP_X_3D_PAN_LEVEL>1</TEMPLATE_PROP_X_3D_PAN_LEVEL>
+<TEMPLATE_PROP_X_2D_SPEAKER_L>1</TEMPLATE_PROP_X_2D_SPEAKER_L>
+<TEMPLATE_PROP_X_2D_SPEAKER_C>1</TEMPLATE_PROP_X_2D_SPEAKER_C>
+<TEMPLATE_PROP_X_2D_SPEAKER_R>1</TEMPLATE_PROP_X_2D_SPEAKER_R>
+<TEMPLATE_PROP_X_2D_SPEAKER_LS>1</TEMPLATE_PROP_X_2D_SPEAKER_LS>
+<TEMPLATE_PROP_X_2D_SPEAKER_RS>1</TEMPLATE_PROP_X_2D_SPEAKER_RS>
+<TEMPLATE_PROP_X_2D_SPEAKER_LR>1</TEMPLATE_PROP_X_2D_SPEAKER_LR>
+<TEMPLATE_PROP_X_2D_SPEAKER_RR>1</TEMPLATE_PROP_X_2D_SPEAKER_RR>
+<TEMPLATE_PROP_X_SPEAKER_LFE>1</TEMPLATE_PROP_X_SPEAKER_LFE>
+<TEMPLATE_PROP_ONESHOT>1</TEMPLATE_PROP_ONESHOT>
+<TEMPLATE_PROP_FADEIN_TIME>1</TEMPLATE_PROP_FADEIN_TIME>
+<TEMPLATE_PROP_FADEOUT_TIME>1</TEMPLATE_PROP_FADEOUT_TIME>
+<TEMPLATE_PROP_NOTES>1</TEMPLATE_PROP_NOTES>
+<TEMPLATE_PROP_USER_PROPERTIES>1</TEMPLATE_PROP_USER_PROPERTIES>
+<TEMPLATE_PROP_CATEGORY>0</TEMPLATE_PROP_CATEGORY>
+<_PC_enabled>1</_PC_enabled>
+<_XBOX360_enabled>1</_XBOX360_enabled>
+<_PSP_enabled>1</_PSP_enabled>
+<_PS3_enabled>1</_PS3_enabled>
+<_WII_enabled>1</_WII_enabled>
+<_WiiU_enabled>1</_WiiU_enabled>
+<_3DS_enabled>1</_3DS_enabled>
+<_NGP_enabled>1</_NGP_enabled>
+<_ANDROID_enabled>1</_ANDROID_enabled>
+<_IOS_enabled>1</_IOS_enabled>
+</event>
+<playcount>0</playcount>
+<loopcount>0</loopcount>
+<queuedsounds>1</queuedsounds>
+<polyphony>1</polyphony>
+<totalgrains>0</totalgrains>
+<mingraininterval>1</mingraininterval>
+<maxgraininterval>1</maxgraininterval>
+<randomrepeatsounds>0</randomrepeatsounds>
+<randomrepeatsilences>0</randomrepeatsilences>
+<shuffleglobal>0</shuffleglobal>
+<sequentialrememberposition>0</sequentialrememberposition>
+<sequentialglobal>0</sequentialglobal>
+<bankname>hof_sfx</bankname>
+<_PC_resamplemode>Off</_PC_resamplemode>
+<_PC_automaticsampleratepercentage>100</_PC_automaticsampleratepercentage>
+<_PC_fixedsamplerate>48000</_PC_fixedsamplerate>
+<_XBOX360_resamplemode>Off</_XBOX360_resamplemode>
+<_XBOX360_automaticsampleratepercentage>100</_XBOX360_automaticsampleratepercentage>
+<_XBOX360_fixedsamplerate>48000</_XBOX360_fixedsamplerate>
+<_PSP_resamplemode>Off</_PSP_resamplemode>
+<_PSP_automaticsampleratepercentage>100</_PSP_automaticsampleratepercentage>
+<_PSP_fixedsamplerate>48000</_PSP_fixedsamplerate>
+<_PS3_resamplemode>Off</_PS3_resamplemode>
+<_PS3_automaticsampleratepercentage>100</_PS3_automaticsampleratepercentage>
+<_PS3_fixedsamplerate>48000</_PS3_fixedsamplerate>
+<_WII_resamplemode>Off</_WII_resamplemode>
+<_WII_automaticsampleratepercentage>100</_WII_automaticsampleratepercentage>
+<_WII_fixedsamplerate>48000</_WII_fixedsamplerate>
+<_WiiU_resamplemode>Off</_WiiU_resamplemode>
+<_WiiU_automaticsampleratepercentage>100</_WiiU_automaticsampleratepercentage>
+<_WiiU_fixedsamplerate>48000</_WiiU_fixedsamplerate>
+<_3DS_resamplemode>Off</_3DS_resamplemode>
+<_3DS_automaticsampleratepercentage>100</_3DS_automaticsampleratepercentage>
+<_3DS_fixedsamplerate>48000</_3DS_fixedsamplerate>
+<_NGP_resamplemode>Off</_NGP_resamplemode>
+<_NGP_automaticsampleratepercentage>100</_NGP_automaticsampleratepercentage>
+<_NGP_fixedsamplerate>48000</_NGP_fixedsamplerate>
+<_ANDROID_resamplemode>Off</_ANDROID_resamplemode>
+<_ANDROID_automaticsampleratepercentage>100</_ANDROID_automaticsampleratepercentage>
+<_ANDROID_fixedsamplerate>48000</_ANDROID_fixedsamplerate>
+<_IOS_resamplemode>Off</_IOS_resamplemode>
+<_IOS_automaticsampleratepercentage>100</_IOS_automaticsampleratepercentage>
+<_IOS_fixedsamplerate>48000</_IOS_fixedsamplerate>
+</simpleevent>
+</eventgroup>
+<eventgroup>
+<name>nukacola</name>
+<guid>{d5a288b5-fb75-4b74-af02-1936fe502259}</guid>
+<eventgroup_nextid>0</eventgroup_nextid>
+<event_nextid>0</event_nextid>
+<open>1</open>
+<notes></notes>
+<simpleevent>
+<event>
+<name>drink1</name>
+<guid>{312874b0-1e82-424e-ab9a-a41134707e1c}</guid>
+<parameter_nextid>0</parameter_nextid>
+<layer_nextid>1</layer_nextid>
+<layer>
+<name>layer00</name>
+<height>100</height>
+<envelope_nextid>0</envelope_nextid>
+<mute>0</mute>
+<solo>0</solo>
+<soundlock>0</soundlock>
+<envlock>0</envlock>
+<priority>-1</priority>
+<sound>
+<name>/__simpleevent_sounddef__/drink1_19</name>
+<x>0</x>
+<width>1</width>
+<startmode>0</startmode>
+<loopmode>1</loopmode>
+<loopcount2>-1</loopcount2>
+<autopitchenabled>0</autopitchenabled>
+<autopitchparameter>0</autopitchparameter>
+<autopitchreference>0</autopitchreference>
+<autopitchatzero>0</autopitchatzero>
+<finetune>0</finetune>
+<volume>1</volume>
+<fadeintype>0</fadeintype>
+<fadeouttype>0</fadeouttype>
+</sound>
+<_PC_enable>1</_PC_enable>
+<_XBOX360_enable>1</_XBOX360_enable>
+<_PSP_enable>1</_PSP_enable>
+<_PS3_enable>1</_PS3_enable>
+<_WII_enable>1</_WII_enable>
+<_WiiU_enable>1</_WiiU_enable>
+<_3DS_enable>1</_3DS_enable>
+<_NGP_enable>1</_NGP_enable>
+<_ANDROID_enable>1</_ANDROID_enable>
+<_IOS_enable>1</_IOS_enable>
+</layer>
+<car_rpm>0</car_rpm>
+<car_rpmsmooth>0.075</car_rpmsmooth>
+<car_loadsmooth>0.05</car_loadsmooth>
+<car_loadscale>6</car_loadscale>
+<volume_db>-7</volume_db>
+<pitch>0</pitch>
+<pitch_units>Octaves</pitch_units>
+<pitch_randomization>0</pitch_randomization>
+<pitch_randomization_units>Octaves</pitch_randomization_units>
+<volume_randomization>0</volume_randomization>
+<priority>128</priority>
+<maxplaybacks>100000</maxplaybacks>
+<maxplaybacks_behavior>Steal_oldest</maxplaybacks_behavior>
+<stealpriority>10000</stealpriority>
+<mode>x_2d</mode>
+<ignoregeometry>No</ignoregeometry>
+<rolloff>Logarithmic</rolloff>
+<mindistance>1</mindistance>
+<maxdistance>10000</maxdistance>
+<auto_distance_filtering>Off</auto_distance_filtering>
+<distance_filter_centre_freq>1500</distance_filter_centre_freq>
+<headrelative>World_relative</headrelative>
+<oneshot>Yes</oneshot>
+<istemplate>No</istemplate>
+<usetemplate></usetemplate>
+<notes></notes>
+<category>master</category>
+<position_randomization_min>0</position_randomization_min>
+<position_randomization>0</position_randomization>
+<speaker_l>1</speaker_l>
+<speaker_c>0</speaker_c>
+<speaker_r>1</speaker_r>
+<speaker_ls>0</speaker_ls>
+<speaker_rs>0</speaker_rs>
+<speaker_lb>0</speaker_lb>
+<speaker_rb>0</speaker_rb>
+<speaker_lfe>0</speaker_lfe>
+<speaker_config>0</speaker_config>
+<speaker_pan_r>1</speaker_pan_r>
+<speaker_pan_theta>0</speaker_pan_theta>
+<cone_inside_angle>360</cone_inside_angle>
+<cone_outside_angle>360</cone_outside_angle>
+<cone_outside_volumedb>0</cone_outside_volumedb>
+<doppler_scale>1</doppler_scale>
+<reverbdrylevel_db>0</reverbdrylevel_db>
+<reverblevel_db>0</reverblevel_db>
+<speaker_spread>0</speaker_spread>
+<panlevel3d>1</panlevel3d>
+<fadein_time>0</fadein_time>
+<fadeout_time>0</fadeout_time>
+<spawn_intensity>1</spawn_intensity>
+<spawn_intensity_randomization>0</spawn_intensity_randomization>
+<TEMPLATE_PROP_LAYERS>1</TEMPLATE_PROP_LAYERS>
+<TEMPLATE_PROP_KEEP_EFFECTS_PARAMS>1</TEMPLATE_PROP_KEEP_EFFECTS_PARAMS>
+<TEMPLATE_PROP_VOLUME>0</TEMPLATE_PROP_VOLUME>
+<TEMPLATE_PROP_PITCH>1</TEMPLATE_PROP_PITCH>
+<TEMPLATE_PROP_PITCH_RANDOMIZATION>1</TEMPLATE_PROP_PITCH_RANDOMIZATION>
+<TEMPLATE_PROP_VOLUME_RANDOMIZATION>1</TEMPLATE_PROP_VOLUME_RANDOMIZATION>
+<TEMPLATE_PROP_PRIORITY>1</TEMPLATE_PROP_PRIORITY>
+<TEMPLATE_PROP_MAX_PLAYBACKS>1</TEMPLATE_PROP_MAX_PLAYBACKS>
+<TEMPLATE_PROP_MAX_PLAYBACKS_BEHAVIOR>1</TEMPLATE_PROP_MAX_PLAYBACKS_BEHAVIOR>
+<TEMPLATE_PROP_STEAL_PRIORITY>1</TEMPLATE_PROP_STEAL_PRIORITY>
+<TEMPLATE_PROP_MODE>1</TEMPLATE_PROP_MODE>
+<TEMPLATE_PROP_IGNORE_GEOMETRY>1</TEMPLATE_PROP_IGNORE_GEOMETRY>
+<TEMPLATE_PROP_X_3D_ROLLOFF>1</TEMPLATE_PROP_X_3D_ROLLOFF>
+<TEMPLATE_PROP_X_3D_MIN_DISTANCE>1</TEMPLATE_PROP_X_3D_MIN_DISTANCE>
+<TEMPLATE_PROP_X_3D_MAX_DISTANCE>1</TEMPLATE_PROP_X_3D_MAX_DISTANCE>
+<TEMPLATE_PROP_X_3D_POSITION>1</TEMPLATE_PROP_X_3D_POSITION>
+<TEMPLATE_PROP_X_3D_MIN_POSITION_RANDOMIZATION>1</TEMPLATE_PROP_X_3D_MIN_POSITION_RANDOMIZATION>
+<TEMPLATE_PROP_X_3D_POSITION_RANDOMIZATION>1</TEMPLATE_PROP_X_3D_POSITION_RANDOMIZATION>
+<TEMPLATE_PROP_X_3D_CONE_INSIDE_ANGLE>1</TEMPLATE_PROP_X_3D_CONE_INSIDE_ANGLE>
+<TEMPLATE_PROP_X_3D_CONE_OUTSIDE_ANGLE>1</TEMPLATE_PROP_X_3D_CONE_OUTSIDE_ANGLE>
+<TEMPLATE_PROP_X_3D_CONE_OUTSIDE_VOLUME>1</TEMPLATE_PROP_X_3D_CONE_OUTSIDE_VOLUME>
+<TEMPLATE_PROP_X_3D_DOPPLER_FACTOR>1</TEMPLATE_PROP_X_3D_DOPPLER_FACTOR>
+<TEMPLATE_PROP_REVERB_WET_LEVEL>1</TEMPLATE_PROP_REVERB_WET_LEVEL>
+<TEMPLATE_PROP_REVERB_DRY_LEVEL>1</TEMPLATE_PROP_REVERB_DRY_LEVEL>
+<TEMPLATE_PROP_X_3D_SPEAKER_SPREAD>1</TEMPLATE_PROP_X_3D_SPEAKER_SPREAD>
+<TEMPLATE_PROP_X_3D_PAN_LEVEL>1</TEMPLATE_PROP_X_3D_PAN_LEVEL>
+<TEMPLATE_PROP_X_2D_SPEAKER_L>1</TEMPLATE_PROP_X_2D_SPEAKER_L>
+<TEMPLATE_PROP_X_2D_SPEAKER_C>1</TEMPLATE_PROP_X_2D_SPEAKER_C>
+<TEMPLATE_PROP_X_2D_SPEAKER_R>1</TEMPLATE_PROP_X_2D_SPEAKER_R>
+<TEMPLATE_PROP_X_2D_SPEAKER_LS>1</TEMPLATE_PROP_X_2D_SPEAKER_LS>
+<TEMPLATE_PROP_X_2D_SPEAKER_RS>1</TEMPLATE_PROP_X_2D_SPEAKER_RS>
+<TEMPLATE_PROP_X_2D_SPEAKER_LR>1</TEMPLATE_PROP_X_2D_SPEAKER_LR>
+<TEMPLATE_PROP_X_2D_SPEAKER_RR>1</TEMPLATE_PROP_X_2D_SPEAKER_RR>
+<TEMPLATE_PROP_X_SPEAKER_LFE>1</TEMPLATE_PROP_X_SPEAKER_LFE>
+<TEMPLATE_PROP_ONESHOT>1</TEMPLATE_PROP_ONESHOT>
+<TEMPLATE_PROP_FADEIN_TIME>1</TEMPLATE_PROP_FADEIN_TIME>
+<TEMPLATE_PROP_FADEOUT_TIME>1</TEMPLATE_PROP_FADEOUT_TIME>
+<TEMPLATE_PROP_NOTES>1</TEMPLATE_PROP_NOTES>
+<TEMPLATE_PROP_USER_PROPERTIES>1</TEMPLATE_PROP_USER_PROPERTIES>
+<TEMPLATE_PROP_CATEGORY>0</TEMPLATE_PROP_CATEGORY>
+<_PC_enabled>1</_PC_enabled>
+<_XBOX360_enabled>1</_XBOX360_enabled>
+<_PSP_enabled>1</_PSP_enabled>
+<_PS3_enabled>1</_PS3_enabled>
+<_WII_enabled>1</_WII_enabled>
+<_WiiU_enabled>1</_WiiU_enabled>
+<_3DS_enabled>1</_3DS_enabled>
+<_NGP_enabled>1</_NGP_enabled>
+<_ANDROID_enabled>1</_ANDROID_enabled>
+<_IOS_enabled>1</_IOS_enabled>
+</event>
+<playcount>0</playcount>
+<loopcount>0</loopcount>
+<queuedsounds>1</queuedsounds>
+<polyphony>1</polyphony>
+<totalgrains>0</totalgrains>
+<mingraininterval>1</mingraininterval>
+<maxgraininterval>1</maxgraininterval>
+<randomrepeatsounds>0</randomrepeatsounds>
+<randomrepeatsilences>0</randomrepeatsilences>
+<shuffleglobal>0</shuffleglobal>
+<sequentialrememberposition>0</sequentialrememberposition>
+<sequentialglobal>0</sequentialglobal>
+<bankname>hof_sfx</bankname>
+<_PC_resamplemode>Off</_PC_resamplemode>
+<_PC_automaticsampleratepercentage>100</_PC_automaticsampleratepercentage>
+<_PC_fixedsamplerate>48000</_PC_fixedsamplerate>
+<_XBOX360_resamplemode>Off</_XBOX360_resamplemode>
+<_XBOX360_automaticsampleratepercentage>100</_XBOX360_automaticsampleratepercentage>
+<_XBOX360_fixedsamplerate>48000</_XBOX360_fixedsamplerate>
+<_PSP_resamplemode>Off</_PSP_resamplemode>
+<_PSP_automaticsampleratepercentage>100</_PSP_automaticsampleratepercentage>
+<_PSP_fixedsamplerate>48000</_PSP_fixedsamplerate>
+<_PS3_resamplemode>Off</_PS3_resamplemode>
+<_PS3_automaticsampleratepercentage>100</_PS3_automaticsampleratepercentage>
+<_PS3_fixedsamplerate>48000</_PS3_fixedsamplerate>
+<_WII_resamplemode>Off</_WII_resamplemode>
+<_WII_automaticsampleratepercentage>100</_WII_automaticsampleratepercentage>
+<_WII_fixedsamplerate>48000</_WII_fixedsamplerate>
+<_WiiU_resamplemode>Off</_WiiU_resamplemode>
+<_WiiU_automaticsampleratepercentage>100</_WiiU_automaticsampleratepercentage>
+<_WiiU_fixedsamplerate>48000</_WiiU_fixedsamplerate>
+<_3DS_resamplemode>Off</_3DS_resamplemode>
+<_3DS_automaticsampleratepercentage>100</_3DS_automaticsampleratepercentage>
+<_3DS_fixedsamplerate>48000</_3DS_fixedsamplerate>
+<_NGP_resamplemode>Off</_NGP_resamplemode>
+<_NGP_automaticsampleratepercentage>100</_NGP_automaticsampleratepercentage>
+<_NGP_fixedsamplerate>48000</_NGP_fixedsamplerate>
+<_ANDROID_resamplemode>Off</_ANDROID_resamplemode>
+<_ANDROID_automaticsampleratepercentage>100</_ANDROID_automaticsampleratepercentage>
+<_ANDROID_fixedsamplerate>48000</_ANDROID_fixedsamplerate>
+<_IOS_resamplemode>Off</_IOS_resamplemode>
+<_IOS_automaticsampleratepercentage>100</_IOS_automaticsampleratepercentage>
+<_IOS_fixedsamplerate>48000</_IOS_fixedsamplerate>
+</simpleevent>
+<simpleevent>
+<event>
+<name>drink2</name>
+<guid>{a64a5e10-623e-4b83-8822-a79819f11145}</guid>
+<parameter_nextid>0</parameter_nextid>
+<layer_nextid>1</layer_nextid>
+<layer>
+<name>layer00</name>
+<height>100</height>
+<envelope_nextid>0</envelope_nextid>
+<mute>0</mute>
+<solo>0</solo>
+<soundlock>0</soundlock>
+<envlock>0</envlock>
+<priority>-1</priority>
+<sound>
+<name>/__simpleevent_sounddef__/drink2_20</name>
 <x>0</x>
 <width>1</width>
 <startmode>0</startmode>
@@ -4674,7 +5138,7 @@
 <_IOS_banktype>DecompressedSample</_IOS_banktype>
 <notes></notes>
 <waveform>
-<filename>../backup/thumper sounds/Antchest_Place.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/Antchest_Place.wav</filename>
 <guid>{797c5bc9-ec20-4e41-a9d4-f2063656ce1b}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -4719,7 +5183,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/DSS_tuna_can.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/DSS_tuna_can.wav</filename>
 <guid>{dfe70c46-5baf-4345-bd31-d894822bf7ef}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -4764,7 +5228,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/GP_LAUGH_1.mp3</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/GP_LAUGH_1.mp3</filename>
 <guid>{d8f6dcb9-60ff-47a7-9454-dec668161328}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -4809,7 +5273,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/GP_LAUGH_2.mp3</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/GP_LAUGH_2.mp3</filename>
 <guid>{178f2340-4332-4af2-a345-ca9fb9cd8e97}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -4854,7 +5318,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_DS_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_DS_01.wav</filename>
 <guid>{e31d0747-a786-4e57-8e2f-29593c937a79}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -4899,7 +5363,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_DS_02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_DS_02.wav</filename>
 <guid>{9640943b-febb-4061-b8b8-cad1a2629057}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -4944,7 +5408,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_DS_03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_DS_03.wav</filename>
 <guid>{644f4da5-a629-4f6b-bcbd-1e0d9b311252}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -4989,7 +5453,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_DS_04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_DS_04.wav</filename>
 <guid>{2363c151-e96a-4df5-8649-410afe444556}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5034,7 +5498,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_DS_05.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_DS_05.wav</filename>
 <guid>{f5480690-8b03-43af-a16f-c5e2f3b706c9}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5079,7 +5543,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_DS_06.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_DS_06.wav</filename>
 <guid>{b910de72-8095-498a-842c-d1bb1b4af718}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5124,7 +5588,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/King_Fisher_Chirp_Takeoff_DS_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/King_Fisher_Chirp_Takeoff_DS_01.wav</filename>
 <guid>{3ad66504-ba6e-4542-b218-fa6fff0960a8}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5169,7 +5633,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/Kingfisher_TakeOff_DS_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/Kingfisher_TakeOff_DS_01.wav</filename>
 <guid>{22acfd80-d9dd-4606-afd5-99b9a701ad94}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5214,7 +5678,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/Kingfisher_TakeOff_DS_02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/Kingfisher_TakeOff_DS_02.wav</filename>
 <guid>{c416a4f9-357f-429c-a545-d092ef6bb8b0}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5259,7 +5723,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/Kingfisher_TakeOff_DS_03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/Kingfisher_TakeOff_DS_03.wav</filename>
 <guid>{07b48085-4836-4e50-a972-914fd94f866e}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5304,7 +5768,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/Kingfisher_TakeOff_DS_04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/Kingfisher_TakeOff_DS_04.wav</filename>
 <guid>{ffb61733-1c2c-4508-a16d-4c8158f7c14b}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5349,7 +5813,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko01.wav</filename>
 <guid>{fda3aa2b-6556-43c0-b7be-6fe197ae63db}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5394,7 +5858,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko02.wav</filename>
 <guid>{392517b6-19d5-4b58-8a9e-1db07a00273a}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5439,7 +5903,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko03.wav</filename>
 <guid>{92c87da5-da97-4d96-91d9-2c6c1b1125d6}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5484,7 +5948,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko04.wav</filename>
 <guid>{8b6bc47c-6d74-43bf-aca4-16eae13e1117}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5529,7 +5993,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko05.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko05.wav</filename>
 <guid>{00af7485-a6bb-42ab-9daa-0e76caf3bc9d}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5574,7 +6038,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko06.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko06.wav</filename>
 <guid>{cc2e4a39-df66-40d4-86c2-ede281a5b4ce}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5619,7 +6083,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko07.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko07.wav</filename>
 <guid>{7483b076-6043-47cd-9770-d41022bb5f7b}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5664,7 +6128,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko08.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko08.wav</filename>
 <guid>{814fa405-28c6-410c-b765-cc6e6104bd9a}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5709,7 +6173,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko09.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko09.wav</filename>
 <guid>{49c89861-6c83-4266-b8fa-b31ef39aeee7}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5754,7 +6218,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko10.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko10.wav</filename>
 <guid>{d93e1601-6a02-44b3-801a-b165c30748e5}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5799,7 +6263,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko11.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko11.wav</filename>
 <guid>{86f86c7b-f721-4359-86e2-3aa86d463e38}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5844,7 +6308,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/atk_squirrel_piko12.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/atk_squirrel_piko12.wav</filename>
 <guid>{764cf6f8-6f01-4364-845a-bb9aff711336}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5889,7 +6353,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/barrelBreak.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/barrelBreak.wav</filename>
 <guid>{20155b16-0d9d-45d7-80ba-f2bcbf34f96c}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5934,7 +6398,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/drawer1.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/drawer1.wav</filename>
 <guid>{55533672-6640-4572-82c8-df7909bddb4c}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -5979,7 +6443,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/drawer2.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/drawer2.wav</filename>
 <guid>{5e97fc2c-5337-4d49-b6ff-6b3238472bcd}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6024,7 +6488,97 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/dwop.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/drink_nuka1.mp3</filename>
+<guid>{ff7b52e5-ab5f-404a-bd21-9af2a97446c9}</guid>
+<mindistance>1</mindistance>
+<maxdistance>10000</maxdistance>
+<deffreq>48000</deffreq>
+<defvol>1</defvol>
+<defpan>0</defpan>
+<defpri>128</defpri>
+<xmafiltering>0</xmafiltering>
+<channelmode>0</channelmode>
+<quality_crossplatform>0</quality_crossplatform>
+<quality>-1</quality>
+<_PC_resamplemode>0</_PC_resamplemode>
+<_PC_optimisedratereduction>100</_PC_optimisedratereduction>
+<_PC_fixedsamplerate>48000</_PC_fixedsamplerate>
+<_XBOX360_resamplemode>0</_XBOX360_resamplemode>
+<_XBOX360_optimisedratereduction>100</_XBOX360_optimisedratereduction>
+<_XBOX360_fixedsamplerate>48000</_XBOX360_fixedsamplerate>
+<_PSP_resamplemode>0</_PSP_resamplemode>
+<_PSP_optimisedratereduction>100</_PSP_optimisedratereduction>
+<_PSP_fixedsamplerate>48000</_PSP_fixedsamplerate>
+<_PS3_resamplemode>0</_PS3_resamplemode>
+<_PS3_optimisedratereduction>100</_PS3_optimisedratereduction>
+<_PS3_fixedsamplerate>48000</_PS3_fixedsamplerate>
+<_WII_resamplemode>0</_WII_resamplemode>
+<_WII_optimisedratereduction>100</_WII_optimisedratereduction>
+<_WII_fixedsamplerate>48000</_WII_fixedsamplerate>
+<_WiiU_resamplemode>0</_WiiU_resamplemode>
+<_WiiU_optimisedratereduction>100</_WiiU_optimisedratereduction>
+<_WiiU_fixedsamplerate>48000</_WiiU_fixedsamplerate>
+<_3DS_resamplemode>0</_3DS_resamplemode>
+<_3DS_optimisedratereduction>100</_3DS_optimisedratereduction>
+<_3DS_fixedsamplerate>48000</_3DS_fixedsamplerate>
+<_NGP_resamplemode>0</_NGP_resamplemode>
+<_NGP_optimisedratereduction>100</_NGP_optimisedratereduction>
+<_NGP_fixedsamplerate>48000</_NGP_fixedsamplerate>
+<_ANDROID_resamplemode>0</_ANDROID_resamplemode>
+<_ANDROID_optimisedratereduction>100</_ANDROID_optimisedratereduction>
+<_ANDROID_fixedsamplerate>48000</_ANDROID_fixedsamplerate>
+<_IOS_resamplemode>0</_IOS_resamplemode>
+<_IOS_optimisedratereduction>100</_IOS_optimisedratereduction>
+<_IOS_fixedsamplerate>48000</_IOS_fixedsamplerate>
+<notes></notes>
+</waveform>
+<waveform>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/drink_nuka2.mp3</filename>
+<guid>{09ae6bdd-bb6f-4930-a8e5-33993ab3c5ac}</guid>
+<mindistance>1</mindistance>
+<maxdistance>10000</maxdistance>
+<deffreq>48000</deffreq>
+<defvol>1</defvol>
+<defpan>0</defpan>
+<defpri>128</defpri>
+<xmafiltering>0</xmafiltering>
+<channelmode>0</channelmode>
+<quality_crossplatform>0</quality_crossplatform>
+<quality>-1</quality>
+<_PC_resamplemode>0</_PC_resamplemode>
+<_PC_optimisedratereduction>100</_PC_optimisedratereduction>
+<_PC_fixedsamplerate>48000</_PC_fixedsamplerate>
+<_XBOX360_resamplemode>0</_XBOX360_resamplemode>
+<_XBOX360_optimisedratereduction>100</_XBOX360_optimisedratereduction>
+<_XBOX360_fixedsamplerate>48000</_XBOX360_fixedsamplerate>
+<_PSP_resamplemode>0</_PSP_resamplemode>
+<_PSP_optimisedratereduction>100</_PSP_optimisedratereduction>
+<_PSP_fixedsamplerate>48000</_PSP_fixedsamplerate>
+<_PS3_resamplemode>0</_PS3_resamplemode>
+<_PS3_optimisedratereduction>100</_PS3_optimisedratereduction>
+<_PS3_fixedsamplerate>48000</_PS3_fixedsamplerate>
+<_WII_resamplemode>0</_WII_resamplemode>
+<_WII_optimisedratereduction>100</_WII_optimisedratereduction>
+<_WII_fixedsamplerate>48000</_WII_fixedsamplerate>
+<_WiiU_resamplemode>0</_WiiU_resamplemode>
+<_WiiU_optimisedratereduction>100</_WiiU_optimisedratereduction>
+<_WiiU_fixedsamplerate>48000</_WiiU_fixedsamplerate>
+<_3DS_resamplemode>0</_3DS_resamplemode>
+<_3DS_optimisedratereduction>100</_3DS_optimisedratereduction>
+<_3DS_fixedsamplerate>48000</_3DS_fixedsamplerate>
+<_NGP_resamplemode>0</_NGP_resamplemode>
+<_NGP_optimisedratereduction>100</_NGP_optimisedratereduction>
+<_NGP_fixedsamplerate>48000</_NGP_fixedsamplerate>
+<_ANDROID_resamplemode>0</_ANDROID_resamplemode>
+<_ANDROID_optimisedratereduction>100</_ANDROID_optimisedratereduction>
+<_ANDROID_fixedsamplerate>48000</_ANDROID_fixedsamplerate>
+<_IOS_resamplemode>0</_IOS_resamplemode>
+<_IOS_optimisedratereduction>100</_IOS_optimisedratereduction>
+<_IOS_fixedsamplerate>48000</_IOS_fixedsamplerate>
+<notes></notes>
+</waveform>
+<waveform>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/dwop.wav</filename>
 <guid>{13530b68-3ead-4808-9289-abe83e93396f}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6069,7 +6623,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_01.wav</filename>
 <guid>{74054c79-c9e4-42d3-88aa-c25d288d3f00}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6114,7 +6668,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_02.wav</filename>
 <guid>{e75a9fb6-a87f-40ec-8f92-4fe027fede15}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6159,7 +6713,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_03.wav</filename>
 <guid>{8defd44d-bff4-41d1-8614-290ece1e9358}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6204,7 +6758,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_04.wav</filename>
 <guid>{105e79ca-93c2-4607-a1d0-df6e96492a05}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6249,7 +6803,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_05.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_05.wav</filename>
 <guid>{19d84ce4-98f4-45c8-91ab-6dc2b4ba3a85}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6294,7 +6848,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_06.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_06.wav</filename>
 <guid>{fb3c4f4d-b9ca-4dd7-98ee-6ddf64e5b740}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6339,7 +6893,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_07.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_07.wav</filename>
 <guid>{3a06c132-a9e1-4200-90bb-2efe58797c75}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6384,7 +6938,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_08.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_08.wav</filename>
 <guid>{5ef642d1-0c9a-4556-91ca-7789b755df3e}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6429,7 +6983,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_09.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_09.wav</filename>
 <guid>{f6739134-5f5c-40c6-866e-9973952e7a49}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6474,7 +7028,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_10.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_10.wav</filename>
 <guid>{a233ac6d-4cf7-405c-9b55-4d798f8bbe75}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6519,7 +7073,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_11.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_11.wav</filename>
 <guid>{4d86fb10-1af6-40a3-92de-4a5f3a2e827c}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6564,7 +7118,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_12.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_12.wav</filename>
 <guid>{833476f0-9884-4a48-b613-4f220fb0afb0}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6609,7 +7163,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_13.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_13.wav</filename>
 <guid>{8d7d28e4-0618-434c-b803-1146207320c7}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6654,7 +7208,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_14.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_14.wav</filename>
 <guid>{31b4b92b-bfa4-49a6-ba4a-d8b0c7dc5717}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6699,7 +7253,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_15.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_15.wav</filename>
 <guid>{7619797e-da43-4de9-a19c-7a116df5b098}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6744,7 +7298,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/idle_squirrel_piko_16.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/idle_squirrel_piko_16.wav</filename>
 <guid>{9f642b2b-f9f9-41c4-bc06-3f630f339cfa}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6789,7 +7343,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_01.wav</filename>
 <guid>{baebeec8-7b00-41de-9ab0-e1304b514966}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6834,7 +7388,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_02.wav</filename>
 <guid>{414d4d6c-fa02-412e-8a32-24e9c04dd212}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6879,7 +7433,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_03.wav</filename>
 <guid>{c4b7981d-2287-418c-b3aa-be9ce8d2ef39}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6924,7 +7478,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_04.wav</filename>
 <guid>{724ee591-8ea4-4da4-bb89-0f1c193334b4}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -6969,7 +7523,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_05.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_05.wav</filename>
 <guid>{e9e375a9-e277-4751-96e8-cccd7a62aecf}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7014,7 +7568,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_06.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_06.wav</filename>
 <guid>{30df47b6-a9bf-44da-9a6e-ea8f6764677b}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7059,7 +7613,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_07.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_07.wav</filename>
 <guid>{9d3d3c2e-63e1-4d8c-a07b-cc9c5d2ed0fe}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7104,7 +7658,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_08.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_08.wav</filename>
 <guid>{5a040404-4bf1-4255-ad8d-e09d7b8f36ea}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7149,7 +7703,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_09.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_09.wav</filename>
 <guid>{4047fa02-7970-48c4-bd5d-042344517a25}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7194,7 +7748,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/steal_squirrel_piko_10.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/steal_squirrel_piko_10.wav</filename>
 <guid>{2d34a19a-6878-4a10-be78-644f19701664}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7239,7 +7793,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_01.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_01.wav</filename>
 <guid>{e03c6bc8-35c6-4ffc-9845-232ba4b3a71d}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7284,7 +7838,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_02.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_02.wav</filename>
 <guid>{2df0954f-4e81-420f-8e1f-0664a0091af4}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7329,7 +7883,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_03.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_03.wav</filename>
 <guid>{8cfcf083-bbbb-42d3-b64e-dd931e2caef9}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7374,7 +7928,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_04.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_04.wav</filename>
 <guid>{580fde0d-20a4-4c58-adde-a0a2765deefd}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7419,7 +7973,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_05.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_05.wav</filename>
 <guid>{880af9ee-7e67-455c-a8bc-ad1e2b07c987}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7464,7 +8018,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_06.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_06.wav</filename>
 <guid>{c81e7d12-17e6-4ea7-99d3-12ada867bdd5}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7509,7 +8063,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_07.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_07.wav</filename>
 <guid>{ba1ef827-6d3f-4611-8135-05cf05a3bba4}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7554,7 +8108,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_08.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_08.wav</filename>
 <guid>{9006e8f2-f333-448d-97ec-dab4f7c12f65}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7599,7 +8153,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_09.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_09.wav</filename>
 <guid>{847972c6-d45b-44a3-8ee0-319636c1e8ed}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7644,7 +8198,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_chirp_10.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_chirp_10.wav</filename>
 <guid>{5cf1229c-e569-46d2-b7d7-4ee8c5eb38b5}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7689,7 +8243,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_1.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_1.wav</filename>
 <guid>{596c7fe2-3bf9-4d76-84f2-7948ac839d17}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7734,7 +8288,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_2.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_2.wav</filename>
 <guid>{55b5985e-b7ec-47c6-96f3-4b58f9a284f1}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7779,7 +8333,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_3.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_3.wav</filename>
 <guid>{cbf32432-8280-4950-91aa-a78247bcc037}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7824,7 +8378,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_4.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_4.wav</filename>
 <guid>{bebc7e22-4d1d-47cb-b8dd-b319513f3186}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7869,7 +8423,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_5.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_5.wav</filename>
 <guid>{1b18adaf-ca48-4615-a529-28beda8ec87b}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7914,7 +8468,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_6.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_6.wav</filename>
 <guid>{75ebef79-f201-41ff-be1b-2213495b9c22}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -7959,7 +8513,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_7.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_7.wav</filename>
 <guid>{125fc644-eda8-4159-9a1b-9737c1bb773d}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -8004,7 +8558,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/toucan_takeoff_8.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/toucan_takeoff_8.wav</filename>
 <guid>{6ab4c5a7-7adb-4748-889f-99ae5234bcc0}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -8049,7 +8603,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/water_scoop1.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/water_scoop1.wav</filename>
 <guid>{298991b3-48ed-41f2-918c-451659ab27ed}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>
@@ -8094,7 +8648,7 @@
 <notes></notes>
 </waveform>
 <waveform>
-<filename>../backup/thumper sounds/water_scoop2.wav</filename>
+<filename>../../../../../../../../users/user/desktop/minha pasta/mods/heap-of-foods-backup/backup/sounds/water_scoop2.wav</filename>
 <guid>{d0485fb3-3a89-4587-bdae-8f72b7ee509c}</guid>
 <mindistance>1</mindistance>
 <maxdistance>10000</maxdistance>

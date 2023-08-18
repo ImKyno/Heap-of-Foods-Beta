@@ -238,5 +238,6 @@ function c_hofmonsterfoods()
 		c_give("durianchicken",     40, true)
 		c_give("durianmeated",      40, true)
 		c_give("wobstermonster",    40, true)
+		c_give("spidercake",        40, true)
     end
 end

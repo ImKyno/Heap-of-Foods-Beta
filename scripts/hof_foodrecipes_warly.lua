@@ -37,7 +37,7 @@ local kyno_warly_foods =
 	
 	gorge_meat_stew =
 	{
-		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 3) and names.kyno_spotspice and (not tags.monster or tags.monster <= 1) end,
+		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 3) and names.kyno_spotspice and not (tags.monster and tags.monster > 1) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,
@@ -86,7 +86,7 @@ local kyno_warly_foods =
 	
 	gorge_meat_wellington =
 	{
-		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and tags.bread and tags.veggie and (not tags.monster or tags.monster <= 1) end,
+		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and tags.bread and tags.veggie and not (tags.monster and tags.monster > 1) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SUPERSLOW,

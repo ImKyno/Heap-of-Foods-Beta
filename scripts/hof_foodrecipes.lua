@@ -695,7 +695,7 @@ local kyno_foods =
 	gorge_stuffedmushroom =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_white_cap or 0) + (names.kyno_white_cap_cooked or 0) >= 3) 
-		and not tags.foliage and not names.succulent_picked and not tags.dairy end,
+		and not tags.foliage and not names.succulent_picked and not tags.dairy and not names.royal_jelly end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -2030,7 +2030,7 @@ local kyno_foods =
 	
 	tricolordango =
 	{
-		test = function(cooker, names, tags) return tags.milk and names.kyno_sugartree_petals and names.kyno_flour and names.twigs end,
+		test = function(cooker, names, tags) return tags.milk and names.kyno_sugar and names.kyno_flour and names.twigs end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
@@ -2040,7 +2040,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"goatmilk", 1}, {"honey", 1}, {"kyno_flour", 1}, {"kyno_sugartree_petals", 1}}},
+		card_def = {ingredients = {{"goatmilk", 1}, {"honey", 1}, {"kyno_flour", 1}, {"kyno_sugar", 1}}},
 	},
 	
 	friesfrench =
@@ -2196,7 +2196,7 @@ local kyno_foods =
 	
 	cottoncandy =
 	{
-		test = function(cooker, names, tags) return (names.kyno_sugartree_petals and names.kyno_sugartree_petals >= 3) and names.twigs end,
+		test = function(cooker, names, tags) return (names.kyno_sugar and names.kyno_sugar >= 3) and names.twigs end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -2207,7 +2207,7 @@ local kyno_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"honeyed"},
-		card_def = {ingredients = {{"kyno_sugartree_petals", 3}, {"twigs", 1}}},
+		card_def = {ingredients = {{"kyno_sugar", 3}, {"twigs", 1}}},
 	},
 	
 	roastedhazelnuts =
@@ -2231,21 +2231,28 @@ local kyno_foods =
 		test = function(cooker, names, tags) return names.kyno_flour and names.nightmarefuel and (tags.sweetener and tags.sweetener >= 2) end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
-        secondaryfoodtype = FOODTYPE.MONSTER,
 		perishtime = TUNING.PERISH_SUPERSLOW,
-		health = 10,
-		hunger = 50,
-		sanity = 15,
+		health = -10,
+		hunger = 50, -- 67 Wurt.
+		sanity = -15,
 		cooktime = 2,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
-		tags = {"honeyed"},
+		tags = {"honeyed", "monstermeat"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"nightmarefuel", 1}, {"honey", 2}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(10)
+				eater.components.sanity:DoDelta(15)
+			end
+		end,
 	},
 	
 	pinkcake =
 	{
-		test = function(cooker, names, tags) return (names.kyno_sugartree_petals and names.kyno_sugartree_petals >= 2) and names.kyno_flour and tags.egg end,
+		test = function(cooker, names, tags) return (names.kyno_sugar and names.kyno_sugar >= 2) and names.kyno_flour and tags.egg end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -2256,7 +2263,7 @@ local kyno_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"honeyed"},
-		card_def = {ingredients = {{"kyno_sugartree_petals", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
+		card_def = {ingredients = {{"kyno_sugar", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 	},
 	
 	chipsbag =
@@ -2440,9 +2447,9 @@ local kyno_foods =
 		foodtype = FOODTYPE.MEAT,
 		secondaryfoodtype = FOODTYPE.MONSTER,
 		perishtime = TUNING.PERISH_SUPERSLOW,
-		health = 5,
+		health = 10,
 		hunger = 40,
-		sanity = 5,
+		sanity = -5,
 		cooktime = 1,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CURSE,
 		potlevel = "low",
@@ -2468,42 +2475,6 @@ local kyno_foods =
 				inst.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
 			end
 		end
-	},
-	
-	duriansplit =
-	{
-		test = function(cooker, names, tags) return (names.durian or names.durian_cooked) and tags.banana and tags.frozen and tags.fruit end,
-		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
-		secondaryfoodtype = FOODTYPE.MONSTER,
-		perishtime = TUNING.PERISH_FAST,
-		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
-		health = -5,
-		hunger = 25,
-		sanity = 10,
-		cooktime = 1,
-		potlevel = "med",
-		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"durian", 1}, {"ice", 1}, {"banana", 2}}},
-	},
-	
-	duriansoup =
-	{
-		test = function(cooker, names, tags) return (names.durian or names.durian_cooked) and (tags.veggie and tags.veggie >= 3) and not tags.inedible end,
-		priority = 35,
-		foodtype = FOODTYPE.VEGGIE,
-		secondaryfoodtype = FOODTYPE.MONSTER,
-		perishtime = TUNING.PERISH_MED,
-		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
-		health = 10,
-		hunger = 37.5,
-		sanity = -10,
-		cooktime = 1.5,
-		potlevel = "high",
-		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"durian", 1}, {"carrot", 3}}},
 	},
 	
 	lunarsoup =
@@ -2539,12 +2510,21 @@ local kyno_foods =
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,
-		health = 60,
+		health = -60,
 		hunger = 62.5,
-		sanity = 5,
+		sanity = -5,
 		cooktime = 2,
 		floater = {"med", nil, 0.65},
+		tags = {"monstermeat"},
 		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"kyno_grouper", 1}, {"kyno_turnip", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(60)
+				eater.components.sanity:DoDelta(5)
+			end
+		end,
 	},
 	
 	wobstermonster =
@@ -2553,17 +2533,76 @@ local kyno_foods =
 		(tags.veggie and tags.veggie >= 2) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
-		secondaryfoodtype = FOODTYPE.MONSTER,
 		perishtime = TUNING.PERISH_MED,
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
-		health = 60,
+		health = -60,
 		hunger = 37.5,
 		sanity = -20,
 		cooktime = 2,
 		potlevel = "high",
 		floater = {"med", nil, 0.65},
+		tags = {"monstermeat"},
 		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"monstermeat", 1}, {"carrot", 2}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(60)
+				eater.components.sanity:DoDelta(20)
+			end
+		end,
+	},
+	
+	duriansplit =
+	{
+		test = function(cooker, names, tags) return (names.durian or names.durian_cooked) and tags.banana and tags.frozen and tags.fruit end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_FAST,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = -5,
+		hunger = 32.5, -- 65 Wurt.
+		sanity = -15,
+		cooktime = 1,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"monstermeat"},
+		card_def = {ingredients = {{"durian", 1}, {"ice", 1}, {"banana", 2}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(5)
+				eater.components.sanity:DoDelta(15)
+			end
+		end,
+	},
+	
+	duriansoup =
+	{
+		test = function(cooker, names, tags) return (names.durian or names.durian_cooked) and (tags.veggie and tags.veggie >= 3) and not tags.inedible end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = -15,
+		hunger = 37.5, -- 75 Wurt.
+		sanity = 0,
+		cooktime = 1.5,
+		potlevel = "high",
+		floater = {"med", nil, 0.65},
+		tags = {"monstermeat"},
+		card_def = {ingredients = {{"durian", 1}, {"carrot", 3}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(15)
+			end
+		end,
 	},
 	
 	durianmeated =
@@ -2572,14 +2611,22 @@ local kyno_foods =
 		((names.durian or 0) + (names.durian_cooked or 0) >= 2) end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
-		secondaryfoodtype = FOODTYPE.MONSTER,
 		perishtime = TUNING.PERISH_SLOW,
-		health = 5,
-		hunger = 62.5,
-		sanity = -20,
+		health = -20,
+		hunger = 37.5,
+		sanity = -5,
 		cooktime = 1.2,
 		floater = {"med", nil, 0.65},
+		tags = {"monstermeat"},
 		card_def = {ingredients = {{"monstermeat", 2}, {"durian", 2}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(20)
+				eater.components.sanity:DoDelta(5)
+			end
+		end,
 	},
 	
 	durianchicken =
@@ -2588,14 +2635,49 @@ local kyno_foods =
 		and names.cactus_flower and not names.durian_cooked and not names.cactus_meat_cooked end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
-		secondaryfoodtype = FOODTYPE.MONSTER,
 		perishtime = TUNING.PERISH_FASTISH,
-		health = 20,
-		hunger = 37.5,
-		sanity = 33,
+		health = -10,
+		hunger = 45, -- 90 Wurt.
+		sanity = -30,
 		cooktime = 1,
 		floater = {"med", nil, 0.65},
+		tags = {"monstermeat"},
 		card_def = {ingredients = {{"durian", 1}, {"cactus_meat", 2}, {"cactus_flower", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(10)
+				eater.components.sanity:DoDelta(30)
+			end
+		end,
+	},
+	
+	spidercake =
+	{
+		test = function(cooker, names, tags) return names.spider and (names.monstermeat or names.monstermeat_cooked) and tags.egg and names.kyno_flour end,
+		priority = 1,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = -20,
+		hunger = 37.5,
+		sanity = -20,
+		cooktime = 2,
+		-- oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPIDER,
+		potlevel = "high",
+		floater = {"med", nil, 0.65},
+		tags = {"monstermeat"},
+		card_def = {ingredients = {{"spider", 1}, {"monstermeat", 1}, {"bird_egg", 1}, {"kyno_flour", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(20)
+				eater.components.sanity:DoDelta(20)
+			end
+			
+			-- eater:AddDebuff("kyno_spiderbuff", "kyno_spiderbuff") -- Do we really want this?
+		end,
 	},
 }
 

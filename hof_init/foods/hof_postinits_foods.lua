@@ -35,33 +35,6 @@ AddPrefabPostInit("foliage", function(inst)
     inst.components.cookable.product = "kyno_foliage_cooked"
 end)
 
--- Wigfrid Can't Drink Coffee. Deprecated.
---[[
-local FRIDA_COFFEE = GetModConfigData("HOF_COFFEEGOODIES")
-if FRIDA_COFFEE == 0 then
-    local coffee_wathgrithr = 
-	{
-        "coffee",
-    }
-
-    for k,v in pairs(coffee_wathgrithr) do
-        AddPrefabPostInit(v, function(inst)
-            if inst.components.edible ~= nil then
-                inst.components.edible.foodtype = FOODTYPE.VEGGIE
-            end
-        end)
-		
-		for k,s in pairs(spices) do 
-			AddPrefabPostInit(v.."_spice_"..s, function(inst)
-				if inst.components.edible ~= nil then
-					inst.components.edible.foodtype = FOODTYPE.VEGGIE
-				end
-			end
-		end)
-    end
-end
-]]--
-
 -- Some items are a bit huge when dropped...
 local function ResizeThisItem(inst)
     inst.AnimState:SetScale(.75, .75, .75)
@@ -376,6 +349,30 @@ VanillaFood.icecream.test = function(cooker, names, tags)
 	and not names.kyno_syrup
 end 
 
+VanillaFood.monsterlasagna.oneatenfn = function(inst, eater)
+	if eater ~= nil and eater:HasTag("playermonster") and
+	not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+	not eater:HasTag("playerghost") then
+		eater.components.health:DoDelta(20)
+		eater.components.sanity:DoDelta(20)
+	end
+end
+
+-- Tweaks for Warly's foods.
+local WarlyFood = require("preparedfoods_warly")
+WarlyFood.monstertartare.health = -20
+WarlyFood.monstertartare.hunger = 62.5
+WarlyFood.monstertartare.sanity = -20
+WarlyFood.monstertartare.cooktime = 2
+WarlyFood.monstertartare.oneatenfn = function(inst, eater)
+	if eater ~= nil and eater:HasTag("playermonster") and
+	not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+	not eater:HasTag("playerghost") then
+		eater.components.health:DoDelta(20)
+		eater.components.sanity:DoDelta(20)
+	end
+end
+
 -- Foods that will have their action "Eat" replaced to "Drink".
 local drinkable_foods = 
 {
@@ -640,13 +637,6 @@ for k,v in pairs(honeyed_foods) do
 		AddPrefabPostInit(v.."_spice_"..s, HoneyFoodsPostinit)
 	end
 end
-
--- Tweaks for Warly's foods.
-local WarlyFood = require("preparedfoods_warly")
-WarlyFood.monstertartare.health = 3
-WarlyFood.monstertartare.hunger = 37.5
-WarlyFood.monstertartare.sanity = 10
-WarlyFood.monstertartare.cooktime = 2
 
 -- Easter Egg for Pretzel. @Pep drew 2 sprites for it, would be a waste to not utilize both.
 -- Basically Pretzel has a chance to be with a different sprite.

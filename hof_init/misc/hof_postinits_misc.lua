@@ -59,7 +59,7 @@ AddPrefabPostInit("willow", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("feijoada", TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("feijoada",       TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("pickles_pepper", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
@@ -73,7 +73,7 @@ AddPrefabPostInit("wolfgang", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_potato_soup", TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("pickles_potato", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("pickles_potato",    TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -83,7 +83,7 @@ AddPrefabPostInit("wendy", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("icedtea", TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("icedtea",   TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_fig", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
@@ -104,7 +104,7 @@ AddPrefabPostInit("wickerbottom", function(inst)
 	end
 	
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("tea", TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("tea",      TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("teagreen", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
@@ -116,7 +116,7 @@ AddPrefabPostInit("woodie", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_sliders", TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("beer", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("beer",          TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -127,7 +127,7 @@ AddPrefabPostInit("waxwell", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_crab_roll", TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("teared", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("teared",          TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -138,7 +138,7 @@ AddPrefabPostInit("wes", function(inst)
 	
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("sharkfinsoup", TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("tartarsauce", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("tartarsauce",  TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -151,7 +151,7 @@ AddPrefabPostInit("wathgrithr", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_pot_roast", TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("mead", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("mead",            TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -162,7 +162,7 @@ AddPrefabPostInit("webber", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("steamedhamsandwich", TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("mayonnaise", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("mayonnaise",         TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -172,7 +172,7 @@ AddPrefabPostInit("winona", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("coffee", TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("coffee",  TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("paleale", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
@@ -183,7 +183,7 @@ AddPrefabPostInit("wortox", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("jellyopop", TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("jellyopop",         TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_pomegranate", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 
@@ -200,7 +200,7 @@ AddPrefabPostInit("wormwood", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("gummy_cake", TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("gummy_cake",    TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_kokonut", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 
@@ -213,10 +213,14 @@ AddPrefabPostInit("wurt", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-
+	
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("gorge_vegetable_soup", TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("pickles_cucumber", TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("duriansoup",    1.93)
+		inst.components.foodaffinity:AddPrefabAffinity("jelly_durian",  1.93)
+		inst.components.foodaffinity:AddPrefabAffinity("duriansplit",   1.93)
+		inst.components.foodaffinity:AddPrefabAffinity("duriansoup",    1.93)
+		inst.components.foodaffinity:AddPrefabAffinity("durianchicken", 1.93)
+		inst.components.foodaffinity:AddPrefabAffinity("monstermuffin", 1.33)
     end
 	
 	if inst.components.locomotor ~= nil then
@@ -230,7 +234,7 @@ AddPrefabPostInit("walter", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("gorge_hamburger", TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("gorge_hamburger",    TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("mayonnaise_chicken", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
@@ -242,7 +246,7 @@ AddPrefabPostInit("wanda", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_candy", TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("mayonnaise_nightmare", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("nukacola",    TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 

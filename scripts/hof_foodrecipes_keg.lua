@@ -760,7 +760,6 @@ local kyno_foods_keg =
 		end,
 	},
 	
-	--[[
 	nukacola =
 	{
 		test = function(cooker, names, tags) return names.kyno_sugar and names.kyno_syrup and tags.frozen end,
@@ -778,19 +777,19 @@ local kyno_foods_keg =
 		card_def = {ingredients = {{"kyno_sugar", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater.SoundEmitter ~= nil then
-				eater.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
+				eater.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
 			else
-				inst.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
+				inst.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
 			end
 			
-			if math.random() < 0.01 then 
+			if math.random() < 0.05 then 
 				local cap = SpawnPrefab("kyno_bottlecap")
 				if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost") 
 				and not eater.components.inventory:IsFull() then 
 					eater.components.inventory:GiveItem(cap)
 				end
 			end
-		end
+		end,
 	},
 	
 	nukacola_quantum =
@@ -812,12 +811,12 @@ local kyno_foods_keg =
 		prefabs = { "wormlight_light_greater" },
         oneatenfn = function(inst, eater)
 			if eater ~= nil and eater.SoundEmitter ~= nil then
-				eater.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
+				eater.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
 			else
-				inst.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
+				inst.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
 			end
 			
-			if math.random() < 0.01 then 
+			if math.random() < 0.05 then 
 				local cap = SpawnPrefab("kyno_bottlecap")
 				if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost") 
 				and not eater.components.inventory:IsFull() then 
@@ -846,7 +845,6 @@ local kyno_foods_keg =
             end
         end,
 	},
-	]]--
 	
 	-- This recipe is for when brewing a invalid product, we need this to prevent a crash.
 	wetgoop2 =

@@ -32,6 +32,7 @@ AddIngredientValues({"green_cap"},              {veggie     = 0.5,  mushrooms = 
 AddIngredientValues({"blue_cap"},               {veggie     = 0.5,  mushrooms = 1},           true)
 AddIngredientValues({"moon_cap"},               {veggie     = 0.5,  mushrooms = 1},           true)
 AddIngredientValues({"livinglog"},              {inedible   = 1,    magic     = 1})
+AddIngredientValues({"spider"},                 {monster    = 1,    spider    = 1})
 
 -- New Mod Crock Pot Ingredients.
 AddIngredientValues({"kyno_coffeebeans"}, 		{seeds      = 1}, 	 		  				  true)
@@ -97,7 +98,7 @@ AddIngredientValues({"kyno_oil"},               {oil        = 1})
 AddIngredientValues({"chocolate_black"},        {sweetener  = 2,   chocolate  = 1})
 AddIngredientValues({"chocolate_white"},        {sweetener  = 2,   chocolate  = 1})
 AddIngredientValues({"littlebread"}, 			{bread      = 1})
--- AddIngredientValues({"kyno_sugar"},             {sweetener  = 1,   sugar      = 1})
+AddIngredientValues({"kyno_sugar"},             {sweetener  = 1,   sugar      = 1})
 
 -- Import The Foods.
 for k, v in pairs(require("hof_foodrecipes")) do

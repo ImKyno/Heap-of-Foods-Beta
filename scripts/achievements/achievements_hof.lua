@@ -16,6 +16,8 @@ local variables =
     hasUsedGrinder         = { net_type = net_bool,     value = false },
     hasFlayedOther         = { net_type = net_bool,     value = false },
     hasCaughtPebble        = { net_type = net_bool,     value = false },
+	hasDrankNukaCola       = { net_type = net_bool,     value = false },
+	hasDrankNukaQuantum    = { net_type = net_bool,     value = false },
 }
 
 local preparedHofFoods      = require("hof_foodrecipes")
@@ -174,6 +176,24 @@ local function SetupPlayerFunctions(player)
             end
         end
 		]]--
+		
+		local nukacola = data.food.prefab == "nukacola" or nil
+		if nukacola ~= nil then
+			local varName = "hasDrankNukaCola"
+			if manager[varName] ~= nil then
+				manager[varName] = true
+				manager:DoAchieve({category = categoryName, name = "drinknukacola"}, {"hasDrankNukaCola"})
+			end
+		end
+		
+		local nukaquantum = data.food.prefab == "nukacola_quantum" or nil
+        if nukaquantum ~= nil then
+            local varName = "hasDrankNukaQuantum"
+            if manager[varName] ~= nil then
+                manager[varName] = true
+                manager:DoAchieve({category = categoryName, name = "drinknukaquantum"}, {"hasDrankNukaQuantum"})
+            end
+        end
 
         local coffee = data.food.prefab == "coffee" or nil
         if coffee ~= nil then
@@ -498,6 +518,11 @@ _G[registerEntriesFuncName] = function(root)
             isHidden    = true,
         },
         {
+            name        = "drinkcoffee",
+            Record      = function(data) return data and data.hasDrankCoffee end,
+            Check       = function(data) return data and data.hasDrankCoffee or false end,
+        },
+		{
             name        = "drinkalcoholic",
             Record      = function(data) return data and data.hasDrankAlcoholic end,
             Check       = function(data) return data and data.hasDrankAlcoholic or false end,
@@ -516,11 +541,18 @@ _G[registerEntriesFuncName] = function(root)
             isHidden    = true,
         },
 		]]--
-        {
-            name        = "drinkcoffee",
-            Record      = function(data) return data and data.hasDrankCoffee end,
-            Check       = function(data) return data and data.hasDrankCoffee or false end,
-        },
+		{
+			name        = "drinknukacola",
+			Record      = function(data) return data and data.hasDrankNukaCola end,
+			Check       = function(data) return data and data.hasDrankNukaCola or false end,
+			isHidden    = true,
+		},
+		{
+			name        = "drinknukaquantum",
+			Record      = function(data) return data and data.hasDrankNukaCola end,
+			Check       = function(data) return data and data.hasDrankNukaCola or false end,
+			isHidden    = true,
+		},
         {
             name        = "pigelder",
             Record      = function(data) return data and data.numTradedWithPigElder end,
@@ -618,17 +650,23 @@ local stringTables =
             CARAMELCUBE_TITLE = "Caramelized",
             CARAMELCUBE_DESC = "Eat a Caramel Cube. Kyno's favourite dish.",
 
-            DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
+            DRINKCOFFEE_TITLE = "Faster Than The Light",
+            DRINKCOFFEE_DESC = "Drink a Coffee and become faster than everything else. Speedy!",
+			
+			DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
             DRINKALCOHOLIC_DESC = "Drink an alcoholic beverage. Drink in moderation!",
-
-            -- DRINKPIRATERUM_TITLE = "Cannon Barrage",
+			
+			-- DRINKPIRATERUM_TITLE = "Cannon Barrage",
             -- DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
             -- DRINKTEQUILA_TITLE = "Shifting Tempo",
             -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
-
-            DRINKCOFFEE_TITLE = "Faster Than The Light",
-            DRINKCOFFEE_DESC = "Drink a Coffee and become faster than everything else. Speedy!",
+			
+			DRINKNUKACOLA_TITLE = "Nuclear Drink",
+			DRINKNUKACOLA_DESC = "Drink a Nuka-Cola. An otherworldly drink!",
+			
+			DRINKNUKAQUANTUM_TITLE = "Ice Cold Quantum!",
+			DRINKNUKAQUANTUM_DESC = "Drink a Nuka-Cola Quantum. Enjoy the rads!",
 
             PIGELDER_TITLE = "Tranquil Merchant",
             PIGELDER_DESC = "Strike a deal with the Pig Elder and unclose new trades.",
@@ -681,17 +719,23 @@ local stringTables =
             CARAMELCUBE_TITLE = "Caramelizado",
             CARAMELCUBE_DESC = "Coma um Cubo de Caramelo. O prato favorito do Kyno.",
 
-            DRINKALCOHOLIC_TITLE = "Jogo de Bebidas do Biv",
+            DRINKCOFFEE_TITLE = "Veloz Como a Luz",
+            DRINKCOFFEE_DESC = "Beba um Café e se torne mais rápido do que todos. Que velocidade!",
+			
+			DRINKALCOHOLIC_TITLE = "Jogo de Bebidas do Biv",
             DRINKALCOHOLIC_DESC = "Beba uma bebida alcoólica. Beba com moderação!",
-
-            -- DRINKPIRATERUM_TITLE = "Barragem de Canhão",
+			
+			-- DRINKPIRATERUM_TITLE = "Barragem de Canhão",
             -- DRINKPIRATERUM_DESC = "Beba um Rum de Pirata e descubra o segredo por trás dele.",
 
             -- DRINKTEQUILA_TITLE = "Mudança de Tempo",
             -- DRINKTEQUILA_DESC = "Beba uma Tequila Retorcida e se perca através do tempo-espaço.",
-
-            DRINKCOFFEE_TITLE = "Veloz Como a Luz",
-            DRINKCOFFEE_DESC = "Beba um Café e se torne mais rápido do que todos. Que velocidade!",
+			
+			DRINKNUKACOLA_TITLE = "Bebida Nuclear",
+			DRINKNUKACOLA_DESC = "Beba uma Nuka-Cola. Um refrigerante de outro mundo!",
+			
+			DRINKNUKAQUANTUM_TITLE = "Uma Quantum Geladinha!",
+			DRINKNUKAQUANTUM_DESC = "Beba uma Nuka-Cola Quantum. Sinta o sabor da radiação!",
 
             PIGELDER_TITLE = "Mercante Tranquilo",
             PIGELDER_DESC = "Faça uma negociação com o Porco Ancião e abra novas possíveis trocas.",
@@ -744,17 +788,23 @@ local stringTables =
             CARAMELCUBE_TITLE = "Caramelized",
             CARAMELCUBE_DESC = "Eat a Caramel Cube. Kyno's favourite dish.",
 
-            DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
+            DRINKCOFFEE_TITLE = "Faster Than The Light",
+            DRINKCOFFEE_DESC = "Drink a Coffee and become faster than everything else. Speedy!",
+			
+			DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
             DRINKALCOHOLIC_DESC = "Drink an alcoholic beverage. Drink in moderation!",
-
-            -- DRINKPIRATERUM_TITLE = "Cannon Barrage",
+			
+			-- DRINKPIRATERUM_TITLE = "Cannon Barrage",
             -- DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
             -- DRINKTEQUILA_TITLE = "Shifting Tempo",
             -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
-
-            DRINKCOFFEE_TITLE = "Faster Than The Light",
-            DRINKCOFFEE_DESC = "Drink a Coffee and become faster than everything else. Speedy!",
+			
+			DRINKNUKACOLA_TITLE = "Nuclear Drink",
+			DRINKNUKACOLA_DESC = "Drink a Nuka-Cola. An otherworldly drink!",
+			
+			DRINKNUKAQUANTUM_TITLE = "Ice Cold Quantum!",
+			DRINKNUKAQUANTUM_DESC = "Drink a Nuka-Cola Quantum. Enjoy the rads!",
 
             PIGELDER_TITLE = "Tranquil Merchant",
             PIGELDER_DESC = "Strike a deal with the Pig Elder and unclose new trades.",
@@ -807,17 +857,23 @@ local stringTables =
             CARAMELCUBE_TITLE = "Caramelized",
             CARAMELCUBE_DESC = "Eat a Caramel Cube. Kyno's favourite dish.",
 
-            DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
+            DRINKCOFFEE_TITLE = "Faster Than The Light",
+            DRINKCOFFEE_DESC = "Drink a Coffee and become faster than everything else. Speedy!",
+			
+			DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
             DRINKALCOHOLIC_DESC = "Drink an alcoholic beverage. Drink in moderation!",
-
-            -- DRINKPIRATERUM_TITLE = "Cannon Barrage",
+			
+			-- DRINKPIRATERUM_TITLE = "Cannon Barrage",
             -- DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
             -- DRINKTEQUILA_TITLE = "Shifting Tempo",
             -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
-
-            DRINKCOFFEE_TITLE = "Faster Than The Light",
-            DRINKCOFFEE_DESC = "Drink a Coffee and become faster than everything else. Speedy!",
+			
+			DRINKNUKACOLA_TITLE = "Nuclear Drink",
+			DRINKNUKACOLA_DESC = "Drink a Nuka-Cola. An otherworldly drink!",
+			
+			DRINKNUKAQUANTUM_TITLE = "Ice Cold Quantum!",
+			DRINKNUKAQUANTUM_DESC = "Drink a Nuka-Cola Quantum. Enjoy the rads!",
 
             PIGELDER_TITLE = "Tranquil Merchant",
             PIGELDER_DESC = "Strike a deal with the Pig Elder and unclose new trades.",
@@ -870,17 +926,23 @@ local stringTables =
             CARAMELCUBE_TITLE = "Caramelized",
             CARAMELCUBE_DESC = "Eat a Caramel Cube. Kyno's favourite dish.",
 
-            DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
+            DRINKCOFFEE_TITLE = "Faster Than The Light",
+            DRINKCOFFEE_DESC = "Drink a Coffee and become faster than everything else. Speedy!",
+			
+			DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
             DRINKALCOHOLIC_DESC = "Drink an alcoholic beverage. Drink in moderation!",
-
-            -- DRINKPIRATERUM_TITLE = "Cannon Barrage",
+			
+			-- DRINKPIRATERUM_TITLE = "Cannon Barrage",
             -- DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
             -- DRINKTEQUILA_TITLE = "Shifting Tempo",
             -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
-
-            DRINKCOFFEE_TITLE = "跑得跟飛得一樣快",
-            DRINKCOFFEE_DESC = "喝杯咖啡，走干若飛。",
+			
+			DRINKNUKACOLA_TITLE = "Nuclear Drink",
+			DRINKNUKACOLA_DESC = "Drink a Nuka-Cola. An otherworldly drink!",
+			
+			DRINKNUKAQUANTUM_TITLE = "Ice Cold Quantum!",
+			DRINKNUKAQUANTUM_DESC = "Drink a Nuka-Cola Quantum. Enjoy the rads!",
 
             PIGELDER_TITLE = "Tranquil Merchant",
             PIGELDER_DESC = "Strike a deal with the Pig Elder and unclose new trades.",

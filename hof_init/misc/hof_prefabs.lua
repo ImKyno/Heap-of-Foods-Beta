@@ -13,6 +13,7 @@ PrefabFiles =
 	"k_foodbuff_insanity",
 	"k_foodbuff_frog",
 	"k_foodbuff_fear",
+	-- "k_foodbuff_spider",
 	
 	"k_product_bubble",
 	"k_fertilizer_nutrient_defs",
@@ -112,5 +113,5 @@ PrefabFiles =
 	"k_meadowisland_pond",
 	"k_meadowisland_sandhill",
 	"k_poison_froglegs",
-	--"k_bottlecap",
+	"k_bottlecap",
 }

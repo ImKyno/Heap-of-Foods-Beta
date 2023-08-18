@@ -7,16 +7,18 @@
 		<Element name="achievements_hof_crafthofbooks.tex" u1="0.252953125" u2="0.3769296875" v2="0.999" v1="0.749046875" variant="" />
 		<Element name="achievements_hof_drinkalcoholic.tex" u1="0.001" u2="0.1249765625" v2="0.747046875" v1="0.49709375" variant="" />
 		<Element name="achievements_hof_drinkcoffee.tex" u1="0.1269765625" u2="0.250953125" v2="0.747046875" v1="0.49709375" variant="" />
-		<Element name="achievements_hof_eatfoods.tex" u1="0.252953125" u2="0.3769296875" v2="0.747046875" v1="0.49709375" variant="" />
-		<Element name="achievements_hof_flayanimal.tex" u1="0.001" u2="0.1249765625" v2="0.49509375" v1="0.245140625" variant="" />
-		<Element name="achievements_hof_grinder.tex" u1="0.1269765625" u2="0.250953125" v2="0.49509375" v1="0.245140625" variant="" />
-		<Element name="achievements_hof_hofbrewbook.tex" u1="0.252953125" u2="0.3769296875" v2="0.49509375" v1="0.245140625" variant="" />
-		<Element name="achievements_hof_hofcookbook.tex" u1="0.3789296875" u2="0.50290625" v2="0.999" v1="0.749046875" variant="" />
-		<Element name="achievements_hof_honeydeposit.tex" u1="0.50490625" u2="0.6288828125" v2="0.999" v1="0.749046875" variant="" />
-		<Element name="achievements_hof_pigelder.tex" u1="0.6308828125" u2="0.754859375" v2="0.999" v1="0.749046875" variant="" />
-		<Element name="achievements_hof_seasidebiome.tex" u1="0.756859375" u2="0.8808359375" v2="0.999" v1="0.749046875" variant="" />
-		<Element name="achievements_hof_serenitybiome.tex" u1="0.3789296875" u2="0.50290625" v2="0.747046875" v1="0.49709375" variant="" />
-		<Element name="achievements_hof_warlyhof1.tex" u1="0.50490625" u2="0.6288828125" v2="0.747046875" v1="0.49709375" variant="" />
-		<Element name="achievements_hof_warlyhof2.tex" u1="0.6308828125" u2="0.754859375" v2="0.747046875" v1="0.49709375" variant="" />
+		<Element name="achievements_hof_drinknukacola.tex" u1="0.252953125" u2="0.3769296875" v2="0.747046875" v1="0.49709375" variant="" />
+		<Element name="achievements_hof_drinknukaquantum.tex" u1="0.001" u2="0.1249765625" v2="0.49509375" v1="0.245140625" variant="" />
+		<Element name="achievements_hof_eatfoods.tex" u1="0.1269765625" u2="0.250953125" v2="0.49509375" v1="0.245140625" variant="" />
+		<Element name="achievements_hof_flayanimal.tex" u1="0.252953125" u2="0.3769296875" v2="0.49509375" v1="0.245140625" variant="" />
+		<Element name="achievements_hof_grinder.tex" u1="0.3789296875" u2="0.50290625" v2="0.999" v1="0.749046875" variant="" />
+		<Element name="achievements_hof_hofbrewbook.tex" u1="0.50490625" u2="0.6288828125" v2="0.999" v1="0.749046875" variant="" />
+		<Element name="achievements_hof_hofcookbook.tex" u1="0.6308828125" u2="0.754859375" v2="0.999" v1="0.749046875" variant="" />
+		<Element name="achievements_hof_honeydeposit.tex" u1="0.756859375" u2="0.8808359375" v2="0.999" v1="0.749046875" variant="" />
+		<Element name="achievements_hof_pigelder.tex" u1="0.3789296875" u2="0.50290625" v2="0.747046875" v1="0.49709375" variant="" />
+		<Element name="achievements_hof_seasidebiome.tex" u1="0.50490625" u2="0.6288828125" v2="0.747046875" v1="0.49709375" variant="" />
+		<Element name="achievements_hof_serenitybiome.tex" u1="0.6308828125" u2="0.754859375" v2="0.747046875" v1="0.49709375" variant="" />
+		<Element name="achievements_hof_warlyhof1.tex" u1="0.756859375" u2="0.8808359375" v2="0.747046875" v1="0.49709375" variant="" />
+		<Element name="achievements_hof_warlyhof2.tex" u1="0.3789296875" u2="0.50290625" v2="0.49509375" v1="0.245140625" variant="" />
 	</Elements>
 </Atlas>

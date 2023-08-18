@@ -14,7 +14,7 @@ local assets =
 	Asset("ANIM", "anim/quagmire_salt.zip"),
 	Asset("ANIM", "anim/foliage.zip"),
 	Asset("ANIM", "anim/kyno_cookingoil.zip"),
-	-- Asset("ANIM", "anim/kyno_sugar.zip"),
+	Asset("ANIM", "anim/kyno_sugar.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -1057,6 +1057,5 @@ Prefab("kyno_foliage_cooked", foliage_cookedfn, assets, prefabs),
 Prefab("kyno_salt", saltfn, assets, prefabs),
 Prefab("kyno_crabmeat", crabmeatfn, assets, prefabs),
 Prefab("kyno_crabmeat_cooked", crabmeat_cookedfn, assets, prefabs),
-Prefab("kyno_oil", oilfn, assets, prefabs)--[[,
+Prefab("kyno_oil", oilfn, assets, prefabs),
 Prefab("kyno_sugar", sugarfn, assets, prefabs)
-]]--
