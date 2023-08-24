@@ -1,8 +1,9 @@
-local foodrecipes = 
+local foodrecipes =
 {
 	"preparedfoods",
 	"preparednonfoods",
 	"hof_foodrecipes",
+	"hof_foodrecipes_seasonal",
 }
 
 for k, v in pairs(foodrecipes) do
@@ -18,10 +19,10 @@ local assets =
     Asset("ANIM", "anim/quagmire_pot_small.zip"),
     Asset("ANIM", "anim/quagmire_pot_syrup.zip"),
     Asset("ANIM", "anim/quagmire_pot_hanger.zip"),
-	
+
 	Asset("ANIM", "anim/ui_cookpot_1x4.zip"),
 	Asset("ANIM", "anim/quagmire_ui_pot_1x4.zip"),
-	
+
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 }
@@ -30,16 +31,16 @@ local prefabs =
 {
 	"kyno_cookware_hanger",
 	"kyno_cookware_hanger_item",
-	
+
 	"kyno_cookware_syrup",
 	"kyno_cookware_syrup_pot",
-	
+
 	"kyno_cookware_big",
 	"kyno_cookware_big_pot",
-	
+
 	"kyno_cookware_small",
 	"kyno_cookware_small_pot",
-	
+
 	"kyno_cookware_fire",
 }
 
@@ -65,9 +66,9 @@ local function ExtraHarvest(self, harvester)
 				end
 
 				local stacksize = recipe and recipe.stacksize or 1
-				
+
 				stacksize = stacksize + 2
-				
+
 				if stacksize > 1 then
 					loot.components.stackable:SetStackSize(stacksize)
 				end
@@ -124,11 +125,11 @@ local function DoubleHarvest(self, harvester)
 				end
 
 				local stacksize = recipe and recipe.stacksize or 1
-				
+
 				if math.random() < 0.30 then -- 30% of Extra food.
 					stacksize = stacksize + 1
 				end
-				
+
 				if stacksize > 1 then
 					loot.components.stackable:SetStackSize(stacksize)
 				end
@@ -210,23 +211,23 @@ local function OnHammeredPot(inst, worker)
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
         inst.components.burnable:Extinguish()
     end
-	
+
 	if not inst:HasTag("burnt") and inst.components.stewer.product ~= nil and inst.components.stewer:IsDone() then
         inst.components.stewer:Harvest()
     end
-	
+
 	if inst.components.container ~= nil then
         inst.components.container:DropEverything()
     end
-	
+
 	local firepit = GetFirepit(inst)
 	if firepit then
 		firepit:RemoveTag("firepit_has_pot")
 		firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
 	end
-	
+
 	inst.components.lootdropper:DropLoot()
-	
+
 	local hng = SpawnPrefab("kyno_cookware_hanger")
 	hng.Transform:SetPosition(inst.Transform:GetWorldPosition())
 	inst:Remove()
@@ -239,7 +240,7 @@ local function OnHammeredHanger(inst, worker)
 	end
 
 	inst.components.lootdropper:DropLoot()
-	
+
 	local fx = SpawnPrefab("collapse_small")
     fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
     fx:SetMaterial("metal")
@@ -358,20 +359,20 @@ for k, v in pairs(cooking.recipes.cookpot) do
     table.insert(prefabs, v.name)
 end
 
-for k, recipe in pairs(cookpotfoods) do 
+for k, recipe in pairs(cookpotfoods) do
     local rep = hofshallowcopy(recipe)
-    AddCookerRecipe("kyno_cookware_big", rep) 
-	AddCookerRecipe("kyno_cookware_small", rep) 
+    AddCookerRecipe("kyno_cookware_big", rep)
+	AddCookerRecipe("kyno_cookware_small", rep)
 end
 
 local function OnPotSteam(inst)
     local fx = CreateEntity()
-	
+
 	fx.entity:AddTransform()
     fx.entity:AddAnimState()
     fx.entity:AddSoundEmitter()
 	-- fx.entity:AddNetwork()
-	
+
 	fx.AnimState:SetBank("quagmire_pot_hanger")
     fx.AnimState:SetBuild("quagmire_pot_hanger")
     fx.AnimState:PlayAnimation("steam", true)
@@ -379,10 +380,10 @@ local function OnPotSteam(inst)
 
     fx:AddTag("FX")
     fx:AddTag("NOCLICK")
-	
+
     fx.entity:SetCanSleep(false)
     fx.persists = false
-	
+
 	fx:ListenForEvent("animover", fx.Remove)
 
     fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
@@ -402,7 +403,7 @@ local function startcookfn(inst)
         inst.SoundEmitter:KillSound("snd")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_rattle", "snd")
         inst.Light:Enable(true)
-		
+
 		local firepit = GetFirepit(inst)
 		if firepit then
 			firepit:AddTag("NOCLICK")
@@ -426,7 +427,7 @@ local function OnClose(inst, doer)
     if not inst:HasTag("burnt") then
         if not inst.components.stewer:IsCooking() then
             inst.SoundEmitter:KillSound("snd")
-			
+
 			if not inst.components.container:IsOpenedByOthers(doer) and
                 inst.components.stewer:CanCook() then
                 startcookfn(inst)
@@ -443,12 +444,12 @@ local function SetProductSymbol(inst, product, overridebuild)
     local potlevel = recipe ~= nil and recipe.potlevel or nil
     local build = (recipe ~= nil and recipe.overridebuild) or overridebuild or "cook_pot_food"
     local overridesymbol = (recipe ~= nil and recipe.overridesymbolname) or product
-	
+
 	local product_image = SpawnPrefab("kyno_product_bubble")
 	product_image.entity:SetParent(inst.entity)
 	product_image.AnimState:PlayAnimation("product_pothanger", false)
 	product_image.AnimState:SetFinalOffset(5)
-	
+
 	product_image.AnimState:OverrideSymbol("product_image", GetInventoryItemAtlas(overridesymbol..".tex"), overridesymbol..".tex")
 end
 
@@ -488,30 +489,30 @@ local function donecookfn(inst)
         inst.SoundEmitter:KillSound("snd")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_finish")
         inst.Light:Enable(false)
-		
+
 		local firepit = GetFirepit(inst)
 		if firepit then
 			firepit:AddTag("NOCLICK")
 		end
-		
-		inst.steam_task = inst:DoPeriodicTask(2, function() 
+
+		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
-			OnPotSteam(inst) 
+			OnPotSteam(inst)
 		end)
     else
 		inst.AnimState:PlayAnimation("cooking_boil_small", true)
         inst.SoundEmitter:KillSound("snd")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_finish")
         inst.Light:Enable(false)
-		
+
 		local firepit = GetFirepit(inst)
 		if firepit then
 			firepit:AddTag("NOCLICK")
 		end
-		
-		inst.steam_task = inst:DoPeriodicTask(2, function() 
+
+		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
-			OnPotSteam(inst) 
+			OnPotSteam(inst)
 		end)
 	end
 	HideGoops(inst)
@@ -521,27 +522,27 @@ end
 local function continuedonefn(inst)
     if not inst:HasTag("burnt") and inst:HasTag("pot_big") then
         inst.AnimState:PlayAnimation("cooking_boil_big", true)
-		
+
 		local firepit = GetFirepit(inst)
 		if firepit then
 			firepit:AddTag("NOCLICK")
 		end
-		
-		inst.steam_task = inst:DoPeriodicTask(2, function() 
+
+		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
-			OnPotSteam(inst) 
+			OnPotSteam(inst)
 		end)
     else
 		inst.AnimState:PlayAnimation("cooking_boil_small", true)
-		
+
 		local firepit = GetFirepit(inst)
 		if firepit then
 			firepit:AddTag("NOCLICK")
 		end
-		
-		inst.steam_task = inst:DoPeriodicTask(2, function() 
+
+		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
-			OnPotSteam(inst) 
+			OnPotSteam(inst)
 		end)
 	end
 	HideGoops(inst)
@@ -554,7 +555,7 @@ local function continuecookfn(inst)
         inst.Light:Enable(true)
         inst.SoundEmitter:KillSound("snd")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_rattle", "snd")
-		
+
 		local firepit = GetFirepit(inst)
 		if firepit then
 			firepit:AddTag("NOCLICK")
@@ -568,18 +569,18 @@ local function harvestfn(inst, doer)
         inst.AnimState:PlayAnimation("idle_pot")
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
     end
-	
+
 	local firepit = GetFirepit(inst)
 	if firepit then
 		firepit:RemoveTag("NOCLICK")
 	end
-	
+
 	if inst.steam_task then
 		inst.steam_task:Cancel()
 		inst.steam_task = nil
 		-- print("Pot steam is gone!")
 	end
-	
+
 	local bubble = GetBubble(inst)
 	if bubble then
 		bubble:Remove()
@@ -626,107 +627,107 @@ end
 
 local function hangerfn()
 	local inst = CreateEntity()
-	
+
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
-	
+
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_cookware_hanger.tex")
-	
+
 	MakeObstaclePhysics(inst, .3)
-	
+
     inst.AnimState:SetBank("quagmire_pot_hanger")
     inst.AnimState:SetBuild("quagmire_pot_hanger")
     inst.AnimState:PlayAnimation("place")
 	inst.AnimState:PushAnimation("idle", true)
-    
+
 	inst.AnimState:Hide("mouseover")
     inst.AnimState:Hide("goop")
     inst.AnimState:Hide("goop_small")
     inst.AnimState:Hide("goop_syrup")
 
     inst.AnimState:SetFinalOffset(-2)
-    
+
 	inst:AddTag("structure")
 	inst:AddTag("cookingpot_hanger")
-	
+
 	inst.entity:SetPristine()
-	
+
     if not TheWorld.ismastersim then
         return inst
     end
 
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"kyno_cookware_hanger_item"})
-	
+
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "QUAGMIRE_POT_HANGER"
-	
+
 	inst:AddComponent("trader")
 	inst.components.trader:SetAcceptTest(TestItem)
     inst.components.trader.onaccept = OnGetItemFromPlayer
-	
+
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammeredHanger)
 	inst.components.workable:SetOnWorkCallback(OnHitHanger)
 	inst.components.workable:SetWorkLeft(3)
-	
+
     return inst
 end
 
 local function syruppotfn()
 	local inst = CreateEntity()
-	
+
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddLight()
     inst.entity:AddNetwork()
-	
+
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_cookware_syrup.tex")
-	
+
 	inst.Light:Enable(false)
 	inst.Light:SetRadius(.6)
 	inst.Light:SetFalloff(1)
 	inst.Light:SetIntensity(.5)
 	inst.Light:SetColour(235/255,62/255,12/255)
-	
+
 	MakeObstaclePhysics(inst, .3)
-	
+
     inst.AnimState:SetBank("quagmire_pot_hanger")
     inst.AnimState:SetBuild("quagmire_pot_hanger")
     inst.AnimState:PlayAnimation("idle_pot")
-	
+
 	inst.AnimState:AddOverrideBuild("quagmire_pot_syrup")
 	inst.AnimState:OverrideSymbol("pot", "quagmire_pot_syrup", "pot")
-	
+
     inst.AnimState:Hide("mouseover")
     inst.AnimState:Hide("goop")
     inst.AnimState:Hide("goop_small")
     inst.AnimState:Hide("goop_syrup")
 
     inst.AnimState:SetFinalOffset(-2)
-    
+
 	inst:AddTag("structure")
 	inst:AddTag("stewer")
 	inst:AddTag("pot_syrup")
-	
+
 	inst._steam = net_event(inst.GUID, "steampot")
-	
+
 	inst.entity:SetPristine()
-	
+
     if not TheWorld.ismastersim then
 		inst:ListenForEvent("steampot", OnPotSteam)
-		inst.OnEntityReplicated = function(inst) 
-			inst.replica.container:WidgetSetup("syrup_pot") 
+		inst.OnEntityReplicated = function(inst)
+			inst.replica.container:WidgetSetup("syrup_pot")
 		end
         return inst
     end
-	
+
 	inst:AddComponent("stewer")
 	inst.components.stewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT_SYRUP
 	inst.components.stewer.onstartcooking = startcookfn
@@ -744,35 +745,35 @@ local function syruppotfn()
 	inst.components.container.onclosefn = OnClose
 	inst.components.container.skipclosesnd = true
 	inst.components.container.skipopensnd = true
-	
+
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"kyno_cookware_syrup_pot"})
-	
+
     inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
-	
+
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammeredPot)
 	inst.components.workable:SetOnWorkCallback(OnHitPotSmall)
 	inst.components.workable:SetWorkLeft(1)
-	
+
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 	inst.OnLoadPostPass = OnLoadPostPass
-	
+
     return inst
 end
 
 local function potfn(small)
 	local inst = CreateEntity()
-	
+
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddLight()
     inst.entity:AddNetwork()
-	
+
 	local minimap = inst.entity:AddMiniMapEntity()
 	if small then
 		minimap:SetIcon("kyno_cookware_small_pot.tex")
@@ -780,19 +781,19 @@ local function potfn(small)
 		minimap:SetIcon("kyno_cookware_big_pot.tex")
 	end
 	minimap:SetPriority(3)
-	
+
 	inst.Light:Enable(false)
 	inst.Light:SetRadius(.6)
 	inst.Light:SetFalloff(1)
 	inst.Light:SetIntensity(.5)
 	inst.Light:SetColour(235/255,62/255,12/255)
-	
+
 	MakeObstaclePhysics(inst, .3)
-	
+
     inst.AnimState:SetBank("quagmire_pot_hanger")
     inst.AnimState:SetBuild("quagmire_pot_hanger")
     inst.AnimState:PlayAnimation("idle_pot")
-	
+
 	if small then
 		inst.AnimState:AddOverrideBuild("quagmire_pot_small")
 		inst.AnimState:OverrideSymbol("pot", "quagmire_pot_small", "pot")
@@ -800,14 +801,14 @@ local function potfn(small)
 		inst.AnimState:AddOverrideBuild("quagmire_pot")
 		inst.AnimState:OverrideSymbol("pot", "quagmire_pot", "pot")
 	end
-	
+
     inst.AnimState:Hide("mouseover")
     inst.AnimState:Hide("goop")
     inst.AnimState:Hide("goop_small")
     inst.AnimState:Hide("goop_syrup")
-	
+
     inst.AnimState:SetFinalOffset(-2)
-    
+
 	inst:AddTag("structure")
 	inst:AddTag("stewer")
 	inst:AddTag("pot_syrup")
@@ -816,19 +817,19 @@ local function potfn(small)
 	else
 		inst:AddTag("pot_big")
 	end
-	
+
 	inst._steam = net_event(inst.GUID, "steampot")
-	
+
 	inst.entity:SetPristine()
-	
+
     if not TheWorld.ismastersim then
 		inst:ListenForEvent("steampot", OnPotSteam)
-		inst.OnEntityReplicated = function(inst) 
-			inst.replica.container:WidgetSetup("cooking_pot") 
+		inst.OnEntityReplicated = function(inst)
+			inst.replica.container:WidgetSetup("cooking_pot")
 		end
         return inst
     end
-	
+
 	inst:AddComponent("stewer")
 	inst.components.stewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT
 	inst.components.stewer.onstartcooking = startcookfn
@@ -846,17 +847,17 @@ local function potfn(small)
 	inst.components.container.onclosefn = OnClose
 	inst.components.container.skipclosesnd = true
 	inst.components.container.skipopensnd = true
-	
+
 	inst:AddComponent("lootdropper")
 	if small then
 		inst.components.lootdropper:SetLoot({"kyno_cookware_small_pot"})
 	else
 		inst.components.lootdropper:SetLoot({"kyno_cookware_big_pot"})
 	end
-	
+
     inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
-	
+
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammeredPot)
@@ -866,11 +867,11 @@ local function potfn(small)
 		inst.components.workable:SetOnWorkCallback(OnHitPotBig)
 	end
 	inst.components.workable:SetWorkLeft(1)
-	
+
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 	inst.OnLoadPostPass = OnLoadPostPass
-	
+
     return inst
 end
 
@@ -890,55 +891,55 @@ local pit_defs = {
 
 local function elderpotfn()
 	local inst = CreateEntity()
-	
+
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddLight()
     inst.entity:AddNetwork()
-	
+
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_cookware_syrup.tex")
-	
+
 	inst.Light:Enable(false)
 	inst.Light:SetRadius(.6)
 	inst.Light:SetFalloff(1)
 	inst.Light:SetIntensity(.5)
 	inst.Light:SetColour(235/255,62/255,12/255)
-	
+
 	MakeObstaclePhysics(inst, .3)
-	
+
     inst.AnimState:SetBank("quagmire_pot_hanger")
     inst.AnimState:SetBuild("quagmire_pot_hanger")
     inst.AnimState:PlayAnimation("idle_pot")
-	
+
 	inst.AnimState:AddOverrideBuild("quagmire_pot_syrup")
 	inst.AnimState:OverrideSymbol("pot", "quagmire_pot_syrup", "pot")
-	
+
     inst.AnimState:Hide("mouseover")
     inst.AnimState:Hide("goop")
     inst.AnimState:Hide("goop_small")
     inst.AnimState:Hide("goop_syrup")
 
     inst.AnimState:SetFinalOffset(-2)
-    
+
 	inst:AddTag("structure")
 	inst:AddTag("stewer")
 	inst:AddTag("pot_syrup")
 	inst:AddTag("pot_elder")
-	
+
 	inst._steam = net_event(inst.GUID, "steampot")
-	
+
 	inst.entity:SetPristine()
-	
+
     if not TheWorld.ismastersim then
 		inst:ListenForEvent("steampot", OnPotSteam)
-		inst.OnEntityReplicated = function(inst) 
-			inst.replica.container:WidgetSetup("syrup_pot") 
+		inst.OnEntityReplicated = function(inst)
+			inst.replica.container:WidgetSetup("syrup_pot")
 		end
         return inst
     end
-	
+
 	local decor_items = pit_defs
 	inst.decor = {}
 	for item_name, data in pairs(decor_items) do
@@ -952,7 +953,7 @@ local function elderpotfn()
 			table.insert(inst.decor, item_inst)
 		end
 	end
-	
+
 	inst:AddComponent("stewer")
 	inst.components.stewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT_SYRUP
 	inst.components.stewer.onstartcooking = startcookfn
@@ -970,23 +971,23 @@ local function elderpotfn()
 	inst.components.container.onclosefn = OnClose
 	inst.components.container.skipclosesnd = true
 	inst.components.container.skipopensnd = true
-	
+
 	-- inst:AddComponent("lootdropper")
 	-- inst.components.lootdropper:SetLoot({"kyno_cookware_syrup_pot"})
-	
+
     inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
-	
+
 	-- inst:AddComponent("workable")
     -- inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	-- inst.components.workable:SetOnFinishCallback(OnHammeredPot)
 	-- inst.components.workable:SetOnWorkCallback(OnHitPotSmall)
 	-- inst.components.workable:SetWorkLeft(1)
-	
+
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 	inst.OnLoadPostPass = OnLoadPostPass
-	
+
     return inst
 end
 

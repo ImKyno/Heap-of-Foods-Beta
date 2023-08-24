@@ -10,9 +10,9 @@ require("craftpot/ingredienttags")
 AddIngredientValues({"slurtle_shellpieces"}, 	{inedible   = 1, 	elemental = 1,	 shell    = 1})
 AddIngredientValues({"rabbit"}, 				{rabbit     = 1})
 AddIngredientValues({"firenettles"}, 			{veggie     = 0.5})
-AddIngredientValues({"foliage"}, 				{veggie     = 0.5,  foliage   = 1}, 		  true)
-AddIngredientValues({"succulent_picked"}, 		{veggie     = 0.5})
-AddIngredientValues({"petals"}, 				{veggie     = 0.5})
+AddIngredientValues({"foliage"}, 				{veggie     = 0.25,  foliage   = 1}, 		  true)
+AddIngredientValues({"succulent_picked"}, 		{veggie     = 0.25})
+AddIngredientValues({"petals"}, 				{decoration = 0.25})
 AddIngredientValues({"gears"}, 					{gears      = 1,	inedible  = 1})
 AddIngredientValues({"rocks"}, 					{rocks      = 1, 	elemental = 1,   inedible = 1})
 AddIngredientValues({"poop"}, 					{poop       = 1, 	inedible  = 1})
@@ -37,7 +37,7 @@ AddIngredientValues({"spider"},                 {monster    = 1,    spider    = 
 -- New Mod Crock Pot Ingredients.
 AddIngredientValues({"kyno_coffeebeans"}, 		{seeds      = 1}, 	 		  				  true)
 AddIngredientValues({"kyno_shark_fin"}, 		{fish       = 1})
-AddIngredientValues({"kyno_roe"}, 				{fish       = 1, 	roe       = 1}, 		  true)
+AddIngredientValues({"kyno_roe"}, 				{fish       = 0.25, meat = 0.25, roe = 1},    true)
 AddIngredientValues({"kyno_mussel"}, 			{fish       = 0.5, 	mussel    = 1}, 		  true)
 AddIngredientValues({"kyno_beanbugs"}, 			{beanbug    = 1, 	veggie    = 0.5}, 		  true)
 AddIngredientValues({"kyno_gummybug"}, 			{gummybug   = 1, 	veggie    = 0.5}, 		  true)
@@ -48,8 +48,7 @@ AddIngredientValues({"kyno_spotspice"},			{spotspice  = 1})
 AddIngredientValues({"kyno_bacon"}, 			{meat       = 0.5, 	bacon     = 1}, 		  true)
 AddIngredientValues({"gorge_bread"}, 			{bread      = 1})
 AddIngredientValues({"kyno_white_cap"}, 		{veggie     = 0.5, 	mushrooms = 1},		      true)
--- This is a false Foliage. We just need it because Cooked Foliage icon doesn't display without it.
-AddIngredientValues({"kyno_foliage"}, 			{veggie     = 0.5,  foliage   = 1}, 		  true)
+AddIngredientValues({"kyno_foliage"}, 			{veggie     = 0.25, foliage   = 1}, 		  true)
 AddIngredientValues({"kyno_sap"}, 				{inedible   = 1, 	sap       = 1})
 AddIngredientValues({"kyno_aloe"}, 				{veggie     = 1}, 						      true)
 AddIngredientValues({"kyno_radish"}, 			{veggie     = 1}, 						      true)
@@ -105,6 +104,7 @@ for k, v in pairs(require("hof_foodrecipes")) do
 	AddCookerRecipe("cookpot",             					v)
 	AddCookerRecipe("archive_cookpot",     					v)
 	AddCookerRecipe("portablecookpot",     					v)
+	
 	AddCookerRecipe("kyno_cookware_syrup", 					v)
 	AddCookerRecipe("kyno_cookware_small", 					v)
 	AddCookerRecipe("kyno_cookware_big",   					v)
@@ -120,7 +120,27 @@ for k, v in pairs(require("hof_foodrecipes")) do
 	end
 end
 
--- This file is only for Warly foods.
+for k, v in pairs(require("hof_foodrecipes_seasonal")) do
+	AddCookerRecipe("cookpot",             					v)
+	AddCookerRecipe("archive_cookpot",     					v)
+	AddCookerRecipe("portablecookpot",     					v)
+	
+	AddCookerRecipe("kyno_cookware_syrup", 					v)
+	AddCookerRecipe("kyno_cookware_small", 					v)
+	AddCookerRecipe("kyno_cookware_big",   					v)
+	AddCookerRecipe("kyno_cookware_elder",          		v)
+	AddCookerRecipe("kyno_cookware_small_grill", 			v)
+	AddCookerRecipe("kyno_cookware_grill", 		 			v)
+	AddCookerRecipe("kyno_cookware_oven_small_casserole", 	v)
+	AddCookerRecipe("kyno_cookware_oven_casserole", 		v)
+
+	if v.card_def then
+		AddRecipeCard("cookpot",                            v)
+		AddRecipeCard("portablecookpot",                    v)
+	end
+end
+
+-- Import Warly's foods.
 for k, v in pairs(require("hof_foodrecipes_warly")) do
 	AddCookerRecipe("portablecookpot",         				v)
 
@@ -148,6 +168,7 @@ local cookers =
 	"portablecookpot",
 	"portablespicer",
 	"archive_cookpot",
+	
 	"kyno_cookware_syrup",
 	"kyno_cookware_small",
 	"kyno_cookware_big",
@@ -170,6 +191,7 @@ local cookerstations =
 	"cookpot",
 	"portablecookpot",
 	"archive_cookpot",
+	
 	"kyno_cookware_syrup",
 	"kyno_cookware_small",
 	"kyno_cookware_big",
@@ -262,26 +284,6 @@ local kynofoods =
 	gorge_cheesecake 		= require("hof_foodrecipes").gorge_cheesecake,
 	kyno_syrup 				= require("hof_foodrecipes").kyno_syrup,
 
-	-- Winter's Feast.
-	festive_berrysauce 		= require("hof_foodrecipes").festive_berrysauce,
-	festive_bibingka 		= require("hof_foodrecipes").festive_bibingka,
-	festive_cabbagerolls 	= require("hof_foodrecipes").festive_cabbagerolls,
-	festive_fishdish 		= require("hof_foodrecipes").festive_fishdish,
-	festive_goodgravy 		= require("hof_foodrecipes").festive_goodgravy,
-	festive_latkes 			= require("hof_foodrecipes").festive_latkes,
-	festive_lutefisk 		= require("hof_foodrecipes").festive_lutefisk,
-	festive_mulledpunch 	= require("hof_foodrecipes").festive_mulledpunch,
-	festive_panettone 		= require("hof_foodrecipes").festive_panettone,
-	festive_pavlova 		= require("hof_foodrecipes").festive_pavlova,
-	festive_pickledherring 	= require("hof_foodrecipes").festive_pickledherring,
-	festive_polishcookies 	= require("hof_foodrecipes").festive_polishcookies,
-	festive_pumpkinpie 		= require("hof_foodrecipes").festive_pumpkinpie,
-	festive_roastedturkey 	= require("hof_foodrecipes").festive_roastedturkey,
-	festive_stuffing 		= require("hof_foodrecipes").festive_stuffing,
-	festive_sweetpotato 	= require("hof_foodrecipes").festive_sweetpotato,
-	festive_tamales 		= require("hof_foodrecipes").festive_tamales,
-	festive_tourtiere 		= require("hof_foodrecipes").festive_tourtiere,
-
 	-- Unimplemented.
 	slaw 					= require("hof_foodrecipes").slaw,
 	lotusbowl 				= require("hof_foodrecipes").lotusbowl,
@@ -338,6 +340,26 @@ local kynofoods =
 	wobstermonster          = require("hof_foodrecipes").wobstermonster,
 	durianmeated            = require("hof_foodrecipes").durianmeated,
 	durianchicken           = require("hof_foodrecipes").durianchicken,
+	
+	-- Winter's Feast.
+	festive_berrysauce 		= require("hof_foodrecipes_seasonal").festive_berrysauce,
+	festive_bibingka 		= require("hof_foodrecipes_seasonal").festive_bibingka,
+	festive_cabbagerolls 	= require("hof_foodrecipes_seasonal").festive_cabbagerolls,
+	festive_fishdish 		= require("hof_foodrecipes_seasonal").festive_fishdish,
+	festive_goodgravy 		= require("hof_foodrecipes_seasonal").festive_goodgravy,
+	festive_latkes 			= require("hof_foodrecipes_seasonal").festive_latkes,
+	festive_lutefisk 		= require("hof_foodrecipes_seasonal").festive_lutefisk,
+	festive_mulledpunch 	= require("hof_foodrecipes_seasonal").festive_mulledpunch,
+	festive_panettone 		= require("hof_foodrecipes_seasonal").festive_panettone,
+	festive_pavlova 		= require("hof_foodrecipes_seasonal").festive_pavlova,
+	festive_pickledherring 	= require("hof_foodrecipes_seasonal").festive_pickledherring,
+	festive_polishcookies 	= require("hof_foodrecipes_seasonal").festive_polishcookies,
+	festive_pumpkinpie 		= require("hof_foodrecipes_seasonal").festive_pumpkinpie,
+	festive_roastedturkey 	= require("hof_foodrecipes_seasonal").festive_roastedturkey,
+	festive_stuffing 		= require("hof_foodrecipes_seasonal").festive_stuffing,
+	festive_sweetpotato 	= require("hof_foodrecipes_seasonal").festive_sweetpotato,
+	festive_tamales 		= require("hof_foodrecipes_seasonal").festive_tamales,
+	festive_tourtiere 		= require("hof_foodrecipes_seasonal").festive_tourtiere,
 
 	-- Warly Exclusives.
 	musselbouillabaise 		= require("hof_foodrecipes_warly").musselbouillabaise,

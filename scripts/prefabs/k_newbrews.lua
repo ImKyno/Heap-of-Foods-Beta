@@ -76,7 +76,7 @@ local function MakePreparedBrew(data)
 		if not TheWorld.ismastersim then
 			return inst
 		end
-		
+
 		inst.food_symbol_build = food_symbol_build or data.overridebuild
 		inst.food_basename = data.basename
 
@@ -132,12 +132,18 @@ end
 
 local prefs = {}
 
-for k, v in pairs(require("hof_foodrecipes_jar")) do
+for k, v in pairs(require("hof_brewrecipes_keg")) do
 	table.insert(prefs, MakePreparedBrew(v))
 end
 
-for k, v in pairs(require("hof_foodrecipes_keg")) do
+for k, v in pairs(require("hof_brewrecipes_jar")) do
 	table.insert(prefs, MakePreparedBrew(v))
 end
+
+--[[
+for k, v in pairs(require("hof_brewrecipes_warly")) do
+	table.insert(prefs, MakePreparedBrew(v))
+end
+]]--
 
 return unpack(prefs)

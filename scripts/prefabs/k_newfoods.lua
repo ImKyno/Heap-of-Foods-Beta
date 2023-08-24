@@ -57,7 +57,7 @@ local function MakePreparedFood(data)
 
 		inst:AddTag("preparedfood")
 		inst:AddTag("preparedfood_hof")
-		
+
 		if inst:HasTag("preparedpoop") then
 			inst.AnimState:SetScale(.95, .95, .95)
 		end
@@ -82,7 +82,7 @@ local function MakePreparedFood(data)
 		if not TheWorld.ismastersim then
 			return inst
 		end
-		
+
 		inst.food_symbol_build = food_symbol_build or data.overridebuild
 		inst.food_basename = data.basename
 
@@ -120,10 +120,10 @@ local function MakePreparedFood(data)
 			inst.components.perishable:StartPerishing()
 			inst.components.perishable.onperishreplacement = "spoiled_food"
 		end
-		
+
 		if inst:HasTag("soulstew") then
 			inst:AddComponent("soul")
-		end 
+		end
 
 		MakeSmallBurnable(inst)
 		MakeSmallPropagator(inst)
@@ -142,6 +142,10 @@ end
 local prefs = {}
 
 for k, v in pairs(require("hof_foodrecipes")) do
+	table.insert(prefs, MakePreparedFood(v))
+end
+
+for k, v in pairs(require("hof_foodrecipes_seasonal")) do
 	table.insert(prefs, MakePreparedFood(v))
 end
 

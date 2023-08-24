@@ -20,12 +20,14 @@ local variables =
 	hasDrankNukaQuantum    = { net_type = net_bool,     value = false },
 }
 
-local preparedHofFoods      = require("hof_foodrecipes")
-local preparedHofWarlyFoods = require("hof_foodrecipes_warly")
+local preparedHofFoods         = require("hof_foodrecipes")
+local preparedHofWarlyFoods    = require("hof_foodrecipes_warly")
+local preparedHofSeasonalFoods = require("hof_foodrecipes_seasonal")
 
 local allHofFoods = {}
-for k,_ in pairs(preparedHofFoods)      do allHofFoods[k] = true end
-for k,_ in pairs(preparedHofWarlyFoods) do allHofFoods[k] = true end
+for k,_ in pairs(preparedHofFoods)         do allHofFoods[k] = true end
+for k,_ in pairs(preparedHofWarlyFoods)    do allHofFoods[k] = true end
+for k,_ in pairs(preparedHofSeasonalFoods) do allHofFoods[k] = true end
 
 for k,_ in pairs(allHofFoods) do
     variables["hasCookedHof_" .. k] = { net_type = net_bool, value = false }
@@ -54,8 +56,8 @@ for k,v in pairs(preparedHofWarlyFoods) do
     variables["hasCookedWarlyHof_" .. k] = { net_type = net_bool, value = false }
 end
 
-local preparedHofJar = require("hof_foodrecipes_jar")
-local preparedHofKeg = require("hof_foodrecipes_keg")
+local preparedHofKeg = require("hof_brewrecipes_keg")
+local preparedHofJar = require("hof_brewrecipes_jar")
 
 local allHofDrinks = {}
 for k,_ in pairs(preparedHofJar) do allHofDrinks[k] = true end
@@ -176,7 +178,7 @@ local function SetupPlayerFunctions(player)
             end
         end
 		]]--
-		
+
 		local nukacola = data.food.prefab == "nukacola" or nil
 		if nukacola ~= nil then
 			local varName = "hasDrankNukaCola"
@@ -185,7 +187,7 @@ local function SetupPlayerFunctions(player)
 				manager:DoAchieve({category = categoryName, name = "drinknukacola"}, {"hasDrankNukaCola"})
 			end
 		end
-		
+
 		local nukaquantum = data.food.prefab == "nukacola_quantum" or nil
         if nukaquantum ~= nil then
             local varName = "hasDrankNukaQuantum"
@@ -652,19 +654,19 @@ local stringTables =
 
             DRINKCOFFEE_TITLE = "Faster Than The Light",
             DRINKCOFFEE_DESC = "Drink a Coffee and become faster than everything else. Speedy!",
-			
+
 			DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
             DRINKALCOHOLIC_DESC = "Drink an alcoholic beverage. Drink in moderation!",
-			
+
 			-- DRINKPIRATERUM_TITLE = "Cannon Barrage",
             -- DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
             -- DRINKTEQUILA_TITLE = "Shifting Tempo",
             -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
-			
+
 			DRINKNUKACOLA_TITLE = "Nuclear Drink",
 			DRINKNUKACOLA_DESC = "Drink a Nuka-Cola. An otherworldly drink!",
-			
+
 			DRINKNUKAQUANTUM_TITLE = "Ice Cold Quantum!",
 			DRINKNUKAQUANTUM_DESC = "Drink a Nuka-Cola Quantum. Enjoy the rads!",
 
@@ -721,19 +723,19 @@ local stringTables =
 
             DRINKCOFFEE_TITLE = "Veloz Como a Luz",
             DRINKCOFFEE_DESC = "Beba um Café e se torne mais rápido do que todos. Que velocidade!",
-			
+
 			DRINKALCOHOLIC_TITLE = "Jogo de Bebidas do Biv",
             DRINKALCOHOLIC_DESC = "Beba uma bebida alcoólica. Beba com moderação!",
-			
+
 			-- DRINKPIRATERUM_TITLE = "Barragem de Canhão",
             -- DRINKPIRATERUM_DESC = "Beba um Rum de Pirata e descubra o segredo por trás dele.",
 
             -- DRINKTEQUILA_TITLE = "Mudança de Tempo",
             -- DRINKTEQUILA_DESC = "Beba uma Tequila Retorcida e se perca através do tempo-espaço.",
-			
+
 			DRINKNUKACOLA_TITLE = "Bebida Nuclear",
 			DRINKNUKACOLA_DESC = "Beba uma Nuka-Cola. Um refrigerante de outro mundo!",
-			
+
 			DRINKNUKAQUANTUM_TITLE = "Uma Quantum Geladinha!",
 			DRINKNUKAQUANTUM_DESC = "Beba uma Nuka-Cola Quantum. Sinta o sabor da radiação!",
 
@@ -790,19 +792,19 @@ local stringTables =
 
             DRINKCOFFEE_TITLE = "Faster Than The Light",
             DRINKCOFFEE_DESC = "Drink a Coffee and become faster than everything else. Speedy!",
-			
+
 			DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
             DRINKALCOHOLIC_DESC = "Drink an alcoholic beverage. Drink in moderation!",
-			
+
 			-- DRINKPIRATERUM_TITLE = "Cannon Barrage",
             -- DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
             -- DRINKTEQUILA_TITLE = "Shifting Tempo",
             -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
-			
+
 			DRINKNUKACOLA_TITLE = "Nuclear Drink",
 			DRINKNUKACOLA_DESC = "Drink a Nuka-Cola. An otherworldly drink!",
-			
+
 			DRINKNUKAQUANTUM_TITLE = "Ice Cold Quantum!",
 			DRINKNUKAQUANTUM_DESC = "Drink a Nuka-Cola Quantum. Enjoy the rads!",
 
@@ -859,19 +861,19 @@ local stringTables =
 
             DRINKCOFFEE_TITLE = "Faster Than The Light",
             DRINKCOFFEE_DESC = "Drink a Coffee and become faster than everything else. Speedy!",
-			
+
 			DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
             DRINKALCOHOLIC_DESC = "Drink an alcoholic beverage. Drink in moderation!",
-			
+
 			-- DRINKPIRATERUM_TITLE = "Cannon Barrage",
             -- DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
             -- DRINKTEQUILA_TITLE = "Shifting Tempo",
             -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
-			
+
 			DRINKNUKACOLA_TITLE = "Nuclear Drink",
 			DRINKNUKACOLA_DESC = "Drink a Nuka-Cola. An otherworldly drink!",
-			
+
 			DRINKNUKAQUANTUM_TITLE = "Ice Cold Quantum!",
 			DRINKNUKAQUANTUM_DESC = "Drink a Nuka-Cola Quantum. Enjoy the rads!",
 
@@ -928,19 +930,19 @@ local stringTables =
 
             DRINKCOFFEE_TITLE = "Faster Than The Light",
             DRINKCOFFEE_DESC = "Drink a Coffee and become faster than everything else. Speedy!",
-			
+
 			DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
             DRINKALCOHOLIC_DESC = "Drink an alcoholic beverage. Drink in moderation!",
-			
+
 			-- DRINKPIRATERUM_TITLE = "Cannon Barrage",
             -- DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
             -- DRINKTEQUILA_TITLE = "Shifting Tempo",
             -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
-			
+
 			DRINKNUKACOLA_TITLE = "Nuclear Drink",
 			DRINKNUKACOLA_DESC = "Drink a Nuka-Cola. An otherworldly drink!",
-			
+
 			DRINKNUKAQUANTUM_TITLE = "Ice Cold Quantum!",
 			DRINKNUKAQUANTUM_DESC = "Drink a Nuka-Cola Quantum. Enjoy the rads!",
 

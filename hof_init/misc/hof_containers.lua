@@ -11,8 +11,9 @@ local params 				= {}
 
 require("hof_foodrecipes")
 require("hof_foodrecipes_warly")
-require("hof_foodrecipes_keg")
-require("hof_foodrecipes_jar")
+require("hof_foodrecipes_seasonal")
+require("hof_brewrecipes_keg")
+require("hof_brewrecipes_jar")
 
 -- Custom containers.
 local containers_widgetsetup_base = containers.widgetsetup
@@ -22,7 +23,7 @@ function containers.widgetsetup(container, prefab, data, ...)
         for k, v in pairs(t) do
             container[k]	= v
         end
-		
+
         container:SetNumSlots(container.widget.slotpos ~= nil and #container.widget.slotpos or 0)
     else
         containers_widgetsetup_base(container, prefab, data, ...)
@@ -46,7 +47,7 @@ params.syrup_pot 			=
         pos 				= Vector3(200, 0, 0), -- A bit closer!
         side_align_tip 		= 100,
     },
-	
+
     acceptsstacks 			= false,
     type 					= "cooker",
 }
@@ -67,13 +68,13 @@ params.cooking_pot 			=
             Vector3(-1, -(32 + 4), 0		 ),
             Vector3(-1, -(64 + 32 + 8 + 4), 0),
         },
-		
+
         animbank 			= "quagmire_ui_pot_1x4",
         animbuild 			= "quagmire_ui_pot_1x4",
         pos 				= Vector3(200, 0, 0),
         side_align_tip 		= 100,
     },
-	
+
     acceptsstacks 			= false,
     type 					= "cooker",
 }
@@ -93,7 +94,7 @@ params.brewer 				=
             Vector3(-1, -(32 + 4), 0		 ),
 			Vector3(-1, -(64 + 32 + 8 + 4), 0),
         },
-		
+
         animbank 			= "ui_brewer_1x3",
         animbuild 			= "ui_brewer_1x3",
         pos 				= Vector3(150, 0, 0),
@@ -104,7 +105,7 @@ params.brewer 				=
             position = Vector3(0, -170, 0),
         }
     },
-	
+
     acceptsstacks 			= false,
     type 					= "brewer",
 }
@@ -143,13 +144,13 @@ params.honeydeposit =
 			Vector3(-37.5, -(70 + 4), 0),
             Vector3(37.5, -(70 + 4), 0),
 		},
-		
+
         animbank = "ui_antchest_honeycomb",
         animbuild = "ui_antchest_honeycomb",
         pos = Vector3(0, 200, 0),
         side_align_tip = 160,
     },
-	
+
     type = "chest",
 }
 
@@ -168,7 +169,7 @@ params.potatosack =
         pos = Vector3(0, 200, 0),
         side_align_tip = 160,
     },
-	
+
     type = "chest",
 }
 

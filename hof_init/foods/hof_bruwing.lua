@@ -76,7 +76,7 @@ AddBrewingValues({"kyno_oil"},                  {oil        = 1})
 AddBrewingValues({"kyno_sugar"},                {sweetener  = 1,   sugar         = 1})
 
 -- Import The Beverages.
-for k, v in pairs(require("hof_foodrecipes_keg")) do
+for k, v in pairs(require("hof_brewrecipes_keg")) do
 	AddBrewerRecipe("kyno_woodenkeg", 			v)
 	
 	if v.card_def then
@@ -84,10 +84,20 @@ for k, v in pairs(require("hof_foodrecipes_keg")) do
 	end
 end
 
-for k, v in pairs(require("hof_foodrecipes_jar")) do
+for k, v in pairs(require("hof_brewrecipes_jar")) do
 	AddBrewerRecipe("kyno_preservesjar", 		v)
 	
 	if v.card_def then
 		AddBrewerCard("kyno_preservesjar",      v)
 	end
 end
+
+--[[
+for k, v in pairs(require("hof_brewrecipes_warly")) do
+	AddBrewerRecipe("kyno_portablebrewer", 		v)
+	
+	if v.card_def then
+		AddBrewerCard("kyno_portablebrewer",    v)
+	end
+end
+]]--

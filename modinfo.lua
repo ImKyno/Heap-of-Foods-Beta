@@ -21,6 +21,7 @@ They take longer to produce a product, but are totally worth your time! Some of 
 
 author                      = "Kyno"
 api_version                 = 10
+priority                    = -15
 
 dst_compatible              = true
 all_clients_require_mod     = true
