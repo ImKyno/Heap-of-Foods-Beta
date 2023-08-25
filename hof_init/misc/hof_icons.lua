@@ -404,7 +404,7 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"tricolordango",
 	"friesfrench",
 	"piraterum",
-	"twistedtequile",
+	"twistedtequila",
 	"onionrings",
 	"donuts",
 	"donuts_chocolate_black",
@@ -443,7 +443,8 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"wobstermonster",
 	"durianmeated",
 	"durianchicken",
-	"spidercake"}) do
+	"spidercake",
+	"sugarbombs"}) do
         local foods_name = foods
         AddPrefabPostInit(foods_name, function(inst)
             inst.components.inventoryitem.imagename = foods_name
@@ -551,6 +552,7 @@ local ingredient_icons =
 	"kyno_oil.tex",
 	"littlebread.tex",
 	"kyno_sugar.tex",
+	"kyno_wheat.tex",
 }
 
 for k,v in pairs(ingredient_icons) do

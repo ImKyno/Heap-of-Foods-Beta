@@ -22,5 +22,6 @@
 		<Element name="roe.tex" u1="0.626" u2="0.749" v2="0.999" v1="0.751" variant="" />
 		<Element name="salmon.tex" u1="0.751" u2="0.874" v2="0.999" v1="0.751" variant="" />
 		<Element name="spotspice.tex" u1="0.876" u2="0.999" v2="0.999" v1="0.751" variant="" />
+		<Element name="sugar.tex" u1="0.501" u2="0.624" v2="0.749" v1="0.501" variant="" />
 	</Elements>
 </Atlas>

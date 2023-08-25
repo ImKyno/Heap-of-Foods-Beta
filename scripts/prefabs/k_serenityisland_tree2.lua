@@ -45,6 +45,26 @@ local function stump_dug(inst)
     inst:Remove()
 end
 
+local function stump_startburn(inst)
+    -- Blank fn to override default one since we do not
+    -- Want to add "tree" tag but we still want to save
+end
+
+local function stump_burnt(inst)
+    SpawnPrefab("ash").Transform:SetPosition(inst.Transform:GetWorldPosition())
+    inst:Remove()
+end
+
+local function OnSaveStump(inst, data)
+    data.burnt = inst.components.burnable ~= nil and inst.components.burnable:IsBurning() or nil
+end
+
+local function OnLoadStump(inst, data)
+    if data ~= nil and data.burnt then
+        stump_burnt(inst)
+    end
+end
+
 local function ChopTreeShake(inst)
     ShakeAllCameras(CAMERASHAKE.FULL, .25, .03, .5, inst, 6)
 end
@@ -117,6 +137,64 @@ local function GrowTall(inst)
 	inst:Remove()
 end
 
+local function StopGrowingShort(inst)
+    inst.components.timer:StopTimer("kyno_sugartree_short_timer")
+end
+
+local function StopGrowingNormal(inst)
+    inst.components.timer:StopTimer("kyno_sugartree_normal_timer")
+end
+
+StartGrowingShort = function(inst)
+    if not inst.components.timer:TimerExists("kyno_sugartree_short_timer") then
+        inst.components.timer:StartTimer("kyno_sugartree_short_timer")
+    end
+end
+
+StartGrowingNormal = function(inst)
+    if not inst.components.timer:TimerExists("kyno_sugartree_normal_timer") then
+        inst.components.timer:StartTimer("kyno_sugartree_normal_timer")
+    end
+end
+
+local function tree_startburn(inst)
+    if inst.components.pickable ~= nil then
+        inst.components.pickable.caninteractwith = false
+    end
+	
+	if inst.components.trader ~= nil then
+		inst.components.trader:Disable()
+	end
+end
+
+local function tree_burnt(inst)
+    local burnt_tree = SpawnPrefab("charcoal") -- No burnt animations?
+    burnt_tree.Transform:SetPosition(inst.Transform:GetWorldPosition())
+	
+    inst:Remove()
+end
+
+local function OnSave(inst, data)
+	-- data.sapped = inst.sapped
+	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
+        data.burnt = true
+	end
+end
+
+local function OnLoad(inst, data)
+	--[[
+	if inst:HasTag("sapoverflow") then
+		ShowSapStuff(inst)
+	else
+		HideSapStuff(inst)
+	end
+	]]--
+	
+	if data and data.burnt then
+		inst.components.lootdropper:SpawnLootPrefab("charcoal")
+	end
+end
+
 local s = .85
 
 local function shortfn()
@@ -177,6 +255,17 @@ local function shortfn()
             GrowNormal(inst)
         end
     end)
+	
+	inst:ListenForEvent("onignite", StopGrowingShort)
+	inst:ListenForEvent("onextinguish", StartGrowingShort)
+	
+	MakeMediumBurnable(inst)
+    inst.components.burnable:SetOnIgniteFn(tree_startburn)
+    inst.components.burnable:SetOnBurntFn(tree_burnt)
+	MakeSmallPropagator(inst)
+	
+	inst.OnSave = OnSave
+    inst.OnLoad = OnLoad
 
     return inst
 end
@@ -239,6 +328,17 @@ local function normalfn()
             GrowTall(inst)
         end
     end)
+	
+	inst:ListenForEvent("onignite", StopGrowingNormal)
+	inst:ListenForEvent("onextinguish", StartGrowingNormal)
+	
+	MakeMediumBurnable(inst)
+    inst.components.burnable:SetOnIgniteFn(tree_startburn)
+    inst.components.burnable:SetOnBurntFn(tree_burnt)
+	MakeSmallPropagator(inst)
+	
+	inst.OnSave = OnSave
+    inst.OnLoad = OnLoad
 
     return inst
 end
@@ -262,6 +362,7 @@ local function stump_shortfn()
 	inst.AnimState:PlayAnimation("stump")
 	
 	inst:AddTag("plant")
+	inst:AddTag("stump")
 
     inst.entity:SetPristine()
 
@@ -278,6 +379,14 @@ local function stump_shortfn()
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
+	
+	MakeSmallBurnable(inst)
+    inst.components.burnable:SetOnIgniteFn(stump_startburn)
+    inst.components.burnable:SetOnBurntFn(stump_burnt)
+	MakeSmallPropagator(inst)
+	
+	inst.OnSave = OnSaveStump
+    inst.OnLoad = OnLoadStump
 
     return inst
 end
@@ -301,6 +410,7 @@ local function stump_normalfn()
 	inst.AnimState:PlayAnimation("stump")
 	
 	inst:AddTag("plant")
+	inst:AddTag("stump")
 
     inst.entity:SetPristine()
 
@@ -317,6 +427,14 @@ local function stump_normalfn()
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
+	
+	MakeSmallBurnable(inst)
+    inst.components.burnable:SetOnIgniteFn(stump_startburn)
+    inst.components.burnable:SetOnBurntFn(stump_burnt)
+	MakeSmallPropagator(inst)
+	
+	inst.OnSave = OnSaveStump
+    inst.OnLoad = OnLoadStump
 
     return inst
 end

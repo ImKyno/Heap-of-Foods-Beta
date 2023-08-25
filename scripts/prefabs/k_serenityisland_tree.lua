@@ -155,6 +155,26 @@ local function stump_dug(inst)
     inst:Remove()
 end
 
+local function stump_startburn(inst)
+    -- Blank fn to override default one since we do not
+    -- Want to add "tree" tag but we still want to save
+end
+
+local function stump_burnt(inst)
+    SpawnPrefab("ash").Transform:SetPosition(inst.Transform:GetWorldPosition())
+    inst:Remove()
+end
+
+local function OnSaveStump(inst, data)
+    data.burnt = inst.components.burnable ~= nil and inst.components.burnable:IsBurning() or nil
+end
+
+local function OnLoadStump(inst, data)
+    if data ~= nil and data.burnt then
+        stump_burnt(inst)
+    end
+end
+
 local function ChopTreeShake(inst)
     ShakeAllCameras(CAMERASHAKE.FULL, .25, .03, .5, inst, 6)
 end
@@ -213,15 +233,41 @@ local function tree_chop(inst, chopper)
     end
 end
 
+local function tree_startburn(inst)
+    if inst.components.pickable ~= nil then
+        inst.components.pickable.caninteractwith = false
+    end
+	
+	if inst.components.trader ~= nil then
+		inst.components.trader:Disable()
+	end
+end
+
+local function tree_burnt(inst)
+    local burnt_tree = SpawnPrefab("charcoal") -- No burnt animations?
+    burnt_tree.Transform:SetPosition(inst.Transform:GetWorldPosition())
+	
+    inst:Remove()
+end
+
 local function OnSave(inst, data)
-	data.sapped = inst.sapped
+	-- data.sapped = inst.sapped
+	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
+        data.burnt = true
+	end
 end
 
 local function OnLoad(inst, data)
+	--[[
 	if inst:HasTag("sapoverflow") then
 		ShowSapStuff(inst)
 	else
 		HideSapStuff(inst)
+	end
+	]]--
+	
+	if data and data.burnt then
+		inst.components.lootdropper:SpawnLootPrefab("charcoal")
 	end
 end
 
@@ -277,6 +323,14 @@ local function treefn()
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(tree_chopped)
     inst.components.workable:SetOnWorkCallback(tree_chop)
+	
+	MakeMediumBurnable(inst)
+    inst.components.burnable:SetOnIgniteFn(tree_startburn)
+    inst.components.burnable:SetOnBurntFn(tree_burnt)
+	MakeSmallPropagator(inst)
+	
+	inst.OnSave = OnSave
+    inst.OnLoad = OnLoad
 
     return inst
 end
@@ -300,6 +354,7 @@ local function stumpfn()
 	inst.AnimState:PlayAnimation("stump")
 	
 	inst:AddTag("plant")
+	inst:AddTag("stump")
 
     inst.entity:SetPristine()
 
@@ -316,6 +371,14 @@ local function stumpfn()
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
+	
+	MakeSmallBurnable(inst)
+    inst.components.burnable:SetOnIgniteFn(stump_startburn)
+    inst.components.burnable:SetOnBurntFn(stump_burnt)
+	MakeSmallPropagator(inst)
+	
+	inst.OnSave = OnSaveStump
+    inst.OnLoad = OnLoadStump
 
     return inst
 end
@@ -494,6 +557,14 @@ local function ruined2fn()
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(tree_chopped_ruined)
     inst.components.workable:SetOnWorkCallback(tree_chop)
+	
+	MakeMediumBurnable(inst)
+    inst.components.burnable:SetOnIgniteFn(tree_startburn)
+    inst.components.burnable:SetOnBurntFn(tree_burnt)
+	MakeSmallPropagator(inst)
+	
+	inst.OnSave = OnSave
+    inst.OnLoad = OnLoad
 
     return inst
 end
@@ -518,6 +589,7 @@ local function stump_ruinedfn()
 	inst.AnimState:PlayAnimation("stump")
 	
 	inst:AddTag("plant")
+	inst:AddTag("stump")
 
     inst.entity:SetPristine()
 
@@ -534,6 +606,14 @@ local function stump_ruinedfn()
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
+	
+	MakeSmallBurnable(inst)
+    inst.components.burnable:SetOnIgniteFn(stump_startburn)
+    inst.components.burnable:SetOnBurntFn(stump_burnt)
+	MakeSmallPropagator(inst)
+	
+	inst.OnSave = OnSaveStump
+    inst.OnLoad = OnLoadStump
 
     return inst
 end

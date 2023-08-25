@@ -218,6 +218,25 @@ configuration_options       =
         },
         default             = 0,
 	},
+	{
+		name                = "HOF_GIANTSPAWNING",
+		label               = "Giants from Foods",
+		hover               = "Should Players spawn Giants when eating their special food?",
+		options             =
+		{
+			{
+				description = "No",
+				hover       = "Players will not spawn Giants when eating their special food.",
+				data        = 0
+			},
+			{
+				description = "Yes",
+				hover       = "Players will spawn Giants when eating their special food.",
+				data        = 1
+			},
+		},
+		default             = 1,
+	},
 	
 	--[[
 	Title("World Options", "Options for the world."),

@@ -4,30 +4,20 @@ local kyno_foods =
 	coffee =
 	{
 		test = function(cooker, names, tags) return names.kyno_coffeebeans_cooked and (names.kyno_coffeebeans_cooked == 4 or 
-		(names.kyno_coffeebeans_cooked == 3 and (tags.dairy or tags.sweetener))) and not names.kyno_coffeebeans end,
+		(names.kyno_coffeebeans_cooked == 3 and (tags.dairy or tags.sweetener or tags.sugar))) and not names.kyno_coffeebeans end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		secondaryfoodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
-		health = 3,
+		health = 5,
 		hunger = 9.375,
-		sanity = -5,
+		sanity = -20,
 		cooktime = 0.5,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"honeyed", "drinkable_food"},
+		tags = {"honeyed", "drinkable_food", "nospice"},
 		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 3}, {"honey", 1}}},
-		prefabs = { "buff_sleepresistance" },
-		oneatenfn = function(inst, eater)
-            if eater.components.grogginess ~= nil and
-			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
-				eater.components.grogginess:ResetGrogginess()
-            end
-
-			eater:AddDebuff("shroomsleepresist", "buff_sleepresistance")
-        end,
 	},
 	
 	bisque =
@@ -1260,8 +1250,8 @@ local kyno_foods =
 	
 	cucumbersalad =
 	{
-		test = function(cooker, names, tags) return names.kyno_cucumber and (tags.veggie and tags.veggie >= 2) and not tags.meat and not tags.inedible 
-		and not tags.egg and not tags.sweetener and not tags.fruit and not (names.kyno_taroroot or names.kyno_taroroot_cooked) end,
+		test = function(cooker, names, tags) return ((names.kyno_cucumber or 0) + (names.kyno_cucumber_cooked or 0) >= 3)
+		and not (names.kyno_taroroot or names.kyno_taroroot_cooked) end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -1272,7 +1262,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DRY,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_cucumber", 2}, {"kyno_seaweeds", 2}}},
+		card_def = {ingredients = {{"kyno_cucumber", 3}, {"kelp", 1}}},
 		prefabs = { "buff_moistureimmunity" },
         oneatenfn = function(inst, eater)
             eater:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
@@ -1462,9 +1452,6 @@ local kyno_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"deerclops_eyeball", 1}, {"kyno_flour", 1}, {"tomato", 2}}},
-		oneatenfn = function(inst, eater)
-			TheWorld.components.deerclopsspawner:SummonMonster(eater)
-		end,
 	},
 	
 	soulstew = 
@@ -1747,7 +1734,7 @@ local kyno_foods =
 	
 	tricolordango =
 	{
-		test = function(cooker, names, tags) return tags.milk and names.kyno_sugar and names.kyno_flour and names.twigs end,
+		test = function(cooker, names, tags) return tags.milk and tags.sugar and names.kyno_flour and names.twigs end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
@@ -1757,7 +1744,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"goatmilk", 1}, {"honey", 1}, {"kyno_flour", 1}, {"kyno_sugar", 1}}},
+		card_def = {ingredients = {{"goatmilk", 1}, {"kyno_flour", 1}, {"kyno_sugar", 1}, {"twigs", 1}}},
 	},
 	
 	friesfrench =
@@ -1844,7 +1831,7 @@ local kyno_foods =
 		test = function(cooker, names, tags) return names.bearger_fur and tags.gummybug and (tags.sweetener and tags.sweetener >= 2) end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
-		perishtime = TUNING.PERISH_SUPERSLOW,
+		perishtime = nil,
 		health = 5,
 		hunger = 30,
 		sanity = -5,
@@ -1854,28 +1841,6 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"bearger_fur", 1}, {"kyno_gummybug", 1}, {"honey", 2}}},
-		oneatenfn = function(inst, eater)
-			-- TheWorld.components.beargerspawner:SummonMonster(eater) -- It's not working?
-			SpawnPrefab("beargerwarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
-			local function BeargerSpawnPoint(pt)
-				if not TheWorld.Map:IsAboveGroundAtPoint(pt:Get()) then
-					pt = FindNearbyLand(pt, 1) or pt
-				end
-				
-				local offset = FindWalkableOffset(pt, math.random() * 2 * PI, 40, 12, true)
-				if offset ~= nil then
-					offset.x = offset.x + pt.x
-					offset.z = offset.z + pt.z
-					return offset
-				end
-			end
-			
-			local spawn_pt = BeargerSpawnPoint(eater:GetPosition())
-			if spawn_pt ~= nil then
-				local bearger = SpawnPrefab("bearger")
-				bearger.Physics:Teleport(spawn_pt:Get())
-			end
-		end,
 	},
 	
 	pretzel =
@@ -1913,7 +1878,7 @@ local kyno_foods =
 	
 	cottoncandy =
 	{
-		test = function(cooker, names, tags) return (names.kyno_sugar and names.kyno_sugar >= 3) and names.twigs end,
+		test = function(cooker, names, tags) return (tags.sugar and tags.sugar >= 3) and names.twigs end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -1923,7 +1888,6 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_sugar", 3}, {"twigs", 1}}},
 	},
 	
@@ -1969,7 +1933,7 @@ local kyno_foods =
 	
 	pinkcake =
 	{
-		test = function(cooker, names, tags) return (names.kyno_sugar and names.kyno_sugar >= 2) and names.kyno_flour and tags.egg end,
+		test = function(cooker, names, tags) return (tags.sugar and tags.sugar >= 2) and names.kyno_flour and tags.egg end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -2092,6 +2056,7 @@ local kyno_foods =
 		cooktime = 0.8,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"honey", 2}, {"pomegranate", 1}, {"twigs", 1}}},
 	},
 	
@@ -2395,6 +2360,20 @@ local kyno_foods =
 			
 			-- eater:AddDebuff("kyno_spiderbuff", "kyno_spiderbuff") -- Do we really want this?
 		end,
+	},
+	
+	sugarbombs =
+	{
+		test = function(cooker, names, tags) return (tags.sugar and tags.sugar >= 2) and ((names.kyno_wheat or 0) + (names.kyno_wheat_cooked or 0) >= 2)
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 5,
+		hunger = 20,
+		sanity = 15,
+		cooktime = 1.5,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_sugar", 2}, {"kyno_wheat", 2}}},
 	},
 }
 

@@ -72,6 +72,8 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_POISONBUNWICH",   "The Noxious Froggle Bunwich
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_TWISTEDTEQUILE",  "\"Last night in the party, when I drank that drink, I think it's called Tequila, right? That thing made me so dizzy that in the next day, I found myself in another place!\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WATERCUP",        "Want to get rid of your debuffs? Drink a Cup of Water and stay hydrated!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKACOLA",        "\See that bottle of... \"Nuka-Cola\", that's the name, right? I think Wortox brought that thing from another dimension, in one of his travels.\" -W")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKACOLA2",       "The unique taste of Nuka-Cola is the result of a combination of seventeen fruit essences, balanced to enhance the classic cola flavor. Zap that thirst!")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_SUGARBOMBS",      "A pack of sugary cereal that holds 100% of the recommended daily amount of sugar, Sugar Bombs have been preserved for 25 years after the Great War. However, this also caused a bit of radiation to slip in for most of them.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_LUNARSOUP",       "\I fear nothing when that Lunar Soup goes down in my belly!\" -W")
 
 -- We want that our custom tips appears more often.

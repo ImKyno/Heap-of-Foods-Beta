@@ -118,6 +118,7 @@ local function fn()
 	inst:AddTag("limpetrock")
 	inst:AddTag("boulder")
 	inst:AddTag("witherable")
+	inst:AddTag("fireproof")
 	
 	inst.entity:SetPristine()
 

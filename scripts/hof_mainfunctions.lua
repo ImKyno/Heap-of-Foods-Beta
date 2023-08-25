@@ -11,3 +11,16 @@ function ChangeFoodConfigs(config, value)
 	KnownModIndex:SaveConfigurationOptions(function() end, "workshop-2334209327", configs, false)
 	-- KnownModIndex:SaveConfigurationOptions(function() end, "workshop-2334209327", configs, false)
 end
+
+local function TogglePickable(pickable, isspring)
+    if isspring then
+        pickable:Pause()
+    else
+        pickable:Resume()
+    end
+end
+
+function MakeNoGrowInSpring(inst)
+    inst.components.pickable:WatchWorldState("isspring", TogglePickable)
+    TogglePickable(inst.components.pickable, TheWorld.state.isspring)
+end

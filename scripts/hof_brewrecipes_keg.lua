@@ -611,20 +611,20 @@ local kyno_foods_keg =
 		end,
 	},
 	
-	twistedtequile =
+	twistedtequila =
 	{
-		test = function(cooker, names, tags) return (names.durian or names.durian_cooked) and names.cutlichen and tags.frozen end,
+		test = function(cooker, names, tags) return (names.kyno_aloe or names.kyno_aloe_cooked) and names.kyno_spotspice_leaf and tags.frozen end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
-		health = 8,
+		health = 15,
 		hunger = 32.5,
-		sanity = -60,
-		cooktime = 2.2,
+		sanity = -30,
+		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_TEQUILA,
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"durian", 1}, {"cutlichen", 1}, {"ice", 1}}},
-		tags = {"drinkable_food", "alcoholic_drink", "honeyed"},
+		card_def = {ingredients = {{"kyno_aloe", 1}, {"kyno_spotspice_leaf", 1}, {"ice", 1}}},
+		tags = {"drinkable_food", "alcoholic_drink"},
 		oneatenfn = function(inst, eater)
 			local function GetRandomPosition(caster, teleportee, target_in_ocean)
 				if target_in_ocean then

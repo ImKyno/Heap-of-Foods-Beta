@@ -271,8 +271,8 @@ local function tree_fn()
 	MakeMediumBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(tree_startburn)
     inst.components.burnable:SetOnBurntFn(tree_burnt)
-	
 	MakeSmallPropagator(inst)
+	
     MakeNoGrowInWinter(inst)
 
     inst.OnSave = tree_onsave
@@ -322,6 +322,7 @@ local function stump_fn()
     inst.AnimState:PlayAnimation("stump")
 	
 	inst:AddTag("plant")
+	inst:AddTag("stump")
 
     inst:SetPrefabNameOverride("kyno_kokonuttree")
 

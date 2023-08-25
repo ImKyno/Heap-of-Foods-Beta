@@ -43,7 +43,8 @@ end
 local resize_items = 
 {
     "kyno_radish_cooked",
-    "kyno_cucumber",
+	"kyno_cucumber",
+	"kyno_cucumber_cooked",
     "kyno_parznip_cooked",
     "kyno_turnip_cooked",
     "kyno_turnip_ground",
@@ -60,19 +61,6 @@ end)
 
 AddPrefabPostInit("durianchicken", function(inst)
     inst.AnimState:SetScale(1.8, 1.8, 1.8)
-end)
-
--- The Sea Cucumber doesn't have a proper "cooked" animation, so I'll just make it non cookable.
-AddPrefabPostInit("kyno_cucumber", function(inst)
-    inst:RemoveTag("cookable")
-
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    if inst.components.cookable ~= nil then
-        inst:RemoveComponent("cookable")
-    end
 end)
 
 -- Parsnip will not be entirely consumed when the player eats it. Instead it will become a eaten version!

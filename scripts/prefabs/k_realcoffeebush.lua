@@ -195,6 +195,9 @@ local function createbush(name, inspectname, berryname, master_postinit)
         end
 		
         MakeSnowCovered(inst)
+		MakeNoGrowInWinter(inst)
+		-- MakeNoGrowInSpring(inst)
+		
         master_postinit(inst)
 		
         return inst

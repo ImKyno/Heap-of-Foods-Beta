@@ -168,6 +168,7 @@ local function SetupPlayerFunctions(player)
                 manager:DoAchieve({category = categoryName, name = "drinktequila"}, {"hasDrankTequila"})
             end
         end
+		]]--
 
         local piraterum = data.food.prefab == "piraterum" or nil
         if piraterum ~= nil then
@@ -177,7 +178,6 @@ local function SetupPlayerFunctions(player)
                 manager:DoAchieve({category = categoryName, name = "drinkpiraterum"}, {"hasDrankPirateRum"})
             end
         end
-		]]--
 
 		local nukacola = data.food.prefab == "nukacola" or nil
 		if nukacola ~= nil then
@@ -529,13 +529,13 @@ _G[registerEntriesFuncName] = function(root)
             Record      = function(data) return data and data.hasDrankAlcoholic end,
             Check       = function(data) return data and data.hasDrankAlcoholic or false end,
         },
-		--[[
         {
             name        = "drinkpiraterum",
             Record      = function(data) return data and data.hasDrankPirateRum end,
             Check       = function(data) return data and data.hasDrankPirateRum or false end,
             isHidden    = true,
         },
+		--[[
         {
             name        = "drinktequila",
             Record      = function(data) return data and data.hasDrankTequila end,
@@ -658,8 +658,8 @@ local stringTables =
 			DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
             DRINKALCOHOLIC_DESC = "Drink an alcoholic beverage. Drink in moderation!",
 
-			-- DRINKPIRATERUM_TITLE = "Cannon Barrage",
-            -- DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
+			DRINKPIRATERUM_TITLE = "Cannon Barrage",
+            DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
             -- DRINKTEQUILA_TITLE = "Shifting Tempo",
             -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
@@ -727,8 +727,8 @@ local stringTables =
 			DRINKALCOHOLIC_TITLE = "Jogo de Bebidas do Biv",
             DRINKALCOHOLIC_DESC = "Beba uma bebida alcoólica. Beba com moderação!",
 
-			-- DRINKPIRATERUM_TITLE = "Barragem de Canhão",
-            -- DRINKPIRATERUM_DESC = "Beba um Rum de Pirata e descubra o segredo por trás dele.",
+			DRINKPIRATERUM_TITLE = "Barragem de Canhão",
+            DRINKPIRATERUM_DESC = "Beba um Rum de Pirata e descubra o segredo por trás dele.",
 
             -- DRINKTEQUILA_TITLE = "Mudança de Tempo",
             -- DRINKTEQUILA_DESC = "Beba uma Tequila Retorcida e se perca através do tempo-espaço.",
@@ -796,8 +796,8 @@ local stringTables =
 			DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
             DRINKALCOHOLIC_DESC = "Drink an alcoholic beverage. Drink in moderation!",
 
-			-- DRINKPIRATERUM_TITLE = "Cannon Barrage",
-            -- DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
+			DRINKPIRATERUM_TITLE = "Cannon Barrage",
+            DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
             -- DRINKTEQUILA_TITLE = "Shifting Tempo",
             -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
@@ -865,8 +865,8 @@ local stringTables =
 			DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
             DRINKALCOHOLIC_DESC = "Drink an alcoholic beverage. Drink in moderation!",
 
-			-- DRINKPIRATERUM_TITLE = "Cannon Barrage",
-            -- DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
+			DRINKPIRATERUM_TITLE = "Cannon Barrage",
+            DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
             -- DRINKTEQUILA_TITLE = "Shifting Tempo",
             -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
@@ -934,8 +934,8 @@ local stringTables =
 			DRINKALCOHOLIC_TITLE = "Biv's Drinking Game",
             DRINKALCOHOLIC_DESC = "Drink an alcoholic beverage. Drink in moderation!",
 
-			-- DRINKPIRATERUM_TITLE = "Cannon Barrage",
-            -- DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
+			DRINKPIRATERUM_TITLE = "Cannon Barrage",
+            DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
             -- DRINKTEQUILA_TITLE = "Shifting Tempo",
             -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",

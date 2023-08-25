@@ -72,6 +72,10 @@ AddComponentPostInit("regrowthmanager", function(self)
 	self:SetRegrowthForType("kyno_aspargos_cave", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_aspargos_cave", function()
         return 1
     end)
+	
+	self:SetRegrowthForType("kyno_limpetrock", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_limpetrock", function()
+		return not (_worldstate.iswinter or _worldstate.snowlevel > 0) and 1 or 0
+	end)
 end) 
 
 AddComponentPostInit("desolationspawner", function(self)
