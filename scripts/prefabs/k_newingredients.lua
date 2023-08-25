@@ -212,11 +212,11 @@ local function sapfn()
     inst.AnimState:SetBuild("quagmire_sap")
     inst.AnimState:PlayAnimation("idle")
 
+	inst:AddTag("honeyed")
 	inst:AddTag("gourmet_sap")
 	inst:AddTag("gourmet_ingredient")
 	inst:AddTag("sap_fishfarmbait")
 	inst:AddTag("show_spoilage")
-	inst:AddTag("honeyed")
 
     inst.entity:SetPristine()
 

@@ -5,9 +5,9 @@ local resolvefilepath 	= _G.resolvefilepath
 local ACTIONS 			= _G.ACTIONS
 local STRINGS			= _G.STRINGS
 local SpawnPrefab		= _G.SpawnPrefab
+local UpvalueHacker     = require("hof_upvaluehacker")
 
 require("hof_mainfunctions")
-require("hof_upvaluehacker")
 
 -- Pig King Trades Some Items.
 local function BushTrader(inst)

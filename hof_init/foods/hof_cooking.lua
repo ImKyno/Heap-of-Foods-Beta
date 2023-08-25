@@ -341,6 +341,9 @@ local kynofoods =
 	wobstermonster          = require("hof_foodrecipes").wobstermonster,
 	durianmeated            = require("hof_foodrecipes").durianmeated,
 	durianchicken           = require("hof_foodrecipes").durianchicken,
+	spidercake              = require("hof_foodrecipes").spidercake,
+	sugarbombs              = require("hof_foodrecipes").sugarbombs,
+	berrybombs              = require("hof_foodrecipes").berrybombs,
 	
 	-- Winter's Feast.
 	festive_berrysauce 		= require("hof_foodrecipes_seasonal").festive_berrysauce,

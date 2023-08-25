@@ -6,7 +6,7 @@ local ACTIONS 			= _G.ACTIONS
 local STRINGS			= _G.STRINGS
 local SpawnPrefab		= _G.SpawnPrefab
 
-local spices = 
+local spices =
 {
 	"chili",
 	"garlic",
@@ -40,7 +40,7 @@ local function ResizeThisItem(inst)
     inst.AnimState:SetScale(.75, .75, .75)
 end
 
-local resize_items = 
+local resize_items =
 {
     "kyno_radish_cooked",
 	"kyno_cucumber",
@@ -48,7 +48,6 @@ local resize_items =
     "kyno_parznip_cooked",
     "kyno_turnip_cooked",
     "kyno_turnip_ground",
-	"friesfrench",
 }
 
 for k,v in pairs(resize_items) do
@@ -68,10 +67,10 @@ local function ParznipPostinit(inst)
 	local function OnEatenParznip(inst, eater)
 		local parsnipeaten = SpawnPrefab("kyno_parznip_eaten")
 		if eater.components.inventory and eater:HasTag("player") and not eater.components.health:IsDead()
-			and not eater:HasTag("playerghost") then eater.components.inventory:GiveItem(parsnipeaten) 
+			and not eater:HasTag("playerghost") then eater.components.inventory:GiveItem(parsnipeaten)
 		end
 	end
-	
+
 	if inst.components.edible ~= nil then
         inst.components.edible:SetOnEatenFn(OnEatenParznip)
 	end
@@ -313,14 +312,14 @@ end
 
 VanillaFood.butterflymuffin.test = function(cooker, names, tags)
 	return (names.butterflywings or names.moonbutterflywings or names.kyno_sugarflywings) and not tags.meat and tags.veggie and tags.veggie >= 0.5
-end 
+end
 
 VanillaFood.leafloaf.test = function(cooker, names, tags)
 	return ((names.plantmeat or 0) + (names.plantmeat_cooked or 0) + (names.kyno_plantmeat_dried or 0) >= 2)
 end
 
 VanillaFood.leafymeatburger.test = function(cooker, names, tags)
-	return (names.plantmeat or names.plantmeat_cooked or names.kyno_plantmeat_dried) and (names.onion or names.onion_cooked) 
+	return (names.plantmeat or names.plantmeat_cooked or names.kyno_plantmeat_dried) and (names.onion or names.onion_cooked)
 	and tags.veggie and tags.veggie >= 2
 end
 
@@ -335,7 +334,7 @@ end
 VanillaFood.icecream.test = function(cooker, names, tags)
 	return tags.frozen and tags.dairy and tags.sweetener and not tags.meat and not tags.veggie and not tags.inedible and not tags.egg
 	and not names.kyno_syrup
-end 
+end
 
 VanillaFood.monsterlasagna.oneatenfn = function(inst, eater)
 	if eater ~= nil and eater:HasTag("playermonster") and
@@ -362,7 +361,7 @@ WarlyFood.monstertartare.oneatenfn = function(inst, eater)
 end
 
 -- Foods that will have their action "Eat" replaced to "Drink".
-local drinkable_foods = 
+local drinkable_foods =
 {
     "winter_food8",
     "goatmilk",
@@ -375,7 +374,7 @@ for k,v in pairs(drinkable_foods) do
 end
 
 -- New foods that can be dried on Drying Racks.
-local dryable_foods = 
+local dryable_foods =
 {
 	"red_cap",
 	"green_cap",
@@ -386,22 +385,22 @@ local dryable_foods =
 
 local function DryablePostinit(inst)
 	inst:AddTag("dryable")
-	
+
 	if not _G.TheWorld.ismastersim then
         return inst
     end
-	
+
     inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("kyno_".. inst.prefab .."_dried")
     inst.components.dryable:SetDryTime(TUNING.DRY_MED)
 end
 
-for k,v in pairs(dryable_foods) do 
-	AddPrefabPostInit(v, DryablePostinit)	
+for k,v in pairs(dryable_foods) do
+	AddPrefabPostInit(v, DryablePostinit)
 end
 
 -- Make every "same" recipe has the same quotes.
-local jelly_foods = 
+local jelly_foods =
 {
     "jelly_berries",
     "jelly_berries_juicy",
@@ -416,7 +415,7 @@ local jelly_foods =
     "jelly_glowberry",
 }
 
-local mayo_foods = 
+local mayo_foods =
 {
     "mayonnaise",
     "mayonnaise_chicken",
@@ -424,7 +423,7 @@ local mayo_foods =
     "mayonnaise_nightmare",
 }
 
-local pickles_foods = 
+local pickles_foods =
 {
     "pickles_carrot",
     "pickles_corn",
@@ -458,7 +457,7 @@ local pickles_foods =
     "pickles_fennel",
 }
 
-local juice_foods = 
+local juice_foods =
 {
     "juice_carrot",
     "juice_corn",
@@ -531,7 +530,7 @@ end
 for k,v in pairs(juice_foods) do
     AddPrefabPostInit(v, function(inst)
 		inst.AnimState:SetScale(1.20, 1.20, 1.20)
-	
+
         if not _G.TheWorld.ismastersim then
             return inst
         end
@@ -545,7 +544,7 @@ end
 -- This will prevent some characters from drinking Alcoholic-like drinks.
 local ALCOHOLIC_DRINKS = GetModConfigData("HOF_ALCOHOLICDRINKS")
 if ALCOHOLIC_DRINKS == 1 then
-	local restricted_characters = 
+	local restricted_characters =
 	{
 		"wendy",
 		"webber",
@@ -553,13 +552,13 @@ if ALCOHOLIC_DRINKS == 1 then
 		"walter",
 		"wilba", -- What? Yeah, modded characters be like.
 	}
-	
+
 	for k,v in pairs(restricted_characters) do
 		AddPrefabPostInit(v, function(inst)
 			inst:AddTag("no_alcoholic_drinker")
 		end)
 	end
-	
+
 	AddComponentPostInit("eater", function(self)
 		local oldPrefersToEat = self.PrefersToEat
 		function self:PrefersToEat(inst)
@@ -588,7 +587,7 @@ if ALCOHOLIC_DRINKS == 1 then
 end
 
 -- Honey and Honey-based foods do not spoil inside Honey Deposits.
-local honeyed_foods = 
+local honeyed_foods =
 {
 	"bandage",
 	"honey",
@@ -620,8 +619,8 @@ end
 
 for k,v in pairs(honeyed_foods) do
 	AddPrefabPostInit(v, HoneyFoodsPostinit)
-	
-	for k,s in pairs(spices) do 
+
+	for k,s in pairs(spices) do
 		AddPrefabPostInit(v.."_spice_"..s, HoneyFoodsPostinit)
 	end
 end
@@ -632,24 +631,24 @@ local function PretzelHeartPostinit(inst)
 	local function ChangePretzelImage(inst)
 		inst.AnimState:PlayAnimation("idle2")
 		inst.AnimState:PushAnimation("idle2")
-	
-		if inst.components.inventoryitem ~= nil then 
+
+		if inst.components.inventoryitem ~= nil then
 			inst.components.inventoryitem:ChangeImageName("pretzel_heart")
 		end
 	end
-	
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
-	if math.random() < 0.20 then 
+
+	if math.random() < 0.20 then
 		inst:DoTaskInTime(0, ChangePretzelImage)
 	end
 end
 
 AddPrefabPostInit("pretzel", PretzelHeartPostinit)
 
-for k,s in pairs(spices) do 
+for k,s in pairs(spices) do
 	AddPrefabPostInit("pretzel_spice_"..s, PretzelHeartPostinit)
 end
 
@@ -659,13 +658,13 @@ local function LivingSandwichPostinit(inst)
 			taker.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
 		end
 	end
-	
+
 	inst.pickupsound = "wood"
-	
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("fuel")
     inst.components.fuel.fuelvalue = TUNING.MED_FUEL
     inst.components.fuel:SetOnTakenFn(FuelTaken)

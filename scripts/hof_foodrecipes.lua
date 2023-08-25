@@ -16,7 +16,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"honeyed", "drinkable_food", "nospice"},
+		tags = {"honeyed", "drinkable_food"},
 		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 3}, {"honey", 1}}},
 	},
 	
@@ -1306,7 +1306,8 @@ local kyno_foods =
 	
 	longpigmeal = 
 	{
-		test = function(cooker, names, tags) return (names.kyno_humanmeat or names.kyno_humanmeat_cooked or names.kyno_humanmeat_dried) and not tags.inedible end,
+		test = function(cooker, names, tags) return ((names.kyno_humanmeat or 0) + (names.kyno_humanmeat_cooked or 0) + (names.kyno_humanmeat_dried or 0) >= 3)
+		and names.boneshard end,
 		priority = 1,
 		foodtype = FOODTYPE.MEAT,
 		secondaryfoodtype = FOODTYPE.MONSTER,
@@ -1318,7 +1319,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HURT,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_humanmeat", 4}}},
+		card_def = {ingredients = {{"kyno_humanmeat", 3}, {"boneshard", 1}}},
 	},
 	
 	duckyouglermz = -- Keep this recipe updated in the postinit in case of changes!!
@@ -1465,7 +1466,7 @@ local kyno_foods =
 		sanity = -10,
 		cooktime = 1.2,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOUL,
-		potlevel = "low",
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"kyno_bottle_soul", 2}, {"boneshard", 2}}},
 		tags = {"soulstew"},
@@ -1742,7 +1743,7 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 5,
 		cooktime = 1,
-		potlevel = "low",
+		potlevel = "high",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"goatmilk", 1}, {"kyno_flour", 1}, {"kyno_sugar", 1}, {"twigs", 1}}},
 	},
@@ -1757,7 +1758,7 @@ local kyno_foods =
 		hunger = 32.5,
 		sanity = 10,
 		cooktime = 1,
-		potlevel = "low",
+		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"potato", 2}, {"kyno_oil", 1}, {"kyno_salt", 1}}},
 	},
@@ -1780,7 +1781,7 @@ local kyno_foods =
 	
 	donuts =
 	{
-		test = function(cooker, names, tags) return (names.kyno_flour and names.kyno_flour >= 2) and names.kyno_syrup and names.kyno_oil end,
+		test = function(cooker, names, tags) return (names.kyno_flour and names.kyno_flour >= 2) and names.kyno_sugar and names.kyno_oil end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -1790,13 +1791,12 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"honeyed"},
-		card_def = {ingredients = {{"kyno_flour", 2}, {"kyno_syrup", 1}, {"kyno_oil", 1}}},
+		card_def = {ingredients = {{"kyno_flour", 2}, {"kyno_sugar", 1}, {"kyno_oil", 1}}},
 	},
 	
 	donuts_chocolate_black =
 	{
-		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_syrup and names.kyno_oil and names.chocolate_black end,
+		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_sugar and names.kyno_oil and names.chocolate_black end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -1806,13 +1806,12 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"honeyed"},
-		card_def = {ingredients = {{"chocolate_black", 1}, {"kyno_flour", 1}, {"kyno_syrup", 1}, {"kyno_oil", 1}}},
+		card_def = {ingredients = {{"chocolate_black", 1}, {"kyno_flour", 1}, {"kyno_sugar", 1}, {"kyno_oil", 1}}},
 	},
 	
 	donuts_chocolate_white =
 	{
-		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_syrup and names.kyno_oil and names.chocolate_white end,
+		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_sugar and names.kyno_oil and names.chocolate_white end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -1822,8 +1821,7 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"honeyed"},
-		card_def = {ingredients = {{"chocolate_white", 1}, {"kyno_flour", 1}, {"kyno_syrup", 1}, {"kyno_oil", 1}}},
+		card_def = {ingredients = {{"chocolate_white", 1}, {"kyno_flour", 1}, {"kyno_sugar", 1}, {"kyno_oil", 1}}},
 	},
 	
 	gummybeargers =
@@ -1943,7 +1941,6 @@ local kyno_foods =
 		cooktime = 1.5,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_sugar", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 	},
 	
@@ -2364,7 +2361,7 @@ local kyno_foods =
 	
 	sugarbombs =
 	{
-		test = function(cooker, names, tags) return (tags.sugar and tags.sugar >= 2) and ((names.kyno_wheat or 0) + (names.kyno_wheat_cooked or 0) >= 2)
+		test = function(cooker, names, tags) return (tags.sugar and tags.sugar >= 2) and ((names.kyno_wheat or 0) + (names.kyno_wheat_cooked or 0) >= 2) end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -2372,8 +2369,23 @@ local kyno_foods =
 		hunger = 20,
 		sanity = 15,
 		cooktime = 1.5,
+		potlevel = "low",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"kyno_sugar", 2}, {"kyno_wheat", 2}}},
+	},
+	
+	berrybombs =
+	{
+		test = function(cooker, names, tags) return (tags.berries and tags.berries >= 2) and names.twigs end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 12,
+		hunger = 18.25,
+		sanity = 5,
+		cooktime = 1,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"berries", 3}, {"twigs", 1}}},
 	},
 }
 

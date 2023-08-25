@@ -594,13 +594,13 @@ local kyno_foods_keg =
 		priority = 1,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = 9000000,
-		health = -15,
+		health = -5,
 		hunger = 60,
 		sanity = -33,
 		cooktime = 48,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RUM,
 		floater = {"med", nil, 0.65},
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"drinkable_food", "alcoholic_drink", "honeyed"},
 		card_def = {ingredients = {{"durian", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater.SoundEmitter ~= nil then
