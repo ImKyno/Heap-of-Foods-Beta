@@ -143,7 +143,8 @@ local function grass(name, stage)
 
         MakeMediumBurnable(inst)
         MakeSmallPropagator(inst)
-        MakeNoGrowInWinter(inst)
+     
+		MakeNoGrowInWinter(inst)
         MakeHauntableIgnite(inst)
 
         return inst

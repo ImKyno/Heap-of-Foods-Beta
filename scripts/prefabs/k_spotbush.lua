@@ -86,6 +86,7 @@ local function fn()
 	
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
+	
     MakeNoGrowInWinter(inst)
     MakeHauntableIgnite(inst)
 

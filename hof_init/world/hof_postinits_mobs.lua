@@ -255,20 +255,20 @@ for k,v in pairs(slaughterable_animals) do
     end)
 end
 
--- Crab King and its claws Drops Crab Meat instead of Meat.
+-- Crab King and its claws Drops Crab King Meat instead of Meat.
 -- Update this if Klei updates their counterparts!
 AddPrefabPostInit("crabking", function(inst)
     _G.SetSharedLootTable("hof_crabking",
     {
         {"chesspiece_crabking_sketch",  1.00},
         {"trident_blueprint",           1.00},
-        {"kyno_crabmeat",               1.00},
-        {"kyno_crabmeat",               1.00},
-        {"kyno_crabmeat",               1.00},
-        {"kyno_crabmeat",               1.00},
-        {"kyno_crabmeat",               1.00},
-        {"kyno_crabmeat",               1.00},
-        {"kyno_crabmeat",               1.00},
+        {"kyno_crabkingmeat",           1.00},
+        {"kyno_crabkingmeat",           1.00},
+        {"kyno_crabkingmeat",           1.00},
+        {"kyno_crabkingmeat",           1.00},
+        {"kyno_crabkingmeat",           1.00},
+        {"kyno_crabkingmeat",           1.00},
+        {"kyno_crabkingmeat",           1.00},
         {"singingshell_octave5",        1.00},
         {"singingshell_octave5",        1.00},
         {"singingshell_octave5",        1.00},
@@ -302,7 +302,7 @@ end)
 AddPrefabPostInit("crabking_claw", function(inst)
     _G.SetSharedLootTable("hof_crabking_claw",
     {
-        {"kyno_crabmeat",               1.00},
+        {"kyno_crabkingmeat",           1.00},
     })
 
     if not _G.TheWorld.ismastersim then

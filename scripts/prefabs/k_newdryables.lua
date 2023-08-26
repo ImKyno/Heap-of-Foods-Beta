@@ -8,6 +8,7 @@ local assets =
 	Asset("ANIM", "anim/kyno_meatrack_humanmeat.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_seaweeds.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_pigskin.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_crabmeat.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -27,6 +28,8 @@ local prefabs =
 	
 	"kyno_seaweeds",
 	"kyno_humanmeat",
+	"kyno_crabmeat",
+	"kyno_crabkingmeat",
 	
 	"spoiled_food",
 }
@@ -319,6 +322,22 @@ local function fn_seaweeds()
 	return inst
 end
 
+local function fn_crabmeat()
+	local inst = meat_fn("kyno_meatrack_crabmeat", "kyno_meatrack_crabmeat", "kyno_crabmeat_idle", "kyno_crabmeat_dried")
+	
+	if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst.components.tradable.goldvalue = 1
+	
+	inst.components.edible.healthvalue = TUNING.KYNO_CRABMEAT_DRIED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_CRABMEAT_DRIED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_CRABMEAT_DRIED_SANITY
+	
+	return inst
+end
+
 return Prefab("kyno_red_cap_dried", fn_red, assets, prefabs),
 Prefab("kyno_green_cap_dried", fn_green, assets, prefabs),
 Prefab("kyno_blue_cap_dried", fn_blue, assets, prefabs),
@@ -326,4 +345,5 @@ Prefab("kyno_moon_cap_dried", fn_moon, assets, prefabs),
 Prefab("kyno_plantmeat_dried", fn_plantmeat, assets, prefabs),
 Prefab("kyno_humanmeat_dried", fn_humanmeat, assets, prefabs),
 Prefab("kyno_seaweeds_dried", fn_seaweeds, assets, prefabs),
-Prefab("kyno_pigskin_dried", fn_pigskin, assets, prefabs)
+Prefab("kyno_pigskin_dried", fn_pigskin, assets, prefabs),
+Prefab("kyno_crabmeat_dried", fn_crabmeat, assets, prefabs)

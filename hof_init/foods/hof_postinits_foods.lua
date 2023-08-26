@@ -457,6 +457,21 @@ local pickles_foods =
     "pickles_fennel",
 }
 
+local wine_foods =
+{
+	"wine_berries",
+    "wine_berries_juicy",
+    "wine_pomegranate",
+    "wine_dragonfruit",
+    "wine_cave_banana",
+    "wine_durian",
+    "wine_watermelon",
+    "wine_fig",
+    "wine_banana",
+    "wine_kokonut",
+    "wine_glowberry",
+}
+
 local juice_foods =
 {
     "juice_carrot",
@@ -523,6 +538,18 @@ for k,v in pairs(pickles_foods) do
 
         if inst.components.inspectable ~= nil then
             inst.components.inspectable.nameoverride = "KYNO_PICKLES"
+        end
+    end)
+end
+
+for k,v in pairs(wine_foods) do
+    AddPrefabPostInit(v, function(inst)
+        if not _G.TheWorld.ismastersim then
+            return inst
+        end
+
+        if inst.components.inspectable ~= nil then
+            inst.components.inspectable.nameoverride = "KYNO_WINE"
         end
     end)
 end

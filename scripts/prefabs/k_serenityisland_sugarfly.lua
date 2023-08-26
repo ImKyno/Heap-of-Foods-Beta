@@ -183,4 +183,4 @@ local function fn()
 end
 
 return Prefab("kyno_sugarfly", fn, assets, prefabs),
-MakePlacer("kyno_sugarfly_placer", "kyno_serenityisland_bud", "kyno_serenityisland_bud", "idle_flower")
+MakePlacer("kyno_sugarfly_placer", "kyno_serenityisland_bud", "kyno_serenityisland_bud", "idle1")

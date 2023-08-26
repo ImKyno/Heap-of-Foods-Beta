@@ -15,6 +15,7 @@ local assets =
 	Asset("ANIM", "anim/foliage.zip"),
 	Asset("ANIM", "anim/kyno_cookingoil.zip"),
 	Asset("ANIM", "anim/kyno_sugar.zip"),
+	Asset("ANIM", "anim/kyno_crabkingmeat.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -41,7 +42,7 @@ local function fertilizerresearchfn(inst)
     return inst:GetFertilizerKey()
 end
 
-local function OilPickIdle(inst)
+local function WaterIdle(inst)
 	local x, y, z = inst.Transform:GetWorldPosition()
 	if TheWorld.Map:IsOceanAtPoint(x, y, z, false) then
 		inst.AnimState:PlayAnimation("idle_water")
@@ -857,6 +858,7 @@ local function crabmeatfn()
 
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
+	inst:AddTag("dryable")
 	inst:AddTag("gourmet_ingredient")
 
 	inst.entity:SetPristine()
@@ -870,6 +872,10 @@ local function crabmeatfn()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
+	
+	inst:AddComponent("dryable")
+	inst.components.dryable:SetProduct("kyno_crabmeat_dried")
+    inst.components.dryable:SetDryTime(TUNING.DRY_MED)
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_CRABMEAT_HEALTH
@@ -951,6 +957,70 @@ local function crabmeat_cookedfn()
 	return inst
 end
 
+local function crabkingmeatfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+	inst.AnimState:SetBank("kyno_crabkingmeat")
+	inst.AnimState:SetBuild("kyno_crabkingmeat")
+	inst.AnimState:PlayAnimation("idle")
+
+	inst:AddTag("meat")
+	inst:AddTag("cookable")
+	inst:AddTag("dryable")
+	inst:AddTag("gourmet_ingredient")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("bait")
+	inst:AddComponent("inspectable")
+	
+	inst:AddComponent("tradable")
+	inst.components.tradable.goldvalue = 5
+	
+	inst:AddComponent("dryable")
+	inst.components.dryable:SetProduct("kyno_crabmeat_dried")
+    inst.components.dryable:SetDryTime(TUNING.DRY_MED)
+
+   	inst:AddComponent("edible")
+	inst.components.edible.healthvalue = TUNING.KYNO_CRABKINGMEAT_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_CRABKINGMEAT_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_CRABKINGMEAT_SANITY
+	inst.components.edible.foodtype = FOODTYPE.MEAT
+	inst.components.edible.ismeat = true
+
+	inst:AddComponent("perishable")
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
+	inst.components.perishable:StartPerishing()
+	inst.components.perishable.onperishreplacement = "spoiled_food"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_crabkingmeat"
+
+	inst:AddComponent("cookable")
+	inst.components.cookable.product = "kyno_crabmeat_cooked"
+	
+	inst:ListenForEvent("on_landed", WaterIdle)
+
+	MakeHauntableLaunchAndPerish(inst)
+
+	return inst
+end
+
 local function oilfn()
     local inst = CreateEntity()
 
@@ -992,7 +1062,7 @@ local function oilfn()
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 	
-	inst:ListenForEvent("on_landed", OilPickIdle)
+	inst:ListenForEvent("on_landed", WaterIdle)
 	
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -1057,5 +1127,6 @@ Prefab("kyno_foliage_cooked", foliage_cookedfn, assets, prefabs),
 Prefab("kyno_salt", saltfn, assets, prefabs),
 Prefab("kyno_crabmeat", crabmeatfn, assets, prefabs),
 Prefab("kyno_crabmeat_cooked", crabmeat_cookedfn, assets, prefabs),
+Prefab("kyno_crabkingmeat", crabkingmeatfn, assets, prefabs),
 Prefab("kyno_oil", oilfn, assets, prefabs),
 Prefab("kyno_sugar", sugarfn, assets, prefabs)

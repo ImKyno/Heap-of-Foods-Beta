@@ -84,27 +84,31 @@ do
 	anim_ondry_food = anim_ondry_food 
 	anim_ondone_food = anim_ondone_food
 
-	anim_ondry_food["kyno_humanmeat"] 			= {build = "meat_rack_food",          folder = "humanmeat"}
-	anim_ondone_food["kyno_humanmeat_dried"] 	= {build = "meat_rack_food",          folder = "humanmeat_dried&#032"}
+	anim_ondry_food["kyno_humanmeat"] 			= {build = "meat_rack_food",              folder = "humanmeat"}
+	anim_ondone_food["kyno_humanmeat_dried"] 	= {build = "meat_rack_food",              folder = "humanmeat_dried&#032"}
 	
-	anim_ondry_food["kyno_seaweeds"] 			= {build = "kyno_meatrack_seaweeds",  folder = "seaweeds"}
-	anim_ondone_food["kyno_seaweeds_dried"] 	= {build = "kyno_meatrack_seaweeds",  folder = "seaweeds_dried"}
+	anim_ondry_food["kyno_seaweeds"] 			= {build = "kyno_meatrack_seaweeds",      folder = "seaweeds"}
+	anim_ondone_food["kyno_seaweeds_dried"] 	= {build = "kyno_meatrack_seaweeds",      folder = "seaweeds_dried"}
 	
-	anim_ondry_food["red_cap"] 			        = {build = "kyno_meatrack_red_cap",   folder = "red_cap"}
-	anim_ondone_food["kyno_red_cap_dried"] 	    = {build = "kyno_meatrack_red_cap",   folder = "red_cap_dried"}
+	anim_ondry_food["red_cap"] 			        = {build = "kyno_meatrack_red_cap",       folder = "red_cap"}
+	anim_ondone_food["kyno_red_cap_dried"] 	    = {build = "kyno_meatrack_red_cap",       folder = "red_cap_dried"}
 	
-	anim_ondry_food["green_cap"] 			    = {build = "kyno_meatrack_green_cap", folder = "green_cap"}
-	anim_ondone_food["kyno_green_cap_dried"] 	= {build = "kyno_meatrack_green_cap", folder = "green_cap_dried"}
+	anim_ondry_food["green_cap"] 			    = {build = "kyno_meatrack_green_cap",     folder = "green_cap"}
+	anim_ondone_food["kyno_green_cap_dried"] 	= {build = "kyno_meatrack_green_cap",     folder = "green_cap_dried"}
 	
-	anim_ondry_food["blue_cap"] 			    = {build = "kyno_meatrack_blue_cap",  folder = "blue_cap"}
-	anim_ondone_food["kyno_blue_cap_dried"] 	= {build = "kyno_meatrack_blue_cap",  folder = "blue_cap_dried"}
+	anim_ondry_food["blue_cap"] 			    = {build = "kyno_meatrack_blue_cap",      folder = "blue_cap"}
+	anim_ondone_food["kyno_blue_cap_dried"] 	= {build = "kyno_meatrack_blue_cap",      folder = "blue_cap_dried"}
 	
-	anim_ondry_food["moon_cap"] 			    = {build = "kyno_meatrack_moon_cap",  folder = "moon_cap"}
-	anim_ondone_food["kyno_moon_cap_dried"] 	= {build = "kyno_meatrack_moon_cap",  folder = "moon_cap_dried"}
+	anim_ondry_food["moon_cap"] 			    = {build = "kyno_meatrack_moon_cap",      folder = "moon_cap"}
+	anim_ondone_food["kyno_moon_cap_dried"] 	= {build = "kyno_meatrack_moon_cap",      folder = "moon_cap_dried"}
 	
-	anim_ondry_food["plantmeat"]                = {build = "kyno_meatrack_plantmeat", folder = "plantmeat"}
-	anim_ondone_food["kyno_plantmeat_dried"]    = {build = "kyno_meatrack_plantmeat", folder = "plantmeat_dried"}
+	anim_ondry_food["plantmeat"]                = {build = "kyno_meatrack_plantmeat",     folder = "plantmeat"}
+	anim_ondone_food["kyno_plantmeat_dried"]    = {build = "kyno_meatrack_plantmeat",     folder = "plantmeat_dried"}
 	
-	anim_ondry_food["pigskin"]                  = {build = "kyno_meatrack_pigskin",   folder = "pigskin"}
-	anim_ondone_food["kyno_pigskin_dried"]      = {build = "kyno_meatrack_pigskin",   folder = "pigskin_dried"}
+	anim_ondry_food["pigskin"]                  = {build = "kyno_meatrack_pigskin",       folder = "pigskin"}
+	anim_ondone_food["kyno_pigskin_dried"]      = {build = "kyno_meatrack_pigskin",       folder = "pigskin_dried"}
+	
+	anim_ondry_food["kyno_crabmeat"]            = {build = "kyno_meatrack_crabmeat",      folder = "crabmeat"}
+	anim_ondry_food["kyno_crabkingmeat"]        = {build = "kyno_meatrack_crabmeat",      folder = "crabkingmeat"}
+	anim_ondone_food["kyno_crabmeat_dried"]     = {build = "kyno_meatrack_crabmeat",      folder = "crabmeat_dried"}
 end

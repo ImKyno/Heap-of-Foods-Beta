@@ -17,6 +17,10 @@ local prefabs =
 	"kyno_sugartree_sapling",
 }
 
+local names               = { "idle1", "idle2" }
+local FINDLIGHT_MUST_TAGS = { "daylight", "lightsource" }
+local LEIF_TAGS           = { "leif" }
+
 local function plant(inst, growtime)
     local sapling = SpawnPrefab("kyno_sugartree_sapling")
     sapling:StartGrowing()
@@ -27,7 +31,6 @@ local function plant(inst, growtime)
     inst:Remove()
 end
 
-local LEIF_TAGS = { "leif" }
 local function ondeploy(inst, pt, deployer)
     inst = inst.components.stackable:Get()
     inst.Physics:Teleport(pt:Get())
@@ -68,11 +71,6 @@ local function onpickedfn(inst, picker)
     TheWorld:PushEvent("plantkilled", { doer = picker, pos = pos })
 end
 
-local function OnBurnt(inst)
-    DefaultBurntFn(inst)
-end
-
-local FINDLIGHT_MUST_TAGS = { "daylight", "lightsource" }
 local function DieInDarkness(inst)
     local x,y,z = inst.Transform:GetWorldPosition()
     local ents = TheSim:FindEntities(x,0,z, TUNING.DAYLIGHT_SEARCH_RANGE, FINDLIGHT_MUST_TAGS)
@@ -94,8 +92,17 @@ local function OnIsCaveDay(inst, isday)
     end
 end
 
+local function OnBurnt(inst)
+    DefaultBurntFn(inst)
+end
+
 local function OnSave(inst, data)
 	data.planted = inst.planted
+	data.anim = inst.animname
+	
+	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
+        data.burnt = true
+	end
 end
 
 local function OnLoad(inst, data)
@@ -103,10 +110,17 @@ local function OnLoad(inst, data)
         plant(inst, data.growtime)
     end
 	
+	if data and data.anim then
+        inst.animname = data.anim
+        inst.AnimState:PlayAnimation(inst.animname, true)
+    end
+	
+	if data and data.burnt then
+		OnBurnt(inst)
+	end
+	
 	inst.planted = data ~= nil and data.planted or nil
 end
-
-local sugarbuds = {}
 
 local function budfn()
 	local inst = CreateEntity()
@@ -167,10 +181,8 @@ local function flowerfn()
 
     inst.AnimState:SetBank("kyno_serenityisland_bud")
     inst.AnimState:SetBuild("kyno_serenityisland_bud")
-	inst.AnimState:PlayAnimation("idle_flower", false)
     inst.AnimState:SetRayTestOnBB(true)
 
-    -- inst:AddTag("flower")
 	inst:AddTag("sugarflower")
     inst:AddTag("cattoy")
 
@@ -179,6 +191,9 @@ local function flowerfn()
     if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.animname = names[math.random(#names)]
+    inst.AnimState:PlayAnimation(inst.animname, true)
 
     inst:AddComponent("inspectable")
 
@@ -217,7 +232,7 @@ local function petalsfn()
 
 	inst.AnimState:SetBank("kyno_serenityisland_bud")
 	inst.AnimState:SetBuild("kyno_serenityisland_bud")
-	inst.AnimState:PlayAnimation("idle_flower", false)
+	inst.AnimState:PlayAnimation("idle", false)
 	
 	inst:AddTag("show_spoilage")
 	inst:AddTag("cattoy")
@@ -244,7 +259,7 @@ local function petalsfn()
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = 0
 	inst.components.edible.hungervalue = 0
-	inst.components.edible.sanityvalue = 10
+	inst.components.edible.sanityvalue = 5
 	inst.components.edible.foodtype = FOODTYPE.GOODIES
 
 	inst:AddComponent("inventoryitem")

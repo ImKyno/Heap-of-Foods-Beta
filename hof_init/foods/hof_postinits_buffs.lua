@@ -166,9 +166,6 @@ if GIANT_SPAWNING == 1 then
 			if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
 				return
 			elseif eater.components.eater ~= nil then
-				-- _G.TheWorld.components.deerclopsspawner:SummonMonster(eater) -- It's not working?
-				_G.SpawnPrefab("deerclopswarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
-				
 				local function DeerclopsSpawnPoint(pt)
 					if not _G.TheWorld.Map:IsAboveGroundAtPoint(pt:Get()) then
 						pt = FindNearbyLand(pt, 1) or pt
@@ -183,7 +180,9 @@ if GIANT_SPAWNING == 1 then
 				end
 			
 				local spawn_pt = DeerclopsSpawnPoint(eater:GetPosition())
-				if spawn_pt ~= nil then
+				if spawn_pt ~= nil and not _G.TheSim:FindFirstEntityWithTag("deerclops") then
+					_G.SpawnPrefab("deerclopswarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
+				
 					local deerclops = _G.SpawnPrefab("deerclops")
 					deerclops.Physics:Teleport(spawn_pt:Get())
 				end
@@ -194,9 +193,6 @@ if GIANT_SPAWNING == 1 then
 				end
 			else
 				if inst.components.eater ~= nil then
-					-- _G.TheWorld.components.deerclopsspawner:SummonMonster(eater) -- It's not working?
-					_G.SpawnPrefab("deerclopswarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
-				
 					local function DeerclopsSpawnPoint(pt)
 						if not _G.TheWorld.Map:IsAboveGroundAtPoint(pt:Get()) then
 							pt = FindNearbyLand(pt, 1) or pt
@@ -211,7 +207,9 @@ if GIANT_SPAWNING == 1 then
 					end
 			
 					local spawn_pt = DeerclopsSpawnPoint(eater:GetPosition())
-					if spawn_pt ~= nil then
+					if spawn_pt ~= nil and not _G.TheSim:FindFirstEntityWithTag("deerclops") then
+						_G.SpawnPrefab("deerclopswarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
+					
 						local deerclops = _G.SpawnPrefab("deerclops")
 						deerclops.Physics:Teleport(spawn_pt:Get())
 					end
@@ -244,9 +242,6 @@ if GIANT_SPAWNING == 1 then
 			if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
 				return
 			elseif eater.components.eater ~= nil then
-				-- TheWorld.components.beargerspawner:SummonMonster(eater) -- It's not working?
-				_G.SpawnPrefab("beargerwarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
-				
 				local function BeargerSpawnPoint(pt)
 					if not _G.TheWorld.Map:IsAboveGroundAtPoint(pt:Get()) then
 						pt = FindNearbyLand(pt, 1) or pt
@@ -261,7 +256,9 @@ if GIANT_SPAWNING == 1 then
 				end
 			
 				local spawn_pt = BeargerSpawnPoint(eater:GetPosition())
-				if spawn_pt ~= nil then
+				if spawn_pt ~= nil and not _G.TheSim:FindFirstEntityWithTag("bearger") then
+					_G.SpawnPrefab("beargerwarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
+				
 					local bearger = _G.SpawnPrefab("bearger")
 					bearger.Physics:Teleport(spawn_pt:Get())
 				end
@@ -272,9 +269,6 @@ if GIANT_SPAWNING == 1 then
 				end
 			else
 				if inst.components.eater ~= nil then
-					-- TheWorld.components.beargerspawner:SummonMonster(eater) -- It's not working?
-					_G.SpawnPrefab("beargerwarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
-					
 					local function BeargerSpawnPoint(pt)
 						if not _G.TheWorld.Map:IsAboveGroundAtPoint(pt:Get()) then
 							pt = FindNearbyLand(pt, 1) or pt
@@ -289,7 +283,9 @@ if GIANT_SPAWNING == 1 then
 					end
 			
 					local spawn_pt = BeargerSpawnPoint(eater:GetPosition())
-					if spawn_pt ~= nil then
+					if spawn_pt ~= nil and not _G.TheSim:FindFirstEntityWithTag("bearger") then
+						_G.SpawnPrefab("beargerwarning_lvl4").Transform:SetPosition(inst.Transform:GetWorldPosition())
+					
 						local bearger = _G.SpawnPrefab("bearger")
 						bearger.Physics:Teleport(spawn_pt:Get())
 					end

@@ -24,6 +24,194 @@ local kyno_foods_keg =
 	]]--
 	
 	-- Keg Recipes.
+	wine_berries = 
+	{
+		test = function(brewer, names, tags) return names.berries and (names.berries == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 40,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"berries", 2}, {"ice", 1}}},
+	},
+	
+	wine_berries_juicy = 
+	{
+		test = function(brewer, names, tags) return names.berries_juicy and (names.berries_juicy == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 40,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"berries_juicy", 2}, {"ice", 1}}},
+	},
+	
+	wine_pomegranate = 
+	{
+		test = function(brewer, names, tags) return names.pomegranate and (names.pomegranate == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 40,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"pomegranate", 2}, {"ice", 1}}},
+	},
+	
+	wine_dragonfruit = 
+	{
+		test = function(brewer, names, tags) return names.dragonfruit and (names.dragonfruit == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 40,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"dragonfruit", 2}, {"ice", 1}}},
+	},
+	
+	wine_cave_banana = 
+	{
+		test = function(brewer, names, tags) return names.cave_banana and (names.cave_banana == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 40,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"cave_banana", 2}, {"ice", 1}}},
+	},
+	
+	wine_durian = 
+	{
+		test = function(brewer, names, tags) return names.durian and (names.durian == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 40,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"durian", 2}, {"ice", 1}}},
+	},
+	
+	wine_watermelon = 
+	{
+		test = function(brewer, names, tags) return names.watermelon and (names.watermelon == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 40,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"watermelon", 2}, {"ice", 1}}},
+	},
+	
+	wine_fig = 
+	{
+		test = function(brewer, names, tags) return names.fig and (names.fig == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 40,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"fig", 2}, {"ice", 1}}},
+	},
+	
+	wine_glowberry = 
+	{
+		test = function(brewer, names, tags) return (names.wormlight or (names.wormlight_lesser and names.wormlight_lesser == 2)) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 40,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"berries", 2}, {"ice", 1}}},
+		prefabs = { "wormlight_light_greater" },
+        oneatenfn = function(inst, eater)
+            if eater.wormlight ~= nil then
+                if eater.wormlight.prefab == "wormlight_light_greater" then
+                    eater.wormlight.components.spell.lifetime = 0
+                    eater.wormlight.components.spell:ResumeSpell()
+                    return
+                else
+                    eater.wormlight.components.spell:OnFinish()
+                end
+            end
+
+            local light = SpawnPrefab("wormlight_light_greater")
+            light.components.spell:SetTarget(eater)
+            if light:IsValid() then
+                if light.components.spell.target == nil then
+                    light:Remove()
+                else
+                    light.components.spell:StartSpell()
+                end
+            end
+        end,
+	},
+	
+	wine_banana = 
+	{
+		test = function(brewer, names, tags) return names.kyno_banana and (names.kyno_banana == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 40,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"kyno_banana", 2}, {"ice", 1}}},
+	},
+	
+	wine_kokonut = 
+	{
+		test = function(brewer, names, tags) return (names.kyno_kokonut_halved or 
+		(names.kyno_kokonut_cooked and names.kyno_kokonut_cooked == 2)) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 20,
+		sanity = 40,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"kyno_kokonut_halved", 2}, {"ice", 1}}},
+	},
+	
 	juice_carrot =
 	{
 		test = function(brewer, names, tags) return names.carrot and (names.carrot == 2) and tags.frozen end,

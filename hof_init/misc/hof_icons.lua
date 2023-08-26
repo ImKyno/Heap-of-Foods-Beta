@@ -364,6 +364,17 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"pickles_parznip",
 	"pickles_turnip",
 	"pickles_fennel",
+	"wine_berries",
+	"wine_berries_juicy",
+	"wine_pomegranate",
+	"wine_dragonfruit",
+	"wine_cave_banana",
+	"wine_durian",
+	"wine_watermelon",
+	"wine_fig",
+	"wine_banana",
+	"wine_kokonut",
+	"wine_glowberry",
 	"juice_carrot",
 	"juice_corn",
 	"juice_eggplant",
@@ -445,7 +456,9 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"durianchicken",
 	"spidercake",
 	"sugarbombs",
-	"berrybombs"}) do
+	"berrybombs",
+	"kyno_crabkingmeat",
+	"kyno_crabmeat_dried"}) do
         local foods_name = foods
         AddPrefabPostInit(foods_name, function(inst)
             inst.components.inventoryitem.imagename = foods_name
@@ -528,6 +541,7 @@ local ingredient_icons =
 	"kyno_sugartree_petals.tex",
 	"kyno_crabmeat.tex",
 	"kyno_crabmeat_cooked.tex",
+	"kyno_crabmeat_dried.tex",
 	"kyno_chicken_egg.tex",
 	"kyno_chicken_egg_cooked.tex",
 	"kyno_bottle_soul.tex",
@@ -554,6 +568,7 @@ local ingredient_icons =
 	"littlebread.tex",
 	"kyno_sugar.tex",
 	"kyno_wheat.tex",
+	"kyno_crabkingmeat.tex",
 }
 
 for k,v in pairs(ingredient_icons) do

@@ -11,7 +11,7 @@ local variables =
     hasEatenCaramelCube    = { net_type = net_bool,     value = false },
     hasDrankAlcoholic      = { net_type = net_bool,     value = false },
     hasDrankPirateRum      = { net_type = net_bool,     value = false },
-    hasDrankTequila        = { net_type = net_bool,     value = false },
+    hasDrankTwistedTequila = { net_type = net_bool,     value = false },
     hasDrankCoffee         = { net_type = net_bool,     value = false },
     hasUsedGrinder         = { net_type = net_bool,     value = false },
     hasFlayedOther         = { net_type = net_bool,     value = false },
@@ -159,16 +159,14 @@ local function SetupPlayerFunctions(player)
             end
         end
 
-		--[[
-        local tequila = data.food.prefab == "twistedtequile" or nil
+        local tequila = data.food.prefab == "twistedtequila" or nil
         if tequila ~= nil then
-            local varName = "hasDrankTequila"
+            local varName = "hasDrankTwistedTequila"
             if manager[varName] ~= nil then
                 manager[varName] = true
-                manager:DoAchieve({category = categoryName, name = "drinktequila"}, {"hasDrankTequila"})
+                manager:DoAchieve({category = categoryName, name = "drinktwistedtequila"}, {"hasDrankTwistedTequila"})
             end
         end
-		]]--
 
         local piraterum = data.food.prefab == "piraterum" or nil
         if piraterum ~= nil then
@@ -535,14 +533,12 @@ _G[registerEntriesFuncName] = function(root)
             Check       = function(data) return data and data.hasDrankPirateRum or false end,
             isHidden    = true,
         },
-		--[[
         {
-            name        = "drinktequila",
-            Record      = function(data) return data and data.hasDrankTequila end,
-            Check       = function(data) return data and data.hasDrankTequila or false end,
+            name        = "drinktwistedtequila",
+            Record      = function(data) return data and data.hasDrankTwistedTequila end,
+            Check       = function(data) return data and data.hasDrankTwistedTequila or false end,
             isHidden    = true,
         },
-		]]--
 		{
 			name        = "drinknukacola",
 			Record      = function(data) return data and data.hasDrankNukaCola end,
@@ -661,8 +657,8 @@ local stringTables =
 			DRINKPIRATERUM_TITLE = "Cannon Barrage",
             DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
-            -- DRINKTEQUILA_TITLE = "Shifting Tempo",
-            -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
+            DRINKTWISTEDTEQUILA_TITLE = "Shifting Tempo",
+            DRINKTWISTEDTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
 
 			DRINKNUKACOLA_TITLE = "Nuclear Drink",
 			DRINKNUKACOLA_DESC = "Drink a Nuka-Cola. An otherworldly drink!",
@@ -730,8 +726,8 @@ local stringTables =
 			DRINKPIRATERUM_TITLE = "Barragem de Canhão",
             DRINKPIRATERUM_DESC = "Beba um Rum de Pirata e descubra o segredo por trás dele.",
 
-            -- DRINKTEQUILA_TITLE = "Mudança de Tempo",
-            -- DRINKTEQUILA_DESC = "Beba uma Tequila Retorcida e se perca através do tempo-espaço.",
+            DRINKTWISTEDTEQUILA_TITLE = "Mudança de Tempo",
+            DRINKTWISTEDTEQUILA_DESC = "Beba uma Tequila Retorcida e se perca através do tempo-espaço.",
 
 			DRINKNUKACOLA_TITLE = "Bebida Nuclear",
 			DRINKNUKACOLA_DESC = "Beba uma Nuka-Cola. Um refrigerante de outro mundo!",
@@ -799,8 +795,8 @@ local stringTables =
 			DRINKPIRATERUM_TITLE = "Cannon Barrage",
             DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
-            -- DRINKTEQUILA_TITLE = "Shifting Tempo",
-            -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
+            DRINKTWISTEDTEQUILA_TITLE = "Shifting Tempo",
+            DRINKTWISTEDTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
 
 			DRINKNUKACOLA_TITLE = "Nuclear Drink",
 			DRINKNUKACOLA_DESC = "Drink a Nuka-Cola. An otherworldly drink!",
@@ -868,8 +864,8 @@ local stringTables =
 			DRINKPIRATERUM_TITLE = "Cannon Barrage",
             DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
-            -- DRINKTEQUILA_TITLE = "Shifting Tempo",
-            -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
+            DRINKTWISTEDTEQUILA_TITLE = "Shifting Tempo",
+            DRINKTWISTEDTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
 
 			DRINKNUKACOLA_TITLE = "Nuclear Drink",
 			DRINKNUKACOLA_DESC = "Drink a Nuka-Cola. An otherworldly drink!",
@@ -937,8 +933,8 @@ local stringTables =
 			DRINKPIRATERUM_TITLE = "Cannon Barrage",
             DRINKPIRATERUM_DESC = "Drink the Pirate's Rum and uncover its mystery.",
 
-            -- DRINKTEQUILA_TITLE = "Shifting Tempo",
-            -- DRINKTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
+            DRINKTWISTEDTEQUILA_TITLE = "Shifting Tempo",
+            DRINKTWISTEDTEQUILA_DESC = "Drink the Twisted Tequila and get yourself lost in time!",
 
 			DRINKNUKACOLA_TITLE = "Nuclear Drink",
 			DRINKNUKACOLA_DESC = "Drink a Nuka-Cola. An otherworldly drink!",

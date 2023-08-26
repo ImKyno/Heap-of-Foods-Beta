@@ -7,7 +7,6 @@ local kyno_foods =
 		(names.kyno_coffeebeans_cooked == 3 and (tags.dairy or tags.sweetener or tags.sugar))) and not names.kyno_coffeebeans end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
-		secondaryfoodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
 		health = 5,
 		hunger = 9.375,
