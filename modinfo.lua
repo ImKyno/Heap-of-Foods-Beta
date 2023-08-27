@@ -180,6 +180,7 @@ configuration_options       =
 		},
 		default             = 480,
 	},
+	--[[
 	{
 		name                = "HOF_COFFEESPEEDMULTIPLIER",
 		label               = "Speed Buff Multiplier",
@@ -214,6 +215,7 @@ configuration_options       =
 		},
 		default             = 1.83,
 	},
+	]]--
 	{
 		name                = "HOF_HUMANMEAT",
 		label               = "Long Pig From Players",

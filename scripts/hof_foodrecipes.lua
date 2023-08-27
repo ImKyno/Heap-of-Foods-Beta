@@ -1705,7 +1705,7 @@ local kyno_foods =
 	
 	chocolate_black =
 	{
-		test = function(cooker, names, tags) return tags.milk and tags.sweetener and (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2)
+		test = function(cooker, names, tags) return tags.milk and tags.sugar and (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2)
 		and not tags.meat and not tags.fish and not tags.veggie and not tags.frozen and not names.kyno_milk_beefalo end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
@@ -1716,12 +1716,12 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"goatmilk", 1}, {"honey", 1}, {"kyno_twiggynuts", 2}}},
+		card_def = {ingredients = {{"goatmilk", 1}, {"kyno_sugar", 1}, {"kyno_twiggynuts", 2}}},
 	},
 	
 	chocolate_white =
 	{
-		test = function(cooker, names, tags) return names.kyno_milk_beefalo and tags.sweetener and (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2)
+		test = function(cooker, names, tags) return names.kyno_milk_beefalo and tags.sugar and (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2)
 		and not tags.meat and not tags.fish and not tags.veggie and not tags.frozen and not names.goatmilk end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
@@ -1732,7 +1732,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_milk_beefalo", 1}, {"honey", 1}, {"kyno_twiggynuts", 2}}},
+		card_def = {ingredients = {{"kyno_milk_beefalo", 1}, {"kyno_sugar", 1}, {"kyno_twiggynuts", 2}}},
 	},
 	
 	tricolordango =
