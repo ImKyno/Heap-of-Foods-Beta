@@ -49,7 +49,7 @@ AddPrefabPostInit("wilson", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("caviar", TUNING.AFFINITY_15_CALORIES_HUGE)
-		-- inst.components.foodaffinity:AddPrefabAffinity("wine_dragonfruit", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("wine_dragonfruit", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -217,6 +217,7 @@ AddPrefabPostInit("wurt", function(inst)
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("duriansoup",    1.93)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_durian",  1.93)
+		inst.components.foodaffinity:AddPrefabAffinity("wine_durian",   1.93)
 		inst.components.foodaffinity:AddPrefabAffinity("duriansplit",   1.93)
 		inst.components.foodaffinity:AddPrefabAffinity("duriansoup",    1.93)
 		inst.components.foodaffinity:AddPrefabAffinity("durianchicken", 1.93)

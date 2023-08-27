@@ -84,10 +84,19 @@ local kyno_foods_jar =
 		perishtime = TUNING.PERISH_MED,
 		health = -5,
 		hunger = 35,
-		sanity = 20,
+		sanity = -20,
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
+		tags = {"monstermeat"},
 		card_def = {ingredients = {{"durian", 2}, {"honey", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(5)
+				eater.components.sanity:DoDelta(20)
+			end
+		end,
 	},
 	
 	jelly_watermelon = 
@@ -124,7 +133,7 @@ local kyno_foods_jar =
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
-		health = 10,
+		health = 20,
 		hunger = 40,
 		sanity = -10,
 		cooktime = 48,

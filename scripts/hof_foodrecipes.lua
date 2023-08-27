@@ -8,6 +8,8 @@ local kyno_foods =
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_BRIEF,
 		health = 5,
 		hunger = 9.375,
 		sanity = -20,
@@ -15,7 +17,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		tags = {"honeyed", "drinkable_food"},
+		tags = {"honeyed", "drinkable_food", "nospice"},
 		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 3}, {"honey", 1}}},
 	},
 	
@@ -244,7 +246,8 @@ local kyno_foods =
 	
 	snakebonesoup = 
 	{
-		test = function(cooker, names, tags) return (names.boneshard and names.boneshard >= 2) and (tags.meat and tags.meat >= 2) end,
+		test = function(cooker, names, tags) return (names.boneshard and names.boneshard >= 2) and (tags.meat and tags.meat >= 2) 
+		and not (names.kyno_humanmeat or names.kyno_humanmeat_cooked or names.kyno_humanmeat_dried) end,
 		priority = 20,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,
@@ -2194,7 +2197,7 @@ local kyno_foods =
 		cooktime = 2,
 		floater = {"med", nil, 0.65},
 		tags = {"monstermeat"},
-		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"kyno_grouper", 1}, {"kyno_turnip", 1}}},
+		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"kyno_grouper", 1}, {"kyno_turnip", 2}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and

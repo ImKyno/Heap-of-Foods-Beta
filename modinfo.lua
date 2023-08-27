@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "6.6-A"
+version                     = "6.7-A"
 local myupdate              = "Food Extravaganza"
 
 description                 = 
@@ -15,7 +15,7 @@ This update brings two new structures that can be used to make a whole new categ
 The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jams, Pickles, Mayonnaises, Teas and more!
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
-󰀌 Mod Version: 6.6-A
+󰀌 Mod Version: 6.7-A
 󰀧 Update: Food Extravaganza
 ]]
 
@@ -179,6 +179,40 @@ configuration_options       =
 			},
 		},
 		default             = 480,
+	},
+	{
+		name                = "HOF_COFFEESPEEDMULTIPLIER",
+		label               = "Speed Buff Multiplier",
+		hover               = "How much is the Speed Buff from foods?\n\This option applies to: Coffee and Tropical Bouillabaisse.",
+		options             =
+		{
+			{
+				description = "30%",
+				hover       = "30% Faster Movement Speed",
+				data        = 1.30
+			},
+			{
+				description = "40%",
+				hover       = "40% Faster Movement Speed",
+				data        = 1.40
+			},
+			{
+				description = "50%",
+				hover       = "50% Faster Movement Speed",
+				data        = 1.50
+			},
+			{
+				description = "60%",
+				hover       = "60% Faster Movement Speed",
+				data        = 1.60
+			},
+			{
+				description = "83% (Default)",
+				hover       = "83% Faster Movement Speed",
+				data        = 1.83
+			},
+		},
+		default             = 1.83,
 	},
 	{
 		name                = "HOF_HUMANMEAT",

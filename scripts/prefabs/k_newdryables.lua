@@ -325,6 +325,8 @@ end
 local function fn_crabmeat()
 	local inst = meat_fn("kyno_meatrack_crabmeat", "kyno_meatrack_crabmeat", "kyno_crabmeat_idle", "kyno_crabmeat_dried")
 	
+	inst.AnimState:SetScale(1.1, 1.1, 1.1)
+	
 	if not TheWorld.ismastersim then
         return inst
     end

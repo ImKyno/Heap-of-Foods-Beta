@@ -16,7 +16,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_COFFEE", 			"You can get Coffee Bushes from th
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WEEDS",  			"You can plant Weeds using their own products, by giving them to a bird first.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WALRY",  			"Warly has exclusive recipes made just by him.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_JELLYBEANS",      "\"It seems that the Lusty Jellybeans makes my body feels super good!\" -W")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_INGREDIENTS",   	"There are new ingredients from the base game available to be used in the Crock Pot.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_INGREDIENTS",   	"There are new ingredients from the base game available to be used in the Crock Pot. Even the strangest of all...")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WX78",          	"\"WX-78 wants to make a dish with Gears. If we have some of them without use, maybe I should help him out.\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_HUMANMEAT",     	"There's a small chance whenever a Player dies, they can drop a suspicious ingredient for cooking...")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SALT",          	"Salt can be used to restore the spoilage of a prepared food. Not losing that sweet dish again!")

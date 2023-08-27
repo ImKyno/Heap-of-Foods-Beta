@@ -1,3 +1,14 @@
+local SEASON_BASEREGENTIME_TUNING_LOOKUP =
+{
+    [SEASONS.SUMMER] = "KYNO_COFFEEBUSH_GROWTIME_SUMMER",
+    [SEASONS.SPRING] = "KYNO_COFFEEBUSH_GROWTIME_SPRING",
+}
+
+local function OnSeasonChange(inst, season)
+    local tuning = SEASON_BASEREGENTIME_TUNING_LOOKUP[season] or "KYNO_COFFEEBUSH_GROWTIME"
+    inst.components.pickable.baseregentime = TUNING[tuning]
+end
+
 local function makeemptyfn(inst)
     if inst.components.pickable then
 		inst.AnimState:PlayAnimation("dead_to_empty")
@@ -75,19 +86,6 @@ local function onpickedfn(inst, picker)
     pickberries(inst)
 end
 
-local function getregentimefn_normal(inst)
-    if inst.components.pickable == nil then
-        return TUNING.KYNO_COFFEEBUSH_GROWTIME
-    end
-
-    local max_cycles = inst.components.pickable.max_cycles
-    local cycles_left = inst.components.pickable.cycles_left or max_cycles
-    local num_cycles_passed = math.max(0, max_cycles - cycles_left)
-    return TUNING.KYNO_COFFEEBUSH_GROWTIME
-    + TUNING.BERRY_REGROW_INCREASE * num_cycles_passed
-    + TUNING.BERRY_REGROW_VARIANCE * math.random()
-end
-
 local function makefullfn(inst)
     inst.AnimState:PlayAnimation(pickanim(inst))
 end
@@ -101,6 +99,7 @@ local function dig_up_common(inst, worker, numberries)
             if inst.components.pickable:CanBePicked() then
                 local pt = inst:GetPosition()
                 pt.y = pt.y + (inst.components.pickable.dropheight or 0)
+				
                 for i = 1, numberries do
                     inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product, pt)
                 end
@@ -109,6 +108,7 @@ local function dig_up_common(inst, worker, numberries)
 			inst.components.lootdropper:SpawnLootPrefab("dug_kyno_coffeebush")
         end
     end
+	
     inst:Remove()
 end
 
@@ -126,6 +126,7 @@ local function OnHaunt(inst)
         inst.components.hauntable.hauntvalue = TUNING.HAUNT_COOLDOWN_TINY
         return true
     end
+	
     return false
 end
 
@@ -194,9 +195,10 @@ local function createbush(name, inspectname, berryname, master_postinit)
             inst.components.inspectable.nameoverride = inspectname
         end
 		
+		inst:WatchWorldState("season", OnSeasonChange)
+		
         MakeSnowCovered(inst)
 		MakeNoGrowInWinter(inst)
-		MakeNoGrowInSpring(inst)
 		
         master_postinit(inst)
 		
@@ -208,7 +210,6 @@ end
 
 local function normal_postinit(inst)
     inst.components.pickable:SetUp("kyno_coffeebeans", TUNING.KYNO_COFFEEBUSH_GROWTIME)
-    inst.components.pickable.getregentimefn = getregentimefn_normal
     inst.components.pickable.max_cycles = TUNING.BERRYBUSH_CYCLES + math.random(2)
     inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
 

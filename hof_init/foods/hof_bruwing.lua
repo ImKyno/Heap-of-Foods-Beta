@@ -73,6 +73,7 @@ AddBrewingValues({"mayonnaise"},                {mayonnaise = 1})
 AddBrewingValues({"kyno_piko"},                 {piko       = 1})
 AddBrewingValues({"kyno_piko_orange"},          {piko       = 1})
 AddBrewingValues({"kyno_oil"},                  {oil        = 1})
+AddBrewingValues({"kyno_salt"},                 {salt       = 1})
 AddBrewingValues({"kyno_sugar"},                {sweetener  = 1,   sugar         = 1})
 
 -- Import The Beverages.

@@ -851,6 +851,8 @@ local function crabmeatfn()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
+	
+	inst.AnimState:SetScale(.85, .85, .85)
 
 	inst.AnimState:SetBank("quagmire_crabmeat")
 	inst.AnimState:SetBuild("quagmire_crabmeat")
@@ -966,6 +968,8 @@ local function crabkingmeatfn()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
+	
+	inst.AnimState:SetScale(1.2, 1.2, 1.2)
 
 	inst.AnimState:SetBank("kyno_crabkingmeat")
 	inst.AnimState:SetBuild("kyno_crabkingmeat")

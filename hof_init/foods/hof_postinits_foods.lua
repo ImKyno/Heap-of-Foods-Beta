@@ -347,6 +347,9 @@ end
 
 -- Tweaks for Warly's foods.
 local WarlyFood = require("preparedfoods_warly")
+WarlyFood.monstertartare.test = function(cooker, names, tags)
+	return tags.monster and tags.monster >= 2 and not tags.inedible and not tags.fruit
+end
 WarlyFood.monstertartare.health = -20
 WarlyFood.monstertartare.hunger = 62.5
 WarlyFood.monstertartare.sanity = -20
