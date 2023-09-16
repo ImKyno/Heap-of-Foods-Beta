@@ -173,7 +173,7 @@ local function OnOcuppied(inst, child)
     end
 end
 
-local function OnSave(inst)
+local function OnSave(inst, data)
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
         data.burnt = true
     end
