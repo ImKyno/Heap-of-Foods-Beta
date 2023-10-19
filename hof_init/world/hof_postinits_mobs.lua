@@ -496,7 +496,7 @@ local function FrogPostinit(inst)
     if not inst.components.health:IsDead() and not inst.components.sleeper:IsAsleep() then
         return FindEntity(inst, TUNING.FROG_TARGET_DIST, function(guy)
             if not guy.components.health:IsDead() then
-                return guy.components.inventory ~= nil
+                return guy.components.inventory ~= nil and inst.hof_oldretarget
             end
         end,
 		RESTARGET_MUST_TAGS, RETARGET_CANT_TAGS)
@@ -507,7 +507,10 @@ local function FrogPostinit(inst)
 		return inst
 	end
 
-	inst.components.combat:SetRetargetFunction(3, Retarget)
+	if inst.components.combat ~= nil then
+		inst.hof_oldretarget = inst.components.combat.targetfn
+		inst.components.combat:SetRetargetFunction(3, Retarget)
+	end
 end
 
 AddPrefabPostInit("frog", FrogPostinit)
