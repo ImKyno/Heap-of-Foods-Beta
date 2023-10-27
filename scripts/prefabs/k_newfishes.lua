@@ -145,7 +145,7 @@ local function packagefn()
 	inst.components.inspectable.nameoverride = "HERMIT_BUNDLE"
     
     inst:AddComponent("inventoryitem")
-    inst.components.inventoryitem.atlasname = "images/inventoryimages1.xml"
+    inst.components.inventoryitem.atlasname = "images/inventoryimages2.xml"
 	inst.components.inventoryitem.imagename = "hermit_bundle"
 
     inst:AddComponent("unwrappable")

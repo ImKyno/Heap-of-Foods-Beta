@@ -18,12 +18,13 @@ PrefabFiles =
 	"k_product_bubble",
 	"k_fertilizer_nutrient_defs",
 	
+	"k_newbirds",
 	"k_newbrews",
+	"k_newdryables",
+	"k_newfishes",
 	"k_newfoods",
 	"k_newingredients",
 	"k_newveggies",
-	"k_newdryables",
-	"k_newbirds",
 	
 	"k_tunacan",
 	"k_cannedfoods",
@@ -66,7 +67,6 @@ PrefabFiles =
 	"k_weed_seeds",
 	"k_floatilizer",
 	"k_twiggynuts",
-	"k_fishes",
 	"k_serenityisland_tools",
 	"k_serenityisland_pond",
 	"k_serenityisland_rocks",

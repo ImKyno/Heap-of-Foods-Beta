@@ -426,6 +426,6 @@ local function KingfisherSetup(inst, prefab_deps)
     table.insert(prefab_deps, "feather_robin_winter")
 end
 
-return makebird("quagmire_pigeon", "quagmire_pigeon", nil, nil, PigeonSetup, nil, true),
-makebird("toucan", "toucan", nil, nil, ToucanSetup, nil, true),
-makebird("kingfisher", "kingfisher", nil, nil, KingfisherSetup, nil, true)
+return makebird("quagmire_pigeon", "quagmire_pigeon", false, nil, PigeonSetup, nil, false),
+makebird("toucan", "toucan", false, nil, ToucanSetup, nil, false),
+makebird("kingfisher", "kingfisher", false, nil, KingfisherSetup, nil, false)

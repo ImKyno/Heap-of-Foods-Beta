@@ -6,7 +6,7 @@ local assets =
 local prefabs =
 {
 	"slurtle_shellpieces",
-	"rock",
+	"rocks",
 	"feather_crow",
 	"feather_robin",
 	"feather_robin_winter",
@@ -32,7 +32,7 @@ end
 
 local function OnRegen(inst)
 	inst.components.activatable.inactive = false
-	
+
 	if inst.components.workable.workleft < #anims-1 then
 		inst.components.workable:SetWorkLeft(inst.components.workable.workleft + 1)
 		StartRegen(inst)
@@ -54,14 +54,14 @@ StartRegen = function(inst, regentime)
 		if inst.task then
 			inst.task:Cancel()
 		end
-		
+
 		inst.task = inst:DoTaskInTime(regentime, OnRegen, "regen")
 		inst.targettime = GetTime() + regentime
 	else
 		if inst.task then
 			inst.task:Cancel()
 		end
-		
+
 		inst.targettime = nil
 	end
 
@@ -100,7 +100,7 @@ local function OnWorked(inst, worker, workleft)
 	local pt = Vector3(inst.Transform:GetWorldPosition())
 	local hispos = Vector3(worker.Transform:GetWorldPosition())
 	local he_right = ((hispos - pt):Dot(TheCamera:GetRightVec()) > 0)
-	
+
 	if he_right then
 		inst.components.lootdropper:DropLoot(pt - (TheCamera:GetRightVec()*(.5 + math.random())))
 	else
@@ -118,13 +118,13 @@ local function OnWorked(inst, worker, workleft, numworks)
 
 	local prevworkleft = numworks + workleft
 	local spawns = math.min(math.ceil(prevworkleft) - math.ceil(workleft), math.ceil(prevworkleft))
-        
+
 	if spawns > 0 then
 
 		local pt = Vector3(inst.Transform:GetWorldPosition())
 		local hispos = Vector3(worker.Transform:GetWorldPosition())
 		local he_right = ((hispos - pt):Dot(TheCamera:GetRightVec()) > 0)
-            
+
 		if he_right then
 			inst.components.lootdropper:DropLoot(pt - (TheCamera:GetRightVec()*(.5 + math.random())))
 		else
@@ -138,11 +138,11 @@ end
 local function OnSave(inst, data)
 	if inst.targettime then
 		local time = GetTime()
-		
+
 		if inst.targettime > time then
 			data.time = math.floor(inst.targettime - time)
 		end
-		
+
 		data.workleft = inst.components.workable.workleft
 	end
 end
@@ -155,7 +155,7 @@ local function OnLoad(inst, data)
 			inst.components.activatable.inactive = true
 		end
 	end
-		
+
 	if data and data.time then
 		StartRegen(inst, data.time)
 	end
@@ -184,7 +184,7 @@ end
 
 local function fn()
 	local inst = CreateEntity()
-	
+
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
@@ -193,9 +193,9 @@ local function fn()
 	inst.AnimState:SetBank("kyno_meadowisland_sandhill")
 	inst.AnimState:SetBuild("kyno_meadowisland_sandhill")
 	inst.AnimState:PlayAnimation(anims[#anims])
-	
+
 	inst:AddTag("sandhill")
-	
+
 	inst.GetActivateVerb = GetVerb
 
 	inst.entity:SetPristine()
@@ -203,7 +203,7 @@ local function fn()
     if not TheWorld.ismastersim then
         return inst
     end
-	
+
 	inst:AddComponent("inspectable")
 
 	inst:AddComponent("workable")
@@ -214,7 +214,7 @@ local function fn()
 	inst:AddComponent("activatable")
 	inst.components.activatable.inactive = false
 	inst.components.activatable.OnActivate = function() inst:Remove() end
-	
+
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper.numrandomloot = 1
 	inst.components.lootdropper.chancerandomloot = 0.01
@@ -233,7 +233,7 @@ local function fn()
 	inst.components.lootdropper:AddRandomLoot("kyno_kokonut", 0.001)
 	inst.components.lootdropper:AddRandomLoot("kyno_piko", 0.001)
 	inst.components.lootdropper:AddRandomLoot("kyno_piko_orange", 0.001)
-	
+
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 	inst.OnEntityWake = OnWake

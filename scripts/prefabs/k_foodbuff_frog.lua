@@ -37,6 +37,10 @@ local function OnExtended(inst, target)
     inst.components.timer:StopTimer("kyno_frogbuff")
     inst.components.timer:StartTimer("kyno_frogbuff", TUNING.KYNO_FROGBUFF_DURATION)
 	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FROGBUFF_START"))
+	end
+	
 	if target:HasTag("player") then 
 		target:RemoveTag("frogimmunity")
 		target:AddTag("frogimmunity")

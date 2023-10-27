@@ -487,19 +487,24 @@ AddPrefabPostInit("koalefant_summer", MilkableKoalefantPostinit)
 AddPrefabPostInit("koalefant_winter", MilkableKoalefantPostinit)
 AddPrefabPostInit("lightninggoat", MilkableVoltGoatPostinit)
 
--- For the frog immunity buff.
+-- For the Noxious Froggle Bunwich effect.
 local function FrogPostinit(inst)
-	local RESTARGET_MUST_TAGS = {"_combat", "_health"}
+	local RETARGET_MUST_TAGS = {"_combat", "_health"}
 	local RETARGET_CANT_TAGS = {"merm", "frogimmunity"}
+	local LUNAR_RETARGET_CANT_TAGS = {"merm", "lunar_aligned", "frogimmunity"}
 
 	local function Retarget(inst)
-    if not inst.components.health:IsDead() and not inst.components.sleeper:IsAsleep() then
-        return FindEntity(inst, TUNING.FROG_TARGET_DIST, function(guy)
+    if not inst.components.health:IsDead() and not (inst.components.sleeper ~= nil and inst.components.sleeper:IsAsleep()) then
+		local target_dist = inst.islunar and TUNING.LUNARFROG_TARGET_DIST or TUNING.FROG_TARGET_DIST
+        local cant_tags   = inst.islunar and LUNAR_RETARGET_CANT_TAGS or RETARGET_CANT_TAGS
+	
+        return FindEntity(inst, target_dist, function(guy)
             if not guy.components.health:IsDead() then
                 return guy.components.inventory ~= nil and inst.hof_oldretarget
             end
         end,
-		RESTARGET_MUST_TAGS, RETARGET_CANT_TAGS)
+		
+		RETARGET_MUST_TAGS, cant_tags)
 		end
 	end
 
@@ -514,6 +519,7 @@ local function FrogPostinit(inst)
 end
 
 AddPrefabPostInit("frog", FrogPostinit)
+AddPrefabPostInit("lunarfrog", FrogPostinit)
 
 -- Toadstool drops Poison Frog Legs instead of normal Frog Legs.
 -- Update this if Klei updates their counterparts!

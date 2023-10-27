@@ -2172,7 +2172,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FEARSLEEP,
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"moon_cap", 1}, {"carrot", 1}, {"rock_avocado_fruit_ripe", 2}}},
-		prefabs = { "buff_sleepresistance", "kyno_mindbuff" },
+		prefabs = { "buff_sleepresistance", "kyno_fearbuff" },
 		oneatenfn = function(inst, eater)
             if eater.components.grogginess ~= nil and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
