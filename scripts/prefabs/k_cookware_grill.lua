@@ -332,10 +332,12 @@ local function donecookfn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
+		--[[
 		inst.smoke_task = inst:DoPeriodicTask(2, function()
 			inst._smoke:push()
 			OnGrillSmoke(inst)
 		end)
+		]]--
 
 		ShowProductImage(inst)
 	end
@@ -350,10 +352,12 @@ local function continuedonefn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
+		--[[
 		inst.smoke_task = inst:DoPeriodicTask(2, function()
 			inst._smoke:push()
 			OnGrillSmoke(inst)
 		end)
+		]]--
 
 		ShowProductImage(inst)
     end
@@ -384,10 +388,12 @@ local function harvestfn(inst, doer)
 			firepit:RemoveTag("NOCLICK")
 		end
 
+	--[[
 	if inst.smoke_task then
 		inst.smoke_task:Cancel()
 		inst.smoke_task = nil
 	end
+	]]--
 
 	local bubble = GetBubble(inst)
 	if bubble then
@@ -464,12 +470,12 @@ local function grillsmallfn()
 	inst:AddTag("stewer")
 	inst:AddTag("grill_small")
 
-	inst._smoke = net_event(inst.GUID, "grillsmoke")
+	-- inst._smoke = net_event(inst.GUID, "grillsmoke")
 
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		inst:ListenForEvent("grillsmoke", OnGrillSmoke)
+		-- inst:ListenForEvent("grillsmoke", OnGrillSmoke)
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("cooking_pot")
 		end
@@ -545,12 +551,12 @@ local function grillbigfn()
 	inst:AddTag("stewer")
 	inst:AddTag("grill_big")
 
-	inst._smoke = net_event(inst.GUID, "grillsmoke")
+	-- inst._smoke = net_event(inst.GUID, "grillsmoke")
 
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		inst:ListenForEvent("grillsmoke", OnGrillSmoke)
+		-- inst:ListenForEvent("grillsmoke", OnGrillSmoke)
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("cooking_pot")
 		end

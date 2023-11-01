@@ -386,10 +386,12 @@ local function donecookfn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
+		--[[
 		inst.oven_task = inst:DoPeriodicTask(2, function()
 			inst._steamoven:push()
 			OnOvenSteam(inst)
 		end)
+		]]--
 	end
 	HideGoops(inst)
 	ShowProductImage(inst)
@@ -404,10 +406,12 @@ local function continuedonefn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
+		--[[
 		inst.oven_task = inst:DoPeriodicTask(2, function()
 			inst._steamoven:push()
 			OnOvenSteam(inst)
 		end)
+		]]--
 	end
 	HideGoops(inst)
 	ShowProductImage(inst)
@@ -629,12 +633,12 @@ local function casserolefn(small)
 		inst:AddTag("oven_casserole")
 	end
 
-	inst._steamoven = net_event(inst.GUID, "steamoven")
+	-- inst._steamoven = net_event(inst.GUID, "steamoven")
 
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		inst:ListenForEvent("steamoven", OnOvenSteam)
+		-- inst:ListenForEvent("steamoven", OnOvenSteam)
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("cooking_pot")
 		end

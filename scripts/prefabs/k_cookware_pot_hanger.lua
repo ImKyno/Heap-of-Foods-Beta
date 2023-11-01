@@ -495,10 +495,12 @@ local function donecookfn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
+		--[[
 		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
 			OnPotSteam(inst)
 		end)
+		]]--
     else
 		inst.AnimState:PlayAnimation("cooking_boil_small", true)
         inst.SoundEmitter:KillSound("snd")
@@ -510,10 +512,12 @@ local function donecookfn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
+		--[[
 		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
 			OnPotSteam(inst)
 		end)
+		]]--
 	end
 	HideGoops(inst)
 	ShowProductImage(inst)
@@ -527,11 +531,13 @@ local function continuedonefn(inst)
 		if firepit then
 			firepit:AddTag("NOCLICK")
 		end
-
+		
+		--[[
 		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
 			OnPotSteam(inst)
 		end)
+		]]--
     else
 		inst.AnimState:PlayAnimation("cooking_boil_small", true)
 
@@ -540,10 +546,12 @@ local function continuedonefn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
+		--[[
 		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
 			OnPotSteam(inst)
 		end)
+		]]--
 	end
 	HideGoops(inst)
 	ShowProductImage(inst)
@@ -575,11 +583,13 @@ local function harvestfn(inst, doer)
 		firepit:RemoveTag("NOCLICK")
 	end
 
+	--[[
 	if inst.steam_task then
 		inst.steam_task:Cancel()
 		inst.steam_task = nil
 		-- print("Pot steam is gone!")
 	end
+	]]--
 
 	local bubble = GetBubble(inst)
 	if bubble then
@@ -716,12 +726,12 @@ local function syruppotfn()
 	inst:AddTag("stewer")
 	inst:AddTag("pot_syrup")
 
-	inst._steam = net_event(inst.GUID, "steampot")
+	-- inst._steam = net_event(inst.GUID, "steampot")
 
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		inst:ListenForEvent("steampot", OnPotSteam)
+		-- inst:ListenForEvent("steampot", OnPotSteam)
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("syrup_pot")
 		end
@@ -818,12 +828,12 @@ local function potfn(small)
 		inst:AddTag("pot_big")
 	end
 
-	inst._steam = net_event(inst.GUID, "steampot")
+	-- inst._steam = net_event(inst.GUID, "steampot")
 
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		inst:ListenForEvent("steampot", OnPotSteam)
+		-- inst:ListenForEvent("steampot", OnPotSteam)
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("cooking_pot")
 		end
@@ -928,12 +938,12 @@ local function elderpotfn()
 	inst:AddTag("pot_syrup")
 	inst:AddTag("pot_elder")
 
-	inst._steam = net_event(inst.GUID, "steampot")
+	-- inst._steam = net_event(inst.GUID, "steampot")
 
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		inst:ListenForEvent("steampot", OnPotSteam)
+		-- inst:ListenForEvent("steampot", OnPotSteam)
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("syrup_pot")
 		end
