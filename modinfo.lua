@@ -123,6 +123,82 @@ configuration_options       =
 	
 	Title("Food Options", "Options for foods and ingredients."),
 	{
+		name                = "HOF_SEASONALFOOD",
+		label               = "Seasonal Recipes",
+		hover               = "Should Seasonal Recipes only be cooked during Special Events?",
+		options             =
+		{
+			{
+				description = "No",
+				hover       = "Seasonal Recipes can be cooked without restrictions.",
+				data        = true
+			},
+			{
+				description = "Yes",
+				hover       = "Seasonal Recipes can only be cooked when Special Events are active.",
+				data        = false
+			},
+		},
+		default             = false,
+	},
+	{
+		name                = "HOF_HUMANMEAT",
+		label               = "Long Pig Recipes",
+		hover               = "Should Players drop Long Pigs upon death?\nNote: If disabled, this will cause some Recipes to be uncookable.",
+		options             =
+		{
+			{
+				description = "No",
+				hover       = "Players will not drop Long Pigs upon death.",
+				data        = 0
+			},
+			{
+				description = "Yes",
+				hover       = "Players may have a chance to drop Long Pigs upon death.",
+				data        = 1
+			},
+		},
+		default             = 1,
+	},
+	{
+		name                = "HOF_ALCOHOLICDRINKS",
+		label               = "Alcoholic Restriction",
+		hover               = "Should some characters be unable to drink Alcoholic-like drinks?",
+		options             =
+		{
+			{
+				description = "No", 
+				hover       = "All characters can drink Alcoholic-like drinks.",
+				data        = 0
+			},
+            {	
+				description = "Yes", 
+				hover       = "Some characters like Webber, Wendy, etc. can't drink Alcoholic-like drinks.",
+				data        = 1
+			},
+        },
+        default             = 0,
+	},
+	{
+		name                = "HOF_GIANTSPAWNING",
+		label               = "Giants from Foods",
+		hover               = "Should Players spawn Giants when eating their special food?",
+		options             =
+		{
+			{
+				description = "No",
+				hover       = "Players will not spawn Giants when eating their special food.",
+				data        = 0
+			},
+			{
+				description = "Yes",
+				hover       = "Players will spawn Giants when eating their special food.",
+				data        = 1
+			},
+		},
+		default             = 1,
+	},
+	{
 		name                = "HOF_COFFEESPEED",
 		label               = "Speed Buff",
 		hover               = "Should the foods give the Speed Buff when eaten?\n\This option applies to: Coffee Beans, Coffee and Tropical Bouillabaisse.",
@@ -179,99 +255,6 @@ configuration_options       =
 			},
 		},
 		default             = 480,
-	},
-	--[[
-	{
-		name                = "HOF_COFFEESPEEDMULTIPLIER",
-		label               = "Speed Buff Multiplier",
-		hover               = "How much is the Speed Buff from foods?\n\This option applies to: Coffee and Tropical Bouillabaisse.",
-		options             =
-		{
-			{
-				description = "30%",
-				hover       = "30% Faster Movement Speed",
-				data        = 1.30
-			},
-			{
-				description = "40%",
-				hover       = "40% Faster Movement Speed",
-				data        = 1.40
-			},
-			{
-				description = "50%",
-				hover       = "50% Faster Movement Speed",
-				data        = 1.50
-			},
-			{
-				description = "60%",
-				hover       = "60% Faster Movement Speed",
-				data        = 1.60
-			},
-			{
-				description = "83% (Default)",
-				hover       = "83% Faster Movement Speed",
-				data        = 1.83
-			},
-		},
-		default             = 1.83,
-	},
-	]]--
-	{
-		name                = "HOF_HUMANMEAT",
-		label               = "Long Pig From Players",
-		hover               = "Should Players drop Long Pigs upon death?\nNote: If disabled, this will cause Deadly Feast to be uncookable.",
-		options             =
-		{
-			{
-				description = "No",
-				hover       = "Players will not drop Long Pigs upon death.",
-				data        = 0
-			},
-			{
-				description = "Yes",
-				hover       = "Players will drop Long Pigs upon death.",
-				data        = 1
-			},
-		},
-		default             = 1,
-	},
-	{
-		name                = "HOF_ALCOHOLICDRINKS",
-		label               = "Alcoholic Restriction",
-		hover               = "Should some characters be unable to drink Alcoholic-like drinks?",
-		options             =
-		{
-			{
-				description = "No", 
-				hover       = "All characters can drink Alcoholic-like drinks.",
-				data        = 0
-			},
-            {	
-				description = "Yes", 
-				hover       = "Some characters like Webber, Wendy, etc. can't drink Alcoholic-like drinks.",
-				data        = 1
-			},
-        },
-        default             = 0,
-	},
-	{
-		name                = "HOF_GIANTSPAWNING",
-		label               = "Giants from Foods",
-		hover               = "Should Players spawn Giants when eating their special food?",
-		options             =
-		{
-			{
-				description = "No",
-				hover       = "Players will not spawn Giants when eating their special food.",
-				data        = 0
-			},
-			{
-				description = "Yes",
-				hover       = "Players will spawn Giants when eating their special food.",
-				data        = 1
-			},
-		},
-		default             = 1,
 	},
 	
 	--[[

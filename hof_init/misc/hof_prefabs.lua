@@ -1,8 +1,8 @@
 -- Prefabs.
 PrefabFiles =
-{	
+{
 	"hermitcrab", -- I'll be using this until I find a better and clean way to do the things.
-	
+
 	"k_foodbuff_haste",
 	"k_foodbuff_coffee",
 	"k_foodbuff_strength",
@@ -14,22 +14,21 @@ PrefabFiles =
 	"k_foodbuff_frog",
 	"k_foodbuff_fear",
 	-- "k_foodbuff_spider",
-	
+
 	"k_product_bubble",
 	"k_fertilizer_nutrient_defs",
-	
+
 	"k_newbirds",
 	"k_newbrews",
 	"k_newdryables",
-	"k_newfishes",
 	"k_newfoods",
 	"k_newingredients",
 	"k_newveggies",
-	
+
 	"k_tunacan",
 	"k_cannedfoods",
 	"k_canneddrinks",
-	
+
 	"k_coffeebeans",
 	"k_realcoffeebush",
 	"k_realdugcoffeebush",
@@ -38,6 +37,7 @@ PrefabFiles =
 	"k_mussel",
 	"k_bugs",
 	"k_humanmeat",
+	"k_fishes",
 	"k_mushstump",
 	"k_spotbush",
 	"k_dugspotbush",

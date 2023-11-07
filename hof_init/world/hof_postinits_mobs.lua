@@ -184,8 +184,20 @@ if HUMANMEATY == 1 then
 
 	local function LongPigPostinit(inst)
 		local function OnDeathLongPig(inst)
-			if math.random() < 0.50 then
-				SpawnPrefab("kyno_humanmeat").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			if math.random() < 0.33 then
+				local x, y, z = inst.Transform:GetWorldPosition()
+				local humanmeat = SpawnPrefab("kyno_humanmeat")
+				
+				if humanmeat ~= nil then
+					if humanmeat.Physics ~= nil then
+						local speed = 2 + math.random()
+						local angle = math.random() * 2 * PI
+						humanmeat.Physics:Teleport(x, y + 1, z)
+						humanmeat.Physics:SetVel(speed * math.cos(angle), speed * 3, speed * math.sin(angle))
+					else
+						humanmeat.Transform:SetPosition(x, y, z)
+					end
+				end
 			end
 		end
 

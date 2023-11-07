@@ -1,3 +1,4 @@
+--[[
 local modName = "Heap-of-Foods"
 local categoryName = "Hof"
 
@@ -959,3 +960,4 @@ local stringTables =
 
 -- Register the strings.
 KaRegisterTrophyStrings(categoryName, stringTables)
+]]--

@@ -1,3 +1,4 @@
+--[[
 -- This belongs to Accomplishments Mod.
 local _G = GLOBAL
 local modName = "Heap-of-Foods"
@@ -20,3 +21,4 @@ for i,v in ipairs(categories) do
 end
 
 print(modName, "Loaded achievementsmain.lua")
+]]--

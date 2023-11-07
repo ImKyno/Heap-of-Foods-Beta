@@ -1,3 +1,4 @@
+--[[
 -- This belongs to Accomplishments Mod.
 local modName = "Heap-of-Foods"
 local _G = GLOBAL
@@ -22,3 +23,4 @@ modimport("hof_init/strings/hof_strings")
 modimport("achievementsmain")
 
 print(modName, "Loaded modclientmain.lua")
+]]--

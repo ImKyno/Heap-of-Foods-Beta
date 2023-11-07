@@ -58,9 +58,17 @@ for _, v in pairs(hof_init_foods) do
 	modimport("hof_init/foods/"..v)
 end
 
+-- Mod Options.
+_G.CONFIGS_HOF =
+{
+	ENABLEDMODS = {}
+}
+
+_G.CONFIGS_HOF.SEASONALFOOD = GetModConfigData("HOF_SEASONALFOOD")
+
 -- Fix For Inventory Icons.
 local atlas = (src and src.components.inventoryitem and src.components.inventoryitem.atlasname
 and resolvefilepath(src.components.inventoryitem.atlasname)) or "images/inventoryimages.xml"
 
 -- This belongs to the Accomplishments Mod.
-modimport("achievementsmain")
+-- modimport("achievementsmain")
