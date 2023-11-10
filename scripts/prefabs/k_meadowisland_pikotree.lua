@@ -2,8 +2,8 @@ local assets =
 {
 	Asset("ANIM", "anim/tree_leaf_tall.zip"),
     Asset("ANIM", "anim/teatree_trunk_build.zip"),
-    Asset("ANIM", "anim/teatree_build.zip"), 
-	
+    Asset("ANIM", "anim/teatree_build.zip"),
+
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 }
@@ -12,7 +12,7 @@ local prefabs =
 {
 	"green_leaves_chop",
 	"driftwood_log",
-	
+
 	"kyno_oaktree_pod",
 	"kyno_twiggynuts",
 	"kyno_piko",
@@ -22,11 +22,11 @@ local prefabs =
 local function RemoveChild(inst)
     if inst.components.spawner and inst.components.spawner.child then
         local child = inst.components.spawner.child
-		
+
         if child.components.knownlocations then
             child.components.knownlocations:ForgetLocation("home")
-        end  
-		
+        end
+
         child:RemoveComponent("homeseeker")
     end
 end
@@ -38,12 +38,12 @@ local function ChopTree(inst, chopper, chopsleft, numchops)
     end
 
     inst.AnimState:PlayAnimation("chop_tall")
-	if math.random() < 0.5 then 
+	if math.random() < 0.5 then
 		inst.AnimState:PushAnimation("sway1_loop_tall", true)
-	else	
+	else
 		inst.AnimState:PushAnimation("sway2_loop_tall", true)
 	end
-	
+
 	--[[
 	if inst.components.spawner and inst.components.spawner:IsOccupied() then
         inst.SoundEmitter:PlaySound("dontstarve_DLC003/creatures/piko/in_tree")
@@ -79,18 +79,18 @@ local function ChopDownTree(inst, chopper)
         inst.components.lootdropper:DropLoot(pt + TheCamera:GetRightVec())
         inst.SoundEmitter:PlaySound("dontstarve/forest/treefall")
     end
-	
+
 	inst.components.inventory:DropEverything(false, false)
 
     if inst.components.spawner and inst.components.spawner:IsOccupied() then
-        inst.components.spawner:ReleaseChild()                            
+        inst.components.spawner:ReleaseChild()
     end
 
     RemoveChild(inst)
 
 	inst.persists = false
 	inst:DoTaskInTime(14 * FRAMES, ChopTreeShake)
-	
+
 	inst:ListenForEvent("animover", inst.Remove)
 	SpawnPrefab("kyno_meadowisland_tree_stump").Transform:SetPosition(inst.Transform:GetWorldPosition())
 end
@@ -103,7 +103,7 @@ end
 local function OnIgnite(inst)
 	if inst.components.spawner then
         local child = inst.components.spawner.child
-		
+
         if child then
             child.components.knownlocations:ForgetLocation("home")
         end
@@ -111,7 +111,7 @@ local function OnIgnite(inst)
         if inst.components.spawner:IsOccupied() then
             inst.components.spawner:ReleaseChild()
         end
-    end 
+    end
 end
 
 local function OnBurnt(inst)
@@ -136,7 +136,7 @@ local function GetChild(inst)
     if math.random() < 0.40 then
         return "kyno_piko_orange"
     end
-	
+
     return "kyno_piko"
 end
 
@@ -157,7 +157,7 @@ local function OnSpawned(inst, child)
 end
 
 local function TestSpawning(inst)
-    if TheWorld.state.isday or TheWorld.state.iscaveday then                
+    if TheWorld.state.isday or TheWorld.state.iscaveday then
         StartSpawning(inst)
     else
         StopSpawning(inst)
@@ -196,27 +196,26 @@ local function fn()
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_meadowisland_tree.tex")
 	minimap:SetPriority(5)
-	
+
 	MakeObstaclePhysics(inst, .4)
 
 	inst.AnimState:SetBank("tree_leaf")
 	inst.AnimState:SetBuild("teatree_build")
 	inst.AnimState:AddOverrideBuild("teatree_trunk_build")
-	if math.random() < 0.5 then 
+	if math.random() < 0.5 then
 		inst.AnimState:PlayAnimation("sway1_loop_tall", true)
-	else	
+	else
 		inst.AnimState:PlayAnimation("sway2_loop_tall", true)
 	end
-	
-	inst:AddTag("structure")
+
 	inst:AddTag("plant")
 	inst:AddTag("tree")
 	inst:AddTag("shelter")
 	inst:AddTag("infested_tree")
 	inst:AddTag("dumpchildrenonignite")
-	
+
 	MakeSnowCoveredPristine(inst)
-	
+
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
@@ -225,16 +224,16 @@ local function fn()
 
     local color = 0.7
     inst.AnimState:SetMultColour(color, color, color, 1)
-	
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("inventory")
-	
+
 	inst:AddComponent("spawner")
 	inst.components.spawner:Configure("kyno_piko", 10)
     inst.components.spawner.childfn = GetChild
     inst.components.spawner:SetOnVacateFn(OnSpawned)
     inst.components.spawner:SetOnOccupiedFn(OnOcuppied)
-	
+
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"driftwood_log", "driftwood_log", "kyno_twiggynuts", "kyno_twiggynuts", "kyno_oaktree_pod"})
 
@@ -249,16 +248,16 @@ local function fn()
     inst.components.burnable:SetOnBurntFn(OnBurnt)
 	MakeSmallPropagator(inst)
 	MakeSnowCovered(inst)
-	
+
 	inst:WatchWorldState("isday", TestSpawning)
     TestSpawning(inst, TheWorld.state.isday)
-	
+
 	inst:WatchWorldState("iscaveday", TestSpawning)
     TestSpawning(inst, TheWorld.state.iscaveday)
-	
+
 	inst:WatchWorldState("isdusk", TestSpawning)
     TestSpawning(inst, TheWorld.state.isdusk)
-	
+
 	inst.OnSave = OnSave
     inst.OnLoad = OnLoad
 

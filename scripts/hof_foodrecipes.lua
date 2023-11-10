@@ -1059,7 +1059,7 @@ local kyno_foods =
 		cooktime = 1,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_crabmeat", 2}, {"succulent_picked", 1}, "kyno_flour", 1}},
+		card_def = {ingredients = {{"kyno_crabmeat", 2}, {"succulent_picked", 1}, {"kyno_flour", 1}}},
 	},
 	
 	gorge_steak_frites =

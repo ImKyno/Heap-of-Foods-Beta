@@ -2,8 +2,8 @@ local assets =
 {
 	Asset("ANIM", "anim/tree_leaf_tall.zip"),
     Asset("ANIM", "anim/teatree_trunk_build.zip"),
-    Asset("ANIM", "anim/teatree_build.zip"), 
-	
+    Asset("ANIM", "anim/teatree_build.zip"),
+
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 }
@@ -12,7 +12,7 @@ local prefabs =
 {
 	"green_leaves_chop",
 	"driftwood_log",
-	
+
 	"kyno_oaktree_pod",
 	"kyno_twiggynuts",
 	"kyno_piko",
@@ -26,9 +26,9 @@ local function ChopTree(inst, chopper, chopsleft, numchops)
     end
 
     inst.AnimState:PlayAnimation("chop_tall")
-	if math.random() < 0.5 then 
+	if math.random() < 0.5 then
 		inst.AnimState:PushAnimation("sway1_loop_tall", true)
-	else	
+	else
 		inst.AnimState:PushAnimation("sway2_loop_tall", true)
 	end
 
@@ -97,7 +97,7 @@ local function OnGetItemFromPlayer(inst, giver, item)
 	if item.components.inventoryitem ~= nil and item:HasTag("squirrel") then
 		local tree = SpawnPrefab("kyno_meadowisland_pikotree")
 		tree.Transform:SetPosition(inst.Transform:GetWorldPosition())
-		
+
 		local fx = SpawnPrefab("green_leaves_chop")
 		fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
 	end
@@ -123,7 +123,7 @@ local function fn()
     inst.entity:AddAnimState()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
-	
+
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_meadowisland_tree.tex")
 	minimap:SetPriority(5)
@@ -133,36 +133,35 @@ local function fn()
 	inst.AnimState:SetBank("tree_leaf")
 	inst.AnimState:SetBuild("teatree_build")
 	inst.AnimState:AddOverrideBuild("teatree_trunk_build")
-	if math.random() < 0.5 then 
+	if math.random() < 0.5 then
 		inst.AnimState:PlayAnimation("sway1_loop_tall", true)
-	else	
+	else
 		inst.AnimState:PlayAnimation("sway2_loop_tall", true)
 	end
-	
-	inst:AddTag("structure")
+
 	inst:AddTag("plant")
 	inst:AddTag("tree")
 	inst:AddTag("shelter")
 	inst:AddTag("infestable_tree")
-	
+
 	MakeSnowCoveredPristine(inst)
-	
+
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
         return inst
     end
-	
+
 	-- inst.AnimState:SetTime(math.random()*2)
 
     -- local color = 0.5 + math.random() * 0.5
     -- inst.AnimState:SetMultColour(color, color, color, 1)
-	
+
 	inst:AddComponent("inspectable")
-	
+
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"driftwood_log", "driftwood_log", "kyno_twiggynuts", "kyno_twiggynuts", "kyno_oaktree_pod"})
-	
+
 	inst:AddComponent("trader")
 	inst.components.trader:SetAcceptTest(TestItem)
     inst.components.trader.onaccept = OnGetItemFromPlayer
@@ -178,7 +177,7 @@ local function fn()
     inst.components.burnable:SetOnBurntFn(OnBurnt)
 	MakeSmallPropagator(inst)
 	MakeSnowCovered(inst)
-	
+
 	inst.OnSave = OnSave
     inst.OnLoad = OnLoad
 
@@ -212,7 +211,7 @@ local function stumpfn()
     inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
-	
+
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_meadowisland_tree_stump.tex")
 	minimap:SetPriority(5)
@@ -223,7 +222,7 @@ local function stumpfn()
     inst.AnimState:PlayAnimation("stump_tall", true)
 
     inst:AddTag("stump")
-	
+
 	inst:SetPrefabNameOverride("kyno_meadowisland_tree")
 
     inst.entity:SetPristine()
@@ -239,12 +238,12 @@ local function stumpfn()
 
     inst:AddComponent("lootdropper")
 	inst:AddComponent("inspectable")
-	
+
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
     inst.components.workable:SetOnFinishCallback(DigUp)
     inst.components.workable:SetWorkLeft(TUNING.KYNO_MEADOWISLAND_TREE_STUMP_WORKLEFT)
-	
+
 	inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 
@@ -253,7 +252,7 @@ local function stumpfn()
     inst.components.burnable:SetOnBurntFn(StumpOnBurnt)
 	MakeSmallPropagator(inst)
     MakeHauntableIgnite(inst)
-	
+
 	inst.OnSave = StumpOnSave
     inst.OnLoad = StumpOnLoad
 
@@ -263,10 +262,10 @@ end
 local function ChopBurntTree(inst)
     inst.components.workable:SetWorkable(false)
     inst.SoundEmitter:PlaySound("dontstarve/forest/treeCrumble")
-	
+
     inst.AnimState:PlayAnimation("chop_burnt_tall")
     inst.components.lootdropper:SpawnLootPrefab("charcoal")
-	
+
     inst.persists = false
     inst:DoTaskInTime(50 * FRAMES, inst.Remove)
 end
@@ -281,7 +280,7 @@ local function burntfn()
 
 	local minimap = inst.entity:AddMiniMapEntity()
     minimap:SetIcon("kyno_meadowisland_tree_burnt.tex")
-	
+
 	MakeObstaclePhysics(inst, .25)
 
     inst.AnimState:SetBank("tree_leaf")
@@ -290,7 +289,7 @@ local function burntfn()
     inst.AnimState:PlayAnimation("burnt_tall")
 
     inst:SetPrefabNameOverride("kyno_meadowisland_tree")
-	
+
 	inst:AddTag("plant")
 
     inst.entity:SetPristine()
