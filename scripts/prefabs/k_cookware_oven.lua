@@ -321,6 +321,7 @@ local function OnOpen(inst)
 		inst.AnimState:PlayAnimation("place_casserole")
 		inst.AnimState:PushAnimation("idle")
     end
+	
 	HideGoops(inst)
 end
 
@@ -337,6 +338,7 @@ local function OnClose(inst, doer)
         end
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
     end
+	
 	HideGoops(inst)
 end
 
@@ -386,13 +388,12 @@ local function donecookfn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
-		--[[
 		inst.oven_task = inst:DoPeriodicTask(2, function()
 			inst._steamoven:push()
 			OnOvenSteam(inst)
 		end)
-		]]--
 	end
+	
 	HideGoops(inst)
 	ShowProductImage(inst)
 end
@@ -406,13 +407,12 @@ local function continuedonefn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
-		--[[
 		inst.oven_task = inst:DoPeriodicTask(2, function()
 			inst._steamoven:push()
 			OnOvenSteam(inst)
 		end)
-		]]--
 	end
+	
 	HideGoops(inst)
 	ShowProductImage(inst)
 end
@@ -429,6 +429,7 @@ local function continuecookfn(inst)
 			firepit:AddTag("NOCLICK")
 		end
     end
+	
 	HideGoops(inst)
 end
 
@@ -467,6 +468,7 @@ local function OnSave(inst, data)
     if inst:HasTag("burnt") or (inst.components.burnable ~= nil and inst.components.burnable:IsBurning()) then
         data.burnt = true
     end
+	
 	local firepit = GetFirepit(inst)
 	if firepit and firepit:HasTag("firepit_has_oven") then
 		data.firepit_has_oven = true
@@ -478,6 +480,7 @@ local function OnLoad(inst, data)
         inst.components.burnable.onburnt(inst)
         inst.Light:Enable(false)
     end
+	
 	if data ~= nil and data.firepit_has_oven then
 		ChangeFireFX(inst)
 	end
@@ -633,15 +636,17 @@ local function casserolefn(small)
 		inst:AddTag("oven_casserole")
 	end
 
-	-- inst._steamoven = net_event(inst.GUID, "steamoven")
+	inst._steamoven = net_event(inst.GUID, "steamoven")
 
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		-- inst:ListenForEvent("steamoven", OnOvenSteam)
+		inst:ListenForEvent("steamoven", OnOvenSteam)
+		
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("cooking_pot")
 		end
+		
         return inst
     end
 

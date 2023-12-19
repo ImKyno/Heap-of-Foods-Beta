@@ -175,21 +175,12 @@ local function tree_burnt(inst)
 end
 
 local function OnSave(inst, data)
-	-- data.sapped = inst.sapped
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
         data.burnt = true
 	end
 end
 
 local function OnLoad(inst, data)
-	--[[
-	if inst:HasTag("sapoverflow") then
-		ShowSapStuff(inst)
-	else
-		HideSapStuff(inst)
-	end
-	]]--
-	
 	if data and data.burnt then
 		inst.components.lootdropper:SpawnLootPrefab("charcoal")
 	end

@@ -494,13 +494,11 @@ local function donecookfn(inst)
 		if firepit then
 			firepit:AddTag("NOCLICK")
 		end
-
-		--[[
+		
 		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
 			OnPotSteam(inst)
 		end)
-		]]--
     else
 		inst.AnimState:PlayAnimation("cooking_boil_small", true)
         inst.SoundEmitter:KillSound("snd")
@@ -512,13 +510,12 @@ local function donecookfn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
-		--[[
 		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
 			OnPotSteam(inst)
 		end)
-		]]--
 	end
+	
 	HideGoops(inst)
 	ShowProductImage(inst)
 end
@@ -532,12 +529,10 @@ local function continuedonefn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 		
-		--[[
 		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
 			OnPotSteam(inst)
 		end)
-		]]--
     else
 		inst.AnimState:PlayAnimation("cooking_boil_small", true)
 
@@ -546,13 +541,12 @@ local function continuedonefn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
-		--[[
 		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
 			OnPotSteam(inst)
 		end)
-		]]--
 	end
+	
 	HideGoops(inst)
 	ShowProductImage(inst)
 end
@@ -569,6 +563,7 @@ local function continuecookfn(inst)
 			firepit:AddTag("NOCLICK")
 		end
     end
+	
 	HideGoops(inst)
 end
 
@@ -583,18 +578,17 @@ local function harvestfn(inst, doer)
 		firepit:RemoveTag("NOCLICK")
 	end
 
-	--[[
 	if inst.steam_task then
 		inst.steam_task:Cancel()
 		inst.steam_task = nil
 		-- print("Pot steam is gone!")
 	end
-	]]--
 
 	local bubble = GetBubble(inst)
 	if bubble then
 		bubble:Remove()
 	end
+	
 	HideGoops(inst)
 end
 
@@ -610,6 +604,7 @@ local function OnSave(inst, data)
     if inst:HasTag("burnt") or (inst.components.burnable ~= nil and inst.components.burnable:IsBurning()) then
         data.burnt = true
     end
+	
 	local firepit = GetFirepit(inst)
 	if firepit and firepit:HasTag("firepit_has_pot") then
 		data.firepit_has_pot = true
@@ -621,6 +616,7 @@ local function OnLoad(inst, data)
         inst.components.burnable.onburnt(inst)
         inst.Light:Enable(false)
     end
+	
 	if data ~= nil and data.firepit_has_pot then
 		ChangeFireFX(inst)
 	end
@@ -726,15 +722,17 @@ local function syruppotfn()
 	inst:AddTag("stewer")
 	inst:AddTag("pot_syrup")
 
-	-- inst._steam = net_event(inst.GUID, "steampot")
+	inst._steam = net_event(inst.GUID, "steampot")
 
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		-- inst:ListenForEvent("steampot", OnPotSteam)
+		inst:ListenForEvent("steampot", OnPotSteam)
+		
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("syrup_pot")
 		end
+		
         return inst
     end
 
@@ -828,15 +826,17 @@ local function potfn(small)
 		inst:AddTag("pot_big")
 	end
 
-	-- inst._steam = net_event(inst.GUID, "steampot")
+	inst._steam = net_event(inst.GUID, "steampot")
 
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		-- inst:ListenForEvent("steampot", OnPotSteam)
+		inst:ListenForEvent("steampot", OnPotSteam)
+		
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("cooking_pot")
 		end
+		
         return inst
     end
 
@@ -895,7 +895,8 @@ local function potsmallfn()
     return inst
 end
 
-local pit_defs = {
+local pit_defs = 
+{
 	pit = { { 0, 0, 0 } },
 }
 
@@ -938,15 +939,17 @@ local function elderpotfn()
 	inst:AddTag("pot_syrup")
 	inst:AddTag("pot_elder")
 
-	-- inst._steam = net_event(inst.GUID, "steampot")
+	inst._steam = net_event(inst.GUID, "steampot")
 
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		-- inst:ListenForEvent("steampot", OnPotSteam)
+		inst:ListenForEvent("steampot", OnPotSteam)
+		
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("syrup_pot")
 		end
+		
         return inst
     end
 

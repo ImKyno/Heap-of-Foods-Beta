@@ -183,7 +183,7 @@ AddRecipe2("kyno_oil", {Ingredient("corn", 1), Ingredient("seeds", 1), Ingredien
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("kyno_sugar", {Ingredient("kyno_sugartree_petals", 2, ModAtlas)}, TECH.MEALING_ONE,
+AddRecipe2("kyno_sugar", {Ingredient("kyno_sugarflywings", 2, ModAtlas)}, TECH.MEALING_ONE,
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,		
@@ -513,16 +513,16 @@ AddRecipe2("kyno_saphealer_p", {Ingredient("kyno_sap_spoiled", 3, ModAtlas)}, TE
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("kyno_sugartree_petals_p", {Ingredient("kyno_sugarfly", 1, ModAtlas)}, TECH.LOST,
+AddRecipe2("kyno_sugarfly_p", {Ingredient("kyno_sugartree_petals", 1, ModAtlas)}, TECH.LOST,
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
-		product				= "kyno_sugartree_petals",		
-		numtogive 			= 3, 
+		product				= "kyno_sugarfly",		
+		numtogive 			= 2, 
 		atlas 				= ModAtlas, 
-		image				= "kyno_sugartree_petals.tex",
+		image				= "kyno_sugarfly.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -673,7 +673,7 @@ if WARLY_MEALGRINDER == 1 then
 	{"CRAFTING_STATION"}
 	)
 	
-	AddRecipe2("kyno_sugar_w", {Ingredient("kyno_sugartree_petals", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+	AddRecipe2("kyno_sugar_w", {Ingredient("kyno_sugarflywings", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE,
 		{
 			nounlock 			= true,
 			no_deconstruction   = true,

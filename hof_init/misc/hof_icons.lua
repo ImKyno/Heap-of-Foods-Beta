@@ -458,7 +458,8 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"sugarbombs",
 	"berrybombs",
 	"kyno_crabkingmeat",
-	"kyno_crabmeat_dried"}) do
+	"kyno_crabmeat_dried",
+	"kyno_mysterymeat"}) do
         local foods_name = foods
         AddPrefabPostInit(foods_name, function(inst)
             inst.components.inventoryitem.imagename = foods_name

@@ -119,13 +119,15 @@ end
 local function OnGetItemFromPlayer(inst, giver, item)
 	if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" and not inst:HasTag("pigelder_gifted") then
 		inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/friendship_music/10")
-		inst:DoTaskInTime(1, function() SayThanks(inst) end)
+		
+		inst:DoTaskInTime(1, function() 
+			SayThanks(inst) 
+		end)
+		
 		-- New Recipes available in the shop!
-		-- inst.components.craftingstation:LearnItem("turf_pinkpark_p", "turf_pinkpark_p")
-		-- inst.components.craftingstation:LearnItem("turf_stonecity_p", "turf_stonecity_p")
-		inst.components.craftingstation:LearnItem("dug_kyno_spotbush", "dug_kyno_spotbush_p")
+		inst.components.craftingstation:LearnItem("dug_kyno_spotbush",  "dug_kyno_spotbush_p")
 		inst.components.craftingstation:LearnItem("dug_kyno_wildwheat", "dug_kyno_wildwheat_p")
-		inst.components.craftingstation:LearnItem("kyno_sugartree_petals", "kyno_sugartree_petals_p")
+		inst.components.craftingstation:LearnItem("kyno_sugarfly",      "kyno_sugarfly_p")
 		inst.components.craftingstation:LearnItem("kyno_sugartree_bud", "kyno_sugartree_bud_p")
 
 		inst:AddTag("pigelder_gifted")

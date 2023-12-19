@@ -21,8 +21,6 @@ local assets =
 	Asset("ANIM", "anim/ui_cookpot_1x4.zip"),
 	Asset("ANIM", "anim/quagmire_ui_pot_1x4.zip"),
 
-	-- Asset("ANIM", "anim/kyno_oven_fire.zip"),
-
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 }
@@ -332,12 +330,10 @@ local function donecookfn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
-		--[[
 		inst.smoke_task = inst:DoPeriodicTask(2, function()
 			inst._smoke:push()
 			OnGrillSmoke(inst)
 		end)
-		]]--
 
 		ShowProductImage(inst)
 	end
@@ -352,12 +348,10 @@ local function continuedonefn(inst)
 			firepit:AddTag("NOCLICK")
 		end
 
-		--[[
 		inst.smoke_task = inst:DoPeriodicTask(2, function()
 			inst._smoke:push()
 			OnGrillSmoke(inst)
 		end)
-		]]--
 
 		ShowProductImage(inst)
     end
@@ -384,16 +378,14 @@ local function harvestfn(inst, doer)
     end
 
 	local firepit = GetFirepit(inst)
-		if firepit then
-			firepit:RemoveTag("NOCLICK")
-		end
+	if firepit then
+		firepit:RemoveTag("NOCLICK")
+	end
 
-	--[[
 	if inst.smoke_task then
 		inst.smoke_task:Cancel()
 		inst.smoke_task = nil
 	end
-	]]--
 
 	local bubble = GetBubble(inst)
 	if bubble then
@@ -413,6 +405,7 @@ local function OnSave(inst, data)
     if inst:HasTag("burnt") or (inst.components.burnable ~= nil and inst.components.burnable:IsBurning()) then
         data.burnt = true
     end
+	
 	local firepit = GetFirepit(inst)
 	if firepit and firepit:HasTag("firepit_has_grill") then
 		data.firepit_has_grill = true
@@ -424,6 +417,7 @@ local function OnLoad(inst, data)
         inst.components.burnable.onburnt(inst)
         inst.Light:Enable(false)
     end
+	
 	if data ~= nil and data.firepit_has_grill then
 		ChangeFireFX(inst)
 	end
@@ -470,15 +464,17 @@ local function grillsmallfn()
 	inst:AddTag("stewer")
 	inst:AddTag("grill_small")
 
-	-- inst._smoke = net_event(inst.GUID, "grillsmoke")
+	inst._smoke = net_event(inst.GUID, "grillsmoke")
 
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		-- inst:ListenForEvent("grillsmoke", OnGrillSmoke)
+		inst:ListenForEvent("grillsmoke", OnGrillSmoke)
+		
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("cooking_pot")
 		end
+		
         return inst
     end
 
@@ -551,15 +547,17 @@ local function grillbigfn()
 	inst:AddTag("stewer")
 	inst:AddTag("grill_big")
 
-	-- inst._smoke = net_event(inst.GUID, "grillsmoke")
+	inst._smoke = net_event(inst.GUID, "grillsmoke")
 
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
-		-- inst:ListenForEvent("grillsmoke", OnGrillSmoke)
+		inst:ListenForEvent("grillsmoke", OnGrillSmoke)
+		
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("cooking_pot")
 		end
+		
         return inst
     end
 

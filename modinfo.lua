@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "7.3-A"
+version                     = "7.4-A"
 local myupdate              = "Food Extravaganza"
 
 description                 = 
@@ -15,7 +15,7 @@ This update brings two new structures that can be used to make a whole new categ
 The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jams, Pickles, Mayonnaises, Teas and more!
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
-󰀌 Mod Version: 7.3-A
+󰀌 Mod Version: 7.4-A
 󰀧 Update: Food Extravaganza
 ]]
 
