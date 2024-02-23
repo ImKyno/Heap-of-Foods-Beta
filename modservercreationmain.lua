@@ -7,11 +7,11 @@ FrontEndAssets =
 	Asset("ATLAS", "images/customizationimages/hof_customizationicons.xml"),
 	
     -- Accomplishments Mod.
-    Asset("IMAGE", "images/achievementsimages/hof_achievements_images.tex"),
-    Asset("ATLAS", "images/achievementsimages/hof_achievements_images.xml"),
+    -- Asset("IMAGE", "images/achievementsimages/hof_achievements_images.tex"),
+    -- Asset("ATLAS", "images/achievementsimages/hof_achievements_images.xml"),
 
-    Asset("IMAGE", "images/achievementsimages/hof_achievements_buttons.tex"),
-    Asset("ATLAS", "images/achievementsimages/hof_achievements_buttons.xml"),
+    -- Asset("IMAGE", "images/achievementsimages/hof_achievements_buttons.tex"),
+    -- Asset("ATLAS", "images/achievementsimages/hof_achievements_buttons.xml"),
 }
 
 ReloadFrontEndAssets()

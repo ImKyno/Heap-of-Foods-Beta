@@ -112,6 +112,8 @@ PrefabFiles =
 	"k_meadowisland_mermhut",
 	"k_meadowisland_pond",
 	"k_meadowisland_sandhill",
+	"k_meadowisland_spawners",
+	"k_meadowisland_shop",
 	"k_poison_froglegs",
 	"k_bottlecap",
 }

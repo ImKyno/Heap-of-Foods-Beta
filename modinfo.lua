@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "7.4-A"
+version                     = "7.5-A"
 local myupdate              = "Food Extravaganza"
 
 description                 = 
@@ -15,7 +15,7 @@ This update brings two new structures that can be used to make a whole new categ
 The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jams, Pickles, Mayonnaises, Teas and more!
 They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
 
-󰀌 Mod Version: 7.4-A
+󰀌 Mod Version: 7.5-A
 󰀧 Update: Food Extravaganza
 ]]
 
@@ -371,5 +371,31 @@ configuration_options       =
 			},
         },
         default = 0,
+	},
+	
+	Title("Retrofit Options", "Options for retrofitting old worlds."),
+	{
+		name                = "HOF_RETROFIT",
+		label               = "Retrofit Contents",
+		hover               = "If your world is missing the Mod Contents enable this option.\nThis option will be set as \"Updated\" once the retrofitting is finished!",
+		options             =
+		{
+			{
+				description = "Updated", 
+				hover       = "Your world is already updated with the Mod Contents.",
+				data        = 0
+			},
+            {
+				description = "Retrofit Islands", 
+				hover       = "Mod Islands will be generated during server initialization.",
+				data        = 1
+			},
+			{
+				description = "Retrofit Prefabs", 
+				hover       = "Mod Prefabs will be generated during server initialization.",
+				data        = 2
+			},
+        },
+        default             = 0,
 	},
 }

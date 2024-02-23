@@ -3,15 +3,13 @@ local _G 			= GLOBAL
 local require 		= _G.require
 
 -- Preload Assets. (Before the game load).
---[[
 PreloadAssets =
 {
-	Asset("IMAGE", "images/tipsimages/hof_loadingtips_icon.tex"),
-	Asset("ATLAS", "images/tipsimages/hof_loadingtips_icon.xml"),
+	Asset("IMAGE", "images/hof_loadingtips_icon.tex"),
+	Asset("ATLAS", "images/hof_loadingtips_icon.xml"),
 }
 
-ReloadPreloadAssets() -- Reload it, so our loading assets can work properly.
-]]--
+ReloadPreloadAssets()
 
 -- Assets.
 Assets =
@@ -48,6 +46,9 @@ Assets =
 	Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_parznip.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
+	
+	Asset("IMAGE", "images/hof_loadingtips_icon.tex"), 
+	Asset("ATLAS", "images/hof_loadingtips_icon.xml"),
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),

@@ -12,14 +12,14 @@ local WEIGHT_END    = _G.LOADING_SCREEN_TIP_CATEGORY_WEIGHTS_END
 local HOF_CATEGORY 	= _G.LOADING_SCREEN_TIP_CATEGORIES
 
 -- Our Tips.
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_COFFEE", 			"You can get Coffee Bushes from the Dragonfly.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_COFFEE", 			"You can get Coffee Bushes after defeating the Dragonfly.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WEEDS",  			"You can plant Weeds using their own products, by giving them to a bird first.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WALRY",  			"Warly has exclusive recipes made just by him.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_JELLYBEANS",      "\"It seems that the Lusty Jellybeans makes my body feels super good!\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_INGREDIENTS",   	"There are new ingredients from the base game available to be used in the Crock Pot. Even the strangest of all...")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WX78",          	"\"WX-78 wants to make a dish with Gears. If we have some of them without use, maybe I should help him out.\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_HUMANMEAT",     	"There's a small chance whenever a Player dies, they can drop a suspicious ingredient for cooking...")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_SALT",          	"Salt can be used to restore the spoilage of a prepared food. Not losing that sweet dish again!")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_SALT",          	"Salt can be used to restore the spoilage time of a prepared food. Never losing that sweet dish again!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_OLDMOD",        	"The very first version of Heap Of Foods was called The Foods Pack, it was discontinued due to errors. Later on, it was remade into this brand new mod.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_CARAMELCUBE",   	"Caramel Cube is Kyno's favorite dish.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WHEAT",         	"Wild Wheat can be grinded at the Mealing Stone to produce Flour.")
@@ -27,7 +27,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_FLOUR",         	"You can use Flour to make a 
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WORMWOOD",      	"\"Wormwood said he made a dish out of... and Salt. I'm not going to eat that, Mon dieu!\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_PIGKING",       	"Pig King trades a variety of new items. For Example Grass Tufts for Wild Wheat Tufts, and Berry Bushes for Spotty Shurbs.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SERENITYISLAND",	"\"I'm certain that I saw a piece of pink-ish land in the ocean! Perhaps my compatriots will join me in a search for it...\" -W")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_PIGELDER", 		 "The Pig Elder trades a variety of exclusive items in exchange for foods.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_PIGELDER", 		"The Pig Elder trades a variety of exclusive items in exchange for foods.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_CRABTRAP", 		"\"Those rock crabs seems to avoid all of my traps! Maybe some kind of special trap can work, instead?\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SAPTREE",			"You can Tap Sugarwood Trees using the Tree Tapping Kit, to make them produce a sweet Sap every Three days.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_RUINEDSAPTREE",	"Careful, Tapped Sugarwood Trees that's overflowing with Sap, and not harvested can spoil. Producing Ruined Sap instead!")
@@ -81,4 +81,4 @@ SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 
 SetLoadingTipCategoryWeights(WEIGHT_END,   {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})
 
 -- Custom Icons for Loading Tips.
--- SetLoadingTipCategoryIcon("OTHER", "images/tipsimages/hof_loadingtips_icon.xml", "hof_loadingtips_icon.tex")
+SetLoadingTipCategoryIcon("OTHER", "images/hof_loadingtips_icon.xml", "hof_loadingtips_icon.tex")

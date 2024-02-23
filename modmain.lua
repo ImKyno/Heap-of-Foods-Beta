@@ -32,6 +32,7 @@ local hof_init_world =
 	-- "hof_customize",
 	"hof_regrowth",
 	"hof_retrofit",
+	"hof_retrofit_component",
 	"hof_worldgen",
 	"hof_postinits_world",
 	"hof_postinits_mobs",

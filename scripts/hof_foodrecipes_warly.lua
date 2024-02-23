@@ -320,7 +320,7 @@ local kyno_warly_foods =
 for k, recipe in pairs(kyno_warly_foods) do
 	recipe.name = k
 	recipe.weight = 1
-	recipe.cookbook_category = "portablecookpot"
+	-- recipe.cookbook_category = "portablecookpot"
 	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages.xml"
 	recipe.cookbook_tex = k..".tex"
 end

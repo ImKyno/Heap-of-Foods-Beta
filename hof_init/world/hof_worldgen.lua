@@ -2,6 +2,8 @@
 local _G 			       = GLOBAL
 local require 		       = _G.require
 local GROUND 		       = _G.GROUND
+local min                  = 1
+local max                  = 3
 
 require("map/terrain")
 modimport("hof_init/misc/hof_tuning")
@@ -364,19 +366,33 @@ for k, v in pairs(AspargosCaveRooms) do
 end
 _G.terrain.filter.kyno_aspargos_cave							= TERRAIN_FILTERS
 
--- Add the Serenity Archipelago to the world. Not using this, because the CC thingie doesn't work properly!!
 AddTaskSetPreInitAny(function(tasksetdata)
     if tasksetdata.location ~= "forest" then
         return
     end
+	
+	if not tasksetdata.ocean_prefill_setpieces then 
+		tasksetdata.ocean_prefill_setpieces = {}
+	end
     
 	tasksetdata.ocean_prefill_setpieces["hof_serenityisland1"]           = { count = 1 }
 	tasksetdata.ocean_prefill_setpieces["hof_meadowisland1"]             = { count = 1 }
 	
-	-- I will let the players decide how many they want. -- Deprecated.
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates"]      = { count = 2 } -- OCEANSETPIECE_COUNT
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates2"]     = { count = 2 }
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_waterycress"] = { count = 2 }
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_taroroot"]    = { count = 2 }
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_seaweeds"]    = { count = 2 }
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates"]      = { count = math.random(min, max) } -- OCEANSETPIECE_COUNT
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates2"]     = { count = math.random(min, max) }
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_waterycress"] = { count = math.random(min, max) }
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_taroroot"]    = { count = math.random(min, max) }
+	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_seaweeds"]    = { count = math.random(min, max) }
+end)
+
+-- Make our setpieces a must for when generating the world.
+AddLevelPreInit("forest", function(level)
+    level.required_setpieces = level.required_setpieces or {}
+	
+    table.insert(level.required_setpieces, "hof_serenityisland1")
+	table.insert(level.required_setpieces, "hof_meadowisland1")
+	table.insert(level.required_setpieces, "hof_oceansetpiece_crates")
+	table.insert(level.required_setpieces, "hof_oceansetpiece_waterycress")
+	table.insert(level.required_setpieces, "hof_oceansetpiece_taroroot")
+	table.insert(level.required_setpieces, "hof_oceansetpiece_seaweeds")
 end)

@@ -1,7 +1,7 @@
 local assets =
 {
     Asset("ANIM", "anim/kyno_meadowisland_mermhut.zip"),
-	-- Asset("ANIM", "anim/merm_fisherman_house.zip"),
+	Asset("ANIM", "anim/kyno_meadowisland_fishermermhut.zip"),
 	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
@@ -156,7 +156,7 @@ local function fn()
     inst.AnimState:PlayAnimation("idle", true)  
 
 	inst:AddTag("structure")
-    inst:AddTag("mermhouse")
+    inst:AddTag("mermhouse_seaside")
 	
 	inst.entity:SetPristine()
 
@@ -204,4 +204,73 @@ local function fn()
 	return inst
 end
 
-return Prefab("kyno_meadowisland_mermhut", fn, assets, prefabs)
+local function fishfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+	
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("kyno_meadowisland_mermhut.tex")
+	
+	MakeObstaclePhysics(inst, 1)
+
+	inst.AnimState:SetBank("kyno_meadowisland_fishermermhut")
+    inst.AnimState:SetBuild("kyno_meadowisland_fishermermhut")
+    inst.AnimState:PlayAnimation("idle", true)  
+
+	inst:AddTag("structure")
+    inst:AddTag("mermhouse")
+	
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("lootdropper")
+	inst:AddComponent("inspectable")
+
+	inst:AddComponent("workable")
+	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
+	inst.components.workable:SetOnFinishCallback(OnHammered)
+	inst.components.workable:SetOnWorkCallback(OnHit)
+	inst.components.workable:SetWorkLeft(4)
+
+	--[[
+	inst:AddComponent("childspawner")
+	inst.components.childspawner.childname = "kyno_meadowisland_fishermerm"
+	inst.components.childspawner:SetSpawnedFn(OnSpawned)
+	inst.components.childspawner:SetGoHomeFn(OnGoHome)
+	inst.components.childspawner:SetRegenPeriod(TUNING.TOTAL_DAY_TIME * 4)
+    inst.components.childspawner:SetSpawnPeriod(10)
+    inst.components.childspawner:SetMaxChildren(3)
+    inst.components.childspawner:SetMaxEmergencyChildren(2)
+	inst.components.childspawner.emergencychildname = "merm"
+	inst.components.childspawner:SetEmergencyRadius(TUNING.MERMHOUSE_EMERGENCY_RADIUS)
+	]]--
+
+	inst:AddComponent("hauntable")
+	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_SMALL)
+	-- inst.components.hauntable:SetOnHauntFn(OnHaunt)
+	
+	-- inst:WatchWorldState("isday", OnIsDay)
+	-- StartSpawning(inst)
+
+	-- MakeMediumBurnable(inst, nil, nil, true)
+	-- MakeLargePropagator(inst)
+	
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
+	
+	-- inst:ListenForEvent("onignite", OnIgnite)
+	-- inst:ListenForEvent("burntup", OnBurnt)
+	inst:ListenForEvent("onbuilt", OnBuilt)
+	
+	return inst
+end
+
+return Prefab("kyno_meadowisland_mermhut", fn, assets, prefabs),
+Prefab("kyno_meadowisland_fishermermhut", fishfn, assets, prefabs)

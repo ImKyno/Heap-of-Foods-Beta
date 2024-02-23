@@ -21,6 +21,12 @@ for k, data in pairs(list) do
             spicedfoods[k] = data
         end
     end
+	
+	for name, v in pairs(foods_festive) do
+		if data.basename == name then
+			spicedfoods[k] = data
+		end
+	end
 end
 
 return spicedfoods

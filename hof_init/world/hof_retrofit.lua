@@ -1,18 +1,31 @@
-local oldretrofit = require("map/retrofit_savedata").DoRetrofitting
+local _G                = GLOBAL
+local OldDoRetrofitting = require("map/retrofit_savedata").DoRetrofitting
 
 require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, ...)
+	local dirty = false
 
 	if GetModConfigData("HOF_RETROFIT") == 1 and savedata.map ~= nil and savedata.map.prefab == "forest" then
-		print("Retrofitting for Heap of Foods Mod - Generating the Serenity Archipelago")
-		require("map/hof_retrofit_serenityisland").HofRetrofitting_SerenityIsland(_G.TheWorld.Map, savedata)
+		if savedata.ents ~= nil and savedata.ents.kyno_serenityisland_shop ~= nil then
+			print("Retrofitting for Heap of Foods Mod - It seems the Serenity Archipelago already exists.")
+		else
+			print("Retrofitting for Heap of Foods Mod - Generating the Serenity Archipelago.")
+			require("map/hof_retrofit_islands").HofRetrofitting_SerenityIsland(_G.TheWorld.Map, savedata)
+		end
+		
+		if savedata.ents ~= nil and savedata.ents.kyno_meadowisland_pond ~= nil then
+			print("Retrofitting for Heap of Foods Mod - It seems the Seaside Island already exists.")
+		else
+			print("Retrofitting for Heap of Foods Mod - Generating the Seaside Island.")
+			require("map/hof_retrofit_islands").HofRetrofitting_MeadowIsland(_G.TheWorld.Map, savedata)
+		end
+		
 		dirty = true
 	end
 	
-	if GetModConfigData("HOF_RETROFIT") == 2 and savedata.map ~= nil and savedata.map.prefab == "forest" then
-		print("Retrofitting for Heap of Foods Mod - Generating the Seaside Island")
-		require("map/hof_retrofit_meadowisland").HofRetrofitting_MeadowIsland(_G.TheWorld.Map, savedata)
-		dirty = true
+	if dirty then
+		savedata.map.tiles = world_map:GetStringEncode()
+		savedata.map.nodeidtilemap = world_map:GetNodeIdTileMapStringEncode()
 	end
 		
-	return oldretrofit(savedata, world_map, ...)
+	OldDoRetrofitting(savedata, world_map, ...)
 end

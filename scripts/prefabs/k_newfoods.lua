@@ -13,8 +13,10 @@ local prefabs =
 local function MakePreparedFood(data)
 	local foodname = data.basename or data.name
 	local foodassets = assets
+	
 	table.insert(foodassets, Asset("ANIM", "anim/"..foodname..".zip"))
 	local spicename = data.spice ~= nil and string.lower(data.spice) or nil
+	
 	if spicename ~= nil then
 		foodassets = shallowcopy(assets)
 		table.insert(foodassets, Asset("ANIM", "anim/spices.zip"))
@@ -35,18 +37,20 @@ local function MakePreparedFood(data)
 
 		MakeInventoryPhysics(inst)
 
-		inst.AnimState:SetScale(1.1, 1.1, 1.1) -- For foods on ground.
+		inst.AnimState:SetScale(1.1, 1.1, 1.1)
 
 		local food_symbol_build = nil
+		
 		if spicename ~= nil then
 			inst.AnimState:SetBuild("plate_food")
 			inst.AnimState:SetBank("plate_food")
+			inst.AnimState:PlayAnimation("idle")
 			inst.AnimState:OverrideSymbol("swap_garnish", "spices", spicename)
 
 			inst:AddTag("spicedfood")
 
-			inst.drawnameoverride = STRINGS.NAMES[string.upper(data.basename)]
-			inst.inv_image_bg = { atlas = "images/inventoryimages/hof_inventoryimages.xml", image = foodname..".tex" }
+			inst.inv_image_bg = { image = (data.basename or data.name)..".tex" }
+            inst.inv_image_bg.atlas = GetInventoryItemAtlas(inst.inv_image_bg.image)
 		else
 			inst.AnimState:SetBank(data.name)
 			inst.AnimState:SetBuild(data.name)

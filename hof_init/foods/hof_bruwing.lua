@@ -76,29 +76,15 @@ AddBrewingValues({"kyno_oil"},                  {oil        = 1})
 AddBrewingValues({"kyno_salt"},                 {salt       = 1})
 AddBrewingValues({"kyno_sugar"},                {sweetener  = 1,   sugar         = 1})
 
--- Import The Beverages.
-for k, v in pairs(require("hof_brewrecipes_keg")) do
-	AddBrewerRecipe("kyno_woodenkeg", 			v)
-	
-	if v.card_def then
-		AddBrewerCard("kyno_woodenkeg",         v)
-	end
-end
+-- Import the Beverages.
+local brewers      = {"kyno_woodenkeg", "kyno_preservesjar"}
 
-for k, v in pairs(require("hof_brewrecipes_jar")) do
-	AddBrewerRecipe("kyno_preservesjar", 		v)
-	
-	if v.card_def then
-		AddBrewerCard("kyno_preservesjar",      v)
-	end
-end
+local jar_recipes  = require("hof_brewrecipes_jar")
+local keg_recipes  = require("hof_brewrecipes_keg")
+local recipe_cards = require("hof_brewing").recipe_cards
 
---[[
-for k, v in pairs(require("hof_brewrecipes_warly")) do
-	AddBrewerRecipe("kyno_portablebrewer", 		v)
-	
-	if v.card_def then
-		AddBrewerCard("kyno_portablebrewer",    v)
-	end
-end
-]]--
+for _, brewer in pairs(brewers)     do for _, recipe in pairs(jar_recipes) do AddBrewerRecipe(brewer, recipe) end end
+for _, brewer in pairs(brewers)     do for _, recipe in pairs(keg_recipes) do AddBrewerRecipe(brewer, recipe) end end
+
+for _, recipe in pairs(jar_recipes) do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_preservesjar"}) end end
+for _, recipe in pairs(keg_recipes) do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_woodenkeg"}) end end
