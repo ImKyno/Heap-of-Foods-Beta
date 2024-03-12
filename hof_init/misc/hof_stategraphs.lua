@@ -104,6 +104,24 @@ AddStategraphState("wilson_client",
 	}
 )
 
+AddStategraphPostInit("wilson", function(self)
+    local _givehandler = self.actionhandlers[ACTIONS.GIVE].deststate
+
+    self.actionhandlers[ACTIONS.GIVE].deststate = function(inst, action, ...)
+        local target = action.target or action.invobject
+        
+        if target and target:HasTags({"trader", "elderpot_rubble"}) then
+            return "dolongaction"
+        end
+		
+		if target and target:HasTags({"trader", "serenity_installable"}) then
+			return "domediumaction"
+		end
+
+        return _givehandler(inst, action, ...)
+    end
+end)
+
 -- Brewbook Action Stategraph.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)
 	-- return (action.invobject ~= nil and action.invobject.components.brewbook ~= nil and "brewbook_open")
@@ -157,6 +175,7 @@ end))
 -- Quick open Canned Items.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.UNWRAP, function(inst, action)
 	local target = action.target or action.invobject
+	
 	if target.components.unwrappable and target:HasTag("canned_food") then
 		return "doshortaction"
 	else

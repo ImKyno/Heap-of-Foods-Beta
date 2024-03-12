@@ -125,10 +125,10 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		end)
 		
 		-- New Recipes available in the shop!
-		inst.components.craftingstation:LearnItem("dug_kyno_spotbush",  "dug_kyno_spotbush_p")
-		inst.components.craftingstation:LearnItem("dug_kyno_wildwheat", "dug_kyno_wildwheat_p")
-		inst.components.craftingstation:LearnItem("kyno_sugarfly",      "kyno_sugarfly_p")
-		inst.components.craftingstation:LearnItem("kyno_sugartree_bud", "kyno_sugartree_bud_p")
+		inst.components.craftingstation:LearnItem("dug_kyno_spotbush",     "dug_kyno_spotbush_p")
+		inst.components.craftingstation:LearnItem("dug_kyno_wildwheat",    "dug_kyno_wildwheat_p")
+		inst.components.craftingstation:LearnItem("kyno_sugartree_petals", "kyno_sugartree_petals_p")
+		inst.components.craftingstation:LearnItem("kyno_sugartree_bud",    "kyno_sugartree_bud_p")
 
 		inst:AddTag("pigelder_gifted")
 		inst.foodgift = true

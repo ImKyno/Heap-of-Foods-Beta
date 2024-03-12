@@ -114,7 +114,8 @@ local cookpots         =
 							"kyno_cookware_small_grill",
 							"kyno_cookware_grill",
 							"kyno_cookware_oven_small_casserole",
-							"kyno_cookware_oven_casserole"
+							"kyno_cookware_oven_casserole",
+							"kyno_cookware_elder",
 						}
 
 
