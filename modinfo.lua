@@ -9,14 +9,13 @@ description                 =
 󰀠 Also features brand new Biomes somewhere in the Ocean!
 󰀦 Complete Recipe Sheet on the Mod Page!
 
-󰀏 Featuring the Artisan Goods Update
-This update brings two new structures that can be used to make a whole new category of recipes!
+󰀏 Featuring the Bountiful Harvest Update
+This series of updates are focused on revamping the visuals of the farming crops as well as adding new ones!
 
-The Wooden Keg and the Preserves Jar, use them to brew Wines, Juices, Jams, Pickles, Mayonnaises, Teas and more!
-They take longer to produce a product, but are totally worth your time! Some of them comes with unique abilities.
+The survivors have managed to find a new type of seed out in the wild! And far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover its flavors...
 
 󰀌 Mod Version: 7.9-A
-󰀧 Update: Food Extravaganza
+󰀧 Update: Bountiful Harvest (Part I)
 ]]
 
 author                      = "Kyno"

@@ -7,7 +7,7 @@ local assets =
 	Asset("ANIM", "anim/quagmire_crab_trap.zip"),
 	Asset("ANIM", "anim/quagmire_slaughtertool.zip"),
 	
-	Asset("ANIM", "anim/hammer.zip"),
+	Asset("ANIM", "anim/kyno_repairkit.zip"),
 	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
@@ -40,10 +40,12 @@ end
 
 local function GetSlaughterActionString(inst, target)
     local t = GetTime()
+	
     if target ~= inst._lasttarget or inst._lastactionstr == nil or inst._actionresettime < t then
         inst._lastactionstr = GetRandomItem(STRINGS.ACTIONS.SLAUGHTER2)
         inst._lasttarget = target
     end
+	
     inst._actionresettime = t + .1
     return inst._lastactionstr
 end
@@ -236,8 +238,8 @@ local function repairtoolfn()
     MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-    inst.AnimState:SetBank("hammer")
-    inst.AnimState:SetBuild("swap_hammer")
+    inst.AnimState:SetBank("kyno_repairkit")
+    inst.AnimState:SetBuild("kyno_repairkit")
     inst.AnimState:PlayAnimation("idle")
 
     inst:AddTag("irreplaceable")
@@ -251,13 +253,10 @@ local function repairtoolfn()
     end
 	
 	inst:AddComponent("tradable")
-
     inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "HAMMER"
 	
     inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "hammer"
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 
     inst:ListenForEvent("floater_startfloating", function(inst) inst.AnimState:PlayAnimation("idle") end)
     inst:ListenForEvent("floater_stopfloating", function(inst) inst.AnimState:PlayAnimation("idle") end)

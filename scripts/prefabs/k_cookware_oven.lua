@@ -533,7 +533,7 @@ local function ovenfn()
 	-- inst.back.AnimState:PlayAnimation("place")
 	inst.back.AnimState:PushAnimation("idle")
 	inst.back.entity:SetParent(inst.entity)
-	inst.back.AnimState:SetFinalOffset(1)
+	inst.back.AnimState:SetFinalOffset(-1)
 
 	inst:AddComponent("inspectable")
 
@@ -654,7 +654,7 @@ local function casserolefn(small)
 	inst.back.AnimState:PlayAnimation("place")
 	inst.back.AnimState:PushAnimation("idle")
 	inst.back.entity:SetParent(inst.entity)
-	inst.back.AnimState:SetFinalOffset(1)
+	inst.back.AnimState:SetFinalOffset(-1)
 
 	inst:AddComponent("stewer")
 	inst.components.stewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT

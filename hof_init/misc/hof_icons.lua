@@ -191,6 +191,12 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"kyno_turnip_seeds",
 	"kyno_turnip_oversized",
 	"kyno_turnip_oversized_waxed",
+	"kyno_rice",
+	"kyno_rice_cooked",
+	"kyno_rice_seeds",
+	"kyno_rice_oversized",
+	"kyno_rice_oversized_waxed",
+	"kyno_rice_oversized_rotten",
 	"festive_berrysauce",
 	"festive_bibingka",
 	"festive_cabbagerolls",
@@ -460,7 +466,8 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"kyno_crabkingmeat",
 	"kyno_crabmeat_dried",
 	"kyno_mysterymeat",
-	"kyno_saphealer"}) do
+	"kyno_saphealer",
+	"kyno_repairtool"}) do
         local foods_name = foods
         AddPrefabPostInit(foods_name, function(inst)
             inst.components.inventoryitem.imagename = foods_name
@@ -523,6 +530,8 @@ local ingredient_icons =
 	"kyno_parznip_eaten.tex",
 	"kyno_turnip.tex",
 	"kyno_turnip_cooked.tex",
+	"kyno_rice.tex",
+	"kyno_rice_cooked.tex",
 	"kyno_banana.tex",
 	"kyno_banana_cooked.tex",
 	"kyno_kokonut.tex",

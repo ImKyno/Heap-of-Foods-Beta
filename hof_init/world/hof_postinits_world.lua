@@ -514,18 +514,20 @@ local function FirePitCookwarePostinit(inst)
     end
 
     local function ChangeGrillFireFX(inst)
-    local firepit = GetFirepit(inst)
+		local firepit = GetFirepit(inst)
         if firepit then
             firepit:AddTag("firepit_has_grill")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+			firepit.hasgrill = true
         end
     end
 
     local function ChangeOvenFireFX(inst)
-    local firepit = GetFirepit(inst)
+		local firepit = GetFirepit(inst)
         if firepit then
             firepit:AddTag("firepit_has_oven")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+			firepit.hasoven = true
         end
     end
 
@@ -566,6 +568,34 @@ local function FirePitCookwarePostinit(inst)
             ChangeOvenFireFX(inst) -- Yeah, the same.
         end
     end
+	
+	local function OnSave(inst, data)
+		local firepit = GetFirepit(inst)
+		
+		data.queued_charcoal = inst.queued_charcoal or nil
+		data.hasgrill = firepit.hasgrill or nil
+		data.hasoven = firepit.hasoven or nil
+	end
+
+	local function OnLoad(inst, data)
+		local firepit = GetFirepit(inst)
+	
+		if data ~= nil and data.queued_charcoal then
+			inst.queued_charcoal = true
+		end
+		
+		if data ~= nil and data.hasgrill then
+			firepit:AddTag("firepit_has_grill")
+            firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+			firepit.hasgrill = true
+		end
+		
+		if data ~= nil and data.hasoven then
+			firepit:AddTag("firepit_has_oven")
+            firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+			firepit.hasoven = true
+		end
+	end
 
     inst:AddTag("serenity_installable")
 
@@ -584,6 +614,9 @@ local function FirePitCookwarePostinit(inst)
     inst:AddComponent("trader")
     inst.components.trader:SetAcceptTest(TestItem)
     inst.components.trader.onaccept = OnGetItemFromPlayer
+	
+	inst.OnSave = OnSave
+    inst.OnLoad = OnLoad
 end
 
 AddPrefabPostInit("firepit", FirePitCookwarePostinit)
