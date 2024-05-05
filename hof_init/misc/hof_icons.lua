@@ -196,7 +196,6 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"kyno_rice_seeds",
 	"kyno_rice_oversized",
 	"kyno_rice_oversized_waxed",
-	"kyno_rice_oversized_rotten",
 	"festive_berrysauce",
 	"festive_bibingka",
 	"festive_cabbagerolls",

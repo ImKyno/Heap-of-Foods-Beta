@@ -101,6 +101,7 @@ AddIngredientValues({"chocolate_white"},        {sweetener  = 2,   chocolate  = 
 AddIngredientValues({"littlebread"}, 			{bread      = 1})
 AddIngredientValues({"kyno_sugar"},             {sweetener  = 1,   sugar      = 1})
 AddIngredientValues({"kyno_wheat"},             {seeds      = 1},                            true)
+AddIngredientValues({"kyno_rice"},              {veggie     = 0.5, seeds      = 0.5},        true)
 
 -- Import the Foods.
 local cookpots         = 
