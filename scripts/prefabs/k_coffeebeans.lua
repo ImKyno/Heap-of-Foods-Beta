@@ -1,19 +1,19 @@
 local assets =
 {
 	Asset("ANIM", "anim/coffeebeans.zip"),
-	
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
-local prefabs = 
+local prefabs =
 {
 	"kyno_coffeebeans_cooked",
 	"spoiled_food",
 }
 
-local HOF_COFFEESPEED = GetModConfigData("HOF_COFFEESPEED", KnownModIndex:GetModActualName("Heap of Foods"))
+local HOF_COFFEESPEED = GetModConfigData("HOF_COFFEESPEED", KnownModIndex:GetModActualName("Heap of Foods (Beta)"))
 
 local function OnEatBeans(inst, eater)
     if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
@@ -51,7 +51,7 @@ local function fn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
@@ -97,7 +97,7 @@ local function fn_cooked()
 	inst.AnimState:SetBank("coffeebeans")
 	inst.AnimState:SetBuild("coffeebeans")
 	inst.AnimState:PlayAnimation("cooked")
-	
+
 	inst:AddTag("veggie")
 
 	inst.entity:SetPristine()
@@ -105,7 +105,7 @@ local function fn_cooked()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
@@ -118,12 +118,12 @@ local function fn_cooked()
 	if HOF_COFFEESPEED == 1 then
 		inst.components.edible:SetOnEatenFn(OnEatBeans)
 	end
-	
+
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
-	
+
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 

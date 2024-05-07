@@ -2389,6 +2389,38 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"berries", 3}, {"twigs", 1}}},
 	},
+	
+	onigiris =
+	{
+		test = function(cooker, names, tags) return ((names.kyno_rice or 0) + (names.kyno_rice_cooked or 0) >= 2) and names.kyno_spotspice and tags.algae end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 8,
+		hunger = 20,
+		sanity = 8,
+		cooktime = 1.1,
+		stacksize = 2,
+		potlevel = "high",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_rice", 2}, {"kyno_seaweeds", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	omurice =
+	{
+		test = function(cooker, names, tags) return tags.egg and ((names.kyno_rice or 0) + (names.kyno_rice_cooked or 0) >= 2) 
+		and (names.tomato or names.tomato_cooked) end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = 30,
+		hunger = 32.5,
+		sanity = 10,
+		cooktime = 1.5,
+		potlevel = "high",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_rice", 2}, {"egg", 1}, {"tomato", 1}}},
+	},
 }
 
 for k, recipe in pairs(kyno_foods) do

@@ -75,6 +75,7 @@ AddBrewingValues({"kyno_piko_orange"},          {piko       = 1})
 AddBrewingValues({"kyno_oil"},                  {oil        = 1})
 AddBrewingValues({"kyno_salt"},                 {salt       = 1})
 AddBrewingValues({"kyno_sugar"},                {sweetener  = 1,   sugar         = 1})
+AddBrewingValues({"kyno_rice"},                 {veggie     = 1})
 
 -- Import the Beverages.
 local brewers      = {"kyno_woodenkeg", "kyno_preservesjar"}

@@ -626,6 +626,20 @@ local kyno_foods_jar =
 		card_def = {ingredients = {{"kyno_fennel", 2}, {"kyno_spotspice", 1}}},
 	},
 	
+	pickles_rice =
+	{
+		test = function(brewer, names, tags) return names.kyno_rice and (names.kyno_rice == 2) and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 20,
+		hunger = 62.5,
+		sanity = 10,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_rice", 2}, {"kyno_spotspice", 1}}},
+	},
+	
 	mayonnaise = 
 	{
 		test = function(brewer, names, tags) return tags.egg and names.kyno_oil and names.kyno_salt

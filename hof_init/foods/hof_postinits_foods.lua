@@ -458,6 +458,7 @@ local pickles_foods =
     "pickles_parznip",
     "pickles_turnip",
     "pickles_fennel",
+	"pickles_rice",
 }
 
 local wine_foods =

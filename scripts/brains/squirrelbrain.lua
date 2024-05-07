@@ -6,41 +6,48 @@ require("behaviours/chaseandattack")
 
 local STOP_RUN_DIST        = 10
 local SEE_PLAYER_DIST      = 5
+
 local AVOID_PLAYER_DIST    = 3
 local AVOID_PLAYER_STOP    = 6
+
 local SEE_BAIT_DIST        = 20
 local SEE_FOOD_DIST        = 10
 local MAX_WANDER_DIST      = 20
 local SEE_STOLEN_ITEM_DIST = 10
+
 local MAX_CHASE_TIME       = 8
 
 local function GoHomeAction(inst)
     if inst.components.homeseeker and
-       inst.components.homeseeker:HasHome() and not
-	   inst.sg:HasStateTag("trapped") then
-        return BufferedAction(inst, inst.components.homeseeker.home, ACTIONS.GOHOME)
+    inst.components.homeseeker:HasHome() then
+        if inst.components.homeseeker.home:HasTag("stump") or
+        inst.components.homeseeker.home:HasTag("burnt") or
+        inst.components.homeseeker.home:HasTag("fire") then
+            inst.components.homeseeker.home:RemoveComponent("spawner")
+            inst:RemoveComponent("homeseeker")
+            return
+        end
+        
+        if not inst.sg:HasStateTag("trapped") then
+            return BufferedAction(inst, inst.components.homeseeker.home, ACTIONS.GOHOME)
+        end
     end
 end
 
 local function EatFoodAction(inst)
-    local target = FindEntity(inst, SEE_FOOD_DIST, function(item, i)
-		return i.components.eater:CanEat(item) and
-		item.components.edible and
-		not (item.components.inventoryitem and item.components.inventoryitem:IsHeld()) and
-		item:IsOnPassablePoint() and
-		item:GetCurrentPlatform() == i:GetCurrentPlatform()
+    local target = FindEntity(inst, SEE_BAIT_DIST, function(item)
+		return inst.components.eater:CanEat(item) and item.components.bait and not item:HasTag("planted") and not (item.components.inventoryitem and
+		item.components.inventoryitem:IsHeld())
 	end)
 		
     if target then
         local act = BufferedAction(inst, target, ACTIONS.EAT)
-        act.validfn = function() return not (target.components.inventoryitem and target.components.inventoryitem:IsHeld()) end
+        act.validfn = function() 
+			return not (target.components.inventoryitem and target.components.inventoryitem:IsHeld()) 
+		end
+		
         return act
     end
-	
-	if target then
-		local action = BufferedAction(inst, target, ACTIONS.PICKUP)
-		return action 
-	end
 end
 
 local function PickupAction(inst)
@@ -54,10 +61,10 @@ local function PickupAction(inst)
                     item.components.inventoryitem and
                     not item.components.inventoryitem:IsHeld() and
                     item.components.inventoryitem.canbepickedup and
+                    item.components.container == nil and
                     item:IsOnValidGround() and
                     not item:HasTag("trap") and 
-					not item:HasTag("nonpotatable") and
-					not item:HasTag("irreplaceable")
+                    not item:HasTag("irreplaceable")
                 return isValidPickupItem
             end)
 
@@ -80,6 +87,8 @@ local function FindHome(inst)
 
     if home then
         if not home.components.spawner then
+			home:AddComponent("spawner")
+            home.setupspawner(home)
             home.components.spawner:CancelSpawning()
             home.components.spawner:TakeOwnership(inst)
             inst.findhometask:Cancel()

@@ -34,12 +34,19 @@ local function oversized_calcweightcoefficient(name)
     end
 end
 
+--[[
 local function oversized_onequip(inst, owner)
     if PLANT_DEFS[inst._base_name].build ~= nil then
         owner.AnimState:OverrideSymbol("swap_body", PLANT_DEFS[inst._base_name].build, "swap_body")
     else
         owner.AnimState:OverrideSymbol("swap_body", "farm_plant_" .. inst._base_name, "swap_body")
     end
+end
+]]--
+
+local function oversized_onequip(inst, owner)
+	local swap = inst.components.symbolswapdata
+    owner.AnimState:OverrideSymbol("swap_body", swap.build, swap.symbol)
 end
 
 local function oversized_onunequip(inst, owner)
@@ -157,6 +164,8 @@ local function MakeVeggie(name)
         inst.AnimState:SetBuild("kyno_veggies")
         inst.AnimState:PlayAnimation(name .. "_seeds")
         inst.AnimState:SetRayTestOnBB(true)
+		
+		inst.pickupsound = "vegetation_firm"
 
         inst:AddTag("cookable")
         inst:AddTag("deployedplant")
@@ -233,6 +242,8 @@ local function MakeVeggie(name)
         inst.AnimState:SetBank("kyno_veggies")
         inst.AnimState:SetBuild("kyno_veggies")
         inst.AnimState:PlayAnimation(name)
+		
+		inst.pickupsound = "vegetation_firm"
 		
 		inst:AddTag("cookable")
 		inst:AddTag("saltbox_valid")
@@ -352,7 +363,9 @@ local function MakeVeggie(name)
 
         inst:AddTag("heavy")
         inst:AddTag("waxable")
-        inst:AddTag("show_spoilage")
+        inst:AddTag("oversized_veggie")
+	    inst:AddTag("show_spoilage")
+        inst.gymweight = 4
 
         MakeHeavyObstaclePhysics(inst, OVERSIZED_PHYSICS_RADIUS)
         inst:SetPhysicsRadiusOverride(OVERSIZED_PHYSICS_RADIUS)
@@ -369,7 +382,6 @@ local function MakeVeggie(name)
 
         inst:AddComponent("heavyobstaclephysics")
         inst.components.heavyobstaclephysics:SetRadius(OVERSIZED_PHYSICS_RADIUS)
-        inst.components.heavyobstaclephysics:MakeSmallObstacle()
 
         inst:AddComponent("perishable")
         inst.components.perishable:SetPerishTime(KYNO_VEGGIES[name].perishtime * OVERSIZED_PERISHTIME_MULT)
@@ -438,6 +450,8 @@ local function MakeVeggie(name)
         inst.AnimState:PlayAnimation("idle_oversized")
 
         inst:AddTag("heavy")
+		inst:AddTag("oversized_veggie")
+		inst.gymweight = 4
 
         inst.displayadjectivefn = displayadjectivefn
         inst:SetPrefabNameOverride(name .. "_oversized")
@@ -455,7 +469,6 @@ local function MakeVeggie(name)
 
         inst:AddComponent("heavyobstaclephysics")
         inst.components.heavyobstaclephysics:SetRadius(OVERSIZED_PHYSICS_RADIUS)
-        inst.components.heavyobstaclephysics:MakeSmallObstacle()
 
         inst:AddComponent("inspectable")
         inst:AddComponent("inventoryitem")
@@ -504,7 +517,8 @@ local function MakeVeggie(name)
         inst.entity:AddAnimState()
         inst.entity:AddNetwork()
 
-        MakeObstaclePhysics(inst, OVERSIZED_PHYSICS_RADIUS)
+        MakeHeavyObstaclePhysics(inst, OVERSIZED_PHYSICS_RADIUS)
+        inst:SetPhysicsRadiusOverride(OVERSIZED_PHYSICS_RADIUS)
 
         local plant_def = PLANT_DEFS[name]
 
@@ -512,9 +526,12 @@ local function MakeVeggie(name)
         inst.AnimState:SetBuild(plant_def.build)
         inst.AnimState:PlayAnimation("idle_rot_oversized")
 
+        inst:AddTag("heavy")
         inst:AddTag("farm_plant_killjoy")
         inst:AddTag("pickable_harvest_str")
-        inst:AddTag("pickable")
+		inst:AddTag("pickable")
+        inst:AddTag("oversized_veggie")
+        inst.gymweight = 3
 
         inst._base_name = name
 
@@ -523,6 +540,9 @@ local function MakeVeggie(name)
         if not TheWorld.ismastersim then
             return inst
         end
+		
+		inst:AddComponent("heavyobstaclephysics")
+        inst.components.heavyobstaclephysics:SetRadius(OVERSIZED_PHYSICS_RADIUS)
 
         inst:AddComponent("inspectable")
         inst.components.inspectable.nameoverride = "VEGGIE_OVERSIZED_ROTTEN"
@@ -533,18 +553,27 @@ local function MakeVeggie(name)
         inst.components.workable:SetWorkLeft(OVERSIZED_MAXWORK)
 
         inst:AddComponent("pickable")
-        inst.components.pickable.onpickedfn = inst.Remove
+        inst.components.pickable.remove_when_picked = true
         inst.components.pickable:SetUp(nil)
         inst.components.pickable.use_lootdropper_for_product = true
         inst.components.pickable.picksound = "dontstarve/wilson/harvest_berries"
 
         inst:AddComponent("inventoryitem")
         inst.components.inventoryitem.cangoincontainer = false
-        inst.components.inventoryitem.canbepickedup = false
         inst.components.inventoryitem:SetSinks(true)
+		
+		inst:AddComponent("equippable")
+        inst.components.equippable.equipslot = EQUIPSLOTS.BODY
+        inst.components.equippable:SetOnEquip(oversized_onequip)
+        inst.components.equippable:SetOnUnequip(oversized_onunequip)
+        inst.components.equippable.walkspeedmult = TUNING.HEAVY_SPEED_MULT
 
         inst:AddComponent("lootdropper")
         inst.components.lootdropper:SetLoot(plant_def.loot_oversized_rot)
+		
+		inst:AddComponent("submersible")
+        inst:AddComponent("symbolswapdata")
+        inst.components.symbolswapdata:SetData(plant_def.build, "swap_body_rotten")
 
         MakeMediumBurnable(inst)
         inst.components.burnable:SetOnBurntFn(oversized_onburnt)

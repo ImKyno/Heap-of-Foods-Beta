@@ -1044,6 +1044,28 @@ local kyno_foods_keg =
         end,
 	},
 	
+	--[[
+	ricesake =
+	{
+		test = function(brewer, names, tags) return names.kyno_rice and (names.kyno_rice == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = -10,
+		hunger = 32.5,
+		sanity = 20,
+		cooktime = 72,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"kyno_rice", 2}, {"ice", 1}}},
+		prefabs = { "kyno_dmgreductionbuff" },
+		oneatenfn = function (inst, eater)
+			eater:AddDebuff("kyno_dmgreductionbuff", "kyno_dmgreductionbuff")
+		end,
+	},
+	]]--
+	
 	-- This recipe is for when brewing a invalid product, we need this to prevent a crash.
 	wetgoop2 =
 	{

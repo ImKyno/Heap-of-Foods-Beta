@@ -1,6 +1,5 @@
-name                        = "Heap of Foods"
+name                        = "Heap of Foods (Beta)"
 version                     = "7.9-A"
-local myupdate              = "Food Extravaganza"
 
 description                 = 
 [[
@@ -12,7 +11,7 @@ description                 =
 󰀏 Featuring the Bountiful Harvest Update
 This series of updates are focused on revamping the visuals of the farming crops as well as adding new ones!
 
-The survivors have managed to find a new type of seed out in the wild! And far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover its flavors...
+Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover its flavors...
 
 󰀌 Mod Version: 7.9-A
 󰀧 Update: Bountiful Harvest (Part I)

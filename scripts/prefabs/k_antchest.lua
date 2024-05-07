@@ -84,16 +84,27 @@ end
 local function RefreshAntChestBuild(inst, minimap)
     local containsHoney = inst.components.container:Has("honey", 1)
 	local containsNectar = inst.components.container:Has("kyno_nectar_pod", 1)
+	local containsHoneyItem = inst.components.container:HasItemWithTag("honeyed", 1)
 	
     if containsHoney then
         inst.AnimState:SetBuild("ant_chest_honey_build")
         minimap:SetIcon("kyno_antchest_honey.tex")
+		inst.Light:Enable(true)
+		
     elseif containsNectar then
 		inst.AnimState:SetBuild("ant_chest_nectar_build")
 		minimap:SetIcon("kyno_antchest_nectar.tex")
+		inst.Light:Enable(false)
+	
+	elseif containsHoneyItem then
+		inst.AnimState:SetBuild("ant_chest_honey_build")
+        minimap:SetIcon("kyno_antchest_honey.tex")
+		inst.Light:Enable(true)
+		
 	else 
         inst.AnimState:SetBuild("ant_chest")
         minimap:SetIcon("kyno_antchest_empty.tex")
+		inst.Light:Enable(false)
     end
 end
 
@@ -120,6 +131,13 @@ local function fn()
     inst.entity:AddAnimState()
     inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
+
+	local light = inst.entity:AddLight()
+	light:SetFalloff(.9)
+	light:SetIntensity(.5)
+	light:SetRadius(.9)
+	light:SetColour(185/255, 185/255, 20/255)
+	light:Enable(false)
 
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_antchest_empty.tex")

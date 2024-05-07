@@ -181,6 +181,7 @@ PLANT_DEFS.kyno_radish.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY_T
 PLANT_DEFS.kyno_radish.weight_data                 = { 361.51, 506.04, .28 } 
 PLANT_DEFS.kyno_radish.sounds                      = PLANT_DEFS.carrot.sounds
 PLANT_DEFS.kyno_radish.nutrient_restoration        = {0, 2, 4}
+
 for i = 1, #PLANT_DEFS.kyno_radish.nutrient_consumption do
     PLANT_DEFS.kyno_radish.nutrient_restoration[i] = PLANT_DEFS.kyno_radish.nutrient_consumption[i] == 0 or nil
 end
@@ -266,6 +267,7 @@ PLANT_DEFS.kyno_sweetpotato.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILL
 PLANT_DEFS.kyno_sweetpotato.weight_data                 = { 420.69, 510.07, .28 } 
 PLANT_DEFS.kyno_sweetpotato.sounds                      = PLANT_DEFS.potato.sounds
 PLANT_DEFS.kyno_sweetpotato.nutrient_restoration        = {2, 0, 4}
+
 for i = 1, #PLANT_DEFS.kyno_sweetpotato.nutrient_consumption do
     PLANT_DEFS.kyno_sweetpotato.nutrient_restoration[i] = PLANT_DEFS.kyno_sweetpotato.nutrient_consumption[i] == 0 or nil
 end
@@ -351,6 +353,7 @@ PLANT_DEFS.kyno_fennel.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY_T
 PLANT_DEFS.kyno_fennel.weight_data                 = { 320.14, 601.34, .18 } 
 PLANT_DEFS.kyno_fennel.sounds                      = PLANT_DEFS.asparagus.sounds
 PLANT_DEFS.kyno_fennel.nutrient_restoration        = {2, 1, 0}
+
 for i = 1, #PLANT_DEFS.kyno_fennel.nutrient_consumption do
     PLANT_DEFS.kyno_fennel.nutrient_restoration[i] = PLANT_DEFS.kyno_fennel.nutrient_consumption[i] == 0 or nil
 end
@@ -436,6 +439,7 @@ PLANT_DEFS.kyno_aloe.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY_TOL
 PLANT_DEFS.kyno_aloe.weight_data                 = { 401.23, 533.08, .11 } 
 PLANT_DEFS.kyno_aloe.sounds                      = PLANT_DEFS.potato.sounds
 PLANT_DEFS.kyno_aloe.nutrient_restoration        = {4, 0, 0}
+
 for i = 1, #PLANT_DEFS.kyno_aloe.nutrient_consumption do
     PLANT_DEFS.kyno_aloe.nutrient_restoration[i] = PLANT_DEFS.kyno_aloe.nutrient_consumption[i] == 0 or nil
 end
@@ -521,6 +525,7 @@ PLANT_DEFS.kyno_cucumber.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY
 PLANT_DEFS.kyno_cucumber.weight_data                 = { 430.23, 585.02, .21 } 
 PLANT_DEFS.kyno_cucumber.sounds                      = PLANT_DEFS.pepper.sounds
 PLANT_DEFS.kyno_cucumber.nutrient_restoration        = {0, 2, 0}
+
 for i = 1, #PLANT_DEFS.kyno_cucumber.nutrient_consumption do
     PLANT_DEFS.kyno_cucumber.nutrient_restoration[i] = PLANT_DEFS.kyno_cucumber.nutrient_consumption[i] == 0 or nil
 end
@@ -606,6 +611,7 @@ PLANT_DEFS.kyno_parznip.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY_
 PLANT_DEFS.kyno_parznip.weight_data                 = { 401.23, 563.02, .21 } 
 PLANT_DEFS.kyno_parznip.sounds                      = PLANT_DEFS.potato.sounds
 PLANT_DEFS.kyno_parznip.nutrient_restoration        = {2, 0, 2}
+
 for i = 1, #PLANT_DEFS.kyno_parznip.nutrient_consumption do
     PLANT_DEFS.kyno_parznip.nutrient_restoration[i] = PLANT_DEFS.kyno_parznip.nutrient_consumption[i] == 0 or nil
 end
@@ -691,6 +697,7 @@ PLANT_DEFS.kyno_turnip.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY_T
 PLANT_DEFS.kyno_turnip.weight_data                 = { 463.23, 694.20, .21 } 
 PLANT_DEFS.kyno_turnip.sounds                      = PLANT_DEFS.garlic.sounds
 PLANT_DEFS.kyno_turnip.nutrient_restoration        = {0, 4, 0}
+
 for i = 1, #PLANT_DEFS.kyno_turnip.nutrient_consumption do
     PLANT_DEFS.kyno_turnip.nutrient_restoration[i] = PLANT_DEFS.kyno_turnip.nutrient_consumption[i] == 0 or nil
 end
@@ -776,6 +783,7 @@ PLANT_DEFS.kyno_rice.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY_TOL
 PLANT_DEFS.kyno_rice.weight_data                 = { 463.23, 694.20, .21 } 
 PLANT_DEFS.kyno_rice.sounds                      = PLANT_DEFS.pepper.sounds
 PLANT_DEFS.kyno_rice.nutrient_restoration        = {0, 0, 4}
+
 for i = 1, #PLANT_DEFS.kyno_rice.nutrient_consumption do
     PLANT_DEFS.kyno_rice.nutrient_restoration[i] = PLANT_DEFS.kyno_rice.nutrient_consumption[i] == 0 or nil
 end
