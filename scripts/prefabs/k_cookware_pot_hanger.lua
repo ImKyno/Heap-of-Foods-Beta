@@ -236,6 +236,7 @@ end
 local function OnHammeredHanger(inst, worker)
 	local firepit = GetFirepit(inst)
 	if firepit then
+		firepit:RemoveTag("firepit_with_cookware")
 		firepit.components.cookwareinstaller.enabled = true
 	end
 
@@ -299,6 +300,7 @@ local function ChangeFireFX(inst)
 	local firepit = GetFirepit(inst)
 	if firepit then
 		firepit:AddTag("firepit_has_pot")
+		firepit:AddTag("firepit_with_cookware")
 		firepit.components.burnable:OverrideBurnFXBuild("quagmire_pot_fire")
 		firepit.components.cookwareinstaller.enabled = false
 		-- print("Added tag to firepit")

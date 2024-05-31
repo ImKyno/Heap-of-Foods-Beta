@@ -141,6 +141,7 @@ local function OnHammeredGrill(inst, worker)
 	local firepit = GetFirepit(inst)
 	if firepit then
 		firepit:RemoveTag("firepit_has_grill")
+		firepit:RemoveTag("firepit_with_cookware")
 		firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
 		firepit.components.burnable:OverrideBurnFXFinalOffset(3)
 		firepit.components.cookwareinstaller.enabled = true

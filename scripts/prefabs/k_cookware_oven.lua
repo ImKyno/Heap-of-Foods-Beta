@@ -166,6 +166,7 @@ local function OnHammeredOven(inst, worker)
 	local firepit = GetFirepit(inst)
 	if firepit then
 		firepit:RemoveTag("firepit_has_oven")
+		firepit:RemoveTag("firepit_with_cookware")
 		firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
 		firepit.components.cookwareinstaller.enabled = true
 	end
@@ -186,11 +187,11 @@ end
 
 local function OnHitCass(inst, worker)
 	if inst.components.stewer:IsCooking() then
-		inst.AnimState:PlayAnimation("hit")
+		-- inst.AnimState:PlayAnimation("hit")
 		inst.AnimState:PushAnimation("cooking_bake_small", true)
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 	elseif inst.components.stewer:IsDone() then
-		inst.AnimState:PlayAnimation("hit_cooking_loop")
+		-- inst.AnimState:PlayAnimation("hit_cooking_loop")
 		inst.AnimState:PushAnimation("cooking_boil_big", true)
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 	else
@@ -199,7 +200,7 @@ local function OnHitCass(inst, worker)
 		else
 			inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 		end
-		inst.AnimState:PlayAnimation("hit")
+		-- inst.AnimState:PlayAnimation("hit")
 		inst.AnimState:PushAnimation("idle")
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 	end
@@ -209,6 +210,7 @@ local function ChangeFireFX(inst)
 	local firepit = GetFirepit(inst)
 	if firepit then
 		firepit:AddTag("firepit_has_oven")
+		firepit:AddTag("firepit_with_cookware")
 		firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 		firepit.components.cookwareinstaller.enabled = false
 		-- print("Added tag to firepit")
@@ -228,7 +230,7 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		local small_cass = SpawnPrefab("kyno_cookware_oven_small_casserole")
 		
 		small_cass.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/dish_place_oven")
-		small_cass.AnimState:PlayAnimation("place_casserole")
+		-- small_cass.AnimState:PlayAnimation("place_casserole")
 		small_cass.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		
 		ChangeFireFX(inst)
@@ -238,7 +240,7 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		local big_cass = SpawnPrefab("kyno_cookware_oven_casserole")
 		
 		big_cass.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/dish_place_oven")
-		big_cass.AnimState:PlayAnimation("place_casserole")
+		-- big_cass.AnimState:PlayAnimation("place_casserole")
 		big_cass.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		
 		ChangeFireFX(inst)
@@ -656,7 +658,7 @@ local function casserolefn(small)
     end
 
 	inst.back = SpawnPrefab("kyno_cookware_oven_back")
-	inst.back.AnimState:PlayAnimation("place")
+	-- inst.back.AnimState:PlayAnimation("place")
 	inst.back.AnimState:PushAnimation("idle")
 	inst.back.entity:SetParent(inst.entity)
 	inst.back.AnimState:SetFinalOffset(-1)
@@ -692,7 +694,7 @@ local function casserolefn(small)
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammeredCass)
-	inst.components.workable:SetOnWorkCallback(OnHitCass)
+	-- inst.components.workable:SetOnWorkCallback(OnHitCass)
 	inst.components.workable:SetWorkLeft(1)
 
 	inst.OnSave = OnSave

@@ -325,11 +325,11 @@ ACTIONS.INSTALLCOOKWARE.priority = 5
 ACTIONS.INSTALLCOOKWARE.mount_valid = true
 
 AddComponentAction("USEITEM", "cookwareinstallable", function(inst, doer, target, actions, right)
-	if target:HasTag("cookware_installable") and target.components.cookwareinstaller.enabled == true then
+	if target:HasTag("cookware_installable") and not target:HasTag("firepit_with_cookware") then
 		table.insert(actions, ACTIONS.INSTALLCOOKWARE)
 	end
 	
-	if target:HasTag("cookware_post_installable") and target.components.cookwareinstaller.enabled == true then
+	if target:HasTag("cookware_post_installable") and not target:HasTag("firepit_with_cookware") then
 		table.insert(actions, ACTIONS.INSTALLCOOKWARE)
 	end
 end)
