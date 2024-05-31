@@ -80,6 +80,7 @@ local function fn()
 	inst.AnimState:SetBuild("lotus")
 	inst.AnimState:PlayAnimation("idle_plant", true)
 
+	inst:AddTag("plant")
     inst:AddTag("blocker")
     inst:AddTag("lotus")
 
@@ -108,13 +109,13 @@ local function fn()
     inst.components.pickable.makeemptyfn = makeemptyfn
 	
 	inst:DoTaskInTime(1/30, function()
-	inst:WatchWorldState("isday", WakeUp)
-    WakeUp(inst, TheWorld.state.isday)
+		inst:WatchWorldState("isday", WakeUp)
+		WakeUp(inst, TheWorld.state.isday)
 	end)
 	
 	inst:DoTaskInTime(1/30, function()
-	inst:WatchWorldState("isdusk", Sleep)
-    Sleep(inst, TheWorld.state.isdusk)
+		inst:WatchWorldState("isdusk", Sleep)
+		Sleep(inst, TheWorld.state.isdusk)
 	end)
 	
 	MakeSmallBurnable(inst)

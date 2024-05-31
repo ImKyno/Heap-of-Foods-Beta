@@ -236,7 +236,7 @@ end
 local function OnHammeredHanger(inst, worker)
 	local firepit = GetFirepit(inst)
 	if firepit then
-		firepit.components.trader.enabled = true
+		firepit.components.cookwareinstaller.enabled = true
 	end
 
 	inst.components.lootdropper:DropLoot()
@@ -300,7 +300,7 @@ local function ChangeFireFX(inst)
 	if firepit then
 		firepit:AddTag("firepit_has_pot")
 		firepit.components.burnable:OverrideBurnFXBuild("quagmire_pot_fire")
-		firepit.components.trader.enabled = false
+		firepit.components.cookwareinstaller.enabled = false
 		-- print("Added tag to firepit")
 	end
 end
@@ -314,30 +314,36 @@ local function TestItem(inst, item, giver)
 end
 
 local function OnGetItemFromPlayer(inst, giver, item)
-	-- Syrup Pot.
 	if item.components.inventoryitem ~= nil and item:HasTag("pot_syrup_installer") then
 		local syrup_pot = SpawnPrefab("kyno_cookware_syrup")
+		
 		syrup_pot.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 		syrup_pot.AnimState:PlayAnimation("place_pot")
 		syrup_pot.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		
 		ChangeFireFX(inst)
 	end
-	-- Small Cooking Pot.
+
 	if item.components.inventoryitem ~= nil and item:HasTag("pot_small_installer") then
 		local small_pot = SpawnPrefab("kyno_cookware_small")
+		
 		small_pot.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 		small_pot.AnimState:PlayAnimation("place_pot")
 		small_pot.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		
 		ChangeFireFX(inst)
 	end
-	-- Large Cooking Pot.
+
 	if item.components.inventoryitem ~= nil and item:HasTag("pot_big_installer") then
 		local large_pot = SpawnPrefab("kyno_cookware_big")
+		
 		large_pot.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 		large_pot.AnimState:PlayAnimation("place_pot")
 		large_pot.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		
 		ChangeFireFX(inst)
 	end
+	
 	inst:Remove()
 end
 
@@ -657,6 +663,7 @@ local function hangerfn()
     inst.AnimState:SetFinalOffset(-2)
 
 	inst:AddTag("structure")
+	inst:AddTag("cookware_post_installable")
 	inst:AddTag("cookingpot_hanger")
 
 	inst.entity:SetPristine()
@@ -671,9 +678,9 @@ local function hangerfn()
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "QUAGMIRE_POT_HANGER"
 
-	inst:AddComponent("trader")
-	inst.components.trader:SetAcceptTest(TestItem)
-    inst.components.trader.onaccept = OnGetItemFromPlayer
+	inst:AddComponent("cookwareinstaller")
+	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
+    inst.components.cookwareinstaller.onaccept = OnGetItemFromPlayer
 
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
@@ -721,6 +728,7 @@ local function syruppotfn()
 	inst:AddTag("structure")
 	inst:AddTag("stewer")
 	inst:AddTag("pot_syrup")
+	inst:AddTag("hanger_with_pot")
 
 	inst._steam = net_event(inst.GUID, "steampot")
 
@@ -819,7 +827,7 @@ local function potfn(small)
 
 	inst:AddTag("structure")
 	inst:AddTag("stewer")
-	inst:AddTag("pot_syrup")
+	inst:AddTag("hanger_with_pot")
 	if small then
 		inst:AddTag("pot_small")
 	else
@@ -936,7 +944,7 @@ local function elderpotfn()
 
 	inst:AddTag("structure")
 	inst:AddTag("stewer")
-	inst:AddTag("pot_syrup")
+	inst:AddTag("hanger_with_pot")
 	inst:AddTag("pot_elder")
 
 	inst._steam = net_event(inst.GUID, "steampot")
@@ -960,7 +968,7 @@ local function elderpotfn()
 			local item_inst = SpawnPrefab("firepit")
 			item_inst.components.burnable:OverrideBurnFXBuild("quagmire_pot_fire")
 			item_inst.components.workable:SetWorkable(false)
-			item_inst.components.trader.enabled = false
+			item_inst.components.cookwareinstaller.enabled = false
 			item_inst.entity:SetParent(inst.entity)
 			item_inst.Transform:SetPosition(offset[1], offset[2], offset[3])
 			table.insert(inst.decor, item_inst)

@@ -315,6 +315,23 @@ local kyno_warly_foods =
 		tags = {"masterfood"},
 		card_def = {ingredients = {{"kyno_kokonut_halved", 1}, {"green_cap", 1}, {"succulent_picked", 1}, {"pepper", 1}}},
 	},
+	
+	risotto =
+	{
+		test = function(cooker, names, tags) return ((names.kyno_rice or 0) + (names.kyno_rice_cooked or 0) >= 2) and 
+		(names.kyno_white_cap or names.kyno_white_cap_cooked) and tags.dairy end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 33,
+		hunger = 75,
+		sanity = 25,
+		cooktime = 1.7,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"masterfood"},
+		card_def = {ingredients = {{"kyno_rice", 2}, {"kyno_white_cap", 1}, {"goatmilk", 1}}},
+	},
 }
 
 for k, recipe in pairs(kyno_warly_foods) do

@@ -30,12 +30,14 @@ local function OnDetached(inst, target)
 			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
 		end
 	end
+	
     inst:Remove()
 end
 
 local function OnExtended(inst, target)
     inst.components.timer:StopTimer("kyno_hastebuff")
     inst.components.timer:StartTimer("kyno_hastebuff", TUNING.KYNO_HASTEBUFF_DURATION)
+	
 	if not target:HasTag("handyperson") then
 		target:RemoveTag("fastbuilder")
 		target:AddTag("fastbuilder")
@@ -64,6 +66,7 @@ local function fn()
 
     inst:AddComponent("timer")
     inst.components.timer:StartTimer("kyno_hastebuff", TUNING.KYNO_HASTEBUFF_DURATION)
+	
     inst:ListenForEvent("timerdone", OnTimerDone)
 
     return inst

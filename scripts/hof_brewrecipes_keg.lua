@@ -799,7 +799,10 @@ local kyno_foods_keg =
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food", "alcoholic_drink", "honeyed"},
 		card_def = {ingredients = {{"durian", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
+		prefabs = { "kyno_piratebuff" },
 		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_piratebuff", "kyno_piratebuff")
+			
 			if eater ~= nil and eater.SoundEmitter ~= nil then
 				eater.SoundEmitter:PlaySound("hof_sounds/common/piraterum/laugh")
 			else	
@@ -1044,7 +1047,6 @@ local kyno_foods_keg =
         end,
 	},
 	
-	--[[
 	ricesake =
 	{
 		test = function(brewer, names, tags) return names.kyno_rice and (names.kyno_rice == 2) and tags.frozen end,
@@ -1054,7 +1056,7 @@ local kyno_foods_keg =
 		health = -10,
 		hunger = 32.5,
 		sanity = 20,
-		cooktime = 72,
+		cooktime = 48,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food", "alcoholic_drink"},
@@ -1064,9 +1066,8 @@ local kyno_foods_keg =
 			eater:AddDebuff("kyno_dmgreductionbuff", "kyno_dmgreductionbuff")
 		end,
 	},
-	]]--
 	
-	-- This recipe is for when brewing a invalid product, we need this to prevent a crash.
+	-- This recipe is for when brewing an invalid product, we need this to prevent a crash.
 	wetgoop2 =
 	{
 		test = function(brewer, names, tags) return true end,

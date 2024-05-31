@@ -68,6 +68,7 @@ local function fn()
 	inst.AnimState:SetBuild("seaweed")
 	inst.AnimState:PlayAnimation("idle_plant", true)
 
+	inst:AddTag("plant")
     inst:AddTag("blocker")
     inst:AddTag("weedsea")
 

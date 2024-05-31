@@ -735,7 +735,7 @@ local kyno_foods_jar =
         end,
 	},
 	
-	-- This recipe is for when brewing a invalid product, we need this to prevent a crash.
+	-- This recipe is for when brewing an invalid product, we need this to prevent a crash.
 	wetgoop2 =
 	{
 		test = function(brewer, names, tags) return true end,

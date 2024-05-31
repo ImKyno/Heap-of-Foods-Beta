@@ -56,6 +56,7 @@ local function fn()
 
     inst:AddComponent("timer")
     inst.components.timer:StartTimer("regenover", TUNING.JELLYBEAN_DURATION)
+	
     inst:ListenForEvent("timerdone", OnTimerDone)
 
     return inst

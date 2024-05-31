@@ -64,6 +64,7 @@ local function fn()
     inst.AnimState:PlayAnimation("idle_plant", true)
     inst.AnimState:SetRayTestOnBB(true)
 	
+	inst:AddTag("plant")
 	inst:AddTag("blocker")
 	inst:AddTag("waterycress")
 

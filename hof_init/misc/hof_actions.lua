@@ -286,26 +286,80 @@ AddComponentAction("INVENTORY", "brewbook", function(inst, doer, actions)
 	table.insert(actions, ACTIONS.READBREWBOOK)
 end)
 
+-- Action for installing Cookware on Fire Pit.
+AddAction("INSTALLCOOKWARE", STRINGS.ACTIONS.INSTALLCOOKWARE, function(act)
+	local target = act.target or act.invobject
+	if target ~= nil and act.doer ~= nil then
+		if act.target.components.cookwareinstaller ~= nil then
+            local count
+
+            if act.target.components.cookwareinstaller:IsAcceptingStacks() then
+                count = (
+                    act.target.components.inventory ~= nil and
+                    act.target.components.inventory:CanAcceptCount(act.invobject)
+                ) or (
+                    act.invobject.components.stackable ~= nil and
+                    act.invobject.components.stackable.stacksize
+                )
+                or 1
+
+                if count <= 0 then
+                    return false
+                end
+            end
+
+			local able, reason = act.target.components.cookwareinstaller:AbleToAccept(act.invobject, act.doer, count)
+			if not able then
+				return false, reason
+			end
+
+			act.target.components.cookwareinstaller:AcceptGift(act.doer, act.invobject, count)
+
+			return true
+		end
+	end
+end)
+
+ACTIONS.INSTALLCOOKWARE.distance = 1
+ACTIONS.INSTALLCOOKWARE.priority = 5
+ACTIONS.INSTALLCOOKWARE.mount_valid = true
+
+AddComponentAction("USEITEM", "cookwareinstallable", function(inst, doer, target, actions, right)
+	if target:HasTag("cookware_installable") and target.components.cookwareinstaller.enabled == true then
+		table.insert(actions, ACTIONS.INSTALLCOOKWARE)
+	end
+	
+	if target:HasTag("cookware_post_installable") and target.components.cookwareinstaller.enabled == true then
+		table.insert(actions, ACTIONS.INSTALLCOOKWARE)
+	end
+end)
+
 -- Action String overrides.
 ACTIONS.GIVE.stroverridefn = function(act)
 	if act.target:HasTag("serenity_installable") and act.invobject:HasTag("serenity_installer") then
 		return subfmt(STRINGS.KYNO_INSTALL_INSTALLER, {item = act.invobject:GetBasicDisplayName()})
 	end
+	
 	if act.target:HasTag("sugartree_installable") and act.invobject:HasTag("serenity_installer") then
 		return subfmt(STRINGS.KYNO_INSTALL_TAPPER, {item = act.invobject:GetBasicDisplayName()})
 	end
+	
 	if act.target:HasTag("cookingpot_hanger") and act.invobject:HasTag("pot_installer") then
 		return subfmt(STRINGS.KYNO_INSTALL_POT, {item = act.invobject:GetBasicDisplayName()})
 	end
+	
 	if act.target:HasTag("serenity_oven") and act.invobject:HasTag("casserole_installer") then
 		return subfmt(STRINGS.KYNO_INSTALL_POT, {item = act.invobject:GetBasicDisplayName()})
 	end
+	
 	if act.target:HasTag("elderpot_rubble") and act.invobject:HasTag("serenity_repairtool") then
 		return subfmt(STRINGS.KYNO_REPAIR_TOOL, {item = act.invobject:GetBasicDisplayName()})
 	end
+	
 	if act.target:HasTag("infestable_tree") and act.invobject:HasTag("squirrel") then
 		return subfmt(STRINGS.KYNO_INFEST_TREE, {item = act.invobject:GetBasicDisplayName()})
 	end
+	
 	if act.target:HasTag("chicken2") then
 		return subfmt(STRINGS.KYNO_FEED_CHICKEN, {item = act.invobject:GetBasicDisplayName()})
 	end
@@ -315,18 +369,23 @@ ACTIONS.PICK.stroverridefn = function(act)
 	if act.target.prefab == "kyno_sugartree_sapped" then
 		return STRINGS.KYNO_HARVEST_SUGARTREE
 	end
+	
 	if act.target.prefab == "kyno_sugartree_ruined" then
 		return STRINGS.KYNO_HARVEST_SUGARTREE_RUINED
 	end
+	
 	if act.target.prefab == "kyno_saltrack" then
 		return STRINGS.KYNO_HARVEST_SALTRACK
 	end
+	
 	if act.target.prefab == "kyno_cookware_syrup" then
 		return STRINGS.KYNO_HARVEST_POTSYRUP
 	end
+	
 	if act.target.prefab == "kyno_rockflippable" then
 		return STRINGS.KYNO_PICKUP_ROCKFLIPPABLE
 	end
+	
 	if act.target.prefab == "kyno_rockflippable_cave" then
 		return STRINGS.KYNO_PICKUP_ROCKFLIPPABLE
 	end
@@ -341,6 +400,7 @@ end
 
 ACTIONS.EAT.stroverridefn = function(act)
 	local obj = act.target or act.invobject
+	
 	if obj:HasTag("drinkable_food") then 
 		return STRINGS.KYNO_DRINK_FOOD 
 	end
@@ -348,9 +408,11 @@ end
 
 ACTIONS.UNWRAP.stroverridefn = function(act)
 	local obj = act.target or act.invobject
+	
 	if obj:HasTag("canned_food") then
 		return STRINGS.KYNO_OPEN_CAN
 	end
+	
 	if obj:HasTag("bottled_soul") then
 		return STRINGS.KYNO_OPEN_BOTTLE_SOUL
 	end
@@ -362,7 +424,15 @@ ACTIONS.STORE.stroverridefn = function(act)
 	end
 end
 
+ACTIONS.INSTALLCOOKWARE.stroverridefn = function(act)
+	if act.target:HasTag("cookware_post_installable") then
+		return STRINGS.KYNO_INSTALL_POT
+	end 
+end
+
+--[[
 -- Fix for fuel items, because the action was "Give" instead of "Add Fuel".
 ACTIONS.ADDFUEL.priority = 5
 ACTIONS.ADDWETFUEL.priority = 5
 ACTIONS.COOK.canforce = true
+]]--

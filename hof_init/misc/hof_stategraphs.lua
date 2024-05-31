@@ -104,9 +104,146 @@ AddStategraphState("wilson_client",
 	}
 )
 
+AddStategraphState("wilson",
+	State{
+        name = "pickable_tall",
+        tags = { "doing", "busy", "nodangle" },
+
+        onenter = function(inst, timeout)
+            inst.components.locomotor:Stop()
+            inst.SoundEmitter:PlaySound("dontstarve/wilson/make_trap", "make")
+			
+            if timeout ~= nil then
+                inst.sg:SetTimeout(timeout)
+                inst.sg.statemem.delayed = true
+                inst.AnimState:PlayAnimation("build_pre")
+                inst.AnimState:PushAnimation("build_loop", true)
+            else
+                inst.sg:SetTimeout(.5)
+                inst.AnimState:PlayAnimation("construct_pre")
+                inst.AnimState:PushAnimation("construct_loop", true)
+            end
+        end,
+
+        timeline =
+        {
+            TimeEvent(3 * FRAMES, function(inst)
+                if inst.sg.statemem.delayed then
+                    inst.sg:RemoveStateTag("busy")
+                end
+            end),
+            TimeEvent(6 * FRAMES, function(inst)
+                if not (inst.sg.statemem.delayed or inst:PerformBufferedAction()) then
+                    inst.sg:RemoveStateTag("busy")
+                end
+            end),
+			TimeEvent(9 * FRAMES, function(inst)
+                if not (inst.sg.statemem.delayed or inst:PerformBufferedAction()) then
+                    inst.sg:RemoveStateTag("busy")
+                end
+            end),
+        },
+
+        ontimeout = function(inst)
+            if not inst.sg.statemem.delayed then
+                inst.SoundEmitter:KillSound("make")
+                inst.AnimState:PlayAnimation("construct_pst")
+            elseif not inst:PerformBufferedAction() then
+                inst.SoundEmitter:KillSound("make")
+                inst.AnimState:PlayAnimation("build_pst")
+            end
+        end,
+
+        events =
+        {
+            EventHandler("animqueueover", function(inst)
+                if inst.AnimState:AnimDone() then
+                    inst.sg:GoToState("idle")
+                end
+            end),
+        },
+
+        onexit = function(inst)
+            if not inst.sg.statemem.constructing then
+                inst.SoundEmitter:KillSound("make")
+            end
+        end,
+	}
+)
+
+AddStategraphState("wilson_client",
+	State{
+        name = "pickable_tall",
+        tags = { "doing", "busy", "nodangle" },
+
+        onenter = function(inst, timeout)
+            inst.components.locomotor:Stop()
+            inst.SoundEmitter:PlaySound("dontstarve/wilson/make_trap", "make")
+			
+            if timeout ~= nil then
+                inst.sg:SetTimeout(timeout)
+                inst.sg.statemem.delayed = true
+                inst.AnimState:PlayAnimation("build_pre")
+                inst.AnimState:PushAnimation("build_loop", true)
+            else
+                inst.sg:SetTimeout(.5)
+                inst.AnimState:PlayAnimation("construct_pre")
+                inst.AnimState:PushAnimation("construct_loop", true)
+            end
+        end,
+
+        timeline =
+        {
+            TimeEvent(3 * FRAMES, function(inst)
+                if inst.sg.statemem.delayed then
+                    inst.sg:RemoveStateTag("busy")
+                end
+            end),
+            TimeEvent(6 * FRAMES, function(inst)
+                if not (inst.sg.statemem.delayed or inst:PerformBufferedAction()) then
+                    inst.sg:RemoveStateTag("busy")
+                end
+            end),
+			TimeEvent(9 * FRAMES, function(inst)
+                if not (inst.sg.statemem.delayed or inst:PerformBufferedAction()) then
+                    inst.sg:RemoveStateTag("busy")
+                end
+            end),
+        },
+
+        ontimeout = function(inst)
+            if not inst.sg.statemem.delayed then
+                inst.SoundEmitter:KillSound("make")
+                inst.AnimState:PlayAnimation("construct_pst")
+            elseif not inst:PerformBufferedAction() then
+                inst.SoundEmitter:KillSound("make")
+                inst.AnimState:PlayAnimation("build_pst")
+            end
+        end,
+
+        events =
+        {
+            EventHandler("animqueueover", function(inst)
+                if inst.AnimState:AnimDone() then
+                    inst.sg:GoToState("idle")
+                end
+            end),
+        },
+
+        onexit = function(inst)
+            if not inst.sg.statemem.constructing then
+                inst.SoundEmitter:KillSound("make")
+            end
+        end,
+	}
+)
+
+-- Change the animations of some things.
 AddStategraphPostInit("wilson", function(self)
     local _givehandler = self.actionhandlers[ACTIONS.GIVE].deststate
+	local _pickhandler = self.actionhandlers[ACTIONS.PICK].deststate
 
+	-- More sofisticated animation for repairing things.
     self.actionhandlers[ACTIONS.GIVE].deststate = function(inst, action, ...)
         local target = action.target or action.invobject
         
@@ -120,6 +257,17 @@ AddStategraphPostInit("wilson", function(self)
 
         return _givehandler(inst, action, ...)
     end
+	
+	-- Currently for Pineapple Bushes and Palm Trees.
+	self.actionhandlers[ACTIONS.PICK].deststate = function(inst, action, ...)
+        local target = action.target or action.invobject
+        
+        if target and target:HasTags({"plant", "pickable_tall"}) then
+            return "pickable_tall" -- "construct"
+        end
+		
+		return _pickhandler(inst, action, ...)
+	end
 end)
 
 -- Brewbook Action Stategraph.
@@ -180,5 +328,27 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.UNWRAP, function(inst
 		return "doshortaction"
 	else
 		return "dolongaction"
+	end
+end))
+
+-- Install Cookwares.
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.INSTALLCOOKWARE, function(inst, action)
+	local target = action.target or action.invobject
+	
+	if target.components.cookwareinstaller and target:HasTag("cookware_installable") then
+		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+		
+	elseif target.components.cookwareinstaller and target:HasTag("cookware_post_installable") then
+		return "give"
+	end
+end))
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.INSTALLCOOKWARE, function(inst, action)
+	local target = action.target or action.invobject
+	
+	if target.components.cookwareinstaller and target:HasTag("cookware_installable") then
+		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+		
+	elseif target.components.cookwareinstaller and target:HasTag("cookware_post_installable") then
+		return "give"
 	end
 end))

@@ -1,7 +1,5 @@
 local function OnTick(inst, target)
-    if target.components.health ~= nil and
-        not target.components.health:IsDead() and
-        not target:HasTag("playerghost") then
+    if target.components.health ~= nil and not target.components.health:IsDead() and not target:HasTag("playerghost") then
         target.components.hunger:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
 		target.components.health:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
 		target.components.sanity:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
@@ -57,6 +55,7 @@ local function fn()
 
     inst:AddComponent("timer")
     inst.components.timer:StartTimer("regenover", TUNING.JELLYBEAN_DURATION)
+	
     inst:ListenForEvent("timerdone", OnTimerDone)
 
     return inst

@@ -51,7 +51,6 @@ end
 local function ElderSayThanks(inst)
 	local pigelder = FindElder(inst)
 	if pigelder then
-		-- pigelder.components.talker:Say("THANKS FOR REPAIRING MY OLD POT, LITTLE GOAT!")
 		Say(pigelder, "PIGELDER_TALK_REPAIRPOT")
 		pigelder.components.craftingstation:LearnItem("kyno_saphealer", "kyno_saphealer_p")
 	end
@@ -59,7 +58,7 @@ end
 
 local function TestItem(inst, item, giver)
 	if item.components.inventoryitem and item.prefab == "kyno_repairtool" then
-		return true -- Accept the Item.
+		return true
 	end
 end
 
@@ -72,8 +71,8 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		pot_fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		
 		ElderSayThanks(inst)
-		-- inst:PushEvent("elderpot_repaired")
 	end
+	
 	inst:Remove()
 end
 

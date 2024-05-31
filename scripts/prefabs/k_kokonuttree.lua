@@ -240,6 +240,7 @@ local function tree_fn()
 	inst:AddTag("plant")
 	inst:AddTag("tree")
 	inst:AddTag("kokonuttree")
+	inst:AddTag("pickable_tall")
 
     inst.entity:SetPristine()
 

@@ -1,4 +1,7 @@
 local function OnAttached(inst, target)
+	inst.entity:SetParent(target.entity)
+    inst.Transform:SetPosition(0, 0, 0)
+	
     if target.coffeebuff_duration then
         inst.components.timer:StartTimer("kyno_coffeebuff_done", target.coffeebuff_duration)
     end
@@ -11,9 +14,6 @@ local function OnAttached(inst, target)
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
 	end
-	
-    inst.entity:SetParent(target.entity)
-    inst.Transform:SetPosition(0, 0, 0)
     
 	if target.components.locomotor ~= nil then
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)

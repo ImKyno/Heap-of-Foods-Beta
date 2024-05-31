@@ -143,7 +143,7 @@ local function OnHammeredGrill(inst, worker)
 		firepit:RemoveTag("firepit_has_grill")
 		firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
 		firepit.components.burnable:OverrideBurnFXFinalOffset(3)
-		firepit.components.trader.enabled = true
+		firepit.components.cookwareinstaller.enabled = true
 	end
 
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
@@ -192,6 +192,7 @@ local function ChangeFireFX(inst)
 	if firepit then
 		firepit:AddTag("firepit_has_grill")
 		firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+		firepit.components.cookwareinstaller.enabled = false
 	end
 end
 

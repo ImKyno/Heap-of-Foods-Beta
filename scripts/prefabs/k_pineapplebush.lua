@@ -47,7 +47,10 @@ local function makeemptyfn(inst)
     else
         inst.AnimState:PlayAnimation("idle", true)
     end
-    setberries(inst, nil)
+    -- setberries(inst, nil)
+	inst.AnimState:Hide("berries")
+	inst.AnimState:Hide("berriesmore")
+	inst.AnimState:Hide("berriesmost")
 end
 
 local function makebarrenfn(inst)--, wasempty)
@@ -93,11 +96,15 @@ local function onpickedfn(inst, picker)
         if inst.components.pickable:IsBarren() then
             inst.AnimState:PlayAnimation("idle_to_dead")
             inst.AnimState:PushAnimation("dead", false)
-            setberries(inst, nil)
+            inst.AnimState:Hide("berries")
+			inst.AnimState:Hide("berriesmore")
+			inst.AnimState:Hide("berriesmost")
         else
             inst.AnimState:PlayAnimation("picked")
             inst.AnimState:PushAnimation("idle")
-            setberriesonanimover(inst)
+            inst.AnimState:Hide("berries")
+			inst.AnimState:Hide("berriesmore")
+			inst.AnimState:Hide("berriesmost")
         end
     end
 
@@ -151,7 +158,8 @@ local function makefullfn(inst)
         inst.AnimState:PlayAnimation("grow")
         inst.AnimState:PushAnimation("idle", true)
     end
-    setberries(inst, berries)
+    -- setberries(inst, berries)
+	inst.AnimState:Show("berries")
 end
 
 local function onworked_juicy(inst, worker, workleft)
@@ -214,6 +222,7 @@ end
 local function createbush(name, inspectname, berryname, master_postinit)
     local assets =
     {
+		Asset("ANIM", "anim/kyno_pineapplebush.zip"),
         Asset("ANIM", "anim/berrybush2.zip"),
         Asset("ANIM", "anim/berrybush2_diseased_build.zip"),
     }
@@ -251,10 +260,10 @@ local function createbush(name, inspectname, berryname, master_postinit)
 
         inst.MiniMapEntity:SetIcon("berrybush2.png")
 
-        inst.AnimState:SetBank("berrybush2")
-        inst.AnimState:SetBuild("berrybush2")
+        inst.AnimState:SetBank("kyno_pineapplebush")
+        inst.AnimState:SetBuild("kyno_pineapplebush")
         inst.AnimState:PlayAnimation("idle", true)
-        setberries(inst, 1)
+        -- setberries(inst, 1)
 
         MakeSnowCoveredPristine(inst)
 		

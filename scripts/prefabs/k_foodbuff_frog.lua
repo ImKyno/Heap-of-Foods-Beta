@@ -69,6 +69,7 @@ local function fn()
 
     inst:AddComponent("timer")
     inst.components.timer:StartTimer("kyno_frogbuff", TUNING.KYNO_FROGBUFF_DURATION)
+	
     inst:ListenForEvent("timerdone", OnTimerDone)
 
     return inst

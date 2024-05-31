@@ -13,6 +13,7 @@ PrefabFiles =
 	"k_foodbuff_insanity",
 	"k_foodbuff_frog",
 	"k_foodbuff_fear",
+	"k_foodbuff_pirate",
 	-- "k_foodbuff_spider",
 
 	"k_product_bubble",

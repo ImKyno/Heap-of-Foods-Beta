@@ -46,6 +46,7 @@ Assets =
 	Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_parznip.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_rice.zip"),
 	
 	Asset("IMAGE", "images/hof_loadingtips_icon.tex"), 
 	Asset("ATLAS", "images/hof_loadingtips_icon.xml"),

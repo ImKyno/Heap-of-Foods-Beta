@@ -167,7 +167,7 @@ local function OnHammeredOven(inst, worker)
 	if firepit then
 		firepit:RemoveTag("firepit_has_oven")
 		firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
-		firepit.components.trader.enabled = true
+		firepit.components.cookwareinstaller.enabled = true
 	end
 
 	inst.components.lootdropper:DropLoot()
@@ -210,7 +210,7 @@ local function ChangeFireFX(inst)
 	if firepit then
 		firepit:AddTag("firepit_has_oven")
 		firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
-		firepit.components.trader.enabled = false
+		firepit.components.cookwareinstaller.enabled = false
 		-- print("Added tag to firepit")
 	end
 end
@@ -224,22 +224,26 @@ local function TestItem(inst, item, giver)
 end
 
 local function OnGetItemFromPlayer(inst, giver, item)
-	-- Small Casserole Dish.
 	if item.components.inventoryitem ~= nil and item:HasTag("casserole_small_installer") then
 		local small_cass = SpawnPrefab("kyno_cookware_oven_small_casserole")
+		
 		small_cass.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/dish_place_oven")
 		small_cass.AnimState:PlayAnimation("place_casserole")
 		small_cass.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		
 		ChangeFireFX(inst)
 	end
-	-- Large Casserole Dish.
+	
 	if item.components.inventoryitem ~= nil and item:HasTag("casserole_big_installer") then
 		local big_cass = SpawnPrefab("kyno_cookware_oven_casserole")
+		
 		big_cass.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/dish_place_oven")
 		big_cass.AnimState:PlayAnimation("place_casserole")
 		big_cass.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		
 		ChangeFireFX(inst)
 	end
+	
 	inst:Remove()
 end
 
@@ -521,6 +525,7 @@ local function ovenfn()
     inst.AnimState:SetFinalOffset(4)
 
 	inst:AddTag("structure")
+	inst:AddTag("cookware_post_installable")
 	inst:AddTag("serenity_oven")
 
 	inst.entity:SetPristine()
@@ -540,9 +545,9 @@ local function ovenfn()
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"kyno_cookware_oven_item"})
 
-	inst:AddComponent("trader")
-	inst.components.trader:SetAcceptTest(TestItem)
-    inst.components.trader.onaccept = OnGetItemFromPlayer
+	inst:AddComponent("cookwareinstaller")
+	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
+    inst.components.cookwareinstaller.onaccept = OnGetItemFromPlayer
 
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)

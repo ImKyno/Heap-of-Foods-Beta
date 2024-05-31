@@ -66,6 +66,7 @@ local function fn()
 	inst.AnimState:SetBuild("seataro")
 	inst.AnimState:PlayAnimation("idle_plant", true)
 
+	inst:AddTag("plant")
     inst:AddTag("blocker")
     inst:AddTag("taroroot")
 

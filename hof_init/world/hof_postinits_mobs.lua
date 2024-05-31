@@ -89,6 +89,15 @@ AddPrefabPostInit("kingfisher", function(inst)
 	end
 end)
 
+-- Prime Mate has very small chance of dropping Pirate's Rum
+AddPrefabPostInit("prime_mate", function(inst)
+    if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    inst.components.lootdropper:AddChanceLoot("piraterum", 0.05)
+end)
+
 -- Dragonfly Drops Coffee Plants.
 local DF_COFFEE = GetModConfigData("HOF_COFFEEDROPRATE")
 if DF_COFFEE == 1 then

@@ -50,7 +50,7 @@ local function hangerfn()
 		return inst
 	end
 	
-	inst:AddComponent("tradable")
+	inst:AddComponent("cookwareinstallable")
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "QUAGMIRE_POT_HANGER_ITEM"
@@ -88,7 +88,7 @@ local function potsyrupfn()
 		return inst
 	end
 	
-	inst:AddComponent("tradable")
+	inst:AddComponent("cookwareinstallable")
 	inst:AddComponent("inspectable")
 		
 	inst:AddComponent("inventoryitem")
@@ -130,7 +130,7 @@ local function potfn(small)
 		return inst
 	end
 	
-	inst:AddComponent("tradable")
+	inst:AddComponent("cookwareinstallable")
 	inst:AddComponent("inspectable")
 		
 	inst:AddComponent("inventoryitem")
@@ -183,7 +183,7 @@ local function grillfn(small)
 		return inst
 	end
 	
-	inst:AddComponent("tradable")
+	inst:AddComponent("cookwareinstallable")
 	inst:AddComponent("inspectable")
 		
 	inst:AddComponent("inventoryitem")
@@ -227,7 +227,7 @@ local function ovenfn()
 		return inst
 	end
 	
-	inst:AddComponent("tradable")
+	inst:AddComponent("cookwareinstallable")
 	inst:AddComponent("inspectable")
 	
 	inst:AddComponent("stackable")
@@ -272,7 +272,7 @@ local function casserolefn(small)
 		return inst
 	end
 	
-	inst:AddComponent("tradable")
+	inst:AddComponent("cookwareinstallable")
 	inst:AddComponent("inspectable")
 		
 	inst:AddComponent("inventoryitem")

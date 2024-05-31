@@ -1,13 +1,14 @@
 local function OnAttached(inst, target)	
+	inst.entity:SetParent(target.entity)
+    inst.Transform:SetPosition(0, 0, 0)
+
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_START"))
 	end
 	
-    inst.entity:SetParent(target.entity)
-    inst.Transform:SetPosition(0, 0, 0)
-	
 	if target.components.locomotor ~= nil and target:HasTag("player") then
 		target:AddTag("groggy")
+		
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_strengthbuff", TUNING.KYNO_ALCOHOL_SPEED)
 	end
 	
@@ -23,6 +24,7 @@ end
 local function OnDetached(inst, target)
 	if target.components.locomotor ~= nil and target:HasTag("player") then
 		target:RemoveTag("groggy")
+		
 		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_strengthbuff")
 	end
 	
@@ -43,6 +45,7 @@ local function OnExtended(inst, target)
 	
 	if target.components.locomotor ~= nil and target:HasTag("player") then
 		target:AddTag("groggy")
+		
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_strengthbuff", TUNING.KYNO_ALCOHOL_SPEED)
 	end
 	
@@ -62,15 +65,16 @@ end
 ---------------------------
 
 local function OnAttachedMed(inst, target)	
+	inst.entity:SetParent(target.entity)
+    inst.Transform:SetPosition(0, 0, 0)
+
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_START"))
 	end
 	
-    inst.entity:SetParent(target.entity)
-    inst.Transform:SetPosition(0, 0, 0)
-	
 	if target.components.locomotor ~= nil and target:HasTag("player") then
 		target:AddTag("groggy")
+		
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_strengthbuff_med", TUNING.KYNO_ALCOHOL_SPEED)
 	end	
 		
@@ -86,6 +90,7 @@ end
 local function OnDetachedMed(inst, target)
 	if target.components.locomotor ~= nil and target:HasTag("player") then
 		target:RemoveTag("groggy")
+		
 		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_strengthbuff_med")
 	end
 	

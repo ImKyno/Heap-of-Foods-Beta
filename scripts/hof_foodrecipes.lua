@@ -2421,6 +2421,24 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"kyno_rice", 2}, {"egg", 1}, {"tomato", 1}}},
 	},
+	
+	paella =
+	{
+		test = function(cooker, names, tags) return (names.kyno_rice or names.kyno_rice_cooked) and (names.kyno_mussel or names.kyno_mussel_cooked)
+		and names.kyno_spotspice and tags.fish end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FASTISH,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_BRIEF,
+		health = 20,
+		hunger = 50,
+		sanity = 10,
+		cooktime = 2.0,
+		stacksize = 2,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_rice", 1}, {"kyno_mussel", 1}, {"pondfish", 1}, {"kyno_spotspice", 1}}},
+	},
 }
 
 for k, recipe in pairs(kyno_foods) do
