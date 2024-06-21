@@ -1,7 +1,7 @@
 local SEASON_BASEREGENTIME_TUNING_LOOKUP =
 {
+	[SEASONS.SPRING] = "KYNO_COFFEEBUSH_GROWTIME_SPRING",
     [SEASONS.SUMMER] = "KYNO_COFFEEBUSH_GROWTIME_SUMMER",
-    [SEASONS.SPRING] = "KYNO_COFFEEBUSH_GROWTIME_SPRING",
 }
 
 local function OnSeasonChange(inst, season)
@@ -199,6 +199,7 @@ local function createbush(name, inspectname, berryname, master_postinit)
 		
         MakeSnowCovered(inst)
 		MakeNoGrowInWinter(inst)
+		-- MakeWaxablePlant(inst)
 		
         master_postinit(inst)
 		

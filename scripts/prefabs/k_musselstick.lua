@@ -140,6 +140,7 @@ local function fn()
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
     MakeHauntableLaunch(inst)
+	-- MakeWaxablePlant(inst)
 
 	inst.OnSave = onsave 
     inst.OnLoad = onload

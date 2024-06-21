@@ -52,7 +52,6 @@ AddBrewingValues({"kyno_spotspice_leaf"}, 		{spotspice  = 1})
 AddBrewingValues({"kyno_syrup"},                {syrup      = 1,   sweetener     = 1})
 AddBrewingValues({"kyno_banana"},				{fruit      = 1,   banana        = 1})
 AddBrewingValues({"kyno_kokonut_halved"},		{fruit      = 1,   kokonut       = 1})
-AddBrewingValues({"kyno_kokonut_cooked"},		{fruit      = 1,   kokonut       = 1})
 AddBrewingValues({"kyno_white_cap"},            {veggie     = 0.5, mushrooms     = 1})
 AddBrewingValues({"kyno_foliage"},				{veggie     = 0.5, foliage       = 1})
 AddBrewingValues({"kyno_aloe"},					{veggie     = 1,   aloe          = 1})
@@ -76,16 +75,18 @@ AddBrewingValues({"kyno_oil"},                  {oil        = 1})
 AddBrewingValues({"kyno_salt"},                 {salt       = 1})
 AddBrewingValues({"kyno_sugar"},                {sweetener  = 1,   sugar         = 1})
 AddBrewingValues({"kyno_rice"},                 {veggie     = 1})
+AddBrewingValues({"kyno_pineapple_halved"},		{fruit      = 1,   pineapple     = 1})
 
 -- Import the Beverages.
-local brewers      = {"kyno_woodenkeg", "kyno_preservesjar"}
+local brewer_jar   = {"kyno_preservesjar"}
+local brewer_keg   = {"kyno_woodenkeg"}
 
 local jar_recipes  = require("hof_brewrecipes_jar")
 local keg_recipes  = require("hof_brewrecipes_keg")
 local recipe_cards = require("hof_brewing").recipe_cards
 
-for _, brewer in pairs(brewers)     do for _, recipe in pairs(jar_recipes) do AddBrewerRecipe(brewer, recipe) end end
-for _, brewer in pairs(brewers)     do for _, recipe in pairs(keg_recipes) do AddBrewerRecipe(brewer, recipe) end end
+for _, brewer in pairs(brewer_jar)  do for _, recipe in pairs(jar_recipes) do AddBrewerRecipe(brewer, recipe) end end
+for _, brewer in pairs(brewer_keg)  do for _, recipe in pairs(keg_recipes) do AddBrewerRecipe(brewer, recipe) end end
 
 for _, recipe in pairs(jar_recipes) do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_preservesjar"}) end end
 for _, recipe in pairs(keg_recipes) do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_woodenkeg"}) end end

@@ -255,6 +255,8 @@ local function shortfn()
     inst.components.burnable:SetOnBurntFn(tree_burnt)
 	MakeSmallPropagator(inst)
 	
+	-- MakeWaxablePlant(inst)
+	
 	inst.OnSave = OnSave
     inst.OnLoad = OnLoad
 
@@ -328,6 +330,8 @@ local function normalfn()
     inst.components.burnable:SetOnBurntFn(tree_burnt)
 	MakeSmallPropagator(inst)
 	
+	-- MakeWaxablePlant(inst)
+	
 	inst.OnSave = OnSave
     inst.OnLoad = OnLoad
 
@@ -376,6 +380,8 @@ local function stump_shortfn()
     inst.components.burnable:SetOnBurntFn(stump_burnt)
 	MakeSmallPropagator(inst)
 	
+	-- MakeWaxablePlant(inst)
+	
 	inst.OnSave = OnSaveStump
     inst.OnLoad = OnLoadStump
 
@@ -423,6 +429,8 @@ local function stump_normalfn()
     inst.components.burnable:SetOnIgniteFn(stump_startburn)
     inst.components.burnable:SetOnBurntFn(stump_burnt)
 	MakeSmallPropagator(inst)
+	
+	-- MakeWaxablePlant(inst)
 	
 	inst.OnSave = OnSaveStump
     inst.OnLoad = OnLoadStump

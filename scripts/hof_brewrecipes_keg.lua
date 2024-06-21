@@ -28,7 +28,7 @@ local kyno_foods_keg =
 	{
 		test = function(brewer, names, tags) return names.berries and (names.berries == 2) and tags.frozen and not names.kyno_sugar end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		health = 10,
 		hunger = 20,
@@ -43,7 +43,7 @@ local kyno_foods_keg =
 	{
 		test = function(brewer, names, tags) return names.berries_juicy and (names.berries_juicy == 2) and tags.frozen and not names.kyno_sugar end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		health = 10,
 		hunger = 20,
@@ -58,7 +58,7 @@ local kyno_foods_keg =
 	{
 		test = function(brewer, names, tags) return names.pomegranate and (names.pomegranate == 2) and tags.frozen and not names.kyno_sugar end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		health = 10,
 		hunger = 25,
@@ -73,7 +73,7 @@ local kyno_foods_keg =
 	{
 		test = function(brewer, names, tags) return names.dragonfruit and (names.dragonfruit == 2) and tags.frozen and not names.kyno_sugar end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		health = 40,
 		hunger = 20,
@@ -88,7 +88,7 @@ local kyno_foods_keg =
 	{
 		test = function(brewer, names, tags) return names.cave_banana and (names.cave_banana == 2) and tags.frozen and not names.kyno_sugar end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		health = 10,
 		hunger = 25,
@@ -103,7 +103,7 @@ local kyno_foods_keg =
 	{
 		test = function(brewer, names, tags) return names.durian and (names.durian == 2) and tags.frozen and not names.kyno_sugar  end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		health = -5,
 		hunger = 35, -- 70 Wurt.
@@ -126,7 +126,7 @@ local kyno_foods_keg =
 	{
 		test = function(brewer, names, tags) return names.watermelon and (names.watermelon == 2) and tags.frozen and not names.kyno_sugar end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		health = 10,
 		hunger = 25,
@@ -141,7 +141,7 @@ local kyno_foods_keg =
 	{
 		test = function(brewer, names, tags) return names.fig and (names.fig == 2) and tags.frozen and not names.kyno_sugar end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		health = 10,
 		hunger = 25,
@@ -157,7 +157,7 @@ local kyno_foods_keg =
 		test = function(brewer, names, tags) return (names.wormlight or (names.wormlight_lesser and names.wormlight_lesser == 2)) and tags.frozen 
 		and not names.kyno_sugar end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		health = 20,
 		hunger = 40,
@@ -194,7 +194,7 @@ local kyno_foods_keg =
 	{
 		test = function(brewer, names, tags) return names.kyno_banana and (names.kyno_banana == 2) and tags.frozen and not names.kyno_sugar end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		health = 10,
 		hunger = 25,
@@ -207,10 +207,10 @@ local kyno_foods_keg =
 	
 	wine_kokonut = 
 	{
-		test = function(brewer, names, tags) return (names.kyno_kokonut_halved or 
-		(names.kyno_kokonut_cooked and names.kyno_kokonut_cooked == 2)) and tags.frozen and not names.kyno_sugar end,
+		test = function(brewer, names, tags) return names.kyno_kokonut_halved and (names.kyno_kokonut_halved == 2) 
+		and tags.frozen and not names.kyno_sugar end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		health = 10,
 		hunger = 25,
@@ -219,6 +219,22 @@ local kyno_foods_keg =
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food", "alcoholic_drink"},
 		card_def = {ingredients = {{"kyno_kokonut_halved", 2}, {"ice", 1}}},
+	},
+	
+	wine_pineapple = 
+	{
+		test = function(brewer, names, tags) return names.kyno_pineapple_halved and (names.kyno_pineapple_halved == 2) 
+		and tags.frozen and not names.kyno_sugar end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_MED,
+		health = 40,
+		hunger = 25,
+		sanity = 20,
+		cooktime = 72,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food", "alcoholic_drink"},
+		card_def = {ingredients = {{"kyno_pineapple", 2}, {"ice", 1}}},
 	},
 	
 	juice_carrot =

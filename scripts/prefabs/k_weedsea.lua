@@ -162,6 +162,7 @@ local function seaweed()
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
+	-- MakeWaxablePlant(inst)
 
 	return inst
 end

@@ -68,7 +68,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_GROUPER",         "Purple Groupers can be fish
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_MEADOWISLAND",    "\"Sailing around the globe, I was capable of exploring almost everything... Except for a strange island full of Palm Trees.\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_INFESTTREE",      "Tea Trees can be infested with Pikos. Increasing your sources of getting those little guys!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWAREBONUS",   "Special Cookware stations have a small chance of giving an extra food when cooking. Cross your fingers and hope that sweet meal comes in double trouble!")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_POISONBUNWICH",   "The Noxious Froggle Bunwich can be quite difficult to cook, but it has an interesting quirk. When eaten, frogs will be pacific towards you for a whole day!")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_POISONBUNWICH",   "The Noxious Froggle Bunwich can be quite difficult to cook, but it has an interesting quirk: frogs will be pacific towards you for a whole day!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_TWISTEDTEQUILE",  "\"Last night in the party, when I drank that drink, I think it's called Tequila, right? That thing made me so dizzy that in the next day, I found myself in another place!\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WATERCUP",        "Want to get rid of your debuffs? Drink a Cup of Water and stay hydrated!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKACOLA",        "\"See that bottle of... \"Nuka-Cola\", that's the name, right? I think Wortox brought that thing from another dimension, in one of his travels.\" -W")

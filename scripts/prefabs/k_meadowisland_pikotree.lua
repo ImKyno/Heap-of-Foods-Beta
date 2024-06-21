@@ -247,7 +247,9 @@ local function fn()
     inst.components.burnable:SetOnIgniteFn(OnIgnite)
     inst.components.burnable:SetOnBurntFn(OnBurnt)
 	MakeSmallPropagator(inst)
+	
 	MakeSnowCovered(inst)
+	-- MakeWaxablePlant(inst)
 
 	inst:WatchWorldState("isday", TestSpawning)
     TestSpawning(inst, TheWorld.state.isday)

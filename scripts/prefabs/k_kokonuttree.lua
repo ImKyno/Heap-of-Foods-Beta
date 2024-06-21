@@ -275,6 +275,7 @@ local function tree_fn()
 	MakeSmallPropagator(inst)
 	
     MakeNoGrowInWinter(inst)
+	-- MakeWaxablePlant(inst)
 
     inst.OnSave = tree_onsave
     inst.OnLoad = tree_onload
@@ -345,6 +346,8 @@ local function stump_fn()
     inst.components.burnable:SetOnIgniteFn(stump_startburn)
     inst.components.burnable:SetOnBurntFn(stump_burnt)
 	MakeSmallPropagator(inst)
+	
+	-- MakeWaxablePlant(inst)
 
     inst.OnSave = stump_onsave
     inst.OnLoad = stump_onload
@@ -409,6 +412,8 @@ local function burnt_fn()
 
     inst.OnSave = burnt_onsave
     inst.OnLoad = burnt_onload
+	
+	-- MakeWaxablePlant(inst)
 
     return inst
 end

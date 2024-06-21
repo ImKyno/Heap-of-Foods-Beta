@@ -105,6 +105,7 @@ local function fn()
     MakeSmallPropagator(inst)
 	MakeNoGrowInWinter(inst)
     MakeHauntableIgnite(inst)
+	-- MakeWaxablePlant(inst)
 
 	return inst
 end

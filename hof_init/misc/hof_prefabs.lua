@@ -103,6 +103,7 @@ PrefabFiles =
 	"k_ocean_wreck",
 	"k_antchest",
 	"k_nectar_pod",
+	"k_pineapple",
 	"k_pineapplebush",
 	"k_meadowisland_tree",
 	"k_meadowisland_tree_seed",

@@ -329,6 +329,8 @@ local function treefn()
     inst.components.burnable:SetOnBurntFn(tree_burnt)
 	MakeSmallPropagator(inst)
 	
+	-- MakeWaxablePlant(inst)
+	
 	inst.OnSave = OnSave
     inst.OnLoad = OnLoad
 
@@ -376,6 +378,8 @@ local function stumpfn()
     inst.components.burnable:SetOnIgniteFn(stump_startburn)
     inst.components.burnable:SetOnBurntFn(stump_burnt)
 	MakeSmallPropagator(inst)
+	
+	-- MakeWaxablePlant(inst)
 	
 	inst.OnSave = OnSaveStump
     inst.OnLoad = OnLoadStump
@@ -444,6 +448,8 @@ local function treesapfn()
             SpoilSap(inst)
         end
     end)
+	
+	-- MakeWaxablePlant(inst)
 
     return inst
 end
@@ -505,6 +511,8 @@ local function ruinedfn()
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammeredRuined)
 	inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_TAPPED_WORKLEFT)
+	
+	-- MakeWaxablePlant(inst)
 
     return inst
 end
@@ -563,6 +571,8 @@ local function ruined2fn()
     inst.components.burnable:SetOnBurntFn(tree_burnt)
 	MakeSmallPropagator(inst)
 	
+	-- MakeWaxablePlant(inst)
+	
 	inst.OnSave = OnSave
     inst.OnLoad = OnLoad
 
@@ -611,6 +621,8 @@ local function stump_ruinedfn()
     inst.components.burnable:SetOnIgniteFn(stump_startburn)
     inst.components.burnable:SetOnBurntFn(stump_burnt)
 	MakeSmallPropagator(inst)
+	
+	-- MakeWaxablePlant(inst)
 	
 	inst.OnSave = OnSaveStump
     inst.OnLoad = OnLoadStump

@@ -2439,6 +2439,41 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"kyno_rice", 1}, {"kyno_mussel", 1}, {"pondfish", 1}, {"kyno_spotspice", 1}}},
 	},
+	
+	pizza_tropical =
+	{
+		test = function(cooker, names, tags) return tags.fish and names.kyno_flour and tags.dairy and 
+		(names.kyno_pineapple_halved or names.kyno_pineapple_cooked) end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = 60,
+		hunger = 75,
+		sanity = 15,
+		cooktime = 2.5,
+		potlevel = "high",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pondfish", 1}, {"kyno_flour", 1}, {"goatmilk", 1}, {"kyno_pineapple_halved", 1}}},
+	},
+	
+	pinacolada = 
+	{
+		test = function(cooker, names, tags) return names.kyno_pineapple_halved and names.kyno_kokonut_halved and tags.sweetener and tags.frozen
+		and not names.kyno_pineapple_cooked and not names.kyno_kokonut_cooked end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 25,
+		hunger = 25,
+		sanity = 10,
+		cooktime = 0.5,
+		potlevel = "high",
+		floater = {"med", nil, 0.65},
+		tags = {"honeyed", "drinkable_food"},
+		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"kyno_kokonut_halved", 1}, {"honey", 1}, {"ice", 1}}},
+	},
 }
 
 for k, recipe in pairs(kyno_foods) do

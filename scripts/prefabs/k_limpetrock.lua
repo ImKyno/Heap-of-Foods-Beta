@@ -167,6 +167,8 @@ local function fn()
 	end)
 
 	inst.components.workable:SetWorkable(false)
+	
+	-- MakeWaxablePlant(inst)
 
 	return inst
 end

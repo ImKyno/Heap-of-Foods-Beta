@@ -416,6 +416,7 @@ local jelly_foods =
     "jelly_banana",
     "jelly_kokonut",
     "jelly_glowberry",
+	"jelly_pineapple",
 }
 
 local mayo_foods =
@@ -474,6 +475,7 @@ local wine_foods =
     "wine_banana",
     "wine_kokonut",
     "wine_glowberry",
+	"wine_pineapple",
 }
 
 local juice_foods =

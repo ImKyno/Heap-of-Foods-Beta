@@ -176,7 +176,9 @@ local function fn()
     inst.components.burnable:SetOnIgniteFn(OnIgnite)
     inst.components.burnable:SetOnBurntFn(OnBurnt)
 	MakeSmallPropagator(inst)
+	
 	MakeSnowCovered(inst)
+	-- MakeWaxablePlant(inst)
 
 	inst.OnSave = OnSave
     inst.OnLoad = OnLoad
@@ -251,7 +253,9 @@ local function stumpfn()
     inst.components.burnable:SetOnIgniteFn(StumpOnIgnite)
     inst.components.burnable:SetOnBurntFn(StumpOnBurnt)
 	MakeSmallPropagator(inst)
+	
     MakeHauntableIgnite(inst)
+	-- MakeWaxablePlant(inst)
 
 	inst.OnSave = StumpOnSave
     inst.OnLoad = StumpOnLoad
@@ -306,6 +310,8 @@ local function burntfn()
     inst.components.workable:SetWorkLeft(TUNING.KYNO_MEADOWISLAND_TREE_BURNT_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(ChopBurntTree)
 
+	-- MakeWaxablePlant(inst)
+	
     return inst
 end
 

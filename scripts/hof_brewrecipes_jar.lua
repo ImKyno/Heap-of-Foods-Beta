@@ -180,8 +180,7 @@ local kyno_foods_jar =
 	
 	jelly_kokonut = 
 	{
-		test = function(brewer, names, tags) return (names.kyno_kokonut_halved or 
-		(names.kyno_kokonut_cooked and names.kyno_kokonut_cooked == 2)) and tags.sweetener end,
+		test = function(brewer, names, tags) return names.kyno_kokonut_halved and (names.kyno_kokonut_halved == 2) and tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -191,6 +190,20 @@ local kyno_foods_jar =
 		cooktime = 48,
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"kyno_kokonut_halved", 2}, {"honey", 1}}},
+	},
+	
+	jelly_pineapple =
+	{
+		test = function(brewer, names, tags) return names.kyno_pineapple_halved and (names.kyno_pineapple_halved == 2) and tags.sweetener end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 33,
+		hunger = 25,
+		sanity = 15,
+		cooktime = 48,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_pineapple_halved", 2}, {"honey", 1}}},
 	},
 	
 	pickles_carrot = 

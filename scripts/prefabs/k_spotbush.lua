@@ -33,6 +33,7 @@ local function dig_up(inst, chopper)
 	if inst.components.pickable:CanBePicked() then
 		inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product)
     end
+	
 	inst.components.lootdropper:SpawnLootPrefab("dug_kyno_spotbush")
 	inst:Remove()
 end
@@ -86,9 +87,9 @@ local function fn()
 	
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
-	
     MakeNoGrowInWinter(inst)
     MakeHauntableIgnite(inst)
+	-- MakeWaxablePlant(inst)
 
 	return inst
 end
