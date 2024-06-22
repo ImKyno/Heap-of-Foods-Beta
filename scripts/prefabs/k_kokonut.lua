@@ -135,7 +135,7 @@ local function kokonut()
     inst.components.workable:SetOnFinishCallback(OnChopped)
 
 	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
