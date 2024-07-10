@@ -421,10 +421,9 @@ AddRecipe2("kyno_sweetpotato_seeds_p", {Ingredient("potato_seeds", 3)}, TECH.SER
 		no_deconstruction   = true,
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
-		product				= "kyno_sweetpotato_seeds",		
-		numtogive 			= 3, 
-		atlas 				= DefaultAtlas, 
-		image				= "quagmire_seedpacket_4.tex",
+		product				= "kyno_seeds_kit_sweetpotato",
+		atlas 				= ModAtlas, 
+		image				= "kyno_seeds_kit_sweetpotato.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -435,10 +434,9 @@ AddRecipe2("kyno_turnip_seeds_p", {Ingredient("garlic_seeds", 3)}, TECH.SERENITY
 		no_deconstruction   = true,
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
-		product				= "kyno_turnip_seeds", 		
-		numtogive 			= 3, 
-		atlas 				= DefaultAtlas, 
-		image				= "quagmire_seedpacket_5.tex",
+		product				= "kyno_seeds_kit_turnip",
+		atlas 				= ModAtlas, 
+		image				= "kyno_seeds_kit_turnip.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -449,10 +447,9 @@ AddRecipe2("kyno_radish_seeds_p", {Ingredient("carrot_seeds", 3)}, TECH.SERENITY
 		no_deconstruction   = true,
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
-		product				= "kyno_radish_seeds",
-		numtogive 			= 3, 
-		atlas 				= DefaultAtlas, 
-		image				= "quagmire_seedpacket_3.tex",
+		product				= "kyno_seeds_kit_radish", 
+		atlas 				= ModAtlas, 
+		image				= "kyno_seeds_kit_radish.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -463,10 +460,9 @@ AddRecipe2("kyno_parznip_seeds_p", {Ingredient("pumpkin_seeds", 3)}, TECH.SERENI
 		no_deconstruction   = true,		
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
-		product				= "kyno_parznip_seeds", 		
-		numtogive 			= 3, 
-		atlas 				= DefaultAtlas, 
-		image				= "quagmire_seedpacket_2.tex",
+		product				= "kyno_seeds_kit_parznip",
+		atlas 				= ModAtlas, 
+		image				= "kyno_seeds_kit_parznip.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -477,10 +473,9 @@ AddRecipe2("kyno_fennel_seeds_p", {Ingredient("durian_seeds", 3)}, TECH.SERENITY
 		no_deconstruction   = true,
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
-		product				= "kyno_fennel_seeds",		
-		numtogive 			= 3, 
-		atlas 				= DefaultAtlas, 
-		image				= "quagmire_seedpacket_6.tex",
+		product				= "kyno_seeds_kit_fennel",
+		atlas 				= ModAtlas, 
+		image				= "kyno_seeds_kit_fennel.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -491,10 +486,22 @@ AddRecipe2("kyno_cucumber_seeds_p", {Ingredient("watermelon_seeds", 3)}, TECH.SE
 		no_deconstruction   = true,
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
-		product				= "kyno_cucumber_seeds",		
-		numtogive 			= 3, 
-		atlas 				= DefaultAtlas, 
-		image				= "quagmire_seedpacket_7.tex",
+		product				= "kyno_seeds_kit_cucumber",
+		atlas 				= ModAtlas, 
+		image				= "kyno_seeds_kit_cucumber.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+AddRecipe2("kyno_aloe_seeds_p", {Ingredient("asparagus_seeds", 3)}, TECH.SERENITYSHOP_ONE,
+	{
+		nounlock 			= true,
+		no_deconstruction   = true,
+		actionstr 			= "SERENITYSHOP",
+		sg_state    		= "give",
+		product				= "kyno_seeds_kit_aloe",
+		atlas 				= ModAtlas, 
+		image				= "kyno_seeds_kit_aloe.tex",
 	},
 	{"CRAFTING_STATION"}
 )

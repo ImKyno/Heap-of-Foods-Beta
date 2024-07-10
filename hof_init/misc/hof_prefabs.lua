@@ -118,4 +118,5 @@ PrefabFiles =
 	"k_meadowisland_shop",
 	"k_poison_froglegs",
 	"k_bottlecap",
+	"k_seeds_kits",
 }
