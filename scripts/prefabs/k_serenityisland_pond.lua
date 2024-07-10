@@ -96,10 +96,9 @@ local function pondfn()
     inst.AnimState:SetSortOrder(3)
     
 	inst:AddTag("watersource")
+	inst:AddTag("birdblocker")
     inst:AddTag("antlion_sinkhole_blocker")
-    inst:AddTag("birdblocker")
-    inst:AddTag("saltpond_installable")
-	inst:AddTag("serenity_installable")
+	inst:AddTag("cookware_other_installable")
 
     inst.no_wet_prefix = true
 	
@@ -116,9 +115,9 @@ local function pondfn()
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "QUAGMIRE_POND_SALT"
 	
-	inst:AddComponent("trader")
-	inst.components.trader:SetAcceptTest(TestItem)
-    inst.components.trader.onaccept = OnGetItemFromPlayer
+	inst:AddComponent("cookwareinstaller")
+	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
+    inst.components.cookwareinstaller.onaccept = OnGetItemFromPlayer
 	
 	inst:AddComponent("fishable")
     inst.components.fishable:SetRespawnTime(TUNING.FISH_RESPAWN_TIME)

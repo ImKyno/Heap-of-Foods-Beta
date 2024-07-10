@@ -9,6 +9,15 @@ local SpawnPrefab		= _G.SpawnPrefab
 require("hof_mainfunctions")
 require("hof_upvaluehacker")
 
+-- Use to replace loot prefabs in their LootTables.
+local function ReplaceLoot(prefab, from, to)
+    for i, tbl in ipairs(LootTables[prefab]) do
+        if tbl[1] == from then
+            tbl[1] = to
+        end
+    end
+end
+
 -- Rockjaws Drops Shark Fin.
 AddPrefabPostInit("shark", function(inst)
     if _G.TheWorld.ismastersim and not _G.KnownModIndex:IsModEnabled("workshop-2174681153") then
@@ -222,38 +231,6 @@ if HUMANMEATY == 1 then
     end
 end
 
--- Splumonkeys and Splumonkey Pods drops Bananas.
---[[
-AddPrefabPostInit("monkey", function(inst)
-    _G.SetSharedLootTable('monkey',
-    {
-        {"smallmeat",     1.0},
-        {"cave_banana",   1.0},
-        {"beardhair",     1.0},
-        {"nightmarefuel", 0.5},
-        -- 50% when in Nightmare.
-        {"kyno_banana",   0.5},
-    })
-
-    local MONKEYLOOT = {"smallmeat", "cave_banana"}
-
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:SetLoot(MONKEYLOOT)
-    inst.components.lootdropper:AddChanceLoot("kyno_banana", 0.20)
-end)
-
-AddPrefabPostInit("monkeybarrel", function(inst)
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:AddChanceLoot("kyno_banana", 1.00)
-end)
-]]--
-
 -- Animals that can be killed with the Slaughter Tools.
 local slaughterable_animals =
 {
@@ -275,63 +252,6 @@ for k,v in pairs(slaughterable_animals) do
         inst:AddTag("slaughterable")
     end)
 end
-
--- Crab King and its claws Drops Crab King Meat instead of Meat.
--- Update this if Klei updates their counterparts!
-AddPrefabPostInit("crabking", function(inst)
-    _G.SetSharedLootTable("hof_crabking",
-    {
-        {"chesspiece_crabking_sketch",  1.00},
-        {"trident_blueprint",           1.00},
-        {"kyno_crabkingmeat",           1.00},
-        {"kyno_crabkingmeat",           1.00},
-        {"kyno_crabkingmeat",           1.00},
-        {"kyno_crabkingmeat",           1.00},
-        {"kyno_crabkingmeat",           1.00},
-        {"kyno_crabkingmeat",           1.00},
-        {"kyno_crabkingmeat",           1.00},
-        {"singingshell_octave5",        1.00},
-        {"singingshell_octave5",        1.00},
-        {"singingshell_octave5",        1.00},
-        {"singingshell_octave5",        1.00},
-        {"singingshell_octave5",        0.50},
-        {"singingshell_octave5",        0.25},
-        {"singingshell_octave4",        1.00},
-        {"singingshell_octave4",        1.00},
-        {"singingshell_octave4",        1.00},
-        {"singingshell_octave4",        0.50},
-        {"singingshell_octave4",        0.25},
-        {"singingshell_octave3",        1.00},
-        {"singingshell_octave3",        1.00},
-        {"singingshell_octave3",        0.50},
-        {"barnacle",                    1.00},
-        {"barnacle",                    1.00},
-        {"barnacle",                    1.00},
-        {"barnacle",                    0.25},
-        {"barnacle",                    0.25},
-        {"barnacle",                    0.25},
-        {"barnacle",                    0.25},
-    })
-
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:SetChanceLootTable("hof_crabking")
-end)
-
-AddPrefabPostInit("crabking_claw", function(inst)
-    _G.SetSharedLootTable("hof_crabking_claw",
-    {
-        {"kyno_crabkingmeat",           1.00},
-    })
-
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:SetChanceLootTable("hof_crabking_claw")
-end)
 
 -- Bee Queen drops the blueprint for the Honey Deposit.
 AddPrefabPostInit("beequeen", function(inst)
@@ -525,7 +445,7 @@ local function FrogPostinit(inst)
             end
         end,
 		
-		RETARGET_MUST_TAGS, cant_tags)
+			RETARGET_MUST_TAGS, cant_tags)
 		end
 	end
 
@@ -542,77 +462,17 @@ end
 AddPrefabPostInit("frog", FrogPostinit)
 AddPrefabPostInit("lunarfrog", FrogPostinit)
 
--- Toadstool drops Poison Frog Legs instead of normal Frog Legs.
--- Update this if Klei updates their counterparts!
-AddPrefabPostInit("toadstool", function(inst)
-    _G.SetSharedLootTable("hof_toadstool",
-    {
-        {"kyno_poison_froglegs",    	1.00},
-		{"meat",          				1.00},
-		{"meat",          				1.00},
-		{"meat",          				1.00},
-		{"meat",          				0.50},
-		{"meat",          				0.25},
+-- Toadstool drops Poison Frog Legs instead.
+AddPrefabPostInit("toadstool", function(inst) ReplaceLoot(inst.prefab, "froglegs", "kyno_poison_froglegs") end)
+AddPrefabPostInit("toadstool_dark", function(inst) ReplaceLoot(inst.prefab, "froglegs", "kyno_poison_froglegs") end)
 
-		{"shroom_skin",   				1.00},
-		{"chesspiece_toadstool_sketch", 1.00},
+-- Crab King and its claws drop Crab King Meat instead.
+AddPrefabPostInit("crabking", function(inst) ReplaceLoot(inst.prefab, "meat", "kyno_crabkingmeat") end)
+AddPrefabPostInit("crabking_claw", function(inst) ReplaceLoot(inst.prefab, "meat", "kyno_crabkingmeat") end)
 
-		{"red_cap",       				1.00},
-		{"red_cap",       				0.33},
-		{"red_cap",       				0.33},
-
-		{"blue_cap",     	 			1.00},
-		{"blue_cap",      				0.33},
-		{"blue_cap",      				0.33},
-
-		{"green_cap",     				1.00},
-		{"green_cap",     				0.33},
-		{"green_cap",     				0.33},
-    })
-
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:SetChanceLootTable("hof_toadstool")
-end)
-
-AddPrefabPostInit("toadstool_dark", function(inst)
-    _G.SetSharedLootTable("hof_toadstool_dark",
-    {
-        {"kyno_poison_froglegs",        1.00},
-		{"meat",          				1.00},
-		{"meat",          				1.00},
-		{"meat",          				1.00},
-		{"meat",          				0.50},
-		{"meat",          				0.25},
-
-		{"shroom_skin",   				1.00},
-		{"shroom_skin",   				1.00},
-		{"chesspiece_toadstool_sketch", 1.00},
-
-		{"red_cap",      				1.00},
-		{"red_cap",       				0.33},
-		{"red_cap",       				0.33},
-
-		{"blue_cap",      				1.00},
-		{"blue_cap",      				0.33},
-		{"blue_cap",      				0.33},
-
-		{"green_cap",     				1.00},
-		{"green_cap",     				0.33},
-		{"green_cap",     				0.33},
-
-		{"mushroom_light2_blueprint", 	1.00},
-		{"sleepbomb_blueprint", 		1.00},
-    })
-
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst.components.lootdropper:SetChanceLootTable("hof_toadstool_dark")
-end)
+-- Crab Guards and Crab Knights drop Crab Meat instead.
+AddPrefabPostInit("crabking_mob", function(inst) ReplaceLoot(inst.prefab, "meat", "kyno_crabmeat") end)
+AddPrefabPostInit("crabking_mob_knight", function(inst) ReplaceLoot(inst.prefab, "meat", "kyno_crabmeat") end)
 
 -- New birds will spawn when landing on these turfs.
 AddClassPostConstruct("components/birdspawner", function(self) 

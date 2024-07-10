@@ -286,7 +286,7 @@ AddComponentAction("INVENTORY", "brewbook", function(inst, doer, actions)
 	table.insert(actions, ACTIONS.READBREWBOOK)
 end)
 
--- Action for installing Cookware on Fire Pit.
+-- Action for installing Cookware on Fire Pit / Tools.
 AddAction("INSTALLCOOKWARE", STRINGS.ACTIONS.INSTALLCOOKWARE, function(act)
 	local target = act.target or act.invobject
 	if target ~= nil and act.doer ~= nil then
@@ -332,6 +332,10 @@ AddComponentAction("USEITEM", "cookwareinstallable", function(inst, doer, target
 	if target:HasTag("cookware_post_installable") and not target:HasTag("firepit_with_cookware") then
 		table.insert(actions, ACTIONS.INSTALLCOOKWARE)
 	end
+	
+	if target:HasTag("cookware_other_installable") then
+		table.insert(actions, ACTIONS.INSTALLCOOKWARE)
+	end 
 end)
 
 -- Action String overrides.
@@ -428,11 +432,16 @@ ACTIONS.INSTALLCOOKWARE.stroverridefn = function(act)
 	if act.target:HasTag("cookware_post_installable") then
 		return STRINGS.KYNO_INSTALL_POT
 	end 
+	
+	if act.target:HasTag("elderpot_rubble") then
+		return STRINGS.KYNO_REPAIR_TOOL
+	end
+	
+	if act.target:HasTag("infestable_tree") then 
+		return STRINGS.KYNO_INFEST_TREE
+	end
+	
+	if act.target:HasTag("cookware_other_installable") then
+		return STRINGS.KYNO_INSTALL_INSTALLER
+	end
 end
-
---[[
--- Fix for fuel items, because the action was "Give" instead of "Add Fuel".
-ACTIONS.ADDFUEL.priority = 5
-ACTIONS.ADDWETFUEL.priority = 5
-ACTIONS.COOK.canforce = true
-]]--

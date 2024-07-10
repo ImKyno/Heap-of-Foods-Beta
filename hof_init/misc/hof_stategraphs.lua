@@ -331,7 +331,7 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.UNWRAP, function(inst
 	end
 end))
 
--- Install Cookwares.
+-- Install Cookwares and Tools.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.INSTALLCOOKWARE, function(inst, action)
 	local target = action.target or action.invobject
 	
@@ -339,6 +339,9 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.INSTALLCOOKWARE, func
 		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
 		
 	elseif target.components.cookwareinstaller and target:HasTag("cookware_post_installable") then
+		return "give"
+	
+	elseif target.components.cookwareinstaller and target:HasTag("cookware_other_installable") then
 		return "give"
 	end
 end))
@@ -349,6 +352,9 @@ AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.INSTALLCOOKWAR
 		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
 		
 	elseif target.components.cookwareinstaller and target:HasTag("cookware_post_installable") then
+		return "give"
+	
+	elseif target.components.cookwareinstaller and target:HasTag("cookware_other_installable") then
 		return "give"
 	end
 end))

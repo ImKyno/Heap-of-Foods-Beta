@@ -873,3 +873,4 @@ local NOTAGS_FIRESUPPRESSOR = UpvalueHacker.GetUpvalue(FireDetector.ActivateEmer
 for k, v in pairs(IGNORE_TAGS) do
     table.insert(NOTAGS_FIRESUPPRESSOR, v)
 end
+

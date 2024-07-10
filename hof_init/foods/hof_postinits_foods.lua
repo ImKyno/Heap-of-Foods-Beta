@@ -42,7 +42,6 @@ end
 
 local resize_items =
 {
-    "kyno_radish_cooked",
 	"kyno_cucumber",
 	"kyno_cucumber_cooked",
     "kyno_parznip_cooked",

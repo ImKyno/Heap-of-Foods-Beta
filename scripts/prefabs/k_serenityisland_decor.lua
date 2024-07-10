@@ -135,6 +135,7 @@ local function rubble2fn()
     inst.AnimState:PlayAnimation("rubble")
 
 	inst:AddTag("elderpot_rubble")
+	inst:AddTag("cookware_installable")
 
     inst.entity:SetPristine()
 
@@ -144,9 +145,9 @@ local function rubble2fn()
 	
 	inst:AddComponent("inspectable")
 	
-	inst:AddComponent("trader")
-	inst.components.trader:SetAcceptTest(TestItem)
-    inst.components.trader.onaccept = OnGetItemFromPlayer
+	inst:AddComponent("cookwareinstaller")
+	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
+    inst.components.cookwareinstaller.onaccept = OnGetItemFromPlayer
 	
 	inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)

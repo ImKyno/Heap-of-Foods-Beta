@@ -238,8 +238,8 @@ local function tree_startburn(inst)
         inst.components.pickable.caninteractwith = false
     end
 	
-	if inst.components.trader ~= nil then
-		inst.components.trader:Disable()
+	if inst.components.cookwareinstaller ~= nil then
+		inst.components.cookwareinstaller:Disable()
 	end
 end
 
@@ -298,7 +298,7 @@ local function treefn()
 	
 	inst:AddTag("tree")
     inst:AddTag("shelter")
-	inst:AddTag("sugartree_installable")
+	inst:AddTag("cookware_other_installable")
 
     inst.entity:SetPristine()
 
@@ -314,9 +314,9 @@ local function treefn()
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
 	
-	inst:AddComponent("trader")
-	inst.components.trader:SetAcceptTest(TestItem)
-    inst.components.trader.onaccept = OnGetItemFromPlayer
+	inst:AddComponent("cookwareinstaller")
+	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
+    inst.components.cookwareinstaller.onaccept = OnGetItemFromPlayer
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)

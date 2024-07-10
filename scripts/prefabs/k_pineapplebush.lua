@@ -96,8 +96,9 @@ local function fn()
 	inst:AddTag("plant")
 	inst:AddTag("bush")
 	inst:AddTag("thorny")
-	inst:AddTag("pineapplebush")
 	inst:AddTag("lunarplant_target")
+	inst:AddTag("pineapplebush")
+	inst:AddTag("pickable_tall")
 	
 	inst.entity:SetPristine()
 

@@ -75,7 +75,7 @@ local function rackfn()
 	end
 
 	inst:AddComponent("inspectable")
-	inst:AddComponent("tradable")
+	inst:AddComponent("cookwareinstallable")
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
@@ -118,7 +118,7 @@ local function bucketfn()
 	end
 
 	inst:AddComponent("inspectable")
-	inst:AddComponent("tradable")
+	inst:AddComponent("cookwareinstallable")
 	
 	inst:AddComponent("stackable")
     inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
@@ -252,7 +252,7 @@ local function repairtoolfn()
         return inst
     end
 	
-	inst:AddComponent("tradable")
+	inst:AddComponent("cookwareinstallable")
     inst:AddComponent("inspectable")
 	
     inst:AddComponent("inventoryitem")

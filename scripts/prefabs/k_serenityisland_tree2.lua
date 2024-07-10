@@ -162,8 +162,8 @@ local function tree_startburn(inst)
         inst.components.pickable.caninteractwith = false
     end
 	
-	if inst.components.trader ~= nil then
-		inst.components.trader:Disable()
+	if inst.components.cookwareinstaller ~= nil then
+		inst.components.cookwareinstaller:Disable()
 	end
 end
 
@@ -232,8 +232,8 @@ local function shortfn()
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
 	
-	inst:AddComponent("trader")
-	inst.components.trader:SetAcceptTest(TestItem)
+	inst:AddComponent("cookwareinstaller")
+	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
@@ -307,8 +307,8 @@ local function normalfn()
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
 	
-	inst:AddComponent("trader")
-	inst.components.trader:SetAcceptTest(TestItem)
+	inst:AddComponent("cookwareinstaller")
+	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)

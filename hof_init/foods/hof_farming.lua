@@ -164,7 +164,7 @@ local NUTRIENT_MED 	    = TUNING.FARM_PLANT_CONSUME_NUTRIENT_MED
 local NUTRIENT_HIGH     = TUNING.FARM_PLANT_CONSUME_NUTRIENT_HIGH
 
 -- Radish Plant.
-PLANT_DEFS.kyno_radish                             = {build = "farm_plant_kyno_radish", bank = "farm_plant_carrot"}
+PLANT_DEFS.kyno_radish                             = {build = "farm_plant_kyno_radish", bank = "farm_plant_kyno_radish"}
 PLANT_DEFS.kyno_radish.prefab                      = "farm_plant_kyno_radish"
 PLANT_DEFS.kyno_radish.product                     = "kyno_radish"
 PLANT_DEFS.kyno_radish.product_oversized           = "kyno_radish_oversized" 

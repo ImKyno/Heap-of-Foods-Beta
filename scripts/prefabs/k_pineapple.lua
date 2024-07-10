@@ -60,6 +60,8 @@ local function pineapple()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
+	
+	inst.AnimState:SetScale(1.2, 1.2, 1.2)
 
 	inst.AnimState:SetBank("kyno_pineapple")
 	inst.AnimState:SetBuild("kyno_pineapple")

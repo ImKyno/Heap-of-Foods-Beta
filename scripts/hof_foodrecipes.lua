@@ -2474,6 +2474,23 @@ local kyno_foods =
 		tags = {"honeyed", "drinkable_food"},
 		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"kyno_kokonut_halved", 1}, {"honey", 1}, {"ice", 1}}},
 	},
+	
+	chimas =
+	{
+		test = function(cooker, names, tags) return ((names.tillweed or 0) + (names.tillweed or 0) >= 2) and tags.frozen end,
+		priority = 35,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SLOW,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 5,
+		hunger = 12.5,
+		sanity = 33,
+		cooktime = 1.2,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"tillweed", 2}, {"ice", 2}}},
+	},
 }
 
 for k, recipe in pairs(kyno_foods) do

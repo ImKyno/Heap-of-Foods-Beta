@@ -176,6 +176,7 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"kyno_parznip_seeds",
 	"kyno_radish_oversized",
 	"kyno_radish_oversized_waxed",
+	"kyno_radish_oversized_rotten",
 	"kyno_sweetpotato_oversized",
 	"kyno_sweetpotato_oversized_waxed",
 	"kyno_fennel_oversized",
@@ -480,7 +481,8 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"kyno_pineapple_halved",
 	"kyno_pineapple_cooked",
 	"pizza_tropical",
-	"pinacolada"}) do
+	"pinacolada",
+	"chimas"}) do
         local foods_name = foods
         AddPrefabPostInit(foods_name, function(inst)
             inst.components.inventoryitem.imagename = foods_name

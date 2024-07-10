@@ -143,6 +143,7 @@ local function fn()
 	inst:AddTag("tree")
 	inst:AddTag("shelter")
 	inst:AddTag("infestable_tree")
+	inst:AddTag("cookware_other_installable")
 
 	MakeSnowCoveredPristine(inst)
 
@@ -162,9 +163,9 @@ local function fn()
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"driftwood_log", "driftwood_log", "kyno_twiggynuts", "kyno_twiggynuts", "kyno_oaktree_pod"})
 
-	inst:AddComponent("trader")
-	inst.components.trader:SetAcceptTest(TestItem)
-    inst.components.trader.onaccept = OnGetItemFromPlayer
+	inst:AddComponent("cookwareinstaller")
+	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
+    inst.components.cookwareinstaller.onaccept = OnGetItemFromPlayer
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.CHOP)
