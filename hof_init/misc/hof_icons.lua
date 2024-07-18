@@ -192,6 +192,7 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"kyno_turnip_seeds",
 	"kyno_turnip_oversized",
 	"kyno_turnip_oversized_waxed",
+	"kyno_turnip_oversized_rotten",
 	"kyno_rice",
 	"kyno_rice_cooked",
 	"kyno_rice_seeds",

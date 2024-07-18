@@ -98,22 +98,22 @@ configuration_options       =
             {
 				description = "4", 
 				hover       = "Dragonfly will drop 4 Coffee Plants.",
-				data        = 1
+				data        = 4
 			},
             {
 				description = "8", 
 				hover       = "Dragonfly will drop 8 Coffee Plants.",
-				data        = 2
+				data        = 8
 			},
 			{	
 				description = "12", 
 				hover       = "Dragonfly will drop 12 Coffee Plants.",
-				data        = 3
+				data        = 12
 			},
 			{
 				description = "16", 
 				hover       = "Dragonfly will drop 16 Coffee Plants.",
-				data        = 4
+				data        = 16
 			},
         },
         default             = 1,

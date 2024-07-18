@@ -820,9 +820,9 @@ local kyno_foods_keg =
 			eater:AddDebuff("kyno_piratebuff", "kyno_piratebuff")
 			
 			if eater ~= nil and eater.SoundEmitter ~= nil then
-				eater.SoundEmitter:PlaySound("hof_sounds/common/piraterum/laugh")
+				eater.SoundEmitter:PlaySound("hof_sounds/common/piraterum/laugh", "piraterum", 0.5)
 			else	
-				inst.SoundEmitter:PlaySound("hof_sounds/common/piraterum/laugh")
+				inst.SoundEmitter:PlaySound("hof_sounds/common/piraterum/laugh", "piraterum", 0.5)
 			end
 		end,
 	},

@@ -679,8 +679,8 @@ PLANT_DEFS.kyno_parznip.plantregistryinfo           =
     },
 }
 
--- Turnip Fern.
-PLANT_DEFS.kyno_turnip                             = {build = "farm_plant_kyno_turnip", bank = "farm_plant_garlic"}
+-- Turnip Plant.
+PLANT_DEFS.kyno_turnip                             = {build = "farm_plant_kyno_turnip", bank = "farm_plant_kyno_turnip"}
 PLANT_DEFS.kyno_turnip.prefab                      = "farm_plant_kyno_turnip"
 PLANT_DEFS.kyno_turnip.product                     = "kyno_turnip"
 PLANT_DEFS.kyno_turnip.product_oversized           = "kyno_turnip_oversized" 

@@ -109,75 +109,17 @@ end)
 
 -- Dragonfly Drops Coffee Plants.
 local DF_COFFEE = GetModConfigData("HOF_COFFEEDROPRATE")
-if DF_COFFEE == 1 then
-    AddPrefabPostInit("dragonfly", function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-    end)
-elseif DF_COFFEE == 2 then
-    AddPrefabPostInit("dragonfly", function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-    end)
-elseif DF_COFFEE == 3 then
-    AddPrefabPostInit("dragonfly", function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-    end)
-elseif DF_COFFEE == 4 then
-    AddPrefabPostInit("dragonfly", function(inst)
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-        inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
-    end)
-end
+AddPrefabPostInit("dragonfly", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	if inst.components.lootdropper ~= nil then
+		for _ = 1, DF_COFFEE do
+			inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
+		end
+	end
+end)
 
 -- It's Cursed. Players Have a Chance to Drop Long Pig. Except WX-78, Wurt, Wortox and Wormwood.
 local HUMANMEATY = GetModConfigData("HOF_HUMANMEAT")
@@ -208,10 +150,10 @@ if HUMANMEATY == 1 then
 				
 				if humanmeat ~= nil then
 					if humanmeat.Physics ~= nil then
-						local speed = 2 + math.random()
-						local angle = math.random() * 2 * PI
+						local speed = 1 + math.random()
+						local angle = math.random() * 1 * PI
 						humanmeat.Physics:Teleport(x, y + 1, z)
-						humanmeat.Physics:SetVel(speed * math.cos(angle), speed * 3, speed * math.sin(angle))
+						humanmeat.Physics:SetVel(speed * math.cos(angle), speed * 0.5, speed * math.sin(angle))
 					else
 						humanmeat.Transform:SetPosition(x, y, z)
 					end
