@@ -29,35 +29,35 @@ local prefabs =
     "collapse_small",
 }
 
-SetSharedLootTable('kyno_serenityisland_rock1',
+SetSharedLootTable("kyno_serenityisland_rock1",
 {
-    {'rocks',  1.00},
-    {'rocks',  1.00},
-    {'rocks',  1.00},
-    {'nitre',  1.00},
-    {'flint',  1.00},
-    {'nitre',  0.25},
-    {'flint',  0.60},
+    {"rocks",  1.00},
+    {"rocks",  1.00},
+    {"rocks",  1.00},
+    {"nitre",  1.00},
+    {"flint",  1.00},
+    {"nitre",  0.25},
+    {"flint",  0.60},
 })
 
-SetSharedLootTable('kyno_serenityisland_rock2',
+SetSharedLootTable("kyno_serenityisland_rock2",
 {
-    {'rocks',       1.00},
-    {'rocks',       1.00},
-    {'rocks',       1.00},
-    {'goldnugget',  1.00},
-    {'flint',       1.00},
-    {'goldnugget',  0.25},
-    {'flint',       0.60},
+    {"rocks",       1.00},
+    {"rocks",       1.00},
+    {"rocks",       1.00},
+    {"goldnugget",  1.00},
+    {"flint",       1.00},
+    {"goldnugget",  0.25},
+    {"flint",       0.60},
 })
 
-SetSharedLootTable('kyno_serenityisland_rock3',
+SetSharedLootTable("kyno_serenityisland_rock3",
 {
-    {'rocks',   1.0},
-    {'rocks',   1.0},
-    {'rocks',   1.0},
-    {'rocks',   1.0},
-    {'rocks',   0.6},
+    {"rocks",   1.0},
+    {"rocks",   1.0},
+    {"rocks",   1.0},
+    {"rocks",   1.0},
+    {"rocks",   0.6},
 })
 
 local function OnWork(inst, worker, workleft)
@@ -161,7 +161,7 @@ local function rock1_fn()
     end
 	
 	inst.components.inspectable.nameoverride = "ROCK"
-    inst.components.lootdropper:SetChanceLootTable('kyno_serenityisland_rock1')
+    inst.components.lootdropper:SetChanceLootTable("kyno_serenityisland_rock1")
 
     return inst
 end
@@ -174,7 +174,7 @@ local function rock2_fn()
     end
 
 	inst.components.inspectable.nameoverride = "ROCK"
-    inst.components.lootdropper:SetChanceLootTable('kyno_serenityisland_rock2')
+    inst.components.lootdropper:SetChanceLootTable("kyno_serenityisland_rock2")
 
     return inst
 end
@@ -187,7 +187,7 @@ local function rock_flintless_fn()
     end
 
 	inst.components.inspectable.nameoverride = "ROCK"
-    inst.components.lootdropper:SetChanceLootTable('kyno_serenityisland_rock3')
+    inst.components.lootdropper:SetChanceLootTable("kyno_serenityisland_rock3")
 
     return inst
 end
@@ -201,7 +201,7 @@ local function rock_flintless_med()
 
 	inst.components.inspectable.nameoverride = "ROCK"
     inst.components.workable:SetWorkLeft(TUNING.ROCKS_MINE_MED)
-    inst.components.lootdropper:SetChanceLootTable('kyno_serenityisland_rock3')
+    inst.components.lootdropper:SetChanceLootTable("kyno_serenityisland_rock3")
 
     return inst
 end
@@ -215,7 +215,7 @@ local function rock_flintless_low()
 	
 	inst.components.inspectable.nameoverride = "ROCK"
 	inst.components.workable:SetWorkLeft(TUNING.ROCKS_MINE_LOW)
-    inst.components.lootdropper:SetChanceLootTable('kyno_serenityisland_rock3')
+    inst.components.lootdropper:SetChanceLootTable("kyno_serenityisland_rock3")
 
     return inst
 end

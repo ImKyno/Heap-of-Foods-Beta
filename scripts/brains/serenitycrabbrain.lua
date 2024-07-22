@@ -28,10 +28,10 @@ end
 
 local function GoHomeAction(inst)
     if inst.components.homeseeker and 
-       inst.components.homeseeker.home and 
-       inst.components.homeseeker.home:IsValid() and
-	   inst.sg:HasStateTag("trapped") == false then
-        return BufferedAction(inst, inst.components.homeseeker.home, ACTIONS.GOHOME)
+		inst.components.homeseeker.home and 
+		inst.components.homeseeker.home:IsValid() and
+		inst.sg:HasStateTag("trapped") == false then
+		return BufferedAction(inst, inst.components.homeseeker.home, ACTIONS.GOHOME)
     end
 end
 
@@ -53,8 +53,8 @@ end
 function SerenityCrabBrain:OnStart()
     local root = PriorityNode(
     {
-        EventNode(self.inst, "gohome", 
-            DoAction(self.inst, GoHomeAction, "go home", true )),
+        EventNode(self.inst, "GoHome", 
+            DoAction(self.inst, GoHomeAction, "GoHome", true )),
         DoAction(self.inst, EatFoodAction),
         Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_WANDER_DIST)
     }, .25)

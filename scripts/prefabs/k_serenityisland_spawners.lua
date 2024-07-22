@@ -9,6 +9,7 @@ local assets =
 local prefabs =
 {
     "kyno_pebblecrab",
+	"kyno_chicken2",
 	"kyno_serenityisland_crate",
 }
 
@@ -66,6 +67,38 @@ local function crabfn()
     return inst
 end
 
+local function chickenfn()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
+	
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("kyno_chicken2_spawner.tex")
+	
+	inst:AddTag("NOBLOCK")
+	inst:AddTag("CLASSIFIED")
+	inst:AddTag("chicken2spawner")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+
+    inst:AddComponent("childspawner")
+    inst.components.childspawner.childname = "kyno_chicken2"
+    inst.components.childspawner:SetOnAddChildFn(OnAddChild)
+    inst.components.childspawner:SetMaxChildren(3)
+    inst.components.childspawner:SetSpawnPeriod(60)
+    inst.components.childspawner:SetRegenPeriod(960)
+    inst.components.childspawner:StartRegen()
+	inst.components.childspawner:StartSpawning()
+
+    return inst
+end
+
 local function cratefn()
 	local inst = CreateEntity()
 
@@ -89,4 +122,5 @@ local function cratefn()
 end
 
 return Prefab("kyno_pebblecrab_spawner", crabfn, assets, prefabs),
+Prefab("kyno_chicken2_spawner", chickenfn, assets, prefabs),
 Prefab("kyno_serenityisland_crate_spawner", cratefn, assets, prefabs)

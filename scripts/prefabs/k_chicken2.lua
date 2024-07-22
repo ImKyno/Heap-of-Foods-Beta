@@ -17,19 +17,23 @@ local prefabs =
 	"goose_feather",
 }
 
-local chickensounds = 
+local ChickenSounds = 
 {
 	scream 	= "dontstarve_DLC001/creatures/buzzard/hurt",
 	hurt 	= "dontstarve_DLC001/creatures/buzzard/hurt",
 }
 
-SetSharedLootTable('kyno_chicken2',
+SetSharedLootTable("kyno_chicken2",
 {
-    {'drumstick',             1.00},
-	{'drumstick',             0.50},
-	{'goose_feather',         1.00},
-	{'goose_feather',         0.33},
+    {"drumstick",             1.00},
+	{"drumstick",             0.50},
+	{"goose_feather",         1.00},
+	{"goose_feather",         0.33},
 })
+
+local function SetHome(inst)
+	inst.components.knownlocations:RememberLocation("home", inst:GetPosition())
+end
 
 local function OnStartDay(inst)
     if inst.components.combat:HasTarget() ~= nil then
@@ -43,12 +47,10 @@ end
 
 local function OnInventory(inst)
 	inst:ClearBufferedAction()
-	-- inst.components.periodicspawner:Stop()
 end
 
 local function OnDropped(inst)
 	inst.components.sleeper:GoToSleep()
-	-- inst.components.periodicspawner:Start()
 end
 
 local function CanSpawnEgg(inst)
@@ -100,8 +102,8 @@ local function fn()
 	inst:AddTag("cookable")
 	inst:AddTag("animal")
 	inst:AddTag("prey")
+	inst:AddTag("canbetrapped")
 	inst:AddTag("smallcreature")
-	inst:AddTag("herdmember")
 	inst:AddTag("chicken2")
 	
 	inst.entity:SetPristine()
@@ -110,8 +112,9 @@ local function fn()
 		return inst
 	end
 	
-	inst:AddComponent("knownlocations")
 	inst:AddComponent("inspectable")
+	inst:AddComponent("knownlocations")
+	inst:AddComponent("homeseeker")
 	inst:AddComponent("sleeper")
 	inst:AddComponent("timer")
 	inst:AddComponent("inventory")
@@ -125,10 +128,11 @@ local function fn()
 	inst.components.cookable:SetOnCookedFn(OnCooked)
 	
 	inst:AddComponent("lootdropper")
-	inst.components.lootdropper:SetChanceLootTable('kyno_chicken2')
+	inst.components.lootdropper:SetChanceLootTable("kyno_chicken2")
 
 	inst:AddComponent("locomotor")
 	inst.components.locomotor.runspeed = TUNING.RABBIT_RUN_SPEED
+	inst.components.locomotor:SetAllowPlatformHopping(true)
 
 	inst:SetBrain(brain)
 	inst:SetStateGraph("SGchicken2")
@@ -139,9 +143,6 @@ local function fn()
 
 	inst:AddComponent("combat")
 	inst.components.combat.hiteffectsymbol = "chest"
-	
-	inst:AddComponent("herdmember")
-    inst.components.herdmember:SetHerdPrefab("kyno_chicken2_herd")
 
 	inst:AddComponent("health")
 	inst.components.health:SetMaxHealth(TUNING.KYNO_CHICKEN2_HEALTH)
@@ -157,15 +158,6 @@ local function fn()
 	inst.components.inventoryitem.canbepickedup = false
 	inst.components.inventoryitem:SetSinks(true)
 	
-	--[[
-	inst:AddComponent("periodicspawner")
-	inst.components.periodicspawner:SetPrefab("kyno_chicken_egg")
-	inst.components.periodicspawner:SetRandomTimes(500, 60)
-	inst.components.periodicspawner:SetDensityInRange(16, 4)
-	inst.components.periodicspawner:SetMinimumSpacing(6)
-	inst.components.periodicspawner:SetSpawnTestFn(CanSpawnEgg)
-	]]--
-	
 	inst:AddComponent("named")
     inst.components.named.possiblenames = 
 	{ 
@@ -179,10 +171,11 @@ local function fn()
 	}
     inst.components.named:PickNewName()
 
-    inst.components.locomotor:SetAllowPlatformHopping(true)
     inst:AddComponent("embarker")	
 
-	inst.sounds = chickensounds
+	inst.sounds = ChickenSounds
+	inst:DoTaskInTime(0, SetHome)
+	
 	MakeSmallBurnableCharacter(inst, "body")
 	MakeTinyFreezableCharacter(inst, "chest")
 
@@ -190,12 +183,10 @@ local function fn()
 	
 	inst:ListenForEvent("gotosleep", function(inst) 
 		inst.components.inventoryitem.canbepickedup = true 
-		-- inst.components.periodicspawner:Stop()
 	end)
 	
     inst:ListenForEvent("onwakeup", function(inst) 
     	inst.components.inventoryitem.canbepickedup = false
-		-- inst.components.periodicspawner:Start()
     end)
 
     inst:ListenForEvent("death", function(inst, data) 
@@ -203,6 +194,7 @@ local function fn()
 		if inst.components.lootdropper and owner then
 			local loots = inst.components.lootdropper:GenerateLoot()
 			inst:Remove()
+			
 			for k, v in pairs(loots) do
 				local loot = SpawnPrefab(v)
 				owner.components.inventory:GiveItem(loot)

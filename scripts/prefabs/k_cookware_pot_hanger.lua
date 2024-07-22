@@ -171,7 +171,7 @@ local function GetFirepit(inst)
         local ents = TheSim:FindEntities(x,y,z, 0.01)
         inst.firepit = nil
         for k,v in pairs(ents) do
-            if v.prefab == 'firepit' then
+            if v.prefab == "firepit" then
                 inst.firepit = v
                 break
             end
@@ -186,7 +186,7 @@ local function GetBubble(inst)
         local ents = TheSim:FindEntities(x,y,z, 0.01)
         inst.bubble = nil
         for k,v in pairs(ents) do
-            if v.prefab == 'kyno_product_bubble' then
+            if v.prefab == "kyno_product_bubble" then
                 inst.bubble = v
                 break
             end
@@ -318,41 +318,41 @@ end
 local function OnGetItemFromPlayer(inst, giver, item)
 	if item.components.inventoryitem ~= nil and item:HasTag("pot_syrup_installer") then
 		local syrup_pot = SpawnPrefab("kyno_cookware_syrup")
-		
+
 		syrup_pot.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 		syrup_pot.AnimState:PlayAnimation("place_pot")
 		syrup_pot.Transform:SetPosition(inst.Transform:GetWorldPosition())
-		
+
 		ChangeFireFX(inst)
 	end
 
 	if item.components.inventoryitem ~= nil and item:HasTag("pot_small_installer") then
 		local small_pot = SpawnPrefab("kyno_cookware_small")
-		
+
 		small_pot.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 		small_pot.AnimState:PlayAnimation("place_pot")
 		small_pot.Transform:SetPosition(inst.Transform:GetWorldPosition())
-		
+
 		ChangeFireFX(inst)
 	end
 
 	if item.components.inventoryitem ~= nil and item:HasTag("pot_big_installer") then
 		local large_pot = SpawnPrefab("kyno_cookware_big")
-		
+
 		large_pot.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 		large_pot.AnimState:PlayAnimation("place_pot")
 		large_pot.Transform:SetPosition(inst.Transform:GetWorldPosition())
-		
+
 		ChangeFireFX(inst)
 	end
-	
+
 	inst:Remove()
 end
 
 function hofshallowcopy(orig)
     local orig_type = type(orig)
     local copy
-    if orig_type == 'table' then
+    if orig_type == "table" then
         copy = {}
         for orig_key, orig_value in pairs(orig) do
             copy[orig_key] = orig_value
@@ -502,7 +502,7 @@ local function donecookfn(inst)
 		if firepit then
 			firepit:AddTag("NOCLICK")
 		end
-		
+
 		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
 			OnPotSteam(inst)
@@ -523,7 +523,7 @@ local function donecookfn(inst)
 			OnPotSteam(inst)
 		end)
 	end
-	
+
 	HideGoops(inst)
 	ShowProductImage(inst)
 end
@@ -536,7 +536,7 @@ local function continuedonefn(inst)
 		if firepit then
 			firepit:AddTag("NOCLICK")
 		end
-		
+
 		inst.steam_task = inst:DoPeriodicTask(2, function()
 			inst._steam:push()
 			OnPotSteam(inst)
@@ -554,7 +554,7 @@ local function continuedonefn(inst)
 			OnPotSteam(inst)
 		end)
 	end
-	
+
 	HideGoops(inst)
 	ShowProductImage(inst)
 end
@@ -571,7 +571,7 @@ local function continuecookfn(inst)
 			firepit:AddTag("NOCLICK")
 		end
     end
-	
+
 	HideGoops(inst)
 end
 
@@ -596,7 +596,7 @@ local function harvestfn(inst, doer)
 	if bubble then
 		bubble:Remove()
 	end
-	
+
 	HideGoops(inst)
 end
 
@@ -612,7 +612,7 @@ local function OnSave(inst, data)
     if inst:HasTag("burnt") or (inst.components.burnable ~= nil and inst.components.burnable:IsBurning()) then
         data.burnt = true
     end
-	
+
 	local firepit = GetFirepit(inst)
 	if firepit and firepit:HasTag("firepit_has_pot") then
 		data.firepit_has_pot = true
@@ -624,7 +624,7 @@ local function OnLoad(inst, data)
         inst.components.burnable.onburnt(inst)
         inst.Light:Enable(false)
     end
-	
+
 	if data ~= nil and data.firepit_has_pot then
 		ChangeFireFX(inst)
 	end
@@ -738,11 +738,11 @@ local function syruppotfn()
 
     if not TheWorld.ismastersim then
 		inst:ListenForEvent("steampot", OnPotSteam)
-		
+
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("syrup_pot")
 		end
-		
+
         return inst
     end
 
@@ -842,11 +842,11 @@ local function potfn(small)
 
     if not TheWorld.ismastersim then
 		inst:ListenForEvent("steampot", OnPotSteam)
-		
+
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("cooking_pot")
 		end
-		
+
         return inst
     end
 
@@ -905,7 +905,7 @@ local function potsmallfn()
     return inst
 end
 
-local pit_defs = 
+local pit_defs =
 {
 	pit = { { 0, 0, 0 } },
 }
@@ -955,11 +955,11 @@ local function elderpotfn()
 
     if not TheWorld.ismastersim then
 		inst:ListenForEvent("steampot", OnPotSteam)
-		
+
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("syrup_pot")
 		end
-		
+
         return inst
     end
 

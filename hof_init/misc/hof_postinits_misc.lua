@@ -9,6 +9,7 @@ local cooking           = require("cooking")
 
 require("hof_debugcommands")
 
+--[[
 -- Commands for testing.
 local function HofCommandsPostConstruct(self)
 	if self.console_edit then
@@ -18,6 +19,7 @@ local function HofCommandsPostConstruct(self)
 			"hofswfoods",
 			"hofhamfoods",
 			"hofotherfoods",
+			"hofveggies",
 			"hoftestcoffee",
 			"hofcrockpots",
 			"hofwarlycrockpots",
@@ -38,6 +40,7 @@ local function HofCommandsPostConstruct(self)
 end
 
 AddClassPostConstruct("screens/consolescreen", HofCommandsPostConstruct)
+]]--
 
 -- Favorite Mod Foods.
 AddPrefabPostInit("wilson", function(inst)

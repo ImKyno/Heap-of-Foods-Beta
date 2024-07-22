@@ -504,7 +504,7 @@ local function FirePitCookwarePostinit(inst)
             local ents = _G.TheSim:FindEntities(x,y,z, 0.01)
             inst.firepit = nil
             for k,v in pairs(ents) do
-                if v.prefab == 'firepit' then
+                if v.prefab == "firepit" then
                     inst.firepit = v
                     break
                 end
@@ -512,13 +512,13 @@ local function FirePitCookwarePostinit(inst)
         end
         return inst.firepit
     end
-	
+
 	local function ApplyHanger(inst)
 		local firepit = GetFirepit(inst)
         if firepit then
 			firepit:AddTag("firepit_with_cookware")
 			firepit.components.cookwareinstaller.enabled = false
-			
+
 			firepit.hashanger = true
 		end
 	end
@@ -530,7 +530,7 @@ local function FirePitCookwarePostinit(inst)
 			firepit:AddTag("firepit_with_cookware")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 			firepit.components.cookwareinstaller.enabled = false
-			
+
 			firepit.hasgrill = true
         end
     end
@@ -542,7 +542,7 @@ local function FirePitCookwarePostinit(inst)
 			firepit:AddTag("firepit_with_cookware")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 			firepit.components.cookwareinstaller.enabled = false
-			
+
 			firepit.hasoven = true
         end
     end
@@ -559,7 +559,7 @@ local function FirePitCookwarePostinit(inst)
         if item.components.inventoryitem ~= nil and item:HasTag("pot_hanger_installer") then
             SpawnPrefab("kyno_cookware_hanger").Transform:SetPosition(inst.Transform:GetWorldPosition())
             inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/pot_hanger")
-			
+
             inst.components.cookwareinstaller.enabled = false
 			ApplyHanger(inst)
         end
@@ -567,31 +567,31 @@ local function FirePitCookwarePostinit(inst)
         if item.components.inventoryitem ~= nil and item:HasTag("grill_big_installer") then
             SpawnPrefab("kyno_cookware_grill").Transform:SetPosition(inst.Transform:GetWorldPosition())
             inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/grill_big")
-			
+
             inst.components.cookwareinstaller.enabled = false
             ChangeGrillFireFX(inst)
         end
-		
+
         if item.components.inventoryitem ~= nil and item:HasTag("grill_small_installer") then
             SpawnPrefab("kyno_cookware_small_grill").Transform:SetPosition(inst.Transform:GetWorldPosition())
             inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/grill_small")
-			
+
             inst.components.cookwareinstaller.enabled = false
             ChangeGrillFireFX(inst)
         end
-        
+
         if item.components.inventoryitem ~= nil and item:HasTag("oven_installer") then
             SpawnPrefab("kyno_cookware_oven").Transform:SetPosition(inst.Transform:GetWorldPosition())
             inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/oven")
-			
+
             inst.components.cookwareinstaller.enabled = false
             ChangeOvenFireFX(inst)
         end
     end
-	
+
 	local function OnSave(inst, data)
 		local firepit = GetFirepit(inst)
-		
+
 		data.queued_charcoal = inst.queued_charcoal or nil
 		data.hasgrill = firepit.hasgrill or nil
 		data.hasoven = firepit.hasoven or nil
@@ -601,37 +601,37 @@ local function FirePitCookwarePostinit(inst)
 
 	local function OnLoad(inst, data)
 		local firepit = GetFirepit(inst)
-	
+
 		if data ~= nil and data.queued_charcoal then
 			inst.queued_charcoal = true
 		end
-		
+
 		if data ~= nil and data.hascookware then
 			firepit.components.cookwareinstaller.enabled = false
-		end 
-		
+		end
+
 		if data ~= nil and data.hashanger then
 			firepit:AddTag("firepit_with_cookware")
 			firepit.components.cookwareinstaller.enabled = false
-			
+
 			firepit.hashanger = true
 		end
-		
+
 		if data ~= nil and data.hasgrill then
 			firepit:AddTag("firepit_has_grill")
 			firepit:AddTag("firepit_with_cookware")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 			firepit.components.cookwareinstaller.enabled = false
-			
+
 			firepit.hasgrill = true
 		end
-		
+
 		if data ~= nil and data.hasoven then
 			firepit:AddTag("firepit_has_oven")
 			firepit:AddTag("firepit_with_cookware")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 			firepit.components.cookwareinstaller.enabled = false
-			
+
 			firepit.hasoven = true
 		end
 	end
@@ -653,7 +653,7 @@ local function FirePitCookwarePostinit(inst)
     inst:AddComponent("cookwareinstaller")
     inst.components.cookwareinstaller:SetAcceptTest(TestItem)
     inst.components.cookwareinstaller.onaccept = OnGetItemFromPlayer
-	
+
 	inst.OnSave = OnSave
     inst.OnLoad = OnLoad
 end
@@ -843,11 +843,11 @@ local function TumbleweedPostinit(inst)
 			table.insert(inst.lootaggro, false)
 		end
 	end
-	
+
 	if not _G.TheWorld.ismastersim then
         return inst
     end
-	
+
 	inst:DoTaskInTime(0, OnInitBrewingCard)
 end
 

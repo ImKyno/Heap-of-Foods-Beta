@@ -106,7 +106,7 @@ local function GetFirepit(inst)
         local ents = TheSim:FindEntities(x,y,z, 0.01)
         inst.firepit = nil
         for k,v in pairs(ents) do
-            if v.prefab == 'firepit' then
+            if v.prefab == "firepit" then
                 inst.firepit = v
                 break
             end
@@ -121,7 +121,7 @@ local function GetBubble(inst)
         local ents = TheSim:FindEntities(x,y,z, 0.01)
         inst.bubble = nil
         for k,v in pairs(ents) do
-            if v.prefab == 'kyno_product_bubble' then
+            if v.prefab == "kyno_product_bubble" then
                 inst.bubble = v
                 break
             end
@@ -228,31 +228,31 @@ end
 local function OnGetItemFromPlayer(inst, giver, item)
 	if item.components.inventoryitem ~= nil and item:HasTag("casserole_small_installer") then
 		local small_cass = SpawnPrefab("kyno_cookware_oven_small_casserole")
-		
+
 		small_cass.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/dish_place_oven")
 		-- small_cass.AnimState:PlayAnimation("place_casserole")
 		small_cass.Transform:SetPosition(inst.Transform:GetWorldPosition())
-		
+
 		ChangeFireFX(inst)
 	end
-	
+
 	if item.components.inventoryitem ~= nil and item:HasTag("casserole_big_installer") then
 		local big_cass = SpawnPrefab("kyno_cookware_oven_casserole")
-		
+
 		big_cass.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/dish_place_oven")
 		-- big_cass.AnimState:PlayAnimation("place_casserole")
 		big_cass.Transform:SetPosition(inst.Transform:GetWorldPosition())
-		
+
 		ChangeFireFX(inst)
 	end
-	
+
 	inst:Remove()
 end
 
 function hofshallowcopy(orig)
     local orig_type = type(orig)
     local copy
-    if orig_type == 'table' then
+    if orig_type == "table" then
         copy = {}
         for orig_key, orig_value in pairs(orig) do
             copy[orig_key] = orig_value
@@ -327,7 +327,7 @@ local function OnOpen(inst)
 		inst.AnimState:PlayAnimation("place_casserole")
 		inst.AnimState:PushAnimation("idle")
     end
-	
+
 	HideGoops(inst)
 end
 
@@ -344,7 +344,7 @@ local function OnClose(inst, doer)
         end
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
     end
-	
+
 	HideGoops(inst)
 end
 
@@ -399,7 +399,7 @@ local function donecookfn(inst)
 			OnOvenSteam(inst)
 		end)
 	end
-	
+
 	HideGoops(inst)
 	ShowProductImage(inst)
 end
@@ -418,7 +418,7 @@ local function continuedonefn(inst)
 			OnOvenSteam(inst)
 		end)
 	end
-	
+
 	HideGoops(inst)
 	ShowProductImage(inst)
 end
@@ -435,7 +435,7 @@ local function continuecookfn(inst)
 			firepit:AddTag("NOCLICK")
 		end
     end
-	
+
 	HideGoops(inst)
 end
 
@@ -474,7 +474,7 @@ local function OnSave(inst, data)
     if inst:HasTag("burnt") or (inst.components.burnable ~= nil and inst.components.burnable:IsBurning()) then
         data.burnt = true
     end
-	
+
 	local firepit = GetFirepit(inst)
 	if firepit and firepit:HasTag("firepit_has_oven") then
 		data.firepit_has_oven = true
@@ -486,7 +486,7 @@ local function OnLoad(inst, data)
         inst.components.burnable.onburnt(inst)
         inst.Light:Enable(false)
     end
-	
+
 	if data ~= nil and data.firepit_has_oven then
 		ChangeFireFX(inst)
 	end
@@ -649,11 +649,11 @@ local function casserolefn(small)
 
     if not TheWorld.ismastersim then
 		inst:ListenForEvent("steamoven", OnOvenSteam)
-		
+
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("cooking_pot")
 		end
-		
+
         return inst
     end
 

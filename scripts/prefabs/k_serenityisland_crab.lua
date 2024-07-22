@@ -49,7 +49,7 @@ local function StartTimer(inst)
 	end
 end
 
-local function onnear(inst)
+local function OnNear(inst)
 	if not inst.components.timer:TimerExists("hide") then
 		inst.sg:GoToState("burrow")
 		StartTimer(inst)
@@ -120,7 +120,7 @@ local function fn()
 	
 	inst:AddComponent("playerprox")
 	inst.components.playerprox:SetDist(3, 4)
-	inst.components.playerprox:SetOnPlayerNear(onnear)
+	inst.components.playerprox:SetOnPlayerNear(OnNear)
 
 	inst:SetStateGraph("SGserenitycrab")
 	inst:SetBrain(brain)

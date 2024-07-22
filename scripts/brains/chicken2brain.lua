@@ -4,9 +4,9 @@ require("behaviours/runaway")
 require("behaviours/doaction")
 require("behaviours/panic")
 
-local SEE_BAIT_DIST   = 20
+local SEE_BAIT_DIST   = 15
 local MAX_LEASH_DIST  = 10
-local MAX_WANDER_DIST = 20
+local MAX_WANDER_DIST = 15
 local STOP_RUN_DIST   = 7
 local SEE_PLAYER_DIST = 10
 
@@ -40,8 +40,11 @@ local RUN_AWAY_PARAMS =
 		guy.components.combat.target:HasTag("chicken"))
     end,
 }
-local function GoHome(inst)
-    if inst.components.homeseeker and inst.components.homeseeker.home and inst.components.homeseeker.home:IsValid() then
+local function GoHomeAction(inst)
+    if inst.components.homeseeker and 
+		inst.components.homeseeker.home and 
+		inst.components.homeseeker.home:IsValid() and
+		inst.sg:HasStateTag("trapped") == false then
         return BufferedAction(inst, inst.components.homeseeker.home, ACTIONS.GOHOME)
     end
 end
@@ -53,19 +56,21 @@ function Chicken2Brain:OnStart()
         WhileNode(function() return self.inst.components.health:GetPercent() < .95 end, "LowHealth",
                     RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST)),
 		WhileNode(function() return not TheWorld.state.iscaveday end, "IsNight",
-            DoAction(self.inst, GoHome, "Go Home")),					
+            DoAction(self.inst, GoHomeAction, "GoHome")),					
         RunAway(self.inst, RUN_AWAY_PARAMS, SEE_PLAYER_DIST, STOP_RUN_DIST),
         RunAway(self.inst, "OnFire", SEE_PLAYER_DIST, STOP_RUN_DIST),
         DoAction(self.inst, EatFoodAction),
-        Leash(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_LEASH_DIST, MAX_WANDER_DIST),
-        Wander(self.inst, nil, MAX_WANDER_DIST)
+        -- Leash(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_LEASH_DIST, MAX_WANDER_DIST),
+        Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_WANDER_DIST)
     }, 0.25)
 
     self.bt = BT(self.inst, root)
 end
 
+--[[
 function Chicken2Brain:OnInitializationComplete()
     self.inst.components.knownlocations:RememberLocation("home", Point(self.inst.Transform:GetWorldPosition()))
 end
+]]--
 
 return Chicken2Brain

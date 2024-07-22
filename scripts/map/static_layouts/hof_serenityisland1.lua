@@ -309,7 +309,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_pebblecrab_spanwer",
+          type = "kyno_pebblecrab_spawner",
           shape = "rectangle",
           x = 2448,
           y = 2470,
@@ -4501,7 +4501,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_chicken2_herd",
+          type = "kyno_chicken2_spawner",
           shape = "rectangle",
           x = 2690,
           y = 1206,
@@ -4512,7 +4512,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_chicken2_herd",
+          type = "kyno_chicken2_spawner",
           shape = "rectangle",
           x = 2710,
           y = 326,
@@ -4523,7 +4523,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_chicken2_herd",
+          type = "kyno_chicken2_spawner",
           shape = "rectangle",
           x = 2916,
           y = 722,
@@ -4534,7 +4534,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_chicken2_herd",
+          type = "kyno_chicken2_spawner",
           shape = "rectangle",
           x = 2556,
           y = 822,

@@ -89,6 +89,44 @@ function c_hofotherfoods()
 	end
 end
 
+-- Give all the Mod vegetables.
+function c_hofveggies()
+	local player = ConsoleCommandPlayer()
+	
+    if player ~= nil then
+        c_select(player)
+        player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
+		c_give("kyno_aloe",               40, true)
+		c_give("kyno_aloe_cooked",        40, true)
+		c_give("kyno_aloe_seeds",         40, true)
+		c_give("kyno_cucumber",           40, true)
+		c_give("kyno_cucumber_cooked",    40, true)
+		c_give("kyno_cucumber_seeds",     40, true)
+		c_give("kyno_fennel",             40, true)
+		c_give("kyno_fennel_cooked",      40, true)
+		c_give("kyno_fennel_seeds",       40, true)
+		c_give("kyno_parznip",            40, true)
+		c_give("kyno_parznip_eaten",      40, true)
+		c_give("kyno_parznip_cooked",     40, true)
+		c_give("kyno_parznip_seeds",      40, true)
+		c_give("kyno_radish",             40, true)
+		c_give("kyno_radish_cooked",      40, true)
+		c_give("kyno_radish_seeds",       40, true)
+		c_give("kyno_rice",               40, true)
+		c_give("kyno_rice_cooked",        40, true)
+		c_give("kyno_rice_seeds",         40, true)
+		c_give("kyno_sweetpotato",        40, true)
+		c_give("kyno_sweetpotato_cooked", 40, true)
+		c_give("kyno_sweetpotato_seeds",  40, true)
+		c_give("kyno_turnip",             40, true)
+		c_give("kyno_turnip_cooked",      40, true)
+		c_give("kyno_turnip_seeds",       40, true)
+		c_give("firenettles_seeds",       40, true)
+		c_give("forgetmelots_seeds",      40, true)
+		c_give("tillweed_seeds",          40, true)
+	end
+end
+
 -- Quick command for testing Coffee Bushes and Coffee.
 function c_hoftestcoffee()
 	local player = ConsoleCommandPlayer()
@@ -158,7 +196,7 @@ function c_hoflayout(name, offset)
     obj_layout.Place({math.floor(x) - 3, math.floor(z) - 3}, name, add_fn, nil, TheWorld.Map)
 end
 
--- Quick Test on Serenity Archipelago Stuff.
+-- Quick Test on Serenity Archipelago stuff.
 function c_hofserenityisland()
     local player = ConsoleCommandPlayer()
 	
@@ -179,6 +217,7 @@ function c_hofserenityisland()
 	end
 end
 
+-- Quick Test on Seaside Island stuff.
 function c_hofmeadowisland()
 	local player = ConsoleCommandPlayer()
 	
@@ -223,6 +262,7 @@ function c_hofjars()
 	end
 end
 
+-- Quick command to test Monster Foods.
 function c_hofmonsterfoods()
 	local player = ConsoleCommandPlayer()
 	

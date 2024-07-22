@@ -14,7 +14,6 @@ PrefabFiles =
 	"k_foodbuff_frog",
 	"k_foodbuff_fear",
 	"k_foodbuff_pirate",
-	-- "k_foodbuff_spider",
 
 	"k_product_bubble",
 	"k_fertilizer_nutrient_defs",
@@ -25,6 +24,7 @@ PrefabFiles =
 	"k_newfoods",
 	"k_newingredients",
 	"k_newveggies",
+	"k_newweeds",
 
 	"k_tunacan",
 	"k_cannedfoods",
@@ -65,7 +65,6 @@ PrefabFiles =
 	"k_kokonut",
 	"k_kokonuttree",
 	"k_kokonuttree_sapling",
-	"k_weed_seeds",
 	"k_floatilizer",
 	"k_twiggynuts",
 	"k_serenityisland_tools",
@@ -83,7 +82,6 @@ PrefabFiles =
 	"k_serenityisland_sugarfly",
 	"k_serenityisland_sugarflywings",
 	"k_chicken2",
-	"k_chicken2_herd",
 	"k_chicken2_eggs",
 	"k_cookware_fire",
 	"k_cookware_tools",

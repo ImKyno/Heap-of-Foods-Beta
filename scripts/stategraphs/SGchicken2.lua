@@ -262,10 +262,24 @@ local states =
             EventHandler("animover", function(inst) inst.sg:GoToState("run") end),
         },
     },
+	
+	State{
+        name = "trapped",
+        tags = {"busy", "trapped"},
+
+        onenter = function(inst)
+            inst.Physics:Stop()
+			inst:ClearBufferedAction()
+            inst.AnimState:PlayAnimation("idle", true)
+            inst.sg:SetTimeout(1)
+        end,
+
+        ontimeout = function(inst) inst.sg:GoToState("idle") end,
+    },
 }
 CommonStates.AddSleepStates(states)
 CommonStates.AddFrozenStates(states)
 CommonStates.AddHopStates(states, true, { pre = "hop", loop = "hop", pst = "hop"})
-CommonStates.AddSimpleActionState(states, "gohome", "hop", 4 * FRAMES, {"busy"})
+CommonStates.AddSimpleActionState(states, "GoHome", "hop", 4 * FRAMES, {"busy"})
 
 return StateGraph("chicken2", states, events, "idle", actionhandlers)

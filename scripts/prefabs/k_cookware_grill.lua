@@ -101,7 +101,7 @@ local function GetFirepit(inst)
         local ents = TheSim:FindEntities(x,y,z, 0.01)
         inst.firepit = nil
         for k,v in pairs(ents) do
-            if v.prefab == 'firepit' then
+            if v.prefab == "firepit" then
                 inst.firepit = v
                 break
             end
@@ -116,7 +116,7 @@ local function GetBubble(inst)
         local ents = TheSim:FindEntities(x,y,z, 0.01)
         inst.bubble = nil
         for k,v in pairs(ents) do
-            if v.prefab == 'kyno_product_bubble' then
+            if v.prefab == "kyno_product_bubble" then
                 inst.bubble = v
                 break
             end
@@ -200,7 +200,7 @@ end
 function hofshallowcopy(orig)
     local orig_type = type(orig)
     local copy
-    if orig_type == 'table' then
+    if orig_type == "table" then
         copy = {}
         for orig_key, orig_value in pairs(orig) do
             copy[orig_key] = orig_value
@@ -407,7 +407,7 @@ local function OnSave(inst, data)
     if inst:HasTag("burnt") or (inst.components.burnable ~= nil and inst.components.burnable:IsBurning()) then
         data.burnt = true
     end
-	
+
 	local firepit = GetFirepit(inst)
 	if firepit and firepit:HasTag("firepit_has_grill") then
 		data.firepit_has_grill = true
@@ -419,7 +419,7 @@ local function OnLoad(inst, data)
         inst.components.burnable.onburnt(inst)
         inst.Light:Enable(false)
     end
-	
+
 	if data ~= nil and data.firepit_has_grill then
 		ChangeFireFX(inst)
 	end
@@ -472,11 +472,11 @@ local function grillsmallfn()
 
     if not TheWorld.ismastersim then
 		inst:ListenForEvent("grillsmoke", OnGrillSmoke)
-		
+
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("cooking_pot")
 		end
-		
+
         return inst
     end
 
@@ -555,11 +555,11 @@ local function grillbigfn()
 
     if not TheWorld.ismastersim then
 		inst:ListenForEvent("grillsmoke", OnGrillSmoke)
-		
+
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("cooking_pot")
 		end
-		
+
         return inst
     end
 

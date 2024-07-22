@@ -1,7 +1,7 @@
 local WEED_DEFS = require("prefabs/weed_defs").WEED_DEFS
 
 local assets_weeds = {
-    Asset("ANIM", "anim/kyno_weed_seeds.zip"),
+    Asset("ANIM", "anim/kyno_veggies.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -17,6 +17,7 @@ local function OnDeploy(inst, pt, deployer)
     local plant = SpawnPrefab(inst.components.farmplantable.plant)
     plant.Transform:SetPosition(pt.x, 0, pt.z)
     plant:PushEvent("on_planted", {in_soil = false, doer = deployer, seed = inst})
+	
     TheWorld.Map:CollapseSoilAtPoint(pt.x, 0, pt.z)
     inst:Remove()
 end
@@ -25,8 +26,9 @@ local function Seed_GetDisplayName(inst)
     local registry_key = inst.weed_def.product
 
     local plantregistryinfo = inst.weed_def.plantregistryinfo
-    return (ThePlantRegistry:KnowsSeed(registry_key, plantregistryinfo) and ThePlantRegistry:KnowsPlantName(registry_key, plantregistryinfo)) and STRINGS.NAMES["KNOWN_"..string.upper(inst.prefab)]
-            or nil
+    return (ThePlantRegistry:KnowsSeed(registry_key, plantregistryinfo) 
+	and ThePlantRegistry:KnowsPlantName(registry_key, plantregistryinfo)) 
+	and STRINGS.NAMES["KNOWN_"..string.upper(inst.prefab)] or nil
 end
 
 local function seeds_common(name)
@@ -41,8 +43,8 @@ local function seeds_common(name)
 
         MakeInventoryPhysics(inst)
 
-        inst.AnimState:SetBank("kyno_weed_seeds")
-        inst.AnimState:SetBuild("kyno_weed_seeds")
+        inst.AnimState:SetBank("kyno_veggies")
+        inst.AnimState:SetBuild("kyno_veggies")
         inst.AnimState:PlayAnimation("kyno_" .. name .. "_seeds", false)
         inst.AnimState:SetRayTestOnBB(true)
 
@@ -64,29 +66,27 @@ local function seeds_common(name)
         if not TheWorld.ismastersim then
             return inst
         end
+		
+		inst:AddComponent("bait")
+		inst:AddComponent("tradable")
+        inst:AddComponent("inspectable")
+		inst:AddComponent("inventoryitem")
+		
+		inst:AddComponent("stackable")
+        inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+		
+		inst:AddComponent("cookable")
+        inst.components.cookable.product = "seeds_cooked"
 
         inst:AddComponent("edible")
         inst.components.edible.foodtype = FOODTYPE.SEEDS
-
-        inst:AddComponent("stackable")
-        inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-        inst:AddComponent("tradable")
-        inst:AddComponent("inspectable")
-        inst:AddComponent("inventoryitem")
-
-        inst.components.edible.healthvalue = TUNING.HEALING_TINY / 2
+		inst.components.edible.healthvalue = TUNING.HEALING_TINY / 2
         inst.components.edible.hungervalue = TUNING.CALORIES_TINY
 
         inst:AddComponent("perishable")
         inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERSLOW)
         inst.components.perishable:StartPerishing()
         inst.components.perishable.onperishreplacement = "spoiled_food"
-
-        inst:AddComponent("cookable")
-        inst.components.cookable.product = "seeds_cooked"
-
-        inst:AddComponent("bait")
 
         inst:AddComponent("farmplantable")
 		if name == "firenettles" then
@@ -106,7 +106,6 @@ local function seeds_common(name)
 
         MakeSmallBurnable(inst)
         MakeSmallPropagator(inst)
-
         MakeHauntableLaunchAndPerish(inst)
 
         return inst
