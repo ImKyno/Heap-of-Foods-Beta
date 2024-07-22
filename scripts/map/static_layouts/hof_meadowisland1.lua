@@ -9843,7 +9843,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_chicken2_spawner",
+          type = "kyno_chicken2_herd",
           shape = "rectangle",
           x = 3138,
           y = 3200,
@@ -9854,7 +9854,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_chicken2_spawner",
+          type = "kyno_chicken2_herd",
           shape = "rectangle",
           x = 2844,
           y = 3418,

@@ -1,4 +1,4 @@
-require "prefabutil"
+require("prefabutil")
 
 local assets =
 {
@@ -101,6 +101,7 @@ local function grass(name, stage)
         inst.AnimState:SetBank("kyno_wheat")
         inst.AnimState:SetBuild("kyno_wheat")
         inst.AnimState:PlayAnimation("idle", true)
+		inst.AnimState:SetRayTestOnBB(true)
 
 		inst:AddTag("plant")
         inst:AddTag("renewable")

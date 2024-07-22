@@ -242,6 +242,7 @@ local function MakeVeggie(name)
         inst.AnimState:SetBank("kyno_veggies")
         inst.AnimState:SetBuild("kyno_veggies")
         inst.AnimState:PlayAnimation(name)
+		inst.AnimState:SetRayTestOnBB(true)
 		
 		inst.pickupsound = "vegetation_firm"
 		
@@ -305,6 +306,7 @@ local function MakeVeggie(name)
         inst.AnimState:SetBank("kyno_veggies")
         inst.AnimState:SetBuild("kyno_veggies")
         inst.AnimState:PlayAnimation(name .. "_cooked")
+		inst.AnimState:SetRayTestOnBB(true)
 
         local float = KYNO_VEGGIES[name].cooked_float_settings
         if float ~= nil then

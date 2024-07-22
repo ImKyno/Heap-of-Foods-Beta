@@ -31,9 +31,11 @@ SetSharedLootTable("kyno_chicken2",
 	{"goose_feather",         0.33},
 })
 
+--[[
 local function SetHome(inst)
-	inst.components.knownlocations:RememberLocation("home", inst:GetPosition())
+	inst.components.knownlocations:RememberLocation("spawnpoint", inst:GetPosition())
 end
+]]--
 
 local function OnStartDay(inst)
     if inst.components.combat:HasTarget() ~= nil then
@@ -104,6 +106,7 @@ local function fn()
 	inst:AddTag("prey")
 	inst:AddTag("canbetrapped")
 	inst:AddTag("smallcreature")
+	inst:AddTag("herdmember")
 	inst:AddTag("chicken2")
 	
 	inst.entity:SetPristine()
@@ -112,12 +115,13 @@ local function fn()
 		return inst
 	end
 	
+	inst:AddComponent("timer")
+	inst:AddComponent("sleeper")
+	inst:AddComponent("embarker")
+	inst:AddComponent("inventory")
 	inst:AddComponent("inspectable")
 	inst:AddComponent("knownlocations")
-	inst:AddComponent("homeseeker")
-	inst:AddComponent("sleeper")
-	inst:AddComponent("timer")
-	inst:AddComponent("inventory")
+	-- inst:AddComponent("homeseeker")
 	
 	inst:AddComponent("trader")
 	inst.components.trader:SetAcceptTest(TestItem)
@@ -126,6 +130,9 @@ local function fn()
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "drumstick_cooked"
 	inst.components.cookable:SetOnCookedFn(OnCooked)
+	
+	inst:AddComponent("herdmember")
+    inst.components.herdmember:SetHerdPrefab("kyno_chicken2_herd")
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetChanceLootTable("kyno_chicken2")
@@ -171,10 +178,8 @@ local function fn()
 	}
     inst.components.named:PickNewName()
 
-    inst:AddComponent("embarker")	
-
 	inst.sounds = ChickenSounds
-	inst:DoTaskInTime(0, SetHome)
+	-- inst:DoTaskInTime(0, SetHome)
 	
 	MakeSmallBurnableCharacter(inst, "body")
 	MakeTinyFreezableCharacter(inst, "chest")

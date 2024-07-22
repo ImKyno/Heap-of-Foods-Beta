@@ -1292,18 +1292,19 @@ local kyno_foods =
 	-- Secret / Custom Foods. Why are you here by the way?	
 	bowlofgears = 
 	{
-		test = function(cooker, names, tags) return (names.gears and names.gears >= 3) and not tags.frozen end,
+		test = function(cooker, names, tags) return (names.gears and names.gears >= 2) and (names.wagpunk_bits and names.wagpunk_bits >= 2) 
+		and not tags.frozen end,
 		priority = 1,
 		foodtype = FOODTYPE.GEARS,
 		perishtime = nil,
-		health = 135,
-		hunger = 150,
+		health = 150,
+		hunger = 200,
 		sanity = 150,
 		cooktime = 2,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GEARS,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"gears", 3}, {"twigs", 1}}},
+		card_def = {ingredients = {{"gears", 2}, {"wagpunk_bits", 2}}},
 	},
 	
 	longpigmeal = 

@@ -68,7 +68,7 @@ AddTile("HOF_TIDALMARSH", "LAND",
 
 -- Since we already have the turfs and they can be dug, we are going to use them for make a custom prefab.
 -- Basically you're getting the original turfs from ground with a custom prefab i.e: the turf item.
-local GROUND_TURFS = 
+local GROUND_TURFS =
 {
 	[WORLD_TILES.QUAGMIRE_PARKFIELD] = "turf_pinkpark",
 	[WORLD_TILES.QUAGMIRE_CITYSTONE] = "turf_stonecity",
@@ -122,16 +122,15 @@ Layouts["SerenityIslandShop"] = StaticLayout.Get("map/static_layouts/hof_serenit
 
 -- Retrofit the Serenity Archipelago in the world.
 -- The numbers below each turf represents them on the setpiece file.
-_G.SERENITYISLAND_GROUNDS        = 
+_G.SERENITYISLAND_GROUNDS        =
 {
 	WORLD_TILES.OCEAN_BRINEPOOL, WORLD_TILES.ROCKY, WORLD_TILES.SAVANNA, WORLD_TILES.QUAGMIRE_CITYSTONE, WORLD_TILES.QUAGMIRE_PARKFIELD
 	-- 1              			 -- 2               -- 3                 -- 4                            -- 5
 }
 
-local hof_serenity_islands          = 
+local hof_serenity_islands          =
 {
-	"hof_serenityisland1", 
-	"hof_serenityisland2"
+	"hof_serenityisland1",
 }
 
 for i, layout in ipairs(hof_serenity_islands) do
@@ -149,13 +148,13 @@ for i, layout in ipairs(hof_serenity_islands) do
 end
 
 -- Ocean Wrecks Setpieces.
-_G.OCEANSETPIECE_GROUNDS         = 
+_G.OCEANSETPIECE_GROUNDS         =
 {
 	WORLD_TILES.OCEAN_BRINEPOOL,
 	-- 1
 }
 
-local hof_ocean_setpieces 		 = 
+local hof_ocean_setpieces 		 =
 {
 	"hof_oceansetpiece_crates",
 	"hof_oceansetpiece_crates2",
@@ -225,20 +224,20 @@ local function HofWaterloggedArea()
 		if math.random() < 0.3 then
 			table.insert(stuff, "watertree_root")
 		end
-	end	
+	end
 
 	for i = 1, 3 do
 		if math.random() < 0.3 then
 			table.insert(stuff, "oceanvine_deco")
 		end
-	end				
-	
+	end
+
 	for i = 1, 2 do
 		if math.random() < 0.3 then
 			table.insert(stuff, "kyno_lotus_ocean")
 		end
 	end
-	
+
 	for i = 1, 2 do
 		if math.random() < 0.3 then
 			table.insert(stuff, "oceanvine_cocoon")
@@ -255,7 +254,7 @@ local function HofWaterloggedArea()
 	return stuff
 end
 
-Layouts["Waterlogged1"] = StaticLayout.Get("map/static_layouts/hof_waterlogged1", 
+Layouts["Waterlogged1"] = StaticLayout.Get("map/static_layouts/hof_waterlogged1",
 {
 	areas =
 	{
@@ -263,7 +262,7 @@ Layouts["Waterlogged1"] = StaticLayout.Get("map/static_layouts/hof_waterlogged1"
 	}
 })
 
-Layouts["Waterlogged2"] = StaticLayout.Get("map/static_layouts/hof_waterlogged2", 
+Layouts["Waterlogged2"] = StaticLayout.Get("map/static_layouts/hof_waterlogged2",
 {
 	areas =
 	{
@@ -271,7 +270,7 @@ Layouts["Waterlogged2"] = StaticLayout.Get("map/static_layouts/hof_waterlogged2"
 	}
 })
 
-Layouts["Waterlogged3"] = StaticLayout.Get("map/static_layouts/hof_waterlogged3", 
+Layouts["Waterlogged3"] = StaticLayout.Get("map/static_layouts/hof_waterlogged3",
 {
 	areas =
 	{
@@ -279,7 +278,7 @@ Layouts["Waterlogged3"] = StaticLayout.Get("map/static_layouts/hof_waterlogged3"
 	}
 })
 
-Layouts["Waterlogged4"] = StaticLayout.Get("map/static_layouts/hof_waterlogged4", 
+Layouts["Waterlogged4"] = StaticLayout.Get("map/static_layouts/hof_waterlogged4",
 {
 	areas =
 	{
