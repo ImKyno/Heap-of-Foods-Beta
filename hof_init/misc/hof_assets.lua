@@ -49,15 +49,15 @@ Assets =
 	
 	Asset("IMAGE", "images/hof_loadingtips_icon.tex"), 
 	Asset("ATLAS", "images/hof_loadingtips_icon.xml"),
+	
+	Asset("IMAGE", "images/tabimages/hof_tabimages.tex"),
+	Asset("ATLAS", "images/tabimages/hof_tabimages.xml"),
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 
 	Asset("IMAGE", "images/minimapimages/hof_parsnipminimap.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_parsnipminimap.xml"),
-
-	Asset("IMAGE", "images/tabimages/hof_tabimages.tex"),
-	Asset("ATLAS", "images/tabimages/hof_tabimages.xml"),
 
 	Asset("IMAGE", "images/cookbookimages/hof_cookbookimages.tex"),
 	Asset("ATLAS", "images/cookbookimages/hof_cookbookimages.xml"),

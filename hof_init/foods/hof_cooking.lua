@@ -34,6 +34,7 @@ AddIngredientValues({"moon_cap"},               {veggie     = 0.5,  mushrooms = 
 AddIngredientValues({"livinglog"},              {inedible   = 1,    magic     = 1})
 AddIngredientValues({"spider"},                 {monster    = 1,    spider    = 1})
 AddIngredientValues({"tillweed"},               {veggie     = 0.5,  weed      = 1})
+AddIngredientValues({"wagpunk_bits"}, 			{junk       = 1,	inedible  = 1})
 
 -- New Mod Crock Pot Ingredients.
 AddIngredientValues({"kyno_coffeebeans"}, 		{seeds      = 1}, 	 		  				  true)

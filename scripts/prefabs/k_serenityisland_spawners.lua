@@ -69,10 +69,6 @@ local function chickenfn()
     local inst = CreateEntity()
 
     inst.entity:AddTransform()
-	inst.entity:AddNetwork()
-	
-	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("kyno_chicken2_spawner.tex")
 
     inst:AddTag("herd")
     inst:AddTag("NOBLOCK")
@@ -88,7 +84,7 @@ local function chickenfn()
 
     inst:AddComponent("periodicspawner")
 	inst.components.periodicspawner:SetRandomTimes(20, 20)
-    -- inst.components.periodicspawner:SetRandomTimes(960, 960 * 0.5)
+    -- inst.components.periodicspawner:SetRandomTimes(960, 980)
     inst.components.periodicspawner:SetPrefab("kyno_chicken2")
     inst.components.periodicspawner:SetOnSpawnFn(OnSpawnedHerdMember)
     inst.components.periodicspawner:SetSpawnTestFn(CanSpawnHerdMember)

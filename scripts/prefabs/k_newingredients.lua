@@ -192,8 +192,6 @@ local function flourfn()
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 	
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
     return inst
@@ -450,8 +448,6 @@ local function spicefn()
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 	
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
     return inst
@@ -512,8 +508,6 @@ local function baconfn()
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_bacon_cooked"
 
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
@@ -569,8 +563,6 @@ local function bacon_cookedfn()
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_bacon_cooked"
 
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
@@ -1107,8 +1099,6 @@ local function sugarfn()
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 	
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
     return inst

@@ -208,6 +208,11 @@ local function fn()
     inst.components.talker.font = TALKINGFONT
     inst.components.talker.offset = Vector3(0, -600, 0)
     inst.components.talker:MakeChatter()
+	
+	if not TheNet:IsDedicated() then
+        inst:AddComponent("pointofinterest")
+        inst.components.pointofinterest:SetHeight(60)
+    end
 
     inst.entity:SetPristine()
 

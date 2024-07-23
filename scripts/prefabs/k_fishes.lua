@@ -267,7 +267,7 @@ local function cookedfn(bank, build, data)
 	inst:AddComponent("inspectable")
 	
 	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
 
     inst:AddComponent("perishable")
     inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)

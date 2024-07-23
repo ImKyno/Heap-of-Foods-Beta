@@ -142,7 +142,7 @@ local function fn_cooked()
 	inst.components.edible.healthvalue = TUNING.KYNO_OAKTREE_POD_COOKED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_OAKTREE_POD_COOKED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_OAKTREE_POD_COOKED_SANITY
-	inst.components.edible.foodtype = FOODTYPE.VEGGIE
+	inst.components.edible.foodtype = FOODTYPE.RAW
 	
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
