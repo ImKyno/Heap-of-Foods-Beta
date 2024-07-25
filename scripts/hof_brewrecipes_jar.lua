@@ -767,7 +767,7 @@ for k, recipe in pairs(kyno_foods_jar) do
 	recipe.name = k
 	recipe.weight = 1
 	recipe.brewbook_category = "jar"
-	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages.xml"
+	recipe.cookbook_atlas = "images/cookbookimages/hof_brewbookimages.xml"
 	recipe.cookbook_tex = k..".tex"
 end
 

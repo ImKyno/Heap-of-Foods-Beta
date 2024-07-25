@@ -114,6 +114,7 @@ function BrewbookPage:CreateRecipeBook()
 	self.details_root:AddChild(self:PopulateRecipeDetailPanel(self.all_recipes[ (TheCookbook.selected ~= nil and TheCookbook.selected[self.category] or 1) ]))
 
 	self:ApplyFilters()
+	self.recipe_grid:RefreshView()
 end
 
 local ingredient_icon_remap = {}
@@ -178,6 +179,7 @@ end
 
 function BrewbookPage:_GetSpoilString(perishtime)
 	return perishtime == nil and STRINGS.UI.COOKBOOK.PERISH_NEVER
+	or perishtime <= TUNING.PERISH_SUPERFAST and STRINGS.UI.COOKBOOK.PERISH_VERY_QUICKLY
 	or perishtime <= TUNING.PERISH_FAST and STRINGS.UI.COOKBOOK.PERISH_QUICKLY
 	or perishtime <= TUNING.PERISH_MED and STRINGS.UI.COOKBOOK.PERISH_AVERAGE
 	or perishtime <= TUNING.PERISH_SLOW and STRINGS.UI.COOKBOOK.PERISH_SLOWLY

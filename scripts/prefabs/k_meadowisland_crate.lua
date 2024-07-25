@@ -19,6 +19,7 @@ local prefabs =
 	"trinket_13",
 	"trinket_26",
 	
+	"kyno_oil",
 	"kyno_banana",
 	"kyno_tunacan",
 	"kyno_tomatocan",

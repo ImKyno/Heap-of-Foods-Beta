@@ -127,49 +127,26 @@ function MilkableAnimal:Milk(milker)
 			self.onmilkedfn(self.inst, milker)
 		end
 		
-		--[[ I'll handle this from the postinits, it's better I think.
-		local kick_chance
-		
-		if self.inst:HasTag("domesticated") then
-			kick_chance = 0
-		elseif milker:HasTag("beefalo") then
-			kick_chance = 10
-		else
-			kick_chance = 70
-		end
-	
-		-- GoToState/Animations is really weird and makes them bugged when milking. I don't know how to fix this.
-		-- So for now, unless I figure out, just play some stupid sound and nothing more...
-		if math.random(100) <= kick_chance and milker.components.combat and not self.inst:HasTag("sleeping")
-		and not self.inst:HasTag("is_frozen") and not self.inst:HasTag("is_thawing") then
-			milker.components.combat:GetAttacked(self.inst, self.damage)
-			milker:PushEvent("kick")
-		elseif self.inst:HasTag("domesticated") then
-			-- Do something?
-		else
-			-- Do something?
-		end
-		]]--
-		
         local loot = nil
         if milker ~= nil and milker.components.inventory ~= nil and self.product ~= nil then
-			loot = SpawnPrefab(self.product)
-			if loot ~= nil then
-				milker:PushEvent("picksomething", { object = self.inst, loot = loot })
-				milker.components.inventory:GiveItem(loot, nil, self.inst:GetPosition())
-				
-				-- Extra loot if is Spring or is Domesticated!
-				if TheWorld.state.isspring then
-					local extraloot = SpawnPrefab(self.product)
-					milker.components.inventory:GiveItem(extraloot, nil, self.inst:GetPosition())
-				end
-				
-				if self.inst:HasTag("domesticated") then
-					local extraloot_domesticated = SpawnPrefab(self.product)
-					milker.components.inventory:GiveItem(extraloot_domesticated, nil, self.inst:GetPosition())
-					milker.components.inventory:GiveItem(extraloot_domesticated, nil, self.inst:GetPosition())
-				end
-			end
+            loot = SpawnPrefab(self.product)
+
+            if loot ~= nil then
+                local numLoots = 1
+
+                -- Extra loot if is Spring or is Domesticated!
+                if TheWorld.state.isspring then
+                    numLoots = numLoots + 1
+                end
+
+                if self.inst:HasTag("domesticated") then
+                    numLoots = numLoots + 2
+                end
+
+                loot.components.stackable:SetStackSize(numLoots)
+                milker:PushEvent("picksomething", { object = self.inst, loot = loot })
+                milker.components.inventory:GiveItem(loot, nil, self.inst:GetPosition())
+            end
         end
 
         self.canbemilked = false

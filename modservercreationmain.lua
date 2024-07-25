@@ -3,8 +3,8 @@ local require 	= _G.require
 
 FrontEndAssets =
 {
-	Asset("IMAGE", "images/customizationimages/hof_customizationicons.tex"),
-	Asset("ATLAS", "images/customizationimages/hof_customizationicons.xml"),
+	-- Asset("IMAGE", "images/customizationimages/hof_customizationicons.tex"),
+	-- Asset("ATLAS", "images/customizationimages/hof_customizationicons.xml"),
 
     -- Accomplishments Mod.
     -- Asset("IMAGE", "images/achievementsimages/hof_achievements_images.tex"),

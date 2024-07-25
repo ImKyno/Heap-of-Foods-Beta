@@ -8,6 +8,7 @@ local assets =
 	
 	Asset("ANIM", "anim/tropicalfish.zip"),
 	Asset("ANIM", "anim/tropicalfish02.zip"),
+	Asset("ANIM", "anim/tropicalfish_cooked.zip"),
 	
 	Asset("ANIM", "anim/neonfish.zip"),
 	Asset("ANIM", "anim/neonfish02.zip"),
@@ -43,8 +44,10 @@ local fish_prefabs =
 {
 	"fishmeat_small",
     "fishmeat_small_cooked",
+	
 	"fishmeat",
 	"fishmeat_cooked",
+	
 	"spoiled_fish_small",
     "spoiled_fish",
 }
@@ -341,7 +344,7 @@ local tropical_data =
     weight_max = 47.32,
     perish_product = "spoiled_fish_small",
     loot = { "fishmeat_small" },
-    cookable_product = "fishmeat_small_cooked",
+    cookable_product = "kyno_tropicalfish_cooked",
     healthvalue = TUNING.KYNO_FISH_SMALL_HEALTH,
     hungervalue = TUNING.KYNO_FISH_SMALL_HUNGER,
     perish_time = TUNING.PERISH_SUPERFAST,
@@ -386,6 +389,10 @@ local function tropicalfn()
 	return commonfn("tropicalfish", "tropicalfish", "tropicalfish02", tropical_data)
 end
 
+local function cooked_tropicalfn()
+	return cookedfn("tropicalfish_cooked", "tropicalfish_cooked", "cooked", tropical_data)
+end
+
 local function neonfn()
 	return commonfn("neonfish", "neonfish", "neonfish02", neon_data)
 end
@@ -424,6 +431,7 @@ Prefab("kyno_koi", koifn, assets, fish_prefabs),
 Prefab("kyno_koi_cooked", cooked_koifn, assets, fish_prefabs),
 
 Prefab("kyno_tropicalfish", tropicalfn, assets, fish_prefabs),
+Prefab("kyno_tropicalfish_cooked", cooked_tropicalfn, assets, fish_prefabs),
 
 Prefab("kyno_neonfish", neonfn, assets, fish_prefabs),
 Prefab("kyno_neonfish_cooked", cooked_neonfn, assets, fish_prefabs),

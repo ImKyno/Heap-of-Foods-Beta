@@ -313,7 +313,7 @@ local kyno_foods_seasonal =
 for k, recipe in pairs(kyno_foods_seasonal) do
 	recipe.name = k
 	recipe.weight = 1
-	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages.xml"
+	recipe.cookbook_atlas = "images/cookbookimages/hof_seasonalfoodsimages.xml"
 	recipe.cookbook_tex = k..".tex"
 end
 

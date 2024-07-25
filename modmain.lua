@@ -1,6 +1,6 @@
 -- Common Dependencies.
-local _G 			= GLOBAL
-local require 		= _G.require
+local _G            = GLOBAL
+local require       = _G.require
 
 require("hof_constants")
 require("hof_debugcommands")
@@ -9,7 +9,6 @@ require("hof_brewing")
 -- Mod Languages. I need to make this one better if new translations are added...
 local HOF_LANGUAGE = GetModConfigData("HOF_LANGUAGE")
 modimport("hof_init/strings/"..HOF_LANGUAGE)
-modimport("hof_init/strings/hof_strings_loadingtips")
 
 -- Mod Dependencies.
 local hof_init_misc =
@@ -19,6 +18,7 @@ local hof_init_misc =
 	"hof_recipes",
 	"hof_brewbook",
 	"hof_actions",
+	"hof_scrapbook",
 	"hof_stategraphs",
 	"hof_meatrackfix",
 	"hof_containers",
@@ -29,7 +29,6 @@ local hof_init_misc =
 
 local hof_init_world =
 {
-	-- "hof_customize",
 	"hof_regrowth",
 	"hof_retrofit",
 	"hof_retrofit_component",
@@ -48,6 +47,12 @@ local hof_init_foods =
 	"hof_postinits_buffs",
 }
 
+local hof_init_strings =
+{
+	"hof_strings_loadingtips",
+	"hof_strings_scrapbook",
+}
+
 for _, v in pairs(hof_init_misc) do
 	modimport("hof_init/misc/"..v)
 end
@@ -60,17 +65,17 @@ for _, v in pairs(hof_init_foods) do
 	modimport("hof_init/foods/"..v)
 end
 
+for _, v in pairs(hof_init_strings) do
+	modimport("hof_init/strings/"..v)
+end
+
 -- Mod Options.
-_G.CONFIGS_HOF =
+_G.CONFIGS_HOF  =
 {
 	ENABLEDMODS = {}
 }
 
 _G.CONFIGS_HOF.SEASONALFOOD = GetModConfigData("HOF_SEASONALFOOD")
-
--- Fix For Inventory Icons.
-local atlas = (src and src.components.inventoryitem and src.components.inventoryitem.atlasname
-and resolvefilepath(src.components.inventoryitem.atlasname)) or "images/inventoryimages.xml"
 
 -- This belongs to the Accomplishments Mod.
 -- modimport("achievementsmain")

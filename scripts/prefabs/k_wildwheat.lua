@@ -6,7 +6,7 @@ local assets =
     Asset("ANIM", "anim/grass1.zip"),
 	Asset("ANIM", "anim/kyno_wheat.zip"),
     Asset("SOUND", "sound/common.fsb"),
-	
+
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 }
@@ -94,7 +94,7 @@ local function grass(name, stage)
         inst.entity:AddAnimState()
         inst.entity:AddSoundEmitter()
         inst.entity:AddNetwork()
-	
+
 		local minimap = inst.entity:AddMiniMapEntity()
         minimap:SetIcon("kyno_wildwheat.tex")
 
@@ -133,9 +133,7 @@ local function grass(name, stage)
         end
 
         inst:AddComponent("lootdropper")
-		
         inst:AddComponent("inspectable")
-		inst.components.inspectable.nameoverride = "GRASS"
 
 		inst:AddComponent("workable")
 		inst.components.workable:SetWorkAction(ACTIONS.DIG)

@@ -1,4 +1,5 @@
 -- New Veggie System to match the R.W.Y.S update. Metatable Source: https://steamcommunity.com/workshop/filedetails/?id=2511339795
+-- New Farm Plants. Source: https://forums.kleientertainment.com/forums/topic/126286-template-adding-farm-plants-to-the-game/
 local _G = GLOBAL
 
 _G.setmetatable(env, {__index=function(t, k) return _G.rawget(_G, k) end})
@@ -131,9 +132,6 @@ AddNewVeggie("kyno_rice",
 	TUNING.SEED_CHANCE_UNCOMMON
 )
 
--- New Farm Plants. Source: https://forums.kleientertainment.com/forums/topic/126286-template-adding-farm-plants-to-the-game/
--- LIST: Aloe - Dragon Fruit | Fennel - Asparagus | Parsnip - Eggplant | Cucumber - Durian | Sweet Potato - Potato | Radish - Carrot
--- Turnip - Onion
 local PLANT_DEFS        = require("prefabs/farm_plant_defs").PLANT_DEFS
 local FRAMES            = _G.FRAMES
 

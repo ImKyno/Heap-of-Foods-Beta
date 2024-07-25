@@ -58,10 +58,10 @@ Assets =
 
 	Asset("IMAGE", "images/minimapimages/hof_parsnipminimap.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_parsnipminimap.xml"),
-
-	Asset("IMAGE", "images/cookbookimages/hof_cookbookimages.tex"),
-	Asset("ATLAS", "images/cookbookimages/hof_cookbookimages.xml"),
-	Asset("ATLAS_BUILD", "images/cookbookimages/hof_cookbookimages.xml", 256),
+	
+	Asset("IMAGE", "images/scrapbookimages/hof_scrapbookimages.tex"),
+	Asset("ATLAS", "images/scrapbookimages/hof_scrapbookimages.xml"),
+	Asset("ATLAS_BUILD", "images/scrapbookimages/hof_scrapbookimages.xml", 256),
 
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -71,6 +71,18 @@ Assets =
 	Asset("ATLAS", "images/ingredientimages/hof_ingredientimages.xml"),
 	Asset("ATLAS_BUILD", "images/ingredientimages/hof_ingredientimages.xml", 256),
 	
+	Asset("IMAGE", "images/cookbookimages/hof_cookbookimages.tex"),
+	Asset("ATLAS", "images/cookbookimages/hof_cookbookimages.xml"),
+	Asset("ATLAS_BUILD", "images/cookbookimages/hof_cookbookimages.xml", 256),
+	
+	Asset("IMAGE", "images/cookbookimages/hof_brewbookimages.tex"),
+	Asset("ATLAS", "images/cookbookimages/hof_brewbookimages.xml"),
+	Asset("ATLAS_BUILD", "images/cookbookimages/hof_brewbookimages.xml", 256),
+	
+	Asset("IMAGE", "images/cookbookimages/hof_seasonalfoodsimages.tex"),
+	Asset("ATLAS", "images/cookbookimages/hof_seasonalfoodsimages.xml"),
+	Asset("ATLAS_BUILD", "images/cookbookimages/hof_seasonalfoodsimages.xml", 256),
+	
 	-- Accomplishments Mod.
     -- Asset("IMAGE", "images/achievementsimages/hof_achievements_images.tex"),
     -- Asset("ATLAS", "images/achievementsimages/hof_achievements_images.xml"),
@@ -78,7 +90,3 @@ Assets =
     -- Asset("IMAGE", "images/achievementsimages/hof_achievements_buttons.tex"),
     -- Asset("ATLAS", "images/achievementsimages/hof_achievements_buttons.xml"),
 }
-
--- Minimap Icons.
-AddMinimapAtlas("images/minimapimages/hof_minimapicons.xml")
-AddMinimapAtlas("images/minimapimages/hof_parsnipminimap.xml") -- The other icon was very small, so I'm just using this from TAP...
