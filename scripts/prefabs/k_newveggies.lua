@@ -288,6 +288,9 @@ local function MakeVeggie(name)
 		
 		inst:AddComponent("cookable")
 		inst.components.cookable.product = name .. "_cooked"
+		
+		MakeSmallBurnable(inst)
+        MakeSmallPropagator(inst)
 
         MakeHauntableLaunchAndPerish(inst)
 
@@ -344,6 +347,9 @@ local function MakeVeggie(name)
 
         inst:AddComponent("bait")
         inst:AddComponent("tradable")
+		
+		MakeSmallBurnable(inst)
+        MakeSmallPropagator(inst)
 
         MakeHauntableLaunchAndPerish(inst)
 

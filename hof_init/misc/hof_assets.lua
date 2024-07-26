@@ -19,6 +19,18 @@ Assets =
 	
 	Asset("ANIM", "anim/ui_brewer_1x3.zip"),
 	
+	Asset("ANIM", "anim/parsnip.zip"),
+	Asset("ANIM", "anim/grotto_parsnip_giant.zip"),
+	
+	Asset("ANIM", "anim/farm_plant_kyno_radish.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_sweetpotato.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_fennel.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_parznip.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_rice.zip"),
+	
 	Asset("ANIM", "anim/kyno_mushroomstump.zip"),
 	Asset("ANIM", "anim/kyno_spotbush.zip"),
 	Asset("ANIM", "anim/kyno_wheat.zip"),
@@ -34,18 +46,6 @@ Assets =
 	Asset("ANIM", "anim/kyno_bananatree_sapling.zip"),
 	Asset("ANIM", "anim/kyno_kokonut.zip"),
 	Asset("ANIM", "anim/kyno_turfs_hof.zip"),
-
-	Asset("ANIM", "anim/parsnip.zip"),
-	Asset("ANIM", "anim/grotto_parsnip_giant.zip"),
-
-	Asset("ANIM", "anim/farm_plant_kyno_radish.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_sweetpotato.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_fennel.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_parznip.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_rice.zip"),
 	
 	Asset("IMAGE", "images/hof_loadingtips_icon.tex"), 
 	Asset("ATLAS", "images/hof_loadingtips_icon.xml"),

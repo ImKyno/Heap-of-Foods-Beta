@@ -15,7 +15,6 @@ local prefabs =
     "kyno_seaweeds",
 	"kyno_waterycress",
 	"kyno_taroroot",
-	"kyno_cucumber",
 	"kyno_mussel",
 	"kyno_limpets",
 	"kyno_neonfish",
@@ -220,7 +219,6 @@ local function fn()
 	inst.components.lootdropper:AddRandomLoot("boneshard", 			     rarity.med)
 	inst.components.lootdropper:AddRandomLoot("kyno_oil",               rarity.high)
 	inst.components.lootdropper:AddRandomLoot("kyno_lotus_flower", 		rarity.high)
-	inst.components.lootdropper:AddRandomLoot("kyno_cucumber", 	   		rarity.high)
 	inst.components.lootdropper:AddRandomLoot("kelp", 	           		rarity.high)
 	inst.components.lootdropper:AddRandomLoot("kyno_roe", 	   	   		rarity.high)
 	inst.components.lootdropper:AddRandomLoot("silk",                   rarity.high)

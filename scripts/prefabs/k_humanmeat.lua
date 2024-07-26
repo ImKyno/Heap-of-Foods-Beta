@@ -77,8 +77,6 @@ local function fn()
 	inst.components.dryable:SetDriedBuildFile("humanmeat_dried")
 	inst.components.dryable:SetDryTime(TUNING.DRY_FAST)
 
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
@@ -121,7 +119,7 @@ local function fn_cooked()
 	inst.components.edible.ismeat = true
 	
 	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 	
@@ -132,8 +130,6 @@ local function fn_cooked()
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_humanmeat_cooked"
 
-	MakeSmallBurnable(inst)
-	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst

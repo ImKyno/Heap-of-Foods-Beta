@@ -106,6 +106,11 @@ local function fn()
 	inst:AddTag("structure")
     inst:AddTag("sammyhouse")
 	
+	if not TheNet:IsDedicated() then
+        inst:AddComponent("pointofinterest")
+        inst.components.pointofinterest:SetHeight(60)
+    end
+	
 	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then

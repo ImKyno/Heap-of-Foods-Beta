@@ -187,11 +187,11 @@ end
 
 local function OnHitCass(inst, worker)
 	if inst.components.stewer:IsCooking() then
-		-- inst.AnimState:PlayAnimation("hit")
+		inst.AnimState:PlayAnimation("hit")
 		inst.AnimState:PushAnimation("cooking_bake_small", true)
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 	elseif inst.components.stewer:IsDone() then
-		-- inst.AnimState:PlayAnimation("hit_cooking_loop")
+		inst.AnimState:PlayAnimation("hit_cooking_loop")
 		inst.AnimState:PushAnimation("cooking_boil_big", true)
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 	else
@@ -230,7 +230,7 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		local small_cass = SpawnPrefab("kyno_cookware_oven_small_casserole")
 
 		small_cass.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/dish_place_oven")
-		-- small_cass.AnimState:PlayAnimation("place_casserole")
+		small_cass.AnimState:PlayAnimation("place_casserole")
 		small_cass.Transform:SetPosition(inst.Transform:GetWorldPosition())
 
 		ChangeFireFX(inst)
@@ -240,7 +240,7 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		local big_cass = SpawnPrefab("kyno_cookware_oven_casserole")
 
 		big_cass.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/dish_place_oven")
-		-- big_cass.AnimState:PlayAnimation("place_casserole")
+		big_cass.AnimState:PlayAnimation("place_casserole")
 		big_cass.Transform:SetPosition(inst.Transform:GetWorldPosition())
 
 		ChangeFireFX(inst)
@@ -694,7 +694,7 @@ local function casserolefn(small)
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammeredCass)
-	-- inst.components.workable:SetOnWorkCallback(OnHitCass)
+	inst.components.workable:SetOnWorkCallback(OnHitCass)
 	inst.components.workable:SetWorkLeft(1)
 
 	inst.OnSave = OnSave

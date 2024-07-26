@@ -115,7 +115,6 @@ local function waterycress()
 	inst.AnimState:PlayAnimation("idle")
 	
 	inst:AddTag("veggie")
-	-- inst:AddTag("cookable")
 	inst:AddTag("modded_crop")
 	inst:AddTag("deployedplant")
 	inst:AddTag("saltbox_valid")
@@ -152,9 +151,6 @@ local function waterycress()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_waterycress"
-	
-	-- inst:AddComponent("cookable")
-	-- inst.components.cookable.product = "kyno_cucumber_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

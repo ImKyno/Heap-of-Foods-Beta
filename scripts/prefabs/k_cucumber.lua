@@ -47,14 +47,13 @@ local function fn()
     -- inst.components.pickable.picksound = "dontstarve/wilson/pickup_plants"
     inst.components.pickable:SetUp("kyno_cucumber", 10)
     inst.components.pickable.onpickedfn = onpicked
-
     inst.components.pickable.quickpick = true
+	
+	inst:AddComponent("hauntable")
+    inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 
     MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
-
-    inst:AddComponent("hauntable")
-    inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 
     return inst
 end

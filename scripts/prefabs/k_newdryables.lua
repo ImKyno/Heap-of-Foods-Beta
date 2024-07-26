@@ -162,6 +162,9 @@ local function veggie_fn(bank, build, anim, veggie_name)
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
+	
+	MakeSmallBurnable(inst)
+	MakeSmallPropagator(inst)
 
 	return inst
 end

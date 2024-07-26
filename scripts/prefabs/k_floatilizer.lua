@@ -51,6 +51,7 @@ local function fn()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("smotherer")
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
@@ -68,8 +69,6 @@ local function fn()
 	inst.components.fertilizer.soil_cycles = TUNING.KYNO_FLOATILIZER_SOILCYCLES
 	inst.components.fertilizer.withered_cycles = TUNING.KYNO_FLOATILIZER_WITHEREDCYCLES
 	inst.components.fertilizer:SetNutrients(FERTILIZER_DEFS.kyno_floatilizer.nutrients)
-
-	inst:AddComponent("smotherer")
 
 	MakeDeployableFertilizer(inst)
 	MakeHauntableLaunch(inst)

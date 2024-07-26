@@ -45,7 +45,6 @@ local resize_items =
 	"kyno_cucumber",
 	"kyno_cucumber_cooked",
     "kyno_parznip_cooked",
-    "kyno_turnip_ground",
 }
 
 for k,v in pairs(resize_items) do

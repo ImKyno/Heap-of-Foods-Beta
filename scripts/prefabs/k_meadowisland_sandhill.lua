@@ -219,7 +219,7 @@ local function fn()
 	inst.components.lootdropper.numrandomloot = 1
 	inst.components.lootdropper.chancerandomloot = 0.01
 	inst.components.lootdropper:AddRandomLoot("slurtle_shellpieces", 0.01)
-	inst.components.lootdropper:AddRandomLoot("rock", 0.20)
+	inst.components.lootdropper:AddRandomLoot("rocks", 0.20)
 	inst.components.lootdropper:AddRandomLoot("feather_crow", 0.08)
 	inst.components.lootdropper:AddRandomLoot("feather_robin", 0.07)
 	inst.components.lootdropper:AddRandomLoot("feather_robin_winter", 0.06)
