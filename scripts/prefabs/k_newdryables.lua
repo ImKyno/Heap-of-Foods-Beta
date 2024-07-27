@@ -9,6 +9,7 @@ local assets =
 	Asset("ANIM", "anim/kyno_meatrack_seaweeds.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_pigskin.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_crabmeat.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_poison_froglegs.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -21,15 +22,16 @@ local prefabs =
 	"green_cap",
 	"blue_cap",
 	"moon_cap",
-	
 	"plantmeat",
-	
 	"pigskin",
+	
+	"smallmeat_dried",
 	
 	"kyno_seaweeds",
 	"kyno_humanmeat",
 	"kyno_crabmeat",
 	"kyno_crabkingmeat",
+	"kyno_poison_froglegs",
 	
 	"spoiled_food",
 }

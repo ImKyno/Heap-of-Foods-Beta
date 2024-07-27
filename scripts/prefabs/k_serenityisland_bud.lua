@@ -152,6 +152,9 @@ local function budfn()
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	inst:AddComponent("lootdropper")
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -163,7 +166,7 @@ local function budfn()
 	inst.components.deployable:SetDeployMode(DEPLOYMODE.PLANT)
 	inst.components.deployable.ondeploy = ondeploy
 
-	MakeSmallBurnable(inst)
+	MakeSmallBurnable(inst, TUNING.SMALL_BURNTIME)
 	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 	

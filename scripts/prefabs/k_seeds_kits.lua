@@ -130,9 +130,6 @@ local function aloekitfn()
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-	
-	inst:AddComponent("stackable")
-    inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
@@ -172,9 +169,6 @@ local function cucumberkitfn()
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-	
-	inst:AddComponent("stackable")
-    inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
@@ -214,10 +208,7 @@ local function fennelkitfn()
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-	
-	inst:AddComponent("stackable")
-    inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
-		
+			
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_seeds_kit_fennel"
@@ -256,10 +247,7 @@ local function parznipkitfn()
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-	
-	inst:AddComponent("stackable")
-    inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
-		
+			
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_seeds_kit_parznip"
@@ -298,9 +286,6 @@ local function radishkitfn()
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-	
-	inst:AddComponent("stackable")
-    inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
@@ -340,9 +325,6 @@ local function sweetpotatokitfn()
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-	
-	inst:AddComponent("stackable")
-    inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
@@ -382,9 +364,6 @@ local function turnipkitfn()
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-	
-	inst:AddComponent("stackable")
-    inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

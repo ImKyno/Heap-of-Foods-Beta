@@ -192,7 +192,7 @@ local function itemfn()
     inst.components.fuel.fuelvalue = TUNING.LARGE_FUEL
 	
 	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
 
     MakeLargeBurnable(inst)
     MakeLargePropagator(inst)

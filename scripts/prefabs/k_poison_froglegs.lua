@@ -10,6 +10,8 @@ local assets =
 local prefabs = 
 {
 	"kyno_poison_froglegs_cooked",
+	
+	"smallmeat_dried",
 	"spoiled_food",
 }
 
@@ -29,6 +31,8 @@ local function fn()
 
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
+	inst:AddTag("dryable")
+	inst:AddTag("lureplant_bait")
 
 	inst.entity:SetPristine()
 
@@ -45,6 +49,10 @@ local function fn()
 	inst.components.edible.hungervalue = TUNING.KYNO_POISON_FROGLEGS_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_POISON_FROGLEGS_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
+	
+	inst:AddComponent("dryable")
+	inst.components.dryable:SetProduct("smallmeat_dried")
+	inst.components.dryable:SetDryTime(TUNING.DRY_MED)
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
@@ -101,7 +109,7 @@ local function fn_cooked()
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	
 	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 	

@@ -86,10 +86,8 @@ local TurnipRooms =
 	"TentacleMud",
 	"SpiderSinkholeMarsh",
 	"SinkholeSwamp",
-}
-
-local TurnipCaveRooms = 
-{
+	
+	-- Caves
 	"SinkholeSwamp",
 	"DarkSwamp",
 	"TentacleMud",
@@ -140,10 +138,8 @@ local StoneSlabRooms =
 	"MagicalDeciduous",
 	"DeciduousMole",
 	"PondyGrass",
-}
-
-local StoneSlabCaveRooms = 
-{
+	
+	-- Caves
 	"SlurtleCanyon",
 	"BatsAndSlurtles",
 	"RockyPlains",
@@ -170,10 +166,8 @@ local MushroomStumpRooms =
 	"CrappyForest",
 	"SpiderForest",
 	"MoonbaseOne",
-}
-
-local MushroomStumpCaveRooms = 
-{
+	
+	-- Caves
 	"GreenMushForest",
 	"GreenMushPonds",
 	"GreenMushSinkhole",
@@ -203,10 +197,8 @@ local AspargosRooms =
 	"BGGrassBurnt",
 	"FlowerPatch",
 	"GrassyMoleColony",
-}
-
-local AspargosCaveRooms = 
-{
+	
+	-- Caves
 	"SinkholeForest",
 	"SinkholeCopses",
 	"SparseSinkholes",
@@ -259,28 +251,12 @@ for k, v in pairs(TurnipRooms) do
 end
 _G.terrain.filter.kyno_turnip_ground 							= TERRAIN_FILTERS
 
-for k, v in pairs(TurnipCaveRooms) do
-	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_turnip_cave  		= TUNING.HOF_RESOURCES
-	end)
-end
-_G.terrain.filter.kyno_turnip_cave 								= TERRAIN_FILTERS
-
 for k, v in pairs(OceanRooms) do
 	AddRoomPreInit(v, function(room)
 		room.contents.distributeprefabs.kyno_cucumber_ground  	= TUNING.HOF_RESOURCES
 	end)
 end
 _G.terrain.filter.kyno_cucumber_ground							= TERRAIN_FILTERS
-
---[[ Lotus Flowers were moved to Waterlogged biomes.
-for k, v in pairs(OceanRooms) do
-	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_lotus_ocean  		= TUNING.HOF_RESOURCES
-	end)
-end
-_G.terrain.filter.kyno_lotus_ocean 								= TERRAIN_FILTERS
-]]--
 
 for k, v in pairs(OceanRooms) do
 	AddRoomPreInit(v, function(room)
@@ -324,26 +300,12 @@ for k, v in pairs(StoneSlabRooms) do
 end
 _G.terrain.filter.kyno_rockflippable							= TERRAIN_FILTERS
 
-for k, v in pairs(StoneSlabCaveRooms) do
-	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_rockflippable_cave	= TUNING.HOF_RESOURCES
-	end)
-end
-_G.terrain.filter.kyno_rockflippable_cave						= TERRAIN_FILTERS
-
 for k, v in pairs(MushroomStumpRooms) do
 	AddRoomPreInit(v, function(room)
 		room.contents.distributeprefabs.kyno_mushstump_natural	= TUNING.HOF_RESOURCES
 	end)
 end
 _G.terrain.filter.kyno_mushstump_natural						= TERRAIN_FILTERS
-
-for k, v in pairs(MushroomStumpCaveRooms) do
-	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_mushstump_cave		= TUNING.HOF_RESOURCES
-	end)
-end
-_G.terrain.filter.kyno_mushstump_cave							= TERRAIN_FILTERS
 
 for k, v in pairs(WateryCrateRooms) do
 	AddRoomPreInit(v, function(room)
@@ -358,13 +320,6 @@ for k, v in pairs(AspargosRooms) do
 	end)
 end
 _G.terrain.filter.kyno_aspargos_ground							= TERRAIN_FILTERS
-
-for k, v in pairs(AspargosCaveRooms) do
-	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_aspargos_cave		= TUNING.HOF_RESOURCES
-	end)
-end
-_G.terrain.filter.kyno_aspargos_cave							= TERRAIN_FILTERS
 
 AddTaskSetPreInitAny(function(tasksetdata)
     if tasksetdata.location ~= "forest" then

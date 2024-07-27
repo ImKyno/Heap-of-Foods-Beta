@@ -79,10 +79,10 @@ local function fn()
         return inst
     end
 	
+	inst:AddComponent("lootdropper")
+	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "QUAGMIRE_MUSHROOMSTUMP"
-	
-	inst:AddComponent("lootdropper")
 	
 	inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)

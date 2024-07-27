@@ -68,6 +68,7 @@ local function pineapple()
 	inst.AnimState:PlayAnimation("idle")
 	
 	inst:AddTag("fruit")
+	inst:AddTag("veggie")
 	inst:AddTag("show_spoilage")
 	inst:AddTag("crackable")
 
@@ -196,7 +197,7 @@ local function pineapple_cooked()
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 	
 	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 	

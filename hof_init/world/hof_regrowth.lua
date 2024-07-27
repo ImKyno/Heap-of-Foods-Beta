@@ -21,9 +21,11 @@ AddComponentPostInit("regrowthmanager", function(self)
         return not (_worldstate.isnight or _worldstate.iswinter or _worldstate.snowlevel > 0) and 1 or 0
     end)
 	
+	--[[
 	self:SetRegrowthForType("kyno_turnip_cave", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_turnip_cave", function()
         return 1
     end)
+	]]--
 	
 	self:SetRegrowthForType("kyno_cucumber_ground", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_cucumber_ground", function()
         return 1
@@ -41,17 +43,21 @@ AddComponentPostInit("regrowthmanager", function(self)
         return not (_worldstate.isday) and 1 or 0
     end)
 	
+	--[[
 	self:SetRegrowthForType("kyno_rockflippable_cave", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_rockflippable_cave", function()
         return 1
     end)
+	]]--
 	
 	self:SetRegrowthForType("kyno_mushstump_natural", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_mushstump_natural", function()
         return not (_worldstate.isday) and 1 or 0
     end)
 	
+	--[[
 	self:SetRegrowthForType("kyno_mushstump_cave", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_mushstump_cave", function()
         return not (_worldstate.isday) and 1 or 0
     end)
+	]]--
 	
 	self:SetRegrowthForType("kyno_fennel_ground", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_fennel_ground", function()
         return 1
@@ -69,9 +75,11 @@ AddComponentPostInit("regrowthmanager", function(self)
         return 1
     end)
 	
+	--[[
 	self:SetRegrowthForType("kyno_aspargos_cave", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_aspargos_cave", function()
         return 1
     end)
+	]]--
 	
 	self:SetRegrowthForType("kyno_limpetrock", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_limpetrock", function()
 		return not (_worldstate.iswinter or _worldstate.snowlevel > 0) and 1 or 0

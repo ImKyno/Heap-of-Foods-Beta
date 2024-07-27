@@ -107,7 +107,7 @@ local function fn_cooked()
 	inst.components.edible.ismeat = true
 	
 	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_FASTISH)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 	

@@ -7,6 +7,9 @@ local assets =
     Asset("ANIM", "anim/quagmire_tree_cotton_build.zip"),
     Asset("ANIM", "anim/quagmire_tree_cotton_trunk_build.zip"),
 	
+	-- Scrapbook anims, these ones up are funky.
+	Asset("ANIM", "anim/kyno_sugartree_scrapbook.zip"),
+	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 }
@@ -137,6 +140,19 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		tree.AnimState:PlayAnimation("install")
 		tree.components.pickable:MakeEmpty()
 	end
+	
+	inst:Remove()
+end
+
+local function OnGetItemFromPlayer2(inst, giver, item)
+	if item.components.inventoryitem ~= nil and item:HasTag("sap_bucket_installer") then
+		local tree = SpawnPrefab("kyno_sugartree_ruined")
+		tree.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/sap_extractor")
+		tree.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		tree.AnimState:PlayAnimation("install")
+		tree.components.pickable:MakeEmpty()
+	end
+	
 	inst:Remove()
 end
 
@@ -478,7 +494,7 @@ local function ruinedfn()
 	inst.AnimState:OverrideSymbol("trunk", "quagmire_tree_cotton_trunk_build", "trunk_holes")
     inst.AnimState:PlayAnimation("sway1_loop", true)
 	
-	inst.AnimState:Show("sap")
+	inst.AnimState:Hide("sap")
 	inst.AnimState:Show("swap_tapper")
 	inst.AnimState:OverrideSymbol("swap_sapbucket", "quagmire_sapbucket", "swap_sapbucket_overflow_spoiled")
 	
@@ -547,6 +563,7 @@ local function ruined2fn()
 	inst:AddTag("tree")
     inst:AddTag("shelter")
 	inst:AddTag("sap_healable")
+	inst:AddTag("cookware_other_installable")
 
     inst.entity:SetPristine()
 
@@ -565,6 +582,10 @@ local function ruined2fn()
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(tree_chopped_ruined)
     inst.components.workable:SetOnWorkCallback(tree_chop)
+	
+	inst:AddComponent("cookwareinstaller")
+	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
+    inst.components.cookwareinstaller.onaccept = OnGetItemFromPlayer2
 	
 	MakeMediumBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(tree_startburn)

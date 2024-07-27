@@ -164,8 +164,10 @@ local function fn()
 		return inst
 	end
 	
-	inst:AddComponent("lootdropper")
 	inst:AddComponent("inspectable")
+	
+	inst:AddComponent("lootdropper")
+	inst.components.lootdropper:SetLoot({"boards", "rocks", "kyno_tropicalfish"})
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
@@ -230,8 +232,10 @@ local function fishfn()
 		return inst
 	end
 	
-	inst:AddComponent("lootdropper")
 	inst:AddComponent("inspectable")
+	
+	inst:AddComponent("lootdropper")
+	inst.components.lootdropper:SetLoot({"boards", "rocks", "kyno_tropicalfish"})
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)

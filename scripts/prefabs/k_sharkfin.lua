@@ -59,6 +59,10 @@ local function fn()
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
+	
+	MakeSmallBurnable(inst)
+	MakeSmallPropagator(inst)
+	MakeHauntableLaunchAndPerish(inst)
 
     return inst
 end

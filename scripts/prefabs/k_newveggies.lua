@@ -170,6 +170,7 @@ local function MakeVeggie(name)
         inst:AddTag("cookable")
         inst:AddTag("deployedplant")
         inst:AddTag("deployedfarmplant")
+		inst:AddTag("oceanfishing_lure")
 
         inst.overridedeployplacername = "seeds_placer"
 
@@ -221,6 +222,9 @@ local function MakeVeggie(name)
         inst.components.deployable:SetDeployMode(DEPLOYMODE.CUSTOM)
         inst.components.deployable.restrictedtag = "plantkin"
         inst.components.deployable.ondeploy = OnDeploy
+		
+		inst:AddComponent("oceanfishingtackle")
+        inst.components.oceanfishingtackle:SetupLure({build = "oceanfishing_lure_mis", symbol = "hook_seeds", single_use = true, lure_data = TUNING.OCEANFISHING_LURE.SEED})
 
         MakeSmallBurnable(inst)
         MakeSmallPropagator(inst)
