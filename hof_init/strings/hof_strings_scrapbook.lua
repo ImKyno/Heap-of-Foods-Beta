@@ -3,18 +3,40 @@ local _G 			= GLOBAL
 local require 		= _G.require
 local STRINGS		= _G.STRINGS
 
--- Datas.
+-- Datas. (Unused)
 STRINGS.SCRAPBOOK.DATA_BREWER = "CAN PREPARE DRINK"
 
--- Categories
+-- Categories.
 STRINGS.SCRAPBOOK.SUBCATS.CHICKEN = "Chicken"
 STRINGS.SCRAPBOOK.SUBCATS.PIKO = "Piko"
 STRINGS.SCRAPBOOK.SUBCATS.CANNED = "Canned"
 STRINGS.SCRAPBOOK.SUBCATS.COOKWARE = "Cookware"
+STRINGS.SCRAPBOOK.SUBCATS.SEASONALFOOD = "Seasonal Food"
+STRINGS.SCRAPBOOK.SUBCATS.ARTISANGOODS = "Artisan Goods"
+STRINGS.SCRAPBOOK.SUBCATS.WINE = "Wine"
+STRINGS.SCRAPBOOK.SUBCATS.JUICE = "Juice"
+STRINGS.SCRAPBOOK.SUBCATS.JAM = "Jam"
+STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "Pickles"
 
--- Items & Foods
+-- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "Increased movement speed for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_COFFEE = "Increased movement speed and temperature for a certain amount of time. Hasta la vista, baby!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SLEEP = "Increased sleep resistance for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALTHREGEN = "Gives off health regeneration for a short period."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERREGEN = "Gives off hunger regeneration for a short period."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SANITYREGEN = "Gives off sanity regeneration for a short period."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUPERREGEN = "Gives off super body regeneration for a short period."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WORMLIGHT = "Gives off a healthy glow for a short period."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ALCOHOL = "Increased damage and decreased movement speed for a certain amount of time. Drink in moderation."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ALCOHOL2 = "Increased damage resistance and decreased movement speed for a certain amount of time. Drink in moderation."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RUM = "Increased damage against pirates for a certain amount of time.\n\nNeither the flames nor the depths could claim me."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_TEQUILA = "Teleports the survivor to a random location in the map."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA = "The unique taste of Nuka-Cola is the result of a combination of seventeen fruit essences, balanced to enhance the classic cola flavor. Zap that thirst!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_QUANTUM = "The unique taste of Nuka-Cola is the result of a combination of seventeen fruit essences, balanced to enhance the classic cola flavor. Zap that thirst!\n\nNuka-Cola Quantum has twice the calories, twice the carbohydrates, twice the caffeine, and twice the taste!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INSANITY = "Indulces insanity for a short period."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NIGHTVISION = "Gives off night vision for a certain amount of time."
+
+-- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "Using a pinch of salt on a crock pot food will refresh its spoilage time by 30%. Don't worry about eating stale dishes again!"
 STRINGS.SCRAPBOOK.SPECIALINFO.SALTRACK = "This rack will collect a small rock of salt every few days."
 STRINGS.SCRAPBOOK.SPECIALINFO.CRABTRAP = "Once set on the ground, it will trigger when a crab move nearby, capturing them.\n\nCollecting a captured trap will put the creature inside your inventory.\n\nCrab Traps can be baited with meats."
@@ -37,19 +59,19 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SAPBUCKET = "Tap it to Sugarwood Trees to produce 
 STRINGS.SCRAPBOOK.SPECIALINFO.SLAUGHTERTOOL = "Butchering tools that instantly kills the animal."
 STRINGS.SCRAPBOOK.SPECIALINFO.SAPHEALER = "Powerful antidote with healing capabilities for trees.\n\nUsing it on Ruined Sugarwood Trees will revert them back to their normal stage."
 
--- Creatures
+-- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Can be feed with seeds to lay down an egg."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Fluffy little buddies that loves to steal your most valuable items!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Kingfishers will often drop Tropical Kois from above. It's raining fish, literally!"
 
--- Others & Point of Interest
+-- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "A Merchant from a distant archipelago. He's willing to trade his best cooking utensils and other useful items for delicious meals.\n\nThe Elder is craving for a meal with extreme sweetness or Butter mescled with seafood. He will reward you accordingly.\n\nBringing Elder's favourtie meal will unlock more trade deals."
 STRINGS.SCRAPBOOK.SPECIALINFO.SAMMY = "Looks like someone is moving in to this old and abandoned house. His stuff is scattered all around.\n\nCome back in the next major update and stay tuned for news!"
 STRINGS.SCRAPBOOK.SPECIALINFO.SALTPOND = "Ponds rich in salt. Salt Racks can be installed for an easy source of salt rocks every few days."
 STRINGS.SCRAPBOOK.SPECIALINFO.MEALGRINDER = "Standing near this device will provide the survivor with new ingredients they can grind.\n\nYou'll need to be near the mealing stone every time you want to grind a new ingredient."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKOTREE = "Standing near a tree offers 35% protection from rain and cools survivor a small amount.\n\nThese Tea Trees are infested with little creatures known as Piko, and they are ready to cause trouble."
 STRINGS.SCRAPBOOK.SPECIALINFO.ANTCHEST = "This special chest can only store honey-based items, up to 7 items simultaneously. It also gives off a healthy glow.\n\nIf honey-based foods are stored inside, the chest will refresh their spoilage time as well keep them fresh forever.\n\nNectar stored inside will eventually turn into honey."
-STRINGS.SCRAPBOOK.SPECIALINFO.BREWER = "A 3 slot container that will receive ingredients for drink.\n\nPlacing 3 items in the container will allow them to be brewed creating some kind of drink depending on the items put in to begin with."
+STRINGS.SCRAPBOOK.SPECIALINFO.BREWER = "A 3 slot container that will receive ingredients for brewing.\n\nPlacing 3 items in the container will allow them to be brewed creating some kind of food depending on the items put in to begin with.\n\nThis process usually takes some days to finish."
 STRINGS.SCRAPBOOK.SPECIALINFO.COOKWARE_HANGER = "Use to hold a cooking pot."
 STRINGS.SCRAPBOOK.SPECIALINFO.COOKWARE_POT = "A 4 slot container that will receive ingredients for food.\n\nPlacing 4 items in the container will allow them to be cooked creating some kind of food depending on the items put to begin with.\n\nThis cooking pot cooks faster than regular ones and also have a chance to yield multiple units of the cooked food."
 STRINGS.SCRAPBOOK.SPECIALINFO.COOKWARE_SYRUP_POT = "A 4 slot container that will receive ingredients for Syrup.\n\nPlacing 4 Sap in the container will allow them to be cooked creating Syrup.\n\nThis pot can only cook Syrup and always give an extra unit."

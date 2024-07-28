@@ -325,7 +325,6 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"curledpepper",
 	"kyno_brewbook",
 	"kyno_brewingrecipecard",
-	"brewertest",
 	"beer",
 	"paleale",
 	"teagreen",
@@ -343,6 +342,7 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"jelly_kokonut",
 	"jelly_glowberry",
 	"jelly_pineapple",
+	"jelly_nightberry",
 	"mayonnaise",
 	"mayonnaise_chicken",
 	"mayonnaise_tallbird",
@@ -391,6 +391,7 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"wine_kokonut",
 	"wine_glowberry",
 	"wine_pineapple",
+	"wine_nightberry",
 	"juice_carrot",
 	"juice_corn",
 	"juice_eggplant",
@@ -681,6 +682,9 @@ local ScrapbookIcons =
 	"kyno_musselstick",
 	"kyno_pineapplebush",
 	"kyno_coffeebush",
+	"farm_plant_kyno_radish",
+	"farm_plant_kyno_rice",
+	"farm_plant_kyno_turnip",
 }
 
 for k,v in pairs(IngredientIcons) do

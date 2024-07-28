@@ -80,7 +80,7 @@ local function onpicked_ruinedfn(inst)
 end
 
 local function onregen_ruinedfn(inst)
-    inst.AnimState:Show("sap")
+    inst.AnimState:Hide("sap")
 	inst.AnimState:Show("swap_tapper")
     inst.AnimState:OverrideSymbol("swap_sapbucket", "quagmire_sapbucket", "swap_sapbucket_overflow_spoiled")
 	

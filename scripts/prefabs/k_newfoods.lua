@@ -89,6 +89,12 @@ local function MakePreparedFood(data)
 
 		inst.food_symbol_build = food_symbol_build or data.overridebuild
 		inst.food_basename = data.basename
+		
+		inst:AddComponent("bait")
+		inst:AddComponent("tradable")
+		
+		inst:AddComponent("inspectable")
+		inst.wet_prefix = data.wet_prefix
 
 		inst:AddComponent("edible")
 		inst.components.edible.healthvalue = data.health
@@ -101,11 +107,7 @@ local function MakePreparedFood(data)
 		inst.components.edible.spice = data.spice
 		inst.components.edible:SetOnEatenFn(data.oneatenfn)
 
-		inst:AddComponent("inspectable")
-		inst.wet_prefix = data.wet_prefix
-
 		inst:AddComponent("inventoryitem")
-
 		if spicename ~= nil then
 			inst.components.inventoryitem:ChangeImageName(spicename.."_over")
 		elseif data.basename ~= nil then
@@ -132,10 +134,6 @@ local function MakePreparedFood(data)
 		MakeSmallBurnable(inst)
 		MakeSmallPropagator(inst)
 		MakeHauntableLaunchAndPerish(inst)
-
-		inst:AddComponent("bait")
-
-		inst:AddComponent("tradable")
 
 		return inst
 	end

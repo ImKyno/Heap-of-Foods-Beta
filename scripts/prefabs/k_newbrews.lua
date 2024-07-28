@@ -13,7 +13,9 @@ local prefabs =
 local function MakePreparedBrew(data)
 	local foodname = data.basename or data.name
 	local foodassets = assets
+	
 	table.insert(foodassets, Asset("ANIM", "anim/"..foodname..".zip"))
+	
 	local spicename = data.spice ~= nil and string.lower(data.spice) or nil
 	if spicename ~= nil then
 		foodassets = shallowcopy(assets)
@@ -31,11 +33,13 @@ local function MakePreparedBrew(data)
 
 		inst.entity:AddTransform()
 		inst.entity:AddAnimState()
+		inst.entity:AddSoundEmitter()
 		inst.entity:AddNetwork()
 
 		MakeInventoryPhysics(inst)
 
 		local food_symbol_build = nil
+		
 		if spicename ~= nil then
 			inst.AnimState:SetBuild("plate_food")
 			inst.AnimState:SetBank("plate_food")
@@ -79,6 +83,11 @@ local function MakePreparedBrew(data)
 
 		inst.food_symbol_build = food_symbol_build or data.overridebuild
 		inst.food_basename = data.basename
+		
+		inst:AddComponent("bait")
+		
+		inst:AddComponent("inspectable")
+		inst.wet_prefix = data.wet_prefix
 
 		inst:AddComponent("edible")
 		inst.components.edible.healthvalue = data.health
@@ -91,11 +100,7 @@ local function MakePreparedBrew(data)
 		inst.components.edible.spice = data.spice
 		inst.components.edible:SetOnEatenFn(data.oneatenfn)
 
-		inst:AddComponent("inspectable")
-		inst.wet_prefix = data.wet_prefix
-
 		inst:AddComponent("inventoryitem")
-
 		if spicename ~= nil then
 			inst.components.inventoryitem:ChangeImageName(spicename.."_over")
 		elseif data.basename ~= nil then
@@ -114,15 +119,13 @@ local function MakePreparedBrew(data)
 			inst.components.perishable:StartPerishing()
 			inst.components.perishable.onperishreplacement = "spoiled_food"
 		end
+		
+		inst:AddComponent("tradable")
+		inst.components.tradable.goldvalue = 8
 
 		MakeSmallBurnable(inst)
 		MakeSmallPropagator(inst)
 		MakeHauntableLaunchAndPerish(inst)
-
-		inst:AddComponent("bait")
-
-		inst:AddComponent("tradable")
-		inst.components.tradable.goldvalue = 8
 
 		return inst
 	end

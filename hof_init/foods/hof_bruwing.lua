@@ -44,6 +44,7 @@ AddBrewingValues({"tallbirdegg"},				{egg        = 4,   tallbirdegg   = 1})
 AddBrewingValues({"bird_egg"},					{egg        = 1})
 AddBrewingValues({"nightmarefuel"},             {inedible   = 1,   magic         = 1})
 AddBrewingValues({"ice"},                       {frozen     = 1})
+AddBrewingValues({"ancientfruit_nightvision"},  {fruit      = 1})
 
 -- Mod Wooden Keg and Preserves Jar Ingredients.
 AddBrewingValues({"kyno_wheat"}, 				{veggie     = 1,   wheat         = 1})

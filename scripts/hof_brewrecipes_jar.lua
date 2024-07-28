@@ -206,6 +206,28 @@ local kyno_foods_jar =
 		card_def = {ingredients = {{"kyno_pineapple_halved", 2}, {"honey", 1}}},
 	},
 	
+	jelly_nightberry =
+	{
+		test = function(brewer, names, tags) return names.ancientfruit_nightvision and (names.ancientfruit_nightvision == 2) and tags.sweetener end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 0,
+		hunger = 25,
+		sanity = 10,
+		cooktime = 48,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"ancientfruit_nightvision", 2}, {"honey", 1}}},
+		prefabs = { "kyno_nightvisionbuff" },
+        oneatenfn = function(inst, eater)
+            eater:AddDebuff("kyno_nightvisionbuff", "kyno_nightvisionbuff")
+			
+			if eater.components.grogginess ~= nil then
+				eater.components.grogginess:MakeGrogginessAtLeast(1.5)
+			end
+        end,
+	},
+	
 	pickles_carrot = 
 	{
 		test = function(brewer, names, tags) return names.carrot and (names.carrot == 2) and names.kyno_spotspice end,
@@ -734,7 +756,7 @@ local kyno_foods_jar =
 	{
 		test = function(brewer, names, tags) return tags.mayonnaise and names.kyno_spotspice and names.kyno_cucumber and not names.mayonnaise_nightmare end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
+		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		health = 20,
 		hunger = 62.5,

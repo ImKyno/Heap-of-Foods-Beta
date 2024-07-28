@@ -14,6 +14,7 @@ PrefabFiles =
 	"k_foodbuff_frog",
 	"k_foodbuff_fear",
 	"k_foodbuff_pirate",
+	"k_foodbuff_nightvision",
 
 	"k_product_bubble",
 	"k_fertilizer_nutrient_defs",

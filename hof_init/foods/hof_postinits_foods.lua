@@ -414,6 +414,7 @@ local jelly_foods =
     "jelly_kokonut",
     "jelly_glowberry",
 	"jelly_pineapple",
+	"jelly_nightberry",
 }
 
 local mayo_foods =
@@ -473,6 +474,7 @@ local wine_foods =
     "wine_kokonut",
     "wine_glowberry",
 	"wine_pineapple",
+	"wine_nightberry",
 }
 
 local juice_foods =
@@ -699,3 +701,61 @@ local function LivingSandwichPostinit(inst)
 end
 
 AddPrefabPostInit("livingsandwich", LivingSandwichPostinit)
+
+-- Night vision for the Artisan Goods made with Nightberry.
+local nightberry_foods =
+{
+	"jelly_nightberry",
+	"wine_nightberry",
+}
+
+local function NightberryPostinit(inst)
+	local BEAT_SOUNDNAME = "BEAT_SOUND"
+
+	local function NightVision_PlayBeatingSound(inst)
+		inst.SoundEmitter:KillSound(BEAT_SOUNDNAME)
+		inst.SoundEmitter:PlaySound("meta4/ancienttree/nightvision/fruit_pulse", BEAT_SOUNDNAME)
+	end
+
+	local function NightVision_OnEntityWake(inst)
+		if inst._beatsoundtask ~= nil or inst:IsInLimbo() or inst:IsAsleep() then
+			return
+		end
+
+		if inst._beatsoundtask ~= nil then
+			inst._beatsoundtask:Cancel()
+			inst._beatsoundtask = nil
+		end
+
+		local fulltime = inst.AnimState:GetCurrentAnimationLength()
+		local currenttime = inst.AnimState:GetCurrentAnimationTime()
+
+		inst:PlayBeatingSound()
+
+		inst._beatsoundtask = inst:DoPeriodicTask(fulltime, inst.PlayBeatingSound, fulltime - currenttime)
+	end
+
+	local function NightVision_OnEntitySleep(inst)
+		inst.SoundEmitter:KillSound(BEAT_SOUNDNAME)
+
+		if inst._beatsoundtask ~= nil then
+			inst._beatsoundtask:Cancel()
+			inst._beatsoundtask = nil
+		end
+	end
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst.PlayBeatingSound = NightVision_PlayBeatingSound
+	
+	inst.OnEntityWake = NightVision_OnEntityWake
+    inst.OnEntitySleep = NightVision_OnEntitySleep
+    inst:ListenForEvent("exitlimbo", inst.OnEntityWake)
+    inst:ListenForEvent("enterlimbo", inst.OnEntitySleep)
+end
+
+for k,v in pairs(nightberry_foods) do
+	AddPrefabPostInit(v, NightberryPostinit)
+end
