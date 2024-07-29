@@ -10,6 +10,48 @@ local prefabs =
 	"spoiled_food"
 }
 
+----------------------------------------------------------------------------------------------------------
+-- Funcions for some special foods.
+local function FuelTaken(inst, taker)
+	if taker ~= nil and taker.SoundEmitter ~= nil then
+		taker.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
+	end
+end
+
+local BEAT_SOUNDNAME = "BEAT_SOUND"
+
+local function NightVision_PlayBeatingSound(inst)
+	inst.SoundEmitter:KillSound(BEAT_SOUNDNAME)
+	inst.SoundEmitter:PlaySound("meta4/ancienttree/nightvision/fruit_pulse", BEAT_SOUNDNAME)
+end
+
+local function NightVision_OnEntityWake(inst)
+	if inst._beatsoundtask ~= nil or inst:IsInLimbo() or inst:IsAsleep() then
+		return
+	end
+
+	if inst._beatsoundtask ~= nil then
+		inst._beatsoundtask:Cancel()
+		inst._beatsoundtask = nil
+	end
+
+	local fulltime = inst.AnimState:GetCurrentAnimationLength()
+	local currenttime = inst.AnimState:GetCurrentAnimationTime()
+
+	inst:PlayBeatingSound()
+
+	inst._beatsoundtask = inst:DoPeriodicTask(fulltime, inst.PlayBeatingSound, fulltime - currenttime)
+end
+
+local function NightVision_OnEntitySleep(inst)
+	inst.SoundEmitter:KillSound(BEAT_SOUNDNAME)
+
+	if inst._beatsoundtask ~= nil then
+		inst._beatsoundtask:Cancel()
+		inst._beatsoundtask = nil
+	end
+end
+----------------------------------------------------------------------------------------------------------
 local function MakePreparedFood(data)
 	local foodname = data.basename or data.name
 	local foodassets = assets
@@ -36,8 +78,16 @@ local function MakePreparedFood(data)
 		inst.entity:AddNetwork()
 
 		MakeInventoryPhysics(inst)
+		
+		if data.pickupsound ~= nil then
+			inst.pickupsound = data.pickupsound
+		end
 
-		inst.AnimState:SetScale(1.1, 1.1, 1.1)
+		if data.scale ~= nil then
+			inst.AnimState:SetScale(data.scale, data.scale, data.scale)
+		else
+			inst.AnimState:SetScale(1.1, 1.1, 1.1)
+		end
 
 		local food_symbol_build = nil
 		
@@ -61,14 +111,6 @@ local function MakePreparedFood(data)
 
 		inst:AddTag("preparedfood")
 		inst:AddTag("preparedfood_hof")
-
-		if inst:HasTag("preparedpoop") then
-			inst.AnimState:SetScale(.95, .95, .95)
-		end
-		
-		if inst:HasTag("preparedgears") then
-			inst.pickupsound = "metal"
-		end
 		
 		if data.fireproof ~= nil then
 			inst:AddTag("fireprooffood")
@@ -102,6 +144,10 @@ local function MakePreparedFood(data)
 		inst:AddComponent("tradable")
 		
 		inst:AddComponent("inspectable")
+		if data.nameoverride ~= nil then
+			inst.components.inspectable.nameoverride = data.nameoverride
+		end
+		
 		inst.wet_prefix = data.wet_prefix
 
 		inst:AddComponent("edible")
@@ -132,11 +178,31 @@ local function MakePreparedFood(data)
 			inst:AddComponent("perishable")
 			inst.components.perishable:SetPerishTime(data.perishtime)
 			inst.components.perishable:StartPerishing()
-			inst.components.perishable.onperishreplacement = "spoiled_food"
+			
+			if data.perishproduct ~= nil then 
+				inst.components.perishable.onperishreplacement = data.perishproduct
+			else
+				inst.components.perishable.onperishreplacement = "spoiled_food"
+			end
 		end
 
 		if inst:HasTag("soulstew") then
 			inst:AddComponent("soul")
+		end
+		
+		if data.isfuel ~= nil then
+			inst:AddComponent("fuel")
+			inst.components.fuel.fuelvalue = TUNING.MED_FUEL
+			inst.components.fuel:SetOnTakenFn(FuelTaken)
+		end
+		
+		if data.nightvision ~= nil then
+			inst.PlayBeatingSound = NightVision_PlayBeatingSound
+	
+			inst.OnEntityWake = NightVision_OnEntityWake
+			inst.OnEntitySleep = NightVision_OnEntitySleep
+			inst:ListenForEvent("exitlimbo", inst.OnEntityWake)
+			inst:ListenForEvent("enterlimbo", inst.OnEntitySleep)
 		end
 
 		if data.fireproof ~= nil then

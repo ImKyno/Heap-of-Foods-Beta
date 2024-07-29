@@ -10,6 +10,52 @@ local prefabs =
 	"spoiled_food"
 }
 
+----------------------------------------------------------------------------------------------------------
+-- Funcions for some special brews.
+local FERTILIZER_DEFS = require("prefabs/fertilizer_nutrient_defs").FERTILIZER_DEFS
+
+local function GetFertilizerKey(inst)
+	return inst.prefab
+end
+
+local function fertilizerresearchfn(inst)
+	return inst:GetFertilizerKey()
+end
+
+local BEAT_SOUNDNAME = "BEAT_SOUND"
+
+local function NightVision_PlayBeatingSound(inst)
+	inst.SoundEmitter:KillSound(BEAT_SOUNDNAME)
+	inst.SoundEmitter:PlaySound("meta4/ancienttree/nightvision/fruit_pulse", BEAT_SOUNDNAME)
+end
+
+local function NightVision_OnEntityWake(inst)
+	if inst._beatsoundtask ~= nil or inst:IsInLimbo() or inst:IsAsleep() then
+		return
+	end
+
+	if inst._beatsoundtask ~= nil then
+		inst._beatsoundtask:Cancel()
+		inst._beatsoundtask = nil
+	end
+
+	local fulltime = inst.AnimState:GetCurrentAnimationLength()
+	local currenttime = inst.AnimState:GetCurrentAnimationTime()
+
+	inst:PlayBeatingSound()
+
+	inst._beatsoundtask = inst:DoPeriodicTask(fulltime, inst.PlayBeatingSound, fulltime - currenttime)
+end
+
+local function NightVision_OnEntitySleep(inst)
+	inst.SoundEmitter:KillSound(BEAT_SOUNDNAME)
+
+	if inst._beatsoundtask ~= nil then
+		inst._beatsoundtask:Cancel()
+		inst._beatsoundtask = nil
+	end
+end
+----------------------------------------------------------------------------------------------------------
 local function MakePreparedBrew(data)
 	local foodname = data.basename or data.name
 	local foodassets = assets
@@ -37,6 +83,22 @@ local function MakePreparedBrew(data)
 		inst.entity:AddNetwork()
 
 		MakeInventoryPhysics(inst)
+		
+		if data.isfertilizer ~= nil then
+			MakeDeployableFertilizerPristine(inst)
+
+			inst:AddTag("fertilizerresearchable")
+	
+			inst.GetFertilizerKey = GetFertilizerKey
+		end
+		
+		if data.pickupsound ~= nil then
+			inst.pickupsound = data.pickupsound
+		end
+		
+		if data.scale ~= nil then
+			inst.AnimState:SetScale(data.scale, data.scale, data.scale)
+		end
 
 		local food_symbol_build = nil
 		
@@ -59,6 +121,10 @@ local function MakePreparedBrew(data)
 
 		inst:AddTag("preparedfood")
 		inst:AddTag("preparedbrew")
+		
+		if data.fireproof ~= nil then
+			inst:AddTag("fireprooffood")
+		end
 
 		if data.tags ~= nil then
 			for i,v in pairs(data.tags) do
@@ -87,6 +153,10 @@ local function MakePreparedBrew(data)
 		inst:AddComponent("bait")
 		
 		inst:AddComponent("inspectable")
+		if data.nameoverride ~= nil then
+			inst.components.inspectable.nameoverride = data.nameoverride
+		end
+		
 		inst.wet_prefix = data.wet_prefix
 
 		inst:AddComponent("edible")
@@ -117,14 +187,54 @@ local function MakePreparedBrew(data)
 			inst:AddComponent("perishable")
 			inst.components.perishable:SetPerishTime(data.perishtime)
 			inst.components.perishable:StartPerishing()
-			inst.components.perishable.onperishreplacement = "spoiled_food"
+			
+			if data.perishproduct ~= nil then 
+				inst.components.perishable.onperishreplacement = data.perishproduct
+			else
+				inst.components.perishable.onperishreplacement = "spoiled_food"
+			end
 		end
 		
 		inst:AddComponent("tradable")
 		inst.components.tradable.goldvalue = 8
+		
+		if data.isfertilizer ~= nil then
+			inst:AddComponent("fertilizerresearchable")
+			inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)
 
-		MakeSmallBurnable(inst)
-		MakeSmallPropagator(inst)
+			inst:AddComponent("fertilizer")
+			inst.components.fertilizer.fertilizervalue = TUNING.ROTTENEGG_FERTILIZE
+			inst.components.fertilizer.soil_cycles = TUNING.ROTTENEGG_SOILCYCLES
+			inst.components.fertilizer.withered_cycles = TUNING.ROTTENEGG_WITHEREDCYCLES
+			inst.components.fertilizer:SetNutrients(FERTILIZER_DEFS.wetgoop2.nutrients)
+		end
+		
+		if data.isfuel ~= nil then
+			inst:AddComponent("fuel")
+			inst.components.fuel.fuelvalue = TUNING.MED_FUEL
+			inst.components.fuel:SetOnTakenFn(FuelTaken)
+		end
+		
+		if data.nightvision ~= nil then
+			inst.PlayBeatingSound = NightVision_PlayBeatingSound
+	
+			inst.OnEntityWake = NightVision_OnEntityWake
+			inst.OnEntitySleep = NightVision_OnEntitySleep
+			inst:ListenForEvent("exitlimbo", inst.OnEntityWake)
+			inst:ListenForEvent("enterlimbo", inst.OnEntitySleep)
+		end
+
+		if data.fireproof ~= nil then
+			-- WHAT WE DO?
+		else
+			MakeSmallBurnable(inst)
+			MakeSmallPropagator(inst)
+		end
+
+		if data.isfertilizer ~= nil then
+			MakeDeployableFertilizer(inst)
+		end
+		
 		MakeHauntableLaunchAndPerish(inst)
 
 		return inst

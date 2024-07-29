@@ -9,39 +9,6 @@ local cooking           = require("cooking")
 
 require("hof_debugcommands")
 
---[[
--- Commands for testing.
-local function HofCommandsPostConstruct(self)
-	if self.console_edit then
-		local hof_commands = 
-		{
-			"hofingredients", 
-			"hofswfoods",
-			"hofhamfoods",
-			"hofotherfoods",
-			"hofveggies",
-			"hoftestcoffee",
-			"hofcrockpots",
-			"hofwarlycrockpots",
-			"hoflayout",
-			"hofserenityisland",
-			"hofmeadowisland",
-			"hofkegs",
-			"hofjars",
-			"hofretrofitserenityisland",
-			"hofretrofitmeadowisland",
-			"hofmonsterfoods",
-		}
-		local dictionary = self.console_edit.prediction_widget.word_predictor.dictionaries[3]
-		for k, word in pairs(hof_commands) do
-			table.insert(dictionary.words, word)
-		end
-	end
-end
-
-AddClassPostConstruct("screens/consolescreen", HofCommandsPostConstruct)
-]]--
-
 -- Favorite Mod Foods.
 AddPrefabPostInit("wilson", function(inst)
     inst:AddTag("wislanhealer")
@@ -302,42 +269,6 @@ local function AshPostinit(inst)
 end
 
 AddPrefabPostInit("ash", AshPostinit)
-
--- Sludge is a fertilizer too.
-local function SludgePostinit(inst)
-	local FERTILIZER_DEFS = require("prefabs/fertilizer_nutrient_defs").FERTILIZER_DEFS
-
-    local function GetFertilizerKey(inst)
-        return inst.prefab
-    end
-
-    local function fertilizerresearchfn(inst)
-        return inst:GetFertilizerKey()
-    end
-
-    MakeDeployableFertilizerPristine(inst)
-
-    inst:AddTag("fertilizerresearchable")
-	
-    inst.GetFertilizerKey = GetFertilizerKey
-
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst:AddComponent("fertilizerresearchable")
-    inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)
-
-    inst:AddComponent("fertilizer")
-    inst.components.fertilizer.fertilizervalue = TUNING.ROTTENEGG_FERTILIZE
-    inst.components.fertilizer.soil_cycles = TUNING.ROTTENEGG_SOILCYCLES
-    inst.components.fertilizer.withered_cycles = TUNING.ROTTENEGG_WITHEREDCYCLES
-    inst.components.fertilizer:SetNutrients(FERTILIZER_DEFS.wetgoop2.nutrients)
-
-    MakeDeployableFertilizer(inst)
-end
-
-AddPrefabPostInit("wetgoop2", SludgePostinit)
 
 -- Prevent Food From Spoiling In Stations.
 local KEEP_FOOD_K = GetModConfigData("HOF_KEEPFOOD")

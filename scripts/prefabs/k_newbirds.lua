@@ -357,7 +357,11 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
 
         if not GetGameModeProperty("disable_bird_mercy_items") then
             inst:AddComponent("periodicspawner")
-            inst.components.periodicspawner:SetPrefab(SpawnPrefabChooser)
+			if name == "kingfisher" then
+				inst.components.periodicspawner:SetPrefab("kyno_koi")
+			else
+				inst.components.periodicspawner:SetPrefab(SpawnPrefabChooser)
+			end
             inst.components.periodicspawner:SetDensityInRange(20, 2)
             inst.components.periodicspawner:SetMinimumSpacing(8)
         end

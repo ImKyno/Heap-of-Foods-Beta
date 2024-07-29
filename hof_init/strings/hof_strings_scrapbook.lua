@@ -50,6 +50,13 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEARGER = "Eating this food will cause
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FORTUNE = "Crack one to see what the destiny has reserved for you."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WATER = "Cleanses all the current active food effects of the survivor."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FROG = "Eating this food will make all Frogs friendly towards your for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE = "Woodie can eat this food to force one of his transformations chosen randomly."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FEARLESS = "This food can make a survivor be fearless for a certain amount of time. Insanity auras will have no effect during this period."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MONSTERFOOD = "Webber can eat this food without any penalties."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WURTFOOD = "Wurt will gain extra benefits from eating this food."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PLAYERMONSTER = "Webber can eat this food without any penalties.\nWurt will gain extra benefits from eating this food."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPIDERCAKE = "Webber can eat this food without any penalties.\n\nDon't Starve Together x Cult of the Lamb - Collab 2023."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUGARBOMBS = "A pack of sugary cereal that holds 100% of the recommended daily amount of sugar, Sugar Bombs have been preserved for 25 years after the Great War. However, this also caused a bit of radiation to slip in for most of them."
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "Using a pinch of salt on a crock pot food will refresh its spoilage time by 30%. Don't worry about eating stale dishes again!"

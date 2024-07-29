@@ -89,15 +89,6 @@ if _G.KnownModIndex:IsModEnabled("workshop-2428854303") then
     end)
 end
 
--- Kingfisher drops Tropical Kois periodically.
-AddPrefabPostInit("kingfisher", function(inst)
-	if inst.components.periodicspawner ~= nil then
-		inst.components.periodicspawner:SetPrefab("kyno_koi")
-		inst.components.periodicspawner:SetDensityInRange(20, 2)
-		inst.components.periodicspawner:SetMinimumSpacing(15)
-	end
-end)
-
 -- Prime Mate has very small chance of dropping Pirate's Rum
 AddPrefabPostInit("prime_mate", function(inst)
     if not _G.TheWorld.ismastersim then
