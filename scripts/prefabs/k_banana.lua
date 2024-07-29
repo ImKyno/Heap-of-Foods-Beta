@@ -79,6 +79,7 @@ local function banana()
 	inst:AddTag("cattoy")
 	inst:AddTag("saltbox_valid")
 	inst:AddTag("surface_banana")
+	inst:AddTag("monkeyqueenbribe")
 
 	inst.entity:SetPristine()
 
@@ -140,6 +141,7 @@ local function banana_cooked()
 
 	inst:AddTag("fruit")
 	inst:AddTag("surface_banana")
+	inst:AddTag("monkeyqueenbribe")
 
 	inst.entity:SetPristine()
 

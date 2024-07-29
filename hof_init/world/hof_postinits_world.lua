@@ -436,66 +436,6 @@ end
 
 AddPrefabPostInit("trident", StridentTridentPostinit)
 
--- Colour Cubes and Music for the Serenitea Archipelago.
--- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=2625422345
--- local SERENITY_CC = GetModConfigData("serenity_cc")
---[[
-if SERENITY_CC == 1 then
-    local function MakeSerenityArea(inst)
-        _G.TheWorld:PushEvent("overridecolourcube", resolvefilepath("images/colourcubesimages/quagmire_cc.tex"))
-    end
-
-    local function RemoveSerenityArea(inst)
-        _G.TheWorld:PushEvent("overridecolourcube", nil)
-    end
-
-    AddPrefabPostInit("world", function(inst)
-        inst:DoTaskInTime(0, function(inst)
-            if _G.TheWorld.topology then
-                for i, node in ipairs(_G.TheWorld.topology.nodes) do
-                    if table.contains(node.tags, "serenityarea") then
-                        if node.area_emitter == nil then
-                            if node.area == nil then
-                                node.area = 1
-                            end
-                        end
-                    end
-                end
-            end
-        end)
-    end)
-
-    AddComponentPostInit("playervision", function(self)
-        self.inst:DoTaskInTime(0, function()
-            self.canchange = true
-            self.inst:ListenForEvent("changearea", function(inst, area)
-                if self.canchange then
-                    if area and area.tags and table.contains(area.tags, "serenityarea") then
-                        MakeSerenityArea(self.inst)
-                    else
-                        RemoveSerenityArea(self.inst)
-                    end
-                end
-            end)
-
-            self.inst:DoTaskInTime(0, function()
-                local node, node_index = _G.TheWorld.Map:FindVisualNodeAtPoint(self.inst.Transform:GetWorldPosition())
-                if node_index then
-                    self.inst:PushEvent("changearea", node and {
-                        id = _G.TheWorld.topology.ids[node_index],
-                        type = node.type,
-                        center = node.cent,
-                        poly = node.poly,
-                        tags = node.tags,
-                    }
-                    or nil)
-                end
-            end)
-        end)
-    end)
-end
-]]--
-
 -- For Installing the new Cookware on the Fire Pits.
 local function FirePitCookwarePostinit(inst)
 	local function GetFirepit(inst)
@@ -688,19 +628,6 @@ AddPrefabPostInit("bananabush", function(inst)
         inst.components.pickable:SetUp("kyno_banana")
     end
 end)
-
--- Monkey Queen also accepts our Bananas!
-local new_bananas =
-{
-    "kyno_banana",
-    "kyno_banana_cooked",
-}
-
-for k,v in pairs(new_bananas) do
-    AddPrefabPostInit(v, function(inst)
-        inst:AddTag("monkeyqueenbribe")
-    end)
-end
 
 -- Make Sugarfly spawn on the Serenity Archipelago.
 AddPrefabPostInit("forest", function(inst)

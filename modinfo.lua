@@ -3,18 +3,18 @@ version                     = "7.9-A"
 
 description                 = 
 [[
-󰀄 Adds over +100 brand new Crock Pot dishes alongside new ingredients to use!
+󰀄 Adds over +100 brand new Crock Pot dishes alongside new ingredients to use. Happy Cooking!
 
 󰀠 Also features brand new Biomes somewhere in the Ocean!
 󰀦 Complete Recipe Sheet on the Mod Page!
 
-󰀏 Featuring the Bountiful Harvest Update
-This series of updates are focused on revamping the visuals of the farming crops as well as adding new ones!
+󰀏 Featuring the Bountiful Harvest Update:
+This update focused on revamping the visuals of the farming crops as well as adding new ones! And some smaller changes and improvements in general to the mod.
 
-Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover its flavors...
+Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover it.
 
 󰀌 Mod Version: 7.9-A
-󰀧 Update: Bountiful Harvest (Part I)
+󰀧 Update: Bountiful Harvest
 ]]
 
 author                      = "Kyno"
@@ -254,82 +254,6 @@ configuration_options       =
 		},
 		default             = 480,
 	},
-	
-	--[[
-	Title("World Options", "Options for the world."),
-	{
-		name                = "HOF_RETROFIT",
-		label               = "Retrofit Contents",
-		hover               = "If your world is missing the Mod Contents enable this option.\nThis option will be set as \"Updated\" once the retrofitting is finished!",
-		options             =
-		{
-			{
-				description = "Updated", 
-				hover       = "Your world is already updated with the Mod Contents.",
-				data        = 0
-			},
-            {
-				description = "Retrofit Serenity Archipelago", 
-				hover       = "Serenity Archipelago will be generated during server initialization.",
-				data        = 1
-			},
-			{
-				description = "Retrofit Seaside Island", 
-				hover       = "Seaside Island will be generated during server initialization.",
-				data        = 2
-			},
-        },
-        default             = 0,
-	},
-	{
-		name                = "HOF_OCEANSETPIECE_COUNT",
-		label               = "Ocean Setpieces",
-		hover               = "How many Ocean Setpieces should be generated in the world?",
-		options             =
-		{
-			{
-				description = "None", 
-				hover       = "Nothing will be generated.",
-				data        = 0
-			},
-			{
-				description = "Less", 
-				hover       = "At least One of each will be generated.",
-				data        = 1
-			},
-			{
-				description = "Default", 
-				hover       = "At least Two of each will be generated.",
-				data        = 2
-			},
-			{
-				description = "More", 
-				hover       = "At least Three of each will be generated.",
-				data        = 3
-			},
-        },
-        default             = 2,
-	},
-	{
-		name                = "HOF_REGROWTH",
-		label               = "World Regrowth",
-		hover               = "Should the Mod plants and objects regrow overtime in the world?",
-		options             =
-		{
-			{
-				description = "No", 
-				hover       = "Mod Plants and objects will not regrow overtime in the world.",
-				data        = 0
-			},
-            {
-				description = "Yes", 
-				hover       = "Mod Plants and objects will regrow overtime in the world.",
-				data        = 1
-			},
-        },
-        default             = 0,
-	},
-	]]--
 	
 	Title("Extra Options", "Extra Options for the Mod."),
 	{

@@ -65,6 +65,14 @@ local function MakePreparedFood(data)
 		if inst:HasTag("preparedpoop") then
 			inst.AnimState:SetScale(.95, .95, .95)
 		end
+		
+		if inst:HasTag("preparedgears") then
+			inst.pickupsound = "metal"
+		end
+		
+		if data.fireproof ~= nil then
+			inst:AddTag("fireprooffood")
+		end
 
 		if data.tags ~= nil then
 			for i,v in pairs(data.tags) do
@@ -131,8 +139,13 @@ local function MakePreparedFood(data)
 			inst:AddComponent("soul")
 		end
 
-		MakeSmallBurnable(inst)
-		MakeSmallPropagator(inst)
+		if data.fireproof ~= nil then
+			-- WHAT WE DO?
+		else
+			MakeSmallBurnable(inst)
+			MakeSmallPropagator(inst)
+		end
+		
 		MakeHauntableLaunchAndPerish(inst)
 
 		return inst

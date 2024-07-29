@@ -5,8 +5,14 @@ local STRINGS		= _G.STRINGS
 
 -- Datas. (Unused)
 STRINGS.SCRAPBOOK.DATA_BREWER = "CAN PREPARE DRINK"
+STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "HORRIBLE"
+STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDSOUL = "SOUL"
+STRINGS.SCRAPBOOK.FOODTYPE.ALCOHOLIC = "ALCOHOLIC"
 
 -- Categories.
+STRINGS.SCRAPBOOK.CATS.ARTISAN = "Artisan\nGoods"
+
+-- Sub Categories.
 STRINGS.SCRAPBOOK.SUBCATS.CHICKEN = "Chicken"
 STRINGS.SCRAPBOOK.SUBCATS.PIKO = "Piko"
 STRINGS.SCRAPBOOK.SUBCATS.CANNED = "Canned"
@@ -20,7 +26,7 @@ STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "Pickles"
 
 -- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "Increased movement speed for a certain amount of time."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_COFFEE = "Increased movement speed and temperature for a certain amount of time. Hasta la vista, baby!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_COFFEE = "Increased movement speed for a certain amount of time.\nBriefly increases the temperature.\n\nHasta la vista, baby!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SLEEP = "Increased sleep resistance for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALTHREGEN = "Gives off health regeneration for a short period."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERREGEN = "Gives off hunger regeneration for a short period."
@@ -35,12 +41,21 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA = "The unique taste of Nuka-C
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_QUANTUM = "The unique taste of Nuka-Cola is the result of a combination of seventeen fruit essences, balanced to enhance the classic cola flavor. Zap that thirst!\n\nNuka-Cola Quantum has twice the calories, twice the carbohydrates, twice the caffeine, and twice the taste!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INSANITY = "Indulces insanity for a short period."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NIGHTVISION = "Gives off night vision for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NAUGHTY = "Eating this food made with parts from a poor and innocent soul will cause \"Him\" to spawn nearby."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HASTE = "Increased speed for all performed actions for a certain amount of time. Winona does not benefit from this effect."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLOOM = "A mix of composts thrown together in a cooking pot that can estimulate bloomness to its maximum potentital.\n\n\"Art!\" - Wormwood."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOUL = "A special food made with a harvested Soul.\n\nWortox can eat this food to gain the full benefits of it with no penalties unlike other mundane foods."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DEERCLOPS = "Eating this food will cause Deerclops to spawn nearby."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEARGER = "Eating this food will cause Bearger to spawn nearby."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FORTUNE = "Crack one to see what the destiny has reserved for you."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WATER = "Cleanses all the current active food effects of the survivor."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FROG = "Eating this food will make all Frogs friendly towards your for a certain amount of time."
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "Using a pinch of salt on a crock pot food will refresh its spoilage time by 30%. Don't worry about eating stale dishes again!"
 STRINGS.SCRAPBOOK.SPECIALINFO.SALTRACK = "This rack will collect a small rock of salt every few days."
 STRINGS.SCRAPBOOK.SPECIALINFO.CRABTRAP = "Once set on the ground, it will trigger when a crab move nearby, capturing them.\n\nCollecting a captured trap will put the creature inside your inventory.\n\nCrab Traps can be baited with meats."
-STRINGS.SCRAPBOOK.SPECIALINFO.CARAMELCUBE = "This dish is a delicacy, a solid block of pure sweetness and love. It's a special entry for someone with sugar addiction, very popular with elderly folk."
+STRINGS.SCRAPBOOK.SPECIALINFO.CARAMELCUBE = "This dish is a delicacy, a solid block of pure sweetness and love. It's a special entry for someone with sugar addiction, very, very popular with elderly folk."
 STRINGS.SCRAPBOOK.SPECIALINFO.NECTAR = "Bees that have pollinated enough flowers will drop nectar when killed.\n\nNectar will be transformed into honey when stored the Honey Deposit."
 STRINGS.SCRAPBOOK.SPECIALINFO.BOTTLESOUL = "A bottled Soul doesn't count towards the total amount inside Wortox's inventory."
 STRINGS.SCRAPBOOK.SPECIALINFO.BOTTLECAP = "Durable, portable, and instantly recognizable bottle caps from the Nuka-Cola Corporation!"

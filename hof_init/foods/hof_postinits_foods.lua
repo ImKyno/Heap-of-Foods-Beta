@@ -51,10 +51,6 @@ for k,v in pairs(resize_items) do
     AddPrefabPostInit(v, ResizeThisItem)
 end
 
-AddPrefabPostInit("cucumbersalad", function(inst)
-    inst.AnimState:SetScale(1.5, 1.5, 1.5)
-end)
-
 AddPrefabPostInit("durianchicken", function(inst)
     inst.AnimState:SetScale(1.8, 1.8, 1.8)
 end)

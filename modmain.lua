@@ -77,5 +77,12 @@ _G.CONFIGS_HOF  =
 
 _G.CONFIGS_HOF.SEASONALFOOD = GetModConfigData("HOF_SEASONALFOOD")
 
+--[[
+local HOF_SCRAPBOOK = GetModConfigData("HOF_SCRAPBOOK")
+if HOF_SCRAPBOOK then
+	table.insert(hof_init_misc, "hof_scrapbook")
+end
+]]--
+
 -- This belongs to the Accomplishments Mod.
 -- modimport("achievementsmain")
