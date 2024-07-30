@@ -30,6 +30,10 @@ PrefabFiles =
 	"k_tunacan",
 	"k_cannedfoods",
 	"k_canneddrinks",
+	
+	"k_garden_sprinkler",
+	"k_raindrop",
+	"k_water_spray",
 
 	"k_coffeebeans",
 	"k_realcoffeebush",

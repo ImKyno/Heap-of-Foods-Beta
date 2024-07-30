@@ -24,7 +24,6 @@ Assets =
 	
 	Asset("ANIM", "anim/farm_plant_kyno_radish.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_sweetpotato.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_sweetpotato_purple.zip"), -- Purple variant!
 	Asset("ANIM", "anim/farm_plant_kyno_fennel.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),

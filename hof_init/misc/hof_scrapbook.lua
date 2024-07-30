@@ -11418,6 +11418,26 @@ local HOF_SCRAPBOOK_THINGS =
 		anim           = "crop_full",
 		deps           = {"kyno_turnip", "kyno_turnip_oversized", "kyno_turnip_seeds", "seeds", "spoiled_food"},
 	},
+	
+	kyno_garden_sprinkler =
+	{
+		name           = "kyno_garden_sprinkler",
+		type           = "thing",
+		subcat         = "structure",
+		tex            = "kyno_garden_sprinkler.tex",
+		prefab         = "kyno_garden_sprinkler",
+		workable       = "HAMMER",
+		fueledmax      = 350, 
+		fueledrate     = 1, 
+		fueledtype1    = "BURNABLE", 
+		fueledtype2    = "CHEMICAL",
+		bank           = "garden_sprinkler",
+		build          = "garden_sprinkler",
+		overridesymbol = {"swap_meter", "sprinkler_meter", "10"},
+		anim           = "idle_off",
+		deps           = {"gears", "ice", "trinket_6"},
+		specialinfo    = "GARDENSPRINKLER",
+	},
 }
 
 -- Register the entries in the Scrapbook.

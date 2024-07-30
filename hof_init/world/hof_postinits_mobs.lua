@@ -98,6 +98,13 @@ AddPrefabPostInit("prime_mate", function(inst)
     inst.components.lootdropper:AddChanceLoot("piraterum", 0.05)
 end)
 
+-- Lord of the Fruit Flies drops Garden Sprinkler blueprint.
+AddPrefabPostInit("lordfruitfly", function(inst)
+	if _G.LootTables and _G.LootTables.lordfruitfly then
+		table.insert(_G.LootTables.lordfruitfly, {"kyno_garden_sprinkler_blueprint", 1.00})
+	end
+end)
+
 -- Dragonfly Drops Coffee Plants.
 local DF_COFFEE = GetModConfigData("HOF_COFFEEDROPRATE")
 AddPrefabPostInit("dragonfly", function(inst)

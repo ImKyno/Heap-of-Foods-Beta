@@ -10,6 +10,8 @@ local State 		= _G.State
 local TimeEvent 	= _G.TimeEvent
 local POPUPS 		= _G.POPUPS
 
+require("hof_upvaluehacker")
+
 -- New Stategraphs.
 AddStategraphState("wilson",
 	State{

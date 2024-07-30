@@ -108,3 +108,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SUGARTREE_RUINED = "Standing near a tree offers 35
 STRINGS.SCRAPBOOK.SPECIALINFO.SUGARTREE_RUINED2 = "Standing near a tree offers 35% protection from rain and cools survivor a small amount.\n\nYou can heal ruined trees using a Musty Antidote."
 STRINGS.SCRAPBOOK.SPECIALINFO.RUBBLE = "Elder wants your help to repair his Old Pot so he can start making delicious Syrup again."
 STRINGS.SCRAPBOOK.SPECIALINFO.PINEAPPLEBUSH = "Pineapple Bushes takes nearly 6 days to fully grow. They take longer to grow in all seasons except for Summer.\n\nDuring Summer they will start growing every 2 days."
+STRINGS.SCRAPBOOK.SPECIALINFO.GARDENSPRINKLER = "Can be turned on and off. While fueled and on, will automatically water farm plants within its range."

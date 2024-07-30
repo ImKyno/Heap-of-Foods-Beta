@@ -684,6 +684,7 @@ local ScrapbookIcons =
 	"kyno_musselstick",
 	"kyno_pineapplebush",
 	"kyno_coffeebush",
+	"kyno_garden_sprinkler",
 	"farm_plant_kyno_radish",
 	"farm_plant_kyno_rice",
 	"farm_plant_kyno_sweetpotato",

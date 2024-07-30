@@ -794,10 +794,9 @@ AddPrefabPostInit("cookingrecipecard", CookingCardPostinit)
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")
 
-local IGNORE_TAGS = {"fireproof"}
+local FIRESUPRESSOR_IGNORE_TAGS = {"fireproof"}
 local NOTAGS_FIRESUPPRESSOR = UpvalueHacker.GetUpvalue(FireDetector.ActivateEmergencyMode, "OnDetectEmergencyTargets", "NOTAGS")
 
-for k, v in pairs(IGNORE_TAGS) do
+for k, v in pairs(FIRESUPRESSOR_IGNORE_TAGS) do
     table.insert(NOTAGS_FIRESUPPRESSOR, v)
 end
-

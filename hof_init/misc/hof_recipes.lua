@@ -288,6 +288,18 @@ SortAfter("kyno_antchest", "saltbox", "CONTAINERS")
 SortAfter("kyno_antchest", "saltbox", "STRUCTURES")
 SortAfter("kyno_antchest", "saltbox", "COOKING")
 
+AddRecipe2("kyno_garden_sprinkler", {Ingredient("gears", 3), Ingredient("ice", 15), Ingredient("trinket_6", 3)}, TECH.LOST,
+	{
+		placer              = "kyno_garden_sprinkler_placer",
+		min_spacing         = 1,
+		atlas               = ModAtlas,
+		image               = "kyno_garden_sprinkler.tex",
+	},
+	{"GARDENING", "STRUCTURES"}
+)
+SortAfter("kyno_garden_sprinkler", "firesuppressor", "STRUCTURES")
+SortAfter("kyno_garden_sprinkler", "compostwrap", "GARDENING")
+
 -- Pig Elder Shop.
 AddRecipe2("kyno_saltrack_installer_p", {Ingredient("kyno_salmonfish", 2, ModAtlas)}, TECH.SERENITYSHOP_ONE, 
 	{
