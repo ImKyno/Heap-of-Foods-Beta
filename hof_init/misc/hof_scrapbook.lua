@@ -892,6 +892,39 @@ local HOF_SCRAPBOOK_ITEMS =
 		deps           = {"kyno_rice_oversized", "fruitfly", "spoiled_food"},
 	},
 	
+	kyno_sweetpotato_oversized =
+	{
+		name           = "kyno_sweetpotato_oversized",
+		type           = "item",
+		tex            = "kyno_sweetpotato_oversized.tex",
+		prefab         = "kyno_sweetpotato_oversized",
+		workable       = "HAMMER",
+		perishable     = 19200,
+		burnable       = true,
+		bank           = "farm_plant_kyno_sweetpotato",
+		build          = "farm_plant_kyno_sweetpotato",
+		anim           = "idle_oversized",
+		animoffsety    = 15,
+		deps           = {"beeswax", "kyno_sweetpotato", "kyno_sweetpotato_seeds", "farm_plant_kyno_sweetpotato"},
+	},
+	
+	kyno_sweetpotato_oversized_rotten =
+	{
+		name           = "kyno_sweetpotato_oversized_rotten",
+		type           = "item",
+		tex            = "kyno_sweetpotato_oversized_rotten.tex",
+		prefab         = "kyno_sweetpotato_oversized_rotten",
+		workable       = "HAMMER",
+		pickable       = true,
+		burnable       = true,
+		bank           = "farm_plant_kyno_sweetpotato",
+		build          = "farm_plant_kyno_sweetpotato",
+		anim           = "idle_rot_oversized",
+		animoffsety    = 20,
+		animoffsetbgy  = -30,
+		deps           = {"kyno_sweetpotato_oversized", "fruitfly", "spoiled_food"},
+	},
+	
 	kyno_turnip_oversized =
 	{
 		name           = "kyno_turnip_oversized",
@@ -945,7 +978,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank           = "mushrooms",
 		build          = "mushrooms",
 		anim           = "red_cap",
-		deps           = {"red_cap_cooked", "meatrack", "kyno_red_cap_dried", "meatrack_hermit", "spoiled_food"},
+		deps           = {"red_cap_cooked", "kyno_red_cap_dried", "meatrack", "meatrack_hermit", "spoiled_food"},
 	},
 	
 	green_cap          = 
@@ -964,7 +997,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank           = "mushrooms",
 		build          = "mushrooms",
 		anim           = "green_cap",
-		deps           = {"green_cap_cooked", "meatrack", "kyno_green_cap_dried", "meatrack_hermit", "spoiled_food"},
+		deps           = {"green_cap_cooked", "kyno_green_cap_dried", "meatrack", "meatrack_hermit", "spoiled_food"},
 	},
 	
 	blue_cap           = 
@@ -2623,7 +2656,8 @@ local HOF_SCRAPBOOK_FOODS =
 		bank           = "kyno_veggies",
 		build          = "kyno_veggies",
 		anim           = "kyno_sweetpotato",
-		deps           = {"kyno_sweetpotato_ground", "kyno_sweetpotato_cooked", "kyno_sweetpotato_seeds", "seeds", "spoiled_food"},
+		deps           = {"farm_plant_kyno_sweetpotato", "kyno_sweetpotato_oversized", "kyno_sweetpotato_ground", "kyno_sweetpotato_cooked", 
+		"kyno_sweetpotato_seeds", "seeds", "spoiled_food"},
 	},
 	
 	kyno_sweetpotato_cooked =
@@ -11098,9 +11132,10 @@ local HOF_SCRAPBOOK_THINGS =
 		bank           = "kyno_aspargos",
 		build          = "kyno_aspargos",
 		anim           = "planted",
-		animoffsetx    = 30,
-		animoffsetbgy  = -5,
-		animoffsetbgy  = -90,
+		animoffsetx    = 25,
+		animoffsety    = -25,
+		animoffsetbgx  = -5,
+		animoffsetbgy  = -130,
 		deps           = {"asparagus"},
 	},
 	
@@ -11187,13 +11222,16 @@ local HOF_SCRAPBOOK_THINGS =
 	{
 		name           = "kyno_sweetpotato_ground",
 		type           = "thing",
-		tex            = "kyno_turnip_ground.tex",
+		tex            = "kyno_sweetpotato_ground.tex",
 		prefab         = "kyno_sweetpotato_ground",
 		pickable       = true,
 		burnable       = true,
 		bank           = "kyno_sweetpotato",
 		build          = "kyno_sweetpotato",
 		anim           = "planted",
+		animoffsety    = 30,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -130,
 		deps           = {"kyno_sweetpotato"},
 	},
 	
@@ -11342,6 +11380,26 @@ local HOF_SCRAPBOOK_THINGS =
 		overridesymbol = {"soil01", "farm_soil", "soil01"},
 		anim           = "crop_full",
 		deps           = {"kyno_rice", "kyno_rice_oversized", "kyno_rice_seeds", "seeds", "spoiled_food"},
+	},
+	
+	farm_plant_kyno_sweetpotato =
+	{
+		name           = "farm_plant_kyno_sweetpotato",
+		type           = "thing",
+		subcat         = "farmplant",
+		tex            = "farm_plant_kyno_sweetpotato.tex",
+		prefab         = "farm_plant_kyno_sweetpotato",
+		workable       = "DIG",
+		pickable       = true,
+		burnable       = true,
+		bank           = "farm_plant_kyno_sweetpotato",
+		build          = "farm_plant_kyno_sweetpotato",
+		overridesymbol = {"soil01", "farm_soil", "soil01"},
+		anim           = "crop_full",
+		animoffsetx    = -5,
+		animoffsety    = 10,
+		animoffsetbgy  = -10,
+		deps           = {"kyno_sweetpotato", "kyno_sweetpotato_oversized", "kyno_sweetpotato_seeds", "seeds", "spoiled_food"},
 	},
 	
 	farm_plant_kyno_turnip =

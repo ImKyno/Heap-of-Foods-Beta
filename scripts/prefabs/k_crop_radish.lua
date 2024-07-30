@@ -1,6 +1,5 @@
 local assets =
 {
-	Asset("ANIM", "anim/kyno_crop_seeds.zip"),
 	Asset("ANIM", "anim/kyno_radish.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),

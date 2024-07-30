@@ -24,6 +24,7 @@ Assets =
 	
 	Asset("ANIM", "anim/farm_plant_kyno_radish.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_sweetpotato.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_sweetpotato_purple.zip"), -- Purple variant!
 	Asset("ANIM", "anim/farm_plant_kyno_fennel.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
@@ -58,10 +59,6 @@ Assets =
 
 	Asset("IMAGE", "images/minimapimages/hof_parsnipminimap.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_parsnipminimap.xml"),
-	
-	Asset("IMAGE", "images/scrapbookimages/hof_scrapbookimages.tex"),
-	Asset("ATLAS", "images/scrapbookimages/hof_scrapbookimages.xml"),
-	Asset("ATLAS_BUILD", "images/scrapbookimages/hof_scrapbookimages.xml", 256),
 
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -82,6 +79,10 @@ Assets =
 	Asset("IMAGE", "images/cookbookimages/hof_seasonalfoodsimages.tex"),
 	Asset("ATLAS", "images/cookbookimages/hof_seasonalfoodsimages.xml"),
 	Asset("ATLAS_BUILD", "images/cookbookimages/hof_seasonalfoodsimages.xml", 256),
+	
+	Asset("IMAGE", "images/scrapbookimages/hof_scrapbookimages.tex"),
+	Asset("ATLAS", "images/scrapbookimages/hof_scrapbookimages.xml"),
+	Asset("ATLAS_BUILD", "images/scrapbookimages/hof_scrapbookimages.xml", 256),
 	
 	-- Accomplishments Mod.
     -- Asset("IMAGE", "images/achievementsimages/hof_achievements_images.tex"),

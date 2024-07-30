@@ -1,6 +1,5 @@
 local assets =
 {
-	Asset("ANIM", "anim/kyno_crop_seeds.zip"),
 	Asset("ANIM", "anim/kyno_turnip.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
@@ -29,7 +28,7 @@ local function fn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(1.2, 1.2, 1.2)
+	inst.AnimState:SetScale(1.5, 1.5, 1.5)
 
     inst.AnimState:SetBank("kyno_turnip")
     inst.AnimState:SetBuild("kyno_turnip")

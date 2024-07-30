@@ -1,14 +1,13 @@
 local assets =
 {
-	Asset("ANIM", "anim/kyno_crop_seeds.zip"),
 	Asset("ANIM", "anim/kyno_cucumber.zip"),
-	
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
-local prefabs = 
+local prefabs =
 {
 	"kyno_cucumber",
 	"kyno_cucumber_seeds",
@@ -27,7 +26,7 @@ local function fn()
     inst.entity:AddAnimState()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
-	
+
 	inst.AnimState:SetScale(.7, .7, .7)
 
     inst.AnimState:SetBank("kyno_cucumber")
@@ -48,7 +47,7 @@ local function fn()
     inst.components.pickable:SetUp("kyno_cucumber", 10)
     inst.components.pickable.onpickedfn = onpicked
     inst.components.pickable.quickpick = true
-	
+
 	inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 

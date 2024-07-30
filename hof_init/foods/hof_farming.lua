@@ -1,8 +1,8 @@
 -- New Veggie System to match the R.W.Y.S update. Metatable Source: https://steamcommunity.com/workshop/filedetails/?id=2511339795
 -- New Farm Plants. Source: https://forums.kleientertainment.com/forums/topic/126286-template-adding-farm-plants-to-the-game/
 local _G = GLOBAL
-
 _G.setmetatable(env, {__index=function(t, k) return _G.rawget(_G, k) end})
+
 _G.KYNO_VEGGIES 	= {}
 _G.KYNO_FARM_PLANTS = {}
 
@@ -677,7 +677,7 @@ PLANT_DEFS.kyno_rice.plantregistryinfo           =
 }
 
 -- Sweet Potato Plant.
-PLANT_DEFS.kyno_sweetpotato                             = {build = "farm_plant_kyno_sweetpotato", bank = "farm_plant_potato"}
+PLANT_DEFS.kyno_sweetpotato                             = {build = "farm_plant_kyno_sweetpotato", bank = "farm_plant_kyno_sweetpotato"}
 PLANT_DEFS.kyno_sweetpotato.prefab                      = "farm_plant_kyno_sweetpotato"
 PLANT_DEFS.kyno_sweetpotato.product                     = "kyno_sweetpotato"
 PLANT_DEFS.kyno_sweetpotato.product_oversized           = "kyno_sweetpotato_oversized"

@@ -183,6 +183,7 @@ if _G.TheNet:GetIsMasterSimulation() then
 	"kyno_radish_oversized_rotten",
 	"kyno_sweetpotato_oversized",
 	"kyno_sweetpotato_oversized_waxed",
+	"kyno_sweetpotato_oversized_rotten",
 	"kyno_fennel_oversized",
 	"kyno_fennel_oversized_waxed",
 	"kyno_aloe_oversized",
@@ -673,6 +674,7 @@ local ScrapbookIcons =
 	"kyno_cucumber_ground",
 	"kyno_fennel_ground",
 	"kyno_radish_ground",
+	"kyno_sweetpotato_ground",
 	"kyno_turnip_ground",
 	"kyno_parznip_ground",
 	"kyno_parznip_big",
@@ -684,6 +686,7 @@ local ScrapbookIcons =
 	"kyno_coffeebush",
 	"farm_plant_kyno_radish",
 	"farm_plant_kyno_rice",
+	"farm_plant_kyno_sweetpotato",
 	"farm_plant_kyno_turnip",
 }
 
