@@ -9,6 +9,9 @@ local cooking           = require("cooking")
 
 require("hof_debugcommands")
 
+local HOF_HUMANMEAT = GetModConfigData("HOF_HUMANMEAT")
+local HOF_KEEPFOOD  = GetModConfigData("HOF_KEEPFOOD")
+
 -- Favorite Mod Foods.
 AddPrefabPostInit("wilson", function(inst)
     inst:AddTag("wislanhealer")
@@ -232,6 +235,57 @@ AddPrefabPostInit("wonkey", function(inst)
     end
 end)
 
+-- Players Have a Chance to Drop Long Pig. Except WX-78, Wurt, Wortox and Wormwood.
+if HOF_HUMANMEAT then
+    local longpig_characters =
+	{
+        "wilson",
+        "willow",
+        "wolfgang",
+        "wendy",
+        "wickerbottom",
+        "woodie",
+        "waxwell",
+        "wes",
+        "webber",
+        "wathgrithr",
+        "winona",
+        "warly",
+        "walter",
+        "wanda",
+    }
+
+	local function LongPigPostinit(inst)
+		local function OnDeathLongPig(inst)
+			if math.random() < 0.33 then
+				local x, y, z = inst.Transform:GetWorldPosition()
+				local humanmeat = SpawnPrefab("kyno_humanmeat")
+				
+				if humanmeat ~= nil then
+					if humanmeat.Physics ~= nil then
+						local speed = 1 + math.random()
+						local angle = math.random() * 1 * PI
+						humanmeat.Physics:Teleport(x, y + 1, z)
+						humanmeat.Physics:SetVel(speed * math.cos(angle), speed * 0.5, speed * math.sin(angle))
+					else
+						humanmeat.Transform:SetPosition(x, y, z)
+					end
+				end
+			end
+		end
+
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+
+		inst:ListenForEvent("death", OnDeathLongPig)
+	end
+
+    for k,v in pairs(longpig_characters) do
+        AddPrefabPostInit(v, LongPigPostinit)
+    end
+end
+
 -- Ashes are Now a Fertilizer. Also using the Nutrients of Manure as placeholder for now, check "ash.lua".
 local function AshPostinit(inst)
 	local FERTILIZER_DEFS = require("prefabs/fertilizer_nutrient_defs").FERTILIZER_DEFS
@@ -271,8 +325,7 @@ end
 AddPrefabPostInit("ash", AshPostinit)
 
 -- Prevent Food From Spoiling In Stations.
-local KEEP_FOOD_K = GetModConfigData("HOF_KEEPFOOD")
-if KEEP_FOOD_K == 1 then
+if HOF_KEEPFOOD then
     local cooking_stations = {
         "cookpot",
         "portablecookpot",

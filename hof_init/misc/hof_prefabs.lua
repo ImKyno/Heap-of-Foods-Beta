@@ -18,6 +18,7 @@ PrefabFiles =
 
 	"k_product_bubble",
 	"k_fertilizer_nutrient_defs",
+	-- "k_waxed_plants",
 
 	"k_newbirds",
 	"k_newbrews",

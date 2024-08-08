@@ -64,6 +64,25 @@ configuration_options       =
     },
 	
 	Title("General Options", "General options for the entire mod."),
+	{
+		name                = "HOF_SCRAPBOOK",
+		label               = "Mod Scrapbook",
+		hover               = "Should the mod's contents be added to the Scrapbook?",
+		options             =
+		{
+			{
+				description = "No", 
+				hover       = "Default Scrapbook.",
+				data        = false
+			},
+            {
+				description = "Yes", 
+				hover       = "Mod's contents will be added to the Scrapbook.",
+				data        = true
+			},
+        },
+        default = true,
+	},
     {
         name                = "HOF_KEEPFOOD",
         label               = "Keep Food Spoilage",
@@ -73,15 +92,15 @@ configuration_options       =
             {
 				description = "No", 
 				hover       = "Food will spoil in Crock Pot, Portable Crock Pot, etc.",
-				data        = 0
+				data        = false
 			},	
 			{
 				description = "Yes", 
 				hover       = "Food will not spoil in Crock Pot, Portable Crock Pot, etc.",
-				data        = 1
+				data        = true
 			},
         },
-        default             = 0,
+        default             = false,
     },
 	{
         name                = "HOF_COFFEEDROPRATE",
@@ -148,15 +167,15 @@ configuration_options       =
 			{
 				description = "No",
 				hover       = "Players will not drop Long Pigs upon death.",
-				data        = 0
+				data        = false
 			},
 			{
 				description = "Yes",
 				hover       = "Players may have a chance to drop Long Pigs upon death.",
-				data        = 1
+				data        = true
 			},
 		},
-		default             = 1,
+		default             = true,
 	},
 	{
 		name                = "HOF_ALCOHOLICDRINKS",
@@ -167,15 +186,15 @@ configuration_options       =
 			{
 				description = "No", 
 				hover       = "All characters can drink Alcoholic-like drinks.",
-				data        = 0
+				data        = false
 			},
             {	
 				description = "Yes", 
 				hover       = "Some characters like Webber, Wendy, etc. can't drink Alcoholic-like drinks.",
-				data        = 1
+				data        = true
 			},
         },
-        default             = 0,
+        default             = true,
 	},
 	{
 		name                = "HOF_GIANTSPAWNING",
@@ -186,15 +205,15 @@ configuration_options       =
 			{
 				description = "No",
 				hover       = "Players will not spawn Giants when eating their special food.",
-				data        = 0
+				data        = false
 			},
 			{
 				description = "Yes",
 				hover       = "Players will spawn Giants when eating their special food.",
-				data        = 1
+				data        = true
 			},
 		},
-		default             = 1,
+		default             = true,
 	},
 	{
 		name                = "HOF_COFFEESPEED",
@@ -205,12 +224,12 @@ configuration_options       =
 			{
 				description = "No",
 				hover       = "Foods will not give the Speed Buff when eaten.",
-				data        = 0
+				data        = false
 			},
 			{
 				description = "Yes",
 				hover       = "Foods will give the Speed Buff when eaten.",
-				data        = 1
+				data        = true
 			},
 		},
 		default             = 1,
@@ -265,15 +284,15 @@ configuration_options       =
 			{
 				description = "No", 
 				hover       = "Warly's Portable Grinding Mill will not have the recipes from Mealing Stone.",
-				data        = 0
+				data        = false
 			},
             {
 				description = "Yes", 
 				hover       = "Warly's Portable Grinding Mill will have the recipes from Mealing Stone.",
-				data        = 1
+				data        = true
 			},
         },
-        default             = 0,
+        default             = false,
 	},
 	{
 		name                = "HOF_FERTILIZERTWEAK",
@@ -284,15 +303,15 @@ configuration_options       =
 			{
 				description = "Default", 
 				hover       = "Bucket-o-Poop will not use the Bucket. (Default crafting recipe).",
-				data        = 0
+				data        = false
 			},
             {
 				description = "Tweaked", 
 				hover       = "Bucket-o-Poop will use the Bucket on its crafting recipe.",
-				data        = 1
+				data        = true
 			},
         },
-        default = 0,
+        default = false,
 	},
 	
 	Title("Retrofit Options", "Options for retrofitting old worlds."),

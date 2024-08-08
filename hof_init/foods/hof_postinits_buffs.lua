@@ -11,11 +11,11 @@ local SpawnPrefab		= _G.SpawnPrefab
 -- for me and I'll gladly give you all the credits. I'm dying and can't bother to make it better.
 
 -- Fix For Spiced Coffee. There you go Terra B. :glzSIP:
-local COFFEE_SPEED    = GetModConfigData("HOF_COFFEESPEED")
-local COFFEE_DURATION = GetModConfigData("HOF_COFFEEDURATION")
-local GIANT_SPAWNING  = GetModConfigData("HOF_GIANTSPAWNING")
+local HOF_COFFEESPEED    = GetModConfigData("HOF_COFFEESPEED")
+local HOF_COFFEEDURATION = GetModConfigData("HOF_COFFEEDURATION")
+local HOF_GIANTSPAWNING  = GetModConfigData("HOF_GIANTSPAWNING")
 
-if COFFEE_SPEED == 1 then
+if HOF_COFFEESPEED then
     local coffee_speedbuff = 
 	{
         "coffee",
@@ -46,7 +46,7 @@ if COFFEE_SPEED == 1 then
 			if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
 				return
 			elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-				eater.coffeebuff_duration = COFFEE_DURATION
+				eater.coffeebuff_duration = HOF_COFFEEDURATION
 				eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
 					
 				local spiced_buff = spiced_buffs[inst.components.edible.spice]
@@ -60,7 +60,7 @@ if COFFEE_SPEED == 1 then
 			else
 				if inst.components.eater ~= nil then
 					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
-					eater:DoTaskInTime(COFFEE_DURATION, function(inst, eater)
+					eater:DoTaskInTime(HOF_COFFEEDURATION, function(inst, eater)
 						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
 					
 						if eater.components.talker and eater:HasTag("player") then
@@ -96,7 +96,7 @@ if COFFEE_SPEED == 1 then
 			if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
 				return
 			elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-				eater.tropicalbuff_duration = COFFEE_DURATION
+				eater.tropicalbuff_duration = HOF_COFFEEDURATION
 				eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
 				
 			local spiced_buff = spiced_buffs[inst.components.edible.spice]
@@ -110,7 +110,7 @@ if COFFEE_SPEED == 1 then
 			else
 				if inst.components.eater ~= nil then
 					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
-					eater:DoTaskInTime(COFFEE_DURATION, function(inst, eater)
+					eater:DoTaskInTime(HOF_COFFEEDURATION, function(inst, eater)
 						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
 					
 						if eater.components.talker and eater:HasTag("player") then
@@ -135,7 +135,7 @@ if COFFEE_SPEED == 1 then
     end
 end
 
-if GIANT_SPAWNING == 1 then
+if HOF_GIANTSPAWNING then
 	local eyeballspaghetti_bossbuff = 
 	{
         "eyeballspaghetti",

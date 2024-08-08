@@ -830,6 +830,39 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "REPAIRTOOLKIT",
 	},
 	
+	kyno_parznip_oversized =
+	{
+		name           = "kyno_parznip_oversized",
+		type           = "item",
+		tex            = "kyno_parznip_oversized.tex",
+		prefab         = "kyno_parznip_oversized",
+		workable       = "HAMMER",
+		perishable     = 19200,
+		burnable       = true,
+		bank           = "farm_plant_kyno_parznip",
+		build          = "farm_plant_kyno_parznip",
+		anim           = "idle_oversized",
+		animoffsetx    = -10,
+		deps           = {"beeswax", "kyno_parznip", "kyno_parznip_seeds", "farm_plant_kyno_parznip"},
+	},
+	
+	kyno_parznip_oversized_rotten =
+	{
+		name           = "kyno_parznip_oversized_rotten",
+		type           = "item",
+		tex            = "kyno_parznip_oversized_rotten.tex",
+		prefab         = "kyno_parznip_oversized_rotten",
+		workable       = "HAMMER",
+		pickable       = true,
+		burnable       = true,
+		bank           = "farm_plant_kyno_parznip",
+		build          = "farm_plant_kyno_parznip",
+		anim           = "idle_rot_oversized",
+		animoffsety    = -25,
+		animoffsetbgy  = 60,
+		deps           = {"kyno_parznip_oversized", "fruitfly", "spoiled_food"},
+	},
+	
 	kyno_radish_oversized =
 	{
 		name           = "kyno_radish_oversized",
@@ -2517,8 +2550,8 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_veggies",
 		anim           = "kyno_parznip",
 		animoffsetbgy  = -30,
-		deps           = {"kyno_parznip_ground", "kyno_parznip_big", "kyno_parznip_eaten", "kyno_parznip_cooked", "kyno_parznip_seeds", 
-		"seeds", "spoiled_food"},
+		deps           = {"kyno_parznip_ground", "kyno_parznip_big", "farm_plant_kyno_parznip", "kyno_parznip_oversized", "kyno_parznip_eaten", 
+		"kyno_parznip_cooked", "kyno_parznip_seeds", "seeds", "spoiled_food"},
 	},
 	
 	kyno_parznip_eaten =
@@ -3248,7 +3281,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_rice_seeds",
-		deps            = {"kyno_rice", "seeds_cooked", "spoiled_food"}, --farm_plant_kyno_rice, kyno_seeds_kit_rice
+		deps            = {"kyno_rice", "seeds_cooked", "spoiled_food"},
 	},
 	
 	kyno_sweetpotato_seeds =
@@ -11346,6 +11379,25 @@ local HOF_SCRAPBOOK_THINGS =
 		animoffsetx    = -10,
 		deps           = {"kyno_repairtool"},
 		specialinfo    = "RUBBLE",
+	},
+	
+	farm_plant_kyno_parznip =
+	{
+		name           = "farm_plant_kyno_parznip",
+		type           = "thing",
+		subcat         = "farmplant",
+		tex            = "farm_plant_kyno_parznip.tex",
+		prefab         = "farm_plant_kyno_parznip",
+		workable       = "DIG",
+		pickable       = true,
+		burnable       = true,
+		bank           = "farm_plant_kyno_parznip",
+		build          = "farm_plant_kyno_parznip",
+		overridesymbol = {"soil01", "farm_soil", "soil01"},
+		anim           = "crop_full",
+		animoffsety    = 25,
+		animoffsetbgy  = -40,
+		deps           = {"kyno_parznip", "kyno_parznip_oversized", "kyno_parznip_seeds", "seeds", "spoiled_food"},
 	},
 	
 	farm_plant_kyno_radish =

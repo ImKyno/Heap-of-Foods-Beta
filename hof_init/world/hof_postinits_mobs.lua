@@ -119,58 +119,6 @@ AddPrefabPostInit("dragonfly", function(inst)
 	end
 end)
 
--- It's Cursed. Players Have a Chance to Drop Long Pig. Except WX-78, Wurt, Wortox and Wormwood.
-local HUMANMEATY = GetModConfigData("HOF_HUMANMEAT")
-if HUMANMEATY == 1 then
-    local longpig_characters =
-	{
-        "wilson",
-        "willow",
-        "wolfgang",
-        "wendy",
-        "wickerbottom",
-        "woodie",
-        "waxwell",
-        "wes",
-        "webber",
-        "wathgrithr",
-        "winona",
-        "warly",
-        "walter",
-        "wanda",
-    }
-
-	local function LongPigPostinit(inst)
-		local function OnDeathLongPig(inst)
-			if math.random() < 0.33 then
-				local x, y, z = inst.Transform:GetWorldPosition()
-				local humanmeat = SpawnPrefab("kyno_humanmeat")
-				
-				if humanmeat ~= nil then
-					if humanmeat.Physics ~= nil then
-						local speed = 1 + math.random()
-						local angle = math.random() * 1 * PI
-						humanmeat.Physics:Teleport(x, y + 1, z)
-						humanmeat.Physics:SetVel(speed * math.cos(angle), speed * 0.5, speed * math.sin(angle))
-					else
-						humanmeat.Transform:SetPosition(x, y, z)
-					end
-				end
-			end
-		end
-
-		if not _G.TheWorld.ismastersim then
-			return inst
-		end
-
-		inst:ListenForEvent("death", OnDeathLongPig)
-	end
-
-    for k,v in pairs(longpig_characters) do
-        AddPrefabPostInit(v, LongPigPostinit)
-    end
-end
-
 -- Animals that can be killed with the Slaughter Tools.
 local slaughterable_animals =
 {

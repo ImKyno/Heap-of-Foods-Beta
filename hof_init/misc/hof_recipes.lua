@@ -1,16 +1,19 @@
 -- Common Dependencies.
-local _G            = GLOBAL
-local TECH 			= _G.TECH
-local Ingredient 	= _G.Ingredient
-local RECIPETABS 	= _G.RECIPETABS
-local AllRecipes 	= _G.AllRecipes
-local Recipe 		= _G.Recipe
-local Recipe2 		= _G.Recipe2
-local TechTree 		= require("techtree")
-local RecipeFilter	= require("recipes_filter")
+local _G                   = GLOBAL
+local TECH                 = _G.TECH
+local Ingredient           = _G.Ingredient
+local RECIPETABS           = _G.RECIPETABS
+local AllRecipes           = _G.AllRecipes
+local Recipe               = _G.Recipe
+local Recipe2              = _G.Recipe2
+local TechTree             = require("techtree")
+local RecipeFilter         = require("recipes_filter")
 
-local TheArchitectPack = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
-local NotEnoughTurfs   = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
+local TheArchitectPack     = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
+local NotEnoughTurfs       = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
+
+local HOF_WARLYMEALGRINDER = GetModConfigData("HOF_WARLYMEALGRINDER")
+local HOF_FERTILIZERTWEAK  = GetModConfigData("HOF_FERTILIZERTWEAK")
 
 -- For sorting recipe.
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
@@ -620,8 +623,7 @@ Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingre
 )
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
-local WARLY_MEALGRINDER = GetModConfigData("HOF_WARLYMEALGRINDER")
-if WARLY_MEALGRINDER == 1 then
+if HOF_WARLYMEALGRINDER then
 	AddRecipe2("kyno_flour_w", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE, 
 		{
 			nounlock 			= true,
@@ -708,8 +710,7 @@ if WARLY_MEALGRINDER == 1 then
 end
 
 -- Replace the Bucket-o-Poop recipe with ours.
-local BUCKETPOOPTWEAK = GetModConfigData("HOF_FERTILIZERTWEAK")
-if BUCKETPOOPTWEAK == 1 then
+if HOF_FERTILIZERTWEAK then
 	Recipe2("fertilizer",	{Ingredient("poop", 3), Ingredient("kyno_bucket_empty", 1, ModAtlas)}, TECH.SCIENCE_TWO,
 		{
 			atlas 				= DefaultAtlas,

@@ -419,7 +419,7 @@ PLANT_DEFS.kyno_fennel.plantregistryinfo           =
 }
 
 -- Parsnip Plant
-PLANT_DEFS.kyno_parznip                             = {build = "farm_plant_kyno_parznip", bank = "farm_plant_potato"}
+PLANT_DEFS.kyno_parznip                             = {build = "farm_plant_kyno_parznip", bank = "farm_plant_kyno_parznip"}
 PLANT_DEFS.kyno_parznip.prefab                      = "farm_plant_kyno_parznip"
 PLANT_DEFS.kyno_parznip.product                     = "kyno_parznip"
 PLANT_DEFS.kyno_parznip.product_oversized           = "kyno_parznip_oversized"

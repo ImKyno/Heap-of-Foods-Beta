@@ -1,10 +1,12 @@
 -- Common Dependencies.
-local _G 				= GLOBAL
-local require 			= _G.require
-local resolvefilepath 	= _G.resolvefilepath
-local ACTIONS 			= _G.ACTIONS
-local STRINGS			= _G.STRINGS
-local SpawnPrefab		= _G.SpawnPrefab
+local _G              = GLOBAL
+local require         = _G.require
+local resolvefilepath = _G.resolvefilepath
+local ACTIONS         = _G.ACTIONS
+local STRINGS         = _G.STRINGS
+local SpawnPrefab     = _G.SpawnPrefab
+
+local HOF_ALCOHOLICDRINKS = GetModConfigData("HOF_ALCOHOLICDRINKS")
 
 local spices =
 {
@@ -165,8 +167,7 @@ for k,v in pairs(dryable_foods) do
 end
 
 -- This will prevent some characters from drinking Alcoholic-like drinks.
-local ALCOHOLIC_DRINKS = GetModConfigData("HOF_ALCOHOLICDRINKS")
-if ALCOHOLIC_DRINKS == 1 then
+if HOF_ALCOHOLICDRINKS then
 	local restricted_characters =
 	{
 		"wendy",
