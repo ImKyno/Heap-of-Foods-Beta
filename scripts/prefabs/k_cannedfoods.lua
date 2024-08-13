@@ -76,6 +76,7 @@ local function closed_fn(bank, build, anim, closed_name)
     inst:AddComponent("inventoryitem")
     inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = closed_name
+	inst.components.inventoryitem:SetSinks(true)
     
     inst:AddComponent("tradable")
     inst.components.tradable.goldvalue = 1

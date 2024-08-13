@@ -70,6 +70,7 @@ local function fn(bank, build, anim, name)
     inst:AddComponent("inventoryitem")
     inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = name
+	inst.components.inventoryitem:SetSinks(true)
     
     inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERSLOW)
