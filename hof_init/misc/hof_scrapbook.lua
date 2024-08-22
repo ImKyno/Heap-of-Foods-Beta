@@ -830,6 +830,40 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "REPAIRTOOLKIT",
 	},
 	
+	kyno_fennel_oversized =
+	{
+		name           = "kyno_fennel_oversized",
+		type           = "item",
+		tex            = "kyno_fennel_oversized.tex",
+		prefab         = "kyno_fennel_oversized",
+		workable       = "HAMMER",
+		perishable     = 19200,
+		burnable       = true,
+		bank           = "farm_plant_kyno_fennel",
+		build          = "farm_plant_kyno_fennel",
+		anim           = "idle_oversized",
+		animoffsety    = -210,
+		deps           = {"beeswax", "kyno_fennel", "kyno_fennel_seeds", "farm_plant_kyno_fennel"},
+	},
+	
+	kyno_fennel_oversized_rotten =
+	{
+		name           = "kyno_fennel_oversized_rotten",
+		type           = "item",
+		tex            = "kyno_fennel_oversized_rotten.tex",
+		prefab         = "kyno_fennel_oversized_rotten",
+		workable       = "HAMMER",
+		pickable       = true,
+		burnable       = true,
+		bank           = "farm_plant_kyno_fennel",
+		build          = "farm_plant_kyno_fennel",
+		anim           = "idle_rot_oversized",
+		animoffsety    = -105,
+		animoffsetbgx  = -10,
+		animoffsetbgy  = 20,
+		deps           = {"kyno_fennel_oversized", "fruitfly", "spoiled_food"},
+	},
+	
 	kyno_parznip_oversized =
 	{
 		name           = "kyno_parznip_oversized",
@@ -2511,7 +2545,8 @@ local HOF_SCRAPBOOK_FOODS =
 		bank           = "kyno_veggies",
 		build          = "kyno_veggies",
 		anim           = "kyno_fennel",
-		deps           = {"kyno_fennel_ground", "kyno_fennel_cooked", "kyno_fennel_seeds", "seeds", "spoiled_food"},
+		deps           = {"kyno_fennel_ground", "kyno_fennel_cooked", "farm_plant_kyno_fennel", "kyno_fennel_oversized", "kyno_fennel_seeds", 
+		"seeds", "spoiled_food"},
 	},
 	
 	kyno_fennel_cooked =
@@ -11379,6 +11414,25 @@ local HOF_SCRAPBOOK_THINGS =
 		animoffsetx    = -10,
 		deps           = {"kyno_repairtool"},
 		specialinfo    = "RUBBLE",
+	},
+	
+	farm_plant_kyno_fennel =
+	{
+		name           = "farm_plant_kyno_fennel",
+		type           = "thing",
+		subcat         = "farmplant",
+		tex            = "farm_plant_kyno_fennel.tex",
+		prefab         = "farm_plant_kyno_fennel",
+		workable       = "DIG",
+		pickable       = true,
+		burnable       = true,
+		bank           = "farm_plant_kyno_fennel",
+		build          = "farm_plant_kyno_fennel",
+		overridesymbol = {"soil01", "farm_soil", "soil01"},
+		anim           = "crop_full",
+		animoffsety    = -45,
+		animoffsetbgy  = -20,
+		deps           = {"kyno_fennel", "kyno_fennel_oversized", "kyno_fennel_seeds", "seeds", "spoiled_food"},
 	},
 	
 	farm_plant_kyno_parznip =

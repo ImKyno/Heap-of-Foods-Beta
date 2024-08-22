@@ -333,7 +333,7 @@ PLANT_DEFS.kyno_cucumber.plantregistryinfo           =
 }
 
 -- Fennel Plant
-PLANT_DEFS.kyno_fennel                             = {build = "farm_plant_kyno_fennel", bank = "farm_plant_asparagus"}
+PLANT_DEFS.kyno_fennel                             = {build = "farm_plant_kyno_fennel", bank = "farm_plant_kyno_fennel"}
 PLANT_DEFS.kyno_fennel.prefab                      = "farm_plant_kyno_fennel"
 PLANT_DEFS.kyno_fennel.product                     = "kyno_fennel"
 PLANT_DEFS.kyno_fennel.product_oversized           = "kyno_fennel_oversized"

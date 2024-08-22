@@ -184,7 +184,7 @@ local function UpdateSpray(inst)
 	OnFuelSectionChange(inst)
 	
     local x, y, z = inst.Transform:GetWorldPosition()
-	local GARDENING_CANT_TAGS = { "pickable", "stump", "barren", "withered", "INLIMBO" }
+	local GARDENING_CANT_TAGS = { "pickable", "stump", "barren", "INLIMBO" } -- "withered",
 	local ents = TheSim:FindEntities(x, y, z, 8, nil, GARDENING_CANT_TAGS)
 
 	if not inst.moisture_targets then
@@ -200,7 +200,7 @@ local function UpdateSpray(inst)
     inst.moisture_targets = {} 
 
     for k, v in pairs(ents) do
-		if v.components.moisture then
+		if v.components.moisture ~= nil and v.components.inventory ~= nil and not v.components.inventory:IsWaterproof() then
 			v.components.moisture:DoDelta(0.1)		
 		end
 		
