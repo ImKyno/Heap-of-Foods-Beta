@@ -193,3 +193,36 @@ function containers.params.portablespicer.itemtestfn(container, item, slot)
 		)
 	and not container.inst:HasTag("burnt")
 end
+
+-- Food Sack.
+params.foodsack =
+{
+	widget =
+	{
+		slotpos = {},
+		slotbg = {},
+		animbank = "ui_piggyback_2x6",
+        animbuild = "ui_piggyback_2x6",
+        pos = Vector3(-5, -90, 0),
+	},
+	
+	issidewidget = true,
+    type = "pack",
+    openlimit = 1,
+}
+
+local FOODSACK_SLOTBG = {image = "inv_slot_morsel.tex", atlas = "images/hud.xml"}
+for y = 0, 5 do
+    table.insert(params.foodsack.widget.slotpos, Vector3(-162, -75 * y + 170, 0))
+    table.insert(params.foodsack.widget.slotpos, Vector3(-162 + 75, -75 * y + 170, 0))
+	table.insert(params.foodsack.widget.slotbg, FOODSACK_SLOTBG)
+end
+
+-- Same as Wilson's beard.
+function params.foodsack.itemtestfn(container, item, slot)
+    for k, v in pairs(FOODGROUP.OMNI.types) do
+        if item:HasTag("edible_"..v) then
+            return true
+        end
+    end
+end

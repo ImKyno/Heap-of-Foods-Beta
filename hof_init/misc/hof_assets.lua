@@ -347,6 +347,7 @@ local HOF_ICONS =
 	"kyno_flour",
 	"kyno_foliage",
 	"kyno_foliage_cooked",
+	"kyno_foodsack",
 	"kyno_green_cap_dried",
 	"kyno_grouper",
 	"kyno_grouper_cooked",

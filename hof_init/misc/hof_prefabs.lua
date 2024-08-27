@@ -51,6 +51,7 @@ PrefabFiles =
 	"k_foodbuff_sanity",
 	"k_foodbuff_strength",
 	"k_foodbuff_super",	
+	"k_foodsack",
 	"k_garden_sprinkler",
 	"k_humanmeat",
 	"k_kokonut",

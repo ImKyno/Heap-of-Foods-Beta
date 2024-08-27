@@ -1023,6 +1023,21 @@ local HOF_SCRAPBOOK_ITEMS =
 		animoffsetbgy  = 30,
 		deps           = {"kyno_turnip_oversized", "fruitfly", "spoiled_food"},
 	},
+	
+	kyno_foodsack      =
+	{
+		name           = "kyno_foodsack",
+		type           = "item",
+		subcat         = "backpack",
+		tex            = "kyno_foodsack.tex",
+		prefab         = "kyno_foodsack",
+		burnable       = true,
+		bank           = "kyno_foodsack",
+		build          = "swap_foodsack",
+		anim           = "anim",
+		deps           = {"malbatross", "malbatross_feather", "rope", "ice"},
+		specialinfo    = "FOODSACK",
+	},
 }
 
 local HOF_SCRAPBOOK_FOODS =
