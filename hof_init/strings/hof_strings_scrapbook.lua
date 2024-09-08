@@ -57,6 +57,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WURTFOOD = "Wurt will gain extra benef
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PLAYERMONSTER = "Webber can eat this food without any penalties.\nWurt will gain extra benefits from eating this food."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPIDERCAKE = "Webber can eat this food without any penalties.\n\nDon't Starve Together x Cult of the Lamb - Collab 2023."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUGARBOMBS = "A pack of sugary cereal that holds 100% of the recommended daily amount of sugar, Sugar Bombs have been preserved for 25 years after the Great War. However, this also caused a bit of radiation to slip in for most of them."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE = "Nukashine was created by Lewis of the Eta Psi fraternity at Vault-Tec University in November 2076.[1] The spirit itself is incredibly potent, causes blackouts, severe hangovers, and is potentially lethal, as the fellow Pi Mu fraternity found out during their \"eviction party.\"\n\nA sugar-free version also existed, with the lack of sugar allowing the beverage to be consumed without any risk of blackouts."
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "Using a pinch of salt on a crock pot food will refresh its spoilage time by 30%. Don't worry about eating stale dishes again!"

@@ -76,6 +76,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKACOLA2",       "The unique taste of Nuka-Co
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SUGARBOMBS",      "A pack of sugary cereal that holds 100% of the recommended daily amount of sugar, Sugar Bombs have been preserved for 25 years after the Great War. However, this also caused a bit of radiation to slip in for most of them.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_LUNARSOUP",       "\"I fear nothing when that Lunar Soup goes down in my belly!\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SPRINKLER",       "Tired of manually watering your crops? Build yourself a Garden Sprinkler today and say goodbye to manual labor!")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKASHINE",       "Lewis originally created Nukashine so he could afford a warehouse for his Nuka-Cola collection, but its popularity meant that chapter president Judy Lowell and members of the wider Eta Psi fraternity became involved. Judy organized the creation of a speakeasy in the basement of Big Al's Tattoo Parlor, containing a lab and distillery in the back room. A sugar-free version also existed, with the lack of sugar allowing the beverage to be consumed without any risk of blackouts.")
 
 -- We want that our custom tips appears more often.
 SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})

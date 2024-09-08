@@ -247,7 +247,7 @@ PLANT_DEFS.kyno_aloe.plantregistryinfo           =
 }
 
 -- Cucumber Plant
-PLANT_DEFS.kyno_cucumber                             = {build = "farm_plant_kyno_cucumber", bank = "farm_plant_pepper"}
+PLANT_DEFS.kyno_cucumber                             = {build = "farm_plant_kyno_cucumber", bank = "farm_plant_kyno_cucumber"}
 PLANT_DEFS.kyno_cucumber.prefab                      = "farm_plant_kyno_cucumber"
 PLANT_DEFS.kyno_cucumber.product                     = "kyno_cucumber"
 PLANT_DEFS.kyno_cucumber.product_oversized           = "kyno_cucumber_oversized"

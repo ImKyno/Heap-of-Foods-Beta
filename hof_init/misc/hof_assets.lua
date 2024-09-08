@@ -334,6 +334,7 @@ local HOF_ICONS =
 	"kyno_cucumber",
 	"kyno_cucumber_cooked",
 	"kyno_cucumber_oversized",
+	"kyno_cucumber_oversized_rotten",
 	"kyno_cucumber_oversized_waxed",
 	"kyno_cucumber_seeds",
 	"kyno_energycan",
@@ -612,6 +613,7 @@ end
 -- Icons for the Scrapbook.
 local HOF_SCRAPBOOK_ICONS =
 {
+	"farm_plant_kyno_cucumber",
 	"farm_plant_kyno_fennel",
 	"farm_plant_kyno_parznip",
 	"farm_plant_kyno_radish",

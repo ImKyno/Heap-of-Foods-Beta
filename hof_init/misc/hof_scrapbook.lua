@@ -830,6 +830,38 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "REPAIRTOOLKIT",
 	},
 	
+	kyno_cucumber_oversized =
+	{
+		name           = "kyno_cucumber_oversized",
+		type           = "item",
+		tex            = "kyno_cucumber_oversized.tex",
+		prefab         = "kyno_cucumber_oversized",
+		workable       = "HAMMER",
+		perishable     = 19200,
+		burnable       = true,
+		bank           = "farm_plant_kyno_cucumber",
+		build          = "farm_plant_kyno_cucumber",
+		anim           = "idle_oversized",
+		deps           = {"beeswax", "kyno_cucumber", "kyno_cucumber_seeds", "farm_plant_kyno_cucumber"},
+	},
+	
+	kyno_cucumber_oversized_rotten =
+	{
+		name           = "kyno_cucumber_oversized_rotten",
+		type           = "item",
+		tex            = "kyno_cucumber_oversized_rotten.tex",
+		prefab         = "kyno_cucumber_oversized_rotten",
+		workable       = "HAMMER",
+		pickable       = true,
+		burnable       = true,
+		bank           = "farm_plant_kyno_cucumber",
+		build          = "farm_plant_kyno_cucumber",
+		anim           = "idle_rot_oversized",
+		animoffsety    = 12,
+		animoffsetbgy  = -30,
+		deps           = {"kyno_cucumber_oversized", "fruitfly", "spoiled_food"},
+	},
+	
 	kyno_fennel_oversized =
 	{
 		name           = "kyno_fennel_oversized",
@@ -2522,7 +2554,8 @@ local HOF_SCRAPBOOK_FOODS =
 		bank           = "kyno_veggies",
 		build          = "kyno_veggies",
 		anim           = "kyno_cucumber",
-		deps           = {"kyno_cucumber_ground", "kyno_cucumber_cooked", "kyno_cucumber_seeds", "seeds", "spoiled_food"},
+		deps           = {"kyno_cucumber_ground", "kyno_cucumber_cooked", "farm_plant_kyno_cucumber", "kyno_cucumber_oversized", "kyno_cucumber_seeds", 
+		"seeds", "spoiled_food"},
 	},
 	
 	kyno_cucumber_cooked =
@@ -11429,6 +11462,24 @@ local HOF_SCRAPBOOK_THINGS =
 		animoffsetx    = -10,
 		deps           = {"kyno_repairtool"},
 		specialinfo    = "RUBBLE",
+	},
+	
+	farm_plant_kyno_cucumber =
+	{
+		name           = "farm_plant_kyno_cucumber",
+		type           = "thing",
+		subcat         = "farmplant",
+		tex            = "farm_plant_kyno_cucumber.tex",
+		prefab         = "farm_plant_kyno_cucumber",
+		workable       = "DIG",
+		pickable       = true,
+		burnable       = true,
+		bank           = "farm_plant_kyno_cucumber",
+		build          = "farm_plant_kyno_cucumber",
+		overridesymbol = {"soil01", "farm_soil", "soil01"},
+		anim           = "crop_full",
+		animoffsetx    = -9,
+		deps           = {"kyno_cucumber", "kyno_cucumber_oversized", "kyno_cucumber_seeds", "seeds", "spoiled_food"},
 	},
 	
 	farm_plant_kyno_fennel =
