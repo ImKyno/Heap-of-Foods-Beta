@@ -75,6 +75,7 @@ local function MakePreparedFood(data)
 
 		inst.entity:AddTransform()
 		inst.entity:AddAnimState()
+		inst.entity:AddSoundEmitter()
 		inst.entity:AddNetwork()
 
 		MakeInventoryPhysics(inst)

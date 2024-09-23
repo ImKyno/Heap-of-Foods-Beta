@@ -6908,6 +6908,29 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -50,
 		deps           = preparedfood_deps,
 	},
+	
+	gummyworms         =
+	{
+		name           = "gummyworms",
+		type           = "food",
+		tex            = "gummyworms.tex",
+		prefab         = "gummyworms",
+		healthvalue    = 10,
+		hungervalue    = 25,
+		sanityvalue    = -5,
+		perishable     = 7200,
+		foodtype       = "GOODIES",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "gummyworms",
+		build          = "gummyworms",
+		overridesymbol = {"swap_food", "swap_food", "gummyworms"},
+		anim           = "idle",
+		animoffsety    = 13,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -100,
+		deps           = preparedfood_deps,
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =

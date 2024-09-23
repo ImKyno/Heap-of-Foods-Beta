@@ -2501,6 +2501,30 @@ local kyno_foods =
 		tags = {"drinkable_food"},
 		card_def = {ingredients = {{"tillweed", 2}, {"ice", 2}}},
 	},
+	
+	gummyworms =
+	{
+		test = function(cooker, names, tags) return names.kyno_gummybug and names.kyno_sugar and names.ancientfruit_nightvision end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 10,
+		hunger = 25,
+		sanity = -5,
+		cooktime = 1,
+		nightvision = true,
+		potlevel = "low",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"ancientfruit_nightvision", 1}, {"kyno_gummybug", 1}, {"kyno_sugar", 2}}},
+		prefabs = { "kyno_nightvisionbuff" },
+        oneatenfn = function(inst, eater)
+            eater:AddDebuff("kyno_nightvisionbuff", "kyno_nightvisionbuff")
+
+			if eater.components.grogginess ~= nil then
+				eater.components.grogginess:MakeGrogginessAtLeast(1.5)
+			end
+        end,
+	},
 }
 
 for k, recipe in pairs(kyno_foods) do

@@ -48,7 +48,9 @@ local function onhammered(inst, worker)
 	if inst:HasTag("fire") and inst.components.burnable then
 		inst.components.burnable:Extinguish()
 	end
+	
 	inst.components.lootdropper:DropLoot()
+	
 	SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_wood")
 	inst:Remove()
@@ -62,6 +64,7 @@ end
 
 local function OnCollide(inst, data)
     local boat_physics = data.other.components.boatphysics
+	
     if boat_physics ~= nil then
         local hit_velocity = math.floor(math.abs(boat_physics:GetVelocity() * data.hit_dot_velocity) * DAMAGE_SCALE / boat_physics.max_velocity + 0.5)
         inst.components.workable:WorkedBy(data.other, hit_velocity * TUNING.SEASTACK_MINE)
@@ -72,6 +75,7 @@ local function onsave(inst, data)
 	if inst:HasTag("burnt") or inst:HasTag("fire") then
         data.burnt = true
     end
+	
 	if inst:HasTag("stick_full") then
 		data.stickfull = true
 	end
@@ -81,8 +85,10 @@ local function onload(inst, data)
 	if data and data.burnt then
         inst.components.burnable.onburnt(inst)
     end
+	
 	if data and data.stickfull then
 		inst.AnimState:PlayAnimation("idle_full", true)
+		inst:AddTag("stick_full")
 	end
 end
 
@@ -150,10 +156,12 @@ end
 
 local function ondeploy(inst, pt, deployer)
     local stick = SpawnPrefab("kyno_musselstick")
+	
 	if stick ~= nil then
 		stick.components.pickable:MakeEmpty()
 		stick.Transform:SetPosition(pt:Get())
 	end
+	
 	if deployer ~= nil and deployer.SoundEmitter ~= nil then
 		deployer.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant") 
 	end

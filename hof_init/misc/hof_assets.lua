@@ -231,6 +231,7 @@ local HOF_ICONS =
 	"guano",
 	"gummy_cake",
 	"gummybeargers",
+	"gummyworms",
 	"hardshell_tacos",
 	"honeyjar",
 	"hornocupia",

@@ -212,9 +212,12 @@ local function UpdateSpray(inst)
 			v.components.crop.growthpercent = v.components.crop.growthpercent + (0.001)
 		end		
 
-		if v.components.growable ~= nil then
+		--[[
+		if not (inst.components.growable.targettime == nil and inst.components.growable.pausedremaining == nil) then 
+		if v.components.growable ~= nil and v.components.growable:IsGrowing() then
 			v.components.growable:ExtendGrowTime(-0.2)
 		end
+		]]--
 	
 		if v then
 			local a, b, c = v.Transform:GetWorldPosition()

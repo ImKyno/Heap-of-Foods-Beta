@@ -203,8 +203,10 @@ AddRecipe2("kyno_musselstick_item", {Ingredient("twigs", 3), Ingredient("rope", 
 		atlas 				= ModAtlas, 
 		image 				= "kyno_musselstick_item.tex",
 	},
-	{"COOKING"}
+	{"GARDENING", "FISHING"}
 )
+SortAfter("kyno_musselstick_item", "ocean_trawler_kit", "GARDENING")
+SortAfter("kyno_musselstick_item", "ocean_trawler_kit", "FISHING")
 
 AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2), Ingredient("flint", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO, 
 	{
