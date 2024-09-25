@@ -161,7 +161,7 @@ local NUTRIENT_MED 	    = TUNING.FARM_PLANT_CONSUME_NUTRIENT_MED
 local NUTRIENT_HIGH     = TUNING.FARM_PLANT_CONSUME_NUTRIENT_HIGH
 
 -- Aloe Plant
-PLANT_DEFS.kyno_aloe                             = {build = "farm_plant_kyno_aloe", bank = "farm_plant_potato"}
+PLANT_DEFS.kyno_aloe                             = {build = "farm_plant_kyno_aloe", bank = "farm_plant_kyno_aloe"}
 PLANT_DEFS.kyno_aloe.prefab                      = "farm_plant_kyno_aloe"
 PLANT_DEFS.kyno_aloe.product                     = "kyno_aloe"
 PLANT_DEFS.kyno_aloe.product_oversized           = "kyno_aloe_oversized"

@@ -289,6 +289,7 @@ local HOF_ICONS =
 	"kyno_aloe",
 	"kyno_aloe_cooked",
 	"kyno_aloe_oversized",
+	"kyno_aloe_oversized_rotten",
 	"kyno_aloe_oversized_waxed",
 	"kyno_aloe_seeds",
 	"kyno_bacon",
@@ -614,6 +615,7 @@ end
 -- Icons for the Scrapbook.
 local HOF_SCRAPBOOK_ICONS =
 {
+	"farm_plant_kyno_aloe",
 	"farm_plant_kyno_cucumber",
 	"farm_plant_kyno_fennel",
 	"farm_plant_kyno_parznip",

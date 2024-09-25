@@ -1,4 +1,4 @@
-name                        = "Heap of Foods (Beta)"
+name                        = "Heap of Foods"
 version                     = "7.9-A"
 
 description                 = 

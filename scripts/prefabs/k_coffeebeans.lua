@@ -13,7 +13,7 @@ local prefabs =
 	"spoiled_food",
 }
 
-local HOF_COFFEESPEED = GetModConfigData("HOF_COFFEESPEED", KnownModIndex:GetModActualName("Heap of Foods (Beta)"))
+local HOF_COFFEESPEED = GetModConfigData("HOF_COFFEESPEED", KnownModIndex:GetModActualName("Heap of Foods"))
 
 local function OnEatBeans(inst, eater)
     if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then

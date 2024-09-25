@@ -830,6 +830,38 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "REPAIRTOOLKIT",
 	},
 	
+	kyno_aloe_oversized = 
+	{
+		name           = "kyno_aloe_oversized",
+		type           = "item",
+		tex            = "kyno_aloe_oversized.tex",
+		prefab         = "kyno_aloe_oversized",
+		workable       = "HAMMER",
+		perishable     = 19200,
+		burnable       = true,
+		bank           = "farm_plant_kyno_aloe",
+		build          = "farm_plant_kyno_aloe",
+		anim           = "idle_oversized",
+		animoffsetbgx  = 10,
+		deps           = {"beeswax", "kyno_aloe", "kyno_aloe_seeds", "farm_plant_kyno_aloe"},
+	},
+	
+	kyno_aloe_oversized_rotten =
+	{
+		name           = "kyno_aloe_oversized_rotten",
+		type           = "item",
+		tex            = "kyno_aloe_oversized_rotten.tex",
+		prefab         = "kyno_aloe_oversized_rotten",
+		workable       = "HAMMER",
+		pickable       = true,
+		burnable       = true,
+		bank           = "farm_plant_kyno_aloe",
+		build          = "farm_plant_kyno_aloe",
+		anim           = "idle_rot_oversized",
+		animoffsetbgx  = 15,
+		deps           = {"kyno_aloe_oversized", "fruitfly", "spoiled_food"},
+	},
+	
 	kyno_cucumber_oversized =
 	{
 		name           = "kyno_cucumber_oversized",
@@ -2516,7 +2548,10 @@ local HOF_SCRAPBOOK_FOODS =
 		bank           = "kyno_veggies",
 		build          = "kyno_veggies",
 		anim           = "kyno_aloe",
-		deps           = {"kyno_aloe_ground", "kyno_aloe_cooked", "kyno_aloe_seeds", "seeds", "spoiled_food"},
+		animoffsety    = 10,
+		animoffsetbgy  = -70,
+		deps           = {"kyno_aloe_ground", "kyno_aloe_cooked", "farm_plant_kyno_aloe", "kyno_aloe_oversized", "kyno_aloe_seeds", 
+		"seeds", "spoiled_food"},
 	},
 	
 	kyno_aloe_cooked   =
@@ -2535,7 +2570,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank           = "kyno_veggies",
 		build          = "kyno_veggies",
 		anim           = "kyno_aloe_cooked",
-		deps           = {"kyno_aloe"},
+		deps           = {"kyno_aloe", "spoiled_food"},
 	},
 	
 	kyno_cucumber      =
@@ -3249,7 +3284,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_aloe_seeds",
-		deps            = {"kyno_seeds_kit_aloe", "kyno_aloe", "seeds_cooked", "spoiled_food"}, --farm_plant_kyno_aloe
+		deps            = {"kyno_seeds_kit_aloe", "kyno_aloe", "seeds_cooked", "spoiled_food"},
 	},
 	
 	kyno_cucumber_seeds =
@@ -11085,7 +11120,7 @@ local HOF_SCRAPBOOK_THINGS =
 		"kabobs", "koalefig_trunk", "leafloaf", "leafymeatburger", "leafymeatsouffle", "lobsterbisque", "lobsterdinner", "mandrakesoup", "mashedpotatoes", 
 		"meatballs", "meatysalad", "monsterlasagna", "pepperpopper", "perogies", "potatotornado", "powcake", "pumpkincookie", "ratatouille", "salsa", 
 		"seafoodgumbo", "shroomcake", "stuffedeggplant", "surfnturf", "sweettea", "taffy", "talleggs", "trailmix", "turkeydinner", "unagi", "veggieomlet", 
-		"vegstinger", "waffles", "watermelonicle", "wetgoop"}, -- GROSS. But I want to keep consistent with Crock Pot deps.
+		"vegstinger", "waffles", "watermelonicle", "shroombait", "wetgoop"}, -- Wacky. But I want to keep consistent with Crock Pot deps.
 		specialinfo    = "COOKWARE_POT",
 	},
 	
@@ -11110,7 +11145,7 @@ local HOF_SCRAPBOOK_THINGS =
 		"kabobs", "koalefig_trunk", "leafloaf", "leafymeatburger", "leafymeatsouffle", "lobsterbisque", "lobsterdinner", "mandrakesoup", "mashedpotatoes", 
 		"meatballs", "meatysalad", "monsterlasagna", "pepperpopper", "perogies", "potatotornado", "powcake", "pumpkincookie", "ratatouille", "salsa", 
 		"seafoodgumbo", "shroomcake", "stuffedeggplant", "surfnturf", "sweettea", "taffy", "talleggs", "trailmix", "turkeydinner", "unagi", "veggieomlet", 
-		"vegstinger", "waffles", "watermelonicle", "wetgoop"},
+		"vegstinger", "waffles", "watermelonicle", "shroombait", "wetgoop"},
 		specialinfo    = "COOKWARE_POT",
 	},
 	
@@ -11169,7 +11204,7 @@ local HOF_SCRAPBOOK_THINGS =
 		"kabobs", "koalefig_trunk", "leafloaf", "leafymeatburger", "leafymeatsouffle", "lobsterbisque", "lobsterdinner", "mandrakesoup", "mashedpotatoes", 
 		"meatballs", "meatysalad", "monsterlasagna", "pepperpopper", "perogies", "potatotornado", "powcake", "pumpkincookie", "ratatouille", "salsa", 
 		"seafoodgumbo", "shroomcake", "stuffedeggplant", "surfnturf", "sweettea", "taffy", "talleggs", "trailmix", "turkeydinner", "unagi", "veggieomlet", 
-		"vegstinger", "waffles", "watermelonicle", "wetgoop"},
+		"vegstinger", "waffles", "watermelonicle", "shroombait", "wetgoop"},
 		specialinfo    = "COOKWARE_CASSEROLE",
 	},
 	
@@ -11194,7 +11229,7 @@ local HOF_SCRAPBOOK_THINGS =
 		"kabobs", "koalefig_trunk", "leafloaf", "leafymeatburger", "leafymeatsouffle", "lobsterbisque", "lobsterdinner", "mandrakesoup", "mashedpotatoes", 
 		"meatballs", "meatysalad", "monsterlasagna", "pepperpopper", "perogies", "potatotornado", "powcake", "pumpkincookie", "ratatouille", "salsa", 
 		"seafoodgumbo", "shroomcake", "stuffedeggplant", "surfnturf", "sweettea", "taffy", "talleggs", "trailmix", "turkeydinner", "unagi", "veggieomlet", 
-		"vegstinger", "waffles", "watermelonicle", "wetgoop"},
+		"vegstinger", "waffles", "watermelonicle", "shroombait", "wetgoop"},
 		specialinfo    = "COOKWARE_CASSEROLE",
 	},
 	
@@ -11216,7 +11251,7 @@ local HOF_SCRAPBOOK_THINGS =
 		"leafloaf", "leafymeatburger", "leafymeatsouffle", "lobsterbisque", "lobsterdinner", "mandrakesoup", "mashedpotatoes", "meatballs", "meatysalad", 
 		"monsterlasagna", "pepperpopper", "perogies", "potatotornado", "powcake", "pumpkincookie", "ratatouille", "salsa", "seafoodgumbo", "shroomcake", 
 		"stuffedeggplant", "surfnturf", "sweettea", "taffy", "talleggs", "trailmix", "turkeydinner", "unagi", "veggieomlet", "vegstinger", "waffles", 
-		"watermelonicle", "wetgoop"},
+		"watermelonicle", "shroombait", "wetgoop"},
 		specialinfo    = "COOKWARE_GRILL",
 	},
 	
@@ -11238,7 +11273,7 @@ local HOF_SCRAPBOOK_THINGS =
 		"leafloaf", "leafymeatburger", "leafymeatsouffle", "lobsterbisque", "lobsterdinner", "mandrakesoup", "mashedpotatoes", "meatballs", "meatysalad", 
 		"monsterlasagna", "pepperpopper", "perogies", "potatotornado", "powcake", "pumpkincookie", "ratatouille", "salsa", "seafoodgumbo", "shroomcake", 
 		"stuffedeggplant", "surfnturf", "sweettea", "taffy", "talleggs", "trailmix", "turkeydinner", "unagi", "veggieomlet", "vegstinger", "waffles", 
-		"watermelonicle", "wetgoop"},
+		"watermelonicle", "shroombait", "wetgoop"},
 		specialinfo    = "COOKWARE_GRILL",
 	},
 	
@@ -11254,8 +11289,8 @@ local HOF_SCRAPBOOK_THINGS =
 		build          = "kyno_aloe",
 		anim           = "planted",
 		animoffsetx    = 30,
-		animoffsety    = -30,
-		animoffsetbgy  = -40,
+		animoffsety    = -45,
+		animoffsetbgy  = -55,
 		deps           = {"kyno_aloe"},
 	},
 	
@@ -11485,6 +11520,25 @@ local HOF_SCRAPBOOK_THINGS =
 		animoffsetx    = -10,
 		deps           = {"kyno_repairtool"},
 		specialinfo    = "RUBBLE",
+	},
+	
+	farm_plant_kyno_aloe =
+	{
+		name           = "farm_plant_kyno_aloe",
+		type           = "thing",
+		subcat         = "farmplant",
+		tex            = "farm_plant_kyno_aloe.tex",
+		prefab         = "farm_plant_kyno_aloe",
+		workable       = "DIG",
+		pickable       = true,
+		burnable       = true,
+		bank           = "farm_plant_kyno_aloe",
+		build          = "farm_plant_kyno_aloe",
+		overridesymbol = {"soil01", "farm_soil", "soil01"},
+		anim           = "crop_full",
+		animoffsety    = 50,
+		animoffsetbgy  = -105,
+		deps           = {"kyno_aloe", "kyno_aloe_oversized", "kyno_aloe_seeds", "seeds", "spoiled_food"},
 	},
 	
 	farm_plant_kyno_cucumber =
