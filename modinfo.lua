@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "7.9-A"
+version                     = "8.0-A"
 
 description                 = 
 [[
@@ -13,7 +13,7 @@ This update focused on revamping the visuals of the farming crops as well as add
 
 Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover it.
 
-󰀌 Mod Version: 7.9-A
+󰀌 Mod Version: 8.0-A
 󰀧 Update: Bountiful Harvest
 ]]
 

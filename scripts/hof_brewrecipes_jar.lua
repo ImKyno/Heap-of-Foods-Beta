@@ -228,6 +228,7 @@ local kyno_foods_jar =
 		hunger = 25,
 		sanity = 10,
 		cooktime = 48,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NIGHTVISION,
 		nightvision = true,
 		nameoverride = "KYNO_JELLY",
 		floater = {"med", nil, 0.65},

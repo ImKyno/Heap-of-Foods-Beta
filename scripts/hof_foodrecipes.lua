@@ -2512,6 +2512,7 @@ local kyno_foods =
 		hunger = 25,
 		sanity = -5,
 		cooktime = 1,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NIGHTVISION,
 		nightvision = true,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},

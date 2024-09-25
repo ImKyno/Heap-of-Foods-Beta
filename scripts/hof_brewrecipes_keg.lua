@@ -242,6 +242,7 @@ local kyno_foods_keg =
 		hunger = 35,
 		sanity = 15,
 		cooktime = 72,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NIGHTVISION,
 		nightvision = true,
 		nameoverride = "KYNO_WINE",
 		floater = {"med", nil, 0.65},

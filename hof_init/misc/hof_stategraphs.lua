@@ -264,8 +264,10 @@ AddStategraphPostInit("wilson", function(self)
 	self.actionhandlers[ACTIONS.PICK].deststate = function(inst, action, ...)
         local target = action.target or action.invobject
         
-        if target and target:HasTags({"plant", "pickable_tall"}) then
+        if target and target:HasTags({"plant", "pickable_tall"}) and inst.components.rider ~= nil and not inst.components.rider:IsRiding() then
             return "pickable_tall" -- "construct"
+		elseif inst.components.rider ~= nil and inst.components.rider:IsRiding() then
+			return "doshortaction"
         end
 		
 		return _pickhandler(inst, action, ...)
