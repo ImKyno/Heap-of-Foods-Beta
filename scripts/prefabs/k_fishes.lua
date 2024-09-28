@@ -241,7 +241,7 @@ local function commonfn(bank, build, char_anim_build, data)
     return inst
 end
 
-local function cookedfn(bank, build, data)
+local function cookedfn(bank, build, anim, data)
 	local inst = CreateEntity()
 
 	data = data or {}
@@ -254,7 +254,7 @@ local function cookedfn(bank, build, data)
 
     inst.AnimState:SetBank(bank)
     inst.AnimState:SetBuild(build)
-    inst.AnimState:PlayAnimation("cooked", false)
+    inst.AnimState:PlayAnimation(anim, false)
 
 	inst:AddTag("fish")
     inst:AddTag("meat")
@@ -270,7 +270,7 @@ local function cookedfn(bank, build, data)
 	inst:AddComponent("inspectable")
 	
 	inst:AddComponent("stackable")
-	inst.components.stackable.stacksize = data.stacksize
+	inst.components.stackable.maxsize = data.stacksize
 
     inst:AddComponent("perishable")
     inst.components.perishable:SetPerishTime(data.perish_time)

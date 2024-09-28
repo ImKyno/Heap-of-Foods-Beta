@@ -167,8 +167,8 @@ PLANT_DEFS.kyno_aloe.product                     = "kyno_aloe"
 PLANT_DEFS.kyno_aloe.product_oversized           = "kyno_aloe_oversized"
 PLANT_DEFS.kyno_aloe.seed                        = "kyno_aloe_seeds"
 PLANT_DEFS.kyno_aloe.loot_oversized_rot          = {"spoiled_food", "spoiled_food", "spoiled_food", "kyno_aloe_seeds", "fruitfly", "fruitfly"}
-PLANT_DEFS.kyno_aloe.family_min_count            = 1
-PLANT_DEFS.kyno_aloe.family_check_dist           = 1
+PLANT_DEFS.kyno_aloe.family_min_count            = 4
+PLANT_DEFS.kyno_aloe.family_check_dist           = 4
 PLANT_DEFS.kyno_aloe.plant_type_tag              = "farm_plant_kyno_aloe"
 PLANT_DEFS.kyno_aloe.grow_time                   = MakeGrowTimes(12 * TUNING.SEG_TIME, 16 * TUNING.SEG_TIME, 4 * TUNING.TOTAL_DAY_TIME, 7 * TUNING.TOTAL_DAY_TIME)
 PLANT_DEFS.kyno_aloe.moisture                    = {drink_rate = DRINK_MED, min_percent = TUNING.FARM_PLANT_DROUGHT_TOLERANCE}
@@ -253,8 +253,8 @@ PLANT_DEFS.kyno_cucumber.product                     = "kyno_cucumber"
 PLANT_DEFS.kyno_cucumber.product_oversized           = "kyno_cucumber_oversized"
 PLANT_DEFS.kyno_cucumber.seed                        = "kyno_cucumber_seeds"
 PLANT_DEFS.kyno_cucumber.loot_oversized_rot          = {"spoiled_food", "spoiled_food", "spoiled_food", "kyno_cucumber_seeds", "fruitfly", "fruitfly"}
-PLANT_DEFS.kyno_cucumber.family_min_count            = 1
-PLANT_DEFS.kyno_cucumber.family_check_dist           = 1
+PLANT_DEFS.kyno_cucumber.family_min_count            = 4
+PLANT_DEFS.kyno_cucumber.family_check_dist           = 4
 PLANT_DEFS.kyno_cucumber.plant_type_tag              = "farm_plant_kyno_cucumber"
 PLANT_DEFS.kyno_cucumber.grow_time                   = MakeGrowTimes(12 * TUNING.SEG_TIME, 16 * TUNING.SEG_TIME, 4 * TUNING.TOTAL_DAY_TIME, 7 * TUNING.TOTAL_DAY_TIME)
 PLANT_DEFS.kyno_cucumber.moisture                    = {drink_rate = DRINK_HIGH, min_percent = TUNING.FARM_PLANT_DROUGHT_TOLERANCE}
@@ -339,8 +339,8 @@ PLANT_DEFS.kyno_fennel.product                     = "kyno_fennel"
 PLANT_DEFS.kyno_fennel.product_oversized           = "kyno_fennel_oversized"
 PLANT_DEFS.kyno_fennel.seed                        = "kyno_fennel_seeds"
 PLANT_DEFS.kyno_fennel.loot_oversized_rot          = {"spoiled_food", "spoiled_food", "spoiled_food", "kyno_fennel_seeds", "fruitfly", "fruitfly"}
-PLANT_DEFS.kyno_fennel.family_min_count            = 1
-PLANT_DEFS.kyno_fennel.family_check_dist           = 1
+PLANT_DEFS.kyno_fennel.family_min_count            = 4
+PLANT_DEFS.kyno_fennel.family_check_dist           = 4
 PLANT_DEFS.kyno_fennel.plant_type_tag              = "farm_plant_kyno_fennel"
 PLANT_DEFS.kyno_fennel.grow_time                   = MakeGrowTimes(12 * TUNING.SEG_TIME, 16 * TUNING.SEG_TIME, 4 * TUNING.TOTAL_DAY_TIME, 7 * TUNING.TOTAL_DAY_TIME)
 PLANT_DEFS.kyno_fennel.moisture                    = {drink_rate = DRINK_MED, min_percent = TUNING.FARM_PLANT_DROUGHT_TOLERANCE}
@@ -425,8 +425,8 @@ PLANT_DEFS.kyno_parznip.product                     = "kyno_parznip"
 PLANT_DEFS.kyno_parznip.product_oversized           = "kyno_parznip_oversized"
 PLANT_DEFS.kyno_parznip.seed                        = "kyno_parznip_seeds"
 PLANT_DEFS.kyno_parznip.loot_oversized_rot          = {"spoiled_food", "spoiled_food", "spoiled_food", "kyno_parznip_seeds", "fruitfly", "fruitfly"}
-PLANT_DEFS.kyno_parznip.family_min_count            = 1
-PLANT_DEFS.kyno_parznip.family_check_dist           = 1
+PLANT_DEFS.kyno_parznip.family_min_count            = 4
+PLANT_DEFS.kyno_parznip.family_check_dist           = 4
 PLANT_DEFS.kyno_parznip.plant_type_tag              = "farm_plant_kyno_parznip"
 PLANT_DEFS.kyno_parznip.grow_time                   = MakeGrowTimes(12 * TUNING.SEG_TIME, 16 * TUNING.SEG_TIME, 4 * TUNING.TOTAL_DAY_TIME, 7 * TUNING.TOTAL_DAY_TIME)
 PLANT_DEFS.kyno_parznip.moisture                    = {drink_rate = DRINK_MED, min_percent = TUNING.FARM_PLANT_DROUGHT_TOLERANCE}
@@ -511,8 +511,8 @@ PLANT_DEFS.kyno_radish.product                     = "kyno_radish"
 PLANT_DEFS.kyno_radish.product_oversized           = "kyno_radish_oversized"
 PLANT_DEFS.kyno_radish.seed                        = "kyno_radish_seeds"
 PLANT_DEFS.kyno_radish.loot_oversized_rot          = {"spoiled_food", "spoiled_food", "spoiled_food", "kyno_radish_seeds", "fruitfly", "fruitfly"}
-PLANT_DEFS.kyno_radish.family_min_count            = 1
-PLANT_DEFS.kyno_radish.family_check_dist           = 1
+PLANT_DEFS.kyno_radish.family_min_count            = 4
+PLANT_DEFS.kyno_radish.family_check_dist           = 4
 PLANT_DEFS.kyno_radish.plant_type_tag              = "farm_plant_kyno_radish"
 PLANT_DEFS.kyno_radish.grow_time                   = MakeGrowTimes(12 * TUNING.SEG_TIME, 16 * TUNING.SEG_TIME, 4 * TUNING.TOTAL_DAY_TIME, 7 * TUNING.TOTAL_DAY_TIME)
 PLANT_DEFS.kyno_radish.moisture                    = {drink_rate = DRINK_LOW, min_percent = TUNING.FARM_PLANT_DROUGHT_TOLERANCE}
@@ -597,8 +597,8 @@ PLANT_DEFS.kyno_rice.product                     = "kyno_rice"
 PLANT_DEFS.kyno_rice.product_oversized           = "kyno_rice_oversized"
 PLANT_DEFS.kyno_rice.seed                        = "kyno_rice_seeds"
 PLANT_DEFS.kyno_rice.loot_oversized_rot          = {"spoiled_food", "spoiled_food", "spoiled_food", "kyno_rice_seeds", "fruitfly", "fruitfly"}
-PLANT_DEFS.kyno_rice.family_min_count            = 1
-PLANT_DEFS.kyno_rice.family_check_dist           = 1
+PLANT_DEFS.kyno_rice.family_min_count            = 4
+PLANT_DEFS.kyno_rice.family_check_dist           = 4
 PLANT_DEFS.kyno_rice.plant_type_tag              = "farm_plant_kyno_rice"
 PLANT_DEFS.kyno_rice.grow_time                   = MakeGrowTimes(12 * TUNING.SEG_TIME, 16 * TUNING.SEG_TIME, 4 * TUNING.TOTAL_DAY_TIME, 7 * TUNING.TOTAL_DAY_TIME)
 PLANT_DEFS.kyno_rice.moisture                    = {drink_rate = DRINK_MED, min_percent = TUNING.FARM_PLANT_DROUGHT_TOLERANCE}
@@ -683,8 +683,8 @@ PLANT_DEFS.kyno_sweetpotato.product                     = "kyno_sweetpotato"
 PLANT_DEFS.kyno_sweetpotato.product_oversized           = "kyno_sweetpotato_oversized"
 PLANT_DEFS.kyno_sweetpotato.seed                        = "kyno_sweetpotato_seeds"
 PLANT_DEFS.kyno_sweetpotato.loot_oversized_rot          = {"spoiled_food", "spoiled_food", "spoiled_food", "kyno_sweetpotato_seeds", "fruitfly", "fruitfly"}
-PLANT_DEFS.kyno_sweetpotato.family_min_count            = 1
-PLANT_DEFS.kyno_sweetpotato.family_check_dist           = 1
+PLANT_DEFS.kyno_sweetpotato.family_min_count            = 4
+PLANT_DEFS.kyno_sweetpotato.family_check_dist           = 4
 PLANT_DEFS.kyno_sweetpotato.plant_type_tag              = "farm_plant_kyno_sweetpotato"
 PLANT_DEFS.kyno_sweetpotato.grow_time                   = MakeGrowTimes(12 * TUNING.SEG_TIME, 16 * TUNING.SEG_TIME, 4 * TUNING.TOTAL_DAY_TIME, 7 * TUNING.TOTAL_DAY_TIME)
 PLANT_DEFS.kyno_sweetpotato.moisture                    = {drink_rate = DRINK_LOW, min_percent = TUNING.FARM_PLANT_DROUGHT_TOLERANCE}
@@ -769,8 +769,8 @@ PLANT_DEFS.kyno_turnip.product                     = "kyno_turnip"
 PLANT_DEFS.kyno_turnip.product_oversized           = "kyno_turnip_oversized"
 PLANT_DEFS.kyno_turnip.seed                        = "kyno_turnip_seeds"
 PLANT_DEFS.kyno_turnip.loot_oversized_rot          = {"spoiled_food", "spoiled_food", "spoiled_food", "kyno_turnip_seeds", "fruitfly", "fruitfly"}
-PLANT_DEFS.kyno_turnip.family_min_count            = 1
-PLANT_DEFS.kyno_turnip.family_check_dist           = 1
+PLANT_DEFS.kyno_turnip.family_min_count            = 4
+PLANT_DEFS.kyno_turnip.family_check_dist           = 4
 PLANT_DEFS.kyno_turnip.plant_type_tag              = "farm_plant_kyno_turnip"
 PLANT_DEFS.kyno_turnip.grow_time                   = MakeGrowTimes(12 * TUNING.SEG_TIME, 16 * TUNING.SEG_TIME, 4 * TUNING.TOTAL_DAY_TIME, 7 * TUNING.TOTAL_DAY_TIME)
 PLANT_DEFS.kyno_turnip.moisture                    = {drink_rate = DRINK_LOW, min_percent = TUNING.FARM_PLANT_DROUGHT_TOLERANCE}
