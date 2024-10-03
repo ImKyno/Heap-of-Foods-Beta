@@ -249,9 +249,11 @@ AddStategraphPostInit("wilson", function(self)
     self.actionhandlers[ACTIONS.GIVE].deststate = function(inst, action, ...)
         local target = action.target or action.invobject
         
+		--[[
         if target and target:HasTags({"trader", "elderpot_rubble"}) then
             return "dolongaction"
         end
+		]]--
 		
 		if target and target:HasTags({"trader", "serenity_installable"}) then
 			return "domediumaction"
@@ -341,11 +343,13 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.INSTALLCOOKWARE, func
 	
 	if target.components.cookwareinstaller and target:HasTag("cookware_installable") then
 		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	end
 		
-	elseif target.components.cookwareinstaller and target:HasTag("cookware_post_installable") then
+	if target.components.cookwareinstaller and target:HasTag("cookware_post_installable") then
 		return "give"
+	end
 	
-	elseif target.components.cookwareinstaller and target:HasTag("cookware_other_installable") then
+	if target.components.cookwareinstaller and target:HasTag("cookware_other_installable") then
 		return "give"
 	end
 end))
@@ -354,11 +358,13 @@ AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.INSTALLCOOKWAR
 	
 	if target.components.cookwareinstaller and target:HasTag("cookware_installable") then
 		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	end
 		
-	elseif target.components.cookwareinstaller and target:HasTag("cookware_post_installable") then
+	if target.components.cookwareinstaller and target:HasTag("cookware_post_installable") then
 		return "give"
+	end
 	
-	elseif target.components.cookwareinstaller and target:HasTag("cookware_other_installable") then
+	if target.components.cookwareinstaller and target:HasTag("cookware_other_installable") then
 		return "give"
 	end
 end))

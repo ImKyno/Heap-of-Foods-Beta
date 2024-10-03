@@ -37,21 +37,26 @@ end
 
 local function SayBuy(inst)
 	Say(inst, "PIGELDER_TALK_BUY")
+	-- inst.components.npc_talker:Chatter("PIGELDER_TALK_BUY")
 end
 
 local function SayThanks(inst)
 	Say(inst, "PIGELDER_TALK_THANK")
+	-- inst.components.npc_talker:Chatter("PIGELDER_TALK_THANK")
 end
 
 local function SayFar(inst)
 	Say(inst, "PIGELDER_TALK_FAR")
+	-- inst.components.npc_talker:Chatter("PIGELDER_TALK_FAR")
 end
 
 local function SayNear(inst)
 	if not inst:HasTag("pigelder_gifted") then
 		Say(inst, "PIGELDER_TALK_NEAR1")
+		-- inst.components.npc_talker:Chatter("PIGELDER_TALK_NEAR1")
 	else
 		Say(inst, "PIGELDER_TALK_NEAR2")
+		-- inst.components.npc_talker:Chatter("PIGELDER_TALK_NEAR2")
     end
 end
 
@@ -63,21 +68,25 @@ end
 
 local function OnTurnOff(inst)
     inst.components.prototyper.on = false
+	
 	if not inst.AnimState:IsCurrentAnimation("sleep_loop", true) then
 		inst.AnimState:PlayAnimation("sleep_pre")
 		inst.AnimState:PushAnimation("sleep_loop", true)
 		inst.SoundEmitter:PlaySound("dontstarve/quagmire/creature/swamppig_elder/sleep_in")
 	end
+	
 	-- inst:DoTaskInTime(1, function() SayFar(inst) end) -- OnFar instead is better.
 end
 
 local function OnTurnOn(inst)
     inst.components.prototyper.on = true
+	
 	if not inst.AnimState:IsCurrentAnimation("idle", true) then
 		inst.AnimState:PlayAnimation("sleep_pst")
 		inst.AnimState:PushAnimation("idle", true)
 		inst.SoundEmitter:PlaySound("dontstarve/quagmire/creature/swamppig_elder/sleep_out")
 	end
+	
 	inst:DoTaskInTime(.5, function() SayNear(inst) end)
 end
 
@@ -207,7 +216,13 @@ local function fn()
     inst.components.talker.fontsize = 35
     inst.components.talker.font = TALKINGFONT
     inst.components.talker.offset = Vector3(0, -600, 0)
+	-- inst.components.talker.name_colour = Vector3(118/256, 89/256, 141/256)
+    -- inst.components.talker.chaticon = "npcchatflair_hermitcrab"
     inst.components.talker:MakeChatter()
+	-- inst.components.talker.lineduration = TUNING.HERMITCRAB.SPEAKTIME - 0.5
+	
+	-- inst:AddComponent("npc_talker")
+    -- inst.components.npc_talker.default_chatpriority = CHATPRIORITIES.LOW
 	
 	if not TheNet:IsDedicated() then
         inst:AddComponent("pointofinterest")

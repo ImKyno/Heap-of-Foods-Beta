@@ -50,8 +50,10 @@ end
 
 local function ElderSayThanks(inst)
 	local pigelder = FindElder(inst)
+	
 	if pigelder then
 		Say(pigelder, "PIGELDER_TALK_REPAIRPOT")
+		-- pigelder.components.npc_talker:Chatter("PIGELDER_TALK_REPAIRPOT")
 		pigelder.components.craftingstation:LearnItem("kyno_saphealer", "kyno_saphealer_p")
 	end
 end

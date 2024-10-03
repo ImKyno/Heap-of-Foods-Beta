@@ -107,6 +107,7 @@ local function GetFirepit(inst)
             end
         end
     end
+	
     return inst.firepit
 end
 
@@ -139,12 +140,14 @@ end
 
 local function OnHammeredGrill(inst, worker)
 	local firepit = GetFirepit(inst)
+	
 	if firepit then
 		firepit:RemoveTag("firepit_has_grill")
 		firepit:RemoveTag("firepit_with_cookware")
 		firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
 		firepit.components.burnable:OverrideBurnFXFinalOffset(3)
 		firepit.components.cookwareinstaller.enabled = true
+		firepit.firepit_has_grill = false
 	end
 
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
@@ -190,10 +193,12 @@ end
 
 local function ChangeFireFX(inst)
 	local firepit = GetFirepit(inst)
+	
 	if firepit then
 		firepit:AddTag("firepit_has_grill")
 		firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 		firepit.components.cookwareinstaller.enabled = false
+		firepit.firepit_has_grill = true
 	end
 end
 
@@ -409,8 +414,9 @@ local function OnSave(inst, data)
     end
 
 	local firepit = GetFirepit(inst)
+	
 	if firepit and firepit:HasTag("firepit_has_grill") then
-		data.firepit_has_grill = true
+		data.firepit_has_grill = firepit.firepit_has_grill or nil
 	end
 end
 
@@ -421,7 +427,11 @@ local function OnLoad(inst, data)
     end
 
 	if data ~= nil and data.firepit_has_grill then
-		ChangeFireFX(inst)
+		firepit:AddTag("firepit_has_grill")
+		firepit:AddTag("firepit_with_cookware")
+		firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+		firepit.components.cookwareinstaller.enabled = false
+		firepit.firepit_has_grill = true
 	end
 end
 

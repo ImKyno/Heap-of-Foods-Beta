@@ -112,6 +112,7 @@ local function GetFirepit(inst)
             end
         end
     end
+	
     return inst.firepit
 end
 
@@ -164,11 +165,13 @@ end
 
 local function OnHammeredOven(inst, worker)
 	local firepit = GetFirepit(inst)
+	
 	if firepit then
 		firepit:RemoveTag("firepit_has_oven")
 		firepit:RemoveTag("firepit_with_cookware")
 		firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
 		firepit.components.cookwareinstaller.enabled = true
+		firepit.firepit_has_oven = false
 	end
 
 	inst.components.lootdropper:DropLoot()
@@ -208,12 +211,13 @@ end
 
 local function ChangeFireFX(inst)
 	local firepit = GetFirepit(inst)
+	
 	if firepit then
 		firepit:AddTag("firepit_has_oven")
 		firepit:AddTag("firepit_with_cookware")
 		firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 		firepit.components.cookwareinstaller.enabled = false
-		-- print("Added tag to firepit")
+		firepit.firepit_has_oven = true
 	end
 end
 
@@ -476,8 +480,9 @@ local function OnSave(inst, data)
     end
 
 	local firepit = GetFirepit(inst)
+	
 	if firepit and firepit:HasTag("firepit_has_oven") then
-		data.firepit_has_oven = true
+		data.firepit_has_oven = firepit.firepit_has_oven or nil
 	end
 end
 
@@ -488,7 +493,11 @@ local function OnLoad(inst, data)
     end
 
 	if data ~= nil and data.firepit_has_oven then
-		ChangeFireFX(inst)
+		firepit:AddTag("firepit_has_oven")
+		firepit:AddTag("firepit_with_cookware")
+		firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+		firepit.components.cookwareinstaller.enabled = false
+		firepit.firepit_has_oven = true
 	end
 end
 

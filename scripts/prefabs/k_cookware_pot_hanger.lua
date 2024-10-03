@@ -177,6 +177,7 @@ local function GetFirepit(inst)
             end
         end
     end
+	
     return inst.firepit
 end
 
@@ -192,6 +193,7 @@ local function GetBubble(inst)
             end
         end
     end
+	
     return inst.bubble
 end
 
@@ -221,9 +223,11 @@ local function OnHammeredPot(inst, worker)
     end
 
 	local firepit = GetFirepit(inst)
+	
 	if firepit then
 		firepit:RemoveTag("firepit_has_pot")
 		firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
+		firepit.firepit_has_pot = false
 	end
 
 	inst.components.lootdropper:DropLoot()
@@ -298,12 +302,13 @@ end
 
 local function ChangeFireFX(inst)
 	local firepit = GetFirepit(inst)
+	
 	if firepit then
 		firepit:AddTag("firepit_has_pot")
 		firepit:AddTag("firepit_with_cookware")
 		firepit.components.burnable:OverrideBurnFXBuild("quagmire_pot_fire")
 		firepit.components.cookwareinstaller.enabled = false
-		-- print("Added tag to firepit")
+		firepit.firepit_has_pot = true
 	end
 end
 
@@ -614,8 +619,9 @@ local function OnSave(inst, data)
     end
 
 	local firepit = GetFirepit(inst)
+	
 	if firepit and firepit:HasTag("firepit_has_pot") then
-		data.firepit_has_pot = true
+		data.firepit_has_pot = firepit.firepit_has_pot or nil
 	end
 end
 
@@ -626,7 +632,11 @@ local function OnLoad(inst, data)
     end
 
 	if data ~= nil and data.firepit_has_pot then
-		ChangeFireFX(inst)
+		firepit:AddTag("firepit_has_pot")
+		firepit:AddTag("firepit_with_cookware")
+		firepit.components.burnable:OverrideBurnFXBuild("quagmire_pot_fire")
+		firepit.components.cookwareinstaller.enabled = false
+		firepit.firepit_has_pot = true
 	end
 end
 
@@ -775,6 +785,12 @@ local function syruppotfn()
 	inst.components.workable:SetOnFinishCallback(OnHammeredPot)
 	inst.components.workable:SetOnWorkCallback(OnHitPotSmall)
 	inst.components.workable:SetWorkLeft(1)
+	
+	--[[
+	if inst:HasTag("firepit_has_pot") then
+        inst.components.burnable:OverrideBurnFXBuild("quagmire_pot_fire")
+    end
+	]]--
 
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad

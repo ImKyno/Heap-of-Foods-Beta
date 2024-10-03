@@ -450,39 +450,40 @@ local function FirePitCookwarePostinit(inst)
                 end
             end
         end
+		
         return inst.firepit
     end
 
 	local function ApplyHanger(inst)
 		local firepit = GetFirepit(inst)
+		
         if firepit then
 			firepit:AddTag("firepit_with_cookware")
 			firepit.components.cookwareinstaller.enabled = false
-
 			firepit.hashanger = true
 		end
 	end
 
     local function ChangeGrillFireFX(inst)
 		local firepit = GetFirepit(inst)
+		
         if firepit then
             firepit:AddTag("firepit_has_grill")
 			firepit:AddTag("firepit_with_cookware")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 			firepit.components.cookwareinstaller.enabled = false
-
 			firepit.hasgrill = true
         end
     end
 
     local function ChangeOvenFireFX(inst)
 		local firepit = GetFirepit(inst)
+		
         if firepit then
             firepit:AddTag("firepit_has_oven")
 			firepit:AddTag("firepit_with_cookware")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 			firepit.components.cookwareinstaller.enabled = false
-
 			firepit.hasoven = true
         end
     end
@@ -553,7 +554,6 @@ local function FirePitCookwarePostinit(inst)
 		if data ~= nil and data.hashanger then
 			firepit:AddTag("firepit_with_cookware")
 			firepit.components.cookwareinstaller.enabled = false
-
 			firepit.hashanger = true
 		end
 
@@ -562,7 +562,6 @@ local function FirePitCookwarePostinit(inst)
 			firepit:AddTag("firepit_with_cookware")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 			firepit.components.cookwareinstaller.enabled = false
-
 			firepit.hasgrill = true
 		end
 
@@ -571,7 +570,6 @@ local function FirePitCookwarePostinit(inst)
 			firepit:AddTag("firepit_with_cookware")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 			firepit.components.cookwareinstaller.enabled = false
-
 			firepit.hasoven = true
 		end
 	end
