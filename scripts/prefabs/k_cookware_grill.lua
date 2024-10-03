@@ -409,11 +409,11 @@ local function GetStatus(inst)
 end
 
 local function OnSave(inst, data)
+	local firepit = GetFirepit(inst)
+
     if inst:HasTag("burnt") or (inst.components.burnable ~= nil and inst.components.burnable:IsBurning()) then
         data.burnt = true
     end
-
-	local firepit = GetFirepit(inst)
 	
 	if firepit and firepit:HasTag("firepit_has_grill") then
 		data.firepit_has_grill = firepit.firepit_has_grill or nil
@@ -427,11 +427,7 @@ local function OnLoad(inst, data)
     end
 
 	if data ~= nil and data.firepit_has_grill then
-		firepit:AddTag("firepit_has_grill")
-		firepit:AddTag("firepit_with_cookware")
-		firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
-		firepit.components.cookwareinstaller.enabled = false
-		firepit.firepit_has_grill = true
+		inst:DoTaskInTime(1, function() ChangeFireFX(inst) end)
 	end
 end
 

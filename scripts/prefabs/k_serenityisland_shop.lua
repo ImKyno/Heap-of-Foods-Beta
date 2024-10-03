@@ -33,30 +33,26 @@ end
 
 local function Say(inst, str)
 	inst.components.talker:Chatter(str, math.random(#STRINGS[str]))
+	-- inst.components.npc_talker:Chatter(str, math.random(#STRINGS[str]))
 end
 
 local function SayBuy(inst)
 	Say(inst, "PIGELDER_TALK_BUY")
-	-- inst.components.npc_talker:Chatter("PIGELDER_TALK_BUY")
 end
 
 local function SayThanks(inst)
 	Say(inst, "PIGELDER_TALK_THANK")
-	-- inst.components.npc_talker:Chatter("PIGELDER_TALK_THANK")
 end
 
 local function SayFar(inst)
 	Say(inst, "PIGELDER_TALK_FAR")
-	-- inst.components.npc_talker:Chatter("PIGELDER_TALK_FAR")
 end
 
 local function SayNear(inst)
 	if not inst:HasTag("pigelder_gifted") then
 		Say(inst, "PIGELDER_TALK_NEAR1")
-		-- inst.components.npc_talker:Chatter("PIGELDER_TALK_NEAR1")
 	else
 		Say(inst, "PIGELDER_TALK_NEAR2")
-		-- inst.components.npc_talker:Chatter("PIGELDER_TALK_NEAR2")
     end
 end
 
@@ -74,8 +70,6 @@ local function OnTurnOff(inst)
 		inst.AnimState:PushAnimation("sleep_loop", true)
 		inst.SoundEmitter:PlaySound("dontstarve/quagmire/creature/swamppig_elder/sleep_in")
 	end
-	
-	-- inst:DoTaskInTime(1, function() SayFar(inst) end) -- OnFar instead is better.
 end
 
 local function OnTurnOn(inst)
@@ -217,9 +211,9 @@ local function fn()
     inst.components.talker.font = TALKINGFONT
     inst.components.talker.offset = Vector3(0, -600, 0)
 	-- inst.components.talker.name_colour = Vector3(118/256, 89/256, 141/256)
-    -- inst.components.talker.chaticon = "npcchatflair_hermitcrab"
+    -- inst.components.talker.chaticon = "npcchatflair_pigelder"
     inst.components.talker:MakeChatter()
-	-- inst.components.talker.lineduration = TUNING.HERMITCRAB.SPEAKTIME - 0.5
+	-- inst.components.talker.lineduration = TUNING.PIGELDER.SPEAKTIME - 0.5
 	
 	-- inst:AddComponent("npc_talker")
     -- inst.components.npc_talker.default_chatpriority = CHATPRIORITIES.LOW
@@ -256,8 +250,6 @@ local function fn()
 
 	inst:WatchWorldState("isnight", OnIsNight)
     OnIsNight(inst, TheWorld.state.isnight)
-
-	-- inst:ListenForEvent("elderpot_repaired", SellKitchenStuff)
 
 	inst.OnSave	= OnSave
 	inst.OnLoad = OnLoad

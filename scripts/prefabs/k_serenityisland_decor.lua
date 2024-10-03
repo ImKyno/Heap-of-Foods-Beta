@@ -46,6 +46,7 @@ end
 
 local function Say(inst, str)
 	inst.components.talker:Chatter(str, math.random(#STRINGS[str]))
+	-- inst.components.npc_talker:Chatter(str, math.random(#STRINGS[str]))
 end
 
 local function ElderSayThanks(inst)
@@ -53,7 +54,6 @@ local function ElderSayThanks(inst)
 	
 	if pigelder then
 		Say(pigelder, "PIGELDER_TALK_REPAIRPOT")
-		-- pigelder.components.npc_talker:Chatter("PIGELDER_TALK_REPAIRPOT")
 		pigelder.components.craftingstation:LearnItem("kyno_saphealer", "kyno_saphealer_p")
 	end
 end

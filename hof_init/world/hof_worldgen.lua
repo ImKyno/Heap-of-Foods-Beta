@@ -1,15 +1,15 @@
 -- Common Dependencies.
-local _G 			       = GLOBAL
-local require 		       = _G.require
-local GROUND 		       = _G.GROUND
-local min                  = 1
-local max                  = 3
+local _G      = GLOBAL
+local require = _G.require
+local GROUND  = _G.GROUND
+local min     = 1
+local max     = 3
 
 require("map/terrain")
 modimport("hof_init/misc/hof_tuning")
 
-local TERRAIN_FILTERS      = {_G.WORLD_TILES.ROAD, _G.WORLD_TILES.WOODFLOOR, _G.WORLD_TILES.CARPET, _G.WORLD_TILES.CHECKER}
-local OCEANSETPIECE_COUNT  = GetModConfigData("HOF_OCEANSETPIECE_COUNT")
+local TERRAIN_FILTERS     = {_G.WORLD_TILES.ROAD, _G.WORLD_TILES.WOODFLOOR, _G.WORLD_TILES.CARPET, _G.WORLD_TILES.CHECKER}
+local OCEANSETPIECE_COUNT = GetModConfigData("HOF_OCEANSETPIECE_COUNT")
 
 -- Prefab Rooms.
 local AloeRooms = 
@@ -26,7 +26,7 @@ local WheatRooms =
 	"BeefalowPlain",
 	"WalrusHut_Plains",
 	"Plain",
-	"BarePlain",
+	-- "BarePlain",
 }
 
 local RadishRooms = 
@@ -211,115 +211,115 @@ local AspargosRooms =
 -- Add the Prefabs to the world.
 for k, v in pairs(AloeRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_aloe_ground 		= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_aloe_ground        = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_aloe_ground 								= TERRAIN_FILTERS
+_G.terrain.filter.kyno_aloe_ground                              = TERRAIN_FILTERS
 
 for k, v in pairs(RadishRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_radish_ground 		= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_radish_ground      = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_radish_ground 							= TERRAIN_FILTERS
+_G.terrain.filter.kyno_radish_ground                            = TERRAIN_FILTERS
 
 for k, v in pairs(FennelRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_fennel_ground 		= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_fennel_ground      = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_fennel_ground 							= TERRAIN_FILTERS
+_G.terrain.filter.kyno_fennel_ground                            = TERRAIN_FILTERS
 
 for k, v in pairs(SweetPotatoRooms) do
 	AddRoomPreInit(v, function(room)
 		room.contents.distributeprefabs.kyno_sweetpotato_ground = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_sweetpotato_ground 						= TERRAIN_FILTERS
+_G.terrain.filter.kyno_sweetpotato_ground                       = TERRAIN_FILTERS
 
 for k, v in pairs(ParznipRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_parznip_ground 	= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_parznip_ground     = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_parznip_ground 							= TERRAIN_FILTERS
+_G.terrain.filter.kyno_parznip_ground                           = TERRAIN_FILTERS
 
 for k, v in pairs(TurnipRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_turnip_ground  	= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_turnip_ground      = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_turnip_ground 							= TERRAIN_FILTERS
+_G.terrain.filter.kyno_turnip_ground                            = TERRAIN_FILTERS
 
 for k, v in pairs(OceanRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_cucumber_ground  	= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_cucumber_ground    = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_cucumber_ground							= TERRAIN_FILTERS
+_G.terrain.filter.kyno_cucumber_ground                          = TERRAIN_FILTERS
 
 for k, v in pairs(OceanRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_seaweeds_ocean  	= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_seaweeds_ocean     = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_seaweeds_ocean 							= TERRAIN_FILTERS
+_G.terrain.filter.kyno_seaweeds_ocean                           = TERRAIN_FILTERS
 
 for k, v in pairs(OceanRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_taroroot_ocean  	= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_taroroot_ocean     = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_taroroot_ocean 							= TERRAIN_FILTERS
+_G.terrain.filter.kyno_taroroot_ocean                           = TERRAIN_FILTERS
 
 for k, v in pairs(WaterycressRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_waterycress_ocean 	= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_waterycress_ocean  = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_waterycress_ocean 						= TERRAIN_FILTERS
+_G.terrain.filter.kyno_waterycress_ocean                        = TERRAIN_FILTERS
 
 for k, v in pairs(WheatRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_wildwheat 			= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_wildwheat          = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_wildwheat 								= TERRAIN_FILTERS
+_G.terrain.filter.kyno_wildwheat                                = TERRAIN_FILTERS
 
 for k, v in pairs(ParznipBigRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_parznip_big 		= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_parznip_big        = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_parznip_big								= TERRAIN_FILTERS
+_G.terrain.filter.kyno_parznip_big                              = TERRAIN_FILTERS
 
 for k, v in pairs(StoneSlabRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_rockflippable		= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_rockflippable      = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_rockflippable							= TERRAIN_FILTERS
+_G.terrain.filter.kyno_rockflippable                            = TERRAIN_FILTERS
 
 for k, v in pairs(MushroomStumpRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_mushstump_natural	= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_mushstump_natural  = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_mushstump_natural						= TERRAIN_FILTERS
+_G.terrain.filter.kyno_mushstump_natural                        = TERRAIN_FILTERS
 
 for k, v in pairs(WateryCrateRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_watery_crate		= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_watery_crate       = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_watery_crate							    = TERRAIN_FILTERS
+_G.terrain.filter.kyno_watery_crate                             = TERRAIN_FILTERS
 
 for k, v in pairs(AspargosRooms) do
 	AddRoomPreInit(v, function(room)
-		room.contents.distributeprefabs.kyno_aspargos_ground	= TUNING.HOF_RESOURCES
+		room.contents.distributeprefabs.kyno_aspargos_ground    = TUNING.HOF_RESOURCES
 	end)
 end
-_G.terrain.filter.kyno_aspargos_ground							= TERRAIN_FILTERS
+_G.terrain.filter.kyno_aspargos_ground                          = TERRAIN_FILTERS
 
 AddTaskSetPreInitAny(function(tasksetdata)
     if tasksetdata.location ~= "forest" then
@@ -344,10 +344,15 @@ end)
 AddLevelPreInit("forest", function(level)
     level.required_setpieces = level.required_setpieces or {}
 	
-    table.insert(level.required_setpieces, "hof_serenityisland1")
+	table.insert(level.required_setpieces, "hof_serenityisland1")
 	table.insert(level.required_setpieces, "hof_meadowisland1")
 	table.insert(level.required_setpieces, "hof_oceansetpiece_crates")
 	table.insert(level.required_setpieces, "hof_oceansetpiece_waterycress")
 	table.insert(level.required_setpieces, "hof_oceansetpiece_taroroot")
 	table.insert(level.required_setpieces, "hof_oceansetpiece_seaweeds")
+end)
+
+-- This mod suffers from low Beefalo amount due to crowded prefabs.
+AddRoomPreInit("BeefalowPlain", function(room)
+	room.contents.distributeprefabs["beefalo"] = 0.06
 end)
