@@ -106,12 +106,12 @@ AddPrefabPostInit("lordfruitfly", function(inst)
 end)
 
 -- Dragonfly Drops Coffee Plants.
-local DF_COFFEE = GetModConfigData("HOF_COFFEEDROPRATE")
+local DF_COFFEE = GetModConfigData("COFFEEDROPRATE")
 AddPrefabPostInit("dragonfly", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	if inst.components.lootdropper ~= nil then
 		for _ = 1, DF_COFFEE do
 			inst.components.lootdropper:AddChanceLoot("dug_kyno_coffeebush", 1.00)
@@ -326,13 +326,13 @@ local function FrogPostinit(inst)
     if not inst.components.health:IsDead() and not (inst.components.sleeper ~= nil and inst.components.sleeper:IsAsleep()) then
 		local target_dist = inst.islunar and TUNING.LUNARFROG_TARGET_DIST or TUNING.FROG_TARGET_DIST
         local cant_tags   = inst.islunar and LUNAR_RETARGET_CANT_TAGS or RETARGET_CANT_TAGS
-	
+
         return FindEntity(inst, target_dist, function(guy)
             if not guy.components.health:IsDead() then
                 return guy.components.inventory ~= nil and inst.hof_oldretarget
             end
         end,
-		
+
 			RETARGET_MUST_TAGS, cant_tags)
 		end
 	end
@@ -363,12 +363,12 @@ AddPrefabPostInit("crabking_mob", function(inst) ReplaceLoot(inst.prefab, "meat"
 AddPrefabPostInit("crabking_mob_knight", function(inst) ReplaceLoot(inst.prefab, "meat", "kyno_crabmeat") end)
 
 -- New birds will spawn when landing on these turfs.
-AddClassPostConstruct("components/birdspawner", function(self) 
+AddClassPostConstruct("components/birdspawner", function(self)
 	local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
-	
+
 	BIRD_TYPES[WORLD_TILES.QUAGMIRE_PARKFIELD] = {"quagmire_pigeon"}
 	BIRD_TYPES[WORLD_TILES.QUAGMIRE_CITYSTONE] = {"quagmire_pigeon"}
-	
+
 	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = {"toucan"}
 	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = {"toucan"}
 	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = {"kingfisher"}

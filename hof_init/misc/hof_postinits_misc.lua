@@ -9,13 +9,13 @@ local cooking           = require("cooking")
 
 require("hof_debugcommands")
 
-local HOF_HUMANMEAT = GetModConfigData("HOF_HUMANMEAT")
-local HOF_KEEPFOOD  = GetModConfigData("HOF_KEEPFOOD")
+local HOF_HUMANMEAT = GetModConfigData("HUMANMEAT")
+local HOF_KEEPFOOD  = GetModConfigData("KEEPFOOD")
 
 -- Favorite Mod Foods.
 AddPrefabPostInit("wilson", function(inst)
     inst:AddTag("wislanhealer")
-	
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
@@ -39,7 +39,7 @@ end)
 
 AddPrefabPostInit("wolfgang", function(inst)
     inst:AddTag("mightyman")
-	
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
@@ -75,7 +75,7 @@ AddPrefabPostInit("wickerbottom", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("tea",      TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("teagreen", TUNING.AFFINITY_15_CALORIES_HUGE)
@@ -108,7 +108,7 @@ AddPrefabPostInit("wes", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("sharkfinsoup", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("tartarsauce",  TUNING.AFFINITY_15_CALORIES_HUGE)
@@ -186,7 +186,7 @@ AddPrefabPostInit("wurt", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("duriansoup",    1.93)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_durian",  1.93)
@@ -196,7 +196,7 @@ AddPrefabPostInit("wurt", function(inst)
 		inst.components.foodaffinity:AddPrefabAffinity("durianchicken", 1.93)
 		inst.components.foodaffinity:AddPrefabAffinity("monstermuffin", 1.33)
     end
-	
+
 	if inst.components.locomotor ~= nil then
 		inst.components.locomotor:SetFasterOnGroundTile(WORLD_TILES.HOF_TIDALMARSH, true)
 	end
@@ -260,7 +260,7 @@ if HOF_HUMANMEAT then
 			if math.random() < 0.33 then
 				local x, y, z = inst.Transform:GetWorldPosition()
 				local humanmeat = SpawnPrefab("kyno_humanmeat")
-				
+
 				if humanmeat ~= nil then
 					if humanmeat.Physics ~= nil then
 						local speed = 1 + math.random()
@@ -301,7 +301,7 @@ local function AshPostinit(inst)
     MakeDeployableFertilizerPristine(inst)
 
     inst:AddTag("fertilizerresearchable")
-	
+
     inst.GetFertilizerKey = GetFertilizerKey
 
     if not _G.TheWorld.ismastersim then
@@ -363,7 +363,7 @@ end)
 -- Speed boost for the White Stone Road.
 AddComponentPostInit("locomotor", function(inst)
 	local QUGSM = inst.UpdateGroundSpeedMultiplier
-	
+
 	inst.UpdateGroundSpeedMultiplier = function(self)
 	QUGSM(self)
 	if self.wasoncreep == false and self:FasterOnRoad() and
