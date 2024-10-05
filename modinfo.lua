@@ -106,7 +106,7 @@ local deschovers            =
 {
 	language1               = "Localization by: Kyno",
 	language2               = "Localization by: Kyno",
-	language3               = "Localization by: Anonymous Author",
+	language3               = "Localization by: 糖豆罐里好多颜色",
 	language4               = "Localization by: Anonymous Author",
 	scrapbook1              = "Default Scrapbook.",
 	scrapbook2              = "Mod's contents will be added to the Scrapbook.",
@@ -144,6 +144,8 @@ local deschovers            =
 
 -- Localizations.
 -- If you want to contribute with your localization please head to "scripts/strings/hof_localization.lua" for more information.
+
+-- Brazilian Portuguese
 if locale == "pt" then
 	name                        = "Amontoado de Comidas"
 
@@ -239,7 +241,7 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 	{
 		language1               = "Localização por: Kyno",
 		language2               = "Localização por: Kyno",
-		language3               = "Localização por: Autor Anônimo",
+		language3               = "Localização por: 糖豆罐里好多颜色",
 		language4               = "Localização por: Autor Anônimo",
 		scrapbook1              = "Scrapbook Padrão;",
 		scrapbook2              = "Os conteúdos do Mod serão adicionados ao Scrapbook.",
@@ -273,6 +275,139 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 		retrofit1               = "Seu mundo já está atualizado com os conteúdos do Mod.",
 		retrofit2               = "As Ilhas do Mod serão geradas durante a inicialização do servidor.",
 		retrofit3               = "As Prefabs do Mod serão geradas durante a inicialização do servidor.",
+	}
+end
+
+-- Chinese.
+if locale  == "zh" or locale == "zht" or locale == "zhr" then
+	name                        = "Heap of Foods(更多料理)"
+
+	description                 = 
+[[
+󰀄 新增 100 多道全新的烹饪锅料理和几种新食材。祝您烹饪愉快！
+
+󰀠 还在海洋的某处添加了全新的生物群落！
+󰀦 Mod创意工坊的介绍页面上有完整食谱表！
+
+󰀏 丰收更新:
+这次更新的重点是改造农作物的视觉效果，并添加新的农作物！还有一些小的改动和改进。
+
+我们的幸存者设法在野外找到了新型种子！在远离大陆的热带岛屿上，一种新的灌木丛正在绽放，等待着他们去发掘。
+
+󰀌 Mod版本: 8.3-A
+󰀧 Update: 丰收
+]]
+
+	names                       =
+	{
+		general                 = "一般选项",
+		extras                  = "其他选项",
+		retrofitting            = "改造选项",
+	}
+
+	labels                      =
+	{
+		language                = "语言",
+		scrapbook               = "Mod图鉴",
+		spoilage                = "防止食物腐败",
+		coffeedrop              = "咖啡丛掉落数量",
+		seasonalfoods           = "季节性食谱",
+		humanmeat               = "人肉食谱",
+		alcoholic               = "酒精限制",
+		giantspawn              = "特殊Boss料理",
+		coffeespeed             = "移速Buff",
+		coffeeduration          = "移速Buff持续时间",
+		warlygrinder            = "便携式研磨器食谱",
+		buckettweak             = "便便桶配方",
+		retrofit                = "改造内容",
+	}
+
+	hovers                      =
+	{
+		general                 = "Mod的一般选项。",
+		food                    = "食物和配料选项。",
+		extras                  = "Mod的其他选项。",
+		retrofitting            = "为旧世界提供向后兼容选项。",
+	
+		language                = "选择Mod语言。\n你可以在我们的Discord提供你的翻译。",
+		scrapbook               = "Mod的内容是否添加到图鉴？",
+		spoilage                = "料理在烹饪锅中是否变质？",
+		coffeedrop              = "龙蝇掉落多少数量的咖啡丛？",
+		seasonalfoods           = "季节性的料理是否在特殊活动下才能烹饪？",
+		humanmeat               = "玩家死亡时是否掉落人肉？\n注意：如果禁用，可能会导致无法制作某些料理。",
+		alcoholic               = "是否应该禁止某些角色饮酒？",
+		giantspawn              = "如果玩家吃了含boss掉落物的特殊料理，boss是否应该出现？",
+		coffeespeed             = "料理是否提供移速Buff？\n该项仅作用于特定料理",
+		coffeeduration          = "料理提供的移速Buff可以持续多久？",
+		warlygrinder            = "沃利的便携式研磨器是否可以拥有碾磨石的功能？",
+		buckettweak             = "便便桶是否用于挤奶而不是默认功能？",
+		retrofit                = "如果你的世界缺少Mod内容，请启用此选项。\n改造完成后，该选项将被设置为 \"已更新\"！",
+	
+	}
+
+	desc                        =
+	{
+		disabled                = "否",
+		enabled                 = "是",
+
+		language1               = "English",
+		language2               = "Português (BR)",
+		language3               = "简体中文",
+		language4               = "繁體中文",
+		coffeedrop1             = "0",
+		coffeedrop2             = "4",
+		coffeedrop3             = "8",
+		coffeedrop4             = "12",
+		coffeedrop5             = "16",
+		coffeeduration1         = "超级短",
+		coffeeduration2         = "短",
+		coffeeduration3         = "默认",
+		coffeeduration4         = "平均",
+		coffeeduration5         = "长",
+		coffeeduration6         = "非常长",
+		retrofit1               = "已更新",
+		retrofit2               = "Mod岛屿",
+		retrofit3               = "Mod物品",
+	}
+
+	deschovers                  =
+	{
+		language1               = "翻译由: Kyno",
+		language2               = "翻译由: Kyno",
+		language3               = "翻译由: 糖豆罐里好多颜色",
+		language4               = "翻译由: 匿名作者",
+		scrapbook1              = "默认图鉴。",
+		scrapbook2              = "Mod的内容将添加到图鉴",
+		spoilage1               = "料理在烹饪锅、便携式烹饪锅等锅中会变质。",
+		spoilage2               = "料理在烹饪锅、便携式烹饪锅等锅中不会变质。",
+		coffeedrop1             = "龙蝇不会掉落咖啡丛。",
+		coffeedrop2             = "龙蝇会掉4株落咖啡丛。",
+		coffeedrop3             = "龙蝇会掉8株落咖啡丛。",
+		coffeedrop4             = "龙蝇会掉12株落咖啡丛。",
+		coffeedrop5             = "龙蝇会掉16株落咖啡丛。",
+		seasonalfoods1          = "季节性料理烹饪不受任何限制",
+		seasonalfoods2          = "季节性料理只能在特殊活动开启时烹制。",
+		humanmeat1              = "玩家死亡后不会掉落人肉。",
+		humanmeat2              = "玩家死亡后小概率会掉落人肉。",
+		alcoholic1              = "所有角色都能饮酒。",
+		alcoholic2              = "一些角色，比如韦伯，温蒂等。不能饮酒。",
+		giantspawn1             = "玩家在食用某些料理时不会产生Boss。",
+		giantspawn2             = "玩家在食用某些料理时会产生Boss。",
+		coffeespeed1            = "料理食用后不会提高移速Buff。",
+		coffeespeed2            = "料理食用后会提高移速Buff。",
+		coffeeduration1         = "移速Buff会持续2分钟。",
+		coffeeduration2         = "移速Buff会持续半天。",
+		coffeeduration3         = "移速Buff会持续一天。",
+		coffeeduration4         = "移速Buff会持续1.5天。",
+		coffeeduration5         = "移速Buff会持续2天。",
+		coffeeduration6         = "移速Buff会持续4天",
+		warlygrinder1           = "沃利的便携式研磨器不会拥有碾磨石的功能。",
+		warlygrinder2           = "沃利的便携式研磨器会拥有碾磨石的功能。",
+		buckettweak1            = "便便桶使用默认功能。",
+		buckettweak2            = "便便桶不使用默认功能，可用于挤奶。",
+		retrofit1               = "你的世界已更新了Mod的内容。",
+		retrofit2               = "Mod的岛屿会在服务器初始化期间生成。",
+		retrofit3               = "Mod的物品会在服务器初始化期间生成。",
 	}
 end
 
