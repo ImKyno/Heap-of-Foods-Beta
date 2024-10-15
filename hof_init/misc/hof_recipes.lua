@@ -186,7 +186,7 @@ AddRecipe2("kyno_oil", {Ingredient("corn", 1), Ingredient("seeds", 1), Ingredien
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("kyno_sugar", {Ingredient("kyno_sugartree_petals", 2, ModAtlas)}, TECH.MEALING_ONE,
+AddRecipe2("kyno_sugar", {Ingredient("kyno_sugartree_petals", 1, ModAtlas)}, TECH.MEALING_ONE,
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,		
@@ -551,6 +551,22 @@ AddRecipe2("kyno_sugartree_petals_p", {Ingredient("kyno_sugarfly", 1, ModAtlas)}
 	{"CRAFTING_STATION"}
 )
 
+--[[
+AddRecipe2("kyno_sugarfly_p", {Ingredient("butterfly", 1)}, TECH.LOST,
+	{
+		nounlock 			= true,
+		no_deconstruction   = true,
+		actionstr 			= "SERENITYSHOP",
+		sg_state    		= "give",
+		product				= "kyno_sugarfly",		
+		numtogive 			= 1, 
+		atlas 				= ModAtlas, 
+		image				= "kyno_sugarfly.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+]]--
+
 AddRecipe2("kyno_sugartree_bud_p", {Ingredient("kyno_syrup", 3, ModAtlas)}, TECH.LOST,
 	{
 		nounlock 			= true,
@@ -579,7 +595,7 @@ AddRecipe2("dug_kyno_spotbush_p", {Ingredient("kyno_spotspice_leaf", 3)}, TECH.L
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("dug_kyno_wildwheat_p", {Ingredient("kyno_sap", 3)}, TECH.LOST,
+AddRecipe2("dug_kyno_wildwheat_p", {Ingredient("kyno_wheat", 3)}, TECH.LOST,
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
@@ -696,7 +712,7 @@ if HOF_WARLYMEALGRINDER then
 	{"CRAFTING_STATION"}
 	)
 	
-	AddRecipe2("kyno_sugar_w", {Ingredient("kyno_sugartree_petals", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+	AddRecipe2("kyno_sugar_w", {Ingredient("kyno_sugartree_petals", 1, ModAtlas)}, TECH.FOODPROCESSING_ONE,
 		{
 			nounlock 			= true,
 			no_deconstruction   = true,
