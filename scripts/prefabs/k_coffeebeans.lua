@@ -13,22 +13,6 @@ local prefabs =
 	"spoiled_food",
 }
 
-local HOF_COFFEESPEED = GetModConfigData("HOF_COFFEESPEED", KnownModIndex:GetModActualName("Heap of Foods"))
-
-local function OnEatBeans(inst, eater)
-    if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
-        return
-    elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-        eater.coffeebuff_duration = TUNING.KYNO_COFFEEBUFF_DURATION_SMALL
-        eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
-    else
-        eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
-        eater:DoTaskInTime(TUNING.KYNO_COFFEEBUFF_DURATION_SMALL, function()
-            eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
-        end)
-    end
-end
-
 local function fn()
 	local inst = CreateEntity()
 
@@ -115,9 +99,6 @@ local function fn_cooked()
 	inst.components.edible.hungervalue = TUNING.KYNO_COFFEEBEANS_COOKED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_COFFEEBEANS_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
-	if HOF_COFFEESPEED == 1 then
-		inst.components.edible:SetOnEatenFn(OnEatBeans)
-	end
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)

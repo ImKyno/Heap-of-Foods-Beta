@@ -9,8 +9,8 @@ local cooking           = require("cooking")
 
 require("hof_debugcommands")
 
-local HOF_HUMANMEAT = GetModConfigData("HOF_HUMANMEAT")
-local HOF_KEEPFOOD  = GetModConfigData("HOF_KEEPFOOD")
+local HOF_HUMANMEAT = GetModConfigData("HUMANMEAT")
+local HOF_KEEPFOOD  = GetModConfigData("KEEPFOOD")
 
 -- Favorite Mod Foods.
 AddPrefabPostInit("wilson", function(inst)

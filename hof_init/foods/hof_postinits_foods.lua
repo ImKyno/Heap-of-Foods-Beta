@@ -6,7 +6,7 @@ local ACTIONS         = _G.ACTIONS
 local STRINGS         = _G.STRINGS
 local SpawnPrefab     = _G.SpawnPrefab
 
-local HOF_ALCOHOLICDRINKS = GetModConfigData("HOF_ALCOHOLICDRINKS")
+local HOF_ALCOHOLICDRINKS = GetModConfigData("ALCOHOLICDRINKS")
 
 local spices =
 {

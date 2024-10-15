@@ -106,7 +106,7 @@ AddPrefabPostInit("lordfruitfly", function(inst)
 end)
 
 -- Dragonfly Drops Coffee Plants.
-local DF_COFFEE = GetModConfigData("HOF_COFFEEDROPRATE")
+local DF_COFFEE = GetModConfigData("COFFEEDROPRATE")
 AddPrefabPostInit("dragonfly", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst

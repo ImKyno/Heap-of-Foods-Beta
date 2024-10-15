@@ -1,19 +1,37 @@
 -- Common Dependencies.
-local _G            = GLOBAL
-local require       = _G.require
+local _G               = GLOBAL
+local require          = _G.require
 
 require("hof_constants")
 require("hof_debugcommands")
 require("hof_brewing")
 require("hof_behaviours")
 
--- Mod Languages. I need to make this one better if new translations are added...
-local HOF_LANGUAGE = GetModConfigData("HOF_LANGUAGE")
-modimport("hof_init/strings/"..HOF_LANGUAGE)
-modimport("hof_init/strings/hof_strings_loadingtips")
+-- Mod Strings and Localizations.
+-- If you want to contribute with your localization please head to "scripts/strings/hof_localization.lua" for more information.
+modimport("scripts/strings/hof_strings_loadingtips")
+
+local hof_init_strings = 
+{
+	"hof_strings", 
+	"hof_strings_scrapbook",
+}
+
+for _, v in pairs(hof_init_strings) do
+	require("strings/"..v)
+end
+
+local localization = GetModConfigData("LANGUAGE")
+if localization then
+	modimport("scripts/strings/localization_"..localization.."/hof_strings_loadingtips")
+
+	for _, v in pairs(hof_init_strings) do
+		require("strings/localization_"..localization.."/"..v)
+	end
+end
 
 -- Mod Dependencies.
-local hof_init_misc =
+local hof_init_misc    =
 {
 	"hof_assets",
 	"hof_prefabs",
@@ -27,7 +45,7 @@ local hof_init_misc =
 	"hof_postinits_misc",
 }
 
-local hof_init_world =
+local hof_init_world   =
 {
 	"hof_regrowth",
 	"hof_retrofit",
@@ -39,7 +57,7 @@ local hof_init_world =
 	"hof_postinits_mobs",
 }
 
-local hof_init_foods =
+local hof_init_foods   =
 {
 	"hof_farming",
 	"hof_cooking",
@@ -61,17 +79,16 @@ for _, v in pairs(hof_init_foods) do
 end
 
 -- Mod Options.
-_G.CONFIGS_HOF  =
+_G.CONFIGS_HOF         =
 {
-	ENABLEDMODS = {}
+	ENABLEDMODS        = {}
 }
 
-_G.CONFIGS_HOF.SEASONALFOOD = GetModConfigData("HOF_SEASONALFOOD")
-_G.CONFIGS_HOF.SCRAPBOOK    = GetModConfigData("HOF_SCRAPBOOK")
+_G.CONFIGS_HOF.SEASONALFOOD = GetModConfigData("SEASONALFOOD")
+_G.CONFIGS_HOF.SCRAPBOOK    = GetModConfigData("SCRAPBOOK")
 
 if _G.CONFIGS_HOF.SCRAPBOOK then
 	modimport("hof_init/misc/hof_scrapbook")
-	modimport("hof_init/strings/hof_strings_scrapbook")
 end
 
 -- This belongs to the Accomplishments Mod.

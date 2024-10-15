@@ -12,8 +12,8 @@ local RecipeFilter         = require("recipes_filter")
 local TheArchitectPack     = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
 local NotEnoughTurfs       = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
 
-local HOF_WARLYMEALGRINDER = GetModConfigData("HOF_WARLYMEALGRINDER")
-local HOF_FERTILIZERTWEAK  = GetModConfigData("HOF_FERTILIZERTWEAK")
+local HOF_WARLYMEALGRINDER = GetModConfigData("WARLYMEALGRINDER")
+local HOF_FERTILIZERTWEAK  = GetModConfigData("FERTILIZERTWEAK")
 
 -- For sorting recipe.
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795

@@ -82,20 +82,20 @@ AddComponentPostInit("retrofitforestmap_anr", function(self)
 	local oldonpostinit_forest = self.OnPostInit
 
     function self:OnPostInit(...)
-		if GetModConfigData("HOF_RETROFIT") == 1 then
+		if GetModConfigData("RETROFIT") == 1 then
 			local success = RetrofitIslands()
 			
 			if success then
 				_G.TheWorld.Map:RetrofitNavGrid()
-				_G.ChangeFoodConfigs("HOF_RETROFIT", 0)
+				_G.ChangeFoodConfigs("RETROFIT", 0)
 				self.requiresreset = true
 			end
 			
-		elseif GetModConfigData("HOF_RETROFIT") == 2 then
+		elseif GetModConfigData("RETROFIT") == 2 then
 			local success = RetrofitMermhuts()
 			
 			if success then
-				_G.ChangeFoodConfigs("HOF_RETROFIT", 0)
+				_G.ChangeFoodConfigs("RETROFIT", 0)
 			end
 		end 
 		

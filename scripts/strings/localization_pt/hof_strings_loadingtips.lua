@@ -1,5 +1,5 @@
 -- Common Dependencies.
-local _G 			= GLOBAL
+local _G            = GLOBAL
 local require       = _G.require
 local STRINGS       = _G.STRINGS
 
@@ -12,8 +12,8 @@ local WEIGHT_END    = _G.LOADING_SCREEN_TIP_CATEGORY_WEIGHTS_END
 local HOF_CATEGORY 	= _G.LOADING_SCREEN_TIP_CATEGORIES
 
 -- Our Tips.
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_COFFEE", 			"You can get Coffee Bushes after defeating the Dragonfly.")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_WEEDS",  			"You can plant Weeds using their own products, by giving them to a bird first.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_COFFEE", 			"Você pode conseguir Plantas de Café ao Derrotar a Libélula.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_WEEDS",  			"Você pode Plantar Ervas Daninhas usando seus próprios produtos, dando elas para um passáro antes.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WALRY",  			"Warly has exclusive recipes made just by him.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_JELLYBEANS",      "\"It seems that the Lusty Jellybeans makes my body feels super good!\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_INGREDIENTS",   	"There are new ingredients from the base game available to be used in the Crock Pot. Even the strangest of all...")
@@ -32,7 +32,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_CRABTRAP", 		"\"Those rock crabs seems to avoi
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SAPTREE",			"You can Tap Sugarwood Trees using the Tree Tapping Kit, to make them produce a sweet Sap every Three days.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_RUINEDSAPTREE",	"Careful, Tapped Sugarwood Trees that's overflowing with Sap, and not harvested can spoil. Producing Ruined Sap instead!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_PIGELDERFOODS",	"\"I heard that strange Pig on the pink-ish island, wants some kind of food... Something to do with Caramels or Wobsters.\" -W")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_SALTPOND",		"You can fish a different kind of fish in the Salt Ponds of the Serenity Archipelago.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_SALTPOND",		"You can fish a different kind of fish in the Salt Ponds of the Serenity Archipelago. Give it a try!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SALTRACK", 		"The Salt Rack can be installed on the Salt Pond, to produce Salt Crystals every Four days.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SPOTTYSHRUB",		"Spotty Shrubs can be found all across the Serenity Archipelago. And they can be brought home using a Shovel.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SWEETFLOWER",		"The Sweet Flower can be used in the Crock Pot as a Sweetener option.")
@@ -76,7 +76,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKACOLA2",       "The unique taste of Nuka-Co
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SUGARBOMBS",      "A pack of sugary cereal that holds 100% of the recommended daily amount of sugar, Sugar Bombs have been preserved for 25 years after the Great War. However, this also caused a bit of radiation to slip in for most of them.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_LUNARSOUP",       "\"I fear nothing when that Lunar Soup goes down in my belly!\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SPRINKLER",       "Tired of manually watering your crops? Build yourself a Garden Sprinkler today and say goodbye to manual labor!")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKASHINE",       "Lewis originally created Nukashine so he could afford a warehouse for his Nuka-Cola collection, but its popularity meant that chapter president Judy Lowell and members of the wider Eta Psi fraternity became involved. Judy organized the creation of a speakeasy in the basement of Big Al's Tattoo Parlor, containing a lab and distillery in the back room. A sugar-free version also existed, with the lack of sugar allowing the beverage to be consumed without any risk of blackouts.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKASHINE",       "Lewis originally created Nukashine so he could afford a warehouse for his Nuka-Cola collection, but its popularity meant that chapter president Judy Lowell and members of the wider Eta Psi fraternity became involved.")
 
 -- We want that our custom tips appears more often.
 SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})

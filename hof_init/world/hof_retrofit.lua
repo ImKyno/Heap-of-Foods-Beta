@@ -4,7 +4,7 @@ local OldDoRetrofitting = require("map/retrofit_savedata").DoRetrofitting
 require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, ...)
 	local dirty = false
 
-	if GetModConfigData("HOF_RETROFIT") == 1 and savedata.map ~= nil and savedata.map.prefab == "forest" then
+	if GetModConfigData("RETROFIT") == 1 and savedata.map ~= nil and savedata.map.prefab == "forest" then
 		if savedata.ents ~= nil and savedata.ents.kyno_serenityisland_shop ~= nil then
 			print("Retrofitting for Heap of Foods Mod - It seems the Serenity Archipelago already exists.")
 		else

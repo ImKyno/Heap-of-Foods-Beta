@@ -11,7 +11,7 @@ local OldPollinate = Pollinator.Pollinate
 function Pollinator:Pollinate(flower, ...)
 	if self.inst.prefab == "butterfly" and self.inst:GetTimeAlive() < 1 then
 		if flower.prefab == "kyno_sugartree_flower" then
-			-- if IsSerenityBiome(flower) then
+			if IsSerenityBiome(flower) then
 				local x, y, z = flower.Transform:GetWorldPosition()
 				local sugarfly = SpawnPrefab("kyno_sugarfly")
 					
@@ -23,8 +23,8 @@ function Pollinator:Pollinate(flower, ...)
 				self.inst:Hide()
 				self.inst:DoTaskInTime(0, self.inst.Remove)
 				
-				print("FUCK YOU")
-			-- end
+				print("Replaced Butterfly into Sugarfly")
+			end
 		end
 	end
 		
