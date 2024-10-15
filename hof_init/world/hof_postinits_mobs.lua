@@ -362,14 +362,17 @@ AddPrefabPostInit("crabking_claw", function(inst) ReplaceLoot(inst.prefab, "meat
 AddPrefabPostInit("crabking_mob", function(inst) ReplaceLoot(inst.prefab, "meat", "kyno_crabmeat") end)
 AddPrefabPostInit("crabking_mob_knight", function(inst) ReplaceLoot(inst.prefab, "meat", "kyno_crabmeat") end)
 
--- New birds will spawn when landing on these turfs.
-AddClassPostConstruct("components/birdspawner", function(self) 
-	local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
-	
-	BIRD_TYPES[WORLD_TILES.QUAGMIRE_PARKFIELD] = {"quagmire_pigeon"}
-	BIRD_TYPES[WORLD_TILES.QUAGMIRE_CITYSTONE] = {"quagmire_pigeon"}
-	
-	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = {"toucan"}
-	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = {"toucan"}
-	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = {"kingfisher"}
-end)
+-- Pollinators will also target Sugar Flowers as well.
+local pollinators = 
+{
+	"bee",
+	"butterfly",
+}
+
+local function PollinatorPostIint(inst)
+	inst:AddTag("sugarflowerpollinator")
+end
+
+for k, v in pairs(pollinators) do
+	AddPrefabPostInit(v, PollinatorPostIint)
+end

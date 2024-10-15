@@ -107,7 +107,7 @@ local function fn()
     inst:AddTag("cattoyairborne")
     inst:AddTag("wildfireprotected")
     inst:AddTag("deployedplant")
-    inst:AddTag("pollinator")
+	inst:AddTag("sugarflowerpollinator")
 	inst:AddTag("_named")
 	
 	MakeFeedableSmallLivestockPristine(inst)

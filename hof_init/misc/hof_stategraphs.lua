@@ -341,30 +341,30 @@ end))
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.INSTALLCOOKWARE, function(inst, action)
 	local target = action.target or action.invobject
 	
-	if target.components.cookwareinstaller and target:HasTag("cookware_installable") then
+	if target:HasTag("cookware_installable") then
 		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
 	end
 		
-	if target.components.cookwareinstaller and target:HasTag("cookware_post_installable") then
+	if target:HasTag("cookware_post_installable") then
 		return "give"
 	end
 	
-	if target.components.cookwareinstaller and target:HasTag("cookware_other_installable") then
+	if target:HasTag("cookware_other_installable") then
 		return "give"
 	end
 end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.INSTALLCOOKWARE, function(inst, action)
 	local target = action.target or action.invobject
 	
-	if target.components.cookwareinstaller and target:HasTag("cookware_installable") then
+	if target:HasTag("cookware_installable") then
 		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
 	end
 		
-	if target.components.cookwareinstaller and target:HasTag("cookware_post_installable") then
+	if target:HasTag("cookware_post_installable") then
 		return "give"
 	end
 	
-	if target.components.cookwareinstaller and target:HasTag("cookware_other_installable") then
+	if target:HasTag("cookware_other_installable") then
 		return "give"
 	end
 end))

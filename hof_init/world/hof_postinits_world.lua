@@ -1,11 +1,11 @@
 -- Common Dependencies.
-local _G 				= GLOBAL
-local require 			= _G.require
-local resolvefilepath 	= _G.resolvefilepath
-local ACTIONS 			= _G.ACTIONS
-local STRINGS			= _G.STRINGS
-local SpawnPrefab		= _G.SpawnPrefab
-local UpvalueHacker     = require("hof_upvaluehacker")
+local _G              = GLOBAL
+local require         = _G.require
+local resolvefilepath = _G.resolvefilepath
+local ACTIONS         = _G.ACTIONS
+local STRINGS         = _G.STRINGS
+local SpawnPrefab     = _G.SpawnPrefab
+local UpvalueHacker   = require("hof_upvaluehacker")
 
 require("hof_mainfunctions")
 
@@ -458,9 +458,28 @@ local function FirePitCookwarePostinit(inst)
 		local firepit = GetFirepit(inst)
 		
         if firepit then
+			firepit:AddTag("firepit_has_hanger")
 			firepit:AddTag("firepit_with_cookware")
 			firepit.components.cookwareinstaller.enabled = false
+			firepit.hascookware = true
 			firepit.hashanger = true
+		end
+	end
+	
+	local function RemoveCookware(inst)
+		local firepit = GetFirepit(inst)
+		
+		if firepit then
+			firepit:RemoveTag("firepit_has_hanger")
+			firepit:RemoveTag("firepit_has_grill")
+			firepit:RemoveTag("firepit_has_oven")
+			firepit:RemoveTag("firepit_with_cookware")
+			firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
+			firepit.components.cookwareinstaller.enabled = true
+			firepit.hascookware = false
+			firepit.hashanger = false
+			firepit.hasgrill = false
+			firepit.hasoven = false
 		end
 	end
 
@@ -472,6 +491,7 @@ local function FirePitCookwarePostinit(inst)
 			firepit:AddTag("firepit_with_cookware")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 			firepit.components.cookwareinstaller.enabled = false
+			firepit.hascookware = true
 			firepit.hasgrill = true
         end
     end
@@ -484,6 +504,7 @@ local function FirePitCookwarePostinit(inst)
 			firepit:AddTag("firepit_with_cookware")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 			firepit.components.cookwareinstaller.enabled = false
+			firepit.hascookware = true
 			firepit.hasoven = true
         end
     end
@@ -534,10 +555,10 @@ local function FirePitCookwarePostinit(inst)
 		local firepit = GetFirepit(inst)
 
 		data.queued_charcoal = inst.queued_charcoal or nil
+		data.hashanger = firepit.hashanger or nil
 		data.hasgrill = firepit.hasgrill or nil
 		data.hasoven = firepit.hasoven or nil
-		data.hashanger = firepit.hashanger or nil
-		data.hascookware = firepit.components.cookwareinstaller.enabled == false
+		data.hascookware = firepit.hascookware or nil
 	end
 
 	local function OnLoad(inst, data)
@@ -548,12 +569,16 @@ local function FirePitCookwarePostinit(inst)
 		end
 
 		if data ~= nil and data.hascookware then
+			firepit:AddTag("firepit_with_cookware")
 			firepit.components.cookwareinstaller.enabled = false
+			firepit.hascookware = true
 		end
 
 		if data ~= nil and data.hashanger then
+			firepit:AddTag("firepit_has_hanger")
 			firepit:AddTag("firepit_with_cookware")
 			firepit.components.cookwareinstaller.enabled = false
+			firepit.hascookware = true
 			firepit.hashanger = true
 		end
 
@@ -562,6 +587,7 @@ local function FirePitCookwarePostinit(inst)
 			firepit:AddTag("firepit_with_cookware")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 			firepit.components.cookwareinstaller.enabled = false
+			firepit.hascookware = true
 			firepit.hasgrill = true
 		end
 
@@ -570,7 +596,25 @@ local function FirePitCookwarePostinit(inst)
 			firepit:AddTag("firepit_with_cookware")
             firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
 			firepit.components.cookwareinstaller.enabled = false
+			firepit.hascookware = true
 			firepit.hasoven = true
+		end
+		
+		if data ~= nil and data.hascookware == false then
+			local firepit = GetFirepit(inst)
+		
+			if firepit then
+				firepit:RemoveTag("firepit_has_hanger")
+				firepit:RemoveTag("firepit_has_grill")
+				firepit:RemoveTag("firepit_has_oven")
+				firepit:RemoveTag("firepit_with_cookware")
+				firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
+				firepit.components.cookwareinstaller.enabled = true
+				firepit.hascookware = false
+				firepit.hashanger = false
+				firepit.hasgrill = false
+				firepit.hasoven = false
+			end
 		end
 	end
 
@@ -798,3 +842,15 @@ local NOTAGS_FIRESUPPRESSOR = UpvalueHacker.GetUpvalue(FireDetector.ActivateEmer
 for k, v in pairs(FIRESUPRESSOR_IGNORE_TAGS) do
     table.insert(NOTAGS_FIRESUPPRESSOR, v)
 end
+
+-- New birds will spawn when landing on these turfs.
+AddClassPostConstruct("components/birdspawner", function(self)
+	local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
+
+	BIRD_TYPES[WORLD_TILES.QUAGMIRE_PARKFIELD] = {"quagmire_pigeon"}
+	BIRD_TYPES[WORLD_TILES.QUAGMIRE_CITYSTONE] = {"quagmire_pigeon"}
+
+	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = {"toucan"}
+	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = {"toucan"}
+	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = {"kingfisher"}
+end)

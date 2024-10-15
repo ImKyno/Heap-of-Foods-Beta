@@ -5,6 +5,7 @@ local require       = _G.require
 require("hof_constants")
 require("hof_debugcommands")
 require("hof_brewing")
+require("hof_behaviours")
 
 -- Mod Languages. I need to make this one better if new translations are added...
 local HOF_LANGUAGE = GetModConfigData("HOF_LANGUAGE")
@@ -31,6 +32,7 @@ local hof_init_world =
 	"hof_regrowth",
 	"hof_retrofit",
 	"hof_retrofit_component",
+	"hof_pollinator_component",
 	"hof_worldgen",
 	"hof_messagebottletreasures",
 	"hof_postinits_world",

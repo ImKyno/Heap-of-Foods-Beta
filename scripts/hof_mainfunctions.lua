@@ -24,3 +24,21 @@ function MakeNoGrowInSpring(inst)
     inst.components.pickable:WatchWorldState("isspring", TogglePickable)
     TogglePickable(inst.components.pickable, TheWorld.state.isspring)
 end
+
+function IsSerenityBiome(inst, cherryruins)
+	if inst ~= nil and inst:IsValid() and TheWorld.Map:IsVisualGroundAtPoint(inst.Transform:GetWorldPosition()) then
+		local node = TheWorld.Map:FindNodeAtPoint(inst.Transform:GetWorldPosition())
+		return node and node.tags and table.contains(node.tags, "serenityarea")
+	end
+	
+	return false
+end
+
+function IsSerenityBiomeAtPoint(x, y, z, cherryruins)
+	if TheWorld.Map:IsVisualGroundAtPoint(x, y, z) then
+		local node = TheWorld.Map:FindNodeAtPoint(x, y, z)
+		return node and node.tags and table.contains(node.tags, "serenityarea")
+	end
+	
+	return false
+end
