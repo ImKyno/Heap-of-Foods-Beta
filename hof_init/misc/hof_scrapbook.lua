@@ -1088,6 +1088,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		deps           = {"kyno_turnip_oversized", "fruitfly", "spoiled_food"},
 	},
 	
+	--[[
 	kyno_foodsack      =
 	{
 		name           = "kyno_foodsack",
@@ -1101,6 +1102,21 @@ local HOF_SCRAPBOOK_ITEMS =
 		anim           = "anim",
 		deps           = {"malbatross", "malbatross_feather", "rope", "ice"},
 		specialinfo    = "FOODSACK",
+	},
+	]]--
+	
+	kyno_worm_bone     =
+	{
+		name           = "kyno_worm_bone",
+		type           = "item",
+		tex            = "kyno_worm_bone.tex",
+		prefab         = "kyno_worm_bone",
+		stacksize      = 20,
+		workable       = "HAMMER",
+		bank           = "snake_bone",
+		build          = "snake_bone",
+		anim           = "idle",
+		deps           = {"boneshard", "worm_boss"},
 	},
 }
 
@@ -3867,7 +3883,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
         prefab         = "snakebonesoup",
 		healthvalue    = 40,
 		hungervalue    = 80,
-		sanityvalue    = 10,
+		sanityvalue    = 20,
         perishable     = 7200,
         foodtype       = "MEAT",
 		burnable       = true,
@@ -3881,6 +3897,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -60,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_BONESOUP",
 	},
 	
 	steamedhamsandwich =
@@ -6966,6 +6983,52 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -100,
 		deps           = preparedfood_deps,
 	},
+	
+	smores             =
+	{
+		name           = "smores",
+		type           = "food",
+		tex            = "smores.tex",
+		prefab         = "smores",
+		healthvalue    = 15,
+		hungervalue    = 65,
+		sanity         = 65,
+		perishable     = 7200,
+		foodtype       = "GOODIES",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "smores",
+		build          = "smores",
+		overridesymbol = {"swap_food", "swap_food", "smores"},
+		anim           = "idle",
+		animoffsety    = 10,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -70,
+		deps           = preparedfood_deps,
+	},
+	
+	antslog            =
+	{
+		name           = "antslog",
+		type           = "food",
+		tex            = "antslog.tex",
+		prefab         = "antslog",
+		healthvalue    = 15,
+		hungervalue    = 25,
+		sanityvalue    = 15,
+		perishable     = 2880,
+		foodtype       = "VEGGIE",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "antslog",
+		build          = "antslog",
+		overridesymbol = {"swap_food", "swap_food", "antslog"},
+		anim           = "idle",
+		animoffsety    = 10,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -70,
+		deps           = preparedfood_deps,
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =
@@ -9173,6 +9236,54 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
 		specialinfo    = "FOODEFFECTS_ALCOHOL2",
+	},
+	
+	nukashine          =
+	{
+		name           = "nukashine",
+		type           = "food",
+		subcat         = "artisangoods",
+		tex            = "nukashine.tex",
+		prefab         = "nukashine",
+		healthvalue    = 100,
+		hungervalue    = 150,
+		sanityvalue    = -100,
+		perishable     = 19200,
+		foodtype       = "GOODIES",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "nukashine",
+		build          = "nukashine",
+		overridesymbol = {"swap_food", "swap_food", "nukashine"},
+		anim           = "idle",
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -50,
+		deps           = {"kyno_woodenkeg", "nukashine_sugarfree", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_NUKASHINE",
+	},
+	
+	nukashine_sugarfree =
+	{
+		name           = "nukashine_sugarfree",
+		speechname     = "nukashine",
+		type           = "food",
+		subcat         = "artisangoods",
+		tex            = "nukashine.tex",
+		prefab         = "nukashine_sugarfree",
+		healthvalue    = 100,
+		hungervalue    = 150,
+		sanityvalue    = -100,
+		foodtype       = "GOODIES",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "nukashine",
+		build          = "nukashine",
+		overridesymbol = {"swap_food", "swap_food", "nukashine"},
+		anim           = "idle",
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -50,
+		deps           = {"sunkenchest", "nukashine"},
+		specialinfo    = "FOODEFFECTS_NUKASHINE2",
 	},
 }
 

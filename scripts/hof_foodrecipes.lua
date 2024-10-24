@@ -247,18 +247,23 @@ local kyno_foods =
 	
 	snakebonesoup = 
 	{
-		test = function(cooker, names, tags) return (names.boneshard and names.boneshard >= 2) and (tags.meat and tags.meat >= 2) 
+		test = function(cooker, names, tags) return (names.kyno_worm_bone and names.kyno_worm_bone >= 2) and (tags.meat and tags.meat >= 2) 
 		and not (names.kyno_humanmeat or names.kyno_humanmeat_cooked or names.kyno_humanmeat_dried) end,
 		priority = 20,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,
 		health = 40,
 		hunger = 80,
-		sanity = 10,
+		sanity = 20,
 		cooktime = 1,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BONESOUP,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"boneshard", 2}, {"meat", 2}}},
+		card_def = {ingredients = {{"kyno_worm_bone", 2}, {"meat", 2}}},
+		prefabs = { "kyno_wormbuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_wormbuff", "kyno_wormbuff")
+		end,
 	},
 	
 	steamedhamsandwich = 
@@ -2526,6 +2531,54 @@ local kyno_foods =
 			end
         end,
 	},
+	
+	smores =
+	{
+		test = function(cooker, names, tags) return (names.kyno_sugar and names.kyno_sugar  >= 2) and names.kyno_flour and tags.chocolate end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 15,
+		hunger = 65,
+		sanity = 65,
+		cooktime = 2,
+		potlevel = "low",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_sugar", 2}, {"chocolate_black", 1}}},
+	},
+	
+	antslog =
+	{
+		test = function(cooker, names, tags) return names.livinglog and (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2) and
+		(names.fig or names.fig_cooked) end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_FAST,
+		health = 15,
+		hunger = 25,
+		sanity = 15,
+		cooktime = 1.1,
+		potlevel = "low",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"livinglog", 1}, {"fig", 1}, {"kyno_twiggynuts", 2}}},
+	},
+	
+	--[[
+	strawberrygrinder =
+	{
+		test = function(cooker, names, tags) return ((names.kyno_strawberry or 0) + (names.kyno_strawberry_cooked or 0) >= 2) and 
+		names.kyno_flour and tags.meat and not tags.fish end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_MED,
+		health = 40,
+		hunger = 62.5
+		sanity = 0,
+		cooktime = 1.5,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_strawberry", 2}, {"kyno_flour", 1}, {"meat", 1}}},
+	},
+	]]--
 }
 
 for k, recipe in pairs(kyno_foods) do

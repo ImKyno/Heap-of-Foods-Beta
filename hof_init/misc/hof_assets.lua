@@ -98,6 +98,8 @@ AddMinimapAtlas("images/minimapimages/hof_parsnipminimap.xml")
 -- Mod Icons.
 local HOF_ICONS =
 {
+	"algae_soup",
+	"antslog",
 	"banana_pudding",
 	"beard_monster",
 	"beer",
@@ -473,6 +475,7 @@ local HOF_ICONS =
 	"kyno_wheat_cooked",
 	"kyno_white_cap",
 	"kyno_white_cap_cooked",
+	"kyno_worm_bone",
 	"littlebread",
 	"livingsandwich",
 	"longpigmeal",
@@ -493,6 +496,7 @@ local HOF_ICONS =
 	"nettlelosange",
 	"nukacola",
 	"nukacola_quantum",
+	"nukashine",
 	"omurice",
 	"onigiris",
 	"onionrings",
@@ -555,10 +559,12 @@ local HOF_ICONS =
 	"sea_pudding",
 	"sharkfinsoup",
 	"slaw",
+	"smores",
 	"snakebonesoup",
 	"soulstew",
 	"spidercake",
 	"steamedhamsandwich",
+	-- "strawberrygrinder",
 	"succulent_picked",
 	"sugarbombs",
 	"sweetpotatosouffle",

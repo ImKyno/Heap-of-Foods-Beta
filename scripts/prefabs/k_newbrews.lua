@@ -217,9 +217,9 @@ local function MakePreparedBrew(data)
 		
 		if data.nightvision ~= nil then
 			inst.PlayBeatingSound = NightVision_PlayBeatingSound
-	
 			inst.OnEntityWake = NightVision_OnEntityWake
 			inst.OnEntitySleep = NightVision_OnEntitySleep
+			
 			inst:ListenForEvent("exitlimbo", inst.OnEntityWake)
 			inst:ListenForEvent("enterlimbo", inst.OnEntitySleep)
 		end

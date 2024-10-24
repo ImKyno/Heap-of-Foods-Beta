@@ -77,6 +77,8 @@ AddBrewingValues({"kyno_salt"},                 {salt       = 1})
 AddBrewingValues({"kyno_sugar"},                {sweetener  = 1,   sugar         = 1})
 AddBrewingValues({"kyno_rice"},                 {veggie     = 1})
 AddBrewingValues({"kyno_pineapple_halved"},		{fruit      = 1,   pineapple     = 1})
+AddBrewingValues({"nukacola"},                  {soda       = 1})
+AddBrewingValues({"nukacola_quantum"},          {soda       = 1,   quantum       = 1})
 
 -- Import the Beverages.
 local brewer_jar   = {"kyno_preservesjar"}

@@ -17,10 +17,10 @@ for treasureprefab, weighted_lists in pairs(weighted_treasure_contents) do
                         }
                     },
         traveler =  {
-                        guaranteed_loot = {},
+                        guaranteed_loot = { nukashine_sugarfree = 1 },
                         randomly_selected_loot =
                         {
-                            { kyno_cokecan = .5, kyno_energycan = .5 },
+                            { kyno_cokecan = .50, kyno_energycan = .50 },
                             { kyno_brewingrecipecard = 1 }
                         }
                     },
@@ -28,7 +28,7 @@ for treasureprefab, weighted_lists in pairs(weighted_treasure_contents) do
                         guaranteed_loot = { kyno_tunacan = 1 },
                         randomly_selected_loot =
                         {
-                            { kyno_cokecan = .5, kyno_energycan = .5 },
+                            { kyno_cokecan = .50, kyno_energycan = .50 },
                             { kyno_brewingrecipecard = 1 }
                         }
                     },

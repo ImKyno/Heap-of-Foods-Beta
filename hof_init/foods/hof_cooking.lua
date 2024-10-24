@@ -106,6 +106,7 @@ AddIngredientValues({"kyno_wheat"},             {seeds      = 1},               
 AddIngredientValues({"kyno_rice"},              {veggie     = 0.5, seeds      = 0.5},        true)
 AddIngredientValues({"kyno_pineapple_halved"},  {fruit      = 1})
 AddIngredientValues({"kyno_pineapple_cooked"},  {fruit      = 1})
+AddIngredientValues({"kyno_worm_bone"},         {inedible   = 1})
 
 -- Import the Foods.
 local cookpots         = 

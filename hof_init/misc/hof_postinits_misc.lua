@@ -208,7 +208,7 @@ AddPrefabPostInit("walter", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("gorge_hamburger",    TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("smores",             TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("mayonnaise_chicken", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)

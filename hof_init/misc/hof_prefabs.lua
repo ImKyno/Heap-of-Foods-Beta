@@ -3,6 +3,7 @@ PrefabFiles =
 {
 
 	"hermitcrab", -- I'll be using this until I find a better and clean way to do the things.
+	"worm_boss",
 	
 	"k_antchest",
 	"k_banana",
@@ -46,11 +47,12 @@ PrefabFiles =
 	"k_foodbuff_haste",
 	"k_foodbuff_hunger",
 	"k_foodbuff_insanity",
+	"k_foodbuff_mobs",
 	"k_foodbuff_nightvision",
-	"k_foodbuff_pirate",
+	"k_foodbuff_nukashine",
 	"k_foodbuff_sanity",
 	"k_foodbuff_strength",
-	"k_foodbuff_super",	
+	"k_foodbuff_super",
 	"k_foodsack",
 	"k_garden_sprinkler",
 	"k_humanmeat",
@@ -84,6 +86,7 @@ PrefabFiles =
 	"k_newingredients",
 	"k_newveggies",
 	"k_newweeds",
+	"k_nukashine_sugarfree",
 	"k_ocean_wreck",
 	"k_pineapple",
 	"k_pineapplebush",
@@ -119,5 +122,6 @@ PrefabFiles =
 	"k_waterycress",
 	"k_weedsea",
 	"k_wildwheat",
+	"k_worm_bone",
 	-- "k_waxed_plants",
 }

@@ -1,10 +1,10 @@
 -- Common Dependencies.
-local _G 				= GLOBAL
-local require 			= _G.require
-local resolvefilepath 	= _G.resolvefilepath
-local ACTIONS 			= _G.ACTIONS
-local STRINGS			= _G.STRINGS
-local SpawnPrefab		= _G.SpawnPrefab
+local _G              = GLOBAL
+local require         = _G.require
+local resolvefilepath = _G.resolvefilepath
+local ACTIONS         = _G.ACTIONS
+local STRINGS         = _G.STRINGS
+local SpawnPrefab     = _G.SpawnPrefab
 
 require("hof_mainfunctions")
 require("hof_upvaluehacker")
