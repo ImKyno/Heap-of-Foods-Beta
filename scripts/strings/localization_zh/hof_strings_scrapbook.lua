@@ -57,7 +57,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WURTFOOD = "吃这种食物会给沃�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PLAYERMONSTER = "韦伯可以吃这种食物而不会受到任何惩罚\n吃这种食物会给沃特带来额外的好处。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPIDERCAKE = "韦伯可以吃这种食物而不会受到任何惩罚。\n\n饥荒联机版x咩咩启示录 - 联动2023."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUGARBOMBS = "甜麦炮弹是含糖量达到每日推荐量的一种麦片，在第一次大战之后保存了25年。不过，这也导致大部分甜麦炮弹受到了辐射。"
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE = "Nukashine是由Vault-Tec大学Eta Psi兄弟会的路易斯于2076年 11 月创造的。[1] 这种烈酒本身效果惊人，会导致昏厥、严重宿醉，并有可能致命，Pi Mu兄弟会的同伴在他们的 \"驱逐派对\"上就发现了这一点。\n\n此外，还有一种无糖版本，由于不含糖，饮用这种饮料不会有停电的危险。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE = "Nukashine是由Vault-Tec大学Eta Psi兄弟会的路易斯于2076年 11 月创造的。 这种烈酒本身效果惊人，会导致昏厥、严重宿醉，并有可能致命，Pi Mu兄弟会的同伴在他们的 \"驱逐派对\"上就发现了这一点。\n\n此外，还有一种无糖版本，由于不含糖，饮用这种饮料不会有停电的危险。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE2 = "现在没有任何混乱风险！尽情狂欢吧！"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BONESOUP = "在一定时间内提高对虫子的伤害。"
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "在烹饪锅里放一小撮盐，食物的变质时间就会缩短30%。再也不用担心吃到变质的菜肴了！"

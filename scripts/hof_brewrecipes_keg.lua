@@ -1006,8 +1006,10 @@ local kyno_foods_keg =
 		prefabs = { "kyno_nukashinebuff" },
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater.SoundEmitter ~= nil then
+				eater.SoundEmitter:PlaySound("hof_sounds/common/nukashine/open")
 				eater.SoundEmitter:PlaySound("hof_sounds/common/nukashine/drink")
 			else
+				inst.SoundEmitter:PlaySound("hof_sounds/common/nukashine/open")
 				inst.SoundEmitter:PlaySound("hof_sounds/common/nukashine/drink")
 			end
 		

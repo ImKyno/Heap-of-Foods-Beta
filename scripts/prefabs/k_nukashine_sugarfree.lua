@@ -53,8 +53,10 @@ end
 
 local function OnDrink(inst, eater)
 	if eater ~= nil and eater.SoundEmitter ~= nil then
+		eater.SoundEmitter:PlaySound("hof_sounds/common/nukashine/open")
 		eater.SoundEmitter:PlaySound("hof_sounds/common/nukashine/drink")
 	else
+		inst.SoundEmitter:PlaySound("hof_sounds/common/nukashine/open")
 		inst.SoundEmitter:PlaySound("hof_sounds/common/nukashine/drink")
 	end
 

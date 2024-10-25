@@ -166,9 +166,9 @@ local function OnAttached(inst, target)
 	
 	-- Play a nice and distant jukebox melody...
 	if target.SoundEmitter ~= nil then
-		target.SoundEmitter:PlaySound("hof_sounds/common/nukashine/jukebox", "nukashine_jukebox", 0.5)
+		target.SoundEmitter:PlaySound("hof_sounds/music/jukebox", "nukashine_jukebox")
 	else
-		inst.SoundEmitter:PlaySound("hof_sounds/common/nukashine/jukebox", "nukashine_jukebox", 0.5)
+		inst.SoundEmitter:PlaySound("hof_sounds/music/jukebox", "nukashine_jukebox")
 	end
 
 	if target.components.playervision ~= nil then
