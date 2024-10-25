@@ -303,7 +303,7 @@ local function fn()
 
     inst:AddTag("CLASSIFIED")
 
-    inst._enabled = net_bool(inst.GUID, "kyno_nightvisionbuff._enabled", "enableddirty")
+    inst._enabled = net_bool(inst.GUID, "kyno_nukashinebuff._enabled", "enableddirty")
 
     inst.entity:SetPristine()
 
@@ -331,4 +331,171 @@ local function fn()
     return inst
 end
 
-return Prefab("kyno_nukashinebuff", fn)
+------------------------------------------------------------------------------------
+-- SUGAR-FREE BUFF
+------------------------------------------------------------------------------------
+local function OnAttachedSugarFree(inst, target)
+    inst.entity:SetParent(target.entity)
+    inst.Transform:SetPosition(0, 0, 0) 
+	
+    inst:ListenForEvent("death", function()
+        inst.components.debuff:Stop()
+    end, target)
+	
+	-- Play a nice and distant jukebox melody...
+	if target.SoundEmitter ~= nil then
+		target.SoundEmitter:PlaySound("hof_sounds/music/jukebox", "nukashine_jukebox")
+	else
+		inst.SoundEmitter:PlaySound("hof_sounds/music/jukebox", "nukashine_jukebox")
+	end
+
+	if target.components.playervision ~= nil then
+        target.components.playervision:PushForcedNightVision(inst, 1, ANCIENTFRUIT_NIGHTVISION_COLOURCUBES, true)
+        inst._enabled2:set(true)
+    end
+	
+	if target.components.sanity ~= nil then
+        target.components.sanity.externalmodifiers:SetModifier(inst, -TUNING.DAPPERNESS_TINY)
+    end
+	
+	-- From Strength Buff.
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_START"))
+	end
+	
+	if target.components.combat ~= nil and target:HasTag("player") then
+		target.components.combat.externaldamagemultipliers:SetModifier(inst, TUNING.KYNO_ALCOHOL_STRENGTH_MEDSMALL, "kyno_nukashinesugarfreebuff")
+	end
+end
+
+local function OnDetachedSugarFree(inst, target)
+	if target ~= nil and target:IsValid() then
+		if target.SoundEmitter ~= nil then
+			target.SoundEmitter:KillSound("nukashine_jukebox")
+		else
+			inst.SoundEmitter:KillSound("nukashine_jukebox")
+		end
+	
+        if target.components.playervision ~= nil then
+            target.components.playervision:PopForcedNightVision(inst)
+            inst._enabled2:set(false)
+        end
+
+        if target.components.sanity ~= nil then
+            target.components.sanity.externalmodifiers:RemoveModifier(inst)
+        end
+		
+		-- From Strength Buff.
+		if target.components.talker and target:HasTag("player") then 
+			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_END"))
+		end
+		
+		if target.components.combat ~= nil and target:HasTag("player") then
+			target.components.combat.externaldamagemultipliers:RemoveModifier(inst, "kyno_nukashinesugarfreebuff")
+		end
+    end
+
+    inst:DoTaskInTime(10 * FRAMES, inst.Remove)
+end
+
+local function OnExpireSugarFree(inst)
+    if inst.components.debuff ~= nil then
+        inst.components.debuff:Stop()
+    end
+end
+
+local function OnExtendedSugarFree(inst)
+    if inst.task ~= nil then
+        inst.task:Cancel()
+        inst.task = nil
+    end
+
+    inst.task = inst:DoTaskInTime(TUNING.KYNO_NUKASHINE_BLACKOUT, OnExpireSugarFree)
+end
+
+local function OnSaveSugarFree(inst, data)
+    if inst.task ~= nil then
+        data.remaining = GetTaskRemaining(inst.task)
+    end
+end
+
+local function OnLoadSugarFree(inst, data)
+    if data == nil then
+        return
+    end
+
+    if data.remaining then
+        if inst.task ~= nil then
+            inst.task:Cancel()
+            inst.task = nil
+        end
+
+        inst.task = inst:DoTaskInTime(data.remaining, OnExpireSugarFree)
+    end
+end
+
+local function OnLongUpdateSugarFree(inst, dt)
+    if inst.task == nil then
+        return
+    end
+
+    local remaining = GetTaskRemaining(inst.task) - dt
+
+    inst.task:Cancel()
+
+    if remaining > 0 then
+        inst.task = inst:DoTaskInTime(remaining, OnExpireSugarFree)
+    else
+        OnExpireSugarFree(inst)
+    end
+end
+
+local function OnEnabledDirtySugarFree(inst)
+    if ThePlayer ~= nil and inst.entity:GetParent() == ThePlayer and ThePlayer.components.playervision ~= nil then
+        if inst._enabled2:value() then
+            ThePlayer.components.playervision:PushForcedNightVision(inst, 1, ANCIENTFRUIT_NIGHTVISION_COLOURCUBES, true)
+        else
+            ThePlayer.components.playervision:PopForcedNightVision(inst)
+        end
+    end
+end
+
+local function sugarfreefn()
+    local inst = CreateEntity()
+	
+	inst.entity:AddTransform()
+	inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
+
+    inst:AddTag("CLASSIFIED")
+
+    inst._enabled2 = net_bool(inst.GUID, "kyno_nukashinesugarfreebuff._enabled", "enableddirty")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        inst:ListenForEvent("enableddirty", OnEnabledDirtySugarFree)
+
+        return inst
+    end
+
+    inst.entity:Hide()
+    inst.persists = false
+
+    inst:AddComponent("debuff")
+    inst.components.debuff:SetAttachedFn(OnAttachedSugarFree)
+    inst.components.debuff:SetDetachedFn(OnDetachedSugarFree)
+    inst.components.debuff:SetExtendedFn(OnExtendedSugarFree)
+    inst.components.debuff.keepondespawn = true
+
+    OnExtendedSugarFree(inst)
+
+    inst.OnSave = OnSaveSugarFree
+    inst.OnLoad = OnLoadSugarFree
+    inst.OnLongUpdate = OnLongUpdateSugarFree
+
+    return inst
+end
+
+return Prefab("kyno_nukashinebuff", fn, assets),
+Prefab("kyno_nukashinesugarfreebuff", sugarfreefn, assets)

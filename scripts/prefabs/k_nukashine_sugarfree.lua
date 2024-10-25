@@ -12,8 +12,7 @@ local assets =
 
 local prefabs = 
 {
-	"kyno_nukashinebuff",
-	
+	"kyno_nukashinesugarfreebuff",
 	"spoiled_food",
 }
 
@@ -61,7 +60,7 @@ local function OnDrink(inst, eater)
 	end
 
     if eater.components.playervision ~= nil and eater.components.combat ~= nil then
-        eater:AddDebuff("kyno_nukashinebuff", "kyno_nukashinebuff")
+        eater:AddDebuff("kyno_nukashinesugarfreebuff", "kyno_nukashinesugarfreebuff")
     end
 end
 
@@ -100,7 +99,7 @@ local function fn()
 
     inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "nukashine"
+	inst.components.inventoryitem.imagename = "nukashine_sugarfree"
 	
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
