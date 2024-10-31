@@ -344,6 +344,138 @@ local kyno_foods_seasonal =
 		tags = {"xmas"},
 		card_def = {ingredients = {{"meat", 1}, {"kyno_flour", 1}, {"kyno_bacon", 1}, {"potato", 1}}},
 	},
+	
+	-- Hallowed Nights Foods.
+	--[[ -- Disabled this one because the sprite needs to be improved first.
+	spooky_brain_noodles =
+	{
+		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_spotspice and tags.dairy and tags.meat 
+		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 10,
+		hunger = 32.5,
+		sanity = 50,
+		cooktime = 1.2,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"halloween"},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_spotspice", 1}, {"goatmilk", 1}, {"meat", 1}}},
+	},
+	]]--
+	
+	spooky_burgerzilla =
+	{
+		test = function(cooker, names, tags) return tags.bread and (names.monstermeat or names.monstermeat_cooked) and
+		(names.onion or names.onion_cooked) and (names.kyno_cucumber or names.kyno_cucumber_cooked) and not tags.foliage and not tags.bacon 
+		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FASTISH,
+		health = -20,
+		hunger = 80,
+		sanity = -20,
+		cooktime = 1.5,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"halloween", "monstermeat"},
+		card_def = {ingredients = {{"gorge_bread", 1}, {"monstermeat", 1}, {"onion", 1}, {"kyno_cucumber", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(20)
+				eater.components.sanity:DoDelta(20)
+			end
+		end,
+	},
+	
+	spooky_jellybeans =
+	{
+		test = function(cooker, names, tags) return names.royal_jelly and tags.sugar and 
+		(names.nightmarefuel and names.nightmarefuel >= 2) and not tags.monster 
+		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
+		priority = 35,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = nil,
+		health = 15,
+		hunger = 15,
+		sanity = 0,
+		cooktime = 2.5,
+		stacksize = 3,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DESANITY,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"halloween", "honeyed"},
+		card_def = {ingredients = {{"royal_jelly", 1}, {"kyno_sugar", 1}, {"nightmarefuel", 2}}},
+		prefabs = { "kyno_insanitybuff" },
+        oneatenfn = function(inst, eater)
+            eater:AddDebuff("kyno_insanitybuff", "kyno_insanitybuff")
+        end,
+	},
+	
+	spooky_popsicle =
+	{
+		test = function(cooker, names, tags) return names.livinglog and tags.dairy and tags.frozen and tags.sugar 
+		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
+		priority = 35,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_FAST,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = 40,
+		hunger = 12.5,
+		sanity = -20,
+		cooktime = .10,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"halloween"},
+		card_def = {ingredients = {{"livinglog", 1}, {"goatmilk", 1}, {"ice", 1}, {"kyno_sugar", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater.SoundEmitter ~= nil then
+				eater.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
+			else
+				inst.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
+			end
+		end,
+	},
+	
+	spooky_pumpkincream =
+	{
+		test = function(cooker, names, tags) return names.pumpkin and names.kyno_pineapple_halved and (names.pomegranate or names.pomegranate_cooked)
+		and tags.dairy and not names.pumpkin_cooked and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 40,
+		hunger = 62.5,
+		sanity = 25,
+		cooktime = 2,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"halloween"},
+		card_def = {ingredients = {{"pumpkin", 1}, {"kyno_pineapple_halved", 1}, {"pomegranate", 1}, {"goatmilk", 1}}},
+	},
+	
+	spooky_tacodile =
+	{
+		test = function(cooker, names, tags) return names.kyno_flour and (names.pepper or names.pepper_cooked) and
+		(names.onion or names.onion_cooked) and names.kyno_spotspice and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SLOW,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = 15,
+		hunger = 50,
+		sanity = 10,
+		cooktime = 1.7,
+		potlevel = "med",
+		floater = {"med", nil, 0.65},
+		tags = {"halloween"},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"pepper", 1}, {"onion", 1}, {"kyno_spotspice", 1}}},
+	},
 }
 
 for k, recipe in pairs(kyno_foods_seasonal) do

@@ -127,7 +127,7 @@ local function fn()
 	inst:AddComponent("tradable")
 	
 	inst:AddComponent("named")
-    inst.components.named.possiblenames = {STRINGS.NAMES["KYNO_SUGARFLY1"], STRINGS.NAMES["KYNO_SUGARFLY2"], STRINGS.NAMES["KYNO_SUGARFLY3"]}
+    inst.components.named.possiblenames = STRINGS.KYNO_SUGARFLY_NAMES
     inst.components.named:PickNewName()
 
     inst:AddComponent("locomotor")

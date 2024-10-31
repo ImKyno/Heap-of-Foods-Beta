@@ -163,7 +163,7 @@ local kyno_warly_foods =
 	jellybean_sanity =
 	{
 		test = function(cooker, names, tags) return names.royal_jelly and ((names.green_cap or 0) + (names.green_cap_cooked or 0) >= 3) 
-		and not tags.inedible and not tags.monster end,
+		and not tags.inedible and not tags.monster and not tags.sugar end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = nil,
@@ -185,7 +185,8 @@ local kyno_warly_foods =
 	
 	jellybean_hunger =
 	{
-		test = function(cooker, names, tags) return names.royal_jelly and names.butter and tags.sweetener and not tags.inedible and not tags.monster end,
+		test = function(cooker, names, tags) return names.royal_jelly and names.butter and tags.sweetener and not tags.inedible 
+		and not tags.monster and not tags.sugar end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = nil,
@@ -208,7 +209,7 @@ local kyno_warly_foods =
 	jellybean_super =
 	{
 		test = function(cooker, names, tags) return (names.royal_jelly and names.royal_jelly  >= 2) and (names.dragonfruit or names.dragonfruit_cooked)
-		and (names.pomegranate or names.pomegranate_cooked) and not tags.inedible and not tags.monster end,
+		and (names.pomegranate or names.pomegranate_cooked) and not tags.inedible and not tags.monster and not tags.sugar end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = nil,

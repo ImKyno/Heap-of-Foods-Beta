@@ -2169,7 +2169,7 @@ local kyno_foods =
 			else
 				inst.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
 			end
-		end
+		end,
 	},
 	
 	lunarsoup =
@@ -2561,6 +2561,13 @@ local kyno_foods =
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"livinglog", 1}, {"fig", 1}, {"kyno_twiggynuts", 2}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater.SoundEmitter ~= nil then
+				eater.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
+			else
+				inst.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
+			end
+		end,
 	},
 	
 	--[[

@@ -166,16 +166,7 @@ local function fn()
 	inst.components.inventoryitem:SetSinks(true)
 	
 	inst:AddComponent("named")
-    inst.components.named.possiblenames = 
-	{ 
-		"Drumstick", "Daisy", "Cah", "Noodles", "Potato",
-		"Curry", "Dinner", "Garibalda", "Marta", "Marina",
-		"Carrot", "Emilha", "Pintadinha", "Galinha", "Pipoca",
-		"Ruiva", "Canjica", "Magricela", "Isolda", "Pedrita",
-		"Isadora", "Ruivinha", "Karen", "Penosa", "Bicuda",
-		"Mel", "Sol", "Lua", "Outono", "Milharina", "Lunch",
-		"Clementina", "Rejane", "Morena", "Flor", "Girasol",
-	}
+    inst.components.named.possiblenames = STRINGS.KYNO_CHICKEN_NAMES
     inst.components.named:PickNewName()
 
 	inst.sounds = ChickenSounds
