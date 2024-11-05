@@ -269,7 +269,9 @@ AddStategraphPostInit("wilson", function(self)
         if target and target:HasTags({"plant", "pickable_tall"}) and inst.components.rider ~= nil and not inst.components.rider:IsRiding() then
             return "pickable_tall" -- "construct"
 		elseif inst.components.rider ~= nil and inst.components.rider:IsRiding() then
-			return "doshortaction"
+			return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+		else
+			return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
         end
 		
 		return _pickhandler(inst, action, ...)

@@ -566,7 +566,7 @@ local HOF_ICONS =
 	"snakebonesoup",
 	"soulstew",
 	"spidercake",
-	-- "spooky_brain_noodles",
+	"spooky_brain_noodles",
 	"spooky_burgerzilla",
 	"spooky_jellybeans",
 	"spooky_popsicle",

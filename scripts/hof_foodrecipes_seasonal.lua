@@ -346,24 +346,22 @@ local kyno_foods_seasonal =
 	},
 	
 	-- Hallowed Nights Foods.
-	--[[ -- Disabled this one because the sprite needs to be improved first.
 	spooky_brain_noodles =
 	{
-		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_spotspice and tags.dairy and tags.meat 
+		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_spotspice and names.kyno_beanbugs and tags.meat 
 		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,
 		health = 10,
 		hunger = 32.5,
-		sanity = 50,
+		sanity = 30,
 		cooktime = 1.2,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"halloween"},
-		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_spotspice", 1}, {"goatmilk", 1}, {"meat", 1}}},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_spotspice", 1}, {"kyno_beanbugs", 1}, {"meat", 1}}},
 	},
-	]]--
 	
 	spooky_burgerzilla =
 	{

@@ -7941,7 +7941,6 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_SEASONAL =
         deps           = preparedfood_deps,
 	},
 	
-	--[[
 	spooky_brain_noodles =
 	{
 		name           = "spooky_brain_noodles",
@@ -7965,7 +7964,6 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_SEASONAL =
 		animoffsetbgy  = -70,
 		deps           = preparedfood_deps,
 	},
-	]]--
 	
 	spooky_burgerzilla =
 	{

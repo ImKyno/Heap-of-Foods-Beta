@@ -367,6 +367,7 @@ local pollinators =
 {
 	"bee",
 	"butterfly",
+	"medal_bee", -- For mod compatibility: 能力勋章 Functional Medal.
 }
 
 local function PollinatorPostIint(inst)

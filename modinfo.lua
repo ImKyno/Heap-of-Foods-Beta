@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "8.5-A"
+version                     = "8.7-A"
 
 description                 = 
 [[
@@ -13,7 +13,7 @@ This update focused on revamping the visuals of the farming crops as well as add
 
 Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover it.
 
-󰀌 Mod Version: 8.5-A
+󰀌 Mod Version: 8.7-A
 󰀧 Update: Frightening Foods
 ]]
 
@@ -161,7 +161,7 @@ Esta atualização tem como foco melhorar os visuais das plantações e adiciona
 
 Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso, em uma ilha muito longe do continente, há um novo arbusto crescendo, esperando para ser descoberto!
 
-󰀌 Versão do Mod: 8.5-A
+󰀌 Versão do Mod: 8.7-A
 󰀧 Atualização: Comidas Amedrontadoras
 ]]
 
@@ -294,8 +294,8 @@ if locale  == "zh" or locale == "zhr" then
 
 我们的幸存者设法在野外找到了新型种子！在远离大陆的热带岛屿上，一种新的灌木丛正在绽放，等待着他们去发掘。
 
-󰀌 Mod版本: 8.5-A
-󰀧 Update: Frightening Foods
+󰀌 Mod版本: 8.7-A
+󰀧 Update: 惊恐盛宴
 ]]
 
 	names                       =
