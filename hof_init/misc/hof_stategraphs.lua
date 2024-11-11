@@ -248,13 +248,7 @@ AddStategraphPostInit("wilson", function(self)
 	-- More sofisticated animation for repairing things.
     self.actionhandlers[ACTIONS.GIVE].deststate = function(inst, action, ...)
         local target = action.target or action.invobject
-        
-		--[[
-        if target and target:HasTags({"trader", "elderpot_rubble"}) then
-            return "dolongaction"
-        end
-		]]--
-		
+
 		if target and target:HasTags({"trader", "serenity_installable"}) then
 			return "domediumaction"
 		end
@@ -268,11 +262,7 @@ AddStategraphPostInit("wilson", function(self)
         
         if target and target:HasTags({"plant", "pickable_tall"}) and inst.components.rider ~= nil and not inst.components.rider:IsRiding() then
             return "pickable_tall" -- "construct"
-		elseif inst.components.rider ~= nil and inst.components.rider:IsRiding() then
-			return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-		else
-			return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-        end
+		end
 		
 		return _pickhandler(inst, action, ...)
 	end

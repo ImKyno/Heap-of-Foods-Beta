@@ -389,6 +389,23 @@ local kyno_foods_seasonal =
 		end,
 	},
 	
+	spooky_deadbread =
+	{
+		test = function(cooker, names, tags) return names.boneshard and names.kyno_sugar and names.kyno_flour and names.butter 
+		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = -15,
+		hunger = 55,
+		sanity = 20,
+		cooktime = 2,
+		potlevel = "low",
+		floater = {"med", nil, 0.65},
+		tags = {"halloween"},
+		card_def = {ingredients = {{"boneshard", 1}, {"kyno_sugar", 1}, {"kyno_flour", 1}, {"butter", 1}}},
+	},
+	
 	spooky_jellybeans =
 	{
 		test = function(cooker, names, tags) return names.royal_jelly and tags.sugar and 
@@ -454,6 +471,25 @@ local kyno_foods_seasonal =
 		floater = {"med", nil, 0.65},
 		tags = {"halloween"},
 		card_def = {ingredients = {{"pumpkin", 1}, {"kyno_pineapple_halved", 1}, {"pomegranate", 1}, {"goatmilk", 1}}},
+	},
+	
+	spooky_skullcandy =
+	{
+		test = function(cooker, names, tags) return names.boneshard and (names.kyno_sugar and names.kyno_sugar >= 2) and names.nightmarefuel 
+		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
+		priority = 35,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = nil,
+		health = 5,
+		hunger = 15,
+		sanity = -15,
+		cooktime = 1.5,
+		stacksize = 2,
+		potlevel = "low",
+		fireproof = true,
+		floater = {"med", nil, 0.65},
+		tags = {"halloween"},
+		card_def = {ingredients = {{"boneshard", 1}, {"kyno_sugar", 2}, {"nightmarefuel", 1}}},
 	},
 	
 	spooky_tacodile =

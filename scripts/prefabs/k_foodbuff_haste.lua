@@ -1,14 +1,17 @@
--- Winona doesn't benefit from this buff.
 local function OnAttached(inst, target)
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0) 
     
 	if not target:HasTag("handyperson") then
 		target:AddTag("fastbuilder")
-		
-		if target.components.talker and target:HasTag("player") then 
-			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
-		end
+	end
+	
+	if not target.components.skilltreeupdater:IsActivated("woodie_human_quickpicker_1") then
+		target:AddTag("fastpicker") -- fastpicker
+	end
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
 	end
 	
     inst:ListenForEvent("death", function()
@@ -25,10 +28,14 @@ end
 local function OnDetached(inst, target)
 	if not target:HasTag("handyperson") then
 		target:RemoveTag("fastbuilder")
+	end
+	
+	if not target.components.skilltreeupdater:IsActivated("woodie_human_quickpicker_1") then
+		target:RemoveTag("fastpicker")
+	end
 		
-		if target.components.talker and target:HasTag("player") then 
-			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
-		end
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
 	end
 	
     inst:Remove()
@@ -41,6 +48,11 @@ local function OnExtended(inst, target)
 	if not target:HasTag("handyperson") then
 		target:RemoveTag("fastbuilder")
 		target:AddTag("fastbuilder")
+	end
+	
+	if not target.components.skilltreeupdater:IsActivated("woodie_human_quickpicker_1") then
+		target:RemoveTag("fastpicker")
+		target:AddTag("fastpicker")
 	end
 end
 
