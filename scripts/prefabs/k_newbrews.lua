@@ -121,6 +121,7 @@ local function MakePreparedBrew(data)
 
 		inst:AddTag("preparedfood")
 		inst:AddTag("preparedbrew")
+		inst:AddTag("nospice")
 		
 		if data.fireproof ~= nil then
 			inst:AddTag("fireprooffood")
@@ -203,10 +204,10 @@ local function MakePreparedBrew(data)
 			inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)
 
 			inst:AddComponent("fertilizer")
-			inst.components.fertilizer.fertilizervalue = TUNING.ROTTENEGG_FERTILIZE
-			inst.components.fertilizer.soil_cycles = TUNING.ROTTENEGG_SOILCYCLES
-			inst.components.fertilizer.withered_cycles = TUNING.ROTTENEGG_WITHEREDCYCLES
-			inst.components.fertilizer:SetNutrients(FERTILIZER_DEFS.wetgoop2.nutrients)
+			inst.components.fertilizer.fertilizervalue = TUNING.SPOILEDFOOD_FERTILIZE
+			inst.components.fertilizer.soil_cycles = TUNING.SPOILEDFOOD_SOILCYCLES
+			inst.components.fertilizer.withered_cycles = TUNING.SPOILEDFOOD_WITHEREDCYCLES
+			inst.components.fertilizer:SetNutrients(data.nutrients)
 		end
 		
 		if data.isfuel ~= nil then

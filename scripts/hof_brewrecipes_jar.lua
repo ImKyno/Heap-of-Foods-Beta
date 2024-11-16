@@ -831,6 +831,7 @@ local kyno_foods_jar =
 		sanity = 0,
 		cooktime = 1,
 		isfertilizer = true,
+		nutrients = {32, 8, 8},
 		-- no_brewbook = true,
         floater = {"small", nil, nil},
 	},
