@@ -2304,7 +2304,7 @@ local kyno_foods =
 	{
 		test = function(cooker, names, tags) return ((names.monstermeat or 0) + (names.monstermeat_cooked or 0) >= 2) and 
 		((names.durian or 0) + (names.durian_cooked or 0) >= 2) end,
-		priority = 30,
+		priority = 40,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,
 		health = -20,

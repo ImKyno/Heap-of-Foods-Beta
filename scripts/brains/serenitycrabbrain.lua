@@ -10,7 +10,7 @@ local SEE_BAIT_DIST     = 10
 local MAX_WANDER_DIST    = 15
 
 local THREAT_MUST_HAVE_TAGS = {"_combat"}
-local THREAT_NO_TAGS        = {"INLIMBO", "playerghost"}
+local THREAT_NO_TAGS        = {"INLIMBO", "playerghost", "notarget"}
 local THREAT_TAGS           = {"scarytoprey", "hostile"}
 
 local SerenityCrabBrain = Class(Brain, function(self, inst)
@@ -53,8 +53,9 @@ end
 function SerenityCrabBrain:OnStart()
     local root = PriorityNode(
     {
-        EventNode(self.inst, "GoHome", 
-            DoAction(self.inst, GoHomeAction, "GoHome", true )),
+		EventNode(self.inst, "GoHome",
+			DoAction(self.inst, GoHomeAction, "GoHome", true)),
+			
         DoAction(self.inst, EatFoodAction),
         Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_WANDER_DIST)
     }, .25)

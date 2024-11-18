@@ -43,6 +43,11 @@ local function SetHome(inst)
 	inst.components.knownlocations:RememberLocation("home", inst:GetPosition())
 end
 
+local function SetNewHome(inst)
+	inst.components.knownlocations:ForgetLocation("home")
+	inst:DoTaskInTime(1, SetHome) -- Set home again.
+end
+
 local function StartTimer(inst)
 	if not inst.components.timer:TimerExists("hide") then
 		inst.components.timer:StartTimer("hide", 10)
@@ -54,6 +59,14 @@ local function OnNear(inst)
 		inst.sg:GoToState("burrow")
 		StartTimer(inst)
 	end
+end
+
+local function OnPickUp(inst)
+	inst:PushEvent("detachchild") -- No longer part of the spawner.
+end
+
+local function OnDropped(inst)
+	inst:DoTaskInTime(1, SetNewHome)
 end
 
 local function fn()
@@ -92,8 +105,8 @@ local function fn()
 	
 	inst.sounds = sounds
 	
-	inst:AddComponent("inspectable")
 	inst:AddComponent("timer")
+	inst:AddComponent("inspectable")
 	inst:AddComponent("knownlocations")
 	inst:AddComponent("homeseeker")
 	inst:AddComponent("tradable")
@@ -128,6 +141,9 @@ local function fn()
 	inst:DoTaskInTime(0, SetHome)
 	MakeFeedableSmallLivestock(inst, TUNING.RABBIT_PERISH_TIME)
 	
+	inst:ListenForEvent("onpickup", OnPickUp)
+	inst:ListenForEvent("ondropped", OnDropped)
+	
 	inst:ListenForEvent("timerdone", function(inst, data)
 		if data.name == "hide" then
 			if FindClosestPlayerToInst(inst, 5) then
@@ -137,30 +153,6 @@ local function fn()
 			end
 		end
 	end)
-		
-	--[[
-	inst:ListenForEvent("timerdone", function(inst, data)
-		if data.name == "hide" then
-			if FindClosestPlayerToInst(inst, 4) then
-				StartTimer(inst)
-			else
-				if inst.components.knownlocations:GetLocation("home") then
-					inst.Physics:Teleport(inst.components.knownlocations:GetLocation("home"):Get())
-				else
-					local pos = inst:GetPosition()
-					local offset, check_angle, deflected = FindWalkableOffset(pos, 2 * math.pi * math.random(), 10, 50, true, false,
-						function(pt)
-							local tile = TheWorld.Map:GetTileAtPoint(pt:Get())
-							return tile == GROUND.ROAD or tile == GROUND.QUAGMIRE_CITYSTONE
-						end)
-						
-						inst.Physics:Teleport(pos.x + offset.x, 0, pos.z + offset.z)
-					end
-					inst.sg:GoToState("emerge")
-				end
-			end
-		end)
-	]]--	
 	
 	return inst
 end

@@ -31,11 +31,14 @@ SetSharedLootTable("kyno_chicken2",
 	{"goose_feather",         0.33},
 })
 
---[[
 local function SetHome(inst)
-	inst.components.knownlocations:RememberLocation("spawnpoint", inst:GetPosition())
+	inst.components.knownlocations:RememberLocation("home", inst:GetPosition())
 end
-]]--
+
+local function SetNewHome(inst)
+	inst.components.knownlocations:ForgetLocation("home")
+	inst:DoTaskInTime(1, SetHome) -- Set home again.
+end
 
 local function OnStartDay(inst)
     if inst.components.combat:HasTarget() ~= nil then
@@ -47,17 +50,54 @@ local function CanShareTarget(dude)
     return not dude:IsInLimbo() and not dude.components.health:IsDead()
 end
 
+local function OnCooked(inst, cooker, chef)
+	inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/buzzard/hurt")
+end
+
 local function OnInventory(inst)
 	inst:ClearBufferedAction()
 end
 
+local function OnPickUp(inst)
+	inst:PushEvent("detachchild") -- No longer part of the spawner.
+end
+
 local function OnDropped(inst)
+	inst:DoTaskInTime(1, SetNewHome)
 	inst.components.sleeper:GoToSleep()
+end
+
+local function OnSleep(inst)
+	inst.components.inventoryitem.canbepickedup = true 
+end
+
+local function OnWakeUp(inst)
+	inst.components.inventoryitem.canbepickedup = false
+end
+
+local function OnDeath(inst, data)
+	local owner = inst.components.inventoryitem:GetGrandOwner()
+	
+	if inst.components.lootdropper and owner then
+		local loots = inst.components.lootdropper:GenerateLoot()
+		inst:Remove()
+			
+		for k, v in pairs(loots) do
+			local loot = SpawnPrefab(v)
+			owner.components.inventory:GiveItem(loot)
+		end
+	end
+end
+
+local function CanSleep(inst, isnight)
+	return TheWorld.state.isnight
 end
 
 local function CanSpawnEgg(inst)
 	if inst.components.inventoryitem:IsHeld() or inst.components.sleeper:IsAsleep() then
 		return false
+	else
+		return true
 	end
 end
 
@@ -78,8 +118,23 @@ local function OnGetItemFromPlayer(inst, giver, item)
 	end
 end
 
-local function OnCooked(inst, cooker, chef)
-	inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/buzzard/hurt")
+local function settrapdata(inst, data)
+    local lootdata = {}
+    local named = inst.components.named
+	
+	if named then
+		lootdata.named = {name = named.name}
+	end
+	
+    return lootdata
+end
+
+local function restoredatafromtrap(inst, data)
+    if data.named then
+		if inst.components.named then
+			inst.components.named:SetName(data.named.name)
+		end
+    end
 end
 
 local function fn()
@@ -106,7 +161,6 @@ local function fn()
 	inst:AddTag("prey")
 	inst:AddTag("canbetrapped")
 	inst:AddTag("smallcreature")
-	inst:AddTag("herdmember")
 	inst:AddTag("chicken2")
 	
 	inst.entity:SetPristine()
@@ -116,12 +170,14 @@ local function fn()
 	end
 	
 	inst:AddComponent("timer")
-	inst:AddComponent("sleeper")
 	inst:AddComponent("embarker")
 	inst:AddComponent("inventory")
 	inst:AddComponent("inspectable")
 	inst:AddComponent("knownlocations")
-	-- inst:AddComponent("homeseeker")
+	inst:AddComponent("homeseeker")
+	
+	inst:AddComponent("sleeper")
+	inst.components.sleeper.sleeptestfn = CanSleep
 	
 	inst:AddComponent("trader")
 	inst.components.trader:SetAcceptTest(TestItem)
@@ -130,9 +186,6 @@ local function fn()
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "drumstick_cooked"
 	inst.components.cookable:SetOnCookedFn(OnCooked)
-	
-	inst:AddComponent("herdmember")
-    inst.components.herdmember:SetHerdPrefab("kyno_chicken2_herd")
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetChanceLootTable("kyno_chicken2")
@@ -159,7 +212,6 @@ local function fn()
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_chicken2"
 	inst.components.inventoryitem.onputininventoryfn = OnInventory
-	inst.components.inventoryitem.ondropfn = OnDropped
 	inst.components.inventoryitem.nobounce = true
 	inst.components.inventoryitem.longpickup = true
 	inst.components.inventoryitem.canbepickedup = false
@@ -168,35 +220,28 @@ local function fn()
 	inst:AddComponent("named")
     inst.components.named.possiblenames = STRINGS.KYNO_CHICKEN_NAMES
     inst.components.named:PickNewName()
+	
+	inst:AddComponent("playerprox")
+	inst.components.playerprox:SetTargetMode(inst.components.playerprox.TargetModes.AllPlayers)
+	inst.components.playerprox:SetOnPlayerNear(CanSpawnEgg)
+	inst.components.playerprox:SetDist(6, 40)
 
 	inst.sounds = ChickenSounds
-	-- inst:DoTaskInTime(0, SetHome)
+	inst:DoTaskInTime(0, SetHome)
+	
+	inst.settrapdata = settrapdata
+	inst.restoredatafromtrap = restoredatafromtrap
 	
 	MakeSmallBurnableCharacter(inst, "body")
 	MakeTinyFreezableCharacter(inst, "chest")
 
 	inst:WatchWorldState("startcaveday", OnStartDay)  
 	
-	inst:ListenForEvent("gotosleep", function(inst) 
-		inst.components.inventoryitem.canbepickedup = true 
-	end)
-	
-    inst:ListenForEvent("onwakeup", function(inst) 
-    	inst.components.inventoryitem.canbepickedup = false
-    end)
-
-    inst:ListenForEvent("death", function(inst, data) 
-		local owner = inst.components.inventoryitem:GetGrandOwner()
-		if inst.components.lootdropper and owner then
-			local loots = inst.components.lootdropper:GenerateLoot()
-			inst:Remove()
-			
-			for k, v in pairs(loots) do
-				local loot = SpawnPrefab(v)
-				owner.components.inventory:GiveItem(loot)
-			end
-		end
-	end)
+	inst:ListenForEvent("onpickup", OnPickUp)
+	inst:ListenForEvent("ondropped", OnDropped)
+	inst:ListenForEvent("gotosleep", OnSleep)
+	inst:ListenForEvent("onwakeup", OnWakeUp)
+	inst:ListenForEvent("ondeath", OnDeath)
 
 	MakeFeedableSmallLivestock(inst, TUNING.RABBIT_PERISH_TIME, OnInventory, OnDropped)
 

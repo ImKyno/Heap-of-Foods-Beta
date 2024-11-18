@@ -33,13 +33,14 @@ end
 local RUN_AWAY_PARAMS =
 {
     tags = { "_combat", "_health" },
-    notags = { "chickenfamily", "playerghost", "INLIMBO" },
+    notags = { "chickenfamily", "playerghost", "notarget", "INLIMBO" },
     fn = function(guy)
 		return not guy.components.health:IsDead()
 		and (guy.components.combat.target ~= nil and
 		guy.components.combat.target:HasTag("chicken2"))
     end,
 }
+
 local function GoHomeAction(inst)
     if inst.components.homeseeker and 
 		inst.components.homeseeker.home and 
@@ -54,21 +55,19 @@ function Chicken2Brain:OnStart()
     {
         WhileNode(function() return self.inst.components.health.takingfiredamage end, "OnFire", Panic(self.inst)),
         WhileNode(function() return self.inst.components.health:GetPercent() < .95 end, "LowHealth",
-			RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST)),
-		-- WhileNode(function() return not TheWorld.state.iscaveday end, "IsNight",
-            -- DoAction(self.inst, GoHomeAction, "GoHome")),					
+			RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST)),	
+			
         RunAway(self.inst, RUN_AWAY_PARAMS, SEE_PLAYER_DIST, STOP_RUN_DIST),
         RunAway(self.inst, "OnFire", SEE_PLAYER_DIST, STOP_RUN_DIST),
+		
+		EventNode(self.inst, "GoHome",
+			DoAction(self.inst, GoHomeAction, "GoHome", true)),
+		
         DoAction(self.inst, EatFoodAction),
-        -- Leash(self.inst, function() return self.inst.components.knownlocations:GetLocation("herd") end, MAX_LEASH_DIST, MAX_WANDER_DIST),
-        Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("herd") end, MAX_WANDER_DIST)
+        Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_WANDER_DIST)
     }, .25)
 
     self.bt = BT(self.inst, root)
-end
-
-function Chicken2Brain:OnInitializationComplete()
-    self.inst.components.knownlocations:RememberLocation("spawnpoint", self.inst:GetPosition())
 end
 
 return Chicken2Brain

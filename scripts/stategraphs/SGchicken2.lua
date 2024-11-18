@@ -152,7 +152,8 @@ local states =
             inst.AnimState:PushAnimation("eat_pst")
 			
 			-- Whatever, math.random does nothing here.
-			if math.random() < 1.00 and not inst.components.timer:TimerExists("kyno_chicken_egg_cooldown") then
+			-- if math.random() < 1.00 and not inst.components.timer:TimerExists("kyno_chicken_egg_cooldown") then
+			if inst.components.playerprox:IsPlayerClose() and not inst.components.timer:TimerExists("kyno_chicken_egg_cooldown") then
 				local x, y, z = inst.Transform:GetWorldPosition()
 				local egg = SpawnPrefab("kyno_chicken_egg")
 				egg.Transform:SetPosition(x, y, z)
