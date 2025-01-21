@@ -33,7 +33,6 @@ end
 
 local function Say(inst, str)
 	inst.components.talker:Chatter(str, math.random(#STRINGS[str]))
-	-- inst.components.npc_talker:Chatter(str, math.random(#STRINGS[str]))
 end
 
 local function SayBuy(inst)
@@ -94,10 +93,13 @@ local function OnIsNight(inst, isnight)
 		inst.AnimState:PlayAnimation("sleep_pre")
 		inst.AnimState:PushAnimation("sleep_loop", true)
 		inst.components.prototyper.restrictedtag = "can_wakeup_elder" -- Just to prevent players from shopping at night.
+		inst.components.trader.enabled = false
+		inst.components.talker:ShutUp()
     else
 		inst.AnimState:PlayAnimation("sleep_pst")
 		inst.AnimState:PushAnimation("idle", true)
 		inst.components.prototyper.restrictedtag = nil
+		inst.components.trader.enabled = true
     end
 end
 
@@ -107,6 +109,8 @@ local function TestItem(inst, item, giver)
 	elseif item.components.inventoryitem ~= nil and item.prefab == "turf_road" or item.prefab == "turf_deciduous" then
 		return true
 	elseif item.components.inventoryitem ~= nil and item.prefab == "cookingrecipecard" then
+		return true
+	elseif inst:HasTag("pigelder_nighttrader") and item.components.tradable.goldvalue > 0 then -- Lights Out worlds.
 		return true
 	else
 		giver.components.talker:Say(GetString(giver, "ANNOUNCE_PIGELDER_FAIL"))
@@ -119,7 +123,11 @@ local function LaunchItem(item, angle)
     item.Physics:SetVel(speed * math.cos(angle), math.random() * 2 + 8, speed * math.sin(angle))
 end
 
-local function OnGetItemFromPlayer(inst, giver, item)
+local function PlayThrowSound(inst)
+	inst.SoundEmitter:PlaySound("dontstarve/pig/PigKingThrowGold")
+end
+
+local function OnGetItemFromPlayer(inst, giver, item, isnight)
 	if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" and not inst:HasTag("pigelder_gifted") then
 		inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/friendship_music/10")
 		
@@ -153,18 +161,36 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		local turf = SpawnPrefab("turf_stonecity")
 		turf.Transform:SetPosition(x, y, z)
 		LaunchItem(turf, angle)
+		PlayThrowSound(inst)
 	end 
 	
 	if item.components.inventoryitem ~= nil and item.prefab == "turf_deciduous" then
 		local turf = SpawnPrefab("turf_pinkpark")
 		turf.Transform:SetPosition(x, y, z)
 		LaunchItem(turf, angle)
+		PlayThrowSound(inst)
 	end
 
 	if item.components.inventoryitem ~= nil and item.prefab == "cookingrecipecard" then
 		local card = SpawnPrefab("kyno_brewingrecipecard")
 		card.Transform:SetPosition(x, y, z)
 		LaunchItem(card, angle)
+		PlayThrowSound(inst)
+	end
+	
+	-- For "Lights Out" worlds.
+	if inst:HasTag("pigelder_nighttrader") then
+		if item.components.tradable.tradefor ~= nil then
+			for _, v in pairs(item.components.tradable.tradefor) do
+				local item = SpawnPrefab(v)
+				
+				if item ~= nil then
+					item.Transform:SetPosition(x, y, z)
+					LaunchItem(item, angle)
+					PlayThrowSound(inst)
+				end
+			end
+		end
 	end
 end
 
@@ -210,13 +236,7 @@ local function fn()
     inst.components.talker.fontsize = 35
     inst.components.talker.font = TALKINGFONT
     inst.components.talker.offset = Vector3(0, -600, 0)
-	-- inst.components.talker.name_colour = Vector3(118/256, 89/256, 141/256)
-    -- inst.components.talker.chaticon = "npcchatflair_pigelder"
     inst.components.talker:MakeChatter()
-	-- inst.components.talker.lineduration = TUNING.PIGELDER.SPEAKTIME - 0.5
-	
-	-- inst:AddComponent("npc_talker")
-    -- inst.components.npc_talker.default_chatpriority = CHATPRIORITIES.LOW
 	
 	if not TheNet:IsDedicated() then
         inst:AddComponent("pointofinterest")
@@ -250,6 +270,18 @@ local function fn()
 
 	inst:WatchWorldState("isnight", OnIsNight)
     OnIsNight(inst, TheWorld.state.isnight)
+	
+	-- Pig Elder will wake up regardless in "Lights Out" worlds.
+	inst:ListenForEvent("clocksegschanged", function(world, data)
+		inst.segs = data
+
+		if inst.segs["night"] + inst.segs["dusk"] >= 16 then
+			inst.components.prototyper.restrictedtag = nil
+			inst.components.trader.enabled = true
+			
+			inst:AddTag("pigelder_nighttrader")
+		end
+	end, TheWorld)
 
 	inst.OnSave	= OnSave
 	inst.OnLoad = OnLoad

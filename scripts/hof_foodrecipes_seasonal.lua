@@ -348,7 +348,7 @@ local kyno_foods_seasonal =
 	-- Hallowed Nights Foods.
 	spooky_brain_noodles =
 	{
-		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_spotspice and names.kyno_beanbugs and tags.meat 
+		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_spotspice and tags.beanbug and tags.meat 
 		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,

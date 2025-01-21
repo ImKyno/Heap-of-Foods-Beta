@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "9.0-A"
+version                     = "9.1-A"
 
 description                 = 
 [[
@@ -13,8 +13,8 @@ This update focused on revamping the visuals of the farming crops as well as add
 
 Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover it.
 
-󰀌 Mod Version: 9.0-A
-󰀧 Update: Frightening Foods
+󰀌 Mod Version: 9.1-A
+󰀧 Update: New Year's Adjustments
 ]]
 
 author                      = "Kyno"
@@ -53,6 +53,7 @@ local labels                =
 	warlygrinder            = "Portable Grinding Mill Recipes",
 	buckettweak             = "Bucket-o-Poop Recipe",
 	retrofit                = "Retrofit Contents",
+	modtrades               = "Retrofit Trades",
 }
 
 local hovers                =
@@ -74,7 +75,7 @@ local hovers                =
 	warlygrinder            = "Should Warly's Portable Grinding Mill have the recipes from Mealing Stone?",
 	buckettweak             = "Should Bucket-o-Poop use the Bucket instead of its default recipe?",
 	retrofit                = "If your world is missing the Mod Contents enable this option.\nThis option will be set as \"Updated\" once the retrofitting is finished!",
-	
+	modtrades               = "Should Pig King be able to trade items in exchange for Mod items?\This also applies to Pig Elder in Lights Out worlds.",
 }
 
 local desc                  =
@@ -140,6 +141,8 @@ local deschovers            =
 	retrofit1               = "Your world is already updated with the Mod Contents.",
 	retrofit2               = "Mod Islands will be generated during server initialization.",
 	retrofit3               = "Mod Prefabs will be generated during server initialization.",
+	modtrades1              = "Certain items can't be traded in exchange for Mod items.",
+	modtrades2              = "Certain items can be traded in exchange for Mod items.",
 }
 
 -- Localizations.
@@ -161,8 +164,8 @@ Esta atualização tem como foco melhorar os visuais das plantações e adiciona
 
 Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso, em uma ilha muito longe do continente, há um novo arbusto crescendo, esperando para ser descoberto!
 
-󰀌 Versão do Mod: 9.0-A
-󰀧 Atualização: Comidas Amedrontadoras
+󰀌 Versão do Mod: 9.1-A
+󰀧 Atualização: Ajustes de Ano Novo
 ]]
 
 	names                       =
@@ -187,6 +190,7 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 		warlygrinder            = "Receitas do Moinho de Moagem",
 		buckettweak             = "Receita do Balde de Cocô",
 		retrofit                = "Fazer Retro. de Conteúdos",
+		modtrades               = "Retro. de Trocas",
 	}
 
 	hovers                      =
@@ -197,19 +201,19 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 		retrofitting            = "Opções de Retrocompatibilidade para mundos antigos.",
 	
 		language                = "Escolha a Linguagem do Mod.\nVocê pode enviar sua localização em nosso Discord.",
-		scrapbook               = "Os conteúdos do Mod devem ser adicionados ao Scrapbook?",
-		spoilage                = "As comidas devem estragar se estiverem na Panela?",
+		scrapbook               = "Permitir que os conteúdos do Mod sejam adicionados ao Scrapbook?",
+		spoilage                = "Permitir que as comidas estraguem se estiverem na Panela?",
 		coffeedrop              = "Quantas Plantas de Café a Libélula deve deixar cair?",
-		seasonalfoods           = "As Receitas Sazonais devem ser cozinhadas somente em Eventos Especiais?",
-		humanmeat               = "Os Jogadores devem deixar cair Carne Humana quando morrem?\nNota: Se desabilitado, pode impedir de certas comidas de serem feitas.",
-		alcoholic               = "Alguns personagens devem ser impedidos de beber bebidas alcoólicas?",
-		giantspawn              = "Gigantes devem spawnar se Jogadores comerem suas comidas especiais?",
-		coffeespeed             = "As comidas devem proporcionar o Efeito de Velocidade?\n\Isto só se aplica à certas comidas.",
+		seasonalfoods           = "Permitir que as Receitas Sazonais sejam cozinhadas somente em Eventos Especiais?",
+		humanmeat               = "Permitir que Jogadores deixem cair Carne Humana quando morrem?\nNota: Se desabilitado, pode impedir certas comidas de serem feitas.",
+		alcoholic               = "Permitir que alguns personagens sejam impedidos de beber bebidas alcoólicas?",
+		giantspawn              = "Permitir que Gigantes apareçam se Jogadores comerem suas comidas especiais?",
+		coffeespeed             = "Permitir que as comidas proporcionem Efeito de Velocidade?\n\Isto só se aplica à certas comidas.",
 		coffeeduration          = "O quão longo deve ser o Efeito de Velocidade das comidas?",
-		warlygrinder            = "O Moinho de Moagem do Warly deve ter as receitas da Pedra de Preparação?",
-		buckettweak             = "O Balde de Cocô deve usar o Balde invés de seus ingredientes padrões?",
+		warlygrinder            = "Permitir que o Moinho de Moagem do Warly tenha as receitas da Pedra de Preparação?",
+		buckettweak             = "Permitir que o Balde de Cocô use o Balde ao invés de seus ingredientes padrões?",
 		retrofit                = "Se seu mundo está faltando algum conteúdo ative esta opção.\nEsta opção irá ficar como \"Atualizado\ assim que a retrocompatibilidade for finalizada!",
-	
+		modtrades               = "Permitir que o Rei Porco aceite certos itens em troca de itens do Mod?\nIsso também se aplica ao Porco Ancião em mundos Lights Out.",
 	}
 
 	desc                        =
@@ -243,7 +247,7 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 		language2               = "Localização por: Kyno",
 		language3               = "Localização por: 糖豆罐里好多颜色",
 		language4               = "Localização por: Autor Anônimo",
-		scrapbook1              = "Scrapbook Padrão;",
+		scrapbook1              = "Scrapbook Padrão.",
 		scrapbook2              = "Os conteúdos do Mod serão adicionados ao Scrapbook.",
 		spoilage1               = "As comidas estragarão na Panela, Panela Portátil, etc.",
 		spoilage2               = "As comidas não estragarão na Panela, Panela Portátil, etc.",
@@ -275,6 +279,8 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 		retrofit1               = "Seu mundo já está atualizado com os conteúdos do Mod.",
 		retrofit2               = "As Ilhas do Mod serão geradas durante a inicialização do servidor.",
 		retrofit3               = "As Prefabs do Mod serão geradas durante a inicialização do servidor.",
+		modtrades1              = "Não será possível fazer trocas por itens do Mod.",
+		modtrades2              = "Será possível fazer trocas por itens do Mod.",
 	}
 end
 
@@ -294,8 +300,8 @@ if locale  == "zh" or locale == "zhr" then
 
 我们的幸存者设法在野外找到了新型种子！在远离大陆的热带岛屿上，一种新的灌木丛正在绽放，等待着他们去发掘。
 
-󰀌 Mod版本: 9.0-A
-󰀧 Update: 惊恐盛宴
+󰀌 Mod版本: 9.1-A
+󰀧 Update: 新年调整
 ]]
 
 	names                       =
@@ -320,6 +326,7 @@ if locale  == "zh" or locale == "zhr" then
 		warlygrinder            = "便携式研磨器食谱",
 		buckettweak             = "便便桶配方",
 		retrofit                = "改造内容",
+		modtrades               = "贸易转型",
 	}
 
 	hovers                      =
@@ -342,7 +349,7 @@ if locale  == "zh" or locale == "zhr" then
 		warlygrinder            = "沃利的便携式研磨器是否可以拥有碾磨石的功能？",
 		buckettweak             = "便便桶是否用于挤奶而不是默认功能？",
 		retrofit                = "如果你的世界缺少Mod内容，请启用此选项。\n改造完成后，该选项将被设置为 \"已更新\"！",
-	
+		modtrades               = "猪王是否应该能够用某些物品来交换 Mod 物品？\这也适用于熄灯世界中的猪长老。"
 	}
 
 	desc                        =
@@ -408,6 +415,8 @@ if locale  == "zh" or locale == "zhr" then
 		retrofit1               = "你的世界已更新了Mod的内容。",
 		retrofit2               = "Mod的岛屿会在服务器初始化期间生成。",
 		retrofit3               = "Mod的物品会在服务器初始化期间生成。",
+		modtrades1              = "某些物品不能用 Mod 物品进行交易。",
+		modtrades2              = "某些物品可以用 Mod 物品进行交易。",
 	}
 end
 
@@ -420,7 +429,7 @@ local options               =
 	scrapbook               = {{description = desc.disabled,        hover = deschovers.scrapbook1,      data = false},         {description = desc.enabled,         hover = deschovers.scrapbook2,      data = true}},
 	spoilage                = {{description = desc.disabled,        hover = deschovers.spoilage1,       data = false},         {description = desc.enabled,         hover = deschovers.spoilage2,       data = true}},
 	coffeedrop              = {{description = desc.coffeedrop1,     hover = deschovers.coffeedrop1,     data = 0},             {description = desc.coffeedrop2,     hover = deschovers.coffeedrop2,     data = 4},    {description = desc.coffeedrop3,     hover = deschovers.coffeedrop3,     data = 8},   {description = desc.coffeedrop4,     hover = deschovers.coffeedrop4,     data = 12},  {description = desc.coffeedrop5,     hover = deschovers.coffeedrop5,     data = 16}},
-	seasonalfoods           = {{description = desc.disabled,        hover = deschovers.seasonalfoods1,  data = false},         {description = desc.enabled,         hover = deschovers.seasonalfoods2,  data = true}},
+	seasonalfoods           = {{description = desc.disabled,        hover = deschovers.seasonalfoods1,  data = true},          {description = desc.enabled,         hover = deschovers.seasonalfoods2,  data = false}},
 	humanmeat               = {{description = desc.disabled,        hover = deschovers.humanmeat1,      data = false},         {description = desc.enabled,         hover = deschovers.humanmeat2,      data = true}},
 	alcoholic               = {{description = desc.disabled,        hover = deschovers.alcoholic1,      data = false},         {description = desc.enabled,         hover = deschovers.alcoholic2,      data = true}},
 	giantspawn              = {{description = desc.disabled,        hover = deschovers.giantspawn1,     data = false},         {description = desc.enabled,         hover = deschovers.giantspawn2,     data = true}},
@@ -429,6 +438,7 @@ local options               =
 	warlygrinder            = {{description = desc.disabled,        hover = deschovers.warlygrinder1,   data = false},         {description = desc.enabled,         hover = deschovers.warlygrinder2,   data = true}},
 	buckettweak             = {{description = desc.disabled,        hover = deschovers.buckettweak1,    data = false},         {description = desc.enabled,         hover = deschovers.buckettweak2,    data = true}},
 	retrofit                = {{description = desc.retrofit1,       hover = deschovers.retrofit1,       data = 0},             {description = desc.retrofit2,       hover = deschovers.retrofit2,       data = 1},    {description = desc.retrofit3,       hover = deschovers.retrofit3,       data = 2}},
+	modtrades               = {{description = desc.disabled,        hover = deschovers.modtrades1,      data = false},         {description = desc.enabled,         hover = deschovers.modtrades2,      data = true}},
 }
 
 configuration_options       =
@@ -452,4 +462,5 @@ configuration_options       =
 	
 	{name                   = names.retrofitting,                                hover = hovers.retrofitting,   options = options.none,           default = false},
 	{name                   = "RETROFIT",         label = labels.retrofit,       hover = hovers.retrofit,       options = options.retrofit,       default = 0},
+	{name                   = "MODTRADES",        label = labels.modtrades,      hover = hovers.modtrades,      options = options.modtrades,      default = false},
 }

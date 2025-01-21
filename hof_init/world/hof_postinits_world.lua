@@ -9,6 +9,8 @@ local UpvalueHacker   = require("hof_upvaluehacker")
 
 require("hof_mainfunctions")
 
+local MOD_TRADES = GetModConfigData("MODTRADES")
+
 -- Pig King Trades Some Items.
 local function BushTrader(inst)
     if not _G.TheWorld.ismastersim then
@@ -280,26 +282,204 @@ local function FieldsTrader(inst)
     end
 end
 
-AddPrefabPostInit("dug_berrybush", 			BushTrader)
-AddPrefabPostInit("dug_berrybush2", 		BushTrader)
-AddPrefabPostInit("dug_berrybush_juicy", 	BushTrader)
-AddPrefabPostInit("dug_grass", 				WheatTrader)
-AddPrefabPostInit("potato_seeds", 			SweetTrader)
-AddPrefabPostInit("carrot_seeds", 			RadishTrader)
-AddPrefabPostInit("durian_seeds", 			FennelTrader)
-AddPrefabPostInit("asparagus_seeds", 		AloeTrader)
-AddPrefabPostInit("cutlichen", 				LimpetTrader)
-AddPrefabPostInit("eggplant", 				TaroTrader)
-AddPrefabPostInit("butterfly", 				LotusTrader)
-AddPrefabPostInit("succulent_picked", 		CressTrader)
-AddPrefabPostInit("watermelon_seeds", 		CucumberTrader)
-AddPrefabPostInit("kelp", 					WeedTrader)
-AddPrefabPostInit("pumpkin_seeds", 			ParsnipTrader)
-AddPrefabPostInit("garlic_seeds", 			TurnipTrader)
-AddPrefabPostInit("pomegranate_seeds",		KokonutTrader)
-AddPrefabPostInit("cave_banana",            BananaTrader)
-AddPrefabPostInit("turf_marsh",             TidalTrader)
-AddPrefabPostInit("turf_grass",             FieldsTrader)
+local function RiceTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_rice_seeds" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_rice_seeds" }
+    end
+end
+
+local function SweetflyTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_sweetfly" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_sweetfly" }
+    end
+end
+
+local function FlowerTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_sugartree_petals" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_sugartree_petals" }
+    end
+end
+
+local function SalmonTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_salmonfish" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_salmonfish" }
+    end
+end
+
+local function SugarwoodTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_sugartree_bud" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_sugartree_bud" }
+    end
+end
+
+local function PineappleTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_pineapple" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_pineapple" }
+    end
+end
+
+local function TropicalTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_tropicalfish" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_tropicalfish" }
+    end
+end
+
+local function KoiTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_koi" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_koi" }
+    end
+end
+
+local function NeonTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_neonfish" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_neonfish" }
+    end
+end
+
+local function PierrotTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_pierrotfish" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_pierrotfish" }
+    end
+end
+
+local function EggTrader(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+
+    if inst.components.inventoryitem ~= nil and not inst.components.tradable then
+        inst:AddComponent("tradable")
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_chicken_egg" }
+    else
+        inst.components.tradable.goldvalue = 1
+        inst.components.tradable.tradefor = { "kyno_chicken_egg" }
+    end
+end
+
+if MOD_TRADES then 
+	AddPrefabPostInit("dug_berrybush",          BushTrader)
+	AddPrefabPostInit("dug_berrybush2",         BushTrader)
+	AddPrefabPostInit("dug_berrybush_juicy",    BushTrader)
+	AddPrefabPostInit("dug_grass",              WheatTrader)
+	AddPrefabPostInit("potato_seeds",           SweetTrader)
+	AddPrefabPostInit("carrot_seeds",           RadishTrader)
+	AddPrefabPostInit("durian_seeds",           FennelTrader)
+	AddPrefabPostInit("asparagus_seeds",        AloeTrader)
+	AddPrefabPostInit("cutlichen",              LimpetTrader)
+	AddPrefabPostInit("eggplant",               TaroTrader)
+	AddPrefabPostInit("butterfly",              LotusTrader)
+	AddPrefabPostInit("succulent_picked",       CressTrader)
+	AddPrefabPostInit("watermelon_seeds",       CucumberTrader)
+	AddPrefabPostInit("kelp",                   WeedTrader)
+	AddPrefabPostInit("pumpkin_seeds",          ParsnipTrader)
+	AddPrefabPostInit("garlic_seeds",           TurnipTrader)
+	AddPrefabPostInit("pomegranate_seeds",      KokonutTrader)
+	AddPrefabPostInit("cave_banana",            BananaTrader)
+	AddPrefabPostInit("turf_marsh",             TidalTrader)
+	AddPrefabPostInit("turf_grass",             FieldsTrader)
+	AddPrefabPostInit("onion_seeds",            RiceTrader)
+	AddPrefabPostInit("moonbutterfly",          SweetflyTrader)
+	AddPrefabPostInit("petals",                 FlowerTrader)
+	AddPrefabPostInit("pondeel",                SalmonTrader)
+	AddPrefabPostInit("acorn",                  SugarwoodTrader)
+	AddPrefabPostInit("dragonfruit",            PineappleTrader)
+	AddPrefabPostInit("oceanfish_medium_8_inv", TropicalTrader)
+	AddPrefabPostInit("oceanfish_medium_7_inv", KoiTrader)
+	AddPrefabPostInit("oceanfish_medium_4_inv", NeonTrader)
+	AddPrefabPostInit("oceanfish_medium_5_inv", PierrotTrader)
+	AddPrefabPostInit("bird_egg",               EggTrader)
+end
 
 -- Nuts drops from Twiggy Trees.
 AddPrefabPostInit("twiggytree", function(inst)

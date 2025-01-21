@@ -9,6 +9,8 @@ local SpawnPrefab     = _G.SpawnPrefab
 require("hof_mainfunctions")
 require("hof_upvaluehacker")
 
+local DF_COFFEE = GetModConfigData("COFFEEDROPRATE")
+
 -- Use to replace loot prefabs in their LootTables.
 local function ReplaceLoot(prefab, from, to)
     for i, tbl in ipairs(LootTables[prefab]) do
@@ -106,7 +108,6 @@ AddPrefabPostInit("lordfruitfly", function(inst)
 end)
 
 -- Dragonfly Drops Coffee Plants.
-local DF_COFFEE = GetModConfigData("COFFEEDROPRATE")
 AddPrefabPostInit("dragonfly", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst

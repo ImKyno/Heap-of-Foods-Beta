@@ -631,7 +631,7 @@ Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingre
 		no_deconstruction = true,
 		actionstr         = "GROW",
 		product           = "dug_monkeytail",
-		builder_tag       = "reedscrafter",         
+		builder_skill     = "wormwood_reedscrafting",         
 		sg_state          = "form_monkey", 
 		description       = "wormwood_reeds",
 		atlas 			  = DefaultAtlas1, 
