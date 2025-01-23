@@ -127,6 +127,19 @@ WarlyFood.monstertartare.oneatenfn = function(inst, eater)
 	end
 end
 
+-- For Preservation Powder Spice.
+for k, v in pairs(_G.MergeMaps(VanillaFood, WarlyFood)) do
+	AddPrefabPostInit(v, function(inst, data)
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+		
+		if inst.components.edible ~= nil then
+			inst.components.edible.degrades_with_spoilage = data.degrades_with_spoilage == nil or data.degrades_with_spoilage
+		end
+	end)
+end
+
 -- Foods that will have their action "Eat" replaced to "Drink".
 local drinkable_foods =
 {

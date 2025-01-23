@@ -8998,3 +8998,23 @@ STRINGS.CHARACTERS.WARLY.DESCRIBE.SPOOKY_TACODILE = "A good creation."
 STRINGS.CHARACTERS.WURT.DESCRIBE.SPOOKY_TACODILE = "Scary!"
 STRINGS.CHARACTERS.WALTER.DESCRIBE.SPOOKY_TACODILE = "Don't worry, girl. It won't bite you."
 STRINGS.CHARACTERS.WANDA.DESCRIBE.SPOOKY_TACODILE = "A Tacozilla! Whaaa!"
+
+STRINGS.NAMES.SPICE_CURE = "Pó de Preservação"
+STRINGS.NAMES.SPICE_CURE_FOOD = "{food} Curado"
+STRINGS.RECIPE_DESC.SPICE_CURE = "Uma boa quantidade de pó curado para preservar suas comidas."
+
+STRINGS.NAMES.SPICE_COLD = "Flocos Congelados"
+STRINGS.NAMES.SPICE_COLD_FOOD = "{food} Gélido"
+STRINGS.RECIPE_DESC.SPICE_COLD = "Congele seus inimigos brevemente!"
+
+STRINGS.NAMES.SPICE_FIRE = "Cristais de Brasa"
+STRINGS.NAMES.SPICE_FIRE_FOOD = "{food} Ardente"
+STRINGS.RECIPE_DESC.SPICE_FIRE = "Ateie fogo em seus inimigos!"
+
+STRINGS.NAMES.SPICE_FED = "Amido Recheado"
+STRINGS.NAMES.SPICE_FED_FOOD = "{food} Recheado"
+STRINGS.RECIPE_DESC.SPICE_FED = "Alto rendimento de calorias para trabalhar com eficiência."
+
+STRINGS.NAMES.SPICE_MIND = "Sal Apaziguante"
+STRINGS.NAMES.SPICE_MIND_FOOD = "{food} Sereno"
+STRINGS.RECIPE_DESC.SPICE_MIND = "Uma pitada de sal relaxante para acalmar a mente."

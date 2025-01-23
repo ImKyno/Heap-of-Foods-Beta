@@ -565,6 +565,16 @@ local HOF_ICONS =
 	"smores",
 	"snakebonesoup",
 	"soulstew",
+	"spice_cold",
+	"spice_cold_over",
+	"spice_cure",
+	"spice_cure_over",
+	"spice_fed",
+	"spice_fed_over",
+	"spice_fire",
+	"spice_fire_over",
+	"spice_mind",
+	"spice_mind_over",
 	"spidercake",
 	"spooky_brain_noodles",
 	"spooky_burgerzilla",
@@ -575,7 +585,6 @@ local HOF_ICONS =
 	"spooky_skullcandy",
 	"spooky_tacodile",
 	"steamedhamsandwich",
-	-- "strawberrygrinder",
 	"succulent_picked",
 	"sugarbombs",
 	"sweetpotatosouffle",
@@ -609,6 +618,7 @@ local HOF_ICONS =
 	"wine_pomegranate",
 	"wine_watermelon",
 	"wobstermonster",
+	-- "strawberrygrinder",
 }
 
 -- Dirty fix for icons not appearing on Mini Signs.

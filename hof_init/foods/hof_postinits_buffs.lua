@@ -23,6 +23,12 @@ if HOF_COFFEESPEED then
         "coffee_spice_sugar",
         "coffee_spice_chili",
         "coffee_spice_salt",
+		
+		"coffee_spice_cure",
+		"coffee_spice_fed",
+		"coffee_spice_cold",
+		"coffee_spice_fire",
+		"coffee_spice_mind",
     }
 
 	local bouillabaisse_speedbuff =
@@ -32,6 +38,12 @@ if HOF_COFFEESPEED then
         "tropicalbouillabaisse_spice_sugar",
         "tropicalbouillabaisse_spice_chili",
         "tropicalbouillabaisse_spice_salt",
+		
+		"tropicalbouillabaisse_spice_cure",
+		"tropicalbouillabaisse_spice_fed",
+		"tropicalbouillabaisse_spice_cold",
+		"tropicalbouillabaisse_spice_fire",
+		"tropicalbouillabaisse_spice_mind",
     }
 
 	local function CoffeePostinit(inst)
@@ -39,7 +51,11 @@ if HOF_COFFEESPEED then
 		{
 			SPICE_CHILI    = "buff_attack",
 			SPICE_GARLIC   = "buff_playerabsorption",
-			SPICE_SUGAR    = "buff_workeffectiveness"
+			SPICE_SUGAR    = "buff_workeffectiveness",
+			
+			SPICE_CURE     = "kyno_preserverbuff",
+			SPICE_COLD     = "kyno_freezebuff",
+			SPICE_FIRE     = "kyno_firebuff",
 		}
 
 		local function OnEatCoffee(inst, eater)
@@ -89,7 +105,11 @@ if HOF_COFFEESPEED then
 		{
 			SPICE_CHILI    = "buff_attack",
 			SPICE_GARLIC   = "buff_playerabsorption",
-			SPICE_SUGAR    = "buff_workeffectiveness"
+			SPICE_SUGAR    = "buff_workeffectiveness",
+			
+			SPICE_CURE     = "kyno_preserverbuff",
+			SPICE_COLD     = "kyno_freezebuff",
+			SPICE_FIRE     = "kyno_firebuff",
 		}
 
 		local function OnEatBouillabaisse(inst, eater)
@@ -179,6 +199,12 @@ if HOF_GIANTSPAWNING then
         "eyeballspaghetti_spice_sugar",
         "eyeballspaghetti_spice_chili",
         "eyeballspaghetti_spice_salt",
+		
+		"eyeballspaghetti_spice_cure",
+		"eyeballspaghetti_spice_fed",
+		"eyeballspaghetti_spice_cold",
+		"eyeballspaghetti_spice_fire",
+		"eyeballspaghetti_spice_mind",
     }
 
 	local gummybeargers_bossbuff =
@@ -188,6 +214,12 @@ if HOF_GIANTSPAWNING then
         "gummybeargers_spice_sugar",
         "gummybeargers_spice_chili",
         "gummybeargers_spice_salt",
+		
+		"gummybeargers_spice_cure",
+		"gummybeargers_spice_fed",
+		"gummybeargers_spice_cold",
+		"gummybeargers_spice_fire",
+		"gummybeargers_spice_mind",
 	}
 
 	local function EyeballspaghettiPostinit(inst)
@@ -195,7 +227,11 @@ if HOF_GIANTSPAWNING then
 		{
 			SPICE_CHILI    = "buff_attack",
 			SPICE_GARLIC   = "buff_playerabsorption",
-			SPICE_SUGAR    = "buff_workeffectiveness"
+			SPICE_SUGAR    = "buff_workeffectiveness",
+			
+			SPICE_CURE     = "kyno_preserverbuff",
+			SPICE_COLD     = "kyno_freezebuff",
+			SPICE_FIRE     = "kyno_firebuff",
 		}
 
 		local function OnEatEyeballspaghetti(inst, eater)
@@ -271,7 +307,11 @@ if HOF_GIANTSPAWNING then
 		{
 			SPICE_CHILI    = "buff_attack",
 			SPICE_GARLIC   = "buff_playerabsorption",
-			SPICE_SUGAR    = "buff_workeffectiveness"
+			SPICE_SUGAR    = "buff_workeffectiveness",
+			
+			SPICE_CURE     = "kyno_preserverbuff",
+			SPICE_COLD     = "kyno_freezebuff",
+			SPICE_FIRE     = "kyno_firebuff",
 		}
 
 		local function OnEatGummyBeargers(inst, eater)

@@ -217,7 +217,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 20,
 		hunger = 25,
 		sanity = -10,
@@ -235,7 +235,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 20,
 		hunger = 37.5,
 		sanity = -5,
@@ -2591,6 +2591,7 @@ local kyno_foods =
 for k, recipe in pairs(kyno_foods) do
 	recipe.name = k
 	recipe.weight = 1
+	recipe.overridebuild = k
 	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages.xml"
 	recipe.cookbook_tex = k..".tex"
 end

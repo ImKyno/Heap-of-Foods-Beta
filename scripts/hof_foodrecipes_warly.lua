@@ -246,6 +246,10 @@ local kyno_warly_foods =
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood", "honeyed"},
 		card_def = {ingredients = {{"berries", 1}, {"goatmilk", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
+		prefabs = { "kyno_heatbuff" },
+		oneatenfn = function(inst, eater)
+            eater:AddDebuff("kyno_heatbuff", "kyno_heatbuff")
+		end,
 	},
 	
 	cinnamonroll =
@@ -315,6 +319,10 @@ local kyno_warly_foods =
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood"},
 		card_def = {ingredients = {{"kyno_kokonut_halved", 1}, {"green_cap", 1}, {"succulent_picked", 1}, {"pepper", 1}}},
+		prefabs = { "kyno_coldbuff" },
+		oneatenfn = function(inst, eater)
+            eater:AddDebuff("kyno_coldbuff", "kyno_coldbuff")
+		end,
 	},
 	
 	risotto =
@@ -339,6 +347,7 @@ for k, recipe in pairs(kyno_warly_foods) do
 	recipe.name = k
 	recipe.weight = 1
 	-- recipe.cookbook_category = "portablecookpot"
+	recipe.overridebuild = k
 	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages.xml"
 	recipe.cookbook_tex = k..".tex"
 end

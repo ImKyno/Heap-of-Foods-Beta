@@ -55,16 +55,18 @@ end
 local function MakePreparedFood(data)
 	local foodname = data.basename or data.name
 	local foodassets = assets
-	
-	table.insert(foodassets, Asset("ANIM", "anim/"..foodname..".zip"))
-	local spicename = data.spice ~= nil and string.lower(data.spice) or nil
-	
-	if spicename ~= nil then
-		foodassets = shallowcopy(assets)
-		table.insert(foodassets, Asset("ANIM", "anim/spices.zip"))
-		table.insert(foodassets, Asset("ANIM", "anim/plate_food.zip"))
-		table.insert(foodassets, Asset("INV_IMAGE", spicename.."_over"))
+
+	if data.overridebuild then
+        table.insert(foodassets, Asset("ANIM", "anim/"..data.overridebuild..".zip"))
 	end
+
+	local spicename = data.spice ~= nil and string.lower(data.spice) or nil
+    if spicename ~= nil then
+        table.insert(foodassets, Asset("ANIM", "anim/spices.zip"))
+		table.insert(foodassets, Asset("ANIM", "anim/kyno_spices.zip"))
+        table.insert(foodassets, Asset("ANIM", "anim/plate_food.zip"))
+        table.insert(foodassets, Asset("INV_IMAGE", spicename.."_over"))
+    end
 
 	local function DisplayNameFn(inst)
 		return subfmt(STRINGS.NAMES[data.spice.."_FOOD"], { food = STRINGS.NAMES[string.upper(data.basename)] })
@@ -97,18 +99,21 @@ local function MakePreparedFood(data)
 			inst.AnimState:SetBank("plate_food")
 			inst.AnimState:PlayAnimation("idle")
 			inst.AnimState:OverrideSymbol("swap_garnish", "spices", spicename)
+			-- inst.AnimState:OverrideSymbol("swap_garnish", "kyno_spices", spicename)
 
 			inst:AddTag("spicedfood")
 
 			inst.inv_image_bg = { image = (data.basename or data.name)..".tex" }
             inst.inv_image_bg.atlas = GetInventoryItemAtlas(inst.inv_image_bg.image)
+			
+			-- food_symbol_build = data.overridebuild or "cook_pot_food"
 		else
-			inst.AnimState:SetBank(data.name)
-			inst.AnimState:SetBuild(data.name)
+			inst.AnimState:SetBuild(data.overridebuild or "cook_pot_food")
+			inst.AnimState:SetBank(data.overridebuild or "cook_pot_food")
 		end
 
 		inst.AnimState:PlayAnimation("idle", false)
-		inst.AnimState:OverrideSymbol("swap_food", foodname, foodname)
+		inst.AnimState:OverrideSymbol("swap_food", data.overridebuild or "cook_pot_food", data.basename or data.name)
 
 		inst:AddTag("preparedfood")
 		inst:AddTag("preparedfood_hof")
@@ -155,12 +160,15 @@ local function MakePreparedFood(data)
 		inst.components.edible.healthvalue = data.health
 		inst.components.edible.hungervalue = data.hunger
 		inst.components.edible.foodtype = data.foodtype or FOODTYPE.GENERIC
+		inst.components.edible.secondaryfoodtype = data.secondaryfoodtype or nil
 		inst.components.edible.sanityvalue = data.sanity or 0
 		inst.components.edible.temperaturedelta = data.temperature or 0
 		inst.components.edible.temperatureduration = data.temperatureduration or 0
 		inst.components.edible.nochill = data.nochill or nil
 		inst.components.edible.spice = data.spice
 		inst.components.edible:SetOnEatenFn(data.oneatenfn)
+		-- inst.components.edible.degrades_with_spoilage = data.degradespoilage or true
+		inst.components.edible.degrades_with_spoilage = data.degrades_with_spoilage == nil or data.degrades_with_spoilage
 
 		inst:AddComponent("inventoryitem")
 		if spicename ~= nil then
