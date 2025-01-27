@@ -185,7 +185,7 @@ local kyno_warly_foods =
 	
 	jellybean_hunger =
 	{
-		test = function(cooker, names, tags) return names.royal_jelly and names.butter and tags.sweetener and not tags.inedible 
+		test = function(cooker, names, tags) return names.royal_jelly and tags.butter and tags.sweetener and not tags.inedible 
 		and not tags.monster and not tags.sugar end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
@@ -254,7 +254,7 @@ local kyno_warly_foods =
 	
 	cinnamonroll =
 	{
-		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_syrup and names.kyno_spotspice and names.butter end,
+		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_syrup and names.kyno_spotspice and tags.butter end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FAST,

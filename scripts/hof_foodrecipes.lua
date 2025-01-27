@@ -1857,7 +1857,7 @@ local kyno_foods =
 	
 	pretzel =
 	{
-		test = function(cooker, names, tags) return names.butter and names.kyno_salt and (names.kyno_flour and names.kyno_flour >= 2) end,
+		test = function(cooker, names, tags) return tags.butter and names.kyno_salt and (names.kyno_flour and names.kyno_flour >= 2) end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
@@ -1872,7 +1872,7 @@ local kyno_foods =
 	
 	cornincup =
 	{
-		test = function(cooker, names, tags) return names.kyno_salt and (names.butter or tags.cheese) and (names.pepper or names.pepper_cooked) and
+		test = function(cooker, names, tags) return names.kyno_salt and (tags.butter or tags.cheese) and (names.pepper or names.pepper_cooked) and
 		(names.corn or names.corn_cooked) end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -2088,7 +2088,7 @@ local kyno_foods =
 	
 	pumpkin_soup =
 	{
-		test = function(cooker, names, tags) return ((names.pumpkin or 0) + (names.pumpkin_cooked or 0) >= 2) and names.butter and names.kyno_spotspice end,
+		test = function(cooker, names, tags) return ((names.pumpkin or 0) + (names.pumpkin_cooked or 0) >= 2) and tags.butter and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,

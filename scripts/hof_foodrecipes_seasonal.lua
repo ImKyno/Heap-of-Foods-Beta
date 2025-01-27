@@ -391,7 +391,7 @@ local kyno_foods_seasonal =
 	
 	spooky_deadbread =
 	{
-		test = function(cooker, names, tags) return names.boneshard and names.kyno_sugar and names.kyno_flour and names.butter 
+		test = function(cooker, names, tags) return names.boneshard and names.kyno_sugar and names.kyno_flour and tags.butter 
 		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,

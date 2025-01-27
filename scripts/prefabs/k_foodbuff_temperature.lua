@@ -6,6 +6,8 @@ local function OnAttachedCold(inst, target)
 		target.components.temperature:SetFreezingHurtRate(TUNING.WILSON_HEALTH / 180)
 	end
 	
+	print("Cold buff enabled")
+	
     inst:ListenForEvent("death", function()
         inst.components.debuff:Stop()
     end, target)
@@ -19,6 +21,8 @@ local function OnAttachedHeat(inst, target)
 		target.components.temperature:SetOverheatHurtRate(TUNING.WILSON_HEALTH / 180)
 	end
 	
+	print("Heat buff enabled")
+	
     inst:ListenForEvent("death", function()
         inst.components.debuff:Stop()
     end, target)
@@ -31,6 +35,8 @@ local function OnDetachedCold(inst, target)
 		target.components.temperature:SetFreezingHurtRate(TUNING.WILSON_HEALTH / TUNING.WILLOW_FREEZING_KILL_TIME)
 	end
 	
+	print("Cold buff disabled")
+	
     inst:Remove()
 end
 
@@ -40,6 +46,8 @@ local function OnDetachedHeat(inst, target)
 	elseif target:HasTag("bernieowner") and target.components.temperature ~= nil then
 		target.components.temperature:SetOverheatHurtRate(TUNING.WILSON_HEALTH / TUNING.WILLOW_OVERHEAT_KILL_TIME)
 	end
+	
+	print("Heat buff disabled")
 	
     inst:Remove()
 end

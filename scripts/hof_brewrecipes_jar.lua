@@ -820,6 +820,48 @@ local kyno_foods_jar =
         end,
 	},
 	
+	butter_beefalo =
+	{
+		test = function(brewer, names, tags) return names.kyno_milk_beefalo and (names.kyno_milk_beefalo == 2) and names.kyno_salt end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 0,
+		hunger = 25,
+		sanity = 40,
+		cooktime = 96,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_milk_beefalo", 2}, {"kyno_salt", 1}}},
+	},
+	
+	butter_goat =
+	{
+		test = function(brewer, names, tags) return names.goatmilk and (names.goatmilk == 2) and names.kyno_salt end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 25,
+		hunger = 40,
+		sanity = 0,
+		cooktime = 96,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"goatmilk", 2}, {"kyno_salt", 1}}},
+	},
+	
+	butter_koalefant =
+	{
+		test = function(brewer, names, tags) return names.kyno_milk_koalefant and (names.kyno_milk_koalefant == 2) and names.kyno_salt end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 20,
+		hunger = 25,
+		sanity = 20,
+		cooktime = 96,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_milk_koalefant", 2}, {"kyno_salt", 1}}},
+	},
+	
 	-- This recipe is for when brewing an invalid product, we need this to prevent a crash.
 	wetgoop2 =
 	{

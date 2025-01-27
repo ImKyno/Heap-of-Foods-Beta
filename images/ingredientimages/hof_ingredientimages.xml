@@ -1,27 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Atlas>
-	<Texture filename="hof_ingredientimages.tex" />
-	<Elements>
-		<Element name="algae.tex" u1="0.001" u2="0.124" v2="0.999" v1="0.751" variant="" />
-		<Element name="bacon.tex" u1="0.126" u2="0.249" v2="0.999" v1="0.751" variant="" />
-		<Element name="banana.tex" u1="0.001" u2="0.124" v2="0.749" v1="0.501" variant="" />
-		<Element name="beanbug.tex" u1="0.126" u2="0.249" v2="0.749" v1="0.501" variant="" />
-		<Element name="berries.tex" u1="0.251" u2="0.374" v2="0.999" v1="0.751" variant="" />
-		<Element name="bread.tex" u1="0.376" u2="0.499" v2="0.999" v1="0.751" variant="" />
-		<Element name="cheese.tex" u1="0.251" u2="0.374" v2="0.749" v1="0.501" variant="" />
-		<Element name="chocolate.tex" u1="0.376" u2="0.499" v2="0.749" v1="0.501" variant="" />
-		<Element name="crab.tex" u1="0.001" u2="0.124" v2="0.499" v1="0.251" variant="" />
-		<Element name="foliage.tex" u1="0.126" u2="0.249" v2="0.499" v1="0.251" variant="" />
-		<Element name="gummybug.tex" u1="0.251" u2="0.374" v2="0.499" v1="0.251" variant="" />
-		<Element name="limpet.tex" u1="0.376" u2="0.499" v2="0.499" v1="0.251" variant="" />
-		<Element name="mayonnaise.tex" u1="0.001" u2="0.124" v2="0.249" v1="0.001" variant="" />
-		<Element name="milk.tex" u1="0.126" u2="0.249" v2="0.249" v1="0.001" variant="" />
-		<Element name="mushroom.tex" u1="0.251" u2="0.374" v2="0.249" v1="0.001" variant="" />
-		<Element name="mussel.tex" u1="0.376" u2="0.499" v2="0.249" v1="0.001" variant="" />
-		<Element name="piko.tex" u1="0.501" u2="0.624" v2="0.999" v1="0.751" variant="" />
-		<Element name="roe.tex" u1="0.626" u2="0.749" v2="0.999" v1="0.751" variant="" />
-		<Element name="salmon.tex" u1="0.751" u2="0.874" v2="0.999" v1="0.751" variant="" />
-		<Element name="spotspice.tex" u1="0.876" u2="0.999" v2="0.999" v1="0.751" variant="" />
-		<Element name="sugar.tex" u1="0.501" u2="0.624" v2="0.749" v1="0.501" variant="" />
-	</Elements>
+    <Texture filename="hof_ingredientimages.tex" />
+    <Elements>
+        <Element name="algae.tex" u1="0.0009765625" v1="0.751953125" u2="0.1240234375" v2="0.998046875" />
+        <Element name="bacon.tex" u1="0.1259765625" v1="0.751953125" u2="0.2490234375" v2="0.998046875" />
+        <Element name="banana.tex" u1="0.2509765625" v1="0.751953125" u2="0.3740234375" v2="0.998046875" />
+        <Element name="beanbug.tex" u1="0.3759765625" v1="0.751953125" u2="0.4990234375" v2="0.998046875" />
+        <Element name="berries.tex" u1="0.5009765625" v1="0.751953125" u2="0.6240234375" v2="0.998046875" />
+        <Element name="bread.tex" u1="0.6259765625" v1="0.751953125" u2="0.7490234375" v2="0.998046875" />
+        <Element name="butter.tex" u1="0.7509765625" v1="0.751953125" u2="0.8740234375" v2="0.998046875" />
+        <Element name="cheese.tex" u1="0.8759765625" v1="0.751953125" u2="0.9990234375" v2="0.998046875" />
+        <Element name="chocolate.tex" u1="0.0009765625" v1="0.501953125" u2="0.1240234375" v2="0.748046875" />
+        <Element name="crab.tex" u1="0.1259765625" v1="0.501953125" u2="0.2490234375" v2="0.748046875" />
+        <Element name="foliage.tex" u1="0.2509765625" v1="0.501953125" u2="0.3740234375" v2="0.748046875" />
+        <Element name="gummybug.tex" u1="0.3759765625" v1="0.501953125" u2="0.4990234375" v2="0.748046875" />
+        <Element name="limpet.tex" u1="0.5009765625" v1="0.501953125" u2="0.6240234375" v2="0.748046875" />
+        <Element name="mayonnaise.tex" u1="0.6259765625" v1="0.501953125" u2="0.7490234375" v2="0.748046875" />
+        <Element name="milk.tex" u1="0.7509765625" v1="0.501953125" u2="0.8740234375" v2="0.748046875" />
+        <Element name="mushroom.tex" u1="0.8759765625" v1="0.501953125" u2="0.9990234375" v2="0.748046875" />
+        <Element name="mussel.tex" u1="0.0009765625" v1="0.251953125" u2="0.1240234375" v2="0.498046875" />
+        <Element name="piko.tex" u1="0.1259765625" v1="0.251953125" u2="0.2490234375" v2="0.498046875" />
+        <Element name="roe.tex" u1="0.2509765625" v1="0.251953125" u2="0.3740234375" v2="0.498046875" />
+        <Element name="salmon.tex" u1="0.3759765625" v1="0.251953125" u2="0.4990234375" v2="0.498046875" />
+        <Element name="spotspice.tex" u1="0.5009765625" v1="0.251953125" u2="0.6240234375" v2="0.498046875" />
+        <Element name="sugar.tex" u1="0.6259765625" v1="0.251953125" u2="0.7490234375" v2="0.498046875" />
+    </Elements>
 </Atlas>

@@ -109,6 +109,14 @@ VanillaFood.monsterlasagna.oneatenfn = function(inst, eater)
 	end
 end
 
+VanillaFood.waffles.test = function(cooker, names, tags)
+	return tags.butter and (names.berries or names.berries_cooked or names.berries_juicy or names.berries_juicy_cooked) and tags.egg
+end
+
+VanillaFood.lobsterdinner.test = function(cooker, names, tags)
+	return names.wobster_sheller_land and tags.butter and (tags.meat and tags.meat >= 1.0) and (tags.fish and tags.fish >= 1.0) and not tags.frozen
+end
+
 -- Tweaks for Warly's foods.
 local WarlyFood = require("preparedfoods_warly")
 WarlyFood.monstertartare.test = function(cooker, names, tags)
@@ -125,6 +133,10 @@ WarlyFood.monstertartare.oneatenfn = function(inst, eater)
 		eater.components.health:DoDelta(20)
 		eater.components.sanity:DoDelta(20)
 	end
+end
+
+WarlyFood.freshfruitcrepes.test = function(cooker, names, tags)
+	return tags.fruit and tags.fruit >= 1.5 and tags.butter and names.honey
 end
 
 -- For Preservation Powder Spice.

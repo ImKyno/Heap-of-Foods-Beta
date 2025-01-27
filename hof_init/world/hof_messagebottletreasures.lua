@@ -37,7 +37,7 @@ for treasureprefab, weighted_lists in pairs(weighted_treasure_contents) do
                         randomly_selected_loot =
                         {
                             { kyno_sodacan = .25 }, 
-							{ kyno_tuncan = .25 }, 
+							{ kyno_tunacan = .25 }, 
 							{ kyno_energycan = .25 },
                         }
                     },

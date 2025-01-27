@@ -45,6 +45,7 @@ AddBrewingValues({"bird_egg"},					{egg        = 1})
 AddBrewingValues({"nightmarefuel"},             {inedible   = 1,   magic         = 1})
 AddBrewingValues({"ice"},                       {frozen     = 1})
 AddBrewingValues({"ancientfruit_nightvision"},  {fruit      = 1})
+AddBrewingValues({"goatmilk"},                  {dairy      = 1,   milk          = 1})
 
 -- Mod Wooden Keg and Preserves Jar Ingredients.
 AddBrewingValues({"kyno_wheat"}, 				{veggie     = 1,   wheat         = 1})
@@ -79,6 +80,8 @@ AddBrewingValues({"kyno_rice"},                 {veggie     = 1})
 AddBrewingValues({"kyno_pineapple_halved"},		{fruit      = 1,   pineapple     = 1})
 AddBrewingValues({"nukacola"},                  {soda       = 1})
 AddBrewingValues({"nukacola_quantum"},          {soda       = 1,   quantum       = 1})
+AddBrewingValues({"kyno_milk_beefalo"},         {dairy      = 1,   milk          = 1})
+AddBrewingValues({"kyno_milk_koalefant"},       {dairy      = 1,   milk          = 1})
 
 -- Import the Beverages.
 local brewer_jar   = {"kyno_preservesjar"}
