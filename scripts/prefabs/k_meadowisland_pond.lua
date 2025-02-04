@@ -20,7 +20,7 @@ local prefabs =
 
 local function SpawnPlants(inst, plantname, count, maxradius)
 	if inst.decor then
-		for i,item in ipairs(inst.decor) do
+		for i, item in ipairs(inst.decor) do
 			item:Remove()
 		end
 	end
@@ -28,11 +28,11 @@ local function SpawnPlants(inst, plantname, count, maxradius)
 	inst.decor = {}
 	local plant_offsets = {}
 
-	for i=1, math.random(math.ceil(count/2), count) do
-		local a = math.random()*math.pi*2
-		local x = math.sin(a)*maxradius+math.random()*0.3
-		local z = math.cos(a)*maxradius+math.random()*0.3
-		table.insert(plant_offsets, {x,0,z})
+	for i = 1, math.random(math.ceil(count / 2), count) do
+		local a = math.random() * math.pi * 2
+		local x = math.sin(a) * maxradius + math.random() * 0.3
+		local z = math.cos(a) * maxradius + math.random() * 0.3
+		table.insert(plant_offsets, {x, 0, z})
 	end
 
 	for k, offset in pairs(plant_offsets) do
@@ -51,7 +51,7 @@ local sizes =
 }
 
 local function SetSize(inst, size)
-	inst.size = math.random(1, #sizes)
+	inst.size = size or math.random(1, #sizes)
 	inst.AnimState:PlayAnimation(sizes[inst.size].anim, true)
 	inst.Physics:SetCylinder(sizes[inst.size].rad, 1.0)
 	SpawnPlants(inst, "kyno_meadowisland_planty", sizes[inst.size].plantcount, sizes[inst.size].plantrad)

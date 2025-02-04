@@ -2050,9 +2050,14 @@ local kyno_foods =
 		hunger = 150,
 		sanity = 5,
 		cooktime = 1,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FISHING,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"pondeel", 1}, {"kyno_mussel", 1}, {"kyno_grouper", 1}, {"kelp", 1}}},
+		prefabs = { "kyno_fishingbuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_fishingbuff", "kyno_fishingbuff")
+		end,
 	},
 	
 	minertreat =
@@ -2568,6 +2573,50 @@ local kyno_foods =
 				inst.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
 			end
 		end,
+	},
+	
+	moonbutterflymuffin =
+	{
+		test = function(cooker, names, tags) return names.moonbutterflywings and not tags.meat and (tags.veggie and tags.veggie >= 0.5) end,
+		priority = 1,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 5,
+		hunger = 37.5,
+		sanity = 20,
+		cooktime = 2,
+		nameoverride = "BUTTERFLYMUFFIN",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"moonbutterflywings", 1}, {"carrot", 1}, {"twigs", 2}}},
+	},
+	
+	sugarflymuffin =
+	{
+		test = function(cooker, names, tags) return names.kyno_sugarflywings and not tags.meat and (tags.veggie and tags.veggie >= 0.5) end,
+		priority = 1,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 20,
+		hunger = 18.75,
+		sanity = 20,
+		cooktime = 2,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_sugarflywings", 1}, {"carrot", 1}, {"twigs", 2}}},
+	},
+	
+	eeltacos =
+	{
+		test = function(cooker, names, tags) return (names.eel or names.pondeel or names.eel_cooked) and 
+		(names.corn or names.corn_cooked or names.oceanfish_small_5_inv or names.oceanfish_medium_5_inv) and names.cutlichen end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FAST,
+		health = 5,
+		hunger = 37.5,
+		sanity = 20,
+		cooktime = .5,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"pondeel", 1}, {"corn", 1}, {"cutlichen", 2}}},
 	},
 	
 	--[[

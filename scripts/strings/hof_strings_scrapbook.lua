@@ -26,7 +26,7 @@ STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "Pickles"
 
 -- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "Increased movement speed for a certain amount of time."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_COFFEE = "Increased movement speed for a certain amount of time.\nBriefly increases the temperature.\n\nHasta la vista, baby!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_COFFEE = "Increased movement speed and sleep resistance for a certain amount of time. Briefly increases the temperature.\n\nHasta la vista, baby!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SLEEP = "Increased sleep resistance for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALTHREGEN = "Gives off health regeneration for a short period."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERREGEN = "Gives off hunger regeneration for a short period."
@@ -61,6 +61,12 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE = "Nukashine was created by 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE2 = "Now without any risk of blackouts! Enjoy the party!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BONESOUP = "Increased damage against worms for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_REVIVER = "Instantly revives a dead player when haunted."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOCHA = "Increased movement speed, sleep resistance and decreased hunger loss rate for a certain amount of time.\n\nBriefly increases the temperature."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSFREEZING = "Briefly increases temperature and become less susceptible to Freezing."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSOVERHEAT = "Briefly decreases temperature and become less susceptible to Overheat."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FISHING = "Increased fishing yields for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIGHTNESS = "Gives off a bit of mightness."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INSPIRATION = "Gives off a bit of inspiration."
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "Using a pinch of salt on a crock pot food will refresh its spoilage time by 30%. Don't worry about eating stale dishes again!"

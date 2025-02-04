@@ -1,4 +1,5 @@
 require("tuning")
+require("cooking")
 
 local foods       = require("preparedfoods")
 local foods_w     = require("preparedfoods_warly")
@@ -7,18 +8,6 @@ local foods_hof_w = require("hof_foodrecipes_warly")
 local foods_hof_s = require("hof_foodrecipes_seasonal")
 
 local hof_spicedfoods = {}
-
-local function checkeaterfn(inst, eater)
-    local results = false
-	
-    if eater.components.debuffable ~= nil and eater.components.debuffable:IsEnabled() and
-        not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-        not eater:HasTag("playerghost") then
-        results =  true
-    end
-	
-    return results
-end
 
 local function oneaten_cold(inst, eater)
     eater:AddDebuff("kyno_freezebuff", "kyno_freezebuff")
@@ -31,8 +20,8 @@ end
 local HOF_SPICES =
 {	
 	SPICE_CURE   = {},
-	SPICE_COLD   = { oneatenfn = oneaten_cold,   prefabs = { "kyno_freezebuff" } },
-	SPICE_FIRE   = { oneatenfn = oneaten_fire,   prefabs = { "kyno_firebuff"   } },
+	SPICE_COLD   = { oneatenfn = oneaten_cold, prefabs = { "kyno_freezebuff" } },
+	SPICE_FIRE   = { oneatenfn = oneaten_fire, prefabs = { "kyno_firebuff"   } },
 	SPICE_MIND   = {},
 	SPICE_FED    = {},
  -- SPICE_MOON   = {},
@@ -43,6 +32,7 @@ function AnimState:OverrideSymbol(symbol, override_build, override_symbol, ...)
     if symbol == "swap_garnish" and override_build == "spices" and HOF_SPICES[override_symbol:upper()] then
         override_build = "kyno_spices"
     end
+	
     return anim_state_override_symbol(self, symbol, override_build, override_symbol, ...)
 end
 
@@ -118,11 +108,10 @@ function GenerateHofSpicedFoods(foods)
     end
 end
 
+local spicedfoods = require("spicedfoods")
 GenerateSpicedFoods(MergeMaps(foods_hof, foods_hof_w, foods_hof_s))
 
-local oldspices = require("spicedfoods")
-
-for k, data in pairs(oldspices) do
+for k, data in pairs(spicedfoods) do
     for name, v in pairs(MergeMaps(foods_hof, foods_hof_w, foods_hof_s)) do
         if data.basename == name then
             hof_spicedfoods[k] = data

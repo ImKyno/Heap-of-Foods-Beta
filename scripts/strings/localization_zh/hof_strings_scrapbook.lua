@@ -26,7 +26,7 @@ STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "腌菜"
 
 -- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "在一定时间内提高移动速度。"
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_COFFEE = "在一定时间内提高移动速度。\n短暂升温。\n\n再见，宝贝！"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_COFFEE = "Increased movement speed and sleep resistance for a certain amount of time. Briefly increases the temperature.\n\nHasta la vista, baby!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SLEEP = "在一定时间内增加催眠抗性。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALTHREGEN = "短时间内回复生命值。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERREGEN = "短时间内回复饥饿值。"
@@ -61,6 +61,12 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE = "Nukashine是由Vault-Tec�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE2 = "现在没有任何混乱风险！尽情狂欢吧！"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BONESOUP = "在一定时间内提高对虫子的伤害。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_REVIVER = "在闹鬼时立即复活死去的玩家。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOCHA = "Increased movement speed, sleep resistance and decreased hunger loss rate for a certain amount of time.\n\nBriefly increases the temperature."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSFREEZING = "Briefly increases temperature and become less susceptible to Freezing."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSOVERHEAT = "Briefly decreases temperature and become less susceptible to Overheat."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FISHING = "Increased fishing yields for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIGHTNESS = "Gives off a bit of mightness."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INSPIRATION = "Gives off a bit of inspiration."
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "在烹饪锅里放一小撮盐，食物的变质时间就会缩短30%。再也不用担心吃到变质的菜肴了！"

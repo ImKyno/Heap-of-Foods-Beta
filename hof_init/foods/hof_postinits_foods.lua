@@ -75,7 +75,7 @@ VanillaFood.bananajuice.test = function(cooker, names, tags)
 end
 
 VanillaFood.butterflymuffin.test = function(cooker, names, tags)
-	return (names.butterflywings or names.moonbutterflywings or names.kyno_sugarflywings) and not tags.meat and tags.veggie and tags.veggie >= 0.5
+	return names.butterflywings and not tags.meat and tags.veggie and tags.veggie >= 0.5
 end
 
 VanillaFood.leafloaf.test = function(cooker, names, tags)
@@ -115,6 +115,16 @@ end
 
 VanillaFood.lobsterdinner.test = function(cooker, names, tags)
 	return names.wobster_sheller_land and tags.butter and (tags.meat and tags.meat >= 1.0) and (tags.fish and tags.fish >= 1.0) and not tags.frozen
+end
+
+VanillaFood.fishtacos.test = function(cooker, names, tags)
+	return tags.fish and (names.corn or names.corn_cooked or names.oceanfish_small_5_inv or names.oceanfish_medium_5_inv) 
+	and not (names.eel or names.pondeel or names.eel_cooked)
+end
+
+VanillaFood.unagi.test = function(cooker, names, tags)
+	return (names.cutlichen or names.kelp or names.kelp_cooked or names.kelp_dried) and (names.eel or names.eel_cooked or names.pondeel) 
+	and not (names.corn or names.corn_cooked or names.oceanfish_small_5_inv or names.oceanfish_medium_5_inv)
 end
 
 -- Tweaks for Warly's foods.

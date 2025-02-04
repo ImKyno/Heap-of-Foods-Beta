@@ -1036,6 +1036,25 @@ local kyno_foods_keg =
 			eater:AddDebuff("kyno_dmgreductionbuff", "kyno_dmgreductionbuff")
 		end,
 	},
+	
+	coffee_mocha =
+	{
+		test = function(brewer, names, tags) return names.kyno_coffeebeans_cooked and (names.kyno_coffeebeans_cooked == 2) and tags.chocolate end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SLOW,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_BRIEF,
+		health = -10,
+		hunger = 33,
+		sanity = 33, 
+		cooktime = 72,
+		nameoverride = "COFFEE",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HUNGERRATE,
+		floater = {"med", nil, 0.65},
+		tags = {"drinkable_food"},
+		card_def = {ingredients = {{"kyno_coffeebeans_cooked", "chocolate_black"}}},
+	},
 
 	-- This recipe is for when brewing an invalid product, we need this to prevent a crash.
 	wetgoop2 =

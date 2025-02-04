@@ -82,6 +82,9 @@ AddBrewingValues({"nukacola"},                  {soda       = 1})
 AddBrewingValues({"nukacola_quantum"},          {soda       = 1,   quantum       = 1})
 AddBrewingValues({"kyno_milk_beefalo"},         {dairy      = 1,   milk          = 1})
 AddBrewingValues({"kyno_milk_koalefant"},       {dairy      = 1,   milk          = 1})
+AddBrewingValues({"kyno_coffeebeans_cooked"},   {seeds      = 1})
+AddBrewingValues({"chocolate_black"},           {sweetener  = 1,   chocolate     = 1})
+AddBrewingValues({"chocolate_white"},           {sweetener  = 1,   chocolate     = 1})
 
 -- Import the Beverages.
 local brewer_jar   = {"kyno_preservesjar"}

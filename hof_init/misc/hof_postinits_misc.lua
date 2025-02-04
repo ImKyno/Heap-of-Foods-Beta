@@ -353,11 +353,43 @@ if HOF_KEEPFOOD then
     end
 end
 
--- For using Salt on Crock Pot foods.
+-- For using Salt on Crock Pot foods. 
 AddComponentPostInit("edible", function(self, inst)
     if not inst.components.saltable and inst:HasTag("preparedfood") then
         inst:AddComponent("saltable")
     end
+	
+	-- Stuffed Starch spice tweak.
+	function self:GetHunger(eater)
+		local multiplier = 1
+		local spice_source = self.spice
+		
+		local ignore_spoilage = not self.degrades_with_spoilage or self.hungervalue < 0 or 
+		(eater ~= nil and eater.components.eater ~= nil and eater.components.eater.ignoresspoilage)
+		
+		if not ignore_spoilage and self.inst.components.perishable ~= nil then
+			if self.inst.components.perishable:IsStale() then
+				multiplier = eater ~= nil and eater.components.eater ~= nil and eater.components.eater.stale_hunger or self.stale_hunger
+			elseif self.inst.components.perishable:IsSpoiled() then
+				multiplier = eater ~= nil and eater.components.eater ~= nil and eater.components.eater.spoiled_hunger or self.spoiled_hunger
+				spice_source = nil
+			end
+		end
+		
+		if eater ~= nil and eater.components.foodaffinity ~= nil then
+			local affinity_bonus = eater.components.foodaffinity:GetAffinity(self.inst)
+			
+			if affinity_bonus ~= nil then
+				multiplier = multiplier * affinity_bonus
+			end
+		end
+		
+		if spice_source and TUNING.SPICE_MULTIPLIERS[spice_source] and TUNING.SPICE_MULTIPLIERS[spice_source].HUNGER then
+			multiplier = multiplier + TUNING.SPICE_MULTIPLIERS[spice_source].HUNGER
+		end
+		
+		return multiplier * self.hungervalue
+	end
 end)
 
 -- Speed boost for the White Stone Road.
@@ -379,5 +411,67 @@ AddComponentPostInit("debuffable", function(self)
         for name, _ in pairs(self.debuffs) do
             self:RemoveDebuff(name)
         end
+    end
+end)
+
+-- Uuugh. Our mod spices have a nasty bug regarding foodaffinity, I don't know how to fix it yet.
+-- This is a temporary workaround for it to work with favorite foods.
+AddComponentPostInit("foodaffinity", function(self)
+	local spicedfoods = _G.MergeMaps(require("spicedfoods"), require("hof_foodspicer"))
+	
+	function self:GetFoodBasePrefab(food)
+		local prefab = food.prefab
+		return spicedfoods[prefab] and spicedfoods[prefab].basename or prefab
+	end
+end)
+
+-- For increasing fishing yields.
+AddComponentPostInit("fishingrod", function(self)
+    local oldReel = self.Reel
+    function self:Reel(...)
+        local ret = {oldReel(self, ...)}
+
+		if self.target ~= nil and self.caughtfish ~= nil and self.fisherman ~= nil and self.fisherman:HasTag("skilledfisherman") then
+			local extraFish = SpawnPrefab(self.caughtfish.prefab)
+			
+			if self.fisherman ~= nil and extraFish.components.weighable ~= nil then
+				extraFish.components.weighable:SetPlayerAsOwner(self.fisherman)
+			end
+            
+			local spawnPos = self.fisherman:GetPosition()
+			local offset = spawnPos - self.target:GetPosition()
+			spawnPos = spawnPos + offset:GetNormalized()
+            
+			self.inst:DoTaskInTime(.8, function()
+				if extraFish.Physics ~= nil then
+					extraFish.Physics:Teleport(spawnPos:Get())
+				else
+					extraFish.Transform:SetPosition(spawnPos:Get())
+				end
+			end)
+				
+			-- Random chance for one more extra fish.
+			if math.random() < .33 then
+				local extraFish2 = SpawnPrefab(self.caughtfish.prefab)
+				
+				if self.fisherman ~= nil and extraFish2.components.weighable ~= nil then
+					extraFish2.components.weighable:SetPlayerAsOwner(self.fisherman)
+				end
+					
+				local spawnPos = self.fisherman:GetPosition()
+				local offset = spawnPos - self.target:GetPosition()
+				spawnPos = spawnPos + offset:GetNormalized()
+				
+				self.inst:DoTaskInTime(.8, function()
+					if extraFish2.Physics ~= nil then
+						extraFish2.Physics:Teleport(spawnPos:Get())
+					else
+						extraFish2.Transform:SetPosition(spawnPos:Get())
+					end
+				end)
+			end
+		end
+
+        return unpack(ret)
     end
 end)

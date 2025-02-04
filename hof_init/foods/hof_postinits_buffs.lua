@@ -76,8 +76,10 @@ if HOF_COFFEESPEED then
 			else
 				if inst.components.eater ~= nil then
 					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
+					
 					eater:DoTaskInTime(HOF_COFFEEDURATION, function(inst, eater)
 						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
+						eater.components.grogginess:RemoveResistanceSource(eater, "kyno_coffeebuff")
 
 						if eater.components.talker and eater:HasTag("player") then
 							eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
@@ -130,8 +132,10 @@ if HOF_COFFEESPEED then
 			else
 				if inst.components.eater ~= nil then
 					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
+					
 					eater:DoTaskInTime(HOF_COFFEEDURATION, function(inst, eater)
 						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
+						eater.components.grogginess:RemoveResistanceSource(eater, "kyno_coffeebuff")
 
 						if eater.components.talker and eater:HasTag("player") then
 							eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
@@ -168,8 +172,10 @@ if HOF_COFFEESPEED then
 			else
 				if inst.components.eater ~= nil then
 					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
+					
 					eater:DoTaskInTime(TUNING.KYNO_COFFEEBUFF_DURATION_SMALL, function(inst, eater)
 						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
+						eater.components.grogginess:RemoveResistanceSource(eater, "kyno_coffeebuff")
 
 						if eater.components.talker and eater:HasTag("player") then
 							eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
@@ -189,6 +195,45 @@ if HOF_COFFEESPEED then
 	end
 	
 	AddPrefabPostInit("kyno_coffeebeans_cooked", CoffeeBeansPostInit)
+	
+	local function MochaPostinit(inst)
+		local function OnEatMocha(inst, eater)
+			if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
+				return
+			elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
+				eater.mochabuff_duration = HOF_COFFEEDURATION
+				eater.components.debuffable:AddDebuff("kyno_hungerratebuff", "kyno_hungerratebuff")
+
+				if eater.components.talker and eater:HasTag("player") then
+					eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
+				end
+			else
+				if inst.components.eater ~= nil then
+					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_hungerratebuff", TUNING.KYNO_MOCHABUFF_SPEED)
+					
+					eater:DoTaskInTime(HOF_COFFEEDURATION, function(inst, eater)
+						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_hungerratebuff")
+						eater.components.grogginess:RemoveResistanceSource(eater, "kyno_hungerratebuff")
+						eater.components.hunger.burnratemodifiers:RemoveModifier(eater, "kyno_hungerratebuff")
+
+						if eater.components.talker and eater:HasTag("player") then
+							eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
+						end
+					end)
+				end
+			end
+		end
+
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+
+		if inst.components.edible ~= nil then
+			inst.components.edible:SetOnEatenFn(OnEatMocha)
+		end
+	end
+
+    AddPrefabPostInit("coffee_mocha", MochaPostinit)
 end
 
 if HOF_GIANTSPAWNING then
