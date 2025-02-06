@@ -754,6 +754,7 @@ local HOF_SCRAPBOOK_ITEMS =
 	kyno_fishpackage   =
 	{
 		name           = "kyno_fishpackage",
+		speechname     = "HERMIT_BUNDLE",
 		type           = "item",
 		tex            = "hermit_bundle.tex",
 		prefab         = "kyno_fishpackage",
@@ -761,7 +762,22 @@ local HOF_SCRAPBOOK_ITEMS =
 		bank           = "hermit_bundle",
 		build          = "hermit_bundle",
 		anim           = "idle_onesize",
-		deps           = {"kyno_tropicalfish", "kyno_koi", "kyno_grouper", "kyno_neonfish", "kyno_pierrotfish"},
+		deps           = {"kyno_tropicalfish", "kyno_koi", "kyno_grouper", "kyno_neonfish", "kyno_pierrotfish", "sunkenchest"},
+		specialinfo    = "BUNDLE",
+	},
+
+	kyno_mobpackage    =
+	{
+		name           = "kyno_mobpackage",
+		speechname     = "HERMIT_BUNDLE",
+		type           = "item",
+		tex            = "hermit_bundle.tex",
+		prefab         = "kyno_mobpackage",
+		burnable       = true,
+		bank           = "hermit_bundle",
+		build          = "hermit_bundle",
+		anim           = "idle_onesize",
+		deps           = {"kyno_piko", "kyno_piko_orange", "kyno_chicken2", "kyno_sugarfly", "sunkenchest"},
 		specialinfo    = "BUNDLE",
 	},
 	
@@ -7098,10 +7114,59 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		overridesymbol = {"swap_food", "swap_food", "eeltacos"},
 		anim           = "idle",
 		animoffsetx    = 65,
-		animoffsety    = -82,
+		animoffsety    = -72,
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -60,
 		deps           = preparedfood_deps,
+	},
+	
+	meatwaltz          =
+	{
+		name           = "meatwaltz", 
+		type           = "food",
+		tex            = "meatwaltz.tex",
+		prefab         = "meatwaltz",
+		healthvalue    = 30,
+		hungervalue    = 37.5,
+		sanityvalue    = 5,
+		perishable     = 4800,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "meatwaltz",
+		build          = "meatwaltz",
+		overridesymbol = {"swap_food", "swap_food", "meatwaltz"},
+		anim           = "idle",
+		animoffsetx    = 65,
+		animoffsety    = -70,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -70,
+		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_INSPIRATION",
+	},
+	
+	completebreakfast  =
+	{
+		name           = "completebreakfast", 
+		type           = "food",
+		tex            = "completebreakfast.tex",
+		prefab         = "completebreakfast",
+		healthvalue    = 60,
+		hungervalue    = 150,
+		sanityvalue    = 5,
+		perishable     = 9600,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "completebreakfast",
+		build          = "completebreakfast",
+		overridesymbol = {"swap_food", "swap_food", "completebreakfast"},
+		anim           = "idle",
+		animoffsety    = 15,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -100,
+		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_MIGHTINESS",
 	},
 }
 
@@ -7563,6 +7628,29 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =
 		animoffsetbgy  = -80,
         deps           = {"portablecookpot", "spoiled_food"},
 	},
+	
+	meatskillet        =
+	{
+		name           = "meatskillet",
+		type           = "food",
+		tex            = "meatskillet.tex",
+		prefab         = "meatskillet",
+		healthvalue    = -5,
+		hungervalue    = 62.5,
+		sanityvalue    = 15,
+		perishable     = 7200,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "meatskillet",
+		build          = "meatskillet",
+		overridesymbol = {"swap_food", "swap_food", "meatskillet"},
+		anim           = "idle",
+		animoffsety    = 23,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -100,
+		deps           = {"portablecookpot", "spoiled_food"},
+	}
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS_SEASONAL =

@@ -104,6 +104,7 @@ PrefabFiles =
 	"k_rockflippable",
 	"k_roe",
 	"k_saphealer",
+	"k_secret_packages",
 	"k_seeds_kits",
 	"k_serenityisland_bud",
 	"k_serenityisland_crab",

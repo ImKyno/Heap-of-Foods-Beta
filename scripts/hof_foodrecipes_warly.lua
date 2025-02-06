@@ -341,6 +341,26 @@ local kyno_warly_foods =
 		tags = {"masterfood"},
 		card_def = {ingredients = {{"kyno_rice", 2}, {"kyno_white_cap", 1}, {"goatmilk", 1}}},
 	},
+	
+	meatskillet =
+	{
+		test = function(cooker, names, tags) return tags.meat and (names.pepper or names.pepper_cooked) and 
+		(names.garlic or names.garlic_cooked) and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_SLOW,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = -5,
+		hunger = 62.5,
+		sanity = 15,
+		cooktime = 2,
+		potlevel = "high",
+		nochill = true,
+		floater = {"med", nil, 0.65},
+		tags = {"masterfood"},
+		card_def = {ingredients = {{"meat", 1}, {"pepper", 1}, {"garlic", 1}, {"kyno_spotspice", 1}}},
+	},
 }
 
 for k, recipe in pairs(kyno_warly_foods) do

@@ -2619,6 +2619,50 @@ local kyno_foods =
 		card_def = {ingredients = {{"pondeel", 1}, {"corn", 1}, {"cutlichen", 2}}},
 	},
 	
+	meatwaltz =
+	{
+		test = function(cooker, names, tags) return tags.meat and tags.bread and 
+		(names.tomato or names.tomato_cooked) and (names.onion or names.onion_cooked) end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_MED,
+		health = 30,
+		hunger = 37.5,
+		sanity = 5,
+		cooktime = .7,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_INSPIRATION,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"meat", 1}, {"gorge_bread", 1}, {"tomato", 1}, {"onion", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater.components.singinginspiration ~= nil then
+				eater.components.singinginspiration:DoDelta(TUNING.KYNO_INSPIRATIONBUFF)
+			end
+		end,
+	},
+	
+	completebreakfast = 
+	{
+		test = function(cooker, names, tags) return names.baconeggs and names.kyno_flour and tags.butter and names.kyno_syrup end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		secondaryfoodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 60,
+		hunger = 150,
+		sanity = 5,
+		cooktime = 3,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIGHTINESS,
+		potlevel = "high",
+		scale = 1.3,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"baconeggs", 1}, {"kyno_flour", 1}, {"butter", 1}, {"kyno_syrup", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater.components.mightiness ~= nil then
+				eater.components.mightiness:DoDelta(TUNING.KYNO_MIGHTINESSBUFF)
+			end
+		end,
+	},
+	
 	--[[
 	strawberrygrinder =
 	{

@@ -35,6 +35,8 @@ AddIngredientValues({"livinglog"},              {inedible   = 1,    magic     = 
 AddIngredientValues({"spider"},                 {monster    = 1,    spider    = 1})
 AddIngredientValues({"tillweed"},               {veggie     = 0.5,  weed      = 1})
 AddIngredientValues({"wagpunk_bits"}, 			{junk       = 1,	inedible  = 1})
+AddIngredientValues({"butter"},                 {fat        = 1,    dairy     = 1,   butter   = 1})
+AddIngredientValues({"baconeggs"},              {prepfood   = 1}) -- Could use meat tag, but I don't want people using this as "filler" lol.
 
 -- New Mod Crock Pot Ingredients.
 AddIngredientValues({"kyno_coffeebeans"}, 		{seeds      = 1}, 	 		  				  true)
@@ -140,7 +142,7 @@ local recipe_cards     = cooking.recipe_cards
 for _, cooker in pairs(cookpots)         do for _, recipe in pairs(common_recipes)   do AddCookerRecipe(cooker, recipe) end end
 for _, cooker in pairs(cookpots)         do for _, recipe in pairs(seasonal_recipes) do AddCookerRecipe(cooker, recipe) end end
 for _, cooker in pairs(cookpots_master)  do for _, recipe in pairs(warly_recipes)    do AddCookerRecipe(cooker, recipe) end end
--- for _, cooker in pairs(cookpots_spicer)  do for _, recipe in pairs(spiced_recipes)   do AddCookerRecipe(cooker, recipe) end end
+-- for _, cooker in pairs(cookpots_spicer)  do for _, recipe in pairs(spiced_recipes)   do AddCookerRecipe(cooker, recipe) end end -- Moved to hof_foodspicer.lua
 
 for _, recipe in pairs(common_recipes)   do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, cooker_name = "cookpot"}) end end
 for _, recipe in pairs(seasonal_recipes) do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, cooker_name = "cookpot"}) end end
@@ -148,7 +150,7 @@ for _, recipe in pairs(warly_recipes)    do if recipe.card_def then table.insert
 
 -- Previous dirty fix don't work anymore, will be using this one for now...
 local testfoods = {}
-for k,v in pairs(_G.MergeMaps(require("hof_foodrecipes"), require("hof_foodrecipes_seasonal"), require("hof_foodrecipes_warly"))) do 
+for k, v in pairs(_G.MergeMaps(require("hof_foodrecipes"), require("hof_foodrecipes_seasonal"), require("hof_foodrecipes_warly"))) do 
 	testfoods[k] = true 
 end
 
@@ -174,3 +176,13 @@ AddPrefabPostInit("portablespicer", function(inst)
 		inst.components.stewer.ondonecooking = function(inst) _donecookfn(inst) ShowProduct(inst) end
 	end
 end)
+
+-- Inject Warly recipes in Chef's Specials page instead of Mod Recipes page in the Cookbook.
+-- I'm not sure if this can lead to problems in the future, will leave it on for now.
+local HOF_WARLYRECIPES = GetModConfigData("WARLYRECIPES")
+if HOF_WARLYRECIPES then
+	for k, recipe in pairs(warly_recipes) do
+		cooking.cookbook_recipes["mod"][k] = nil
+		cooking.cookbook_recipes["portablecookpot"][k] = recipe
+	end
+end

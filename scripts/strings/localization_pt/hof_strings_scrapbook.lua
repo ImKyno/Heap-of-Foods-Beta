@@ -65,8 +65,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOCHA = "Increased movement speed, sle
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSFREEZING = "Briefly increases temperature and become less susceptible to Freezing."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSOVERHEAT = "Briefly decreases temperature and become less susceptible to Overheat."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FISHING = "Increased fishing yields for a certain amount of time."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIGHTNESS = "Gives off a bit of mightness."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INSPIRATION = "Gives off a bit of inspiration."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIGHTINESS = "Slightly boosts mightiness."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INSPIRATION = "Slightly boosts inspiration."
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "Using a pinch of salt on a crock pot food will refresh its spoilage time by 30%. Don't worry about eating stale dishes again!"
