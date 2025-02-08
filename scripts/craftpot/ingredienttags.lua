@@ -75,3 +75,4 @@ AddFoodTag("piko",          {name = STRINGS_INGREDIENTS_PIKO,       atlas = "ima
 AddFoodTag("spotspice",     {name = STRINGS_INGREDIENTS_SPOTSPICE,  atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("mayonnaise",    {name = STRINGS_INGREDIENTS_MAYONNAISE, atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("butter",        {name = STRINGS_INGREDIENTS_BUTTER,     atlas = "images/ingredientimages/hof_ingredientimages.xml"})
+AddFoodTag("flour",         {name = STRINGS_INGREDIENTS_FLOUR,      atlas = "images/ingredientimages/hof_ingredientimages.xml"})

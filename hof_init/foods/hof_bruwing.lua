@@ -85,6 +85,7 @@ AddBrewingValues({"kyno_milk_koalefant"},       {dairy      = 1,   milk         
 AddBrewingValues({"kyno_coffeebeans_cooked"},   {seeds      = 1})
 AddBrewingValues({"chocolate_black"},           {sweetener  = 1,   chocolate     = 1})
 AddBrewingValues({"chocolate_white"},           {sweetener  = 1,   chocolate     = 1})
+AddBrewingValues({"kyno_tealeaf"},              {leaf       = 1})
 
 -- Import the Beverages.
 local brewer_jar   = {"kyno_preservesjar"}

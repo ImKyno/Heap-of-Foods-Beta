@@ -93,7 +93,7 @@ local hof_presets =
 		},
 	
 		randomly_selected_loot =
-		{,
+		{
 			{ kyno_tunacan = .50, kyno_brewingrecipecard = 1 },
 		},
 

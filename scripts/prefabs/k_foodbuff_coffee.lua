@@ -19,12 +19,6 @@ local function OnAttached(inst, target)
     end, target)
 end
 
-local function OnTimerDone(inst, data)
-    if data.name == "kyno_coffeebuff" then
-        inst.components.debuff:Stop()
-    end
-end
-
 local function OnAttachedMocha(inst, target)
 	inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0)
@@ -48,6 +42,12 @@ local function OnAttachedMocha(inst, target)
     inst:ListenForEvent("death", function()
         inst.components.debuff:Stop()
     end, target)
+end
+
+local function OnTimerDone(inst, data)
+    if data.name == "kyno_coffeebuff" then
+        inst.components.debuff:Stop()
+    end
 end
 
 local function OnTimerDoneMocha(inst, data)

@@ -3548,6 +3548,24 @@ local HOF_SCRAPBOOK_FOODS =
 		anim            = "kyno_tillweed_seeds",
 		deps            = {"weed_tillweed", "tillweed", "seeds_cooked", "spoiled_food"},
 	},
+	
+	kyno_tealeaf        =
+	{
+		name            = "kyno_tealeaf",
+		type            = "food",
+		tex             = "kyno_tealeaf.tex",
+		prefab          = "kyno_tealeaf",
+		healthvalue     = 0,
+		hungervalue     = 4.6875,
+		sanityvalue     = 1,
+		stacksize       = 40,
+		burnable        = true,
+		foodtype        = "VEGGIE",
+		bank            = "kyno_tealeaf",
+		build           = "kyno_tealeaf",
+		anim            = "idle",
+		deps            = {"kyno_meadowisland_tree", "kyno_meadowisland_pikotree"},
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS =
@@ -3646,6 +3664,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -60,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	sharkfinsoup       =
@@ -3719,7 +3738,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -40,
 		deps           = preparedfood_deps,
-		specialinfo    = "FOODEFFECTS_SPEED",
+		specialinfo    = "FOODEFFECTS_BOUILLABAISSE",
 	},
 	
 	feijoada           =
@@ -3816,7 +3835,8 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -60,
 		deps           = {"cookpot", "portablecookpot", "archive_cookpot", "kyno_cookware_small", "kyno_cookware_big", "kyno_cookware_small_grill", 
-		"kyno_cookware_grill", "kyno_cookware_oven_small_casserole", "kyno_cookware_oven_casserole", "tea"},
+		"kyno_cookware_grill", "kyno_cookware_oven_small_casserole", "kyno_cookware_oven_casserole", "tea", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	tea                =
@@ -3842,6 +3862,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -60,
 		deps           = {"cookpot", "portablecookpot", "archive_cookpot", "kyno_cookware_small", "kyno_cookware_big", "kyno_cookware_small_grill", 
 		"kyno_cookware_grill", "kyno_cookware_oven_small_casserole", "kyno_cookware_oven_casserole", "icedtea"},
+		specialinfo    = "FOODEFFECTS_INCREASETEMP",
 	},
 	
 	nettlelosange      =
@@ -3866,6 +3887,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -60,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_INCREASETEMP",
 	},
 	
 	nettlemeated       =
@@ -3889,6 +3911,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -100,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_INCREASETEMP",
 	},
 	
 	snakebonesoup      =
@@ -5499,6 +5522,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -95,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	bowlofgears        =
@@ -5656,6 +5680,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -95,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	coconutwater       =
@@ -5679,6 +5704,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -105,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	eyeballspaghetti   =
@@ -5973,6 +5999,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -95,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_INCREASETEMP",
 	},
 	
 	chocolate_black    =
@@ -6227,6 +6254,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -110,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_INCREASETEMP",
 	},
 	
 	cottoncandy        =
@@ -6412,6 +6440,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -110,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	banana_pudding     =
@@ -6671,7 +6700,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -110,
 		deps           = preparedfood_deps,
-		specialinfo    = "FOODEFFECTS_MONSTERFOOD",
+		specialinfo    = "FOODEFFECTS_MONSTERFOOD2",
 	},
 	
 	duriansplit        =
@@ -6695,7 +6724,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -110,
 		deps           = preparedfood_deps,
-		specialinfo    = "FOODEFFECTS_PLAYERMONSTER",
+		specialinfo    = "FOODEFFECTS_PLAYERMONSTER2",
 	},
 	
 	duriansoup         =
@@ -6719,7 +6748,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -110,
 		deps           = preparedfood_deps,
-		specialinfo    = "FOODEFFECTS_PLAYERMONSTER",
+		specialinfo    = "FOODEFFECTS_PLAYERMONSTER3",
 	},
 	
 	durianmeated       =
@@ -6906,6 +6935,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -110,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_INCREASETEMP",
 	},
 	
 	pizza_tropical     =
@@ -6952,6 +6982,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -110,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	chimas             =
@@ -6976,6 +7007,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -50,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_INCREASETEMP",
 	},
 	
 	gummyworms         =
@@ -7167,6 +7199,30 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -100,
 		deps           = preparedfood_deps,
 		specialinfo    = "FOODEFFECTS_MIGHTINESS",
+	},
+	
+	dumplings          =
+	{
+		name           = "dumplings", 
+		type           = "food",
+		tex            = "dumplings.tex",
+		prefab         = "dumplings",
+		healthvalue    = 15,
+		hungervalue    = 25,
+		sanityvalue    = 5,
+		perishable     = 4800,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "dumplings",
+		build          = "dumplings",
+		overridesymbol = {"swap_food", "swap_food", "dumplings"},
+		anim           = "idle",
+		animoffsetx    = 65,
+		animoffsety    = -70,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -70,
+		deps           = preparedfood_deps,
 	},
 }
 
@@ -7554,6 +7610,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =
 		animoffsetbgx  = -20,
 		animoffsetbgy  = -80,
         deps           = {"portablecookpot", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	nachos             =
@@ -7650,7 +7707,58 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =
 		animoffsetbgx  = -20,
 		animoffsetbgy  = -100,
 		deps           = {"portablecookpot", "spoiled_food"},
-	}
+		specialinfo    = "FOODEFFECTS_INCREASETEMP",
+	},
+	
+	warlyicedtea       =
+	{
+		name           = "warlyicedtea",
+        type           = "food",
+		tex            = "warlyicedtea.tex",
+        prefab         = "warlyicedtea",
+		healthvalue    = 20,
+		hungervalue    = 12.5,
+		sanityvalue    = 5,
+        perishable     = 4800,
+        foodtype       = "GOODIES",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "warlyicedtea",
+		build          = "warlyicedtea",
+		overridesymbol = {"swap_food", "swap_food", "warlyicedtea"},
+		anim           = "idle",
+		animoffsetx    = 65,
+		animoffsety    = -80,
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -60,
+		deps           = {"portablecookpot", "warlytea", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
+	},
+	
+	warlytea           =
+	{
+		name           = "warlytea",
+        type           = "food",
+		tex            = "warlytea.tex",
+        prefab         = "warlytea",
+		healthvalue    = 40,
+		hungervalue    = 25,
+		sanityvalue    = 10,
+        perishable     = 4800,
+        foodtype       = "GOODIES",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "warlytea",
+		build          = "warlytea",
+		overridesymbol = {"swap_food", "swap_food", "warlytea"},
+		anim           = "idle",
+		animoffsetx    = 65,
+		animoffsety    = -80,
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -60,
+		deps           = {"portablecookpot", "warlyicedtea"},
+		specialinfo    = "FOODEFFECTS_WARLYTEA",
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS_SEASONAL =

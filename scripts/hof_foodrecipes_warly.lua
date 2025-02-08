@@ -70,7 +70,7 @@ local kyno_warly_foods =
 	
 	gorge_pizza =
 	{
-		test = function(cooker, names, tags) return tags.meat and names.kyno_flour and tags.dairy and (names.tomato or names.tomato_cooked) end,
+		test = function(cooker, names, tags) return tags.meat and tags.flour and tags.dairy and (names.tomato or names.tomato_cooked) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -102,7 +102,7 @@ local kyno_warly_foods =
 	
 	gorge_trifle =
 	{
-		test = function(cooker, names, tags) return tags.fruit and names.kyno_flour and (tags.dairy and tags.dairy >= 2) end,
+		test = function(cooker, names, tags) return tags.fruit and tags.flour and (tags.dairy and tags.dairy >= 2) end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SLOW,
@@ -118,8 +118,7 @@ local kyno_warly_foods =
 	
 	bubbletea = 
 	{
-		test = function(cooker, names, tags) return names.kyno_piko and (tags.sweetener and tags.sweetener >= 2) and 
-		tags.frozen and not tags.meat and not tags.egg and not tags.fish end,
+		test = function(cooker, names, tags) return names.kyno_piko and names.kyno_tealeaf and tags.sweetener and tags.frozen end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FAST,
@@ -130,7 +129,7 @@ local kyno_warly_foods =
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"masterfood", "honeyed", "drinkable_food"},
-		card_def = {ingredients = {{"kyno_piko", 1}, {"honey", 2}, {"ice", 1}}},
+		card_def = {ingredients = {{"kyno_piko", 1}, {"kyno_tealeaf", 1}, {"honey", 1}, {"ice", 1}}},
 		prefabs = { "buff_sleepresistance" },
         oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
         oneatenfn = function(inst, eater)
@@ -254,7 +253,7 @@ local kyno_warly_foods =
 	
 	cinnamonroll =
 	{
-		test = function(cooker, names, tags) return names.kyno_flour and names.kyno_syrup and names.kyno_spotspice and tags.butter end,
+		test = function(cooker, names, tags) return tags.flour and names.kyno_syrup and names.kyno_spotspice and tags.butter end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FAST,
@@ -361,14 +360,55 @@ local kyno_warly_foods =
 		tags = {"masterfood"},
 		card_def = {ingredients = {{"meat", 1}, {"pepper", 1}, {"garlic", 1}, {"kyno_spotspice", 1}}},
 	},
+	
+	warlyicedtea = 
+	{
+		test = function(cooker, names, tags) return names.kyno_piko_orange and names.kyno_tealeaf and tags.sweetener and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 20,
+		hunger = 12.5,
+		sanity = 5,
+		cooktime = 0.5,
+		floater = {"med", nil, 0.65},
+		tags = {"masterfood", "honeyed", "drinkable_food"},
+		card_def = {ingredients = {{"kyno_piko_orange", 1}, {"kyno_tealeaf", 1}, {"honey", 1}, {"ice", 1}}},
+	},
+	
+	warlytea =
+	{
+		test = function(cooker, names, tags) return names.kyno_piko_orange and names.kyno_tealeaf and tags.sweetener and not tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_MED,
+		perishproduct = "warlyicedtea",
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 40,
+		hunger = 25,
+		sanity = 10,
+		cooktime = 0.5,
+		potlevel = "low",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SANITYRATE,
+		floater = {"med", nil, 0.65},
+		tags = {"masterfood", "honeyed", "drinkable_food"},
+		card_def = {ingredients = {{"kyno_piko_orange", 1}, {"kyno_tealeaf", 1}, {"honey", 2}}},
+		prefabs = { "kyno_sanityratebuff" },
+		oneatenfn = function(inst, eater)
+            eater:AddDebuff("kyno_sanityratebuff", "kyno_sanityratebuff")
+		end,
+	},
 }
 
 for k, recipe in pairs(kyno_warly_foods) do
 	recipe.name = k
 	recipe.weight = 1
-	-- recipe.cookbook_category = "portablecookpot"
+	-- recipe.cookbook_category = "portablecookpot" -- check "hof_cooking.lua" for details.
 	recipe.overridebuild = k
-	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages.xml"
+	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages_warly.xml"
 	recipe.cookbook_tex = k..".tex"
 end
 

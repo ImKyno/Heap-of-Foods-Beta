@@ -16,6 +16,7 @@ local assets =
 	Asset("ANIM", "anim/kyno_cookingoil.zip"),
 	Asset("ANIM", "anim/kyno_sugar.zip"),
 	Asset("ANIM", "anim/kyno_crabkingmeat.zip"),
+	Asset("ANIM", "anim/kyno_tealeaf.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -1104,6 +1105,51 @@ local function sugarfn()
     return inst
 end
 
+local function leaffn()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddAnimState()
+    inst.entity:AddNetwork()
+
+    MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+    inst.AnimState:SetBank("kyno_tealeaf")
+    inst.AnimState:SetBuild("kyno_tealeaf")
+    inst.AnimState:PlayAnimation("idle")
+
+	inst:AddTag("gourmet_ingredient")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+	
+    inst:AddComponent("inspectable")
+	inst:AddComponent("tradable")
+	
+	inst:AddComponent("edible")
+	inst.components.edible.healthvalue = TUNING.KYNO_TEALEAF_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_TEALEAF_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_TEALEAF_SANITY
+	inst.components.edible.foodtype = FOODTYPE.VEGGIE
+
+    inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_tealeaf"
+	
+    inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+	
+	MakeSmallBurnable(inst)
+	MakeSmallPropagator(inst)
+	MakeHauntableLaunchAndPerish(inst)
+
+    return inst
+end
+
 return Prefab("kyno_wheat", wheatfn, assets, prefabs),
 Prefab("kyno_wheat_cooked", wheat_cookedfn, assets, prefabs),
 Prefab("kyno_flour", flourfn, assets, prefabs),
@@ -1111,16 +1157,17 @@ Prefab("kyno_spotspice_leaf", sprigfn, assets, prefabs),
 Prefab("kyno_spotspice", spicefn, assets, prefabs),
 Prefab("kyno_sap", sapfn, assets, prefabs),
 Prefab("kyno_sap_spoiled", sap_ruinedfn, assets, prefabs),
--- Prefab("kyno_syrup", syrupfn, assets, prefabs), Check "modmain.lua" for more info.
+-- Prefab("kyno_syrup", syrupfn, assets, prefabs), Its now a Crock Pot dish.
 Prefab("kyno_bacon", baconfn, assets, prefabs),
 Prefab("kyno_bacon_cooked", bacon_cookedfn, assets, prefabs),
 Prefab("kyno_white_cap", mushfn, assets, prefabs),
 Prefab("kyno_white_cap_cooked", mush_cookedfn, assets, prefabs),
-Prefab("kyno_foliage", foliagefn, assets, prefabs), -- False Foliage, check "modmain.lua" for more info.
+Prefab("kyno_foliage", foliagefn, assets, prefabs), -- False Foliage, just for mimic the Cookbook.
 Prefab("kyno_foliage_cooked", foliage_cookedfn, assets, prefabs),
 Prefab("kyno_salt", saltfn, assets, prefabs),
 Prefab("kyno_crabmeat", crabmeatfn, assets, prefabs),
 Prefab("kyno_crabmeat_cooked", crabmeat_cookedfn, assets, prefabs),
 Prefab("kyno_crabkingmeat", crabkingmeatfn, assets, prefabs),
 Prefab("kyno_oil", oilfn, assets, prefabs),
-Prefab("kyno_sugar", sugarfn, assets, prefabs)
+Prefab("kyno_sugar", sugarfn, assets, prefabs),
+Prefab("kyno_tealeaf", leaffn, assets, prefabs)

@@ -814,7 +814,7 @@ local kyno_foods_keg =
 
 	teagreen =
 	{
-		test = function(brewer, names, tags) return names.kyno_piko_orange and names.green_cap and tags.frozen end,
+		test = function(brewer, names, tags) return names.kyno_piko_orange and names.green_cap and names.kyno_tealeaf end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
@@ -825,7 +825,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RESANITY,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
-		card_def = {ingredients = {{"kyno_piko_orange", 1}, {"green_cap", 1}, {"ice", 1}}},
+		card_def = {ingredients = {{"kyno_piko_orange", 1}, {"green_cap", 1}, {"kyno_tealeaf", 1}}},
 		prefabs = { "kyno_sanityregenbuff" },
         oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_sanityregenbuff", "kyno_sanityregenbuff")
@@ -834,7 +834,7 @@ local kyno_foods_keg =
 
 	teared =
 	{
-		test = function(brewer, names, tags) return names.kyno_piko and names.red_cap and tags.frozen end,
+		test = function(brewer, names, tags) return names.kyno_piko and names.red_cap and names.kyno_tealeaf end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
@@ -845,7 +845,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HEALTH_REGEN,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
-		card_def = {ingredients = {{"kyno_piko", 1}, {"red_cap", 1}, {"ice", 1}}},
+		card_def = {ingredients = {{"kyno_piko", 1}, {"red_cap", 1}, {"kyno_tealeaf", 1}}},
 		prefabs = { "healthregenbuff" },
         oneatenfn = function(inst, eater)
 			eater:AddDebuff("healthregenbuff", "healthregenbuff")

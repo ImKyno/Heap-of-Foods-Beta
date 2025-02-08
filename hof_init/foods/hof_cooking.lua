@@ -1,7 +1,7 @@
 -- Common Dependencies.
-local _G 					= GLOBAL
-local require 				= _G.require
-local cooking               = require("cooking")
+local _G      = GLOBAL
+local require = _G.require
+local cooking = require("cooking")
 
 require("hof_constants")
 require("craftpot/ingredienttags")
@@ -112,23 +112,23 @@ AddIngredientValues({"kyno_worm_bone"},         {inedible   = 1})
 AddIngredientValues({"butter_beefalo"},         {dairy      = 1,    fat       = 1,     butter = 1})
 AddIngredientValues({"butter_goat"},            {dairy      = 1,    fat       = 1,     butter = 1})
 AddIngredientValues({"butter_koalefant"},       {dairy      = 1,    fat       = 1,     butter = 1})
+AddIngredientValues({"kyno_tealeaf"},           {leaf       = 1})
 
 -- Import the Foods.
-local cookpots         = 
-						{
-							"cookpot", 
-							"portablecookpot", 
-							"archive_cookpot",
-							"kyno_cookware_syrup",
-							"kyno_cookware_small",
-							"kyno_cookware_big",
-							"kyno_cookware_small_grill",
-							"kyno_cookware_grill",
-							"kyno_cookware_oven_small_casserole",
-							"kyno_cookware_oven_casserole",
-							"kyno_cookware_elder",
-						}
-
+local cookpots = 
+{
+	"cookpot", 
+	"portablecookpot", 
+	"archive_cookpot",
+	"kyno_cookware_syrup",
+	"kyno_cookware_small",
+	"kyno_cookware_big",
+	"kyno_cookware_small_grill",
+	"kyno_cookware_grill",
+	"kyno_cookware_oven_small_casserole",
+	"kyno_cookware_oven_casserole",
+	"kyno_cookware_elder",
+}
 
 local cookpots_master  = {"portablecookpot"}
 local cookpots_spicer  = {"portablespicer"}

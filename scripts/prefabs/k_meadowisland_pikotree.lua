@@ -15,6 +15,7 @@ local prefabs =
 
 	"kyno_oaktree_pod",
 	"kyno_twiggynuts",
+	"kyno_tealeaf",
 	"kyno_piko",
 	"kyno_piko_orange",
 }
@@ -52,6 +53,18 @@ local function ChopTree(inst, chopper, chopsleft, numchops)
 
     local x, y, z = inst.Transform:GetWorldPosition()
 	SpawnPrefab(math.random() < 0.5 and "green_leaves_chop" or "green_leaves_chop").Transform:SetPosition(x, y + math.random(), z)
+	
+	-- Chance to get some leaves/nuts when chopping.
+	if math.random() <= TUNING.KYNO_MEADOWISLAND_TREE_DROP_CHANCE then
+		local item_to_drop = math.random() <= .50 and "kyno_tealeaf" or "kyno_twiggynuts"
+	
+		local item = SpawnPrefab(item_to_drop)
+		local rad = chopper:GetPosition():Dist(inst:GetPosition())
+		local vec = (chopper:GetPosition() - inst:GetPosition()):Normalize()
+		local offset = Vector3(vec.x * rad, 4, vec.z * rad)
+
+		item.Transform:SetPosition((inst:GetPosition() + offset):Get())
+	end
 end
 
 local function ChopTreeShake(inst)
@@ -235,7 +248,17 @@ local function fn()
     inst.components.spawner:SetOnOccupiedFn(OnOcuppied)
 
 	inst:AddComponent("lootdropper")
-	inst.components.lootdropper:SetLoot({"driftwood_log", "driftwood_log", "kyno_twiggynuts", "kyno_twiggynuts", "kyno_oaktree_pod"})
+	inst.components.lootdropper:SetLoot(
+	{
+		"driftwood_log", 
+		"driftwood_log",
+		"driftwood_log",
+		"kyno_twiggynuts", 
+		"kyno_twiggynuts",
+		"kyno_tealeaf",
+		"kyno_tealeaf",
+		"kyno_oaktree_pod"
+	})
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.CHOP)
