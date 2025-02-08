@@ -360,3 +360,20 @@ AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.INSTALLCOOKWAR
 		return "give"
 	end
 end))
+
+-- Slice Items.
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SLICE, function(inst, action)
+	local target = action.target or action.invobject
+	
+	if target:HasTag("sliceable") then
+		return "domediumaction"
+	end
+end))
+
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SLICE, function(inst, action)
+	local target = action.target or action.invobject
+	
+	if target:HasTag("sliceable") then
+		return "domediumaction"
+	end
+end))

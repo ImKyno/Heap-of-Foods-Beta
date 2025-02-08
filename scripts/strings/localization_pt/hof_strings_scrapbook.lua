@@ -74,6 +74,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WARLYTEA = "Decreased sanity loss for 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INCREASETEMP = "Briefly increases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DECREASETEMP = "Briefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BOUILLABAISSE = "Increased sleep resistance for a certain amount of time.\nBriefly decreases the temperature."
+STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER = "For slicing off meat chunks and other things."
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "Using a pinch of salt on a crock pot food will refresh its spoilage time by 30%. Don't worry about eating stale dishes again!"

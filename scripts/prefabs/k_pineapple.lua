@@ -14,42 +14,6 @@ local prefabs =
 	"kyno_pineapple_halved",
 }
 
-local function OnChopped(inst, worker)
-    local pineapple = inst 
-    if inst.components.inventoryitem then 
-		local owner = inst.components.inventoryitem.owner
-        if inst.components.stackable and inst.components.stackable.stacksize > 1 then 
-            pineapple = inst.components.stackable:Get()
-            inst.components.workable:SetWorkLeft(1)
-        end
-		
-		local cracked
-		
-        if owner then
-			local container = owner.components.inventory or owner.components.container
-			if container then 
-				local cracked = SpawnPrefab("kyno_pineapple_halved")
-				cracked.components.stackable.stacksize = 2
-				container:GiveItem(cracked)
-            elseif owner.components.lootdropper then
-                cracked = owner.components.lootdropper:SpawnLootPrefab("kyno_pineapple_halved")
-                owner.components.lootdropper:SpawnLootPrefab("kyno_pineapple_halved")
-            end
-        else 
-            cracked = inst.components.lootdropper:SpawnLootPrefab("kyno_pineapple_halved")
-            inst.components.lootdropper:SpawnLootPrefab("kyno_pineapple_halved")
-        end 
-		
-		if worker and worker.SoundEmitter then
-			worker.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
-		else
-			inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
-		end
-    end
-	
-    pineapple:Remove()
-end 
-
 local function pineapple()
 	local inst = CreateEntity()
 
@@ -70,7 +34,7 @@ local function pineapple()
 	inst:AddTag("fruit")
 	inst:AddTag("veggie")
 	inst:AddTag("show_spoilage")
-	inst:AddTag("crackable")
+	inst:AddTag("sliceable")
 
 	inst.entity:SetPristine()
 
@@ -81,17 +45,15 @@ local function pineapple()
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
-	inst:AddComponent("lootdropper")
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 	
-	inst:AddComponent("workable")
-    inst.components.workable:SetWorkAction(ACTIONS.CHOP)
-    inst.components.workable:SetWorkLeft(1)
-    inst.components.workable:SetOnFinishCallback(OnChopped)
+	inst:AddComponent("sliceable")
+	inst.components.sliceable:SetProduct("kyno_pineapple_halved")
+	inst.components.sliceable:SetSliceSize(2)
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM

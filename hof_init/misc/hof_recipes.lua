@@ -247,6 +247,15 @@ AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1), Ingredient("boards"
 )
 SortAfter("kyno_bucket_empty", "goldenpitchfork", "TOOLS")
 
+AddRecipe2("kyno_itemslicer", {Ingredient("flint", 3), Ingredient("twigs", 2)}, TECH.SCIENCE_ONE,
+	{
+		atlas				= ModAtlas,
+		image				= "kyno_itemslicer.tex",
+	},
+	{"TOOLS"}
+)
+SortAfter("kyno_itemslicer", "razor", "TOOLS")
+
 AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ingredient("kyno_wheat", 1, ModAtlas)}, TECH.SCIENCE_ONE,
 	{
 		atlas 				= ModAtlas,

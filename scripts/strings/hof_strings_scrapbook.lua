@@ -97,6 +97,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.REPAIRTOOLKIT = "Used to repair destroyed structur
 STRINGS.SCRAPBOOK.SPECIALINFO.SAPBUCKET = "Tap it to Sugarwood Trees to produce fresh Sap every few days."
 STRINGS.SCRAPBOOK.SPECIALINFO.SLAUGHTERTOOL = "Butchering tools that instantly kills the animal."
 STRINGS.SCRAPBOOK.SPECIALINFO.SAPHEALER = "Powerful antidote with healing capabilities for trees.\n\nUsing it on Ruined Sugarwood Trees will revert them back to their normal stage."
+STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER = "For slicing off meat chunks and other things."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Can be feed with seeds to lay down an egg."

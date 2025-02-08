@@ -74,6 +74,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WARLYTEA = "Decreased sanity loss for 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INCREASETEMP = "Briefly increases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DECREASETEMP = "Briefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BOUILLABAISSE = "Increased sleep resistance for a certain amount of time.\nBriefly decreases the temperature."
+STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER = "For slicing off meat chunks and other things."
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "在烹饪锅里放一小撮盐，食物的变质时间就会缩短30%。再也不用担心吃到变质的菜肴了！"

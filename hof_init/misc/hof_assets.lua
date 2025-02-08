@@ -373,6 +373,7 @@ local HOF_ICONS =
 	"kyno_humanmeat",
 	"kyno_humanmeat_cooked",
 	"kyno_humanmeat_dried",
+	"kyno_itemslicer",
 	"kyno_koi",
 	"kyno_koi_cooked",
 	"kyno_kokonut",

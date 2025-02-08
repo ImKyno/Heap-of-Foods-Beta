@@ -17,6 +17,7 @@ local function GetSaltedFoodBonus(inst, eater)
         sanity = 0,
         hunger = 0,
     }
+	
     if edible then
         if edible.foodtype == FOODTYPE.MEAT then
             bonus.health = 0
@@ -28,6 +29,7 @@ local function GetSaltedFoodBonus(inst, eater)
             bonus.health = 0
         end
     end
+	
     return bonus
 end
 
@@ -43,6 +45,7 @@ function Saltable:SetUp()
     if stackable then
         stackable.ondestack = OnDestack
     end
+	
     local edible = self.inst.components.edible
     if edible then
         edible.oneaten = OnEaten
@@ -51,6 +54,7 @@ end
 
 function Saltable:UpdatePerishable()
     local perishable = self.inst.components.perishable
+	
     if perishable then
         local multiplier = math.max(1 - (self.saltlevel * self.maxgain), 0)
 		local percentage = perishable:GetPercent()
@@ -61,6 +65,7 @@ end
 function Saltable:Dilute(numberadded, saltlevel)
     local oldsize = self.inst.components.stackable and self.inst.components.stackable.stacksize or 1
     local newsize = oldsize + numberadded
+	
     self.saltlevel = math.min(((oldsize * self.saltlevel) + (numberadded * saltlevel)) / newsize, 1)
     self:UpdatePerishable()
 end
@@ -68,6 +73,7 @@ end
 function Saltable:AddSalt()
     local stackable = self.inst.components.stackable
     local inc = 1 / (stackable and stackable.stacksize or 1)
+	
     self.saltlevel = math.min(self.saltlevel + inc, 1)
     self:UpdatePerishable()
 	self.inst:AddTag("saltedfood")
@@ -77,6 +83,7 @@ function Saltable:GetSanityModifier(eater, basevalue)
     if basevalue > 0 and self:IsSalted() then
         return 2
     end
+	
     return 0
 end
 
@@ -97,6 +104,7 @@ function Saltable:OnSave()
 	{
 		issalted = self.inst:HasTag("saltedfood"),
 	}
+	
 	return data 
 end
 

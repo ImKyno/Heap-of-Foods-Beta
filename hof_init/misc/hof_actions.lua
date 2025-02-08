@@ -17,6 +17,7 @@ end)
 -- Action for the Salt.
 AddAction("SALT", STRINGS.ACTIONS.SALT, function(act)
 	local saltable = act.target and act.target.components.saltable or nil
+	
 	if act.invobject and saltable ~= nil then
 		saltable:AddSalt()
 		act.doer.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/salt_shake") -- Play a cool salting sound yay.
@@ -69,10 +70,30 @@ AddComponentAction("USEITEM", "slaughteritem", function(inst, doer, target, acti
 	end
 end)
 
--- For chopping items inside the inventory, such as Coconuts.
-AddComponentAction("USEITEM", "tool", function(inst, doer, target, actions, right)
-	if target:HasTag("crackable") then
-		table.insert(actions, ACTIONS.CHOP)
+-- For slicing items into something else.
+AddAction("SLICE", STRINGS.ACTIONS.SLICE, function(act)
+	local sliceable = act.target and act.target.components.sliceable or nil
+	
+	if act.invobject and sliceable ~= nil then
+		sliceable:OnSlice()
+		act.doer.SoundEmitter:PlaySound("dontstarve/wilson/harvest_sticks")
+		return true
+	end
+end)
+
+ACTIONS.SLICE.priority = 2
+ACTIONS.SLICE.mount_valid = true
+
+-- For slicing items inside the inventory, such as Coconuts.
+AddComponentAction("USEITEM", "slicer", function(inst, doer, target, actions, right)
+	if target:HasTag("sliceable") then
+		table.insert(actions, ACTIONS.SLICE)
+	end
+end)
+
+AddComponentAction("INVENTORY", "slicer", function(inst, doer, actions, right)
+	if inst:HasTag("sliceable") then
+		table.insert(actions, ACTIONS.SLICE)
 	end
 end)
 

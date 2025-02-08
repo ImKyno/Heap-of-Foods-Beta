@@ -14,6 +14,12 @@ local spices =
 	"garlic",
 	"sugar",
 	"salt",
+	
+	"cure",
+	"cold",
+	"fire",
+	"fed",
+	"mind",
 }
 
 -- Foliage can be cooked into Cooked Foliage.
@@ -40,7 +46,7 @@ local resize_items =
     "kyno_parznip_cooked",
 }
 
-for k,v in pairs(resize_items) do
+for k, v in pairs(resize_items) do
     AddPrefabPostInit(v, ResizeThisItem)
 end
 
@@ -169,7 +175,7 @@ local drinkable_foods =
     "goatmilk",
 }
 
-for k,v in pairs(drinkable_foods) do
+for k, v in pairs(drinkable_foods) do
     AddPrefabPostInit(v, function(inst)
         inst:AddTag("drinkable_food")
     end)
@@ -197,7 +203,7 @@ local function DryablePostinit(inst)
     inst.components.dryable:SetDryTime(TUNING.DRY_MED)
 end
 
-for k,v in pairs(dryable_foods) do
+for k, v in pairs(dryable_foods) do
 	AddPrefabPostInit(v, DryablePostinit)
 end
 
@@ -212,7 +218,7 @@ if HOF_ALCOHOLICDRINKS then
 		"wilba", -- What? Yeah, modded characters be like.
 	}
 
-	for k,v in pairs(restricted_characters) do
+	for k, v in pairs(restricted_characters) do
 		AddPrefabPostInit(v, function(inst)
 			inst:AddTag("no_alcoholic_drinker")
 		end)
@@ -274,10 +280,10 @@ local function HoneyFoodsPostinit(inst)
 	end
 end
 
-for k,v in pairs(honeyed_foods) do
+for k, v in pairs(honeyed_foods) do
 	AddPrefabPostInit(v, HoneyFoodsPostinit)
 
-	for k,s in pairs(spices) do
+	for k, s in pairs(spices) do
 		AddPrefabPostInit(v.."_spice_"..s, HoneyFoodsPostinit)
 	end
 end
@@ -305,6 +311,46 @@ end
 
 AddPrefabPostInit("pretzel", PretzelHeartPostinit)
 
-for k,s in pairs(spices) do
+for k, s in pairs(spices) do
 	AddPrefabPostInit("pretzel_spice_"..s, PretzelHeartPostinit)
 end
+
+local function MeatPostInit(inst)
+	inst:AddTag("sliceable")
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("sliceable")
+	inst.components.sliceable:SetProduct("smallmeat")
+	inst.components.sliceable:SetSliceSize(2)
+end
+
+local function DrumstickPostInit(inst)
+	inst:AddTag("sliceable")
+	
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("sliceable")
+	inst.components.sliceable:SetProduct("smallmeat")
+	inst.components.sliceable:SetSliceSize(1)
+end
+
+local function FishMeatPostInit(inst)
+	inst:AddTag("sliceable")
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("sliceable")
+	inst.components.sliceable:SetProduct("fishmeat_small")
+	inst.components.sliceable:SetSliceSize(2)
+end
+
+AddPrefabPostInit("meat", MeatPostInit)
+AddPrefabPostInit("drumstick", DrumstickPostInit)
+AddPrefabPostInit("fishmeat", FishMeatPostInit)

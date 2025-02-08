@@ -1134,6 +1134,23 @@ local HOF_SCRAPBOOK_ITEMS =
 		anim           = "idle",
 		deps           = {"boneshard", "worm_boss"},
 	},
+	
+	kyno_itemslicer    =
+	{
+		name           = "kyno_itemslicer",
+		type           = "item",
+		subcat         = "tool",
+		tex            = "kyno_itemslicer.tex",
+		prefab         = "kyno_itemslicer",
+		bank           = "kyno_itemslicer",
+		build          = "kyno_itemslicer",
+		anim           = "idle",
+		animoffsety    = 10,
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -75,
+		deps           = {"researchlab", "researchlab2", "flint", "twigs"},
+		specialinfo    = "ITEMSLICER",
+	},
 }
 
 local HOF_SCRAPBOOK_FOODS =
