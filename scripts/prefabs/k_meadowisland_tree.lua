@@ -20,6 +20,11 @@ local prefabs =
 	"kyno_piko_orange",
 }
 
+local LEAF_PREFAB = "kyno_tealeaf" 
+local NUT_PREFAB = "kyno_twiggynuts"
+local RANDOM_CHANCE = .50
+local VEC_CHANCE = .33
+
 local function ChopTree(inst, chopper, chopsleft, numchops)
     if not (chopper ~= nil and chopper:HasTag("playerghost")) then
         inst.SoundEmitter:PlaySound(chopper ~= nil and chopper:HasTag("beaver") and
@@ -34,18 +39,20 @@ local function ChopTree(inst, chopper, chopsleft, numchops)
 	end
 
     local x, y, z = inst.Transform:GetWorldPosition()
-	SpawnPrefab(math.random() < 0.5 and "green_leaves_chop" or "green_leaves_chop").Transform:SetPosition(x, y + math.random(), z)
+	SpawnPrefab("green_leaves_chop").Transform:SetPosition(x, y + math.random(), z)
 	
 	-- Chance to get some leaves/nuts when chopping.
 	if math.random() <= TUNING.KYNO_MEADOWISLAND_TREE_DROP_CHANCE then
-		local item_to_drop = math.random() <= .50 and "kyno_tealeaf" or "kyno_twiggynuts"
+		local item_to_drop = math.random() <= RANDOM_CHANCE and LEAF_PREFAB or NUT_PREFAB
 	
 		local item = SpawnPrefab(item_to_drop)
-		local rad = chopper:GetPosition():Dist(inst:GetPosition())
-		local vec = (chopper:GetPosition() - inst:GetPosition()):Normalize()
-		local offset = Vector3(vec.x * rad, 4, vec.z * rad)
-
-		item.Transform:SetPosition((inst:GetPosition() + offset):Get())
+		if math.random() < VEC_CHANCE then 
+			LaunchAt(item, inst, chopper, .5, 4, 1.3, 5)
+		else
+			LaunchAt(item, inst, nil, .5, 4, 1.1, 5)
+		end
+		
+		item.components.inventoryitem:SetLanded(true)
 	end
 end
 

@@ -77,6 +77,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_SUGARBOMBS",      "A pack of sugary cereal tha
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_LUNARSOUP",       "\"I fear nothing when that Lunar Soup goes down in my belly!\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SPRINKLER",       "Tired of manually watering your crops? Build yourself a Garden Sprinkler today and say goodbye to manual labor!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKASHINE",       "Lewis originally created Nukashine so he could afford a warehouse for his Nuka-Cola collection, but its popularity meant that chapter president Judy Lowell and members of the wider Eta Psi fraternity became involved.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_ITEMSLICER",      "Meat Chunks and some hard fruits can be sliced using a Cleaver.")
 
 -- We want that our custom tips appears more often.
 SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})

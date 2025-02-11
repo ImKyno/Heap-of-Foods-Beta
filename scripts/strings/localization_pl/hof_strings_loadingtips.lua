@@ -77,6 +77,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_SUGARBOMBS",      "Paczka słodkich płatków 
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_LUNARSOUP",       "\"Nie boję się niczego, gdy ta Księżycowa Zupa ląduje w moim brzuchu!\" -W")	
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SPRINKLER",       "Zmęczony ręcznym podlewaniem upraw? Zbuduj sobie Ogrodowy Zraszacz i pożegnaj się z tą uciążliwą pracą!")	
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKASHINE",       "Lewis stworzył Nukashine, aby zarobić na magazyn dla swojej kolekcji Nuka-Coli. Jego popularność sprawiła jednak, że prezes oddziału Judy Lowell oraz członkowie bractwa Eta Psi zaczęli brać w tym udział.")	
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_ITEMSLICER",      "Meat Chunks and some hard fruits can be sliced using a Cleaver.")
 
 -- Chcemy, aby nasze niestandardowe wskazówki pojawiały się częściej.	
 SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})	

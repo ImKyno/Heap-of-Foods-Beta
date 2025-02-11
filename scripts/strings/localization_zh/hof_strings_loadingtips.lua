@@ -77,6 +77,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_SUGARBOMBS",      "甜麦炮弹是含糖量达
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_LUNARSOUP",       "\"喝下月牙汤，我无所畏惧！\" -W")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SPRINKLER",       "厌倦了手动浇灌庄稼？那今天就为自己建造一个花园洒水器，告别手工劳动！")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKASHINE",       "路易斯（Lewis）创建 Nukashine 的初衷是为了给他的核子可乐收藏提供一个地方，但它的流行意味着朱迪-洛厄尔（Judy Lowell）和 Eta Psi 将会介入。")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_ITEMSLICER",      "Meat Chunks and some hard fruits can be sliced using a Cleaver.")
 
 -- We want that our custom tips appears more often.
 SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})

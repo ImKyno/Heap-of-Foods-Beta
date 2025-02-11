@@ -176,6 +176,8 @@ local function tree_chop(inst, chopper)
 		local offset = Vector3(vec.x * rad, 4, vec.z * rad)
 
 		coconut.Transform:SetPosition((inst:GetPosition() + offset):Get())
+		coconut.components.inventoryitem:SetLanded(true)
+
 		coconut.updatetask = coconut:DoPeriodicTask(0.1, CoconutChecker, 0.05)
 	end
 end

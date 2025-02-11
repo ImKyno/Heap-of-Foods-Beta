@@ -134,27 +134,28 @@
 		<Element name="pizza_tropical.tex" u1="0.0635" u2="0.124" v2="0.199" v1="0.101" variant="" />
 		<Element name="poi.tex" u1="0.126" u2="0.1865" v2="0.199" v1="0.101" variant="" />
 		<Element name="poisonfrogglebunwich.tex" u1="0.1885" u2="0.249" v2="0.199" v1="0.101" variant="" />
-		<Element name="pretzel.tex" u1="0.251" u2="0.3115" v2="0.199" v1="0.101" variant="" />
-		<Element name="pumpkin_soup.tex" u1="0.3135" u2="0.374" v2="0.199" v1="0.101" variant="" />
-		<Element name="purplewobstersoup.tex" u1="0.376" u2="0.4365" v2="0.199" v1="0.101" variant="" />
-		<Element name="radishsalad.tex" u1="0.4385" u2="0.499" v2="0.199" v1="0.101" variant="" />
-		<Element name="roastedhazelnuts.tex" u1="0.501" u2="0.5615" v2="0.199" v1="0.101" variant="" />
-		<Element name="sea_pudding.tex" u1="0.5635" u2="0.624" v2="0.199" v1="0.101" variant="" />
-		<Element name="sharkfinsoup.tex" u1="0.626" u2="0.6865" v2="0.199" v1="0.101" variant="" />
-		<Element name="slaw.tex" u1="0.6885" u2="0.749" v2="0.199" v1="0.101" variant="" />
-		<Element name="smores.tex" u1="0.751" u2="0.8115" v2="0.199" v1="0.101" variant="" />
-		<Element name="snakebonesoup.tex" u1="0.8135" u2="0.874" v2="0.199" v1="0.101" variant="" />
-		<Element name="soulstew.tex" u1="0.876" u2="0.9365" v2="0.199" v1="0.101" variant="" />
-		<Element name="spidercake.tex" u1="0.9385" u2="0.999" v2="0.199" v1="0.101" variant="" />
-		<Element name="steamedhamsandwich.tex" u1="0.001" u2="0.0615" v2="0.099" v1="0.001" variant="" />
-		<Element name="strawberrygrinder.tex" u1="0.0635" u2="0.124" v2="0.099" v1="0.001" variant="" />
-		<Element name="sugarbombs.tex" u1="0.126" u2="0.1865" v2="0.099" v1="0.001" variant="" />
-		<Element name="sugarflymuffin.tex" u1="0.1885" u2="0.249" v2="0.099" v1="0.001" variant="" />
-		<Element name="tea.tex" u1="0.251" u2="0.3115" v2="0.099" v1="0.001" variant="" />
-		<Element name="tricolordango.tex" u1="0.3135" u2="0.374" v2="0.099" v1="0.001" variant="" />
-		<Element name="tropicalbouillabaisse.tex" u1="0.376" u2="0.4365" v2="0.099" v1="0.001" variant="" />
-		<Element name="watercup.tex" u1="0.4385" u2="0.499" v2="0.099" v1="0.001" variant="" />
-		<Element name="waterycressbowl.tex" u1="0.501" u2="0.5615" v2="0.099" v1="0.001" variant="" />
-		<Element name="wobstermonster.tex" u1="0.5635" u2="0.624" v2="0.099" v1="0.001" variant="" />
+		<Element name="poisonfrogglebunwich_old.tex" u1="0.251" u2="0.3115" v2="0.199" v1="0.101" variant="" />
+		<Element name="pretzel.tex" u1="0.3135" u2="0.374" v2="0.199" v1="0.101" variant="" />
+		<Element name="pumpkin_soup.tex" u1="0.376" u2="0.4365" v2="0.199" v1="0.101" variant="" />
+		<Element name="purplewobstersoup.tex" u1="0.4385" u2="0.499" v2="0.199" v1="0.101" variant="" />
+		<Element name="radishsalad.tex" u1="0.501" u2="0.5615" v2="0.199" v1="0.101" variant="" />
+		<Element name="roastedhazelnuts.tex" u1="0.5635" u2="0.624" v2="0.199" v1="0.101" variant="" />
+		<Element name="sea_pudding.tex" u1="0.626" u2="0.6865" v2="0.199" v1="0.101" variant="" />
+		<Element name="sharkfinsoup.tex" u1="0.6885" u2="0.749" v2="0.199" v1="0.101" variant="" />
+		<Element name="slaw.tex" u1="0.751" u2="0.8115" v2="0.199" v1="0.101" variant="" />
+		<Element name="smores.tex" u1="0.8135" u2="0.874" v2="0.199" v1="0.101" variant="" />
+		<Element name="snakebonesoup.tex" u1="0.876" u2="0.9365" v2="0.199" v1="0.101" variant="" />
+		<Element name="soulstew.tex" u1="0.9385" u2="0.999" v2="0.199" v1="0.101" variant="" />
+		<Element name="spidercake.tex" u1="0.001" u2="0.0615" v2="0.099" v1="0.001" variant="" />
+		<Element name="steamedhamsandwich.tex" u1="0.0635" u2="0.124" v2="0.099" v1="0.001" variant="" />
+		<Element name="strawberrygrinder.tex" u1="0.126" u2="0.1865" v2="0.099" v1="0.001" variant="" />
+		<Element name="sugarbombs.tex" u1="0.1885" u2="0.249" v2="0.099" v1="0.001" variant="" />
+		<Element name="sugarflymuffin.tex" u1="0.251" u2="0.3115" v2="0.099" v1="0.001" variant="" />
+		<Element name="tea.tex" u1="0.3135" u2="0.374" v2="0.099" v1="0.001" variant="" />
+		<Element name="tricolordango.tex" u1="0.376" u2="0.4365" v2="0.099" v1="0.001" variant="" />
+		<Element name="tropicalbouillabaisse.tex" u1="0.4385" u2="0.499" v2="0.099" v1="0.001" variant="" />
+		<Element name="watercup.tex" u1="0.501" u2="0.5615" v2="0.099" v1="0.001" variant="" />
+		<Element name="waterycressbowl.tex" u1="0.5635" u2="0.624" v2="0.099" v1="0.001" variant="" />
+		<Element name="wobstermonster.tex" u1="0.626" u2="0.6865" v2="0.099" v1="0.001" variant="" />
 	</Elements>
 </Atlas>
