@@ -1,23 +1,24 @@
 -- Common Dependencies.
-local _G      = GLOBAL
-local require = _G.require
-local cooking = require("cooking")
+local _G           = GLOBAL
+local require      = _G.require
+local cooking      = require("cooking")
+local CookbookData = require("cookbookdata")
 
 require("hof_constants")
 require("craftpot/ingredienttags")
 
 -- New Vanilla Crock Pot Ingredients.
-AddIngredientValues({"slurtle_shellpieces"}, 	{inedible   = 1, 	elemental = 1,	 shell    = 1})
+AddIngredientValues({"slurtle_shellpieces"}, 	{shell      = 1, 	elemental = 1})
 AddIngredientValues({"rabbit"}, 				{rabbit     = 1})
 AddIngredientValues({"firenettles"}, 			{veggie     = 0.5})
 AddIngredientValues({"foliage"}, 				{veggie     = 0.25, foliage   = 1}, 		  true)
 AddIngredientValues({"succulent_picked"}, 		{veggie     = 0.25})
 AddIngredientValues({"petals"}, 				{decoration = 1})
-AddIngredientValues({"gears"}, 					{gears      = 1,	inedible  = 1})
-AddIngredientValues({"rocks"}, 					{rocks      = 1, 	elemental = 1,   inedible = 1})
-AddIngredientValues({"poop"}, 					{poop       = 1, 	inedible  = 1})
-AddIngredientValues({"guano"}, 					{poop       = 1, 	inedible  = 1})
-AddIngredientValues({"glommerfuel"}, 			{poop       = 1, 	inedible  = 1})
+AddIngredientValues({"gears"}, 					{gears      = 1})
+AddIngredientValues({"rocks"}, 					{rocks      = 1, 	elemental = 1})
+AddIngredientValues({"poop"}, 					{poop       = 1})
+AddIngredientValues({"guano"}, 					{poop       = 1})
+AddIngredientValues({"glommerfuel"}, 			{poop       = 1})
 AddIngredientValues({"papyrus"},				{paper      = 1})
 AddIngredientValues({"deerclops_eyeball"},      {inedible   = 1, 	boss      = 1})
 AddIngredientValues({"bearger_fur"},            {inedible   = 1, 	boss      = 1})
@@ -34,7 +35,7 @@ AddIngredientValues({"moon_cap"},               {veggie     = 0.5,  mushrooms = 
 AddIngredientValues({"livinglog"},              {inedible   = 1,    magic     = 1})
 AddIngredientValues({"spider"},                 {monster    = 1,    spider    = 1})
 AddIngredientValues({"tillweed"},               {veggie     = 0.5,  weed      = 1})
-AddIngredientValues({"wagpunk_bits"}, 			{junk       = 1,	inedible  = 1})
+AddIngredientValues({"wagpunk_bits"}, 			{junk       = 1})
 AddIngredientValues({"butter"},                 {fat        = 1,    dairy     = 1,   butter   = 1})
 AddIngredientValues({"baconeggs"},              {prepfood   = 1}) -- Could use meat tag, but I don't want people using this as "filler" lol.
 
@@ -142,7 +143,7 @@ local recipe_cards     = cooking.recipe_cards
 for _, cooker in pairs(cookpots)         do for _, recipe in pairs(common_recipes)   do AddCookerRecipe(cooker, recipe) end end
 for _, cooker in pairs(cookpots)         do for _, recipe in pairs(seasonal_recipes) do AddCookerRecipe(cooker, recipe) end end
 for _, cooker in pairs(cookpots_master)  do for _, recipe in pairs(warly_recipes)    do AddCookerRecipe(cooker, recipe) end end
--- for _, cooker in pairs(cookpots_spicer)  do for _, recipe in pairs(spiced_recipes)   do AddCookerRecipe(cooker, recipe) end end -- Moved to hof_foodspicer.lua
+for _, cooker in pairs(cookpots_spicer)  do for _, recipe in pairs(spiced_recipes)   do AddCookerRecipe(cooker, recipe) end end -- Moved to hof_foodspicer.lua
 
 for _, recipe in pairs(common_recipes)   do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, cooker_name = "cookpot"}) end end
 for _, recipe in pairs(seasonal_recipes) do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, cooker_name = "cookpot"}) end end
@@ -184,5 +185,6 @@ if HOF_WARLYRECIPES then
 	for k, recipe in pairs(warly_recipes) do
 		cooking.cookbook_recipes["mod"][k] = nil
 		cooking.cookbook_recipes["portablecookpot"][k] = recipe
+		recipe.cookbook_category = "portablecookpot" -- Need this here so it can properly register the recipes.
 	end
 end

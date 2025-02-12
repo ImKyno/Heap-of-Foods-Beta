@@ -41,7 +41,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_CHICKEN",         "\"Zastanawiam się, czy te 
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SYRUPPOT",        "Syrop przygotowany w Garnku do Syropu daje trzy jednostki zamiast jednej, gdy gotujesz go w zwykłym Crock Pocie.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWARE",        "Garnki do Syropu, Garnki do Gotowania, Grille i Piece gotują jedzenie szybciej niż zwykły Crock Pot. Mają też małą szansę na podwójną porcję!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWARE_PIT",    "Aby gotować przy użyciu specjalnych stacji kuchennych, musisz najpierw zainstalować je na Ognisku.")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWARE_FIRE",   "Specjalne stacje kuchenne będą gotować jedzenie tylko wtedy, gdy poziom ognia w ognisku pod nimi będzie wystarczająco wysoki.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWARE_FIRE",   "Specjalne stacje kuchenne będą gotować jedzenie tylko wtedy gdy poziom ognia w ognisku pod nimi będzie wystarczająco wysoki.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWARE_OLDPOT", "Starszy Świniak może potrzebować Twojej pomocy, aby naprawić swój Stary Garnek.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SPEED_DURATION",  "Możesz zmienić, jak długo trwa bonus szybkości z jedzenia w konfiguracji moda.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WATERY_CRATE",    "\"Wczoraj, kiedy żeglowałem, widziałem dziwną skrzynkę dryfującą po oceanie, powinienem ją sprawdzić, jeśli znowu ją znajdę.\" -W")

@@ -41,7 +41,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_CHICKEN",			"\"I wonder if those Chickens coul
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SYRUPPOT", 		"Syrup made in the Syrup Pot will give Three units instead of One unit, when that's cooked on a normal Crock Pot.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWARE",		"Syrup Pots, Cookpots, Grills and Ovens cooks the food faster than a normal Crock Pot. And they have a small chance to yield double portions!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWARE_PIT", 	"To cook using the special Cookware stations, you need to install them above a Fire Pit first.")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWARE_FIRE",	"Special Cookware stations will only cook the food, if the fire level of the Fire Pit below them is high enough.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWARE_FIRE",	"Special Cookware stations will only cook the food if the fire level of the Fire Pit below them is high enough.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_COOKWARE_OLDPOT", "The Pig Elder may need your assist to repair his Old Pot.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SPEED_DURATION",  "You can change how long the Speed Buff from foods will last in the Mod Configuration.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WATERY_CRATE",	"\"Yesterday when I was sailing, I saw a strange crate drifting in the ocean, I should check them out, if I find one again.\" -W")

@@ -63,7 +63,7 @@ function GenerateHofSpicedFoods(foods)
 			
 			if spicename == "spice_cure" then
 				if newdata.perishtime then
-					newdata.perishtime = newdata.perishtime * TUNING.KYNO_PRESERVERBUFF_PERISHTIME
+					newdata.perishtime = newdata.perishtime * TUNING.KYNO_PRESERVERBUFF_PERISHTIME or 0
 					newdata.degrades_with_spoilage = false
 				end
 			end

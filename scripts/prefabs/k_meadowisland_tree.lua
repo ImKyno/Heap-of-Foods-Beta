@@ -42,8 +42,8 @@ local function ChopTree(inst, chopper, chopsleft, numchops)
 	SpawnPrefab("green_leaves_chop").Transform:SetPosition(x, y + math.random(), z)
 	
 	-- Chance to get some leaves/nuts when chopping.
-	if math.random() <= TUNING.KYNO_MEADOWISLAND_TREE_DROP_CHANCE then
-		local item_to_drop = math.random() <= RANDOM_CHANCE and LEAF_PREFAB or NUT_PREFAB
+	if math.random() < TUNING.KYNO_MEADOWISLAND_TREE_DROP_CHANCE then
+		local item_to_drop = math.random() < RANDOM_CHANCE and LEAF_PREFAB or NUT_PREFAB
 	
 		local item = SpawnPrefab(item_to_drop)
 		if math.random() < VEC_CHANCE then 

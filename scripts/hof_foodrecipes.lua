@@ -2661,7 +2661,7 @@ local kyno_foods =
 	
 	dumplings = -- Wow... they're just perogies with hamlet skin.
 	{
-		test = function(cooker, names, tags) return tags.flour and tags.meat and (tags.veggie and tags.veggie >= 1) end,
+		test = function(cooker, names, tags) return tags.flour and tags.meat and (tags.veggie and tags.veggie >= 1) and not tags.dairy end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,

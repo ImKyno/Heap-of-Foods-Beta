@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "9.2-A"
+version                     = "9.4-A"
 
 description                 = 
 [[
@@ -13,7 +13,7 @@ This update focused on revamping the visuals of the farming crops as well as add
 
 Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover it.
 
-󰀌 Mod Version: 9.2-A
+󰀌 Mod Version: 9.4-A
 󰀧 Update: The Seasonings Fest
 ]]
 
@@ -170,7 +170,7 @@ Esta atualização tem como foco melhorar os visuais das plantações e adiciona
 
 Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso, em uma ilha muito longe do continente, há um novo arbusto crescendo, esperando para ser descoberto!
 
-󰀌 Versão do Mod: 9.2-A
+󰀌 Versão do Mod: 9.4-A
 󰀧 Atualização: O Festival dos Temperos
 ]]
 
@@ -312,7 +312,7 @@ if locale  == "zh" or locale == "zhr" then
 
 我们的幸存者设法在野外找到了新型种子！在远离大陆的热带岛屿上，一种新的灌木丛正在绽放，等待着他们去发掘。
 
-󰀌 Mod版本: 9.2-A
+󰀌 Mod版本: 9.4-A
 󰀧 Update: 调味料节
 ]]
 
@@ -336,7 +336,7 @@ if locale  == "zh" or locale == "zhr" then
 		coffeespeed             = "移速Buff",
 		coffeeduration          = "移速Buff持续时间",
 		warlygrinder            = "便携式研磨器食谱",
-		warlyrecipes            = "Chef's Specials Cookbook Page",
+		warlyrecipes            = "沃利的特色食谱页面",
 		buckettweak             = "便便桶配方",
 		retrofit                = "改造内容",
 		modtrades               = "贸易转型",
@@ -360,7 +360,7 @@ if locale  == "zh" or locale == "zhr" then
 		coffeespeed             = "料理是否提供移速Buff？\n该项仅作用于特定料理",
 		coffeeduration          = "料理提供的移速Buff可以持续多久？",
 		warlygrinder            = "沃利的便携式研磨器是否可以拥有碾磨石的功能？",
-		warlyrecipes            = "Should Warly's Recipes appear on \"Chef's Specials\" instead of \"Mod Recipes\" in the Cookbook?",
+		warlyrecipes            = "在烹饪指南中，沃利的Mod特色料理是否应该出现在\"大厨特色菜\"分页，而不是\"模组食谱\"分页？",
 		buckettweak             = "便便桶是否用于挤奶而不是默认功能？",
 		retrofit                = "如果你的世界缺少Mod内容，请启用此选项。\n改造完成后，该选项将被设置为 \"已更新\"！",
 		modtrades               = "猪王是否应该能够用某些物品来交换 Mod 物品？\这也适用于熄灯世界中的猪长老。"
@@ -426,8 +426,8 @@ if locale  == "zh" or locale == "zhr" then
 		coffeeduration6         = "移速Buff会持续4天",
 		warlygrinder1           = "沃利的便携式研磨器不会拥有碾磨石的功能。",
 		warlygrinder2           = "沃利的便携式研磨器会拥有碾磨石的功能。",
-		warlyrecipes1           = "Warly's Recipes will appear on \"Mod Recipes\" page of the Cookbook.",
-		warlyrecipes2           = "Warly's Recipes will appear on \"Chef's Specials\" page of the Cookbook.",
+		warlyrecipes1           = "在烹饪指南中，沃利的Mod特色料理会出现在\"模组食谱\"分页。",
+		warlyrecipes2           = "在烹饪指南中，沃利的Mod特色料理会出现在\"大厨特色菜\"分页。",
 		buckettweak1            = "便便桶使用默认功能。",
 		buckettweak2            = "便便桶不使用默认功能，可用于挤奶。",
 		retrofit1               = "你的世界已更新了Mod的内容。",
