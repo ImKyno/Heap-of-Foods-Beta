@@ -214,12 +214,13 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 20,
 		hunger = 25,
 		sanity = -10,
 		cooktime = .5,
 		potlevel = "med",
+		nochill = true,
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"firenettles", 1}, {"twigs", 3}}},
 	},
@@ -232,12 +233,13 @@ local kyno_foods =
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 20,
 		hunger = 37.5,
 		sanity = -5,
 		cooktime = 1,
 		potlevel = "high",
+		nochill = true,
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"firenettles", 2}, {"smallmeat", 2}}},
 	},
@@ -1555,7 +1557,7 @@ local kyno_foods =
 	cheese_yellow = 
 	{
 		test = function(cooker, names, tags) return (tags.milk and tags.milk == 2) and names.kyno_spotspice and not tags.meat 
-		and not (names.garlic or names.garlic_cooked) and not names.kyno_milk_koalefant end,
+		and not (names.garlic or names.garlic_cooked) and not names.kyno_milk_koalefant and not tags.cheese end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -1571,7 +1573,7 @@ local kyno_foods =
 	cheese_white = 
 	{
 		test = function(cooker, names, tags) return (tags.milk and tags.milk == 2) and names.kyno_spotspice and (names.garlic or names.garlic_cooked)
-		and not tags.meat end,
+		and not tags.meat and not tags.cheese end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -1587,7 +1589,7 @@ local kyno_foods =
 	cheese_koalefant =
 	{
 		test = function(cooker, names, tags) return (names.kyno_milk_koalefant and names.kyno_milk_koalefant == 2) and names.kyno_spotspice
-		and not (names.garlic or names.garlic_cooked) and not names.kyno_milk_beefalo and not names.goatmilk and not tags.meat end,
+		and not (names.garlic or names.garlic_cooked) and not names.kyno_milk_beefalo and not names.goatmilk and not tags.meat and not tags.cheese end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -2661,8 +2663,9 @@ local kyno_foods =
 	
 	dumplings = -- Wow... they're just perogies with hamlet skin.
 	{
-		test = function(cooker, names, tags) return tags.flour and tags.meat and (tags.veggie and tags.veggie >= 1) and not tags.dairy end,
-		priority = 35,
+		test = function(cooker, names, tags) return tags.flour and (tags.veggie and tags.veggie >= 1)
+		and (tags.meat and tags.meat < 1) end,
+		priority = 25,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
 		health = 15,
@@ -2671,7 +2674,7 @@ local kyno_foods =
 		cooktime = 1.3,
 		potlevel = "high",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_flour", 1}, {"meat", 1}, {"carrot", 1}, {"kyno_spotspice", 1}}},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"smallmeat", 1}, {"carrot", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	--[[
