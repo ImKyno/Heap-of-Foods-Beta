@@ -366,7 +366,7 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SLICE, function(inst,
 	local target = action.target or action.invobject
 	
 	if target:HasTag("sliceable") then
-		return "domediumaction"
+		return inst:HasTag("fastbuilder") and "doshortaction" or "domediumaction"
 	end
 end))
 
@@ -374,6 +374,22 @@ AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SLICE, functio
 	local target = action.target or action.invobject
 	
 	if target:HasTag("sliceable") then
-		return "domediumaction"
+		return inst:HasTag("fastbuilder") and "doshortaction" or "domediumaction"
+	end
+end))
+
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SLICESTACK, function(inst, action)
+	local target = action.target or action.invobject
+	
+	if target:HasTag("sliceable") then
+		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	end
+end))
+
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SLICESTACK, function(inst, action)
+	local target = action.target or action.invobject
+	
+	if target:HasTag("sliceable") then
+		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
 	end
 end))

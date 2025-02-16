@@ -84,30 +84,50 @@ end)
 ACTIONS.SLICE.priority = 2
 ACTIONS.SLICE.mount_valid = true
 
+AddAction("SLICESTACK", STRINGS.ACTIONS.SLICESTACK, function(act)
+	local sliceable = act.target and act.target.components.sliceable or nil
+	local owner = act.invobject.components.inventoryitem:GetGrandOwner()
+	
+	if act.invobject and sliceable ~= nil then
+		sliceable:OnSliceStack()
+		owner.SoundEmitter:PlaySound("dontstarve/wilson/harvest_sticks")
+		return true
+	end
+end)
+
+ACTIONS.SLICESTACK.priority = 2
+ACTIONS.SLICESTACK.mount_valid = true
+
 -- For slicing items inside the inventory, such as Coconuts.
 AddComponentAction("USEITEM", "slicer", function(inst, doer, target, actions, right)
+	local act = target.replica.stackable ~= nil and target.replica.stackable:IsStack() and 
+	(doer.components.playercontroller ~= nil and doer.components.playercontroller:IsControlPressed(CONTROL_FORCE_STACK)) and
+	ACTIONS.SLICESTACK or ACTIONS.SLICE
+	
 	if target:HasTag("sliceable") then
-		table.insert(actions, ACTIONS.SLICE)
+		table.insert(actions, act)
 	end
 end)
 
 AddComponentAction("INVENTORY", "slicer", function(inst, doer, actions, right)
-	if inst:HasTag("sliceable") then
-		table.insert(actions, ACTIONS.SLICE)
-	end
-end)
+	local act = inst.replica.stackable ~= nil and inst.replica.stackable:IsStack() and 
+	(doer.components.playercontroller ~= nil and doer.components.playercontroller:IsControlPressed(CONTROL_FORCE_STACK)) and
+	ACTIONS.SLICESTACK or ACTIONS.SLICE
 
--- Action for storing Souls inside bottles. (Only Wortox).
-AddPrefabPostInit("messagebottleempty", function(inst)
-	inst:AddTag("soul_storage")
+	if inst:HasTag("sliceable") then
+		table.insert(actions, act)
+	end
 end)
 
 AddAction("STORESOUL", STRINGS.ACTIONS.STORESOUL, function(act)
 	local bottle = act.target and act.target.components.unwrappable or nil
+	
 	if act.invobject:HasTag("soul") and act.target:HasTag("soul_storage") then
 		local bottle_soul = SpawnPrefab("kyno_bottle_soul")
+		
 		act.doer.components.inventory:GiveItem(bottle_soul) 
 		act.doer.SoundEmitter:PlaySound("dontstarve/characters/wortox/soul/hop_out")
+		
 		act.invobject.components.stackable:Get(1):Remove()
 		act.target.components.stackable:Get(1):Remove()
 		return true
@@ -144,6 +164,7 @@ end)
 -- _G.KnownModIndex:IsModEnabled("workshop-2431867642") or _G.KnownModIndex:IsModEnabled("workshop-1935156140") then
 AddAction("PULLMILK", STRINGS.ACTIONS.PULLMILK, function(act)
 	local milkable = act.target and act.target.components.milkableanimal or nil
+	
 	if act.invobject and milkable ~= nil then
 		act.target.components.milkableanimal:Milk(act.doer)
 		act.doer.SoundEmitter:PlaySound("turnoftides/common/together/water/emerge/small")

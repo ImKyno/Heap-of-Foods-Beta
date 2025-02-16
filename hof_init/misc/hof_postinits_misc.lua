@@ -235,6 +235,11 @@ AddPrefabPostInit("wonkey", function(inst)
     end
 end)
 
+-- Action for storing Souls inside bottles. (Only Wortox).
+AddPrefabPostInit("messagebottleempty", function(inst)
+	inst:AddTag("soul_storage")
+end)
+
 -- Players Have a Chance to Drop Long Pig. Except WX-78, Wurt, Wortox and Wormwood.
 if HOF_HUMANMEAT then
     local longpig_characters =
