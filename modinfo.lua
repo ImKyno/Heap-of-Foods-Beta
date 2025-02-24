@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "9.5-A"
+version                     = "9.6-A"
 
 description                 = 
 [[
@@ -13,7 +13,7 @@ This update focused on revamping the visuals of the farming crops as well as add
 
 Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover it.
 
-󰀌 Mod Version: 9.5-A
+󰀌 Mod Version: 9.6-A
 󰀧 Update: The Seasonings Fest
 ]]
 
@@ -45,6 +45,7 @@ local labels                =
 	spoilage                = "Keep Food Spoilage",
 	coffeedrop              = "Coffee Plant Drop Rate",
 	seasonalfoods           = "Seasonal Recipes",
+	modspices               = "Chef's Spices",
 	humanmeat               = "Long Pig Recipes",
 	alcoholic               = "Alcoholic Restriction",
 	giantspawn              = "Giants from Foods",
@@ -68,6 +69,7 @@ local hovers                =
 	spoilage                = "Should food spoil if it's in the Crock Pot?",
 	coffeedrop              = "How many Coffee Plants Dragonfly should drop?",
 	seasonalfoods           = "Should Seasonal Recipes only be cooked during Special Events?",
+	modspices               = "Should Warly be able to grind Mod Spices?\nThis may cause longer loading times.",
 	humanmeat               = "Should Players drop Long Pigs upon death?\nNote: If disabled, this will cause some Recipes to be uncookable.",
 	alcoholic               = "Should some characters be unable to drink Alcoholic-like drinks?",
 	giantspawn              = "Should Players spawn Giants when eating their special food?",
@@ -124,6 +126,8 @@ local deschovers            =
 	coffeedrop5             = "Dragonfly will drop 16 Coffee Plants.",
 	seasonalfoods1          = "Seasonal Recipes can be cooked without restrictions.",
 	seasonalfoods2          = "Seasonal Recipes can only be cooked when Special Events are active.",
+	modspices1              = "Warly can't grind any Mod Spices.",
+	modspices2              = "Warly can grind all Mod Spices at the Portable Grinding Mill.",
 	humanmeat1              = "Players will not drop Long Pigs upon death.",
 	humanmeat2              = "Players may have a chance to drop Long Pigs upon death.",
 	alcoholic1              = "All characters can drink Alcoholic-like drinks.",
@@ -156,7 +160,7 @@ local deschovers            =
 
 -- Brazilian Portuguese
 if locale == "pt" then
-	name                        = "Amontoado de Comidas"
+	name                     = "Amontoado de Comidas"
 
 	description                 = 
 [[
@@ -170,7 +174,7 @@ Esta atualização tem como foco melhorar os visuais das plantações e adiciona
 
 Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso, em uma ilha muito longe do continente, há um novo arbusto crescendo, esperando para ser descoberto!
 
-󰀌 Versão do Mod: 9.5-A
+󰀌 Versão do Mod: 9.6-A
 󰀧 Atualização: O Festival dos Temperos
 ]]
 
@@ -188,13 +192,14 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 		spoilage                = "Deteorização da Comida",
 		coffeedrop              = "Taxa de Drop da Planta de Café",
 		seasonalfoods           = "Receitas Sazonais",
+		modspices               = "Temperos do Chef", 
 		humanmeat               = "Receitas de Carne Humana",
 		alcoholic               = "Restrição Alcoólica",
 		giantspawn              = "Spawn de Gigantes das Comidas",
 		coffeespeed             = "Efeito de Velocidade",
 		coffeeduration          = "Duração do Efeito de Velocidade",
 		warlygrinder            = "Receitas do Moinho de Moagem",
-		warlyrecipes            = "Página Especiais do Chefe",
+		warlyrecipes            = "Página Especiais do Chef",
 		buckettweak             = "Receita do Balde de Cocô",
 		retrofit                = "Fazer Retro. de Conteúdos",
 		modtrades               = "Retro. de Trocas",
@@ -212,6 +217,7 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 		spoilage                = "Permitir que as comidas estraguem se estiverem na Panela?",
 		coffeedrop              = "Quantas Plantas de Café a Libélula deve deixar cair?",
 		seasonalfoods           = "Permitir que as Receitas Sazonais sejam cozinhadas somente em Eventos Especiais?",
+		modspices               = "Permitir que o Warly consiga fazer Temperos do Mod?\nIsso pode vir a causar um maior tempo de carregamento.",
 		humanmeat               = "Permitir que Jogadores deixem cair Carne Humana quando morrem?\nNota: Se desabilitado, pode impedir certas comidas de serem feitas.",
 		alcoholic               = "Permitir que alguns personagens sejam impedidos de beber bebidas alcoólicas?",
 		giantspawn              = "Permitir que Gigantes apareçam se Jogadores comerem suas comidas especiais?",
@@ -268,6 +274,8 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 		coffeedrop5             = "A Libélula deixará cair 16 Plantas de Café",
 		seasonalfoods1          = "Receitas Sazonais podem ser cozinhadas sem nenhuma restrição.",
 		seasonalfoods2          = "Receitas Sazonais só podem ser cozinhadas durante Eventos Especiais.",
+		modspices1              = "Warly não irá conseguir fazer nenhum Tempero do Mod.",
+		modspices2              = "Warly poderá fazer qualquer Tempero do Mod no Moinho de Moagem Portátil.",
 		humanmeat1              = "Jogadores não deixarão cair Carne Humana quando morrem.",
 		humanmeat2              = "Jogadores podem ter a chance de deixar cair Carne Humana quando morrem.",
 		alcoholic1              = "Todos os personagens podem beber bebidas alcoólicas.",
@@ -297,8 +305,8 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 end
 
 -- Simplified Chinese.
-if locale  == "zh" or locale == "zhr" then
-	name                        = "Heap of Foods(更多料理)"
+if locale == "zh" or locale == "zhr" then
+	name                        = "Heap of Foods (更多料理)"
 
 	description                 = 
 [[
@@ -312,7 +320,7 @@ if locale  == "zh" or locale == "zhr" then
 
 我们的幸存者设法在野外找到了新型种子！在远离大陆的热带岛屿上，一种新的灌木丛正在绽放，等待着他们去发掘。
 
-󰀌 Mod版本: 9.5-A
+󰀌 Mod版本: 9.6-A
 󰀧 Update: 调味料节
 ]]
 
@@ -330,6 +338,7 @@ if locale  == "zh" or locale == "zhr" then
 		spoilage                = "防止食物腐败",
 		coffeedrop              = "咖啡丛掉落数量",
 		seasonalfoods           = "季节性食谱",
+		modspices               = "Chef's Spices",
 		humanmeat               = "人肉食谱",
 		alcoholic               = "酒精限制",
 		giantspawn              = "特殊Boss料理",
@@ -354,6 +363,7 @@ if locale  == "zh" or locale == "zhr" then
 		spoilage                = "料理在烹饪锅中是否变质？",
 		coffeedrop              = "龙蝇掉落多少数量的咖啡丛？",
 		seasonalfoods           = "季节性的料理是否在特殊活动下才能烹饪？",
+		modspices               = "Should Warly be able to grind Mod Spices?\nThis may cause longer loading times.",
 		humanmeat               = "玩家死亡时是否掉落人肉？\n注意：如果禁用，可能会导致无法制作某些料理。",
 		alcoholic               = "是否应该禁止某些角色饮酒？",
 		giantspawn              = "如果玩家吃了含boss掉落物的特殊料理，boss是否应该出现？",
@@ -410,6 +420,8 @@ if locale  == "zh" or locale == "zhr" then
 		coffeedrop5             = "龙蝇会掉16株落咖啡丛。",
 		seasonalfoods1          = "季节性料理烹饪不受任何限制",
 		seasonalfoods2          = "季节性料理只能在特殊活动开启时烹制。",
+		modspices1              = "Warly can't grind any Mod Spices.",
+		modspices2              = "Warly can grind all Mod Spices at the Portable Grinding Mill.",
 		humanmeat1              = "玩家死亡后不会掉落人肉。",
 		humanmeat2              = "玩家死亡后小概率会掉落人肉。",
 		alcoholic1              = "所有角色都能饮酒。",
@@ -448,6 +460,7 @@ local options               =
 	spoilage                = {{description = desc.disabled,        hover = deschovers.spoilage1,       data = false},         {description = desc.enabled,         hover = deschovers.spoilage2,       data = true}},
 	coffeedrop              = {{description = desc.coffeedrop1,     hover = deschovers.coffeedrop1,     data = 0},             {description = desc.coffeedrop2,     hover = deschovers.coffeedrop2,     data = 4},    {description = desc.coffeedrop3,     hover = deschovers.coffeedrop3,     data = 8},    {description = desc.coffeedrop4,     hover = deschovers.coffeedrop4,     data = 12},  {description = desc.coffeedrop5,     hover = deschovers.coffeedrop5,     data = 16}},
 	seasonalfoods           = {{description = desc.disabled,        hover = deschovers.seasonalfoods1,  data = true},          {description = desc.enabled,         hover = deschovers.seasonalfoods2,  data = false}},
+	modspices               = {{description = desc.disabled,        hover = deschovers.modspices1,      data = false},         {description = desc.enabled,         hover = deschovers.modspices2,      data = true}},
 	humanmeat               = {{description = desc.disabled,        hover = deschovers.humanmeat1,      data = false},         {description = desc.enabled,         hover = deschovers.humanmeat2,      data = true}},
 	alcoholic               = {{description = desc.disabled,        hover = deschovers.alcoholic1,      data = false},         {description = desc.enabled,         hover = deschovers.alcoholic2,      data = true}},
 	giantspawn              = {{description = desc.disabled,        hover = deschovers.giantspawn1,     data = false},         {description = desc.enabled,         hover = deschovers.giantspawn2,     data = true}},
@@ -466,6 +479,7 @@ configuration_options       =
 	
 	{name                   = names.general,                                     hover = hovers.general,        options = options.none,           default = false},
 	{name                   = "SEASONALFOOD",     label = labels.seasonalfoods,  hover = hovers.seasonalfoods,  options = options.seasonalfoods,  default = false},
+	{name                   = "MODSPICES",        label = labels.modspices,      hover = hovers.modspices,      options = options.modspices,      default = true},
 	{name                   = "HUMANMEAT",        label = labels.humanmeat,      hover = hovers.humanmeat,      options = options.humanmeat,      default = true},
 	{name                   = "COFFEEDROPRATE",   label = labels.coffeedrop,     hover = hovers.coffeedrop,     options = options.coffeedrop,     default = 4},
 	{name                   = "ALCOHOLICDRINKS",  label = labels.alcoholic,      hover = hovers.alcoholic,      options = options.alcoholic,      default = true},

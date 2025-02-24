@@ -5,10 +5,29 @@ local function AddDappernessResistance(owner, equippable)
 end
 
 local function RemoveDappernessResistance(owner, equippable)
+	local dapperness = equippable:GetDapperness(owner, owner.components.sanity.no_moisture_penalty)
+	
 	if equippable.is_magic_dapperness and owner:HasTag("pinetreepioneer") then
-		return equippable:GetDapperness(owner, owner.components.sanity.no_moisture_penalty)
+		return dapperness or 0
+		
+	elseif equippable.is_magic_dapperness and owner:HasTag("shadowmagic") then
+		return equippable.inst:HasTag("shadow_item") and dapperness * TUNING.WAXWELL_SHADOW_ITEM_RESISTANCE or dapperness
+		
+	elseif equippable.is_magic_dapperness and owner:HasTag("clockmaker") then
+		if equippable.inst:HasTag("shadow_item") then
+			if owner.age_state == "old" then
+				return dapperness * TUNING.WANDA_SHADOW_RESISTANCE_OLD
+			elseif owner.age_state == "normal" then
+				return dapperness * TUNING.WANDA_SHADOW_RESISTANCE_NORMAL
+			end
+			
+			return dapperness * TUNING.WANDA_SHADOW_RESISTANCE_YOUNG
+		end 
+		
+		return dapperness
+		
 	elseif equippable.is_magic_dapperness then
-		return 1
+		return nil -- 1
 	end
 end
 

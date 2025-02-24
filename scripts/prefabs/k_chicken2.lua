@@ -89,8 +89,8 @@ local function OnDeath(inst, data)
 	end
 end
 
-local function CanSleep(inst, isnight)
-	return TheWorld.state.isnight
+local function CanSleep(inst)
+	return DefaultSleepTest(inst)
 end
 
 local function CanSpawnEgg(inst)
@@ -177,7 +177,7 @@ local function fn()
 	inst:AddComponent("homeseeker")
 	
 	inst:AddComponent("sleeper")
-	inst.components.sleeper.sleeptestfn = CanSleep
+	inst.components.sleeper:SetSleepTest(CanSleep)
 	
 	inst:AddComponent("trader")
 	inst.components.trader:SetAcceptTest(TestItem)
@@ -206,7 +206,7 @@ local function fn()
 
 	inst:AddComponent("health")
 	inst.components.health:SetMaxHealth(TUNING.KYNO_CHICKEN2_HEALTH)
-	inst.components.health:StartRegen(1, 8)
+	inst.components.health:StartRegen(5, 8)
 	
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

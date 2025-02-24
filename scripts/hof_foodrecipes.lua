@@ -2674,7 +2674,7 @@ local kyno_foods =
 		cooktime = 1.3,
 		potlevel = "high",
 		floater = {"med", nil, 0.65},
-		card_def = {ingredients = {{"kyno_flour", 1}, {"smallmeat", 1}, {"carrot", 1}, {"kyno_spotspice", 1}}},
+		card_def = {ingredients = {{"kyno_flour", 1}, {"smallmeat", 1}, {"carrot", 1}, {"kyno_oil", 1}}},
 	},
 	
 	--[[

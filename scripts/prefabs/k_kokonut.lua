@@ -79,6 +79,7 @@ local function kokonut()
 	inst:AddTag("deployedplant")
 	inst:AddTag("cattoy")
 	inst:AddTag("sliceable")
+	inst:AddTag("kokonut") -- For CoconutChecker.
 
 	inst.entity:SetPristine()
 

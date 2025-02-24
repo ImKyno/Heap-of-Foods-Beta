@@ -110,6 +110,7 @@ local function fn()
 	inst:AddComponent("knownlocations")
 	inst:AddComponent("homeseeker")
 	inst:AddComponent("tradable")
+	inst:AddComponent("murderable")
 	
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
@@ -118,8 +119,12 @@ local function fn()
 	inst.components.inventoryitem.canbepickedupalive = true
 	inst.components.inventoryitem:SetSinks(true)
 	
-	inst:AddComponent("health")
-	inst.components.health:SetMaxHealth(TUNING.KYNO_PEBBLECRAB_HEALTH)
+	-- inst:AddComponent("health")
+	-- inst.components.health:SetMaxHealth(TUNING.KYNO_PEBBLECRAB_HEALTH)
+	
+	-- inst:AddComponent("combat")
+	-- inst.components.combat.hiteffectsymbol = "chest"
+	-- inst.components.combat:SetTarget(nil)
 
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"kyno_crabmeat"})

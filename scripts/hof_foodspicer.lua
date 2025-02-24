@@ -24,7 +24,6 @@ local HOF_SPICES =
 	SPICE_FIRE   = { oneatenfn = oneaten_fire, prefabs = { "kyno_firebuff"   } },
 	SPICE_MIND   = {},
 	SPICE_FED    = {},
- -- SPICE_MOON   = {},
 }
 
 local anim_state_override_symbol = AnimState.OverrideSymbol
@@ -109,7 +108,7 @@ function GenerateHofSpicedFoods(foods)
 end
 
 local spicedfoods = require("spicedfoods")
-GenerateSpicedFoods(MergeMaps(foods_hof, foods_hof_w, foods_hof_s))
+GenerateSpicedFoods(MergeMaps(foods_hof, foods_hof_w, foods_hof_s)) -- This only creates spiced foods with vanilla spices.
 
 for k, data in pairs(spicedfoods) do
     for name, v in pairs(MergeMaps(foods_hof, foods_hof_w, foods_hof_s)) do

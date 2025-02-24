@@ -63,7 +63,7 @@ local hof_presets =
 			{ kyno_brewingrecipecard = 1 },
 		},
 
-		preset_weight = 2,	
+		preset_weight = 1,	
 	},
 	
 	hof_presets_can1 =
@@ -80,7 +80,7 @@ local hof_presets =
 			{ kyno_brewingrecipecard = 1 },
 		},
 
-		preset_weight = 2,	
+		preset_weight = 1,	
 	},
 	
 	hof_presets_can2 =
@@ -97,7 +97,25 @@ local hof_presets =
 			{ kyno_tunacan = .50, kyno_brewingrecipecard = 1 },
 		},
 
-		preset_weight = 2,	
+		preset_weight = 1,	
+	},
+	
+	hof_presets_fallout =
+	{
+		guaranteed_loot =
+		{
+			nukashine_sugarfree = {1, 4},
+			nukacola = {1, 3},
+			nukacola_quantum = {1, 2},
+		},
+		
+		randomly_selected_loot =
+		{
+			{ sugarbombs = 1 },
+			{ kyno_brewingrecipecard = .33 },
+		},
+		
+		preset_weight = 1,
 	},
 	
 	hof_presets_mobs =
@@ -131,7 +149,7 @@ local hof_presets =
 			{ mandrake = .33, kyno_brewingrecipecard = 1 },
 		},
 
-		preset_weight = 2,	
+		preset_weight = 1,	
 	},
 }
 

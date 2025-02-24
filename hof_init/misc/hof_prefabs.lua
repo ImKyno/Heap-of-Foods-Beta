@@ -76,6 +76,7 @@ PrefabFiles =
 	"k_meadowisland_shop",
 	"k_meadowisland_spawners",
 	"k_meadowisland_tree",
+	-- "k_meadowisland_tree2",
 	"k_meadowisland_tree_sapling",
 	"k_meadowisland_tree_seed",
 	"k_mealgrinder",

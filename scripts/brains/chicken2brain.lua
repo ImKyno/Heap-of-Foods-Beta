@@ -9,6 +9,7 @@ local MAX_LEASH_DIST  = 10
 local MAX_WANDER_DIST = 15
 local STOP_RUN_DIST   = 7
 local SEE_PLAYER_DIST = 10
+local RUN_TIME_OUT    = 7
 
 local Chicken2Brain = Class(Brain, function(self, inst)
     Brain._ctor(self, inst)
@@ -23,6 +24,7 @@ local function EatFoodAction(inst)
             not (item.components.inventoryitem and
 			item.components.inventoryitem:IsHeld())
         end)
+		
     if target then
         local act = BufferedAction(inst, target, ACTIONS.EAT)
         act.validfn = function() return not (target.components.inventoryitem and target.components.inventoryitem:IsHeld()) end
@@ -34,8 +36,9 @@ local RUN_AWAY_PARAMS =
 {
     tags = { "_combat", "_health" },
     notags = { "chickenfamily", "playerghost", "notarget", "INLIMBO" },
+	
     fn = function(guy)
-		return not guy.components.health:IsDead()
+		return not guy.components.health:IsDead() 
 		and (guy.components.combat.target ~= nil and
 		guy.components.combat.target:HasTag("chicken2"))
     end,
@@ -54,8 +57,14 @@ function Chicken2Brain:OnStart()
     local root = PriorityNode(
     {
         WhileNode(function() return self.inst.components.health.takingfiredamage end, "OnFire", Panic(self.inst)),
-        WhileNode(function() return self.inst.components.health:GetPercent() < .95 end, "LowHealth",
-			RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST)),	
+        -- WhileNode(function() return self.inst.components.health:GetPercent() < .50 end, "LowHealth",
+			-- RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST)),	
+		
+		-- WhileNode(function() return not TheWorld.state.iscaveday end, "CaveNightness",
+			-- DoAction(self.inst, GoHomeAction, "GoHome", true)),
+			
+		WhileNode(function() return GetTime() - self.inst.components.combat:GetLastAttackedTime() <= RUN_TIME_OUT end, "Attacked",
+			RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST)),
 			
         RunAway(self.inst, RUN_AWAY_PARAMS, SEE_PLAYER_DIST, STOP_RUN_DIST),
         RunAway(self.inst, "OnFire", SEE_PLAYER_DIST, STOP_RUN_DIST),

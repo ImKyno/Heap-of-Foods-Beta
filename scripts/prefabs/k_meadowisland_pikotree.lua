@@ -80,8 +80,8 @@ end
 
 local function ChopDownTree(inst, chopper)
     local pt = inst:GetPosition()
-
     local he_right = true
+	
     if chopper then
         local hispos = chopper:GetPosition()
         he_right = (hispos - pt):Dot(TheCamera:GetRightVec()) > 0
@@ -90,6 +90,7 @@ local function ChopDownTree(inst, chopper)
             he_right = false
         end
     end
+	
     if he_right then
         inst.AnimState:PlayAnimation("fallright_tall")
         inst.components.lootdropper:DropLoot(pt - TheCamera:GetRightVec())
@@ -136,10 +137,12 @@ end
 
 local function OnBurnt(inst)
 	RemoveChild(inst)
+	
     inst:RemoveComponent("spawner")
 
     local burnt_tree = SpawnPrefab("kyno_meadowisland_tree_burnt")
     burnt_tree.Transform:SetPosition(inst.Transform:GetWorldPosition())
+	
     inst:Remove()
 end
 
