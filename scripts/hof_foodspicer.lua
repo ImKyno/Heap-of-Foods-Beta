@@ -118,7 +118,7 @@ for k, data in pairs(spicedfoods) do
     end
 end
 
-GenerateHofSpicedFoods(MergeMaps(foods, foods_w))
-GenerateHofSpicedFoods(MergeMaps(foods_hof, foods_hof_w, foods_hof_s))
+-- GenerateHofSpicedFoods(MergeMaps(foods, foods_w))
+-- GenerateHofSpicedFoods(MergeMaps(foods_hof, foods_hof_w, foods_hof_s))
 
 return hof_spicedfoods

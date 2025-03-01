@@ -479,7 +479,7 @@ configuration_options       =
 	
 	{name                   = names.general,                                     hover = hovers.general,        options = options.none,           default = false},
 	{name                   = "SEASONALFOOD",     label = labels.seasonalfoods,  hover = hovers.seasonalfoods,  options = options.seasonalfoods,  default = false},
-	{name                   = "MODSPICES",        label = labels.modspices,      hover = hovers.modspices,      options = options.modspices,      default = true},
+ -- {name                   = "MODSPICES",        label = labels.modspices,      hover = hovers.modspices,      options = options.modspices,      default = true},
 	{name                   = "HUMANMEAT",        label = labels.humanmeat,      hover = hovers.humanmeat,      options = options.humanmeat,      default = true},
 	{name                   = "COFFEEDROPRATE",   label = labels.coffeedrop,     hover = hovers.coffeedrop,     options = options.coffeedrop,     default = 4},
 	{name                   = "ALCOHOLICDRINKS",  label = labels.alcoholic,      hover = hovers.alcoholic,      options = options.alcoholic,      default = true},

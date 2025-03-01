@@ -93,6 +93,7 @@ end
 
 local function chop_down_burnt_tree(inst, chopper)
 	inst:RemoveComponent("workable")
+	inst:RemoveComponent("pickable")
 	
 	inst.SoundEmitter:PlaySound("dontstarve/forest/treeCrumble")
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
@@ -136,6 +137,7 @@ local function OnBurnt(inst, imm, coconut)
 		inst:RemoveComponent("burnable")
 		inst:RemoveComponent("propagator")
 		inst:RemoveComponent("growable")
+		inst:RemoveComponent("pickable")
 
 		inst:RemoveTag("shelter")
 		inst:RemoveTag("fire")
@@ -395,6 +397,7 @@ local function chop_down_tree(inst, chopper)
 	MakeSmallPropagator(inst)
 	
 	inst:RemoveComponent("workable")
+	inst:RemoveComponent("pickable")
 	
 	inst:RemoveTag("shelter")
 	
@@ -556,6 +559,8 @@ local function onload(inst, data)
 			inst:RemoveTag("has_coconut")
 			inst.AnimState:HideSymbol("coconut")
 			
+			inst:RemoveComponent("pickable")
+			
 			inst.coconut = false
 			
 		elseif data.stump then
@@ -569,6 +574,7 @@ local function onload(inst, data)
 			
 			inst:RemoveComponent("workable")
 			inst:RemoveComponent("growable")
+			inst:RemoveComponent("pickable")
 			
 			RemovePhysicsColliders(inst)
 			
@@ -699,7 +705,7 @@ local function makefn(build, stage, data, level, coconut)
 		inst.components.growable.stages = growth_stages
 		inst.components.growable:SetStage(l_stage)
 		inst.components.growable.springgrowth = true
-		inst.components.growable.loopstages = true
+		inst.components.growable.loopstages = false
 		inst.components.growable:StartGrowing()
 
 		inst.growfromseed = handler_growfromseed
@@ -721,6 +727,8 @@ local function makefn(build, stage, data, level, coconut)
 			
 			inst:RemoveTag("has_coconut")
 			inst.AnimState:HideSymbol("coconut")
+			
+			inst:RemoveComponent("pickable")
 			
 			inst.coconut = false
 		end

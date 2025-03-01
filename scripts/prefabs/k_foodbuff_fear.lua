@@ -7,8 +7,12 @@ end
 local function RemoveDappernessResistance(owner, equippable)
 	local dapperness = equippable:GetDapperness(owner, owner.components.sanity.no_moisture_penalty)
 	
-	if equippable.is_magic_dapperness and owner:HasTag("pinetreepioneer") then
-		return dapperness or 0
+	if owner:HasTag("pinetreepioneer") then
+		if equippable.is_magic_dapperness then
+			return dapperness
+		end
+		
+		return 0
 		
 	elseif equippable.is_magic_dapperness and owner:HasTag("shadowmagic") then
 		return equippable.inst:HasTag("shadow_item") and dapperness * TUNING.WAXWELL_SHADOW_ITEM_RESISTANCE or dapperness

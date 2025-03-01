@@ -153,6 +153,7 @@ local kyno_foods_keg =
 		hunger = 40,
 		sanity = -10,
 		cooktime = 72,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLOW,
 		nameoverride = "KYNO_WINE",
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food", "alcoholic_drink"},

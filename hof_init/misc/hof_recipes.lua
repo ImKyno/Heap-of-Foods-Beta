@@ -705,6 +705,17 @@ Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingre
 	{"CHARACTER"}
 )
 
+AddRecipe2("wendy_sugarfly", {Ingredient("ghostflower", 3), Ingredient("kyno_sugarflywings", 1)}, TECH.NONE,
+	{
+		no_deconstruction = true,
+		product           = "kyno_sugarfly",
+		builder_skill     = "wendy_ghostflower_butterfly",
+		atlas             = ModAtlas,
+		image             = "kyno_sugarfly.tex",
+	},
+	{"CHARACTER"}
+)
+
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 if HOF_WARLYMEALGRINDER then
 	AddRecipe2("kyno_flour_w", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE, 
