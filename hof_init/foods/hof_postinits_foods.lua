@@ -155,6 +155,7 @@ WarlyFood.freshfruitcrepes.test = function(cooker, names, tags)
 	return tags.fruit and tags.fruit >= 1.5 and tags.butter and names.honey
 end
 
+--[[
 -- For Preservation Powder Spice.
 for k, v in pairs(_G.MergeMaps(VanillaFood, WarlyFood)) do
 	AddPrefabPostInit(v, function(inst, data)
@@ -167,6 +168,7 @@ for k, v in pairs(_G.MergeMaps(VanillaFood, WarlyFood)) do
 		end
 	end)
 end
+]]--
 
 -- Foods that will have their action "Eat" replaced to "Drink".
 local drinkable_foods =

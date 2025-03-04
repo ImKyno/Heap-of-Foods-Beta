@@ -19,7 +19,7 @@ Our survivors have managed to find new types of seeds out in the wild! And far, 
 
 author                      = "Kyno"
 api_version                 = 10
-priority                    = -15
+priority                    = -15 -- Above 0 = Override other mods. | Below 0 = Overriden by other mods.
 
 dst_compatible              = true
 all_clients_require_mod     = true

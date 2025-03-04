@@ -12375,6 +12375,91 @@ local HOF_SCRAPBOOK_THINGS =
 	},
 }
 
+local HOF_SCRAPBOOK_SPICES =
+{
+	spice_cure         =
+	{
+		name           = "spice_cure",
+		type           = "item",
+		tex            = "spice_cure.tex",
+		prefab         = "spice_cure",
+		craftingprefab = "warly",
+		stacksize      = 40,
+		bank           = "kyno_spices",
+		build          = "kyno_spices",
+		anim           = "idle",
+		animoffsetx    = 10,
+		overridesymbol = {"swap_spice", "kyno_spices", "spice_cure"},
+		deps           = {"portableblender", "kyno_spotspice"},
+		specialinfo    = "SPICEEFFECTS_CURE",
+	},
+		
+	spice_mind         =
+	{
+		name           = "spice_mind",
+		type           = "item",
+		tex            = "spice_mind.tex",
+		prefab         = "spice_mind",
+		craftingprefab = "warly",
+		stacksize      = 40,
+		bank           = "kyno_spices",
+		build          = "kyno_spices",
+		anim           = "idle",
+		animoffsetx    = -10,
+		overridesymbol = {"swap_spice", "kyno_spices", "spice_mind"},
+		deps           = {"portableblender", "kyno_sugartree_petals"},
+		specialinfo    = "SPICEEFFECTS_MIND",
+	},
+		
+	spice_fed          =
+	{
+		name           = "spice_fed",
+		type           = "item",
+		tex            = "spice_fed.tex",
+		prefab         = "spice_fed",
+		craftingprefab = "warly",
+		stacksize      = 40,
+		bank           = "kyno_spices",
+		build          = "kyno_spices",
+		anim           = "idle",
+		overridesymbol = {"swap_spice", "kyno_spices", "spice_fed"},
+		deps           = {"portableblender", "corn"},
+		specialinfo    = "SPICEEFFECTS_FED",
+	},
+		
+	spice_fire         =
+	{
+		name           = "spice_fire",
+		type           = "item",
+		tex            = "spice_fire.tex",
+		prefab         = "spice_fire",
+		craftingprefab = "warly",
+		stacksize      = 40,
+		bank           = "kyno_spices",
+		build          = "kyno_spices",
+		anim           = "idle",
+		overridesymbol = {"swap_spice", "kyno_spices", "spice_fire"},
+		deps           = {"portableblender", "oceanfish_small_8_inv"},
+		specialinfo    = "SPICEEFFECTS_FIRE",
+	},
+		
+	spice_cold         =
+	{
+		name           = "spice_cold",
+		type           = "item",
+		tex            = "spice_cold.tex",
+		prefab         = "spice_cold",
+		craftingprefab = "warly",
+		stacksize      = 40,
+		bank           = "kyno_spices",
+		build          = "kyno_spices",
+		anim           = "idle",
+		overridesymbol = {"swap_spice", "kyno_spices", "spice_cold"},
+		deps           = {"portableblender", "oceanfish_medium_8_inv"},
+		specialinfo    = "SPICEEFFECTS_COLD",
+	},
+}
+
 -- Register the entries in the Scrapbook.
 local function AddExtraScrapBookItem(sbdata, sbprefab, sbtable)
     for k, v in pairs(sbtable) do
@@ -12393,3 +12478,8 @@ AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_PREPAREDBRE
 AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_PREPAREDFOODS_JAR)
 AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_CREATURES)
 AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_THINGS)
+
+-- For the Complementary Mod.
+if KnownModIndex:IsModEnabled("workshop-3438589036") then
+	AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_SPICES)
+end

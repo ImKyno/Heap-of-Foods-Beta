@@ -76,6 +76,13 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DECREASETEMP = "短暂降低温度。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BOUILLABAISSE = "在一定时间内增加催眠抗性。\n短暂降低温度。"
 STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER = "用于切肉块和其他东西。"
 
+-- Spice Effects.
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_MIND = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Soothing Sugar grants 25% more sanity."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FED = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Stuffed Starch grants 25% more hunger."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FIRE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Blaze Crystals causes your attacks to ignite targets.\n\nDuration 4 minutes.\n\nAlso raises temperature 15 degrees for 15 seconds."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_COLD = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Frozen Flakes causes your attacks to freeze targets.\n\nDuration 4 minutes.\n\nAlso lowers temperature 15 degrees for 15 seconds."
+
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "在烹饪锅里放一小撮盐，食物的变质时间就会缩短30%。再也不用担心吃到变质的菜肴了！"
 STRINGS.SCRAPBOOK.SPECIALINFO.SALTRACK = "这个架子每隔几天就会收集一小块盐石。"

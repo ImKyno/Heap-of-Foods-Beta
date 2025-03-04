@@ -75,6 +75,13 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INCREASETEMP = "Briefly increases the 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DECREASETEMP = "Briefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BOUILLABAISSE = "Increased sleep resistance for a certain amount of time.\nBriefly decreases the temperature."
 
+-- Spice Effects.
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_MIND = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Soothing Sugar grants 25% more sanity."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FED = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Stuffed Starch grants 25% more hunger."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FIRE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Blaze Crystals causes your attacks to ignite targets.\n\nDuration 4 minutes.\n\nAlso raises temperature 15 degrees for 15 seconds."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_COLD = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Frozen Flakes causes your attacks to freeze targets.\n\nDuration 4 minutes.\n\nAlso lowers temperature 15 degrees for 15 seconds."
+
 -- Items & Foods
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "Używając szczypty soli w jedzeniu z garnka, przedłużysz czas psucia się o 30%. Nie musisz już martwić się o jedzenie starych potraw!"
 STRINGS.SCRAPBOOK.SPECIALINFO.SALTRACK = "Ta półka zbiera małą kostkę soli co kilka dni."

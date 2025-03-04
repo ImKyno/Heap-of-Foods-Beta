@@ -48,7 +48,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOUL = "A special food made with a har
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DEERCLOPS = "Eating this food will cause Deerclops to spawn nearby."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEARGER = "Eating this food will cause Bearger to spawn nearby."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FORTUNE = "Crack one to see what the destiny has reserved for you."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WATER = "Cleanses all the current active food effects of the survivor.\nBriefly decreases the temperature."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WATER = "Cleanses all the current active food side effects of the survivor.\nBriefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FROG = "Eating this food will make all Frogs friendly towards your for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE = "Woodie can eat this food to force one of his transformations chosen randomly."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FEARLESS = "This food can make a survivor be fearless for a certain amount of time. Insanity auras will have no effect during this period."
@@ -74,6 +74,13 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WARLYTEA = "Decreased sanity loss for 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INCREASETEMP = "Briefly increases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DECREASETEMP = "Briefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BOUILLABAISSE = "Increased sleep resistance for a certain amount of time.\nBriefly decreases the temperature."
+
+-- Spice Effects.
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_MIND = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Soothing Sugar grants 25% more sanity."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FED = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Stuffed Starch grants 25% more hunger."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FIRE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Blaze Crystals causes your attacks to ignite targets.\n\nDuration 4 minutes.\n\nAlso raises temperature 15 degrees for 15 seconds."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_COLD = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Frozen Flakes causes your attacks to freeze targets.\n\nDuration 4 minutes.\n\nAlso lowers temperature 15 degrees for 15 seconds."
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "Using a pinch of salt on a crock pot food will refresh its spoilage time by 30%. Don't worry about eating stale dishes again!"
