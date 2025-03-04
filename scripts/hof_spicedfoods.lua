@@ -1,5 +1,4 @@
 require("tuning")
-require("cooking")
 
 local foods       = require("preparedfoods")
 local foods_w     = require("preparedfoods_warly")
@@ -55,7 +54,7 @@ function GenerateHofSpicedFoods(foods)
             newdata.basename = foodname
             newdata.name = foodname.."_"..spicename
             newdata.floater = {"med", nil, {0.85, 0.7, 0.85}}
-			newdata.official = true
+			newdata.official = false
 			newdata.cookbook_category = fooddata.cookbook_category ~= nil and ("spiced_"..fooddata.cookbook_category) or nil
 
             hof_spicedfoods[newdata.name] = newdata
@@ -118,7 +117,7 @@ for k, data in pairs(spicedfoods) do
     end
 end
 
--- GenerateHofSpicedFoods(MergeMaps(foods, foods_w))
--- GenerateHofSpicedFoods(MergeMaps(foods_hof, foods_hof_w, foods_hof_s))
+GenerateHofSpicedFoods(MergeMaps(foods, foods_w))
+GenerateHofSpicedFoods(MergeMaps(foods_hof, foods_hof_w, foods_hof_s))
 
 return hof_spicedfoods

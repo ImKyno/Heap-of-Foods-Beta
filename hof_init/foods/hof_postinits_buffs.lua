@@ -98,7 +98,7 @@ if HOF_COFFEESPEED then
 		end
 	end
 
-    for k,v in pairs(coffee_speedbuff) do
+    for k, v in pairs(coffee_speedbuff) do
         AddPrefabPostInit(v, CoffeePostinit)
     end
 
@@ -154,16 +154,16 @@ if HOF_COFFEESPEED then
 		end
 	end
 
-    for k,v in pairs(bouillabaisse_speedbuff) do
+    for k, v in pairs(bouillabaisse_speedbuff) do
         AddPrefabPostInit(v, BouillabaissePostinit)
     end
 	
-	local function CoffeeBeansPostinit(inst)
-		local function OnEatBeans(inst, eater)
+	local function CookedBeansPostInit(inst)
+		local function OnEatCookedBeans(inst, eater)
 			if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
 				return
 			elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-				eater.coffeebuff_duration = TUNING.KYNO_COFFEEBUFF_DURATION_SMALL
+				eater.beansbuff_duration = 30
 				eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
 
 				if eater.components.talker and eater:HasTag("player") then
@@ -173,7 +173,7 @@ if HOF_COFFEESPEED then
 				if inst.components.eater ~= nil then
 					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
 					
-					eater:DoTaskInTime(TUNING.KYNO_COFFEEBUFF_DURATION_SMALL, function(inst, eater)
+					eater:DoTaskInTime(30, function(inst, eater)
 						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
 						eater.components.grogginess:RemoveResistanceSource(eater, "kyno_coffeebuff")
 
@@ -190,11 +190,11 @@ if HOF_COFFEESPEED then
 		end
 
 		if inst.components.edible ~= nil then
-			inst.components.edible:SetOnEatenFn(OnEatBeans)
+			inst.components.edible:SetOnEatenFn(OnEatCookedBeans)
 		end
 	end
 	
-	AddPrefabPostInit("kyno_coffeebeans_cooked", CoffeeBeansPostInit)
+	-- AddPrefabPostInit("kyno_coffeebeans_cooked", CookedBeansPostInit) -- dafuq this shit doesn't register (?)
 	
 	local function MochaPostinit(inst)
 		local function OnEatMocha(inst, eater)
@@ -202,19 +202,19 @@ if HOF_COFFEESPEED then
 				return
 			elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
 				eater.mochabuff_duration = HOF_COFFEEDURATION
-				eater.components.debuffable:AddDebuff("kyno_hungerratebuff", "kyno_hungerratebuff")
+				eater.components.debuffable:AddDebuff("kyno_mochabuff", "kyno_mochabuff")
 
 				if eater.components.talker and eater:HasTag("player") then
 					eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
 				end
 			else
 				if inst.components.eater ~= nil then
-					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_hungerratebuff", TUNING.KYNO_MOCHABUFF_SPEED)
+					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_mochabuff", TUNING.KYNO_MOCHABUFF_SPEED)
 					
 					eater:DoTaskInTime(HOF_COFFEEDURATION, function(inst, eater)
-						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_hungerratebuff")
-						eater.components.grogginess:RemoveResistanceSource(eater, "kyno_hungerratebuff")
-						eater.components.hunger.burnratemodifiers:RemoveModifier(eater, "kyno_hungerratebuff")
+						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_mochabuff")
+						eater.components.grogginess:RemoveResistanceSource(eater, "kyno_mochabuff")
+						eater.components.hunger.burnratemodifiers:RemoveModifier(eater, "kyno_mochabuff")
 
 						if eater.components.talker and eater:HasTag("player") then
 							eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
@@ -343,7 +343,7 @@ if HOF_GIANTSPAWNING then
 		end
 	end
 
-    for k,v in pairs(eyeballspaghetti_bossbuff) do
+    for k, v in pairs(eyeballspaghetti_bossbuff) do
         AddPrefabPostInit(v, EyeballspaghettiPostinit)
     end
 
@@ -423,7 +423,7 @@ if HOF_GIANTSPAWNING then
 		end
 	end
 
-    for k,v in pairs(gummybeargers_bossbuff) do
+    for k, v in pairs(gummybeargers_bossbuff) do
         AddPrefabPostInit(v, GummyBeargersPostinit)
     end
 end

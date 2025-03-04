@@ -137,7 +137,7 @@ local cookpots_spicer  = {"portablespicer"}
 local common_recipes   = require("hof_foodrecipes")
 local seasonal_recipes = require("hof_foodrecipes_seasonal")
 local warly_recipes    = require("hof_foodrecipes_warly")
-local spiced_recipes   = require("hof_foodspicer")
+local spiced_recipes   = require("hof_spicedfoods")
 local recipe_cards     = cooking.recipe_cards
 
 for _, cooker in pairs(cookpots)         do for _, recipe in pairs(common_recipes)   do AddCookerRecipe(cooker, recipe) end end

@@ -28,7 +28,7 @@ local function OnAttachedMocha(inst, target)
 	end
 	
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_hungerratebuff", TUNING.KYNO_MOCHABUFF_SPEED)
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_mochabuff", TUNING.KYNO_MOCHABUFF_SPEED)
 	end
 	
 	if target.components.grogginess ~= nil then
@@ -51,7 +51,7 @@ local function OnTimerDone(inst, data)
 end
 
 local function OnTimerDoneMocha(inst, data)
-    if data.name == "kyno_hungerratebuff" then
+    if data.name == "kyno_mochabuff" then
         inst.components.debuff:Stop()
     end
 end
@@ -74,15 +74,15 @@ end
 
 local function OnDetachedMocha(inst, target)	
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_hungerratebuff")
+		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_mochabuff")
 	end
 	
 	if target.components.grogginess ~= nil then
-        target.components.grogginess:RemoveResistanceSource(target, "kyno_hungerratebuff")
+        target.components.grogginess:RemoveResistanceSource(target, "kyno_mochabuff")
     end
 
 	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:RemoveModifier(target, "kyno_hungerratebuff")
+		target.components.hunger.burnratemodifiers:RemoveModifier(target, "kyno_mochabuff")
 	end
 	
 	if target.components.talker and target:HasTag("player") then 
@@ -106,11 +106,11 @@ local function OnExtended(inst, target)
 end
 
 local function OnExtendedMocha(inst, target)
-    inst.components.timer:StopTimer("kyno_hungerratebuff")
-    inst.components.timer:StartTimer("kyno_hungerratebuff", TUNING.KYNO_HUNGERRATEBUFF_DURATION)
+    inst.components.timer:StopTimer("kyno_mochabuff")
+    inst.components.timer:StartTimer("kyno_mochabuff", TUNING.KYNO_MOCHABUFF_DURATION)
 	
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_hungerratebuff", TUNING.KYNO_MOCHABUFF_SPEED)
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_mochabuff", TUNING.KYNO_MOCHABUFF_SPEED)
 	end
 	
 	if target.components.grogginess ~= nil then
@@ -170,7 +170,7 @@ local function mochafn()
     inst.components.debuff.keepondespawn = true
 
     inst:AddComponent("timer")
-    inst.components.timer:StartTimer("kyno_hungerratebuff", TUNING.KYNO_HUNGERRATEBUFF_DURATION)
+    inst.components.timer:StartTimer("kyno_mochabuff", TUNING.KYNO_MOCHABUFF_DURATION)
     
 	inst:ListenForEvent("timerdone", OnTimerDoneMocha)
 
@@ -178,4 +178,4 @@ local function mochafn()
 end
 
 return Prefab("kyno_coffeebuff", fn),
-Prefab("kyno_hungerratebuff", mochafn)
+Prefab("kyno_mochabuff", mochafn)
