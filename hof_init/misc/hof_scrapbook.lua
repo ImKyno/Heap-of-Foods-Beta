@@ -12126,7 +12126,7 @@ local HOF_SCRAPBOOK_THINGS =
 		build          = "kyno_kokonut",
 		anim           = "planted",
 		animoffsetbgy  = -50,
-		deps           = {"twigs", "kyno_kokonut", "kyno_kokonuttree"}
+		deps           = {"twigs", "kyno_kokonut", "kyno_kokonuttree"},
 	},
 	
 	kyno_kokonuttree   =
@@ -12138,14 +12138,9 @@ local HOF_SCRAPBOOK_THINGS =
 		prefab         = "kyno_kokonuttree",
 		workable       = "CHOP",
 		burnable       = true,
-		bank           = "kyno_kokonuttree",
-		build          = "kyno_kokonuttree",
-		anim           = "idle",
-		scale          = 2,
-		animoffsetx    = 50,
-		animoffsety    = -50,
-		animoffsetbgx  = 60,
-		animoffsetbgy  = 50,
+		bank           = "kokonuttree",
+		build          = "kokonuttree_build",
+		anim           = "idle_tall",
 		deps           = {"charcoal", "log", "kyno_kokonuttree_sapling", "kyno_kokonut"},
 		specialinfo    = "KOKONUTTREE",
 	},

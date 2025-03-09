@@ -39,6 +39,7 @@ AddTile("HOF_FIELDS", "LAND",
 		name			= "fields",
 		anim			= "fields",
 		bank_build		= "kyno_turfs_hof",
+		pickupsound     = "vegetation_grassy",
 	}
 )
 
@@ -63,6 +64,7 @@ AddTile("HOF_TIDALMARSH", "LAND",
 		name			= "tidalmarsh",
 		anim			= "tidalmarsh",
 		bank_build		= "kyno_turfs_hof",
+		pickupsound     = "squidgy",
 	}
 )
 
@@ -72,14 +74,25 @@ local GROUND_TURFS =
 {
 	[WORLD_TILES.QUAGMIRE_PARKFIELD] = "turf_pinkpark",
 	[WORLD_TILES.QUAGMIRE_CITYSTONE] = "turf_stonecity",
-	-- [WORLD_TILES.HOF_FIELDS]      = "turf_fields",
-	-- [WORLD_TILES.HOF_TIDALMARSH]  = "turf_tidalmarsh",
 }
 
-require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_PARKFIELD] = { name = "pinkpark",   bank_build = "kyno_turfs_hof", anim = "pinkpark"   }
-require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_CITYSTONE] = { name = "stonecity",  bank_build = "kyno_turfs_hof", anim = "stonecity"  }
--- require("worldtiledefs").turf[WORLD_TILES.HOF_FIELDS]      = { name = "fields",     bank_build = "kyno_turfs_hof", anim = "fields"     }
--- require("worldtiledefs").turf[WORLD_TILES.HOF_TIDALMARSH]  = { name = "tidalmarsh", bank_build = "kyno_turfs_hof", anim = "tidalmarsh" }
+require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_PARKFIELD] = 
+{ 
+	name = "pinkpark",  
+	bank_build = "kyno_turfs_events", 
+	anim = "pinkpark",  
+	pickupsound = "rock", 
+}
+
+require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_CITYSTONE] = 
+{ 
+	name = "stonecity", 
+	bank_build = "kyno_turfs_events", 
+	anim = "stonecity", 
+	pickupsound = "rock",
+	hard = true,
+	roadways = true,
+}
 
 ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_PARKFIELD,  WORLD_TILES.DECIDUOUS, true)
 ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_CITYSTONE,  WORLD_TILES.ROCKY,     true)

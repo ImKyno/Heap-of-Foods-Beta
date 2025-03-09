@@ -128,7 +128,7 @@ end
 local burnt_highlight_override = {.5,.5,.5}
 local function OnBurnt(inst, imm, coconut)
 	local function changes()
-		if inst.components.burnable then
+		if inst.components.burnable ~= nil then
 			inst.components.burnable:Extinguish()
 		end
 		
@@ -144,7 +144,7 @@ local function OnBurnt(inst, imm, coconut)
 
 		inst.components.lootdropper:SetLoot({})
 
-		if inst.components.workable then
+		if inst.components.workable ~= nil then
 			inst.components.workable:SetWorkLeft(1)
 			inst.components.workable:SetOnWorkCallback(nil)
 			inst.components.workable:SetOnFinishCallback(chop_down_burnt_tree)
@@ -187,11 +187,11 @@ local function SetShort(inst, level)
 	inst.anims = short_anims
 	inst.level = "short"
 
-	if inst.components.workable then
+	if inst.components.workable ~= nil then
 		inst.components.workable:SetWorkLeft(TUNING.KYNO_KOKONUTTREE_SHORT_WORKLEFT)
 	end
 	
-	if inst.components.pickable then
+	if inst.components.pickable ~= nil then
 		inst.components.pickable:SetUp(nil)
 		inst.components.pickable.canbepicked = false
 	end
@@ -215,11 +215,11 @@ local function SetNormal(inst, level)
 	inst.anims = normal_anims
 	inst.level = "normal"
 
-	if inst.components.workable then
+	if inst.components.workable ~= nil then
 		inst.components.workable:SetWorkLeft(TUNING.KYNO_KOKONUTTREE_NORMAL_WORKLEFT)
 	end
 	
-	if inst.components.pickable then
+	if inst.components.pickable ~= nil then
 		inst.components.pickable:SetUp(nil)
 		inst.components.pickable.canbepicked = false
 	end
@@ -242,11 +242,11 @@ local function SetTall(inst, level, coconut)
 	inst:AddTag("has_coconut")
 	inst.AnimState:ShowSymbol("coconut")
 	
-	if inst.components.workable then
+	if inst.components.workable ~= nil then
 		inst.components.workable:SetWorkLeft(TUNING.KYNO_KOKONUTTREE_TALL_WORKLEFT)
 	end
 	
-	if inst.components.pickable then
+	if inst.components.pickable ~= nil then
 		inst.components.pickable:SetUp("kyno_kokonut", TUNING.KYNO_KOKONUTTREE_GROWTIME, 1)
 		inst.components.pickable.canbepicked = true
 	end
@@ -426,7 +426,7 @@ local function chop_down_tree(inst, chopper)
 
 	inst:AddTag("stump")
 	
-	if inst.components.growable then
+	if inst.components.growable ~= nil then
 		inst.components.growable:StopGrowing()
 	end
 	
@@ -542,14 +542,20 @@ local function onload(inst, data)
 			inst.level = data.level
 		end
 		
-		if data.coconut and inst.components.pickable ~= nil then
+		if data.coconut then
 			inst:AddTag("has_coconut")
 			inst.AnimState:ShowSymbol("coconut")
-			inst.components.pickable.canbepicked = true
+			
+			if inst.components.pickable ~= nil then
+				inst.components.pickable.canbepicked = true
+			end
 		else
 			inst:RemoveTag("has_coconut")
 			inst.AnimState:HideSymbol("coconut")
-			inst.components.pickable.canbepicked = false
+			
+			if inst.components.pickable ~= nil then
+				inst.components.pickable.canbepicked = false
+			end
 		end
 
 		if data.burnt then

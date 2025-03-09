@@ -587,7 +587,7 @@ local function makefn(build, stage, data, level)
 		inst.components.growable.stages = growth_stages
 		inst.components.growable:SetStage(l_stage)
 		inst.components.growable.springgrowth = true
-		inst.components.growable.loopstages = true
+		inst.components.growable.loopstages = false
 		inst.components.growable:StartGrowing()
 
 		inst.growfromseed = handler_growfromseed

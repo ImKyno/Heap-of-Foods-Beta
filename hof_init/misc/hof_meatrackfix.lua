@@ -21,6 +21,8 @@ do
 					inst.AnimState:OverrideSymbol("swap_dried", data.build, data.folder)
 					return
 				end
+				
+				inst.SoundEmitter:PlaySound("dontstarve/common/together/put_meat_rack")
 
 				return old_onstartdrying(inst, ingredient, ...)
 			end)
