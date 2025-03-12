@@ -13,6 +13,8 @@ do
 			local old_onstartdrying = inst.components.dryer.onstartdrying
 			
 			inst.components.dryer:SetStartDryingFn(function(inst, ingredient, ...)
+				inst.SoundEmitter:PlaySound("dontstarve/common/together/put_meat_rack")
+				
 				local data = ingredient and anim_ondry_food[ingredient]
 				
 				if data ~= nil then
@@ -21,8 +23,6 @@ do
 					inst.AnimState:OverrideSymbol("swap_dried", data.build, data.folder)
 					return
 				end
-				
-				inst.SoundEmitter:PlaySound("dontstarve/common/together/put_meat_rack")
 
 				return old_onstartdrying(inst, ingredient, ...)
 			end)

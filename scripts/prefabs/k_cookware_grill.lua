@@ -345,7 +345,7 @@ local function donecookfn(inst)
 			OnGrillSmoke(inst)
 		end)
 
-		ShowProductImage(inst)
+		-- ShowProductImage(inst)
 	end
 end
 
@@ -363,7 +363,7 @@ local function continuedonefn(inst)
 			OnGrillSmoke(inst)
 		end)
 
-		ShowProductImage(inst)
+		-- ShowProductImage(inst)
     end
 end
 

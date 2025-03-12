@@ -79,7 +79,7 @@ local GROUND_TURFS =
 require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_PARKFIELD] = 
 { 
 	name = "pinkpark",  
-	bank_build = "kyno_turfs_events", 
+	bank_build = "kyno_turfs_hof", 
 	anim = "pinkpark",  
 	pickupsound = "rock", 
 }
@@ -87,7 +87,7 @@ require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_PARKFIELD] =
 require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_CITYSTONE] = 
 { 
 	name = "stonecity", 
-	bank_build = "kyno_turfs_events", 
+	bank_build = "kyno_turfs_hof", 
 	anim = "stonecity", 
 	pickupsound = "rock",
 	hard = true,

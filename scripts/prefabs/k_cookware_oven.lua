@@ -407,7 +407,7 @@ local function donecookfn(inst)
 	end
 
 	HideGoops(inst)
-	ShowProductImage(inst)
+	-- ShowProductImage(inst)
 end
 
 local function continuedonefn(inst)
@@ -426,7 +426,7 @@ local function continuedonefn(inst)
 	end
 
 	HideGoops(inst)
-	ShowProductImage(inst)
+	-- ShowProductImage(inst)
 end
 
 local function continuecookfn(inst)

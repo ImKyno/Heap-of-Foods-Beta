@@ -368,6 +368,15 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SLICE, function(inst,
 	if target:HasTag("sliceable") then
 		return inst:HasTag("fastbuilder") and "doshortaction" or "domediumaction"
 	end
+	
+	-- Planned feature. New cleaver is faster.
+	--[[
+	if target:HasTag("sliceable") then
+		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	elseif target:HasTag("sliceable") and action.invobject:HasTag("professionalslicer") then
+		return inst:HasTag("fastbuilder") and "doshortaction" or "domediumaction"
+	end
+	]]--
 end))
 
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SLICE, function(inst, action)

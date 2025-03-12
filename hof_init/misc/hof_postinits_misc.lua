@@ -134,8 +134,8 @@ AddPrefabPostInit("webber", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("cottoncandy",        TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("mayonnaise",         TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("cottoncandy", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("mayonnaise",  TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -437,6 +437,7 @@ end)
 -- For increasing fishing yields.
 AddComponentPostInit("fishingrod", function(self)
     local oldReel = self.Reel
+	
     function self:Reel(...)
         local ret = {oldReel(self, ...)}
 
