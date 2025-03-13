@@ -1444,10 +1444,6 @@ local kyno_foods =
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
 		card_def = {ingredients = {{"kyno_kokonut_halved", 1}, {"ice", 2}, {"twigs", 1}}},
-		prefabs = { "buff_moistureimmunity" },
-        oneatenfn = function(inst, eater)
-            eater:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
-       	end,
 	},
 	
 	eyeballspaghetti =
@@ -2130,9 +2126,14 @@ local kyno_foods =
 		hunger = 32.5,
 		sanity = 5,
 		cooktime = 1,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EATER,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"kyno_parznip", 3}, {"succulent_picked", 1}}},
+		oneatenfn = function(inst, eater)
+		prefabs = { "kyno_eaterbuff" },
+            eater:AddDebuff("kyno_eaterbuff", "kyno_eaterbuff")
+        end,
 	},
 	
 	livingsandwich =
@@ -2389,6 +2390,7 @@ local kyno_foods =
 		hunger = 20,
 		sanity = 15,
 		cooktime = 1.5,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SUGARBOMBS,
 		potlevel = "low",
 		floater = {"med", nil, 0.65},
 		card_def = {ingredients = {{"kyno_sugar", 2}, {"kyno_wheat", 2}}},

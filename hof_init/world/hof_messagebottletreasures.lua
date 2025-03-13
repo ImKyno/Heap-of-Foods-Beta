@@ -107,6 +107,7 @@ local hof_presets =
 			nukashine_sugarfree = {1, 4},
 			nukacola = {1, 3},
 			nukacola_quantum = {1, 2},
+			sugarbombs_explosive = {1, 3},
 		},
 		
 		randomly_selected_loot =

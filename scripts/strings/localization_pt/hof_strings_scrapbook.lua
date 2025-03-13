@@ -74,7 +74,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WARLYTEA = "Decreased sanity loss for 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INCREASETEMP = "Briefly increases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DECREASETEMP = "Briefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BOUILLABAISSE = "Increased sleep resistance for a certain amount of time.\nBriefly decreases the temperature."
-STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER = "For slicing off meat chunks and other things."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOISTURE = "Dries off the survivor and grants them immunity to Wetness for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUGARBOMBS_EXPLOSIVE = "These Sugar Bombs are filled with an explosive taste!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EATER = "Makes food more soft and easy to eat for a certain amount of time."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
@@ -105,6 +107,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.REPAIRTOOLKIT = "Used to repair destroyed structur
 STRINGS.SCRAPBOOK.SPECIALINFO.SAPBUCKET = "Tap it to Sugarwood Trees to produce fresh Sap every few days."
 STRINGS.SCRAPBOOK.SPECIALINFO.SLAUGHTERTOOL = "Butchering tools that instantly kills the animal."
 STRINGS.SCRAPBOOK.SPECIALINFO.SAPHEALER = "Powerful antidote with healing capabilities for trees.\n\nUsing it on Ruined Sugarwood Trees will revert them back to their normal stage."
+STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER = "For slicing off meat chunks and other things."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Can be feed with seeds to lay down an egg."

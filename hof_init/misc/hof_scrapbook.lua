@@ -1147,7 +1147,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		anim           = "idle",
 		animoffsety    = 10,
 		animoffsetbgx  = -30,
-		animoffsetbgy  = -75,
+		animoffsetbgy  = -105,
 		deps           = {"researchlab", "researchlab2", "flint", "twigs"},
 		specialinfo    = "ITEMSLICER",
 	},
@@ -4044,8 +4044,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		build          = "gorge_vegetable_soup",
 		overridesymbol = {"swap_food", "swap_food", "gorge_vegetable_soup"},
 		anim           = "idle",
-		animoffsetx    = 65,
-		animoffsety    = -80,
+		animoffsetx    = 15,
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -60,
 		deps           = preparedfood_deps,
@@ -5516,6 +5515,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -95,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_MOISTURE",
 	},
 	
 	waterycressbowl    =
@@ -6620,6 +6620,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -110,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_EATER",
 	},
 	
 	livingsandwich     =
@@ -6856,10 +6857,36 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		build          = "sugarbombs",
 		overridesymbol = {"swap_food", "swap_food", "sugarbombs"},
 		anim           = "idle",
+		animoffsety    = 15,
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -110,
 		deps           = preparedfood_deps,
 		specialinfo    = "FOODEFFECTS_SUGARBOMBS",
+	},
+	
+	sugarbombs_explosive =
+	{
+		name           = "sugarbombs_explosive",
+		speechname     = "sugarbombs",
+        type           = "food",
+		tex            = "sugarbombs_explosive.tex",
+        prefab         = "sugarbombs_explosive",
+		healthvalue    = 5,
+		hungervalue    = 20,
+		sanityvalue    = 15,
+        perishable     = 9000000,
+        foodtype       = "GOODIES",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "sugarbombs",
+		build          = "sugarbombs",
+		overridesymbol = {"swap_food", "swap_food", "sugarbombs"},
+		anim           = "idle",
+		animoffsety    = 15,
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -110,
+		deps           = {"sunkenchest"},
+		specialinfo    = "FOODEFFECTS_SUGARBOMBS_EXPLOSIVE",
 	},
 	
 	berrybombs         =

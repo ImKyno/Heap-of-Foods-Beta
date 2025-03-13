@@ -19,39 +19,8 @@ local function OnAttached(inst, target)
     end, target)
 end
 
-local function OnAttachedMocha(inst, target)
-	inst.entity:SetParent(target.entity)
-    inst.Transform:SetPosition(0, 0, 0)
-	
-	if target.components.talker and target:HasTag("player") then 
-		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
-	end
-	
-	if target.components.locomotor ~= nil then
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_mochabuff", TUNING.KYNO_MOCHABUFF_SPEED)
-	end
-	
-	if target.components.grogginess ~= nil then
-		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE)
-	end
-	
-	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.HUNGERRATEBUFF_MODIFIER)
-	end
-	
-    inst:ListenForEvent("death", function()
-        inst.components.debuff:Stop()
-    end, target)
-end
-
 local function OnTimerDone(inst, data)
     if data.name == "kyno_coffeebuff" then
-        inst.components.debuff:Stop()
-    end
-end
-
-local function OnTimerDoneMocha(inst, data)
-    if data.name == "kyno_mochabuff" then
         inst.components.debuff:Stop()
     end
 end
@@ -72,26 +41,6 @@ local function OnDetached(inst, target)
     inst:Remove()
 end
 
-local function OnDetachedMocha(inst, target)	
-	if target.components.locomotor ~= nil then
-		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_mochabuff")
-	end
-	
-	if target.components.grogginess ~= nil then
-        target.components.grogginess:RemoveResistanceSource(target, "kyno_mochabuff")
-    end
-
-	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:RemoveModifier(target, "kyno_mochabuff")
-	end
-	
-	if target.components.talker and target:HasTag("player") then 
-		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
-	end
-	
-    inst:Remove()
-end
-
 local function OnExtended(inst, target)
     inst.components.timer:StopTimer("kyno_coffeebuff")
     inst.components.timer:StartTimer("kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_DURATION_MED)
@@ -102,23 +51,6 @@ local function OnExtended(inst, target)
 	
 	if target.components.grogginess ~= nil then
 		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE)
-	end
-end
-
-local function OnExtendedMocha(inst, target)
-    inst.components.timer:StopTimer("kyno_mochabuff")
-    inst.components.timer:StartTimer("kyno_mochabuff", TUNING.KYNO_MOCHABUFF_DURATION)
-	
-	if target.components.locomotor ~= nil then
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_mochabuff", TUNING.KYNO_MOCHABUFF_SPEED)
-	end
-	
-	if target.components.grogginess ~= nil then
-		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE)
-	end
-	
-	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.HUNGERRATEBUFF_MODIFIER)
 	end
 end
 
@@ -147,6 +79,74 @@ local function fn()
     inst:ListenForEvent("timerdone", OnTimerDone)
 
     return inst
+end
+
+local function OnAttachedMocha(inst, target)
+	inst.entity:SetParent(target.entity)
+    inst.Transform:SetPosition(0, 0, 0)
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
+	end
+	
+	if target.components.locomotor ~= nil then
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_mochabuff", TUNING.KYNO_MOCHABUFF_SPEED)
+	end
+	
+	if target.components.grogginess ~= nil then
+		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE)
+	end
+	
+	if target.components.hunger ~= nil then
+		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.HUNGERRATEBUFF_MODIFIER)
+	end
+	
+    inst:ListenForEvent("death", function()
+        inst.components.debuff:Stop()
+    end, target)
+end
+
+local function OnTimerDoneMocha(inst, data)
+    if data.name == "kyno_mochabuff" then
+        inst.components.debuff:Stop()
+    end
+end
+
+local function OnDetachedMocha(inst, target)	
+	if target.components.locomotor ~= nil then
+		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_mochabuff")
+	end
+	
+	if target.components.grogginess ~= nil then
+        target.components.grogginess:RemoveResistanceSource(target, "kyno_mochabuff")
+    end
+
+	if target.components.hunger ~= nil then
+		target.components.hunger.burnratemodifiers:RemoveModifier(target, "kyno_mochabuff")
+	end
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
+	end
+	
+    inst:Remove()
+end
+
+local function OnExtendedMocha(inst, target)
+    inst.components.timer:StopTimer("kyno_mochabuff")
+    inst.components.timer:StartTimer("kyno_mochabuff", TUNING.KYNO_MOCHABUFF_DURATION)
+	
+	if target.components.locomotor ~= nil then
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_mochabuff", TUNING.KYNO_MOCHABUFF_SPEED)
+	end
+	
+	if target.components.grogginess ~= nil then
+		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE)
+	end
+	
+	if target.components.hunger ~= nil then
+		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.HUNGERRATEBUFF_MODIFIER)
+	end
 end
 
 local function mochafn()

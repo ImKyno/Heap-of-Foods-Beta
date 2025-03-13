@@ -74,7 +74,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WARLYTEA = "在一定时间内减少�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INCREASETEMP = "短暂升高温度。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DECREASETEMP = "短暂降低温度。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BOUILLABAISSE = "在一定时间内增加催眠抗性。\n短暂降低温度。"
-STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER = "用于切肉块和其他东西。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOISTURE = "Dries off the survivor and grants them immunity to Wetness for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUGARBOMBS_EXPLOSIVE = "These Sugar Bombs are filled with an explosive taste!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EATER = "Makes food more soft and easy to eat for a certain amount of time."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
@@ -105,6 +107,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.REPAIRTOOLKIT = "用于修复被破坏的结构。
 STRINGS.SCRAPBOOK.SPECIALINFO.SAPBUCKET = "把它安装到糖木树上，每隔几天就会产生新鲜的树液。"
 STRINGS.SCRAPBOOK.SPECIALINFO.SLAUGHTERTOOL = "可立即杀死动物的屠宰工具。"
 STRINGS.SCRAPBOOK.SPECIALINFO.SAPHEALER = "强大的解毒剂，具有治疗树木的功能。\n\n对被感染的糖木树使用它可以使其恢复到正常阶段。"
+STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER = "用于切肉块和其他东西。"
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "可以用种子喂它，让它下蛋。"

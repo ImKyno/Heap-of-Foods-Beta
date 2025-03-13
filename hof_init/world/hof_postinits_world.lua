@@ -736,6 +736,7 @@ local function FirePitCookwarePostinit(inst)
 
 		data.queued_charcoal = inst.queued_charcoal or nil
 		data.hashanger = firepit.hashanger or nil
+		data.haspot = firepit.haspot or nil
 		data.hasgrill = firepit.hasgrill or nil
 		data.hasoven = firepit.hasoven or nil
 		data.hascookware = firepit.hascookware or nil
@@ -760,6 +761,16 @@ local function FirePitCookwarePostinit(inst)
 			firepit.components.cookwareinstaller.enabled = false
 			firepit.hascookware = true
 			firepit.hashanger = true
+		end
+		
+		if data ~= nil and data.haspot then
+			firepit:AddTag("firepit_has_pot")
+			firepit:AddTag("firepit_with_cookware")
+			firepit.components.burnable:OverrideBurnFXBuild("quagmire_pot_fire")
+			firepit.components.cookwareinstaller.enabled = false
+			firepit.hascookware = true
+			firepit.hashanger = true
+			firepit.haspot = true
 		end
 
 		if data ~= nil and data.hasgrill then
@@ -811,6 +822,12 @@ local function FirePitCookwarePostinit(inst)
     if inst:HasTag("firepit_has_oven") then
         inst.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
     end
+	
+	--[[
+	if inst:HasTag("firepit_has_pot") then
+		inst.components.burnable:OverrideBurnFXBuild("quagmire_pot_fire")
+	end
+	]]--
 
     inst:AddComponent("cookwareinstaller")
     inst.components.cookwareinstaller:SetAcceptTest(TestItem)

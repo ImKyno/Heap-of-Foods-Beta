@@ -242,8 +242,12 @@ AddStategraphState("wilson_client",
 
 -- Change the animations of some things.
 AddStategraphPostInit("wilson", function(self)
-    local _givehandler = self.actionhandlers[ACTIONS.GIVE].deststate
-	local _pickhandler = self.actionhandlers[ACTIONS.PICK].deststate
+    local _givehandler      = self.actionhandlers[ACTIONS.GIVE].deststate
+	local _pickhandler      = self.actionhandlers[ACTIONS.PICK].deststate
+	local _harvesthandler   = self.actionhandlers[ACTIONS.HARVEST].deststate
+	local _buildhandler     = self.actionhandlers[ACTIONS.BUILD].deststate
+	local _dismantlehandler = self.actionhandlers[ACTIONS.DISMANTLE].deststate
+	local _eathandler       = self.actionhandlers[ACTIONS.EAT].deststate
 
 	-- More sofisticated animation for repairing things.
     self.actionhandlers[ACTIONS.GIVE].deststate = function(inst, action, ...)
@@ -264,7 +268,53 @@ AddStategraphPostInit("wilson", function(self)
             return "pickable_tall" -- "construct"
 		end
 		
+		-- Haste Buff.
+		if inst:HasTag("fasthands") then
+			return "doshortaction"
+		end
+		
 		return _pickhandler(inst, action, ...)
+	end
+	
+	self.actionhandlers[ACTIONS.HARVEST].deststate = function(inst, action, ...)
+		local target = action.target or action.invobject
+		
+		if inst:HasTag("fasthands") then
+			return "doshortaction"
+		end
+		
+		return _harvesthandler(inst, action, ...)
+	end
+	
+	self.actionhandlers[ACTIONS.BUILD].deststate = function(inst, action, ...)
+		local target = action.target or action.invobject
+		
+		if inst:HasTag("fasthands") then
+			return "domediumaction" -- doshortaction is too fast, ruins the mood.
+		end
+		
+		return _buildhandler(inst, action, ...)
+	end
+	
+	self.actionhandlers[ACTIONS.DISMANTLE].deststate = function(inst, action, ...)
+		local target = action.target or action.invobject
+		
+		if inst:HasTag("fasthands") then
+			return "doshortaction"
+		end
+		
+		return _dismantlehandler(inst, action, ...)
+	end
+	
+	-- Makes eating faster with any food.
+	self.actionhandlers[ACTIONS.EAT].deststate = function(inst, action, ...)
+		local target = action.target or action.invobject
+		
+		if inst:HasTag("fasteater") then
+			return "quickeat"
+		end
+		
+		return _eathandler(inst, action, ...)
 	end
 end)
 

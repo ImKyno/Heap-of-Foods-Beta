@@ -605,6 +605,7 @@ local HOF_ICONS =
 	"steamedhamsandwich",
 	"succulent_picked",
 	"sugarbombs",
+	"sugarbombs_explosive",
 	"sugarflymuffin",
 	"sweetpotatosouffle",
 	"tartarsauce",

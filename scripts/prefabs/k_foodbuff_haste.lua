@@ -1,17 +1,11 @@
 local function OnAttached(inst, target)
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0) 
-    
-	if not target:HasTag("handyperson") then
-		target:AddTag("fastbuilder")
-	end
-	
-	if not target.components.skilltreeupdater:IsActivated("woodie_human_quickpicker_1") then
-		target:AddTag("fastpicker") -- fastpicker
-	end
+
+	target:AddTag("fasthands")
 	
 	if target.components.talker and target:HasTag("player") then 
-		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_HASTEBUFF_START"))
 	end
 	
     inst:ListenForEvent("death", function()
@@ -26,16 +20,10 @@ local function OnTimerDone(inst, data)
 end
 
 local function OnDetached(inst, target)
-	if not target:HasTag("handyperson") then
-		target:RemoveTag("fastbuilder")
-	end
-	
-	if not target.components.skilltreeupdater:IsActivated("woodie_human_quickpicker_1") then
-		target:RemoveTag("fastpicker")
-	end
+	target:RemoveTag("fasthands")
 		
 	if target.components.talker and target:HasTag("player") then 
-		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_HASTEBUFF_END"))
 	end
 	
     inst:Remove()
@@ -45,15 +33,8 @@ local function OnExtended(inst, target)
     inst.components.timer:StopTimer("kyno_hastebuff")
     inst.components.timer:StartTimer("kyno_hastebuff", TUNING.KYNO_HASTEBUFF_DURATION)
 	
-	if not target:HasTag("handyperson") then
-		target:RemoveTag("fastbuilder")
-		target:AddTag("fastbuilder")
-	end
-	
-	if not target.components.skilltreeupdater:IsActivated("woodie_human_quickpicker_1") then
-		target:RemoveTag("fastpicker")
-		target:AddTag("fastpicker")
-	end
+	target:RemoveTag("fasthands")
+	target:AddTag("fasthands")
 end
 
 local function fn()
@@ -84,4 +65,72 @@ local function fn()
     return inst
 end
 
-return Prefab("kyno_hastebuff", fn)
+local function OnAttachedEater(inst, target)
+    inst.entity:SetParent(target.entity)
+    inst.Transform:SetPosition(0, 0, 0) 
+
+	target:AddTag("fasteater")
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_EATERBUFF_START"))
+	end
+	
+    inst:ListenForEvent("death", function()
+        inst.components.debuff:Stop()
+    end, target)
+end
+
+local function OnTimerDoneEater(inst, data)
+    if data.name == "kyno_eaterbuff" then
+        inst.components.debuff:Stop()
+    end
+end
+
+local function OnDetachedEater(inst, target)
+	target:RemoveTag("fasteater")
+		
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_EATERBUFF_END"))
+	end
+	
+    inst:Remove()
+end
+
+local function OnExtendedEater(inst, target)
+    inst.components.timer:StopTimer("kyno_eaterbuff")
+    inst.components.timer:StartTimer("kyno_eaterbuff", TUNING.KYNO_EATERBUFF_DURATION)
+	
+	target:RemoveTag("fasteater")
+	target:AddTag("fasteater")
+end
+
+local function eaterfn()
+    local inst = CreateEntity()
+
+    if not TheWorld.ismastersim then
+        inst:DoTaskInTime(0, inst.Remove)
+        return inst
+    end
+
+    inst.entity:AddTransform()
+    inst.entity:Hide()
+    inst.persists = false
+
+    inst:AddTag("CLASSIFIED")
+
+    inst:AddComponent("debuff")
+    inst.components.debuff:SetAttachedFn(OnAttachedEater)
+    inst.components.debuff:SetDetachedFn(OnDetachedEater)
+    inst.components.debuff:SetExtendedFn(OnExtendedEater)
+    inst.components.debuff.keepondespawn = true
+
+    inst:AddComponent("timer")
+    inst.components.timer:StartTimer("kyno_eaterbuff", TUNING.KYNO_EATERBUFF_DURATION)
+	
+    inst:ListenForEvent("timerdone", OnTimerDoneEater)
+
+    return inst
+end
+
+return Prefab("kyno_hastebuff", fn),
+Prefab("kyno_eaterbuff", eaterfn)
