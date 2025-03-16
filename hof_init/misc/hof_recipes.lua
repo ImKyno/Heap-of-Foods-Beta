@@ -226,8 +226,9 @@ AddRecipe2("kyno_mushstump", {Ingredient("spoiled_food", 4), Ingredient("poop", 
 		atlas 				= ModAtlas, 
 		image 				= "kyno_mushroomstump.tex",
 	},
-	{"COOKING"}
+	{"GARDENING"}
 )
+SortAfter("kyno_mushstump", "mushroom_farm", "GARDENING")
 
 AddRecipe2("kyno_floatilizer", {Ingredient("poop", 3), Ingredient("kelp", 2), Ingredient("rocks", 4)}, TECH.SCIENCE_TWO,
 	{

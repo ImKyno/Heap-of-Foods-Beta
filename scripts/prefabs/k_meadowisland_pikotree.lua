@@ -267,7 +267,9 @@ local function fn()
 		"kyno_twiggynuts",
 		"kyno_tealeaf",
 		"kyno_tealeaf",
-		"kyno_oaktree_pod"
+		"kyno_oaktree_pod",
+		"kyno_oaktree_pod",
+		"kyno_oaktree_pod",
 	})
 
 	inst:AddComponent("workable")

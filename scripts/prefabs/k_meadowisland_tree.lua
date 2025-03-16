@@ -34,7 +34,8 @@ local builds =
 		prefab_name = "kyno_meadowisland_tree",
 		normal_loot = {"driftwood_log", "driftwood_log", "kyno_tealeaf", "kyno_oaktree_pod"},
 		short_loot  = {"driftwood_log", "kyno_tealeaf"},
-		tall_loot   = {"driftwood_log", "driftwood_log", "driftwood_log", "kyno_tealeaf", "kyno_tealeaf", "kyno_twiggynuts", "kyno_twiggynuts", "kyno_oaktree_pod"},
+		tall_loot   = {"driftwood_log", "driftwood_log", "driftwood_log", "kyno_tealeaf", "kyno_tealeaf", 
+		"kyno_twiggynuts", "kyno_twiggynuts", "kyno_oaktree_pod", "kyno_oaktree_pod"},
 	}
 }
 
@@ -342,6 +343,8 @@ local function chop_down_tree(inst, chopper)
 	
 	inst:RemoveTag("shelter")
 	
+	inst.MiniMapEntity:SetIcon("kyno_meadowisland_tree_stump.tex")
+	
 	inst.SoundEmitter:PlaySound("dontstarve/forest/treefall")
 	
 	local pt = Vector3(inst.Transform:GetWorldPosition())
@@ -605,11 +608,11 @@ local function makefn(build, stage, data, level)
 		if data == "burnt" then
 			OnBurnt(inst)
 			
-			minimap:SetIcon("kyno_meadowisland_tree_burnt.tex")
+			inst.MiniMapEntity:SetIcon("kyno_meadowisland_tree_burnt.tex")
 		end
 
 		if data == "stump" then
-			minimap:SetIcon("kyno_meadowisland_tree_stump.tex")
+			inst.MiniMapEntity:SetIcon("kyno_meadowisland_tree_stump.tex")
 			
 			inst:RemoveComponent("burnable")
 			MakeSmallBurnable(inst)

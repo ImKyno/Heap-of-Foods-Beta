@@ -1439,7 +1439,6 @@ local kyno_foods =
 		hunger = 0,
 		sanity = 0,
 		cooktime = .5,
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DRY,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},

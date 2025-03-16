@@ -242,12 +242,14 @@ AddStategraphState("wilson_client",
 
 -- Change the animations of some things.
 AddStategraphPostInit("wilson", function(self)
-    local _givehandler      = self.actionhandlers[ACTIONS.GIVE].deststate
-	local _pickhandler      = self.actionhandlers[ACTIONS.PICK].deststate
-	local _harvesthandler   = self.actionhandlers[ACTIONS.HARVEST].deststate
-	local _buildhandler     = self.actionhandlers[ACTIONS.BUILD].deststate
-	local _dismantlehandler = self.actionhandlers[ACTIONS.DISMANTLE].deststate
-	local _eathandler       = self.actionhandlers[ACTIONS.EAT].deststate
+    local _givehandler       = self.actionhandlers[ACTIONS.GIVE].deststate
+	local _pickhandler       = self.actionhandlers[ACTIONS.PICK].deststate
+	local _harvesthandler    = self.actionhandlers[ACTIONS.HARVEST].deststate
+	local _buildhandler      = self.actionhandlers[ACTIONS.BUILD].deststate
+	local _dismantlehandler  = self.actionhandlers[ACTIONS.DISMANTLE].deststate
+	local _takeitemhandler   = self.actionhandlers[ACTIONS.TAKEITEM].deststate
+	local _takesinglehandler = self.actionhandlers[ACTIONS.TAKESINGLEITEM].deststate
+	local _eathandler        = self.actionhandlers[ACTIONS.EAT].deststate
 
 	-- More sofisticated animation for repairing things.
     self.actionhandlers[ACTIONS.GIVE].deststate = function(inst, action, ...)
@@ -306,6 +308,26 @@ AddStategraphPostInit("wilson", function(self)
 		return _dismantlehandler(inst, action, ...)
 	end
 	
+	self.actionhandlers[ACTIONS.TAKEITEM].deststate = function(inst, action, ...)
+		local target = action.target or action.invobject
+		
+		if inst:HasTag("fasthands") then
+			return "doshortaction"
+		end
+		
+		return _takeitemhandler(inst, action, ...)
+	end
+	
+	self.actionhandlers[ACTIONS.TAKESINGLEITEM].deststate = function(inst, action, ...)
+		local target = action.target or action.invobject
+		
+		if inst:HasTag("fasthands") then
+			return "doshortaction"
+		end
+		
+		return _takesinglehandler(inst, action, ...)
+	end
+
 	-- Makes eating faster with any food.
 	self.actionhandlers[ACTIONS.EAT].deststate = function(inst, action, ...)
 		local target = action.target or action.invobject
@@ -330,42 +352,42 @@ end))
 
 -- Brewing Action Stategraph.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.BREWER, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.BREWER, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 end))
 
 -- Milking Action Stategraph.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.PULLMILK, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.PULLMILK, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 end))
 
 -- Slaughter Tools Action Stategraph.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.FLAY, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.FLAY, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 end))
 
 -- Store Soul Action Stategraph.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.STORESOUL, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.STORESOUL, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 end))
 
 -- Heal Sugarwood Tree Action Stategraph.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SAPHEAL, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SAPHEAL, function(inst, action)
-	return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 end))
 
 -- Quick open Canned Items.
@@ -384,7 +406,7 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.INSTALLCOOKWARE, func
 	local target = action.target or action.invobject
 	
 	if target:HasTag("cookware_installable") then
-		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+		return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 	end
 		
 	if target:HasTag("cookware_post_installable") then
@@ -399,7 +421,7 @@ AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.INSTALLCOOKWAR
 	local target = action.target or action.invobject
 	
 	if target:HasTag("cookware_installable") then
-		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+		return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 	end
 		
 	if target:HasTag("cookware_post_installable") then
@@ -416,7 +438,7 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SLICE, function(inst,
 	local target = action.target or action.invobject
 	
 	if target:HasTag("sliceable") then
-		return inst:HasTag("fastbuilder") and "doshortaction" or "domediumaction"
+		return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 	end
 	
 	-- Planned feature. New cleaver is faster.
@@ -433,7 +455,7 @@ AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SLICE, functio
 	local target = action.target or action.invobject
 	
 	if target:HasTag("sliceable") then
-		return inst:HasTag("fastbuilder") and "doshortaction" or "domediumaction"
+		return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 	end
 end))
 
@@ -441,7 +463,7 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SLICESTACK, function(
 	local target = action.target or action.invobject
 	
 	if target:HasTag("sliceable") then
-		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+		return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 	end
 end))
 
@@ -449,6 +471,6 @@ AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SLICESTACK, fu
 	local target = action.target or action.invobject
 	
 	if target:HasTag("sliceable") then
-		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
+		return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 	end
 end))

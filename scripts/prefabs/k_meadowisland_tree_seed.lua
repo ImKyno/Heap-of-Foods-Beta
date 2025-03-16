@@ -72,6 +72,7 @@ local function fn()
 	
 	inst:AddTag("show_spoilage")
 	inst:AddTag("deployedplant")
+	inst:AddTag("icebox_valid")
 	inst:AddTag("cattoy")
 	inst:AddTag("cookable")
 

@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "9.9-A"
+version                     = "1.0-B"
 
 description                 = 
 [[
@@ -13,8 +13,8 @@ This update focused on revamping the visuals of the farming crops as well as add
 
 Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover it.
 
-󰀌 Mod Version: 9.9-A
-󰀧 Update: The Seasonings Fest
+󰀌 Mod Version: 1.0-B
+󰀧 Update: Spring Cleaning
 ]]
 
 author                      = "Kyno"
@@ -174,8 +174,8 @@ Esta atualização tem como foco melhorar os visuais das plantações e adiciona
 
 Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso, em uma ilha muito longe do continente, há um novo arbusto crescendo, esperando para ser descoberto!
 
-󰀌 Versão do Mod: 9.9-A
-󰀧 Atualização: O Festival dos Temperos
+󰀌 Versão do Mod: 1.0-B
+󰀧 Atualização: Limpeza de Primavera
 ]]
 
 	names                       =
@@ -320,8 +320,8 @@ if locale == "zh" or locale == "zhr" then
 
 我们的幸存者设法在野外找到了新型种子！在远离大陆的热带岛屿上，一种新的灌木丛正在绽放，等待着他们去发掘。
 
-󰀌 Mod版本: 9.9-A
-󰀧 Update: 调味料节
+󰀌 Mod版本: 1.0-B
+󰀧 Update: Spring Cleaning
 ]]
 
 	names                       =
