@@ -364,7 +364,6 @@ AddComponentPostInit("edible", function(self, inst)
         inst:AddComponent("saltable")
     end
 	
-	--[[
 	-- Stuffed Starch spice tweak.
 	function self:GetHunger(eater)
 		local multiplier = 1
@@ -396,7 +395,6 @@ AddComponentPostInit("edible", function(self, inst)
 		
 		return multiplier * self.hungervalue
 	end
-	]]--
 end)
 
 -- Speed boost for the White Stone Road.
@@ -421,7 +419,6 @@ AddComponentPostInit("debuffable", function(self)
     end
 end)
 
---[[
 -- Uuugh. Our mod spices have a nasty bug regarding foodaffinity, I don't know how to fix it yet.
 -- This is a temporary workaround for it to work with favorite foods.
 AddComponentPostInit("foodaffinity", function(self)
@@ -432,7 +429,6 @@ AddComponentPostInit("foodaffinity", function(self)
 		return spicedfoods[prefab] and spicedfoods[prefab].basename or prefab
 	end
 end)
-]]--
 
 -- For increasing fishing yields.
 AddComponentPostInit("fishingrod", function(self)

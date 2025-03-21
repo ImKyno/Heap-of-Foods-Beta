@@ -12502,6 +12502,7 @@ AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_CREATURES)
 AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_THINGS)
 
 -- For the Complementary Mod.
-if KnownModIndex:IsModEnabled("workshop-3438589036") then
+-- Heap-of-Foods-Workshop-Spices / workshop-3438589036
+if _G.KnownModIndex:IsModEnabled("Heap-of-Foods-Workshop-Spices") then
 	AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_SPICES)
 end

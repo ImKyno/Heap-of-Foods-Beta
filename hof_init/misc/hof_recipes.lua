@@ -619,63 +619,62 @@ AddRecipe2("dug_kyno_wildwheat_p", {Ingredient("kyno_wheat", 3)}, TECH.LOST,
 	{"CRAFTING_STATION"}
 )
 
--- Warly Spices
-if _G.KnownModIndex:IsModEnabled("workshop-3438589036") then
-	AddRecipe2("spice_fed", {Ingredient("corn", 3)}, TECH.FOODPROCESSING_ONE,
-		{
-			nounlock			= true,
-			builder_tag			= "professionalchef",
-			numtogive			= 2,
-			atlas				= ModAtlas,
-			image				= "spice_fed.tex",
-		},
-		{"CRAFTING_STATION"}
-	)
+-- Warly Spices.
+-- Heap-of-Foods-Workshop-Spices / workshop-3438589036
+AddRecipe2("spice_fed", {Ingredient("corn", 3)}, TECH.FOODPROCESSING_ONE,
+	{
+		nounlock			= true,
+		builder_tag			= "hof_spicemaker",
+		numtogive			= 2,
+		atlas				= ModAtlas,
+		image				= "spice_fed.tex",
+	},
+	{"CRAFTING_STATION"}
+)
 
-	AddRecipe2("spice_cure", {Ingredient("kyno_spotspice", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
-		{
-			nounlock			= true,
-			builder_tag			= "professionalchef",
-			numtogive			= 2,
-			atlas				= ModAtlas,
-			image				= "spice_cure.tex",
-		},
-		{"CRAFTING_STATION"}
-	)
+AddRecipe2("spice_cure", {Ingredient("kyno_spotspice", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+	{
+		nounlock			= true,
+		builder_tag			= "hof_spicemaker",
+		numtogive			= 2,
+		atlas				= ModAtlas,
+		image				= "spice_cure.tex",
+	},
+	{"CRAFTING_STATION"}
+)
 
-	AddRecipe2("spice_mind", {Ingredient("kyno_sugartree_petals", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
-		{
-			nounlock			= true,
-			builder_tag			= "professionalchef",
-			numtogive			= 2,
-			atlas				= ModAtlas,
-			image				= "spice_mind.tex",
-		},
-		{"CRAFTING_STATION"}
-	)
+AddRecipe2("spice_mind", {Ingredient("kyno_sugartree_petals", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+	{
+		nounlock			= true,
+		builder_tag			= "hof_spicemaker",
+		numtogive			= 2,
+		atlas				= ModAtlas,
+		image				= "spice_mind.tex",
+	},
+	{"CRAFTING_STATION"}
+)
 
-	AddRecipe2("spice_cold", {Ingredient("oceanfish_medium_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
-		{
-			nounlock			= true,
-			builder_tag			= "professionalchef",
-			numtogive			= 2,
-			atlas				= ModAtlas,
-			image				= "spice_cold.tex",
-		},
-		{"CRAFTING_STATION"}
-	)
+AddRecipe2("spice_cold", {Ingredient("oceanfish_medium_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
+	{
+		nounlock			= true,
+		builder_tag			= "hof_spicemaker",
+		numtogive			= 2,
+		atlas				= ModAtlas,
+		image				= "spice_cold.tex",
+	},
+	{"CRAFTING_STATION"}
+)
 
-	AddRecipe2("spice_fire", {Ingredient("oceanfish_small_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
-		{
-			nounlock			= true,
-			builder_tag			= "professionalchef",
-			numtogive			= 2,
-			atlas				= ModAtlas,
-			image				= "spice_fire.tex",
-		},
-		{"CRAFTING_STATION"}
-	)
-end
+AddRecipe2("spice_fire", {Ingredient("oceanfish_small_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
+	{
+		nounlock			= true,
+		builder_tag			= "hof_spicemaker",
+		numtogive			= 2,
+		atlas				= ModAtlas,
+		image				= "spice_fire.tex",
+	},
+	{"CRAFTING_STATION"}
+)
 
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{

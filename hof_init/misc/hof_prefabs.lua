@@ -1,3 +1,6 @@
+-- Common Dependencies.
+local _G = GLOBAL
+
 -- Prefabs.
 PrefabFiles =
 {
@@ -43,9 +46,9 @@ PrefabFiles =
 	"k_foodbuff_coffee",
 	"k_foodbuff_defense",
 	"k_foodbuff_fear",
-	-- "k_foodbuff_fire",
+	"k_foodbuff_fire",
 	"k_foodbuff_fishing",
-	-- "k_foodbuff_freeze",
+	"k_foodbuff_freeze",
 	"k_foodbuff_frog",
 	"k_foodbuff_haste",
 	"k_foodbuff_hunger",
@@ -76,7 +79,6 @@ PrefabFiles =
 	"k_meadowisland_shop",
 	"k_meadowisland_spawners",
 	"k_meadowisland_tree",
-	-- "k_meadowisland_tree2",
 	"k_meadowisland_tree_sapling",
 	"k_meadowisland_tree_seed",
 	"k_mealgrinder",
@@ -91,7 +93,6 @@ PrefabFiles =
 	"k_newdryables",
 	"k_newfoods",
 	"k_newingredients",
-	-- "k_newspices",
 	"k_newveggies",
 	"k_newweeds",
 	"k_nukashine_sugarfree",
