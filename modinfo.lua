@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "1.1-B"
+version                     = "1.2-B"
 
 description                 = 
 [[
@@ -13,7 +13,7 @@ This update focused on revamping the visuals of the farming crops as well as add
 
 Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover it.
 
-󰀌 Mod Version: 1.1-B
+󰀌 Mod Version: 1.2-B
 󰀧 Update: Spring Cleaning
 ]]
 
@@ -174,7 +174,7 @@ Esta atualização tem como foco melhorar os visuais das plantações e adiciona
 
 Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso, em uma ilha muito longe do continente, há um novo arbusto crescendo, esperando para ser descoberto!
 
-󰀌 Versão do Mod: 1.1-B
+󰀌 Versão do Mod: 1.2-B
 󰀧 Atualização: Limpeza de Primavera
 ]]
 
@@ -320,8 +320,8 @@ if locale == "zh" or locale == "zhr" then
 
 我们的幸存者设法在野外找到了新型种子！在远离大陆的热带岛屿上，一种新的灌木丛正在绽放，等待着他们去发掘。
 
-󰀌 Mod版本: 1.1-B
-󰀧 Update: Spring Cleaning
+󰀌 Mod版本: 1.2-B
+󰀧 Update: 春季大扫除
 ]]
 
 	names                       =
@@ -338,7 +338,7 @@ if locale == "zh" or locale == "zhr" then
 		spoilage                = "防止食物腐败",
 		coffeedrop              = "咖啡丛掉落数量",
 		seasonalfoods           = "季节性食谱",
-		modspices               = "Chef's Spices",
+		modspices               = "厨师香料",
 		humanmeat               = "人肉食谱",
 		alcoholic               = "酒精限制",
 		giantspawn              = "特殊Boss料理",
@@ -363,7 +363,7 @@ if locale == "zh" or locale == "zhr" then
 		spoilage                = "料理在烹饪锅中是否变质？",
 		coffeedrop              = "龙蝇掉落多少数量的咖啡丛？",
 		seasonalfoods           = "季节性的料理是否在特殊活动下才能烹饪？",
-		modspices               = "Should Warly be able to grind Mod Spices?\nThis may cause longer loading times.",
+		modspices               = "沃利可以研磨Mod的香料吗？\n这可能会导致游戏加载时间延长。",
 		humanmeat               = "玩家死亡时是否掉落人肉？\n注意：如果禁用，可能会导致无法制作某些料理。",
 		alcoholic               = "是否应该禁止某些角色饮酒？",
 		giantspawn              = "如果玩家吃了含boss掉落物的特殊料理，boss是否应该出现？",
@@ -420,8 +420,8 @@ if locale == "zh" or locale == "zhr" then
 		coffeedrop5             = "龙蝇会掉16株落咖啡丛。",
 		seasonalfoods1          = "季节性料理烹饪不受任何限制",
 		seasonalfoods2          = "季节性料理只能在特殊活动开启时烹制。",
-		modspices1              = "Warly can't grind any Mod Spices.",
-		modspices2              = "Warly can grind all Mod Spices at the Portable Grinding Mill.",
+		modspices1              = "沃利不能研磨任何Mod的香料。",
+		modspices2              = "沃利可以在便携式研磨器上研磨所有Mod的香料。",
 		humanmeat1              = "玩家死亡后不会掉落人肉。",
 		humanmeat2              = "玩家死亡后小概率会掉落人肉。",
 		alcoholic1              = "所有角色都能饮酒。",

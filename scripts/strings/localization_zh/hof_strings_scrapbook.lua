@@ -74,16 +74,16 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WARLYTEA = "在一定时间内减少�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INCREASETEMP = "短暂升高温度。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DECREASETEMP = "短暂降低温度。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BOUILLABAISSE = "在一定时间内增加催眠抗性。\n短暂降低温度。"
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOISTURE = "Dries off the survivor and grants them immunity to Wetness for a certain amount of time."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUGARBOMBS_EXPLOSIVE = "These Sugar Bombs are filled with an explosive taste!"
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EATER = "Makes food more soft and easy to eat for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOISTURE = "清空潮湿值并在一定时间内保持干燥。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUGARBOMBS_EXPLOSIVE = "这些糖衣炸弹内藏引爆味蕾的惊喜！"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EATER = "使食物在一段时间内保持松软易食。"
 
 -- Spice Effects.
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_MIND = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Soothing Sugar grants 25% more sanity."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FED = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Stuffed Starch grants 25% more hunger."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FIRE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Blaze Crystals causes your attacks to ignite targets.\n\nDuration 4 minutes.\n\nAlso raises temperature 15 degrees for 15 seconds."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_COLD = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Frozen Flakes causes your attacks to freeze targets.\n\nDuration 4 minutes.\n\nAlso lowers temperature 15 degrees for 15 seconds."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含防腐粉末的料理可使腐败速率减半，并免除食用变质食物的惩罚。"
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_MIND = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含舒缓糖粉调味的料理可获得25%额外精神值。"
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FED = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含淀粉调味的料理可获得25%额外饱食度"
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FIRE = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含烈焰水晶调味的料理会使你的攻击点燃目标。\n\n持续时间4分钟。\n\n还将温度升高15度，持续15秒。"
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_COLD = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含冰霜水晶调味的料理会使你的攻击冻结目标。\n\n持续时间4分钟。\n\n还将温度降低15度，持续15秒。"
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "在烹饪锅里放一小撮盐，食物的变质时间就会缩短30%。再也不用担心吃到变质的菜肴了！"

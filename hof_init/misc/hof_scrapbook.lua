@@ -1723,9 +1723,9 @@ local HOF_SCRAPBOOK_FOODS =
 		type           = "food",
 		tex            = "kyno_blue_cap_dried.tex",
 		prefab         = "kyno_blue_cap_dried",
-		healthvalue    = -10,
+		healthvalue    = 25,
 		hungervalue    = 0,
-		sanityvalue    = 25,
+		sanityvalue    = -10,
 		perishable     = 9600,
 		stacksize      = 40,
 		burnable       = true,
@@ -1809,7 +1809,7 @@ local HOF_SCRAPBOOK_FOODS =
 		perishable     = 4800,
 		stacksize      = 40,
 		burnable       = true,
-		foodtype       = "RAW",
+		foodtype       = "SEEDS",
 		bank           = "kyno_meadowisland_tree_sapling",
 		build          = "kyno_meadowisland_tree_sapling",
 		anim           = "cooked",
@@ -12503,6 +12503,6 @@ AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_THINGS)
 
 -- For the Complementary Mod.
 -- Heap-of-Foods-Workshop-Spices / workshop-3438589036
-if _G.KnownModIndex:IsModEnabled("Heap-of-Foods-Workshop-Spices") then
+if _G.KnownModIndex:IsModEnabled("workshop-3438589036") then
 	AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_SPICES)
 end

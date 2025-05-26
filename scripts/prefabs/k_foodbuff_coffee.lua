@@ -70,11 +70,11 @@ local function fn()
     inst:AddComponent("debuff")
     inst.components.debuff:SetAttachedFn(OnAttached)
     inst.components.debuff:SetDetachedFn(OnDetached)
-    inst.components.debuff:SetExtendedFn(OnExtended)
+    -- inst.components.debuff:SetExtendedFn(OnExtended)
     inst.components.debuff.keepondespawn = true
 
     inst:AddComponent("timer")
-	inst.components.timer:StartTimer("kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_DURATION_MED)
+	-- inst.components.timer:StartTimer("kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_DURATION_MED)
 	
     inst:ListenForEvent("timerdone", OnTimerDone)
 
@@ -153,7 +153,6 @@ local function mochafn()
     local inst = CreateEntity()
 
     if not TheWorld.ismastersim then
-        inst:DoTaskInTime(0, inst.Remove)
         return inst
     end
 
@@ -166,11 +165,11 @@ local function mochafn()
     inst:AddComponent("debuff")
     inst.components.debuff:SetAttachedFn(OnAttachedMocha)
     inst.components.debuff:SetDetachedFn(OnDetachedMocha)
-    inst.components.debuff:SetExtendedFn(OnExtendedMocha)
+    -- inst.components.debuff:SetExtendedFn(OnExtendedMocha)
     inst.components.debuff.keepondespawn = true
 
     inst:AddComponent("timer")
-    inst.components.timer:StartTimer("kyno_mochabuff", TUNING.KYNO_MOCHABUFF_DURATION)
+    -- inst.components.timer:StartTimer("kyno_mochabuff", TUNING.KYNO_MOCHABUFF_DURATION)
     
 	inst:ListenForEvent("timerdone", OnTimerDoneMocha)
 

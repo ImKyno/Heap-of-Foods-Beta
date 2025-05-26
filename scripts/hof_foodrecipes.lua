@@ -2654,6 +2654,7 @@ local kyno_foods =
 		potlevel = "high",
 		scale = 1.3,
 		floater = {"med", nil, 0.65},
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"baconeggs", 1}, {"kyno_flour", 1}, {"butter", 1}, {"kyno_syrup", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater.components.mightiness ~= nil then

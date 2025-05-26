@@ -15,225 +15,105 @@ local HOF_COFFEESPEED    = GetModConfigData("COFFEESPEED")
 local HOF_COFFEEDURATION = GetModConfigData("COFFEEDURATION")
 local HOF_GIANTSPAWNING  = GetModConfigData("GIANTSPAWNING")
 
+local function CoffeeBuffPostInit(inst)
+	local function OnTimerDone(inst, data)
+		if data.name == "kyno_coffeebuff" then
+			inst.components.debuff:Stop()
+		end
+	end
+	
+	local function OnExtended(inst, target)
+		inst.components.timer:StopTimer("kyno_coffeebuff")
+		inst.components.timer:StartTimer("kyno_coffeebuff", HOF_COFFEEDURATION)
+	
+		if target.components.locomotor ~= nil then
+			target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
+		end
+	
+		if target.components.grogginess ~= nil then
+			target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE)
+		end
+		
+		if target.components.talker and target:HasTag("player") then 
+			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
+		end
+	end
+	
+	if not _G.TheWorld.ismastersim then 
+		return 
+	end
+	
+	if inst.components.debuff ~= nil then
+		inst.components.debuff:SetExtendedFn(OnExtended)
+	end
+	
+	if inst.components.timer ~= nil then
+		inst.components.timer:StartTimer("kyno_coffeebuff", HOF_COFFEEDURATION)
+	end
+	
+	inst:ListenForEvent("timerdone", OnTimerDone)
+end
+
+local function MochaBuffPostInit(inst)
+	local function OnTimerDone(inst, data)
+		if data.name == "kyno_mochabuff" then
+			inst.components.debuff:Stop()
+		end
+	end
+	
+	local function OnExtended(inst, target)
+		inst.components.timer:StopTimer("kyno_mochabuff")
+		inst.components.timer:StartTimer("kyno_mochabuff", HOF_COFFEEDURATION)
+	
+		if target.components.locomotor ~= nil then
+			target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_mochabuff", TUNING.KYNO_MOCHABUFF_SPEED)
+		end
+	
+		if target.components.grogginess ~= nil then
+			target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE)
+		end
+	
+		if target.components.hunger ~= nil then
+			target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.HUNGERRATEBUFF_MODIFIER)
+		end
+		
+		if target.components.talker and target:HasTag("player") then 
+			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
+		end
+	end
+	
+	if not _G.TheWorld.ismastersim then 
+		return 
+	end
+	
+	if inst.components.debuff ~= nil then
+		inst.components.debuff:SetExtendedFn(OnExtended)
+	end
+	
+	if inst.components.timer ~= nil then
+		inst.components.timer:StartTimer("kyno_mochabuff", HOF_COFFEEDURATION)
+	end
+	
+	inst:ListenForEvent("timerdone", OnTimerDone)
+end
+
+AddPrefabPostInit("kyno_coffeebuff", CoffeeBuffPostInit)
+AddPrefabPostInit("kyno_mochabuff", MochaBuffPostInit)
+
 if HOF_COFFEESPEED then
-    local coffee_speedbuff =
-	{
-        "coffee",
-        "coffee_spice_garlic",
-        "coffee_spice_sugar",
-        "coffee_spice_chili",
-        "coffee_spice_salt",
-		
-		"coffee_spice_cure",
-		"coffee_spice_fed",
-		"coffee_spice_cold",
-		"coffee_spice_fire",
-		"coffee_spice_mind",
-    }
-
-	local bouillabaisse_speedbuff =
-	{
-        "tropicalbouillabaisse",
-        "tropicalbouillabaisse_spice_garlic",
-        "tropicalbouillabaisse_spice_sugar",
-        "tropicalbouillabaisse_spice_chili",
-        "tropicalbouillabaisse_spice_salt",
-		
-		"tropicalbouillabaisse_spice_cure",
-		"tropicalbouillabaisse_spice_fed",
-		"tropicalbouillabaisse_spice_cold",
-		"tropicalbouillabaisse_spice_fire",
-		"tropicalbouillabaisse_spice_mind",
-    }
-
-	local function CoffeePostinit(inst)
-		local spiced_buffs =
-		{
-			SPICE_CHILI    = "buff_attack",
-			SPICE_GARLIC   = "buff_playerabsorption",
-			SPICE_SUGAR    = "buff_workeffectiveness",
-			
-			SPICE_CURE     = "kyno_preserverbuff",
-			SPICE_COLD     = "kyno_freezebuff",
-			SPICE_FIRE     = "kyno_firebuff",
-		}
-
-		local function OnEatCoffee(inst, eater)
-			if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
-				return
-			elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-				eater.coffeebuff_duration = HOF_COFFEEDURATION
-				eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
-
-				local spiced_buff = spiced_buffs[inst.components.edible.spice]
-				if spiced_buff then
-					eater.components.debuffable:AddDebuff(spiced_buff, spiced_buff)
-				end
-
-				if eater.components.talker and eater:HasTag("player") then
-					eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
-				end
-			else
-				if inst.components.eater ~= nil then
-					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
-					
-					eater:DoTaskInTime(HOF_COFFEEDURATION, function(inst, eater)
-						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
-						eater.components.grogginess:RemoveResistanceSource(eater, "kyno_coffeebuff")
-
-						if eater.components.talker and eater:HasTag("player") then
-							eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
-						end
-					end)
-				end
-			end
-		end
-
-		if not _G.TheWorld.ismastersim then
-			return inst
-		end
-
-		if inst.components.edible ~= nil then
-			inst.components.edible:SetOnEatenFn(OnEatCoffee)
-		end
-	end
-
-    for k, v in pairs(coffee_speedbuff) do
-        AddPrefabPostInit(v, CoffeePostinit)
-    end
-
-	local function BouillabaissePostinit(inst)
-		local spiced_buffs =
-		{
-			SPICE_CHILI    = "buff_attack",
-			SPICE_GARLIC   = "buff_playerabsorption",
-			SPICE_SUGAR    = "buff_workeffectiveness",
-			
-			SPICE_CURE     = "kyno_preserverbuff",
-			SPICE_COLD     = "kyno_freezebuff",
-			SPICE_FIRE     = "kyno_firebuff",
-		}
-
-		local function OnEatBouillabaisse(inst, eater)
-			if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
-				return
-			elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-				eater.tropicalbuff_duration = HOF_COFFEEDURATION
-				eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
-
-			local spiced_buff = spiced_buffs[inst.components.edible.spice]
-				if spiced_buff then
-					eater.components.debuffable:AddDebuff(spiced_buff, spiced_buff)
-				end
-
-				if eater.components.talker and eater:HasTag("player") then
-					eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
-				end
-			else
-				if inst.components.eater ~= nil then
-					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
-					
-					eater:DoTaskInTime(HOF_COFFEEDURATION, function(inst, eater)
-						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
-						eater.components.grogginess:RemoveResistanceSource(eater, "kyno_coffeebuff")
-
-						if eater.components.talker and eater:HasTag("player") then
-							eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
-						end
-					end)
-				end
-			end
-		end
-
-		if not _G.TheWorld.ismastersim then
-			return inst
-		end
-
-        if inst.components.edible ~= nil then
-			inst.components.edible:SetOnEatenFn(OnEatBouillabaisse)
-		end
-	end
-
-    for k, v in pairs(bouillabaisse_speedbuff) do
-        AddPrefabPostInit(v, BouillabaissePostinit)
-    end
+    local CoffeeFood = _G.MergeMaps(require("hof_foodrecipes"), require("hof_brewrecipes_keg"))
 	
-	local function CookedBeansPostInit(inst)
-		local function OnEatCookedBeans(inst, eater)
-			if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
-				return
-			elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-				eater.beansbuff_duration = 30
-				eater.components.debuffable:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
-
-				if eater.components.talker and eater:HasTag("player") then
-					eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
-				end
-			else
-				if inst.components.eater ~= nil then
-					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
-					
-					eater:DoTaskInTime(30, function(inst, eater)
-						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_coffeebuff")
-						eater.components.grogginess:RemoveResistanceSource(eater, "kyno_coffeebuff")
-
-						if eater.components.talker and eater:HasTag("player") then
-							eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
-						end
-					end)
-				end
-			end
-		end
-
-		if not _G.TheWorld.ismastersim then
-			return inst
-		end
-
-		if inst.components.edible ~= nil then
-			inst.components.edible:SetOnEatenFn(OnEatCookedBeans)
-		end
+	CoffeeFood.coffee.oneatenfn = function(inst, eater)
+		eater:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
 	end
 	
-	-- AddPrefabPostInit("kyno_coffeebeans_cooked", CookedBeansPostInit) -- dafuq this shit doesn't register (?)
-	
-	local function MochaPostinit(inst)
-		local function OnEatMocha(inst, eater)
-			if not eater.components.health or eater.components.health:IsDead() or eater:HasTag("playerghost") then
-				return
-			elseif eater.components.debuffable and eater.components.debuffable:IsEnabled() then
-				eater.mochabuff_duration = HOF_COFFEEDURATION
-				eater.components.debuffable:AddDebuff("kyno_mochabuff", "kyno_mochabuff")
-
-				if eater.components.talker and eater:HasTag("player") then
-					eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
-				end
-			else
-				if inst.components.eater ~= nil then
-					eater.components.locomotor:SetExternalSpeedMultiplier(eater, "kyno_mochabuff", TUNING.KYNO_MOCHABUFF_SPEED)
-					
-					eater:DoTaskInTime(HOF_COFFEEDURATION, function(inst, eater)
-						eater.components.locomotor:RemoveExternalSpeedMultiplier(eater, "kyno_mochabuff")
-						eater.components.grogginess:RemoveResistanceSource(eater, "kyno_mochabuff")
-						eater.components.hunger.burnratemodifiers:RemoveModifier(eater, "kyno_mochabuff")
-
-						if eater.components.talker and eater:HasTag("player") then
-							eater.components.talker:Say(_G.GetString(eater, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
-						end
-					end)
-				end
-			end
-		end
-
-		if not _G.TheWorld.ismastersim then
-			return inst
-		end
-
-		if inst.components.edible ~= nil then
-			inst.components.edible:SetOnEatenFn(OnEatMocha)
-		end
+	CoffeeFood.tropicalbouillabaisse.oneatenfn = function(inst, eater)
+		eater:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
 	end
-
-    AddPrefabPostInit("coffee_mocha", MochaPostinit)
+	
+	CoffeeFood.coffee_mocha.oneatenfn = function(inst, eater)
+		eater:AddDebuff("kyno_mochabuff", "kyno_mochabuff")
+	end
 end
 
 if HOF_GIANTSPAWNING then
