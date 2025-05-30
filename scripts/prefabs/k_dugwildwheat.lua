@@ -78,7 +78,7 @@ end
 
 local plantables =
 {
-	{name="kyno_wildwheat", bank = "kyno_wheat", build = "kyno_wheat", mediumspacing = true},
+	{name = "kyno_wildwheat", bank = "kyno_wheat", build = "kyno_wheat", mediumspacing = true},
 }
 
 local prefabs = {}

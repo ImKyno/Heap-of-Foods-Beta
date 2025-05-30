@@ -141,6 +141,7 @@ local HOF_ICONS =
 	"donuts_chocolate_white",
 	"duckyouglermz",
 	"dug_kyno_coffeebush",
+	"dug_kyno_pineapplebush",
 	"dug_kyno_spotbush",
 	"dug_kyno_wildwheat",
 	"dumplings",

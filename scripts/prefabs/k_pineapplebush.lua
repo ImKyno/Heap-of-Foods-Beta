@@ -9,13 +9,13 @@ local assets =
 local prefabs =
 {
     "kyno_pineapple",
-	-- "dug_kyno_pineapplebush",
+	"dug_kyno_pineapplebush",
 }
 
 local SEASON_BASEREGENTIME_TUNING_LOOKUP =
 {
-    [SEASONS.SUMMER] = "KYNO_PINEAPPLEBUSH_GROWTIME_SPRING",
-    [SEASONS.SPRING] = "KYNO_PINEAPPLEBUSH_GROWTIME_SUMMER",
+    [SEASONS.SPRING] = "KYNO_PINEAPPLEBUSH_GROWTIME_SPRING",
+    [SEASONS.SUMMER] = "KYNO_PINEAPPLEBUSH_GROWTIME_SUMMER",
 }
 
 local function OnSeasonChange(inst, season)
@@ -31,9 +31,15 @@ local function OnPicked(inst, picker)
             picker:PushEvent("thorns")
         end
 	end
+	
+	if inst.components.pickable:IsBarren() then
+        inst.AnimState:PushAnimation("idle_to_dead")
+        inst.AnimState:PushAnimation("dead", false)
+    else
+        inst.AnimState:PushAnimation("picked", false)
+    end
 
 	inst.AnimState:Hide("pineapple")
-    inst.AnimState:PlayAnimation("picked")
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 end
 
@@ -45,33 +51,44 @@ local function OnRegen(inst)
 end
 
 local function OnMakeEmpty(inst)
+	if not POPULATING and (inst.components.witherable ~= nil and inst.components.witherable:IsWithered() 
+	or inst.AnimState:IsCurrentAnimation("dead")) then
+        inst.AnimState:PlayAnimation("dead_to_idle")
+        -- inst.AnimState:PushAnimation("picked", false)
+    else
+        inst.AnimState:PlayAnimation("picked")
+    end
+	
     inst.AnimState:Hide("pineapple")
 end
 
-local function OnMakeBarren(inst)
-	if not POPULATING and (inst:HasTag("withered") or inst.AnimState:IsCurrentAnimation("idle")) then
-		inst.AnimState:Hide("pineapple")
-        inst.AnimState:PlayAnimation("idle_to_dead")
+local function OnMakeBarren(inst, wasempty)
+	if not POPULATING and (inst.components.witherable ~= nil and inst.components.witherable:IsWithered()) then
+        inst.AnimState:PlayAnimation(wasempty and "idle_to_dead" or "idle_to_dead")
         inst.AnimState:PushAnimation("dead", false)
     else
         inst.AnimState:PlayAnimation("dead")
     end
+	
+	inst.AnimState:Hide("pineapple")
 end
 
 local function OnTransplant(inst)
-	inst.AnimState:Hide("pineapple")
-    inst.AnimState:PlayAnimation("dead")
-	
-	inst.components.pickable:MakeEmpty()
+	inst.components.pickable:MakeBarren()
 end
 
 local function OnDigUp(inst, chopper)
-	if inst.components.pickable:CanBePicked() then
-		inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product)
+	if inst.components.pickable ~= nil and inst.components.lootdropper ~= nil then
+        local withered = inst.components.witherable ~= nil and inst.components.witherable:IsWithered()
+
+        if inst.components.pickable:CanBePicked() then
+            inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product)
+        end
+
+        inst.components.lootdropper:SpawnLootPrefab(withered and "kyno_pineapple" or "dug_kyno_pineapplebush")
     end
 	
-	inst.components.lootdropper:SpawnLootPrefab("dug_kyno_pineapplebush")
-	inst:Remove()
+    inst:Remove()
 end
 
 local function fn()
@@ -96,7 +113,6 @@ local function fn()
 	inst:AddTag("plant")
 	inst:AddTag("bush")
 	inst:AddTag("thorny")
-	inst:AddTag("lunarplant_target")
 	inst:AddTag("pineapplebush")
 	inst:AddTag("pickable_tall")
 	
@@ -111,11 +127,6 @@ local function fn()
 	
 	inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
-    
-	-- inst:AddComponent("workable")
-	-- inst.components.workable:SetWorkAction(ACTIONS.DIG)
-	-- inst.components.workable:SetOnFinishCallback(OnDigUp)
-	-- inst.components.workable:SetWorkLeft(1)
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/wilson/harvest_sticks"
@@ -123,18 +134,47 @@ local function fn()
     inst.components.pickable.onregenfn = OnRegen
     inst.components.pickable.onpickedfn = OnPicked
     inst.components.pickable.makeemptyfn = OnMakeEmpty
-	-- inst.components.pickable.makebarrenfn = OnMakeBarren
-	inst.components.pickable.ontransplantfn = OnTransplant
 	
 	MakeLargeBurnable(inst)
 	MakeMediumPropagator(inst)
 	MakeHauntableIgnite(inst)
     MakeNoGrowInWinter(inst)
-	-- MakeWaxablePlant(inst)
 	
 	inst:WatchWorldState("season", OnSeasonChange)
 
 	return inst
 end
 
-return Prefab("kyno_pineapplebush", fn, assets, prefabs)
+local function transplantablefn()
+	local inst = fn()
+	
+	inst:AddTag("witherable")
+	inst:AddTag("lunarplant_target") -- Transplantable Pineapple Bushes are susceptible to them.
+	
+	inst:SetPrefabNameOverride("kyno_pineapplebush")
+	
+	if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst:AddComponent("witherable")
+	
+	inst:AddComponent("workable")
+	inst.components.workable:SetWorkAction(ACTIONS.DIG)
+	inst.components.workable:SetOnFinishCallback(OnDigUp)
+	inst.components.workable:SetWorkLeft(1)
+	
+	inst.components.inspectable.nameoverride = "KYNO_PINEAPPLEBUSH"
+	
+	inst.components.pickable.makebarrenfn = OnMakeBarren
+	inst.components.pickable.max_cycles = 20
+	inst.components.pickable.cycles_left = 20
+	inst.components.pickable.ontransplantfn = OnTransplant
+	
+	-- MakeWaxablePlant(inst)
+	
+	return inst
+end
+
+return Prefab("kyno_pineapplebush", fn, assets, prefabs),
+Prefab("kyno_pineapplebush2", transplantablefn, assets, prefabs)

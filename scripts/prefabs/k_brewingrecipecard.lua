@@ -65,6 +65,7 @@ local function fn()
     inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("brewingrecipecard")
+	inst:AddTag("learnablerecipecard")
 
     inst.entity:SetPristine()
 
@@ -75,6 +76,7 @@ local function fn()
 	inst:AddComponent("named")
 	inst:AddComponent("erasablepaper")
 	inst:AddComponent("tradable")
+	inst:AddComponent("learnablerecipecard")
 
     inst:AddComponent("inspectable")
 	inst.components.inspectable.getspecialdescription = GetDesc

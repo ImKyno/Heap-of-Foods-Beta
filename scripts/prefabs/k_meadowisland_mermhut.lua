@@ -15,6 +15,7 @@ local prefabs =
     "rocks",
 
     "kyno_tropicalfish",
+	"kyno_meadowisland_mermfisher",
 }
 
 local loot =
@@ -43,15 +44,14 @@ local function OnHit(inst, worker)
         if inst.components.childspawner ~= nil then
             inst.components.childspawner:ReleaseAllChildren(worker)
         end
+		
         inst.AnimState:PlayAnimation("hit")
         inst.AnimState:PushAnimation("idle")
     end
 end
 
 local function StartSpawning(inst)
-    if not inst:HasTag("burnt") and
-        not TheWorld.state.iswinter and not TheWorld.state.isday and
-        inst.components.childspawner ~= nil then
+    if not TheWorld.state.iswinter and inst.components.childspawner ~= nil and not inst:HasTag("burnt") then
         inst.components.childspawner:StartSpawning()
     end
 end
@@ -65,6 +65,7 @@ end
 local function OnSpawned(inst, child)
     if not inst:HasTag("burnt") then
         inst.SoundEmitter:PlaySound("dontstarve/common/pighouse_door")
+		
         if TheWorld.state.isday and
             inst.components.childspawner ~= nil and
             inst.components.childspawner:CountChildrenOutside() >= 1 and
@@ -77,6 +78,7 @@ end
 local function OnGoHome(inst, child)
     if not inst:HasTag("burnt") then
         inst.SoundEmitter:PlaySound("dontstarve/common/pighouse_door")
+		
         if inst.components.childspawner ~= nil and
             inst.components.childspawner:CountChildrenOutside() < 1 then
             StartSpawning(inst)
@@ -101,24 +103,25 @@ local function OnIsDay(inst, isday)
         if not TheWorld.state.iswinter then
             inst.components.childspawner:ReleaseAllChildren()
         end
+		
         StartSpawning(inst)
     end
 end
 
 local function OnHaunt(inst)
     if inst.components.childspawner == nil or
-        not inst.components.childspawner:CanSpawn() or
-        math.random() > TUNING.HAUNT_CHANCE_HALF then
+            not inst.components.childspawner:CanSpawn() or
+            math.random() > TUNING.HAUNT_CHANCE_HALF then
         return false
     end
 
     local target = FindEntity(inst, 25, nil, { "character" }, { "merm", "playerghost", "INLIMBO" })
-    if target == nil then
+    if target then
+        onhit(inst, target)
+        return true
+    else
         return false
     end
-
-    OnHit(inst, target)
-    return true
 end
 
 local function OnBuilt(inst)
@@ -243,34 +246,32 @@ local function fishfn()
 	inst.components.workable:SetOnWorkCallback(OnHit)
 	inst.components.workable:SetWorkLeft(4)
 
-	--[[
 	inst:AddComponent("childspawner")
-	inst.components.childspawner.childname = "kyno_meadowisland_fishermerm"
+	inst.components.childspawner.childname = "kyno_meadowisland_mermfisher"
 	inst.components.childspawner:SetSpawnedFn(OnSpawned)
 	inst.components.childspawner:SetGoHomeFn(OnGoHome)
 	inst.components.childspawner:SetRegenPeriod(TUNING.TOTAL_DAY_TIME * 4)
-    inst.components.childspawner:SetSpawnPeriod(10)
-    inst.components.childspawner:SetMaxChildren(3)
+    inst.components.childspawner:SetSpawnPeriod(20)
+    inst.components.childspawner:SetMaxChildren(2)
     inst.components.childspawner:SetMaxEmergencyChildren(2)
 	inst.components.childspawner.emergencychildname = "merm"
 	inst.components.childspawner:SetEmergencyRadius(TUNING.MERMHOUSE_EMERGENCY_RADIUS)
-	]]--
 
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_SMALL)
-	-- inst.components.hauntable:SetOnHauntFn(OnHaunt)
+	inst.components.hauntable:SetOnHauntFn(OnHaunt)
 	
-	-- inst:WatchWorldState("isday", OnIsDay)
-	-- StartSpawning(inst)
+	inst:WatchWorldState("isday", OnIsDay)
+	StartSpawning(inst)
 
-	-- MakeMediumBurnable(inst, nil, nil, true)
-	-- MakeLargePropagator(inst)
+	MakeMediumBurnable(inst, nil, nil, true)
+	MakeLargePropagator(inst)
 	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 	
-	-- inst:ListenForEvent("onignite", OnIgnite)
-	-- inst:ListenForEvent("burntup", OnBurnt)
+	inst:ListenForEvent("onignite", OnIgnite)
+	inst:ListenForEvent("burntup", OnBurnt)
 	inst:ListenForEvent("onbuilt", OnBuilt)
 	
 	return inst

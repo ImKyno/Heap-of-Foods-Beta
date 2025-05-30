@@ -437,40 +437,65 @@ end))
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SLICE, function(inst, action)
 	local target = action.target or action.invobject
 	
-	if target:HasTag("sliceable") then
-		return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
+	if target:HasTag("sliceable") and not action.invobject:HasTag("professionalslicer") then
+		return inst:HasTag("fasthands") and "domediumaction" or "dolongaction"
 	end
 	
-	-- Planned feature. New cleaver is faster.
-	--[[
-	if target:HasTag("sliceable") then
-		return inst:HasTag("fastbuilder") and "domediumaction" or "dolongaction"
-	elseif target:HasTag("sliceable") and action.invobject:HasTag("professionalslicer") then
-		return inst:HasTag("fastbuilder") and "doshortaction" or "domediumaction"
+	if target:HasTag("sliceable") and action.invobject:HasTag("professionalslicer") then
+		return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
 	end
-	]]--
 end))
 
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SLICE, function(inst, action)
 	local target = action.target or action.invobject
 	
-	if target:HasTag("sliceable") then
-		return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
+	if target:HasTag("sliceable") and not action.invobject:HasTag("professionalslicer") then
+		return inst:HasTag("fasthands") and "domediumaction" or "dolongaction"
+	end
+	
+	if target:HasTag("sliceable") and action.invobject:HasTag("professionalslicer") then
+		return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
 	end
 end))
 
+-- Slice Item Stacks.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SLICESTACK, function(inst, action)
 	local target = action.target or action.invobject
 	
-	if target:HasTag("sliceable") then
-		return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
+	if target:HasTag("sliceable") and not action.invobject:HasTag("professionalslicer") then
+		return inst:HasTag("fasthands") and "domediumaction" or "dolongaction"
+	end
+	
+	if target:HasTag("sliceable") and action.invobject:HasTag("professionalslicer") then
+		return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
 	end
 end))
 
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SLICESTACK, function(inst, action)
 	local target = action.target or action.invobject
 	
-	if target:HasTag("sliceable") then
-		return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
+	if target:HasTag("sliceable") and not action.invobject:HasTag("professionalslicer") then
+		return inst:HasTag("fasthands") and "domediumaction" or "dolongaction"
+	end
+	
+	if target:HasTag("sliceable") and action.invobject:HasTag("professionalslicer") then
+		return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
+	end
+end))
+
+-- Learn Recipe Cards.
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.LEARNRECIPECARD, function(inst, action)
+	local target = action.target or action.invobject
+	
+	if target:HasTag("learnablerecipecard") then
+		return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
+	end
+end))
+
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.LEARNRECIPECARD, function(inst, action)
+	local target = action.target or action.invobject
+	
+	if target:HasTag("learnablerecipecard") then
+		return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
 	end
 end))

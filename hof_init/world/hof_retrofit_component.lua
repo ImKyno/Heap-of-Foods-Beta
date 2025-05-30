@@ -66,7 +66,7 @@ local function RetrofitMermhuts()
 	local count = 0
     local max_count = 3
 
-    for k,v in pairs(_G.Ents) do
+    for k, v in pairs(_G.Ents) do
         if count >= max_count then
             break
         end

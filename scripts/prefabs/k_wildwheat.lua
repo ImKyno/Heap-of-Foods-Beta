@@ -36,6 +36,7 @@ local function dig_up(inst, worker)
 
         inst.components.lootdropper:SpawnLootPrefab(withered and "kyno_wheat" or "dug_kyno_wildwheat")
     end
+	
     inst:Remove()
 end
 
@@ -46,11 +47,8 @@ local function onregenfn(inst)
 end
 
 local function makeemptyfn(inst)
-    if not POPULATING and
-        (   inst.components.witherable ~= nil and
-            inst.components.witherable:IsWithered() or
-            inst.AnimState:IsCurrentAnimation("idle_dead")
-        ) then
+    if not POPULATING and (inst.components.witherable ~= nil and inst.components.witherable:IsWithered() 
+	or inst.AnimState:IsCurrentAnimation("idle_dead")) then
         inst.AnimState:PlayAnimation("dead_to_empty")
         inst.AnimState:PushAnimation("picked", false)
     else
@@ -59,10 +57,7 @@ local function makeemptyfn(inst)
 end
 
 local function makebarrenfn(inst, wasempty)
-    if not POPULATING and
-        (   inst.components.witherable ~= nil and
-            inst.components.witherable:IsWithered()
-        ) then
+    if not POPULATING and (inst.components.witherable ~= nil and inst.components.witherable:IsWithered()) then
         inst.AnimState:PlayAnimation(wasempty and "empty_to_dead" or "full_to_dead")
         inst.AnimState:PushAnimation("idle_dead", false)
     else
@@ -106,6 +101,7 @@ local function grass(name, stage)
 		inst:AddTag("plant")
         inst:AddTag("renewable")
 		inst:AddTag("silviculture")
+		inst:AddTag("lunarplant_target")
 
         inst.entity:SetPristine()
 

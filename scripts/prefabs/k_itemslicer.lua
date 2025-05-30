@@ -66,13 +66,12 @@ local function fn()
 	
 	inst.components.inventoryitem.imagename = "kyno_itemslicer"
 	
-	-- Planned feature. New cleaver will be infinite though.
-	-- inst:AddComponent("finiteuses")
-	-- inst.components.finiteuses:SetMaxUses(TUNING.KYNO_ITEMSLICER_USES)
-	-- inst.components.finiteuses:SetUses(TUNING.KYNO_ITEMSLICER_USES)
-	-- inst.components.finiteuses:SetOnFinished(inst.Remove)
-	-- inst.components.finiteuses:SetConsumption(ACTIONS.SLICE, 1)
-	-- inst.components.finiteuses:SetConsumption(ACTIONS.SLICESTACK, GetStackSizeUses)
+	inst:AddComponent("finiteuses")
+	inst.components.finiteuses:SetMaxUses(TUNING.KYNO_ITEMSLICER_USES)
+	inst.components.finiteuses:SetUses(TUNING.KYNO_ITEMSLICER_USES)
+	inst.components.finiteuses:SetConsumption(ACTIONS.SLICE, 2)
+	inst.components.finiteuses:SetConsumption(ACTIONS.SLICESTACK, 2)
+	inst.components.finiteuses:SetOnFinished(inst.Remove)
 	
 	return inst
 end

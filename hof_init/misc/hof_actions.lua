@@ -6,6 +6,8 @@ local STRINGS			= _G.STRINGS
 local ACTIONS 			= _G.ACTIONS
 local ActionHandler		= _G.ActionHandler
 local SpawnPrefab		= _G.SpawnPrefab
+local cooking           = require("cooking")
+local brewing           = require("hof_brewing")
 
 -- Coffee Plant can be Only Fertilized by Ashes.
 AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions)
@@ -20,7 +22,7 @@ AddAction("SALT", STRINGS.ACTIONS.SALT, function(act)
 	
 	if act.invobject and saltable ~= nil then
 		saltable:AddSalt()
-		act.doer.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/salt_shake") -- Play a cool salting sound yay.
+		act.doer:PushEvent("saltfood") -- Play a cool sound, yay.
 		act.invobject.components.stackable:Get(1):Remove()
 		return true
 	end
@@ -312,6 +314,7 @@ end)
 -- Action for reading the Brewbook.
 AddAction("READBREWBOOK", STRINGS.ACTIONS.READBREWBOOK, function(act)
     local target = act.target or act.invobject
+	
     if target ~= nil and act.doer ~= nil then
 		if target.components.brewbook ~= nil then
 			target.components.brewbook:Read(act.doer)
@@ -331,6 +334,7 @@ end)
 -- Action for installing Cookware on Fire Pit / Tools.
 AddAction("INSTALLCOOKWARE", STRINGS.ACTIONS.INSTALLCOOKWARE, function(act)
 	local target = act.target or act.invobject
+	
 	if target ~= nil and act.doer ~= nil then
 		if act.target.components.cookwareinstaller ~= nil then
             local count
@@ -378,6 +382,54 @@ AddComponentAction("USEITEM", "cookwareinstallable", function(inst, doer, target
 	if target:HasTag("cookware_other_installable") then
 		table.insert(actions, ACTIONS.INSTALLCOOKWARE)
 	end 
+end)
+
+local function GetIngredients(card)
+	local ret = {}
+	
+	for i, data in pairs(card.ingredients) do
+		for j = 1, data[2] do
+			table.insert(ret, data[1])
+		end
+	end
+
+	return ret
+end
+
+-- Action for learning Recipe Cards.
+AddAction("LEARNRECIPECARD", STRINGS.ACTIONS.LEARNRECIPECARD, function(act)
+	local target = act.target or act.invobject
+
+	if target ~= nil and act.doer ~= nil then
+		local cooker_recipes = cooking.recipes[target.cooker_name]
+		local brewer_recipes = brewing.recipes[target.brewer_name]
+		
+		if target:HasTag("brewingrecipecard") then
+			if brewer_recipes then
+				local card_def = brewer_recipes[target.recipe_name] and brewer_recipes[target.recipe_name].card_def
+				act.doer:PushEvent("learncookbookrecipe", {product = target.recipe_name, ingredients = GetIngredients(card_def)})
+				act.doer:PushEvent("learnrecipecard") -- Play a cool sound, yay.
+
+				target:Remove()
+				
+				return true
+			end
+		else
+			if cooker_recipes then
+				local card_def = cooker_recipes[target.recipe_name] and cooker_recipes[target.recipe_name].card_def
+				act.doer:PushEvent("learncookbookrecipe", {product = target.recipe_name, ingredients = GetIngredients(card_def)})
+				act.doer:PushEvent("learnrecipecard")
+
+				target:Remove()
+			
+				return true
+			end
+		end
+	end
+end)
+
+AddComponentAction("INVENTORY", "learnablerecipecard", function(inst, doer, actions)
+	table.insert(actions, ACTIONS.LEARNRECIPECARD)
 end)
 
 -- Action String overrides.
@@ -485,5 +537,11 @@ ACTIONS.INSTALLCOOKWARE.stroverridefn = function(act)
 	
 	if act.target:HasTag("cookware_other_installable") then
 		return STRINGS.KYNO_INSTALL_INSTALLER
+	end
+end
+
+ACTIONS.LEARNRECIPECARD.stroverridefn = function(act)
+	if act.invobject:HasTag("brewingrecipecard") then
+		return STRINGS.ACTIONS.LEARNRECIPECARD2
 	end
 end

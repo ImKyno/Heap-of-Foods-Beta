@@ -489,6 +489,7 @@ AddPrefabPostInit("twiggytree", function(inst)
             if inst.components.lootdropper ~= nil then
                 inst.components.lootdropper:AddChanceLoot("kyno_twiggynuts", 0.25)
             end
+			
             if onfinish_old_t ~= nil then
                 onfinish_old_t(inst, chopper)
             end
@@ -1018,17 +1019,6 @@ local function TumbleweedPostinit(inst)
 end
 
 AddPrefabPostInit("tumbleweed", TumbleweedPostinit)
-
--- For trading with Pig Elder.
-local function CookingCardPostinit(inst)
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst:AddComponent("tradable")
-end
-
-AddPrefabPostInit("cookingrecipecard", CookingCardPostinit)
 
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")

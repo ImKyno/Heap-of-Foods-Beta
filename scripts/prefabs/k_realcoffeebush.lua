@@ -167,6 +167,7 @@ local function createbush(name, inspectname, berryname, master_postinit)
 		inst:AddTag("kyno_coffeebush")
         inst:AddTag("plant")
         inst:AddTag("renewable")
+		inst:AddTag("lunarplant_target")
 
         inst.entity:SetPristine()
 

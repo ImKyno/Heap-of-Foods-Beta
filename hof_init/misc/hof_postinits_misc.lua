@@ -481,3 +481,55 @@ AddComponentPostInit("fishingrod", function(self)
         return unpack(ret)
     end
 end)
+
+local function CookingRecipeCardPostInit(inst)
+	inst:AddTag("learnablerecipecard")
+	
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst:AddComponent("tradable")
+	inst:AddComponent("learnablerecipecard")
+end
+
+AddPrefabPostInit("cookingrecipecard", CookingRecipeCardPostInit)
+
+local function PlayerClassifiedPostInit(inst)
+	local function OnLearnRecipeCardEvent(inst)
+		if inst._parent ~= nil and TheFocalPoint.entity:GetParent() == inst._parent then
+			TheFocalPoint.SoundEmitter:PlaySound("dontstarve/HUD/get_gold")
+		end
+	end
+	
+	local function OnSaltFoodEvent(inst)
+		if inst._parent ~= nil and TheFocalPoint.entity:GetParent() == inst._parent then
+			TheFocalPoint.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/salt_shake")
+		end
+	end
+
+	local function OnLearnRecipeCard(parent)
+		parent.player_classified.learnrecipecardevent:push()
+	end
+	
+	local function OnSaltFood(parent)
+		parent.player_classified.saltfoodevent:push()
+	end
+
+	local function RegisterNetListeners(inst)
+		if _G.TheWorld.ismastersim then
+			inst:ListenForEvent("learnrecipecard", OnLearnRecipeCard, inst.entity:GetParent())
+			inst:ListenForEvent("saltfood", OnSaltFood, inst.entity:GetParent())
+		end
+
+		inst:ListenForEvent("action.learnrecipecard", OnLearnRecipeCardEvent)
+		inst:ListenForEvent("action.salt", OnSaltFoodEvent)
+	end
+	
+	inst.learnrecipecardevent = net_event(inst.GUID, "action.learnrecipecard")
+	inst.saltfoodevent = net_event(inst.GUID, "action.salt")
+
+	inst:DoStaticTaskInTime(0, RegisterNetListeners)
+end
+
+AddPrefabPostInit("player_classified", PlayerClassifiedPostInit)
