@@ -165,13 +165,7 @@ local function OnAttached(inst, target)
     end, target)
 	
 	-- Play a nice and distant jukebox melody...
-	--[[
-	if target.SoundEmitter ~= nil then
-		target.SoundEmitter:PlaySound("hof_sounds/music/jukebox", "nukashine_jukebox")
-	else
-		inst.SoundEmitter:PlaySound("hof_sounds/music/jukebox", "nukashine_jukebox")
-	end
-	]]--
+	target:PushEvent("playnukashine")
 
 	if target.components.playervision ~= nil then
         target.components.playervision:PushForcedNightVision(inst, 1, ANCIENTFRUIT_NIGHTVISION_COLOURCUBES, true)
@@ -200,13 +194,7 @@ end
 
 local function OnDetached(inst, target)
 	if target ~= nil and target:IsValid() then
-		--[[
-		if target.SoundEmitter ~= nil then
-			target.SoundEmitter:KillSound("nukashine_jukebox")
-		else
-			inst.SoundEmitter:KillSound("nukashine_jukebox")
-		end
-		]]--
+		target:PushEvent("stopnukashine")
 	
         if target.components.playervision ~= nil then
             target.components.playervision:PopForcedNightVision(inst)
@@ -346,14 +334,7 @@ local function OnAttachedSugarFree(inst, target)
         inst.components.debuff:Stop()
     end, target)
 	
-	-- Play a nice and distant jukebox melody...
-	--[[
-	if target.SoundEmitter ~= nil then
-		target.SoundEmitter:PlaySound("hof_sounds/music/jukebox", "nukashine_jukebox")
-	else
-		inst.SoundEmitter:PlaySound("hof_sounds/music/jukebox", "nukashine_jukebox")
-	end
-	]]--
+	target:PushEvent("playnukashine")
 
 	if target.components.playervision ~= nil then
         target.components.playervision:PushForcedNightVision(inst, 1, ANCIENTFRUIT_NIGHTVISION_COLOURCUBES, true)
@@ -376,13 +357,7 @@ end
 
 local function OnDetachedSugarFree(inst, target)
 	if target ~= nil and target:IsValid() then
-		--[[
-		if target.SoundEmitter ~= nil then
-			target.SoundEmitter:KillSound("nukashine_jukebox")
-		else
-			inst.SoundEmitter:KillSound("nukashine_jukebox")
-		end
-		]]--
+		target:PushEvent("stopnukashine")
 	
         if target.components.playervision ~= nil then
             target.components.playervision:PopForcedNightVision(inst)

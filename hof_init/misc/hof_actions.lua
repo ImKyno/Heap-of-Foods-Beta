@@ -8,6 +8,7 @@ local ActionHandler		= _G.ActionHandler
 local SpawnPrefab		= _G.SpawnPrefab
 local cooking           = require("cooking")
 local brewing           = require("hof_brewing")
+local UpvalueHacker     = require("hof_upvaluehacker")
 
 -- Coffee Plant can be Only Fertilized by Ashes.
 AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions)
@@ -431,6 +432,43 @@ end)
 AddComponentAction("INVENTORY", "learnablerecipecard", function(inst, doer, actions)
 	table.insert(actions, ACTIONS.LEARNRECIPECARD)
 end)
+
+-- From Island Adventures https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
+-- Hope they don't smack and bonk my head...
+local _FISHfn = ACTIONS.FISH.fn
+function ACTIONS.FISH.fn(act, ...)
+    if act.doer and act.doer.components.fishingrod then
+        act.doer.components.fishingrod:StartFishing(act.target, act.doer)
+        return true
+    end
+    return _FISHfn(act, ...)
+end
+
+local COMPONENT_ACTIONS = UpvalueHacker.GetUpvalue(_G.EntityScript.CollectActions, "COMPONENT_ACTIONS")
+local USEITEM = COMPONENT_ACTIONS.USEITEM
+local EQUIPPED = COMPONENT_ACTIONS.EQUIPPED
+
+local _USEITEMfishingrod = USEITEM.fishingrod
+function USEITEM.fishingrod(inst, doer, target, actions, ...)
+    if inst.replica.fishingrod:HasCaughtFish() then
+        if doer.sg == nil or doer.sg:HasStateTag("fishing") then
+            table.insert(actions, ACTIONS.REEL)
+        end
+    else
+        return _USEITEMfishingrod(inst, doer, target, actions, ...)
+    end
+end
+
+local _EQUIPPEDfishingrod = EQUIPPED.fishingrod
+function EQUIPPED.fishingrod(inst, doer, target, actions, ...)
+    if inst.replica.fishingrod:HasCaughtFish() then
+        if doer.sg == nil or doer.sg:HasStateTag("fishing") then
+            table.insert(actions, ACTIONS.REEL)
+        end
+    else
+        return _EQUIPPEDfishingrod(inst, doer, target, actions, ...)
+    end
+end
 
 -- Action String overrides.
 ACTIONS.GIVE.stroverridefn = function(act)

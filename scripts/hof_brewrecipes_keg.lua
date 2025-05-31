@@ -870,12 +870,15 @@ local kyno_foods_keg =
 		prefabs = { "kyno_piratebuff" },
 		oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_piratebuff", "kyno_piratebuff")
-
+			eater:PushEvent("piraterum")
+			
+			--[[
 			if eater ~= nil and eater.SoundEmitter ~= nil then
 				eater.SoundEmitter:PlaySound("hof_sounds/common/piraterum/laugh", "piraterum", 0.5)
 			else
 				inst.SoundEmitter:PlaySound("hof_sounds/common/piraterum/laugh", "piraterum", 0.5)
 			end
+			]]--
 		end,
 	},
 
@@ -919,11 +922,7 @@ local kyno_foods_keg =
 		tags = {"drinkable_food"},
 		card_def = {ingredients = {{"kyno_sugar", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
-			if eater ~= nil and eater.SoundEmitter ~= nil then
-				eater.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
-			else
-				inst.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
-			end
+			eater:PushEvent("bottlecap")
 
 			if math.random() < 0.05 then
 				local cap = SpawnPrefab("kyno_bottlecap")
@@ -932,6 +931,14 @@ local kyno_foods_keg =
 					eater.components.inventory:GiveItem(cap)
 				end
 			end
+			
+			--[[
+			if eater ~= nil and eater.SoundEmitter ~= nil then
+				eater.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
+			else
+				inst.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
+			end
+			]]--
 		end,
 	},
 
@@ -953,11 +960,7 @@ local kyno_foods_keg =
 		card_def = {ingredients = {{"kyno_sugar", 1}, {"wormlight_lesser", 1}, {"ice", 1}}},
 		prefabs = { "wormlight_light_greater" },
         oneatenfn = function(inst, eater)
-			if eater ~= nil and eater.SoundEmitter ~= nil then
-				eater.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
-			else
-				inst.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
-			end
+			eater:PushEvent("bottlecap")
 
 			if math.random() < 0.05 then
 				local cap = SpawnPrefab("kyno_bottlecap")
@@ -966,6 +969,14 @@ local kyno_foods_keg =
 					eater.components.inventory:GiveItem(cap)
 				end
 			end
+			
+			--[[
+			if eater ~= nil and eater.SoundEmitter ~= nil then
+				eater.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
+			else
+				inst.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
+			end
+			]]--
 
             if eater.wormlight ~= nil then
                 if eater.wormlight.prefab == "wormlight_light_greater" then
@@ -1006,6 +1017,9 @@ local kyno_foods_keg =
 		card_def = {ingredients = {{"ancientfruit_nightvision", 1}, {"kyno_sugar", 1}, {"nukacola_quantum", 1}}},
 		prefabs = { "kyno_nukashinebuff" },
 		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_nukashinebuff", "kyno_nukashinebuff")
+			
+			--[[
 			if eater ~= nil and eater.SoundEmitter ~= nil then
 				eater.SoundEmitter:PlaySound("hof_sounds/common/nukashine/open")
 				eater.SoundEmitter:PlaySound("hof_sounds/common/nukashine/drink")
@@ -1013,8 +1027,7 @@ local kyno_foods_keg =
 				inst.SoundEmitter:PlaySound("hof_sounds/common/nukashine/open")
 				inst.SoundEmitter:PlaySound("hof_sounds/common/nukashine/drink")
 			end
-		
-			eater:AddDebuff("kyno_nukashinebuff", "kyno_nukashinebuff")
+			]]--
 		end,
 	},
 

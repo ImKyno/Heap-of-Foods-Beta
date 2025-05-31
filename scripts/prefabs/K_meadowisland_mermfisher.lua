@@ -158,7 +158,7 @@ end
 
 local function ShouldSleep(inst)
     return NocturnalSleepTest(inst)
-        and not (TheWorld.components.mermkingmanager and TheWorld.components.mermkingmanager:IsCandidate(inst))
+	and not (TheWorld.components.mermkingmanager and TheWorld.components.mermkingmanager:IsCandidate(inst))
 end
 
 local function ShouldWake(inst)

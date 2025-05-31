@@ -47,7 +47,25 @@ local function SortAfter(a, b, filter_name)
     SortRecipe(a, b, filter_name, 1)
 end
 
--- Custom TechTree for Mealing Stone.
+-- Wurt can craft her structures on Tidal Marsh ground.
+-- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=3435352667
+local _IsMarshLand = AllRecipes["mermhouse_crafted"].testfn
+local function IsTidalMarshLand(pt, rot, ...)
+    return _G.TheWorld.Map:GetTileAtPoint(pt.x, pt.y, pt.z) == WORLD_TILES.HOF_TIDALMARSH
+    or _IsMarshLand(pt, rot, ...)
+end
+
+AllRecipes["mermhouse_crafted"].testfn = IsTidalMarshLand
+AllRecipes["mermthrone_construction"].testfn = IsTidalMarshLand
+AllRecipes["mermwatchtower"].testfn = IsTidalMarshLand
+AllRecipes["offering_pot"].testfn = IsTidalMarshLand
+AllRecipes["offering_pot_upgraded"].testfn = IsTidalMarshLand
+AllRecipes["merm_toolshed"].testfn = IsTidalMarshLand
+AllRecipes["merm_toolshed_upgraded"].testfn = IsTidalMarshLand
+AllRecipes["merm_armory"].testfn = IsTidalMarshLand
+AllRecipes["merm_armory_upgraded"].testfn = IsTidalMarshLand
+
+-- Custom TechTree for Stations.
 table.insert(TechTree.AVAILABLE_TECH, "MEALING")
 table.insert(TechTree.AVAILABLE_TECH, "SERENITYSHOP")
 
@@ -717,6 +735,33 @@ AddRecipe2("wendy_sugarfly", {Ingredient("ghostflower", 3), Ingredient("kyno_sug
 	},
 	{"CHARACTER"}
 )
+
+AddRecipe2("kyno_fishermermhut_wurt", {Ingredient("boards", 4), Ingredient("cutreeds", 3), Ingredient("kyno_tropicalfish", 2, ModAtlas)}, TECH.SCIENCE_ONE,
+	{
+		placer            = "kyno_fishermermhut_wurt_placer",
+		min_spacing       = 1,
+		testfn            = IsTidalMarshLand,
+		builder_tag       = "merm_builder",
+		atlas             = ModAtlas,
+		image             = "kyno_fishermermhut_wurt.tex",
+	},
+	{"CHARACTER", "STRUCTURES"}
+)
+SortAfter("kyno_fishermermhut_wurt", "mermhouse_crafted", "CHARACTER")
+SortAfter("kyno_fishermermhut_wurt", "mermhouse_crafted", "STRUCTURES")
+
+AddRecipe2("wurt_turf_tidalmarsh", {Ingredient("cutreeds", 1), Ingredient("ice", 2)}, TECH.NONE,
+	{
+		no_deconstruction = true,
+		product           = "turf_tidalmarsh",
+		builder_tag       = "merm_builder",
+		numtogive         = 4,
+		atlas             = ModAtlas,
+		image             = "turf_tidalmarsh.tex",
+	},
+	{"CHARACTER"}
+)
+SortAfter("wurt_turf_tidalmarsh", "wurt_turf_marsh", "CHARACTER")
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 if HOF_WARLYMEALGRINDER then
