@@ -15,6 +15,11 @@ local NotEnoughTurfs       = _G.KnownModIndex:IsModEnabled("workshop-2528541304"
 local HOF_WARLYMEALGRINDER = GetModConfigData("WARLYMEALGRINDER")
 local HOF_FERTILIZERTWEAK  = GetModConfigData("FERTILIZERTWEAK")
 
+-- Atlases for Recipes.
+local DefaultAtlas         = "images/inventoryimages.xml"
+local DefaultAtlas1        = "images/inventoryimages1.xml"
+local ModAtlas             = "images/inventoryimages/hof_inventoryimages.xml"
+
 -- For sorting recipe.
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 local function SortRecipe(a, b, filter_name, offset)
@@ -78,34 +83,25 @@ TechTree.Create = function(t)
 end
 
 -- Mealing Stone.
-_G.TECH.NONE.MEALING 		= 0
-_G.TECH.MEALING_ONE 		= { MEALING 			= 1 }
-_G.TECH.MEALING_TWO 		= { MEALING 			= 2 }
+_G.TECH.NONE.MEALING      = 0
+_G.TECH.MEALING_ONE       = { MEALING          = 1 }
+_G.TECH.MEALING_TWO       = { MEALING          = 2 }
 
 -- Pig Elder.
-_G.TECH.NONE.SERENITYSHOP	= 0
-_G.TECH.SERENITYSHOP_ONE 	= { SERENITYSHOP 		= 1 }
-_G.TECH.SERENITYSHOP_TWO	= { SERENITYSHOP_TWO 	= 2 }
+_G.TECH.NONE.SERENITYSHOP = 0
+_G.TECH.SERENITYSHOP_ONE  = { SERENITYSHOP     = 1 }
+_G.TECH.SERENITYSHOP_TWO  = { SERENITYSHOP_TWO = 2 }
 
-for k,v in pairs(TUNING.PROTOTYPER_TREES) do
+for k, v in pairs(TUNING.PROTOTYPER_TREES) do
     v.MEALING 		= 0
 	v.SERENITYSHOP 	= 0
 end
 
-TUNING.PROTOTYPER_TREES.MEALING_ONE 		= TechTree.Create({
-    MEALING 		= 1,
-})
-TUNING.PROTOTYPER_TREES.MEALING_TWO 		= TechTree.Create({
-	MEALING 		= 2,
-})
+TUNING.PROTOTYPER_TREES.MEALING_ONE      = TechTree.Create({ MEALING      = 1 })
+TUNING.PROTOTYPER_TREES.MEALING_TWO      = TechTree.Create({ MEALING      = 2 })
 
-TUNING.PROTOTYPER_TREES.SERENITYSHOP_ONE 	= TechTree.Create({
-	SERENITYSHOP	= 1,
-})
-
-TUNING.PROTOTYPER_TREES.SERENITYSHOP_TWO 	= TechTree.Create({
-	SERENITYSHOP	= 2,
-})
+TUNING.PROTOTYPER_TREES.SERENITYSHOP_ONE = TechTree.Create({ SERENITYSHOP = 1 })
+TUNING.PROTOTYPER_TREES.SERENITYSHOP_TWO = TechTree.Create({ SERENITYSHOP = 2 })
 
 for i, v in pairs(_G.AllRecipes) do
 	if v.level.MEALING == nil then
@@ -138,11 +134,7 @@ AddPrototyperDef("kyno_serenityisland_shop",
 	}
 )
 
--- Ingredient and Structures Recipes.
-local DefaultAtlas 			= "images/inventoryimages.xml"
-local DefaultAtlas1 		= "images/inventoryimages1.xml"
-local ModAtlas     			= "images/inventoryimages/hof_inventoryimages.xml"
-
+-- Mod Recipes.
 AddRecipe2("kyno_flour", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.MEALING_ONE, 
 	{
 		nounlock 			= true,
@@ -750,18 +742,17 @@ AddRecipe2("kyno_fishermermhut_wurt", {Ingredient("boards", 4), Ingredient("cutr
 SortAfter("kyno_fishermermhut_wurt", "mermhouse_crafted", "CHARACTER")
 SortAfter("kyno_fishermermhut_wurt", "mermhouse_crafted", "STRUCTURES")
 
-AddRecipe2("wurt_turf_tidalmarsh", {Ingredient("cutreeds", 1), Ingredient("ice", 2)}, TECH.NONE,
+AddRecipe2("turf_tidalmarsh", {Ingredient("cutreeds", 1), Ingredient("ice", 2)}, TECH.NONE,
 	{
-		no_deconstruction = true,
-		product           = "turf_tidalmarsh",
 		builder_tag       = "merm_builder",
 		numtogive         = 4,
 		atlas             = ModAtlas,
 		image             = "turf_tidalmarsh.tex",
 	},
-	{"CHARACTER"}
+	{"CHARACTER", "DECOR"}
 )
 SortAfter("wurt_turf_tidalmarsh", "wurt_turf_marsh", "CHARACTER")
+SortAfter("wurt_turf_tidalmarsh", "wurt_turf_marsh", "DECOR")
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 if HOF_WARLYMEALGRINDER then

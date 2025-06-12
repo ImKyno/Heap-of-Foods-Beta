@@ -6,6 +6,7 @@ local CookbookData = require("cookbookdata")
 
 require("hof_constants")
 require("craftpot/ingredienttags")
+-- require("craftpot/cookingpots")
 
 -- New Vanilla Crock Pot Ingredients.
 AddIngredientValues({"slurtle_shellpieces"}, 	{shell      = 1, 	elemental = 1})

@@ -7,7 +7,7 @@ require("behaviours/chattynode")
 local BrainCommon = require("brains/braincommon")
 
 local SEE_HOME_DIST = 18
-local MAX_WANDER_DIST = 10
+local MAX_WANDER_DIST = 15
 local RUN_AWAY_DIST = 5
 local STOP_RUN_AWAY_DIST = 8
 local TRADE_DIST = 20

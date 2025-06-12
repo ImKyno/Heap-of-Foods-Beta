@@ -132,10 +132,10 @@ local states =
         timeline =
         {
             TimeEvent(10 * FRAMES, function(inst)
-                -- inst.SoundEmitter:PlaySound("dontstarve_DLC002/creatures/Merm/whoosh_throw")
+                inst.SoundEmitter:PlaySound("hof_sounds/creatures/mermfisher/whoosh_throw")
             end),
             TimeEvent(14 * FRAMES, function(inst)
-                -- inst.SoundEmitter:PlaySound("dontstarve_DLC002/creatures/Merm/spear_water")
+                inst.SoundEmitter:PlaySound("hof_sounds/creatures/mermfisher/spear_water")
             end),
             TimeEvent(34 * FRAMES, function(inst)
                 inst.components.fishingrod:Collect()

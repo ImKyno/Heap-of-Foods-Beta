@@ -255,7 +255,7 @@ local function OnGetItemFromPlayer(inst, giver, item)
 	inst:Remove()
 end
 
-function hofshallowcopy(orig)
+function shallowcopy(orig)
     local orig_type = type(orig)
     local copy
     if orig_type == "table" then
@@ -274,7 +274,7 @@ for k, v in pairs(cooking.recipes.cookpot) do
 end
 
 for k, recipe in pairs(cookpotfoods) do
-    local rep = hofshallowcopy(recipe)
+    local rep = shallowcopy(recipe)
     AddCookerRecipe("kyno_cookware_oven_small_casserole", rep)
 	AddCookerRecipe("kyno_cookware_oven_casserole", rep)
 end
@@ -657,7 +657,7 @@ local function casserolefn(small)
 
 	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
+    if not TheWorld.ismastersim then	
 		inst:ListenForEvent("steamoven", OnOvenSteam)
 
 		inst.OnEntityReplicated = function(inst)

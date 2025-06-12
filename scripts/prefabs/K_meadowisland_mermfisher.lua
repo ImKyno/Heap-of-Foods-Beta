@@ -118,7 +118,7 @@ local function RoyalUpgrade(inst)
 	
 	inst.components.health:SetMaxHealth(TUNING.KYNO_MERMFISHER_ROYAL_HEALTH)
 
-    inst.fishtimer_mult = 0.75
+    inst.fishtimer_mult = TUNING.KYNO_MERMFISHER_TIMERMULT_ROYAL
 
     if inst.components.timer:TimerExists("fish") then
         inst.components.timer:SetTimeLeft("fish", inst.components.timer:GetTimeLeft("fish") * 0.75)
@@ -134,7 +134,7 @@ local function RoyalDowngrade(inst)
 	
 	inst.components.health:SetMaxHealth(TUNING.KYNO_MERMFISHER_HEALTH)
 
-    inst.fishtimer_mult = 1
+    inst.fishtimer_mult = TUNING.KYNO_MERMFISHER_TIMERMULT
 
     if inst.components.timer:TimerExists("fish") then
         inst.components.timer:SetTimeLeft("fish", inst.components.timer:GetTimeLeft("fish") / 0.75)

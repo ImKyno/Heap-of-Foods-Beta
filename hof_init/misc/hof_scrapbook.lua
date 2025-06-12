@@ -105,7 +105,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		bank           = "kyno_turfs_hof",
 		build          = "kyno_turfs_hof",
 		anim           = "tidalmarsh",
-		deps           = {"pigking", "turf_marsh"},
+		deps           = {"pigking", "cutreeds", "ice"},
 		specialinfo    = "TURF",
 	},
 
@@ -1142,6 +1142,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		subcat         = "tool",
 		tex            = "kyno_itemslicer.tex",
 		prefab         = "kyno_itemslicer",
+	 -- finiteuses     = 200,
 		bank           = "kyno_itemslicer",
 		build          = "kyno_itemslicer",
 		anim           = "idle",
@@ -1151,6 +1152,24 @@ local HOF_SCRAPBOOK_ITEMS =
 		deps           = {"researchlab", "researchlab2", "flint", "twigs"},
 		specialinfo    = "ITEMSLICER",
 	},
+	
+	--[[
+	kyno_itemslicer_gold =
+	{
+		name           = "kyno_itemslicer_gold",
+		type           = "item",
+		subcat         = "tool",
+		tex            = "kyno_itemslicer_gold.tex",
+		prefab         = "kyno_itemslicer_gold",
+		bank           = "kyno_itemslicer_gold",
+		build          = "kyno_itemslicer_gold",
+		anim           = "idle",
+		animoffsety    = 10,
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -105,
+		specialinfo    = "ITEMSLICER2",
+	},
+	]]--
 }
 
 local HOF_SCRAPBOOK_FOODS =
@@ -7265,6 +7284,26 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -100,
 		deps           = preparedfood_deps,
 	},
+	
+	coxinha            =
+	{
+		name           = "coxinha",
+		type           = "food",
+		tex            = "coxinha.tex",
+		prefab         = "coxinha",
+		healthvalue    = 15,
+		hungervalue    = 32.5,
+		sanityvalue    = 0,
+		perishable     = 4800,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "coxinha",
+		build          = "coxinha",
+		overridesymbol = {"swap_food", "swap_food", "coxinha"},
+		anim           = "idle",
+		deps           = preparedfood_deps,
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =
@@ -11189,6 +11228,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		subcat         = "insect",
 		tex            = "kyno_sugarfly.tex",
 		prefab         = "kyno_sugarfly",
+		craftingprefab = "wendy",
 		health         = 1,
 		perishable     = 1440,
 		stacksize      = 20,
@@ -11213,6 +11253,22 @@ local HOF_SCRAPBOOK_CREATURES =
 		anim           = "idle",
 		animoffsety    = 20,
 		deps           = {"kyno_crabtrap_installer", "kyno_crabmeat", "kyno_crabmeat_cooked"},
+	},
+	
+	kyno_meadowisland_mermfisher =
+	{
+		name           = "kyno_meadowisland_mermfisher",
+		type           = "creature",
+		subcat         = "merm",
+		tex            = "kyno_meadowisland_mermfisher.tex",
+		prefab         = "kyno_meadowisland_mermfisher",
+		health         = 300,
+		damage         = "30-40",
+		bank           = "pigman",
+		build          = "merm_fisherman_build",
+		anim           = "idle_loop",
+		hide           = {"hat", "ARM_carry", "ARM_carry_up"},
+		deps           = {"kyno_meadowisland_fishermermhut", "kyno_fishermermhut_wurt", "pondfish", "froglegs"},
 	},
 }
 
@@ -11589,7 +11645,24 @@ local HOF_SCRAPBOOK_THINGS =
 		animoffsety    = -40,
 		animoffsetbgx  = 50,
 		animoffsetbgy  = 20,
-		deps           = {"merm", "kyno_tropicalfish", "boards", "rocks"},
+		deps           = {"kyno_meadowisland_mermfisher", "kyno_tropicalfish", "boards", "rocks"},
+	},
+	
+	kyno_fishermermhut_wurt =
+	{
+		name           = "kyno_fishermermhut_wurt",
+		speechname     = "mermhouse_crafted",
+		type           = "thing",
+		subcat         = "structure",
+		tex            = "kyno_fishermermhut_wurt.tex",
+		prefab         = "kyno_fishermermhut_wurt",
+		craftingprefab = "wurt",
+		workable       = "HAMMER",
+		burnable       = true,
+		bank           = "mermhouse_crafted",
+		build          = "kyno_fishermermhut_wurt",
+		anim           = "idle",
+		deps           = {"kyno_meadowisland_mermfisher", "kyno_tropicalfish", "boards", "cutreeds", "researchlab", "researchlab2"},
 	},
 	
 	kyno_spotbush      = 

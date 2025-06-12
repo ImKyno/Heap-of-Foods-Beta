@@ -262,17 +262,18 @@ local function kegfn()
 
 	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
+    if not TheWorld.ismastersim then	
 		inst.OnEntityReplicated = function(inst)
 			if not inst:HasTag("burnt") then
 				inst.replica.container:WidgetSetup("brewer")
 			end
 		end
+		
         return inst
     end
 
 	inst:AddComponent("lootdropper")
-
+	
 	inst:AddComponent("brewer")
 	inst.components.brewer.onstartcooking = StartCookFn
 	inst.components.brewer.oncontinuecooking = ContinueCookFn
@@ -344,6 +345,7 @@ local function preservejarfn()
 				inst.replica.container:WidgetSetup("brewer")
 			end
 		end
+		
         return inst
     end
 

@@ -108,6 +108,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SAPBUCKET = "Odbieraj świeży sok co kilka dni z 
 STRINGS.SCRAPBOOK.SPECIALINFO.SLAUGHTERTOOL = "Narzędzia do rzezi, które natychmiastowo zabijają zwierzę."
 STRINGS.SCRAPBOOK.SPECIALINFO.SAPHEALER = "Potężny antidotum z właściwościami leczniczymi dla drzew.\n\nUżywając go na zniszczonych drzewach Sugarwood, przywrócisz je do normalnego stanu."
 STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER = "For slicing off meat chunks and other things."
+STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER2 = "For slicing off meat chunks and other things, faster!"
 
 -- Stworzenia.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Można karmić nasionami, aby złożyła jajko."

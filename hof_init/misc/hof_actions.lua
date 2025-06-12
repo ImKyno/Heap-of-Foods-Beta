@@ -429,7 +429,7 @@ AddAction("LEARNRECIPECARD", STRINGS.ACTIONS.LEARNRECIPECARD, function(act)
 	end
 end)
 
-AddComponentAction("INVENTORY", "learnablerecipecard", function(inst, doer, actions)
+AddComponentAction("INVENTORY", "learnablerecipecard", function(inst, doer, actions)	
 	table.insert(actions, ACTIONS.LEARNRECIPECARD)
 end)
 

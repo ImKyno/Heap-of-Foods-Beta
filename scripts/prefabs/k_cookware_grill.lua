@@ -205,7 +205,7 @@ local function ChangeFireFX(inst)
 	end
 end
 
-function hofshallowcopy(orig)
+function shallowcopy(orig)
     local orig_type = type(orig)
     local copy
     if orig_type == "table" then
@@ -224,7 +224,7 @@ for k, v in pairs(cooking.recipes.cookpot) do
 end
 
 for k, recipe in pairs(cookpotfoods) do
-    local rep = hofshallowcopy(recipe)
+    local rep = shallowcopy(recipe)
     AddCookerRecipe("kyno_cookware_grill", rep)
 	AddCookerRecipe("kyno_cookware_small_grill", rep)
 end
@@ -482,7 +482,7 @@ local function grillsmallfn()
 
 	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
+    if not TheWorld.ismastersim then	
 		inst:ListenForEvent("grillsmoke", OnGrillSmoke)
 
 		inst.OnEntityReplicated = function(inst)

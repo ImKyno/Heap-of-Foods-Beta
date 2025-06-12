@@ -5,6 +5,7 @@ local require 				= _G.require
 require("hof_constants")
 require("hof_brewing")
 require("craftpot/ingredienttags")
+-- require("craftpot/cookingpots")
 
 -- Vanilla Wooden Keg and Preserves Jar Ingredients.
 AddBrewingValues({"honey"},						{sweetener  = 1,   honey         = 1})
