@@ -1945,7 +1945,7 @@
 <guid>{4901cf80-aaac-46ab-8bd1-b056f3158d0d}</guid>
 <eventgroup_nextid>0</eventgroup_nextid>
 <event_nextid>1</event_nextid>
-<open>1</open>
+<open>0</open>
 <notes></notes>
 <eventgroup>
 <name>brewers</name>
@@ -6072,7 +6072,7 @@
 <ignoregeometry>No</ignoregeometry>
 <rolloff>Linear</rolloff>
 <mindistance>1</mindistance>
-<maxdistance>30</maxdistance>
+<maxdistance>15</maxdistance>
 <auto_distance_filtering>Off</auto_distance_filtering>
 <distance_filter_centre_freq>1500</distance_filter_centre_freq>
 <headrelative>World_relative</headrelative>
@@ -6261,7 +6261,7 @@
 <ignoregeometry>No</ignoregeometry>
 <rolloff>Linear</rolloff>
 <mindistance>1</mindistance>
-<maxdistance>30</maxdistance>
+<maxdistance>15</maxdistance>
 <auto_distance_filtering>Off</auto_distance_filtering>
 <distance_filter_centre_freq>1500</distance_filter_centre_freq>
 <headrelative>World_relative</headrelative>
@@ -6450,7 +6450,7 @@
 <ignoregeometry>No</ignoregeometry>
 <rolloff>Linear</rolloff>
 <mindistance>1</mindistance>
-<maxdistance>30</maxdistance>
+<maxdistance>15</maxdistance>
 <auto_distance_filtering>Off</auto_distance_filtering>
 <distance_filter_centre_freq>1500</distance_filter_centre_freq>
 <headrelative>World_relative</headrelative>
@@ -6639,7 +6639,7 @@
 <ignoregeometry>No</ignoregeometry>
 <rolloff>Linear</rolloff>
 <mindistance>1</mindistance>
-<maxdistance>30</maxdistance>
+<maxdistance>15</maxdistance>
 <auto_distance_filtering>Off</auto_distance_filtering>
 <distance_filter_centre_freq>1500</distance_filter_centre_freq>
 <headrelative>World_relative</headrelative>
@@ -6828,7 +6828,7 @@
 <ignoregeometry>No</ignoregeometry>
 <rolloff>Linear</rolloff>
 <mindistance>1</mindistance>
-<maxdistance>30</maxdistance>
+<maxdistance>15</maxdistance>
 <auto_distance_filtering>Off</auto_distance_filtering>
 <distance_filter_centre_freq>1500</distance_filter_centre_freq>
 <headrelative>World_relative</headrelative>

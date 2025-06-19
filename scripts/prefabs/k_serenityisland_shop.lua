@@ -226,22 +226,29 @@ local function fn()
 	inst.AnimState:SetBuild("quagmire_elderswampig")
 	inst.AnimState:PlayAnimation("idle", true)
 
-    inst:AddTag("trader")
-    inst:AddTag("prototyper")
+	inst:AddTag("character")
+	inst:AddTag("trader")
+	inst:AddTag("prototyper")
 	inst:AddTag("birdblocker")
-    inst:AddTag("antlion_sinkhole_blocker")
+	inst:AddTag("antlion_sinkhole_blocker")
 	inst:AddTag("serenity_pigelder") -- Using this as a flag for generating the island.
 
-    inst:AddComponent("talker")
-    inst.components.talker.fontsize = 35
-    inst.components.talker.font = TALKINGFONT
-    inst.components.talker.offset = Vector3(0, -600, 0)
-    inst.components.talker:MakeChatter()
+	inst:AddComponent("talker")
+	inst.components.talker.font = TALKINGFONT
+	inst.components.talker.offset = Vector3(0, -600, 0)
+	inst.components.talker.name_colour = Vector3(118/256, 89/256, 141/256)
+	-- inst.components.talker.chaticon = "npcchatflair_pigelder"
+	inst.components.talker:MakeChatter()
+	inst.components.talker.lineduration = TUNING.HERMITCRAB.SPEAKTIME - 0.5
+	
+	if LOC.GetTextScale() == 1 then
+		inst.components.talker.fontsize = 35
+	end
 	
 	if not TheNet:IsDedicated() then
-        inst:AddComponent("pointofinterest")
-        inst.components.pointofinterest:SetHeight(60)
-    end
+		inst:AddComponent("pointofinterest")
+		inst.components.pointofinterest:SetHeight(60)
+	end
 
     inst.entity:SetPristine()
 

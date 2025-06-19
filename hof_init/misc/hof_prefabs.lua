@@ -4,8 +4,6 @@ local _G = GLOBAL
 -- Prefabs.
 PrefabFiles =
 {
-
-	"hermitcrab", -- I'll be using this until I find a better and clean way to do the things.
 	"worm_boss",
 	
 	"k_antchest",
@@ -72,8 +70,8 @@ PrefabFiles =
 	"k_limpetrock",
 	"k_lotus",
 	"k_meadowisland_crate",
-	"k_meadowisland_mermfisher",
-	"k_meadowisland_mermhut",
+	"k_meadowisland_fishermerm",
+	"k_meadowisland_mermhuts",
 	"k_meadowisland_piko",
 	"k_meadowisland_pikotree",
 	"k_meadowisland_pond",

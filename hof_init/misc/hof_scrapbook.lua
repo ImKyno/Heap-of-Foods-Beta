@@ -98,6 +98,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		subcat         = "turf",
 		tex            = "turf_tidalmarsh.tex",
 		prefab         = "turf_tidalmarsh",
+		craftingprefab = "wurt",
 		fueltype       = "BURNABLE",
 		fuelvalue      = 7.5,
 		stacksize      = 20,
@@ -341,7 +342,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		anim           = "tomato_closed",
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -90,
-		deps           = {"hermitcrab", "sunkenchest", "kyno_serenityisland_crate", "kyno_meadowisland_crate", "kyno_tomatocan_open"},
+		deps           = {"sunkenchest", "kyno_serenityisland_crate", "kyno_meadowisland_crate", "kyno_tomatocan_open"},
 		specialinfo    = "CANNEDFOOD",
 	},
 	
@@ -358,7 +359,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		anim           = "bean_closed",
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -90,
-		deps           = {"hermitcrab", "sunkenchest", "kyno_serenityisland_crate", "kyno_meadowisland_crate", "kyno_beancan_open"},
+		deps           = {"sunkenchest", "kyno_serenityisland_crate", "kyno_meadowisland_crate", "kyno_beancan_open"},
 		specialinfo    = "CANNEDFOOD",
 	},
 	
@@ -375,7 +376,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		anim           = "meat_closed",
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -90,
-		deps           = {"hermitcrab", "sunkenchest", "kyno_serenityisland_crate", "kyno_meadowisland_crate", "kyno_meatcan_open"},
+		deps           = {"sunkenchest", "kyno_serenityisland_crate", "kyno_meadowisland_crate", "kyno_meatcan_open"},
 		specialinfo    = "CANNEDFOOD",
 	},
 	

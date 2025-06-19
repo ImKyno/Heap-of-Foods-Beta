@@ -89,12 +89,13 @@ local hof_presets =
 		{ 
 			kyno_tomatocan = 1, 
 			kyno_meatcan = 1, 
-			kyno_beancan = 1, 
+			kyno_beancan = 1,
+			kyno_tunacan = 1,
 		},
 	
 		randomly_selected_loot =
 		{
-			{ kyno_tunacan = .50, kyno_brewingrecipecard = 1 },
+			{ kyno_brewingrecipecard = 1 },
 		},
 
 		preset_weight = 1,	

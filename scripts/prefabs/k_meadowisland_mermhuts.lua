@@ -26,69 +26,6 @@ local loot =
     "kyno_tropicalfish",
 }
 
-local PLACER_SCALE = 1.5
-
-local function OnUpdatePlacerHelper(helperinst)
-    if not helperinst.placerinst:IsValid() then
-        helperinst.components.updatelooper:RemoveOnUpdateFn(OnUpdatePlacerHelper)
-        helperinst.AnimState:SetAddColour(0, 0, 0, 0)
-    elseif helperinst:IsNear(helperinst.placerinst, TUNING.WURT_OFFERING_POT_RANGE) then
-        helperinst.AnimState:SetAddColour(helperinst.placerinst.AnimState:GetAddColour())
-    else
-        helperinst.AnimState:SetAddColour(0, 0, 0, 0)
-    end
-
-end
-
-local function CreatePlacerRing()
-    local inst = CreateEntity()
-
-    inst.entity:SetCanSleep(false)
-    inst.persists = false
-
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-
-    inst:AddTag("CLASSIFIED")
-    inst:AddTag("NOCLICK")
-    inst:AddTag("placer")
-
-    inst.AnimState:SetBank("winona_battery_placement")
-    inst.AnimState:SetBuild("winona_battery_placement")
-    inst.AnimState:PlayAnimation("idle")
-    inst.AnimState:SetAddColour(0, .2, .5, 0)
-    inst.AnimState:SetLightOverride(1)
-    inst.AnimState:SetOrientation(ANIM_ORIENTATION.OnGround)
-    inst.AnimState:SetLayer(LAYER_BACKGROUND)
-    inst.AnimState:SetSortOrder(1)
-    inst.AnimState:SetScale(PLACER_SCALE, PLACER_SCALE)
-
-    inst.AnimState:Hide("outer")
-
-    return inst
-end
-
-local function OnEnableHelper(inst, enabled, recipename, placerinst)
-    if enabled then
-        inst.helper = CreatePlacerRing()
-        inst.helper.entity:SetParent(inst.entity)
-
-        inst.helper:AddComponent("updatelooper")
-        inst.helper.components.updatelooper:AddOnUpdateFn(OnUpdatePlacerHelper)
-        inst.helper.placerinst = placerinst
-        OnUpdatePlacerHelper(inst.helper)
-    elseif inst.helper ~= nil then
-        inst.helper:Remove()
-        inst.helper = nil
-    end
-end
-
-local function OnStartHelper(inst)
-    if inst.AnimState:IsCurrentAnimation("idle") then
-        inst.components.deployhelper:StopHelper()
-    end
-end
-
 local function OnHammered(inst, worker)
     if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
         inst.components.burnable:Extinguish()
@@ -343,78 +280,69 @@ local function fishfn()
 	return inst
 end
 
-local MAX_COUNT = 6
+local function craftfn()
+	local inst = CreateEntity()
 
-local function UpdateSpawningTime(inst, data)
-    if data.inst == nil or
-        not data.inst:IsValid() or
-        data.inst:GetDistanceSqToInst(inst) > TUNING.WURT_OFFERING_POT_RANGE * TUNING.WURT_OFFERING_POT_RANGE
-    then
-        return
-    end
-
-    local timer   = inst.components.worldsettingstimer
-    local spawner = inst.components.childspawner
-
-    if timer == nil or spawner == nil then
-        return
-    end
-
-    inst.kelpofferings[data.inst.GUID] =  data.count and data.count > 0 and data.count or nil
-
-    local topcount = 0
-
-    for _, count in pairs(inst.kelpofferings) do
-        if count > topcount then
-            topcount = count
-        end
-    end
-
-    local mult = Remap(topcount, 0, MAX_COUNT, 1, TUNING.WURT_MAX_OFFERING_REGEN_MULT)
-
-    timer:SetMaxTime("ChildSpawner_RegenPeriod", TUNING.MERMHOUSE_REGEN_TIME / 2 * mult)
-    spawner:SetRegenPeriod(TUNING.MERMHOUSE_REGEN_TIME / 2 * mult)
-end
-
-local function craftedfishfn()
-	local inst = fishfn()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
 	
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_fishermermhut_wurt.tex")
 	
+	MakeObstaclePhysics(inst, 1)
+
 	inst.AnimState:SetBank("mermhouse_crafted")
 	inst.AnimState:SetBuild("kyno_fishermermhut_wurt")
 	inst.AnimState:PlayAnimation("idle", true)
 	
 	inst:AddTag("fishermermhut_crafted")
+	inst:AddTag("structure")
 	
-	if not TheNet:IsDedicated() then
-        inst:AddComponent("deployhelper")
-        inst.components.deployhelper:AddRecipeFilter("offering_pot")
-        inst.components.deployhelper:AddRecipeFilter("offering_pot_upgraded")
-        inst.components.deployhelper.onenablehelper = OnEnableHelper
-        inst.components.deployhelper.onstarthelper = OnStartHelper
-    end
-	
+	inst.entity:SetPristine()
+
 	if not TheWorld.ismastersim then
 		return inst
 	end
 	
-    inst.components.childspawner:SetRegenPeriod(TUNING.MERMHOUSE_REGEN_TIME / 2)
-    inst.components.childspawner:SetSpawnPeriod(TUNING.MERMHOUSE_RELEASE_TIME)
-    inst.components.childspawner:SetMaxChildren(1)
+	inst:AddComponent("lootdropper")
 	
-	inst.components.lootdropper:SetLoot(nil)
-	
+	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "MERMHOUSE_CRAFTED"
+
+	inst:AddComponent("workable")
+	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
+	inst.components.workable:SetOnFinishCallback(OnHammered)
+	inst.components.workable:SetOnWorkCallback(OnHit)
+	inst.components.workable:SetWorkLeft(4)
+
+	inst:AddComponent("childspawner")
+	inst.components.childspawner.childname = "kyno_meadowisland_mermfisher"
+	inst.components.childspawner:SetSpawnedFn(OnSpawned)
+	inst.components.childspawner:SetGoHomeFn(OnGoHome)
+	inst.components.childspawner:SetRegenPeriod(TUNING.MERMHOUSE_REGEN_TIME / 2)
+    inst.components.childspawner:SetSpawnPeriod(TUNING.MERMHOUSE_RELEASE_TIME)
+    inst.components.childspawner:SetMaxChildren(2)
+
+	inst:AddComponent("hauntable")
+	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_SMALL)
+	inst.components.hauntable:SetOnHauntFn(OnHaunt)
 	
-	inst.UpdateSpawningTime = UpdateSpawningTime
-    inst.kelpofferings = {}
+	inst:WatchWorldState("isday", OnIsDay)
+	StartSpawning(inst)
+
+	MakeMediumBurnable(inst, nil, nil, true)
+	MakeLargePropagator(inst)
 	
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
+	
+	inst:ListenForEvent("onignite", OnIgnite)
+	inst:ListenForEvent("burntup", OnBurnt)
 	inst:ListenForEvent("onbuilt", OnBuiltCrafted)
-	inst:ListenForEvent("ms_updateofferingpotstate", function(_, data) inst:UpdateSpawningTime(data) end, TheWorld)
 	
-	return inst 
+	return inst
 end
 
 local function placerfn(player, placer)
@@ -429,6 +357,6 @@ end
 
 return Prefab("kyno_meadowisland_mermhut", fn, assets, prefabs),
 Prefab("kyno_meadowisland_fishermermhut", fishfn, assets, prefabs),
-Prefab("kyno_fishermermhut_wurt", craftedfishfn, assets, prefabs),
+Prefab("kyno_fishermermhut_wurt", craftfn, assets, prefabs),
 MakePlacer("kyno_fishermermhut_wurt_placer", "kyno_fishermermhut_wurt", "kyno_fishermermhut_wurt", "idle", 
 nil, nil, nil, nil, nil, nil, nil, nil, placerfn)

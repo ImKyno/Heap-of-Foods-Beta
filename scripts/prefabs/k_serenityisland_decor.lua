@@ -46,7 +46,6 @@ end
 
 local function Say(inst, str)
 	inst.components.talker:Chatter(str, math.random(#STRINGS[str]))
-	-- inst.components.npc_talker:Chatter(str, math.random(#STRINGS[str]))
 end
 
 local function ElderSayThanks(inst)

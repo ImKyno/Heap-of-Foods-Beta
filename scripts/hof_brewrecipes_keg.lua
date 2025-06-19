@@ -806,7 +806,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food", "alcoholic_drink", "honeyed"},
-		card_def = {ingredients = {{"kyno_honey", 2}, {"ice", 1}}},
+		card_def = {ingredients = {{"honey", 2}, {"ice", 1}}},
 		prefabs = { "kyno_dmgreductionbuff" },
 		oneatenfn = function (inst, eater)
 			eater:AddDebuff("kyno_dmgreductionbuff", "kyno_dmgreductionbuff")
@@ -1067,7 +1067,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HUNGERRATE,
 		floater = {"med", nil, 0.65},
 		tags = {"drinkable_food"},
-		card_def = {ingredients = {{"kyno_coffeebeans_cooked", "chocolate_black"}}},
+		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 2}, {"chocolate_black", 1}}},
 	},
 
 	-- This recipe is for when brewing an invalid product, we need this to prevent a crash.

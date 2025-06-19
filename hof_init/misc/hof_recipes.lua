@@ -751,8 +751,8 @@ AddRecipe2("turf_tidalmarsh", {Ingredient("cutreeds", 1), Ingredient("ice", 2)},
 	},
 	{"CHARACTER", "DECOR"}
 )
-SortAfter("wurt_turf_tidalmarsh", "wurt_turf_marsh", "CHARACTER")
-SortAfter("wurt_turf_tidalmarsh", "wurt_turf_marsh", "DECOR")
+SortAfter("turf_tidalmarsh", "wurt_turf_marsh", "CHARACTER")
+SortAfter("turf_tidalmarsh", "wurt_turf_marsh", "DECOR")
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 if HOF_WARLYMEALGRINDER then
