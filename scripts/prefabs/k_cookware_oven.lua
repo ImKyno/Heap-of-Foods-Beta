@@ -255,7 +255,8 @@ local function OnGetItemFromPlayer(inst, giver, item)
 	inst:Remove()
 end
 
-function shallowcopy(orig)
+--[[
+local function shallowcopy(orig)
     local orig_type = type(orig)
     local copy
     if orig_type == "table" then
@@ -268,6 +269,7 @@ function shallowcopy(orig)
     end
     return copy
 end
+]]--
 
 for k, v in pairs(cooking.recipes.cookpot) do
     table.insert(prefabs, v.name)

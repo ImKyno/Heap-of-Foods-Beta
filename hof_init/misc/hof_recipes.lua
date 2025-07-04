@@ -4,7 +4,6 @@ local TECH                 = _G.TECH
 local Ingredient           = _G.Ingredient
 local RECIPETABS           = _G.RECIPETABS
 local AllRecipes           = _G.AllRecipes
-local Recipe               = _G.Recipe
 local Recipe2              = _G.Recipe2
 local TechTree             = require("techtree")
 local RecipeFilter         = require("recipes_filter")
