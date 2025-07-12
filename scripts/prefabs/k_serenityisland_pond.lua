@@ -60,10 +60,12 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		rack.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		rack.components.pickable:MakeEmpty()
 	end
+	
 	inst:Remove()
 end
 
-local rack_defs = {
+local rack_defs = 
+{
 	rack = { { 0, 0, 0 } },
 }
 

@@ -25,6 +25,7 @@ local prefabs =
 local StartRegen
 
 local anims = {"low", "med", "full"}
+local fullanim = anims[#anims]
 
 local function GetVerb()
     return "DESTROY"
@@ -34,7 +35,7 @@ local function OnRegen(inst)
 	inst.components.activatable.inactive = false
 
 	if inst.components.workable.workleft < #anims-1 then
-		inst.components.workable:SetWorkLeft(inst.components.workable.workleft + 1)
+		inst.components.workable:SetWorkLeft(math.floor(inst.components.workable.workleft)+1)
 		StartRegen(inst)
 	else
 		inst.targettime = nil
@@ -68,54 +69,16 @@ StartRegen = function(inst, regentime)
 	if inst.components.workable.workleft < 1 then
 		inst.AnimState:PlayAnimation(anims[1])
 	else
-		inst.AnimState:PlayAnimation(anims[inst.components.workable.workleft + 1])
+		inst.AnimState:PlayAnimation(anims[math.floor(inst.components.workable.workleft)+1])
 	end
 end
-
---[[
-local function OnWorked(inst, worker, workleft)
-	if workleft <= 0 then
-		inst.components.activatable.inactive = true
-	end
-
-	inst.components.lootdropper.numrandomloot = 1
-	inst.components.lootdropper.chancerandomloot = 0.01
-
-	inst.components.lootdropper:AddRandomLoot("slurtle_shellpieces", 0.01)
-	inst.components.lootdropper:AddRandomLoot("rock", 0.01)
-	inst.components.lootdropper:AddRandomLoot("feather_crow", 0.01)
-	inst.components.lootdropper:AddRandomLoot("feather_robin", 0.01)
-	inst.components.lootdropper:AddRandomLoot("feather_robin_winter", 0.01)
-	inst.components.lootdropper:AddRandomLoot("spidergland", 0.001)
-	inst.components.lootdropper:AddRandomLoot("gears", 0.002)
-	inst.components.lootdropper:AddRandomLoot("goldnugget", 0.002)
-	inst.components.lootdropper:AddRandomLoot("redgem", 0.002)
-	inst.components.lootdropper:AddRandomLoot("purplegem", 0.001)
-	inst.components.lootdropper:AddRandomLoot("greengem", 0.001)
-	inst.components.lootdropper:AddRandomLoot("yellowgem", 0.001)
-	inst.components.lootdropper:AddRandomLoot("kyno_kokonut", 0.001)
-	inst.components.lootdropper:AddRandomLoot("kyno_piko", 0.001)
-	inst.components.lootdropper:AddRandomLoot("kyno_piko_orange", 0.001)
-
-	local pt = Vector3(inst.Transform:GetWorldPosition())
-	local hispos = Vector3(worker.Transform:GetWorldPosition())
-	local he_right = ((hispos - pt):Dot(TheCamera:GetRightVec()) > 0)
-
-	if he_right then
-		inst.components.lootdropper:DropLoot(pt - (TheCamera:GetRightVec()*(.5 + math.random())))
-	else
-		inst.components.lootdropper:DropLoot(pt + (TheCamera:GetRightVec()*(.5 + math.random())))
-	end
-
-	StartRegen(inst)
-end
-]]--
 
 local function OnWorked(inst, worker, workleft, numworks)
     if workleft <= 0 then
         inst.components.activatable.inactive = true
     end
 
+	numworks = math.min(numworks, inst.AnimState:IsCurrentAnimation("med") and 1 or 2)
 	local prevworkleft = numworks + workleft
 	local spawns = math.min(math.ceil(prevworkleft) - math.ceil(workleft), math.ceil(prevworkleft))
 
@@ -177,6 +140,11 @@ local function OnWake(inst)
 	if TheWorld.state.isspring and TheWorld.state.israining then
 		if math.random() < TUNING.KYNO_MEADOWISLAND_SAND_DEPLETE and inst.components.workable.workleft > 0 then
 			inst.components.workable.workleft = inst.components.workable.workleft - math.random(0, inst.components.workable.workleft)
+			
+			if inst.components.workable.workleft <= 0 then
+                inst.components.activatable.inactive = true
+            end
+			
 			StartRegen(inst)
 		end
 	end
@@ -192,7 +160,7 @@ local function fn()
 
 	inst.AnimState:SetBank("kyno_meadowisland_sandhill")
 	inst.AnimState:SetBuild("kyno_meadowisland_sandhill")
-	inst.AnimState:PlayAnimation(anims[#anims])
+	inst.AnimState:PlayAnimation(fullanim)
 
 	inst:AddTag("sandhill")
 
