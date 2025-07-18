@@ -42,6 +42,7 @@ local function onpickedfn(inst)
 	inst.AnimState:Show("swap_tapper")
     inst.AnimState:OverrideSymbol("swap_sapbucket", "quagmire_sapbucket", "swap_sapbucket_empty")
 	
+	inst.sapped = false
 	inst:RemoveTag("sap_overflow")
 	
 	inst.components.timer:StopTimer("kyno_sugartree_timer")
@@ -63,6 +64,7 @@ local function makeemptyfn(inst)
 	inst.AnimState:Show("swap_tapper")
     inst.AnimState:OverrideSymbol("swap_sapbucket", "quagmire_sapbucket", "swap_sapbucket_empty")
 	
+	inst.sapped = false
 	inst:RemoveTag("sap_overflow")
 	
 	inst.components.timer:StopTimer("kyno_sugartree_timer")
@@ -76,6 +78,7 @@ local function onpicked_ruinedfn(inst)
 	inst.AnimState:Show("swap_tapper")
     inst.AnimState:OverrideSymbol("swap_sapbucket", "quagmire_sapbucket", "swap_sapbucket_empty")
 	
+	inst.sapped = false
 	inst:RemoveTag("sap_overflow_spoiled")
 end
 
@@ -93,6 +96,7 @@ local function makeempty_ruinedfn(inst)
 	inst.AnimState:Show("swap_tapper")
     inst.AnimState:OverrideSymbol("swap_sapbucket", "quagmire_sapbucket", "swap_sapbucket_empty")
 	
+	inst.sapped = false
 	inst:RemoveTag("sap_overflow_spoiled")
 end
 
@@ -267,20 +271,21 @@ local function tree_burnt(inst)
 end
 
 local function OnSave(inst, data)
-	-- data.sapped = inst.sapped
+	data.sapped = inst.sapped
+	
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
         data.burnt = true
 	end
 end
 
 local function OnLoad(inst, data)
-	--[[
-	if inst:HasTag("sapoverflow") then
-		ShowSapStuff(inst)
-	else
-		HideSapStuff(inst)
+	if data and data.sapped then
+		if data.sapped == true then
+			inst.sapped = true 
+		else
+			inst.sapped = false
+		end
 	end
-	]]--
 	
 	if data and data.burnt then
 		inst.components.lootdropper:SpawnLootPrefab("charcoal")
@@ -345,7 +350,7 @@ local function treefn()
     inst.components.burnable:SetOnBurntFn(tree_burnt)
 	MakeSmallPropagator(inst)
 	
-	-- MakeWaxablePlant(inst)
+	MakeWaxablePlant(inst)
 	
 	inst.OnSave = OnSave
     inst.OnLoad = OnLoad
@@ -395,7 +400,7 @@ local function stumpfn()
     inst.components.burnable:SetOnBurntFn(stump_burnt)
 	MakeSmallPropagator(inst)
 	
-	-- MakeWaxablePlant(inst)
+	MakeWaxablePlant(inst)
 	
 	inst.OnSave = OnSaveStump
     inst.OnLoad = OnLoadStump
@@ -465,7 +470,7 @@ local function treesapfn()
         end
     end)
 	
-	-- MakeWaxablePlant(inst)
+	MakeWaxablePlant(inst)
 
     return inst
 end
@@ -528,7 +533,7 @@ local function ruinedfn()
 	inst.components.workable:SetOnFinishCallback(OnHammeredRuined)
 	inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_TAPPED_WORKLEFT)
 	
-	-- MakeWaxablePlant(inst)
+	MakeWaxablePlant(inst)
 
     return inst
 end
@@ -592,7 +597,7 @@ local function ruined2fn()
     inst.components.burnable:SetOnBurntFn(tree_burnt)
 	MakeSmallPropagator(inst)
 	
-	-- MakeWaxablePlant(inst)
+	MakeWaxablePlant(inst)
 	
 	inst.OnSave = OnSave
     inst.OnLoad = OnLoad
@@ -643,7 +648,7 @@ local function stump_ruinedfn()
     inst.components.burnable:SetOnBurntFn(stump_burnt)
 	MakeSmallPropagator(inst)
 	
-	-- MakeWaxablePlant(inst)
+	MakeWaxablePlant(inst)
 	
 	inst.OnSave = OnSaveStump
     inst.OnLoad = OnLoadStump

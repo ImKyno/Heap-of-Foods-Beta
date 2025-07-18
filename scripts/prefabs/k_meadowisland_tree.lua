@@ -643,7 +643,7 @@ local function makefn(build, stage, data, level)
 		inst.components.burnable:SetOnBurntFn(tree_burnt)
 		MakeLargePropagator(inst)
 
-		-- MakeWaxablePlant(inst)
+		MakeWaxablePlant(inst)
 
 		return inst
 	end

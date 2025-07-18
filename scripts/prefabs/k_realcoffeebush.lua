@@ -1,16 +1,16 @@
 local SEASON_BASEREGENTIME_TUNING_LOOKUP =
 {
 	[SEASONS.SPRING] = "KYNO_COFFEEBUSH_GROWTIME_SPRING",
-    [SEASONS.SUMMER] = "KYNO_COFFEEBUSH_GROWTIME_SUMMER",
+	[SEASONS.SUMMER] = "KYNO_COFFEEBUSH_GROWTIME_SUMMER",
 }
 
 local function OnSeasonChange(inst, season)
-    local tuning = SEASON_BASEREGENTIME_TUNING_LOOKUP[season] or "KYNO_COFFEEBUSH_GROWTIME"
-    inst.components.pickable.baseregentime = TUNING[tuning]
+	local tuning = SEASON_BASEREGENTIME_TUNING_LOOKUP[season] or "KYNO_COFFEEBUSH_GROWTIME"
+	inst.components.pickable.baseregentime = TUNING[tuning]
 end
 
 local function makeemptyfn(inst)
-    if inst.components.pickable then
+	if inst.components.pickable then
 		inst.AnimState:PlayAnimation("dead_to_empty")
 		inst.AnimState:PushAnimation("empty")
 	else
@@ -19,11 +19,11 @@ local function makeemptyfn(inst)
 end
 
 local function makebarrenfn(inst)
-    if not POPULATING and (inst:HasTag("withered") or inst.AnimState:IsCurrentAnimation("idle")) then
-        inst.AnimState:PlayAnimation("empty_to_dead")
-        inst.AnimState:PushAnimation("idle_dead", false)
-    else
-        inst.AnimState:PlayAnimation("idle_dead")
+	if not POPULATING and (inst:HasTag("withered") or inst.AnimState:IsCurrentAnimation("idle")) then
+		inst.AnimState:PlayAnimation("empty_to_dead")
+		inst.AnimState:PushAnimation("idle_dead", false)
+	else
+		inst.AnimState:PlayAnimation("idle_dead")
     end
 end
 
@@ -31,9 +31,11 @@ local function pickanim(inst)
 	if inst.components.pickable then
 		if inst.components.pickable:CanBePicked() then
 			local percent = 0
+			
 			if inst.components.pickable then
 				percent = inst.components.pickable.cycles_left / inst.components.pickable.max_cycles or 1
 			end
+			
 			if percent >= .9 then
 				return "berriesmost"
 			elseif percent >= .33 then
@@ -54,11 +56,12 @@ local function pickanim(inst)
 end
 
 local function shake(inst)
-    if inst.components.pickable and inst.components.pickable:CanBePicked() then
+	if inst.components.pickable and inst.components.pickable:CanBePicked() then
 		inst.AnimState:PlayAnimation("shake")
 	else
 		inst.AnimState:PlayAnimation("shake_empty")
 	end
+	
 	inst.AnimState:PushAnimation(pickanim(inst), false)
 end
 
@@ -83,139 +86,139 @@ local function pickberries(inst)
 end
 
 local function onpickedfn(inst, picker)
-    pickberries(inst)
+	pickberries(inst)
 end
 
 local function makefullfn(inst)
-    inst.AnimState:PlayAnimation(pickanim(inst))
+	inst.AnimState:PlayAnimation(pickanim(inst))
 end
 
 local function dig_up_common(inst, worker, numberries)
-    if inst.components.pickable ~= nil and inst.components.lootdropper ~= nil then
-        if inst.components.pickable:IsBarren() then
-            inst.components.lootdropper:SpawnLootPrefab("twigs")
-            inst.components.lootdropper:SpawnLootPrefab("twigs")
-        else
-            if inst.components.pickable:CanBePicked() then
-                local pt = inst:GetPosition()
-                pt.y = pt.y + (inst.components.pickable.dropheight or 0)
+	if inst.components.pickable ~= nil and inst.components.lootdropper ~= nil then
+		if inst.components.pickable:IsBarren() then
+			inst.components.lootdropper:SpawnLootPrefab("twigs")
+			inst.components.lootdropper:SpawnLootPrefab("twigs")
+		else
+			if inst.components.pickable:CanBePicked() then
+				local pt = inst:GetPosition()
+				pt.y = pt.y + (inst.components.pickable.dropheight or 0)
 				
-                for i = 1, numberries do
-                    inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product, pt)
-                end
-            end
+				for i = 1, numberries do
+					inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product, pt)
+				end
+			end
 
 			inst.components.lootdropper:SpawnLootPrefab("dug_kyno_coffeebush")
-        end
-    end
+		end
+	end
 	
-    inst:Remove()
+	inst:Remove()
 end
 
 local function dig_up_normal(inst, worker)
-    dig_up_common(inst, worker, 1)
+	dig_up_common(inst, worker, 1)
 end
 
 local function ontransplantfn(inst)
-    inst.AnimState:PushAnimation("idle_dead")
-    inst.components.pickable:MakeBarren()
+	inst.AnimState:PushAnimation("idle_dead")
+	inst.components.pickable:MakeBarren()
 end
 
 local function OnHaunt(inst)
-    if math.random() <= TUNING.HAUNT_CHANCE_ALWAYS then
-        inst.components.hauntable.hauntvalue = TUNING.HAUNT_COOLDOWN_TINY
-        return true
-    end
+	if math.random() <= TUNING.HAUNT_CHANCE_ALWAYS then
+		inst.components.hauntable.hauntvalue = TUNING.HAUNT_COOLDOWN_TINY
+		return true
+	end
 	
-    return false
+	return false
 end
 
 local function createbush(name, inspectname, berryname, master_postinit)
-    local assets =
-    {
+	local assets =
+	{
 		Asset("ANIM", "anim/coffeebush.zip"),
 		
 		Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 		Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
-    }
+	}
 
-    local prefabs =
-    {
-        berryname,
-        "dug_"..name,
-        "twigs",
+	local prefabs =
+	{
+		berryname,
+		"dug_"..name,
+		"twigs",
 		"kyno_coffeebeans",
-    }
+	}
 
-    local function fn()
-        local inst = CreateEntity()
+	local function fn()
+		local inst = CreateEntity()
 
-        inst.entity:AddTransform()
-        inst.entity:AddAnimState()
+		inst.entity:AddTransform()
+		inst.entity:AddAnimState()
 		inst.entity:AddSoundEmitter()
-        inst.entity:AddNetwork()
+		inst.entity:AddNetwork()
 		
 		local minimap = inst.entity:AddMiniMapEntity()
 		minimap:SetIcon("kyno_coffeebush.tex")
 
-        MakeSmallObstaclePhysics(inst, .1)
+		MakeSmallObstaclePhysics(inst, .1)
 
-        inst.AnimState:SetBank("coffeebush")
-        inst.AnimState:SetBuild("coffeebush")
-        inst.AnimState:PlayAnimation("berriesmost", false)
+		inst.AnimState:SetBank("coffeebush")
+		inst.AnimState:SetBuild("coffeebush")
+		inst.AnimState:PlayAnimation("berriesmost", false)
 		
 		inst:AddTag("kyno_coffeebush")
-        inst:AddTag("plant")
-        inst:AddTag("renewable")
+		inst:AddTag("plant")
+		inst:AddTag("renewable")
 		inst:AddTag("lunarplant_target")
 
-        inst.entity:SetPristine()
+		inst.entity:SetPristine()
 
-        if not TheWorld.ismastersim then
-            return inst
-        end
+		if not TheWorld.ismastersim then
+			return inst
+		end
 
-        inst.AnimState:SetTime(math.random() * inst.AnimState:GetCurrentAnimationLength())
+		inst.AnimState:SetTime(math.random() * inst.AnimState:GetCurrentAnimationLength())
 		
 		inst:AddComponent("lootdropper")
 
-        inst:AddComponent("pickable")
-        inst.components.pickable.picksound = "dontstarve/wilson/harvest_berries"
-        inst.components.pickable.onpickedfn = onpickedfn
-        inst.components.pickable.makeemptyfn = makeemptyfn
-        inst.components.pickable.makebarrenfn = makebarrenfn
-        inst.components.pickable.makefullfn = makefullfn
-        inst.components.pickable.ontransplantfn = ontransplantfn
+		inst:AddComponent("pickable")
+		inst.components.pickable.picksound = "dontstarve/wilson/harvest_berries"
+		inst.components.pickable.onpickedfn = onpickedfn
+		inst.components.pickable.makeemptyfn = makeemptyfn
+		inst.components.pickable.makebarrenfn = makebarrenfn
+		inst.components.pickable.makefullfn = makefullfn
+		inst.components.pickable.ontransplantfn = ontransplantfn
 
-        inst:AddComponent("workable")
-        inst.components.workable:SetWorkAction(ACTIONS.DIG)
-        inst.components.workable:SetWorkLeft(TUNING.KYNO_COFFEEBUSH_WORKLEFT)
+		inst:AddComponent("workable")
+		inst.components.workable:SetWorkAction(ACTIONS.DIG)
+		inst.components.workable:SetWorkLeft(TUNING.KYNO_COFFEEBUSH_WORKLEFT)
 
-        inst:AddComponent("inspectable")
-        if name ~= inspectname then
-            inst.components.inspectable.nameoverride = inspectname
-        end
+		inst:AddComponent("inspectable")
+		if name ~= inspectname then
+			inst.components.inspectable.nameoverride = inspectname
+		end
 		
 		inst:WatchWorldState("season", OnSeasonChange)
 		
-        MakeSnowCovered(inst)
+		MakeSnowCovered(inst)
 		MakeNoGrowInWinter(inst)
-		-- MakeWaxablePlant(inst)
+		MakeWaxablePlant(inst)
 		
-        master_postinit(inst)
+		master_postinit(inst)
 		
-        return inst
-    end
+		return inst
+	end
 
-    return Prefab(name, fn, assets, prefabs)
+	return Prefab(name, fn, assets, prefabs)
 end
 
 local function normal_postinit(inst)
-    inst.components.pickable:SetUp("kyno_coffeebeans", TUNING.KYNO_COFFEEBUSH_GROWTIME)
-    inst.components.pickable.max_cycles = TUNING.BERRYBUSH_CYCLES + math.random(2)
-    inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
+	inst.components.pickable:SetUp("kyno_coffeebeans", TUNING.KYNO_COFFEEBUSH_GROWTIME)
+	inst.components.pickable.max_cycles = TUNING.BERRYBUSH_CYCLES + math.random(2)
+	inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
 
-    inst.components.workable:SetOnFinishCallback(dig_up_normal)
+	inst.components.workable:SetOnFinishCallback(dig_up_normal)
 end
 
 return createbush("kyno_coffeebush", "kyno_coffeebush", "kyno_coffeebeans", normal_postinit)

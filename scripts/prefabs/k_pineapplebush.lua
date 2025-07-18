@@ -171,7 +171,7 @@ local function transplantablefn()
 	inst.components.pickable.cycles_left = 20
 	inst.components.pickable.ontransplantfn = OnTransplant
 	
-	-- MakeWaxablePlant(inst)
+	MakeWaxablePlant(inst)
 	
 	return inst
 end

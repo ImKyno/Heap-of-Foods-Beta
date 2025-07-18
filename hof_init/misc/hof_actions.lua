@@ -576,6 +576,10 @@ ACTIONS.INSTALLCOOKWARE.stroverridefn = function(act)
 	if act.target:HasTag("cookware_other_installable") then
 		return STRINGS.KYNO_INSTALL_INSTALLER
 	end
+	
+	if act.target:HasTag("cookware_pond_installable") then
+		return STRINGS.KYNO_INSTALL_SALTRACK
+	end
 end
 
 ACTIONS.LEARNRECIPECARD.stroverridefn = function(act)

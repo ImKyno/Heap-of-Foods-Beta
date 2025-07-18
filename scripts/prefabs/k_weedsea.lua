@@ -1,3 +1,5 @@
+local WAXED_PLANTS = require("prefabs/waxed_plant_common")
+
 local assets =
 {
     Asset("ANIM", "anim/seaweed.zip"),
@@ -41,10 +43,12 @@ end
 
 local function ondeploy(inst, pt, deployer)
     local plant = SpawnPrefab("kyno_seaweeds_ocean")
+	
     if plant ~= nil then
         plant.Transform:SetPosition(pt:Get())
         inst.components.stackable:Get():Remove()
 		plant.components.pickable:MakeEmpty()
+		
         if deployer ~= nil and deployer.SoundEmitter ~= nil then
             deployer.SoundEmitter:PlaySound("dontstarve/common/plant")
         end
@@ -162,7 +166,6 @@ local function seaweed()
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
-	-- MakeWaxablePlant(inst)
 
 	return inst
 end
@@ -261,6 +264,12 @@ local function seaweed_root()
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
+end
+
+local function WaxedPlant_MasterPostInit(inst)
+	if inst.components.deployable ~= nil then
+		inst.components.deployable:SetDeployMode(DEPLOYMODE.WATER)
+	end
 end
 
 return Prefab("kyno_seaweeds_ocean", fn, assets, prefabs),

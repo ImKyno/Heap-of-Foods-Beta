@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "1.7-B"
+version                     = "1.8-B"
 
 description                 = 
 [[
@@ -13,7 +13,7 @@ This update focused on revamping the visuals of the farming crops as well as add
 
 Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover it.
 
-󰀌 Mod Version: 1.7-B
+󰀌 Mod Version: 1.8-B
 󰀧 Update: Seaside Summer (Part I)
 ]]
 
@@ -105,7 +105,7 @@ local desc                  =
 	coffeeduration6         = "Super Long",
 	retrofit1               = "Updated",
 	retrofit2               = "Retrofit Islands",
-	retrofit3               = "Retrofit Prefabs",
+	retrofit3               = "Retrofit Mermhuts",
 }
 
 local deschovers            =
@@ -150,7 +150,7 @@ local deschovers            =
 	buckettweak2            = "Bucket-o-Poop will use the Bucket as its crafting ingredient.",
 	retrofit1               = "Your world is already updated with the Mod Contents.",
 	retrofit2               = "Mod Islands will be generated during server initialization.",
-	retrofit3               = "Mod Prefabs will be generated during server initialization.",
+	retrofit3               = "Mod Mermhuts will be generated during server initialization.",
 	modtrades1              = "Certain items can't be traded in exchange for Mod items.",
 	modtrades2              = "Certain items can be traded in exchange for Mod items.",
 }
@@ -174,7 +174,7 @@ Esta atualização tem como foco melhorar os visuais das plantações e adiciona
 
 Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso, em uma ilha muito longe do continente, há um novo arbusto crescendo, esperando para ser descoberto!
 
-󰀌 Versão do Mod: 1.7-B
+󰀌 Versão do Mod: 1.8-B
 󰀧 Atualização: Verão à Beira-mar (Parte I)
 ]]
 
@@ -253,7 +253,7 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 		coffeeduration6         = "Super Longo",
 		retrofit1               = "Atualizado",
 		retrofit2               = "Retro. de Ilhas",
-		retrofit3               = "Retro. de Prefabs",
+		retrofit3               = "Retro. de Mermhuts",
 	}
 
 	deschovers                  =
@@ -298,7 +298,7 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 		buckettweak2            = "O Balde de Cocô irá usar o Balde como parte de seu ingrediente.",
 		retrofit1               = "Seu mundo já está atualizado com os conteúdos do Mod.",
 		retrofit2               = "As Ilhas do Mod serão geradas durante a inicialização do servidor.",
-		retrofit3               = "As Prefabs do Mod serão geradas durante a inicialização do servidor.",
+		retrofit3               = "As Mermhuts do Mod serão geradas durante a inicialização do servidor.",
 		modtrades1              = "Não será possível fazer trocas por itens do Mod.",
 		modtrades2              = "Será possível fazer trocas por itens do Mod.",
 	}
@@ -320,7 +320,7 @@ if locale == "zh" or locale == "zhr" then
 
 我们的幸存者设法在野外找到了新型种子！在远离大陆的热带岛屿上，一种新的灌木丛正在绽放，等待着他们去发掘。
 
-󰀌 Mod版本: 1.7-B
+󰀌 Mod版本: 1.8-B
 󰀧 Update: Seaside Summer (Part I)
 ]]
 

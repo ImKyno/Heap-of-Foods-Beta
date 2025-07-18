@@ -840,24 +840,6 @@ end
 
 AddPrefabPostInit("firepit", FirePitCookwarePostinit)
 
--- Small fix for the natural spawning Mushroom Stump.
-local mushstumps =
-{
-    "kyno_mushstump_natural",
-    "kyno_mushstump_cave",
-}
-
-for k,v in pairs(mushstumps) do
-    AddPrefabPostInit(v, function(inst)
-        inst:AddTag("mushroom_stump_natural")
-    end)
-end
-
--- Small fix for the Watery Crate and Freshwater Fishing Rod.
-AddPrefabPostInit("kyno_watery_crate", function(inst)
-    inst:AddTag("not_serenity_crate")
-end)
-
 -- Make Banana Bushes give our Bananas instead.
 AddPrefabPostInit("bananabush", function(inst)
     if not _G.TheWorld.ismastersim then

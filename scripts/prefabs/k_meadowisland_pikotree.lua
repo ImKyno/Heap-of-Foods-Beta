@@ -284,7 +284,7 @@ local function fn()
 	MakeSmallPropagator(inst)
 	
 	MakeSnowCovered(inst)
-	-- MakeWaxablePlant(inst)
+	MakeWaxablePlant(inst)
 
 	inst:WatchWorldState("isday", TestSpawning)
     TestSpawning(inst, TheWorld.state.isday)

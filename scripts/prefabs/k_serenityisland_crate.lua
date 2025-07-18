@@ -260,5 +260,13 @@ local function fn()
     return inst
 end
 
+local function wateryfn()
+	local inst = fn()
+	
+	inst:AddTag("not_serenity_crate")
+	
+	return inst
+end
+
 return Prefab("kyno_serenityisland_crate", fn, assets, prefabs), -- This only spawns near the Serenity Archipelago.
-Prefab("kyno_watery_crate", fn, assets, prefabs) -- This one is for other places.
+Prefab("kyno_watery_crate", wateryfn, assets, prefabs) -- This one is for other places.

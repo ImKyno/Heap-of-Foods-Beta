@@ -121,7 +121,6 @@ local function fn()
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
     MakeHauntableIgnite(inst)
-	-- MakeWaxablePlant(inst)
 
     return inst
 end

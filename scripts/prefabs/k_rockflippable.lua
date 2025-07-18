@@ -226,8 +226,6 @@ local function fn()
 	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
-	
-	-- MakeWaxablePlant(inst)
 
 	return inst
 end

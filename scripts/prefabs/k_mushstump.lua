@@ -103,10 +103,19 @@ local function fn()
 
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
+	
 	MakeNoGrowInWinter(inst)
     MakeHauntableIgnite(inst)
-	-- MakeWaxablePlant(inst)
+	MakeWaxablePlant(inst)
 
+	return inst
+end
+
+local function naturalfn()
+	local inst = fn()
+	
+	inst:AddTag("mushroom_stump_natural")
+	
 	return inst
 end
 
@@ -115,6 +124,6 @@ local function mushplacefn(inst)
 end
 
 return Prefab("kyno_mushstump", fn, assets, prefabs),
-Prefab("kyno_mushstump_natural", fn, assets, prefabs),
-Prefab("kyno_mushstump_cave", fn, assets, prefabs),
+Prefab("kyno_mushstump_natural", naturalfn, assets, prefabs),
+Prefab("kyno_mushstump_cave", naturalfn, assets, prefabs),
 MakePlacer("kyno_mushstump_placer", "kyno_mushroomstump", "kyno_mushroomstump", "idle", false, nil, nil, nil, nil, nil, mushplacefn)

@@ -2,7 +2,7 @@ local assets =
 {
 	Asset("ANIM", "anim/quagmire_salt_pond.zip"),
 	Asset("ANIM", "anim/quagmire_salt_rack.zip"),
-    Asset("ANIM", "anim/splash.zip"),
+	Asset("ANIM", "anim/splash.zip"),
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
@@ -15,8 +15,6 @@ local prefabs =
 	"kyno_saltrack_installer",
 	"saltrock",
 }
-
-local SALT_REGROW_TIME = 1920
 
 local function onpickedfn(inst)
     inst.AnimState:PlayAnimation("picked", false)
@@ -59,6 +57,7 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		rack.SoundEmitter:PlaySound("dontstarve/common/fishingpole_fishcaught")
 		rack.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		rack.components.pickable:MakeEmpty()
+		rack.AnimState:PlayAnimation("place", false)
 	end
 	
 	inst:Remove()
@@ -99,8 +98,9 @@ local function pondfn()
 
 	inst:AddTag("watersource")
 	inst:AddTag("birdblocker")
-    inst:AddTag("antlion_sinkhole_blocker")
+	inst:AddTag("antlion_sinkhole_blocker")
 	inst:AddTag("cookware_installable")
+	inst:AddTag("cookware_pond_installable")
 
     inst.no_wet_prefix = true
 
@@ -218,7 +218,7 @@ local function rackfn()
 
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
-    inst.components.pickable:SetUp("saltrock", SALT_REGROW_TIME)
+    inst.components.pickable:SetUp("saltrock", TUNING.KYNO_SALTRACK_REGROW_TIME)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
     inst.components.pickable.makeemptyfn = makeemptyfn
