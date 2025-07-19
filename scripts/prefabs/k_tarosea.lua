@@ -37,13 +37,34 @@ end
 
 local function ondeploy(inst, pt, deployer)
     local plant = SpawnPrefab("kyno_taroroot_ocean")
+	
     if plant ~= nil then
         plant.Transform:SetPosition(pt:Get())
         inst.components.stackable:Get():Remove()
 		plant.components.pickable:MakeEmpty()
+		
         if deployer ~= nil and deployer.SoundEmitter ~= nil then
             deployer.SoundEmitter:PlaySound("dontstarve/common/plant")
         end
+    end
+end
+
+local function CheckBeached(inst)
+    inst._checkgroundtask = nil
+    local x, y, z = inst.Transform:GetWorldPosition()
+	
+    if inst:GetCurrentPlatform() ~= nil or TheWorld.Map:IsVisualGroundAtPoint(x, y, z) then
+        if inst.components.pickable ~= nil then
+            inst.components.pickable:Pick(TheWorld)
+        end
+		
+        inst:Remove()
+    end
+end
+
+local function OnCollide(inst, other)
+    if inst._checkgroundtask == nil then
+        inst._checkgroundtask = inst:DoTaskInTime(1 + math.random(), CheckBeached)
     end
 end
 
@@ -97,6 +118,9 @@ local function fn()
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
     MakeHauntableIgnite(inst)
+	
+	inst.Physics:SetCollisionCallback(OnCollide)
+	inst:DoTaskInTime(1 + math.random(), CheckBeached)
 
     return inst
 end

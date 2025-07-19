@@ -346,10 +346,28 @@ local function SugarTreeRuined2_CommonPostInit(inst)
     inst.AnimState:Hide("mouseover")
 end
 
+local SUGARTREE_BURNT_ANIMSET =
+{
+	burnt = { anim = "burnt" },
+}
+
+local function SugarTreeBurnt_CommonPostInit(inst)
+	Tree_Minimap_CommonPostInit(inst)
+	
+	local s = .85
+	inst.AnimState:SetScale(s, s, s)
+	
+	inst.AnimState:Hide("mouseover")
+end
+
 local function SugarTree_GetAnimFn(inst) 
     if inst:HasTag("stump") then
         return "stump"
     end
+	
+	if inst:HasTag("burnt") then
+		return "burnt"
+	end
 	
 	if inst.sapped == false or nil then
         return "picked" and "picked" or "empty"
@@ -473,7 +491,7 @@ local ret =
 		bank            = "quagmire_tree_cotton_short",
 		build           = "quagmire_tree_cotton_build",
 		anim            = "sway1_loop",
-		minimapicon     = "quagmire_sugarwoodtree",
+		minimapicon2    = "kyno_sugartree",
 		action          = "CHOP",
 		physics         = {MakeObstaclePhysics, .25},
 		animset         = SUGARTREE_ANIMSET,
@@ -487,7 +505,7 @@ local ret =
 		bank            = "quagmire_tree_cotton_normal",
 		build           = "quagmire_tree_cotton_build",
 		anim            = "sway1_loop",
-		minimapicon     = "quagmire_sugarwoodtree",
+		minimapicon2    = "kyno_sugartree",
 		action          = "CHOP",
 		physics         = {MakeObstaclePhysics, .25},
 		animset         = SUGARTREE_ANIMSET,
@@ -501,7 +519,7 @@ local ret =
 		bank            = "quagmire_tree_cotton_tall",
 		build           = "quagmire_tree_cotton_build",
 		anim            = "sway1_loop",
-		minimapicon     = "quagmire_sugarwoodtree",
+		minimapicon2    = "kyno_sugartree",
 		action          = "CHOP",
 		physics         = {MakeObstaclePhysics, .25},
 		animset         = SUGARTREE_ANIMSET,
@@ -515,7 +533,7 @@ local ret =
 		bank            = "quagmire_tree_cotton_short",
 		build           = "quagmire_tree_cotton_build",
 		anim            = "stump",
-		minimapicon2    = "kyno_bananatree_stump",
+		minimapicon2    = "kyno_sugartree_stump",
 		action          = "DIG",
 		animset         = SUGARTREE_ANIMSET,
 		getanim_fn      = SugarTree_GetAnimFn,
@@ -528,7 +546,7 @@ local ret =
 		bank            = "quagmire_tree_cotton_normal",
 		build           = "quagmire_tree_cotton_build",
 		anim            = "stump",
-		minimapicon2    = "kyno_bananatree_stump",
+		minimapicon2    = "kyno_sugartree_stump",
 		action          = "DIG",
 		animset         = SUGARTREE_ANIMSET,
 		getanim_fn      = SugarTree_GetAnimFn,
@@ -541,7 +559,7 @@ local ret =
 		bank            = "quagmire_tree_cotton_tall",
 		build           = "quagmire_tree_cotton_build",
 		anim            = "stump",
-		minimapicon2    = "kyno_bananatree_stump",
+		minimapicon2    = "kyno_sugartree_stump",
 		action          = "DIG",
 		animset         = SUGARTREE_ANIMSET,
 		getanim_fn      = SugarTree_GetAnimFn,
@@ -554,7 +572,7 @@ local ret =
 		bank            = "quagmire_tree_cotton_tall",
 		build           = "quagmire_tree_cotton_build",
 		anim            = "stump",
-		minimapicon2    = "kyno_bananatree_stump",
+		minimapicon2    = "kyno_sugartree_stump_ruined",
 		action          = "DIG",
 		animset         = SUGARTREE_RUINED2_ANIMSET,
 		getanim_fn      = SugarTree_GetAnimFn,
@@ -563,11 +581,53 @@ local ret =
 	}),
 	
 	WAXED_PLANTS.CreateWaxedPlant({
+		prefab          = "kyno_sugartree_short_burnt",
+		bank            = "quagmire_tree_cotton_short",
+		build           = "quagmire_tree_cotton_trunk_build",
+		anim            = "burnt",
+		minimapicon2    = "kyno_sugartree_burnt",
+		action          = "CHOP",
+		physics         = {MakeObstaclePhysics, .25},
+		animset         = SUGARTREE_BURNT_ANIMSET,
+		getanim_fn      = SugarTree_GetAnimFn,
+		common_postinit = SugarTreeBurnt_CommonPostInit,
+		assets          = ASSETS,
+	}),
+	
+	WAXED_PLANTS.CreateWaxedPlant({
+		prefab          = "kyno_sugartree_normal_burnt",
+		bank            = "quagmire_tree_cotton_normal",
+		build           = "quagmire_tree_cotton_trunk_build",
+		anim            = "burnt",
+		minimapicon2    = "kyno_sugartree_burnt",
+		action          = "CHOP",
+		physics         = {MakeObstaclePhysics, .25},
+		animset         = SUGARTREE_BURNT_ANIMSET,
+		getanim_fn      = SugarTree_GetAnimFn,
+		common_postinit = SugarTreeBurnt_CommonPostInit,
+		assets          = ASSETS,
+	}),
+	
+	WAXED_PLANTS.CreateWaxedPlant({
+		prefab          = "kyno_sugartree_burnt",
+		bank            = "quagmire_tree_cotton_tall",
+		build           = "quagmire_tree_cotton_trunk_build",
+		anim            = "burnt",
+		minimapicon2    = "kyno_sugartree_burnt",
+		action          = "CHOP",
+		physics         = {MakeObstaclePhysics, .25},
+		animset         = SUGARTREE_BURNT_ANIMSET,
+		getanim_fn      = SugarTree_GetAnimFn,
+		common_postinit = SugarTreeBurnt_CommonPostInit,
+		assets          = ASSETS,
+	}),
+	
+	WAXED_PLANTS.CreateWaxedPlant({
 		prefab          = "kyno_sugartree_sapped",
 		bank            = "quagmire_tree_cotton_tall",
 		build           = "quagmire_tree_cotton_build",
 		anim            = "sway1_loop",
-		minimapicon     = "quagmire_sugarwoodtree_tapped",
+		minimapicon2    = "kyno_sugartree_tapped",
 		action          = "CHOP",
 		physics         = {MakeObstaclePhysics, .25},
 		animset         = SUGARTREE_TAPPED_ANIMSET,
@@ -581,7 +641,7 @@ local ret =
 		bank            = "quagmire_tree_cotton_tall",
 		build           = "quagmire_tree_cotton_build",
 		anim            = "sway1_loop",
-		minimapicon     = "quagmire_sugarwoodtree_tapped",
+		minimapicon2    = "kyno_sugartree_tapped_ruined",
 		action          = "CHOP",
 		physics         = {MakeObstaclePhysics, .25},
 		animset         = SUGARTREE_RUINED_ANIMSET,
@@ -595,7 +655,7 @@ local ret =
 		bank            = "quagmire_tree_cotton_tall",
 		build           = "quagmire_tree_cotton_build",
 		anim            = "sway1_loop",
-		minimapicon     = "quagmire_sugarwoodtree",
+		minimapicon2    = "kyno_sugartree_ruined",
 		action          = "CHOP",
 		physics         = {MakeObstaclePhysics, .25},
 		animset         = SUGARTREE_RUINED2_ANIMSET,

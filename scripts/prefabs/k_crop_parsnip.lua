@@ -7,8 +7,8 @@ local assets =
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 	
-	Asset("IMAGE", "images/minimapimages/hof_parsnipminimap.tex"),
-	Asset("ATLAS", "images/minimapimages/hof_parsnipminimap.xml"),
+	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 }
 
 -- I'm going to use parznip because T.A.P has a parsnip prefab too.
@@ -152,7 +152,7 @@ local function parznip_big()
     inst.entity:AddNetwork()
 
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("kyno_parsnipminimap.tex")
+	minimap:SetIcon("kyno_parznip_big.tex")
 	
 	MakeObstaclePhysics(inst, 1)
 

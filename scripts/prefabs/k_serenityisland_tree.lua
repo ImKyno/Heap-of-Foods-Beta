@@ -264,10 +264,33 @@ local function tree_startburn(inst)
 end
 
 local function tree_burnt(inst)
-    local burnt_tree = SpawnPrefab("charcoal") -- No burnt animations?
+    local burnt_tree = SpawnPrefab("kyno_sugartree_burnt")
     burnt_tree.Transform:SetPosition(inst.Transform:GetWorldPosition())
 	
+	if inst:HasTag("has_sap") then
+		if inst.components.pickable:CanBePicked() then -- Sap burned, spawn ashes.
+			inst.components.lootdropper:SpawnLootPrefab("ash")
+			inst.components.lootdropper:SpawnLootPrefab("ash")
+			inst.components.lootdropper:SpawnLootPrefab("ash")
+			inst.components.lootdropper:DropLoot()
+		else
+			inst.components.lootdropper:DropLoot()
+		end
+	end
+	
     inst:Remove()
+end
+
+local function burnt_chopped(inst)
+    inst.components.workable:SetWorkable(false)
+	
+    inst.SoundEmitter:PlaySound("dontstarve/forest/treeCrumble")
+    inst.AnimState:PlayAnimation("chop_burnt")
+	
+    inst.components.lootdropper:SpawnLootPrefab("charcoal")
+	
+    inst.persists = false
+    inst:DoTaskInTime(40 * FRAMES, inst.Remove)
 end
 
 local function OnSave(inst, data)
@@ -305,7 +328,7 @@ local function treefn()
 	inst.AnimState:SetScale(s, s, s)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("quagmire_sugarwoodtree.png")
+	minimap:SetIcon("kyno_sugartree.tex")
 
     MakeObstaclePhysics(inst, .25)
 
@@ -348,7 +371,7 @@ local function treefn()
 	MakeMediumBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(tree_startburn)
     inst.components.burnable:SetOnBurntFn(tree_burnt)
-	MakeSmallPropagator(inst)
+	MakeMediumPropagator(inst)
 	
 	MakeWaxablePlant(inst)
 	
@@ -369,14 +392,13 @@ local function stumpfn()
 	inst.AnimState:SetScale(s, s, s)
 
 	local minimap = inst.entity:AddMiniMapEntity()
-    minimap:SetIcon("kyno_bananatree_stump.tex") -- KEKW
+    minimap:SetIcon("kyno_sugartree_stump.tex")
 
     inst.AnimState:SetBank("quagmire_tree_cotton_tall")
     inst.AnimState:SetBuild("quagmire_tree_cotton_build")
 	inst.AnimState:AddOverrideBuild("quagmire_tree_cotton_trunk_build")
 	inst.AnimState:PlayAnimation("stump")
 	
-	inst:AddTag("plant")
 	inst:AddTag("stump")
 
     inst.entity:SetPristine()
@@ -419,7 +441,7 @@ local function treesapfn()
 	inst.AnimState:SetScale(s, s, s)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("quagmire_sugarwoodtree_tapped.png")
+	minimap:SetIcon("kyno_sugartree_tapped.tex")
 
     MakeObstaclePhysics(inst, .25)
 
@@ -470,6 +492,11 @@ local function treesapfn()
         end
     end)
 	
+	MakeMediumBurnable(inst)
+	inst.components.burnable:SetOnIgniteFn(tree_startburn)
+	inst.components.burnable:SetOnBurntFn(tree_burnt)
+	MakeMediumPropagator(inst)
+	
 	MakeWaxablePlant(inst)
 
     return inst
@@ -486,7 +513,7 @@ local function ruinedfn()
 	inst.AnimState:SetScale(s, s, s)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("quagmire_sugarwoodtree_tapped.png")
+	minimap:SetIcon("kyno_sugartree_tapped_ruined.tex")
 
     MakeObstaclePhysics(inst, .25)
 
@@ -533,6 +560,11 @@ local function ruinedfn()
 	inst.components.workable:SetOnFinishCallback(OnHammeredRuined)
 	inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_TAPPED_WORKLEFT)
 	
+	MakeMediumBurnable(inst)
+	inst.components.burnable:SetOnIgniteFn(tree_startburn)
+	inst.components.burnable:SetOnBurntFn(tree_burnt)
+	MakeMediumPropagator(inst)
+	
 	MakeWaxablePlant(inst)
 
     return inst
@@ -549,7 +581,7 @@ local function ruined2fn()
 	inst.AnimState:SetScale(s, s, s)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("quagmire_sugarwoodtree.png")
+	minimap:SetIcon("kyno_sugartree_ruined.tex")
 
     MakeObstaclePhysics(inst, .25)
 
@@ -595,12 +627,54 @@ local function ruined2fn()
 	MakeMediumBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(tree_startburn)
     inst.components.burnable:SetOnBurntFn(tree_burnt)
-	MakeSmallPropagator(inst)
+	MakeMediumPropagator(inst)
 	
 	MakeWaxablePlant(inst)
 	
 	inst.OnSave = OnSave
     inst.OnLoad = OnLoad
+
+    return inst
+end
+
+local function burntfn()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddAnimState()
+    inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
+	
+	inst.AnimState:SetScale(s, s, s)
+
+    MakeObstaclePhysics(inst, .25)
+
+	local minimap = inst.entity:AddMiniMapEntity()
+    minimap:SetIcon("kyno_sugartree_burnt.tex")
+
+    inst.AnimState:SetBank("quagmire_tree_cotton_tall")
+    inst.AnimState:SetBuild("quagmire_tree_cotton_trunk_build")
+    inst.AnimState:PlayAnimation("burnt")
+	
+	inst:AddTag("burnt")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+
+    inst:AddComponent("lootdropper")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+
+    inst:AddComponent("workable")
+    inst.components.workable:SetWorkAction(ACTIONS.CHOP)
+    inst.components.workable:SetWorkLeft(1)
+    inst.components.workable:SetOnFinishCallback(burnt_chopped)
+	
+	MakeWaxablePlant(inst)
 
     return inst
 end
@@ -616,7 +690,7 @@ local function stump_ruinedfn()
 	inst.AnimState:SetScale(s, s, s)
 
 	local minimap = inst.entity:AddMiniMapEntity()
-    minimap:SetIcon("kyno_bananatree_stump.tex") -- KEKW
+    minimap:SetIcon("kyno_sugartree_stump_ruined.tex")
 
     inst.AnimState:SetBank("quagmire_tree_cotton_tall")
     inst.AnimState:SetBuild("quagmire_tree_cotton_build")
@@ -660,5 +734,6 @@ return Prefab("kyno_sugartree", treefn, assets, prefabs),
 Prefab("kyno_sugartree_sapped", treesapfn, assets, prefabs),
 Prefab("kyno_sugartree_ruined", ruinedfn, assets, prefabs),
 Prefab("kyno_sugartree_ruined2", ruined2fn, assets, prefabs),
+Prefab("kyno_sugartree_burnt", burntfn, assets, prefabs),
 Prefab("kyno_sugartree_stump", stumpfn, assets, prefabs),
 Prefab("kyno_sugartree_stump_ruined", stump_ruinedfn, assets, prefabs)

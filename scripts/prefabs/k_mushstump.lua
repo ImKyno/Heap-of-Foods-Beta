@@ -59,7 +59,7 @@ local function fn()
 	
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_mushroomstump.tex")
-	minimap:SetPriority(-2)
+	minimap:SetPriority(2) -- From -2
 	
 	inst.AnimState:SetScale(.8, .8, .8)
 	MakeObstaclePhysics(inst, .5)

@@ -456,6 +456,9 @@ local function onload(inst, data)
 			inst:AddTag("fire")
 			inst.MiniMapEntity:SetIcon("kyno_meadowisland_tree_burnt.tex")
 			
+			inst.build = data.build
+			inst.level = data.level
+			
 		elseif data.stump then
 			inst.MiniMapEntity:SetIcon("kyno_meadowisland_tree_stump.tex")
 		
@@ -479,6 +482,9 @@ local function onload(inst, data)
 			inst.components.workable:SetWorkAction(ACTIONS.DIG)
 			inst.components.workable:SetOnFinishCallback(dig_up_stump)
 			inst.components.workable:SetWorkLeft(1)
+			
+			inst.build = data.build
+			inst.level = data.level
 		end
 	end
 end

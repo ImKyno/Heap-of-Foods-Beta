@@ -1,5 +1,3 @@
-local WAXED_PLANTS = require("prefabs/waxed_plant_common")
-
 local assets =
 {
     Asset("ANIM", "anim/seaweed.zip"),
@@ -55,6 +53,28 @@ local function ondeploy(inst, pt, deployer)
     end
 end
 
+local function CheckBeached(inst)
+    inst._checkgroundtask = nil
+    local x, y, z = inst.Transform:GetWorldPosition()
+	
+    if inst:GetCurrentPlatform() ~= nil or TheWorld.Map:IsVisualGroundAtPoint(x, y, z) then
+        if inst.components.pickable ~= nil then
+            inst.components.pickable:Pick(TheWorld)
+        end
+		
+        inst:Remove()
+		
+        local beached = SpawnPrefab("kyno_seaweeds_root")
+        beached.Transform:SetPosition(x, y, z)
+    end
+end
+
+local function OnCollide(inst, other)
+    if inst._checkgroundtask == nil then
+        inst._checkgroundtask = inst:DoTaskInTime(1 + math.random(), CheckBeached)
+    end
+end
+
 local function fn()
     local inst = CreateEntity()
 
@@ -103,6 +123,9 @@ local function fn()
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
     MakeHauntableIgnite(inst)
+	
+	inst.Physics:SetCollisionCallback(OnCollide)
+	inst:DoTaskInTime(1 + math.random(), CheckBeached)
 
     return inst
 end

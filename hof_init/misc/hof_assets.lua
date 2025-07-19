@@ -56,9 +56,6 @@ Assets =
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 
-	Asset("IMAGE", "images/minimapimages/hof_parsnipminimap.tex"),
-	Asset("ATLAS", "images/minimapimages/hof_parsnipminimap.xml"),
-
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -97,7 +94,6 @@ Assets =
 
 -- Minimap Icons.
 AddMinimapAtlas("images/minimapimages/hof_minimapicons.xml")
-AddMinimapAtlas("images/minimapimages/hof_parsnipminimap.xml")
 
 -- Mod Icons.
 local HOF_ICONS =
