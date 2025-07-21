@@ -96,6 +96,7 @@ local function fn()
     -- inst:AddTag("canbetrapped") This means the normal trap can work.
     inst:AddTag("cattoy")
 	inst:AddTag("serenitycrab")
+	inst:AddTag("crab_mob")
 	
 	inst.entity:SetPristine()
 

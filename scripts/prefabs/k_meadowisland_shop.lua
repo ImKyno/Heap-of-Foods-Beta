@@ -17,6 +17,7 @@ local prefabs =
     "rocks",
 	
 	"kyno_meadowisland_mermcart",
+	"kyno_meadowisland_trader",
 }
 
 local loot =
@@ -25,28 +26,25 @@ local loot =
     "rocks",
 }
 
---[[
 local function StartSpawning(inst)
-    if not inst:HasTag("burnt") and not TheWorld.state.iswinter and not TheWorld.state.isday and inst.components.childspawner ~= nil then
-        inst.components.childspawner:StartSpawning()
-    end
+	if not TheWorld.state.isday and inst.components.childspawner ~= nil then
+		inst.components.childspawner:StartSpawning()
+	end
 end
 
 local function StopSpawning(inst)
-    if not inst:HasTag("burnt") and inst.components.childspawner ~= nil then
-        inst.components.childspawner:StopSpawning()
-    end
+	if inst.components.childspawner ~= nil then
+		inst.components.childspawner:StopSpawning()
+	end
 end
 
 local function OnSpawned(inst, child)
-    if not inst:HasTag("burnt") then
-        inst.SoundEmitter:PlaySound("dontstarve/common/pighouse_door")
+	inst.SoundEmitter:PlaySound("dontstarve/common/pighouse_door")
 		
-        if TheWorld.state.isday and inst.components.childspawner ~= nil and 
-		inst.components.childspawner:CountChildrenOutside() >= 1 and child.components.combat.target == nil then
-            StopSpawning(inst)
-        end
-    end
+	if TheWorld.state.isday and inst.components.childspawner ~= nil and inst.components.childspawner:CountChildrenOutside() >= 1 
+	and child.components.combat.target == nil then
+		StopSpawning(inst)
+	end
 end
 
 local function OnGoHome(inst, child)
@@ -59,18 +57,17 @@ local function OnGoHome(inst, child)
         end
     end
 end
-]]--
 
-local function OnIsDay(inst, isday, iswinter)
+local function OnIsDay(inst, isday)
     if TheWorld.state.isday then
-        -- StopSpawning(inst)
+        StopSpawning(inst)
 		inst.Light:Enable(false)
 		inst.AnimState:PlayAnimation("idle", true)
     else
 		inst.Light:Enable(true)
 		inst.AnimState:PlayAnimation("lit", true)
-		-- inst.components.childspawner:ReleaseAllChildren()
-		-- StartSpawning(inst)
+		inst.components.childspawner:ReleaseAllChildren()
+		StartSpawning(inst)
 	end
 end
 
@@ -120,15 +117,13 @@ local function fn()
 	inst:AddComponent("lootdropper")
 	inst:AddComponent("inspectable")
 
-	--[[
 	inst:AddComponent("childspawner")
-	inst.components.childspawner.childname = "kyno_meadowisland_vendor"
+	inst.components.childspawner.childname = "kyno_meadowisland_trader"
 	inst.components.childspawner:SetSpawnedFn(OnSpawned)
 	inst.components.childspawner:SetGoHomeFn(OnGoHome)
-	inst.components.childspawner:SetRegenPeriod(TUNING.TOTAL_DAY_TIME * 4)
+	inst.components.childspawner:SetRegenPeriod(10) -- Whatever, he's unkillable.
     inst.components.childspawner:SetSpawnPeriod(10)
     inst.components.childspawner:SetMaxChildren(1)
-	]]--
 
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_SMALL)

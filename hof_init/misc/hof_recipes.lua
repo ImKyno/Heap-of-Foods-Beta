@@ -2,7 +2,6 @@
 local _G                   = GLOBAL
 local TECH                 = _G.TECH
 local Ingredient           = _G.Ingredient
-local RECIPETABS           = _G.RECIPETABS
 local AllRecipes           = _G.AllRecipes
 local Recipe2              = _G.Recipe2
 local TechTree             = require("techtree")
@@ -72,6 +71,7 @@ AllRecipes["merm_armory_upgraded"].testfn = IsTidalMarshLand
 -- Custom TechTree for Stations.
 table.insert(TechTree.AVAILABLE_TECH, "MEALING")
 table.insert(TechTree.AVAILABLE_TECH, "SERENITYSHOP")
+table.insert(TechTree.AVAILABLE_TECH, "MEADOWSHOP")
 
 TechTree.Create = function(t)
 	t = t or {}
@@ -91,9 +91,15 @@ _G.TECH.NONE.SERENITYSHOP = 0
 _G.TECH.SERENITYSHOP_ONE  = { SERENITYSHOP     = 1 }
 _G.TECH.SERENITYSHOP_TWO  = { SERENITYSHOP_TWO = 2 }
 
+-- Sammy The Trader.
+_G.TECH.NONE.MEADOWSHOP   = 0
+_G.TECH.MEADOWSHOP_ONE    = { MEADOWSHOP       = 1 }
+_G.TECH.MEADOWSHOP_TWO    = { MEADOWSHOP_TWO   = 2 }
+
 for k, v in pairs(TUNING.PROTOTYPER_TREES) do
     v.MEALING 		= 0
 	v.SERENITYSHOP 	= 0
+	v.MEADOWSHOP    = 0
 end
 
 TUNING.PROTOTYPER_TREES.MEALING_ONE      = TechTree.Create({ MEALING      = 1 })
@@ -102,6 +108,9 @@ TUNING.PROTOTYPER_TREES.MEALING_TWO      = TechTree.Create({ MEALING      = 2 })
 TUNING.PROTOTYPER_TREES.SERENITYSHOP_ONE = TechTree.Create({ SERENITYSHOP = 1 })
 TUNING.PROTOTYPER_TREES.SERENITYSHOP_TWO = TechTree.Create({ SERENITYSHOP = 2 })
 
+TUNING.PROTOTYPER_TREES.MEADOWSHOP_ONE   = TechTree.Create({ MEADOWSHOP   = 1 })
+TUNING.PROTOTYPER_TREES.MEADOWSHOP_TWO   = TechTree.Create({ MEADOWSHOP   = 2 })
+
 for i, v in pairs(_G.AllRecipes) do
 	if v.level.MEALING == nil then
 		v.level.MEALING = 0
@@ -109,6 +118,10 @@ for i, v in pairs(_G.AllRecipes) do
 	
 	if v.level.SERENITYSHOP == nil then
 		v.level.SERENITYSHOP = 0
+	end
+	
+	if v.level.MEADOWSHOP == nil then
+		v.level.MEADOWSHOP = 0
 	end
 end
 
@@ -130,6 +143,16 @@ AddPrototyperDef("kyno_serenityisland_shop",
 		is_crafting_station	= true,
 		action_str			= "TRADE",
 		filter_text			= _G.STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP,
+	}
+)
+
+AddPrototyperDef("kyno_meadowisland_trader",
+	{
+		icon_atlas          = "images/tabimages/hof_tabimages.xml",
+		icon_image          = "kyno_tab_meadow.tex",
+		is_crafting_station = true,
+		action_str          = "TRADE",
+		filter_text         = _G.STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP,
 	}
 )
 
@@ -323,310 +346,6 @@ AddRecipe2("kyno_garden_sprinkler", {Ingredient("gears", 3), Ingredient("ice", 1
 )
 SortAfter("kyno_garden_sprinkler", "firesuppressor", "STRUCTURES")
 SortAfter("kyno_garden_sprinkler", "compostwrap", "GARDENING")
-
--- Pig Elder Shop.
-AddRecipe2("kyno_saltrack_installer_p", {Ingredient("kyno_salmonfish", 2, ModAtlas)}, TECH.SERENITYSHOP_ONE, 
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,		
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give", 
-		product				= "kyno_saltrack_installer",
-		numtogive 			= 1, 
-		atlas 				= ModAtlas, 
-		image 				= "kyno_saltrack_installer.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_crabtrap_installer_p", {Ingredient("quagmire_pigeon", 1)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock			= true,
-		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
-		sg_state			= "give",
-		product				= "kyno_crabtrap_installer",
-		numtogive			= 1,
-		atlas				= ModAtlas,
-		image				= "kyno_crabtrap_installer.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_sapbucket_installer_p", {Ingredient("kyno_salt", 3, ModAtlas)}, TECH.SERENITYSHOP_ONE, 
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_sapbucket_installer",		
-		numtogive 			= 3, 
-		atlas 				= ModAtlas, 
-		image 				= "kyno_sapbucket_installer.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_slaughtertool_p", {Ingredient("kyno_crabmeat", 2, ModAtlas)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock			= true,
-		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
-		sg_state			= "give",
-		product				= "kyno_slaughtertool",
-		numtogive			= 1,
-		atlas				= ModAtlas,
-		image				= "kyno_slaughtertool.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_kit_hanger_p", {Ingredient("bonestew", 1), Ingredient("gorge_stone_soup", 1, ModAtlas), Ingredient("caviar", 1, ModAtlas)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock			= true,
-		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
-		sg_state			= "give",
-		product				= "kyno_cookware_kit_hanger",
-		numtogive			= 1,
-		atlas				= ModAtlas,
-		image				= "kyno_cookware_kit_hanger.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_kit_syrup_p", {Ingredient("taffy", 1), Ingredient("gorge_berry_tart", 1, ModAtlas), Ingredient("gummy_cake", 1, ModAtlas)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock			= true,
-		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
-		sg_state			= "give",
-		product				= "kyno_cookware_kit_syrup",
-		numtogive			= 1,
-		atlas				= ModAtlas,
-		image				= "kyno_cookware_kit_hanger.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_kit_oven_p", {Ingredient("dragonpie", 1), Ingredient("gorge_bread", 1), Ingredient("gorge_carrot_cake", 1, ModAtlas)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock			= true,
-		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
-		sg_state			= "give",
-		product				= "kyno_cookware_kit_oven",
-		numtogive			= 1,
-		atlas				= ModAtlas,
-		image				= "kyno_cookware_kit_oven.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_kit_small_grill_p", {Ingredient("kabobs", 1), Ingredient("gorge_sliders", 1, ModAtlas), Ingredient("steamedhamsandwich", 1, ModAtlas)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock			= true,
-		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
-		sg_state			= "give",
-		product				= "kyno_cookware_kit_small_grill",
-		numtogive			= 1,
-		atlas				= ModAtlas,
-		image				= "kyno_cookware_kit_small_grill.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_kit_grill_p", {Ingredient("frogglebunwich", 1), Ingredient("gorge_hamburger", 1, ModAtlas), Ingredient("hardshell_tacos", 1, ModAtlas)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock			= true,
-		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
-		sg_state			= "give",
-		product				= "kyno_cookware_kit_grill",
-		numtogive			= 1,
-		atlas				= ModAtlas,
-		image				= "kyno_cookware_kit_grill.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_sweetpotato_seeds_p", {Ingredient("potato_seeds", 3)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_seeds_kit_sweetpotato",
-		atlas 				= ModAtlas, 
-		image				= "kyno_seeds_kit_sweetpotato.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_turnip_seeds_p", {Ingredient("garlic_seeds", 3)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_seeds_kit_turnip",
-		atlas 				= ModAtlas, 
-		image				= "kyno_seeds_kit_turnip.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_radish_seeds_p", {Ingredient("carrot_seeds", 3)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_seeds_kit_radish", 
-		atlas 				= ModAtlas, 
-		image				= "kyno_seeds_kit_radish.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_parznip_seeds_p", {Ingredient("pumpkin_seeds", 3)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,		
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_seeds_kit_parznip",
-		atlas 				= ModAtlas, 
-		image				= "kyno_seeds_kit_parznip.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_fennel_seeds_p", {Ingredient("durian_seeds", 3)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_seeds_kit_fennel",
-		atlas 				= ModAtlas, 
-		image				= "kyno_seeds_kit_fennel.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_cucumber_seeds_p", {Ingredient("watermelon_seeds", 3)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_seeds_kit_cucumber",
-		atlas 				= ModAtlas, 
-		image				= "kyno_seeds_kit_cucumber.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_aloe_seeds_p", {Ingredient("asparagus_seeds", 3)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_seeds_kit_aloe",
-		atlas 				= ModAtlas, 
-		image				= "kyno_seeds_kit_aloe.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_saphealer_p", {Ingredient("kyno_sap_spoiled", 3, ModAtlas)}, TECH.SERENITYSHOP_ONE,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_saphealer",		
-		numtogive 			= 2, 
-		atlas 				= ModAtlas, 
-		image				= "kyno_saphealer.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("kyno_sugartree_petals_p", {Ingredient("kyno_sugarfly", 1, ModAtlas)}, TECH.LOST,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_sugartree_petals",		
-		numtogive 			= 3, 
-		atlas 				= ModAtlas, 
-		image				= "kyno_sugartree_petals.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
---[[
-AddRecipe2("kyno_sugarfly_p", {Ingredient("butterfly", 1)}, TECH.LOST,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_sugarfly",		
-		numtogive 			= 1, 
-		atlas 				= ModAtlas, 
-		image				= "kyno_sugarfly.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-]]--
-
-AddRecipe2("kyno_sugartree_bud_p", {Ingredient("kyno_syrup", 3, ModAtlas)}, TECH.LOST,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_sugartree_bud",		
-		numtogive 			= 2, 
-		atlas 				= ModAtlas, 
-		image				= "kyno_sugartree_bud.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("dug_kyno_spotbush_p", {Ingredient("kyno_spotspice_leaf", 3)}, TECH.LOST,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,		
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "dug_kyno_spotbush",		
-		numtogive 			= 2, 
-		atlas 				= ModAtlas, 
-		image				= "dug_kyno_spotbush.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("dug_kyno_wildwheat_p", {Ingredient("kyno_wheat", 3)}, TECH.LOST,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "dug_kyno_wildwheat",		
-		numtogive 			= 2, 
-		atlas 				= ModAtlas, 
-		image				= "dug_kyno_wildwheat.tex",
-	},
-	{"CRAFTING_STATION"}
-)
 
 -- Warly Spices.
 -- Heap-of-Foods-Workshop-Spices / workshop-3438589036

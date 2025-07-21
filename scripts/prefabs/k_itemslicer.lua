@@ -66,13 +66,12 @@ local function fn()
 	
 	inst.components.inventoryitem.imagename = "kyno_itemslicer"
 	
-	-- Planned for future update.
-	-- inst:AddComponent("finiteuses")
-	-- inst.components.finiteuses:SetMaxUses(TUNING.KYNO_ITEMSLICER_USES)
-	-- inst.components.finiteuses:SetUses(TUNING.KYNO_ITEMSLICER_USES)
-	-- inst.components.finiteuses:SetConsumption(ACTIONS.SLICE, 2)
-	-- inst.components.finiteuses:SetConsumption(ACTIONS.SLICESTACK, 2)
-	-- inst.components.finiteuses:SetOnFinished(inst.Remove)
+	inst:AddComponent("finiteuses")
+	inst.components.finiteuses:SetMaxUses(TUNING.KYNO_ITEMSLICER_USES)
+	inst.components.finiteuses:SetUses(TUNING.KYNO_ITEMSLICER_USES)
+	inst.components.finiteuses:SetConsumption(ACTIONS.SLICE, 2)
+	inst.components.finiteuses:SetConsumption(ACTIONS.SLICESTACK, 2)
+	inst.components.finiteuses:SetOnFinished(inst.Remove)
 	
 	return inst
 end

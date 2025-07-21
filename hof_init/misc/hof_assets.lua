@@ -451,6 +451,7 @@ local HOF_ICONS =
 	"kyno_seeds_kit_parznip",
 	"kyno_seeds_kit_radish",
 	"kyno_seeds_kit_sweetpotato",
+	"kyno_seeds_kit_rice",
 	"kyno_seeds_kit_turnip",
 	"kyno_shark_fin",
 	"kyno_sodacan",

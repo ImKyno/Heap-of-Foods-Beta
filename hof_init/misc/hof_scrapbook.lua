@@ -1143,7 +1143,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		subcat         = "tool",
 		tex            = "kyno_itemslicer.tex",
 		prefab         = "kyno_itemslicer",
-	 -- finiteuses     = 200,
+		finiteuses     = 200,
 		bank           = "kyno_itemslicer",
 		build          = "kyno_itemslicer",
 		anim           = "idle",
@@ -1154,7 +1154,6 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "ITEMSLICER",
 	},
 	
-	--[[
 	kyno_itemslicer_gold =
 	{
 		name           = "kyno_itemslicer_gold",
@@ -1170,7 +1169,6 @@ local HOF_SCRAPBOOK_ITEMS =
 		animoffsetbgy  = -105,
 		specialinfo    = "ITEMSLICER2",
 	},
-	]]--
 }
 
 local HOF_SCRAPBOOK_FOODS =
@@ -11271,6 +11269,21 @@ local HOF_SCRAPBOOK_CREATURES =
 		hide           = {"hat", "ARM_carry", "ARM_carry_up"},
 		deps           = {"kyno_meadowisland_fishermermhut", "kyno_fishermermhut_wurt", "pondfish", "froglegs"},
 	},
+	
+	kyno_meadowisland_trader =
+	{
+		name           = "kyno_meadowisland_trader",
+		type           = "creature",
+		subcat         = "merm",
+		tex            = "kyno_meadowisland_trader.tex",
+		prefab         = "kyno_meadowisland_trader",
+		bank           = "pigman",
+		build          = "merm_trader1_build",
+		anim           = "idle_loop",
+		hide           = {"ARM_carry", "ARM_carry_up"},
+		deps           = {"kyno_meadowisland_shop", "kyno_meadowisland_mermcart"},
+		specialinfo    = "SAMMY",
+	},
 }
 
 local HOF_SCRAPBOOK_THINGS =
@@ -11306,11 +11319,9 @@ local HOF_SCRAPBOOK_THINGS =
 		animoffsety    = -30,
 		animoffsetbgx  = 50,
 		animoffsetbgy  = 20,
-		deps           = {"merm"}, -- TO DO: Sammy and his stuff.
-		specialinfo    = "SAMMY",
+		deps           = {"kyno_meadowisland_trader"},
 	},
 	
-	--[[
 	kyno_meadowisland_mermcart =
 	{
 		name           = "kyno_meadowisland_mermcart",
@@ -11320,10 +11331,8 @@ local HOF_SCRAPBOOK_THINGS =
 		bank           = "kyno_meadowisland_mermcart",
 		build          = "kyno_meadowisland_mermcart",
 		anim           = "idle1",
-		deps           = {"boards"}, -- TO DO: Sammy and his stuff.
-		specialinfo    = "SAMMY",
+		deps           = {"kyno_meadowisland_trader"},
 	},
-	]]--
 
 	kyno_mealgrinder   = 
 	{

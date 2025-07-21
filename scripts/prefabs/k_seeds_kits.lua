@@ -21,7 +21,7 @@ local prefabs =
 	-- "firenettles_seeds",
 	-- "forgetmelots_seeds",
 	-- "tillweed_seeds",
-	-- "kyno_rice_seeds",
+	"kyno_rice_seeds",
 }
 
 local KIT_LOOT =
@@ -68,6 +68,12 @@ local KIT_LOOT =
 		"kyno_turnip_seeds",
 		"kyno_turnip_seeds",
 	},
+	[8] =
+	{
+		"kyno_rice_seeds",
+		"kyno_rice_seeds",
+		"kyno_rice_seeds",
+	},
 }
 
 local function GetItemData(id, KIT_LOOT)
@@ -103,7 +109,7 @@ local function OnUnwrapped(inst, pos, doer)
 	inst:ListenForEvent("animover", inst.Remove)
 end
 
-local function aloekitfn()
+local function kitfn()
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
@@ -116,7 +122,6 @@ local function aloekitfn()
 
 	inst.AnimState:SetBank("kyno_seeds_kit")
 	inst.AnimState:SetBuild("kyno_seeds_kit")
-	inst.AnimState:PlayAnimation("aloe")
 
 	inst:AddTag("bundle")
 	inst:AddTag("unwrappable")
@@ -133,245 +138,129 @@ local function aloekitfn()
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_seeds_kit_aloe"
 	
 	inst:AddComponent("unwrappable")
 	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
+
+	return inst
+end
+
+local function aloekitfn()
+	local inst = kitfn()
+
+	inst.AnimState:PlayAnimation("aloe")
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst.components.inventoryitem.imagename = "kyno_seeds_kit_aloe"
 	inst.components.unwrappable.itemdata = GetItemData(1, KIT_LOOT)
 
 	return inst
 end
 
 local function cucumberkitfn()
-	local inst = CreateEntity()
+	local inst = kitfn()
 
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddSoundEmitter()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst, "small", 0.2, 0.95)
-
-	inst.AnimState:SetBank("kyno_seeds_kit")
-	inst.AnimState:SetBuild("kyno_seeds_kit")
 	inst.AnimState:PlayAnimation("cucumber")
-
-	inst:AddTag("bundle")
-	inst:AddTag("unwrappable")
-	inst:AddTag("seeds_kit")
-
-	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
-	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-		
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+
 	inst.components.inventoryitem.imagename = "kyno_seeds_kit_cucumber"
-	
-	inst:AddComponent("unwrappable")
-	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
 	inst.components.unwrappable.itemdata = GetItemData(2, KIT_LOOT)
 
 	return inst
 end
 
 local function fennelkitfn()
-	local inst = CreateEntity()
+	local inst = kitfn()
 
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddSoundEmitter()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst, "small", 0.2, 0.95)
-
-	inst.AnimState:SetBank("kyno_seeds_kit")
-	inst.AnimState:SetBuild("kyno_seeds_kit")
 	inst.AnimState:PlayAnimation("fennel")
-
-	inst:AddTag("bundle")
-	inst:AddTag("unwrappable")
-	inst:AddTag("seeds_kit")
-
-	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
-	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-			
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+
 	inst.components.inventoryitem.imagename = "kyno_seeds_kit_fennel"
-	
-	inst:AddComponent("unwrappable")
-	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
 	inst.components.unwrappable.itemdata = GetItemData(3, KIT_LOOT)
 
 	return inst
 end
 
 local function parznipkitfn()
-	local inst = CreateEntity()
-
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddSoundEmitter()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst, "small", 0.2, 0.95)
-
-	inst.AnimState:SetBank("kyno_seeds_kit")
-	inst.AnimState:SetBuild("kyno_seeds_kit")
+	local inst = kitfn()
+	
 	inst.AnimState:PlayAnimation("parznip")
-
-	inst:AddTag("bundle")
-	inst:AddTag("unwrappable")
-	inst:AddTag("seeds_kit")
-
-	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
-	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-			
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+
 	inst.components.inventoryitem.imagename = "kyno_seeds_kit_parznip"
-	
-	inst:AddComponent("unwrappable")
-	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
 	inst.components.unwrappable.itemdata = GetItemData(4, KIT_LOOT)
 
 	return inst
 end
 
 local function radishkitfn()
-	local inst = CreateEntity()
-
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddSoundEmitter()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst, "small", 0.2, 0.95)
-
-	inst.AnimState:SetBank("kyno_seeds_kit")
-	inst.AnimState:SetBuild("kyno_seeds_kit")
+	local inst = kitfn()
+	
 	inst.AnimState:PlayAnimation("radish")
-
-	inst:AddTag("bundle")
-	inst:AddTag("unwrappable")
-	inst:AddTag("seeds_kit")
-
-	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
-	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-		
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+
 	inst.components.inventoryitem.imagename = "kyno_seeds_kit_radish"
-	
-	inst:AddComponent("unwrappable")
-	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
 	inst.components.unwrappable.itemdata = GetItemData(5, KIT_LOOT)
 
 	return inst
 end
 
 local function sweetpotatokitfn()
-	local inst = CreateEntity()
+	local inst = kitfn()
 
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddSoundEmitter()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst, "small", 0.2, 0.95)
-
-	inst.AnimState:SetBank("kyno_seeds_kit")
-	inst.AnimState:SetBuild("kyno_seeds_kit")
 	inst.AnimState:PlayAnimation("sweetpotato")
-
-	inst:AddTag("bundle")
-	inst:AddTag("unwrappable")
-	inst:AddTag("seeds_kit")
-
-	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
 		return inst
 	end
 	
-	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-		
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_seeds_kit_sweetpotato"
-	
-	inst:AddComponent("unwrappable")
-	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
 	inst.components.unwrappable.itemdata = GetItemData(6, KIT_LOOT)
 
 	return inst
 end
 
 local function turnipkitfn()
-	local inst = CreateEntity()
-
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddSoundEmitter()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst, "small", 0.2, 0.95)
-
-	inst.AnimState:SetBank("kyno_seeds_kit")
-	inst.AnimState:SetBuild("kyno_seeds_kit")
+	local inst = kitfn()
+	
 	inst.AnimState:PlayAnimation("turnip")
-
-	inst:AddTag("bundle")
-	inst:AddTag("unwrappable")
-	inst:AddTag("seeds_kit")
-
-	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
-	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-		
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+
 	inst.components.inventoryitem.imagename = "kyno_seeds_kit_turnip"
-	
-	inst:AddComponent("unwrappable")
-	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
 	inst.components.unwrappable.itemdata = GetItemData(7, KIT_LOOT)
+
+	return inst
+end
+
+local function ricekitfn()
+	local inst = kitfn()
+	
+	inst.AnimState:PlayAnimation("rice")
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst.components.inventoryitem.imagename = "kyno_seeds_kit_rice"
+	inst.components.unwrappable.itemdata = GetItemData(8, KIT_LOOT)
 
 	return inst
 end
@@ -382,4 +271,5 @@ Prefab("kyno_seeds_kit_fennel", fennelkitfn, assets, prefabs),
 Prefab("kyno_seeds_kit_parznip", parznipkitfn, assets, prefabs),
 Prefab("kyno_seeds_kit_radish", radishkitfn, assets, prefabs),
 Prefab("kyno_seeds_kit_sweetpotato", sweetpotatokitfn, assets, prefabs),
-Prefab("kyno_seeds_kit_turnip", turnipkitfn, assets, prefabs)
+Prefab("kyno_seeds_kit_turnip", turnipkitfn, assets, prefabs),
+Prefab("kyno_seeds_kit_rice", ricekitfn, assets, prefabs)

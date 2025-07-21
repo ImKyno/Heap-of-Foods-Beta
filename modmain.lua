@@ -36,6 +36,8 @@ local hof_init_misc    =
 	"hof_assets",
 	"hof_prefabs",
 	"hof_recipes",
+	"hof_recipes_serenity",
+	"hof_recipes_meadow",
 	"hof_brewbook",
 	"hof_actions",
 	"hof_stategraphs",

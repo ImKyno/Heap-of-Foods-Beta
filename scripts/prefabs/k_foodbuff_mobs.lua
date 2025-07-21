@@ -100,6 +100,10 @@ local function OnAttachedWorm(inst, target)
     
 	if target.components.combat ~= nil and target:HasTag("player") then	
 		target.components.combat.bonusdamagefn = ApplyWormBonusDamage
+		
+		if target.components.talker and target:HasTag("player") then 
+			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_WORMBUFF_START"))
+		end
 	end
 	
     inst:ListenForEvent("death", function()
@@ -116,6 +120,10 @@ end
 local function OnDetachedWorm(inst, target)
 	if target.components.combat ~= nil and target:HasTag("player") then
 		target.components.combat.bonusdamagefn = nil
+		
+		if target.components.talker and target:HasTag("player") then 
+			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_WORMBUFF_END"))
+		end
 	end
 	
     inst:Remove()
@@ -158,5 +166,91 @@ local function wormfn()
     return inst
 end
 
+---------------------------------------------------------------------------
+-- Crab Buff
+---------------------------------------------------------------------------
+local function ApplyCrabBonusDamage(inst, target, damage, weapon)
+	local CRAB_TAGS = {"crabking", "crabking_ally", "crab_mob"}
+
+    return (target:HasOneOfTags(CRAB_TAGS) and TUNING.KYNO_CRABBUFF_EXTRADAMAGE) or 0
+end
+
+local function ClearCrabBonusDamage(inst, target, damage, weapon)
+	return 0
+end
+
+local function OnAttachedCrab(inst, target)
+    inst.entity:SetParent(target.entity)
+    inst.Transform:SetPosition(0, 0, 0) 
+    
+	if target.components.combat ~= nil and target:HasTag("player") then	
+		target.components.combat.bonusdamagefn = ApplyCrabBonusDamage
+		
+		if target.components.talker and target:HasTag("player") then 
+			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_CRABBUFF_START"))
+		end
+	end
+	
+    inst:ListenForEvent("death", function()
+        inst.components.debuff:Stop()
+    end, target)
+end
+
+local function OnTimerDoneCrab(inst, data)
+    if data.name == "kyno_crabbuff" then
+        inst.components.debuff:Stop()
+    end
+end
+
+local function OnDetachedCrab(inst, target)
+	if target.components.combat ~= nil and target:HasTag("player") then
+		target.components.combat.bonusdamagefn = nil
+		
+		if target.components.talker and target:HasTag("player") then 
+			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_CRABBUFF_END"))
+		end
+	end
+	
+    inst:Remove()
+end
+
+local function OnExtendedCrab(inst, target)
+    inst.components.timer:StopTimer("kyno_crabbuff")
+    inst.components.timer:StartTimer("kyno_crabbuff", TUNING.KYNO_CRABBUFF_DURATION)
+	
+	if target.components.combat ~= nil and target:HasTag("player") then
+		target.components.combat.bonusdamagefn = ApplyCrabBonusDamage
+	end
+end
+
+local function crabfn()
+    local inst = CreateEntity()
+
+    if not TheWorld.ismastersim then
+        inst:DoTaskInTime(0, inst.Remove)
+        return inst
+    end
+
+    inst.entity:AddTransform()
+    inst.entity:Hide()
+    inst.persists = false
+
+    inst:AddTag("CLASSIFIED")
+
+    inst:AddComponent("debuff")
+    inst.components.debuff:SetAttachedFn(OnAttachedCrab)
+    inst.components.debuff:SetDetachedFn(OnDetachedCrab)
+    inst.components.debuff:SetExtendedFn(OnExtendedCrab)
+    inst.components.debuff.keepondespawn = true
+
+    inst:AddComponent("timer")
+    inst.components.timer:StartTimer("kyno_crabbuff", TUNING.KYNO_CRABBUFF_DURATION)
+    
+	inst:ListenForEvent("timerdone", OnTimerDoneCrab)
+
+    return inst
+end
+
 return Prefab("kyno_piratebuff", piratefn),
-Prefab("kyno_wormbuff", wormfn)
+Prefab("kyno_wormbuff", wormfn),
+Prefab("kyno_crabbuff", crabfn)

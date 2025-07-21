@@ -6,7 +6,6 @@ local CookbookData = require("cookbookdata")
 
 require("hof_constants")
 require("craftpot/ingredienttags")
--- require("craftpot/cookingpots")
 
 -- New Vanilla Crock Pot Ingredients.
 AddIngredientValues({"slurtle_shellpieces"}, 	{shell      = 1, 	elemental = 1})
@@ -39,6 +38,7 @@ AddIngredientValues({"tillweed"},               {veggie     = 0.5,  weed      = 
 AddIngredientValues({"wagpunk_bits"}, 			{junk       = 1})
 AddIngredientValues({"butter"},                 {fat        = 1,    dairy     = 1,   butter   = 1})
 AddIngredientValues({"baconeggs"},              {prepfood   = 1}) -- Could use meat tag, but I don't want people using this as "filler" lol.
+AddIngredientValues({"townportaltalisman"},     {rocks      = 1,    elemental = 1})
 
 -- New Mod Crock Pot Ingredients.
 AddIngredientValues({"kyno_coffeebeans"}, 		{seeds      = 1}, 	 		  				  true)
@@ -106,8 +106,8 @@ AddIngredientValues({"chocolate_black"},        {sweetener  = 2,    chocolate  =
 AddIngredientValues({"chocolate_white"},        {sweetener  = 2,    chocolate  = 1})
 AddIngredientValues({"littlebread"}, 			{bread      = 1})
 AddIngredientValues({"kyno_sugar"},             {sweetener  = 1,    sugar      = 1})
-AddIngredientValues({"kyno_wheat"},             {seeds      = 1},                            true)
-AddIngredientValues({"kyno_rice"},              {veggie     = 0.5,  seeds      = 0.5},       true)
+AddIngredientValues({"kyno_wheat"},             {seeds      = 1},                             true)
+AddIngredientValues({"kyno_rice"},              {veggie     = 0.5,  seeds      = 0.5},        true)
 AddIngredientValues({"kyno_pineapple_halved"},  {fruit      = 1})
 AddIngredientValues({"kyno_pineapple_cooked"},  {fruit      = 1})
 AddIngredientValues({"kyno_worm_bone"},         {inedible   = 1})

@@ -2694,6 +2694,59 @@ local kyno_foods =
 		card_def = {ingredients = {{"drumstick", 1}, {"kyno_flour", 1}, {"kyno_oil", 1}, {"kyno_spotspice", 1}}},
 	},
 	
+	lazydessert =
+	{
+		test = function(cooker, names, tags) return names.townportaltalisman and names.rocks and tags.sweetener end,
+		priority = 1,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = nil,
+		rocktribute = 18,
+		health = -30,
+		hunger = 12.5,
+		sanity = 0,
+		cooktime = 2,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ANTLION,
+		floater = {"med", nil, 0.65},
+		tags = {"honeyed", "nospice"},
+		card_def = {ingredients = {{"townportaltalisman", 1}, {"rocks", 2}, {"honey", 1}}},
+	},
+	
+	crabkingfeast =
+	{
+		test = function(cooker, names, tags) return names.kyno_crabkingmeat and names.kyno_spotspice and names.corn
+		and (names.onion or names.onion_cooked) and not names.corn_cooked end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 40,
+		hunger = 62.5,
+		sanity = 33,
+		cooktime = 3,
+		scale = 2,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRAB,
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_crabkingmeat", 1}, {"kyno_spotspice", 1}, {"corn", 1}, {"onion", 1}}},
+		prefabs = { "kyno_crabbuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_crabbuff", "kyno_crabbuff")
+		end,
+	},
+	
+	pienapple =
+	{
+		test = function(cooker, names, tags) return (names.kyno_pineapple_halved or names.kyno_pineapple_cooked) and not tags.meat end,
+		priority = 15,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 40,
+		hunger = 25,
+		sanity = 5,
+		cooktime = 2,
+		potlevel = "high",
+		floater = {"med", nil, 0.65},
+		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"twigs", 3}}},
+	},
+	
 	--[[
 	strawberrygrinder =
 	{

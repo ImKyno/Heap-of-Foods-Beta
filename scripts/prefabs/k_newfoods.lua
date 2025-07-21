@@ -147,7 +147,11 @@ local function MakePreparedFood(data)
 		inst.food_basename = data.basename
 		
 		inst:AddComponent("bait")
+		
 		inst:AddComponent("tradable")
+		if data.rocktribute ~= nil then
+			inst.components.tradable.rocktribute = data.rocktribute
+		end
 		
 		inst:AddComponent("inspectable")
 		if data.nameoverride ~= nil then
