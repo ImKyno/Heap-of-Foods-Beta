@@ -10,6 +10,7 @@ local assets =
 
 local function OnLanded(inst)
 	local x, y, z = inst.Transform:GetWorldPosition()
+	
 	if TheWorld.Map:IsOceanAtPoint(x, y, z, false) then
 		inst.AnimState:PlayAnimation("idle_water")
 	else

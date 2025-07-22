@@ -11,6 +11,7 @@ local TimeEvent 	= _G.TimeEvent
 local POPUPS 		= _G.POPUPS
 
 require("hof_upvaluehacker")
+require("stategraphs/commonstates")
 
 -- New Stategraphs.
 AddStategraphState("wilson",
@@ -341,7 +342,79 @@ AddStategraphPostInit("wilson", function(self)
 end)
 
 -- Klei made sharks don't actually eat food, they just remove it from the scene...
--- code
+local function groundsound(inst)
+    local x,y,z = inst.Transform:GetWorldPosition()
+	
+    if inst:GetCurrentPlatform() then
+        inst.SoundEmitter:PlaySound("dangerous_sea/creatures/shark/boat_land")
+    elseif _G.TheWorld.Map:IsVisualGroundAtPoint(x,y,z) then
+        PlayFootstep(inst)
+    end
+end
+
+AddStategraphState("shark",
+	State{
+        name = "eat_pst2",
+        tags = { "busy", "jumping" },
+
+        onenter = function(inst, cb)
+            inst.Physics:Stop()
+            inst.AnimState:PlayAnimation("eat")
+        end,
+
+        timeline =
+        {
+            TimeEvent(1 * FRAMES, function(inst)
+                if inst.foodtoeat and inst.foodtoeat:HasTag("jawsbreaker") then
+					inst:DoTaskInTime(1, function()
+						if inst.components.health ~= nil and not inst.components.health:IsDead() then
+							inst.components.health:Kill()
+						end
+					end)
+					
+					inst.foodtoeat:Remove()
+				else
+                    inst.foodtoeat:Remove()
+                end
+				
+                inst.foodtoeat = nil
+            end),
+            TimeEvent(7 * FRAMES, function(inst)
+                inst.SoundEmitter:PlaySound("dangerous_sea/creatures/shark/bite")
+                _G.SpawnPrefab("splash_green").Transform:SetPosition(inst.Transform:GetWorldPosition())
+            end),
+
+            TimeEvent(30 * FRAMES, function(inst)
+                if inst:HasTag("swimming") then
+                    _G.SpawnPrefab("splash_green_large").Transform:SetPosition(inst.Transform:GetWorldPosition())
+                else
+                    groundsound(inst)
+                end
+            end),
+        },
+
+        events =
+        {
+            EventHandler("animover", function(inst) inst.sg:GoToState("idle") end),
+        },
+    }
+)
+
+AddStategraphPostInit("shark", function(sg)
+	local oldeat_pre = sg.states["eat_pre"].ontimeout
+	sg.states["eat_pre"].ontimeout = function(inst)
+		oldeat_pre(inst)
+		
+		local targetpt = _G.Vector3(inst.Transform:GetWorldPosition())
+		
+		if inst.foodtoeat and inst.foodtoeat:IsValid() then
+			targetpt = _G.Vector3(inst.foodtoeat.Transform:GetWorldPosition())
+		end
+		
+		inst.Transform:SetPosition(targetpt.x,0,targetpt.z)
+		inst.sg:GoToState("eat_pst2")
+	end
+end)
 
 -- Brewbook Action Stategraph.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)

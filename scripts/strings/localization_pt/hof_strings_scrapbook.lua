@@ -77,6 +77,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BOUILLABAISSE = "Increased sleep resis
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOISTURE = "Dries off the survivor and grants them immunity to Wetness for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUGARBOMBS_EXPLOSIVE = "These Sugar Bombs are filled with an explosive taste!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EATER = "Makes food more soft and easy to eat for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRABKINGFEAST = "Increased damage against crabs for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ANTLION = "Satisfies the Antlion for a certain amount of time."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
@@ -117,7 +119,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Kingfishers will often drop Tropical
 
 -- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "A Merchant from a distant archipelago. He's willing to trade his best cooking utensils and other useful items for delicious meals.\n\nThe Elder is craving for a meal with extreme sweetness or Butter mescled with seafood. He will reward you accordingly.\n\nBringing Elder's favourtie meal will unlock more trade deals."
-STRINGS.SCRAPBOOK.SPECIALINFO.SAMMY = "Looks like someone is moving in to this old and abandoned house. His stuff is scattered all around.\n\nCome back in the next major update and stay tuned for news!"
+STRINGS.SCRAPBOOK.SPECIALINFO.SAMMY = "A merchant from an otherworldly realm. He somehow ended stranded on one of the Constant islands and has built a shop for bartering in the meantime.\n\nSammy trades an array of rare items throughout the seasons and during some special occasions. Make sure to check his wares every now and then to see what he has to offer.\n\nSammy will reward you handsomely if you bring a gift that reminds him of home."
 STRINGS.SCRAPBOOK.SPECIALINFO.SALTPOND = "Ponds rich in salt. Salt Racks can be installed for an easy source of salt rocks every few days."
 STRINGS.SCRAPBOOK.SPECIALINFO.MEALGRINDER = "Standing near this device will provide the survivor with new ingredients they can grind.\n\nYou'll need to be near the mealing stone every time you want to grind a new ingredient."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKOTREE = "Standing near a tree offers 35% protection from rain and cools survivor a small amount.\n\nThese Tea Trees are infested with little creatures known as Piko, and they are ready to cause trouble."

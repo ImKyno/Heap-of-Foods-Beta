@@ -61,6 +61,7 @@ PrefabFiles =
 	"k_garden_sprinkler",
 	"k_humanmeat",
 	"k_itemslicer",
+	"k_jawsbreaker",
 	"k_kokonut",
 	"k_kokonuttree",
 	"k_limpetrock",

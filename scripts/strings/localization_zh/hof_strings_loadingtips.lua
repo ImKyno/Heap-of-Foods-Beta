@@ -49,7 +49,6 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_SERENITYCRATE",	"在宁静岛上钓到的水�
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WATERY_CRATE2",	"水箱总是会产生海藻和额外的战利品。继续摧毁它们，看看还能发现什么！")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_TUNACAN",			"\"金枪鱼罐头\"永远不会变质，除非你打开它。")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_CANNED_SOURCE",	"你可以从水箱和沉箱中获得罐头和饮料。祝你寻宝愉快！")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_TUNACAN_HERMIT",	"如果你完成了寄居蟹奶奶的任务，她可能会给你特别奖励。")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_CRABKING_LOOT",	"没有蟹肉了？帝王蟹就是一个可靠的来源。")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_REGROWTH",		"植物、树木等模组实体。如果在世界上的数量较少，它们会随着时间的推移而重新生长。")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_BOTTLE_SOUL",		"沃托克斯可以将灵魂储存在空瓶子里，以供日后食用...")
@@ -78,6 +77,11 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_LUNARSOUP",       "\"喝下月牙汤，我无�
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SPRINKLER",       "厌倦了手动浇灌庄稼？那今天就为自己建造一个花园洒水器，告别手工劳动！")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKASHINE",       "路易斯（Lewis）创建 Nukashine 的初衷是为了给他的核子可乐收藏提供一个地方，但它的流行意味着朱迪-洛厄尔（Judy Lowell）和 Eta Psi 将会介入。")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_ITEMSLICER",      "肉块和一些硬质水果可以用切片刀切片。")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_ITEMSLICER_GOLD", "The Grand Cleaver has unlimited uses and can slice items quicker than a regular Cleaver.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_SAMMY1",          "Sammy can be found on the Seaside Island selling an array of rare items and ingredients that you can't find so easily out there.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_SAMMY2",          "Sammy's wares changes throughout the seasons and during special world occasions. Make sure to check his inventory every now and then to see what he has to offer.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_JAWSBREAKER",     "Jawsbreaker can be used to lure Rockjaws and Gnarwails, killing them instantly. But don't use it too close to yourself.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_METALBUCKET",     "What's better than a Bucket? A sturdy metal bucket that will not break when milking animals!")
 
 -- We want that our custom tips appears more often.
 SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})

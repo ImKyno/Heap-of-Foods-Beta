@@ -49,7 +49,6 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_SERENITYCRATE",   "Wodne Skrzynie łowione na 
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WATERY_CRATE2",   "Wodne Skrzynie zawsze zawierają Wodorosty i dodatkowe łupy. Zniszcz je, aby sprawdzić, co możesz znaleźć!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_TUNACAN",         "\"Tuna 'Ballphin Free' nigdy się nie psuje, chyba że ją otworzysz.\"")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_CANNED_SOURCE",   "Możesz znaleźć jedzenie i napoje w puszkach w Wodnych Skrzyniach i Zatopionych Skarbach. Szczęśliwego polowania na skarby!")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_TUNACAN_HERMIT",   "Krabby Hermit może mieć specjalną nagrodę, jeśli wykonasz jej zadania.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_CRABKING_LOOT",   "Brakuje Ci Krabowego Mięsa? Król Krabów może być niezawodnym źródłem.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_REGROWTH",        "Jednostki moda, takie jak rośliny, drzewa itp., będą odrastać w czasie, jeśli będzie ich za mało w świecie.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_BOTTLE_SOUL",     "Wortox może przechowywać Dusze w Pustych Butelkach na późniejsze posiłki...")
@@ -78,6 +77,11 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_LUNARSOUP",       "\"Nie boję się niczego, g
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SPRINKLER",       "Zmęczony ręcznym podlewaniem upraw? Zbuduj sobie Ogrodowy Zraszacz i pożegnaj się z tą uciążliwą pracą!")	
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKASHINE",       "Lewis stworzył Nukashine, aby zarobić na magazyn dla swojej kolekcji Nuka-Coli. Jego popularność sprawiła jednak, że prezes oddziału Judy Lowell oraz członkowie bractwa Eta Psi zaczęli brać w tym udział.")	
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_ITEMSLICER",      "Meat Chunks and some hard fruits can be sliced using a Cleaver.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_ITEMSLICER_GOLD", "The Grand Cleaver has unlimited uses and can slice items quicker than a regular Cleaver.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_SAMMY1",          "Sammy can be found on the Seaside Island selling an array of rare items and ingredients that you can't find so easily out there.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_SAMMY2",          "Sammy's wares changes throughout the seasons and during special world occasions. Make sure to check his inventory every now and then to see what he has to offer.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_JAWSBREAKER",     "Jawsbreaker can be used to lure Rockjaws and Gnarwails, killing them instantly. But don't use it too close to yourself.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_METALBUCKET",     "What's better than a Bucket? A sturdy metal bucket that will not break when milking animals!")
 
 -- Chcemy, aby nasze niestandardowe wskazówki pojawiały się częściej.	
 SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})	

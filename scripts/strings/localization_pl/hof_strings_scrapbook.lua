@@ -77,6 +77,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BOUILLABAISSE = "Increased sleep resis
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOISTURE = "Dries off the survivor and grants them immunity to Wetness for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUGARBOMBS_EXPLOSIVE = "These Sugar Bombs are filled with an explosive taste!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EATER = "Makes food more soft and easy to eat for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRABKINGFEAST = "Increased damage against crabs for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ANTLION = "Satisfies the Antlion for a certain amount of time."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
@@ -117,7 +119,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Zimorodki często upuszczają Tropik
 
 -- Struktury, Różne i Miejsca Zainteresowania.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "Kupiec z odległego archipelagu. Chce wymieniać swoje najlepsze narzędzia kuchenne i inne przydatne przedmioty na pyszne posiłki.\n\nStarszy pragnie posiłku o ekstremalnej słodyczy lub masła zmieszanego z owocami morza. Nagrodzi cię odpowiednio.\n\nPrzyniesienie ulubionego posiłku Starszego odblokuje nowe oferty handlowe."
-STRINGS.SCRAPBOOK.SPECIALINFO.SAMMY = "Wygląda na to, że ktoś wprowadza się do tego starego i opuszczonego domu. Jego rzeczy są porozrzucane wszędzie.\n\nWracaj w następnej dużej aktualizacji i śledź wiadomości!"
+STRINGS.SCRAPBOOK.SPECIALINFO.SAMMY = "A merchant from an otherworldly realm. He somehow ended stranded on one of the Constant islands and has built a shop for bartering in the meantime.\n\nSammy trades an array of rare items throughout the seasons and during some special occasions. Make sure to check his wares every now and then to see what he has to offer.\n\nSammy will reward you handsomely if you bring a gift that reminds him of home."
 STRINGS.SCRAPBOOK.SPECIALINFO.SALTPOND = "Stawy bogate w sól. Stojaki na sól mogą być zainstalowane, aby łatwo pozyskiwać kamienie soli co kilka dni."
 STRINGS.SCRAPBOOK.SPECIALINFO.MEALGRINDER = "Stojąc blisko tego urządzenia, survivor otrzyma nowe składniki, które może mielić.\n\nMusisz stać przy kamieniu do mielenia za każdym razem, gdy chcesz zmielić nowy składnik."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKOTREE = "Stojąc blisko drzewa, oferuje to 35% ochrony przed deszczem i chłodzi survivors o niewielką ilość.\n\nTe drzewa herbaciane są zainfekowane małymi stworzonkami zwanymi Piko, które gotowe są do psot."
