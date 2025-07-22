@@ -49,7 +49,6 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_SERENITYCRATE",	"Watery Crates fished on the S
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WATERY_CRATE2",	"Watery Crates will always yield a Seaweed and extra loots. Keep destroying them to see what you can find!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_TUNACAN",			"The \"Ballphin Free\" Tuna will never spoil, unless you open it.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_CANNED_SOURCE",	"You can get Canned Foods and Drinks from Watery Crates and Sunken Chests. Happy treasure hunting!")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_TUNACAN_HERMIT",	"The Crabby Hermit might have a special reward, if you complete her tasks.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_CRABKING_LOOT",	"Out of Crab Meat? Crab King can be a reliable source for it.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_REGROWTH",		"Mod entities such as Plants, Trees, etc. Will regrow overtime if there are a low amount of them in the world.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_BOTTLE_SOUL",		"Wortox can store Souls inside Empty Bottles for later meals...")
@@ -78,6 +77,10 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_LUNARSOUP",       "\"I fear nothing when that 
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SPRINKLER",       "Tired of manually watering your crops? Build yourself a Garden Sprinkler today and say goodbye to manual labor!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_NUKASHINE",       "Lewis originally created Nukashine so he could afford a warehouse for his Nuka-Cola collection, but its popularity meant that chapter president Judy Lowell and members of the wider Eta Psi fraternity became involved.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_ITEMSLICER",      "Meat Chunks and some hard fruits can be sliced using a Cleaver.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_ITEMSLICER_GOLD", "The Grand Cleaver has unlimited uses and can slice items quicker than a regular Cleaver.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_SAMMY1",          "Sammy can be found on the Seaside Island selling an array of rare items.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_SAMMY2",          "Sammy's inventory changes throughout the seasons and during special world occasions. Make sure to check his inventory every now and then to see what he has to offer.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_SAMMY3",          "Sammy sells rare items and ingredients that you can't find so easily out there.")
 
 -- We want that our custom tips appears more often.
 SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})

@@ -42,6 +42,7 @@ STRINGS.BREWBOOK_DESC = "Przewodnik po browarnictwie w The Constant"
 
 STRINGS.UI.CRAFTING_FILTERS.MEALING = "Składniki spożywcze"
 STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP = "Zapasy Starszego"
+STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP = "Sammy's Emporium"
 
 STRINGS.UI.CRAFTING.NEEDSMEALING_ONE = "Użyj kamienia mielącego, aby zmielić ten składnik!"
 STRINGS.UI.CRAFTING.NEEDSMEALING_TWO = "Użyj kamienia mielącego, aby zmielić ten składnik!"
@@ -49,12 +50,17 @@ STRINGS.UI.CRAFTING.NEEDSMEALING_TWO = "Użyj kamienia mielącego, aby zmielić 
 STRINGS.UI.CRAFTING.NEEDSSERENITYSHOP_ONE = "Znajdź kogoś na tyle przyjaznego, by dokonać tej wymiany!"
 STRINGS.UI.CRAFTING.NEEDSSERENITYSHOP_TWO = "Znajdź kogoś na tyle przyjaznego, by dokonać tej wymiany!"
 
+STRINGS.UI.CRAFTING.NEEDSMEADOWSHOP = "Seek out the exotic merchant to make this trade!"
+STRINGS.UI.CRAFTING.NEEDSMEADOWSHOP_ONE = "Seek out the exotic merchant to make this trade!"
+STRINGS.UI.CRAFTING.NEEDSMEADOWSHOP_TWO = "Seek out the exotic merchant to make this trade!"
+
 STRINGS.UI.FOOD_TYPES.PREPAREDSOUL = "Dusza"
 STRINGS.UI.FOOD_TYPES.PREPAREDPOOP = "Okropne" -- Zachowane dla imitacji książki kucharskiej.
 STRINGS.UI.FOOD_TYPES.ALCOHOLIC = "Rarytasy" -- Zachowane dla imitacji Brewbooka.
 
 STRINGS.UI.CRAFTING.RECIPEACTION.SERENITYSHOP = "Wymień"
 STRINGS.UI.CRAFTING.RECIPEACTION.MEALGRINDER = "Zmień"
+STRINGS.UI.CRAFTING.RECIPEACTION.MEADOWSHOP = "Barter" -- Trade?
 
 STRINGS.ACTIONS.OPEN_CRAFTING.MEALING = "Miel w"
 
@@ -334,6 +340,7 @@ STRINGS.KYNO_SUGARFLYWINGS_NAMES =
 
 STRINGS.KYNO_CHICKEN_NAMES =
 {
+	-- Feel free to replace any chicken name with whatever name you want.
 	"Pałka", 
 	"Stokrotka", 
 	"Kot", 
@@ -370,6 +377,95 @@ STRINGS.KYNO_CHICKEN_NAMES =
 	"Brunetka", 
 	"Kwiat", 
 	"Słonecznik",
+}
+
+STRINGS.MEADOWISLANDTRADER = "Sammy\nThe %s"
+STRINGS.MEADOWISLANDTRADER_TITLES = 
+{
+	"Merchant", 
+	"Lucid Bog Merm", 
+	"Seasoned Merchant", 
+	"Exotic Merchant",
+	"Swamp Vendor",
+}
+
+STRINGS.MEADOWISLANDTRADER_OUTOFSTOCK =
+{
+	"I ain't got nothing to trade right now!",
+	"Nothing yet, come back later buddy.",
+	"Say pal, I need some time to restock.",
+}
+
+STRINGS.MEADOWISLANDTRADER_OUTOFSTOCKTRADES = 
+{
+	"Ya cleaned me out! Need time to restock.",
+	"That's all I got! Come back later",
+	"You lad, just cleared my good ol' stock. I need some time now.",
+	"Come back later for more bartering.",
+}
+    
+STRINGS.MEADOWISLANDTRADER_STARTTRADING = 
+{
+	"Why ain't you bought somethin' yet?",
+	"Hey, buddy, whatcha need?",
+	"I don't care what ya buy, just buy somethin'!",
+	"Hey there, fancy a little shopping?",
+	"Pick somethin'! My time's valuable! Kinda.",
+	"Whatchu want?",
+	"I could use some Carrot Cake right now, y'know?",
+}
+
+STRINGS.MEADOWISLANDTRADER_ENDTRADING_NOTRADES = 
+{
+	"What was I doing? ...Oh SEEDS HERE!",
+	"Maybe next time.",
+	"Nothin' interests you? Come see what I got later.",
+	"Don't waste my time then y'hear?",
+	"Oh well, can't please everyone!",
+	"Aaaaand stay gone!",
+	"You should try my mate Pipton then!",
+}
+
+STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE = 
+{
+	"Come back now, y'hear?",
+	"Thanks, stranger.",
+	"Pleasure!",
+	"Who're you again?",
+	"Always in a rush, you lot.",
+	"Alright, alright, get a move on.",
+	"Come back now! I get a little lonely! Heh, a lil' lonely.",
+}
+
+STRINGS.MEADOWISLANDTRADER_DOTRADE = 
+{
+	"Ahh, a great choice! Anythin' else tickle yer fancy?",
+	"Comin' right up! What else you need?",
+	"Nice, nice! Let's keep it goin'!",
+	"You have a nice taste for fancy stuff.",
+	"Wowe, somebody actually PAID for that?",
+	"Hah, I got that from Pipton's stockpile.",
+	"Hope that serves ya well.",
+	"C'mon, c'mon, keep buying!",
+	"Cash is for clowns, baby!",
+}
+
+STRINGS.MEADOWISLANDTRADER_DOTRADEHAT =
+{
+	"You want my hat? Err fine, you can have.",
+	"My ol' hat? Mhm, grab it.",
+	"Here take my cap, don't worry I have thousands of it.",
+	"I can always take another one from my stock at home.",
+	"You can have my cap. Come back later if ya want more!",
+}
+
+STRINGS.MEADOWISLANDTRADER_REFUSE =
+{
+	"Don't want that!",
+	"Nah, I'm fine.",
+	"Get me somethin' else, not that!",
+	"That won't do, matey!",
+	"Not interested, stay gone.",
 }
 
 STRINGS.CHARACTERS.GENERIC.ANNOUNCE_KYNO_COFFEEBUFF_START = "Szybkość!"
@@ -805,6 +901,7 @@ STRINGS.CHARACTERS.WALTER.ANNOUNCE_KYNO_CRABBUFF_END = "The hunt is over, girl."
 STRINGS.CHARACTERS.WANDA.ANNOUNCE_KYNO_CRABBUFF_END = "Sigh. My time has come to an end."
 
 STRINGS.NAMES.KYNO_ROE = "Ikra"
+STRINGS.RECIPE_DESC.KYNO_ROE = "Fish eggs ready for cooking."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_ROE = "Rybie dzieci."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_ROE = "Ughh! Okropne!!"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_ROE = "Jest jajkowe."
@@ -843,6 +940,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_ROE_COOKED = "Usmażyłem je. Hehe."
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_ROE_COOKED = "Całkiem ładnie pachnie."
 
 STRINGS.NAMES.KYNO_SHARK_FIN = "Płetwa rekina"
+STRINGS.RECIPE_DESC.KYNO_SHARK_FIN = "Fin ripped from an abominable shark."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_SHARK_FIN = "Smukła płetwa."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_SHARK_FIN = "Płetwa odpadła."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_SHARK_FIN = "Zgubiłem resztę rekina."
@@ -1229,6 +1327,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_MUSSEL_COOKED = "Maleńkie przekąski z 
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_MUSSEL_COOKED = "Wygląda smacznie."
 
 STRINGS.NAMES.DUG_KYNO_COFFEEBUSH = "Roślina Kawowa"
+STRINGS.RECIPE_DESC.DUG_KYNO_COFFEEBUSH = "A rare and exotic plant cherished by many."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.DUG_KYNO_COFFEEBUSH = "To roślina, którą mógłbym polubić."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Ten krzew kwitnie w pobliżu wulkanu!"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Krzew kawowy jest dumny, silny."
@@ -4263,6 +4362,7 @@ STRINGS.NAMES.KYNO_SEEDS_KIT_TURNIP = "Pakiet Nasion Rzepy"
 STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_TURNIP = "SPORA ILOŚĆ NASION RZEPY!"
 
 STRINGS.NAMES.KYNO_SEEDS_KIT_RICE = "Pakiet Nasion Ryżu"
+STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_RICE = "A bunch of rice seeds nicely packed."
 
 STRINGS.NAMES.KYNO_LOTUS_OCEAN = "Roślina Lotosu"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_LOTUS_OCEAN = "Nauka dobrze kwitnie w tym sezonie."
@@ -5059,6 +5159,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.EYEBALLSPAGHETTI = "Hahaha, to jedzenie jest 
 STRINGS.CHARACTERS.WANDA.DESCRIBE.EYEBALLSPAGHETTI = "Nie pora na to."
 
 STRINGS.NAMES.FORGETMELOTS_SEEDS = "Nasiona Niezapominajek"
+STRINGS.RECIPE_DESC.FORGETMELOTS_SEEDS = "Don't forget to plant them while you can!"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.FORGETMELOTS_SEEDS = "To nasiono."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.FORGETMELOTS_SEEDS = "Kilka nasion."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.FORGETMELOTS_SEEDS = "Nasiono za małe."
@@ -5078,6 +5179,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.FORGETMELOTS_SEEDS = "Tak, to nasiona!"
 STRINGS.CHARACTERS.WANDA.DESCRIBE.FORGETMELOTS_SEEDS = "Po prostu nasiona."
 
 STRINGS.NAMES.FIRENETTLES_SEEDS = "Nasiona Płonących Pokrzyw"
+STRINGS.RECIPE_DESC.FIRENETTLES_SEEDS = "Fiercy and flaming seeds."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.FIRENETTLES_SEEDS = "To nasiono."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.FIRENETTLES_SEEDS = "Kilka nasion."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.FIRENETTLES_SEEDS = "Nasiono za małe."
@@ -5097,6 +5199,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.FIRENETTLES_SEEDS = "Tak, to nasiona!"
 STRINGS.CHARACTERS.WANDA.DESCRIBE.FIRENETTLES_SEEDS = "Po prostu nasiona."
 
 STRINGS.NAMES.TILLWEED_SEEDS = "Nasiona Tilliwidu"
+STRINGS.RECIPE_DESC.TILLWEED_SEEDS = "Sprouts ready for planting."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.TILLWEED_SEEDS = "To nasiono."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.TILLWEED_SEEDS = "Kilka nasion."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.TILLWEED_SEEDS = "Nasiono za małe."
@@ -5825,6 +5928,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_CRABMEAT_DRIED = "Białe mięso? Ciekawe
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_CRABMEAT_DRIED = "Mięso kraba, idealne do wyrafinowanych potraw."
 
 STRINGS.NAMES.KYNO_CRABKINGMEAT = "Mięso Kraba Króla"
+STRINGS.RECIPE_DESC.KYNO_CRABKINGMEAT = "Noble meat from a rare crab specimen."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_CRABKINGMEAT = "Bez imitacji."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_CRABKINGMEAT = "Potrzebuje więcej ognia."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_CRABKINGMEAT = "To mięso małych szczypczyków."
@@ -5919,6 +6023,7 @@ STRINGS.CHARACTERS.WALTER.ANNOUNCE_PIKOTREE_TOOSMALL = "Back in the camp, they s
 STRINGS.CHARACTERS.WANDA.ANNOUNCE_PIKOTREE_TOOSMALL = "This will take some time, ah..."
 
 STRINGS.NAMES.KYNO_CHICKEN2 = "Kurczak"
+STRINGS.RECIPE_DESC.KYNO_CHICKEN2 = "Lay eggs when fed."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_CHICKEN2 = "To mały kurczak."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_CHICKEN2 = "To brzydki kurczak."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_CHICKEN2 = "Mały ptak, co gdacze."
@@ -6553,6 +6658,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_WATERY_CRATE = "Wygląda na coś, co pow
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_WATERY_CRATE = "Otwórzmy tę skrzynię."
 
 STRINGS.NAMES.KYNO_TUNACAN = "\"Ballphin Free\" Tuńczyk"
+STRINGS.RECIPE_DESC.KYNO_TUNACAN = "Preserved fish for an overseas journey."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_TUNACAN = "Skąd wzięła się ta puszka?"
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_TUNACAN = "Ach, ale lubię ją z Ballphinem!"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_TUNACAN = "Otworzę go gołymi rękami!"
@@ -6591,12 +6697,15 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_TUNACAN_OPEN = "Puszka z rybami! Co za p
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_TUNACAN_OPEN = "Zajęło to mniej czasu, niż się spodziewałam."
 
 STRINGS.NAMES.KYNO_TOMATOCAN = "Puszka Toma Korzeni"
+STRINGS.RECIPE_DESC.KYNO_TOMATOCAN = "For when you're feeling green."
 STRINGS.NAMES.KYNO_TOMATOCAN_OPEN = "Otwarta Puszka Toma Korzeni"
 
 STRINGS.NAMES.KYNO_BEANCAN = "Puszka Fasoli"
+STRINGS.RECIPE_DESC.KYNO_BEANCAN = "For your soup needs."
 STRINGS.NAMES.KYNO_BEANCAN_OPEN = "Otwarta Puszka Fasoli"
 
 STRINGS.NAMES.KYNO_MEATCAN = "Puszka Steku"
+STRINGS.RECIPE_DESC.KYNO_MEATCAN = "Canned meat that can last forever!"
 STRINGS.NAMES.KYNO_MEATCAN_OPEN = "Otwarta Puszka Steku"
 
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_CANNEDFOOD = "Skąd wzięła się ta puszka?"
@@ -6636,8 +6745,13 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_CANNEDFOOD_OPEN = "Puszka z rybą! Co za
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_CANNEDFOOD_OPEN = "Zajęło to mniej czasu, niż się spodziewałam."
 
 STRINGS.NAMES.KYNO_SODACAN = "Pomarańczowa Soda"
+STRINGS.RECIPE_DESC.KYNO_SODACAN = "Not sure if its real orange in there."
+
 STRINGS.NAMES.KYNO_COKECAN = "Coca-Cola"
+STRINGS.RECIPE_DESC.KYNO_COKECAN = "A classic soft drink."
+
 STRINGS.NAMES.KYNO_ENERGYCAN = "Napój Energetyczny"
+STRINGS.RECIPE_DESC.KYNO_ENERGYCAN = "Filled with powerful energy."
 
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_POP = "Czym jest ta substancja?"
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_POP = "Czy to woda ognista? To dziwne."
@@ -7281,6 +7395,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "To tylko drzewo
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "Po prostu drzewo herbaciane, z wiewiórkami."
 
 STRINGS.NAMES.KYNO_PIKO = "Piko"
+STRINGS.RECIPE_DESC.KYNO_PIKO = "Pesky little squirrels that steals everything."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_PIKO = "Ma nierówno pod sufitem."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_PIKO = "Mały, wiewiórczy cwaniak."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_PIKO = "Mała, słaba kuleczka."
@@ -7300,6 +7415,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_PIKO = "Ma więcej miejsca w policzkach 
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_PIKO = "Jesteś uroczym maluchem."
 
 STRINGS.NAMES.KYNO_PIKO_ORANGE = "Pomarańczowy Piko"
+STRINGS.RECIPE_DESC.KYNO_PIKO_ORANGE = "Pesky little squirrels that steals everything."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_PIKO_ORANGE = "Z jakiegoś powodu nabrałem ochoty na herbatę."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_PIKO_ORANGE = "Mały, wiewiórczy cwaniak."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_PIKO_ORANGE = "Mała, słaba, pomarańczowa kuleczka."
@@ -7379,6 +7495,58 @@ STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "Ktoś się tu wpro
 
 STRINGS.NAMES.KYNO_MEADOWISLAND_MERMCART = "Czyjeś Rzeczy"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "Wygląda jak czyjeś rzeczy. Lepiej ich nie ruszać."
+
+STRINGS.NAMES.KYNO_MEADOWISLAND_TRADER = "Sammy\nThe Merchant" -- Placeholder.
+STRINGS.NAMES.KYNO_MEADOWISLAND_TRADER_SCRAPBOOK = "Sammy"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "Hey! I remember you from that scary place."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "Oh good... We meet again."
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "Great to see you, buddy."
+STRINGS.CHARACTERS.WENDY.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "That imp thinks he can hide what he did from us."
+STRINGS.CHARACTERS.WX78.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "ITS YOU. THE FISH BARTERER THAT SOLD ME SEEDS ONCE"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "Looks like we've met again, dear."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "I wonder if he jumped with us in that portal when I wasn't looking."
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "Great, he somehow found a way to this realm."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "Its fine trader of all sorts."
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "Good to see you again, Sammy!"
+STRINGS.CHARACTERS.WINONA.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "How did he end up in here?"
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "Don't tell anyone I brought you here!"
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "Hello!"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "He seems decent enough to be a trader."
+STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "Finally find someone normal!"
+STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "Its my first time seeing a merm with bartering skills."
+STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_MEADOWISLAND_TRADER = "Have we met before? Please don't tell me."
+
+-- RECIPE_DESC for Sammy's Emporium.
+STRINGS.RECIPE_DESC.FOLIAGE = "Purple ferns."
+STRINGS.RECIPE_DESC.BARNACLE = "The ultimate hitchhikers."
+STRINGS.RECIPE_DESC.TALLBIRDEGG = "A giant egg from an one-eyed creature."
+STRINGS.RECIPE_DESC.BUTTER = "Believe or not, it is butter."
+STRINGS.RECIPE_DESC.MANDRAKE = "A living root with sleep properties."
+STRINGS.RECIPE_DESC.OCEANFISH_SMALL_6_INV = "Rare fish from autumn waters."
+STRINGS.RECIPE_DESC.OCEANFISH_MEDIUM_8_INV = "Rare fish from winter waters."
+STRINGS.RECIPE_DESC.OCEANFISH_SMALL_7_INV = "Rare fish from spring waters."
+STRINGS.RECIPE_DESC.OCEANFISH_SMALL_8_INV = "Rare fish from summer waters."
+STRINGS.RECIPE_DESC.SUCCULENT_PICKED = "Summer plants."
+STRINGS.RECIPE_DESC.MOON_CAP = "Mushrooms infused with the power of the Moon."
+
+STRINGS.NAMES.KYNO_SAMMYHAT = "Sammy's Cap"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_SAMMYHAT = "Makes me feel like a merchant."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_SAMMYHAT = "I had my own cap, dunno where it went though."
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_SAMMYHAT = "Little cap to protect Wolfgang head."
+STRINGS.CHARACTERS.WENDY.DESCRIBE.KYNO_SAMMYHAT = "Its dusty."
+STRINGS.CHARACTERS.WX78.DESCRIBE.KYNO_SAMMYHAT = "BARTERER HAT"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.KYNO_SAMMYHAT = "A simple and old hat."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.KYNO_SAMMYHAT = "Isn't this the cap of merchants and mailmen?"
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.KYNO_SAMMYHAT = "Not fit for a fine gentleman."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.KYNO_SAMMYHAT = "It wouldn't help during a battle."
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.KYNO_SAMMYHAT = "Yay! We got Sammy's hat for cheap!"
+STRINGS.CHARACTERS.WINONA.DESCRIBE.KYNO_SAMMYHAT = "Oh! I used to own one of those."
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.KYNO_SAMMYHAT = "It smells like fish."
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.KYNO_SAMMYHAT = "Dusty"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_SAMMYHAT = "It's a bit yet."
+STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_SAMMYHAT = "Cool hat from friend!"
+STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_SAMMYHAT = "I already have my own hat."
+STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_SAMMYHAT = "I don't think he will miss it."
 
 STRINGS.NAMES.KYNO_MEADOWISLAND_POND = "Przybrzeżna Kałuża"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_MEADOWISLAND_POND = "Kałuża pozostawiona przez przypływ."
@@ -7796,6 +7964,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_JUICE = "Dawno nie piłem takiego."
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_JUICE = "Wolę słodszy sok."
 
 STRINGS.NAMES.KYNO_POISON_FROGLEGS = "Trujące Żabie Nogi"
+STRINGS.RECIPE_DESC.KYNO_POISON_FROGLEGS = "May cause food poisoning."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_POISON_FROGLEGS = "Wygląda na toksyczne."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_POISON_FROGLEGS = "Nie jestem pewna, czy powinnam to jeść."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_POISON_FROGLEGS = "To niebezpieczne żabie części!"
@@ -8985,6 +9154,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_PINEAPPLEBUSH = "Nie dotykaj, dziewczyno
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_PINEAPPLEBUSH = "Widzę. Same kolce dookoła."
 
 STRINGS.NAMES.KYNO_PINEAPPLE = "Ananas"
+STRINGS.RECIPE_DESC.KYNO_PINEAPPLE = "Hardy and spiky fruit."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_PINEAPPLE = "Trzeba go rozłupać."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_PINEAPPLE = "Ałć!"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_PINEAPPLE = "Wolfgang zmiażdży go gołymi rękami."
@@ -9197,6 +9367,7 @@ STRINGS.CHARACTERS.WANDA.DESCRIBE.STRAWBERRYGRINDER = "Przynajmniej jest jadalne
 
 STRINGS.NAMES.NUKASHINE = "Nukashine"
 STRINGS.NAMES.NUKASHINE_SUGARFREE = "\"Bez cukru\" Nukashine"
+STRINGS.RECIPE_DESC.NUKASHINE_SUGARFREE = "Now without the risk of blackouts!"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.NUKASHINE = "Ugh, o nie. Mój umysł zamiera."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.NUKASHINE = "To będzie niezapomniana przygoda!"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.NUKASHINE = "Dziwny napój sprawia, że umysł Wolfgang'a wybucha."
@@ -9235,6 +9406,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.ANTSLOG = "Musisz zrobić, co trzeba, by prze
 STRINGS.CHARACTERS.WANDA.DESCRIBE.ANTSLOG = "To nie to, czego się spodziewałam."
 
 STRINGS.NAMES.KYNO_WORM_BONE = "Kość robaka"
+STRINGS.RECIPE_DESC.KYNO_WORM_BONE = "Definitely not regular bones."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_WORM_BONE = "Ha ha robaku, mam twoją kość."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_WORM_BONE = "Haha. Mam jego kość."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_WORM_BONE = "Wolfgang wygrywa."
@@ -9763,7 +9935,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_ITEMSLICER = "You'd be slicing with that
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_ITEMSLICER = "For cutting the toughest meat chunks."
 
 STRINGS.NAMES.KYNO_ITEMSLICER_GOLD = "Grand Cleaver"
-STRINGS.RECIPE_DESC.KYNO_ITEMSLICER_GOLD = "This fine cleaver can cut through anything!"
+STRINGS.RECIPE_DESC.KYNO_ITEMSLICER_GOLD = "This fine cleaver can quickly cut through anything!"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_ITEMSLICER_GOLD = "I like the cut of this tool."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Or I could just burn my way through."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Ah! Very good!"

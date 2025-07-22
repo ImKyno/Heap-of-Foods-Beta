@@ -20,12 +20,19 @@ local function ReplaceLoot(prefab, from, to)
     end
 end
 
--- Rockjaws Drops Shark Fin.
-AddPrefabPostInit("shark", function(inst)
-    if _G.TheWorld.ismastersim and not _G.KnownModIndex:IsModEnabled("workshop-2174681153") then
-        inst.components.lootdropper:AddChanceLoot("kyno_shark_fin", 1.00)
-    end
-end)
+local function SharkPostInit(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	if not _G.KnownModIndex:IsModEnabled("workshop-2174681153") then
+		if inst.components.lootdropper ~= nil then	
+			inst.components.lootdropper:AddChanceLoot("kyno_shark_fin", 1.00)
+		end
+	end
+end
+
+AddPrefabPostInit("shark", SharkPostInit)
 
 -- Cookie Cutters Drops Mussel.
 AddPrefabPostInit("cookiecutter", function(inst)

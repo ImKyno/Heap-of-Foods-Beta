@@ -18,6 +18,13 @@ local events =
             inst.sg:GoToState("dotrade", data)
         end
     end),
+	
+	EventHandler("dotradehat", function(inst, data)
+        if not inst.sg:HasStateTag("busy") then
+			inst.sg.statemem.keeprevealed = true
+            inst.sg:GoToState("dotradehat", data)
+        end
+    end),
 }
 
 local states = 
@@ -132,7 +139,6 @@ local states =
         onenter = function(inst)
             inst.components.locomotor:StopMoving()
 			inst.AnimState:PlayAnimation("trade_pst")
-			-- inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack")
 			
             if inst.sg.mem.didtrade then
                 inst:TryChatter("MEADOWISLANDTRADER_ENDTRADING_MADETRADE", math.random(#STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE), 1.5)
@@ -152,10 +158,8 @@ local states =
                 if inst.AnimState:IsCurrentAnimation("trade_pst") then
                     if inst.sg.mem.trading then
                         inst.AnimState:PlayAnimation("trade_pre")
-                        -- inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack", "talk")
                     else
                         inst.AnimState:PlayAnimation("idle_loop") -- idle_creepy
-                        -- inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack", "talk")
                     end
                 elseif inst.AnimState:IsCurrentAnimation("trade_pre") then
 					inst.sg.statemem.keeprevealed = true
@@ -184,7 +188,6 @@ local states =
         onenter = function(inst, data)
             inst.Physics:Stop()
             inst.AnimState:PlayAnimation("pig_take")
-			-- inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack")
 			
             if data and data.no_stock then
                 inst:DoChatter("MEADOWISLANDTRADER_OUTOFSTOCK_FROMTRADES", math.random(#STRINGS.MEADOWISLANDTRADER_OUTOFSTOCK_FROMTRADES), 15)
@@ -199,7 +202,6 @@ local states =
                 end
             end
 			
-            -- inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack", "talk")
 			inst:SetRevealed(true)
         end,
 		
@@ -219,22 +221,36 @@ local states =
     },
 	
 	State{
-		name = "curious",
+        name = "dotradehat",
 		tags = { "busy", "revealed" },
 		
-		onenter = function(inst, data)
-			inst.components.locomotor:StopMoving()
-			inst.AnimState:PlayAnimation("idle_creepy")
+        onenter = function(inst, data)
+            inst.Physics:Stop()
+            inst.AnimState:PlayAnimation("pig_take")
+			inst.sg.mem.didtrade = true -- Count this as a trade.
 			
-			inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack")
-			-- inst:SetRevealed(true)
-		end,
+			if data and data.no_stock then
+                inst:DoChatter("MEADOWISLANDTRADER_OUTOFSTOCK_FROMTRADES", math.random(#STRINGS.MEADOWISLANDTRADER_OUTOFSTOCK_FROMTRADES), 15)
+				inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack")
+            else
+                if not inst.sg.mem.didtrade then
+                    inst:DoChatter("MEADOWISLANDTRADER_DOTRADEHAT", math.random(#STRINGS.MEADOWISLANDTRADER_DOTRADEHAT), 1.5)
+					inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack")
+                else
+                    inst:TryChatter("MEADOWISLANDTRADER_DOTRADEHAT", math.random(#STRINGS.MEADOWISLANDTRADER_DOTRADEHAT), 1.5)
+					inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack")
+                end
+            end
+			
+			inst:SetHatless(true)
+			inst:SetRevealed(true)
+        end,
 		
-		events = 
+        events = 
 		{
             EventHandler("animover", function(inst)
-				-- inst.sg.statemem.keeprevealed = true
-                inst.sg:GoToState("idle")
+				inst.sg.statemem.keeprevealed = true
+                inst.sg:GoToState("trading") -- Let this state get out of trading.
             end),
         },
 		
@@ -243,46 +259,46 @@ local states =
 				inst:SetRevealed(false)
 			end
 		end,
-	},
+    },
 	
-	--[[
-    State{
-        name = "talking",
-		tags = { "canrotate", "revealed" },
-
-        onenter = function(inst, already_talking)
-            inst.components.locomotor:StopMoving()
+	State{
+        name = "refuse",
+		tags = { "busy", "revealed" },
+		
+        onenter = function(inst, data)
+            inst.Physics:Stop()
+            inst.AnimState:PlayAnimation("pig_reject")
 			
-			inst.AnimState:PlayAnimation("idle_loop")
-			
-            if not already_talking then
-                inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack", "talk")
+			if data and data.no_stock then
+                inst:DoChatter("MEADOWISLANDTRADER_OUTOFSTOCK_FROMTRADES", math.random(#STRINGS.MEADOWISLANDTRADER_OUTOFSTOCK_FROMTRADES), 15)
+				inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack")
+            else
+                if not inst.sg.mem.didtrade then
+                    inst:DoChatter("MEADOWISLANDTRADER_REFUSE", math.random(#STRINGS.MEADOWISLANDTRADER_REFUSE), 1.5)
+					inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack")
+                else
+                    inst:TryChatter("MEADOWISLANDTRADER_REFUSE", math.random(#STRINGS.MEADOWISLANDTRADER_REFUSE), 1.5)
+					inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack")
+                end
             end
-			
+
 			inst:SetRevealed(true)
         end,
-
+		
         events = 
 		{
             EventHandler("animover", function(inst)
-                inst.sg.statemem.keep_talking = true
 				inst.sg.statemem.keeprevealed = true
-				
-                inst.sg:GoToState("talking", true)
+                inst.sg:GoToState("trading") -- Let this state get out of trading.
             end),
         },
-
-        onexit = function(inst)
-            if not inst.sg.statemem.keep_talking then
-                inst.SoundEmitter:KillSound("talk")
-            end
-			
+		
+		onexit = function(inst)
 			if not inst.sg.statemem.keeprevealed then
 				inst:SetRevealed(false)
 			end
-        end,
+		end,
     },
-	]]--
 }
 
 CommonStates.AddWalkStates(states,
@@ -304,6 +320,6 @@ CommonStates.AddRunStates(states,
 
 CommonStates.AddSinkAndWashAshoreStates(states)
 CommonStates.AddVoidFallStates(states)
-CommonStates.AddSimpleActionState(states, "gohome", "pig_take", 4 * FRAMES, {"busy"})
+CommonStates.AddSimpleActionState(states, "gohome", "pig_take", 4 * FRAMES, { "busy" })
 
 return StateGraph("meadowislandtrader", states, events, "idle", actionhandlers)

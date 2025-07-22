@@ -340,6 +340,9 @@ AddStategraphPostInit("wilson", function(self)
 	end
 end)
 
+-- Klei made sharks don't actually eat food, they just remove it from the scene...
+-- code
+
 -- Brewbook Action Stategraph.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)
 	-- return (action.invobject ~= nil and action.invobject.components.brewbook ~= nil and "brewbook_open")

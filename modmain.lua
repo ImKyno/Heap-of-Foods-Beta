@@ -45,6 +45,7 @@ local hof_init_misc    =
 	"hof_containers",
 	"hof_tuning",
 	"hof_postinits_misc",
+	"hof_postinits_brains",
 }
 
 local hof_init_world   =

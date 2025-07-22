@@ -18,6 +18,7 @@ local prefabs =
 {
     "pondfish",
 	"froglegs",
+	"kyno_sammyhat",
 }
 
 local sounds = 
@@ -232,16 +233,16 @@ local function RerollWares(inst)
 	inst:AddWares(inst.WARES.ALWAYS[1])
 	-- inst:AddWares(inst.WARES.STARTER[1])
     
-	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_UNCOMMONS_ODDS then
+	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_UNCOMMONS_ODDS then -- 25%
 		inst:AddWares(inst.WARES.RANDOM_UNCOMMONS[math.random(#inst.WARES.RANDOM_UNCOMMONS)])
 	end
 	
-	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_RARES_ODDS then
+	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_RARES_ODDS then -- 5%
 		inst:AddWares(inst.WARES.RANDOM_RARES[math.random(#inst.WARES.RANDOM_RARES)])
 	end
 	
 	--[[
-	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_ULTRARARES_ODDS then
+	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_ULTRARARES_ODDS then -- 1%
 		inst:AddWares(inst.WARES.RANDOM_RARES[math.random(#inst.WARES.RANDOM_ULTRARARES)])
 	end
 	]]--
@@ -274,6 +275,7 @@ end
 
 local function Initialize(inst)
 	inst.inittask = nil
+	inst.hattask = nil
 	
 	-- inst:AddWares(inst.WARES.STARTER[1])
 	inst:RerollWares()
@@ -334,6 +336,20 @@ local function SetRevealed(inst, revealed)
 	end
 end
 
+local function SetHatless(inst, hatless)
+	if hatless then
+		inst:AddTag("hatless")
+		inst.AnimState:Hide("hat")
+		inst.AnimState:Hide("swap_hat")
+		inst.components.trader:Disable()
+	else
+		inst:RemoveTag("hatless")
+		inst.AnimState:Show("hat")
+		inst.AnimState:Show("swap_hat")
+		inst.components.trader:Enable()
+	end
+end
+
 local function OnEntitySleep(inst)
 	if inst.HiddenActionFn then
 		inst:HiddenActionFn()
@@ -341,23 +357,26 @@ local function OnEntitySleep(inst)
 end
 
 local function ShouldAcceptItem(inst, item)
-    if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" and not inst:HasTag("nohat") then
+    if item.components.inventoryitem ~= nil and item.prefab == "gorge_carrot_cake" and not inst:HasTag("hatless") then
         return true
     end
 end
 
+-- Sammy gives his hat to the player when gifted.
 local function OnGetItemFromPlayer(inst, giver, item)
-	local current = inst.components.inventory:GetEquippedItem(EQUIPSLOTS.HEAD)
+	local no_stock = not inst:HasStock()
+	local hat = SpawnPrefab("kyno_sammyhat")
 	
-	if current ~= nil then
+	if hat ~= nil then
 		if giver ~= nil and giver.components.inventory ~= nil then
-			giver.components.inventory:GiveItem(current, nil, inst:GetPosition())
+			giver.components.inventory:GiveItem(hat, nil, inst:GetPosition())
 		else
-			inst.components.inventory:DropItem(current)
+			inst.components.inventory:DropItem(hat)
 		end
 	end
-	
-	-- inst.sg:GoToState("dotradehat")
+
+	inst.sg:GoToState("dotradehat")
+	inst:PushEvent("dotrade", {no_stock = no_stock, })
 end
 
 local function OnRefuseItem(inst, item)
@@ -427,6 +446,7 @@ local function fn()
 	-- inst.SetIsLunarHailing = SetIsLunarHailing
 	inst.SetIsFullMoon = SetIsFullMoon
 	inst.SetRevealed = SetRevealed
+	inst.SetHatless = SetHatless
 	
 	inst:AddComponent("craftingstation")
 	inst:AddComponent("knownlocations")

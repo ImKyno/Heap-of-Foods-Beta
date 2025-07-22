@@ -2747,6 +2747,32 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"twigs", 3}}},
 	},
 	
+	jawsbreaker =
+	{
+		test = function(cooker, names, tags) return names.kyno_shark_fin and (tags.sweetener and tags.sweetener >= 2) end,
+		priority = 15,
+		foodtype = FOODTYPE.GOODIES,
+		secondaryfoodtype = FOODTYPE.MEAT, 
+		perishtime = nil,
+		health = -30,
+		hunger = 12.5,
+		sanity = 33,
+		cooktime = 1,
+		floater = {"med", nil, 0.65},
+		tags = {"honeyed", "jawsbreaker"},
+		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"honey", 3}}},
+		oneatenfn = function(inst, eater)
+			local JAWSBREAKER_TAGS = {"shark", "gnarwail"}
+			
+			-- See hof_stategraphs.lua for more info.
+			if eater:HasOneOfTags(JAWSBREAKER_TAGS) then
+				if eater.components.health ~= nil and not eater.components.health:IsDead() then
+					eater.components.health:Kill()
+				end
+			end
+		end,
+	},
+	
 	--[[
 	strawberrygrinder =
 	{
