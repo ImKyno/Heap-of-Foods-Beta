@@ -137,8 +137,11 @@ Layouts["SerenityIslandShop"] = StaticLayout.Get("map/static_layouts/hof_serenit
 -- The numbers below each turf represents them on the setpiece file.
 _G.SERENITYISLAND_GROUNDS        =
 {
-	WORLD_TILES.OCEAN_BRINEPOOL, WORLD_TILES.ROCKY, WORLD_TILES.SAVANNA, WORLD_TILES.QUAGMIRE_CITYSTONE, WORLD_TILES.QUAGMIRE_PARKFIELD
-	-- 1              			 -- 2               -- 3                 -- 4                            -- 5
+	WORLD_TILES.OCEAN_BRINEPOOL,     -- 1
+	WORLD_TILES.ROCKY,               -- 2
+	WORLD_TILES.SAVANNA,             -- 3
+	WORLD_TILES.QUAGMIRE_CITYSTONE,  -- 4
+	WORLD_TILES.QUAGMIRE_PARKFIELD,  -- 5
 }
 
 local hof_serenity_islands          =
@@ -163,8 +166,7 @@ end
 -- Ocean Wrecks Setpieces.
 _G.OCEANSETPIECE_GROUNDS         =
 {
-	WORLD_TILES.OCEAN_BRINEPOOL,
-	-- 1
+	WORLD_TILES.OCEAN_BRINEPOOL, -- 1
 }
 
 local hof_ocean_setpieces 		 =
@@ -192,13 +194,19 @@ end
 
 _G.MEADOWISLAND_GROUNDS          =
 {
-	WORLD_TILES.OCEAN_BRINEPOOL, WORLD_TILES.MONKEY_GROUND, WORLD_TILES.HOF_FIELDS, WORLD_TILES.HOF_TIDALMARSH,
-	-- 1              			 -- 2                       -- 3                    -- 4
+	WORLD_TILES.OCEAN_BRINEPOOL, -- 1
+	WORLD_TILES.MONKEY_GROUND,   -- 2
+	WORLD_TILES.HOF_FIELDS,      -- 3
+	WORLD_TILES.HOF_TIDALMARSH,  -- 4
+	WORLD_TILES.ROAD,            -- 5
+	WORLD_TILES.FARMING_SOIL,    -- 6
+	WORLD_TILES.FOREST,          -- 7
 }
 
 local hof_meadow_setpieces       =
 {
 	"hof_meadowisland1",
+	"hof_meadowisland2",
 }
 
 for i, layout in ipairs(hof_meadow_setpieces) do

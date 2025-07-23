@@ -232,7 +232,7 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 		return false
 	end
 	
-	local success = TryToAddLayout("hof_meadowisland1", 54)
+	local success = TryToAddLayout("hof_meadowisland2", 54) -- hof_meadowisland1
 	
 	if success then
 		print("Retrofitting for Heap of Foods Mod - Added the Seaside Island to the world.")

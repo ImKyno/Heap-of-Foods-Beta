@@ -331,7 +331,7 @@ AddTaskSetPreInitAny(function(tasksetdata)
 	end
     
 	tasksetdata.ocean_prefill_setpieces["hof_serenityisland1"]           = { count = 1 }
-	tasksetdata.ocean_prefill_setpieces["hof_meadowisland1"]             = { count = 1 }
+	tasksetdata.ocean_prefill_setpieces["hof_meadowisland2"]             = { count = 1 } -- hof_meadowisland1
 	
 	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates"]      = { count = math.random(min, max) } -- OCEANSETPIECE_COUNT
 	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates2"]     = { count = math.random(min, max) }
@@ -345,7 +345,7 @@ AddLevelPreInit("forest", function(level)
     level.required_setpieces = level.required_setpieces or {}
 	
 	table.insert(level.required_setpieces, "hof_serenityisland1")
-	table.insert(level.required_setpieces, "hof_meadowisland1")
+	table.insert(level.required_setpieces, "hof_meadowisland2") -- hof_meadowisland1
 	table.insert(level.required_setpieces, "hof_oceansetpiece_crates")
 	table.insert(level.required_setpieces, "hof_oceansetpiece_waterycress")
 	table.insert(level.required_setpieces, "hof_oceansetpiece_taroroot")

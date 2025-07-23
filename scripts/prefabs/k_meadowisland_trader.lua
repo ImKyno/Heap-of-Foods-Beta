@@ -16,8 +16,6 @@ local assets =
 
 local prefabs =
 {
-    "pondfish",
-	"froglegs",
 	"kyno_sammyhat",
 }
 
@@ -357,7 +355,7 @@ local function OnEntitySleep(inst)
 end
 
 local function ShouldAcceptItem(inst, item)
-    if item.components.inventoryitem ~= nil and item.prefab == "gorge_carrot_cake" and not inst:HasTag("hatless") then
+    if item.components.inventoryitem ~= nil and item:HasTag("sammyfood") and not inst:HasTag("hatless") then
         return true
     end
 end
@@ -393,6 +391,10 @@ local function fn()
 	
 	local shadow = inst.entity:AddDynamicShadow()
 	shadow:SetSize(1.5, .75)
+	
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("kyno_meadowisland_shop.tex")
+	minimap:SetPriority(2)
     
 	inst.Transform:SetFourFaced()
     MakeCharacterPhysics(inst, 50, .5)

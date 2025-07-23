@@ -606,6 +606,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CAKE,
 		potlevel = "med",
 		floater = {"med", nil, 0.65},
+		tags = {"sammyfood"},
 		card_def = {ingredients = {{"carrot", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 	},
 	
