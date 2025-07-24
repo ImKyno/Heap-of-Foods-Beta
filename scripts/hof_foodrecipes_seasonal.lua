@@ -41,7 +41,7 @@ local kyno_foods_seasonal =
 	
 	festive_cabbagerolls =
 	{
-		test = function(cooker, names, tags) return (names.kyno_waterycress and names.kyno_waterycress >= 2) and names.kyno_syrup and not tags.flour 
+		test = function(cooker, names, tags) return (names.kyno_waterycress and names.kyno_waterycress >= 2) and tags.syrup and not tags.flour 
 		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -79,7 +79,7 @@ local kyno_foods_seasonal =
 	
 	festive_goodgravy =
 	{
-		test = function(cooker, names, tags) return names.kyno_syrup and tags.flour and tags.meat 
+		test = function(cooker, names, tags) return tags.syrup and tags.flour and tags.meat 
 		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -138,7 +138,7 @@ local kyno_foods_seasonal =
 	
 	festive_mulledpunch = 
 	{
-		test = function(cooker, names, tags) return names.kyno_syrup and tags.sweetener and tags.frozen and not names.forgetmelots 
+		test = function(cooker, names, tags) return tags.syrup and tags.sweetener and tags.frozen and not names.forgetmelots 
 		and not tags.meat and not tags.berries and not tags.fruit and not names.cutlichen and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
@@ -195,7 +195,7 @@ local kyno_foods_seasonal =
 	
 	festive_pickledherring =
 	{
-		test = function(cooker, names, tags) return tags.fish and (names.kyno_spotspice and names.kyno_spotspice >= 2) and not tags.flour 
+		test = function(cooker, names, tags) return tags.fish and (tags.spotspice and tags.spotspice >= 2) and not tags.flour 
 		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -253,7 +253,7 @@ local kyno_foods_seasonal =
 	festive_roastedturkey =
 	{
 		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) 
-		and (names.kyno_spotspice and names.kyno_spotspice >= 2) and names.succulent_picked and not tags.fruit and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
+		and (tags.spotspice and tags.spotspice >= 2) and names.succulent_picked and not tags.fruit and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
@@ -348,7 +348,7 @@ local kyno_foods_seasonal =
 	-- Hallowed Nights Foods.
 	spooky_brain_noodles =
 	{
-		test = function(cooker, names, tags) return tags.flour and names.kyno_spotspice and tags.beanbug and tags.meat 
+		test = function(cooker, names, tags) return tags.flour and tags.spotspice and tags.beanbug and tags.meat 
 		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -495,7 +495,7 @@ local kyno_foods_seasonal =
 	spooky_tacodile =
 	{
 		test = function(cooker, names, tags) return tags.flour and (names.pepper or names.pepper_cooked) and
-		(names.onion or names.onion_cooked) and names.kyno_spotspice and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
+		(names.onion or names.onion_cooked) and tags.spotspice and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SLOW,

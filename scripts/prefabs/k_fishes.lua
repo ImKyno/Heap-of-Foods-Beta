@@ -95,6 +95,9 @@ local function commonfn(bank, build, char_anim_build, data)
     inst.entity:AddTransform()
     inst.entity:AddAnimState()
     inst.entity:AddNetwork()
+	
+	local shadow = inst.entity:AddDynamicShadow()
+	shadow:SetSize(1.5, .75)
 
     MakeInventoryPhysics(inst)
 

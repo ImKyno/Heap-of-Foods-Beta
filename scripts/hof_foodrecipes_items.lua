@@ -3,7 +3,7 @@ local kyno_foods_items =
 {
 	jawsbreaker =
 	{
-		test = function(cooker, names, tags) return names.kyno_shark_fin and (tags.sweetener and tags.sweetener >= 2) end,
+		test = function(cooker, names, tags) return names.kyno_shark_fin and tags.sugar and (tags.sweetener and tags.sweetener >= 2) end,
 		priority = 100,
 		foodtype = FOODTYPE.GOODIES,
 		secondaryfoodtype = FOODTYPE.MEAT, 
@@ -16,7 +16,7 @@ local kyno_foods_items =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_JAWSBREAKER,
 		floater = {"med", nil, 0.65},
 		potlevel = "low",
-		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"honey", 3}}},
+		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"kyno_sugar", 1}, {"honey", 2}}},
 	},
 }
 

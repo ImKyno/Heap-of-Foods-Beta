@@ -429,6 +429,22 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "BUCKET",
 	},
 	
+	kyno_bucket_metal  =
+	{
+		name           = "kyno_bucket_metal",
+		type           = "item",
+		subcat         = "tool",
+		tex            = "kyno_bucket_metal.tex",
+		prefab         = "kyno_bucket_metal",
+		bank           = "kyno_buckets",
+		build          = "kyno_buckets",
+		anim           = "idle_metal",
+		animoffsetbgy  = -70,
+		deps           = {"lightninggoat", "koalefant_summer", "koalefant_winter", "beefalo", 
+		"goatmilk", "kyno_milk_beefalo", "kyno_milk_koalefant"},
+		specialinfo    = "BUCKET",
+	},
+	
 	kyno_cookware_kit_hanger = 
 	{
 		name           = "kyno_cookware_kit_hanger",
@@ -7401,6 +7417,27 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -80,
 		deps           = preparedfood_deps,
 	},
+	
+	jawsbreaker        =
+	{
+		name           = "jawsbreaker",
+		type           = "food",
+		subcat         = "weapon",
+		tex            = "jawsbreaker.tex",
+		prefab         = "jawsbreaker",
+		healthvalue    = -30,
+		hungervalue    = 12.5,
+		sanityvalue    = 33,
+		foodtype       = "GOODIES",
+		stacksize      = 20,
+		bank           = "jawsbreaker",
+		build          = "jawsbreaker",
+		anim           = "idle",
+		animoffsetbgy  = -40,
+		deps           = {"cookpot", "archive_cookpot", "portablecookpot", "kyno_cookware_small", "kyno_cookware_big", "kyno_cookware_small_grill", 
+		"kyno_cookware_grill", "kyno_cookware_oven_small_casserole", "kyno_cookware_oven_casserole", "shark", "gnarwail"},
+		specialinfo    = "FOODEFFECTS_JAWSBREAKER",
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =
@@ -11418,18 +11455,19 @@ local HOF_SCRAPBOOK_THINGS =
 		animoffsetbgx  = 50,
 		animoffsetbgy  = 20,
 		deps           = {"kyno_meadowisland_trader"},
+		specialinfo    = "SAMMYHOUSE",
 	},
 	
 	kyno_meadowisland_mermcart =
 	{
 		name           = "kyno_meadowisland_mermcart",
-		type           = "POI",
 		tex            = "kyno_meadowisland_mermcart.tex",
 		prefab         = "kyno_meadowisland_mermcart",
 		bank           = "kyno_meadowisland_mermcart",
 		build          = "kyno_meadowisland_mermcart",
-		anim           = "idle1",
+		anim           = "empty",
 		deps           = {"kyno_meadowisland_trader"},
+		specialinfo    = "SAMMYWAGON",
 	},
 
 	kyno_mealgrinder   = 

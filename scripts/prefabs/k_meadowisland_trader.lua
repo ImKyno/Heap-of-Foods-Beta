@@ -37,6 +37,7 @@ local WARES =
 	{
 		{
 			["kyno_itemslicer_gold"]   = { recipe = "meadowislandtrader_kyno_itemslicer_gold",   min = 6,  max = 6,  limit = 6  },
+			["kyno_bucket_metal"]      = { recipe = "meadowislandtrader_kyno_bucket_metal",      min = 6,  max = 6,  limit = 6  },
 			["kyno_pineapple"]         = { recipe = "meadowislandtrader_kyno_pineapple",         min = 6,  max = 20, limit = 20 },
 			["kyno_tunacan"]           = { recipe = "meadowislandtrader_kyno_tunacan",           min = 2,  max = 5,  limit = 5  },
 			["kyno_piko"]              = { recipe = "meadowislandtrader_kyno_piko",              min = 1,  max = 3,  limit = 3  },
@@ -393,8 +394,8 @@ local function fn()
 	shadow:SetSize(1.5, .75)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("kyno_meadowisland_shop.tex")
-	minimap:SetPriority(2)
+	minimap:SetIcon("kyno_meadowisland_trader.tex")
+	minimap:SetPriority(5)
     
 	inst.Transform:SetFourFaced()
     MakeCharacterPhysics(inst, 50, .5)
@@ -417,7 +418,7 @@ local function fn()
 	inst.components.talker.font = TALKINGFONT
 	inst.components.talker.offset = Vector3(0, -400, 0)
 	inst.components.talker.name_colour = Vector3(130/255, 109/255, 57/255)
-	inst.components.talker.chaticon = "npcchatflair_wanderingtrader"
+	-- inst.components.talker.chaticon = "npcchatflair_meadowislandtrader"
 	inst.components.talker:MakeChatter()
 	
 	inst.entity:SetPristine()

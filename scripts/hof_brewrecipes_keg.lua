@@ -794,7 +794,7 @@ local kyno_foods_keg =
 
 	mead =
 	{
-		test = function(brewer, names, tags) return ((names.honey or 0) + (names.kyno_syrup or 0) == 2)
+		test = function(brewer, names, tags) return ((names.honey or 0) + (tags.syrup or 0) == 2)
 		and tags.frozen and not tags.veggie and not tags.fruit end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
@@ -855,7 +855,7 @@ local kyno_foods_keg =
 
 	piraterum =
 	{
-		test = function(brewer, names, tags) return names.durian and names.kyno_syrup and tags.frozen end,
+		test = function(brewer, names, tags) return names.durian and tags.syrup and tags.frozen end,
 		priority = 1,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = 9000000,
@@ -907,7 +907,7 @@ local kyno_foods_keg =
 
 	nukacola =
 	{
-		test = function(cooker, names, tags) return names.kyno_sugar and names.kyno_syrup and tags.frozen
+		test = function(cooker, names, tags) return names.kyno_sugar and tags.syrup and tags.frozen
 		and not (names.wormlight or names.wormlight_lesser) end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,

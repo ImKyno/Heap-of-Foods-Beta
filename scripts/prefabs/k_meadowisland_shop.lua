@@ -158,7 +158,7 @@ local function mainfn(oldshop, symbol, offset)
 	OnIsDay(inst, TheWorld.state.isday)
 	-- StartSpawning(inst)
 	
-	inst:DoTaskInTime(0, SetChimneyFX)
+	-- inst:DoTaskInTime(0, SetChimneyFX)
 	
 	-- Doing this for old worlds, new setpiece comes with the cart already.
 	if oldshop then

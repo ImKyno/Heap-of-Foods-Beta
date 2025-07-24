@@ -79,6 +79,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUGARBOMBS_EXPLOSIVE = "这些糖衣�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EATER = "使食物在一段时间内保持松软易食。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRABKINGFEAST = "Increased damage against crabs for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ANTLION = "Satisfies the Antlion for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_JAWSBREAKER = "Allures and kills Rockjaws and Gnarwails when thrown into the ocean. Does not work if too close."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含防腐粉末的料理可使腐败速率减半，并免除食用变质食物的惩罚。"
@@ -120,6 +121,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "翠鸟经常会从上空投下热带
 -- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "来自遥远群岛的商人。他愿意用最好的炊具和其他有用的物品换取美味佳肴。\n\n长老想吃极甜的食物或黄油海鲜。他会给你相应的奖励。\n\n把长老最喜欢的食物带过来会解锁更多交易"
 STRINGS.SCRAPBOOK.SPECIALINFO.SAMMY = "A merchant from an otherworldly realm. He somehow ended stranded on one of the Constant islands and has built a shop for bartering in the meantime.\n\nSammy trades an array of rare items throughout the seasons and during some special occasions. Make sure to check his wares every now and then to see what he has to offer.\n\nSammy will reward you handsomely if you bring a gift that reminds him of home."
+STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHOUSE = "Sammy's Emporium houses a variety of odd items and antiquities from distant lands and otherworldly realms."
+STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYWAGON = "Sammy's cherished wagon. Don't let its size fool you, a lot of things can be stored in there."
 STRINGS.SCRAPBOOK.SPECIALINFO.SALTPOND = "富含盐分的池塘。可以安装盐架，每隔几天就能轻松获得盐晶。"
 STRINGS.SCRAPBOOK.SPECIALINFO.MEALGRINDER = "站在这个装置附近，幸存者就能获得可以研磨的新原料。\n\n每次要研磨新的食材时，您都需要在碾磨石附近。"
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKOTREE = "站在树旁可为幸存者提供35%的防雨保护和少量降温。\n\n这些茶树上有一种被称为异食松鼠的小生物，它们随时准备制造麻烦。"

@@ -2,7 +2,7 @@ local kyno_warly_foods =
 {
 	musselbouillabaise =
 	{
-		test = function(cooker, names, tags) return (names.kyno_mussel and names.kyno_mussel >= 3) and tags.veggie and not tags.inedible 
+		test = function(cooker, names, tags) return (tags.mussel and tags.mussel >= 3) and tags.veggie and not tags.inedible 
 		and not tags.sweetener and not names.kyno_mussel_cooked end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
@@ -37,7 +37,7 @@ local kyno_warly_foods =
 	
 	gorge_meat_stew =
 	{
-		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 3) and names.kyno_spotspice and not (tags.monster and tags.monster > 1) end,
+		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 3) and tags.spotspice and not (tags.monster and tags.monster > 1) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,
@@ -54,7 +54,7 @@ local kyno_warly_foods =
 	gorge_cheeseburger =
 	{
 		test = function(cooker, names, tags) return tags.bread and tags.meat and tags.foliage and (tags.cheese or tags.dairy)
-		and not names.kyno_bacon and not names.kyno_bacon_cooked end,
+		and not tags.bacon end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,
@@ -230,7 +230,7 @@ local kyno_warly_foods =
 	
 	berrysundae =
 	{
-		test = function(cooker, names, tags) return tags.berries and tags.dairy and tags.frozen and names.kyno_syrup
+		test = function(cooker, names, tags) return tags.berries and tags.dairy and tags.frozen and tags.syrup
 		and not tags.meat and not tags.veggie and not tags.inedible and not tags.egg end,
 		priority = 10,
 		foodtype = FOODTYPE.GOODIES,
@@ -253,7 +253,7 @@ local kyno_warly_foods =
 	
 	cinnamonroll =
 	{
-		test = function(cooker, names, tags) return tags.flour and names.kyno_syrup and names.kyno_spotspice and tags.butter end,
+		test = function(cooker, names, tags) return tags.flour and tags.syrup and tags.spotspice and tags.butter end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FAST,
@@ -269,7 +269,7 @@ local kyno_warly_foods =
 	
 	milkshake_prismatic =
 	{
-		test = function(cooker, names, tags) return tags.milk and tags.berries and (names.kyno_syrup and names.kyno_syrup >= 2) end,
+		test = function(cooker, names, tags) return tags.milk and tags.berries and (tags.syrup and tags.syrup >= 2) end,
 		priority = 10,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FAST,
@@ -287,7 +287,7 @@ local kyno_warly_foods =
 	
 	nachos =
 	{
-		test = function(cooker, names, tags) return names.kyno_oil and names.kyno_spotspice and tags.cheese and names.corn and not names.corn_cooked end,
+		test = function(cooker, names, tags) return names.kyno_oil and tags.spotspice and tags.cheese and names.corn and not names.corn_cooked end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SLOW,
@@ -344,7 +344,7 @@ local kyno_warly_foods =
 	meatskillet =
 	{
 		test = function(cooker, names, tags) return tags.meat and (names.pepper or names.pepper_cooked) and 
-		(names.garlic or names.garlic_cooked) and names.kyno_spotspice end,
+		(names.garlic or names.garlic_cooked) and tags.spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,

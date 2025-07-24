@@ -49,7 +49,7 @@ local function SortAfter(a, b, filter_name)
 end
 
 -- Sammy The Merchant.
-AddRecipe2("meadowislandtrader_kyno_itemslicer_gold", {Ingredient("goldnugget", 10)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_kyno_itemslicer_gold", {Ingredient("goldnugget", 20)}, TECH.LOST,
 	{
 		limitedamount       = true, 
 		nounlock            = true, 
@@ -59,6 +59,20 @@ AddRecipe2("meadowislandtrader_kyno_itemslicer_gold", {Ingredient("goldnugget", 
 		product             = "kyno_itemslicer_gold",
 		atlas               = ModAtlas,
 		image               = "kyno_itemslicer_gold.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+AddRecipe2("meadowislandtrader_kyno_bucket_metal", {Ingredient("antliontrinket", 1)}, TECH.LOST,
+	{
+		limitedamount       = true, 
+		nounlock            = true, 
+		no_deconstruction   = true,
+		actionstr           = "MEADOWSHOP", 
+		sg_state            = "give", 
+		product             = "kyno_bucket_metal",
+		atlas               = ModAtlas,
+		image               = "kyno_bucket_metal.tex",
 	},
 	{"CRAFTING_STATION"}
 )
