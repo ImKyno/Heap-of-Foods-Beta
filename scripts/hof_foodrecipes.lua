@@ -68,25 +68,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"twigs", 3}}},
 		oneatenfn = function(inst, eater)
-			SpawnPrefab("krampuswarning_lvl3").Transform:SetPosition(inst.Transform:GetWorldPosition())
-			local function KrampusSpawnPoint(pt)
-				if not TheWorld.Map:IsAboveGroundAtPoint(pt:Get()) then
-					pt = FindNearbyLand(pt, 1) or pt
-				end
-				
-				local offset = FindWalkableOffset(pt, math.random() * 2 * PI, 15, 12, true)
-				if offset ~= nil then
-					offset.x = offset.x + pt.x
-					offset.z = offset.z + pt.z
-					return offset
-				end
-			end
-			
-			local spawn_pt = KrampusSpawnPoint(eater:GetPosition())
-			if spawn_pt ~= nil then
-				local krampus = SpawnPrefab("krampus")
-				krampus.Physics:Teleport(spawn_pt:Get())
-			end
+			OnFoodNaughtiness(inst, eater)
 		end,
 	},
 	
@@ -2695,23 +2677,6 @@ local kyno_foods =
 		card_def = {ingredients = {{"drumstick", 1}, {"kyno_flour", 1}, {"kyno_oil", 1}, {"kyno_spotspice", 1}}},
 	},
 	
-	lazydessert =
-	{
-		test = function(cooker, names, tags) return names.townportaltalisman and names.rocks and tags.sweetener end,
-		priority = 1,
-		foodtype = FOODTYPE.GOODIES,
-		perishtime = nil,
-		rocktribute = 18,
-		health = -30,
-		hunger = 12.5,
-		sanity = 0,
-		cooktime = 2,
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ANTLION,
-		floater = TUNING.HOF_FLOATER,
-		tags = {"honeyed", "nospice"},
-		card_def = {ingredients = {{"townportaltalisman", 1}, {"rocks", 2}, {"honey", 1}}},
-	},
-	
 	crabkingfeast =
 	{
 		test = function(cooker, names, tags) return names.kyno_crabkingmeat and tags.spotspice and names.corn
@@ -2726,6 +2691,7 @@ local kyno_foods =
 		scale = 2,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRAB,
 		floater = TUNING.HOF_FLOATER,
+		tags = {"masterfood"},
 		card_def = {ingredients = {{"kyno_crabkingmeat", 1}, {"kyno_spotspice", 1}, {"corn", 1}, {"onion", 1}}},
 		prefabs = { "kyno_crabbuff" },
 		oneatenfn = function(inst, eater)
@@ -2774,10 +2740,98 @@ local kyno_foods =
 		health = 5,
 		hunger = 15, 
 		sanity = 33,
-		cooktime = .8,
+		cooktime = 0.8,
 		scale = .9,
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_rice", 2}, {"goatmilk", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	sharksushi =
+	{
+		test = function(cooker, names, tags) return names.kyno_shark_fin and ((names.kyno_rice or 0) + (names.kyno_rice_cooked or 0) >= 2) end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_MED,
+		health = 20,
+		hunger = 40,
+		sanity = -10,
+		cooktime = 0.5,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NAUGHTINESS,
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"kyno_rice", 3}}},
+		oneatenfn = function(inst, eater)
+			OnFoodNaughtiness(inst, eater)
+		end,
+	},
+	
+	wobsterbreaded =
+	{
+		test = function(cooker, names, tags) return names.wobster_sheller_land and (names.tomato or names.tomato_cooked) and tags.flour and
+		names.kyno_oil end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 60,
+		hunger = 50,
+		sanity = 10,
+		cooktime = 0.7,
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"tomato", 1}, {"kyno_flour", 1}, {"kyno_oil", 1}}},
+	},
+	
+	lazypurrito =
+	{
+		test = function(cooker, names, tags) return tags.beanbug and (names.kyno_rice or names.kyno_rice_cooked) and tags.flour end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 20,
+		hunger = 62.5,
+		sanity = -15,
+		cooktime = 1.3,
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_beanbugs", 1}, {"kyno_flour", 1}, {"kyno_rice", 2}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater.SoundEmitter ~= nil then
+				eater.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/death", "lazypurrit", 0.5)
+			else
+				inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/death", "lazypurrit", 0.5)
+			end
+		end,
+	},
+	
+	horchata = 
+	{
+		test = function(cooker, names, tags) return (names.kyno_rice or names.kyno_rice_cooked) and tags.dairy and tags.sweetener
+		and tags.frozen end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_FAST,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 40,
+		hunger = 20,
+		sanity = 5,
+		cooktime = 1,
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_rice", 1}, {"goatmilk", 1}, {"honey", 1}, {"ice", 1}}},
+	},
+	
+	wobstercocktail =
+	{
+		test = function(cooker, names, tags) return names.wobster_sheller_land and (names.tomato or names.tomato_cooked) and
+		(names.pepper or names.pepper_cooked) and not tags.inedible end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_FASTISH,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 20,
+		hunger = 32.5,
+		sanity = 60,
+		cooktime = 1.1,
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"tomato", 1}, {"pepper", 2}}},
 	},
 	--[[
 	strawberrygrinder =

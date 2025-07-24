@@ -1,11 +1,12 @@
 -- Common Dependencies.
-local _G 				= GLOBAL
-local require 			= _G.require
-local resolvefilepath 	= _G.resolvefilepath
-local ACTIONS 			= _G.ACTIONS
-local STRINGS			= _G.STRINGS
-local SpawnPrefab		= _G.SpawnPrefab
-local cooking           = require("cooking")
+local _G              = GLOBAL
+local require         = _G.require
+local resolvefilepath = _G.resolvefilepath
+local ACTIONS         = _G.ACTIONS
+local STRINGS         = _G.STRINGS
+local SpawnPrefab     = _G.SpawnPrefab
+local cooking         = require("cooking")
+local UpvalueHacker   = require("hof_upvaluehacker")
 
 require("hof_debugcommands")
 
@@ -396,7 +397,6 @@ AddComponentPostInit("edible", function(self, inst)
 		return multiplier * self.hungervalue
 	end
 end)
-
 -- Speed boost for the White Stone Road.
 AddComponentPostInit("locomotor", function(inst)
 	local QUGSM = inst.UpdateGroundSpeedMultiplier
@@ -596,7 +596,7 @@ end
 
 AddPrefabPostInit("player_classified", PlayerClassifiedPostInit)
 
--- From Island Adventures https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
+-- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 -- Hope they don't smack and bonk my head...
 local FishingRod = require("components/fishingrod")
 function FishingRod:OnUpdate()

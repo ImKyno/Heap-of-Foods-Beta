@@ -16,7 +16,7 @@ local DefaultAtlas1    = "images/inventoryimages1.xml"
 local ModAtlas         = "images/inventoryimages/hof_inventoryimages.xml"
 
 -- For sorting recipe.
--- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
+-- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 local function SortRecipe(a, b, filter_name, offset)
     local filter = _G.CRAFTING_FILTERS[filter_name]
     if filter and filter.recipes then

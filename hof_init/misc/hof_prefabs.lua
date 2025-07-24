@@ -43,6 +43,7 @@ PrefabFiles =
 	"k_foodbuff_defense",
 	"k_foodbuff_fear",
 	"k_foodbuff_fire",
+	"k_foodbuff_fireimmunity",
 	"k_foodbuff_fishing",
 	"k_foodbuff_freeze",
 	"k_foodbuff_frog",

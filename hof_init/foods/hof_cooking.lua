@@ -38,7 +38,8 @@ AddIngredientValues({"tillweed"},               {veggie     = 0.5,  weed      = 
 AddIngredientValues({"wagpunk_bits"}, 			{junk       = 1})
 AddIngredientValues({"butter"},                 {fat        = 1,    dairy     = 1,   butter   = 1})
 AddIngredientValues({"baconeggs"},              {prepfood   = 1}) -- Could use meat tag, but I don't want people using this as "filler" lol.
-AddIngredientValues({"townportaltalisman"},     {rocks      = 1,    elemental = 1})
+AddIngredientValues({"townportaltalisman"},     {rocks      = 1,    elemental = 1,   boss     = 1})
+AddIngredientValues({"lavae_egg"},              {boss       = 1,    lavaegg   = 1})
 
 -- New Mod Crock Pot Ingredients.
 AddIngredientValues({"kyno_coffeebeans"}, 		{seeds      = 1}, 	 		  				  true)

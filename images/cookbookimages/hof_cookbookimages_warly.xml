@@ -14,14 +14,16 @@
 		<Element name="jellybean_hunger.tex" u1="0.126" u2="0.249" v2="0.499" v1="0.251" variant="" />
 		<Element name="jellybean_sanity.tex" u1="0.251" u2="0.374" v2="0.499" v1="0.251" variant="" />
 		<Element name="jellybean_super.tex" u1="0.376" u2="0.499" v2="0.499" v1="0.251" variant="" />
-		<Element name="meatskillet.tex" u1="0.001" u2="0.124" v2="0.249" v1="0.001" variant="" />
-		<Element name="milkshake_prismatic.tex" u1="0.126" u2="0.249" v2="0.249" v1="0.001" variant="" />
-		<Element name="musselbouillabaise.tex" u1="0.251" u2="0.374" v2="0.249" v1="0.001" variant="" />
-		<Element name="nachos.tex" u1="0.376" u2="0.499" v2="0.249" v1="0.001" variant="" />
-		<Element name="risotto.tex" u1="0.501" u2="0.624" v2="0.999" v1="0.751" variant="" />
-		<Element name="sweetpotatosouffle.tex" u1="0.626" u2="0.749" v2="0.999" v1="0.751" variant="" />
-		<Element name="tom_kha_soup.tex" u1="0.751" u2="0.874" v2="0.999" v1="0.751" variant="" />
-		<Element name="warlyicedtea.tex" u1="0.876" u2="0.999" v2="0.999" v1="0.751" variant="" />
-		<Element name="warlytea.tex" u1="0.501" u2="0.624" v2="0.749" v1="0.501" variant="" />
+		<Element name="lavaeeggboiled.tex" u1="0.001" u2="0.124" v2="0.249" v1="0.001" variant="" />
+		<Element name="lazydessert.tex" u1="0.126" u2="0.249" v2="0.249" v1="0.001" variant="" />
+		<Element name="meatskillet.tex" u1="0.251" u2="0.374" v2="0.249" v1="0.001" variant="" />
+		<Element name="milkshake_prismatic.tex" u1="0.376" u2="0.499" v2="0.249" v1="0.001" variant="" />
+		<Element name="musselbouillabaise.tex" u1="0.501" u2="0.624" v2="0.999" v1="0.751" variant="" />
+		<Element name="nachos.tex" u1="0.626" u2="0.749" v2="0.999" v1="0.751" variant="" />
+		<Element name="risotto.tex" u1="0.751" u2="0.874" v2="0.999" v1="0.751" variant="" />
+		<Element name="sweetpotatosouffle.tex" u1="0.876" u2="0.999" v2="0.999" v1="0.751" variant="" />
+		<Element name="tom_kha_soup.tex" u1="0.501" u2="0.624" v2="0.749" v1="0.501" variant="" />
+		<Element name="warlyicedtea.tex" u1="0.626" u2="0.749" v2="0.749" v1="0.501" variant="" />
+		<Element name="warlytea.tex" u1="0.751" u2="0.874" v2="0.749" v1="0.501" variant="" />
 	</Elements>
 </Atlas>

@@ -184,3 +184,28 @@ function OnFoodTeleport(inst, eater)
 		TeleportStart(eater, inst, caster, loctarget, target_in_ocean)
 	end
 end
+
+function OnFoodNaughtiness(inst, eater)
+	SpawnPrefab("krampuswarning_lvl3").Transform:SetPosition(inst.Transform:GetWorldPosition())
+			
+	local function KrampusSpawnPoint(pt)
+		if not TheWorld.Map:IsAboveGroundAtPoint(pt:Get()) then
+			pt = FindNearbyLand(pt, 1) or pt
+		end
+				
+		local offset = FindWalkableOffset(pt, math.random() * 2 * PI, 15, 12, true)
+		
+		if offset ~= nil then
+			offset.x = offset.x + pt.x
+			offset.z = offset.z + pt.z
+			return offset
+		end
+	end
+			
+	local spawn_pt = KrampusSpawnPoint(eater:GetPosition())
+	
+	if spawn_pt ~= nil then
+		local krampus = SpawnPrefab("krampus")
+		krampus.Physics:Teleport(spawn_pt:Get())
+	end
+end

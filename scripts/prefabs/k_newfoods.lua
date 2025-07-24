@@ -163,9 +163,9 @@ local function MakePreparedFood(data)
 		inst:AddComponent("edible")
 		inst.components.edible.healthvalue = data.health
 		inst.components.edible.hungervalue = data.hunger
+		inst.components.edible.sanityvalue = data.sanity or 0
 		inst.components.edible.foodtype = data.foodtype or FOODTYPE.GENERIC
 		inst.components.edible.secondaryfoodtype = data.secondaryfoodtype or nil
-		inst.components.edible.sanityvalue = data.sanity or 0
 		inst.components.edible.temperaturedelta = data.temperature or 0
 		inst.components.edible.temperatureduration = data.temperatureduration or 0
 		inst.components.edible.nochill = data.nochill or nil

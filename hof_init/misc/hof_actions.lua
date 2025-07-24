@@ -433,7 +433,7 @@ AddComponentAction("INVENTORY", "learnablerecipecard", function(inst, doer, acti
 	table.insert(actions, ACTIONS.LEARNRECIPECARD)
 end)
 
--- From Island Adventures https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
+-- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 -- Hope they don't smack and bonk my head...
 local _FISHfn = ACTIONS.FISH.fn
 function ACTIONS.FISH.fn(act, ...)
