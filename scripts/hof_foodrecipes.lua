@@ -2814,7 +2814,7 @@ local kyno_foods =
 		sanity = 5,
 		cooktime = 1,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"honeyed", "drinkable_food"},
 		card_def = {ingredients = {{"kyno_rice", 1}, {"goatmilk", 1}, {"honey", 1}, {"ice", 1}}},
 	},
 	
@@ -2852,6 +2852,68 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		tags = {"honeyed", "drinkable_food"},
 		card_def = {ingredients = {{"pomegranate", 1}, {"ice", 1}, {"honey", 2}}},
+	},
+	
+	pomegranatepie =
+	{
+		test = function(cooker, names, tags) return (names.pomegranate or names.pomegranate_cooked) and tags.sweetener and tags.flour end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = 40,
+		hunger = 32.5,
+		sanity = 20,
+		cooktime = 1.6,
+		potlevel = "high",
+		scale = 1,
+		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
+		card_def = {ingredients = {{"pomegranate", 2}, {"kyno_flour", 1}, {"honey", 1}}},
+	},
+	
+	pineapplecake =
+	{
+		test = function(cooker, names, tags) return (names.kyno_pineapple_halved or names.kyno_pineapple_cooked) and tags.egg
+		and tags.flour and tags.sweetener end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 20,
+		hunger = 25,
+		sanity = 40,
+		cooktime = 1.8,
+		scale = 1,
+		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
+		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"bird_egg", 1}, {"kyno_flour", 1}, {"honey", 1}}},
+	},
+	
+	pasty_meat =
+	{
+		test = function(cooker, names, tags) return tags.meat and tags.flour and tags.veggie and names.kyno_oil end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_MED,
+		health = 20,
+		hunger = 62.5,
+		sanity = 5,
+		cooktime = .7,
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"meat", 1}, {"kyno_flour", 1}, {"carrot", 1}, {"kyno_oil", 1}}},
+	},
+	
+	pasty_cheese =
+	{
+		test = function(cooker, names, tags) return tags.cheese and tags.flour and tags.spotspice and names.kyno_oil end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 40,
+		hunger = 37.5,
+		sanity = 33,
+		cooktime = .7,
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"cheese_yellow", 1}, {"kyno_flour", 1}, {"kyno_spotspice", 1}, {"kyno_oil", 1}}},
 	},
 	
 	--[[

@@ -10989,7 +10989,7 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "4",
+            ["data.growable.stage"] = "5",
             ["scenario"] = "sammy_farmplot"
           }
         },
@@ -11038,7 +11038,7 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "4",
+            ["data.growable.stage"] = "5",
             ["scenario"] = "sammy_farmplot"
           }
         },
@@ -11066,7 +11066,7 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "4",
+            ["data.growable.stage"] = "5",
             ["scenario"] = "sammy_farmplot"
           }
         },
@@ -11205,7 +11205,7 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "4",
+            ["data.growable.stage"] = "5",
             ["scenario"] = "sammy_farmplot"
           }
         },

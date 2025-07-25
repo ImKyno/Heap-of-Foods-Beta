@@ -4,6 +4,7 @@ function c_hofingredients()
 	
     if player ~= nil then
         c_select(player)
+		
         player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
 		c_give("cookbook",         nil, true)
         c_give("kyno_syrup", 		40, true)
@@ -39,6 +40,7 @@ function c_hofswfoods()
 	
     if player ~= nil then
         c_select(player)
+		
 		c_give("coffee", 				40, true)
 		c_give("bisque",           	 	40, true)
 		c_give("jellyopop",         	40, true)
@@ -56,6 +58,7 @@ function c_hofhamfoods()
 	
     if player ~= nil then
         c_select(player)
+		
 		c_give("feijoada",				40, true)
 		c_give("gummy_cake",			40, true)
 		c_give("hardshell_tacos", 		40, true)
@@ -73,6 +76,7 @@ function c_hofotherfoods()
 	
 	if player ~= nil then
 		c_select(player)
+		
 		c_give("bubbletea",				40, true)
 		c_give("frenchonionsoup",		40, true)
 		c_give("slaw",					40, true)
@@ -95,6 +99,7 @@ function c_hofveggies()
 	
     if player ~= nil then
         c_select(player)
+		
         player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
 		c_give("kyno_aloe",               40, true)
 		c_give("kyno_aloe_cooked",        40, true)
@@ -133,6 +138,7 @@ function c_hoftestcoffee()
 	
     if player ~= nil then
         c_select(player)
+		
 		c_give("shovel", 			   	   nil, true)
 		c_give("dug_kyno_coffeebush",		10, true)
 		c_give("ash",                       40, true)
@@ -148,8 +154,10 @@ function c_hofcrockpots()
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
 	local sector = 2*math.pi/n
+	
 	for i = 1, n, 1 do
 		local crockpot = SpawnPrefab("cookpot")
+		
 		if crockpot then
 			crockpot.Transform:SetPosition(x + 5 * math.cos(i * sector), y, z + 5 * math.sin(i * sector))
 		end
@@ -163,37 +171,14 @@ function c_hofwarlycrockpots()
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
 	local sector = 2*math.pi/n
+	
 	for i = 1, n, 1 do
 		local crockpot = SpawnPrefab("portablecookpot")
+		
 		if crockpot then
 			crockpot.Transform:SetPosition(x + 4 * math.cos(i * sector), y, z + 4 * math.sin(i * sector))
 		end
 	end
-end
-
--- Testing Setpieces.
-function c_hoflayout(name, offset)
-	local player = ConsoleCommandPlayer()
-	
-	local obj_layout = require("map/object_layout")
-    local entities = {}
-    local map_width, map_height = TheWorld.Map:GetSize()
-    local add_fn = {
-        fn=function(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
-        print("adding, ", prefab, points_x[current_pos_idx], points_y[current_pos_idx])
-            local x = (points_x[current_pos_idx] - width/2.0)*TILE_SCALE
-            local y = (points_y[current_pos_idx] - height/2.0)*TILE_SCALE
-            x = math.floor(x*100)/100.0
-            y = math.floor(y*100)/100.0
-            SpawnPrefab(prefab).Transform:SetPosition(x, 0, y)
-        end,
-        args={entitiesOut=entities, width=map_width, height=map_height, rand_offset = false, debug_prefab_list=nil}
-    }
-
-    local x, y, z = ConsoleWorldPosition():Get()
-    x, z = TheWorld.Map:GetTileCoordsAtPoint(x, y, z)
-    offset = offset or 3
-    obj_layout.Place({math.floor(x) - 3, math.floor(z) - 3}, name, add_fn, nil, TheWorld.Map)
 end
 
 -- Quick Test on Serenity Archipelago stuff.
@@ -202,7 +187,9 @@ function c_hofserenityisland()
 	
     if player ~= nil then
         c_select(player)
+		
 		local islandshop = c_findnext("kyno_serenityisland_shop")
+		
 		player.Physics:Teleport(islandshop.Transform:GetWorldPosition())
         player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
 		c_give("kyno_slaughtertool",			 nil, true)
@@ -223,7 +210,9 @@ function c_hofmeadowisland()
 	
     if player ~= nil then
         c_select(player)
-		local islandpond = c_findnext("kyno_meadowisland_pond")
+		
+		local islandpond = c_findnext("kyno_meadowisland_sammyhouse")
+		
 		player.Physics:Teleport(islandpond.Transform:GetWorldPosition())
         player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
 		c_give("kyno_piko",        nil, true) 
@@ -240,8 +229,10 @@ function c_hofkegs()
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
 	local sector = 2*math.pi/n
+	
 	for i = 1, n, 1 do
 		local crockpot = SpawnPrefab("kyno_woodenkeg")
+		
 		if crockpot then
 			crockpot.Transform:SetPosition(x + 5 * math.cos(i * sector), y, z + 5 * math.sin(i * sector))
 		end
@@ -254,8 +245,10 @@ function c_hofjars()
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
 	local sector = 2*math.pi/n
+	
 	for i = 1, n, 1 do
 		local crockpot = SpawnPrefab("kyno_preservesjar")
+		
 		if crockpot then
 			crockpot.Transform:SetPosition(x + 5 * math.cos(i * sector), y, z + 5 * math.sin(i * sector))
 		end
@@ -280,4 +273,55 @@ function c_hofmonsterfoods()
 		c_give("wobstermonster",    40, true)
 		c_give("spidercake",        40, true)
     end
+end	
+
+local function _SpawnLayout_AddFn(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
+    local x = (points_x[current_pos_idx] - width/2.0)  * TILE_SCALE
+    local y = (points_y[current_pos_idx] - height/2.0) * TILE_SCALE
+
+    x = math.floor(x*100) / 100.0
+    y = math.floor(y*100) / 100.0
+
+    prefab_data.x = x
+    prefab_data.z = y
+
+    prefab_data.prefab = prefab
+
+    local ent = SpawnSaveRecord(prefab_data)
+
+    ent:LoadPostPass(Ents, FunctionOrValue(prefab_data.data))
+
+    if ent.components.scenariorunner ~= nil then
+        ent.components.scenariorunner:Run()
+    end
+end
+
+local obj_layout = require("map/object_layout")
+local LAYOUT_CANT_TAGS = { "player", "INLIMBO", "FX", "multiplayer_portal", "irreplaceable" } -- Add any other tag in here if needed.
+
+-- Testing Setpieces.
+-- If its not working for you consider using: require("debugcommands") d_spawnlayout("layoutname")
+function c_hofspawnlayout(name)
+    local layout  = obj_layout.LayoutForDefinition(name)
+    local map_width, map_height = TheWorld.Map:GetSize()
+
+    local add_fn = 
+	{
+        fn = _SpawnLayout_AddFn,
+        args = {entitiesOut={}, width=map_width, height=map_height, rand_offset=false}
+    }
+
+    local offset = 3 --layout.ground ~= nil and (#layout.ground / 2) or 0
+    local size = layout.ground ~= nil and (#layout.ground * TILE_SCALE) or nil
+
+    local pos  = ConsoleWorldPosition()
+    local x, z = TheWorld.Map:GetTileCoordsAtPoint(pos:Get())
+
+    if size ~= nil then
+        for i, ent in ipairs(TheSim:FindEntities(pos.x, 0, pos.z, size, nil, LAYOUT_CANT_TAGS)) do
+            ent:Remove()
+        end
+    end
+
+    obj_layout.Place({x-offset, z-offset}, name, add_fn, nil, TheWorld.Map)
 end
