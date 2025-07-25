@@ -324,6 +324,7 @@ local function fn()
 	inst:AddTag("structure")
 	inst:AddTag("firesupressor")
 	inst:AddTag("gardensprinkler")
+	inst:AddTag("tornado_immune") -- THANKS LEONIDAS
 	
 	if not TheNet:IsDedicated() then
         inst:AddComponent("deployhelper")

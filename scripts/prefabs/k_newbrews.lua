@@ -1,5 +1,7 @@
 local assets =
 {
+	Asset("ANIM", "anim/horrorfuel.zip"),
+	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -54,6 +56,29 @@ local function NightVision_OnEntitySleep(inst)
 		inst._beatsoundtask:Cancel()
 		inst._beatsoundtask = nil
 	end
+end
+
+local function CreateCore()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddAnimState()
+	
+	inst:AddTag("FX")
+    inst.persists = false
+	
+	inst.AnimState:SetScale(.8, .8, .8)
+
+    inst.AnimState:SetBank("horrorfuel")
+    inst.AnimState:SetBuild("horrorfuel")
+    inst.AnimState:PlayAnimation("scrapbook", true)
+	inst.AnimState:HideSymbol("blobs")
+	inst.AnimState:SetMultColour(1, 1, 1, 0.5)
+    inst.AnimState:UsePointFiltering(true)
+    inst.AnimState:SetFrame(math.random(inst.AnimState:GetCurrentAnimationNumFrames()) - 1)
+    inst.AnimState:SetFinalOffset(-2)
+
+    return inst
 end
 ----------------------------------------------------------------------------------------------------------
 local function MakePreparedBrew(data)
@@ -116,8 +141,14 @@ local function MakePreparedBrew(data)
 			inst.AnimState:SetBuild(data.name)
 		end
 
-		inst.AnimState:PlayAnimation("idle", false)
+		inst.AnimState:PlayAnimation("idle", data.loopanim or false)
 		inst.AnimState:OverrideSymbol("swap_food", foodname, foodname)
+		
+		if data.bloom ~= nil then
+			inst.AnimState:SetBloomEffectHandle("shaders/anim.ksh")
+			inst.AnimState:SetLightOverride(.1)
+			inst.lightcolour = data.bloomlight
+		end
 
 		inst:AddTag("preparedfood")
 		inst:AddTag("preparedbrew")
@@ -141,6 +172,18 @@ local function MakePreparedBrew(data)
 		end
 
 		MakeInventoryFloatable(inst)
+		
+		if not TheNet:IsDedicated() then
+			if data.horrorfx then
+				inst.core = CreateCore()
+				inst.core.entity:SetParent(inst.entity)
+				
+				local x, y, z = inst.Transform:GetWorldPosition()
+				inst.core.Transform:SetPosition(x, .2, z)
+				
+				inst.highlightchildren = { inst.core }
+			end
+		end
 
 		inst.entity:SetPristine()
 

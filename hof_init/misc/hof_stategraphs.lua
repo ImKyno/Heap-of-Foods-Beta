@@ -9,8 +9,8 @@ local FRAMES 		= _G.FRAMES
 local State 		= _G.State
 local TimeEvent 	= _G.TimeEvent
 local POPUPS 		= _G.POPUPS
+local UpvalueHacker = require("hof_upvaluehacker")
 
-require("hof_upvaluehacker")
 require("stategraphs/commonstates")
 
 -- New Stategraphs.

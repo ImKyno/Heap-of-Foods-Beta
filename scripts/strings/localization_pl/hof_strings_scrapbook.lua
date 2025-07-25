@@ -80,6 +80,11 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EATER = "Makes food more soft and easy
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRABKINGFEAST = "Increased damage against crabs for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ANTLION = "Satisfies the Antlion for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_JAWSBREAKER = "Allures and kills Rockjaws and Gnarwails when thrown into the ocean. Does not work if too close."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FIREIMMUNITY = "This food can make a survivor immune to Fire for a certain amount of time. Briefly increases the temperature."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_TIRAMISU = "Increased movement speed for a certain amount of time.\n\nDries off the survivor and grants them immunity to Wetness for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_AMPHIBIAN = "Increased damage against amphibians for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ENLIGHTENMENT = "Enlightens the survivor for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_STEALTH = "Renders the survivor unseen and undetectable from traps and creatures for a certain amount of time."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."

@@ -134,7 +134,7 @@ Layouts["Oasis"]              = StaticLayout.Get("map/static_layouts/hof_oasis")
 Layouts["SerenityIslandShop"] = StaticLayout.Get("map/static_layouts/hof_serenityisland_shop")
 
 -- Retrofit the Serenity Archipelago in the world.
--- The numbers below each turf represents them on the setpiece file.
+-- The numbers below represents each turf in the setpiece file.
 _G.SERENITYISLAND_GROUNDS        =
 {
 	WORLD_TILES.OCEAN_BRINEPOOL,     -- 1
@@ -222,6 +222,24 @@ for i, layout in ipairs(hof_meadow_setpieces) do
 	})
 	Layouts[layout].ground_types = _G.MEADOWISLAND_GROUNDS
 end
+
+--[[
+-- In case anyone needs Sammy setpiece but not the whole island.
+Layouts["MeadowIslandShop"] = StaticLayout.Get("map/static_layouts/hof_meadowisland_shop",
+{
+	start_mask             = _G.PLACE_MASK.IGNORE_IMPASSABLE,
+	fill_mask              = _G.PLACE_MASK.IGNORE_IMPASSABLE,
+	add_topology           = {room_id = "StaticLayout:Sammy Shop HoF", tags = {"RoadPoison", "sammyshop"}},
+	areas                  =
+	{
+	},
+	min_dist_from_land     = 0,
+})
+Layouts["MeadowIslandShop"] = _G.MEADOWISLAND_GROUNDS
+Layouts["SerenityIslandShop"] = StaticLayout.Get("map/static_layouts/hof_serenityisland_shop")
+]]--
+Layouts["MeadowIslandShop"] = StaticLayout.Get("map/static_layouts/hof_meadowisland_shop")
+Layouts["MeadowIslandShop"].ground_types = _G.MEADOWISLAND_GROUNDS
 
 -- Custom Layout for Waterlogged biome.
 local function HofWaterloggedArea()

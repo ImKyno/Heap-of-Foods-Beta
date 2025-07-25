@@ -440,6 +440,26 @@ local kyno_warly_foods =
 			eater:AddDebuff("kyno_fireimmunitybuff", "kyno_fireimmunitybuff")
 		end,
 	},
+	
+	tiramisu = -- Dry + Small Speed buffs.
+	{
+		test = function(cooker, names, tags) return names.kyno_coffeebeans_cooked and tags.chocolate and tags.dairy and not names.kyno_coffeebeans end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_MED,
+		health = 20,
+		hunger = 32.5,
+		sanity = 15,
+		cooktime = 1.5,
+		scale = .9,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED, 
+		floater = TUNING.HOF_FLOATER,
+		tags = {"masterfood"},
+		prefabs = { "buff_moistureimmunity" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
+		end,
+	},
 }
 
 for k, recipe in pairs(kyno_warly_foods) do

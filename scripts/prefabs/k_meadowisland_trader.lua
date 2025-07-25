@@ -75,8 +75,8 @@ local WARES =
 	--[[
 	RANDOM_ULTRARARES =
 	{
-		-- Sharkuttery Board
-		-- What else?
+		-- TO DO: Sharkuttery Board
+		-- TO DO: Coffee Machine Kit
 	}
 	]]--
 	
@@ -126,14 +126,14 @@ local WARES =
 		["islunarhailing"] = 
 		{
 			{
-				-- Moon Frog Legs
+				-- TO DO: Moon Frog Legs
 			},
 		},
 		
 		["mermking"] =
 		{
 			{
-				-- Exclusive things for Wurt?
+				-- TO DO: Something for Wurt?
 			},
 		},
 		]]--

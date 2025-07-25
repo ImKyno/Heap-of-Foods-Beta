@@ -1,113 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Atlas>
-    <Texture filename="hof_brewbookimages.tex" />
-    <Elements>
-        <Element name="beer.tex" u1="0.000244140625" v1="0.87548828125" u2="0.062255859375" v2="0.99951171875" />
-        <Element name="butter_beefalo.tex" u1="0.062744140625" v1="0.87548828125" u2="0.124755859375" v2="0.99951171875" />
-        <Element name="butter_goat.tex" u1="0.125244140625" v1="0.87548828125" u2="0.187255859375" v2="0.99951171875" />
-        <Element name="butter_koalefant.tex" u1="0.187744140625" v1="0.87548828125" u2="0.249755859375" v2="0.99951171875" />
-        <Element name="coffee_mocha.tex" u1="0.250244140625" v1="0.87548828125" u2="0.312255859375" v2="0.99951171875" />
-        <Element name="jelly_banana.tex" u1="0.312744140625" v1="0.87548828125" u2="0.374755859375" v2="0.99951171875" />
-        <Element name="jelly_berries.tex" u1="0.375244140625" v1="0.87548828125" u2="0.437255859375" v2="0.99951171875" />
-        <Element name="jelly_berries_juicy.tex" u1="0.437744140625" v1="0.87548828125" u2="0.499755859375" v2="0.99951171875" />
-        <Element name="jelly_cave_banana.tex" u1="0.500244140625" v1="0.87548828125" u2="0.562255859375" v2="0.99951171875" />
-        <Element name="jelly_dragonfruit.tex" u1="0.562744140625" v1="0.87548828125" u2="0.624755859375" v2="0.99951171875" />
-        <Element name="jelly_durian.tex" u1="0.625244140625" v1="0.87548828125" u2="0.687255859375" v2="0.99951171875" />
-        <Element name="jelly_fig.tex" u1="0.687744140625" v1="0.87548828125" u2="0.749755859375" v2="0.99951171875" />
-        <Element name="jelly_glowberry.tex" u1="0.750244140625" v1="0.87548828125" u2="0.812255859375" v2="0.99951171875" />
-        <Element name="jelly_kokonut.tex" u1="0.812744140625" v1="0.87548828125" u2="0.874755859375" v2="0.99951171875" />
-        <Element name="jelly_nightberry.tex" u1="0.875244140625" v1="0.87548828125" u2="0.937255859375" v2="0.99951171875" />
-        <Element name="jelly_pineapple.tex" u1="0.937744140625" v1="0.87548828125" u2="0.999755859375" v2="0.99951171875" />
-        <Element name="jelly_pomegranate.tex" u1="0.000244140625" v1="0.75048828125" u2="0.062255859375" v2="0.87451171875" />
-        <Element name="jelly_watermelon.tex" u1="0.062744140625" v1="0.75048828125" u2="0.124755859375" v2="0.87451171875" />
-        <Element name="juice_aloe.tex" u1="0.125244140625" v1="0.75048828125" u2="0.187255859375" v2="0.87451171875" />
-        <Element name="juice_asparagus.tex" u1="0.187744140625" v1="0.75048828125" u2="0.249755859375" v2="0.87451171875" />
-        <Element name="juice_avocado.tex" u1="0.250244140625" v1="0.75048828125" u2="0.312255859375" v2="0.87451171875" />
-        <Element name="juice_bluecap.tex" u1="0.312744140625" v1="0.75048828125" u2="0.374755859375" v2="0.87451171875" />
-        <Element name="juice_cactus.tex" u1="0.375244140625" v1="0.75048828125" u2="0.437255859375" v2="0.87451171875" />
-        <Element name="juice_carrot.tex" u1="0.437744140625" v1="0.75048828125" u2="0.499755859375" v2="0.87451171875" />
-        <Element name="juice_corn.tex" u1="0.500244140625" v1="0.75048828125" u2="0.562255859375" v2="0.87451171875" />
-        <Element name="juice_cucumber.tex" u1="0.562744140625" v1="0.75048828125" u2="0.624755859375" v2="0.87451171875" />
-        <Element name="juice_eggplant.tex" u1="0.625244140625" v1="0.75048828125" u2="0.687255859375" v2="0.87451171875" />
-        <Element name="juice_fennel.tex" u1="0.687744140625" v1="0.75048828125" u2="0.749755859375" v2="0.87451171875" />
-        <Element name="juice_garlic.tex" u1="0.750244140625" v1="0.75048828125" u2="0.812255859375" v2="0.87451171875" />
-        <Element name="juice_greencap.tex" u1="0.812744140625" v1="0.75048828125" u2="0.874755859375" v2="0.87451171875" />
-        <Element name="juice_kelp.tex" u1="0.875244140625" v1="0.75048828125" u2="0.937255859375" v2="0.87451171875" />
-        <Element name="juice_lichen.tex" u1="0.937744140625" v1="0.75048828125" u2="0.999755859375" v2="0.87451171875" />
-        <Element name="juice_lotus.tex" u1="0.000244140625" v1="0.62548828125" u2="0.062255859375" v2="0.74951171875" />
-        <Element name="juice_mooncap.tex" u1="0.062744140625" v1="0.62548828125" u2="0.124755859375" v2="0.74951171875" />
-        <Element name="juice_onion.tex" u1="0.125244140625" v1="0.62548828125" u2="0.187255859375" v2="0.74951171875" />
-        <Element name="juice_parznip.tex" u1="0.187744140625" v1="0.62548828125" u2="0.249755859375" v2="0.74951171875" />
-        <Element name="juice_pepper.tex" u1="0.250244140625" v1="0.62548828125" u2="0.312255859375" v2="0.74951171875" />
-        <Element name="juice_potato.tex" u1="0.312744140625" v1="0.62548828125" u2="0.374755859375" v2="0.74951171875" />
-        <Element name="juice_pumpkin.tex" u1="0.375244140625" v1="0.62548828125" u2="0.437255859375" v2="0.74951171875" />
-        <Element name="juice_radish.tex" u1="0.437744140625" v1="0.62548828125" u2="0.499755859375" v2="0.74951171875" />
-        <Element name="juice_redcap.tex" u1="0.500244140625" v1="0.62548828125" u2="0.562255859375" v2="0.74951171875" />
-        <Element name="juice_seaweeds.tex" u1="0.562744140625" v1="0.62548828125" u2="0.624755859375" v2="0.74951171875" />
-        <Element name="juice_sweetpotato.tex" u1="0.625244140625" v1="0.62548828125" u2="0.687255859375" v2="0.74951171875" />
-        <Element name="juice_taroroot.tex" u1="0.687744140625" v1="0.62548828125" u2="0.749755859375" v2="0.74951171875" />
-        <Element name="juice_tomato.tex" u1="0.750244140625" v1="0.62548828125" u2="0.812255859375" v2="0.74951171875" />
-        <Element name="juice_turnip.tex" u1="0.812744140625" v1="0.62548828125" u2="0.874755859375" v2="0.74951171875" />
-        <Element name="juice_waterycress.tex" u1="0.875244140625" v1="0.62548828125" u2="0.937255859375" v2="0.74951171875" />
-        <Element name="juice_whitecap.tex" u1="0.937744140625" v1="0.62548828125" u2="0.999755859375" v2="0.74951171875" />
-        <Element name="mayonnaise.tex" u1="0.000244140625" v1="0.50048828125" u2="0.062255859375" v2="0.62451171875" />
-        <Element name="mayonnaise_chicken.tex" u1="0.062744140625" v1="0.50048828125" u2="0.124755859375" v2="0.62451171875" />
-        <Element name="mayonnaise_nightmare.tex" u1="0.125244140625" v1="0.50048828125" u2="0.187255859375" v2="0.62451171875" />
-        <Element name="mayonnaise_tallbird.tex" u1="0.187744140625" v1="0.50048828125" u2="0.249755859375" v2="0.62451171875" />
-        <Element name="mead.tex" u1="0.250244140625" v1="0.50048828125" u2="0.312255859375" v2="0.62451171875" />
-        <Element name="nukacola.tex" u1="0.312744140625" v1="0.50048828125" u2="0.374755859375" v2="0.62451171875" />
-        <Element name="nukacola_quantum.tex" u1="0.375244140625" v1="0.50048828125" u2="0.437255859375" v2="0.62451171875" />
-        <Element name="nukashine.tex" u1="0.437744140625" v1="0.50048828125" u2="0.499755859375" v2="0.62451171875" />
-        <Element name="paleale.tex" u1="0.500244140625" v1="0.50048828125" u2="0.562255859375" v2="0.62451171875" />
-        <Element name="pickles_aloe.tex" u1="0.562744140625" v1="0.50048828125" u2="0.624755859375" v2="0.62451171875" />
-        <Element name="pickles_asparagus.tex" u1="0.625244140625" v1="0.50048828125" u2="0.687255859375" v2="0.62451171875" />
-        <Element name="pickles_avocado.tex" u1="0.687744140625" v1="0.50048828125" u2="0.749755859375" v2="0.62451171875" />
-        <Element name="pickles_bluecap.tex" u1="0.750244140625" v1="0.50048828125" u2="0.812255859375" v2="0.62451171875" />
-        <Element name="pickles_cactus.tex" u1="0.812744140625" v1="0.50048828125" u2="0.874755859375" v2="0.62451171875" />
-        <Element name="pickles_carrot.tex" u1="0.875244140625" v1="0.50048828125" u2="0.937255859375" v2="0.62451171875" />
-        <Element name="pickles_corn.tex" u1="0.937744140625" v1="0.50048828125" u2="0.999755859375" v2="0.62451171875" />
-        <Element name="pickles_cucumber.tex" u1="0.000244140625" v1="0.37548828125" u2="0.062255859375" v2="0.49951171875" />
-        <Element name="pickles_eggplant.tex" u1="0.062744140625" v1="0.37548828125" u2="0.124755859375" v2="0.49951171875" />
-        <Element name="pickles_fennel.tex" u1="0.125244140625" v1="0.37548828125" u2="0.187255859375" v2="0.49951171875" />
-        <Element name="pickles_garlic.tex" u1="0.187744140625" v1="0.37548828125" u2="0.249755859375" v2="0.49951171875" />
-        <Element name="pickles_greencap.tex" u1="0.250244140625" v1="0.37548828125" u2="0.312255859375" v2="0.49951171875" />
-        <Element name="pickles_kelp.tex" u1="0.312744140625" v1="0.37548828125" u2="0.374755859375" v2="0.49951171875" />
-        <Element name="pickles_lichen.tex" u1="0.375244140625" v1="0.37548828125" u2="0.437255859375" v2="0.49951171875" />
-        <Element name="pickles_lotus.tex" u1="0.437744140625" v1="0.37548828125" u2="0.499755859375" v2="0.49951171875" />
-        <Element name="pickles_mooncap.tex" u1="0.500244140625" v1="0.37548828125" u2="0.562255859375" v2="0.49951171875" />
-        <Element name="pickles_onion.tex" u1="0.562744140625" v1="0.37548828125" u2="0.624755859375" v2="0.49951171875" />
-        <Element name="pickles_parznip.tex" u1="0.625244140625" v1="0.37548828125" u2="0.687255859375" v2="0.49951171875" />
-        <Element name="pickles_pepper.tex" u1="0.687744140625" v1="0.37548828125" u2="0.749755859375" v2="0.49951171875" />
-        <Element name="pickles_potato.tex" u1="0.750244140625" v1="0.37548828125" u2="0.812255859375" v2="0.49951171875" />
-        <Element name="pickles_pumpkin.tex" u1="0.812744140625" v1="0.37548828125" u2="0.874755859375" v2="0.49951171875" />
-        <Element name="pickles_radish.tex" u1="0.875244140625" v1="0.37548828125" u2="0.937255859375" v2="0.49951171875" />
-        <Element name="pickles_redcap.tex" u1="0.937744140625" v1="0.37548828125" u2="0.999755859375" v2="0.49951171875" />
-        <Element name="pickles_rice.tex" u1="0.000244140625" v1="0.25048828125" u2="0.062255859375" v2="0.37451171875" />
-        <Element name="pickles_seaweeds.tex" u1="0.062744140625" v1="0.25048828125" u2="0.124755859375" v2="0.37451171875" />
-        <Element name="pickles_sweetpotato.tex" u1="0.125244140625" v1="0.25048828125" u2="0.187255859375" v2="0.37451171875" />
-        <Element name="pickles_taroroot.tex" u1="0.187744140625" v1="0.25048828125" u2="0.249755859375" v2="0.37451171875" />
-        <Element name="pickles_tomato.tex" u1="0.250244140625" v1="0.25048828125" u2="0.312255859375" v2="0.37451171875" />
-        <Element name="pickles_turnip.tex" u1="0.312744140625" v1="0.25048828125" u2="0.374755859375" v2="0.37451171875" />
-        <Element name="pickles_waterycress.tex" u1="0.375244140625" v1="0.25048828125" u2="0.437255859375" v2="0.37451171875" />
-        <Element name="pickles_whitecap.tex" u1="0.437744140625" v1="0.25048828125" u2="0.499755859375" v2="0.37451171875" />
-        <Element name="piraterum.tex" u1="0.500244140625" v1="0.25048828125" u2="0.562255859375" v2="0.37451171875" />
-        <Element name="ricesake.tex" u1="0.562744140625" v1="0.25048828125" u2="0.624755859375" v2="0.37451171875" />
-        <Element name="tartarsauce.tex" u1="0.625244140625" v1="0.25048828125" u2="0.687255859375" v2="0.37451171875" />
-        <Element name="teagreen.tex" u1="0.687744140625" v1="0.25048828125" u2="0.749755859375" v2="0.37451171875" />
-        <Element name="teared.tex" u1="0.750244140625" v1="0.25048828125" u2="0.812255859375" v2="0.37451171875" />
-        <Element name="twistedtequila.tex" u1="0.812744140625" v1="0.25048828125" u2="0.874755859375" v2="0.37451171875" />
-        <Element name="wetgoop2.tex" u1="0.875244140625" v1="0.25048828125" u2="0.937255859375" v2="0.37451171875" />
-        <Element name="wine_banana.tex" u1="0.937744140625" v1="0.25048828125" u2="0.999755859375" v2="0.37451171875" />
-        <Element name="wine_berries.tex" u1="0.000244140625" v1="0.12548828125" u2="0.062255859375" v2="0.24951171875" />
-        <Element name="wine_berries_juicy.tex" u1="0.062744140625" v1="0.12548828125" u2="0.124755859375" v2="0.24951171875" />
-        <Element name="wine_cave_banana.tex" u1="0.125244140625" v1="0.12548828125" u2="0.187255859375" v2="0.24951171875" />
-        <Element name="wine_dragonfruit.tex" u1="0.187744140625" v1="0.12548828125" u2="0.249755859375" v2="0.24951171875" />
-        <Element name="wine_durian.tex" u1="0.250244140625" v1="0.12548828125" u2="0.312255859375" v2="0.24951171875" />
-        <Element name="wine_fig.tex" u1="0.312744140625" v1="0.12548828125" u2="0.374755859375" v2="0.24951171875" />
-        <Element name="wine_glowberry.tex" u1="0.375244140625" v1="0.12548828125" u2="0.437255859375" v2="0.24951171875" />
-        <Element name="wine_kokonut.tex" u1="0.437744140625" v1="0.12548828125" u2="0.499755859375" v2="0.24951171875" />
-        <Element name="wine_nightberry.tex" u1="0.500244140625" v1="0.12548828125" u2="0.562255859375" v2="0.24951171875" />
-        <Element name="wine_pineapple.tex" u1="0.562744140625" v1="0.12548828125" u2="0.624755859375" v2="0.24951171875" />
-        <Element name="wine_pomegranate.tex" u1="0.625244140625" v1="0.12548828125" u2="0.687255859375" v2="0.24951171875" />
-        <Element name="wine_watermelon.tex" u1="0.687744140625" v1="0.12548828125" u2="0.749755859375" v2="0.24951171875" />
-    </Elements>
+	<Texture filename="hof_brewbookimages.tex" />
+	<Elements>
+		<Element name="beer.tex" u1="0.001" u2="0.0615" v2="0.999" v1="0.876" variant="" />
+		<Element name="butter_beefalo.tex" u1="0.0635" u2="0.124" v2="0.999" v1="0.876" variant="" />
+		<Element name="butter_goat.tex" u1="0.001" u2="0.0615" v2="0.874" v1="0.751" variant="" />
+		<Element name="butter_koalefant.tex" u1="0.0635" u2="0.124" v2="0.874" v1="0.751" variant="" />
+		<Element name="coffee_mocha.tex" u1="0.126" u2="0.1865" v2="0.999" v1="0.876" variant="" />
+		<Element name="jelly_banana.tex" u1="0.1885" u2="0.249" v2="0.999" v1="0.876" variant="" />
+		<Element name="jelly_berries.tex" u1="0.126" u2="0.1865" v2="0.874" v1="0.751" variant="" />
+		<Element name="jelly_berries_juicy.tex" u1="0.1885" u2="0.249" v2="0.874" v1="0.751" variant="" />
+		<Element name="jelly_cave_banana.tex" u1="0.001" u2="0.0615" v2="0.749" v1="0.626" variant="" />
+		<Element name="jelly_dragonfruit.tex" u1="0.0635" u2="0.124" v2="0.749" v1="0.626" variant="" />
+		<Element name="jelly_durian.tex" u1="0.126" u2="0.1865" v2="0.749" v1="0.626" variant="" />
+		<Element name="jelly_fig.tex" u1="0.1885" u2="0.249" v2="0.749" v1="0.626" variant="" />
+		<Element name="jelly_glowberry.tex" u1="0.001" u2="0.0615" v2="0.624" v1="0.501" variant="" />
+		<Element name="jelly_kokonut.tex" u1="0.0635" u2="0.124" v2="0.624" v1="0.501" variant="" />
+		<Element name="jelly_nightberry.tex" u1="0.126" u2="0.1865" v2="0.624" v1="0.501" variant="" />
+		<Element name="jelly_pineapple.tex" u1="0.1885" u2="0.249" v2="0.624" v1="0.501" variant="" />
+		<Element name="jelly_pomegranate.tex" u1="0.251" u2="0.3115" v2="0.999" v1="0.876" variant="" />
+		<Element name="jelly_watermelon.tex" u1="0.3135" u2="0.374" v2="0.999" v1="0.876" variant="" />
+		<Element name="juice_aloe.tex" u1="0.376" u2="0.4365" v2="0.999" v1="0.876" variant="" />
+		<Element name="juice_asparagus.tex" u1="0.4385" u2="0.499" v2="0.999" v1="0.876" variant="" />
+		<Element name="juice_avocado.tex" u1="0.251" u2="0.3115" v2="0.874" v1="0.751" variant="" />
+		<Element name="juice_bluecap.tex" u1="0.3135" u2="0.374" v2="0.874" v1="0.751" variant="" />
+		<Element name="juice_cactus.tex" u1="0.376" u2="0.4365" v2="0.874" v1="0.751" variant="" />
+		<Element name="juice_carrot.tex" u1="0.4385" u2="0.499" v2="0.874" v1="0.751" variant="" />
+		<Element name="juice_corn.tex" u1="0.251" u2="0.3115" v2="0.749" v1="0.626" variant="" />
+		<Element name="juice_cucumber.tex" u1="0.3135" u2="0.374" v2="0.749" v1="0.626" variant="" />
+		<Element name="juice_eggplant.tex" u1="0.376" u2="0.4365" v2="0.749" v1="0.626" variant="" />
+		<Element name="juice_fennel.tex" u1="0.4385" u2="0.499" v2="0.749" v1="0.626" variant="" />
+		<Element name="juice_garlic.tex" u1="0.251" u2="0.3115" v2="0.624" v1="0.501" variant="" />
+		<Element name="juice_greencap.tex" u1="0.3135" u2="0.374" v2="0.624" v1="0.501" variant="" />
+		<Element name="juice_kelp.tex" u1="0.376" u2="0.4365" v2="0.624" v1="0.501" variant="" />
+		<Element name="juice_lichen.tex" u1="0.4385" u2="0.499" v2="0.624" v1="0.501" variant="" />
+		<Element name="juice_lotus.tex" u1="0.001" u2="0.0615" v2="0.499" v1="0.376" variant="" />
+		<Element name="juice_mooncap.tex" u1="0.0635" u2="0.124" v2="0.499" v1="0.376" variant="" />
+		<Element name="juice_onion.tex" u1="0.126" u2="0.1865" v2="0.499" v1="0.376" variant="" />
+		<Element name="juice_parznip.tex" u1="0.1885" u2="0.249" v2="0.499" v1="0.376" variant="" />
+		<Element name="juice_pepper.tex" u1="0.251" u2="0.3115" v2="0.499" v1="0.376" variant="" />
+		<Element name="juice_potato.tex" u1="0.3135" u2="0.374" v2="0.499" v1="0.376" variant="" />
+		<Element name="juice_pumpkin.tex" u1="0.376" u2="0.4365" v2="0.499" v1="0.376" variant="" />
+		<Element name="juice_radish.tex" u1="0.4385" u2="0.499" v2="0.499" v1="0.376" variant="" />
+		<Element name="juice_redcap.tex" u1="0.001" u2="0.0615" v2="0.374" v1="0.251" variant="" />
+		<Element name="juice_seaweeds.tex" u1="0.0635" u2="0.124" v2="0.374" v1="0.251" variant="" />
+		<Element name="juice_sweetpotato.tex" u1="0.126" u2="0.1865" v2="0.374" v1="0.251" variant="" />
+		<Element name="juice_taroroot.tex" u1="0.1885" u2="0.249" v2="0.374" v1="0.251" variant="" />
+		<Element name="juice_tomato.tex" u1="0.251" u2="0.3115" v2="0.374" v1="0.251" variant="" />
+		<Element name="juice_turnip.tex" u1="0.3135" u2="0.374" v2="0.374" v1="0.251" variant="" />
+		<Element name="juice_waterycress.tex" u1="0.376" u2="0.4365" v2="0.374" v1="0.251" variant="" />
+		<Element name="juice_whitecap.tex" u1="0.4385" u2="0.499" v2="0.374" v1="0.251" variant="" />
+		<Element name="lunartequila.tex" u1="0.001" u2="0.0615" v2="0.249" v1="0.126" variant="" />
+		<Element name="mayonnaise.tex" u1="0.0635" u2="0.124" v2="0.249" v1="0.126" variant="" />
+		<Element name="mayonnaise_chicken.tex" u1="0.126" u2="0.1865" v2="0.249" v1="0.126" variant="" />
+		<Element name="mayonnaise_nightmare.tex" u1="0.1885" u2="0.249" v2="0.249" v1="0.126" variant="" />
+		<Element name="mayonnaise_tallbird.tex" u1="0.251" u2="0.3115" v2="0.249" v1="0.126" variant="" />
+		<Element name="mead.tex" u1="0.3135" u2="0.374" v2="0.249" v1="0.126" variant="" />
+		<Element name="mimicmosa.tex" u1="0.376" u2="0.4365" v2="0.249" v1="0.126" variant="" />
+		<Element name="nukacola.tex" u1="0.4385" u2="0.499" v2="0.249" v1="0.126" variant="" />
+		<Element name="nukacola_quantum.tex" u1="0.001" u2="0.0615" v2="0.124" v1="0.001" variant="" />
+		<Element name="nukashine.tex" u1="0.0635" u2="0.124" v2="0.124" v1="0.001" variant="" />
+		<Element name="paleale.tex" u1="0.126" u2="0.1865" v2="0.124" v1="0.001" variant="" />
+		<Element name="pickles_aloe.tex" u1="0.1885" u2="0.249" v2="0.124" v1="0.001" variant="" />
+		<Element name="pickles_asparagus.tex" u1="0.251" u2="0.3115" v2="0.124" v1="0.001" variant="" />
+		<Element name="pickles_avocado.tex" u1="0.3135" u2="0.374" v2="0.124" v1="0.001" variant="" />
+		<Element name="pickles_bluecap.tex" u1="0.376" u2="0.4365" v2="0.124" v1="0.001" variant="" />
+		<Element name="pickles_cactus.tex" u1="0.4385" u2="0.499" v2="0.124" v1="0.001" variant="" />
+		<Element name="pickles_carrot.tex" u1="0.501" u2="0.5615" v2="0.999" v1="0.876" variant="" />
+		<Element name="pickles_corn.tex" u1="0.5635" u2="0.624" v2="0.999" v1="0.876" variant="" />
+		<Element name="pickles_cucumber.tex" u1="0.626" u2="0.6865" v2="0.999" v1="0.876" variant="" />
+		<Element name="pickles_eggplant.tex" u1="0.6885" u2="0.749" v2="0.999" v1="0.876" variant="" />
+		<Element name="pickles_fennel.tex" u1="0.751" u2="0.8115" v2="0.999" v1="0.876" variant="" />
+		<Element name="pickles_garlic.tex" u1="0.8135" u2="0.874" v2="0.999" v1="0.876" variant="" />
+		<Element name="pickles_greencap.tex" u1="0.876" u2="0.9365" v2="0.999" v1="0.876" variant="" />
+		<Element name="pickles_kelp.tex" u1="0.9385" u2="0.999" v2="0.999" v1="0.876" variant="" />
+		<Element name="pickles_lichen.tex" u1="0.501" u2="0.5615" v2="0.874" v1="0.751" variant="" />
+		<Element name="pickles_lotus.tex" u1="0.5635" u2="0.624" v2="0.874" v1="0.751" variant="" />
+		<Element name="pickles_mooncap.tex" u1="0.626" u2="0.6865" v2="0.874" v1="0.751" variant="" />
+		<Element name="pickles_onion.tex" u1="0.6885" u2="0.749" v2="0.874" v1="0.751" variant="" />
+		<Element name="pickles_parznip.tex" u1="0.751" u2="0.8115" v2="0.874" v1="0.751" variant="" />
+		<Element name="pickles_pepper.tex" u1="0.8135" u2="0.874" v2="0.874" v1="0.751" variant="" />
+		<Element name="pickles_potato.tex" u1="0.876" u2="0.9365" v2="0.874" v1="0.751" variant="" />
+		<Element name="pickles_pumpkin.tex" u1="0.9385" u2="0.999" v2="0.874" v1="0.751" variant="" />
+		<Element name="pickles_radish.tex" u1="0.501" u2="0.5615" v2="0.749" v1="0.626" variant="" />
+		<Element name="pickles_redcap.tex" u1="0.5635" u2="0.624" v2="0.749" v1="0.626" variant="" />
+		<Element name="pickles_rice.tex" u1="0.626" u2="0.6865" v2="0.749" v1="0.626" variant="" />
+		<Element name="pickles_seaweeds.tex" u1="0.6885" u2="0.749" v2="0.749" v1="0.626" variant="" />
+		<Element name="pickles_sweetpotato.tex" u1="0.751" u2="0.8115" v2="0.749" v1="0.626" variant="" />
+		<Element name="pickles_taroroot.tex" u1="0.8135" u2="0.874" v2="0.749" v1="0.626" variant="" />
+		<Element name="pickles_tomato.tex" u1="0.876" u2="0.9365" v2="0.749" v1="0.626" variant="" />
+		<Element name="pickles_turnip.tex" u1="0.9385" u2="0.999" v2="0.749" v1="0.626" variant="" />
+		<Element name="pickles_waterycress.tex" u1="0.501" u2="0.5615" v2="0.624" v1="0.501" variant="" />
+		<Element name="pickles_whitecap.tex" u1="0.5635" u2="0.624" v2="0.624" v1="0.501" variant="" />
+		<Element name="piraterum.tex" u1="0.626" u2="0.6865" v2="0.624" v1="0.501" variant="" />
+		<Element name="ricesake.tex" u1="0.6885" u2="0.749" v2="0.624" v1="0.501" variant="" />
+		<Element name="tartarsauce.tex" u1="0.751" u2="0.8115" v2="0.624" v1="0.501" variant="" />
+		<Element name="teagreen.tex" u1="0.8135" u2="0.874" v2="0.624" v1="0.501" variant="" />
+		<Element name="teared.tex" u1="0.876" u2="0.9365" v2="0.624" v1="0.501" variant="" />
+		<Element name="tepache.tex" u1="0.9385" u2="0.999" v2="0.624" v1="0.501" variant="" />
+		<Element name="toadstoolcola.tex" u1="0.501" u2="0.5615" v2="0.499" v1="0.376" variant="" />
+		<Element name="twistedtequila.tex" u1="0.5635" u2="0.624" v2="0.499" v1="0.376" variant="" />
+		<Element name="wetgoop2.tex" u1="0.626" u2="0.6865" v2="0.499" v1="0.376" variant="" />
+		<Element name="wine_banana.tex" u1="0.6885" u2="0.749" v2="0.499" v1="0.376" variant="" />
+		<Element name="wine_berries.tex" u1="0.751" u2="0.8115" v2="0.499" v1="0.376" variant="" />
+		<Element name="wine_berries_juicy.tex" u1="0.8135" u2="0.874" v2="0.499" v1="0.376" variant="" />
+		<Element name="wine_cave_banana.tex" u1="0.876" u2="0.9365" v2="0.499" v1="0.376" variant="" />
+		<Element name="wine_dragonfruit.tex" u1="0.9385" u2="0.999" v2="0.499" v1="0.376" variant="" />
+		<Element name="wine_durian.tex" u1="0.501" u2="0.5615" v2="0.374" v1="0.251" variant="" />
+		<Element name="wine_fig.tex" u1="0.5635" u2="0.624" v2="0.374" v1="0.251" variant="" />
+		<Element name="wine_glowberry.tex" u1="0.626" u2="0.6865" v2="0.374" v1="0.251" variant="" />
+		<Element name="wine_kokonut.tex" u1="0.6885" u2="0.749" v2="0.374" v1="0.251" variant="" />
+		<Element name="wine_nightberry.tex" u1="0.751" u2="0.8115" v2="0.374" v1="0.251" variant="" />
+		<Element name="wine_pineapple.tex" u1="0.8135" u2="0.874" v2="0.374" v1="0.251" variant="" />
+		<Element name="wine_pomegranate.tex" u1="0.876" u2="0.9365" v2="0.374" v1="0.251" variant="" />
+		<Element name="wine_watermelon.tex" u1="0.9385" u2="0.999" v2="0.374" v1="0.251" variant="" />
+	</Elements>
 </Atlas>

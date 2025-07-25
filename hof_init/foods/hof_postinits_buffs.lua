@@ -97,11 +97,43 @@ local function MochaBuffPostInit(inst)
 	inst:ListenForEvent("timerdone", OnTimerDone)
 end
 
+local function TiramisuBuffPostInit(inst)
+	local function OnTimerDone(inst, data)
+		if data.name == "kyno_tiramisubuff" then
+			inst.components.debuff:Stop()
+		end
+	end
+	
+	local function OnExtended(inst, target)
+		inst.components.timer:StopTimer("kyno_tiramisubuff")
+		inst.components.timer:StartTimer("kyno_tiramisubuff", HOF_COFFEEDURATION)
+	
+		if target.components.locomotor ~= nil then
+			target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_tiramisubuff", TUNING.KYNO_TIRAMISUBUFF_SPEED)
+		end
+	end
+	
+	if not _G.TheWorld.ismastersim then 
+		return 
+	end
+	
+	if inst.components.debuff ~= nil then
+		inst.components.debuff:SetExtendedFn(OnExtended)
+	end
+	
+	if inst.components.timer ~= nil then
+		inst.components.timer:StartTimer("kyno_tiramisubuff", HOF_COFFEEDURATION)
+	end
+	
+	inst:ListenForEvent("timerdone", OnTimerDone)
+end
+
 AddPrefabPostInit("kyno_coffeebuff", CoffeeBuffPostInit)
 AddPrefabPostInit("kyno_mochabuff", MochaBuffPostInit)
+AddPrefabPostInit("kyno_tiramisubuff", TiramisuBuffPostInit)
 
 if HOF_COFFEESPEED then
-    local CoffeeFood = _G.MergeMaps(require("hof_foodrecipes"), require("hof_brewrecipes_keg"))
+    local CoffeeFood = _G.MergeMaps(require("hof_foodrecipes"), require("hof_foodrecipes_warly"), require("hof_brewrecipes_keg"))
 	
 	CoffeeFood.coffee.oneatenfn = function(inst, eater)
 		eater:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
@@ -113,6 +145,11 @@ if HOF_COFFEESPEED then
 	
 	CoffeeFood.coffee_mocha.oneatenfn = function(inst, eater)
 		eater:AddDebuff("kyno_mochabuff", "kyno_mochabuff")
+	end
+	
+	CoffeeFood.tiramisu.oneatenfn = function(inst, eater)
+		eater:AddDebuff("kyno_tiramisubuff", "kyno_tiramisubuff")
+		eater:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
 	end
 end
 

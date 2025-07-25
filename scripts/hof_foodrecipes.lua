@@ -89,7 +89,7 @@ local kyno_foods =
 	
 	tropicalbouillabaisse =
 	{
-		test = function(cooker, names, tags) return tags.fish and (names.eel or names.eel_cooked or names.pondeel) and (names.wobster_sheller_land) 
+		test = function(cooker, names, tags) return tags.fish and (names.eel or names.eel_cooked or names.pondeel) and (tags.wobster) 
 		and (names.barnacle or names.barnacle_cooked) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -2187,7 +2187,7 @@ local kyno_foods =
 	
 	purplewobstersoup =
 	{
-		test = function(cooker, names, tags) return names.wobster_sheller_land and names.kyno_grouper and (names.kyno_turnip or names.kyno_turnip_cooked) end,
+		test = function(cooker, names, tags) return tags.wobster and names.kyno_grouper and (names.kyno_turnip or names.kyno_turnip_cooked) end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,
@@ -2210,7 +2210,7 @@ local kyno_foods =
 	
 	wobstermonster =
 	{
-		test = function(cooker, names, tags) return names.wobster_sheller_land and (names.monstermeat or names.monstermeat_cooked) and
+		test = function(cooker, names, tags) return tags.wobster and (names.monstermeat or names.monstermeat_cooked) and
 		(tags.veggie and tags.veggie >= 2) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -2766,7 +2766,7 @@ local kyno_foods =
 	
 	wobsterbreaded =
 	{
-		test = function(cooker, names, tags) return names.wobster_sheller_land and (names.tomato or names.tomato_cooked) and tags.flour and
+		test = function(cooker, names, tags) return tags.wobster and (names.tomato or names.tomato_cooked) and tags.flour and
 		names.kyno_oil end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -2814,15 +2814,16 @@ local kyno_foods =
 		sanity = 5,
 		cooktime = 1,
 		floater = TUNING.HOF_FLOATER,
+		tags = {"drinkable_food"},
 		card_def = {ingredients = {{"kyno_rice", 1}, {"goatmilk", 1}, {"honey", 1}, {"ice", 1}}},
 	},
 	
 	wobstercocktail =
 	{
-		test = function(cooker, names, tags) return names.wobster_sheller_land and (names.tomato or names.tomato_cooked) and
+		test = function(cooker, names, tags) return tags.wobster and (names.tomato or names.tomato_cooked) and
 		(names.pepper or names.pepper_cooked) and not tags.inedible end,
 		priority = 30,
-		foodtype = FOODTYPE.GOODIES,
+		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
@@ -2831,8 +2832,28 @@ local kyno_foods =
 		sanity = 60,
 		cooktime = 1.1,
 		floater = TUNING.HOF_FLOATER,
+		tags = {"drinkable_food"},
 		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"tomato", 1}, {"pepper", 2}}},
 	},
+	
+	pomegranatetea =
+	{
+		test = function(cooker, names, tags) return (names.pomegranate or names.pomegranate_cooked) and tags.frozen and tags.sweetener end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 25,
+		hunger = 12.5,
+		sanity = 10,
+		cooktime = 0.5,
+		scale = .8,
+		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed", "drinkable_food"},
+		card_def = {ingredients = {{"pomegranate", 1}, {"ice", 1}, {"honey", 2}}},
+	},
+	
 	--[[
 	strawberrygrinder =
 	{

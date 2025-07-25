@@ -80,7 +80,6 @@ local function piratefn()
 
     return inst
 end
-
 ---------------------------------------------------------------------------
 -- Worm Buff
 ---------------------------------------------------------------------------
@@ -165,7 +164,6 @@ local function wormfn()
 
     return inst
 end
-
 ---------------------------------------------------------------------------
 -- Crab Buff
 ---------------------------------------------------------------------------
@@ -250,7 +248,92 @@ local function crabfn()
 
     return inst
 end
+---------------------------------------------------------------------------
+-- Amphibian Buff
+---------------------------------------------------------------------------
+local function ApplyAmphibianBonusDamage(inst, target, damage, weapon)
+	local AMPHIBIAN_TAGS = {"merm", "frog", "toadstool"}
+
+    return (target:HasOneOfTags(AMPHIBIAN_TAGS) and TUNING.KYNO_AMPHIBIANBUFF_EXTRADAMAGE) or 0
+end
+
+local function ClearAmphibianBonusDamage(inst, target, damage, weapon)
+	return 0
+end
+
+local function OnAttachedAmphibian(inst, target)
+    inst.entity:SetParent(target.entity)
+    inst.Transform:SetPosition(0, 0, 0) 
+    
+	if target.components.combat ~= nil and target:HasTag("player") then	
+		target.components.combat.bonusdamagefn = ApplyAmphibianBonusDamage
+		
+		if target.components.talker and target:HasTag("player") then 
+			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_AMPHIBIANBUFF_START"))
+		end
+	end
+	
+    inst:ListenForEvent("death", function()
+        inst.components.debuff:Stop()
+    end, target)
+end
+
+local function OnTimerDoneAmphibian(inst, data)
+    if data.name == "kyno_amphibianbuff" then
+        inst.components.debuff:Stop()
+    end
+end
+
+local function OnDetachedAmphibian(inst, target)
+	if target.components.combat ~= nil and target:HasTag("player") then
+		target.components.combat.bonusdamagefn = nil
+		
+		if target.components.talker and target:HasTag("player") then 
+			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_AMPHIBIANBUFF_END"))
+		end
+	end
+	
+    inst:Remove()
+end
+
+local function OnExtendedAmphibian(inst, target)
+    inst.components.timer:StopTimer("kyno_amphibianbuff")
+    inst.components.timer:StartTimer("kyno_amphibianbuff", TUNING.KYNO_AMPHIBIANBUFF_DURATION)
+	
+	if target.components.combat ~= nil and target:HasTag("player") then
+		target.components.combat.bonusdamagefn = ApplyAmphibianBonusDamage
+	end
+end
+
+local function amphibianfn()
+    local inst = CreateEntity()
+
+    if not TheWorld.ismastersim then
+        inst:DoTaskInTime(0, inst.Remove)
+        return inst
+    end
+
+    inst.entity:AddTransform()
+    inst.entity:Hide()
+    inst.persists = false
+
+    inst:AddTag("CLASSIFIED")
+
+    inst:AddComponent("debuff")
+    inst.components.debuff:SetAttachedFn(OnAttachedAmphibian)
+    inst.components.debuff:SetDetachedFn(OnDetachedAmphibian)
+    inst.components.debuff:SetExtendedFn(OnExtendedAmphibian)
+    inst.components.debuff.keepondespawn = true
+
+    inst:AddComponent("timer")
+    inst.components.timer:StartTimer("kyno_amphibianbuff", TUNING.KYNO_AMPHIBIANBUFF_DURATION)
+    
+	inst:ListenForEvent("timerdone", OnTimerDoneAmphibian)
+
+    return inst
+end
 
 return Prefab("kyno_piratebuff", piratefn),
 Prefab("kyno_wormbuff", wormfn),
-Prefab("kyno_crabbuff", crabfn)
+Prefab("kyno_crabbuff", crabfn),
+Prefab("kyno_amphibianbuff", amphibianfn)

@@ -80,6 +80,11 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EATER = "使食物在一段时间内�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRABKINGFEAST = "Increased damage against crabs for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ANTLION = "Satisfies the Antlion for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_JAWSBREAKER = "Allures and kills Rockjaws and Gnarwails when thrown into the ocean. Does not work if too close."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FIREIMMUNITY = "This food can make a survivor immune to Fire for a certain amount of time. Briefly increases the temperature."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_TIRAMISU = "Increased movement speed for a certain amount of time.\n\nDries off the survivor and grants them immunity to Wetness for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_AMPHIBIAN = "Increased damage against amphibians for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ENLIGHTENMENT = "Enlightens the survivor for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_STEALTH = "Renders the survivor unseen and undetectable from traps and creatures for a certain amount of time."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含防腐粉末的料理可使腐败速率减半，并免除食用变质食物的惩罚。"

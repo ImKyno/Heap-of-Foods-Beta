@@ -77,3 +77,4 @@ AddFoodTag("mayonnaise",    {name = STRINGS_INGREDIENTS_MAYONNAISE, atlas = "ima
 AddFoodTag("butter",        {name = STRINGS_INGREDIENTS_BUTTER,     atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("flour",         {name = STRINGS_INGREDIENTS_FLOUR,      atlas = "images/ingredientimages/hof_ingredientimages.xml"})
 AddFoodTag("syrup",         {name = STRINGS_INGREDIENTS_SYRUP,      atlas = "images/ingredientimages/hof_ingredientimages.xml"})
+AddFoodTag("wobster",       {name = STRINGS_INGREDIENTS_WOBSTER,    altas = "images/ingredientimages/hof_ingredientimages.xml"})

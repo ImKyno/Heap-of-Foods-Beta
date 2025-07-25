@@ -80,7 +80,9 @@ local function fn()
 
     return inst
 end
-
+----------------------------------------------------------------------
+-- MOCHA BUFF
+----------------------------------------------------------------------
 local function OnAttachedMocha(inst, target)
 	inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0)
@@ -175,6 +177,72 @@ local function mochafn()
 
     return inst
 end
+----------------------------------------------------------------------
+-- TIRAMISU BUFF
+----------------------------------------------------------------------
+local function OnAttachedTiramisu(inst, target)
+	inst.entity:SetParent(target.entity)
+    inst.Transform:SetPosition(0, 0, 0)
+	
+	if target.components.locomotor ~= nil then
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_tiramisubuff", TUNING.KYNO_TIRAMISUBUFF_SPEED)
+	end
+	
+    inst:ListenForEvent("death", function()
+        inst.components.debuff:Stop()
+    end, target)
+end
+
+local function OnTimerDoneTiramisu(inst, data)
+    if data.name == "kyno_tiramisubuff" then
+        inst.components.debuff:Stop()
+    end
+end
+
+local function OnDetachedTiramisu(inst, target)	
+	if target.components.locomotor ~= nil then
+		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_tiramisubuff")
+	end
+	
+    inst:Remove()
+end
+
+local function OnExtendedTiramisu(inst, target)
+    inst.components.timer:StopTimer("kyno_tiramisubuff")
+    inst.components.timer:StartTimer("kyno_tiramisubuff", TUNING.KYNO_TIRAMISUBUFF_DURATION)
+	
+	if target.components.locomotor ~= nil then
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_tiramisubuff", TUNING.KYNO_TIRAMISUBUFF_SPEED)
+	end
+end
+
+local function tiramisufn()
+    local inst = CreateEntity()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+
+    inst.entity:AddTransform()
+    inst.entity:Hide()
+    inst.persists = false
+
+    inst:AddTag("CLASSIFIED")
+
+    inst:AddComponent("debuff")
+    inst.components.debuff:SetAttachedFn(OnAttachedTiramisu)
+    inst.components.debuff:SetDetachedFn(OnDetachedTiramisu)
+    -- inst.components.debuff:SetExtendedFn(OnExtendedTiramisu)
+    inst.components.debuff.keepondespawn = true
+
+    inst:AddComponent("timer")
+    -- inst.components.timer:StartTimer("kyno_tiramisubuff", TUNING.KYNO_TIRAMISUBUFF_DURATION)
+    
+	inst:ListenForEvent("timerdone", OnTimerDoneTiramisu)
+
+    return inst
+end
 
 return Prefab("kyno_coffeebuff", fn),
-Prefab("kyno_mochabuff", mochafn)
+Prefab("kyno_mochabuff", mochafn),
+Prefab("kyno_tiramisubuff", tiramisufn)

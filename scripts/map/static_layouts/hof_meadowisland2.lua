@@ -10989,7 +10989,8 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "4"
+            ["data.growable.stage"] = "4",
+            ["scenario"] = "sammy_farmplot"
           }
         },
         {
@@ -11001,7 +11002,9 @@ return {
           width = 0,
           height = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["scenario"] = "random_damage"
+          }
         },
         {
           name = "",
@@ -11035,7 +11038,8 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "4"
+            ["data.growable.stage"] = "4",
+            ["scenario"] = "sammy_farmplot"
           }
         },
         {
@@ -11048,7 +11052,8 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "4"
+            ["data.growable.stage"] = "5",
+            ["scenario"] = "sammy_farmplot"
           }
         },
         {
@@ -11061,7 +11066,8 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "4"
+            ["data.growable.stage"] = "4",
+            ["scenario"] = "sammy_farmplot"
           }
         },
         {
@@ -11076,6 +11082,7 @@ return {
           properties = {
             ["data.growable.stage"] = "5",
             ["data.is_oversized"] = "true",
+            ["scenario"] = "sammy_farmplot"
           }
         },
         {
@@ -11088,7 +11095,8 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "4"
+            ["data.growable.stage"] = "5",
+            ["scenario"] = "sammy_farmplot"
           }
         },
         {
@@ -11155,7 +11163,9 @@ return {
           width = 0,
           height = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["scenario"] = "random_damage"
+          }
         },
         {
           name = "",
@@ -11167,7 +11177,8 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "4"
+            ["data.growable.stage"] = "5",
+            ["scenario"] = "sammy_farmplot"
           }
         },
         {
@@ -11180,7 +11191,8 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "4"
+            ["data.growable.stage"] = "5",
+            ["scenario"] = "sammy_farmplot"
           }
         },
         {
@@ -11193,7 +11205,8 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "4"
+            ["data.growable.stage"] = "4",
+            ["scenario"] = "sammy_farmplot"
           }
         },
         {
@@ -11209,6 +11222,138 @@ return {
             ["data.c"] = "cookpot",
             ["data.r"] = "gorge_carrot_cake"
           }
+        },
+        {
+          name = "",
+          type = "rock1",
+          shape = "rectangle",
+          x = 1692,
+          y = 2384,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "rock1",
+          shape = "rectangle",
+          x = 1460,
+          y = 2100,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "rock1",
+          shape = "rectangle",
+          x = 752,
+          y = 2924,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "rock1",
+          shape = "rectangle",
+          x = 1824,
+          y = 3000,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "rock1",
+          shape = "rectangle",
+          x = 1280,
+          y = 2488,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "rock_flintless",
+          shape = "rectangle",
+          x = 672,
+          y = 2412,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "rock_flintless",
+          shape = "rectangle",
+          x = 1512,
+          y = 3048,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "rock_flintless",
+          shape = "rectangle",
+          x = 1092,
+          y = 2168,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "rock_flintless",
+          shape = "rectangle",
+          x = 1856,
+          y = 2444,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "rock_flintless",
+          shape = "rectangle",
+          x = 1400,
+          y = 1820,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "rock_flintless",
+          shape = "rectangle",
+          x = 1476,
+          y = 2748,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "rock1",
+          shape = "rectangle",
+          x = 784,
+          y = 3064,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
         }
       }
     }

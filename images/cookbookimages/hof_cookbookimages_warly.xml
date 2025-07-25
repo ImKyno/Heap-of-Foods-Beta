@@ -22,8 +22,9 @@
 		<Element name="nachos.tex" u1="0.626" u2="0.749" v2="0.999" v1="0.751" variant="" />
 		<Element name="risotto.tex" u1="0.751" u2="0.874" v2="0.999" v1="0.751" variant="" />
 		<Element name="sweetpotatosouffle.tex" u1="0.876" u2="0.999" v2="0.999" v1="0.751" variant="" />
-		<Element name="tom_kha_soup.tex" u1="0.501" u2="0.624" v2="0.749" v1="0.501" variant="" />
-		<Element name="warlyicedtea.tex" u1="0.626" u2="0.749" v2="0.749" v1="0.501" variant="" />
-		<Element name="warlytea.tex" u1="0.751" u2="0.874" v2="0.749" v1="0.501" variant="" />
+		<Element name="tiramisu.tex" u1="0.501" u2="0.624" v2="0.749" v1="0.501" variant="" />
+		<Element name="tom_kha_soup.tex" u1="0.626" u2="0.749" v2="0.749" v1="0.501" variant="" />
+		<Element name="warlyicedtea.tex" u1="0.751" u2="0.874" v2="0.749" v1="0.501" variant="" />
+		<Element name="warlytea.tex" u1="0.876" u2="0.999" v2="0.749" v1="0.501" variant="" />
 	</Elements>
 </Atlas>

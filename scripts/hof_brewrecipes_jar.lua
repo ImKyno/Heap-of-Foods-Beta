@@ -17,7 +17,7 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"berries", 2}, {"honey", 1}}},
 	},
 	
@@ -32,7 +32,7 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"berries_juicy", 2}, {"honey", 1}}},
 	},
 	
@@ -47,7 +47,7 @@ local kyno_foods_jar =
 		sanity = 30,
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"pomegranate", 2}, {"honey", 1}}},
 	},
 	
@@ -62,7 +62,7 @@ local kyno_foods_jar =
 		sanity = 40,
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"dragonfruit", 2}, {"honey", 1}}},
 	},
 	
@@ -77,7 +77,7 @@ local kyno_foods_jar =
 		sanity = 25,
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"cave_banana", 2}, {"honey", 1}}},
 	},
 	
@@ -92,7 +92,7 @@ local kyno_foods_jar =
 		sanity = -20,
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		tags = {"monstermeat"},
 		card_def = {ingredients = {{"durian", 2}, {"honey", 1}}},
 		oneatenfn = function(inst, eater)
@@ -116,7 +116,7 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"watermelon", 2}, {"honey", 1}}},
 	},
 	
@@ -131,7 +131,7 @@ local kyno_foods_jar =
 		sanity = 20,
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"fig", 2}, {"honey", 1}}},
 	},
 	
@@ -147,7 +147,7 @@ local kyno_foods_jar =
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLOW,
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"wormlight_lesser", 2}, {"honey", 1}}},
 		prefabs = { "wormlight_light_greater" },
         oneatenfn = function(inst, eater)
@@ -184,7 +184,7 @@ local kyno_foods_jar =
 		sanity = 33,
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_banana", 2}, {"honey", 1}}},
 	},
 	
@@ -199,7 +199,7 @@ local kyno_foods_jar =
 		sanity = 33,
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_kokonut_halved", 2}, {"honey", 1}}},
 	},
 	
@@ -214,7 +214,7 @@ local kyno_foods_jar =
 		sanity = 15,
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_pineapple_halved", 2}, {"honey", 1}}},
 	},
 	
@@ -231,7 +231,7 @@ local kyno_foods_jar =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NIGHTVISION,
 		nightvision = true,
 		nameoverride = "KYNO_JELLY",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"ancientfruit_nightvision", 2}, {"honey", 1}}},
 		prefabs = { "kyno_nightvisionbuff" },
         oneatenfn = function(inst, eater)
@@ -254,7 +254,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"carrot", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -269,7 +269,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"corn", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -284,7 +284,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"eggplant", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -299,7 +299,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"pumpkin", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -314,7 +314,7 @@ local kyno_foods_jar =
 		sanity = -15,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"cutlichen", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -329,7 +329,7 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"cactus_meat", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -344,7 +344,7 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"garlic", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -359,7 +359,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"asparagus", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -374,7 +374,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"onion", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -389,7 +389,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"tomato", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -404,7 +404,7 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"potato", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -421,7 +421,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"pepper", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -436,7 +436,7 @@ local kyno_foods_jar =
 		sanity = -15,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"red_cap", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -451,7 +451,7 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"green_cap", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -466,7 +466,7 @@ local kyno_foods_jar =
 		sanity = -5,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"blue_cap", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -482,7 +482,7 @@ local kyno_foods_jar =
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"moon_cap", 2}, {"kyno_spotspice", 1}}},
 		prefabs = { "buff_sleepresistance" },
         oneatenfn = function(inst, eater)
@@ -506,7 +506,7 @@ local kyno_foods_jar =
 		sanity = -5,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kelp", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -521,7 +521,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"rock_avocado_fruit_ripe", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -536,7 +536,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_white_cap", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -551,7 +551,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_aloe", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -566,7 +566,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_radish", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -581,7 +581,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_sweetpotato", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -596,7 +596,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_lotus_flower", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -611,7 +611,7 @@ local kyno_foods_jar =
 		sanity = -10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_seaweeds", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -626,7 +626,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_taroroot", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -641,7 +641,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_waterycress", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -656,7 +656,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_cucumber", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -672,7 +672,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_parznip", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -687,7 +687,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_turnip", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -702,7 +702,7 @@ local kyno_foods_jar =
 		sanity = -15,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_fennel", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -717,7 +717,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_PICKLES",
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_rice", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -734,7 +734,7 @@ local kyno_foods_jar =
 		cooktime = 24,
 		nameoverride = "KYNO_MAYONNAISE",
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"bird_egg", 1}, {"kyno_oil", 1}, {"kyno_salt", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
@@ -754,7 +754,7 @@ local kyno_foods_jar =
 		cooktime = 24,
 		nameoverride = "KYNO_MAYONNAISE",
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_chicken_egg", 1}, {"kyno_oil", 1}, {"kyno_salt", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
@@ -774,7 +774,7 @@ local kyno_foods_jar =
 		cooktime = 24,
 		nameoverride = "KYNO_MAYONNAISE",
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"tallbirdegg", 1}, {"kyno_oil", 1}, {"kyno_salt", 1}}},
 		prefabs = { "kyno_hungerregenbuff" },
         oneatenfn = function(inst, eater)
@@ -794,7 +794,7 @@ local kyno_foods_jar =
 		cooktime = 72,
 		nameoverride = "KYNO_MAYONNAISE",
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DESANITY,
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"bird_egg", 1}, {"nightmarefuel", 1}, {"kyno_salt", 1}}},
 		prefabs = { "kyno_insanitybuff" },
         oneatenfn = function(inst, eater)
@@ -813,7 +813,7 @@ local kyno_foods_jar =
 		sanity = 10,
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"mayonnaise", 1}, {"kyno_spotspice", 1}, {"kyno_cucumber", 1}}},
 		oneatenfn = function(inst, eater)
             eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
@@ -830,7 +830,7 @@ local kyno_foods_jar =
 		hunger = 25,
 		sanity = 40,
 		cooktime = 96,
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_milk_beefalo", 2}, {"kyno_salt", 1}}},
 	},
 	
@@ -844,7 +844,7 @@ local kyno_foods_jar =
 		hunger = 40,
 		sanity = 0,
 		cooktime = 96,
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"goatmilk", 2}, {"kyno_salt", 1}}},
 	},
 	
@@ -858,7 +858,7 @@ local kyno_foods_jar =
 		hunger = 25,
 		sanity = 20,
 		cooktime = 96,
-		floater = {"med", nil, 0.65},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_milk_koalefant", 2}, {"kyno_salt", 1}}},
 	},
 	
