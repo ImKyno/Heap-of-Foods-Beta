@@ -1,5 +1,5 @@
-name                        = "Heap of Foods"
-version                     = "1.8-B"
+name                        = "Heap of Foods - Beta Branch"
+version                     = "1.0-B"
 
 description                 = 
 [[
@@ -13,8 +13,8 @@ This update focused on revamping the visuals of the farming crops as well as add
 
 Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover it.
 
-󰀌 Mod Version: 1.8-B
-󰀧 Update: Seaside Summer (Part I)
+󰀌 Beta Branch Version: 1.0-B
+󰀧 Update: Seaside Summer (Part II)
 ]]
 
 author                      = "Kyno"
@@ -27,8 +27,8 @@ client_only_mod             = false
 
 server_filter_tags          = {"Heap of Foods", "HOF", "Cooking", "Entertainment", "Kyno"}
 
-icon                        = "ModiconHOF.tex"
-icon_atlas                  = "ModiconHOF.xml"
+icon                        = "ModiconHOFB.tex"
+icon_atlas                  = "ModiconHOFB.xml"
 
 -- Mod Configuraton Strings and Stuff.
 local names                 =
@@ -160,7 +160,7 @@ local deschovers            =
 
 -- Brazilian Portuguese
 if locale == "pt" then
-	name                     = "Amontoado de Comidas"
+	name                     = "Amontoado de Comidas - Beta"
 
 	description                 = 
 [[
@@ -174,8 +174,8 @@ Esta atualização tem como foco melhorar os visuais das plantações e adiciona
 
 Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso, em uma ilha muito longe do continente, há um novo arbusto crescendo, esperando para ser descoberto!
 
-󰀌 Versão do Mod: 1.8-B
-󰀧 Atualização: Verão à Beira-mar (Parte I)
+󰀌 Versão do Beta: 1.0-B
+󰀧 Atualização: Verão à Beira-mar (Parte II)
 ]]
 
 	names                       =
@@ -306,7 +306,7 @@ end
 
 -- Simplified Chinese.
 if locale == "zh" or locale == "zhr" then
-	name                        = "Heap of Foods (更多料理)"
+	name                        = "Heap of Foods - Beta Branch"
 
 	description                 = 
 [[
@@ -320,8 +320,8 @@ if locale == "zh" or locale == "zhr" then
 
 我们的幸存者设法在野外找到了新型种子！在远离大陆的热带岛屿上，一种新的灌木丛正在绽放，等待着他们去发掘。
 
-󰀌 Mod版本: 1.8-B
-󰀧 Update: Seaside Summer (Part I)
+󰀌 Beta Branch Version: 1.0-B
+󰀧 Update: Seaside Summer (Part II)
 ]]
 
 	names                       =
