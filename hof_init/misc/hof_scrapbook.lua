@@ -7701,6 +7701,52 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -100,
 		deps           = preparedfood_deps,
 	},
+	
+	brigadeiro         =
+	{
+		name           = "brigadeiro",
+		type           = "food",
+		tex            = "brigadeiro.tex",
+		prefab         = "brigadeiro",
+		healthvalue    = 25,
+		hungervalue    = 32.5,
+		sanityvalue    = 50,
+		perishable     = 3840,
+		foodtype       = "GOODIES",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "brigadeiro",
+		build          = "brigadeiro",
+		overridesymbol = {"swap_food", "swap_food", "brigadeiro"},
+		anim           = "idle",
+		animoffsetx    = 10,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -100,
+		deps           = preparedfood_deps,
+	},
+	
+	regularlasagna     =
+	{
+		name           = "regularlasagna",
+		type           = "food",
+		tex            = "regularlasagna.tex",
+		prefab         = "regularlasagna",
+		healthvalue    = 30,
+		hungervalue    = 37.5,
+		sanityvalue    = 30,
+		perishable     = 3840,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "regularlasagna",
+		build          = "regularlasagna",
+		overridesymbol = {"swap_food", "swap_food", "regularlasagna"},
+		anim           = "idle",
+		animoffsetx    = 12,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -100,
+		deps           = preparedfood_deps,
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =

@@ -132,6 +132,8 @@ LOCKS_KEYS[LOCKS.SERENITY_ISLAND] = {KEYS.SERENITY_ISLAND}
 -- Our Custom Layouts.
 Layouts["Oasis"]              = StaticLayout.Get("map/static_layouts/hof_oasis")
 Layouts["SerenityIslandShop"] = StaticLayout.Get("map/static_layouts/hof_serenityisland_shop")
+Layouts["LivingTree"]         = StaticLayout.Get("map/static_layouts/hof_livingtree")
+Layouts["TrufflesZone"]       = StaticLayout.Get("map/static_layouts/hof_truffles_zone") -- WIP.
 
 -- Retrofit the Serenity Archipelago in the world.
 -- The numbers below represents each turf in the setpiece file.
@@ -223,6 +225,7 @@ for i, layout in ipairs(hof_meadow_setpieces) do
 	Layouts[layout].ground_types = _G.MEADOWISLAND_GROUNDS
 end
 
+-- In case someone needs Sammy but not the whole island.
 Layouts["MeadowIslandShop"] = StaticLayout.Get("map/static_layouts/hof_meadowisland_shop")
 Layouts["MeadowIslandShop"].ground_types = { WORLD_TILES.ROAD, WORLD_TILES.FOREST, WORLD_TILES.FARMING_SOIL } -- 1,2,3
 

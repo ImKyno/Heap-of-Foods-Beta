@@ -2916,6 +2916,37 @@ local kyno_foods =
 		card_def = {ingredients = {{"cheese_yellow", 1}, {"kyno_flour", 1}, {"kyno_spotspice", 1}, {"kyno_oil", 1}}},
 	},
 	
+	brigadeiro =
+	{
+		test = function(cooker, names, tags) return names.chocolate_black and tags.sugar and names.kyno_twiggynuts end,
+		priority = 35,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_FASTISH,
+		health = 25,
+		hunger = 32.5,
+		sanity = 50,
+		cooktime = 1,
+		scale = .9,
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"chocolate_black", 1}, {"kyno_sugar", 1}, {"kyno_twiggynuts", 2}}},
+	},
+	
+	regularlasagna =
+	{
+		test = function(cooker, names, tags) return tags.meat and (names.tomato or names.tomato_cooked) and tags.flour
+		and not tags.monster and not tags.spotspice end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FAST,
+		health = 30,
+		hunger = 37.5,
+		sanity = 30,
+		cooktime = .5,
+		scale = .9,
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"meat", 1}, {"tomato", 2}, {"kyno_flour", 1}}},
+	},
+	
 	--[[
 	strawberrygrinder =
 	{

@@ -82,6 +82,8 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_SAMMY1",          "Sammy can be found on the S
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SAMMY2",          "Sammy's wares changes throughout the seasons and during special world occasions. Make sure to check his inventory every now and then to see what he has to offer.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_JAWSBREAKER",     "Jawsbreaker can be used to lure Rockjaws and Gnarwails, killing them instantly. But don't use it too close to yourself.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_METALBUCKET",     "What's better than a Bucket? A sturdy metal bucket that will not break when milking animals!")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_LUNARTEQUILA",    "Feeling a bit on your moon side? Why not drink an Enlightened Tequila to open your mind to the truth?")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_MIMICMONSA",      "If you want to sneak past dangerous foes, brew a Sneakmosa and no one and nothing will ever notice you!")
 
 -- Chcemy, aby nasze niestandardowe wskazówki pojawiały się częściej.	
 SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})	
