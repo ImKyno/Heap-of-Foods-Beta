@@ -1,7 +1,8 @@
 local assets =
 {
-	Asset("ANIM", "anim/meat_rack_food.zip"),
 	Asset("ANIM", "anim/meat_human.zip"),
+	
+	Asset("ANIM", "anim/kyno_meatrack_humanmeat.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -73,9 +74,9 @@ local function fn()
 	
 	inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("kyno_humanmeat_dried")
-	inst.components.dryable:SetBuildFile("humanmeat")
-	inst.components.dryable:SetDriedBuildFile("humanmeat_dried")
-	inst.components.dryable:SetDryTime(TUNING.DRY_FAST)
+	inst.components.dryable:SetDryTime(TUNING.DRY_MED)
+	inst.components.dryable:SetBuildFile("kyno_meatrack_humanmeat")
+	inst.components.dryable:SetDriedBuildFile("kyno_meatrack_humanmeat")
 
 	MakeHauntableLaunchAndPerish(inst)
 

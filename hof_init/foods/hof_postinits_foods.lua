@@ -181,32 +181,6 @@ for k, v in pairs(drinkable_foods) do
     end)
 end
 
--- New foods that can be dried on Drying Racks.
-local dryable_foods =
-{
-	"red_cap",
-	"green_cap",
-	"blue_cap",
-	"moon_cap",
-	"plantmeat",
-}
-
-local function DryablePostinit(inst)
-	inst:AddTag("dryable")
-
-	if not _G.TheWorld.ismastersim then
-        return inst
-    end
-
-    inst:AddComponent("dryable")
-	inst.components.dryable:SetProduct("kyno_".. inst.prefab .."_dried")
-    inst.components.dryable:SetDryTime(TUNING.DRY_MED)
-end
-
-for k, v in pairs(dryable_foods) do
-	AddPrefabPostInit(v, DryablePostinit)
-end
-
 -- This will prevent some characters from drinking Alcoholic-like drinks.
 if HOF_ALCOHOLICDRINKS then
 	local restricted_characters =

@@ -1,6 +1,8 @@
 local assets =
 {
+	Asset("ANIM", "anim/meat_rack_food.zip"),
 	Asset("ANIM", "anim/kyno_poison_froglegs.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_poison_froglegs.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -53,6 +55,8 @@ local function fn()
 	inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("smallmeat_dried")
 	inst.components.dryable:SetDryTime(TUNING.DRY_MED)
+	inst.components.dryable:SetBuildFile("kyno_meatrack_poison_froglegs")
+	inst.components.dryable:SetDriedBuildFile("meat_rack_food") -- Uses smallmeat_dried build.
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)

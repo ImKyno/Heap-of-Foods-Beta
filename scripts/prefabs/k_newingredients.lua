@@ -18,6 +18,8 @@ local assets =
 	Asset("ANIM", "anim/kyno_crabkingmeat.zip"),
 	Asset("ANIM", "anim/kyno_tealeaf.zip"),
 	
+	Asset("ANIM", "anim/kyno_meatrack_crabmeat.zip"),
+	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -871,6 +873,8 @@ local function crabmeatfn()
 	inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("kyno_crabmeat_dried")
     inst.components.dryable:SetDryTime(TUNING.DRY_MED)
+	inst.components.dryable:SetBuildFile("kyno_meatrack_crabmeat")
+	inst.components.dryable:SetDriedBuildFile("kyno_meatrack_crabmeat")
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_CRABMEAT_HEALTH
@@ -988,6 +992,8 @@ local function crabkingmeatfn()
 	inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("kyno_crabmeat_dried")
     inst.components.dryable:SetDryTime(TUNING.DRY_MED)
+	inst.components.dryable:SetBuildFile("kyno_meatrack_crabmeat")
+	inst.components.dryable:SetDriedBuildFile("kyno_meatrack_crabmeat")
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_CRABKINGMEAT_HEALTH

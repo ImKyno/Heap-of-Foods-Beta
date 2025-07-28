@@ -187,7 +187,6 @@ local function limpets()
 	
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
-	inst:AddTag("lureplant_bait")
 
 	inst.entity:SetPristine()
 

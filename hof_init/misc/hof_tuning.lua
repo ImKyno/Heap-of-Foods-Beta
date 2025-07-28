@@ -2,6 +2,29 @@
 TUNING.HOF_RESOURCES = .07
 TUNING.HOF_FLOATER = {"med", nil, 0.65}
 
+TUNING.HOF_COOKPOTS =
+{
+	"cookpot",
+	"portablecookpot",
+	"archive_cookpot",
+	"portablespicer",
+	
+	"kyno_cookware_syrup",
+	"kyno_cookware_small",
+	"kyno_cookware_big",
+	"kyno_cookware_elder",
+	"kyno_cookware_small_grill",
+	"kyno_cookware_grill",
+	"kyno_cookware_oven_small_casserole",
+	"kyno_cookware_oven_casserole",
+}
+
+TUNING.HOF_MEATRACKS = 
+{	
+	"meatrack", 
+	"meatrack_hermit"
+}
+
 TUNING.KYNO_FLOATILIZER_USES = 20
 TUNING.KYNO_FLOATILIZER_SOILCYCLES = TUNING.POOP_SOILCYCLES
 TUNING.KYNO_FLOATILIZER_FERTILIZE = TUNING.POOP_FERTILIZE * 2

@@ -261,6 +261,7 @@ function c_hofmonsterfoods()
 	
     if player ~= nil then
         c_select(player)
+		
         player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
 		c_give("cookbook",         nil, true)
         c_give("monsterlasagna", 	40, true)
@@ -274,6 +275,27 @@ function c_hofmonsterfoods()
 		c_give("spidercake",        40, true)
     end
 end	
+
+-- Gives all dryable items.
+function c_hofdryables()
+	local player = ConsoleCommandPlayer()
+	
+    if player ~= nil then
+        c_select(player)
+		
+		player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
+		c_give("red_cap",              40, true)
+		c_give("green_cap",            40, true)
+		c_give("blue_cap",             40, true)
+		c_give("moon_cap",             40, true)
+		c_give("plantmeat",            20, true)
+		c_give("kyno_humanmeat",       20, true)
+		c_give("kyno_crabmeat",        20, true)
+		c_give("kyno_crabkingmeat",    20, true)
+		c_give("kyno_poison_froglegs", 40, true)
+		c_give("kyno_seaweeds",        40, true)
+	end
+end
 
 local function _SpawnLayout_AddFn(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
     local x = (points_x[current_pos_idx] - width/2.0)  * TILE_SCALE

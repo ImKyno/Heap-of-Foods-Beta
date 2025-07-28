@@ -2,6 +2,7 @@ local assets =
 {
     Asset("ANIM", "anim/seaweed.zip"),
 	Asset("ANIM", "anim/seaweed_seed.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_seaweeds.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -168,8 +169,8 @@ local function seaweed()
 	inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("kyno_seaweeds_dried")
 	inst.components.dryable:SetDryTime(TUNING.DRY_FAST)
-	inst.components.dryable:SetBuildFile("seaweed")
-	inst.components.dryable:SetDriedBuildFile("seaweed_dried")
+	inst.components.dryable:SetBuildFile("kyno_meatrack_seaweeds")
+	inst.components.dryable:SetDriedBuildFile("kyno_meatrack_seaweeds")
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)

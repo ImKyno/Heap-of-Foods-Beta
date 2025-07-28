@@ -60,7 +60,7 @@ local function RetrofitMermhuts()
 	local newshop = _G.TheSim:FindFirstEntityWithTag("mermhouse_seaside")
 	
 	if newshop ~= nil then 
-		_G.ReplacePrefab(newshop, "kyno_meadowisland_shop")
+		_G.ReplacePrefab(newshop, "kyno_meadowisland_sammyhouse")
 	end
 	
 	local count = 0

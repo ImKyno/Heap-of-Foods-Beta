@@ -330,33 +330,19 @@ end
 
 AddPrefabPostInit("ash", AshPostinit)
 
--- Prevent Food From Spoiling In Stations.
+-- Prevent food from spoiling in stations.
 if HOF_KEEPFOOD then
-    local cooking_stations = {
-        "cookpot",
-        "portablecookpot",
-        "archive_cookpot",
-        "kyno_cookware_syrup",
-        "kyno_cookware_small",
-        "kyno_cookware_big",
-        "kyno_cookware_elder",
-        "kyno_cookware_small_grill",
-        "kyno_cookware_grill",
-        "kyno_cookware_oven_small_casserole",
-        "kyno_cookware_oven_casserole",
-    }
-
-    for k,v in pairs(cooking_stations) do
-        AddPrefabPostInit(v, function(inst)
-            if inst.components.stewer then
-                inst.components.stewer.onspoil = function()
-                    inst.components.stewer.spoiltime = 1
-                    inst.components.stewer.targettime = _G.GetTime()
-                    inst.components.stewer.product_spoilage = 0
-                end
-            end
-        end)
-    end
+	for k, v in pairs(TUNING.HOF_COOKPOTS) do
+		AddPrefabPostInit(v, function(inst)
+			if inst.components.stewer then
+				inst.components.stewer.onspoil = function()
+					inst.components.stewer.spoiltime = 1
+					inst.components.stewer.targettime = _G.GetTime()
+					inst.components.stewer.product_spoilage = 0
+				end
+			end
+		end)
+	end
 end
 
 -- For using Salt on Crock Pot foods. 
