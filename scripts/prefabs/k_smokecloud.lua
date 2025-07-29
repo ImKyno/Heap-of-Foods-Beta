@@ -1,8 +1,9 @@
 local assets =
 {
-    Asset("ANIM", "anim/smoke_plants.zip"),
-    Asset("SOUND", "sound/common.fsb"),
+    Asset("ANIM", "anim/fx_book_rain.zip"),
 }
+
+local s = .60
 
 local function fn()
     local inst = CreateEntity()
@@ -12,13 +13,12 @@ local function fn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	local s = .85
 	inst.AnimState:SetScale(s, s, s)
+	inst.AnimState:SetMultColour(1, 1, 1, .7)
 
-    inst.AnimState:SetBank("smoke_out")
-    inst.AnimState:SetBuild("smoke_plants")
-    inst.AnimState:PlayAnimation("smoke_loop", true)
-    -- inst.AnimState:SetFinalOffset(2)
+    inst.AnimState:SetBank("fx_book_rain")
+    inst.AnimState:SetBuild("fx_book_rain")
+    inst.AnimState:PlayAnimation("play_fx", false)
 
     inst:AddTag("FX")
 
@@ -33,4 +33,4 @@ local function fn()
     return inst
 end
 
-return Prefab("kyno_smoketrail", fn, assets)
+return Prefab("kyno_smokecloud", fn, assets)

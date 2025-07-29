@@ -9,13 +9,13 @@ local assets =
 local prefabs =
 {
     "kyno_pineapple",
-	"dug_kyno_pineapplebush",
+	-- "dug_kyno_pineapplebush",
 }
 
 local SEASON_BASEREGENTIME_TUNING_LOOKUP =
 {
-    [SEASONS.SPRING] = "KYNO_PINEAPPLEBUSH_GROWTIME_SPRING",
-    [SEASONS.SUMMER] = "KYNO_PINEAPPLEBUSH_GROWTIME_SUMMER",
+	[SEASONS.SPRING] = "KYNO_PINEAPPLEBUSH_GROWTIME_SPRING",
+	[SEASONS.SUMMER] = "KYNO_PINEAPPLEBUSH_GROWTIME_SUMMER",
 }
 
 local function OnSeasonChange(inst, season)
@@ -141,6 +141,7 @@ local function fn()
     MakeNoGrowInWinter(inst)
 	
 	inst:WatchWorldState("season", OnSeasonChange)
+	OnSeasonChange(inst, TheWorld.state.season)
 
 	return inst
 end

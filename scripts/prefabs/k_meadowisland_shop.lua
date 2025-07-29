@@ -1,6 +1,6 @@
 local assets =
 {	
-    Asset("ANIM", "anim/kyno_meadowisland_shop.zip"),
+	Asset("ANIM", "anim/kyno_meadowisland_shop.zip"),
 	Asset("ANIM", "anim/kyno_meadowisland_mermcart.zip"),
 	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
@@ -14,7 +14,7 @@ local prefabs =
 	
 	"kyno_meadowisland_mermcart",
 	"kyno_meadowisland_trader",
-	"kyno_smoketrail",
+	"kyno_smokecloud",
 }
 
 local function StartSpawning(inst)
@@ -74,14 +74,26 @@ local function SetWagonArt(inst, season)
 end
 
 local function SetChimneyFX(inst)
-	if not inst.smoketrail then
-		inst.smoketrail = SpawnPrefab("kyno_smoketrail")
-		inst.smoketrail.persists = false
-		inst.smoketrail.entity:SetParent(inst.entity)
+	if not inst.smokecloud then
+		inst.smokecloud = SpawnPrefab("kyno_smokecloud")
+		inst.smokecloud.entity:SetParent(inst.entity)
 
-		inst.smoketrail.entity:AddFollower()
-		inst.smoketrail.Follower:FollowSymbol(inst.GUID, "chimney", 0, 0, 0, true)
+		inst.smokecloud.entity:AddFollower()
+		inst.smokecloud.Follower:FollowSymbol(inst.GUID, "chimney", 0, 200, 0) -- Why positive makes it go down ???
 	end
+end
+
+local function CancelChimneyTask(inst)
+    if inst._chimneytask ~= nil then
+        inst._chimneytask:Cancel()
+        inst._chimneytask = nil
+    end
+end
+
+local function StartChimneyTask(inst)
+    if not inst.inlimbo and inst._chimneytask == nil then
+        inst._chimneytask = inst:DoTaskInTime(GetRandomMinMax(10, 40), SetChimneyFX)
+    end
 end
 
 local function OnIsDay(inst, isday)
@@ -99,7 +111,7 @@ local function OnIsDay(inst, isday)
 	end
 end
 
-local function mainfn(oldshop, symbol, offset)
+local function fn(oldshop)
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
@@ -122,14 +134,14 @@ local function mainfn(oldshop, symbol, offset)
 
 	inst.AnimState:SetBank("kyno_meadowisland_shop")
     inst.AnimState:SetBuild("kyno_meadowisland_shop")
-    --inst.AnimState:PlayAnimation("idle", true)
+    inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("structure")
     inst:AddTag("sammyhouse")
 	
 	if not TheNet:IsDedicated() then
         inst:AddComponent("pointofinterest")
-        inst.components.pointofinterest:SetHeight(60)
+        inst.components.pointofinterest:SetHeight(80)
     end
 	
 	inst.entity:SetPristine()
@@ -156,27 +168,13 @@ local function mainfn(oldshop, symbol, offset)
 	
 	inst:WatchWorldState("isday", OnIsDay)
 	OnIsDay(inst, TheWorld.state.isday)
-	-- StartSpawning(inst)
 	
-	-- inst:DoTaskInTime(0, SetChimneyFX)
+	inst.OnEntitySleep = CancelChimneyTask
+	inst.OnEntityWake = StartChimneyTask
+
+	StartChimneyTask(inst)
 	
-	-- Doing this for old worlds, new setpiece comes with the cart already.
-	if oldshop then
-		inst:DoTaskInTime(0, function(inst)
-			inst.mermcart = SpawnPrefab("kyno_meadowisland_mermcart")
-			inst.mermcart:AddTag("descartablewagon")
-			inst.mermcart.persists = false
-    
-			local x, y, z = inst.Transform:GetWorldPosition()
-
-			local theta = -3 -- -3
-			local radius = 4 -- 4
-			local x = x + radius * math.cos(theta)
-			local z = z - radius * math.sin(theta)
-
-			inst.mermcart.Transform:SetPosition(x, 0, z)
-		end)
-	end
+	-- SetChimneyFX(inst) -- Only used for testing.
 	
 	return inst
 end
@@ -197,6 +195,7 @@ local function cartfn()
 	
 	inst.AnimState:SetBank("kyno_meadowisland_mermcart")
     inst.AnimState:SetBuild("kyno_meadowisland_mermcart")
+	inst.AnimState:PlayAnimation("empty")
 	
 	inst:AddTag("sammywagon")
 	
@@ -206,10 +205,6 @@ local function cartfn()
         return inst
     end
 
-	if inst:HasTag("descartablewagon") then
-		inst.persists = false
-	end
-	
 	inst:AddComponent("inspectable")
 	
 	inst:WatchWorldState("season", SetWagonArt)
@@ -218,19 +213,5 @@ local function cartfn()
 	return inst
 end
 
-local function shop1fn()
-	local inst = mainfn(true)
-	return inst
-end
-
-local function shop2fn()
-	local inst = mainfn(false)
-	
-	inst:SetPrefabNameOverride("kyno_meadowisland_shop")
-	
-	return inst
-end
-
-return Prefab("kyno_meadowisland_shop", shop1fn, assets, prefabs),
-Prefab("kyno_meadowisland_sammyhouse", shop2fn, assets, prefabs),
+return Prefab("kyno_meadowisland_shop", fn, assets, prefabs),
 Prefab("kyno_meadowisland_mermcart", cartfn, assets, prefabs)

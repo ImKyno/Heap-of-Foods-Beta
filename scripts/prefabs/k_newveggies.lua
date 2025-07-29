@@ -4,6 +4,15 @@ local assets_veggies =
 {
     Asset("ANIM", "anim/kyno_veggies.zip"),
 	
+	Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_fennel.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_parznip.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_radish.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_rice.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_sweetpotato.zip"),
+	Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
+	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -115,7 +124,7 @@ local function dowaxfn(inst, doer, waxitem)
         doer.components.inventory:Equip(waxedveggie)
     else
         waxedveggie.Transform:SetPosition(inst.Transform:GetWorldPosition())
-        waxedveggie.AnimState:PlayAnimation("wax_oversized", false)
+        -- waxedveggie.AnimState:PlayAnimation("wax_oversized", false)
         waxedveggie.AnimState:PushAnimation("idle_oversized")
     end
     inst:Remove()
@@ -511,13 +520,14 @@ local function MakeVeggie(name)
 
         MakeHauntableWork(inst)
 
-        inst:ListenForEvent("onputininventory", CancelWaxTask)
-        inst:ListenForEvent("ondropped", StartWaxTask)
+		-- Don't use this, we don't have proper animations!
+        -- inst:ListenForEvent("onputininventory", CancelWaxTask)
+        -- inst:ListenForEvent("ondropped", StartWaxTask)
 
-        inst.OnEntitySleep = CancelWaxTask
-        inst.OnEntityWake = StartWaxTask
+        -- inst.OnEntitySleep = CancelWaxTask
+        -- inst.OnEntityWake = StartWaxTask
 
-        StartWaxTask(inst)
+        -- StartWaxTask(inst)
 
         return inst
     end

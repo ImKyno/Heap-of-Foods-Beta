@@ -233,7 +233,7 @@ local function fishfn()
     inst.AnimState:PlayAnimation("idle", true)  
 
 	inst:AddTag("structure")
-    inst:AddTag("mermhouse")
+    inst:AddTag("mermhouse_seaside")
 	
 	inst.entity:SetPristine()
 

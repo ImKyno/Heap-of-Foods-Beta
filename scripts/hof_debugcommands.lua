@@ -211,9 +211,9 @@ function c_hofmeadowisland()
     if player ~= nil then
         c_select(player)
 		
-		local islandpond = c_findnext("kyno_meadowisland_sammyhouse")
+		local shop = c_findnext("kyno_meadowisland_shop")
 		
-		player.Physics:Teleport(islandpond.Transform:GetWorldPosition())
+		player.Physics:Teleport(shop.Transform:GetWorldPosition())
         player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
 		c_give("kyno_piko",        nil, true) 
 		c_give("kyno_piko_orange", nil, true)
@@ -294,6 +294,31 @@ function c_hofdryables()
 		c_give("kyno_crabkingmeat",    20, true)
 		c_give("kyno_poison_froglegs", 40, true)
 		c_give("kyno_seaweeds",        40, true)
+	end
+end
+
+-- In case someone needs to spawn Sammy's Wagon.
+function c_hofsammywagon()
+	local player = ConsoleCommandPlayer()
+	
+	local house = TheSim:FindFirstEntityWithTag("sammyhouse")
+	
+	if house then
+		local mermcart = SpawnPrefab("kyno_meadowisland_mermcart")
+		
+		local x, y, z = house.Transform:GetWorldPosition()
+		
+		local theta = -3 -- -3
+		local radius = 4 -- 4
+		local x = x + radius * math.cos(theta)
+		local z = z - radius * math.sin(theta)
+
+		mermcart.Transform:SetPosition(x, 0, z)
+		
+		TheNet:Announce("Successfully spawned: Sammy's Wagon. Near: Sammy's Emporium.")
+	else
+		TheNet:Announce("Could not spawn: Sammy's Wagon. Reason: Missing Sammy's Emporium.")
+		TheNet:Announce("Please Retrofit your world at Mod Configuration using option: Mermhuts.")
 	end
 end
 

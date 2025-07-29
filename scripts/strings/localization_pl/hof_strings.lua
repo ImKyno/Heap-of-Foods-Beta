@@ -477,6 +477,16 @@ STRINGS.MEADOWISLANDTRADER_REFUSE =
 	"Not interested, stay gone.",
 }
 
+STRINGS.MEADOWISLANDTRADER_GOHOME =
+{
+	"Time to go home and rest.",
+	"Later, I need to rest for a while now.",
+	"My shift is over!",
+	"See ya later!",
+	"I don't work overtime!",
+	"You know where to find me.",
+}
+
 STRINGS.CHARACTERS.GENERIC.ANNOUNCE_KYNO_COFFEEBUFF_START = "Szybkość!"
 STRINGS.CHARACTERS.WILLOW.ANNOUNCE_KYNO_COFFEEBUFF_START = "Więcej prędkości, więcej spalania!"
 STRINGS.CHARACTERS.WOLFGANG.ANNOUNCE_KYNO_COFFEEBUFF_START = "Wolfgang szybszy!"

@@ -56,26 +56,51 @@ local function RetrofitIslands()
     return true
 end
 
-local function RetrofitMermhuts()
-	local newshop = _G.TheSim:FindFirstEntityWithTag("mermhouse_seaside")
+local function SpawnSammyWagon()
+	local house = _G.TheSim:FindFirstEntityWithTag("sammyhouse")
+	local mermcart = SpawnPrefab("kyno_meadowisland_mermcart")
 	
-	if newshop ~= nil then 
-		_G.ReplacePrefab(newshop, "kyno_meadowisland_sammyhouse")
+	local x, y, z = house.Transform:GetWorldPosition()
+	
+	local theta = -3 -- -3
+	local radius = 4 -- 4
+	local x = x + radius * math.cos(theta)
+	local z = z - radius * math.sin(theta)
+	
+	mermcart.Transform:SetPosition(x, 0, z)
+end
+
+-- Deprecated. Use Wurt to build Fishermerm Huts.
+local function RetrofitMermhuts()
+	local count = 0
+	local max_count = 3
+
+	for k, v in pairs(_G.Ents) do
+		if count >= max_count then
+			break
+		end
+
+		if v.prefab == "kyno_meadowisland_mermhut" then
+			_G.ReplacePrefab(v, "kyno_meadowisland_fishermermhut")
+			count = count + 1
+		end
+	end
+end
+
+local function RetrofitSammyShop()
+	local newshop = _G.TheSim:FindFirstEntityWithTag("mermhouse_seaside")
+	local sammyhouse = _G.TheSim:FindFirstEntityWithTag("sammyhouse") -- Don't let them have more shops.
+	local sammywagon = _G.TheSim:FindFirstEntityWithTag("sammywagon")
+	
+	if newshop ~= nil and not sammyhouse then 
+		_G.ReplacePrefab(newshop, "kyno_meadowisland_shop")
+		SpawnSammyWagon()
 	end
 	
-	local count = 0
-    local max_count = 3
-
-    for k, v in pairs(_G.Ents) do
-        if count >= max_count then
-            break
-        end
-
-        if v.prefab == "kyno_meadowisland_mermhut" then
-            _G.ReplacePrefab(v, "kyno_meadowisland_fishermermhut")
-            count = count + 1
-        end
-    end
+	-- In case the world has the shop but not the wagon.
+	if not sammywagon and sammyhouse then
+		SpawnSammyWagon()
+	end
 end
 
 AddComponentPostInit("retrofitforestmap_anr", function(self)
@@ -92,7 +117,7 @@ AddComponentPostInit("retrofitforestmap_anr", function(self)
 			end
 			
 		elseif GetModConfigData("RETROFIT") == 2 then
-			local success = RetrofitMermhuts()
+			local success = RetrofitSammyShop() -- RetrofitMermhuts()
 			
 			if success then
 				_G.ChangeFoodConfigs("RETROFIT", 0)

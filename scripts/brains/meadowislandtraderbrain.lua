@@ -23,6 +23,11 @@ end
 
 local function GoHomeAction(inst)
     local home = inst.components.homeseeker ~= nil and inst.components.homeseeker.home or nil
+	
+	if inst:CanChatter() then -- Let me go home!
+		inst:DoChatter("MEADOWISLANDTRADER_GOHOME", math.random(#STRINGS.MEADOWISLANDTRADER_GOHOME), 1)
+	end
+	
     return home and home:IsValid() and BufferedAction(inst, home, ACTIONS.GOHOME)
 end
 
@@ -36,6 +41,9 @@ end
 
 function MeadowIslandTraderBrain:OnStart()
     local root = PriorityNode({
+		WhileNode(function() return ShouldGoHome(self.inst) end, "ShouldGoHome", 
+			DoAction(self.inst, GoHomeAction, "GoHome", true)), -- Priortize going home over trading.
+			
 		WhileNode(function() return self.inst.sg.mem.trading or self.inst:HasStock() end, "Trading",
             FaceEntity(self.inst, GetFaceTargetFn, KeepFaceTargetFn)),
 
@@ -47,9 +55,6 @@ function MeadowIslandTraderBrain:OnStart()
                 FaceEntity(self.inst, GetFaceTargetFn, KeepFaceTargetFn, 2),
             })
         ),
-		
-		WhileNode(function() return ShouldGoHome(self.inst) end, "ShouldGoHome", 
-			DoAction(self.inst, GoHomeAction, "GoHome", true)),
 
 		Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_WANDER_DIST),
     }, .25)

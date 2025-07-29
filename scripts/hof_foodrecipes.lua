@@ -2687,8 +2687,8 @@ local kyno_foods =
 		health = 40,
 		hunger = 62.5,
 		sanity = 33,
-		cooktime = 3,
-		scale = 2,
+		cooktime = 2,
+		-- scale = 2,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRAB,
 		floater = TUNING.HOF_FLOATER,
 		tags = {"masterfood"},
@@ -2766,8 +2766,7 @@ local kyno_foods =
 	
 	wobsterbreaded =
 	{
-		test = function(cooker, names, tags) return tags.wobster and (names.tomato or names.tomato_cooked) and tags.flour and
-		names.kyno_oil end,
+		test = function(cooker, names, tags) return tags.wobster and tags.spotspice and tags.flour and names.kyno_oil end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -2776,7 +2775,7 @@ local kyno_foods =
 		sanity = 10,
 		cooktime = 0.7,
 		floater = TUNING.HOF_FLOATER,
-		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"tomato", 1}, {"kyno_flour", 1}, {"kyno_oil", 1}}},
+		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"kyno_spotspice", 1}, {"kyno_flour", 1}, {"kyno_oil", 1}}},
 	},
 	
 	lazypurrito =
@@ -2890,7 +2889,7 @@ local kyno_foods =
 	
 	pasty_meat =
 	{
-		test = function(cooker, names, tags) return tags.meat and tags.flour and tags.veggie and names.kyno_oil end,
+		test = function(cooker, names, tags) return tags.meat and tags.flour and tags.veggie and names.kyno_oil and not tags.wobster end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
@@ -2934,7 +2933,7 @@ local kyno_foods =
 	regularlasagna =
 	{
 		test = function(cooker, names, tags) return tags.meat and (names.tomato or names.tomato_cooked) and tags.flour
-		and not tags.monster and not tags.spotspice end,
+		and not tags.monster and not tags.spotspice and not tags.wobster end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FAST,

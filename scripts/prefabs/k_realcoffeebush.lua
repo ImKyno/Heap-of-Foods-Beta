@@ -1,3 +1,20 @@
+local assets =
+{
+	Asset("ANIM", "anim/coffeebush.zip"),
+		
+	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
+}
+
+local prefabs =
+{
+	"kyno_coffeebeans",
+	"dug_kyno_coffeebush",
+	
+	"twigs",
+	"ash",
+}
+
 local SEASON_BASEREGENTIME_TUNING_LOOKUP =
 {
 	[SEASONS.SPRING] = "KYNO_COFFEEBUSH_GROWTIME_SPRING",
@@ -9,7 +26,7 @@ local function OnSeasonChange(inst, season)
 	inst.components.pickable.baseregentime = TUNING[tuning]
 end
 
-local function makeemptyfn(inst)
+local function OnMakeEmpty(inst)
 	if inst.components.pickable then
 		inst.AnimState:PlayAnimation("dead_to_empty")
 		inst.AnimState:PushAnimation("empty")
@@ -18,7 +35,7 @@ local function makeemptyfn(inst)
 	end
 end
 
-local function makebarrenfn(inst)
+local function OnMakeBarren(inst)
 	if not POPULATING and (inst:HasTag("withered") or inst.AnimState:IsCurrentAnimation("idle")) then
 		inst.AnimState:PlayAnimation("empty_to_dead")
 		inst.AnimState:PushAnimation("idle_dead", false)
@@ -27,7 +44,7 @@ local function makebarrenfn(inst)
     end
 end
 
-local function pickanim(inst)
+local function PickAnim(inst)
 	if inst.components.pickable then
 		if inst.components.pickable:CanBePicked() then
 			local percent = 0
@@ -55,17 +72,17 @@ local function pickanim(inst)
 	return "idle"
 end
 
-local function shake(inst)
+local function OnShake(inst)
 	if inst.components.pickable and inst.components.pickable:CanBePicked() then
 		inst.AnimState:PlayAnimation("shake")
 	else
 		inst.AnimState:PlayAnimation("shake_empty")
 	end
 	
-	inst.AnimState:PushAnimation(pickanim(inst), false)
+	inst.AnimState:PushAnimation(PickAnim(inst), false)
 end
 
-local function pickberries(inst)
+local function PickBerries(inst)
 	if inst.components.pickable then
 		local old_percent = (inst.components.pickable.cycles_left + 1) / inst.components.pickable.max_cycles or 1
 
@@ -85,15 +102,15 @@ local function pickberries(inst)
 	end	
 end
 
-local function onpickedfn(inst, picker)
-	pickberries(inst)
+local function OnPicked(inst, picker)
+	PickBerries(inst)
 end
 
-local function makefullfn(inst)
-	inst.AnimState:PlayAnimation(pickanim(inst))
+local function OnMakeFull(inst)
+	inst.AnimState:PlayAnimation(PickAnim(inst))
 end
 
-local function dig_up_common(inst, worker, numberries)
+local function OnDigUp(inst, worker, numberries)
 	if inst.components.pickable ~= nil and inst.components.lootdropper ~= nil then
 		if inst.components.pickable:IsBarren() then
 			inst.components.lootdropper:SpawnLootPrefab("twigs")
@@ -115,110 +132,78 @@ local function dig_up_common(inst, worker, numberries)
 	inst:Remove()
 end
 
-local function dig_up_normal(inst, worker)
-	dig_up_common(inst, worker, 1)
+local function OnDig(inst)
+	OnDigUp(inst, worker, 1)
 end
 
-local function ontransplantfn(inst)
+local function OnTransplant(inst)
 	inst.AnimState:PushAnimation("idle_dead")
 	inst.components.pickable:MakeBarren()
 end
 
-local function OnHaunt(inst)
-	if math.random() <= TUNING.HAUNT_CHANCE_ALWAYS then
-		inst.components.hauntable.hauntvalue = TUNING.HAUNT_COOLDOWN_TINY
-		return true
-	end
+local function fn()
+	local inst = CreateEntity()
+    
+	inst.entity:AddTransform()
+    inst.entity:AddAnimState()
+    inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("kyno_coffeebush.tex")
 	
-	return false
-end
+	inst.AnimState:SetScale(1.2, 1.2, 1.2)
+	
+	MakeSmallObstaclePhysics(inst, .1)
+	
+	inst.AnimState:SetBank("coffeebush")
+	inst.AnimState:SetBuild("coffeebush")
+	inst.AnimState:PlayAnimation("berriesmost", false)
+	
+	inst:AddTag("bush")
+	inst:AddTag("plant")
+	inst:AddTag("renewable")
+	inst:AddTag("lunarplant_target")
+	inst:AddTag("kyno_coffeebush")
+	
+	inst.entity:SetPristine()
 
-local function createbush(name, inspectname, berryname, master_postinit)
-	local assets =
-	{
-		Asset("ANIM", "anim/coffeebush.zip"),
-		
-		Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
-		Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
-	}
+    if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst.AnimState:SetTime(math.random() * inst.AnimState:GetCurrentAnimationLength())
+	
+	inst:AddComponent("lootdropper")
+	inst:AddComponent("inspectable")
+	
+	inst:AddComponent("hauntable")
+    inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 
-	local prefabs =
-	{
-		berryname,
-		"dug_"..name,
-		"twigs",
-		"kyno_coffeebeans",
-	}
-
-	local function fn()
-		local inst = CreateEntity()
-
-		inst.entity:AddTransform()
-		inst.entity:AddAnimState()
-		inst.entity:AddSoundEmitter()
-		inst.entity:AddNetwork()
-		
-		local minimap = inst.entity:AddMiniMapEntity()
-		minimap:SetIcon("kyno_coffeebush.tex")
-
-		MakeSmallObstaclePhysics(inst, .1)
-
-		inst.AnimState:SetBank("coffeebush")
-		inst.AnimState:SetBuild("coffeebush")
-		inst.AnimState:PlayAnimation("berriesmost", false)
-		
-		inst:AddTag("kyno_coffeebush")
-		inst:AddTag("plant")
-		inst:AddTag("renewable")
-		inst:AddTag("lunarplant_target")
-
-		inst.entity:SetPristine()
-
-		if not TheWorld.ismastersim then
-			return inst
-		end
-
-		inst.AnimState:SetTime(math.random() * inst.AnimState:GetCurrentAnimationLength())
-		
-		inst:AddComponent("lootdropper")
-
-		inst:AddComponent("pickable")
-		inst.components.pickable.picksound = "dontstarve/wilson/harvest_berries"
-		inst.components.pickable.onpickedfn = onpickedfn
-		inst.components.pickable.makeemptyfn = makeemptyfn
-		inst.components.pickable.makebarrenfn = makebarrenfn
-		inst.components.pickable.makefullfn = makefullfn
-		inst.components.pickable.ontransplantfn = ontransplantfn
-
-		inst:AddComponent("workable")
-		inst.components.workable:SetWorkAction(ACTIONS.DIG)
-		inst.components.workable:SetWorkLeft(TUNING.KYNO_COFFEEBUSH_WORKLEFT)
-
-		inst:AddComponent("inspectable")
-		if name ~= inspectname then
-			inst.components.inspectable.nameoverride = inspectname
-		end
-		
-		inst:WatchWorldState("season", OnSeasonChange)
-		
-		MakeSnowCovered(inst)
-		MakeNoGrowInWinter(inst)
-		MakeWaxablePlant(inst)
-		
-		master_postinit(inst)
-		
-		return inst
-	end
-
-	return Prefab(name, fn, assets, prefabs)
-end
-
-local function normal_postinit(inst)
-	inst.components.pickable:SetUp("kyno_coffeebeans", TUNING.KYNO_COFFEEBUSH_GROWTIME)
+    inst:AddComponent("pickable")
+    inst.components.pickable.picksound = "dontstarve/wilson/harvest_sticks"
+    inst.components.pickable:SetUp("kyno_coffeebeans", TUNING.KYNO_COFFEEBUSH_GROWTIME)
 	inst.components.pickable.max_cycles = TUNING.BERRYBUSH_CYCLES + math.random(2)
 	inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
+    inst.components.pickable.onpickedfn = OnPicked
+    inst.components.pickable.makeemptyfn = OnMakeEmpty
+    inst.components.pickable.makebarrenfn = OnMakeBarren
+    inst.components.pickable.makefullfn = OnMakeFull
+    inst.components.pickable.ontransplantfn = OnTransplant
+	
+	inst:AddComponent("workable")
+	inst.components.workable:SetWorkAction(ACTIONS.DIG)
+	inst.components.workable:SetWorkLeft(TUNING.KYNO_COFFEEBUSH_WORKLEFT)
+	inst.components.workable:SetOnFinishCallback(OnDig)
+	
+	inst:WatchWorldState("season", OnSeasonChange)
+	OnSeasonChange(inst, TheWorld.state.season)
 
-	inst.components.workable:SetOnFinishCallback(dig_up_normal)
+	MakeSnowCovered(inst)
+	MakeNoGrowInWinter(inst)
+	MakeWaxablePlant(inst)
+
+	return inst
 end
 
-return createbush("kyno_coffeebush", "kyno_coffeebush", "kyno_coffeebeans", normal_postinit)
+return Prefab("kyno_coffeebush", fn, assets, prefabs)

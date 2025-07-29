@@ -10970,7 +10970,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_meadowisland_sammyhouse",
+          type = "kyno_meadowisland_shop",
           shape = "rectangle",
           x = 671,
           y = 736,

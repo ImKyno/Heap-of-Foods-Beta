@@ -126,7 +126,7 @@ PrefabFiles =
 	"k_serenityisland_tree",
 	"k_serenityisland_tree2",
 	"k_sharkfin",
-	"k_smoketrail",
+	"k_smokecloud",
 	"k_spotbush",
 	"k_sugarbombs_explosive",
 	"k_tarosea",

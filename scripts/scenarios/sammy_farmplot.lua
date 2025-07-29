@@ -1,13 +1,18 @@
 -- Make Sammy farm plants don't decay.
 local function OnCreate(inst, scenariorunner)
-	for k, v in pairs(Ents) do
-		if v.components.growable ~= nil then
-			v.components.growable:Pause("sammy_farmplot")
-		end
+	if inst.components.growable ~= nil then
+		inst.components.growable:Pause("sammy_farmplot")
+	end
+end
+
+local function OnLoad(inst, scenariorunner)
+	if inst.components.growable ~= nil then
+		inst.components.growable:Pause("sammy_farmplot")
 	end
 end
 
 return 
 {
-	OnCreate = OnCreate
+	OnCreate = OnCreate,
+	OnLoad = OnLoad,
 }

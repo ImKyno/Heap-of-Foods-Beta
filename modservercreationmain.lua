@@ -17,4 +17,4 @@ FrontEndAssets =
 ReloadFrontEndAssets()
 
 require("hof_mainfunctions")
-_G.ChangeFoodConfigs("HOF_RETROFIT", 0)
+_G.ChangeFoodConfigs("RETROFIT", 0)
