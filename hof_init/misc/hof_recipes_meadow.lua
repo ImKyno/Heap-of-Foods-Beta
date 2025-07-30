@@ -231,6 +231,20 @@ AddRecipe2("meadowislandtrader_kyno_poison_froglegs", {Ingredient("froglegs", 5)
 	{"CRAFTING_STATION"}
 )
 
+AddRecipe2("meadowislandtrader_kyno_moon_froglegs", {Ingredient("moonglass_charged", 3)}, TECH.LOST,
+	{
+		limitedamount       = true, 
+		nounlock            = true, 
+		no_deconstruction   = true,
+		actionstr           = "MEADOWSHOP", 
+		sg_state            = "give", 
+		product             = "kyno_moon_froglegs",
+		atlas               = ModAtlas,
+		image               = "kyno_moon_froglegs.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
 AddRecipe2("meadowislandtrader_kyno_crabkingmeat", {Ingredient("kyno_crabmeat", 5, ModAtlas)}, TECH.LOST,
 	{
 		limitedamount       = true, 

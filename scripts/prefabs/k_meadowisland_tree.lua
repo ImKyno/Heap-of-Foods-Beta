@@ -607,8 +607,6 @@ local function makefn(build, stage, data, level)
 		inst.OnSave = onsave
 		inst.OnLoad = onload
 
-		MakeSnowCovered(inst)
-
 		inst:SetPrefabName(GetBuild(inst).prefab_name)
 
 		if data == "burnt" then
@@ -648,7 +646,8 @@ local function makefn(build, stage, data, level)
 		inst.components.burnable:SetFXLevel(5)
 		inst.components.burnable:SetOnBurntFn(tree_burnt)
 		MakeLargePropagator(inst)
-
+		
+		MakeSnowCovered(inst)
 		MakeWaxablePlant(inst)
 
 		return inst

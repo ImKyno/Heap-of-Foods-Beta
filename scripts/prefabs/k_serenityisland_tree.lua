@@ -341,6 +341,7 @@ local function treefn()
 	inst.AnimState:Hide("sap")
 	
 	inst:AddTag("tree")
+	inst:AddTag("plant")
     inst:AddTag("shelter")
 	inst:AddTag("cookware_other_installable")
 
@@ -456,6 +457,7 @@ local function treesapfn()
 	inst.AnimState:OverrideSymbol("swap_sapbucket", "quagmire_sapbucket", "swap_sapbucket_overflow")
 	
 	inst:AddTag("tree")
+	inst:AddTag("plant")
 	inst:AddTag("has_sap")
     inst:AddTag("shelter")
 
@@ -531,6 +533,7 @@ local function ruinedfn()
 	inst.AnimState:OverrideSymbol("swap_sapbucket", "quagmire_sapbucket", "swap_sapbucket_overflow_spoiled")
 	
 	inst:AddTag("tree")
+	inst:AddTag("plant")
 	inst:AddTag("has_sap")
     inst:AddTag("shelter")
 	inst:AddTag("sap_healable")
@@ -598,6 +601,7 @@ local function ruined2fn()
 	inst.AnimState:Hide("swap_tapper")
 	
 	inst:AddTag("tree")
+	inst:AddTag("plant")
     inst:AddTag("shelter")
 	inst:AddTag("sap_healable")
 	inst:AddTag("cookware_other_installable")
@@ -698,7 +702,6 @@ local function stump_ruinedfn()
 	inst.AnimState:OverrideSymbol("trunk", "quagmire_tree_cotton_trunk_build", "trunk_holes")
 	inst.AnimState:PlayAnimation("stump")
 	
-	inst:AddTag("plant")
 	inst:AddTag("stump")
 
     inst.entity:SetPristine()
