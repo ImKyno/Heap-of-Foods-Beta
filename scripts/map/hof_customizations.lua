@@ -69,8 +69,8 @@ WSO.Pre.hof_plants = function(difficulty)
 	local tuning_vars =
 	{
 		never   = { HOF_RESOURCES = 0   },
-		few     = { HOF_RESOURCES = .05 },
-		default = { HOF_RESOURCES = .07 },
+		few     = { HOF_RESOURCES = .07 },
+		-- default = { HOF_RESOURCES = .07 },
 		many    = { HOF_RESOURCES = .09 },
 		always  = { HOF_RESOURCES = .10 },
 	}
@@ -82,8 +82,8 @@ WSO.Pre.hof_plants_ocean = function(difficulty)
 	local tuning_vars =
 	{
 		never   = { HOF_RESOURCES = 0   },
-		few     = { HOF_RESOURCES = .05 },
-		default = { HOF_RESOURCES = .07 },
+		few     = { HOF_RESOURCES = .07 },
+		-- default = { HOF_RESOURCES = .07 },
 		many    = { HOF_RESOURCES = .09 },
 		always  = { HOF_RESOURCES = .10 },
 	}

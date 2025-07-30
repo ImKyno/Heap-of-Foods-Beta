@@ -328,3 +328,31 @@ end
 AddPrefabPostInit("meat", MeatPostInit)
 AddPrefabPostInit("drumstick", DrumstickPostInit)
 AddPrefabPostInit("fishmeat", FishMeatPostInit)
+
+-- Make dried foods valid for Salt Box and Polar Bearger Bin.
+local dried_foods =
+{
+	"smallmeat_dried",
+	"meat_dried",
+	"monstermeat_dried",
+	"kelp_dried",
+	"humanmeat_dried",
+	
+	"kyno_seaweeds_dried",
+	"kyno_red_cap_dried",
+	"kyno_green_cap_dried",
+	"kyno_blue_cap_dried",
+	"kyno_moon_cap_dried",
+	"kyno_humanmeat_dried",
+	"kyno_crabmeat_dried",
+	"kyno_plantmeat_dried",
+}
+
+local function DriedPostInit(inst)
+	inst:AddTag("saltbox_valid")
+	inst:AddTag("beargerfur_sack_valid")
+end
+
+for k, v in pairs(dried_foods) do
+	AddPrefabPostInit(v, DriedPostInit)
+end

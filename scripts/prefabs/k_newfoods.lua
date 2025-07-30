@@ -112,7 +112,7 @@ local function MakePreparedFood(data)
 			inst.AnimState:SetBank(data.overridebuild or "cook_pot_food")
 		end
 
-		inst.AnimState:PlayAnimation("idle", false)
+		inst.AnimState:PlayAnimation(data.anim or "idle", false)
 		inst.AnimState:OverrideSymbol("swap_food", data.overridebuild or "cook_pot_food", data.basename or data.name)
 
 		inst:AddTag("preparedfood")

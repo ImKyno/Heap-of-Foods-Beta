@@ -1,11 +1,12 @@
 require("constants")
+require("componentutil")
 
 local HOF_FOODTYPES      = {}
 local HOF_NAUGHTY_VALUE  = {}
 local HOF_PICKABLE_FOODS = {}
 
 -- New FOODTYPE just for showing the correct string on Cookbook.
-NEW_FOODTYPES    = 
+HOF_FOODTYPES    = 
 {
 	PREPAREDSOUL = "PREPAREDSOUL",
 	PREPAREDPOOP = "PREPAREDPOOP",
@@ -13,7 +14,7 @@ NEW_FOODTYPES    =
 }
 
 -- New NAUGHTINESS values for innocent creatures.
-NEW_NAUGHTY_VALUE                    =
+HOF_NAUGHTY_VALUE                    =
 {
 	-- Mod creatures.
 	["kyno_chicken2"]                = 1,
@@ -29,17 +30,15 @@ NEW_NAUGHTY_VALUE                    =
 }
 
 -- New PICKABLE for Woby foraging.
-HOF_PICKABLE_FOODS =
+HOF_PICKABLE_FOODS          =
 {
-	kyno_aloe_ground        = true,
-	kyno_radish_ground      = true,
-	kyno_sweetpotato_ground = true,
-	kyno_turnip_ground      = true,
-	kyno_aspargos_ground    = true,
-	kyno_mushstump_natural  = true,
-	kyno_pineapplebush      = true,
-	kyno_fennel_ground      = true,
-	kyno_parznip_ground     = true,
+	kyno_white_cap      = true,
+	kyno_pineapple      = true,
+	kyno_limpets        = true,
+	kyno_spotspice_leaf = true,
+	kyno_coffeebeans    = true,
+	kyno_wheat          = true,
+	kyno_kokonut        = true,
 }
 
 for k, v in pairs(HOF_FOODTYPES) do

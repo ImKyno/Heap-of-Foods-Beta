@@ -1,13 +1,13 @@
 -- Common Dependencies.
-local _G 					= GLOBAL
-local require 				= _G.require
-local Vector3    			= _G.Vector3
-local ACTIONS    			= _G.ACTIONS
-local STRINGS				= _G.STRINGS
-local cooking 				= require("cooking")
-local brewing				= require("hof_brewing")
-local containers 			= require("containers")
-local params 				= {}
+local _G         = GLOBAL
+local require    = _G.require
+local Vector3    = _G.Vector3
+local ACTIONS    = _G.ACTIONS
+local STRINGS    = _G.STRINGS
+local cooking    = require("cooking")
+local brewing    = require("hof_brewing")
+local containers = require("containers")
+local params     = containers.params
 
 require("hof_foodrecipes")
 require("hof_foodrecipes_warly")
@@ -226,3 +226,9 @@ function params.foodsack.itemtestfn(container, item, slot)
         end
     end
 end
+
+params.icebox.widget.animbank_upgraded = "ui_chest_upgraded_3x3"
+params.icebox.widget.animbuild_upgraded = "ui_chest_upgraded_3x3"
+
+params.saltbox.widget.animbank_upgraded = "ui_chest_upgraded_3x3"
+params.saltbox.widget.animbuild_upgraded = "ui_chest_upgraded_3x3"
