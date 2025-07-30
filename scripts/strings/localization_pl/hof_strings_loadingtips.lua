@@ -21,7 +21,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_WX78",            "\"WX-78 chce zrobić danie 
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_HUMANMEAT",       "Istnieje mała szansa, że po śmierci gracza może on upuścić podejrzany składnik do gotowania...")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SALT",            "Sól może być użyta do wydłużenia czasu psucia się przygotowanego jedzenia. Nigdy więcej nie stracisz tego pysznego dania!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_OLDMOD",          "Pierwsza wersja Heap Of Foods nazywała się The Foods Pack i została porzucona z powodu błędów. Później została przerobiona na ten nowy mod.")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_CARAMELCUBE",     "Kostka karmelowa to ulubione danie Kyno.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_KYNOFOOD",	   	"Caramel Cube and Jawsbreaker are Kyno's favourite dishes.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WHEAT",           "Dziki pszenica może być mielona na Kamieniu do Mielenia, aby wytworzyć mąkę.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_FLOUR",           "Mąkę można używać do robienia prostych bochenków chleba. Istnieje jednak wiele innych zastosowań mąki poza chlebami.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WORMWOOD",        "\"Wormwood powiedział, że zrobił danie z... i soli. Nie zamierzam tego jeść, Mon dieu!\" -W")

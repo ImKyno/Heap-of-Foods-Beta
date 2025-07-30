@@ -21,7 +21,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_WX78",          	"\"WX-78 wants to make a dish
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_HUMANMEAT",     	"There's a small chance whenever a Player dies, they can drop a suspicious ingredient for cooking...")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SALT",          	"Salt can be used to restore the spoilage time of a prepared food. Never losing that sweet dish again!")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_OLDMOD",        	"The very first version of Heap Of Foods was called The Foods Pack, it was discontinued due to errors. Later on, it was remade into this brand new mod.")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_CARAMELCUBE",   	"Caramel Cube is Kyno's favourite dish.")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_KYNOFOOD",	   	"Caramel Cube and Jawsbreaker are Kyno's favourite dishes.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WHEAT",         	"Wild Wheat can be grinded at the Mealing Stone to produce Flour.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_FLOUR",         	"You can use Flour to make a simple Loaf of Bread. Yet, there are many other uses for Flour besides breads.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WORMWOOD",      	"\"Wormwood said he made a dish out of... and Salt. I'm not going to eat that, Mon dieu!\" -W")

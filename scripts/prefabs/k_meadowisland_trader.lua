@@ -122,14 +122,12 @@ local WARES =
 		{
 			["moon_cap"]               = { recipe = "meadowislandtrader_moon_cap",               min = 3,  max = 9,  limit = 9  },
 		},
-		--[[
+
 		["islunarhailing"] = 
 		{
-			{
-				-- TO DO: Moon Frog Legs
-			},
+			["kyno_moon_froglegs"]     = { recipe = "meadowislandtrader_kyno_moon_froglegs",     min = 3,  max = 9,  limit = 9  },
 		},
-		
+		--[[
 		["mermking"] =
 		{
 			{
@@ -281,7 +279,7 @@ local function Initialize(inst)
 end
 
 local function OnSave(inst, data)
-	-- data.islunarhailing = inst.islunarhailing -- Will use for later things.
+	data.islunarhailing = inst.islunarhailing
 	data.isfullmoon = inst.isfullmoon
 end
 
@@ -291,11 +289,10 @@ local function OnLoad(inst, data)
 		inst.inittask = nil
 	end
 
-	-- inst.islunarhailing = data.islunarhailing
+	inst.islunarhailing = data.islunarhailing
 	inst.isfullmoon = data.isfullmoon
 end
 
---[[
 local function SetIsLunarHailing(inst, active)
 	if inst.islunarhailing ~= active then
 		inst.islunarhailing = active
@@ -305,7 +302,6 @@ local function SetIsLunarHailing(inst, active)
 		end
 	end
 end
-]]--
 
 local function SetIsFullMoon(inst, active)
 	if inst.isfullmoon ~= active then
@@ -318,8 +314,8 @@ local function SetIsFullMoon(inst, active)
 end
 
 local function OnWorldInit(inst)
-	-- inst:WatchWorldState("islunarhailing", inst.SetIsLunarHailing)
-	-- inst:SetIsLunarHailing(TheWorld.state.islunarhailing)
+	inst:WatchWorldState("islunarhailing", inst.SetIsLunarHailing)
+	inst:SetIsLunarHailing(TheWorld.state.islunarhailing)
 	
 	inst:WatchWorldState("isfullmoon", inst.SetIsFullMoon)
 	inst:SetIsFullMoon(TheWorld.state.isfullmoon)
@@ -446,7 +442,7 @@ local function fn()
 	inst.AddWares = AddWares
 	inst.EnablePrototyper = EnablePrototyper
 
-	-- inst.SetIsLunarHailing = SetIsLunarHailing
+	inst.SetIsLunarHailing = SetIsLunarHailing
 	inst.SetIsFullMoon = SetIsFullMoon
 	inst.SetRevealed = SetRevealed
 	inst.SetHatless = SetHatless

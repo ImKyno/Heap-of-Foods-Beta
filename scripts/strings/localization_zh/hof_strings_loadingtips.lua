@@ -21,7 +21,7 @@ AddLoadingTip(TIPS_HOF, "TIPS_HOF_WX78",          	"\"WX-78想用齿轮做一道
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_HUMANMEAT",     	"每当玩家死亡时，有几率掉落一个奇怪的烹饪食材...")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_SALT",          	"盐可以用来恢复食物的变质时间。再也不会失去那道甜美的菜肴了！")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_OLDMOD",        	"Heap Of Foods 的第一个版本名为食物包，后因错误而停用。后来，它被重新制作成了这个全新的Mod。")
-AddLoadingTip(TIPS_HOF, "TIPS_HOF_CARAMELCUBE",   	"焦糖方块是Kyno最喜欢的一道菜。")
+AddLoadingTip(TIPS_HOF, "TIPS_HOF_KYNOFOOD",	   	"Caramel Cube and Jawsbreaker are Kyno's favourite dishes.")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WHEAT",         	"野生小麦可以在碾磨石上磨成面粉。")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_FLOUR",         	"你可以用面粉制做一个简单的面包。然而，除了面包，面粉还有很多其他用途。")
 AddLoadingTip(TIPS_HOF, "TIPS_HOF_WORMWOOD",      	"\"沃姆伍德说他用...和盐做了一道美食。但是我才不要吃那个，我的天啊！\" -W")

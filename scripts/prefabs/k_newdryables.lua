@@ -9,7 +9,9 @@ local assets =
 	Asset("ANIM", "anim/kyno_meatrack_seaweeds.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_pigskin.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_crabmeat.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_crabkingmeat.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_poison_froglegs.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_moon_froglegs.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -32,6 +34,7 @@ local prefabs =
 	"kyno_crabmeat",
 	"kyno_crabkingmeat",
 	"kyno_poison_froglegs",
+	"kyno_moon_froglegs",
 	
 	"spoiled_food",
 }
@@ -348,6 +351,24 @@ local function fn_crabmeat()
 	return inst
 end
 
+local function fn_crabkingmeat()
+	local inst = meat_fn("kyno_meatrack_crabkingmeat", "kyno_meatrack_crabkingmeat", "kyno_crabkingmeat_idle", "kyno_crabkingmeat_dried")
+	
+	inst.AnimState:SetScale(1.1, 1.1, 1.1)
+	
+	if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst.components.tradable.goldvalue = 1
+	
+	inst.components.edible.healthvalue = TUNING.KYNO_CRABKINGMEAT_DRIED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_CRABKINGMEAT_DRIED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_CRABKINGMEAT_DRIED_SANITY
+	
+	return inst
+end
+
 return Prefab("kyno_red_cap_dried", fn_red, assets, prefabs),
 Prefab("kyno_green_cap_dried", fn_green, assets, prefabs),
 Prefab("kyno_blue_cap_dried", fn_blue, assets, prefabs),
@@ -356,4 +377,5 @@ Prefab("kyno_plantmeat_dried", fn_plantmeat, assets, prefabs),
 Prefab("kyno_humanmeat_dried", fn_humanmeat, assets, prefabs),
 Prefab("kyno_seaweeds_dried", fn_seaweeds, assets, prefabs),
 Prefab("kyno_pigskin_dried", fn_pigskin, assets, prefabs),
-Prefab("kyno_crabmeat_dried", fn_crabmeat, assets, prefabs)
+Prefab("kyno_crabmeat_dried", fn_crabmeat, assets, prefabs),
+Prefab("kyno_crabkingmeat_dried", fn_crabkingmeat, assets, prefabs)

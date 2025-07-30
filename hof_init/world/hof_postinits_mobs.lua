@@ -371,10 +371,15 @@ local function FrogPostinit(inst)
 		inst.hof_oldretarget = inst.components.combat.targetfn
 		inst.components.combat:SetRetargetFunction(3, Retarget)
 	end
+	
+	if inst.islunar then
+		inst.components.lootdropper:SetLoot({"kyno_moon_froglegs"})
+	end
 end
 
 AddPrefabPostInit("frog", FrogPostinit)
 AddPrefabPostInit("lunarfrog", FrogPostinit)
+
 
 -- Toadstool drops Poison Frog Legs instead.
 AddPrefabPostInit("toadstool", function(inst) ReplaceLoot(inst.prefab, "froglegs", "kyno_poison_froglegs") end)

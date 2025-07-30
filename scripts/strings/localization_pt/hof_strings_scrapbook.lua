@@ -85,6 +85,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_TIRAMISU = "Increased movement speed f
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_AMPHIBIAN = "Increased damage against amphibians for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ENLIGHTENMENT = "Enlightens the survivor for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_STEALTH = "Renders the survivor unseen and undetectable from traps and creatures for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PLANARDEFENSE = "Increased planar defense for a certain amount of time."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."

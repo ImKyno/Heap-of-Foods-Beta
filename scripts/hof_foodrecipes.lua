@@ -2679,8 +2679,8 @@ local kyno_foods =
 	
 	crabkingfeast =
 	{
-		test = function(cooker, names, tags) return names.kyno_crabkingmeat and tags.spotspice and names.corn
-		and (names.onion or names.onion_cooked) and not names.corn_cooked end,
+		test = function(cooker, names, tags) return (names.kyno_crabkingmeat or names.kyno_crabkingmeat_cooked or names.kyno_crabkingmeat_dried)
+		and tags.spotspice and names.corn and (names.onion or names.onion_cooked) and not names.corn_cooked end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -2945,6 +2945,26 @@ local kyno_foods =
 		scale = .9,
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 1}, {"tomato", 2}, {"kyno_flour", 1}}},
+	},
+	
+	fltsandwich =
+	{
+		test = function(cooker, names, tags) return (names.kyno_moon_froglegs or names.kyno_moon_froglegs_cooked) and 
+		(names.tomato or names.tomato_cooked) and tags.algae and tags.foliage end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_MED,
+		health = 15,
+		hunger = 32.5, 
+		sanity = 33,
+		cooktime = 1.3,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_PLANARDEFENSE,
+		potlevel = "high",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_moon_froglegs", 1}, {"tomato", 1}, {"foliage", 1}, {"kyno_waterycress", 1}}},
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_planardefensebuff", "kyno_planardefensebuff")
+		end,
 	},
 	
 	--[[
