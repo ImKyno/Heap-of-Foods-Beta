@@ -16,11 +16,11 @@ local function RetrofitIslands()
     local node_indices = {}
 	
     for k, v in ipairs(_G.TheWorld.topology.ids) do
-		if string.find(v, "Serenity Archipelago") then
+		if string.find(v, "SerenityIsland") then
             table.insert(node_indices, k)
         end
 		
-        if string.find(v, "Seaside Island") then
+        if string.find(v, "MeadowIsland") then
             table.insert(node_indices, k)
         end
     end
@@ -29,7 +29,7 @@ local function RetrofitIslands()
         return false
     end
 
-    local tags = {"serenityarea", "meadowarea"}
+    local tags = {"SerenityArea", "MeadowArea"}
 	
     for k, v in ipairs(node_indices) do
         if TheWorld.topology.nodes[v].tags == nil then
@@ -44,11 +44,11 @@ local function RetrofitIslands()
     end
 	
     for i, node in ipairs(TheWorld.topology.nodes) do
-		if table.contains(node.tags, "serenityarea") then
+		if table.contains(node.tags, "SerenityArea") then
             TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
         end
 	
-        if table.contains(node.tags, "meadowarea") then
+        if table.contains(node.tags, "MeadowArea") then
             TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
         end
     end

@@ -32,6 +32,9 @@ Assets =
 	Asset("IMAGE", "images/hof_loadingtips_icon.tex"), 
 	Asset("ATLAS", "images/hof_loadingtips_icon.xml"),
 	
+	Asset("IMAGE", "images/customizationimages/hof_customizationimages.tex"),
+	Asset("ATLAS", "images/customizationimages/hof_customizationimages.xml"),
+	
 	Asset("IMAGE", "images/tabimages/hof_tabimages.tex"),
 	Asset("ATLAS", "images/tabimages/hof_tabimages.xml"),
 

@@ -672,3 +672,46 @@ if HOF_ICEBOXSTACKSIZE then
 	AddPrefabPostInit("icebox", ElastispacerPostInit)
 	AddPrefabPostInit("saltbox", ElastispacerPostInit)
 end
+
+--[[
+local function MakeSerenityArea(inst)
+	_G.TheWorld:PushEvent("overrideambientlighting", Point(150 / 255, 150 / 255, 150 / 255))
+	_G.TheWorld:PushEvent("overridecolourcube", "images/colour_cubes/quagmire_cc.tex")
+end
+
+local function RemoveSerenityArea(inst)
+	_G.TheWorld:PushEvent("overrideambientlighting", nil)
+	_G.TheWorld:PushEvent("overridecolourcube", nil)
+end
+
+env.AddComponentPostInit("playervision", function(self)
+	self.inst:DoTaskInTime(0, function()
+		self.canchange = true
+		
+		self.inst:ListenForEvent("changearea", function(inst, area)
+			if self.canchange then
+				if area and area.tags and table.contains(area.tags, "SerenityArea") then
+					MakeSerenityArea(self.inst)
+				else
+					RemoveSerenityArea(self.inst)
+				end
+			end
+		end)
+
+		self.inst:DoTaskInTime(0, function()
+			local node, node_index = _G.TheWorld.Map:FindVisualNodeAtPoint(self.inst.Transform:GetWorldPosition())
+			if node_index then
+				self.inst:PushEvent("changearea", node and 
+				{
+					id = _G.TheWorld.topology.ids[node_index],
+					type = node.type,
+					center = node.cent,
+					poly = node.poly,
+					tags = node.tags,
+				}
+				or nil)
+			end
+		end)
+	end)
+end)
+]]--

@@ -13,11 +13,6 @@ local prefabs =
 	"kyno_gummybug",
 }
 
-local FLIPPABLE_ROCK_REPOPULATE_TIME 		= 2400
-local FLIPPABLE_ROCK_REPOPULATE_INCREASE 	= 240
-local FLIPPABLE_ROCK_REPOPULATE_VARIANCE 	= 960
-local FLIPPABLE_ROCK_CYCLES 				= 3
-
 local function SetLoot(inst)
     local ground = TheWorld
     local pt = Vector3(inst.Transform:GetWorldPosition())

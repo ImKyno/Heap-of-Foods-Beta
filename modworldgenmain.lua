@@ -12,7 +12,6 @@ local StaticLayout   = require("map/static_layout")
 require("map/terrain")
 require("tilemanager")
 
--- modimport("hof_init/world/hof_customize")
 modimport("hof_init/world/hof_worldgen")
 
 local TheArchitectPack = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
@@ -78,20 +77,20 @@ local GROUND_TURFS =
 
 require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_PARKFIELD] = 
 { 
-	name = "pinkpark",  
-	bank_build = "kyno_turfs_hof", 
-	anim = "pinkpark",  
+	name        = "pinkpark",  
+	bank_build  = "kyno_turfs_hof", 
+	anim        = "pinkpark",  
 	pickupsound = "rock", 
 }
 
 require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_CITYSTONE] = 
 { 
-	name = "stonecity", 
-	bank_build = "kyno_turfs_hof", 
-	anim = "stonecity", 
+	name        = "stonecity", 
+	bank_build  = "kyno_turfs_hof", 
+	anim        = "stonecity", 
 	pickupsound = "rock",
-	hard = true,
-	roadways = true,
+	hard        = true,
+	roadways    = true,
 }
 
 ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_PARKFIELD,  WORLD_TILES.DECIDUOUS, true)
@@ -156,7 +155,7 @@ for i, layout in ipairs(hof_serenity_islands) do
 	{
 		start_mask 			     = _G.PLACE_MASK.IGNORE_IMPASSABLE,
 		fill_mask                = _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		add_topology             = {room_id = "StaticLayoutIsland:Serenity Archipelago", tags = {"RoadPoison", "serenityarea", "not_mainland", "nohunt", "nohasslers"}},
+		add_topology             = {room_id = "StaticLayoutIsland: SerenityIsland", tags = {"RoadPoison", "SerenityArea", "not_mainland", "nohunt", "nohasslers"}},
 		areas                    =
 		{
 		},
@@ -185,7 +184,7 @@ for i, layout in ipairs(hof_ocean_setpieces) do
 	{
 		start_mask 			     = _G.PLACE_MASK.IGNORE_IMPASSABLE,
 		fill_mask                = _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		add_topology             = {room_id = "StaticLayoutIsland:OceanSetpiece HoF", tags = {"RoadPoison", "not_mainland", "wreckarea"}},
+		add_topology             = {room_id = "StaticLayoutIsland: OceanSetPieces", tags = {"RoadPoison", "WreckArea", "not_mainland"}},
 		areas                    =
 		{
 		},
@@ -216,7 +215,7 @@ for i, layout in ipairs(hof_meadow_setpieces) do
 	{
 		start_mask 			     = _G.PLACE_MASK.IGNORE_IMPASSABLE,
 		fill_mask                = _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		add_topology             = {room_id = "StaticLayoutIsland:Seaside Island", tags = {"RoadPoison", "meadowarea", "not_mainland"}},
+		add_topology             = {room_id = "StaticLayoutIsland: MeadowIsland", tags = {"RoadPoison", "MeadowArea", "not_mainland"}},
 		areas                    =
 		{
 		},
@@ -228,6 +227,16 @@ end
 -- In case someone needs Sammy but not the whole island.
 Layouts["MeadowIslandShop"] = StaticLayout.Get("map/static_layouts/hof_meadowisland_shop")
 Layouts["MeadowIslandShop"].ground_types = { WORLD_TILES.ROAD, WORLD_TILES.FOREST, WORLD_TILES.FARMING_SOIL } -- 1,2,3
+
+--[[
+AddGlobalClassPostConstruct("map/storygen", "Story", function(self)
+	if self.map_tags ~= nil then
+		self.map_tags.Tag["SerenityArea"] = function(tagdata) return "TAG", "SerenityArea" end
+		self.map_tags.Tag["MeadowArea"]   = function(tagdata) return "TAG", "MeadowArea"   end
+		self.map_tags.Tag["WreckArea"]    = function(tagdata) return "TAG", "WreckArea"    end
+	end
+end)
+]]--
 
 -- Custom Layout for Waterlogged biome.
 local function HofWaterloggedArea()

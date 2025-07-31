@@ -1,0 +1,46 @@
+<Atlas>
+    <Texture filename="hof_customizationimages.tex" />
+    <Elements>
+        <Element name="worldsettings_aloes.tex" u1="0.00048828125" v1="0.87548828125" u2="0.12451171875" v2="0.99951171875" />
+        <Element name="worldsettings_asparaguses.tex" u1="0.12548828125" v1="0.87548828125" u2="0.24951171875" v2="0.99951171875" />
+        <Element name="worldsettings_chickens.tex" u1="0.25048828125" v1="0.87548828125" u2="0.37451171875" v2="0.99951171875" />
+        <Element name="worldsettings_fennels.tex" u1="0.37548828125" v1="0.87548828125" u2="0.49951171875" v2="0.99951171875" />
+        <Element name="worldsettings_fishermermhuts.tex" u1="0.50048828125" v1="0.87548828125" u2="0.62451171875" v2="0.99951171875" />
+        <Element name="worldsettings_fishermerms.tex" u1="0.62548828125" v1="0.87548828125" u2="0.74951171875" v2="0.99951171875" />
+        <Element name="worldsettings_giantparznips.tex" u1="0.75048828125" v1="0.87548828125" u2="0.87451171875" v2="0.99951171875" />
+        <Element name="worldsettings_islandcrates.tex" u1="0.87548828125" v1="0.87548828125" u2="0.99951171875" v2="0.99951171875" />
+        <Element name="worldsettings_kingfishers.tex" u1="0.00048828125" v1="0.75048828125" u2="0.12451171875" v2="0.87451171875" />
+        <Element name="worldsettings_kokonuttrees.tex" u1="0.12548828125" v1="0.75048828125" u2="0.24951171875" v2="0.87451171875" />
+        <Element name="worldsettings_limpetrocks.tex" u1="0.25048828125" v1="0.75048828125" u2="0.37451171875" v2="0.87451171875" />
+        <Element name="worldsettings_lotusplants.tex" u1="0.37548828125" v1="0.75048828125" u2="0.49951171875" v2="0.87451171875" />
+        <Element name="worldsettings_mandrakemen.tex" u1="0.50048828125" v1="0.75048828125" u2="0.62451171875" v2="0.87451171875" />
+        <Element name="worldsettings_meadowisland.tex" u1="0.62548828125" v1="0.75048828125" u2="0.74951171875" v2="0.87451171875" />
+        <Element name="worldsettings_mermhuts.tex" u1="0.75048828125" v1="0.75048828125" u2="0.87451171875" v2="0.87451171875" />
+        <Element name="worldsettings_mushstumps.tex" u1="0.87548828125" v1="0.75048828125" u2="0.99951171875" v2="0.87451171875" />
+        <Element name="worldsettings_oceancrates.tex" u1="0.00048828125" v1="0.62548828125" u2="0.12451171875" v2="0.74951171875" />
+        <Element name="worldsettings_oceanwrecks.tex" u1="0.12548828125" v1="0.62548828125" u2="0.24951171875" v2="0.74951171875" />
+        <Element name="worldsettings_parznips.tex" u1="0.25048828125" v1="0.62548828125" u2="0.37451171875" v2="0.74951171875" />
+        <Element name="worldsettings_pebblecrabs.tex" u1="0.37548828125" v1="0.62548828125" u2="0.49951171875" v2="0.74951171875" />
+        <Element name="worldsettings_pikos.tex" u1="0.50048828125" v1="0.62548828125" u2="0.62451171875" v2="0.74951171875" />
+        <Element name="worldsettings_pikos_orange.tex" u1="0.62548828125" v1="0.62548828125" u2="0.74951171875" v2="0.74951171875" />
+        <Element name="worldsettings_pikotrees.tex" u1="0.75048828125" v1="0.62548828125" u2="0.87451171875" v2="0.74951171875" />
+        <Element name="worldsettings_pineapplebushes.tex" u1="0.87548828125" v1="0.62548828125" u2="0.99951171875" v2="0.74951171875" />
+        <Element name="worldsettings_radishes.tex" u1="0.00048828125" v1="0.50048828125" u2="0.12451171875" v2="0.62451171875" />
+        <Element name="worldsettings_rockflippables.tex" u1="0.12548828125" v1="0.50048828125" u2="0.24951171875" v2="0.62451171875" />
+        <Element name="worldsettings_saltponds.tex" u1="0.25048828125" v1="0.50048828125" u2="0.37451171875" v2="0.62451171875" />
+        <Element name="worldsettings_sandhills.tex" u1="0.37548828125" v1="0.50048828125" u2="0.49951171875" v2="0.62451171875" />
+        <Element name="worldsettings_seacucumbers.tex" u1="0.50048828125" v1="0.50048828125" u2="0.62451171875" v2="0.62451171875" />
+        <Element name="worldsettings_serenityisland.tex" u1="0.62548828125" v1="0.50048828125" u2="0.74951171875" v2="0.62451171875" />
+        <Element name="worldsettings_spotbushes.tex" u1="0.75048828125" v1="0.50048828125" u2="0.87451171875" v2="0.62451171875" />
+        <Element name="worldsettings_sugartrees.tex" u1="0.87548828125" v1="0.50048828125" u2="0.99951171875" v2="0.62451171875" />
+        <Element name="worldsettings_sweetpotatoes.tex" u1="0.00048828125" v1="0.37548828125" u2="0.12451171875" v2="0.49951171875" />
+        <Element name="worldsettings_taroroots.tex" u1="0.12548828125" v1="0.37548828125" u2="0.24951171875" v2="0.49951171875" />
+        <Element name="worldsettings_teatrees.tex" u1="0.25048828125" v1="0.37548828125" u2="0.37451171875" v2="0.49951171875" />
+        <Element name="worldsettings_tidalpools.tex" u1="0.37548828125" v1="0.37548828125" u2="0.49951171875" v2="0.49951171875" />
+        <Element name="worldsettings_truffles.tex" u1="0.50048828125" v1="0.37548828125" u2="0.62451171875" v2="0.49951171875" />
+        <Element name="worldsettings_turnips.tex" u1="0.62548828125" v1="0.37548828125" u2="0.74951171875" v2="0.49951171875" />
+        <Element name="worldsettings_waterycresses.tex" u1="0.75048828125" v1="0.37548828125" u2="0.87451171875" v2="0.49951171875" />
+        <Element name="worldsettings_weedsea.tex" u1="0.87548828125" v1="0.37548828125" u2="0.99951171875" v2="0.49951171875" />
+        <Element name="worldsettings_wildwheats.tex" u1="0.00048828125" v1="0.25048828125" u2="0.12451171875" v2="0.37451171875" />
+    </Elements>
+</Atlas>
