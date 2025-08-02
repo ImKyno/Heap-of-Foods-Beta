@@ -25,14 +25,6 @@ TUNING.HOF_MEATRACKS =
 	"meatrack_hermit"
 }
 
--- Shiy Loot Mod support for our rare items.
-TUNING.SHINY_LOOT_MOD_DEFS = TUNING.SHINY_LOOT_MOD_DEFS or {}
-TUNING.SHINY_LOOT_MOD_DEFS["kyno_garden_sprinkler_blueprint"] = "CreatureTest"
-TUNING.SHINY_LOOT_MOD_DEFS["kyno_antchest_blueprint"] = "CreatureTest"
-TUNING.SHINY_LOOT_MOD_DEFS["dug_kyno_coffeebush"] = "CreatureTest"
-TUNING.SHINY_LOOT_MOD_DEFS["kyno_crabkingmeat"] = "CreatureTest"
-TUNING.SHINY_LOOT_MOD_DEFS["kyno_poison_froglegs"] = "CreatureTest"
-
 TUNING.KYNO_FLOATILIZER_USES = 20
 TUNING.KYNO_FLOATILIZER_SOILCYCLES = TUNING.POOP_SOILCYCLES
 TUNING.KYNO_FLOATILIZER_FERTILIZE = TUNING.POOP_FERTILIZE * 2

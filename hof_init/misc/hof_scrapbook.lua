@@ -19,6 +19,8 @@ local ScrapbookScreen  = require("screens/redux/scrapbookscreen")
 	TUNING.RABBIT_PERISHTIME = 2400  - 5  DAYS
 ]]--
 
+-- Vanilla: red_cap, green_cap, blue_cap, moon_cap, monsterlasagna, lordfruitfly
+
 -- Sample deps for preparedfoods. Some special foods are likely to use their own deps though.
 local preparedfood_deps =
 {
@@ -11836,6 +11838,23 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 
 local HOF_SCRAPBOOK_CREATURES =
 {
+	lordfruitfly       = 
+	{
+		name           = "lordfruitfly", 
+		type           = "giant",
+		subcat         = "smallepic",
+		prefab         = "lordfruitfly",
+		tex            = "lordfruitfly.tex", 
+		health         = 1500, 
+		sanityaura     = -0.41666666666667,
+		damage         = 25, 
+		bank           = "fruitfly",
+		build          = "fruitfly_evil",  
+		anim           = "idle", 
+		animoffsety    = 70, 
+		deps           = {"fruitfly", "fruitflyfruit", "plantmeat", "blueprint"},
+	},
+	
 	kyno_chicken2      =
 	{
 		name           = "kyno_chicken2",

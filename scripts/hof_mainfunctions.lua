@@ -1,5 +1,5 @@
 function ChangeFoodConfigs(config, value)
-	local configs = KnownModIndex:LoadModConfigurationOptions("Heap-of-Foods-Workshop", false)
+	local configs = KnownModIndex:LoadModConfigurationOptions("workshop-2063154740", false)
 	-- local configs = KnownModIndex:LoadModConfigurationOptions("workshop-2334209327", false) -- Heap of Foods Workshop.
 	-- local configs = KnownModIndex:LoadModConfigurationOptions("workshop-2063154740", false) -- Heap of Foods Beta Branch.
 	if configs ~= nil then
@@ -10,7 +10,7 @@ function ChangeFoodConfigs(config, value)
 		end
 	end
 	
-	KnownModIndex:SaveConfigurationOptions(function() end, "Heap-of-Foods-Workshop", configs, false)
+	KnownModIndex:SaveConfigurationOptions(function() end, "workshop-2063154740", configs, false)
 	-- KnownModIndex:SaveConfigurationOptions(function() end, "workshop-2334209327", configs, false)
 	-- KnownModIndex:SaveConfigurationOptions(function() end, "workshop-2063154740", configs, false)
 end
@@ -31,7 +31,7 @@ end
 function IsSerenityBiome(inst)
 	if inst ~= nil and inst:IsValid() and TheWorld.Map:IsVisualGroundAtPoint(inst.Transform:GetWorldPosition()) then
 		local node = TheWorld.Map:FindNodeAtPoint(inst.Transform:GetWorldPosition())
-		return node and node.tags and table.contains(node.tags, "serenityarea")
+		return node and node.tags and table.contains(node.tags, "SerenityArea")
 	end
 	
 	return false
@@ -40,7 +40,7 @@ end
 function IsSerenityBiomeAtPoint(x, y, z)
 	if TheWorld.Map:IsVisualGroundAtPoint(x, y, z) then
 		local node = TheWorld.Map:FindNodeAtPoint(x, y, z)
-		return node and node.tags and table.contains(node.tags, "serenityarea")
+		return node and node.tags and table.contains(node.tags, "SerenityArea")
 	end
 	
 	return false

@@ -94,6 +94,7 @@ _G.CONFIGS_HOF.SCRAPBOOK    = GetModConfigData("SCRAPBOOK")
 
 if _G.CONFIGS_HOF.SCRAPBOOK then
 	modimport("hof_init/misc/hof_scrapbook")
+	modimport("hof_init/misc/hof_shinyloots") -- Requires Scrapbook to be enabled...
 end
 
 -- This belongs to the Accomplishments Mod.
