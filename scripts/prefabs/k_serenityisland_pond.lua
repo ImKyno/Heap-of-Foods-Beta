@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
 	Asset("ANIM", "anim/quagmire_salt_pond.zip"),
@@ -74,6 +76,10 @@ local function DoSplash(inst)
 		inst.AnimState:PlayAnimation("splash")
 		inst.AnimState:PushAnimation("idle", true)
 	end
+end
+
+local function OnPreLoad(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_SALTRACK_REGROW_TIME)
 end
 
 local function pondfn()
@@ -218,6 +224,7 @@ local function rackfn()
 
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
+	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_SALTRACK_REGROW_TIME, true)
     inst.components.pickable:SetUp("saltrock", TUNING.KYNO_SALTRACK_REGROW_TIME)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
@@ -227,6 +234,8 @@ local function rackfn()
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammered)
 	inst.components.workable:SetWorkLeft(3)
+
+	inst.OnPreLoad = OnPreLoad
 
     return inst
 end

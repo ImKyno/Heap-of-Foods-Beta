@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
     Asset("ANIM", "anim/seataro.zip"),
@@ -68,6 +70,10 @@ local function OnCollide(inst, other)
     end
 end
 
+local function OnPreLoad(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_TAROSEA_GROWTIME)
+end
+
 local function fn()
     local inst = CreateEntity()
 
@@ -76,7 +82,8 @@ local function fn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(.7, .7, .7)
+	local s = .7
+	inst.AnimState:SetScale(s, s, s)
 
     local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_taroroot.tex")
@@ -110,17 +117,22 @@ local function fn()
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
+	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_TAROSEA_GROWTIME, true)
     inst.components.pickable:SetUp("kyno_taroroot", TUNING.KYNO_TAROSEA_GROWTIME)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
     inst.components.pickable.makeemptyfn = makeemptyfn
+
+	inst.Physics:SetCollisionCallback(OnCollide)
+	inst:DoTaskInTime(1 + math.random(), CheckBeached)
+
+	inst.OnPreLoad = OnPreLoad
 	
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
-    MakeHauntableIgnite(inst)
 	
-	inst.Physics:SetCollisionCallback(OnCollide)
-	inst:DoTaskInTime(1 + math.random(), CheckBeached)
+    MakeHauntableIgnite(inst)
+	AddToRegrowthManager(inst)
 
     return inst
 end
@@ -239,7 +251,8 @@ local function taroroot_cooked()
 end
 
 local function taroplacer(inst)
-	inst.AnimState:SetScale(.7, .7, .7)
+	local s = .7
+	inst.AnimState:SetScale(s, s, s)
 end
 
 return Prefab("kyno_taroroot_ocean", fn, assets, prefabs),

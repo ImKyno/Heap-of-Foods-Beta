@@ -1,4 +1,5 @@
 require("prefabutil")
+require("worldsettingsutil")
 
 local assets =
 {
@@ -84,6 +85,10 @@ local function ontransplantfn(inst)
 	inst.components.pickable:MakeBarren()
 end
 
+local function OnPreLoad(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_WILDWHEAT_GROWTIME)
+end
+
 local function grass(name, stage)
 	local function fn()
 		local inst = CreateEntity()
@@ -113,11 +118,13 @@ local function grass(name, stage)
 		end
 
 		inst.AnimState:SetTime(math.random() * 2)
+		
 		local color = 0.75 + math.random() * 0.25
 		inst.AnimState:SetMultColour(color, color, color, 1)
 
 		inst:AddComponent("pickable")
 		inst.components.pickable.picksound = "dontstarve/wilson/pickup_reeds"
+		WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_WILDWHEAT_GROWTIME, true)
 		inst.components.pickable:SetUp("kyno_wheat", TUNING.KYNO_WILDWHEAT_GROWTIME)
 		inst.components.pickable.onregenfn = onregenfn
 		inst.components.pickable.onpickedfn = onpickedfn
@@ -144,7 +151,11 @@ local function grass(name, stage)
 		
 		MakeNoGrowInWinter(inst)
 		MakeHauntableIgnite(inst)
+
 		MakeWaxablePlant(inst)
+		AddToRegrowthManager(inst)
+		
+		inst.OnPreLoad = OnPreLoad
 
 		return inst
 	end

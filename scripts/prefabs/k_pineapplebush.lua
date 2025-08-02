@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
 	Asset("ANIM", "anim/kyno_pineapplebush.zip"),
@@ -91,6 +93,10 @@ local function OnDigUp(inst, chopper)
     inst:Remove()
 end
 
+local function OnPreLoad(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_PINEAPPLEBUSH_GROWTIME)
+end
+
 local function fn()
 	local inst = CreateEntity()
     
@@ -130,18 +136,23 @@ local function fn()
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/wilson/harvest_sticks"
+	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_PINEAPPLEBUSH_GROWTIME, true)
     inst.components.pickable:SetUp("kyno_pineapple", TUNING.KYNO_PINEAPPLEBUSH_GROWTIME)
     inst.components.pickable.onregenfn = OnRegen
     inst.components.pickable.onpickedfn = OnPicked
     inst.components.pickable.makeemptyfn = OnMakeEmpty
 	
-	MakeLargeBurnable(inst)
-	MakeMediumPropagator(inst)
-	MakeHauntableIgnite(inst)
-    MakeNoGrowInWinter(inst)
-	
 	inst:WatchWorldState("season", OnSeasonChange)
 	OnSeasonChange(inst, TheWorld.state.season)
+
+	inst.OnPreLoad = OnPreLoad
+
+	MakeLargeBurnable(inst)
+	MakeMediumPropagator(inst)
+
+	MakeHauntableIgnite(inst)
+    MakeNoGrowInWinter(inst)
+	AddToRegrowthManager(inst)
 
 	return inst
 end

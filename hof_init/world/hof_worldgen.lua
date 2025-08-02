@@ -351,61 +351,6 @@ AddRoomPreInit("OceanSwell", function(room)
 		table.insert(room.tags, "MeadowSpawner")
 	end
 end)
-
-local MapData = 
-{
-    ["SerenitySpawner"] = true,
-	["MeadowSpawner"]   = true,
-}
-
-local MapTags = 
-{    
-    ["SerenitySpawner"] = function(tagdata, level)
-        if tagdata["SerenitySpawner"] == false then
-            return
-        end
-        
-        tagdata["SerenitySpawner"] = false
-    
-        if level ~= nil and level.overrides ~= nil and level.overrides.serenityisland == "never" then
-            return
-        end
-    
-        return "STATIC", "hof_serenityisland1"
-    end,
-	
-	["SerenityArea"] = function(tagdata)
-		return "TAG", "SerenityArea"
-	end,
-	
-	["MeadowSpawner"] = function(tagdata, level)
-        if tagdata["MeadowSpawner"] == false then
-            return
-        end
-        
-        tagdata["MeadowSpawner"] = false
-    
-        if level ~= nil and level.overrides ~= nil and level.overrides.serenityisland == "never" then
-            return
-        end
-    
-        return "STATIC", "hof_meadowisland2"
-    end,
-	
-	["MeadowArea"] = function(tagdata)
-		return "TAG", "MeadowArea"
-	end,
-}
-
-AddClassPostConstruct("map/storygen", function(self)
-    for tag, v in pairs(MapData) do
-        self.map_tags.TagData[tag] = v
-    end
-    
-    for tag, v in pairs(MapTags) do
-        self.map_tags.Tag[tag] = v
-    end
-end)
 ]]--
 
 AddTaskSetPreInitAny(function(tasksetdata)
@@ -442,17 +387,21 @@ AddLevelPreInit("forest", function(level)
 end)
 
 -- Main Menu world customization.
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof",          "Heap of Foods - Resources",            nil, nil, 6)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_ocean",    "Heap of Foods - Ocean Resources",      nil, nil, 7)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_serenity", "Heap of Foods - Serenity Archipelago", nil, nil, 8)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_meadow",   "Heap of Foods - Seaside Island",       nil, nil, 9)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof",            "Heap of Foods - Resources",                     nil, nil, 6)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_ocean",      "Heap of Foods - Ocean Resources",               nil, nil, 7)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_serenity",   "Heap of Foods - Serenity Archipelago",          nil, nil, 8)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_meadow",     "Heap of Foods - Seaside Island",                nil, nil, 9)
 
-for k, v in pairs(require("map/hof_customizations")) do
-	if v.category == LEVELCATEGORY.SETTINGS then
-		v.image = "worldsettings_"..v.name
-	else
-		v.image = "worldsettings_"..v.name -- Actually will use the same.
-	end
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_r",          "Heap of Foods - Resources Regrowth",            nil, nil, 8)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_ocean_r",    "Heap of Foods - Ocean Resources Regrowth",      nil, nil, 9)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_serenity_r", "Heap of Foods - Serenity Archipelago Regrowth", nil, nil, 10)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_meadow_r",   "Heap of Foods - Seaside Island Regrowth",       nil, nil, 11)
+
+local customization_worldgen      = require("map/hof_customizations_worldgen")
+local customization_worldsettings = require("map/hof_customizations_worldsettings")
+
+for k, v in pairs(customization_worldgen) do
+	v.image = "worldgen_"..v.name
 	
 	AddCustomizeItem(v.category, v.group, v.name, 
 	{
@@ -461,6 +410,20 @@ for k, v in pairs(require("map/hof_customizations")) do
 		desc  = GetCustomizeDescription(v.desc),
 		world = v.world or {"forest"},		
 		image = v.image..".tex",
-		atlas = "images/customizationimages/hof_customizationimages.xml",
+		atlas = "images/customizationimages/hof_customizationimages_worldgen.xml",
+	})
+end
+
+for k, v in pairs(customization_worldsettings) do
+	v.image = v.name
+	
+	AddCustomizeItem(v.category, v.group, v.name, 
+	{
+		order = v.order,
+		value = v.value,
+		desc  = GetCustomizeDescription(v.desc),
+		world = v.world or {"forest"},		
+		image = v.image..".tex",
+		atlas = "images/customizationimages/hof_customizationimages_worldsettings.xml",
 	})
 end

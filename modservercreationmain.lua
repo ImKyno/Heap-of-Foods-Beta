@@ -2,13 +2,21 @@ local _G      = GLOBAL
 local require = _G.require
 
 require("hof_mainfunctions")
-require("strings/hof_strings")
+require("strings/hof_strings_customizations")
 modimport("hof_init/misc/hof_tuning")
+
+local localization = GetModConfigData("LANGUAGE")
+if localization then
+	require("strings/localization_"..localization.."/hof_strings_customizations")
+end
 
 FrontEndAssets =
 {
-	Asset("IMAGE", "images/customizationimages/hof_customizationimages.tex"),
-	Asset("ATLAS", "images/customizationimages/hof_customizationimages.xml"),
+	Asset("IMAGE", "images/customizationimages/hof_customizationimages_worldgen.tex"),
+	Asset("ATLAS", "images/customizationimages/hof_customizationimages_worldgen.xml"),
+	
+	Asset("IMAGE", "images/customizationimages/hof_customizationimages_worldsettings.tex"),
+	Asset("ATLAS", "images/customizationimages/hof_customizationimages_worldsettings.xml"),
 
     -- Accomplishments Mod.
     -- Asset("IMAGE", "images/achievementsimages/hof_achievements_images.tex"),
@@ -19,12 +27,5 @@ FrontEndAssets =
 }
 
 ReloadFrontEndAssets()
-
-local localization = GetModConfigData("LANGUAGE")
-if localization then
-	for _, v in pairs(hof_init_strings) do
-		require("strings/localization_"..localization.."/hof_strings")
-	end
-end
 
 _G.ChangeFoodConfigs("RETROFIT", 0)

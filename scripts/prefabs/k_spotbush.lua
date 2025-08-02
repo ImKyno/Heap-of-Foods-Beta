@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
 	Asset("ANIM", "anim/quagmire_spiceshrub.zip"),
@@ -37,6 +39,10 @@ local function dig_up(inst, chopper)
 	
 	inst.components.lootdropper:SpawnLootPrefab("dug_kyno_spotbush")
 	inst:Remove()
+end
+
+local function OnPreLoad(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_SPOTBUSH_GROWTIME)
 end
 
 local function fn()
@@ -81,18 +87,23 @@ local function fn()
 
 	inst:AddComponent("pickable")
 	inst.components.pickable.picksound = "dontstarve/wilson/pickup_reeds"
+	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_SPOTBUSH_GROWTIME, true)
 	inst.components.pickable:SetUp("kyno_spotspice_leaf", TUNING.KYNO_SPOTBUSH_GROWTIME)
 	inst.components.pickable.onregenfn = onregenfn
 	inst.components.pickable.onpickedfn = onpickedfn
 	inst.components.pickable.makeemptyfn = makeemptyfn
 	inst.components.pickable.ontransplantfn = ontransplantfn
+
+	inst.OnPreLoad = OnPreLoad
 	
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 	
 	MakeNoGrowInWinter(inst)
 	MakeHauntableIgnite(inst)
+
 	MakeWaxablePlant(inst)
+	AddToRegrowthManager(inst)
 
 	return inst
 end

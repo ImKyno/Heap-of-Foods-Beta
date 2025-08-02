@@ -207,6 +207,8 @@ local function fn()
 	inst.OnEntityWake = OnWake
 	inst.OnLongUpdate = LongUpdate
 
+	AddToRegrowthManager(inst)
+
 	return inst
 end
 

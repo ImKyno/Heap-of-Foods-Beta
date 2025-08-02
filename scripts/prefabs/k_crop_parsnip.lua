@@ -22,11 +22,6 @@ local prefabs =
 	"spoiled_food",
 }
 
-local function onpicked(inst)
-    TheWorld:PushEvent("beginregrowth", inst)
-    inst:Remove()
-end
-
 local function fn()
     local inst = CreateEntity()
 
@@ -50,8 +45,8 @@ local function fn()
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/wilson/pickup_plants"
-    inst.components.pickable:SetUp("kyno_parznip", 10)
-    inst.components.pickable.onpickedfn = onpicked
+    inst.components.pickable:SetUp("kyno_parznip")
+    inst.components.pickable.remove_when_picked = true
     inst.components.pickable.quickpick = true
 	
 	inst:AddComponent("hauntable")
@@ -59,7 +54,7 @@ local function fn()
 
     MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
-
+	AddToRegrowthManager(inst)
 
     return inst
 end
@@ -80,7 +75,6 @@ local function parznip_eaten()
 	
 	inst:AddTag("veggie")
 	inst:AddTag("cookable")
-	inst:AddTag("modded_crop")
 
 	inst.entity:SetPristine()
 
@@ -131,15 +125,18 @@ end
 local function onworkfinish(inst, chopper)
 	inst.SoundEmitter:PlaySound("dontstarve/forest/treeCrumble")
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
+
+	inst.components.lootdropper:DropLoot()
 	
 	TheWorld:PushEvent("beginregrowth", inst)
-	inst.components.lootdropper:DropLoot()
+	inst:Remove()
 end
 
 local function onburnt(inst)
     inst.components.lootdropper:SpawnLootPrefab("kyno_parznip_cooked")
 	inst.components.lootdropper:SpawnLootPrefab("kyno_parznip_cooked")
 	inst.components.lootdropper:SpawnLootPrefab("ash")
+
     inst:Remove()
 end
 
@@ -160,8 +157,7 @@ local function parznip_big()
 	inst.AnimState:SetBuild("grotto_parsnip_giant")
 	inst.AnimState:PlayAnimation("idle", true)
 	
-	inst:AddTag("modded_crop")
-	inst:AddTag("giant_modded_crop")
+	inst:AddTag("giantparznips")
 	
 	inst.entity:SetPristine()
 
@@ -187,6 +183,7 @@ local function parznip_big()
 	inst.components.burnable:SetFXLevel(4)
 	inst.components.burnable:SetOnBurntFn(onburnt)
     MakeLargePropagator(inst)
+	AddToRegrowthManager(inst)
 	
 	return inst
 end

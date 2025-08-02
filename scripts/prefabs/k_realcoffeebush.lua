@@ -132,7 +132,7 @@ local function OnDigUp(inst, worker, numberries)
 	inst:Remove()
 end
 
-local function OnDig(inst)
+local function OnDig(inst, worker)
 	OnDigUp(inst, worker, 1)
 end
 

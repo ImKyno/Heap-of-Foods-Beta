@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
     Asset("ANIM", "anim/graves_water.zip"),
@@ -248,14 +250,14 @@ local function fn()
 	inst:ListenForEvent("on_collide", OnCollide)
 	
 	inst.sunkeninventory = {}
-	
+
+    inst.OnSave = OnSave
+    inst.OnLoad = OnLoad
+
 	MakeMediumBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(OnIgnite)
     inst.components.burnable:SetOnBurntFn(OnBurnt)
 	MakeSmallPropagator(inst)
-
-    inst.OnSave = OnSave
-    inst.OnLoad = OnLoad
 
     return inst
 end
@@ -264,6 +266,12 @@ local function wateryfn()
 	local inst = fn()
 	
 	inst:AddTag("not_serenity_crate")
+	
+	if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	AddToRegrowthManager(inst)
 	
 	return inst
 end

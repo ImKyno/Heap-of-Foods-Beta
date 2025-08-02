@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
     Asset("ANIM", "anim/kyno_meadowisland_mermhut.zip"),
@@ -147,6 +149,18 @@ local function OnLoad(inst, data)
     end
 end
 
+local function OnPreLoad(inst, data)
+    WorldSettings_ChildSpawner_PreLoad(inst, data, TUNING.MERMHOUSE_RELEASE_TIME, TUNING.MERMHOUSE_REGEN_TIME)
+end
+
+local function OnPreLoadFisher(inst, data)
+	WorldSettings_ChildSpawner_PreLoad(inst, data, TUNING.KYNO_MERMFISHER_RELEASE_TIME, TUNING.KYNO_MERMFISHER_REGEN_TIME)
+end
+
+local function OnPreLoadCrafted(inst, data)
+	WorldSettings_ChildSpawner_PreLoad(inst, data, TUNING.KYNO_MERMFISHER_RELEASE_TIME, TUNING.KYNO_MERMFISHER_REGEN_TIME / 2)
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -186,14 +200,21 @@ local function fn()
 
 	inst:AddComponent("childspawner")
 	inst.components.childspawner.childname = "merm"
+	inst.components.childspawner.emergencychildname = "merm"
 	inst.components.childspawner:SetSpawnedFn(OnSpawned)
 	inst.components.childspawner:SetGoHomeFn(OnGoHome)
-	inst.components.childspawner:SetRegenPeriod(TUNING.TOTAL_DAY_TIME * 4)
-    inst.components.childspawner:SetSpawnPeriod(10)
+	inst.components.childspawner:SetRegenPeriod(TUNING.MERMHOUSE_REGEN_TIME)
+    inst.components.childspawner:SetSpawnPeriod(TUNING.MERMHOUSE_RELEASE_TIME)
     inst.components.childspawner:SetMaxChildren(TUNING.MERMHOUSE_MERMS)
     inst.components.childspawner:SetMaxEmergencyChildren(TUNING.MERMHOUSE_EMERGENCY_MERMS)
-	inst.components.childspawner.emergencychildname = "merm"
 	inst.components.childspawner:SetEmergencyRadius(TUNING.MERMHOUSE_EMERGENCY_RADIUS)
+	inst.components.childspawner.canemergencyspawn = TUNING.MERMHOUSE_ENABLED
+	
+	WorldSettings_ChildSpawner_SpawnPeriod(inst, TUNING.MERMHOUSE_RELEASE_TIME, TUNING.MERMHOUSE_ENABLED)
+    WorldSettings_ChildSpawner_RegenPeriod(inst, TUNING.MERMHOUSE_REGEN_TIME, TUNING.MERMHOUSE_ENABLED)
+    if not TUNING.MERMHOUSE_ENABLED then
+        inst.components.childspawner.childreninside = 0
+    end
 
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_SMALL)
@@ -201,16 +222,17 @@ local function fn()
 	
 	inst:WatchWorldState("isday", OnIsDay)
 	StartSpawning(inst)
-
+	
+	inst:ListenForEvent("onignite", OnIgnite)
+	inst:ListenForEvent("burntup", OnBurnt)
+	inst:ListenForEvent("onbuilt", OnBuilt)
+	
 	MakeMediumBurnable(inst, nil, nil, true)
 	MakeLargePropagator(inst)
 	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
-	
-	inst:ListenForEvent("onignite", OnIgnite)
-	inst:ListenForEvent("burntup", OnBurnt)
-	inst:ListenForEvent("onbuilt", OnBuilt)
+	inst.OnPreLoad = OnPreLoad
 	
 	return inst
 end
@@ -256,9 +278,15 @@ local function fishfn()
 	inst.components.childspawner.childname = "kyno_meadowisland_mermfisher"
 	inst.components.childspawner:SetSpawnedFn(OnSpawned)
 	inst.components.childspawner:SetGoHomeFn(OnGoHome)
-	inst.components.childspawner:SetRegenPeriod(TUNING.MERMHOUSE_REGEN_TIME)
-    inst.components.childspawner:SetSpawnPeriod(TUNING.MERMHOUSE_RELEASE_TIME)
-    inst.components.childspawner:SetMaxChildren(2)
+	inst.components.childspawner:SetRegenPeriod(TUNING.KYNO_MERMFISHER_REGEN_TIME)
+    inst.components.childspawner:SetSpawnPeriod(TUNING.KYNO_MERMFISHER_RELEASE_TIME)
+    inst.components.childspawner:SetMaxChildren(TUNING.KYNO_MERMFISHER_AMOUNT)
+	
+	WorldSettings_ChildSpawner_SpawnPeriod(inst, TUNING.KYNO_MERMFISHER_RELEASE_TIME, TUNING.KYNO_MERMFISHER_ENABLED)
+    WorldSettings_ChildSpawner_RegenPeriod(inst, TUNING.KYNO_MERMFISHER_REGEN_TIME, TUNING.KYNO_MERMFISHER_ENABLED)
+    if not TUNING.KYNO_MERMFISHER_ENABLED then
+        inst.components.childspawner.childreninside = 0
+    end
 
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_SMALL)
@@ -266,16 +294,17 @@ local function fishfn()
 	
 	inst:WatchWorldState("isday", OnIsDay)
 	StartSpawning(inst)
-
+	
+	inst:ListenForEvent("onignite", OnIgnite)
+	inst:ListenForEvent("burntup", OnBurnt)
+	inst:ListenForEvent("onbuilt", OnBuilt)
+	
 	MakeMediumBurnable(inst, nil, nil, true)
 	MakeLargePropagator(inst)
 	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
-	
-	inst:ListenForEvent("onignite", OnIgnite)
-	inst:ListenForEvent("burntup", OnBurnt)
-	inst:ListenForEvent("onbuilt", OnBuilt)
+	inst.OnPreLoad = OnPreLoadFisher
 	
 	return inst
 end
@@ -321,9 +350,15 @@ local function craftfn()
 	inst.components.childspawner.childname = "kyno_meadowisland_mermfisher"
 	inst.components.childspawner:SetSpawnedFn(OnSpawned)
 	inst.components.childspawner:SetGoHomeFn(OnGoHome)
-	inst.components.childspawner:SetRegenPeriod(TUNING.MERMHOUSE_REGEN_TIME / 2)
-    inst.components.childspawner:SetSpawnPeriod(TUNING.MERMHOUSE_RELEASE_TIME)
-    inst.components.childspawner:SetMaxChildren(2)
+	inst.components.childspawner:SetRegenPeriod(TUNING.KYNO_MERMFISHER_REGEN_TIME / 2)
+    inst.components.childspawner:SetSpawnPeriod(TUNING.KYNO_MERMFISHER_RELEASE_TIME)
+    inst.components.childspawner:SetMaxChildren(TUNING.KYNO_MERMFISHER_AMOUNT)
+	
+	WorldSettings_ChildSpawner_SpawnPeriod(inst, TUNING.KYNO_MERMFISHER_RELEASE_TIME, TUNING.KYNO_MERMFISHER_ENABLED)
+    WorldSettings_ChildSpawner_RegenPeriod(inst, TUNING.KYNO_MERMFISHER_REGEN_TIME / 2, TUNING.KYNO_MERMFISHER_ENABLED)
+    if not TUNING.KYNO_MERMFISHER_ENABLED then
+        inst.components.childspawner.childreninside = 0
+    end
 
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_SMALL)
@@ -331,16 +366,17 @@ local function craftfn()
 	
 	inst:WatchWorldState("isday", OnIsDay)
 	StartSpawning(inst)
-
+	
+	inst:ListenForEvent("onignite", OnIgnite)
+	inst:ListenForEvent("burntup", OnBurnt)
+	inst:ListenForEvent("onbuilt", OnBuiltCrafted)
+	
 	MakeMediumBurnable(inst, nil, nil, true)
 	MakeLargePropagator(inst)
 	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
-	
-	inst:ListenForEvent("onignite", OnIgnite)
-	inst:ListenForEvent("burntup", OnBurnt)
-	inst:ListenForEvent("onbuilt", OnBuiltCrafted)
+	inst.OnPreLoad = OnPreLoadCrafted
 	
 	return inst
 end

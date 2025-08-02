@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
     Asset("ANIM", "anim/quagmire_pebble_crab.zip"),
@@ -27,6 +29,14 @@ local function OnAddChildren(inst)
     end
 end
 
+local function OnPreLoadCrab(inst, data)
+    WorldSettings_ChildSpawner_PreLoad(inst, data, TUNING.KYNO_PEBBLECRAB_RELEASE_TIME, TUNING.KYNO_PEBBLECRAB_REGEN_TIME)
+end
+
+local function OnPreLoadChicken(inst, data)
+    WorldSettings_ChildSpawner_PreLoad(inst, data, TUNING.KYNO_CHICKEN_RELEASE_TIME, TUNING.KYNO_CHICKEN_REGEN_TIME)
+end
+
 local function crabfn()
     local inst = CreateEntity()
 
@@ -50,10 +60,18 @@ local function crabfn()
     inst.components.childspawner.childname = "kyno_pebblecrab"
 	inst.components.childspawner.spawnoffscreen = true
     inst.components.childspawner:SetSpawnedFn(OnSpawnCrab)
-    inst.components.childspawner:SetSpawnPeriod(0)
-    inst.components.childspawner:SetRegenPeriod(960)
-	inst.components.childspawner:SetMaxChildren(2)
+    inst.components.childspawner:SetSpawnPeriod(TUNING.KYNO_PEBBLECRAB_RELEASE_TIME)
+    inst.components.childspawner:SetRegenPeriod(TUNING.KYNO_PEBBLECRAB_REGEN_TIME)
+	inst.components.childspawner:SetMaxChildren(TUNING.KYNO_PEBBLECRAB_AMOUNT)
 	inst.components.childspawner:StartSpawning()
+	
+	WorldSettings_ChildSpawner_SpawnPeriod(inst, TUNING.KYNO_PEBBLECRAB_RELEASE_TIME, TUNING.KYNO_PEBBLECRAB_ENABLED)
+    WorldSettings_ChildSpawner_RegenPeriod(inst, TUNING.KYNO_PEBBLECRAB_REGEN_TIME, TUNING.KYNO_PEBBLECRAB_ENABLED)
+    if not TUNING.KYNO_PEBBLECRAB_ENABLED then
+        inst.components.childspawner.childreninside = 0
+    end
+	
+	inst.OnPreLoad = OnPreLoadCrab
 
     return inst
 end
@@ -78,16 +96,24 @@ local function chickenfn()
     inst.components.childspawner.childname = "kyno_chicken2"
 	inst.components.childspawner.spawnoffscreen = true
 	inst.components.childspawner:SetSpawnedFn(OnSpawnChicken)
-    inst.components.childspawner:SetSpawnPeriod(0)
-    inst.components.childspawner:SetRegenPeriod(960)
-	inst.components.childspawner:SetMaxChildren(3)
+    inst.components.childspawner:SetSpawnPeriod(TUNING.KYNO_CHICKEN_RELEASE_TIME)
+    inst.components.childspawner:SetRegenPeriod(TUNING.KYNO_CHICKEN_REGEN_TIME)
+	inst.components.childspawner:SetMaxChildren(TUNING.KYNO_CHICKEN_AMOUNT)
 	inst.components.childspawner:StartSpawning()
+	
+	WorldSettings_ChildSpawner_SpawnPeriod(inst, TUNING.KYNO_CHICKEN_RELEASE_TIME, TUNING.KYNO_CHICKEN_ENABLED)
+    WorldSettings_ChildSpawner_RegenPeriod(inst, TUNING.KYNO_CHICKEN_REGEN_TIME, TUNING.KYNO_CHICKEN_ENABLED)
+    if not TUNING.KYNO_CHICKEN_ENABLED then
+        inst.components.childspawner.childreninside = 0
+    end
+	
+	inst.OnPreLoad = OnPreLoadChicken
 
     return inst
 end
 
 local function OnInitCrate(inst)
-	inst:DoTaskInTime(3360, function(inst)
+	inst:DoTaskInTime(TUNING.KYNO_CRATE_GROWTIME, function(inst)
 		local crate = SpawnPrefab("kyno_serenityisland_crate")
 	
 		crate.Transform:SetPosition(inst.Transform:GetWorldPosition())

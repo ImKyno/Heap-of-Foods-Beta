@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
 	Asset("ANIM", "anim/tree_leaf_tall.zip"),
@@ -138,7 +140,9 @@ end
 local function OnBurnt(inst)
 	RemoveChild(inst)
 	
-    inst:RemoveComponent("spawner")
+	if inst.components.spawner then
+		inst:RemoveComponent("spawner")
+	end
 
     local burnt_tree = SpawnPrefab("kyno_meadowisland_tree_burnt")
     burnt_tree.Transform:SetPosition(inst.Transform:GetWorldPosition())
@@ -156,11 +160,17 @@ local function BurnInventoryItems(inst)
 end
 
 local function GetChild(inst)
-    if math.random() < 0.40 then
-        return "kyno_piko_orange"
-    end
+	if not TUNING.KYNO_PIKO_ENABLED then
+		return "kyno_piko_orange"
+	end
+    
+	if TUNING.KYNO_PIKO_ORANGE_ENABLED then
+		if math.random() < TUNING.KYNO_PIKO_ORANGE_CHANCE then
+			return "kyno_piko_orange"
+		end
+	end
 
-    return "kyno_piko"
+	return "kyno_piko"
 end
 
 local function StartSpawning(inst)
@@ -208,6 +218,10 @@ local function OnLoad(inst, data)
 	end
 end
 
+local function OnPreLoad(inst, data)
+    WorldSettings_Spawner_PreLoad(inst, data, TUNING.KYNO_PIKO_SPAWN_TIME)
+end
+
 local function fn()
     local inst = CreateEntity()
 
@@ -236,6 +250,7 @@ local function fn()
 	inst:AddTag("shelter")
 	inst:AddTag("infested_tree")
 	inst:AddTag("dumpchildrenonignite")
+	inst:AddTag("meadowislandtree")
 
 	MakeSnowCoveredPristine(inst)
 
@@ -251,11 +266,17 @@ local function fn()
 	inst:AddComponent("inspectable")
 	inst:AddComponent("inventory")
 
-	inst:AddComponent("spawner")
-	inst.components.spawner:Configure("kyno_piko", 10)
-    inst.components.spawner.childfn = GetChild
-    inst.components.spawner:SetOnVacateFn(OnSpawned)
-    inst.components.spawner:SetOnOccupiedFn(OnOcuppied)
+	-- Only make it a spawner if any pikos are enabled.
+	if TUNING.KYNO_PIKO_ENABLED or TUNING.KYNO_PIKO_ORANGE_ENABLED then
+		inst:AddComponent("spawner")
+		WorldSettings_Spawner_SpawnDelay(inst, TUNING.KYNO_PIKO_SPAWN_TIME, true)
+		inst.components.spawner:Configure(nil, TUNING.KYNO_PIKO_SPAWN_TIME)
+		inst.components.spawner.childfn = GetChild
+		inst.components.spawner:SetOnVacateFn(OnSpawned)
+		inst.components.spawner:SetOnOccupiedFn(OnOcuppied)
+		
+		inst.OnPreLoad = OnPreLoad
+	end
 
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot(
@@ -277,6 +298,11 @@ local function fn()
 	inst.components.workable:SetWorkLeft(TUNING.KYNO_MEADOWISLAND_TREE_WORKLEFT)
 	inst.components.workable:SetOnWorkCallback(ChopTree)
     inst.components.workable:SetOnFinishCallback(ChopDownTree)
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_MEADOWISLAND_TREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_meadowisland_tree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("meadowislandtree")
 
     MakeMediumBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(OnIgnite)

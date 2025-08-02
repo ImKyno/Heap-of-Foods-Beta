@@ -559,6 +559,7 @@ local function makefn(build, stage, data, level)
 		inst:AddTag("tree")
 		inst:AddTag("shelter")
 		inst:AddTag("infestable_tree")
+		inst:AddTag("meadowislandtree")
 		inst:AddTag("cookware_other_installable")
 		
 		inst:SetPrefabNameOverride("kyno_meadowisland_tree")
@@ -598,6 +599,11 @@ local function makefn(build, stage, data, level)
 		inst.components.growable.springgrowth = true
 		inst.components.growable.loopstages = false
 		inst.components.growable:StartGrowing()
+		
+		-- inst:AddComponent("plantregrowth")
+		-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_MEADOWISLAND_TREE_REGROWTH_TIME)
+		-- inst.components.plantregrowth:SetProduct("kyno_meadowisland_tree_sapling")
+		-- inst.components.plantregrowth:SetSearchTag("meadowislandtree")
 
 		inst.growfromseed = handler_growfromseed
 

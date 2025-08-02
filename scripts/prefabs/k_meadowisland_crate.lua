@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
 	Asset("ANIM", "anim/kyno_meadowisland_crate.zip"),
@@ -43,7 +45,7 @@ local function OnHammered(inst, worker)
 
 	if not inst:HasTag("not_meadow_crate") then
 		if not inst.components.timer:TimerExists("replenish_crate") then
-			inst.components.timer:StartTimer("replenish_crate", 3360)
+			inst.components.timer:StartTimer("replenish_crate", TUNING.KYNO_ISLANDCRATE_GROWTIME)
 		end
 		
 		inst:Hide() -- Hide from now on.
@@ -210,6 +212,8 @@ local function fn()
     inst.components.burnable:SetOnIgniteFn(OnIgnite)
     inst.components.burnable:SetOnBurntFn(OnBurnt)
 	MakeSmallPropagator(inst)
+	
+	AddToRegrowthManager(inst)
 
     inst.OnSave = OnSave
     inst.OnLoad = OnLoad

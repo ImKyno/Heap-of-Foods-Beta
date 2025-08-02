@@ -9852,6 +9852,7 @@ return {
           visible = true,
           properties = {}
         },
+        --[[
         {
           name = "",
           type = "kyno_flup_spawner",
@@ -9918,6 +9919,7 @@ return {
           visible = true,
           properties = {}
         },
+        ]]--
         {
           name = "",
           type = "kyno_meadowisland_mermhut",

@@ -73,7 +73,7 @@ local hovers                =
 	modspices               = "Should Warly be able to grind Mod Spices?\nThis may cause longer loading times.",
 	humanmeat               = "Should Players drop Long Pigs upon death?\nNote: If disabled, this will cause some Recipes to be uncookable.",
 	alcoholic               = "Should some characters be unable to drink Alcoholic-like drinks?",
-	iceboxstacks            = "Should Elastispacer be able to upgrade Ice Box and Salt Box?\May cause visual glitches if disabled afterwards.",
+	iceboxstacks            = "Should Elastispacer be able to upgrade Ice Box and Salt Box?\nNote: If disabled afterwards, may cause visual glitches.",
 	giantspawn              = "Should Players spawn Giants when eating their special food?",
 	coffeespeed             = "Should the foods give the Speed Buff when eaten?\n\This option only applies to certain foods.",
 	coffeeduration          = "How long should the Speed Buff from foods last?",
@@ -81,7 +81,7 @@ local hovers                =
 	warlyrecipes            = "Should Warly's Recipes appear on \"Chef's Specials\" instead of \"Mod Recipes\" in the Cookbook?",
 	buckettweak             = "Should Bucket-o-Poop use the Bucket instead of its default recipe?",
 	retrofit                = "If your world is missing the Mod Contents enable this option.\nThis option will be set as \"Updated\" once the retrofitting is finished!",
-	modtrades               = "Should Pig King be able to trade items in exchange for Mod items?\This also applies to Pig Elder in Lights Out worlds.",
+	modtrades               = "Should Pig King be able to trade items in exchange for Mod items?\nThis also applies to Pig Elder in Lights Out worlds.",
 }
 
 local desc                  =
@@ -225,7 +225,7 @@ Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso,
 		modspices               = "Permitir que o Warly consiga fazer Temperos do Mod?\nIsso pode vir a causar um maior tempo de carregamento.",
 		humanmeat               = "Permitir que Jogadores deixem cair Carne Humana quando morrem?\nNota: Se desabilitado, pode impedir certas comidas de serem feitas.",
 		alcoholic               = "Permitir que alguns personagens sejam impedidos de beber bebidas alcoólicas?",
-		iceboxstacks            = "Permitir que o Elastipaçador funcione para Geladeiras?\Pode causar erros visuais se for desabilitado posteriormente.",
+		iceboxstacks            = "Permitir que o Elastipaçador funcione para Geladeiras?\nNota:Pode causar erros visuais se for desabilitado posteriormente.",
 		giantspawn              = "Permitir que Gigantes apareçam se Jogadores comerem suas comidas especiais?",
 		coffeespeed             = "Permitir que as comidas proporcionem Efeito de Velocidade?\n\Isto só se aplica à certas comidas.",
 		coffeeduration          = "O quão longo deve ser o Efeito de Velocidade das comidas?",
@@ -374,7 +374,7 @@ if locale == "zh" or locale == "zhr" then
 		seasonalfoods           = "季节性的料理是否在特殊活动下才能烹饪？",
 		modspices               = "沃利可以研磨Mod的香料吗？\n这可能会导致游戏加载时间延长。",
 		humanmeat               = "玩家死亡时是否掉落人肉？\n注意：如果禁用，可能会导致无法制作某些料理。",
-		iceboxstacks            = "Should Elastispacer be able to upgrade Ice Box and Salt Box?\May cause visual glitches if disabled afterwards.",
+		iceboxstacks            = "Should Elastispacer be able to upgrade Ice Box and Salt Box?\nNote: If disabled afterwards, may cause visual glitches.",
 		alcoholic               = "是否应该禁止某些角色饮酒？",
 		giantspawn              = "如果玩家吃了含boss掉落物的特殊料理，boss是否应该出现？",
 		coffeespeed             = "料理是否提供移速Buff？\n该项仅作用于特定料理",
@@ -383,7 +383,7 @@ if locale == "zh" or locale == "zhr" then
 		warlyrecipes            = "在烹饪指南中，沃利的Mod特色料理是否应该出现在\"大厨特色菜\"分页，而不是\"模组食谱\"分页？",
 		buckettweak             = "便便桶是否用于挤奶而不是默认功能？",
 		retrofit                = "如果你的世界缺少Mod内容，请启用此选项。\n改造完成后，该选项将被设置为 \"已更新\"！",
-		modtrades               = "猪王是否应该能够用某些物品来交换 Mod 物品？\这也适用于熄灯世界中的猪长老。"
+		modtrades               = "猪王是否应该能够用某些物品来交换 Mod 物品？\n这也适用于熄灯世界中的猪长老。"
 	}
 
 	desc                        =

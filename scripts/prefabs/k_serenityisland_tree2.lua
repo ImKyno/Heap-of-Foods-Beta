@@ -233,6 +233,7 @@ local function shortfn()
 	inst:AddTag("tree")
 	inst:AddTag("plant")
     inst:AddTag("shelter")
+	inst:AddTag("sugartree")
 
     inst.entity:SetPristine()
 
@@ -259,6 +260,11 @@ local function shortfn()
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_SHORT_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(tree_chopped_short)
     inst.components.workable:SetOnWorkCallback(tree_chop)
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
 	
 	inst:ListenForEvent("timerdone", function(inst, data)
         if data.name == "kyno_sugartree_short_timer" then
@@ -302,6 +308,7 @@ local function short_burntfn()
     inst.AnimState:PlayAnimation("burnt")
 	
 	inst:AddTag("burnt")
+	inst:AddTag("sugartree")
 
     inst.entity:SetPristine()
 
@@ -318,6 +325,11 @@ local function short_burntfn()
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
     inst.components.workable:SetWorkLeft(1)
     inst.components.workable:SetOnFinishCallback(burnt_chopped)
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
 	
 	MakeWaxablePlant(inst)
 
@@ -350,6 +362,7 @@ local function normalfn()
 	inst:AddTag("tree")
 	inst:AddTag("plant")
     inst:AddTag("shelter")
+	inst:AddTag("sugartree")
 
     inst.entity:SetPristine()
 
@@ -376,6 +389,11 @@ local function normalfn()
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_NORMAL_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(tree_chopped_normal)
     inst.components.workable:SetOnWorkCallback(tree_chop)
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
 	
 	inst:ListenForEvent("timerdone", function(inst, data)
         if data.name == "kyno_sugartree_normal_timer" then
@@ -419,6 +437,7 @@ local function normal_burntfn()
     inst.AnimState:PlayAnimation("burnt")
 	
 	inst:AddTag("burnt")
+	inst:AddTag("sugartree")
 
     inst.entity:SetPristine()
 
@@ -435,6 +454,11 @@ local function normal_burntfn()
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
     inst.components.workable:SetWorkLeft(1)
     inst.components.workable:SetOnFinishCallback(burnt_chopped)
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
 	
 	MakeWaxablePlant(inst)
 
@@ -460,6 +484,7 @@ local function stump_shortfn()
 	inst.AnimState:PlayAnimation("stump")
 	
 	inst:AddTag("stump")
+	inst:AddTag("sugartree")
 
     inst.entity:SetPristine()
 
@@ -476,6 +501,11 @@ local function stump_shortfn()
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
 	
 	MakeSmallBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(stump_startburn)
@@ -509,6 +539,7 @@ local function stump_normalfn()
 	inst.AnimState:PlayAnimation("stump")
 	
 	inst:AddTag("stump")
+	inst:AddTag("sugartree")
 
     inst.entity:SetPristine()
 
@@ -525,6 +556,11 @@ local function stump_normalfn()
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
 	
 	MakeSmallBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(stump_startburn)

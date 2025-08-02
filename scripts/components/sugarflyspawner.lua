@@ -9,7 +9,7 @@ return Class(function(self, inst)
 	local _worldstate = TheWorld.state
 	local _updating = false
 	local _sugarflies = {}
-	local _maxsugarflies = TUNING.MAX_BUTTERFLIES
+	local _maxsugarflies = TUNING.MAX_KYNO_SUGARFLIES
 
 	local FLOWER_TAGS = { "sugarflower" }
 	local SUGARFLY_TAGS = { "sugarfly" }

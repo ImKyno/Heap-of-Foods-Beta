@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
 	Asset("ANIM", "anim/limpetrock.zip"),
@@ -98,6 +100,10 @@ local function makefullfn(inst)
 	inst.AnimState:PlayAnimation(pickanim(inst))
 end
 
+local function OnPreLoad(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_LIMPETROCK_GROWTIME)
+end
+
 local function fn()
 	local inst = CreateEntity()
     
@@ -134,6 +140,7 @@ local function fn()
 
 	inst:AddComponent("pickable")
 	inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
+	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_LIMPETROCK_GROWTIME, true)
 	inst.components.pickable:SetUp("kyno_limpets", TUNING.KYNO_LIMPETROCK_GROWTIME)
 	inst.components.pickable.getregentimefn = getregentimefn
 	inst.components.pickable.onpickedfn = onpickedfn
@@ -167,6 +174,10 @@ local function fn()
 	end)
 
 	inst.components.workable:SetWorkable(false)
+
+	inst.OnPreLoad = OnPreLoad
+
+	AddToRegrowthManager(inst)
 
 	return inst
 end

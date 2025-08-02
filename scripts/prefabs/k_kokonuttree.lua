@@ -714,6 +714,11 @@ local function makefn(build, stage, data, level, coconut)
 		inst.components.growable.loopstages = false
 		inst.components.growable:StartGrowing()
 
+		-- inst:AddComponent("plantregrowth")
+        -- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_KOKONUTTREE_REGROWTH_TIME)
+        -- inst.components.plantregrowth:SetProduct("kyno_kokonuttree_sapling")
+        -- inst.components.plantregrowth:SetSearchTag("kokonuttree")
+
 		inst.growfromseed = handler_growfromseed
 
 		-- PushSway(inst)

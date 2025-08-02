@@ -1,3 +1,6 @@
+require("prefabutil")
+require("worldsettingsutil")
+
 local assets =
 {
     Asset("ANIM", "anim/lotus.zip"),
@@ -84,6 +87,10 @@ local function OnCollide(inst, other)
     end
 end
 
+local function OnPreLoad(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_LOTUS_GROWTIME)
+end
+
 local function fn()
     local inst = CreateEntity()
 
@@ -111,23 +118,27 @@ local function fn()
         return inst
     end
 
-    inst:AddComponent("inspectable")
-	inst:AddComponent("lootdropper")
-	
-	inst:AddComponent("hauntable")
-    inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
-	
 	inst.AnimState:SetTime(math.random() * 2)
 
     local color = 0.75 + math.random() * 0.25
     inst.AnimState:SetMultColour(color, color, color, 1)
 
+    inst:AddComponent("inspectable")
+	inst:AddComponent("lootdropper")
+
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
+	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_LOTUS_GROWTIME, true)
     inst.components.pickable:SetUp("kyno_lotus_flower", TUNING.KYNO_LOTUS_GROWTIME)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
     inst.components.pickable.makeemptyfn = makeemptyfn
+
+	inst:AddComponent("hauntable")
+    inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
+
+	inst.Physics:SetCollisionCallback(OnCollide)
+	inst:DoTaskInTime(1 + math.random(), CheckBeached)
 	
 	inst:DoTaskInTime(1/30, function()
 		inst:WatchWorldState("isday", WakeUp)
@@ -143,8 +154,7 @@ local function fn()
     MakeSmallPropagator(inst)
     MakeHauntableIgnite(inst)
 	
-	inst.Physics:SetCollisionCallback(OnCollide)
-	inst:DoTaskInTime(1 + math.random(), CheckBeached)
+	inst.OnPreLoad = OnPreLoad
 
     return inst
 end

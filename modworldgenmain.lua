@@ -321,3 +321,60 @@ Layouts["Waterlogged4"] = StaticLayout.Get("map/static_layouts/hof_waterlogged4"
 		treearea = HofWaterloggedArea,
 	}
 })
+
+--[[
+local MapData = 
+{
+    ["SerenitySpawner"] = true,
+	["MeadowSpawner"]   = true,
+}
+
+local MapTags = 
+{    
+    ["SerenitySpawner"] = function(tagdata, level)
+        if tagdata["SerenitySpawner"] == false then
+            return
+        end
+        
+        tagdata["SerenitySpawner"] = false
+    
+        if level ~= nil and level.overrides ~= nil and level.overrides.serenityisland == "never" then
+            return
+        end
+    
+        return "STATIC", "hof_serenityisland1"
+    end,
+	
+	["SerenityArea"] = function(tagdata)
+		return "TAG", "SerenityArea"
+	end,
+	
+	["MeadowSpawner"] = function(tagdata, level)
+        if tagdata["MeadowSpawner"] == false then
+            return
+        end
+        
+        tagdata["MeadowSpawner"] = false
+    
+        if level ~= nil and level.overrides ~= nil and level.overrides.serenityisland == "never" then
+            return
+        end
+    
+        return "STATIC", "hof_meadowisland2"
+    end,
+	
+	["MeadowArea"] = function(tagdata)
+		return "TAG", "MeadowArea"
+	end,
+}
+
+AddGlobalClassPostConstruct("map/storygen", "Story", function(self)
+    for tag, v in pairs(MapData) do
+        self.map_tags.TagData[tag] = v
+    end
+    
+    for tag, v in pairs(MapTags) do
+        self.map_tags.Tag[tag] = v
+    end
+end)
+]]--

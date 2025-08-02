@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
 	Asset("ANIM", "anim/kyno_ocean_wreck.zip"),
@@ -130,8 +132,10 @@ local function OnHammered(inst, worker)
 	end
 	
 	inst.components.lootdropper:DropLoot()
+
 	SpawnPrefab("collapse_big").Transform:SetPosition(inst.Transform:GetWorldPosition())
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_wood")
+
 	inst:Remove()
 end
 
@@ -183,6 +187,10 @@ local function OnLoad(inst, data)
 	end
 end
 
+local function OnPreLoad(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_OCEAN_WRECK_GROWTIME)
+end
+
 local function fn()
 	local inst = CreateEntity()
 	
@@ -216,7 +224,8 @@ local function fn()
 
 	inst:AddComponent("pickable")
 	inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
-	inst.components.pickable:SetUp("kyno_limpets", TUNING.KYNO_LIMPETROCK_GROWTIME)
+	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_OCEAN_WRECK_GROWTIME, true)
+	inst.components.pickable:SetUp("kyno_limpets", TUNING.KYNO_OCEAN_WRECK_GROWTIME)
 	inst.components.pickable.getregentimefn = getregentimefn
 	inst.components.pickable.onpickedfn = onpickedfn
 	inst.components.pickable.makeemptyfn = makeemptyfn
@@ -240,14 +249,16 @@ local function fn()
 	inst.components.lootdropper:SetLoot({"boards", "boards", "kyno_limpets"})
 
 	SetType(inst, "random")
-	
-	MakeLargeBurnable(inst)
-    MakeSmallPropagator(inst)
+
+	inst:ListenForEvent("on_collide", OnCollide)
 
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
-	
-	inst:ListenForEvent("on_collide", OnCollide)
+	inst.OnPreLoad = OnPreLoad
+
+	MakeLargeBurnable(inst)
+    MakeSmallPropagator(inst)
+	AddToRegrowthManager(inst)
 
 	return inst
 end

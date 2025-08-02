@@ -13,7 +13,8 @@ modimport("scripts/strings/hof_strings_loadingtips")
 
 local hof_init_strings = 
 {
-	"hof_strings", 
+	"hof_strings",
+	"hof_strings_customizations",
 	"hof_strings_scrapbook",
 }
 
@@ -33,6 +34,7 @@ end
 -- Mod Dependencies.
 local hof_init_misc    =
 {
+	"hof_tuning",
 	"hof_assets",
 	"hof_prefabs",
 	"hof_recipes",
@@ -42,7 +44,7 @@ local hof_init_misc    =
 	"hof_actions",
 	"hof_stategraphs",
 	"hof_containers",
-	"hof_tuning",
+	-- "hof_tuning",
 	"hof_meatrack_foods",
 	"hof_postinits_misc",
 	"hof_postinits_brains",

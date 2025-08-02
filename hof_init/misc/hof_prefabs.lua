@@ -136,8 +136,8 @@ PrefabFiles =
 	"k_twiggynuts",
 	"k_water_spray",
 	"k_waterycress",
+	"k_waxed_plants",
 	"k_weedsea",
 	"k_wildwheat",
 	"k_worm_bone",
-	"k_waxed_plants",
 }

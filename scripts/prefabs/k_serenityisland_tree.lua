@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
     Asset("ANIM", "anim/quagmire_sapbucket.zip"),
@@ -27,6 +29,8 @@ local prefabs =
 	"kyno_sugartree_bud",
 }
 
+local SPOIL_SAP_TIMER = "kyno_sugartree_timer"
+
 local function SpoilSap(inst)
 	local ruined = SpawnPrefab("kyno_sugartree_ruined")
 	ruined.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/sap_extractor")
@@ -36,7 +40,7 @@ local function SpoilSap(inst)
 end
 
 local function onpickedfn(inst)
-    inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/sap_extractor")
+    -- inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/sap_extractor")
 	
 	inst.AnimState:Hide("sap")
 	inst.AnimState:Show("swap_tapper")
@@ -45,7 +49,7 @@ local function onpickedfn(inst)
 	inst.sapped = false
 	inst:RemoveTag("sap_overflow")
 	
-	inst.components.timer:StopTimer("kyno_sugartree_timer")
+	inst.components.worldsettingstimer:StopTimer(SPOIL_SAP_TIMER)
 end
 
 local function onregenfn(inst)
@@ -56,7 +60,9 @@ local function onregenfn(inst)
 	inst.sapped = true
 	inst:AddTag("sap_overflow")
 	
-	inst.components.timer:StartTimer("kyno_sugartree_timer", TUNING.KYNO_SAP_SPOILTIME)
+	local mintimer = inst.components.worldsettingstimer:GetTimeLeft(SPOIL_SAP_TIMER)
+	local maxtimer = TUNING.KYNO_SAP_SPOILTIME_MAX
+	inst.components.worldsettingstimer:StartTimer(SPOIL_SAP_TIMER, math.min(mintimer, maxtimer))
 end
 
 local function makeemptyfn(inst)
@@ -67,12 +73,12 @@ local function makeemptyfn(inst)
 	inst.sapped = false
 	inst:RemoveTag("sap_overflow")
 	
-	inst.components.timer:StopTimer("kyno_sugartree_timer")
+	inst.components.worldsettingstimer:StopTimer(SPOIL_SAP_TIMER)
 end
 
 -- Ruined Sap.
 local function onpicked_ruinedfn(inst)
-    inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/sap_extractor")
+    -- inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/sap_extractor")
 	
 	inst.AnimState:Hide("sap")
 	inst.AnimState:Show("swap_tapper")
@@ -315,6 +321,17 @@ local function OnLoad(inst, data)
 	end
 end
 
+local function OnPreLoad(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_SAP_GROWTIME)
+	
+	WorldSettings_Timer_PreLoad(inst, data, SPOIL_SAP_TIMER, TUNING.KYNO_SAP_SPOILTIME_MAX)
+    WorldSettings_Timer_PreLoad_Fix(inst, data, SPOIL_SAP_TIMER, 1)
+end
+
+local function OnPreLoadRuined(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_SAP_RUINED_GROWTIME)
+end
+
 local s = .85
 
 local function treefn()
@@ -343,6 +360,7 @@ local function treefn()
 	inst:AddTag("tree")
 	inst:AddTag("plant")
     inst:AddTag("shelter")
+	inst:AddTag("sugartree")
 	inst:AddTag("cookware_other_installable")
 
     inst.entity:SetPristine()
@@ -368,6 +386,11 @@ local function treefn()
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_WORKLEFT)
     inst.components.workable:SetOnFinishCallback(tree_chopped)
     inst.components.workable:SetOnWorkCallback(tree_chop)
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
 	
 	MakeMediumBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(tree_startburn)
@@ -401,6 +424,7 @@ local function stumpfn()
 	inst.AnimState:PlayAnimation("stump")
 	
 	inst:AddTag("stump")
+	inst:AddTag("sugartree")
 
     inst.entity:SetPristine()
 
@@ -417,6 +441,11 @@ local function stumpfn()
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
 	
 	MakeSmallBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(stump_startburn)
@@ -460,6 +489,7 @@ local function treesapfn()
 	inst:AddTag("plant")
 	inst:AddTag("has_sap")
     inst:AddTag("shelter")
+	inst:AddTag("sugartree")
 
     inst.entity:SetPristine()
 
@@ -475,6 +505,7 @@ local function treesapfn()
 
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/quagmire/common/craft/sap_extractor"
+	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_SAP_GROWTIME, true)
     inst.components.pickable:SetUp("kyno_sap", TUNING.KYNO_SAP_GROWTIME, 3)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
@@ -485,14 +516,32 @@ local function treesapfn()
 	inst.components.workable:SetOnFinishCallback(OnHammered)
 	inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_TAPPED_WORKLEFT)
 	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
+	
 	-- Check if it's there any tree with sap to be picked and 
 	-- Make the Tree and Sap spoil after 2 Days (5 Days in total).
+	--[[
 	inst:AddComponent("timer")
 	inst:ListenForEvent("timerdone", function(inst, data)
         if data.name == "kyno_sugartree_timer" then
             SpoilSap(inst)
         end
     end)
+	]]--
+	
+	inst:AddComponent("worldsettingstimer")
+    inst:ListenForEvent("timerdone", function(inst, data)
+		if data.name == SPOIL_SAP_TIMER then
+			SpoilSap(inst)
+		end
+	end)
+    inst.components.worldsettingstimer:AddTimer(SPOIL_SAP_TIMER, TUNING.KYNO_SAP_SPOILTIME_MAX, TUNING.KYNO_SAP_SPOILS)
+    inst.components.worldsettingstimer:StartTimer(SPOIL_SAP_TIMER, TUNING.KYNO_SAP_SPOILTIME)
+	
+	inst.OnPreLoad = OnPreLoad
 	
 	MakeMediumBurnable(inst)
 	inst.components.burnable:SetOnIgniteFn(tree_startburn)
@@ -536,6 +585,7 @@ local function ruinedfn()
 	inst:AddTag("plant")
 	inst:AddTag("has_sap")
     inst:AddTag("shelter")
+	inst:AddTag("sugartree")
 	inst:AddTag("sap_healable")
 	inst:AddTag("sap_healable_bucket")
 
@@ -553,7 +603,8 @@ local function ruinedfn()
 
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/quagmire/common/craft/sap_extractor"
-    inst.components.pickable:SetUp("kyno_sap_spoiled", TUNING.KYNO_SAP_GROWTIME, 3)
+	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_SAP_RUINED_GROWTIME, true)
+    inst.components.pickable:SetUp("kyno_sap_spoiled", TUNING.KYNO_SAP_RUINED_GROWTIME, 3)
     inst.components.pickable.onregenfn = onregen_ruinedfn
     inst.components.pickable.onpickedfn = onpicked_ruinedfn
     inst.components.pickable.makeemptyfn = makeempty_ruinedfn
@@ -562,6 +613,13 @@ local function ruinedfn()
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammeredRuined)
 	inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_TAPPED_WORKLEFT)
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
+	
+	inst.OnPreLoad = OnPreLoadRuined
 	
 	MakeMediumBurnable(inst)
 	inst.components.burnable:SetOnIgniteFn(tree_startburn)
@@ -603,6 +661,7 @@ local function ruined2fn()
 	inst:AddTag("tree")
 	inst:AddTag("plant")
     inst:AddTag("shelter")
+	inst:AddTag("sugartree")
 	inst:AddTag("sap_healable")
 	inst:AddTag("cookware_other_installable")
 
@@ -627,6 +686,11 @@ local function ruined2fn()
 	inst:AddComponent("cookwareinstaller")
 	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
     inst.components.cookwareinstaller.onaccept = OnGetItemFromPlayer2
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
 	
 	MakeMediumBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(tree_startburn)
@@ -661,6 +725,7 @@ local function burntfn()
     inst.AnimState:PlayAnimation("burnt")
 	
 	inst:AddTag("burnt")
+	inst:AddTag("sugartree")
 
     inst.entity:SetPristine()
 
@@ -677,6 +742,11 @@ local function burntfn()
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
     inst.components.workable:SetWorkLeft(1)
     inst.components.workable:SetOnFinishCallback(burnt_chopped)
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
 	
 	MakeWaxablePlant(inst)
 
@@ -703,6 +773,7 @@ local function stump_ruinedfn()
 	inst.AnimState:PlayAnimation("stump")
 	
 	inst:AddTag("stump")
+	inst:AddTag("sugartree")
 
     inst.entity:SetPristine()
 
@@ -719,6 +790,11 @@ local function stump_ruinedfn()
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
     inst.components.workable:SetWorkLeft(TUNING.KYNO_SUGARTREE_STUMP_WORKLEFT)
     inst.components.workable:SetOnWorkCallback(stump_dug)
+	
+	-- inst:AddComponent("plantregrowth")
+	-- inst.components.plantregrowth:SetRegrowthRate(TUNING.KYNO_SUGARTREE_REGROWTH_TIME)
+	-- inst.components.plantregrowth:SetProduct("kyno_sugartree_sapling")
+	-- inst.components.plantregrowth:SetSearchTag("sugartree")
 	
 	MakeSmallBurnable(inst)
     inst.components.burnable:SetOnIgniteFn(stump_startburn)

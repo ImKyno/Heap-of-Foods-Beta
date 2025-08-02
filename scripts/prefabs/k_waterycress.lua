@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
 	Asset("ANIM", "anim/kyno_waterycress.zip"),
@@ -64,6 +66,10 @@ local function OnCollide(inst, other)
     end
 end
 
+local function OnPreLoad(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_WATERYCRESS_GROWTIME)
+end
+
 local function fn()
     local inst = CreateEntity()
 
@@ -72,7 +78,8 @@ local function fn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 
-	inst.AnimState:SetScale(1.2, 1.2, 1.2)
+	local s = 1.2
+	inst.AnimState:SetScale(s, s, s)
 
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_waterycress.tex")
@@ -107,17 +114,22 @@ local function fn()
 
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
+	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_WATERYCRESS_GROWTIME, true)
     inst.components.pickable:SetUp("kyno_waterycress", TUNING.KYNO_WATERYCRESS_GROWTIME)
     inst.components.pickable.onregenfn = onregenfn
     inst.components.pickable.onpickedfn = onpickedfn
     inst.components.pickable.makeemptyfn = makeemptyfn
 
-    MakeSmallBurnable(inst)
-    MakeSmallPropagator(inst)
-	MakeHauntableIgnite(inst)
-
 	inst.Physics:SetCollisionCallback(OnCollide)
 	inst:DoTaskInTime(1 + math.random(), CheckBeached)
+
+    MakeSmallBurnable(inst)
+    MakeSmallPropagator(inst)
+
+	MakeHauntableIgnite(inst)
+	AddToRegrowthManager(inst)
+	
+	inst.OnPreLoad = OnPreLoad
 
     return inst
 end

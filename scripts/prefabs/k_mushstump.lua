@@ -56,13 +56,15 @@ local function fn()
     inst.entity:AddAnimState()
     inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
+
+	MakeObstaclePhysics(inst, .5)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_mushroomstump.tex")
 	minimap:SetPriority(2) -- From -2
 	
-	inst.AnimState:SetScale(.8, .8, .8)
-	MakeObstaclePhysics(inst, .5)
+	local s = .8
+	inst.AnimState:SetScale(s, s, s)
 	
 	inst.AnimState:SetBank("kyno_mushroomstump")
 	inst.AnimState:SetBuild("kyno_mushroomstump")
@@ -115,12 +117,19 @@ local function naturalfn()
 	local inst = fn()
 	
 	inst:AddTag("mushroom_stump_natural")
+
+	if not TheWorld.ismastersim then
+        return inst
+    end
+
+	AddToRegrowthManager(inst)
 	
 	return inst
 end
 
 local function mushplacefn(inst)
-	inst.AnimState:SetScale(.8, .8, .8)
+	local s = .8
+	inst.AnimState:SetScale(s, s, s)
 end
 
 return Prefab("kyno_mushstump", fn, assets, prefabs),

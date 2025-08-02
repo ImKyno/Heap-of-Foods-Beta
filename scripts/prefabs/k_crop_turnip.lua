@@ -15,11 +15,6 @@ local prefabs =
 	"spoiled_food",
 }
 
-local function onpicked(inst)
-    TheWorld:PushEvent("beginregrowth", inst)
-    inst:Remove()
-end
-
 local function fn()
     local inst = CreateEntity()
 
@@ -28,7 +23,8 @@ local function fn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	inst.AnimState:SetScale(1.5, 1.5, 1.5)
+    local s = 1.5
+	inst.AnimState:SetScale(s, s, s)
 
     inst.AnimState:SetBank("kyno_turnip")
     inst.AnimState:SetBuild("kyno_turnip")
@@ -48,8 +44,8 @@ local function fn()
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/wilson/pickup_plants"
-    inst.components.pickable:SetUp("kyno_turnip", 10)
-    inst.components.pickable.onpickedfn = onpicked
+    inst.components.pickable:SetUp("kyno_turnip")
+    inst.components.pickable.remove_when_picked = true
     inst.components.pickable.quickpick = true
 
     inst:AddComponent("hauntable")
@@ -57,6 +53,7 @@ local function fn()
 	
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
+    AddToRegrowthManager(inst)
 
     return inst
 end
