@@ -4,6 +4,8 @@ require("behaviours/doaction")
 require("behaviours/panic")
 require("behaviours/chaseandattack")
 
+local BrainCommon = require("brains/braincommon")
+
 local STOP_RUN_DIST        = 10
 local SEE_PLAYER_DIST      = 5
 
@@ -78,6 +80,7 @@ local function FindHome(inst)
     local x,y,z = inst.Transform:GetWorldPosition()
     local ents = TheSim:FindEntities(x,y,z, 30, {"infestedtree"}, {"stump", "burnt"})
     local home = nil
+	
     for i, ent in ipairs(ents)do
         if not ent.components.spawner or not ent.components.spawner.child then
             home = ent
@@ -113,22 +116,30 @@ end)
 function SquirrelBrain:OnStart()
     local root = PriorityNode(
     {
-        WhileNode(function() return self.inst.components.health.takingfiredamage end, "OnFire", Panic(self.inst)),
-        WhileNode(function() return self.inst.components.inventory:NumItems() > 0 and self.inst.components.homeseeker end, "run off with prize",
-            DoAction(self.inst, GoHomeAction, "go home", true)),
-        DoAction(self.inst, PickupAction, "searching for prize", true),
-        RunAway(self.inst, "scarytoprey", AVOID_PLAYER_DIST, AVOID_PLAYER_STOP),
-        RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST, nil, true),
-            EventNode(self.inst, "gohome", 
-                DoAction(self.inst, GoHomeAction, "go home", true )),
-        WhileNode(function() return not TheWorld.state.isday and (not TheWorld.state.isnight or TheWorld.state.moonphase ~= "new") end, "IsNight",
-            DoAction(self.inst, GoHomeAction, "go home", true )),
+		BrainCommon.PanicTrigger(self.inst),
+		BrainCommon.ElectricFencePanicTrigger(self.inst),
+		
+		WhileNode(function() return self.inst.components.health.takingfiredamage end, "OnFire", Panic(self.inst)),
+		WhileNode(function() return self.inst.components.inventory:NumItems() > 0 and self.inst.components.homeseeker end, "RunWithPrize",
+			DoAction(self.inst, GoHomeAction, "GoHome", true)),
+			
+		DoAction(self.inst, PickupAction, "SearchPrize", true),
+		RunAway(self.inst, "scarytoprey", AVOID_PLAYER_DIST, AVOID_PLAYER_STOP),
+		RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST, nil, true),
+			EventNode(self.inst, "gohome", 
+			DoAction(self.inst, GoHomeAction, "GoHome", true)),
+				
+		WhileNode(function() return not TheWorld.state.isday and (not TheWorld.state.isnight or TheWorld.state.moonphase ~= "new") end, "IsNight",
+			DoAction(self.inst, GoHomeAction, "GoHome", true)),
+			
     --    WhileNode(function() return seasonmgr and seasonmgr:GetSeason() == SEASONS.SPRING end, "IsSpring",
     --        DoAction(self.inst, GoHomeAction, "go home", true )),
-        DoAction(self.inst, EatFoodAction),
-        WhileNode(function() return CheckForHome(self.inst) end, "wander to find home",
-            Wander(self.inst)),
-        Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_WANDER_DIST)
+	
+		DoAction(self.inst, EatFoodAction),
+		WhileNode(function() return CheckForHome(self.inst) end, "WanderToHome",
+			Wander(self.inst)),
+			
+		Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_WANDER_DIST)
     }, 0.25)
     self.bt = BT(self.inst, root)
 end

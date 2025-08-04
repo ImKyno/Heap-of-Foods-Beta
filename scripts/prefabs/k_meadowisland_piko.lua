@@ -27,6 +27,7 @@ local squirrel_sounds =
 {
 	scream = "hof_sounds/creatures/piko/steal",
 	hurt = "hof_sounds/creatures/piko/attack",
+	hit = "hof_sounds/creatures/piko/attack",
 }
 
 local function UpdateBuild(inst, cheeks)

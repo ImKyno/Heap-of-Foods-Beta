@@ -1,5 +1,5 @@
 name                        = "Heap of Foods - Beta Branch"
-version                     = "1.1-B"
+version                     = "1.2-B"
 
 description                 = 
 [[
@@ -13,7 +13,7 @@ This update focused on revamping the visuals of the farming crops as well as add
 
 Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover it.
 
-󰀌 Beta Branch Version: 1.1-B
+󰀌 Beta Branch Version: 1.2-B
 󰀧 Update: Seaside Summer (Part II)
 ]]
 
@@ -178,7 +178,7 @@ Esta atualização tem como foco melhorar os visuais das plantações e adiciona
 
 Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso, em uma ilha muito longe do continente, há um novo arbusto crescendo, esperando para ser descoberto!
 
-󰀌 Versão do Beta: 1.1-B
+󰀌 Versão do Beta: 1.2-B
 󰀧 Atualização: Verão à Beira-mar (Parte II)
 ]]
 
@@ -328,7 +328,7 @@ if locale == "zh" or locale == "zhr" then
 
 我们的幸存者设法在野外找到了新型种子！在远离大陆的热带岛屿上，一种新的灌木丛正在绽放，等待着他们去发掘。
 
-󰀌 Beta Branch Version: 1.1-B
+󰀌 Beta Branch Version: 1.2-B
 󰀧 Update: Seaside Summer (Part II)
 ]]
 

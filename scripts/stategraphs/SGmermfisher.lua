@@ -13,6 +13,7 @@ local events =
     CommonHandlers.OnLocomote(true, true),
     CommonHandlers.OnSleep(),
     CommonHandlers.OnFreeze(),
+	CommonHandlers.OnElectrocute(),
     CommonHandlers.OnAttack(),
     CommonHandlers.OnAttacked(),
     CommonHandlers.OnDeath(),
@@ -38,7 +39,7 @@ local states =
 
     State{
         name = "fishing_pre",
-        tags = {"canrotate", "prefish", "fishing", "busy"},
+        tags = {"canrotate", "prefish", "fishing", "busy", "noelectrocute"},
         onenter = function(inst)
             inst.components.locomotor:Stop()
             inst.AnimState:PlayAnimation("fish_pre")
@@ -55,7 +56,7 @@ local states =
 
     State{
         name = "fishing",
-        tags = {"canrotate", "fishing", "busy"},
+        tags = {"canrotate", "fishing", "busy", "noelectrocute"},
 
         onenter = function(inst)
             inst.AnimState:PlayAnimation("fish_loop", true)
@@ -71,7 +72,7 @@ local states =
 
     State{
         name = "fishing_pst",
-        tags = {"canrotate", "fishing", "busy"},
+        tags = {"canrotate", "fishing", "busy", "noelectrocute"},
         onenter = function(inst)
             -- inst.AnimState:PushAnimation("fish_loop", true)
             inst.AnimState:PlayAnimation("fish_pst")
@@ -85,7 +86,7 @@ local states =
 
     State{
         name = "fishing_nibble",
-        tags = {"canrotate", "fishing", "nibble", "busy"},
+        tags = {"canrotate", "fishing", "nibble", "busy", "noelectrocute"},
         onenter = function(inst)
             inst.AnimState:PushAnimation("fish_loop", true)
             if inst.components.fishingrod.target.components.fishable.fishleft > 0 then
@@ -103,7 +104,7 @@ local states =
 
     State{
         name = "fishing_strain",
-        tags = {"canrotate", "fishing", "busy"},
+        tags = {"canrotate", "fishing", "busy", "noelectrocute"},
         onenter = function(inst)
             inst.components.fishingrod:Reel()
         end,
@@ -123,7 +124,7 @@ local states =
 	
 	State{
         name = "catchfish",
-        tags = {"canrotate", "fishing", "catchfish", "busy"},
+        tags = {"canrotate", "fishing", "catchfish", "busy", "noelectrocute"},
         onenter = function(inst, build)
             inst.AnimState:PlayAnimation("fishcatch")
             inst.AnimState:OverrideSymbol("fish01", build, "fish01")
@@ -240,5 +241,6 @@ CommonStates.AddSimpleActionState(states, "gohome", "pig_pickup", 4 * FRAMES, {"
 -- CommonStates.AddSimpleActionState(states, "eat", "eat", 10 * FRAMES, {"busy"})
 CommonStates.AddSimpleActionState(states, "fish", "fishing", 10 * FRAMES, {"busy"})
 CommonStates.AddFrozenStates(states)
+CommonStates.AddElectrocuteStates(states)
 
 return StateGraph("mermfisher", states, events, "idle", actionhandlers)

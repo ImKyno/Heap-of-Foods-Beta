@@ -19,7 +19,8 @@ local ScrapbookScreen  = require("screens/redux/scrapbookscreen")
 	TUNING.RABBIT_PERISHTIME = 2400  - 5  DAYS
 ]]--
 
--- Vanilla: red_cap, green_cap, blue_cap, moon_cap, monsterlasagna, lordfruitfly
+-- Vanilla: red_cap, green_cap, blue_cap, moon_cap, plantmeat, monsterlasagna, lordfruitfly
+table.insert(ScrapbookData.lordfruitfly.deps, "blueprint")
 
 -- Sample deps for preparedfoods. Some special foods are likely to use their own deps though.
 local preparedfood_deps =
@@ -1210,8 +1211,6 @@ local HOF_SCRAPBOOK_ITEMS =
 
 local HOF_SCRAPBOOK_FOODS =
 {
-	-- red_cap, green_cap, blue_cap, moon_cap, plantmeat needs to be keep up to date.
-	-- I don't know how to override base game items yet.
 	red_cap            = 
 	{
 		name           = "red_cap",
@@ -11838,6 +11837,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 
 local HOF_SCRAPBOOK_CREATURES =
 {
+	--[[
 	lordfruitfly       = 
 	{
 		name           = "lordfruitfly", 
@@ -11854,6 +11854,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		animoffsety    = 70, 
 		deps           = {"fruitfly", "fruitflyfruit", "plantmeat", "blueprint"},
 	},
+	]]--
 	
 	kyno_chicken2      =
 	{

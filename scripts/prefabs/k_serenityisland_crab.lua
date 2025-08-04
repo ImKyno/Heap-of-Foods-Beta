@@ -97,6 +97,7 @@ local function fn()
     inst:AddTag("cattoy")
 	inst:AddTag("serenitycrab")
 	inst:AddTag("crab_mob")
+	inst:AddTag("electricdamageimmune")
 	
 	inst.entity:SetPristine()
 

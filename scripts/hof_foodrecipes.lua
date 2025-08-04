@@ -915,7 +915,6 @@ local kyno_foods =
 	
 	gorge_grilled_cheese =
 	{
-		-- test = function(cooker, names, tags) return tags.bread and tags.dairy and not tags.fish and not tags.meat and not tags.spotspice end,
 		test = function(cooker, names, tags) return tags.bread and (tags.dairy or tags.cheese) and not tags.fish and not tags.meat 
 		and not tags.spotspice and not (tags.inedible and tags.inedible > 1) end,
 		priority = 35,
@@ -1457,8 +1456,8 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOUL,
 		potlevel = "med",
 		floater = TUNING.HOF_FLOATER,
-		card_def = {ingredients = {{"kyno_bottle_soul", 2}, {"boneshard", 2}}},
 		tags = {"soulstew"},
+		card_def = {ingredients = {{"kyno_bottle_soul", 2}, {"boneshard", 2}}},
 		oneatenfn = function(inst, eater)
 			if eater:HasTag("soulstealer") then
 				eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH)

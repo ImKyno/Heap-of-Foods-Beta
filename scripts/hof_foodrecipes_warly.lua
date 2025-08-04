@@ -455,6 +455,7 @@ local kyno_warly_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED, 
 		floater = TUNING.HOF_FLOATER,
 		tags = {"masterfood"},
+		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 1}, {"chocolate_black", 1}, {"goatmilk", 1}}},
 		prefabs = { "buff_moistureimmunity" },
 		oneatenfn = function(inst, eater)
 			eater:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")

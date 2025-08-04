@@ -14,7 +14,6 @@ local kyno_foods_items =
 		cooktime = 1,
 		stacksize = 2,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_JAWSBREAKER,
-		floater = {"med", nil, 0.65},
 		potlevel = "low",
 		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"kyno_sugar", 1}, {"honey", 2}}},
 	},

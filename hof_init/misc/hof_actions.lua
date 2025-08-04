@@ -408,22 +408,34 @@ AddAction("LEARNRECIPECARD", STRINGS.ACTIONS.LEARNRECIPECARD, function(act)
 		if target:HasTag("brewingrecipecard") then
 			if brewer_recipes then
 				local card_def = brewer_recipes[target.recipe_name] and brewer_recipes[target.recipe_name].card_def
-				act.doer:PushEvent("learncookbookrecipe", {product = target.recipe_name, ingredients = GetIngredients(card_def)})
-				act.doer:PushEvent("learnrecipecard") -- Play a cool sound, yay.
+				if card_def then
+					act.doer:PushEvent("learncookbookrecipe", {product = target.recipe_name, ingredients = GetIngredients(card_def)})
+					act.doer:PushEvent("learnrecipecard") -- Play a cool sound, yay.
 
-				target:Remove()
+					target:Remove()
 				
-				return true
+					return true
+				else
+					target:Remove() -- Just remove if no card_def found.
+					
+					return true
+				end
 			end
 		else
 			if cooker_recipes then
 				local card_def = cooker_recipes[target.recipe_name] and cooker_recipes[target.recipe_name].card_def
-				act.doer:PushEvent("learncookbookrecipe", {product = target.recipe_name, ingredients = GetIngredients(card_def)})
-				act.doer:PushEvent("learnrecipecard")
+				if card_def then
+					act.doer:PushEvent("learncookbookrecipe", {product = target.recipe_name, ingredients = GetIngredients(card_def)})
+					act.doer:PushEvent("learnrecipecard")
 
-				target:Remove()
+					target:Remove()
 			
-				return true
+					return true
+				else
+					target:Remove()
+					
+					return true
+				end
 			end
 		end
 	end

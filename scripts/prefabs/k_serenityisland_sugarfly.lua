@@ -2,6 +2,7 @@ require("prefabutil")
 
 local assets =
 {
+	Asset("ANIM", "anim/butterfly_basic.zip"),
     Asset("ANIM", "anim/kyno_sugarfly.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
@@ -19,19 +20,24 @@ local prefabs =
 
 local function OnDropped(inst)
     inst.sg:GoToState("idle")
+	
     if inst.sugarflyspawner ~= nil then
         inst.sugarflyspawner:StartTracking(inst)
     end
+	
     if inst.components.workable ~= nil then
         inst.components.workable:SetWorkLeft(1)
     end
+	
     if inst.components.stackable ~= nil then
         while inst.components.stackable:StackSize() > 1 do
             local item = inst.components.stackable:Get()
+			
             if item ~= nil then
                 if item.components.inventoryitem ~= nil then
                     item.components.inventoryitem:OnDropped()
                 end
+				
                 item.Physics:Teleport(inst.Transform:GetWorldPosition())
             end
         end
@@ -46,9 +52,11 @@ end
 
 local function OnWorked(inst, worker)
     if worker.components.inventory ~= nil then
+	
         if inst.sugarflyspawner ~= nil then
             inst.sugarflyspawner:StopTracking(inst)
         end
+		
         worker.components.inventory:GiveItem(inst, nil, inst:GetPosition())
         worker.SoundEmitter:PlaySound("dontstarve/common/butterfly_trap")
     end
@@ -60,6 +68,7 @@ end
 
 local function OnDeploy(inst, pt, deployer)
     local flower = SpawnPrefab("kyno_sugartree_flower_planted")
+	
     if flower then
         flower:PushEvent("growfrombutterfly")
         flower.Transform:SetPosition(pt:Get())
@@ -67,6 +76,7 @@ local function OnDeploy(inst, pt, deployer)
         inst.components.stackable:Get():Remove()
         
         TheWorld:PushEvent("CHEVO_growfrombutterfly",{target = flower, doer = deployer})
+		
         if deployer and deployer.SoundEmitter then
             deployer.SoundEmitter:PlaySound("dontstarve/common/plant")
         end
@@ -94,8 +104,8 @@ local function fn()
     MakeTinyFlyingCharacterPhysics(inst, 1, .5)
 	MakeInventoryFloatable(inst)
 
+    inst.AnimState:SetBank("butterfly") -- Use butterfly because we don't have electrocute state.
     inst.AnimState:SetBuild("kyno_sugarfly")
-    inst.AnimState:SetBank("kyno_sugarfly")
     inst.AnimState:PlayAnimation("idle")
     inst.AnimState:SetRayTestOnBB(true)
 	
@@ -103,6 +113,7 @@ local function fn()
     inst:AddTag("flying")
     inst:AddTag("ignorewalkableplatformdrowning")
     inst:AddTag("insect")
+	inst:AddTag("noember")
     inst:AddTag("smallcreature")
     inst:AddTag("cattoyairborne")
     inst:AddTag("wildfireprotected")
@@ -162,6 +173,11 @@ local function fn()
     inst:AddComponent("deployable")
     inst.components.deployable.ondeploy = OnDeploy
     inst.components.deployable:SetDeployMode(DEPLOYMODE.PLANT)
+	
+	inst:AddComponent("halloweenmoonmutable")
+	inst.components.halloweenmoonmutable:SetPrefabMutated("moonbutterfly")
+	inst.components.halloweenmoonmutable:SetOnMutateFn(OnMutate)
+	inst.components.halloweenmoonmutable.push_attacked_on_new_inst = false
 
 	local brain = require("brains/sugarflybrain")
     inst:SetBrain(brain)

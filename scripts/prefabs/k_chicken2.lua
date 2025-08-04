@@ -21,6 +21,7 @@ local ChickenSounds =
 {
 	scream 	= "dontstarve_DLC001/creatures/buzzard/hurt",
 	hurt 	= "dontstarve_DLC001/creatures/buzzard/hurt",
+	hit     = "dontstarve_DLC001/creatures/buzzard/hurt",
 }
 
 SetSharedLootTable("kyno_chicken2",
@@ -110,11 +111,12 @@ local function TestItem(inst, item, giver)
 	end
 end
 
+-- TO DO: Change this timer to worldsettingstimer and let players decide.
 local function OnGetItemFromPlayer(inst, giver, item)
 	if item.components.edible and item.components.edible.foodtype == FOODTYPE.SEEDS 
 	and not inst.components.timer:TimerExists("kyno_chicken_egg_cooldown") then
 		inst.sg:GoToState("eat_seeds")
-		inst.components.timer:StartTimer("kyno_chicken_egg_cooldown", 480)
+		inst.components.timer:StartTimer("kyno_chicken_egg_cooldown", TUNING.KYNO_CHICKEN_LAYEGG_COOLDOWN)
 	end
 end
 

@@ -14,6 +14,8 @@ local events =
     CommonHandlers.OnSleep(),
     CommonHandlers.OnHop(),		
     CommonHandlers.OnFreeze(),
+	CommonHandlers.OnElectrocute(),
+	
     EventHandler("attacked", function(inst) if inst.components.health:GetPercent() > 0 then inst.sg:GoToState("hit") end end),
     EventHandler("death", function(inst) inst.sg:GoToState("death") end),
     EventHandler("trapped", function(inst) inst.sg:GoToState("trapped") end),
@@ -151,14 +153,13 @@ local states =
             inst.Physics:Stop()
             inst.AnimState:PushAnimation("eat_pst")
 			
-			-- Whatever, math.random does nothing here.
-			-- if math.random() < 1.00 and not inst.components.timer:TimerExists("kyno_chicken_egg_cooldown") then
+			-- TO DO: Change this timer to worldsettingstimer and let players decide.
 			if inst.components.playerprox:IsPlayerClose() and not inst.components.timer:TimerExists("kyno_chicken_egg_cooldown") then
 				local x, y, z = inst.Transform:GetWorldPosition()
 				local egg = SpawnPrefab("kyno_chicken_egg")
 				egg.Transform:SetPosition(x, y, z)
 				
-				inst.components.timer:StartTimer("kyno_chicken_egg_cooldown", 480)
+				inst.components.timer:StartTimer("kyno_chicken_egg_cooldown", TUNING.KYNO_CHICKEN_LAYEGG_COOLDOWN)
 			end
         end,
 
@@ -213,7 +214,7 @@ local states =
             TimeEvent(5 * FRAMES, function(inst) 
                 inst.Physics:Stop() 
                 inst.SoundEmitter:PlaySound("dontstarve/rabbit/hop")
-            end ),
+            end),
         },
         
         onenter = function(inst) 
@@ -280,6 +281,7 @@ local states =
 }
 CommonStates.AddSleepStates(states)
 CommonStates.AddFrozenStates(states)
+CommonStates.AddElectrocuteStates(states, nil, { pre = "hit", loop = "hit", pst = "hit"})
 CommonStates.AddHopStates(states, true, { pre = "hop", loop = "hop", pst = "hop"})
 CommonStates.AddSimpleActionState(states, "GoHome", "hop", 4 * FRAMES, {"busy"})
 

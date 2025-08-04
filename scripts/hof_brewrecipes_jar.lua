@@ -491,6 +491,7 @@ local kyno_foods_jar =
 			not eater:HasTag("playerghost") then
 				eater.components.grogginess:ResetGrogginess()
             end
+			
 			eater:AddDebuff("shroomsleepresist", "buff_sleepresistance")
         end,
 	},

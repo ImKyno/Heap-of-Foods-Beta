@@ -4,6 +4,8 @@ require("behaviours/runaway")
 require("behaviours/doaction")
 require("behaviours/panic")
 
+local BrainCommon = require("brains/braincommon")
+
 local SEE_BAIT_DIST   = 15
 local MAX_LEASH_DIST  = 10
 local MAX_WANDER_DIST = 15
@@ -56,6 +58,9 @@ end
 function Chicken2Brain:OnStart()
     local root = PriorityNode(
     {
+		BrainCommon.PanicTrigger(self.inst),
+		BrainCommon.ElectricFencePanicTrigger(self.inst),
+		
         WhileNode(function() return self.inst.components.health.takingfiredamage end, "OnFire", Panic(self.inst)),
         -- WhileNode(function() return self.inst.components.health:GetPercent() < .50 end, "LowHealth",
 			-- RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST)),	

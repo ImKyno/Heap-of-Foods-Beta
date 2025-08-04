@@ -97,7 +97,7 @@ local function KeepFaceTargetFn(inst, target)
     return keepface
 end
 
-local EATFOOD_MUST_TAGS = {"edible_VEGGIE", "edible_SEEDS"}
+local EATFOOD_MUST_TAGS = {"edible_VEGGIE"}
 local EATFOOD_CANT_TAGS = {"INLIMBO", "outofreach"}
 local SCARY_TAGS = {"pig", "scarytoprey"}
 
@@ -137,26 +137,30 @@ function MermFisherBrain:OnStart()
 				-- Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_WANDER_DIST))),
 
         ChattyNode(self.inst, "MERM_TALK_FIND_FOOD",
-            DoAction(self.inst, EatFoodAction, "Eat Food")),
-
-        ChattyNode(self.inst, "MERM_TALK_FIND_FOOD",
         FaceEntity(self.inst, GetTraderFn, KeepTraderFn)),
 
         WhileNode(function() return IsHomeOnFire(self.inst) end, "HomeOnFire", 
             ChattyNode(self.inst, "MERM_TALK_PANICBOSS",
 			Panic(self.inst))),
+			
+		WhileNode(function() return BrainCommon.ShouldAvoidElectricFence(self.inst) end, "Shocked",
+            ChattyNode(self.inst, "MERM_TALK_PANICELECTRICITY",
+			AvoidElectricFence(self.inst))),
 
         ChattyNode(self.inst, "MERM_TALK_FIND_FOOD",
             WhileNode(function() return ShouldGoHome(self.inst) end, "ShouldGoHome", 
-				DoAction(self.inst, GoHomeAction, "Go Home", true))),
+				DoAction(self.inst, GoHomeAction, "GoHome", true))),
 
         ChattyNode(self.inst, "MERM_TALK_FIND_FOOD",
-            DoAction(self.inst, Fish, "Fish Action")),
+            DoAction(self.inst, Fish, "FishAction")),
+			
+		ChattyNode(self.inst, "MERM_TALK_FIND_FOOD",
+            DoAction(self.inst, EatFoodAction, "EatFood")),
 			
 		WhileNode(function() return GetTime() - self.inst.components.combat:GetLastAttackedTime() <= RUN_TIME_OUT end, "Attacked",
 			RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_AWAY_DIST)),
 
-        WhileNode(function() return not self.inst.sg:HasStateTag("fishing") end, "Is Idle",
+        WhileNode(function() return not self.inst.sg:HasStateTag("fishing") end, "IsIdle",
 			Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_WANDER_DIST)),
     }, 0.25)
     

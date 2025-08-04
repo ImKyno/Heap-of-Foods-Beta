@@ -29,8 +29,10 @@ local events =
 			end
         end
     end),
+	
     EventHandler("death", function(inst) inst.sg:GoToState("death") end),
     CommonHandlers.OnFreeze(),
+	CommonHandlers.OnElectrocute(),
 }
 
 local states =
@@ -156,6 +158,7 @@ local states =
 
 }
 CommonStates.AddFrozenStates(states, LandFlyingCreature, RaiseFlyingCreature)
+CommonStates.AddElectrocuteStates(states)
 
 return StateGraph("sugarfly", states, events, "takeoff", actionhandlers)
 
