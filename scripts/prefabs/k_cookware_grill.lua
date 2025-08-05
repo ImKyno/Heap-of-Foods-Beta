@@ -19,6 +19,7 @@ local assets =
     Asset("ANIM", "anim/quagmire_grill_small.zip"),
 
 	Asset("ANIM", "anim/ui_cookpot_1x4.zip"),
+	Asset("ANIM", "anim/quagmire_ui_pot_1x3.zip"),
 	Asset("ANIM", "anim/quagmire_ui_pot_1x4.zip"),
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
@@ -55,10 +56,12 @@ local function DoubleHarvest(self, harvester)
 				end
 
 				local stacksize = recipe and recipe.stacksize or 1
-
+				stacksize = stacksize + TUNING.KYNO_COOKWARE_BONUSHARVEST -- Always grants +1 for large stations.
+				--[[
 				if math.random() < 0.30 then -- 30% of Extra food.
 					stacksize = stacksize + 1
 				end
+				]]--
 
 				if stacksize > 1 then
 					loot.components.stackable:SetStackSize(stacksize)
@@ -75,6 +78,7 @@ local function DoubleHarvest(self, harvester)
                     LaunchAt(loot, self.inst, nil, 1, 1)
                 end
             end
+			
             self.product = nil
         end
 
@@ -82,6 +86,7 @@ local function DoubleHarvest(self, harvester)
             self.task:Cancel()
             self.task = nil
         end
+		
         self.targettime = nil
         self.done = nil
         self.spoiltime = nil
@@ -488,7 +493,7 @@ local function grillsmallfn()
 		inst:ListenForEvent("grillsmoke", OnGrillSmoke)
 
 		inst.OnEntityReplicated = function(inst)
-			inst.replica.container:WidgetSetup("cooking_pot")
+			inst.replica.container:WidgetSetup("cooking_pot_small")
 		end
 
         return inst
@@ -501,12 +506,12 @@ local function grillsmallfn()
 	inst.components.stewer.oncontinuedone = continuedonefn
 	inst.components.stewer.ondonecooking = donecookfn
 	inst.components.stewer.onharvest = harvestfn
-	inst.components.stewer.Harvest = DoubleHarvest
+	-- inst.components.stewer.Harvest = DoubleHarvest
 	inst.components.stewer.onspoil = spoilfn
 	inst.components.stewer.CanCook = cancookfn
 
 	inst:AddComponent("container")
-	inst.components.container:WidgetSetup("cooking_pot")
+	inst.components.container:WidgetSetup("cooking_pot_small") -- cooking_pot
 	inst.components.container.onopenfn = OnOpen
 	inst.components.container.onclosefn = OnClose
 	inst.components.container.skipclosesnd = true

@@ -387,15 +387,15 @@ AddLevelPreInit("forest", function(level)
 end)
 
 -- Main Menu world customization.
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof",            "Heap of Foods - Resources",                     nil, nil, 6)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_ocean",      "Heap of Foods - Ocean Resources",               nil, nil, 7)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_serenity",   "Heap of Foods - Serenity Archipelago",          nil, nil, 8)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_meadow",     "Heap of Foods - Seaside Island",                nil, nil, 9)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof",            "Heap of Foods - Resources",                     nil, nil, 11)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_ocean",      "Heap of Foods - Ocean Resources",               nil, nil, 12)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_serenity",   "Heap of Foods - Serenity Archipelago",          nil, nil, 13)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_meadow",     "Heap of Foods - Seaside Island",                nil, nil, 14)
 
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_r",          "Heap of Foods - Resources Regrowth",            nil, nil, 8)
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_ocean_r",    "Heap of Foods - Ocean Resources Regrowth",      nil, nil, 9)
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_serenity_r", "Heap of Foods - Serenity Archipelago Regrowth", nil, nil, 10)
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_meadow_r",   "Heap of Foods - Seaside Island Regrowth",       nil, nil, 11)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_r",          "Heap of Foods - Resources Regrowth",            nil, nil, 11)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_ocean_r",    "Heap of Foods - Ocean Resources Regrowth",      nil, nil, 12)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_serenity_r", "Heap of Foods - Serenity Archipelago Regrowth", nil, nil, 13)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_meadow_r",   "Heap of Foods - Seaside Island Regrowth",       nil, nil, 14)
 
 local customization_worldgen      = require("map/hof_customizations_worldgen")
 local customization_worldsettings = require("map/hof_customizations_worldsettings")

@@ -44,7 +44,6 @@ local hof_init_misc    =
 	"hof_actions",
 	"hof_stategraphs",
 	"hof_containers",
-	-- "hof_tuning",
 	"hof_meatrack_foods",
 	"hof_postinits_misc",
 	"hof_postinits_brains",

@@ -1,7 +1,7 @@
 local brewing = require("hof_brewing")
 
 local assets =
-{
+{	
     Asset("ANIM", "anim/kyno_brewingrecipecard.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),

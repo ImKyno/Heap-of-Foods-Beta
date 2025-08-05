@@ -413,10 +413,14 @@ AddAction("LEARNRECIPECARD", STRINGS.ACTIONS.LEARNRECIPECARD, function(act)
 					act.doer:PushEvent("learnrecipecard") -- Play a cool sound, yay.
 
 					target:Remove()
-				
 					return true
 				else
 					target:Remove() -- Just remove if no card_def found.
+					
+					-- Say they can't learn the card as well...
+					if act.doer.components.talker and act.doer:HasTag("player") then 
+						act.doer.components.talker:Say(GetDescription(act.doer, target))
+					end
 					
 					return true
 				end
@@ -429,10 +433,13 @@ AddAction("LEARNRECIPECARD", STRINGS.ACTIONS.LEARNRECIPECARD, function(act)
 					act.doer:PushEvent("learnrecipecard")
 
 					target:Remove()
-			
 					return true
 				else
 					target:Remove()
+					
+					if act.doer.components.talker and act.doer:HasTag("player") then 
+						act.doer.components.talker:Say(GetDescription(act.doer, target))
+					end
 					
 					return true
 				end

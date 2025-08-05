@@ -56,8 +56,34 @@ function params.syrup_pot.itemtestfn(container, item, slot)
     return item:HasTag("gourmet_sap") and not container.inst:HasTag("burnt")
 end
 
--- Small and Large Pot. (They use the same).
-params.cooking_pot 			=
+-- Small Cookwares.
+params.cooking_pot_small	=
+{
+    widget 					=
+    {
+        slotpos 			=
+        {
+            Vector3(0, 64 + 8,    0),
+            Vector3(0, 0,         0),
+            Vector3(0, -(64 + 8), 0),
+        },
+
+        animbank 			= "quagmire_ui_pot_1x3",
+        animbuild 			= "quagmire_ui_pot_1x3",
+        pos 				= Vector3(200, 0, 0),
+        side_align_tip 		= 100,
+    },
+
+    acceptsstacks 			= false,
+    type 					= "cooker",
+}
+
+function params.cooking_pot_small.itemtestfn(container, item, slot)
+    return cooking.IsCookingIngredient(item.prefab) and not container.inst:HasTag("burnt")
+end
+
+-- Large Cookwares.
+params.cooking_pot			=
 {
     widget 					=
     {

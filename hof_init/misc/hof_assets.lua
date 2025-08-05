@@ -556,6 +556,7 @@ local HOF_ICONS =
 	"pumpkin_soup",
 	"purplewobstersoup",
 	"radishsalad",
+	"riceandbeans",
 	"ricepudding",
 	"ricesake",
 	"risotto",

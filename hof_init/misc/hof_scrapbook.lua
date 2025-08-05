@@ -1206,6 +1206,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		build          = "hat_sammy",
 		anim           = "anim",
 		deps           = {"kyno_meadowisland_trader"},
+		specialinfo    = "SAMMYHAT",
 	},
 }
 
@@ -6243,7 +6244,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		build          = "friesfrench",
 		overridesymbol = {"swap_food", "swap_food", "friesfrench"},
 		anim           = "idle",
-		animoffsety    = 15,
+		animoffsetx    = 12,
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -110,
 		deps           = preparedfood_deps,
@@ -7829,7 +7830,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		deps           = preparedfood_deps,
 	},
 	
-	fltsandwich     =
+	fltsandwich        =
 	{
 		name           = "fltsandwich",
 		type           = "food",
@@ -7851,6 +7852,30 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -100,
 		deps           = preparedfood_deps,
 		specialinfo    = "FOODEFFECTS_PLANARDEFENSE",
+	},
+	
+	riceandbeans       =
+	{
+		name           = "riceandbeans",
+		type           = "food",
+		tex            = "riceandbeans.tex",
+		prefab         = "riceandbeans",
+		healthvalue    = 5,
+		hungervalue    = 62.5,
+		sanityvalue    = 20,
+		perishable     = 9600,
+		foodtype       = "VEGGIE",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "riceandbeans",
+		build          = "riceandbeans",
+		overridesymbol = {"swap_food", "swap_food", "riceandbeans"},
+		anim           = "idle",
+		animoffsetx    = 12,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -100,
+		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_INCREASETEMP",
 	},
 }
 
@@ -12688,7 +12713,7 @@ local HOF_SCRAPBOOK_THINGS =
 		"meatballs", "meatysalad", "monsterlasagna", "pepperpopper", "perogies", "potatotornado", "powcake", "pumpkincookie", "ratatouille", "salsa", 
 		"seafoodgumbo", "shroomcake", "stuffedeggplant", "surfnturf", "sweettea", "taffy", "talleggs", "trailmix", "turkeydinner", "unagi", "veggieomlet", 
 		"vegstinger", "waffles", "watermelonicle", "shroombait", "wetgoop"},
-		specialinfo    = "COOKWARE_POT",
+		specialinfo    = "COOKWARE_POT_SMALL",
 	},
 	
 	kyno_cookware_syrup =
@@ -12772,7 +12797,7 @@ local HOF_SCRAPBOOK_THINGS =
 		"meatballs", "meatysalad", "monsterlasagna", "pepperpopper", "perogies", "potatotornado", "powcake", "pumpkincookie", "ratatouille", "salsa", 
 		"seafoodgumbo", "shroomcake", "stuffedeggplant", "surfnturf", "sweettea", "taffy", "talleggs", "trailmix", "turkeydinner", "unagi", "veggieomlet", 
 		"vegstinger", "waffles", "watermelonicle", "shroombait", "wetgoop"},
-		specialinfo    = "COOKWARE_CASSEROLE",
+		specialinfo    = "COOKWARE_CASSEROLE_SMALL",
 	},
 	
 	kyno_cookware_grill =
@@ -12816,7 +12841,7 @@ local HOF_SCRAPBOOK_THINGS =
 		"monsterlasagna", "pepperpopper", "perogies", "potatotornado", "powcake", "pumpkincookie", "ratatouille", "salsa", "seafoodgumbo", "shroomcake", 
 		"stuffedeggplant", "surfnturf", "sweettea", "taffy", "talleggs", "trailmix", "turkeydinner", "unagi", "veggieomlet", "vegstinger", "waffles", 
 		"watermelonicle", "shroombait", "wetgoop"},
-		specialinfo    = "COOKWARE_GRILL",
+		specialinfo    = "COOKWARE_GRILL_SMALL",
 	},
 	
 	kyno_aloe_ground   =

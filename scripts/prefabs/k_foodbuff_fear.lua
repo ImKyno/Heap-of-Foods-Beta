@@ -52,6 +52,10 @@ local function OnAttached(inst, target)
 		target.components.sanity.get_equippable_dappernessfn = AddDappernessResistance
 	end
 	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FEARBUFF_START"))
+	end
+	
     inst:ListenForEvent("death", function()
         inst.components.debuff:Stop()
     end, target)
@@ -75,6 +79,10 @@ local function OnDetached(inst, target)
 	if target.components.sanity ~= nil then
 		target.components.sanity:SetFullAuraImmunity(false)
 		target.components.sanity.get_equippable_dappernessfn = RemoveDappernessResistance
+	end
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FEARBUFF_END"))
 	end
 	
     inst:Remove()

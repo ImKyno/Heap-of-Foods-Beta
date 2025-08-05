@@ -8,6 +8,7 @@ modimport("hof_init/misc/hof_tuning")
 local localization = GetModConfigData("LANGUAGE")
 if localization then
 	require("strings/localization_"..localization.."/hof_strings_customizations")
+	print("HOF MODSERVERCREATIONMAIN LOCALIZATION:", localization)
 end
 
 FrontEndAssets =

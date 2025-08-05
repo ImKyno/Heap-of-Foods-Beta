@@ -2966,6 +2966,23 @@ local kyno_foods =
 		end,
 	},
 	
+	riceandbeans =
+	{
+		test = function(cooker, names, tags) return (names.kyno_rice or names.kyno_rice_cooked) and (tags.beanbug and tags.beanbug >= 2) end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_PRESERVED,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 5,
+		hunger = 62.5,
+		sanity = 20,
+		cooktime = 1,
+		potlevel = "high",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_rice", 1}, {"kyno_beanbugs", 2}, {"twigs", 1}}},
+	},
+	
 	--[[
 	strawberrygrinder =
 	{

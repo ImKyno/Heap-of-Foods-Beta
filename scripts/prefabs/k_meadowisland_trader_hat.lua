@@ -21,6 +21,10 @@ local function OnEquip(inst, owner, from_ground)
 	if inst.components.fueled ~= nil then
 		inst.components.fueled:StartConsuming()
 	end
+	
+	if owner.components.hunger ~= nil then
+		owner.components.hunger.burnratemodifiers:SetModifier(inst, TUNING.KYNO_SAMMYHAT_HUNGERRATE)
+	end
 end
 
 local function OnUnequip(inst, owner, from_ground)
@@ -37,11 +41,19 @@ local function OnUnequip(inst, owner, from_ground)
 	if inst.components.fueled ~= nil then
 		inst.components.fueled:StopConsuming()
 	end
+	
+	if owner.components.hunger ~= nil then
+		owner.components.hunger.burnratemodifiers:RemoveModifier(inst)
+	end
 end
 
 local function OnEquipToModel(inst, owner, from_ground)
 	if inst.components.fueled ~= nil then
 		inst.components.fueled:StopConsuming()
+	end
+	
+	if owner.components.hunger ~= nil then
+		owner.components.hunger.burnratemodifiers:RemoveModifier(inst)
 	end
 end
 
@@ -76,6 +88,7 @@ local function fn()
 		
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
+	inst:AddComponent("snowmandecor")
 	
 	inst:AddComponent("waterproofer")
 	inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_SMALL)

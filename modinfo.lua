@@ -1,19 +1,19 @@
-name                        = "Heap of Foods - Beta Branch"
-version                     = "1.2-B"
+name                        = "Heap of Foods"
+version                     = "1.9-B"
 
 description                 = 
 [[
-󰀄 Adds over +100 brand new Crock Pot dishes alongside new ingredients to use. Happy Cooking!
+󰀄 Adds over +200 brand new Crock Pot dishes alongside new ingredients to use. Happy Cooking!
 
 󰀠 Also features brand new Biomes somewhere in the Ocean!
 󰀦 Complete Recipe Sheet on the Mod Page!
 
-󰀏 Featuring the Bountiful Harvest Update:
-This update focused on revamping the visuals of the farming crops as well as adding new ones! And some smaller changes and improvements in general to the mod.
+󰀏 Featuring the Seaside Summer Update:
+Seaside Island welcomes a new merchant! Assisted by a familiar survivor, he has opened a one-of-a-kind trading post. Specializing in rare items and ingredients that are otherwise incredibly difficult to acquire and even some you won't find anywhere else. 
 
-Our survivors have managed to find new types of seeds out in the wild! And far, far away from the mainland, on a tropical island a new kind of bush is blooming, waiting for them to uncover it.
+Make sure to check his wares every now and then to see what he got to offer. As his inventory is always changing!
 
-󰀌 Beta Branch Version: 1.2-B
+󰀌 Mod Version: 1.9-B
 󰀧 Update: Seaside Summer (Part II)
 ]]
 
@@ -27,8 +27,8 @@ client_only_mod             = false
 
 server_filter_tags          = {"Heap of Foods", "HOF", "Cooking", "Entertainment", "Kyno"}
 
-icon                        = "ModiconHOFB.tex"
-icon_atlas                  = "ModiconHOFB.xml"
+icon                        = "ModiconHOF.tex"
+icon_atlas                  = "ModiconHOF.xml"
 
 -- Mod Configuraton Strings and Stuff.
 local names                 =
@@ -164,21 +164,21 @@ local deschovers            =
 
 -- Brazilian Portuguese
 if locale == "pt" then
-	name                     = "Amontoado de Comidas - Beta"
+	name                     = "Amontoado de Comidas"
 
 	description                 = 
 [[
-󰀄 Adiciona +100 novas comidas para a Panela, além de ingredientes novos para cozinhar!
+󰀄 Adiciona +200 novas comidas para a Panela, além de ingredientes novos para cozinhar!
 
 󰀠 Também acrescenta novos biomas em algum lugar do alto mar!
 󰀦 Lista completa de Receitas disponível na página do Mod!
 
-󰀏 Apresentando a atualização Colheita Farta:
-Esta atualização tem como foco melhorar os visuais das plantações e adicionar novas! E também pequenos ajustes para melhorar o mod em geral.
+󰀏 Apresentando a atualização Verão à Beira-mar:
+A Ilha Beira-mar dá as boas-vindas a um novo comerciante! Com a ajuda de um sobrevivente conhecido, ele abriu um posto comercial único. Especializado em itens e ingredientes raros que, de outra forma, seriam incrivelmente difíceis de obter e até mesmo alguns que você não encontrará em nenhum outro lugar.
 
-Nossos sobreviventes conseguiram encontrar um novo tipo de semente! Além disso, em uma ilha muito longe do continente, há um novo arbusto crescendo, esperando para ser descoberto!
+Não deixe de conferir os produtos dele de vez em quando para ver o que ele tem a oferecer. Já que o inventário dele está sempre mudando!
 
-󰀌 Versão do Beta: 1.2-B
+󰀌 Versão do Mod: 1.9-B
 󰀧 Atualização: Verão à Beira-mar (Parte II)
 ]]
 
@@ -314,21 +314,21 @@ end
 
 -- Simplified Chinese.
 if locale == "zh" or locale == "zhr" then
-	name                        = "Heap of Foods - Beta Branch"
+	name                        = "Heap of Foods"
 
 	description                 = 
 [[
-󰀄 新增 100 多道全新的烹饪锅料理和几种新食材。祝您烹饪愉快！
+󰀄 新增 200 多道全新的烹饪锅料理和几种新食材。祝您烹饪愉快！
 
 󰀠 还在海洋的某处添加了全新的生物群落！
 󰀦 Mod创意工坊的介绍页面上有完整食谱表！
 
-󰀏 丰收更新:
-这次更新的重点是改造农作物的视觉效果，并添加新的农作物！还有一些小的改动和改进。
+󰀏 Featuring the Seaside Summer Update:
+Seaside Island welcomes a new merchant! Assisted by a familiar survivor, he has opened a one-of-a-kind trading post. Specializing in rare items and ingredients that are otherwise incredibly difficult to acquire and even some you won't find anywhere else. 
 
-我们的幸存者设法在野外找到了新型种子！在远离大陆的热带岛屿上，一种新的灌木丛正在绽放，等待着他们去发掘。
+Make sure to check his wares every now and then to see what he got to offer. As his inventory is always changing!
 
-󰀌 Beta Branch Version: 1.2-B
+󰀌 Mod Version: 1.9-B
 󰀧 Update: Seaside Summer (Part II)
 ]]
 
