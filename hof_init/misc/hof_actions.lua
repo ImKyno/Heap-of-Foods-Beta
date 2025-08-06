@@ -163,15 +163,17 @@ AddComponentAction("USEITEM", "saphealer", function(inst, doer, target, actions,
 end)
 
 -- Action for Milking animals. If Beefalo Milk mod is enabled, use their system instead?
--- if not _G.KnownModIndex:IsModEnabled("workshop-436654027") or _G.KnownModIndex:IsModEnabled("workshop-1277605967") or
--- _G.KnownModIndex:IsModEnabled("workshop-2431867642") or _G.KnownModIndex:IsModEnabled("workshop-1935156140") then
 AddAction("PULLMILK", STRINGS.ACTIONS.PULLMILK, function(act)
 	local milkable = act.target and act.target.components.milkableanimal or nil
 	
 	if act.invobject and milkable ~= nil then
 		act.target.components.milkableanimal:Milk(act.doer)
 		act.doer.SoundEmitter:PlaySound("turnoftides/common/together/water/emerge/small")
-		act.invobject.components.finiteuses:Use(1)
+		
+		if act.invobject.components.finiteuses ~= nil then
+			act.invobject.components.finiteuses:Use(1)
+		end
+		
 		return true
 	end
 end)
@@ -181,7 +183,7 @@ ACTIONS.PULLMILK.mount_valid = true
 ACTIONS.PULLMILK.encumbered_valid = true
 
 AddComponentAction("USEITEM", "milker", function(inst, doer, target, actions)
-	if target and target:HasTag("milkableanimal") and inst:HasTag("bucket_empty") 
+	if target and target:HasTag("milkableanimal") and inst:HasTag("bucket") 
 	and not target:HasTag("is_frozen") and not target:HasTag("is_thawing") then
 		table.insert(actions, ACTIONS.PULLMILK)
 	end

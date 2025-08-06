@@ -374,7 +374,9 @@ AddStategraphState("shark",
 					
 					inst.foodtoeat:Remove()
 				else
-                    inst.foodtoeat:Remove()
+					if inst.foodtoeat and not inst.foodtoeat:HasTag("jawsbreaker") then 
+						inst.foodtoeat:Remove()
+					end
                 end
 				
                 inst.foodtoeat = nil

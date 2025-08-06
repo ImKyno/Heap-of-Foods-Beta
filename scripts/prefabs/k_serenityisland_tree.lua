@@ -36,6 +36,7 @@ local function SpoilSap(inst)
 	ruined.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/sap_extractor")
 	ruined.Transform:SetPosition(inst.Transform:GetWorldPosition())
 	ruined.components.pickable:Regen()
+	
 	inst:Remove()
 end
 
@@ -53,6 +54,8 @@ local function onpickedfn(inst)
 end
 
 local function onregenfn(inst)
+	inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/sap_extractor")
+
     inst.AnimState:Show("sap")
 	inst.AnimState:Show("swap_tapper")
     inst.AnimState:OverrideSymbol("swap_sapbucket", "quagmire_sapbucket", "swap_sapbucket_overflow")
@@ -60,9 +63,9 @@ local function onregenfn(inst)
 	inst.sapped = true
 	inst:AddTag("sap_overflow")
 	
-	local mintimer = inst.components.worldsettingstimer:GetTimeLeft(SPOIL_SAP_TIMER)
-	local maxtimer = TUNING.KYNO_SAP_SPOILTIME_MAX
-	inst.components.worldsettingstimer:StartTimer(SPOIL_SAP_TIMER, math.min(mintimer, maxtimer))
+	if not inst.components.worldsettingstimer:ActiveTimerExists(SPOIL_SAP_TIMER) then
+		inst.components.worldsettingstimer:StartTimer(SPOIL_SAP_TIMER, TUNING.KYNO_SAP_SPOILTIME)
+	end
 end
 
 local function makeemptyfn(inst)
@@ -89,6 +92,8 @@ local function onpicked_ruinedfn(inst)
 end
 
 local function onregen_ruinedfn(inst)
+	inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/sap_extractor")
+
     inst.AnimState:Hide("sap")
 	inst.AnimState:Show("swap_tapper")
     inst.AnimState:OverrideSymbol("swap_sapbucket", "quagmire_sapbucket", "swap_sapbucket_overflow_spoiled")
@@ -117,6 +122,7 @@ local function OnHammered(inst, worker)
 	SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
 	SpawnPrefab("kyno_sugartree").Transform:SetPosition(inst.Transform:GetWorldPosition())
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_metal")
+	
 	inst:Remove()
 end
 
@@ -131,6 +137,7 @@ local function OnHammeredRuined(inst, worker)
 	SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
 	SpawnPrefab("kyno_sugartree_ruined2").Transform:SetPosition(inst.Transform:GetWorldPosition())
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_metal")
+	
 	inst:Remove()
 end
 
@@ -254,6 +261,7 @@ end
 local function tree_chop(inst, chopper)
     inst.AnimState:PlayAnimation("chop")
 	inst.AnimState:PushAnimation("sway2_loop", true)
+	
     if not (chopper ~= nil and chopper:HasTag("playerghost")) then
         inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
     end
