@@ -7,7 +7,7 @@ local STRINGS    = _G.STRINGS
 local cooking    = require("cooking")
 local brewing    = require("hof_brewing")
 local containers = require("containers")
-local params     = containers.params
+local params     = {}
 
 require("hof_foodrecipes")
 require("hof_foodrecipes_warly")
@@ -253,8 +253,13 @@ function params.foodsack.itemtestfn(container, item, slot)
     end
 end
 
-params.icebox.widget.animbank_upgraded = "ui_chest_upgraded_3x3"
-params.icebox.widget.animbuild_upgraded = "ui_chest_upgraded_3x3"
+--[[
+-- Not using because if using increased storage mods this will break.
+if HOF_ICEBOXSTACKSIZE then
+	containers.params.icebox.widget.animbank_upgraded = "ui_chest_upgraded_3x3"
+	containers.params.icebox.widget.animbuild_upgraded = "ui_chest_upgraded_3x3"
 
-params.saltbox.widget.animbank_upgraded = "ui_chest_upgraded_3x3"
-params.saltbox.widget.animbuild_upgraded = "ui_chest_upgraded_3x3"
+	containers.params.saltbox.widget.animbank_upgraded = "ui_chest_upgraded_3x3"
+	containers.params.saltbox.widget.animbuild_upgraded = "ui_chest_upgraded_3x3"
+end
+]]--

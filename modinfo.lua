@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "2.0-B"
+version                     = "2.1-B"
 
 description                 = 
 [[
@@ -13,7 +13,7 @@ Seaside Island welcomes a new merchant! Assisted by a familiar survivor, he has 
 
 Make sure to check his wares every now and then to see what he got to offer. As his inventory is always changing!
 
-󰀌 Mod Version: 2.0-B
+󰀌 Mod Version: 2.1-B
 󰀧 Update: Seaside Summer (Part II)
 ]]
 
@@ -178,7 +178,7 @@ A Ilha Beira-mar dá as boas-vindas a um novo comerciante! Com a ajuda de um sob
 
 Não deixe de conferir os produtos dele de vez em quando para ver o que ele tem a oferecer. Já que o inventário dele está sempre mudando!
 
-󰀌 Versão do Mod: 2.0-B
+󰀌 Versão do Mod: 2.1-B
 󰀧 Atualização: Verão à Beira-mar (Parte II)
 ]]
 
@@ -323,12 +323,12 @@ if locale == "zh" or locale == "zhr" then
 󰀠 还在海洋的某处添加了全新的生物群落！
 󰀦 Mod创意工坊的介绍页面上有完整食谱表！
 
-󰀏 Featuring the Seaside Summer Update:
-Seaside Island welcomes a new merchant! Assisted by a familiar survivor, he has opened a one-of-a-kind trading post. Specializing in rare items and ingredients that are otherwise incredibly difficult to acquire and even some you won't find anywhere else. 
+󰀏 海缤夏日特色更新:
+海岛迎来了一位新的商人！在一个熟悉的冒险家的帮助下，他开设了一个独特的交易站。售卖稀有物品和原料，这些物品和原料在其他地方很难获得，甚至有些你在其他地方都找不到。
 
-Make sure to check his wares every now and then to see what he got to offer. As his inventory is always changing!
+一定要时不时地光顾下他的小店，看看他有什么靓货。因为他的小店进货很频繁!
 
-󰀌 Mod Version: 2.0-B
+󰀌 Mod Version: 2.1-B
 󰀧 Update: Seaside Summer (Part II)
 ]]
 
@@ -349,7 +349,7 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 		modspices               = "厨师香料",
 		humanmeat               = "人肉食谱",
 		alcoholic               = "酒精限制",
-		iceboxstacks            = "Elastispacer for Fridges",
+		iceboxstacks            = "冰箱的弹性空间",
 		giantspawn              = "特殊Boss料理",
 		coffeespeed             = "移速Buff",
 		coffeeduration          = "移速Buff持续时间",
@@ -374,7 +374,7 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 		seasonalfoods           = "季节性的料理是否在特殊活动下才能烹饪？",
 		modspices               = "沃利可以研磨Mod的香料吗？\n这可能会导致游戏加载时间延长。",
 		humanmeat               = "玩家死亡时是否掉落人肉？\n注意：如果禁用，可能会导致无法制作某些料理。",
-		iceboxstacks            = "Should Elastispacer be able to upgrade Ice Box and Salt Box?\nNote: If disabled afterwards, may cause visual glitches.",
+		iceboxstacks            = "弹性空间制造器是否可以升级冰箱和盐盒？\n注意: 若升级后禁用可能会导致视觉上的问题。",
 		alcoholic               = "是否应该禁止某些角色饮酒？",
 		giantspawn              = "如果玩家吃了含boss掉落物的特殊料理，boss是否应该出现？",
 		coffeespeed             = "料理是否提供移速Buff？\n该项仅作用于特定料理",
@@ -436,8 +436,8 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 		humanmeat2              = "玩家死亡后小概率会掉落人肉。",
 		alcoholic1              = "所有角色都能饮酒。",
 		alcoholic2              = "一些角色，比如韦伯，温蒂等。不能饮酒。",
-		iceboxstacks1           = "Elastispacer will not upgrade Ice Box and Salt Box.",
-		iceboxstacks2           = "Elastispacer will upgrade Ice Box and Salt Box for infinite item stacks.",
+		iceboxstacks1           = "弹性空间制造器不可以升级冰箱和盐盒。",
+		iceboxstacks2           = "弹性空间制造器可以升级冰箱和盐盒，食物堆叠无上限。",
 		giantspawn1             = "玩家在食用某些料理时不会产生Boss。",
 		giantspawn2             = "玩家在食用某些料理时会产生Boss。",
 		coffeespeed1            = "料理食用后不会提高移速Buff。",

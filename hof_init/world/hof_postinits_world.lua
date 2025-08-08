@@ -1012,8 +1012,7 @@ for k, v in pairs(FIRESUPRESSOR_IGNORE_TAGS) do
     table.insert(NOTAGS_FIRESUPPRESSOR, v)
 end
 
--- Deprecated. Was added to the game officially, just here for reference.
---[[
+-- New birds will spawn when landing on these turfs.
 AddClassPostConstruct("components/birdspawner", function(self)
 	local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
 
@@ -1024,13 +1023,16 @@ AddClassPostConstruct("components/birdspawner", function(self)
 	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = {"toucan"}
 	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = {"kingfisher"}
 end)
-]]--
 
--- New birds will spawn when landing on these turfs.
+--[[
+-- Not using this for now because its causing some worlds to crash.
 AddComponentPostInit("birdspawner", function(self)
-	self:SetBirdTypesForTile(WORLD_TILES.QUAGMIRE_PARKFIELD, {"quagmire_pigeon"})
-	self:SetBirdTypesForTile(WORLD_TILES.QUAGMIRE_CITYSTONE, {"quagmire_pigeon"})
-	self:SetBirdTypesForTile(WORLD_TILES.MONKEY_GROUND,      {"toucan"})
-	self:SetBirdTypesForTile(WORLD_TILES.HOF_TIDALMARSH,     {"toucan"})
-	self:SetBirdTypesForTile(WORLD_TILES.HOF_FIELDS,         {"kingfisher"})
+	if self.SetBirdTypesForTile then
+		self:SetBirdTypesForTile(WORLD_TILES.QUAGMIRE_PARKFIELD, {"quagmire_pigeon"})
+		self:SetBirdTypesForTile(WORLD_TILES.QUAGMIRE_CITYSTONE, {"quagmire_pigeon"})
+		self:SetBirdTypesForTile(WORLD_TILES.MONKEY_GROUND,      {"toucan"})
+		self:SetBirdTypesForTile(WORLD_TILES.HOF_TIDALMARSH,     {"toucan"})
+		self:SetBirdTypesForTile(WORLD_TILES.HOF_FIELDS,         {"kingfisher"})
+	end
 end)
+]]--
