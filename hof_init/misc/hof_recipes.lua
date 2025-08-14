@@ -146,7 +146,7 @@ AddPrototyperDef("kyno_serenityisland_shop",
 	}
 )
 
-AddPrototyperDef("kyno_meadowisland_trader",
+AddPrototyperDef("kyno_meadowisland_seller",
 	{
 		icon_atlas          = "images/tabimages/hof_tabimages.xml",
 		icon_image          = "kyno_tab_meadow.tex",

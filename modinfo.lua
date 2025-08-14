@@ -1,5 +1,5 @@
 name                        = "Heap of Foods"
-version                     = "2.1-B"
+version                     = "2.2-B"
 
 description                 = 
 [[
@@ -13,7 +13,7 @@ Seaside Island welcomes a new merchant! Assisted by a familiar survivor, he has 
 
 Make sure to check his wares every now and then to see what he got to offer. As his inventory is always changing!
 
-󰀌 Mod Version: 2.1-B
+󰀌 Mod Version: 2.2-B
 󰀧 Update: Seaside Summer (Part II)
 ]]
 
@@ -178,7 +178,7 @@ A Ilha Beira-mar dá as boas-vindas a um novo comerciante! Com a ajuda de um sob
 
 Não deixe de conferir os produtos dele de vez em quando para ver o que ele tem a oferecer. Já que o inventário dele está sempre mudando!
 
-󰀌 Versão do Mod: 2.1-B
+󰀌 Versão do Mod: 2.2-B
 󰀧 Atualização: Verão à Beira-mar (Parte II)
 ]]
 
@@ -328,7 +328,7 @@ if locale == "zh" or locale == "zhr" then
 
 一定要时不时地光顾下他的小店，看看他有什么靓货。因为他的小店进货很频繁!
 
-󰀌 Mod Version: 2.1-B
+󰀌 Mod Version: 2.2-B
 󰀧 Update: Seaside Summer (Part II)
 ]]
 

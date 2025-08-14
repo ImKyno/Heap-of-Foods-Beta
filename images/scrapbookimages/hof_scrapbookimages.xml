@@ -42,7 +42,7 @@
 		<Element name="kyno_meadowisland_pond.tex" u1="0.303734375" u2="0.36228125" v2="0.5068125" v1="0.385765625" variant="" />
 		<Element name="kyno_meadowisland_sandhill.tex" u1="0.36428125" u2="0.422828125" v2="0.5068125" v1="0.385765625" variant="" />
 		<Element name="kyno_meadowisland_shop.tex" u1="0.424828125" u2="0.483375" v2="0.5068125" v1="0.385765625" variant="" />
-		<Element name="kyno_meadowisland_trader.tex" u1="0.001" u2="0.059546875" v2="0.383765625" v1="0.26271875" variant="" />
+		<Element name="kyno_meadowisland_seller.tex" u1="0.001" u2="0.059546875" v2="0.383765625" v1="0.26271875" variant="" />
 		<Element name="kyno_meadowisland_tree.tex" u1="0.061546875" u2="0.12009375" v2="0.383765625" v1="0.26271875" variant="" />
 		<Element name="kyno_meadowisland_tree_sapling.tex" u1="0.12209375" u2="0.180640625" v2="0.383765625" v1="0.26271875" variant="" />
 		<Element name="kyno_mealgrinder.tex" u1="0.182640625" u2="0.2411875" v2="0.383765625" v1="0.26271875" variant="" />

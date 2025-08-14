@@ -34,7 +34,7 @@
         <Element name="kyno_meadowisland_mermhut.tex" u1="0.06298828125" v1="0.6259765625" u2="0.12451171875" v2="0.7490234375" />
         <Element name="kyno_meadowisland_pond.tex" u1="0.12548828125" v1="0.6259765625" u2="0.18701171875" v2="0.7490234375" />
         <Element name="kyno_meadowisland_shop.tex" u1="0.18798828125" v1="0.6259765625" u2="0.24951171875" v2="0.7490234375" />
-        <Element name="kyno_meadowisland_trader.tex" u1="0.25048828125" v1="0.6259765625" u2="0.31201171875" v2="0.7490234375" />
+        <Element name="kyno_meadowisland_seller.tex" u1="0.25048828125" v1="0.6259765625" u2="0.31201171875" v2="0.7490234375" />
         <Element name="kyno_meadowisland_tree.tex" u1="0.31298828125" v1="0.6259765625" u2="0.37451171875" v2="0.7490234375" />
         <Element name="kyno_meadowisland_tree_burnt.tex" u1="0.37548828125" v1="0.6259765625" u2="0.43701171875" v2="0.7490234375" />
         <Element name="kyno_meadowisland_tree_stump.tex" u1="0.43798828125" v1="0.6259765625" u2="0.49951171875" v2="0.7490234375" />

@@ -710,7 +710,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_meadowisland_pond",
 	"kyno_meadowisland_sandhill",
 	"kyno_meadowisland_shop",
-	"kyno_meadowisland_trader",
+	"kyno_meadowisland_seller",
 	"kyno_meadowisland_tree",
 	"kyno_meadowisland_tree_sapling",
 	"kyno_mealgrinder",

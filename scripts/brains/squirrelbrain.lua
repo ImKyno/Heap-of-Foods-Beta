@@ -81,7 +81,7 @@ local function FindHome(inst)
     local ents = TheSim:FindEntities(x,y,z, 30, {"infestedtree"}, {"stump", "burnt"})
     local home = nil
 	
-    for i, ent in ipairs(ents)do
+    for i, ent in ipairs(ents) do
         if not ent.components.spawner or not ent.components.spawner.child then
             home = ent
             break

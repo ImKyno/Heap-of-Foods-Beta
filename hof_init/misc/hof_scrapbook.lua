@@ -1205,7 +1205,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		bank           = "sammyhat",
 		build          = "hat_sammy",
 		anim           = "anim",
-		deps           = {"kyno_meadowisland_trader"},
+		deps           = {"kyno_meadowisland_seller"},
 		specialinfo    = "SAMMYHAT",
 	},
 }
@@ -12040,13 +12040,13 @@ local HOF_SCRAPBOOK_CREATURES =
 		deps           = {"kyno_meadowisland_fishermermhut", "kyno_fishermermhut_wurt", "pondfish", "froglegs"},
 	},
 	
-	kyno_meadowisland_trader =
+	kyno_meadowisland_seller =
 	{
-		name           = "kyno_meadowisland_trader_scrapbook",
+		name           = "kyno_meadowisland_seller_scrapbook",
 		type           = "creature",
 		subcat         = "merm",
-		tex            = "kyno_meadowisland_trader.tex",
-		prefab         = "kyno_meadowisland_trader",
+		tex            = "kyno_meadowisland_seller.tex",
+		prefab         = "kyno_meadowisland_seller",
 		bank           = "pigman",
 		build          = "merm_trader1_build",
 		anim           = "idle_loop",
@@ -12089,19 +12089,20 @@ local HOF_SCRAPBOOK_THINGS =
 		animoffsety    = -30,
 		animoffsetbgx  = 50,
 		animoffsetbgy  = 20,
-		deps           = {"kyno_meadowisland_trader"},
+		deps           = {"kyno_meadowisland_seller"},
 		specialinfo    = "SAMMYHOUSE",
 	},
 	
 	kyno_meadowisland_mermcart =
 	{
 		name           = "kyno_meadowisland_mermcart",
+		type           = "thing",
 		tex            = "kyno_meadowisland_mermcart.tex",
 		prefab         = "kyno_meadowisland_mermcart",
 		bank           = "kyno_meadowisland_mermcart",
 		build          = "kyno_meadowisland_mermcart",
 		anim           = "empty",
-		deps           = {"kyno_meadowisland_trader"},
+		deps           = {"kyno_meadowisland_seller"},
 		specialinfo    = "SAMMYWAGON",
 	},
 

@@ -50,11 +50,11 @@ local WARES =
 	RANDOM_UNCOMMONS = 
 	{
 		{
-			["kyno_meatcan"]           = { recipe = "meadowislandtrader_kyno_meatcan",           min = 3,  max = 6, limit = 6 }, 
-			["kyno_tomatocan"]         = { recipe = "meadowislandtrader_kyno_tomatocan",         min = 3,  max = 7, limit = 7 },
-			["kyno_beancan"]           = { recipe = "meadowislandtrader_kyno_beancan",           min = 3,  max = 8, limit = 8 },
-			["kyno_piko_orange"]       = { recipe = "meadowislandtrader_kyno_piko_orange",       min = 1,  max = 3, },
-			["kyno_shark_fin"]         = { recipe = "meadowislandtrader_kyno_shark_fin",         min = 1,  max = 7, },
+			["kyno_meatcan"]           = { recipe = "meadowislandtrader_kyno_meatcan",           min = 3,  max = 6  }, 
+			["kyno_tomatocan"]         = { recipe = "meadowislandtrader_kyno_tomatocan",         min = 3,  max = 7  },
+			["kyno_beancan"]           = { recipe = "meadowislandtrader_kyno_beancan",           min = 3,  max = 8  },
+			["kyno_piko_orange"]       = { recipe = "meadowislandtrader_kyno_piko_orange",       min = 1,  max = 3  },
+			["kyno_shark_fin"]         = { recipe = "meadowislandtrader_kyno_shark_fin",         min = 1,  max = 7  },
 			["tallbirdegg"]            = { recipe = "meadowislandtrader_tallbirdegg",            min = 1,  max = 5  },
 		},
 	},
@@ -86,33 +86,33 @@ local WARES =
 		[SEASONS.AUTUMN] = 
 		{
 			-- TO DO: Srawberry Seeds
-			["kyno_energycan"]         = { recipe = "meadowislandtrader_kyno_energycan",         min = 3,  max = 5,  limit = 5  },
-			["oceanfish_small_6_inv"]  = { recipe = "meadowislandtrader_oceanfish_small_6_inv",  min = 1,  max = 3,  limit = 3  },
+			["kyno_energycan"]         = { recipe = "meadowislandtrader_kyno_energycan",         min = 3,  max = 5  },
+			["oceanfish_small_6_inv"]  = { recipe = "meadowislandtrader_oceanfish_small_6_inv",  min = 1,  max = 3  },
 		},
 		
 		[SEASONS.WINTER] = 
 		{
 			-- TO DO: Artichoke Seeds
-			["kyno_cokecan"]           = { recipe = "meadowislandtrader_kyno_cokecan",           min = 3,  max = 5,  limit = 5  },
-			["kyno_roe"]               = { recipe = "meadowislandtrader_kyno_roe",               min = 4,  max = 8,  limit = 8  },
-			["forgetmelots_seeds"]     = { recipe = "meadowislandtrader_forgetmelots_seeds",     min = 3,  max = 6,  limit = 6  },
-			["oceanfish_medium_8_inv"] = { recipe = "meadowislandtrader_oceanfish_medium_8_inv", min = 1,  max = 3,  limit = 3  },
+			["kyno_cokecan"]           = { recipe = "meadowislandtrader_kyno_cokecan",           min = 3,  max = 5  },
+			["kyno_roe"]               = { recipe = "meadowislandtrader_kyno_roe",               min = 4,  max = 8  },
+			["forgetmelots_seeds"]     = { recipe = "meadowislandtrader_forgetmelots_seeds",     min = 3,  max = 6  },
+			["oceanfish_medium_8_inv"] = { recipe = "meadowislandtrader_oceanfish_medium_8_inv", min = 1,  max = 3  },
 		},
 		
 		[SEASONS.SPRING] = 
 		{
-			["kyno_seeds_kit_rice"]    = { recipe = "meadowislandtrader_kyno_seeds_kit_rice",    min = 15, max = 15, limit = 15 },
-			["tillweed_seeds"]         = { recipe = "meadowislandtrader_tillweed_seeds",         min = 3,  max = 6,  limit = 6  },
-			["oceanfish_small_7_inv"]  = { recipe = "meadowislandtrader_oceanfish_small_7_inv",  min = 1,  max = 3,  limit = 3  },
+			["kyno_seeds_kit_rice"]    = { recipe = "meadowislandtrader_kyno_seeds_kit_rice",    min = 15, max = 15 },
+			["tillweed_seeds"]         = { recipe = "meadowislandtrader_tillweed_seeds",         min = 3,  max = 6  },
+			["oceanfish_small_7_inv"]  = { recipe = "meadowislandtrader_oceanfish_small_7_inv",  min = 1,  max = 3  },
 		},
 		
 		[SEASONS.SUMMER] = 
 		{
 			-- TO DO: Melon Seeds
-			["kyno_sodacan"]           = { recipe = "meadowislandtrader_kyno_sodacan",           min = 3,  max = 5,  limit = 5  },
-			["firenettles_seeds"]      = { recipe = "meadowislandtrader_firenettles_seeds",      min = 3,  max = 6,  limit = 6  },
-			["oceanfish_small_8_inv"]  = { recipe = "meadowislandtrader_oceanfish_small_8_inv",  min = 1,  max = 3,  limit = 3  },
-			["succulent_picked"]       = { recipe = "meadowislandtrader_succulent_picked",       min = 10, max = 25, limit = 25 },
+			["kyno_sodacan"]           = { recipe = "meadowislandtrader_kyno_sodacan",           min = 3,  max = 5  },
+			["firenettles_seeds"]      = { recipe = "meadowislandtrader_firenettles_seeds",      min = 3,  max = 6  },
+			["oceanfish_small_8_inv"]  = { recipe = "meadowislandtrader_oceanfish_small_8_inv",  min = 1,  max = 3  },
+			["succulent_picked"]       = { recipe = "meadowislandtrader_succulent_picked",       min = 10, max = 25 },
 		},
 	},
 	
@@ -120,12 +120,12 @@ local WARES =
 	{
 		["isfullmoon"] =
 		{
-			["moon_cap"]               = { recipe = "meadowislandtrader_moon_cap",               min = 3,  max = 9,  limit = 9  },
+			["moon_cap"]               = { recipe = "meadowislandtrader_moon_cap",               min = 3,  max = 9  },
 		},
 
 		["islunarhailing"] = 
 		{
-			["kyno_moon_froglegs"]     = { recipe = "meadowislandtrader_kyno_moon_froglegs",     min = 3,  max = 9,  limit = 9  },
+			["kyno_moon_froglegs"]     = { recipe = "meadowislandtrader_kyno_moon_froglegs",     min = 3,  max = 9  },
 		},
 		--[[
 		["mermking"] =
@@ -264,7 +264,7 @@ local function OnTimerDone(inst, data)
 				inst.components.timer:StartTimer("refreshwares", 5)
 			else
 				inst:RerollWares()
-				inst.components.timer:StartTimer("refreshwares", TUNING.WANDERINGTRADER_SHOP_REFRESH_INTERVAL)
+				inst.components.timer:StartTimer("refreshwares", TUNING.KYNO_MEADOWISLANDTRADER_REFRESHWARES)
 			end
 		end
 	end
@@ -279,8 +279,9 @@ local function Initialize(inst)
 end
 
 local function OnSave(inst, data)
-	data.islunarhailing = inst.islunarhailing
-	data.isfullmoon = inst.isfullmoon
+	-- data.islunarhailing = inst.islunarhailing
+	-- data.isfullmoon = inst.isfullmoon
+	data.hatless = inst.hatless
 end
 
 local function OnLoad(inst, data)
@@ -288,9 +289,14 @@ local function OnLoad(inst, data)
 		inst.inittask:Cancel()
 		inst.inittask = nil
 	end
-
+	
+	if data and data.hatless then
+		inst:SetHatless(true)
+	end
+	
 	inst.islunarhailing = data.islunarhailing
 	inst.isfullmoon = data.isfullmoon
+	inst.hatless = data.hatless
 end
 
 local function SetIsLunarHailing(inst, active)
@@ -337,11 +343,13 @@ local function SetHatless(inst, hatless)
 		inst.AnimState:Hide("hat")
 		inst.AnimState:Hide("swap_hat")
 		inst.components.trader:Disable()
+		inst.hatless = true
 	else
 		inst:RemoveTag("hatless")
 		inst.AnimState:Show("hat")
 		inst.AnimState:Show("swap_hat")
 		inst.components.trader:Enable()
+		inst.hatless = false
 	end
 end
 
@@ -390,7 +398,7 @@ local function fn()
 	shadow:SetSize(1.5, .75)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("kyno_meadowisland_trader.tex")
+	minimap:SetIcon("kyno_meadowisland_seller.tex")
 	minimap:SetPriority(5)
     
 	inst.Transform:SetFourFaced()
@@ -407,6 +415,7 @@ local function fn()
 	inst:AddTag("character")
     inst:AddTag("merm")
 	inst:AddTag("trader")
+	inst:AddTag("meadowislandtrader")
 	inst:AddTag("_named")
 	
 	inst:AddComponent("talker")
@@ -432,6 +441,7 @@ local function fn()
 	inst.CanChatter = CanChatter
 	inst.TryChatter = TryChatter
 
+	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 
 	inst.HiddenActionFn = nil
@@ -467,7 +477,7 @@ local function fn()
 	inst.components.named:PickNewName()
 
 	inst:AddComponent("timer")
-	inst.components.timer:StartTimer("refreshwares", TUNING.WANDERINGTRADER_SHOP_REFRESH_INTERVAL)
+	inst.components.timer:StartTimer("refreshwares", TUNING.KYNO_MEADOWISLANDTRADER_REFRESHWARES)
 	inst:ListenForEvent("timerdone", OnTimerDone)
 
 	inst:SetBrain(brain)
@@ -475,8 +485,18 @@ local function fn()
 
 	inst.inittask = inst:DoTaskInTime(0, Initialize)
 	inst:DoTaskInTime(0, OnWorldInit)
+	
+	-- We somehow got a Sammy without a home. Kill it! Kill it with fire!
+	--[[
+	inst:DoTaskInTime(2, function(inst)
+		print("Heap of Foods - Found a Sammy without a home. Removing it!")
+		if inst.components.homeseeker == nil then
+			inst:Remove()
+		end
+	end)
+	]]--
 
     return inst
 end
 
-return Prefab("kyno_meadowisland_trader", fn, assets, prefabs)
+return Prefab("kyno_meadowisland_seller", fn, assets, prefabs)

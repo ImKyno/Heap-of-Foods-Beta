@@ -26,7 +26,7 @@ HOF_NAUGHTY_VALUE                    =
 	["kyno_sugarfly"]                = 1,
 	["kyno_pebblecrab"]              = 2,
 	["kyno_meadowisland_mermfisher"] = 3,
-	["kyno_meadowisland_trader"]     = 50, -- Wait, how did you kill Sammy?
+	["kyno_meadowisland_seller"]     = 50, -- Wait, how did you kill Sammy?
 }
 
 -- New PICKABLE for Woby foraging.

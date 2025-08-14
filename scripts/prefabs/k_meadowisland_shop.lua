@@ -13,40 +13,108 @@ local prefabs =
 	"small_puff",
 	
 	"kyno_meadowisland_mermcart",
-	"kyno_meadowisland_trader",
+	"kyno_meadowisland_seller",
 	"kyno_smokecloud",
 }
 
-local function StartSpawning(inst)
-	if not TheWorld.state.isday and inst.components.childspawner ~= nil then
-		inst.components.childspawner:StartSpawning()
-	end
+local function OnOcuppiedDoorTask(inst)
+    inst.doortask = nil
 end
 
-local function StopSpawning(inst)
-	if inst.components.childspawner ~= nil then
-		inst.components.childspawner:StopSpawning()
-	end
-end
-
-local function OnSpawned(inst, child)
+local function OnOcuppied(inst, child)
 	inst.SoundEmitter:PlaySound("dontstarve/common/pighouse_door")
+
+	if inst.doortask ~= nil then
+		inst.doortask:Cancel()
+	end
+	
+	-- Get another hat when at home.
+	if child ~= nil then
+		if child.SetHatless then
+			child:SetHatless(false)
+		end
+	end
 		
-	if TheWorld.state.isday and inst.components.childspawner ~= nil and inst.components.childspawner:CountChildrenOutside() >= 1 
-	and child.components.combat.target == nil then
-		StopSpawning(inst)
+	inst.doortask = inst:DoTaskInTime(1, OnOcuppiedDoorTask)
+end
+
+local function OnVacate(inst, child)
+	inst.SoundEmitter:PlaySound("dontstarve/common/pighouse_door")
+	
+	if inst.doortask ~= nil then
+		inst.doortask:Cancel()
+		inst.doortask = nil
+	end
+	
+	if child ~= nil then
+		local child_platform = child:GetCurrentPlatform()
+		
+		if (child_platform == nil and not child:IsOnValidGround()) then
+			local fx = SpawnPrefab("splash_sink")
+			fx.Transform:SetPosition(child.Transform:GetWorldPosition())
+
+			child:Remove()
+		else
+			if child.components.health ~= nil then
+				child.components.health:SetPercent(1)
+			end
+			
+			child:PushEvent("onvacatehome")
+		end
 	end
 end
 
-local function OnGoHome(inst, child)
-    if not inst:HasTag("burnt") then
-        inst.SoundEmitter:PlaySound("dontstarve/common/pighouse_door")
+local function OnStartDuskDoorTask(inst)
+	inst.doortask = nil
+	
+	if inst.components.spawner ~= nil then
+		inst.components.spawner:ReleaseChild()
+	end
+end
+
+local function OnStartDuskTask(inst, isday)
+	if not TheWorld.state.isday then
+		inst.doortask = inst:DoTaskInTime(1 + math.random() * 2, OnStartDuskDoorTask)
+	else
+		inst.doortask = nil
+	end
+end
+
+local function OnStartDusk(inst)
+	if inst.components.spawner:IsOccupied() then
+		if inst.doortask ~= nil then
+			inst.doortask:Cancel()
+		end
 		
-        if inst.components.childspawner ~= nil and
-            inst.components.childspawner:CountChildrenOutside() < 1 then
-            StartSpawning(inst)
-        end
-    end
+		inst.doortask = inst:DoTaskInTime(1 + math.random() * 2, OnStartDuskTask)
+	end
+end
+
+local function SpawnCheckDusk(inst, isdusk)
+	inst.inittask = nil
+	inst:WatchWorldState("isdusk", OnStartDusk)
+	
+	if inst.components.spawner ~= nil and inst.components.spawner:IsOccupied() then
+		if TheWorld.state.isdusk then
+			inst.components.spawner:ReleaseChild()
+		else
+			OnOcuppiedDoorTask(inst)
+		end
+	end
+end
+
+local function OnInit(inst)
+	inst.inittask = inst:DoTaskInTime(math.random(), SpawnCheckDusk)
+	
+	if inst.components.spawner ~= nil and inst.components.spawner.child == nil and inst.components.spawner.childname ~= nil and 
+	not inst.components.spawner:IsSpawnPending() then
+		local child = SpawnPrefab(inst.components.spawner.childname)
+		
+		if child ~= nil then
+			inst.components.spawner:TakeOwnership(child)
+			inst.components.spawner:GoHome(child)
+		end
+	end
 end
 
 local function OnSeasonChange(inst, season)
@@ -92,7 +160,7 @@ end
 
 local function StartChimneyTask(inst)
     if not inst.inlimbo and inst._chimneytask == nil then
-        inst._chimneytask = inst:DoTaskInTime(GetRandomMinMax(10, 40), SetChimneyFX)
+        inst._chimneytask = inst:DoTaskInTime(GetRandomMinMax(10, 20), SetChimneyFX)
     end
 end
 
@@ -100,14 +168,11 @@ local function OnIsDay(inst, isday)
 	local season = OnSeasonChange(inst)
 	
     if TheWorld.state.isday then
-        StopSpawning(inst)
 		inst.Light:Enable(false)
 		inst.AnimState:PlayAnimation("idle_"..season or "idle", true)
     else
 		inst.Light:Enable(true)
 		inst.AnimState:PlayAnimation("lit_"..season or "lit", true)
-		inst.components.childspawner:ReleaseAllChildren()
-		StartSpawning(inst)
 	end
 end
 
@@ -138,6 +203,7 @@ local function fn(oldshop)
 
 	inst:AddTag("structure")
     inst:AddTag("sammyhouse")
+	inst:AddTag("antlion_sinkhole_blocker")
 	
 	if not TheNet:IsDedicated() then
         inst:AddComponent("pointofinterest")
@@ -152,13 +218,12 @@ local function fn(oldshop)
 
 	inst:AddComponent("inspectable")
 
-	inst:AddComponent("childspawner")
-	inst.components.childspawner.childname = "kyno_meadowisland_trader"
-	inst.components.childspawner:SetSpawnedFn(OnSpawned)
-	inst.components.childspawner:SetGoHomeFn(OnGoHome)
-	inst.components.childspawner:SetRegenPeriod(10)
-    inst.components.childspawner:SetSpawnPeriod(10)
-    inst.components.childspawner:SetMaxChildren(1)
+	inst:AddComponent("spawner")
+	inst.components.spawner:Configure("kyno_meadowisland_seller", 10) -- TUNING.TOTAL_DAY_TIME
+	inst.components.spawner.onoccupied = OnOcuppied
+	inst.components.spawner.onvacate = OnVacate
+	inst.components.spawner:SetWaterSpawning(false, true)
+	inst.components.spawner:CancelSpawning()
 
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_SMALL)
@@ -171,8 +236,9 @@ local function fn(oldshop)
 	
 	inst.OnEntitySleep = CancelChimneyTask
 	inst.OnEntityWake = StartChimneyTask
-
+	
 	StartChimneyTask(inst)
+	inst.inittask = inst:DoTaskInTime(0, OnInit)
 	
 	-- SetChimneyFX(inst) -- Only used for testing.
 	
