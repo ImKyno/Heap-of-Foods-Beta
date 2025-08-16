@@ -232,7 +232,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_truffles",
+          type = "kyno_truffles_ground",
           shape = "rectangle",
           x = 220,
           y = 205,
@@ -298,7 +298,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_truffles",
+          type = "kyno_truffles_ground",
           shape = "rectangle",
           x = 18,
           y = 215,
@@ -375,7 +375,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_truffles",
+          type = "kyno_truffles_ground",
           shape = "rectangle",
           x = 228,
           y = 43,

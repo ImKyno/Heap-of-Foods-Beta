@@ -2889,8 +2889,8 @@ local kyno_foods =
 	
 	pasty_meat =
 	{
-		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 1) and tags.flour and 
-		tags.veggie and names.kyno_oil and not tags.wobster end,
+		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 1) and tags.flour 
+		and tags.veggie and names.kyno_oil and not tags.wobster end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,

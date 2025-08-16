@@ -60,7 +60,7 @@ local kyno_foods_seasonal =
 	
 	festive_fishdish =
 	{
-		test = function(cooker, names, tags) return tags.fish and names.succulent_picked and not tags.sweetener and not names.wobster_sheller_land 
+		test = function(cooker, names, tags) return tags.fish and names.succulent_picked and not tags.sweetener and not tags.wobster
 		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,

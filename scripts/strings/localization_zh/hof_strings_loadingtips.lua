@@ -7,7 +7,7 @@ local WEIGHT_END    = _G.LOADING_SCREEN_TIP_CATEGORY_WEIGHTS_END
 local TIPS_HOF      = STRINGS.UI.LOADING_SCREEN_OTHER_TIPS
 
 -- New Loading Tips and Lore.
-STRINGS.HOF_LOADINGTIPS =
+local LOADINGTIPS   =
 {
 	COFFEE          = "在击败龙蝇后可以获得咖啡丛。",
 	WEEDS           = "耕地里长出的杂草可以喂鸟来换取对应的种子。",
@@ -83,41 +83,11 @@ STRINGS.HOF_LOADINGTIPS =
 	MIMICMONSA      = "如果你想悄悄地躲过危险的敌人，就酿造一杯“潜行鸡尾酒”，这样没有人会注意到你！",
 }
 
-function SetupHofLoadingTips()
-    for k, v in pairs(STRINGS.HOF_LOADINGTIPS) do
-        AddLoadingTip(TIPS_HOF, ""..k, v)
-    end
-
-    local WeightStart =
-    {
-        CONTROLS        = 1,
-        SURVIVAL        = 1,
-        LORE            = 1,
-        LOADING_SCREEN  = 1,
-        OTHER           = 4,
-    }
-
-    SetLoadingTipCategoryWeights(WEIGHT_START, WeightStart)
-
-    local WeightEnd =
-    {
-        CONTROLS        = 1,
-        SURVIVAL        = 1,
-        LORE            = 1,
-        LOADING_SCREEN  = 1,
-        OTHER           = 4,
-    }
-
-    SetLoadingTipCategoryWeights(WEIGHT_END, WeightEnd)
-
-    SetLoadingTipCategoryIcon("OTHER", "images/hof_loadingtips_icon.xml", "hof_loadingtips_icon.tex")
-    _G.TheLoadingTips = require("loadingtipsdata")()
-
-    local TheLoadingTips             = _G.TheLoadingTips
-    TheLoadingTips.loadingtipweights = TheLoadingTips:CalculateLoadingTipWeights()
-    TheLoadingTips.categoryweights   = TheLoadingTips:CalculateCategoryWeights()
-
-    _G.TheLoadingTips:Load()
+for k, v in pairs(LOADINGTIPS) do
+	AddLoadingTip(TIPS_HOF, "TIPS_HOF_"..k, v)
 end
 
-SetupHofLoadingTips()
+SetLoadingTipCategoryIcon("OTHER", "images/hof_loadingtips_icon.xml", "hof_loadingtips_icon.tex")
+
+SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})
+SetLoadingTipCategoryWeights(WEIGHT_END,   {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})

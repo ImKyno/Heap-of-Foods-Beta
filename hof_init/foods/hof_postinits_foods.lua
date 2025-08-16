@@ -345,6 +345,7 @@ local dried_foods =
 	"kyno_moon_cap_dried",
 	"kyno_humanmeat_dried",
 	"kyno_crabmeat_dried",
+	"kyno_crabkingmeat_dried",
 	"kyno_plantmeat_dried",
 }
 

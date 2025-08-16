@@ -5,7 +5,7 @@ local assets =
 
 local prefabs =
 {
-	-- "kyno_truffles_picked",
+	-- "kyno_truffles",
 }
 
 local function OnPicked(inst)
@@ -33,8 +33,8 @@ local function DigUp(inst, chopper)
 	end
 	
 	-- TheWorld:PushEvent("beginregrowth", inst)
+	-- inst.components.lootdropper:SpawnLootPrefab("kyno_truffles")
 	
-	-- inst.components.lootdropper:SpawnLootPrefab("kyno_truffles_picked")
 	inst:Remove()
 end
 
@@ -98,7 +98,7 @@ local function fn()
 
 	-- inst:AddComponent("pickable")
 	-- inst.components.pickable.picksound = "dontstarve/wilson/pickup_plants"
-	-- inst.components.pickable:SetUp("kyno_truffles_picked", TUNING.KYNO_TRUFFLES_GROWTIME)
+	-- inst.components.pickable:SetUp("kyno_truffles", TUNING.KYNO_TRUFFLES_GROWTIME)
 	-- inst.components.pickable.onregenfn = OnRegen
 	-- inst.components.pickable.onpickedfn = OnPicked
 	-- inst.components.pickable.makeemptyfn = OnMakeEmpty
@@ -110,4 +110,4 @@ local function fn()
 	return inst
 end
 
-return Prefab("kyno_truffles", fn, assets, prefabs)
+return Prefab("kyno_truffles_ground", fn, assets, prefabs)

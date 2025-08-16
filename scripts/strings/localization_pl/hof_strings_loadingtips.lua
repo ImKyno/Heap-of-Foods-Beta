@@ -7,7 +7,7 @@ local WEIGHT_END    = _G.LOADING_SCREEN_TIP_CATEGORY_WEIGHTS_END
 local TIPS_HOF      = STRINGS.UI.LOADING_SCREEN_OTHER_TIPS
 
 -- Nowe wskazówki i lore na ekranie ładowania.
-STRINGS.HOF_LOADINGTIPS =
+local LOADINGTIPS   =
 {
 	COFFEE          = "Po pokonaniu Smoczego Muchy możesz zdobyć krzewy kawy.",
 	WEEDS           = "Możesz sadzić chwasty, używając ich własnych produktów, dając je najpierw ptakowi.",
@@ -83,41 +83,11 @@ STRINGS.HOF_LOADINGTIPS =
 	MIMICMONSA      = "If you want to sneak past dangerous foes, brew a Sneakmosa and no one and nothing will ever notice you!",
 }
 
-function SetupHofLoadingTips()
-    for k, v in pairs(STRINGS.HOF_LOADINGTIPS) do
-        AddLoadingTip(TIPS_HOF, "TIPS_HOF_"..k, v)
-    end
-
-    local WeightStart =
-    {
-        CONTROLS        = 1,
-        SURVIVAL        = 1,
-        LORE            = 1,
-        LOADING_SCREEN  = 1,
-        OTHER           = 4,
-    }
-
-    SetLoadingTipCategoryWeights(WEIGHT_START, WeightStart)
-
-    local WeightEnd =
-    {
-        CONTROLS        = 1,
-        SURVIVAL        = 1,
-        LORE            = 1,
-        LOADING_SCREEN  = 1,
-        OTHER           = 4,
-    }
-
-    SetLoadingTipCategoryWeights(WEIGHT_END, WeightEnd)
-
-    SetLoadingTipCategoryIcon("OTHER", "images/hof_loadingtips_icon.xml", "hof_loadingtips_icon.tex")
-    _G.TheLoadingTips = require("loadingtipsdata")()
-
-    local TheLoadingTips             = _G.TheLoadingTips
-    TheLoadingTips.loadingtipweights = TheLoadingTips:CalculateLoadingTipWeights()
-    TheLoadingTips.categoryweights   = TheLoadingTips:CalculateCategoryWeights()
-
-    _G.TheLoadingTips:Load()
+for k, v in pairs(LOADINGTIPS) do
+	AddLoadingTip(TIPS_HOF, "TIPS_HOF_"..k, v)
 end
 
-SetupHofLoadingTips()
+SetLoadingTipCategoryIcon("OTHER", "images/hof_loadingtips_icon.xml", "hof_loadingtips_icon.tex")
+
+SetLoadingTipCategoryWeights(WEIGHT_START, {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})
+SetLoadingTipCategoryWeights(WEIGHT_END,   {OTHER = 4, CONTROLS = 1, SURVIVAL = 1, LORE = 1, LOADING_SCREEN = 1})
