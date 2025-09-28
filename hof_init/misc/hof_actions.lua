@@ -1,14 +1,14 @@
 -- Common Dependencies.
-local _G 				= GLOBAL
-local require 			= _G.require
-local resolvefilepath 	= _G.resolvefilepath
-local STRINGS			= _G.STRINGS
-local ACTIONS 			= _G.ACTIONS
-local ActionHandler		= _G.ActionHandler
-local SpawnPrefab		= _G.SpawnPrefab
-local cooking           = require("cooking")
-local brewing           = require("hof_brewing")
-local UpvalueHacker     = require("hof_upvaluehacker")
+local _G              = GLOBAL
+local require         = _G.require
+local resolvefilepath = _G.resolvefilepath
+local STRINGS         = _G.STRINGS
+local ACTIONS         = _G.ACTIONS
+local ActionHandler   = _G.ActionHandler
+local SpawnPrefab     = _G.SpawnPrefab
+local cooking         = require("cooking")
+local brewing         = require("hof_brewing")
+local UpvalueHacker   = require("hof_upvaluehacker")
 
 -- Coffee Plant can be Only Fertilized by Ashes.
 AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions)

@@ -1,7 +1,6 @@
 local assets =
 {	
 	Asset("ANIM", "anim/kyno_meadowisland_shop.zip"),
-	Asset("ANIM", "anim/kyno_meadowisland_mermcart.zip"),
 	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
@@ -131,16 +130,6 @@ local function SetHouseArt(inst, season)
 	end
 end
 
-local function SetWagonArt(inst, season)
-	local season = OnSeasonChange(inst)
-
-	local fx = SpawnPrefab("small_puff")
-	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
-	fx.Transform:SetScale(1.7, 1.7, 1.7)
-	
-	inst.AnimState:PlayAnimation("idle_"..season or "empty", true)
-end
-
 local function SetChimneyFX(inst)
 	if not inst.smokecloud then
 		inst.smokecloud = SpawnPrefab("kyno_smokecloud")
@@ -245,39 +234,4 @@ local function fn(oldshop)
 	return inst
 end
 
-local function cartfn()
-	local inst = CreateEntity()
-
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddSoundEmitter()
-	inst.entity:AddNetwork()
-	
-	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("kyno_meadowisland_mermcart.tex")
-	minimap:SetPriority(1)
-	
-	MakeObstaclePhysics(inst, 1)
-	
-	inst.AnimState:SetBank("kyno_meadowisland_mermcart")
-    inst.AnimState:SetBuild("kyno_meadowisland_mermcart")
-	inst.AnimState:PlayAnimation("empty")
-	
-	inst:AddTag("sammywagon")
-	
-	inst.entity:SetPristine()
-
-    if not TheWorld.ismastersim then
-        return inst
-    end
-
-	inst:AddComponent("inspectable")
-	
-	inst:WatchWorldState("season", SetWagonArt)
-	SetWagonArt(inst, TheWorld.state.season)
-	
-	return inst
-end
-
-return Prefab("kyno_meadowisland_shop", fn, assets, prefabs),
-Prefab("kyno_meadowisland_mermcart", cartfn, assets, prefabs)
+return Prefab("kyno_meadowisland_shop", fn, assets, prefabs)

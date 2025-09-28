@@ -57,6 +57,31 @@ local function OnEquipToModel(inst, owner, from_ground)
 	end
 end
 
+local function OnEquipVanity(inst, owner, from_ground)
+	if owner ~= nil then
+		if inst.components.fueled ~= nil then
+			inst.components.fueled:StopConsuming()
+		
+			if inst.components.fueled.no_sewing ~= nil then
+				inst.components.fueled.__no_sewing = inst.components.fueled.no_sewing
+				inst.components.fueled.no_sewing = true
+			end
+		end
+	
+		if owner.components.hunger ~= nil then
+			owner.components.hunger.burnratemodifiers:RemoveModifier(inst)
+		end
+	end
+end
+
+local function OnUnequipVanity(inst, owner)
+	if owner ~= nil then
+		if inst.components.equippable ~= nil then
+			inst.components.equippable:Unequip(owner)
+		end
+	end
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -85,6 +110,9 @@ local function fn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
+	
+	inst.onequipvanity = OnEquipVanity
+	inst.onunequipvanity = OnUnequipVanity
 		
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")

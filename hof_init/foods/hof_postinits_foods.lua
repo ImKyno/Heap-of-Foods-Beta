@@ -357,3 +357,18 @@ end
 for k, v in pairs(dried_foods) do
 	AddPrefabPostInit(v, DriedPostInit)
 end
+
+local monkeyqueen_foods =
+{
+	"bananapop",
+	"frozenbananadaiquiri",
+	"bananajuice",
+}
+
+local function MonkeyQueenBribesPostInit(inst)
+	inst:AddTag("monkeyqueenbribe")
+end
+
+for k, v in pairs(monkeyqueen_foods) do
+	AddPrefabPostInit(v, MonkeyQueenBribesPostInit)
+end

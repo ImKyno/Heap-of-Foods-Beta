@@ -33,9 +33,11 @@ AddComponentPostInit("regrowthmanager", function(self)
         return not (_worldstate.isday) and TUNING.KYNO_LIMPETROCK_REGROWTH_TIME_MULT or 0
     end)
 	
+	--[[
 	self:SetRegrowthForType("kyno_sugartree_flower", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_sugartree_flower", function()
         return not (_worldstate.isnight or _worldstate.iswinter or _worldstate.snowlevel > 0) and TUNING.KYNO_SUGARFLOWER_REGROWTH_TIME_MULT or 0
     end)
+	]]--
 	
 	self:SetRegrowthForType("kyno_rockflippable", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_rockflippable", function()
         return not (_worldstate.isday) and TUNING.KYNO_FLIPPABLE_REGROWTH_TIME_MULT or 0

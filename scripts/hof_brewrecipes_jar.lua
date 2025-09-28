@@ -78,6 +78,7 @@ local kyno_foods_jar =
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"monkeyqueenbribe"},
 		card_def = {ingredients = {{"cave_banana", 2}, {"honey", 1}}},
 	},
 	
@@ -185,6 +186,7 @@ local kyno_foods_jar =
 		cooktime = 48,
 		nameoverride = "KYNO_JELLY",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"monkeyqueenbribe"},
 		card_def = {ingredients = {{"kyno_banana", 2}, {"honey", 1}}},
 	},
 	

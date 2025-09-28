@@ -910,7 +910,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = TUNING.HOF_FLOATER,
-		card_def = {ingredients = {{"gorge_bread", 1}, {"goatmilk", 1}, {"kyno_salmonfish"}, {"kyno_spotspice", 1}}},
+		card_def = {ingredients = {{"gorge_bread", 1}, {"goatmilk", 1}, {"kyno_salmonfish", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	gorge_grilled_cheese =
@@ -2010,7 +2010,7 @@ local kyno_foods =
 		cooktime = .8,
 		potlevel = "med",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"honeyed"},
+		tags = {"honeyed", "monkeyqueenbribe"},
 		card_def = {ingredients = {{"cave_banana", 2}, {"goatmilk", 1}, {"honey", 1}}},
 	},
 	
@@ -2288,7 +2288,7 @@ local kyno_foods =
 	durianmeated =
 	{
 		test = function(cooker, names, tags) return ((names.monstermeat or 0) + (names.monstermeat_cooked or 0) >= 2) and 
-		((names.durian or 0) + (names.durian_cooked or 0) >= 2) end,
+		((names.durian or 0) + (names.durian_cooked or 0) >= 2) and not tags.meat end,
 		priority = 40,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,

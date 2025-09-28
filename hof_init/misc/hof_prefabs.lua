@@ -74,6 +74,7 @@ PrefabFiles =
 	"k_lotus",
 	"k_meadowisland_crate",
 	"k_meadowisland_fishermerm",
+	"k_meadowisland_mermcart",
 	"k_meadowisland_mermhuts",
 	"k_meadowisland_piko",
 	"k_meadowisland_pikotree",

@@ -127,8 +127,7 @@ local function onworkfinish(inst, chopper)
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/use_axe_tree")
 
 	inst.components.lootdropper:DropLoot()
-	
-	TheWorld:PushEvent("beginregrowth", inst)
+
 	inst:Remove()
 end
 
