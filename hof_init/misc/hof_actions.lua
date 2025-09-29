@@ -39,29 +39,19 @@ end)
 
 -- Action for the Slaughter Tools.
 AddAction("FLAY", STRINGS.ACTIONS.FLAY, function(act)
-	if act.target and act.target.components.health and not act.target.components.health:IsDead() and act.target.components.lootdropper then
-		act.target.components.health.invincible = false
-	
-		-- if act.doer.prefab == "wathgrithr" then
-		if act.doer:HasTag("animal_butcher") then -- Characters with this tag gets 2 extra meats!
-			act.target.components.lootdropper:SpawnLootPrefab("meat")
-			act.target.components.lootdropper:SpawnLootPrefab("meat")
-		end
-			
-		if act.invobject ~= nil and act.invobject.components.finiteuses then
-			act.invobject.components.finiteuses:Use(1)
-		end					
-		
-		act.target.components.health:Kill()
-		
-		-- Needed for the Accomplishment.
-		local data = {doer = act.doer, target = act.target, tool = act.invobject}
-        act.doer:PushEvent("hof_FlayOther", data)
-        act.target:PushEvent("hof_Flayed", data)
-		
-		return true
-	end
+	if act.target ~= nil and act.target.components.health ~= nil and not act.target.components.health:IsDead() 
+	and act.target.components.lootdropper ~= nil and act.invobject ~= nil and act.invobject.components.slaughteritem ~= nil then
+		act.invobject.components.slaughteritem:Slaughter(act.doer, act.target)
+        
+        -- This belongs to Accomplishments Mod.
+		local data = { doer = act.doer, target = act.target, tool = act.invobject }
+		act.doer:PushEvent("hof_FlayOther", data)
+		act.target:PushEvent("hof_Flayed", data)
+
+        return true
+    end
 end)
+
 
 ACTIONS.FLAY.distance = 2
 ACTIONS.FLAY.priority = 3

@@ -154,28 +154,6 @@ AddPrefabPostInit("malbatross", function(inst)
 	inst.components.lootdropper:AddChanceLoot("kyno_foodsack_blueprint", 1.00)
 end)
 
--- Animals that can be killed with the Slaughter Tools.
-local slaughterable_animals =
-{
-    "koalefant_winter",
-    "koalefant_summer",
-    "beefalo",
-    "spat",
-    "lightninggoat",
-}
-
-for k,v in pairs(slaughterable_animals) do
-    AddPrefabPostInit(v, function(inst)
-        inst:RemoveTag("slaughterable")
-
-        if not _G.TheWorld.ismastersim then
-            return inst
-        end
-
-        inst:AddTag("slaughterable")
-    end)
-end
-
 -- Bee Queen drops the blueprint for the Honey Deposit.
 AddPrefabPostInit("beequeen", function(inst)
 	if not _G.TheWorld.ismastersim then

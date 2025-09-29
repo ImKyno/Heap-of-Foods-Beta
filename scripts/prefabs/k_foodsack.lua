@@ -27,7 +27,7 @@ local function OnEquip(inst, owner)
 		inst.fx = SpawnPrefab("kyno_foodsack_fx")
 		
 		local follower = inst.fx.entity:AddFollower()
-		follower:FollowSymbol(owner.GUID, "swap_body", 0, 0, 0)
+		follower:FollowSymbol(owner.GUID, "swap_body", 0, 20, 0)
 	end
 end
 

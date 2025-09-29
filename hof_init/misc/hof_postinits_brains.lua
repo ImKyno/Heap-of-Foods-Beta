@@ -5,6 +5,7 @@ local ACTIONS = _G.ACTIONS
 
 require("hof_upvaluehacker")
 require("behaviours/doaction")
+require("behaviours/runaway")
 
 -- Hack to lure Rockjaws and Gnarwails to Jawsbreaker food. 
 -- Thanks DiogoW for the help.
@@ -75,3 +76,27 @@ local function GnarwailPostInit(self)
 end
 
 AddBrainPostInit("gnarwailbrain", GnarwailPostInit)
+-----------------------------------------------------------------------------------------------------
+-- Flee from players who have recently used Slaughter Tools.
+local slaughterable_brains =
+{
+	"beefalobrain",
+	"deerbrain",
+}
+
+local AVOID_BUTCHER_DIST = TUNING.KYNO_SLAUGHTERTOOLS_AVOID_DIST
+local AVOID_BUTCHER_STOP = TUNING.KYNO_SLAUGHTERTOOLS_AVOID_STOP
+
+local function SlaughterablePostInit(self)
+	local inst = self.inst
+
+	local runaway = RunAway(inst, "recent_butcher", AVOID_BUTCHER_DIST, AVOID_BUTCHER_STOP)
+	local conditional = WhileNode(function() return inst:HasTag("butcher_fearable") and not inst:HasTag("domesticated") end, "Fear Butcher", runaway)
+
+	conditional.parent = self.bt.root
+	table.insert(self.bt.root.children, 1, conditional)
+end
+
+for _, brain in ipairs(slaughterable_brains) do
+	AddBrainPostInit(brain, SlaughterablePostInit)
+end

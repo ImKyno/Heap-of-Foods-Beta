@@ -3,17 +3,27 @@ local SlaughterItem = Class(function(self, inst)
 end)
 
 function SlaughterItem:Slaughter(doer, target)
+	if not target:HasTag("slaughterable") then
+		return
+	end
+
 	target.components.health.invincible = false
 	target.components.health:Kill()
 	
-	doer:AddTag("recent_butcher")
-	
-	if doer.butcher_task then
-		doer.butcher_task:Cancel()
-		doer.butcher_task = nil
+	if target.components.slaughterable ~= nil then
+		target.components.slaughterable:DropExtraLoot(doer)
 	end
 	
-	-- We are scary, make prey run away from us.
+	if self.inst.components.finiteuses ~= nil then
+		self.inst.components.finiteuses:Use(1)
+	end
+
+	doer:AddTag("recent_butcher")
+	
+	if doer.butcher_task ~= nil then
+		doer.butcher_task:Cancel()
+	end
+
 	doer.butcher_task = doer:DoTaskInTime(TUNING.KYNO_SLAUGHTERTOOLS_COOLDOWN, function()
 		if doer:IsValid() then
 			doer:RemoveTag("recent_butcher")
@@ -21,30 +31,35 @@ function SlaughterItem:Slaughter(doer, target)
 		end
 	end)
 	
-	self:ScareNearbyAnimals(doer, target)
+	if doer.components.talker ~= nil then
+		doer.components.talker:Say(GetString(doer, "ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED"))
+	end
+	
+	target:PushEvent("slaughtered", { doer = doer, target = target })
+
+    self:MakeNearbyAnimalsAware(doer, target)
 end
 
-function SlaughterItem:ScareNearbyAnimals(doer, target)
-	local x, y, z = target.Transform:GetWorldPosition()
+function SlaughterItem:MakeNearbyAnimalsAware(doer, target)
+    if not (target and target:IsValid()) then 
+        return 
+    end
+
+    local x, y, z = target.Transform:GetWorldPosition()
+	local MAX_DIST = TUNING.KYNO_SLAUGHTERTOOLS_MAXDIST
 	
 	-- TheSim:FindEntities(x, y, z, radius, musttags, canttags, mustoneoftags)
-	local nearby = TheSim:FindEntities(x, y, z, 20, {"slaughterable"}, {"player", "FX", "NOCLICK", "INLIMBO"})
+    local nearby_animals = TheSim:FindEntities(x, y, z, MAX_DIST, {"slaughterable"}, {"player", "FX", "NOCLICK", "INLIMBO"})
 
-	for _, mob in ipairs(nearby) do
-		if mob:IsValid() and mob.components.locomotor and mob.components.combat and not mob.components.combat.target then
-			-- Give up and run.
-			mob.components.combat:SetTarget(nil)
+	for _, mob in ipairs(nearby_animals) do
+		if mob:IsValid() then
+			if mob.components.slaughterable ~= nil and mob:HasTag("butcher_aggressive") then
+				mob.components.slaughterable:MakeAggressive(doer)
+			end
 			
-			-- Run away from butcher for about 4 secs.
-			mob:DoTaskInTime(math.random() * 0.5, function()
-				if mob:IsValid() then
-					local mx, my, mz = mob.Transform:GetWorldPosition()
-					local dx, dz = mx - doer.Transform:GetWorldPosition()
-					local flee_pt = Vector3(mx + dx * 6, my, mz + dz * 6)
-
-					mob.components.locomotor:GoToPoint(flee_pt)
-				end
-			end)
+			if mob.components.slaughterable ~= nil and mob:HasTag("butcher_fearable") then
+				mob.components.slaughterable:MakeFearable()
+			end
 		end
 	end
 end
