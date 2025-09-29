@@ -154,3 +154,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.RUBBLE = "Starszy chce twojej pomocy w naprawieniu
 STRINGS.SCRAPBOOK.SPECIALINFO.PINEAPPLEBUSH = "Krzak ananasowy rośnie prawie 6 dni, aby osiągnąć pełny wzrost. Rośnie wolniej w każdych porach roku oprócz lata.\n\nLatem zaczynają rosnąć co 2 dni."
 STRINGS.SCRAPBOOK.SPECIALINFO.GARDENSPRINKLER = "Może być włączony i wyłączony. Jeśli jest zasilany i włączony, automatycznie podleje rośliny uprawne w jego zasięgu."
 STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHAT = "Reduces hunger by 15%."
+STRINGS.SCRAPBOOK.SPECIALINFO.POTATOSACK = "A 6 slot container that can store potato-related items and keep them fresh for longer periods.\n\n\"Potatoes is strong for belly!\" - Wolfgang."

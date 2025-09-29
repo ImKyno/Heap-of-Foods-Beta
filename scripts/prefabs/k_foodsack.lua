@@ -155,9 +155,9 @@ local function fxfn()
 
 	inst.AnimState:SetBank("deer_ice_flakes")
 	inst.AnimState:SetBuild("deer_ice_flakes")
-	inst.AnimState:PlayAnimation("idle", false)
+	inst.AnimState:PlayAnimation("idle", true)
 	inst.AnimState:SetBloomEffectHandle("shaders/anim.ksh")
-	inst.AnimState:SetFinalOffset(-1)
+	inst.AnimState:SetFinalOffset(0)
 
 	inst:AddTag("FX")
 	

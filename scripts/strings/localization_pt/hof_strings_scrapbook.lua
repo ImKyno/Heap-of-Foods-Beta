@@ -154,3 +154,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.RUBBLE = "Elder wants your help to repair his Old 
 STRINGS.SCRAPBOOK.SPECIALINFO.PINEAPPLEBUSH = "Pineapple Bushes takes nearly 6 days to fully grow. They take longer to grow in all seasons except for Summer.\n\nDuring Summer they will start growing every 2 days."
 STRINGS.SCRAPBOOK.SPECIALINFO.GARDENSPRINKLER = "Can be turned on and off. While fueled and on, will automatically water farm plants within its range."
 STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHAT = "Reduces hunger by 15%."
+STRINGS.SCRAPBOOK.SPECIALINFO.POTATOSACK = "A 6 slot container that can store potato-related items and keep them fresh for longer periods.\n\n\"Potatoes is strong for belly!\" - Wolfgang."

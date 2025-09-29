@@ -95,7 +95,7 @@ local HOF_SCRAPBOOK_ITEMS =
 	
 	turf_fields        =
 	{
-		name           = "turf_stonecity",
+		name           = "turf_fields",
 		type           = "item",
 		subcat         = "turf",
 		tex            = "turf_fields.tex",
@@ -118,7 +118,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		type           = "item",
 		subcat         = "turf",
 		tex            = "turf_tidalmarsh.tex",
-		prefab         = "wurt_turf_tidalmarsh",
+		prefab         = "turf_tidalmarsh",
 		craftingprefab = "wurt",
 		fueltype       = "BURNABLE",
 		fuelvalue      = 7.5,
