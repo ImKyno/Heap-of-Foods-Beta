@@ -79,6 +79,12 @@ local function OnUnequipVanity(inst, owner)
 		if inst.components.equippable ~= nil then
 			inst.components.equippable:Unequip(owner)
 		end
+		
+		if inst.components.fueled ~= nil then
+			if inst.components.fueled.no_sewing ~= nil then
+				inst.components.fueled.no_sewing = inst.components.fueled.__no_sewing
+			end
+		end
 	end
 end
 
@@ -129,6 +135,7 @@ local function fn()
 	inst.components.fueled.fueltype = FUELTYPE.USAGE
 	inst.components.fueled:InitializeFuelLevel(TUNING.KYNO_SAMMYHAT_PERISHTIME)
 	inst.components.fueled:SetDepletedFn(inst.Remove)
+	inst.components.fueled.no_sewing = false
 	
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

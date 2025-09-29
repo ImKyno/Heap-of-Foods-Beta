@@ -35,8 +35,8 @@ local LOOT =
 	
 	ITEMS =
 	{
-		{ weight = 8, prefab = EMPTY_PREFAB,   season = nil }, -- 25%
-		{ weight = 8, prefab = "wagpunk_bits", season = nil }, -- 25%
+		{ weight = 8, prefab = "wagpunk_bits", season = "winter" }, -- 25%
+		{ weight = 4, prefab = EMPTY_PREFAB,   season = nil }, -- 12.5%
 		{ weight = 4, prefab = "rocks",        season = nil }, -- 12.5%
 		{ weight = 4, prefab = "log",          season = nil }, -- 12.5%
 		{ weight = 2, prefab = "boards",       season = nil }, -- 6.25%
@@ -155,7 +155,6 @@ local function StopPickingLoot(inst, nosound)
 	end
 	
 	inst._pickingloop = nil
-
 	inst.SoundEmitter:KillSound(RUMMAGE_SOUND_NAME)
 	
 	if not nosound then

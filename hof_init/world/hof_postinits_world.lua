@@ -932,6 +932,8 @@ local function PotatoSackPostinit(inst)
 			inst.components.container:Close()
 		end
 	end
+	
+	inst.scrapbook_proxy = "potatosack2" -- Fix for missing Scrapbook CRAFTING_FILTER.
 
 	if not _G.TheWorld.ismastersim then
 		inst.OnEntityReplicated = function(inst) inst.replica.container:WidgetSetup("potatosack") end

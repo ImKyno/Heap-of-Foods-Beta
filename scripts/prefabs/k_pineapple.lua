@@ -34,6 +34,8 @@ local function pineapple()
 	inst:AddTag("fruit")
 	inst:AddTag("veggie")
 	inst:AddTag("show_spoilage")
+	inst:AddTag("icebox_valid")
+	inst:AddTag("foodsack_valid")
 	inst:AddTag("sliceable")
 
 	inst.entity:SetPristine()

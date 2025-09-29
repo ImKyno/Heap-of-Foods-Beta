@@ -404,12 +404,22 @@ AddRecipe2("spice_fire", {Ingredient("oceanfish_small_8_inv", 1)}, TECH.FOODPROC
 	{"CRAFTING_STATION"}
 )
 
+AddRecipe2("kyno_foodsack", {Ingredient("saltrock", 10), Ingredient("malbatross_feathered_weave", 4), Ingredient("bluegem", 1)}, TECH.LOST,
+	{
+		atlas               = ModAtlas,
+		image               = "kyno_foodsack.tex",
+	},
+	{"COOKING", "CONTAINERS"}
+)
+SortAfter("kyno_foodsack", "icepack", "COOKING")
+SortAfter("kyno_foodsack", "icepack", "CONTAINERS")
+
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
-		product     = "potatosack",
-		builder_tag = "strongman",
-		atlas       = "images/inventoryimages2.xml",
-		image       = "potato_sack_full.tex",
+		product             = "potatosack",
+		builder_tag         = "strongman",
+		atlas               = "images/inventoryimages2.xml",
+		image               = "potato_sack_full.tex",
 	},
 	{"CONTAINERS", "COOKING"}
 )
@@ -422,55 +432,57 @@ AddDeconstructRecipe("potatosack", {Ingredient("cutgrass", 4), Ingredient("papyr
 -- Using Bananas instead of Cave Bananas.
 Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingredient("kyno_banana", 1), Ingredient("cutreeds", 4)}, TECH.NONE,	
 	{
-		allowautopick     = true, 
-		no_deconstruction = true,
-		actionstr         = "GROW",
-		product           = "dug_monkeytail",
-		builder_skill     = "wormwood_reedscrafting",         
-		sg_state          = "form_monkey", 
-		description       = "wormwood_reeds",
-		atlas 			  = DefaultAtlas1, 
-		image 			  = "dug_monkeytail.tex",
+		allowautopick       = true, 
+		no_deconstruction   = true,
+		actionstr           = "GROW",
+		product             = "dug_monkeytail",
+		builder_skill       = "wormwood_reedscrafting",         
+		sg_state            = "form_monkey", 
+		description         = "wormwood_reeds",
+		atlas 			    = DefaultAtlas1, 
+		image               = "dug_monkeytail.tex",
 	},
 	{"CHARACTER"}
 )
 
-AddRecipe2("wendy_sugarfly", {Ingredient("ghostflower", 3), Ingredient("kyno_sugarflywings", 1)}, TECH.NONE,
+AddCharacterRecipe("kyno_sugarfly", {Ingredient("ghostflower", 3), Ingredient("kyno_sugarflywings", 1)}, TECH.NONE,
 	{
-		no_deconstruction = true,
-		product           = "kyno_sugarfly",
-		builder_skill     = "wendy_ghostflower_butterfly",
-		atlas             = ModAtlas,
-		image             = "kyno_sugarfly.tex",
-	},
-	{"CHARACTER"}
+		no_deconstruction   = true,
+		product             = "kyno_sugarfly",
+		description         = "kyno_sugarfly",
+		builder_skill       = "wendy_ghostflower_butterfly",
+		atlas               = ModAtlas,
+		image               = "kyno_sugarfly.tex",
+	}
 )
 
-AddRecipe2("kyno_fishermermhut_wurt", {Ingredient("boards", 4), Ingredient("cutreeds", 3), Ingredient("kyno_tropicalfish", 2, ModAtlas)}, TECH.SCIENCE_ONE,
+AddCharacterRecipe("kyno_fishermermhut_wurt", {Ingredient("boards", 4), Ingredient("cutreeds", 3), Ingredient("kyno_tropicalfish", 2, ModAtlas)}, TECH.SCIENCE_ONE,
 	{
-		placer            = "kyno_fishermermhut_wurt_placer",
-		min_spacing       = 1,
-		testfn            = IsTidalMarshLand,
-		builder_tag       = "merm_builder",
-		atlas             = ModAtlas,
-		image             = "kyno_fishermermhut_wurt.tex",
+		placer              = "kyno_fishermermhut_wurt_placer",
+		min_spacing         = 1,
+		testfn              = IsTidalMarshLand,
+		builder_tag         = "merm_builder",
+		atlas               = ModAtlas,
+		image               = "kyno_fishermermhut_wurt.tex",
 	},
-	{"CHARACTER", "STRUCTURES"}
+	{"STRUCTURES"}
 )
 SortAfter("kyno_fishermermhut_wurt", "mermhouse_crafted", "CHARACTER")
 SortAfter("kyno_fishermermhut_wurt", "mermhouse_crafted", "STRUCTURES")
 
-AddRecipe2("turf_tidalmarsh", {Ingredient("cutreeds", 1), Ingredient("ice", 2)}, TECH.NONE,
+AddCharacterRecipe("wurt_turf_tidalmarsh", {Ingredient("cutreeds", 1), Ingredient("ice", 2)}, TECH.NONE,
 	{
-		builder_tag       = "merm_builder",
-		numtogive         = 4,
-		atlas             = ModAtlas,
-		image             = "turf_tidalmarsh.tex",
+		product             = "turf_tidalmarsh",
+		description         = "turf_tidalmarsh",
+		builder_tag         = "merm_builder",
+		numtogive           = 4,
+		atlas               = ModAtlas,
+		image               = "turf_tidalmarsh.tex",
 	},
-	{"CHARACTER", "DECOR"}
+	{"DECOR"}
 )
-SortAfter("turf_tidalmarsh", "wurt_turf_marsh", "CHARACTER")
-SortAfter("turf_tidalmarsh", "wurt_turf_marsh", "DECOR")
+SortAfter("wurt_turf_tidalmarsh", "wurt_turf_marsh", "CHARACTER")
+SortAfter("wurt_turf_tidalmarsh", "turf_marsh", "DECOR")
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 if HOF_WARLYMEALGRINDER then

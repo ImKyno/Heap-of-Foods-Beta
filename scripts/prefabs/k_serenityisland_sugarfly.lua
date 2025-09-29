@@ -122,6 +122,8 @@ local function fn()
 	inst:AddTag("_named")
 	
 	MakeFeedableSmallLivestockPristine(inst)
+	
+	inst.scrapbook_proxy = "wendy_sugarfly" -- Fix for missing Scrapbook CRAFTING_FILTER.
 
     inst.entity:SetPristine()
 

@@ -225,11 +225,11 @@ params.foodsack =
 {
 	widget =
 	{
-		slotpos = {},
 		slotbg = {},
-		animbank = "ui_piggyback_2x6",
-        animbuild = "ui_piggyback_2x6",
-        pos = Vector3(-5, -90, 0),
+		slotpos = {},
+		animbank = "ui_backpack_2x4",
+        animbuild = "ui_backpack_2x4",
+        pos = Vector3(-5, -80, 0),
 	},
 	
 	issidewidget = true,
@@ -237,17 +237,18 @@ params.foodsack =
     openlimit = 1,
 }
 
-local FOODSACK_SLOTBG = {image = "inv_slot_morsel.tex", atlas = "images/hud.xml"}
-for y = 0, 5 do
-    table.insert(params.foodsack.widget.slotpos, Vector3(-162, -75 * y + 170, 0))
-    table.insert(params.foodsack.widget.slotpos, Vector3(-162 + 75, -75 * y + 170, 0))
-	table.insert(params.foodsack.widget.slotbg, FOODSACK_SLOTBG)
+local foodsack_slotbg = { atlas = "images/hud.xml", image = "inv_slot_morsel.tex" }
+for y = 0, 3 do
+	table.insert(params.foodsack.widget.slotpos, Vector3(-162, -75 * y + 114, 0))
+	table.insert(params.foodsack.widget.slotpos, Vector3(-162 + 75, -75 * y + 114, 0))
+	table.insert(params.foodsack.widget.slotbg, foodsack_slotbg)
+	table.insert(params.foodsack.widget.slotbg, foodsack_slotbg)
 end
+foodsack_slotbg = nil
 
--- Same as Wilson's beard.
 function params.foodsack.itemtestfn(container, item, slot)
     for k, v in pairs(FOODGROUP.OMNI.types) do
-        if item:HasTag("edible_"..v) then
+        if item:HasTag("edible_"..v) or item:HasTag("foodsack_valid") and not item:HasTag("preparedfood") then
             return true
         end
     end

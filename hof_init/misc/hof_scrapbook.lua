@@ -40,6 +40,23 @@ local preparedfood_deps =
 -- Scrapbook Entries tables.
 local HOF_SCRAPBOOK_ITEMS =
 {
+	potatosack         =
+	{
+		name           = "potatosack",
+		speechname     = "potatosack",
+		type           = "item",
+		tex            = "potato_sack_full.tex",
+		prefab         = "potatosack",
+		craftingprefab = "wolfgang",
+		workable       = "HAMMER",
+		burnable       = true,
+		bank           = "potato_sack_empty",
+		build          = "potato_sack",
+		anim           = "idle_full",
+		deps           = {"cutgrass", "papyrus", "rope"},
+		specialinfo    = "POTATOSACK",
+	},
+
 	turf_pinkpark      =
 	{
 		name           = "turf_pinkpark",
@@ -94,13 +111,14 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "TURF",
 	},
 	
-	turf_tidalmarsh    =
+	turf_tidalmarsh =
 	{
 		name           = "turf_tidalmarsh",
+		speechname     = "turf_tidalmarsh",
 		type           = "item",
 		subcat         = "turf",
 		tex            = "turf_tidalmarsh.tex",
-		prefab         = "turf_tidalmarsh",
+		prefab         = "wurt_turf_tidalmarsh",
 		craftingprefab = "wurt",
 		fueltype       = "BURNABLE",
 		fuelvalue      = 7.5,

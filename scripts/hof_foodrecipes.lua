@@ -493,6 +493,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"sammyfood"},
 		card_def = {ingredients = {{"carrot", 3}, {"kyno_spotspice", 1}}},
 	},
 	

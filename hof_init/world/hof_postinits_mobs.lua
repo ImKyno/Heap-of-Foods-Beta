@@ -145,6 +145,15 @@ AddPrefabPostInit("dragonfly", function(inst)
 	end
 end)
 
+-- Malbatross Drops Salt Pack blueprint.
+AddPrefabPostInit("malbatross", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst.components.lootdropper:AddChanceLoot("kyno_foodsack_blueprint", 1.00)
+end)
+
 -- Animals that can be killed with the Slaughter Tools.
 local slaughterable_animals =
 {

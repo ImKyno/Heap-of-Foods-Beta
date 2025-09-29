@@ -79,6 +79,8 @@ local function kokonut()
 	inst:AddTag("deployedplant")
 	inst:AddTag("cattoy")
 	inst:AddTag("sliceable")
+	inst:AddTag("icebox_valid")
+	inst:AddTag("foodsack_valid")
 	inst:AddTag("kokonut") -- For CoconutChecker.
 
 	inst.entity:SetPristine()
