@@ -22,13 +22,6 @@ local function OnEquip(inst, owner)
     owner.AnimState:OverrideSymbol("swap_body", "swap_foodsack", "swap_body")
 	
     inst.components.container:Open(owner)
-	
-	if not inst.fx then
-		inst.fx = SpawnPrefab("kyno_foodsack_fx")
-		
-		local follower = inst.fx.entity:AddFollower()
-		follower:FollowSymbol(owner.GUID, "swap_body", 0, 20, 0)
-	end
 end
 
 local function OnUnequip(inst, owner)
@@ -36,20 +29,10 @@ local function OnUnequip(inst, owner)
     owner.AnimState:ClearOverrideSymbol("backpack")
 	
     inst.components.container:Close(owner)
-	
-	if inst.fx ~= nil then
-		inst.fx:Remove()
-		inst.fx = nil
-	end
 end
 
 local function OnEquipToModel(inst, owner)
     inst.components.container:Close(owner)
-	
-	if inst.fx ~= nil then
-		inst.fx:Remove()
-		inst.fx = nil
-	end
 end
 
 local function OnPreEquipVanity(inst, owner, from_ground)
@@ -100,7 +83,7 @@ local function fn()
     inst:AddTag("nocool")
 	inst:AddTag("waterproofer")
 
-    inst.foleysound = "dontstarve/movement/foley/backpack"
+    inst.foleysound = "dontstarve/movement/foley/marblearmour"
 
     inst.entity:SetPristine()
 

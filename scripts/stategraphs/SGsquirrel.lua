@@ -59,11 +59,11 @@ local states =
             inst.data.donelooking = nil
             
             if math.random() > .5 then
-                inst.AnimState:PlayAnimation("lookup_pre")
+                -- inst.AnimState:PlayAnimation("lookup_pre")
                 inst.AnimState:PushAnimation("lookup_loop", true)
                 inst.data.lookingup = true
             else
-                inst.AnimState:PlayAnimation("lookdown_pre")
+                -- inst.AnimState:PlayAnimation("lookdown_pre")
                 inst.AnimState:PushAnimation("lookdown_loop", true)
             end
             
