@@ -685,19 +685,26 @@ AddClassPostConstruct("widgets/invslot", function(self)
 	end
 end)
 
---[[
 local function MakeSerenityArea(inst)
-	_G.TheWorld:PushEvent("overrideambientlighting", Point(150 / 255, 150 / 255, 150 / 255))
 	_G.TheWorld:PushEvent("overridecolourcube", "images/colour_cubes/quagmire_cc.tex")
 end
 
 local function RemoveSerenityArea(inst)
-	_G.TheWorld:PushEvent("overrideambientlighting", nil)
 	_G.TheWorld:PushEvent("overridecolourcube", nil)
 end
 
-env.AddComponentPostInit("playervision", function(self)
-	self.inst:DoTaskInTime(0, function()
+AddPrefabPostInit("wilson", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:DoPeriodicTask(1, function(inst)
+		print(inst.components.areaaware:GetDebugString())
+	end)
+end)
+
+AddComponentPostInit("playervision", function(self)
+	self.inst:DoTaskInTime(0.1, function()
 		self.canchange = true
 		
 		self.inst:ListenForEvent("changearea", function(inst, area)
@@ -710,8 +717,9 @@ env.AddComponentPostInit("playervision", function(self)
 			end
 		end)
 
-		self.inst:DoTaskInTime(0, function()
+		self.inst:DoTaskInTime(0.1, function()
 			local node, node_index = _G.TheWorld.Map:FindVisualNodeAtPoint(self.inst.Transform:GetWorldPosition())
+			
 			if node_index then
 				self.inst:PushEvent("changearea", node and 
 				{
@@ -726,4 +734,3 @@ env.AddComponentPostInit("playervision", function(self)
 		end)
 	end)
 end)
-]]--

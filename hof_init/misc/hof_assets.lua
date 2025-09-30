@@ -19,6 +19,7 @@ Assets =
 	
 	Asset("ANIM", "anim/ui_brewer_1x3.zip"),
 	Asset("ANIM", "anim/kyno_turfs_hof.zip"),
+	Asset("ANIM", "anim/kyno_tree_rock_swaps.zip"),
 	
 	Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),

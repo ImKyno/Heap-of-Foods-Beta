@@ -136,7 +136,7 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 		return false
 	end
 	
-	local success = TryToAddLayout("hof_serenityisland1", 53)
+	local success = TryToAddLayout("SerenityIsland", 53)
 	
 	if success then
 		print("Retrofitting for Heap of Foods Mod - Added the Serenity Archipelago to the world.")
@@ -232,7 +232,7 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 		return false
 	end
 	
-	local success = TryToAddLayout("hof_meadowisland2", 54) -- hof_meadowisland1
+	local success = TryToAddLayout("MeadowIsland", 54) -- hof_meadowisland1
 	
 	if success then
 		print("Retrofitting for Heap of Foods Mod - Added the Seaside Island to the world.")

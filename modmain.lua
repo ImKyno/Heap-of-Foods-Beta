@@ -60,6 +60,7 @@ local hof_init_world   =
 	"hof_postinits_world",
 	"hof_postinits_mobs",
 	"hof_slaughterable_animals",
+	"hof_tree_rock_data",
 }
 
 local hof_init_foods   =

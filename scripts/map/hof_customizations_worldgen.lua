@@ -25,7 +25,7 @@ local customizations_worldgen =
 	weedsea         = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean", order = 6, world = {"forest"}},
 	
 	-- SERENITYISLAND
-	serenityisland  = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 0, world = {"forest"}},
+ -- serenityisland  = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 0, world = {"forest"}},
 	chickens        = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 1, world = {"forest"}},
 	pebblecrabs     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 2, world = {"forest"}},
 	saltponds       = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 3, world = {"forest"}},
@@ -34,7 +34,7 @@ local customizations_worldgen =
 	sugartrees      = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 6, world = {"forest"}},
 	
 	-- MEADOWISLAND
-	meadowisland    = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 0,  world = {"forest"}},
+ -- meadowisland    = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 0,  world = {"forest"}},
 	fishermermhuts  = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 1,  world = {"forest"}},
 	islandcrates    = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 5,  world = {"forest"}},
 	kokonuttrees    = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 3,  world = {"forest"}},
@@ -65,7 +65,8 @@ map.TRANSLATE_TO_PREFABS["taroroots"]       = {"kyno_taroroot_ocean"}
 map.TRANSLATE_TO_PREFABS["waterycresses"]   = {"kyno_waterycress_ocean"}
 map.TRANSLATE_TO_PREFABS["weedsea"]         = {"kyno_seaweeds_ocean"}
 
-map.TRANSLATE_TO_PREFABS["serenityisland"]  = {"kyno_serenityisland_shop", "kyno_serenityisland_decor2", "kyno_repairtool"}
+-- Required prefab, can't change.
+-- map.TRANSLATE_TO_PREFABS["serenityisland"]  = {"kyno_serenityisland_shop", "kyno_serenityisland_decor2", "kyno_repairtool"}
 map.TRANSLATE_TO_PREFABS["chickens"]        = {"kyno_chicken", "kyno_chicken2", "kyno_chicken2_herd"}
 map.TRANSLATE_TO_PREFABS["pebblecrabs"]     = {"kyno_pebblecrab", "kyno_pebblecrab_spawner"}
 map.TRANSLATE_TO_PREFABS["saltponds"]       = {"kyno_pond_salt"}
@@ -74,7 +75,8 @@ map.TRANSLATE_TO_PREFABS["sugarflies"]      = {"kyno_sugarfly"}
 map.TRANSLATE_TO_PREFABS["sugarflowers"]    = {"kyno_sugartree_flower"}
 map.TRANSLATE_TO_PREFABS["sugartrees"]      = {"kyno_sugartree"}
 
-map.TRANSLATE_TO_PREFABS["meadowisland"]    = {"kyno_meadowisland_shop", "kyno_meadowisland_mermcart"}
+-- Required prefab, can't change.
+-- map.TRANSLATE_TO_PREFABS["meadowisland"]    = {"kyno_meadowisland_shop", "kyno_meadowisland_mermcart"}
 map.TRANSLATE_TO_PREFABS["fishermerms"]     = {"kyno_meadowisland_mermfisher"}
 map.TRANSLATE_TO_PREFABS["fishermermhuts"]  = {"kyno_meadowisland_fishermermhut"}
 map.TRANSLATE_TO_PREFABS["islandcrates"]    = {"kyno_meadowisland_crate"}

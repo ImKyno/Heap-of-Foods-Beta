@@ -12,7 +12,7 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 			require("map/hof_retrofit_islands").HofRetrofitting_SerenityIsland(_G.TheWorld.Map, savedata)
 		end
 		
-		if savedata.ents ~= nil and savedata.ents.kyno_meadowisland_pond ~= nil then
+		if savedata.ents ~= nil and savedata.ents.kyno_meadowisland_shop ~= nil then
 			print("Retrofitting for Heap of Foods Mod - It seems the Seaside Island already exists.")
 		else
 			print("Retrofitting for Heap of Foods Mod - Generating the Seaside Island.")

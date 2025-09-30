@@ -6,10 +6,20 @@ local min     = 1
 local max     = 3
 
 require("map/terrain")
+require("tilemanager")
+
+require("map/rooms/hof_rooms")
+require("map/tasks/hof_tasks")
+
 modimport("hof_init/misc/hof_tuning")
 
-local TERRAIN_FILTERS     = {_G.WORLD_TILES.ROAD, _G.WORLD_TILES.WOODFLOOR, _G.WORLD_TILES.CARPET, _G.WORLD_TILES.CHECKER}
-local OCEANSETPIECE_COUNT = GetModConfigData("OCEANSETPIECE_COUNT")
+local TERRAIN_FILTERS = 
+{
+	WORLD_TILES.ROAD, 
+	WORLD_TILES.WOODFLOOR, 
+	WORLD_TILES.CARPET, 
+	WORLD_TILES.CHECKER,
+}
 
 -- Prefab Rooms.
 local AloeRooms = 
@@ -335,24 +345,6 @@ for k, v in pairs(BeefaloRooms) do
 	end)
 end
 
---[[
-AddRoomPreInit("OceanRough", function(room)
-	if not room.tags then
-		room.tags = { "SerenitySpawner" }
-	elseif room.tags then
-		table.insert(room.tags, "SerenitySpawner")
-	end
-end)
-
-AddRoomPreInit("OceanSwell", function(room)
-	if not room.tags then
-		room.tags = { "MeadowSpawner" }
-	elseif room.tags then
-		table.insert(room.tags, "MeadowSpawner")
-	end
-end)
-]]--
-
 AddTaskSetPreInitAny(function(tasksetdata)
     if tasksetdata.location ~= "forest" then
         return
@@ -362,28 +354,28 @@ AddTaskSetPreInitAny(function(tasksetdata)
 		tasksetdata.ocean_prefill_setpieces = {}
 	end
     
-	tasksetdata.ocean_prefill_setpieces["hof_serenityisland1"]           = { count = 1 }
-	tasksetdata.ocean_prefill_setpieces["hof_meadowisland2"]             = { count = 1 } -- hof_meadowisland1
+	tasksetdata.ocean_prefill_setpieces["SerenityIsland"]                = { count = 1 }
+	tasksetdata.ocean_prefill_setpieces["MeadowIsland"]                  = { count = 1 }
 	
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates"]      = { count = math.random(min, max) } -- OCEANSETPIECE_COUNT
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates2"]     = { count = math.random(min, max) }
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_waterycress"] = { count = math.random(min, max) }
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_taroroot"]    = { count = math.random(min, max) }
-	tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_seaweeds"]    = { count = math.random(min, max) }
+	-- tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates"]      = { count = math.random(min, max) }
+	-- tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_crates2"]     = { count = math.random(min, max) }
+	-- tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_waterycress"] = { count = math.random(min, max) }
+	-- tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_taroroot"]    = { count = math.random(min, max) }
+	-- tasksetdata.ocean_prefill_setpieces["hof_oceansetpiece_seaweeds"]    = { count = math.random(min, max) }
 end)
 
 -- Make our setpieces a must for when generating the world.
 AddLevelPreInit("forest", function(level)
     level.required_setpieces = level.required_setpieces or {}
 	
-	table.insert(level.required_setpieces, "hof_serenityisland1")
-	table.insert(level.required_setpieces, "hof_meadowisland2") -- hof_meadowisland1
+	table.insert(level.required_setpieces, "SerenityIsland")
+	table.insert(level.required_setpieces, "MeadowIsland")
 	
-	table.insert(level.required_setpieces, "hof_oceansetpiece_crates")
-	table.insert(level.required_setpieces, "hof_oceansetpiece_crates2")
-	table.insert(level.required_setpieces, "hof_oceansetpiece_waterycress")
-	table.insert(level.required_setpieces, "hof_oceansetpiece_taroroot")
-	table.insert(level.required_setpieces, "hof_oceansetpiece_seaweeds")
+	-- table.insert(level.required_setpieces, "hof_oceansetpiece_crates")
+	-- table.insert(level.required_setpieces, "hof_oceansetpiece_crates2")
+	-- table.insert(level.required_setpieces, "hof_oceansetpiece_waterycress")
+	-- table.insert(level.required_setpieces, "hof_oceansetpiece_taroroot")
+	-- table.insert(level.required_setpieces, "hof_oceansetpiece_seaweeds")
 end)
 
 -- Main Menu world customization.

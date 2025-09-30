@@ -1,18 +1,15 @@
 -- Common Dependencies.
-local _G             = GLOBAL
-local require        = _G.require
-local LAYOUT         = _G.LAYOUT
-local GROUND         = _G.GROUND
-local LOCKS          = _G.LOCKS
-local KEYS           = _G.KEYS
-local LOCKS_KEYS     = _G.LOCKS_KEYS
-local Layouts        = require("map/layouts").Layouts
-local StaticLayout   = require("map/static_layout")
+local _G              = GLOBAL
+local require         = _G.require
+local LAYOUT          = _G.LAYOUT
+local LAYOUT_POSITION = _G.LAYOUT_POSITION
+local PLACE_MASK      = _G.PLACE_MASK
+local GROUND          = _G.GROUND
+local Layouts         = require("map/layouts").Layouts
+local StaticLayout    = require("map/static_layout")
 
 require("map/terrain")
 require("tilemanager")
-
-modimport("hof_init/world/hof_worldgen")
 
 local TheArchitectPack = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
 local NotEnoughTurfs   = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
@@ -67,8 +64,6 @@ AddTile("HOF_TIDALMARSH", "LAND",
 	}
 )
 
--- Since we already have the turfs and they can be dug, we are going to use them for make a custom prefab.
--- Basically you're getting the original turfs from ground with a custom prefab i.e: the turf item.
 local GROUND_TURFS =
 {
 	[WORLD_TILES.QUAGMIRE_PARKFIELD] = "turf_pinkpark",
@@ -112,65 +107,62 @@ end
 -- ROCKY_ID				 = 3
 -- SAVANNA_ID			 = 5
 
--- Keys and Locks.
-local keycount                    = 1
-for k, v in pairs(KEYS) do
-	keycount                      = keycount + 1
-end
-
-KEYS["SERENITY_ISLAND"]           = keycount
-
-local lockcount                   = 1
-for k, v in pairs(LOCKS) do
-	lockcount                     = lockcount + 1
-end
-
-LOCKS["SERENITY_ISLAND"]          = lockcount
-LOCKS_KEYS[LOCKS.SERENITY_ISLAND] = {KEYS.SERENITY_ISLAND}
-
--- Our Custom Layouts.
-Layouts["Oasis"]              = StaticLayout.Get("map/static_layouts/hof_oasis")
-Layouts["SerenityIslandShop"] = StaticLayout.Get("map/static_layouts/hof_serenityisland_shop")
--- Layouts["LivingTree"]         = StaticLayout.Get("map/static_layouts/hof_livingtree")
--- Layouts["TrufflesZone"]       = StaticLayout.Get("map/static_layouts/hof_truffles_zone") -- WIP.
-
--- Retrofit the Serenity Archipelago in the world.
 -- The numbers below represents each turf in the setpiece file.
-_G.SERENITYISLAND_GROUNDS =
+_G.SERENITYISLAND_GROUNDS                =
 {
-	WORLD_TILES.OCEAN_BRINEPOOL,     -- 1
-	WORLD_TILES.ROCKY,               -- 2
-	WORLD_TILES.SAVANNA,             -- 3
-	WORLD_TILES.QUAGMIRE_CITYSTONE,  -- 4
-	WORLD_TILES.QUAGMIRE_PARKFIELD,  -- 5
+	WORLD_TILES.OCEAN_BRINEPOOL,         -- 1
+	WORLD_TILES.ROCKY,                   -- 2
+	WORLD_TILES.SAVANNA,                 -- 3
+	WORLD_TILES.QUAGMIRE_CITYSTONE,      -- 4
+	WORLD_TILES.QUAGMIRE_PARKFIELD,      -- 5
 }
 
-local hof_serenity_islands =
+_G.MEADOWISLAND_GROUNDS                  =
 {
-	"hof_serenityisland1",
+	WORLD_TILES.OCEAN_BRINEPOOL,         -- 1
+	WORLD_TILES.MONKEY_GROUND,           -- 2
+	WORLD_TILES.HOF_FIELDS,              -- 3
+	WORLD_TILES.HOF_TIDALMARSH,          -- 4
+	WORLD_TILES.ROAD,                    -- 5
+	WORLD_TILES.FARMING_SOIL,            -- 6
+	WORLD_TILES.FOREST,                  -- 7
 }
 
-for i, layout in ipairs(hof_serenity_islands) do
-	Layouts[layout] = StaticLayout.Get("map/static_layouts/"..layout,
+_G.MEADOWISLAND_SHOP_GROUNDS             =
+{
+	WORLD_TILES.ROAD,                    -- 1
+	WORLD_TILES.FOREST,                  -- 2
+	WORLD_TILES.FARMING_SOIL,            -- 3
+}
+
+Layouts["SerenityIsland"]                = StaticLayout.Get("map/static_layouts/hof_serenityisland1",
+{
+	add_topology                         =
 	{
-		start_mask 			     = _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		fill_mask                = _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		add_topology             = {room_id = "StaticLayoutIsland: SerenityIsland", tags = {"RoadPoison", "SerenityArea", "not_mainland", "nohunt", "nohasslers"}},
-		areas                    =
-		{
-		},
-		min_dist_from_land       = 10,
-	})
-	Layouts[layout].ground_types = _G.SERENITYISLAND_GROUNDS
-end
+		room_id                          = "StaticLayoutIsland:SerenityIsland",
+		tags                             = {"RoadPoison", "not_mainland", "nohasslers", "nohunt", "SerenityArea"},
+	},
+	min_dist_from_land                   = 0,
+})
+Layouts["SerenityIsland"].ground_types   = _G.SERENITYISLAND_GROUNDS
 
--- Ocean Wrecks Setpieces.
-_G.OCEANSETPIECE_GROUNDS =
+Layouts["MeadowIsland"]                  = StaticLayout.Get("map/static_layouts/hof_meadowisland2",
 {
-	WORLD_TILES.OCEAN_BRINEPOOL, -- 1
-}
+	add_topology                         =
+	{
+		room_id                          = "StaticLayoutIsland:MeadowIsland",
+		tags                             = {"RoadPoison", "not_mainland", "nohunt", "MeadowArea"},
+	},
+	min_dist_from_land                   = 0,
+})
+Layouts["MeadowIsland"].ground_types     = _G.MEADOWISLAND_GROUNDS
 
-local hof_ocean_setpieces =
+Layouts["Oasis"]                         = StaticLayout.Get("map/static_layouts/hof_oasis")
+Layouts["SerenityIslandShop"]            = StaticLayout.Get("map/static_layouts/hof_serenityisland_shop")
+Layouts["MeadowIslandShop"]              = StaticLayout.Get("map/static_layouts/hof_meadowisland_shop")
+Layouts["MeadowIslandShop"].ground_types = _G.MEADOWISLAND_SHOP_GROUNDS
+
+local hof_ocean_setpieces                =
 {
 	"hof_oceansetpiece_crates",
 	"hof_oceansetpiece_crates2",
@@ -182,61 +174,15 @@ local hof_ocean_setpieces =
 for i, layout in ipairs(hof_ocean_setpieces) do
 	Layouts[layout] = StaticLayout.Get("map/static_layouts/"..layout,
 	{
-		start_mask 			     = _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		fill_mask                = _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		add_topology             = {room_id = "StaticLayoutIsland: OceanSetPieces", tags = {"RoadPoison", "WreckArea", "not_mainland"}},
-		areas                    =
+		add_topology                     = 
 		{
+			room_id                      = "StaticLayoutIsland:WreckSetPieces",
+			tags                         = {"RoadPoison", "not_mainland", "WreckArea"},
 		},
-		min_dist_from_land       = 10,
+		min_dist_from_land               = 0,
 	})
-	Layouts[layout].ground_types = _G.OCEANSETPIECE_GROUNDS
+	Layouts[layout].ground_types         = { WORLD_TILES.OCEAN_BRINEPOOL }
 end
-
-_G.MEADOWISLAND_GROUNDS =
-{
-	WORLD_TILES.OCEAN_BRINEPOOL, -- 1
-	WORLD_TILES.MONKEY_GROUND,   -- 2
-	WORLD_TILES.HOF_FIELDS,      -- 3
-	WORLD_TILES.HOF_TIDALMARSH,  -- 4
-	WORLD_TILES.ROAD,            -- 5
-	WORLD_TILES.FARMING_SOIL,    -- 6
-	WORLD_TILES.FOREST,          -- 7
-}
-
-local hof_meadow_setpieces =
-{
-	"hof_meadowisland1",
-	"hof_meadowisland2",
-}
-
-for i, layout in ipairs(hof_meadow_setpieces) do
-	Layouts[layout] = StaticLayout.Get("map/static_layouts/"..layout,
-	{
-		start_mask 			     = _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		fill_mask                = _G.PLACE_MASK.IGNORE_IMPASSABLE,
-		add_topology             = {room_id = "StaticLayoutIsland: MeadowIsland", tags = {"RoadPoison", "MeadowArea", "not_mainland"}},
-		areas                    =
-		{
-		},
-		min_dist_from_land       = 10,
-	})
-	Layouts[layout].ground_types = _G.MEADOWISLAND_GROUNDS
-end
-
--- In case someone needs Sammy but not the whole island.
-Layouts["MeadowIslandShop"] = StaticLayout.Get("map/static_layouts/hof_meadowisland_shop")
-Layouts["MeadowIslandShop"].ground_types = { WORLD_TILES.ROAD, WORLD_TILES.FOREST, WORLD_TILES.FARMING_SOIL } -- 1,2,3
-
---[[
-AddGlobalClassPostConstruct("map/storygen", "Story", function(self)
-	if self.map_tags ~= nil then
-		self.map_tags.Tag["SerenityArea"] = function(tagdata) return "TAG", "SerenityArea" end
-		self.map_tags.Tag["MeadowArea"]   = function(tagdata) return "TAG", "MeadowArea"   end
-		self.map_tags.Tag["WreckArea"]    = function(tagdata) return "TAG", "WreckArea"    end
-	end
-end)
-]]--
 
 -- Custom Layout for Waterlogged biome.
 local function HofWaterloggedArea()
@@ -290,91 +236,30 @@ local function HofWaterloggedArea()
 	return stuff
 end
 
-Layouts["Waterlogged1"] = StaticLayout.Get("map/static_layouts/hof_waterlogged1",
+local waterlogged_layouts = 
 {
-	areas =
-	{
-		treearea = HofWaterloggedArea,
-	}
-})
-
-Layouts["Waterlogged2"] = StaticLayout.Get("map/static_layouts/hof_waterlogged2",
-{
-	areas =
-	{
-		treearea = HofWaterloggedArea,
-	}
-})
-
-Layouts["Waterlogged3"] = StaticLayout.Get("map/static_layouts/hof_waterlogged3",
-{
-	areas =
-	{
-		treearea = HofWaterloggedArea,
-	}
-})
-
-Layouts["Waterlogged4"] = StaticLayout.Get("map/static_layouts/hof_waterlogged4",
-{
-	areas =
-	{
-		treearea = HofWaterloggedArea,
-	}
-})
-
---[[
-local MapData = 
-{
-    ["SerenitySpawner"] = true,
-	["MeadowSpawner"]   = true,
+	"Waterlogged1",
+	"Waterlogged2",
+	"Waterlogged3",
+	"Waterlogged4",
 }
 
-local MapTags = 
-{    
-    ["SerenitySpawner"] = function(tagdata, level)
-        if tagdata["SerenitySpawner"] == false then
-            return
-        end
-        
-        tagdata["SerenitySpawner"] = false
-    
-        if level ~= nil and level.overrides ~= nil and level.overrides.serenityisland == "never" then
-            return
-        end
-    
-        return "STATIC", "hof_serenityisland1"
-    end,
-	
-	["SerenityArea"] = function(tagdata)
-		return "TAG", "SerenityArea"
-	end,
-	
-	["MeadowSpawner"] = function(tagdata, level)
-        if tagdata["MeadowSpawner"] == false then
-            return
-        end
-        
-        tagdata["MeadowSpawner"] = false
-    
-        if level ~= nil and level.overrides ~= nil and level.overrides.serenityisland == "never" then
-            return
-        end
-    
-        return "STATIC", "hof_meadowisland2"
-    end,
-	
-	["MeadowArea"] = function(tagdata)
-		return "TAG", "MeadowArea"
-	end,
-}
+for _, name in ipairs(waterlogged_layouts) do
+	Layouts[name] = StaticLayout.Get("map/static_layouts/hof_" .. string.lower(name), 
+	{
+		areas = 
+		{
+			treearea = HofWaterloggedArea,
+		},
+	})
+end
 
-AddGlobalClassPostConstruct("map/storygen", "Story", function(self)
-    for tag, v in pairs(MapData) do
-        self.map_tags.TagData[tag] = v
-    end
-    
-    for tag, v in pairs(MapTags) do
-        self.map_tags.Tag[tag] = v
-    end
+AddClassPostConstruct("map/storygen", function(self)
+	if self.map_tags ~= nil then
+		self.map_tags.Tag["SerenityArea"] = function(tagdata) return "TAG", "SerenityArea" end
+		self.map_tags.Tag["MeadowArea"]   = function(tagdata) return "TAG", "MeadowArea" end
+		self.map_tags.Tag["WreckArea"]    = function(tagdata) return "TAG", "WreckArea" end
+	end
 end)
-]]--
+
+modimport("hof_init/world/hof_worldgen")
