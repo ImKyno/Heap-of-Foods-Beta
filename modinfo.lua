@@ -1,7 +1,21 @@
-name                        = "Heap of Foods"
-version                     = "2.3-B"
+local function ChooseTranslationTable(tbl)
+    return tbl[locale] or tbl[1]
+end
 
-description                 = 
+local STRINGS = 
+{
+	NAME = 
+	{
+		"Heap of Foods",
+		zh  = "食物堆积 (Heap of Foods)",
+		zht = "食物堆積 (Heap of Foods)",
+		pt  = "Amontoado de Comidas (Heap of Foods)",
+		pl  = "Stos jedzenia (Heap of Foods)",
+		es  = "Montón de Alimentos (Heap of Foods)",
+	},
+	
+	DESCRIPTION =
+	{
 [[
 󰀄 Adds over +200 brand new Crock Pot dishes alongside new ingredients to use. Happy Cooking!
 
@@ -13,160 +27,40 @@ Seaside Island welcomes a new merchant! Assisted by a familiar survivor, he has 
 
 Make sure to check his wares every now and then to see what he got to offer. As his inventory is always changing!
 
-󰀌 Mod Version: 2.3-B
-󰀧 Update: Seaside Summer (Part II)
-]]
+󰀌 Mod Version: 2.4-B
+󰀧 Update: Preparing The Hook
+]],
+		zh  =
+[[
+󰀄 新增超过 +200 道全新慢炖锅菜肴，以及可使用的新食材。快乐烹饪！
 
-author                      = "Kyno"
-api_version                 = 10
-priority                    = -15 -- Above 0 = Override other mods. | Below 0 = Overriden by other mods.
+󰀠 还新增了海洋中的全新生物群系！
+󰀦 完整食谱表可在 Mod 页面查看！
 
-dst_compatible              = true
-all_clients_require_mod     = true
-client_only_mod             = false
+󰀏 海滨夏日更新亮点：
+海滨岛迎来了一位新商人！在熟悉的幸存者协助下，他开设了一家独一无二的贸易站。专门提供稀有物品和极难获得的食材，甚至包括一些其他地方找不到的物品。
 
-server_filter_tags          = {"Heap of Foods", "HOF", "Cooking", "Entertainment", "Kyno"}
+记得不时查看他的商品，看看他带来了什么新奇好货。因为他的库存总是在变化！
 
-icon                        = "ModiconHOF.tex"
-icon_atlas                  = "ModiconHOF.xml"
+󰀌 Mod 版本： 2.4-B
+󰀧 更新内容： 准备“排队”
+]],	
+		zht =
+[[
+󰀄 新增超過 +200 道全新慢燉鍋菜餚，以及可使用的新食材。快樂烹飪！
 
--- Mod Configuraton Strings and Stuff.
-local names                 =
-{
-	general                 = "General Options",
-	extras                  = "Miscellaneous Options",
-	retrofitting            = "Retrofit Options",
-}
+󰀠 還新增了海洋中的全新生物群系！
+󰀦 完整食譜表可在 Mod 頁面查看！
 
-local labels                =
-{
-	language                = "Language",
-	scrapbook               = "Mod Scrapbook",
-	spoilage                = "Keep Food Spoilage",
-	coffeedrop              = "Coffee Plant Drop Rate",
-	seasonalfoods           = "Seasonal Recipes",
-	modspices               = "Chef's Spices",
-	humanmeat               = "Long Pig Recipes",
-	alcoholic               = "Alcoholic Restriction",
-	iceboxstacks            = "Elastispacer for Fridges",
-	giantspawn              = "Giants from Foods",
-	coffeespeed             = "Speed Buff",
-	coffeeduration          = "Speed Buff Duration",
-	warlygrinder            = "Portable Grinding Mill Recipes",
-	warlyrecipes            = "Chef's Specials Cookbook Page",
-	buckettweak             = "Bucket-o-Poop Recipe",
-	retrofit                = "Retrofit Contents",
-	modtrades               = "Retrofit Trades",
-}
+󰀏 海濱夏日更新亮點：
+海濱島迎來了一位新商人！在熟悉的倖存者協助下，他開設了一家獨一無二的貿易站。專門提供稀有物品和極難獲得的食材，甚至包括一些其他地方找不到的物品。
 
-local hovers                =
-{
-	general                 = "General options for the entire mod.",
-	extras                  = "Miscellaneous options for the mod.",
-	retrofitting            = "Retrofitting options for old worlds.",
+記得不時查看他的商品，看看他帶來了什麼新奇好貨。因為他的庫存總是在變化！
 
-	language                = "Choose the language for the mod.\nYou can submit your translation in our Discord.",
-	scrapbook               = "Should the mod's contents be added to the Scrapbook?",
-	spoilage                = "Should food spoil if it's in the Crock Pot?",
-	coffeedrop              = "How many Coffee Plants Dragonfly should drop?",
-	seasonalfoods           = "Should Seasonal Recipes only be cooked during Special Events?",
-	modspices               = "Should Warly be able to grind Mod Spices?\nThis may cause longer loading times.",
-	humanmeat               = "Should Players drop Long Pigs upon death?\nNote: If disabled, this will cause some Recipes to be uncookable.",
-	alcoholic               = "Should some characters be unable to drink Alcoholic-like drinks?",
-	iceboxstacks            = "Should Elastispacer be able to upgrade Ice Box and Salt Box?\nNote: If disabled afterwards, may cause visual glitches.",
-	giantspawn              = "Should Players spawn Giants when eating their special food?",
-	coffeespeed             = "Should the foods give the Speed Buff when eaten?\n\This option only applies to certain foods.",
-	coffeeduration          = "How long should the Speed Buff from foods last?",
-	warlygrinder            = "Should Warly's Portable Grinding Mill have the recipes from Mealing Stone?",
-	warlyrecipes            = "Should Warly's Recipes appear on \"Chef's Specials\" instead of \"Mod Recipes\" in the Cookbook?",
-	buckettweak             = "Should Bucket-o-Poop use the Bucket instead of its default recipe?",
-	retrofit                = "If your world is missing the Mod Contents enable this option.\nThis option will be set as \"Updated\" once the retrofitting is finished!",
-	modtrades               = "Should Pig King be able to trade items in exchange for Mod items?\nThis also applies to Pig Elder in Lights Out worlds.",
-}
-
-local desc                  =
-{
-	disabled                = "No",
-	enabled                 = "Yes",
-
-	language1               = "English",
-	language2               = "Português",
-	language3               = "简体中文",
-	language4               = "繁體中文",
-	language5               = "Polski",
-	coffeedrop1             = "0",
-	coffeedrop2             = "4",
-	coffeedrop3             = "8",
-	coffeedrop4             = "12",
-	coffeedrop5             = "16",
-	coffeeduration1         = "Super Fast",
-	coffeeduration2         = "Fast",
-	coffeeduration3         = "Default",
-	coffeeduration4         = "Average",
-	coffeeduration5         = "Long",
-	coffeeduration6         = "Super Long",
-	retrofit1               = "Updated",
-	retrofit2               = "Retrofit Islands",
-	retrofit3               = "Retrofit Mermhuts",
-}
-
-local deschovers            =
-{
-	language1               = "Localization by: Kyno",
-	language2               = "Localization by: Kyno",
-	language3               = "Localization by: 糖豆罐里好多颜色",
-	language4               = "Localization by: Anonymous Author",
-	language5               = "Localization by: Dr_Brzeszczot",
-	scrapbook1              = "Default Scrapbook.",
-	scrapbook2              = "Mod's contents will be added to the Scrapbook.",
-	spoilage1               = "Food will spoil in Crock Pot, Portable Crock Pot, etc.",
-	spoilage2               = "Food will not spoil in Crock Pot, Portable Crock Pot, etc.",
-	coffeedrop1             = "Dragonfly will not Coffee Plants.",
-	coffeedrop2             = "Dragonfly will drop 4 Coffee Plants.",
-	coffeedrop3             = "Dragonfly will drop 8 Coffee Plants.",
-	coffeedrop4             = "Dragonfly will drop 12 Coffee Plants.",
-	coffeedrop5             = "Dragonfly will drop 16 Coffee Plants.",
-	seasonalfoods1          = "Seasonal Recipes can be cooked without restrictions.",
-	seasonalfoods2          = "Seasonal Recipes can only be cooked when Special Events are active.",
-	modspices1              = "Warly can't grind any Mod Spices.",
-	modspices2              = "Warly can grind all Mod Spices at the Portable Grinding Mill.",
-	humanmeat1              = "Players will not drop Long Pigs upon death.",
-	humanmeat2              = "Players may have a chance to drop Long Pigs upon death.",
-	alcoholic1              = "All characters can drink Alcoholic-like drinks.",
-	alcoholic2              = "Some characters like Webber, Wendy, etc. can't drink Alcoholic-like drinks.",
-	iceboxstacks1           = "Elastispacer will not upgrade Ice Box and Salt Box.",
-	iceboxstacks2           = "Elastispacer will upgrade Ice Box and Salt Box for infinite item stacks.",
-	giantspawn1             = "Players will not spawn Giants when eating certain foods.",
-	giantspawn2             = "Players will spawn Giants when eating certain foods.",
-	coffeespeed1            = "Foods will not give the Speed Buff when eaten.",
-	coffeespeed2            = "Foods will give the Speed Buff when eaten.",
-	coffeeduration1         = "Speed Buff will last for 2 Minutes.",
-	coffeeduration2         = "Speed Buff will last for a Half Day.",
-	coffeeduration3         = "Speed Buff will last for 1 Day.",
-	coffeeduration4         = "Speed Buff will last for 1.5 Days.",
-	coffeeduration5         = "Speed Buff will last for 2 Days.",
-	coffeeduration6         = "Speed Buff will last for 4 Days.",
-	warlygrinder1           = "Warly's Portable Grinding Mill will not have the recipes from Mealing Stone.",
-	warlygrinder2           = "Warly's Portable Grinding Mill will have the recipes from Mealing Stone.",
-	warlyrecipes1           = "Warly's Recipes will appear on \"Mod Recipes\" page of the Cookbook.",
-	warlyrecipes2           = "Warly's Recipes will appear on \"Chef's Specials\" page of the Cookbook.",
-	buckettweak1            = "Bucket-o-Poop will not use the Bucket. (Default crafting recipe).",
-	buckettweak2            = "Bucket-o-Poop will use the Bucket as its crafting ingredient.",
-	retrofit1               = "Your world is already updated with the Mod Contents.",
-	retrofit2               = "Mod Islands will be generated during server initialization.",
-	retrofit3               = "Mod Mermhuts will be generated during server initialization.",
-	modtrades1              = "Certain items can't be traded in exchange for Mod items.",
-	modtrades2              = "Certain items can be traded in exchange for Mod items.",
-}
-
--- Localizations.
--- If you want to contribute with your localization please head to "scripts/strings/hof_localization.lua" for more information.
-
--- Brazilian Portuguese
-if locale == "pt" then
-	name                        = "Amontoado de Comidas"
-
-	description                 = 
+󰀌 Mod 版本： 2.4-B
+󰀧 更新內容： 準備「排隊」
+]],	
+		pt  = 
 [[
 󰀄 Adiciona +200 novas comidas para a Panela, além de ingredientes novos para cozinhar!
 
@@ -178,340 +72,1448 @@ A Ilha Beira-mar dá as boas-vindas a um novo comerciante! Com a ajuda de um sob
 
 Não deixe de conferir os produtos dele de vez em quando para ver o que ele tem a oferecer. Já que o inventário dele está sempre mudando!
 
-󰀌 Versão do Mod: 2.3-B
-󰀧 Atualização: Verão à Beira-mar (Parte II)
-]]
-
-	names                       =
-	{
-		general                 = "Opções Gerais",
-		extras                  = "Opções de Miscelânea",
-		retrofitting            = "Opções de Retrocomp.",
-	}
-
-	labels                      =
-	{
-		language                = "Idioma",
-		scrapbook               = "Scrapbook do Mod",
-		spoilage                = "Deteorização da Comida",
-		coffeedrop              = "Taxa de Drop da Planta de Café",
-		seasonalfoods           = "Receitas Sazonais",
-		modspices               = "Temperos do Chef", 
-		humanmeat               = "Receitas de Carne Humana",
-		alcoholic               = "Restrição Alcoólica",
-		iceboxstacks            = "Elastipaçador para Geladeiras",
-		giantspawn              = "Spawn de Gigantes das Comidas",
-		coffeespeed             = "Efeito de Velocidade",
-		coffeeduration          = "Duração do Efeito de Velocidade",
-		warlygrinder            = "Receitas do Moinho de Moagem",
-		warlyrecipes            = "Página Especiais do Chef",
-		buckettweak             = "Receita do Balde de Cocô",
-		retrofit                = "Fazer Retro. de Conteúdos",
-		modtrades               = "Retro. de Trocas",
-	}
-
-	hovers                      =
-	{
-		general                 = "Opções Gerais do Mod.",
-		food                    = "Opções de Comidas e Ingredientes.",
-		extras                  = "Opções de Miscelânea do Mod.",
-		retrofitting            = "Opções de Retrocompatibilidade para mundos antigos.",
-	
-		language                = "Escolha o Idioma do Mod.\nVocê pode enviar sua tradução em nosso Discord.",
-		scrapbook               = "Permitir que os conteúdos do Mod sejam adicionados ao Scrapbook?",
-		spoilage                = "Permitir que as comidas estraguem se estiverem na Panela?",
-		coffeedrop              = "Quantas Plantas de Café a Libélula deve deixar cair?",
-		seasonalfoods           = "Permitir que as Receitas Sazonais sejam cozinhadas somente em Eventos Especiais?",
-		modspices               = "Permitir que o Warly consiga fazer Temperos do Mod?\nIsso pode vir a causar um maior tempo de carregamento.",
-		humanmeat               = "Permitir que Jogadores deixem cair Carne Humana quando morrem?\nNota: Se desabilitado, pode impedir certas comidas de serem feitas.",
-		alcoholic               = "Permitir que alguns personagens sejam impedidos de beber bebidas alcoólicas?",
-		iceboxstacks            = "Permitir que o Elastipaçador funcione para Geladeiras?\nNota:Pode causar erros visuais se for desabilitado posteriormente.",
-		giantspawn              = "Permitir que Gigantes apareçam se Jogadores comerem suas comidas especiais?",
-		coffeespeed             = "Permitir que as comidas proporcionem Efeito de Velocidade?\n\Isto só se aplica à certas comidas.",
-		coffeeduration          = "O quão longo deve ser o Efeito de Velocidade das comidas?",
-		warlygrinder            = "Permitir que o Moinho de Moagem do Warly tenha as receitas da Pedra de Preparação?",
-		warlyrecipes            = "Permitir que as Receitas do Warly apareçam na página \"Especiais do Chefe\" ao invés de \"Receitas do Mod\" no Livro de Receitas?",
-		buckettweak             = "Permitir que o Balde de Cocô use o Balde ao invés de seus ingredientes padrões?",
-		retrofit                = "Se seu mundo está faltando algum conteúdo ative esta opção.\nEsta opção irá ficar como \"Atualizado\ assim que a retrocompatibilidade for finalizada!",
-		modtrades               = "Permitir que o Rei Porco aceite certos itens em troca de itens do Mod?\nIsso também se aplica ao Porco Ancião em mundos Lights Out.",
-	}
-
-	desc                        =
-	{
-		disabled                = "Não",
-		enabled                 = "Sim",
-
-		language1               = "English",
-		language2               = "Português",
-		language3               = "简体中文",
-		language4               = "繁體中文",
-		language5               = "Polski",
-		coffeedrop1             = "0",
-		coffeedrop2             = "4",
-		coffeedrop3             = "8",
-		coffeedrop4             = "12",
-		coffeedrop5             = "16",
-		coffeeduration1         = "Super Rápido",
-		coffeeduration2         = "Rápido",
-		coffeeduration3         = "Padrão",
-		coffeeduration4         = "Médio",
-		coffeeduration5         = "Longo",
-		coffeeduration6         = "Super Longo",
-		retrofit1               = "Atualizado",
-		retrofit2               = "Retro. de Ilhas",
-		retrofit3               = "Retro. de Mermhuts",
-	}
-
-	deschovers                  =
-	{
-		language1               = "Localização por: Kyno",
-		language2               = "Localização por: Kyno",
-		language3               = "Localização por: 糖豆罐里好多颜色",
-		language4               = "Localização por: Autor Anônimo",
-		language5               = "Localização por: Dr_Brzeszczot",
-		scrapbook1              = "Scrapbook Padrão.",
-		scrapbook2              = "Os conteúdos do Mod serão adicionados ao Scrapbook.",
-		spoilage1               = "As comidas estragarão na Panela, Panela Portátil, etc.",
-		spoilage2               = "As comidas não estragarão na Panela, Panela Portátil, etc.",
-		coffeedrop1             = "A Libélula não deixará cair nenhuma Planta de Café",
-		coffeedrop2             = "A Libélula deixará cair 4 Plantas de Café",
-		coffeedrop3             = "A Libélula deixará cair 8 Plantas de Café",
-		coffeedrop4             = "A Libélula deixará cair 12 Plantas de Café",
-		coffeedrop5             = "A Libélula deixará cair 16 Plantas de Café",
-		seasonalfoods1          = "Receitas Sazonais podem ser cozinhadas sem nenhuma restrição.",
-		seasonalfoods2          = "Receitas Sazonais só podem ser cozinhadas durante Eventos Especiais.",
-		modspices1              = "Warly não irá conseguir fazer nenhum Tempero do Mod.",
-		modspices2              = "Warly poderá fazer qualquer Tempero do Mod no Moinho de Moagem Portátil.",
-		humanmeat1              = "Jogadores não deixarão cair Carne Humana quando morrem.",
-		humanmeat2              = "Jogadores podem ter a chance de deixar cair Carne Humana quando morrem.",
-		alcoholic1              = "Todos os personagens podem beber bebidas alcoólicas.",
-		alcoholic2              = "Alguns personagens como Webber, Wendy, etc. Não poderão beber bebidas alcoólicas.",
-		iceboxstacks1           = "O Elastipaçador não irá funcionar para Geladeiras.",
-		iceboxstacks2           = "O Elastipaçador irá funcionar para Geladeiras, permitindo pilhas infinitas de itens.",
-		giantspawn1             = "Jogadores não irão spawnar Gigantes quando comem certas comidas.",
-		giantspawn2             = "Jogadores irão spawnar Gigantes quando comem certas comidas.",
-		coffeespeed1            = "As comidas não irão proporcionar o Efeito de Velocidade quando ingeridas.",
-		coffeespeed2            = "As comidas irão proporcionar o Efeito de Velocidade quando ingeridas.",
-		coffeeduration1         = "O Efeito de Velocidade irá durar por 2 minutos.",
-		coffeeduration2         = "O Efeito de Velocidade irá durar por meio dia.",
-		coffeeduration3         = "O Efeito de Velocidade irá durar 1 dia.",
-		coffeeduration4         = "O Efeito de Velocidade irá durar 1 dia e meio.",
-		coffeeduration5         = "O Efeito de Velocidade irá durar 2 dias.",
-		coffeeduration6         = "O Efeito de Velocidade irá durar 4 dias.",
-		warlygrinder1           = "O Moinho de Moagem do Warly não terá as receitas da Pedra de Preparação.",
-		warlygrinder2           = "O Moinho de Moagem do Warly terá as receitas da Pedra de Preparação.",
-		warlyrecipes1           = "As Receitas do Warly irão aparecer na página \"Receitas do Mod\" no Livro de Receitas.",
-		warlyrecipes2           = "As Receitas do Warly irão aparecer na página \"Especiais do Chefe\" no Livro de Receitas.",
-		buckettweak1            = "O Balde de Cocô não irá usar o Balde. (Ingredientes padrão).",
-		buckettweak2            = "O Balde de Cocô irá usar o Balde como parte de seu ingrediente.",
-		retrofit1               = "Seu mundo já está atualizado com os conteúdos do Mod.",
-		retrofit2               = "As Ilhas do Mod serão geradas durante a inicialização do servidor.",
-		retrofit3               = "As Mermhuts do Mod serão geradas durante a inicialização do servidor.",
-		modtrades1              = "Não será possível fazer trocas por itens do Mod.",
-		modtrades2              = "Será possível fazer trocas por itens do Mod.",
-	}
-end
-
--- Simplified Chinese.
-if locale == "zh" or locale == "zhr" then
-	name                        = "Heap of Foods"
-
-	description                 = 
+󰀌 Versão do Mod: 2.4-B
+󰀧 Atualização: Preparando o Anzol
+]],
+		pl  =
 [[
-󰀄 新增 200 多道全新的烹饪锅料理和几种新食材。祝您烹饪愉快！
+󰀄 Dodaje ponad +200 zupełnie nowych potraw do Crock Pota wraz z nowymi składnikami do wykorzystania. Smacznego gotowania!
 
-󰀠 还在海洋的某处添加了全新的生物群落！
-󰀦 Mod创意工坊的介绍页面上有完整食谱表！
+󰀠 Zawiera również zupełnie nowe biomasy gdzieś na Oceanie!
+󰀦 Pełna lista przepisów dostępna na stronie Moda!
 
-󰀏 海缤夏日特色更新:
-海岛迎来了一位新的商人！在一个熟悉的冒险家的帮助下，他开设了一个独特的交易站。售卖稀有物品和原料，这些物品和原料在其他地方很难获得，甚至有些你在其他地方都找不到。
+󰀏 Wprowadzenie Aktualizacji Lato nad Morzem:
+Wyspa nad Morzem wita nowego handlarza! Wspierany przez znanego ocalałego, otworzył wyjątkowy punkt handlowy. Specjalizuje się w rzadkich przedmiotach i składnikach, które w przeciwnym razie byłyby niezwykle trudne do zdobycia, a nawet w niektórych przypadkach nie do znalezienia nigdzie indziej. 
 
-一定要时不时地光顾下他的小店，看看他有什么靓货。因为他的小店进货很频繁!
+󰀌 Wersja Moda: 2.4-B
+󰀧 Aktualizacja: Przygotowanie Hook
+]],
+		es  =
+[[
+󰀄 ¡Agrega más de +200 nuevos platos para la Olla, junto con nuevos ingredientes para cocinar!
 
-󰀌 Mod Version: 2.3-B
-󰀧 Update: Seaside Summer (Part II)
-]]
+󰀠 ¡También incluye nuevos biomas en algún lugar del mar abierto!
+󰀦 ¡Lista completa de recetas disponible en la página del Mod!
 
-	names                       =
+󰀏 Presentando la actualización Verano junto al Mar:
+¡La Isla Junto al Mar da la bienvenida a un nuevo comerciante! Con la ayuda de un sobreviviente conocido, ha abierto un puesto comercial único. Especializado en objetos e ingredientes raros que, de otra manera, serían increíblemente difíciles de conseguir, e incluso algunos que no encontrarás en ningún otro lugar.
+
+No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrecer, ¡ya que su inventario cambia constantemente!
+
+󰀌 Versión del Mod: 2.4-B
+󰀧 Actualización: Preparando el Gancho
+]],
+	},
+
+	SETTINGS = 
 	{
-		general                 = "一般选项",
-		extras                  = "其他选项",
-		retrofitting            = "改造选项",
-	}
+		DISABLED =
+		{
+			"Disabled",
+			zh  = "残疾人",
+			zht = "殘障人士",
+			pt  = "Desativado",
+			pl  = "Wyłączony",
+			es  = "Desactivada",
+		},
+		
+		ENABLED =
+		{
+			"Enabled",
+			zh  = "启用",
+			zht = "啟用",
+			pt  = "Ativado",
+			pl  = "Włączony",
+			es  = "Activada",
+		},
 
-	labels                      =
-	{
-		language                = "语言",
-		scrapbook               = "Mod图鉴",
-		spoilage                = "防止食物腐败",
-		coffeedrop              = "咖啡丛掉落数量",
-		seasonalfoods           = "季节性食谱",
-		modspices               = "厨师香料",
-		humanmeat               = "人肉食谱",
-		alcoholic               = "酒精限制",
-		iceboxstacks            = "冰箱的弹性空间",
-		giantspawn              = "特殊Boss料理",
-		coffeespeed             = "移速Buff",
-		coffeeduration          = "移速Buff持续时间",
-		warlygrinder            = "便携式研磨器食谱",
-		warlyrecipes            = "沃利的特色食谱页面",
-		buckettweak             = "便便桶配方",
-		retrofit                = "改造内容",
-		modtrades               = "贸易转型",
-	}
+		GENERAL =
+		{
+			NAME =
+			{
+				"General Options",
+				zh  = "一般选项",
+				zht = "一般選項",
+				pt  = "Opções Gerais",
+				pl  = "Opcje ogólne",
+				es  = "Opciones generales",
+			},
+			
+			HOVER =
+			{
+				"General options for the entire mod.",
+				zh  = "Mod的一般选项。",
+				zht = "整個模組的常規選項。",
+				pt  = "Opções gerais para o Mod inteiro.",
+				pl  = "Ogólne opcje dla całego moda.",
+				es  = "Opciones generales para todo el mod.",
+			},
+		},
+		
+		EXTRAS =
+		{
+			NAME =
+			{
+				"Miscellaneous Options",
+				zh  = "其他选项",
+				zht = "其他選項",
+				pt  = "Opções de Miscelânea",
+				pl  = "Różne opcje",
+				es  = "Opciones varias",
+			},
+			
+			HOVER =
+			{
+				"Miscellaneous options for the mod.",
+				zh  = "Mod的其他选项。",
+				zht = "該模組的其他選項。",
+				pt  = "Opções de miscelânea para o mod.",
+				pl  = "Różne opcje dla moda.",
+				es  = "Opciones varias para el mod.",
+			},
+		},
+		
+		RETROCOMPAT =
+		{
+			NAME =
+			{
+				"Retrofit Options",
+				zh  = "改造选项",
+				zht = "改造選項",
+				pt  = "Opções de Retrofit",
+				pl  = "Opcje modernizacji",
+				es  = "Opciones de Retrofit",
+			},
+			
+			HOVER =
+			{
+				"Retrofitting options for old worlds.",
+				zh  = "为旧世界提供向后兼容选项。",
+				zht = "為舊世界提供改造選擇。",
+				pt  = "Opções de retrofitting para mundos antigos.",
+				pl  = "Opcje modernizacji starych światów.",
+				es  = "Opciones de retrofitting para mundos antiguos.",
+			},
+		},
+		
+		LANGUAGE =
+		{
+			NAME =
+			{
+				"Language",
+				zh  = "语",
+				zht = "話",
+				pt  = "Idioma",
+				pl  = "Język",
+				es  = "Idioma",
+			},
 
-	hovers                      =
-	{
-		general                 = "Mod的一般选项。",
-		food                    = "食物和配料选项。",
-		extras                  = "Mod的其他选项。",
-		retrofitting            = "为旧世界提供向后兼容选项。",
-	
-		language                = "选择Mod语言。\n你可以在我们的Discord提供你的翻译。",
-		scrapbook               = "Mod的内容是否添加到图鉴？",
-		spoilage                = "料理在烹饪锅中是否变质？",
-		coffeedrop              = "龙蝇掉落多少数量的咖啡丛？",
-		seasonalfoods           = "季节性的料理是否在特殊活动下才能烹饪？",
-		modspices               = "沃利可以研磨Mod的香料吗？\n这可能会导致游戏加载时间延长。",
-		humanmeat               = "玩家死亡时是否掉落人肉？\n注意：如果禁用，可能会导致无法制作某些料理。",
-		iceboxstacks            = "弹性空间制造器是否可以升级冰箱和盐盒？\n注意: 若升级后禁用可能会导致视觉上的问题。",
-		alcoholic               = "是否应该禁止某些角色饮酒？",
-		giantspawn              = "如果玩家吃了含boss掉落物的特殊料理，boss是否应该出现？",
-		coffeespeed             = "料理是否提供移速Buff？\n该项仅作用于特定料理",
-		coffeeduration          = "料理提供的移速Buff可以持续多久？",
-		warlygrinder            = "沃利的便携式研磨器是否可以拥有碾磨石的功能？",
-		warlyrecipes            = "在烹饪指南中，沃利的Mod特色料理是否应该出现在\"大厨特色菜\"分页，而不是\"模组食谱\"分页？",
-		buckettweak             = "便便桶是否用于挤奶而不是默认功能？",
-		retrofit                = "如果你的世界缺少Mod内容，请启用此选项。\n改造完成后，该选项将被设置为 \"已更新\"！",
-		modtrades               = "猪王是否应该能够用某些物品来交换 Mod 物品？\n这也适用于熄灯世界中的猪长老。"
-	}
+			HOVER =
+			{
+				"Choose the language for the mod.\nYou can submit your translation in our Discord.",
+				zh  = "选择模块的语言。 \n您可以在我们的 Discord 中提交您的翻译。",
+				zht = "選擇模組的語言。 \n您可以在我們的 Discord 中提交您的翻譯。",
+				pt  = "Escolha o idioma do Mod.\nVocê pode enviar sua tradução em nosso Discord.",
+				pl  = "Wybierz język moda.\nMożesz przesłać swoje tłumaczenie na naszym Discordzie.",
+				es  = "Elige el idioma para el mod.\nPuedes enviar tu traducción en nuestro Discord.",
+			},
 
-	desc                        =
-	{
-		disabled                = "否",
-		enabled                 = "是",
-
-		language1               = "English",
-		language2               = "Português",
-		language3               = "简体中文",
-		language4               = "繁體中文",
-		language5               = "Polski",
-		coffeedrop1             = "0",
-		coffeedrop2             = "4",
-		coffeedrop3             = "8",
-		coffeedrop4             = "12",
-		coffeedrop5             = "16",
-		coffeeduration1         = "超级短",
-		coffeeduration2         = "短",
-		coffeeduration3         = "默认",
-		coffeeduration4         = "平均",
-		coffeeduration5         = "长",
-		coffeeduration6         = "非常长",
-		retrofit1               = "已更新",
-		retrofit2               = "Mod岛屿",
-		retrofit3               = "Mod物品",
-	}
-
-	deschovers                  =
-	{
-		language1               = "翻译由: Kyno",
-		language2               = "翻译由: Kyno",
-		language3               = "翻译由: 糖豆罐里好多颜色",
-		language4               = "翻译由: 匿名作者",
-		language5               = "翻译由: Dr_Brzeszczot",
-		scrapbook1              = "默认图鉴。",
-		scrapbook2              = "Mod的内容将添加到图鉴",
-		spoilage1               = "料理在烹饪锅、便携式烹饪锅等锅中会变质。",
-		spoilage2               = "料理在烹饪锅、便携式烹饪锅等锅中不会变质。",
-		coffeedrop1             = "龙蝇不会掉落咖啡丛。",
-		coffeedrop2             = "龙蝇会掉4株落咖啡丛。",
-		coffeedrop3             = "龙蝇会掉8株落咖啡丛。",
-		coffeedrop4             = "龙蝇会掉12株落咖啡丛。",
-		coffeedrop5             = "龙蝇会掉16株落咖啡丛。",
-		seasonalfoods1          = "季节性料理烹饪不受任何限制",
-		seasonalfoods2          = "季节性料理只能在特殊活动开启时烹制。",
-		modspices1              = "沃利不能研磨任何Mod的香料。",
-		modspices2              = "沃利可以在便携式研磨器上研磨所有Mod的香料。",
-		humanmeat1              = "玩家死亡后不会掉落人肉。",
-		humanmeat2              = "玩家死亡后小概率会掉落人肉。",
-		alcoholic1              = "所有角色都能饮酒。",
-		alcoholic2              = "一些角色，比如韦伯，温蒂等。不能饮酒。",
-		iceboxstacks1           = "弹性空间制造器不可以升级冰箱和盐盒。",
-		iceboxstacks2           = "弹性空间制造器可以升级冰箱和盐盒，食物堆叠无上限。",
-		giantspawn1             = "玩家在食用某些料理时不会产生Boss。",
-		giantspawn2             = "玩家在食用某些料理时会产生Boss。",
-		coffeespeed1            = "料理食用后不会提高移速Buff。",
-		coffeespeed2            = "料理食用后会提高移速Buff。",
-		coffeeduration1         = "移速Buff会持续2分钟。",
-		coffeeduration2         = "移速Buff会持续半天。",
-		coffeeduration3         = "移速Buff会持续一天。",
-		coffeeduration4         = "移速Buff会持续1.5天。",
-		coffeeduration5         = "移速Buff会持续2天。",
-		coffeeduration6         = "移速Buff会持续4天",
-		warlygrinder1           = "沃利的便携式研磨器不会拥有碾磨石的功能。",
-		warlygrinder2           = "沃利的便携式研磨器会拥有碾磨石的功能。",
-		warlyrecipes1           = "在烹饪指南中，沃利的Mod特色料理会出现在\"模组食谱\"分页。",
-		warlyrecipes2           = "在烹饪指南中，沃利的Mod特色料理会出现在\"大厨特色菜\"分页。",
-		buckettweak1            = "便便桶使用默认功能。",
-		buckettweak2            = "便便桶不使用默认功能，可用于挤奶。",
-		retrofit1               = "你的世界已更新了Mod的内容。",
-		retrofit2               = "Mod的岛屿会在服务器初始化期间生成。",
-		retrofit3               = "Mod的物品会在服务器初始化期间生成。",
-		modtrades1              = "某些物品不能用 Mod 物品进行交易。",
-		modtrades2              = "某些物品可以用 Mod 物品进行交易。",
-	}
-end
-
-local options               =
-{
-	none                    = {{description = "", data = false}},
-	toggle                  = {{description = desc.disabled, data = false}, {description = desc.enabled, data = true}},
-	
-	language                = {{description = desc.language1,       hover = deschovers.language1,       data = false},         {description = desc.language2,       hover = deschovers.language2,       data = "pt"}, {description = desc.language3,       hover = deschovers.language3,       data = "zh"}, {description = desc.language5,       hover = deschovers.language5,       data = "pl"}}, 
-
-	seasonalfoods           = {{description = desc.disabled,        hover = deschovers.seasonalfoods1,  data = true},          {description = desc.enabled,         hover = deschovers.seasonalfoods2,  data = false}},
-	modspices               = {{description = desc.disabled,        hover = deschovers.modspices1,      data = false},         {description = desc.enabled,         hover = deschovers.modspices2,      data = true}},
-	humanmeat               = {{description = desc.disabled,        hover = deschovers.humanmeat1,      data = false},         {description = desc.enabled,         hover = deschovers.humanmeat2,      data = true}},
-	coffeedrop              = {{description = desc.coffeedrop1,     hover = deschovers.coffeedrop1,     data = 0},             {description = desc.coffeedrop2,     hover = deschovers.coffeedrop2,     data = 4},    {description = desc.coffeedrop3,     hover = deschovers.coffeedrop3,     data = 8},    {description = desc.coffeedrop4,     hover = deschovers.coffeedrop4,     data = 12},  {description = desc.coffeedrop5,     hover = deschovers.coffeedrop5,     data = 16}},
-	alcoholic               = {{description = desc.disabled,        hover = deschovers.alcoholic1,      data = false},         {description = desc.enabled,         hover = deschovers.alcoholic2,      data = true}},
-	giantspawn              = {{description = desc.disabled,        hover = deschovers.giantspawn1,     data = false},         {description = desc.enabled,         hover = deschovers.giantspawn2,     data = true}},
-	iceboxstacks            = {{description = desc.disabled,        hover = deschovers.iceboxstacks1,   data = false},         {description = desc.enabled,         hover = deschovers.iceboxstacks2,   data = true}},
-	coffeespeed             = {{description = desc.disabled,        hover = deschovers.coffeespeed1,    data = false},         {description = desc.enabled,         hover = deschovers.coffeespeed2,    data = true}},
-	coffeeduration          = {{description = desc.coffeeduration1, hover = deschovers.coffeeduration1, data = 120},           {description = desc.coffeeduration2, hover = deschovers.coffeeduration2, data = 240},  {description = desc.coffeeduration3, hover = deschovers.coffeeduration3, data = 480},  {description = desc.coffeeduration4, hover = deschovers.coffeeduration4, data = 640}, {description = desc.coffeeduration5, hover = deschovers.coffeeduration5, data = 960}, {description = desc.coffeeduration6, hover = deschovers.coffeeduration6, data = 1920}}, 
-	
-	scrapbook               = {{description = desc.disabled,        hover = deschovers.scrapbook1,      data = false},         {description = desc.enabled,         hover = deschovers.scrapbook2,      data = true}},
-	warlyrecipes            = {{description = desc.disabled,        hover = deschovers.warlyrecipes1,   data = false},         {description = desc.enabled,         hover = deschovers.warlyrecipes2,   data = true}},
-	spoilage                = {{description = desc.disabled,        hover = deschovers.spoilage1,       data = false},         {description = desc.enabled,         hover = deschovers.spoilage2,       data = true}},
-	warlygrinder            = {{description = desc.disabled,        hover = deschovers.warlygrinder1,   data = false},         {description = desc.enabled,         hover = deschovers.warlygrinder2,   data = true}},
-	buckettweak             = {{description = desc.disabled,        hover = deschovers.buckettweak1,    data = false},         {description = desc.enabled,         hover = deschovers.buckettweak2,    data = true}},
-	
-	retrofit                = {{description = desc.retrofit1,       hover = deschovers.retrofit1,       data = 0},             {description = desc.retrofit2,       hover = deschovers.retrofit2,       data = 1},    {description = desc.retrofit3,       hover = deschovers.retrofit3,       data = 2}},
-	modtrades               = {{description = desc.disabled,        hover = deschovers.modtrades1,      data = false},         {description = desc.enabled,         hover = deschovers.modtrades2,      data = true}},
+			HOVER_OPTIONS =
+			{
+				en  = "English",
+				zh  = "简体中文",
+				zht = "繁體中文",
+				pt  = "Português",
+				pl  = "Polski",
+				es  = "Español",
+				
+				DESCRIPTION =
+				{
+					en  = "Default Localization",
+					zh  = "作者: 糖豆罐里好多颜色",
+					zht = "作者： 匿名作者",
+					pt  = "Autor: Desconhecido",
+					pl  = "Autor: Dr_Brzeszczot",
+					es  = "Autor: Desconocido",
+				},
+			},
+		},
+		
+		SEASONALFOOD =
+		{
+			NAME =
+			{
+				"Seasonal Recipes",
+				zh  = "季节性食谱",
+				zht = "季節性食譜",
+				pt  = "Receitas Sazonais",
+				pl  = "Przepisy sezonowe",
+				es  = "Recetas de temporada",
+			},
+			
+			HOVER =
+			{
+				"Should Seasonal Recipes only be cooked during Special Events?",
+				zh  = "季节性的料理是否在特殊活动下才能烹饪？",
+				zht = "季節性食譜是否只能在特別活動期間烹飪？",
+				pt  = "Permitir que as Receitas Sazonais sejam cozinhadas somente em Eventos Especiais?",
+				pl  = "Czy sezonowe przepisy mogą być gotowane tylko podczas specjalnych wydarzeń?",
+				es  = "¿Las recetas de temporada solo pueden cocinarse durante eventos especiales?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Seasonal Recipes can be cooked without restrictions.",
+					zh  = "季节性料理烹饪不受任何限制",
+					zht = "季節性食譜可在任何時間無限制地烹飪。",
+					pt  = "Receitas Sazonais podem ser cozinhadas sem nenhuma restrição.",
+					pl  = "Sezonowe przepisy można gotować bez żadnych ograniczeń.",
+					es  = "Las recetas de temporada se pueden cocinar sin restricciones.",
+				},
+				
+				ENABLED =
+				{
+					"Seasonal Recipes can only be cooked when Special Events are active.",
+					zh  = "季节性料理只能在特殊活动开启时烹制。",
+					zht = "季節性食譜只能在特別活動進行時烹飪。",
+					pt  = "Receitas Sazonais só podem ser cozinhadas durante Eventos Especiais.",
+					pl  = "Sezonowe przepisy można gotować tylko wtedy, gdy aktywne są specjalne wydarzenia.",
+					es  = "Las recetas de temporada solo se pueden cocinar cuando los eventos especiales están activos.",
+				},
+			},
+		},
+		
+		HUMANMEAT =
+		{
+			NAME =
+			{
+				"Long Pig Recipes",
+				zh  = "人肉食谱",
+				zht = "長豬食譜",
+				pt  = "Receitas de Carne Humana",
+				pl  = "Przepisy z długiego wieprza",
+				es  = "Recetas de Cerdo Largo",
+			},
+			
+			HOVER =
+			{
+				"Should Players drop Long Pigs upon death?\nNote: If disabled, this will cause some Recipes to be uncookable.",
+				zh  = "玩家死亡时是否掉落人肉？\n注意：如果禁用，可能会导致无法制作某些料理。",
+				zht = "玩家死亡時是否應該掉落長豬？\n注意：如果停用，此設定將導致某些食譜無法烹飪。",
+				pt  = "Permitir que Jogadores deixem cair Carne Humana quando morrem?\nNota: Se desabilitado, pode impedir certas comidas de serem feitas.",
+				pl  = "Czy gracze powinni upuszczać długiego wieprza po śmierci?\nUwaga: Jeśli ta opcja jest wyłączona, niektóre przepisy staną się niemożliwe do ugotowania.",
+				es  = "¿Deberían los jugadores soltar cerdo largo al morir?\nNota: Si se desactiva, algunas recetas no podrán cocinarse.",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Players will not drop Long Pigs upon death.",
+					zh  = "玩家死亡后不会掉落人肉。",
+					zht = "玩家死亡時不會掉落長豬。",
+					pt  = "Jogadores não deixarão cair Carne Humana quando morrem.",
+					pl  = "Gracze nie upuszczą długiego wieprza po śmierci.",
+					es  = "Los jugadores no soltarán cerdo largo al morir.",
+				},
+				
+				ENABLED =
+				{
+					"Players may have a chance to drop Long Pigs upon death.",
+					zh  = "玩家死亡后小概率会掉落人肉。",
+					zht = "玩家死亡時有機會掉落長豬。",
+					pt  = "Jogadores podem ter a chance de deixar cair Carne Humana quando morrem.",
+					pl  = "Gracze mogą mieć szansę upuścić długiego wieprza po śmierci.",
+					es  = "Los jugadores pueden tener la posibilidad de soltar cerdo largo al morir.",
+				},
+			},
+		},
+		
+		COFFEEDROP =
+		{
+			NAME =
+			{
+				"Coffee Plant Drop Rate",
+				zh  = "咖啡丛掉落数量",
+				zht = "咖啡植物掉落率",
+				pt  = "Taxa de Drop da Planta de Café",
+				pl  = "Wskaźnik wypadania roślin kawy",
+				es  = "Tasa de caída de plantas de café",
+			},
+			
+			HOVER =
+			{
+				"How many Coffee Plants Dragonfly should drop?",
+				zh  = "龙蝇掉落多少数量的咖啡丛？",
+				zht = "龍蠅應掉落多少咖啡植物？",
+				pt  = "Quantas Plantas de Café a Libélula deve deixar cair?",
+				pl  = "Ile roślin kawy powinna upuścić Smocza Mucha?",
+				es  = "¿Cuántas plantas de café debería soltar la Libélula?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				AMOUNT0 =
+				{
+					"Dragonfly will not drop Coffee Plants.",
+					zh  = "龙蝇不会掉落咖啡丛。",
+					zht = "龍蠅不會掉落咖啡植物。",
+					pt  = "A Libélula não deixará cair nenhuma Planta de Café.",
+					pl  = "Smocza Mucha nie upuści roślin kawy.",
+					es  = "La Libélula no soltará plantas de café.",
+				},
+				
+				AMOUNT4 =
+				{
+					"Dragonfly will drop 4 Coffee Plants.",
+					zh  = "龙蝇会掉4株落咖啡丛。",
+					zht = "龍蠅會掉落 4 株咖啡植物。",
+					pt  = "A Libélula deixará cair 4 Plantas de Café.",
+					pl  = "Smocza Mucha upuści 4 roślin kawy.",
+					es  = "La Libélula soltará 4 plantas de café.",
+				},
+				
+				AMOUNT8 =
+				{
+					"Dragonfly will drop 8 Coffee Plants.",
+					zh  = "龙蝇会掉8株落咖啡丛。",
+					zht = "龍蠅會掉落 8 株咖啡植物。",
+					pt  = "A Libélula deixará cair 8 Plantas de Café.",
+					pl  = "Smocza Mucha upuści 8 roślin kawy.",
+					es  = "La Libélula soltará 8 plantas de café.",
+				},
+				
+				AMOUNT12 =
+				{
+					"Dragonfly will drop 12 Coffee Plants.",
+					zh  = "龙蝇会掉12株落咖啡丛。",
+					zht = "龍蠅會掉落 12 株咖啡植物。",
+					pt  = "A Libélula deixará cair 12 Plantas de Café.",
+					pl  = "Smocza Mucha upuści 12 roślin kawy.",
+					es  = "La Libélula soltará 12 plantas de café.",
+				},
+				
+				AMOUNT16 =
+				{
+					"Dragonfly will drop 16 Coffee Plants.",
+					zh  = "龙蝇会掉16株落咖啡丛。",
+					zht = "龍蠅會掉落 16 株咖啡植物。",
+					pt  = "A Libélula deixará cair 16 Plantas de Café.",
+					pl  = "Smocza Mucha upuści 16 roślin kawy.",
+					es  = "La Libélula soltará 16 plantas de café.",
+				},
+			},
+		},
+		
+		ALCOHOLICDRINKS =
+		{
+			NAME =
+			{
+				"Alcoholic Restriction",
+				zh  = "酒精限制",
+				zht = "酒精限制",
+				pt  = "Restrição Alcoólica",
+				pl  = "Ograniczenie alkoholu",
+				es  = "Restricción alcohólica",
+			},
+			
+			HOVER =
+			{
+				"Should some characters be unable to drink Alcoholic-like drinks?",
+				zh  = "是否应该禁止某些角色饮酒？",
+				zht = "是否應該禁止某些角色飲酒？",
+				pt  = "Permitir que alguns personagens sejam impedidos de beber bebidas alcoólicas?",
+				pl  = "Czy niektórzy bohaterowie powinni być niezdolni do picia napojów alkoholowych?",
+				es  = "¿Deberían algunos personajes no poder beber bebidas alcohólicas?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"All characters can drink Alcoholic-like drinks.",
+					zh  = "所有角色都能饮酒。",
+					zht = "所有角色都能飲酒。",
+					pt  = "Todos os personagens podem beber bebidas alcoólicas.",
+					pl  = "Wszyscy bohaterowie mogą pić napoje alkoholowe.",
+					es  = "Todos los personajes pueden beber bebidas alcohólicas.",
+				},
+				
+				ENABLED =
+				{
+					"Some characters like Webber, Wendy, etc. can't drink Alcoholic-like drinks.",
+					zh  = "一些角色，比如韦伯，温蒂等。不能饮酒。",
+					zht = "一些角色，比如韋伯、溫蒂等，不能飲酒。",
+					pt  = "Alguns personagens como Webber, Wendy, etc. Não poderão beber bebidas alcoólicas.",
+					pl  = "Niektórzy bohaterowie, tacy jak Webber, Wendy itp., nie mogą pić napojów alkoholowych.",
+					es  = "Algunos personajes como Webber, Wendy, etc., no podrán beber bebidas alcohólicas.",
+				},
+			},
+		},
+		
+		GIANTSPAWNING =
+		{
+			NAME =
+			{
+				"Giants From Foods",
+				zh  = "特殊Boss料理",
+				zht = "特殊Boss料理",
+				pt  = "Spawn de Gigantes das Comidas",
+				pl  = "Giganci z jedzenia",
+				es  = "Gigantes de la comida",
+			},
+			
+			HOVER =
+			{
+				"Should Players spawn Giants when eating their special food?",
+				zh  = "如果玩家吃了含boss掉落物的特殊料理，boss是否应该出现？",
+				zht = "如果玩家吃了含Boss掉落物的特殊料理，Boss是否應該出現？",
+				pt  = "Permitir que Gigantes apareçam se Jogadores comerem suas comidas especiais?",
+				pl  = "Czy giganci powinni się pojawiać, gdy gracze jedzą swoje specjalne potrawy?",
+				es  = "¿Deberían aparecer gigantes cuando los jugadores coman sus comidas especiales?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Players will not spawn Giants when eating their special foods.",
+					zh  = "玩家在食用某些料理时不会产生Boss。",
+					zht = "玩家在食用某些料理時不會產生Boss。",
+					pt  = "Jogadores não irão spawnar Gigantes quando comerem suas comidas especiais.",
+					pl  = "Gracze nie przywołają gigantów po zjedzeniu swoich specjalnych potraw.",
+					es  = "Los jugadores no invocarán gigantes al comer sus comidas especiales.",
+				},
+				
+				ENABLED =
+				{
+					"Players will spawn Giants when eating their special foods.",
+					zh  = "玩家在食用某些料理时会产生Boss。",
+					zht = "玩家在食用某些料理時會產生Boss。",
+					pt  = "Jogadores irão spawnar Gigantes quando comerem suas comidas especiais.",
+					pl  = "Gracze przywołają gigantów po zjedzeniu swoich specjalnych potraw.",
+					es  = "Los jugadores invocarán gigantes al comer sus comidas especiales.",
+				},
+			},
+		},
+		
+		ICEBOXSTACKSIZE =
+		{
+			NAME =
+			{
+				"Elastispacer for Fridges",
+				zh  = "冰箱的弹性空间",
+				zht = "冰箱的彈性空間",
+				pt  = "Elastipaçador para Geladeiras",
+				pl  = "Elastispacer do lodówek",
+				es  = "Elastiespaciador para refrigeradores",
+			},
+			
+			HOVER =
+			{
+				"Should Elastispacer be able to upgrade Ice Box and Salt Box?\nNote: If disabled afterwards, may cause visual glitches.",
+				zh  = "弹性空间制造器是否可以升级冰箱和盐盒？\n注意: 若升级后禁用可能会导致视觉上的问题。",
+				zht = "彈性空間製造器是否可以升級冰箱和鹽盒？\n注意： 若升級後停用，可能會導致視覺問題。",
+				pt  = "Permitir que o Elastipaçador funcione para Geladeiras?\nNota:Pode causar erros visuais se for desabilitado posteriormente.",
+				pl  = "Czy Elastispacer powinien móc ulepszać lodówki i solne skrzynie?\nUwaga: Wyłączenie później może powodować błędy wizualne.",
+				es  = "¿Debería el Elastiespaciador poder mejorar las neveras y las cajas de sal?\nNota: Si se desactiva posteriormente, puede causar errores visuales.",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Elastispacer will not upgrade Ice Box and Salt Box.",
+					zh  = "弹性空间制造器不可以升级冰箱和盐盒。",
+					zht = "彈性空間製造器不可以升級冰箱和鹽盒。",
+					pt  = "O Elastipaçador não irá funcionar para Geladeiras.",
+					pl  = "Elastispacer nie będzie ulepszał lodówek ani solnych skrzyń.",
+					es  = "El Elastiespaciador no mejorará las neveras ni las cajas de sal.",
+				},
+				
+				ENABLED =
+				{
+					"Elastispacer will upgrade Ice Box and Salt Box for infinite item stacks.",
+					zh  = "弹性空间制造器可以升级冰箱和盐盒，食物堆叠无上限。",
+					zht = "彈性空間製造器可以升級冰箱和鹽盒，食物堆疊無上限。",
+					pt  = "O Elastipaçador irá funcionar para Geladeiras, permitindo pilhas infinitas de itens.",
+					pl  = "Elastispacer ulepszy lodówki i solne skrzynie, umożliwiając nieskończone stosy przedmiotów.",
+					es  = "El Elastiespaciador mejorará las neveras y las cajas de sal, permitiendo pilas infinitas de objetos.",
+				},
+			},
+		},
+		
+		COFFEESPEED =
+		{
+			NAME =
+			{
+				"Speed Effect From Foods",
+				zh  = "移速Buff",
+				zht = "移速Buff",
+				pt  = "Efeito de Velocidade",
+				pl  = "Efekt prędkości",
+				es  = "Efecto de velocidad",
+			},
+			
+			HOVER =
+			{
+				"Should the foods give the Speed Effect when eaten?\n\This option only applies to certain foods.",
+				zh  = "料理是否提供移速Buff？\n该项仅作用于特定料理",
+				zht = "料理是否提供移速Buff？\n該項僅作用於特定料理",
+				pt  = "Permitir que as comidas proporcionem Efeito de Velocidade?\n\Isto só se aplica à certas comidas.",
+				pl  = "Czy jedzenie powinno dawać efekt prędkości po spożyciu?\nTa opcja dotyczy tylko niektórych potraw.",
+				es  = "¿Deberían los alimentos otorgar el efecto de velocidad al consumirse?\nEsta opción solo se aplica a ciertos alimentos.",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Foods will not give the Speed Effect when eaten.",
+					zh  = "料理食用后不会提高移速Buff。",
+					zht = "料理食用後不會提高移速Buff。",
+					pt  = "As comidas não irão proporcionar o Efeito de Velocidade quando ingeridas.",
+					pl  = "Jedzenie nie będzie dawało efektu prędkości po spożyciu.",
+					es  = "Los alimentos no otorgarán el efecto de velocidad al consumirse.",
+				},
+				
+				ENABLED =
+				{
+					"Foods will give the Speed Effect when eaten.",
+					zh  = "料理食用后会提高移速Buff。",
+					zht = "料理食用後會提高移速Buff。",
+					pt  = "As comidas irão proporcionar o Efeito de Velocidade quando ingeridas.",
+					pl  = "Jedzenie będzie dawało efekt prędkości po spożyciu.",
+					es  = "Los alimentos otorgarán el efecto de velocidad al consumirse.",
+				},
+			},
+		},
+		
+		COFFEEDURATION =
+		{
+			NAME =
+			{
+				"Speed Effect Duration",
+				zh  = "移速Buff持续时间",
+				zht = "移速Buff持續時間",
+				pt  = "Duração do Efeito de Velocidade",
+				pl  = "Czas trwania efektu prędkości",
+				es  = "Duración del efecto de velocidad",
+			},
+			
+			HOVER =
+			{
+				"How long should the Speed Effect from foods last?",
+				zh  = "料理提供的移速Buff可以持续多久？",
+				zht = "料理提供的移速Buff可以持續多久？",
+				pt  = "O quão longo deve ser o Efeito de Velocidade das comidas?",
+				pl  = "Jak długo powinien trwać efekt prędkości z jedzenia?",
+				es  = "¿Cuánto debería durar el efecto de velocidad otorgado por los alimentos?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				SUPERSHORT =
+				{
+					NAME =
+					{
+						"Very Short",
+						zh  = "超级短",
+						zht = "超級短",
+						pt  = "Super Curto",
+						pl  = "Bardzo krótki",
+						es  = "Muy corto",
+					},
+					
+					HOVER =
+					{
+						"Speed Effect will last for 2 Minutes.",
+						zh  = "移速Buff会持续2分钟。",
+						zht = "移速Buff會持續2分鐘。",
+						pt  = "O Efeito de Velocidade irá durar por 2 minutos.",
+						pl  = "Efekt prędkości będzie trwał 2 minuty.",
+						es  = "El efecto de velocidad durará 2 minutos.",
+					},
+				},
+				
+				SHORT =
+				{
+					NAME =
+					{
+						"Short",
+						zh  = "短",
+						zht = "短",
+						pt  = "Curto",
+						pl  = "Krótki",
+						es  = "Corto",
+					},
+					
+					HOVER =
+					{
+						"Speed Effect will last for a Half Day.",
+						zh  = "移速Buff会持续半天。",
+						zht = "移速Buff會持續半天。",
+						pt  = "O Efeito de Velocidade irá durar por meio dia.",
+						pl  = "Efekt prędkości będzie trwał przez pół dnia.",
+						es  = "El efecto de velocidad durará medio día.",
+					},
+				},
+				
+				NORMAL =
+				{
+					NAME =
+					{
+						"Default",
+						zh  = "默认",
+						zht = "默認",
+						pt  = "Padrão",
+						pl  = "Domyślny",
+						es  = "Predeterminado",
+					},
+					
+					HOVER =
+					{
+						"Speed Effect will last for 1 Day.",
+						zh  = "移速Buff会持续一天。",
+						zht = "移速Buff會持續一天。",
+						pt  = "O Efeito de Velocidade irá durar 1 dia.",
+						pl  = "Efekt prędkości będzie trwał 1 dzień.",
+						es  = "El efecto de velocidad durará 1 día.",
+					},
+				},
+				
+				AVERAGE =
+				{
+					NAME =
+					{
+						"Average",
+						zh  = "平均",
+						zht = "平均",
+						pt  = "Mediano",
+						pl  = "Średni",
+						es  = "Promedio",
+					},
+					
+					HOVER =
+					{
+						"Speed Effect will last for 1.5 Days.",
+						zh  = "移速Buff会持续1.5天。",
+						zht = "移速Buff會持續1.5天。",
+						pt  = "O Efeito de Velocidade irá durar 1 dia e meio.",
+						pl  = "Efekt prędkości będzie trwał 1.5 dnia.",
+						es  = "El efecto de velocidad durará 1.5 días.",
+					},
+				},
+				
+				LONG =
+				{
+					NAME =
+					{
+						"Long",
+						zh  = "长",
+						zht = "長",
+						pt  = "Longo",
+						pl  = "Długi",
+						es  = "Largo",
+					},
+					
+					HOVER =
+					{
+						"Speed Effect will last for 2 Days.",
+						zh  = "移速Buff会持续2天。",
+						zht = "移速Buff會持續2天。",
+						pt  = "O Efeito de Velocidade irá durar 2 dias.",
+						pl  = "Efekt prędkości będzie trwał 2 dni.",
+						es  = "El efecto de velocidad durará 2 días.",
+					},
+				},
+				
+				SUPERLONG =
+				{
+					NAME =
+					{
+						"Very Long",
+						zh  = "非常长",
+						zht = "非常長",
+						pt  = "Super Longo",
+						pl  = "Bardzo długi",
+						es  = "Muy largo",
+					},
+					
+					HOVER =
+					{
+						"Speed Effect will last for 4 Days.",
+						zh  = "移速Buff会持续4天",
+						zht = "移速Buff會持續4天",
+						pt  = "O Efeito de Velocidade irá durar 4 dias.",
+						pl  = "Efekt prędkości będzie trwał 4 dni.",
+						es  = "El efecto de velocidad durará 4 días.",
+					},
+				},
+			},
+		},
+		
+		SCRAPBOOK =
+		{
+			NAME =
+			{
+				"Mod Scrapbook",
+				zh  = "Mod图鉴",
+				zht = "Mod圖鑑",
+				pt  = "Scrapbook do Mod",
+				pl  = "Księga modyfikacji",
+				es  = "Scrapbook del Mod",
+			},
+			
+			HOVER =
+			{
+				"Should the Mod's contents be added to the Scrapbook?",
+				zh  = "Mod的内容是否添加到图鉴？",
+				zht = "是否應將Mod的內容添加到圖鑑？",
+				pt  = "Permitir que os conteúdos do Mod sejam adicionados ao Scrapbook?",
+				pl  = "Czy zawartość moda powinna być dodana do księgi?",
+				es  = "¿Deberían añadirse los contenidos del mod al Scrapbook?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Default Scrapbook.",
+					zh  = "默认图鉴。",
+					zht = "預設圖鑑。",
+					pt  = "Scrapbook Padrão.",
+					pl  = "Domyślna księga.",
+					es  = "Scrapbook predeterminado.",
+				},
+				
+				ENABLED =
+				{
+					"Mod's contents will be added to the Scrapbook.",
+					zh  = "Mod的内容将添加到图鉴",
+					zht = "Mod的内容将添加到图鉴",
+					pt  = "Os conteúdos do Mod serão adicionados ao Scrapbook.",
+					pl  = "Zawartość moda zostanie dodana do księgi.",
+					es  = "Los contenidos del mod se añadirán al Scrapbook.",
+				},
+			},
+		},
+		
+		WARLYRECIPES =
+		{
+			NAME =
+			{
+				"Chef's Specials Cookbook Page",
+				zh  = "沃利的特色食谱页面",
+				zht = "沃利的特色食譜頁面",
+				pt  = "Página Especiais do Chef",
+				pl  = "Strona Kuchnia Specjalności Warly'ego",
+				es  = "Página de Especialidades del Chef",
+			},
+			
+			HOVER =
+			{
+				"Should Warly's Recipes appear on \"Chef's Specials\" instead of \"Mod Recipes\" in the Cookbook?",
+				zh  = "在烹饪指南中，沃利的Mod特色料理是否应该出现在\"大厨特色菜\"分页，而不是\"模组食谱\"分页？",
+				zht = "在烹飪指南中，沃利的Mod特色料理是否應該出現在\"大廚特色菜\"分頁，而不是\"模組食譜\"分頁？",
+				pt  = "Permitir que as Receitas do Warly apareçam na página \"Especiais do Chefe\" ao invés de \"Receitas do Mod\" no Livro de Receitas?",
+				pl  = "Czy przepisy Warly'ego powinny pojawiać się na stronie \"Specjalności Szefa\" zamiast w \"Przepisach Moda\" w książce kucharskiej?",
+				es  = "¿Deberían las recetas de Warly aparecer en la página \"Especialidades del Chef\" en lugar de en \"Recetas del Mod\" en el libro de cocina?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Warly's Recipes will appear on \"Mod Recipes\" page of the Cookbook.",
+					zh  = "在烹饪指南中，沃利的Mod特色料理会出现在\"模组食谱\"分页。",
+					zht = "在烹飪指南中，沃利的Mod特色料理會出現在\"模組食譜\"分頁。",
+					pt  = "As Receitas do Warly irão aparecer na página \"Receitas do Mod\" no Livro de Receitas.",
+					pl  = "Przepisy Warly'ego pojawią się na stronie \"Przepisy Moda\" w książce kucharskiej.",
+					es  = "Las recetas de Warly aparecerán en la página \"Recetas del Mod\" del libro de cocina.",
+				},
+				
+				ENABLED =
+				{
+					"Warly's Recipes will appear on \"Chef's Specials\" page of the Cookbook.",
+					zh  = "在烹饪指南中，沃利的Mod特色料理会出现在\"大厨特色菜\"分页。",
+					zht = "在烹飪指南中，沃利的Mod特色料理會出現在\"大廚特色菜\"分頁。",
+					pt  = "As Receitas do Warly irão aparecer na página \"Especiais do Chefe\" no Livro de Receitas.",
+					pl  = "Przepisy Warly'ego pojawią się na stronie \"Specjalności Szefa\" w książce kucharskiej.",
+					es  = "Las recetas de Warly aparecerán en la página \"Especialidades del Chef\" del libro de cocina.",
+				},
+			},
+		},
+		
+		KEEPFOOD =
+		{
+			NAME =
+			{
+				"Halt Food Spoilage",
+				zh  = "防止食物腐败",
+				zht = "防止食物腐敗",
+				pt  = "Parar Deteorização da Comida",
+				pl  = "Zatrzymaj psucie się jedzenia",
+				es  = "Detener la descomposición de alimentos",
+			},
+			
+			HOVER =
+			{
+				"Should food spoil if its inside the Crock Pot?",
+				zh  = "料理在烹饪锅中是否变质？",
+				zht = "料理在烹飪鍋中是否變質？",
+				pt  = "Permitir que as comidas estraguem se estiverem na Panela?",
+				pl  = "Czy jedzenie powinno się psuć, jeśli jest w garnku Crock Pot?",
+				es  = "¿Debería la comida echarse a perder si está dentro de la Olla?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Food will spoil inside Crock Pot, Portable Crock Pot, etc.",
+					zh  = "料理在烹饪锅、便携式烹饪锅等锅中会变质。",
+					zht = "料理在烹飪鍋、便攜式烹飪鍋等鍋中會變質。",
+					pt  = "As comidas estragarão na Panela, Panela Portátil, etc.",
+					pl  = "Jedzenie będzie się psuć w garnku Crock Pot, przenośnym Crock Pot itp.",
+					es  = "La comida se echará a perder dentro de la Olla, Olla portátil, etc.",
+				},
+				
+				ENABLED =
+				{
+					"Food will not spoil inside Crock Pot, Portable Crock Pot, etc.",
+					zh  = "料理在烹饪锅、便携式烹饪锅等锅中不会变质。",
+					zht = "料理在烹飪鍋、便攜式烹飪鍋等鍋中不會變質。",
+					pt  = "As comidas não estragarão na Panela, Panela Portátil, etc.",
+					pl  = "Jedzenie nie będzie się psuć w garnku Crock Pot, przenośnym Crock Pot itp.",
+					es  = "La comida no se echará a perder dentro de la Olla, Olla portátil, etc.",
+				},
+			},
+		},
+		
+		WARLYGRINDER =
+		{
+			NAME =
+			{
+				"Portable Grinding Mill Recipes",
+				zh  = "便携式研磨器食谱",
+				zht = "便攜式研磨器食譜",
+				pt  = "Receitas do Moinho de Moagem",
+				pl  = "Przepisy przenośnego młyna Warly'ego",
+				es  = "Recetas del Molino Portátil",
+			},
+			
+			HOVER =
+			{
+				"Should Warly's Portable Grinding Mill have the recipes from Mealing Stone?",
+				zh  = "沃利的便携式研磨器是否可以拥有碾磨石的功能？",
+				zht = "沃利的便攜式研磨器是否可以擁有碾磨石的功能？",
+				pt  = "Permitir que o Moinho de Moagem do Warly tenha as receitas da Pedra de Preparação?",
+				pl  = "Czy przenośny młyn Warly'ego powinien mieć przepisy z Kamienia Mielenia?",
+				es  = "¿Debería el Molino Portátil de Warly tener las recetas de la Piedra de Molienda?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Warly's Portable Grinding Mill will not have the recipes from Mealing Stone.",
+					zh  = "沃利的便携式研磨器不会拥有碾磨石的功能。",
+					zht = "沃利的便攜式研磨器不會擁有碾磨石的功能。",
+					pt  = "O Moinho de Moagem do Warly não terá as receitas da Pedra de Preparação.",
+					pl  = "Przenośny młyn Warly'ego nie będzie miał przepisów z Kamienia Mielenia.",
+					es  = "El Molino Portátil de Warly no tendrá las recetas de la Piedra de Molienda.",
+				},
+				
+				ENABLED =
+				{
+					"Warly's Portable Grinding Mill will have the recipes from Mealing Stone.",
+					zh  = "沃利的便携式研磨器会拥有碾磨石的功能。",
+					zht = "沃利的便攜式研磨器會擁有碾磨石的功能。",
+					pt  = "O Moinho de Moagem do Warly terá as receitas da Pedra de Preparação.",
+					pl  = "Przenośny młyn Warly'ego będzie miał przepisy z Kamienia Mielenia.",
+					es  = "El Molino Portátil de Warly tendrá las recetas de la Piedra de Molienda.",
+				},
+			},
+		},
+		
+		FERTILIZERTWEAK =
+		{
+			NAME =
+			{
+				"Bucket-o-Poop Recipe",
+				zh  = "便便桶配方",
+				zht = "便便桶配方",
+				pt  = "Receita do Balde de Cocô",
+				pl  = "Przepis na Wiadro Kupu",
+				es  = "Receta del Cubo de Caca",
+			},
+			
+			HOVER =
+			{
+				"Should Bucket-o-Poop use the Bucket instead of its default recipe?",
+				zh  = "便便桶是否用于挤奶而不是默认功能？",
+				zht = "便便桶是否用於擠奶而不是預設功能？",
+				pt  = "Permitir que o Balde de Cocô use o Balde ao invés de seus ingredientes padrões?",
+				pl  = "Czy Wiadro Kupu powinno używać Wiadra zamiast swojej domyślnej receptury?",
+				es  = "¿Debería el Cubo de Caca usar el Cubo en lugar de su receta predeterminada?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Bucket-o-Poop will not use the Bucket. (Default crafting recipe).",
+					zh  = "便便桶使用默认功能。",
+					zht = "便便桶使用預設功能。",
+					pt  = "O Balde de Cocô não irá usar o Balde. (Ingredientes padrão).",
+					pl  = "Wiadro Kupu nie będzie używać Wiadra. (Domyślna receptura).",
+					es  = "El Cubo de Caca no usará el Cubo. (Receta predeterminada).",
+				},
+				
+				ENABLED =
+				{
+					"Bucket-o-Poop will use the Bucket as its crafting ingredient.",
+					zh  = "便便桶不使用默认功能，可用于挤奶。",
+					zht = "便便桶不使用預設功能，可用於擠奶。",
+					pt  = "O Balde de Cocô irá usar o Balde como parte de seus ingredientes.",
+					pl  = "Wiadro Kupu będzie używać Wiadra jako składnika w przepisie.",
+					es  = "El Cubo de Caca usará el Cubo como ingrediente de su receta.",
+				},
+			},
+		},
+		
+		RETROFIT =
+		{
+			NAME =
+			{
+				"Retrofit Contents",
+				zh  = "改造内容",
+				zht = "改造內容",
+				pt  = "Fazer Retro. de Conteúdos",
+				pl  = "Zawartość retrofitowana",
+				es  = "Contenido de Reacondicionamiento",
+			},
+			
+			HOVER =
+			{
+				"If your world is missing the Mod Contents enable this option.\nThis option will be set as \"Updated\" once the retrofitting is finished!",
+				zh  = "如果你的世界缺少Mod内容，请启用此选项。\n改造完成后，该选项将被设置为 \"已更新\"！",
+				zht = "如果你的世界缺少Mod內容，請啟用此選項。\n改造完成後，該選項將被設置為 \"已更新\"！",
+				pt  = "Se seu mundo está faltando algum conteúdo ative esta opção.\nEsta opção irá ficar como \"Atualizado\ assim que a retrocompatibilidade for finalizada!",
+				pl  = "Jeśli w twoim świecie brakuje zawartości moda, włącz tę opcję.\nOpcja zostanie ustawiona jako \"Zaktualizowana\" po zakończeniu retrofitowania!",
+				es  = "Si a tu mundo le falta el contenido del mod, activa esta opción.\n¡Esta opción se marcará como \"Actualizado\" una vez que se complete el reacondicionamiento!",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				UPDATED =
+				{
+					NAME =
+					{
+						"Updated",
+						zh  = "已更新",
+						zht = "已更新",
+						pt  = "Atualizado",
+						pl  = "Zaktualizowane",
+						es  = "Actualizado",
+					},
+					
+					HOVER =
+					{
+						"Your world is already updated with the Mod Contents.",
+						zh  = "你的世界已更新了Mod的内容。",
+						zht = "你的世界已更新了Mod的內容。",
+						pt  = "Seu mundo já está atualizado com os conteúdos do Mod.",
+						pl  = "Twój świat jest już zaktualizowany o zawartość moda.",
+						es  = "Tu mundo ya está actualizado con los contenidos del mod.",
+					},
+				},
+				
+				ISLANDS =
+				{
+					NAME =
+					{
+						"Retrofit Islands",
+						zh  = "Mod岛屿",
+						zht = "Mod島嶼",
+						pt  = "Retro. de Ilhas",
+						pl  = "Wyspy Retrofitowane",
+						es  = "Islas Retrofitadas",
+					},
+					
+					HOVER =
+					{
+						"Mod Islands will be generated during server initialization.",
+						zh  = "Mod的岛屿会在服务器初始化期间生成。",
+						zht = "Mod的島嶼會在伺服器初始化期間生成。",
+						pt  = "As Ilhas do Mod serão geradas durante a inicialização do servidor.",
+						pl  = "Wyspy moda zostaną wygenerowane podczas inicjalizacji serwera.",
+						es  = "Las islas del mod se generarán durante la inicialización del servidor.",
+					},
+				},
+				
+				MERMHUT =
+				{
+					NAME =
+					{
+						"Retrofit Mermhuts",
+						zh  = "Mod物品",
+						zht = "Mod物品",
+						pt  = "Retro. de Mermhuts",
+						pl  = "Retrofit Mermhuts",
+						es  = "Mermhuts Retrofitados",
+					},
+					
+					HOVER =
+					{
+						"Mod Mermhuts will be generated during server initialization.",
+						zh  = "Mod的物品会在服务器初始化期间生成。",
+						zht = "Mod的物品會在伺服器初始化期間生成。",
+						pt  = "Os Mermhuts do Mod serão geradas durante a inicialização do servidor.",
+						pl  = "Mermhuty moda zostaną wygenerowane podczas inicjalizacji serwera.",
+						es  = "Los Mermhuts del mod se generarán durante la inicialización del servidor.",
+					},
+				},
+			},
+		},
+		
+		MODTRADES =
+		{
+			NAME =
+			{
+				"Retrofit Trades",
+				zh  = "贸易转型",
+				zht = "貿易轉型",
+				pt  = "Retro. de Trocas",
+				pl  = "Handel Retrofitowany",
+				es  = "Intercambios Retrofitados",
+			},
+			
+			HOVER =
+			{
+				"Should Pig King be able to trade items in exchange for Mod items?\nThis also applies to Pig Elder in Lights Out worlds.",
+				zh  = "猪王是否应该能够用某些物品来交换 Mod 物品？\n这也适用于熄灯世界中的猪长老。",
+				zht = "豬王是否應該能夠用某些物品來交換 Mod 物品？\n這也適用於熄燈世界中的豬長老。",
+				pt  = "Permitir que o Rei Porco aceite certos itens em troca de itens do Mod?\nIsso também se aplica ao Porco Ancião em mundos Lights Out.",
+				pl  = "Czy Król Świń powinien móc wymieniać przedmioty na przedmioty z moda?\nDotyczy to również Starszego Świni w światach Lights Out.",
+				es  = "¿Debería el Rey Cerdo poder intercambiar objetos por objetos del mod?\nEsto también se aplica al Anciano Cerdo en mundos Lights Out.",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Certain items can't be traded in exchange for Mod items.",
+					zh  = "某些物品不能用 Mod 物品进行交易。",
+					zht = "某些物品不能用 Mod 物品進行交易。",
+					pt  = "Não será possível fazer trocas por itens do Mod.",
+					pl  = "Niektóre przedmioty nie mogą być wymienione na przedmioty z moda.",
+					es  = "Ciertos objetos no se pueden intercambiar por objetos del mod.",
+				},
+				
+				ENABLED =
+				{
+					"Certain items can be traded in exchange for Mod items.",
+					zh  = "某些物品可以用 Mod 物品进行交易。",
+					zht = "某些物品可以用 Mod 物品進行交易。",
+					pt  = "Será possível fazer trocas por itens do Mod.",
+					pl  = "Niektóre przedmioty można wymienić na przedmioty z moda.",
+					es  = "Ciertos objetos se pueden intercambiar por objetos del mod.",
+				},
+			},
+		},
+	},
 }
 
-configuration_options       =
+name                         = ChooseTranslationTable(STRINGS.NAME)
+version                      = "2.4-B"
+
+description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
+
+author                       = "Kyno 󰀃"
+api_version                  = 10
+priority                     = -15 -- Above 0 = Override other mods. | Below 0 = Overriden by other mods.
+
+dst_compatible               = true
+all_clients_require_mod      = true
+client_only_mod              = false
+
+server_filter_tags           = {"Heap of Foods", "HOF", "Cooking", "Entertainment", "Kyno"}
+
+icon                         = "ModiconHOF.tex"
+icon_atlas                   = "ModiconHOF.xml"
+
+local NONE_LABEL             = ""
+local NONE_OPTIONS           = 
 {
-	{name                   = "LANGUAGE",         label = labels.language,       hover = hovers.language,       options = options.language,       default = false},
-	
-	{name                   = names.general,                                     hover = hovers.general,        options = options.none,           default = false},
-	{name                   = "SEASONALFOOD",     label = labels.seasonalfoods,  hover = hovers.seasonalfoods,  options = options.seasonalfoods,  default = false},
- -- {name                   = "MODSPICES",        label = labels.modspices,      hover = hovers.modspices,      options = options.modspices,      default = true},
-	{name                   = "HUMANMEAT",        label = labels.humanmeat,      hover = hovers.humanmeat,      options = options.humanmeat,      default = true},
-	{name                   = "COFFEEDROPRATE",   label = labels.coffeedrop,     hover = hovers.coffeedrop,     options = options.coffeedrop,     default = 4},
-	{name                   = "ALCOHOLICDRINKS",  label = labels.alcoholic,      hover = hovers.alcoholic,      options = options.alcoholic,      default = true},
-	{name                   = "GIANTSPAWNING",    label = labels.giantspawn,     hover = hovers.giantspawn,     options = options.giantspawn,     default = true},
-	{name                   = "ICEBOXSTACKSIZE",  label = labels.iceboxstacks,   hover = hovers.iceboxstacks,   options = options.iceboxstacks,   default = false},
-	{name                   = "COFFEESPEED",      label = labels.coffeespeed,    hover = hovers.coffeespeed,    options = options.coffeespeed,    default = true},
-	{name                   = "COFFEEDURATION",   label = labels.coffeeduration, hover = hovers.coffeeduration, options = options.coffeeduration, default = 480},
-	
-	{name                   = names.extras,                                      hover = hovers.extras,         options = options.none,           default = false},
-	{name                   = "SCRAPBOOK",        label = labels.scrapbook,      hover = hovers.scrapbook,      options = options.scrapbook,      default = true},
-	{name                   = "WARLYRECIPES",     label = labels.warlyrecipes,   hover = hovers.warlyrecipes,   options = options.warlyrecipes,   default = true},
-	{name                   = "KEEPFOOD",         label = labels.spoilage,       hover = hovers.spoilage,       options = options.spoilage,       default = false},
-	{name                   = "WARLYMEALGRINDER", label = labels.warlygrinder,   hover = hovers.warlygrinder,   options = options.warlygrinder,   default = false},
-	{name                   = "FERTILIZERTWEAK",  label = labels.buckettweak,    hover = hovers.buckettweak,    options = options.buckettweak,    default = false},
-	
-	{name                   = names.retrofitting,                                hover = hovers.retrofitting,   options = options.none,           default = false},
-	{name                   = "RETROFIT",         label = labels.retrofit,       hover = hovers.retrofit,       options = options.retrofit,       default = 0},
-	{name                   = "MODTRADES",        label = labels.modtrades,      hover = hovers.modtrades,      options = options.modtrades,      default = false},
+	{
+		description          = "", 
+		data                 = false
+	}
+}
+
+local TOGGLE_OPTIONS         =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED), 
+		data                 = false,
+	}, 
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED), 
+		data                 = true,
+	},
+}
+
+local GENERAL_LABEL          = ChooseTranslationTable(STRINGS.SETTINGS.GENERAL.NAME)
+local GENERAL_HOVER          = ChooseTranslationTable(STRINGS.SETTINGS.GENERAL.HOVER)
+
+local EXTRAS_LABEL           = ChooseTranslationTable(STRINGS.SETTINGS.EXTRAS.NAME)
+local EXTRAS_HOVER           = ChooseTranslationTable(STRINGS.SETTINGS.EXTRAS.HOVER)
+
+local RETROCOMPAT_LABEL      = ChooseTranslationTable(STRINGS.SETTINGS.RETROCOMPAT.NAME)
+local RETROCOMPAT_HOVER      = ChooseTranslationTable(STRINGS.SETTINGS.RETROCOMPAT.HOVER)
+
+local LANGUAGE_LABEL         = ChooseTranslationTable(STRINGS.SETTINGS.LANGUAGE.NAME)
+local LANGUAGE_HOVER         = ChooseTranslationTable(STRINGS.SETTINGS.LANGUAGE.HOVER)
+local LANGUAGE_OPTIONS       =
+{
+	{
+		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.en,
+		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.en,
+		data                 = false, 
+	},
+	{
+		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.zh,
+		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.zh,
+		data                 = "zh",
+	},
+	{
+		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.zht,
+		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.zht,
+		data                 = "zht",
+	},
+	{
+		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.pt,
+		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.pt,
+		data                 = "pt",
+	},
+	{
+		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.pl,
+		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.pl,
+		data                 = "pl",
+	},
+	{
+		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.es,
+		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.es,
+		data                 = "es",
+	},
+}
+
+local SEASONALFOOD_LABEL     = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.NAME)
+local SEASONALFOOD_HOVER     = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.HOVER)
+local SEASONALFOOD_OPTIONS   =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.HOVER_OPTIONS.DISABLED),
+		data                 = true,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.HOVER_OPTIONS.ENABLED),
+		data                 = false,
+	},
+}
+
+local HUMANMEAT_LABEL        = ChooseTranslationTable(STRINGS.SETTINGS.HUMANMEAT.NAME)
+local HUMANMEAT_HOVER        = ChooseTranslationTable(STRINGS.SETTINGS.HUMANMEAT.HOVER)
+local HUMANMEAT_OPTIONS      =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.HUMANMEAT.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.HUMANMEAT.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
+local COFFEEDROP_LABEL       = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.NAME)
+local COFFEEDROP_HOVER       = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.HOVER)
+local COFFEEDROP_OPTIONS     =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.HOVER_OPTIONS.AMOUNT0),
+		data                 = 0,
+	},
+	{
+		description          = "4",
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.HOVER_OPTIONS.AMOUNT4),
+		data                 = 4,
+	},
+	{
+		description          = "8",
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.HOVER_OPTIONS.AMOUNT8),
+		data                 = 8,
+	},
+	{
+		description          = "12",
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.HOVER_OPTIONS.AMOUNT12),
+		data                 = 12,
+	},
+	{
+		description          = "16",
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.HOVER_OPTIONS.AMOUNT16),
+		data                 = 16,
+	},
+}
+
+local ALCOHOL_LABEL          = ChooseTranslationTable(STRINGS.SETTINGS.ALCOHOLICDRINKS.NAME)
+local ALCOHOL_HOVER          = ChooseTranslationTable(STRINGS.SETTINGS.ALCOHOLICDRINKS.HOVER)
+local ALCOHOL_OPTIONS        =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.ALCOHOLICDRINKS.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.ALCOHOLICDRINKS.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
+local GIANTSPAWN_LABEL       = ChooseTranslationTable(STRINGS.SETTINGS.GIANTSPAWNING.NAME)
+local GIANTSPAWN_HOVER       = ChooseTranslationTable(STRINGS.SETTINGS.GIANTSPAWNING.HOVER)
+local GIANTSPAWN_OPTIONS     =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.GIANTSPAWNING.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.GIANTSPAWNING.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
+local ICEBOX_LABEL           = ChooseTranslationTable(STRINGS.SETTINGS.ICEBOXSTACKSIZE.NAME)
+local ICEBOX_HOVER           = ChooseTranslationTable(STRINGS.SETTINGS.ICEBOXSTACKSIZE.HOVER)
+local ICEBOX_OPTIONS         =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.ICEBOXSTACKSIZE.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.ICEBOXSTACKSIZE.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
+local COFFEESPEED_LABEL      = ChooseTranslationTable(STRINGS.SETTINGS.COFFEESPEED.NAME)
+local COFFEESPEED_HOVER      = ChooseTranslationTable(STRINGS.SETTINGS.COFFEESPEED.HOVER)
+local COFFEESPEED_OPTIONS    =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEESPEED.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEESPEED.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
+local COFFEETIMER_LABEL      = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.NAME)
+local COFFEETIMER_HOVER      = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER)
+local COFFEETIMER_OPTIONS    =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.SUPERSHORT.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.SUPERSHORT.HOVER),
+		data                 = 120,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.SHORT.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.SHORT.HOVER),
+		data                 = 240,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.NORMAL.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.NORMAL.HOVER),
+		data                 = 480,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.AVERAGE.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.AVERAGE.HOVER),
+		data                 = 640,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.LONG.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.LONG.HOVER),
+		data                 = 960,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.SUPERLONG.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.SUPERLONG.HOVER),
+		data                 = 1920,
+	},
+}
+
+local SCRAPBOOK_LABEL        = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK.NAME)
+local SCRAPBOOK_HOVER        = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK.HOVER)
+local SCRAPBOOK_OPTIONS      =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
+local WARLYRECIPES_LABEL     = ChooseTranslationTable(STRINGS.SETTINGS.WARLYRECIPES.NAME)
+local WARLYRECIPES_HOVER     = ChooseTranslationTable(STRINGS.SETTINGS.WARLYRECIPES.HOVER)
+local WARLYRECIPES_OPTIONS   =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.WARLYRECIPES.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.WARLYRECIPES.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
+local KEEPFOOD_LABEL         = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.NAME)
+local KEEPFOOD_HOVER         = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.HOVER)
+local KEEPFOOD_OPTIONS       =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
+local WARLYGRINDER_LABEL     = ChooseTranslationTable(STRINGS.SETTINGS.WARLYGRINDER.NAME)
+local WARLYGRINDER_HOVER     = ChooseTranslationTable(STRINGS.SETTINGS.WARLYGRINDER.HOVER)
+local WARLYGRINDER_OPTIONS   =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.WARLYGRINDER.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.WARLYGRINDER.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
+local FERTILIZER_LABEL       = ChooseTranslationTable(STRINGS.SETTINGS.FERTILIZERTWEAK.NAME)
+local FERTILIZER_HOVER       = ChooseTranslationTable(STRINGS.SETTINGS.FERTILIZERTWEAK.HOVER)
+local FERTILIZER_OPTIONS     =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.FERTILIZERTWEAK.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.FERTILIZERTWEAK.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
+local RETROFIT_LABEL         = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.NAME)
+local RETROFIT_HOVER         = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER)
+local RETROFIT_OPTIONS       =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.UPDATED.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.UPDATED.HOVER),
+		data                 = 0,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.ISLANDS.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.ISLANDS.HOVER),
+		data                 = 1,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.MERMHUT.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.MERMHUT.HOVER),
+		data                 = 2,
+	},
+}
+
+local MODTRADES_LABEL        = ChooseTranslationTable(STRINGS.SETTINGS.MODTRADES.NAME)
+local MODTRADES_HOVER        = ChooseTranslationTable(STRINGS.SETTINGS.MODTRADES.HOVER)
+local MODTRADES_OPTIONS      =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.MODTRADES.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.MODTRADES.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
+configuration_options        =
+{
+	{ name                   = "LANGUAGE",         label = LANGUAGE_LABEL,      hover = LANGUAGE_HOVER,     options = LANGUAGE_OPTIONS,     default = false },
+	-- General Options.
+	{ name                   = "GENERAL",          label = GENERAL_LABEL,       hover = GENERAL_HOVER,      options = NONE_OPTIONS,         default = false },
+	{ name                   = "SEASONALFOOD",     label = SEASONALFOOD_LABEL,  hover = SEASONALFOOD_HOVER, options = SEASONALFOOD_OPTIONS, default = false },
+	{ name                   = "HUMANMEAT",        label = HUMANMEAT_LABEL,     hover = HUMANMEAT_HOVER,    options = HUMANMEAT_OPTIONS,    default = true  },
+	{ name                   = "GIANTSPAWNING",    label = GIANTSPAWN_LABEL,    hover = GIANTSPAWN_HOVER,   options = GIANTSPAWN_OPTIONS,   default = true  },
+	{ name                   = "ALCOHOLICDRINKS",  label = ALCOHOL_LABEL,       hover = ALCOHOL_HOVER,      options = ALCOHOL_OPTIONS,      default = true  },
+	{ name                   = "ICEBOXSTACKSIZE",  label = ICEBOX_LABEL,        hover = ICEBOX_HOVER,       options = ICEBOX_OPTIONS,       default = false },
+	{ name                   = "COFFEESPEED",      label = COFFEESPEED_LABEL,   hover = COFFEESPEED_HOVER,  options = COFFEESPEED_OPTIONS,  default = true  },
+	{ name                   = "COFFEEDURATION",   label = COFFEETIMER_LABEL,   hover = COFFEETIMER_HOVER,  options = COFFEETIMER_OPTIONS,  default = 480   },
+	{ name                   = "COFFEEDROPRATE",   label = COFFEEDROP_LABEL,    hover = COFFEEDROP_HOVER,   options = COFFEEDROP_OPTIONS,   default = 4     },
+	-- Miscellaneous Options.
+	{ name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,       options = NONE_OPTIONS,         default = false },
+	{ name                   = "SCRAPBOOK",        label = SCRAPBOOK_LABEL,     hover = SCRAPBOOK_HOVER,    options = SCRAPBOOK_OPTIONS,    default = true  },
+	{ name                   = "WARLYRECIPES",     label = WARLYRECIPES_LABEL,  hover = WARLYRECIPES_HOVER, options = WARLYRECIPES_OPTIONS, default = true  },
+	{ name                   = "KEEPFOOD",         label = KEEPFOOD_LABEL,      hover = KEEPFOOD_HOVER,     options = KEEPFOOD_OPTIONS,     default = false },
+	{ name                   = "WARLYMEALGRINDER", label = WARLYGRINDER_LABEL,  hover = WARLYGRINDER_HOVER, options = WARLYGRINDER_OPTIONS, default = false },
+	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,   options = FERTILIZER_OPTIONS,   default = false },
+	-- Retrofitting Options.
+	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,  options = NONE_OPTIONS,         default = false },
+	{ name                   = "RETROFIT",         label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,     options = RETROFIT_OPTIONS,     default = 0     },
+	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,    options = MODTRADES_OPTIONS,    default = false },
 }
