@@ -193,6 +193,7 @@ local function fn(oldshop)
 	inst:AddTag("structure")
     inst:AddTag("sammyhouse")
 	inst:AddTag("antlion_sinkhole_blocker")
+	inst:AddTag("meadow_marker")
 	
 	if not TheNet:IsDedicated() then
         inst:AddComponent("pointofinterest")

@@ -693,16 +693,6 @@ local function RemoveSerenityArea(inst)
 	_G.TheWorld:PushEvent("overridecolourcube", nil)
 end
 
-AddPrefabPostInit("wilson", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-
-	inst:DoPeriodicTask(1, function(inst)
-		print(inst.components.areaaware:GetDebugString())
-	end)
-end)
-
 AddComponentPostInit("playervision", function(self)
 	self.inst:DoTaskInTime(0.1, function()
 		self.canchange = true

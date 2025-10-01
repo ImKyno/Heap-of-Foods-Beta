@@ -231,7 +231,8 @@ local function fn()
 	inst:AddTag("prototyper")
 	inst:AddTag("birdblocker")
 	inst:AddTag("antlion_sinkhole_blocker")
-	inst:AddTag("serenity_pigelder") -- Using this as a flag for generating the island.
+	inst:AddTag("serenity_pigelder")
+	inst:AddTag("serenity_marker")
 
 	inst:AddComponent("talker")
 	inst.components.talker.font = TALKINGFONT

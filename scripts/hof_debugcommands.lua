@@ -372,3 +372,278 @@ function c_hofspawnlayout(name)
 
     obj_layout.Place({x-offset, z-offset}, name, add_fn, nil, TheWorld.Map)
 end
+
+-- A Recursive function that locates a setpiece + prefab serving as
+-- starting point to remove everything around it including world tiles.
+-- Feel free to copy this function and modify to your own needs!
+
+-- We are replacing tiles with WORLD_TILES.OCEAN_ROUGH, but it can be any tile, really.
+-- This function also makes use of Flood Fill with some helpers to "jump" gaps and find 
+-- the nearest correspondent tile to remove, its nice for setpieces that are "archipelagos".
+
+-- c_hofremoveisland("SerenityIsland", "serenity_marker", 3, true)
+-- c_hofremoveisland("MeadowIsland", "meadow_marker")
+function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
+	require("tilemanager")
+
+	local map = TheWorld.Map
+	local map_width, map_height = map:GetSize()
+	max_jump = max_jump or 3
+
+	local center_prefabs =
+	{
+		"kyno_chicken2",
+		"kyno_chicken2_herd",
+		"kyno_cookware_elder",
+		"kyno_flup_spawner",
+		"kyno_koi",
+		"kyno_kokonuttree",
+		"kyno_limpetrock",
+		"kyno_lotus_ocean",
+		"kyno_meadowisland_crate",
+		"kyno_meadowisland_fishermermhut",
+		"kyno_meadowisland_mermcart",
+		"kyno_meadowisland_mermfisher",
+		"kyno_meadowisland_mermhut",
+		"kyno_meadowisland_pikotree",
+		"kyno_meadowisland_pond",
+		"kyno_meadowisland_sandhill",
+		"kyno_meadowisland_seller",
+		"kyno_meadowisland_shop",
+		"kyno_meadowisland_tree",
+		"kyno_neonfish",
+		"kyno_pebblecrab",
+		"kyno_pebblecrab_spawner",
+		"kyno_pierrotfish",
+		"kyno_pineapplebush",
+		"kyno_pond_salt",
+		"kyno_repairtool",
+		"kyno_salmonfish",
+		"kyno_serenityisland_crate",
+		"kyno_serenityisland_decor",
+		"kyno_serenityisland_decor2",
+		"kyno_serenityisland_rock1",
+		"kyno_serenityisland_rock2",
+		"kyno_serenityisland_rock3",
+		"kyno_serenityisland_shop",
+		"kyno_spotbush",
+		"kyno_sugartree",
+		"kyno_sugartree_flower",
+		"kyno_sweetpotato_ground",
+		"kyno_tropicalfish",
+		"kyno_wildwheat",
+	}
+
+	local prefabs_to_remove =
+	{
+		"blue_mushroom",
+		"cave_fern",
+		"cookingrecipecard",
+		"dead_sea_bones",
+		"farm_hoe",
+		"farm_plant_kyno_rice",
+		"fertilizer",
+		"firepit",
+		"flower",
+		"flower_planted",
+		"grass",
+		"green_mushroom",
+		"kyno_chicken2",
+		"kyno_chicken2_herd",
+		"kyno_cookware_elder",
+		"kyno_flup_spawner",
+		"kyno_koi",
+		"kyno_kokonuttree",
+		"kyno_limpetrock",
+		"kyno_lotus_ocean",
+		"kyno_meadowisland_crate",
+		"kyno_meadowisland_fishermermhut",
+		"kyno_meadowisland_mermcart",
+		"kyno_meadowisland_mermfisher",
+		"kyno_meadowisland_mermhut",
+		"kyno_meadowisland_pikotree",
+		"kyno_meadowisland_pond",
+		"kyno_meadowisland_sandhill",
+		"kyno_meadowisland_seller",
+		"kyno_meadowisland_shop",
+		"kyno_meadowisland_tree",
+		"kyno_neonfish",
+		"kyno_pebblecrab",
+		"kyno_pebblecrab_spawner",
+		"kyno_pierrotfish",
+		"kyno_pineapplebush",
+		"kyno_pond_salt",
+		"kyno_repairtool",
+		"kyno_salmonfish",
+		"kyno_serenityisland_crate",
+		"kyno_serenityisland_crate_spawner",
+		"kyno_serenityisland_decor",
+		"kyno_serenityisland_decor2",
+		"kyno_serenityisland_rock1",
+		"kyno_serenityisland_rock2",
+		"kyno_serenityisland_rock3",
+		"kyno_serenityisland_shop",
+		"kyno_spotbush",
+		"kyno_sugartree",
+		"kyno_sugartree_flower",
+		"kyno_sweetpotato_ground",
+		"kyno_tropicalfish",
+		"lightning_rod",
+		"mandrake_planted",
+		"plantregistryhat",
+		"quagmire_pigeon",
+		"red_mushroom",
+		"reeds",
+		"rock1",
+		"rock_flintless",
+		"rocks",
+		"saltrock",
+		"sapling",
+		"seastack",
+		"waterplant",
+		"waterplant_baby",
+        "kyno_wildwheat",
+    }
+
+    local tiles_to_replace = 
+	{
+		WORLD_TILES.QUAGMIRE_CITYSTONE,
+		WORLD_TILES.QUAGMIRE_PARKFIELD,
+		WORLD_TILES.OCEAN_BRINEPOOL,
+		WORLD_TILES.SAVANNA,
+		WORLD_TILES.ROCKY,
+		WORLD_TILES.FOREST,
+		WORLD_TILES.MONKEY_GROUND,
+		WORLD_TILES.ROAD,
+		WORLD_TILES.FARMING_SOIL,
+		WORLD_TILES.HOF_FIELDS,
+		WORLD_TILES.HOF_TIDALMARSH,
+	}
+
+	local marker = TheSim:FindFirstEntityWithTag(marker_tag)
+	
+	if not marker or not marker:IsValid() then
+		print("Marker '"..marker_tag.."' not found!")
+		return
+	end
+
+	local px, py, pz = marker.Transform:GetWorldPosition()
+
+	local layout_ents = TheSim:FindEntities(px, py, pz, 200, nil, {"player", "FX", "INLIMBO"})
+	local filtered = {}
+	
+	for _, ent in ipairs(layout_ents) do
+		if ent:IsValid() and ent.prefab ~= nil then
+			for _, name in ipairs(center_prefabs) do
+				if ent.prefab == name then
+					table.insert(filtered, ent)
+					break
+				end
+			end
+		end
+	end
+	
+	if #filtered > 0 then
+		local sum_x, sum_z = 0, 0
+		
+		for _, ent in ipairs(filtered) do
+			local ex, _, ez = ent.Transform:GetWorldPosition()
+			
+			sum_x = sum_x + ex
+			sum_z = sum_z + ez
+		end
+		
+		px = sum_x / #filtered
+		pz = sum_z / #filtered
+    end
+
+	local cx, cz = map:GetTileCoordsAtPoint(px, 0, pz)
+	local visited = {}
+	
+	local function FloodFillAdvanced(x, z, base_tile)
+		local key = x..","..z
+		
+		if visited[key] then 
+			return 
+		end
+        
+		if x < 0 or z < 0 or x >= map_width or z >= map_height then 
+			return 
+		end
+
+		local current_tile = map:GetTile(x, z)
+		local match = false
+		
+		for _, t in ipairs(tiles_to_replace) do
+			if current_tile == t then
+				match = true
+				break
+			end
+		end
+		
+		if not match then 
+			return 
+		end
+
+		visited[key] = true
+		map:SetTile(x, z, WORLD_TILES.OCEAN_ROUGH)
+
+		local dirs = {{1,0},{-1,0},{0,1},{0,-1}}
+        
+		for _, d in ipairs(dirs) do
+			FloodFillAdvanced(x + d[1], z + d[2], current_tile)
+		end
+
+		for dx = -max_jump, max_jump do
+			for dz = -max_jump, max_jump do
+				if math.abs(dx) + math.abs(dz) > 1 then
+					local nx, nz = x + dx, z + dz
+					
+					if not visited[nx..","..nz] and map:GetTile(nx, nz) == current_tile then
+						FloodFillAdvanced(nx, nz, current_tile)
+					end
+				end
+			end
+		end
+	end
+
+	FloodFillAdvanced(cx, cz, map:GetTile(cx, cz))
+	
+	if floodagain then
+		for dx = -max_jump*5, max_jump*5 do
+			for dz = -max_jump*5, max_jump*5 do
+				local nx, nz = cx + dx, cz + dz
+			
+				if nx >= 0 and nz >= 0 and nx < map_width and nz < map_height then
+					local tile = map:GetTile(nx, nz)
+
+					for _, t in ipairs(tiles_to_replace) do
+						if tile == t and not visited[nx..","..nz] then
+							FloodFillAdvanced(nx, nz, tile)
+						end
+					end
+				end
+			end
+		end
+	end
+
+	local ents = TheSim:FindEntities(px, py, pz, 150, nil, {"player", "FX", "INLIMBO"})
+	local removed_ents = 0
+	
+	for _, ent in ipairs(ents) do
+		if ent and ent:IsValid() and ent.prefab then
+			for _, prefab_name in ipairs(prefabs_to_remove) do
+				if ent.prefab == prefab_name then
+					ent:Remove()
+					removed_ents = removed_ents + 1
+					break
+				end
+			end
+		end
+	end
+	
+	-- Can't this be removed by this function already?
+	TheNet:SendRemoteExecute('c_removeall("kyno_pebblecrab_spawner")')
+	TheNet:Announce(layoutname.." Successfully removed. Return to the Main Menu to perform complete Retrofit.")
+	print("Heap of Foods Retrofitting - Island Removed! | Prefabs removed: "..removed_ents)
+end

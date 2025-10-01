@@ -177,7 +177,7 @@ for i, layout in ipairs(hof_ocean_setpieces) do
 		add_topology                     = 
 		{
 			room_id                      = "StaticLayoutIsland:WreckSetPieces",
-			tags                         = {"RoadPoison", "not_mainland", "WreckArea"},
+			tags                         = {"RoadPoison", "not_mainland", "Mist", "WreckArea"},
 		},
 		min_dist_from_land               = 0,
 	})

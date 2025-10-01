@@ -46,6 +46,42 @@ function IsSerenityBiomeAtPoint(x, y, z)
 	return false
 end
 
+function IsMeadowBiome(inst)
+	if inst ~= nil and inst:IsValid() and TheWorld.Map:IsVisualGroundAtPoint(inst.Transform:GetWorldPosition()) then
+		local node = TheWorld.Map:FindNodeAtPoint(inst.Transform:GetWorldPosition())
+		return node and node.tags and table.contains(node.tags, "MeadowArea")
+	end
+	
+	return false
+end
+
+function IsMeadowBiomeAtPoint(x, y, z)
+	if TheWorld.Map:IsVisualGroundAtPoint(x, y, z) then
+		local node = TheWorld.Map:FindNodeAtPoint(x, y, z)
+		return node and node.tags and table.contains(node.tags, "MeadowArea")
+	end
+	
+	return false
+end
+
+function IsWreckBiome(inst)
+	if inst ~= nil and inst:IsValid() and TheWorld.Map:IsVisualGroundAtPoint(inst.Transform:GetWorldPosition()) then
+		local node = TheWorld.Map:FindNodeAtPoint(inst.Transform:GetWorldPosition())
+		return node and node.tags and table.contains(node.tags, "WreckArea")
+	end
+	
+	return false
+end
+
+function IsWreckBiomeAtPoint(x, y, z)
+	if TheWorld.Map:IsVisualGroundAtPoint(x, y, z) then
+		local node = TheWorld.Map:FindNodeAtPoint(x, y, z)
+		return node and node.tags and table.contains(node.tags, "WreckArea")
+	end
+	
+	return false
+end
+
 local function GetRandomPosition(caster, teleportee, target_in_ocean)
 	if target_in_ocean then
 		local pt = TheWorld.Map:FindRandomPointInOcean(20)
