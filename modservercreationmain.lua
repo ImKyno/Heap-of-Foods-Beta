@@ -30,3 +30,4 @@ FrontEndAssets =
 ReloadFrontEndAssets()
 
 _G.ChangeFoodConfigs("RETROFIT", 0)
+_G.ChangeFoodConfigs("RETROFIT_FORCE", false)

@@ -66,6 +66,9 @@ local function fn(bank, build, anim, name)
         
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_POP"
+	
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
     
     inst:AddComponent("inventoryitem")
     inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

@@ -985,6 +985,52 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			},
 		},
 		
+		RETROFIT_FORCE =
+		{
+			NAME =
+			{
+				"Force Retrofit",
+				zh  = "强制改造",
+				zht = "強制改造",
+				pt  = "Forçar Retrofit",
+				pl  = "Wymuś Retrofit",
+				es  = "Forzar Retrofit",
+			},
+			
+			HOVER =
+			{
+				"If you are unable to Retrofit Mod Contents enable this option.\nWARNING: Caution is advised, you may end up with unwanted content.",
+				zh  = "如果无法改造模组内容，请启用此选项。\n警告：请谨慎使用，否则可能产生不想要的内容。",
+				zht = "如果無法改造模組內容，請啟用此選項。\n警告：請謹慎使用，否則可能產生不想要的內容。",
+				pt  = "Se você não conseguir fazer Retrofit dos conteúdos do Mod, habilite esta opção.\nAVISO: Use com cautela, você pode acabar com conteúdos indesejados.",
+				pl  = "Jeśli nie możesz zastosować retrofitu zawartości moda, włącz tę opcję.\nOSTRZEŻENIE: Używaj ostrożnie, możesz otrzymać niepożądaną zawartość.",
+				es  = "Si no puedes realizar el Retrofit del contenido del mod, activa esta opción.\nADVERTENCIA: Se recomienda precaución, podrías obtener contenido no deseado si se usa descuidadamente.",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"The Mod will try retrofitting using the default settings.",
+					zh  = "模组将尝试使用默认设置进行改造。",
+					zht = "模組將嘗試使用預設設置進行改造。",
+					pt  = "O Mod tentará aplicar retrofit usando as configurações padrão.",
+					pl  = "Mod spróbuje zastosować retrofit używając domyślnych ustawień.",
+					es  = "El mod intentará realizar el retrofit usando la configuración predeterminada.",
+				},
+				
+				ENABLED =
+				{
+					"The Mod will override default settings to force a Retrofit.",
+					zh  = "模组将覆盖默认设置以强制执行改造。",
+					zht = "模組將覆蓋預設設置以強制執行改造。",
+					pt  = "O mod irá sobrescrever as configurações padrão para forçar um retrofit.",
+					pl  = "Mod nadpisze domyślne ustawienia, aby wymusić retrofit.",
+					es  = "El mod sobrescribirá la configuración predeterminada para forzar un retrofit.",
+				},
+			},
+		},
+		
 		RETROFIT =
 		{
 			NAME =
@@ -1032,26 +1078,26 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 					},
 				},
 				
-				ISLANDS =
+				OCEAN =
 				{
 					NAME =
 					{
-						"Retrofit Islands",
-						zh  = "Mod岛屿",
-						zht = "Mod島嶼",
-						pt  = "Retro. de Ilhas",
-						pl  = "Wyspy Retrofitowane",
-						es  = "Islas Retrofitadas",
+						"Retrofit Ocean",
+						zh  = "海洋回填",
+						zht = "海洋回填",
+						pt  = "Retro. do Oceano",
+						pl  = "Przebudowa oceanu",
+						es  = "Océano Retrofitado",
 					},
 					
 					HOVER =
 					{
-						"Mod Islands will be generated during server initialization.",
-						zh  = "Mod的岛屿会在服务器初始化期间生成。",
-						zht = "Mod的島嶼會在伺服器初始化期間生成。",
-						pt  = "As Ilhas do Mod serão geradas durante a inicialização do servidor.",
-						pl  = "Wyspy moda zostaną wygenerowane podczas inicjalizacji serwera.",
-						es  = "Las islas del mod se generarán durante la inicialización del servidor.",
+						"Mod Ocean Setpieces will be generated during server initialization.",
+						zh  = "海洋布景将在服务器初始化期间生成。",
+						zht = "海洋布景將在伺服器初始化期間生成。",
+						pt  = "As Setpieces de Oceano serão geradas durante a inicialização do servidor.",
+						pl  = "Elementy oceanu zostaną wygenerowane podczas inicjalizacji serwera.",
+						es  = "Las piezas del océano se generarán durante la inicialización del servidor.",
 					},
 				},
 				
@@ -1455,6 +1501,22 @@ local FERTILIZER_OPTIONS     =
 	},
 }
 
+local RETROFITFORCE_LABEL    = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.NAME)
+local RETROFITFORCE_HOVER    = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.HOVER)
+local RETROFITFORCE_OPTIONS  =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
 local RETROFIT_LABEL         = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.NAME)
 local RETROFIT_HOVER         = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER)
 local RETROFIT_OPTIONS       =
@@ -1465,8 +1527,8 @@ local RETROFIT_OPTIONS       =
 		data                 = 0,
 	},
 	{
-		description          = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.ISLANDS.NAME),
-		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.ISLANDS.HOVER),
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.OCEAN.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.OCEAN.HOVER),
 		data                 = 1,
 	},
 	{
@@ -1494,26 +1556,27 @@ local MODTRADES_OPTIONS      =
 
 configuration_options        =
 {
-	{ name                   = "LANGUAGE",         label = LANGUAGE_LABEL,      hover = LANGUAGE_HOVER,     options = LANGUAGE_OPTIONS,     default = false },
+	{ name                   = "LANGUAGE",         label = LANGUAGE_LABEL,      hover = LANGUAGE_HOVER,      options = LANGUAGE_OPTIONS,      default = false },
 	-- General Options.
-	{ name                   = "GENERAL",          label = GENERAL_LABEL,       hover = GENERAL_HOVER,      options = NONE_OPTIONS,         default = false },
-	{ name                   = "SEASONALFOOD",     label = SEASONALFOOD_LABEL,  hover = SEASONALFOOD_HOVER, options = SEASONALFOOD_OPTIONS, default = false },
-	{ name                   = "HUMANMEAT",        label = HUMANMEAT_LABEL,     hover = HUMANMEAT_HOVER,    options = HUMANMEAT_OPTIONS,    default = true  },
-	{ name                   = "GIANTSPAWNING",    label = GIANTSPAWN_LABEL,    hover = GIANTSPAWN_HOVER,   options = GIANTSPAWN_OPTIONS,   default = true  },
-	{ name                   = "ALCOHOLICDRINKS",  label = ALCOHOL_LABEL,       hover = ALCOHOL_HOVER,      options = ALCOHOL_OPTIONS,      default = true  },
-	{ name                   = "ICEBOXSTACKSIZE",  label = ICEBOX_LABEL,        hover = ICEBOX_HOVER,       options = ICEBOX_OPTIONS,       default = false },
-	{ name                   = "COFFEESPEED",      label = COFFEESPEED_LABEL,   hover = COFFEESPEED_HOVER,  options = COFFEESPEED_OPTIONS,  default = true  },
-	{ name                   = "COFFEEDURATION",   label = COFFEETIMER_LABEL,   hover = COFFEETIMER_HOVER,  options = COFFEETIMER_OPTIONS,  default = 480   },
-	{ name                   = "COFFEEDROPRATE",   label = COFFEEDROP_LABEL,    hover = COFFEEDROP_HOVER,   options = COFFEEDROP_OPTIONS,   default = 4     },
+	{ name                   = "GENERAL",          label = GENERAL_LABEL,       hover = GENERAL_HOVER,       options = NONE_OPTIONS,          default = false },
+	{ name                   = "SEASONALFOOD",     label = SEASONALFOOD_LABEL,  hover = SEASONALFOOD_HOVER,  options = SEASONALFOOD_OPTIONS,  default = false },
+	{ name                   = "HUMANMEAT",        label = HUMANMEAT_LABEL,     hover = HUMANMEAT_HOVER,     options = HUMANMEAT_OPTIONS,     default = true  },
+	{ name                   = "GIANTSPAWNING",    label = GIANTSPAWN_LABEL,    hover = GIANTSPAWN_HOVER,    options = GIANTSPAWN_OPTIONS,    default = true  },
+	{ name                   = "ALCOHOLICDRINKS",  label = ALCOHOL_LABEL,       hover = ALCOHOL_HOVER,       options = ALCOHOL_OPTIONS,       default = true  },
+	{ name                   = "ICEBOXSTACKSIZE",  label = ICEBOX_LABEL,        hover = ICEBOX_HOVER,        options = ICEBOX_OPTIONS,        default = false },
+	{ name                   = "COFFEESPEED",      label = COFFEESPEED_LABEL,   hover = COFFEESPEED_HOVER,   options = COFFEESPEED_OPTIONS,   default = true  },
+	{ name                   = "COFFEEDURATION",   label = COFFEETIMER_LABEL,   hover = COFFEETIMER_HOVER,   options = COFFEETIMER_OPTIONS,   default = 480   },
+	{ name                   = "COFFEEDROPRATE",   label = COFFEEDROP_LABEL,    hover = COFFEEDROP_HOVER,    options = COFFEEDROP_OPTIONS,    default = 4     },
 	-- Miscellaneous Options.
-	{ name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,       options = NONE_OPTIONS,         default = false },
-	{ name                   = "SCRAPBOOK",        label = SCRAPBOOK_LABEL,     hover = SCRAPBOOK_HOVER,    options = SCRAPBOOK_OPTIONS,    default = true  },
-	{ name                   = "WARLYRECIPES",     label = WARLYRECIPES_LABEL,  hover = WARLYRECIPES_HOVER, options = WARLYRECIPES_OPTIONS, default = true  },
-	{ name                   = "KEEPFOOD",         label = KEEPFOOD_LABEL,      hover = KEEPFOOD_HOVER,     options = KEEPFOOD_OPTIONS,     default = false },
-	{ name                   = "WARLYMEALGRINDER", label = WARLYGRINDER_LABEL,  hover = WARLYGRINDER_HOVER, options = WARLYGRINDER_OPTIONS, default = false },
-	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,   options = FERTILIZER_OPTIONS,   default = false },
+	{ name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,        options = NONE_OPTIONS,          default = false },
+	{ name                   = "SCRAPBOOK",        label = SCRAPBOOK_LABEL,     hover = SCRAPBOOK_HOVER,     options = SCRAPBOOK_OPTIONS,     default = true  },
+	{ name                   = "WARLYRECIPES",     label = WARLYRECIPES_LABEL,  hover = WARLYRECIPES_HOVER,  options = WARLYRECIPES_OPTIONS,  default = true  },
+	{ name                   = "KEEPFOOD",         label = KEEPFOOD_LABEL,      hover = KEEPFOOD_HOVER,      options = KEEPFOOD_OPTIONS,      default = false },
+	{ name                   = "WARLYMEALGRINDER", label = WARLYGRINDER_LABEL,  hover = WARLYGRINDER_HOVER,  options = WARLYGRINDER_OPTIONS,  default = false },
+	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,    options = FERTILIZER_OPTIONS,    default = false },
 	-- Retrofitting Options.
-	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,  options = NONE_OPTIONS,         default = false },
-	{ name                   = "RETROFIT",         label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,     options = RETROFIT_OPTIONS,     default = 0     },
-	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,    options = MODTRADES_OPTIONS,    default = false },
+	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false },
+	{ name                   = "RETROFIT_FORCE",   label = RETROFITFORCE_LABEL, hover = RETROFITFORCE_HOVER, options = RETROFITFORCE_OPTIONS, default = false },
+	{ name                   = "RETROFIT",         label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,      options = RETROFIT_OPTIONS,      default = 0     },
+	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,     options = MODTRADES_OPTIONS,     default = false },
 }

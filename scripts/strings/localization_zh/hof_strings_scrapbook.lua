@@ -154,4 +154,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.RUBBLE = "长老希望您能帮助他修复旧锅�
 STRINGS.SCRAPBOOK.SPECIALINFO.PINEAPPLEBUSH = "菠萝丛需要近6天才能完全生长。除夏季外，其他季节都需要更长的生长时间。\n\n在夏季，它们每两天就会开始生长一次。"
 STRINGS.SCRAPBOOK.SPECIALINFO.GARDENSPRINKLER = "可以开启和关闭。加满燃料并开启时，会自动为范围内的农作物浇水。"
 STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHAT = "减少饥饿感15%。"
-STRINGS.SCRAPBOOK.SPECIALINFO.POTATOSACK = "A 6 slot container that can store potato-related items and keep them fresh for longer periods.\n\n\"Potatoes is strong for belly!\" - Wolfgang."
+STRINGS.SCRAPBOOK.SPECIALINFO.POTATOSACK = "一个拥有6个格位的容器，可以存放土豆相关的物品，并延长它们的新鲜度。\n\n“土豆让肚子更强壮！” - 沃尔夫冈。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODSACK = "一个8格防水容器，无论天气如何都能保持食材新鲜。\n\n它巧妙的设计不仅减缓食材腐败，还能恢复已经开始变质的食材的新鲜度。\n\n它散发着神秘的冰霜魔力，冻结容器内的一切。"

@@ -34,8 +34,16 @@ local function OnOpenCan(inst, pos, doer)
 		tunacan.components.inventoryitem:OnDropped(false, .5)
 	end
 	
-	inst:Remove()
-end		
+	if inst.components.stackable ~= nil then
+		inst.components.stackable:Get():Remove()
+        
+		if inst.components.stackable:StackSize() <= 0 then
+			inst:Remove()
+		end
+	else
+		inst:Remove()
+	end
+end
 
 local function closed_fn()
 	local inst = CreateEntity()
@@ -68,6 +76,9 @@ local function closed_fn()
     inst:AddComponent("inventoryitem")
     inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_tunacan"
+	
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
     
     inst:AddComponent("tradable")
     inst.components.tradable.goldvalue = 1
@@ -113,6 +124,9 @@ local function opened_fn()
     
     inst:AddComponent("tradable")
     inst.components.tradable.goldvalue = 1
+	
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
 
     inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_TUNACAN_HEALTH

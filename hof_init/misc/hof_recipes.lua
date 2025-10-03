@@ -17,6 +17,7 @@ local HOF_FERTILIZERTWEAK  = GetModConfigData("FERTILIZERTWEAK")
 local DefaultAtlas         = "images/inventoryimages.xml"
 local DefaultAtlas1        = "images/inventoryimages1.xml"
 local ModAtlas             = "images/inventoryimages/hof_inventoryimages.xml"
+local CraftingFilterAtlas  = "images/tabimages/hof_tabimages.xml"
 
 -- For sorting recipe.
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
@@ -108,6 +109,7 @@ TUNING.PROTOTYPER_TREES.MEALING_TWO      = TechTree.Create({ MEALING      = 2 })
 TUNING.PROTOTYPER_TREES.SERENITYSHOP_ONE = TechTree.Create({ SERENITYSHOP = 1 })
 TUNING.PROTOTYPER_TREES.SERENITYSHOP_TWO = TechTree.Create({ SERENITYSHOP = 2 })
 
+TUNING.PROTOTYPER_TREES.MEADOWSHOP       = TechTree.Create({ MEADOWSHOP   = 1 })
 TUNING.PROTOTYPER_TREES.MEADOWSHOP_ONE   = TechTree.Create({ MEADOWSHOP   = 1 })
 TUNING.PROTOTYPER_TREES.MEADOWSHOP_TWO   = TechTree.Create({ MEADOWSHOP   = 2 })
 
@@ -125,36 +127,72 @@ for i, v in pairs(_G.AllRecipes) do
 	end
 end
 
--- Custom Prototyper and Recipe Filters.
-AddPrototyperDef("kyno_mealgrinder", 
-	{ 
-		icon_atlas 			= "images/tabimages/hof_tabimages.xml", 
-		icon_image 			= "kyno_tab_mealing.tex", 
-		is_crafting_station = true, 
-		action_str 			= "MEALING", 
-		filter_text 		= _G.STRINGS.UI.CRAFTING_FILTERS.MEALING,
-	}
-)
-
-AddPrototyperDef("kyno_serenityisland_shop",
+-- Custom Recipe Filters.
+local HOF_FILTERS            =
+{
+	MEALING                  =
 	{
-		icon_atlas			= "images/tabimages/hof_tabimages.xml",
-		icon_image			= "kyno_tab_serenity.tex",
-		is_crafting_station	= true,
-		action_str			= "TRADE",
-		filter_text			= _G.STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP,
-	}
-)
-
-AddPrototyperDef("kyno_meadowisland_seller",
+		name                 = "MEALING",
+		atlas                = CraftingFilterAtlas,
+		image                = "kyno_tab_mealing.tex",
+		custom_pos           = true,
+	},
+	
+	SERENITYSHOP             =
 	{
-		icon_atlas          = "images/tabimages/hof_tabimages.xml",
-		icon_image          = "kyno_tab_meadow.tex",
-		is_crafting_station = true,
-		action_str          = "TRADE",
-		filter_text         = _G.STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP,
-	}
-)
+		name                 = "SERENITYSHOP",
+		atlas                = CraftingFilterAtlas,
+		image                = "kyno_tab_serenity.tex",
+		custom_pos           = true,
+	},
+	
+	MEADOWSHOP               =
+	{
+		name                 = "MEADOWSHOP",
+		atlas                = CraftingFilterAtlas,
+		image                = "kyno_tab_meadow.tex",
+		custom_pos           = true,
+	},
+}
+
+for k, filter in pairs(HOF_FILTERS) do
+    AddRecipeFilter(k, filter)
+end
+
+-- Custom Prototyper and Crafting Stations.
+local HOF_PROTOTYPERS        =
+{
+	kyno_mealgrinder         =
+	{
+		icon_atlas           = CraftingFilterAtlas,
+		icon_image           = "kyno_tab_mealing.tex",
+		is_crafting_station  = true,
+		action_str           = "MEALING",
+		filter_text          = _G.STRINGS.UI.CRAFTING_FILTERS.MEALING,
+	},
+	
+	kyno_serenityisland_shop =
+	{
+		icon_atlas			 = CraftingFilterAtlas,
+		icon_image			 = "kyno_tab_serenity.tex",
+		is_crafting_station	 = true,
+		action_str			 = "TRADE",
+		filter_text			 = _G.STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP,
+	},
+	
+	kyno_meadowisland_seller =
+	{
+		icon_atlas           = CraftingFilterAtlas,
+		icon_image           = "kyno_tab_meadow.tex",
+		is_crafting_station  = true,
+		action_str           = "TRADE",
+		filter_text          = _G.STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP,
+	},
+}
+
+for k, prototyper in pairs(HOF_PROTOTYPERS) do
+    AddPrototyperDef(k, prototyper)
+end
 
 -- Mod Recipes.
 AddRecipe2("kyno_flour", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.MEALING_ONE, 
@@ -416,7 +454,6 @@ SortAfter("kyno_foodsack", "icepack", "CONTAINERS")
 
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
-		product             = "potatosack",
 		builder_tag         = "strongman",
 		atlas               = "images/inventoryimages2.xml",
 		image               = "potato_sack_full.tex",

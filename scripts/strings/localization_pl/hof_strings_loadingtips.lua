@@ -81,6 +81,10 @@ local LOADINGTIPS   =
 	METALBUCKET     = "What's better than a Bucket? A sturdy metal bucket that will not break when milking animals!",
 	LUNARTEQUILA    = "Feeling a bit on your moon side? Why not drink an Enlightened Tequila to open your mind to the truth?",
 	MIMICMONSA      = "If you want to sneak past dangerous foes, brew a Sneakmosa and no one and nothing will ever notice you!",
+	RUMMAGEWAGON    = "\"I saw Sammy the other day rummaging his Wagon in search of something. I think he was trading with someone. Perhaps I should check what he stores in there...\" -W",
+	RUMMAGEWAGON2   = "\"Its not robbery, I swear! Sammy's throwing away a bunch of useful junk we could use instead! Just look everything I got from his Wagon!\" -W.",
+	SLAUGHTERHEAT   = "Beware! Some animals will attack if you slaughter one of their kind when more is around.",
+	SLAUGHTERFLEE   = "Some animals can be scared away when they see you slaughtering one of their kind with the Slaughter Tools.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

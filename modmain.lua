@@ -51,9 +51,9 @@ local hof_init_misc    =
 
 local hof_init_world   =
 {
+	"hof_tiledefs",
 	"hof_regrowth",
 	"hof_retrofit",
-	"hof_retrofit_component",
 	"hof_pollinator_component",
 	"hof_worldgen",
 	"hof_messagebottletreasures",

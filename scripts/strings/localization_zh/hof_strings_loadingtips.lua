@@ -81,6 +81,10 @@ local LOADINGTIPS   =
 	METALBUCKET     = "什么比水桶更好？一个结实的金属水桶，在挤奶时不会破裂！",
 	LUNARTEQUILA    = "感觉有点儿迷迷糊糊？何不来一杯启明龙舌兰酒，让你的心灵敞开，接纳真相？",
 	MIMICMONSA      = "如果你想悄悄地躲过危险的敌人，就酿造一杯“潜行鸡尾酒”，这样没有人会注意到你！",
+	RUMMAGEWAGON    = "\"I saw Sammy the other day rummaging his Wagon in search of something. I think he was trading with someone. Perhaps I should check what he stores in there...\" -W",
+	RUMMAGEWAGON2   = "\"Its not robbery, I swear! Sammy's throwing away a bunch of useful junk we could use instead! Just look everything I got from his Wagon!\" -W.",
+	SLAUGHTERHEAT   = "Beware! Some animals will attack if you slaughter one of their kind when more is around.",
+	SLAUGHTERFLEE   = "Some animals can be scared away when they see you slaughtering one of their kind with the Slaughter Tools.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

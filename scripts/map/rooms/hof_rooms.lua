@@ -1,8 +1,8 @@
 AddRoom("SerenityRoom", 
 {
 	colour = {r = 0.3, g = 0.2, b = 0.1, a = 0.3},
-	value = WORLD_TILES.QUAGMIRE_PARKFIELD,
-	tags = {"RoadPoison", "nohasslers", "nohunt"},
+	value = WORLD_TILES.OCEAN_SWELL,
+	tags = {"SerenityArea"},
 	
 	required_prefabs =
 	{
@@ -21,8 +21,8 @@ AddRoom("SerenityRoom",
 AddRoom("MeadowRoom", 
 {
 	colour = {r = 0.3, g = 0.2, b = 0.1, a = 0.3},
-	value = WORLD_TILES.MONKEY_GROUND,
-	tags = {"RoadPoison", "nohunt"},
+	value = WORLD_TILES.OCEAN_SWELL,
+	tags = {"MeadowArea"},
 	
 	required_prefabs =
 	{

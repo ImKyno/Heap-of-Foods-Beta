@@ -373,6 +373,32 @@ function c_hofspawnlayout(name)
     obj_layout.Place({x-offset, z-offset}, name, add_fn, nil, TheWorld.Map)
 end
 
+function c_hofareaaware(start)
+	local player = ConsoleCommandPlayer()
+	
+	if player ~= nil then
+		if player.areatask ~= nil then
+			player.areatask:Cancel()
+			player.areatask = nil
+		end
+		
+		if start then
+			player.areatask = player:DoPeriodicTask(1, function()
+				print(player.components.areaaware:GetDebugString())
+			end)
+			
+			TheNet:Announce("Areaaware Debugging Started.")
+		else
+			if player.areatask ~= nil then
+				player.areatask:Cancel()
+				player.areatask = nil
+			end
+			
+			TheNet:Announce("Areaaware Debugging Stopped.")
+		end
+	end
+end
+
 -- A Recursive function that locates a setpiece + prefab serving as
 -- starting point to remove everything around it including world tiles.
 -- Feel free to copy this function and modify to your own needs!
@@ -382,7 +408,7 @@ end
 -- the nearest correspondent tile to remove, its nice for setpieces that are "archipelagos".
 
 -- c_hofremoveisland("SerenityIsland", "serenity_marker", 3, true)
--- c_hofremoveisland("MeadowIsland", "meadow_marker")
+-- c_hofremoveisland("MeadowIsland", "meadow_marker", 1)
 function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 	require("tilemanager")
 
@@ -392,6 +418,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 
 	local center_prefabs =
 	{
+		"kingfisher",
 		"kyno_chicken2",
 		"kyno_chicken2_herd",
 		"kyno_cookware_elder",
@@ -427,11 +454,13 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"kyno_serenityisland_rock3",
 		"kyno_serenityisland_shop",
 		"kyno_spotbush",
+		"kyno_sugarfly",
 		"kyno_sugartree",
 		"kyno_sugartree_flower",
 		"kyno_sweetpotato_ground",
 		"kyno_tropicalfish",
 		"kyno_wildwheat",
+		"toucan",
 	}
 
 	local prefabs_to_remove =
@@ -448,6 +477,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"flower_planted",
 		"grass",
 		"green_mushroom",
+		"kingfisher",
 		"kyno_chicken2",
 		"kyno_chicken2_herd",
 		"kyno_cookware_elder",
@@ -484,6 +514,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"kyno_serenityisland_rock3",
 		"kyno_serenityisland_shop",
 		"kyno_spotbush",
+		"kyno_sugarfly",
 		"kyno_sugartree",
 		"kyno_sugartree_flower",
 		"kyno_sweetpotato_ground",
@@ -500,6 +531,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"saltrock",
 		"sapling",
 		"seastack",
+		"toucan",
 		"waterplant",
 		"waterplant_baby",
         "kyno_wildwheat",

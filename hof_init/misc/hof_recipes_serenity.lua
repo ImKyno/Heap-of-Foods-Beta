@@ -283,6 +283,7 @@ AddRecipe2("kyno_sugartree_petals_p", {Ingredient("kyno_sugarfly", 1, ModAtlas)}
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
 		product				= "kyno_sugartree_petals",		
@@ -298,6 +299,7 @@ AddRecipe2("kyno_sugarfly_p", {Ingredient("butterfly", 1)}, TECH.LOST,
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
 		product				= "kyno_sugarfly",		
@@ -313,6 +315,7 @@ AddRecipe2("kyno_sugartree_bud_p", {Ingredient("kyno_syrup", 3, ModAtlas)}, TECH
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
 		product				= "kyno_sugartree_bud",		
@@ -326,7 +329,8 @@ AddRecipe2("kyno_sugartree_bud_p", {Ingredient("kyno_syrup", 3, ModAtlas)}, TECH
 AddRecipe2("dug_kyno_spotbush_p", {Ingredient("kyno_spotspice_leaf", 3)}, TECH.LOST,
 	{
 		nounlock 			= true,
-		no_deconstruction   = true,		
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
 		product				= "dug_kyno_spotbush",		
@@ -341,6 +345,7 @@ AddRecipe2("dug_kyno_wildwheat_p", {Ingredient("kyno_wheat", 3)}, TECH.LOST,
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
 		sg_state    		= "give",
 		product				= "dug_kyno_wildwheat",		

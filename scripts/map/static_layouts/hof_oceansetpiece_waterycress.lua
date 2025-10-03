@@ -36,11 +36,11 @@ return {
       properties = {},
       encoding = "lua",
       data = {
-        0, 1, 1, 1, 0,
         1, 1, 1, 1, 1,
         1, 1, 1, 1, 1,
         1, 1, 1, 1, 1,
-        0, 1, 1, 1, 0
+        1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1
       }
     },
     {
@@ -122,6 +122,94 @@ return {
           shape = "rectangle",
           x = 249,
           y = 103,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_watery_crate",
+          shape = "rectangle",
+          x = 130,
+          y = 256,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_jellyfish_spawner",
+          shape = "rectangle",
+          x = 237,
+          y = 181,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_ocean_wreck",
+          shape = "rectangle",
+          x = 186,
+          y = 50,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "seastack",
+          shape = "rectangle",
+          x = 190,
+          y = 121,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "seastack",
+          shape = "rectangle",
+          x = 76,
+          y = 182,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "seastack",
+          shape = "rectangle",
+          x = 209,
+          y = 242,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "seastack",
+          shape = "rectangle",
+          x = 295,
+          y = 155,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "seastack",
+          shape = "rectangle",
+          x = 139,
+          y = 18,
           width = 0,
           height = 0,
           visible = true,

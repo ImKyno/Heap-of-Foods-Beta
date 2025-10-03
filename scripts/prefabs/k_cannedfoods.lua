@@ -38,7 +38,15 @@ local function OnOpenCan(inst, pos, doer)
 		openedcan.components.inventoryitem:OnDropped(false, .5)
 	end
 	
-	inst:Remove()
+	if inst.components.stackable ~= nil then
+		inst.components.stackable:Get():Remove()
+        
+		if inst.components.stackable:StackSize() <= 0 then
+			inst:Remove()
+		end
+	else
+		inst:Remove()
+	end
 end		
 
 local function closed_fn(bank, build, anim, closed_name)
@@ -72,6 +80,9 @@ local function closed_fn(bank, build, anim, closed_name)
         
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_CANNEDFOOD"
+	
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
     
     inst:AddComponent("inventoryitem")
     inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
@@ -121,6 +132,9 @@ local function opened_fn(bank, build, anim, opened_name)
         
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_CANNEDFOOD_OPEN"
+	
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
     
     inst:AddComponent("inventoryitem")
     inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

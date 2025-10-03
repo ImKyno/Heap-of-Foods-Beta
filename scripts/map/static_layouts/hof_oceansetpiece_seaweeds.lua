@@ -36,11 +36,11 @@ return {
       properties = {},
       encoding = "lua",
       data = {
-        0, 1, 1, 1, 0,
         1, 1, 1, 1, 1,
         1, 1, 1, 1, 1,
         1, 1, 1, 1, 1,
-        0, 1, 1, 1, 0
+        1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1
       }
     },
     {
@@ -122,6 +122,72 @@ return {
           shape = "rectangle",
           x = 184,
           y = 28,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_jellyfish_spawner",
+          shape = "rectangle",
+          x = 217,
+          y = 127,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_watery_crate",
+          shape = "rectangle",
+          x = 282,
+          y = 177,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_watery_crate",
+          shape = "rectangle",
+          x = 85,
+          y = 74,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "seastack",
+          shape = "rectangle",
+          x = 141,
+          y = 82,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "seastack",
+          shape = "rectangle",
+          x = 192,
+          y = 259,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "seastack",
+          shape = "rectangle",
+          x = 78,
+          y = 184,
           width = 0,
           height = 0,
           visible = true,

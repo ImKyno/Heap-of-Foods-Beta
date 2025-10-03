@@ -36,11 +36,11 @@ return {
       properties = {},
       encoding = "lua",
       data = {
-        0, 1, 1, 1, 0,
         1, 1, 1, 1, 1,
         1, 1, 1, 1, 1,
         1, 1, 1, 1, 1,
-        0, 1, 1, 1, 0
+        1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1
       }
     },
     {
@@ -133,6 +133,61 @@ return {
           shape = "rectangle",
           x = 174,
           y = 212,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_swordfish_spawner",
+          shape = "rectangle",
+          x = 204,
+          y = 125,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "seastack",
+          shape = "rectangle",
+          x = 127,
+          y = 41,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "seastack",
+          shape = "rectangle",
+          x = 61,
+          y = 193,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "seastack",
+          shape = "rectangle",
+          x = 270,
+          y = 213,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "seastack",
+          shape = "rectangle",
+          x = 173,
+          y = 285,
           width = 0,
           height = 0,
           visible = true,

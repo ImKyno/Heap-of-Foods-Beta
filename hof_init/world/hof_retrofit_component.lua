@@ -103,6 +103,52 @@ local function RetrofitSammyShop()
 	end
 end
 
+local function RetrofitOceanSetPieces()
+	local TheWorld = _G.TheWorld
+
+    local node_indices = {}
+	
+    for k, v in ipairs(_G.TheWorld.topology.ids) do
+		if string.find(v, "WreckArea") then
+            table.insert(node_indices, k)
+        end
+		
+		if string.find(v, "LowMist") then
+            table.insert(node_indices, k)
+        end
+    end
+	
+    if #node_indices == 0 then
+        return false
+    end
+
+    local tags = {"WreckArea", "LowMist"}
+	
+    for k, v in ipairs(node_indices) do
+        if TheWorld.topology.nodes[v].tags == nil then
+            TheWorld.topology.nodes[v].tags = {}
+        end
+		
+        for i, tag in ipairs(tags) do
+            if not table.contains(TheWorld.topology.nodes[v].tags, tag) then
+                table.insert(TheWorld.topology.nodes[v].tags, tag)
+            end
+        end
+    end
+	
+    for i, node in ipairs(TheWorld.topology.nodes) do
+		if table.contains(node.tags, "WreckArea") then
+            TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
+        end
+		
+		if table.contains(node.tags, "LowMist") then
+            TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
+        end
+    end
+
+    return true
+end
+
 AddComponentPostInit("retrofitforestmap_anr", function(self)
 	local oldonpostinit_forest = self.OnPostInit
 
@@ -114,15 +160,22 @@ AddComponentPostInit("retrofitforestmap_anr", function(self)
 				_G.TheWorld.Map:RetrofitNavGrid()
 				_G.ChangeFoodConfigs("RETROFIT", 0)
 				self.requiresreset = true
-			end
-			
+			end			
 		elseif GetModConfigData("RETROFIT") == 2 then
 			local success = RetrofitSammyShop() -- RetrofitMermhuts()
 			
 			if success then
 				_G.ChangeFoodConfigs("RETROFIT", 0)
 			end
-		end 
+		elseif GetModConfigData("RETROFIT") == 3 then
+			local success = RetrofitOceanSetPieces()
+			
+			if success ~= nil then
+				_G.TheWorld.Map:RetrofitNavGrid()
+				_G.ChangeFoodConfigs("RETROFIT", 0)
+				self.requiresreset = true
+			end
+		end
 		
         return oldonpostinit_forest(self, ...)
     end

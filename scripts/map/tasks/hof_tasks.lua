@@ -7,7 +7,8 @@ AddTask("SerenityIsland",
 	keys_given = KEYS.SERENITY_ISLAND,
 	
 	region_id = "serenityisland",
-	room_tags = {"RoadPoison", "not_mainland", "nohasslers", "nohunt"},
+	room_tags = {"RoadPoison", "not_mainland", "SerenityArea"},
+	type = NODE_TYPE.SeparatedRoom,
 	level_set_piece_blocker = true,
 	
 	room_choices = 
@@ -30,7 +31,7 @@ AddTask("MeadowIsland",
 	keys_given = KEYS.MEADOW_ISLAND,
 
 	region_id = "meadowisland",
-	room_tags = {"RoadPoison", "not_mainland", "nohunt"},
+	room_tags = {"RoadPoison", "not_mainland", "MeadowArea"},
 	level_set_piece_blocker = true,
 	
 	room_choices = 

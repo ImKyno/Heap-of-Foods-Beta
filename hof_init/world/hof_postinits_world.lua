@@ -9,9 +9,17 @@ local UpvalueHacker   = require("hof_upvaluehacker")
 
 require("hof_mainfunctions")
 
-local MOD_TRADES = GetModConfigData("MODTRADES")
+AddPrefabPostInit("forest", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("sugarflyspawner")
+    inst:AddComponent("retrofitforestmap_hof")
+end)
 
 -- Pig King Trades Some Items.
+local MOD_TRADES = GetModConfigData("MODTRADES")
 local function BushTrader(inst)
     if not _G.TheWorld.ismastersim then
         return inst
@@ -851,15 +859,6 @@ AddPrefabPostInit("bananabush", function(inst)
     end
 end)
 
--- Make Sugarfly spawn on the Serenity Archipelago.
-AddPrefabPostInit("forest", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-
-	inst:AddComponent("sugarflyspawner")
-end)
-
 -- Purple Grouper can be caught on Swamp ponds.
 AddPrefabPostInit("pond_mos", function(inst)
 	if not _G.TheWorld.ismastersim then
@@ -1038,3 +1037,36 @@ AddComponentPostInit("birdspawner", function(self)
 	end
 end)
 ]]--
+
+-- Spawns Mist in static layouts, not using game's function because its too dense.
+AddSimPostInit(function()
+	if not _G.TheWorld or not _G.TheWorld.topology or not _G.TheWorld.topology.nodes then
+		return
+	end
+
+	for i, node in ipairs(_G.TheWorld.topology.nodes) do
+		if node.tags and table.contains(node.tags, "LowMist") then
+			if node.area == nil then
+				node.area = 1
+			end
+
+			if not _G.TheNet:IsDedicated() then
+				local mist = _G.SpawnPrefab("mist")
+				mist.Transform:SetPosition(node.cent[1], 0, node.cent[2])
+				mist.components.emitter.area_emitter = CreateAreaEmitter(node.poly, node.cent)
+
+				local ext = ResetextentsForPoly(node.poly)
+				mist.entity:SetAABB(ext.radius, 2)
+
+				local density = math.ceil(node.area / 4) / 31
+
+				if table.contains(node.tags, "LowMist") then
+					density = density * 0.2 -- 20% from total density.
+				end
+
+				mist.components.emitter.density_factor = density
+				mist.components.emitter:Emit()
+			end
+		end
+	end
+end)

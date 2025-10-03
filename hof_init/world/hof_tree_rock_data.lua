@@ -24,23 +24,23 @@ WEIGHTED_VINE_LOOT["MEADOW_AREA"] =
 	kyno_kokonut          = 8,
 }
 
-local ROOMS =
+local ROOMS               =
 {
-	["SerenityRoom"] = "SERENITY_AREA",
-	["MeadowRoom"]   = "MEADOW_AREA",
+	["SerenityRoom"]      = "SERENITY_AREA",
+	["MeadowRoom"]        = "MEADOW_AREA",
 }
 
 local TASKS =
 {
-	["SerenityIsland"] = "SERENITY_AREA",
-	["MeadowIsland"]   = "MEADOW_AREA",
+	["SerenityIsland"]    = "SERENITY_AREA",
+	["MeadowIsland"]      = "MEADOW_AREA",
 }
 
-local STATIC_LAYOUTS = 
+local STATIC_LAYOUTS      = 
 {
-    ["hof_serenityisland1"] = "SERENITY_AREA",
-    ["hof_meadowisland1"]   = "MEADOW_AREA",
-	["hof_meadowisland2"]   = "MEADOW_AREA",
+    ["SerenityIsland"]    = "SERENITY_AREA",
+    ["MeadowIsland"]      = "MEADOW_AREA",
+	["hof_meadowisland1"] = "MEADOW_AREA", -- Old layout.
 }
 
 VINE_LOOT_DATA["kyno_sugartree_bud"]    = { build = "kyno_tree_rock_swaps", symbols = { "swap_kyno_sugartree_bud"    } }

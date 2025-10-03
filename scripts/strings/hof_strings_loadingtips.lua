@@ -30,7 +30,7 @@ local LOADINGTIPS   =
 	RUINEDSAPTREE   = "Careful, Tapped Sugarwood Trees that's overflowing with Sap, and not harvested can spoil. Producing Ruined Sap instead!",
 	PIGELDERFOODS   = "\"I heard that strange Pig on the pink-ish island, wants some kind of food... Something to do with Caramels or Wobsters.\" -W",
 	SALTPOND        = "You can fish a different kind of fish in the Salt Ponds of the Serenity Archipelago. Give it a try!",
-	SALTRACK        = "The Salt Rack can be installed on the Salt Pond, to produce Salt Crystals every Four days.",
+	SALTRACK        = "The Salt Rack can be installed on the Salt Pond to produce Salt Crystals every Four days.",
 	SPOTTYSHRUB     = "Spotty Shrubs can be found all across the Serenity Archipelago. And they can be brought home using a Shovel.",
 	SWEETFLOWER     = "The Sweet Flower can be used in the Crock Pot as a Sweetener option.",
 	LIMPETROCK      = "The only place that you will find Limpet Rocks, is the Crab Quarry of Serenity Archipelago or the beach of Seaside Island!",
@@ -81,6 +81,10 @@ local LOADINGTIPS   =
 	METALBUCKET     = "What's better than a Bucket? A sturdy metal bucket that will not break when milking animals!",
 	LUNARTEQUILA    = "Feeling a bit on your moon side? Why not drink an Enlightened Tequila to open your mind to the truth?",
 	MIMICMONSA      = "If you want to sneak past dangerous foes, brew a Sneakmosa and no one and nothing will ever notice you!",
+	RUMMAGEWAGON    = "\"I saw Sammy the other day rummaging his Wagon in search of something. I think he was trading with someone. Perhaps I should check what he stores in there...\" -W",
+	RUMMAGEWAGON2   = "\"Its not robbery, I swear! Sammy's throwing away a bunch of useful junk we could use instead! Just look everything I got from his Wagon!\" -W.",
+	SLAUGHTERHEAT   = "Beware! Some animals will attack if you slaughter one of their kind when more is around.",
+	SLAUGHTERFLEE   = "Some animals can be scared away when they see you slaughtering one of their kind with the Slaughter Tools.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

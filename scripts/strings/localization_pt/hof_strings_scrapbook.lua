@@ -155,3 +155,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PINEAPPLEBUSH = "Pineapple Bushes takes nearly 6 d
 STRINGS.SCRAPBOOK.SPECIALINFO.GARDENSPRINKLER = "Can be turned on and off. While fueled and on, will automatically water farm plants within its range."
 STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHAT = "Reduces hunger by 15%."
 STRINGS.SCRAPBOOK.SPECIALINFO.POTATOSACK = "A 6 slot container that can store potato-related items and keep them fresh for longer periods.\n\n\"Potatoes is strong for belly!\" - Wolfgang."
+STRINGS.SCRAPBOOK.SPECIALINFO.POTATOSACK = "Um contêiner de 6 espaços que pode armazenar itens relacionados a batatas e mantê-los frescos por mais tempo.\n\n“Batatas fortalecem a barriga!” - Wolfgang."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODSACK = "Um contêiner à prova d'água com 8 espaços que mantém seus ingredientes frescos, não importa o clima.\n\nSeu design inteligente não apenas retarda a deterioração, como também pode restaurar a frescura de ingredientes que já começaram a estragar.\n\nEle pulsa com um poder mágico gelado, congelando tudo dentro dele."
