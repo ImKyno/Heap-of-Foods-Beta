@@ -216,12 +216,29 @@ local RoomPrefabs =
 		"BGSpillagmite", 
 		"BGSpillagmiteRoom",
 	},
+	
+	kyno_coffeebush =
+	{
+		"BGVentsRoom",
+		"VentsRoom",
+		"RockTreeRoom",
+		"VentsRoom_exit",
+	},
+}
+
+-- Special case where we want less prefabs spawns in rooms.
+local PrefabValues =
+{
+	["kyno_coffeebush"]    = .02, -- This is because we don't want that much coffee there.
+	["kyno_rockflippable"] = .04, -- Decreased this because of low beefalo amounts.
+	["kyno_wildwheat"]     = .05, -- Same thing as above.
 }
 
 for prefab, rooms in pairs(RoomPrefabs) do
 	for _, roomname in ipairs(rooms) do
 		AddRoomPreInit(roomname, function(room)
-			room.contents.distributeprefabs[prefab] = TUNING.HOF_RESOURCES
+			local value = PrefabValues[prefab] or TUNING.HOF_RESOURCES
+			room.contents.distributeprefabs[prefab] = value
 		end)
 	end
 end
@@ -229,7 +246,7 @@ end
 -- This mod suffers from low Beefalo amount due to crowded prefabs.
 AddRoomPreInit("BeefalowPlain", function(room)
 	room.contents.distributepercent = .10
-	room.contents.distributeprefabs["beefalo"] = .10
+	room.contents.distributeprefabs["beefalo"] = .08
 end)
 
 local OCEAN_SETPIECES =

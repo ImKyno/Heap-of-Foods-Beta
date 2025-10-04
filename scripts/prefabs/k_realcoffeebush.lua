@@ -24,6 +24,17 @@ local SEASON_BASEREGENTIME_TUNING_LOOKUP =
 local function OnSeasonChange(inst, season)
 	local tuning = SEASON_BASEREGENTIME_TUNING_LOOKUP[season] or "KYNO_COFFEEBUSH_GROWTIME"
 	inst.components.pickable.baseregentime = TUNING[tuning]
+	
+	if TheWorld.state.issummer and inst.components.pickable ~= nil then
+		inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
+		
+		if inst.components.pickable:IsBarren() or inst.components.pickable:IsWithered() then
+			inst.AnimState:PlayAnimation("dead_to_empty")
+			inst.AnimState:PushAnimation("empty")
+
+			inst.components.pickable:MakeEmpty()
+		end
+	end
 end
 
 local function OnMakeEmpty(inst)
@@ -36,6 +47,12 @@ local function OnMakeEmpty(inst)
 end
 
 local function OnMakeBarren(inst)
+	if TheWorld.state.issummer then
+		inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
+		inst.components.pickable:MakeEmpty()
+		return
+	end
+	
 	if not POPULATING and (inst:HasTag("withered") or inst.AnimState:IsCurrentAnimation("idle")) then
 		inst.AnimState:PlayAnimation("empty_to_dead")
 		inst.AnimState:PushAnimation("idle_dead", false)
@@ -103,6 +120,11 @@ local function PickBerries(inst)
 end
 
 local function OnPicked(inst, picker)
+	if TheWorld.state.issummer then
+		inst.components.pickable:MakeEmpty()
+		inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
+	end
+
 	PickBerries(inst)
 end
 
@@ -152,7 +174,7 @@ local function fn()
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_coffeebush.tex")
 	
-	inst.AnimState:SetScale(1.2, 1.2, 1.2)
+	-- inst.AnimState:SetScale(1.2, 1.2, 1.2)
 	
 	MakeSmallObstaclePhysics(inst, .1)
 	
@@ -183,7 +205,7 @@ local function fn()
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/wilson/harvest_sticks"
     inst.components.pickable:SetUp("kyno_coffeebeans", TUNING.KYNO_COFFEEBUSH_GROWTIME)
-	inst.components.pickable.max_cycles = TUNING.BERRYBUSH_CYCLES + math.random(2)
+	inst.components.pickable.max_cycles = TUNING.KYNO_COFFEEBUSH_CYCLES + math.random(2)
 	inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
     inst.components.pickable.onpickedfn = OnPicked
     inst.components.pickable.makeemptyfn = OnMakeEmpty
