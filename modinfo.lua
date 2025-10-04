@@ -985,6 +985,98 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			},
 		},
 		
+		SERENITY_CC =
+		{
+			NAME =
+			{
+				"Serenity Archipelago CC",
+				zh  = "宁静群岛 CC",
+				zht = "寧靜群島 CC",
+				pt  = "CC do Arquipélago da Serenidade",
+				pl  = "CC Archipelagu Spokoju",
+				es  = "CC del Archipiélago de la Serenidad",
+			},
+			
+			HOVER =
+			{
+				"This option is experimental and its under testing.\n\Should the Serenity Archipelago have special Colour Cubes?", 
+				zh  = "此选项为实验性功能，正在测试中。\n是否应为宁静群岛启用特殊 Colour Cubes？",
+				zht = "此選項為實驗性功能，正在測試中。\n是否應為寧靜群島啟用特殊 Colour Cubes？",
+				pt  = "Esta opção é experimental e está em teste.\nO Arquipélago da Serenidade deve ter Colour Cubes especiais?",
+				pl  = "Ta opcja jest eksperymentalna i w fazie testów.\nCzy Archipelag Spokoju powinien mieć specjalne Colour Cubes?",
+				es  = "Esta opción es experimental y está en pruebas.\n¿Debería el Archipiélago de la Serenidad tener Colour Cubes especiales?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Default Colour Cubes for the Serenity Archipelago.",
+					zh  = "宁静群岛使用默认 Colour Cubes。",
+					zht = "寧靜群島使用預設 Colour Cubes。",
+					pt  = "Colour Cubes padrão para o Arquipélago da Serenidade.",
+					pl  = "Domyślny Colour Cubes dla Archipelagu Spokoju.",
+					es  = "Colour Cubes predeterminados para el Archipiélago de la Serenidad.",
+				},
+				
+				ENABLED =
+				{
+					"Special Colour Cubes for the Serenity Archipelago.",
+					zh  = "宁静群岛使用特殊 Colour Cubes。",
+					zht = "寧靜群島使用特殊 Colour Cubes。",
+					pt  = "Colour Cubes especiais para o Arquipélago da Serenidade.",
+					pl  = "Specjalny Colour Cubes dla Archipelagu Spokoju.",
+					es  = "Colour Cubes especiales para el Archipiélago de la Serenidad.",
+				},
+			},
+		},
+		
+		MEADOW_CC =
+		{
+			NAME =
+			{
+				"Seaside Island CC",
+				zh  = "海滨岛 CC",
+				zht = "海濱島 CC",
+				pt  = "CC da Ilha Beira-mar",
+				pl  = "CC Wyspy Nadmorskiej",
+				es  = "CC de la Isla Costera",
+			},
+			
+			HOVER =
+			{
+				"This option is experimental and its under testing.\n\Should the Seaside Island have special Colour Cubes?", 
+				zh  = "此选项为实验性功能，正在测试中。\n是否应为海滨岛启用特殊 Colour Cubes？",
+				zht = "此選項為實驗性功能，正在測試中。\n是否應為海濱島啟用特殊 Colour Cubes？",
+				pt  = "Esta opção é experimental e está em teste.\nA Ilha Beira-mar deve ter Colour Cubes especiais?",
+				pl  = "Ta opcja jest eksperymentalna i w fazie testów.\nCzy Wyspa Nadmorska powinna mieć specjalny Colour Cubes?",
+				es  = "Esta opción es experimental y está en pruebas.\n¿Debería la Isla Costera tener Colour Cubes especiales?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Default Colour Cubes for the Seaside Island.",
+					zh  = "海滨岛使用默认 Colour Cubes。",
+					zht = "海濱島使用預設 Colour Cubes。",
+					pt  = "Colour Cubes padrão para a Ilha Beira-mar.",
+					pl  = "Domyślny Colour Cubes dla Wyspy Nadmorskiej.",
+					es  = "Colour Cubes predeterminados para la Isla Costera.",
+				},
+				
+				ENABLED =
+				{
+					"Special Colour Cubes for the Seaside Island.",
+					zh  = "海滨岛使用特殊 Colour Cubes。",
+					zht = "海濱島使用特殊 Colour Cubes。",
+					pt  = "Colour Cubes especiais para a Ilha Beira-mar.",
+					pl  = "Specjalny Colour Cubes dla Wyspy Nadmorskiej.",
+					es  = "Colour Cubes especiales para la Isla Costera.",
+				},
+			},
+		},
+		
 		RETROFIT_FORCE =
 		{
 			NAME =
@@ -1501,6 +1593,38 @@ local FERTILIZER_OPTIONS     =
 	},
 }
 
+local SERENITY_CC_LABEL      = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.NAME)
+local SERENITY_CC_HOVER      = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.HOVER)
+local SERENITY_CC_OPTIONS    =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
+local MEADOW_CC_LABEL        = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.NAME)
+local MEADOW_CC_HOVER        = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.HOVER)
+local MEADOW_CC_OPTIONS      =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.HOVER_OPTIONS.DISABLED),
+		data                 = false,
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.HOVER_OPTIONS.ENABLED),
+		data                 = true,
+	},
+}
+
 local RETROFITFORCE_LABEL    = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.NAME)
 local RETROFITFORCE_HOVER    = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.HOVER)
 local RETROFITFORCE_OPTIONS  =
@@ -1556,27 +1680,31 @@ local MODTRADES_OPTIONS      =
 
 configuration_options        =
 {
-	{ name                   = "LANGUAGE",         label = LANGUAGE_LABEL,      hover = LANGUAGE_HOVER,      options = LANGUAGE_OPTIONS,      default = false },
+	{ name                   = "LANGUAGE",         label = LANGUAGE_LABEL,      hover = LANGUAGE_HOVER,      options = LANGUAGE_OPTIONS,      default = false, client = false },
 	-- General Options.
-	{ name                   = "GENERAL",          label = GENERAL_LABEL,       hover = GENERAL_HOVER,       options = NONE_OPTIONS,          default = false },
-	{ name                   = "SEASONALFOOD",     label = SEASONALFOOD_LABEL,  hover = SEASONALFOOD_HOVER,  options = SEASONALFOOD_OPTIONS,  default = false },
-	{ name                   = "HUMANMEAT",        label = HUMANMEAT_LABEL,     hover = HUMANMEAT_HOVER,     options = HUMANMEAT_OPTIONS,     default = true  },
-	{ name                   = "GIANTSPAWNING",    label = GIANTSPAWN_LABEL,    hover = GIANTSPAWN_HOVER,    options = GIANTSPAWN_OPTIONS,    default = true  },
-	{ name                   = "ALCOHOLICDRINKS",  label = ALCOHOL_LABEL,       hover = ALCOHOL_HOVER,       options = ALCOHOL_OPTIONS,       default = true  },
-	{ name                   = "ICEBOXSTACKSIZE",  label = ICEBOX_LABEL,        hover = ICEBOX_HOVER,        options = ICEBOX_OPTIONS,        default = false },
-	{ name                   = "COFFEESPEED",      label = COFFEESPEED_LABEL,   hover = COFFEESPEED_HOVER,   options = COFFEESPEED_OPTIONS,   default = true  },
-	{ name                   = "COFFEEDURATION",   label = COFFEETIMER_LABEL,   hover = COFFEETIMER_HOVER,   options = COFFEETIMER_OPTIONS,   default = 480   },
-	{ name                   = "COFFEEDROPRATE",   label = COFFEEDROP_LABEL,    hover = COFFEEDROP_HOVER,    options = COFFEEDROP_OPTIONS,    default = 4     },
+	{ name                   = "GENERAL",          label = GENERAL_LABEL,       hover = GENERAL_HOVER,       options = NONE_OPTIONS,          default = false, client = false },
+	{ name                   = "SEASONALFOOD",     label = SEASONALFOOD_LABEL,  hover = SEASONALFOOD_HOVER,  options = SEASONALFOOD_OPTIONS,  default = false, client = false },
+	{ name                   = "HUMANMEAT",        label = HUMANMEAT_LABEL,     hover = HUMANMEAT_HOVER,     options = HUMANMEAT_OPTIONS,     default = true,  client = false },
+	{ name                   = "GIANTSPAWNING",    label = GIANTSPAWN_LABEL,    hover = GIANTSPAWN_HOVER,    options = GIANTSPAWN_OPTIONS,    default = true,  client = false },
+	{ name                   = "ALCOHOLICDRINKS",  label = ALCOHOL_LABEL,       hover = ALCOHOL_HOVER,       options = ALCOHOL_OPTIONS,       default = true,  client = false },
+	{ name                   = "ICEBOXSTACKSIZE",  label = ICEBOX_LABEL,        hover = ICEBOX_HOVER,        options = ICEBOX_OPTIONS,        default = false, client = false },
+	{ name                   = "COFFEESPEED",      label = COFFEESPEED_LABEL,   hover = COFFEESPEED_HOVER,   options = COFFEESPEED_OPTIONS,   default = true,  client = false },
+	{ name                   = "COFFEEDURATION",   label = COFFEETIMER_LABEL,   hover = COFFEETIMER_HOVER,   options = COFFEETIMER_OPTIONS,   default = 480,   client = false },
+	{ name                   = "COFFEEDROPRATE",   label = COFFEEDROP_LABEL,    hover = COFFEEDROP_HOVER,    options = COFFEEDROP_OPTIONS,    default = 4,     client = false },
 	-- Miscellaneous Options.
-	{ name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,        options = NONE_OPTIONS,          default = false },
-	{ name                   = "SCRAPBOOK",        label = SCRAPBOOK_LABEL,     hover = SCRAPBOOK_HOVER,     options = SCRAPBOOK_OPTIONS,     default = true  },
-	{ name                   = "WARLYRECIPES",     label = WARLYRECIPES_LABEL,  hover = WARLYRECIPES_HOVER,  options = WARLYRECIPES_OPTIONS,  default = true  },
-	{ name                   = "KEEPFOOD",         label = KEEPFOOD_LABEL,      hover = KEEPFOOD_HOVER,      options = KEEPFOOD_OPTIONS,      default = false },
-	{ name                   = "WARLYMEALGRINDER", label = WARLYGRINDER_LABEL,  hover = WARLYGRINDER_HOVER,  options = WARLYGRINDER_OPTIONS,  default = false },
-	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,    options = FERTILIZER_OPTIONS,    default = false },
+	{ name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,        options = NONE_OPTIONS,          default = false, client = false },
+	{ name                   = "SCRAPBOOK",        label = SCRAPBOOK_LABEL,     hover = SCRAPBOOK_HOVER,     options = SCRAPBOOK_OPTIONS,     default = true,  client = false },
+	{ name                   = "WARLYRECIPES",     label = WARLYRECIPES_LABEL,  hover = WARLYRECIPES_HOVER,  options = WARLYRECIPES_OPTIONS,  default = true,  client = false },
+	{ name                   = "KEEPFOOD",         label = KEEPFOOD_LABEL,      hover = KEEPFOOD_HOVER,      options = KEEPFOOD_OPTIONS,      default = false, client = false },
+	{ name                   = "WARLYMEALGRINDER", label = WARLYGRINDER_LABEL,  hover = WARLYGRINDER_HOVER,  options = WARLYGRINDER_OPTIONS,  default = false, client = false },
+	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,    options = FERTILIZER_OPTIONS,    default = false, client = false },
+	-- Experimental Options.
+	{ name                   = "SERENITY_CC",      label = SERENITY_CC_LABEL,   hover = SERENITY_CC_HOVER,   options = SERENITY_CC_OPTIONS,   default = false, client = false },
+	{ name                   = "MEADOW_CC",        label = MEADOW_CC_LABEL,     hover = MEADOW_CC_HOVER,     options = MEADOW_CC_OPTIONS,     default = false, client = false },
+	
 	-- Retrofitting Options.
-	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false },
-	{ name                   = "RETROFIT_FORCE",   label = RETROFITFORCE_LABEL, hover = RETROFITFORCE_HOVER, options = RETROFITFORCE_OPTIONS, default = false },
-	{ name                   = "RETROFIT",         label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,      options = RETROFIT_OPTIONS,      default = 0     },
-	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,     options = MODTRADES_OPTIONS,     default = false },
+	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false, client = false },
+	{ name                   = "RETROFIT_FORCE",   label = RETROFITFORCE_LABEL, hover = RETROFITFORCE_HOVER, options = RETROFITFORCE_OPTIONS, default = false, client = false },
+	{ name                   = "RETROFIT",         label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,      options = RETROFIT_OPTIONS,      default = 0,     client = false },
+	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,     options = MODTRADES_OPTIONS,     default = false, client = false },
 }

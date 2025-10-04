@@ -47,6 +47,7 @@ local hof_init_misc    =
 	"hof_meatrack_foods",
 	"hof_postinits_misc",
 	"hof_postinits_brains",
+	"hof_postinits_playervision",
 }
 
 local hof_init_world   =

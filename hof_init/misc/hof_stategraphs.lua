@@ -436,6 +436,14 @@ AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.BREWER, functi
 	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
 end))
 
+-- Cookware Action Stategraph.
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.COOKWARECOOK, function(inst, action)
+	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
+end))
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.COOKWARECOOK, function(inst, action)
+	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"
+end))
+
 -- Milking Action Stategraph.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.PULLMILK, function(inst, action)
 	return inst:HasTag("fasthands") and "doshortaction" or "dolongaction"

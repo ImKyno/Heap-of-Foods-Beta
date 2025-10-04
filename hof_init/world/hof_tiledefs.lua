@@ -6,52 +6,58 @@ local WORLD_TILES     = _G.WORLD_TILES
 local TheArchitectPack = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
 local NotEnoughTurfs   = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
 
+-- I don't know why but there's a bug when "EnableModError()" is enabled that prevents
+-- you from even launching a server with the mod enabled. This seems to solve the issue (?)
+if WORLD_TILES.HOF_FIELDS ~= nil or WORLD_TILES.HOF_TIDALMARSH ~= nil then
+	return
+end
+
 AddTile("HOF_FIELDS", "LAND",
 	{
 		ground_name 	= "HOF Fields",
 		old_static_id   = 65,
 	},
 	{
-		name			= "jungle",
-		noise_texture	= "levels/textures/hof/fields_noise.tex",
-		runsound		= "dontstarve/movement/run_grass",
-		walksound		= "dontstarve/movement/walk_grass",
-		snowsound		= "dontstarve/movement/run_snow",
-		hard			= false,
+		name            = "jungle",
+		noise_texture   = "levels/textures/hof/fields_noise.tex",
+		runsound        = "dontstarve/movement/run_grass",
+		walksound       = "dontstarve/movement/walk_grass",
+		snowsound       = "dontstarve/movement/run_snow",
+		hard            = false,
 	},
 	{
-		name 			= "map_edge",
-		noise_texture	= "levels/textures/hof/fields_mini.tex",
+		name            = "map_edge",
+		noise_texture   = "levels/textures/hof/fields_mini.tex",
 	},
 	{
-		name			= "fields",
-		anim			= "fields",
-		bank_build		= "kyno_turfs_hof",
+		name            = "fields",
+		anim            = "fields",
+		bank_build      = "kyno_turfs_hof",
 		pickupsound     = "vegetation_grassy",
 	}
 )
 
 AddTile("HOF_TIDALMARSH", "LAND",
 	{
-		ground_name 	= "HOF Tidal Marsh",
-		old_static_id 	= 80,
+		ground_name     = "HOF Tidal Marsh",
+		old_static_id   = 80,
 	},
 	{
-		name			= "tidalmarsh",
-		noise_texture	= "levels/textures/hof/tidalmarsh_noise.tex",
-		runsound 		= "dontstarve/movement/run_marsh",
-        walksound 		= "dontstarve/movement/walk_marsh",
-		snowsound		= "dontstarve/movement/run_snow",
-		hard			= false,
+		name            = "tidalmarsh",
+		noise_texture   = "levels/textures/hof/tidalmarsh_noise.tex",
+		runsound        = "dontstarve/movement/run_marsh",
+        walksound       = "dontstarve/movement/walk_marsh",
+		snowsound       = "dontstarve/movement/run_snow",
+		hard            = false,
 	},
 	{
-		name 			= "map_edge",
-		noise_texture	= "levels/textures/hof/tidalmarsh_mini.tex",
+		name            = "map_edge",
+		noise_texture   = "levels/textures/hof/tidalmarsh_mini.tex",
 	},
 	{
-		name			= "tidalmarsh",
-		anim			= "tidalmarsh",
-		bank_build		= "kyno_turfs_hof",
+		name            = "tidalmarsh",
+		anim            = "tidalmarsh",
+		bank_build      = "kyno_turfs_hof",
 		pickupsound     = "squidgy",
 	}
 )

@@ -221,4 +221,14 @@ local function fn()
     return inst
 end
 
-return Prefab("kyno_meadowisland_crate", fn, assets, prefabs)
+local function desertfn()
+	local inst = fn()
+	
+	inst:AddTag("not_meadow_crate")
+	inst:SetPrefabNameOverride("kyno_meadowisland_crate")
+	
+	return inst
+end
+
+return Prefab("kyno_meadowisland_crate", fn, assets, prefabs),
+Prefab("kyno_desert_crate", desertfn, assets, prefabs)

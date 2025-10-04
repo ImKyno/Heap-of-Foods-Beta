@@ -11,7 +11,7 @@ local StaticLayout    = require("map/static_layout")
 modimport("hof_init/world/hof_tiledefs")
 require("map/hof_terrain")
 
-Layouts["SerenityIsland"]                = StaticLayout.Get("map/static_layouts/hof_serenityisland1",
+Layouts["SerenityIsland"]                = StaticLayout.Get("map/static_layouts/hof_serenityisland2",
 {
 	add_topology                         =
 	{
@@ -33,7 +33,7 @@ Layouts["MeadowIsland"]                  = StaticLayout.Get("map/static_layouts/
 })
 Layouts["MeadowIsland"].ground_types     = _G.MEADOWISLAND_GROUNDS
 
-Layouts["Oasis"]                         = StaticLayout.Get("map/static_layouts/hof_oasis")
+Layouts["Oasis"]                         = StaticLayout.Get("map/static_layouts/hof_oasis_beach")
 Layouts["Oasis"].ground_types            = { WORLD_TILES.MONKEY_GROUND }
 Layouts["SerenityIslandShop"]            = StaticLayout.Get("map/static_layouts/hof_serenityisland_shop")
 Layouts["MeadowIslandShop"]              = StaticLayout.Get("map/static_layouts/hof_meadowisland_shop")

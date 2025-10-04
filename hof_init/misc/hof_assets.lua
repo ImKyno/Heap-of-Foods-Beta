@@ -45,7 +45,9 @@ Assets =
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 	
-	Asset("IMAGE", "images/colourcubesimages/meadow_cc.tex"),
+	Asset("IMAGE", "images/colourcubesimages/meadow_day_cc.tex"),
+	Asset("IMAGE", "images/colourcubesimages/meadow_dusk_cc.tex"),
+	Asset("IMAGE", "images/colourcubesimages/meadow_night_cc.tex"),
 	Asset("IMAGE", "images/colourcubesimages/serenity_cc.tex"),
 
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),

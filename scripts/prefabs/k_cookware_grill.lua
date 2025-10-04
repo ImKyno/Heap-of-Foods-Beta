@@ -160,8 +160,8 @@ local function OnHammeredGrill(inst, worker)
         inst.components.burnable:Extinguish()
     end
 
-	if not inst:HasTag("burnt") and inst.components.stewer.product ~= nil and inst.components.stewer:IsDone() then
-        inst.components.stewer:Harvest()
+	if not inst:HasTag("burnt") and inst.components.cookwarestewer.product ~= nil and inst.components.cookwarestewer:IsDone() then
+        inst.components.cookwarestewer:Harvest()
     end
 
 	if inst.components.container ~= nil then
@@ -177,11 +177,11 @@ local function OnHammeredGrill(inst, worker)
 end
 
 local function OnHitGrill(inst, worker)
-	if inst.components.stewer:IsCooking() then
+	if inst.components.cookwarestewer:IsCooking() then
 		inst.AnimState:PlayAnimation("hit_cooking")
 		inst.AnimState:PushAnimation("cooking_grill_big", true)
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
-	elseif inst.components.stewer:IsDone() then
+	elseif inst.components.cookwarestewer:IsDone() then
 		inst.AnimState:PlayAnimation("hit_cooking")
 		inst.AnimState:PushAnimation("cooking_grill_big", true)
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
@@ -287,13 +287,13 @@ end
 
 local function OnClose(inst, doer)
     if not inst:HasTag("burnt") then
-        if not inst.components.stewer:IsCooking() then
+        if not inst.components.cookwarestewer:IsCooking() then
             inst.SoundEmitter:KillSound("snd")
 
 			if not inst.components.container:IsOpenedByOthers(doer) and
-                inst.components.stewer:CanCook() then
+                inst.components.cookwarestewer:CanCook() then
                 startcookfn(inst)
-                inst.components.stewer:StartCooking(doer)
+                inst.components.cookwarestewer:StartCooking(doer)
             end
         end
 		inst.AnimState:PlayAnimation("idle")
@@ -322,15 +322,22 @@ end
 
 local function spoilfn(inst)
     if not inst:HasTag("burnt") then
-		inst.components.stewer.product = "wetgoop"
+		inst.components.cookwarestewer.product = "wetgoop"
 		inst.AnimState:PushAnimation("cooking_burnt_loop", true)
-		SetProductSymbol(inst, inst.components.stewer.product)
+		-- SetProductSymbol(inst, inst.components.cookwarestewer.product)
 	end
+	
+	if inst.smoke_task then
+		inst.smoke_task:Cancel()
+		inst.smoke_task = nil
+	end
+	
+	inst:AddTag("spoiledcookware")
 end
 
 local function ShowProductImage(inst)
     if not inst:HasTag("burnt") then
-        local product = inst.components.stewer.product
+        local product = inst.components.cookwarestewer.product
         SetProductSymbol(inst, product, IsModCookingProduct(inst.prefab, product) and product or nil)
     end
 end
@@ -408,13 +415,15 @@ local function harvestfn(inst, doer)
 	if bubble then
 		bubble:Remove()
 	end
+	
+	inst:RemoveTag("spoiledcookware")
 end
 
 local function GetStatus(inst)
     return (inst:HasTag("burnt") and "BURNT")
-	or (inst.components.stewer:IsDone() and "DONE")
-	or (not inst.components.stewer:IsCooking() and "EMPTY")
-	or (inst.components.stewer:GetTimeToCook() > 15 and "COOKING_LONG")
+	or (inst.components.cookwarestewer:IsDone() and "DONE")
+	or (not inst.components.cookwarestewer:IsCooking() and "EMPTY")
+	or (inst.components.cookwarestewer:GetTimeToCook() > 15 and "COOKING_LONG")
 	or "COOKING_SHORT"
 end
 
@@ -429,6 +438,10 @@ local function OnSave(inst, data)
 		data.hasgrill = true
 		data.hascookare = true
 	end
+	
+	if inst:HasTag("spoiledcookware") then
+		data.spoiled = true
+	end
 end
 
 local function OnLoad(inst, data)
@@ -440,6 +453,12 @@ local function OnLoad(inst, data)
 	if data and data.hasgrill then
 		inst:DoTaskInTime(1, function() 
 			ChangeFireFX(inst) 
+		end)
+	end
+	
+	if data and data.spoiled then
+		inst:DoTaskInTime(1, function()
+			spoilfn(inst)
 		end)
 	end
 end
@@ -482,7 +501,8 @@ local function grillsmallfn()
 	inst.AnimState:SetFinalOffset(4)
 
 	inst:AddTag("structure")
-	inst:AddTag("stewer")
+	inst:AddTag("cookwarestewer")
+	inst:AddTag("cookwarestewer_grill")
 	inst:AddTag("grill_small")
 
 	inst._smoke = net_event(inst.GUID, "grillsmoke")
@@ -499,16 +519,16 @@ local function grillsmallfn()
         return inst
     end
 
-	inst:AddComponent("stewer")
-	inst.components.stewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT
-	inst.components.stewer.onstartcooking = startcookfn
-	inst.components.stewer.oncontinuecooking = continuecookfn
-	inst.components.stewer.oncontinuedone = continuedonefn
-	inst.components.stewer.ondonecooking = donecookfn
-	inst.components.stewer.onharvest = harvestfn
-	-- inst.components.stewer.Harvest = DoubleHarvest
-	inst.components.stewer.onspoil = spoilfn
-	inst.components.stewer.CanCook = cancookfn
+	inst:AddComponent("cookwarestewer")
+	inst.components.cookwarestewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT
+	inst.components.cookwarestewer.onstartcooking = startcookfn
+	inst.components.cookwarestewer.oncontinuecooking = continuecookfn
+	inst.components.cookwarestewer.oncontinuedone = continuedonefn
+	inst.components.cookwarestewer.ondonecooking = donecookfn
+	inst.components.cookwarestewer.onharvest = harvestfn
+	-- inst.components.cookwarestewer.Harvest = DoubleHarvest
+	inst.components.cookwarestewer.onspoil = spoilfn
+	inst.components.cookwarestewer.CanCook = cancookfn
 
 	inst:AddComponent("container")
 	inst.components.container:WidgetSetup("cooking_pot_small") -- cooking_pot
@@ -565,7 +585,8 @@ local function grillbigfn()
 	inst.AnimState:SetFinalOffset(4)
 
 	inst:AddTag("structure")
-	inst:AddTag("stewer")
+	inst:AddTag("cookwarestewer")
+	inst:AddTag("cookwarestewer_grill")
 	inst:AddTag("grill_big")
 
 	inst._smoke = net_event(inst.GUID, "grillsmoke")
@@ -582,16 +603,16 @@ local function grillbigfn()
         return inst
     end
 
-	inst:AddComponent("stewer")
-	inst.components.stewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT
-	inst.components.stewer.onstartcooking = startcookfn
-	inst.components.stewer.oncontinuecooking = continuecookfn
-	inst.components.stewer.oncontinuedone = continuedonefn
-	inst.components.stewer.ondonecooking = donecookfn
-	inst.components.stewer.onharvest = harvestfn
-	inst.components.stewer.Harvest = DoubleHarvest
-	inst.components.stewer.onspoil = spoilfn
-	inst.components.stewer.CanCook = cancookfn
+	inst:AddComponent("cookwarestewer")
+	inst.components.cookwarestewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT
+	inst.components.cookwarestewer.onstartcooking = startcookfn
+	inst.components.cookwarestewer.oncontinuecooking = continuecookfn
+	inst.components.cookwarestewer.oncontinuedone = continuedonefn
+	inst.components.cookwarestewer.ondonecooking = donecookfn
+	inst.components.cookwarestewer.onharvest = harvestfn
+	-- inst.components.cookwarestewer.Harvest = DoubleHarvest
+	inst.components.cookwarestewer.onspoil = spoilfn
+	inst.components.cookwarestewer.CanCook = cancookfn
 
 	inst:AddComponent("container")
 	inst.components.container:WidgetSetup("cooking_pot")

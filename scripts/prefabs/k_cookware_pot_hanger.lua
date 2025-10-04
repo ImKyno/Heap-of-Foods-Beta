@@ -105,7 +105,7 @@ local function ExtraHarvest(self, harvester)
     end
 end
 
--- Remember to update this function if Klei updates the stewer component.
+-- Remember to update this function if Klei updates the cookwarestewer component.
 local function DoubleHarvest(self, harvester)
     if self.done then
         if self.onharvest ~= nil then
@@ -220,8 +220,8 @@ local function OnHammeredPot(inst, worker)
         inst.components.burnable:Extinguish()
     end
 
-	if not inst:HasTag("burnt") and inst.components.stewer.product ~= nil and inst.components.stewer:IsDone() then
-        inst.components.stewer:Harvest()
+	if not inst:HasTag("burnt") and inst.components.cookwarestewer.product ~= nil and inst.components.cookwarestewer:IsDone() then
+        inst.components.cookwarestewer:Harvest()
     end
 
 	if inst.components.container ~= nil then
@@ -271,11 +271,11 @@ local function OnHitHanger(inst, worker)
 end
 
 local function OnHitPotSmall(inst, worker)
-	if inst.components.stewer:IsCooking() then
+	if inst.components.cookwarestewer:IsCooking() then
 		inst.AnimState:PlayAnimation("hit_cooking_loop")
 		inst.AnimState:PushAnimation("cooking_loop", true)
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
-	elseif inst.components.stewer:IsDone() then
+	elseif inst.components.cookwarestewer:IsDone() then
 		inst.AnimState:PlayAnimation("hit_cooking_loop")
 		inst.AnimState:PushAnimation("cooking_boil_small", true)
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
@@ -292,11 +292,11 @@ local function OnHitPotSmall(inst, worker)
 end
 
 local function OnHitPotBig(inst, worker)
-	if inst.components.stewer:IsCooking() then
+	if inst.components.cookwarestewer:IsCooking() then
 		inst.AnimState:PlayAnimation("hit_cooking_loop")
 		inst.AnimState:PushAnimation("cooking_loop", true)
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
-	elseif inst.components.stewer:IsDone() then
+	elseif inst.components.cookwarestewer:IsDone() then
 		inst.AnimState:PlayAnimation("hit_cooking_loop")
 		inst.AnimState:PushAnimation("cooking_boil_big", true)
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
@@ -433,6 +433,16 @@ local function OnPotSteam(inst)
     fx.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 end
 
+local function ShowGoops(inst)
+	if inst:HasTag("pot_small") then
+		inst.AnimState:Show("goop_small")
+	elseif inst:HasTag("pot_big") then
+		inst.AnimState:Show("goop")
+	elseif inst:HasTag("pot_elder") or inst:HasTag("pot_syrup") then
+		inst.AnimState:Show("goop_syrup")
+	end
+end
+
 local function HideGoops(inst)
 	inst.AnimState:Hide("goop")
 	inst.AnimState:Hide("goop_small")
@@ -467,13 +477,13 @@ end
 
 local function OnClose(inst, doer)
     if not inst:HasTag("burnt") then
-        if not inst.components.stewer:IsCooking() then
+        if not inst.components.cookwarestewer:IsCooking() then
             inst.SoundEmitter:KillSound("snd")
 
 			if not inst.components.container:IsOpenedByOthers(doer) and
-                inst.components.stewer:CanCook() then
+                inst.components.cookwarestewer:CanCook() then
                 startcookfn(inst)
-                inst.components.stewer:StartCooking(doer)
+                inst.components.cookwarestewer:StartCooking(doer)
             end
         end
         inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
@@ -497,30 +507,36 @@ end
 
 local function spoilfn(inst)
     if inst:HasTag("pot_syrup") then
-        inst.components.stewer.product = "kyno_sap_spoiled"
-		inst.AnimState:Show("goop_syrup")
+        inst.components.cookwarestewer.product = "kyno_sap_spoiled"
         inst.AnimState:PlayAnimation("boiled_over")
 		inst.AnimState:PushAnimation("idle_loop", true)
 		inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/boiled_over")
     elseif inst:HasTag("pot_big") then
-		inst.components.stewer.product = "spoiled_food"
-		inst.AnimState:Show("goop")
+		inst.components.cookwarestewer.product = "wetgoop"
         inst.AnimState:PlayAnimation("boiled_over")
 		inst.AnimState:PushAnimation("idle_loop", true)
 		inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/boiled_over")
 	else
-		inst.components.stewer.product = "spoiled_food"
-		inst.AnimState:Show("goop_small")
+		inst.components.cookwarestewer.product = "wetgoop"
         inst.AnimState:PlayAnimation("boiled_over")
 		inst.AnimState:PushAnimation("idle_loop", true)
 		inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/boiled_over")
 	end
-	SetProductSymbol(inst, inst.components.stewer.product)
+	
+	ShowGoops(inst)
+	
+	if inst.steam_task then
+		inst.steam_task:Cancel()
+		inst.steam_task = nil
+	end
+	
+	inst:AddTag("spoiledcookware")
+	-- SetProductSymbol(inst, inst.components.cookwarestewer.product)
 end
 
 local function ShowProductImage(inst)
     if not inst:HasTag("burnt") then
-        local product = inst.components.stewer.product
+        local product = inst.components.cookwarestewer.product
         SetProductSymbol(inst, product, IsModCookingProduct(inst.prefab, product) and product or nil)
     end
 end
@@ -632,13 +648,15 @@ local function harvestfn(inst, doer)
 	end
 
 	HideGoops(inst)
+	
+	inst:RemoveTag("spoiledcookware")
 end
 
 local function GetStatus(inst)
     return (inst:HasTag("burnt") and "BURNT")
-	or (inst.components.stewer:IsDone() and "DONE")
-	or (not inst.components.stewer:IsCooking() and "EMPTY")
-	or (inst.components.stewer:GetTimeToCook() > 15 and "COOKING_LONG")
+	or (inst.components.cookwarestewer:IsDone() and "DONE")
+	or (not inst.components.cookwarestewer:IsCooking() and "EMPTY")
+	or (inst.components.cookwarestewer:GetTimeToCook() > 15 and "COOKING_LONG")
 	or "COOKING_SHORT"
 end
 
@@ -657,6 +675,10 @@ local function OnSave(inst, data)
 		data.hashanger = true
 		data.hascookware = true
 	end
+	
+	if inst:HasTag("spoiledcookware") then
+		data.spoiled = true
+	end
 end
 
 local function OnLoad(inst, data)
@@ -674,6 +696,12 @@ local function OnLoad(inst, data)
 	if data and data.hashanger then
 		inst:DoTaskInTime(1, function() 
 			ApplyHanger(inst)
+		end)
+	end
+	
+	if data and data.spoiled then
+		inst:DoTaskInTime(1, function()
+			spoilfn(inst)
 		end)
 	end
 end
@@ -776,7 +804,7 @@ local function syruppotfn()
     inst.AnimState:SetFinalOffset(-2)
 
 	inst:AddTag("structure")
-	inst:AddTag("stewer")
+	inst:AddTag("cookwarestewer")
 	inst:AddTag("pot_syrup")
 	inst:AddTag("hanger_with_pot")
 
@@ -794,16 +822,16 @@ local function syruppotfn()
         return inst
     end
 
-	inst:AddComponent("stewer")
-	inst.components.stewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT_SYRUP
-	inst.components.stewer.onstartcooking = startcookfn
-	inst.components.stewer.oncontinuecooking = continuecookfn
-	inst.components.stewer.oncontinuedone = continuedonefn
-	inst.components.stewer.ondonecooking = donecookfn
-	inst.components.stewer.onharvest = harvestfn
-	inst.components.stewer.Harvest = ExtraHarvest -- Extra Syrup!
-	inst.components.stewer.onspoil = spoilfn
-	inst.components.stewer.CanCook = cancookfn
+	inst:AddComponent("cookwarestewer")
+	inst.components.cookwarestewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT_SYRUP
+	inst.components.cookwarestewer.onstartcooking = startcookfn
+	inst.components.cookwarestewer.oncontinuecooking = continuecookfn
+	inst.components.cookwarestewer.oncontinuedone = continuedonefn
+	inst.components.cookwarestewer.ondonecooking = donecookfn
+	inst.components.cookwarestewer.onharvest = harvestfn
+	inst.components.cookwarestewer.Harvest = ExtraHarvest -- Extra Syrup!
+	inst.components.cookwarestewer.onspoil = spoilfn
+	inst.components.cookwarestewer.CanCook = cancookfn
 
 	inst:AddComponent("container")
 	inst.components.container:WidgetSetup("syrup_pot")
@@ -876,7 +904,7 @@ local function potfn(small)
     inst.AnimState:SetFinalOffset(-2)
 
 	inst:AddTag("structure")
-	inst:AddTag("stewer")
+	inst:AddTag("cookwarestewer")
 	inst:AddTag("hanger_with_pot")
 	if small then
 		inst:AddTag("pot_small")
@@ -898,16 +926,16 @@ local function potfn(small)
         return inst
     end
 
-	inst:AddComponent("stewer")
-	inst.components.stewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT
-	inst.components.stewer.onstartcooking = startcookfn
-	inst.components.stewer.oncontinuecooking = continuecookfn
-	inst.components.stewer.oncontinuedone = continuedonefn
-	inst.components.stewer.ondonecooking = donecookfn
-	inst.components.stewer.onharvest = harvestfn
-	-- inst.components.stewer.Harvest = DoubleHarvest
-	inst.components.stewer.onspoil = spoilfn
-	inst.components.stewer.CanCook = cancookfn
+	inst:AddComponent("cookwarestewer")
+	inst.components.cookwarestewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT
+	inst.components.cookwarestewer.onstartcooking = startcookfn
+	inst.components.cookwarestewer.oncontinuecooking = continuecookfn
+	inst.components.cookwarestewer.oncontinuedone = continuedonefn
+	inst.components.cookwarestewer.ondonecooking = donecookfn
+	inst.components.cookwarestewer.onharvest = harvestfn
+	inst.components.cookwarestewer.Harvest = DoubleHarvest
+	inst.components.cookwarestewer.onspoil = spoilfn
+	inst.components.cookwarestewer.CanCook = cancookfn
 
 	inst:AddComponent("container")
 	inst.components.container:WidgetSetup("cooking_pot_small") -- cooking_pot
@@ -962,7 +990,7 @@ local function potbigfn()
     end
 	
 	inst.components.container:WidgetSetup("cooking_pot")
-	inst.components.stewer.Harvest = DoubleHarvest
+	inst.components.cookwarestewer.Harvest = DoubleHarvest
 	
 	return inst
 end
@@ -1007,7 +1035,7 @@ local function elderpotfn()
     inst.AnimState:SetFinalOffset(-2)
 
 	inst:AddTag("structure")
-	inst:AddTag("stewer")
+	inst:AddTag("cookwarestewer")
 	inst:AddTag("hanger_with_pot")
 	inst:AddTag("pot_elder")
 
@@ -1039,16 +1067,16 @@ local function elderpotfn()
 		end
 	end
 
-	inst:AddComponent("stewer")
-	inst.components.stewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT_SYRUP
-	inst.components.stewer.onstartcooking = startcookfn
-	inst.components.stewer.oncontinuecooking = continuecookfn
-	inst.components.stewer.oncontinuedone = continuedonefn
-	inst.components.stewer.ondonecooking = donecookfn
-	inst.components.stewer.onharvest = harvestfn
-	inst.components.stewer.Harvest = ExtraHarvest -- Extra Syrup!
-	inst.components.stewer.onspoil = spoilfn
-	inst.components.stewer.CanCook = cancookfn
+	inst:AddComponent("cookwarestewer")
+	inst.components.cookwarestewer.cooktimemult = TUNING.KYNO_COOKWARE_COOKTIMEMULT_SYRUP
+	inst.components.cookwarestewer.onstartcooking = startcookfn
+	inst.components.cookwarestewer.oncontinuecooking = continuecookfn
+	inst.components.cookwarestewer.oncontinuedone = continuedonefn
+	inst.components.cookwarestewer.ondonecooking = donecookfn
+	inst.components.cookwarestewer.onharvest = harvestfn
+	inst.components.cookwarestewer.Harvest = ExtraHarvest -- Extra Syrup!
+	inst.components.cookwarestewer.onspoil = spoilfn
+	inst.components.cookwarestewer.CanCook = cancookfn
 
 	inst:AddComponent("container")
 	inst.components.container:WidgetSetup("syrup_pot")

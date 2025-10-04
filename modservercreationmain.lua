@@ -3,12 +3,13 @@ local require = _G.require
 
 require("hof_mainfunctions")
 require("strings/hof_strings_customizations")
+
 modimport("hof_init/misc/hof_tuning")
+modimport("hof_init/world/hof_worldsettings")
 
 local localization = GetModConfigData("LANGUAGE")
 if localization then
 	require("strings/localization_"..localization.."/hof_strings_customizations")
-	print("HOF MODSERVERCREATIONMAIN LOCALIZATION:", localization)
 end
 
 FrontEndAssets =

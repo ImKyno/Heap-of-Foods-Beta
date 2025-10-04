@@ -10,6 +10,10 @@ local cooking         = require("cooking")
 local brewing         = require("hof_brewing")
 local UpvalueHacker   = require("hof_upvaluehacker")
 
+local COMPONENT_ACTIONS = UpvalueHacker.GetUpvalue(_G.EntityScript.CollectActions, "COMPONENT_ACTIONS")
+local USEITEM = COMPONENT_ACTIONS.USEITEM
+local EQUIPPED = COMPONENT_ACTIONS.EQUIPPED
+
 -- Coffee Plant can be Only Fertilized by Ashes.
 AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions)
     if actions[1] == ACTIONS.FERTILIZE and inst:HasTag("coffeefertilizer2") ~= target:HasTag("kyno_coffeebush") then
@@ -277,15 +281,6 @@ end)
 ACTIONS.BREWER.priority = 1
 ACTIONS.BREWER.mount_valid = true
 
-local oldHARVESTfn = ACTIONS.HARVEST.fn
-function ACTIONS.HARVEST.fn(act, ...)
-    if act.target and act.target.components.brewer and act.target:HasTag("brewer") then
-        return act.target.components.brewer:Harvest(act.doer)
-    else
-        return oldHARVESTfn(act, ...)
-    end
-end
-
 AddComponentAction("SCENE", "brewer", function(inst, doer, actions, right)
 	if not inst:HasTag("burnt") and not (doer.replica.rider ~= nil and doer.replica.rider:IsRiding()) then
 		if inst:HasTag("donecooking") then
@@ -377,6 +372,185 @@ AddComponentAction("USEITEM", "cookwareinstallable", function(inst, doer, target
 	end 
 end)
 
+AddAction("COOKWARECOOK", STRINGS.ACTIONS.COOK, function(act)
+	if act.target.components.cooker ~= nil then
+        local cook_pos = act.target:GetPosition()
+        local ingredient = act.doer.components.inventory:RemoveItem(act.invobject)
+
+        ingredient.Transform:SetPosition(cook_pos:Get())
+
+        if not act.target.components.cooker:CanCook(ingredient, act.doer) then
+            act.doer.components.inventory:GiveItem(ingredient, nil, cook_pos)
+            return false
+        end
+
+        if ingredient.components.health ~= nil and ingredient.components.combat ~= nil then
+            act.doer:PushEvent("killed", { victim = ingredient })
+        end
+
+        local product = act.target.components.cooker:CookItem(ingredient, act.doer)
+        if product ~= nil then
+            act.doer.components.inventory:GiveItem(product, nil, cook_pos)
+            return true
+        elseif ingredient:IsValid() then
+            act.doer.components.inventory:GiveItem(ingredient, nil, cook_pos)
+        end
+        return false
+    elseif act.target.components.cookwarestewer ~= nil then
+        if act.target.components.cookwarestewer:IsCooking() then
+            return true
+        end
+        local container = act.target.components.container
+        if container ~= nil and container:IsOpenedByOthers(act.doer) then
+            return false, "INUSE"
+        elseif not act.target.components.cookwarestewer:CanCook() then
+            return false
+        end
+        act.target.components.cookwarestewer:StartCooking(act.doer)
+        return true
+    elseif act.target.components.cookable ~= nil
+        and act.invobject ~= nil
+        and act.invobject.components.cooker ~= nil then
+
+        local cook_pos = act.target:GetPosition()
+
+        if act.doer:GetPosition():Dist(cook_pos) > 2 then
+            return false, "TOOFAR"
+        end
+
+        local owner = act.target.components.inventoryitem:GetGrandOwner()
+        local container = owner ~= nil and (owner.components.inventory or owner.components.container) or nil
+        local stacked = act.target.components.stackable ~= nil and act.target.components.stackable:IsStack()
+        local ingredient = stacked and act.target.components.stackable:Get() or act.target
+
+        if ingredient ~= act.target then
+            ingredient.Transform:SetPosition(cook_pos:Get())
+        end
+
+        if not act.invobject.components.cooker:CanCook(ingredient, act.doer) then
+            if container ~= nil then
+                container:GiveItem(ingredient, nil, cook_pos)
+            elseif stacked and ingredient ~= act.target then
+                act.target.components.stackable:SetStackSize(act.target.components.stackable:StackSize() + 1)
+                ingredient:Remove()
+            end
+            return false
+        end
+
+        if ingredient.components.health ~= nil and ingredient.components.combat ~= nil then
+            act.doer:PushEvent("killed", { victim = ingredient })
+        end
+
+        local product = act.invobject.components.cooker:CookItem(ingredient, act.doer)
+        if product ~= nil then
+            if container ~= nil then
+                container:GiveItem(product, nil, cook_pos)
+            else
+                product.Transform:SetPosition(cook_pos:Get())
+                if stacked and product.Physics ~= nil then
+                    local angle = math.random() * 2 * PI
+                    local speed = math.random() * 2
+                    product.Physics:SetVel(speed * math.cos(angle), GetRandomWithVariance(8, 4), speed * math.sin(angle))
+                end
+            end
+            return true
+        elseif ingredient:IsValid() then
+            if container ~= nil then
+                container:GiveItem(ingredient, nil, cook_pos)
+            elseif stacked and ingredient ~= act.target then
+                act.target.components.stackable:SetStackSize(act.target.components.stackable:StackSize() + 1)
+                ingredient:Remove()
+            end
+        end
+        return false
+    end
+end)
+
+ACTIONS.COOKWARECOOK.priority = 1
+ACTIONS.COOKWARECOOK.mount_valid = true
+
+AddComponentAction("SCENE", "cookwarestewer", function(inst, doer, actions, right)
+	if not inst:HasTag("burnt") and not (doer.replica.rider ~= nil and doer.replica.rider:IsRiding()) then
+		if inst:HasTag("donecooking") then
+			table.insert(actions, ACTIONS.HARVEST)
+		elseif right and (
+		(   inst:HasTag("readytocook") and
+			(not inst:HasTag("mastercookware") or doer:HasTag("masterchef"))
+		) or
+			(   inst.replica.container ~= nil and
+				inst.replica.container:IsFull() and
+				inst.replica.container:IsOpenedBy(doer)
+			)
+		) then
+			table.insert(actions, ACTIONS.COOKWARECOOK)
+		end
+	end
+end)
+
+local function GetFirepit(inst)
+	if not inst.firepit or not inst.firepit:IsValid() or not inst.firepit.components.fueled then
+		local x,y,z = inst.Transform:GetWorldPosition()
+		local ents = _G.TheSim:FindEntities(x,y,z, 0.1, {"firepit"})
+		
+		inst.firepit = nil
+		
+		for _,v in ipairs(ents) do
+			if v.prefab == "firepit" then
+				inst.firepit = v
+				break
+			end
+		end
+	end
+	
+	return inst.firepit
+end
+
+local _STOREfn = ACTIONS.STORE.fn
+ACTIONS.STORE.fn = function(act, ...)
+	local target = act.target
+	local item = act.invobject
+
+	if target and target:HasTag("cookwarestewer") then
+		if not (item and item.components.cookable) then
+			local firepit = GetFirepit(target)
+			
+			if firepit ~= nil and firepit.components.fueled ~= nil then
+				if item ~= nil then
+					local fuel_item = item
+					
+					if item.components.fuel ~= nil then
+						if item.components.stackable ~= nil and item.components.stackable:StackSize() > 1 then
+							fuel_item = item.components.stackable:Get(1)
+						end
+					end
+				
+					if fuel_item ~= nil and fuel_item.components.fuel ~= nil then
+						if firepit.components.fueled:CanAcceptFuelItem(fuel_item) then
+							firepit.components.fueled:TakeFuelItem(fuel_item, act.doer)
+							return true
+						end
+					end
+				end
+			end
+			
+			return false, "NOTALLOWED"
+		end
+	end
+
+	return _STOREfn(act, ...)
+end
+
+local _HARVESTfn = ACTIONS.HARVEST.fn
+function ACTIONS.HARVEST.fn(act, ...)
+    if act.target and act.target.components.brewer and act.target:HasTag("brewer") then
+        return act.target.components.brewer:Harvest(act.doer)
+    elseif act.target and act.target.components.cookwarestewer and act.target:HasTag("cookwarestewer") then
+		return act.target.components.cookwarestewer:Harvest(act.doer)
+	else
+        return _HARVESTfn(act, ...)
+    end
+end
+
 local function GetIngredients(card)
 	local ret = {}
 	
@@ -454,10 +628,6 @@ function ACTIONS.FISH.fn(act, ...)
     end
     return _FISHfn(act, ...)
 end
-
-local COMPONENT_ACTIONS = UpvalueHacker.GetUpvalue(_G.EntityScript.CollectActions, "COMPONENT_ACTIONS")
-local USEITEM = COMPONENT_ACTIONS.USEITEM
-local EQUIPPED = COMPONENT_ACTIONS.EQUIPPED
 
 local _USEITEMfishingrod = USEITEM.fishingrod
 function USEITEM.fishingrod(inst, doer, target, actions, ...)
@@ -566,9 +736,22 @@ ACTIONS.UNWRAP.stroverridefn = function(act)
 end
 
 ACTIONS.STORE.stroverridefn = function(act)
-	if act.target:HasTag("brewer") then
+	local obj = act.invobject
+	local target = act.target
+
+	if target:HasTag("brewer") then
 		return STRINGS.ACTIONS.BREWER
 	end
+
+	if target:HasTag("cookwarestewer") then
+		for k, v in pairs(_G.FUELTYPE) do
+			if obj:HasTag(v.."_fuel") then
+				return STRINGS.ACTIONS.ADDFUEL
+			end
+		end
+		
+		return STRINGS.ACTIONS.COOK
+    end
 end
 
 ACTIONS.INSTALLCOOKWARE.stroverridefn = function(act)

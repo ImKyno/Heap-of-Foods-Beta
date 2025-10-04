@@ -39,6 +39,7 @@ HOF_PICKABLE_FOODS          =
 	kyno_coffeebeans    = true,
 	kyno_wheat          = true,
 	kyno_kokonut        = true,
+	kyno_banana         = true,
 }
 
 for k, v in pairs(HOF_FOODTYPES) do

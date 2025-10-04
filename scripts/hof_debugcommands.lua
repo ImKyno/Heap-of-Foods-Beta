@@ -410,7 +410,7 @@ end
 -- c_hofremoveisland("SerenityIsland", "serenity_marker", 3, true)
 -- c_hofremoveisland("MeadowIsland", "meadow_marker", 1)
 function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
-	require("tilemanager")
+	-- require("tilemanager")
 
 	local map = TheWorld.Map
 	local map_width, map_height = map:GetSize()
@@ -427,6 +427,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"kyno_kokonuttree",
 		"kyno_limpetrock",
 		"kyno_lotus_ocean",
+		"kyno_meadow_cc_marker",
 		"kyno_meadowisland_crate",
 		"kyno_meadowisland_fishermermhut",
 		"kyno_meadowisland_mermcart",
@@ -446,6 +447,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"kyno_pond_salt",
 		"kyno_repairtool",
 		"kyno_salmonfish",
+		"kyno_serenity_cc_marker",
 		"kyno_serenityisland_crate",
 		"kyno_serenityisland_decor",
 		"kyno_serenityisland_decor2",
@@ -486,6 +488,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"kyno_kokonuttree",
 		"kyno_limpetrock",
 		"kyno_lotus_ocean",
+		"kyno_meadow_cc_marker",
 		"kyno_meadowisland_crate",
 		"kyno_meadowisland_fishermermhut",
 		"kyno_meadowisland_mermcart",
@@ -505,6 +508,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"kyno_pond_salt",
 		"kyno_repairtool",
 		"kyno_salmonfish",
+		"kyno_serenity_cc_marker",
 		"kyno_serenityisland_crate",
 		"kyno_serenityisland_crate_spawner",
 		"kyno_serenityisland_decor",

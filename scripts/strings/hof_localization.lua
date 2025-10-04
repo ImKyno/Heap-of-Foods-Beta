@@ -10,43 +10,13 @@
 	to your localization folder to start translating them. 
 	Note: you don't need to add the language ID to their names.
 	
-	* ALL STRINGS of "hof_strings.lua" can be translated.
-	* ALL STRINGS of "hof_strings_scrapbook.lua" can be translated.
-	* For "hof_strings_loadingtips.lua" only the strings after "TIPS_HOF, "TIPS_HOF_XXXX" can be translated.
-	
-	e.g:                                                          -- String to Translate:
-	Original String:   AddLoadingTip(TIPS_HOF, "TIPS_HOF_COFFEE", "You can get Coffee Bushes after defeating the Dragonfly.")
-	Translated String: AddLoadingTip(TIPS_HOF, "TIPS_HOF_COFFEE", "Você pode conseguir Plantas de Café ao Derrotar a Libélula.")
+	* ALL STRINGS of "modinfo.lua" can be translated.
+	* ALL STRINGS of "hof_init/world/hof_worldsettings.lua" can be transled.
+	* ALL STRINGS of "scripts/strings/hof_strings.lua" can be translated.
+	* ALL STRINGS of "scripts/strings/hof_strings_scrapbook.lua" can be translated.
 	
 	* Some strings may have "\n" or "\n\n" that means a line break markdown.
 	* Some strings may have \"Text\" that means that text has quotation marks.
-	
-	-------------------------------------------------------------------------------------------------------------------------------------------------
-	
-	[ Creating a Localization for modinfo.lua ]
-	
-	* To start your localization for modinfo open the "modinfo.lua" file, you gonna need to copy some things to start.
-	
-	* What can you translate from modinfo: 
-	- Mod Name
-	- Mod Description (Version, Update)
-	- Mod Configurations (Labels, Hovers, Options)
-	
-	* You'll need to create a if statement with your language ID. There's an example there to get you started.
-	e.g:
-	if locale == "pt" then
-		-- Your localization code.
-	end
-	
-	* Tables that can be translated:
-	- names
-	- labels 
-	- hovers 
-	- desc
-	- deschovers
-	
-	* Make sure your localization follows ALL the original strings. If one of them is missing, you might run into a crash.
-	* DO NOT translate the tables of "options" and "configuration_options".
 	
 	-------------------------------------------------------------------------------------------------------------------------------------------------
 	
