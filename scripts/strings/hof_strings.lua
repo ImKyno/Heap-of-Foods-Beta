@@ -7742,6 +7742,15 @@ STRINGS.RECIPE_DESC.OCEANFISH_SMALL_8_INV = "Rare fish from summer waters."
 STRINGS.RECIPE_DESC.SUCCULENT_PICKED = "Summer plants."
 STRINGS.RECIPE_DESC.MOON_CAP = "Mushrooms infused with the power of the Moon."
 
+STRINGS.NAMES.SLOW_FARMPLOT_BLUEPRINT = "Basic Farm Blueprint"
+STRINGS.RECIPE_DESC.SLOW_FARMPLOT_BLUEPRINT = "A stroll through nostalgia."
+
+STRINGS.NAMES.FAST_FARMPLOT_BLUEPRINT = "Improved Farm Blueprint"
+STRINGS.RECIPE_DESC.FAST_FARMPLOT_BLUEPRINT = "A journey back in time to simpler days."
+
+STRINGS.NAMES.KYNO_BOOK_GARDENING = "Horticulture, Mastered"
+STRINGS.RECIPE_DESC.KYNO_BOOK_GARDENING = "Harness the power of botany and bend plants to your will."
+
 STRINGS.NAMES.KYNO_SAMMYHAT = "Sammy's Cap"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_SAMMYHAT = "Makes me feel like a merchant."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_SAMMYHAT = "I had my own cap, dunno where it went though."

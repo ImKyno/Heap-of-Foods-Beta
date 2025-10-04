@@ -79,6 +79,36 @@ AddRecipe2("meadowislandtrader_kyno_bucket_metal", {Ingredient("antliontrinket",
 	{"CRAFTING_STATION"}
 )
 
+AddRecipe2("meadowislandtrader_slow_farmplot_blueprint", {Ingredient("kyno_turnip", 10, ModAtlas)}, TECH.LOST,
+	{
+		limitedamount       = true,
+		nounlock            = true,
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSMEADOWSHOP",
+		actionstr           = "MEADOWSHOP",
+		sg_state            = "give",
+		product             = "slow_farmplot_blueprint",
+		atlas               = DefaultAtlas,
+		image               = "blueprint_rare.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+AddRecipe2("meadowislandtrader_fast_farmplot_blueprint", {Ingredient("kyno_radish", 20, ModAtlas)}, TECH.LOST,
+	{
+		limitedamount       = true,
+		nounlock            = true,
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSMEADOWSHOP",
+		actionstr           = "MEADOWSHOP",
+		sg_state            = "give",
+		product             = "fast_farmplot_blueprint",
+		atlas               = DefaultAtlas,
+		image               = "blueprint_rare.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
 AddRecipe2("meadowislandtrader_foliage", {Ingredient("kyno_wheat", 1, ModAtlas)}, TECH.LOST,
 	{
 		limitedamount       = true, 

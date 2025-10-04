@@ -72,13 +72,16 @@ local WARES =
 		},
 	},
 	
-	--[[
 	RANDOM_ULTRARARES =
 	{
 		-- TO DO: Sharkuttery Board
 		-- TO DO: Coffee Machine Kit
-	}
-	]]--
+		{
+			-- I was going to add Wicker's book here, but I found out you can't blueprint character items.
+			["slow_farmplot_blueprint"]  = { recipe = "meadowislandtrader_slow_farmplot_blueprint",  min = 1, max = 2 },
+			["fast_farmplot_blueprint"]  = { recipe = "meadowislandtrader_fast_farmplot_blueprint",  min = 1, max = 2 },
+		},
+	},
 	
 	-- Make sure to always have seasonal seeds available to trade.
 	SEASONAL = 
@@ -234,15 +237,13 @@ local function RerollWares(inst)
 		inst:AddWares(inst.WARES.RANDOM_UNCOMMONS[math.random(#inst.WARES.RANDOM_UNCOMMONS)])
 	end
 	
-	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_RARES_ODDS then -- 5%
+	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_RARES_ODDS then -- 10%
 		inst:AddWares(inst.WARES.RANDOM_RARES[math.random(#inst.WARES.RANDOM_RARES)])
 	end
 	
-	--[[
-	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_ULTRARARES_ODDS then -- 1%
-		inst:AddWares(inst.WARES.RANDOM_RARES[math.random(#inst.WARES.RANDOM_ULTRARARES)])
+	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_ULTRARARES_ODDS then -- 5%
+		inst:AddWares(inst.WARES.RANDOM_ULTRARARES[math.random(#inst.WARES.RANDOM_ULTRARARES)])
 	end
-	]]--
 	
 	local seasonalwares = inst.WARES.SEASONAL[TheWorld.state.season]
 	

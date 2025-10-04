@@ -10,6 +10,7 @@ PrefabFiles =
 	"k_banana",
 	"k_bananatree",
 	"k_bananatree_sapling",
+	"k_books",
 	"k_bottle_soul",
 	"k_bottlecap",
 	"k_brewbook",

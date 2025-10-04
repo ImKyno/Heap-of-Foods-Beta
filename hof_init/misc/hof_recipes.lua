@@ -452,6 +452,30 @@ AddRecipe2("kyno_foodsack", {Ingredient("saltrock", 10), Ingredient("malbatross_
 SortAfter("kyno_foodsack", "icepack", "COOKING")
 SortAfter("kyno_foodsack", "icepack", "CONTAINERS")
 
+AddRecipe2("slow_farmplot", {Ingredient("cutgrass", 8), Ingredient("poop", 4), Ingredient("log", 4)}, TECH.LOST,
+	{
+		placer              = "slow_farmplot_placer",
+		min_spacing         = 2.5,
+		atlas               = DefaultAtlas,
+		image               = "slow_farmplot.tex",
+	},
+	{"GARDENING", "STRUCTURES"}
+)
+SortAfter("slow_farmplot", "farm_plow_item", "GARDENING")
+SortAfter("slow_farmplot", "meatrack2", "STRUCTURES")
+
+AddRecipe2("fast_farmplot", {Ingredient("cutgrass", 10), Ingredient("poop", 6), Ingredient("rocks", 4)}, TECH.LOST,
+	{
+		placer              = "fast_farmplot_placer",
+		min_spacing         = 2.5,
+		atlas               = DefaultAtlas,
+		image               = "fast_farmplot.tex",
+	},
+	{"GARDENING", "STRUCTURES"}
+)
+SortAfter("fast_farmplot", "slow_farmplot", "GARDENING")
+SortAfter("fast_farmplot", "slow_farmplot", "STRUCTURES")
+
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
 		builder_tag         = "strongman",
@@ -520,6 +544,18 @@ AddCharacterRecipe("wurt_turf_tidalmarsh", {Ingredient("cutreeds", 1), Ingredien
 )
 SortAfter("wurt_turf_tidalmarsh", "wurt_turf_marsh", "CHARACTER")
 SortAfter("wurt_turf_tidalmarsh", "turf_marsh", "DECOR")
+
+-- Holy shit... he's back.
+AddCharacterRecipe("kyno_book_gardening", {Ingredient("book_horticulture_upgraded", 1), Ingredient("fertilizer", 1), Ingredient("papyrus", 2)}, TECH.BOOKCRAFT_ONE, 
+	{
+		product             = "kyno_book_gardening",
+		description         = "kyno_book_gardening",
+		builder_tag         = "bookbuilder",
+		atlas               = DefaultAtlas1,
+		image               = "book_gardening.tex",
+	}
+)
+SortAfter("kyno_book_gardening", "book_horticulture_upgraded", "CHARACTER")
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 if HOF_WARLYMEALGRINDER then

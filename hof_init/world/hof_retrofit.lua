@@ -46,8 +46,6 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 
 	if #applied > 0 then
 		print("Retrofitting for Heap of Foods Mod - Retrofits applied: " .. table.concat(applied, ", "))
-    else
-		print("Retrofitting for Heap of Foods Mod - No retrofits were applied.")
 	end
 
 	_DoRetrofitting(savedata, world_map, ...)

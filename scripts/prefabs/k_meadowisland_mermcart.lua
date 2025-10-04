@@ -30,18 +30,19 @@ end
 local SQUID_ENABLED = SquidTest() or nil
 local PENGUIN_ENABLED = PenguinTest() or nil
 
+-- OMG SLURPERS DON'T HAVE A PROPER WORLDSETTINGS TUNING AAAAAHHHH 💀💀
 local LOOT =
 {
 	CRITTERS =
 	{
-		{ weight = 4, prefab = "penguin",          target = true,  state = "attack",    tuning = PENGUIN_ENABLED,            season = "winter" }, -- 57.14%
-		{ weight = 4, prefab = "frog",             target = true,  state = "attack",    tuning = "FROG_POND_ENABLED",        season = "spring" }, -- 57.14%
-		{ weight = 4, prefab = "slurper",          target = true,  state = "headslurp", tuning = nil,                        season = "summer" }, -- 57.14%
-		{ weight = 4, prefab = "kyno_piko",        target = false, state = "look",      tuning = "KYNO_PIKO_ENABLED",        season = nil      }, -- 57.14%
-		{ weight = 2, prefab = "mole",             target = false, state = "peek",      tuning = "MOLE_ENABLED",             season = nil      }, -- 28.57%
-		{ weight = 2, prefab = "squid",            target = true,  state = "attack",    tuning = SQUID_ENABLED,              season = nil      }, -- 28.57%
-		{ weight = 2, prefab = "kyno_chicken2",    target = false, state = "honk",      tuning = "KYNO_CHICKEN_ENABLED",     season = nil      }, -- 28.57%
-		{ weight = 1, prefab = "kyno_piko_orange", target = false, state = "look",      tuning = "KYNO_PIKO_ORANGE_ENABLED", season = nil      }, -- 14.29%
+		{ weight = 4, prefab = "penguin",          targetplayer = true,  state = "attack",    tuning = PENGUIN_ENABLED,            season = "winter" }, -- 57.14%
+		{ weight = 4, prefab = "frog",             targetplayer = true,  state = "attack",    tuning = "FROG_POND_ENABLED",        season = "spring" }, -- 57.14%
+		{ weight = 4, prefab = "slurper",          targetplayer = true,  state = "headslurp", tuning = nil,                        season = "summer" }, -- 57.14%
+		{ weight = 4, prefab = "kyno_piko",        targetplayer = false, state = "look",      tuning = "KYNO_PIKO_ENABLED",        season = nil      }, -- 57.14%
+		{ weight = 2, prefab = "mole",             targetplayer = false, state = "peek",      tuning = "MOLE_ENABLED",             season = nil      }, -- 28.57%
+		{ weight = 2, prefab = "squid",            targetplayer = true,  state = "attack",    tuning = SQUID_ENABLED,              season = nil      }, -- 28.57%
+		{ weight = 2, prefab = "kyno_chicken2",    targetplayer = false, state = "honk",      tuning = "KYNO_CHICKEN_ENABLED",     season = nil      }, -- 28.57%
+		{ weight = 1, prefab = "kyno_piko_orange", targetplayer = false, state = "look",      tuning = "KYNO_PIKO_ORANGE_ENABLED", season = nil      }, -- 14.29%
 	},
 	
 	ITEMS =
@@ -133,6 +134,8 @@ local LOOT =
 		{ weight = 1, prefab = "pondeel",                amount = {1, 2},     season = nil },
 		
 		-- COOKPOT FOODS
+		{ weight = 2, prefab = "jawsbreaker",            amount = {3, 5},     season = nil },
+		{ weight = 2, prefab = "gorge_caramel_cube",     amount = {3, 5},     season = nil },
 		{ weight = 1, prefab = "bunnystew",              amount = {1, 5},     season = nil },
 		{ weight = 1, prefab = "seafoodgumbo",           amount = {1, 3},     season = nil },
 		{ weight = 1, prefab = "watermelonicle",         amount = {1, 5},     season = nil },
@@ -239,11 +242,11 @@ local function SpawnWagonLoot(inst, picker, nopickup)
 			
 			inst.components.lootdropper:FlingItem(critter)
 			
-			if attackplayer and choice.target and critter.components.combat ~= nil then
+			if attackplayer and choice.targetplayer and critter.components.combat ~= nil then
                 critter.components.combat:SetTarget(picker)
             end
 			
-			if choice.state ~= nil and (not choice.target or attackplayer) then
+			if choice.state ~= nil and (not choice.targetplayer or attackplayer) then
 				critter.sg:GoToState(choice.state, picker)
 			end
 		end

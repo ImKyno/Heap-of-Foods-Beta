@@ -55,6 +55,10 @@ local function MakePlantable(data)
 				inst:AddTag(v)
 			end
 		end
+		
+		if data.customdeploy then
+			inst._custom_candeploy_fn = data.customdeployfn
+		end
 	
 		inst.entity:SetPristine()
 
@@ -76,8 +80,8 @@ local function MakePlantable(data)
 		inst.components.inventoryitem.imagename = data.inventoryimage
 	
 		inst:AddComponent("deployable")
+		inst.components.deployable:SetDeployMode(data.deploymode)
 		inst.components.deployable.ondeploy = OnDeploy
-		inst.components.deployable:SetDeployMode(DEPLOYMODE.PLANT)
 		if data.mediumspacing ~= nil then
 			inst.components.deployable:SetDeploySpacing(DEPLOYSPACING.MEDIUM)
 		end
@@ -96,6 +100,11 @@ local function MakePlantable(data)
 	return Prefab("dug_"..data.name, fn, assets)
 end
 
+local function CoffeeBushTest(inst, pt, mouseover, deployer)
+	local tile = TheWorld.Map:GetTileAtPoint(pt.x, pt.y, pt.z)
+	return tile == WORLD_TILES.DESERT_DIRT or tile == WORLD_TILES.VENT
+end
+
 local plantables =
 {
 	-- Coffee Bush
@@ -105,9 +114,12 @@ local plantables =
 		build          = "coffeebush",
 		tags           = {"coffeebush", "coffeeplant"},
 		inventoryimage = "dug_kyno_coffeebush",
+		deploymode     = DEPLOYMODE.CUSTOM,
 		fireproof      = true,
 		mediumspacing  = true,
 		waxable        = true,
+		customdeploy   = true,
+		customdeployfn = CoffeeBushTest,
 	},
 	
 	-- Spotty Shrub
@@ -118,6 +130,7 @@ local plantables =
 		scale          = 1.4,
 		tags           = {"spotbush"},
 		inventoryimage = "dug_kyno_spotbush",
+		deploymode     = DEPLOYMODE.PLANT,
 		mediumspacing  = true,
 		waxable        = true,
 	},
@@ -128,8 +141,9 @@ local plantables =
 		bank           = "kyno_wheat",
 		build          = "kyno_wheat",
 		tags           = {"wildwheat"},
-		inventoryimage = "dug_kyno_wildwheat",
 		nameoverride   = "DUG_GRASS",
+		inventoryimage = "dug_kyno_wildwheat",
+		deploymode     = DEPLOYMODE.PLANT,
 		mediumspacing  = true,
 		waxable        = true,
 	},
