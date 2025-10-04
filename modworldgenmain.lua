@@ -11,6 +11,34 @@ local StaticLayout    = require("map/static_layout")
 modimport("hof_init/world/hof_tiledefs")
 require("map/hof_terrain")
 
+-- The numbers below represents each turf in the setpiece file.
+_G.SERENITYISLAND_GROUNDS                =
+{
+	WORLD_TILES.OCEAN_BRINEPOOL,         -- 1
+	WORLD_TILES.ROCKY,                   -- 2
+	WORLD_TILES.SAVANNA,                 -- 3
+	WORLD_TILES.QUAGMIRE_CITYSTONE,      -- 4
+	WORLD_TILES.QUAGMIRE_PARKFIELD,      -- 5
+}
+
+_G.MEADOWISLAND_GROUNDS                  =
+{
+	WORLD_TILES.OCEAN_BRINEPOOL,         -- 1
+	WORLD_TILES.MONKEY_GROUND,           -- 2
+	WORLD_TILES.HOF_FIELDS,              -- 3
+	WORLD_TILES.HOF_TIDALMARSH,          -- 4
+	WORLD_TILES.ROAD,                    -- 5
+	WORLD_TILES.FARMING_SOIL,            -- 6
+	WORLD_TILES.FOREST,                  -- 7
+}
+
+_G.MEADOWISLAND_SHOP_GROUNDS             =
+{
+	WORLD_TILES.ROAD,                    -- 1
+	WORLD_TILES.FOREST,                  -- 2
+	WORLD_TILES.FARMING_SOIL,            -- 3
+}
+
 Layouts["SerenityIsland"]                = StaticLayout.Get("map/static_layouts/hof_serenityisland2",
 {
 	add_topology                         =
@@ -156,3 +184,4 @@ AddGlobalClassPostConstruct("map/storygen", "Story", function(self)
 end)
 
 modimport("hof_init/world/hof_worldgen")
+modimport("hof_init/world/hof_worldsettings")

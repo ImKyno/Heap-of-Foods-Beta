@@ -5,7 +5,7 @@ require("hof_mainfunctions")
 require("strings/hof_strings_customizations")
 
 modimport("hof_init/misc/hof_tuning")
-modimport("hof_init/world/hof_worldsettings")
+modimport("scripts/strings/hof_strings_worldsettings")
 
 local localization = GetModConfigData("LANGUAGE")
 if localization then

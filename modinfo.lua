@@ -173,6 +173,29 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			},
 		},
 		
+		EXPERIMENTAL =
+		{
+			NAME =
+			{
+				"Experimental Options",
+				zh  = "实验性选项",
+				zht = "實驗性選項",
+				pt  = "Opções Experimentais",
+				pl  = "Opcje Eksperymentalne",
+				es  = "Opciones Experimentales",
+			},
+			
+			HOVER =
+			{
+				"Experimental options for the Mod. Under testing!",
+				zh  = "模组的实验性选项，正在测试中！",
+				zht = "模組的實驗性選項，正在測試中！",
+				pt  = "Opções experimentais do Mod. Em fase de testes!",
+				pl  = "Eksperymentalne opcje moda. W fazie testów!",
+				es  = "Opciones experimentales del mod. ¡En fase de prueba!",
+			},
+		},
+		
 		RETROCOMPAT =
 		{
 			NAME =
@@ -1311,6 +1334,9 @@ local GENERAL_HOVER          = ChooseTranslationTable(STRINGS.SETTINGS.GENERAL.H
 local EXTRAS_LABEL           = ChooseTranslationTable(STRINGS.SETTINGS.EXTRAS.NAME)
 local EXTRAS_HOVER           = ChooseTranslationTable(STRINGS.SETTINGS.EXTRAS.HOVER)
 
+local EXPERIMENTAL_LABEL     = ChooseTranslationTable(STRINGS.SETTINGS.EXPERIMENTAL.NAME)
+local EXPERIMENTAL_HOVER     = ChooseTranslationTable(STRINGS.SETTINGS.EXPERIMENTAL.HOVER)
+
 local RETROCOMPAT_LABEL      = ChooseTranslationTable(STRINGS.SETTINGS.RETROCOMPAT.NAME)
 local RETROCOMPAT_HOVER      = ChooseTranslationTable(STRINGS.SETTINGS.RETROCOMPAT.HOVER)
 
@@ -1699,6 +1725,7 @@ configuration_options        =
 	{ name                   = "WARLYMEALGRINDER", label = WARLYGRINDER_LABEL,  hover = WARLYGRINDER_HOVER,  options = WARLYGRINDER_OPTIONS,  default = false, client = false },
 	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,    options = FERTILIZER_OPTIONS,    default = false, client = false },
 	-- Experimental Options.
+	{ name                   = "EXPERIMENTAL",     label = EXPERIMENTAL_LABEL,  hover = EXPERIMENTAL_HOVER,  options = NONE_OPTIONS,          default = false, client = false },
 	{ name                   = "SERENITY_CC",      label = SERENITY_CC_LABEL,   hover = SERENITY_CC_HOVER,   options = SERENITY_CC_OPTIONS,   default = false, client = false },
 	{ name                   = "MEADOW_CC",        label = MEADOW_CC_LABEL,     hover = MEADOW_CC_HOVER,     options = MEADOW_CC_OPTIONS,     default = false, client = false },
 	

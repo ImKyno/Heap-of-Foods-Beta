@@ -11,9 +11,11 @@
 	Note: you don't need to add the language ID to their names.
 	
 	* ALL STRINGS of "modinfo.lua" can be translated.
-	* ALL STRINGS of "hof_init/world/hof_worldsettings.lua" can be transled.
 	* ALL STRINGS of "scripts/strings/hof_strings.lua" can be translated.
 	* ALL STRINGS of "scripts/strings/hof_strings_scrapbook.lua" can be translated.
+	* ALL STRINGS of "scripts/strings/hof_strings_worldsettings.lua" can be transled. 
+	
+	* DO NOT COPY "scripts/strings/hof_strings_worldsettings.lua" TO YOUR LOCALIZATION FORLDER! More deails can be found there.
 	
 	* Some strings may have "\n" or "\n\n" that means a line break markdown.
 	* Some strings may have \"Text\" that means that text has quotation marks.
