@@ -1228,6 +1228,25 @@ local HOF_SCRAPBOOK_ITEMS =
 		deps           = {"malbatross", "malbatross_feathered_weave", "saltrock", "bluegem"},
 		specialinfo    = "FOODSACK",
 	},
+	
+	kyno_book_gardening =
+	{
+		name           = "kyno_book_gardening",
+		type           = "item",
+		subcat         = "book",
+		tex            = "book_gardening.tex",
+		prefab         = "kyno_book_gardening",
+		craftingprefab = "wickerbottom",
+		finiteuses     = 2,
+		fueltype       = "BURNABLE", 
+		fuelvalue      = 45, 
+		burnable       = true,
+		bank           = "books",
+		build          = "books",
+		anim           = "book_gardening",
+		deps           = {"book_horticulture_upgraded", "fertilizer", "papyrus"},
+		specialinfo    = "BOOK_GARDENING",
+	},
 }
 
 local HOF_SCRAPBOOK_FOODS =
@@ -13386,6 +13405,6 @@ AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_THINGS)
 
 -- For the Complementary Mod.
 -- Heap-of-Foods-Workshop-Spices / workshop-3438589036
-if _G.KnownModIndex:IsModEnabled("workshop-3438589036") then
+if TUNING.HOF_IS_HSP_ENABLED then
 	AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_SPICES)
 end

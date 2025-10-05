@@ -102,7 +102,27 @@ end
 
 local function CoffeeBushTest(inst, pt, mouseover, deployer)
 	local tile = TheWorld.Map:GetTileAtPoint(pt.x, pt.y, pt.z)
-	return tile == WORLD_TILES.DESERT_DIRT or tile == WORLD_TILES.VENT
+	
+	local VALID_TILES             =
+	{
+		[WORLD_TILES.DESERT_DIRT] = true,
+		[WORLD_TILES.VENT]        = true,
+	}
+	
+	if TUNING.HOF_IS_TAP_ENABLED or TUNING.HOF_IS_NET_ENABLED then
+		VALID_TILES[WORLD_TILES.VOLCANO]      = true
+		VALID_TILES[WORLD_TILES.VOLCANO_ROCK] = true
+		VALID_TILES[WORLD_TILES.MAGMAFIELD]   = true
+		VALID_TILES[WORLD_TILES.ASH]          = true
+		VALID_TILES[WORLD_TILES.FORGEROCK]    = true
+	end
+    
+	if not VALID_TILES[tile] then
+		return false
+	end
+
+	local radius = inst.replica.inventoryitem ~= nil and inst.replica.inventoryitem:DeploySpacingRadius() or DEPLOYSPACING_RADIUS[DEPLOYSPACING.MEDIUM]
+    return TheWorld.Map:IsDeployPointClear(pt, inst, radius)
 end
 
 local plantables =

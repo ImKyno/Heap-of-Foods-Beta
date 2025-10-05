@@ -7,9 +7,6 @@ local Recipe2          = _G.Recipe2
 local TechTree         = require("techtree")
 local RecipeFilter     = require("recipes_filter")
 
-local TheArchitectPack = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
-local NotEnoughTurfs   = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
-
 -- Atlases for Recipes.
 local DefaultAtlas     = "images/inventoryimages.xml"
 local DefaultAtlas1    = "images/inventoryimages1.xml"

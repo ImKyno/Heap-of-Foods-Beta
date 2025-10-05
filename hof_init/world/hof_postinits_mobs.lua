@@ -25,7 +25,7 @@ local function SharkPostInit(inst)
 		return inst
 	end
 	
-	if not _G.KnownModIndex:IsModEnabled("workshop-2174681153") then
+	if not TUNING.HOF_IS_TCP_ENABLED then
 		if inst.components.lootdropper ~= nil then	
 			inst.components.lootdropper:AddChanceLoot("kyno_shark_fin", 1.00)
 		end
@@ -88,7 +88,7 @@ AddPrefabPostInit("canary", function(inst)
 end)
 
 -- If T.A.P is enabled, make sure Cormorant Spawns Roe too.
-if _G.KnownModIndex:IsModEnabled("workshop-2428854303") then
+if TUNING.HOF_IS_TAP_ENABLED then
     AddPrefabPostInit("cormorant", function(inst)
         if inst.components.periodicspawner ~= nil then
             inst.components.periodicspawner:SetPrefab("kyno_roe")

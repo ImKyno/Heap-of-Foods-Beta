@@ -157,6 +157,20 @@ local function DoGardeningSpell(x, z, max_targets, maximize)
 	if #targets == 0 then
 		return false, "NOHORTICULTURE"
 	end
+	
+	local ready_for_harvest = false
+	
+	for _, v in ipairs(targets) do
+		if (v.components.pickable ~= nil and v.components.pickable:CanBePicked()) or (v.components.crop ~= nil 
+		and v.components.crop:IsReadyForHarvest()) or (v.components.harvestable ~= nil and v.components.harvestable:CanBeHarvested()) then
+			ready_for_harvest = true
+			break
+		end
+	end
+
+	if ready_for_harvest then
+		return false, "NOHORTICULTURE"
+	end
 
 	local spell = SpawnPrefab("kyno_book_gardening_spell")
 	spell.Transform:SetPosition(x, 0, z)
@@ -169,7 +183,6 @@ local function DoGardeningSpell(x, z, max_targets, maximize)
 					
 			for i, v in ipairs(ents) do
 				v:DoTaskInTime(timevar * math.random(), TryGrowth)
-				-- v:DoTaskInTime(0, TryGrowth)
 			end
 		end
 	end

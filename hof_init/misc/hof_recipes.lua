@@ -7,9 +7,6 @@ local Recipe2              = _G.Recipe2
 local TechTree             = require("techtree")
 local RecipeFilter         = require("recipes_filter")
 
-local TheArchitectPack     = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
-local NotEnoughTurfs       = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
-
 local HOF_WARLYMEALGRINDER = GetModConfigData("WARLYMEALGRINDER")
 local HOF_FERTILIZERTWEAK  = GetModConfigData("FERTILIZERTWEAK")
 
@@ -455,7 +452,8 @@ SortAfter("kyno_foodsack", "icepack", "CONTAINERS")
 AddRecipe2("slow_farmplot", {Ingredient("cutgrass", 8), Ingredient("poop", 4), Ingredient("log", 4)}, TECH.LOST,
 	{
 		placer              = "slow_farmplot_placer",
-		min_spacing         = 2.5,
+		min_spacing         = 3,
+		hint_msg            = "NEEDSMEADOWSHOP",
 		atlas               = DefaultAtlas,
 		image               = "slow_farmplot.tex",
 	},
@@ -467,7 +465,8 @@ SortAfter("slow_farmplot", "meatrack2", "STRUCTURES")
 AddRecipe2("fast_farmplot", {Ingredient("cutgrass", 10), Ingredient("poop", 6), Ingredient("rocks", 4)}, TECH.LOST,
 	{
 		placer              = "fast_farmplot_placer",
-		min_spacing         = 2.5,
+		min_spacing         = 3,
+		hint_msg            = "NEEDSMEADOWSHOP",
 		atlas               = DefaultAtlas,
 		image               = "fast_farmplot.tex",
 	},

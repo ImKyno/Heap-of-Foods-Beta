@@ -105,7 +105,6 @@ local function ExtraHarvest(self, harvester)
     end
 end
 
--- Remember to update this function if Klei updates the cookwarestewer component.
 local function DoubleHarvest(self, harvester)
     if self.done then
         if self.onharvest ~= nil then
@@ -127,12 +126,67 @@ local function DoubleHarvest(self, harvester)
 				end
 
 				local stacksize = recipe and recipe.stacksize or 1
-				stacksize = stacksize + TUNING.KYNO_COOKWARE_BONUSHARVEST -- Always grants +1 for large stations.
-				--[[
-				if math.random() < 0.30 then -- 30% of Extra food.
-					stacksize = stacksize + 1
+				stacksize = stacksize + TUNING.KYNO_COOKWARE_BONUSHARVEST - 1
+
+				if stacksize > 1 then
+					loot.components.stackable:SetStackSize(stacksize)
 				end
-				]]--
+
+                if self.spoiltime ~= nil and loot.components.perishable ~= nil then
+                    local spoilpercent = self:GetTimeToSpoil() / self.spoiltime
+                    loot.components.perishable:SetPercent(self.product_spoilage * spoilpercent)
+                    loot.components.perishable:StartPerishing()
+                end
+                if harvester ~= nil and harvester.components.inventory ~= nil then
+                    harvester.components.inventory:GiveItem(loot, nil, self.inst:GetPosition())
+                else
+                    LaunchAt(loot, self.inst, nil, 1, 1)
+                end
+            end
+			
+            self.product = nil
+        end
+
+        if self.task ~= nil then
+            self.task:Cancel()
+            self.task = nil
+        end
+		
+        self.targettime = nil
+        self.done = nil
+        self.spoiltime = nil
+        self.product_spoilage = nil
+
+        if self.inst.components.container ~= nil then
+            self.inst.components.container.canbeopened = true
+        end
+
+        return true
+    end
+end
+
+local function TripleHarvest(self, harvester)
+    if self.done then
+        if self.onharvest ~= nil then
+            self.onharvest(self.inst)
+        end
+
+        if self.product ~= nil then
+            local loot = SpawnPrefab(self.product)
+            if loot ~= nil then
+				local recipe = cooking.GetRecipe(self.inst.prefab, self.product)
+
+				if harvester ~= nil and
+					self.chef_id == harvester.userid and
+					recipe ~= nil and
+					recipe.cookbook_category ~= nil and
+					cooking.cookbook_recipes[recipe.cookbook_category] ~= nil and
+					cooking.cookbook_recipes[recipe.cookbook_category][self.product] ~= nil then
+					harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
+				end
+
+				local stacksize = recipe and recipe.stacksize or 1
+				stacksize = stacksize + TUNING.KYNO_COOKWARE_BONUSHARVEST
 
 				if stacksize > 1 then
 					loot.components.stackable:SetStackSize(stacksize)
@@ -990,7 +1044,7 @@ local function potbigfn()
     end
 	
 	inst.components.container:WidgetSetup("cooking_pot")
-	inst.components.cookwarestewer.Harvest = DoubleHarvest
+	inst.components.cookwarestewer.Harvest = TripleHarvest
 	
 	return inst
 end

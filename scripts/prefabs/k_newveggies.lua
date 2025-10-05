@@ -3,6 +3,7 @@ local PLANT_DEFS = require("prefabs/farm_plant_defs").PLANT_DEFS
 local assets_veggies = 
 {
     Asset("ANIM", "anim/kyno_veggies.zip"),
+	Asset("ANIM", "anim/kyno_rice.zip"),
 	
 	Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),

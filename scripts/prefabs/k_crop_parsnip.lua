@@ -1,6 +1,6 @@
 local assets =
 {
-	Asset("ANIM", "anim/parsnip.zip"),
+	Asset("ANIM", "anim/kyno_parznip.zip"),
 	Asset("ANIM", "anim/grotto_parsnip_giant.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
@@ -11,7 +11,6 @@ local assets =
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 }
 
--- I'm going to use parznip because T.A.P has a parsnip prefab too.
 local prefabs = 
 {
 	"kyno_parznip",
@@ -30,8 +29,8 @@ local function fn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 
-    inst.AnimState:SetBank("parsnip")
-    inst.AnimState:SetBuild("parsnip")
+    inst.AnimState:SetBank("kyno_parznip")
+    inst.AnimState:SetBuild("kyno_parznip")
     inst.AnimState:PlayAnimation("planted")
     inst.AnimState:SetRayTestOnBB(true)
 
@@ -69,8 +68,8 @@ local function parznip_eaten()
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-	inst.AnimState:SetBank("parsnip")
-	inst.AnimState:SetBuild("parsnip")
+	inst.AnimState:SetBank("kyno_parznip")
+	inst.AnimState:SetBuild("kyno_parznip")
 	inst.AnimState:PlayAnimation("idle_eaten")
 	
 	inst:AddTag("veggie")

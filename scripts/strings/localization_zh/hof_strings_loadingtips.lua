@@ -36,7 +36,7 @@ local LOADINGTIPS   =
 	LIMPETROCK      = "你只能在宁静群岛的螃蟹采石场或海滨岛的海滩上找到帽贝岩！",
 	CHICKEN         = "\"我在想这些鸡能不能给我一些蛋。可能我需要一些种子来引诱它们！\" -W",
 	SYRUPPOT        = "用糖浆烹饪锅制作糖浆时，会给三份，相反，普通烹饪锅会给一份。",
-	COOKWARE        = "糖浆烹饪锅、烹饪锅、烧烤炉和烤箱比普通烹饪锅烹饪食物的速度更快。而且它们还能小概率地做出双份食物！",
+	COOKWARE        = "糖浆锅、烹饪锅、烤架和烤箱的烹饪速度比普通陶锅快。每种都有独特的加成效果！",
 	COOKWARE_PIT    = "要使用特殊炊具站进行烹饪，你需要先将它安装在火坑上。",
 	COOKWARE_FIRE   = "特殊炊具站只有在火坑的火足够旺时才能烹饪食物。",
 	COOKWARE_OLDPOT = "猪长老可能需要你的帮助来修复他的旧锅。",
@@ -81,10 +81,10 @@ local LOADINGTIPS   =
 	METALBUCKET     = "什么比水桶更好？一个结实的金属水桶，在挤奶时不会破裂！",
 	LUNARTEQUILA    = "感觉有点儿迷迷糊糊？何不来一杯启明龙舌兰酒，让你的心灵敞开，接纳真相？",
 	MIMICMONSA      = "如果你想悄悄地躲过危险的敌人，就酿造一杯“潜行鸡尾酒”，这样没有人会注意到你！",
-	RUMMAGEWAGON    = "\"I saw Sammy the other day rummaging his Wagon in search of something. I think he was trading with someone. Perhaps I should check what he stores in there...\" -W",
-	RUMMAGEWAGON2   = "\"Its not robbery, I swear! Sammy's throwing away a bunch of useful junk we could use instead! Just look everything I got from his Wagon!\" -W.",
-	SLAUGHTERHEAT   = "Beware! Some animals will attack if you slaughter one of their kind when more is around.",
-	SLAUGHTERFLEE   = "Some animals can be scared away when they see you slaughtering one of their kind with the Slaughter Tools.",
+	RUMMAGEWAGON    = "“我前几天看到萨米在翻他的马车寻找什么东西。我想他可能在和别人交易。也许我应该看看他在里面存了什么……” -W",
+	RUMMAGEWAGON2   = "“这不是抢劫，我发誓！萨米把一堆有用的破烂扔掉了，我们本可以用上！快看看我从他的马车里得到的一切！” -W",
+	SLAUGHTERHEAT   = "小心！当同类动物在附近时，屠宰其中一只可能会激怒其他动物进行攻击。",
+	SLAUGHTERFLEE   = "当某些动物看到你用屠宰工具屠宰它们的同类时，它们可能会受到惊吓逃跑。",
 }
 
 for k, v in pairs(LOADINGTIPS) do

@@ -3,9 +3,6 @@ local _G              = GLOBAL
 local require         = _G.require
 local WORLD_TILES     = _G.WORLD_TILES
 
-local TheArchitectPack = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
-local NotEnoughTurfs   = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
-
 -- I don't know why but there's a bug when "EnableModError()" is enabled that prevents
 -- you from even launching a server with the mod enabled. This seems to solve the issue (?)
 if WORLD_TILES.HOF_FIELDS ~= nil or WORLD_TILES.HOF_TIDALMARSH ~= nil then
@@ -92,7 +89,7 @@ ChangeTileRenderOrder(WORLD_TILES.HOF_TIDALMARSH,      WORLD_TILES.MARSH,     tr
 ChangeTileRenderOrder(WORLD_TILES.HOF_FIELDS,          WORLD_TILES.DECIDUOUS, true)
 
 -- To match The Architect Pack and Not Enough Turfs.
-if TheArchitectPack or NotEnoughTurfs then
+if TUNING.HOF_IS_TAP_ENABLED or TUNING.HOF_IS_NET_ENABLED then
 	ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_PARKFIELD, WORLD_TILES.SWIRLGRASSMONO, true)
 	ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_CITYSTONE, WORLD_TILES.PINKSTONE,      true)
 	ChangeTileRenderOrder(WORLD_TILES.HOF_TIDALMARSH,     WORLD_TILES.TIDALMARSH,     true)

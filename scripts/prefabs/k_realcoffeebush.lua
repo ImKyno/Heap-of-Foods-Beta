@@ -25,15 +25,21 @@ local function OnSeasonChange(inst, season)
 	local tuning = SEASON_BASEREGENTIME_TUNING_LOOKUP[season] or "KYNO_COFFEEBUSH_GROWTIME"
 	inst.components.pickable.baseregentime = TUNING[tuning]
 	
-	if TheWorld.state.issummer and inst.components.pickable ~= nil then
-		inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
-		
-		if inst.components.pickable:IsBarren() or inst.components.pickable:IsWithered() then
-			inst.AnimState:PlayAnimation("dead_to_empty")
-			inst.AnimState:PushAnimation("empty")
-
-			inst.components.pickable:MakeEmpty()
+	if season == SEASONS.SUMMER then
+		if inst.components.pickable:IsBarren() or inst.components.pickable:CanBeFertilized() then
+			local delay = 5 + math.random() * 10
+			
+			inst:DoTaskInTime(delay, function()
+				if inst:IsValid() and inst.components.pickable ~= nil then
+					local fertilizer = SpawnPrefab("ash")
+			
+					inst.components.pickable:Fertilize(fertilizer)
+					fertilizer:Remove()
+				end
+			end)
 		end
+		
+		inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
 	end
 end
 
@@ -130,6 +136,7 @@ end
 
 local function OnMakeFull(inst)
 	inst.AnimState:PlayAnimation(PickAnim(inst))
+	inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 end
 
 local function OnDigUp(inst, worker, numberries)
