@@ -12104,6 +12104,40 @@ local HOF_SCRAPBOOK_CREATURES =
 
 local HOF_SCRAPBOOK_THINGS =
 {
+	slow_farmplot      =
+	{
+		name           = "slow_farmplot",
+		speechname     = "farmplot",
+		type           = "thing",
+		subcat         = "structure",
+		tex            = "slow_farmplot.tex",
+		prefab         = "slow_farmplot",
+		workable       = "HAMMER",
+		burnable       = true,
+		bank           = "kyno_farmplot_scrapbook",
+		build          = "kyno_farmplot_scrapbook",
+		anim           = "basic",
+		deps           = {"seeds", "poop", "log", "cutgrass"},
+		specialinfo    = "FARMPLOT",
+	},
+	
+	fast_farmplot      =
+	{
+		name           = "fast_farmplot",
+		speechname     = "farmplot",
+		type           = "thing",
+		subcat         = "structure",
+		tex            = "fast_farmplot.tex",
+		prefab         = "fast_farmplot",
+		workable       = "HAMMER",
+		burnable       = true,
+		bank           = "kyno_farmplot_scrapbook",
+		build          = "kyno_farmplot_scrapbook",
+		anim           = "improved",
+		deps           = {"seeds", "poop", "rocks", "cutgrass"},
+		specialinfo    = "FARMPLOT",
+	},
+	
 	kyno_serenityisland_shop =
 	{
 		name           = "kyno_serenityisland_shop",

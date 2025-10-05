@@ -20,6 +20,7 @@ Assets =
 	Asset("ANIM", "anim/ui_brewer_1x3.zip"),
 	Asset("ANIM", "anim/kyno_turfs_hof.zip"),
 	Asset("ANIM", "anim/kyno_tree_rock_swaps.zip"),
+	Asset("ANIM", "anim/kyno_farmplot_scrapbook.zip"),
 	
 	Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
 	Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
@@ -684,6 +685,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"farm_plant_kyno_rice",
 	"farm_plant_kyno_sweetpotato",
 	"farm_plant_kyno_turnip",
+	"fast_farmplot",
 	"kingfisher",
 	"kyno_aloe_ground",
 	"kyno_antchest",
@@ -715,8 +717,8 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_meadowisland_pikotree",
 	"kyno_meadowisland_pond",
 	"kyno_meadowisland_sandhill",
-	"kyno_meadowisland_shop",
 	"kyno_meadowisland_seller",
+	"kyno_meadowisland_shop",
 	"kyno_meadowisland_tree",
 	"kyno_meadowisland_tree_sapling",
 	"kyno_mealgrinder",
@@ -753,6 +755,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_wildwheat",
 	"kyno_woodenkeg",
 	"quagmire_pigeon",
+	"slow_farmplot",
 	"toucan",
 }
 

@@ -1357,7 +1357,7 @@ local LANGUAGE_OPTIONS       =
 	{
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.zht,
 		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.zht,
-		data                 = "zht",
+		data                 = "zh", -- We don't have Traditional Chinese yet.
 	},
 	{
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.pt,
@@ -1369,11 +1369,13 @@ local LANGUAGE_OPTIONS       =
 		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.pl,
 		data                 = "pl",
 	},
+	--[[
 	{
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.es,
 		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.es,
-		data                 = "es",
+		data                 = "es", -- We Also don't have Spanish.
 	},
+	]]--
 }
 
 local SEASONALFOOD_LABEL     = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.NAME)
