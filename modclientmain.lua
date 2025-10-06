@@ -1,4 +1,4 @@
-require("hof_main")
+require("hof_util")
 
 --[[
 -- This belongs to Accomplishments Mod.

@@ -11,7 +11,6 @@ modimport("scripts/strings/hof_strings_loadingtips")
 local hof_init_strings = 
 {
 	"hof_strings",
-	"hof_strings_customizations",
 	"hof_strings_scrapbook",
 }
 
@@ -51,9 +50,10 @@ local hof_init_world   =
 {
 	"hof_tiledefs",
 	"hof_regrowth",
-	"hof_retrofit",
+	--"hof_retrofit",
 	"hof_pollinator_component",
 	"hof_worldgen",
+	"hof_worldsettings",
 	"hof_messagebottletreasures",
 	"hof_postinits_world",
 	"hof_postinits_mobs",
@@ -84,13 +84,13 @@ for _, v in pairs(hof_init_foods) do
 end
 
 -- Mod Options.
-_G.CONFIGS_HOF         =
+_G.CONFIGS_HOF                =
 {
-	ENABLEDMODS        = {}
+	ENABLEDMODS               = {}
 }
 
-_G.CONFIGS_HOF.SEASONALFOOD = GetModConfigData("SEASONALFOOD")
-_G.CONFIGS_HOF.SCRAPBOOK    = GetModConfigData("SCRAPBOOK")
+_G.CONFIGS_HOF.SEASONALFOOD   = GetModConfigData("SEASONALFOOD")
+_G.CONFIGS_HOF.SCRAPBOOK      = GetModConfigData("SCRAPBOOK")
 
 if _G.CONFIGS_HOF.SCRAPBOOK then
 	modimport("hof_init/misc/hof_scrapbook")
@@ -99,3 +99,36 @@ end
 
 -- This belongs to the Accomplishments Mod.
 -- modimport("achievementsmain")
+
+-- Testing Mod Options.
+local mod_options = 
+{
+	{ name = "LANGUAGE",         default = false },
+
+	{ name = "SEASONALFOOD",     default = false },
+	{ name = "HUMANMEAT",        default = true  },
+	{ name = "GIANTSPAWNING",    default = true  },
+	{ name = "ALCOHOLICDRINKS",  default = true  },
+	{ name = "ICEBOXSTACKSIZE",  default = false },
+	{ name = "COFFEESPEED",      default = true  },
+	{ name = "COFFEEDURATION",   default = 480   },
+	{ name = "COFFEEDROPRATE",   default = 4     },
+
+	{ name = "SCRAPBOOK",        default = true  },
+	{ name = "WARLYRECIPES",     default = true  },
+	{ name = "KEEPFOOD",         default = false },
+	{ name = "WARLYMEALGRINDER", default = false },
+	{ name = "FERTILIZERTWEAK",  default = false },
+
+	{ name = "SERENITY_CC",      default = false },
+	{ name = "MEADOW_CC",        default = false },
+
+	{ name = "MODRETROFITFORCE", default = false },
+	{ name = "MODRETROFIT",      default = 0     },
+	{ name = "MODTRADES",        default = false },
+}
+
+for _, option in ipairs(mod_options) do
+	local value = GetModConfigData(option.name)
+	print(string.format("HOF CONFIG - %s = %s", option.name, tostring(value)))
+end

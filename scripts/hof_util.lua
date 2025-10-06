@@ -1,19 +1,27 @@
-function ChangeFoodConfigs(config, value)
-	local configs = KnownModIndex:LoadModConfigurationOptions("Heap-of-Foods-Workshop", false)
-	-- local configs = KnownModIndex:LoadModConfigurationOptions("workshop-2334209327", false) -- Heap of Foods Workshop.
-	-- local configs = KnownModIndex:LoadModConfigurationOptions("workshop-2063154740", false) -- Heap of Foods Beta Branch.
-	if configs ~= nil then
-		for i, v in ipairs(configs) do
+-- workshop-2334209327 Heap of Foods Workshop. 
+-- workshop-2063154740 Heap of Foods Beta Branch.
+--[[
+function HOF_ChangeConfiguration(config, value)
+	local configs = KnownModIndex:LoadModConfigurationOptions("Heap-of-Foods-Workshop-Main", false)
+
+	if configs then
+		for i, v in pairs(configs) do
 			if v.name == config then
 				v.saved = value
-				print("Heap of Foods Configuration - Changed "..config.." to "..value)
+				print("Heap of Foods Mod - Changed Configuration "..config.." to "..value)
 			end
 		end
 	end
 	
-	KnownModIndex:SaveConfigurationOptions(function() end, "Heap-of-Foods-Workshop", configs, false)
-	-- KnownModIndex:SaveConfigurationOptions(function() end, "workshop-2334209327", configs, false)
-	-- KnownModIndex:SaveConfigurationOptions(function() end, "workshop-2063154740", configs, false)
+	KnownModIndex:SaveConfigurationOptions(function() end, "Heap-of-Foods-Workshop-Main", configs, false)
+end
+]]--
+
+function HOF_ChangeConfiguration(config)
+	if config == "MODRETROFIT" then
+		KnownModIndex:GetModInfo("Heap-of-Foods-Workshop-Main").MODRETROFIT = 0
+		print("Heap of Foods Mod - Changed Configuration "..config.." to 0")
+	end
 end
 
 local function TogglePickable(pickable, isspring)

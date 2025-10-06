@@ -2,9 +2,6 @@ require("constants")
 require("mathutil")
 require("map/terrain")
 
--- Using custom, becuase Klei has changed how it behaves
--- causing our island to be placed incorrectly.
--- local obj_layout = require("map/hof_object_layout")
 local obj_layout = require("map/object_layout")
 
 local function FindEntsInArea(entities, left, top, size, blocking_prefabs)
@@ -108,72 +105,70 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 		
 		args = { entitiesOut = entities, width = map_width, height = map_height, rand_offset = false, debug_prefab_list = nil }
 	}
-	
-	local function is_rough_or_swell_ocean(_left, _top, tile_size)
-		for x = 0, tile_size do
-			for y = 0, tile_size do
-				local tile = map:GetTile(_left + x, _top + y)
-				
-				if tile ~= WORLD_TILES.OCEAN_ROUGH and tile ~= WORLD_TILES.OCEAN_SWELL then
-					return false
-				end
-			end
-		end
-		
-		return true
-	end
 
-	local function TryToAddLayout(name, topology_delta)--, isvalidareafn)
+	local function TryToAddLayout(name, area_size, topology_delta)
 		local layout = obj_layout.LayoutForDefinition(name)
 		local tile_size = #layout.ground
 
 		topology_delta = topology_delta or 1
-
-		local candidtates = {}
-		local foundarea = false
-		local num_steps = math.floor((map_width - tile_size) / tile_size)
 		
+		local function isvalidareafn(_left, _top)
+			for x = 0, area_size do
+				for y = 0, area_size do
+					if not IsOceanTile(map:GetTile(_left + x, _top + y)) then
+						return false
+					end
+				end
+			end
+			
+			return true
+		end
+
+		local candidates = {}
+		local foundarea = false
+		local num_steps = 50
+
 		for x = 0, num_steps do
 			for y = 0, num_steps do
-				local left = 8 + (x > 0 and ((x * math.floor(map_width / num_steps)) - tile_size - 16) or 0)
-				local top  = 8 + (y > 0 and ((y * math.floor(map_height / num_steps)) - tile_size - 16) or 0)
+				local left = 8 + (x > 0 and ((x * math.floor(map_width / num_steps)) - area_size - 16) or 0)
+				local top  = 8 + (y > 0 and ((y * math.floor(map_height / num_steps)) - area_size - 16) or 0)
 
-				table.insert(candidtates, {top = top, left = left})
+				if isvalidareafn(left, top) then
+					table.insert(candidates, {top = top, left = left, distsq = VecUtil_LengthSq(left - map_width / 2, top - map_height / 2)})
+				end
 			end
 		end
 		
-		print("   " ..tostring(#candidtates) .. " candidtate locations")
+		print("   " ..tostring(#candidates) .. " candidtate locations")
 
-		if #candidtates > 0 then
-			local topology_size = (tile_size + (topology_delta * 2))
-			local world_size = topology_size * TILE_SCALE
-
-			shuffleArray(candidtates)
+		if #candidates > 0 then
+			local world_size = tile_size * 4
 			
-			for _, candidtate in ipairs(candidtates) do
-				local top, left = candidtates[1].top, candidtates[1].left
-				local world_top, world_left = (left - topology_delta) * TILE_SCALE - (map_width * 0.5 * TILE_SCALE), (top - topology_delta) * TILE_SCALE - (map_height * 0.5 * TILE_SCALE)
+			table.sort(candidates, function(a, b) return a.distsq < b.distsq end)
+			
+			for _, candidate in ipairs(candidates) do
+				local top, left = candidate.top, candidate.left
+				local world_top, world_left = left * 4 - (map_width * 0.5 * 4), top * 4 - (map_height * 0.5 * 4)
 				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
 				{
-					"boat", "malbatross", "oceanfish_shoalspawner", "chester_eyebone", 
-					"glommerflower", "klaussackkey", "crabking", "oceantree", "waterplant_base"
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower",
+					"oceantree_pillar", "watertree_pillar",
 				})
 				
 				if ents_to_remove ~= nil then
-					print("   Removed " .. tostring(#ents_to_remove) .. " entities for static layout:")
-					
+					print("   Removed "..tostring(#ents_to_remove).." entities for static layout:")
 					for i = #ents_to_remove, 1, -1 do
-						print ("   - " .. tostring(ents_to_remove[i].prefab) .. " " )
+						print ("   - "..tostring(ents_to_remove[i].prefab))
 						table.remove(savedata.ents[ents_to_remove[i].prefab], ents_to_remove[i].index)
 					end
-
-					obj_layout.Place({left, top}, name, add_fn, nil, map)
 					
+					obj_layout.Place({left, top}, name, add_fn, nil, map)
 					if layout.add_topology ~= nil then
-						local topology_node_index = AddSquareTopology(topology, world_top, world_left, world_size, layout.add_topology.room_id, layout.add_topology.tags)
-						AddTileNodeIdsForArea(map, topology_node_index, left + 1, top + 1, topology_size)
+						AddSquareTopology(topology, world_top, world_left, world_size, "StaticLayoutIsland:DUMMY_SERENITY1", {"not_mainland"})
+						AddSquareTopology(topology, world_top, world_left, world_size, "StaticLayoutIsland:DUMMY_SERENITY2", {"not_mainland"})
+						AddSquareTopology(topology, world_top, world_left, world_size, layout.add_topology.room_id, layout.add_topology.tags)
 					end
-
+					
 					return true
 				end
 			end
@@ -182,7 +177,7 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 		return false
 	end
 	
-	local success = TryToAddLayout("SerenityIsland", 1)
+	local success = TryToAddLayout("SerenityIsland", 53)
 	
 	if success then
 		print("Retrofitting for Heap of Foods Mod - Added the Serenity Archipelago to the world.")
@@ -238,71 +233,69 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 		args = { entitiesOut = entities, width = map_width, height = map_height, rand_offset = false, debug_prefab_list = nil }
 	}
 	
-	local function is_rough_or_swell_ocean(_left, _top, tile_size)
-		for x = 0, tile_size do
-			for y = 0, tile_size do
-				local tile = map:GetTile(_left + x, _top + y)
-				
-				if tile ~= WORLD_TILES.OCEAN_ROUGH and tile ~= WORLD_TILES.OCEAN_SWELL then
-					return false
-				end
-			end
-		end
-		
-		return true
-	end
-
-	local function TryToAddLayout(name, topology_delta)--, isvalidareafn)
+	local function TryToAddLayout(name, area_size, topology_delta)
 		local layout = obj_layout.LayoutForDefinition(name)
 		local tile_size = #layout.ground
 
 		topology_delta = topology_delta or 1
-
-		local candidtates = {}
-		local foundarea = false
-		local num_steps = math.floor((map_width - tile_size) / tile_size)
 		
+		local function isvalidareafn(_left, _top)
+			for x = 0, area_size do
+				for y = 0, area_size do
+					if not IsOceanTile(map:GetTile(_left + x, _top + y)) then
+						return false
+					end
+				end
+			end
+			
+			return true
+		end
+
+		local candidates = {}
+		local foundarea = false
+		local num_steps = 50
+
 		for x = 0, num_steps do
 			for y = 0, num_steps do
-				local left = 8 + (x > 0 and ((x * math.floor(map_width / num_steps)) - tile_size - 16) or 0)
-				local top  = 8 + (y > 0 and ((y * math.floor(map_height / num_steps)) - tile_size - 16) or 0)
+				local left = 8 + (x > 0 and ((x * math.floor(map_width / num_steps)) - area_size - 16) or 0)
+				local top  = 8 + (y > 0 and ((y * math.floor(map_height / num_steps)) - area_size - 16) or 0)
 
-				table.insert(candidtates, {top = top, left = left})
+				if isvalidareafn(left, top) then
+					table.insert(candidates, {top = top, left = left, distsq = VecUtil_LengthSq(left - map_width / 2, top - map_height / 2)})
+				end
 			end
 		end
 		
-		print("   " ..tostring(#candidtates) .. " candidtate locations")
+		print("   " ..tostring(#candidates) .. " candidtate locations")
 
-		if #candidtates > 0 then
-			local topology_size = (tile_size + (topology_delta * 2))
-			local world_size = topology_size * TILE_SCALE
-
-			shuffleArray(candidtates)
+		if #candidates > 0 then
+			local world_size = tile_size * 4
 			
-			for _, candidtate in ipairs(candidtates) do
-				local top, left = candidtates[1].top, candidtates[1].left
-				local world_top, world_left = (left - topology_delta) * TILE_SCALE - (map_width * 0.5 * TILE_SCALE), (top - topology_delta) * TILE_SCALE - (map_height * 0.5 * TILE_SCALE)
+			table.sort(candidates, function(a, b) return a.distsq < b.distsq end)
+			
+			for _, candidate in ipairs(candidates) do
+				local top, left = candidate.top, candidate.left
+				local world_top, world_left = left * 4 - (map_width * 0.5 * 4), top * 4 - (map_height * 0.5 * 4)
 				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
 				{
-					"boat", "malbatross", "oceanfish_shoalspawner", "chester_eyebone", 
-					"glommerflower", "klaussackkey", "crabking", "oceantree", "waterplant_base"
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower",
+					"oceantree_pillar", "watertree_pillar",
 				})
 				
 				if ents_to_remove ~= nil then
-					print("   Removed " .. tostring(#ents_to_remove) .. " entities for static layout:")
-					
+					print("   Removed "..tostring(#ents_to_remove).." entities for static layout:")
 					for i = #ents_to_remove, 1, -1 do
-						print ("   - " .. tostring(ents_to_remove[i].prefab) .. " " )
+						print ("   - "..tostring(ents_to_remove[i].prefab))
 						table.remove(savedata.ents[ents_to_remove[i].prefab], ents_to_remove[i].index)
 					end
-
-					obj_layout.Place({left, top}, name, add_fn, nil, map)
 					
+					obj_layout.Place({left, top}, name, add_fn, nil, map)
 					if layout.add_topology ~= nil then
-						local topology_node_index = AddSquareTopology(topology, world_top, world_left, world_size, layout.add_topology.room_id, layout.add_topology.tags)
-						AddTileNodeIdsForArea(map, topology_node_index, left + 1, top + 1, topology_size)
+						AddSquareTopology(topology, world_top, world_left, world_size, "StaticLayoutIsland:DUMMY_MEADOW1", {"not_mainland"})
+						AddSquareTopology(topology, world_top, world_left, world_size, "StaticLayoutIsland:DUMMY_MEADOW2", {"not_mainland"})
+						AddSquareTopology(topology, world_top, world_left, world_size, layout.add_topology.room_id, layout.add_topology.tags)
 					end
-
+					
 					return true
 				end
 			end
@@ -311,7 +304,7 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 		return false
 	end
 	
-	local success = TryToAddLayout("MeadowIsland", 1)
+	local success = TryToAddLayout("MeadowIsland", 54)
 	
 	if success then
 		print("Retrofitting for Heap of Foods Mod - Added the Seaside Island to the world.")
@@ -424,8 +417,10 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 				local top, left = candidtates[1].top, candidtates[1].left
 				local world_top, world_left = (left-topology_delta)*4 - (map_width * 0.5 * 4), (top-topology_delta)*4 - (map_height * 0.5 * 4)
 
-				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, {"boat", "malbatross", 
-				"oceanfish_shoalspawner", "chester_eyebone", "glommerflower", "klaussackkey"})
+				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
+				{
+					"boat", "malbatross", "oceanfish_shoalspawner", "chester_eyebone", "glommerflower", "klaussackkey"
+				})
 				
 				if ents_to_remove ~= nil then
 					print("   Removed " .. tostring(#ents_to_remove) .. " entities for static layout:")

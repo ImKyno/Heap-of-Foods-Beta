@@ -1320,11 +1320,11 @@ local TOGGLE_OPTIONS         =
 {
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED), 
-		data                 = false,
+		data                 = false
 	}, 
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED), 
-		data                 = true,
+		data                 = true
 	},
 }
 
@@ -1347,33 +1347,35 @@ local LANGUAGE_OPTIONS       =
 	{
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.en,
 		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.en,
-		data                 = false, 
+		data                 = false
 	},
 	{
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.zh,
 		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.zh,
-		data                 = "zh",
+		data                 = "zh"
 	},
+	--[[
 	{
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.zht,
 		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.zht,
-		data                 = "zh", -- We don't have Traditional Chinese yet.
+		data                 = "zht", -- We don't have Traditional Chinese yet.
 	},
+	]]--
 	{
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.pt,
 		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.pt,
-		data                 = "pt",
+		data                 = "pt"
 	},
 	{
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.pl,
 		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.pl,
-		data                 = "pl",
-	},
+		data                 = "pl"
+	}
 	--[[
 	{
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.es,
 		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.es,
-		data                 = "es", -- We Also don't have Spanish.
+		data                 = "es", -- We also don't have Spanish.
 	},
 	]]--
 }
@@ -1385,13 +1387,13 @@ local SEASONALFOOD_OPTIONS   =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.HOVER_OPTIONS.DISABLED),
-		data                 = true,
+		data                 = true
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.HOVER_OPTIONS.ENABLED),
-		data                 = false,
-	},
+		data                 = false
+	}
 }
 
 local HUMANMEAT_LABEL        = ChooseTranslationTable(STRINGS.SETTINGS.HUMANMEAT.NAME)
@@ -1401,13 +1403,13 @@ local HUMANMEAT_OPTIONS      =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.HUMANMEAT.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.HUMANMEAT.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 local COFFEEDROP_LABEL       = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.NAME)
@@ -1417,28 +1419,28 @@ local COFFEEDROP_OPTIONS     =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.HOVER_OPTIONS.AMOUNT0),
-		data                 = 0,
+		data                 = 0
 	},
 	{
 		description          = "4",
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.HOVER_OPTIONS.AMOUNT4),
-		data                 = 4,
+		data                 = 4
 	},
 	{
 		description          = "8",
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.HOVER_OPTIONS.AMOUNT8),
-		data                 = 8,
+		data                 = 8
 	},
 	{
 		description          = "12",
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.HOVER_OPTIONS.AMOUNT12),
-		data                 = 12,
+		data                 = 12
 	},
 	{
 		description          = "16",
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDROP.HOVER_OPTIONS.AMOUNT16),
-		data                 = 16,
-	},
+		data                 = 16
+	}
 }
 
 local ALCOHOL_LABEL          = ChooseTranslationTable(STRINGS.SETTINGS.ALCOHOLICDRINKS.NAME)
@@ -1448,13 +1450,13 @@ local ALCOHOL_OPTIONS        =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.ALCOHOLICDRINKS.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.ALCOHOLICDRINKS.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 local GIANTSPAWN_LABEL       = ChooseTranslationTable(STRINGS.SETTINGS.GIANTSPAWNING.NAME)
@@ -1464,13 +1466,13 @@ local GIANTSPAWN_OPTIONS     =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.GIANTSPAWNING.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.GIANTSPAWNING.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 local ICEBOX_LABEL           = ChooseTranslationTable(STRINGS.SETTINGS.ICEBOXSTACKSIZE.NAME)
@@ -1480,13 +1482,13 @@ local ICEBOX_OPTIONS         =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.ICEBOXSTACKSIZE.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.ICEBOXSTACKSIZE.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 local COFFEESPEED_LABEL      = ChooseTranslationTable(STRINGS.SETTINGS.COFFEESPEED.NAME)
@@ -1496,13 +1498,13 @@ local COFFEESPEED_OPTIONS    =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEESPEED.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEESPEED.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 local COFFEETIMER_LABEL      = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.NAME)
@@ -1512,33 +1514,33 @@ local COFFEETIMER_OPTIONS    =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.SUPERSHORT.NAME),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.SUPERSHORT.HOVER),
-		data                 = 120,
+		data                 = 120
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.SHORT.NAME),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.SHORT.HOVER),
-		data                 = 240,
+		data                 = 240
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.NORMAL.NAME),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.NORMAL.HOVER),
-		data                 = 480,
+		data                 = 480
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.AVERAGE.NAME),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.AVERAGE.HOVER),
-		data                 = 640,
+		data                 = 640
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.LONG.NAME),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.LONG.HOVER),
-		data                 = 960,
+		data                 = 960
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.SUPERLONG.NAME),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.COFFEEDURATION.HOVER_OPTIONS.SUPERLONG.HOVER),
-		data                 = 1920,
-	},
+		data                 = 1920
+	}
 }
 
 local SCRAPBOOK_LABEL        = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK.NAME)
@@ -1548,13 +1550,13 @@ local SCRAPBOOK_OPTIONS      =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 local WARLYRECIPES_LABEL     = ChooseTranslationTable(STRINGS.SETTINGS.WARLYRECIPES.NAME)
@@ -1564,13 +1566,13 @@ local WARLYRECIPES_OPTIONS   =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.WARLYRECIPES.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.WARLYRECIPES.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 local KEEPFOOD_LABEL         = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.NAME)
@@ -1580,13 +1582,13 @@ local KEEPFOOD_OPTIONS       =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 local WARLYGRINDER_LABEL     = ChooseTranslationTable(STRINGS.SETTINGS.WARLYGRINDER.NAME)
@@ -1596,13 +1598,13 @@ local WARLYGRINDER_OPTIONS   =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.WARLYGRINDER.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.WARLYGRINDER.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 local FERTILIZER_LABEL       = ChooseTranslationTable(STRINGS.SETTINGS.FERTILIZERTWEAK.NAME)
@@ -1612,13 +1614,13 @@ local FERTILIZER_OPTIONS     =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.FERTILIZERTWEAK.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.FERTILIZERTWEAK.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 local SERENITY_CC_LABEL      = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.NAME)
@@ -1628,13 +1630,13 @@ local SERENITY_CC_OPTIONS    =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 local MEADOW_CC_LABEL        = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.NAME)
@@ -1644,13 +1646,13 @@ local MEADOW_CC_OPTIONS      =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 local RETROFITFORCE_LABEL    = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.NAME)
@@ -1660,13 +1662,13 @@ local RETROFITFORCE_OPTIONS  =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.HOVER_OPTIONS.DISABLED),
-		data                 = 0,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.HOVER_OPTIONS.ENABLED),
-		data                 = 1,
-	},
+		data                 = true
+	}
 }
 
 local RETROFIT_LABEL         = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.NAME)
@@ -1676,18 +1678,18 @@ local RETROFIT_OPTIONS       =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.UPDATED.NAME),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.UPDATED.HOVER),
-		data                 = 0,
+		data                 = 0
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.OCEAN.NAME),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.OCEAN.HOVER),
-		data                 = 1,
+		data                 = 1
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.MERMHUT.NAME),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.MERMHUT.HOVER),
-		data                 = 2,
-	},
+		data                 = 2
+	}
 }
 
 local MODTRADES_LABEL        = ChooseTranslationTable(STRINGS.SETTINGS.MODTRADES.NAME)
@@ -1697,20 +1699,20 @@ local MODTRADES_OPTIONS      =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.MODTRADES.HOVER_OPTIONS.DISABLED),
-		data                 = false,
+		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.MODTRADES.HOVER_OPTIONS.ENABLED),
-		data                 = true,
-	},
+		data                 = true
+	}
 }
 
 configuration_options        =
 {
 	{ name                   = "LANGUAGE",         label = LANGUAGE_LABEL,      hover = LANGUAGE_HOVER,      options = LANGUAGE_OPTIONS,      default = false },
 	-- General Options.
-	{ name                   = "GENERAL",          label = GENERAL_LABEL,       hover = GENERAL_HOVER,       options = NONE_OPTIONS,          default = false },
+	-- { name                   = "GENERAL",          label = GENERAL_LABEL,       hover = GENERAL_HOVER,       options = NONE_OPTIONS,          default = false },
 	{ name                   = "SEASONALFOOD",     label = SEASONALFOOD_LABEL,  hover = SEASONALFOOD_HOVER,  options = SEASONALFOOD_OPTIONS,  default = false },
 	{ name                   = "HUMANMEAT",        label = HUMANMEAT_LABEL,     hover = HUMANMEAT_HOVER,     options = HUMANMEAT_OPTIONS,     default = true  },
 	{ name                   = "GIANTSPAWNING",    label = GIANTSPAWN_LABEL,    hover = GIANTSPAWN_HOVER,    options = GIANTSPAWN_OPTIONS,    default = true  },
@@ -1720,20 +1722,20 @@ configuration_options        =
 	{ name                   = "COFFEEDURATION",   label = COFFEETIMER_LABEL,   hover = COFFEETIMER_HOVER,   options = COFFEETIMER_OPTIONS,   default = 480   },
 	{ name                   = "COFFEEDROPRATE",   label = COFFEEDROP_LABEL,    hover = COFFEEDROP_HOVER,    options = COFFEEDROP_OPTIONS,    default = 4     },
 	-- Miscellaneous Options.
-	{ name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,        options = NONE_OPTIONS,          default = false },
+	-- { name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,        options = NONE_OPTIONS,          default = false },
 	{ name                   = "SCRAPBOOK",        label = SCRAPBOOK_LABEL,     hover = SCRAPBOOK_HOVER,     options = SCRAPBOOK_OPTIONS,     default = true  },
 	{ name                   = "WARLYRECIPES",     label = WARLYRECIPES_LABEL,  hover = WARLYRECIPES_HOVER,  options = WARLYRECIPES_OPTIONS,  default = true  },
 	{ name                   = "KEEPFOOD",         label = KEEPFOOD_LABEL,      hover = KEEPFOOD_HOVER,      options = KEEPFOOD_OPTIONS,      default = false },
 	{ name                   = "WARLYMEALGRINDER", label = WARLYGRINDER_LABEL,  hover = WARLYGRINDER_HOVER,  options = WARLYGRINDER_OPTIONS,  default = false },
 	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,    options = FERTILIZER_OPTIONS,    default = false },
 	-- Experimental Options.
-	{ name                   = "EXPERIMENTAL",     label = EXPERIMENTAL_LABEL,  hover = EXPERIMENTAL_HOVER,  options = NONE_OPTIONS,          default = false },
+	-- { name                   = "EXPERIMENTAL",     label = EXPERIMENTAL_LABEL,  hover = EXPERIMENTAL_HOVER,  options = NONE_OPTIONS,          default = false },
 	{ name                   = "SERENITY_CC",      label = SERENITY_CC_LABEL,   hover = SERENITY_CC_HOVER,   options = SERENITY_CC_OPTIONS,   default = false },
 	{ name                   = "MEADOW_CC",        label = MEADOW_CC_LABEL,     hover = MEADOW_CC_HOVER,     options = MEADOW_CC_OPTIONS,     default = false },
 	
 	-- Retrofitting Options.
-	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false },
- -- { name                   = "MODFORCERETROFIT", label = RETROFITFORCE_LABEL, hover = RETROFITFORCE_HOVER, options = RETROFITFORCE_OPTIONS, default = 0     },
+	-- { name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false },
+	{ name                   = "MODRETROFITFORCE", label = RETROFITFORCE_LABEL, hover = RETROFITFORCE_HOVER, options = RETROFITFORCE_OPTIONS, default = false },
 	{ name                   = "MODRETROFIT",      label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,      options = RETROFIT_OPTIONS,      default = 0     },
 	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,     options = MODTRADES_OPTIONS,     default = false },
 }

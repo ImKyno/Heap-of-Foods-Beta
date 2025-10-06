@@ -19,6 +19,7 @@
 -- Common Dependencies.
 local _G      = GLOBAL
 local require = _G.require
+local STRINGS = _G.STRINGS
 local locale  = _G.LOC.GetLocaleCode()
 
 modimport("hof_init/misc/hof_tuning")
@@ -27,7 +28,7 @@ local function ChooseTranslationTable(tbl)
     return tbl[locale] or tbl[1]
 end
 
-local STRINGS =
+local STRINGS_CUSTOMIZATION =
 {
 	-- WORLDGEN
 	RESOURCES =
@@ -113,12 +114,58 @@ local STRINGS =
 }
 
 -- Main Menu world customization.
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof",            ChooseTranslationTable(STRINGS.RESOURCES),              nil, nil, 11)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_ocean",      ChooseTranslationTable(STRINGS.RESOURCES_OCEAN),        nil, nil, 12)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_serenity",   ChooseTranslationTable(STRINGS.SERENITYISLAND),         nil, nil, 13)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_meadow",     ChooseTranslationTable(STRINGS.MEADOWISLAND),           nil, nil, 14)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof",            ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES),              nil, nil, 11)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_ocean",      ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES_OCEAN),        nil, nil, 12)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_serenity",   ChooseTranslationTable(STRINGS_CUSTOMIZATION.SERENITYISLAND),         nil, nil, 13)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_meadow",     ChooseTranslationTable(STRINGS_CUSTOMIZATION.MEADOWISLAND),           nil, nil, 14)
 
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_r",          ChooseTranslationTable(STRINGS.RESOURCES_REGROW),       nil, nil, 11)
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_ocean_r",    ChooseTranslationTable(STRINGS.RESOURCES_OCEAN_REGROW), nil, nil, 12)
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_serenity_r", ChooseTranslationTable(STRINGS.SERENITYISLAND_REGROW),  nil, nil, 13)
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_meadow_r",   ChooseTranslationTable(STRINGS.MEADOWISLAND_REGROW),    nil, nil, 14)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_r",          ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES_REGROW),       nil, nil, 11)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_ocean_r",    ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES_OCEAN_REGROW), nil, nil, 12)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_serenity_r", ChooseTranslationTable(STRINGS_CUSTOMIZATION.SERENITYISLAND_REGROW),  nil, nil, 13)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_meadow_r",   ChooseTranslationTable(STRINGS_CUSTOMIZATION.MEADOWISLAND_REGROW),    nil, nil, 14)
+
+local function ChooseTranslationTable2()
+	-- Try to load strings if we have the localization files.
+	local ok, strings = _G.pcall(require, "strings/localization_" .. locale .. "/hof_strings_customizations")
+	
+	if ok and strings then
+		return strings
+	end
+
+    -- Fallback to english if we don't have them.
+	local ok2, fallback = _G.pcall(require, "strings/hof_strings_customizations")
+	
+	if ok2 and fallback then
+		return fallback
+	end
+
+    -- HOW DID WE GET HERE? Fallback if even english can't be loaded.
+	print("Heap of Foods Mod - Failed to load World Settings Localization!")
+	return {}
+end
+
+ChooseTranslationTable2()
+
+--[[
+local function ChooseTranslationTable2()
+	-- Try to load strings if we have the localization files.
+	local ok, strings = pcall(require, "strings/localization_" .. locale .. "/hof_strings_customizations")
+	
+	if not ok or strings == nil or _G.next(strings) == nil then
+		-- Fallback to english if we don't have them.
+		local ok2, fallback = pcall(require, "strings/hof_strings_customizations")
+		
+		if ok2 and fallback ~= nil then
+			print("Heap of Foods Mod - No Localization found! Using English as default.")
+			return fallback
+		else
+			print("Heap of Foods Mod - Failed to load World Settings Localization!")
+			return {}
+		end
+	end
+
+	return strings
+end
+
+ChooseTranslationTable2()
+]]--

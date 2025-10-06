@@ -3,7 +3,7 @@ return Class(function(self, inst)
 	
 	self.inst = inst
 	
-	local function RetrofitIslands()
+	local function RetrofitOcean()
 		local node_indices = {}
 	
 		for k, v in ipairs(TheWorld.topology.ids) do
@@ -14,13 +14,21 @@ return Class(function(self, inst)
 			if string.find(v, "MeadowIsland") then
 				table.insert(node_indices, k)
 			end
+			
+			if string.find(v, "WreckArea") then
+				table.insert(node_indices, k)
+			end
+		
+			if string.find(v, "LowMist") then
+				table.insert(node_indices, k)
+			end
 		end
 	
 		if #node_indices == 0 then
 			return false
 		end
 
-		local tags = {"SerenityArea", "MeadowArea"}
+		local tags = {"SerenityArea", "MeadowArea", "WreckArea", "LowMist"}
 	
 		for k, v in ipairs(node_indices) do
 			if TheWorld.topology.nodes[v].tags == nil then
@@ -40,6 +48,14 @@ return Class(function(self, inst)
 			end
 	
 			if table.contains(node.tags, "MeadowArea") then
+				TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
+			end
+			
+			if table.contains(node.tags, "WreckArea") then
+				TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
+			end
+		
+			if table.contains(node.tags, "LowMist") then
 				TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
 			end
 		end
@@ -93,69 +109,25 @@ return Class(function(self, inst)
 			SpawnSammyWagon()
 		end
 	end
-	
-	local function RetrofitOceanSetPieces()
-		local node_indices = {}
-	
-		for k, v in ipairs(TheWorld.topology.ids) do
-			if string.find(v, "WreckArea") then
-				table.insert(node_indices, k)
-			end
-		
-			if string.find(v, "LowMist") then
-				table.insert(node_indices, k)
-			end
-		end
-	
-		if #node_indices == 0 then
-			return false
-		end
-
-		local tags = {"WreckArea", "LowMist"}
-	
-		for k, v in ipairs(node_indices) do
-			if TheWorld.topology.nodes[v].tags == nil then
-				TheWorld.topology.nodes[v].tags = {}
-			end
-		
-			for i, tag in ipairs(tags) do
-				if not table.contains(TheWorld.topology.nodes[v].tags, tag) then
-					table.insert(TheWorld.topology.nodes[v].tags, tag)
-				end
-			end
-		end
-	
-		for i, node in ipairs(TheWorld.topology.nodes) do
-			if table.contains(node.tags, "WreckArea") then
-				TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
-			end
-		
-			if table.contains(node.tags, "LowMist") then
-				TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
-			end
-		end
-
-		return true
-	end
 
 	function self:OnPostInit()
 		local isforest = TheWorld.worldprefab == "forest"
 		local iscave = TheWorld.worldprefab == "cave"
 		
 		if isforest then
-			if TUNING.HOF_RETROFIT == 1 then
-				local success = RetrofitIslands()
+			if TUNING.HOF_RETROFIT == 1 then --or TUNING.HOF_RETROFIT_FORCE == true then
+				local success = RetrofitOcean()
 				
 				if success then
 					TheWorld.Map:RetrofitNavGrid()
-					ChangeFoodConfigs("MODRETROFIT", 0)
+					HOF_ChangeConfiguration("MODRETROFIT", 0)
 					self.requiresreset = true
 				end
-			elseif TUNING.HOF_RETROFIT == 2 then
-				local success = RetrofitSammyShop() -- RetrofitMermhuts()
+			elseif TUNING.HOF_RETROFIT == 2 then --or TUNING.HOF_RETROFIT_FORCE == true then
+				local success = RetrofitSammyShop()
 			
 				if success then
-					ChangeFoodConfigs("MODRETROFIT", 0)
+					HOF_ChangeConfiguration("MODRETROFIT", 0)
 				end
 			end
 		end
