@@ -4,7 +4,7 @@ local require     = _G.require
 local SpawnPrefab = _G.SpawnPrefab
 local Pollinator  = require("components/pollinator")
 
-require("hof_mainfunctions")
+require("hof_util")
 
 -- Pollinators will also target Sugar Flowers as well.	
 local OldCanPollinate = Pollinator.CanPollinate

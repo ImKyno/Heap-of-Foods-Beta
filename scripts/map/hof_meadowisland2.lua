@@ -9852,7 +9852,6 @@ return {
           visible = true,
           properties = {}
         },
-        --[[
         {
           name = "",
           type = "kyno_flup_spawner",
@@ -9919,7 +9918,6 @@ return {
           visible = true,
           properties = {}
         },
-        ]]--
         {
           name = "",
           type = "kyno_meadowisland_mermhut",
@@ -10991,7 +10989,7 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "5",
+            ["data.growable.stage"] = "4",
             ["scenario"] = "sammy_farmplot"
           }
         },
@@ -11040,7 +11038,7 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "5",
+            ["data.growable.stage"] = "4",
             ["scenario"] = "sammy_farmplot"
           }
         },
@@ -11068,7 +11066,7 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "5",
+            ["data.growable.stage"] = "4",
             ["scenario"] = "sammy_farmplot"
           }
         },
@@ -11207,7 +11205,7 @@ return {
           height = 0,
           visible = true,
           properties = {
-            ["data.growable.stage"] = "5",
+            ["data.growable.stage"] = "4",
             ["scenario"] = "sammy_farmplot"
           }
         },
@@ -11352,6 +11350,589 @@ return {
           shape = "rectangle",
           x = 784,
           y = 3064,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1008,
+          y = 1315,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 442,
+          y = 1315,
+          width = 40,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 962,
+          y = 999,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 308,
+          y = 791,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1024,
+          y = 483,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 384,
+          y = 423,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1538,
+          y = 369,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2110,
+          y = 601,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1462,
+          y = 735,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1924,
+          y = 1009,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1454,
+          y = 1241,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2364,
+          y = 1185,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1542,
+          y = 1477,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2096,
+          y = 1699,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2606,
+          y = 1317,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2976,
+          y = 1371,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 3612,
+          y = 1303,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 3326,
+          y = 1597,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2560,
+          y = 1721,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2310,
+          y = 2027,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 3086,
+          y = 2013,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1938,
+          y = 1397,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 3438,
+          y = 1819,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 3741,
+          y = 2113,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 3101,
+          y = 2285,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2777,
+          y = 2561,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2456,
+          y = 2240,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1965,
+          y = 1982,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 3559,
+          y = 2376,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 3556,
+          y = 3009,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 3035,
+          y = 2767,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 3053,
+          y = 3446,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2598,
+          y = 3073,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2292,
+          y = 3206,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1753,
+          y = 3261,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1317,
+          y = 3409,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 762,
+          y = 3319,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 417,
+          y = 3152,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 304,
+          y = 2791,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 623,
+          y = 2309,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 683,
+          y = 1919,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 938,
+          y = 1573,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 671,
+          y = 2849,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1238,
+          y = 3091,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1853,
+          y = 2761,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1241,
+          y = 2391,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2068,
+          y = 3000,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2783,
+          y = 2061,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1638,
+          y = 2367,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1011,
+          y = 2779,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1050,
+          y = 2097,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 2908,
+          y = 1606,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "kyno_meadow_cc_marker",
+          shape = "rectangle",
+          x = 1280,
+          y = 1840,
           width = 0,
           height = 0,
           visible = true,

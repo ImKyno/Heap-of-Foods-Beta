@@ -157,3 +157,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SUGARTREE_RUINED2 = "站在树旁可为幸存者�
 STRINGS.SCRAPBOOK.SPECIALINFO.RUBBLE = "长老希望您能帮助他修复旧锅，让他重新开始制作美味的糖浆。"
 STRINGS.SCRAPBOOK.SPECIALINFO.PINEAPPLEBUSH = "菠萝丛需要近6天才能完全生长。除夏季外，其他季节都需要更长的生长时间。\n\n在夏季，它们每两天就会开始生长一次。"
 STRINGS.SCRAPBOOK.SPECIALINFO.GARDENSPRINKLER = "可以开启和关闭。加满燃料并开启时，会自动为范围内的农作物浇水。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FARMPLOT = "允许种植和生长种子。\n\n种下的种子会随机生长为作物。使用作物种子可以种出特定作物。\n\n农场在收获一定次数后会耗尽，需要施肥才能继续种植。正在生长的作物可以施肥以加快生长速度。\n\n此施肥仅影响作物本身，不会影响农场本身的施肥状态。"

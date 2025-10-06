@@ -1,3 +1,5 @@
+require("hof_main")
+
 --[[
 -- This belongs to Accomplishments Mod.
 local modName = "Heap-of-Foods"

@@ -1,7 +1,6 @@
 local _G      = GLOBAL
 local require = _G.require
 
-require("hof_mainfunctions")
 require("strings/hof_strings_customizations")
 
 modimport("hof_init/misc/hof_tuning")
@@ -14,6 +13,9 @@ end
 
 FrontEndAssets =
 {
+	Asset("IMAGE", "images/hof_loadingtips_icon.tex"),
+	Asset("ATLAS", "images/hof_loadingtips_icon.xml"),
+
 	Asset("IMAGE", "images/customizationimages/hof_customizationimages_worldgen.tex"),
 	Asset("ATLAS", "images/customizationimages/hof_customizationimages_worldgen.xml"),
 	
@@ -30,5 +32,5 @@ FrontEndAssets =
 
 ReloadFrontEndAssets()
 
-_G.ChangeFoodConfigs("RETROFIT", 0)
-_G.ChangeFoodConfigs("RETROFIT_FORCE", false)
+require("hof_util")
+_G.ChangeFoodConfigs("MODRETROFIT", 0)

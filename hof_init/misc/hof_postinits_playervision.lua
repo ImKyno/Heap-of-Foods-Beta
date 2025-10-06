@@ -59,80 +59,81 @@ local function RemoveIslandEffects()
 end
 
 local function IsValidTile(tile)
-	return tile 
-	and tile ~= WORLD_TILES.OCEAN_BRINEPOOL
+	return tile
 	and tile ~= WORLD_TILES.OCEAN_SWELL
 	and tile ~= WORLD_TILES.OCEAN_ROUGH
 	and tile ~= WORLD_TILES.OCEAN_HAZARDOUS
 	and tile ~= WORLD_TILES.OCEAN_WATERLOG
 end
 
-AddComponentPostInit("playervision", function(self)
-	self.inst:DoTaskInTime(0.5, function()
-		local current_island = nil
-		local watchers = {}
+if SERENITY_CC or MEADOW_CC then
+	AddComponentPostInit("playervision", function(self)
+		self.inst:DoTaskInTime(0.5, function()
+			local current_island = nil
+			local watchers = {}
 
-		local function StopWatching()
-			for k, fn in pairs(watchers) do
-				self.inst:StopWatchingWorldState(k, fn)
-			end
+			local function StopWatching()
+				for k, fn in pairs(watchers) do
+					self.inst:StopWatchingWorldState(k, fn)
+				end
 			
-			watchers = {}
-			current_island = nil
-			RemoveIslandEffects()
-		end
-
-		local function StartWatching(island)
-			StopWatching()
-			current_island = island
-
-			local function Update()
-				ApplyIslandColourCube(self, current_island)
+				watchers = {}
+				current_island = nil
+				RemoveIslandEffects()
 			end
 
-			watchers.isday = function(_, v) if v then Update() end end
-			watchers.isdusk = function(_, v) if v then Update() end end
-			watchers.isnight = function(_, v) if v then Update() end end
+			local function StartWatching(island)
+				StopWatching()
+				current_island = island
 
-			self.inst:WatchWorldState("isday", watchers.isday)
-			self.inst:WatchWorldState("isdusk", watchers.isdusk)
-			self.inst:WatchWorldState("isnight", watchers.isnight)
+				local function Update()
+					ApplyIslandColourCube(self, current_island)
+				end
 
-			Update()
-		end
+				watchers.isday = function(_, v) if v then Update() end end
+				watchers.isdusk = function(_, v) if v then Update() end end
+				watchers.isnight = function(_, v) if v then Update() end end
 
-		local function CheckIslands()
-			local x, _, z = self.inst.Transform:GetWorldPosition()
-			local found_island = nil
+				self.inst:WatchWorldState("isday", watchers.isday)
+				self.inst:WatchWorldState("isdusk", watchers.isdusk)
+				self.inst:WatchWorldState("isnight", watchers.isnight)
 
-			for _, island in ipairs(ISLANDS) do
-				if island.config_key == true then
-					local ents = _G.TheSim:FindEntities(x, 0, z, island.radius, island.prefabs)
+				Update()
+			end
+
+			local function CheckIslands()
+				local x, _, z = self.inst.Transform:GetWorldPosition()
+				local found_island = nil
+
+				for _, island in ipairs(ISLANDS) do
+					if island.config_key == true then
+						local ents = _G.TheSim:FindEntities(x, 0, z, island.radius, island.prefabs)
             
-					if #ents > 0 then
-						if island.ignore_ocean then
-							local tile = _G.TheWorld.Map:GetTileAtPoint(x, 0, z)
+						if #ents > 0 then
+							if island.ignore_ocean then
+								local tile = _G.TheWorld.Map:GetTileAtPoint(x, 0, z)
 						
-							if IsValidTile(tile) then
+								if IsValidTile(tile) then
+									found_island = island
+									break
+								end
+							else
 								found_island = island
 								break
 							end
-						else
-							found_island = island
-							break
 						end
 					end
 				end
+
+				if found_island and current_island ~= found_island then
+					StartWatching(found_island)
+				elseif not found_island and current_island then
+					StopWatching()
+				end
 			end
 
-			if found_island and current_island ~= found_island then
-				StartWatching(found_island)
-			elseif not found_island and current_island then
-				StopWatching()
-			end
-		end
-
-		self.inst:DoPeriodicTask(0.5, CheckIslands)
-		CheckIslands()
+			self.inst:DoPeriodicTask(0.5, CheckIslands)
+			CheckIslands()
+		end)
 	end)
-end)
+end

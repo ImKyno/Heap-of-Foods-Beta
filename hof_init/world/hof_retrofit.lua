@@ -3,7 +3,7 @@ local _DoRetrofitting = require("map/retrofit_savedata").DoRetrofitting
 
 require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, ...)
 	local dirty = false
-	local force = TUNING.HOF_RETROFIT_FORCE or false
+	local force = false -- True will force retrofit.
 
 	local function Exists(prefab)
 		return savedata.ents ~= nil and savedata.ents[prefab] ~= nil
@@ -27,7 +27,7 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 			table.insert(applied, "Serenity Archipelago")
 			dirty = true
 		end
-		
+		--[[
 		if ApplyRetrofit("Seaside Island", "kyno_meadowisland_shop", require("map/hof_retrofit_forest").HofRetrofitting_MeadowIsland) then
 			table.insert(applied, "Seaside Island")
 			dirty = true
@@ -37,6 +37,7 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 			table.insert(applied, "Ocean Setpieces")
 			dirty = true
 		end
+		]]--
     end
 	
 	if dirty then
@@ -53,4 +54,3 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 	-- Failsafe to not run again.
 	TUNING.HOF_RETROFIT_FORCE = false
 end
-

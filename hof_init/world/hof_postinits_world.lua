@@ -7,7 +7,7 @@ local STRINGS         = _G.STRINGS
 local SpawnPrefab     = _G.SpawnPrefab
 local UpvalueHacker   = require("hof_upvaluehacker")
 
-require("hof_mainfunctions")
+require("hof_util")
 
 AddPrefabPostInit("forest", function(inst)
 	if not _G.TheWorld.ismastersim then
@@ -15,6 +15,14 @@ AddPrefabPostInit("forest", function(inst)
 	end
 
 	inst:AddComponent("sugarflyspawner")
+    inst:AddComponent("retrofitforestmap_hof")
+end)
+
+AddPrefabPostInit("cave", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+
     inst:AddComponent("retrofitforestmap_hof")
 end)
 

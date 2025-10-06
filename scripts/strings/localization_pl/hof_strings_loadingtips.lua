@@ -83,7 +83,7 @@ local LOADINGTIPS   =
 	RUMMAGEWAGON    = "\"Widziałem ostatnio Sammy’ego, jak przeszukiwał swój wóz w poszukiwaniu czegoś. Chyba handlował z kimś. Może powinienem sprawdzić, co tam przechowuje...\" -W",
 	RUMMAGEWAGON2   = "\"To nie jest kradzież, przysięgam! Sammy wyrzuca mnóstwo przydatnych rzeczy, których moglibyśmy użyć! Zobacz, co wszystko zdobyłem z jego wozu!\" -W.",
 	SLAUGHTERHEAT   = "Uwaga! Niektóre zwierzęta zaatakują, jeśli zabijesz jedno ze swojego gatunku, gdy obok są inne.",
-	SLAUGHTERFLEE   = "Niektóre zwierzęta mogą się przestraszyć, gdy zobaczą, że zabijasz jedno ze swojego gatunku przy użyciu Narzędzi do Rzezi.".
+	SLAUGHTERFLEE   = "Niektóre zwierzęta mogą się przestraszyć, gdy zobaczą, że zabijasz jedno ze swojego gatunku przy użyciu Narzędzi do Rzezi.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

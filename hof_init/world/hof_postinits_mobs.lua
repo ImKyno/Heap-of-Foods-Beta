@@ -6,7 +6,7 @@ local ACTIONS         = _G.ACTIONS
 local STRINGS         = _G.STRINGS
 local SpawnPrefab     = _G.SpawnPrefab
 
-require("hof_mainfunctions")
+require("hof_util")
 require("hof_upvaluehacker")
 
 local DF_COFFEE = GetModConfigData("COFFEEDROPRATE")
@@ -395,3 +395,31 @@ end
 for k, v in pairs(pollinators) do
 	AddPrefabPostInit(v, PollinatorPostIint)
 end
+
+-- Make Pigs truffle hunters!
+local function PigmanPostInit(inst)
+	if not _G.TheWorld.ismastersim then
+		return
+	end
+
+	inst:AddComponent("trufflehunter")
+
+	inst.components.trufflehunter:Configure(
+	{
+		min_truffles         = 3,
+		max_truffles         = 7,
+		start_chance         = 0.7,
+		chance_decay         = 0.2,
+		truffle_prefab       = "kyno_truffles_ground",
+		dig_animation        = "pig_pickup",
+		dig_repeats          = 3,
+		accept_item_speech   = "Oink! Eu vou procurar trufas!",
+		truffle_found_speech = "Oink! Achei uma!"
+	})
+
+	inst.components.trufflehunter:SetOnTruffleFoundFn(function(inst, truffle)
+		print(inst, "encontrou uma trufa em:", truffle:GetPosition())
+	end)
+end
+
+AddPrefabPostInit("pigman", PigmanPostInit)

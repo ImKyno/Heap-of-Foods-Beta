@@ -2,10 +2,7 @@
 local _G               = GLOBAL
 local require          = _G.require
 
-require("hof_constants")
-require("hof_debugcommands")
-require("hof_brewing")
-require("hof_behaviours")
+require("hof_main")
 
 -- Mod Strings and Localizations.
 -- If you want to contribute with your localization please head to "scripts/strings/hof_localization.lua" for more information.

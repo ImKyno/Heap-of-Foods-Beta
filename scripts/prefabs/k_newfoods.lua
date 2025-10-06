@@ -209,6 +209,11 @@ local function MakePreparedFood(data)
 			inst.components.fuel:SetOnTakenFn(FuelTaken)
 		end
 		
+		if data.reviver ~= nil then
+			inst:AddComponent("hauntable")
+			inst.components.hauntable:SetHauntValue(TUNING.HAUNT_INSTANT_REZ)
+		end
+		
 		if data.nightvision ~= nil then
 			inst.PlayBeatingSound = NightVision_PlayBeatingSound
 	

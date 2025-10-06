@@ -72,11 +72,13 @@ local WARES                             =
 		},
 	},
 	
+	--[[
 	RANDOM_ULTRARARES                   =
 	{
 		-- TO DO: Sharkuttery Board
 		-- TO DO: Coffee Machine Kit
 	},
+	]]--
 	
 	-- Make sure to always have seasonal seeds available to trade.
 	SEASONAL                            = 
@@ -246,9 +248,11 @@ local function RerollWares(inst)
 		inst:AddWares(inst.WARES.RANDOM_RARES[math.random(#inst.WARES.RANDOM_RARES)])
 	end
 	
+	--[[
 	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_ULTRARARES_ODDS then -- 5%
 		inst:AddWares(inst.WARES.RANDOM_ULTRARARES[math.random(#inst.WARES.RANDOM_ULTRARARES)])
 	end
+	]]--
 	
 	local seasonalwares = inst.WARES.SEASONAL[TheWorld.state.season]
 	

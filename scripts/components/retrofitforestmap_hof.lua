@@ -148,16 +148,14 @@ return Class(function(self, inst)
 				
 				if success then
 					TheWorld.Map:RetrofitNavGrid()
-					ChangeFoodConfigs("RETROFIT", 0)
-					ChangeFoodConfigs("RETROFIT_FORCE", false)
+					ChangeFoodConfigs("MODRETROFIT", 0)
 					self.requiresreset = true
 				end
 			elseif TUNING.HOF_RETROFIT == 2 then
 				local success = RetrofitSammyShop() -- RetrofitMermhuts()
 			
 				if success then
-					ChangeFoodConfigs("RETROFIT", 0)
-					ChangeFoodConfigs("RETROFIT_FORCE", false)
+					ChangeFoodConfigs("MODRETROFIT", 0)
 				end
 			end
 		end

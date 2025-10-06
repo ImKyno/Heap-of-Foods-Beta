@@ -6,6 +6,7 @@ function ChangeFoodConfigs(config, value)
 		for i, v in ipairs(configs) do
 			if v.name == config then
 				v.saved = value
+				print("Heap of Foods Configuration - Changed "..config.." to "..value)
 			end
 		end
 	end

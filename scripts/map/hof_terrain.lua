@@ -42,6 +42,7 @@ local TERRAIN_FILTER               =
 	kyno_kokonuttree_short         = OnlyAllow({ WORLD_TILES.MONKEY_GROUND }),
 	kyno_kokonuttree_normal        = OnlyAllow({ WORLD_TILES.MONKEY_GROUND }),
 	kyno_kokonuttree_tall          = OnlyAllow({ WORLD_TILES.MONKEY_GROUND }),
+	kyno_pineapplebush             = OnlyAllow({ WORLD_TILES.HOF_FIELDS }),
 	kyno_meadowisland_tree_sapling = OnlyAllow({ WORLD_TILES.MONKEY_GROUND }),
 	kyno_meadowisland_sandhill     = OnlyAllow({ WORLD_TILES.MONKEY_GROUND }),
 	kyno_meadowisland_tree         = OnlyAllow({ WORLD_TILES.HOF_FIELDS }),
@@ -49,6 +50,7 @@ local TERRAIN_FILTER               =
 	kyno_meadowisland_tree_normal  = OnlyAllow({ WORLD_TILES.HOF_FIELDS }),
 	kyno_meadowisland_tree_tall    = OnlyAllow({ WORLD_TILES.HOF_FIELDS }),
 	kyno_watery_crate              = OnlyAllow({ WORLD_TILES.OCEAN_COASTAL_SHORE, WORLD_TILES.OCEAN_COASTAL, WORLD_TILES.OCEAN_SWELL, WORLD_TILES.OCEAN_ROUGH, WORLD_TILES.OCEAN_HAZARDOUS }),
+	kyno_coffeebush                = OnlyAllow({ WORLD_TILES.VENT }),
 	kyno_rockflippable             = { WORLD_TILES.ROAD, WORLD_TILES.WOODFLOOR, WORLD_TILES.CARPET, WORLD_TILES.CHECKER, WORLD_TILES.MONKEY_DOCK },
 }
 

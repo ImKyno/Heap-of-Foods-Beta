@@ -487,8 +487,9 @@ local kyno_foods_seasonal =
 		stacksize = 2,
 		potlevel = "low",
 		fireproof = true,
+		reviver = true,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"halloween"},
+		tags = {"halloween", "resurrector"},
 		card_def = {ingredients = {{"boneshard", 1}, {"kyno_sugar", 2}, {"nightmarefuel", 1}}},
 	},
 	
