@@ -1,132 +1,59 @@
 return Class(function(self, inst)
 	assert(TheWorld.ismastersim, "RetrofitForestMap_Hof should not exist on client")
-	
-	self.inst = inst
-	
-	local function RetrofitOcean()
-		local node_indices = {}
-	
-		for k, v in ipairs(TheWorld.topology.ids) do
-			if string.find(v, "SerenityIsland") then
-				table.insert(node_indices, k)
-			end
-		
-			if string.find(v, "MeadowIsland") then
-				table.insert(node_indices, k)
-			end
-			
-			if string.find(v, "WreckArea") then
-				table.insert(node_indices, k)
-			end
-		
-			if string.find(v, "LowMist") then
-				table.insert(node_indices, k)
-			end
-		end
-	
-		if #node_indices == 0 then
-			return false
-		end
 
-		local tags = {"SerenityArea", "MeadowArea", "WreckArea", "LowMist"}
-		local dirty = false
+	self.inst = inst
+	self.requiresreset = false
 	
-		for k, v in ipairs(node_indices) do
-			if TheWorld.topology.nodes[v].tags == nil then
-				TheWorld.topology.nodes[v].tags = {}
-			end
+	local HOF_MAPUTIL = require("map/hof_maputil")
+	
+	local function IsOldWorld()
+		local no_serenity  = TheSim:FindFirstEntityWithTag("kyno_serenityisland_shop") == nil
+		local no_meadow    = TheSim:FindFirstEntityWithTag("kyno_meadowisland_shop") == nil
+		local no_oceanfish = TheSim:FindFirstEntityWithTag("kyno_swordfish_spawner") == nil
+
+		local has_old_ids = false
 		
-			for i, tag in ipairs(tags) do
-				if not table.contains(TheWorld.topology.nodes[v].tags, tag) then
-					table.insert(TheWorld.topology.nodes[v].tags, tag)
-					dirty = true
+		if TheWorld.topology and TheWorld.topology.ids then
+			for _, id in ipairs(TheWorld.topology.ids) do
+				if string.find(id, "StaticLayoutIsland: MeadowIsland") 
+				or string.find(id, "StaticLayoutIsland: SerenityIsland") 
+				or string.find(id, "StaticLayoutIsland: OceanSetPieces") then
+					has_old_ids = true
+					break
 				end
 			end
 		end
-	
-		for i, node in ipairs(TheWorld.topology.nodes) do
-			if table.contains(node.tags, "SerenityArea") then
-				TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
-			end
-	
-			if table.contains(node.tags, "MeadowArea") then
-				TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
-			end
-			
-			if table.contains(node.tags, "WreckArea") then
-				TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
-			end
-		
-			if table.contains(node.tags, "LowMist") then
-				TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
-			end
-		end
 
-		return dirty
-	end
-	
-	local function SpawnSammyWagon()
-		local house = TheSim:FindFirstEntityWithTag("sammyhouse")
-		local mermcart = SpawnPrefab("kyno_meadowisland_mermcart")
-	
-		local x, y, z = house.Transform:GetWorldPosition()
-	
-		local theta = -3 -- -3
-		local radius = 4 -- 4
-		local x = x + radius * math.cos(theta)
-		local z = z - radius * math.sin(theta)
-	
-		mermcart.Transform:SetPosition(x, 0, z)
-	end
-	
-	-- Deprecated. Use Wurt to build Fishermerm Huts.
-	local function RetrofitMermhuts()
-		local count = 0
-		local max_count = 3
-
-		for k, v in pairs(Ents) do
-			if count >= max_count then
-				break
-			end
-
-			if v.prefab == "kyno_meadowisland_mermhut" then
-				ReplacePrefab(v, "kyno_meadowisland_fishermermhut")
-				count = count + 1
-			end
-		end
-	end
-	
-	local function RetrofitSammyShop()
-		local newshop = TheSim:FindFirstEntityWithTag("mermhouse_seaside")
-		local sammyhouse = TheSim:FindFirstEntityWithTag("sammyhouse") -- Don't let them have more shops.
-		local sammywagon = TheSim:FindFirstEntityWithTag("sammywagon")
-	
-		if newshop ~= nil and not sammyhouse then 
-			ReplacePrefab(newshop, "kyno_meadowisland_shop")
-			SpawnSammyWagon()
-		end
-	
-		-- In case the world has the shop but not the wagon.
-		if not sammywagon and sammyhouse then
-			SpawnSammyWagon()
-		end
+		return (no_serenity and no_meadow and no_oceanfish) or has_old_ids
 	end
 
 	function self:OnPostInit()
 		local isforest = TheWorld.worldprefab == "forest"
-		local iscave = TheWorld.worldprefab == "cave"
-		
-		if isforest then
-			local dirty = RetrofitOcean()
-			
-			if dirty then
-				TheWorld.Map:RetrofitNavGrid()
-				-- self.requiresreset = true
-			end
+    
+		if not isforest then 
+			return 
 		end
-		
-		if self.requiresreset and not (TheWorld.components.retrofitforestmap_anr and TheWorld.components.retrofitforestmap_anr.requiresreset) and
+
+		if not IsOldWorld() then
+			print("Retrofitting for Heap of Foods Mod - Looks like a New World. Skipping.")
+			return
+		end
+
+		local dirty_topology = HOF_MAPUTIL.RetrofitOceanLayouts()
+		local dirty_prefabs = rawget(_G, "HOF_RETROFIT_APPLIED") == true
+
+		if dirty_prefabs then
+			print("(Topologia:", dirty_topology, ", Prefabs:", dirty_prefabs, ")")
+			TheWorld.Map:RetrofitNavGrid()
+			self.requiresreset = true
+		else
+			print("[HOF Retrofit] Nenhuma alteração necessária. Sem reset.")
+		end
+
+		if self.requiresreset and
+		not (TheWorld.components.retrofitforestmap_anr and TheWorld.components.retrofitforestmap_anr.requiresreset) and
 		not (TheWorld.components.retrofitcavemap_anr and TheWorld.components.retrofitcavemap_anr.requiresreset) then
+
 			print("Retrofitting for Heap of Foods Mod - Worldgen retrofitting requires the server to save and restart to fully take effect.")
 			print("Restarting server in 30 seconds...")
 
@@ -140,11 +67,11 @@ return Class(function(self, inst)
 			inst:DoTaskInTime(30, function() TheNet:SendWorldRollbackRequestToServer(0) end)
 		end
 	end
-	
+
 	function self:OnSave()
 		return {}
 	end
-	
+
 	function self:OnLoad(data)
 
 	end

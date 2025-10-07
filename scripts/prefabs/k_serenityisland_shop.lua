@@ -1,3 +1,5 @@
+local HOF_MAPUTIL = require("map/hof_maputil")
+
 local assets =
 {
     Asset("ANIM", "anim/quagmire_elderswampig.zip"),
@@ -205,6 +207,17 @@ local function OnLoad(inst, data)
     end
 end
 
+local function RetrofitMapTags(inst)
+	local info = HOF_MAPUTIL.GetLayoutInfoFromPrefab(inst, 640, 1344, 53, 53)
+
+	print("Layout Origin:", info.origin.x, info.origin.z)
+	print("Layout Center:", info.center.x, info.center.z)
+	print("Prefab Origin:", info.prefab.x, info.prefab.z)
+	
+	HOF_MAPUTIL.AddPrefabTopologyNode(inst, 640, 1344, 53, 53, "StaticLayoutIsland:NewSerenityIsland", 
+	{ "RoadPoison", "not_mainland", "nohasslers", "nohunt", "SerenityArea" })
+end
+
 local function fn()
     local inst = CreateEntity()
 
@@ -278,6 +291,8 @@ local function fn()
 
 	inst:WatchWorldState("isnight", OnIsNight)
     OnIsNight(inst, TheWorld.state.isnight)
+	
+	inst:DoTaskInTime(1, RetrofitMapTags)
 	
 	-- Pig Elder will wake up regardless in "Lights Out" worlds.
 	inst:ListenForEvent("clocksegschanged", function(world, data)

@@ -97,19 +97,11 @@ if _G.CONFIGS_HOF.SCRAPBOOK then
 	modimport("hof_init/misc/hof_shinyloots") -- Requires Scrapbook to be enabled...
 end
 
--- workshop-2334209327 Heap of Foods Workshop. 
--- workshop-2063154740 Heap of Foods Beta Branch.
-function HOF_ChangeConfiguration(config, value)
-	KnownModIndex:SetConfigurationOption("Heap-of-Foods-Workshop-Main", config, value)
-    KnownModIndex:SaveHostConfiguration("Heap-of-Foods-Workshop-Main")
-
-	print("Heap of Foods Mod - Changed Configuration "..config.." to "..value)
-end
-
 -- This belongs to the Accomplishments Mod.
 -- modimport("achievementsmain")
 
 -- Testing Mod Options.
+--[[
 local mod_options = 
 {
 	{ name = "LANGUAGE",         default = false },
@@ -141,3 +133,4 @@ for _, option in ipairs(mod_options) do
 	local value = GetModConfigData(option.name)
 	print(string.format("HOF CONFIG - %s = %s", option.name, tostring(value)))
 end
+]]--

@@ -428,6 +428,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"kyno_limpetrock",
 		"kyno_lotus_ocean",
 		"kyno_meadow_cc_marker",
+		"kyno_meadowflup_spawner",
 		"kyno_meadowisland_crate",
 		"kyno_meadowisland_fishermermhut",
 		"kyno_meadowisland_mermcart",
@@ -489,6 +490,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"kyno_limpetrock",
 		"kyno_lotus_ocean",
 		"kyno_meadow_cc_marker",
+		"kyno_meadowflup_spawner",
 		"kyno_meadowisland_crate",
 		"kyno_meadowisland_fishermermhut",
 		"kyno_meadowisland_mermcart",
@@ -680,6 +682,57 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 	
 	-- Can't this be removed by this function already?
 	TheNet:SendRemoteExecute('c_removeall("kyno_pebblecrab_spawner")')
-	TheNet:Announce(layoutname.." Successfully removed. Return to the Main Menu to perform complete Retrofit.")
-	print("Heap of Foods Retrofitting - Island Removed! | Prefabs removed: "..removed_ents)
+	TheNet:SendRemoteExecute('c_removeall("kyno_meadowflup_spawner")')
+	TheNet:Announce(layoutname.." Successfully removed. Please save and restart the world to perform Retrofitting.")
+	print("Heap of Foods Mod - Island Removed! | Prefabs removed: "..removed_ents)
 end
+
+-- Deprecated stuff. Reference only.
+--[[
+local function SpawnSammyWagon()
+		local house = TheSim:FindFirstEntityWithTag("sammyhouse")
+		local mermcart = SpawnPrefab("kyno_meadowisland_mermcart")
+	
+		local x, y, z = house.Transform:GetWorldPosition()
+	
+		local theta = -3 -- -3
+		local radius = 4 -- 4
+		local x = x + radius * math.cos(theta)
+		local z = z - radius * math.sin(theta)
+	
+		mermcart.Transform:SetPosition(x, 0, z)
+	end
+	
+	-- Deprecated. Use Wurt to build Fishermerm Huts.
+	local function RetrofitMermhuts()
+		local count = 0
+		local max_count = 3
+
+		for k, v in pairs(Ents) do
+			if count >= max_count then
+				break
+			end
+
+			if v.prefab == "kyno_meadowisland_mermhut" then
+				ReplacePrefab(v, "kyno_meadowisland_fishermermhut")
+				count = count + 1
+			end
+		end
+	end
+	
+	-- Deprecated. Old worlds without this prefab will be Retrofitted.
+	local function RetrofitSammyShop()
+		local newshop = TheSim:FindFirstEntityWithTag("mermhouse_seaside")
+		local sammyhouse = TheSim:FindFirstEntityWithTag("sammyhouse") -- Don't let them have more shops.
+		local sammywagon = TheSim:FindFirstEntityWithTag("sammywagon")
+	
+		if newshop ~= nil and not sammyhouse then 
+			ReplacePrefab(newshop, "kyno_meadowisland_shop")
+			SpawnSammyWagon()
+		end
+
+		if not sammywagon and sammyhouse then
+			SpawnSammyWagon()
+		end
+	end
+]]--
