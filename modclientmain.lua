@@ -1,5 +1,3 @@
-require("hof_util")
-
 --[[
 -- This belongs to Accomplishments Mod.
 local modName = "Heap-of-Foods"

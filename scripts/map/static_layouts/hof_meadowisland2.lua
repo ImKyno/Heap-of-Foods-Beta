@@ -9854,7 +9854,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_flup_spawner",
+          type = "kyno_meadowflup_spawner",
           shape = "rectangle",
           x = 1018,
           y = 1224,
@@ -9865,7 +9865,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_flup_spawner",
+          type = "kyno_meadowflup_spawner",
           shape = "rectangle",
           x = 570,
           y = 1274,
@@ -9876,7 +9876,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_flup_spawner",
+          type = "kyno_meadowflup_spawner",
           shape = "rectangle",
           x = 314,
           y = 894,
@@ -9887,7 +9887,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_flup_spawner",
+          type = "kyno_meadowflup_spawner",
           shape = "rectangle",
           x = 316,
           y = 518,
@@ -9898,7 +9898,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_flup_spawner",
+          type = "kyno_meadowflup_spawner",
           shape = "rectangle",
           x = 968,
           y = 370,
@@ -9909,7 +9909,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_flup_spawner",
+          type = "kyno_meadowflup_spawner",
           shape = "rectangle",
           x = 632,
           y = 384,

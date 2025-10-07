@@ -50,7 +50,7 @@ local hof_init_world   =
 {
 	"hof_tiledefs",
 	"hof_regrowth",
-	--"hof_retrofit",
+	"hof_retrofit",
 	"hof_pollinator_component",
 	"hof_worldgen",
 	"hof_worldsettings",
@@ -95,6 +95,15 @@ _G.CONFIGS_HOF.SCRAPBOOK      = GetModConfigData("SCRAPBOOK")
 if _G.CONFIGS_HOF.SCRAPBOOK then
 	modimport("hof_init/misc/hof_scrapbook")
 	modimport("hof_init/misc/hof_shinyloots") -- Requires Scrapbook to be enabled...
+end
+
+-- workshop-2334209327 Heap of Foods Workshop. 
+-- workshop-2063154740 Heap of Foods Beta Branch.
+function HOF_ChangeConfiguration(config, value)
+	KnownModIndex:SetConfigurationOption("Heap-of-Foods-Workshop-Main", config, value)
+    KnownModIndex:SaveHostConfiguration("Heap-of-Foods-Workshop-Main")
+
+	print("Heap of Foods Mod - Changed Configuration "..config.." to "..value)
 end
 
 -- This belongs to the Accomplishments Mod.

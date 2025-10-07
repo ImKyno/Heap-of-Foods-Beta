@@ -29,6 +29,7 @@ return Class(function(self, inst)
 		end
 
 		local tags = {"SerenityArea", "MeadowArea", "WreckArea", "LowMist"}
+		local dirty = false
 	
 		for k, v in ipairs(node_indices) do
 			if TheWorld.topology.nodes[v].tags == nil then
@@ -38,6 +39,7 @@ return Class(function(self, inst)
 			for i, tag in ipairs(tags) do
 				if not table.contains(TheWorld.topology.nodes[v].tags, tag) then
 					table.insert(TheWorld.topology.nodes[v].tags, tag)
+					dirty = true
 				end
 			end
 		end
@@ -60,7 +62,7 @@ return Class(function(self, inst)
 			end
 		end
 
-		return true
+		return dirty
 	end
 	
 	local function SpawnSammyWagon()
@@ -115,20 +117,11 @@ return Class(function(self, inst)
 		local iscave = TheWorld.worldprefab == "cave"
 		
 		if isforest then
-			if TUNING.HOF_RETROFIT == 1 then --or TUNING.HOF_RETROFIT_FORCE == true then
-				local success = RetrofitOcean()
-				
-				if success then
-					TheWorld.Map:RetrofitNavGrid()
-					HOF_ChangeConfiguration("MODRETROFIT", 0)
-					self.requiresreset = true
-				end
-			elseif TUNING.HOF_RETROFIT == 2 then --or TUNING.HOF_RETROFIT_FORCE == true then
-				local success = RetrofitSammyShop()
+			local dirty = RetrofitOcean()
 			
-				if success then
-					HOF_ChangeConfiguration("MODRETROFIT", 0)
-				end
+			if dirty then
+				TheWorld.Map:RetrofitNavGrid()
+				-- self.requiresreset = true
 			end
 		end
 		

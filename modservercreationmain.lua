@@ -24,4 +24,4 @@ FrontEndAssets =
 
 ReloadFrontEndAssets()
 
-_G.HOF_ChangeConfiguration("MODRETROFIT", 0)
+--_G.HOF_ChangeConfiguration("MODRETROFIT", 0)

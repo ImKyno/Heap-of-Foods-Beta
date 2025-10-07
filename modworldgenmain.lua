@@ -41,8 +41,8 @@ _G.MEADOWISLAND_SHOP_GROUNDS             =
 
 Layouts["SerenityIsland"]                = StaticLayout.Get("map/static_layouts/hof_serenityisland2",
 {
-	start_mask                           = PLACE_MASK.NORMAL, -- PLACE_MASK.IGNORE_IMPASSABLE,
-	fill_mask                            = PLACE_MASK.NORMAL, -- PLACE_MASK.IGNORE_IMPASSABLE,
+	start_mask                           = PLACE_MASK.IGNORE_IMPASSABLE,
+	fill_mask                            = PLACE_MASK.IGNORE_IMPASSABLE,
 	add_topology                         =
 	{
 		room_id                          = "StaticLayoutIsland:SerenityIsland",
@@ -54,8 +54,8 @@ Layouts["SerenityIsland"].ground_types   = _G.SERENITYISLAND_GROUNDS
 
 Layouts["MeadowIsland"]                  = StaticLayout.Get("map/static_layouts/hof_meadowisland2",
 {
-	start_mask                           = PLACE_MASK.NORMAL, -- PLACE_MASK.IGNORE_IMPASSABLE,
-	fill_mask                            = PLACE_MASK.NORMAL, -- PLACE_MASK.IGNORE_IMPASSABLE,
+	start_mask                           = PLACE_MASK.IGNORE_IMPASSABLE,
+	fill_mask                            = PLACE_MASK.IGNORE_IMPASSABLE,
 	add_topology                         =
 	{
 		room_id                          = "StaticLayoutIsland:MeadowIsland",
@@ -99,8 +99,8 @@ for i, layout in ipairs(hof_ocean_setpieces) do
 
 	Layouts[layout]                      = StaticLayout.Get("map/static_layouts/"..layout,
 	{
-		start_mask                       = PLACE_MASK.NORMAL, -- PLACE_MASK.IGNORE_IMPASSABLE,
-		fill_mask                        = PLACE_MASK.NORMAL, -- PLACE_MASK.IGNORE_IMPASSABLE,
+		start_mask                       = PLACE_MASK.IGNORE_IMPASSABLE,
+		fill_mask                        = PLACE_MASK.IGNORE_IMPASSABLE,
 		add_topology                     = 
 		{
 			room_id                      = "StaticLayoutIsland:WreckSetPieces",

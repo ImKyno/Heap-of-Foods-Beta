@@ -1712,7 +1712,7 @@ configuration_options        =
 {
 	{ name                   = "LANGUAGE",         label = LANGUAGE_LABEL,      hover = LANGUAGE_HOVER,      options = LANGUAGE_OPTIONS,      default = false },
 	-- General Options.
-	-- { name                   = "GENERAL",          label = GENERAL_LABEL,       hover = GENERAL_HOVER,       options = NONE_OPTIONS,          default = false },
+	{ name                   = "GENERAL",          label = GENERAL_LABEL,       hover = GENERAL_HOVER,       options = NONE_OPTIONS,          default = false },
 	{ name                   = "SEASONALFOOD",     label = SEASONALFOOD_LABEL,  hover = SEASONALFOOD_HOVER,  options = SEASONALFOOD_OPTIONS,  default = false },
 	{ name                   = "HUMANMEAT",        label = HUMANMEAT_LABEL,     hover = HUMANMEAT_HOVER,     options = HUMANMEAT_OPTIONS,     default = true  },
 	{ name                   = "GIANTSPAWNING",    label = GIANTSPAWN_LABEL,    hover = GIANTSPAWN_HOVER,    options = GIANTSPAWN_OPTIONS,    default = true  },
@@ -1722,20 +1722,20 @@ configuration_options        =
 	{ name                   = "COFFEEDURATION",   label = COFFEETIMER_LABEL,   hover = COFFEETIMER_HOVER,   options = COFFEETIMER_OPTIONS,   default = 480   },
 	{ name                   = "COFFEEDROPRATE",   label = COFFEEDROP_LABEL,    hover = COFFEEDROP_HOVER,    options = COFFEEDROP_OPTIONS,    default = 4     },
 	-- Miscellaneous Options.
-	-- { name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,        options = NONE_OPTIONS,          default = false },
+	{ name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,        options = NONE_OPTIONS,          default = false },
 	{ name                   = "SCRAPBOOK",        label = SCRAPBOOK_LABEL,     hover = SCRAPBOOK_HOVER,     options = SCRAPBOOK_OPTIONS,     default = true  },
 	{ name                   = "WARLYRECIPES",     label = WARLYRECIPES_LABEL,  hover = WARLYRECIPES_HOVER,  options = WARLYRECIPES_OPTIONS,  default = true  },
 	{ name                   = "KEEPFOOD",         label = KEEPFOOD_LABEL,      hover = KEEPFOOD_HOVER,      options = KEEPFOOD_OPTIONS,      default = false },
 	{ name                   = "WARLYMEALGRINDER", label = WARLYGRINDER_LABEL,  hover = WARLYGRINDER_HOVER,  options = WARLYGRINDER_OPTIONS,  default = false },
 	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,    options = FERTILIZER_OPTIONS,    default = false },
 	-- Experimental Options.
-	-- { name                   = "EXPERIMENTAL",     label = EXPERIMENTAL_LABEL,  hover = EXPERIMENTAL_HOVER,  options = NONE_OPTIONS,          default = false },
+	{ name                   = "EXPERIMENTAL",     label = EXPERIMENTAL_LABEL,  hover = EXPERIMENTAL_HOVER,  options = NONE_OPTIONS,          default = false },
 	{ name                   = "SERENITY_CC",      label = SERENITY_CC_LABEL,   hover = SERENITY_CC_HOVER,   options = SERENITY_CC_OPTIONS,   default = false },
 	{ name                   = "MEADOW_CC",        label = MEADOW_CC_LABEL,     hover = MEADOW_CC_HOVER,     options = MEADOW_CC_OPTIONS,     default = false },
 	
 	-- Retrofitting Options.
-	-- { name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false },
-	{ name                   = "MODRETROFITFORCE", label = RETROFITFORCE_LABEL, hover = RETROFITFORCE_HOVER, options = RETROFITFORCE_OPTIONS, default = false },
-	{ name                   = "MODRETROFIT",      label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,      options = RETROFIT_OPTIONS,      default = 0     },
+	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false },
+	-- { name                   = "MODRETROFITFORCE", label = RETROFITFORCE_LABEL, hover = RETROFITFORCE_HOVER, options = RETROFITFORCE_OPTIONS, default = false },
+	-- { name                   = "MODRETROFIT",      label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,      options = RETROFIT_OPTIONS,      default = 0     },
 	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,     options = MODTRADES_OPTIONS,     default = false },
 }

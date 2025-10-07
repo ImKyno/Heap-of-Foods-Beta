@@ -1,29 +1,3 @@
--- workshop-2334209327 Heap of Foods Workshop. 
--- workshop-2063154740 Heap of Foods Beta Branch.
---[[
-function HOF_ChangeConfiguration(config, value)
-	local configs = KnownModIndex:LoadModConfigurationOptions("Heap-of-Foods-Workshop-Main", false)
-
-	if configs then
-		for i, v in pairs(configs) do
-			if v.name == config then
-				v.saved = value
-				print("Heap of Foods Mod - Changed Configuration "..config.." to "..value)
-			end
-		end
-	end
-	
-	KnownModIndex:SaveConfigurationOptions(function() end, "Heap-of-Foods-Workshop-Main", configs, false)
-end
-]]--
-
-function HOF_ChangeConfiguration(config)
-	if config == "MODRETROFIT" then
-		KnownModIndex:GetModInfo("Heap-of-Foods-Workshop-Main").MODRETROFIT = 0
-		print("Heap of Foods Mod - Changed Configuration "..config.." to 0")
-	end
-end
-
 local function TogglePickable(pickable, isspring)
     if isspring then
         pickable:Pause()

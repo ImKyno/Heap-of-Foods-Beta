@@ -1087,12 +1087,3 @@ AddSimPostInit(function()
 		end
 	end
 end)
-
-local retrofit = require("map/retrofit_savedata")
-local _OldDoRetrofitting = retrofit.DoRetrofitting
-
-retrofit.DoRetrofitting = function(savedata, world_map, ...)
-    require("map/hof_retrofits")(savedata, world_map)
-
-    return _OldDoRetrofitting(savedata, world_map, ...)
-end
