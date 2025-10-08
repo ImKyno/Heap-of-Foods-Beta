@@ -6,20 +6,21 @@ local assets =
 local prefabs =
 {
 	-- "kyno_truffles",
+	-- "kyno_truffles_cooked",
 }
 
 local function OnPicked(inst)
-    if inst.growtask ~= nil then
-        inst.growtask:Cancel()
-        inst.growtask = nil
-    end
+	if inst.growtask ~= nil then
+		inst.growtask:Cancel()
+		inst.growtask = nil
+	end
 	
-    inst.AnimState:PlayAnimation("picked")
-    inst.rain = 10 + math.random(10)
+	inst.AnimState:PlayAnimation("picked")
+	inst.rain = 10 + math.random(10)
 end
 
 local function OnMakeEmpty(inst)
-    inst.AnimState:PlayAnimation("picked")
+	inst.AnimState:PlayAnimation("picked")
 end
 
 local function OnRegen(inst)	
@@ -32,32 +33,32 @@ local function DigUp(inst, chopper)
 		inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product)
 	end
 	
-	-- TheWorld:PushEvent("beginregrowth", inst)
-	-- inst.components.lootdropper:SpawnLootPrefab("kyno_truffles")
+	TheWorld:PushEvent("beginregrowth", inst)
+	inst.components.lootdropper:SpawnLootPrefab("kyno_truffles")
 	
 	inst:Remove()
 end
 
 local function CheckGrow(inst)
-    if inst.components.pickable ~= nil and not inst.components.pickable.canbepicked and TheWorld.state.israining then
-        inst.rain = inst.rain - 1
+	if inst.components.pickable ~= nil and not inst.components.pickable.canbepicked and TheWorld.state.israining then
+		inst.rain = inst.rain - 1
 		
-        if inst.rain <= 0 then
-            inst.components.pickable:Regen()
-        end
-    end
+		if inst.rain <= 0 then
+			inst.components.pickable:Regen()
+		end
+	end
 end
 
 local function OnSave(inst, data)
-    if inst.rain > 0 then
-        data.rain = inst.rain
-    end
+	if inst.rain > 0 then
+		data.rain = inst.rain
+	end
 end
 
 local function OnLoad(inst, data)
-    if data and data.rain then
-        inst.rain = data.rain or inst.rain
-    end
+	if data and data.rain then
+		inst.rain = data.rain or inst.rain
+	end
 end
 
 local function fn()
@@ -96,12 +97,12 @@ local function fn()
 	-- inst.components.workable:SetOnFinishCallback(DigUp)
 	-- inst.components.workable:SetWorkLeft(1)
 
-	-- inst:AddComponent("pickable")
-	-- inst.components.pickable.picksound = "dontstarve/wilson/pickup_plants"
-	-- inst.components.pickable:SetUp("kyno_truffles", TUNING.KYNO_TRUFFLES_GROWTIME)
-	-- inst.components.pickable.onregenfn = OnRegen
-	-- inst.components.pickable.onpickedfn = OnPicked
-	-- inst.components.pickable.makeemptyfn = OnMakeEmpty
+	inst:AddComponent("pickable")
+	inst.components.pickable.picksound = "dontstarve/wilson/pickup_plants"
+	inst.components.pickable:SetUp("kyno_truffles", TUNING.KYNO_TRUFFLES_GROWTIME)
+	inst.components.pickable.onregenfn = OnRegen
+	inst.components.pickable.onpickedfn = OnPicked
+	inst.components.pickable.makeemptyfn = OnMakeEmpty
 	
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

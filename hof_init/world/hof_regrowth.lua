@@ -29,8 +29,24 @@ AddComponentPostInit("regrowthmanager", function(self)
         return TUNING.KYNO_CUCUMBER_REGROWTH_TIME_MULT
     end)
 	
+	self:SetRegrowthForType("kyno_waterycress_ocean", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_waterycress_ocean", function()
+		return TUNING.KYNO_WATERYCRESS_REGROWTH_TIME_MULT
+	end)
+	
+	self:SetRegrowthForType("kyno_taroroot_ocean", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_taroroot_ocean", function()
+		return TUNING.KYNO_TAROROOT_REGROWTH_TIME_MULT
+	end)
+	
+	self:SetRegrowthForType("kyno_seaweeds_ocean", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_seaweeds_ocean", function()
+		return TUNING.KYNO_WEEDSEA_REGROWTH_TIME_MULT
+	end)
+	
 	self:SetRegrowthForType("kyno_limpetrock", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_limpetrock", function()
-        return not (_worldstate.isday) and TUNING.KYNO_LIMPETROCK_REGROWTH_TIME_MULT or 0
+        return not (_worldstate.isnight) and TUNING.KYNO_LIMPETROCK_REGROWTH_TIME_MULT or 0
+    end)
+	
+	self:SetRegrowthForType("kyno_ocean_wreck", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_ocean_wreck", function()
+        return not (_worldstate.isnight) and TUNING.KYNO_OCEAN_WRECK_REGROWTH_TIME_MULT or 0
     end)
 	
 	--[[
@@ -40,7 +56,7 @@ AddComponentPostInit("regrowthmanager", function(self)
 	]]--
 	
 	self:SetRegrowthForType("kyno_rockflippable", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_rockflippable", function()
-        return not (_worldstate.isday) and TUNING.KYNO_FLIPPABLE_REGROWTH_TIME_MULT or 0
+        return not (_worldstate.isnight) and TUNING.KYNO_FLIPPABLE_REGROWTH_TIME_MULT or 0
     end)
 	
 	self:SetRegrowthForType("kyno_rockflippable_cave", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_rockflippable_cave", function()

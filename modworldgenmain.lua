@@ -3,6 +3,7 @@ local _G              = GLOBAL
 local require         = _G.require
 local LAYOUT          = _G.LAYOUT
 local LAYOUT_POSITION = _G.LAYOUT_POSITION
+local LAYOUT_ROTATION = _G.LAYOUT_ROTATION
 local PLACE_MASK      = _G.PLACE_MASK
 local WORLD_TILES     = _G.WORLD_TILES
 local Layouts         = require("map/layouts").Layouts
@@ -37,6 +38,14 @@ _G.MEADOWISLAND_SHOP_GROUNDS             =
 	WORLD_TILES.ROAD,                    -- 1
 	WORLD_TILES.FOREST,                  -- 2
 	WORLD_TILES.FARMING_SOIL,            -- 3
+}
+
+_G.DECIDUOUSFOREST_SHOP_GROUNDS          =
+{
+	WORLD_TILES.DECIDUOUS,               -- 1
+	WORLD_TILES.ROAD,                    -- 2
+	WORLD_TILES.FOREST,                  -- 3
+	WORLD_TILES.GRASS,                   -- 4
 }
 
 Layouts["SerenityIsland"]                = StaticLayout.Get("map/static_layouts/hof_serenityisland2",
@@ -112,6 +121,19 @@ for i, layout in ipairs(hof_ocean_setpieces) do
 	Layouts[layout].ground_types         = { WORLD_TILES.OCEAN_HAZARDOUS }
 end
 
+Layouts["FruitTreeShop"]                 = StaticLayout.Get("map/static_layouts/hof_deciduousforest_shop",
+{
+	start_mask                           = PLACE_MASK.IGNORE_IMPASSABLE,
+	fill_mask                            = PLACE_MASK.IGNORE_IMPASSABLE,
+	force_rotation                       = LAYOUT_ROTATION.NORTH,
+	add_topology                         =
+	{
+		room_id                          = "StaticLayoutIsland:DeciduousForestShop",
+		tags                             = {"FruitTreeArea"},
+	},
+})
+Layouts["FruitTreeShop"].ground_types    = _G.DECIDUOUSFOREST_SHOP_GROUNDS
+
 -- Custom Layout for Waterlogged biome.
 local function HofWaterloggedArea()
 	local stuff = {}
@@ -182,10 +204,60 @@ for _, name in ipairs(waterlogged_layouts) do
 	})
 end
 
-local MapTags = { "SerenityArea", "MeadowArea", "WreckArea", "LowMist" }
+local MapData =
+{
+	--["DinaMemorial_Spawner"]  = true,
+	["FruitTreeShop_Spawner"] = true,
+}
+
+local MapTags = 
+{ 
+	["SerenityArea"] = function(tagdata)
+		return "TAG", "SerenityArea"
+	end,
+	
+	["MeadowArea"] = function(tagdata)
+		return "TAG", "MeadowArea"
+	end,
+	
+	["WreckArea"] = function(tagdata)
+		return "TAG", "WreckArea"
+	end,
+	
+	["LowMist"] = function(tagdata)
+		return "TAG", "LowMist"
+	end,
+	
+	--[[
+	["DinaMemorial_Spawner"] = function(tagdata, level)
+		if tagdata["DinaMemorial_Spawner"] == false then
+			return
+		end
+		
+		tagdata["DinaMemorial_Spawner"] = false
+
+        return "STATIC", "DinaMemorial"
+    end,
+	]]--
+	
+	["FruitTreeShop_Spawner"] = function(tagdata, level)
+		if tagdata["FruitTreeShop_Spawner"] == false then
+			return
+		end
+		
+		tagdata["FruitTreeShop_Spawner"] = false
+
+        return "STATIC", "FruitTreeShop"
+    end,
+}
+
 AddGlobalClassPostConstruct("map/storygen", "Story", function(self)
-	for k, v in pairs(MapTags) do
-		self.map_tags.Tag[v] = function(tagdata) return "TAG", v end
+	for tag, v in pairs(MapData) do
+		self.map_tags.TagData[tag] = v
+	end
+	
+	for tag, v in pairs(MapTags) do
+		self.map_tags.Tag[tag] = v
 	end
 end)
 

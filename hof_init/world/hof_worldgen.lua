@@ -224,14 +224,26 @@ local RoomPrefabs =
 		"RockTreeRoom",
 		"VentsRoom_exit",
 	},
+
+	kyno_truffles_ground =
+	{
+		"BGDeciduous",
+		"DeepDeciduous",
+		"DeciduousMole",
+		"DeciduousClearing",
+		"PondyGrass",
+	},
 }
 
--- Special case where we want less prefabs spawns in rooms.
+-- Special case where we want more or less prefabs spawns in rooms.
 local PrefabValues =
 {
-	["kyno_coffeebush"]    = .02, -- This is because we don't want that much coffee there.
-	["kyno_rockflippable"] = .04, -- Decreased this because of low beefalo amounts.
-	["kyno_wildwheat"]     = .05, -- Same thing as above.
+	["kyno_coffeebush"]         = .02, -- This is because we don't want that much coffee there.
+	["kyno_sweetpotato_ground"] = .03,
+	["kyno_rockflippable"]      = .04, -- Decreased this because of low beefalo amounts. Wheats too.
+	["kyno_wildwheat"]          = .04,
+	["kyno_truffles_ground"]    = .2,
+	["kyno_radish_ground"]      = .3,
 }
 
 for prefab, rooms in pairs(RoomPrefabs) do
@@ -241,6 +253,8 @@ for prefab, rooms in pairs(RoomPrefabs) do
 			room.contents.distributeprefabs[prefab] = value
 		end)
 	end
+	
+	-- _G.terrain.filter.prefab = TERRAIN_FILTERS
 end
 
 -- This mod suffers from low Beefalo amount due to crowded prefabs.
@@ -248,6 +262,26 @@ AddRoomPreInit("BeefalowPlain", function(room)
 	room.contents.distributepercent = .10
 	room.contents.distributeprefabs["beefalo"] = .08
 end)
+
+local FruitTreeShopRooms = 
+{
+	"DeepDeciduous",
+	"MagicalDeciduous",
+	"DeciduousMole",
+	"MolesvilleDeciduous",
+	"DeciduousClearing",
+	"PondyGrass",
+}
+
+for k, roomname in pairs(FruitTreeShopRooms) do
+	AddRoomPreInit(roomname, function(room)
+		if not room.tags then
+			room.tags = { "FruitTreeShop_Spawner" }
+		elseif room.tags then
+			table.insert(room.tags, "FruitTreeShop_Spawner")
+		end
+	end)
+end
 
 local OCEAN_SETPIECES =
 {
@@ -283,6 +317,7 @@ AddLevelPreInit("forest", function(level)
 	
 	table.insert(level.required_setpieces, "SerenityIsland")
 	table.insert(level.required_setpieces, "MeadowIsland")
+	table.insert(level.required_setpieces, "FruitTreeShop")
 	
 	for k, layout in pairs(OCEAN_SETPIECES) do
 		table.insert(level.required_setpieces, layout)

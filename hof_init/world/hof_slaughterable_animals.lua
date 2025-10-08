@@ -76,7 +76,9 @@ local function SlaughterablePostinit(inst)
 	end
 
 	inst:ListenForEvent("slaughtered_extraloot", function(inst, data)
-		print("Extra loot:", data.prefab, "doer", data.doer and data.doer.prefab)
+		if TUNING.HOF_DEBUG_MODE then
+			print("Extra loot:", data.prefab, "doer", data.doer and data.doer.prefab)
+		end
 	end)
 end
 

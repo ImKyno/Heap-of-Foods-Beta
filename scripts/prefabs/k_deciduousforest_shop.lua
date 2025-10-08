@@ -1,21 +1,14 @@
-local HOF_MAPUTIL = require("map/hof_maputil")
-
 local assets =
 {	
-	Asset("ANIM", "anim/kyno_meadowisland_shop.zip"),
-	
-	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
-	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
+	Asset("ANIM", "anim/kyno_deciduousforest_shop.zip"),
+
+    Asset("SOUND", "sound/pig.fsb"),
 }
 
 local prefabs =
 {
 	"collapse_big",
 	"small_puff",
-	
-	"kyno_meadowisland_mermcart",
-	"kyno_meadowisland_seller",
-	"kyno_smokecloud",
 }
 
 local function OnOcuppiedDoorTask(inst)
@@ -27,13 +20,6 @@ local function OnOcuppied(inst, child)
 
 	if inst.doortask ~= nil then
 		inst.doortask:Cancel()
-	end
-	
-	-- Get another hat when at home.
-	if child ~= nil then
-		if child.SetHatless then
-			child:SetHatless(false)
-		end
 	end
 		
 	inst.doortask = inst:DoTaskInTime(1, OnOcuppiedDoorTask)
@@ -73,15 +59,15 @@ local function OnStartDuskDoorTask(inst)
 	end
 end
 
-local function OnStartDuskTask(inst, isday)
-	if not TheWorld.state.isday then
+local function OnStartDayTask(inst, isday)
+	if not TheWorld.state.isdusk then
 		inst.doortask = inst:DoTaskInTime(1 + math.random() * 2, OnStartDuskDoorTask)
 	else
 		inst.doortask = nil
 	end
 end
 
-local function OnStartDusk(inst)
+local function OnStartDay(inst)
 	if inst.components.spawner:IsOccupied() then
 		if inst.doortask ~= nil then
 			inst.doortask:Cancel()
@@ -91,12 +77,12 @@ local function OnStartDusk(inst)
 	end
 end
 
-local function SpawnCheckDusk(inst, isdusk)
+local function SpawnCheckDay(inst, isdusk)
 	inst.inittask = nil
-	inst:WatchWorldState("isdusk", OnStartDusk)
+	inst:WatchWorldState("isday", OnStartDusk)
 	
 	if inst.components.spawner ~= nil and inst.components.spawner:IsOccupied() then
-		if TheWorld.state.isdusk then
+		if TheWorld.state.isday then
 			inst.components.spawner:ReleaseChild()
 		else
 			OnOcuppiedDoorTask(inst)
@@ -122,65 +108,7 @@ local function OnSeasonChange(inst, season)
 	return TheWorld.state.season
 end
 
-local function SetHouseArt(inst, season)
-	local season = OnSeasonChange(inst)
-	
-	if TheWorld.state.isday then
-		inst.AnimState:PlayAnimation("idle_"..season or "idle", true)
-	else
-		inst.AnimState:PlayAnimation("lit_"..season or "lit", true)
-	end
-end
-
-local function SetChimneyFX(inst)
-	if not inst.smokecloud then
-		inst.smokecloud = SpawnPrefab("kyno_smokecloud")
-		inst.smokecloud.entity:SetParent(inst.entity)
-
-		inst.smokecloud.entity:AddFollower()
-		inst.smokecloud.Follower:FollowSymbol(inst.GUID, "chimney", 0, 200, 0) -- Why positive makes it go down ???
-	end
-end
-
-local function CancelChimneyTask(inst)
-    if inst._chimneytask ~= nil then
-        inst._chimneytask:Cancel()
-        inst._chimneytask = nil
-    end
-end
-
-local function StartChimneyTask(inst)
-    if not inst.inlimbo and inst._chimneytask == nil then
-        inst._chimneytask = inst:DoTaskInTime(GetRandomMinMax(10, 20), SetChimneyFX)
-    end
-end
-
-local function OnIsDay(inst, isday)
-	local season = OnSeasonChange(inst)
-	
-    if TheWorld.state.isday then
-		inst.Light:Enable(false)
-		inst.AnimState:PlayAnimation("idle_"..season or "idle", true)
-    else
-		inst.Light:Enable(true)
-		inst.AnimState:PlayAnimation("lit_"..season or "lit", true)
-	end
-end
-
-local function RetrofitMapTags(inst)
-	local info = HOF_MAPUTIL.GetLayoutInfoFromPrefab(inst, 671, 736, 61, 61)
-
-	if TUNING.HOF_DEBUG_MODE then
-		print("Layout Origin:", info.origin.x, info.origin.z)
-		print("Layout Center:", info.center.x, info.center.z)
-		print("Prefab Origin:", info.prefab.x, info.prefab.z)
-	end
-	
-	HOF_MAPUTIL.AddPrefabTopologyNode(inst, 671, 736, 61, 61, "StaticLayoutIsland:NewMeadowIsland", 
-	{ "RoadPoison", "not_mainland", "nohunt", "MeadowArea" })
-end
-
-local function fn(oldshop)
+local function fn()
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
@@ -196,19 +124,18 @@ local function fn(oldshop)
     inst.Light:SetColour(180/255, 195/255, 50/255)
 	
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("kyno_meadowisland_shop.tex")
+	minimap:SetIcon("pighouse.png")
 	minimap:SetPriority(2)
 	
 	MakeObstaclePhysics(inst, 1)
 
-	inst.AnimState:SetBank("kyno_meadowisland_shop")
-    inst.AnimState:SetBuild("kyno_meadowisland_shop")
+	inst.AnimState:SetBank("kyno_deciduousforest_shop")
+    inst.AnimState:SetBuild("kyno_deciduousforest_shop")
     inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("structure")
-    inst:AddTag("sammyhouse")
+	inst:AddTag("deciduousforestshop")
 	inst:AddTag("antlion_sinkhole_blocker")
-	inst:AddTag("meadow_marker")
 	
 	if not TheNet:IsDedicated() then
         inst:AddComponent("pointofinterest")
@@ -223,33 +150,22 @@ local function fn(oldshop)
 
 	inst:AddComponent("inspectable")
 
+	--[[
 	inst:AddComponent("spawner")
-	inst.components.spawner:Configure("kyno_meadowisland_seller", 10) -- TUNING.TOTAL_DAY_TIME
+	inst.components.spawner:Configure("kyno_deciduousforest_seller", 10)
 	inst.components.spawner.onoccupied = OnOcuppied
 	inst.components.spawner.onvacate = OnVacate
 	inst.components.spawner:SetWaterSpawning(false, true)
 	inst.components.spawner:CancelSpawning()
+	]]--
 
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_SMALL)
 	
-	-- inst:DoTaskInTime(1, RetrofitMapTags)
-	
-	inst:WatchWorldState("season", SetHouseArt)
-	SetHouseArt(inst, TheWorld.state.season)
-	
-	inst:WatchWorldState("isday", OnIsDay)
-	OnIsDay(inst, TheWorld.state.isday)
-	
-	inst.OnEntitySleep = CancelChimneyTask
-	inst.OnEntityWake = StartChimneyTask
-	
-	StartChimneyTask(inst)
-	inst.inittask = inst:DoTaskInTime(0, OnInit)
-	
-	-- SetChimneyFX(inst) -- Only used for testing.
+	-- inst:WatchWorldState("isday", OnIsDay)
+	-- OnIsDay(inst, TheWorld.state.isday)
 	
 	return inst
 end
 
-return Prefab("kyno_meadowisland_shop", fn, assets, prefabs)
+return Prefab("kyno_deciduousforest_shop", fn, assets, prefabs)

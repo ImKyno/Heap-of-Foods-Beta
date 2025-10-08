@@ -35,7 +35,10 @@ return Class(function(self, inst)
 		end
 
 		if not IsOldWorld() then
-			print("Retrofitting for Heap of Foods Mod - Looks like a New World. Skipping.")
+			if TUNING.HOF_DEBUG_MODE then
+				print("Retrofitting for Heap of Foods Mod - Looks like a New World. Skipping.")
+			end
+
 			return
 		end
 
@@ -43,19 +46,26 @@ return Class(function(self, inst)
 		local dirty_prefabs = rawget(_G, "HOF_RETROFIT_APPLIED") == true
 
 		if dirty_prefabs then
-			print("(Topologia:", dirty_topology, ", Prefabs:", dirty_prefabs, ")")
+			if TUNING.HOF_DEBUG_MODE then
+				print("Retrofitting for Heap of Foods Mod - World needs to Restart! (World Topology:", dirty_topology, ", Prefabs:", dirty_prefabs, ")")
+			end
+
 			TheWorld.Map:RetrofitNavGrid()
 			self.requiresreset = true
 		else
-			print("[HOF Retrofit] Nenhuma alteração necessária. Sem reset.")
+			if TUNING.HOF_DEBUG_MODE then
+				print("Retrofitting for Heap of Foods Mod - World does not need to Restart.")
+			end
 		end
 
 		if self.requiresreset and
 		not (TheWorld.components.retrofitforestmap_anr and TheWorld.components.retrofitforestmap_anr.requiresreset) and
 		not (TheWorld.components.retrofitcavemap_anr and TheWorld.components.retrofitcavemap_anr.requiresreset) then
 
-			print("Retrofitting for Heap of Foods Mod - Worldgen retrofitting requires the server to save and restart to fully take effect.")
-			print("Restarting server in 30 seconds...")
+			if TUNING.HOF_DEBUG_MODE then
+				print("Retrofitting for Heap of Foods Mod - World Retrofitting requires the server to save and restart to fully take effect.")
+				print("Restarting server in 30 seconds...")
+			end
 
 			inst:DoTaskInTime(5,  function() TheNet:Announce(subfmt(STRINGS.UI.HUD.RETROFITTING_ANNOUNCEMENT, {time = 25})) end)
 			inst:DoTaskInTime(10, function() TheNet:Announce(subfmt(STRINGS.UI.HUD.RETROFITTING_ANNOUNCEMENT, {time = 20})) end)

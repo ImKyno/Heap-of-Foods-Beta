@@ -330,13 +330,11 @@ local function SetIsFullMoon(inst, active)
 end
 
 local function SetLordFruitFlyKilled(inst, active)
-	print("LOTFF 1")
 	if inst.fruitflykilled ~= active then
 		inst.fruitflykilled = active
 		
 		if inst.fruitflykilled then
 			inst:AddWares(inst.WARES.SPECIAL["fruitflykilled"])
-			print("LOTFF 2")
 		end
 	end
 end

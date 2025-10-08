@@ -66,7 +66,7 @@ local LOOT =
     },
 	{
 		item   = "krampus_sack", -- Let me know if you get one from here, I'll give you a reward.
-		chance = 0.02,
+		chance = 0.01,
 		count  = 1,
 	},
 }

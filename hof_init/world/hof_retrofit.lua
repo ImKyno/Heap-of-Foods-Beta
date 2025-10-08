@@ -13,7 +13,10 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 	local dirty = false
 
 	if savedata.ents == nil or next(savedata.ents) == nil then
-        print("Retrofitting for Heap of Foods Mod - Looks like a New World. Skipping.")
+		if TUNING.HOF_DEBUG_MODE then
+			print("Retrofitting for Heap of Foods Mod - Looks like a New World. Skipping.")
+		end
+
 		return _DoRetrofitting(savedata, world_map, ...)
 	end
 	
@@ -23,10 +26,16 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 
 	local function ApplyRetrofit(name, prefab_check, retrofit_fn)
 		if Exists(prefab_check) then
-			print(string.format("Retrofitting for Heap of Foods Mod - %s Already exists. Skipping.", name))
+			if TUNING.HOF_DEBUG_MODE then
+				print(string.format("Retrofitting for Heap of Foods Mod - %s Already exists. Skipping.", name))
+			end
+
 			return false
 		else
-			print(string.format("Retrofitting for Heap of Foods Mod - Generating %s...", name))
+			if TUNING.HOF_DEBUG_MODE then
+				print(string.format("Retrofitting for Heap of Foods Mod - Generating %s...", name))
+			end
+
 			retrofit_fn(_G.TheWorld.Map, savedata)
 			return true
 		end
@@ -58,10 +67,16 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 		savedata.map.nodeidtilemap = world_map:GetNodeIdTileMapStringEncode()
 		
 		rawset(_G, "HOF_RETROFIT_APPLIED", true)
-		print("Retrofitting for Heap of Foods Mod - Applied Retrofits: " .. table.concat(applied, ", "))
+
+		if TUNING.HOF_DEBUG_MODE then
+			print("Retrofitting for Heap of Foods Mod - Applied Retrofits: " .. table.concat(applied, ", "))
+		end
 	else
 		rawset(_G, "HOF_RETROFIT_APPLIED", false)
-		print("Retrofitting for Heap of Foods Mod - World does not need Retrofit.")
+
+		if TUNING.HOF_DEBUG_MODE then
+			print("Retrofitting for Heap of Foods Mod - World does not need Retrofit.")
+		end
 	end
 
 	return _DoRetrofitting(savedata, world_map, ...)

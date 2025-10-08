@@ -37,6 +37,7 @@ PrefabFiles =
 	"k_crop_sweetpotato",
 	"k_crop_turnip",
 	"k_cucumber",
+	"k_deciduousforest_shop",
 	"k_fertilizer_nutrient_defs",
 	"k_fishes",
 	"k_floatilizer",	

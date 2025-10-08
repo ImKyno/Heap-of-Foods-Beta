@@ -644,26 +644,31 @@ WSO.Pre.taroroots_setting = function(difficulty)
 		never = 
 		{
 			KYNO_TAROSEA_GROWTIME = NEVER_TIME,
+			KYNO_TAROROOT_REGROWTH_TIME_MULT = 0,
 		},
 
 		veryslow = 
 		{
 			KYNO_TAROSEA_GROWTIME = 3840,
+			KYNO_TAROROOT_REGROWTH_TIME_MULT = .25,
 		},
 		
 		slow = 
 		{
 			KYNO_TAROSEA_GROWTIME = 2880,
+			KYNO_TAROROOT_REGROWTH_TIME_MULT = .50,
 		},
             
 		fast = 
 		{
 			KYNO_TAROSEA_GROWTIME = 1280,
+			KYNO_TAROROOT_REGROWTH_TIME_MULT = 1.5,
 		},
 		
 		veryfast = 
 		{
 			KYNO_TAROSEA_GROWTIME = 480,
+			KYNO_TAROROOT_REGROWTH_TIME_MULT = 3,
 		},
 	}
 	
@@ -676,26 +681,31 @@ WSO.Pre.waterycresses_setting = function(difficulty)
 		never = 
 		{
 			KYNO_WATERYCRESS_GROWTIME = NEVER_TIME,
+			KYNO_WATERYCRESS_REGROWTH_TIME_MULT = 0,
 		},
 
 		veryslow = 
 		{
 			KYNO_WATERYCRESS_GROWTIME = 4800,
+			KYNO_WATERYCRESS_REGROWTH_TIME_MULT = .25,
 		},
 		
 		slow = 
 		{
 			KYNO_WATERYCRESS_GROWTIME = 3600,
+			KYNO_WATERYCRESS_REGROWTH_TIME_MULT = .50,
 		},
             
 		fast = 
 		{
 			KYNO_WATERYCRESS_GROWTIME = 1600,
+			KYNO_WATERYCRESS_REGROWTH_TIME_MULT = 1.5,
 		},
 		
 		veryfast = 
 		{
 			KYNO_WATERYCRESS_GROWTIME = 960,
+			KYNO_WATERYCRESS_REGROWTH_TIME_MULT = 3,
 		},
 	}
 	
@@ -708,26 +718,31 @@ WSO.Pre.weedsea_setting = function(difficulty)
 		never = 
 		{
 			KYNO_WEEDSEA_GROWTIME = NEVER_TIME,
+			KYNO_WEEDSEA_REGROWTH_TIME_MULT = 0,
 		},
 
 		veryslow = 
 		{
 			KYNO_WEEDSEA_GROWTIME = 2880,
+			KYNO_WEEDSEA_REGROWTH_TIME_MULT = .25,
 		},
 		
 		slow = 
 		{
 			KYNO_WEEDSEA_GROWTIME = 2160,
+			KYNO_WEEDSEA_REGROWTH_TIME_MULT = .50,
 		},
             
 		fast = 
 		{
 			KYNO_WEEDSEA_GROWTIME = 960,
+			KYNO_WEEDSEA_REGROWTH_TIME_MULT = 1.5,
 		},
 		
 		veryfast = 
 		{
 			KYNO_WEEDSEA_GROWTIME = 480,
+			KYNO_WEEDSEA_REGROWTH_TIME_MULT = 3,
 		},
 	}
 	

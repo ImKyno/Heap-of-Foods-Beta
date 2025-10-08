@@ -2,6 +2,7 @@ require("constants")
 require("mathutil")
 require("map/terrain")
 
+local HOF_MAPUTIL = require("map/hof_maputil")
 local obj_layout = require("map/object_layout")
 
 local function FindEntsInArea(entities, left, top, size, blocking_prefabs)
@@ -304,7 +305,7 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 		return false
 	end
 	
-	local success = TryToAddLayout("MeadowIsland", 54)
+	local success = TryToAddLayout("MeadowIsland", 53)
 	
 	if success then
 		print("Retrofitting for Heap of Foods Mod - Added the Seaside Island to the world.")
@@ -487,11 +488,60 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 	end
 end
 
+local function HofRetrofitting_DeciduousForestShop()
+	local VALID_ROOMS = 
+	{
+		"DeepDeciduous",
+		"MagicalDeciduous",
+		"DeciduousClearing",
+	}
+	
+	local node_indices, shop_candidate_nodes = {}, {}
+	
+	for node_index, id_string in ipairs(TheWorld.topology.ids) do
+		for _, bg_string in ipairs(VALID_ROOMS) do
+			if id_string:find(bg_string) then
+				table.insert(shop_candidate_nodes, TheWorld.topology.nodes[node_index])
+			end
+		end
+	end
+
+	if #shop_candidate_nodes == 0 or #shop_candidate_nodes == 0 then
+		print("Retrofitting for Heap of Foods Mod - Failed to find any appropriate nodes to spawn Deciduous Forest Shop.")
+		return
+	end
+
+	print("Retrofitting for Heap of Foods Mod - Adding Deciduous Forest Shop")
+
+	local VALID_TILES = 
+	{
+		WORLD_TILES.DECIDUOUS,
+	}
+	
+	local isvalidareafn = function(x, y, z, prefab)
+		local tile = TheWorld.Map:GetTileAtPoint(x, y, z)
+		
+		for _, tile_type in ipairs(VALID_TILES) do
+			if tile_type == tile then
+				return true
+			end
+		end
+		
+		return false
+	end
+	
+	if not HOF_MAPUTIL.RetrofitNewContentPrefab(inst, "balatro_machine", 10.5, 11, isvalidareafn, shop_candidate_nodes)
+	and not HOF_MAPUTIL.RetrofitNewContentPrefab(inst, "balatro_machine", 10.5, 11, nil, shop_candidate_nodes) then
+		print("Retrofitting for Heap of Foods Mod - Failed to add Deciduous Forest Shop to the world!")
+	end
+end
+
 return 
 {
-	HofRetrofitting_SerenityIsland = HofRetrofitting_SerenityIsland,
-	HofRetrofitting_MeadowIsland   = HofRetrofitting_MeadowIsland,
-	HofRetrofitting_OceanSetpieces = HofRetrofitting_OceanSetpieces,
+	HofRetrofitting_SerenityIsland      = HofRetrofitting_SerenityIsland,
+	HofRetrofitting_MeadowIsland        = HofRetrofitting_MeadowIsland,
+	HofRetrofitting_OceanSetpieces      = HofRetrofitting_OceanSetpieces,
+	HofRetrofitting_DeciduousForestShop = HofRetrofitting_DeciduousForestShop,
 }
 
 --[[

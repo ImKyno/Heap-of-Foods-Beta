@@ -1,4 +1,5 @@
 local TILE_SCALE = 4
+local MAX_PLACEMENT_ATTEMPTS = 50
 
 -- inst: Prefab in the world.
 -- prefab_layout_x, prefab_layout_y: Prefab's position in the layout in world tiles.
@@ -7,13 +8,19 @@ local TILE_SCALE = 4
 -- tags: MapTags for the Node.
 local function AddPrefabTopologyNode(inst, prefab_layout_x, prefab_layout_y, layout_w, layout_h, room_id, tags)
 	if not TheWorld or not TheWorld.topology then
-		print("Heap of Foods Mod - Retrofitting MapTags - TheWorld.topology not found.")
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Retrofitting MapTags - TheWorld.topology not found.")
+		end
+
 		return
 	end
 
 	for _, id in ipairs(TheWorld.topology.ids) do
 		if id == room_id then
-			print("Heap of Foods Mod - Retrofitting MapTags - Node '"..room_id.."' already exists. Skipping.")
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Retrofitting MapTags - Node '"..room_id.."' already exists. Skipping.")
+			end
+
 			return
 		end
 	end
@@ -53,7 +60,9 @@ local function AddPrefabTopologyNode(inst, prefab_layout_x, prefab_layout_y, lay
 
 	topology.nodes[index] = node
 
-	print(string.format("Heap of Foods Mod - Retrofitting MapTags - Added Node: '%s' to position: (%.2f, %.2f)", room_id, node.x, node.y))
+	if TUNING.HOF_DEBUG_MODE then
+		print(string.format("Heap of Foods Mod - Retrofitting MapTags - Added Node: '%s' to position: (%.2f, %.2f)", room_id, node.x, node.y))
+	end
 end
 
 -- inst: Prefab in the world
@@ -83,7 +92,10 @@ end
 
 local function RetrofitOceanLayouts()
 	if TheWorld.topology == nil or TheWorld.topology.nodes == nil or TheWorld.topology.ids == nil then
-		print("Retrofitting for Heap of Foods Mod - World Topology does not exist yet. Skipping.")
+		if TUNING.HOF_DEBUG_MODE then
+			print("Retrofitting for Heap of Foods Mod - World Topology does not exist yet. Skipping.")
+		end
+
 		return false
 	end
 
@@ -162,9 +174,61 @@ local function RetrofitOceanLayouts()
 	return dirty
 end
 
+-- From retrofitforestmap_anr.lua
+local function RetrofitNewContentPrefab(inst, prefab, min_space, dist_from_structures, canplacefn, candidtate_nodes, on_add_prefab)
+	local attempt = 1
+	local topology = TheWorld.topology
+
+	while attempt <= MAX_PLACEMENT_ATTEMPTS do
+		local area = nil
+		
+		if candidtate_nodes ~= nil then
+			area = candidtate_nodes[math.random(#candidtate_nodes)]
+		else
+			area = topology.nodes[math.random(#topology.nodes)]
+		end
+
+		local points_x, points_y = TheWorld.Map:GetRandomPointsForSite(area.x, area.y, area.poly, 1)
+		
+		if #points_x == 1 and #points_y == 1 then
+			local x = points_x[1]
+			local z = points_y[1]
+
+			if (canplacefn ~= nil and canplacefn(x, 0, z, prefab)) or
+				(canplacefn == nil and TheWorld.Map:CanPlacePrefabFilteredAtPoint(x, 0, z, prefab)) then
+				
+				local ents = TheSim:FindEntities(x, 0, z, min_space)
+				
+				if #ents == 0 then
+					if dist_from_structures ~= nil then
+						ents = TheSim:FindEntities(x, 0, z, dist_from_structures, STRUCTURE_TAGS )
+					end
+
+					if #ents == 0 then
+						local e = SpawnPrefab(prefab)
+						
+						e.Transform:SetPosition(x, 0, z)
+						
+						if on_add_prefab ~= nil then
+							on_add_prefab(e)
+						end
+						
+						break
+					end
+				end
+			end
+		end
+		
+		attempt = attempt + 1
+	end
+	
+	return attempt <= MAX_PLACEMENT_ATTEMPTS
+end
+
 return 
 {
-    GetLayoutInfoFromPrefab = GetLayoutInfoFromPrefab,
-	AddPrefabTopologyNode   = AddPrefabTopologyNode,
-	RetrofitOceanLayouts    = RetrofitOceanLayouts,
+    GetLayoutInfoFromPrefab  = GetLayoutInfoFromPrefab,
+	AddPrefabTopologyNode    = AddPrefabTopologyNode,
+	RetrofitOceanLayouts     = RetrofitOceanLayouts,
+	RetrofitNewContentPrefab = RetrofitNewContentPrefab,
 }

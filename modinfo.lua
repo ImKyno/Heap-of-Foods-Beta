@@ -1042,14 +1042,50 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 					es  = "Colour Cubes predeterminados para el Archipiélago de la Serenidad.",
 				},
 				
-				ENABLED =
+				MARKER =
 				{
-					"Special Colour Cubes for the Serenity Archipelago.",
-					zh  = "宁静群岛使用特殊 Colour Cubes。",
-					zht = "寧靜群島使用特殊 Colour Cubes。",
-					pt  = "Colour Cubes especiais para o Arquipélago da Serenidade.",
-					pl  = "Specjalny Colour Cubes dla Archipelagu Spokoju.",
-					es  = "Colour Cubes especiales para el Archipiélago de la Serenidad.",
+					NAME = 
+					{
+						"Marker Mode",
+						zh  = "标记模式",
+						zht = "標記模式",
+						pt  = "Modo Marcador",
+						pl  = "Tryb Marker",
+						es  = "Modo Marcador",
+					},
+					
+					HOVER =
+					{
+						"Marker Mode only works for New/Retrofitted Worlds.",
+						zh  = "标记模式仅适用于新世界或已改造的世界。",
+						zht = "標記模式僅適用於新世界或已改造的世界。",
+						pt  = "Modo Marcador funciona somente em Mundos Novos/Retrofitados.",
+						pl  = "Tryb Marker działa tylko w nowych lub poddanych retrofitowi światach.",
+						es  = "El Modo Marcador solo funciona en Mundos Nuevos o Retroadaptados.",
+					},
+				},
+				
+				STATIC =
+				{
+					NAME =
+					{
+						"Static Mode",
+						zh  = "静态模式",
+						zht = "靜態模式",
+						pt  = "Modo Estático",
+						pl  = "Tryb Statyczny",
+						es  = "Modo Estático",
+					},
+
+					HOVER =
+					{
+						"Static Mode Should work for both scenarios. Requires Server Restart.",
+						zh  = "静态模式适用于所有场景。需要重启服务器。",
+						zht = "靜態模式適用於所有場景。需要重新啟動伺服器。",
+						pt  = "Modo Estático funciona para ambos cenários. Requer Restart do Servidor.",
+						pl  = "Tryb Statyczny powinien działać w obu scenariuszach. Wymaga ponownego uruchomienia serwera.",
+						es  = "El Modo Estático debería funcionar en ambos escenarios. Requiere reiniciar el servidor.",
+					},
 				},
 			},
 		},
@@ -1088,14 +1124,50 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 					es  = "Colour Cubes predeterminados para la Isla Costera.",
 				},
 				
-				ENABLED =
+				MARKER =
 				{
-					"Special Colour Cubes for the Seaside Island.",
-					zh  = "海滨岛使用特殊 Colour Cubes。",
-					zht = "海濱島使用特殊 Colour Cubes。",
-					pt  = "Colour Cubes especiais para a Ilha Beira-mar.",
-					pl  = "Specjalny Colour Cubes dla Wyspy Nadmorskiej.",
-					es  = "Colour Cubes especiales para la Isla Costera.",
+					NAME = 
+					{
+						"Marker Mode",
+						zh  = "标记模式",
+						zht = "標記模式",
+						pt  = "Modo Marcador",
+						pl  = "Tryb Marker",
+						es  = "Modo Marcador",
+					},
+					
+					HOVER =
+					{
+						"Marker Mode only works for New/Retrofitted Worlds.",
+						zh  = "标记模式仅适用于新世界或已改造的世界。",
+						zht = "標記模式僅適用於新世界或已改造的世界。",
+						pt  = "Modo Marcador funciona somente em Mundos Novos/Retrofitados.",
+						pl  = "Tryb Marker działa tylko w nowych lub poddanych retrofitowi światach.",
+						es  = "El Modo Marcador solo funciona en Mundos Nuevos o Retroadaptados.",
+					},
+				},
+				
+				STATIC =
+				{
+					NAME =
+					{
+						"Static Mode",
+						zh  = "静态模式",
+						zht = "靜態模式",
+						pt  = "Modo Estático",
+						pl  = "Tryb Statyczny",
+						es  = "Modo Estático",
+					},
+
+					HOVER =
+					{
+						"Static Mode Should work for both scenarios. Requires Server Restart.",
+						zh  = "静态模式适用于所有场景。需要重启服务器。",
+						zht = "靜態模式適用於所有場景。需要重新啟動伺服器。",
+						pt  = "Modo Estático funciona para ambos cenários. Requer Restart do Servidor.",
+						pl  = "Tryb Statyczny powinien działać w obu scenariuszach. Wymaga ponownego uruchomienia serwera.",
+						es  = "El Modo Estático debería funcionar en ambos escenarios. Requiere reiniciar el servidor.",
+					},
 				},
 			},
 		},
@@ -1630,12 +1702,17 @@ local SERENITY_CC_OPTIONS    =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.HOVER_OPTIONS.DISABLED),
-		data                 = false
+		data                 = 0
 	},
 	{
-		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
-		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.HOVER_OPTIONS.ENABLED),
-		data                 = true
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.HOVER_OPTIONS.MARKER.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.HOVER_OPTIONS.MARKER.HOVER),
+		data                 = 1
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.HOVER_OPTIONS.STATIC.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.HOVER_OPTIONS.STATIC.HOVER),
+		data                 = 2
 	}
 }
 
@@ -1646,12 +1723,17 @@ local MEADOW_CC_OPTIONS      =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.HOVER_OPTIONS.DISABLED),
-		data                 = false
+		data                 = 0
 	},
 	{
-		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
-		hover                = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.HOVER_OPTIONS.ENABLED),
-		data                 = true
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.HOVER_OPTIONS.MARKER.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.HOVER_OPTIONS.MARKER.HOVER),
+		data                 = 1
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.HOVER_OPTIONS.STATIC.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.MEADOW_CC.HOVER_OPTIONS.STATIC.HOVER),
+		data                 = 2
 	}
 }
 
@@ -1730,12 +1812,12 @@ configuration_options        =
 	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,    options = FERTILIZER_OPTIONS,    default = false },
 	-- Experimental Options.
 	{ name                   = "EXPERIMENTAL",     label = EXPERIMENTAL_LABEL,  hover = EXPERIMENTAL_HOVER,  options = NONE_OPTIONS,          default = false },
-	{ name                   = "SERENITY_CC",      label = SERENITY_CC_LABEL,   hover = SERENITY_CC_HOVER,   options = SERENITY_CC_OPTIONS,   default = false },
-	{ name                   = "MEADOW_CC",        label = MEADOW_CC_LABEL,     hover = MEADOW_CC_HOVER,     options = MEADOW_CC_OPTIONS,     default = false },
+	{ name                   = "SERENITY_CC",      label = SERENITY_CC_LABEL,   hover = SERENITY_CC_HOVER,   options = SERENITY_CC_OPTIONS,   default = 0     },
+	{ name                   = "MEADOW_CC",        label = MEADOW_CC_LABEL,     hover = MEADOW_CC_HOVER,     options = MEADOW_CC_OPTIONS,     default = 0     },
 	
 	-- Retrofitting Options.
 	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false },
-	-- { name                   = "MODRETROFITFORCE", label = RETROFITFORCE_LABEL, hover = RETROFITFORCE_HOVER, options = RETROFITFORCE_OPTIONS, default = false },
-	-- { name                   = "MODRETROFIT",      label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,      options = RETROFIT_OPTIONS,      default = 0     },
+ -- { name                   = "MODRETROFITFORCE", label = RETROFITFORCE_LABEL, hover = RETROFITFORCE_HOVER, options = RETROFITFORCE_OPTIONS, default = false },
+ -- { name                   = "MODRETROFIT",      label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,      options = RETROFIT_OPTIONS,      default = 0     },
 	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,     options = MODTRADES_OPTIONS,     default = false },
 }

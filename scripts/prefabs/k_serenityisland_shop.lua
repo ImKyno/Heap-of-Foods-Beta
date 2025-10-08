@@ -210,9 +210,11 @@ end
 local function RetrofitMapTags(inst)
 	local info = HOF_MAPUTIL.GetLayoutInfoFromPrefab(inst, 640, 1344, 53, 53)
 
-	print("Layout Origin:", info.origin.x, info.origin.z)
-	print("Layout Center:", info.center.x, info.center.z)
-	print("Prefab Origin:", info.prefab.x, info.prefab.z)
+	if TUNING.HOF_DEBUG_MODE then
+		print("Layout Origin:", info.origin.x, info.origin.z)
+		print("Layout Center:", info.center.x, info.center.z)
+		print("Prefab Origin:", info.prefab.x, info.prefab.z)
+	end
 	
 	HOF_MAPUTIL.AddPrefabTopologyNode(inst, 640, 1344, 53, 53, "StaticLayoutIsland:NewSerenityIsland", 
 	{ "RoadPoison", "not_mainland", "nohasslers", "nohunt", "SerenityArea" })
@@ -292,7 +294,7 @@ local function fn()
 	inst:WatchWorldState("isnight", OnIsNight)
     OnIsNight(inst, TheWorld.state.isnight)
 	
-	inst:DoTaskInTime(1, RetrofitMapTags)
+	-- inst:DoTaskInTime(1, RetrofitMapTags)
 	
 	-- Pig Elder will wake up regardless in "Lights Out" worlds.
 	inst:ListenForEvent("clocksegschanged", function(world, data)
