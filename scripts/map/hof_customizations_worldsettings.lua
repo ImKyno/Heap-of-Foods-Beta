@@ -10,12 +10,13 @@ local customizations_worldsettings =
 	fennels_setting          = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 3,   world = {"cave"}},
 	giantparznips_setting    = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 4,   world = {"cave"}},
 	mushstumps_setting       = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 5,   world = {"forest", "cave"}},
-	parznips_setting         = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 6,   world = {"cave"}},
-	radishes_setting         = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 7,   world = {"forest"}},
-	rockflippables_setting   = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 8,   world = {"forest", "cave"}},
-	sweetpotatoes_setting    = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 9,   world = {"forest"}},
-	turnips_setting          = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 10,  world = {"forest", "cave"}},
-	wildwheats_setting       = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 11,  world = {"forest"}},
+	truffles_setting         = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 6,   world = {"forest"}},
+	parznips_setting         = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 7,   world = {"cave"}},
+	radishes_setting         = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 8,   world = {"forest"}},
+	rockflippables_setting   = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 9,   world = {"forest", "cave"}},
+	sweetpotatoes_setting    = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 10,  world = {"forest"}},
+	turnips_setting          = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 11,  world = {"forest", "cave"}},
+	wildwheats_setting       = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_r", order = 12,  world = {"forest"}},
 	
 	-- OCEANSETTING
 	lotusplants_setting      = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions", group = "hof_ocean_r", order = 0,  world = {"forest"}},
@@ -292,6 +293,43 @@ WSO.Pre.mushstumps_setting = function(difficulty)
 		{
 			KYNO_MUSHSTUMP_GROWTIME = 960,
 			KYNO_MUSHSTUMP_REGROWTH_TIME_MULT = 3,
+		},
+	}
+	
+	OverrideTuningVariables(tuning_vars[difficulty])
+end
+
+WSO.Pre.truffles_setting = function(difficulty)
+	local tuning_vars =
+	{
+		never = 
+		{
+			KYNO_TRUFFLES_GROWTIME = NEVER_TIME,
+			KYNO_TRUFFLES_REGROWTH_TIME_MULT = 0,
+		},
+
+		veryslow = 
+		{
+			KYNO_TRUFFLES_GROWTIME = 9600,
+			KYNO_TRUFFLES_REGROWTH_TIME_MULT = .25,
+		},
+		
+		slow = 
+		{
+			KYNO_TRUFFLES_GROWTIME = 7200,
+			KYNO_TRUFFLES_REGROWTH_TIME_MULT = .50,
+		},
+            
+		fast = 
+		{
+			KYNO_TRUFFLES_GROWTIME = 3200,
+			KYNO_TRUFFLES_REGROWTH_TIME_MULT = 1.5,
+		},
+		
+		veryfast = 
+		{
+			KYNO_TRUFFLES_GROWTIME = 2400,
+			KYNO_TRUFFLES_REGROWTH_TIME_MULT = 3,
 		},
 	}
 	

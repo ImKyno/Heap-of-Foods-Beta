@@ -516,6 +516,7 @@ local function HofRetrofitting_DeciduousForestShop()
 	local VALID_TILES = 
 	{
 		WORLD_TILES.DECIDUOUS,
+		WORLD_TILES.GRASS,
 	}
 	
 	local isvalidareafn = function(x, y, z, prefab)

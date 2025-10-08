@@ -91,6 +91,10 @@ AddComponentPostInit("regrowthmanager", function(self)
         return TUNING.KYNO_ASPARGOS_REGROWTH_TIME_MULT
     end)
 	
+	self:SetRegrowthForType("kyno_truffles_ground", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_truffles_ground", function()
+        return not (_worldstate.isday) and TUNING.KYNO_TRUFFLES_REGROWTH_TIME_MULT or 0
+    end)
+	
 	--[[
 	self:SetRegrowthForType("kyno_serenityisland_crate", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_serenityisland_crate", function()
         return TUNING.KYNO_CRATE_REGROWTH_TIME_MULT

@@ -8,12 +8,13 @@ local customizations_worldgen =
 	fennels         = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 2,  world = {"cave"}},
 	giantparznips   = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 3,  world = {"cave"}},
 	mushstumps      = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 4,  world = {"forest", "cave"}},
-	parznips        = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 5,  world = {"cave"}},
-	radishes        = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 6,  world = {"forest"}},
-	rockflippables  = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 7,  world = {"forest", "cave"}},
-	sweetpotatoes   = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 8,  world = {"forest"}},
-	turnips         = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 9,  world = {"forest", "cave"}},
-	wildwheats      = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 10, world = {"forest"}},
+	truffles        = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 5,  world = {"forest"}},
+	parznips        = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 6,  world = {"cave"}},
+	radishes        = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 7,  world = {"forest"}},
+	rockflippables  = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 8,  world = {"forest", "cave"}},
+	sweetpotatoes   = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 9,  world = {"forest"}},
+	turnips         = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 10, world = {"forest", "cave"}},
+	wildwheats      = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 11, world = {"forest"}},
 	
 	-- OCEANGEN
 	lotusplants     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean", order = 0, world = {"forest"}},
@@ -52,6 +53,7 @@ map.TRANSLATE_TO_PREFABS["asparaguses"]     = {"kyno_aspargos_ground"}
 map.TRANSLATE_TO_PREFABS["fennels"]         = {"kyno_fennel_ground"}
 map.TRANSLATE_TO_PREFABS["giantparznips"]   = {"kyno_parznip_big"}
 map.TRANSLATE_TO_PREFABS["mushstumps"]      = {"kyno_mushstump_natural", "kyno_mushstump_cave"}
+map.TRANSLATE_TO_PREFABS["truffles"]        = {"kyno_truffles_ground"}
 map.TRANSLATE_TO_PREFABS["radishes"]        = {"kyno_radish_ground"}
 map.TRANSLATE_TO_PREFABS["rockflippables"]  = {"kyno_rockflippable", "kyno_rockflippable_cave"}
 map.TRANSLATE_TO_PREFABS["sweetpotatoes"]   = {"kyno_sweetpotato_ground"}

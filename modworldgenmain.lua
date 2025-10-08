@@ -206,8 +206,10 @@ end
 
 local MapData =
 {
-	--["DinaMemorial_Spawner"]  = true,
-	["FruitTreeShop_Spawner"] = true,
+ -- ["SerenityIsland_Spawner"] = true,
+ -- ["MeadowIsland_Spawner"]   = true,
+	["DinaMemorial_Spawner"]   = true,
+	["FruitTreeShop_Spawner"]  = true,
 }
 
 local MapTags = 
@@ -229,6 +231,27 @@ local MapTags =
 	end,
 	
 	--[[
+	["SerenityIsland_Spawner"] = function(tagdata, level)
+		if tagdata["SerenityIsland_Spawner"] == false then
+			return
+		end
+		
+		tagdata["SerenityIsland_Spawner"] = false
+
+        return "STATIC", "SerenityIsland"
+    end,
+	
+	["MeadowIsland_Spawner"] = function(tagdata, level)
+		if tagdata["MeadowIsland_Spawner"] == false then
+			return
+		end
+		
+		tagdata["MeadowIsland_Spawner"] = false
+
+        return "STATIC", "MeadowIsland"
+    end,
+	]]--
+
 	["DinaMemorial_Spawner"] = function(tagdata, level)
 		if tagdata["DinaMemorial_Spawner"] == false then
 			return
@@ -238,7 +261,6 @@ local MapTags =
 
         return "STATIC", "DinaMemorial"
     end,
-	]]--
 	
 	["FruitTreeShop_Spawner"] = function(tagdata, level)
 		if tagdata["FruitTreeShop_Spawner"] == false then

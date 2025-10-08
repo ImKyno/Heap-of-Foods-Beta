@@ -308,14 +308,14 @@ local function AshPostinit(inst)
     MakeDeployableFertilizerPristine(inst)
 
     inst:AddTag("fertilizerresearchable")
+    inst:AddTag("coffeefertilizer2")
+    inst:AddTag("fertilizer_volcanic")
 	
     inst.GetFertilizerKey = GetFertilizerKey
 
     if not _G.TheWorld.ismastersim then
         return inst
     end
-
-    inst:AddTag("coffeefertilizer2")
 
     inst:AddComponent("fertilizerresearchable")
     inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)

@@ -19,6 +19,11 @@ AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions
     if actions[1] == ACTIONS.FERTILIZE and inst:HasTag("coffeefertilizer2") ~= target:HasTag("kyno_coffeebush") then
         actions[1] = nil
     end
+	
+	-- Island Adventures.
+	if actions[1] == ACTIONS.FERTILIZE and inst:HasTag("fertilizer_volcanic") ~= target:HasTag("volcanicplant") then
+        actions[1] = nil
+    end
 end)
 
 -- Action for the Salt.

@@ -2222,7 +2222,7 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_banana",
 		anim           = "idle",
 		animoffsetbgy  = -50,
-		deps           = {"bananabush", "kyno_meadowisland_crate", "kyno_banana_cooked", "spoiled_food"},
+		deps           = {"bananabush", "kyno_bananatree", "kyno_meadowisland_crate", "kyno_banana_cooked", "spoiled_food"},
 	},
 	
 	kyno_banana_cooked =
@@ -3253,6 +3253,46 @@ local HOF_SCRAPBOOK_FOODS =
 		anim           = "cooked",
 		animoffsetbgy  = -50,
 		deps           = {"kyno_white_cap", "spoiled_food"},
+	},
+	
+	kyno_truffles      =
+	{
+		name           = "kyno_truffles",
+		type           = "food",
+		tex            = "kyno_truffles.tex",
+		prefab         = "kyno_truffles",
+		healthvalue    = 0,
+		hungervalue    = 9.375,
+		sanityvalue    = -10,
+		perishable     = 7200,
+		stacksize      = 40,
+		burnable       = true,
+		foodtype       = "VEGGIE",
+		bank           = "kyno_truffles",
+		build          = "kyno_truffles",
+		anim           = "idle",
+		scale          = 2,
+		deps           = {"kyno_truffles_ground", "kyno_truffles_cooked", "spoiled_food"},
+	},
+	
+	kyno_truffles_cooked =
+	{
+		name           = "kyno_truffles_cooked",
+		type           = "food",
+		tex            = "kyno_truffles_cooked.tex",
+		prefab         = "kyno_truffles_cooked",
+		healthvalue    = 5,
+		hungervalue    = 12.5,
+		sanityvalue    = -5,
+		perishable     = 7200,
+		stacksize      = 40,
+		burnable       = true,
+		foodtype       = "VEGGIE",
+		bank           = "kyno_truffles",
+		build          = "kyno_truffles",
+		anim           = "cooked",
+		scale          = 2,
+		deps           = {"kyno_truffles", "spoiled_food"},
 	},
 	
 	kyno_sap           =
@@ -12185,6 +12225,18 @@ local HOF_SCRAPBOOK_THINGS =
 		deps           = {"kyno_meadowisland_seller"},
 		specialinfo    = "SAMMYWAGON",
 	},
+	
+	kyno_deciduousforest_shop =
+	{
+		name           = "kyno_deciduousforest_shop",
+		type           = "POI",
+		tex            = "kyno_deciduousforest_shop.tex",
+		prefab         = "kyno_deciduousforest_shop",
+		bank           = "kyno_deciduousforest_shop",
+		build          = "kyno_deciduousforest_shop",
+		anim           = "idle",
+		specialinfo    = "DECIDUOUSSHOP",
+	},
 
 	kyno_mealgrinder   = 
 	{
@@ -13075,6 +13127,21 @@ local HOF_SCRAPBOOK_THINGS =
 		deps           = {"kyno_turnip"},
 	},
 	
+	kyno_truffles_ground =
+	{
+		name           = "kyno_truffles_ground",
+		type           = "thing",
+		tex            = "kyno_truffles_ground.tex",
+		prefab         = "kyno_truffles_ground",
+		pickable       = true,
+		burnable       = true,
+		bank           = "kyno_truffles",
+		build          = "kyno_truffles",
+		anim           = "planted",
+		animoffsetbgy  = -30,
+		deps           = {"kyno_truffles"},
+	},
+	
 	kyno_kokonuttree_sapling =
 	{
 		name           = "kyno_kokonuttree_sapling",
@@ -13105,6 +13172,26 @@ local HOF_SCRAPBOOK_THINGS =
 		anim           = "idle_tall",
 		deps           = {"charcoal", "log", "kyno_kokonuttree_sapling", "kyno_kokonut"},
 		specialinfo    = "KOKONUTTREE",
+	},
+	
+	kyno_bananatree    =
+	{
+		name           = "kyno_bananatree",
+		type           = "thing",
+		subcat         = "tree",
+		tex            = "kyno_bananatree.tex",
+		prefab         = "kyno_bananatree",
+		workable       = "CHOP",
+		pickable       = true,
+		burnable       = true,
+		bank           = "kyno_bananatree",
+		build          = "kyno_bananatree",
+		anim           = "idle_loop",
+		scale          = 2,
+		animoffsetx    = 20,
+		animoffsety    = -30,
+		deps           = {"kyno_banana", "log", "twigs"},
+		specialinfo    = "SURFACEBANANATREE",
 	},
 	
 	kyno_musselstick   =

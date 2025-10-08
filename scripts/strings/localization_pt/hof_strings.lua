@@ -10600,9 +10600,6 @@ STRINGS.CHARACTERS.WURT.DESCRIBE.REGULARLASAGNA = "O que... tem nisso?"
 STRINGS.CHARACTERS.WALTER.DESCRIBE.REGULARLASAGNA = "Vou cozinhar uma lasanha-monstro para você depois, garota."
 STRINGS.CHARACTERS.WANDA.DESCRIBE.REGULARLASAGNA = "De dar água na boca."
 
-STRINGS.NAMES.KYNO_TRUFFLES = "Trufas"
-STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_TRUFFLES = "This does not have a pickable item yet!"
-
 STRINGS.NAMES.KYNO_MOON_FROGLEGS = "Pernas de Sapo Lunar"
 STRINGS.RECIPE_DESC.KYNO_MOON_FROGLEGS = "Pernas de sapo infundido com poder da Lua!"
 STRINGS.NAMES.KYNO_MOON_FROGLEGS_COOKED = "Pernas de Sapo Lunar Cozidas"

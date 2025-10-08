@@ -194,6 +194,7 @@ local function fn()
 	inst:AddTag("renewable")
 	inst:AddTag("lunarplant_target")
 	inst:AddTag("kyno_coffeebush")
+	inst:AddTag("volcanicplant")
 	
 	inst.entity:SetPristine()
 

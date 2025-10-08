@@ -168,4 +168,30 @@ local function fn()
 	return inst
 end
 
-return Prefab("kyno_deciduousforest_shop", fn, assets, prefabs)
+local function placeholderfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	inst:AddTag("NOCLICK")
+	inst:AddTag("NOBLOCK")
+	inst:AddTag("placeholder")
+	inst:AddTag("fruittree")
+	inst:AddTag("antlion_sinkhole_blocker")
+	
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("inspectable")
+	
+	return inst
+end
+
+return Prefab("kyno_deciduousforest_shop", fn, assets, prefabs),
+Prefab("kyno_fruittree_placeholder", placeholderfn, assets, prefabs)

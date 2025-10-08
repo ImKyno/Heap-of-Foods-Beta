@@ -1,18 +1,20 @@
 local PLANT_DEFS = require("prefabs/farm_plant_defs").PLANT_DEFS
 
+-- Note for myself: Commenting out veggie animations can fix them if they are invisible (?)
+-- Happened once during beta testing, I don't know why, of course I never do.
 local assets_veggies = 
 {
-    Asset("ANIM", "anim/kyno_veggies.zip"),
+    -- Asset("ANIM", "anim/kyno_veggies.zip"),
 	Asset("ANIM", "anim/kyno_rice.zip"),
-	
-	Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_fennel.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_parznip.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_radish.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_rice.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_sweetpotato.zip"),
-	Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
+		
+	-- Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
+	-- Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
+	-- Asset("ANIM", "anim/farm_plant_kyno_fennel.zip"),
+	-- Asset("ANIM", "anim/farm_plant_kyno_parznip.zip"),
+	-- Asset("ANIM", "anim/farm_plant_kyno_radish.zip"),
+	-- Asset("ANIM", "anim/farm_plant_kyno_rice.zip"),
+	-- Asset("ANIM", "anim/farm_plant_kyno_sweetpotato.zip"),
+	-- Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -153,8 +155,21 @@ PlayWaxAnimation = function(inst)
 end
 
 local function MakeVeggie(name)
-    local assets_oversized = {
+    local assets_oversized = 
+	{
         Asset("ANIM", "anim/" .. PLANT_DEFS[name].build .. ".zip"),
+		
+		-- Asset("ANIM", "anim/kyno_veggies.zip"),
+		-- Asset("ANIM", "anim/kyno_rice.zip"),
+		
+		-- Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
+		-- Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
+		-- Asset("ANIM", "anim/farm_plant_kyno_fennel.zip"),
+		-- Asset("ANIM", "anim/farm_plant_kyno_parznip.zip"),
+		-- Asset("ANIM", "anim/farm_plant_kyno_radish.zip"),
+		-- Asset("ANIM", "anim/farm_plant_kyno_rice.zip"),
+		-- Asset("ANIM", "anim/farm_plant_kyno_sweetpotato.zip"),
+		-- Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
 		
 		Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 		Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -294,9 +309,6 @@ local function MakeVeggie(name)
         inst:AddComponent("inspectable")
         inst:AddComponent("inventoryitem")
 
-        MakeSmallBurnable(inst)
-        MakeSmallPropagator(inst)
-
         inst:AddComponent("bait")
         inst:AddComponent("tradable")
 		
@@ -305,7 +317,6 @@ local function MakeVeggie(name)
 		
 		MakeSmallBurnable(inst)
         MakeSmallPropagator(inst)
-
         MakeHauntableLaunchAndPerish(inst)
 
         return inst
@@ -356,15 +367,11 @@ local function MakeVeggie(name)
         inst:AddComponent("inspectable")
         inst:AddComponent("inventoryitem")
 
-        MakeSmallBurnable(inst)
-        MakeSmallPropagator(inst)
-
         inst:AddComponent("bait")
         inst:AddComponent("tradable")
 		
 		MakeSmallBurnable(inst)
         MakeSmallPropagator(inst)
-
         MakeHauntableLaunchAndPerish(inst)
 
         return inst
@@ -447,7 +454,6 @@ local function MakeVeggie(name)
         MakeMediumBurnable(inst)
         inst.components.burnable:SetOnBurntFn(oversized_onburnt)
         MakeMediumPropagator(inst)
-
         MakeHauntableWork(inst)
 
         inst.from_plant = false
@@ -518,7 +524,6 @@ local function MakeVeggie(name)
         MakeMediumBurnable(inst)
         inst.components.burnable:SetOnBurntFn(oversized_onburnt)
         MakeMediumPropagator(inst)
-
         MakeHauntableWork(inst)
 
 		-- Don't use this, we don't have proper animations!

@@ -242,8 +242,8 @@ local PrefabValues =
 	["kyno_sweetpotato_ground"] = .03,
 	["kyno_rockflippable"]      = .04, -- Decreased this because of low beefalo amounts. Wheats too.
 	["kyno_wildwheat"]          = .04,
-	["kyno_truffles_ground"]    = .2,
-	["kyno_radish_ground"]      = .3,
+	["kyno_truffles_ground"]    = .2,  -- Want truffles to be slightly rare and be like cacti.
+	["kyno_radish_ground"]      = .7,
 }
 
 for prefab, rooms in pairs(RoomPrefabs) do
@@ -265,7 +265,7 @@ end)
 
 local FruitTreeShopRooms = 
 {
-	"DeepDeciduous",
+	-- "DeepDeciduous",
 	"MagicalDeciduous",
 	"DeciduousMole",
 	"MolesvilleDeciduous",
@@ -303,23 +303,17 @@ AddTaskSetPreInitAny(function(tasksetdata)
 		tasksetdata.ocean_prefill_setpieces = {}
 	end
 
+	-- Islands are too big to generated, using this instead.
 	tasksetdata.ocean_prefill_setpieces["SerenityIsland"] = { count = 1 }
 	tasksetdata.ocean_prefill_setpieces["MeadowIsland"]   = { count = 1 }
 	
 	for k, layout in pairs(OCEAN_SETPIECES) do
 		tasksetdata.ocean_prefill_setpieces[layout]       = { count = math.random(TUNING.HOF_MIN_OCEANSETPIECES, TUNING.HOF_MAX_OCEANSETPIECES) }
 	end
-end)
-
--- Make our setpieces a must for when generating the world.
-AddLevelPreInit("forest", function(level)
-    level.required_setpieces = level.required_setpieces or {}
 	
-	table.insert(level.required_setpieces, "SerenityIsland")
-	table.insert(level.required_setpieces, "MeadowIsland")
-	table.insert(level.required_setpieces, "FruitTreeShop")
-	
-	for k, layout in pairs(OCEAN_SETPIECES) do
-		table.insert(level.required_setpieces, layout)
+	if not tasksetdata.required_prefabs then
+		tasksetdata.required_prefabs = {}
 	end
+	
+	table.insert(tasksetdata.required_prefabs, "kyno_deciduousforest_shop")
 end)
