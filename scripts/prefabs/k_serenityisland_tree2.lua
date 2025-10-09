@@ -234,6 +234,7 @@ local function shortfn()
 	inst:AddTag("plant")
     inst:AddTag("shelter")
 	inst:AddTag("sugartree")
+	inst:AddTag("sugartree_growing")
 
     inst.entity:SetPristine()
 
@@ -363,6 +364,7 @@ local function normalfn()
 	inst:AddTag("plant")
     inst:AddTag("shelter")
 	inst:AddTag("sugartree")
+	inst:AddTag("sugartree_growing")
 
     inst.entity:SetPristine()
 

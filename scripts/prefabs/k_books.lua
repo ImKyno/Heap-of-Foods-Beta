@@ -95,6 +95,40 @@ local function TryGrowth(inst, maximize)
 			end
 		end
 	end
+	
+	if inst.components.growable ~= nil and ((inst:HasTag("tree") or inst:HasTag("winter_tree")) and not inst:HasTag("stump")) then
+		local stage_data = inst.components.growable:GetCurrentStageData()
+		local stage_name = stage_data and stage_data.name or nil
+
+		if stage_name == "tall" then
+			if inst:HasTag("ancienttree") and inst.components.pickable ~= nil then
+				if inst.components.pickable:CanBePicked() and inst.components.pickable.caninteractwith then
+					return false
+				end
+			end
+			
+			return false
+		end
+
+		inst.components.growable:DoGrowth()
+	end
+	
+	-- Special case for this stupid tree using timer ahahahaha.
+	-- I really should rewrite its code to use the proper growable system.
+	if inst.components.timer ~= nil then
+		print("print 1")
+		if inst:HasTag("sugartree_growing") then
+			print("print 2")
+			local timer_name = inst.prefab == "kyno_sugartree_short" and "kyno_sugartree_short_timer"
+			or inst.prefab == "kyno_sugartree_normal" and "kyno_sugartree_normal_timer"
+
+			if timer_name ~= nil then
+				print("print 3")
+				inst:PushEvent("timerdone", { name = timer_name })
+				return true
+			end
+		end
+	end
 
 	if inst.components.pickable ~= nil then
 		if inst.components.pickable:CanBePicked() and inst.components.pickable.caninteractwith then
@@ -145,45 +179,73 @@ local function GardeningSpellFn()
 end
 
 local function DoGardeningSpell(x, z, max_targets, maximize)
-	local ents = TheSim:FindEntities(x, 0, z, 30, nil, GARDENING_CANT_TAGS, GARDENING_ONEOF_TAGS)
-	local targets = {}
-	
-	for i, v in ipairs(ents) do
-		if v.components.pickable ~= nil or v.components.crop ~= nil or v.components.growable ~= nil or v.components.harvestable ~= nil then
-			table.insert(targets, v)
+    local ents = TheSim:FindEntities(x, 0, z, 30, nil, GARDENING_CANT_TAGS, GARDENING_ONEOF_TAGS)
+    local grow_targets = {}
+
+	for _, v in ipairs(ents) do
+		local can_grow = false
+
+		if v.components.growable ~= nil then
+			local stage = v.components.growable:GetCurrentStageData()
+			local stagename = stage ~= nil and stage.name or nil
+
+			if v:HasTag("farm_plant") then
+				if stagename ~= "full" and stagename ~= "rotten" then
+					can_grow = true
+				end
+			elseif v:HasTag("tree") or v:HasTag("winter_tree") then
+				if stagename == "old" then
+					v.components.growable:DoGrowth()
+					can_grow = true
+				elseif stagename ~= "tall" and not v:HasTag("stump") then
+					can_grow = true
+				end
+			else
+				can_grow = true
+			end
+		elseif v.components.timer ~= nil then
+			if v:HasTag("sugartree_growing") then
+				can_grow = true
+			else
+				can_grow = true
+			end
+		elseif v.components.pickable ~= nil or v.components.crop ~= nil or v.components.harvestable ~= nil then
+			can_grow = true
+			
+			if v.components.pickable ~= nil and v.components.pickable:CanBePicked() then
+				can_grow = false
+			end
+			
+			if v.components.crop ~= nil and v.components.crop:IsReadyForHarvest() then
+				can_grow = false
+			end
+			
+			if v.components.harvestable ~= nil and v.components.harvestable:CanBeHarvested() then
+				can_grow = false
+			end
+		end
+
+		if can_grow then
+			table.insert(grow_targets, v)
 		end
 	end
 
-	if #targets == 0 then
-		return false, "NOHORTICULTURE"
-	end
-	
-	local ready_for_harvest = false
-	
-	for _, v in ipairs(targets) do
-		if (v.components.pickable ~= nil and v.components.pickable:CanBePicked()) or (v.components.crop ~= nil 
-		and v.components.crop:IsReadyForHarvest()) or (v.components.harvestable ~= nil and v.components.harvestable:CanBeHarvested()) then
-			ready_for_harvest = true
-			break
-		end
-	end
-
-	if ready_for_harvest then
+	if #grow_targets == 0 then
 		return false, "NOHORTICULTURE"
 	end
 
 	local spell = SpawnPrefab("kyno_book_gardening_spell")
 	spell.Transform:SetPosition(x, 0, z)
-			
-	if #ents > 0 then
-		TryGrowth(table.remove(ents, math.random(#ents)))
-				
-		if #ents > 0 then
-			local timevar = 1 - 1 / (#ents + 1)
-					
-			for i, v in ipairs(ents) do
-				v:DoTaskInTime(timevar * math.random(), TryGrowth)
-			end
+
+	local target = table.remove(grow_targets, math.random(#grow_targets))
+    
+	TryGrowth(target)
+
+	if #grow_targets > 0 then
+		local timevar = 1 - 1 / (#grow_targets + 1)
+		
+		for _, v in ipairs(grow_targets) do
+			v:DoTaskInTime(timevar * math.random(), TryGrowth)
 		end
 	end
 
@@ -194,7 +256,7 @@ local book_defs =
 {
 	{
 		name = "kyno_book_gardening",
-		uses = 2, -- Gonna use 2 because this book allows giant crops. TUNING.BOOK_USES_SMALL
+		uses = 100, -- Gonna use 2 because this book allows giant crops. TUNING.BOOK_USES_SMALL
 		read_sanity = -TUNING.SANITY_HUGE,
 		peruse_sanity = -TUNING.SANITY_HUGE,
 		
