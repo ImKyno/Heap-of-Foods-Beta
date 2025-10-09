@@ -55,6 +55,10 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 		if ApplyRetrofit("Ocean Setpieces", "kyno_swordfish_spawner", require("map/hof_retrofit_forest").HofRetrofitting_OceanSetpieces) then
 			table.insert(applied, "Ocean Setpieces")
 		end
+		
+		if ApplyRetrofit("Fruit Tree Shop", "kyno_deciduousforest_shop", require("map/hof_retrofit_forest").HofRetrofitting_DeciduousForestShop) then
+			table.insert(applied, "Fruit Tree Shop")
+		end
 
 		if HOF_MAPUTIL.RetrofitOceanLayouts() then
 			table.insert(applied, "Ocean Topology Tags")

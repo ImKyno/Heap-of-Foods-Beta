@@ -1,11 +1,16 @@
 local WEED_DEFS = require("prefabs/weed_defs").WEED_DEFS
 
-local assets_weeds = {
+local assets_weeds = 
+{
     Asset("ANIM", "anim/kyno_veggies.zip"),
 	
-	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
-	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
-	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
+    Asset("ANIM", "anim/firenettles.zip"),
+    Asset("ANIM", "anim/forgetmelots.zip"),
+    Asset("ANIM", "anim/tillweed.zip"),
+	
+    Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
+    Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
+    Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
 local function can_plant_seed(inst, pt, mouseover, deployer)
@@ -121,7 +126,7 @@ local function MakeWeedSeed(name)
     return Prefab(name .. "_seeds", seeds_common(name), assets_weeds, prefabs)  
 end
 
-return MakeWeedSeed("forgetmelots"),
-MakeWeedSeed("firenettles"),
+return MakeWeedSeed("firenettles"),
+MakeWeedSeed("forgetmelots"),
 MakeWeedSeed("tillweed")
 -- MakeWeedSeed("ivy") -- Not sure...

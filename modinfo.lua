@@ -28,7 +28,7 @@ Seaside Island welcomes a new merchant! Assisted by a familiar survivor, he has 
 Make sure to check his wares every now and then to see what he got to offer. As his inventory is always changing!
 
 󰀌 Mod Version: 2.4-B
-󰀧 Update: Preparing The Hook
+󰀧 Update: Preparing The Grounds
 ]],
 		zh  =
 [[
@@ -43,7 +43,7 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 记得不时查看他的商品，看看他带来了什么新奇好货。因为他的库存总是在变化！
 
 󰀌 Mod 版本： 2.4-B
-󰀧 更新内容： 准备“排队”
+󰀧 更新内容： 准备地基
 ]],	
 		zht =
 [[
@@ -58,7 +58,7 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 記得不時查看他的商品，看看他帶來了什麼新奇好貨。因為他的庫存總是在變化！
 
 󰀌 Mod 版本： 2.4-B
-󰀧 更新內容： 準備「排隊」
+󰀧 更新內容： 準備地基
 ]],	
 		pt  = 
 [[
@@ -73,7 +73,7 @@ A Ilha Beira-mar dá as boas-vindas a um novo comerciante! Com a ajuda de um sob
 Não deixe de conferir os produtos dele de vez em quando para ver o que ele tem a oferecer. Já que o inventário dele está sempre mudando!
 
 󰀌 Versão do Mod: 2.4-B
-󰀧 Atualização: Preparando o Anzol
+󰀧 Atualização: Preparando o Terreno
 ]],
 		pl  =
 [[
@@ -86,7 +86,7 @@ Não deixe de conferir os produtos dele de vez em quando para ver o que ele tem 
 Wyspa nad Morzem wita nowego handlarza! Wspierany przez znanego ocalałego, otworzył wyjątkowy punkt handlowy. Specjalizuje się w rzadkich przedmiotach i składnikach, które w przeciwnym razie byłyby niezwykle trudne do zdobycia, a nawet w niektórych przypadkach nie do znalezienia nigdzie indziej. 
 
 󰀌 Wersja Moda: 2.4-B
-󰀧 Aktualizacja: Przygotowanie Hook
+󰀧 Aktualizacja: Przygotowania do Gruntu
 ]],
 		es  =
 [[
@@ -101,7 +101,7 @@ Wyspa nad Morzem wita nowego handlarza! Wspierany przez znanego ocalałego, otwo
 No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrecer, ¡ya que su inventario cambia constantemente!
 
 󰀌 Versión del Mod: 2.4-B
-󰀧 Actualización: Preparando el Gancho
+󰀧 Actualización: Preparando el Terreno
 ]],
 	},
 

@@ -128,11 +128,23 @@ Layouts["FruitTreeShop"]                 = StaticLayout.Get("map/static_layouts/
 	force_rotation                       = LAYOUT_ROTATION.NORTH,
 	add_topology                         =
 	{
-		room_id                          = "StaticLayoutIsland:DeciduousForestShop",
+		room_id                          = "StaticLayout:DeciduousForestShop",
 		tags                             = {"FruitTreeArea"},
 	},
 })
 Layouts["FruitTreeShop"].ground_types    = _G.DECIDUOUSFOREST_SHOP_GROUNDS
+
+Layouts["DinaMemorial"]                  = StaticLayout.Get("map/static_layouts/hof_dinamemorial",
+{
+	start_mask                           = PLACE_MASK.IGNORE_IMPASSABLE,
+	fill_mask                            = PLACE_MASK.IGNORE_IMPASSABLE,
+	force_rotation                       = LAYOUT_ROTATION.NORTH,
+	add_topology                         =
+	{
+		room_id                          = "StaticLayout:DinaMemorial",
+		tags                             = {"FruitTreeArea"},
+	},
+})
 
 -- Custom Layout for Waterlogged biome.
 local function HofWaterloggedArea()

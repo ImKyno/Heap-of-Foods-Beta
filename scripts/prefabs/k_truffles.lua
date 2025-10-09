@@ -28,7 +28,7 @@ local function OnMakeEmpty(inst)
 end
 
 local function OnRegen(inst)	
-	inst.AnimState:PushAnimation("planted", false)
+	inst.AnimState:PushAnimation("idle_ground")
 	inst.SoundEmitter:PlaySound("dontstarve/common/mushroom_down")
 end
 
@@ -78,7 +78,7 @@ local function fn()
 	
 	inst.AnimState:SetBank("kyno_truffles")
 	inst.AnimState:SetBuild("kyno_truffles")
-	inst.AnimState:PlayAnimation("planted", true)
+	inst.AnimState:PlayAnimation("idle_ground")
 	
 	inst:AddTag("plant")
 	inst:AddTag("renewable")

@@ -50,7 +50,7 @@ local hof_init_world   =
 {
 	"hof_tiledefs",
 	"hof_regrowth",
-	--"hof_retrofit",
+	"hof_retrofit",
 	"hof_pollinator_component",
 	"hof_worldgen",
 	"hof_worldsettings",

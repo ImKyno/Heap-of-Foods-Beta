@@ -283,6 +283,28 @@ for k, roomname in pairs(FruitTreeShopRooms) do
 	end)
 end
 
+local DinaMemorialRooms =
+{
+	"BGForest", 
+	"DeepForest", 
+	"Forest", 
+	"BGCrappyForest", 
+	"CrappyDeepForest", 
+	"CrappyForest",
+	"SpiderForest", 
+	"MoonbaseOne", 
+}
+
+for k, roomname in pairs(DinaMemorialRooms) do
+	AddRoomPreInit(roomname, function(room)
+		if not room.tags then
+			room.tags = { "DinaMemorial_Spawner" }
+		elseif room.tags then
+			table.insert(room.tags, "DinaMemorial_Spawner")
+		end
+	end)
+end
+
 local OCEAN_SETPIECES =
 {
 	"hof_oceansetpiece_crates",
@@ -315,5 +337,6 @@ AddTaskSetPreInitAny(function(tasksetdata)
 		tasksetdata.required_prefabs = {}
 	end
 	
+	table.insert(tasksetdata.required_prefabs, "kyno_dinamemorial_marker")
 	table.insert(tasksetdata.required_prefabs, "kyno_deciduousforest_shop")
 end)

@@ -152,6 +152,7 @@ local LOOT =
 		{ weight = 1, prefab = "ceviche",                amount = {1, 3},     season = nil },
 		{ weight = 1, prefab = "veggieomlet",            amount = {1, 4},     season = nil },
 		{ weight = 1, prefab = "beefalotreat",           amount = {1, 3},     season = nil },
+		{ weight = 1, prefab = "mandrakesoup",           amount = {1, 2},     season = nil },
 	},
 }
 

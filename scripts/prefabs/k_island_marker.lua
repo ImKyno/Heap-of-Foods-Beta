@@ -39,5 +39,10 @@ local function meadow_marker()
 	return commonfn("MeadowIsland", "meadow_cc_marker")
 end
 
+local function dina_marker()
+	return commonfn("DinaMemorial", "dina_cc_marker")
+end
+
 return Prefab("kyno_serenity_cc_marker", serenity_marker, assets),
-Prefab("kyno_meadow_cc_marker", meadow_marker, assets)
+Prefab("kyno_meadow_cc_marker", meadow_marker, assets),
+Prefab("kyno_dinamemorial_marker", dina_marker, assets)
