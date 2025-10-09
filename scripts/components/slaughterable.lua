@@ -1,3 +1,61 @@
+--[[------------------------------------------------------------------------------------------------
+
+	* Slaughter Tools should now work for any mob with "slaughterable" component.
+	* Animals set to "Fearable" will run away from players who have recently used Slaughter Tools.
+	* Animals set to "Aggressive" will be hostile towards players who have recently used Slaughter Tools.
+
+	* Characters with tag "animal_butcher" can get extra loots set via "SetExtraLoot(table or string)"
+	*  Custom loot code can be added via "SetExtraLootFn(function)"
+	* Default loot is already handled by the game and doesn't need to be set.
+
+	* To start, on your prefab:
+	inst:AddComponent("slaughterable")
+
+	* To make an animal run away from players who have recently used Slaughter Tools:
+	inst.components.slaughterable:MakeFearable()
+
+	* To make an animal hostile to players who have recently used Slaughter Tools:
+	inst.components.slaughterable:MakeAggressive()
+
+	* There are multiple ways to add extra loot:
+	* Single loot
+	inst.components.slaughterable:SetExtraLoot("meat")
+	
+	* Multiple loots
+	inst.components.slaughterable:SetExtraLoot({"meat", "meat"})
+	
+	* Loot with quantity and chance:
+	inst.components.slaughterable:SetExtraLoot(
+	{
+		{ prefab = "meat",        count = 2, chance = 0.75 }, -- 75%
+		{ prefab = "beefalowool", count = 1, chance = 1.00 }, -- 100%
+		{ prefab = "horn",        count = 1, chance = 0.10 },  -- 10%
+	})
+
+	* Extra Functions and Event listeners:
+	* Function for extra loot
+	inst.components.slaughterable:SetOnExtraLootDroppedFn(function(inst, doer, loot)
+		print("Set something cool to happen?")
+	end)
+
+	* Event listener for when killed:
+	inst:ListenForEvent("slaughtered", function(inst, data)
+		print("We have been slaughtered!")
+	end)
+
+	* Event listener for extra loots:
+	inst:ListenForEvent("slaughtered_extraloot", function(inst, data)
+		print("Extra Loot:", data.prefab, "Doer:", data.doer and data.doer.prefab)
+	end)
+	
+	* Relevant tags:
+	* "slaughterable"      - Component tag.
+	* "animal_butcher"     - Extra loot when slaughtering an animal.
+	* "butcher_aggressive" - Makes animal aggressive towards the butcher.
+	* "butcher_fearable"   - Makes animal fear the butcher.
+
+]]------------------------------------------------------------------------------------------------
+
 local Slaughterable = Class(function(self, inst)
 	self.inst = inst
 	self.extra_loot = nil
