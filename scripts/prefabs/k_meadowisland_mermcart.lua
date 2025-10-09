@@ -13,6 +13,7 @@ local prefabs =
 }
 
 local EMPTY_PREFAB = "EMPTY"
+local SWEETPOTATO_OVERSIZED = "kyno_sweetpotato_oversized" -- Too large!
 local RUMMAGE_SOUND_NAME = "rummage"
 
 local function SquidTest()
@@ -60,6 +61,8 @@ local LOOT =
 		{ weight = 2, prefab = "tentaclespots",          amount = {1, 3},     season = "autumn" },
 		{ weight = 2, prefab = "gears",                  amount = {1, 3},     season = "autumn" },
 		{ weight = 1, prefab = "furtuft",                amount = {1, 15},    season = "autumn" }, -- 3.125%
+		{ weight = 1, prefab = "potato_oversized",       amount = 1,          season = "autumn" },         
+		{ weight = 1, prefab = "corn_oversized",         amount = 1,          season = "autumn" },
 		
 		-- WINTER
 		{ weight = 8, prefab = "garlic_seeds",           amount = {3, 9},     season = "winter" },
@@ -71,6 +74,8 @@ local LOOT =
 		{ weight = 4, prefab = "catcoonhat",                                  season = "winter" },
 		{ weight = 2, prefab = "winterhat",                                   season = "winter" },
 		{ weight = 1, prefab = "walrus_tusk",                                 season = "winter" },
+		{ weight = 1, prefab = "garlic_oversized",       amount = 1,          season = "winter" },         
+		{ weight = 1, prefab = "pumpkin_oversized",      amount = 1,          season = "winter" },
 		
 		-- SPRING
 		{ weight = 8, prefab = "durian_seeds",           amount = {3, 9},     season = "spring" },
@@ -80,6 +85,8 @@ local LOOT =
 		{ weight = 8, prefab = "kyno_cucumber_seeds",    amount = {3, 9},     season = "spring" },
 		{ weight = 4, prefab = "umbrella",                                    season = "spring" },
 		{ weight = 2, prefab = "rainhat",                                     season = "spring" },
+		{ weight = 1, prefab = "kyno_parznip_oversized", amount = 1,          season = "spring" },         
+		{ weight = 1, prefab = "kyno_radish_oversized",  amount = 1,          season = "spring" },
 		
 		-- SUMMER
 		{ weight = 8, prefab = "dragonfruit_seeds",      amount = {3, 9},     season = "summer" },
@@ -92,6 +99,8 @@ local LOOT =
 		{ weight = 2, prefab = "icehat",                                      season = "summer" },
 		{ weight = 2, prefab = "watermelonhat",                               season = "summer" },
 		{ weight = 1, prefab = "hawaiianshirt",                               season = "summer" },
+		{ weight = 8, prefab = SWEETPOTATO_OVERSIZED,    amount = 1,          season = "summer" },         
+		{ weight = 1, prefab = "kyno_turnip_oversized",  amount = 1,          season = "summer" },
 		
 		-- ALL TIMES
 		{ weight = 8, prefab = "kyno_wheat",             amount = {3, 10},    season = nil },
@@ -152,7 +161,7 @@ local LOOT =
 		{ weight = 1, prefab = "ceviche",                amount = {1, 3},     season = nil },
 		{ weight = 1, prefab = "veggieomlet",            amount = {1, 4},     season = nil },
 		{ weight = 1, prefab = "beefalotreat",           amount = {1, 3},     season = nil },
-		{ weight = 1, prefab = "mandrakesoup",           amount = {1, 2},     season = nil },
+		{ weight = 1, prefab = "mandrakesoup",           amount = 1,          season = nil },
 	},
 }
 

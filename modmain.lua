@@ -50,7 +50,6 @@ local hof_init_world   =
 {
 	"hof_tiledefs",
 	"hof_regrowth",
-	"hof_retrofit",
 	"hof_pollinator_component",
 	"hof_worldgen",
 	"hof_worldsettings",
@@ -91,10 +90,15 @@ _G.CONFIGS_HOF                =
 
 _G.CONFIGS_HOF.SEASONALFOOD   = GetModConfigData("SEASONALFOOD")
 _G.CONFIGS_HOF.SCRAPBOOK      = GetModConfigData("SCRAPBOOK")
+_G.CONFIGS_HOF.AUTORETROFIT   = GetModConfigData("AUTORETROFIT")
 
 if _G.CONFIGS_HOF.SCRAPBOOK then
 	modimport("hof_init/misc/hof_scrapbook")
 	modimport("hof_init/misc/hof_shinyloots") -- Requires Scrapbook to be enabled...
+end
+
+if _G.CONFIGS_HOF.AUTORETROFIT then
+	modimport("hof_init/world/hof_retrofit")
 end
 
 -- This belongs to the Accomplishments Mod.

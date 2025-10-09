@@ -1313,6 +1313,52 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			},
 		},
 		
+		AUTORETROFIT =
+		{
+			NAME =
+			{
+				"Auto Retrofit",
+				zh  = "自动改造",
+				zht = "自動改造",
+				pt  = "Retrofit Automático",
+				pl  = "Automatyczna Modernizacja",
+				es  = "Retrofit Automático",
+			},
+			
+			HOVER =
+			{
+				"Should the Server check every time if the World needs any Retrofits during initialization? This option does not auto-disable afterwards.",
+				zh  = "服务器是否应在初始化期间每次检查世界是否需要改造？ 此选项之后不会自动禁用。",
+				zht = "伺服器是否應在初始化期間每次檢查世界是否需要改造？ 此選項之後不會自動禁用。",
+				pt  = "Permitir que o Servidor cheque toda vez se o Mundo precisa de algum Retrofit durante a inicialização? Esta opção não é desativada automaticamente depois.",
+				pl  = "Czy serwer powinien sprawdzać za każdym razem, czy świat wymaga modernizacji podczas inicjalizacji? Ta opcja nie zostanie automatycznie wyłączona później.",
+				es  = "¿Debe el Servidor comprobar cada vez si el Mundo necesita algún Retrofit durante la inicialización? Esta opción no se desactivará automáticamente después.",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Server will not check for Retrofits during initialization.",
+					zh  = "服务器在初始化期间不会检查改造。",
+					zht = "伺服器在初始化期間不會檢查改造。",
+					pt  = "O Servidor não irá checar por Retrofits durante a inicialização.",
+					pl  = "Serwer nie będzie sprawdzał modernizacji podczas inicjalizacji.",
+					es  = "El Servidor no comprobará los Retrofits durante la inicialización.",
+				},
+				
+				ENABLED =
+				{
+					"Server will check for Retrofits during initialization.",
+					zh  = "服务器将在初始化期间检查改造。",
+					zht = "伺服器將在初始化期間檢查改造。",
+					pt  = "O Servidor irá checar por Retrofits durante a inicialização.",
+					pl  = "Serwer będzie sprawdzał modernizacje podczas inicjalizacji.",
+					es  = "El Servidor comprobará los Retrofits durante la inicialización.",
+				},
+			},
+		},
+		
 		MODTRADES =
 		{
 			NAME =
@@ -1774,6 +1820,22 @@ local RETROFIT_OPTIONS       =
 	}
 }
 
+local AUTORETROFIT_LABEL     = ChooseTranslationTable(STRINGS.SETTINGS.AUTORETROFIT.NAME)
+local AUTORETROFIT_HOVER     = ChooseTranslationTable(STRINGS.SETTINGS.AUTORETROFIT.HOVER)
+local AUTORETROFIT_OPTIONS   =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.AUTORETROFIT.HOVER_OPTIONS.DISABLED),
+		data                 = false
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.AUTORETROFIT.HOVER_OPTIONS.ENABLED),
+		data                 = true
+	}
+}
+
 local MODTRADES_LABEL        = ChooseTranslationTable(STRINGS.SETTINGS.MODTRADES.NAME)
 local MODTRADES_HOVER        = ChooseTranslationTable(STRINGS.SETTINGS.MODTRADES.HOVER)
 local MODTRADES_OPTIONS      =
@@ -1819,5 +1881,6 @@ configuration_options        =
 	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false },
  -- { name                   = "MODRETROFITFORCE", label = RETROFITFORCE_LABEL, hover = RETROFITFORCE_HOVER, options = RETROFITFORCE_OPTIONS, default = false },
  -- { name                   = "MODRETROFIT",      label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,      options = RETROFIT_OPTIONS,      default = 0     },
+	{ name                   = "AUTORETROFIT",     label = AUTORETROFIT_LABEL,  hover = AUTORETROFIT_HOVER,  options = AUTORETROFIT_OPTIONS,  default = false },
 	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,     options = MODTRADES_OPTIONS,     default = false },
 }

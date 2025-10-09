@@ -59,6 +59,13 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 		if ApplyRetrofit("Fruit Tree Shop", "kyno_deciduousforest_shop", require("map/hof_retrofit_forest").HofRetrofitting_DeciduousForestShop) then
 			table.insert(applied, "Fruit Tree Shop")
 		end
+		
+		-- Not really required for any content, just something nice to have. Will leave it for new worlds only.
+		--[[
+		if ApplyRetrofit("Dina Memorial", "kyno_dinamemorial_marker", require("map/hof_retrofit_forest").HofRetrofitting_DinaMemorial) then
+			table.insert(applied, "Dina Memorial")
+		end
+		]]--
 
 		if HOF_MAPUTIL.RetrofitOceanLayouts() then
 			table.insert(applied, "Ocean Topology Tags")

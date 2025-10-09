@@ -581,7 +581,7 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 	end
 
 	if #shop_candidate_nodes == 0 then
-		print("Retrofitting - Nenhuma room válida encontrada para spawnar o layout.")
+		print("Retrofitting for Heap of Foods Mod - Couldn't find a valid node!")
 		return
 	end
 
@@ -604,7 +604,7 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 			end
 		end
 		
-		print("Retrofitting - " .. tostring(#candidates) .. " candidate locations")
+		print("Retrofitting for Heap of Foods Mod - Found " .. tostring(#candidates) .. " candidate locations.")
 
 		local min_x, max_x, min_y, max_y = node.poly[1][1], node.poly[1][1], node.poly[1][2], node.poly[1][2]
 		
@@ -624,10 +624,10 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 			end
 		end
 
-		print("Retrofitting - " .. tostring(#valid_candidates) .. " candidates dentro do node")
+		print("Retrofitting for Heap of Foods Mod - " .. tostring(#valid_candidates) .. " candidates locations inside node.")
 
 		if #valid_candidates == 0 then
-			print("Retrofitting - Nenhuma posição válida dentro do bioma.")
+			print("Retrofitting for Heap of Foods Mod - Couldn't find valid location inside biome.")
 			return false
 		end
 
@@ -648,8 +648,10 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 			local layout_h = #layout.ground or 10
 			local radius = math.max(layout_w, layout_h) * TILE_SCALE * 0.6
 
-			local world_x = left * TILE_SCALE - (map_width * TILE_SCALE * 0.5)
-			local world_y = top * TILE_SCALE - (map_height * TILE_SCALE * 0.5)
+			-- local world_x = left * TILE_SCALE - (map_width * TILE_SCALE * 0.5)
+			-- local world_y = top * TILE_SCALE - (map_height * TILE_SCALE * 0.5)
+			local world_x = (left - map_width / 2) * TILE_SCALE + (layout_w * TILE_SCALE) / 2
+			local world_y = (top - map_height / 2) * TILE_SCALE + (layout_h * TILE_SCALE) / 2
 
 			local blacklist = 
 			{
@@ -661,13 +663,15 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 				chester_eyebone = true,
 				insanityrock = true,
 				sanityrock = true,
+				lunarrift_portal = true,
+				lunarrift_crystal_big = true,
 			}
 			
-			print(string.format(">> Limpando área em (%.2f, %.2f), raio %.2f", world_x, world_y, radius))
+			print(string.format("Retrofitting for Heap of Foods Mod - Clearing area: (%.2f, %.2f), raio %.2f", world_x, world_y, radius))
 			local ents_to_remove = FindEntsInArea(savedata.ents, world_x - radius, world_y - radius, radius * 2)
 
 			if not ents_to_remove or #ents_to_remove == 0 then
-				print("Retrofitting - Nenhuma entidade para limpar na área.")
+				print("Retrofitting for Heap of Foods Mod - Nothing to clear in the area.")
 				return
 			end
 
@@ -679,26 +683,216 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 				if not blacklist[ent.prefab] then
 					table.remove(savedata.ents[ent.prefab], ent.index)
 					removed = removed + 1
-					print("Removed " .. tostring(ent.prefab))
+					print("Retrofitting for Heap of Foods Mod - Removed: " .. tostring(ent.prefab))
 				else
-					print("Preserved " .. tostring(ent.prefab))
+					print("Retrofitting for Heap of Foods Mod - Preserved: " .. tostring(ent.prefab))
 				end
 			end
 
-			print("Retrofitting - Área do layout limpa. Entidades removidas: " .. tostring(removed))
+			print("Retrofitting for Heap of Foods Mod - Area cleared. Removed entities: " .. tostring(removed))
 		end
 
 		ClearLayoutArea(savedata, layout, {left, top})
 		obj_layout.Place({left, top}, name, add_fn, nil, map)
 		
-		print("Retrofitting - Layout colocado com sucesso.")
+		print("Retrofitting for Heap of Foods Mod - Added Deciduous Forest Shop to the world.")
 		return true
 	end
 
 	local node = shop_candidate_nodes[math.random(#shop_candidate_nodes)]
 
 	if not PlaceLayoutAtNode(node, "FruitTreeShop") then
-		print("Retrofitting - Falhou ao adicionar o layout.")
+		print("Retrofitting for Heap of Foods Mod - Failed to add Deciduous Forest Shop to the world!")
+	end
+end
+
+local function HofRetrofitting_DinaMemorial(map, savedata)
+	local obj_layout = require("map/object_layout")
+
+	local VALID_ROOMS = 
+	{
+		"BGForest", 
+		"DeepForest", 
+		"Forest", 
+		"BGCrappyForest", 
+		"CrappyDeepForest", 
+		"CrappyForest",
+		"SpiderForest", 
+		"MoonbaseOne",
+	}
+
+	local topology = savedata.map.topology
+	local map_width = savedata.map.width
+	local map_height = savedata.map.height
+	local entities = savedata.ents
+	
+	local add_fn = 
+	{
+		fn = function(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
+			local x = (points_x[current_pos_idx] - width / 2) * TILE_SCALE
+			local y = (points_y[current_pos_idx] - height / 2) * TILE_SCALE
+				
+			x = math.floor(x * 100) / 100.0
+			y = math.floor(y * 100) / 100.0
+				
+			if entitiesOut[prefab] == nil then
+				entitiesOut[prefab] = {}
+			end
+				
+			local save_data = { x = x, z = y }
+				
+			if prefab_data then
+				if prefab_data.data then
+					if type(prefab_data.data) == "function" then
+						save_data["data"] = prefab_data.data()
+					else
+						save_data["data"] = prefab_data.data
+					end
+				end
+					
+				if prefab_data.id then
+					save_data["id"] = prefab_data.id
+				end
+					
+				if prefab_data.scenario then
+					save_data["scenario"] = prefab_data.scenario
+				end
+			end
+				
+			table.insert(entitiesOut[prefab], save_data)
+		end,
+		
+		args = { entitiesOut = entities, width = map_width, height = map_height, rand_offset = false, debug_prefab_list = nil}
+	}
+
+	local shop_candidate_nodes = {}
+	
+	for node_index, id_string in ipairs(topology.ids) do
+		for _, bg_string in ipairs(VALID_ROOMS) do
+			if id_string:find(bg_string) then
+				table.insert(shop_candidate_nodes, topology.nodes[node_index])
+			end
+		end
+	end
+
+	if #shop_candidate_nodes == 0 then
+		print("Retrofitting for Heap of Foods Mod - Couldn't find a valid node!")
+		return
+	end
+
+	local function PlaceLayoutAtNode(node, name)
+		local layout = obj_layout.LayoutForDefinition(name)
+
+		local area_size = 20
+		local num_steps = 30
+		local tile_size = #layout.ground
+
+		local candidates = {}
+		local valid_candidates = {}
+		
+		for x = 0, num_steps do
+			for y = 0, num_steps do
+				local left = 8 + (x > 0 and ((x * math.floor(map_width / num_steps)) - area_size - 16) or 0)
+				local top  = 8 + (y > 0 and ((y * math.floor(map_height / num_steps)) - area_size - 16) or 0)
+
+				table.insert(candidates, {left = left, top = top, distsq = VecUtil_LengthSq(left - map_width / 2, top - map_height / 2), })
+			end
+		end
+		
+		print("Retrofitting for Heap of Foods Mod - Found " .. tostring(#candidates) .. " candidate locations.")
+
+		local min_x, max_x, min_y, max_y = node.poly[1][1], node.poly[1][1], node.poly[1][2], node.poly[1][2]
+		
+		for _, point in ipairs(node.poly) do
+			min_x = math.min(min_x, point[1])
+			max_x = math.max(max_x, point[1])
+			min_y = math.min(min_y, point[2])
+			max_y = math.max(max_y, point[2])
+		end
+
+		for _, c in ipairs(candidates) do
+			local wx = (c.left - map_width/2) * TILE_SCALE
+			local wy = (c.top - map_height/2) * TILE_SCALE
+
+			if wx >= min_x and wx <= max_x and wy >= min_y and wy <= max_y then
+				table.insert(valid_candidates, c)
+			end
+		end
+
+		print("Retrofitting for Heap of Foods Mod - " .. tostring(#valid_candidates) .. " candidates locations inside node.")
+
+		if #valid_candidates == 0 then
+			print("Retrofitting for Heap of Foods Mod - Couldn't find valid location inside biome.")
+			return false
+		end
+
+		table.sort(valid_candidates, function(a, b)
+			local da = VecUtil_LengthSq(a.left - node.x, a.top - node.y)
+			local db = VecUtil_LengthSq(b.left - node.x, b.top - node.y)
+		
+			return da < db
+		end)
+
+		local candidate = valid_candidates[1]
+		local left, top = candidate.left, candidate.top
+		
+		local function ClearLayoutArea(savedata, layout, pos)
+			local left, top = pos[1], pos[2]
+
+			local layout_w = #layout.ground[1] or 10
+			local layout_h = #layout.ground or 10
+			local radius = math.max(layout_w, layout_h) * TILE_SCALE * 0.6
+
+			-- local world_x = left * TILE_SCALE - (map_width * TILE_SCALE * 0.5)
+			-- local world_y = top * TILE_SCALE - (map_height * TILE_SCALE * 0.5)
+			local world_x = (left - map_width / 2) * TILE_SCALE + (layout_w * TILE_SCALE) / 2
+			local world_y = (top - map_height / 2) * TILE_SCALE + (layout_h * TILE_SCALE) / 2
+
+			local blacklist = 
+			{
+				moonbase = true,
+				livingtree = true,
+				mandrake_planted = true,
+				lunarrift_portal = true,
+				lunarrift_crystal_big = true,
+			}
+			
+			print(string.format("Retrofitting for Heap of Foods Mod - Clearing area: (%.2f, %.2f), raio %.2f", world_x, world_y, radius))
+			local ents_to_remove = FindEntsInArea(savedata.ents, world_x - radius, world_y - radius, radius * 2)
+
+			if not ents_to_remove or #ents_to_remove == 0 then
+				print("Retrofitting for Heap of Foods Mod - Nothing to clear in the area.")
+				return
+			end
+
+			local removed = 0
+			
+			for i = #ents_to_remove, 1, -1 do
+				local ent = ents_to_remove[i]
+				
+				if not blacklist[ent.prefab] then
+					table.remove(savedata.ents[ent.prefab], ent.index)
+					removed = removed + 1
+					print("Retrofitting for Heap of Foods Mod - Removed: " .. tostring(ent.prefab))
+				else
+					print("Retrofitting for Heap of Foods Mod - Preserved: " .. tostring(ent.prefab))
+				end
+			end
+
+			print("Retrofitting for Heap of Foods Mod - Area cleared. Removed entities: " .. tostring(removed))
+		end
+
+		ClearLayoutArea(savedata, layout, {left, top})
+		obj_layout.Place({left, top}, name, add_fn, nil, map)
+		
+		print("Retrofitting for Heap of Foods Mod - Added Dina Memorial to the world.")
+		return true
+	end
+
+	local node = shop_candidate_nodes[math.random(#shop_candidate_nodes)]
+
+	if not PlaceLayoutAtNode(node, "DinaMemorial") then
+		print("Retrofitting for Heap of Foods Mod - Failed to add Dina Memorial to the world!")
 	end
 end
 
@@ -708,6 +902,7 @@ return
 	HofRetrofitting_MeadowIsland        = HofRetrofitting_MeadowIsland,
 	HofRetrofitting_OceanSetpieces      = HofRetrofitting_OceanSetpieces,
 	HofRetrofitting_DeciduousForestShop = HofRetrofitting_DeciduousForestShop,
+	HofRetrofitting_DinaMemorial        = HofRetrofitting_DinaMemorial,
 }
 
 --[[

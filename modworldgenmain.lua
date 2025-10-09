@@ -142,7 +142,7 @@ Layouts["DinaMemorial"]                  = StaticLayout.Get("map/static_layouts/
 	add_topology                         =
 	{
 		room_id                          = "StaticLayout:DinaMemorial",
-		tags                             = {"FruitTreeArea"},
+		tags                             = {"MemorialArea"},
 	},
 })
 
@@ -240,6 +240,14 @@ local MapTags =
 	
 	["LowMist"] = function(tagdata)
 		return "TAG", "LowMist"
+	end,
+	
+	["FruitTreeArea"] = function(tagdata)
+		return "TAG", "FruitTreeArea"
+	end,
+	
+	["MemorialArea"] = function(tagdata)
+		return "TAG", "MemorialArea"
 	end,
 	
 	--[[
