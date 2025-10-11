@@ -56,17 +56,38 @@ local function TryGrowth(inst, maximize)
 				if inst:IsAsleep() or inst.components.growable:GetStage() >= 5 or inst.is_oversized then
 					return
 				end
-				
-				local grow_loops = 4
-            
+
+				local growable = inst.components.growable
+				local current_stage = growable.stage
+				local max_stage = #growable.stages
+				local grow_loops = max_stage - current_stage
+
 				for i = 1, grow_loops do
-					inst.components.growable:DoGrowth()
+					local next_stage = growable.stage + 1
+					local next_stage_data = growable.stages[next_stage]
+
+					if next_stage_data == nil or next_stage_data.name == "rotten" then
+						break
+					end
+
+					growable:DoGrowth()
 				end
-				
+
 				MaximizePlant(inst)
 				
-				if math.random() < TUNING.KYNO_GROWTH_OVERSIZED_CHANCE then
-					inst.is_oversized = true
+				local current_season = TheWorld.state.season
+				local plant_def = inst.plant_def or (inst.prefab and PLANT_DEFS[inst.prefab])
+
+				if plant_def ~= nil then
+					local good_seasons = plant_def.good_seasons or {}
+
+					if good_seasons[current_season] and math.random() < TUNING.KYNO_GROWTH_OVERSIZED_CHANCE then
+						inst.is_oversized = true
+					end
+				else
+					if math.random() < TUNING.KYNO_GROWTH_OVERSIZED_CHANCE then
+						inst.is_oversized = true
+					end
 				end
 				
 				local fx = SpawnPrefab("farm_plant_happy")
@@ -156,10 +177,13 @@ local function TryGrowth(inst, maximize)
 		end
 	end
 
-	if inst.components.crop ~= nil and (inst.components.crop.rate or 0) > 0 then
-		if inst.components.crop:DoGrow(1 / inst.components.crop.rate, true) then
-			return true
+	if inst.components.crop ~= nil then
+		if inst.components.crop:IsReadyForHarvest() then
+			return false
 		end
+		
+		inst.components.crop:DoGrow(9999)
+		return true
 	end
 
 	if inst.components.harvestable ~= nil and inst.components.harvestable:CanBeHarvested() and inst:HasTag("mushroom_farm") then

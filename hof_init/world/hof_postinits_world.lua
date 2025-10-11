@@ -1043,6 +1043,12 @@ end
 
 AddPrefabPostInit("livingtree_halloween", LivingTreeHalloween)
 
+local function PlantNormalPostInit(inst)
+	inst:AddTag("plant")
+end
+
+AddPrefabPostInit("plant_normal", PlantNormalPostInit)
+
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")
 

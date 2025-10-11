@@ -262,7 +262,7 @@ PLANT_DEFS.kyno_cucumber.good_seasons                = {autumn = true, spring = 
 PLANT_DEFS.kyno_cucumber.nutrient_consumption        = {NUTRIENT_LOW, 0, NUTRIENT_LOW}
 PLANT_DEFS.kyno_cucumber.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY_TOLERANCE
 PLANT_DEFS.kyno_cucumber.weight_data                 = { 430.23, 585.02, .21 }
-PLANT_DEFS.kyno_cucumber.sounds                      = PLANT_DEFS.pepper.sounds
+PLANT_DEFS.kyno_cucumber.sounds                      = PLANT_DEFS.potato.sounds
 PLANT_DEFS.kyno_cucumber.nutrient_restoration        = {0, 2, 0}
 
 for i = 1, #PLANT_DEFS.kyno_cucumber.nutrient_consumption do
@@ -348,7 +348,7 @@ PLANT_DEFS.kyno_fennel.good_seasons                = {autumn = true, winter = tr
 PLANT_DEFS.kyno_fennel.nutrient_consumption        = {0, 0, NUTRIENT_HIGH}
 PLANT_DEFS.kyno_fennel.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY_TOLERANCE
 PLANT_DEFS.kyno_fennel.weight_data                 = { 320.14, 601.34, .18 }
-PLANT_DEFS.kyno_fennel.sounds                      = PLANT_DEFS.asparagus.sounds
+PLANT_DEFS.kyno_fennel.sounds                      = PLANT_DEFS.carrot.sounds
 PLANT_DEFS.kyno_fennel.nutrient_restoration        = {2, 1, 0}
 
 for i = 1, #PLANT_DEFS.kyno_fennel.nutrient_consumption do
@@ -434,7 +434,7 @@ PLANT_DEFS.kyno_parznip.good_seasons                = {autumn = true, winter = t
 PLANT_DEFS.kyno_parznip.nutrient_consumption        = {0, NUTRIENT_HIGH, 0}
 PLANT_DEFS.kyno_parznip.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY_TOLERANCE
 PLANT_DEFS.kyno_parznip.weight_data                 = { 401.23, 563.02, .21 }
-PLANT_DEFS.kyno_parznip.sounds                      = PLANT_DEFS.potato.sounds
+PLANT_DEFS.kyno_parznip.sounds                      = PLANT_DEFS.carrot.sounds
 PLANT_DEFS.kyno_parznip.nutrient_restoration        = {2, 0, 2}
 
 for i = 1, #PLANT_DEFS.kyno_parznip.nutrient_consumption do
@@ -778,7 +778,7 @@ PLANT_DEFS.kyno_turnip.good_seasons                = {autumn = true, winter = tr
 PLANT_DEFS.kyno_turnip.nutrient_consumption        = {NUTRIENT_MED, 0, NUTRIENT_MED}
 PLANT_DEFS.kyno_turnip.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY_TOLERANCE
 PLANT_DEFS.kyno_turnip.weight_data                 = { 463.23, 694.20, .21 }
-PLANT_DEFS.kyno_turnip.sounds                      = PLANT_DEFS.garlic.sounds
+PLANT_DEFS.kyno_turnip.sounds                      = PLANT_DEFS.carrot.sounds
 PLANT_DEFS.kyno_turnip.nutrient_restoration        = {0, 4, 0}
 
 for i = 1, #PLANT_DEFS.kyno_turnip.nutrient_consumption do
