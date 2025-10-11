@@ -495,7 +495,7 @@ end)
 local function GetFirepit(inst)
 	if not inst.firepit or not inst.firepit:IsValid() or not inst.firepit.components.fueled then
 		local x,y,z = inst.Transform:GetWorldPosition()
-		local ents = _G.TheSim:FindEntities(x,y,z, 0.1, {"firepit"})
+		local ents = _G.TheSim:FindEntities(x,y,z, 0.01, {"firepit"})
 		
 		inst.firepit = nil
 		
@@ -515,29 +515,29 @@ ACTIONS.STORE.fn = function(act, ...)
 	local target = act.target
 	local item = act.invobject
 
-	if target and target:HasTag("cookwarestewer") then
-		if not (item and item.components.cookable) then
+	if target ~= nil and target:HasTag("cookwarestewer") then
+		if target.components.container ~= nil and target.components.container:CanTakeItemInSlot(item) then
+			return _STOREfn(act, ...)
+		end
+
+		if item ~= nil and target.components.container ~= nil and not target.components.container:CanTakeItemInSlot(item) then
 			local firepit = GetFirepit(target)
 			
 			if firepit ~= nil and firepit.components.fueled ~= nil then
-				if item ~= nil then
-					local fuel_item = item
-					
-					if item.components.fuel ~= nil then
-						if item.components.stackable ~= nil and item.components.stackable:StackSize() > 1 then
-							fuel_item = item.components.stackable:Get(1)
-						end
+				local fuel_item = item
+
+				if item.components.fuel ~= nil then
+					if item.components.stackable ~= nil and item.components.stackable:StackSize() > 1 then
+						fuel_item = item.components.stackable:Get(1)
 					end
-				
-					if fuel_item ~= nil and fuel_item.components.fuel ~= nil then
-						if firepit.components.fueled:CanAcceptFuelItem(fuel_item) then
-							firepit.components.fueled:TakeFuelItem(fuel_item, act.doer)
-							return true
-						end
+
+					if fuel_item ~= nil and firepit.components.fueled:CanAcceptFuelItem(fuel_item) then
+						firepit.components.fueled:TakeFuelItem(fuel_item, act.doer)
+						return true
 					end
 				end
 			end
-			
+
 			return false, "NOTALLOWED"
 		end
 	end
@@ -744,19 +744,68 @@ ACTIONS.STORE.stroverridefn = function(act)
 	local obj = act.invobject
 	local target = act.target
 
+	local isfood = false
+	local isfuel = false
+	local issyrup = false
+	local cancook = false
+
+	for _, v in pairs(_G.FOODTYPE) do
+		if obj:HasTag("edible_" .. v) then
+			isfood = true
+			break
+		end
+	end
+
+	if obj:HasTag("fuel") then
+		isfuel = true
+	else
+		for _, v in pairs(_G.FUELTYPE) do
+			if obj:HasTag(v .. "_fuel") then
+				isfuel = true
+				break
+			end
+		end
+	end
+
+	if target.replica.container ~= nil and target.replica.container:CanTakeItemInSlot(obj) then
+		cancook = true
+	end
+
+	if obj:HasTag("gourmet_sap") then
+		issyrup = true
+	end
+
+	if target:HasTag("pot_syrup") then
+		if issyrup then
+			return STRINGS.ACTIONS.COOK
+		end
+
+		if isfuel then
+			return STRINGS.ACTIONS.ADDFUEL
+		end
+
+		if isfood or cancook then
+			return STRINGS.ACTIONS.COOK
+		end
+
+		return STRINGS.ACTIONS.COOK
+	end
+
+	if target:HasTag("cookwarestewer") then		
+		if cancook then
+			return STRINGS.ACTIONS.COOK
+		end
+		
+		if isfuel and not cancook then
+			return STRINGS.ACTIONS.ADDFUEL
+		end
+
+		return STRINGS.ACTIONS.COOK
+	end
+	
 	if target:HasTag("brewer") then
 		return STRINGS.ACTIONS.BREWER
 	end
-
-	if target:HasTag("cookwarestewer") then
-		for k, v in pairs(_G.FUELTYPE) do
-			if obj:HasTag(v.."_fuel") then
-				return STRINGS.ACTIONS.ADDFUEL
-			end
-		end
-		
-		return STRINGS.ACTIONS.COOK
-    end
 end
 
 ACTIONS.INSTALLCOOKWARE.stroverridefn = function(act)

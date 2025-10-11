@@ -118,6 +118,7 @@ AddIngredientValues({"butter_goat"},            {dairy      = 1,    fat       = 
 AddIngredientValues({"butter_koalefant"},       {dairy      = 1,    fat       = 1,     butter = 1})
 AddIngredientValues({"kyno_tealeaf"},           {leaf       = 1})
 AddIngredientValues({"kyno_moon_froglegs"},     {meat       = 0.5},                     true,   true)
+AddIngredientValues({"kyno_truffles"},          {veggie     = 1,    mushrooms = 1},     true)
 
 -- Import the Foods.
 local cookpots = 

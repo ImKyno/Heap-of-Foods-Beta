@@ -21,7 +21,7 @@ local grow_sounds =
 }
 
 local GARDENING_CANT_TAGS = { "player", "stump", "withered", "barren", "INLIMBO", "FX" }
-local GARDENING_ONEOF_TAGS = { "plant", "lichen", "oceanvine", "mushroom_farm", "kelp" }
+local GARDENING_ONEOF_TAGS = { "plant", "lichen", "oceanvine", "mushroom_farm", "kelp", "marbletree" }
 
 local function MaximizePlant(inst)
 	if inst.components.farmplantstress ~= nil then
@@ -96,17 +96,25 @@ local function TryGrowth(inst, maximize)
 		end
 	end
 	
-	if inst.components.growable ~= nil and ((inst:HasTag("tree") or inst:HasTag("winter_tree")) and not inst:HasTag("stump")) then
-		local stage_data = inst.components.growable:GetCurrentStageData()
-		local stage_name = stage_data and stage_data.name or nil
+	if inst.components.growable ~= nil and ((inst:HasTag("tree") or inst:HasTag("winter_tree") or inst:HasTag("marbletree")) and not inst:HasTag("stump")) then
+		local is_marble = inst:HasTag("marbletree")
+		local is_hallowen = inst:HasTag("livingtree_halloween")
+		local stage_name = nil
+		
+		if is_marble or is_hallowen then
+			stage_name = inst.components.growable.stage
+		else
+			local stage_data = inst.components.growable:GetCurrentStageData()
+			stage_name = stage_data and stage_data.name or nil
+		end
 
-		if stage_name == "tall" then
+		if (not is_marble and stage_name == "tall") or (is_marble and stage_name == 3) or (is_hallowen and stage_name == 2) then
 			if inst:HasTag("ancienttree") and inst.components.pickable ~= nil then
 				if inst.components.pickable:CanBePicked() and inst.components.pickable.caninteractwith then
 					return false
 				end
 			end
-			
+
 			return false
 		end
 
@@ -116,17 +124,24 @@ local function TryGrowth(inst, maximize)
 	-- Special case for this stupid tree using timer ahahahaha.
 	-- I really should rewrite its code to use the proper growable system.
 	if inst.components.timer ~= nil then
-		print("print 1")
 		if inst:HasTag("sugartree_growing") then
-			print("print 2")
+			--[[
 			local timer_name = inst.prefab == "kyno_sugartree_short" and "kyno_sugartree_short_timer"
 			or inst.prefab == "kyno_sugartree_normal" and "kyno_sugartree_normal_timer"
 
 			if timer_name ~= nil then
-				print("print 3")
 				inst:PushEvent("timerdone", { name = timer_name })
 				return true
 			end
+			]]--
+
+			local tall = SpawnPrefab("kyno_sugartree")
+			tall.Transform:SetPosition(inst.Transform:GetWorldPosition())
+			tall.SoundEmitter:PlaySound("dontstarve/forest/treeGrow")
+			
+			inst:Remove()
+			
+			return true
 		end
 	end
 
@@ -193,11 +208,26 @@ local function DoGardeningSpell(x, z, max_targets, maximize)
 				if stagename ~= "full" and stagename ~= "rotten" then
 					can_grow = true
 				end
+			elseif v:HasTag("marbletree") then
+				if v.components.growable.stage < 3 then
+					v.components.growable:DoGrowth()
+					can_grow = true
+				else
+					can_grow = false
+				end
+			elseif v:HasTag("livingtree_halloween") then
+				if v.components.growable.stage < 2 then
+					v.components.growable:DoGrowth()
+					can_grow = true
+				else
+					can_grow = false
+				end
 			elseif v:HasTag("tree") or v:HasTag("winter_tree") then
 				if stagename == "old" then
 					v.components.growable:DoGrowth()
 					can_grow = true
 				elseif stagename ~= "tall" and not v:HasTag("stump") then
+					v.components.growable:DoGrowth()
 					can_grow = true
 				end
 			else
@@ -256,7 +286,7 @@ local book_defs =
 {
 	{
 		name = "kyno_book_gardening",
-		uses = 100, -- Gonna use 2 because this book allows giant crops. TUNING.BOOK_USES_SMALL
+		uses = 2, -- Gonna use 2 because this book allows giant crops. TUNING.BOOK_USES_SMALL
 		read_sanity = -TUNING.SANITY_HUGE,
 		peruse_sanity = -TUNING.SANITY_HUGE,
 		

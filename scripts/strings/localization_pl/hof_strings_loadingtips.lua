@@ -9,7 +9,9 @@ local TIPS_HOF      = STRINGS.UI.LOADING_SCREEN_OTHER_TIPS
 -- Nowe wskazówki i lore na ekranie ładowania.
 local LOADINGTIPS   =
 {
-	COFFEE          = "Po pokonaniu Smoczego Muchy możesz zdobyć krzewy kawy.",
+	COFFEE1         = "Rośliny kawy można zdobyć po pokonaniu Ważki. A jeśli to za straszne, mała wycieczka do biomu Fumarola przyniesie ci kilka!",
+	COFFEE2         = "Rośliny kawy nie potrzebują nawożenia latem. Same się nawet nawożą!",
+	COFFEE3         = "Rośliny kawy można sadzić tylko na piaskowych lub fumarolowych terenach.",
 	WEEDS           = "Możesz sadzić chwasty, używając ich własnych produktów, dając je najpierw ptakowi.",
 	WALRY           = "Warly ma unikalne przepisy robione tylko przez niego.",
 	JELLYBEANS      = "\"Wydaje się, że żarłoczne Żelki sprawiają, że moje ciało czuje się super!\" -W",
@@ -35,7 +37,7 @@ local LOADINGTIPS   =
 	SWEETFLOWER     = "Słodki Kwiat może być użyty w Crock Pocie jako opcja słodzenia.",
 	LIMPETROCK      = "Jedynym miejscem, w którym znajdziesz Limpet Rocks, jest Kamieniołom Krabów w Archipelagu Spokoju lub plaża na Wyspie Nadmorskiej!",
 	CHICKEN         = "\"Zastanawiam się, czy te Kury mogłyby dawać mi jajka. Potrzebuję nasion, żeby je pobudzić!\" -W",
-	SYRUPPOT        = "Syrop przygotowany w Garnku do Syropu daje trzy jednostki zamiast jednej, gdy gotujesz go w zwykłym Crock Pocie.",
+	SYRUPPOT        = "Syrop zrobiony w Garnku do Syropu da cztery jednostki zamiast jednej, gdy zostanie ugotowany w zwykłym Garnku.",
 	COOKWARE        = "Garnki do syropu, garnki, grille i piekarniki gotują jedzenie szybciej niż zwykły Crock Pot. Każdy z nich ma także wyjątkowe bonusy!",
 	COOKWARE_PIT    = "Aby gotować przy użyciu specjalnych stacji kuchennych, musisz najpierw zainstalować je na Ognisku.",
 	COOKWARE_FIRE   = "Specjalne stacje kuchenne będą gotować jedzenie tylko wtedy gdy poziom ognia w ognisku pod nimi będzie wystarczająco wysoki.",
@@ -76,6 +78,7 @@ local LOADINGTIPS   =
 	ITEMSLICER_GOLD = "Wielki Tasak ma nieograniczone użycia i może kroić przedmioty szybciej niż zwykły tasak.",
 	SAMMY1          = "Sammy można znaleźć na Wyspie Nadmorskiej, gdzie sprzedaje różnorodne rzadkie przedmioty i składniki, których trudno znaleźć gdzie indziej.",
 	SAMMY2          = "Towary Sammy’ego zmieniają się w zależności od pór roku i specjalnych okazji. Sprawdzaj jego inwentarz od czasu do czasu, aby zobaczyć, co ma do zaoferowania.",
+	SAMMY3          = "Po pokonaniu Pana Much Owocowych, powinieneś sprawdzić Sammy'ego. Wynagrodzi tych, którzy okażą się godni, ciekawymi przedmiotami!",
 	JAWSBREAKER     = "Jawsbreaker można użyć, aby zwabić Rockjaws i Gnarwails, zabijając je natychmiast. Ale nie używaj go zbyt blisko siebie.",
 	METALBUCKET     = "Co jest lepsze od wiadra? Solidne metalowe wiadro, które się nie złamie podczas dojenia zwierząt!",
 	LUNARTEQUILA    = "Czujesz się trochę po księżycowej stronie? Dlaczego nie napić się Oświeconej Tequili, aby otworzyć umysł na prawdę?",
@@ -84,6 +87,9 @@ local LOADINGTIPS   =
 	RUMMAGEWAGON2   = "\"To nie jest kradzież, przysięgam! Sammy wyrzuca mnóstwo przydatnych rzeczy, których moglibyśmy użyć! Zobacz, co wszystko zdobyłem z jego wozu!\" -W.",
 	SLAUGHTERHEAT   = "Uwaga! Niektóre zwierzęta zaatakują, jeśli zabijesz jedno ze swojego gatunku, gdy obok są inne.",
 	SLAUGHTERFLEE   = "Niektóre zwierzęta mogą się przestraszyć, gdy zobaczą, że zabijasz jedno ze swojego gatunku przy użyciu Narzędzi do Rzezi.",
+	BOOKGARDENING1  = "Książka Wickerbottom 'Hodowla Roślin, Opanowana' pozwala hodować każdy rodzaj roślin, nawet niektóre specjalne drzewa, których normalnie nie można!",
+	BOOKGARDENING2  = "Książka Wickerbottom 'Hodowla Roślin, Opanowana' ma szansę wyhodować rośliny z farmy w formę Przerosłą!",
+	FARMPLOT        = "Jeśli nowy system rolnictwa jest dla ciebie zbyt skomplikowany, nie martw się! Sammy cię wspiera, sprzedaje stare plany, które pomogą.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

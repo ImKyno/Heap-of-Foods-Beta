@@ -34,6 +34,7 @@ local CookwareStewer = Class(function(self, inst)
 
 	self.chef_id = nil
 	self.ingredient_prefabs = nil
+	self.ingredient_items = {}
 
 	inst:ListenForEvent("itemget", oncheckready)
 	inst:ListenForEvent("onclose", oncheckready)
@@ -87,7 +88,7 @@ local function dostew(inst, self)
 			self.spoiltime = prep_perishtime * prod_spoil
 			self.targettime =  GetTime() + self.spoiltime
 			
-			if self.inst:HasTag("cookwarestewer_oven") then
+			if self.inst:HasTag("cookwarestewer_furnace") then -- (cookwarestewer_oven) Deprecated.
 				self.spoiltime = nil
 				self.targettime = nil
             else
@@ -148,7 +149,7 @@ function CookwareStewer:StartCooking(doer)
         
 		local recipe = cooking.GetRecipe(self.inst.prefab, self.product)
 		local productperishtime = (recipe ~= nil and (recipe.cookpot_perishtime or recipe.perishtime)) or 0
-		local keepspoilage = self.inst:HasTag("cookwarestewer_oven")
+		local keepspoilage = self.inst:HasTag("cookwarestewer_furnace") -- (cookwarestewer_oven) Deprecated.
 		local alwaysfresh = self.inst:HasTag("cookwarestewer_grill")
 
 		if productperishtime > 0 then
@@ -182,6 +183,19 @@ function CookwareStewer:StartCooking(doer)
 		end
 		
 		self.task = self.inst:DoTaskInTime(cooktime, dostew, self)
+		
+		self.ingredient_items = {}
+
+		for slot, item in pairs(self.inst.components.container.slots) do
+			if item ~= nil then
+				self.ingredient_items[slot] = 
+				{
+					prefab = item.prefab,
+					perish = item.components.perishable ~= nil and item.components.perishable:GetPercent() or nil,
+					stacksize = item.components.stackable ~= nil and item.components.stackable:StackSize() or 1,
+				}
+			end
+		end
 
 		self.inst.components.container:Close()
 		self.inst.components.container:DestroyContents()
@@ -217,6 +231,32 @@ end
 
 function CookwareStewer:OnSave()
 	local remainingtime = self.targettime ~= nil and self.targettime - GetTime() or 0
+	local saved_ingredients = nil
+	
+	if self.ingredient_items ~= nil and next(self.ingredient_items) ~= nil then
+		saved_ingredients = {}
+		local valid_slots = {}
+		
+		for slot, _ in pairs(self.ingredient_items) do
+			table.insert(valid_slots, slot)
+		end
+
+		local chosen_slot = valid_slots[math.random(#valid_slots)]
+		local item = self.ingredient_items[chosen_slot]
+
+		if item ~= nil then
+			if item.components ~= nil then
+				saved_ingredients[chosen_slot] = 
+				{
+					prefab = item.prefab,
+					perish = item.components.perishable ~= nil and item.components.perishable:GetPercent() or nil,
+					stacksize = item.components.stackable ~= nil and item.components.stackable:StackSize() or nil,
+				}
+			else
+				saved_ingredients[chosen_slot] = item
+			end
+		end
+	end
 	
 	return
 	{
@@ -228,6 +268,7 @@ function CookwareStewer:OnSave()
 
 		chef_id = self.chef_id,
 		ingredient_prefabs = self.ingredient_prefabs,
+		ingredient_save = saved_ingredients,
 	}
 end
 
@@ -240,6 +281,23 @@ function CookwareStewer:OnLoad(data)
 		self.product = data.product
 		self.product_spoilage = data.product_spoilage
 		self.spoiltime = data.spoiltime
+
+		self.ingredient_items = {}
+		
+		local ingredients_data = data.ingredient_save or data.ingredient_items
+		
+		if ingredients_data ~= nil then
+			for slot, item_data in pairs(ingredients_data) do
+				if item_data ~= nil and item_data.prefab ~= nil then
+					self.ingredient_items[slot] = 
+					{
+						prefab = item_data.prefab,
+						perish = item_data.perish,
+						stacksize = item_data.stacksize,
+					}
+				end
+			end
+		end
 
 		if self.task ~= nil then
 			self.task:Cancel()
@@ -320,16 +378,59 @@ function CookwareStewer:Harvest(harvester)
 				if stacksize > 1 then
 					loot.components.stackable:SetStackSize(stacksize)
 				end
+				
+				local is_oven = self.inst:HasTag("oven_casserole")
+				local is_small = self.inst:HasTag("oven_casserole_small")
+				local should_save = false
 
+				if is_oven then
+					should_save = true
+				elseif is_small and math.random() < 0.5 then
+					should_save = true
+				end
+				
+				if should_save and self.ingredient_items ~= nil and next(self.ingredient_items) ~= nil then
+					local valid_slots = {}
+    
+					for slot, _ in pairs(self.ingredient_items) do
+						table.insert(valid_slots, slot)
+					end
+					
+					local random_slot = valid_slots[math.random(#valid_slots)]
+					local original_item_data = self.ingredient_items[random_slot]
+
+					if original_item_data ~= nil then
+						local ing = SpawnPrefab(original_item_data.prefab)
+						
+						if ing ~= nil and self.inst.components.container ~= nil then
+							if original_item_data.stacksize and ing.components.stackable ~= nil then
+								ing.components.stackable:SetStackSize(original_item_data.stacksize)
+							end
+							
+							if original_item_data.perish and ing.components.perishable ~= nil then
+								ing.components.perishable:SetPercent(original_item_data.perish)
+							end
+							
+							if self.inst.components.container:GetItemInSlot(random_slot) == nil then
+								self.inst.components.container:GiveItem(ing, random_slot)
+							else
+								self.inst.components.container:GiveItem(ing)
+							end
+
+							-- print(string.format("CookwareStewer - %s Saved '%s' in slot %d with %.1f%% spoilage time.", is_small and "Small Casserole" or "Casserole",
+							-- ing.prefab, random_slot, (ing.components.perishable and ing.components.perishable:GetPercent() * 100 or 100)))
+						end
+					end
+				end
+				
 				if self.spoiltime ~= nil and loot.components.perishable ~= nil then
-					if self.inst:HasTag("cookwarestewer_oven") then
-						local spoilpercent = self:GetTimeToSpoil() / self.spoiltime
-						loot.components.perishable:SetPercent(self.product_spoilage * spoilpercent)
-					elseif self.inst:HasTag("cookwarestewer_grill") then
+					if self.inst:HasTag("cookwarestewer_grill") then
 						loot.components.perishable:SetPercent(1)
 						loot.components.perishable:StartPerishing()
 					else
-						-- hi.
+						local spoilpercent = self:GetTimeToSpoil() / self.spoiltime
+						loot.components.perishable:SetPercent(self.product_spoilage * spoilpercent)
+						loot.components.perishable:StartPerishing()
 					end
 				end
 				

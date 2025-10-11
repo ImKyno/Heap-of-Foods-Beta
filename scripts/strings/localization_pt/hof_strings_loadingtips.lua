@@ -9,7 +9,9 @@ local TIPS_HOF      = STRINGS.UI.LOADING_SCREEN_OTHER_TIPS
 -- New Loading Tips and Lore.
 local LOADINGTIPS   =
 {
-	COFFEE          = "Você pode obter Arbustos de Café após derrotar a Libélula.",
+	COFFEE1         = "Você pode obter Plantas de Café após derrotar a Libélula. Ou, se isso for muito assustador, uma pequena viagem ao bioma Fumarola te trará algumas!",
+	COFFEE2         = "Plantas de Café não precisam ser fertilizadas durante o Verão. Elas até se fertilizam sozinhas!",
+	COFFEE3         = "Plantas de Café só podem ser plantadas em Turfs de Areia ou Fumarola.",
 	WEEDS           = "Você pode plantar Ervas usando seus próprios produtos, dando-os primeiro a um pássaro.",
 	WALRY           = "Warly tem receitas exclusivas feitas apenas por ele.",
 	JELLYBEANS      = "\"Parece que as Jujubas Vigorosas me fazem sentir super bem!\" -W",
@@ -76,6 +78,7 @@ local LOADINGTIPS   =
 	ITEMSLICER_GOLD = "O Grande Sublime tem usos ilimitados e pode fatiar itens mais rápido que um Cutelo normal.",
 	SAMMY1          = "Sammy pode ser encontrado na Ilha Beira-mar vendendo uma variedade de itens raros e ingredientes que não são fáceis de encontrar por aí.",
 	SAMMY2          = "Os produtos de Sammy mudam ao longo das estações e durante ocasiões especiais no mundo. Certifique-se de verificar seu inventário de vez em quando para ver o que ele oferece.",
+	SAMMY3          = "Após derrotar o Lord of the Fruit Flies, você deveria falar com o Sammy. Ele recompensará aqueles que se mostrarem dignos com alguns itens curiosos!",
 	JAWSBREAKER     = "Quebra-queixo pode ser usado para atrair Rockjaws e Gnarwails, matando-os instantaneamente. Mas não use muito perto de você.",
 	METALBUCKET     = "O que é melhor que um Balde? Um balde de metal resistente que não quebra ao ordenhar animais!",
 	LUNARTEQUILA    = "Se sentindo um pouco lunar? Por que não beber uma Tequila Iluminada para abrir sua mente para a verdade?",
@@ -83,7 +86,10 @@ local LOADINGTIPS   =
 	RUMMAGEWAGON    = "\"Vi Sammy outro dia revirando sua Carroça em busca de algo. Acho que ele estava negociando com alguém. Talvez eu deva ver o que ele guarda lá dentro...\" -W",
 	RUMMAGEWAGON2   = "\"Não é roubo, juro! Sammy está jogando fora um monte de coisas úteis que poderíamos usar! Veja tudo o que eu peguei da sua Carroça!\" -W.",
 	SLAUGHTERHEAT   = "Cuidado! Alguns animais atacarão se você matar um da mesma espécie quando houver outros por perto.",
-	SLAUGHTERFLEE   = "Alguns animais podem fugir quando veem você matar um de sua espécie com as Ferramentas de Abate."
+	SLAUGHTERFLEE   = "Alguns animais podem fugir quando veem você matar um de sua espécie com as Ferramentas de Abate.",
+	BOOKGARDENING1  = "O livro de Wickerbottom, Horticultura, Masterizada, pode cultivar qualquer tipo de planta, até algumas árvores especiais que normalmente você não consegue!",
+	BOOKGARDENING2  = "O livro de Wickerbottom, Horticultura, Masterizada, tem chance de cultivar plantas de fazenda em uma forma Gigante!",
+	FARMPLOT        = "Se o novo sistema de agricultura for muito complicado para você, não se preocupe! O Sammy tá contigo, ele está vendendo alguns antigos projetos de hortas que vão ajudar.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

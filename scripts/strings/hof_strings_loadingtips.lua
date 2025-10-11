@@ -9,7 +9,9 @@ local TIPS_HOF      = STRINGS.UI.LOADING_SCREEN_OTHER_TIPS
 -- New Loading Tips and Lore.
 local LOADINGTIPS   =
 {
-	COFFEE          = "You can get Coffee Bushes after defeating the Dragonfly.",
+	COFFEE1         = "You can get Coffee Plants after defeating the Dragonfly. Or if its too scary for you, a little trip to the Fumarole biome will fetch you some!",
+	COFFEE2         = "Coffee Plants don't need to be fertilized during Summer. They will even fertilize themselves!",
+	COFFEE3         = "Coffee Plants can only be planted on Sandy or Fumarole Turfs.",
 	WEEDS           = "You can plant Weeds using their own products, by giving them to a bird first.",
 	WALRY           = "Warly has exclusive recipes made just by him.",
 	JELLYBEANS      = "\"It seems that the Lusty Jellybeans makes my body feels super good!\" -W",
@@ -35,7 +37,7 @@ local LOADINGTIPS   =
 	SWEETFLOWER     = "The Sweet Flower can be used in the Crock Pot as a Sweetener option.",
 	LIMPETROCK      = "The only place that you will find Limpet Rocks, is the Crab Quarry of Serenity Archipelago or the beach of Seaside Island!",
 	CHICKEN         = "\"I wonder if those Chickens could give me some eggs. I need some seeds to estimulate them!\" -W",
-	SYRUPPOT        = "Syrup made in the Syrup Pot will give Three units instead of One unit, when that's cooked on a normal Crock Pot.",
+	SYRUPPOT        = "Syrup made in the Syrup Pot will give Four units instead of One unit, when that's cooked on a normal Crock Pot.",
 	COOKWARE        = "Syrup Pots, Cookpots, Grills and Ovens cooks the food faster than a normal Crock Pot. And each one of them comes with exclusive bonuses!",
 	COOKWARE_PIT    = "To cook using the special Cookware stations, you need to install them above a Fire Pit first.",
 	COOKWARE_FIRE   = "Special Cookware stations will only cook the food if the fire level of the Fire Pit below them is high enough.",
@@ -76,6 +78,7 @@ local LOADINGTIPS   =
 	ITEMSLICER_GOLD = "The Grand Cleaver has unlimited uses and can slice items quicker than a regular Cleaver.",
 	SAMMY1          = "Sammy can be found on the Seaside Island selling an array of rare items and ingredients that you can't find so easily out there.",
 	SAMMY2          = "Sammy's wares changes throughout the seasons and during special world occasions. Make sure to check his inventory every now and then to see what he has to offer.",
+	SAMMY3          = "After defeating the Lord of the Fruit Flies, you should go check on Sammy. He will reward those who are proven worthy with some curious items!",
 	JAWSBREAKER     = "Jawsbreaker can be used to lure Rockjaws and Gnarwails, killing them instantly. But don't use it too close to yourself.",
 	METALBUCKET     = "What's better than a Bucket? A sturdy metal bucket that will not break when milking animals!",
 	LUNARTEQUILA    = "Feeling a bit on your moon side? Why not drink an Enlightened Tequila to open your mind to the truth?",
@@ -84,6 +87,9 @@ local LOADINGTIPS   =
 	RUMMAGEWAGON2   = "\"Its not robbery, I swear! Sammy's throwing away a bunch of useful junk we could use instead! Just look everything I got from his Wagon!\" -W.",
 	SLAUGHTERHEAT   = "Beware! Some animals will attack if you slaughter one of their kind when more is around.",
 	SLAUGHTERFLEE   = "Some animals can be scared away when they see you slaughtering one of their kind with the Slaughter Tools.",
+	BOOKGARDENING1  = "Wickerbottom's book Horticulture, Mastered can grow any type of plant, even some special trees that you normally can't!",
+	BOOKGARDENING2  = "Wickerbottom's book Horticulture, Mastered has a chance to grow farm plants into a Oversized form!",
+	FARMPLOT        = "If the new farming system is too complicated for you, don't worry! Sammy got you covered, he's selling some old blueprints that will help.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

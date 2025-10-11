@@ -749,7 +749,10 @@ local function FirePitCookwarePostinit(inst)
         end
 
         if item.components.inventoryitem ~= nil and item:HasTag("oven_installer") then
-            SpawnPrefab("kyno_cookware_oven").Transform:SetPosition(inst.Transform:GetWorldPosition())
+            local oven = SpawnPrefab("kyno_cookware_oven")
+			oven.Transform:SetPosition(inst.Transform:GetWorldPosition())
+			oven.AnimState:PlayAnimation("place")
+			
             inst.SoundEmitter:PlaySound("dontstarve/quagmire/common/craft/oven")
 
             inst.components.cookwareinstaller.enabled = false
@@ -776,62 +779,74 @@ local function FirePitCookwarePostinit(inst)
 		end
 
 		if data ~= nil and data.hascookware then
-			firepit:AddTag("firepit_with_cookware")
-			firepit.components.cookwareinstaller.enabled = false
-			firepit.hascookware = true
+			inst:DoTaskInTime(1, function()
+				firepit:AddTag("firepit_with_cookware")
+				firepit.components.cookwareinstaller.enabled = false
+				firepit.hascookware = true
+			end)
 		end
 
 		if data ~= nil and data.hashanger then
-			firepit:AddTag("firepit_has_hanger")
-			firepit:AddTag("firepit_with_cookware")
-			firepit.components.cookwareinstaller.enabled = false
-			firepit.hascookware = true
-			firepit.hashanger = true
+			inst:DoTaskInTime(1, function()
+				firepit:AddTag("firepit_has_hanger")
+				firepit:AddTag("firepit_with_cookware")
+				firepit.components.cookwareinstaller.enabled = false
+				firepit.hascookware = true
+				firepit.hashanger = true
+			end)
 		end
 		
 		if data ~= nil and data.haspot then
-			firepit:AddTag("firepit_has_pot")
-			firepit:AddTag("firepit_with_cookware")
-			firepit.components.burnable:OverrideBurnFXBuild("quagmire_pot_fire")
-			firepit.components.cookwareinstaller.enabled = false
-			firepit.hascookware = true
-			firepit.hashanger = true
-			firepit.haspot = true
+			inst:DoTaskInTime(1, function()
+				firepit:AddTag("firepit_has_pot")
+				firepit:AddTag("firepit_with_cookware")
+				firepit.components.burnable:OverrideBurnFXBuild("quagmire_pot_fire")
+				firepit.components.cookwareinstaller.enabled = false
+				firepit.hascookware = true
+				firepit.hashanger = true
+				firepit.haspot = true
+			end)
 		end
 
 		if data ~= nil and data.hasgrill then
-			firepit:AddTag("firepit_has_grill")
-			firepit:AddTag("firepit_with_cookware")
-            firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
-			firepit.components.cookwareinstaller.enabled = false
-			firepit.hascookware = true
-			firepit.hasgrill = true
+			inst:DoTaskInTime(1, function()
+				firepit:AddTag("firepit_has_grill")
+				firepit:AddTag("firepit_with_cookware")
+				firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+				firepit.components.cookwareinstaller.enabled = false
+				firepit.hascookware = true
+				firepit.hasgrill = true
+			end)
 		end
 
 		if data ~= nil and data.hasoven then
-			firepit:AddTag("firepit_has_oven")
-			firepit:AddTag("firepit_with_cookware")
-            firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
-			firepit.components.cookwareinstaller.enabled = false
-			firepit.hascookware = true
-			firepit.hasoven = true
+			inst:DoTaskInTime(1, function()
+				firepit:AddTag("firepit_has_oven")
+				firepit:AddTag("firepit_with_cookware")
+				firepit.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
+				firepit.components.cookwareinstaller.enabled = false
+				firepit.hascookware = true
+				firepit.hasoven = true
+			end)
 		end
 		
 		if data ~= nil and data.hascookware == false then
-			local firepit = GetFirepit(inst)
+			inst:DoTaskInTime(1, function()
+				local firepit = GetFirepit(inst)
 		
-			if firepit then
-				firepit:RemoveTag("firepit_has_hanger")
-				firepit:RemoveTag("firepit_has_grill")
-				firepit:RemoveTag("firepit_has_oven")
-				firepit:RemoveTag("firepit_with_cookware")
-				firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
-				firepit.components.cookwareinstaller.enabled = true
-				firepit.hascookware = false
-				firepit.hashanger = false
-				firepit.hasgrill = false
-				firepit.hasoven = false
-			end
+				if firepit then
+					firepit:RemoveTag("firepit_has_hanger")
+					firepit:RemoveTag("firepit_has_grill")
+					firepit:RemoveTag("firepit_has_oven")
+					firepit:RemoveTag("firepit_with_cookware")
+					firepit.components.burnable:OverrideBurnFXBuild("campfire_fire")
+					firepit.components.cookwareinstaller.enabled = true
+					firepit.hascookware = false
+					firepit.hashanger = false
+					firepit.hasgrill = false
+					firepit.hasoven = false
+				end
+			end)
 		end
 	end
 
@@ -843,17 +858,11 @@ local function FirePitCookwarePostinit(inst)
 
     if inst:HasTag("firepit_has_grill") then
         inst.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
-    end
-
-    if inst:HasTag("firepit_has_oven") then
+	elseif inst:HasTag("firepit_has_oven") then
         inst.components.burnable:OverrideBurnFXBuild("quagmire_oven_fire")
-    end
-	
-	--[[
-	if inst:HasTag("firepit_has_pot") then
+	elseif inst:HasTag("firepit_has_pot") then
 		inst.components.burnable:OverrideBurnFXBuild("quagmire_pot_fire")
 	end
-	]]--
 
     inst:AddComponent("cookwareinstaller")
     inst.components.cookwareinstaller:SetAcceptTest(TestItem)
@@ -1019,6 +1028,20 @@ local function TumbleweedPostinit(inst)
 end
 
 AddPrefabPostInit("tumbleweed", TumbleweedPostinit)
+
+-- Allows Wickerbottom's book to grow marble trees.
+
+local function MarbleShrubPostInit(inst)
+	inst:AddTag("marbletree")
+end
+
+AddPrefabPostInit("marbleshrub", MarbleShrubPostInit)
+
+local function LivingTreeHalloween(inst)
+	inst:AddTag("livingtree_halloween")
+end
+
+AddPrefabPostInit("livingtree_halloween", LivingTreeHalloween)
 
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")

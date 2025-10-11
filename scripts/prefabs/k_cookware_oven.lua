@@ -179,6 +179,10 @@ local function OnHammeredOven(inst, worker)
 		firepit.hasoven = false
 		firepit.hascookware = false
 	end
+	
+	if inst.components.container ~= nil then
+        inst.components.container:DropEverything()
+    end
 
 	inst.components.lootdropper:DropLoot()
 
@@ -209,7 +213,8 @@ local function OnHitCass(inst, worker)
 		else
 			inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 		end
-		-- inst.AnimState:PlayAnimation("hit")
+		
+		inst.AnimState:PlayAnimation("hit")
 		inst.AnimState:PushAnimation("idle")
 		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 	end
@@ -499,6 +504,10 @@ local function GetStatus(inst)
 	or "COOKING_SHORT"
 end
 
+local function OnBuilt(inst)
+	inst.AnimState:PlayAnimation("place")
+end
+
 local function OnSave(inst, data)
 	local firepit = GetFirepit(inst)
 
@@ -559,7 +568,7 @@ local function ovenfn()
 
     inst.AnimState:SetBank("quagmire_oven")
     inst.AnimState:SetBuild("quagmire_oven")
-    inst.AnimState:PlayAnimation("place")
+    -- inst.AnimState:PlayAnimation("place")
 	inst.AnimState:PushAnimation("idle")
 
 	inst.AnimState:Hide("mouseover")
@@ -674,6 +683,7 @@ local function casserolefn(small)
     inst.AnimState:Hide("goop")
 	inst.AnimState:Hide("goop_small")
 	inst.AnimState:Hide("oven_back")
+	inst.AnimState:Hide("shadow")
 
     inst.AnimState:SetFinalOffset(4)
 

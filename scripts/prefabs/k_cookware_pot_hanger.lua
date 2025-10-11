@@ -309,6 +309,10 @@ local function OnHammeredHanger(inst, worker)
 		firepit.hashanger = false
 		firepit.hascookware = false
 	end
+	
+	if inst.components.container ~= nil then
+        inst.components.container:DropEverything()
+    end
 
 	inst.components.lootdropper:DropLoot()
 
