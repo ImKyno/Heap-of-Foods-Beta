@@ -34,7 +34,7 @@ local STRINGS_CUSTOMIZATION =
 	RESOURCES =
 	{
 		"Heap of Foods - Resources",
-		zh  = "食物堆积 - 资源",
+		zh  = "更多料理 - 资源",
 		zht = "食物堆積 - 資源",
 		pt  = "Amontoado de Comidas - Recursos",
 		pl  = "Stos jedzenia - Zasoby",
@@ -44,7 +44,7 @@ local STRINGS_CUSTOMIZATION =
 	RESOURCES_OCEAN =
 	{
 		"Heap of Foods - Ocean Resources",
-		zh  = "食物堆积 - 海洋资源",
+		zh  = "更多料理 - 海洋资源",
 		zht = "食物堆積 - 海洋資源",
 		pt  = "Amontoado de Comidas - Recursos do Oceano",
 		pl  = "Stos jedzenia - Zasoby oceaniczne",
@@ -54,7 +54,7 @@ local STRINGS_CUSTOMIZATION =
 	SERENITYISLAND =
 	{
 		"Heap of Foods - Serenity Archipelago",
-		zh  = "食物堆积 - 宁静群岛",
+		zh  = "更多料理 - 宁静群岛",
 		zht = "食物堆積 - 寧靜群島",
 		pt  = "Amontoado de Comidas - Arquipélago da Serenidade",
 		pl  = "Stos jedzenia - Archipelag Spokoju",
@@ -64,7 +64,7 @@ local STRINGS_CUSTOMIZATION =
 	MEADOWISLAND =
 	{
 		"Heap of Foods - Seaside Island",
-		zh  = "食物堆积 - 海滨岛屿",
+		zh  = "更多料理 - 海滨岛屿",
 		zht = "食物堆積 - 海濱島嶼",
 		pt  = "Amontoado de Comidas - Ilha Beira-mar",
 		pl  = "Stos jedzenia - Wyspa Nadmorska",
@@ -75,7 +75,7 @@ local STRINGS_CUSTOMIZATION =
 	RESOURCES_REGROW =
 	{
 		"Heap of Foods - Resources Regrowth",
-		zh  = "食物堆积 - 资源再生",
+		zh  = "更多料理 - 资源再生",
 		zht = "食物堆積 - 資源再生",
 		pt  = "Amontoado de Comidas - Regeneração de Recursos",
 		pl  = "Stos jedzenia - Odnowa zasobów",
@@ -85,7 +85,7 @@ local STRINGS_CUSTOMIZATION =
 	RESOURCES_OCEAN_REGROW =
 	{
 		"Heap of Foods - Ocean Resources Regrowth",
-		zh  = "食物堆积 - 海洋资源再生",
+		zh  = "更多料理 - 海洋资源再生",
 		zht = "食物堆積 - 海洋資源再生",
 		pt  = "Amontoado de Comidas - Regeneração de Recursos Oceânicos",
 		pl  = "Stos jedzenia - Odnowa zasobów oceanicznych",
@@ -95,7 +95,7 @@ local STRINGS_CUSTOMIZATION =
 	SERENITYISLAND_REGROW =
 	{
 		"Heap of Foods - Serenity Archipelago Regrowth",
-		zh  = "食物堆积 - 宁静群岛再生",
+		zh  = "更多料理 - 宁静群岛再生",
 		zht = "食物堆積 - 寧靜群島再生",
 		pt  = "Amontoado de Comidas - Regeneração do Arquipélago da Serenidade",
 		pl  = "Stos jedzenia - Odnowa Archipelagu Spokoju",
@@ -105,7 +105,7 @@ local STRINGS_CUSTOMIZATION =
 	MEADOWISLAND_REGROW =
 	{
 		"Heap of Foods - Seaside Island Regrowth",
-		zh  = "食物堆积 - 海滨岛屿再生",
+		zh  = "更多料理 - 海滨岛屿再生",
 		zht = "食物堆積 - 海濱島嶼再生",
 		pt  = "Amontoado de Comidas - Regeneração da Ilha Beira-mar",
 		pl  = "Stos jedzenia - Odnowa Wyspy Nadmorskiej",
