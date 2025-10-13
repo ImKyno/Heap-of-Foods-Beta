@@ -7,7 +7,7 @@ local STRINGS =
 	NAME = 
 	{
 		"Heap of Foods",
-		zh  = "食物堆积 (Heap of Foods)",
+		zh  = "更多料理 (Heap of Foods)",
 		zht = "食物堆積 (Heap of Foods)",
 		pt  = "Amontoado de Comidas (Heap of Foods)",
 		pl  = "Stos jedzenia (Heap of Foods)",
@@ -32,18 +32,18 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 ]],
 		zh  =
 [[
-󰀄 新增超过 +200 道全新慢炖锅菜肴，以及可使用的新食材。快乐烹饪！
+󰀄 新增 200+ 道全新烹饪锅料理，以及一些新的食材。烹饪愉快！
 
 󰀠 还新增了海洋中的全新生物群系！
 󰀦 完整食谱表可在 Mod 页面查看！
 
 󰀏 海滨夏日更新亮点：
-海滨岛迎来了一位新商人！在熟悉的幸存者协助下，他开设了一家独一无二的贸易站。专门提供稀有物品和极难获得的食材，甚至包括一些其他地方找不到的物品。
+海滨岛迎来了一位新商人！在一位熟悉的幸存者协助下，他开设了一家独一无二的小店。专门提供稀有物品和特殊食材，有些在其他地方根本找不到。
 
-记得不时查看他的商品，看看他带来了什么新奇好货。因为他的库存总是在变化！
+记得时不时光顾下他的小店，看看他进了什么靓货。因为他进货很频繁！
 
 󰀌 Mod 版本： 2.6-B
-󰀧 更新内容： 准备地基
+󰀧 更新内容： 场地准备
 ]],	
 		zht =
 [[
@@ -110,8 +110,8 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 		DISABLED =
 		{
 			"Disabled",
-			zh  = "残疾人",
-			zht = "殘障人士",
+			zh  = "已禁用",
+			zht = "停用",
 			pt  = "Desativado",
 			pl  = "Wyłączony",
 			es  = "Desactivada",
@@ -120,7 +120,7 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 		ENABLED =
 		{
 			"Enabled",
-			zh  = "启用",
+			zh  = "已启用",
 			zht = "啟用",
 			pt  = "Ativado",
 			pl  = "Włączony",
@@ -132,7 +132,7 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			NAME =
 			{
 				"General Options",
-				zh  = "一般选项",
+				zh  = "常规选项",
 				zht = "一般選項",
 				pt  = "Opções Gerais",
 				pl  = "Opcje ogólne",
@@ -142,7 +142,7 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			HOVER =
 			{
 				"General options for the entire mod.",
-				zh  = "Mod的一般选项。",
+				zh  = "Mod的常规选项。",
 				zht = "整個模組的常規選項。",
 				pt  = "Opções gerais para o Mod inteiro.",
 				pl  = "Ogólne opcje dla całego moda.",
@@ -188,7 +188,7 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			HOVER =
 			{
 				"Experimental options for the Mod. Under testing!",
-				zh  = "模组的实验性选项，正在测试中！",
+				zh  = "Mod的实验性选项，正在测试中！",
 				zht = "模組的實驗性選項，正在測試中！",
 				pt  = "Opções experimentais do Mod. Em fase de testes!",
 				pl  = "Eksperymentalne opcje moda. W fazie testów!",
@@ -211,7 +211,7 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			HOVER =
 			{
 				"Retrofitting options for old worlds.",
-				zh  = "为旧世界提供向后兼容选项。",
+				zh  = "旧世界的改造。",
 				zht = "為舊世界提供改造選擇。",
 				pt  = "Opções de retrofitting para mundos antigos.",
 				pl  = "Opcje modernizacji starych światów.",
@@ -224,7 +224,7 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			NAME =
 			{
 				"Language",
-				zh  = "语",
+				zh  = "语言",
 				zht = "話",
 				pt  = "Idioma",
 				pl  = "Język",
@@ -234,7 +234,7 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			HOVER =
 			{
 				"Choose the language for the mod.\nYou can submit your translation in our Discord.",
-				zh  = "选择模块的语言。 \n您可以在我们的 Discord 中提交您的翻译。",
+				zh  = "选择Mod的语言。 \n您可以在我们的 Discord 中提交您的翻译。",
 				zht = "選擇模組的語言。 \n您可以在我們的 Discord 中提交您的翻譯。",
 				pt  = "Escolha o idioma do Mod.\nVocê pode enviar sua tradução em nosso Discord.",
 				pl  = "Wybierz język moda.\nMożesz przesłać swoje tłumaczenie na naszym Discordzie.",
@@ -1023,8 +1023,8 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			HOVER =
 			{
 				"This option is experimental and its under testing.\n\Should the Serenity Archipelago have special Colour Cubes?", 
-				zh  = "此选项为实验性功能，正在测试中。\n是否应为宁静群岛启用特殊 Colour Cubes？",
-				zht = "此選項為實驗性功能，正在測試中。\n是否應為寧靜群島啟用特殊 Colour Cubes？",
+				zh  = "此选项为实验性功能，正在测试中。\n是否应为宁静群岛启用特殊 色块？",
+				zht = "此選項為實驗性功能，正在測試中。\n是否應為寧靜群島啟用特殊 色塊？",
 				pt  = "Esta opção é experimental e está em teste.\nO Arquipélago da Serenidade deve ter Colour Cubes especiais?",
 				pl  = "Ta opcja jest eksperymentalna i w fazie testów.\nCzy Archipelag Spokoju powinien mieć specjalne Colour Cubes?",
 				es  = "Esta opción es experimental y está en pruebas.\n¿Debería el Archipiélago de la Serenidad tener Colour Cubes especiales?",
@@ -1035,8 +1035,8 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 				DISABLED =
 				{
 					"Default Colour Cubes for the Serenity Archipelago.",
-					zh  = "宁静群岛使用默认 Colour Cubes。",
-					zht = "寧靜群島使用預設 Colour Cubes。",
+					zh  = "宁静群岛使用默认 色块。",
+					zht = "寧靜群島使用預設 色塊。",
 					pt  = "Colour Cubes padrão para o Arquipélago da Serenidade.",
 					pl  = "Domyślny Colour Cubes dla Archipelagu Spokoju.",
 					es  = "Colour Cubes predeterminados para el Archipiélago de la Serenidad.",
@@ -1105,8 +1105,8 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			HOVER =
 			{
 				"This option is experimental and its under testing.\n\Should the Seaside Island have special Colour Cubes?", 
-				zh  = "此选项为实验性功能，正在测试中。\n是否应为海滨岛启用特殊 Colour Cubes？",
-				zht = "此選項為實驗性功能，正在測試中。\n是否應為海濱島啟用特殊 Colour Cubes？",
+				zh  = "此选项为实验性功能，正在测试中。\n是否应为海滨岛启用特殊 色块？",
+				zht = "此選項為實驗性功能，正在測試中。\n是否應為海濱島啟用特殊 色塊？",
 				pt  = "Esta opção é experimental e está em teste.\nA Ilha Beira-mar deve ter Colour Cubes especiais?",
 				pl  = "Ta opcja jest eksperymentalna i w fazie testów.\nCzy Wyspa Nadmorska powinna mieć specjalny Colour Cubes?",
 				es  = "Esta opción es experimental y está en pruebas.\n¿Debería la Isla Costera tener Colour Cubes especiales?",
@@ -1117,8 +1117,8 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 				DISABLED =
 				{
 					"Default Colour Cubes for the Seaside Island.",
-					zh  = "海滨岛使用默认 Colour Cubes。",
-					zht = "海濱島使用預設 Colour Cubes。",
+					zh  = "海滨岛使用默认 色块。",
+					zht = "海濱島使用預設 色塊。",
 					pt  = "Colour Cubes padrão para a Ilha Beira-mar.",
 					pl  = "Domyślny Colour Cubes dla Wyspy Nadmorskiej.",
 					es  = "Colour Cubes predeterminados para la Isla Costera.",
@@ -1270,8 +1270,8 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 					NAME =
 					{
 						"Retrofit Ocean",
-						zh  = "海洋回填",
-						zht = "海洋回填",
+						zh  = "海洋改造",
+						zht = "海洋改造",
 						pt  = "Retro. do Oceano",
 						pl  = "Przebudowa oceanu",
 						es  = "Océano Retrofitado",
@@ -1293,8 +1293,8 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 					NAME =
 					{
 						"Retrofit Mermhuts",
-						zh  = "Mod物品",
-						zht = "Mod物品",
+						zh  = "鱼人屋改造",
+						zht = "鱼人屋改造",
 						pt  = "Retro. de Mermhuts",
 						pl  = "Retrofit Mermhuts",
 						es  = "Mermhuts Retrofitados",
@@ -1303,8 +1303,8 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 					HOVER =
 					{
 						"Mod Mermhuts will be generated during server initialization.",
-						zh  = "Mod的物品会在服务器初始化期间生成。",
-						zht = "Mod的物品會在伺服器初始化期間生成。",
+						zh  = "Mod的鱼人屋会在服务器初始化期间生成。",
+						zht = "Mod的鱼人屋會在伺服器初始化期間生成。",
 						pt  = "Os Mermhuts do Mod serão geradas durante a inicialização do servidor.",
 						pl  = "Mermhuty moda zostaną wygenerowane podczas inicjalizacji serwera.",
 						es  = "Los Mermhuts del mod se generarán durante la inicialización del servidor.",
@@ -1386,8 +1386,8 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 				DISABLED =
 				{
 					"Certain items can't be traded in exchange for Mod items.",
-					zh  = "某些物品不能用 Mod 物品进行交易。",
-					zht = "某些物品不能用 Mod 物品進行交易。",
+					zh  = "某些物品无法兑换为Mod物品。",
+					zht = "某些物品無法用來兌換模組物品。",
 					pt  = "Não será possível fazer trocas por itens do Mod.",
 					pl  = "Niektóre przedmioty nie mogą być wymienione na przedmioty z moda.",
 					es  = "Ciertos objetos no se pueden intercambiar por objetos del mod.",
@@ -1396,8 +1396,8 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 				ENABLED =
 				{
 					"Certain items can be traded in exchange for Mod items.",
-					zh  = "某些物品可以用 Mod 物品进行交易。",
-					zht = "某些物品可以用 Mod 物品進行交易。",
+					zh  = "某些物品可兑换为Mod物品。",
+					zht = "某些物品可用來兌換模組物品。",
 					pt  = "Será possível fazer trocas por itens do Mod.",
 					pl  = "Niektóre przedmioty można wymienić na przedmioty z moda.",
 					es  = "Ciertos objetos se pueden intercambiar por objetos del mod.",
