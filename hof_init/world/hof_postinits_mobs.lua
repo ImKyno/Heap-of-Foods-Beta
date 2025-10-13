@@ -399,7 +399,7 @@ end
 local function AntlionPostInit(inst)
 	local _OnGivenItem
 	
-	local function OnGivenItem(inst, giver, item)
+	local function OnGivenItem(inst, giver, item, ...)
 		if item.prefab == "lazydessert" then
 			if giver ~= nil and giver:IsValid() then
 				giver:PushEvent("learncookbookstats", item.prefab)

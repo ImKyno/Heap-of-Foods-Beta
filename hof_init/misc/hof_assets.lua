@@ -230,6 +230,7 @@ local HOF_ICONS =
 	"gorge_tomato_soup",
 	"gorge_trifle",
 	"gorge_vegetable_soup",
+	"gorge_waffles",
 	"gummy_cake",
 	"gummybeargers",
 	"gummyworms",

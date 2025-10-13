@@ -1144,6 +1144,23 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_syrup", 2}, {"goatmilk", 2}}},
 	},
 	
+	gorge_waffles =
+	{
+		test = function(cooker, names, tags) return tags.butter and tags.egg and tags.syrup end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_MED,
+		health = 5,
+		hunger = 37.5,
+		sanity = 60,
+		cooktime = .5,
+		nameoverride = "WAFFLES",
+		potlevel = "med",
+		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
+		card_def = {ingredients = {{"butter", 1}, {"bird_egg", 1}, {"kyno_syrup", 2}}},
+	},
+	
 	gorge_scone =
 	{
 		test = function(cooker, names, tags) return tags.fruit and (tags.flour and tags.flour >= 2) and tags.dairy end,

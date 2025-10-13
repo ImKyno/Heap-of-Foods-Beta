@@ -5628,6 +5628,29 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		specialinfo    = "CARAMELCUBE",
 	},
 	
+	gorge_waffles      =
+	{
+		name           = "gorge_waffles",
+		type           = "food",
+		tex            = "gorge_waffles.tex",
+		prefab         = "gorge_waffles",
+		healthvalue    = 5,
+		hungervalue    = 37.5,
+		sanityvalue    = 60,
+		perishable     = 4800,
+		foodtype       = "GOODIES",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "gorge_waffles",
+		build          = "gorge_waffles",
+		overridesymbol = {"swap_food", "swap_food", "gorge_waffles"},
+		anim           = "idle",
+		animoffsetx    = 12,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -100,
+		deps           = preparedfood_deps,
+	},
+	
 	gorge_scone        =
 	{
 		name           = "gorge_scone",	
