@@ -43,7 +43,7 @@ end
 
 local function OnExtended(inst, target)
     inst.components.timer:StopTimer("kyno_coffeebuff")
-    inst.components.timer:StartTimer("kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_DURATION_MED)
+    inst.components.timer:StartTimer("kyno_coffeebuff", TUNING.HOF_COFFEEBUFF_DURATION)
 	
 	if target.components.locomotor ~= nil then
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
@@ -70,11 +70,11 @@ local function fn()
     inst:AddComponent("debuff")
     inst.components.debuff:SetAttachedFn(OnAttached)
     inst.components.debuff:SetDetachedFn(OnDetached)
-    -- inst.components.debuff:SetExtendedFn(OnExtended)
+    inst.components.debuff:SetExtendedFn(OnExtended)
     inst.components.debuff.keepondespawn = true
 
     inst:AddComponent("timer")
-	-- inst.components.timer:StartTimer("kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_DURATION_MED)
+	inst.components.timer:StartTimer("kyno_coffeebuff", TUNING.HOF_COFFEEBUFF_DURATION)
 	
     inst:ListenForEvent("timerdone", OnTimerDone)
 
@@ -136,7 +136,7 @@ end
 
 local function OnExtendedMocha(inst, target)
     inst.components.timer:StopTimer("kyno_mochabuff")
-    inst.components.timer:StartTimer("kyno_mochabuff", TUNING.KYNO_MOCHABUFF_DURATION)
+    inst.components.timer:StartTimer("kyno_mochabuff", TUNING.HOF_COFFEEBUFF_DURATION)
 	
 	if target.components.locomotor ~= nil then
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_mochabuff", TUNING.KYNO_MOCHABUFF_SPEED)
@@ -167,11 +167,11 @@ local function mochafn()
     inst:AddComponent("debuff")
     inst.components.debuff:SetAttachedFn(OnAttachedMocha)
     inst.components.debuff:SetDetachedFn(OnDetachedMocha)
-    -- inst.components.debuff:SetExtendedFn(OnExtendedMocha)
+    inst.components.debuff:SetExtendedFn(OnExtendedMocha)
     inst.components.debuff.keepondespawn = true
 
     inst:AddComponent("timer")
-    -- inst.components.timer:StartTimer("kyno_mochabuff", TUNING.KYNO_MOCHABUFF_DURATION)
+    inst.components.timer:StartTimer("kyno_mochabuff", TUNING.HOF_COFFEEBUFF_DURATION)
     
 	inst:ListenForEvent("timerdone", OnTimerDoneMocha)
 
@@ -209,7 +209,7 @@ end
 
 local function OnExtendedTiramisu(inst, target)
     inst.components.timer:StopTimer("kyno_tiramisubuff")
-    inst.components.timer:StartTimer("kyno_tiramisubuff", TUNING.KYNO_TIRAMISUBUFF_DURATION)
+    inst.components.timer:StartTimer("kyno_tiramisubuff", TUNING.HOF_COFFEEBUFF_DURATION)
 	
 	if target.components.locomotor ~= nil then
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_tiramisubuff", TUNING.KYNO_TIRAMISUBUFF_SPEED)
@@ -232,11 +232,11 @@ local function tiramisufn()
     inst:AddComponent("debuff")
     inst.components.debuff:SetAttachedFn(OnAttachedTiramisu)
     inst.components.debuff:SetDetachedFn(OnDetachedTiramisu)
-    -- inst.components.debuff:SetExtendedFn(OnExtendedTiramisu)
+    inst.components.debuff:SetExtendedFn(OnExtendedTiramisu)
     inst.components.debuff.keepondespawn = true
 
     inst:AddComponent("timer")
-    -- inst.components.timer:StartTimer("kyno_tiramisubuff", TUNING.KYNO_TIRAMISUBUFF_DURATION)
+    inst.components.timer:StartTimer("kyno_tiramisubuff", TUNING.HOF_COFFEEBUFF_DURATION)
     
 	inst:ListenForEvent("timerdone", OnTimerDoneTiramisu)
 

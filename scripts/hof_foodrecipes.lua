@@ -539,7 +539,7 @@ local kyno_foods =
 		hunger = 50,
 		sanity = 25,
 		cooktime = 2,
-		potlevel = "med",
+		potlevel = "low",
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 1}, {"kyno_flour", 2}, {"tomato", 1}}},
 	},
@@ -1404,6 +1404,7 @@ local kyno_foods =
 		cooktime = 1.2,
 		potlevel = "med",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"popcorn"},
 		card_def = {ingredients = {{"corn", 3}, {"kyno_salt", 1}}},
 	},
 	

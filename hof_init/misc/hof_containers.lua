@@ -31,25 +31,26 @@ function containers.widgetsetup(container, prefab, data, ...)
 end
 
 -- Syrup Pot.
-params.syrup_pot 			=
+params.syrup_pot =
 {
-    widget 					=
+    widget =
     {
-        slotpos 			=
+        slotpos =
         {
             Vector3(-1, 64 + 32 + 8 + 4, 0	 ),
             Vector3(-1, 32 + 4, 0			 ),
             Vector3(-1, -(32 + 4), 0		 ),
             Vector3(-1, -(64 + 32 + 8 + 4), 0),
         },
-        animbank 			= "quagmire_ui_pot_1x4",
-        animbuild 			= "quagmire_ui_pot_1x4",
-        pos 				= Vector3(200, 0, 0), -- A bit closer!
-        side_align_tip 		= 100,
+        animbank = "quagmire_ui_pot_1x4",
+        animbuild = "quagmire_ui_pot_1x4",
+		
+        pos = Vector3(200, 0, 0), -- A bit closer!
+        side_align_tip = 100,
     },
 
-    acceptsstacks 			= false,
-    type 					= "cooker",
+    acceptsstacks = false,
+    type = "cooker",
 }
 
 function params.syrup_pot.itemtestfn(container, item, slot)
@@ -57,25 +58,26 @@ function params.syrup_pot.itemtestfn(container, item, slot)
 end
 
 -- Small Cookwares.
-params.cooking_pot_small	=
+params.cooking_pot_small =
 {
-    widget 					=
+    widget =
     {
-        slotpos 			=
+        slotpos =
         {
             Vector3(0, 64 + 8,    0),
             Vector3(0, 0,         0),
             Vector3(0, -(64 + 8), 0),
         },
 
-        animbank 			= "quagmire_ui_pot_1x3",
-        animbuild 			= "quagmire_ui_pot_1x3",
-        pos 				= Vector3(200, 0, 0),
-        side_align_tip 		= 100,
+        animbank = "quagmire_ui_pot_1x3",
+        animbuild = "quagmire_ui_pot_1x3",
+		
+        pos = Vector3(200, 0, 0),
+        side_align_tip = 100,
     },
 
-    acceptsstacks 			= false,
-    type 					= "cooker",
+    acceptsstacks = false,
+    type = "cooker",
 }
 
 function params.cooking_pot_small.itemtestfn(container, item, slot)
@@ -83,11 +85,11 @@ function params.cooking_pot_small.itemtestfn(container, item, slot)
 end
 
 -- Large Cookwares.
-params.cooking_pot			=
+params.cooking_pot =
 {
-    widget 					=
+    widget =
     {
-        slotpos 			=
+        slotpos =
         {
             Vector3(-1, 64 + 32 + 8 + 4, 0	 ),
             Vector3(-1, 32 + 4, 0			 ),
@@ -95,14 +97,15 @@ params.cooking_pot			=
             Vector3(-1, -(64 + 32 + 8 + 4), 0),
         },
 
-        animbank 			= "quagmire_ui_pot_1x4",
-        animbuild 			= "quagmire_ui_pot_1x4",
-        pos 				= Vector3(200, 0, 0),
-        side_align_tip 		= 100,
+        animbank = "quagmire_ui_pot_1x4",
+        animbuild = "quagmire_ui_pot_1x4",
+		
+        pos = Vector3(200, 0, 0),
+        side_align_tip = 100,
     },
 
-    acceptsstacks 			= false,
-    type 					= "cooker",
+    acceptsstacks = false,
+    type = "cooker",
 }
 
 function params.cooking_pot.itemtestfn(container, item, slot)
@@ -110,21 +113,22 @@ function params.cooking_pot.itemtestfn(container, item, slot)
 end
 
 -- Wooden Keg and Preserves Jar. (They use the same).
-params.brewer 				=
+params.brewer =
 {
-    widget 					=
+    widget =
     {
-        slotpos 			=
+        slotpos =
         {
             Vector3(-1, 32 + 4, 0			 ),
             Vector3(-1, -(32 + 4), 0		 ),
 			Vector3(-1, -(64 + 32 + 8 + 4), 0),
         },
 
-        animbank 			= "ui_brewer_1x3",
-        animbuild 			= "ui_brewer_1x3",
-        pos 				= Vector3(150, 0, 0),
-        side_align_tip 		= 100,
+        animbank = "ui_brewer_1x3",
+        animbuild = "ui_brewer_1x3",
+		
+        pos = Vector3(150, 0, 0),
+        side_align_tip = 100,
 		buttoninfo =
         {
             text = STRINGS.ACTIONS.BREWER,
@@ -132,8 +136,8 @@ params.brewer 				=
         }
     },
 
-    acceptsstacks 			= false,
-    type 					= "brewer",
+    acceptsstacks = false,
+    type = "brewer",
 }
 
 function params.brewer.itemtestfn(container, item, slot)
@@ -173,6 +177,7 @@ params.honeydeposit =
 
         animbank = "ui_antchest_honeycomb",
         animbuild = "ui_antchest_honeycomb",
+		
         pos = Vector3(0, 200, 0),
         side_align_tip = 160,
     },
@@ -190,8 +195,10 @@ params.potatosack =
     widget =
     {
 		slotpos = {},
+		
         animbank = "ui_chest_3x2",
         animbuild = "ui_chest_3x2",
+		
         pos = Vector3(0, 200, 0),
         side_align_tip = 160,
     },
@@ -227,8 +234,10 @@ params.foodsack =
 	{
 		slotbg = {},
 		slotpos = {},
+		
 		animbank = "ui_backpack_2x4",
         animbuild = "ui_backpack_2x4",
+		
         pos = Vector3(-5, -80, 0),
 	},
 	
@@ -252,6 +261,30 @@ function params.foodsack.itemtestfn(container, item, slot)
             return true
         end
     end
+end
+
+params.popcornmachine = 
+{
+	widget =
+	{
+		slotpos =
+		{
+			Vector3(-2, 18, 0),
+		},
+		
+		animbank = "ui_chest_1x1",
+		animbuild = "ui_chest_1x1",
+		
+		pos = Vector3(0, 160, 0),
+		side_align_tip = 100,
+    },
+
+	acceptsstacks = true,
+	type = "chest",
+}
+
+function params.popcornmachine.itemtestfn(container, item, slot)
+	return (item:HasTag("popcorn") and item:GetTimeAlive() <= 0)
 end
 
 --[[

@@ -118,12 +118,10 @@ local function OnEat(inst, food)
 				local owner = inst.components.inventoryitem:GetGrandOnwer()
 				owner.components.inventory:GiveItem("kyno_piko_orange")
 				inst:Remove()
-				-- print("EATING HONEYED FOOD")
 			else
 				SpawnPrefab("sand_puff").Transform:SetPosition(inst.Transform:GetWorldPosition())
 				SpawnPrefab("kyno_piko_orange").Transform:SetPosition(inst.Transform:GetWorldPosition())
 				inst:Remove()
-				-- print("EATING HONEYED FOOD")
 			end
 		end
 	end

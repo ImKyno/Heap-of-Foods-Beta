@@ -1049,6 +1049,71 @@ end
 
 AddPrefabPostInit("plant_normal", PlantNormalPostInit)
 
+-- Toadstool's Sporecaps drops special Mushrooms.
+local function MushroomSproutPostInit(inst)
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst:AddComponent("lootdropper")
+	
+	if inst.components.workable ~= nil then
+		local _onfinish = inst.components.workable.onfinish
+
+		inst.components.workable:SetOnFinishCallback(function(inst, worker)
+			if _onfinish ~= nil then
+				_onfinish(inst, worker)
+			end
+
+			if worker ~= nil and worker:IsValid() then
+				local loot_data = inst._custom_loot or 
+				{
+					main_loot = nil,
+					extra_loot = nil,
+					extra_chance = 0,
+				}
+
+				if loot_data.main_loot then
+					inst.components.lootdropper:SpawnLootPrefab(loot_data.main_loot)
+				end
+
+				if loot_data.extra_loot and math.random() < loot_data.extra_chance then
+					inst.components.lootdropper:SpawnLootPrefab(loot_data.extra_loot)
+				end
+			end
+		end)
+	end
+end
+
+local mushroomsprouts = 
+{
+	{
+		name = "mushroomsprout",
+		main_loot = "blue_cap",
+		extra_loot = "blue_cap",
+		extra_chance = 0.25,
+	},
+	{
+		name = "mushroomsprout_dark",
+		main_loot = "nightmarefuel",
+		extra_loot = "livinglog",
+		extra_chance = 0.1,
+	},
+}
+
+for _, v in ipairs(mushroomsprouts) do
+	AddPrefabPostInit(v.name, function(inst)
+		inst._custom_loot = 
+		{
+			main_loot = v.main_loot,
+			extra_loot = v.extra_loot,
+			extra_chance = v.extra_chance,
+		}
+		
+		MushroomSproutPostInit(inst)
+	end)
+end
+
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")
 
