@@ -54,7 +54,7 @@
 	* "butcher_aggressive" - Makes animal aggressive towards the butcher.
 	* "butcher_fearable"   - Makes animal fear the butcher.
 
-]]------------------------------------------------------------------------------------------------
+]]--------------------------------------------------------------------------------------------------
 
 local Slaughterable = Class(function(self, inst)
 	self.inst = inst

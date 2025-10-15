@@ -57,6 +57,7 @@ local hof_init_world   =
 	"hof_postinits_world",
 	"hof_postinits_mobs",
 	"hof_slaughterable_animals",
+	"hof_transformable_mushrooms",
 	"hof_ancienttree_data",
 	"hof_tree_rock_data",
 }

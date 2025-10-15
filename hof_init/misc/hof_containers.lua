@@ -275,7 +275,7 @@ params.popcornmachine =
 		animbank = "ui_chest_1x1",
 		animbuild = "ui_chest_1x1",
 		
-		pos = Vector3(0, 160, 0),
+		pos = Vector3(0, 140, 0),
 		side_align_tip = 100,
     },
 
