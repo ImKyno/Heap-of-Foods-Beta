@@ -72,13 +72,14 @@ local WARES                             =
 		},
 	},
 	
-	--[[
 	RANDOM_ULTRARARES                   =
 	{
 		-- TO DO: Sharkuttery Board
 		-- TO DO: Coffee Machine Kit
+		{
+			["kyno_bottlecap"]          = { recipe = "meadowislandtrader_kyno_bottlecap",         min = 3,  max = 6  },
+		},
 	},
-	]]--
 	
 	-- Make sure to always have seasonal seeds available to trade.
 	SEASONAL                            = 
@@ -137,14 +138,6 @@ local WARES                             =
 			["slow_farmplot_blueprint"] = { recipe = "meadowislandtrader_slow_farmplot_blueprint",  min = 1, max = 2 },
 			["fast_farmplot_blueprint"] = { recipe = "meadowislandtrader_fast_farmplot_blueprint",  min = 1, max = 2 },
 		},
-		--[[
-		["mermking"] =
-		{
-			{
-				-- TO DO: Something for Wurt?
-			},
-		},
-		]]--
 	},
 }
 
@@ -248,11 +241,9 @@ local function RerollWares(inst)
 		inst:AddWares(inst.WARES.RANDOM_RARES[math.random(#inst.WARES.RANDOM_RARES)])
 	end
 	
-	--[[
 	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_ULTRARARES_ODDS then -- 5%
 		inst:AddWares(inst.WARES.RANDOM_ULTRARARES[math.random(#inst.WARES.RANDOM_ULTRARARES)])
 	end
-	]]--
 	
 	local seasonalwares = inst.WARES.SEASONAL[TheWorld.state.season]
 	
@@ -339,12 +330,29 @@ local function SetLordFruitFlyKilled(inst, active)
 	end
 end
 
+local function SetCelestialScionKilled(inst, active)
+	if inst.celestialscionkilled ~= active then
+		inst.celestialscionkilled = active
+
+		if inst.celestialscionkilled then
+			inst.WARES.RANDOM_ULTRARARES[1]["kyno_goldenapple"] = { recipe = "meadowislandtrader_kyno_goldenapple", min = 1, max = 3 }
+			inst.FORGETABLE_RECIPES["meadowislandtrader_kyno_goldenapple"] = true
+
+			inst:AddWares({ ["kyno_goldenapple"] = { recipe = "meadowislandtrader_kyno_goldenapple", min = 1, max = 3 } })
+		end
+	end
+end
+
 local function OnWorldInit(inst)
 	inst:WatchWorldState("islunarhailing", inst.SetIsLunarHailing)
 	inst:SetIsLunarHailing(TheWorld.state.islunarhailing)
 	
 	inst:WatchWorldState("isfullmoon", inst.SetIsFullMoon)
 	inst:SetIsFullMoon(TheWorld.state.isfullmoon)
+	
+	if TheWorld.components.wagboss_tracker and TheWorld.components.wagboss_tracker:IsWagbossDefeated() then
+		SetCelestialScionKilled(inst, true)
+	end
 end
 
 local function SetRevealed(inst, revealed)
@@ -508,6 +516,10 @@ local function fn()
 	
 	inst:ListenForEvent("ms_lordfruitflykilled", function(world, data)
 		SetLordFruitFlyKilled(inst, true)
+	end, TheWorld)
+	
+	inst:ListenForEvent("wagboss_defeated", function(world, data)
+		SetCelestialScionKilled(inst, true)
 	end, TheWorld)
 	
 	-- We somehow got a Sammy without a home. Kill it! Kill it with fire!

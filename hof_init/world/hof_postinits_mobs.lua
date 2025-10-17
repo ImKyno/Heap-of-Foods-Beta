@@ -5,9 +5,9 @@ local resolvefilepath = _G.resolvefilepath
 local ACTIONS         = _G.ACTIONS
 local STRINGS         = _G.STRINGS
 local SpawnPrefab     = _G.SpawnPrefab
+local UpvalueHacker   = require("hof_upvaluehacker")
 
 require("hof_util")
-require("hof_upvaluehacker")
 
 local DF_COFFEE = GetModConfigData("COFFEEDROPRATE")
 
@@ -367,10 +367,39 @@ end
 AddPrefabPostInit("frog", FrogPostinit)
 AddPrefabPostInit("lunarfrog", FrogPostinit)
 
-
 -- Toadstool drops Poison Frog Legs instead.
-AddPrefabPostInit("toadstool", function(inst) ReplaceLoot(inst.prefab, "froglegs", "kyno_poison_froglegs") end)
-AddPrefabPostInit("toadstool_dark", function(inst) ReplaceLoot(inst.prefab, "froglegs", "kyno_poison_froglegs") end)
+local function ToadstoolPostInit(inst)
+	ReplaceLoot(inst.prefab, "froglegs", "kyno_poison_froglegs")
+	
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	if inst.components.lootdropper ~= nil then
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap", 1.00)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap", 1.00)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap", 0.50)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap", 0.25)
+	end
+end
+
+local function ToadstoolDarkPostInit(inst)
+	ReplaceLoot(inst.prefab, "froglegs", "kyno_poison_froglegs")
+	
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	if inst.components.lootdropper ~= nil then
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap_dark", 1.00)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap_dark", 1.00)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap_dark", 0.50)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap_dark", 0.25)
+	end
+end
+
+AddPrefabPostInit("toadstool", ToadstoolPostInit)
+AddPrefabPostInit("toadstool_dark", ToadstoolDarkPostInit)
 
 -- Crab King and its claws drop Crab King Meat instead.
 AddPrefabPostInit("crabking", function(inst) ReplaceLoot(inst.prefab, "meat", "kyno_crabkingmeat") end)
@@ -420,3 +449,60 @@ local function AntlionPostInit(inst)
 end
 
 AddPrefabPostInit("antlion", AntlionPostInit)
+
+--[[
+local function WormBossPostInit(inst)
+	local _GenerateLoot = UpvalueHacker.GetUpvalue(_G.Prefabs.worm_boss
+end
+
+AddPrefabPostInit("worm_boss", function(inst)
+    if not GLOBAL.TheWorld.ismastersim then
+        return
+    end
+
+    -- Pegamos o arquivo original
+    local prefab_fn = require("prefabs/worm_boss")
+
+    -- Pegamos a função GenerateLoot
+    local GenerateLoot = UpvalueHacker.GetUpvalue(prefab_fn, "GenerateLoot")
+
+    if GenerateLoot then
+        -- Pegamos a tabela interna de loot
+        local loottable = UpvalueHacker.GetUpvalue(GenerateLoot, "loottable")
+
+        if loottable and loottable.boneshard then
+            -- Remove o item original
+            loottable.boneshard = nil
+        end
+
+        -- Adiciona sua prefab customizada no lugar
+        loottable["meu_item_custom"] = 15  -- nome da sua prefab e quantidade
+    else
+        print("[WormBossLootPatch] Falhou em achar GenerateLoot!")
+    end
+end)
+]]--
+
+-- Guaranteed Golden Apple for Wagstaff cutscene and chances afterwards.
+local GOLDENAPPLE_ADDED = false
+
+local function ScionPostInit(inst)
+	if GOLDENAPPLE_ADDED then
+		return
+	end
+	
+	local WAGSTAFF_LOOT = UpvalueHacker.GetUpvalue(_G.Prefabs.alterguardian_phase4_lunarrift.fn, "LootSetupFn", "WAGSTAFF_LOOT")
+    table.insert(WAGSTAFF_LOOT, "kyno_goldenapple")
+
+	GOLDENAPPLE_ADDED = true
+end
+
+AddPrefabPostInit("alterguardian_phase4_lunarrift", ScionPostInit)
+
+local function ApplyScionLootTable()
+	if _G.LootTables and _G.LootTables.alterguardian_phase4_lunarrift then
+		table.insert(_G.LootTables.alterguardian_phase4_lunarrift, {"kyno_goldenapple", 0.10})
+	end
+end
+
+AddSimPostInit(ApplyScionLootTable)

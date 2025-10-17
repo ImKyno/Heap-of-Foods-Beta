@@ -672,6 +672,9 @@ local function mush_cookedfn()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.TINY_FUEL
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

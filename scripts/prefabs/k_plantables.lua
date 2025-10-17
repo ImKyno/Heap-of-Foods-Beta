@@ -183,6 +183,7 @@ local plantables =
 }
 
 local prefabs = {}
+
 for i, v in ipairs(plantables) do
 	table.insert(prefabs, MakePlantable(v))
 	table.insert(prefabs, MakePlacer("dug_"..v.name.."_placer", v.bank or v.name, v.build or v.name, v.anim or "idle"))

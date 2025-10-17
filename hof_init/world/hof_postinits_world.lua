@@ -1089,14 +1089,14 @@ local mushroomsprouts =
 {
 	{
 		name = "mushroomsprout",
-		main_loot = "blue_cap",
-		extra_loot = "blue_cap",
+		main_loot = "kyno_sporecap",
+		extra_loot = "kyno_sporecap",
 		extra_chance = 0.25,
 	},
 	{
 		name = "mushroomsprout_dark",
-		main_loot = "nightmarefuel",
-		extra_loot = "livinglog",
+		main_loot = "kyno_sporecap_dark",
+		extra_loot = "kyno_sporecap_dark",
 		extra_chance = 0.1,
 	},
 }

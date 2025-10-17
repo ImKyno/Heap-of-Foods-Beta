@@ -106,6 +106,21 @@ AddRecipe2("meadowislandtrader_fast_farmplot_blueprint", {Ingredient("kyno_radis
 	{"CRAFTING_STATION"}
 )
 
+AddRecipe2("meadowislandtrader_kyno_goldenapple", {Ingredient("coolant", 1)}, TECH.LOST,
+	{
+		limitedamount       = true,
+		nounlock            = true,
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSMEADOWSHOP",
+		actionstr           = "MEADOWSHOP",
+		sg_state            = "give",
+		product             = "kyno_goldenapple",
+		atlas               = ModAtlas,
+		image               = "kyno_goldenapple.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
 AddRecipe2("meadowislandtrader_foliage", {Ingredient("kyno_wheat", 1, ModAtlas)}, TECH.LOST,
 	{
 		limitedamount       = true, 
@@ -342,6 +357,21 @@ AddRecipe2("meadowislandtrader_nukashine_sugarfree", {Ingredient("nukashine", 1,
 		product             = "nukashine_sugarfree",
 		atlas               = ModAtlas,
 		image               = "nukashine.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+AddRecipe2("meadowislandtrader_kyno_bottlecap", {Ingredient("gears", 1)}, TECH.LOST,
+	{
+		limitedamount       = true, 
+		nounlock            = true, 
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSMEADOWSHOP",
+		actionstr           = "MEADOWSHOP", 
+		sg_state            = "give", 
+		product             = "kyno_bottlecap",
+		atlas               = ModAtlas,
+		image               = "kyno_bottlecap.tex",
 	},
 	{"CRAFTING_STATION"}
 )

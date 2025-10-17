@@ -61,6 +61,9 @@ local function CheckBeached(inst)
         end
 		
         inst:Remove()
+
+		local beached = SpawnPrefab("kyno_taroroot")
+        beached.Transform:SetPosition(x, y, z)
     end
 end
 
@@ -95,7 +98,7 @@ local function fn()
 	inst.AnimState:PlayAnimation("idle_plant", true)
 
 	inst:AddTag("plant")
-    inst:AddTag("blocker")
+	inst:AddTag("blocker")
     inst:AddTag("taroroot")
 
     inst.entity:SetPristine()

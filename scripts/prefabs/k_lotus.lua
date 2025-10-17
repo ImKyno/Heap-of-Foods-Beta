@@ -78,6 +78,9 @@ local function CheckBeached(inst)
         end
 		
         inst:Remove()
+
+		local beached = SpawnPrefab("kyno_lotus_flower")
+        beached.Transform:SetPosition(x, y, z)
     end
 end
 
