@@ -47,6 +47,29 @@ if HOF_COFFEEBUFF_ENABLED then
 	end
 	
 	AddPrefabPostInit("kyno_coffeebeans_cooked", CookedCoffeeBeansPostInit)
+	
+	local function GoldenApplePostInit(inst)
+		local function OnEaten(inst, eater)
+			if eater:HasTag("plantkin") then
+				if eater.components.health ~= nil and not eater.components.health:IsDead() then
+					eater.components.health:DoDelta(100)
+				end
+			end
+		
+			eater:AddDebuff("kyno_goldenapplebuff", "kyno_goldenapplebuff")
+			eater:AddDebuff("kyno_coffeealtbuff", "kyno_coffeealtbuff")
+		end
+		
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+		
+		if inst.components.edible ~= nil then
+			inst.components.edible:SetOnEatenFn(OnEaten)
+		end
+	end
+	
+	AddPrefabPostInit("kyno_goldenapple", GoldenApplePostInit)
 end
 
 if HOF_GIANTSPAWNING then

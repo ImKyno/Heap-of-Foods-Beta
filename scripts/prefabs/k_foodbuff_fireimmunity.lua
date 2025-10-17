@@ -7,7 +7,9 @@ local function OnAttached(inst, target)
 	end
 	
 	if not target:HasTag("bernieowner") then
-		target.components.health.fire_damage_scale = 0
+		if target.components.health ~= nil then
+			target.components.health.fire_damage_scale = 0
+		end
 	end
 	
     inst:ListenForEvent("death", function()
@@ -17,7 +19,9 @@ end
 
 local function OnDetached(inst, target)
 	if not target:HasTag("bernieowner") then
-		target.components.health.fire_damage_scale = 1
+		if target.components.health ~= nil then
+			target.components.health.fire_damage_scale = 1
+		end
 	end
 	
 	if target.components.talker and target:HasTag("player") then 
@@ -32,7 +36,9 @@ local function OnExtended(inst, target)
     inst.components.timer:StartTimer("kyno_fireimmunitybuff", TUNING.KYNO_FIREIMMUNITYBUFF_DURATION)
 
 	if not target:HasTag("bernieowner") then
-		target.components.health.fire_damage_scale = 0
+		if target.components.health ~= nil then
+			target.components.health.fire_damage_scale = 0
+		end
 	end
 end
 

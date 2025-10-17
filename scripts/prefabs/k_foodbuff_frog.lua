@@ -2,7 +2,7 @@ local function OnAttached(inst, target)
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0) 
 	
-	if target:HasTag("player") then 
+	if not target:HasTag("frogimmunity") then 
 		target:AddTag("frogimmunity")
 	end
 		
@@ -22,7 +22,7 @@ local function OnTimerDone(inst, data)
 end
 
 local function OnDetached(inst, target)
-	if target:HasTag("player") then 
+	if target:HasTag("frogimmunity") then 
 		target:RemoveTag("frogimmunity")
 	end
 	
@@ -41,8 +41,10 @@ local function OnExtended(inst, target)
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FROGBUFF_START"))
 	end
 	
-	if target:HasTag("player") then 
+	if target:HasTag("frogimmunity") then
 		target:RemoveTag("frogimmunity")
+		target:AddTag("frogimmunity")
+	else
 		target:AddTag("frogimmunity")
 	end
 end

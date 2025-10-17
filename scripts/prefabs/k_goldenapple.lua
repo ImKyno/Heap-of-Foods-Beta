@@ -10,6 +10,8 @@ local assets =
 local prefabs = 
 {
 	"kyno_goldenapple_fx",
+	"kyno_goldenapplebuff",
+
 	"spoiled_food",
 }
 
@@ -20,6 +22,8 @@ local function OnEaten(inst, eater)
 			eater.components.health:DoDelta(100)
 		end
 	end
+	
+	eater:AddDebuff("kyno_goldenapplebuff", "kyno_goldenapplebuff")
 end
 
 local function OnDropped(inst)

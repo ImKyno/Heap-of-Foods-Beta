@@ -13,7 +13,7 @@ local function OnAttached(inst, target)
 	end
 	
 	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.externaldamagemultipliers:SetModifier(inst, TUNING.KYNO_ALCOHOL_STRENGTH_SMALL, "kyno_strengthbuff")
+		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_SMALL, "kyno_strengthbuff")
 	end
 	
     inst:ListenForEvent("death", function()
@@ -29,7 +29,7 @@ local function OnDetached(inst, target)
 	end
 	
 	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.externaldamagemultipliers:RemoveModifier(inst, "kyno_strengthbuff")
+		target.components.combat.externaldamagemultipliers:RemoveModifier(target, "kyno_strengthbuff")
 	end
 	
 	if target.components.talker and target:HasTag("player") then 
@@ -50,7 +50,7 @@ local function OnExtended(inst, target)
 	end
 	
 	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.externaldamagemultipliers:SetModifier(inst, TUNING.KYNO_ALCOHOL_STRENGTH_SMALL, "kyno_strengthbuff")
+		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_SMALL, "kyno_strengthbuff")
 	end
 end
 
@@ -79,7 +79,7 @@ local function OnAttachedMed(inst, target)
 	end	
 		
 	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.externaldamagemultipliers:SetModifier(inst, TUNING.KYNO_ALCOHOL_STRENGTH_MEDSMALL, "kyno_strengthbuff_med")
+		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_MEDSMALL, "kyno_strengthbuff_med")
 	end
 	
     inst:ListenForEvent("death", function()
@@ -95,7 +95,7 @@ local function OnDetachedMed(inst, target)
 	end
 	
 	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.externaldamagemultipliers:RemoveModifier(inst, "kyno_strengthbuff_med")
+		target.components.combat.externaldamagemultipliers:RemoveModifier(target, "kyno_strengthbuff_med")
 	end
 	
 	if target.components.talker and target:HasTag("player") then 
@@ -115,7 +115,7 @@ local function OnExtendedMed(inst, target)
 	end
 	
 	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.externaldamagemultipliers:SetModifier(inst, TUNING.KYNO_ALCOHOL_STRENGTH_MEDSMALL, "kyno_strengthbuff_med")
+		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_MEDSMALL, "kyno_strengthbuff_med")
 	end
 end
 

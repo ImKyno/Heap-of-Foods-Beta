@@ -50,6 +50,7 @@ PrefabFiles =
 	"k_foodbuff_fishing",
 	"k_foodbuff_freeze",
 	"k_foodbuff_frog",
+	"k_foodbuff_goldenapple",
 	"k_foodbuff_haste",
 	"k_foodbuff_hunger",
 	"k_foodbuff_insanity",

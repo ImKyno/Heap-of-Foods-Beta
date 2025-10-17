@@ -4005,6 +4005,8 @@ local HOF_SCRAPBOOK_FOODS =
 		bank            = "kyno_goldenapple",
 		build           = "kyno_goldenapple",
 		anim            = "idle",
+		deps            = {"alterguardian_phase4_lunarrift", "spoiled_food"},
+		specialinfo     = "FOODEFFECTS_GOLDENAPPLE",
 	},
 }
 

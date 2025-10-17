@@ -726,6 +726,10 @@ ACTIONS.EAT.stroverridefn = function(act)
 	if obj:HasTag("drinkable_food") then 
 		return STRINGS.KYNO_DRINK_FOOD 
 	end
+	
+	if obj:HasTag("goldenapple") then
+		return STRINGS.KYNO_CONSUME_FOOD
+	end
 end
 
 ACTIONS.UNWRAP.stroverridefn = function(act)

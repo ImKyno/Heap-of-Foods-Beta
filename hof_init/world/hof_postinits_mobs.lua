@@ -107,31 +107,6 @@ AddPrefabPostInit("prime_mate", function(inst)
     inst.components.lootdropper:AddChanceLoot("piraterum", 0.05)
 end)
 
--- Lord of the Fruit Flies drops Garden Sprinkler blueprint.
--- Leonidas remember me to not put LootTables inside postinit again, otherwise it will 
--- increase the drop by +1 each time the entity spawns.
-AddPrefabPostInit("lordfruitfly", function(inst)
-	--[[
-	if _G.LootTables and _G.LootTables.lordfruitfly then
-		table.insert(_G.LootTables.lordfruitfly, {"kyno_garden_sprinkler_blueprint", 1.00})
-	end
-	]]--
-
-	_G.SetSharedLootTable("hof_lordfruitfly",
-	{
-		{"plantmeat", 1.00},
-		{"kyno_garden_sprinkler_blueprint", 1.00},
-	})
-	
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	if inst.components.lootdropper ~= nil then
-		inst.components.lootdropper:SetChanceLootTable("hof_lordfruitfly")
-	end
-end)
-
 -- Dragonfly Drops Coffee Plants.
 AddPrefabPostInit("dragonfly", function(inst)
 	if not _G.TheWorld.ismastersim then
@@ -499,10 +474,16 @@ end
 
 AddPrefabPostInit("alterguardian_phase4_lunarrift", ScionPostInit)
 
-local function ApplyScionLootTable()
+-- Leonidas remember me to not put LootTables inside postinit again, otherwise it will 
+-- increase the drop by +1 each time the entity spawns.
+local function ApplyLootTables()
+	if _G.LootTables and _G.LootTables.lordfruitfly then
+		table.insert(_G.LootTables.lordfruitfly, {"kyno_garden_sprinkler_blueprint", 1.00})
+	end
+
 	if _G.LootTables and _G.LootTables.alterguardian_phase4_lunarrift then
 		table.insert(_G.LootTables.alterguardian_phase4_lunarrift, {"kyno_goldenapple", 0.10})
 	end
 end
 
-AddSimPostInit(ApplyScionLootTable)
+AddSimPostInit(ApplyLootTables)

@@ -2,7 +2,9 @@ local function OnAttached(inst, target)
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0) 
 
-	target:AddTag("fasthands")
+	if not target:HasTag("fasthands") then
+		target:AddTag("fasthands")
+	end
 	
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_HASTEBUFF_START"))
@@ -20,7 +22,9 @@ local function OnTimerDone(inst, data)
 end
 
 local function OnDetached(inst, target)
-	target:RemoveTag("fasthands")
+	if target:HasTag("fasthands") then
+		target:RemoveTag("fasthands")
+	end
 		
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_HASTEBUFF_END"))
@@ -33,8 +37,12 @@ local function OnExtended(inst, target)
     inst.components.timer:StopTimer("kyno_hastebuff")
     inst.components.timer:StartTimer("kyno_hastebuff", TUNING.KYNO_HASTEBUFF_DURATION)
 	
-	target:RemoveTag("fasthands")
-	target:AddTag("fasthands")
+	if target:HasTag("fasthands") then
+		target:RemoveTag("fasthands")
+		target:AddTag("fasthands")
+	else
+		target:AddTag("fasthands")
+	end
 end
 
 local function fn()
@@ -69,7 +77,9 @@ local function OnAttachedEater(inst, target)
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0) 
 
-	target:AddTag("fasteater")
+	if not target:HasTag("fasteater") then
+		target:AddTag("fasteater")
+	end
 	
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_EATERBUFF_START"))
@@ -87,7 +97,9 @@ local function OnTimerDoneEater(inst, data)
 end
 
 local function OnDetachedEater(inst, target)
-	target:RemoveTag("fasteater")
+	if target:HasTag("fasteater") then
+		target:RemoveTag("fasteater")
+	end
 		
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_EATERBUFF_END"))
@@ -100,8 +112,12 @@ local function OnExtendedEater(inst, target)
     inst.components.timer:StopTimer("kyno_eaterbuff")
     inst.components.timer:StartTimer("kyno_eaterbuff", TUNING.KYNO_EATERBUFF_DURATION)
 	
-	target:RemoveTag("fasteater")
-	target:AddTag("fasteater")
+	if target:HasTag("fasteater") then
+		target:RemoveTag("fasteater")
+		target:AddTag("fasteater")
+	else
+		target:AddTag("fasteater")
+	end
 end
 
 local function eaterfn()

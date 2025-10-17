@@ -97,12 +97,11 @@ local function OnExtended(inst, target)
 			target.components.sanity:SetNegativeAuraImmunity(true)
 			target.components.sanity:SetPlayerGhostImmunity(true)
 			target.components.sanity:SetLightDrainImmune(true)
-			target.components.sanity:SetFullAuraImmunity(true)
 		end
 	end
 	
 	if target.components.sanity ~= nil then 
-		target.components.sanity:SetFullAuraImmunity(false)
+		target.components.sanity:SetFullAuraImmunity(true)
 		target.components.sanity.get_equippable_dappernessfn = AddDappernessResistance
 	end
 end

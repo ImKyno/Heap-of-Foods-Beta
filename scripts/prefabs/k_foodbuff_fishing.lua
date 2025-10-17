@@ -37,7 +37,10 @@ local function OnExtended(inst, target)
     inst.components.timer:StopTimer("kyno_fishingbuff")
     inst.components.timer:StartTimer("kyno_fishingbuff", TUNING.KYNO_FISHINGBUFF_DURATION)
 	
-	if not target:HasTag("skilledfisherman") then
+	if target:HasTag("skilledfisherman") then
+		target:RemoveTag("skilledfisherman")
+		target:AddTag("skilledfisherman")
+	else
 		target:AddTag("skilledfisherman")
 	end
 end
