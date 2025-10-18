@@ -86,6 +86,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_AMPHIBIAN = "在一定时间内对两�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ENLIGHTENMENT = "在一定时间内提供启迪。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_STEALTH = "在一定时间内对陷阱和生物不可见且无法被探测到。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PLANARDEFENSE = "在一定时间内提升位面防御能力。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GOLDENAPPLE = "Gives off multiple positive effects for a certain amount of time, at the cost of your life. Tread carefully!\n\n\"A forbidden treasure, blessed by gods and time alike. Sparkling rays conceals both grace and torment. Power unbound, and the soul listens to the hush of eternity.\" - Unknown Author."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含防腐粉末的料理可使腐败速率减半，并免除食用变质食物的惩罚。"

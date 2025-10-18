@@ -86,6 +86,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_AMPHIBIAN = "Zwiększa obrażenia zada
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ENLIGHTENMENT = "Oświeca ocalałego przez określony czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_STEALTH = "Czyni ocalałego niewidzialnym i niewykrywalnym dla pułapek i stworzeń przez określony czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PLANARDEFENSE = "Zwiększa obronę planarną przez określony czas."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GOLDENAPPLE = "Zapewnia wiele pozytywnych efektów przez pewien czas, kosztem twojego życia. Kroczyć ostrożnie!\n\n„Zakazany skarb, pobłogosławiony przez bogów i czas. Lśniące promienie skrywają zarówno łaskę, jak i udrękę. Moc nieokiełznana, a dusza wsłuchuje się w szept wieczności.” - Nieznany Autor."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Może być dodany do jedzenia w garnku za pomocą przenośnej stacji przypraw.\n\nJedzenie przyprawione Preserver Powder zmniejsza czas psucia się o połowę i neguje kary za zepsute jedzenie."

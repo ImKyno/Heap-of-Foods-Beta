@@ -86,7 +86,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_AMPHIBIAN = "Increased damage against 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ENLIGHTENMENT = "Enlightens the survivor for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_STEALTH = "Renders the survivor unseen and undetectable from traps and creatures for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PLANARDEFENSE = "Increased planar defense for a certain amount of time."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GOLDENAPPLE = "Gives off multiple positive effects for a certain amount of time, at the cost of your life.\n\n\"A forbidden treasure, blessed by gods and time alike. Sparkling rays conceals both grace and torment. Power unbound, and the soul listens to the hush of eternity\" - Unknown Author."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GOLDENAPPLE = "Gives off multiple positive effects for a certain amount of time, at the cost of your life. Tread carefully!\n\n\"A forbidden treasure, blessed by gods and time alike. Sparkling rays conceals both grace and torment. Power unbound, and the soul listens to the hush of eternity.\" - Unknown Author."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."

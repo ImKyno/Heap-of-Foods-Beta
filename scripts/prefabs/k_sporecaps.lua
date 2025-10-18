@@ -1,7 +1,10 @@
 local assets =
 {
 	Asset("ANIM", "anim/kyno_sporecap.zip"),
+	Asset("ANIM", "anim/mushroom_farm_kyno_sporecap_build.zip"),
+	
 	Asset("ANIM", "anim/kyno_sporecap_dark.zip"),
+	Asset("ANIM", "anim/mushroom_farm_kyno_sporecap_dark_build.zip"),
 
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -31,6 +34,8 @@ local function MakeSporecap(data)
 				inst:AddTag(v)
 			end
 		end
+		
+		inst.pickupsound = "vegetation_firm"
 
 		inst.entity:SetPristine()
 
@@ -87,7 +92,7 @@ local sporecaps =
 	-- Regular Toadstool.
 	{
 		name            = "kyno_sporecap",
-		tags            = {"cookable", "toadstool_cap"},
+		tags            = {"cookable", "mushroom", "toadstool_cap"},
 		bank            = "kyno_sporecap",
 		build           = "kyno_sporecap",
 		anim            = "idle",
@@ -121,7 +126,7 @@ local sporecaps =
 	-- Misery Toadstool.
 	{
 		name            = "kyno_sporecap_dark",
-		tags            = {"cookable", "toadstool_dark_cap"},
+		tags            = {"cookable", "mushroom", "toadstool_dark_cap"},
 		bank            = "kyno_sporecap_dark",
 		build           = "kyno_sporecap_dark",
 		anim            = "idle",

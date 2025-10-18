@@ -38,7 +38,7 @@ STRINGS.CHARACTERS.WANDA.ANNOUNCE_KYNO_
 ]]--
 
 -- Mod Strings.
-STRINGS.BREWBOOK_TITLE = "Livro de Fermentações"
+STRINGS.BREWBOOK_TITLE = "Livro de Fermentação"
 STRINGS.BREWBOOK_DESC = "O Guia do Constante para fermentação"
 
 STRINGS.UI.CRAFTING_FILTERS.MEALING = "Ingredientes Culinários"
@@ -153,6 +153,7 @@ STRINGS.KYNO_HARVEST_SUGARTREE = "Colher Árvore Açucarada"
 STRINGS.KYNO_HARVEST_SUGARTREE_RUINED = "Colher Árvore Açucarada Arruinada"
 STRINGS.KYNO_HARVEST_SALTRACK = "Colher Varal de Carne"
 STRINGS.KYNO_HARVEST_FISHFARMPLOT = "Colher Fazenda de Peixes"
+STRINGS.KYNO_INSTALL_SALTRACK = "Instalar Varal de Sal"
 STRINGS.KYNO_INSTALL_INSTALLER = "Instalar"
 STRINGS.KYNO_INSTALL_TAPPER = "Instalar Torneirinha"
 STRINGS.KYNO_DRINK_FOOD = "Beber"
@@ -174,6 +175,11 @@ STRINGS.ACTIONS.READBREWBOOK = "Ler"
 STRINGS.ACTIONS.INSTALLCOOKWARE = "Instalar Utensílio"
 STRINGS.ACTIONS.SLICE = "Fatiar"
 STRINGS.ACTIONS.SLICESTACK = "Fatiar Pilha"
+STRINGS.ACTIONS.LEARNRECIPECARD = "Adicionar ao Livro de Culinária"
+STRINGS.ACTIONS.LEARNRECIPECARD2 = "Adicionar ao Livro de Fermentação"
+
+-- Edited strings for skill trees.
+STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Cogumelos plantados em um Plantador de Cogumelos crescem muito mais rápido.\nAprenda a plantar novos tipos de cogumelos nos Plantadores de Cogumelos."
 
 STRINGS.ACTIONS.SLAUGHTER2 =
 {

@@ -1029,8 +1029,7 @@ end
 
 AddPrefabPostInit("tumbleweed", TumbleweedPostinit)
 
--- Allows Wickerbottom's book to grow marble trees.
-
+-- Allows Wickerbottom's book to grow some plants.
 local function MarbleShrubPostInit(inst)
 	inst:AddTag("marbletree")
 end
@@ -1048,71 +1047,6 @@ local function PlantNormalPostInit(inst)
 end
 
 AddPrefabPostInit("plant_normal", PlantNormalPostInit)
-
--- Toadstool's Sporecaps drops special Mushrooms.
-local function MushroomSproutPostInit(inst)
-	if not _G.TheWorld.ismastersim then
-        return inst
-    end
-	
-	inst:AddComponent("lootdropper")
-	
-	if inst.components.workable ~= nil then
-		local _onfinish = inst.components.workable.onfinish
-
-		inst.components.workable:SetOnFinishCallback(function(inst, worker)
-			if _onfinish ~= nil then
-				_onfinish(inst, worker)
-			end
-
-			if worker ~= nil and worker:IsValid() then
-				local loot_data = inst._custom_loot or 
-				{
-					main_loot = nil,
-					extra_loot = nil,
-					extra_chance = 0,
-				}
-
-				if loot_data.main_loot then
-					inst.components.lootdropper:SpawnLootPrefab(loot_data.main_loot)
-				end
-
-				if loot_data.extra_loot and math.random() < loot_data.extra_chance then
-					inst.components.lootdropper:SpawnLootPrefab(loot_data.extra_loot)
-				end
-			end
-		end)
-	end
-end
-
-local mushroomsprouts = 
-{
-	{
-		name = "mushroomsprout",
-		main_loot = "kyno_sporecap",
-		extra_loot = "kyno_sporecap",
-		extra_chance = 0.25,
-	},
-	{
-		name = "mushroomsprout_dark",
-		main_loot = "kyno_sporecap_dark",
-		extra_loot = "kyno_sporecap_dark",
-		extra_chance = 0.1,
-	},
-}
-
-for _, v in ipairs(mushroomsprouts) do
-	AddPrefabPostInit(v.name, function(inst)
-		inst._custom_loot = 
-		{
-			main_loot = v.main_loot,
-			extra_loot = v.extra_loot,
-			extra_chance = v.extra_chance,
-		}
-		
-		MushroomSproutPostInit(inst)
-	end)
-end
 
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")
@@ -1135,19 +1069,6 @@ AddClassPostConstruct("components/birdspawner", function(self)
 	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = {"toucan"}
 	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = {"kingfisher"}
 end)
-
---[[
--- Not using this for now because its causing some worlds to crash.
-AddComponentPostInit("birdspawner", function(self)
-	if self.SetBirdTypesForTile then
-		self:SetBirdTypesForTile(WORLD_TILES.QUAGMIRE_PARKFIELD, {"quagmire_pigeon"})
-		self:SetBirdTypesForTile(WORLD_TILES.QUAGMIRE_CITYSTONE, {"quagmire_pigeon"})
-		self:SetBirdTypesForTile(WORLD_TILES.MONKEY_GROUND,      {"toucan"})
-		self:SetBirdTypesForTile(WORLD_TILES.HOF_TIDALMARSH,     {"toucan"})
-		self:SetBirdTypesForTile(WORLD_TILES.HOF_FIELDS,         {"kingfisher"})
-	end
-end)
-]]--
 
 -- Spawns Mist in static layouts, not using game's function because its too dense.
 AddSimPostInit(function()

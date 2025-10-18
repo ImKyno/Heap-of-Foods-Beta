@@ -1,5 +1,6 @@
 -- Common Dependencies.
 local _G              = GLOBAL
+local next            = _G.next
 local require         = _G.require
 local resolvefilepath = _G.resolvefilepath
 local ACTIONS         = _G.ACTIONS
@@ -528,6 +529,18 @@ local function PlayerClassifiedPostInit(inst)
 			TheFocalPoint.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
 		end
 	end
+	
+	local function OnPlayGoldenAppleEvent(inst)
+		if inst._parent ~= nil and TheFocalPoint.entity:GetParent() == inst._parent then
+			TheFocalPoint.SoundEmitter:PlaySound("dontstarve/quagmire/music/gorge_win", "goldenapple", 0.5)
+		end
+	end
+	
+	local function OnStopGoldenAppleEvent(inst)
+		if inst._parent ~= nil and TheFocalPoint.entity:GetParent() == inst._parent then
+			TheFocalPoint.SoundEmitter:PlaySound("dontstarve/quagmire/transform/music/2")
+		end
+	end
 
 	local function OnLearnRecipeCard(parent)
 		parent.player_classified.learnrecipecardevent:push()
@@ -552,31 +565,45 @@ local function PlayerClassifiedPostInit(inst)
 	local function OnBottleCap(parent)
 		parent.player_classified.bottlecapevent:push()
 	end
+	
+	local function OnPlayGoldenApple(parent)
+		parent.player_classified.playgoldenappleevent:push()
+	end
+	
+	local function OnStopGoldenApple(parent)
+		parent.player_classified.stopgoldenappleevent:push()
+	end
 
 	local function RegisterNetListeners(inst)
 		if _G.TheWorld.ismastersim then
 			inst:ListenForEvent("learnrecipecard", OnLearnRecipeCard, inst.entity:GetParent())
-			inst:ListenForEvent("saltfood", OnSaltFood, inst.entity:GetParent())
-			inst:ListenForEvent("playnukashine", OnPlayNukashine, inst.entity:GetParent())
-			inst:ListenForEvent("stopnukashine", OnStopNukashine, inst.entity:GetParent())
-			inst:ListenForEvent("piraterum", OnPirateRum, inst.entity:GetParent())
-			inst:ListenForEvent("bottlecap", OnBottleCap, inst.entity:GetParent())
+			inst:ListenForEvent("saltfood", OnSaltFood,               inst.entity:GetParent())
+			inst:ListenForEvent("playnukashine", OnPlayNukashine,     inst.entity:GetParent())
+			inst:ListenForEvent("stopnukashine", OnStopNukashine,     inst.entity:GetParent())
+			inst:ListenForEvent("piraterum", OnPirateRum,             inst.entity:GetParent())
+			inst:ListenForEvent("bottlecap", OnBottleCap,             inst.entity:GetParent())
+			inst:ListenForEvent("playgoldenapple", OnPlayGoldenApple, inst.entity:GetParent())
+			inst:ListenForEvent("stopgoldenapple", OnStopGoldenApple, inst.entity:GetParent())
 		end
 
 		inst:ListenForEvent("action.learnrecipecard", OnLearnRecipeCardEvent)
-		inst:ListenForEvent("action.salt", OnSaltFoodEvent)
-		inst:ListenForEvent("buff.playnukashine", OnPlayNukashineEvent)
-		inst:ListenForEvent("buff.stopnukashine", OnStopNukashineEvent)
-		inst:ListenForEvent("buff.piraterum", OnPirateRumEvent)
-		inst:ListenForEvent("buff.bottlecap", OnBottleCapEvent)
+		inst:ListenForEvent("action.salt",            OnSaltFoodEvent)
+		inst:ListenForEvent("buff.playnukashine",     OnPlayNukashineEvent)
+		inst:ListenForEvent("buff.stopnukashine",     OnStopNukashineEvent)
+		inst:ListenForEvent("buff.piraterum",         OnPirateRumEvent)
+		inst:ListenForEvent("buff.bottlecap",         OnBottleCapEvent)
+		inst:ListenForEvent("buff.playgoldenapple",   OnPlayGoldenAppleEvent)
+		inst:ListenForEvent("buff.stopgoldenapple",   OnStopGoldenAppleEvent)
 	end
 	
 	inst.learnrecipecardevent = net_event(inst.GUID, "action.learnrecipecard")
-	inst.saltfoodevent = net_event(inst.GUID, "action.salt")
-	inst.playnukashineevent = net_event(inst.GUID, "buff.playnukashine")
-	inst.stopnukashineevent = net_event(inst.GUID, "buff.stopnukashine")
-	inst.piraterumevent = net_event(inst.GUID, "buff.piraterum")
-	inst.bottlecapevent = net_event(inst.GUID, "buff.bottlecap")
+	inst.saltfoodevent        = net_event(inst.GUID, "action.salt")
+	inst.playnukashineevent   = net_event(inst.GUID, "buff.playnukashine")
+	inst.stopnukashineevent   = net_event(inst.GUID, "buff.stopnukashine")
+	inst.piraterumevent       = net_event(inst.GUID, "buff.piraterum")
+	inst.bottlecapevent       = net_event(inst.GUID, "buff.bottlecap")
+	inst.playgoldenappleevent = net_event(inst.GUID, "buff.playgoldenapple")
+	inst.stopgoldenappleevent = net_event(inst.GUID, "buff.stopgoldenapple")
 
 	inst:DoStaticTaskInTime(0, RegisterNetListeners)
 end
@@ -682,5 +709,115 @@ AddClassPostConstruct("widgets/invslot", function(self)
 		if bgoverride ~= nil then
 			self.bgimage:SetTexture(bgoverride.atlas or "images/hud.xml", bgoverride.image or "inv_slot.tex")
 		end
+	end
+end)
+
+-- Cool effect for enchanted items.
+AddClassPostConstruct("widgets/itemtile", function(self)
+	local UIAnim = require("widgets/uianim")
+	
+	local function _StartUpdating(self, flag)
+		if next(self.updatingflags) == nil then
+			self:StartUpdating()
+		end
+		
+		self.updatingflags[flag] = true
+	end
+
+	local function _StopUpdating(self, flag)
+		self.updatingflags[flag] = nil
+        
+		if next(self.updatingflags) == nil then
+			self:StopUpdating()
+		end
+	end
+	
+	function self:StartUpdatingEnchanted()
+		self.updateenchanteddelay = 0
+		_StartUpdating(self, "enchanted")
+	end
+	
+	function self:StopUpdatingEnchanted()
+		_StopUpdating(self, "enchanted")
+		self.updateenchanteddelay = nil
+	end
+	
+	local _OnUpdate = self.OnUpdate
+	
+	function self:OnUpdate(dt)
+		if _OnUpdate then
+			_OnUpdate(self, dt)
+		end
+
+		if self.updatingflags and self.updatingflags.enchanted then
+			self.updateenchanteddelay = (self.updateenchanteddelay or 0) + dt
+			
+			if self.updateenchanteddelay > 0.2 then
+				self.updateenchanteddelay = 0
+
+				self:CheckEnchantedFX()
+			end
+		end
+	end
+	
+	function self:CheckEnchantedFX()
+		if self.item:HasTag("goldenapple") then
+			self.enchantedfx:Show()
+		else
+			self.enchantedfx:Hide()
+		end
+	end
+
+	function self:ToggleEnchantedFX()
+		if self.showequipenchantedfx or (self.item and self.item:HasTag("goldenapple")) then
+			if self.enchantedfx == nil then
+				self.enchantedfx = self.image:AddChild(UIAnim())
+				self.enchantedfx:GetAnimState():SetBank("inventory_fx_enchanted")
+				self.enchantedfx:GetAnimState():SetBuild("inventory_fx_enchanted")
+				self.enchantedfx:GetAnimState():PlayAnimation("idle", true)
+				self.enchantedfx:GetAnimState():SetTime(math.random() * self.enchantedfx:GetAnimState():GetCurrentAnimationTime())
+				self.enchantedfx:SetScale(.25)
+				self.enchantedfx:GetAnimState():AnimateWhilePaused(false)
+				self.enchantedfx:SetClickable(false)
+			end
+			
+			if self.item:HasTag("goldenapple") then
+				self:CheckEnchantedFX()
+				self:StartUpdatingEnchanted()
+			else
+				self:StopUpdatingEnchanted()
+			end
+		elseif self.enchantedfx ~= nil then
+			self.enchantedfx:Kill()
+			self.enchantedfx = nil
+		end
+	end
+
+	local _SetIsEquip = self.SetIsEquip
+	
+	function self:SetIsEquip(isequip)
+		local enchantedfx = isequip and self.item:HasTag("goldenapple")
+
+		if not self.showequipenchantedfx == enchantedfx then
+			self.showequipenchantedfx = enchantedfx or nil
+			self:ToggleEnchantedFX()
+		end
+		
+		return _SetIsEquip(self, isequip)
+	end
+	
+	self:ToggleEnchantedFX()
+end)
+
+-- HAHAHAHA YOU CAN'T EDIT SKILLTREE STRINGS WITH REGULAR METHODS 💀💀
+AddSimPostInit(function()
+	local defs = require("prefabs/skilltree_defs")
+	local wormwood_defs = defs.SKILLTREE_DEFS and defs.SKILLTREE_DEFS["wormwood"]
+
+	if wormwood_defs and wormwood_defs["wormwood_mushroomplanter_ratebonus2"] then
+		wormwood_defs["wormwood_mushroomplanter_ratebonus2"].desc = STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC
+		or "ERROR: MISSING SKILL DESCRIPTION FOR WORMWOOD_MUSHROOMPLANTER_RATEBONUS2"
+	else
+		print("Heap of Foods Mod - Wormwood's Skill 'wormwood_mushroomplanter_ratebonus2' not found.")
 	end
 end)

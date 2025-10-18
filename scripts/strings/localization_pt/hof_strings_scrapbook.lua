@@ -77,6 +77,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_AMPHIBIAN = "Aumenta o dano contra anf
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ENLIGHTENMENT = "Ilumina o sobrevivente por um determinado período."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_STEALTH = "Torna o sobrevivente invisível e indetectável por armadilhas e criaturas por um determinado período."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PLANARDEFENSE = "Aumenta a defesa planar por um determinado período."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GOLDENAPPLE = "Concede múltiplos efeitos positivos por um determinado período, ao custo de sua vida. Prossiga com cautela!\n\n\"Um tesouro proíbido, abençoado pelos deuses e pelo tempo. Raios brilhantes concedem tanto graça como tormento. Poder irrestrito, e a alma ouve o clamor da eternidade.\" - Autor Desconhecido."
 
 -- Efeitos de Temperos.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Pó Conservante reduz pela metade o tempo de deterioração e anula penalidades de comida estragada."

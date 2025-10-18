@@ -153,6 +153,7 @@ STRINGS.KYNO_HARVEST_SUGARTREE = "Zbierz z Drzewa Cukrowego"
 STRINGS.KYNO_HARVEST_SUGARTREE_RUINED = "Zbierz z Zrujnowanego Drzewa Cukrowego"
 STRINGS.KYNO_HARVEST_SALTRACK = "Zbierz z Solnej Półki"
 STRINGS.KYNO_HARVEST_FISHFARMPLOT = "Zbierz z Hodowli Ryb"
+STRINGS.KYNO_INSTALL_SALTRACK = "Zainstaluj Wieszak na Sól"
 STRINGS.KYNO_INSTALL_INSTALLER = "Zainstaluj"
 STRINGS.KYNO_INSTALL_TAPPER = "Zamontuj Kran"
 STRINGS.KYNO_DRINK_FOOD = "Wypij"
@@ -174,6 +175,11 @@ STRINGS.ACTIONS.READBREWBOOK = "Czytaj"
 STRINGS.ACTIONS.INSTALLCOOKWARE = "Zainstaluj Naczynie Kuchenne"
 STRINGS.ACTIONS.SLICE = "Slice"
 STRINGS.ACTIONS.SLICESTACK = "Slice Stack"
+STRINGS.ACTIONS.LEARNRECIPECARD = "Add to Cookbook"
+STRINGS.ACTIONS.LEARNRECIPECARD2 = "Add to Brewbook"
+
+-- Edited strings for skill trees.
+STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Grzyby posadzone w Sadzarce Grzybów rosną znacznie szybciej.\nDowiedz się, jak sadzić nowe rodzaje grzybów w Sadzarce Grzybów."
 
 STRINGS.ACTIONS.SLAUGHTER2 =
 {

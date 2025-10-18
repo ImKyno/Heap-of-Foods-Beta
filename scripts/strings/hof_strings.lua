@@ -179,6 +179,9 @@ STRINGS.ACTIONS.SLICESTACK = "Slice Stack"
 STRINGS.ACTIONS.LEARNRECIPECARD = "Add to Cookbook"
 STRINGS.ACTIONS.LEARNRECIPECARD2 = "Add to Brewbook"
 
+-- Edited strings for skill trees.
+STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Mushrooms planted in a Mushroom Planter grow much faster.\nLearn how to plant new kinds of mushrooms in Mushroom Planters."
+
 STRINGS.ACTIONS.SLAUGHTER2 =
 {
 	DISEMBOWEL = "Gently Disembowel",

@@ -58,6 +58,7 @@ if HOF_COFFEEBUFF_ENABLED then
 		
 			eater:AddDebuff("kyno_goldenapplebuff", "kyno_goldenapplebuff")
 			eater:AddDebuff("kyno_coffeealtbuff", "kyno_coffeealtbuff")
+			eater:PushEvent("playgoldenapple")
 		end
 		
 		if not _G.TheWorld.ismastersim then

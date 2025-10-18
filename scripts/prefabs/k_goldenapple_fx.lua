@@ -2,6 +2,7 @@
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=3371086303
 local assets =
 {
+	Asset("ANIM", "anim/inventory_fx_enchanted.zip"),
 	Asset("ANIM", "anim/lavaarena_item_pickup_fx.zip"),
 }
 
@@ -110,7 +111,7 @@ end
 
 local function AttachTo(inst, object) --, sound, duration)
 	inst.entity:SetParent(object.entity)
-	inst.Transform:SetPosition(0, 0, 0)
+	inst.Transform:SetPosition(0, 0.50, 0)
 
 	-- inst.SoundEmitter:PlaySound("dontstarve/wilson/equip_item_gold")
 

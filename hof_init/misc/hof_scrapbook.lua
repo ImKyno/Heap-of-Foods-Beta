@@ -3398,7 +3398,7 @@ local HOF_SCRAPBOOK_FOODS =
 		animoffsety    = 10,
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -85,
-		deps           = {"toadstool", "mushroomsprout", "kyno_sporecap_cooked", "spoiled_food"},
+		deps           = {"toadstool", "mushroomsprout", "mushroom_farm", "kyno_sporecap_cooked", "spoiled_food"},
 	},
 	
 	kyno_sporecap_cooked =
@@ -3446,7 +3446,7 @@ local HOF_SCRAPBOOK_FOODS =
 		animoffsety    = 10,
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -85,
-		deps           = {"toadstool_dark", "mushroomsprout_dark", "kyno_sporecap_dark_cooked", "spoiled_food"},
+		deps           = {"toadstool_dark", "mushroomsprout_dark", "mushroom_farm", "kyno_sporecap_dark_cooked", "spoiled_food"},
 	},
 	
 	kyno_sporecap_dark_cooked =
@@ -4005,6 +4005,8 @@ local HOF_SCRAPBOOK_FOODS =
 		bank            = "kyno_goldenapple",
 		build           = "kyno_goldenapple",
 		anim            = "idle",
+		animoffsetbgx   = -20,
+		animoffsetbgy   = -15,
 		deps            = {"alterguardian_phase4_lunarrift", "spoiled_food"},
 		specialinfo     = "FOODEFFECTS_GOLDENAPPLE",
 	},

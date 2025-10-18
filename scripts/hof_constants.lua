@@ -4,6 +4,7 @@ require("componentutil")
 local HOF_FOODTYPES      = {}
 local HOF_NAUGHTY_VALUE  = {}
 local HOF_PICKABLE_FOODS = {}
+local HOF_PICKUP_SOUNDS  = {}
 
 -- New FOODTYPE just for showing the correct string on Cookbook.
 HOF_FOODTYPES    = 
@@ -30,7 +31,7 @@ HOF_NAUGHTY_VALUE                    =
 }
 
 -- New PICKABLE for Woby foraging.
-HOF_PICKABLE_FOODS          =
+HOF_PICKABLE_FOODS      =
 {
 	kyno_white_cap      = true,
 	kyno_pineapple      = true,
@@ -40,6 +41,11 @@ HOF_PICKABLE_FOODS          =
 	kyno_wheat          = true,
 	kyno_kokonut        = true,
 	kyno_banana         = true,
+}
+
+HOF_PICKUP_SOUNDS =
+{
+	["item_gold"] = "dontstarve/wilson/equip_item_gold",
 }
 
 for k, v in pairs(HOF_FOODTYPES) do
@@ -52,6 +58,10 @@ end
 	
 for k, v in pairs(HOF_PICKABLE_FOODS) do
 	PICKABLE_FOOD_PRODUCTS[k] = v
+end
+
+for k, v in pairs(HOF_PICKUP_SOUNDS) do
+	PICKUPSOUNDS[k] = v
 end
 
 --[[

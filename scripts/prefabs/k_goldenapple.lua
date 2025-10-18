@@ -24,6 +24,7 @@ local function OnEaten(inst, eater)
 	end
 	
 	eater:AddDebuff("kyno_goldenapplebuff", "kyno_goldenapplebuff")
+	eater:PushEvent("playgoldenapple")
 end
 
 local function OnDropped(inst)
@@ -40,10 +41,14 @@ local function fn()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
+	
+	inst.AnimState:SetScale(1.1, 1.1, 1.1)
 
 	inst.AnimState:SetBank("kyno_goldenapple")
 	inst.AnimState:SetBuild("kyno_goldenapple")
-	inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:PlayAnimation("idle", true)
+	
+	inst.AnimState:HideSymbol("glowpulse")
 
 	inst:AddTag("fruit")
 	inst:AddTag("goldenapple")
@@ -52,6 +57,8 @@ local function fn()
 	
 	inst._goldenapplefx = SpawnPrefab("kyno_goldenapple_fx")
 	inst._goldenapplefx:AttachTo(inst)
+	
+	inst.pickupsound = "item_gold"
 
 	inst.entity:SetPristine()
 

@@ -40,7 +40,6 @@ local hof_init_misc    =
 	"hof_actions",
 	"hof_stategraphs",
 	"hof_containers",
-	"hof_meatrack_foods",
 	"hof_postinits_misc",
 	"hof_postinits_brains",
 	"hof_postinits_playervision",
@@ -57,7 +56,6 @@ local hof_init_world   =
 	"hof_postinits_world",
 	"hof_postinits_mobs",
 	"hof_slaughterable_animals",
-	"hof_transformable_mushrooms",
 	"hof_ancienttree_data",
 	"hof_tree_rock_data",
 }
@@ -67,6 +65,8 @@ local hof_init_foods   =
 	"hof_farming",
 	"hof_cooking",
 	"hof_bruwing",
+	"hof_meatrack_foods",
+	"hof_mushroom_foods",
 	"hof_postinits_foods",
 	"hof_postinits_buffs",
 }

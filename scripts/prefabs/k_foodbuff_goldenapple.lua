@@ -74,11 +74,7 @@ local function OnAttached(inst, target)
 	inst.entity:SetParent(target.entity)
 	inst.Transform:SetPosition(0, 0, 0)
 	
-	target.sg:GoToState("powerup")
-	
-	if target.SoundEmitter ~= nil then
-		target.SoundEmitter:PlaySound("wolfgang2/characters/wolfgang/mighty")
-	end
+	target:PushEvent("powerup")
 	
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_GOLDENAPPLEBUFF_START"))
@@ -278,22 +274,37 @@ local function OnDetached(inst, target)
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_GOLDENAPPLEBUFF_END"))
 	end
 	
+	-- Slow down for a bit after using it.
+	if target.components.locomotor ~= nil and target:HasTag("player") then
+		target:AddTag("groggy")
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_goldenapplebuff", TUNING.KYNO_ALCOHOL_SPEED)
+	end
+	
 	-- Pay with your life suckass!
-	if target.components.health ~= nil then
-		target.components.health:DoDelta(-50)
-	end
+	target:DoTaskInTime(5, function(target)
+		if target.components.locomotor ~= nil and target:HasTag("player") then
+			target:RemoveTag("groggy")
+			target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_goldenapplebuff")
+		end
+
+		if target.components.health ~= nil then
+			target.components.health:SetPercent(.2)
+		end
 	
-	if target.components.hunger ~= nil then
-		target.components.hunger:DoDelta(-999)
-	end
+		if target.components.hunger ~= nil then
+			target.components.hunger:SetPercent(.1)
+		end
 	
-	if target.components.sanity ~= nil then
-		target.components.sanity:DoDelta(-999)
-	end
+		if target.components.sanity ~= nil then
+			target.components.sanity:SetPercent(.1)
+		end
 	
-	if target.components.grogginess ~= nil then
-		target.components.grogginess:AddGrogginess(10, TUNING.KYNO_GOLDENAPPLEBUFF_SLEEPDURATION)
-	end
+		if target.components.grogginess ~= nil then
+			target.components.grogginess:AddGrogginess(10, TUNING.KYNO_GOLDENAPPLEBUFF_SLEEPDURATION)
+		end
+
+		target:PushEvent("stopgoldenapple")
+	end)
 	
 	inst:Remove()
 end

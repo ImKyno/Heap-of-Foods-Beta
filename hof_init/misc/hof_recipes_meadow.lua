@@ -117,6 +117,7 @@ AddRecipe2("meadowislandtrader_kyno_goldenapple", {Ingredient("coolant", 1)}, TE
 		product             = "kyno_goldenapple",
 		atlas               = ModAtlas,
 		image               = "kyno_goldenapple.tex",
+		fxover              = { bank = "inventory_fx_enchanted", build = "inventory_fx_enchanted", anim = "idle" },
 	},
 	{"CRAFTING_STATION"}
 )
