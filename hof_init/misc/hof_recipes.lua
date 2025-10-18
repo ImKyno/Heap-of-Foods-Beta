@@ -505,7 +505,7 @@ Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingre
 	{"CHARACTER"}
 )
 
-AddCharacterRecipe("kyno_sugarfly", {Ingredient("ghostflower", 3), Ingredient("kyno_sugarflywings", 1)}, TECH.NONE,
+AddCharacterRecipe("wendy_sugarfly", {Ingredient("ghostflower", 3), Ingredient("kyno_sugarflywings", 1)}, TECH.NONE,
 	{
 		no_deconstruction   = true,
 		product             = "kyno_sugarfly",

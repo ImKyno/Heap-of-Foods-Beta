@@ -602,8 +602,8 @@ local HOF_ICONS =
 	"spooky_pumpkincream",
 	"spooky_skullcandy",
 	"spooky_tacodile",
+	"sporecap_skewers",
 	"steamedhamsandwich",
-	"succulent_picked",
 	"sugarbombs",
 	"sugarbombs_explosive",
 	"sugarflymuffin",
@@ -620,6 +620,7 @@ local HOF_ICONS =
 	"toucan",
 	"tricolordango",
 	"tropicalbouillabaisse",
+	"trufflesgrinder",
 	"turf_fields",
 	"turf_pinkpark",
 	"turf_stonecity",
@@ -661,7 +662,9 @@ local HOF_ICONS =
 	-- "robin_winter",
 	-- "rocks",
 	-- "saltrock",
+	-- "spider",
 	-- "strawberrygrinder",
+	-- "succulent_picked",
 }
 
 -- Dirty fix for icons not appearing on Mini Signs.

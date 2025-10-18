@@ -3003,22 +3003,53 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_rice", 1}, {"kyno_beanbugs", 2}, {"twigs", 1}}},
 	},
 	
-	--[[
-	strawberrygrinder =
+	-- RIP STRAWBERRYGRINDER
+	trufflesgrinder =
 	{
-		test = function(cooker, names, tags) return ((names.kyno_strawberry or 0) + (names.kyno_strawberry_cooked or 0) >= 2) and 
-		tags.flour and tags.meat and not tags.fish end,
+		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 1) and (names.kyno_truffles or names.kyno_truffles_cooked)
+		and tags.flour end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
-		perishtime = TUNING.PERISH_MED,
-		health = 40,
-		hunger = 62.5
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 30,
+		hunger = 62.5,
 		sanity = 0,
 		cooktime = 1.5,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_TRUFFLES,
+		potlevel = "high",
 		floater = TUNING.HOF_FLOATER,
-		card_def = {ingredients = {{"kyno_strawberry", 2}, {"kyno_flour", 1}, {"meat", 1}}},
+		tags = {"truffles"},
+		card_def = {ingredients = {{"kyno_truffles", 2}, {"kyno_flour", 1}, {"meat", 1}}},
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_trufflesbuff", "kyno_trufflesbuff")
+		end,
 	},
-	]]--
+	
+	sporecap_skewers =
+	{
+		test = function(cooker, names, tags) return ((names.kyno_sporecap_dark or 0) + (names.kyno_sporecap_dark_cooked or 0) >= 2) and
+		tags.veggie and names.twigs end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = -30,
+		hunger = 62.5,
+		sanity = -20,
+		cooktime = 1,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPORECAP_DARK,
+		floater = TUNING.HOF_FLOATER,
+		tags = {"monstermeat", "acidrainimmune"},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(30)
+				eater.components.sanity:DoDelta(20)
+			end
+			
+			eater:AddDebuff("kyno_acidimmunitybuff", "kyno_acidimmunitybuff")
+		end,
+	},
 }
 
 for k, recipe in pairs(kyno_foods) do

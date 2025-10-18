@@ -18,6 +18,7 @@ AddPrefabPostInit("forest", function(inst)
     inst:AddComponent("retrofitforestmap_hof")
 	
 	-- Let the players know they have force retrofit option enabled.
+    --[[
 	inst:DoTaskInTime(10, function()
 		if TUNING.HOF_RETROFIT_FORCE then
 			_G.TheNet:Announce("WARNING! You have \"Force Retrofit\" Option enabled!")
@@ -25,6 +26,7 @@ AddPrefabPostInit("forest", function(inst)
 			_G.TheNet:Announce("After finishing the Retrofiting process, please head back to the Main Menu to disable it.")
 		end
 	end)
+    ]]--
 end)
 
 AddPrefabPostInit("cave", function(inst)

@@ -215,8 +215,8 @@ local function MushroomFarmPostInit(inst)
 	end
 
 	if inst.components.trader ~= nil then
-		_accepttest = inst.components.trader.abletoaccepttest
-		inst.components.trader.abletoaccepttest = CustomAcceptTest
+		_accepttest = inst.components.trader.test
+		inst.components.trader.test = CustomAcceptTest
 		
 		local _onaccept = inst.components.trader.onaccept
     

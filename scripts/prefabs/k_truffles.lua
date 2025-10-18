@@ -146,13 +146,16 @@ local function truffles()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
+	
 	inst:AddComponent("tradable")
+	inst.components.tradable.goldvalue = 2
 
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_TRUFFLES_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_TRUFFLES_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_TRUFFLES_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
+	inst.components.edible.secondaryfoodtype = FOODTYPE.HORRIBLE
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
@@ -204,13 +207,16 @@ local function truffles_cooked()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
+	
 	inst:AddComponent("tradable")
+	inst.components.tradable.goldvalue = 2
 
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_TRUFFLES_COOKED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_TRUFFLES_COOKED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_TRUFFLES_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
+	inst.components.edible.secondaryfoodtype = FOODTYPE.HORRIBLE
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)

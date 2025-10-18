@@ -28,6 +28,8 @@ local function MakeSporecap(data)
 
 		inst:AddTag("veggie")
 		inst:AddTag("saltbox_valid")
+		inst:AddTag("acidrainimmune")
+		inst:AddTag("sporecloudimmune")
 		
 		if data.tags ~= nil then
 			for i, v in pairs(data.tags) do
