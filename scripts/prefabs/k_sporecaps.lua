@@ -11,6 +11,13 @@ local assets =
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
+local function OnEaten(inst, eater)	
+	if eater ~= nil then
+		local cloud = SpawnPrefab("sporecloud")
+		cloud.Transform:SetPosition(eater.Transform:GetWorldPosition())
+	end
+end
+
 local function MakeSporecap(data)
 	local function fn()
 		local inst = CreateEntity()
@@ -54,6 +61,10 @@ local function MakeSporecap(data)
 		inst.components.edible.hungervalue = data.hungervalue
 		inst.components.edible.sanityvalue = data.sanityvalue
 		inst.components.edible.foodtype = FOODTYPE.VEGGIE
+		
+		if data.oneaten then
+			inst.components.edible:SetOnEatenFn(OnEaten)
+		end
 
 		inst:AddComponent("perishable")
 		inst.components.perishable:SetPerishTime(data.perishtime)
@@ -104,6 +115,7 @@ local sporecaps =
 		healthvalue     = TUNING.KYNO_SPORECAP_HEALTH,
 		hungervalue     = TUNING.KYNO_SPORECAP_HUNGER,
 		sanityvalue     = TUNING.KYNO_SPORECAP_SANITY,
+		oneaten         = true,
 		cookable        = true,
 		burnable        = true,
 		fuel            = false,
@@ -138,6 +150,7 @@ local sporecaps =
 		healthvalue     = TUNING.KYNO_SPORECAP_DARK_HEALTH,
 		hungervalue     = TUNING.KYNO_SPORECAP_DARK_HUNGER,
 		sanityvalue     = TUNING.KYNO_SPORECAP_DARK_SANITY,
+		oneaten         = true,
 		cookable        = true,
 		burnable        = true,
 		fuel            = false,

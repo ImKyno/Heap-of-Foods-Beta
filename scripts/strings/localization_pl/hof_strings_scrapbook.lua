@@ -88,6 +88,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_STEALTH = "Czyni ocalałego niewidzial
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PLANARDEFENSE = "Zwiększa obronę planarną przez określony czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GOLDENAPPLE = "Zapewnia wiele pozytywnych efektów przez pewien czas, kosztem twojego życia. Kroczyć ostrożnie!\n\n„Zakazany skarb, pobłogosławiony przez bogów i czas. Lśniące promienie skrywają zarówno łaskę, jak i udrękę. Moc nieokiełznana, a dusza wsłuchuje się w szept wieczności.” - Nieznany Autor."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_TRUFFLES = "Przez pewien czas ocalały będzie nieodparty dla świń, czyniąc je przyjaznymi."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP = "Ten pokarm może uczynić ocalałego odpornym na Trujące Aury przez pewien czas.\n\nPotworni ocalali mogą jeść ten pokarm bez żadnych kar."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP2 = "Ten pokarm może uczynić ocalałego odpornym na Trujące Aury przez pewien czas. Dodatkowo przyspiesza tempo psucia się przedmiotów w ekwipunku i na wyposażeniu.\n\nPotworni ocalali mogą jeść ten pokarm bez żadnych kar."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP_DARK = "To jedzenie może uczynić postać odporną na Kwaśny Deszcz przez pewien czas.\n\nPotworne postacie mogą jeść to jedzenie bez żadnych kar."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP_DARK2 = "To jedzenie może uczynić postać odporną na Kwaśny Deszcz przez pewien czas. Ponadto przyspiesza psucie się przedmiotów w ekwipunku i na slotach wyposażenia.\n\nPotworne postacie mogą jeść to jedzenie bez żadnych kar."
 

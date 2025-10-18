@@ -240,7 +240,7 @@ local function MakePreparedBrew(data)
 		end
 		
 		inst:AddComponent("tradable")
-		inst.components.tradable.goldvalue = 8
+		inst.components.tradable.goldvalue = data.goldvalue or 8
 		
 		if data.isfertilizer ~= nil then
 			inst:AddComponent("fertilizerresearchable")

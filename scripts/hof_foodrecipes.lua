@@ -3025,6 +3025,33 @@ local kyno_foods =
 		end,
 	},
 	
+	sporecappie =
+	{
+		test = function(cooker, names, tags) return ((names.kyno_sporecap or 0) + (names.kyno_sporecap_cooked or 0) >= 2) and
+		tags.flour and tags.sweetener end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = -20,
+		hunger = 37.5,
+		sanity = -10,
+		cooktime = 2,
+		potlevel = "high",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPORECAP,
+		floater = TUNING.HOF_FLOATER,
+		tags = {"monstermeat", "acidrainimmune"},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(20)
+				eater.components.sanity:DoDelta(10)
+			end
+			
+			eater:AddDebuff("kyno_poisonimmunitybuff", "kyno_poisonimmunitybuff")
+		end,
+	},
+	
 	sporecap_skewers =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_sporecap_dark or 0) + (names.kyno_sporecap_dark_cooked or 0) >= 2) and

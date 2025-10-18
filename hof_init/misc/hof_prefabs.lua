@@ -59,6 +59,7 @@ PrefabFiles =
 	"k_foodbuff_nightvision",
 	"k_foodbuff_nukashine",
 	"k_foodbuff_planardefense",
+	"k_foodbuff_poisonimmunity",
 	"k_foodbuff_preserver",
 	"k_foodbuff_sanity",
 	"k_foodbuff_stealth",

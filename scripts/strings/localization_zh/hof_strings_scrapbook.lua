@@ -88,6 +88,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_STEALTH = "在一定时间内对陷阱
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PLANARDEFENSE = "在一定时间内提升位面防御能力。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GOLDENAPPLE = "Gives off multiple positive effects for a certain amount of time, at the cost of your life. Tread carefully!\n\n\"A forbidden treasure, blessed by gods and time alike. Sparkling rays conceals both grace and torment. Power unbound, and the soul listens to the hush of eternity.\" - Unknown Author."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_TRUFFLES = "在一定时间内，幸存者对猪类具有不可抗拒的吸引力，使它们变得友好。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP = "This food can make a survivor immune to Poison Auras for a certain amount of time.\n\Monster survivors can eat this food without any penalties."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP2 = "This food can make a survivor immune to Poison Auras for a certain amount of time. It also accelerates spoiling rate of items in inventory and equipment slots.\n\nMonster survivors can eat this food without any penalties."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP_DARK = "This food can make a survivor immune to Acid Rain for a certain amount of time.\n\Monster survivors can eat this food without any penalties."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP_DARK2 = "This food can make a survivor immune to Acid Rain for a certain amount of time. It also accelerates spoiling rate of items in inventory and equipment slots.\n\nMonster survivors can eat this food without any penalties."
 

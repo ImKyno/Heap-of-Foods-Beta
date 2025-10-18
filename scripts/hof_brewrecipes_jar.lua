@@ -724,6 +724,76 @@ local kyno_foods_jar =
 		card_def = {ingredients = {{"kyno_rice", 2}, {"kyno_spotspice", 1}}},
 	},
 	
+	pickles_truffles =
+	{
+		test = function(brewer, names, tags) return names.kyno_truffles and (names.kyno_truffles == 2) and tags.spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 25,
+		hunger = 62.5,
+		sanity = 33,
+		cooktime = 72,
+		goldvalue = 10,
+		nameoverride = "KYNO_PICKLES",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_truffles", 2}, {"kyno_spotspice", 1}}},
+	},
+	
+	pickles_sporecap =
+	{
+		test = function(brewer, names, tags) return names.kyno_sporecap and (names.kyno_sporecap == 2) and tags.spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = -20,
+		hunger = 75,
+		sanity = -20,
+		cooktime = 72,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPORECAP,
+		nameoverride = "KYNO_PICKLES",
+		floater = TUNING.HOF_FLOATER,
+		tags = {"monstermeat", "acidrainimmune"},
+		card_def = {ingredients = {{"kyno_sporecap", 2}, {"kyno_spotspice", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(20)
+				eater.components.sanity:DoDelta(20)
+			end
+			
+			eater:AddDebuff("kyno_poisonimmunityaltbuff", "kyno_poisonimmunityaltbuff")
+		end,
+	},
+	
+	pickles_sporecap_dark =
+	{
+		test = function(brewer, names, tags) return names.kyno_sporecap_dark and (names.kyno_sporecap_dark == 2) and tags.spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = -30,
+		hunger = 100,
+		sanity = -30,
+		cooktime = 72,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPORECAP_DARK,
+		nameoverride = "KYNO_PICKLES",
+		floater = TUNING.HOF_FLOATER,
+		tags = {"monstermeat", "acidrainimmune"},
+		card_def = {ingredients = {{"kyno_sporecap_dark", 2}, {"kyno_spotspice", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(30)
+				eater.components.sanity:DoDelta(30)
+			end
+
+			eater:AddDebuff("kyno_acidimmunityaltbuff", "kyno_acidimmunityaltbuff")
+		end,
+	},
+	
 	mayonnaise = 
 	{
 		test = function(brewer, names, tags) return tags.egg and names.kyno_oil and names.kyno_salt

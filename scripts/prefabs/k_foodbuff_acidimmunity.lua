@@ -10,6 +10,10 @@ local function OnAttached(inst, target)
 		target:AddTag("spoiler")
 	end
 	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START"))
+	end
+	
     inst:ListenForEvent("death", function()
         inst.components.debuff:Stop()
     end, target)
@@ -47,6 +51,10 @@ local function OnExtended(inst, target)
 		target:AddTag("spoiler")
 	else
 		target:AddTag("spoiler")
+	end
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START"))
 	end
 end
 
@@ -93,6 +101,10 @@ local function OnAttachedAlt(inst, target)
 		target:AddTag("acidrainimmune")
 	end
 	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START"))
+	end
+	
     inst:ListenForEvent("death", function()
         inst.components.debuff:Stop()
     end, target)
@@ -119,6 +131,10 @@ local function OnExtendedAlt(inst, target)
 		target:AddTag("acidrainimmune")
 	else
 		target:AddTag("acidrainimmune")
+	end
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START"))
 	end
 end
 

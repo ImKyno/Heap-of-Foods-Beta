@@ -1050,6 +1050,14 @@ end
 
 AddPrefabPostInit("plant_normal", PlantNormalPostInit)
 
+-- Immunity to Sporeclouds.
+local function SporecloudPostInit(inst)
+	local AURA_EXCLUDE_TAGS = UpvalueHacker.GetUpvalue(_G.Prefabs.sporecloud.fn, "AURA_EXCLUDE_TAGS")
+    table.insert(AURA_EXCLUDE_TAGS, "sporecloudimmune")
+end
+
+AddPrefabPostInit("sporecloud", SporecloudPostInit)
+
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")
 

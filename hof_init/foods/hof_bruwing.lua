@@ -91,6 +91,9 @@ AddBrewingValues({"chocolate_black"},           {sweetener  = 1,   chocolate    
 AddBrewingValues({"chocolate_white"},           {sweetener  = 1,   chocolate     = 1})
 AddBrewingValues({"kyno_tealeaf"},              {leaf       = 1})
 AddBrewingValues({"kyno_poison_froglegs"},      {froglegs   = 1})
+AddBrewingValues({"kyno_truffles"},             {veggie     = 1,   mushrooms     = 1})
+AddBrewingValues({"kyno_sporecap"},             {veggie     = 0.5, mushrooms     = 1, monster = 0.5})
+AddBrewingValues({"kyno_sporecap_dark"},        {veggie     = 0.5, mushrooms     = 1, monster = 0.5})
 
 -- Import the Beverages.
 local brewer_jar   = {"kyno_preservesjar"}
