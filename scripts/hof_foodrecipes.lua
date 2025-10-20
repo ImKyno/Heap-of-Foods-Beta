@@ -283,7 +283,7 @@ local kyno_foods =
 	gorge_sweet_chips = 
 	{
 		test = function(cooker, names, tags) return ((names.kyno_sweetpotato or 0) + (names.kyno_sweetpotato_cooked or 0) >= 2) 
-		and names.kyno_oil and tags.spotspice end,
+		and tags.oil and tags.spotspice end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
@@ -1758,7 +1758,7 @@ local kyno_foods =
 	
 	friesfrench =
 	{
-		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 2) and names.kyno_oil and names.kyno_salt end,
+		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 2) and tags.oil and names.kyno_salt end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SUPERSLOW,
@@ -1773,7 +1773,7 @@ local kyno_foods =
 	
 	onionrings =
 	{
-		test = function(cooker, names, tags) return ((names.onion or 0) + (names.onion_cooked or 0) >= 2) and names.kyno_oil and tags.flour 
+		test = function(cooker, names, tags) return ((names.onion or 0) + (names.onion_cooked or 0) >= 2) and tags.oil and tags.flour 
 		and not names.twigs and not tags.frozen and not tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -1789,7 +1789,7 @@ local kyno_foods =
 	
 	donuts =
 	{
-		test = function(cooker, names, tags) return (tags.flour and tags.flour >= 2) and names.kyno_sugar and names.kyno_oil end,
+		test = function(cooker, names, tags) return (tags.flour and tags.flour >= 2) and names.kyno_sugar and tags.oil end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -1804,7 +1804,7 @@ local kyno_foods =
 	
 	donuts_chocolate_black =
 	{
-		test = function(cooker, names, tags) return tags.flour and names.kyno_sugar and names.kyno_oil and names.chocolate_black end,
+		test = function(cooker, names, tags) return tags.flour and names.kyno_sugar and tags.oil and names.chocolate_black end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -1819,7 +1819,7 @@ local kyno_foods =
 	
 	donuts_chocolate_white =
 	{
-		test = function(cooker, names, tags) return tags.flour and names.kyno_sugar and names.kyno_oil and names.chocolate_white end,
+		test = function(cooker, names, tags) return tags.flour and names.kyno_sugar and tags.oil and names.chocolate_white end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -1954,7 +1954,7 @@ local kyno_foods =
 	
 	chipsbag =
 	{
-		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 2) and names.kyno_oil and tags.spotspice end,
+		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 2) and tags.oil and tags.spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -2667,7 +2667,7 @@ local kyno_foods =
 	dumplings = -- Wow... they're just perogies with hamlet skin.
 	{
 		test = function(cooker, names, tags) return tags.flour and (tags.veggie and tags.veggie >= 1)
-		and (tags.meat and tags.meat < 1) and names.kyno_oil end,
+		and (tags.meat and tags.meat < 1) and tags.oil end,
 		priority = 25,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
@@ -2682,7 +2682,7 @@ local kyno_foods =
 	
 	coxinha =
 	{
-		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) and tags.flour and names.kyno_oil
+		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) and tags.flour and tags.oil
 		and tags.spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
@@ -2785,7 +2785,7 @@ local kyno_foods =
 	
 	wobsterbreaded =
 	{
-		test = function(cooker, names, tags) return tags.wobster and tags.spotspice and tags.flour and names.kyno_oil end,
+		test = function(cooker, names, tags) return tags.wobster and tags.spotspice and tags.flour and tags.oil end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -2909,7 +2909,7 @@ local kyno_foods =
 	pasty_meat =
 	{
 		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 1) and tags.flour 
-		and tags.veggie and names.kyno_oil and not tags.wobster end,
+		and tags.veggie and tags.oil and not tags.wobster end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
@@ -2923,7 +2923,7 @@ local kyno_foods =
 	
 	pasty_cheese =
 	{
-		test = function(cooker, names, tags) return tags.cheese and tags.flour and tags.spotspice and names.kyno_oil end,
+		test = function(cooker, names, tags) return tags.cheese and tags.flour and tags.spotspice and tags.oil end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -3015,6 +3015,7 @@ local kyno_foods =
 		hunger = 62.5,
 		sanity = 0,
 		cooktime = 1.5,
+		goldvalue = 5,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_TRUFFLES,
 		potlevel = "high",
 		floater = TUNING.HOF_FLOATER,
@@ -3060,7 +3061,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
 		health = -30,
-		hunger = 62.5,
+		hunger = 45,
 		sanity = -20,
 		cooktime = 1,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPORECAP_DARK,

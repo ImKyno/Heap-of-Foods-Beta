@@ -737,6 +737,7 @@ local kyno_foods_jar =
 		goldvalue = 10,
 		nameoverride = "KYNO_PICKLES",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"truffles"},
 		card_def = {ingredients = {{"kyno_truffles", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -747,7 +748,7 @@ local kyno_foods_jar =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
 		health = -20,
-		hunger = 75,
+		hunger = 40,
 		sanity = -20,
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPORECAP,
@@ -774,7 +775,7 @@ local kyno_foods_jar =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
 		health = -30,
-		hunger = 100,
+		hunger = 55,
 		sanity = -30,
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPORECAP_DARK,
@@ -796,7 +797,7 @@ local kyno_foods_jar =
 	
 	mayonnaise = 
 	{
-		test = function(brewer, names, tags) return tags.egg and names.kyno_oil and names.kyno_salt
+		test = function(brewer, names, tags) return tags.egg and tags.oil and names.kyno_salt
 		and not names.kyno_chicken_egg and not names.tallbirdegg and not names.nightmarefuel end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
@@ -817,7 +818,7 @@ local kyno_foods_jar =
 	
 	mayonnaise_chicken = 
 	{
-		test = function(brewer, names, tags) return names.kyno_chicken_egg and names.kyno_oil and names.kyno_salt and not names.nightmarefuel end,
+		test = function(brewer, names, tags) return names.kyno_chicken_egg and tags.oil and names.kyno_salt and not names.nightmarefuel end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -837,7 +838,7 @@ local kyno_foods_jar =
 	
 	mayonnaise_tallbird = 
 	{
-		test = function(brewer, names, tags) return names.tallbirdegg and names.kyno_oil and names.kyno_salt and not names.nightmarefuel end,
+		test = function(brewer, names, tags) return names.tallbirdegg and tags.oil and names.kyno_salt and not names.nightmarefuel end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -935,12 +936,30 @@ local kyno_foods_jar =
 		card_def = {ingredients = {{"kyno_milk_koalefant", 2}, {"kyno_salt", 1}}},
 	},
 	
+	truffleoil =
+	{
+		test = function(brewer, names, tags) return names.kyno_truffles and names.seeds and names.kyno_salt end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		scale = 1.1,
+		health = -10,
+		hunger = 12.5,
+		sanity = -20,
+		cooktime = 24,
+		stacksize = 2,
+		goldvalue = 10,
+		floater = TUNING.HOF_FLOATER,
+		tags = {"drinkable_food", "truffles"},
+		card_def = {ingredients = {{"kyno_truffles", 1}, {"seeds", 1}, {"kyno_salt", 1}}},
+	},
+	
 	-- This recipe is for when brewing an invalid product, we need this to prevent a crash.
 	wetgoop2 =
 	{
 		test = function(brewer, names, tags) return true end,
 		priority = -2,
-		perishtime = TUNING.PERISH_FAST,
+		perishtime = nil,
 		health = 0,
 		hunger = 0,
 		sanity = 0,

@@ -1,6 +1,49 @@
 -- Multiple buffs combined into one.
 -- Speed, Sleep, Defense, Strength, Fear, Fire Immunity, Fishing, Frog, Haste, Eater
--- Work, Pirate, Worm, Crab, Amphibian, Planar Defense, Super Jellybeans, Moisture
+-- Work, Pirate, Worm, Crab, Amphibian, Planar Defense, Super Jellybeans, Moisture,
+-- Poison Immunity, Acid Immunity, One Man Band
+local banddt = 1
+local FOLLOWER_ONEOF_TAGS = {"pig"}
+local FOLLOWER_CANT_TAGS = {"werepig", "merm", "player"}
+local HAUNTEDFOLLOWER_MUST_TAGS = {"pig"}
+
+local function DisableBand(inst)
+	if inst.updatetask then
+		inst.updatetask:Cancel()
+		inst.updatetask = nil
+	end
+end
+
+local function UpdateBand(inst)	
+	if inst:HasTag("playermerm") or inst:HasTag("playermonster") then
+		return
+	end
+    
+	if inst and inst.components.leader then
+		local x,y,z = inst.Transform:GetWorldPosition()
+		local ents = TheSim:FindEntities(x, y, z, TUNING.ONEMANBAND_RANGE, nil, FOLLOWER_CANT_TAGS, FOLLOWER_ONEOF_TAGS)
+		
+		for k, v in pairs(ents) do
+			if v.components.follower and not v.components.follower.leader and not 
+			inst.components.leader:IsFollower(v) and inst.components.leader.numfollowers < 10 then
+				inst.components.leader:AddFollower(v)
+			end
+		end
+		
+		for k, v in pairs(inst.components.leader.followers) do
+			if k.components.follower then
+				if k:HasTag("pig") then
+					k.components.follower:AddLoyaltyTime(3)
+                end
+            end
+        end
+	end
+end
+
+local function EnableBand(inst)
+	inst.updatetask = inst:DoPeriodicTask(banddt, UpdateBand, 1)
+end
+
 local function AddDappernessResistance(owner, equippable)
 	if equippable.is_magic_dapperness then
 		return 0
@@ -181,6 +224,23 @@ local function OnAttached(inst, target)
 	
 	target.components.moistureimmunity:AddSource(target)
 	
+	-- Poison Immunity
+	if not target:HasTag("sporecloudimmune") then
+		target:AddTag("sporecloudimmune")
+	end
+	
+	-- Acid Immunity
+	if not target:HasTag("acidrainimmune") then
+		target:AddTag("acidrainimmune")
+	end
+	
+	-- One Man Band
+	if target:HasTag("playermerm") or target:HasTag("playermonster") then
+		return
+	else
+		EnableBand(target)
+	end
+	
 	inst:ListenForEvent("death", function()
 		inst.components.debuff:Stop()
 	end, target)
@@ -272,6 +332,23 @@ local function OnDetached(inst, target)
 	
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_GOLDENAPPLEBUFF_END"))
+	end
+	
+	-- Poison Immunity
+	if target:HasTag("sporecloudimmune") then
+		target:RemoveTag("sporecloudimmune")
+	end
+	
+	-- Acid Immunity
+	if target:HasTag("acidrainimmune") then
+		target:RemoveTag("acidrainimmune")
+	end
+	
+	-- One Man Band
+	if target:HasTag("playermerm") or target:HasTag("playermonster") then
+		return
+	else
+		DisableBand(target)
 	end
 	
 	-- Slow down for a bit after using it.
@@ -435,6 +512,30 @@ local function OnExtended(inst, target)
 	end
 	
 	target.components.moistureimmunity:AddSource(target)
+	
+	-- Poison Immunity
+	if target:HasTag("sporecloudimmune") then
+		target:RemoveTag("sporecloudimmune")
+		target:AddTag("sporecloudimmune")
+	else
+		target:AddTag("sporecloudimmune")
+	end
+	
+	-- Acid Immunity
+	if target:HasTag("acidrainimmune") then
+		target:RemoveTag("acidrainimmune")
+		target:AddTag("acidrainimmune")
+	else
+		target:AddTag("acidrainimmune")
+	end
+	
+	-- One Man Band
+	if target:HasTag("playermerm") or target:HasTag("playermonster") then
+		return
+	else
+		DisableBand(target)
+		EnableBand(target)
+	end
 end
 
 local function OnTimerDone(inst, data)

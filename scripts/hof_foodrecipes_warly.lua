@@ -287,7 +287,7 @@ local kyno_warly_foods =
 	
 	nachos =
 	{
-		test = function(cooker, names, tags) return names.kyno_oil and tags.spotspice and tags.cheese and names.corn and not names.corn_cooked end,
+		test = function(cooker, names, tags) return tags.oil and tags.spotspice and tags.cheese and names.corn and not names.corn_cooked end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SLOW,

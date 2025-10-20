@@ -121,6 +121,7 @@ AddIngredientValues({"kyno_moon_froglegs"},     {meat       = 0.5},             
 AddIngredientValues({"kyno_truffles"},          {veggie     = 1,    mushrooms = 1},                    true)
 AddIngredientValues({"kyno_sporecap"},          {veggie     = 0.5,  mushrooms = 1,    monster  = 0.5}, true)
 AddIngredientValues({"kyno_sporecap_dark"},     {veggie     = 0.5,  mushrooms = 1,    monster  = 0.5}, true)
+AddIngredientValues({"truffleoil"},             {oil        = 1})
 
 -- Import the Foods.
 local cookpots = 

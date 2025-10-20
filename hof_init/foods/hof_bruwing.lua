@@ -5,7 +5,6 @@ local require 				= _G.require
 require("hof_constants")
 require("hof_brewing")
 require("craftpot/ingredienttags")
--- require("craftpot/cookingpots")
 
 -- Vanilla Wooden Keg and Preserves Jar Ingredients.
 AddBrewingValues({"honey"},						{sweetener  = 1,   honey         = 1})
@@ -50,6 +49,7 @@ AddBrewingValues({"goatmilk"},                  {dairy      = 1,   milk         
 AddBrewingValues({"moon_tree_blossom"},         {veggie     = 0.5})
 AddBrewingValues({"purebrilliance"},            {lunar      = 1})
 AddBrewingValues({"horrorfuel"},                {shadow     = 1})
+AddBrewingValues({"seeds"},                     {seeds      = 1})
 
 -- Mod Wooden Keg and Preserves Jar Ingredients.
 AddBrewingValues({"kyno_wheat"}, 				{veggie     = 1,   wheat         = 1})
@@ -94,6 +94,7 @@ AddBrewingValues({"kyno_poison_froglegs"},      {froglegs   = 1})
 AddBrewingValues({"kyno_truffles"},             {veggie     = 1,   mushrooms     = 1})
 AddBrewingValues({"kyno_sporecap"},             {veggie     = 0.5, mushrooms     = 1, monster = 0.5})
 AddBrewingValues({"kyno_sporecap_dark"},        {veggie     = 0.5, mushrooms     = 1, monster = 0.5})
+AddBrewingValues({"truffleoil"},                {oil        = 1})
 
 -- Import the Beverages.
 local brewer_jar   = {"kyno_preservesjar"}

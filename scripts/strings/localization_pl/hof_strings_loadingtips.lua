@@ -90,6 +90,9 @@ local LOADINGTIPS   =
 	BOOKGARDENING1  = "Książka Wickerbottom 'Hodowla Roślin, Opanowana' pozwala hodować każdy rodzaj roślin, nawet niektóre specjalne drzewa, których normalnie nie można!",
 	BOOKGARDENING2  = "Książka Wickerbottom 'Hodowla Roślin, Opanowana' ma szansę wyhodować rośliny z farmy w formę Przerosłą!",
 	FARMPLOT        = "Jeśli nowy system rolnictwa jest dla ciebie zbyt skomplikowany, nie martw się! Sammy cię wspiera, sprzedaje stare plany, które pomogą.",
+	TRUFFLES1       = "Przedmioty związane z truflami mogą być użyte do zaprzyjaźnienia się ze Świniami, czyniąc je lojalnymi na dłużej.",
+	TRUFFLES2       = "Przedmioty związane z truflami można wymienić u Króla Świń na kilka łatwych Złotych Samorodków.",
+	GOLDENAPPLE     = "Zaczarowane Złote Jabłka to rzadkie przedmioty, które można zdobyć po pokonaniu Niebiańskiego Dziedzica co najmniej raz w świecie. Dają wiele pozytywnych efektów kosztem twojego życia.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

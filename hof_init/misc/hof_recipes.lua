@@ -478,6 +478,7 @@ SortAfter("fast_farmplot", "slow_farmplot", "STRUCTURES")
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
 		builder_tag         = "strongman",
+		product             = "potatosack",
 		atlas               = "images/inventoryimages2.xml",
 		image               = "potato_sack_full.tex",
 	},

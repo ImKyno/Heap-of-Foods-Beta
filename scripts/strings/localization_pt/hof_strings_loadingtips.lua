@@ -90,6 +90,9 @@ local LOADINGTIPS   =
 	BOOKGARDENING1  = "O livro de Wickerbottom, Horticultura, Masterizada, pode cultivar qualquer tipo de planta, até algumas árvores especiais que normalmente você não consegue!",
 	BOOKGARDENING2  = "O livro de Wickerbottom, Horticultura, Masterizada, tem chance de cultivar plantas de fazenda em uma forma Gigante!",
 	FARMPLOT        = "Se o novo sistema de agricultura for muito complicado para você, não se preocupe! O Sammy tá contigo, ele está vendendo alguns antigos projetos de hortas que vão ajudar.",
+	TRUFFLES1       = "Itens relacionados a Trufas podem ser usados para fazer amizade com Porcos, tornando-os leais por mais tempo.",
+	TRUFFLES2       = "Itens relacionados a Trufas podem ser trocados com o Rei Porco por algumas Pepitas de Ouro.",
+	GOLDENAPPLE     = "Maçãs Douradas Encantadas são itens raros que podem ser obtidas após o Celestial Scion ter sido derrotado pelo menos uma vez no mundo. Elas concedem múltiplos efeitos positivos ao custo de sua vida.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

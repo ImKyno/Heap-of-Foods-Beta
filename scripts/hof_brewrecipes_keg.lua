@@ -751,6 +751,71 @@ local kyno_foods_keg =
 		tags = {"drinkable_food"},
 		card_def = {ingredients = {{"kyno_fennel", 2}, {"ice", 1}}},
 	},
+	
+	juice_truffles =
+	{
+		test = function(brewer, names, tags) return names.kyno_truffles and (names.kyno_truffles == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SLOW,
+		health = 5,
+		hunger = 50,
+		sanity = 5,
+		cooktime = 72,
+		goldvalue = 10,
+		nameoverride = "KYNO_JUICE",
+		floater = TUNING.HOF_FLOATER,
+		tags = {"drinkable_food", "truffles"},
+		card_def = {ingredients = {{"kyno_truffles", 2}, {"ice", 1}}},
+	},
+	
+	juice_sporecap =
+	{
+		test = function(brewer, names, tags) return names.kyno_sporecap and (names.kyno_sporecap == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SLOW,
+		health = -10,
+		hunger = 62.5,
+		sanity = -10,
+		cooktime = 72,
+		nameoverride = "KYNO_JUICE",
+		floater = TUNING.HOF_FLOATER,
+		tags = {"drinkable_food", "monstermeat"},
+		card_def = {ingredients = {{"kyno_sporecap", 2}, {"ice", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(10)
+				eater.components.sanity:DoDelta(10)
+			end
+		end,
+	},
+	
+	juice_sporecap_dark =
+	{
+		test = function(brewer, names, tags) return names.kyno_sporecap_dark and (names.kyno_sporecap_dark == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SLOW,
+		health = -20,
+		hunger = 62.5,
+		sanity = -20,
+		cooktime = 72,
+		nameoverride = "KYNO_JUICE",
+		floater = TUNING.HOF_FLOATER,
+		tags = {"drinkable_food", "monstermeat"},
+		card_def = {ingredients = {{"kyno_sporecap_dark", 2}, {"ice", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("playermonster") and
+			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				eater.components.health:DoDelta(20)
+				eater.components.sanity:DoDelta(20)
+			end
+		end,
+	},
 
 	beer =
 	{

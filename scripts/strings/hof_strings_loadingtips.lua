@@ -90,6 +90,9 @@ local LOADINGTIPS   =
 	BOOKGARDENING1  = "Wickerbottom's book Horticulture, Mastered can grow any type of plant, even some special trees that you normally can't!",
 	BOOKGARDENING2  = "Wickerbottom's book Horticulture, Mastered has a chance to grow farm plants into a Oversized form!",
 	FARMPLOT        = "If the new farming system is too complicated for you, don't worry! Sammy got you covered, he's selling some old blueprints that will help.",
+	TRUFFLES1       = "Truffle-related items can be used to befriend Pigs, making them loyal for longer.",
+	TRUFFLES2       = "Truffle-related items can be traded to Pig King for some easy Gold Nuggets.",
+	GOLDENAPPLE     = "Enchanted Golden Apples are rare items that can be obtained after Celestial Scion has been defeated at least once in the world. They give multiple positive effects at the cost of your life.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

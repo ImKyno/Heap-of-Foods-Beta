@@ -153,6 +153,10 @@ local function MakePreparedFood(data)
 			inst.components.tradable.rocktribute = data.rocktribute
 		end
 		
+		if data.goldvalue ~= nil then
+			inst.components.tradable.goldvalue = data.goldvalue
+		end
+		
 		inst:AddComponent("inspectable")
 		if data.nameoverride ~= nil then
 			inst.components.inspectable.nameoverride = data.nameoverride
