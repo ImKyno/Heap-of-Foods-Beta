@@ -175,13 +175,15 @@ local function MakePreparedBrew(data)
 		
 		if not TheNet:IsDedicated() then
 			if data.horrorfx then
-				inst.core = CreateCore()
-				inst.core.entity:SetParent(inst.entity)
-				
-				local x, y, z = inst.Transform:GetWorldPosition()
-				inst.core.Transform:SetPosition(x, .2, z)
-				
-				inst.highlightchildren = { inst.core }
+				local horrorfx = SpawnPrefab("tophat_shadow_fx")
+				horrorfx.entity:SetParent(inst.entity)
+				-- horrorfx.Transform:SetPosition(inst.Transform:GetWorldPosition())
+
+				inst:ListenForEvent("onremove", function()
+					if horrorfx and horrorfx:IsValid() then
+						horrorfx:Remove()
+					end
+				end)
 			end
 		end
 

@@ -459,39 +459,6 @@ end
 
 AddPrefabPostInit("pigman", PigmanPostInit)
 
---[[
-local function WormBossPostInit(inst)
-	local _GenerateLoot = UpvalueHacker.GetUpvalue(_G.Prefabs.worm_boss
-end
-
-AddPrefabPostInit("worm_boss", function(inst)
-    if not GLOBAL.TheWorld.ismastersim then
-        return
-    end
-
-    -- Pegamos o arquivo original
-    local prefab_fn = require("prefabs/worm_boss")
-
-    -- Pegamos a função GenerateLoot
-    local GenerateLoot = UpvalueHacker.GetUpvalue(prefab_fn, "GenerateLoot")
-
-    if GenerateLoot then
-        -- Pegamos a tabela interna de loot
-        local loottable = UpvalueHacker.GetUpvalue(GenerateLoot, "loottable")
-
-        if loottable and loottable.boneshard then
-            -- Remove o item original
-            loottable.boneshard = nil
-        end
-
-        -- Adiciona sua prefab customizada no lugar
-        loottable["meu_item_custom"] = 15  -- nome da sua prefab e quantidade
-    else
-        print("[WormBossLootPatch] Falhou em achar GenerateLoot!")
-    end
-end)
-]]--
-
 -- Guaranteed Golden Apple for Wagstaff cutscene and chances afterwards.
 local GOLDENAPPLE_ADDED = false
 

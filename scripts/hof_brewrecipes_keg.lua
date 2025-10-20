@@ -1142,7 +1142,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = TUNING.HOF_FLOATER,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_STEALTH,
-		tags = {"drinkable_food", "alcoholic_drink", "shadow_aligned"},
+		tags = {"drinkable_food", "alcoholic_drink", "shadow_aligned", "shadow_fooditem"},
 		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"horrorfuel", 1}, {"ice", 1}}},
 		prefabs = { "kyno_stealthbuff" },
 		oneatenfn = function(inst, eater)

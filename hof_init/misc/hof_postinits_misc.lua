@@ -700,6 +700,109 @@ if HOF_ICEBOXSTACKSIZE then
 	AddPrefabPostInit("saltbox", ElastispacerPostInit)
 end
 
+local function WobyRackPostInit(inst)
+	local CS = 
+	{
+		r = 0.4, 
+		g = 0.4, 
+		b = 0.6, 
+		a = 0.5,
+	}
+	
+	local function ApplyColourToSlot(slotfx, r, g, b, a)
+		if slotfx and slotfx.AnimState then
+			slotfx.AnimState:SetMultColour(r, g, b, a)
+			slotfx.AnimState:SetSymbolMultColour("rope", r, g, b, a)
+			slotfx.AnimState:SetSymbolMultColour("rope_empty", r, g, b, a)
+			slotfx.AnimState:SetSymbolMultColour("swap_dried", r, g, b, a)
+		end
+	end
+	
+	local function StealthMultColour(inst)
+		inst.AnimState:SetMultColour(CS.r, CS.g, CS.b, CS.a)
+		inst.AnimState:SetSymbolMultColour("rack", CS.r, CS.g, CS.b, CS.a)
+		
+		if inst.slots ~= nil then
+			for _, v in ipairs(inst.slots) do
+				if v.fx ~= nil then
+					ApplyColourToSlot(v.fx, CS.r, CS.g, CS.b, CS.a)
+				end
+			end
+		end
+	end
+	
+	local function DefaultMultColour(inst)
+		inst.AnimState:SetMultColour(1, 1, 1, 1)
+		inst.AnimState:SetSymbolMultColour("rack", 1, 1, 1, 1)
+		
+		if inst.slots ~= nil then
+			for _, v in ipairs(inst.slots) do
+				if v.fx ~= nil then
+					ApplyColourToSlot(v.fx, 1, 1, 1, 1)
+				end
+			end
+		end
+	end
+
+	local function RackStealth(inst)
+		local parent = inst.entity:GetParent()
+		
+		if parent and parent:HasTag("mimicmosa_stealthed") then
+			StealthMultColour(inst)
+		else
+			DefaultMultColour(inst)
+		end
+	end
+	
+	inst:DoPeriodicTask(0, RackStealth)
+end
+
+AddPrefabPostInit("woby_rack_swap_fx", WobyRackPostInit)
+
+local function SaddleShadowPostInit(inst)
+	local CS = 
+	{
+		r = 0.4, 
+		g = 0.4, 
+		b = 0.6, 
+		a = 0.5,
+	}
+	
+	local function StealthMultColour(inst)
+		if inst.fx then
+			for i, fx in ipairs(inst.fx) do
+				if fx.AnimState then
+					fx.AnimState:SetMultColour(CS.r, CS.g, CS.b, CS.a)
+				end
+			end
+		end
+	end
+	
+	local function DefaultMultColour(inst)
+		if inst.fx then
+			for i, fx in ipairs(inst.fx) do
+				if fx.AnimState then
+					fx.AnimState:SetMultColour(1, 1, 1, 1)
+				end
+			end
+		end
+	end
+	
+	local function SaddleStealth(inst)
+		local parent = inst.entity:GetParent()
+		
+		if parent:HasTag("mimicmosa_stealthed") then
+			StealthMultColour(inst)
+		else
+			DefaultMultColour(inst)
+		end
+	end
+
+	inst:DoPeriodicTask(0, SaddleStealth)
+end
+
+AddPrefabPostInit("saddle_shadow_fx", SaddleShadowPostInit)
+
 -- Makes icons appear for containers that are integrated to player's inventory.
 AddClassPostConstruct("widgets/invslot", function(self)
 	if self.owner == _G.ThePlayer and self.container.GetWidget ~= nil then
@@ -742,6 +845,16 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 		self.updateenchanteddelay = nil
 	end
 	
+	function self:StartUpdatingShadow2()
+		self.updateshadow2delay = 0
+		_StartUpdating(self, "shadow2")
+	end
+	
+	function self:StopUpdatingShadow2()
+		_StopUpdating(self, "shadow2")
+		self.updateshadow2delay = nil
+	end
+	
 	local _OnUpdate = self.OnUpdate
 	
 	function self:OnUpdate(dt)
@@ -758,6 +871,16 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 				self:CheckEnchantedFX()
 			end
 		end
+		
+		if self.updatingflags and self.updatingflags.shadow2 then
+			self.updateshadow2delay = (self.updateshadow2delay or 0) + dt
+			
+			if self.updateshadow2delay > 0.2 then
+				self.updateshadow2delay = 0
+
+				self:CheckShadow2FX()
+			end
+		end
 	end
 	
 	function self:CheckEnchantedFX()
@@ -765,6 +888,14 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 			self.enchantedfx:Show()
 		else
 			self.enchantedfx:Hide()
+		end
+	end
+	
+	function self:CheckShadow2FX()
+		if self.item:HasTag("shadow_fooditem") then
+			self.shadow2fx:Show()
+		else
+			self.shadow2fx:Hide()
 		end
 	end
 
@@ -792,21 +923,53 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 			self.enchantedfx = nil
 		end
 	end
+	
+	function self:ToggleShadow2FX()
+		if self.showequipshadow2fx or (self.item and self.item:HasTag("shadow_fooditem")) then
+			if self.shadow2fx == nil then
+				self.shadow2fx = self.image:AddChild(UIAnim())
+				self.shadow2fx:GetAnimState():SetBank("inventory_fx_shadow")
+				self.shadow2fx:GetAnimState():SetBuild("inventory_fx_shadow")
+				self.shadow2fx:GetAnimState():PlayAnimation("idle", true)
+				self.shadow2fx:GetAnimState():SetTime(math.random() * self.shadow2fx:GetAnimState():GetCurrentAnimationTime())
+				self.shadow2fx:SetScale(.25)
+				self.shadow2fx:GetAnimState():AnimateWhilePaused(false)
+				self.shadow2fx:SetClickable(false)
+			end
+			
+			if self.item:HasTag("shadow_fooditem") then
+				self:CheckShadow2FX()
+				self:StartUpdatingShadow2()
+			else
+				self:StopUpdatingShadow2()
+			end
+		elseif self.shadow2fx ~= nil then
+			self.shadow2fx:Kill()
+			self.shadow2fx = nil
+		end
+	end
 
 	local _SetIsEquip = self.SetIsEquip
 	
 	function self:SetIsEquip(isequip)
 		local enchantedfx = isequip and self.item:HasTag("goldenapple")
+		local shadow2fx = isequip and self.item:HasTag("shadow_fooditem")
 
 		if not self.showequipenchantedfx == enchantedfx then
 			self.showequipenchantedfx = enchantedfx or nil
 			self:ToggleEnchantedFX()
 		end
 		
+		if not self.showequipshadow2fx == shadow2fx then
+			self.showequipshadow2fx = shadow2fx or nil
+			self:ToggleShadow2FX()
+		end
+		
 		return _SetIsEquip(self, isequip)
 	end
 	
 	self:ToggleEnchantedFX()
+	self:ToggleShadow2FX()
 end)
 
 -- HAHAHAHA YOU CAN'T EDIT SKILLTREE STRINGS WITH REGULAR METHODS 💀💀
