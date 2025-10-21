@@ -12,6 +12,7 @@ local hof_init_strings =
 {
 	"hof_strings",
 	"hof_strings_scrapbook",
+	"hof_strings_skinprefabs",
 }
 
 for _, v in pairs(hof_init_strings) do
@@ -33,6 +34,7 @@ local hof_init_misc    =
 	"hof_tuning",
 	"hof_assets",
 	"hof_prefabs",
+	"hof_skins",
 	"hof_recipes",
 	"hof_recipes_serenity",
 	"hof_recipes_meadow",

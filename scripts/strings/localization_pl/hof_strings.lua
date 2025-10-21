@@ -10967,8 +10967,8 @@ STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_POPCORN_MACHINE = "Popcorn dobry dla Wurt,
 STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_POPCORN_MACHINE = "Popcorn gotowy do jedzenia!"
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_POPCORN_MACHINE = "Popcorn zawsze na czas, cudownie."
 
-STRINGS.NAMES.KYNO_ITEMSHOWCASER = "Witryna na Przedmioty"
-STRINGS.RECIPE_DESC.KYNO_ITEMSHOWCASER = "Pochwal się swoimi najlepszymi potrawami!"
+STRINGS.NAMES.KYNO_ITEMSHOWCASER = "Stojak Wystawowy"
+STRINGS.RECIPE_DESC.KYNO_ITEMSHOWCASER = "Elegancki stojak do prezentacji twoich najcenniejszych potraw."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_ITEMSHOWCASER = "Idealne miejsce, by zaprezentować moje kulinarne osiągnięcia!"
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_ITEMSHOWCASER = "Wreszcie coś, czego nie spalę... chyba że chcę!"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_ITEMSHOWCASER = "Wolfgang pokazuje jedzenie! Wolfgang dumny i głodny!"

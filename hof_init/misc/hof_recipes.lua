@@ -460,7 +460,7 @@ AddRecipe2("slow_farmplot", {Ingredient("cutgrass", 8), Ingredient("poop", 4), I
 	{"GARDENING", "STRUCTURES"}
 )
 SortAfter("slow_farmplot", "farm_plow_item", "GARDENING")
-SortAfter("slow_farmplot", "meatrack2", "STRUCTURES")
+SortAfter("slow_farmplot", "meatrack", "STRUCTURES")
 
 AddRecipe2("fast_farmplot", {Ingredient("cutgrass", 10), Ingredient("poop", 6), Ingredient("rocks", 4)}, TECH.LOST,
 	{
@@ -474,6 +474,18 @@ AddRecipe2("fast_farmplot", {Ingredient("cutgrass", 10), Ingredient("poop", 6), 
 )
 SortAfter("fast_farmplot", "slow_farmplot", "GARDENING")
 SortAfter("fast_farmplot", "slow_farmplot", "STRUCTURES")
+
+AddRecipe2("kyno_itemshowcaser", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("moonglass", 5)}, TECH.CARPENTRY_TWO,
+	{
+		placer              = "kyno_itemshowcaser_placer",
+		min_spacing         = 1.75,
+		station_tag         = "carpentry_station",
+		atlas               = ModAtlas,
+		image               = "kyno_itemshowcaser.tex",
+	},
+	{"CRAFTING_STATION", "STRUCTURES"}
+)
+SortAfter("kyno_itemshowcaser", "endtable", "STRUCTURES")
 
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{

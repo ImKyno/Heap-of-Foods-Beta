@@ -784,3 +784,20 @@ local HOF_SCRAPBOOK_ICONS =
 for i, v in ipairs(HOF_SCRAPBOOK_ICONS) do
 	RegisterScrapbookIconAtlas("images/scrapbookimages/hof_scrapbookimages.xml", v..".tex")
 end
+
+-- Modded Skins Assets.
+local HOF_SKIN_ICONS =
+{
+	"ms_kyno_itemshowcaser_cakestand",
+	"ms_kyno_itemshowcaser_fridge",
+	"ms_kyno_itemshowcaser_icebox",
+	"ms_kyno_itemshowcaser_marble",
+	"ms_kyno_itemshowcaser_marbledome",
+	"ms_kyno_itemshowcaser_quagmire",
+	"ms_kyno_itemshowcaser_traystand",
+	"ms_kyno_itemshowcaser_yotp",
+}
+
+for k, v in pairs(HOF_SKIN_ICONS) do
+	RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", v..".tex")
+end

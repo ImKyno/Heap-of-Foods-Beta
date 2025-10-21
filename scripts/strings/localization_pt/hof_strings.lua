@@ -10895,8 +10895,8 @@ STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_POPCORN_MACHINE = "Pipoca boa pra Wurt, gl
 STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_POPCORN_MACHINE = "Pipoca prontinha pra comer!"
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_POPCORN_MACHINE = "Serviço de pipoca pontual, adorei."
 
-STRINGS.NAMES.KYNO_ITEMSHOWCASER = "Vitrine de Itens"
-STRINGS.RECIPE_DESC.KYNO_ITEMSHOWCASER = "Mostre seus melhores pratos!"
+STRINGS.NAMES.KYNO_ITEMSHOWCASER = "Expositor"
+STRINGS.RECIPE_DESC.KYNO_ITEMSHOWCASER = "Um belo suporte para exibir seus pratos mais valiosos."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_ITEMSHOWCASER = "Um lugar perfeito para exibir minhas criações culinárias!"
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_ITEMSHOWCASER = "Finalmente, algo que não vai queimar... a menos que eu queira!"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_ITEMSHOWCASER = "Wolfgang mostra comida! Deixa Wolfgang orgulhoso e com fome!"

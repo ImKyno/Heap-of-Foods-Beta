@@ -167,3 +167,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.GARDENSPRINKLER = "可以开启和关闭。加满�
 STRINGS.SCRAPBOOK.SPECIALINFO.FARMPLOT = "允许种植和生长种子。\n\n种下的种子会随机生长为作物。使用作物种子可以种出特定作物。\n\n农场在收获一定次数后会耗尽，需要施肥才能继续种植。正在生长的作物可以施肥以加快生长速度。\n\n此施肥仅影响作物本身，不会影响农场本身的施肥状态。"
 STRINGS.SCRAPBOOK.SPECIALINFO.SURFACEBANANATREE = "一种稀有而难觅的奇异树木，能够在地下环境之外生长。\n\n据说在自然中已灭绝，仅有少数被专门的看护者照料。"
 STRINGS.SCRAPBOOK.SPECIALINFO.DECIDUOUSSHOP = "一座神秘的住宅，长久沉寂，其门或许有一天会打开……揭示其中的秘密。\n\n请在2026年的下一次重大更新中再来探访！"
+STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSHOWCASER = "用于展示熟食的结构。放在上面的食物不会腐坏。"

@@ -1882,5 +1882,5 @@ configuration_options        =
  -- { name                   = "MODRETROFITFORCE", label = RETROFITFORCE_LABEL, hover = RETROFITFORCE_HOVER, options = RETROFITFORCE_OPTIONS, default = false },
  -- { name                   = "MODRETROFIT",      label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,      options = RETROFIT_OPTIONS,      default = 0     },
 	{ name                   = "AUTORETROFIT",     label = AUTORETROFIT_LABEL,  hover = AUTORETROFIT_HOVER,  options = AUTORETROFIT_OPTIONS,  default = false },
-	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,     options = MODTRADES_OPTIONS,     default = false },
+	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,     options = MODTRADES_OPTIONS,     default = true  },
 }
