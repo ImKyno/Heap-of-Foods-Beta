@@ -24,6 +24,7 @@ local FOOD_ONEOF_TAGS =
 {
 	"preparedfood",
 	"preparedbrew",
+	"itemshowcaser_valid",
 }
 	
 local function GetCookerForFood(foodname)
@@ -109,7 +110,7 @@ local function OnFoodGiven(inst, item, giver)
 end
 
 local function OnFoodTaken(inst, item, taker, wholestack)
-	inst.SoundEmitter:PlaySound("wintersfeast2019/winters_feast/table/food")
+	inst.SoundEmitter:PlaySound("dontstarve/creatures/together/stagehand/hit")
 
 	if not wholestack then
 		return
@@ -143,7 +144,7 @@ local function GetStatus(inst)
 end
 
 local function OnBuilt(inst)
-	inst.SoundEmitter:PlaySound("wintersfeast2019/winters_feast/table/place")
+	inst.SoundEmitter:PlaySound("dontstarve/creatures/together/stagehand/hit")
 end
 
 local function fn()
@@ -166,6 +167,8 @@ local function fn()
 
 	inst:AddTag("structure")
 	inst:AddTag("itemshowcaser")
+	
+	inst.AnimState:HideSymbol("cooker_overlay")
 
 	inst.takeitem = net_entity(inst.GUID, "gelblob_storage.takeitem")
 		

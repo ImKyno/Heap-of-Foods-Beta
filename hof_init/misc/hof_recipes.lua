@@ -475,7 +475,7 @@ AddRecipe2("fast_farmplot", {Ingredient("cutgrass", 10), Ingredient("poop", 6), 
 SortAfter("fast_farmplot", "slow_farmplot", "GARDENING")
 SortAfter("fast_farmplot", "slow_farmplot", "STRUCTURES")
 
-AddRecipe2("kyno_itemshowcaser", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("moonglass", 5)}, TECH.CARPENTRY_TWO,
+AddRecipe2("kyno_itemshowcaser", {Ingredient("boards", 3), Ingredient("rope", 3), Ingredient("moonglass", 5)}, TECH.CARPENTRY_THREE,
 	{
 		placer              = "kyno_itemshowcaser_placer",
 		min_spacing         = 1.75,

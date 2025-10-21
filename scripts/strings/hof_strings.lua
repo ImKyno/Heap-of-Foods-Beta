@@ -10964,7 +10964,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_POPCORN_MACHINE = "Popcorn ready to eat!
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_POPCORN_MACHINE = "Timely popcorn service."
 
 STRINGS.NAMES.KYNO_ITEMSHOWCASER = "Display Stand"
-STRINGS.RECIPE_DESC.KYNO_ITEMSHOWCASER = "An exhibitor for showing off your prized dishes."
+STRINGS.RECIPE_DESC.KYNO_ITEMSHOWCASER = "A stand for showing off your prized dishes."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_ITEMSHOWCASER = "A perfect place to show my culinary triumphs!"
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_ITEMSHOWCASER = "Finally, something that won't burn... unless I make it."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_ITEMSHOWCASER = "Wolfgang show food! Make Wolfgang proud and hungry!"

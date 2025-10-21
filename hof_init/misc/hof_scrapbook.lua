@@ -13890,6 +13890,24 @@ local HOF_SCRAPBOOK_THINGS =
 		deps           = {"gears", "ice", "trinket_6"},
 		specialinfo    = "GARDENSPRINKLER",
 	},
+	
+	kyno_itemshowcaser =
+	{
+		name           = "kyno_itemshowcaser",
+		type           = "thing",
+		subcat         = "structure",
+		tex            = "kyno_itemshowcaser.tex",
+		prefab         = "kyno_itemshowcaser",
+		workable       = "HAMMER",
+		bank           = "kyno_itemshowcaser",
+		build          = "kyno_itemshowcaser",
+		anim           = "idle",
+		animoffsetx    = -8,
+		animoffsetbgx  = -15,
+		animoffsetbgy  = -65,
+		deps           = {"carpentry_station", "boards", "rope", "moonglass"},
+		specialinfo    = "ITEMSHOWCASER",
+	},
 }
 
 local HOF_SCRAPBOOK_SPICES =

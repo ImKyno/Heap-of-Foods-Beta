@@ -726,6 +726,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_fennel_ground",
 	"kyno_fishermermhut_wurt",
 	"kyno_garden_sprinkler",
+	"kyno_itemshowcaser",
 	"kyno_kokonuttree",
 	"kyno_kokonuttree_sapling",
 	"kyno_limpetrock",

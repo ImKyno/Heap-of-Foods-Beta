@@ -3041,6 +3041,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPORECAP,
 		floater = TUNING.HOF_FLOATER,
 		tags = {"monstermeat", "acidrainimmune"},
+		card_def = {ingredients = {{"kyno_sporecap", 2}, {"kyno_flour", 1}, {"honey", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
@@ -3067,6 +3068,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPORECAP_DARK,
 		floater = TUNING.HOF_FLOATER,
 		tags = {"monstermeat", "acidrainimmune"},
+		card_def = {ingredients = {{"kyno_sporecap_dark", 2}, {"carrot", 1}, {"twigs", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
