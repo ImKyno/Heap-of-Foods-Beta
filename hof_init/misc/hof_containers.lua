@@ -302,7 +302,7 @@ params.fishfarmplot =
 		animbank = "ui_fishfarmplot_3x4",
 		animbuild = "ui_fishfarmplot_3x4",
         
-		pos = Vector3(0, 200, 0),
+		pos = Vector3(0, 170, 0),
 		side_align_tip = 100,
 	},
 	
@@ -312,15 +312,21 @@ params.fishfarmplot =
 
 local spacing = 80
 local start_y = 3
+local x_offset = -10
+local y_offset = 140
 
 for y = start_y, 0, -1 do
 	if y == start_y then
 		for x = 0, 1 do
-			table.insert(params.fishfarmplot.widget.slotpos, Vector3(spacing * x - spacing * 0.5, spacing * (y - 1) - spacing * 1.5, 0))
+			table.insert(params.fishfarmplot.widget.slotpos, 
+			Vector3(spacing * x - spacing * 0.5 + x_offset, 
+			spacing * (y - 1) - spacing * 1.5 + y_offset, 0))
 		end
-    else
+	else
 		for x = 0, 2 do
-			table.insert(params.fishfarmplot.widget.slotpos, Vector3(spacing * x - spacing * 2 + spacing, spacing * (y - 1) - spacing * 1.5, 0))
+			table.insert(params.fishfarmplot.widget.slotpos,
+			Vector3(spacing * x - spacing * 2 + spacing + x_offset,
+			spacing * (y - 1) - spacing * 1.5 + y_offset, 0))
 		end
 	end
 end
