@@ -287,13 +287,67 @@ function params.popcornmachine.itemtestfn(container, item, slot)
 	return (item:HasTag("popcorn") and item:GetTimeAlive() <= 0)
 end
 
---[[
--- Not using because if using increased storage mods this will break.
-if HOF_ICEBOXSTACKSIZE then
-	containers.params.icebox.widget.animbank_upgraded = "ui_chest_upgraded_3x3"
-	containers.params.icebox.widget.animbuild_upgraded = "ui_chest_upgraded_3x3"
+params.fishfarmplot = 
+{
+	widget = 
+	{
+		slotpos = {},
+		
+		slotbg =
+		{
+			{ image = "fishfarmplot_slot_fish.tex", atlas = "images/inventoryimages/hof_hudimages.xml" },
+			{ image = "fishfarmplot_slot_roe.tex", atlas = "images/inventoryimages/hof_hudimages.xml" },
+		},
+		
+		animbank = "ui_fishfarmplot_3x4",
+		animbuild = "ui_fishfarmplot_3x4",
+        
+		pos = Vector3(0, 200, 0),
+		side_align_tip = 100,
+	},
+	
+	acceptsstacks = true,
+	type = "chest",
+}
 
-	containers.params.saltbox.widget.animbank_upgraded = "ui_chest_upgraded_3x3"
-	containers.params.saltbox.widget.animbuild_upgraded = "ui_chest_upgraded_3x3"
+local spacing = 80
+local start_y = 3
+
+for y = start_y, 0, -1 do
+	if y == start_y then
+		for x = 0, 1 do
+			table.insert(params.fishfarmplot.widget.slotpos, Vector3(spacing * x - spacing * 0.5, spacing * (y - 1) - spacing * 1.5, 0))
+		end
+    else
+		for x = 0, 2 do
+			table.insert(params.fishfarmplot.widget.slotpos, Vector3(spacing * x - spacing * 2 + spacing, spacing * (y - 1) - spacing * 1.5, 0))
+		end
+	end
 end
-]]--
+
+function params.fishfarmplot.itemtestfn(container, item, slot)
+	if slot == 1 then
+		return item:HasTag("fishfarmable")
+	elseif slot == 2 then
+		return item:HasTag("roe") and item:GetTimeAlive() <= 0
+	else
+		local valid_fish_slots = 
+		{
+			[3] = true, [4]  = true,  [5]  = true,
+			[6] = true, [7]  = true,  [8]  = true,
+			[9] = true, [10] = true,  [11] = true,
+        }
+
+		if valid_fish_slots[slot] then
+			return item:HasTag("fishfarmable") and item:GetTimeAlive() <= 0
+		end
+	end
+
+    if slot == nil then
+		if item:HasTag("fishfarmable") then
+			return container:GetItemInSlot(1) == nil
+		end
+	end
+	
+	return false
+end

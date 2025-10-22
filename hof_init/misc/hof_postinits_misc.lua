@@ -803,6 +803,33 @@ end
 
 AddPrefabPostInit("saddle_shadow_fx", SaddleShadowPostInit)
 
+-- Extra distance for Fish Hatchery.
+-- Why these morons at klei didn't add a self.containerdistance?
+AddComponentPostInit("container", function(self)
+	local _OnUpdate = self.OnUpdate
+
+	function self:OnUpdate(dt)
+		if self.opencount == 0 then
+			self.inst:StopUpdatingComponent(self)
+			return
+		end
+
+		for opener, _ in pairs(self.openlist) do
+			if self.inst ~= nil and self.inst:HasTag("fishhatchery") then
+				local old_distance = _G.CONTAINER_AUTOCLOSE_DISTANCE
+				_G.CONTAINER_AUTOCLOSE_DISTANCE = 6
+
+				_OnUpdate(self, dt)
+				_G.CONTAINER_AUTOCLOSE_DISTANCE = old_distance
+				
+				return
+			end
+		end
+
+		return _OnUpdate(self, dt)
+	end
+end)
+
 -- Makes icons appear for containers that are integrated to player's inventory.
 AddClassPostConstruct("widgets/invslot", function(self)
 	if self.owner == _G.ThePlayer and self.container.GetWidget ~= nil then

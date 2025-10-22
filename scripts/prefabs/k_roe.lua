@@ -27,10 +27,10 @@ local function fn()
 	inst.AnimState:SetBuild("roe")
 	inst.AnimState:PlayAnimation("idle")
 	
+	inst:AddTag("roe")
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
 	inst:AddTag("saltbox_valid")
-	inst:AddTag("roe_fishfarmbait")
 
 	inst.entity:SetPristine()
 

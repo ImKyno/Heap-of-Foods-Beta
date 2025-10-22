@@ -50,6 +50,9 @@ Assets =
 	Asset("IMAGE", "images/colourcubesimages/meadow_dusk_cc.tex"),
 	Asset("IMAGE", "images/colourcubesimages/meadow_night_cc.tex"),
 	Asset("IMAGE", "images/colourcubesimages/serenity_cc.tex"),
+	
+	Asset("IMAGE", "images/inventoryimages/hof_hudimages.tex"),
+	Asset("ATLAS", "images/inventoryimages/hof_hudimages.xml"),
 
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),

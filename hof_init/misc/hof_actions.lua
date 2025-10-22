@@ -810,6 +810,20 @@ ACTIONS.STORE.stroverridefn = function(act)
 	if target:HasTag("brewer") then
 		return STRINGS.ACTIONS.BREWER
 	end
+	
+	if target:HasTag("fishhatchery") then
+		if obj:HasTag("fishfarmable") then
+			return STRINGS.ACTIONS.BREEDFISH
+		end
+		
+		return STRINGS.ACTIONS.STORE.GENERIC
+	end
+end
+
+ACTIONS.ADDFUEL.stroverridefn = function(act)
+	if act.target:HasTag("fishhatchery") then
+		return STRINGS.ACTIONS.FEED.GENERIC
+	end
 end
 
 ACTIONS.INSTALLCOOKWARE.stroverridefn = function(act)

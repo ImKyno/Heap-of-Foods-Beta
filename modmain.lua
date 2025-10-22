@@ -67,6 +67,7 @@ local hof_init_foods   =
 	"hof_farming",
 	"hof_cooking",
 	"hof_bruwing",
+	"hof_fishfarm_foods",
 	"hof_meatrack_foods",
 	"hof_mushroom_foods",
 	"hof_postinits_foods",

@@ -40,6 +40,7 @@ PrefabFiles =
 	"k_deciduousforest_shop",
 	"k_fertilizer_nutrient_defs",
 	"k_fishes",
+	"k_fishfarmplot",
 	"k_floatilizer",
 	"k_foodbuff_acidimmunity",
 	"k_foodbuff_coffee",

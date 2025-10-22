@@ -2,6 +2,7 @@ require("constants")
 require("componentutil")
 
 local HOF_FOODTYPES      = {}
+local HOF_FUELTYPES      = {}
 local HOF_NAUGHTY_VALUE  = {}
 local HOF_PICKABLE_FOODS = {}
 local HOF_PICKUP_SOUNDS  = {}
@@ -12,6 +13,12 @@ HOF_FOODTYPES    =
 	PREPAREDSOUL = "PREPAREDSOUL",
 	PREPAREDPOOP = "PREPAREDPOOP",
 	ALCOHOLIC    = "ALCOHOLIC",
+}
+
+-- New FUELTYPE value for fishfarmplot.
+HOF_FUELTYPES =
+{
+	FISHFOOD  = "FISHFOOD",
 }
 
 -- New NAUGHTINESS values for innocent creatures.
@@ -50,6 +57,10 @@ HOF_PICKUP_SOUNDS =
 
 for k, v in pairs(HOF_FOODTYPES) do
 	FOODTYPE[k] = v
+end
+
+for k, v in pairs(HOF_FUELTYPES) do
+	FUELTYPE[k] = v
 end
 
 for k, v in pairs(HOF_NAUGHTY_VALUE) do
