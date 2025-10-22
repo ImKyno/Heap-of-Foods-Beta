@@ -51,11 +51,9 @@ local function fn()
 	inst.AnimState:HideSymbol("glowpulse")
 
 	inst:AddTag("fruit")
-	inst:AddTag("goldenapple")
 	inst:AddTag("nosteal")
-	inst:AddTag("saltbox_valid")
-	inst:AddTag("itemshowcaser_valid")
-	inst:AddTag("beargerfur_sack_valid")
+	inst:AddTag("goldenapple")
+	inst:AddTag("preparedfood")
 	inst:AddTag("_named")
 	
 	inst._goldenapplefx = SpawnPrefab("kyno_goldenapple_fx")
