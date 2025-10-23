@@ -311,9 +311,9 @@ params.fishfarmplot =
 }
 
 local spacing = 80
-local start_y = 3
+local start_y = 2
 local x_offset = -10
-local y_offset = 150
+local y_offset = 190
 
 for y = start_y, 0, -1 do
 	if y == start_y then
@@ -325,7 +325,7 @@ for y = start_y, 0, -1 do
 	else
 		for x = 0, 2 do
 			table.insert(params.fishfarmplot.widget.slotpos,
-			Vector3(spacing * x - spacing * 2 + spacing + x_offset,
+			Vector3(spacing * x - spacing + x_offset,
 			spacing * (y - 1) - spacing * 1.5 + y_offset, 0))
 			
 			table.insert(params.fishfarmplot.widget.slotbg, 
@@ -344,7 +344,6 @@ function params.fishfarmplot.itemtestfn(container, item, slot)
 		{
 			[3] = true, [4]  = true,  [5]  = true,
 			[6] = true, [7]  = true,  [8]  = true,
-			[9] = true, [10] = true,  [11] = true,
         }
 
 		if valid_fish_slots[slot] then

@@ -3,6 +3,7 @@ require("prefabutil")
 local assets =
 {
     Asset("ANIM", "anim/kyno_fishfarmplot.zip"),
+	Asset("ANIM", "anim/kyno_fishfarmplot_shoal.zip"),
 	Asset("ANIM", "anim/ui_fishfarmplot_3x4.zip"),
 	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
@@ -11,8 +12,15 @@ local assets =
 
 local prefabs =
 {
-	"rocks",
-	"collapse_small",
+	"marsh_plant",
+	"collapse_big",
+	
+	"kyno_fishfarmplot_shoal",
+	"kyno_fishfarmplot_shoal_marker",
+	
+	"kyno_fishfarmplot_rock1",
+	"kyno_fishfarmplot_rock2",
+	"kyno_fishfarmplot_rock3",
 }
 
 local function SpawnPlants(inst)
@@ -22,66 +30,77 @@ local function SpawnPlants(inst)
 		return
 	end
 
-	local radius_x = 3.5
-	local radius_z = 3
-	local total = math.random(3, 6)
-	local sector = TWOPI / total
-	
 	inst.plant_ents = {}
+	inst.plants = inst.plants or {}
+
+	if #inst.plants == 0 then
+		local radius_x = 3.5
+		local radius_z = 3
+		local total = math.random(3, 6)
+		local sector = TWOPI / total
 	
-	for i = 1, total do
-		local theta = i * sector + (math.random() * 0.2 - 0.1)
-		local dist = radius_x + math.random() * 0.2
-		local is_rock = math.random() < 0.5
+		for i = 1, total do
+			local theta = i * sector + (math.random() * 0.2 - 0.1)
+			local dist = radius_x + math.random() * 0.2
 
-		local x = math.cos(theta) * radius_x
-		local z = math.sin(theta) * radius_z
-		local y = 0
+			local x = math.cos(theta) * radius_x
+			local z = math.sin(theta) * radius_z
+			local y = 0
 
-		local plant_prefab = inst.planttype or "marsh_plant"
-		local plant = SpawnPrefab(plant_prefab)
+			local plant_prefab = inst.planttype or "marsh_plant"
+			local plant_rot = math.random() * 360
 
-		if plant ~= nil then
-			plant.entity:SetParent(inst.entity)
-			plant.Transform:SetPosition(x, y, z)
-			plant.persists = false
-			plant.Transform:SetRotation(math.random() * 360)
-			table.insert(inst.plant_ents, plant)
+			table.insert(inst.plants, 
+			{
+				prefab = plant_prefab,
+				pos = { x, y, z },
+				rot = plant_rot,
+			})
 
-			local rock_variants =
+			local rock_variants = 
 			{
 				"kyno_fishfarmplot_rock1",
 				"kyno_fishfarmplot_rock2",
 				"kyno_fishfarmplot_rock3",
 			}
-				
+			
 			local offsets = { math.pi / 2, -math.pi / 2 }
 			local offset_dist = 0.3 + math.random() * 0.2
 
 			for _, off in ipairs(offsets) do
 				local rock_prefab = rock_variants[math.random(#rock_variants)]
-				local rock = SpawnPrefab(rock_prefab)
+				local rx = x + math.cos(theta + off) * offset_dist
+				local rz = z + math.sin(theta + off) * offset_dist
+				local r_rot = math.random() * 360
+				local shade = 0.7 + math.random() * 0.1
 
-				if rock ~= nil then
-					rock.entity:SetParent(inst.entity)
-
-					local rx = x + math.cos(theta + off) * offset_dist
-					local rz = z + math.sin(theta + off) * offset_dist
-
-					rock.Transform:SetPosition(rx, y, rz)
-					rock.persists = false
-					rock.Transform:SetRotation(math.random() * 360)
-
-					if rock.AnimState then
-						local shade = 0.7 + math.random() * 0.1
-						
-						rock.AnimState:SetMultColour(shade, shade, shade, 1)
-						rock.AnimState:SetScale(.9, .9, .9)
-					end
-
-					table.insert(inst.plant_ents, rock)
-				end
+				table.insert(inst.plants, 
+				{
+					prefab = rock_prefab,
+					pos = { rx, y, rz },
+					rot = r_rot,
+					shade = shade,
+					scale = 0.9,
+				})
 			end
+		end
+	end
+
+	for _, data in ipairs(inst.plants) do
+		local deco = SpawnPrefab(data.prefab)
+		
+		if deco ~= nil then
+			deco.entity:SetParent(inst.entity)
+			deco.Transform:SetPosition(unpack(data.pos))
+			deco.Transform:SetRotation(data.rot or 0)
+			deco.persists = false
+
+			if deco.AnimState and data.shade then
+				deco.AnimState:SetMultColour(data.shade, data.shade, data.shade, 1)
+				deco.AnimState:SetScale(data.scale or 1, data.scale or 1, data.scale or 1)
+			end
+
+			table.insert(inst.plant_ents, deco)
 		end
 	end
 end
@@ -103,7 +122,7 @@ end
 local function OnHammred(inst, worker)
 	inst.components.lootdropper:DropLoot()
 
-	local fx = SpawnPrefab("collapse_small")
+	local fx = SpawnPrefab("collapse_big")
 	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
 	fx:SetMaterial("stone")
 
@@ -121,6 +140,62 @@ local function DoFishFarmSplash(inst)
 	local splash = SpawnPrefab(splash_prefab)
 
 	splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
+end
+
+local function UpdateFishArt(inst)
+	if inst.shoal ~= nil and inst.shoal:IsValid() then
+		inst.shoal:Remove()
+		inst.shoal = nil
+	end
+	
+	if inst.shoal_marker ~= nil and inst.shoal_marker:IsValid() then
+		inst.shoal_marker:Remove()
+		inst.shoal_marker = nil
+	end
+
+	local container = inst.components.container
+	
+	if not container then
+		return
+	end
+
+	local has_fish = false
+	local valid_slots = {1, 3, 4, 5, 6, 7, 8}
+
+	for _, slot in ipairs(valid_slots) do
+		local item = container:GetItemInSlot(slot)
+		
+		if item and item:HasTag("fishfarmable") then
+			has_fish = true
+			break
+		end
+	end
+
+	if not has_fish then
+		return
+	end
+
+	local shoal = SpawnPrefab("kyno_fishfarmplot_shoal")
+	local shoal_marker = SpawnPrefab("kyno_fishfarmplot_shoal_marker")
+	
+	if shoal and shoal_marker then
+		shoal_marker.entity:SetParent(inst.entity)
+		shoal.AnimState:SetMultColour(.7, .7, .7, 1)
+		
+		if shoal.Follower == nil then
+			shoal.entity:AddFollower()
+		end
+	
+		shoal.Follower:FollowSymbol(shoal_marker.GUID, "marker", 0, -180, 0)
+		
+		shoal.persists = false
+		shoal_marker.persists = false
+		
+		inst.shoal = shoal
+		inst.shoal_marker = shoal_marker
+	else
+		shoal.Follower:StopFollowing()
+	end
 end
 
 local function OnStartWorking(inst)
@@ -155,53 +230,47 @@ end
 
 local function OnItemGet(inst)
 	DoFishFarmSplash(inst)
+	UpdateFishArt(inst)
+
 	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/splash/small")
 end
 
 local function OnItemLose(inst)
+	UpdateFishArt(inst)
+
 	inst.SoundEmitter:PlaySound("dontstarve/common/fishingpole_fishcaught")
 end
 
 local function OnBuilt(inst, data)
+	DoFishFarmSplash(inst)
+	
+	local fx = SpawnPrefab("collapse_big")
+	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
+	fx:SetMaterial("stone")
+
 	inst.AnimState:PlayAnimation("dry_pst")
 	inst.AnimState:PushAnimation("idle", true)
 	
-	inst.SoundEmitter:PlaySound("dontstarve/common/together/sculpting_table/craft")
-end
-
-local function OnSnowLevel(inst, snowlevel)
-	if snowlevel > .02 then
-        if not inst.frozen then
-			inst.frozen = true
-			DespawnPlants(inst)
-		end
-	elseif inst.frozen then
-		inst.frozen = false
-		SpawnPlants(inst)
-	elseif inst.frozen == nil then
-		inst.frozen = false
-		SpawnPlants(inst)
-	end
+	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/emerge/large")
 end
 
 local function OnSave(inst, data)
-	data.plants = inst.plants
+	if inst.plants ~= nil then
+		data.plants = inst.plants
+	end
 end
 
 local function OnLoad(inst, data)
-	if data ~= nil then
-		if inst.task ~= nil and inst.plants == nil then
-			inst.plants = data.plants
-		end
+	if data and data.plants then
+		inst.plants = data.plants
 	end
 end
 
 local function OnInit(inst)
 	inst.task = nil
+	
 	SpawnPlants(inst)
-
-	-- inst:WatchWorldState("snowlevel", OnSnowLevel)
-	-- OnSnowLevel(inst, TheWorld.state.snowlevel)
+	UpdateFishArt(inst)
 end
 
 local function fn()
@@ -270,15 +339,12 @@ local function fn()
 	inst.components.fueled.maxfuel = TUNING.KYNO_FISHFARMLAKE_FUEL_MAX
 	inst.components.fueled:InitializeFuelLevel(TUNING.KYNO_FISHFARMLAKE_FUEL_MAX)
 	inst.components.fueled:SetSections(TUNING.KYNO_FISHFARMLAKE_SECTIONS)
-	inst.components.fueled:StartConsuming()
 	
 	inst:AddComponent("fishfarmmanager")
 	inst.components.fishfarmmanager:SetSlotStart(3)
 	inst.components.fishfarmmanager:SetSlotEnd(11)
 	inst.components.fishfarmmanager:SetRoeConsumption(TUNING.KYNO_FISHFARMLAKE_ROE_CONSUMPTION)
 	inst.components.fishfarmmanager:SetBabyConsumption(TUNING.KYNO_FISHFARMLAKE_BABY_CONSUMPTION)
-	-- inst.components.fishfarmmanager:SetStartWorkingFn(OnStartWorking)
-	-- inst.components.fishfarmmanager:SetStopWorkingFn(OnStopWorking)
 	
 	inst:ListenForEvent("onbuilt", OnBuilt)
 	inst:ListenForEvent("itemget", OnItemGet)
@@ -294,4 +360,62 @@ local function fn()
 	return inst
 end
 
-return Prefab("kyno_fishfarmplot", fn, assets, prefabs)
+local function shoalfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+	
+	inst.AnimState:SetScale(.9, .9, .9)
+	
+	inst.AnimState:SetBank("kyno_fishfarmplot_shoal")
+	inst.AnimState:SetBuild("kyno_fishfarmplot_shoal")
+	inst.AnimState:PlayAnimation("idle", true)
+	inst.AnimState:SetFinalOffset(4)
+	
+	inst:AddTag("NOCLICK")
+	inst:AddTag("NOBLOCK")
+	
+	inst.no_wet_prefix = true
+	
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("savedrotation")
+
+	return inst
+end
+
+local function markerfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+	
+	inst.AnimState:SetBank("kyno_fishfarmplot_shoal")
+	inst.AnimState:SetBuild("kyno_fishfarmplot_shoal")
+	inst.AnimState:PlayAnimation("marker")
+	inst.AnimState:SetFinalOffset(4)
+	
+	inst:AddTag("NOCLICK")
+	inst:AddTag("NOBLOCK")
+	
+	inst.no_wet_prefix = true
+	
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("savedrotation")
+
+	return inst
+end
+
+return Prefab("kyno_fishfarmplot", fn, assets, prefabs),
+Prefab("kyno_fishfarmplot_shoal", shoalfn, assets, prefabs),
+Prefab("kyno_fishfarmplot_shoal_marker", markerfn, assets, prefabs)

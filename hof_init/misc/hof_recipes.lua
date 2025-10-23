@@ -4,6 +4,7 @@ local TECH                 = _G.TECH
 local Ingredient           = _G.Ingredient
 local AllRecipes           = _G.AllRecipes
 local Recipe2              = _G.Recipe2
+local CONSTRUCTION_PLANS   = _G.CONSTRUCTION_PLANS
 local TechTree             = require("techtree")
 local RecipeFilter         = require("recipes_filter")
 
@@ -500,7 +501,7 @@ SortAfter("potatosack2", "mighty_gym", "CHARACTER")
 SortBefore("potatosack2", "icebox", "CONTAINERS")
 SortBefore("potatosack2", "icebox", "COOKING")
 
-AddDeconstructRecipe("potatosack", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)})
+AddDeconstructRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)})
 
 -- Using Bananas instead of Cave Bananas.
 Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingredient("kyno_banana", 1), Ingredient("cutreeds", 4)}, TECH.NONE,	
@@ -666,3 +667,26 @@ if HOF_FERTILIZERTWEAK then
 		{"GARDENING"}
 	)
 end
+
+-- Construction Plans.
+AddRecipe2("kyno_fishfarmplot_construction", {Ingredient("boards", 5), Ingredient("rope", 3)}, TECH.LOST,
+	{
+		placer              = "kyno_fishfarmplot_construction_placer",
+		min_spacing         = 4,
+		atlas               = ModAtlas,
+		image               = "kyno_fishfarmplot_construction.tex",
+	},
+	{"GARDENING", "FISHING"}
+)
+SortAfter("kyno_fishfarmplot_construction", "kyno_musselstick_item", "GARDENING")
+SortAfter("kyno_fishfarmplot_construction", "kyno_musselstick_item", "FISHING")
+
+CONSTRUCTION_PLANS["kyno_fishfarmplot_construction"] =
+{
+	Ingredient("shovel",            1, nil,      nil),
+	Ingredient("kyno_bucket_water", 1, ModAtlas, nil),
+	Ingredient("rocks",            20, nil,      nil),
+	Ingredient("chum",              5, nil,      nil),
+}
+
+AddDeconstructRecipe("kyno_fishfarmplot", {Ingredient("rocks", 20)})

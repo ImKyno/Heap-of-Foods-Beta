@@ -23,6 +23,7 @@ PrefabFiles =
 	"k_chicken2",
 	"k_chicken2_eggs",
 	"k_coffeebeans",
+	"k_construction_plans",
 	"k_cookware_fire",
 	"k_cookware_grill",
 	"k_cookware_kits",

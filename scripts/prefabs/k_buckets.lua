@@ -13,6 +13,28 @@ local prefabs =
 	"fertilizer",
 }
 
+local function OnFill(inst, from_object)
+	local owner = inst.components.inventoryitem.owner or inst.components.inventoryitem:GetGrandOwner()
+	local waterbucket = SpawnPrefab("kyno_bucket_water")
+	
+	if from_object ~= nil and from_object.components.watersource ~= nil and from_object.components.watersource.override_fill_uses ~= nil then
+		return false -- Will not fill from objects.
+	end
+		
+	if waterbucket ~= nil then
+		if owner ~= nil and owner.components.inventory ~= nil then
+			owner.components.inventory:GiveItem(waterbucket, nil, owner:GetPosition())
+		else
+			inst.components.inventory:DropItem(waterbucket)
+		end
+	end
+		
+	inst:Remove()
+	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/emerge/small")
+	
+	return true
+end
+
 local function emptyfn()
 	local inst = CreateEntity()
 
@@ -23,6 +45,8 @@ local function emptyfn()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
+	
+	inst.AnimState:SetScale(.9, .9, .9)
 
 	inst.AnimState:SetBank("kyno_buckets")
 	inst.AnimState:SetBuild("kyno_buckets")
@@ -74,6 +98,8 @@ local function metalfn()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
+	
+	inst.AnimState:SetScale(.8, .8, .8)
 
 	inst.AnimState:SetBank("kyno_buckets")
 	inst.AnimState:SetBuild("kyno_buckets")
@@ -93,6 +119,11 @@ local function metalfn()
 	inst:AddComponent("inspectable")
 	inst:AddComponent("milker")
 	
+	inst:AddComponent("fillable")
+	inst.components.fillable.overrideonfillfn = OnFill
+	inst.components.fillable.showoceanaction = true
+	inst.components.fillable.acceptsoceanwater = true
+	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 1
 	inst.components.tradable.tradefor = { "kyno_sapbucket_installer" }
@@ -104,5 +135,47 @@ local function metalfn()
 	return inst
 end
 
+local function waterfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+	
+	inst.AnimState:SetScale(.8, .8, .8)
+
+	inst.AnimState:SetBank("kyno_buckets")
+	inst.AnimState:SetBuild("kyno_buckets")
+	inst.AnimState:PlayAnimation("idle_water")
+
+	inst:AddTag("bucket")
+	inst:AddTag("bucket_water")
+	
+	inst.pickupsound = "metal"
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("inspectable")
+	
+	inst:AddComponent("tradable")
+	inst.components.tradable.goldvalue = 1
+	inst.components.tradable.tradefor = { "kyno_sapbucket_installer" }
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_bucket_water"
+
+	return inst
+end
+
 return Prefab("kyno_bucket_empty", emptyfn, assets, prefabs),
-Prefab("kyno_bucket_metal", metalfn, assets, prefabs)
+Prefab("kyno_bucket_metal", metalfn, assets, prefabs),
+Prefab("kyno_bucket_water", waterfn, assets, prefabs)

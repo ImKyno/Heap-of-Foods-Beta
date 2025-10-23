@@ -317,6 +317,7 @@ local HOF_ICONS =
 	"kyno_brewingrecipecard",
 	"kyno_bucket_empty",
 	"kyno_bucket_metal",
+	"kyno_bucket_water",
 	"kyno_chicken2",
 	"kyno_chicken_egg",
 	"kyno_chicken_egg_cooked",
