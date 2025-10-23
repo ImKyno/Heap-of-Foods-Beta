@@ -2,7 +2,8 @@
 <Atlas>
 	<Texture filename="hof_hudimages.tex" />
 	<Elements>
-		<Element name="fishfarmplot_slot_fish.tex" u1="0.001" u2="0.499" v2="0.999" v1="0.001" variant="" />
-		<Element name="fishfarmplot_slot_roe.tex" u1="0.501" u2="0.999" v2="0.999" v1="0.001" variant="" />
+		<Element name="fishfarmplot_slot_empty.tex" u1="0.001" u2="0.332333333333333" v2="0.999" v1="0.001" variant="" />
+		<Element name="fishfarmplot_slot_fish.tex" u1="0.334333333333333" u2="0.665666666666667" v2="0.999" v1="0.001" variant="" />
+		<Element name="fishfarmplot_slot_roe.tex" u1="0.667666666666667" u2="0.999" v2="0.999" v1="0.001" variant="" />
 	</Elements>
 </Atlas>

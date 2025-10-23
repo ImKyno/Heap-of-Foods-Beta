@@ -26,6 +26,15 @@ AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions
     end
 end)
 
+-- Don't ask why this is needed, I don't know too.
+AddComponentAction("USEITEM", "inventoryitem", function(inst, doer, target, actions, right)
+	if target:HasTag("fishhatchery") then
+		if inst:HasTag("FISHFOOD_fuel") and target:HasTag("FISHFOOD_fueled") then
+			_G.RemoveByValue(actions, _G.ACTIONS.STORE)
+		end
+	end
+end)
+
 -- Action for the Salt.
 AddAction("SALT", STRINGS.ACTIONS.SALT, function(act)
 	local saltable = act.target and act.target.components.saltable or nil

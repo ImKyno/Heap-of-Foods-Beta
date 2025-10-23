@@ -78,7 +78,7 @@ function FishFarmManager:ProduceRoe()
 		return
 	end
 	
-	if not farmable:IsSeasonValid() then
+	if not fishfarmable:IsSeasonValid() then
 		return
 	end
 
@@ -138,7 +138,7 @@ function FishFarmManager:ProduceBaby()
 		return
 	end
 	
-	if not farmable:IsSeasonValid() then
+	if not fishfarmable:IsSeasonValid() then
 		return
 	end
 

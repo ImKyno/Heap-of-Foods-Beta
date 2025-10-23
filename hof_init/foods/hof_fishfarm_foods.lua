@@ -2,6 +2,8 @@ local _G            = GLOBAL
 local require       = _G.require
 local UpvalueHacker = require("hof_upvaluehacker")
 
+require("hof_constants")
+
 --[[
 	{
 		roe_time =
@@ -60,17 +62,48 @@ for k, v in pairs(fishes) do
 	AddPrefabPostInit(k, FishFarmablePostInit)
 end
 
--- Make Fish Food a valid fuel for the Fish Hatchery.
-local function ChumPostInit(inst)
-	inst:AddTag("fishfood")
+-- Make some items a valid fuel for the Fish Hatchery.
+local fishfoods =
+{
+	chum =
+	{
+		fuelvalue = TUNING.LARGE_FUEL * 2,
+	},
+	
+	barnacle =
+	{
+		fuelvalue = TUNING.MED_FUEL * 1.5,
+	},
+	
+	kelp =
+	{
+		fuelvalue = TUNING.MED_FUEL,
+	},
+	
+	seeds =
+	{
+		fuelvalue = TUNING.SMALL_FUEL,
+	},
+}
 
+local function FishFoodPostInit(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
 	
-	inst:AddComponent("fuel")
-	inst.components.fuel.fueltype = _G.FUELTYPE.FISHFOOD
-	inst.components.fuel.fuelvalue = TUNING.LARGE_FUEL
+	if not inst.components.fuel then
+		inst:AddComponent("fuel")
+	end
+	
+	entry = fishfoods[inst.prefab]
+	if inst.components.fuel then
+		if entry then
+			inst.components.fuel.fueltype = _G.FUELTYPE.FISHFOOD
+			inst.components.fuel.fuelvalue = entry.fuelvalue
+		end
+	end
 end
 
-AddPrefabPostInit("chum", ChumPostInit)
+for k, v in pairs(fishfoods) do
+	AddPrefabPostInit(k, FishFoodPostInit)
+end

@@ -2,7 +2,6 @@ require("prefabutil")
 
 local assets =
 {
-	Asset("ANIM", "anim/farmplot.zip"),
     Asset("ANIM", "anim/kyno_fishfarmplot.zip"),
 	Asset("ANIM", "anim/ui_fishfarmplot_3x4.zip"),
 	
@@ -111,6 +110,19 @@ local function OnHammred(inst, worker)
 	inst:Remove()
 end
 
+local function DoFishFarmSplash(inst)
+	local splash_variants =
+	{
+		"ocean_splash_med1",
+		"ocean_splash_med2",
+	}
+				
+	local splash_prefab = splash_variants[math.random(#splash_variants)]
+	local splash = SpawnPrefab(splash_prefab)
+
+	splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
+end
+
 local function OnStartWorking(inst)
 	inst.SoundEmitter:PlaySound("dontstarve/common/researchmachine_lvl1_ding")
 end
@@ -125,6 +137,7 @@ end
 
 -- Handled by the fishfarmmanager component.
 local function OnAddFuel(inst)
+	DoFishFarmSplash(inst)
 	inst.components.fishfarmmanager:OnAddFuel()
 end
 
@@ -141,11 +154,12 @@ local function OnClose(inst)
 end
 
 local function OnItemGet(inst)
+	DoFishFarmSplash(inst)
 	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/splash/small")
 end
 
 local function OnItemLose(inst)
-	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/splash/small")
+	inst.SoundEmitter:PlaySound("dontstarve/common/fishingpole_fishcaught")
 end
 
 local function OnBuilt(inst, data)
@@ -249,13 +263,13 @@ local function fn()
 	inst.components.container.skipopensnd = true
 
 	inst:AddComponent("fueled")
+	inst.components.fueled.accepting = true
 	inst.components.fueled.fueltype = FUELTYPE.FISHFOOD
 	inst.components.fueled:SetTakeFuelFn(OnAddFuel)
 	inst.components.fueled:SetDepletedFn(OnFuelEmpty)
 	inst.components.fueled.maxfuel = TUNING.KYNO_FISHFARMLAKE_FUEL_MAX
 	inst.components.fueled:InitializeFuelLevel(TUNING.KYNO_FISHFARMLAKE_FUEL_MAX)
 	inst.components.fueled:SetSections(TUNING.KYNO_FISHFARMLAKE_SECTIONS)
-	inst.components.fueled.accepting = true
 	inst.components.fueled:StartConsuming()
 	
 	inst:AddComponent("fishfarmmanager")

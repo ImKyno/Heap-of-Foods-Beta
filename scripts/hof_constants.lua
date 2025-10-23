@@ -15,7 +15,7 @@ HOF_FOODTYPES    =
 	ALCOHOLIC    = "ALCOHOLIC",
 }
 
--- New FUELTYPE value for fishfarmplot.
+-- New FUELTYPE for Fish Hatchery.
 HOF_FUELTYPES =
 {
 	FISHFOOD  = "FISHFOOD",
@@ -74,16 +74,3 @@ end
 for k, v in pairs(HOF_PICKUP_SOUNDS) do
 	PICKUPSOUNDS[k] = v
 end
-
---[[
--- "New Category" for showing button on Scrapbook.
-local HOF_SCRAPBOOK_CATS = {}
-HOF_SCRAPBOOK_CATS =
-{
-	"artisangood",
-}
-
-for k, v in pairs(HOF_SCRAPBOOK_CATS) do
-	SCRAPBOOK_CATS[k] = v
-end
-]]--
