@@ -27,7 +27,7 @@ Seaside Island welcomes a new merchant! Assisted by a familiar survivor, he has 
 
 Make sure to check his wares every now and then to see what he got to offer. As his inventory is always changing!
 
-󰀌 Mod Version: 2.9-B
+󰀌 Mod Version: 3.0-B
 󰀧 Update: Mushroom Madness
 ]],
 		zh  =
@@ -42,7 +42,7 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 
 记得时不时光顾下他的小店，看看他进了什么靓货。因为他进货很频繁！
 
-󰀌 Mod 版本： 2.9-B
+󰀌 Mod 版本： 3.0-B
 󰀧 更新内容： 蘑菇狂潮
 ]],	
 		zht =
@@ -57,7 +57,7 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 
 記得不時查看他的商品，看看他帶來了什麼新奇好貨。因為他的庫存總是在變化！
 
-󰀌 Mod 版本： 2.9-B
+󰀌 Mod 版本： 3.0-B
 󰀧 更新內容： 蘑菇狂潮
 ]],	
 		pt  = 
@@ -72,7 +72,7 @@ A Ilha Beira-mar dá as boas-vindas a um novo comerciante! Com a ajuda de um sob
 
 Não deixe de conferir os produtos dele de vez em quando para ver o que ele tem a oferecer. Já que o inventário dele está sempre mudando!
 
-󰀌 Versão do Mod: 2.9-B
+󰀌 Versão do Mod: 3.0-B
 󰀧 Atualização: Loucura dos Cogumelos
 ]],
 		pl  =
@@ -85,7 +85,7 @@ Não deixe de conferir os produtos dele de vez em quando para ver o que ele tem 
 󰀏 Wprowadzenie Aktualizacji Lato nad Morzem:
 Wyspa nad Morzem wita nowego handlarza! Wspierany przez znanego ocalałego, otworzył wyjątkowy punkt handlowy. Specjalizuje się w rzadkich przedmiotach i składnikach, które w przeciwnym razie byłyby niezwykle trudne do zdobycia, a nawet w niektórych przypadkach nie do znalezienia nigdzie indziej. 
 
-󰀌 Wersja Moda: 2.9-B
+󰀌 Wersja Moda: 3.0-B
 󰀧 Aktualizacja: Grzybowe Szaleństwo
 ]],
 		es  =
@@ -100,7 +100,7 @@ Wyspa nad Morzem wita nowego handlarza! Wspierany przez znanego ocalałego, otwo
 
 No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrecer, ¡ya que su inventario cambia constantemente!
 
-󰀌 Versión del Mod: 2.9-B
+󰀌 Versión del Mod: 3.0-B
 󰀧 Actualización: Locura de Champiñones
 ]],
 	},
@@ -1408,7 +1408,7 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "2.9-B"
+version                      = "3.0-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 

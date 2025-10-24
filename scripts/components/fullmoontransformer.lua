@@ -55,6 +55,16 @@ function FullMoonTransformer:SpawnFX(fx_prefab, x, y, z)
 	end
 end
 
+function FullMoonTransformer:SafeRemove()
+	-- Don't tell RegrowthManager to repopulate this prefab.
+	if self.inst.OnStartRegrowth then
+		-- print("FullMoonTransformer - This prefab has regrowth, but we are going to skip it.")
+		self.inst:RemoveEventCallback("onremove", self.inst.OnStartRegrowth)
+	end
+	
+	self.inst:Remove()
+end
+
 function FullMoonTransformer:DoTransform()
 	if TheWorld:HasTag("cave") or self._isTransformed or not self.transform_prefab then
 		return
@@ -98,8 +108,8 @@ function FullMoonTransformer:DoTransform()
 				end
 			end)
 		end
-
-		self.inst:Remove()
+		
+		self:SafeRemove()
 	end)
 end
 
@@ -135,7 +145,7 @@ function FullMoonTransformer:DoRevert()
 			comp._isTransformed = false
 		end
 
-		self.inst:Remove()
+		self:SafeRemove()
 	end)
 end
 

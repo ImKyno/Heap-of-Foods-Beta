@@ -1,4 +1,8 @@
 local PLANT_DEFS = require("prefabs/farm_plant_defs").PLANT_DEFS
+local WEED_DEFS = require("prefabs/weed_defs").WEED_DEFS
+local WEIGHTED_SEED_TABLE = require("prefabs/weed_defs").weighted_seed_table
+
+require("prefabs/veggies")
 
 local assets =
 {
@@ -23,12 +27,48 @@ local grow_sounds =
 local GARDENING_CANT_TAGS = { "player", "stump", "withered", "barren", "INLIMBO", "FX" }
 local GARDENING_ONEOF_TAGS = { "plant", "lichen", "oceanvine", "mushroom_farm", "kelp", "marbletree" }
 
+local function PickFarmPlant()
+	if math.random() < TUNING.FARM_PLANT_RANDOMSEED_WEED_CHANCE then
+		return weighted_random_choice(WEIGHTED_SEED_TABLE)
+	else
+		local season = TheWorld.state.season
+		local weights = {}
+		local season_mod = TUNING.SEED_WEIGHT_SEASON_MOD
+
+		for k, v in pairs(VEGGIES) do
+			weights[k] = v.seed_weight * ((PLANT_DEFS[k] and PLANT_DEFS[k].good_seasons[season]) and season_mod or 1)
+		end
+
+		return "farm_plant_"..weighted_random_choice(weights)
+	end
+	
+	return "weed_forgetmelots"
+end
+
+local function ReplaceWithPlant(inst)
+	local plant_prefab = inst._identified_plant_type or PickFarmPlant()
+	local plant = SpawnPrefab(plant_prefab)
+	
+	plant.Transform:SetPosition(inst.Transform:GetWorldPosition())
+
+	if plant.plant_def ~= nil then
+		plant.long_life = inst.long_life
+		plant.components.farmsoildrinker:CopyFrom(inst.components.farmsoildrinker)
+		plant.components.farmplantstress:CopyFrom(inst.components.farmplantstress)
+		plant.components.growable:DoGrowth()
+		plant.AnimState:OverrideSymbol("veggie_seed", "farm_soil", "seed")
+	end
+
+	inst.grew_into = plant
+	inst:Remove()
+end
+
 local function MaximizePlant(inst)
 	if inst.components.farmplantstress ~= nil then
 		if inst.components.farmplanttendable then
 			inst.components.farmplanttendable:TendTo()
 		end
-		
+
 		local _x, _y, _z = inst.Transform:GetWorldPosition()
 		local x, y = TheWorld.Map:GetTileCoordsAtPoint(_x, _y, _z)
 
@@ -50,63 +90,100 @@ local function TryGrowth(inst, maximize)
 			if inst.components.simplemagicgrower ~= nil then
 				inst.components.simplemagicgrower:StartGrowing()
 				return true
-			elseif inst:HasTag("farm_plant") and inst.components.growable.domagicgrowthfn ~= nil then
+			elseif inst:HasTag("farm_plant") and inst:HasTag("weed") then
+				-- Case for Weeds because they used different stages and such, ugh.
+				if inst:IsAsleep() then
+					return
+				end
+				
+				local growable = inst.components.growable
+				local weed_def = inst.weed_def or (inst.prefab and WEED_DEFS[inst.prefab])
+
+				growable:DoGrowth()
+				growable:DoGrowth()
+				
+				local fx = SpawnPrefab("farm_plant_happy")
+				fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
+				
+				if inst.SoundEmitter ~= nil then
+					inst.SoundEmitter:PlaySound("farming/common/farm/grow_full")
+				end
+
+				return true
+			elseif inst:HasTag("farm_plant") and inst.components.growable.domagicgrowthfn ~= nil and not inst:HasTag("weed") then
 				-- Just check if its really a farm plant, but can't use magicgrowth because that prevents oversized crops.
 				-- We could also check if its pickable and cancel.
 				if inst:IsAsleep() or inst.components.growable:GetStage() >= 5 or inst.is_oversized then
 					return
 				end
-
-				local growable = inst.components.growable
-				local current_stage = growable.stage
-				local max_stage = #growable.stages
-				local grow_loops = max_stage - current_stage
-
-				for i = 1, grow_loops do
-					local next_stage = growable.stage + 1
-					local next_stage_data = growable.stages[next_stage]
-
-					if next_stage_data == nil or next_stage_data.name == "rotten" then
-						break
-					end
-
-					growable:DoGrowth()
-				end
-
-				MaximizePlant(inst)
 				
-				local current_season = TheWorld.state.season
+				local growable = inst.components.growable
 				local plant_def = inst.plant_def or (inst.prefab and PLANT_DEFS[inst.prefab])
+				local current_season = TheWorld.state.season
 
+				if plant_def and plant_def.is_randomseed then					
+					ReplaceWithPlant(inst)
+					
+					inst = inst.grew_into
+					growable = inst.components.growable
+					growable.stage = 1
+					
+					plant_def = inst.plant_def or (inst.prefab and PLANT_DEFS[inst.prefab])
+					
+					if inst:HasTag("weed") then
+						growable:SetStage(3)
+					end
+				end
+				
+				local max_stage = #growable.stages
+
+				-- We still need to check for weeds because randomseed might spawn them.
+				-- If a weed enter the loop it will cause stack overflow because they have cycling stages.
+				if not inst:HasTag("weed") then
+					while growable.stage < max_stage do
+						local next_stage = growable.stage + 1
+						local next_stage_data = growable.stages[next_stage]
+					
+						if next_stage_data == nil or next_stage_data.name == "rotten" then
+							break
+						end
+					
+						growable:DoGrowth()
+					end
+				end
+				
+				if plant_def and not plant_def.is_randomseed and not inst:HasTag("weed") then
+					MaximizePlant(inst)
+				end
+				
 				if plant_def ~= nil then
 					local good_seasons = plant_def.good_seasons or {}
-
-					if good_seasons[current_season] and math.random() < TUNING.KYNO_GROWTH_OVERSIZED_CHANCE then
-						inst.is_oversized = true
-					end
-				else
-					if math.random() < TUNING.KYNO_GROWTH_OVERSIZED_CHANCE then
-						inst.is_oversized = true
+					
+					if not inst:HasTag("weed") then
+						if good_seasons[current_season] and math.random() < TUNING.KYNO_GROWTH_OVERSIZED_CHANCE then
+							inst.is_oversized = true
+						end
+					else
+						if math.random() < TUNING.KYNO_GROWTH_OVERSIZED_CHANCE then
+							inst.is_oversized = true
+						end
 					end
 				end
 				
 				local fx = SpawnPrefab("farm_plant_happy")
 				fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
 				
-				-- Play animation and sounds because this skips all growing stages.
 				local anim = inst.is_oversized and "oversized" or "full"
 				inst.AnimState:PlayAnimation("grow_"..anim, false)
 				inst.AnimState:PushAnimation("crop_"..anim, true)
-				
-				local plant_def = inst.plant_def or (inst.prefab and PLANT_DEFS[inst.prefab])
-				
-				if plant_def and plant_def.sounds and plant_def.sounds["grow_"..anim] then
-					inst.SoundEmitter:PlaySound(plant_def.sounds["grow_"..anim])
-				else
-					local sound = grow_sounds["grow_"..anim]
 
-					if sound ~= nil and inst.SoundEmitter ~= nil then
-						inst.SoundEmitter:PlaySound(sound)
+				if plant_def and plant_def.sounds and plant_def.sounds["grow_"..anim] then
+					if inst.SoundEmitter ~= nil then
+						inst.SoundEmitter:PlaySound(plant_def.sounds["grow_"..anim])
+					end
+				elseif grow_sounds["grow_"..anim] ~= nil and inst.SoundEmitter ~= nil then
+					if inst.SoundEmitter ~= nil then
+						inst.SoundEmitter:PlaySound(grow_sounds["grow_"..anim])
 					end
 				end
 
@@ -146,16 +223,6 @@ local function TryGrowth(inst, maximize)
 	-- I really should rewrite its code to use the proper growable system.
 	if inst.components.timer ~= nil then
 		if inst:HasTag("sugartree_growing") then
-			--[[
-			local timer_name = inst.prefab == "kyno_sugartree_short" and "kyno_sugartree_short_timer"
-			or inst.prefab == "kyno_sugartree_normal" and "kyno_sugartree_normal_timer"
-
-			if timer_name ~= nil then
-				inst:PushEvent("timerdone", { name = timer_name })
-				return true
-			end
-			]]--
-
 			local tall = SpawnPrefab("kyno_sugartree")
 			tall.Transform:SetPosition(inst.Transform:GetWorldPosition())
 			tall.SoundEmitter:PlaySound("dontstarve/forest/treeGrow")

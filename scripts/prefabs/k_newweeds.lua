@@ -42,6 +42,7 @@ local function seeds_common(name)
 
         inst.entity:AddTransform()
         inst.entity:AddAnimState()
+        inst.entity:AddSoundEmitter()
         inst.entity:AddNetwork()
 		
 		inst.AnimState:SetScale(1.2, 1.2, 1.2)
