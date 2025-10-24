@@ -43,6 +43,7 @@ PrefabFiles =
 	"k_fishes",
 	"k_fishfarmplot",
 	"k_fishfarmplot_decor",
+	"k_fishroe",
 	"k_floatilizer",
 	"k_foodbuff_acidimmunity",
 	"k_foodbuff_coffee",

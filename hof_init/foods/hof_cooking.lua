@@ -45,7 +45,7 @@ AddIngredientValues({"wobster_sheller_land"},   {meat       = 1,    fish      = 
 -- New Mod Crock Pot Ingredients.
 AddIngredientValues({"kyno_coffeebeans"}, 		{seeds      = 1}, 	 		  				           true)
 AddIngredientValues({"kyno_shark_fin"}, 		{fish       = 1})
-AddIngredientValues({"kyno_roe"}, 				{fish       = 0.25, meat      = 0.25, roe = 1},        true)
+AddIngredientValues({"kyno_roe"}, 				{fish       = 0.25, meat      = 0.25, roe = 1},        true) -- Deprecated, but kept for old worlds.
 AddIngredientValues({"kyno_mussel"}, 			{fish       = 0.5, 	mussel    = 1}, 		           true)
 AddIngredientValues({"kyno_beanbugs"}, 			{beanbug    = 1, 	veggie    = 0.5}, 		           true)
 AddIngredientValues({"kyno_gummybug"}, 			{gummybug   = 1, 	veggie    = 0.5}, 		           true)

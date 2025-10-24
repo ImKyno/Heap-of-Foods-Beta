@@ -3538,12 +3538,12 @@ local HOF_SCRAPBOOK_FOODS =
 		deps            = {"foliage", "spoiled_food"},
 	},
 	
-	kyno_roe            =
+	kyno_roe_pondfish   =
 	{
-		name            = "kyno_roe",
+		name            = "kyno_roe_pondfish",
 		type            = "food",
-		tex             = "kyno_roe.tex",
-		prefab          = "kyno_roe",
+		tex             = "kyno_roe_pondfish.tex",
+		prefab          = "kyno_ro_pondfish",
 		healthvalue     = 1,
 		hungervalue     = 4.6875,
 		sanityvalue     = 0,
@@ -3551,10 +3551,10 @@ local HOF_SCRAPBOOK_FOODS =
 		stacksize       = 40,
 		burnable        = true,
 		foodtype        = "MEAT",
-		bank            = "roe",
-		build           = "roe",
+		bank            = "kyno_roe",
+		build           = "kyno_roe",
 		anim            = "idle",
-		deps            = {"puffin", "canary", "kyno_roe_cooked", "spoiled_food"},
+		deps            = {"kyno_fishfarmplot", "pondfish", "puffin", "canary", "kyno_roe_cooked", "spoiled_food"},
 	},
 	
 	kyno_roe_cooked     =
@@ -3570,10 +3570,10 @@ local HOF_SCRAPBOOK_FOODS =
 		stacksize       = 40,
 		burnable        = true,
 		foodtype        = "MEAT",
-		bank            = "roe",
-		build           = "roe",
+		bank            = "kyno_roe",
+		build           = "kyno_roe",
 		anim            = "cooked",
-		deps            = {"kyno_roe", "spoiled_food"},
+		deps            = {"kyno_roe_pondfish", "spoiled_food"},
 	},
 	
 	kyno_pineapple      =
@@ -12888,7 +12888,7 @@ local HOF_SCRAPBOOK_THINGS =
 		deps           = {"cutgrass", "twigs", "log", "rope", "boards", "seeds", "kelp", "meat_dried", "silk", "livinglog", "batwing", "saltrock", "wormlight", 
 		"wormlight_lesser", "boneshard", "purplegem", "bluegem", "orangegem", "yellowgem", "greengem", "mandrake", "kyno_tunacan", "kyno_tomatocan", "kyno_beancan",
 		"kyno_meatcan", "kyno_waterycress", "kyno_taroroot", "kyno_seaweeds", "kyno_limpets", "kyno_sodacan", "kyno_cokecan", "kyno_energycan", "kyno_oil",
-		"kyno_lotus_flower", "kyno_mysterymeat", "kyno_fishpackage", "kyno_roe"},
+		"kyno_lotus_flower", "kyno_mysterymeat", "kyno_fishpackage", "kyno_roe_pondfish"},
 	},
 	
 	kyno_meadowisland_pond =

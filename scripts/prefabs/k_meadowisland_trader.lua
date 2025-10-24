@@ -95,7 +95,7 @@ local WARES                             =
 		{
 			-- TO DO: Artichoke Seeds
 			["kyno_cokecan"]            = { recipe = "meadowislandtrader_kyno_cokecan",           min = 3,  max = 5  },
-			["kyno_roe"]                = { recipe = "meadowislandtrader_kyno_roe",               min = 4,  max = 8  },
+			["kyno_roe_pondfish"]       = { recipe = "meadowislandtrader_kyno_roe_pondfish",      min = 4,  max = 8  },
 			["forgetmelots_seeds"]      = { recipe = "meadowislandtrader_forgetmelots_seeds",     min = 3,  max = 6  },
 			["oceanfish_medium_8_inv"]  = { recipe = "meadowislandtrader_oceanfish_medium_8_inv", min = 1,  max = 3  },
 		},

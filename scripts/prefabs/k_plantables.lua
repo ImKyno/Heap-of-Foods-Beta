@@ -6,6 +6,10 @@ local function MakePlantable(data)
 	local assets = 
 	{
 		Asset("ANIM", "anim/"..(data.build or data.name)..".zip"),
+		
+		Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
+		Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
+		Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 	}
 	
 	local function OnDeploy(inst, pt, deployer)

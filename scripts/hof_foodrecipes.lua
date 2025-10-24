@@ -84,7 +84,7 @@ local kyno_foods =
 		cooktime = 2,
 		potlevel = "med",
 		floater = TUNING.HOF_FLOATER,
-		card_def = {ingredients = {{"kyno_roe", 1}, {"corn", 3}}},
+		card_def = {ingredients = {{"kyno_roe", 1}, {"corn", 3}}}, -- Update this for sturgeon.
 	},
 	
 	tropicalbouillabaisse =

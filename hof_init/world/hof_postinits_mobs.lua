@@ -73,7 +73,7 @@ end)
 -- Some Birds Spawns Roe Periodically.
 AddPrefabPostInit("puffin", function(inst)
     if inst.components.periodicspawner ~= nil then
-        inst.components.periodicspawner:SetPrefab("kyno_roe")
+        inst.components.periodicspawner:SetPrefab("kyno_roe_pondfish")
         inst.components.periodicspawner:SetDensityInRange(20, 2)
         inst.components.periodicspawner:SetMinimumSpacing(8)
     end
@@ -81,7 +81,7 @@ end)
 
 AddPrefabPostInit("canary", function(inst)
     if inst.components.periodicspawner ~= nil then
-        inst.components.periodicspawner:SetPrefab("kyno_roe")
+        inst.components.periodicspawner:SetPrefab("kyno_roe_pondfish")
         inst.components.periodicspawner:SetDensityInRange(20, 2)
         inst.components.periodicspawner:SetMinimumSpacing(8)
     end
@@ -91,7 +91,7 @@ end)
 if TUNING.HOF_IS_TAP_ENABLED then
     AddPrefabPostInit("cormorant", function(inst)
         if inst.components.periodicspawner ~= nil then
-            inst.components.periodicspawner:SetPrefab("kyno_roe")
+            inst.components.periodicspawner:SetPrefab("kyno_roe_pondfish")
             inst.components.periodicspawner:SetDensityInRange(20, 2)
             inst.components.periodicspawner:SetMinimumSpacing(8)
         end

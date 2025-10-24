@@ -1,6 +1,8 @@
+-- Roe is deprecated, but kept for old worlds. Default Roe is now Freshwater Fish Roe.
+-- For the new kinds of roes see k_fishroe.lua
 local assets =
 {
-	Asset("ANIM", "anim/roe.zip"),
+	Asset("ANIM", "anim/kyno_roe.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -9,6 +11,7 @@ local assets =
 
 local prefabs = 
 {
+	"kyno_roe",
 	"kyno_roe_cooked",
 	"spoiled_food",
 }
@@ -23,8 +26,8 @@ local function fn()
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-	inst.AnimState:SetBank("roe")
-	inst.AnimState:SetBuild("roe")
+	inst.AnimState:SetBank("kyno_roe")
+	inst.AnimState:SetBuild("kyno_roe")
 	inst.AnimState:PlayAnimation("idle")
 	
 	inst:AddTag("roe")
@@ -84,8 +87,8 @@ local function fn_cooked()
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-	inst.AnimState:SetBank("roe")
-	inst.AnimState:SetBuild("roe")
+	inst.AnimState:SetBank("kyno_roe")
+	inst.AnimState:SetBuild("kyno_roe")
 	inst.AnimState:PlayAnimation("cooked")
 	
 	inst:AddTag("meat")

@@ -242,7 +242,7 @@ AddRecipe2("meadowislandtrader_kyno_pineapple", {Ingredient("durian", 1)}, TECH.
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_kyno_roe", {Ingredient("bird_egg", 1)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_kyno_roe_pondfish", {Ingredient("bird_egg", 1)}, TECH.LOST,
 	{
 		limitedamount       = true, 
 		nounlock            = true, 
@@ -250,9 +250,9 @@ AddRecipe2("meadowislandtrader_kyno_roe", {Ingredient("bird_egg", 1)}, TECH.LOST
 		hint_msg            = "NEEDSMEADOWSHOP",
 		actionstr           = "MEADOWSHOP", 
 		sg_state            = "give", 
-		product             = "kyno_roe",
+		product             = "kyno_roe_pondfish",
 		atlas               = ModAtlas,
-		image               = "kyno_roe.tex",
+		image               = "kyno_roe_pondfish.tex",
 	},
 	{"CRAFTING_STATION"}
 )
