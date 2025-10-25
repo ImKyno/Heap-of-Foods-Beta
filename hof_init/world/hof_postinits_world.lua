@@ -1058,6 +1058,19 @@ end
 
 AddPrefabPostInit("sporecloud", SporecloudPostInit)
 
+local weeds =
+{
+	"weed_firenettle",
+	"weed_forgetmelots",
+	"weed_tillweed",
+}
+
+for k, v in pairs(weeds) do
+	AddPrefabPostInit(v, function(inst)
+		inst.entity:AddSoundEmitter()
+	end)
+end
+
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")
 

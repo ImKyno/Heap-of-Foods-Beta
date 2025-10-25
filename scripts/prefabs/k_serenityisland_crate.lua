@@ -27,6 +27,7 @@ local prefabs =
 	"kyno_tomatocan",
 	"kyno_beancan",
 	"kyno_meatcan",
+	"kyno_antchovycan",
 	"kyno_sodacan",
 	"kyno_cokecan",
 	"kyno_energycan",
@@ -208,6 +209,7 @@ local function fn()
 	inst.components.lootdropper:AddRandomLoot("kyno_tomatocan", 		 rarity.low)
 	inst.components.lootdropper:AddRandomLoot("kyno_beancan", 		 	 rarity.low)
 	inst.components.lootdropper:AddRandomLoot("kyno_meatcan", 		 	 rarity.low)
+	inst.components.lootdropper:AddRandomLoot("kyno_antchovycan", 		 rarity.low)
 	inst.components.lootdropper:AddRandomLoot("kyno_waterycress", 		 rarity.low)
 	inst.components.lootdropper:AddRandomLoot("kyno_taroroot",    		 rarity.low)
 	inst.components.lootdropper:AddRandomLoot("kyno_seaweeds",    		 rarity.low)

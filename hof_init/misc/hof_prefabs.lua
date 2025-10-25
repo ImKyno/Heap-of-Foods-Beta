@@ -7,6 +7,7 @@ PrefabFiles =
 	"worm_boss",
 	
 	"k_antchest",
+	"k_antchovy",
 	"k_banana",
 	"k_bananatree",
 	"k_bananatree_sapling",

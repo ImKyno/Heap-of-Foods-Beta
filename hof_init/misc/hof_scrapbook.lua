@@ -375,7 +375,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "CANNEDFOOD",
 	},
 	
-	kyno_tomatocan       =
+	kyno_tomatocan     =
 	{
 		name           = "kyno_tomatocan",
 		speechname     = "kyno_cannedfood",
@@ -426,6 +426,24 @@ local HOF_SCRAPBOOK_ITEMS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -90,
 		deps           = {"sunkenchest", "kyno_serenityisland_crate", "kyno_meadowisland_crate", "kyno_meatcan_open"},
+		specialinfo    = "CANNEDFOOD",
+	},
+	
+	kyno_antchovycan   =
+	{
+		name           = "kyno_antchovycan",
+		speechname     = "kyno_cannedfood",
+		type           = "item",
+		subcat         = "canned",
+		tex            = "kyno_antchovycan.tex",
+		prefab         = "kyno_antchovycan",
+		stacksize      = 20,
+		bank           = "kyno_cannedfoods",
+		build          = "kyno_cannedfoods",
+		anim           = "antchovy_closed",
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -90,
+		deps           = {"sunkenchest", "kyno_serenityisland_crate", "kyno_antchovy"},
 		specialinfo    = "CANNEDFOOD",
 	},
 	
@@ -3704,27 +3722,6 @@ local HOF_SCRAPBOOK_FOODS =
 		deps            = {"kyno_roe_cooked", "spoiled_food"}, -- wobster_moonquay_land
 	},
 	
-	kyno_roe_dogfish    =
-	{
-		name            = "kyno_roe_dogfish",
-		speechname      = "kyno_roe",
-		type            = "food",
-		subcat          = "fishroe",
-		tex             = "kyno_roe_dogfish.tex",
-		prefab          = "kyno_roe_dogfish",
-		healthvalue     = 1,
-		hungervalue     = 4.6875,
-		sanityvalue     = 0,
-		perishable      = 2880,
-		stacksize       = 20,
-		burnable        = true,
-		foodtype        = "MEAT",
-		bank            = "kyno_roe",
-		build           = "kyno_roe",
-		anim            = "idle_dogfish",
-		deps            = {"kyno_roe_cooked", "spoiled_food"}, -- kyno_dogfish
-	},
-	
 	kyno_roe_neonfish   =
 	{
 		name            = "kyno_roe_neonfish",
@@ -3891,27 +3888,6 @@ local HOF_SCRAPBOOK_FOODS =
 		build           = "kyno_roe",
 		anim            = "idle_koi",
 		deps            = {"kyno_koi", "kyno_roe_cooked", "spoiled_food"},
-	},
-	
-	kyno_roe_antchovy   =
-	{
-		name            = "kyno_roe_antchovy",
-		speechname      = "kyno_roe",
-		type            = "food",
-		subcat          = "fishroe",
-		tex             = "kyno_roe_antchovy.tex",
-		prefab          = "kyno_roe_antchovy",
-		healthvalue     = 1,
-		hungervalue     = 4.6875,
-		sanityvalue     = 0,
-		perishable      = 2880,
-		stacksize       = 60,
-		burnable        = true,
-		foodtype        = "MEAT",
-		bank            = "kyno_roe",
-		build           = "kyno_roe",
-		anim            = "idle_antchovy",
-		deps            = {"kyno_roe_cooked", "spoiled_food"}, -- kyno_antchovy
 	},
 	
 	kyno_roe_oceanfish_small_1 =
@@ -4788,6 +4764,25 @@ local HOF_SCRAPBOOK_FOODS =
 		animoffsetbgy   = -15,
 		deps            = {"alterguardian_phase4_lunarrift", "spoiled_food"},
 		specialinfo     = "FOODEFFECTS_GOLDENAPPLE",
+	},
+	
+	kyno_antchovy       =
+	{
+		name            = "kyno_antchovy",
+		type            = "food",
+		tex             = "kyno_antchovy.tex",
+		prefab          = "kyno_antchovy",
+		healthvalue     = 0,
+		hungervalue     = 9.375,
+		sanityvalue     = 3,
+		perishable      = 2880,
+		stacksize       = 60,
+		foodtype        = "MEAT",
+		bank            = "kyno_antchovy",
+		build           = "kyno_antchovy",
+		anim            = "idle_dead",
+		animoffsetx     = -25,
+		deps            = {"kyno_antchovycan", "spoiled_fish_small"},
 	},
 }
 
@@ -6534,6 +6529,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 	gorge_waffles      =
 	{
 		name           = "gorge_waffles",
+		speechname     = "waffles",
 		type           = "food",
 		tex            = "gorge_waffles.tex",
 		prefab         = "gorge_waffles",

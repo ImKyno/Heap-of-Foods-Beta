@@ -432,7 +432,7 @@ local function kitfn()
 	inst.AnimState:PlayAnimation("idle", true)
 	
 	inst:AddTag("usedeploystring")
-	inst:AddTag("projectile") -- For extra spacing.
+	inst:AddTag("fishfarmplot_kit") -- For extra deploy range.
 	
 	inst.entity:SetPristine()
 	

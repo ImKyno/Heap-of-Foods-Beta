@@ -14,6 +14,22 @@ local COMPONENT_ACTIONS = UpvalueHacker.GetUpvalue(_G.EntityScript.CollectAction
 local USEITEM = COMPONENT_ACTIONS.USEITEM
 local EQUIPPED = COMPONENT_ACTIONS.EQUIPPED
 
+local _ExtraDeployDist = ACTIONS.DEPLOY.extra_arrive_dist
+local function ExtraDeployDist(doer, dest, bufferedaction, ...)
+    if dest ~= nil and doer:IsValid() then
+		local invobject = bufferedaction and bufferedaction.invobject or nil
+		local inventoryitem = invobject and invobject.replica.inventoryitem
+        
+		if invobject:HasTag("fishfarmplot_kit") then
+			return 5
+		end
+	end
+
+	return _ExtraDeployDist(doer, dest, bufferedaction, ...)
+end
+
+ACTIONS.DEPLOY.extra_arrive_dist = ExtraDeployDist
+
 -- Coffee Plant can be Only Fertilized by Ashes.
 AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions)
     if actions[1] == ACTIONS.FERTILIZE and inst:HasTag("coffeefertilizer2") ~= target:HasTag("kyno_coffeebush") then

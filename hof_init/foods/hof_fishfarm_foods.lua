@@ -93,17 +93,6 @@ local fishes         =
 		
 		seasons      = {"autumn", "summer"},
 	},
-	
-	kyno_dogfish =
-	{
-		roe_prefab   = "kyno_roe_dogfish",
-		baby_prefab  = "kyno_dogfish",
-		
-		roe_time     = TUNING.DOGFISH_ROETIME,
-		baby_time    = TUNING.DOGFISH_BABYTIME,
-		
-		seasons      = ALL_SEASONS,
-	},
 	]]--
 	
 	kyno_neonfish    =
@@ -213,20 +202,7 @@ local fishes         =
 		seasons      = { "summer" },
 		worlds       = ALL_WORLDS,
 	},
-	
-	--[[
-	kyno_antchovy    =
-	{
-		roe_prefab   = "kyno_roe_antchovy",
-		baby_prefab  = "kyno_antchovy",
-		
-		roe_time     = TUNING.ANTCHOVY_ROETIME,
-		baby_time    = TUNING.ANTCHOVY_BABYTIME,
-		
-		seasons      = {"autumn", "spring", "summer"},
-	},
-	]]--
-	
+
 	oceanfish_small_1_inv =
 	{
 		roe_prefab   = "kyno_roe_oceanfish_small_1",
