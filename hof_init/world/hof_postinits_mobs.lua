@@ -7,6 +7,7 @@ local STRINGS         = _G.STRINGS
 local SpawnPrefab     = _G.SpawnPrefab
 local UpvalueHacker   = require("hof_upvaluehacker")
 
+require("constants")
 require("hof_util")
 
 local DF_COFFEE = GetModConfigData("COFFEEDROPRATE")
@@ -503,6 +504,79 @@ local function ScionPostInit(inst)
 end
 
 AddPrefabPostInit("alterguardian_phase4_lunarrift", ScionPostInit)
+
+-- Frostjaw gives Fish Hatchery Foundation Kit blueprint.
+local function SharkBoiPostInit(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	local _OnSave = inst.OnSave
+	local _OnLoad = inst.OnLoad
+
+	inst.OnSave = function(inst, data)
+		if _OnSave ~= nil then
+			_OnSave(inst, data)
+		end
+		
+		if inst.blueprintgiven then
+			data.blueprintgiven = true
+		end
+	end
+
+	inst.OnLoad = function(inst, data)
+		if _OnLoad ~= nil then
+			_OnLoad(inst, data)
+		end
+		
+		if data ~= nil and data.blueprintgiven then
+			inst.blueprintgiven = true
+		end
+	end
+
+	if inst.GiveReward ~= nil then
+		local _GiveReward = inst.GiveReward
+
+		inst.GiveReward = function(inst, target)
+			_GiveReward(inst, target)
+
+			if target == nil or not target:IsValid() then
+				return
+			end
+			
+			if inst.blueprintgiven then
+				return
+			end
+
+			local blueprint = "kyno_fishfarmplot_kit_blueprint"
+
+			if inst.sketchgiven == nil or inst.blueprintgiven == nil then
+				if IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST) then
+					local gift = _G.SpawnPrefab("gift")
+
+					gift.components.unwrappable:WrapItems({
+						blueprint,
+						"oceanfishinglure_hermit_snow",
+						GetRandomLightWinterOrnament(),
+						"winter_food"..math.random(NUM_WINTERFOOD),
+					})
+
+					_G.LaunchAt(gift, inst, target, 1.5, 2, 1.25)
+				else
+					local loot = _G.SpawnPrefab(blueprint)
+				
+					if loot ~= nil then
+						_G.LaunchAt(loot, inst, target, 1.5, 2, 1.25)
+					end
+				end
+				
+				inst.blueprintgiven = true
+			end
+		end
+	end
+end
+
+AddPrefabPostInit("sharkboi", SharkBoiPostInit)
 
 -- Leonidas remember me to not put LootTables inside postinit again, otherwise it will 
 -- increase the drop by +1 each time the entity spawns.

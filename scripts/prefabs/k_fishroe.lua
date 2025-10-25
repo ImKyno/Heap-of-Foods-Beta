@@ -17,6 +17,7 @@ local function MakeRoe(data)
 		inst.entity:AddNetwork()
 	
 		MakeInventoryPhysics(inst)
+		MakeInventoryFloatable(inst)
 		
 		inst.AnimState:SetScale(data.scale or 1, data.scale or 1, data.scale or 1)
 	
