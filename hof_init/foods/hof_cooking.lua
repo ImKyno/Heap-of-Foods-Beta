@@ -123,6 +123,49 @@ AddIngredientValues({"kyno_sporecap"},          {veggie     = 0.5,  mushrooms = 
 AddIngredientValues({"kyno_sporecap_dark"},     {veggie     = 0.5,  mushrooms = 1,    monster  = 0.5}, true)
 AddIngredientValues({"truffleoil"},             {oil        = 1})
 
+local fishroes =
+{
+	"kyno_roe_antchovy",
+	"kyno_roe_cooked",
+	"kyno_roe_dogfish",
+	"kyno_roe_grouper",
+	"kyno_roe_jellyfish",
+	"kyno_roe_jellyfish_rainbow",
+	"kyno_roe_koi",
+	"kyno_roe_neonfish",
+	"kyno_roe_oceanfish_medium_1",
+	"kyno_roe_oceanfish_medium_2",
+	"kyno_roe_oceanfish_medium_3",
+	"kyno_roe_oceanfish_medium_4",
+	"kyno_roe_oceanfish_medium_5",
+	"kyno_roe_oceanfish_medium_6",
+	"kyno_roe_oceanfish_medium_7",
+	"kyno_roe_oceanfish_medium_8",
+	"kyno_roe_oceanfish_medium_9",
+	"kyno_roe_oceanfish_pufferfish",
+	"kyno_roe_oceanfish_small_1",
+	"kyno_roe_oceanfish_small_2",
+	"kyno_roe_oceanfish_small_3",
+	"kyno_roe_oceanfish_small_4",
+	"kyno_roe_oceanfish_small_5",
+	"kyno_roe_oceanfish_small_6",
+	"kyno_roe_oceanfish_small_7",
+	"kyno_roe_oceanfish_small_8",
+	"kyno_roe_oceanfish_small_9",
+	"kyno_roe_oceanfish_sturgeon",
+	"kyno_roe_pierrotfish",
+	"kyno_roe_pondeel",
+	"kyno_roe_pondfish",
+	"kyno_roe_salmonfish",
+	"kyno_roe_tropicalfish",
+	"kyno_roe_wobster",
+	"kyno_roe_wobster_moonquay",
+}
+
+for k, v in pairs(fishroes) do
+	AddIngredientValues({v}, {fish = 0.25, meat = 0.25, roe = 1})
+end
+
 -- Import the Foods.
 local cookpots = 
 {

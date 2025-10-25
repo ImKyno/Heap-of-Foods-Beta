@@ -273,8 +273,8 @@ AddRecipe2("kyno_musselstick_item", {Ingredient("twigs", 3), Ingredient("rope", 
 	},
 	{"GARDENING", "FISHING"}
 )
-SortAfter("kyno_musselstick_item", "ocean_trawler_kit", "GARDENING")
-SortAfter("kyno_musselstick_item", "ocean_trawler_kit", "FISHING")
+SortAfter("kyno_musselstick_item", "kyno_fishfarmplot_construction", "GARDENING")
+SortAfter("kyno_musselstick_item", "kyno_fishfarmplot_construction", "FISHING")
 
 AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2), Ingredient("flint", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO, 
 	{
@@ -668,18 +668,28 @@ if HOF_FERTILIZERTWEAK then
 	)
 end
 
+-- Checking if Chum The Waters Mod is enabled to not add duplicates.
+if not TUNING.HOF_IS_CTW_ENABLED then
+	AddRecipe2("kyno_malbatrossfood", {Ingredient("chum", 1), Ingredient("oceanfish_medium_2_inv", 2), Ingredient("kyno_mysterymeat", 1, ModAtlas)}, TECH.LOST, 
+		{
+			atlas 				= ModAtlas,
+			image 				= "kyno_malbatrossfood.tex",
+		},
+		{"FISHING"}
+	)
+	SortAfter("kyno_malbatrossfood", "chum", "FISHING")
+end
+
 -- Construction Plans.
-AddRecipe2("kyno_fishfarmplot_construction", {Ingredient("boards", 5), Ingredient("rope", 3)}, TECH.LOST,
+AddRecipe2("kyno_fishfarmplot_kit", {Ingredient("boards", 5), Ingredient("rope", 3)}, TECH.LOST,
 	{
-		placer              = "kyno_fishfarmplot_construction_placer",
-		min_spacing         = 4,
 		atlas               = ModAtlas,
-		image               = "kyno_fishfarmplot_construction.tex",
+		image               = "kyno_fishfarmplot_kit.tex",
 	},
 	{"GARDENING", "FISHING"}
 )
-SortAfter("kyno_fishfarmplot_construction", "kyno_musselstick_item", "GARDENING")
-SortAfter("kyno_fishfarmplot_construction", "kyno_musselstick_item", "FISHING")
+SortAfter("kyno_fishfarmplot_kit", "ocean_trawler_kit", "GARDENING")
+SortAfter("kyno_fishfarmplot_kit", "ocean_trawler_kit", "FISHING")
 
 CONSTRUCTION_PLANS["kyno_fishfarmplot_construction"] =
 {

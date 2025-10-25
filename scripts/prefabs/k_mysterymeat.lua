@@ -34,6 +34,8 @@ local function fn()
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "small", 0.2, 0.95)
 	MakeDeployableFertilizerPristine(inst)
+	
+	inst.AnimState:SetScale(.7, .7, .7)
 
 	inst.AnimState:SetBank("mysterymeat")
 	inst.AnimState:SetBuild("mystery_meat")

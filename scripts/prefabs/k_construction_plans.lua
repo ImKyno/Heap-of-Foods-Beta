@@ -96,7 +96,9 @@ local function MakeConstructionPlan(data)
 		end
 		
 		inst:AddComponent("inspectable")
+		
 		inst:AddComponent("lootdropper")
+		inst.components.lootdropper:SetLoot(data.loot)
 		
 		inst:AddComponent("constructionsite")
 		inst.components.constructionsite:SetConstructionPrefab("construction_container")
@@ -137,6 +139,7 @@ local constructions =
 		minimapicon = "kyno_fishfarmplot.tex",
 		fx          = "collapse_big",
 		material    = "wood",
+		loot        = {"boards", "boards", "boards", "rope", "rope"},
 		radius      = 5,
 		burnable    = false,
 	},

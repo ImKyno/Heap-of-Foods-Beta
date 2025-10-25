@@ -61,11 +61,40 @@ AddPrefabPostInit("babybeefalo", function(inst)
     inst.components.lootdropper:AddChanceLoot("kyno_beanbugs", 0.10)
 end)
 
--- Catcoon Drops Gummy Slug
+-- Catcoon Drops Gummy Slug / Malbatross Food.
 AddPrefabPostInit("catcoon", function(inst)
+	local _OnGetItemFromPlayer
+
+	local function OnGetItemFromPlayer(self, giver, item)
+		if self.components.sleeper:IsAsleep() then
+			self.components.sleeper:WakeUp()
+		end
+		
+		if self.components.combat.target == giver then
+			self.components.combat:SetTarget(nil)
+			self.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/pickup")
+		end
+			
+		if item:HasTag("fish") then
+			if not self.sg:HasStateTag("busy") then
+				self:FacePoint(giver.Transform:GetWorldPosition())
+				self.sg:GoToState("pawground2")
+			end
+		end
+	
+		item:Remove()
+		
+		return _OnGetItemFromPlayer(self, giver, item)
+	end
+
     if not _G.TheWorld.ismastersim then
         return inst
     end
+	
+	if inst.components.trader ~= nil then
+		_OnGetItemFromPlayer = inst.components.trader.onaccept
+		inst.components.trader.onaccept = OnGetItemFromPlayer
+	end
 
     inst.components.lootdropper:AddChanceLoot("kyno_gummybug", 0.35)
 end)

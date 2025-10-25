@@ -3,8 +3,14 @@ require("prefabutil")
 local assets =
 {
     Asset("ANIM", "anim/kyno_fishfarmplot.zip"),
+	Asset("ANIM", "anim/kyno_fishfarmplot_kit.zip"),
 	Asset("ANIM", "anim/kyno_fishfarmplot_shoal.zip"),
+	Asset("ANIM", "anim/kyno_fishfarmplot_scrapbook.zip"),
 	Asset("ANIM", "anim/ui_fishfarmplot_3x4.zip"),
+	
+	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
+	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
+	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
@@ -12,6 +18,8 @@ local assets =
 
 local prefabs =
 {
+	"boards",
+	"rope",
 	"marsh_plant",
 	"collapse_big",
 	
@@ -160,7 +168,7 @@ local function UpdateFishArt(inst)
 	end
 
 	local has_fish = false
-	local valid_slots = {1, 3, 4, 5, 6, 7, 8}
+	local valid_slots = {1, 2, 3, 4, 5, 6, 7, 8}
 
 	for _, slot in ipairs(valid_slots) do
 		local item = container:GetItemInSlot(slot)
@@ -169,10 +177,6 @@ local function UpdateFishArt(inst)
 			has_fish = true
 			break
 		end
-	end
-
-	if not has_fish then
-		return
 	end
 
 	local shoal = SpawnPrefab("kyno_fishfarmplot_shoal")
@@ -187,6 +191,41 @@ local function UpdateFishArt(inst)
 		end
 	
 		shoal.Follower:FollowSymbol(shoal_marker.GUID, "marker", 0, -180, 0)
+		
+		local visual_to_slot = 
+		{
+			[1] = 1,
+			[3] = 3,
+			[4] = 4,
+			[5] = 5,
+			[6] = 6,
+			[7] = 7,
+			[8] = 8,
+		}
+		
+		local all_symbols =
+		{
+			"fish_body", 
+			"fish_fin",
+			"fish",
+		}
+		
+		for _, symbol in ipairs(all_symbols) do
+			shoal.AnimState:HideSymbol(symbol)
+		end
+		
+		for visual_index, slot in pairs(visual_to_slot) do
+			local fish = container:GetItemInSlot(slot)
+			
+			if fish and fish:HasTag("fishfarmable") then
+				if slot == 1 then
+					shoal.AnimState:ShowSymbol("fish_body")
+					shoal.AnimState:ShowSymbol("fish_fin")
+				else
+					shoal.AnimState:ShowSymbol("fish")
+				end
+			end
+		end
 		
 		shoal.persists = false
 		shoal_marker.persists = false
@@ -254,6 +293,19 @@ local function OnBuilt(inst, data)
 	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/emerge/large")
 end
 
+local function OnDeploy(inst, pt, deployer)
+	local obj = SpawnPrefab("kyno_fishfarmplot_construction")
+		
+	if obj ~= nil then
+		obj.Transform:SetPosition(pt:Get())
+		obj:PushEvent("onbuilt")
+			
+		if deployer ~= nil and deployer.SoundEmitter ~= nil then
+			deployer.SoundEmitter:PlaySound("dontstarve/common/together/sculpting_table/craft")
+		end
+	end
+end
+
 local function OnSave(inst, data)
 	if inst.plants ~= nil then
 		data.plants = inst.plants
@@ -302,6 +354,8 @@ local function fn()
 	inst:AddTag("birdblocker")
 	
 	inst.no_wet_prefix = true
+	
+	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
 		inst.OnEntityReplicated = function(inst)
@@ -342,7 +396,7 @@ local function fn()
 	
 	inst:AddComponent("fishfarmmanager")
 	inst.components.fishfarmmanager:SetSlotStart(3)
-	inst.components.fishfarmmanager:SetSlotEnd(11)
+	inst.components.fishfarmmanager:SetSlotEnd(8)
 	inst.components.fishfarmmanager:SetRoeConsumption(TUNING.KYNO_FISHFARMLAKE_ROE_CONSUMPTION)
 	inst.components.fishfarmmanager:SetBabyConsumption(TUNING.KYNO_FISHFARMLAKE_BABY_CONSUMPTION)
 	
@@ -358,6 +412,80 @@ local function fn()
 	inst.OnLoad = OnLoad
 
 	return inst
+end
+
+local function kitfn()
+	local inst = CreateEntity()
+	
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+	
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+	
+	inst.pickupsound = "wood"
+	
+	inst.AnimState:SetBank("kyno_fishfarmplot_kit")
+	inst.AnimState:SetBuild("kyno_fishfarmplot_kit")
+	inst.AnimState:PlayAnimation("idle", true)
+	
+	inst:AddTag("usedeploystring")
+	inst:AddTag("projectile") -- For extra spacing.
+	
+	inst.entity:SetPristine()
+	
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("inspectable")
+	
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_fishfarmplot_kit"
+	
+	inst:AddComponent("deployable")
+	inst.components.deployable:SetDeployMode(DEPLOYMODE.DEFAULT)
+	inst.components.deployable:SetDeploySpacing(DEPLOYSPACING.LARGE)
+	inst.components.deployable.ondeploy = OnDeploy
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.LARGE_FUEL
+	
+	MakeSmallBurnable(inst, TUNING.LARGE_BURNTIME)
+    MakeSmallPropagator(inst)
+	MakeHauntableLaunchAndIgnite(inst)
+	
+	return inst
+end
+
+local function placerfn()
+	local inst = CreateEntity()
+	
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+
+	inst:AddTag("CLASSIFIED")
+	inst:AddTag("NOCLICK")
+	inst:AddTag("placer")
+
+	inst.entity:SetCanSleep(false)
+	inst.persists = false
+	
+	inst.AnimState:SetScale(.8, .8, .8)
+
+	inst.AnimState:SetBank("kyno_fishfarmplot")
+    inst.AnimState:SetBuild("kyno_fishfarmplot")
+	inst.AnimState:PlayAnimation("idle", true)
+	inst.AnimState:SetOrientation(ANIM_ORIENTATION.OnGround)
+	inst.AnimState:SetLayer(LAYER_BACKGROUND)
+	inst.AnimState:SetLightOverride(1)
+
+	inst:AddComponent("placer")
+
+    return inst
 end
 
 local function shoalfn()
@@ -379,6 +507,8 @@ local function shoalfn()
 	inst:AddTag("NOBLOCK")
 	
 	inst.no_wet_prefix = true
+	
+	inst.entity:SetPristine()
 	
 	if not TheWorld.ismastersim then
 		return inst
@@ -407,6 +537,8 @@ local function markerfn()
 	
 	inst.no_wet_prefix = true
 	
+	inst.entity:SetPristine()
+	
 	if not TheWorld.ismastersim then
 		return inst
 	end
@@ -417,5 +549,7 @@ local function markerfn()
 end
 
 return Prefab("kyno_fishfarmplot", fn, assets, prefabs),
+Prefab("kyno_fishfarmplot_kit", kitfn, assets, prefabs),
+Prefab("kyno_fishfarmplot_kit_placer", placerfn, assets, prefabs),
 Prefab("kyno_fishfarmplot_shoal", shoalfn, assets, prefabs),
 Prefab("kyno_fishfarmplot_shoal_marker", markerfn, assets, prefabs)

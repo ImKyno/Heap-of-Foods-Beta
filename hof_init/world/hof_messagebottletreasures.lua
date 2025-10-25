@@ -153,6 +153,25 @@ local hof_presets =
 
 		preset_weight = 1,	
 	},
+	
+	hof_presets_malbatross =
+	{
+		guaranteed_loot = 
+		{ 
+			kyno_malbatrossfood_blueprint = 1, 
+			malbatross_feather = {1, 8},
+			spoiled_fish = {1, 5},
+			kyno_mysterymeat = {1, 3},
+		},
+	
+		randomly_selected_loot =
+		{
+			{ oceanfishingrod = .50 },
+			{ boatpatch = .33 },
+		},
+
+		preset_weight = 1,
+	},
 }
 
 for k, preset in pairs(hof_presets) do 

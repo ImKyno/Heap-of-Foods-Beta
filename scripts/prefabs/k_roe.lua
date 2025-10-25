@@ -34,6 +34,8 @@ local function fn()
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
 	inst:AddTag("saltbox_valid")
+	
+	inst.scrapbook_proxy = "kyno_roe_pondfish"
 
 	inst.entity:SetPristine()
 

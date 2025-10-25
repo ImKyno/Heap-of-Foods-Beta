@@ -86,6 +86,8 @@ PrefabFiles =
 	"k_limpetrock",
 	"k_livingtree_monster",
 	"k_lotus",
+	"k_malbatrossfood",
+	"k_malbatrossfood_aoe",
 	"k_meadowisland_crate",
 	"k_meadowisland_fishermerm",
 	"k_meadowisland_mermcart",
