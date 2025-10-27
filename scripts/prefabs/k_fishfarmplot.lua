@@ -22,6 +22,7 @@ local prefabs =
 	"rope",
 	"marsh_plant",
 	"collapse_big",
+	"splash_green_small",
 	
 	"kyno_fishfarmplot_shoal",
 	"kyno_fishfarmplot_shoal_marker",
@@ -133,7 +134,8 @@ local function OnHammred(inst, worker)
 	local fx = SpawnPrefab("collapse_big")
 	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
 	fx:SetMaterial("stone")
-
+	
+	StopHungryTask(inst)
 	inst:Remove()
 end
 
@@ -237,6 +239,67 @@ local function UpdateFishArt(inst)
 	end
 end
 
+local function StartHungryTask(inst)
+	if inst.hungry_task ~= nil then
+		return -- já está rodando
+	end
+
+	local function DoHungrySplash()
+		if inst.components.fueled == nil or not inst.components.fueled:IsEmpty() then
+			inst.hungry_task:Cancel()
+			inst.hungry_task = nil
+			return
+		end
+
+		local container = inst.components.container
+		local fish = container ~= nil and container:GetItemInSlot(1) or nil
+		
+		if fish == nil or not fish:HasTag("fishfarmable") then
+			return
+		end
+
+		local x, y, z = inst.Transform:GetWorldPosition()
+		local radius = 2
+
+        local count = math.random(2, 3)
+
+		for i = 1, count do
+			local delay = (i - 1) * math.random(0.3, 0.5)
+			
+			inst:DoTaskInTime(delay, function()
+				local theta = math.random() * 2 * PI
+				local dist = radius * math.sqrt(math.random())
+				local fx_x = x + math.cos(theta) * dist
+				local fx_z = z + math.sin(theta) * dist
+
+				local fx = SpawnPrefab("splash_green_small")
+				
+				if fx ~= nil then
+					fx.Transform:SetPosition(fx_x, 0, fx_z)
+				end
+			end)
+		end
+	end
+
+    inst.hungry_task = inst:DoPeriodicTask(math.random(4, 8), function()
+		DoHungrySplash()
+		
+		if inst.hungry_task ~= nil then
+			local next_time = math.random(5, 9)
+			
+			inst.hungry_task:Cancel()
+			inst.hungry_task = inst:DoPeriodicTask(next_time, DoHungrySplash)
+		end
+	end)
+end
+
+local function StopHungryTask(inst)
+	if inst.hungry_task ~= nil then
+		inst.hungry_task:Cancel()
+		inst.hungry_task = nil
+	end
+end
+
 local function OnStartWorking(inst)
 	inst.SoundEmitter:PlaySound("dontstarve/common/researchmachine_lvl1_ding")
 end
@@ -252,10 +315,13 @@ end
 -- Handled by the fishfarmmanager component.
 local function OnAddFuel(inst)
 	DoFishFarmSplash(inst)
+	StopHungryTask(inst)
+	
 	inst.components.fishfarmmanager:OnAddFuel()
 end
 
 local function OnFuelEmpty(inst)
+	StartHungryTask(inst)
 	inst.components.fishfarmmanager:OnFuelEmpty()
 end
 
@@ -306,6 +372,10 @@ local function OnDeploy(inst, pt, deployer)
 	end
 end
 
+local function OnEntityRemove(inst)
+	StopHungryTask(inst)
+end
+
 local function OnSave(inst, data)
 	if inst.plants ~= nil then
 		data.plants = inst.plants
@@ -315,6 +385,10 @@ end
 local function OnLoad(inst, data)
 	if data and data.plants then
 		inst.plants = data.plants
+	end
+	
+	if inst.components.fueled and inst.components.fueled:IsEmpty() then
+		StartHungryTask(inst)
 	end
 end
 
@@ -403,6 +477,7 @@ local function fn()
 	inst:ListenForEvent("onbuilt", OnBuilt)
 	inst:ListenForEvent("itemget", OnItemGet)
 	inst:ListenForEvent("itemlose", OnItemLose)
+	inst:ListenForEvent("onremove", OnEntityRemove)
 	
 	inst.planttype = "marsh_plant"
 	inst.dayspawn = true
