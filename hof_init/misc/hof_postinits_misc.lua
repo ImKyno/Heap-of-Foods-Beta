@@ -476,19 +476,25 @@ AddComponentPostInit("fishingrod", function(self)
 
 	function self:Reel(...)
 		local ret = {oldReel(self, ...)}
-
-		if self.caughtfish ~= nil then
+		
+		if self.caughtfish ~= nil and self.fisherman ~= nil and self.fisherman.components.inventory ~= nil then
 			local fish = self.caughtfish
 
 			if fish:HasTag("antchovy") and fish.components.inventoryitem ~= nil then
 				fish.components.inventoryitem:SetSinks(false)
 
-				fish:DoTaskInTime(3, function(f)
-					if f:IsValid() and f.components.inventoryitem ~= nil then
-						f.components.inventoryitem:SetSinks(true)
-						f:AddTag("antchovy_sinkable")
-					end
-				end)
+				if self.fisherman.components.inventory:GiveItem(fish, nil, self.fisherman:GetPosition()) then
+					fish:DoTaskInTime(3, function(f)
+						if f:IsValid() and f.components.inventoryitem ~= nil then
+							f.components.inventoryitem:SetSinks(true)
+							f:AddTag("antchovy_sinkable")
+						end
+					end)
+				else
+					fish.Transform:SetPosition(self.fisherman.Transform:GetWorldPosition())
+					fish.components.inventoryitem:SetSinks(true)
+					fish:AddTag("antchovy_sinkable")
+				end
 			end
 		end
 

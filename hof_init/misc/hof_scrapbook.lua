@@ -3938,6 +3938,7 @@ local HOF_SCRAPBOOK_FOODS =
 		build           = "kyno_roe",
 		anim            = "idle_swordfish_blue",
 		deps            = {"kyno_swordfish_blue", "kyno_roe_cooked", "spoiled_food"},
+		specialinfo     = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	kyno_roe_oceanfish_small_1 =
@@ -4849,7 +4850,8 @@ local HOF_SCRAPBOOK_FOODS =
 		bank            = "kyno_swordfish_blue",
 		build           = "kyno_swordfish_blue",
 		anim            = "idle",
-		deps            = {"grotto_pool_big", "ice", "fishmeat", "spoiled_fish"},
+		deps            = {"grotto_pool_big", "ice", "fishmeat", "meatrack", "meatrack_hermit", "meat_dried", "spoiled_fish"}, -- kyno_fishmeat_dried
+		specialinfo     = "FOODEFFECTS_DECREASETEMP",
 	},
 }
 
@@ -13630,6 +13632,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		animoffsetbgx  = -20,
 		animoffsetbgy  = -100,
 		deps           = {"kyno_preservesjar", "kyno_roe_swordfish_blue", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	agedroe_oceanfish_small_1 =

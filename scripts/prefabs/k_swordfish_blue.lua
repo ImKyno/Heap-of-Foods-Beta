@@ -3,6 +3,9 @@ local assets =
 	Asset("ANIM", "anim/kyno_swordfish_blue.zip"),
 	Asset("ANIM", "anim/kyno_swordfish_blue01.zip"),
 	
+	Asset("ANIM", "anim/meat_rack_food.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_swordfish_blue.zip"),
+	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -96,6 +99,12 @@ local function fn()
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"fishmeat", "fishmeat", "ice"})
+	
+	inst:AddComponent("dryable")
+	inst.components.dryable:SetDryTime(TUNING.DRY_MED)
+	inst.components.dryable:SetProduct("meat_dried")
+	inst.components.dryable:SetBuildFile("kyno_meatrack_swordfish_blue")
+	inst.components.dryable:SetDriedBuildFile("meat_rack_food")
 	
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
