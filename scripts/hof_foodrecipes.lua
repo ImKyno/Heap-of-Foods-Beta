@@ -72,21 +72,6 @@ local kyno_foods =
 		end,
 	},
 	
-	caviar = 
-	{
-		test = function(cooker, names, tags) return tags.roe and tags.veggie and not tags.sweetener and not tags.dairy end,
-		priority = 30,
-		foodtype = FOODTYPE.MEAT,
-		perishtime = TUNING.PERISH_MED,
-		health = 3,
-		hunger = 12.5,
-		sanity = 15,
-		cooktime = 2,
-		potlevel = "med",
-		floater = TUNING.HOF_FLOATER,
-		card_def = {ingredients = {{"kyno_roe", 1}, {"corn", 3}}}, -- Update this for sturgeon.
-	},
-	
 	tropicalbouillabaisse =
 	{
 		test = function(cooker, names, tags) return tags.fish and (names.eel or names.eel_cooked or names.pondeel) and (tags.wobster) 

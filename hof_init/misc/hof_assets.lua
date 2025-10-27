@@ -96,6 +96,9 @@ AddMinimapAtlas("images/minimapimages/hof_minimapicons.xml")
 -- Mod Icons.
 local HOF_ICONS =
 {
+	"agedroe_pondfish",
+	"agedroe_pondeel",
+	"agedroe_oceanfish_sturgeon",
 	"algae_soup",
 	"antslog",
 	"avocadotoast",
@@ -111,7 +114,6 @@ local HOF_ICONS =
 	"butter_goat",
 	"butter_koalefant",
 	"catfood",
-	"caviar",
 	"cheese_koalefant",
 	"cheese_white",
 	"cheese_yellow",
@@ -303,6 +305,7 @@ local HOF_ICONS =
 	"kyno_aloe_oversized_waxed",
 	"kyno_aloe_seeds",
 	"kyno_antchovy",
+	"kyno_antchovy_dead",
 	"kyno_bacon",
 	"kyno_bacon_cooked",
 	"kyno_banana",
@@ -437,7 +440,9 @@ local HOF_ICONS =
 	"kyno_rice_oversized_waxed",
 	"kyno_rice_seeds",
 	"kyno_roe",
+	"kyno_roe_antchovy",
 	"kyno_roe_cooked",
+	"kyno_roe_dogfish",
 	"kyno_roe_grouper",
 	"kyno_roe_jellyfish",
 	"kyno_roe_jellyfish_rainbow",

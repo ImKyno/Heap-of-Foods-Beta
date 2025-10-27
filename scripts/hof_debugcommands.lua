@@ -47,7 +47,6 @@ function c_hofswfoods()
 		c_give("musselbouillabaise", 	40, true)
 		c_give("sharkfinsoup",          40, true)
 		c_give("sweetpotatosouffle",    40, true)
-		c_give("caviar",                40, true)
 		c_give("tropicalbouillabaisse", 40, true)
 	end
 end

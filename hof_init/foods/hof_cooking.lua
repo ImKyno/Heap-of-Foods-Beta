@@ -122,11 +122,11 @@ AddIngredientValues({"kyno_truffles"},          {veggie     = 1,    mushrooms = 
 AddIngredientValues({"kyno_sporecap"},          {veggie     = 0.5,  mushrooms = 1,    monster  = 0.5}, true)
 AddIngredientValues({"kyno_sporecap_dark"},     {veggie     = 0.5,  mushrooms = 1,    monster  = 0.5}, true)
 AddIngredientValues({"truffleoil"},             {oil        = 1})
+AddIngredientValues({"kyno_antchovy"},          {meat       = 0.25, fish      = 0.25, antchovy = 1})
 
 local fishroes =
 {
 	"kyno_roe_antchovy",
-	"kyno_roe_cooked",
 	"kyno_roe_dogfish",
 	"kyno_roe_grouper",
 	"kyno_roe_jellyfish",
@@ -159,6 +159,7 @@ local fishroes =
 	"kyno_roe_salmonfish",
 	"kyno_roe_tropicalfish",
 	"kyno_roe_wobster",
+	"kyno_roe_wobster_moonglass",
 	"kyno_roe_wobster_moonquay",
 }
 

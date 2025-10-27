@@ -117,7 +117,9 @@ local function antchovyfn()
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_antchovy_ocean.tex")
 	
-	inst.AnimState:SetMultColour(.7, .7, .7, 1)
+	inst:SetPhysicsRadiusOverride(6)
+	
+	inst.AnimState:SetMultColour(.5, .5, .5, 1)
 	
 	inst.AnimState:SetBank("kyno_antchovy_ocean")
 	inst.AnimState:SetBuild("kyno_antchovy_ocean")
@@ -187,6 +189,6 @@ local function mouseoverfn()
 end
 
 return Prefab("kyno_swordfish_spawner", swordfishfn, assets, prefabs),
-Prefab("kyno_jellyfish_spawner", jellyfishfn, assets, prefabs)
--- Prefab("kyno_antchovy_spawner", antchovyfn, assets, prefabs),
--- Prefab("kyno_antchovy_mouseover", mouseoverfn, assets)
+Prefab("kyno_jellyfish_spawner", jellyfishfn, assets, prefabs),
+Prefab("kyno_antchovy_spawner", antchovyfn, assets, prefabs),
+Prefab("kyno_antchovy_mouseover", mouseoverfn, assets)

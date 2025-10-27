@@ -202,6 +202,20 @@ local fishes         =
 		seasons      = { "summer" },
 		worlds       = ALL_WORLDS,
 	},
+	
+	kyno_antchovy    =
+	{
+		roe_prefab   = "kyno_roe_antchovy",
+		baby_prefab  = "kyno_antchovy",
+		
+		roe_time     = TUNING.ANTCHOVY_ROETIME,
+		baby_time    = TUNING.ANTCHOVY_BABYTIME,
+		
+		phases       = ALL_PHASES,
+		moonphases   = ALL_MOONPHASES,
+		seasons      = ALL_SEASONS,
+		worlds       = ALL_WORLDS,
+	},
 
 	oceanfish_small_1_inv =
 	{
@@ -480,31 +494,8 @@ for k, v in pairs(fishes) do
 	AddPrefabPostInit(k, FishFarmablePostInit)
 end
 
--- Make some items a valid fuel for the Fish Hatchery.
-local fishfoods =
-{
-	chum =
-	{
-		fuelvalue = TUNING.HUGE_FUEL,
-	},
-	
-	barnacle =
-	{
-		fuelvalue = TUNING.LARGE_FUEL,
-	},
-	
-	kelp =
-	{
-		fuelvalue = TUNING.MED_FUEL,
-	},
-	
-	seeds =
-	{
-		fuelvalue = TUNING.SMALL_FUEL,
-	},
-}
-
-local function FishFoodPostInit(inst)
+-- Make Fish Food a valid fuel for the Fish Hatchery.
+local function ChumPostInit(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
@@ -513,15 +504,10 @@ local function FishFoodPostInit(inst)
 		inst:AddComponent("fuel")
 	end
 	
-	entry = fishfoods[inst.prefab]
-	if inst.components.fuel then
-		if entry then
-			inst.components.fuel.fueltype = _G.FUELTYPE.FISHFOOD
-			inst.components.fuel.fuelvalue = entry.fuelvalue
-		end
+	if inst.components.fuel ~= nil then
+		inst.components.fuel.fueltype = _G.FUELTYPE.FISHFOOD
+		inst.components.fuel.fuelvalue = TUNING.HUGE_FUEL
 	end
 end
 
-for k, v in pairs(fishfoods) do
-	AddPrefabPostInit(k, FishFoodPostInit)
-end
+AddPrefabPostInit("chum", ChumPostInit)

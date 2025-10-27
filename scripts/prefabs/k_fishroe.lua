@@ -130,6 +130,12 @@ local fishroes =
 	},
 	
 	{
+		name                = "dogfish",
+		stacksize           = TUNING.STACK_SIZE_MEDITEM,
+		goldvalue           = 2,
+	},
+	
+	{
 		name                = "neonfish",
 		stacksize           = TUNING.STACK_SIZE_MEDITEM,
 		goldvalue           = 3,
@@ -169,6 +175,12 @@ local fishroes =
 		name                = "koi",
 		stacksize           = TUNING.STACK_SIZE_MEDITEM,
 		goldvalue           = 2,
+	},
+	
+	{
+		name                = "antchovy",
+		stacksize           = TUNING.STACK_SIZE_TINYITEM,
+		goldvalue           = 1,
 	},
 	
 	{

@@ -3,6 +3,8 @@ local assets =
 	Asset("ANIM", "anim/kyno_antchovy.zip"),
 	Asset("ANIM", "anim/kyno_antchovy01.zip"),
 	
+	Asset("ANIM", "anim/fish_swordfish_blue.zip"),
+	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -63,6 +65,17 @@ local function OnPickup(inst)
     end
 end
 
+local function OnSave(inst, data)
+	data.setsinks = inst:HasTag("antchovy_sinkable")
+end
+
+local function OnLoad(inst, data)
+	if data ~= nil and data.setsinks then
+		inst.components.inventoryitem:SetSinks(true)
+		inst:AddTag("antchovy_sinkable")
+	end
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -76,14 +89,15 @@ local function fn()
 	
 	MakeInventoryPhysics(inst)
 
-	inst.AnimState:SetBank("kyno_antchovy")
-	inst.AnimState:SetBuild("kyno_antchovy")
-	inst.AnimState:PlayAnimation("idle_dead", true)
+	inst.AnimState:SetBank("fish_swordfish_blue")
+	inst.AnimState:SetBuild("fish_swordfish_blue")
+	inst.AnimState:PlayAnimation("idle", true)
 	
 	inst:AddTag("fish")
 	inst:AddTag("meat")
 	inst:AddTag("catfood")
 	inst:AddTag("smallcreature")
+	inst:AddTag("antchovy")
 	-- inst:AddTag("weighable_fish")
 
 	inst.entity:SetPristine()
@@ -93,6 +107,7 @@ local function fn()
 	end
 	
 	inst.build = "kyno_antchovy01"
+	inst.flop_task = inst:DoTaskInTime(math.random() * 2 + 1, DoFlop)
 	
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
@@ -106,9 +121,9 @@ local function fn()
 	inst.components.perishable.onperishreplacement = "spoiled_fish_small"
 
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem:SetSinks(true)
-	-- inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
-	-- inst.components.inventoryitem:SetOnPutInInventoryFn(OnPickup)
+	-- inst.components.inventoryitem:SetSinks(true)
+	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
+	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPickup)
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_antchovy"
 
@@ -118,17 +133,19 @@ local function fn()
 	inst.components.edible.sanityvalue = TUNING.KYNO_ANTCHOVY_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	
-	-- inst:AddComponent("weighable")
-	-- inst.components.weighable.type = TROPHYSCALE_TYPES.FISH
-	-- inst.components.weighable:Initialize(MIN_WEIGHT, MAX_WEIGHT)
-	-- inst.components.weighable:SetWeight(Lerp(MIN_WEIGHT, MAX_WEIGHT, CalcNewSize()))
+	inst:AddComponent("weighable")
+	inst.components.weighable.type = TROPHYSCALE_TYPES.FISH
+	inst.components.weighable:Initialize(MIN_WEIGHT, MAX_WEIGHT)
+	inst.components.weighable:SetWeight(Lerp(MIN_WEIGHT, MAX_WEIGHT, CalcNewSize()))
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_TINYITEM
 	
-	-- inst:ListenForEvent("on_loot_dropped", OnDroppedAsLoot)
+	inst:ListenForEvent("on_loot_dropped", OnDroppedAsLoot)
 	
-	-- inst.flop_task = inst:DoTaskInTime(math.random() * 2 + 1, DoFlop)
+	-- I am manually enabling SetSinks for reasons.
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
 	
 	MakeHauntableLaunchAndPerish(inst)
 

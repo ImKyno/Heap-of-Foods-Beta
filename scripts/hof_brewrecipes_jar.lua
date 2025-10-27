@@ -954,6 +954,545 @@ local kyno_foods_jar =
 		card_def = {ingredients = {{"kyno_truffles", 1}, {"seeds", 1}, {"kyno_salt", 1}}},
 	},
 	
+	agedroe_pondfish =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_pondfish and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 5,
+		hunger = 15,
+		sanity = 5,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_pondfish", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_pondeel =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_pondeel and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 15,
+		hunger = 20,
+		sanity = 15,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_pondeel", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_wobster =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_wobster and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 30,
+		hunger = 25,
+		sanity = 5,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_wobster", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_wobster_moonglass =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_wobster_moonglass and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 30,
+		hunger = 30,
+		sanity = 10,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_wobster_moonglass", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_wobster_moonquay =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_wobster_moonquay and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 30,
+		hunger = 30,
+		sanity = 30,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_wobster_moonquay", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_dogfish =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_dogfish and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 20,
+		hunger = 20,
+		sanity = 15,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_dogfish", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_neonfish =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_neonfish and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 25,
+		hunger = 20,
+		sanity = 10,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_neonfish", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_pierrotfish =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_pierrotfish and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 15,
+		hunger = 15,
+		sanity = 10,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_pierrotfish", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_grouper =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_grouper and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 10,
+		hunger = 20,
+		sanity = 25,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_grouper", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_tropicalfish =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_tropicalfish and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 10,
+		hunger = 15,
+		sanity = 15,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_tropicalfish", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_jellyfish =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_jellyfish and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 10,
+		hunger = 15,
+		sanity = 0,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_jellyfish", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_jellyfish_rainbow =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_jellyfish_rainbow and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 10,
+		hunger = 15,
+		sanity = 10,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_jellyfish", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_salmonfish =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_salmonfish and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 10,
+		hunger = 15,
+		sanity = 15,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_salmonfish", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_koi =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_koi and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 15,
+		hunger = 20,
+		sanity = 25,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_koi", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_antchovy =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_antchovy and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 5,
+		hunger = 10,
+		sanity = 5,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_antchovy", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_small_1 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_small_1 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 10,
+		hunger = 20,
+		sanity = 5,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_small_1", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_small_2 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_small_2 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 5,
+		hunger = 20,
+		sanity = 10,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_small_2", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_small_3 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_small_3 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 20,
+		hunger = 5,
+		sanity = 10,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_small_3", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_small_4 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_small_4 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 10,
+		hunger = 5,
+		sanity = 20,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_small_4", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_small_5 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_small_5 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 10,
+		hunger = 20,
+		sanity = 10,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_small_5", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_small_6 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_small_6 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 20,
+		hunger = 10,
+		sanity = 10,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_small_6", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_small_7 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_small_7 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 10,
+		hunger = 10,
+		sanity = 20,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_small_7", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_small_8 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_small_8 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 20,
+		hunger = 20,
+		sanity = 5,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_small_8", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_small_9 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_small_9 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 15,
+		hunger = 20,
+		sanity = 5,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_small_9", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_medium_1 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_medium_1 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 30,
+		hunger = 15,
+		sanity = 10,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_medium_1", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_medium_2 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_medium_2 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 15,
+		hunger = 30,
+		sanity = 10,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_medium_2", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_medium_3 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_medium_3 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 15,
+		hunger = 10,
+		sanity = 30,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_medium_3", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_medium_4 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_medium_4 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 15,
+		hunger = 30,
+		sanity = 15,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_medium_4", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_medium_5 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_medium_5 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 10,
+		hunger = 30,
+		sanity = 15,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_medium_5", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_medium_6 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_medium_6 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 30,
+		hunger = 15,
+		sanity = 20,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_medium_6", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_medium_7 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_medium_7 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 30,
+		hunger = 20,
+		sanity = 15,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_medium_7", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_medium_8 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_medium_8 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 20,
+		hunger = 15,
+		sanity = 30,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_medium_8", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_medium_9 =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_medium_9 and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 15,
+		hunger = 20,
+		sanity = 30,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_medium_9", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
+	agedroe_oceanfish_pufferfish =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_pufferfish and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 15,
+		hunger = 25,
+		sanity = 20,
+		cooktime = 48,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_PUFFERFISH,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_pufferfish", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+			not eater:HasTag("playerghost") then
+				if math.random() < TUNING.KYNO_PUFFERFISH_KILL_CHANCE then -- Chance to die eating this, haha.
+					eater.components.health:SetInvincible(false)
+					eater.components.health:Kill()
+				end
+            end
+		end,
+	},
+	
+	agedroe_oceanfish_sturgeon =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_sturgeon and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 20,
+		hunger = 37.5,
+		sanity = 33,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_oceanfish_sturgeon", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
 	-- This recipe is for when brewing an invalid product, we need this to prevent a crash.
 	wetgoop2 =
 	{

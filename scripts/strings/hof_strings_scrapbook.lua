@@ -24,6 +24,7 @@ STRINGS.SCRAPBOOK.SUBCATS.JUICE = "Juice"
 STRINGS.SCRAPBOOK.SUBCATS.JAM = "Jam"
 STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "Pickles"
 STRINGS.SCRAPBOOK.SUBCATS.FISHROE = "Fish Roe"
+STRINGS.SCRAPBOOK.SUBCATS.AGEDROE = "Aged Roe"
 
 -- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "Increased movement speed for a certain amount of time."
@@ -94,6 +95,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP = "This food can make a survi
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP2 = "This food can make a survivor immune to Poison Auras for a certain amount of time. It also accelerates spoiling rate of items in inventory and equipment slots.\n\nMonster survivors can eat this food without any penalties."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP_DARK = "This food can make a survivor immune to Acid Rain for a certain amount of time.\n\nMonster survivors can eat this food without any penalties."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP_DARK2 = "This food can make a survivor immune to Acid Rain for a certain amount of time. It also accelerates spoiling rate of items in inventory and equipment slots.\n\nMonster survivors can eat this food without any penalties."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PUFFERFISH = "Survivors must have caution when eating Pufferfish. It can contain poison if cooked by unskilled chefs."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."

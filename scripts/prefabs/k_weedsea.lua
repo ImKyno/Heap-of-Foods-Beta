@@ -170,10 +170,6 @@ local function seaweed()
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
-	
-	inst:AddComponent("fuel")
-	inst.components.fuel.fueltype = FUELTYPE.FISHFOOD
-	inst.components.fuel.fuelvalue = TUNING.MED_LARGE_FUEL
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_WEEDSEA_HEALTH

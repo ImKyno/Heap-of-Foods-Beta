@@ -24,7 +24,7 @@ AddPrefabPostInit("wilson", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("caviar", TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("agedroe_oceanfish_sturgeon", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("wine_dragonfruit", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
@@ -445,7 +445,7 @@ AddComponentPostInit("fishingrod", function(self)
 			end)
 				
 			-- Random chance for one more extra fish.
-			if math.random() < .33 then
+			if math.random() < TUNING.KYNO_FISHINGBUFF_EXTRA_FISH_CHANCE then
 				local extraFish2 = SpawnPrefab(self.caughtfish.prefab)
 				
 				if self.fisherman ~= nil and extraFish2.components.weighable ~= nil then
@@ -468,6 +468,32 @@ AddComponentPostInit("fishingrod", function(self)
 
         return unpack(ret)
     end
+end)
+
+-- Antchovy special case that don't let them sink right after catching it.
+AddComponentPostInit("fishingrod", function(self)
+	local oldReel = self.Reel
+
+	function self:Reel(...)
+		local ret = {oldReel(self, ...)}
+
+		if self.caughtfish ~= nil then
+			local fish = self.caughtfish
+
+			if fish:HasTag("antchovy") and fish.components.inventoryitem ~= nil then
+				fish.components.inventoryitem:SetSinks(false)
+
+				fish:DoTaskInTime(3, function(f)
+					if f:IsValid() and f.components.inventoryitem ~= nil then
+						f.components.inventoryitem:SetSinks(true)
+						f:AddTag("antchovy_sinkable")
+					end
+				end)
+			end
+		end
+
+		return unpack(ret)
+	end
 end)
 
 -- For trading and learning Recipe Cards.
