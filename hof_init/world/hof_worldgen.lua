@@ -233,6 +233,12 @@ local RoomPrefabs =
 		"DeciduousClearing",
 		"PondyGrass",
 	},
+	
+	kyno_antchovy_spawner =
+	{
+		"OceanCoastal",
+		"OceanSwell",
+	},
 }
 
 -- Special case where we want more or less prefabs spawns in rooms.
@@ -244,6 +250,7 @@ local PrefabValues =
 	["kyno_wildwheat"]          = .04,
 	["kyno_truffles_ground"]    = .2,  -- Want truffles to be slightly rare and be like cacti.
 	["kyno_radish_ground"]      = .7,
+	["kyno_antchovy_spawner"]   = .1,
 }
 
 for prefab, rooms in pairs(RoomPrefabs) do

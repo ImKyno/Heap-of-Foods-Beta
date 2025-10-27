@@ -3,8 +3,6 @@ local assets =
 	Asset("ANIM", "anim/kyno_antchovy.zip"),
 	Asset("ANIM", "anim/kyno_antchovy01.zip"),
 	
-	Asset("ANIM", "anim/fish_swordfish_blue.zip"),
-	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -89,9 +87,9 @@ local function fn()
 	
 	MakeInventoryPhysics(inst)
 
-	inst.AnimState:SetBank("fish_swordfish_blue")
-	inst.AnimState:SetBuild("fish_swordfish_blue")
-	inst.AnimState:PlayAnimation("idle", true)
+	inst.AnimState:SetBank("kyno_antchovy")
+	inst.AnimState:SetBuild("kyno_antchovy")
+	inst.AnimState:PlayAnimation("idle_alive", true)
 	
 	inst:AddTag("fish")
 	inst:AddTag("meat")

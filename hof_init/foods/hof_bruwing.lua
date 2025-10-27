@@ -129,6 +129,7 @@ local fishroes =
 	"kyno_roe_pondeel",
 	"kyno_roe_pondfish",
 	"kyno_roe_salmonfish",
+	"kyno_roe_swordfish_blue",
 	"kyno_roe_tropicalfish",
 	"kyno_roe_wobster",
 	"kyno_roe_wobster_moonglass",

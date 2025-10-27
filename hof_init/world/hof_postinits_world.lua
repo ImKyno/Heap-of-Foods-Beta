@@ -1071,6 +1071,22 @@ for k, v in pairs(weeds) do
 	end)
 end
 
+-- Add Swordfish to Vitreoasis.
+local function GrottoPoolBigPostInit(inst)
+	inst:AddTag("pond")
+
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst:AddComponent("fishable")
+	inst.components.fishable:AddFish("kyno_swordfish_blue")
+	inst.components.fishable.maxfish = TUNING.KYNO_GROTTO_POOL_MAX_FISH
+	inst.components.fishable:SetRespawnTime(TUNING.KYNO_SWORDFISH_BLUE_REGROW_TIME)
+end
+
+AddPrefabPostInit("grotto_pool_big", GrottoPoolBigPostInit)
+
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")
 

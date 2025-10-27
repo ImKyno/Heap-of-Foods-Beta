@@ -184,6 +184,12 @@ local fishroes =
 	},
 	
 	{
+		name                = "swordfish_blue",
+		stacksize           = TUNING.STACK_SIZE_LARGEITEM,
+		goldvalue           = 4,
+	},
+	
+	{
 		name                = "oceanfish_small_1",
 		goldvalue           = 2,
 	},

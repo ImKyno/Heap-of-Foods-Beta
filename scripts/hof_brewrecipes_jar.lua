@@ -1179,6 +1179,23 @@ local kyno_foods_jar =
 		card_def = {ingredients = {{"kyno_roe_antchovy", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
 	},
 	
+	agedroe_swordfish_blue =
+	{
+		test = function(brewer, names, tags) return names.kyno_roe_swordfish_blue and names.kyno_salt and names.kyno_spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 20,
+		hunger = 25,
+		sanity = 25,
+		cooktime = 48,
+		nameoverride = "AGEDROE",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_roe_swordfish_blue", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+	},
+	
 	agedroe_oceanfish_small_1 =
 	{
 		test = function(brewer, names, tags) return names.kyno_roe_oceanfish_small_1 and names.kyno_salt and names.kyno_spotspice end,

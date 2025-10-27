@@ -3919,6 +3919,27 @@ local HOF_SCRAPBOOK_FOODS =
 		deps            = {"kyno_antchovy", "kyno_roe_cooked", "spoiled_food"},
 	},
 	
+	kyno_roe_swordfish_blue =
+	{
+		name            = "kyno_roe_swordfish_blue",
+		speechname      = "kyno_roe",
+		type            = "food",
+		subcat          = "fishroe",
+		tex             = "kyno_roe_swordfish_blue.tex",
+		prefab          = "kyno_roe_swordfish_blue",
+		healthvalue     = 1,
+		hungervalue     = 4.6875,
+		sanityvalue     = 0,
+		perishable      = 2880,
+		stacksize       = 20,
+		burnable        = true,
+		foodtype        = "MEAT",
+		bank            = "kyno_roe",
+		build           = "kyno_roe",
+		anim            = "idle_swordfish_blue",
+		deps            = {"kyno_swordfish_blue", "kyno_roe_cooked", "spoiled_food"},
+	},
+	
 	kyno_roe_oceanfish_small_1 =
 	{
 		name            = "kyno_roe_oceanfish_small_1",
@@ -4812,6 +4833,23 @@ local HOF_SCRAPBOOK_FOODS =
 		anim            = "idle_alive",
 		animoffsetx     = -25,
 		deps            = {"kyno_antchovycan", "kyno_roe_antchovy", "spoiled_fish_small"},
+	},
+	
+	kyno_swordfish_blue =
+	{
+		name            = "kyno_swordfish_blue",
+		type            = "food",
+		tex             = "kyno_swordfish_blue.tex",
+		prefab          = "kyno_swordfish_blue",
+		healthvalue     = 4,
+		hungervalue     = 25,
+		sanityvalue     = 0,
+		perishable      = 2880,
+		foodtype        = "MEAT",
+		bank            = "kyno_swordfish_blue",
+		build           = "kyno_swordfish_blue",
+		anim            = "idle",
+		deps            = {"grotto_pool_big", "ice", "fishmeat", "spoiled_fish"},
 	},
 }
 
@@ -13567,6 +13605,31 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		animoffsetbgx  = -20,
 		animoffsetbgy  = -100,
 		deps           = {"kyno_preservesjar", "kyno_roe_antchovy", "spoiled_food"},
+	},
+	
+	agedroe_swordfish_blue =
+	{
+		name           = "agedroe_swordfish_blue",
+		speechname     = "agedroe",
+        type           = "food",
+		subcat         = "agedroe",
+		tex            = "agedroe_swordfish_blue.tex",
+        prefab         = "agedroe_swordfish_blue",
+		healthvalue    = 5,
+		hungervalue    = 10,
+		sanityvalue    = 5,
+        perishable     = 9600,
+        foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "agedroe_swordfish_blue",
+		build          = "agedroe_swordfish_blue",
+		overridesymbol = {"swap_food", "swap_food", "agedroe_swordfish_blue"},
+		anim           = "idle",
+		animoffsetx    = 12,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -100,
+		deps           = {"kyno_preservesjar", "kyno_roe_swordfish_blue", "spoiled_food"},
 	},
 	
 	agedroe_oceanfish_small_1 =

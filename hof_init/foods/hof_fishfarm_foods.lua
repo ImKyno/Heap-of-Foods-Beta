@@ -216,6 +216,20 @@ local fishes         =
 		seasons      = ALL_SEASONS,
 		worlds       = ALL_WORLDS,
 	},
+	
+	kyno_swordfish_blue =
+	{
+		roe_prefab   = "kyno_roe_swordfish_blue",
+		baby_prefab  = "kyno_swordfish_blue",
+		
+		roe_time     = TUNING.SWORDFISH_BLUE_ROETIME,
+		baby_time    = TUNING.SWORDFISH_BLUE_BABYTIME,
+		
+		phases       = ALL_PHASES,
+		moonphases   = ALL_MOONPHASES,
+		seasons      = { "winter" },
+		worlds       = { "cave" },
+	},
 
 	oceanfish_small_1_inv =
 	{

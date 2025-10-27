@@ -152,6 +152,7 @@ PrefabFiles =
 	"k_sporecaps",
 	"k_spotbush",
 	"k_sugarbombs_explosive",
+	"k_swordfish_blue",
 	"k_tarosea",
 	"k_truffles",
 	"k_tunacan",
