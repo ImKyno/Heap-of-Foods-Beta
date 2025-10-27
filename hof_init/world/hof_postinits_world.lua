@@ -1108,8 +1108,8 @@ AddClassPostConstruct("components/birdspawner", function(self)
 	BIRD_TYPES[WORLD_TILES.QUAGMIRE_PARKFIELD] = {"quagmire_pigeon"}
 	BIRD_TYPES[WORLD_TILES.QUAGMIRE_CITYSTONE] = {"quagmire_pigeon"}
 
-	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = {"toucan"}
-	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = {"toucan"}
+	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = {"toucan", "toucan_chubby"}
+	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = {"toucan", "toucan_chubby"}
 	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = {"kingfisher"}
 end)
 

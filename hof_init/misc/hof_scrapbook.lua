@@ -14254,6 +14254,23 @@ local HOF_SCRAPBOOK_CREATURES =
 		deps           = {"cutgrass", "twigs", "feather_crow", "smallmeat", "cookedsmallmeat"},
 	},
 	
+	toucan_chubby      =
+	{
+		name           = "toucan_chubby",
+		type           = "creature",
+		subcat         = "bird",
+		tex            = "toucan_chubby.tex",
+		prefab         = "toucan_chubby",
+		health         = 25,
+		perishable     = 2400,
+		bank           = "crow",
+		build          = "toucan_chubby_build",
+		anim           = "idle",
+		animoffsetx    = -20,
+		animoffsety    = 20,
+		deps           = {"cutgrass", "twigs", "feather_crow", "smallmeat", "cookedsmallmeat"},
+	},
+	
 	quagmire_pigeon    =
 	{
 		name           = "quagmire_pigeon",

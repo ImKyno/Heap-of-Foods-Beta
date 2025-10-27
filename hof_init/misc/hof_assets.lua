@@ -703,6 +703,7 @@ local HOF_ICONS =
 	"toadstoolcola",
 	"tom_kha_soup",
 	"toucan",
+	"toucan_chubby",
 	"tricolordango",
 	"tropicalbouillabaisse",
 	"truffleoil",
@@ -861,6 +862,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"quagmire_pigeon",
 	"slow_farmplot",
 	"toucan",
+	"toucan_chubby",
 }
 
 for i, v in ipairs(HOF_SCRAPBOOK_ICONS) do

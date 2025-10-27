@@ -258,6 +258,8 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
         if not TheWorld.ismastersim then
             return inst
         end
+		
+		inst.lunar_mutation_chance = TUNING.BIRD_PRERIFT_MUTATION_SPAWN_CHANCE
 
         inst.sounds =
         {
@@ -275,7 +277,7 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
 			}
 		end
 
-		if name == "toucan" then
+		if name == "toucan" or name == "toucan_chubby" then
 			inst.sounds =
 			{
 				takeoff = "hof_sounds/creatures/toucan/take_off",
@@ -432,4 +434,5 @@ end
 
 return makebird("quagmire_pigeon", "quagmire_pigeon", true, nil, PigeonSetup, nil, false),
 makebird("toucan", "toucan", true, nil, ToucanSetup, nil, false),
+makebird("toucan_chubby", "toucan_chubby", true, nil, ToucanSetup, nil, false),
 makebird("kingfisher", "kingfisher", true, nil, KingfisherSetup, nil, false)
