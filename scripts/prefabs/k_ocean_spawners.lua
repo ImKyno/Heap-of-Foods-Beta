@@ -11,6 +11,7 @@ local assets =
 local prefabs =
 {
 	"kyno_antchovy",
+	"kyno_jellyfish_ocean",
 }
 
 local function OnSpawn(inst, child)
@@ -25,6 +26,10 @@ end
 
 local function OnInit(inst)
 
+end
+
+local function OnPreLoadJelly(inst, data)
+    WorldSettings_ChildSpawner_PreLoad(inst, data, TUNING.KYNO_JELLYFISH_RELEASE_TIME, TUNING.KYNO_JELLYFISH_REGEN_TIME)
 end
 
 local function swordfishfn()
@@ -63,12 +68,12 @@ local function jellyfishfn()
     local inst = CreateEntity()
 
     inst.entity:AddTransform()
-	inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
 	inst:AddTag("NOBLOCK")
 	inst:AddTag("CLASSIFIED")
 	inst:AddTag("jellyfishspawner")
+	inst:AddTag("ignorewalkableplatforms")
 
     inst.entity:SetPristine()
 
@@ -76,12 +81,10 @@ local function jellyfishfn()
         return inst
     end
 
-	--[[
     inst:AddComponent("childspawner")
-    inst.components.childspawner.childname = "kyno_jellyfish"
-	inst.components.childspawner:SetRareChild("kyno_jellyfish_rainbow", TUNING.KYNO_JELLYFISH_RAINBOW_CHANCE)
+    inst.components.childspawner.childname = "kyno_jellyfish_ocean"
 	inst.components.childspawner.spawnoffscreen = true
-    inst.components.childspawner:SetSpawnedFn(OnSpawnJellyFish)
+	inst.components.childspawner.allowwater = true
     inst.components.childspawner:SetSpawnPeriod(TUNING.KYNO_JELLYFISH_RELEASE_TIME)
     inst.components.childspawner:SetRegenPeriod(TUNING.KYNO_JELLYFISH_REGEN_TIME)
 	inst.components.childspawner:SetMaxChildren(TUNING.KYNO_JELLYFISH_AMOUNT)
@@ -94,7 +97,6 @@ local function jellyfishfn()
     end
 	
 	inst.OnPreLoad = OnPreLoadJelly
-	]]--
 
     return inst
 end

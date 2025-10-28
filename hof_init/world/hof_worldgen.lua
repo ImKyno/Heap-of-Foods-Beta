@@ -238,6 +238,14 @@ local RoomPrefabs =
 	{
 		"OceanCoastal",
 		"OceanSwell",
+		"OceanRough",
+	},
+	
+	kyno_jellyfish_spawner =
+	{
+		"OceanCoastal",
+		"OceanSwell",
+		"OceanRough",
 	},
 }
 
@@ -250,7 +258,8 @@ local PrefabValues =
 	["kyno_wildwheat"]          = .04,
 	["kyno_truffles_ground"]    = .2,  -- Want truffles to be slightly rare and be like cacti.
 	["kyno_radish_ground"]      = .7,
-	["kyno_antchovy_spawner"]   = .1,
+	["kyno_antchovy_spawner"]   = .04,
+	["kyno_jellyfish_spawner"]  = .03,
 }
 
 for prefab, rooms in pairs(RoomPrefabs) do

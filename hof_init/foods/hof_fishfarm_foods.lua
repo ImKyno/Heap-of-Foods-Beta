@@ -151,7 +151,6 @@ local fishes         =
 		worlds       = { "forest" },
 	},
 	
-	--[[
 	kyno_jellyfish   =
 	{
 		roe_prefab   = "kyno_roe_jellyfish",
@@ -160,9 +159,12 @@ local fishes         =
 		roe_time     = TUNING.JELLYFISH_ROETIME,
 		baby_time    = TUNING.JELLYFISH_BABYTIME,
 		
+		phases       = ALL_PHASES,
+		moonphases   = ALL_MOONPHASES,
 		seasons      = ALL_SEASONS,
+		worlds       = ALL_WORLDS,
 	},
-	
+	--[[
 	kyno_jellyfish_rainbow =
 	{
 		roe_prefab   = "kyno_roe_jellyfish_rainbow",
@@ -171,10 +173,12 @@ local fishes         =
 		roe_time     = TUNING.JELLYFISH_RAINBOW_ROETIME,
 		baby_time    = TUNING.JELLYFISH_RAINBOW_BABYTIME,
 		
+		phases       = { "dusk", "night" },
+		moonphases   = ALL_MOONPHASES,
 		seasons      = ALL_SEASONS,
+		worlds       = ALL_WORLDS,
 	},
 	]]--
-	
 	kyno_salmonfish  =
 	{
 		roe_prefab   = "kyno_roe_salmonfish",

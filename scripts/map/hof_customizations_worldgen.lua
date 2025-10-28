@@ -3,49 +3,50 @@ local map = require("map/forest_map")
 local customizations_worldgen =
 {	
 	-- WORLDGEN
-	aloes           = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 0,  world = {"forest"}},
-	asparaguses     = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 1,  world = {"forest", "cave"}},
-	fennels         = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 2,  world = {"cave"}},
-	giantparznips   = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 3,  world = {"cave"}},
-	mushstumps      = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 4,  world = {"forest", "cave"}},
-	truffles        = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 5,  world = {"forest"}},
-	parznips        = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 6,  world = {"cave"}},
-	radishes        = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 7,  world = {"forest"}},
-	rockflippables  = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 8,  world = {"forest", "cave"}},
-	sweetpotatoes   = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 9,  world = {"forest"}},
-	turnips         = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 10, world = {"forest", "cave"}},
-	wildwheats      = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof", order = 11, world = {"forest"}},
+	aloes           = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 0,  world = {"forest"}},
+	asparaguses     = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 1,  world = {"forest", "cave"}},
+	fennels         = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 2,  world = {"cave"}},
+	giantparznips   = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 3,  world = {"cave"}},
+	mushstumps      = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 4,  world = {"forest", "cave"}},
+	truffles        = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 5,  world = {"forest"}},
+	parznips        = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 6,  world = {"cave"}},
+	radishes        = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 7,  world = {"forest"}},
+	rockflippables  = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 8,  world = {"forest", "cave"}},
+	sweetpotatoes   = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 9,  world = {"forest"}},
+	turnips         = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 10, world = {"forest", "cave"}},
+	wildwheats      = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 11, world = {"forest"}},
 	
 	-- OCEANGEN
-	lotusplants     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean", order = 0, world = {"forest"}},
-	oceancrates     = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean", order = 1, world = {"forest"}},
-	oceanwrecks     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean", order = 2, world = {"forest"}},
-	seacucumbers    = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean", order = 3, world = {"forest"}},
-	taroroots       = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean", order = 4, world = {"forest"}},
-	waterycresses   = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean", order = 5, world = {"forest"}},
-	weedsea         = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean", order = 6, world = {"forest"}},
+	jellyfishes     = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 0,  world = {"forest"}},
+	lotusplants     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean",    order = 1,  world = {"forest"}},
+	oceancrates     = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 2,  world = {"forest"}},
+	oceanwrecks     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean",    order = 3,  world = {"forest"}},
+	seacucumbers    = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 4,  world = {"forest"}},
+	taroroots       = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 5,  world = {"forest"}},
+	waterycresses   = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 6,  world = {"forest"}},
+	weedsea         = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 7,  world = {"forest"}},
 	
 	-- SERENITYISLAND
- -- serenityisland  = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 0, world = {"forest"}},
-	chickens        = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 1, world = {"forest"}},
-	pebblecrabs     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 2, world = {"forest"}},
-	saltponds       = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 3, world = {"forest"}},
-	spotbushes      = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 4, world = {"forest"}},
-	sugarflowers    = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 5, world = {"forest"}},
-	sugartrees      = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_serenity", order = 6, world = {"forest"}},
+ -- serenityisland  = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity", order = 0,  world = {"forest"}},
+	chickens        = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity", order = 1,  world = {"forest"}},
+	pebblecrabs     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity", order = 2,  world = {"forest"}},
+	saltponds       = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity", order = 3,  world = {"forest"}},
+	spotbushes      = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity", order = 4,  world = {"forest"}},
+	sugarflowers    = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity", order = 5,  world = {"forest"}},
+	sugartrees      = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity", order = 6,  world = {"forest"}},
 	
 	-- MEADOWISLAND
- -- meadowisland    = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 0,  world = {"forest"}},
-	fishermermhuts  = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 1,  world = {"forest"}},
-	islandcrates    = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 5,  world = {"forest"}},
-	kokonuttrees    = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 3,  world = {"forest"}},
-	limpetrocks     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 4,  world = {"forest"}},
-	mermhuts        = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 2,  world = {"forest"}},
-	pikotrees       = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 6,  world = {"forest"}},
-	pineapplebushes = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 7,  world = {"forest"}},
-	sandhills       = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 8,  world = {"forest"}},
-	teatrees        = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 9,  world = {"forest"}},
-	tidalpools      = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions", group = "hof_meadow", order = 10, world = {"forest"}},
+ -- meadowisland    = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_meadow", order = 0,    world = {"forest"}},
+	fishermermhuts  = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_meadow", order = 1,    world = {"forest"}},
+	islandcrates    = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_meadow", order = 5,    world = {"forest"}},
+	kokonuttrees    = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_meadow", order = 3,    world = {"forest"}},
+	limpetrocks     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_meadow", order = 4,    world = {"forest"}},
+	mermhuts        = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_meadow", order = 2,    world = {"forest"}},
+	pikotrees       = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_meadow", order = 6,    world = {"forest"}},
+	pineapplebushes = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_meadow", order = 7,    world = {"forest"}},
+	sandhills       = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_meadow", order = 8,    world = {"forest"}},
+	teatrees        = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_meadow", order = 9,    world = {"forest"}},
+	tidalpools      = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_meadow", order = 10,   world = {"forest"}},
 }
 
 map.TRANSLATE_TO_PREFABS["aloes"]           = {"kyno_aloe_ground"}
@@ -60,6 +61,7 @@ map.TRANSLATE_TO_PREFABS["sweetpotatoes"]   = {"kyno_sweetpotato_ground"}
 map.TRANSLATE_TO_PREFABS["turnips"]         = {"kyno_turnip_ground"}
 map.TRANSLATE_TO_PREFABS["wildwheats"]      = {"kyno_wildwheat"}
 
+map.TRANSLATE_TO_PREFABS["jellyfishes"]     = {"kyno_jellyfish_ocean", "kyno_jellyfish_spawner"}
 map.TRANSLATE_TO_PREFABS["lotusplants"]     = {"kyno_lotus_ocean"}
 map.TRANSLATE_TO_PREFABS["oceancrates"]     = {"kyno_watery_crate", "kyno_serenityisland_crate", "kyno_serenityisland_crate_spawner"}
 map.TRANSLATE_TO_PREFABS["seacucumbers"]    = {"kyno_cucumber_ground"}

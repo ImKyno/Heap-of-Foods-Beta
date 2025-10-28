@@ -12,6 +12,7 @@ local assets =
 	Asset("ANIM", "anim/kyno_meatrack_crabkingmeat.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_poison_froglegs.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_moon_froglegs.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_jellyfish.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -35,6 +36,8 @@ local prefabs =
 	"kyno_crabkingmeat",
 	"kyno_poison_froglegs",
 	"kyno_moon_froglegs",
+	"kyno_jellyfish",
+	"kyno_jellyfish_dead",
 	
 	"spoiled_food",
 }
@@ -369,6 +372,27 @@ local function fn_crabkingmeat()
 	return inst
 end
 
+local function fn_jellyfish()
+	local inst = meat_fn("kyno_meatrack_jellyfish", "kyno_meatrack_jellyfish", "kyno_jellyfish_idle", "kyno_jellyfish_dried")
+	
+	inst:AddTag("fish")
+	inst:AddTag("fishmeat")
+	inst:AddTag("catfood")
+	
+	if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst.components.tradable.goldvalue = 1
+	
+	inst.components.edible.healthvalue = TUNING.KYNO_JELLYFISH_DRIED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_JELLYFISH_DRIED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_JELLYFISH_DRIED_SANITY
+	inst.components.edible.secondaryfoodtype = FOODTYPE.MONSTER
+	
+	return inst
+end
+
 return Prefab("kyno_red_cap_dried", fn_red, assets, prefabs),
 Prefab("kyno_green_cap_dried", fn_green, assets, prefabs),
 Prefab("kyno_blue_cap_dried", fn_blue, assets, prefabs),
@@ -378,4 +402,5 @@ Prefab("kyno_humanmeat_dried", fn_humanmeat, assets, prefabs),
 Prefab("kyno_seaweeds_dried", fn_seaweeds, assets, prefabs),
 Prefab("kyno_pigskin_dried", fn_pigskin, assets, prefabs),
 Prefab("kyno_crabmeat_dried", fn_crabmeat, assets, prefabs),
-Prefab("kyno_crabkingmeat_dried", fn_crabkingmeat, assets, prefabs)
+Prefab("kyno_crabkingmeat_dried", fn_crabkingmeat, assets, prefabs),
+Prefab("kyno_jellyfish_dried", fn_jellyfish, assets, prefabs)

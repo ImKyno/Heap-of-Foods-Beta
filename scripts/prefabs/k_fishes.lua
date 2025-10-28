@@ -109,7 +109,7 @@ local function commonfn(bank, build, char_anim_build, data)
 	inst:AddTag("pondfish")
     inst:AddTag("meat")
     inst:AddTag("catfood")
-	inst:AddTag("smallcreature")
+	inst:AddTag("smalloceancreature")
 
 	if data.weight_min ~= nil and data.weight_max ~= nil then
 		inst:AddTag("weighable_fish")

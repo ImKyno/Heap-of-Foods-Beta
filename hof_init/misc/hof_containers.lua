@@ -359,3 +359,8 @@ function params.fishfarmplot.itemtestfn(container, item, slot)
 	
 	return false
 end
+
+-- Tin Fishing' Bin accepts more kinds of fish.
+function containers.params.fish_box.itemtestfn(container, item, slot)
+    return item:HasAnyTag("smalloceancreature", "fish_box_valid")
+end

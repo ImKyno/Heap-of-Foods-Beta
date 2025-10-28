@@ -30,12 +30,14 @@ local ScrapbookScreen  = require("screens/redux/scrapbookscreen")
 ]]--
 
 -- Vanilla: red_cap, green_cap, blue_cap, moon_cap, plantmeat, monsterlasagna, lordfruitfly
--- potatosack, seeds, chum, barnacle, kelp, sharkboi
+-- potatosack, seeds, chum, barnacle, kelp, sharkboi, ghost
 table.insert(ScrapbookData.lordfruitfly.deps, "blueprint")
 table.insert(ScrapbookData.sharkboi.deps, "blueprint")
 
 ScrapbookData.chum.fueltype = "FISHFOOD"
 ScrapbookData.chum.fuelvalue = 270
+
+ScrapbookData.ghost.subcat = "ghost"
 
 -- Sample deps for preparedfoods. Some special foods are likely to use their own deps though.
 local preparedfood_deps =
@@ -3832,7 +3834,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank            = "kyno_roe",
 		build           = "kyno_roe",
 		anim            = "idle_jellyfish",
-		deps            = {"kyno_roe_cooked", "spoiled_food"}, -- kyno_jellyfish
+		deps            = {"kyno_jellyfish_ocean", "kyno_roe_cooked", "spoiled_food"},
 	},
 	
 	kyno_roe_jellyfish_rainbow =
@@ -4853,6 +4855,57 @@ local HOF_SCRAPBOOK_FOODS =
 		deps            = {"grotto_pool_big", "ice", "fishmeat", "meatrack", "meatrack_hermit", "meat_dried", "spoiled_fish"}, -- kyno_fishmeat_dried
 		specialinfo     = "FOODEFFECTS_DECREASETEMP",
 	},
+	
+	kyno_jellyfish_dead =
+	{
+		name           = "kyno_jellyfish_dead", 
+		type           = "food",
+		tex            = "kyno_jellyfish_dead.tex",
+		prefab         = "kyno_jellyfish_dead",
+		healthvalue    = 10,
+		hungervalue    = 10,
+		sanityvalue    = 0,
+		perishable     = 1440,
+		foodtype       = "MEAT",
+		bank           = "kyno_jellyfish",
+		build          = "kyno_jellyfish",
+		anim           = "idle_ground",
+		deps           = {"kyno_jellyfish_ocean", "kyno_jellyfish_cooked", "kyno_jellyfish_dried", "meatrack", "meatrack_hermit", "spoiled_food"},
+	},
+	
+	kyno_jellyfish_cooked =
+	{
+		name           = "kyno_jellyfish_cooked", 
+		type           = "food",
+		tex            = "kyno_jellyfish_cooked.tex",
+		prefab         = "kyno_jellyfish_cooked",
+		healthvalue    = 10,
+		hungervalue    = 18.75,
+		sanityvalue    = 0,
+		perishable     = 2880,
+		foodtype       = "MEAT",
+		bank           = "kyno_jellyfish",
+		build          = "kyno_jellyfish",
+		anim           = "cooked",
+		deps           = {"kyno_jellyfish_dead", "spoiled_food"},
+	},
+	
+	kyno_jellyfish_dried =
+	{
+		name           = "kyno_jellyfish_dried", 
+		type           = "food",
+		tex            = "kyno_jellyfish_dried.tex",
+		prefab         = "kyno_jellyfish_dried",
+		healthvalue    = 15,
+		hungervalue    = 25,
+		sanityvalue    = 5,
+		perishable     = 9600,
+		foodtype       = "MEAT",
+		bank           = "kyno_meatrack_jellyfish",
+		build          = "kyno_meatrack_jellyfish",
+		anim           = "kyno_jellyfish_idle",
+		deps           = {"kyno_jellyfish_dead", "spoiled_food"},
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS =
@@ -4936,8 +4989,8 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		tex            = "jellyopop.tex",
         prefab         = "jellyopop",
 		healthvalue    = 20,
-		hungervalue    = 12.5,
-		sanityvalue    = 0,
+		hungervalue    = 18.75,
+		sanityvalue    = 10,
         perishable     = 1440,
         foodtype       = "MEAT",
 		burnable       = true,
@@ -14350,6 +14403,40 @@ local HOF_SCRAPBOOK_CREATURES =
 		deps           = {"kyno_meadowisland_shop", "kyno_meadowisland_mermcart", "kyno_sammyhat"},
 		specialinfo    = "SAMMY",
 	},
+	
+	kyno_ghost_pirate  =
+	{
+		name           = "kyno_ghost_pirate",
+		type           = "creature",
+		subcat         = "ghost",
+		tex            = "kyno_ghost_pirate.tex",
+		prefab         = "kyno_ghost_pirate",
+		sanityaura     = -0.66666666666667, 
+		health         = 200, 
+		damage         = 15,
+		bank           = "ghost",
+		build          = "ghost_pirate_build",
+		anim           = "idle",
+		scale          = .8,
+		animoffsetx    = -5,
+		animoffsety    = -15,
+		deps           = {"kyno_ocean_wreck"},
+	},
+	
+	kyno_jellyfish_ocean =
+	{
+		name           = "kyno_jellyfish_ocean",
+		speechname     = "kyno_jellyfish",
+		type           = "creature",
+		tex            = "kyno_jellyfish_ocean.tex",
+		prefab         = "kyno_jellyfish_ocean",
+		health         = 50,
+		perishable     = 1440,
+		bank           = "kyno_jellyfish",
+		build          = "kyno_jellyfish",
+		anim           = "idle",
+		deps           = {"kyno_jellyfish_dead", "kyno_roe_jellyfish"},
+	},
 }
 
 local HOF_SCRAPBOOK_THINGS =
@@ -14940,7 +15027,7 @@ local HOF_SCRAPBOOK_THINGS =
 		bank           = "shipwreck",
 		build          = "kyno_ocean_wreck",
 		anim           = "idle_full3",
-		deps           = {"ghost", "boards", "kyno_limpets"},
+		deps           = {"kyno_ghost_pirate", "boards", "kyno_limpets"},
 	},
 	
 	kyno_woodenkeg     =

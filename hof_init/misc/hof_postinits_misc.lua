@@ -835,6 +835,68 @@ end
 
 AddPrefabPostInit("saddle_shadow_fx", SaddleShadowPostInit)
 
+-- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
+-- Correct animations for Jellyfish inside Scale-o-Matic.
+local function TrophyScaleFishPostInit(inst)	
+	local function SetFish(inst, item_data)
+		if item_data then
+			if item_data.prefab == "kyno_jellyfish" then
+				inst.AnimState:SetBank("trophyscale_fish_kyno_jellyfish")
+				inst.AnimState:HideSymbol("eel_head")
+			elseif item_data.prefab == "kyno_jellyfish_rainbow" then
+				-- inst.AnimState:SetBank("trophyscale_fish_kyno_jellyfish_rainbow")
+				inst.AnimState:HideSymbol("eel_head")
+			else
+				inst.AnimState:SetBank("scale_o_matic")
+			end
+
+			if item_data.prefab == "kyno_jellyfish_rainbow" then
+				-- local light = _G.SpawnPrefab("kyno_jellyfish_rainbow_light")
+				light.components.spell:SetTarget(inst)
+				
+				if light:IsValid() then
+					if not light.components.spell.target then
+						light:Remove()
+					else
+						light.components.spell:StartSpell()
+						light:StopUpdatingComponent(light.components.spell)
+					end
+				end
+			else
+				if inst.wormlight then
+					inst.wormlight.components.spell:OnFinish()
+				end
+			end
+		end
+	end
+
+	local function onnewtrophy(inst, data_old_and_new)
+		local data_new = data_old_and_new.new
+		SetFish(inst, data_new)
+	end
+
+	if not _G.TheWorld.ismastersim then
+		return
+	end
+
+	local _OnLoad = inst.OnLoad
+	
+	inst.OnLoad = function(inst, ...)
+		if inst.components.trophyscale ~= nil then
+			local item_data = inst.components.trophyscale:GetItemData()
+			SetFish(inst, item_data)
+		end
+
+		if _OnLoad ~= nil then
+			_OnLoad(inst, ...)
+		end
+	end
+
+	inst:ListenForEvent("onnewtrophy", OnNewTrophy)
+end
+
+AddPrefabPostInit("trophyscale_fish", TrophyScaleFishPostInit)
+
 -- Extra distance for Fish Hatchery.
 -- Why these morons at klei didn't add a self.containerdistance?
 AddComponentPostInit("container", function(self)

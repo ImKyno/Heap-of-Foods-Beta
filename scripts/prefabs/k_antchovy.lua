@@ -94,9 +94,9 @@ local function fn()
 	inst:AddTag("fish")
 	inst:AddTag("meat")
 	inst:AddTag("catfood")
-	inst:AddTag("smallcreature")
+	inst:AddTag("smalloceancreature")
 	inst:AddTag("antchovy")
-	-- inst:AddTag("weighable_fish")
+	inst:AddTag("weighable_fish")
 
 	inst.entity:SetPristine()
 

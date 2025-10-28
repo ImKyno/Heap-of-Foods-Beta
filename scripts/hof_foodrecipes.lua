@@ -38,19 +38,19 @@ local kyno_foods =
 	
 	jellyopop = 
 	{
-		test = function(cooker, names, tags) return tags.fish and tags.frozen and names.twigs end,
+		test = function(cooker, names, tags) return tags.jellyfish and tags.frozen and names.twigs end,
 		priority = 20,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SUPERFAST,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 20,
-		hunger = 12.5,
-		sanity = 0,
+		hunger = 18.75,
+		sanity = 10,
 		cooktime = 0.5,
 		potlevel = "med",
 		floater = TUNING.HOF_FLOATER,
-		card_def = {ingredients = {{"pondfish", 1}, {"ice", 1}, {"twigs", 1}}},
+		card_def = {ingredients = {{"kyno_jellyfish", 1}, {"ice", 1}, {"twigs", 1}}},
 	},
 	
 	sharkfinsoup = 

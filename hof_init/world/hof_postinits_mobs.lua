@@ -578,6 +578,23 @@ end
 
 AddPrefabPostInit("sharkboi", SharkBoiPostInit)
 
+-- New fish that can be stored inside Tin Fishing' Bin.
+local fishes =
+{
+	"fish",
+	"eel",
+	"pondfish",
+	"pondeel",
+}
+
+local function FishPostInit(inst)
+	inst:AddTag("fish_box_valid")
+end
+
+for k, v in pairs(fishes) do
+	AddPrefabPostInit(v, FishPostInit)
+end
+
 -- Leonidas remember me to not put LootTables inside postinit again, otherwise it will 
 -- increase the drop by +1 each time the entity spawns.
 local function ApplyLootTables()
