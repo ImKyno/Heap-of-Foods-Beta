@@ -3,26 +3,26 @@ STRINGS.SKIN_NAMES.ms_
 STRINGS.SKIN_DESCRIPTIONS.ms_
 ]]--
 
-STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_cakestand = "Cake Stand"
-STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_cakestand = "A fine stand for showing off the best cakes around."
+STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_cakestand = "蛋糕架"
+STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_cakestand = "一个精美的展示架，专为陈列最精美的蛋糕而设。"
 
-STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_fridge = "Fridge Display"
-STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_fridge = "This display stand has been refined with the most recent cooling functions!"
+STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_fridge = "冰箱展示"
+STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_fridge = "这款展示架已升级至最新的冷却功能！"
 
-STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_icebox = "Ice Cooler Box"
-STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_icebox = "A rudimentar way of keeping food fresh."
+STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_icebox = "冰镇箱"
+STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_icebox = "一种保持食物新鲜的原始方法。"
 
-STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_marble = "Marble Stand"
-STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_marble = "A stylish and luxurious display case."
+STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_marble = "大理石支架"
+STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_marble = "一款时尚而奢华的展示柜。"
 
-STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_marbledome = "Marble Dome"
-STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_marbledome = "This glass can withstand almost everything and keep your prizes protected."
+STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_marbledome = "大理石圆顶"
+STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_marbledome = "这款玻璃几乎能抵御一切冲击，让您的珍品得到周全保护。"
 
-STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_quagmire = "Altar of The Gnaw"
-STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_quagmire = "The beast's hunger is insatiable! It craves more food!"
+STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_quagmire = "饕餮祭坛"
+STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_quagmire = "野兽的饥渴永无止境！它渴求更多的食物！"
 
-STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_traystand = "Traystand"
-STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_traystand = "A simple and stylish display for those who enjoy country life."
+STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_traystand = "托盘架"
+STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_traystand = "为热爱田园生活的人们打造的简约时尚展示架。"
 
-STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_yotp = "Pig Fiesta Stand"
-STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_yotp = "Celebrate the Year of the Pig with this themed display stand!" 
+STRINGS.SKIN_NAMES.ms_kyno_itemshowcaser_yotp = "猪年嘉年华摊位"
+STRINGS.SKIN_DESCRIPTIONS.ms_kyno_itemshowcaser_yotp = "用这款猪年主题展示架欢庆猪年！" 
