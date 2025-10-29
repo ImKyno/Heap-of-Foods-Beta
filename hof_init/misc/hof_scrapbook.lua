@@ -3855,7 +3855,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank            = "kyno_roe",
 		build           = "kyno_roe",
 		anim            = "idle_jellyfish_rainbow",
-		deps            = {"kyno_roe_cooked", "spoiled_food"}, -- kyno_jellyfish_rainbow
+		deps            = {"kyno_jellyfish_rainbow_ocean", "kyno_roe_cooked", "spoiled_food"},
 	},
 	
 	kyno_roe_salmonfish =
@@ -4873,6 +4873,24 @@ local HOF_SCRAPBOOK_FOODS =
 		deps           = {"kyno_jellyfish_ocean", "kyno_jellyfish_cooked", "kyno_jellyfish_dried", "meatrack", "meatrack_hermit", "spoiled_food"},
 	},
 	
+	kyno_jellyfish_rainbow_dead =
+	{
+		name           = "kyno_jellyfish_rainbow_dead", 
+		type           = "food",
+		tex            = "kyno_jellyfish_rainbow_dead.tex",
+		prefab         = "kyno_jellyfish_rainbow_dead",
+		healthvalue    = 10,
+		hungervalue    = 10,
+		sanityvalue    = 10,
+		perishable     = 1440,
+		foodtype       = "MEAT",
+		bank           = "kyno_jellyfish_rainbow",
+		build          = "kyno_jellyfish_rainbow",
+		anim           = "idle_ground",
+		deps           = {"kyno_jellyfish_rainbow_ocean", "kyno_jellyfish_rainbow_cooked", "kyno_jellyfish_dried", "meatrack", "meatrack_hermit", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_WORMLIGHT",
+	},
+	
 	kyno_jellyfish_cooked =
 	{
 		name           = "kyno_jellyfish_cooked", 
@@ -4888,6 +4906,23 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_jellyfish",
 		anim           = "cooked",
 		deps           = {"kyno_jellyfish_dead", "spoiled_food"},
+	},
+	
+	kyno_jellyfish_rainbow_cooked =
+	{
+		name           = "kyno_jellyfish_rainbow_cooked", 
+		type           = "food",
+		tex            = "kyno_jellyfish_rainbow_cooked.tex",
+		prefab         = "kyno_jellyfish_rainbow_cooked",
+		healthvalue    = 10,
+		hungervalue    = 18.75,
+		sanityvalue    = 10,
+		perishable     = 2880,
+		foodtype       = "MEAT",
+		bank           = "kyno_jellyfish_rainbow",
+		build          = "kyno_jellyfish_rainbow",
+		anim           = "cooked",
+		deps           = {"kyno_jellyfish_rainbow_dead", "spoiled_food"},
 	},
 	
 	kyno_jellyfish_dried =
@@ -13545,7 +13580,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		subcat         = "agedroe",
 		tex            = "agedroe_jellyfish.tex",
         prefab         = "agedroe_jellyfish",
-		healthvalue    = 10,
+		healthvalue    = 15,
 		hungervalue    = 15,
 		sanityvalue    = 0,
         perishable     = 9600,
@@ -13570,9 +13605,9 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		subcat         = "agedroe",
 		tex            = "agedroe_jellyfish_rainbow.tex",
         prefab         = "agedroe_jellyfish_rainbow",
-		healthvalue    = 10,
+		healthvalue    = 15,
 		hungervalue    = 15,
-		sanityvalue    = 10,
+		sanityvalue    = 15,
         perishable     = 9600,
         foodtype       = "MEAT",
 		burnable       = true,
@@ -13585,6 +13620,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		animoffsetbgx  = -20,
 		animoffsetbgy  = -100,
 		deps           = {"kyno_preservesjar", "kyno_roe_jellyfish_rainbow", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_WORMLIGHT2",
 	},
 	
 	agedroe_salmonfish =
@@ -14436,6 +14472,22 @@ local HOF_SCRAPBOOK_CREATURES =
 		build          = "kyno_jellyfish",
 		anim           = "idle",
 		deps           = {"kyno_jellyfish_dead", "kyno_roe_jellyfish"},
+	},
+	
+	kyno_jellyfish_rainbow_ocean =
+	{
+		name           = "kyno_jellyfish_rainbow_ocean",
+		speechname     = "kyno_jellyfish_rainbow",
+		type           = "creature",
+		tex            = "kyno_jellyfish_rainbow_ocean.tex",
+		prefab         = "kyno_jellyfish_rainbow_ocean",
+		health         = 50,
+		perishable     = 1440,
+		bank           = "kyno_jellyfish_rainbow",
+		build          = "kyno_jellyfish_rainbow",
+		anim           = "idle",
+		deps           = {"kyno_jellyfish_rainbow_dead", "kyno_roe_jellyfish_rainbow"},
+		specialinfo    = "JELLYFISH_RAINBOW",
 	},
 }
 

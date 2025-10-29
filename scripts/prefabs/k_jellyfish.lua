@@ -78,6 +78,12 @@ local function SetNewHome(inst)
 	inst:DoTaskInTime(1, SetHome) -- Set home again.
 end
 
+local function SleepTest(inst, isday, isdusk, isnight)
+	if isday or isnight then
+		return false
+	end
+end
+
 local function OnDroppedAsLoot(inst, data)
 	if data ~= nil and data.dropper ~= nil then
 		inst.components.weighable.prefab_override_owner = data.dropper.prefab
@@ -93,11 +99,11 @@ local function PlayShockAnim(inst)
 	if inst.components.floater and inst.components.floater:IsFloating() then
 		inst.AnimState:PlayAnimation("idle_water_shock")
 		inst.AnimState:PushAnimation("idle_water", true)
-		inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/lightninggoat/jacobshorn")
+		inst.SoundEmitter:PlaySound("hof_sounds/creatures/jellyfish/shock_water")
 	else
 		inst.AnimState:PlayAnimation("idle_ground_shock")
 		inst.AnimState:PushAnimation("idle_ground", true)
-		inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/lightninggoat/jacobshorn")
+		inst.SoundEmitter:PlaySound("hof_sounds/creatures/jellyfish/shock_land")
 	end
 end
 
@@ -194,22 +200,23 @@ local function fn()
 	inst:AddComponent("inspectable")
     inst:AddComponent("knownlocations")
 	inst:AddComponent("homeseeker")
+	inst:AddComponent("combat")
 
     inst:AddComponent("locomotor")
 	inst.components.locomotor.walkspeed = TUNING.KYNO_JELLYFISH_WALKSPEED
 	inst.components.locomotor.pathcaps = { allowocean = true, ignoreLand = true }
 
-	inst:AddComponent("combat")
-	inst.components.combat:SetHurtSound("ia/creatures/jellyfish/hit")
-
     inst:AddComponent("health")
     inst.components.health:SetMaxHealth(TUNING.KYNO_JELLYFISH_OCEAN_HEALTH)
+	
+	inst:AddComponent("eater")
+	inst.components.eater:SetDiet({ FOODGROUP.VEGETARIAN }, { FOODGROUP.VEGETARIAN })
 
     inst:AddComponent("lootdropper")
     inst.components.lootdropper:SetLoot({"kyno_jellyfish_dead"})
 
 	inst:AddComponent("sleeper")
-	inst.components.sleeper.onlysleepsfromitems = true
+	inst.components.sleeper:SetSleepTest(SleepTest)
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.NET)
@@ -269,7 +276,7 @@ local function jellyfish()
 	inst.components.cookable.product = "kyno_jellyfish_cooked"
 	
 	inst:AddComponent("health")
-	inst.components.health.murdersound = "ia/creatures/jellyfish/death_murder"
+	inst.components.health.murdersound = "hof_sounds/creatures/jellyfish/murder"
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"kyno_jellyfish_dead"})

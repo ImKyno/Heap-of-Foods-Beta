@@ -20,13 +20,14 @@ local customizations_worldsettings =
 	
 	-- OCEANSETTING
 	jellyfishes_setting      = {category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_ocean_r",    order = 0,   world = {"forest"}},
-	lotusplants_setting      = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 1,   world = {"forest"}},
-	oceancrates_setting      = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 2,   world = {"forest"}},
-	oceanwrecks_setting      = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 3,   world = {"forest"}},
-	seacucumbers_setting     = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 4,   world = {"forest"}},
-	taroroots_setting        = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 5,   world = {"forest"}},
-	waterycresses_setting    = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 6,   world = {"forest"}},
-	weedsea_setting          = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 7,   world = {"forest"}},
+	jellyfishes2_setting     = {category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_ocean_r",    order = 1,   world = {"forest"}},
+	lotusplants_setting      = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 2,   world = {"forest"}},
+	oceancrates_setting      = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 3,   world = {"forest"}},
+	oceanwrecks_setting      = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 4,   world = {"forest"}},
+	seacucumbers_setting     = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 5,   world = {"forest"}},
+	taroroots_setting        = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 6,   world = {"forest"}},
+	waterycresses_setting    = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 7,   world = {"forest"}},
+	weedsea_setting          = {category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 8,   world = {"forest"}},
 	
 	-- SERENITYSETTING
 	chickens_setting         = {category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_serenity_r", order = 0,   world = {"forest"}},
@@ -556,13 +557,43 @@ WSO.Pre.jellyfishes_setting = function(difficulty)
 		many = 
 		{
 			KYNO_JELLYFISH_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 2,
-			KYNO_JELLYFISH_AMOUNT = 3,
+			KYNO_JELLYFISH_AMOUNT = 4,
 		},
             
 		always = 
 		{
 			KYNO_JELLYFISH_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 1,
-			KYNO_JELLYFISH_AMOUNT = 4,
+			KYNO_JELLYFISH_AMOUNT = 5,
+		},
+	}
+	
+	OverrideTuningVariables(tuning_vars[difficulty])
+end
+
+WSO.Pre.jellyfishes2_setting = function(difficulty)
+	local tuning_vars =
+	{
+		never = 
+		{
+			KYNO_JELLYFISH_RAINBOW_ENABLED = false,
+		},
+
+		few = 
+		{
+			KYNO_JELLYFISH_RAINBOW_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 8,
+			KYNO_JELLYFISH_RAINBOW_AMOUNT = 1,
+		},
+		
+		many = 
+		{
+			KYNO_JELLYFISH_RAINBOW_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 2,
+			KYNO_JELLYFISH_RAINBOW_AMOUNT = 2,
+		},
+            
+		always = 
+		{
+			KYNO_JELLYFISH_RAINBOW_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 1,
+			KYNO_JELLYFISH_RAINBOW_AMOUNT = 3,
 		},
 	}
 	

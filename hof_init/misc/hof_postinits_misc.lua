@@ -844,14 +844,14 @@ local function TrophyScaleFishPostInit(inst)
 				inst.AnimState:SetBank("trophyscale_fish_kyno_jellyfish")
 				inst.AnimState:HideSymbol("eel_head")
 			elseif item_data.prefab == "kyno_jellyfish_rainbow" then
-				-- inst.AnimState:SetBank("trophyscale_fish_kyno_jellyfish_rainbow")
+				inst.AnimState:SetBank("trophyscale_fish_kyno_jellyfish_rainbow")
 				inst.AnimState:HideSymbol("eel_head")
 			else
 				inst.AnimState:SetBank("scale_o_matic")
 			end
 
 			if item_data.prefab == "kyno_jellyfish_rainbow" then
-				-- local light = _G.SpawnPrefab("kyno_jellyfish_rainbow_light")
+				local light = _G.SpawnPrefab("kyno_jellyfish_rainbow_light")
 				light.components.spell:SetTarget(inst)
 				
 				if light:IsValid() then

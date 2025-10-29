@@ -17,14 +17,16 @@ local customizations_worldgen =
 	wildwheats      = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",          order = 11, world = {"forest"}},
 	
 	-- OCEANGEN
-	jellyfishes     = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 0,  world = {"forest"}},
-	lotusplants     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean",    order = 1,  world = {"forest"}},
-	oceancrates     = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 2,  world = {"forest"}},
-	oceanwrecks     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean",    order = 3,  world = {"forest"}},
-	seacucumbers    = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 4,  world = {"forest"}},
-	taroroots       = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 5,  world = {"forest"}},
-	waterycresses   = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 6,  world = {"forest"}},
-	weedsea         = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 7,  world = {"forest"}},
+	antchovies      = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 0,  world = {"forest"}},
+	jellyfishes     = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 1,  world = {"forest"}},
+	jellyfishes2    = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 2,  world = {"forest"}},
+	lotusplants     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean",    order = 3,  world = {"forest"}},
+	oceancrates     = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 4,  world = {"forest"}},
+	oceanwrecks     = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean",    order = 5,  world = {"forest"}},
+	seacucumbers    = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 6,  world = {"forest"}},
+	taroroots       = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 7,  world = {"forest"}},
+	waterycresses   = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 8,  world = {"forest"}},
+	weedsea         = {category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",    order = 9,  world = {"forest"}},
 	
 	-- SERENITYISLAND
  -- serenityisland  = {category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity", order = 0,  world = {"forest"}},
@@ -61,7 +63,9 @@ map.TRANSLATE_TO_PREFABS["sweetpotatoes"]   = {"kyno_sweetpotato_ground"}
 map.TRANSLATE_TO_PREFABS["turnips"]         = {"kyno_turnip_ground"}
 map.TRANSLATE_TO_PREFABS["wildwheats"]      = {"kyno_wildwheat"}
 
+map.TRANSLATE_TO_PREFABS["antchovies"]      = {"kyno_antchovy_spawner"}
 map.TRANSLATE_TO_PREFABS["jellyfishes"]     = {"kyno_jellyfish_ocean", "kyno_jellyfish_spawner"}
+map.TRANSLATE_TO_PREFABS["jellyfishes2"]    = {"kyno_jellyfish_rainbow_ocean", "kyno_jellyfish_rainbow_spawner"}
 map.TRANSLATE_TO_PREFABS["lotusplants"]     = {"kyno_lotus_ocean"}
 map.TRANSLATE_TO_PREFABS["oceancrates"]     = {"kyno_watery_crate", "kyno_serenityisland_crate", "kyno_serenityisland_crate_spawner"}
 map.TRANSLATE_TO_PREFABS["seacucumbers"]    = {"kyno_cucumber_ground"}

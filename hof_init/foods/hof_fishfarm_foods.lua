@@ -164,7 +164,7 @@ local fishes         =
 		seasons      = ALL_SEASONS,
 		worlds       = ALL_WORLDS,
 	},
-	--[[
+
 	kyno_jellyfish_rainbow =
 	{
 		roe_prefab   = "kyno_roe_jellyfish_rainbow",
@@ -178,7 +178,7 @@ local fishes         =
 		seasons      = ALL_SEASONS,
 		worlds       = ALL_WORLDS,
 	},
-	]]--
+
 	kyno_salmonfish  =
 	{
 		roe_prefab   = "kyno_roe_salmonfish",

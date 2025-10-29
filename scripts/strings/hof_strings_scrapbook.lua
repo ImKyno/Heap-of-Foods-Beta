@@ -36,6 +36,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERREGEN = "Gives off hunger regene
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SANITYREGEN = "Gives off sanity regeneration for a short period."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUPERREGEN = "Gives off super body regeneration for a short period."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WORMLIGHT = "Gives off a healthy glow for a short period."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WORMLIGHT2 = "Gives off a healthy glow for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ALCOHOL = "Increased damage and decreased movement speed for a certain amount of time. Drink in moderation."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ALCOHOL2 = "Increased damage resistance and decreased movement speed for a certain amount of time. Drink in moderation."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RUM = "Increased damage against pirates for a certain amount of time.\n\nNeither the flames nor the depths could claim me."
@@ -139,6 +140,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "Attracts the Malbatross when thr
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Can be feed with seeds to lay down an egg."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Fluffy little buddies that loves to steal your most valuable items!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Kingfishers will often drop Tropical Kois from above. It's raining fish, literally!"
+STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emits a colorful healthy glow during dusk and night."
 
 -- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "A Merchant from a distant archipelago. He's willing to trade his best cooking utensils and other useful items for delicious meals.\n\nThe Elder is craving for a meal with extreme sweetness or Butter mescled with seafood. He will reward you accordingly.\n\nBringing Elder's favourtie meal will unlock more trade deals."

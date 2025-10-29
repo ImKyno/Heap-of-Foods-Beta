@@ -90,7 +90,7 @@ local states =
         onenter = function(inst)
             inst.Physics:Stop()
             inst.AnimState:PlayAnimation("idle3", true)
-            inst.sg:SetTimeout(2+math.random()*4)
+            inst.sg:SetTimeout(2 + math.random() * 4)
         end,
 
         ontimeout= function(inst)
@@ -115,7 +115,7 @@ local states =
 			
             inst.components.lootdropper:DropLoot(inst:GetPosition())
 			
-			if inst.components.inventory then
+			if inst.components.inventory ~= nil then
 				inst.components.inventory:DropEverything(false, true)
 			end
         end,
@@ -153,4 +153,4 @@ CommonStates.AddWalkStates(states,
 	stopwalk 	= "walk_pst",
 })
 
-return StateGraph("kyno_pebblecrab", states, events, "idle", actionhandlers)
+return StateGraph("serenitycrab", states, events, "idle", actionhandlers)

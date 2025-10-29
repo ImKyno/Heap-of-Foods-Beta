@@ -1110,7 +1110,7 @@ local kyno_foods_jar =
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_PRESERVED,
-		health = 10,
+		health = 15,
 		hunger = 15,
 		sanity = 0,
 		cooktime = 48,
@@ -1125,13 +1125,36 @@ local kyno_foods_jar =
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_PRESERVED,
-		health = 10,
+		health = 15,
 		hunger = 15,
-		sanity = 10,
+		sanity = 15,
 		cooktime = 48,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLOW,
 		nameoverride = "AGEDROE",
 		floater = TUNING.HOF_FLOATER,
+		prefabs = { "kyno_jellyfish_rainbow_light_greater" },
 		card_def = {ingredients = {{"kyno_roe_jellyfish", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+		oneatenfn = function(inst, eater)
+            if eater.wormlight ~= nil then
+                if eater.wormlight.prefab == "kyno_jellyfish_rainbow_light_greater" then
+                    eater.wormlight.components.spell.lifetime = 0
+                    eater.wormlight.components.spell:ResumeSpell()
+                    return
+                else
+                    eater.wormlight.components.spell:OnFinish()
+                end
+            end
+
+            local light = SpawnPrefab("kyno_jellyfish_rainbow_light_greater")
+            light.components.spell:SetTarget(eater)
+            if light:IsValid() then
+                if light.components.spell.target == nil then
+                    light:Remove()
+                else
+                    light.components.spell:StartSpell()
+                end
+            end
+        end,
 	},
 	
 	agedroe_salmonfish =

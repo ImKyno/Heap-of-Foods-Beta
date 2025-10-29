@@ -84,6 +84,8 @@ PrefabFiles =
 	"k_itemslicer",
 	"k_jawsbreaker",
 	"k_jellyfish",
+	"k_jellyfish_rainbow",
+	"k_jellyfish_rainbow_fx",
 	"k_kokonut",
 	"k_kokonuttree",
 	"k_limpetrock",

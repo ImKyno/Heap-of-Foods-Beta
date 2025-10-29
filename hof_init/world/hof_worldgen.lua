@@ -247,19 +247,27 @@ local RoomPrefabs =
 		"OceanSwell",
 		"OceanRough",
 	},
+	
+	kyno_jellyfish_rainbow_spawner =
+	{
+		"OceanSwell",
+		"OceanRough",
+		"OceanHazardous",
+	},
 }
 
 -- Special case where we want more or less prefabs spawns in rooms.
 local PrefabValues =
 {
-	["kyno_coffeebush"]         = .02, -- This is because we don't want that much coffee there.
-	["kyno_sweetpotato_ground"] = .03,
-	["kyno_rockflippable"]      = .04, -- Decreased this because of low beefalo amounts. Wheats too.
-	["kyno_wildwheat"]          = .04,
-	["kyno_truffles_ground"]    = .2,  -- Want truffles to be slightly rare and be like cacti.
-	["kyno_radish_ground"]      = .7,
-	["kyno_antchovy_spawner"]   = .04,
-	["kyno_jellyfish_spawner"]  = .03,
+	["kyno_coffeebush"]                = .02, -- This is because we don't want that much coffee there.
+	["kyno_sweetpotato_ground"]        = .03,
+	["kyno_rockflippable"]             = .04, -- Decreased this because of low beefalo amounts. Wheats too.
+	["kyno_wildwheat"]                 = .04,
+	["kyno_truffles_ground"]           = .2,  -- Want truffles to be slightly rare and be like cacti.
+	["kyno_radish_ground"]             = .7,
+	["kyno_antchovy_spawner"]          = .04,
+	["kyno_jellyfish_spawner"]         = .03,
+	["kyno_jellyfish_rainbow_spawner"] = .02,
 }
 
 for prefab, rooms in pairs(RoomPrefabs) do

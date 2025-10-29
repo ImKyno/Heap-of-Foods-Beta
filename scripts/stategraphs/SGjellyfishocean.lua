@@ -2,6 +2,7 @@ require("stategraphs/commonstates")
 
 local actionhandlers = 
 {
+	ActionHandler(ACTIONS.EAT, "eat"),
 	ActionHandler(ACTIONS.GOHOME, "action"),
 }
 
@@ -98,6 +99,8 @@ local states =
 			inst:Hide()
 			inst.Physics:Stop()
 			RemovePhysicsColliders(inst)
+			
+			inst.SoundEmitter:PlaySound("hof_sounds/creatures/jellyfish/murder")
 			inst.components.lootdropper:DropLoot(inst:GetPosition())
 		end,
 	},
@@ -109,6 +112,7 @@ local states =
 		onenter = function(inst, cb)
 			inst.components.locomotor:StopMoving()
 			inst.AnimState:PlayAnimation("hit")
+			inst.SoundEmitter:PlaySound("hof_sounds/creatures/jellyfish/hit")
 		end,
 
 		events =
@@ -116,6 +120,21 @@ local states =
 			EventHandler("animover", function(inst) inst.sg:GoToState("idle") end),
 		},
 	},
+	
+	State{
+		name = "eat",
+		
+		onenter = function(inst)
+			inst.Physics:Stop()
+			inst.AnimState:PlayAnimation("idle", true)
+			inst.sg:SetTimeout(2 + math.random() * 4)
+        end,
+
+		ontimeout= function(inst)
+			inst:PerformBufferedAction()
+			inst.sg:GoToState("idle")
+		end,
+    },
 }
 
 CommonStates.AddSleepStates(states)
