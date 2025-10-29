@@ -134,7 +134,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHAT = "Reduces hunger by 15%."
 STRINGS.SCRAPBOOK.SPECIALINFO.POTATOSACK = "A 6 slot container that can store potato-related items and keep them fresh for longer periods.\n\n\"Potatoes is strong for belly!\" - Wolfgang."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODSACK = "An 8 slots waterproof container that keeps your ingredients fresh, no matter the weather.\n\nIts clever design not only slows spoilage, but can even restore freshness to ingredients that have begun to spoil.\n\nIt pulses with a magical icy power, freezing everything inside."
 STRINGS.SCRAPBOOK.SPECIALINFO.BOOK_GARDENING = "Rapidly grow up all kinds of plants nearby.\n\n\"An ancient tome bound in living roots, banished for its overwhelming power to bend nature's will. Its pages whisper forgotten words that can awaken the land itself, turning mere soil into untamed, living wilderness.\" - Unknown Author."
+STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "The foundation plans for a Fish Hatchery."
 STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "Attracts the Malbatross when thrown into the ocean."
+STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Once set on the ocean, it will trigger when a fish move nearby, capturing them.\n\nCollecting a captured trap will put the creature inside your inventory.\n\nOceanic Traps can be baited with appropriated food."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Can be feed with seeds to lay down an egg."
@@ -175,5 +177,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FARMPLOT = "Allows the planting and growing of See
 STRINGS.SCRAPBOOK.SPECIALINFO.SURFACEBANANATREE = "A rare and elusive exotic tree, capable of growing outside of underground environments.\n\nIts said to be extinct in the nature, only a few of them remain in care of specialized caretakers."
 STRINGS.SCRAPBOOK.SPECIALINFO.DECIDUOUSSHOP = "An enigmatic dwelling, long silent, whose doors may one day open... and reveal what lies within.\n\nCome back in the next major update of 2026!"
 STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSHOWCASER = "A structure for displaying prepared foods."
-STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "The foundation plans for a Fish Hatchery."
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOT = "A 8 slot container that will receive fish for breed.\n\nPlacing a fish in the first slot and feeding it will allow breeding. Fish will produce their respective offspring and roe after certain amounts of time have passed.\n\nFish can only breed when all their criteria is met, each fish has its own preferences, such as: Day Phase, Moon Phase, Season and Location."

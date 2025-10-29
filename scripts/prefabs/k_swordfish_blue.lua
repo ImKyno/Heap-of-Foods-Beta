@@ -76,7 +76,6 @@ local function fn()
 	inst:AddTag("pondfish")
 	inst:AddTag("meat")
 	inst:AddTag("catfood")
-	inst:AddTag("fish_box_valid")
 
 	inst.entity:SetPristine()
 

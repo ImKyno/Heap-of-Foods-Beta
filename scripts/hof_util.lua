@@ -231,3 +231,12 @@ function OnFoodNaughtiness(inst, eater)
 		krampus.Physics:Teleport(spawn_pt:Get())
 	end
 end
+
+function GetOceanTrapInventoryPrefab(fish)
+	if TUNING.HOF_OCEANTRAP_PREFAB_INDEX[fish.prefab] ~= nil then
+		return TUNING.HOF_OCEANTRAP_PREFAB_INDEX[fish.prefab]
+	end
+    
+	-- Default fallback for oceanfish.
+    return fish.prefab.."_inv"
+end

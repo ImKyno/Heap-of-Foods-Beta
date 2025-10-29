@@ -267,7 +267,7 @@ local PrefabValues =
 	["kyno_radish_ground"]             = .7,
 	["kyno_antchovy_spawner"]          = .04,
 	["kyno_jellyfish_spawner"]         = .03,
-	["kyno_jellyfish_rainbow_spawner"] = .02,
+	["kyno_jellyfish_rainbow_spawner"] = .05,
 }
 
 for prefab, rooms in pairs(RoomPrefabs) do

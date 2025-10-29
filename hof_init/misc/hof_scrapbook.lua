@@ -1315,6 +1315,19 @@ local HOF_SCRAPBOOK_ITEMS =
 		deps            = {"malbatross", "chum", "oceanfish_medium_2_inv", "kyno_mysterymeat", "tacklestation"},
 		specialinfo     = "MALBATROSSFOOD",
 	},
+	
+	kyno_messagebottle_empty =
+	{
+		name           = "kyno_messagebottle_empty",
+		type           = "item",
+		tex            = "kyno_messagebottle_empty.tex",
+		prefab         = "kyno_messagebottle_empty",
+		stacksize      = 20,
+		bank           = "kyno_messagebottle",
+		build          = "kyno_messagebottle",
+		anim           = "idle_empty",
+		deps           = {"moonglass", "rope", "researchlab"},
+	},
 }
 
 local HOF_SCRAPBOOK_FOODS =

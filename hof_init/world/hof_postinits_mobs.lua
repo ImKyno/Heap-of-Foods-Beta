@@ -5,6 +5,7 @@ local resolvefilepath = _G.resolvefilepath
 local ACTIONS         = _G.ACTIONS
 local STRINGS         = _G.STRINGS
 local SpawnPrefab     = _G.SpawnPrefab
+local OceanFishDef    = require("prefabs/oceanfishdef")
 local UpvalueHacker   = require("hof_upvaluehacker")
 
 require("constants")
@@ -593,6 +594,33 @@ end
 
 for k, v in pairs(fishes) do
 	AddPrefabPostInit(v, FishPostInit)
+end
+
+-- Trappable for Oceanic Trap.
+-- "oceanfish" and "smalloceancreature" tags are inconsistent.
+local function OceanFishPostInit(inst)
+	inst:AddTag("smalloceanfish")
+	inst:AddTag("canbetrapped")
+end
+
+for _, fish_def in pairs(OceanFishDef.fish) do
+	AddPrefabPostInit(fish_def.prefab, OceanFishPostInit)
+end
+
+local trappable_oceancreatures =
+{
+	"cookiecutter",
+	"wobster_sheller",
+	"wobster_moonglass",
+}
+
+local function TrappableOceanCreaturePostInit(inst)
+	inst:AddTag("smalloceanfish")
+	inst:AddTag("canbetrapped")
+end
+
+for k, v in pairs(trappable_oceancreatures) do
+	AddPrefabPostInit(v, TrappableOceanCreaturePostInit)
 end
 
 -- Leonidas remember me to not put LootTables inside postinit again, otherwise it will 

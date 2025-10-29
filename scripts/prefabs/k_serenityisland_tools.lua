@@ -8,13 +8,13 @@ local assets =
 	Asset("ANIM", "anim/quagmire_slaughtertool.zip"),
 	
 	Asset("ANIM", "anim/kyno_repairkit.zip"),
-	
-	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
-	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 		
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
+	
+	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 }
 
 local prefabs =
@@ -79,6 +79,7 @@ local function rackfn()
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_saltrack_installer"
 	
 	inst:AddComponent("stackable")
     inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
@@ -125,6 +126,7 @@ local function bucketfn()
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_sapbucket_installer"
 
 	return inst
 end
@@ -165,6 +167,7 @@ local function trapfn()
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_crabtrap_installer"
 	
 	inst:AddComponent("finiteuses")
     inst.components.finiteuses:SetMaxUses(TUNING.KYNO_CRABTRAP_USES)
@@ -216,6 +219,7 @@ local function slaughterfn()
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_slaughtertool"
 	
 	inst:AddComponent("finiteuses")
     inst.components.finiteuses:SetMaxUses(TUNING.KYNO_SLAUGHTERTOOLS_USES)
@@ -257,6 +261,7 @@ local function repairtoolfn()
 	
     inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_repairtool"
 
     inst:ListenForEvent("floater_startfloating", function(inst) inst.AnimState:PlayAnimation("idle") end)
     inst:ListenForEvent("floater_stopfloating", function(inst) inst.AnimState:PlayAnimation("idle") end)

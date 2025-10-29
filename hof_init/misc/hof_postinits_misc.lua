@@ -851,7 +851,7 @@ local function TrophyScaleFishPostInit(inst)
 			end
 
 			if item_data.prefab == "kyno_jellyfish_rainbow" then
-				local light = _G.SpawnPrefab("kyno_jellyfish_rainbow_light")
+				local light = SpawnPrefab("kyno_jellyfish_rainbow_light")
 				light.components.spell:SetTarget(inst)
 				
 				if light:IsValid() then
@@ -896,6 +896,58 @@ local function TrophyScaleFishPostInit(inst)
 end
 
 AddPrefabPostInit("trophyscale_fish", TrophyScaleFishPostInit)
+
+-- Some hacks for trap component since it does not support water creatures.
+-- We basically remove the fish from scene and spawn its inventory prefab.
+AddComponentPostInit("trap", function(self)
+	local _DoTriggerOn = self.DoTriggerOn
+	local _Harvest = self.Harvest
+
+	function self:DoTriggerOn(target)
+		if self.inst:HasTag("smalloceanfish_trap") and target ~= nil and target:HasTag("smalloceanfish") then
+			self.target = target
+			self.captured_fish = target
+			
+			self.issprung = true
+			
+			local loot_prefab = TUNING.HOF_OCEANTRAP_PREFAB_INDEX[target.prefab] or (target.prefab .. "_inv")
+			self.lootprefabs = { loot_prefab }
+
+			target:Remove()
+			
+			self:StopUpdating()
+			self.inst:PushEvent("springtrap")
+
+			return
+		end
+
+		_DoTriggerOn(self, target)
+	end
+
+	function self:Harvest(doer)
+		if self.inst:HasTag("smalloceanfish_trap") and self.captured_fish ~= nil then
+			local fish = self.captured_fish
+			local pos = self.inst:GetPosition()
+
+			local loot_prefab = TUNING.HOF_OCEANTRAP_PREFAB_INDEX[fish.prefab] or (fish.prefab .. "_inv")
+			local loot = SpawnPrefab(loot_prefab)
+
+			if loot ~= nil then
+				loot.Transform:SetPosition(pos:Get())
+
+				if doer ~= nil and doer.components.inventory ~= nil then
+					doer.components.inventory:GiveItem(loot)
+				end
+			end
+
+			self.captured_fish = nil
+			self.lootprefabs = nil
+			-- self.issprung = false -- _Harvest needs this to run.
+		end
+
+		_Harvest(self, doer)
+	end
+end)
 
 -- Extra distance for Fish Hatchery.
 -- Why these morons at klei didn't add a self.containerdistance?

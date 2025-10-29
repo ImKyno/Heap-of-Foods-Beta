@@ -488,6 +488,25 @@ AddRecipe2("kyno_itemshowcaser", {Ingredient("boards", 3), Ingredient("rope", 3)
 )
 SortAfter("kyno_itemshowcaser", "endtable", "STRUCTURES")
 
+AddRecipe2("kyno_messagebottle_empty", {Ingredient("moonglass", 3), Ingredient("rope", 1)}, TECH.SCIENCE_ONE,
+	{
+		atlas               = "images/inventoryimages/hof_inventoryimages.xml", 
+		image               = "kyno_messagebottle_empty.tex",
+	},
+	{"REFINE"}
+)
+
+AddRecipe2("kyno_oceantrap", {Ingredient("kyno_seaweeds", 4, ModAtlas), Ingredient("kyno_messagebottle_empty", 2, ModAtlas), Ingredient("kyno_jellyfish", 1, ModAtlas)}, TECH.LOST,
+	{
+		atlas               = "images/inventoryimages/hof_inventoryimages.xml",
+		image               = "kyno_oceantrap.tex",
+	},
+	{"TOOLS", "GARDENING", "FISHING"}
+)
+SortAfter("kyno_oceantrap", "trap", "TOOLS")
+SortAfter("kyno_oceantrap", "trap", "GARDENING")
+SortAfter("kyno_oceantrap", "fish_box", "FISHING")
+
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
 		builder_tag         = "strongman",
@@ -504,7 +523,7 @@ SortBefore("potatosack2", "icebox", "COOKING")
 AddDeconstructRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)})
 
 -- Using Bananas instead of Cave Bananas.
-Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingredient("kyno_banana", 1), Ingredient("cutreeds", 4)}, TECH.NONE,	
+Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingredient("kyno_banana", 1, ModAtlas), Ingredient("cutreeds", 4)}, TECH.NONE,	
 	{
 		allowautopick       = true, 
 		no_deconstruction   = true,
@@ -668,18 +687,6 @@ if HOF_FERTILIZERTWEAK then
 	)
 end
 
--- Checking if Chum The Waters Mod is enabled to not add duplicates.
-if not TUNING.HOF_IS_CTW_ENABLED then
-	AddRecipe2("kyno_malbatrossfood", {Ingredient("chum", 1), Ingredient("oceanfish_medium_2_inv", 2), Ingredient("kyno_mysterymeat", 1, ModAtlas)}, TECH.LOST, 
-		{
-			atlas 				= ModAtlas,
-			image 				= "kyno_malbatrossfood.tex",
-		},
-		{"FISHING"}
-	)
-	SortAfter("kyno_malbatrossfood", "chum", "FISHING")
-end
-
 -- Construction Plans.
 AddRecipe2("kyno_fishfarmplot_kit", {Ingredient("boards", 5), Ingredient("rope", 3)}, TECH.LOST,
 	{
@@ -700,3 +707,34 @@ CONSTRUCTION_PLANS["kyno_fishfarmplot_construction"] =
 }
 
 AddDeconstructRecipe("kyno_fishfarmplot", {Ingredient("rocks", 20)})
+
+-- Checking if Chum The Waters Mod is enabled to not add duplicates.
+if not TUNING.HOF_IS_CTW_ENABLED then
+	AddRecipe2("kyno_malbatrossfood", {Ingredient("chum", 1), Ingredient("oceanfish_medium_2_inv", 2), Ingredient("kyno_mysterymeat", 1, ModAtlas)}, TECH.LOST, 
+		{
+			atlas 				= ModAtlas,
+			image 				= "kyno_malbatrossfood.tex",
+		},
+		{"FISHING"}
+	)
+	SortAfter("kyno_malbatrossfood", "chum", "FISHING")
+end
+
+-- Some recipe changes for Apparels Overload Mod.
+if TUNING.HOF_IS_TCP_ENABLED then
+	Recipe2("aerodynamichat", {Ingredient("kyno_shark_fin", 1, ModAtlas), Ingredient("kyno_kokonut", 1), Ingredient("log", 2)}, TECH.SCIENCE_TWO,
+		{
+			atlas               = "images/inventoryimages/ecp_inventoryimages.xml", 
+			image               = "aerodynamichat.tex",
+		},
+		{"CLOTHING"}
+	)
+
+	Recipe2("gashat", {Ingredient("kyno_messagebottle_empty", 2, ModAtlas), Ingredient("barnacle", 3), Ingredient("kyno_jellyfish", 1, ModAtlas)}, TECH.SCIENCE_TWO,
+		{
+			atlas               = "images/inventoryimages/ecp_inventoryimages.xml", 
+			image               = "gashat.tex",
+		},
+		{"CLOTHING", "SUMMER"}
+	)
+end

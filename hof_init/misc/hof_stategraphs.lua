@@ -1,14 +1,14 @@
 -- Common Dependencies.
-local _G 			= GLOBAL
-local require 		= _G.require
-local ACTIONS 		= _G.ACTIONS
+local _G            = GLOBAL
+local require       = _G.require
+local ACTIONS       = _G.ACTIONS
 local ActionHandler = _G.ActionHandler
-local EQUIPSLOTS 	= _G.EQUIPSLOTS
-local EventHandler 	= _G.EventHandler
-local FRAMES 		= _G.FRAMES
-local State 		= _G.State
-local TimeEvent 	= _G.TimeEvent
-local POPUPS 		= _G.POPUPS
+local EQUIPSLOTS    = _G.EQUIPSLOTS
+local EventHandler  = _G.EventHandler
+local FRAMES        = _G.FRAMES
+local State         = _G.State
+local TimeEvent     = _G.TimeEvent
+local POPUPS        = _G.POPUPS
 local PlayFootstep  = _G.PlayFootstep
 local UpvalueHacker = require("hof_upvaluehacker")
 
