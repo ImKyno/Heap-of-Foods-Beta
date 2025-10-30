@@ -55,13 +55,14 @@ function FullMoonTransformer:SpawnFX(fx_prefab, x, y, z)
 	end
 end
 
+-- Don't tell RegrowthManager to repopulate this prefab.
 function FullMoonTransformer:SafeRemove()
-	-- Don't tell RegrowthManager to repopulate this prefab.
 	if self.inst.OnStartRegrowth then
 		-- print("FullMoonTransformer - This prefab has regrowth, but we are going to skip it.")
 		self.inst:RemoveEventCallback("onremove", self.inst.OnStartRegrowth)
 	end
 	
+	RemoveFromRegrowthManager(self.inst)
 	self.inst:Remove()
 end
 

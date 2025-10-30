@@ -130,9 +130,11 @@ local mod_options =
 
 	{ name = "SERENITY_CC",      default = false },
 	{ name = "MEADOW_CC",        default = false },
+	{ name = "FULLMOONTRANS",    default = false },
 
-	{ name = "MODRETROFITFORCE", default = false },
-	{ name = "MODRETROFIT",      default = 0     },
+	{ name = "RETROCOMPAT",      default = false },
+ -- { name = "MODRETROFITFORCE", default = false },
+ -- { name = "MODRETROFIT",      default = 0     },
 	{ name = "MODTRADES",        default = false },
 }
 

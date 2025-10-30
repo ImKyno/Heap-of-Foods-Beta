@@ -5757,6 +5757,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 	gorge_waffles      =
 	{
 		name           = "gorge_waffles",
+		speechname     = "waffles",
 		type           = "food",
 		tex            = "gorge_waffles.tex",
 		prefab         = "gorge_waffles",

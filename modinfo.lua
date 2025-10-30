@@ -27,7 +27,7 @@ Seaside Island welcomes a new merchant! Assisted by a familiar survivor, he has 
 
 Make sure to check his wares every now and then to see what he got to offer. As his inventory is always changing!
 
-󰀌 Mod Version: 3.0-B
+󰀌 Mod Version: 3.1-B
 󰀧 Update: Mushroom Madness
 ]],
 		zh  =
@@ -42,7 +42,7 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 
 记得时不时光顾下他的小店，看看他进了什么靓货。因为他进货很频繁！
 
-󰀌 Mod 版本： 3.0-B
+󰀌 Mod 版本： 3.1-B
 󰀧 更新内容： 蘑菇狂潮
 ]],	
 		zht =
@@ -57,7 +57,7 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 
 記得不時查看他的商品，看看他帶來了什麼新奇好貨。因為他的庫存總是在變化！
 
-󰀌 Mod 版本： 3.0-B
+󰀌 Mod 版本： 3.1-B
 󰀧 更新內容： 蘑菇狂潮
 ]],	
 		pt  = 
@@ -72,7 +72,7 @@ A Ilha Beira-mar dá as boas-vindas a um novo comerciante! Com a ajuda de um sob
 
 Não deixe de conferir os produtos dele de vez em quando para ver o que ele tem a oferecer. Já que o inventário dele está sempre mudando!
 
-󰀌 Versão do Mod: 3.0-B
+󰀌 Versão do Mod: 3.1-B
 󰀧 Atualização: Loucura dos Cogumelos
 ]],
 		pl  =
@@ -85,7 +85,7 @@ Não deixe de conferir os produtos dele de vez em quando para ver o que ele tem 
 󰀏 Wprowadzenie Aktualizacji Lato nad Morzem:
 Wyspa nad Morzem wita nowego handlarza! Wspierany przez znanego ocalałego, otworzył wyjątkowy punkt handlowy. Specjalizuje się w rzadkich przedmiotach i składnikach, które w przeciwnym razie byłyby niezwykle trudne do zdobycia, a nawet w niektórych przypadkach nie do znalezienia nigdzie indziej. 
 
-󰀌 Wersja Moda: 3.0-B
+󰀌 Wersja Moda: 3.1-B
 󰀧 Aktualizacja: Grzybowe Szaleństwo
 ]],
 		es  =
@@ -100,7 +100,7 @@ Wyspa nad Morzem wita nowego handlarza! Wspierany przez znanego ocalałego, otwo
 
 No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrecer, ¡ya que su inventario cambia constantemente!
 
-󰀌 Versión del Mod: 3.0-B
+󰀌 Versión del Mod: 3.1-B
 󰀧 Actualización: Locura de Champiñones
 ]],
 	},
@@ -1172,6 +1172,52 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 			},
 		},
 		
+		FULLMOON =
+		{
+			NAME =
+			{
+				"Full Moon Transformations",
+				zh  = "满月变身",
+				zht = "滿月變身",
+				pt  = "Transformações da Lua Cheia",
+				pl  = "Transformacje Pełni Księżyca",
+				es  = "Transformaciones de la Luna Llena",
+			},
+			
+			HOVER =
+			{
+				"Should some things transform during Full Moon Nights?\nCurrently it affects: Mushrooms.",
+				zh  = "满月之夜，有些东西会发生变化吗？\n目前受影响的是：蘑菇。",
+				zht = "滿月之夜，有些東西會改變嗎？\n目前受影響的是：蘑菇。",
+				pt  = "Permitir que algumas coisas se transformem na Lua Cheia?\nAtualmente afeta: Cogumelos.",
+				pl  = "Czy niektóre rzeczy powinny ulegać przemianie podczas nocy pełni księżyca?\nAktualnie dotyczy to: Grzybów.",
+				es  = "¿Deberían transformarse algunas cosas durante las noches de luna llena?\nActualmente afecta a: los hongos.",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Some things will not transform during Full Moon Nights.",
+					zh  = "有些事物在满月之夜不会发生变化。",
+					zht = "有些事物在滿月之夜不會改變。",
+					pt  = "Algumas coisas não se transformam durante as noites de lua cheia.",
+					pl  = "Niektóre rzeczy nie ulegną zmianie podczas nocy pełni księżyca.",
+					es  = "Algunas cosas no se transformarán durante las noches de luna llena.",
+				},
+				
+				ENABLED =
+				{
+					"Some things will transform during Full Moon Nights.",
+					zh  = "满月之夜，有些事物会发生变化。",
+					zht = "滿月之夜，有些事物會改變。",
+					pt  = "Algumas coisas se transformarão durante as noites de lua cheia.",
+					pl  = "Podczas nocy pełni księżyca pewne rzeczy ulegają zmianie.",
+					es  = "Algunas cosas se transformarán durante las noches de luna llena.",
+				},
+			},
+		},
+		
 		RETROFIT_FORCE =
 		{
 			NAME =
@@ -1408,7 +1454,7 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "3.0-B"
+version                      = "3.1-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 
@@ -1783,6 +1829,22 @@ local MEADOW_CC_OPTIONS      =
 	}
 }
 
+local FULLMOON_LABEL         = ChooseTranslationTable(STRINGS.SETTINGS.FULLMOON.NAME)
+local FULLMOON_HOVER         = ChooseTranslationTable(STRINGS.SETTINGS.FULLMOON.HOVER)
+local FULLMOON_OPTIONS       =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.FULLMOON.HOVER_OPTIONS.DISABLED),
+		data                 = false
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.FULLMOON.HOVER_OPTIONS.ENABLED),
+		data                 = true
+	}
+}
+
 local RETROFITFORCE_LABEL    = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.NAME)
 local RETROFITFORCE_HOVER    = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.HOVER)
 local RETROFITFORCE_OPTIONS  =
@@ -1876,6 +1938,7 @@ configuration_options        =
 	{ name                   = "EXPERIMENTAL",     label = EXPERIMENTAL_LABEL,  hover = EXPERIMENTAL_HOVER,  options = NONE_OPTIONS,          default = false },
 	{ name                   = "SERENITY_CC",      label = SERENITY_CC_LABEL,   hover = SERENITY_CC_HOVER,   options = SERENITY_CC_OPTIONS,   default = 0     },
 	{ name                   = "MEADOW_CC",        label = MEADOW_CC_LABEL,     hover = MEADOW_CC_HOVER,     options = MEADOW_CC_OPTIONS,     default = 0     },
+	{ name                   = "FULLMOONTRANS",    label = FULLMOON_LABEL,      hover = FULLMOON_HOVER,      options = FULLMOON_OPTIONS,      default = false },
 	
 	-- Retrofitting Options.
 	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false },
