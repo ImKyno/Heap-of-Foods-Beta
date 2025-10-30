@@ -33,12 +33,16 @@ end
 
 local function OnBaited(inst, bait)
 	inst:PushEvent("baited")
-	-- bait:Hide()
+	
+	bait:AddTag("bait_invisible")
+	bait:Hide()
 end
 
 local function OnPickup(inst, doer)
 	if inst.components.trap ~= nil and inst.components.trap.bait and doer.components.inventory ~= nil then
+		inst.components.trap.bait:RemoveTag("bait_invisible")
 		inst.components.trap.bait:Show()
+		
 		inst.components.trap.bait:DoTaskInTime(0, function(bait)
 			doer.components.inventory:GiveItem(bait)
 		end)
@@ -47,12 +51,21 @@ local function OnPickup(inst, doer)
 	inst.components.trap:Reset()
 end
 
+local function TrapHasLoot(inst)
+	return inst.components.trap ~= nil and (
+	(inst.components.trap.lootprefabs ~= nil and next(inst.components.trap.lootprefabs) ~= nil)
+	or (inst.components.trap.captured_fish ~= nil and inst.components.trap.captured_fish:IsValid()))
+end
+
 local function OnLoad(inst, data)
-	local x, y, z = inst.Transform:GetWorldPosition()
-	local onland = TheWorld.Map:IsPassableAtPoint(x, y, z)
-	
-	inst:DoTaskInTime(0, function(inst)
-		inst.sg:GoToState(onland and "idle_ground" or "idle")
+	inst:DoTaskInTime(0, function()
+		local x, y, z = inst.Transform:GetWorldPosition()
+		local onland = TheWorld.Map:IsPassableAtPoint(x, y, z)
+		local trap = inst.components.trap
+
+		if onland then
+			inst.sg:GoToState("idle_ground")
+		end
 	end)
 end
 
@@ -106,7 +119,7 @@ local function fn()
 	inst.components.trap.targettag = "smalloceanfish"
 	inst.components.trap:SetOnHarvestFn(OnHarvested)
 	inst.components.trap.onbaited = OnBaited
-	--inst.components.trap.baitsortorder = -1
+	inst.components.trap.baitsortorder = -1
 	inst.components.trap.range = TUNING.KYNO_OCEANTRAP_RANGE
 	
 	local OnPickup = UpvalueHacker.GetUpvalue(inst.components.trap.OnRemoveFromEntity, "OnPickup")

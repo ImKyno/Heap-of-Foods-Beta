@@ -1,3 +1,9 @@
+local function TrapHasLoot(inst)
+	return inst.components.trap ~= nil and (
+	(inst.components.trap.lootprefabs ~= nil and next(inst.components.trap.lootprefabs) ~= nil)
+	or (inst.components.trap.captured_fish ~= nil and inst.components.trap.captured_fish:IsValid()))
+end
+
 local events =
 {
 	EventHandler("ondropped", function(inst)
@@ -29,12 +35,12 @@ local states =
 		{
 			EventHandler("springtrap", function(inst, data)
 				if data ~= nil and data.loading then
-					inst.sg:GoToState(inst.components.trap.lootprefabs ~= nil and "full" or "empty")
+					inst.sg:GoToState(TrapHasLoot(inst) and "full" or "empty")
 				elseif inst.entity:IsAwake() then
 					inst.sg:GoToState("sprung")
 				else
 					inst.components.trap:DoSpring()
-					inst.sg:GoToState(inst.components.trap.lootprefabs ~= nil and "full" or "empty")
+					inst.sg:GoToState(TrapHasLoot(inst) and "full" or "empty")
 				end
 			end),
 
@@ -47,7 +53,7 @@ local states =
 		name = "full",
 		
 		onenter = function(inst, target)
-			inst.AnimState:PlayAnimation("trap_loop")
+			inst.AnimState:PlayAnimation("trap_loop", true)
 		end,
 
 		events =
@@ -94,7 +100,7 @@ local states =
 		events =
 		{
 			EventHandler("animover", function(inst)
-				inst.sg:GoToState(inst.components.trap.lootprefabs ~= nil and "full" or "empty")
+				inst.sg:GoToState(TrapHasLoot(inst) and "full" or "empty")
 			end),
 		},
 	},

@@ -505,7 +505,6 @@ AddRecipe2("kyno_oceantrap", {Ingredient("kyno_seaweeds", 4, ModAtlas), Ingredie
 )
 SortAfter("kyno_oceantrap", "trap", "TOOLS")
 SortAfter("kyno_oceantrap", "trap", "GARDENING")
-SortAfter("kyno_oceantrap", "fish_box", "FISHING")
 
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
