@@ -7,8 +7,8 @@ local assets =
 
 local prefabs =
 {
-	"corn_cookd",
-	"bolwofpopcorn",
+	"corn_cooked",
+	"bowlofpopcorn",
 	"collapse_small",
 }
 

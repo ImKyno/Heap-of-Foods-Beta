@@ -21,6 +21,7 @@ local states =
 
 		onenter = function(inst)
 			inst.AnimState:PlayAnimation("idle")
+			inst.SoundEmitter:PlaySound("hof_sounds/common/oceantrap/drop_ground")
 		end,
     },
 
@@ -29,6 +30,7 @@ local states =
 		
 		onenter = function(inst)
 			inst.AnimState:PlayAnimation(inst.components.trap.bait and "idle_baited" or "idle_water", true)
+			inst.SoundEmitter:PlaySound("hof_sounds/common/oceantrap/drop_water")
 		end,
 
 		events =
@@ -89,10 +91,10 @@ local states =
 
 		timeline =
 		{
-			TimeEvent(13 * FRAMES, function(inst) inst.SoundEmitter:PlaySound("dontstarve_DLC002/common/sea_trap/sea_trap_drop") end),
-			TimeEvent(15 * FRAMES, function(inst) inst.SoundEmitter:PlaySound("dontstarve_DLC002/common/sea_trap/sea_trap_ground_hit") end),
+			TimeEvent(13 * FRAMES, function(inst) inst.SoundEmitter:PlaySound("hof_sounds/common/oceantrap/drop_water") end),
+			TimeEvent(15 * FRAMES, function(inst) inst.SoundEmitter:PlaySound("hof_sounds/common/oceantrap/drop_ground") end),
             TimeEvent(17 * FRAMES, function(inst) 
-				inst.SoundEmitter:PlaySound("dontstarve_DLC002/common/sea_trap/sea_trap_flag")
+				inst.SoundEmitter:PlaySound("hof_sounds/common/oceantrap/captured")
 				inst.components.trap:DoSpring()
 			end),
 		},

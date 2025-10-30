@@ -82,7 +82,7 @@ local function fn()
 
 	MakeInventoryPhysics(inst)
 	
-	inst:SetPhysicsRadiusOverride(1.5)
+	inst:SetPhysicsRadiusOverride(2) -- For extra action range.
 
 	inst.AnimState:SetBank("kyno_oceantrap")
 	inst.AnimState:SetBuild("kyno_oceantrap")
