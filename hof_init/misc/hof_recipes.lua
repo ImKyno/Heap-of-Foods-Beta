@@ -396,50 +396,6 @@ AddRecipe2("spice_fed", {Ingredient("corn", 3)}, TECH.FOODPROCESSING_ONE,
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("spice_cure", {Ingredient("kyno_spotspice", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
-	{
-		nounlock			= true,
-		builder_tag			= "hof_spicemaker",
-		numtogive			= 2,
-		atlas				= ModAtlas,
-		image				= "spice_cure.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("spice_mind", {Ingredient("kyno_sugartree_petals", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
-	{
-		nounlock			= true,
-		builder_tag			= "hof_spicemaker",
-		numtogive			= 2,
-		atlas				= ModAtlas,
-		image				= "spice_mind.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("spice_cold", {Ingredient("oceanfish_medium_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
-	{
-		nounlock			= true,
-		builder_tag			= "hof_spicemaker",
-		numtogive			= 2,
-		atlas				= ModAtlas,
-		image				= "spice_cold.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("spice_fire", {Ingredient("oceanfish_small_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
-	{
-		nounlock			= true,
-		builder_tag			= "hof_spicemaker",
-		numtogive			= 2,
-		atlas				= ModAtlas,
-		image				= "spice_fire.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
 AddRecipe2("kyno_foodsack", {Ingredient("saltrock", 10), Ingredient("malbatross_feathered_weave", 4), Ingredient("bluegem", 1)}, TECH.LOST,
 	{
 		atlas               = ModAtlas,
@@ -488,7 +444,7 @@ AddRecipe2("kyno_itemshowcaser", {Ingredient("boards", 3), Ingredient("rope", 3)
 )
 SortAfter("kyno_itemshowcaser", "endtable", "STRUCTURES")
 
-AddRecipe2("kyno_messagebottle_empty", {Ingredient("moonglass", 3), Ingredient("rope", 1)}, TECH.SCIENCE_ONE,
+AddRecipe2("kyno_messagebottle_empty", {Ingredient("moonglass", 3)}, TECH.SCIENCE_ONE,
 	{
 		atlas               = "images/inventoryimages/hof_inventoryimages.xml", 
 		image               = "kyno_messagebottle_empty.tex",
@@ -496,7 +452,7 @@ AddRecipe2("kyno_messagebottle_empty", {Ingredient("moonglass", 3), Ingredient("
 	{"REFINE"}
 )
 
-AddRecipe2("kyno_oceantrap", {Ingredient("kyno_seaweeds", 4, ModAtlas), Ingredient("kyno_messagebottle_empty", 2, ModAtlas), Ingredient("kyno_jellyfish", 1, ModAtlas)}, TECH.LOST,
+AddRecipe2("kyno_oceantrap", {Ingredient("kyno_seaweeds", 4, ModAtlas), Ingredient("kyno_messagebottle_empty", 2, ModAtlas), Ingredient("kyno_jellyfish", 1, ModAtlas)}, TECH.FISHING_ONE,
 	{
 		atlas               = "images/inventoryimages/hof_inventoryimages.xml",
 		image               = "kyno_oceantrap.tex",
@@ -717,6 +673,53 @@ if not TUNING.HOF_IS_CTW_ENABLED then
 		{"FISHING"}
 	)
 	SortAfter("kyno_malbatrossfood", "chum", "FISHING")
+end
+
+-- Heap of Foods - Warly Spices Complementary Mod.
+if TUNING.HOF_IS_HSP_ENABLED then
+	AddRecipe2("spice_cure", {Ingredient("kyno_spotspice", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+		{
+			nounlock			= true,
+			builder_tag			= "hof_spicemaker",
+			numtogive			= 2,
+			atlas				= ModAtlas,
+			image				= "spice_cure.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
+
+	AddRecipe2("spice_mind", {Ingredient("kyno_sugartree_petals", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+		{
+			nounlock			= true,
+			builder_tag			= "hof_spicemaker",
+			numtogive			= 2,
+			atlas				= ModAtlas,
+			image				= "spice_mind.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
+
+	AddRecipe2("spice_cold", {Ingredient("oceanfish_medium_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
+		{
+			nounlock			= true,
+			builder_tag			= "hof_spicemaker",
+			numtogive			= 2,
+			atlas				= ModAtlas,
+			image				= "spice_cold.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
+
+	AddRecipe2("spice_fire", {Ingredient("oceanfish_small_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
+		{
+			nounlock			= true,
+			builder_tag			= "hof_spicemaker",
+			numtogive			= 2,
+			atlas				= ModAtlas,
+			image				= "spice_fire.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
 end
 
 -- Some recipe changes for Apparels Overload Mod.

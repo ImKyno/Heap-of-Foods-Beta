@@ -92,8 +92,10 @@ local function fn()
 	inst.AnimState:PlayAnimation("idle_alive", true)
 	
 	inst:AddTag("fish")
+	inst:AddTag("fishfarmable")
 	inst:AddTag("meat")
 	inst:AddTag("catfood")
+	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
 	inst:AddTag("antchovy")
 	inst:AddTag("weighable_fish")
@@ -112,6 +114,9 @@ local function fn()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_TINYITEM
 	
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
@@ -135,9 +140,14 @@ local function fn()
 	inst.components.weighable.type = TROPHYSCALE_TYPES.FISH
 	inst.components.weighable:Initialize(MIN_WEIGHT, MAX_WEIGHT)
 	inst.components.weighable:SetWeight(Lerp(MIN_WEIGHT, MAX_WEIGHT, CalcNewSize()))
-
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_TINYITEM
+	
+	inst:AddComponent("fishfarmable")
+	inst.components.fishfarmable:SetTimes(TUNING.ANTCHOVY_ROETIME, TUNING.ANTCHOVY_BABYTIME)
+	inst.components.fishfarmable:SetProducts("kyno_roe_antchovy", "kyno_antchovy")
+	inst.components.fishfarmable:SetPhases({ "day", "dusk", "night" })
+	inst.components.fishfarmable:SetMoonPhases({ "new", "quarter", "half", "threequarter", "full" })
+	inst.components.fishfarmable:SetSeasons({ "autumn", "winter", "spring", "summer" })
+	inst.components.fishfarmable:SetWorlds({ "forest", "cave" })
 	
 	inst:ListenForEvent("on_loot_dropped", OnDroppedAsLoot)
 	

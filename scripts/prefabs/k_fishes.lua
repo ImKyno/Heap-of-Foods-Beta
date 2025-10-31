@@ -52,6 +52,11 @@ local fish_prefabs =
     "spoiled_fish",
 }
 
+local ALL_PHASES     = { "day", "dusk", "night" }
+local ALL_MOONPHASES = { "new", "quarter", "half", "threequarter", "full" }
+local ALL_SEASONS    = { "autumn", "winter", "spring", "summer" }
+local ALL_WORLDS     = { "forest", "cave" }
+
 local function CalcNewSize()
 	local p = 2 * math.random() - 1
 	return (p*p*p + 1) * 0.5
@@ -110,6 +115,10 @@ local function commonfn(bank, build, char_anim_build, data)
     inst:AddTag("meat")
     inst:AddTag("catfood")
 	inst:AddTag("smalloceancreature")
+	
+	if data.roe_time ~= nil and data.baby_time ~= nil then
+		inst:AddTag("fishfarmable")
+	end
 
 	if data.weight_min ~= nil and data.weight_max ~= nil then
 		inst:AddTag("weighable_fish")
@@ -121,7 +130,7 @@ local function commonfn(bank, build, char_anim_build, data)
         return inst
     end
 
-    inst.build = char_anim_build --This is used within SGwilson, sent from an event in fishingrod.lua
+    inst.build = char_anim_build -- This is used within SGwilson, sent from an event in fishingrod.lua
 
     inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
@@ -160,6 +169,16 @@ local function commonfn(bank, build, char_anim_build, data)
 	
 	inst:AddComponent("tradable")
     inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	
+	if data.roe_time ~= nil and data.baby_time ~= nil then
+		inst:AddComponent("fishfarmable")
+		inst.components.fishfarmable:SetTimes(data.roe_time, data.baby_time)
+		inst.components.fishfarmable:SetProducts(data.roe_prefab, data.baby_prefab)
+		inst.components.fishfarmable:SetPhases(data.phases)
+		inst.components.fishfarmable:SetMoonPhases(data.moonphases)
+		inst.components.fishfarmable:SetSeasons(data.seasons)
+		inst.components.fishfarmable:SetWorlds(data.worlds)
+	end
 	
 	inst.data = {}
 
@@ -229,97 +248,180 @@ local function cookedfn(bank, build, anim, data)
 end
 
 -- Large Fishes.
-local koi_data         =
+-- Why is the weight hardcoded in here? Whatever, don't think anyone will need it.
+local koi_data          =
 {
-    weight_min         = 154.32,
-    weight_max         = 420.69,
-    perish_product     = "spoiled_fish",
-    loot               = {"fishmeat"},
-    cookable_product   = "kyno_koi_cooked",
-    healthvalue        = TUNING.KYNO_FISH_LARGE_HEALTH,
-    hungervalue        = TUNING.KYNO_FISH_LARGE_HUNGER,
-    perish_time        = TUNING.PERISH_SUPERFAST,
+	weight_min          = 154.32,
+	weight_max          = 420.69,
+	
+	perish_product      = "spoiled_fish",
+	loot                = { "fishmeat" },
+	cookable_product    = "kyno_koi_cooked",
+	
+	healthvalue         = TUNING.KYNO_FISH_LARGE_HEALTH,
+	hungervalue         = TUNING.KYNO_FISH_LARGE_HUNGER,
+	perish_time         = TUNING.PERISH_SUPERFAST,
+	
+	roe_prefab          = "kyno_roe_koi",
+	baby_prefab         = "kyno_koi",
+	
+	roe_time            = TUNING.TROPICALKOI_ROETIME,
+	baby_time           = TUNING.TROPICALKOI_BABYTIME,
+	
+	phases              = ALL_PHASES,
+	moonphases          = ALL_MOONPHASES,
+	seasons             = { "summer" },
+	worlds              = ALL_WORLDS,
 }
 
 local neon_data         =
 {
-    weight_min          = 121.02,
-    weight_max          = 243.74,
-    perish_product      = "spoiled_fish",
-    loot                = {"fishmeat"},
-    cookable_product    = "kyno_neonfish_cooked",
-    healthvalue         = TUNING.KYNO_FISH_LARGE_HEALTH,
-    hungervalue         = TUNING.KYNO_FISH_LARGE_HUNGER,
-    perish_time         = TUNING.PERISH_SUPERFAST,
+	weight_min          = 121.02,
+	weight_max          = 243.74,
+	
+	perish_product      = "spoiled_fish",
+	loot                = { "fishmeat" },
+	cookable_product    = "kyno_neonfish_cooked",
+	
+	healthvalue         = TUNING.KYNO_FISH_LARGE_HEALTH,
+	hungervalue         = TUNING.KYNO_FISH_LARGE_HUNGER,
+	perish_time         = TUNING.PERISH_SUPERFAST,
+	
+	roe_prefab          = "kyno_roe_neonfish",
+	baby_prefab         = "kyno_neonfish",
+		
+	roe_time            = TUNING.NEONFISH_ROETIME,
+	baby_time           = TUNING.NEONFISH_BABYTIME,
+		
+	phases              = ALL_PHASES,
+	moonphases          = ALL_MOONPHASES,
+	seasons             = { "winter" },
+	worlds              = ALL_WORLDS,
 }
 
 local purple_data       =
 {
-    weight_min          = 205.15,
-    weight_max          = 362.87,
-    perish_product      = "spoiled_fish",
-    loot                = {"fishmeat"},
-    cookable_product    = "kyno_grouper_cooked",
-    healthvalue         = TUNING.KYNO_FISH_LARGE_HEALTH,
-    hungervalue         = TUNING.KYNO_FISH_LARGE_HUNGER,
-    perish_time         = TUNING.PERISH_SUPERFAST,
+	weight_min          = 205.15,
+	weight_max          = 362.87,
+	
+	perish_product      = "spoiled_fish",
+	loot                = { "fishmeat" },
+	cookable_product    = "kyno_grouper_cooked",
+	
+	healthvalue         = TUNING.KYNO_FISH_LARGE_HEALTH,
+	hungervalue         = TUNING.KYNO_FISH_LARGE_HUNGER,
+	perish_time         = TUNING.PERISH_SUPERFAST,
+	
+	roe_prefab          = "kyno_roe_grouper",
+	baby_prefab         = "kyno_grouper",
+		
+	roe_time            = TUNING.GROUPER_ROETIME,
+	baby_time           = TUNING.GROUPER_BABYTIME,
+		
+	phases              = { "dusk", "night" },
+	moonphases          = ALL_MOONPHASES,
+	seasons             = ALL_SEASONS,
+	worlds              = ALL_WORLDS,
 }
 
 local large_cooked_data =
 {
 	perish_product      = "spoiled_fish",
+	perish_time         = TUNING.PERISH_SUPERFAST,
+	
 	healthvalue         = TUNING.KYNO_FISH_LARGE_COOKED_HEALTH,
 	hungervalue         = TUNING.KYNO_FISH_LARGE_COOKED_HUNGER,
 	sanityvalue         = TUNING.KYNO_FISH_LARGE_COOKED_SANITY,
+	
 	stacksize           = TUNING.STACK_SIZE_MEDITEM,
-	perish_time         = TUNING.PERISH_SUPERFAST,
 }
 
 -- Small Fishes.
 local tropical_data     =
 {
-    weight_min          = 20.89,
-    weight_max          = 47.32,
-    perish_product      = "spoiled_fish_small",
-    loot                = {"fishmeat_small"},
-    cookable_product    = "kyno_tropicalfish_cooked",
-    healthvalue         = TUNING.KYNO_FISH_SMALL_HEALTH,
-    hungervalue         = TUNING.KYNO_FISH_SMALL_HUNGER,
-    perish_time         = TUNING.PERISH_SUPERFAST,
+	weight_min          = 20.89,
+	weight_max          = 47.32,
+	
+	perish_product      = "spoiled_fish_small",
+	loot                = { "fishmeat_small" },
+	cookable_product    = "kyno_tropicalfish_cooked",
+	
+	healthvalue         = TUNING.KYNO_FISH_SMALL_HEALTH,
+	hungervalue         = TUNING.KYNO_FISH_SMALL_HUNGER,
+	perish_time         = TUNING.PERISH_SUPERFAST,
+	
+	roe_prefab          = "kyno_roe_tropicalfish",
+	baby_prefab         = "kyno_tropicalfish",
+		
+	roe_time            = TUNING.TROPICALFISH_ROETIME,
+	baby_time           = TUNING.TROPICALFISH_BABYTIME,
+		
+	phases              = ALL_PHASES,
+	moonphases          = ALL_MOONPHASES,
+	seasons             = { "autumn" },
+	worlds              = ALL_WORLDS,
 }
 
 local pierrot_data      =
 {
-    weight_min          = 60.23,
-    weight_max          = 97.55,
-    perish_product      = "spoiled_fish_small",
-    loot                = {"fishmeat_small"},
-    cookable_product    = "kyno_pierrotfish_cooked",
-    healthvalue         = TUNING.KYNO_FISH_SMALL_HEALTH,
-    hungervalue         = TUNING.KYNO_FISH_SMALL_HUNGER,
-    perish_time         = TUNING.PERISH_SUPERFAST,
+	weight_min          = 60.23,
+	weight_max          = 97.55,
+	
+	perish_product      = "spoiled_fish_small",
+	loot                = { "fishmeat_small" },
+	cookable_product    = "kyno_pierrotfish_cooked",
+	
+	healthvalue         = TUNING.KYNO_FISH_SMALL_HEALTH,
+	hungervalue         = TUNING.KYNO_FISH_SMALL_HUNGER,
+	perish_time         = TUNING.PERISH_SUPERFAST,
+	
+	roe_prefab          = "kyno_roe_pierrotfish",
+	baby_prefab         = "kyno_pierrotfish",
+		
+	roe_time            = TUNING.PIERROTFISH_ROETIME,
+	baby_time           = TUNING.PIERROTFISH_BABYTIME,
+		
+	phases              = ALL_PHASES,
+	moonphases          = ALL_MOONPHASES,
+	seasons             = { "spring" },
+	worlds              = ALL_WORLDS,
 }
 
 local salmon_data       =
 {
-    weight_min          = 52.43,
-    weight_max          = 110.85,
-    perish_product      = "spoiled_fish_small",
-    loot                = {"fishmeat_small"},
-    cookable_product    = "kyno_salmonfish_cooked",
-    healthvalue         = TUNING.KYNO_FISH_SMALL_HEALTH,
-    hungervalue         = TUNING.KYNO_FISH_SMALL_HUNGER,
-    perish_time         = TUNING.PERISH_SUPERFAST,
+	weight_min          = 52.43,
+	weight_max          = 110.85,
+	
+	perish_product      = "spoiled_fish_small",
+	loot                = { "fishmeat_small" },
+	cookable_product    = "kyno_salmonfish_cooked",
+	
+	healthvalue         = TUNING.KYNO_FISH_SMALL_HEALTH,
+	hungervalue         = TUNING.KYNO_FISH_SMALL_HUNGER,
+	perish_time         = TUNING.PERISH_SUPERFAST,
+	
+	roe_prefab          = "kyno_roe_salmonfish",
+	baby_prefab         = "kyno_salmonfish",
+		
+	roe_time            = TUNING.SALMONFISH_ROETIME,
+	baby_time           = TUNING.SALMONFISH_BABYTIME,
+		
+	phases              = { "day", "dusk" },
+	moonphases          = ALL_MOONPHASES,
+	seasons             = ALL_SEASONS,
+	worlds              = ALL_WORLDS,
 }
 
 local small_cooked_data =
 {
 	perish_product      = "spoiled_fish_small",
+	perish_time         = TUNING.PERISH_SUPERFAST,
+	
 	healthvalue         = TUNING.KYNO_FISH_SMALL_COOKED_HEALTH,
 	hungervalue         = TUNING.KYNO_FISH_SMALL_COOKED_HUNGER,
 	sanityvalue         = TUNING.KYNO_FISH_SMALL_COOKED_SANITY,
+	
 	stacksize           = TUNING.STACK_SIZE_SMALLITEM,
-	perish_time         = TUNING.PERISH_SUPERFAST,
 }
 
 local function koifn()

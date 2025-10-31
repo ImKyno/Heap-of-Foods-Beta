@@ -596,7 +596,7 @@ for k, v in pairs(fishes) do
 	AddPrefabPostInit(v, FishPostInit)
 end
 
--- Trappable for Oceanic Trap.
+-- Trappable for Ocean Trap.
 -- "oceanfish" and "smalloceancreature" tags are inconsistent.
 local function OceanFishPostInit(inst)
 	inst:AddTag("smalloceanfish")

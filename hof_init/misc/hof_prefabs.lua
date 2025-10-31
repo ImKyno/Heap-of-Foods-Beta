@@ -123,6 +123,7 @@ PrefabFiles =
 	"k_newveggies",
 	"k_newweeds",
 	"k_nukashine_sugarfree",
+	"k_oceanfish",
 	"k_ocean_spawners",
 	"k_ocean_wreck",
 	"k_oceantrap",

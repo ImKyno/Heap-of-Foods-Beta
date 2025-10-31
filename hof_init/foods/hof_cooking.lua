@@ -173,6 +173,19 @@ for k, v in pairs(fishroes) do
 	AddIngredientValues({v}, {fish = 0.25, meat = 0.25, roe = 1})
 end
 
+local oceanfishes =
+{
+	-- "oceanfish_pufferfish_inv",
+	oceanfish_sturgeon_inv =
+	{
+		meat = 1, fish = 1
+	},
+}
+
+for k, v in pairs(oceanfishes) do
+	AddIngredientValues({k}, v, false)
+end
+
 -- Import the Foods.
 local cookpots = 
 {

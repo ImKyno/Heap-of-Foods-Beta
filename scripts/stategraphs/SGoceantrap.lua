@@ -20,7 +20,7 @@ local states =
 		name = "idle_ground",
 
 		onenter = function(inst)
-			inst.AnimState:PlayAnimation("idle")
+			inst:PlayTrapAnimation("idle")
 			inst.SoundEmitter:PlaySound("hof_sounds/common/oceantrap/drop_ground")
 		end,
     },
@@ -29,7 +29,7 @@ local states =
 		name = "idle",
 		
 		onenter = function(inst)
-			inst.AnimState:PlayAnimation(inst.components.trap.bait and "idle_baited" or "idle_water", true)
+			inst:PlayTrapAnimation(inst.components.trap.bait and "idle_baited" or "idle_water", true)
 			inst.SoundEmitter:PlaySound("hof_sounds/common/oceantrap/drop_water")
 		end,
 
@@ -46,7 +46,7 @@ local states =
 				end
 			end),
 
-			EventHandler("baited", function(inst) inst.AnimState:PlayAnimation("idle_baited", true) end),
+			EventHandler("baited", function(inst) inst:PlayTrapAnimation("idle_baited", true) end),
 			EventHandler("removed_bait", function(inst) inst.sg:GoToState("idle") end),
 		},
 	},
@@ -55,7 +55,7 @@ local states =
 		name = "full",
 		
 		onenter = function(inst, target)
-			inst.AnimState:PlayAnimation("trap_loop", true)
+			inst:PlayTrapAnimation("trap_loop", true)
 		end,
 
 		events =
@@ -68,7 +68,7 @@ local states =
 		name = "empty",
 		
 		onenter = function(inst, target)
-			inst.AnimState:PlayAnimation("side", true)
+			inst:PlayTrapAnimation("side", true)
 			inst.AnimState:HideSymbol("trapped")
 		end,
 
@@ -86,7 +86,7 @@ local states =
 		name = "sprung",
 		
 		onenter = function(inst, target)
-			inst.AnimState:PlayAnimation(inst.components.trap.bait and "trap_baited_pre" or "trap_pre")
+			inst:PlayTrapAnimation(inst.components.trap.bait and "trap_baited_pre" or "trap_pre")
 		end,
 
 		timeline =

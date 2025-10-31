@@ -862,6 +862,7 @@ local HOF_SCRAPBOOK_ITEMS =
 	{
 		name           = "kyno_musselstick_item",
 		type           = "item",
+		subcat         = "seafaring",
 		tex            = "kyno_musselstick_item.tex",
 		prefab         = "kyno_musselstick_item",
 		fueltype       = "BURNABLE",
@@ -1287,6 +1288,7 @@ local HOF_SCRAPBOOK_ITEMS =
 	{
 		name           = "kyno_fishfarmplot_kit",
 		type           = "item",
+		subcat         = "seafaring",
 		tex            = "kyno_fishfarmplot_kit.tex",
 		prefab         = "kyno_fishfarmplot_kit",
 		fueltype       = "BURNABLE",
@@ -1327,6 +1329,21 @@ local HOF_SCRAPBOOK_ITEMS =
 		build          = "kyno_messagebottle",
 		anim           = "idle_empty",
 		deps           = {"moonglass", "rope", "researchlab"},
+	},
+	
+	kyno_oceantrap     =
+	{
+		name           = "kyno_oceantrap",
+		type           = "item",
+		subcat         = "seafaring",
+		tex            = "kyno_oceantrap.tex",
+		prefab         = "kyno_oceantrap",
+		finiteuses     = 10,
+		bank           = "kyno_oceantrap",
+		build          = "kyno_oceantrap",
+		anim           = "idle",
+		deps           = {"kyno_messagebottle_empty", "kyno_jellyfish_ocean", "kyno_seaweeds"},
+		specialinfo    = "OCEANTRAP",
 	},
 }
 
@@ -4352,7 +4369,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank            = "kyno_roe",
 		build           = "kyno_roe",
 		anim            = "idle_oceanfish_pufferfish",
-		deps            = {"kyno_roe_cooked", "spoiled_food"}, -- kyno_oceanfish_pufferfish
+		deps            = {"kyno_roe_cooked", "spoiled_food"}, -- oceanfish_pufferfish_inv
 	},
 	
 	kyno_roe_oceanfish_sturgeon =
@@ -4373,7 +4390,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank            = "kyno_roe",
 		build           = "kyno_roe",
 		anim            = "idle_oceanfish_sturgeon",
-		deps            = {"kyno_roe_cooked", "spoiled_food"},
+		deps            = {"oceanfish_sturgeon_inv", "kyno_roe_cooked", "spoiled_food"},
 	},
 	
 	kyno_roe_cooked     =
@@ -4878,7 +4895,7 @@ local HOF_SCRAPBOOK_FOODS =
 		healthvalue    = 10,
 		hungervalue    = 10,
 		sanityvalue    = 0,
-		perishable     = 1440,
+		perishable     = 480,
 		foodtype       = "MEAT",
 		bank           = "kyno_jellyfish",
 		build          = "kyno_jellyfish",
@@ -4895,7 +4912,7 @@ local HOF_SCRAPBOOK_FOODS =
 		healthvalue    = 10,
 		hungervalue    = 10,
 		sanityvalue    = 10,
-		perishable     = 1440,
+		perishable     = 480,
 		foodtype       = "MEAT",
 		bank           = "kyno_jellyfish_rainbow",
 		build          = "kyno_jellyfish_rainbow",
@@ -4913,7 +4930,7 @@ local HOF_SCRAPBOOK_FOODS =
 		healthvalue    = 10,
 		hungervalue    = 18.75,
 		sanityvalue    = 0,
-		perishable     = 2880,
+		perishable     = 1440,
 		foodtype       = "MEAT",
 		bank           = "kyno_jellyfish",
 		build          = "kyno_jellyfish",
@@ -4930,7 +4947,7 @@ local HOF_SCRAPBOOK_FOODS =
 		healthvalue    = 10,
 		hungervalue    = 18.75,
 		sanityvalue    = 10,
-		perishable     = 2880,
+		perishable     = 1440,
 		foodtype       = "MEAT",
 		bank           = "kyno_jellyfish_rainbow",
 		build          = "kyno_jellyfish_rainbow",
@@ -4947,7 +4964,7 @@ local HOF_SCRAPBOOK_FOODS =
 		healthvalue    = 15,
 		hungervalue    = 25,
 		sanityvalue    = 5,
-		perishable     = 9600,
+		perishable     = 4800,
 		foodtype       = "MEAT",
 		bank           = "kyno_meatrack_jellyfish",
 		build          = "kyno_meatrack_jellyfish",
@@ -14480,7 +14497,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		tex            = "kyno_jellyfish_ocean.tex",
 		prefab         = "kyno_jellyfish_ocean",
 		health         = 50,
-		perishable     = 1440,
+		perishable     = 480,
 		bank           = "kyno_jellyfish",
 		build          = "kyno_jellyfish",
 		anim           = "idle",
@@ -14495,12 +14512,32 @@ local HOF_SCRAPBOOK_CREATURES =
 		tex            = "kyno_jellyfish_rainbow_ocean.tex",
 		prefab         = "kyno_jellyfish_rainbow_ocean",
 		health         = 50,
-		perishable     = 1440,
+		perishable     = 480,
 		bank           = "kyno_jellyfish_rainbow",
 		build          = "kyno_jellyfish_rainbow",
 		anim           = "idle",
 		deps           = {"kyno_jellyfish_rainbow_dead", "kyno_roe_jellyfish_rainbow"},
 		specialinfo    = "JELLYFISH_RAINBOW",
+	},
+	
+	oceanfish_sturgeon_inv =
+	{
+		name           = "oceanfish_sturgeon_inv",
+		speechname     = "oceanfish_sturgeon",
+		type           = "creature",
+		subcat         = "oceanfish",
+		tex            = "oceanfish_sturgeon_inv.tex",
+		prefab         = "oceanfish_sturgeon_inv",
+		healthvalue    = 8,
+		hungervalue    = 25,
+		sanityvalue    = 0,
+		perishable     = 480,
+		bank           = "kyno_oceanfish_sturgeon",
+		build          = "kyno_oceanfish_sturgeon",
+		anim           = "flop_pst",
+		animoffsetx    = -5,
+		animoffsety    = -10,
+		deps           = {"fishmeat", "fishmeat_small"},
 	},
 }
 

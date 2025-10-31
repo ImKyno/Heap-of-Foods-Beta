@@ -136,7 +136,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODSACK = "An 8 slots waterproof container that k
 STRINGS.SCRAPBOOK.SPECIALINFO.BOOK_GARDENING = "Rapidly grow up all kinds of plants nearby.\n\n\"An ancient tome bound in living roots, banished for its overwhelming power to bend nature's will. Its pages whisper forgotten words that can awaken the land itself, turning mere soil into untamed, living wilderness.\" - Unknown Author."
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "The foundation plans for a Fish Hatchery."
 STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "Attracts the Malbatross when thrown into the ocean."
-STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Once set on the ocean, it will trigger when a fish move nearby, capturing them.\n\nCollecting a captured trap will put the creature inside your inventory.\n\nOceanic Traps can be baited with appropriated food."
+STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Once set on the ocean, it will trigger when a fish move nearby, capturing them.\n\nCollecting a captured trap will put the creature inside your inventory.\n\nOcean Traps can be baited with appropriated food."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Can be feed with seeds to lay down an egg."

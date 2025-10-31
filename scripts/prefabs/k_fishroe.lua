@@ -77,7 +77,7 @@ local function MakeRoe(data)
 		inst.components.cookable.product = data.cookable_product or "kyno_roe_cooked"
 	
 		inst:AddComponent("perishable")
-		inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
+		inst.components.perishable:SetPerishTime(data.perishtime or TUNING.PERISH_FAST)
 		inst.components.perishable:StartPerishing()
 		inst.components.perishable.onperishreplacement = "spoiled_food"
 	
@@ -159,10 +159,12 @@ local fishroes =
 	
 	{
 		name                = "jellyfish",
+		perishtime          = TUNING.PERISH_ONE_DAY,
 	},
 	
 	{
 		name                = "jellyfish_rainbow",
+		perishtime          = TUNING.PERISH_ONE_DAY,
 		goldvalue           = 3,
 	},
 	

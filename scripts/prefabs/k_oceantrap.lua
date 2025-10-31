@@ -25,6 +25,40 @@ local sounds =
     rustle = "dontstarve/common/trap_rustle",
 }
 
+local function ToggleCageVisibility(inst, anim)
+	if anim == "idle" then
+		inst.AnimState:ShowSymbol("cage")
+		
+		if inst.underwater then
+			inst.underwater:Hide()
+		end
+	else
+		inst.AnimState:HideSymbol("cage")
+		
+		if inst.underwater then
+			inst.underwater:Show()
+		end
+	end
+end
+
+local function PlayTrapAnimation(inst, anim, loop)
+	ToggleCageVisibility(inst, anim)
+	inst.AnimState:PlayAnimation(anim, loop)
+	
+	if inst.underwater then
+		inst.underwater.AnimState:PlayAnimation(anim, loop)
+	end
+end
+
+local function PushTrapAnimation(inst, anim, loop)
+	ToggleCageVisibility(inst, anim)
+	inst.AnimState:PushAnimation(anim, loop)
+	
+	if inst.underwater then
+		inst.underwater.AnimState:PushAnimation(anim, loop)
+	end
+end
+
 local function OnHarvested(inst)
     if inst.components.finiteuses ~= nil then
         inst.components.finiteuses:Use(1)
@@ -86,7 +120,8 @@ local function fn()
 
 	inst.AnimState:SetBank("kyno_oceantrap")
 	inst.AnimState:SetBuild("kyno_oceantrap")
-	inst.AnimState:PlayAnimation("idle")
+	PlayTrapAnimation(inst, "idle")
+	inst.AnimState:HideSymbol("trapped")
 
 	inst:AddTag("trap")
 	inst:AddTag("smalloceanfish_trap")
@@ -98,6 +133,10 @@ local function fn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
+	
+	inst.underwater = SpawnPrefab("kyno_oceantrap_underwater")
+	inst.underwater.entity:SetParent(inst.entity)
+	inst.underwater.Transform:SetPosition(0, 0, 0)
 	
 	inst.sounds = sounds
 
@@ -125,13 +164,49 @@ local function fn()
 	local OnPickup = UpvalueHacker.GetUpvalue(inst.components.trap.OnRemoveFromEntity, "OnPickup")
 	inst:RemoveEventCallback("onpickup", OnPickup)
 	
-	inst:SetStateGraph("SGoceantrap")
-	
+	inst.PlayTrapAnimation = PlayTrapAnimation
+	inst.PushTrapAnimation = PushTrapAnimation
 	inst.OnLoad = OnLoad
+	
+	inst:SetStateGraph("SGoceantrap")
 	
 	MakeHauntableLaunchAndIgnite(inst)
 
 	return inst
 end
 
-return Prefab("kyno_oceantrap", fn, assets, prefabs)
+local function underwaterfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
+		
+	inst.AnimState:SetBank("kyno_oceantrap")
+	inst.AnimState:SetBuild("kyno_oceantrap")
+	inst.AnimState:PlayAnimation("idle", true)
+	inst.AnimState:SetLayer(LAYER_BACKGROUND)
+
+	inst.AnimState:HideSymbol("jelly")
+	inst.AnimState:HideSymbol("bottle")
+	inst.AnimState:HideSymbol("flag")
+	inst.AnimState:HideSymbol("vine")
+	inst.AnimState:HideSymbol("ripple2")
+	inst.AnimState:HideSymbol("white")
+
+	inst:AddTag("DECOR")
+	inst:AddTag("FX")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst.persists = false
+
+	return inst
+end
+
+return Prefab("kyno_oceantrap", fn, assets, prefabs),
+Prefab("kyno_oceantrap_underwater", underwaterfn, assets, prefabs)

@@ -127,7 +127,6 @@ local function meat_fn(bank, build, anim, meat_name)
 	inst.components.edible.ismeat = true
 
     inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 
@@ -303,6 +302,8 @@ local function fn_humanmeat()
 	inst.components.edible.hungervalue = TUNING.KYNO_HUMANMEAT_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_HUMANMEAT_DRIED_SANITY
 	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
+	
 	return inst
 end
 
@@ -318,6 +319,8 @@ local function fn_plantmeat()
 	inst.components.edible.healthvalue = TUNING.KYNO_PLANTMEAT_DRIED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_PLANTMEAT_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_PLANTMEAT_DRIED_SANITY
+	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
 	
 	return inst
 end 
@@ -351,6 +354,8 @@ local function fn_crabmeat()
 	inst.components.edible.hungervalue = TUNING.KYNO_CRABMEAT_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_CRABMEAT_DRIED_SANITY
 	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
+	
 	return inst
 end
 
@@ -368,6 +373,8 @@ local function fn_crabkingmeat()
 	inst.components.edible.healthvalue = TUNING.KYNO_CRABKINGMEAT_DRIED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_CRABKINGMEAT_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_CRABKINGMEAT_DRIED_SANITY
+	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
 	
 	return inst
 end
@@ -389,6 +396,8 @@ local function fn_jellyfish()
 	inst.components.edible.hungervalue = TUNING.KYNO_JELLYFISH_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_JELLYFISH_DRIED_SANITY
 	inst.components.edible.secondaryfoodtype = FOODTYPE.MONSTER
+	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
 	
 	return inst
 end

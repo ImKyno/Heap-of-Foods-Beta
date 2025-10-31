@@ -73,9 +73,11 @@ local function fn()
 	inst.AnimState:PlayAnimation("idle", false)
 	
 	inst:AddTag("fish")
+	inst:AddTag("fishfarmable")
 	inst:AddTag("pondfish")
 	inst:AddTag("meat")
 	inst:AddTag("catfood")
+	inst:AddTag("largecreature")
 
 	inst.entity:SetPristine()
 
@@ -124,6 +126,14 @@ local function fn()
 	inst.components.edible.temperaturedelta = TUNING.COLD_FOOD_BONUS_TEMP
 	inst.components.edible.temperatureduration = TUNING.FOOD_TEMP_BRIEF
 	inst.components.edible.foodtype = FOODTYPE.MEAT
+	
+	inst:AddComponent("fishfarmable")
+	inst.components.fishfarmable:SetTimes(TUNING.SWORDFISH_BLUE_ROETIME, TUNING.SWORDFISH_BLUE_BABYTIME)
+	inst.components.fishfarmable:SetProducts("kyno_roe_swordfish_blue", "kyno_swordfish_blue")
+	inst.components.fishfarmable:SetPhases({ "day", "dusk", "night" })
+	inst.components.fishfarmable:SetMoonPhases({ "new", "quarter", "half", "threequarter", "full" })
+	inst.components.fishfarmable:SetSeasons({ "winter" })
+	inst.components.fishfarmable:SetWorlds({ "cave" })
 	
 	MakeHauntableLaunchAndPerish(inst)
 

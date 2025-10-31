@@ -264,6 +264,7 @@ local function fn()
 
 	inst:AddTag("animal")
 	inst:AddTag("prey")
+	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
 	
 	inst:SetPrefabNameOverride("KYNO_JELLYFISH_RAINBOW")
@@ -352,11 +353,13 @@ local function jellyfish()
 	
 	inst:AddTag("meat")
 	inst:AddTag("fish")
+	inst:AddTag("fishfarmable")
 	inst:AddTag("catfood")
 	inst:AddTag("cookable")
 	inst:AddTag("show_spoilage")
 	inst:AddTag("weighable_fish")
 	inst:AddTag("small_livestock")
+	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
 	
 	inst.scrapbook_proxy = "kyno_jellyfish_rainbow_ocean"
@@ -383,7 +386,7 @@ local function jellyfish()
 	inst.components.lootdropper:SetLoot({"kyno_jellyfish_rainbow_dead"})
 
    	inst:AddComponent("perishable")
-    inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
+    inst.components.perishable:SetPerishTime(TUNING.PERISH_ONE_DAY)
     inst.components.perishable.onperishreplacement = "kyno_jellyfish_rainbow_dead"
     inst.components.perishable:StartPerishing()
 	
@@ -396,6 +399,14 @@ local function jellyfish()
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_rainbow_jellyfish"
+	
+	inst:AddComponent("fishfarmable")
+	inst.components.fishfarmable:SetTimes(TUNING.JELLYFISH_RAINBOW_ROETIME, TUNING.JELLYFISH_RAINBOW_BABYTIME)
+	inst.components.fishfarmable:SetProducts("kyno_roe_jellyfish_rainbow", "kyno_jellyfish_rainbow")
+	inst.components.fishfarmable:SetPhases({ "dusk", "night" })
+	inst.components.fishfarmable:SetMoonPhases({ "new", "quarter", "half", "threequarter", "full" })
+	inst.components.fishfarmable:SetSeasons({ "autumn", "winter", "spring", "summer" })
+	inst.components.fishfarmable:SetWorlds({ "forest", "cave" })
 	
 	inst:ListenForEvent("on_landed", OnDropped)
 
@@ -444,7 +455,7 @@ local function jellyfish_dead()
 	inst.components.cookable.product = "kyno_jellyfish_rainbow_cooked"
 	
    	inst:AddComponent("perishable")
-    inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
+    inst.components.perishable:SetPerishTime(TUNING.PERISH_ONE_DAY)
     inst.components.perishable.onperishreplacement = "spoiled_food"
     inst.components.perishable:StartPerishing()
 	
@@ -510,7 +521,7 @@ local function jellyfish_cooked()
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	
    	inst:AddComponent("perishable")
-    inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
+    inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
     inst.components.perishable.onperishreplacement = "spoiled_food"
     inst.components.perishable:StartPerishing()
 	
