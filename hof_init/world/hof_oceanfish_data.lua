@@ -31,7 +31,7 @@ local SCHOOL_AREA                  =
 	LARGE                          = 10,
 }
 
-local SCHOOL_WORLD_TIME = 
+local SCHOOL_WORLD_TIME            = 
 {
 	SHORT                          = { min = 30 * 8,      max = 30 * 16      },
 	MEDIUM                         = { min = 30 * 16,     max = 30 * 16 * 2  },
@@ -47,19 +47,19 @@ local WANDER_DIST                  =
 
 local ARRIVE_DIST                  = 
 {
-	CLOSE                         = 3,
-	MEDIUM                        = 8,
-	FAR                           = 12,
+	CLOSE                          = 3,
+	MEDIUM                         = 8,
+	FAR                            = 12,
 }
 
-local WANDER_DELAY                =
+local WANDER_DELAY                 =
 {
-	SHORT                         = { min = 0,  max = 10 },
-	MEDIUM                        = { min = 10, max = 30 },
-	LONG                          = { min = 30, max = 60 },
+	SHORT                          = { min = 0,  max = 10 },
+	MEDIUM                         = { min = 10, max = 30 },
+	LONG                           = { min = 30, max = 60 },
 }
 
-local DIET = 
+local DIET                         = 
 {
 	OMNI                           = { caneat = { FOODGROUP.OMNI       } },
 	VEGGIE                         = { caneat = { FOODGROUP.VEGETARIAN } },
@@ -67,16 +67,17 @@ local DIET =
 	BERRY                          = { caneat = { FOODTYPE.BERRY       } },
 }
 
-local LOOT =
+local LOOT                         =
 {
-	TINY                           = { "fishmeat_small"         },
-	SMALL                          = { "fishmeat_small"         },
-	SMALL_COOKED                   = { "fishmeat_small_cooked"  },
-	MEDIUM                         = { "fishmeat"               },
-	LARGE                          = { "fishmeat", "fishmeat"   },
-	HUGE                           = { "fishmeat"               },
-	ICE                            = { "fishmeat", "ice", "ice" },
-	PLANTMEAT                      = { "plantmeat"              },
+	TINY                           = { "fishmeat_small"            },
+	SMALL                          = { "fishmeat_small"            },
+	SMALL_COOKED                   = { "fishmeat_small_cooked"     },
+	MEDIUM                         = { "fishmeat"                  },
+	LARGE                          = { "fishmeat", "fishmeat"      },
+	HUGE                           = { "fishmeat"                  },
+	ICE                            = { "fishmeat", "ice", "ice"    },
+	PLANTMEAT                      = { "plantmeat"                 },
+	PUFFERFISH                     = { "fishmeat_small", "stinger" },
 }
 
 local HEAVY_LOOT                   = 
@@ -86,9 +87,10 @@ local HEAVY_LOOT                   =
 	MEDIUM                         = { "fishmeat", "fishmeat_small"               },
 	LARGE                          = { "fishmeat", "fishmeat", "fishmeat_small",  },
 	ICE                            = { "fishmeat", "fishmeat_small", "ice", "ice" },
+	PUFFERFISH                     = { "fishmeat", "stinger", "stinger"           },
 }
 
-local PERISH = 
+local PERISH                       = 
 {
 	TINY                           = "fishmeat_small",
 	SMALL                          = "fishmeat_small",
@@ -126,6 +128,7 @@ local BREACH_FX_MEDIUM             = { "ocean_splash_med1", "ocean_splash_med2" 
 
 local SHADOW_SMALL                 = { 1,   0.75 }
 local SHADOW_MEDIUM                = { 1.5, 0.75 }
+local SHADOW_LARGE                 = { 2.5, 0.75 }
 
 local ALL_PHASES                   = { "day", "dusk", "night" }
 local ALL_MOONPHASES               = { "new", "quarter", "half", "threequarter", "full" }
@@ -135,6 +138,68 @@ local ALL_WORLDS                   = { "forest", "cave" }
 -- New Ocean Fishes,
 local OCEANFISHES                  =
 {
+	oceanfish_pufferfish           = 
+	{
+		prefab                     = "oceanfish_pufferfish",
+		bank                       = "kyno_oceanfish_pufferfish",
+		build                      = "kyno_oceanfish_pufferfish",
+		
+		weight_min                 = TUNING.KYNO_OCEANFISH_PUFFERFISH_MIN_WEIGHT,
+		weight_max                 = TUNING.KYNO_OCEANFISH_PUFFERFISH_MAX_WEIGHT,
+
+		walkspeed                  = TUNING.KYNO_OCEANFISH_PUFFERFISH_WALKSPEED,
+		runspeed                   = TUNING.KYNO_OCEANFISH_PUFFERFISH_RUNSPEED,
+		
+		stamina =
+		{
+			drain_rate             = 0.1,
+			recover_rate           = 0.5,
+			struggle_times	       = { low = 1, r_low = 2, high = 3, r_high = 2 },
+			tired_times		       = { low = 1, r_low = 2, high = 1, r_high = 1 },
+			tiredout_angles        = { has_tention = 80, low_tention = 120},
+		},
+
+		schoolmin                  = SCHOOL_SIZE.LARGE.min,
+		schoolmax                  = SCHOOL_SIZE.LARGE.max,
+		schoolrange                = SCHOOL_AREA.LARGE,
+		schoollifetimemin          = SCHOOL_WORLD_TIME.MEDIUM.min,
+		schoollifetimemax          = SCHOOL_WORLD_TIME.MEDIUM.max,
+
+		herdwandermin              = WANDER_DIST.LONG.min,
+		herdwandermax              = WANDER_DIST.LONG.max,
+		herdarrivedist             = ARRIVE_DIST.MEDIUM,
+		herdwanderdelaymin         = WANDER_DELAY.SHORT.min,
+		herdwanderdelaymax         = WANDER_DELAY.SHORT.max,
+
+		set_hook_time              = SET_HOOK_TIME_MEDIUM,
+		breach_fx                  = BREACH_FX_SMALL,
+		
+		loot                       = LOOT.PUFFERFISH,
+		heavy_loot                 = HEAVY_LOOT.PUFFERFISH,
+		
+		cooking_product            = COOKING_PRODUCT.SMALL,
+		perish_product             = PERISH.SMALL,
+		fishtype                   = "meat",
+
+		lures                      = TUNING.OCEANFISH_LURE_PREFERENCE.SMALL_OMNI,
+		diet                       = DIET.OMNI,
+		cooker_ingredient_value    = COOKER_INGREDIENT_SMALL,
+		edible_values              = EDIBLE_VALUES_SMALL_MEAT,
+
+		dynamic_shadow             = SHADOW_SMALL,
+		
+		roe_prefab                 = "kyno_roe_oceanfish_pufferfish",
+		baby_prefab                = "oceanfish_pufferfish_inv",
+		
+		roe_time                   = TUNING.OCEANFISH_SMALL_ROETIME,
+		baby_time                  = TUNING.OCEANFISH_SMALL_BABYTIME,
+		
+		phases                     = { "day" },
+		moonphases                 = ALL_MOONPHASES,
+		seasons                    = { "summer" },
+		worlds                     = ALL_WORLDS,
+	},
+
 	oceanfish_sturgeon             = 
 	{
 		prefab                     = "oceanfish_sturgeon",
@@ -183,7 +248,7 @@ local OCEANFISHES                  =
 		cooker_ingredient_value    = COOKER_INGREDIENT_MEDIUM,
 		edible_values              = EDIBLE_VALUES_MEDIUM_MEAT,
 
-		dynamic_shadow             = SHADOW_MEDIUM,
+		dynamic_shadow             = SHADOW_LARGE,
 		
 		roe_prefab                 = "kyno_roe_oceanfish_sturgeon",
 		baby_prefab                = "oceanfish_sturgeon_inv",
@@ -203,9 +268,9 @@ for k, v in pairs(OCEANFISHES) do
 end
 
 -- Pufferfish school locations.
--- SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_HAZARDOUS].oceanfish_pufferfish = SCHOOL_VERY_COMMON
--- SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_pufferfish     = SCHOOL_UNCOMMON
--- SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_COASTAL].oceanfish_pufferfish   = SCHOOL_RARE
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_HAZARDOUS].oceanfish_pufferfish = SCHOOL_VERY_COMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_pufferfish     = SCHOOL_UNCOMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_pufferfish     = SCHOOL_RARE
 
 -- Sturgeon school locations.
 SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_BRINEPOOL].oceanfish_sturgeon   = SCHOOL_COMMON

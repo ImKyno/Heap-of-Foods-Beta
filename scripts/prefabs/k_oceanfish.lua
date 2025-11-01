@@ -625,6 +625,7 @@ end
 -- I am going to manually register them in here...
 local FISH_DATA_HOF = 
 {
+	oceanfish_pufferfish = true,
 	oceanfish_sturgeon = true,
 }
 

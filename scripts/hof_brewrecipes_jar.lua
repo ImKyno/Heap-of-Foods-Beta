@@ -164,6 +164,7 @@ local kyno_foods_jar =
 
             local light = SpawnPrefab("wormlight_light_greater")
             light.components.spell:SetTarget(eater)
+			
             if light:IsValid() then
                 if light.components.spell.target == nil then
                     light:Remove()
@@ -1147,6 +1148,7 @@ local kyno_foods_jar =
 
             local light = SpawnPrefab("kyno_jellyfish_rainbow_light_greater")
             light.components.spell:SetTarget(eater)
+			
             if light:IsValid() then
                 if light.components.spell.target == nil then
                     light:Remove()

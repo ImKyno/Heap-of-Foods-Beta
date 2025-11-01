@@ -906,7 +906,7 @@ AddComponentPostInit("trap", function(self)
 	local _OnLoad = self.OnLoad
 
 	function self:DoTriggerOn(target)
-		if self.inst:HasTag("smalloceanfish_trap") and target ~= nil and target:HasTag("smalloceanfish") then
+		if self.inst:HasTag("smalloceanfish_trap") and target ~= nil and target:HasTag("smalloceanfish") and not target:HasTag("partiallyhooked") then
 			self.target = target
 			self.captured_fish = target
 			

@@ -506,8 +506,20 @@ end
 
 AddPrefabPostInit("alterguardian_phase4_lunarrift", ScionPostInit)
 
--- Frostjaw gives Fish Hatchery Foundation Kit blueprint.
+-- Frostjaw gives Fish Hatchery Foundation Kit blueprint and Special rewards.
 local function SharkBoiPostInit(inst)
+	local function CustomAcceptTest(inst, item)
+		if item:HasTag("sharkboifood") then
+			return not inst.sunkenchestgiven
+		end
+		
+		return inst.pendingreward == nil
+		and inst.stock > 0
+		and item:HasTag("oceanfish")
+		and item.components.weighable
+		and item.components.weighable:GetWeight() >= 150
+	end
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
@@ -520,9 +532,8 @@ local function SharkBoiPostInit(inst)
 			_OnSave(inst, data)
 		end
 		
-		if inst.blueprintgiven then
-			data.blueprintgiven = true
-		end
+		data.blueprintgiven = inst.blueprintgiven or nil
+		data.sunkenchestgiven = inst.sunkenchestgiven or nil
 	end
 
 	inst.OnLoad = function(inst, data)
@@ -530,8 +541,9 @@ local function SharkBoiPostInit(inst)
 			_OnLoad(inst, data)
 		end
 		
-		if data ~= nil and data.blueprintgiven then
-			inst.blueprintgiven = true
+		if data ~= nil then
+			inst.blueprintgiven = data.blueprintgiven
+			inst.sunkenchestgiven = data.sunkenchestgiven
 		end
 	end
 
@@ -553,7 +565,7 @@ local function SharkBoiPostInit(inst)
 
 			if inst.sketchgiven == nil or inst.blueprintgiven == nil then
 				if IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST) then
-					local gift = _G.SpawnPrefab("gift")
+					local gift = SpawnPrefab("gift")
 
 					gift.components.unwrappable:WrapItems({
 						blueprint,
@@ -564,7 +576,7 @@ local function SharkBoiPostInit(inst)
 
 					_G.LaunchAt(gift, inst, target, 1.5, 2, 1.25)
 				else
-					local loot = _G.SpawnPrefab(blueprint)
+					local loot = SpawnPrefab(blueprint)
 				
 					if loot ~= nil then
 						_G.LaunchAt(loot, inst, target, 1.5, 2, 1.25)
@@ -573,6 +585,56 @@ local function SharkBoiPostInit(inst)
 				
 				inst.blueprintgiven = true
 			end
+		end
+	end
+
+	if inst.MakeTrader ~= nil then
+		local _MakeTrader = inst.MakeTrader
+
+		inst.MakeTrader = function(inst, ...)
+			local result = _MakeTrader(inst, ...)
+			local trader = inst.components.trader
+			
+			if trader ~= nil and not trader._modded then
+				trader._modded = true
+				trader:SetAcceptTest(CustomAcceptTest)
+
+				local _onaccept = trader.onaccept
+				trader.onaccept = function(inst, giver, item, ...)
+					if inst.sunkenchestgiven then
+						if _onaccept and not item:HasTag("sharkboifood") then
+							_onaccept(inst, giver, item, ...)
+						end
+						
+						return
+					end
+					
+					if item:HasTag("sharkboifood") then
+						local chest = SpawnPrefab("sunkenchest")
+						
+						if chest ~= nil then
+							local x, y, z = inst.Transform:GetWorldPosition()
+							chest.Transform:SetPosition(x, y, z)
+							
+							chest:AddComponent("scenariorunner")
+							chest.components.scenariorunner:SetScript("sunkenchest_sharkboi")
+							chest.components.scenariorunner:Run()
+							
+							_G.LaunchAt(chest, inst, giver, 1.5, 2, 2)
+							inst.SoundEmitter:PlaySound("dontstarve/wilson/equip_item_gold")
+						end
+
+						inst.sunkenchestgiven = true
+						return
+					end
+
+					if _onaccept ~= nil then
+						_onaccept(inst, giver, item, ...)
+					end
+				end
+			end
+
+			return result
 		end
 	end
 end

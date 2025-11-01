@@ -186,7 +186,7 @@ local function lightfn()
 end
 
 local function greaterlightfn()
-    return light_commonfn(TUNING.KYNO_JELLYFISH_RAINBOW_LIGHT_GREATER_DURATION, "kyno_jellyfish_rainbow_light_fx_greater")
+    return commonfn(TUNING.KYNO_JELLYFISH_RAINBOW_LIGHT_GREATER_DURATION, "kyno_jellyfish_rainbow_light_fx_greater")
 end
 
 local noupdate_parents = 

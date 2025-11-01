@@ -25,13 +25,17 @@ HOF_FUELTYPES =
 HOF_NAUGHTY_VALUE                    =
 {
 	-- Mod creatures.
-	["kyno_chicken2"]                = 1,
-	["kyno_piko"]                    = 1,
-	["kyno_piko_orange"]             = 2,
-	["kingfisher"]                   = 2,
 	["toucan"]                       = 1,
 	["quagmire_pigeon"]              = 1,
 	["kyno_sugarfly"]                = 1,
+	["kyno_chicken2"]                = 1,
+	["kyno_jellyfish_ocean"]         = 1,
+	["kyno_jellyfish"]               = 1,
+	["kyno_piko"]                    = 1,
+	["kyno_piko_orange"]             = 2,
+	["kyno_jellyfish_rainbow_ocean"] = 2,
+	["kyno_jellyfish_rainbow"]       = 2,
+	["kingfisher"]                   = 2,
 	["kyno_pebblecrab"]              = 2,
 	["kyno_meadowisland_mermfisher"] = 3,
 	["kyno_meadowisland_seller"]     = 50, -- Wait, how did you kill Sammy?
@@ -48,6 +52,7 @@ HOF_PICKABLE_FOODS      =
 	kyno_wheat          = true,
 	kyno_kokonut        = true,
 	kyno_banana         = true,
+	kyno_truffles       = true,
 }
 
 HOF_PICKUP_SOUNDS =

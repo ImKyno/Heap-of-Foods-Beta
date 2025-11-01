@@ -4369,7 +4369,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank            = "kyno_roe",
 		build           = "kyno_roe",
 		anim            = "idle_oceanfish_pufferfish",
-		deps            = {"kyno_roe_cooked", "spoiled_food"}, -- oceanfish_pufferfish_inv
+		deps            = {"oceanfish_pufferfish_inv", "kyno_roe_cooked", "spoiled_food"},
 	},
 	
 	kyno_roe_oceanfish_sturgeon =
@@ -14518,6 +14518,26 @@ local HOF_SCRAPBOOK_CREATURES =
 		anim           = "idle",
 		deps           = {"kyno_jellyfish_rainbow_dead", "kyno_roe_jellyfish_rainbow"},
 		specialinfo    = "JELLYFISH_RAINBOW",
+	},
+	
+	oceanfish_pufferfish_inv =
+	{
+		name           = "oceanfish_pufferfish_inv",
+		speechname     = "oceanfish_pufferfish",
+		type           = "creature",
+		subcat         = "oceanfish",
+		tex            = "oceanfish_pufferfish_inv.tex",
+		prefab         = "oceanfish_pufferfish_inv",
+		healthvalue    = 1,
+		hungervalue    = 12.5,
+		sanityvalue    = 0,
+		perishable     = 480,
+		bank           = "kyno_oceanfish_pufferfish",
+		build          = "kyno_oceanfish_pufferfish",
+		anim           = "flop_pst",
+		animoffsetx    = -10,
+		animoffsety    = 20,
+		deps           = {"fishmeat", "fishmeat_small", "stinger"},
 	},
 	
 	oceanfish_sturgeon_inv =
