@@ -1,0 +1,498 @@
+Warning: QPainter::begin: Paint device returned engine == 0, type: 1
+Warning: QPainter::setPen: Painter not active
+Warning: QPainter::setBrush: Painter not active
+Warning: QPainter::setRenderHint: Painter must be active to set rendering hints
+Warning: QPainter::setPen: Painter not active
+Debug: "00:22:11 c:\anthill_jobs\job504524\fmod4\tools\fmod_designer\src\eventform.ui.h:1638 BZ: Add Event Group" 
+Debug: "00:22:22 c:\anthill_jobs\job504524\fmod4\tools\fmod_designer\src\eventform.ui.h:1529 HH: Add Simple Event" 
+Debug: "00:22:47 ..\..\src\simpleeventcontroller.cpp:1734 IS: Add Sounds to Playlist" 
+Debug: "00:22:53 ..\..\src\propertyeditor.cpp:2619 EO: Set Volume" 
+Debug: "00:22:55 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:22:55 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:22:55 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:22:56 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:22:56 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:22:59 ..\..\src\propertyeditor.cpp:4234 ER: Set Mode" 
+Debug: "00:23:01 ..\..\src\propertyeditor.cpp:4234 ER: Set x 3D Rolloff" 
+Debug: "00:23:03 ..\..\src\propertyeditor.cpp:2619 EO: Set x 3D Max Distance" 
+Debug: "00:23:10 ..\..\src\propertyeditor.cpp:2619 EO: Set Volume" 
+Debug: "00:23:22 c:\anthill_jobs\job504524\fmod4\tools\fmod_designer\src\eventform.ui.h:1529 HH: Add Simple Event" 
+Debug: "00:23:35 ..\..\src\simpleeventcontroller.cpp:1734 IS: Add Sounds to Playlist" 
+Debug: "00:23:40 ..\..\src\propertyeditor.cpp:2619 EO: Set Volume" 
+Debug: "00:23:42 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:23:42 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:23:42 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:23:43 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:23:44 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:23:45 ..\..\src\propertyeditor.cpp:4234 ER: Set Mode" 
+Debug: "00:23:46 ..\..\src\propertyeditor.cpp:4234 ER: Set x 3D Rolloff" 
+Debug: "00:23:48 ..\..\src\propertyeditor.cpp:2619 EO: Set x 3D Max Distance" 
+Debug: "00:24:01 c:\anthill_jobs\job504524\fmod4\tools\fmod_designer\src\eventform.ui.h:1529 HH: Add Simple Event" 
+Debug: "00:24:17 ..\..\src\simpleeventcontroller.cpp:1734 IS: Add Sound to Playlist" 
+Debug: "00:24:19 ..\..\src\simpleeventcontroller.cpp:606 HV: Set Playback Mode" 
+Debug: "00:24:24 ..\..\src\propertyeditor.cpp:2619 EO: Set Volume" 
+Debug: "00:24:28 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:24:28 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:24:28 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:24:29 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:24:30 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:24:32 ..\..\src\propertyeditor.cpp:4234 ER: Set Mode" 
+Debug: "00:24:33 ..\..\src\propertyeditor.cpp:4234 ER: Set x 3D Rolloff" 
+Debug: "00:24:35 ..\..\src\propertyeditor.cpp:2619 EO: Set x 3D Max Distance" 
+Debug: "00:24:47 ..\..\src\propertyeditor.cpp:1508 EM: Set Name" 
+Debug: "00:25:28 c:\anthill_jobs\job504524\fmod4\tools\fmod_designer\src\eventform.ui.h:1529 HH: Add Simple Event" 
+Debug: "00:25:37 ..\..\src\propertyeditor.cpp:1508 EM: Set Name" 
+Debug: "00:25:54 ..\..\src\simpleeventcontroller.cpp:1734 IS: Add Sounds to Playlist" 
+Debug: "00:25:59 ..\..\src\propertyeditor.cpp:2619 EO: Set Volume" 
+Debug: "00:26:01 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:26:01 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:26:02 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:26:03 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:26:03 ..\..\src\propertyeditor.cpp:3444 EQ: Set Max Playbacks" 
+Debug: "00:26:04 ..\..\src\propertyeditor.cpp:4234 ER: Set Mode" 
+Debug: "00:26:08 ..\..\src\propertyeditor.cpp:4234 ER: Set x 3D Rolloff" 
+Debug: "00:26:10 ..\..\src\propertyeditor.cpp:2619 EO: Set x 3D Max Distance" 
+Debug: "00:27:08 ..\..\src\propertyeditor.cpp:1508 EM: Set Name" 
+Debug: "00:28:28 ..\..\src\categorylistview.cpp:409 CD: Move Multiple Events to Category" 
+Debug: 
+Building project 'hof_sounds'...
+Debug: Building project C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\hof_sounds.fev...
+Debug: Unique sound defs 2/47
+Debug: Retrieving sound file info...
+Debug: Retrieving reverb info...
+Debug: FEV file written ok
+Debug: Unique Envelope Points: 0 of 0
+Debug: Unique Strings: 2090 characters of 2138
+Debug: Caching sound file details for ''...
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Antchest_Place.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_10.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_3.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_4.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_5.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_6.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_7.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_8.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_9.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_10.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_3.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_4.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_5.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_6.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_7.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_8.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_9.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_10.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_11.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_12.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_13.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_14.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_15.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_16.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_17.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_3.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_4.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_5.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_6.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_7.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_8.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_9.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimEmerged_MED_LP.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_AntiVenom_Whoosh_01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_AntiVenom_Whoosh_02.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_AntiVenom_Whoosh_03.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_3.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_4.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_5.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_6.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_7.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_3.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_4.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_5.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_6.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_7.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_02.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_03.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_04.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_05.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_06.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_07.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_08.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_09.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_02.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_03.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_04.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_05.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_06.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_07.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_sea_trap_drop.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_sea_trap_flag.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_sea_trap_ground_hit.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_splashes_small_01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_splashes_small_02.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_splashes_small_03.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_3.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_4.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_5.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_6.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_7.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_8.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_02.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_03.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_04.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_05.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_06.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_07.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_08.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_09.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_10.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_11.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_12.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_13.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_death_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_death_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_death_3.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_death_4.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_death_5.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_death_6.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_02.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_03.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_04.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_05.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_06.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_07.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_08.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_09.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_10.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_11.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_sword_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_sword_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_tuna_can.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\GP_LAUGH_1.mp3
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\GP_LAUGH_2.mp3
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_DS_01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_DS_02.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_DS_03.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_DS_04.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_DS_05.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_DS_06.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_Takeoff_DS_01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Kingfisher_TakeOff_DS_01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Kingfisher_TakeOff_DS_02.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Kingfisher_TakeOff_DS_03.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Kingfisher_TakeOff_DS_04.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_Place.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_Refuel_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_Refuel_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_Refuel_3.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_TurnOff_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_TurnOff_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_TurnOff_3.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_TurnOn_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_TurnOn_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_TurnOn_3.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_WorkingLP_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_WorkingLP_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_WorkingLP_3.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko02.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko03.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko04.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko05.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko06.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko07.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko08.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko09.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko10.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko11.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko12.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\barrelBreak.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\drawer1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\drawer2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\drink_effect.mp3
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\drink_nuka1.mp3
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\drink_nuka2.mp3
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\dwop.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_02.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_03.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_04.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_05.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_06.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_07.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_08.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_09.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_10.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_11.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_12.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_13.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_14.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_15.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_16.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\nukashine.mp3
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\nukashine_jukebox.mp3
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_02.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_03.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_04.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_05.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_06.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_07.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_08.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_09.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_10.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_01.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_02.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_03.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_04.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_05.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_06.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_07.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_08.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_09.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_10.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_2.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_3.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_4.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_5.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_6.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_7.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_8.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\water_scoop1.wav
+Debug: ..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\water_scoop2.wav
+Debug: Building 'hof_sfx.fsb'
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Antchest_Place.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_10.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_3.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_4.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_5.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_6.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_7.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_8.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Emerge_Med_9.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_10.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_3.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_4.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_5.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_6.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_7.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_8.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_Submerge_Med_9.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_10.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_11.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_12.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_13.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_14.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_15.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_16.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_17.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_3.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_4.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_5.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_6.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_7.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_8.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimBreach_MED_9.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_AntiVenom_Whoosh_01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_AntiVenom_Whoosh_02.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_AntiVenom_Whoosh_03.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_3.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_4.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_5.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_6.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_land_7.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_3.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_4.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_5.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_6.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_electric_water_7.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_02.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_03.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\CreatureWater_SwimEmerged_MED_LP.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_04.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_05.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_06.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_07.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_08.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jelly_fish_hit_09.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_02.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_03.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_04.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_05.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_06.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_jellyfish_deathmurder_07.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_sea_trap_drop.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_sea_trap_flag.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_sea_trap_ground_hit.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_splashes_small_01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_splashes_small_02.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_3.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_splashes_small_03.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_4.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_6.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_5.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_7.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_8.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_02.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_03.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_04.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_05.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_06.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_07.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_08.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_09.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_10.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_11.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_12.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_attack_pre_13.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_death_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_death_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_death_4.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_death_3.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_death_6.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_death_5.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_02.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_03.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_04.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_05.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_06.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_08.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_07.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_10.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_09.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_sword_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_hit_11.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_swordfish_sword_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\DSS_tuna_can.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\GP_LAUGH_1.mp3
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\GP_LAUGH_2.mp3
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_DS_01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_DS_02.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_DS_03.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_DS_04.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_DS_05.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_DS_06.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\King_Fisher_Chirp_Takeoff_DS_01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Kingfisher_TakeOff_DS_01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Kingfisher_TakeOff_DS_03.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Kingfisher_TakeOff_DS_02.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_Place.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Kingfisher_TakeOff_DS_04.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_Refuel_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_Refuel_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_Refuel_3.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_TurnOff_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_TurnOff_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_TurnOff_3.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_TurnOn_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_TurnOn_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_TurnOn_3.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_WorkingLP_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_WorkingLP_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko02.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko03.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko04.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko05.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko06.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko07.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\Sprinkler_WorkingLP_3.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko08.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko09.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko10.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko11.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\atk_squirrel_piko12.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\barrelBreak.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\drawer1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\drawer2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\drink_effect.mp3
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\drink_nuka1.mp3
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\drink_nuka2.mp3
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_02.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\dwop.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_03.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_05.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_04.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_06.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_07.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_09.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_08.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_11.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_10.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_12.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_14.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_13.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_15.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\idle_squirrel_piko_16.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\nukashine.mp3
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_02.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_03.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_04.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_05.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_06.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_07.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_08.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_09.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\steal_squirrel_piko_10.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_01.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_02.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_03.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_04.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_05.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_06.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_07.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_08.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_09.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_chirp_10.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_3.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_4.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_5.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_6.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_7.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\toucan_takeoff_8.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\water_scoop1.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\water_scoop2.wav
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods\Heap-of-Foods-Workshop-Main\sound\..\..\..\..\..\..\..\..\users\kyno\desktop\minha pasta\mods\heap-of-foods-backup\backup\sounds\nukashine_jukebox.mp3
+Debug: Writing FSB...
+Debug: Finished building FSB
+Debug: 
+Debug: 
+Summary of build:
+SUCCESS: C:/Program Files (x86)/Steam/steamapps/common/Don't Starve Together/mods/Heap-of-Foods-Workshop-Main/sound/hof_sounds.fev
+SUCCESS: hof_sfx.fsb

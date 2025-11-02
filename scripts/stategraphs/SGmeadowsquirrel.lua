@@ -411,4 +411,4 @@ CommonStates.AddSleepStates(states)
 CommonStates.AddFrozenStates(states)
 CommonStates.AddElectrocuteStates(states, nil, { pre = "hit", loop = "hit", pst = "hit"})
 
-return StateGraph("squirrel", states, events, "idle", actionhandlers)
+return StateGraph("meadowsquirrel", states, events, "idle", actionhandlers)

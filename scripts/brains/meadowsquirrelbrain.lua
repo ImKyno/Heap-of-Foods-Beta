@@ -109,11 +109,11 @@ local function CheckForHome(inst)
     end
 end
 
-local SquirrelBrain = Class(Brain, function(self, inst)
+local MeadowSquirrelBrain = Class(Brain, function(self, inst)
     Brain._ctor(self, inst)
 end)
 
-function SquirrelBrain:OnStart()
+function MeadowSquirrelBrain:OnStart()
     local root = PriorityNode(
     {
 		BrainCommon.PanicTrigger(self.inst),
@@ -144,4 +144,4 @@ function SquirrelBrain:OnStart()
     self.bt = BT(self.inst, root)
 end
 
-return SquirrelBrain
+return MeadowSquirrelBrain

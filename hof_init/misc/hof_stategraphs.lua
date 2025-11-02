@@ -489,6 +489,7 @@ if not TUNING.HOF_IS_CTW_ENABLED then
 						inst.vomit.Transform:SetPosition(pos.x, pos.y, pos.z)
 						
 						inst.vomit:AddTag("nosteal")
+						inst.vomit:RemoveTag("cattoy")
 					
 						if inst.vomit.components.inventoryitem and inst.vomit.components.inventoryitem.ondropfn then
 							inst.vomit.components.inventoryitem.ondropfn(inst.vomit)

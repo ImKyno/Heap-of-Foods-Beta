@@ -123,6 +123,7 @@ AddIngredientValues({"kyno_sporecap"},               {veggie     = 0.5,  mushroo
 AddIngredientValues({"kyno_sporecap_dark"},          {veggie     = 0.5,  mushrooms = 1,    monster   = 0.5}, true)
 AddIngredientValues({"truffleoil"},                  {oil        = 1})
 AddIngredientValues({"kyno_antchovy"},               {meat       = 0.25, fish      = 0.25, antchovy  = 1})
+AddIngredientValues({"kyno_swordfish_dead"},         {meat       = 1,    fish      = 2,    swordfish = 1})
 AddIngredientValues({"kyno_swordfish_blue"},         {meat       = 1,    fish      = 2,    swordfish = 1})
 AddIngredientValues({"kyno_jellyfish"},              {monster    = 1,    fish      = 1,    jellyfish = 1},   true, true)
 AddIngredientValues({"kyno_jellyfish_dead"},         {monster    = 1,    fish      = 1,    jellyfish = 1})
@@ -182,7 +183,7 @@ local oceanfishes =
 	
 	oceanfish_sturgeon_inv =
 	{
-		meat = 1, fish = 1
+		meat = 1, fish = 2
 	},
 }
 

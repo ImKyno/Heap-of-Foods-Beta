@@ -445,7 +445,7 @@ local function fn()
 	inst:AddComponent("watersource")
 	
 	inst:AddComponent("preserver")
-    inst.components.preserver:SetPerishRateMultiplier(0)
+    inst.components.preserver:SetPerishRateMultiplier(TUNING.KYNO_FISHFARMLAKE_PRESERVER_RATE)
 	
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)

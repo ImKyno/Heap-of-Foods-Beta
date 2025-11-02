@@ -251,7 +251,7 @@ local function fn()
 	
 	inst.Transform:SetFourFaced()
 	
-	MakeCharacterPhysics(inst, 1, 0.5)
+	MakeCharacterPhysics(inst, 10, 0.5)
 	
 	inst.AnimState:SetScale(.8, .8, .8)
 
@@ -274,6 +274,8 @@ local function fn()
 	
 	inst:AddComponent("lighttweener")
 	inst.components.lighttweener:StartTween(inst.Light, nil, nil, nil, { 0/255, 180/255, 255/255 }, 4, SwapColor)
+	
+	inst.no_wet_prefix = true
 
     inst.entity:SetPristine()
 
@@ -310,7 +312,7 @@ local function fn()
     inst.components.lootdropper:SetLoot({"kyno_jellyfish_rainbow_dead"})
 
 	inst:AddComponent("sleeper")
-	inst.components.sleeper:SetSleepTest(SleepTest)
+	inst.components.sleeper.sleeptestfn = nil
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.NET)

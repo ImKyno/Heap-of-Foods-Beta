@@ -9,11 +9,11 @@ local FishFarmManager = Class(function(self, inst)
 	self.onstopfn = nil
 	self.onworkfn = nil
 	
-	self.slot_start = 3
-	self.slot_end = 8
+	self.slot_start = TUNING.KYNO_FISHFARMLAKE_SLOT_START
+	self.slot_end = TUNING.KYNO_FISHFARMLAKE_SLOT_END
 	
-	self.consumefuel_roe = 5
-	self.consumefuel_baby = 15
+	self.consumefuel_roe = TUNING.KYNO_FISHFARMLAKE_ROE_CONSUMPTION
+	self.consumefuel_baby = TUNING.KYNO_FISHFARMLAKE_BABY_CONSUMPTION
 end)
 
 function FishFarmManager:SetStartWorkingFn(fn)
@@ -29,19 +29,19 @@ function FishFarmManager:SetWorkingFn(fn)
 end
 
 function FishFarmManager:SetSlotStart(value)
-	self.slot_start = value or 3
+	self.slot_start = value or TUNING.KYNO_FISHFARMLAKE_SLOT_START
 end
 
 function FishFarmManager:SetSlotEnd(value)
-	self.slot_end = value or 8
+	self.slot_end = value or TUNING.KYNO_FISHFARMLAKE_SLOT_END
 end
 
 function FishFarmManager:SetRoeConsumption(value)
-	self.consumefuel_roe = value or 5
+	self.consumefuel_roe = value or TUNING.KYNO_FISHFARMLAKE_ROE_CONSUMPTION
 end
 
 function FishFarmManager:SetBabyConsumption(value)
-	self.consumefuel_baby = value or 15
+	self.consumefuel_baby = value or TUNING.KYNO_FISHFARMLAKE_BABY_CONSUMPTION
 end
 
 function FishFarmManager:StopWorking()

@@ -176,7 +176,7 @@ local function fn()
 	
 	inst.Transform:SetFourFaced()
 	
-	MakeCharacterPhysics(inst, 1, 0.5)
+	MakeCharacterPhysics(inst, 10, 0.5)
 
 	inst.AnimState:SetBank("kyno_jellyfish")
 	inst.AnimState:SetBuild("kyno_jellyfish")
@@ -191,6 +191,8 @@ local function fn()
 	inst:AddTag("electricdamageimmune")
 	
 	inst:SetPrefabNameOverride("KYNO_JELLYFISH")
+	
+	inst.no_wet_prefix = true
 
     inst.entity:SetPristine()
 
@@ -217,7 +219,7 @@ local function fn()
     inst.components.lootdropper:SetLoot({"kyno_jellyfish_dead"})
 
 	inst:AddComponent("sleeper")
-	inst.components.sleeper:SetSleepTest(SleepTest)
+	inst.components.sleeper.sleeptestfn = nil
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.NET)

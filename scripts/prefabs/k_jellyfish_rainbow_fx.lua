@@ -1,3 +1,4 @@
+-- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 local lightprefabs =
 {
 	"kyno_jellyfish_rainbow_light",

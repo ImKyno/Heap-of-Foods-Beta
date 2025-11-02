@@ -143,6 +143,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Can be feed with seeds to lay down 
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Fluffy little buddies that loves to steal your most valuable items!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Kingfishers will often drop Tropical Kois from above. It's raining fish, literally!"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emits a colorful healthy glow during dusk and night."
+STRINGS.SCRAPBOOK.SPECIALINFO.HULLBREAKER_CREATURE = "Can damage the boat's hull when landing successful attacks."
 
 -- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "A Merchant from a distant archipelago. He's willing to trade his best cooking utensils and other useful items for delicious meals.\n\nThe Elder is craving for a meal with extreme sweetness or Butter mescled with seafood. He will reward you accordingly.\n\nBringing Elder's favourtie meal will unlock more trade deals."

@@ -55,6 +55,7 @@ local function fn()
 		
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_floatilizer"	
 
 	inst:AddComponent("fertilizerresearchable")
 	inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)

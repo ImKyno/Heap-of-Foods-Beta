@@ -4971,6 +4971,44 @@ local HOF_SCRAPBOOK_FOODS =
 		anim           = "kyno_jellyfish_idle",
 		deps           = {"kyno_jellyfish_dead", "spoiled_food"},
 	},
+	
+	kyno_spoiled_fish_large =
+	{
+		name           = "kyno_spoiled_fish_large",
+		type           = "food",
+		tex            = "kyno_spoiled_fish_large.tex",
+		prefab         = "kyno_spoiled_fish_large",
+		healthvalue    = -1,
+		hungervalue    = -10,
+		sanityvalue    = 0,
+		foodtype       = "GENERIC",
+		fueltype       = "BURNABLE",
+		fuelvalue      = 45,
+		burnable       = true,
+		stacksize      = 20,
+		workable       = "HAMMER",
+		bank           = "kyno_spoiled_fish_large",
+		build          = "kyno_spoiled_fish_large",
+		anim           = "idle",
+		deps           = {"boneshard", "spoiled_food"},
+	},
+	
+	kyno_swordfish_dead =
+	{
+		name           = "kyno_swordfish_dead",
+		type           = "food",
+		tex            = "kyno_swordfish_dead.tex",
+		prefab         = "kyno_swordfish_dead",
+		healthvalue    = 16,
+		hungervalue    = 37.5,
+		sanityvalue    = 0,
+		perishable     = 1440,
+		foodtype       = "MEAT",
+		bank           = "kyno_swordfish",
+		build          = "kyno_swordfish",
+		anim           = "dead",
+		deps           = {"kyno_swordfish", "kyno_spoiled_fish_large"},
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS =
@@ -14518,6 +14556,21 @@ local HOF_SCRAPBOOK_CREATURES =
 		anim           = "idle",
 		deps           = {"kyno_jellyfish_rainbow_dead", "kyno_roe_jellyfish_rainbow"},
 		specialinfo    = "JELLYFISH_RAINBOW",
+	},
+	
+	kyno_swordfish     =
+	{
+		name           = "kyno_swordfish",
+		type           = "creature",
+		tex            = "kyno_swordfish.tex",
+		prefab         = "kyno_swordfish",
+		health         = 500,
+		damage         = 50,
+		bank           = "kyno_swordfish",
+		build          = "kyno_swordfish",
+		anim           = "fishmed",
+		deps           = {"kyno_swordfish_dead"},
+		specialinfo    = "HULLBREAKER_CREATURE",
 	},
 	
 	oceanfish_pufferfish_inv =

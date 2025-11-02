@@ -1,4 +1,4 @@
-local squirrelbrain = require("brains/squirrelbrain")
+local squirrelbrain = require("brains/meadowsquirrelbrain")
 
 local assets =
 {
@@ -197,7 +197,7 @@ local function fn()
 	inst:AddComponent("locomotor")
 	inst.components.locomotor.runspeed = TUNING.KYNO_PIKO_RUN_SPEED
 
-	inst:SetStateGraph("SGsquirrel")
+	inst:SetStateGraph("SGmeadowsquirrel")
 	inst:SetBrain(squirrelbrain)
 
 	inst:AddComponent("eater")
@@ -306,7 +306,7 @@ local function orangefn()
 	inst:AddComponent("locomotor")
 	inst.components.locomotor.runspeed = TUNING.KYNO_PIKO_RUN_SPEED
 
-	inst:SetStateGraph("SGsquirrel")
+	inst:SetStateGraph("SGmeadowsquirrel")
 	inst:SetBrain(squirrelbrain)
 
 	inst:AddComponent("eater")

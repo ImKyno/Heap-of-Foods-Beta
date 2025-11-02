@@ -63,7 +63,7 @@ AddPrefabPostInit("babybeefalo", function(inst)
     inst.components.lootdropper:AddChanceLoot("kyno_beanbugs", 0.10)
 end)
 
--- Catcoon Drops Gummy Slug / Malbatross Food.
+-- Catcoon Drops Gummy Slug / Mystery Meat.
 AddPrefabPostInit("catcoon", function(inst)
 	local _OnGetItemFromPlayer
 
@@ -101,6 +101,7 @@ AddPrefabPostInit("catcoon", function(inst)
     inst.components.lootdropper:AddChanceLoot("kyno_gummybug", 0.35)
 end)
 
+--[[
 -- Some Birds Spawns Roe Periodically.
 AddPrefabPostInit("puffin", function(inst)
     if inst.components.periodicspawner ~= nil then
@@ -128,6 +129,7 @@ if TUNING.HOF_IS_TAP_ENABLED then
         end
     end)
 end
+]]--
 
 -- Prime Mate has very small chance of dropping Pirate's Rum
 AddPrefabPostInit("prime_mate", function(inst)
