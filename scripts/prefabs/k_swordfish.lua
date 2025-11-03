@@ -28,10 +28,10 @@ local prefabs =
 local SWIMMING_COLLISION_MASK = COLLISION.GROUND + COLLISION.LAND_OCEAN_LIMITS + COLLISION.OBSTACLES + COLLISION.SMALLOBSTACLES
 
 local SWORDFISH_MUST_TAGS = { "_combat" }
-local SWORDFISH_CANT_TAGS = { "INLIMBO", "outofreach", "swordfish" }
+local SWORDFISH_CANT_TAGS = { "INLIMBO", "outofreach", "swordfish", "puffermonster" }
 
 local SWORDFISH_BOAT_MUST_TAGS = { "boat" }
-local SWORDFISH_BOAT_CANT_TAGS = { "INLIMBO", "outofreach", "swordfish" }
+local SWORDFISH_BOAT_CANT_TAGS = { "INLIMBO", "outofreach", "swordfish", "puffermonster" }
 
 local function Retarget(inst)
 	local function CheckTarget(guy)
@@ -49,6 +49,13 @@ local function KeepTarget(inst, target)
 
 	-- Don't keep target if we chased too far from our home.
 	return isnearhome and inst.components.combat:CanTarget(target) and not TheWorld.Map:IsVisualGroundAtPoint(x, y, z)
+end
+
+local function OnAttacked(inst, data)
+	inst.components.combat:SetTarget(data.attacker)
+	inst.components.combat:ShareTarget(data.attacker, TUNING.KYNO_SWORDFISH_SHARE_TARGET_DIST, function(dude)
+		return not (dude.components.health ~= nil and dude.components.health:IsDead()) and dude:HasTag("swordfish")
+	end, 5)
 end
 
 local function SetAboveWater(inst, above)
@@ -82,6 +89,60 @@ local function SleepTest(inst, isday, isnight)
 	end
 end
 
+local function FindWater(inst)
+	local foundwater = false
+	
+	local position = Vector3(inst.Transform:GetWorldPosition())
+	local start_angle = inst.Transform:GetRotation() * DEGREES
+
+	local foundwater = false
+	local radius = 6.5
+
+	local test_fn = function(offset)
+		local x = position.x + offset.x
+		local z = position.z + offset.z
+		return not TheWorld.Map:IsVisualGroundAtPoint(x, 0, z)
+	end
+
+	local offset = nil
+
+	while foundwater == false do
+		offset = FindValidPositionByFan(start_angle, radius, 10, test_fn)
+		
+		if offset and offset.x and offset.z then
+			foundwater = true
+		else
+			radius = radius + 4
+		end
+	end
+
+	return offset
+end
+
+-- Tihs means we are stuck outside water and need to get out.
+-- Happens if we are underwater and emerge while something is above us.
+local function StuckDetection(inst)
+	local platform = inst:GetCurrentPlatform()
+
+	if platform then
+		local spawnPos = inst:GetPosition()
+		local offset = FindWater(inst)
+		spawnPos = spawnPos + offset
+				
+		if inst.Physics ~= nil then
+			inst.Physics:Teleport(spawnPos:Get())
+			
+			local splash = SpawnPrefab("ocean_splash_med1")
+			splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		else
+			inst.Transform:SetPosition(spawnPos:Get())
+			
+			local splash = SpawnPrefab("ocean_splash_med2")
+			splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		end
+	end
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -106,10 +167,9 @@ local function fn()
 	inst:AddTag("animal")
 	inst:AddTag("swordfish")
 	inst:AddTag("scarytoprey")
+	inst:AddTag("scarytooceanpreay")
 	inst:AddTag("largecreature")
 	inst:AddTag("largeoceancreature")
-	inst:AddTag("icebox_valid")
-	inst:AddTag("saltbox_valid")
 
 	inst.no_wet_prefix = true
 
@@ -124,6 +184,7 @@ local function fn()
 	
 	inst:AddComponent("health")
 	inst.components.health:SetMaxHealth(TUNING.KYNO_SWORDFISH_HEALTH)
+	inst.components.health:StartRegen(TUNING.BEEFALO_HEALTH_REGEN, TUNING.BEEFALO_HEALTH_REGEN_PERIOD)
 
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"kyno_swordfish_dead"})
@@ -140,7 +201,7 @@ local function fn()
 	inst:AddComponent("combat")
 	inst.components.combat:SetDefaultDamage(TUNING.KYNO_SWORDFISH_DAMAGE)
 	inst.components.combat:SetAttackPeriod(TUNING.KYNO_SWORDFISH_ATTACK_PERIOD)
-	inst.components.combat:SetRetargetFunction(3, Retarget)
+	inst.components.combat:SetRetargetFunction(2, Retarget)
 	inst.components.combat:SetKeepTargetFunction(KeepTarget)
 
 	inst.SetLocoState = SetLocoState
@@ -150,6 +211,10 @@ local function fn()
 
 	inst:SetBrain(brain)
 	inst:SetStateGraph("SGswordfishocean")
+	
+	inst:ListenForEvent("attacked", OnAttacked)
+	
+	inst:DoPeriodicTask(3, StuckDetection) -- Stupid? Yes, but it works.
 
 	MakeMediumFreezableCharacter(inst, "swordfish_body")
 	MakeHauntablePanic(inst)
@@ -177,6 +242,8 @@ local function swordfish_dead()
 	inst:AddTag("catfood")
 	inst:AddTag("cookable")
 	inst:AddTag("dryable")
+	inst:AddTag("icebox_valid")
+	inst:AddTag("saltbox_valid")
 
 	inst.entity:SetPristine()
 

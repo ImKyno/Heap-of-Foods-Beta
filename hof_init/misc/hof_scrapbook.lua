@@ -3742,27 +3742,6 @@ local HOF_SCRAPBOOK_FOODS =
 		deps            = {"kyno_roe_cooked", "spoiled_food"}, -- wobster_moonquay_land
 	},
 	
-	kyno_roe_dogfish    =
-	{
-		name            = "kyno_roe_dogfish",
-		speechname      = "kyno_roe",
-		type            = "food",
-		subcat          = "fishroe",
-		tex             = "kyno_roe_dogfish.tex",
-		prefab          = "kyno_roe_dogfish",
-		healthvalue     = 1,
-		hungervalue     = 4.6875,
-		sanityvalue     = 0,
-		perishable      = 2880,
-		stacksize       = 20,
-		burnable        = true,
-		foodtype        = "MEAT",
-		bank            = "kyno_roe",
-		build           = "kyno_roe",
-		anim            = "idle_dogfish",
-		deps            = {"kyno_roe_cooked", "spoiled_food"}, -- kyno_dogfish
-	},
-	
 	kyno_roe_neonfish   =
 	{
 		name            = "kyno_roe_neonfish",
@@ -5009,6 +4988,23 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_swordfish",
 		anim           = "dead",
 		deps           = {"kyno_swordfish", "kyno_spoiled_fish_large"},
+	},
+	
+	kyno_dogfish_dead  =
+	{
+		name           = "kyno_dogfish_dead",
+		type           = "food",
+		tex            = "kyno_dogfish_dead.tex",
+		prefab         = "kyno_dogfish_dead",
+		healthvalue    = 8,
+		hungervalue    = 25,
+		sanityvalue    = 0,
+		perishable     = 1440,
+		foodtype       = "MEAT",
+		bank           = "kyno_dogfish",
+		build          = "kyno_dogfish",
+		anim           = "dead",
+		deps           = {"kyno_dogfish", "kyno_spoiled_fish_large"},
 	},
 }
 
@@ -13540,31 +13536,6 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		deps           = {"kyno_preservesjar", "kyno_roe_wobster_moonquay", "spoiled_food"},
 	},
 	
-	agedroe_dogfish    =
-	{
-		name           = "agedroe_dogfish",
-		speechname     = "agedroe",
-        type           = "food",
-		subcat         = "agedroe",
-		tex            = "agedroe_dogfish.tex",
-        prefab         = "agedroe_dogfish",
-		healthvalue    = 20,
-		hungervalue    = 20,
-		sanityvalue    = 15,
-        perishable     = 9600,
-        foodtype       = "MEAT",
-		burnable       = true,
-		stacksize      = 40,
-		bank           = "agedroe_dogfish",
-		build          = "agedroe_dogfish",
-		overridesymbol = {"swap_food", "swap_food", "agedroe_dogfish"},
-		anim           = "idle",
-		animoffsetx    = 12,
-		animoffsetbgx  = -20,
-		animoffsetbgy  = -100,
-		deps           = {"kyno_preservesjar", "kyno_roe_dogfish", "spoiled_food"},
-	},
-	
 	agedroe_neonfish   =
 	{
 		name           = "agedroe_neonfish",
@@ -14596,6 +14567,19 @@ local HOF_SCRAPBOOK_CREATURES =
 		anim           = "fishmed",
 		deps           = {"kyno_swordfish_dead"},
 		specialinfo    = "HULLBREAKER_CREATURE",
+	},
+	
+	kyno_dogfish       =
+	{
+		name           = "kyno_dogfish",
+		type           = "creature",
+		tex            = "kyno_dogfish.tex",
+		prefab         = "kyno_dogfish",
+		health         = 250,
+		bank           = "kyno_dogfish",
+		build          = "kyno_dogfish",
+		anim           = "fishmed",
+		deps           = {"kyno_dogfish_dead"},
 	},
 	
 	oceanfish_pufferfish_inv =

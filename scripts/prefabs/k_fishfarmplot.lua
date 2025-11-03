@@ -23,6 +23,8 @@ local prefabs =
 	"marsh_plant",
 	"collapse_big",
 	"splash_green_small",
+	"ocean_splash_med1",
+	"ocean_splash_med2",
 	
 	"kyno_fishfarmplot_shoal",
 	"kyno_fishfarmplot_shoal_marker",

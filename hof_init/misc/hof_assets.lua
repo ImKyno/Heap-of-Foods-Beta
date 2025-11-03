@@ -97,7 +97,6 @@ AddMinimapAtlas("images/minimapimages/hof_minimapicons.xml")
 local HOF_ICONS =
 {
 	"agedroe_antchovy",
-	"agedroe_dogfish",
 	"agedroe_grouper",
 	"agedroe_jellyfish",
 	"agedroe_jellyfish_rainbow",
@@ -483,7 +482,6 @@ local HOF_ICONS =
 	"kyno_roe",
 	"kyno_roe_antchovy",
 	"kyno_roe_cooked",
-	"kyno_roe_dogfish",
 	"kyno_roe_grouper",
 	"kyno_roe_jellyfish",
 	"kyno_roe_jellyfish_rainbow",
@@ -818,6 +816,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_cookware_syrup",
 	"kyno_cucumber_ground",
 	"kyno_deciduousforest_shop",
+	"kyno_dogfish",
 	"kyno_fennel_ground",
 	"kyno_fishermermhut_wurt",
 	"kyno_fishfarmplot",

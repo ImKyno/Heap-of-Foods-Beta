@@ -70,7 +70,10 @@ local events =
 		end
 	end),
 
-	EventHandler("death", function(inst) inst.sg:GoToState("death") end),
+	EventHandler("death", function(inst)
+		inst.sg:GoToState("death")
+	end),
+
 	EventHandler("attacked", function(inst, data)
 		if not inst.components.health:IsDead() then
 			if CommonHandlers.TryElectrocuteOnAttacked(inst, data) then
@@ -133,7 +136,7 @@ local states =
 			inst.AnimState:PlayAnimation("emerge")
 			
 			inst.Transform:SetFourFaced()
-			inst.SoundEmitter:PlaySound("hof_sounds/creatures/water_movement/submerge_med")
+			inst.SoundEmitter:PlaySound("hof_sounds/creatures/water_movement/emerge_med")
 			
 			inst.sg.statemem.endstate = data.endstate
 		end,
@@ -193,7 +196,9 @@ local states =
 				inst.AnimState:PlayAnimation("fishmed", true)
 				inst.components.locomotor:RunForward()
 				
-				inst.SoundEmitter:PlaySound("hof_sounds/creatures/water_movement/swim_emerge_med", "swimming")
+				if not inst.SoundEmitter:PlayingSound("swimming") then
+					inst.SoundEmitter:PlaySound("hof_sounds/creatures/water_movement/swim_emerge_med", "swimming")
+				end
 			end
 		end,
 
@@ -208,6 +213,10 @@ local states =
 		
 		onenter = function(inst)
 			if GoToLocoState(inst, "above") then
+				if inst.SoundEmitter:PlayingSound("swimming") then
+					inst.SoundEmitter:KillSound("swimming")
+				end
+			
 				inst.SoundEmitter:PlaySound("hof_sounds/creatures/swordfish/death")
 				
 				inst:Hide()
@@ -272,7 +281,7 @@ local states =
 				inst.SoundEmitter:PlaySound("hof_sounds/creatures/swordfish/swing")
 			end),
 			
-            TimeEvent(16*FRAMES, function(inst)
+            TimeEvent(16 * FRAMES, function(inst)
 				if inst.components.combat.target then
 					inst:ForceFacePoint(inst.components.combat.target:GetPosition())
 				end

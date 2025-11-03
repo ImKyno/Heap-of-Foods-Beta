@@ -35,10 +35,6 @@ local function OnInit(inst)
 
 end
 
-local function OnPreLoadSwordfish(inst, data)
-    WorldSettings_Spawner_PreLoad(inst, data, TUNING.KYNO_SWORDFISH_SPAWN_TIME)
-end
-
 local function OnPreLoadJelly(inst, data)
     WorldSettings_ChildSpawner_PreLoad(inst, data, TUNING.KYNO_JELLYFISH_RELEASE_TIME, TUNING.KYNO_JELLYFISH_REGEN_TIME)
 end
@@ -47,36 +43,12 @@ local function OnPreLoadJellyRainbow(inst, data)
 	WorldSettings_ChildSpawner_PreLoad(inst, data, TUNING.KYNO_JELLYFISH_RAINBOW_RELEASE_TIME, TUNING.KYNO_JELLYFISH_RAINBOW_REGEN_TIME)
 end
 
-local function swordfishfn()
-    local inst = CreateEntity()
+local function OnPreLoadDogfish(inst, data)
+	WorldSettings_Spawner_PreLoad(inst, data, TUNING.KYNO_DOGFISH_SPAWN_TIME)
+end
 
-    inst.entity:AddTransform()
-    inst.entity:AddSoundEmitter()
-    inst.entity:AddNetwork()
-	
-	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("kyno_swordfish_spawner.tex")
-	minimap:SetPriority(5)
-	
-	inst:AddTag("NOBLOCK")
-	inst:AddTag("CLASSIFIED")
-	inst:AddTag("swordfishspawner")
-
-    inst.entity:SetPristine()
-
-    if not TheWorld.ismastersim then
-        return inst
-    end
-
-	if TUNING.KYNO_SWORDFISH_ENABLED then
-		inst:AddComponent("spawner")
-		WorldSettings_Spawner_SpawnDelay(inst, TUNING.KYNO_SWORDFISH_SPAWN_TIME, true)
-		inst.components.spawner:Configure("kyno_swordfish", TUNING.KYNO_SWORDFISH_SPAWN_TIME)
-		
-		inst.OnPreLoad = OnPreLoadSwordfish
-	end
-
-    return inst
+local function OnPreLoadSwordfish(inst, data)
+    WorldSettings_Spawner_PreLoad(inst, data, TUNING.KYNO_SWORDFISH_SPAWN_TIME)
 end
 
 local function jellyfishfn()
@@ -151,6 +123,71 @@ local function jellyfishrainbowfn()
     end
 	
 	inst.OnPreLoad = OnPreLoadJellyRainbow
+
+    return inst
+end
+
+local function dogfishfn()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
+	
+	-- Do we want a minimap for this guy?
+	-- local minimap = inst.entity:AddMiniMapEntity()
+	-- minimap:SetIcon("kyno_dogfish_spawner.tex")
+	-- minimap:SetPriority(5)
+	
+	inst:AddTag("NOBLOCK")
+	inst:AddTag("CLASSIFIED")
+	inst:AddTag("dogfishspawner")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+
+	if TUNING.KYNO_DOGFISH_ENABLED then
+		inst:AddComponent("spawner")
+		WorldSettings_Spawner_SpawnDelay(inst, TUNING.KYNO_DOGFISH_SPAWN_TIME, true)
+		inst.components.spawner:Configure("kyno_dogfish", TUNING.KYNO_DOGFISH_SPAWN_TIME)
+		
+		inst.OnPreLoad = OnPreLoadDogfish
+	end
+
+    return inst
+end
+
+local function swordfishfn()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
+	
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("kyno_swordfish_spawner.tex")
+	minimap:SetPriority(5)
+	
+	inst:AddTag("NOBLOCK")
+	inst:AddTag("CLASSIFIED")
+	inst:AddTag("swordfishspawner")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+
+	if TUNING.KYNO_SWORDFISH_ENABLED then
+		inst:AddComponent("spawner")
+		WorldSettings_Spawner_SpawnDelay(inst, TUNING.KYNO_SWORDFISH_SPAWN_TIME, true)
+		inst.components.spawner:Configure("kyno_swordfish", TUNING.KYNO_SWORDFISH_SPAWN_TIME)
+		
+		inst.OnPreLoad = OnPreLoadSwordfish
+	end
 
     return inst
 end
@@ -245,8 +282,9 @@ local function mouseoverfn()
 	return inst
 end
 
-return Prefab("kyno_swordfish_spawner", swordfishfn, assets, prefabs),
-Prefab("kyno_jellyfish_spawner", jellyfishfn, assets, prefabs),
+return Prefab("kyno_jellyfish_spawner", jellyfishfn, assets, prefabs),
 Prefab("kyno_jellyfish_rainbow_spawner", jellyfishrainbowfn, assets, prefabs),
+Prefab("kyno_swordfish_spawner", swordfishfn, assets, prefabs),
+Prefab("kyno_dogfish_spawner", dogfishfn, assets, prefabs),
 Prefab("kyno_antchovy_spawner", antchovyfn, assets, prefabs),
 Prefab("kyno_antchovy_mouseover", mouseoverfn, assets)

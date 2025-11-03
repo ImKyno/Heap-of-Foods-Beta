@@ -30,7 +30,8 @@ local customizations_worldsettings =
 	-- OCEANCREATURESSETTING
 	jellyfishes_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_ocean_c",    order = 0,   world = { "forest" }},
 	jellyfishes2_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_ocean_c",    order = 1,   world = { "forest" }},
-	swordfishes_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_ocean_c",    order = 2,   world = { "forest" }},
+	dogfishes_setting        = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_ocean_c",    order = 2,   world = { "forest" }},
+	swordfishes_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_ocean_c",    order = 3,   world = { "forest" }},
 	
 	-- SERENITYSETTING
 	chickens_setting         = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_serenity_r", order = 0,   world = { "forest" }},
@@ -597,6 +598,33 @@ WSO.Pre.jellyfishes2_setting = function(difficulty)
 		{
 			KYNO_JELLYFISH_RAINBOW_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 1,
 			KYNO_JELLYFISH_RAINBOW_AMOUNT = 5,
+		},
+	}
+	
+	OverrideTuningVariables(tuning_vars[difficulty])
+end
+
+WSO.Pre.dogfishes_setting = function(difficulty)
+	local tuning_vars =
+	{
+		never = 
+		{
+			KYNO_DOGFISH_ENABLED = false,
+		},
+
+		few = 
+		{
+			KYNO_DOGFISH_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 6,
+		},
+		
+		many = 
+		{
+			KYNO_DOGFISH_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 2,
+		},
+            
+		always = 
+		{
+			KYNO_DOGFISH_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 1,
 		},
 	}
 	

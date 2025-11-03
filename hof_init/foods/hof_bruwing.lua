@@ -99,7 +99,6 @@ AddBrewingValues({"truffleoil"},                {oil        = 1})
 local fishroes =
 {
 	"kyno_roe_antchovy",
-	"kyno_roe_dogfish",
 	"kyno_roe_grouper",
 	"kyno_roe_jellyfish",
 	"kyno_roe_jellyfish_rainbow",
