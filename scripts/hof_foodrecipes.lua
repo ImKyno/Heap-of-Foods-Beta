@@ -3065,6 +3065,24 @@ local kyno_foods =
 			eater:AddDebuff("kyno_acidimmunitybuff", "kyno_acidimmunitybuff")
 		end,
 	},
+	
+	-- Mandrake Soup but with meat instead.
+	swordfishfeast =
+	{
+		test = function(cooker, names, tags) return tags.swordfish and tags.cheese and (names.fig or names.fig_cooked) and tags.sweetener end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_MED,
+		health = 100,
+		hunger = 150,
+		sanity = 25,
+		cooktime = 2,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXQUISITE,
+		scale = 1.5,
+		floater = TUNING.HOF_FLOATER,
+		tags = {"sharkboifood", "exquisite"},
+		card_def = {ingredients = {{"kyno_swordfish_dead", 1}, {"cheese_yellow", 1}, {"fig", 1}, {"honey", 1}}},
+	},
 }
 
 for k, recipe in pairs(kyno_foods) do

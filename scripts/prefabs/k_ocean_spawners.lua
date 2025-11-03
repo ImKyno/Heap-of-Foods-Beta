@@ -35,6 +35,10 @@ local function OnInit(inst)
 
 end
 
+local function OnPreLoadSwordfish(inst, data)
+    WorldSettings_Spawner_PreLoad(inst, data, TUNING.KYNO_SWORDFISH_SPAWN_TIME)
+end
+
 local function OnPreLoadJelly(inst, data)
     WorldSettings_ChildSpawner_PreLoad(inst, data, TUNING.KYNO_JELLYFISH_RELEASE_TIME, TUNING.KYNO_JELLYFISH_REGEN_TIME)
 end
@@ -50,6 +54,10 @@ local function swordfishfn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("kyno_swordfish_spawner.tex")
+	minimap:SetPriority(5)
+	
 	inst:AddTag("NOBLOCK")
 	inst:AddTag("CLASSIFIED")
 	inst:AddTag("swordfishspawner")
@@ -60,17 +68,13 @@ local function swordfishfn()
         return inst
     end
 
-	--[[
-    if TUNING.KYNO_SWORDFISH_ENABLED then
+	if TUNING.KYNO_SWORDFISH_ENABLED then
 		inst:AddComponent("spawner")
 		WorldSettings_Spawner_SpawnDelay(inst, TUNING.KYNO_SWORDFISH_SPAWN_TIME, true)
 		inst.components.spawner:Configure("kyno_swordfish", TUNING.KYNO_SWORDFISH_SPAWN_TIME)
-		inst.components.spawner:SetOnVacateFn(OnSpawned)
-		inst.components.spawner:SetOnOccupiedFn(OnOcuppied)
 		
-		inst.OnPreLoad = OnPreLoad
+		inst.OnPreLoad = OnPreLoadSwordfish
 	end
-	]]--
 
     return inst
 end
@@ -168,6 +172,7 @@ local function antchovyfn()
 	
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_antchovy_ocean.tex")
+	minimap:SetPriority(5)
 	
 	inst:SetPhysicsRadiusOverride(6)
 	

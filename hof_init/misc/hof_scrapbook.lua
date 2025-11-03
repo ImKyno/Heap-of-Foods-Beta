@@ -30,14 +30,15 @@ local ScrapbookScreen  = require("screens/redux/scrapbookscreen")
 ]]--
 
 -- Vanilla: red_cap, green_cap, blue_cap, moon_cap, plantmeat, monsterlasagna, lordfruitfly
--- potatosack, seeds, chum, barnacle, kelp, sharkboi, ghost
+-- potatosack, seeds, chum, barnacle, kelp, sharkboi, ghost, lobsterdinner
 table.insert(ScrapbookData.lordfruitfly.deps, "blueprint")
 table.insert(ScrapbookData.sharkboi.deps, "blueprint")
 
+-- General Stuff for vanilla content.
 ScrapbookData.chum.fueltype = "FISHFOOD"
 ScrapbookData.chum.fuelvalue = 270
-
 ScrapbookData.ghost.subcat = "ghost"
+ScrapbookData.lobsterdinner.specialinfo = "FOODEFFECTS_EXQUISITE"
 
 -- Sample deps for preparedfoods. Some special foods are likely to use their own deps though.
 local preparedfood_deps =
@@ -4882,7 +4883,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank            = "kyno_swordfish_blue",
 		build           = "kyno_swordfish_blue",
 		anim            = "idle",
-		deps            = {"grotto_pool_big", "ice", "fishmeat", "meatrack", "meatrack_hermit", "meat_dried", "spoiled_fish"}, -- kyno_fishmeat_dried
+		deps            = {"grotto_pool_big", "ice", "fishmeat", "meatrack", "meatrack_hermit", "meat_dried", "kyno_spoiled_fish_large"}, -- kyno_fishmeat_dried
 		specialinfo     = "FOODEFFECTS_DECREASETEMP",
 	},
 	
@@ -9235,6 +9236,30 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -100,
 		deps           = preparedfood_deps,
 		specialinfo    = "FOODEFFECTS_SPORECAP_DARK2",
+	},
+	
+	swordfishfeast     =
+	{
+		name           = "swordfishfeast",
+		type           = "food",
+		tex            = "swordfishfeast.tex",
+		prefab         = "swordfishfeast",
+		healthvalue    = 100,
+		hungervalue    = 150,
+		sanityvalue    = 25,
+		perishable     = 4800,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "swordfishfeast",
+		build          = "swordfishfeast",
+		anim           = "idle",
+		animoffsetx    = 12,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -100,
+		deps           = {"cookpot", "archive_cookpot", "portablecookpot", "kyno_cookware_small", "kyno_cookware_big", "kyno_cookware_small_grill", "kyno_cookware_grill", 
+		"kyno_cookware_oven_small_casserole", "kyno_cookware_oven_casserole", "sharkboi", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_EXQUISITE",
 	},
 }
 

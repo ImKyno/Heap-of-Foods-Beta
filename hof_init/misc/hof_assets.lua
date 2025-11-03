@@ -706,6 +706,7 @@ local HOF_ICONS =
 	"sugarbombs_explosive",
 	"sugarflymuffin",
 	"sweetpotatosouffle",
+	"swordfishfeast",
 	"tartarsauce",
 	"tea",
 	"teagreen",

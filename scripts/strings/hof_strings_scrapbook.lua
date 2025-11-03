@@ -98,6 +98,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP2 = "This food can make a surv
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP_DARK = "This food can make a survivor immune to Acid Rain for a certain amount of time.\n\nMonster survivors can eat this food without any penalties."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP_DARK2 = "This food can make a survivor immune to Acid Rain for a certain amount of time. It also accelerates spoiling rate of items in inventory and equipment slots.\n\nMonster survivors can eat this food without any penalties."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PUFFERFISH = "Survivors must have caution when eating Pufferfish. It can contain poison if cooked by unskilled chefs."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EXQUISITE = "An exquisite and luxurious meal.\nSomeone would for sure like this as a gift."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."

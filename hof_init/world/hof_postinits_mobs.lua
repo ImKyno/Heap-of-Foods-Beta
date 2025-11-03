@@ -622,7 +622,7 @@ local function SharkBoiPostInit(inst)
 							chest.components.scenariorunner:SetScript("sunkenchest_sharkboi")
 							chest.components.scenariorunner:Run()
 							
-							_G.LaunchAt(chest, inst, giver, 1.5, 2, 2)
+							_G.LaunchAt(chest, inst, giver, 2, 2, 2.25)
 							inst.SoundEmitter:PlaySound("dontstarve/wilson/equip_item_gold")
 						end
 

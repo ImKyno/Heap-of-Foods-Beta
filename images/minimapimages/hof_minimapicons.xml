@@ -61,9 +61,10 @@
         <Element name="kyno_sugartree_stump_ruined.tex" u1="0.75048828125" v1="0.5009765625" u2="0.81201171875" v2="0.6240234375" />
         <Element name="kyno_sugartree_tapped.tex" u1="0.81298828125" v1="0.5009765625" u2="0.87451171875" v2="0.6240234375" />
         <Element name="kyno_sugartree_tapped_ruined.tex" u1="0.87548828125" v1="0.5009765625" u2="0.93701171875" v2="0.6240234375" />
-        <Element name="kyno_taroroot.tex" u1="0.93798828125" v1="0.5009765625" u2="0.99951171875" v2="0.6240234375" />
-        <Element name="kyno_waterycress.tex" u1="0.00048828125" v1="0.4306640625" u2="0.06201171875" v2="0.5537109375" />
-        <Element name="kyno_wildwheat.tex" u1="0.06298828125" v1="0.3759765625" u2="0.12451171875" v2="0.4990234375" />
-        <Element name="kyno_woodenkeg.tex" u1="0.12548828125" v1="0.3759765625" u2="0.18701171875" v2="0.4990234375" />
+        <Element name="kyno_swordfish_spawner.tex" u1="0.93798828125" v1="0.5009765625" u2="0.99951171875" v2="0.6240234375" />
+        <Element name="kyno_taroroot.tex" u1="0.00048828125" v1="0.4306640625" u2="0.06201171875" v2="0.5537109375" />
+        <Element name="kyno_waterycress.tex" u1="0.06298828125" v1="0.3759765625" u2="0.12451171875" v2="0.4990234375" />
+        <Element name="kyno_wildwheat.tex" u1="0.12548828125" v1="0.3759765625" u2="0.18701171875" v2="0.4990234375" />
+        <Element name="kyno_woodenkeg.tex" u1="0.18798828125" v1="0.3759765625" u2="0.24951171875" v2="0.4990234375" />
     </Elements>
 </Atlas>

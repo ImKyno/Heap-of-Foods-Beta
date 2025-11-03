@@ -15,7 +15,7 @@ local prefabs =
 {
 	"ice",
 	"fishmeat",
-	"spoiled_fish",
+	"kyno_spoiled_fish_large",
 }
 
 local function DoFlop(inst)
@@ -110,7 +110,7 @@ local function fn()
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
 	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_fish"
+	inst.components.perishable.onperishreplacement = "kyno_spoiled_fish_large"
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetSinks(true)
