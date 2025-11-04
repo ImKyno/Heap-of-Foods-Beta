@@ -433,8 +433,8 @@
         <Element name="kyno_roe_swordfish_blue.tex" u1="0.406494140625" v1="0.562744140625" u2="0.437255859375" v2="0.593505859375" />
         <Element name="kyno_roe_tropicalfish.tex" u1="0.437744140625" v1="0.562744140625" u2="0.468505859375" v2="0.593505859375" />
         <Element name="kyno_roe_wobster.tex" u1="0.468994140625" v1="0.562744140625" u2="0.499755859375" v2="0.593505859375" />
-        <Element name="kyno_roe_wobster_moonglass.tex" u1="0.500244140625" v1="0.562744140625" u2="0.531005859375" v2="0.593505859375" />
-        <Element name="kyno_roe_wobster_monkeyisland.tex" u1="0.531494140625" v1="0.562744140625" u2="0.562255859375" v2="0.593505859375" />
+        <Element name="kyno_roe_wobster_monkeyisland.tex" u1="0.500244140625" v1="0.562744140625" u2="0.531005859375" v2="0.593505859375" />
+        <Element name="kyno_roe_wobster_moonglass.tex" u1="0.531494140625" v1="0.562744140625" u2="0.562255859375" v2="0.593505859375" />
         <Element name="kyno_salmonfish.tex" u1="0.562744140625" v1="0.562744140625" u2="0.593505859375" v2="0.593505859375" />
         <Element name="kyno_salmonfish_cooked.tex" u1="0.593994140625" v1="0.562744140625" u2="0.624755859375" v2="0.593505859375" />
         <Element name="kyno_salt.tex" u1="0.625244140625" v1="0.562744140625" u2="0.656005859375" v2="0.593505859375" />
@@ -691,6 +691,7 @@
         <Element name="wobstercocktail.tex" u1="0.468994140625" v1="0.312744140625" u2="0.499755859375" v2="0.343505859375" />
         <Element name="wobstermonster.tex" u1="0.500244140625" v1="0.312744140625" u2="0.531005859375" v2="0.343505859375" />
         <Element name="wobster_monkeyisland_dead.tex" u1="0.531494140625" v1="0.312744140625" u2="0.562255859375" v2="0.343505859375" />
-        <Element name="wobster_monkeyisland_land.tex" u1="0.562744140625" v1="0.312744140625" u2="0.593505859375" v2="0.343505859375" />
+        <Element name="wobster_monkeyisland_dead_cooked.tex" u1="0.562744140625" v1="0.312744140625" u2="0.593505859375" v2="0.343505859375" />
+        <Element name="wobster_monkeyisland_land.tex" u1="0.593994140625" v1="0.312744140625" u2="0.624755859375" v2="0.343505859375" />
     </Elements>
 </Atlas>

@@ -7,8 +7,9 @@ local brain_land = require("brains/wobsterlandbrain")
 local assets =
 {
 	Asset("ANIM", "anim/lobster.zip"),
-	
+
 	Asset("ANIM", "anim/kyno_lobster_monkeyisland.zip"),
+	Asset("ANIM", "anim/kyno_lobster_monkeyisland_cooked.zip"),
 	Asset("ANIM", "anim/trophyscale_fish_wobster_monkeyisland.zip"), -- Custom bank with hacky stuff.
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
@@ -22,8 +23,8 @@ local prefabs =
 	"ocean_splash_small1",
 	"wobster_monkeyisland_land",
 	"wobster_monkeyisland_dead",
-	"wobster_sheller_dead_cooked",
-	"wobster_den",
+	"wobster_monkeyisland_dead_cooked",
+	"kyno_wobster_den_monkeyisland",
 }
 
 local SWIMMING_COLLISION_MASK   = COLLISION.GROUND
@@ -363,7 +364,7 @@ local function dead_wobster()
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
 	
 	inst:AddComponent("cookable")
-	inst.components.cookable.product = "wobster_sheller_dead_cooked"
+	inst.components.cookable.product = "wobster_monkeyisland_dead_cooked"
 
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
@@ -387,6 +388,57 @@ local function dead_wobster()
     return inst
 end
 
+local function cooked_wobster()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+	inst.AnimState:SetBank("kyno_lobster_monkeyisland_cooked")
+	inst.AnimState:SetBuild("kyno_lobster_monkeyisland_cooked")
+	inst.AnimState:PlayAnimation("cooked")
+
+	inst:AddTag("fishmeat")
+	inst:AddTag("catfood")
+	inst:AddTag("wobster_monkeyisland")
+
+	inst.entity:SetPristine()
+	
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("inspectable")
+	
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
+	
+	inst:AddComponent("tradable")
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+
+	inst:AddComponent("perishable")
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
+	inst.components.perishable:StartPerishing()
+	inst.components.perishable.onperishreplacement = "spoiled_fish"
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "wobster_monkeyisland_dead_cooked"
+
+	inst:AddComponent("edible")
+	inst.components.edible.healthvalue = TUNING.KYNO_WOBSTER_MONKEYISLAND_DEAD_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_WOBSTER_MONKEYISLAND_DEAD_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_WOBSTER_MONKEYISLAND_DEAD_SANITY
+	inst.components.edible.foodtype = FOODTYPE.MEAT
+	inst.components.edible.ismeat = true
+
+	return inst
+end
+
 local WOBSTER_MONKEYISLAND_FISH_DEF =
 {
 	prefab = "wobster_monkeyisland",
@@ -403,7 +455,7 @@ local function wobster_monkeyisland_water()
 end
 
 local function wobster_monkeyisland_land()
-	local inst = land_wobster("kyno_lobster_monkeyisland", "WOBSTER_MONKEYISLAND", WOBSTER_MONKEYISLAND_FISH_DEF, false, "wobster_sheller_dead_cooked")
+	local inst = land_wobster("kyno_lobster_monkeyisland", "WOBSTER_MONKEYISLAND", WOBSTER_MONKEYISLAND_FISH_DEF, false, "wobster_monkeyisland_dead_cooked")
 	
 	inst:AddTag("fishfarmable")
 	inst:AddTag("wobster_monkeyisland")
@@ -428,4 +480,5 @@ end
 
 return Prefab("wobster_monkeyisland", wobster_monkeyisland_water, assets, prefabs),
 Prefab("wobster_monkeyisland_land", wobster_monkeyisland_land, assets, prefabs),
-Prefab("wobster_monkeyisland_dead", dead_wobster, assets, prefabs)
+Prefab("wobster_monkeyisland_dead", dead_wobster, assets, prefabs),
+Prefab("wobster_monkeyisland_dead_cooked", cooked_wobster, assets, prefabs)

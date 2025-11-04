@@ -5022,7 +5022,25 @@ local HOF_SCRAPBOOK_FOODS =
 		bank           = "lobster",
 		build          = "kyno_lobster_monkeyisland",
 		anim           = "idle_dead",
-		deps           = {"wobster_monkeyisland_land", "wobster_sheller_dead_cooked", "spoiled_fish"},
+		deps           = {"wobster_monkeyisland_land", "wobster_monkeyisland_dead_cooked", "spoiled_fish"},
+	},
+	
+	wobster_monkeyisland_dead_cooked =
+	{
+		name           = "wobster_monkeyisland_dead_cooked",
+		type           = "food",
+		tex            = "wobster_monkeyisland_dead_cooked.tex",
+		prefab         = "wobster_monkeyisland_dead_cooked",
+		healthvalue    = 9,
+		hungervalue    = 18.75,
+		sanityvalue    = 5,
+		perishable     = 2880,
+		foodtype       = "MEAT",
+		stacksize      = 10,
+		bank           = "kyno_lobster_monkeyisland_cooked",
+		build          = "kyno_lobster_monkeyisland_cooked",
+		anim           = "cooked",
+		deps           = {"wobster_monkeyisland_dead", "spoiled_fish"},
 	},
 }
 
@@ -14612,7 +14630,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		bank           = "lobster",
 		build          = "kyno_lobster_monkeyisland",
 		anim           = "idle",
-		deps           = {"kyno_roe_wobster_monkeyisland", "wobster_monkeyisland_dead", "wobster_sheller_dead_cooked", "spoiled_fish"},
+		deps           = {"kyno_roe_wobster_monkeyisland", "wobster_monkeyisland_dead", "wobster_monkeyisland_dead_cooked", "spoiled_fish"},
 	},
 	
 	kyno_puffermonster =
