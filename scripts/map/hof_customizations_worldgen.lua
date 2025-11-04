@@ -27,13 +27,14 @@ local customizations_worldgen =
 	weedsea         = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",     order = 6,  world = { "forest" }},
 	
 	-- OCEANCREATURES
-	chickens        = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_creatures", order = 0,  world = { "forest" }},
 	antchovies      = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 2,  world = { "forest" }},
+	chickens        = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_creatures", order = 0,  world = { "forest" }},
 	dogfishes       = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 5,  world = { "forest" }},
 	hermitwobsters  = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_creatures", order = 6,  world = { "forest" }},
 	jellyfishes     = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 3,  world = { "forest" }},
 	jellyfishes2    = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 4,  world = { "forest" }},
 	pebblecrabs     = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_creatures", order = 1,  world = { "forest" }},
+	puffermonsters  = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 8,  world = { "forest" }},
 	swordfishes     = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_creatures", order = 7,  world = { "forest" }},
 	
 	-- SERENITYISLAND
@@ -76,28 +77,29 @@ map.TRANSLATE_TO_PREFABS["waterycresses"]   = { "kyno_waterycress_ocean" }
 map.TRANSLATE_TO_PREFABS["weedsea"]         = { "kyno_seaweeds_ocean" }
 
 map.TRANSLATE_TO_PREFABS["antchovies"]      = { "kyno_antchovy_spawner" }
+map.TRANSLATE_TO_PREFABS["chickens"]        = { "kyno_chicken", "kyno_chicken2", "kyno_chicken2_herd" }
+map.TRANSLATE_TO_PREFABS["dogfishes"]       = { "kyno_dogfish", "kyno_dogfish_spawner" }
+map.TRANSLATE_TO_PREFABS["fishermerms"]     = { "kyno_meadowisland_mermfisher" }
+map.TRANSLATE_TO_PREFABS["hermitwobsters"]  = { "wobster_monkeyisland", "wobster_monkeyisland_land", "kyno_wobster_den_monkeyisland" }
 map.TRANSLATE_TO_PREFABS["jellyfishes"]     = { "kyno_jellyfish_ocean", "kyno_jellyfish_spawner" }
 map.TRANSLATE_TO_PREFABS["jellyfishes2"]    = { "kyno_jellyfish_rainbow_ocean", "kyno_jellyfish_rainbow_spawner" }
-map.TRANSLATE_TO_PREFABS["hermitwobsters"]  = { "wobster_monkeyisland", "wobster_monkeyisland_land", "kyno_wobster_den_monkeyisland" }
-map.TRANSLATE_TO_PREFABS["dogfishes"]       = { "kyno_dogfish", "kyno_dogfish_spawner" }
+map.TRANSLATE_TO_PREFABS["pebblecrabs"]     = { "kyno_pebblecrab", "kyno_pebblecrab_spawner" }
+map.TRANSLATE_TO_PREFABS["pikos"]           = { "kyno_piko" }
+map.TRANSLATE_TO_PREFABS["pikosorange"]     = { "kyno_piko_orange" }
+map.TRANSLATE_TO_PREFABS["puffermonsters"]  = { "kyno_puffermonster", "kyno_puffermonster_spawner" }
+map.TRANSLATE_TO_PREFABS["sugarflies"]      = { "kyno_sugarfly" }
 map.TRANSLATE_TO_PREFABS["swordfishes"]     = { "kyno_swordfish", "kyno_swordfish_spawner" }
 
-map.TRANSLATE_TO_PREFABS["chickens"]        = { "kyno_chicken", "kyno_chicken2", "kyno_chicken2_herd" }
-map.TRANSLATE_TO_PREFABS["pebblecrabs"]     = { "kyno_pebblecrab", "kyno_pebblecrab_spawner" }
 map.TRANSLATE_TO_PREFABS["saltponds"]       = { "kyno_pond_salt" }
 map.TRANSLATE_TO_PREFABS["spotbushes"]      = { "kyno_spotbush" }
-map.TRANSLATE_TO_PREFABS["sugarflies"]      = { "kyno_sugarfly" }
 map.TRANSLATE_TO_PREFABS["sugarflowers"]    = { "kyno_sugartree_flower" }
 map.TRANSLATE_TO_PREFABS["sugartrees"]      = { "kyno_sugartree" }
 
-map.TRANSLATE_TO_PREFABS["fishermerms"]     = { "kyno_meadowisland_mermfisher" }
 map.TRANSLATE_TO_PREFABS["fishermermhuts"]  = { "kyno_meadowisland_fishermermhut" }
 map.TRANSLATE_TO_PREFABS["islandcrates"]    = { "kyno_meadowisland_crate" }
 map.TRANSLATE_TO_PREFABS["kokonuttrees"]    = { "kyno_kokonuttree" }
 map.TRANSLATE_TO_PREFABS["limpetrocks"]     = { "kyno_limpetrock" }
 map.TRANSLATE_TO_PREFABS["mermhuts"]        = { "kyno_meadowisland_mermhut" }
-map.TRANSLATE_TO_PREFABS["pikos"]           = { "kyno_piko" }
-map.TRANSLATE_TO_PREFABS["pikosorange"]     = { "kyno_piko_orange" }
 map.TRANSLATE_TO_PREFABS["pikotrees"]       = { "kyno_meadowisland_pikotree" }
 map.TRANSLATE_TO_PREFABS["pineapplebushes"] = { "kyno_pineapplebush", "kyno_pineapplebush2" }
 map.TRANSLATE_TO_PREFABS["sandhills"]       = { "kyno_meadowisland_sandhill" }

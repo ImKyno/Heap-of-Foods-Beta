@@ -51,6 +51,10 @@ local function OnPreLoadSwordfish(inst, data)
     WorldSettings_Spawner_PreLoad(inst, data, TUNING.KYNO_SWORDFISH_SPAWN_TIME)
 end
 
+local function OnPreLoadPufferMonster(inst, data)
+	WorldSettings_Spawner_PreLoad(inst, data, TUNING.KYNO_PUFFERMONSTER_SPAWN_TIME)
+end
+
 local function jellyfishfn()
     local inst = CreateEntity()
 
@@ -155,6 +159,7 @@ local function dogfishfn()
 		inst:AddComponent("spawner")
 		WorldSettings_Spawner_SpawnDelay(inst, TUNING.KYNO_DOGFISH_SPAWN_TIME, true)
 		inst.components.spawner:Configure("kyno_dogfish", TUNING.KYNO_DOGFISH_SPAWN_TIME)
+		inst.components.spawner:SetWaterSpawning(true, false)
 		
 		inst.OnPreLoad = OnPreLoadDogfish
 	end
@@ -187,8 +192,42 @@ local function swordfishfn()
 		inst:AddComponent("spawner")
 		WorldSettings_Spawner_SpawnDelay(inst, TUNING.KYNO_SWORDFISH_SPAWN_TIME, true)
 		inst.components.spawner:Configure("kyno_swordfish", TUNING.KYNO_SWORDFISH_SPAWN_TIME)
+		inst.components.spawner:SetWaterSpawning(true, false)
 		
 		inst.OnPreLoad = OnPreLoadSwordfish
+	end
+
+    return inst
+end
+
+local function puffermonsterfn()
+    local inst = CreateEntity()
+
+    inst.entity:AddTransform()
+    inst.entity:AddSoundEmitter()
+    inst.entity:AddNetwork()
+	
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("kyno_puffermonster_spawner.tex")
+	minimap:SetPriority(5)
+	
+	inst:AddTag("NOBLOCK")
+	inst:AddTag("CLASSIFIED")
+	inst:AddTag("puffermonsterspawner")
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then
+        return inst
+    end
+
+	if TUNING.KYNO_PUFFERMONSTER_ENABLED then
+		inst:AddComponent("spawner")
+		WorldSettings_Spawner_SpawnDelay(inst, TUNING.KYNO_PUFFERMONSTER_SPAWN_TIME, true)
+		inst.components.spawner:Configure("kyno_puffermonster", TUNING.KYNO_PUFFERMONSTER_SPAWN_TIME)
+		inst.components.spawner:SetWaterSpawning(true, false)
+		
+		inst.OnPreLoad = OnPreLoadPufferMonster
 	end
 
     return inst
@@ -287,6 +326,7 @@ end
 return Prefab("kyno_jellyfish_spawner", jellyfishfn, assets, prefabs),
 Prefab("kyno_jellyfish_rainbow_spawner", jellyfishrainbowfn, assets, prefabs),
 Prefab("kyno_swordfish_spawner", swordfishfn, assets, prefabs),
+Prefab("kyno_puffermonster_spawner", puffermonsterfn, assets, prefabs),
 Prefab("kyno_dogfish_spawner", dogfishfn, assets, prefabs),
 Prefab("kyno_antchovy_spawner", antchovyfn, assets, prefabs),
 Prefab("kyno_antchovy_mouseover", mouseoverfn, assets)

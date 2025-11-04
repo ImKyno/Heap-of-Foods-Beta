@@ -37,6 +37,7 @@ local customizations_worldsettings =
 	pebblecrabs_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 1,   world = { "forest" }},
 	pikos_setting            = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 3,   world = { "forest" }},
 	pikosorange_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 4,   world = { "forest" }},
+	puffermonsters_setting   = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 11,  world = { "forest" }},
 	sugarflies_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 2,   world = { "forest" }},
 	swordfishes_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 10,  world = { "forest" }},
 	
@@ -1444,6 +1445,33 @@ WSO.Pre.pikosorange_setting = function(difficulty)
 		{
 			-- KYNO_PIKO_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 1,
 			KYNO_PIKO_ORANGE_CHANCE = .80,
+		},
+	}
+	
+	OverrideTuningVariables(tuning_vars[difficulty])
+end
+
+WSO.Pre.puffermonsters_setting = function(difficulty)
+	local tuning_vars =
+	{
+		never = 
+		{
+			KYNO_PUFFERMONSTER_ENABLED = false,
+		},
+
+		few = 
+		{
+			KYNO_PUFFERMONSTER_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 2,
+		},
+		
+		many = 
+		{
+			KYNO_PUFFERMONSTER_SPAWN_TIME = TUNING.TOTAL_DAY_TIME / 2,
+		},
+            
+		always = 
+		{
+			KYNO_PUFFERMONSTER_SPAWN_TIME = TUNING.TOTAL_DAY_TIME / 4,
 		},
 	}
 	

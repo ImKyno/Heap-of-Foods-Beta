@@ -14615,6 +14615,22 @@ local HOF_SCRAPBOOK_CREATURES =
 		deps           = {"kyno_roe_wobster_monkeyisland", "wobster_monkeyisland_dead", "wobster_sheller_dead_cooked", "spoiled_fish"},
 	},
 	
+	kyno_puffermonster =
+	{
+		name           = "kyno_puffermonster",
+		type           = "creature",
+		tex            = "kyno_puffermonster.tex",
+		prefab         = "kyno_puffermonster",
+		sanityaura     = -0.66666666666667, 
+		health         = 350,
+		damage         = 30,
+		bank           = "kyno_puffermonster",
+		build          = "kyno_puffermonster",
+		anim           = "idle",
+		deps           = {"monstermeat", "stinger"},
+		specialinfo    = "HULLBREAKER_CREATURE",
+	},
+	
 	oceanfish_pufferfish_inv =
 	{
 		name           = "oceanfish_pufferfish_inv",
@@ -14627,6 +14643,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		hungervalue    = 12.5,
 		sanityvalue    = 0,
 		perishable     = 480,
+		foodtype       = "MEAT",
 		bank           = "kyno_oceanfish_pufferfish",
 		build          = "kyno_oceanfish_pufferfish",
 		anim           = "flop_pst",
@@ -14647,6 +14664,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		hungervalue    = 25,
 		sanityvalue    = 0,
 		perishable     = 480,
+		foodtype       = "MEAT",
 		bank           = "kyno_oceanfish_sturgeon",
 		build          = "kyno_oceanfish_sturgeon",
 		anim           = "flop_pst",

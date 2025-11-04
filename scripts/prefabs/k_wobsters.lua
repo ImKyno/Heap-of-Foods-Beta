@@ -7,8 +7,9 @@ local brain_land = require("brains/wobsterlandbrain")
 local assets =
 {
 	Asset("ANIM", "anim/lobster.zip"),
+	
 	Asset("ANIM", "anim/kyno_lobster_monkeyisland.zip"),
-	Asset("ANIM", "anim/trophyscale_fish_wobster_monkeyisland.zip"),
+	Asset("ANIM", "anim/trophyscale_fish_wobster_monkeyisland.zip"), -- Custom bank with hacky stuff.
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),

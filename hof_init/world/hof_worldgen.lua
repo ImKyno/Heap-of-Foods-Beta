@@ -262,6 +262,12 @@ local RoomPrefabs =
 		"OceanRough",
 		"OceanHazardous",
 	},
+	
+	kyno_puffermonster_spawner =
+	{
+		"OceanRough",
+		"OceanHazardous",
+	},
 }
 
 -- Special case where we want more or less prefabs spawns in rooms.
@@ -277,6 +283,7 @@ local PrefabValues =
 	["kyno_jellyfish_spawner"]         = .09,
 	["kyno_jellyfish_rainbow_spawner"] = .09,
 	["kyno_dogfish_spawner"]           = .1,
+	["kyno_puffermonster_spawner"]     = .2,
 }
 
 for prefab, rooms in pairs(RoomPrefabs) do

@@ -854,6 +854,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_pineapplebush",
 	"kyno_pond_salt",
 	"kyno_preservesjar",
+	"kyno_puffermonster",
 	"kyno_radish_ground",
 	"kyno_rockflippable",
 	"kyno_seaweeds_ocean",

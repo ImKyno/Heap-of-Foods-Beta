@@ -76,7 +76,11 @@ local function fn()
 	MakeCharacterPhysics(inst, 50, 1)
 	inst.Physics:SetCollisionGroup(COLLISION.CHARACTERS)
 	
-	inst.AnimState:SetScale(.85, .85, .85)
+	MakeInventoryFloatable(inst, "med", 0.1, {1.1, 0.9, 1.1})
+	inst.components.floater:SetIsObstacle()
+	inst.components.floater.bob_percent = 0
+	
+	inst.AnimState:SetScale(1.1, 1.1, 1.1)
 
 	inst.AnimState:SetBank("kyno_puffermonster")
 	inst.AnimState:SetBuild("kyno_puffermonster")
@@ -98,19 +102,33 @@ local function fn()
 		return inst
 	end
 	
+	local land_time = (POPULATING and math.random() * 5 * FRAMES) or 0
+	
+	inst:DoTaskInTime(land_time, function(inst)
+		inst.components.floater:OnLandedServer()
+	end)
+	
 	inst:AddComponent("inspectable")
 	inst:AddComponent("knownlocations")
 	
-	inst:AddComponent("health")
-	inst.components.health:SetMaxHealth(TUNING.KYNO_PUFFERMONSTER_HEALTH)
-	inst.components.health:StartRegen(TUNING.BEEFALO_HEALTH_REGEN, TUNING.BEEFALO_HEALTH_REGEN_PERIOD)
+	inst:AddComponent("eater")
+	inst.components.eater:SetDiet({ FOODTYPE.MEAT }, { FOODTYPE.MEAT })
+	inst.components.eater:SetCanEatHorrible()
+	inst.components.eater:SetStrongStomach(true)
 
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetChanceLootTable("kyno_puffermonster")
+	
+	inst:AddComponent("sanityaura")
+	inst.components.sanityaura.aura = -TUNING.SANITYAURA_MED
 
 	inst:AddComponent("sleeper")
 	inst.components.sleeper:SetResistance(1)
 	inst.components.sleeper.sleeptestfn = nil
+	
+	inst:AddComponent("health")
+	inst.components.health:SetMaxHealth(TUNING.KYNO_PUFFERMONSTER_HEALTH)
+	inst.components.health:StartRegen(TUNING.BEEFALO_HEALTH_REGEN, TUNING.BEEFALO_HEALTH_REGEN_PERIOD)
 
 	inst:AddComponent("locomotor")
 	inst.components.locomotor.walkspeed = TUNING.KYNO_PUFFERMONSTER_WALKSPEED

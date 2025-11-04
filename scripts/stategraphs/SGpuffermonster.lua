@@ -1,5 +1,11 @@
 require("stategraphs/commonstates")
 
+local actionhandlers = 
+{
+	ActionHandler(ACTIONS.EAT, "eat"),
+	ActionHandler(ACTIONS.GOHOME, "action"),
+}
+
 local function AttackBoatHull(inst)
 	local position = inst:GetPosition()
 	local angle = inst:GetRotation() + (math.random() * 20 - 10)
@@ -39,28 +45,19 @@ local events =
 	CommonHandlers.OnElectrocute(),
 
 	EventHandler("locomote", function(inst)
-		if not inst.sg:HasStateTag("idle") and not inst.sg:HasStateTag("moving") then
-			return
-		end
+		local is_moving = inst.sg:HasStateTag("moving")
+		local is_running = inst.sg:HasStateTag("running")
+		local is_idling = inst.sg:HasStateTag("idle")
 
-		if not inst.components.locomotor:WantsToMoveForward() then
-			if not inst.sg:HasStateTag("idle") then
-				if not inst.sg:HasStateTag("running") then
-					inst.sg:GoToState("idle")
-				end
-					
-				inst.sg:GoToState("idle")
-			end
-		elseif inst.components.locomotor:WantsToRun() then
-			if not inst.sg:HasStateTag("running") then
-				inst.sg:GoToState("run")
-			end
-		else
-			if not inst.sg:HasStateTag("swimming") then
-				inst.sg:GoToState("swimming")
-			end
-		end
-	end),
+		local should_move = inst.components.locomotor:WantsToMoveForward()
+		local should_run = inst.components.locomotor:WantsToRun()
+
+		if is_moving and not should_move then
+			inst.sg:GoToState((is_running and "run_stop") or "swimming_stop")
+		elseif (is_idling and should_move) or (is_moving and should_move and is_running ~= should_run) then
+			inst.sg:GoToState((should_run and "run_pre") or "swimming_pre")
+        end
+    end),
 
 	EventHandler("death", function(inst)
 		inst.sg:GoToState("death")
@@ -99,8 +96,7 @@ local states =
 			inst.Physics:Stop()
 
 			if playanim then
-				inst.AnimState:PlayAnimation("idle")
-				inst.AnimState:PushAnimation("idle", true)
+				inst.AnimState:PlayAnimation("idle", true)
 			else
 				inst.AnimState:PlayAnimation("idle", true)
 			end
@@ -108,37 +104,147 @@ local states =
 	},
 
 	State{
-		name = "swimming",
+		name = "swimming_pre",
 		tags = { "moving", "canrotate", "swimming" },
 		
 		onenter = function(inst)
 			inst.AnimState:PlayAnimation("walk_pre")
-			inst.AnimState:PushAnimation("walk_loop", true)
 			inst.components.locomotor:WalkForward()
 		end,
 
-		onupdate = function(inst)
-			if not inst.components.locomotor:WantsToMoveForward() then
-				inst.sg:GoToState("idle")
-			end
+		timeline =
+		{
+			TimeEvent(8 * FRAMES, function(inst)
+				inst.SoundEmitter:PlaySound("turnoftides/common/together/water/splash/jump_small", nil, .25)
+			end),
+		},
+
+		events =
+		{
+			EventHandler("animover", function(inst)
+				if inst.AnimState:AnimDone() then
+					inst.sg:GoToState("swimming")
+				end
+			end),
+		},
+	},
+	
+	State{
+		name = "swimming",
+		tags = { "moving", "canrotate", "swimming" },
+
+		onenter = function(inst)
+			inst.components.locomotor:WalkForward()
+			
+			inst.AnimState:PlayAnimation("walk_loop")
+			inst.sg:SetTimeout(inst.AnimState:GetCurrentAnimationLength())
 		end,
+
+		timeline =
+		{
+			TimeEvent(6 * FRAMES, function(inst)
+				inst.SoundEmitter:PlaySound("turnoftides/common/together/water/splash/jump_small", nil, .25)
+			end),
+		},
+
+		ontimeout = function(inst)
+			inst.sg:GoToState("swimming")
+		end,
+	},
+	
+	State{
+		name = "swimming_stop",
+		tags = { "canrotate" },
+
+		onenter = function(inst)
+			inst.components.locomotor:StopMoving()
+
+			local run_anim_time_remaining = inst.AnimState:GetCurrentAnimationLength() - inst.AnimState:GetCurrentAnimationTime()
+			inst.sg:SetTimeout(run_anim_time_remaining + 1 * FRAMES)
+
+			inst.AnimState:PushAnimation("walk_pst", false)
+		end,
+
+		ontimeout = function(inst)
+			inst.SoundEmitter:PlaySound("turnoftides/common/together/water/splash/jump_small", nil, .25)
+		end,
+
+		events =
+		{
+			EventHandler("animqueueover", function(inst) inst.sg:GoToState("idle") end),
+		},
 	},
 
 	State{
-		name = "run",
-		tags = { "moving", "running", "canrotate" },
+		name = "run_pre",
+		tags = { "moving", "canrotate", "running" },
 		
 		onenter = function(inst)
 			inst.AnimState:PlayAnimation("walk_pre")
-			inst.AnimState:PushAnimation("walk_loop", true)
-			inst.components.locomotor:RunForward()
-				
-			inst.SoundEmitter:PlaySound("hof_sounds/creatures/water_movement/swim_emerge_med", "swimming")
+			inst.components.locomotor:WalkForward()
 		end,
 
-        onexit = function(inst)
-			inst.SoundEmitter:KillSound("swimming")
+		timeline =
+		{
+			TimeEvent(8 * FRAMES, function(inst)
+				inst.SoundEmitter:PlaySound("turnoftides/common/together/water/splash/jump_small", nil, .25)
+			end),
+		},
+
+		events =
+		{
+			EventHandler("animover", function(inst)
+				if inst.AnimState:AnimDone() then
+					inst.sg:GoToState("run")
+				end
+			end),
+		},
+	},
+	
+	State{
+		name = "run",
+		tags = { "moving", "canrotate", "running" },
+
+		onenter = function(inst)
+			inst.components.locomotor:WalkForward()
+			
+			inst.AnimState:PlayAnimation("walk_loop")
+			inst.sg:SetTimeout(inst.AnimState:GetCurrentAnimationLength())
 		end,
+
+		timeline =
+		{
+			TimeEvent(6 * FRAMES, function(inst)
+				inst.SoundEmitter:PlaySound("turnoftides/common/together/water/splash/jump_small", nil, .25)
+			end),
+		},
+
+		ontimeout = function(inst)
+			inst.sg:GoToState("run")
+		end,
+	},
+	
+	State{
+		name = "run_stop",
+		tags = { "canrotate" },
+
+		onenter = function(inst)
+			inst.components.locomotor:StopMoving()
+
+			local run_anim_time_remaining = inst.AnimState:GetCurrentAnimationLength() - inst.AnimState:GetCurrentAnimationTime()
+			inst.sg:SetTimeout(run_anim_time_remaining + 1 * FRAMES)
+
+			inst.AnimState:PushAnimation("walk_pst", false)
+		end,
+
+		ontimeout = function(inst)
+			inst.SoundEmitter:PlaySound("turnoftides/common/together/water/splash/jump_small", nil, .25)
+		end,
+
+		events =
+		{
+			EventHandler("animqueueover", function(inst) inst.sg:GoToState("idle") end),
+		},
 	},
 
 	State{
@@ -147,6 +253,11 @@ local states =
 		
 		onenter = function(inst)
 			inst.AnimState:PlayAnimation("death")
+			
+			inst.SoundEmitter:PlaySound("dontstarve/common/balloon_pop")
+			inst.SoundEmitter:PlaySound("wes/characters/wes/deflate_speedballoon")
+			
+			inst.components.floater:OnNoLongerLandedServer()
 			inst.components.lootdropper:DropLoot(inst:GetPosition())
 		end,
 	},
@@ -157,7 +268,9 @@ local states =
 		
 		onenter = function(inst)
 			inst.Physics:Stop()
+			
 			inst.AnimState:PlayAnimation("hit_splash")
+			inst.SoundEmitter:PlaySound("hof_sounds/creatures/puffermonster/hit")
 		end,
 
 		events =
@@ -175,6 +288,7 @@ local states =
 			inst.Physics:Stop()
 				
 			inst.AnimState:PlayAnimation("attack", false)
+			inst.SoundEmitter:PlaySound("hof_sounds/creatures/puffermonster/attack")
 		end,
 
 		timeline =
@@ -217,6 +331,7 @@ local states =
 		
 		onenter = function(inst)
 			inst.AnimState:PlayAnimation("sleep_loop")
+			inst.SoundEmitter:PlaySound("hof_sounds/creatures/puffermonster/sleep")
 		end,
 
 		events =
@@ -244,6 +359,22 @@ local states =
 			EventHandler("animover", function(inst) inst.sg:GoToState("idle") end),
 		},
 	},
+	
+	State{
+		name = "eat",
+		
+		onenter = function(inst)
+			inst.Physics:Stop()
+			
+			inst.AnimState:PlayAnimation("hit_splash", false)
+			inst.sg:SetTimeout(2 + math.random() * 4)
+        end,
+
+		ontimeout = function(inst)
+			inst:PerformBufferedAction()
+			inst.sg:GoToState("idle")
+		end,
+    },
 }
 
 CommonStates.AddElectrocuteStates(states, nil, { pre = "hit", loop = "hit", pst = "hit"})

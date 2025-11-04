@@ -114,7 +114,7 @@ local states =
 			inst.sg:SetTimeout(2 + math.random() * 4)
         end,
 
-		ontimeout= function(inst)
+		ontimeout = function(inst)
 			inst:PerformBufferedAction()
 			inst.sg:GoToState("idle")
 		end,
