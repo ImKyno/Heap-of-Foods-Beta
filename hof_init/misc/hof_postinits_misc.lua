@@ -847,9 +847,16 @@ local function TrophyScaleFishPostInit(inst)
 				inst.AnimState:SetBank("trophyscale_fish_kyno_jellyfish_rainbow")
 				inst.AnimState:HideSymbol("eel_head")
 			elseif item_data.prefab == "wobster_monkeyisland_land" then
-				inst.AnimState:ClearOverrideBuild("lobster_build")
+				inst.AnimState:SetBank("trophyscale_fish_wobster_monkeyisland")
+				-- inst.AnimState:ClearOverrideBuild("lobster_build")
 				inst.AnimState:AddOverrideBuild("kyno_lobster_monkeyisland")
-				inst.AnimState:OverrideSymbol("claw_type1A", "kyno_lobster_monkeyisland", "claw_type3A")
+				inst.AnimState:OverrideSymbol("claw_type1a", "kyno_lobster_monkeyisland", "claw_type3a")
+				inst.AnimState:OverrideSymbol("claw_type2b", "kyno_lobster_monkeyisland", "claw_type3b")
+				inst.AnimState:HideSymbol("claw_type2a")
+				
+				inst:DoTaskInTime(1, function(inst)
+					inst.AnimState:OverrideSymbol("claw_type2b", "kyno_lobster_monkeyisland", "claw_type3b")
+				end)
 			else
 				inst.AnimState:SetBank("scale_o_matic")
 			end
@@ -895,7 +902,7 @@ local function TrophyScaleFishPostInit(inst)
 			_OnLoad(inst, ...)
 		end
 	end
-
+	
 	inst:ListenForEvent("onnewtrophy", OnNewTrophy)
 end
 
