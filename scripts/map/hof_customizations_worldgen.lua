@@ -27,15 +27,16 @@ local customizations_worldgen =
 	weedsea         = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",     order = 6,  world = { "forest" }},
 	
 	-- OCEANCREATURES
-	antchovies      = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean_mob", order = 0,  world = { "forest" }},
-	jellyfishes     = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean_mob", order = 1,  world = { "forest" }},
-	jellyfishes2    = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean_mob", order = 2,  world = { "forest" }},
-	dogfishes       = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean_mob", order = 3,  world = { "forest" }},
-	swordfishes     = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean_mob", order = 4,  world = { "forest" }},
+	chickens        = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_creatures", order = 0,  world = { "forest" }},
+	antchovies      = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 2,  world = { "forest" }},
+	dogfishes       = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 5,  world = { "forest" }},
+	hermitwobsters  = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_creatures", order = 6,  world = { "forest" }},
+	jellyfishes     = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 3,  world = { "forest" }},
+	jellyfishes2    = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 4,  world = { "forest" }},
+	pebblecrabs     = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_creatures", order = 1,  world = { "forest" }},
+	swordfishes     = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_creatures", order = 7,  world = { "forest" }},
 	
 	-- SERENITYISLAND
-	chickens        = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity",  order = 1,  world = { "forest" }},
-	pebblecrabs     = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity",  order = 2,  world = { "forest" }},
 	saltponds       = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity",  order = 3,  world = { "forest" }},
 	spotbushes      = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity",  order = 4,  world = { "forest" }},
 	sugarflowers    = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_serenity",  order = 5,  world = { "forest" }},
@@ -77,6 +78,7 @@ map.TRANSLATE_TO_PREFABS["weedsea"]         = { "kyno_seaweeds_ocean" }
 map.TRANSLATE_TO_PREFABS["antchovies"]      = { "kyno_antchovy_spawner" }
 map.TRANSLATE_TO_PREFABS["jellyfishes"]     = { "kyno_jellyfish_ocean", "kyno_jellyfish_spawner" }
 map.TRANSLATE_TO_PREFABS["jellyfishes2"]    = { "kyno_jellyfish_rainbow_ocean", "kyno_jellyfish_rainbow_spawner" }
+map.TRANSLATE_TO_PREFABS["hermitwobsters"]  = { "wobster_monkeyisland", "wobster_monkeyisland_land", "kyno_wobster_den_monkeyisland" }
 map.TRANSLATE_TO_PREFABS["dogfishes"]       = { "kyno_dogfish", "kyno_dogfish_spawner" }
 map.TRANSLATE_TO_PREFABS["swordfishes"]     = { "kyno_swordfish", "kyno_swordfish_spawner" }
 

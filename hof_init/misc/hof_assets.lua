@@ -128,8 +128,8 @@ local HOF_ICONS =
 	"agedroe_swordfish_blue",
 	"agedroe_tropicalfish",
 	"agedroe_wobster",
+	"agedroe_wobster_monkeyisland",
 	"agedroe_wobster_moonglass",
-	"agedroe_wobster_moonquay",
 	"algae_soup",
 	"antslog",
 	"avocadotoast",
@@ -514,7 +514,8 @@ local HOF_ICONS =
 	"kyno_roe_swordfish_blue",
 	"kyno_roe_tropicalfish",
 	"kyno_roe_wobster",
-	"kyno_roe_wobster_moonquay",
+	"kyno_roe_wobster_monkeyisland",
+	"kyno_roe_wobster_moonglass",
 	"kyno_salmonfish",
 	"kyno_salmonfish_cooked",
 	"kyno_salt",
@@ -882,6 +883,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"slow_farmplot",
 	"toucan",
 	"toucan_chubby",
+	"wobster_monkeyisland_land",
 }
 
 for i, v in ipairs(HOF_SCRAPBOOK_ICONS) do

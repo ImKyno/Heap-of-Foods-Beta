@@ -51,16 +51,6 @@ local STRINGS_CUSTOMIZATION =
 		es  = "Montón de Alimentos - Recursos oceánicos",
 	},
 	
-	CREATURES_OCEAN =
-	{
-		"Heap of Foods - Ocean Creatures",
-		zh  = "更多料理 - 海洋生物",
-		zht = "食物堆積 - 海洋生物",
-		pt  = "Amontoado de Comidas - Criaturas do Oceano",
-		pl  = "Stos jedzenia - Stworzenia oceaniczne",
-		es  = "Montón de Alimentos - Criaturas oceánicas",
-	},
-	
 	SERENITYISLAND =
 	{
 		"Heap of Foods - Serenity Archipelago",
@@ -79,6 +69,16 @@ local STRINGS_CUSTOMIZATION =
 		pt  = "Amontoado de Comidas - Ilha Beira-mar",
 		pl  = "Stos jedzenia - Wyspa Nadmorska",
 		es  = "Montón de Alimentos - Isla Costera",
+	},
+	
+	CREATURES =
+	{
+		"Heap of Foods - Creatures",
+		zh  = "更多料理 - 生物",
+		zht = "食物堆積 - 生物",
+		pt  = "Amontoado de Comidas - Criaturas",
+		pl  = "Stos jedzenia - Stworzenia",
+		es  = "Montón de Alimentos - Criaturas",
 	},
 	
 	-- WORLDSETTINGS
@@ -124,17 +124,17 @@ local STRINGS_CUSTOMIZATION =
 }
 
 -- Main Menu world customization.
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof",            ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES),              nil, nil, 11)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_ocean",      ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES_OCEAN),        nil, nil, 12)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_ocean_mob",  ChooseTranslationTable(STRINGS_CUSTOMIZATION.CREATURES_OCEAN),        nil, nil, 13)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_serenity",   ChooseTranslationTable(STRINGS_CUSTOMIZATION.SERENITYISLAND),         nil, nil, 14)
-AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_meadow",     ChooseTranslationTable(STRINGS_CUSTOMIZATION.MEADOWISLAND),           nil, nil, 15)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof",             ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES),              nil, nil, 11)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_ocean",       ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES_OCEAN),        nil, nil, 12)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_serenity",    ChooseTranslationTable(STRINGS_CUSTOMIZATION.SERENITYISLAND),         nil, nil, 13)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_meadow",      ChooseTranslationTable(STRINGS_CUSTOMIZATION.MEADOWISLAND),           nil, nil, 14)
+AddCustomizeGroup(_G.LEVELCATEGORY.WORLDGEN, "hof_creatures",   ChooseTranslationTable(STRINGS_CUSTOMIZATION.CREATURES),              nil, nil, 15)
 
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_r",          ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES_REGROW),       nil, nil, 11)
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_ocean_r",    ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES_OCEAN_REGROW), nil, nil, 12)
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_ocean_c",    ChooseTranslationTable(STRINGS_CUSTOMIZATION.CREATURES_OCEAN),        nil, nil, 13)
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_serenity_r", ChooseTranslationTable(STRINGS_CUSTOMIZATION.SERENITYISLAND_REGROW),  nil, nil, 14)
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_meadow_r",   ChooseTranslationTable(STRINGS_CUSTOMIZATION.MEADOWISLAND_REGROW),    nil, nil, 15)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_r",           ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES_REGROW),       nil, nil, 11)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_ocean_r",     ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES_OCEAN_REGROW), nil, nil, 12)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_serenity_r",  ChooseTranslationTable(STRINGS_CUSTOMIZATION.SERENITYISLAND_REGROW),  nil, nil, 13)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_meadow_r",    ChooseTranslationTable(STRINGS_CUSTOMIZATION.MEADOWISLAND_REGROW),    nil, nil, 14)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_creatures_r", ChooseTranslationTable(STRINGS_CUSTOMIZATION.CREATURES),              nil, nil, 15)
 
 local function ChooseTranslationTable2()
 	-- Try to load strings if we have the localization files.

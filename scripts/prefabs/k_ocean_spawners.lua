@@ -71,7 +71,8 @@ local function jellyfishfn()
     inst:AddComponent("childspawner")
     inst.components.childspawner.childname = "kyno_jellyfish_ocean"
 	inst.components.childspawner.spawnoffscreen = true
-	inst.components.childspawner.allowwater = true
+	inst.components.childspawner.wateronly = true
+	inst.components.childspawner.spawnradius = TUNING.KYNO_JELLYFISH_RADIUS
     inst.components.childspawner:SetSpawnPeriod(TUNING.KYNO_JELLYFISH_RELEASE_TIME)
     inst.components.childspawner:SetRegenPeriod(TUNING.KYNO_JELLYFISH_REGEN_TIME)
 	inst.components.childspawner:SetMaxChildren(TUNING.KYNO_JELLYFISH_AMOUNT)
@@ -109,7 +110,8 @@ local function jellyfishrainbowfn()
     inst:AddComponent("childspawner")
     inst.components.childspawner.childname = "kyno_jellyfish_rainbow_ocean"
 	inst.components.childspawner.spawnoffscreen = true
-	inst.components.childspawner.allowwater = true
+	inst.components.childspawner.wateronly = true
+	inst.components.childspawner.spawnradius = TUNING.KYNO_JELLYFISH_RAINBOW_RADIUS
     inst.components.childspawner:SetSpawnPeriod(TUNING.KYNO_JELLYFISH_RAINBOW_RELEASE_TIME)
     inst.components.childspawner:SetRegenPeriod(TUNING.KYNO_JELLYFISH_RAINBOW_REGEN_TIME)
 	inst.components.childspawner:SetMaxChildren(TUNING.KYNO_JELLYFISH_RAINBOW_AMOUNT)
@@ -209,7 +211,7 @@ local function antchovyfn()
 	
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_antchovy_ocean.tex")
-	minimap:SetPriority(5)
+	minimap:SetPriority(-5)
 	
 	inst:SetPhysicsRadiusOverride(6)
 	

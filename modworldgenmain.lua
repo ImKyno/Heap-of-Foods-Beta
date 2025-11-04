@@ -146,6 +146,71 @@ Layouts["DinaMemorial"]                  = StaticLayout.Get("map/static_layouts/
 	},
 })
 
+local function monkeyisland_prefabs_area(area, data)
+	local prefabs = _G.PickSomeWithDups(math.floor(area / 5 + 0.5),
+		{   
+			"bananabush",
+			"monkeytail",
+			"palmconetree_short",
+			"palmconetree_normal",
+			"palmconetree_tall",
+			"pirate_flag_pole",
+		}
+	)
+
+	table.insert(prefabs, "bananabush")
+	table.insert(prefabs, "palmconetree_normal")
+	table.insert(prefabs, "monkeytail")
+	table.insert(prefabs, "lightcrab")
+	
+	if math.random() > 0.5 then
+		table.insert(prefabs, "lightcrab")
+	end
+
+	return prefabs
+end
+
+local function monkeyhut_area()
+	return {"monkeyhut", "monkeyhut"}
+end
+
+local monkey_island_add_data             =
+{
+	add_topology                         = 
+	{
+		room_id                          = "StaticLayoutIsland:MonkeyIsland", 
+		tags                             = {"RoadPoison", "nohunt", "nohasslers", "not_mainland"}
+	},
+	
+	areas =
+	{
+		monkeyisland_prefabs             = monkeyisland_prefabs_area,
+		monkeyhut_area                   = monkeyhut_area,
+
+		monkeyisland_docksafearea        = function(area, data)
+			return 
+			{
+				{
+					prefab               = "monkeyisland_dockgen_safeareacenter",
+					x                    = data.x,
+					y                    = data.y,
+					properties           = 
+					{
+						data             = 
+						{
+							width        = data.width,
+							height       = data.height,
+						},
+					},
+				}
+			}
+		end,
+	},
+}
+
+Layouts["MonkeyIsland"]                  = StaticLayout.Get("map/static_layouts/hof_monkeyisland_01", monkey_island_add_data)
+Layouts["MonkeyIslandSmall"]             = StaticLayout.Get("map/static_layouts/hof_monkeyisland_01_small", monkey_island_add_data)
+
 -- Custom Layout for Waterlogged biome.
 local function HofWaterloggedArea()
 	local stuff = {}

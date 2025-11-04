@@ -173,5 +173,7 @@ PrefabFiles =
 	"k_waxed_plants",
 	"k_weedsea",
 	"k_wildwheat",
+	"k_wobsters",
+	"k_wobster_den_monkeyisland",
 	"k_worm_bone",
 }

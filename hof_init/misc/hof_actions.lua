@@ -681,6 +681,25 @@ function EQUIPPED.fishingrod(inst, doer, target, actions, ...)
     end
 end
 
+-- Don't let Metal Bucket be filled with items.
+local _USEITEMwatersource = USEITEM.watersource
+function USEITEM.watersource(inst, doer, target, ...)
+	if target:HasTag("bucket_metal") then
+		return
+	else
+		return _USEITEMwatersource(inst, doer, target, ...)
+	end
+end
+
+local _USEITEMfillable = USEITEM.fillable
+function USEITEM.fillable(inst, doer, target, ...)
+	if inst:HasTag("bucket_metal") and target:HasTag("watersource") then
+		return
+	else
+		return _USEITEMfillable(inst, doer, target, ...)
+	end
+end
+
 -- Action String overrides.
 ACTIONS.GIVE.stroverridefn = function(act)
 	if act.target:HasTag("serenity_installable") and act.invobject:HasTag("serenity_installer") then

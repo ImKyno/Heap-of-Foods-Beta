@@ -81,19 +81,6 @@ local fishes         =
 		seasons      = ALL_SEASONS,
 		worlds       = { "forest" },
 	},
-	
-	--[[
-	kyno_wobster_moonquay_land =
-	{
-		roe_prefab   = "kyno_roe_wobster_moonquay",
-		baby_prefab  = "kyno_wobster_moonquay_land",
-		
-		roe_time     = TUNING.WOBSTER_MOONQUAY_ROETIME,
-		baby_time    = TUNING.WOBSTER_MOONQUAY_BABYTIME,
-		
-		seasons      = {"autumn", "summer"},
-	},
-	]]--
 
 	oceanfish_small_1_inv =
 	{

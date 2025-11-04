@@ -177,7 +177,7 @@ local function dogfish_dead()
 	inst.entity:AddNetwork()
 
 	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst)
+	MakeInventoryFloatable(inst, "large", 0.05, {0.5, 0.35, 0.5})
 
 	inst.AnimState:SetBank("kyno_dogfish")
 	inst.AnimState:SetBuild("kyno_dogfish")

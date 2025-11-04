@@ -1015,9 +1015,9 @@ local kyno_foods_jar =
 		card_def = {ingredients = {{"kyno_roe_wobster_moonglass", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
 	},
 	
-	agedroe_wobster_moonquay =
+	agedroe_wobster_monkeyisland =
 	{
-		test = function(brewer, names, tags) return names.kyno_roe_wobster_moonquay and names.kyno_salt and names.kyno_spotspice end,
+		test = function(brewer, names, tags) return names.kyno_roe_wobster_monkeyisland and names.kyno_salt and names.kyno_spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_PRESERVED,
@@ -1027,7 +1027,7 @@ local kyno_foods_jar =
 		cooktime = 48,
 		nameoverride = "AGEDROE",
 		floater = TUNING.HOF_FLOATER,
-		card_def = {ingredients = {{"kyno_roe_wobster_moonquay", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+		card_def = {ingredients = {{"kyno_roe_wobster_monkeyisland", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	agedroe_neonfish =

@@ -4,57 +4,58 @@ local WSO = require("worldsettings_overrides")
 local customizations_worldsettings =
 {	
 	-- WORLDSETTING
-	aloes_setting            = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 0,   world = { "forest" }},
-	asparaguses_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 1,   world = { "forest", "cave" }},
-	coffeebushes_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 2,   world = { "forest", "cave" }},
-	fennels_setting          = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 3,   world = { "cave" }},
-	giantparznips_setting    = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 4,   world = { "cave" }},
-	mushstumps_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 5,   world = { "forest", "cave" }},
-	truffles_setting         = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 6,   world = { "forest" }},
-	parznips_setting         = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 7,   world = { "cave" }},
-	radishes_setting         = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 8,   world = { "forest" }},
-	rockflippables_setting   = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 9,   world = { "forest", "cave" }},
-	sweetpotatoes_setting    = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 10,  world = { "forest" }},
-	turnips_setting          = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 11,  world = { "forest", "cave" }},
-	wildwheats_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",          order = 12,  world = { "forest" }},
+	aloes_setting            = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 0,   world = { "forest" }},
+	asparaguses_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 1,   world = { "forest", "cave" }},
+	coffeebushes_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 2,   world = { "forest", "cave" }},
+	fennels_setting          = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 3,   world = { "cave" }},
+	giantparznips_setting    = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 4,   world = { "cave" }},
+	mushstumps_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 5,   world = { "forest", "cave" }},
+	truffles_setting         = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 6,   world = { "forest" }},
+	parznips_setting         = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 7,   world = { "cave" }},
+	radishes_setting         = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 8,   world = { "forest" }},
+	rockflippables_setting   = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 9,   world = { "forest", "cave" }},
+	sweetpotatoes_setting    = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 10,  world = { "forest" }},
+	turnips_setting          = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 11,  world = { "forest", "cave" }},
+	wildwheats_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_r",           order = 12,  world = { "forest" }},
 	
 	-- OCEANSETTING
-	lotusplants_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 0,   world = { "forest" }},
-	oceancrates_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 1,   world = { "forest" }},
-	oceanwrecks_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 2,   world = { "forest" }},
-	seacucumbers_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 3,   world = { "forest" }},
-	taroroots_setting        = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 4,   world = { "forest" }},
-	waterycresses_setting    = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 5,   world = { "forest" }},
-	weedsea_setting          = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",    order = 6,   world = { "forest" }},
+	lotusplants_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",     order = 0,   world = { "forest" }},
+	oceancrates_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",     order = 1,   world = { "forest" }},
+	oceanwrecks_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",     order = 2,   world = { "forest" }},
+	seacucumbers_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",     order = 3,   world = { "forest" }},
+	taroroots_setting        = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",     order = 4,   world = { "forest" }},
+	waterycresses_setting    = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",     order = 5,   world = { "forest" }},
+	weedsea_setting          = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",     order = 6,   world = { "forest" }},
 	
 	-- OCEANCREATURESSETTING
-	jellyfishes_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_ocean_c",    order = 0,   world = { "forest" }},
-	jellyfishes2_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_ocean_c",    order = 1,   world = { "forest" }},
-	dogfishes_setting        = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_ocean_c",    order = 2,   world = { "forest" }},
-	swordfishes_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_ocean_c",    order = 3,   world = { "forest" }},
+	chickens_setting         = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 0,   world = { "forest" }},
+	dogfishes_setting        = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 9,   world = { "forest" }},
+	fishermerms_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 5,   world = { "forest" }},
+	hermitwobsters_setting   = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 8,   world = { "forest" }},
+	jellyfishes_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 6,   world = { "forest" }},
+	jellyfishes2_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 7,   world = { "forest" }},
+	pebblecrabs_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 1,   world = { "forest" }},
+	pikos_setting            = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 3,   world = { "forest" }},
+	pikosorange_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 4,   world = { "forest" }},
+	sugarflies_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 2,   world = { "forest" }},
+	swordfishes_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_creatures_r", order = 10,  world = { "forest" }},
 	
 	-- SERENITYSETTING
-	chickens_setting         = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_serenity_r", order = 0,   world = { "forest" }},
-	pebblecrabs_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_serenity_r", order = 1,   world = { "forest" }},
-    saltponds_setting        = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_serenity_r", order = 2,   world = { "forest" }},
-	spotbushes_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_serenity_r", order = 3,   world = { "forest" }},
-	sugarflies_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_serenity_r", order = 4,   world = { "forest" }},
-	sugarflowers_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_serenity_r", order = 5,   world = { "forest" }},
-	sugartrees_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_serenity_r", order = 6,   world = { "forest" }},
-	sapsugartrees_setting    = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_serenity_r", order = 7,   world = { "forest" }},
-	sap2sugartrees_setting   = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_serenity_r", order = 8,   world = { "forest" }},
-	ruinedsugartrees_setting = { category = LEVELCATEGORY.SETTINGS, desc = "yesno_descriptions",     group = "hof_serenity_r", order = 9,   world = { "forest" }},
+    saltponds_setting        = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_serenity_r",  order = 2,   world = { "forest" }},
+	spotbushes_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_serenity_r",  order = 3,   world = { "forest" }},
+	sugarflowers_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_serenity_r",  order = 5,   world = { "forest" }},
+	sugartrees_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_serenity_r",  order = 6,   world = { "forest" }},
+	sapsugartrees_setting    = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_serenity_r",  order = 7,   world = { "forest" }},
+	sap2sugartrees_setting   = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_serenity_r",  order = 8,   world = { "forest" }},
+	ruinedsugartrees_setting = { category = LEVELCATEGORY.SETTINGS, desc = "yesno_descriptions",     group = "hof_serenity_r",  order = 9,   world = { "forest" }},
 	
 	-- MEADOWSETTING
-	fishermerms_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_meadow_r",   order = 0,   world = { "forest" }},
-	islandcrates_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_meadow_r",   order = 1,   world = { "forest" }},
-	kokonuttrees_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_meadow_r",   order = 3,   world = { "forest" }},
-	limpetrocks_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_meadow_r",   order = 2,   world = { "forest" }},
-	pikos_setting            = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_meadow_r",   order = 4,   world = { "forest" }},
-	pikosorange_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "frequency_descriptions", group = "hof_meadow_r",   order = 5,   world = { "forest" }},
-	pineapplebushes_setting  = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_meadow_r",   order = 7,   world = { "forest" }},
-    sandhills_setting        = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_meadow_r",   order = 8,   world = { "forest" }},
-	teatrees_setting         = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_meadow_r",   order = 6,   world = { "forest" }},
+	islandcrates_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_meadow_r",    order = 1,   world = { "forest" }},
+	kokonuttrees_setting     = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_meadow_r",    order = 3,   world = { "forest" }},
+	limpetrocks_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_meadow_r",    order = 2,   world = { "forest" }},
+	pineapplebushes_setting  = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_meadow_r",    order = 7,   world = { "forest" }},
+    sandhills_setting        = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_meadow_r",    order = 8,   world = { "forest" }},
+	teatrees_setting         = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_meadow_r",    order = 6,   world = { "forest" }},
 }
 
 local function OverrideTuningVariables(tuning)
@@ -625,6 +626,39 @@ WSO.Pre.dogfishes_setting = function(difficulty)
 		always = 
 		{
 			KYNO_DOGFISH_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 1,
+		},
+	}
+	
+	OverrideTuningVariables(tuning_vars[difficulty])
+end
+
+WSO.Pre.hermitwobsters_setting = function(difficulty)
+	local tuning_vars =
+	{
+		never = 
+		{
+			KYNO_WOBSTER_MONKEYISLAND_DEN_ENABLED = false,
+		},
+
+		few = 
+		{
+			KYNO_WOBSTER_MONKEYISLAND_DEN_SPAWN_TIME = 150,
+			KYNO_WOBSTER_MONKEYISLAND_DEN_REGEN_TIME = 200,
+			KYNO_WOBSTER_MONKEYISLAND_DEN_AMOUNT = 1,
+		},
+		
+		many = 
+		{
+			KYNO_WOBSTER_MONKEYISLAND_DEN_SPAWN_TIME = 80,
+			KYNO_WOBSTER_MONKEYISLAND_DEN_REGEN_TIME = 100,
+			KYNO_WOBSTER_MONKEYISLAND_DEN_AMOUNT = 3,
+		},
+            
+		always = 
+		{
+			KYNO_WOBSTER_MONKEYISLAND_DEN_SPAWN_TIME = 40,
+			KYNO_WOBSTER_MONKEYISLAND_DEN_REGEN_TIME = 80,
+			KYNO_WOBSTER_MONKEYISLAND_DEN_AMOUNT = 4,
 		},
 	}
 	

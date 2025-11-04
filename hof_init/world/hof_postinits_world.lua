@@ -1058,6 +1058,7 @@ end
 
 AddPrefabPostInit("sporecloud", SporecloudPostInit)
 
+-- Weeds doesn't have SoundEmitter...
 local weeds =
 {
 	"weed_firenettle",

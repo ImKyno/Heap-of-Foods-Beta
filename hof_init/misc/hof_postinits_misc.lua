@@ -836,7 +836,7 @@ end
 AddPrefabPostInit("saddle_shadow_fx", SaddleShadowPostInit)
 
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
--- Correct animations for Jellyfish inside Scale-o-Matic.
+-- Correct animations for new ocean creatures inside Scale-o-Matic.
 local function TrophyScaleFishPostInit(inst)	
 	local function SetFish(inst, item_data)
 		if item_data then
@@ -846,6 +846,10 @@ local function TrophyScaleFishPostInit(inst)
 			elseif item_data.prefab == "kyno_jellyfish_rainbow" then
 				inst.AnimState:SetBank("trophyscale_fish_kyno_jellyfish_rainbow")
 				inst.AnimState:HideSymbol("eel_head")
+			elseif item_data.prefab == "wobster_monkeyisland_land" then
+				inst.AnimState:ClearOverrideBuild("lobster_build")
+				inst.AnimState:AddOverrideBuild("kyno_lobster_monkeyisland")
+				inst.AnimState:OverrideSymbol("claw_type1A", "kyno_lobster_monkeyisland", "claw_type3A")
 			else
 				inst.AnimState:SetBank("scale_o_matic")
 			end
@@ -870,7 +874,7 @@ local function TrophyScaleFishPostInit(inst)
 		end
 	end
 
-	local function onnewtrophy(inst, data_old_and_new)
+	local function OnNewTrophy(inst, data_old_and_new)
 		local data_new = data_old_and_new.new
 		SetFish(inst, data_new)
 	end
@@ -896,6 +900,20 @@ local function TrophyScaleFishPostInit(inst)
 end
 
 AddPrefabPostInit("trophyscale_fish", TrophyScaleFishPostInit)
+
+AddComponentPostInit("spell", function(self)
+	local _OnSave = self.OnSave
+
+	function self:OnSave(...)
+		local ret = {_OnSave(self, ...)}
+
+		if self.target ~= nil and self.target.components.trophyscale then
+			return ret[1], { self.target.GUID }
+		end
+
+		return unpack(ret)
+	end
+end)
 
 -- Some hacks for trap component since it does not support water creatures.
 -- We basically remove the fish from scene and spawn its inventory prefab.

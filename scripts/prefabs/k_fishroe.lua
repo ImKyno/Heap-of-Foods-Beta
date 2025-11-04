@@ -116,15 +116,15 @@ local fishroes =
 		stacksize           = TUNING.STACK_SIZE_MEDITEM,
 		goldvalue           = 2,
 	},
-	
+
 	{
-		name                = "wobster_moonglass",
+		name                = "wobster_monkeyisland",
 		stacksize           = TUNING.STACK_SIZE_MEDITEM,
 		goldvalue           = 3,
 	},
 	
 	{
-		name                = "wobster_moonquay",
+		name                = "wobster_moonglass",
 		stacksize           = TUNING.STACK_SIZE_MEDITEM,
 		goldvalue           = 3,
 	},

@@ -130,6 +130,7 @@ AddIngredientValues({"kyno_jellyfish_rainbow_dead"}, {monster    = 1,    fish   
 AddIngredientValues({"kyno_dogfish_dead"},           {meat       = 1,    fish      = 1})
 AddIngredientValues({"kyno_swordfish_dead"},         {meat       = 1,    fish      = 2,    swordfish = 1})
 AddIngredientValues({"kyno_swordfish_blue"},         {meat       = 1,    fish      = 2,    swordfish = 1})
+AddIngredientValues({"wobster_monkeyisland_land"},   {meat       = 1,    fish      = 1,    wobster   = 1})
 
 local fishroes =
 {
@@ -166,8 +167,8 @@ local fishroes =
 	"kyno_roe_swordfish_blue",
 	"kyno_roe_tropicalfish",
 	"kyno_roe_wobster",
+	"kyno_roe_wobster_monkeyisland",
 	"kyno_roe_wobster_moonglass",
-	"kyno_roe_wobster_moonquay",
 }
 
 for k, v in pairs(fishroes) do

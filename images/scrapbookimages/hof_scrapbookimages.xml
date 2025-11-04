@@ -94,5 +94,6 @@
 		<Element name="slow_farmplot.tex" u1="0.5635" u2="0.624" v2="0.624" v1="0.501" variant="" />
 		<Element name="toucan.tex" u1="0.626" u2="0.6865" v2="0.624" v1="0.501" variant="" />
 		<Element name="toucan_chubby.tex" u1="0.6885" u2="0.749" v2="0.624" v1="0.501" variant="" />
+		<Element name="wobster_monkeyisland_land.tex" u1="0.751" u2="0.8115" v2="0.624" v1="0.501" variant="" />
 	</Elements>
 </Atlas>

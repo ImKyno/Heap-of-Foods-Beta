@@ -131,8 +131,8 @@ local fishroes =
 	"kyno_roe_swordfish_blue",
 	"kyno_roe_tropicalfish",
 	"kyno_roe_wobster",
+	"kyno_roe_wobster_monkeyisland",
 	"kyno_roe_wobster_moonglass",
-	"kyno_roe_wobster_moonquay",
 }
 
 for k, v in pairs(fishroes) do

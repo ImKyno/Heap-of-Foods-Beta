@@ -3721,14 +3721,14 @@ local HOF_SCRAPBOOK_FOODS =
 		deps            = {"wobster_moonglass_land", "kyno_roe_cooked", "spoiled_food"},
 	},
 	
-	kyno_roe_wobster_moonquay =
+	kyno_roe_wobster_monkeyisland =
 	{
-		name            = "kyno_roe_wobster_moonquay",
+		name            = "kyno_roe_wobster_monkeyisland",
 		speechname      = "kyno_roe",
 		type            = "food",
 		subcat          = "fishroe",
-		tex             = "kyno_roe_wobster_moonquay.tex",
-		prefab          = "kyno_roe_wobster_moonquay",
+		tex             = "kyno_roe_wobster_monkeyisland.tex",
+		prefab          = "kyno_roe_wobster_monkeyisland",
 		healthvalue     = 1,
 		hungervalue     = 4.6875,
 		sanityvalue     = 0,
@@ -3738,8 +3738,8 @@ local HOF_SCRAPBOOK_FOODS =
 		foodtype        = "MEAT",
 		bank            = "kyno_roe",
 		build           = "kyno_roe",
-		anim            = "idle_wobster_moonquay",
-		deps            = {"kyno_roe_cooked", "spoiled_food"}, -- wobster_moonquay_land
+		anim            = "idle_wobster_monkeyisland",
+		deps            = {"wobster_monkeyisland_land", "kyno_roe_cooked", "spoiled_food"},
 	},
 	
 	kyno_roe_neonfish   =
@@ -5005,6 +5005,24 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_dogfish",
 		anim           = "dead",
 		deps           = {"kyno_dogfish", "kyno_spoiled_fish_large"},
+	},
+	
+	wobster_monkeyisland_dead =
+	{
+		name           = "wobster_monkeyisland_dead",
+		type           = "food",
+		tex            = "wobster_monkeyisland_dead.tex",
+		prefab         = "wobster_monkeyisland_dead",
+		healthvalue    = 3,
+		hungervalue    = 12.5,
+		sanityvalue    = 5,
+		perishable     = 1440,
+		foodtype       = "MEAT",
+		stacksize      = 10,
+		bank           = "lobster",
+		build          = "kyno_lobster_monkeyisland",
+		anim           = "idle_dead",
+		deps           = {"wobster_monkeyisland_land", "wobster_sheller_dead_cooked", "spoiled_fish"},
 	},
 }
 
@@ -13511,14 +13529,14 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		deps           = {"kyno_preservesjar", "kyno_roe_wobster_moonglass", "spoiled_food"},
 	},
 	
-	agedroe_wobster_moonquay =
+	agedroe_wobster_monkeyisland =
 	{
-		name           = "agedroe_wobster_moonquay",
+		name           = "agedroe_wobster_monkeyisland",
 		speechname     = "agedroe",
         type           = "food",
 		subcat         = "agedroe",
-		tex            = "agedroe_wobster_moonquay.tex",
-        prefab         = "agedroe_wobster_moonquay",
+		tex            = "agedroe_wobster_monkeyisland.tex",
+        prefab         = "agedroe_wobster_monkeyisland",
 		healthvalue    = 30,
 		hungervalue    = 30,
 		sanityvalue    = 30,
@@ -13526,14 +13544,14 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
         foodtype       = "MEAT",
 		burnable       = true,
 		stacksize      = 40,
-		bank           = "agedroe_wobster_moonquay",
-		build          = "agedroe_wobster_moonquay",
-		overridesymbol = {"swap_food", "swap_food", "agedroe_wobster_moonquay"},
+		bank           = "agedroe_wobster_monkeyisland",
+		build          = "agedroe_wobster_monkeyisland",
+		overridesymbol = {"swap_food", "swap_food", "agedroe_wobster_monkeyisland"},
 		anim           = "idle",
 		animoffsetx    = 12,
 		animoffsetbgx  = -20,
 		animoffsetbgy  = -100,
-		deps           = {"kyno_preservesjar", "kyno_roe_wobster_moonquay", "spoiled_food"},
+		deps           = {"kyno_preservesjar", "kyno_roe_wobster_monkeyisland", "spoiled_food"},
 	},
 	
 	agedroe_neonfish   =
@@ -14580,6 +14598,21 @@ local HOF_SCRAPBOOK_CREATURES =
 		build          = "kyno_dogfish",
 		anim           = "fishmed",
 		deps           = {"kyno_dogfish_dead"},
+	},
+	
+	wobster_monkeyisland_land =
+	{
+		name           = "wobster_monkeyisland_land",
+		speechname     = "wobster_monkeyisland",
+		type           = "creature",
+		tex            = "wobster_monkeyisland_land.tex",
+		prefab         = "wobster_monkeyisland_land",
+		health         = 25,
+		perishable     = 1920,
+		bank           = "lobster",
+		build          = "kyno_lobster_monkeyisland",
+		anim           = "idle",
+		deps           = {"kyno_roe_wobster_monkeyisland", "wobster_monkeyisland_dead", "wobster_sheller_dead_cooked", "spoiled_fish"},
 	},
 	
 	oceanfish_pufferfish_inv =
