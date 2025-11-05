@@ -174,6 +174,7 @@ PrefabFiles =
 	"k_waxed_plants",
 	"k_weedsea",
 	"k_whales_ocean",
+	"k_whales_ocean_bubbles",
 	"k_whales_ocean_carcass",
 	"k_wildwheat",
 	"k_wobsters",

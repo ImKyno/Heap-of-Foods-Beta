@@ -45,6 +45,7 @@ local hof_init_misc    =
 	"hof_postinits_misc",
 	"hof_postinits_brains",
 	"hof_postinits_playervision",
+	"hof_postinits_wisecracker",
 }
 
 local hof_init_world   =

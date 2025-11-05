@@ -7,7 +7,7 @@ local assets =
 }
 
 local brain = require("brains/ghostbrain")
-local GHOSTLYFRIEND_AURA_SAFE_TAGS = {"abigail", "ghostlyfriend", "ghost_ally"}
+local GHOSTLYFRIEND_AURA_SAFE_TAGS = { "abigail", "ghostlyfriend", "ghost_ally", "swordfish" }
 
 local function AbleToAcceptTest(inst, item)
 	return false, (item:HasTag("reviver") and "GHOSTHEART") or nil

@@ -28,10 +28,10 @@ local prefabs =
 local SWIMMING_COLLISION_MASK = COLLISION.GROUND + COLLISION.LAND_OCEAN_LIMITS + COLLISION.OBSTACLES + COLLISION.SMALLOBSTACLES
 
 local SWORDFISH_MUST_TAGS = { "_combat" }
-local SWORDFISH_CANT_TAGS = { "INLIMBO", "outofreach", "swordfish", "puffermonster" }
+local SWORDFISH_CANT_TAGS = { "INLIMBO", "outofreach", "swordfish", "puffermonster", "ghost" }
 
 local SWORDFISH_BOAT_MUST_TAGS = { "boat" }
-local SWORDFISH_BOAT_CANT_TAGS = { "INLIMBO", "outofreach", "swordfish", "puffermonster" }
+local SWORDFISH_BOAT_CANT_TAGS = { "INLIMBO", "outofreach", "swordfish", "puffermonster", "ghost" }
 
 local function Retarget(inst)
 	local function CheckTarget(guy)

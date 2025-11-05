@@ -1,6 +1,6 @@
 -- Common Dependencies.
-local _G 			= GLOBAL
-local require 		= _G.require
+local _G      = GLOBAL
+local require = _G.require
 
 -- Preload Assets. (Before the game load).
 PreloadAssets =

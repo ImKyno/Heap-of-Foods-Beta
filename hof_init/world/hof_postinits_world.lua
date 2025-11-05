@@ -15,6 +15,7 @@ AddPrefabPostInit("forest", function(inst)
 	end
 
 	inst:AddComponent("sugarflyspawner")
+	inst:AddComponent("waterfowlhunter")
     inst:AddComponent("retrofitforestmap_hof")
 	
 	-- Let the players know they have force retrofit option enabled.
@@ -39,6 +40,7 @@ end)
 
 -- Pig King Trades Some Items.
 local MOD_TRADES = GetModConfigData("MODTRADES")
+
 local function BushTrader(inst)
     if not _G.TheWorld.ismastersim then
         return inst

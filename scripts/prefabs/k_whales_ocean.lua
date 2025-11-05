@@ -101,6 +101,16 @@ local function SpawnWhaleWaves(inst, numWaves, totalAngle, waveSpeed, wavePrefab
 	)
 end
 
+-- Play scary sound to hunters when spawning.
+local function OnSpawnedFromHunt(inst, data)
+	local px, py, pz = inst.Transform:GetWorldPosition()
+	local hunter = FindPlayersInRange(px, py, pz, 20, true)
+		
+	if hunter and TheFocalPoint then
+		TheFocalPoint.SoundEmitter:PlaySound(inst.sounds.idle)
+	end
+end
+
 local function common()
 	local inst = CreateEntity()
 
@@ -145,13 +155,13 @@ local function common()
 	inst:SetStateGraph("SGwhaleocean")
 
 	inst:ListenForEvent("attacked", OnAttacked)
+	inst:ListenForEvent("spawnedforhunt", OnSpawnedFromHunt)
 
 	MakeHauntablePanic(inst)
 	MakeLargeFreezableCharacter(inst)
 
 	return inst
 end
-
 
 local function whale_blue()
     local inst = common()
