@@ -73,7 +73,7 @@ local STRINGS_CUSTOMIZATION =
 	
 	CREATURES =
 	{
-		"Heap of Foods - Creatures",
+		"Heap of Foods - Creatures and Spawners",
 		zh  = "更多料理 - 生物",
 		zht = "食物堆積 - 生物",
 		pt  = "Amontoado de Comidas - Criaturas",

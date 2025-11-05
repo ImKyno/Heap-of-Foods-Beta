@@ -207,9 +207,9 @@ local function puffermonsterfn()
     inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
-	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("kyno_puffermonster_spawner.tex")
-	minimap:SetPriority(5)
+	-- local minimap = inst.entity:AddMiniMapEntity()
+	-- minimap:SetIcon("kyno_puffermonster_spawner.tex")
+	-- minimap:SetPriority(5)
 	
 	inst:AddTag("NOBLOCK")
 	inst:AddTag("CLASSIFIED")

@@ -16,6 +16,7 @@ STRINGS.SCRAPBOOK.CATS.ARTISAN = "Artisan\nGoods"
 STRINGS.SCRAPBOOK.SUBCATS.CHICKEN = "Chicken"
 STRINGS.SCRAPBOOK.SUBCATS.PIKO = "Piko"
 STRINGS.SCRAPBOOK.SUBCATS.GHOST = "Ghost"
+STRINGS.SCRAPBOOK.SUBCATS.WHALE = "Whale"
 STRINGS.SCRAPBOOK.SUBCATS.CANNED = "Canned"
 STRINGS.SCRAPBOOK.SUBCATS.COOKWARE = "Cookware"
 STRINGS.SCRAPBOOK.SUBCATS.SEASONALFOOD = "Seasonal Food"
@@ -99,6 +100,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP_DARK = "This food can make a 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP_DARK2 = "This food can make a survivor immune to Acid Rain for a certain amount of time. It also accelerates spoiling rate of items in inventory and equipment slots.\n\nMonster survivors can eat this food without any penalties."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PUFFERFISH = "Survivors must have caution when eating Pufferfish. It can contain poison if cooked by unskilled chefs."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EXQUISITE = "An exquisite and luxurious meal.\nSomeone would for sure like this as a gift."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLUBBER = "Decreases the moisture off the survivor."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
@@ -180,3 +182,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SURFACEBANANATREE = "A rare and elusive exotic tre
 STRINGS.SCRAPBOOK.SPECIALINFO.DECIDUOUSSHOP = "An enigmatic dwelling, long silent, whose doors may one day open... and reveal what lies within.\n\nCome back in the next major update of 2026!"
 STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSHOWCASER = "A structure for displaying prepared foods."
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOT = "A 8 slot container that will receive fish for breed.\n\nPlacing a fish in the first slot and feeding it will allow breeding. Fish will produce their respective offspring and roe after certain amounts of time have passed.\n\nFish can only breed when all their criteria is met, each fish has its own preferences, such as: Day Phase, Moon Phase, Season and Location."
+STRINGS.SCRAPBOOK.SPECIALINFO.WHALEOCEANCARCASS = "A whale carcass that has begun to spoil.\n\nIt will grow bigger and bigger each day until it explodes and release everything inside.\n\nThe sound of the explosion might attract unwanted attention."

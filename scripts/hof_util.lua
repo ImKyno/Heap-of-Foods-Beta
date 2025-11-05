@@ -240,3 +240,45 @@ function GetOceanTrapInventoryPrefab(fish)
 	-- Default fallback for oceanfish.
     return fish.prefab.."_inv"
 end
+
+function SpawnWhaleCarcassEnemies(inst, player)
+	local function EnemySpawnPoint(pt)
+		if not TheWorld.Map:IsAboveGroundAtPoint(pt:Get()) then
+			pt = FindNearbyOcean(pt, 1) or pt
+		end
+
+		local offset = FindSwimmableOffset(pt, math.random() * 8 * PI, 20, 12, true)
+		
+		if offset ~= nil then
+			offset.x = offset.x + pt.x
+			offset.z = offset.z + pt.z
+			return offset
+		end
+	end
+			
+	local spawn_pt = EnemySpawnPoint(inst:GetPosition())
+	local roll = math.random()
+	
+	if roll < TUNING.KYNO_WHALE_PIRATE_CHANCE and player ~= nil and TheWorld.components.piratespawner ~= nil then
+		local platform = player:GetCurrentPlatform()
+		
+		if platform ~= nil then
+			TheWorld.components.piratespawner:SpawnPiratesForPlayer(player)
+			-- print("SpawnWhaleCarcassEnemies - Pirates spawned.")
+		end
+	elseif roll < TUNING.KYNO_WHALE_ENEMY_CHANCE and player ~= nil then
+		if spawn_pt ~= nil then
+			local prefab = math.random() < TUNING.KYNO_WHALE_SHARK_CHANCE and "shark" or "gnarwail"
+			local enemy = SpawnPrefab(prefab)
+			enemy.Physics:Teleport(spawn_pt:Get())
+			
+			if enemy.components.combat ~= nil then
+				enemy.components.combat:SetTarget(player)
+			end
+			
+			-- print("SpawnWhaleCarcassEnemies - Shark/Gnarwail spawned.")
+		end
+	else 
+		-- print("SpawnWhaleCarcassEnemies - No enemies spawned.")
+	end
+end

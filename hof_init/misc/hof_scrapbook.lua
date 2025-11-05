@@ -5042,6 +5042,29 @@ local HOF_SCRAPBOOK_FOODS =
 		anim           = "cooked",
 		deps           = {"wobster_monkeyisland_dead", "spoiled_fish"},
 	},
+	
+	kyno_blubber       =
+	{
+		name           = "kyno_blubber",
+		type           = "food",
+		tex            = "kyno_blubber.tex",
+		prefab         = "kyno_blubber",
+		healthvalue    = 10,
+		hungervalue    = 10,
+		sanityvalue    = 0,
+		perishable     = 4800,
+		foodtype       = "MEAT",
+		fueltype       = "BURNABLE",
+		fuelvalue      = 180,
+		burnable       = true,
+		stacksize      = 10,
+		waterproofer   = 1,
+		bank           = "kyno_blubber",
+		build          = "kyno_blubber",
+		anim           = "idle",
+		deps           = {"kyno_whale_blue_ocean", "kyno_whale_blue_ocean_carcass", "kyno_whale_white_ocean", "kyno_whale_white_ocean_carcass", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_BLUBBER",
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS =
@@ -14649,6 +14672,40 @@ local HOF_SCRAPBOOK_CREATURES =
 		specialinfo    = "HULLBREAKER_CREATURE",
 	},
 	
+	kyno_whale_blue_ocean =
+	{
+		name           = "kyno_whale_blue_ocean",
+		type           = "creature",
+		subcat         = "whale",
+		tex            = "kyno_whale_blue_ocean.tex",
+		prefab         = "kyno_whale_blue_ocean",
+		health         = 1300,
+		damage         = 50,
+		bank           = "kyno_whale",
+		build          = "kyno_whale_blue_build",
+		anim           = "idle",
+		animoffsetx    = -5,
+		deps           = {"kyno_whale_blue_ocean_carcass", "fishmeat", "kyno_blubber"},
+		specialinfo    = "HULLBREAKER_CREATURE",
+	},
+	
+	kyno_whale_white_ocean =
+	{
+		name           = "kyno_whale_white_ocean",
+		type           = "creature",
+		subcat         = "whale",
+		tex            = "kyno_whale_white_ocean.tex",
+		prefab         = "kyno_whale_white_ocean",
+		health         = 1600,
+		damage         = 75,
+		bank           = "kyno_whale",
+		build          = "kyno_whale_white_build",
+		anim           = "idle",
+		animoffsetx    = -5,
+		deps           = {"kyno_whale_white_ocean_carcass", "fishmeat", "kyno_blubber"},
+		specialinfo    = "HULLBREAKER_CREATURE",
+	},
+	
 	oceanfish_pufferfish_inv =
 	{
 		name           = "oceanfish_pufferfish_inv",
@@ -16005,6 +16062,36 @@ local HOF_SCRAPBOOK_THINGS =
 		animoffsety    = -60,
 		deps           = {"kyno_fishfarmplot_kit", "pondfish", "kyno_roe_pondfish", "rocks"},
 		specialinfo    = "FISHFARMPLOT",
+	},
+	
+	kyno_whale_blue_ocean_carcass =
+	{
+		name           = "kyno_whale_blue_ocean_carcass",
+		speechname     = "kyno_whale_ocean_carcass",
+		type           = "thing",
+		tex            = "kyno_whale_blue_ocean_carcass.tex",
+		prefab         = "kyno_whale_blue_ocean_carcass",
+		workable       = "CHOP",
+		bank           = "kyno_whale_carcass",
+		build          = "kyno_whale_blue_carcass_build",
+		anim           = "idle_bloat1",
+		deps           = {"fishmeat", "kyno_blubber"},
+		specialinfo    = "WHALEOCEANCARCASS",
+	},
+	
+	kyno_whale_white_ocean_carcass =
+	{
+		name           = "kyno_whale_white_ocean_carcass",
+		speechname     = "kyno_whale_ocean_carcass",
+		type           = "thing",
+		tex            = "kyno_whale_white_ocean_carcass.tex",
+		prefab         = "kyno_whale_white_ocean_carcass",
+		workable       = "CHOP",
+		bank           = "kyno_whale_carcass",
+		build          = "kyno_whale_white_carcass_build",
+		anim           = "idle_bloat1",
+		deps           = {"fishmeat", "kyno_blubber"},
+		specialinfo    = "WHALEOCEANCARCASS",
 	},
 }
 

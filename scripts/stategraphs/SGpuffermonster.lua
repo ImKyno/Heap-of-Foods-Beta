@@ -21,7 +21,7 @@ local function AttackBoatHull(inst)
 		local offset = Vector3(math.cos( theta ), 0, -math.sin(theta))
 
 		if platform.components.hullhealth ~= nil then
-			platform.components.health:DoDelta(-TUNING.KYNO_SWORDFISH_HULLDAMAGE)
+			platform.components.health:DoDelta(-TUNING.KYNO_PUFFERMONSTER_HULLDAMAGE)
 			
 			-- Cool fx and sound to let the player know the boat is being damaged.
 			local fx = SpawnPrefab("kyno_swordfish_damage_fx")

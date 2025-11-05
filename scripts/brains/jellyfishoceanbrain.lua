@@ -25,7 +25,7 @@ function JellyfishOceanBrain:OnStart()
 	local root = PriorityNode(
 	{
 		BrainCommon.PanicTrigger(self.inst),
-		DoAction(self.inst, EatFoodAction),
+		-- DoAction(self.inst, EatFoodAction),
 		Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_WANDER_DIST)
 	}, .25)
 	

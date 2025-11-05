@@ -212,8 +212,8 @@ local function fn()
     inst:AddComponent("health")
     inst.components.health:SetMaxHealth(TUNING.KYNO_JELLYFISH_OCEAN_HEALTH)
 	
-	inst:AddComponent("eater")
-	inst.components.eater:SetDiet({ FOODGROUP.VEGETARIAN }, { FOODGROUP.VEGETARIAN })
+	-- inst:AddComponent("eater")
+	-- inst.components.eater:SetDiet({ FOODGROUP.VEGETARIAN }, { FOODGROUP.VEGETARIAN })
 
     inst:AddComponent("lootdropper")
     inst.components.lootdropper:SetLoot({"kyno_jellyfish_dead"})

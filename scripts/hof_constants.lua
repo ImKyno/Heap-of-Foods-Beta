@@ -32,12 +32,16 @@ HOF_NAUGHTY_VALUE                    =
 	["kyno_jellyfish_ocean"]         = 1,
 	["kyno_jellyfish"]               = 1,
 	["kyno_piko"]                    = 1,
+	["kingfisher"]                   = 2,
+	["kyno_dogfish"]                 = 2,
 	["kyno_piko_orange"]             = 2,
 	["kyno_jellyfish_rainbow_ocean"] = 2,
 	["kyno_jellyfish_rainbow"]       = 2,
-	["kingfisher"]                   = 2,
 	["kyno_pebblecrab"]              = 2,
 	["kyno_meadowisland_mermfisher"] = 3,
+	["kyno_swordfish"]               = 4,
+	["kyno_whale_white_ocean"]       = 6,
+	["kyno_whale_blue_ocean"]        = 7,
 	["kyno_meadowisland_seller"]     = 50, -- Wait, how did you kill Sammy?
 }
 

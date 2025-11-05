@@ -722,6 +722,7 @@ if TUNING.HOF_IS_HSP_ENABLED then
 	)
 end
 
+--[[
 -- Some recipe changes for Apparels Overload Mod.
 if TUNING.HOF_IS_TCP_ENABLED then
 	Recipe2("aerodynamichat", {Ingredient("kyno_shark_fin", 1, ModAtlas), Ingredient("kyno_kokonut", 1), Ingredient("log", 2)}, TECH.SCIENCE_TWO,
@@ -740,3 +741,4 @@ if TUNING.HOF_IS_TCP_ENABLED then
 		{"CLOTHING", "SUMMER"}
 	)
 end
+]]--

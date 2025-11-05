@@ -56,6 +56,73 @@ TUNING.HOF_OCEANTRAP_PREFAB_INDEX =
 	-- kyno_jellyfish_rainbow_ocean = "kyno_jellyfish_rainbow",
 }
 
+-- Public loot tables for Whales in case someone wants it.
+TUNING.HOF_WHALE_BLUE_LOOT = 
+{
+	"fishmeat",
+	"fishmeat",
+	"fishmeat",
+	"fishmeat",
+
+	"kyno_blubber",
+	"kyno_blubber",
+	"kyno_blubber",
+	"kyno_blubber",
+}
+
+TUNING.HOF_WHALE_WHITE_LOOT =
+{
+	"fishmeat",
+	"fishmeat",
+	"fishmeat",
+	"fishmeat",
+	
+	"boneshard",
+	
+	"kyno_blubber",
+	"kyno_blubber",
+	"kyno_blubber",
+	"kyno_blubber",
+}
+
+TUNING.HOF_WHALE_LOOT =
+{
+	-- High Tier
+	{
+		"bullkelp_root",
+		"monkey_mediumhat",
+		"polly_rogershat",
+		"stash_map",
+		"chum",
+		"messagebottle",
+	},
+	
+	-- Medium Tier
+	{
+		"wobster_sheller_dead",
+		"wobster_monkeyisland_dead",
+		"oceanfishinglure_hermit_heavy",
+		"waterplant_planter",
+		"monkey_smallhat",
+		"messagebottle",
+		"puffin",
+		"kyno_kokonut",
+		"kyno_oceantrap",
+		"kyno_dogfish_dead",
+    },
+	
+	-- Low Tier
+	{
+		"kelp",
+		"fishmeat",
+		"boneshard",
+		"kyno_seaweeds",
+		"kyno_jellyfish",
+		"kyno_blubber",
+		"kyno_spoiled_fish_large",
+	},
+}
+
 TUNING.KYNO_FLOATILIZER_USES = 20
 TUNING.KYNO_FLOATILIZER_SOILCYCLES = TUNING.POOP_SOILCYCLES
 TUNING.KYNO_FLOATILIZER_FERTILIZE = TUNING.POOP_FERTILIZE * 2
@@ -990,3 +1057,45 @@ TUNING.KYNO_WOBSTER_MONKEYISLAND_DEN_REGEN_TIME = 150
 TUNING.KYNO_WOBSTER_MONKEYISLAND_DEN_AMOUNT = 2
 TUNING.KYNO_WOBSTER_MONKEYISLAND_DEN_RADIUS = 4
 TUNING.KYNO_WOBSTER_MONKEYISLAND_DEN_ENABLED = true
+
+TUNING.KYNO_WHALE_WAKE_TO_RUN_DISTANCE = 10
+TUNING.KYNO_WHALE_SLEEP_NEAR_ENEMY_DISTANCE = 14
+TUNING.KYNO_WHALE_ATTACK_PERIOD = 3.5
+TUNING.KYNO_WHALE_BOAT_PUSH = 0.50
+TUNING.KYNO_WHALE_PIRATE_CHANCE = 0.10
+TUNING.KYNO_WHALE_ENEMY_CHANCE = 0.30
+TUNING.KYNO_WHALE_SHARK_CHANCE = 0.40
+
+TUNING.KYNO_WHALE_BLUE_CHASE_DIST = 20
+TUNING.KYNO_WHALE_BLUE_TARGET_DIST = 10
+TUNING.KYNO_WHALE_BLUE_FOLLOW_TIME = 60
+TUNING.KYNO_WHALE_BLUE_WALKSPEED = 4 * 0.5
+TUNING.KYNO_WHALE_BLUE_RUNSPEED = 4
+TUNING.KYNO_WHALE_BLUE_HEALTH = 1300
+TUNING.KYNO_WHALE_BLUE_DAMAGE = 50
+TUNING.KYNO_WHALE_BLUE_HULLDAMAGE = 25
+TUNING.KYNO_WHALE_BLUE_EXPLOSION_CHOPS = 3
+TUNING.KYNO_WHALE_BLUE_EXPLOSION_DAMAGE = 25
+
+TUNING.KYNO_WHALE_WHITE_CHASE_DIST = 30
+TUNING.KYNO_WHALE_WHITE_TARGET_DIST = 15
+TUNING.KYNO_WHALE_WHITE_FOLLOW_TIME = 90
+TUNING.KYNO_WHALE_WHITE_WALKSPEED = 5 * 0.5
+TUNING.KYNO_WHALE_WHITE_RUNSPEED = 5
+TUNING.KYNO_WHALE_WHITE_HEALTH = 1600
+TUNING.KYNO_WHALE_WHITE_DAMAGE = 75
+TUNING.KYNO_WHALE_WHITE_HULLDAMAGE = 37.5
+TUNING.KYNO_WHALE_WHITE_EXPLOSION_CHOPS = 4
+TUNING.KYNO_WHALE_WHITE_EXPLOSION_DAMAGE = 50
+
+TUNING.KYNO_WHALE_ROT_TIME = 
+{
+	{ base = 2 * TUNING.TOTAL_DAY_TIME, random = 0.5 * TUNING.TOTAL_DAY_TIME },
+	{ base = 2 * TUNING.TOTAL_DAY_TIME, random = 0.5 * TUNING.TOTAL_DAY_TIME },
+	{ base = 1 * TUNING.TOTAL_DAY_TIME, random = 0.5 * TUNING.TOTAL_DAY_TIME },
+}
+
+TUNING.KYNO_BLUBBLER_HEALTH = 10
+TUNING.KYNO_BLUBBLER_HUNGER = 10
+TUNING.KYNO_BLUBBLER_SANITY = 0
+TUNING.KYNO_BLUBBLER_MOISTURE = -10
