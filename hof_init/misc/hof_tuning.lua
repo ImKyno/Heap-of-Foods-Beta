@@ -46,7 +46,7 @@ TUNING.HOF_MEATRACKS =
 -- Need to make support to allow multiple prefab loot.
 TUNING.HOF_OCEANTRAP_PREFAB_INDEX =
 {
-	cookiecutter = "cookiecuttershell",
+	cookiecutter = "kyno_mussel",
 	wobster_sheller = "wobster_sheller_land",
 	wobster_monkeyisland = "wobster_monkeyisland_land",
 	wobster_moonglass = "wobster_moonglass_land",
@@ -1112,3 +1112,11 @@ TUNING.KYNO_BLUBBLER_HEALTH = 10
 TUNING.KYNO_BLUBBLER_HUNGER = 10
 TUNING.KYNO_BLUBBLER_SANITY = 0
 TUNING.KYNO_BLUBBLER_MOISTURE = -10
+
+TUNING.KYNO_FISHMEAT_SMALL_DRIED_HEALTH = 10
+TUNING.KYNO_FISHMEAT_SMALL_DRIED_HUNGER = 12.5
+TUNING.KYNO_FISHMEAT_SMALL_DRIED_SANITY = 8
+
+TUNING.KYNO_FISHMEAT_DRIED_HEALTH = 15
+TUNING.KYNO_FISHMEAT_DRIED_HUNGER = 25
+TUNING.KYNO_FISHMEAT_DRIED_SANITY = 20

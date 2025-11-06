@@ -37,7 +37,6 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERREGEN = "Gives off hunger regene
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SANITYREGEN = "Gives off sanity regeneration for a short period."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUPERREGEN = "Gives off super body regeneration for a short period."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WORMLIGHT = "Gives off a healthy glow for a short period."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WORMLIGHT2 = "Gives off a healthy glow for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ALCOHOL = "Increased damage and decreased movement speed for a certain amount of time. Drink in moderation."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ALCOHOL2 = "Increased damage resistance and decreased movement speed for a certain amount of time. Drink in moderation."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RUM = "Increased damage against pirates for a certain amount of time.\n\nNeither the flames nor the depths could claim me."
@@ -98,9 +97,14 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP = "This food can make a survi
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP2 = "This food can make a survivor immune to Poison Auras for a certain amount of time. It also accelerates spoiling rate of items in inventory and equipment slots.\n\nMonster survivors can eat this food without any penalties."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP_DARK = "This food can make a survivor immune to Acid Rain for a certain amount of time.\n\nMonster survivors can eat this food without any penalties."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPORECAP_DARK2 = "This food can make a survivor immune to Acid Rain for a certain amount of time. It also accelerates spoiling rate of items in inventory and equipment slots.\n\nMonster survivors can eat this food without any penalties."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINBOWGLOW = "Gives off a healthy and colorful glow for a short period."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINBOWGLOW2 = "Gives off a healthy and colorful glow for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINBOWGLOW3 = "Gives off a healthy and colorful glow for a certain amount of time.\nBriefly decreases the temperature."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINBOWGLOW4 = "Gives off a healthy and colorful glow for a certain amount of time.\nBriefly increases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PUFFERFISH = "Survivors must have caution when eating Pufferfish. It can contain poison if cooked by unskilled chefs."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EXQUISITE = "An exquisite and luxurious meal.\nSomeone would for sure like this as a gift."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLUBBER = "Decreases the moisture off the survivor."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE_MONKEY = "This food can break off the Moon Quay Island curse."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."

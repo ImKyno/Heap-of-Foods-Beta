@@ -3083,6 +3083,33 @@ local kyno_foods =
 		tags = {"sharkboifood", "exquisite"},
 		card_def = {ingredients = {{"kyno_swordfish_dead", 1}, {"cheese_yellow", 1}, {"fig", 1}, {"honey", 1}}},
 	},
+	
+	monkeyislandmeal =
+	{
+		test = function(cooker, names, tags) return names.wobster_monkeyisland_land and tags.banana end,
+		priority = 35,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_MED,
+		health = 20,
+		hunger = 25,
+		sanity = 20,
+		cooktime = .15,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CURSE_MONKEY,
+		floater = TUNING.HOF_FLOATER,
+		tags = {"monkeyqueenbribe"},
+		card_def = {ingredients = {{"wobster_monkeyisland_land", 1}, {"cave_banana", 1}, {"twigs", 2}}},
+		oneatenfn = function(inst, eater)
+			if eater.components.inventory ~= nil and eater.components.cursable ~= nil
+			and not (eater.components.health ~= nil and eater.components.health:IsDead()) and 
+			not eater:HasTag("playerghost") then
+				local prop = eater.components.inventory:FindItem(function(item) return item.prefab == "cursed_monkey_token" end)
+				
+				if prop ~= nil then
+					eater.components.cursable:RemoveCurse("MONKEY", 10)
+				end
+			end
+		end,
+	},
 }
 
 for k, recipe in pairs(kyno_foods) do

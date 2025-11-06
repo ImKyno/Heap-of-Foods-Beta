@@ -1515,8 +1515,9 @@ local kyno_foods_jar =
 		hunger = 37.5,
 		sanity = 33,
 		cooktime = 48,
-		nameoverride = "AGEDROE",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXQUISITE,
 		floater = TUNING.HOF_FLOATER,
+		tags = {"exquisite"},
 		card_def = {ingredients = {{"kyno_roe_oceanfish_sturgeon", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
 	},
 	

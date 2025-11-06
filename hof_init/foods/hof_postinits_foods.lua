@@ -342,16 +342,6 @@ local dried_foods =
 	"monstermeat_dried",
 	"kelp_dried",
 	"humanmeat_dried",
-	
-	"kyno_seaweeds_dried",
-	"kyno_red_cap_dried",
-	"kyno_green_cap_dried",
-	"kyno_blue_cap_dried",
-	"kyno_moon_cap_dried",
-	"kyno_humanmeat_dried",
-	"kyno_crabmeat_dried",
-	"kyno_crabkingmeat_dried",
-	"kyno_plantmeat_dried",
 }
 
 local function DriedPostInit(inst)

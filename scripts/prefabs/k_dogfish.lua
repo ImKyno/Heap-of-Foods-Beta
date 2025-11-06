@@ -3,9 +3,9 @@ local brain = require("brains/dogfishoceanbrain")
 local assets =
 {
 	Asset("ANIM", "anim/kyno_dogfish.zip"),
-	
-	Asset("ANIM", "anim/meat_rack_food.zip"),
+
 	Asset("ANIM", "anim/kyno_meatrack_dogfish.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_fishmeat.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -20,6 +20,7 @@ local prefabs =
 	"fishmeat_cooked",
 
 	"kyno_dogfish_dead",
+	"kyno_fishmeat_dried",
 	"kyno_spoiled_fish_large",
 }
 

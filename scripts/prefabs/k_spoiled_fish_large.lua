@@ -109,7 +109,7 @@ local function fn()
 	inst:AddComponent("tradable")
 	
 	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
 	
 	inst:AddComponent("fuel")
 	inst.components.fuel.fuelvalue = TUNING.MED_FUEL
