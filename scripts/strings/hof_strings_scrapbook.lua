@@ -182,4 +182,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SURFACEBANANATREE = "A rare and elusive exotic tre
 STRINGS.SCRAPBOOK.SPECIALINFO.DECIDUOUSSHOP = "An enigmatic dwelling, long silent, whose doors may one day open... and reveal what lies within.\n\nCome back in the next major update of 2026!"
 STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSHOWCASER = "A structure for displaying prepared foods."
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOT = "A 8 slot container that will receive fish for breed.\n\nPlacing a fish in the first slot and feeding it will allow breeding. Fish will produce their respective offspring and roe after certain amounts of time have passed.\n\nFish can only breed when all their criteria is met, each fish has its own preferences, such as: Day Phase, Moon Phase, Season and Location."
+STRINGS.SCRAPBOOK.SPECIALINFO.OCEANHUNT = "A bubbling trail indicating aquatic activity.\nFollowing the trail may lead to the creature behind them."
 STRINGS.SCRAPBOOK.SPECIALINFO.WHALEOCEANCARCASS = "A whale carcass that has begun to spoil.\n\nIt will grow bigger and bigger each day until it explodes and release everything inside.\n\nThe sound of the explosion might attract unwanted attention."

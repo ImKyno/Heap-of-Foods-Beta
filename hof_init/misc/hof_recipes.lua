@@ -14,6 +14,7 @@ local HOF_FERTILIZERTWEAK  = GetModConfigData("FERTILIZERTWEAK")
 -- Atlases for Recipes.
 local DefaultAtlas         = "images/inventoryimages.xml"
 local DefaultAtlas1        = "images/inventoryimages1.xml"
+local DefaultAtlas2        = "images/inventoryimages2.xml"
 local ModAtlas             = "images/inventoryimages/hof_inventoryimages.xml"
 local CraftingFilterAtlas  = "images/tabimages/hof_tabimages.xml"
 
@@ -446,7 +447,7 @@ SortAfter("kyno_itemshowcaser", "endtable", "STRUCTURES")
 
 AddRecipe2("kyno_messagebottle_empty", {Ingredient("moonglass", 3)}, TECH.SCIENCE_ONE,
 	{
-		atlas               = "images/inventoryimages/hof_inventoryimages.xml", 
+		atlas               = ModAtlas, 
 		image               = "kyno_messagebottle_empty.tex",
 	},
 	{"REFINE"}
@@ -454,7 +455,7 @@ AddRecipe2("kyno_messagebottle_empty", {Ingredient("moonglass", 3)}, TECH.SCIENC
 
 AddRecipe2("kyno_oceantrap", {Ingredient("kyno_seaweeds", 4, ModAtlas), Ingredient("kyno_messagebottle_empty", 2, ModAtlas), Ingredient("kyno_jellyfish", 1, ModAtlas)}, TECH.FISHING_ONE,
 	{
-		atlas               = "images/inventoryimages/hof_inventoryimages.xml",
+		atlas               = ModAtlas,
 		image               = "kyno_oceantrap.tex",
 	},
 	{"TOOLS", "GARDENING", "FISHING"}
@@ -466,7 +467,7 @@ AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyru
 	{
 		builder_tag         = "strongman",
 		product             = "potatosack",
-		atlas               = "images/inventoryimages2.xml",
+		atlas               = DefaultAtlas2,
 		image               = "potato_sack_full.tex",
 	},
 	{"CONTAINERS", "COOKING"}

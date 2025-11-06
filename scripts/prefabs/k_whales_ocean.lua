@@ -5,12 +5,18 @@ local whale_blue_assets =
 {
 	Asset("ANIM", "anim/kyno_whale.zip"),
 	Asset("ANIM", "anim/kyno_whale_blue_build.zip"),
+	
+	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
+	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
 
 local whale_white_assets =
 {
 	Asset("ANIM", "anim/kyno_whale.zip"),
 	Asset("ANIM", "anim/kyno_whale_white_build.zip"),
+	
+	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
+	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
 
 local whale_blue_prefabs =

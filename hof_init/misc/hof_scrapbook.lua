@@ -1343,7 +1343,11 @@ local HOF_SCRAPBOOK_ITEMS =
 		bank           = "kyno_oceantrap",
 		build          = "kyno_oceantrap",
 		anim           = "idle",
-		deps           = {"kyno_messagebottle_empty", "kyno_jellyfish_ocean", "kyno_seaweeds"},
+		deps           = {"kyno_messagebottle_empty", "kyno_jellyfish_ocean", "kyno_seaweeds", "kyno_jellyfish_rainbow_ocean", "oceanfish_small_1_inv", "oceanfish_small_2_inv",
+		"oceanfish_small_3_inv", "oceanfish_small_4_inv", "oceanfish_small_5_inv", "oceanfish_small_6_inv", "oceanfish_small_7_inv", "oceanfish_small_8_inv", 
+		"oceanfish_small_9_inv", "oceanfish_medium_1_inv", "oceanfish_medium_2_inv", "oceanfish_medium_3_inv", "oceanfish_medium_4_inv", "oceanfish_medium_5_inv", 
+		"oceanfish_medium_6_inv", "oceanfish_medium_7_inv", "oceanfish_medium_8_inv", "oceanfish_medium_9_inv", "oceanfish_pufferfish_inv", "oceanfish_sturgeon_inv", 
+		"wobster_sheller_land", "wobster_moonglass_land", "wobster_monkeyisland_land", "cookiecutter"},
 		specialinfo    = "OCEANTRAP",
 	},
 }
@@ -14478,8 +14482,8 @@ local HOF_SCRAPBOOK_CREATURES =
 		bank           = "crow",
 		build          = "toucan_chubby_build",
 		anim           = "idle",
-		animoffsetx    = -20,
-		animoffsety    = 20,
+		animoffsetx    = -5,
+		animoffsety    = 10,
 		deps           = {"cutgrass", "twigs", "feather_crow", "smallmeat", "cookedsmallmeat"},
 	},
 	
@@ -14685,7 +14689,8 @@ local HOF_SCRAPBOOK_CREATURES =
 		build          = "kyno_whale_blue_build",
 		anim           = "idle",
 		animoffsetx    = -5,
-		deps           = {"kyno_whale_blue_ocean_carcass", "fishmeat", "kyno_blubber"},
+		facing         = 3,
+		deps           = {"kyno_whale_ocean_bubbles", "kyno_whale_blue_ocean_carcass", "fishmeat", "kyno_blubber"},
 		specialinfo    = "HULLBREAKER_CREATURE",
 	},
 	
@@ -14702,7 +14707,8 @@ local HOF_SCRAPBOOK_CREATURES =
 		build          = "kyno_whale_white_build",
 		anim           = "idle",
 		animoffsetx    = -5,
-		deps           = {"kyno_whale_white_ocean_carcass", "fishmeat", "kyno_blubber"},
+		facing         = 3,
+		deps           = {"kyno_whale_ocean_bubbles", "kyno_whale_white_ocean_carcass", "fishmeat", "kyno_blubber"},
 		specialinfo    = "HULLBREAKER_CREATURE",
 	},
 	
@@ -16060,8 +16066,22 @@ local HOF_SCRAPBOOK_THINGS =
 		build          = "kyno_fishfarmplot_scrapbook",
 		anim           = "idle",
 		animoffsety    = -60,
-		deps           = {"kyno_fishfarmplot_kit", "pondfish", "kyno_roe_pondfish", "rocks"},
+		deps           = {"kyno_fishfarmplot_kit", "pondfish", "kyno_roe_pondfish", "rocks", "chum"},
 		specialinfo    = "FISHFARMPLOT",
+	},
+	
+	kyno_whale_ocean_bubbles =
+	{
+		name           = "kyno_whale_ocean_bubbles",
+		type           = "thing",
+		tex            = "kyno_whale_ocean_bubbles.tex",
+		prefab         = "kyno_whale_ocean_bubbles",
+		activatable    = "INVESTIGATE",
+		bank           = "kyno_whale_tracks",
+		build          = "kyno_whale_tracks",
+		anim           = "bubble_loop",
+		deps           = {"kyno_whale_blue_ocean", "kyno_whale_white_ocean", "otterden"},
+		specialinfo    = "OCEANHUNT",
 	},
 	
 	kyno_whale_blue_ocean_carcass =

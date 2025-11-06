@@ -21,8 +21,10 @@ return Class(function(self, inst)
 	
 		-- Marotter Den during rain.
 		function(beasts)
-			if _worldstate.israining then
-				table.insert(beasts, "boat_otterden")
+			if TUNING.OTTERDEN_ENABLED then
+				if _worldstate.israining then
+					table.insert(beasts, "boat_otterden")
+				end
 			end
 		end,
 	

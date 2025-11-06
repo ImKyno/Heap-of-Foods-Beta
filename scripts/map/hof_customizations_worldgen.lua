@@ -3,19 +3,19 @@ local map = require("map/forest_map")
 local customizations_worldgen =
 {	
 	-- WORLDGEN
-	aloes           = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 0,  world = { "forest" }},
-	asparaguses     = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 1,  world = { "forest", "cave" }},
-	coffeebushes    = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 2,  world = { "cave" }},
-	fennels         = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 3,  world = { "cave" }},
-	giantparznips   = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 4,  world = { "cave" }},
-	mushstumps      = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 5,  world = { "forest", "cave" }},
-	truffles        = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 6,  world = { "forest" }},
-	parznips        = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 7,  world = { "cave" }},
-	radishes        = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 8,  world = { "forest" }},
-	rockflippables  = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 9,  world = { "forest", "cave" }},
-	sweetpotatoes   = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 10, world = { "forest" }},
-	turnips         = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 11, world = { "forest", "cave" }},
-	wildwheats      = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof",           order = 12, world = { "forest" }},
+	aloes           = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 0,  world = { "forest" }},
+	asparaguses     = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 1,  world = { "forest", "cave" }},
+	coffeebushes    = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 2,  world = { "cave" }},
+	fennels         = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 3,  world = { "cave" }},
+	giantparznips   = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 4,  world = { "cave" }},
+	mushstumps      = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 5,  world = { "forest", "cave" }},
+	truffles        = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 6,  world = { "forest" }},
+	parznips        = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 7,  world = { "cave" }},
+	radishes        = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 8,  world = { "forest" }},
+	rockflippables  = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 9,  world = { "forest", "cave" }},
+	sweetpotatoes   = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 10, world = { "forest" }},
+	turnips         = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 11, world = { "forest", "cave" }},
+	wildwheats      = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 12, world = { "forest" }},
 	
 	-- OCEANGEN
 	lotusplants     = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean",     order = 0,  world = { "forest" }},

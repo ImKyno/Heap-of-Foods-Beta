@@ -3,6 +3,9 @@ local assets =
 	Asset("ANIM", "anim/kyno_whale_tracks.zip"),
 	Asset("ANIM", "anim/kyno_whale_bubbles.zip"),
 	Asset("ANIM", "anim/kyno_whale_bubbles_follow.zip"),
+	
+	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
+	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
 
 local function GetVerb(inst)
@@ -50,7 +53,7 @@ local function fn()
 	inst.AnimState:SetLayer(LAYER_BACKGROUND)
 	inst.AnimState:SetSortOrder(-2)
 
-	-- inst.SoundEmitter:PlaySound("ia/common/whale_trail/discovery_LP", "discovery_LP")
+	inst.SoundEmitter:PlaySound("hof_sounds/common/oceanhunt/bubbles_trail_loop", "bubbles_loop")
 	inst.GetActivateVerb = GetVerb
 
 	inst:AddTag("dirtpile")
@@ -101,7 +104,7 @@ local function trackfn()
 	inst.AnimState:SetLayer(LAYER_BACKGROUND)
 	inst.AnimState:SetSortOrder(-2)
 
-	inst.SoundEmitter:PlaySound("ia/common/whale_trail/bubble_pop")
+	inst.SoundEmitter:PlaySound("hof_sounds/common/oceanhunt/bubbles_trail_pop")
 
 	inst:AddTag("track")
 	inst:AddTag("FX")

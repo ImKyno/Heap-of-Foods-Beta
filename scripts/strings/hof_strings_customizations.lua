@@ -64,6 +64,9 @@ STRINGS.UI.CUSTOMIZATIONSCREEN.SWORDFISHES = "Swordfishes"
 ------------------------------------------------------------------------------------------------------------
 -- World Settings
 ------------------------------------------------------------------------------------------------------------
+-- GLOBALSETTINGS
+STRINGS.UI.CUSTOMIZATIONSCREEN.OCEANHUNTS_SETTING = "Ocean Hunts"
+STRINGS.UI.CUSTOMIZATIONSCREEN.OCEANHUNTALTS_SETTING = "Ocean Hunt Surprises"
 
 -- WORLDSETTINGS RESOURCES
 STRINGS.UI.CUSTOMIZATIONSCREEN.ALOES_SETTING = "Aloes"

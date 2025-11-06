@@ -259,7 +259,7 @@ function SpawnWhaleCarcassEnemies(inst, player)
 	local spawn_pt = EnemySpawnPoint(inst:GetPosition())
 	local roll = math.random()
 	
-	if roll < TUNING.KYNO_WHALE_PIRATE_CHANCE and player ~= nil and TheWorld.components.piratespawner ~= nil then
+	if roll < TUNING.KYNO_WHALE_PIRATE_CHANCE and TUNING.PIRATE_RAIDS_ENABLED and player ~= nil and TheWorld.components.piratespawner ~= nil then
 		local platform = player:GetCurrentPlatform()
 		
 		if platform ~= nil then
@@ -268,7 +268,18 @@ function SpawnWhaleCarcassEnemies(inst, player)
 		end
 	elseif roll < TUNING.KYNO_WHALE_ENEMY_CHANCE and player ~= nil then
 		if spawn_pt ~= nil then
-			local prefab = math.random() < TUNING.KYNO_WHALE_SHARK_CHANCE and "shark" or "gnarwail"
+			local prefab = nil
+			
+			if TUNING.SHARK_SPAWN_CHANCE > 0 and TUNING.GNARWAIL_SPAWN_CHANCE > 0 then
+				prefab = math.random() < TUNING.KYNO_WHALE_SHARK_CHANCE and "shark" or "gnarwail"
+			elseif TUNING.SHARK_SPAWN_CHANCE > 0 then
+				prefab = "shark"
+			elseif TUNING.GNARWAIL_SPAWN_CHANCE > 0 then
+				prefab = "gnarwail"
+			else
+				return
+			end
+			
 			local enemy = SpawnPrefab(prefab)
 			enemy.Physics:Teleport(spawn_pt:Get())
 			

@@ -882,6 +882,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_waterycress_ocean",
 	"kyno_whale_blue_ocean",
 	"kyno_whale_blue_ocean_carcass",
+	"kyno_whale_ocean_bubbles",
 	"kyno_whale_white_ocean",
 	"kyno_whale_white_ocean_carcass",
 	"kyno_wildwheat",
@@ -914,4 +915,28 @@ local HOF_SKIN_ICONS =
 
 for k, v in pairs(HOF_SKIN_ICONS) do
 	RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", v..".tex")
+end
+
+-- Dirty fix for icons for the Plant Registry and Farm Plants.
+local _GetInventoryItemAtlas = _G.GetInventoryItemAtlas
+_G.GetInventoryItemAtlas = function(name, ...)
+    local myatlas = _G.resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")
+
+	if _G.TheSim:AtlasContains(myatlas, name) then
+        return myatlas
+    end
+
+    return _GetInventoryItemAtlas(name, ...)
+end
+
+-- Dirty fix for icons for the Scrapbook.
+local _GetScrapbookIconAtlas_Internal = _G.GetScrapbookIconAtlas_Internal
+_G.GetScrapbookIconAtlas_Internal = function(name, ...)
+	local myatlas = _G.resolvefilepath("images/scrapbookimages/hof_scrapbookimages.xml")
+	
+	if _G.TheSim:AtlasContains(myatlas, name) then
+		return myatlas
+	end
+	
+	return _GetScrapbookIconAtlas_Internal(name, ...)
 end

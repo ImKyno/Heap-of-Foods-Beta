@@ -847,15 +847,3 @@ PLANT_DEFS.kyno_turnip.plantregistryinfo           =
         hidden          = true,
     },
 }
-
--- Icons for the Plant Registry and Farm Plants.
-local old_GetInventoryItemAtlas = GetInventoryItemAtlas
-_G.GetInventoryItemAtlas = function(name, ...)
-    local myatlas = resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")
-
-	if TheSim:AtlasContains(myatlas, name) then
-        return myatlas
-    end
-
-    return old_GetInventoryItemAtlas(name, ...)
-end
