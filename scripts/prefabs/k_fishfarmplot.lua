@@ -440,11 +440,13 @@ local function fn()
 		
 		return inst
 	end
-
-	inst:AddComponent("lootdropper")
+	
 	inst:AddComponent("inspectable")
 	inst:AddComponent("savedrotation")
 	inst:AddComponent("watersource")
+	
+	inst:AddComponent("lootdropper")
+	inst.components.lootdropper.spawn_loot_inside_prefab = true
 	
 	inst:AddComponent("preserver")
     inst.components.preserver:SetPerishRateMultiplier(TUNING.KYNO_FISHFARMLAKE_PRESERVER_RATE)

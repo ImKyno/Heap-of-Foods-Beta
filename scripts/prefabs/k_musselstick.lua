@@ -104,6 +104,7 @@ local function fn()
     minimap:SetIcon("kyno_musselstick.tex")
 	
 	MakeInventoryPhysics(inst, nil, 0.7)
+	inst:SetPhysicsRadiusOverride(3)
 	
     inst.AnimState:SetBank("kyno_musselstick")
     inst.AnimState:SetBuild("kyno_musselstick")
@@ -123,7 +124,10 @@ local function fn()
     end
 
 	inst:AddComponent("inspectable")
+	
     inst:AddComponent("lootdropper")
+	inst.components.lootdropper:SetLoot({"twigs", "twigs", "rope", "boards"})
+	inst.components.lootdropper.spawn_loot_inside_prefab = true
 	
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"

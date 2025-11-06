@@ -9467,7 +9467,7 @@
 <ignoregeometry>No</ignoregeometry>
 <rolloff>Linear</rolloff>
 <mindistance>1</mindistance>
-<maxdistance>15</maxdistance>
+<maxdistance>40</maxdistance>
 <auto_distance_filtering>Off</auto_distance_filtering>
 <distance_filter_centre_freq>1500</distance_filter_centre_freq>
 <headrelative>World_relative</headrelative>
@@ -9656,7 +9656,7 @@
 <ignoregeometry>No</ignoregeometry>
 <rolloff>Linear</rolloff>
 <mindistance>1</mindistance>
-<maxdistance>30</maxdistance>
+<maxdistance>40</maxdistance>
 <auto_distance_filtering>Off</auto_distance_filtering>
 <distance_filter_centre_freq>1500</distance_filter_centre_freq>
 <headrelative>World_relative</headrelative>

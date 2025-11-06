@@ -105,6 +105,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_PUFFERFISH = "Survivors must have caut
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EXQUISITE = "An exquisite and luxurious meal.\nSomeone would for sure like this as a gift."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLUBBER = "Decreases the moisture off the survivor."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE_MONKEY = "This food can break off the Moon Quay Island curse."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRAFTING = "This food can make a survivor prototype and build items without the need of a crafting station.\n\nEach crafted item consumes a small amount of their sanity."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."

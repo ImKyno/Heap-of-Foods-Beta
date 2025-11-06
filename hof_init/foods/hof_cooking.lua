@@ -132,6 +132,7 @@ AddIngredientValues({"kyno_swordfish_dead"},         {meat       = 1,    fish   
 AddIngredientValues({"kyno_swordfish_blue"},         {meat       = 1,    fish      = 2,    swordfish = 1})
 AddIngredientValues({"wobster_monkeyisland_land"},   {meat       = 1,    fish      = 1,    wobster   = 1})
 AddIngredientValues({"kyno_blubber"},                {meat       = 1,    fat       = 1})
+AddIngredientValues({"kyno_brainrock_coral"},        {meat       = 0.5})
 
 local fishroes =
 {

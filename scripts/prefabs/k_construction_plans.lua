@@ -99,6 +99,7 @@ local function MakeConstructionPlan(data)
 		
 		inst:AddComponent("lootdropper")
 		inst.components.lootdropper:SetLoot(data.loot)
+		inst.components.lootdropper.spawn_loot_inside_prefab = true
 		
 		inst:AddComponent("constructionsite")
 		inst.components.constructionsite:SetConstructionPrefab("construction_container")

@@ -3110,6 +3110,25 @@ local kyno_foods =
 			end
 		end,
 	},
+	
+	brainmettersoup =
+	{
+		test = function(cooker, names, tags) return names.kyno_brainrock_coral and tags.jellyfish and tags.algae and not tags.inedible end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FAST,
+		health = -15,
+		hunger = 18.75,
+		sanity = 50,
+		cooktime = 1,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRAFTING,
+		floater = TUNING.HOF_FLOATER,
+		prefabs = { "kyno_craftingbuff" },
+		card_def = {ingredients = {{"kyno_brainrock_coral", 1}, {"kyno_jellyfish", 1}, {"kyno_seaweeds", 1}}},
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_craftingbuff", "kyno_craftingbuff")
+		end,
+	},
 }
 
 for k, recipe in pairs(kyno_foods) do

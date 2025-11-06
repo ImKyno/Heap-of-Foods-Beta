@@ -18,6 +18,7 @@ local customizations_worldgen =
 	wildwheats      = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 12, world = { "forest" }},
 	
 	-- OCEANGEN
+	brainrocks      = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean",     order = 7,  world = { "forest" }},
 	lotusplants     = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean",     order = 0,  world = { "forest" }},
 	oceancrates     = { category = LEVELCATEGORY.WORLDGEN, desc = "worldgen_frequency_descriptions", group = "hof_ocean",     order = 1,  world = { "forest" }},
 	oceanwrecks     = { category = LEVELCATEGORY.WORLDGEN, desc = "yesno_descriptions",              group = "hof_ocean",     order = 2,  world = { "forest" }},
@@ -69,6 +70,7 @@ map.TRANSLATE_TO_PREFABS["sweetpotatoes"]   = { "kyno_sweetpotato_ground" }
 map.TRANSLATE_TO_PREFABS["turnips"]         = { "kyno_turnip_ground" }
 map.TRANSLATE_TO_PREFABS["wildwheats"]      = { "kyno_wildwheat" }
 
+map.TRANSLATE_TO_PREFABS["brainrocks"]      = { "kyno_brainrock_rock" }
 map.TRANSLATE_TO_PREFABS["lotusplants"]     = { "kyno_lotus_ocean" }
 map.TRANSLATE_TO_PREFABS["oceancrates"]     = { "kyno_watery_crate", "kyno_serenityisland_crate", "kyno_serenityisland_crate_spawner" }
 map.TRANSLATE_TO_PREFABS["seacucumbers"]    = { "kyno_cucumber_ground" }

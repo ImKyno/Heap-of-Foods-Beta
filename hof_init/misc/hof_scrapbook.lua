@@ -1350,6 +1350,38 @@ local HOF_SCRAPBOOK_ITEMS =
 		"wobster_sheller_land", "wobster_moonglass_land", "wobster_monkeyisland_land", "cookiecutter"},
 		specialinfo    = "OCEANTRAP",
 	},
+	
+	kyno_brainrock_larvae =
+	{
+		name           = "kyno_brainrock_larvae",
+		type           = "item",
+		tex            = "kyno_brainrock_larvae.tex",
+		prefab         = "kyno_brainrock_larvae",
+		stacksize      = 10,
+		bank           = "kyno_brainrock_larvae",
+		build          = "kyno_brainrock_larvae",
+		anim           = "idle",
+		animoffsety    = 10,
+		animoffsetbgy  = -50,
+		deps           = {"kyno_brainrock_nubbin", "kyno_brainrock_rock"},
+	},
+	
+	kyno_brainrock_nubbin =
+	{
+		name           = "kyno_brainrock_nubbin",
+		type           = "item",
+		tex            = "kyno_brainrock_nubbin.tex",
+		prefab         = "kyno_brainrock_nubbin",
+		perishable     = 9600,
+		stacksize      = 10,
+		bank           = "kyno_brainrock_nubbin",
+		build          = "kyno_brainrock_nubbin",
+		anim           = "idle",
+		animoffsetx    = 3,
+		animoffsetbgx  = -10,
+		animoffsetbgy  = -20,
+		deps           = {"kyno_brainrock_sprout", "kyno_brainrock_larvae", "rocks", "spoiled_food"},
+	},
 }
 
 local HOF_SCRAPBOOK_FOODS =
@@ -5113,6 +5145,26 @@ local HOF_SCRAPBOOK_FOODS =
 		animoffsetx    = 15,
 		animoffsetbgy  = -10,
 		deps           = {"eel", "fishmeat", "spoiled_food"},
+	},
+	
+	kyno_brainrock_coral =
+	{
+		name           = "kyno_brainrock_coral",
+		type           = "food",
+		tex            = "kyno_brainrock_coral.tex",
+		prefab         = "kyno_brainrock_coral",
+		healthvalue    = -10,
+		hungervalue    = 10,
+		sanityvalue    = 50,
+		perishable     = 480,
+		foodtype       = "MEAT",
+		bank           = "kyno_brainrock_coral",
+		build          = "kyno_brainrock_coral",
+		anim           = "idle",
+		animoffsetx    = 5,
+		animoffsetbgx  = -15,
+		animoffsetbgy  = -15,
+		deps           = {"kyno_brainrock_rock", "spoiled_food"},
 	},
 }
 
@@ -9388,6 +9440,29 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		deps           = {"cookpot", "archive_cookpot", "portablecookpot", "kyno_cookware_small", "kyno_cookware_big", "kyno_cookware_small_grill", "kyno_cookware_grill", 
 		"kyno_cookware_oven_small_casserole", "kyno_cookware_oven_casserole", "cursed_monkey_token", "spoiled_food"},
 		specialinfo    = "FOODEFFECTS_CURSE_MONKEY",
+	},
+	
+	brainmettersoup    =
+	{
+		name           = "brainmettersoup",
+		type           = "food",
+		tex            = "brainmettersoup.tex",
+		prefab         = "brainmettersoup",
+		healthvalue    = -15,
+		hungervalue    = 18.75,
+		sanityvalue    = 50,
+		perishable     = 2880,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "brainmettersoup",
+		build          = "brainmettersoup",
+		anim           = "idle",
+		animoffsetx    = 12,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -90,
+		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_CRAFTING",
 	},
 }
 
@@ -16180,6 +16255,35 @@ local HOF_SCRAPBOOK_THINGS =
 		anim           = "idle_bloat1",
 		deps           = {"fishmeat", "kyno_blubber"},
 		specialinfo    = "WHALEOCEANCARCASS",
+	},
+	
+	kyno_brainrock_sprout =
+	{
+		name           = "kyno_brainrock_nubbin",
+		speechname     = "kyno_brainrock_nubbin",
+		type           = "thing",
+		tex            = "kyno_brainrock_sprout.tex",
+		prefab         = "kyno_brainrock_sprout",
+		workable       = "MINE",
+		bank           = "kyno_brainrock_nubbin",
+		build          = "kyno_brainrock_nubbin",
+		anim           = "misc",
+		animoffsety    = -20,
+		deps           = {"kyno_brainrock_nubbin", "kyno_brainrock_rock", "rocks"},
+	},
+	
+	kyno_brainrock_rock =
+	{
+		name           = "kyno_brainrock_rock",
+		type           = "thing",
+		tex            = "kyno_brainrock_rock.tex",
+		prefab         = "kyno_brainrock_rock",
+		sanityaura     = 0.41666666666667,
+		workable       = "HAMMER",
+		bank           = "kyno_brainrock_rock",
+		build          = "kyno_brainrock_rock",
+		anim           = "idle_full",
+		deps           = {"kyno_brainrock_coral", "kyno_brainrock_larvae", "kyno_brainrock_sprout", "rocks"},
 	},
 }
 

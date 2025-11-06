@@ -23,6 +23,7 @@ local customizations_worldsettings =
 	wildwheats_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_regrow_r",    order = 12,  world = { "forest" }},
 	
 	-- OCEANSETTING
+	brainrocks_setting       = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",     order = 7,   world = { "forest" }},
 	lotusplants_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",     order = 0,   world = { "forest" }},
 	oceancrates_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",     order = 1,   world = { "forest" }},
 	oceanwrecks_setting      = { category = LEVELCATEGORY.SETTINGS, desc = "speed_descriptions",     group = "hof_ocean_r",     order = 2,   world = { "forest" }},
@@ -757,6 +758,38 @@ WSO.Pre.swordfishes_setting = function(difficulty)
 		always = 
 		{
 			KYNO_SWORDFISH_SPAWN_TIME = TUNING.TOTAL_DAY_TIME / 4,
+		},
+	}
+	
+	OverrideTuningVariables(tuning_vars[difficulty])
+end
+
+WSO.Pre.brainrocks_setting = function(difficulty)
+	local tuning_vars =
+	{
+		never = 
+		{
+			KYNO_BRAINROCK_ROCK_GROWTIME = NEVER_TIME,
+		},
+
+		veryslow = 
+		{
+			KYNO_BRAINROCK_ROCK_GROWTIME = 480 * 20,
+		},
+		
+		slow = 
+		{
+			KYNO_BRAINROCK_ROCK_GROWTIME = 480 * 15,
+		},
+            
+		fast = 
+		{
+			KYNO_BRAINROCK_ROCK_GROWTIME = 480 * 5,
+		},
+		
+		veryfast = 
+		{
+			KYNO_BRAINROCK_ROCK_GROWTIME = 480 * 3,
 		},
 	}
 	

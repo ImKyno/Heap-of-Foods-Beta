@@ -267,7 +267,7 @@ AddRecipe2("kyno_sugar", {Ingredient("kyno_sugartree_petals", 1, ModAtlas)}, TEC
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("kyno_musselstick_item", {Ingredient("twigs", 3), Ingredient("rope", 1), Ingredient("boards", 1)}, TECH.SCIENCE_TWO, 
+AddRecipe2("kyno_musselstick_item", {Ingredient("twigs", 3), Ingredient("rope", 1), Ingredient("boards", 1)}, TECH.FISHING_ONE, 
 	{
 		atlas 				= ModAtlas, 
 		image 				= "kyno_musselstick_item.tex",
@@ -462,6 +462,15 @@ AddRecipe2("kyno_oceantrap", {Ingredient("kyno_seaweeds", 4, ModAtlas), Ingredie
 )
 SortAfter("kyno_oceantrap", "trap", "TOOLS")
 SortAfter("kyno_oceantrap", "trap", "GARDENING")
+
+AddRecipe2("kyno_brainrock_nubbin", {Ingredient("rocks", 6), Ingredient("kyno_brainrock_larvae", 1, ModAtlas)}, TECH.SEAFARING_ONE,
+	{
+		atlas               = ModAtlas,
+		image               = "kyno_brainrock_nubbin.tex",
+	},
+	{"REFINE", "SEAFARING"}
+)
+SortAfter("kyno_brainrock_nubbin", "dock_woodposts_item", "SEAFARING")
 
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{

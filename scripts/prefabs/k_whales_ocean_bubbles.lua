@@ -43,6 +43,8 @@ local function fn()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
+	
+	inst:SetPhysicsRadiusOverride(6)
 
 	inst.AnimState:SetBank("kyno_whale_tracks")
 	inst.AnimState:SetBuild("kyno_whale_tracks")
@@ -104,8 +106,6 @@ local function trackfn()
 	inst.AnimState:SetLayer(LAYER_BACKGROUND)
 	inst.AnimState:SetSortOrder(-2)
 
-	inst.SoundEmitter:PlaySound("hof_sounds/common/oceanhunt/bubbles_trail_pop")
-
 	inst:AddTag("track")
 	inst:AddTag("FX")
 	inst:AddTag("NOCLICK")
@@ -141,6 +141,8 @@ local function fxfn()
 	inst:AddTag("FX")
 	inst:AddTag("NOCLICK")
 	inst:AddTag("ignorewalkableplatforms")
+	
+	inst.SoundEmitter:PlaySound("hof_sounds/common/oceanhunt/bubbles_trail_pop")
 
 	return inst
 end
