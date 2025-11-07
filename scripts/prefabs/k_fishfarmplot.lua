@@ -303,11 +303,11 @@ local function StopHungryTask(inst)
 end
 
 local function OnStartWorking(inst)
-	inst.SoundEmitter:PlaySound("dontstarve/common/researchmachine_lvl1_ding")
+	-- inst.SoundEmitter:PlaySound("dontstarve/common/researchmachine_lvl1_ding")
 end
 
 local function OnStopWorking(inst)
-	inst.SoundEmitter:PlaySound("dontstarve/common/researchmachine_lvl1_ding")
+	-- inst.SoundEmitter:PlaySound("dontstarve/common/researchmachine_lvl1_ding")
 end
 
 local function OnWorking(inst)

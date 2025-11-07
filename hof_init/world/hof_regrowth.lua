@@ -128,10 +128,6 @@ AddComponentPostInit("regrowthmanager", function(self)
 	self:SetRegrowthForType("kyno_meadowisland_sandhill", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_meadowisland_sandhill", function()
         return TUNING.KYNO_MEADOWISLAND_SAND_REGROWTH_TIME_MULT
     end)
-	
-	self:SetRegrowthForType("kyno_brainrock_rock", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_brainrock_rock", function()
-        return TUNING.KYNO_BRAINROCK_ROCK_REGROWTH_TIME_MULT
-    end)
 end) 
 
 AddComponentPostInit("desolationspawner", function(self)

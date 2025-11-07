@@ -168,7 +168,8 @@ local function commonfn(bank, build, char_anim_build, data)
 	end
 	
 	inst:AddComponent("tradable")
-    inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+    inst.components.tradable.goldvalue = data.goldvalue or TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = data.octopusvalue or TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	if data.roe_time ~= nil and data.baby_time ~= nil then
 		inst:AddComponent("fishfarmable")
@@ -238,7 +239,8 @@ local function cookedfn(bank, build, anim, data)
     inst.components.edible.foodtype = FOODTYPE.MEAT
 
     inst:AddComponent("tradable")
-    inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+    inst.components.tradable.goldvalue = data.goldvalue or TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = data.octopusvalue or TUNING.OCTOPUS_VALUES.SEAFOOD
 	
     inst.data = {}
 	

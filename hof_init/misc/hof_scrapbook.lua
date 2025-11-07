@@ -3691,7 +3691,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank            = "kyno_roe",
 		build           = "kyno_roe",
 		anim            = "idle_pondfish",
-		deps            = {"kyno_fishfarmplot", "pondfish", "puffin", "canary", "kyno_roe_cooked", "spoiled_food"},
+		deps            = {"kyno_fishfarmplot", "pondfish", "kyno_roe_cooked", "spoiled_food"},
 	},
 	
 	kyno_roe_pondeel    =
@@ -14710,6 +14710,48 @@ local HOF_SCRAPBOOK_CREATURES =
 		specialinfo    = "SAMMY",
 	},
 	
+	oceanfish_pufferfish_inv =
+	{
+		name           = "oceanfish_pufferfish_inv",
+		speechname     = "oceanfish_pufferfish",
+		type           = "creature",
+		subcat         = "oceanfish",
+		tex            = "oceanfish_pufferfish_inv.tex",
+		prefab         = "oceanfish_pufferfish_inv",
+		healthvalue    = 1,
+		hungervalue    = 12.5,
+		sanityvalue    = 0,
+		perishable     = 480,
+		foodtype       = "MEAT",
+		bank           = "kyno_oceanfish_pufferfish",
+		build          = "kyno_oceanfish_pufferfish",
+		anim           = "flop_pst",
+		animoffsetx    = -10,
+		animoffsety    = 20,
+		deps           = {"fishmeat", "fishmeat_small", "stinger"},
+	},
+	
+	oceanfish_sturgeon_inv =
+	{
+		name           = "oceanfish_sturgeon_inv",
+		speechname     = "oceanfish_sturgeon",
+		type           = "creature",
+		subcat         = "oceanfish",
+		tex            = "oceanfish_sturgeon_inv.tex",
+		prefab         = "oceanfish_sturgeon_inv",
+		healthvalue    = 8,
+		hungervalue    = 25,
+		sanityvalue    = 0,
+		perishable     = 480,
+		foodtype       = "MEAT",
+		bank           = "kyno_oceanfish_sturgeon",
+		build          = "kyno_oceanfish_sturgeon",
+		anim           = "flop_pst",
+		animoffsetx    = -5,
+		animoffsety    = -10,
+		deps           = {"fishmeat", "fishmeat_small"},
+	},
+	
 	kyno_ghost_pirate  =
 	{
 		name           = "kyno_ghost_pirate",
@@ -14854,48 +14896,6 @@ local HOF_SCRAPBOOK_CREATURES =
 		deps           = {"kyno_whale_ocean_bubbles", "kyno_whale_white_ocean_carcass", "fishmeat", "kyno_blubber"},
 		specialinfo    = "HULLBREAKER_CREATURE",
 	},
-	
-	oceanfish_pufferfish_inv =
-	{
-		name           = "oceanfish_pufferfish_inv",
-		speechname     = "oceanfish_pufferfish",
-		type           = "creature",
-		subcat         = "oceanfish",
-		tex            = "oceanfish_pufferfish_inv.tex",
-		prefab         = "oceanfish_pufferfish_inv",
-		healthvalue    = 1,
-		hungervalue    = 12.5,
-		sanityvalue    = 0,
-		perishable     = 480,
-		foodtype       = "MEAT",
-		bank           = "kyno_oceanfish_pufferfish",
-		build          = "kyno_oceanfish_pufferfish",
-		anim           = "flop_pst",
-		animoffsetx    = -10,
-		animoffsety    = 20,
-		deps           = {"fishmeat", "fishmeat_small", "stinger"},
-	},
-	
-	oceanfish_sturgeon_inv =
-	{
-		name           = "oceanfish_sturgeon_inv",
-		speechname     = "oceanfish_sturgeon",
-		type           = "creature",
-		subcat         = "oceanfish",
-		tex            = "oceanfish_sturgeon_inv.tex",
-		prefab         = "oceanfish_sturgeon_inv",
-		healthvalue    = 8,
-		hungervalue    = 25,
-		sanityvalue    = 0,
-		perishable     = 480,
-		foodtype       = "MEAT",
-		bank           = "kyno_oceanfish_sturgeon",
-		build          = "kyno_oceanfish_sturgeon",
-		anim           = "flop_pst",
-		animoffsetx    = -5,
-		animoffsety    = -10,
-		deps           = {"fishmeat", "fishmeat_small"},
-	},
 }
 
 local HOF_SCRAPBOOK_THINGS =
@@ -14992,6 +14992,20 @@ local HOF_SCRAPBOOK_THINGS =
 		build          = "kyno_deciduousforest_shop",
 		anim           = "idle",
 		specialinfo    = "DECIDUOUSSHOP",
+	},
+	
+	kyno_octopusking_ocean =
+	{
+		name           = "kyno_octopusking_ocean",
+		type           = "POI",
+		tex            = "kyno_octopusking_ocean.tex",
+		prefab         = "kyno_octopusking_ocean",
+		bank           = "kyno_octopusking",
+		build          = "kyno_octopusking",
+		anim           = "idle",
+		deps           = {"kyno_octopusking_treasurechest", "goldnugget", "kyno_seaweeds", "kyno_waterycress", "kyno_shark_fin", "kyno_blubber", "fireflies",
+		"kelp", "saltrock"},
+		specialinfo    = "OCTOPUSKINGTRADER",
 	},
 
 	kyno_mealgrinder   = 
@@ -16284,6 +16298,20 @@ local HOF_SCRAPBOOK_THINGS =
 		build          = "kyno_brainrock_rock",
 		anim           = "idle_full",
 		deps           = {"kyno_brainrock_coral", "kyno_brainrock_larvae", "kyno_brainrock_sprout", "rocks"},
+	},
+	
+	kyno_octopusking_treasurechest =
+	{
+		name           = "kyno_octopusking_treasurechest",
+		type           = "thing",
+		subcat         = "structure",
+		tex            = "kyno_octopusking_treasurechest.tex",
+		prefab         = "kyno_octopusking_treasurechest",
+		bank           = "kyno_octopusking_chest",
+		build          = "kyno_octopusking_chest",
+		anim           = "closed",
+		deps           = {"kyno_octopusking_ocean"},
+		specialinfo    = "OCTOPUSKINGTREASURE",
 	},
 }
 

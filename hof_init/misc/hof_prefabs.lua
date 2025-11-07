@@ -131,6 +131,8 @@ PrefabFiles =
 	"k_ocean_spawners",
 	"k_ocean_wreck",
 	"k_oceantrap",
+	"k_octopus_king",
+	"k_octopus_king_chest",
 	"k_pineapple",
 	"k_pineapplebush",
 	"k_plantables",

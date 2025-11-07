@@ -226,6 +226,7 @@ local function fn()
 	minimap:SetIcon("kyno_brainrock_rock.tex")
 
 	MakeWaterObstaclePhysics(inst, 0.5, 1, 0.85)
+	inst:SetPhysicsRadiusOverride(1)
 
 	inst.AnimState:SetBank("kyno_brainrock_rock")
 	inst.AnimState:SetBuild("kyno_brainrock_rock")
@@ -278,8 +279,6 @@ local function fn()
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 	inst.OnPreLoad = OnPreLoad
-	
-	AddToRegrowthManager(inst)
 
     return inst
 end

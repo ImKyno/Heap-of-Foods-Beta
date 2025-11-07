@@ -290,6 +290,7 @@ local function land_wobster(build_name, nameoverride, fish_def, fadeout, cook_pr
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD_RARE
 
 	inst:AddComponent("locomotor")
 	inst.components.locomotor.runspeed = TUNING.WOBSTER.SPEED.GROUND
@@ -368,6 +369,7 @@ local function dead_wobster()
 
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD_RARE
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
@@ -419,6 +421,7 @@ local function cooked_wobster()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD_RARE
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)

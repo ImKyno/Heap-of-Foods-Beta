@@ -873,6 +873,7 @@ local function crabmeatfn()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("kyno_crabmeat_dried")
@@ -935,6 +936,7 @@ local function crabmeat_cookedfn()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_CRABMEAT_COOKED_HEALTH
@@ -992,6 +994,7 @@ local function crabkingmeatfn()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD_RARE
 	
 	inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("kyno_crabkingmeat_dried")
@@ -1056,6 +1059,7 @@ local function crabkingmeat_cookedfn()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD_RARE
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_CRABKINGMEAT_COOKED_HEALTH

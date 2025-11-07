@@ -112,7 +112,6 @@ local function fn()
 	inst.entity:AddNetwork()
 
 	MakeCharacterPhysics(inst, 100, 0.5)
-	inst.Physics:SetCollisionGroup(COLLISION.CHARACTERS)
 
 	inst.AnimState:SetBank("kyno_dogfish")
 	inst.AnimState:SetBuild("kyno_dogfish")
@@ -202,6 +201,7 @@ local function dogfish_dead()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "fishmeat_cooked"

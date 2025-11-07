@@ -23,6 +23,7 @@ local function fn()
 
     inst:AddTag("molebait")
     inst:AddTag("quakedebris")
+	inst:AddTag("hof_trinket")
 	inst:AddTag("_named")
 	
 	inst.pickupsound = "metal"
@@ -39,6 +40,7 @@ local function fn()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 20
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.BOTTLECAPTRINKET
 
     inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

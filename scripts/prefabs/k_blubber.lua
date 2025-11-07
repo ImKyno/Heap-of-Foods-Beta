@@ -56,7 +56,8 @@ local function fn()
 	inst.components.waterproofer:SetEffectiveness(0)
 
 	inst:AddComponent("tradable")
-	inst.components.tradable.goldvalue = 2
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

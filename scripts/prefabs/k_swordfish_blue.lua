@@ -94,7 +94,8 @@ local function fn()
 	inst:AddComponent("murderable")
 	
 	inst:AddComponent("tradable")
-	inst.components.tradable.goldvalue = 3
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD_RARE
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "fishmeat_cooked"

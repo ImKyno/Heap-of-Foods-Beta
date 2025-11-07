@@ -114,6 +114,7 @@ local function fn()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_TINYITEM

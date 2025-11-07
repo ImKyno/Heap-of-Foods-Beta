@@ -153,7 +153,6 @@ local function fn()
 	inst.entity:AddNetwork()
 
 	MakeCharacterPhysics(inst, 100, 1.25)
-	inst.Physics:SetCollisionGroup(COLLISION.CHARACTERS)
 	
 	inst.AnimState:SetScale(.85, .85, .85)
 
@@ -255,7 +254,8 @@ local function swordfish_dead()
 	inst:AddComponent("inspectable")
 	
 	inst:AddComponent("tradable")
-	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT + 2
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "fishmeat_cooked"

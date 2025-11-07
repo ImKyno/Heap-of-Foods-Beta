@@ -48,7 +48,8 @@ local function fn()
 	inst:AddComponent("selfstacker")
 	
 	inst:AddComponent("tradable")
-	inst.components.tradable.goldvalue = 1
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_ROE_HEALTH

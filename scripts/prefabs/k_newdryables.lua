@@ -345,6 +345,8 @@ local function fn_seaweeds()
 	inst.components.edible.hungervalue = TUNING.KYNO_WEEDSEA_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_WEEDSEA_DRIED_SANITY
 	
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
+	
 	return inst
 end
 
@@ -357,7 +359,8 @@ local function fn_crabmeat()
         return inst
     end
 	
-	inst.components.tradable.goldvalue = 1
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	inst.components.edible.healthvalue = TUNING.KYNO_CRABMEAT_DRIED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_CRABMEAT_DRIED_HUNGER
@@ -377,7 +380,8 @@ local function fn_crabkingmeat()
         return inst
     end
 	
-	inst.components.tradable.goldvalue = 1
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD_RARE
 	
 	inst.components.edible.healthvalue = TUNING.KYNO_CRABKINGMEAT_DRIED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_CRABKINGMEAT_DRIED_HUNGER
@@ -399,7 +403,8 @@ local function fn_jellyfish()
         return inst
     end
 	
-	inst.components.tradable.goldvalue = 1
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	inst.components.edible.healthvalue = TUNING.KYNO_JELLYFISH_DRIED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_JELLYFISH_DRIED_HUNGER
@@ -422,7 +427,8 @@ local function fn_fishmeat_small()
         return inst
     end
 	
-	inst.components.tradable.goldvalue = 1
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	inst.components.edible.healthvalue = TUNING.KYNO_FISHMEAT_SMALL_DRIED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_FISHMEAT_SMALL_DRIED_HUNGER
@@ -446,7 +452,8 @@ local function fn_fishmeat()
         return inst
     end
 	
-	inst.components.tradable.goldvalue = 1
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	inst.components.edible.healthvalue = TUNING.KYNO_FISHMEAT_DRIED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_FISHMEAT_DRIED_HUNGER

@@ -30,23 +30,6 @@ end
 
 ACTIONS.DEPLOY.extra_arrive_dist = ExtraDeployDist
 
-local _ExtraPickupRange = ACTIONS.PICK.extra_arrive_dist
-local function ExtraPickupRange(doer, dest, ...)
-	if dest ~= nil and doer:IsValid() then
-		local target_x, target_y, target_z = dest:GetPoint()
-
-		local is_on_water = TheWorld.Map:IsOceanTileAtPoint(target_x, 0, target_z) and not TheWorld.Map:IsPassableAtPoint(target_x, 0, target_z)
-		
-		if is_on_water and dest.prefab == "kyno_brainrock_rock" then
-			return 2
-		end
-	end
-	
-	return _ExtraPickupRange(doer, dest, ...)
-end
-
-ACTIONS.PICKUP.extra_arrive_dist = ExtraPickupRange
-
 -- Coffee Plant can be Only Fertilized by Ashes.
 AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions)
     if actions[1] == ACTIONS.FERTILIZE and inst:HasTag("coffeefertilizer2") ~= target:HasTag("kyno_coffeebush") then

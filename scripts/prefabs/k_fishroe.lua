@@ -55,7 +55,8 @@ local function MakeRoe(data)
 		inst:AddComponent("selfstacker")
 		
 		inst:AddComponent("tradable")
-		inst.components.tradable.goldvalue = data.goldvalue or 1
+		inst.components.tradable.goldvalue = data.goldvalue or TUNING.GOLD_VALUES.MEAT
+		inst.components.tradable.octopusvalue = data.octopusvalue or TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 		inst:AddComponent("inspectable")
 		inst.components.inspectable.nameoverride = "KYNO_ROE"

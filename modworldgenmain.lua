@@ -146,6 +146,18 @@ Layouts["DinaMemorial"]                  = StaticLayout.Get("map/static_layouts/
 	},
 })
 
+Layouts["OctopusKingShop"]               = StaticLayout.Get("map/static_layouts/hof_octopusking_shop",
+{
+	start_mask                           = PLACE_MASK.IGNORE_IMPASSABLE,
+	fill_mask                            = PLACE_MASK.IGNORE_IMPASSABLE,
+	force_rotation                       = LAYOUT_ROTATION.NORTH,
+	add_topology                         =
+	{
+		room_id                          = "StaticLayoutIsland:OctopusShop",
+		tags                             = {"RoadPoison", "not_mainland", "nohunt", "OctopusArea"},
+	},
+})
+
 local function monkeyisland_prefabs_area(area, data)
 	local prefabs = _G.PickSomeWithDups(math.floor(area / 5 + 0.5),
 		{   
@@ -283,10 +295,8 @@ end
 
 local MapData =
 {
- -- ["SerenityIsland_Spawner"] = true,
- -- ["MeadowIsland_Spawner"]   = true,
-	["DinaMemorial_Spawner"]   = true,
-	["FruitTreeShop_Spawner"]  = true,
+	["DinaMemorial_Spawner"]    = true,
+	["FruitTreeShop_Spawner"]   = true,
 }
 
 local MapTags = 
@@ -315,28 +325,10 @@ local MapTags =
 		return "TAG", "MemorialArea"
 	end,
 	
-	--[[
-	["SerenityIsland_Spawner"] = function(tagdata, level)
-		if tagdata["SerenityIsland_Spawner"] == false then
-			return
-		end
-		
-		tagdata["SerenityIsland_Spawner"] = false
-
-        return "STATIC", "SerenityIsland"
-    end,
+	["OctopusArea"] = function(tagdata)
+		return "TAG", "OctopusArea"
+	end,
 	
-	["MeadowIsland_Spawner"] = function(tagdata, level)
-		if tagdata["MeadowIsland_Spawner"] == false then
-			return
-		end
-		
-		tagdata["MeadowIsland_Spawner"] = false
-
-        return "STATIC", "MeadowIsland"
-    end,
-	]]--
-
 	["DinaMemorial_Spawner"] = function(tagdata, level)
 		if tagdata["DinaMemorial_Spawner"] == false then
 			return

@@ -60,6 +60,10 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 			table.insert(applied, "Fruit Tree Shop")
 		end
 		
+		if ApplyRetrofit("Octopus King Shop", "kyno_octopusking_ocean", require("map/hof_retrofit_forest").HofRetrofitting_OctopusKingShop) then
+			table.insert(applied, "Octopus King Shop")
+		end
+		
 		-- Not really required for any content, just something nice to have. Will leave it for new worlds only.
 		--[[
 		if ApplyRetrofit("Dina Memorial", "kyno_dinamemorial_marker", require("map/hof_retrofit_forest").HofRetrofitting_DinaMemorial) then

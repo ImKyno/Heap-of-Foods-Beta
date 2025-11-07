@@ -170,8 +170,8 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 				local world_top, world_left = left * 4 - (map_width * 0.5 * 4), top * 4 - (map_height * 0.5 * 4)
 				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
 				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable",
-					"oceantree_pillar", "watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal",
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", 
+					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
 				})
 				
 				if ents_to_remove ~= nil then
@@ -299,8 +299,8 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 				local world_top, world_left = left * 4 - (map_width * 0.5 * 4), top * 4 - (map_height * 0.5 * 4)
 				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
 				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable",
-					"oceantree_pillar", "watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal",
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", 
+					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
 				})
 				
 				if ents_to_remove ~= nil then
@@ -445,8 +445,8 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 
 				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
 				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable",
-					"oceantree_pillar", "watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal",
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", 
+					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
 				})
 				
 				if ents_to_remove ~= nil then
@@ -897,6 +897,141 @@ local function HofRetrofitting_DinaMemorial(map, savedata)
 	end
 end
 
+local function HofRetrofitting_OctopusKingShop(map, savedata)
+	local topology = savedata.map.topology
+	local map_width = savedata.map.width
+	local map_height = savedata.map.height
+	local entities = savedata.ents
+
+	local add_fn = 
+	{
+		fn = function(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
+			local x = (points_x[current_pos_idx] - width/2.0) * TILE_SCALE
+			local y = (points_y[current_pos_idx] - height/2.0) * TILE_SCALE
+				
+			x = math.floor(x * 100) / 100.0
+			y = math.floor(y * 100) / 100.0
+				
+			if entitiesOut[prefab] == nil then
+				entitiesOut[prefab] = {}
+			end
+				
+			local save_data = {x=x, z=y}
+				
+			if prefab_data then
+				if prefab_data.data then
+					if type(prefab_data.data) == "function" then
+						save_data["data"] = prefab_data.data()
+					else
+						save_data["data"] = prefab_data.data
+					end
+				end
+					
+				if prefab_data.id then
+					save_data["id"] = prefab_data.id
+				end
+					
+				if prefab_data.scenario then
+					save_data["scenario"] = prefab_data.scenario
+				end
+			end
+				
+			table.insert(entitiesOut[prefab], save_data)
+		end,
+	
+		args = { entitiesOut = entities, width = map_width, height = map_height, rand_offset = false, debug_prefab_list = nil }
+	}
+
+	local VALID_TILES = 
+	{
+		[WORLD_TILES.OCEAN_SWELL] = true,
+		[WORLD_TILES.OCEAN_ROUGH] = true,
+		[WORLD_TILES.OCEAN_HAZARDOUS] = true,
+	}
+	
+	local function is_valid_ocean(_left, _top, tile_size)
+		for x = 0, tile_size do
+			for y = 0, tile_size do
+				local tile = map:GetTile(_left + x, _top + y)
+				
+				if not VALID_TILES[tile] then
+					return false
+				end
+			end
+		end
+		
+		return true
+	end
+
+	local function TryToAddLayout(name, topology_delta, isvalidareafn)
+		local layout = obj_layout.LayoutForDefinition(name)
+		local tile_size = #layout.ground
+
+		topology_delta = topology_delta or 1
+
+		local candidtates = {}
+		local foundarea = false
+		local num_steps = math.floor((map_width - tile_size) / tile_size)
+		
+		for x = 0, num_steps do
+			for y = 0, num_steps do
+				local left = 8 + (x > 0 and ((x * math.floor(map_width / num_steps)) - tile_size - 16) or 0)
+				local top  = 8 + (y > 0 and ((y * math.floor(map_height / num_steps)) - tile_size - 16) or 0)
+				
+				if isvalidareafn(left, top, tile_size) then
+					table.insert(candidtates, {top = top, left = left})
+				end
+			end
+		end
+		
+		print("   " ..tostring(#candidtates) .. " candidtate locations")
+
+		if #candidtates > 0 then
+			local world_size = (tile_size + (topology_delta*2))*4
+
+			shuffleArray(candidtates)
+			
+			for _, candidtate in ipairs(candidtates) do
+				local top, left = candidtates[1].top, candidtates[1].left
+				local world_top, world_left = (left-topology_delta)*4 - (map_width * 0.5 * 4), (top-topology_delta)*4 - (map_height * 0.5 * 4)
+
+				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
+				{
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", 
+					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
+				})
+				
+				if ents_to_remove ~= nil then
+					print("   Removed " .. tostring(#ents_to_remove) .. " entities for static layout:")
+					
+					for i = #ents_to_remove, 1, -1 do
+						print ("   - " .. tostring(ents_to_remove[i].prefab) .. " " )
+						table.remove(savedata.ents[ents_to_remove[i].prefab], ents_to_remove[i].index)
+					end
+
+					obj_layout.Place({left, top}, name, add_fn, nil, map)
+					
+					if layout.add_topology ~= nil then
+						AddSquareTopology(topology, world_top, world_left, world_size, layout.add_topology.room_id, layout.add_topology.tags)
+					end
+
+					return true
+				end
+			end
+		end
+		
+		return false
+	end
+
+	local success TryToAddLayout("OctopusKingShop", 0, is_valid_ocean)
+
+	if success then
+		print("Retrofitting for Heap of Foods Mod - Added Yaarctopus Trading Post to the world.")
+	else
+		print("Retrofitting for Heap of Foods Mod - Failed to add Yaarctopus Trading Post to the world!")
+	end
+end
+
 return 
 {
 	HofRetrofitting_SerenityIsland      = HofRetrofitting_SerenityIsland,
@@ -904,4 +1039,5 @@ return
 	HofRetrofitting_OceanSetpieces      = HofRetrofitting_OceanSetpieces,
 	HofRetrofitting_DeciduousForestShop = HofRetrofitting_DeciduousForestShop,
 	HofRetrofitting_DinaMemorial        = HofRetrofitting_DinaMemorial,
+	HofRetrofitting_OctopusKingShop     = HofRetrofitting_OctopusKingShop,
 }

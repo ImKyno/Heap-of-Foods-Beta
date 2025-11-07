@@ -62,6 +62,7 @@ local hof_init_world   =
 	"hof_ancienttree_data",
 	"hof_tree_rock_data",
 	"hof_oceanfish_data",
+	"hof_octopusking_data",
 }
 
 local hof_init_foods   =

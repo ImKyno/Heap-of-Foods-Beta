@@ -42,87 +42,6 @@ TUNING.HOF_MEATRACKS =
 	"meatrack_hermit"
 }
 
--- Ocean prefab -> Inventory prefab. This supports non inventory-able creatures too.
--- Need to make support to allow multiple prefab loot.
-TUNING.HOF_OCEANTRAP_PREFAB_INDEX =
-{
-	cookiecutter = "kyno_mussel",
-	wobster_sheller = "wobster_sheller_land",
-	wobster_monkeyisland = "wobster_monkeyisland_land",
-	wobster_moonglass = "wobster_moonglass_land",
-	
-	-- Don't let it trap jellyfishes.
-	-- kyno_jellyfish_ocean = "kyno_jellyfish",
-	-- kyno_jellyfish_rainbow_ocean = "kyno_jellyfish_rainbow",
-}
-
--- Public loot tables for Whales in case someone wants it.
-TUNING.HOF_WHALE_BLUE_LOOT = 
-{
-	"fishmeat",
-	"fishmeat",
-	"fishmeat",
-	"fishmeat",
-
-	"kyno_blubber",
-	"kyno_blubber",
-	"kyno_blubber",
-	"kyno_blubber",
-}
-
-TUNING.HOF_WHALE_WHITE_LOOT =
-{
-	"fishmeat",
-	"fishmeat",
-	"fishmeat",
-	"fishmeat",
-	
-	"boneshard",
-	
-	"kyno_blubber",
-	"kyno_blubber",
-	"kyno_blubber",
-	"kyno_blubber",
-}
-
-TUNING.HOF_WHALE_LOOT =
-{
-	-- High Tier
-	{
-		"bullkelp_root",
-		"monkey_mediumhat",
-		"polly_rogershat",
-		"stash_map",
-		"chum",
-		"messagebottle",
-	},
-	
-	-- Medium Tier
-	{
-		"wobster_sheller_dead",
-		"wobster_monkeyisland_dead",
-		"oceanfishinglure_hermit_heavy",
-		"waterplant_planter",
-		"monkey_smallhat",
-		"messagebottle",
-		"puffin",
-		"kyno_kokonut",
-		"kyno_oceantrap",
-		"kyno_dogfish_dead",
-    },
-	
-	-- Low Tier
-	{
-		"kelp",
-		"fishmeat",
-		"boneshard",
-		"kyno_seaweeds",
-		"kyno_jellyfish",
-		"kyno_blubber",
-		"kyno_spoiled_fish_large",
-	},
-}
-
 TUNING.KYNO_FLOATILIZER_USES = 20
 TUNING.KYNO_FLOATILIZER_SOILCYCLES = TUNING.POOP_SOILCYCLES
 TUNING.KYNO_FLOATILIZER_FERTILIZE = TUNING.POOP_FERTILIZE * 2
@@ -989,6 +908,20 @@ TUNING.KYNO_JELLYFISH_RAINBOW_ENABLED = true
 TUNING.KYNO_OCEANTRAP_USES = 10
 TUNING.KYNO_OCEANTRAP_RANGE = 2
 
+-- Ocean prefab -> Inventory prefab. This supports non inventory-able creatures too.
+-- Need to make support to allow multiple prefab loot.
+TUNING.HOF_OCEANTRAP_PREFAB_INDEX =
+{
+	cookiecutter = "kyno_mussel",
+	wobster_sheller = "wobster_sheller_land",
+	wobster_monkeyisland = "wobster_monkeyisland_land",
+	wobster_moonglass = "wobster_moonglass_land",
+	
+	-- Don't let it trap jellyfishes.
+	-- kyno_jellyfish_ocean = "kyno_jellyfish",
+	-- kyno_jellyfish_rainbow_ocean = "kyno_jellyfish_rainbow",
+}
+
 TUNING.KYNO_OCEANFISH_PUFFERFISH_WALKSPEED = 1.5
 TUNING.KYNO_OCEANFISH_PUFFERFISH_RUNSPEED = 3.0
 TUNING.KYNO_OCEANFISH_PUFFERFISH_MIN_WEIGHT = 43.11
@@ -1095,6 +1028,73 @@ TUNING.KYNO_WHALE_ROT_TIME =
 	{ base = 1 * TUNING.TOTAL_DAY_TIME, random = 0.5 * TUNING.TOTAL_DAY_TIME },
 }
 
+-- Public loot tables for Whales in case someone wants it.
+TUNING.HOF_WHALE_BLUE_LOOT = 
+{
+	"fishmeat",
+	"fishmeat",
+	"fishmeat",
+	"fishmeat",
+
+	"kyno_blubber",
+	"kyno_blubber",
+	"kyno_blubber",
+	"kyno_blubber",
+}
+
+TUNING.HOF_WHALE_WHITE_LOOT =
+{
+	"fishmeat",
+	"fishmeat",
+	"fishmeat",
+	"fishmeat",
+	
+	"boneshard",
+	
+	"kyno_blubber",
+	"kyno_blubber",
+	"kyno_blubber",
+	"kyno_blubber",
+}
+
+TUNING.HOF_WHALE_LOOT =
+{
+	-- High Tier
+	{
+		"bullkelp_root",
+		"monkey_mediumhat",
+		"polly_rogershat",
+		"stash_map",
+		"chum",
+		"messagebottle",
+	},
+	
+	-- Medium Tier
+	{
+		"wobster_sheller_dead",
+		"wobster_monkeyisland_dead",
+		"oceanfishinglure_hermit_heavy",
+		"waterplant_planter",
+		"monkey_smallhat",
+		"messagebottle",
+		"puffin",
+		"kyno_kokonut",
+		"kyno_oceantrap",
+		"kyno_dogfish_dead",
+    },
+	
+	-- Low Tier
+	{
+		"kelp",
+		"fishmeat",
+		"boneshard",
+		"kyno_seaweeds",
+		"kyno_jellyfish",
+		"kyno_blubber",
+		"kyno_spoiled_fish_large",
+	},
+}
+
 TUNING.WATERFOWLHUNT_ALTERNATE_BEAST_CHANCE_MIN = 0.05
 TUNING.WATERFOWLHUNT_ALTERNATE_BEAST_CHANCE_MAX = 0.33
 TUNING.WATERFOWLHUNT_SPAWN_DIST = 20
@@ -1132,3 +1132,64 @@ TUNING.KYNO_BRAINROCK_CORAL_SANITY = 50
 
 TUNING.KYNO_CRAFTINGBUFF_DURATION = 240
 TUNING.KYNO_CRAFTINGBUFF_SANITY_PENALTY = -10
+
+TUNING.OCTOPUS_VALUES = 
+{
+	SEAFOOD = 1 + 3,
+	SEAFOOD_RARE = 5 + 3,
+
+	TRINKETS = 
+	{
+		-- RoG Trinkets 1-12
+		6 + 3, 8 + 3, 6 + 3, 7 + 3, 6 + 3, 7 + 3, 
+		6 + 3, 9 + 3, 9 + 3, 4 + 3, 7 + 3, 9 + 3, 
+		
+		-- DST Trinkets 13+
+		7 + 3, 4 + 3, 4 + 3, 2 + 3, 6 + 3, 6 + 3,
+		7 + 3, 5 + 3, 4 + 3, 3 + 3, 8 + 3, 2 + 3,
+		9 + 3, 4 + 3, 4 + 3, 4 + 3, 4 + 3, 4 + 3,
+		1 + 3, 1 + 3, 1 + 3, 1 + 3, 1 + 3, 1 + 3,
+	},
+
+	ANTLIONTRINKET = 8,
+	COTLTRINKET = 8,
+	BOTTLECAPTRINKET = 25,
+}
+
+TUNING.OCTOPUSKING_OCEAN_LOOT = 
+{
+	randomchestloot =
+	{
+		"kyno_seaweeds",
+		"kyno_seaweeds",
+		"kyno_seaweeds",
+		"kyno_seaweeds",
+		"kyno_seaweeds",
+		"kyno_waterycress",
+		"kyno_waterycress",
+		"kyno_waterycress",
+		"kelp",
+		"kelp",
+		"kelp",
+		"kyno_shark_fin",
+		"kyno_blubber",
+		"fireflies",
+		"fireflies",
+		"saltrock",
+		"saltrock",
+	},
+	
+	chestloot =
+	{
+		californiaroll             = { prefab = "anchor_item",           amount = 1 },
+		seafoodgumbo               = { prefab = "mast_item",             amount = 1 },
+		bisque                     = { prefab = "boatpatch",             amount = 5 },
+		jellyopop                  = { prefab = "kyno_oceantrap",        amount = 1 },
+		ceviche                    = { prefab = "flotationcushion",      amount = 1 },
+		surfnturf                  = { prefab = "ocean_trawler_kit",     amount = 1 },
+		lobsterbisque              = { prefab = "kyno_brainrock_larvae", amount = 1 },
+		lobsterdinner              = { prefab = "boat_bumper_shell_kit", amount = 8 },
+		agedroe_oceanfish_sturgeon = { prefab = "messagebottle",         amount = 2 },
+		swordfishfeast             = { prefab = "kyno_malbatrossfood",   amount = 3 },
+	},
+}

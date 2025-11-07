@@ -494,6 +494,7 @@ local function inventoryfn(fish_def)
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPickup)

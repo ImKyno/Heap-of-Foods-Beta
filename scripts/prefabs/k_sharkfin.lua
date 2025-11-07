@@ -40,6 +40,7 @@ local function fn()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD_RARE
 
     inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

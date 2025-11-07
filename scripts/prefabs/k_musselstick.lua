@@ -104,7 +104,7 @@ local function fn()
     minimap:SetIcon("kyno_musselstick.tex")
 	
 	MakeInventoryPhysics(inst, nil, 0.7)
-	inst:SetPhysicsRadiusOverride(3)
+	inst:SetPhysicsRadiusOverride(1)
 	
     inst.AnimState:SetBank("kyno_musselstick")
     inst.AnimState:SetBuild("kyno_musselstick")

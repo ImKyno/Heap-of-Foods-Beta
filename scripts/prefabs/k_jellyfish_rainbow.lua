@@ -32,7 +32,9 @@ local brain = require("brains/jellyfishrainbowoceanbrain")
 
 local MIN_WEIGHT = TUNING.KYNO_JELLYFISH_RAINBOW_MIN_WEIGHT
 local MAX_WEIGHT = TUNING.KYNO_JELLYFISH_RAINBOW_MAX_WEIGHT
+
 local INTENSITY = 0.65
+local SWIMMING_COLLISION_MASK = COLLISION.GROUND + COLLISION.LAND_OCEAN_LIMITS + COLLISION.OBSTACLES + COLLISION.SMALLOBSTACLES
 
 local function SwapColor(inst, light)
 	if inst.ispink then
@@ -251,15 +253,16 @@ local function fn()
 	
 	inst.Transform:SetFourFaced()
 	
-	MakeCharacterPhysics(inst, 10, 0.5)
+	MakeCharacterPhysics(inst, 50, 0.5)
 	
 	inst.AnimState:SetScale(.8, .8, .8)
 
 	inst.AnimState:SetBank("kyno_jellyfish_rainbow")
 	inst.AnimState:SetBuild("kyno_jellyfish_rainbow")
 	inst.AnimState:PlayAnimation("idle", true)
+	inst.AnimState:SetSortOrder(ANIM_SORT_ORDER.OCEAN_BOAT)
 	inst.AnimState:SetLayer(LAYER_BACKGROUND)
-	inst.AnimState:SetSortOrder(3)
+	inst.AnimState:SetFinalOffset(1)
 	inst.AnimState:SetRayTestOnBB(true)
 
 	inst:AddTag("animal")
@@ -377,6 +380,7 @@ local function jellyfish()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_jellyfish_rainbow_cooked"
@@ -452,6 +456,7 @@ local function jellyfish_dead()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_jellyfish_rainbow_cooked"
@@ -521,6 +526,7 @@ local function jellyfish_cooked()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
    	inst:AddComponent("perishable")
     inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)

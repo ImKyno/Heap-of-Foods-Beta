@@ -366,8 +366,9 @@ AddTaskSetPreInitAny(function(tasksetdata)
 	end
 
 	-- Islands are too big to generated, using this instead.
-	tasksetdata.ocean_prefill_setpieces["SerenityIsland"] = { count = 1 }
-	tasksetdata.ocean_prefill_setpieces["MeadowIsland"]   = { count = 1 }
+	tasksetdata.ocean_prefill_setpieces["SerenityIsland"]  = { count = 1 }
+	tasksetdata.ocean_prefill_setpieces["MeadowIsland"]    = { count = 1 }
+	tasksetdata.ocean_prefill_setpieces["OctopusKingShop"] = { count = 1 }
 	
 	for k, layout in pairs(OCEAN_SETPIECES) do
 		tasksetdata.ocean_prefill_setpieces[layout]       = { count = math.random(TUNING.HOF_MIN_OCEANSETPIECES, TUNING.HOF_MAX_OCEANSETPIECES) }

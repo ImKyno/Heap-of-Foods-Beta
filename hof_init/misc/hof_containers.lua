@@ -364,3 +364,25 @@ end
 function containers.params.fish_box.itemtestfn(container, item, slot)
     return item:HasAnyTag("smalloceancreature", "fish_box_valid")
 end
+
+params.octopustraderchest =
+{
+	widget =
+	{
+		slotpos =
+		{
+			Vector3(0, 64   + 32 + 8 + 4,  0),
+			Vector3(0, 32   + 4,           0),
+			Vector3(0, -(32 + 4),          0),
+			Vector3(0, -(64 + 32 + 8 + 4), 0),
+		},
+		
+		animbank = "ui_lamp_1x4",
+		animbuild = "ui_lamp_1x4",
+		
+		pos = Vector3(75, 200, 0),
+		side_align_tip = 160,
+	},
+	
+	type = "chest",
+}
