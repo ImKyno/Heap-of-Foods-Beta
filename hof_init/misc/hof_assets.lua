@@ -454,6 +454,8 @@ local HOF_ICONS =
 	"kyno_oaktree_pod_cooked",
 	"kyno_oceantrap",
 	"kyno_oil",
+	"kyno_packimbaggims_fishbone",
+	"kyno_packimbaggims_fishbone_dead",
 	"kyno_parznip",
 	"kyno_parznip_cooked",
 	"kyno_parznip_eaten",
@@ -788,8 +790,10 @@ for k, v in pairs(HOF_ICONS) do
 			local icon_name = icon 
 		
 			AddPrefabPostInit(icon_name, function(inst)
-				inst.components.inventoryitem.imagename = icon_name
-				inst.components.inventoryitem.atlasname = icon_atlas
+				if inst.components.inventoryitem ~= nil then
+					inst.components.inventoryitem.imagename = icon_name
+					inst.components.inventoryitem.atlasname = icon_atlas
+				end
 			end)
 		end
 	end
@@ -861,6 +865,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_ocean_wreck",
 	"kyno_octopusking_ocean",
 	"kyno_octopusking_treasurechest",
+	"kyno_packimbaggims",
 	"kyno_parznip_big",
 	"kyno_parznip_ground",
 	"kyno_pebblecrab",

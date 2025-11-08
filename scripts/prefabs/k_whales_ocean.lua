@@ -21,16 +21,16 @@ local whale_white_assets =
 
 local whale_blue_prefabs =
 {
-	"kyno_whale_blue_carcass",
-	"kyno_whale_bubbles",
-	"kyno_whale_track",
+	"kyno_whale_blue_ocean_carcass",
+	"kyno_whale_ocean_bubbles",
+	"kyno_whale_ocean_track",
 }
 
 local whale_white_prefabs =
 {
-	"kyno_whale_white_carcass",
-	"kyno_whale_bubbles",
-	"kyno_whale_track",
+	"kyno_whale_white_ocean_carcass",
+	"kyno_whale_ocean_bubbles",
+	"kyno_whale_ocean_track",
 }
 
 local whale_blue_sounds =

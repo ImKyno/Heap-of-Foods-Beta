@@ -7,9 +7,15 @@ return Class(function(self, inst)
 	local HOF_MAPUTIL = require("map/hof_maputil")
 	
 	local function IsOldWorld()
-		local no_serenity  = TheSim:FindFirstEntityWithTag("kyno_serenityisland_shop") == nil
-		local no_meadow    = TheSim:FindFirstEntityWithTag("kyno_meadowisland_shop") == nil
-		local no_oceanfish = TheSim:FindFirstEntityWithTag("kyno_swordfish_spawner") == nil
+		local no_serenity   = TheSim:FindFirstEntityWithTag("serenity_pigelder")       == nil -- kyno_serenityisland_shop
+		local no_meadow     = TheSim:FindFirstEntityWithTag("sammyhouse")              == nil -- kyno_meadowisland_shop
+		local no_oceanfish  = TheSim:FindFirstEntityWithTag("swordfishspawner")        == nil -- kyno_swordfish_spawner
+		local no_jellyfish  = TheSim:FindFirstEntityWithTag("jellyfishspawner")        == nil -- kyno_jellyfish_spawner
+		local no_jellyfish2 = TheSim:FindFirstEntityWithTag("jellyfishrainbowspawner") == nil -- kyno_jellyfish_rainbow_spawner
+		local no_dogfish    = TheSim:FindFirstEntityWithTag("dogfishspawner")          == nil -- kyno_dogfish_spawner
+		local no_puffer     = TheSim:FindFirstEntityWithTag("puffermonsterspawner")    == nil -- kyno_puffermonster_spawner
+		local no_antchovy   = TheSim:FindFirstEntityWithTag("antchovyspawner")         == nil -- kyno_antchovy_spawner
+		local no_octopus    = TheSim:FindFirstEntityWithTag("octopuskingtrader")       == nil -- kyno_octopusking_ocean
 
 		local has_old_ids = false
 		
@@ -24,7 +30,8 @@ return Class(function(self, inst)
 			end
 		end
 
-		return (no_serenity and no_meadow and no_oceanfish) or has_old_ids
+		return (no_serenity and no_meadow and no_oceanfish and no_jellyfish and no_jellyfish2
+		and no_dogfish and no_puffer and no_antchovy and no_octopus) or has_old_ids
 	end
 
 	function self:OnPostInit()

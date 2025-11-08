@@ -1,10 +1,11 @@
 -- Common Dependencies.
-local _G      = GLOBAL
-local next    = _G.next
-local require = _G.require
-local HOF_MAPUTIL = require("map/hof_maputil")
+local _G                = GLOBAL
+local next              = _G.next
+local require           = _G.require
+local HOF_MAPUTIL       = require("map/hof_maputil")
+local HOF_FOREST_DATA   = require("map/hof_retrofit_forest")
 
-local _DoRetrofitting = require("map/retrofit_savedata").DoRetrofitting
+local _DoRetrofitting   = require("map/retrofit_savedata").DoRetrofitting
 
 -- Fuck it. not relying on mod option to retrofit anymore, too many issues...
 -- If we don't exist, spawn the damn thing already.
@@ -44,24 +45,45 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 	local applied = {}
 
 	if savedata.map ~= nil and savedata.map.prefab == "forest" then
-		if ApplyRetrofit("Serenity Archipelago", "kyno_serenityisland_shop", require("map/hof_retrofit_forest").HofRetrofitting_SerenityIsland) then
+		if ApplyRetrofit("Serenity Archipelago", "kyno_serenityisland_shop", HOF_FOREST_DATA.HofRetrofitting_SerenityIsland) then
 			table.insert(applied, "Serenity Archipelago")
 		end
 
-		if ApplyRetrofit("Seaside Island", "kyno_meadowisland_shop", require("map/hof_retrofit_forest").HofRetrofitting_MeadowIsland) then
+		if ApplyRetrofit("Seaside Island", "kyno_meadowisland_shop", HOF_FOREST_DATA.HofRetrofitting_MeadowIsland) then
 			table.insert(applied, "Seaside Island")
 		end
 
-		if ApplyRetrofit("Ocean Setpieces", "kyno_swordfish_spawner", require("map/hof_retrofit_forest").HofRetrofitting_OceanSetpieces) then
+		if ApplyRetrofit("Ocean Setpieces", "kyno_swordfish_spawner", HOF_FOREST_DATA.HofRetrofitting_OceanSetpieces) then
 			table.insert(applied, "Ocean Setpieces")
 		end
 		
-		if ApplyRetrofit("Fruit Tree Shop", "kyno_deciduousforest_shop", require("map/hof_retrofit_forest").HofRetrofitting_DeciduousForestShop) then
+		if ApplyRetrofit("Fruit Tree Shop", "kyno_deciduousforest_shop", HOF_FOREST_DATA.HofRetrofitting_DeciduousForestShop) then
 			table.insert(applied, "Fruit Tree Shop")
 		end
 		
-		if ApplyRetrofit("Octopus King Shop", "kyno_octopusking_ocean", require("map/hof_retrofit_forest").HofRetrofitting_OctopusKingShop) then
+		if ApplyRetrofit("Jellyfish Spawners", "kyno_jellyfish_rainbow_spawner", HOF_FOREST_DATA.HofRetrofitting_JellyfishSpawners) then
+			table.insert(applied, "Jellyfish Spawners")
+		end
+		
+		if ApplyRetrofit("Dogfish Spawners", "kyno_dogfish_spawner", HOF_FOREST_DATA.HofRetrofitting_DogfishSpawners) then
+			table.insert(applied, "Dogfish Spawners")
+		end
+		
+		if ApplyRetrofit("Puffernaut Spawners", "kyno_puffermonster_spawner", HOF_FOREST_DATA.HofRetrofitting_PufferSpawners) then
+			table.insert(applied, "Puffernaut Spawners")
+		end
+		
+		-- Needs to be after Jellyfish retrofit because it will not spawn new ones if before.
+		if ApplyRetrofit("Octopus King Shop", "kyno_octopusking_ocean", HOF_FOREST_DATA.HofRetrofitting_OctopusKingShop) then
 			table.insert(applied, "Octopus King Shop")
+		end
+		
+		if ApplyRetrofit("Packim Baggims", "kyno_packimbaggims_fishbone", HOF_FOREST_DATA.HofRetrofitting_PackimBaggims) then
+			table.insert(applied, "Packim Baggims")
+		end
+		
+		if ApplyRetrofit("Hermit Wobster Dens", "kyno_wobster_den_monkeyisland", HOF_FOREST_DATA.HofRetrofitting_WobsterMonkeyIsland) then
+			table.insert(applied, "Hermit Wobster Dens")
 		end
 		
 		-- Not really required for any content, just something nice to have. Will leave it for new worlds only.

@@ -152,6 +152,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Fluffy little buddies that loves to steal 
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Kingfishers will often drop Tropical Kois from above. It's raining fish, literally!"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emits a colorful healthy glow during dusk and night."
 STRINGS.SCRAPBOOK.SPECIALINFO.HULLBREAKER_CREATURE = "Can damage the boat's hull when landing successful attacks."
+STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS = "Things can be stored in Packim Baggims much like a chest.\n\nHe loves eating all kinds of fish."
 
 -- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "A Merchant from a distant archipelago. He's willing to trade his best cooking utensils and other useful items for delicious meals.\n\nThe Elder is craving for a meal with extreme sweetness or Butter mescled with seafood. He will reward you accordingly.\n\nBringing Elder's favourtie meal will unlock more trade deals."
@@ -191,3 +192,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.OCEANHUNT = "A bubbling trail indicating aquatic a
 STRINGS.SCRAPBOOK.SPECIALINFO.WHALEOCEANCARCASS = "A whale carcass that has begun to spoil.\n\nIt will grow bigger and bigger each day until it explodes and release everything inside.\n\nThe sound of the explosion might attract unwanted attention."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTRADER = "A lonely octopus living in the vast ocean.\n\nYaarctopus offers rewards in exchange for Fishes, Trinkets and certain Fish Prepared Foods." 
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTREASURE = "Yaarctopus' chest given to survivors during their exchanges."
+STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS_FISHBONE = "Summons Packim Baggims when picked up.\n\nPackim Baggims will follow the holder. While Packim Baggims is alive, the fish color will be orange."

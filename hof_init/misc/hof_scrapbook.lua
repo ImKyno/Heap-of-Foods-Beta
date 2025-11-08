@@ -1382,6 +1382,23 @@ local HOF_SCRAPBOOK_ITEMS =
 		animoffsetbgy  = -20,
 		deps           = {"kyno_brainrock_sprout", "kyno_brainrock_larvae", "rocks", "spoiled_food"},
 	},
+	
+	kyno_packimbaggims_fishbone =
+	{
+		name           = "kyno_packimbaggims_fishbone",
+		type           = "item",
+		tex            = "kyno_packimbaggims_fishbone_dead.tex",
+		prefab         = "kyno_packimbaggims_fishbone",
+		bank           = "kyno_packimbaggims_fishbone",
+		build          = "kyno_packimbaggims_fishbone",
+		anim           = "dead",
+		animoffsetx    = 10,
+		animoffsety    = 50,
+		animoffsetbgx  = -25,
+		animoffsetbgy  = -95,
+		deps           = {"kyno_packimbaggims"},
+		specialinfo    = "PACKIMBAGGIMS_FISHBONE",
+	},
 }
 
 local HOF_SCRAPBOOK_FOODS =
@@ -14895,6 +14912,20 @@ local HOF_SCRAPBOOK_CREATURES =
 		facing         = 3,
 		deps           = {"kyno_whale_ocean_bubbles", "kyno_whale_white_ocean_carcass", "fishmeat", "kyno_blubber"},
 		specialinfo    = "HULLBREAKER_CREATURE",
+	},
+	
+	kyno_packimbaggims =
+	{
+		name           = "kyno_packimbaggims",
+		type           = "creature",
+		tex            = "kyno_packimbaggims.tex",
+		prefab         = "kyno_packimbaggims",
+		health         = 450,
+		bank           = "kyno_packimbaggims",
+		build          = "kyno_packimbaggims_build",
+		anim           = "idle_loop",
+		deps           = {"kyno_packimbaggims_fishbone"},
+		specialinfo    = "PACKIMBAGGIMS",
 	},
 }
 

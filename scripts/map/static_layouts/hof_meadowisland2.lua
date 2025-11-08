@@ -10482,7 +10482,7 @@ return {
         },
         {
           name = "",
-          type = "kyno_meadowisland_sandhill",
+          type = "kyno_packimbaggims_fishbone",
           shape = "rectangle",
           x = 893,
           y = 1663,

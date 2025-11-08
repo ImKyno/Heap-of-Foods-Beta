@@ -386,3 +386,47 @@ params.octopustraderchest =
 	
 	type = "chest",
 }
+
+params.packimbaggims =
+{
+	widget =
+	{
+		slotpos = {},
+		
+		animbank = "ui_chest_3x3",
+		animbuild = "ui_chest_3x3",
+		
+		pos = Vector3(0, 200, 0),
+		side_align_tip = 160,
+	},
+	
+	type = "chest",
+}
+
+for y = 2, 0, -1 do
+	for x = 0, 2 do
+		table.insert(params.packimbaggims.widget.slotpos, Vector3(80 * x - 80 * 2 + 80, 80 * y - 80 * 2 + 80, 0))
+	end
+end
+
+params.packimbaggimsfat =
+{
+	widget =
+	{
+		slotpos = {},
+		
+		animbank = "ui_chester_shadow_3x4",
+		animbuild = "ui_chester_shadow_3x4",
+		
+		pos = Vector3(0, 220, 0),
+		side_align_tip = 160,
+	},
+	
+	type = "chest",
+}
+
+for y = 2.5, -0.5, -1 do
+	for x = 0, 2 do
+		table.insert(params.packimbaggimsfat.widget.slotpos, Vector3(75 * x - 75 * 2 + 75, 75 * y - 75 * 2 + 75, 0))
+	end
+end

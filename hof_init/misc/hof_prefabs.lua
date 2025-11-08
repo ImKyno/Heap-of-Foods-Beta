@@ -133,6 +133,8 @@ PrefabFiles =
 	"k_oceantrap",
 	"k_octopus_king",
 	"k_octopus_king_chest",
+	"k_packimbaggims",
+	"k_packimbaggims_fishbone",
 	"k_pineapple",
 	"k_pineapplebush",
 	"k_plantables",
