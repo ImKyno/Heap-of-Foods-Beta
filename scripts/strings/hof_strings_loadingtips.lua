@@ -93,6 +93,23 @@ local LOADINGTIPS   =
 	TRUFFLES1       = "Truffle-related items can be used to befriend Pigs, making them loyal for longer.",
 	TRUFFLES2       = "Truffle-related items can be traded to Pig King for some easy Gold Nuggets.",
 	GOLDENAPPLE     = "Enchanted Golden Apples are rare items that can be obtained after Celestial Scion has been defeated at least once in the world. They give multiple positive effects at the cost of your life.",
+	FISHROE         = "Fish roes can be obtained by placing the desired kind of Fish on the Fish Hatchery.",
+	FISHFARMPLOT    = "Fish Hatchery can be used to raise fish to produce roe and offspring.",
+	FISHFARMPLOT2   = "Each fish has its own preferences while at the Fish Hatchery. And those are: Day Phase, Moon Phase, Season and Location.",
+	OCEANHUNTS      = "\"Suspicious Bubbles are appearing all across the ocean. I wonder what I'll find if I keep following them?\" -W.",
+	OCTOPUSTRADER   = "\"Yesterday when I was sailing, I found a lonely octopus sleeping in a nearby cluster of seastacks. I wonder if he has something useful to trade for.\" -W.",
+	OCTOPUSTRADER2  = "Yaarctopus will trade items in exchange for Fishes and some Fish Prepared Foods!",
+	HULLBREAKER     = "Some ocean creatures such as Swordfishes, Puffernauts and Whales are capable of damaging the Boat's hull when landing successful attacks.",
+	CURSEREMOVER    = "\"I heard there's a Moon Quay Island specialty food that is capable of removing curses! I must try it, the recipe says it needs some kind of exotic wobster...\" -W.",
+	BRAINMETTERSOUP = "\"After tasting that silly soup, I'm kinda feeling smart all of sudden, I don't even need crafting stations anymore.\" -W.",
+	MALBATROSSFOOD  = "The Bewitching Fish Food can be thrown at the ocean to summon a threating foe known as the Malbatross.",
+	PACKIMBAGGIMS   = "Everyone's favourite companion is back! His beloved item can be found at the Seaside Island.",
+	PACKIMBAGGIMS2  = "Packim Baggims can be transformed by feeding him Heavy Ocean Fishes or Scorched Sunfishes.",
+	PACKIMBAGGIMS3  = "Fire Packim Baggims can instantly cook any food inside him. He is also capable of burning wood-related items into charcoal.",
+	OTTERDENS       = "There's a chance for Marotter Dens to appear at the end of a Ocean Hunt during when its raining.",
+	SHARKBOIREWARD  = "Frostjaw is craving for a exquisite meal and he will reward those who can accomplish his request.",
+	GHOSTPIRATE     = "Exploring Wrecks of previous crews at Full Moon Nights can be quite dangerous, as Pirate Ghosts can be found roaming around them. Spooky!",
+	HERMITWOBSTER   = "Hermit Wobsters can only be found at the Moon Quay Island.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

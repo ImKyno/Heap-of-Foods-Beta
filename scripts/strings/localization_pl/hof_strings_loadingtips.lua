@@ -93,6 +93,23 @@ local LOADINGTIPS   =
 	TRUFFLES1       = "Przedmioty związane z truflami mogą być użyte do zaprzyjaźnienia się ze Świniami, czyniąc je lojalnymi na dłużej.",
 	TRUFFLES2       = "Przedmioty związane z truflami można wymienić u Króla Świń na kilka łatwych Złotych Samorodków.",
 	GOLDENAPPLE     = "Zaczarowane Złote Jabłka to rzadkie przedmioty, które można zdobyć po pokonaniu Niebiańskiego Dziedzica co najmniej raz w świecie. Dają wiele pozytywnych efektów kosztem twojego życia.",
+	FISHROE         = "Ikra rybna może być uzyskana poprzez umieszczenie wybranego rodzaju ryby w hodowli ryb.",
+	FISHFARMPLOT    = "Hodowla ryb może być używana do rozmnażania ryb w celu uzyskania ikry i potomstwa.",
+	FISHFARMPLOT2   = "Każda ryba ma swoje własne preferencje w hodowli ryb, takie jak: pora dnia, faza księżyca, pora roku i lokalizacja.",
+	OCEANHUNTS      = "\"Podejrzane bąbelki pojawiają się po całym oceanie. Ciekawe, co znajdę, jeśli będę za nimi podążać?\" -W.",
+	OCTOPUSTRADER   = "\"Wczoraj podczas żeglugi znalazłem samotną ośmiornicę śpiącą w pobliżu grupy morskich skał. Ciekawe, czy ma coś użytecznego do wymiany?\" -W.",
+	OCTOPUSTRADER2  = "Yaarctopus wymienia przedmioty w zamian za ryby i niektóre potrawy z ryb!",
+	HULLBREAKER     = "Niektóre morskie stworzenia, takie jak mieczniki, puffernauty i wieloryby, mogą uszkodzić kadłub łodzi, jeśli ich ataki będą udane.",
+	CURSEREMOVER    = "\"Słyszałem, że na Wyspie Moon Quay jest potrawa, która potrafi usunąć klątwy! Muszę jej spróbować, przepis mówi, że wymaga jakiegoś egzotycznego homara...\" -W.",
+	BRAINMETTERSOUP = "\"Po spróbowaniu tej głupiej zupy nagle czuję się mądrzejszy. Już nie potrzebuję stacji rzemieślniczych.\" -W.",
+	MALBATROSSFOOD  = "Zaczarowana karma dla ryb może być wrzucona do oceanu, aby przyzwać groźnego przeciwnika znanego jako Malbatross.",
+	PACKIMBAGGIMS   = "Ulubiony towarzysz wszystkich powraca! Jego ukochany przedmiot można znaleźć na Nadmorskiej Wyspie.",
+	PACKIMBAGGIMS2  = "Packim Baggims może zostać przemieniony po nakarmieniu go ciężkimi rybami oceanicznymi lub spalonymi rybami słonecznymi.",
+	PACKIMBAGGIMS3  = "Ognisty Packim Baggims może natychmiast ugotować dowolne jedzenie znajdujące się w jego wnętrzu. Potrafi także spalać drewniane przedmioty, zamieniając je w węgiel drzewny.",
+	OTTERDENS       = "Istnieje szansa, że nory Marotterów pojawią się na końcu oceanicznego polowania podczas deszczu.",
+	SHARKBOIREWARD  = "Frostjaw pragnie wykwintnego posiłku i nagrodzi tych, którzy spełnią jego prośbę.",
+	GHOSTPIRATE     = "Odkrywanie wraków dawnych załóg podczas pełni księżyca może być bardzo niebezpieczne, ponieważ w ich pobliżu można spotkać duchy piratów. Straszne!",
+	HERMITWOBSTER   = "Wobstery pustelnicze można znaleźć tylko na wyspie Moon Quay.",
 }
 
 for k, v in pairs(LOADINGTIPS) do
