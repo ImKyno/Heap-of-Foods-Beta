@@ -6,7 +6,7 @@ local STRINGS =
 {
 	NAME = 
 	{
-		"Heap of Foods - Beta",
+		"Heap of Foods - Beta Branch",
 		zh  = "更多料理 (Heap of Foods)",
 		zht = "食物堆積 (Heap of Foods)",
 		pt  = "Amontoado de Comidas (Heap of Foods)",
@@ -22,12 +22,12 @@ local STRINGS =
 󰀠 Also features brand new Biomes somewhere in the Ocean!
 󰀦 Complete Recipe Sheet on the Mod Page!
 
-󰀏 Featuring the Seaside Summer Update:
-Seaside Island welcomes a new merchant! Assisted by a familiar survivor, he has opened a one-of-a-kind trading post. Specializing in rare items and ingredients that are otherwise incredibly difficult to acquire and even some you won't find anywhere else. 
+󰀏 Featuring the Gone Fishing Update:
+Cast your line, set your sail, and dive into the ocean! A wave of new aquatic creatures awaits, whether you're a seasoned angler or just an apprentice there's always something to catch!
 
-Make sure to check his wares every now and then to see what he got to offer. As his inventory is always changing!
+Build yourself a Fish Hatchery to raise your own fish at the comfort of your base, explore the ocean in search of elusive creatures, take part in Ocean Hunts and find a friendly new companion.
 
-󰀌 Mod Version: 3.0-B
+󰀌 Beta Branch Version: 1.5-B
 󰀧 Update: Gone Fishing
 ]],
 		zh  =
@@ -1454,7 +1454,7 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "3.0-B"
+version                      = "1.5-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 
@@ -1468,8 +1468,8 @@ client_only_mod              = false
 
 server_filter_tags           = {"Heap of Foods", "HOF", "Cooking", "Entertainment", "Kyno"}
 
-icon                         = "ModiconHOF.tex"
-icon_atlas                   = "ModiconHOF.xml"
+icon                         = "ModiconHOFB.tex"
+icon_atlas                   = "ModiconHOFB.xml"
 
 local NONE_LABEL             = ""
 local NONE_OPTIONS           = 

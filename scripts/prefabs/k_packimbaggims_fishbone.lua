@@ -185,7 +185,7 @@ local function fn()
 	inst:AddTag("packimbaggims_fishbone")
 	inst:AddTag("irreplaceable")
 	inst:AddTag("nonpotatable")
-	inst:AddTag("dead_fish_item")
+	inst:AddTag("spoiled_fish")
 
 	inst.AnimState:SetBank("kyno_packimbaggims_fishbone")
 	inst.AnimState:SetBuild("kyno_packimbaggims_fishbone")

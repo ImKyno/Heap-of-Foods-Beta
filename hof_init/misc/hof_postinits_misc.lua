@@ -24,7 +24,7 @@ AddPrefabPostInit("wilson", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("agedroe_oceanfish_sturgeon", TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("gorge_steak_frites", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("wine_dragonfruit", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
