@@ -8,6 +8,7 @@ local weighted_treasure_contents = UpvalueHacker.GetUpvalue(messagebottletreasur
 -- New loots for Sunken Chests.
 local hof_presets =
 {
+	--[[ -- Cookwares are no longer just decorative, don't want them for free.
 	hof_presets_cook =
 	{
 		guaranteed_loot = 
@@ -26,6 +27,7 @@ local hof_presets =
 
 		preset_weight = 1,
 	},
+	]]--
 	
 	hof_presets_tool =
 	{
@@ -91,6 +93,7 @@ local hof_presets =
 			kyno_meatcan = 1, 
 			kyno_beancan = 1,
 			kyno_tunacan = 1,
+			kyno_antchovycan = 1,
 		},
 	
 		randomly_selected_loot =
@@ -152,6 +155,25 @@ local hof_presets =
 		},
 
 		preset_weight = 1,	
+	},
+	
+	hof_presets_malbatross =
+	{
+		guaranteed_loot = 
+		{ 
+			kyno_malbatrossfood_blueprint = 1, 
+			malbatross_feather = {1, 8},
+			spoiled_fish = {1, 5},
+			kyno_mysterymeat = {1, 3},
+		},
+	
+		randomly_selected_loot =
+		{
+			{ oceanfishingrod = .50 },
+			{ boatpatch = .33 },
+		},
+
+		preset_weight = 1,
 	},
 }
 

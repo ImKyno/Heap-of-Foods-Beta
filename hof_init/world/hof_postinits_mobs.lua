@@ -5,8 +5,10 @@ local resolvefilepath = _G.resolvefilepath
 local ACTIONS         = _G.ACTIONS
 local STRINGS         = _G.STRINGS
 local SpawnPrefab     = _G.SpawnPrefab
+local OceanFishDef    = require("prefabs/oceanfishdef")
 local UpvalueHacker   = require("hof_upvaluehacker")
 
+require("constants")
 require("hof_util")
 
 local DF_COFFEE = GetModConfigData("COFFEEDROPRATE")
@@ -61,19 +63,49 @@ AddPrefabPostInit("babybeefalo", function(inst)
     inst.components.lootdropper:AddChanceLoot("kyno_beanbugs", 0.10)
 end)
 
--- Catcoon Drops Gummy Slug
+-- Catcoon Drops Gummy Slug / Mystery Meat.
 AddPrefabPostInit("catcoon", function(inst)
+	local _OnGetItemFromPlayer
+
+	local function OnGetItemFromPlayer(self, giver, item)
+		if self.components.sleeper:IsAsleep() then
+			self.components.sleeper:WakeUp()
+		end
+		
+		if self.components.combat.target == giver then
+			self.components.combat:SetTarget(nil)
+			self.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/pickup")
+		end
+			
+		if item:HasTag("fish") then
+			if not self.sg:HasStateTag("busy") then
+				self:FacePoint(giver.Transform:GetWorldPosition())
+				self.sg:GoToState("pawground2")
+			end
+		end
+	
+		item:Remove()
+		
+		return _OnGetItemFromPlayer(self, giver, item)
+	end
+
     if not _G.TheWorld.ismastersim then
         return inst
     end
+	
+	if inst.components.trader ~= nil then
+		_OnGetItemFromPlayer = inst.components.trader.onaccept
+		inst.components.trader.onaccept = OnGetItemFromPlayer
+	end
 
     inst.components.lootdropper:AddChanceLoot("kyno_gummybug", 0.35)
 end)
 
+--[[
 -- Some Birds Spawns Roe Periodically.
 AddPrefabPostInit("puffin", function(inst)
     if inst.components.periodicspawner ~= nil then
-        inst.components.periodicspawner:SetPrefab("kyno_roe")
+        inst.components.periodicspawner:SetPrefab("kyno_roe_pondfish")
         inst.components.periodicspawner:SetDensityInRange(20, 2)
         inst.components.periodicspawner:SetMinimumSpacing(8)
     end
@@ -81,7 +113,7 @@ end)
 
 AddPrefabPostInit("canary", function(inst)
     if inst.components.periodicspawner ~= nil then
-        inst.components.periodicspawner:SetPrefab("kyno_roe")
+        inst.components.periodicspawner:SetPrefab("kyno_roe_pondfish")
         inst.components.periodicspawner:SetDensityInRange(20, 2)
         inst.components.periodicspawner:SetMinimumSpacing(8)
     end
@@ -91,12 +123,13 @@ end)
 if TUNING.HOF_IS_TAP_ENABLED then
     AddPrefabPostInit("cormorant", function(inst)
         if inst.components.periodicspawner ~= nil then
-            inst.components.periodicspawner:SetPrefab("kyno_roe")
+            inst.components.periodicspawner:SetPrefab("kyno_roe_pondfish")
             inst.components.periodicspawner:SetDensityInRange(20, 2)
             inst.components.periodicspawner:SetMinimumSpacing(8)
         end
     end)
 end
+]]--
 
 -- Prime Mate has very small chance of dropping Pirate's Rum
 AddPrefabPostInit("prime_mate", function(inst)
@@ -474,6 +507,194 @@ local function ScionPostInit(inst)
 end
 
 AddPrefabPostInit("alterguardian_phase4_lunarrift", ScionPostInit)
+
+-- Frostjaw gives Fish Hatchery Foundation Kit blueprint and Special rewards.
+local function SharkBoiPostInit(inst)
+	local function CustomAcceptTest(inst, item)
+		if item:HasTag("sharkboifood") then
+			return not inst.sunkenchestgiven
+		end
+		
+		return inst.pendingreward == nil
+		and inst.stock > 0
+		and item:HasTag("oceanfish")
+		and item.components.weighable
+		and item.components.weighable:GetWeight() >= 150
+	end
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	local _OnSave = inst.OnSave
+	local _OnLoad = inst.OnLoad
+
+	inst.OnSave = function(inst, data)
+		if _OnSave ~= nil then
+			_OnSave(inst, data)
+		end
+		
+		data.blueprintgiven = inst.blueprintgiven or nil
+		data.sunkenchestgiven = inst.sunkenchestgiven or nil
+	end
+
+	inst.OnLoad = function(inst, data)
+		if _OnLoad ~= nil then
+			_OnLoad(inst, data)
+		end
+		
+		if data ~= nil then
+			inst.blueprintgiven = data.blueprintgiven
+			inst.sunkenchestgiven = data.sunkenchestgiven
+		end
+	end
+
+	if inst.GiveReward ~= nil then
+		local _GiveReward = inst.GiveReward
+
+		inst.GiveReward = function(inst, target)
+			_GiveReward(inst, target)
+
+			if target == nil or not target:IsValid() then
+				return
+			end
+			
+			if inst.blueprintgiven then
+				return
+			end
+
+			local blueprint = "kyno_fishfarmplot_kit_blueprint"
+
+			if inst.sketchgiven == nil or inst.blueprintgiven == nil then
+				if IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST) then
+					local gift = SpawnPrefab("gift")
+
+					gift.components.unwrappable:WrapItems({
+						blueprint,
+						"oceanfishinglure_hermit_snow",
+						GetRandomLightWinterOrnament(),
+						"winter_food"..math.random(NUM_WINTERFOOD),
+					})
+
+					_G.LaunchAt(gift, inst, target, 1.5, 2, 1.25)
+				else
+					local loot = SpawnPrefab(blueprint)
+				
+					if loot ~= nil then
+						_G.LaunchAt(loot, inst, target, 1.5, 2, 1.25)
+					end
+				end
+				
+				inst.blueprintgiven = true
+			end
+		end
+	end
+
+	if inst.MakeTrader ~= nil then
+		local _MakeTrader = inst.MakeTrader
+
+		inst.MakeTrader = function(inst, ...)
+			local result = _MakeTrader(inst, ...)
+			local trader = inst.components.trader
+			
+			if trader ~= nil and not trader._modded then
+				trader._modded = true
+				trader:SetAcceptTest(CustomAcceptTest)
+
+				local _onaccept = trader.onaccept
+				trader.onaccept = function(inst, giver, item, ...)
+					if inst.sunkenchestgiven then
+						if _onaccept and not item:HasTag("sharkboifood") then
+							_onaccept(inst, giver, item, ...)
+						end
+						
+						return
+					end
+					
+					if item:HasTag("sharkboifood") then
+						local chest = SpawnPrefab("sunkenchest")
+						
+						if chest ~= nil then
+							local x, y, z = inst.Transform:GetWorldPosition()
+							chest.Transform:SetPosition(x, y, z)
+							
+							chest:AddComponent("scenariorunner")
+							chest.components.scenariorunner:SetScript("sunkenchest_sharkboi")
+							chest.components.scenariorunner:Run()
+							
+							_G.LaunchAt(chest, inst, giver, 2, 2, 2.25)
+							inst.SoundEmitter:PlaySound("dontstarve/wilson/equip_item_gold")
+						end
+
+						inst.sunkenchestgiven = true
+						return
+					end
+
+					if _onaccept ~= nil then
+						_onaccept(inst, giver, item, ...)
+					end
+				end
+			end
+
+			return result
+		end
+	end
+end
+
+AddPrefabPostInit("sharkboi", SharkBoiPostInit)
+
+-- New fish that can be stored inside Tin Fishing' Bin.
+local fishes =
+{
+	"fish",
+	"eel",
+	"pondfish",
+	"pondeel",
+}
+
+local function FishPostInit(inst)
+	inst:AddTag("fish_box_valid")
+end
+
+for k, v in pairs(fishes) do
+	AddPrefabPostInit(v, FishPostInit)
+end
+
+-- Trappable for Ocean Trap.
+-- "oceanfish" and "smalloceancreature" tags are inconsistent.
+local function OceanFishPostInit(inst)
+	inst:AddTag("smalloceanfish")
+	inst:AddTag("canbetrapped")
+end
+
+for _, fish_def in pairs(OceanFishDef.fish) do
+	AddPrefabPostInit(fish_def.prefab, OceanFishPostInit)
+end
+
+local trappable_oceancreatures =
+{
+	"cookiecutter",
+	"wobster_sheller",
+	"wobster_moonglass",
+}
+
+local function TrappableOceanCreaturePostInit(inst)
+	inst:AddTag("smalloceanfish")
+	inst:AddTag("canbetrapped")
+end
+
+for k, v in pairs(trappable_oceancreatures) do
+	AddPrefabPostInit(v, TrappableOceanCreaturePostInit)
+end
+
+-- Items that can be turned to charcoal by Fire Packim Baggims.
+local function PackimBaggimsFireItemsPostInit(inst)
+	inst:AddTag("charcoal_source")
+end
+
+for k, v in pairs(TUNING.KYNO_PACKIMBAGGIMS_CHARCOAL_ITEMS) do
+	AddPrefabPostInit(v, PackimBaggimsFireItemsPostInit)
+end
 
 -- Leonidas remember me to not put LootTables inside postinit again, otherwise it will 
 -- increase the drop by +1 each time the entity spawns.

@@ -3,41 +3,62 @@ local require       = _G.require
 local UpvalueHacker = require("hof_upvaluehacker")
 
 -- New foods that can be dried on Drying Racks.
-local dryables =
+local dryables     =
 {
-	red_cap    =
+	red_cap        =
 	{
-		raw    = "red_cap",
-		dried  = "kyno_red_cap_dried",
-		build  = "kyno_meatrack_red_cap",
+		raw        = "red_cap",
+		dried      = "kyno_red_cap_dried",
+		build      = "kyno_meatrack_red_cap",
 	},
 	
-	green_cap  =
+	green_cap      =
 	{
-		raw    = "green_cap",
-		dried  = "kyno_green_cap_dried",
-		build  = "kyno_meatrack_green_cap",
+		raw        = "green_cap",
+		dried      = "kyno_green_cap_dried",
+		build      = "kyno_meatrack_green_cap",
 	},
 	
-	blue_cap   =
+	blue_cap       =
 	{
-		raw    = "blue_cap",
-		dried  = "kyno_blue_cap_dried",
-		build  = "kyno_meatrack_blue_cap",
+		raw        = "blue_cap",
+		dried      = "kyno_blue_cap_dried",
+		build      = "kyno_meatrack_blue_cap",
 	},
 	
-	moon_cap   =
+	moon_cap       =
 	{
-		raw    = "moon_cap",
-		dried  = "kyno_moon_cap_dried",
-		build  = "kyno_meatrack_moon_cap",
+		raw        = "moon_cap",
+		dried      = "kyno_moon_cap_dried",
+		build      = "kyno_meatrack_moon_cap",
 	},
 	
-	plantmeat  =
+	plantmeat      =
 	{
-		raw    = "plantmeat",
-		dried  = "kyno_plantmeat_dried",
-		build  = "kyno_meatrack_plantmeat",
+		raw        = "plantmeat",
+		dried      = "kyno_plantmeat_dried",
+		build      = "kyno_meatrack_plantmeat",
+	},
+	
+	fishmeat_small =
+	{
+		raw        = "fishmeat_small",
+		dried      = "kyno_fishmeat_small_dried",
+		build      = "kyno_meatrack_fishmeat",
+	},
+	
+	fishmeat       =
+	{
+		raw        = "fishmeat",
+		dried      = "kyno_fishmeat_dried",
+		build      = "kyno_meatrack_fishmeat",
+	},
+	
+	eel            =
+	{
+		raw        = "eel",
+		dried      = "kyno_fishmeat_dried",
+		build      = "kyno_meatrack_fishmeat",
 	},
 }
 

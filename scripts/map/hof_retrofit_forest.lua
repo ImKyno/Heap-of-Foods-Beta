@@ -170,8 +170,8 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 				local world_top, world_left = left * 4 - (map_width * 0.5 * 4), top * 4 - (map_height * 0.5 * 4)
 				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
 				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable",
-					"oceantree_pillar", "watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal",
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", 
+					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
 				})
 				
 				if ents_to_remove ~= nil then
@@ -299,8 +299,8 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 				local world_top, world_left = left * 4 - (map_width * 0.5 * 4), top * 4 - (map_height * 0.5 * 4)
 				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
 				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable",
-					"oceantree_pillar", "watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal",
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", 
+					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
 				})
 				
 				if ents_to_remove ~= nil then
@@ -445,8 +445,8 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 
 				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
 				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable",
-					"oceantree_pillar", "watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal",
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", 
+					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
 				})
 				
 				if ents_to_remove ~= nil then
@@ -897,6 +897,532 @@ local function HofRetrofitting_DinaMemorial(map, savedata)
 	end
 end
 
+local function HofRetrofitting_OctopusKingShop(map, savedata)
+	local topology = savedata.map.topology
+	local map_width = savedata.map.width
+	local map_height = savedata.map.height
+	local entities = savedata.ents
+
+	local add_fn = 
+	{
+		fn = function(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
+			local x = (points_x[current_pos_idx] - width/2.0) * TILE_SCALE
+			local y = (points_y[current_pos_idx] - height/2.0) * TILE_SCALE
+				
+			x = math.floor(x * 100) / 100.0
+			y = math.floor(y * 100) / 100.0
+				
+			if entitiesOut[prefab] == nil then
+				entitiesOut[prefab] = {}
+			end
+				
+			local save_data = {x=x, z=y}
+				
+			if prefab_data then
+				if prefab_data.data then
+					if type(prefab_data.data) == "function" then
+						save_data["data"] = prefab_data.data()
+					else
+						save_data["data"] = prefab_data.data
+					end
+				end
+					
+				if prefab_data.id then
+					save_data["id"] = prefab_data.id
+				end
+					
+				if prefab_data.scenario then
+					save_data["scenario"] = prefab_data.scenario
+				end
+			end
+				
+			table.insert(entitiesOut[prefab], save_data)
+		end,
+	
+		args = { entitiesOut = entities, width = map_width, height = map_height, rand_offset = false, debug_prefab_list = nil }
+	}
+
+	local VALID_TILES = 
+	{
+		[WORLD_TILES.OCEAN_SWELL] = true,
+		[WORLD_TILES.OCEAN_ROUGH] = true,
+		[WORLD_TILES.OCEAN_HAZARDOUS] = true,
+	}
+	
+	local function is_valid_ocean(_left, _top, tile_size)
+		for x = 0, tile_size do
+			for y = 0, tile_size do
+				local tile = map:GetTile(_left + x, _top + y)
+				
+				if not VALID_TILES[tile] then
+					return false
+				end
+			end
+		end
+		
+		return true
+	end
+
+	local function TryToAddLayout(name, topology_delta, isvalidareafn)
+		local layout = obj_layout.LayoutForDefinition(name)
+		local tile_size = #layout.ground
+
+		topology_delta = topology_delta or 1
+
+		local candidtates = {}
+		local foundarea = false
+		local num_steps = math.floor((map_width - tile_size) / tile_size)
+		
+		for x = 0, num_steps do
+			for y = 0, num_steps do
+				local left = 8 + (x > 0 and ((x * math.floor(map_width / num_steps)) - tile_size - 16) or 0)
+				local top  = 8 + (y > 0 and ((y * math.floor(map_height / num_steps)) - tile_size - 16) or 0)
+				
+				if isvalidareafn(left, top, tile_size) then
+					table.insert(candidtates, {top = top, left = left})
+				end
+			end
+		end
+		
+		print("   " ..tostring(#candidtates) .. " candidtate locations")
+
+		if #candidtates > 0 then
+			local world_size = (tile_size + (topology_delta*2))*4
+
+			shuffleArray(candidtates)
+			
+			for _, candidtate in ipairs(candidtates) do
+				local top, left = candidtates[1].top, candidtates[1].left
+				local world_top, world_left = (left-topology_delta)*4 - (map_width * 0.5 * 4), (top-topology_delta)*4 - (map_height * 0.5 * 4)
+
+				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
+				{
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", 
+					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
+				})
+				
+				if ents_to_remove ~= nil then
+					print("   Removed " .. tostring(#ents_to_remove) .. " entities for static layout:")
+					
+					for i = #ents_to_remove, 1, -1 do
+						print ("   - " .. tostring(ents_to_remove[i].prefab) .. " " )
+						table.remove(savedata.ents[ents_to_remove[i].prefab], ents_to_remove[i].index)
+					end
+
+					obj_layout.Place({left, top}, name, add_fn, nil, map)
+					
+					if layout.add_topology ~= nil then
+						AddSquareTopology(topology, world_top, world_left, world_size, layout.add_topology.room_id, layout.add_topology.tags)
+					end
+
+					return true
+				end
+			end
+		end
+		
+		return false
+	end
+
+	local success = TryToAddLayout("OctopusKingShop", 0, is_valid_ocean)
+
+	if success then
+		print("Retrofitting for Heap of Foods Mod - Added Yaarctopus Trading Post to the world.")
+	else
+		print("Retrofitting for Heap of Foods Mod - Failed to add Yaarctopus Trading Post to the world!")
+	end
+end
+
+local function HofRetrofitting_JellyfishSpawners(map, savedata)
+	local PREFABS_DATA = 
+	{
+		{
+			prefab = "kyno_jellyfish_spawner",
+			max_to_spawn = 25,
+			min_distance = 40,
+			
+			valid_tiles = 
+			{
+				WORLD_TILES.OCEAN_COASTAL,
+				WORLD_TILES.OCEAN_SWELL,
+				WORLD_TILES.OCEAN_ROUGH,
+			},
+		},
+		{
+			prefab = "kyno_jellyfish_rainbow_spawner",
+			max_to_spawn = 15,
+			min_distance = 40,
+			
+			valid_tiles = 
+			{
+				WORLD_TILES.OCEAN_SWELL,
+				WORLD_TILES.OCEAN_ROUGH,
+				WORLD_TILES.OCEAN_HAZARDOUS,
+			},
+		},
+	}
+
+	local function IsValidOceanTile(tile, valid_tiles)
+		for _, valid in ipairs(valid_tiles) do
+			if tile == valid then
+				return true
+			end
+		end
+		
+		return false
+	end
+
+	local function IsFarFromOthers(x, z, points, min_dist)
+		for _, p in ipairs(points) do
+			if VecUtil_LengthSq(p.x - x, p.z - z) < (min_dist * min_dist) then
+				return false
+			end
+		end
+		
+		return true
+	end
+
+	local width = savedata.map.width
+	local height = savedata.map.height
+	local entities = savedata.ents
+
+	for _, data in ipairs(PREFABS_DATA) do
+		local prefab = data.prefab
+		local max_to_spawn = data.max_to_spawn
+		local min_distance = data.min_distance
+		local valid_tiles = data.valid_tiles
+		local valid_positions = {}
+		local attempts = 0
+		local max_attempts = max_to_spawn * 50
+
+		print(string.format("Retrofitting for Heap of Foods Mod - Placing '%s' randomly at the ocean.", prefab))
+
+		while #valid_positions < max_to_spawn and attempts < max_attempts do
+			attempts = attempts + 1
+
+			local x = math.random(1, width)
+			local y = math.random(1, height)
+			local tile = map:GetTile(x, y)
+
+			if IsValidOceanTile(tile, valid_tiles) then
+				local wx = (x - width / 2) * TILE_SCALE
+				local wz = (y - height / 2) * TILE_SCALE
+
+				if IsFarFromOthers(wx, wz, valid_positions, min_distance) then
+					table.insert(valid_positions, { x = wx, z = wz })
+				end
+			end
+		end
+
+		print(string.format("Retrofitting for Heap of Foods Mod - %d valid positions found '%s' after %d attempts.", #valid_positions, prefab, attempts))
+
+		if entities[prefab] == nil then
+			entities[prefab] = {}
+		end
+
+		for _, pos in ipairs(valid_positions) do
+			table.insert(entities[prefab], { x = pos.x, z = pos.z })
+		end
+
+		print(string.format("Retrofitting for Heap of Foods Mod - Added %d '%s' to the world.", #valid_positions, prefab))
+	end
+end
+
+local function HofRetrofitting_DogfishSpawners(map, savedata)
+	local prefab_to_spawn = "kyno_dogfish_spawner"
+	local max_to_spawn = 30
+	local min_distance = 60
+
+	local VALID_TILES =
+	{
+		WORLD_TILES.OCEAN_COASTAL,
+		WORLD_TILES.OCEAN_SWELL,
+		WORLD_TILES.OCEAN_ROUGH,
+		WORLD_TILES.OCEAN_HAZARDOUS,
+	}
+
+	local function IsValidOceanTile(tile)
+		for _, valid in ipairs(VALID_TILES) do
+			if tile == valid then
+				return true
+			end
+		end
+		
+		return false
+	end
+
+	local function IsFarFromOthers(x, z, points, min_dist)
+		for _, p in ipairs(points) do
+			if VecUtil_LengthSq(p.x - x, p.z - z) < (min_dist * min_dist) then
+				return false
+			end
+		end
+		
+		return true
+	end
+
+	local width = savedata.map.width
+	local height = savedata.map.height
+	local entities = savedata.ents
+
+	local valid_positions = {}
+	local attempts = 0
+	local max_attempts = max_to_spawn * 50
+
+	print("Retrofitting for Heap of Foods Mod - Placing '".. prefab_to_spawn .. "' randomly at the ocean.")
+
+	while #valid_positions < max_to_spawn and attempts < max_attempts do
+		attempts = attempts + 1
+
+		local x = math.random(1, width)
+		local y = math.random(1, height)
+		local tile = map:GetTile(x, y)
+
+		if IsValidOceanTile(tile) then
+			local wx = (x - width / 2) * TILE_SCALE
+			local wz = (y - height / 2) * TILE_SCALE
+
+			if IsFarFromOthers(wx, wz, valid_positions, min_distance) then
+				table.insert(valid_positions, {x = wx, z = wz})
+			end
+		end
+	end
+
+	print(string.format("Retrofitting for Heap of Foods Mod - %d valid positions found after %d attempts.", #valid_positions, attempts))
+
+	if entities[prefab_to_spawn] == nil then
+		entities[prefab_to_spawn] = {}
+	end
+
+	for _, pos in ipairs(valid_positions) do
+		table.insert(entities[prefab_to_spawn], { x = pos.x, z = pos.z })
+	end
+
+	print(string.format("Retrofitting for Heap of Foods Mod - Added %d '%s' to the world.", #valid_positions, prefab_to_spawn))
+end
+
+local function HofRetrofitting_PufferSpawners(map, savedata)
+	local prefab_to_spawn = "kyno_puffermonster_spawner"
+	local max_to_spawn = 30
+	local min_distance = 60
+
+	local VALID_TILES =
+	{
+		WORLD_TILES.OCEAN_COASTAL,
+		WORLD_TILES.OCEAN_SWELL,
+		WORLD_TILES.OCEAN_ROUGH,
+		WORLD_TILES.OCEAN_HAZARDOUS,
+	}
+
+	local function IsValidOceanTile(tile)
+		for _, valid in ipairs(VALID_TILES) do
+			if tile == valid then
+				return true
+			end
+		end
+		
+		return false
+	end
+
+	local function IsFarFromOthers(x, z, points, min_dist)
+		for _, p in ipairs(points) do
+			if VecUtil_LengthSq(p.x - x, p.z - z) < (min_dist * min_dist) then
+				return false
+			end
+		end
+		
+		return true
+	end
+
+	local width = savedata.map.width
+	local height = savedata.map.height
+	local entities = savedata.ents
+
+	local valid_positions = {}
+	local attempts = 0
+	local max_attempts = max_to_spawn * 50
+
+	print("Retrofitting for Heap of Foods Mod - Placing '".. prefab_to_spawn .. "' randomly at the ocean.")
+
+	while #valid_positions < max_to_spawn and attempts < max_attempts do
+		attempts = attempts + 1
+
+		local x = math.random(1, width)
+		local y = math.random(1, height)
+		local tile = map:GetTile(x, y)
+
+		if IsValidOceanTile(tile) then
+			local wx = (x - width / 2) * TILE_SCALE
+			local wz = (y - height / 2) * TILE_SCALE
+
+			if IsFarFromOthers(wx, wz, valid_positions, min_distance) then
+				table.insert(valid_positions, {x = wx, z = wz})
+			end
+		end
+	end
+
+	print(string.format("Retrofitting for Heap of Foods Mod - %d valid positions found after %d attempts.", #valid_positions, attempts))
+
+	if entities[prefab_to_spawn] == nil then
+		entities[prefab_to_spawn] = {}
+	end
+
+	for _, pos in ipairs(valid_positions) do
+		table.insert(entities[prefab_to_spawn], { x = pos.x, z = pos.z })
+	end
+
+	print(string.format("Retrofitting for Heap of Foods Mod - Added %d '%s' to the world.", #valid_positions, prefab_to_spawn))
+end
+
+local function HofRetrofitting_PackimBaggims(map, savedata)
+	local VALID_ROOMS =
+	{
+		"MeadowArea",
+		"MeadowIsland",
+	}
+
+	local topology = savedata.map.topology
+	local map_width = savedata.map.width
+	local map_height = savedata.map.height
+	local entities = savedata.ents
+
+	local prefab_to_spawn = "kyno_packimbaggims_fishbone"
+	
+	local candidate_nodes = {}
+	
+	for node_index, id_string in ipairs(topology.ids) do
+		for _, bg_string in ipairs(VALID_ROOMS) do
+			if id_string:find(bg_string) then
+				table.insert(candidate_nodes, topology.nodes[node_index])
+			end
+		end
+	end
+
+	if #candidate_nodes == 0 then
+		print("Retrofitting for Heap of Foods Mod - Couldn't find any valid nodes!")
+		return
+	end
+
+	local node = candidate_nodes[math.random(#candidate_nodes)]
+	
+	if not node then
+		print("Retrofitting for Heap of Foods Mod - Couldn't pick a valid node!")
+		return
+	end
+
+	local wx = node.x
+	local wy = node.y
+
+	if entities[prefab_to_spawn] == nil then
+		entities[prefab_to_spawn] = {}
+	end
+
+	table.insert(entities[prefab_to_spawn], { x = wx, z = wy })
+	print(string.format("Retrofitting for Heap of Foods Mod - Spawned '%s' (Fishbone) at (%.2f, %.2f)", prefab_to_spawn, wx, wy))
+end
+
+local function HofRetrofitting_WobsterMonkeyIsland(map, savedata)
+	local TARGET_PREFAB = "monkeyqueen"
+	local SPAWN_PREFAB  = "kyno_wobster_den_monkeyisland"
+	local RADIUS        = 60
+	local MAX_TO_SPAWN  = 5
+	local MAX_ATTEMPTS  = 50
+	local SAFE_DOCK_DIST = 4
+	
+	local VALID_TILES = 
+	{
+		WORLD_TILES.OCEAN_COASTAL,
+		WORLD_TILES.OCEAN_SWELL,
+		WORLD_TILES.OCEAN_ROUGH,
+		WORLD_TILES.OCEAN_HAZARDOUS,
+	}
+
+	local function IsValidTile(tile)
+		for _, valid in ipairs(VALID_TILES) do
+			if tile == valid then
+				return true
+			end
+		end
+		
+		return false
+	end
+
+	local width = savedata.map.width
+	local height = savedata.map.height
+	local entities = savedata.ents
+	
+	local dock_positions = {}
+	local step = 2
+	
+	for y = 1, height, step do
+		for x = 1, width, step do
+			if map:GetTile(x, y) == WORLD_TILES.MONKEY_DOCK then
+				local wx = (x - width / 2) * TILE_SCALE
+				local wz = (y - height / 2) * TILE_SCALE
+				table.insert(dock_positions, { x = wx, z = wz })
+			end
+		end
+	end
+	
+	print(string.format("[Retrofit] Encontrados %d tiles MONKEY_DOCK no mapa.", #dock_positions))
+
+	local function IsFarFromDocks(x, z)
+		for _, dock in ipairs(dock_positions) do
+			if VecUtil_LengthSq(dock.x - x, dock.z - z) < (SAFE_DOCK_DIST * SAFE_DOCK_DIST) then
+				return false
+			end
+		end
+		
+		return true
+	end
+
+	local targets = entities[TARGET_PREFAB]
+
+	if not targets or #targets == 0 then
+		print(string.format("[Retrofit] Nenhum '%s' encontrado no mundo!", TARGET_PREFAB))
+		return
+	end
+
+	print(string.format("[Retrofit] Encontradas %d instâncias de '%s'", #targets, TARGET_PREFAB))
+
+	if entities[SPAWN_PREFAB] == nil then
+		entities[SPAWN_PREFAB] = {}
+	end
+
+	local total_spawned = 0
+
+	for _, target in ipairs(targets) do
+		if total_spawned >= MAX_TO_SPAWN then
+			break
+		end
+
+		local base_x, base_z = target.x, target.z
+
+		for i = 1, MAX_ATTEMPTS do
+			if total_spawned >= MAX_TO_SPAWN then
+				break
+			end
+
+			local angle = math.random() * 2 * PI
+			local dist = math.random() * RADIUS
+			local wx = base_x + math.cos(angle) * dist
+			local wz = base_z + math.sin(angle) * dist
+
+			local tile_x = math.floor(wx / TILE_SCALE + width / 2)
+			local tile_y = math.floor(wz / TILE_SCALE + height / 2)
+			local tile = map:GetTile(tile_x, tile_y)
+
+			if IsValidTile(tile) and IsFarFromDocks(wx, wz) then
+				table.insert(entities[SPAWN_PREFAB], { x = wx, z = wz })
+				total_spawned = total_spawned + 1
+				
+				print(string.format("[Retrofit] '%s' colocado próximo de '%s' (%.1f, %.1f)", SPAWN_PREFAB, TARGET_PREFAB, wx, wz))
+			end
+		end
+	end
+
+	print(string.format("[Retrofit] Retrofit finalizado: %d '%s' adicionados (seguros de docas).", total_spawned, SPAWN_PREFAB))
+end
+
 return 
 {
 	HofRetrofitting_SerenityIsland      = HofRetrofitting_SerenityIsland,
@@ -904,4 +1430,10 @@ return
 	HofRetrofitting_OceanSetpieces      = HofRetrofitting_OceanSetpieces,
 	HofRetrofitting_DeciduousForestShop = HofRetrofitting_DeciduousForestShop,
 	HofRetrofitting_DinaMemorial        = HofRetrofitting_DinaMemorial,
+	HofRetrofitting_OctopusKingShop     = HofRetrofitting_OctopusKingShop,
+	HofRetrofitting_JellyfishSpawners   = HofRetrofitting_JellyfishSpawners,
+	HofRetrofitting_DogfishSpawners     = HofRetrofitting_DogfishSpawners,
+	HofRetrofitting_PufferSpawners      = HofRetrofitting_PufferSpawners,
+	HofRetrofitting_PackimBaggims       = HofRetrofitting_PackimBaggims,
+	HofRetrofitting_WobsterMonkeyIsland = HofRetrofitting_WobsterMonkeyIsland,
 }

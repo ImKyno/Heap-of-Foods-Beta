@@ -2,6 +2,7 @@ require("constants")
 require("componentutil")
 
 local HOF_FOODTYPES      = {}
+local HOF_FUELTYPES      = {}
 local HOF_NAUGHTY_VALUE  = {}
 local HOF_PICKABLE_FOODS = {}
 local HOF_PICKUP_SOUNDS  = {}
@@ -14,19 +15,33 @@ HOF_FOODTYPES    =
 	ALCOHOLIC    = "ALCOHOLIC",
 }
 
+-- New FUELTYPE for Fish Hatchery.
+HOF_FUELTYPES =
+{
+	FISHFOOD  = "FISHFOOD",
+}
+
 -- New NAUGHTINESS values for innocent creatures.
 HOF_NAUGHTY_VALUE                    =
 {
 	-- Mod creatures.
-	["kyno_chicken2"]                = 1,
-	["kyno_piko"]                    = 1,
-	["kyno_piko_orange"]             = 2,
-	["kingfisher"]                   = 2,
 	["toucan"]                       = 1,
 	["quagmire_pigeon"]              = 1,
 	["kyno_sugarfly"]                = 1,
+	["kyno_chicken2"]                = 1,
+	["kyno_jellyfish_ocean"]         = 1,
+	["kyno_jellyfish"]               = 1,
+	["kyno_piko"]                    = 1,
+	["kingfisher"]                   = 2,
+	["kyno_dogfish"]                 = 2,
+	["kyno_piko_orange"]             = 2,
+	["kyno_jellyfish_rainbow_ocean"] = 2,
+	["kyno_jellyfish_rainbow"]       = 2,
 	["kyno_pebblecrab"]              = 2,
 	["kyno_meadowisland_mermfisher"] = 3,
+	["kyno_swordfish"]               = 4,
+	["kyno_whale_white_ocean"]       = 6,
+	["kyno_whale_blue_ocean"]        = 7,
 	["kyno_meadowisland_seller"]     = 50, -- Wait, how did you kill Sammy?
 }
 
@@ -41,6 +56,7 @@ HOF_PICKABLE_FOODS      =
 	kyno_wheat          = true,
 	kyno_kokonut        = true,
 	kyno_banana         = true,
+	kyno_truffles       = true,
 }
 
 HOF_PICKUP_SOUNDS =
@@ -50,6 +66,10 @@ HOF_PICKUP_SOUNDS =
 
 for k, v in pairs(HOF_FOODTYPES) do
 	FOODTYPE[k] = v
+end
+
+for k, v in pairs(HOF_FUELTYPES) do
+	FUELTYPE[k] = v
 end
 
 for k, v in pairs(HOF_NAUGHTY_VALUE) do
@@ -63,16 +83,3 @@ end
 for k, v in pairs(HOF_PICKUP_SOUNDS) do
 	PICKUPSOUNDS[k] = v
 end
-
---[[
--- "New Category" for showing button on Scrapbook.
-local HOF_SCRAPBOOK_CATS = {}
-HOF_SCRAPBOOK_CATS =
-{
-	"artisangood",
-}
-
-for k, v in pairs(HOF_SCRAPBOOK_CATS) do
-	SCRAPBOOK_CATS[k] = v
-end
-]]--

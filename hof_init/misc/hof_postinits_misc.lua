@@ -24,7 +24,7 @@ AddPrefabPostInit("wilson", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("caviar", TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("gorge_steak_frites", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("wine_dragonfruit", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
@@ -445,7 +445,7 @@ AddComponentPostInit("fishingrod", function(self)
 			end)
 				
 			-- Random chance for one more extra fish.
-			if math.random() < .33 then
+			if math.random() < TUNING.KYNO_FISHINGBUFF_EXTRA_FISH_CHANCE then
 				local extraFish2 = SpawnPrefab(self.caughtfish.prefab)
 				
 				if self.fisherman ~= nil and extraFish2.components.weighable ~= nil then
@@ -468,6 +468,38 @@ AddComponentPostInit("fishingrod", function(self)
 
         return unpack(ret)
     end
+end)
+
+-- Antchovy special case that don't let them sink right after catching it.
+AddComponentPostInit("fishingrod", function(self)
+	local oldReel = self.Reel
+
+	function self:Reel(...)
+		local ret = {oldReel(self, ...)}
+		
+		if self.caughtfish ~= nil and self.fisherman ~= nil and self.fisherman.components.inventory ~= nil then
+			local fish = self.caughtfish
+
+			if fish:HasTag("antchovy") and fish.components.inventoryitem ~= nil then
+				fish.components.inventoryitem:SetSinks(false)
+
+				if self.fisherman.components.inventory:GiveItem(fish, nil, self.fisherman:GetPosition()) then
+					fish:DoTaskInTime(3, function(f)
+						if f:IsValid() and f.components.inventoryitem ~= nil then
+							f.components.inventoryitem:SetSinks(true)
+							f:AddTag("antchovy_sinkable")
+						end
+					end)
+				else
+					fish.Transform:SetPosition(self.fisherman.Transform:GetWorldPosition())
+					fish.components.inventoryitem:SetSinks(true)
+					fish:AddTag("antchovy_sinkable")
+				end
+			end
+		end
+
+		return unpack(ret)
+	end
 end)
 
 -- For trading and learning Recipe Cards.
@@ -802,6 +834,238 @@ local function SaddleShadowPostInit(inst)
 end
 
 AddPrefabPostInit("saddle_shadow_fx", SaddleShadowPostInit)
+
+-- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
+-- Correct animations for new ocean creatures inside Scale-o-Matic.
+local function TrophyScaleFishPostInit(inst)	
+	local function SetFish(inst, item_data)
+		if item_data then
+			if item_data.prefab == "kyno_jellyfish" then
+				inst.AnimState:SetBank("trophyscale_fish_kyno_jellyfish")
+				inst.AnimState:HideSymbol("eel_head")
+			elseif item_data.prefab == "kyno_jellyfish_rainbow" then
+				inst.AnimState:SetBank("trophyscale_fish_kyno_jellyfish_rainbow")
+				inst.AnimState:HideSymbol("eel_head")
+			elseif item_data.prefab == "wobster_monkeyisland_land" then
+				inst.AnimState:SetBank("trophyscale_fish_wobster_monkeyisland")
+				-- inst.AnimState:ClearOverrideBuild("lobster_build")
+				inst.AnimState:AddOverrideBuild("kyno_lobster_monkeyisland")
+				inst.AnimState:OverrideSymbol("claw_type1a", "kyno_lobster_monkeyisland", "claw_type3a")
+				inst.AnimState:OverrideSymbol("claw_type2b", "kyno_lobster_monkeyisland", "claw_type3b")
+				inst.AnimState:HideSymbol("claw_type2a")
+				
+				inst:DoTaskInTime(1, function(inst)
+					inst.AnimState:OverrideSymbol("claw_type2b", "kyno_lobster_monkeyisland", "claw_type3b")
+				end)
+			else
+				inst.AnimState:SetBank("scale_o_matic")
+			end
+
+			if item_data.prefab == "kyno_jellyfish_rainbow" then
+				local light = SpawnPrefab("kyno_jellyfish_rainbow_light")
+				light.components.spell:SetTarget(inst)
+				
+				if light:IsValid() then
+					if not light.components.spell.target then
+						light:Remove()
+					else
+						light.components.spell:StartSpell()
+						light:StopUpdatingComponent(light.components.spell)
+					end
+				end
+			else
+				if inst.wormlight then
+					inst.wormlight.components.spell:OnFinish()
+				end
+			end
+		end
+	end
+
+	local function OnNewTrophy(inst, data_old_and_new)
+		local data_new = data_old_and_new.new
+		SetFish(inst, data_new)
+	end
+
+	if not _G.TheWorld.ismastersim then
+		return
+	end
+
+	local _OnLoad = inst.OnLoad
+	
+	inst.OnLoad = function(inst, ...)
+		if inst.components.trophyscale ~= nil then
+			local item_data = inst.components.trophyscale:GetItemData()
+			SetFish(inst, item_data)
+		end
+
+		if _OnLoad ~= nil then
+			_OnLoad(inst, ...)
+		end
+	end
+	
+	inst:ListenForEvent("onnewtrophy", OnNewTrophy)
+end
+
+AddPrefabPostInit("trophyscale_fish", TrophyScaleFishPostInit)
+
+AddComponentPostInit("spell", function(self)
+	local _OnSave = self.OnSave
+
+	function self:OnSave(...)
+		local ret = {_OnSave(self, ...)}
+
+		if self.target ~= nil and self.target.components.trophyscale then
+			return ret[1], { self.target.GUID }
+		end
+
+		return unpack(ret)
+	end
+end)
+
+-- Some hacks for trap component since it does not support water creatures.
+-- We basically remove the fish from scene and spawn its inventory prefab.
+AddComponentPostInit("trap", function(self)
+	local _DoTriggerOn = self.DoTriggerOn
+	local _Harvest = self.Harvest
+	local _OnSave = self.OnSave
+	local _OnLoad = self.OnLoad
+
+	function self:DoTriggerOn(target)
+		if self.inst:HasTag("smalloceanfish_trap") and target ~= nil and target:HasTag("smalloceanfish") and not target:HasTag("partiallyhooked") then
+			self.target = target
+			self.captured_fish = target
+			
+			self.issprung = true
+
+			local loot_prefab = TUNING.HOF_OCEANTRAP_PREFAB_INDEX[target.prefab] or (target.prefab .. "_inv")
+			self.lootprefabs = { loot_prefab }
+			
+			if self.bait ~= nil then
+				if self.bait:IsValid() then
+					self.bait:Remove()
+				end
+				
+				if self.RemoveBait ~= nil then
+					self:RemoveBait()
+				end
+				
+				self.bait = nil
+			end
+
+			if self.captured_fish ~= nil and self.captured_fish:IsValid() then
+				self.captured_fish:RemoveFromScene()
+			end
+			
+			self:StopUpdating()
+			self.inst:PushEvent("springtrap")
+
+			return
+		end
+
+		_DoTriggerOn(self, target)
+	end
+
+	function self:Harvest(doer)
+		if self.inst:HasTag("smalloceanfish_trap") and self.captured_fish ~= nil then
+			local fish = self.captured_fish
+			local pos = self.inst:GetPosition()
+		
+			local loot_prefab = TUNING.HOF_OCEANTRAP_PREFAB_INDEX[fish.prefab] or (fish.prefab .. "_inv")
+			local loot = SpawnPrefab(loot_prefab)
+
+			if loot ~= nil then
+				loot.Transform:SetPosition(pos:Get())
+				
+				if doer ~= nil and doer.components.inventory ~= nil then
+					doer.components.inventory:GiveItem(loot)
+				end
+			end
+
+			if fish:IsValid() then
+				fish:Remove()
+			end
+
+			self.captured_fish = nil
+			self.target = nil
+			self.lootprefabs = nil
+		end
+
+		_Harvest(self, doer)
+    end
+
+	function self:OnSave()
+		local data, refs = _OnSave ~= nil and _OnSave(self) or {}, {}
+
+		if self.inst:HasTag("smalloceanfish_trap") then
+			if self.captured_fish ~= nil and self.captured_fish:IsValid() then
+				data.captured_fish_prefab = self.captured_fish.prefab
+			end
+
+			if self.lootprefabs ~= nil and next(self.lootprefabs) ~= nil then
+				data.loot = self.lootprefabs
+			end
+
+			if self.issprung then
+				data.issprung = true
+			end
+		end
+
+		return data, refs
+	end
+
+	function self:OnLoad(data)
+		if _OnLoad ~= nil then
+			_OnLoad(self, data)
+		end
+		
+		if self.inst:HasTag("smalloceanfish_trap") and data ~= nil then
+			if data.loot ~= nil then
+				self.lootprefabs = type(data.loot) == "table" and data.loot or { data.loot }
+			end
+
+			if data.captured_fish_prefab ~= nil then
+				local fish = SpawnPrefab(data.captured_fish_prefab)
+				
+				if fish ~= nil then
+					fish:RemoveFromScene()
+					self.captured_fish = fish
+				end
+			end
+
+			if data.issprung then
+				self.issprung = true
+				self.inst:PushEvent("springtrap")
+			end
+		end
+	end
+end)
+
+-- Extra distance for Fish Hatchery.
+-- Why these morons at klei didn't add a self.containerdistance?
+AddComponentPostInit("container", function(self)
+	local _OnUpdate = self.OnUpdate
+
+	function self:OnUpdate(dt)
+		if self.opencount == 0 then
+			self.inst:StopUpdatingComponent(self)
+			return
+		end
+
+		for opener, _ in pairs(self.openlist) do
+			if self.inst ~= nil and self.inst:HasTag("fishhatchery") then
+				local old_distance = _G.CONTAINER_AUTOCLOSE_DISTANCE
+				_G.CONTAINER_AUTOCLOSE_DISTANCE = 6
+
+				_OnUpdate(self, dt)
+				_G.CONTAINER_AUTOCLOSE_DISTANCE = old_distance
+				
+				return
+			end
+		end
+
+		return _OnUpdate(self, dt)
+	end
+end)
 
 -- Makes icons appear for containers that are integrated to player's inventory.
 AddClassPostConstruct("widgets/invslot", function(self)

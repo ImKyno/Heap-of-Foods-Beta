@@ -96,6 +96,49 @@ AddBrewingValues({"kyno_sporecap"},             {veggie     = 0.5, mushrooms    
 AddBrewingValues({"kyno_sporecap_dark"},        {veggie     = 0.5, mushrooms     = 1, monster = 0.5})
 AddBrewingValues({"truffleoil"},                {oil        = 1})
 
+local fishroes =
+{
+	"kyno_roe_antchovy",
+	"kyno_roe_grouper",
+	"kyno_roe_jellyfish",
+	"kyno_roe_jellyfish_rainbow",
+	"kyno_roe_koi",
+	"kyno_roe_neonfish",
+	"kyno_roe_oceanfish_medium_1",
+	"kyno_roe_oceanfish_medium_2",
+	"kyno_roe_oceanfish_medium_3",
+	"kyno_roe_oceanfish_medium_4",
+	"kyno_roe_oceanfish_medium_5",
+	"kyno_roe_oceanfish_medium_6",
+	"kyno_roe_oceanfish_medium_7",
+	"kyno_roe_oceanfish_medium_8",
+	"kyno_roe_oceanfish_medium_9",
+	"kyno_roe_oceanfish_pufferfish",
+	"kyno_roe_oceanfish_small_1",
+	"kyno_roe_oceanfish_small_2",
+	"kyno_roe_oceanfish_small_3",
+	"kyno_roe_oceanfish_small_4",
+	"kyno_roe_oceanfish_small_5",
+	"kyno_roe_oceanfish_small_6",
+	"kyno_roe_oceanfish_small_7",
+	"kyno_roe_oceanfish_small_8",
+	"kyno_roe_oceanfish_small_9",
+	"kyno_roe_oceanfish_sturgeon",
+	"kyno_roe_pierrotfish",
+	"kyno_roe_pondeel",
+	"kyno_roe_pondfish",
+	"kyno_roe_salmonfish",
+	"kyno_roe_swordfish_blue",
+	"kyno_roe_tropicalfish",
+	"kyno_roe_wobster",
+	"kyno_roe_wobster_monkeyisland",
+	"kyno_roe_wobster_moonglass",
+}
+
+for k, v in pairs(fishroes) do
+	AddBrewingValues({v}, {roe = 1})
+end
+
 -- Import the Beverages.
 local brewer_jar   = {"kyno_preservesjar"}
 local brewer_keg   = {"kyno_woodenkeg"}

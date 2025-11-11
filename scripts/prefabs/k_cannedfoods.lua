@@ -18,6 +18,7 @@ local prefabs =
 	"kyno_beancan_open",
 	"kyno_meatcan",
 	"kyno_meatcan_open",
+	"kyno_antchovycan", -- Special case
 }    
 
 local function OnOpenCan(inst, pos, doer)
@@ -47,7 +48,42 @@ local function OnOpenCan(inst, pos, doer)
 	else
 		inst:Remove()
 	end
-end		
+end
+
+local function OnOpenAntchovy(inst, pos, doer)
+	local name = inst.name
+
+	if doer ~= nil and doer.SoundEmitter ~= nil then
+		doer.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
+	else
+		inst.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
+	end
+
+	local antchovy1 = SpawnPrefab("kyno_antchovy")
+	local antchovy2 = SpawnPrefab("kyno_antchovy")
+	
+	if doer.components.inventory and doer:HasTag("player") and not doer.components.health:IsDead() 
+	and not doer:HasTag("playerghost") then 
+		doer.components.inventory:GiveItem(antchovy1)
+		doer.components.inventory:GiveItem(antchovy2)
+	else
+		antchovy1.Transform:SetPosition(pos:Get())
+		antchovy1.components.inventoryitem:OnDropped(false, .5)
+		
+		antchovy2.Transform:SetPosition(pos:Get())
+		antchovy2.components.inventoryitem:OnDropped(false, .5)
+	end
+	
+	if inst.components.stackable ~= nil then
+		inst.components.stackable:Get():Remove()
+        
+		if inst.components.stackable:StackSize() <= 0 then
+			inst:Remove()
+		end
+	else
+		inst:Remove()
+	end
+end
 
 local function closed_fn(bank, build, anim, closed_name)
 	local inst = CreateEntity()
@@ -231,10 +267,23 @@ local function opened_meat()
 	return inst
 end
 
+-- Canned Ant-Chovy.
+local function closed_antchovy()
+	local inst = closed_fn("kyno_cannedfoods", "kyno_cannedfoods", "antchovy_closed", "kyno_antchovycan")
+	
+	if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst.components.unwrappable:SetOnUnwrappedFn(OnOpenAntchovy)
+	
+	return inst
+end
 
 return Prefab("kyno_tomatocan", closed_tomato, assets, prefabs),
 Prefab("kyno_tomatocan_open", opened_tomato, assets, prefabs),
 Prefab("kyno_beancan", closed_bean, assets, prefabs),
 Prefab("kyno_beancan_open", opened_bean, assets, prefabs),
 Prefab("kyno_meatcan", closed_meat, assets, prefabs),
-Prefab("kyno_meatcan_open", opened_meat, assets, prefabs)
+Prefab("kyno_meatcan_open", opened_meat, assets, prefabs),
+Prefab("kyno_antchovycan", closed_antchovy, assets, prefabs)

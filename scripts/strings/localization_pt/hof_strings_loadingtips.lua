@@ -93,6 +93,23 @@ local LOADINGTIPS   =
 	TRUFFLES1       = "Itens relacionados a Trufas podem ser usados para fazer amizade com Porcos, tornando-os leais por mais tempo.",
 	TRUFFLES2       = "Itens relacionados a Trufas podem ser trocados com o Rei Porco por algumas Pepitas de Ouro.",
 	GOLDENAPPLE     = "Maçãs Douradas Encantadas são itens raros que podem ser obtidas após o Celestial Scion ter sido derrotado pelo menos uma vez no mundo. Elas concedem múltiplos efeitos positivos ao custo de sua vida.",
+	FISHROE         = "Ovas de peixe podem ser obtidas ao colocar o tipo desejado de peixe no Viveiro de Peixes.",
+	FISHFARMPLOT    = "O Viveiro de Peixes pode ser usado para criar peixes e produzir ovas e filhotes.",
+	FISHFARMPLOT2   = "Cada peixe tem suas próprias preferências no Viveiro de Peixes, como: Fase do Dia, Fase da Lua, Estação e Localização.",
+	OCEANHUNTS      = "\"Bolhas suspeitas estão aparecendo por todo o oceano. Será que vou encontrar algo se continuar seguindo elas?\" -W.",
+	OCTOPUSTRADER   = "\"Ontem enquanto navegava, encontrei um polvo solitário dormindo em um aglomerado de rochedos marítimos. Será que ele tem algo útil para trocar?\" -W.",
+	OCTOPUSTRADER2  = "Yaarctopus fará trocas oferecendo itens em troca de Peixes e alguns Pratos Preparados de Peixe!",
+	HULLBREAKER     = "Algumas criaturas marinhas, como Peixes-Espada, Puffernauts e Baleias, são capazes de danificar o casco do Barco ao acertarem ataques bem-sucedidos.",
+	CURSEREMOVER    = "\"Ouvi dizer que há uma comida típica da Ilha Moon Quay capaz de remover maldições! Preciso experimentá-la, a receita diz que precisa de um tipo exótico de lagostim...\" -W.",
+	BRAINMETTERSOUP = "\"Depois de provar aquela sopa boba, estou me sentindo inteligente de repente. Nem preciso mais de estações de criação.\" -W.",
+	MALBATROSSFOOD  = "A Comida Encantada de Peixe pode ser arremessada no oceano para invocar um inimigo temível conhecido como Malbatross.",
+	PACKIMBAGGIMS   = "O companheiro favorito de todos está de volta! Seu item querido pode ser encontrado na Ilha Litorânea.",
+	PACKIMBAGGIMS2  = "Packim Baggims pode ser transformado ao ser alimentado com Peixes Pesados do Oceano ou Peixes do Sol Queimado.",
+	PACKIMBAGGIMS3  = "O Packim Baggims de Fogo pode cozinhar instantaneamente qualquer alimento guardado dentro dele. Ele também é capaz de queimar itens de madeira e transformá-los em carvão.",
+	OTTERDENS       = "Há uma chance de Tocas de Marotters aparecerem no final de uma Caçada Oceânica durante a chuva.",
+	SHARKBOIREWARD  = "Frostjaw está desejando uma refeição requintada e recompensará aqueles que conseguirem satisfazer seu pedido.",
+	GHOSTPIRATE     = "Explorar Naufrágios de tripulações anteriores durante as Noites de Lua Cheia pode ser bem perigoso, já que Fantasmas Piratas podem ser encontrados vagando por lá. Assustador!",
+	HERMITWOBSTER   = "Lagostas Eremitas só podem ser encontradas na Ilha Moon Quay.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

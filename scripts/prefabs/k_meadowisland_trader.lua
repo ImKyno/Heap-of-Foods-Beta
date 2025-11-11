@@ -39,6 +39,7 @@ local WARES                             =
 			["kyno_itemslicer_gold"]    = { recipe = "meadowislandtrader_kyno_itemslicer_gold",   min = 6,  max = 6,  limit = 6  },
 			["kyno_bucket_metal"]       = { recipe = "meadowislandtrader_kyno_bucket_metal",      min = 6,  max = 6,  limit = 6  },
 			["kyno_pineapple"]          = { recipe = "meadowislandtrader_kyno_pineapple",         min = 6,  max = 20, limit = 20 },
+			["kyno_antchovycan"]        = { recipe = "meadowislandtrader_kyno_antchovycan",       min = 4,  max = 8,  limit = 8  },
 			["kyno_tunacan"]            = { recipe = "meadowislandtrader_kyno_tunacan",           min = 2,  max = 5,  limit = 5  },
 			["kyno_piko"]               = { recipe = "meadowislandtrader_kyno_piko",              min = 1,  max = 3,  limit = 3  },
 			["kyno_chicken2"]           = { recipe = "meadowislandtrader_kyno_chicken2",          min = 1,  max = 4,  limit = 4  },
@@ -95,7 +96,7 @@ local WARES                             =
 		{
 			-- TO DO: Artichoke Seeds
 			["kyno_cokecan"]            = { recipe = "meadowislandtrader_kyno_cokecan",           min = 3,  max = 5  },
-			["kyno_roe"]                = { recipe = "meadowislandtrader_kyno_roe",               min = 4,  max = 8  },
+			["kyno_roe_pondfish"]       = { recipe = "meadowislandtrader_kyno_roe_pondfish",      min = 4,  max = 8  },
 			["forgetmelots_seeds"]      = { recipe = "meadowislandtrader_forgetmelots_seeds",     min = 3,  max = 6  },
 			["oceanfish_medium_8_inv"]  = { recipe = "meadowislandtrader_oceanfish_medium_8_inv", min = 1,  max = 3  },
 		},

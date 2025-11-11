@@ -15,6 +15,7 @@ AddPrefabPostInit("forest", function(inst)
 	end
 
 	inst:AddComponent("sugarflyspawner")
+	inst:AddComponent("waterfowlhunter")
     inst:AddComponent("retrofitforestmap_hof")
 	
 	-- Let the players know they have force retrofit option enabled.
@@ -39,6 +40,7 @@ end)
 
 -- Pig King Trades Some Items.
 local MOD_TRADES = GetModConfigData("MODTRADES")
+
 local function BushTrader(inst)
     if not _G.TheWorld.ismastersim then
         return inst
@@ -1072,6 +1074,26 @@ for k, v in pairs(weeds) do
 	end)
 end
 
+-- Add Swordfish to Vitreoasis.
+local function GrottoPoolBigPostInit(inst)
+	inst:AddTag("pond")
+	
+	local function GetFish(inst)
+		return _G.TheWorld.state.iswinter and "kyno_swordfish_blue" or nil
+	end
+
+	if not _G.TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst:AddComponent("fishable")
+	inst.components.fishable:SetGetFishFn(GetFish)
+	inst.components.fishable.maxfish = TUNING.KYNO_GROTTO_POOL_MAX_FISH
+	inst.components.fishable:SetRespawnTime(TUNING.KYNO_SWORDFISH_BLUE_REGROW_TIME)
+end
+
+AddPrefabPostInit("grotto_pool_big", GrottoPoolBigPostInit)
+
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")
 
@@ -1089,8 +1111,8 @@ AddClassPostConstruct("components/birdspawner", function(self)
 	BIRD_TYPES[WORLD_TILES.QUAGMIRE_PARKFIELD] = {"quagmire_pigeon"}
 	BIRD_TYPES[WORLD_TILES.QUAGMIRE_CITYSTONE] = {"quagmire_pigeon"}
 
-	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = {"toucan"}
-	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = {"toucan"}
+	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = {"toucan", "toucan_chubby"}
+	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = {"toucan", "toucan_chubby"}
 	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = {"kingfisher"}
 end)
 

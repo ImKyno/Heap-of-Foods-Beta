@@ -146,14 +146,14 @@ local function OnAttached(inst, target)
 	-- Fear
 	if not target:HasTag("pinetreepioneer") then
 		if target.components.sanity ~= nil then 
-			target.components.sanity:SetNegativeAuraImmunity(true)
-			target.components.sanity:SetPlayerGhostImmunity(true)
-			target.components.sanity:SetLightDrainImmune(true)
+			target.components.sanity:SetNegativeAuraImmunity(true, inst)
+			target.components.sanity:SetPlayerGhostImmunity(true, inst)
+			target.components.sanity:SetLightDrainImmune(true, inst)
 		end
 	end
 	
 	if target.components.sanity ~= nil then 
-		target.components.sanity:SetFullAuraImmunity(true)
+		target.components.sanity:SetFullAuraImmunity(true, inst)
 		target.components.sanity.get_equippable_dappernessfn = AddDappernessResistance
 	end
 	
@@ -270,14 +270,14 @@ local function OnDetached(inst, target)
 	-- Fear
 	if not target:HasTag("pinetreepioneer") then
 		if target.components.sanity ~= nil then 
-			target.components.sanity:SetNegativeAuraImmunity(false)
-			target.components.sanity:SetPlayerGhostImmunity(false)
-			target.components.sanity:SetLightDrainImmune(false)
+			target.components.sanity:SetNegativeAuraImmunity(false, inst)
+			target.components.sanity:SetPlayerGhostImmunity(false, inst)
+			target.components.sanity:SetLightDrainImmune(false, inst)
 		end
 	end
 	
 	if target.components.sanity ~= nil then
-		target.components.sanity:SetFullAuraImmunity(false)
+		target.components.sanity:SetFullAuraImmunity(false, inst)
 		target.components.sanity.get_equippable_dappernessfn = RemoveDappernessResistance
 	end
 	
@@ -423,14 +423,14 @@ local function OnExtended(inst, target)
 	-- Fear
 	if not target:HasTag("pinetreepioneer") then
 		if target.components.sanity ~= nil then 
-			target.components.sanity:SetNegativeAuraImmunity(true)
-			target.components.sanity:SetPlayerGhostImmunity(true)
-			target.components.sanity:SetLightDrainImmune(true)
+			target.components.sanity:SetNegativeAuraImmunity(true, inst)
+			target.components.sanity:SetPlayerGhostImmunity(true, inst)
+			target.components.sanity:SetLightDrainImmune(true, inst)
 		end
 	end
 	
 	if target.components.sanity ~= nil then 
-		target.components.sanity:SetFullAuraImmunity(true)
+		target.components.sanity:SetFullAuraImmunity(true, inst)
 		target.components.sanity.get_equippable_dappernessfn = AddDappernessResistance
 	end
 	

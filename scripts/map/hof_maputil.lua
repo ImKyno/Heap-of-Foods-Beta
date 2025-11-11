@@ -118,6 +118,11 @@ local function RetrofitOceanLayouts()
 		"StaticLayoutIsland: OceanSetPieces",
 		"StaticLayoutIsland:WreckSetPieces"
 	}
+	
+	local octopus_ids =
+	{
+		"StaticLayoutIsland:OctopusShop"
+	}
 
 	local function NodeNeedsRetrofit(node, expected_tags)
 		for _, tag in ipairs(expected_tags) do
@@ -158,6 +163,13 @@ local function RetrofitOceanLayouts()
 				dirty = true
 			end
 		end
+		
+		for _, oid in ipairs(octopus_ids) do
+			if string.find(id, wid) and NodeNeedsRetrofit(node, {"OctopusArea"}) then
+				table.insert(node.tags, "OctopusArea")
+				dirty = true
+			end
+		end
 	end
 
 	if dirty then
@@ -165,7 +177,8 @@ local function RetrofitOceanLayouts()
 			if table.contains(node.tags, "SerenityArea") or
 			table.contains(node.tags, "MeadowArea") or
 			table.contains(node.tags, "WreckArea") or
-			table.contains(node.tags, "LowMist") then
+			table.contains(node.tags, "LowMist") or 
+			table.contains(node.tags, "OctopusArea") then
 				TheWorld.Map:RepopulateNodeIdTileMap(i, node.x, node.y, node.poly, 10000, 2.1)
 			end
 		end
@@ -227,7 +240,7 @@ end
 
 return 
 {
-    GetLayoutInfoFromPrefab  = GetLayoutInfoFromPrefab,
+	GetLayoutInfoFromPrefab  = GetLayoutInfoFromPrefab,
 	AddPrefabTopologyNode    = AddPrefabTopologyNode,
 	RetrofitOceanLayouts     = RetrofitOceanLayouts,
 	RetrofitNewContentPrefab = RetrofitNewContentPrefab,

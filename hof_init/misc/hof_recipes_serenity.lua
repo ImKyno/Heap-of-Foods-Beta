@@ -101,7 +101,7 @@ AddRecipe2("kyno_slaughtertool_p", {Ingredient("kyno_crabmeat", 2, ModAtlas)}, T
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("kyno_kit_hanger_p", {Ingredient("bonestew", 1), Ingredient("gorge_stone_soup", 1, ModAtlas), Ingredient("caviar", 1, ModAtlas)}, TECH.SERENITYSHOP_ONE,
+AddRecipe2("kyno_kit_hanger_p", {Ingredient("bonestew", 1), Ingredient("gorge_garlicmashed", 1, ModAtlas), Ingredient("feijoada", 1, ModAtlas)}, TECH.SERENITYSHOP_ONE,
 	{
 		nounlock			= true,
 		no_deconstruction   = true,

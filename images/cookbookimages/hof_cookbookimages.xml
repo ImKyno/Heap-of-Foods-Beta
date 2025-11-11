@@ -10,9 +10,9 @@
 		<Element name="bisque.tex" u1="0.1885" u2="0.249" v2="0.999" v1="0.917666666666667" variant="" />
 		<Element name="bowlofgears.tex" u1="0.126" u2="0.1865" v2="0.915666666666667" v1="0.834333333333333" variant="" />
 		<Element name="bowlofpopcorn.tex" u1="0.1885" u2="0.249" v2="0.915666666666667" v1="0.834333333333333" variant="" />
-		<Element name="brigadeiro.tex" u1="0.001" u2="0.0615" v2="0.832333333333333" v1="0.751" variant="" />
-		<Element name="catfood.tex" u1="0.0635" u2="0.124" v2="0.832333333333333" v1="0.751" variant="" />
-		<Element name="caviar.tex" u1="0.126" u2="0.1865" v2="0.832333333333333" v1="0.751" variant="" />
+		<Element name="brainmettersoup.tex" u1="0.001" u2="0.0615" v2="0.832333333333333" v1="0.751" variant="" />
+		<Element name="brigadeiro.tex" u1="0.0635" u2="0.124" v2="0.832333333333333" v1="0.751" variant="" />
+		<Element name="catfood.tex" u1="0.126" u2="0.1865" v2="0.832333333333333" v1="0.751" variant="" />
 		<Element name="cheese_koalefant.tex" u1="0.1885" u2="0.249" v2="0.832333333333333" v1="0.751" variant="" />
 		<Element name="cheese_white.tex" u1="0.001" u2="0.0615" v2="0.749" v1="0.667666666666667" variant="" />
 		<Element name="cheese_yellow.tex" u1="0.0635" u2="0.124" v2="0.749" v1="0.667666666666667" variant="" />
@@ -128,56 +128,58 @@
 		<Element name="milk_box.tex" u1="0.6885" u2="0.749" v2="0.415666666666667" v1="0.334333333333333" variant="" />
 		<Element name="milkshake.tex" u1="0.751" u2="0.8115" v2="0.415666666666667" v1="0.334333333333333" variant="" />
 		<Element name="minertreat.tex" u1="0.8135" u2="0.874" v2="0.415666666666667" v1="0.334333333333333" variant="" />
-		<Element name="monstermuffin.tex" u1="0.876" u2="0.9365" v2="0.415666666666667" v1="0.334333333333333" variant="" />
-		<Element name="moonbutterflymuffin.tex" u1="0.9385" u2="0.999" v2="0.415666666666667" v1="0.334333333333333" variant="" />
-		<Element name="nettlelosange.tex" u1="0.001" u2="0.0615" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="nettlemeated.tex" u1="0.0635" u2="0.124" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="omurice.tex" u1="0.126" u2="0.1865" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="onigiris.tex" u1="0.1885" u2="0.249" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="onionrings.tex" u1="0.251" u2="0.3115" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="paella.tex" u1="0.3135" u2="0.374" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="parznip_soup.tex" u1="0.376" u2="0.4365" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="pasty_cheese.tex" u1="0.4385" u2="0.499" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="pasty_meat.tex" u1="0.501" u2="0.5615" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="pepperrolls.tex" u1="0.5635" u2="0.624" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="pienapple.tex" u1="0.626" u2="0.6865" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="pinacolada.tex" u1="0.6885" u2="0.749" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="pineapplecake.tex" u1="0.751" u2="0.8115" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="pinkcake.tex" u1="0.8135" u2="0.874" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="pizza_tropical.tex" u1="0.876" u2="0.9365" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="poi.tex" u1="0.9385" u2="0.999" v2="0.332333333333333" v1="0.251" variant="" />
-		<Element name="poisonfrogglebunwich.tex" u1="0.001" u2="0.0615" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="pomegranatepie.tex" u1="0.0635" u2="0.124" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="pomegranatetea.tex" u1="0.126" u2="0.1865" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="pretzel.tex" u1="0.1885" u2="0.249" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="pumpkin_soup.tex" u1="0.251" u2="0.3115" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="purplewobstersoup.tex" u1="0.3135" u2="0.374" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="radishsalad.tex" u1="0.376" u2="0.4365" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="regularlasagna.tex" u1="0.4385" u2="0.499" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="riceandbeans.tex" u1="0.501" u2="0.5615" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="ricepudding.tex" u1="0.5635" u2="0.624" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="roastedhazelnuts.tex" u1="0.626" u2="0.6865" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="sea_pudding.tex" u1="0.6885" u2="0.749" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="sharkfinsoup.tex" u1="0.751" u2="0.8115" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="sharksushi.tex" u1="0.8135" u2="0.874" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="slaw.tex" u1="0.876" u2="0.9365" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="smores.tex" u1="0.9385" u2="0.999" v2="0.249" v1="0.167666666666667" variant="" />
-		<Element name="snakebonesoup.tex" u1="0.001" u2="0.0615" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="soulstew.tex" u1="0.0635" u2="0.124" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="spidercake.tex" u1="0.126" u2="0.1865" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="sporecap_skewers.tex" u1="0.1885" u2="0.249" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="sporecappie.tex" u1="0.251" u2="0.3115" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="steamedhamsandwich.tex" u1="0.3135" u2="0.374" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="sugarbombs.tex" u1="0.376" u2="0.4365" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="sugarflymuffin.tex" u1="0.4385" u2="0.499" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="tea.tex" u1="0.501" u2="0.5615" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="tricolordango.tex" u1="0.5635" u2="0.624" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="tropicalbouillabaisse.tex" u1="0.626" u2="0.6865" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="trufflesgrinder.tex" u1="0.6885" u2="0.749" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="watercup.tex" u1="0.751" u2="0.8115" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="waterycressbowl.tex" u1="0.8135" u2="0.874" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="wobsterbreaded.tex" u1="0.876" u2="0.9365" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="wobstercocktail.tex" u1="0.9385" u2="0.999" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
-		<Element name="wobstermonster.tex" u1="0.001" u2="0.0615" v2="0.0823333333333334" v1="0.001" variant="" />
+		<Element name="monkeyislandmeal.tex" u1="0.876" u2="0.9365" v2="0.415666666666667" v1="0.334333333333333" variant="" />
+		<Element name="monstermuffin.tex" u1="0.9385" u2="0.999" v2="0.415666666666667" v1="0.334333333333333" variant="" />
+		<Element name="moonbutterflymuffin.tex" u1="0.001" u2="0.0615" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="nettlelosange.tex" u1="0.0635" u2="0.124" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="nettlemeated.tex" u1="0.126" u2="0.1865" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="omurice.tex" u1="0.1885" u2="0.249" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="onigiris.tex" u1="0.251" u2="0.3115" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="onionrings.tex" u1="0.3135" u2="0.374" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="paella.tex" u1="0.376" u2="0.4365" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="parznip_soup.tex" u1="0.4385" u2="0.499" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="pasty_cheese.tex" u1="0.501" u2="0.5615" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="pasty_meat.tex" u1="0.5635" u2="0.624" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="pepperrolls.tex" u1="0.626" u2="0.6865" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="pienapple.tex" u1="0.6885" u2="0.749" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="pinacolada.tex" u1="0.751" u2="0.8115" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="pineapplecake.tex" u1="0.8135" u2="0.874" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="pinkcake.tex" u1="0.876" u2="0.9365" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="pizza_tropical.tex" u1="0.9385" u2="0.999" v2="0.332333333333333" v1="0.251" variant="" />
+		<Element name="poi.tex" u1="0.001" u2="0.0615" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="poisonfrogglebunwich.tex" u1="0.0635" u2="0.124" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="pomegranatepie.tex" u1="0.126" u2="0.1865" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="pomegranatetea.tex" u1="0.1885" u2="0.249" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="pretzel.tex" u1="0.251" u2="0.3115" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="pumpkin_soup.tex" u1="0.3135" u2="0.374" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="purplewobstersoup.tex" u1="0.376" u2="0.4365" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="radishsalad.tex" u1="0.4385" u2="0.499" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="regularlasagna.tex" u1="0.501" u2="0.5615" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="riceandbeans.tex" u1="0.5635" u2="0.624" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="ricepudding.tex" u1="0.626" u2="0.6865" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="roastedhazelnuts.tex" u1="0.6885" u2="0.749" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="sea_pudding.tex" u1="0.751" u2="0.8115" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="sharkfinsoup.tex" u1="0.8135" u2="0.874" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="sharksushi.tex" u1="0.876" u2="0.9365" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="slaw.tex" u1="0.9385" u2="0.999" v2="0.249" v1="0.167666666666667" variant="" />
+		<Element name="smores.tex" u1="0.001" u2="0.0615" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="snakebonesoup.tex" u1="0.0635" u2="0.124" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="soulstew.tex" u1="0.126" u2="0.1865" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="spidercake.tex" u1="0.1885" u2="0.249" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="sporecap_skewers.tex" u1="0.251" u2="0.3115" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="sporecappie.tex" u1="0.3135" u2="0.374" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="steamedhamsandwich.tex" u1="0.376" u2="0.4365" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="sugarbombs.tex" u1="0.4385" u2="0.499" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="sugarflymuffin.tex" u1="0.501" u2="0.5615" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="swordfishfeast.tex" u1="0.5635" u2="0.624" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="tea.tex" u1="0.626" u2="0.6865" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="tricolordango.tex" u1="0.6885" u2="0.749" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="tropicalbouillabaisse.tex" u1="0.751" u2="0.8115" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="trufflesgrinder.tex" u1="0.8135" u2="0.874" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="watercup.tex" u1="0.876" u2="0.9365" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="waterycressbowl.tex" u1="0.9385" u2="0.999" v2="0.165666666666667" v1="0.0843333333333334" variant="" />
+		<Element name="wobsterbreaded.tex" u1="0.001" u2="0.0615" v2="0.0823333333333334" v1="0.001" variant="" />
+		<Element name="wobstercocktail.tex" u1="0.0635" u2="0.124" v2="0.0823333333333334" v1="0.001" variant="" />
+		<Element name="wobstermonster.tex" u1="0.126" u2="0.1865" v2="0.0823333333333334" v1="0.001" variant="" />
 	</Elements>
 </Atlas>

@@ -14,6 +14,22 @@ local COMPONENT_ACTIONS = UpvalueHacker.GetUpvalue(_G.EntityScript.CollectAction
 local USEITEM = COMPONENT_ACTIONS.USEITEM
 local EQUIPPED = COMPONENT_ACTIONS.EQUIPPED
 
+local _ExtraDeployDist = ACTIONS.DEPLOY.extra_arrive_dist
+local function ExtraDeployDist(doer, dest, bufferedaction, ...)
+    if dest ~= nil and doer:IsValid() then
+		local invobject = bufferedaction and bufferedaction.invobject or nil
+		local inventoryitem = invobject and invobject.replica.inventoryitem
+        
+		if invobject:HasTag("fishfarmplot_kit") then
+			return 5
+		end
+	end
+
+	return _ExtraDeployDist(doer, dest, bufferedaction, ...)
+end
+
+ACTIONS.DEPLOY.extra_arrive_dist = ExtraDeployDist
+
 -- Coffee Plant can be Only Fertilized by Ashes.
 AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions)
     if actions[1] == ACTIONS.FERTILIZE and inst:HasTag("coffeefertilizer2") ~= target:HasTag("kyno_coffeebush") then
@@ -24,6 +40,15 @@ AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions
 	if actions[1] == ACTIONS.FERTILIZE and inst:HasTag("fertilizer_volcanic") ~= target:HasTag("volcanicplant") then
         actions[1] = nil
     end
+end)
+
+-- Don't ask why this is needed, I don't know too.
+AddComponentAction("USEITEM", "inventoryitem", function(inst, doer, target, actions, right)
+	if target:HasTag("fishhatchery") then
+		if inst:HasTag("FISHFOOD_fuel") and target:HasTag("FISHFOOD_fueled") then
+			_G.RemoveByValue(actions, _G.ACTIONS.STORE)
+		end
+	end
 end)
 
 -- Action for the Salt.
@@ -656,6 +681,25 @@ function EQUIPPED.fishingrod(inst, doer, target, actions, ...)
     end
 end
 
+-- Don't let Metal Bucket be filled with items.
+local _USEITEMwatersource = USEITEM.watersource
+function USEITEM.watersource(inst, doer, target, ...)
+	if target:HasTag("bucket_metal") then
+		return
+	else
+		return _USEITEMwatersource(inst, doer, target, ...)
+	end
+end
+
+local _USEITEMfillable = USEITEM.fillable
+function USEITEM.fillable(inst, doer, target, ...)
+	if inst:HasTag("bucket_metal") and target:HasTag("watersource") then
+		return
+	else
+		return _USEITEMfillable(inst, doer, target, ...)
+	end
+end
+
 -- Action String overrides.
 ACTIONS.GIVE.stroverridefn = function(act)
 	if act.target:HasTag("serenity_installable") and act.invobject:HasTag("serenity_installer") then
@@ -809,6 +853,20 @@ ACTIONS.STORE.stroverridefn = function(act)
 	
 	if target:HasTag("brewer") then
 		return STRINGS.ACTIONS.BREWER
+	end
+	
+	if target:HasTag("fishhatchery") then
+		if obj:HasTag("fishfarmable") then
+			return STRINGS.ACTIONS.BREEDFISH
+		end
+		
+		return STRINGS.ACTIONS.STORE.GENERIC
+	end
+end
+
+ACTIONS.ADDFUEL.stroverridefn = function(act)
+	if act.target:HasTag("fishhatchery") then
+		return STRINGS.ACTIONS.FEED.GENERIC
 	end
 end
 

@@ -1,6 +1,6 @@
 -- Common Dependencies.
-local _G 			= GLOBAL
-local require 		= _G.require
+local _G      = GLOBAL
+local require = _G.require
 
 -- Preload Assets. (Before the game load).
 PreloadAssets =
@@ -50,6 +50,9 @@ Assets =
 	Asset("IMAGE", "images/colourcubesimages/meadow_dusk_cc.tex"),
 	Asset("IMAGE", "images/colourcubesimages/meadow_night_cc.tex"),
 	Asset("IMAGE", "images/colourcubesimages/serenity_cc.tex"),
+	
+	Asset("IMAGE", "images/inventoryimages/hof_hudimages.tex"),
+	Asset("ATLAS", "images/inventoryimages/hof_hudimages.xml"),
 
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -93,6 +96,40 @@ AddMinimapAtlas("images/minimapimages/hof_minimapicons.xml")
 -- Mod Icons.
 local HOF_ICONS =
 {
+	"agedroe_antchovy",
+	"agedroe_grouper",
+	"agedroe_jellyfish",
+	"agedroe_jellyfish_rainbow",
+	"agedroe_koi",
+	"agedroe_neonfish",
+	"agedroe_oceanfish_medium_1",
+	"agedroe_oceanfish_medium_2",
+	"agedroe_oceanfish_medium_3",
+	"agedroe_oceanfish_medium_4",
+	"agedroe_oceanfish_medium_5",
+	"agedroe_oceanfish_medium_6",
+	"agedroe_oceanfish_medium_7",
+	"agedroe_oceanfish_medium_8",
+	"agedroe_oceanfish_medium_9",
+	"agedroe_oceanfish_pufferfish",
+	"agedroe_oceanfish_small_1",
+	"agedroe_oceanfish_small_2",
+	"agedroe_oceanfish_small_3",
+	"agedroe_oceanfish_small_4",
+	"agedroe_oceanfish_small_5",
+	"agedroe_oceanfish_small_6",
+	"agedroe_oceanfish_small_7",
+	"agedroe_oceanfish_small_8",
+	"agedroe_oceanfish_small_9",
+	"agedroe_oceanfish_sturgeon",
+	"agedroe_pierrotfish",
+	"agedroe_pondeel",
+	"agedroe_pondfish",
+	"agedroe_swordfish_blue",
+	"agedroe_tropicalfish",
+	"agedroe_wobster",
+	"agedroe_wobster_monkeyisland",
+	"agedroe_wobster_moonglass",
 	"algae_soup",
 	"antslog",
 	"avocadotoast",
@@ -103,12 +140,12 @@ local HOF_ICONS =
 	"bisque",
 	"bowlofgears",
 	"bowlofpopcorn",
+	"brainmettersoup",
 	"bubbletea",
 	"butter_beefalo",
 	"butter_goat",
 	"butter_koalefant",
 	"catfood",
-	"caviar",
 	"cheese_koalefant",
 	"cheese_white",
 	"cheese_yellow",
@@ -299,6 +336,8 @@ local HOF_ICONS =
 	"kyno_aloe_oversized_rotten",
 	"kyno_aloe_oversized_waxed",
 	"kyno_aloe_seeds",
+	"kyno_antchovy",
+	"kyno_antchovy_dead",
 	"kyno_bacon",
 	"kyno_bacon_cooked",
 	"kyno_banana",
@@ -307,13 +346,18 @@ local HOF_ICONS =
 	"kyno_beanbugs_cooked",
 	"kyno_beancan",
 	"kyno_beancan_open",
+	"kyno_blubber",
 	"kyno_blue_cap_dried",
 	"kyno_bottle_soul",
 	"kyno_bottlecap",
+	"kyno_brainrock_coral",
+	"kyno_brainrock_larvae",
+	"kyno_brainrock_nubbin",
 	"kyno_brewbook",
 	"kyno_brewingrecipecard",
 	"kyno_bucket_empty",
 	"kyno_bucket_metal",
+	"kyno_bucket_water",
 	"kyno_chicken2",
 	"kyno_chicken_egg",
 	"kyno_chicken_egg_cooked",
@@ -354,6 +398,9 @@ local HOF_ICONS =
 	"kyno_fennel_oversized_rotten",
 	"kyno_fennel_oversized_waxed",
 	"kyno_fennel_seeds",
+	"kyno_fishfarmplot_kit",
+	"kyno_fishmeat_dried",
+	"kyno_fishmeat_small_dried",
 	"kyno_floatilizer",
 	"kyno_flour",
 	"kyno_foliage",
@@ -370,6 +417,13 @@ local HOF_ICONS =
 	"kyno_humanmeat_dried",
 	"kyno_itemslicer",
 	"kyno_itemslicer_gold",
+	"kyno_jellyfish",
+	"kyno_jellyfish_cooked",
+	"kyno_jellyfish_dead",
+	"kyno_jellyfish_dried",
+	"kyno_jellyfish_rainbow",
+	"kyno_jellyfish_rainbow_cooked",
+	"kyno_jellyfish_rainbow_dead",
 	"kyno_koi",
 	"kyno_koi_cooked",
 	"kyno_kokonut",
@@ -379,8 +433,10 @@ local HOF_ICONS =
 	"kyno_limpets_cooked",
 	"kyno_lotus_flower",
 	"kyno_lotus_flower_cooked",
+	"kyno_malbatrossfood",
 	"kyno_meatcan",
 	"kyno_meatcan_open",
+	"kyno_messagebottle_empty",
 	"kyno_milk_beefalo",
 	"kyno_milk_deer",
 	"kyno_milk_koalefant",
@@ -396,7 +452,10 @@ local HOF_ICONS =
 	"kyno_neonfish_cooked",
 	"kyno_oaktree_pod",
 	"kyno_oaktree_pod_cooked",
+	"kyno_oceantrap",
 	"kyno_oil",
+	"kyno_packimbaggims_fishbone",
+	"kyno_packimbaggims_fishbone_dead",
 	"kyno_parznip",
 	"kyno_parznip_cooked",
 	"kyno_parznip_eaten",
@@ -430,7 +489,42 @@ local HOF_ICONS =
 	"kyno_rice_oversized_waxed",
 	"kyno_rice_seeds",
 	"kyno_roe",
+	"kyno_roe_antchovy",
 	"kyno_roe_cooked",
+	"kyno_roe_grouper",
+	"kyno_roe_jellyfish",
+	"kyno_roe_jellyfish_rainbow",
+	"kyno_roe_koi",
+	"kyno_roe_neonfish",
+	"kyno_roe_oceanfish_medium_1",
+	"kyno_roe_oceanfish_medium_2",
+	"kyno_roe_oceanfish_medium_3",
+	"kyno_roe_oceanfish_medium_4",
+	"kyno_roe_oceanfish_medium_5",
+	"kyno_roe_oceanfish_medium_6",
+	"kyno_roe_oceanfish_medium_7",
+	"kyno_roe_oceanfish_medium_8",
+	"kyno_roe_oceanfish_medium_9",
+	"kyno_roe_oceanfish_pufferfish",
+	"kyno_roe_oceanfish_small_1",
+	"kyno_roe_oceanfish_small_2",
+	"kyno_roe_oceanfish_small_3",
+	"kyno_roe_oceanfish_small_4",
+	"kyno_roe_oceanfish_small_5",
+	"kyno_roe_oceanfish_small_6",
+	"kyno_roe_oceanfish_small_7",
+	"kyno_roe_oceanfish_small_8",
+	"kyno_roe_oceanfish_small_9",
+	"kyno_roe_oceanfish_sturgeon",
+	"kyno_roe_pierrotfish",
+	"kyno_roe_pondeel",
+	"kyno_roe_pondfish",
+	"kyno_roe_salmonfish",
+	"kyno_roe_swordfish_blue",
+	"kyno_roe_tropicalfish",
+	"kyno_roe_wobster",
+	"kyno_roe_wobster_monkeyisland",
+	"kyno_roe_wobster_moonglass",
 	"kyno_salmonfish",
 	"kyno_salmonfish_cooked",
 	"kyno_salt",
@@ -453,6 +547,7 @@ local HOF_ICONS =
 	"kyno_seeds_kit_turnip",
 	"kyno_shark_fin",
 	"kyno_sodacan",
+	"kyno_spoiled_fish_large",
 	"kyno_sporecap",
 	"kyno_sporecap_cooked",
 	"kyno_sporecap_dark",
@@ -470,6 +565,8 @@ local HOF_ICONS =
 	"kyno_sweetpotato_oversized_rotten",
 	"kyno_sweetpotato_oversized_waxed",
 	"kyno_sweetpotato_seeds",
+	"kyno_swordfish_dead",
+	"kyno_swordfish_blue",
 	"kyno_syrup",
 	"kyno_taroroot",
 	"kyno_taroroot_cooked",
@@ -514,6 +611,7 @@ local HOF_ICONS =
 	"milkshake_prismatic",
 	"mimicmosa",
 	"minertreat",
+	"monkeyislandmeal",
 	"monstermuffin",
 	"moonbutterflymuffin",
 	"musselbouillabaise",
@@ -523,6 +621,8 @@ local HOF_ICONS =
 	"nukacola_quantum",
 	"nukashine",
 	"nukashine_sugarfree",
+	"oceanfish_pufferfish_inv",
+	"oceanfish_sturgeon_inv",
 	"omurice",
 	"onigiris",
 	"onionrings",
@@ -608,13 +708,14 @@ local HOF_ICONS =
 	"spooky_pumpkincream",
 	"spooky_skullcandy",
 	"spooky_tacodile",
-	"sporecappie",
 	"sporecap_skewers",
+	"sporecappie",
 	"steamedhamsandwich",
 	"sugarbombs",
 	"sugarbombs_explosive",
 	"sugarflymuffin",
 	"sweetpotatosouffle",
+	"swordfishfeast",
 	"tartarsauce",
 	"tea",
 	"teagreen",
@@ -625,6 +726,7 @@ local HOF_ICONS =
 	"toadstoolcola",
 	"tom_kha_soup",
 	"toucan",
+	"toucan_chubby",
 	"tricolordango",
 	"tropicalbouillabaisse",
 	"truffleoil",
@@ -651,9 +753,13 @@ local HOF_ICONS =
 	"wine_pineapple",
 	"wine_pomegranate",
 	"wine_watermelon",
+	"wobster_monkeyisland_land",
+	"wobster_monkeyisland_dead",
+	"wobster_monkeyisland_dead_cooked",
 	"wobsterbreaded",
 	"wobstercocktail",
 	"wobstermonster",
+	
 	-- "beard_monster",
 	-- "bearger_fur",
 	-- "deerclops_eyeball",
@@ -684,8 +790,10 @@ for k, v in pairs(HOF_ICONS) do
 			local icon_name = icon 
 		
 			AddPrefabPostInit(icon_name, function(inst)
-				inst.components.inventoryitem.imagename = icon_name
-				inst.components.inventoryitem.atlasname = icon_atlas
+				if inst.components.inventoryitem ~= nil then
+					inst.components.inventoryitem.imagename = icon_name
+					inst.components.inventoryitem.atlasname = icon_atlas
+				end
 			end)
 		end
 	end
@@ -705,11 +813,14 @@ local HOF_SCRAPBOOK_ICONS =
 	"farm_plant_kyno_sweetpotato",
 	"farm_plant_kyno_turnip",
 	"fast_farmplot",
+	"icon_fuel_fishfood",
 	"kingfisher",
 	"kyno_aloe_ground",
 	"kyno_antchest",
 	"kyno_aspargos_ground",
 	"kyno_bananatree",
+	"kyno_brainrock_rock",
+	"kyno_brainrock_sprout",
 	"kyno_chicken2",
 	"kyno_coffeebush",
 	"kyno_cookware_big",
@@ -723,10 +834,15 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_cookware_syrup",
 	"kyno_cucumber_ground",
 	"kyno_deciduousforest_shop",
+	"kyno_dogfish",
 	"kyno_fennel_ground",
 	"kyno_fishermermhut_wurt",
+	"kyno_fishfarmplot",
 	"kyno_garden_sprinkler",
+	"kyno_ghost_pirate",
 	"kyno_itemshowcaser",
+	"kyno_jellyfish_ocean",
+	"kyno_jellyfish_rainbow_ocean",
 	"kyno_kokonuttree",
 	"kyno_kokonuttree_sapling",
 	"kyno_limpetrock",
@@ -747,6 +863,9 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_mushstump",
 	"kyno_musselstick",
 	"kyno_ocean_wreck",
+	"kyno_octopusking_ocean",
+	"kyno_octopusking_treasurechest",
+	"kyno_packimbaggims",
 	"kyno_parznip_big",
 	"kyno_parznip_ground",
 	"kyno_pebblecrab",
@@ -755,6 +874,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_pineapplebush",
 	"kyno_pond_salt",
 	"kyno_preservesjar",
+	"kyno_puffermonster",
 	"kyno_radish_ground",
 	"kyno_rockflippable",
 	"kyno_seaweeds_ocean",
@@ -771,15 +891,25 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_sugartree_sapling",
 	"kyno_sugartree_sapped",
 	"kyno_sweetpotato_ground",
+	"kyno_swordfish",
 	"kyno_taroroot_ocean",
 	"kyno_truffles_ground",
 	"kyno_turnip_ground",
 	"kyno_waterycress_ocean",
+	"kyno_whale_blue_ocean",
+	"kyno_whale_blue_ocean_carcass",
+	"kyno_whale_ocean_bubbles",
+	"kyno_whale_white_ocean",
+	"kyno_whale_white_ocean_carcass",
 	"kyno_wildwheat",
 	"kyno_woodenkeg",
+	"oceanfish_pufferfish_inv",
+	"oceanfish_sturgeon_inv",
 	"quagmire_pigeon",
 	"slow_farmplot",
 	"toucan",
+	"toucan_chubby",
+	"wobster_monkeyisland_land",
 }
 
 for i, v in ipairs(HOF_SCRAPBOOK_ICONS) do
@@ -801,4 +931,28 @@ local HOF_SKIN_ICONS =
 
 for k, v in pairs(HOF_SKIN_ICONS) do
 	RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", v..".tex")
+end
+
+-- Dirty fix for icons for the Plant Registry and Farm Plants.
+local _GetInventoryItemAtlas = _G.GetInventoryItemAtlas
+_G.GetInventoryItemAtlas = function(name, ...)
+    local myatlas = _G.resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")
+
+	if _G.TheSim:AtlasContains(myatlas, name) then
+        return myatlas
+    end
+
+    return _GetInventoryItemAtlas(name, ...)
+end
+
+-- Dirty fix for icons for the Scrapbook.
+local _GetScrapbookIconAtlas_Internal = _G.GetScrapbookIconAtlas_Internal
+_G.GetScrapbookIconAtlas_Internal = function(name, ...)
+	local myatlas = _G.resolvefilepath("images/scrapbookimages/hof_scrapbookimages.xml")
+	
+	if _G.TheSim:AtlasContains(myatlas, name) then
+		return myatlas
+	end
+	
+	return _GetScrapbookIconAtlas_Internal(name, ...)
 end

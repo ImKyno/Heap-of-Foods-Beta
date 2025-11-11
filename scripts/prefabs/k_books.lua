@@ -230,6 +230,17 @@ local function TryGrowth(inst, maximize)
 			inst:Remove()
 			
 			return true
+		elseif inst:HasTag("brainsprout") then -- NOW WE HAVE THIS ONE TOO HAHAHAHAHA
+			local sprout = SpawnPrefab("kyno_brainrock_rock")
+			sprout.Transform:SetPosition(inst.Transform:GetWorldPosition())
+			sprout.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant")
+			
+			local fx = SpawnPrefab("ocean_splash_med1")
+			fx.Transform:SetPosition(sprout.Transform:GetWorldPosition())
+	
+			inst:Remove()
+			
+			return true
 		end
 	end
 

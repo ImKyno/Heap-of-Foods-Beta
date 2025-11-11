@@ -1,16 +1,15 @@
 -- Common Dependencies.
-local _G      = GLOBAL
-local require = _G.require
-local ACTIONS = _G.ACTIONS
+local _G            = GLOBAL
+local require       = _G.require
+local ACTIONS       = _G.ACTIONS
+local UpvalueHacker = require("hof_upvaluehacker")
 
-require("hof_upvaluehacker")
 require("behaviours/doaction")
 require("behaviours/runaway")
 
 -- Hack to lure Rockjaws and Gnarwails to Jawsbreaker food. 
 -- Thanks DiogoW for the help.
-SharkBrain = require("brains/sharkbrain")
-
+local SharkBrain = require("brains/sharkbrain")
 local SHARK_SEE_FOOD_DIST = 15
 local SHARK_FINDFOOD_CANT_TAGS = { "INLIMBO", "outofreach" }
 
@@ -45,8 +44,7 @@ end
 
 AddBrainPostInit("sharkbrain", SharkBrainPostInit)
 -----------------------------------------------------------------------------------------------------
-GnarwailBrain = require("brains/gnarwailbrain")
-
+local GnarwailBrain = require("brains/gnarwailbrain")
 local GNARWAIL_SEE_FOOD_DIST = 15
 local GNARWAIL_FINDFOOD_CANT_TAGS = { "INLIMBO", "outofreach" }
 
@@ -67,7 +65,7 @@ local function Gnarwail_EatJawsbreakerAction(inst)
 	end
 end
 
-local function GnarwailPostInit(self)
+local function GnarwailBrainPostInit(self)
 	local jawsbreaker = WhileNode(function() return end, "JawsbreakerBait", 
 	DoAction(self.inst, Gnarwail_EatJawsbreakerAction, "EatJawsbreaker", true))
     
@@ -75,7 +73,7 @@ local function GnarwailPostInit(self)
 	table.insert(self.bt.root.children, 1, jawsbreaker)
 end
 
-AddBrainPostInit("gnarwailbrain", GnarwailPostInit)
+AddBrainPostInit("gnarwailbrain", GnarwailBrainPostInit)
 -----------------------------------------------------------------------------------------------------
 -- Flee from players who have recently used Slaughter Tools.
 local slaughterable_brains =
@@ -87,7 +85,7 @@ local slaughterable_brains =
 local AVOID_BUTCHER_DIST = TUNING.KYNO_SLAUGHTERTOOLS_AVOID_DIST
 local AVOID_BUTCHER_STOP = TUNING.KYNO_SLAUGHTERTOOLS_AVOID_STOP
 
-local function SlaughterablePostInit(self)
+local function SlaughterableBrainPostInit(self)
 	local inst = self.inst
 
 	local runaway = RunAway(inst, "recent_butcher", AVOID_BUTCHER_DIST, AVOID_BUTCHER_STOP)
@@ -98,5 +96,33 @@ local function SlaughterablePostInit(self)
 end
 
 for _, brain in ipairs(slaughterable_brains) do
-	AddBrainPostInit(brain, SlaughterablePostInit)
+	AddBrainPostInit(brain, SlaughterableBrainPostInit)
 end
+-----------------------------------------------------------------------------------------------------
+-- Be able to eat invisible baits inside Oceanic Trap.
+local OceanFishBrain = require("brains/oceanfishbrain")
+local OCEANFISH_SEE_FOOD_DIST = 4
+local OCEANFISH_FINDFOOD_CANT_TAGS = { "planted", "INLIMBO", "outofreach" }
+local OCEANFISH_FINDFOOD_ONEOF_TAGS = { "fishinghook", "oceantrawler", "bait_invisible" }
+
+local _FindFoodAction = UpvalueHacker.GetUpvalue(OceanFishBrain.OnStart, "FindFoodAction")
+
+local function OceanFishFindFoodAction(inst, ...)
+	if inst.food_target == nil then
+		local x, y, z = inst.Transform:GetWorldPosition()
+		local ents = _G.TheSim:FindEntities(x, y, z, OCEANFISH_SEE_FOOD_DIST, {"bait_invisible"}, OCEANFISH_FINDFOOD_CANT_TAGS, OCEANFISH_FINDFOOD_ONEOF_TAGS)
+			
+		for _, baits in ipairs(ents) do
+			if baits.components.bait ~= nil and inst.components.eater:CanEat(baits) then
+				inst.food_target = baits
+				inst.num_nibbles = 1
+					
+				return false
+			end
+		end
+	end
+
+	return _FindFoodAction(inst, ...)
+end
+
+UpvalueHacker.SetUpvalue(OceanFishBrain.OnStart, OceanFishFindFoodAction, "FindFoodAction")

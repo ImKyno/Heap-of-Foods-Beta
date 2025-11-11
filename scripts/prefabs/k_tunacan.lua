@@ -81,7 +81,8 @@ local function closed_fn()
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
     
     inst:AddComponent("tradable")
-    inst.components.tradable.goldvalue = 1
+    inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 
     inst:AddComponent("unwrappable")
 	inst.components.unwrappable:SetOnUnwrappedFn(OnOpenCan)
@@ -123,7 +124,8 @@ local function opened_fn()
 	inst.components.inventoryitem.imagename = "kyno_tunacan_open"
     
     inst:AddComponent("tradable")
-    inst.components.tradable.goldvalue = 1
+    inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM

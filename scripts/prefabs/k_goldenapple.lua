@@ -55,6 +55,8 @@ local function fn()
 	inst:AddTag("goldenapple")
 	inst:AddTag("preparedfood")
 	inst:AddTag("saltbox_valid")
+	inst:AddTag("itemshowcaser_valid")
+	inst:AddTag("beargerfur_sack_valid")
 	inst:AddTag("_named")
 	
 	inst._goldenapplefx = SpawnPrefab("kyno_goldenapple_fx")

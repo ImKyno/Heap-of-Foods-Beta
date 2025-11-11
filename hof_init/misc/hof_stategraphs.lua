@@ -1,14 +1,15 @@
 -- Common Dependencies.
-local _G 			= GLOBAL
-local require 		= _G.require
-local ACTIONS 		= _G.ACTIONS
+local _G            = GLOBAL
+local require       = _G.require
+local ACTIONS       = _G.ACTIONS
 local ActionHandler = _G.ActionHandler
-local EQUIPSLOTS 	= _G.EQUIPSLOTS
-local EventHandler 	= _G.EventHandler
-local FRAMES 		= _G.FRAMES
-local State 		= _G.State
-local TimeEvent 	= _G.TimeEvent
-local POPUPS 		= _G.POPUPS
+local EQUIPSLOTS    = _G.EQUIPSLOTS
+local EventHandler  = _G.EventHandler
+local FRAMES        = _G.FRAMES
+local State         = _G.State
+local TimeEvent     = _G.TimeEvent
+local POPUPS        = _G.POPUPS
+local PlayFootstep  = _G.PlayFootstep
 local UpvalueHacker = require("hof_upvaluehacker")
 
 require("stategraphs/commonstates")
@@ -417,6 +418,101 @@ AddStategraphPostInit("shark", function(sg)
 		inst.sg:GoToState("eat_pst2")
 	end
 end)
+
+-- Checking if Chum The Waters Mod is enabled to not add duplicates.
+if not TUNING.HOF_IS_CTW_ENABLED then
+	AddStategraphState("catcoon",
+		State{
+			name = "pawground2",
+			tags = {"busy"},
+
+			onenter = function(inst)
+				inst.Physics:Stop()
+				inst.AnimState:PlayAnimation("action")
+				inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/pickup")
+			end,
+
+			onexit = function(inst)
+
+			end,
+
+			timeline =
+			{
+				TimeEvent(6  * FRAMES, function(inst) PlayFootstep(inst) end),
+				TimeEvent(13 * FRAMES, function(inst) PlayFootstep(inst) end),
+				TimeEvent(20 * FRAMES, function(inst) PlayFootstep(inst) end),
+				TimeEvent(27 * FRAMES, function(inst) PlayFootstep(inst) end),
+				TimeEvent(34 * FRAMES, function(inst) PlayFootstep(inst) end),
+				TimeEvent(42 * FRAMES, function(inst) PlayFootstep(inst) end),
+			},
+
+			events =
+			{
+				EventHandler("animover", function(inst) inst.sg:GoToState("mysterymeat") end),
+			},
+		}
+	)
+
+	AddStategraphState("catcoon",
+		State{
+			name = "mysterymeat",
+			tags = {"busy", "hairball", "mysterymeat"},
+
+			onenter = function(inst)
+				inst.Physics:Stop()
+				inst.AnimState:PushAnimation("furball", false)
+			
+				inst.hairballfollowup = math.random() <= .75
+				
+				if inst.hairballfollowup then
+					inst.AnimState:PushAnimation("idle_loop", false)
+					inst.AnimState:PushAnimation("action", false)
+				end
+			end,
+
+			onexit = function(inst)
+
+			end,
+
+			timeline =
+			{
+				TimeEvent(37 * FRAMES, function(inst) inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/hairball_vomit") end),
+				TimeEvent(46 * FRAMES, function(inst)
+					inst.vomit = _G.SpawnPrefab("kyno_mysterymeat")
+				
+					if inst.vomit ~= nil then
+						local downvec = _G.TheCamera:GetDownVec()
+						local face = math.atan2(downvec.z, downvec.x) * (180 / math.pi)
+						local pos = inst:GetPosition() + downvec:Normalize()
+						
+						inst.Transform:SetRotation(-face)
+						inst.vomit.Transform:SetPosition(pos.x, pos.y, pos.z)
+						
+						inst.vomit:AddTag("nosteal")
+						inst.vomit:RemoveTag("cattoy")
+					
+						if inst.vomit.components.inventoryitem and inst.vomit.components.inventoryitem.ondropfn then
+							inst.vomit.components.inventoryitem.ondropfn(inst.vomit)
+						end
+					
+						if inst.vomit.components.weighable ~= nil then
+							inst.vomit.components.weighable.prefab_override_owner = inst.prefab
+						end
+					end
+
+					inst:PerformBufferedAction()
+				end),
+			},
+
+			events =
+			{
+				EventHandler("animqueueover", function(inst)
+					inst.sg:GoToState("idle")
+				end),
+			},
+		}
+	)
+end
 
 -- Brewbook Action Stategraph.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)

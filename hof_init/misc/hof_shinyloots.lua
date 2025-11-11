@@ -37,3 +37,4 @@ TUNING.SHINY_LOOT_MOD_DEFS["dug_kyno_coffeebush"] = CreatureTest
 TUNING.SHINY_LOOT_MOD_DEFS["kyno_crabkingmeat"] = CreatureTest
 TUNING.SHINY_LOOT_MOD_DEFS["kyno_poison_froglegs"] = CreatureTest
 TUNING.SHINY_LOOT_MOD_DEFS["kyno_foodsack_blueprint"] = CreatureTest
+TUNING.SHINY_LOOT_MOD_DEFS["kyno_fishfarmplot_kit_blueprint"] = CreatureTest

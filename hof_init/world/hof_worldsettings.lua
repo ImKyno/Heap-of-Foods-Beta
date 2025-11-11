@@ -13,7 +13,7 @@ for k, v in pairs(customization_worldgen) do
 		order = v.order,
 		value = v.value,
 		desc  = GetCustomizeDescription(v.desc),
-		world = v.world or {"forest"},		
+		world = v.world or { "forest" },		
 		image = v.image..".tex",
 		atlas = "images/customizationimages/hof_customizationimages_worldgen.xml",
 	})
@@ -27,7 +27,7 @@ for k, v in pairs(customization_worldsettings) do
 		order = v.order,
 		value = v.value,
 		desc  = GetCustomizeDescription(v.desc),
-		world = v.world or {"forest"},		
+		world = v.world or { "forest" },		
 		image = v.image..".tex",
 		atlas = "images/customizationimages/hof_customizationimages_worldsettings.xml",
 	})

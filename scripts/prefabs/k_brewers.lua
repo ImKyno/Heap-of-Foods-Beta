@@ -43,9 +43,11 @@ end
 
 local function GetBubble(inst)
     if not inst.bubble or not inst.bubble:IsValid() then
-        local x,y,z = inst.Transform:GetWorldPosition()
+        local x, y, z = inst.Transform:GetWorldPosition()
         local ents = TheSim:FindEntities(x,y,z, 0.01)
+		
         inst.bubble = nil
+		
         for k,v in pairs(ents) do
             if v.prefab == "kyno_product_bubble" then
                 inst.bubble = v
@@ -53,6 +55,7 @@ local function GetBubble(inst)
             end
         end
     end
+	
     return inst.bubble
 end
 
@@ -90,6 +93,7 @@ local function OnHit(inst, worker)
             if inst.components.container ~= nil and inst.components.container:IsOpen() then
                 inst.components.container:Close()
             end
+
             inst.AnimState:PlayAnimation("hit_empty")
             inst.AnimState:PushAnimation("idle_empty", false)
         end
@@ -118,6 +122,7 @@ local function OnClose(inst)
             inst.AnimState:PlayAnimation("idle_empty")
             inst.SoundEmitter:KillSound("brew_loop")
         end
+		
         inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
     end
 end

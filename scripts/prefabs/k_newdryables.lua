@@ -12,6 +12,8 @@ local assets =
 	Asset("ANIM", "anim/kyno_meatrack_crabkingmeat.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_poison_froglegs.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_moon_froglegs.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_jellyfish.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_fishmeat.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -26,8 +28,10 @@ local prefabs =
 	"moon_cap",
 	"plantmeat",
 	"pigskin",
-	
-	"smallmeat_dried",
+	"smallmeat",
+	"meat",
+	"fishmeat_small",
+	"fishmeat",
 	
 	"kyno_seaweeds",
 	"kyno_humanmeat",
@@ -35,6 +39,8 @@ local prefabs =
 	"kyno_crabkingmeat",
 	"kyno_poison_froglegs",
 	"kyno_moon_froglegs",
+	"kyno_jellyfish",
+	"kyno_jellyfish_dead",
 	
 	"spoiled_food",
 }
@@ -53,8 +59,10 @@ local function cap_fn(bank, build, anim, cap_name)
     inst.AnimState:SetBuild(build)
     inst.AnimState:PlayAnimation(anim)
 
-    inst:AddTag("dried_cap")
 	inst:AddTag("veggie")
+	inst:AddTag("dried_cap")
+	inst:AddTag("saltbox_valid")
+	inst:AddTag("beargerfur_sack_valid")
 
     inst.entity:SetPristine()
 
@@ -102,6 +110,8 @@ local function meat_fn(bank, build, anim, meat_name)
 
     inst:AddTag("meat")
 	inst:AddTag("lureplant_bait")
+	inst:AddTag("saltbox_valid")
+	inst:AddTag("beargerfur_sack_valid")
 
     inst.entity:SetPristine()
 
@@ -124,7 +134,6 @@ local function meat_fn(bank, build, anim, meat_name)
 	inst.components.edible.ismeat = true
 
     inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 
@@ -146,6 +155,8 @@ local function veggie_fn(bank, build, anim, veggie_name)
 	inst.AnimState:PlayAnimation(anim)
 	
 	inst:AddTag("veggie")
+	inst:AddTag("saltbox_valid")
+	inst:AddTag("beargerfur_sack_valid")
 
 	inst.entity:SetPristine()
 
@@ -300,6 +311,8 @@ local function fn_humanmeat()
 	inst.components.edible.hungervalue = TUNING.KYNO_HUMANMEAT_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_HUMANMEAT_DRIED_SANITY
 	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
+	
 	return inst
 end
 
@@ -316,6 +329,8 @@ local function fn_plantmeat()
 	inst.components.edible.hungervalue = TUNING.KYNO_PLANTMEAT_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_PLANTMEAT_DRIED_SANITY
 	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
+	
 	return inst
 end 
 
@@ -330,6 +345,8 @@ local function fn_seaweeds()
 	inst.components.edible.hungervalue = TUNING.KYNO_WEEDSEA_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_WEEDSEA_DRIED_SANITY
 	
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
+	
 	return inst
 end
 
@@ -342,11 +359,14 @@ local function fn_crabmeat()
         return inst
     end
 	
-	inst.components.tradable.goldvalue = 1
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
 	inst.components.edible.healthvalue = TUNING.KYNO_CRABMEAT_DRIED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_CRABMEAT_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_CRABMEAT_DRIED_SANITY
+	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
 	
 	return inst
 end
@@ -360,11 +380,86 @@ local function fn_crabkingmeat()
         return inst
     end
 	
-	inst.components.tradable.goldvalue = 1
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD_RARE
 	
 	inst.components.edible.healthvalue = TUNING.KYNO_CRABKINGMEAT_DRIED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_CRABKINGMEAT_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_CRABKINGMEAT_DRIED_SANITY
+	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
+	
+	return inst
+end
+
+local function fn_jellyfish()
+	local inst = meat_fn("kyno_meatrack_jellyfish", "kyno_meatrack_jellyfish", "kyno_jellyfish_idle", "kyno_jellyfish_dried")
+	
+	inst:AddTag("fish")
+	inst:AddTag("fishmeat")
+	inst:AddTag("catfood")
+	
+	if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
+	
+	inst.components.edible.healthvalue = TUNING.KYNO_JELLYFISH_DRIED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_JELLYFISH_DRIED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_JELLYFISH_DRIED_SANITY
+	inst.components.edible.secondaryfoodtype = FOODTYPE.MONSTER
+	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
+	
+	return inst
+end
+
+local function fn_fishmeat_small()
+	local inst = meat_fn("kyno_meatrack_fishmeat", "kyno_meatrack_fishmeat", "kyno_fishmeat_small_idle", "kyno_fishmeat_small_dried")
+	
+	inst:AddTag("fish")
+	inst:AddTag("fishmeat")
+	inst:AddTag("catfood")
+	
+	if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
+	
+	inst.components.edible.healthvalue = TUNING.KYNO_FISHMEAT_SMALL_DRIED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_FISHMEAT_SMALL_DRIED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_FISHMEAT_SMALL_DRIED_SANITY
+	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
+	
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+	
+	return inst
+end
+
+local function fn_fishmeat()
+	local inst = meat_fn("kyno_meatrack_fishmeat", "kyno_meatrack_fishmeat", "kyno_fishmeat_idle", "kyno_fishmeat_dried")
+	
+	inst:AddTag("fish")
+	inst:AddTag("fishmeat")
+	inst:AddTag("catfood")
+	
+	if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
+	
+	inst.components.edible.healthvalue = TUNING.KYNO_FISHMEAT_DRIED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_FISHMEAT_DRIED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_FISHMEAT_DRIED_SANITY
+	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
 	
 	return inst
 end
@@ -378,4 +473,7 @@ Prefab("kyno_humanmeat_dried", fn_humanmeat, assets, prefabs),
 Prefab("kyno_seaweeds_dried", fn_seaweeds, assets, prefabs),
 Prefab("kyno_pigskin_dried", fn_pigskin, assets, prefabs),
 Prefab("kyno_crabmeat_dried", fn_crabmeat, assets, prefabs),
-Prefab("kyno_crabkingmeat_dried", fn_crabkingmeat, assets, prefabs)
+Prefab("kyno_crabkingmeat_dried", fn_crabkingmeat, assets, prefabs),
+Prefab("kyno_jellyfish_dried", fn_jellyfish, assets, prefabs),
+Prefab("kyno_fishmeat_small_dried", fn_fishmeat_small, assets, prefabs),
+Prefab("kyno_fishmeat_dried", fn_fishmeat, assets, prefabs)

@@ -38,19 +38,19 @@ local kyno_foods =
 	
 	jellyopop = 
 	{
-		test = function(cooker, names, tags) return tags.fish and tags.frozen and names.twigs end,
+		test = function(cooker, names, tags) return tags.jellyfish and tags.frozen and names.twigs end,
 		priority = 20,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SUPERFAST,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 20,
-		hunger = 12.5,
-		sanity = 0,
+		hunger = 18.75,
+		sanity = 10,
 		cooktime = 0.5,
 		potlevel = "med",
 		floater = TUNING.HOF_FLOATER,
-		card_def = {ingredients = {{"pondfish", 1}, {"ice", 1}, {"twigs", 1}}},
+		card_def = {ingredients = {{"kyno_jellyfish", 1}, {"ice", 1}, {"twigs", 1}}},
 	},
 	
 	sharkfinsoup = 
@@ -70,21 +70,6 @@ local kyno_foods =
 		oneatenfn = function(inst, eater)
 			OnFoodNaughtiness(inst, eater)
 		end,
-	},
-	
-	caviar = 
-	{
-		test = function(cooker, names, tags) return tags.roe and tags.veggie and not tags.sweetener and not tags.dairy end,
-		priority = 30,
-		foodtype = FOODTYPE.MEAT,
-		perishtime = TUNING.PERISH_MED,
-		health = 3,
-		hunger = 12.5,
-		sanity = 15,
-		cooktime = 2,
-		potlevel = "med",
-		floater = TUNING.HOF_FLOATER,
-		card_def = {ingredients = {{"kyno_roe", 1}, {"corn", 3}}},
 	},
 	
 	tropicalbouillabaisse =
@@ -3078,6 +3063,70 @@ local kyno_foods =
 			end
 			
 			eater:AddDebuff("kyno_acidimmunitybuff", "kyno_acidimmunitybuff")
+		end,
+	},
+	
+	-- Mandrake Soup but with meat instead.
+	swordfishfeast =
+	{
+		test = function(cooker, names, tags) return tags.swordfish and tags.cheese and (names.fig or names.fig_cooked) and tags.sweetener end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_MED,
+		health = 100,
+		hunger = 150,
+		sanity = 25,
+		cooktime = 2,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXQUISITE,
+		scale = 1.5,
+		floater = TUNING.HOF_FLOATER,
+		tags = {"sharkboifood", "exquisite"},
+		card_def = {ingredients = {{"kyno_swordfish_dead", 1}, {"cheese_yellow", 1}, {"fig", 1}, {"honey", 1}}},
+	},
+	
+	monkeyislandmeal =
+	{
+		test = function(cooker, names, tags) return names.wobster_monkeyisland_land and tags.banana end,
+		priority = 35,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_MED,
+		health = 20,
+		hunger = 25,
+		sanity = 20,
+		cooktime = .15,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CURSE_MONKEY,
+		floater = TUNING.HOF_FLOATER,
+		tags = {"monkeyqueenbribe"},
+		card_def = {ingredients = {{"wobster_monkeyisland_land", 1}, {"cave_banana", 1}, {"twigs", 2}}},
+		oneatenfn = function(inst, eater)
+			if eater.components.inventory ~= nil and eater.components.cursable ~= nil
+			and not (eater.components.health ~= nil and eater.components.health:IsDead()) and 
+			not eater:HasTag("playerghost") then
+				local prop = eater.components.inventory:FindItem(function(item) return item.prefab == "cursed_monkey_token" end)
+				
+				if prop ~= nil then
+					eater.components.cursable:RemoveCurse("MONKEY", 10)
+				end
+			end
+		end,
+	},
+	
+	brainmettersoup =
+	{
+		test = function(cooker, names, tags) return names.kyno_brainrock_coral and tags.jellyfish and tags.algae and not tags.inedible end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FAST,
+		health = -15,
+		hunger = 18.75,
+		sanity = 50,
+		cooktime = 1,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRAFTING,
+		floater = TUNING.HOF_FLOATER,
+		prefabs = { "kyno_craftingbuff" },
+		card_def = {ingredients = {{"kyno_brainrock_coral", 1}, {"kyno_jellyfish", 1}, {"kyno_seaweeds", 1}}},
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_craftingbuff", "kyno_craftingbuff")
 		end,
 	},
 }

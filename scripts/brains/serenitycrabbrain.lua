@@ -7,7 +7,7 @@ local SEE_PLAYER_DIST   = 5
 local AVOID_PLAYER_DIST = 3
 local AVOID_PLAYER_STOP = 6
 local SEE_BAIT_DIST     = 10
-local MAX_WANDER_DIST    = 15
+local MAX_WANDER_DIST   = 15
 
 local THREAT_MUST_HAVE_TAGS = {"_combat"}
 local THREAT_NO_TAGS        = {"INLIMBO", "playerghost", "notarget"}
@@ -42,7 +42,10 @@ local function TestAction(inst)
 end
 
 local function EatFoodAction(inst)
-    local target = FindEntity(inst, SEE_BAIT_DIST, function(item) return inst.components.eater:CanEat(item) and item.components.bait and not item:HasTag("planted") and not (item.components.inventoryitem and item.components.inventoryitem:IsHeld()) end)
+    local target = FindEntity(inst, SEE_BAIT_DIST, function(item) return inst.components.eater:CanEat(item) 
+	and item.components.bait and not item:HasTag("planted") 
+	and not (item.components.inventoryitem and item.components.inventoryitem:IsHeld()) end)
+	
     if target then
         local act = BufferedAction(inst, target, ACTIONS.EAT)
         act.validfn = function() return not (target.components.inventoryitem and target.components.inventoryitem:IsHeld()) end

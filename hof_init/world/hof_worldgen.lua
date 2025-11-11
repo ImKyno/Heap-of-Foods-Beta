@@ -233,17 +233,57 @@ local RoomPrefabs =
 		"DeciduousClearing",
 		"PondyGrass",
 	},
+	
+	kyno_antchovy_spawner =
+	{
+		"OceanCoastal",
+		"OceanSwell",
+		"OceanRough",
+	},
+	
+	kyno_jellyfish_spawner =
+	{
+		"OceanCoastal",
+		"OceanSwell",
+		"OceanRough",
+	},
+	
+	kyno_jellyfish_rainbow_spawner =
+	{
+		"OceanSwell",
+		"OceanRough",
+		"OceanHazardous",
+	},
+	
+	kyno_dogfish_spawner =
+	{
+		"OceanCoastal",
+		"OceanSwell",
+		"OceanRough",
+		"OceanHazardous",
+	},
+	
+	kyno_puffermonster_spawner =
+	{
+		"OceanRough",
+		"OceanHazardous",
+	},
 }
 
 -- Special case where we want more or less prefabs spawns in rooms.
 local PrefabValues =
 {
-	["kyno_coffeebush"]         = .02, -- This is because we don't want that much coffee there.
-	["kyno_sweetpotato_ground"] = .03,
-	["kyno_rockflippable"]      = .04, -- Decreased this because of low beefalo amounts. Wheats too.
-	["kyno_wildwheat"]          = .04,
-	["kyno_truffles_ground"]    = .2,  -- Want truffles to be slightly rare and be like cacti.
-	["kyno_radish_ground"]      = .7,
+	["kyno_coffeebush"]                = .02, -- This is because we don't want that much coffee there.
+	["kyno_sweetpotato_ground"]        = .03,
+	["kyno_rockflippable"]             = .04, -- Decreased this because of low beefalo amounts. Wheats too.
+	["kyno_wildwheat"]                 = .04,
+	["kyno_truffles_ground"]           = .2,  -- Want truffles to be slightly rare and be like cacti.
+	["kyno_radish_ground"]             = .7,
+	["kyno_antchovy_spawner"]          = .1,
+	["kyno_jellyfish_spawner"]         = .09,
+	["kyno_jellyfish_rainbow_spawner"] = .09,
+	["kyno_dogfish_spawner"]           = .1,
+	["kyno_puffermonster_spawner"]     = .2,
 }
 
 for prefab, rooms in pairs(RoomPrefabs) do
@@ -326,8 +366,9 @@ AddTaskSetPreInitAny(function(tasksetdata)
 	end
 
 	-- Islands are too big to generated, using this instead.
-	tasksetdata.ocean_prefill_setpieces["SerenityIsland"] = { count = 1 }
-	tasksetdata.ocean_prefill_setpieces["MeadowIsland"]   = { count = 1 }
+	tasksetdata.ocean_prefill_setpieces["SerenityIsland"]  = { count = 1 }
+	tasksetdata.ocean_prefill_setpieces["MeadowIsland"]    = { count = 1 }
+	tasksetdata.ocean_prefill_setpieces["OctopusKingShop"] = { count = 1 }
 	
 	for k, layout in pairs(OCEAN_SETPIECES) do
 		tasksetdata.ocean_prefill_setpieces[layout]       = { count = math.random(TUNING.HOF_MIN_OCEANSETPIECES, TUNING.HOF_MAX_OCEANSETPIECES) }

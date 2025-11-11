@@ -68,6 +68,7 @@ AddPrefabPostInit("kyno_parznip", ParznipPostinit)
 
 -- Some changes for the Vanilla foods.
 local VanillaFood = require("preparedfoods")
+
 VanillaFood.bananapop.test = function(cooker, names, tags)
     return tags.banana and tags.frozen and names.twigs and not tags.meat and not tags.fish
 end
@@ -123,6 +124,8 @@ VanillaFood.lobsterdinner.test = function(cooker, names, tags)
 	return names.wobster_sheller_land and tags.butter and (tags.meat and tags.meat >= 1.0) and (tags.fish and tags.fish >= 1.0) and not tags.frozen
 end
 
+VanillaFood.lobsterdinner.oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXQUISITE
+
 VanillaFood.fishtacos.test = function(cooker, names, tags)
 	return tags.fish and (names.corn or names.corn_cooked or names.oceanfish_small_5_inv or names.oceanfish_medium_5_inv) 
 	and not (names.eel or names.pondeel or names.eel_cooked)
@@ -135,9 +138,11 @@ end
 
 -- Tweaks for Warly's foods.
 local WarlyFood = require("preparedfoods_warly")
+
 WarlyFood.monstertartare.test = function(cooker, names, tags)
 	return tags.monster and tags.monster >= 2 and not tags.inedible and not tags.fruit
 end
+
 WarlyFood.monstertartare.health = -20
 WarlyFood.monstertartare.hunger = 62.5
 WarlyFood.monstertartare.sanity = -20
@@ -337,16 +342,6 @@ local dried_foods =
 	"monstermeat_dried",
 	"kelp_dried",
 	"humanmeat_dried",
-	
-	"kyno_seaweeds_dried",
-	"kyno_red_cap_dried",
-	"kyno_green_cap_dried",
-	"kyno_blue_cap_dried",
-	"kyno_moon_cap_dried",
-	"kyno_humanmeat_dried",
-	"kyno_crabmeat_dried",
-	"kyno_crabkingmeat_dried",
-	"kyno_plantmeat_dried",
 }
 
 local function DriedPostInit(inst)

@@ -25,6 +25,7 @@ local TERRAIN_FILTER               =
 	kyno_cucumber_ground           = OnlyAllow({ WORLD_TILES.OCEAN_COASTAL, WORLD_TILES.OCEAN_ROUGH, WORLD_TILES.OCEAN_HAZARDOUS }),
 	kyno_waterycress_ocean         = OnlyAllow({ WORLD_TILES.OCEAN_SWELL, WORLD_TILES.OCEAN_ROUGH, WORLD_TILES.OCEAN_HAZARDOUS }),
 	kyno_ocean_wreck               = OnlyAllow({ WORLD_TILES.OCEAN_SWELL, WORLD_TILES.OCEAN_ROUGH, WORLD_TILES.OCEAN_HAZARDOUS }),
+	kyno_brainrock_rock            = OnlyAllow({ WORLD_TILES.OCEAN_SWELL, WORLD_TILES.OCEAN_ROUGH, WORLD_TILES.OCEAN_HAZARDOUS }),
 	kyno_wildwheat                 = OnlyAllow({ WORLD_TILES.SAVANNA }),
 	kyno_parznip_big               = OnlyAllow({ WORLD_TILES.MUD }),
 	kyno_mushstump_natural         = OnlyAllow({ WORLD_TILES.FOREST }),

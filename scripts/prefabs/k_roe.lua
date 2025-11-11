@@ -1,6 +1,8 @@
+-- Roe is deprecated, but kept for old worlds. Default Roe is now Freshwater Fish Roe.
+-- For the new kinds of roes see k_fishroe.lua
 local assets =
 {
-	Asset("ANIM", "anim/roe.zip"),
+	Asset("ANIM", "anim/kyno_roe.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -9,6 +11,7 @@ local assets =
 
 local prefabs = 
 {
+	"kyno_roe",
 	"kyno_roe_cooked",
 	"spoiled_food",
 }
@@ -23,14 +26,16 @@ local function fn()
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-	inst.AnimState:SetBank("roe")
-	inst.AnimState:SetBuild("roe")
+	inst.AnimState:SetBank("kyno_roe")
+	inst.AnimState:SetBuild("kyno_roe")
 	inst.AnimState:PlayAnimation("idle")
 	
+	inst:AddTag("roe")
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
 	inst:AddTag("saltbox_valid")
-	inst:AddTag("roe_fishfarmbait")
+	
+	inst.scrapbook_proxy = "kyno_roe_pondfish"
 
 	inst.entity:SetPristine()
 
@@ -43,7 +48,8 @@ local function fn()
 	inst:AddComponent("selfstacker")
 	
 	inst:AddComponent("tradable")
-	inst.components.tradable.goldvalue = 1
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_ROE_HEALTH
@@ -84,8 +90,8 @@ local function fn_cooked()
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-	inst.AnimState:SetBank("roe")
-	inst.AnimState:SetBuild("roe")
+	inst.AnimState:SetBank("kyno_roe")
+	inst.AnimState:SetBuild("kyno_roe")
 	inst.AnimState:PlayAnimation("cooked")
 	
 	inst:AddTag("meat")

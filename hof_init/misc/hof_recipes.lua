@@ -4,6 +4,7 @@ local TECH                 = _G.TECH
 local Ingredient           = _G.Ingredient
 local AllRecipes           = _G.AllRecipes
 local Recipe2              = _G.Recipe2
+local CONSTRUCTION_PLANS   = _G.CONSTRUCTION_PLANS
 local TechTree             = require("techtree")
 local RecipeFilter         = require("recipes_filter")
 
@@ -13,6 +14,7 @@ local HOF_FERTILIZERTWEAK  = GetModConfigData("FERTILIZERTWEAK")
 -- Atlases for Recipes.
 local DefaultAtlas         = "images/inventoryimages.xml"
 local DefaultAtlas1        = "images/inventoryimages1.xml"
+local DefaultAtlas2        = "images/inventoryimages2.xml"
 local ModAtlas             = "images/inventoryimages/hof_inventoryimages.xml"
 local CraftingFilterAtlas  = "images/tabimages/hof_tabimages.xml"
 
@@ -265,15 +267,15 @@ AddRecipe2("kyno_sugar", {Ingredient("kyno_sugartree_petals", 1, ModAtlas)}, TEC
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("kyno_musselstick_item", {Ingredient("twigs", 3), Ingredient("rope", 1), Ingredient("boards", 1)}, TECH.SCIENCE_TWO, 
+AddRecipe2("kyno_musselstick_item", {Ingredient("twigs", 3), Ingredient("rope", 1), Ingredient("boards", 1)}, TECH.FISHING_ONE, 
 	{
 		atlas 				= ModAtlas, 
 		image 				= "kyno_musselstick_item.tex",
 	},
 	{"GARDENING", "FISHING"}
 )
-SortAfter("kyno_musselstick_item", "ocean_trawler_kit", "GARDENING")
-SortAfter("kyno_musselstick_item", "ocean_trawler_kit", "FISHING")
+SortAfter("kyno_musselstick_item", "kyno_fishfarmplot_construction", "GARDENING")
+SortAfter("kyno_musselstick_item", "kyno_fishfarmplot_construction", "FISHING")
 
 AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2), Ingredient("flint", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO, 
 	{
@@ -395,50 +397,6 @@ AddRecipe2("spice_fed", {Ingredient("corn", 3)}, TECH.FOODPROCESSING_ONE,
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("spice_cure", {Ingredient("kyno_spotspice", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
-	{
-		nounlock			= true,
-		builder_tag			= "hof_spicemaker",
-		numtogive			= 2,
-		atlas				= ModAtlas,
-		image				= "spice_cure.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("spice_mind", {Ingredient("kyno_sugartree_petals", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
-	{
-		nounlock			= true,
-		builder_tag			= "hof_spicemaker",
-		numtogive			= 2,
-		atlas				= ModAtlas,
-		image				= "spice_mind.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("spice_cold", {Ingredient("oceanfish_medium_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
-	{
-		nounlock			= true,
-		builder_tag			= "hof_spicemaker",
-		numtogive			= 2,
-		atlas				= ModAtlas,
-		image				= "spice_cold.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
-AddRecipe2("spice_fire", {Ingredient("oceanfish_small_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
-	{
-		nounlock			= true,
-		builder_tag			= "hof_spicemaker",
-		numtogive			= 2,
-		atlas				= ModAtlas,
-		image				= "spice_fire.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
 AddRecipe2("kyno_foodsack", {Ingredient("saltrock", 10), Ingredient("malbatross_feathered_weave", 4), Ingredient("bluegem", 1)}, TECH.LOST,
 	{
 		atlas               = ModAtlas,
@@ -487,11 +445,38 @@ AddRecipe2("kyno_itemshowcaser", {Ingredient("boards", 3), Ingredient("rope", 3)
 )
 SortAfter("kyno_itemshowcaser", "endtable", "STRUCTURES")
 
+AddRecipe2("kyno_messagebottle_empty", {Ingredient("moonglass", 3)}, TECH.SCIENCE_ONE,
+	{
+		atlas               = ModAtlas, 
+		image               = "kyno_messagebottle_empty.tex",
+	},
+	{"REFINE"}
+)
+
+AddRecipe2("kyno_oceantrap", {Ingredient("kyno_seaweeds", 4, ModAtlas), Ingredient("kyno_messagebottle_empty", 2, ModAtlas), Ingredient("kyno_jellyfish", 1, ModAtlas)}, TECH.FISHING_ONE,
+	{
+		atlas               = ModAtlas,
+		image               = "kyno_oceantrap.tex",
+	},
+	{"TOOLS", "GARDENING", "FISHING"}
+)
+SortAfter("kyno_oceantrap", "trap", "TOOLS")
+SortAfter("kyno_oceantrap", "trap", "GARDENING")
+
+AddRecipe2("kyno_brainrock_nubbin", {Ingredient("rocks", 6), Ingredient("kyno_brainrock_larvae", 1, ModAtlas)}, TECH.SEAFARING_ONE,
+	{
+		atlas               = ModAtlas,
+		image               = "kyno_brainrock_nubbin.tex",
+	},
+	{"REFINE", "SEAFARING"}
+)
+SortAfter("kyno_brainrock_nubbin", "dock_woodposts_item", "SEAFARING")
+
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
 		builder_tag         = "strongman",
 		product             = "potatosack",
-		atlas               = "images/inventoryimages2.xml",
+		atlas               = DefaultAtlas2,
 		image               = "potato_sack_full.tex",
 	},
 	{"CONTAINERS", "COOKING"}
@@ -500,10 +485,10 @@ SortAfter("potatosack2", "mighty_gym", "CHARACTER")
 SortBefore("potatosack2", "icebox", "CONTAINERS")
 SortBefore("potatosack2", "icebox", "COOKING")
 
-AddDeconstructRecipe("potatosack", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)})
+AddDeconstructRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)})
 
 -- Using Bananas instead of Cave Bananas.
-Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingredient("kyno_banana", 1), Ingredient("cutreeds", 4)}, TECH.NONE,	
+Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingredient("kyno_banana", 1, ModAtlas), Ingredient("cutreeds", 4)}, TECH.NONE,	
 	{
 		allowautopick       = true, 
 		no_deconstruction   = true,
@@ -666,3 +651,104 @@ if HOF_FERTILIZERTWEAK then
 		{"GARDENING"}
 	)
 end
+
+-- Construction Plans.
+AddRecipe2("kyno_fishfarmplot_kit", {Ingredient("boards", 5), Ingredient("rope", 3)}, TECH.LOST,
+	{
+		atlas               = ModAtlas,
+		image               = "kyno_fishfarmplot_kit.tex",
+	},
+	{"GARDENING", "FISHING"}
+)
+SortAfter("kyno_fishfarmplot_kit", "ocean_trawler_kit", "GARDENING")
+SortAfter("kyno_fishfarmplot_kit", "ocean_trawler_kit", "FISHING")
+
+CONSTRUCTION_PLANS["kyno_fishfarmplot_construction"] =
+{
+	Ingredient("shovel",            1, nil,      nil),
+	Ingredient("kyno_bucket_water", 1, ModAtlas, nil),
+	Ingredient("rocks",            20, nil,      nil),
+	Ingredient("chum",              5, nil,      nil),
+}
+
+AddDeconstructRecipe("kyno_fishfarmplot", {Ingredient("rocks", 20)})
+
+-- Checking if Chum The Waters Mod is enabled to not add duplicates.
+if not TUNING.HOF_IS_CTW_ENABLED then
+	AddRecipe2("kyno_malbatrossfood", {Ingredient("chum", 1), Ingredient("oceanfish_medium_2_inv", 2), Ingredient("kyno_mysterymeat", 1, ModAtlas)}, TECH.LOST, 
+		{
+			atlas 				= ModAtlas,
+			image 				= "kyno_malbatrossfood.tex",
+		},
+		{"FISHING"}
+	)
+	SortAfter("kyno_malbatrossfood", "chum", "FISHING")
+end
+
+-- Heap of Foods - Warly Spices Complementary Mod.
+if TUNING.HOF_IS_HSP_ENABLED then
+	AddRecipe2("spice_cure", {Ingredient("kyno_spotspice", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+		{
+			nounlock			= true,
+			builder_tag			= "hof_spicemaker",
+			numtogive			= 2,
+			atlas				= ModAtlas,
+			image				= "spice_cure.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
+
+	AddRecipe2("spice_mind", {Ingredient("kyno_sugartree_petals", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+		{
+			nounlock			= true,
+			builder_tag			= "hof_spicemaker",
+			numtogive			= 2,
+			atlas				= ModAtlas,
+			image				= "spice_mind.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
+
+	AddRecipe2("spice_cold", {Ingredient("oceanfish_medium_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
+		{
+			nounlock			= true,
+			builder_tag			= "hof_spicemaker",
+			numtogive			= 2,
+			atlas				= ModAtlas,
+			image				= "spice_cold.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
+
+	AddRecipe2("spice_fire", {Ingredient("oceanfish_small_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
+		{
+			nounlock			= true,
+			builder_tag			= "hof_spicemaker",
+			numtogive			= 2,
+			atlas				= ModAtlas,
+			image				= "spice_fire.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
+end
+
+--[[
+-- Some recipe changes for Apparels Overload Mod.
+if TUNING.HOF_IS_TCP_ENABLED then
+	Recipe2("aerodynamichat", {Ingredient("kyno_shark_fin", 1, ModAtlas), Ingredient("kyno_kokonut", 1), Ingredient("log", 2)}, TECH.SCIENCE_TWO,
+		{
+			atlas               = "images/inventoryimages/ecp_inventoryimages.xml", 
+			image               = "aerodynamichat.tex",
+		},
+		{"CLOTHING"}
+	)
+
+	Recipe2("gashat", {Ingredient("kyno_messagebottle_empty", 2, ModAtlas), Ingredient("barnacle", 3), Ingredient("kyno_jellyfish", 1, ModAtlas)}, TECH.SCIENCE_TWO,
+		{
+			atlas               = "images/inventoryimages/ecp_inventoryimages.xml", 
+			image               = "gashat.tex",
+		},
+		{"CLOTHING", "SUMMER"}
+	)
+end
+]]--

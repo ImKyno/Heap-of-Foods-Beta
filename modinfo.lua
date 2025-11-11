@@ -22,13 +22,13 @@ local STRINGS =
 󰀠 Also features brand new Biomes somewhere in the Ocean!
 󰀦 Complete Recipe Sheet on the Mod Page!
 
-󰀏 Featuring the Seaside Summer Update:
-Seaside Island welcomes a new merchant! Assisted by a familiar survivor, he has opened a one-of-a-kind trading post. Specializing in rare items and ingredients that are otherwise incredibly difficult to acquire and even some you won't find anywhere else. 
+󰀏 Featuring the Gone Fishing Update:
+Cast your line, set your sail, and dive into the ocean! A wave of new aquatic creatures awaits, whether you're a seasoned angler or just an apprentice there's always something to catch!
 
-Make sure to check his wares every now and then to see what he got to offer. As his inventory is always changing!
+Build yourself a Fish Hatchery to raise your own fish at the comfort of your base, explore the ocean in search of elusive creatures, take part in Ocean Hunts and find a friendly new companion.
 
-󰀌 Mod Version: 3.1-B
-󰀧 Update: Mushroom Madness
+󰀌 Beta Branch Version: 3.2-B
+󰀧 Update: Gone Fishing
 ]],
 		zh  =
 [[
@@ -37,13 +37,13 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 󰀠 还新增了海洋中的全新生物群系！
 󰀦 完整食谱表可在 Mod 页面查看！
 
-󰀏 海滨夏日更新亮点：
-海滨岛迎来了一位新商人！在一位熟悉的幸存者协助下，他开设了一家独一无二的小店。专门提供稀有物品和特殊食材，有些在其他地方根本找不到。
+󰀏 全新“钓鱼之旅”更新：
+抛下鱼线，扬起风帆，潜入浩瀚的海洋！无数全新的水生生物正等待着你，无论你是经验丰富的垂钓老手还是初出茅庐的新手，总有值得你去捕获的猎物！
 
-记得时不时光顾下他的小店，看看他进了什么靓货。因为他进货很频繁！
+建造一座鱼苗孵化场，在你的基地里舒适地饲养属于你自己的鱼儿；探索海洋，寻找那些难以捉摸的生物；参与海洋狩猎，结识一位友好的新伙伴。
 
-󰀌 Mod 版本： 3.1-B
-󰀧 更新内容： 蘑菇狂潮
+󰀌 Mod 版本： 3.2-B
+󰀧 更新内容： 钓鱼之旅
 ]],	
 		zht =
 [[
@@ -52,13 +52,13 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 󰀠 還新增了海洋中的全新生物群系！
 󰀦 完整食譜表可在 Mod 頁面查看！
 
-󰀏 海濱夏日更新亮點：
-海濱島迎來了一位新商人！在熟悉的倖存者協助下，他開設了一家獨一無二的貿易站。專門提供稀有物品和極難獲得的食材，甚至包括一些其他地方找不到的物品。
+󰀏 全新「釣魚之旅」更新：
+拋下魚線，揚起風帆，潛入浩瀚的海洋！無數全新的水生生物正等著你，無論你是經驗豐富的釣老手還是初出茅廬的新手，總有值得你去捕獲的獵物！
 
-記得不時查看他的商品，看看他帶來了什麼新奇好貨。因為他的庫存總是在變化！
+建造一座魚苗孵化場，在你的基地裡舒適地飼養屬於你自己的魚兒；探索海洋，尋找那些難以捉摸的生物；參與海洋狩獵，結識一位友好的新夥伴。
 
-󰀌 Mod 版本： 3.1-B
-󰀧 更新內容： 蘑菇狂潮
+󰀌 Mod 版本： 3.2-B
+󰀧 更新內容： 去釣魚
 ]],	
 		pt  = 
 [[
@@ -67,13 +67,13 @@ Make sure to check his wares every now and then to see what he got to offer. As 
 󰀠 Também acrescenta novos biomas em algum lugar do alto mar!
 󰀦 Lista completa de Receitas disponível na página do Mod!
 
-󰀏 Apresentando a atualização Verão à Beira-mar:
-A Ilha Beira-mar dá as boas-vindas a um novo comerciante! Com a ajuda de um sobrevivente conhecido, ele abriu um posto comercial único. Especializado em itens e ingredientes raros que, de outra forma, seriam incrivelmente difíceis de obter e até mesmo alguns que você não encontrará em nenhum outro lugar.
+󰀏 Apresentando a atualização Hora da Pescaria:
+Lance sua linha, prepare suas velas e mergulhe no oceano! Uma onda de novas criaturas aquáticas aguarda por você. Seja você um pescador experiente ou apenas um aprendiz, sempre há algo para fisgar!
 
-Não deixe de conferir os produtos dele de vez em quando para ver o que ele tem a oferecer. Já que o inventário dele está sempre mudando!
+Construa um viveiro de peixes para criar seus próprios peixes no conforto da sua base, explore o oceano em busca de criaturas elusivas, participe de caçadas oceânicas e encontre um novo companheiro amigável.
 
-󰀌 Versão do Mod: 3.1-B
-󰀧 Atualização: Loucura dos Cogumelos
+󰀌 Versão do Mod: 3.2-B
+󰀧 Atualização: Hora da Pescaria
 ]],
 		pl  =
 [[
@@ -82,11 +82,13 @@ Não deixe de conferir os produtos dele de vez em quando para ver o que ele tem 
 󰀠 Zawiera również zupełnie nowe biomasy gdzieś na Oceanie!
 󰀦 Pełna lista przepisów dostępna na stronie Moda!
 
-󰀏 Wprowadzenie Aktualizacji Lato nad Morzem:
-Wyspa nad Morzem wita nowego handlarza! Wspierany przez znanego ocalałego, otworzył wyjątkowy punkt handlowy. Specjalizuje się w rzadkich przedmiotach i składnikach, które w przeciwnym razie byłyby niezwykle trudne do zdobycia, a nawet w niektórych przypadkach nie do znalezienia nigdzie indziej. 
+󰀏 Przedstawiamy aktualizację Poszedłem na ryby:
+Zarzuć wędkę, postaw żagle i zanurz się w oceanie! Czeka Cię fala nowych stworzeń wodnych – niezależnie od tego, czy jesteś doświadczonym wędkarzem, czy dopiero zaczynasz, zawsze znajdziesz coś do złowienia!
 
-󰀌 Wersja Moda: 3.1-B
-󰀧 Aktualizacja: Grzybowe Szaleństwo
+Zbuduj sobie wylęgarnię ryb, aby hodować własne ryby w zaciszu swojej bazy, eksploruj ocean w poszukiwaniu nieuchwytnych stworzeń, weź udział w polowaniach na ryby i znajdź nowego, przyjaznego towarzysza.
+
+󰀌 Wersja Moda: 3.2-B
+󰀧 Aktualizacja: Poszedłem na ryby
 ]],
 		es  =
 [[
@@ -95,13 +97,13 @@ Wyspa nad Morzem wita nowego handlarza! Wspierany przez znanego ocalałego, otwo
 󰀠 ¡También incluye nuevos biomas en algún lugar del mar abierto!
 󰀦 ¡Lista completa de recetas disponible en la página del Mod!
 
-󰀏 Presentando la actualización Verano junto al Mar:
-¡La Isla Junto al Mar da la bienvenida a un nuevo comerciante! Con la ayuda de un sobreviviente conocido, ha abierto un puesto comercial único. Especializado en objetos e ingredientes raros que, de otra manera, serían increíblemente difíciles de conseguir, e incluso algunos que no encontrarás en ningún otro lugar.
+󰀏 Presentando la actualización A Pescar:
+¡Lanza tu caña, iza las velas y sumérgete en el océano! Una oleada de nuevas criaturas acuáticas te espera. Tanto si eres un pescador experimentado como si acabas de empezar, ¡siempre hay algo que pescar!
 
-No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrecer, ¡ya que su inventario cambia constantemente!
+Construye una piscifactoría para criar tus propios peces en la comodidad de tu base, explora el océano en busca de criaturas esquivas, participa en cacerías oceánicas y encuentra un nuevo compañero.
 
-󰀌 Versión del Mod: 3.1-B
-󰀧 Actualización: Locura de Champiñones
+󰀌 Versión del Mod: 3.2-B
+󰀧 Actualización: A Pescar
 ]],
 	},
 
@@ -1454,7 +1456,7 @@ No olvides revisar sus productos de vez en cuando para ver qué tiene para ofrec
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "3.1-B"
+version                      = "3.2-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 

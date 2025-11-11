@@ -287,13 +287,146 @@ function params.popcornmachine.itemtestfn(container, item, slot)
 	return (item:HasTag("popcorn") and item:GetTimeAlive() <= 0)
 end
 
---[[
--- Not using because if using increased storage mods this will break.
-if HOF_ICEBOXSTACKSIZE then
-	containers.params.icebox.widget.animbank_upgraded = "ui_chest_upgraded_3x3"
-	containers.params.icebox.widget.animbuild_upgraded = "ui_chest_upgraded_3x3"
+params.fishfarmplot = 
+{
+	widget = 
+	{
+		slotpos = {},
+		
+		slotbg =
+		{
+			{ image = "fishfarmplot_slot_fish.tex", atlas = "images/inventoryimages/hof_hudimages.xml" },
+			{ image = "fishfarmplot_slot_roe.tex", atlas = "images/inventoryimages/hof_hudimages.xml" },
+		},
+		
+		animbank = "ui_fishfarmplot_3x4",
+		animbuild = "ui_fishfarmplot_3x4",
+        
+		pos = Vector3(0, 170, 0),
+		side_align_tip = 100,
+	},
+	
+	acceptsstacks = true,
+	type = "chest",
+}
 
-	containers.params.saltbox.widget.animbank_upgraded = "ui_chest_upgraded_3x3"
-	containers.params.saltbox.widget.animbuild_upgraded = "ui_chest_upgraded_3x3"
+local spacing = 80
+local start_y = 2
+local x_offset = -10
+local y_offset = 190
+
+for y = start_y, 0, -1 do
+	if y == start_y then
+		for x = 0, 1 do
+			table.insert(params.fishfarmplot.widget.slotpos, 
+			Vector3(spacing * x - spacing * 0.5 + x_offset, 
+			spacing * (y - 1) - spacing * 1.5 + y_offset, 0))
+		end
+	else
+		for x = 0, 2 do
+			table.insert(params.fishfarmplot.widget.slotpos,
+			Vector3(spacing * x - spacing + x_offset,
+			spacing * (y - 1) - spacing * 1.5 + y_offset, 0))
+			
+			table.insert(params.fishfarmplot.widget.slotbg, 
+			{ image = "fishfarmplot_slot_empty.tex", atlas = "images/inventoryimages/hof_hudimages.xml" })
+		end
+	end
 end
-]]--
+
+function params.fishfarmplot.itemtestfn(container, item, slot)
+	if slot == 1 then
+		return item:HasTag("fishfarmable")
+	elseif slot == 2 then
+		return item:HasTag("roe") and item:GetTimeAlive() <= 0
+	else
+		local valid_fish_slots = 
+		{
+			[3] = true, [4]  = true,  [5]  = true,
+			[6] = true, [7]  = true,  [8]  = true,
+        }
+
+		if valid_fish_slots[slot] then
+			return item:HasTag("fishfarmable") and item:GetTimeAlive() <= 0
+		end
+	end
+
+    if slot == nil then
+		if item:HasTag("fishfarmable") then
+			return container:GetItemInSlot(1) == nil
+		end
+	end
+	
+	return false
+end
+
+-- Tin Fishing' Bin accepts more kinds of fish.
+function containers.params.fish_box.itemtestfn(container, item, slot)
+    return item:HasAnyTag("smalloceancreature", "fish_box_valid")
+end
+
+params.octopustraderchest =
+{
+	widget =
+	{
+		slotpos =
+		{
+			Vector3(0, 64   + 32 + 8 + 4,  0),
+			Vector3(0, 32   + 4,           0),
+			Vector3(0, -(32 + 4),          0),
+			Vector3(0, -(64 + 32 + 8 + 4), 0),
+		},
+		
+		animbank = "ui_lamp_1x4",
+		animbuild = "ui_lamp_1x4",
+		
+		pos = Vector3(75, 200, 0),
+		side_align_tip = 160,
+	},
+	
+	type = "chest",
+}
+
+params.packimbaggims =
+{
+	widget =
+	{
+		slotpos = {},
+		
+		animbank = "ui_chest_3x3",
+		animbuild = "ui_chest_3x3",
+		
+		pos = Vector3(0, 200, 0),
+		side_align_tip = 160,
+	},
+	
+	type = "chest",
+}
+
+for y = 2, 0, -1 do
+	for x = 0, 2 do
+		table.insert(params.packimbaggims.widget.slotpos, Vector3(80 * x - 80 * 2 + 80, 80 * y - 80 * 2 + 80, 0))
+	end
+end
+
+params.packimbaggimsfat =
+{
+	widget =
+	{
+		slotpos = {},
+		
+		animbank = "ui_chester_shadow_3x4",
+		animbuild = "ui_chester_shadow_3x4",
+		
+		pos = Vector3(0, 220, 0),
+		side_align_tip = 160,
+	},
+	
+	type = "chest",
+}
+
+for y = 2.5, -0.5, -1 do
+	for x = 0, 2 do
+		table.insert(params.packimbaggimsfat.widget.slotpos, Vector3(75 * x - 75 * 2 + 75, 75 * y - 75 * 2 + 75, 0))
+	end
+end

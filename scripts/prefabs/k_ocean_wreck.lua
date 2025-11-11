@@ -12,9 +12,9 @@ local prefabs =
 {
 	"boards",
 	"collapse_big",
-	"ghost",
 	
 	"kyno_limpets",
+	"kyno_ghost_pirate",
 }
 
 local MAST       = 1
@@ -117,8 +117,8 @@ local function OnHammered(inst, worker)
 		inst.components.burnable:Extinguish()
 	end
 	
-	if math.random() < 0.50 then
-		local ghost = SpawnPrefab("ghost")
+	if math.random() < TUNING.KYNO_OCEAN_WRECK_GHOST_CHANCE then
+		local ghost = SpawnPrefab("kyno_ghost_pirate")
 		if ghost then
 			local pos = Point(inst.Transform:GetWorldPosition())
 			ghost.Transform:SetPosition(pos.x - .3, pos.y, pos.z - .3)
@@ -165,6 +165,34 @@ end
 
 local function MakeHaunted(inst)
 	inst.haunted = true
+end
+
+local function ReturnChildren(inst)
+	local toremove = {}
+	
+	for k, v in pairs(inst.components.childspawner.childrenoutside) do
+		table.insert(toremove, v)
+	end
+	
+	for i, v in ipairs(toremove) do
+		if v:IsAsleep() then
+			v:PushEvent("detachchild")
+			v:Remove()
+		else
+			v.components.health:Kill()
+		end
+	end
+end
+
+local function OnFullMoon(inst)
+	if TheWorld.state.isfullmoon then
+		inst.components.childspawner:StartSpawning()
+		inst.components.childspawner:StopRegen()
+	else
+		inst.components.childspawner:StopSpawning()
+		inst.components.childspawner:StartRegen()
+		ReturnChildren(inst)
+	end
 end
 
 local DAMAGE_SCALE = 0.5
@@ -247,6 +275,18 @@ local function fn()
 
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"boards", "boards", "kyno_limpets"})
+	
+	inst:AddComponent("hauntable")
+	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_SMALL)
+	
+	inst:AddComponent("childspawner")
+	inst.components.childspawner.childname = "kyno_ghost_pirate"
+	inst.components.childspawner.allowwater = true
+	inst.components.childspawner:SetMaxChildren(1)
+	inst.components.childspawner:SetSpawnPeriod(10, 3)
+
+	inst:WatchWorldState("isfullmoon", OnFullMoon)
+	OnFullMoon(inst, TheWorld.state.isfullmoon)
 
 	SetType(inst, "random")
 
