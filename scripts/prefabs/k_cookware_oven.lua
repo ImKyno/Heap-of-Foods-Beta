@@ -60,16 +60,13 @@ local function DoubleHarvest(self, harvester)
 					harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
 				end
 
-				local stacksize = recipe and recipe.stacksize or 1
-				stacksize = stacksize + TUNING.KYNO_COOKWARE_BONUSHARVEST -- Always grants +1 for large stations.
-				--[[
-				if math.random() < 0.30 then -- 30% of Extra food.
-					stacksize = stacksize + 1
-				end
-				]]--
+				if loot.components.stackable ~= nil then
+					local stacksize = recipe and recipe.stacksize or 1
+					stacksize = stacksize + TUNING.KYNO_COOKWARE_BONUSHARVEST -- Always grants +1 for large stations.
 
-				if stacksize > 1 then
-					loot.components.stackable:SetStackSize(stacksize)
+					if stacksize > 1 then
+						loot.components.stackable:SetStackSize(stacksize)
+					end
 				end
 
                 if self.spoiltime ~= nil and loot.components.perishable ~= nil then

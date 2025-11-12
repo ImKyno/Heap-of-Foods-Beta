@@ -66,12 +66,14 @@ local function SyrupHarvest(self, harvester)
 					harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
 				end
 
-				local stacksize = recipe and recipe.stacksize or 1
+				if loot.components.stackable ~= nil then
+					local stacksize = recipe and recipe.stacksize or 1
 
-				stacksize = stacksize + TUNING.KYNO_COOKWARE_BONUSHARVEST_SYRUP
+					stacksize = stacksize + TUNING.KYNO_COOKWARE_BONUSHARVEST_SYRUP
 
-				if stacksize > 1 then
-					loot.components.stackable:SetStackSize(stacksize)
+					if stacksize > 1 then
+						loot.components.stackable:SetStackSize(stacksize)
+					end
 				end
 
                 if self.spoiltime ~= nil and loot.components.perishable ~= nil then
@@ -125,18 +127,47 @@ local function DoubleHarvest(self, harvester)
 					harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
 				end
 
-				local stacksize = recipe and recipe.stacksize or 1
+				if loot.components.stackable ~= nil then
+					local stacksize = recipe and recipe.stacksize or 1
 				
-				if self.inst:HasTag("pot_small") then
-					if math.random() < 0.50 then
+					if self.inst:HasTag("pot_small") then
+						if math.random() < 0.50 then
+							stacksize = stacksize + TUNING.KYNO_COOKWARE_BONUSHARVEST
+						end
+					else
 						stacksize = stacksize + TUNING.KYNO_COOKWARE_BONUSHARVEST
 					end
-				else
-					stacksize = stacksize + TUNING.KYNO_COOKWARE_BONUSHARVEST
-				end
 
-				if stacksize > 1 then
-					loot.components.stackable:SetStackSize(stacksize)
+					if stacksize > 1 then
+						loot.components.stackable:SetStackSize(stacksize)
+					end
+				else
+					-- This is for non stackable foods.
+					local duplicate = false
+
+					if self.inst:HasTag("pot_small") then
+						if math.random() < 0.50 then
+							duplicate = true
+						end
+					else
+						duplicate = true
+					end
+
+					if duplicate then
+						local extra = SpawnPrefab(loot.prefab)
+						
+						if extra ~= nil then
+							if loot.components.perishable ~= nil and extra.components.perishable ~= nil then
+								extra.components.perishable:SetPercent(loot.components.perishable:GetPercent())
+							end
+
+							if loot.components.inventoryitem ~= nil and extra.components.inventoryitem ~= nil then
+								if harvester ~= nil and harvester.components.inventory ~= nil then
+									harvester.components.inventory:GiveItem(extra, nil, harvester:GetPosition())
+								end
+							end
+						end
+					end
 				end
 
                 if self.spoiltime ~= nil and loot.components.perishable ~= nil then

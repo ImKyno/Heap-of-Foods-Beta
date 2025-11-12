@@ -373,10 +373,12 @@ function CookwareStewer:Harvest(harvester)
 					harvester:PushEvent("learncookbookrecipe", {product = self.product, ingredients = self.ingredient_prefabs})
 				end
 
-				local stacksize = recipe and recipe.stacksize or 1
+				if loot.components.stackable ~= nil then
+					local stacksize = recipe and recipe.stacksize or 1
 				
-				if stacksize > 1 then
-					loot.components.stackable:SetStackSize(stacksize)
+					if stacksize > 1 then
+						loot.components.stackable:SetStackSize(stacksize)
+					end
 				end
 				
 				local is_oven = self.inst:HasTag("oven_casserole")
