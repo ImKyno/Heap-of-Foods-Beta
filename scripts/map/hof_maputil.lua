@@ -165,7 +165,7 @@ local function RetrofitOceanLayouts()
 		end
 		
 		for _, oid in ipairs(octopus_ids) do
-			if string.find(id, wid) and NodeNeedsRetrofit(node, {"OctopusArea"}) then
+			if string.find(id, oid) and NodeNeedsRetrofit(node, {"OctopusArea"}) then
 				table.insert(node.tags, "OctopusArea")
 				dirty = true
 			end
