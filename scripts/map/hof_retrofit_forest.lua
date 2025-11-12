@@ -1326,7 +1326,7 @@ local function HofRetrofitting_WobsterMonkeyIsland(map, savedata)
 	local RADIUS        = 60
 	local MAX_TO_SPAWN  = 5
 	local MAX_ATTEMPTS  = 50
-	local SAFE_DOCK_DIST = 4
+	local SAFE_DOCK_DIST = 6
 	
 	local VALID_TILES = 
 	{
@@ -1363,7 +1363,7 @@ local function HofRetrofitting_WobsterMonkeyIsland(map, savedata)
 		end
 	end
 	
-	print(string.format("[Retrofit] Encontrados %d tiles MONKEY_DOCK no mapa.", #dock_positions))
+	print(string.format("Retrofitting for Heap of Foods Mod - Found %d MONKEY_DOCK tiles.", #dock_positions))
 
 	local function IsFarFromDocks(x, z)
 		for _, dock in ipairs(dock_positions) do
@@ -1378,11 +1378,11 @@ local function HofRetrofitting_WobsterMonkeyIsland(map, savedata)
 	local targets = entities[TARGET_PREFAB]
 
 	if not targets or #targets == 0 then
-		print(string.format("[Retrofit] Nenhum '%s' encontrado no mundo!", TARGET_PREFAB))
+		print(string.format("Retrofitting for Heap of Foods Mod - Couldn't find '%s' in the world!", TARGET_PREFAB))
 		return
 	end
 
-	print(string.format("[Retrofit] Encontradas %d instâncias de '%s'", #targets, TARGET_PREFAB))
+	print(string.format("Retrofitting for Heap of Foods Mod - Found %d instances of '%s'", #targets, TARGET_PREFAB))
 
 	if entities[SPAWN_PREFAB] == nil then
 		entities[SPAWN_PREFAB] = {}
@@ -1415,12 +1415,12 @@ local function HofRetrofitting_WobsterMonkeyIsland(map, savedata)
 				table.insert(entities[SPAWN_PREFAB], { x = wx, z = wz })
 				total_spawned = total_spawned + 1
 				
-				print(string.format("[Retrofit] '%s' colocado próximo de '%s' (%.1f, %.1f)", SPAWN_PREFAB, TARGET_PREFAB, wx, wz))
+				print(string.format("Retrofitting for Heap of Foods Mod - '%s' placed near '%s' (%.1f, %.1f)", SPAWN_PREFAB, TARGET_PREFAB, wx, wz))
 			end
 		end
 	end
 
-	print(string.format("[Retrofit] Retrofit finalizado: %d '%s' adicionados (seguros de docas).", total_spawned, SPAWN_PREFAB))
+	print(string.format("Retrofitting for Heap of Foods Mod - %d '%s' Added.", total_spawned, SPAWN_PREFAB))
 end
 
 return 

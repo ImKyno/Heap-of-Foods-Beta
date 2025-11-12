@@ -127,6 +127,7 @@ local function GrowNormal(inst)
 	local normal = SpawnPrefab("kyno_sugartree_normal")
 	normal.SoundEmitter:PlaySound("dontstarve/forest/treeGrowFromWilt")
 	normal.Transform:SetPosition(inst.Transform:GetWorldPosition())
+	
 	inst:Remove()
 end
 
@@ -134,27 +135,36 @@ local function GrowTall(inst)
 	local tall = SpawnPrefab("kyno_sugartree")
 	tall.SoundEmitter:PlaySound("dontstarve/forest/treeGrow")
 	tall.Transform:SetPosition(inst.Transform:GetWorldPosition())
+	
 	inst:Remove()
 end
 
 local function StopGrowingShort(inst)
-    inst.components.timer:StopTimer("kyno_sugartree_short_timer")
+	if inst.components.timer:TimerExists("kyno_sugartree_short_timer") then
+		inst.components.timer:PauseTimer("kyno_sugartree_short_timer")
+	end
 end
 
 local function StopGrowingNormal(inst)
-    inst.components.timer:StopTimer("kyno_sugartree_normal_timer")
+	if inst.components.timer:TimerExists("kyno_sugartree_normal_timer") then
+		inst.components.timer:PauseTimer("kyno_sugartree_normal_timer")
+	end
 end
 
-StartGrowingShort = function(inst)
-    if not inst.components.timer:TimerExists("kyno_sugartree_short_timer") then
-        inst.components.timer:StartTimer("kyno_sugartree_short_timer")
-    end
+local function StartGrowingShort(inst)
+	if inst.components.timer:TimerExists("kyno_sugartree_short_timer") then
+		inst.components.timer:ResumeTimer("kyno_sugartree_short_timer")
+	else
+		inst.components.timer:StartTimer("kyno_sugartree_short_timer", TUNING.KYNO_SUGARTREE_SHORT_GROWTIME)
+	end
 end
 
-StartGrowingNormal = function(inst)
-    if not inst.components.timer:TimerExists("kyno_sugartree_normal_timer") then
-        inst.components.timer:StartTimer("kyno_sugartree_normal_timer")
-    end
+local function StartGrowingNormal(inst)
+	if inst.components.timer:TimerExists("kyno_sugartree_normal_timer") then
+		inst.components.timer:ResumeTimer("kyno_sugartree_normal_timer")
+	else
+		inst.components.timer:StartTimer("kyno_sugartree_normal_timer", TUNING.KYNO_SUGARTREE_NORMAL_GROWTIME)
+	end
 end
 
 local function tree_startburn(inst)
