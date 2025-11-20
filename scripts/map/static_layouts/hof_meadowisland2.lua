@@ -10491,6 +10491,17 @@ return {
           visible = true,
           properties = {}
         },
+		{
+          name = "",
+          type = "kyno_packimbaggims_fishbone_marker",
+          shape = "rectangle",
+          x = 893,
+          y = 1663,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
         {
           name = "",
           type = "kyno_meadowisland_sandhill",

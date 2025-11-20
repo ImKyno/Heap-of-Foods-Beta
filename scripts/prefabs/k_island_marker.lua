@@ -43,6 +43,11 @@ local function dina_marker()
 	return commonfn("DinaMemorial", "dina_cc_marker")
 end
 
+local function packim_marker()
+	return commonfn("PackimBaggims", "packim_cc_marker")
+end
+
 return Prefab("kyno_serenity_cc_marker", serenity_marker, assets),
 Prefab("kyno_meadow_cc_marker", meadow_marker, assets),
-Prefab("kyno_dinamemorial_marker", dina_marker, assets)
+Prefab("kyno_dinamemorial_marker", dina_marker, assets),
+Prefab("kyno_packimbaggims_fishbone_marker", packim_marker, assets)

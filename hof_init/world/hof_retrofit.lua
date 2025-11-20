@@ -20,26 +20,30 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 
 		return _DoRetrofitting(savedata, world_map, ...)
 	end
-	
+
 	local function Exists(prefab)
 		return savedata.ents ~= nil and savedata.ents[prefab] ~= nil
 	end
 
 	local function ApplyRetrofit(name, prefab_check, retrofit_fn)
-		if Exists(prefab_check) then
-			if TUNING.HOF_DEBUG_MODE then
-				print(string.format("Retrofitting for Heap of Foods Mod - %s Already exists. Skipping.", name))
-			end
+		local prefab_list = type(prefab_check) == "table" and prefab_check or { prefab_check }
 
-			return false
-		else
-			if TUNING.HOF_DEBUG_MODE then
-				print(string.format("Retrofitting for Heap of Foods Mod - Generating %s...", name))
+		for _, prefab in ipairs(prefab_list) do
+			if Exists(prefab) then
+				if TUNING.HOF_DEBUG_MODE then
+					print(string.format("Retrofitting for Heap of Foods Mod - %s Already exists. Skipping.", name))
+				end
+				
+				return false
 			end
-
-			retrofit_fn(_G.TheWorld.Map, savedata)
-			return true
 		end
+
+		if TUNING.HOF_DEBUG_MODE then
+			print(string.format("Retrofitting for Heap of Foods Mod - Generating %s...", name))
+		end
+
+		retrofit_fn(_G.TheWorld.Map, savedata)
+		return true
 	end
 
 	local applied = {}
@@ -78,7 +82,8 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 			table.insert(applied, "Octopus King Shop")
 		end
 		
-		if ApplyRetrofit("Packim Baggims", "kyno_packimbaggims_fishbone", HOF_FOREST_DATA.HofRetrofitting_PackimBaggims) then
+		if ApplyRetrofit("Packim Baggims", { "packim", "kyno_packimbaggims", "kyno_packimbaggims_fishbone", "kyno_packimbaggims_fishbone_marker" }, 
+		HOF_FOREST_DATA.HofRetrofitting_PackimBaggims) then
 			table.insert(applied, "Packim Baggims")
 		end
 		

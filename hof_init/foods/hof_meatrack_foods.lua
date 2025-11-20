@@ -69,8 +69,10 @@ local function DryablePostinit(inst)
 		return inst
 	end
 
-	inst:AddComponent("dryable")
-	inst.components.dryable:SetDryTime(TUNING.DRY_MED)
+	if not inst.components.dryable then
+		inst:AddComponent("dryable")
+		inst.components.dryable:SetDryTime(TUNING.DRY_MED)
+	end
 	
 	entry = dryables[inst.prefab]
 	if entry then

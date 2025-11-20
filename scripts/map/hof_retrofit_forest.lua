@@ -1286,7 +1286,13 @@ local function HofRetrofitting_PackimBaggims(map, savedata)
 	local entities = savedata.ents
 
 	local prefab_to_spawn = "kyno_packimbaggims_fishbone"
+	local marker_to_spawn = "kyno_packimbaggims_fishbone_marker"
 	
+	if entities[marker_to_spawn] ~= nil then
+		print("Retrofitting for Heap of Foods Mod - Packim Baggims Fishbone found. Skipping.")
+		return
+	end
+
 	local candidate_nodes = {}
 	
 	for node_index, id_string in ipairs(topology.ids) do
@@ -1315,8 +1321,14 @@ local function HofRetrofitting_PackimBaggims(map, savedata)
 	if entities[prefab_to_spawn] == nil then
 		entities[prefab_to_spawn] = {}
 	end
+	
+	if entities[marker_to_spawn] == nil then
+		entities[marker_to_spawn] = {}
+	end
 
 	table.insert(entities[prefab_to_spawn], { x = wx, z = wy })
+	table.insert(entities[marker_to_spawn], { x = wx, z = wy })
+	
 	print(string.format("Retrofitting for Heap of Foods Mod - Spawned '%s' (Fishbone) at (%.2f, %.2f)", prefab_to_spawn, wx, wy))
 end
 
@@ -1326,7 +1338,7 @@ local function HofRetrofitting_WobsterMonkeyIsland(map, savedata)
 	local RADIUS        = 60
 	local MAX_TO_SPAWN  = 5
 	local MAX_ATTEMPTS  = 50
-	local SAFE_DOCK_DIST = 6
+	local SAFE_DOCK_DIST = 8
 	
 	local VALID_TILES = 
 	{
