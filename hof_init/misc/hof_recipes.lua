@@ -554,6 +554,181 @@ AddCharacterRecipe("kyno_book_gardening", {Ingredient("book_horticulture_upgrade
 )
 SortAfter("kyno_book_gardening", "book_horticulture_upgraded", "CHARACTER")
 
+-- New transmutations for Wilson.
+AddCharacterRecipe("transmute_red_cap", {Ingredient("green_cap", 1)}, TECH.NONE,
+	{
+		product             = "red_cap",
+		numtogive           = 2,
+		description         = "transmute_red_cap",
+		builder_skill       = "wilson_alchemy_1",
+		atlas               = DefaultAtlas,
+		image               = "red_cap.tex",
+	}
+)
+SortBefore("transmute_red_cap", "transmute_meat", "CHARACTER")
+
+AddCharacterRecipe("transmute_green_cap", {Ingredient("red_cap", 3)}, TECH.NONE,
+	{
+		product             = "green_cap", 
+		description         = "transmute_green_cap",
+		builder_skill       = "wilson_alchemy_1",
+		atlas               = DefaultAtlas,
+		image               = "green_cap.tex",
+	}
+)
+SortAfter("transmute_green_cap", "transmute_red_cap", "CHARACTER")
+
+AddCharacterRecipe("transmute_succulent", {Ingredient("foliage", 1)}, TECH.NONE,
+	{
+		product             = "succulent_picked", 
+		description         = "transmute_succulent",
+		builder_skill       = "wilson_alchemy_1",
+		atlas               = DefaultAtlas,
+		image               = "succulent_picked.tex",
+	}
+)
+SortAfter("transmute_succulent", "transmute_green_cap", "CHARACTER")
+
+AddCharacterRecipe("transmute_foliage", {Ingredient("succulent_picked", 1)}, TECH.NONE,
+	{
+		product             = "foliage", 
+		description         = "transmute_foliage",
+		builder_skill       = "wilson_alchemy_1",
+		atlas               = DefaultAtlas,
+		image               = "foliage.tex",
+	}
+)
+SortAfter("transmute_foliage", "transmute_succulent", "CHARACTER")
+
+---
+
+AddCharacterRecipe("transmute_blue_cap", {Ingredient("moon_cap", 1)}, TECH.NONE,
+	{
+		product             = "blue_cap",
+		numtogive           = 2,
+		description         = "transmute_blue_cap",
+		builder_skill       = "wilson_alchemy_9",
+		atlas               = DefaultAtlas,
+		image               = "blue_cap.tex",
+	}
+)
+SortAfter("transmute_blue_cap", "transmute_green_cap", "CHARACTER")
+
+AddCharacterRecipe("transmute_moon_cap", {Ingredient("blue_cap", 3)}, TECH.NONE,
+	{
+		product             = "moon_cap",
+		description         = "transmute_moon_cap",
+		builder_skill       = "wilson_alchemy_9",
+		atlas               = DefaultAtlas2,
+		image               = "moon_cap.tex",
+	}
+)
+SortAfter("transmute_moon_cap", "transmute_blue_cap", "CHARACTER")
+
+AddCharacterRecipe("transmute_kyno_white_cap", {Ingredient("kyno_truffles", 1, ModAtlas)}, TECH.NONE,
+	{
+		product             = "kyno_white_cap",
+		numtogive           = 2,
+		description         = "transmute_kyno_white_cap",
+		builder_skill       = "wilson_alchemy_9",
+		atlas               = ModAtlas,
+		image               = "kyno_white_cap.tex",
+	}
+)
+SortAfter("transmute_kyno_white_cap", "transmute_moon_cap", "CHARACTER")
+
+AddCharacterRecipe("transmute_kyno_sporecap", {Ingredient("red_cap", 1), Ingredient("green_cap", 1), Ingredient("blue_cap", 1), Ingredient("moon_cap", 1),
+Ingredient("kyno_white_cap", 1, ModAtlas)}, TECH.NONE,
+	{
+		product             = "kyno_sporecap",
+		description         = "transmute_kyno_sporecap",
+		builder_skill       = "wilson_alchemy_10",
+		atlas               = ModAtlas,
+		image               = "kyno_sporecap.tex",
+	}
+)
+SortAfter("transmute_kyno_sporecap", "transmute_kyno_white_cap", "CHARACTER")
+
+AddCharacterRecipe("transmute_kyno_truffles", {Ingredient("kyno_white_cap", 3, ModAtlas)}, TECH.NONE,
+	{
+		product             = "kyno_truffles",
+		description         = "transmute_kyno_truffles",
+		builder_skill       = "wilson_alchemy_9",
+		atlas               = ModAtlas,
+		image               = "kyno_truffles.tex",
+	}
+)
+SortAfter("transmute_kyno_truffles", "transmute_kyno_sporecap", "CHARACTER")
+
+AddCharacterRecipe("transmute_berries", {Ingredient("berries_juicy", 1)}, TECH.NONE,
+	{
+		product             = "berries",
+		numtogive           = 2,
+		description         = "transmute_berries",
+		builder_skill       = "wilson_alchemy_4",
+		atlas               = DefaultAtlas,
+		image               = "berries.tex",
+	}
+)
+SortAfter("transmute_berries", "transmute_kyno_truffles", "CHARACTER")
+
+AddCharacterRecipe("transmute_berries_juicy", {Ingredient("berries", 3)}, TECH.NONE,
+	{
+		product             = "berries_juicy",
+		description         = "transmute_berries_juicy",
+		builder_skill       = "wilson_alchemy_4",
+		atlas               = DefaultAtlas,
+		image               = "berries_juicy.tex",
+	}
+)
+SortAfter("transmute_berries_juicy", "transmute_berries", "CHARACTER")
+
+AddCharacterRecipe("transmute_fishmeat", {Ingredient("fishmeat_small", 3)}, TECH.NONE,
+	{
+		product             = "fishmeat",
+		description         = "transmute_fishmeat",
+		builder_skill       = "wilson_alchemy_4",
+		atlas               = DefaultAtlas2,
+		image               = "fishmeat.tex",
+	}
+)
+SortAfter("transmute_fishmeat", "transmute_smallmeat", "CHARACTER")
+
+AddCharacterRecipe("transmute_fishmeat_small", {Ingredient("fishmeat", 1)}, TECH.NONE,
+	{
+		product             = "fishmeat_small",
+		numtogive           = 2,
+		description         = "transmute_fishmeat_small",
+		builder_skill       = "wilson_alchemy_4",
+		atlas               = DefaultAtlas2,
+		image               = "fishmeat_small.tex",
+	}
+)
+SortAfter("transmute_fishmeat_small", "transmute_fishmeat", "CHARACTER")
+
+AddCharacterRecipe("transmute_fossil_piece", {Ingredient("kyno_worm_bone", 3, ModAtlas)}, TECH.NONE,
+	{
+		product             = "fossil_piece",
+		description         = "transmute_fossil_piece",
+		builder_skill       = "wilson_alchemy_10",
+		atlas               = DefaultAtlas,
+		image               = "fossil_piece.tex",
+	}
+)
+SortAfter("transmute_fossil_piece", "transmute_houndstooth", "CHARACTER")
+
+AddCharacterRecipe("transmute_kyno_worm_bone", {Ingredient("fossil_piece", 1)}, TECH.NONE,
+	{
+		product             = "kyno_worm_bone",
+		numtogive           = 2,
+		description         = "transmute_kyno_worm_bone",
+		builder_skill       = "wilson_alchemy_10",
+		atlas               = ModAtlas,
+		image               = "kyno_worm_bone.tex",
+	}
+)
+SortAfter("transmute_kyno_worm_bone", "transmute_fossil_piece", "CHARACTER")
+
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 if HOF_WARLYMEALGRINDER then
 	AddRecipe2("kyno_flour_w", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE, 
