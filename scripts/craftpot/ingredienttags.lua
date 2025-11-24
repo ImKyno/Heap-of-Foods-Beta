@@ -41,3 +41,4 @@ AddFoodTag("oil",               { name = STRINGS_INGREDIENTS_OIL,        atlas =
 AddFoodTag("jellyfish",         { name = STRINGS_INGREDIENTS_JELLYFISH,  atlas = "images/ingredientimages/hof_ingredientimages.xml" })
 AddFoodTag("jellyfish_rainbow", { name = STRINGS_INGREDIENTS_JELLYFISH2, atlas = "images/ingredientimages/hof_ingredientimages.xml" })
 AddFoodTag("swordfish",         { name = STRINGS_INGREDIENTS_SWORDFISH,  atlas = "images/ingredientimages/hof_ingredientimages.xml" })
+AddFoodTag("succulent",         { name = STRINGS_INGREDIENTS_SUCCULENT,  atlas = "images/ingredientimages/hof_ingredientimages.xml" })

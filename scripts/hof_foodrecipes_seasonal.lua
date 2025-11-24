@@ -22,7 +22,7 @@ local kyno_foods_seasonal =
 	
 	festive_bibingka =
 	{
-		test = function(cooker, names, tags) return (names.succulent_picked and names.succulent_picked >= 2) and tags.foliage and tags.veggie 
+		test = function(cooker, names, tags) return (tags.succulent and tags.succulent >= 2) and tags.foliage and tags.veggie 
 		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -60,7 +60,7 @@ local kyno_foods_seasonal =
 	
 	festive_fishdish =
 	{
-		test = function(cooker, names, tags) return tags.fish and names.succulent_picked and not tags.sweetener and not tags.wobster
+		test = function(cooker, names, tags) return tags.fish and tags.succulent and not tags.sweetener and not tags.wobster
 		and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -253,7 +253,7 @@ local kyno_foods_seasonal =
 	festive_roastedturkey =
 	{
 		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) 
-		and (tags.spotspice and tags.spotspice >= 2) and names.succulent_picked and not tags.fruit and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
+		and (tags.spotspice and tags.spotspice >= 2) and tags.succulent and not tags.fruit and (CONFIGS_HOF.SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,

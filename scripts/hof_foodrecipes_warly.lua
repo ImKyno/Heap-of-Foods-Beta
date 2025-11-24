@@ -327,7 +327,7 @@ local kyno_warly_foods =
 	
 	tom_kha_soup =
 	{
-		test = function(cooker, names, tags) return names.kyno_kokonut_halved and tags.mushrooms and names.succulent_picked and
+		test = function(cooker, names, tags) return names.kyno_kokonut_halved and tags.mushrooms and tags.succulent and
 		(names.pepper or names.pepper_cooked) end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
