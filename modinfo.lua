@@ -27,7 +27,7 @@ Cast your line, set your sail, and dive into the ocean! A wave of new aquatic cr
 
 Build yourself a Fish Hatchery to raise your own fish at the comfort of your base, explore the ocean in search of elusive creatures, take part in Ocean Hunts and find a friendly new companion.
 
-󰀌 Beta Branch Version: 3.2-B
+󰀌 Mod Version: 3.2-B
 󰀧 Update: Gone Fishing
 ]],
 		zh  =
@@ -82,13 +82,13 @@ Construa um viveiro de peixes para criar seus próprios peixes no conforto da su
 󰀠 Zawiera również zupełnie nowe biomasy gdzieś na Oceanie!
 󰀦 Pełna lista przepisów dostępna na stronie Moda!
 
-󰀏 Przedstawiamy aktualizację Poszedłem na ryby:
+󰀏 Przedstawiamy aktualizację Czas wędkowania:
 Zarzuć wędkę, postaw żagle i zanurz się w oceanie! Czeka Cię fala nowych stworzeń wodnych – niezależnie od tego, czy jesteś doświadczonym wędkarzem, czy dopiero zaczynasz, zawsze znajdziesz coś do złowienia!
 
 Zbuduj sobie wylęgarnię ryb, aby hodować własne ryby w zaciszu swojej bazy, eksploruj ocean w poszukiwaniu nieuchwytnych stworzeń, weź udział w polowaniach na ryby i znajdź nowego, przyjaznego towarzysza.
 
 󰀌 Wersja Moda: 3.2-B
-󰀧 Aktualizacja: Poszedłem na ryby
+󰀧 Aktualizacja: Czas wędkowania
 ]],
 		es  =
 [[
@@ -97,13 +97,13 @@ Zbuduj sobie wylęgarnię ryb, aby hodować własne ryby w zaciszu swojej bazy, 
 󰀠 ¡También incluye nuevos biomas en algún lugar del mar abierto!
 󰀦 ¡Lista completa de recetas disponible en la página del Mod!
 
-󰀏 Presentando la actualización A Pescar:
+󰀏 Presentando la actualización Tiempo de Pesca:
 ¡Lanza tu caña, iza las velas y sumérgete en el océano! Una oleada de nuevas criaturas acuáticas te espera. Tanto si eres un pescador experimentado como si acabas de empezar, ¡siempre hay algo que pescar!
 
 Construye una piscifactoría para criar tus propios peces en la comodidad de tu base, explora el océano en busca de criaturas esquivas, participa en cacerías oceánicas y encuentra un nuevo compañero.
 
 󰀌 Versión del Mod: 3.2-B
-󰀧 Actualización: A Pescar
+󰀧 Actualización: Tiempo de Pesca
 ]],
 	},
 
