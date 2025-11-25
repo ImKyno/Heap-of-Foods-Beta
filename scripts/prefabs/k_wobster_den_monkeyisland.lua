@@ -263,8 +263,8 @@ end
 local function fn()
 	local inst = basefn("lobster_den_build", "kyno_wobster_den_monkeyisland", "wobster_monkeyisland")
 
-	inst:AddComponent("halloweenmoonmutable")
-	inst.components.halloweenmoonmutable:SetConversionOverrideFn(MoonConversionOverride)
+	-- inst:AddComponent("halloweenmoonmutable")
+	-- inst.components.halloweenmoonmutable:SetConversionOverrideFn(MoonConversionOverride)
 
 	return inst
 end

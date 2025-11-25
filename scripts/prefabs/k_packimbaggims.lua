@@ -525,6 +525,8 @@ local function fxfn(bank, build, scale)
 	inst:AddTag("FX")
 	inst:AddTag("NOCLICK")
 	
+	inst.entity:SetPristine()
+	
 	if not TheWorld.ismastersim then
 		return inst
 	end
