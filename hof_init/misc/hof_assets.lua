@@ -959,15 +959,3 @@ _G.GetInventoryItemAtlas = function(name, ...)
 
     return _GetInventoryItemAtlas(name, ...)
 end
-
--- Dirty fix for icons for the Scrapbook.
-local _GetScrapbookIconAtlas_Internal = _G.GetScrapbookIconAtlas_Internal
-_G.GetScrapbookIconAtlas_Internal = function(name, ...)
-	local myatlas = _G.resolvefilepath("images/scrapbookimages/hof_scrapbookimages.xml")
-	
-	if _G.TheSim:AtlasContains(myatlas, name) then
-		return myatlas
-	end
-	
-	return _GetScrapbookIconAtlas_Internal(name, ...)
-end

@@ -137,13 +137,7 @@ local function dogfishfn()
     local inst = CreateEntity()
 
     inst.entity:AddTransform()
-    inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
-	
-	-- Do we want a minimap for this guy?
-	-- local minimap = inst.entity:AddMiniMapEntity()
-	-- minimap:SetIcon("kyno_dogfish_spawner.tex")
-	-- minimap:SetPriority(5)
 	
 	inst:AddTag("NOBLOCK")
 	inst:AddTag("CLASSIFIED")
@@ -171,7 +165,6 @@ local function swordfishfn()
     local inst = CreateEntity()
 
     inst.entity:AddTransform()
-    inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
 	
 	local minimap = inst.entity:AddMiniMapEntity()
@@ -204,13 +197,8 @@ local function puffermonsterfn()
     local inst = CreateEntity()
 
     inst.entity:AddTransform()
-    inst.entity:AddSoundEmitter()
     inst.entity:AddNetwork()
-	
-	-- local minimap = inst.entity:AddMiniMapEntity()
-	-- minimap:SetIcon("kyno_puffermonster_spawner.tex")
-	-- minimap:SetPriority(5)
-	
+
 	inst:AddTag("NOBLOCK")
 	inst:AddTag("CLASSIFIED")
 	inst:AddTag("puffermonsterspawner")
@@ -245,7 +233,6 @@ local function antchovyfn()
 	
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
-	inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
 	
 	local minimap = inst.entity:AddMiniMapEntity()
@@ -312,7 +299,6 @@ local function mouseoverfn()
 	inst.AnimState:SetLayer(LAYER_BACKGROUND)
 	
 	inst:AddTag("FX")
-	inst.persists = false
 	
 	inst.entity:SetPristine()
 

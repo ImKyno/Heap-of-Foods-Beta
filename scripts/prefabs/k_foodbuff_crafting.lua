@@ -56,7 +56,6 @@ local function OnAttached(inst, target)
 		
 		target:PushEvent("techlevelchange")
 		target:PushEvent("unlockrecipe")
-		target:PushEvent("refreshcrafting")
 			
 		target:ListenForEvent("builditem", OnBuild)
 		target:ListenForEvent("bufferbuild", OnBuild)
@@ -84,7 +83,6 @@ local function OnDetached(inst, target)
 			
 		target:PushEvent("techlevelchange")
 		target:PushEvent("unlockrecipe")
-		target:PushEvent("refreshcrafting")
 			
 		target:RemoveEventCallback("builditem", OnBuild)
 		target:RemoveEventCallback("bufferbuild", OnBuild)

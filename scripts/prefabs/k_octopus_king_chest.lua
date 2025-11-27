@@ -61,7 +61,6 @@ local function InWaterCheck(inst)
 end
 
 local function ChangeToWaterChestPhysics(inst)
-	MakeWaterObstaclePhysics(inst, .5, 1, 1)
 	inst.no_wet_prefix = true
 end
 
@@ -103,6 +102,7 @@ local function fn()
 	inst:SetDeploySmartRadius(0.5)
 	
 	ChangeToWaterChestPhysics(inst)
+	MakeWaterObstaclePhysics(inst, .5, 1, 1)
 	MakeInventoryPhysics(inst)
 	
 	inst:SetPhysicsRadiusOverride(1)

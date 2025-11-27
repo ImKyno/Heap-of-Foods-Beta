@@ -313,6 +313,7 @@ local function OnAddFuel(inst)
 	StopHungryTask(inst)
 	
 	inst.components.fishfarmmanager:OnAddFuel()
+	inst.components.fishfarmmanager:StartWorking()
 end
 
 local function OnFuelEmpty(inst)
@@ -328,15 +329,29 @@ local function OnClose(inst)
 	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant")
 end
 
-local function OnItemGet(inst)
+local function OnItemGet(inst, data)
 	DoFishFarmSplash(inst)
 	UpdateFishArt(inst)
+	
+	if data.slot == 1 then
+		local fish = data.item
+		
+		if fish and fish:HasTag("fishfarmable") then
+			if inst.components.fueled ~= nil and not inst.components.fueled:IsEmpty() then
+				inst.components.fishfarmmanager:StartWorking()
+			end
+		end
+	end
 
 	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/splash/small")
 end
 
-local function OnItemLose(inst)
+local function OnItemLose(inst, data)
 	UpdateFishArt(inst)
+	
+	if data.slot == 1 then
+		inst.components.fishfarmmanager:StopWorking()
+	end
 
 	inst.SoundEmitter:PlaySound("dontstarve/common/fishingpole_fishcaught")
 end
@@ -397,7 +412,14 @@ local function OnLoad(inst, data)
 		inst.plants = data.plants
 	end
 	
-	if inst.components.fueled and inst.components.fueled:IsEmpty() then
+	if inst.components.fueled and not inst.components.fueled:IsEmpty() then
+		local container = inst.components.container
+		local fish = container and container:GetItemInSlot(1)
+
+		if fish and fish:HasTag("fishfarmable") then
+			inst.components.fishfarmmanager:StartWorking()
+		end
+	else
 		StartHungryTask(inst)
 	end
 end
@@ -548,33 +570,6 @@ local function kitfn()
 	return inst
 end
 
-local function placerfn()
-	local inst = CreateEntity()
-	
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-
-	inst:AddTag("CLASSIFIED")
-	inst:AddTag("NOCLICK")
-	inst:AddTag("placer")
-
-	inst.entity:SetCanSleep(false)
-	inst.persists = false
-	
-	inst.AnimState:SetScale(.8, .8, .8)
-
-	inst.AnimState:SetBank("kyno_fishfarmplot")
-    inst.AnimState:SetBuild("kyno_fishfarmplot")
-	inst.AnimState:PlayAnimation("idle", true)
-	inst.AnimState:SetOrientation(ANIM_ORIENTATION.OnGround)
-	inst.AnimState:SetLayer(LAYER_BACKGROUND)
-	inst.AnimState:SetLightOverride(1)
-
-	inst:AddComponent("placer")
-
-    return inst
-end
-
 local function shoalfn()
 	local inst = CreateEntity()
 
@@ -637,6 +632,6 @@ end
 
 return Prefab("kyno_fishfarmplot", fn, assets, prefabs),
 Prefab("kyno_fishfarmplot_kit", kitfn, assets, prefabs),
-Prefab("kyno_fishfarmplot_kit_placer", placerfn, assets, prefabs),
 Prefab("kyno_fishfarmplot_shoal", shoalfn, assets, prefabs),
-Prefab("kyno_fishfarmplot_shoal_marker", markerfn, assets, prefabs)
+Prefab("kyno_fishfarmplot_shoal_marker", markerfn, assets, prefabs),
+MakePlacer("kyno_fishfarmplot_kit_placer", "kyno_fishfarmplot", "kyno_fishfarmplot", "idle", true, nil, nil, .9)

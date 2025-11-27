@@ -262,9 +262,13 @@ end
 
 local function fn()
 	local inst = basefn("lobster_den_build", "kyno_wobster_den_monkeyisland", "wobster_monkeyisland")
+	
+	if not TheWorld.ismastersim then
+		return inst
+	end
 
-	-- inst:AddComponent("halloweenmoonmutable")
-	-- inst.components.halloweenmoonmutable:SetConversionOverrideFn(MoonConversionOverride)
+	inst:AddComponent("halloweenmoonmutable")
+	inst.components.halloweenmoonmutable:SetConversionOverrideFn(MoonConversionOverride)
 
 	return inst
 end

@@ -18,6 +18,8 @@ local function makefn(bankname, buildname, animname, tag)
 		inst.AnimState:SetBuild(buildname)
 		inst.AnimState:PlayAnimation(animname)
 		
+		inst:AddTag("DECOR")
+		
         if tag ~= nil then
             inst:AddTag(tag)
         end

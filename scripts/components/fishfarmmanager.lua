@@ -60,7 +60,7 @@ function FishFarmManager:StopWorking()
 	end
 	
 	if self.inst.components.fueled ~= nil then
-		-- self.inst.components.fueled:StopConsuming()
+		self.inst.components.fueled:StopConsuming()
 	end
 end
 
@@ -221,7 +221,7 @@ function FishFarmManager:StartWorking()
 	end
 	
 	if self.inst.components.fueled ~= nil then
-		-- self.inst.components.fueled:StartConsuming()
+		self.inst.components.fueled:StartConsuming()
 	end
 end
 

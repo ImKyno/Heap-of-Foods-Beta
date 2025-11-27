@@ -269,21 +269,22 @@ local function fn()
 	inst:AddTag("prey")
 	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
+	inst:AddTag("jellyfish_rainbow")
 	
 	inst:SetPrefabNameOverride("KYNO_JELLYFISH_RAINBOW")
 	
-	inst.ispink = true
-	inst._switchlightstate = net_event(inst.GUID, "kyno_jellyfishrainbow_planted._switchlightstate")
-	
 	inst:AddComponent("lighttweener")
 	inst.components.lighttweener:StartTween(inst.Light, nil, nil, nil, { 0/255, 180/255, 255/255 }, 4, SwapColor)
+	
+	inst.ispink = true
+	inst._switchlightstate = net_event(inst.GUID, "kyno_jellyfish_rainbow_ocean._switchlightstate")
 	
 	inst.no_wet_prefix = true
 
     inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
-		inst:ListenForEvent("kyno_jellyfishrainbow_planted._switchlightstate", function(inst, data)
+		inst:ListenForEvent("kyno_jellyfish_rainbow_ocean._switchlightstate", function(inst, data)
 			if inst.Light and not inst:HasTag("NOCLICK") then
 				local secs = 1 + math.random()
 				
@@ -366,6 +367,7 @@ local function jellyfish()
 	inst:AddTag("small_livestock")
 	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
+	inst:AddTag("jellyfish_rainbow")
 	
 	inst.scrapbook_proxy = "kyno_jellyfish_rainbow_ocean"
 
@@ -445,6 +447,7 @@ local function jellyfish_dead()
 	inst:AddTag("catfood")
 	inst:AddTag("dryable")
 	inst:AddTag("cookable")
+	inst:AddTag("jellyfish_rainbow")
 
 	inst.entity:SetPristine()
 
@@ -515,6 +518,7 @@ local function jellyfish_cooked()
 	inst:AddTag("fish")
 	inst:AddTag("fishmeat")
 	inst:AddTag("catfood")
+	inst:AddTag("jellyfish_rainbow")
 
 	inst.entity:SetPristine()
 

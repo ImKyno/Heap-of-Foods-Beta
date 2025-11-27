@@ -638,7 +638,7 @@ local function StridentTridentPostinit(inst)
     end
 
     if not _G.TheWorld.ismastersim then
-        return
+        return inst
     end
 
     inst.DoWaterExplosionEffect = DoWaterExplosionEffectNew

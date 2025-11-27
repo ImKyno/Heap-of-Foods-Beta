@@ -39,7 +39,7 @@ if HOF_FULLMOON then
 	for prefab_name, data in pairs(MUSHROOMS) do
 		AddPrefabPostInit(prefab_name, function(inst)
 			if not _G.TheWorld.ismastersim then
-				return
+				return inst
 			end
 
 			inst:AddComponent("fullmoontransformer")
@@ -60,7 +60,7 @@ if HOF_FULLMOON then
 	for k, v in pairs(MUSHTREES) do
 		AddPrefabPostInit(v, function(inst)
 			if not _G.TheWorld.ismastersim then
-				return
+				return inst
 			end
 
 			inst:AddComponent("fullmoontransformer")
@@ -215,7 +215,7 @@ local function MushroomFarmPostInit(inst)
 	end
 
 	if not _G.TheWorld.ismastersim then
-		return
+		return inst
 	end
 
 	if inst.components.trader ~= nil then

@@ -164,7 +164,7 @@ local function commonfn(duration, fxprefab)
 	inst:AddTag("NOCLICK")
 
 	inst:AddComponent("spell")
-	inst.components.spell.spellname = "kyno_rainbow_jellyfish_fx"
+	inst.components.spell.spellname = "jellyfish_rainbow"
 	inst.components.spell.duration = duration
 	inst.components.spell.ontargetfn = LightOnTarget
 	inst.components.spell.onstartfn = LightStart
@@ -289,6 +289,7 @@ local function fxfn(duration)
 
 	if not TheWorld.ismastersim then
 		inst:ListenForEvent("lightdirty", OnLightDirty)
+
 		return inst
 	end
 

@@ -81,8 +81,6 @@ local function fn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-
-	inst:SetBrain(brain)
 	
 	inst:AddComponent("inspectable")
 
@@ -91,6 +89,7 @@ local function fn()
 	inst.components.locomotor.runspeed = TUNING.GHOST_SPEED
 	inst.components.locomotor.directdrive = true
 
+	inst:SetBrain(brain)
 	inst:SetStateGraph("SGghost")
 
 	inst:AddComponent("sanityaura")

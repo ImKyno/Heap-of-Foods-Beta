@@ -193,6 +193,7 @@ local function fn()
 	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
 	inst:AddTag("electricdamageimmune")
+	inst:AddTag("jellyfish")
 	
 	inst:SetPrefabNameOverride("KYNO_JELLYFISH")
 	
@@ -266,6 +267,7 @@ local function jellyfish()
 	inst:AddTag("small_livestock")
 	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
+	inst:AddTag("jellyfish")
 	
 	inst.scrapbook_proxy = "kyno_jellyfish_ocean"
 
@@ -344,6 +346,7 @@ local function jellyfish_dead()
 	inst:AddTag("catfood")
 	inst:AddTag("dryable")
 	inst:AddTag("cookable")
+	inst:AddTag("jellyfish")
 
 	inst.entity:SetPristine()
 
@@ -411,6 +414,7 @@ local function jellyfish_cooked()
 	inst:AddTag("fish")
 	inst:AddTag("fishmeat")
 	inst:AddTag("catfood")
+	inst:AddTag("jellyfish")
 
 	inst.entity:SetPristine()
 

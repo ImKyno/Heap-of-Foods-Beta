@@ -52,16 +52,6 @@ local seafoods     =
 	"wobster_sheller_land",
 }
 
-local function MakeOctopusValues(octopusvalue)
-	octopusvalue = octopusvalue or 3
-	
-	return function(inst)
-		if inst.components.tradable ~= nil then
-			inst.components.tradable.octopusvalue = octopusvalue
-		end
-	end
-end
-
 local function OctopusValuesTrinketPostInit(inst)
 	inst:AddTag("hof_trinket")
 	
@@ -89,7 +79,15 @@ local function OctopusValuesSeafoodPostInit(inst)
 end
 
 for i = 1, _G.NUM_TRINKETS do
-	AddPrefabPostInit("trinket_".. i, MakeOctopusValues(TUNING.OCTOPUS_VALUES.TRINKETS[i]))
+	AddPrefabPostInit("trinket_"..i, function(inst)
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+	
+		if inst.components.tradable ~= nil then
+			inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.TRINKETS[i] or 3
+		end
+	end)
 end
 
 for k, v in pairs(trinkets) do

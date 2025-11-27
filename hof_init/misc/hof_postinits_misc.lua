@@ -887,7 +887,7 @@ local function TrophyScaleFishPostInit(inst)
 	end
 
 	if not _G.TheWorld.ismastersim then
-		return
+		return inst
 	end
 
 	local _OnLoad = inst.OnLoad

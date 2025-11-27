@@ -69,8 +69,10 @@ local function DryablePostinit(inst)
 		return inst
 	end
 
-	if not inst.components.dryable then
+	if inst.components.inventoryitem ~= nil and not inst.components.dryable then
 		inst:AddComponent("dryable")
+		inst.components.dryable:SetDryTime(TUNING.DRY_MED)
+	else
 		inst.components.dryable:SetDryTime(TUNING.DRY_MED)
 	end
 	

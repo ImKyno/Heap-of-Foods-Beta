@@ -67,26 +67,26 @@ end)
 AddPrefabPostInit("catcoon", function(inst)
 	local _OnGetItemFromPlayer
 
-	local function OnGetItemFromPlayer(self, giver, item)
-		if self.components.sleeper:IsAsleep() then
-			self.components.sleeper:WakeUp()
+	local function OnGetItemFromPlayer(inst, giver, item)
+		if inst.components.sleeper:IsAsleep() then
+			inst.components.sleeper:WakeUp()
 		end
 		
-		if self.components.combat.target == giver then
-			self.components.combat:SetTarget(nil)
-			self.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/pickup")
+		if inst.components.combat.target == giver then
+			inst.components.combat:SetTarget(nil)
+			inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/pickup")
 		end
 			
 		if item:HasTag("fish") then
-			if not self.sg:HasStateTag("busy") then
-				self:FacePoint(giver.Transform:GetWorldPosition())
-				self.sg:GoToState("pawground2")
+			if not inst.sg:HasStateTag("busy") then
+				inst:FacePoint(giver.Transform:GetWorldPosition())
+				inst.sg:GoToState("pawground2")
 			end
 		end
 	
 		item:Remove()
 		
-		return _OnGetItemFromPlayer(self, giver, item)
+		return _OnGetItemFromPlayer(inst, giver, item)
 	end
 
     if not _G.TheWorld.ismastersim then
@@ -461,7 +461,7 @@ AddPrefabPostInit("antlion", AntlionPostInit)
 -- Truffles make pigs happy, yay.
 local function PigmanPostInit(inst)
 	if not _G.TheWorld.ismastersim then
-		return
+		return inst
 	end
 	
 	if inst.components.trader ~= nil then

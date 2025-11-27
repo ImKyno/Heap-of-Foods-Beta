@@ -478,7 +478,7 @@ local kyno_warly_foods =
 		scale = .9,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED, 
 		floater = TUNING.HOF_FLOATER,
-		tags = {"masterfood", "drinkable_food", "nospice"},
+		tags = {"masterfood", "nospice"},
 		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 1}, {"chocolate_black", 1}, {"goatmilk", 1}}},
 		prefabs = { "buff_moistureimmunity" },
 		oneatenfn = function(inst, eater)
