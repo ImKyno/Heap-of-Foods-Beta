@@ -130,17 +130,6 @@ local function DespawnPlants(inst)
 	inst.plants = nil
 end
 
-local function OnHammred(inst, worker)
-	inst.components.lootdropper:DropLoot()
-
-	local fx = SpawnPrefab("collapse_big")
-	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
-	fx:SetMaterial("stone")
-	
-	StopHungryTask(inst)
-	inst:Remove()
-end
-
 local function DoFishFarmSplash(inst)
 	local splash_variants =
 	{
@@ -190,6 +179,8 @@ local function UpdateFishArt(inst)
 		shoal_marker.entity:SetParent(inst.entity)
 		shoal.AnimState:SetMultColour(.7, .7, .7, 1)
 		
+		shoal.entity:SetParent(inst.entity)
+		
 		if shoal.Follower == nil then
 			shoal.entity:AddFollower()
 		end
@@ -212,6 +203,7 @@ local function UpdateFishArt(inst)
 			"fish_body", 
 			"fish_fin",
 			"fish",
+			"water_ripple",
 		}
 		
 		for _, symbol in ipairs(all_symbols) do
@@ -225,6 +217,7 @@ local function UpdateFishArt(inst)
 				if slot == 1 then
 					shoal.AnimState:ShowSymbol("fish_body")
 					shoal.AnimState:ShowSymbol("fish_fin")
+					shoal.AnimState:ShowSymbol("water_ripple")
 				else
 					shoal.AnimState:ShowSymbol("fish")
 				end
@@ -374,6 +367,21 @@ local function OnDeploy(inst, pt, deployer)
 	end
 end
 
+local function OnHammered(inst, worker)
+	if inst.components.container ~= nil then 
+		inst.components.container:DropEverything() 
+	end
+	
+	inst.components.lootdropper:DropLoot()
+
+	local fx = SpawnPrefab("collapse_big")
+	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
+	fx:SetMaterial("stone")
+	
+	StopHungryTask(inst)
+	inst:Remove()
+end
+
 local function OnEntityRemove(inst)
 	StopHungryTask(inst)
 end
@@ -453,7 +461,7 @@ local function fn()
 	
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
-	inst.components.workable:SetOnFinishCallback(OnHammred)
+	inst.components.workable:SetOnFinishCallback(OnHammered)
 	inst.components.workable:SetWorkLeft(4)
 
 	inst:AddComponent("container")

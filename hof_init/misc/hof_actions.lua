@@ -46,7 +46,7 @@ end)
 AddComponentAction("USEITEM", "inventoryitem", function(inst, doer, target, actions, right)
 	if target:HasTag("fishhatchery") then
 		if inst:HasTag("FISHFOOD_fuel") and target:HasTag("FISHFOOD_fueled") then
-			_G.RemoveByValue(actions, _G.ACTIONS.STORE)
+			_G.RemoveByValue(actions, ACTIONS.STORE)
 		end
 	end
 end)

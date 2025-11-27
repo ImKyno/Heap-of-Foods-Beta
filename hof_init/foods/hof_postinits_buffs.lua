@@ -71,6 +71,38 @@ if HOF_COFFEEBUFF_ENABLED then
 	end
 	
 	AddPrefabPostInit("kyno_goldenapple", GoldenApplePostInit)
+	
+	local tropicalbouillabaisse_spicebuff =
+	{
+		"tropicalbouillabaisse_spice_garlic",
+		"tropicalbouillabaisse_spice_sugar",
+		"tropicalbouillabaisse_spice_chili",
+		"tropicalbouillabaisse_spice_salt",
+		
+		"tropicalbouillabaisse_spice_cure",
+		"tropicalbouillabaisse_spice_fed",
+		"tropicalbouillabaisse_spice_cold",
+		"tropicalbouillabaisse_spice_fire",
+		"tropicalbouillabaisse_spice_mind",
+	}
+	
+	local function TropicalBouillabaissePostInit(inst)
+		local function OnEaten(inst, eater)
+			eater:AddDebuff("kyno_coffeebuff", "kyno_coffeebuff")
+		end
+		
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+		
+		if inst.components.edible ~= nil then
+			inst.components.edible:SetOnEatenFn(OnEaten)
+		end
+	end
+	
+	for k, v in pairs(tropicalbouillabaisse_spicebuff) do
+		AddPrefabPostInit(v, TropicalBouillabaissePostInit)
+	end
 end
 
 if HOF_GIANTSPAWNING then

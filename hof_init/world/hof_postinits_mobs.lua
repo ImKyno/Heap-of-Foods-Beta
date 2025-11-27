@@ -566,14 +566,14 @@ local function SharkBoiPostInit(inst)
 			local blueprint = "kyno_fishfarmplot_kit_blueprint"
 
 			if inst.sketchgiven == nil or inst.blueprintgiven == nil then
-				if IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST) then
+				if _G.IsSpecialEventActive(_G.SPECIAL_EVENTS.WINTERS_FEAST) then
 					local gift = SpawnPrefab("gift")
 
 					gift.components.unwrappable:WrapItems({
 						blueprint,
 						"oceanfishinglure_hermit_snow",
-						GetRandomLightWinterOrnament(),
-						"winter_food"..math.random(NUM_WINTERFOOD),
+						_G.GetRandomLightWinterOrnament(),
+						"winter_food"..math.random(9), -- NUM_WINTERFOOD
 					})
 
 					_G.LaunchAt(gift, inst, target, 1.5, 2, 1.25)

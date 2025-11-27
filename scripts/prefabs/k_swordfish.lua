@@ -300,13 +300,14 @@ local function fx()
 	inst.AnimState:PlayAnimation("pop")
 	
 	inst:AddTag("FX")
-	inst.persists = false
 	
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.persists = false
 	
 	return inst
 end

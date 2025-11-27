@@ -8,6 +8,10 @@ local function OnAttached(inst, target)
 	inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0)
 	
+	if not target:HasTag("bigbrain") then
+		target:AddTag("bigbrain")
+	end
+	
 	if target.components.builder ~= nil then
 		inst._added_bonuses = 
 		{
@@ -69,6 +73,10 @@ local function OnAttached(inst, target)
 end
 
 local function OnDetached(inst, target)
+	if target:HasTag("bigbrain") then
+		target:RemoveTag("bigbrain")
+	end
+	
 	if target.components.builder ~= nil and inst._added_bonuses ~= nil then
 		for k, v in pairs(inst._added_bonuses) do
 			target.components.builder[k] = math.max(0, (target.components.builder[k] or 0) - v)
@@ -93,6 +101,13 @@ end
 local function OnExtended(inst, target)
 	inst.components.timer:StopTimer("kyno_craftingbuff")
     inst.components.timer:StartTimer("kyno_craftingbuff", TUNING.KYNO_CRAFTINGBUFF_DURATION)
+	
+	if target:HasTag("bigbrain") then
+		target:RemoveTag("bigbrain")
+		target:AddTag("bigbrain")
+	else
+		target:AddTag("bigbrain")
+	end
 	
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_CRAFTINGBUFF_START"))
