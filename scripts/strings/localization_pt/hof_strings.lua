@@ -189,6 +189,7 @@ STRINGS.ACTIONS.SLICE = "Fatiar"
 STRINGS.ACTIONS.SLICESTACK = "Fatiar Pilha"
 STRINGS.ACTIONS.LEARNRECIPECARD = "Adicionar ao Livro de Culinária"
 STRINGS.ACTIONS.LEARNRECIPECARD2 = "Adicionar ao Livro de Fermentação"
+STRINGS.ACTIONS.BREEDFISH = "Procriar"
 
 -- Edited strings for skill trees.
 STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Cogumelos plantados em um Plantador de Cogumelos crescem muito mais rápido.\nAprenda a plantar novos tipos de cogumelos nos Plantadores de Cogumelos."

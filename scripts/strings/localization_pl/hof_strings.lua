@@ -189,6 +189,7 @@ STRINGS.ACTIONS.SLICE = "Slice"
 STRINGS.ACTIONS.SLICESTACK = "Slice Stack"
 STRINGS.ACTIONS.LEARNRECIPECARD = "Add to Cookbook"
 STRINGS.ACTIONS.LEARNRECIPECARD2 = "Add to Brewbook"
+STRINGS.ACTIONS.BREEDFISH = "Breed"
 
 -- Edited strings for skill trees.
 STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Grzyby posadzone w Sadzarce Grzybów rosną znacznie szybciej.\nDowiedz się, jak sadzić nowe rodzaje grzybów w Sadzarce Grzybów."
