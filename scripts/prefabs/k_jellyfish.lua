@@ -19,7 +19,7 @@ local prefabs =
 	"kyno_jellyfish_dead",
 	"kyno_jellyfish_cooked",
 	"kyno_jellyfish_dried",
-	
+
 	"spoiled_food",
 }
 
@@ -178,7 +178,7 @@ local function fn()
 	
 	inst.Transform:SetFourFaced()
 	
-	MakeCharacterPhysics(inst, 50, 0.5)
+	MakeCharacterPhysics(inst, 1, 1.25)
 
 	inst.AnimState:SetBank("kyno_jellyfish")
 	inst.AnimState:SetBuild("kyno_jellyfish")

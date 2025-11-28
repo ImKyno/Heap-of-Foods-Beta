@@ -18,6 +18,9 @@ local assets =
 local prefabs =
 {
 	"fishmeat_cooked",
+	
+	"ocean_splash_med1",
+	"ocean_splash_med2",
 
 	"kyno_dogfish_dead",
 	"kyno_fishmeat_dried",

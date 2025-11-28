@@ -59,9 +59,11 @@ function FishFarmManager:StopWorking()
 		self.onstopfn(self.inst)
 	end
 	
+	--[[
 	if self.inst.components.fueled ~= nil then
 		self.inst.components.fueled:StopConsuming()
 	end
+	]]--
 end
 
 function FishFarmManager:ProduceRoe()
@@ -77,7 +79,7 @@ function FishFarmManager:ProduceRoe()
 	local fish_parent = container:GetItemInSlot(1)
 	local fishfarmable = fish_parent.components.fishfarmable
 	
-	if fish_parent == nil or fish_parent.components.fishfarmable == nil then
+	if fish_parent == nil or fishfarmable == nil then
 		self:StopWorking()
 		return
 	end
@@ -86,15 +88,12 @@ function FishFarmManager:ProduceRoe()
 		or not fishfarmable:IsMoonPhaseValid()
 		or not fishfarmable:IsSeasonValid()
 		or not fishfarmable:IsWorldValid() then
-		
-		self:StopWorking()
 		return
 	end
 
-	local roe_prefab = fish_parent.components.fishfarmable:GetRoePrefab()
+	local roe_prefab = fishfarmable:GetRoePrefab()
 	
 	if roe_prefab == nil then
-		self:StopWorking()
 		return
 	end
 
@@ -142,7 +141,7 @@ function FishFarmManager:ProduceBaby()
 	local fish_parent = container:GetItemInSlot(1)
 	local fishfarmable = fish_parent.components.fishfarmable
 	
-	if fish_parent == nil or fish_parent.components.fishfarmable == nil then
+	if fish_parent == nil or fishfarmable == nil then
 		self:StopWorking()
 		return
 	end
@@ -151,17 +150,14 @@ function FishFarmManager:ProduceBaby()
 		or not fishfarmable:IsMoonPhaseValid()
 		or not fishfarmable:IsSeasonValid()
 		or not fishfarmable:IsWorldValid() then
-		
-		self:StopWorking()
 		return
 	end
 
-	local baby_prefab = fish_parent.components.fishfarmable:GetBabyPrefab()
+	local baby_prefab = fishfarmable:GetBabyPrefab()
 	
 	if baby_prefab == nil then
-		self:StopWorking()
 		return
-    end
+	end
 
 	for i = self.slot_start, self.slot_end do
 		if container:GetItemInSlot(i) == nil then
@@ -191,50 +187,46 @@ end
 function FishFarmManager:StartWorking()
 	local inst = self.inst
 	local container = inst.components.container
-	local fish_parent = container:GetItemInSlot(1)
-
-	if fish_parent == nil or fish_parent.components.fishfarmable == nil then
-		return
-	end
-
-	local fishfarmable = fish_parent.components.fishfarmable
 	
-	if not (fishfarmable:IsPhaseValid()
-		and fishfarmable:IsMoonPhaseValid()
-		and fishfarmable:IsSeasonValid()
-		and fishfarmable:IsWorldValid()) then
+	local fish_parent = container:GetItemInSlot(1)
+	local fishfarmable = fish_parent.components.fishfarmable
+
+	if fish_parent == nil or fishfarmable == nil then
 		return
 	end
 
 	self:StopWorking()
 
 	self._roe_task = inst:DoPeriodicTask(fishfarmable:GetRoeTime(), function() 
-		self:ProduceRoe() 
+		self:ProduceRoe()
 	end)
-	
+    
 	self._baby_task = inst:DoPeriodicTask(fishfarmable:GetBabyTime(), function() 
-		self:ProduceBaby() 
+		self:ProduceBaby()
 	end)
 
 	if self.onstartfn then
 		self.onstartfn(inst)
 	end
 	
+	-- Decided on not spending fuel when working only when something was produced.
+	--[[
 	if self.inst.components.fueled ~= nil then
 		self.inst.components.fueled:StartConsuming()
 	end
+	]]--
 end
 
 function FishFarmManager:OnAddFuel()
 	local container = self.inst.components.container
 	local fish_parent = container:GetItemInSlot(1)
-	
+    
 	if fish_parent == nil or fish_parent.components.fishfarmable == nil then
 		self:StopWorking()
 		return
-	else
-		self:StartWorking()
 	end
+
+	self:StartWorking()
 end
 
 function FishFarmManager:OnFuelEmpty()
@@ -250,32 +242,23 @@ local function CheckFishValidity(self)
 		self:StopWorking()
 		return
 	end
-
-	local valid = fishfarmable:IsPhaseValid()
-	and fishfarmable:IsMoonPhaseValid()
-	and fishfarmable:IsSeasonValid()
-	and fishfarmable:IsWorldValid()
-
-	if not valid then
-		self:StopWorking()
-	else
-		if not self._roe_task and not self._baby_task then
-			self:StartWorking()
-		end
-	end
 end
 
 function FishFarmManager:WatchWorldStates()
 	self.inst:WatchWorldState("phase", function() 
-		CheckFishValidity(self) 
+		CheckFishValidity(self)
 	end)
-	
+    
 	self.inst:WatchWorldState("moonphase", function() 
-		CheckFishValidity(self) 
+		CheckFishValidity(self)
 	end)
 	
+	self.inst:WatchWorldState("isalterawake", function() 
+		CheckFishValidity(self)
+	end)
+    
 	self.inst:WatchWorldState("season", function() 
-		CheckFishValidity(self) 
+		CheckFishValidity(self)
 	end)
 end
 
@@ -289,35 +272,35 @@ function FishFarmManager:LongUpdate(dt)
 	end
 
 	local fish_parent = container:GetItemInSlot(1)
-	
-	if not fish_parent or not fish_parent.components.fishfarmable then
+	local fishfarmable = fish_parent.components.fishfarmable
+    
+	if not fish_parent or not fishfarmable then
 		return
 	end
 
-	local farmable = fish_parent.components.fishfarmable
-	local roe_interval = farmable:GetRoeTime()
-	local baby_interval = farmable:GetBabyTime()
+	local roe_interval = fishfarmable:GetRoeTime()
+	local baby_interval = fishfarmable:GetBabyTime()
 
 	if roe_interval > 0 then
 		local roe_cycles = math.floor(dt / roe_interval)
-		
+        
 		for i = 1, roe_cycles do
 			if fueled:IsEmpty() then
 				break
 			end
-			
+            
 			self:ProduceRoe()
 		end
 	end
 
 	if baby_interval > 0 then
 		local baby_cycles = math.floor(dt / baby_interval)
-		
+        
 		for i = 1, baby_cycles do
 			if fueled:IsEmpty() then
 				break
 			end
-			
+            
 			self:ProduceBaby()
 		end
 	end

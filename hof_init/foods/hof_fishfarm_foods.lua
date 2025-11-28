@@ -73,8 +73,8 @@ local fishes         =
 		roe_prefab   = "kyno_roe_wobster_moonglass",
 		baby_prefab  = "wobster_moonglass_land",
 		
-		roe_time     = TUNING.WOBSTER_ROETIME,
-		baby_time    = TUNING.WOBSTER_BABYTIME,
+		roe_time     = TUNING.WOBSTER_MOONGLASS_ROETIME,
+		baby_time    = TUNING.WOBSTER_MOONGLASS_BABYTIME,
 		
 		phases       = { "night" },
 		moonphases   = { "full" },

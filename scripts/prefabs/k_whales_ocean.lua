@@ -21,6 +21,9 @@ local whale_white_assets =
 
 local whale_blue_prefabs =
 {
+	"ocean_splash_med1",
+	"ocean_splash_med2",
+
 	"kyno_whale_blue_ocean_carcass",
 	"kyno_whale_ocean_bubbles",
 	"kyno_whale_ocean_track",
@@ -28,6 +31,9 @@ local whale_blue_prefabs =
 
 local whale_white_prefabs =
 {
+	"ocean_splash_med1",
+	"ocean_splash_med2",
+
 	"kyno_whale_white_ocean_carcass",
 	"kyno_whale_ocean_bubbles",
 	"kyno_whale_ocean_track",
@@ -107,6 +113,58 @@ local function SpawnWhaleWaves(inst, numWaves, totalAngle, waveSpeed, wavePrefab
 	)
 end
 
+local function FindWater(inst)
+	local foundwater = false
+	
+	local position = Vector3(inst.Transform:GetWorldPosition())
+	local start_angle = inst.Transform:GetRotation() * DEGREES
+
+	local foundwater = false
+	local radius = 6.5
+
+	local test_fn = function(offset)
+		local x = position.x + offset.x
+		local z = position.z + offset.z
+		return not TheWorld.Map:IsVisualGroundAtPoint(x, 0, z)
+	end
+
+	local offset = nil
+
+	while foundwater == false do
+		offset = FindValidPositionByFan(start_angle, radius, 10, test_fn)
+		
+		if offset and offset.x and offset.z then
+			foundwater = true
+		else
+			radius = radius + 4
+		end
+	end
+
+	return offset
+end
+
+local function StuckDetection(inst)
+	local platform = inst:GetCurrentPlatform()
+
+	if platform then
+		local spawnPos = inst:GetPosition()
+		local offset = FindWater(inst)
+		spawnPos = spawnPos + offset
+				
+		if inst.Physics ~= nil then
+			inst.Physics:Teleport(spawnPos:Get())
+			
+			local splash = SpawnPrefab("ocean_splash_med1")
+			splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		else
+			inst.Transform:SetPosition(spawnPos:Get())
+			
+			local splash = SpawnPrefab("ocean_splash_med2")
+			splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		end
+	end
+end
+
 local function common()
 	local inst = CreateEntity()
 
@@ -147,6 +205,8 @@ local function common()
 	inst.components.sleeper:SetWakeTest(ShouldWakeUp)
 	
 	inst.SpawnWhaleWaves = SpawnWhaleWaves
+	
+	inst:DoPeriodicTask(3, StuckDetection)
 
 	inst:SetStateGraph("SGwhaleocean")
 

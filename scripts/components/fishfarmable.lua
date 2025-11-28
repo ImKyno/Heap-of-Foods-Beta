@@ -15,11 +15,11 @@ local FishFarmable = Class(function(self, inst)
 end)
 
 function FishFarmable:IsPhaseValid()
-	local phase = TheWorld:HasTag("cave") 
+	local dayphase = TheWorld:HasTag("cave") 
 	and TheWorld.state.cavephase or TheWorld.state.phase
 	
 	for _, p in ipairs(self.valid_phases) do
-		if p == phase then
+		if p == dayphase then
 			return true
 		end
 	end

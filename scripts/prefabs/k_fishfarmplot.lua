@@ -586,7 +586,8 @@ local function shoalfn()
 	inst.AnimState:SetFinalOffset(4)
 	
 	inst:AddTag("NOCLICK")
-	inst:AddTag("NOBLOCK")
+	inst:AddTag("antlion_sinkhole_blocker")
+	inst:AddTag("birdblocker")
 	
 	inst.no_wet_prefix = true
 	
@@ -615,7 +616,8 @@ local function markerfn()
 	inst.AnimState:SetFinalOffset(4)
 	
 	inst:AddTag("NOCLICK")
-	inst:AddTag("NOBLOCK")
+	inst:AddTag("antlion_sinkhole_blocker")
+	inst:AddTag("birdblocker")
 	
 	inst.no_wet_prefix = true
 	

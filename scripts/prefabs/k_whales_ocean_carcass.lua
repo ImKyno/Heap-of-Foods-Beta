@@ -231,7 +231,7 @@ local function OnCollide(inst, data)
 		local hit_velocity = math.floor(math.abs(boat_physics:GetVelocity() * data.hit_dot_velocity) * COLLISION_DAMAGE_SCALE / boat_physics.max_velocity + 0.5)
 		
 		if inst.components.workable:CanBeWorked() then
-			inst.components.workable:WorkedBy(data.other, hit_velocity * TUNING.WHALE_BLUE_EXPLOSION_HACKS)
+			inst.components.workable:WorkedBy(data.other, hit_velocity * TUNING.KYNO_WHALE_EXPLOSION_CHOPS)
 		end
 	end
 end

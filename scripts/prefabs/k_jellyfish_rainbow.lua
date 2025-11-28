@@ -24,7 +24,7 @@ local prefabs =
 	"kyno_jellyfish_rainbow_light_fx",
 	"kyno_jellyfish_rainbow_light_greater",
 	"kyno_jellyfish_rainbow_light_fx_greater",
-	
+
 	"spoiled_food",
 }
 
@@ -86,7 +86,7 @@ end
 
 local function OnWake(inst)
 	if not TheWorld.state.isday then
-		FadeIn(inst)
+		-- FadeIn(inst)
 		TurnOn(inst)
 	else
 		TurnOff(inst)
@@ -95,7 +95,7 @@ end
 
 local function OnSleep(inst)
 	if TheWorld.state.isday then
-		FadeOut(inst)
+		-- FadeOut(inst)
 		TurnOff(inst)
 	end
 end
@@ -253,7 +253,7 @@ local function fn()
 	
 	inst.Transform:SetFourFaced()
 	
-	MakeCharacterPhysics(inst, 50, 0.5)
+	MakeCharacterPhysics(inst, 1, 1.25)
 	
 	inst.AnimState:SetScale(.8, .8, .8)
 
@@ -326,8 +326,8 @@ local function fn()
 	inst:SetStateGraph("SGjellyfishrainbowocean")
 	inst:SetBrain(brain)
 	
-	-- inst.OnEntityWake = OnWake
-	-- inst.OnEntitySleep = OnSleep
+	inst.OnEntityWake = OnWake
+	inst.OnEntitySleep = OnSleep
 
 	inst:WatchWorldState("isday", OnDay)
 	inst:WatchWorldState("isdusk", OnDusk)

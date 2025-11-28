@@ -73,7 +73,7 @@ local function fn()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
 
-	MakeCharacterPhysics(inst, 50, 1)
+	MakeCharacterPhysics(inst, 1, 1.25)
 	inst.Physics:SetCollisionGroup(COLLISION.CHARACTERS)
 	
 	MakeInventoryFloatable(inst, "med", 0.1, {1.1, 0.9, 1.1})
