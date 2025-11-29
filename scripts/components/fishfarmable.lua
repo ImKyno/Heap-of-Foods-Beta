@@ -15,11 +15,10 @@ local FishFarmable = Class(function(self, inst)
 end)
 
 function FishFarmable:IsPhaseValid()
-	local dayphase = TheWorld:HasTag("cave") 
-	and TheWorld.state.cavephase or TheWorld.state.phase
+	local phase = TheWorld.state.phase -- Its always night in caves...
 	
 	for _, p in ipairs(self.valid_phases) do
-		if p == dayphase then
+		if p == phase then
 			return true
 		end
 	end
@@ -27,13 +26,12 @@ function FishFarmable:IsPhaseValid()
 	return false
 end
 
-function FishFarmable:IsMoonPhaseValid()
-	local moonphase = TheWorld.state.moonphase
-	
-	-- No Moon in caves!
+function FishFarmable:IsMoonPhaseValid()	
 	if TheWorld:HasTag("cave") then
-		return false
+		return true -- No Moon in caves!
 	end
+	
+	local moonphase = TheWorld.state.moonphase
 	
 	for _, mp in ipairs(self.valid_moonphases) do
 		if mp == moonphase then
@@ -57,14 +55,12 @@ function FishFarmable:IsSeasonValid()
 end
 
 function FishFarmable:IsWorldValid()
-	local worldtag = TheWorld:HasTag("cave") and "cave" or "forest"
-
-	for _, w in ipairs(self.valid_worlds) do
-		if w == worldtag then
+	for _, world in ipairs(self.valid_worlds) do
+		if TheWorld:HasTag(world) then
 			return true
 		end
 	end
-
+	
 	return false
 end
 

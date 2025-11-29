@@ -5,18 +5,20 @@ local assets =
 
 local prefabs =
 {
-	"slurtle_shellpieces",
-	"rocks",
+	"antliontrinket",
 	"feather_crow",
 	"feather_robin",
 	"feather_robin_winter",
-	"spidergland",
 	"gears",
 	"goldnugget",
-	"redgem",
-	"purplegem",
 	"greengem",
+	"purplegem",
+	"redgem",
+	"rocks",
+	"slurtle_shellpieces",
+	"spidergland",
 	"yellowgem",
+	
 	"kyno_kokonut",
 	"kyno_piko",
 	"kyno_piko_orange",
@@ -185,22 +187,23 @@ local function fn()
 
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper.numrandomloot = 1
-	inst.components.lootdropper.chancerandomloot = 0.01
-	inst.components.lootdropper:AddRandomLoot("slurtle_shellpieces", 0.01)
-	inst.components.lootdropper:AddRandomLoot("rocks", 0.20)
-	inst.components.lootdropper:AddRandomLoot("feather_crow", 0.08)
-	inst.components.lootdropper:AddRandomLoot("feather_robin", 0.07)
-	inst.components.lootdropper:AddRandomLoot("feather_robin_winter", 0.06)
-	inst.components.lootdropper:AddRandomLoot("spidergland", 0.02)
-	inst.components.lootdropper:AddRandomLoot("gears", 0.002)
-	inst.components.lootdropper:AddRandomLoot("goldnugget", 0.002)
-	inst.components.lootdropper:AddRandomLoot("redgem", 0.002)
-	inst.components.lootdropper:AddRandomLoot("purplegem", 0.001)
-	inst.components.lootdropper:AddRandomLoot("greengem", 0.001)
-	inst.components.lootdropper:AddRandomLoot("yellowgem", 0.001)
-	inst.components.lootdropper:AddRandomLoot("kyno_kokonut", 0.10)
-	inst.components.lootdropper:AddRandomLoot("kyno_piko", 0.09)
-	inst.components.lootdropper:AddRandomLoot("kyno_piko_orange", 0.08)
+	-- inst.components.lootdropper.chancerandomloot = 0.01
+	inst.components.lootdropper:AddRandomLoot("purplegem",            0.001)
+	inst.components.lootdropper:AddRandomLoot("greengem",             0.001)
+	inst.components.lootdropper:AddRandomLoot("yellowgem",            0.001)
+	inst.components.lootdropper:AddRandomLoot("gears",                0.002)
+	inst.components.lootdropper:AddRandomLoot("redgem",               0.002)
+	inst.components.lootdropper:AddRandomLoot("goldnugget",           0.003)
+	inst.components.lootdropper:AddRandomLoot("slurtle_shellpieces",  0.02)
+	inst.components.lootdropper:AddRandomLoot("spidergland",          0.02)
+	inst.components.lootdropper:AddRandomLoot("antliontrinket",       0.04)
+	inst.components.lootdropper:AddRandomLoot("feather_robin_winter", 0.04)
+	inst.components.lootdropper:AddRandomLoot("kyno_kokonut",         0.05)
+	inst.components.lootdropper:AddRandomLoot("feather_robin",        0.05)
+	inst.components.lootdropper:AddRandomLoot("kyno_piko_orange",     0.05)
+	inst.components.lootdropper:AddRandomLoot("kyno_piko",            0.06)
+	inst.components.lootdropper:AddRandomLoot("feather_crow",         0.06)
+	inst.components.lootdropper:AddRandomLoot("rocks",                0.20)
 
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad

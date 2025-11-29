@@ -51,7 +51,7 @@ local fishes         =
 		phases       = ALL_PHASES,
 		moonphases   = ALL_MOONPHASES,
 		seasons      = ALL_SEASONS,
-		worlds       = { "caves" },
+		worlds       = { "cave" },
 	},
 	
 	wobster_sheller_land =
@@ -68,6 +68,8 @@ local fishes         =
 		worlds       = ALL_WORLDS,
 	},
 	
+	-- There's no moon in Caves, so this fish shouldn't work there.
+	-- Locking it to Forest only will prevent it from doing so.
 	wobster_moonglass_land =
 	{
 		roe_prefab   = "kyno_roe_wobster_moonglass",

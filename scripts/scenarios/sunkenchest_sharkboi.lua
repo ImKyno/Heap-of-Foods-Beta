@@ -38,6 +38,11 @@ local LOOT =
 		count  = 1,
 	},
 	{
+		item   = "antliontrinket",
+		chance = 1.00,
+		count  = 1,
+	},
+	{
 		item   = "chum",
 		chance = 1.00,
 		count  = 5,
