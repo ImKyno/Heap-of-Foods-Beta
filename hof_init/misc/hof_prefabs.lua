@@ -50,6 +50,7 @@ PrefabFiles =
 	"k_fishroe",
 	"k_floatilizer",
 	"k_foodbuff_acidimmunity",
+	"k_foodbuff_beefriendly",
 	"k_foodbuff_coffee",
 	"k_foodbuff_crafting",
 	"k_foodbuff_defense",

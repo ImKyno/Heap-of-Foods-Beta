@@ -7509,10 +7509,10 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
         type           = "food",
 		tex            = "honeyjar.tex",
         prefab         = "honeyjar",
-		healthvalue    = 30,
+		healthvalue    = 25,
 		hungervalue    = 45,
-		sanityvalue    = 5,
-        perishable     = 9600,
+		sanityvalue    = 10,
+        perishable     = 19200,
         foodtype       = "GOODIES",
 		burnable       = true,
 		stacksize      = 40,
@@ -7523,6 +7523,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -95,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_BEEFRIENDLY",
 	},
 	
 	watercup           =

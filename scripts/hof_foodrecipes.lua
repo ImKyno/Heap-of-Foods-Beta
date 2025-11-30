@@ -1601,18 +1601,23 @@ local kyno_foods =
 	
 	honeyjar =
 	{
-		test = function(cooker, names, tags) return names.honeycomb and (names.honey and names.honey == 3) end,
+		test = function(cooker, names, tags) return (names.honey and names.honey >= 2) and (tags.sugar and tags.sugar >= 2) end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
-		perishtime = TUNING.PERISH_PRESERVED,
-		health = 30,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = 25,
 		hunger = 45,
-		sanity = 5,
+		sanity = 10,
 		cooktime = 1.6,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BEEFRIENDLY,
 		potlevel = "med",
 		floater = TUNING.HOF_FLOATER,
 		tags = {"honeyed"},
-		card_def = {ingredients = {{"honeycomb", 1}, {"honey", 3}}},
+		card_def = {ingredients = {{"honey", 2}, {"kyno_sugar", 2}}},
+		prefabs = { "kyno_beefriendlybuff" },
+        oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_beefriendlybuff", "kyno_beefriendlybuff")
+       	end,
 	},
 	
 	watercup =

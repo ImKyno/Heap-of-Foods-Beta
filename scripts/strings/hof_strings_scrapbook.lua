@@ -53,7 +53,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DEERCLOPS = "Eating this food will cau
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEARGER = "Eating this food will cause Bearger to spawn nearby."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FORTUNE = "Crack one to see what the destiny has reserved for you."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WATER = "Cleanses all the current active food side effects of the survivor.\nBriefly decreases the temperature."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FROG = "Eating this food will make all Frogs friendly towards your for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FROG = "Eating this food will make Frogs friendly towards you for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE = "Woodie can eat this food to force one of his transformations chosen randomly."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FEARLESS = "This food can make a survivor be fearless for a certain amount of time. Insanity auras will have no effect during this period."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MONSTERFOOD = "Monster survivors can eat this food without any penalties."
@@ -106,6 +106,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EXQUISITE = "An exquisite and luxuriou
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLUBBER = "Decreases the moisture off the survivor."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE_MONKEY = "This food can break off the Moon Quay Island curse."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRAFTING = "This food can make a survivor prototype and build items without the need of a crafting station.\n\nEach crafted item consumes a small amount of their sanity."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "Eating this food will make Bees friendly towards you for a certain amount of time."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."

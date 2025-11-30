@@ -696,6 +696,14 @@ for k, v in pairs(TUNING.KYNO_PACKIMBAGGIMS_CHARCOAL_ITEMS) do
 	AddPrefabPostInit(v, PackimBaggimsFireItemsPostInit)
 end
 
+local function BeePostInit(inst)
+	local RETARGET_CANT_TAGS = UpvalueHacker.GetUpvalue(_G.Prefabs.bee.fn, "SpringBeeRetarget", "RETARGET_CANT_TAGS")
+	table.insert(RETARGET_CANT_TAGS, "beefriendly")
+end
+
+AddPrefabPostInit("bee", BeePostInit)
+AddPrefabPostInit("killerbee", BeePostInit)
+
 -- Leonidas remember me to not put LootTables inside postinit again, otherwise it will 
 -- increase the drop by +1 each time the entity spawns.
 local function ApplyLootTables()

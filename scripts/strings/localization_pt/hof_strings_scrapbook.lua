@@ -42,7 +42,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DEERCLOPS = "Comer este alimento fará
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEARGER = "Comer este alimento fará Bearger aparecer nas proximidades."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FORTUNE = "Abra um para ver o que o destino reservou para você."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WATER = "Remove todos os efeitos alimentares ativos do sobrevivente.\nDiminui brevemente a temperatura."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FROG = "Comer este alimento fará com que todos os sapos fiquem amigáveis com você por um determinado período."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FROG = "Comer este alimento fará com que os sapos fiquem amigáveis com você por um determinado período."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE = "Woodie pode comer este alimento para forçar uma de suas transformações escolhida aleatoriamente."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FEARLESS = "Este alimento pode tornar um sobrevivente destemido por um determinado período. Auras de insanidade não terão efeito durante esse período."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MONSTERFOOD = "Sobreviventes monstros podem comer este alimento sem penalidades."
@@ -95,6 +95,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EXQUISITE = "Uma refeição requintada
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLUBBER = "Reduz a umidade do sobrevivente."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE_MONKEY = "Esta comida pode quebrar a maldição da Ilha da Lua Quay."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRAFTING = "Esta comida permite que um sobrevivente crie protótipos e construa itens sem precisar de uma estação de criação.\n\nCada item criado consome uma pequena quantidade de sanidade."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "Comer este alimento fará com que as abelhas fiquem amigáveis com você por um determinado período."
 
 -- Efeitos de Temperos.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Pó Conservante reduz pela metade o tempo de deterioração e anula penalidades de comida estragada."

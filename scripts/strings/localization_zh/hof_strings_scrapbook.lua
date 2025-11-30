@@ -106,6 +106,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EXQUISITE = "An exquisite and luxuriou
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLUBBER = "Decreases the moisture off the survivor."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE_MONKEY = "This food can break off the Moon Quay Island curse."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRAFTING = "This food can make a survivor prototype and build items without the need of a crafting station.\n\nEach crafted item consumes a small amount of their sanity."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "Eating this food will make Bees friendly towards you for a certain amount of time."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含防腐粉末的料理可使腐败速率减半，并免除食用变质食物的惩罚。"

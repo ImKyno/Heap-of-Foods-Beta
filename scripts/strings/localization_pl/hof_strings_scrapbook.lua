@@ -106,6 +106,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_EXQUISITE = "Wykwintny i luksusowy pos
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLUBBER = "Zmniejsza wilgotność ocalałego."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE_MONKEY = "To jedzenie może zdjąć klątwę Wyspy Księżycowej Przystani."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRAFTING = "To jedzenie pozwala ocalałemu tworzyć prototypy i wytwarzać przedmioty bez użycia stacji rzemieślniczej.\n\nKażdy wytworzony przedmiot zużywa niewielką ilość jego zdrowia psychicznego."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "Zjedzenie tego jedzenia sprawi, że wszystkie pszczoły będą przez pewien czas przyjaźnie nastawione do ciebie."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Może być dodany do jedzenia w garnku za pomocą przenośnej stacji przypraw.\n\nJedzenie przyprawione Preserver Powder zmniejsza czas psucia się o połowę i neguje kary za zepsute jedzenie."
