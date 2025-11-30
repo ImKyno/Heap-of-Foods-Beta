@@ -185,6 +185,16 @@ AddPrefabPostInit("wormwood", function(inst)
     end
 end)
 
+AddPrefabPostInit("warly", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	if inst.components.eater ~= nil then
+		inst.components.eater:SetPrefersEatingTag("warly_caneat") -- New tag that allows Warly to eat stuff.
+	end
+end)
+
 AddPrefabPostInit("wurt", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst

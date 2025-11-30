@@ -106,7 +106,7 @@ local function opened_fn()
     inst.AnimState:PlayAnimation("opened")
 	
 	inst:AddTag("canned_food_open")
-	inst:AddTag("preparedfood") -- So warly can eat them.
+	inst:AddTag("pre-preparedfood") -- So warly can eat them.
 	
 	inst.pickupsound = "metal"
     

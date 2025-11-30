@@ -7,8 +7,10 @@ local brain_land = require("brains/wobsterlandbrain")
 local assets =
 {
 	Asset("ANIM", "anim/lobster.zip"),
+	Asset("ANIM", "anim/lobster_water.zip"),
 
 	Asset("ANIM", "anim/kyno_lobster_monkeyisland.zip"),
+	Asset("ANIM", "anim/kyno_lobster_monkeyisland_water.zip"),
 	Asset("ANIM", "anim/kyno_lobster_monkeyisland_cooked.zip"),
 	Asset("ANIM", "anim/trophyscale_fish_wobster_monkeyisland.zip"), -- Custom bank with hacky stuff.
 	
@@ -161,7 +163,7 @@ local function OnDroppedAsLoot(inst, data)
 	end
 end
 
-local function water_wobster(build_name, fish_def)
+local function water_wobster(bank_name, build_name, fish_def)
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
@@ -179,11 +181,13 @@ local function water_wobster(build_name, fish_def)
 	inst.Physics:SetCollisionMask(SWIMMING_COLLISION_MASK)
 	inst.Physics:SetCapsule(0.5, 1)
 
-	inst.AnimState:SetBank("lobster_water")
+	inst.AnimState:SetBank(bank_name)
 	inst.AnimState:SetBuild(build_name)
 	inst.AnimState:PlayAnimation("idle")
 	inst.AnimState:SetSortOrder(ANIM_SORT_ORDER_BELOW_GROUND.UNDERWATER)
 	inst.AnimState:SetLayer(LAYER_WIP_BELOW_OCEAN)
+	
+	inst.AnimState:HideSymbol("claw_type3a")
 
     inst:AddTag("ediblefish_meat")
 	inst:AddTag("ignorewalkableplatforms")
@@ -228,7 +232,7 @@ local function water_wobster(build_name, fish_def)
 	return inst
 end
 
-local function land_wobster(build_name, nameoverride, fish_def, fadeout, cook_product)
+local function land_wobster(bank_name, build_name, nameoverride, fish_def, fadeout, cook_product)
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
@@ -246,7 +250,7 @@ local function land_wobster(build_name, nameoverride, fish_def, fadeout, cook_pr
 
 	inst.Transform:SetFourFaced()
 
-	inst.AnimState:SetBank("lobster")
+	inst.AnimState:SetBank(bank_name)
 	inst.AnimState:SetBuild(build_name)
 	inst.AnimState:PlayAnimation("idle")
 
@@ -454,11 +458,11 @@ local WOBSTER_MONKEYISLAND_FISH_DEF =
 }
 
 local function wobster_monkeyisland_water()
-	return water_wobster("kyno_lobster_monkeyisland", WOBSTER_MONKEYISLAND_FISH_DEF)
+	return water_wobster("kyno_lobster_monkeyisland_water", "kyno_lobster_monkeyisland_water", WOBSTER_MONKEYISLAND_FISH_DEF)
 end
 
 local function wobster_monkeyisland_land()
-	local inst = land_wobster("kyno_lobster_monkeyisland", "WOBSTER_MONKEYISLAND", WOBSTER_MONKEYISLAND_FISH_DEF, false, "wobster_monkeyisland_dead_cooked")
+	local inst = land_wobster("lobster", "kyno_lobster_monkeyisland", "WOBSTER_MONKEYISLAND", WOBSTER_MONKEYISLAND_FISH_DEF, false, "wobster_monkeyisland_dead_cooked")
 	
 	inst:AddTag("fishfarmable")
 	inst:AddTag("wobster_monkeyisland")

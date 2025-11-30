@@ -1094,6 +1094,18 @@ end
 
 AddPrefabPostInit("grotto_pool_big", GrottoPoolBigPostInit)
 
+-- Sunken Chest retains spoilage.
+local function SunkenChestPostInit(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("preserver")
+	inst.components.preserver:SetPerishRateMultiplier(0)
+end
+
+AddPrefabPostInit("sunkenchest", SunkenChestPostInit)
+
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")
 

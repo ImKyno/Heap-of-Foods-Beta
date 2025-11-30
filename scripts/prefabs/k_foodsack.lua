@@ -52,6 +52,10 @@ end
 
 local function OnUnequipVanity(inst, owner)
 	if owner ~= nil then
+		if inst.components.preserver ~= nil then
+			inst.components.preserver:SetPerishRateMultiplier(TUNING.KYNO_FOODSACK_PERISH_MULT)
+		end
+
 		if inst.components.equippable ~= nil then
 			inst.components.equippable:Unequip(owner)
 		end

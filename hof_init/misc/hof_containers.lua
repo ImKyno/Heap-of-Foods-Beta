@@ -256,8 +256,12 @@ end
 foodsack_slotbg = nil
 
 function params.foodsack.itemtestfn(container, item, slot)
+	if item:HasTag("preparedfood") then
+		return false
+	end
+	
     for k, v in pairs(FOODGROUP.OMNI.types) do
-        if item:HasTag("edible_"..v) or item:HasTag("foodsack_valid") and not item:HasTag("preparedfood") then
+        if item:HasTag("edible_"..v) or item:HasTag("foodsack_valid") then
             return true
         end
     end

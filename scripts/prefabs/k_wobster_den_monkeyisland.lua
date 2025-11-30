@@ -85,23 +85,15 @@ local function OnVacated(inst)
 	end
 end
 
-local function StopSpawning(inst)
-	if inst.components.childspawner.spawning then
-		inst.components.childspawner:StopSpawning()
-	end
-end
-
-local function OnDayEnded(inst)
-	if inst._spawning_update_task ~= nil then
-		inst._spawning_update_task:Cancel()
-	end
-	
-	inst._spawning_update_task = inst:DoTaskInTime(1 + math.random() * 2, StopSpawning)
-end
-
 local function StartSpawning(inst)
-	if not inst.components.childspawner.spawning then
+	if inst.components.childspawner ~= nil and not inst.components.childspawner.spawning then
 		inst.components.childspawner:StartSpawning()
+	end
+end
+
+local function StopSpawning(inst)
+	if inst.components.childspawner ~= nil and inst.components.childspawner.spawning then
+		inst.components.childspawner:StopSpawning()
 	end
 end
 
@@ -110,23 +102,30 @@ local function OnDayStarted(inst)
 		inst._spawning_update_task:Cancel()
 	end
 	
-	inst._spawning_update_task = inst:DoTaskInTime(1 + math.random() * 2, StartSpawning)
+	inst._spawning_update_task = inst:DoTaskInTime(2, StartSpawning)
 end
 
-local function Initialize(inst)
+local function OnDayEnded(inst)
+	if inst._spawning_update_task ~= nil then
+		inst._spawning_update_task:Cancel()
+	end
+	
+	inst._spawning_update_task = inst:DoTaskInTime(2, StopSpawning)
+end
+
+local function OnInit(inst)
 	UpdateArt(inst)
 
 	if inst.components.childspawner.childreninside > 0 then
 		inst._blink_task = inst:DoPeriodicTask(5, TryBlink, math.random() * 3)
 	end
-
-    if TheWorld.state.isdusk or TheWorld.state.isnight then
-		inst.components.childspawner:StopSpawning()
+	
+	if TheWorld.state.iscaveday then
+		inst.components.childspawner:StartSpawning()
 	end
 
-	inst:WatchWorldState("isday", OnDayStarted)
-	inst:WatchWorldState("isdusk", OnDayEnded)
-	inst:WatchWorldState("isnight", OnDayEnded)
+	inst:WatchWorldState("startcaveday", OnDayStarted)
+	inst:WatchWorldState("stopcaveday", OnDayEnded)
 end
 
 local function OnWork(inst, worker, workleft)
@@ -242,7 +241,7 @@ local function basefn(build, loot_table_name, child_name)
 
 	inst:ListenForEvent("on_collide", OnCollide)
 
-	inst:DoTaskInTime(0, Initialize)
+	inst:DoTaskInTime(0, OnInit)
 
 	inst.OnPreLoad = OnPreLoad
 
