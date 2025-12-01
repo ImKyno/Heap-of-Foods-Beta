@@ -1601,7 +1601,7 @@ local kyno_foods =
 	
 	honeyjar =
 	{
-		test = function(cooker, names, tags) return (names.honey and names.honey >= 2) and (tags.sugar and tags.sugar >= 2) end,
+		test = function(cooker, names, tags) return (names.honey and names.honey >= 2) and tags.sugar end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
