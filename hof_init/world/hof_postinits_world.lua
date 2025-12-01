@@ -1106,59 +1106,60 @@ end
 
 AddPrefabPostInit("sunkenchest", SunkenChestPostInit)
 
-local beeboxes =
-{
-	"beebox",
-	"beebox_hermit",
-}
-
 -- Harvesting Bee Box while friendly does not trigger bees.
-local function IsFriendlyBee(inst)
-	return inst and inst:HasTag("player") and inst:HasTag("beefriendly")
-end
-	
-local function FriendlyBee(inst, picker)
-	if IsFriendlyBee(picker) then
-		local friend = picker ~= nil and picker:HasTag("beefriendly")
-			
-		if friend then
-			if picker.components.sanity ~= nil then
-				picker.components.sanity:DoDelta(2) -- Gain sanity for harvesting. Yay.
-			end
-		end
-	else
-		if not (picker ~= nil and picker.components.skilltreeupdater ~= nil and picker.components.skilltreeupdater:IsActivated("wormwood_bugs")) then
-			inst.components.childspawner:ReleaseAllChildren(picker)
-		end
-	end
-end
+if not TUNING.HOF_IS_TCP_ENABLED then
+	local beeboxes =
+	{
+		"beebox",
+		"beebox_hermit",
+	}
 
-local function BeeBoxPostInit(inst)
-	local updatelevel = UpvalueHacker.GetUpvalue(_G.Prefabs.beebox.fn, "updatelevel")
+	local function IsFriendlyBee(inst)
+		return inst and inst:HasTag("player") and inst:HasTag("beefriendly")
+	end
 	
-	local function onharvest(inst, picker)
-		if not inst:HasTag("burnt") then			
-			updatelevel(inst)
+	local function FriendlyBee(inst, picker)
+		if IsFriendlyBee(picker) then
+			local friend = picker ~= nil and picker:HasTag("beefriendly")
 			
-			if inst.components.childspawner ~= nil and not _G.TheWorld.state.iswinter then
-				FriendlyBee(inst, picker)
+			if friend then
+				if picker.components.sanity ~= nil then
+					picker.components.sanity:DoDelta(2) -- Gain sanity for harvesting. Yay.
+				end
+			end
+		else
+			if not (picker ~= nil and picker.components.skilltreeupdater ~= nil and picker.components.skilltreeupdater:IsActivated("wormwood_bugs")) then
+				inst.components.childspawner:ReleaseAllChildren(picker)
 			end
 		end
 	end
+
+	local function BeeBoxPostInit(inst)
+		local updatelevel = UpvalueHacker.GetUpvalue(_G.Prefabs.beebox.fn, "updatelevel")
 	
-	if not _G.TheWorld.ismastersim then
-		return inst
+		local function onharvest(inst, picker)
+			if not inst:HasTag("burnt") then			
+				updatelevel(inst)
+			
+				if inst.components.childspawner ~= nil and not _G.TheWorld.state.iswinter then
+					FriendlyBee(inst, picker)
+				end
+			end
+		end
+	
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+	
+		if inst.components.harvestable ~= nil then
+			inst.components.harvestable:SetUp("honey", 6, nil, onharvest, updatelevel)
+		end
 	end
-	
-	if inst.components.harvestable ~= nil then
-		inst.components.harvestable:SetUp("honey", 6, nil, onharvest, updatelevel)
+
+	for k, v in pairs(beeboxes) do
+		AddPrefabPostInit(v, BeeBoxPostInit)
 	end
 end
-
-for k, v in pairs(beeboxes) do
-	AddPrefabPostInit(v, BeeBoxPostInit)
-end
-
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")
 
