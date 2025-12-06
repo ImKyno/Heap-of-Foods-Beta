@@ -123,8 +123,6 @@ local function fn()
 
     inst:AddComponent("container")
     inst.components.container:WidgetSetup("foodsack")
-	inst.components.container.skipclosesnd = true
-    inst.components.container.skipopensnd = true
 
     MakeHauntableLaunchAndDropFirstItem(inst)
 

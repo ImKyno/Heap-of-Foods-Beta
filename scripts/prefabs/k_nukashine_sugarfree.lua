@@ -81,7 +81,7 @@ local function fn()
 
     inst:AddTag("preparedfood")
 	inst:AddTag("preparedbrew")
-	inst:AddTag("drinkable_food")
+	inst:AddTag("fooddrink")
 	inst:AddTag("alcoholic_drink")
 	inst:AddTag("nukashine")
 

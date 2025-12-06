@@ -110,6 +110,7 @@ local LOADINGTIPS   =
 	SHARKBOIREWARD  = "Frostjaw pragnie wykwintnego posiłku i nagrodzi tych, którzy spełnią jego prośbę.",
 	GHOSTPIRATE     = "Odkrywanie wraków dawnych załóg podczas pełni księżyca może być bardzo niebezpieczne, ponieważ w ich pobliżu można spotkać duchy piratów. Straszne!",
 	HERMITWOBSTER   = "Wobstery pustelnicze można znaleźć tylko na wyspie Moon Quay.",
+	SALTEDFISH      = "Salowaną rybę można uzyskać, susząc suszoną rybę przez dłuższy czas na suszarce.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

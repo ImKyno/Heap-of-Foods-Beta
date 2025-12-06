@@ -1,12 +1,22 @@
+-- Common Dependencies.
+-- local _G      = GLOBAL
+-- local require = _G.require
+-- local STRINGS = _G.STRINGS
+
+-- Datas. (Unused)
 STRINGS.SCRAPBOOK.DATA_BREWER = "PODE PREPARAR BEBIDAS"
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "HORRÍVEL"
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDSOUL = "ALMA"
 STRINGS.SCRAPBOOK.FOODTYPE.ALCOHOLIC = "ALCÓLICO"
 
+-- Categories.
 STRINGS.SCRAPBOOK.CATS.ARTISAN = "Receitas\nde Artesanato"
 
+-- Sub Categories.
 STRINGS.SCRAPBOOK.SUBCATS.CHICKEN = "Galinha"
 STRINGS.SCRAPBOOK.SUBCATS.PIKO = "Esquilo"
+STRINGS.SCRAPBOOK.SUBCATS.GHOST = "Fantasma"
+STRINGS.SCRAPBOOK.SUBCATS.WHALE = "Baleia"
 STRINGS.SCRAPBOOK.SUBCATS.CANNED = "Enlatado"
 STRINGS.SCRAPBOOK.SUBCATS.COOKWARE = "Utensílio"
 STRINGS.SCRAPBOOK.SUBCATS.SEASONALFOOD = "Comida Sazonal"
@@ -18,6 +28,7 @@ STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "Picles"
 STRINGS.SCRAPBOOK.SUBCATS.FISHROE = "Ovas de Peixe"
 STRINGS.SCRAPBOOK.SUBCATS.AGEDROE = "Ovas Maturadas"
 
+-- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "Aumenta a velocidade de movimento por um determinado período."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_COFFEE = "Aumenta a velocidade de movimento e resistência ao sono por um determinado período. Aumenta brevemente a temperatura.\n\nHasta la vista, baby!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SLEEP = "Aumenta a resistência ao sono por um determinado período."
@@ -97,13 +108,14 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE_MONKEY = "Esta comida pode quebr
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRAFTING = "Esta comida permite que um sobrevivente crie protótipos e construa itens sem precisar de uma estação de criação.\n\nCada item criado consome uma pequena quantidade de sanidade."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "Comer este alimento fará com que as abelhas fiquem amigáveis com você por um determinado período."
 
--- Efeitos de Temperos.
+-- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Pó Conservante reduz pela metade o tempo de deterioração e anula penalidades de comida estragada."
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_MIND = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Açúcar Calmante concede 25% mais sanidade."
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FED = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Amido Recheado concede 25% mais fome."
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FIRE = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Cristais de Chama faz seus ataques incendiarem os alvos.\n\nDuração: 4 minutos.\n\nTambém aumenta a temperatura em 15 graus por 15 segundos."
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_COLD = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Flocos Congelados faz seus ataques congelarem os alvos.\n\nDuração: 4 minutos.\n\nTambém diminui a temperatura em 15 graus por 15 segundos."
 
+-- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "Usar uma pitada de sal em um alimento da panela aumentará seu tempo de validade em 30%. Não se preocupe mais com pratos estragados!"
 STRINGS.SCRAPBOOK.SPECIALINFO.SALTRACK = "Este rack coletará pequenos cristais de sal a cada poucos dias."
 STRINGS.SCRAPBOOK.SPECIALINFO.CRABTRAP = "Uma vez colocado no chão, dispara quando um caranguejo se aproxima, capturando-o.\n\nColetar uma armadilha capturada colocará a criatura no inventário.\n\nAs armadilhas de caranguejo podem ser atraídas com carne."
@@ -134,11 +146,17 @@ STRINGS.SCRAPBOOK.SPECIALINFO.BOOK_GARDENING = "Faz todas as plantas próximas c
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "Os planos de fundação para um Viveiro de Peixes."
 STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "Atrai o Malbatross quando lançado no oceano."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Uma vez colocado no oceano, será ativado quando um peixe se aproximar, capturando-o.\n\nColetar uma armadilha capturada colocará a criatura no seu inventário.\n\nArmadilhas do oceano podem ser iscas com alimento apropriado."
+STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Deixar secar por períodos mais longos melhorará ainda mais a sua qualidade."
 
+-- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Pode ser alimentada com sementes para botar um ovo."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Amiguinhos peludos que adoram roubar seus itens mais valiosos!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Martins-pescadores frequentemente deixam cair Kois Tropicais de cima. Chuva de peixes, literalmente!"
+STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emite um brilho saudável e colorido ao entardecer e à noite."
+STRINGS.SCRAPBOOK.SPECIALINFO.HULLBREAKER_CREATURE = "Pode danificar o casco do barco ao executar ataques bem-sucedidos."
+STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS = "As coisas podem ser armazenadas em Packim Baggims como se fossem um baú.\n\nEle adora comer todos os tipos de peixe."
 
+-- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "Um comerciante de um arquipélago distante. Ele está disposto a trocar seus melhores utensílios de cozinha e outros itens úteis por refeições deliciosas.\n\nO Elder deseja uma refeição extremamente doce ou manteiga misturada com frutos do mar. Ele recompensará de acordo.\n\nLevar a refeição favorita do Elder desbloqueará mais opções de comércio."
 STRINGS.SCRAPBOOK.SPECIALINFO.SAMMY = "Um comerciante de um reino de outro mundo. Ele de alguma forma ficou preso em uma das Ilhas Constantes e construiu uma loja para trocas temporariamente.\n\nSammy negocia uma variedade de itens raros durante as estações e ocasiões especiais. Confira suas mercadorias de vez em quando.\n\nSammy recompensará generosamente se você levar um presente que o lembre de casa."
 STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHOUSE = "O Empório de Sammy abriga uma variedade de itens estranhos e antiguidades de terras distantes e reinos de outro mundo."

@@ -146,11 +146,15 @@ STRINGS.SCRAPBOOK.SPECIALINFO.BOOK_GARDENING = "快速催熟附近的各种植�
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "该基地计划建立一个鱼苗孵化场。"
 STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "投入海洋时会吸引邪天翁。"
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "一旦设置在海洋中，当鱼类靠近时就会触发，将其捕获。\n\n拾取被捕获的陷阱会将其中的生物放入你的物品栏。\n\n海洋陷阱可用适当的食物作为诱饵。"
+STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "晾晒时间越长，品质越好。"
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "可以用种子喂它，让它下蛋。"
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "毛茸茸的小家伙，喜欢偷你最值钱的东西！"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "翠鸟经常会从上空投下热带锦鲤。真是一场鱼雨！"
+STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "在黄昏和夜晚会发出色彩鲜艳的健康光芒。"
+STRINGS.SCRAPBOOK.SPECIALINFO.HULLBREAKER_CREATURE = "成功发动攻击时可能会损坏船体。"
+STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS = "物品可以像箱子一样存放在帕克白克斯里。\n\n他喜欢吃各种各样的鱼。"
 
 -- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "来自遥远群岛的商人。他愿意用最好的炊具和其他有用的物品换取美味佳肴。\n\n长老想吃极甜的食物或黄油海鲜。他会给你相应的奖励。\n\n把长老最喜欢的食物带过来会解锁更多交易"

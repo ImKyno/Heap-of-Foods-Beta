@@ -767,7 +767,7 @@ end
 ACTIONS.EAT.stroverridefn = function(act)
 	local obj = act.target or act.invobject
 	
-	if obj:HasTag("drinkable_food") then 
+	if obj:HasTag("drinkable_food") then -- Was officially added, kept just in case.
 		return STRINGS.KYNO_DRINK_FOOD 
 	end
 	

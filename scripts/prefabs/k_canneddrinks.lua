@@ -47,7 +47,7 @@ local function fn(bank, build, anim, name)
     inst.AnimState:PlayAnimation(anim)
 	
 	inst:AddTag("foodsack_valid")
-	inst:AddTag("drinkable_food")
+	inst:AddTag("fooddrink")
 	inst:AddTag("pre-preparedfood") -- So warly can drink them.
 	
 	inst.pickupsound = "metal"

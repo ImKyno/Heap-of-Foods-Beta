@@ -42,6 +42,8 @@ local prefabs =
 	"kyno_jellyfish",
 	"kyno_jellyfish_dead",
 	
+	"spoiled_fish_small",
+	"spoiled_fish",
 	"spoiled_food",
 }
 
@@ -135,7 +137,6 @@ local function meat_fn(bank, build, anim, meat_name)
 
     inst:AddComponent("perishable")
 	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
 
     return inst
 end
@@ -312,6 +313,7 @@ local function fn_humanmeat()
 	inst.components.edible.sanityvalue = TUNING.KYNO_HUMANMEAT_DRIED_SANITY
 	
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
+	inst.components.perishable.onperishreplacement = "spoiled_food"
 	
 	return inst
 end
@@ -330,6 +332,7 @@ local function fn_plantmeat()
 	inst.components.edible.sanityvalue = TUNING.KYNO_PLANTMEAT_DRIED_SANITY
 	
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
+	inst.components.perishable.onperishreplacement = "spoiled_food"
 	
 	return inst
 end 
@@ -367,6 +370,7 @@ local function fn_crabmeat()
 	inst.components.edible.sanityvalue = TUNING.KYNO_CRABMEAT_DRIED_SANITY
 	
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
+	inst.components.perishable.onperishreplacement = "spoiled_food"
 	
 	return inst
 end
@@ -388,6 +392,7 @@ local function fn_crabkingmeat()
 	inst.components.edible.sanityvalue = TUNING.KYNO_CRABKINGMEAT_DRIED_SANITY
 	
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
+	inst.components.perishable.onperishreplacement = "spoiled_food"
 	
 	return inst
 end
@@ -412,6 +417,7 @@ local function fn_jellyfish()
 	inst.components.edible.secondaryfoodtype = FOODTYPE.MONSTER
 	
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
+	inst.components.perishable.onperishreplacement = "spoiled_food"
 	
 	return inst
 end
@@ -427,6 +433,9 @@ local function fn_fishmeat_small()
         return inst
     end
 	
+	inst:AddComponent("driedsalticon")
+	inst.components.driedsalticon:SetCollectsOnDried(true)
+	
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
@@ -434,7 +443,8 @@ local function fn_fishmeat_small()
 	inst.components.edible.hungervalue = TUNING.KYNO_FISHMEAT_SMALL_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_FISHMEAT_SMALL_DRIED_SANITY
 	
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
+	inst.components.perishable.onperishreplacement = "spoiled_fish_small"
 	
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 	
@@ -452,6 +462,9 @@ local function fn_fishmeat()
         return inst
     end
 	
+	inst:AddComponent("driedsalticon")
+	inst.components.driedsalticon:SetCollectsOnDried(true)
+	
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 	
@@ -459,7 +472,8 @@ local function fn_fishmeat()
 	inst.components.edible.hungervalue = TUNING.KYNO_FISHMEAT_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_FISHMEAT_DRIED_SANITY
 	
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
+	inst.components.perishable.onperishreplacement = "spoiled_fish"
 	
 	return inst
 end

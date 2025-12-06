@@ -110,6 +110,8 @@ local LOADINGTIPS   =
 	OTTERDENS       = "在雨天进行海洋狩猎时，在狩猎结束后，水獭有可能出现。",
 	SHARKBOIREWARD  = "大霜鲨渴望享用一顿精致的盛宴，他将奖励那些能满足他要求的人。",
 	GHOSTPIRATE     = "在月圆时探索前任船员的沉船残骸相当危险，因为海盗幽灵常在沉船周围游荡。真吓人！",
+	HERMITWOBSTER   = "隐士沃布斯特只能在月亮码头岛上找到。",
+	SALTEDFISH      = "将鱼干放在晾晒架上晾晒更长时间即可制成咸鱼干。",
 }
 
 for k, v in pairs(LOADINGTIPS) do

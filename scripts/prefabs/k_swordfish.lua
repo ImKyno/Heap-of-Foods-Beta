@@ -5,8 +5,8 @@ local assets =
 	Asset("ANIM", "anim/fx_boat_pop.zip"),
 	Asset("ANIM", "anim/kyno_swordfish.zip"),
 
+	Asset("ANIM", "anim/meat_rack_food_tot.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_swordfish.zip"),
-	Asset("ANIM", "anim/kyno_meatrack_fishmeat.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -19,6 +19,7 @@ local assets =
 local prefabs =
 {
 	"fishmeat_cooked",
+	"fishmeat_dried",
 	
 	"kyno_fishmeat_dried",
 	"kyno_swordfish_dead",
@@ -276,10 +277,10 @@ local function swordfish_dead()
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	
 	inst:AddComponent("dryable")
-	inst.components.dryable:SetProduct("kyno_fishmeat_dried")
+	inst.components.dryable:SetProduct("fishmeat_dried")
 	inst.components.dryable:SetDryTime(TUNING.DRY_FAST)
 	inst.components.dryable:SetBuildFile("kyno_meatrack_swordfish")
-	inst.components.dryable:SetDriedBuildFile("kyno_meatrack_fishmeat")
+	inst.components.dryable:SetDriedBuildFile("meat_rack_food_tot")
 
 	MakeHauntableLaunchAndPerish(inst)
 

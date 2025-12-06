@@ -40,7 +40,7 @@ local function beefalofn()
 
 	inst:AddTag("milk_raw")
 	inst:AddTag("milk_beefalo")
-	inst:AddTag("drinkable_food")
+	inst:AddTag("fooddrink")
 
 	inst.entity:SetPristine()
 
@@ -92,7 +92,7 @@ local function koalefantfn()
 	
 	inst:AddTag("milk_raw")
 	inst:AddTag("milk_koalefant")
-	inst:AddTag("drinkable_food")
+	inst:AddTag("fooddrink")
 
 	inst.entity:SetPristine()
 

@@ -3,62 +3,84 @@ local require       = _G.require
 local UpvalueHacker = require("hof_upvaluehacker")
 
 -- New foods that can be dried on Drying Racks.
-local dryables     =
+local dryables           =
 {
-	red_cap        =
+	red_cap              =
 	{
-		raw        = "red_cap",
-		dried      = "kyno_red_cap_dried",
-		build      = "kyno_meatrack_red_cap",
+		raw              = "red_cap",
+		dried            = "kyno_red_cap_dried",
+		
+		rawbuild         = "kyno_meatrack_red_cap",
+		build            = "kyno_meatrack_red_cap",
+		
+		drytime          = TUNING.DRY_FAST,
 	},
 	
-	green_cap      =
+	green_cap            =
 	{
-		raw        = "green_cap",
-		dried      = "kyno_green_cap_dried",
-		build      = "kyno_meatrack_green_cap",
+		raw              = "green_cap",
+		dried            = "kyno_green_cap_dried",
+		
+		rawbuild         = "kyno_meatrack_green_cap",
+		build            = "kyno_meatrack_green_cap",
+		
+		drytime          = TUNING.DRY_FAST,
 	},
 	
-	blue_cap       =
+	blue_cap             =
 	{
-		raw        = "blue_cap",
-		dried      = "kyno_blue_cap_dried",
-		build      = "kyno_meatrack_blue_cap",
+		raw              = "blue_cap",
+		dried            = "kyno_blue_cap_dried",
+		
+		rawbuild         = "kyno_meatrack_blue_cap",
+		build            = "kyno_meatrack_blue_cap",
+		
+		drytime          = TUNING.DRY_FAST,
 	},
 	
-	moon_cap       =
+	moon_cap             =
 	{
-		raw        = "moon_cap",
-		dried      = "kyno_moon_cap_dried",
-		build      = "kyno_meatrack_moon_cap",
+		raw              = "moon_cap",
+		dried            = "kyno_moon_cap_dried",
+		
+		rawbuild         = "kyno_meatrack_moon_cap",
+		build            = "kyno_meatrack_moon_cap",
+		
+		drytime          = TUNING.DRY_FAST,
 	},
 	
-	plantmeat      =
+	plantmeat            =
 	{
-		raw        = "plantmeat",
-		dried      = "kyno_plantmeat_dried",
-		build      = "kyno_meatrack_plantmeat",
+		raw              = "plantmeat",
+		dried            = "kyno_plantmeat_dried",
+
+		rawbuild         = "kyno_meatrack_plantmeat",
+		build            = "kyno_meatrack_plantmeat",
+		
+		drytime          = TUNING.DRY_MED,
 	},
 	
-	fishmeat_small =
+	-- Tier II
+	fishmeat_small_dried =
 	{
-		raw        = "fishmeat_small",
-		dried      = "kyno_fishmeat_small_dried",
-		build      = "kyno_meatrack_fishmeat",
+		raw              = "fishmeat_small_dried",
+		dried            = "kyno_fishmeat_small_dried",
+		
+		rawbuild         = "meat_rack_food_tot",
+		build            = "kyno_meatrack_fishmeat",
+		
+		drytime          = TUNING.DRY_FAST * 2, -- DRY_FAST is 1 Day.
 	},
 	
-	fishmeat       =
+	fishmeat_dried       =
 	{
-		raw        = "fishmeat",
-		dried      = "kyno_fishmeat_dried",
-		build      = "kyno_meatrack_fishmeat",
-	},
-	
-	eel            =
-	{
-		raw        = "eel",
-		dried      = "kyno_fishmeat_dried",
-		build      = "kyno_meatrack_fishmeat",
+		raw              = "fishmeat_dried",
+		dried            = "kyno_fishmeat_dried",
+		
+		rawbuild         = "meat_rack_food_tot",
+		build            = "kyno_meatrack_fishmeat",
+		
+		drytime          = TUNING.DRY_FAST * 3,
 	},
 }
 
@@ -68,19 +90,17 @@ local function DryablePostinit(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-
-	if inst.components.inventoryitem ~= nil and not inst.components.dryable then
-		inst:AddComponent("dryable")
-		inst.components.dryable:SetDryTime(TUNING.DRY_MED)
-	else
-		inst.components.dryable:SetDryTime(TUNING.DRY_MED)
-	end
 	
-	entry = dryables[inst.prefab]
-	if entry then
-		inst.components.dryable:SetProduct(entry.dried)
-		inst.components.dryable:SetBuildFile(entry.build)
-		inst.components.dryable:SetDriedBuildFile(entry.build)
+	if not inst.components.dryable then
+		inst:AddComponent("dryable")
+		
+		entry = dryables[inst.prefab]
+		if entry then
+			inst.components.dryable:SetProduct(entry.dried)
+			inst.components.dryable:SetBuildFile(entry.rawbuild)
+			inst.components.dryable:SetDriedBuildFile(entry.build)
+			inst.components.dryable:SetDryTime(entry.drytime)
+		end
 	end
 end
 

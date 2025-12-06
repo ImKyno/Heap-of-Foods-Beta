@@ -1101,7 +1101,7 @@ local function oilfn()
     inst.AnimState:SetBuild("kyno_cookingoil")
     inst.AnimState:PlayAnimation("idle")
 
-	inst:AddTag("drinkable_food")
+	inst:AddTag("fooddrink")
 	inst:AddTag("gourmet_ingredient")
 
     inst.entity:SetPristine()

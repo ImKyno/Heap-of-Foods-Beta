@@ -951,7 +951,7 @@ local kyno_foods_jar =
 		stacksize = 2,
 		goldvalue = 10,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "truffles"},
+		tags = {"fooddrink", "truffles"},
 		card_def = {ingredients = {{"kyno_truffles", 1}, {"seeds", 1}, {"kyno_salt", 1}}},
 	},
 	

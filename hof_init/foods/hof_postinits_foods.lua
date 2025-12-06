@@ -182,7 +182,7 @@ local drinkable_foods =
 
 for k, v in pairs(drinkable_foods) do
     AddPrefabPostInit(v, function(inst)
-        inst:AddTag("drinkable_food")
+        inst:AddTag("fooddrink")
     end)
 end
 

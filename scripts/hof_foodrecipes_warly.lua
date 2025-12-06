@@ -128,7 +128,7 @@ local kyno_warly_foods =
 		cooktime = 0.5,
 		potlevel = "med",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"masterfood", "honeyed", "drinkable_food"},
+		tags = {"masterfood", "honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_piko", 1}, {"kyno_tealeaf", 1}, {"honey", 1}, {"ice", 1}}},
 		prefabs = { "buff_sleepresistance" },
         oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
@@ -398,7 +398,7 @@ local kyno_warly_foods =
 		sanity = 5,
 		cooktime = 0.5,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"masterfood", "honeyed", "drinkable_food"},
+		tags = {"masterfood", "honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_piko_orange", 1}, {"kyno_tealeaf", 1}, {"honey", 1}, {"ice", 1}}},
 	},
 	
@@ -418,7 +418,7 @@ local kyno_warly_foods =
 		potlevel = "low",
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SANITYRATE,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"masterfood", "honeyed", "drinkable_food"},
+		tags = {"masterfood", "honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_piko_orange", 1}, {"kyno_tealeaf", 1}, {"honey", 2}}},
 		prefabs = { "kyno_sanityratebuff" },
 		oneatenfn = function(inst, eater)

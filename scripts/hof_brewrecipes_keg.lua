@@ -18,7 +18,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"berries", 2}, {"ice", 1}}},
 	},
 
@@ -34,7 +34,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"berries_juicy", 2}, {"ice", 1}}},
 	},
 
@@ -50,7 +50,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"pomegranate", 2}, {"ice", 1}}},
 	},
 
@@ -66,7 +66,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"dragonfruit", 2}, {"ice", 1}}},
 	},
 
@@ -82,7 +82,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink", "monkeyqueenbribe"},
+		tags = {"fooddrink", "alcoholic_drink", "monkeyqueenbribe"},
 		card_def = {ingredients = {{"cave_banana", 2}, {"ice", 1}}},
 	},
 
@@ -98,7 +98,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink", "monstermeat"},
+		tags = {"fooddrink", "alcoholic_drink", "monstermeat"},
 		card_def = {ingredients = {{"durian", 2}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm") and
@@ -122,7 +122,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"watermelon", 2}, {"ice", 1}}},
 	},
 
@@ -138,7 +138,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"fig", 2}, {"ice", 1}}},
 	},
 
@@ -156,7 +156,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLOW,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"berries", 2}, {"ice", 1}}},
 		prefabs = { "wormlight_light_greater" },
         oneatenfn = function(inst, eater)
@@ -194,7 +194,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink", "monkeyqueenbribe"},
+		tags = {"fooddrink", "alcoholic_drink", "monkeyqueenbribe"},
 		card_def = {ingredients = {{"kyno_banana", 2}, {"ice", 1}}},
 	},
 
@@ -211,7 +211,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"kyno_kokonut_halved", 2}, {"ice", 1}}},
 	},
 
@@ -228,7 +228,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"kyno_pineapple", 2}, {"ice", 1}}},
 	},
 
@@ -247,7 +247,7 @@ local kyno_foods_keg =
 		nightvision = true,
 		nameoverride = "KYNO_WINE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"ancientfruit_nightvision", 2}, {"ice", 1}}},
 		prefabs = { "kyno_nightvisionbuff" },
         oneatenfn = function(inst, eater)
@@ -271,7 +271,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"carrot", 2}, {"ice", 1}}},
 	},
 
@@ -287,7 +287,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"corn", 2}, {"ice", 1}}},
 	},
 
@@ -303,7 +303,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"eggplant", 2}, {"ice", 1}}},
 	},
 
@@ -319,7 +319,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"pumpkin", 2}, {"ice", 1}}},
 	},
 
@@ -335,7 +335,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"cutlichen", 2}, {"ice", 1}}},
 	},
 
@@ -351,7 +351,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"cactus_meat", 2}, {"ice", 1}}},
 	},
 
@@ -367,7 +367,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"garlic", 2}, {"ice", 1}}},
 	},
 
@@ -383,7 +383,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"asparagus", 2}, {"ice", 1}}},
 	},
 
@@ -399,7 +399,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"onion", 2}, {"ice", 1}}},
 	},
 
@@ -415,7 +415,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"tomato", 2}, {"ice", 1}}},
 	},
 
@@ -431,7 +431,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"potato", 2}, {"ice", 1}}},
 	},
 
@@ -449,7 +449,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"pepper", 2}, {"ice", 1}}},
 	},
 
@@ -465,7 +465,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"red_cap", 2}, {"ice", 1}}},
 	},
 
@@ -481,7 +481,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"green_cap", 2}, {"ice", 1}}},
 	},
 
@@ -497,7 +497,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"blue_cap", 2}, {"ice", 1}}},
 	},
 
@@ -514,7 +514,7 @@ local kyno_foods_keg =
 		nameoverride = "KYNO_JUICE",
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"moon_cap", 2}, {"ice", 1}}},
 		prefabs = { "buff_sleepresistance" },
         oneatenfn = function(inst, eater)
@@ -540,7 +540,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kelp", 2}, {"ice", 1}}},
 	},
 
@@ -556,7 +556,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"rock_avocado_fruit_ripe", 2}, {"ice", 1}}},
 	},
 
@@ -572,7 +572,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_white_cap", 2}, {"ice", 1}}},
 	},
 
@@ -588,7 +588,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_aloe", 2}, {"ice", 1}}},
 	},
 
@@ -604,7 +604,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_radish", 2}, {"ice", 1}}},
 	},
 
@@ -620,7 +620,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_sweetpotato", 2}, {"ice", 1}}},
 	},
 
@@ -636,7 +636,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_lotus_flower", 2}, {"ice", 1}}},
 	},
 
@@ -652,7 +652,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_seaweeds", 2}, {"ice", 1}}},
 	},
 
@@ -668,7 +668,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_taroroot", 2}, {"ice", 1}}},
 	},
 
@@ -684,7 +684,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_waterycress", 2}, {"ice", 1}}},
 	},
 
@@ -700,7 +700,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_cucumber", 2}, {"ice", 1}}},
 	},
 
@@ -716,7 +716,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_parznip", 2}, {"ice", 1}}},
 	},
 
@@ -732,7 +732,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_turnip", 2}, {"ice", 1}}},
 	},
 
@@ -748,7 +748,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_fennel", 2}, {"ice", 1}}},
 	},
 	
@@ -765,7 +765,7 @@ local kyno_foods_keg =
 		goldvalue = 10,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "truffles"},
+		tags = {"fooddrink", "truffles"},
 		card_def = {ingredients = {{"kyno_truffles", 2}, {"ice", 1}}},
 	},
 	
@@ -781,7 +781,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "monstermeat"},
+		tags = {"fooddrink", "monstermeat"},
 		card_def = {ingredients = {{"kyno_sporecap", 2}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
@@ -805,7 +805,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "monstermeat"},
+		tags = {"fooddrink", "monstermeat"},
 		card_def = {ingredients = {{"kyno_sporecap_dark", 2}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
@@ -829,7 +829,7 @@ local kyno_foods_keg =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ALCOHOL,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"kyno_wheat", 2}, {"ice", 1}}},
 		prefabs = { "kyno_strengthbuff" },
 		oneatenfn = function (inst, eater)
@@ -849,7 +849,7 @@ local kyno_foods_keg =
 		cooktime = 48,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ALCOHOL,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"kyno_spotspice_leaf", 2}, {"ice", 1}}},
 		prefabs = { "kyno_strengthbuff_med" },
 		oneatenfn = function (inst, eater)
@@ -870,7 +870,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink", "honeyed"},
+		tags = {"fooddrink", "alcoholic_drink", "honeyed"},
 		card_def = {ingredients = {{"honey", 2}, {"ice", 1}}},
 		prefabs = { "kyno_dmgreductionbuff" },
 		oneatenfn = function (inst, eater)
@@ -890,7 +890,7 @@ local kyno_foods_keg =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RESANITY,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_piko_orange", 1}, {"green_cap", 1}, {"kyno_tealeaf", 1}}},
 		prefabs = { "kyno_sanityregenbuff" },
         oneatenfn = function(inst, eater)
@@ -910,7 +910,7 @@ local kyno_foods_keg =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HEALTH_REGEN,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_piko", 1}, {"red_cap", 1}, {"kyno_tealeaf", 1}}},
 		prefabs = { "healthregenbuff" },
         oneatenfn = function(inst, eater)
@@ -930,7 +930,7 @@ local kyno_foods_keg =
 		cooktime = 48,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RUM,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink", "honeyed", "monkeyqueenbribe"},
+		tags = {"fooddrink", "alcoholic_drink", "honeyed", "monkeyqueenbribe"},
 		card_def = {ingredients = {{"durian", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
 		prefabs = { "kyno_piratebuff" },
 		oneatenfn = function(inst, eater)
@@ -959,7 +959,7 @@ local kyno_foods_keg =
 		cooktime = 24,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_TEQUILA,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"kyno_aloe", 1}, {"kyno_spotspice_leaf", 1}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
 			OnFoodTeleport(inst, eater)
@@ -984,7 +984,7 @@ local kyno_foods_keg =
 		sanity = 60,
 		cooktime = 48,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_sugar", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
 			eater:PushEvent("bottlecap")
@@ -1021,7 +1021,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLOW,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_sugar", 1}, {"wormlight_lesser", 1}, {"ice", 1}}},
 		prefabs = { "wormlight_light_greater" },
         oneatenfn = function(inst, eater)
@@ -1078,7 +1078,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NUKASHINE,
 		nightvision = true,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"ancientfruit_nightvision", 1}, {"kyno_sugar", 1}, {"nukacola_quantum", 1}}},
 		prefabs = { "kyno_nukashinebuff" },
 		oneatenfn = function(inst, eater)
@@ -1108,7 +1108,7 @@ local kyno_foods_keg =
 		cooktime = 48,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food", "alcoholic_drink"},
+		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"kyno_rice", 2}, {"ice", 1}}},
 		prefabs = { "kyno_dmgreductionbuff" },
 		oneatenfn = function(inst, eater)
@@ -1131,7 +1131,7 @@ local kyno_foods_keg =
 		nameoverride = "COFFEE",
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HUNGERRATE,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 2}, {"chocolate_black", 1}}},
 	},
 	
@@ -1147,7 +1147,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_AMPHIBIAN,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_poison_froglegs", 1}, {"kyno_sugar", 1}, {"ice", 1}}},
 		prefab = { "kyno_amphibianbuff" },
 		oneatenfn = function(inst, eater)
@@ -1168,7 +1168,7 @@ local kyno_foods_keg =
 		sanity = 33,
 		cooktime = 24,
 		floater = TUNING.HOF_FLOATER,
-		tags = {"drinkable_food"},
+		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"kyno_sugar", 1}, {"ice", 1}}},
 	},
 	
@@ -1186,7 +1186,7 @@ local kyno_foods_keg =
 		scale = 1.2,
 		floater = TUNING.HOF_FLOATER,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_ENLIGHTENMENT,
-		tags = {"drinkable_food", "alcoholic_drink", "lunar_aligned"},
+		tags = {"fooddrink", "alcoholic_drink", "lunar_aligned"},
 		card_def = {ingredients = {{"moon_tree_blossom", 1}, {"purebrilliance", 1}, {"ice", 1}}},
 		prefabs = { "kyno_enlightenmentbuff" },
 		oneatenfn = function(inst, eater)
@@ -1207,7 +1207,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		floater = TUNING.HOF_FLOATER,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_STEALTH,
-		tags = {"drinkable_food", "alcoholic_drink", "shadow_aligned", "shadow_fooditem"},
+		tags = {"fooddrink", "alcoholic_drink", "shadow_aligned", "shadow_fooditem"},
 		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"horrorfuel", 1}, {"ice", 1}}},
 		prefabs = { "kyno_stealthbuff" },
 		oneatenfn = function(inst, eater)

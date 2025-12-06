@@ -146,6 +146,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.BOOK_GARDENING = "Rapidly grow up all kinds of pla
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "The foundation plans for a Fish Hatchery."
 STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "Attracts the Malbatross when thrown into the ocean."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Once set on the ocean, it will trigger when a fish move nearby, capturing them.\n\nCollecting a captured trap will put the creature inside your inventory.\n\nOcean Traps can be baited with appropriated food."
+STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Leaving it to dry for longer periods will further enhance its quality."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Can be feed with seeds to lay down an egg."

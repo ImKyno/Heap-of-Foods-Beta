@@ -146,11 +146,15 @@ STRINGS.SCRAPBOOK.SPECIALINFO.BOOK_GARDENING = "Szybko przyspiesza wzrost wszyst
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "Plany fundamentów dla hodowli ryb."
 STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "Przyciąga Malbatrossa, gdy zostanie wrzucony do oceanu."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Po ustawieniu w oceanie, uruchamia się, gdy ryba znajdzie się w pobliżu, łapiąc ją.\n\nZebranie złapanej pułapki umieszcza stworzenie w twoim ekwipunku.\n\nPułapki oceaniczne można przynęcić odpowiednim jedzeniem."
+STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Pozostawienie do wyschnięcia na dłuższy czas jeszcze bardziej poprawi jego jakość."
 
 -- Stworzenia.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Można karmić nasionami, aby złożyła jajko."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Puchate maluchy, które uwielbiają kraść twoje najcenniejsze przedmioty!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Zimorodki często upuszczają Tropikalne Karpie z góry. Dosłownie padają ryby!"
+STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emituje kolorowe, zdrowe światło o zmierzchu i w nocy."
+STRINGS.SCRAPBOOK.SPECIALINFO.HULLBREAKER_CREATURE = "Może uszkodzić kadłub łodzi podczas udanych ataków."
+STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS = "W Packim Baggims można przechowywać rzeczy podobnie jak w skrzyniach.\n\nUwielbia jeść wszelkiego rodzaju ryby."
 
 -- Struktury, Różne i Miejsca Zainteresowania.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "Kupiec z odległego archipelagu. Chce wymieniać swoje najlepsze narzędzia kuchenne i inne przydatne przedmioty na pyszne posiłki.\n\nStarszy pragnie posiłku o ekstremalnej słodyczy lub masła zmieszanego z owocami morza. Nagrodzi cię odpowiednio.\n\nPrzyniesienie ulubionego posiłku Starszego odblokuje nowe oferty handlowe."
