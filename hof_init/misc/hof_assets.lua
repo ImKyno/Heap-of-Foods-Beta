@@ -417,6 +417,8 @@ local HOF_ICONS =
 	"kyno_grouper_cooked",
 	"kyno_gummybug",
 	"kyno_gummybug_cooked",
+	"kyno_hofbirthday_candle",
+	"kyno_hofbirthday_cheer",
 	"kyno_humanmeat",
 	"kyno_humanmeat_cooked",
 	"kyno_humanmeat_dried",

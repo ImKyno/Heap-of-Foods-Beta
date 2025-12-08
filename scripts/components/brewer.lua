@@ -325,7 +325,20 @@ function Brewer:Harvest(harvester)
                 else
                     LaunchAt(loot, self.inst, nil, 1, 1)
                 end
+				
+				-- Anniverary Event. Chance to get Anniversary Cheer when brewing.
+				if not TUNING.HOFBIRTHDAY_BLOCKED_RECIPES[loot.prefab] and 
+				IsSpecialEventActive(SPECIAL_EVENTS.HOFBIRTHDAY) and math.random() <= TUNING.HOFBIRTHDAY_CHEER_CHANCE then
+					local cheer = SpawnPrefab("kyno_hofbirthday_cheer")
+					
+					if harvester ~= nil and harvester.components.inventory ~= nil then
+						harvester.components.inventory:GiveItem(cheer, nil, self.inst:GetPosition())
+					else
+						LaunchAt(cheer, self.inst, nil, 1, 1)
+					end
+				end
             end
+			
             self.product = nil
         end
 

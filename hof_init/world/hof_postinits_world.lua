@@ -1213,4 +1213,9 @@ AddSimPostInit(function()
 			end
 		end
 	end
+	
+	-- Apply our Special Events.
+	if TUNING.HOF_SPECIAL_EVENTS_BIRTHDAY == true then
+		_G.ApplyExtraEvent(_G.SPECIAL_EVENTS.HOFBIRTHDAY)
+	end
 end)

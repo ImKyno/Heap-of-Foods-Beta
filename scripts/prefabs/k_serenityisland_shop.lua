@@ -130,21 +130,23 @@ local function PlayThrowSound(inst)
 end
 
 local function OnGetItemFromPlayer(inst, giver, item, isnight)
-	if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" and not inst:HasTag("pigelder_gifted") then
-		inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/friendship_music/10")
+	if not inst:HasTag("pigelder_gifted") then
+		if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" then
+			inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/friendship_music/10")
 		
-		inst:DoTaskInTime(1, function() 
-			SayThanks(inst) 
-		end)
+			inst:DoTaskInTime(1, function()
+				SayThanks(inst)
+			end)
 		
-		-- New Recipes available in the shop!
-		inst.components.craftingstation:LearnItem("dug_kyno_spotbush",     "dug_kyno_spotbush_p")
-		inst.components.craftingstation:LearnItem("dug_kyno_wildwheat",    "dug_kyno_wildwheat_p")
-		inst.components.craftingstation:LearnItem("kyno_sugartree_petals", "kyno_sugartree_petals_p")
-		inst.components.craftingstation:LearnItem("kyno_sugartree_bud",    "kyno_sugartree_bud_p")
+			-- New Recipes available in the shop!
+			inst.components.craftingstation:LearnItem("dug_kyno_spotbush",     "dug_kyno_spotbush_p")
+			inst.components.craftingstation:LearnItem("dug_kyno_wildwheat",    "dug_kyno_wildwheat_p")
+			inst.components.craftingstation:LearnItem("kyno_sugartree_petals", "kyno_sugartree_petals_p")
+			inst.components.craftingstation:LearnItem("kyno_sugartree_bud",    "kyno_sugartree_bud_p")
 
-		inst:AddTag("pigelder_gifted")
-		inst.foodgift = true
+			inst:AddTag("pigelder_gifted")
+			inst.foodgift = true
+		end
 	end
 	
 	local x, y, z = inst.Transform:GetWorldPosition()
@@ -202,7 +204,7 @@ local function OnSave(inst, data)
 end
 
 local function OnLoad(inst, data)
-    if data ~= nil and data.foodgift ~= nil then
+    if data ~= nil and data.foodgift then
         inst:AddTag("pigelder_gifted")
     end
 end

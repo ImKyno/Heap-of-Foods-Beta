@@ -66,6 +66,7 @@ STRINGS.UI.CUSTOMIZATIONSCREEN.SWORDFISHES = "Swordfishes"
 -- World Settings
 ------------------------------------------------------------------------------------------------------------
 -- GLOBALSETTINGS
+STRINGS.UI.CUSTOMIZATIONSCREEN.HOFBIRTHDAY = "Heap of Foods Anniversary"
 STRINGS.UI.CUSTOMIZATIONSCREEN.OCEANHUNTS_SETTING = "Ocean Hunts"
 STRINGS.UI.CUSTOMIZATIONSCREEN.OCEANHUNTALTS_SETTING = "Ocean Hunts Surprises"
 

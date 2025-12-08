@@ -250,8 +250,7 @@ local kyno_foods =
 	-- The Gorge Foods.
 	gorge_bread = 
 	{
-		test = function(cooker, names, tags) return (tags.flour and tags.flour == 3 or (tags.flour and tags.flour == 4)) 
-		and not tags.spotspice end,
+		test = function(cooker, names, tags) return (tags.flour and tags.flour >= 3) and not tags.spotspice end,
 		priority = 1,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SUPERSLOW,

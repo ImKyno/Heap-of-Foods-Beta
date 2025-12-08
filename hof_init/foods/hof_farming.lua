@@ -47,18 +47,6 @@ AddNewVeggie("kyno_aloe",
 	TUNING.SEED_CHANCE_RARE
 )
 
-AddNewVeggie("kyno_cucumber",
-	TUNING.KYNO_CUCUMBER_HEALTH,
-	TUNING.KYNO_CUCUMBER_HUNGER,
-	TUNING.KYNO_CUCUMBER_SANITY,
-	TUNING.PERISH_MED,
-	TUNING.KYNO_CUCUMBER_COOKED_HEALTH,
-	TUNING.KYNO_CUCUMBER_COOKED_HUNGER,
-	TUNING.KYNO_CUCUMBER_COOKED_SANITY,
-	TUNING.PERISH_FAST,
-	TUNING.SEED_CHANCE_COMMON
-)
-
 AddNewVeggie("kyno_fennel",
 	TUNING.KYNO_FENNEL_HEALTH,
 	TUNING.KYNO_FENNEL_HUNGER,
@@ -106,6 +94,18 @@ AddNewVeggie("kyno_rice",
 	TUNING.KYNO_RICE_COOKED_SANITY,
 	TUNING.PERISH_MED,
 	TUNING.SEED_CHANCE_UNCOMMON
+)
+
+AddNewVeggie("kyno_cucumber",
+	TUNING.KYNO_CUCUMBER_HEALTH,
+	TUNING.KYNO_CUCUMBER_HUNGER,
+	TUNING.KYNO_CUCUMBER_SANITY,
+	TUNING.PERISH_MED,
+	TUNING.KYNO_CUCUMBER_COOKED_HEALTH,
+	TUNING.KYNO_CUCUMBER_COOKED_HUNGER,
+	TUNING.KYNO_CUCUMBER_COOKED_SANITY,
+	TUNING.PERISH_FAST,
+	TUNING.SEED_CHANCE_COMMON
 )
 
 AddNewVeggie("kyno_sweetpotato",
@@ -187,92 +187,6 @@ PLANT_DEFS.kyno_aloe.pictureframeanim            = {anim = "emote_impatient", ti
 PLANT_DEFS.kyno_aloe.plantregistrywidget         = "widgets/redux/farmplantpage"
 PLANT_DEFS.kyno_aloe.plantregistrysummarywidget  = "widgets/redux/farmplantsummarywidget"
 PLANT_DEFS.kyno_aloe.plantregistryinfo           =
-{
-    {
-        text            = "seed",
-        anim            = "crop_seed",
-        grow_anim       = "grow_seed",
-        learnseed       = true,
-        growing         = true,
-    },
-    {
-        text            = "sprout",
-        anim            = "crop_sprout",
-        grow_anim       = "grow_sprout",
-        growing         = true,
-    },
-    {
-        text            = "small",
-        anim            = "crop_small",
-        grow_anim       = "grow_small",
-        growing         = true,
-    },
-    {
-        text            = "medium",
-        anim            = "crop_med",
-        grow_anim       = "grow_med",
-        growing         = true,
-    },
-    {
-        text            = "grown",
-        anim            = "crop_full",
-        grow_anim       = "grow_full",
-        revealplantname = true,
-        fullgrown       = true,
-    },
-    {
-        text            = "oversized",
-        anim            = "crop_oversized",
-        grow_anim       = "grow_oversized",
-        revealplantname = true,
-        fullgrown       = true,
-        hidden          = true,
-    },
-    {
-        text            = "rotting",
-        anim            = "crop_rot",
-        grow_anim       = "grow_rot",
-        stagepriority   = -100,
-        is_rotten       = true,
-        hidden          = true,
-    },
-    {
-        text            = "oversized_rotting",
-        anim            = "crop_rot_oversized",
-        grow_anim       = "grow_rot_oversized",
-        stagepriority   = -100,
-        is_rotten       = true,
-        hidden          = true,
-    },
-}
-
--- Cucumber Plant
-PLANT_DEFS.kyno_cucumber                             = {build = "farm_plant_kyno_cucumber", bank = "farm_plant_kyno_cucumber"}
-PLANT_DEFS.kyno_cucumber.prefab                      = "farm_plant_kyno_cucumber"
-PLANT_DEFS.kyno_cucumber.product                     = "kyno_cucumber"
-PLANT_DEFS.kyno_cucumber.product_oversized           = "kyno_cucumber_oversized"
-PLANT_DEFS.kyno_cucumber.seed                        = "kyno_cucumber_seeds"
-PLANT_DEFS.kyno_cucumber.loot_oversized_rot          = {"spoiled_food", "spoiled_food", "spoiled_food", "kyno_cucumber_seeds", "fruitfly", "fruitfly"}
-PLANT_DEFS.kyno_cucumber.family_min_count            = 4
-PLANT_DEFS.kyno_cucumber.family_check_dist           = 4
-PLANT_DEFS.kyno_cucumber.plant_type_tag              = "farm_plant_kyno_cucumber"
-PLANT_DEFS.kyno_cucumber.grow_time                   = MakeGrowTimes(12 * TUNING.SEG_TIME, 16 * TUNING.SEG_TIME, 4 * TUNING.TOTAL_DAY_TIME, 7 * TUNING.TOTAL_DAY_TIME)
-PLANT_DEFS.kyno_cucumber.moisture                    = {drink_rate = DRINK_HIGH, min_percent = TUNING.FARM_PLANT_DROUGHT_TOLERANCE}
-PLANT_DEFS.kyno_cucumber.good_seasons                = {autumn = true, spring = true, summer = true}
-PLANT_DEFS.kyno_cucumber.nutrient_consumption        = {NUTRIENT_LOW, 0, NUTRIENT_LOW}
-PLANT_DEFS.kyno_cucumber.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY_TOLERANCE
-PLANT_DEFS.kyno_cucumber.weight_data                 = { 430.23, 585.02, .21 }
-PLANT_DEFS.kyno_cucumber.sounds                      = PLANT_DEFS.potato.sounds
-PLANT_DEFS.kyno_cucumber.nutrient_restoration        = {0, 2, 0}
-
-for i = 1, #PLANT_DEFS.kyno_cucumber.nutrient_consumption do
-    PLANT_DEFS.kyno_cucumber.nutrient_restoration[i] = PLANT_DEFS.kyno_cucumber.nutrient_consumption[i] == 0 or nil
-end
-
-PLANT_DEFS.kyno_cucumber.pictureframeanim            = {anim = "emote_laugh", time = 27 * FRAMES}
-PLANT_DEFS.kyno_cucumber.plantregistrywidget         = "widgets/redux/farmplantpage"
-PLANT_DEFS.kyno_cucumber.plantregistrysummarywidget  = "widgets/redux/farmplantsummarywidget"
-PLANT_DEFS.kyno_cucumber.plantregistryinfo           =
 {
     {
         text            = "seed",
@@ -617,6 +531,92 @@ PLANT_DEFS.kyno_rice.pictureframeanim            = {anim = "emoteXL_facepalm", t
 PLANT_DEFS.kyno_rice.plantregistrywidget         = "widgets/redux/farmplantpage"
 PLANT_DEFS.kyno_rice.plantregistrysummarywidget  = "widgets/redux/farmplantsummarywidget"
 PLANT_DEFS.kyno_rice.plantregistryinfo           =
+{
+    {
+        text            = "seed",
+        anim            = "crop_seed",
+        grow_anim       = "grow_seed",
+        learnseed       = true,
+        growing         = true,
+    },
+    {
+        text            = "sprout",
+        anim            = "crop_sprout",
+        grow_anim       = "grow_sprout",
+        growing         = true,
+    },
+    {
+        text            = "small",
+        anim            = "crop_small",
+        grow_anim       = "grow_small",
+        growing         = true,
+    },
+    {
+        text            = "medium",
+        anim            = "crop_med",
+        grow_anim       = "grow_med",
+        growing         = true,
+    },
+    {
+        text            = "grown",
+        anim            = "crop_full",
+        grow_anim       = "grow_full",
+        revealplantname = true,
+        fullgrown       = true,
+    },
+    {
+        text            = "oversized",
+        anim            = "crop_oversized",
+        grow_anim       = "grow_oversized",
+        revealplantname = true,
+        fullgrown       = true,
+        hidden          = true,
+    },
+    {
+        text            = "rotting",
+        anim            = "crop_rot",
+        grow_anim       = "grow_rot",
+        stagepriority   = -100,
+        is_rotten       = true,
+        hidden          = true,
+    },
+    {
+        text            = "oversized_rotting",
+        anim            = "crop_rot_oversized",
+        grow_anim       = "grow_rot_oversized",
+        stagepriority   = -100,
+        is_rotten       = true,
+        hidden          = true,
+    },
+}
+
+-- Cucumber Plant
+PLANT_DEFS.kyno_cucumber                             = {build = "farm_plant_kyno_cucumber", bank = "farm_plant_kyno_cucumber"}
+PLANT_DEFS.kyno_cucumber.prefab                      = "farm_plant_kyno_cucumber"
+PLANT_DEFS.kyno_cucumber.product                     = "kyno_cucumber"
+PLANT_DEFS.kyno_cucumber.product_oversized           = "kyno_cucumber_oversized"
+PLANT_DEFS.kyno_cucumber.seed                        = "kyno_cucumber_seeds"
+PLANT_DEFS.kyno_cucumber.loot_oversized_rot          = {"spoiled_food", "spoiled_food", "spoiled_food", "kyno_cucumber_seeds", "fruitfly", "fruitfly"}
+PLANT_DEFS.kyno_cucumber.family_min_count            = 4
+PLANT_DEFS.kyno_cucumber.family_check_dist           = 4
+PLANT_DEFS.kyno_cucumber.plant_type_tag              = "farm_plant_kyno_cucumber"
+PLANT_DEFS.kyno_cucumber.grow_time                   = MakeGrowTimes(12 * TUNING.SEG_TIME, 16 * TUNING.SEG_TIME, 4 * TUNING.TOTAL_DAY_TIME, 7 * TUNING.TOTAL_DAY_TIME)
+PLANT_DEFS.kyno_cucumber.moisture                    = {drink_rate = DRINK_HIGH, min_percent = TUNING.FARM_PLANT_DROUGHT_TOLERANCE}
+PLANT_DEFS.kyno_cucumber.good_seasons                = {autumn = true, spring = true, summer = true}
+PLANT_DEFS.kyno_cucumber.nutrient_consumption        = {NUTRIENT_LOW, 0, NUTRIENT_LOW}
+PLANT_DEFS.kyno_cucumber.max_killjoys_tolerance      = TUNING.FARM_PLANT_KILLJOY_TOLERANCE
+PLANT_DEFS.kyno_cucumber.weight_data                 = { 430.23, 585.02, .21 }
+PLANT_DEFS.kyno_cucumber.sounds                      = PLANT_DEFS.potato.sounds
+PLANT_DEFS.kyno_cucumber.nutrient_restoration        = {0, 2, 0}
+
+for i = 1, #PLANT_DEFS.kyno_cucumber.nutrient_consumption do
+    PLANT_DEFS.kyno_cucumber.nutrient_restoration[i] = PLANT_DEFS.kyno_cucumber.nutrient_consumption[i] == 0 or nil
+end
+
+PLANT_DEFS.kyno_cucumber.pictureframeanim            = {anim = "emote_laugh", time = 27 * FRAMES}
+PLANT_DEFS.kyno_cucumber.plantregistrywidget         = "widgets/redux/farmplantpage"
+PLANT_DEFS.kyno_cucumber.plantregistrysummarywidget  = "widgets/redux/farmplantsummarywidget"
+PLANT_DEFS.kyno_cucumber.plantregistryinfo           =
 {
     {
         text            = "seed",

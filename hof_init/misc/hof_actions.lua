@@ -520,7 +520,7 @@ end)
 local function GetFirepit(inst)
 	if not inst.firepit or not inst.firepit:IsValid() or not inst.firepit.components.fueled then
 		local x,y,z = inst.Transform:GetWorldPosition()
-		local ents = _G.TheSim:FindEntities(x,y,z, 0.01, {"firepit"})
+		local ents = _G.TheSim:FindEntities(x,y,z, 0.1, {"firepit"})
 		
 		inst.firepit = nil
 		
@@ -895,5 +895,17 @@ end
 ACTIONS.LEARNRECIPECARD.stroverridefn = function(act)
 	if act.invobject:HasTag("brewingrecipecard") then
 		return STRINGS.ACTIONS.LEARNRECIPECARD2
+	end
+end
+
+ACTIONS.CONSTRUCT.stroverridefn = function(act)
+	if act.target ~= nil and act.target:HasTag("anniversarycake") then
+		return STRINGS.KYNO_BAKE_CAKE
+    end
+end
+
+ACTIONS.STOPCONSTRUCTION.stroverridefn = function(act)
+	if act.invobject == nil and act.target ~= nil and act.target:HasTag("anniversarycake") then
+		return STRINGS.KYNO_BAKE_CAKE_STOP
 	end
 end

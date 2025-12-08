@@ -344,6 +344,9 @@ local function fn_seaweeds()
         return inst
     end
 	
+	inst:AddComponent("driedsalticon")
+	inst.components.driedsalticon:SetCollectsOnDried(true)
+	
 	inst.components.edible.healthvalue = TUNING.KYNO_WEEDSEA_DRIED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_WEEDSEA_DRIED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_WEEDSEA_DRIED_SANITY

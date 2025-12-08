@@ -72,6 +72,7 @@ AllRecipes["merm_armory_upgraded"].testfn = IsTidalMarshLand
 table.insert(TechTree.AVAILABLE_TECH, "MEALING")
 table.insert(TechTree.AVAILABLE_TECH, "SERENITYSHOP")
 table.insert(TechTree.AVAILABLE_TECH, "MEADOWSHOP")
+table.insert(TechTree.AVAILABLE_TECH, "HOFBIRTHDAY")
 
 TechTree.Create = function(t)
 	t = t or {}
@@ -83,34 +84,29 @@ end
 
 -- Mealing Stone.
 _G.TECH.NONE.MEALING      = 0
-_G.TECH.MEALING_ONE       = { MEALING          = 1 }
-_G.TECH.MEALING_TWO       = { MEALING          = 2 }
+_G.TECH.MEALING_ONE       = { MEALING          = 1  }
+_G.TECH.MEALING_TWO       = { MEALING          = 2  }
 
 -- Pig Elder.
 _G.TECH.NONE.SERENITYSHOP = 0
-_G.TECH.SERENITYSHOP_ONE  = { SERENITYSHOP     = 1 }
-_G.TECH.SERENITYSHOP_TWO  = { SERENITYSHOP_TWO = 2 }
+_G.TECH.SERENITYSHOP_ONE  = { SERENITYSHOP     = 1  }
+_G.TECH.SERENITYSHOP_TWO  = { SERENITYSHOP     = 2  }
 
 -- Sammy The Trader.
 _G.TECH.NONE.MEADOWSHOP   = 0
-_G.TECH.MEADOWSHOP_ONE    = { MEADOWSHOP       = 1 }
-_G.TECH.MEADOWSHOP_TWO    = { MEADOWSHOP_TWO   = 2 }
+_G.TECH.MEADOWSHOP_ONE    = { MEADOWSHOP       = 1  }
+_G.TECH.MEADOWSHOP_TWO    = { MEADOWSHOP       = 2  }
+
+-- HoF Anniversary.
+_G.TECH.NONE.HOFBIRTHDAY  = 0
+_G.TECH.HOFBIRTHDAY       = { SCIENCE          = 10 }
 
 for k, v in pairs(TUNING.PROTOTYPER_TREES) do
     v.MEALING 		= 0
 	v.SERENITYSHOP 	= 0
 	v.MEADOWSHOP    = 0
+	v.HOFBIRTHDAY   = 0
 end
-
-TUNING.PROTOTYPER_TREES.MEALING_ONE      = TechTree.Create({ MEALING      = 1 })
-TUNING.PROTOTYPER_TREES.MEALING_TWO      = TechTree.Create({ MEALING      = 2 })
-
-TUNING.PROTOTYPER_TREES.SERENITYSHOP_ONE = TechTree.Create({ SERENITYSHOP = 1 })
-TUNING.PROTOTYPER_TREES.SERENITYSHOP_TWO = TechTree.Create({ SERENITYSHOP = 2 })
-
-TUNING.PROTOTYPER_TREES.MEADOWSHOP       = TechTree.Create({ MEADOWSHOP   = 1 })
-TUNING.PROTOTYPER_TREES.MEADOWSHOP_ONE   = TechTree.Create({ MEADOWSHOP   = 1 })
-TUNING.PROTOTYPER_TREES.MEADOWSHOP_TWO   = TechTree.Create({ MEADOWSHOP   = 2 })
 
 for i, v in pairs(_G.AllRecipes) do
 	if v.level.MEALING == nil then
@@ -123,6 +119,10 @@ for i, v in pairs(_G.AllRecipes) do
 	
 	if v.level.MEADOWSHOP == nil then
 		v.level.MEADOWSHOP = 0
+	end
+	
+	if v.level.HOFBIRTHDAY == nil then
+		v.level.HOFBIRTHDAY = 0
 	end
 end
 
@@ -834,6 +834,104 @@ CONSTRUCTION_PLANS["kyno_fishfarmplot_construction"] =
 }
 
 AddDeconstructRecipe("kyno_fishfarmplot", {Ingredient("rocks", 20)})
+
+-- HoF Anniversary Event.
+AddRecipe2("kyno_hofbirthday_cake_empty_construction", {Ingredient("kyno_hofbirthday_cheer", 10), Ingredient("cutstone", 2)}, TECH.HOFBIRTHDAY,
+	{
+		min_spacing         = 2,
+		placer              = "kyno_hofbirthday_cake_placer",
+		hint_msg            = "NEEDSHOFBIRTHDAY",
+		atlas               = ModAtlas,
+		image               = "kyno_hofbirthday_cake.tex",
+	},
+	{"SPECIAL_EVENT", "COOKING"}
+)
+
+AddRecipe2("kyno_hofbirthday_candle", {Ingredient("kyno_hofbirthday_cheer", 1), Ingredient("twigs", 1), Ingredient("beeswax", 1)}, TECH.HOFBIRTHDAY,
+	{
+		numtogive           = 5,
+		hint_msg            = "NEEDSHOFBIRTHDAY",
+		atlas               = ModAtlas,
+		image               = "kyno_hofbirthday_candle.tex",
+	},
+	{"SPECIAL_EVENT", "LIGHT"}
+)
+
+-- I would like to let players use alternative ingredients
+-- but well, Klei doesn't have a proper system for it. 🤡🤡
+CONSTRUCTION_PLANS["kyno_hofbirthday_cake_empty_construction"] =
+{
+	Ingredient("kyno_flour",              5, ModAtlas, nil),
+	Ingredient("bird_egg",                5, nil,      nil),
+	Ingredient("kyno_milk_beefalo",       2, ModAtlas, nil),
+	Ingredient("butter_beefalo",          1, ModAtlas, nil),
+}
+
+CONSTRUCTION_PLANS["kyno_hofbirthday_cake_construction"] =
+{
+	Ingredient("kyno_flour",              5, ModAtlas, nil),
+	Ingredient("bird_egg",                5, nil,      nil),
+	Ingredient("kyno_milk_beefalo",       3, ModAtlas, nil),
+	Ingredient("kyno_hofbirthday_cheer",  1, ModAtlas, nil),
+}
+
+AddDeconstructRecipe("kyno_hofbirthday_cake_construction", {Ingredient("kyno_flour", 5), 
+Ingredient("bird_egg", 5), Ingredient("kyno_milk_beefalo", 2), Ingredient("butter_beefalo", 1)})
+
+CONSTRUCTION_PLANS["kyno_hofbirthday_cake_stage1_construction"] =
+{
+	Ingredient("kyno_sugar",              5, ModAtlas, nil),
+	Ingredient("kyno_lotus_flower",       5, ModAtlas, nil),
+	Ingredient("kyno_salt",               5, ModAtlas, nil),
+	Ingredient("kyno_hofbirthday_cheer",  1, ModAtlas, nil),
+}
+
+AddDeconstructRecipe("kyno_hofbirthday_cake_stage1_construction", {Ingredient("kyno_flour", 5), 
+Ingredient("bird_egg", 5), Ingredient("kyno_milk_beefalo", 3), Ingredient("kyno_hofbirthday_cheer", 1)})
+
+CONSTRUCTION_PLANS["kyno_hofbirthday_cake_stage2_construction"] =
+{
+	Ingredient("kyno_flour",              5, ModAtlas, nil),
+	Ingredient("bird_egg",                5, nil,      nil),
+	Ingredient("kyno_milk_beefalo",       2, ModAtlas, nil),
+	Ingredient("butter_beefalo",          1, ModAtlas, nil),
+}
+
+AddDeconstructRecipe("kyno_hofbirthday_cake_stage2_construction", {Ingredient("kyno_sugar", 5), 
+Ingredient("kyno_lotus_flower", 5), Ingredient("kyno_salt", 5), Ingredient("kyno_hofbirthday_cheer", 1)})
+
+CONSTRUCTION_PLANS["kyno_hofbirthday_cake_stage3_construction"] =
+{
+	Ingredient("kyno_sugar",              5, ModAtlas, nil),
+	Ingredient("kyno_pineapple",          5, ModAtlas, nil),
+	Ingredient("kyno_salt",               5, ModAtlas, nil),
+	Ingredient("kyno_hofbirthday_cheer",  1, ModAtlas, nil),
+}
+
+AddDeconstructRecipe("kyno_hofbirthday_cake_stage3_construction", {Ingredient("kyno_flour", 5), 
+Ingredient("bird_egg", 5), Ingredient("kyno_milk_beefalo", 2), Ingredient("butter_beefalo", 1)})
+
+CONSTRUCTION_PLANS["kyno_hofbirthday_cake_stage4_construction"] =
+{
+	Ingredient("kyno_flour",              5, ModAtlas, nil),
+	Ingredient("bird_egg",                5, nil,      nil),
+	Ingredient("kyno_milk_beefalo",       2, ModAtlas, nil),
+	Ingredient("butter_beefalo",          1, ModAtlas, nil),
+}
+
+AddDeconstructRecipe("kyno_hofbirthday_cake_stage4_construction", {Ingredient("kyno_sugar", 5), 
+Ingredient("kyno_pineapple", 5), Ingredient("kyno_salt", 5), Ingredient("kyno_hofbirthday_cheer", 1)})
+
+CONSTRUCTION_PLANS["kyno_hofbirthday_cake_stage5_construction"] =
+{
+	Ingredient("kyno_sugar",              5, ModAtlas, nil),
+	Ingredient("chocolate_black",         5, ModAtlas, nil),
+	Ingredient("kyno_salt",               5, ModAtlas, nil),
+	Ingredient("kyno_hofbirthday_candle", 5, ModAtlas, nil),
+}
+
+AddDeconstructRecipe("kyno_hofbirthday_cake_stage5_construction", {Ingredient("kyno_flour", 5), 
+Ingredient("bird_egg", 5), Ingredient("kyno_milk_beefalo", 2), Ingredient("butter_beefalo", 1)})
 
 -- Checking if Chum The Waters Mod is enabled to not add duplicates.
 if not TUNING.HOF_IS_CTW_ENABLED then

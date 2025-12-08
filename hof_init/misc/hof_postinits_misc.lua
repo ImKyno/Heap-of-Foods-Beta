@@ -1077,6 +1077,63 @@ AddComponentPostInit("container", function(self)
 	end
 end)
 
+-- Get Anniversary Cheer when cooking.
+AddComponentPostInit("stewer", function(self)
+	local _Harvest = self.Harvest
+
+	self.Harvest = function(self, harvester, ...)
+		if not self.done then
+			return _Harvest(self, harvester, ...)
+		end
+
+		local product_prefab = self.product
+		local loot_captured = nil
+		
+		if harvester and harvester.components.inventory then
+			local _GiveItem = harvester.components.inventory.GiveItem
+			
+			harvester.components.inventory.GiveItem = function(inv, item, ...)
+				loot_captured = item
+				return _GiveItem(inv, item, ...)
+			end
+
+			local result = _Harvest(self, harvester, ...)
+			
+            harvester.components.inventory.GiveItem = _GiveItem
+
+			if result and loot_captured then
+				if not TUNING.HOFBIRTHDAY_BLOCKED_RECIPES[loot_captured.prefab] and _G.IsSpecialEventActive(_G.SPECIAL_EVENTS.HOFBIRTHDAY)
+				and math.random() <= TUNING.HOFBIRTHDAY_CHEER_CHANCE then
+					inv = harvester.components.inventory
+					local cheer = SpawnPrefab("kyno_hofbirthday_cheer")
+					
+					if inv then
+						inv:GiveItem(cheer, nil, self.inst:GetPosition())
+					else
+						_G.LaunchAt(cheer, self.inst, nil, 1, 1)
+					end
+				end
+			end
+
+			return result
+		end
+
+		local result = _Harvest(self, harvester, ...)
+		
+		if result and product_prefab then
+			local loot = SpawnPrefab(product_prefab)
+
+			if loot and not TUNING.HOFBIRTHDAY_BLOCKED_RECIPES[loot.prefab] and 
+			_G.IsSpecialEventActive(_G.SPECIAL_EVENTS.HOFBIRTHDAY) and math.random() <= TUNING.HOFBIRTHDAY_CHEER_CHANCE then
+				local cheer = SpawnPrefab("kyno_hofbirthday_cheer")
+				_G.LaunchAt(cheer, self.inst, nil, 1, 1)
+			end
+		end
+
+		return result
+	end
+end)
+
 -- Makes icons appear for containers that are integrated to player's inventory.
 AddClassPostConstruct("widgets/invslot", function(self)
 	if self.owner == _G.ThePlayer and self.container ~= nil and self.container.GetWidget ~= nil then

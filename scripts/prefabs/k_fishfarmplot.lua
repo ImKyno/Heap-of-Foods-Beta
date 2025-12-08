@@ -377,7 +377,7 @@ local function OnDeploy(inst, pt, deployer)
 		obj:PushEvent("onbuilt")
 			
 		if deployer ~= nil and deployer.SoundEmitter ~= nil then
-			deployer.SoundEmitter:PlaySound("dontstarve/common/together/sculpting_table/craft")
+			-- deployer.SoundEmitter:PlaySound("dontstarve/common/together/sculpting_table/craft")
 		end
 	end
 end

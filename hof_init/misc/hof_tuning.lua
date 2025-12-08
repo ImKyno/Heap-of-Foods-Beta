@@ -1,12 +1,27 @@
 -- Common Dependencies.
-local _G = GLOBAL
+local _G       = GLOBAL
+local require  = _G.require
+local TechTree = require("techtree")
 
 -- Mod Tunings.
+TUNING.PROTOTYPER_TREES.MEALING_ONE      = TechTree.Create({ MEALING      = 1 })
+TUNING.PROTOTYPER_TREES.MEALING_TWO      = TechTree.Create({ MEALING      = 2 })
+
+TUNING.PROTOTYPER_TREES.SERENITYSHOP_ONE = TechTree.Create({ SERENITYSHOP = 1 })
+TUNING.PROTOTYPER_TREES.SERENITYSHOP_TWO = TechTree.Create({ SERENITYSHOP = 2 })
+
+TUNING.PROTOTYPER_TREES.MEADOWSHOP       = TechTree.Create({ MEADOWSHOP   = 1 })
+TUNING.PROTOTYPER_TREES.MEADOWSHOP_ONE   = TechTree.Create({ MEADOWSHOP   = 1 })
+TUNING.PROTOTYPER_TREES.MEADOWSHOP_TWO   = TechTree.Create({ MEADOWSHOP   = 2 })
+
 TUNING.HOF_RESOURCES = .06
 TUNING.HOF_FLOATER = {"med", nil, 0.65}
 
 TUNING.HOF_DEBUG_MODE = false
 TUNING.HOF_RETROFIT_ENABLED = true
+
+-- Setting this to true will force our Special Event. It must be false during off-season.
+TUNING.HOF_SPECIAL_EVENTS_BIRTHDAY = false -- Anniversary Event | Period: December - January.
 
 TUNING.HOF_COFFEEBUFF_DURATION = GetModConfigData("COFFEEDURATION") or 480
 
@@ -1221,3 +1236,26 @@ TUNING.KYNO_PACKIMBAGGIMS_CHARCOAL_ITEMS =
 }
 
 TUNING.KYNO_BEEFRIENDLYBUFF_DURATION = 480 * 1.5
+
+TUNING.HOFBIRTHDAY_CAKE_CONSTRUCTION_LOOT =
+{
+	"boards",
+	"boards",
+	"twigs",
+	"twigs",
+}
+
+-- These are recipes that won't give you Anniversary Cheer.
+TUNING.HOFBIRTHDAY_BLOCKED_RECIPES =
+{
+	beefalofeed = true,
+	duckyouglermz = true,
+	dustmeringue = true,
+	gorge_bread = true,
+	littlebread = true,
+	watercup = true,
+	wetgoop = true,
+	wetgoop2 = true,
+}
+
+TUNING.HOFBIRTHDAY_CHEER_CHANCE = 1.00--0.20

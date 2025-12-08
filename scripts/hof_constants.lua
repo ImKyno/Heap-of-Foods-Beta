@@ -6,6 +6,7 @@ local HOF_FUELTYPES      = {}
 local HOF_NAUGHTY_VALUE  = {}
 local HOF_PICKABLE_FOODS = {}
 local HOF_PICKUP_SOUNDS  = {}
+local HOF_SPECIAL_EVENTS = {}
 
 -- New FOODTYPE just for showing the correct string on Cookbook.
 HOF_FOODTYPES    = 
@@ -64,6 +65,11 @@ HOF_PICKUP_SOUNDS =
 	["item_gold"] = "dontstarve/wilson/equip_item_gold",
 }
 
+HOF_SPECIAL_EVENTS =
+{
+	HOFBIRTHDAY    = "hofbirthday",
+}
+
 for k, v in pairs(HOF_FOODTYPES) do
 	FOODTYPE[k] = v
 end
@@ -82,4 +88,8 @@ end
 
 for k, v in pairs(HOF_PICKUP_SOUNDS) do
 	PICKUPSOUNDS[k] = v
+end
+
+for k, v in pairs(HOF_SPECIAL_EVENTS) do
+	SPECIAL_EVENTS[k] = v
 end

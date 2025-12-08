@@ -45,16 +45,56 @@ local function MakeConstructionPlan(data)
 	
 	local function OnHit(inst, worker)
 		if not inst:HasTag("burnt") then
-			inst.AnimState:PlayAnimation("hit")
-			inst.AnimState:PushAnimation("idle", true)
+			if data.onhitanim then
+				inst.AnimState:PlayAnimation("hit")
+				inst.AnimState:PushAnimation("idle", true)
+			end
+			
 			inst.components.constructionsite:ForceStopConstruction()
 		end
 	end
-
+	
+	local function OnIgnite(inst)
+		if inst.components.constructionsite ~= nil then
+			inst.components.constructionsite:ForceStopConstruction()
+			inst.components.constructionsite:Disable()
+		end
+	end
+	
+	local function OnExtinguish(inst)
+		if inst.components.constructionsite ~= nil then
+			inst.components.constructionsite:Enable()
+		end
+	end
+	
+	local function OnBurnt(inst)
+		if inst.components.constructionsite ~= nil then
+			inst.components.constructionsite:DropAllMaterials()
+		end
+		
+		if inst.components.lootdropper ~= nil then
+			inst.components.lootdropper:SpawnLootPrefab("charcoal")
+			inst.components.lootdropper:SpawnLootPrefab("charcoal")
+			inst.components.lootdropper:SpawnLootPrefab("charcoal")
+			inst.components.lootdropper:SpawnLootPrefab("charcoal")
+			inst.components.lootdropper:SpawnLootPrefab("charcoal")
+		end
+		
+		inst:Remove()
+	end
+	
 	local function OnBuilt(inst)
 		PreventCharacterCollisionsWithPlacedObjects(inst)
-		inst.AnimState:PlayAnimation("place")
-		inst.AnimState:PushAnimation("idle", true)
+		
+		if data.onplaceanim then
+			inst.AnimState:PlayAnimation("place")
+			inst.AnimState:PushAnimation("idle", true)
+		end
+		
+		if data.customonbuiltfx then
+			local fx = SpawnPrefab(data.onbuiltfx)
+			fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		end
 	end
 	
 	local function OnSave(inst, data)
@@ -80,7 +120,7 @@ local function MakeConstructionPlan(data)
 		local minimap = inst.entity:AddMiniMapEntity()
 		minimap:SetIcon(data.minimapicon)
 
-		inst.Transform:SetScale(data.scale or .9, data.scale or .9, data.scale or .9)
+		inst.Transform:SetScale(data.scale or 1, data.scale or 1, data.scale or 1)
 		
 		inst:SetPhysicsRadiusOverride(data.radius or 1.5)
 		MakeObstaclePhysics(inst, inst.physicsradiusoverride)
@@ -88,6 +128,19 @@ local function MakeConstructionPlan(data)
 		inst.AnimState:SetBank(data.bank)
 		inst.AnimState:SetBuild(data.build)
 		inst.AnimState:PlayAnimation(data.anim, true)
+		
+		inst:AddTag("blocker")
+		inst:AddTag("constructionsite")
+		
+		if data.tags ~= nil then
+			for i, v in pairs(data.tags) do
+				inst:AddTag(v)
+			end
+		end
+		
+		if data.nameoverride then
+			inst:SetPrefabNameOverride(data.nameoverride)
+		end
 
 		inst.entity:SetPristine()
 		
@@ -105,17 +158,27 @@ local function MakeConstructionPlan(data)
 		inst.components.constructionsite:SetConstructionPrefab("construction_container")
 		inst.components.constructionsite:SetOnConstructedFn(OnConstructed)
 		
-		inst:AddComponent("workable")
-		inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
-		inst.components.workable:SetOnFinishCallback(OnHammered)
-		inst.components.workable:SetOnWorkCallback(OnHit)
-		inst.components.workable:SetWorkLeft(4)
+		if data.workable then
+			inst:AddComponent("workable")
+			inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
+			inst.components.workable:SetOnFinishCallback(OnHammered)
+			inst.components.workable:SetOnWorkCallback(OnHit)
+			inst.components.workable:SetWorkLeft(4)
+		end
 		
 		if data.burnable then
-			MakeHauntableWork(inst)
 			MakeLargeBurnable(inst, nil, nil, true)
-			MakeMediumPropagator(inst)
+			inst.components.burnable:SetOnIgniteFn(OnIgnite)
+			inst.components.burnable:SetOnExtinguishFn(OnExtinguish)
+			inst.components.burnable:SetOnBurntFn(OnBurnt)
+			MakeSmallPropagator(inst)
 		end
+		
+		if data.postinit ~= nil then
+			data.postinit(inst)
+		end
+		
+		MakeHauntableWork(inst)
 
 		inst:ListenForEvent("onbuilt", OnBuilt)
 
@@ -130,19 +193,187 @@ end
 
 local constructions =
 {
+	--[[
+	-- Moved to its own prefab due to reasons.
 	-- Fish Hatchery.
 	{
-		name        = "kyno_fishfarmplot_construction",
-		prefab_name = "kyno_fishfarmplot",
-		bank        = "kyno_fishfarmplot_construction",
-		build       = "kyno_fishfarmplot_construction",
-		anim        = "idle",
-		minimapicon = "kyno_fishfarmplot.tex",
-		fx          = "collapse_big",
-		material    = "wood",
-		loot        = {"boards", "boards", "boards", "rope", "rope"},
-		radius      = 5,
-		burnable    = false,
+		name            = "kyno_fishfarmplot_construction",
+		prefab_name     = "kyno_fishfarmplot",
+		bank            = "kyno_fishfarmplot_construction",
+		build           = "kyno_fishfarmplot_construction",
+		anim            = "idle",
+		minimapicon     = "kyno_fishfarmplot.tex",
+		fx              = "collapse_big",
+		material        = "wood",
+		loot            = {"boards", "boards", "boards", "rope", "rope"},
+		radius          = 5,
+		workable        = true,
+		burnable        = false,
+		onhitanim       = true,
+		onplaceanim     = true,
+		customonbuiltfx = false,
+	},
+	]]--
+	
+	-- Anniversary Cake (Construction Empty)
+	{
+		name            = "kyno_hofbirthday_cake_empty_construction",
+		prefab_name     = "kyno_hofbirthday_cake_construction",
+		bank            = "kyno_hofbirthday_cake",
+		build           = "kyno_hofbirthday_cake",
+		anim            = "idle_empty",
+		minimapicon     = "kyno_hofbirthday_cake",
+		fx              = "collapse_big",
+		tags            = { "anniversarycake" },
+		material        = "straw",
+		loot            = TUNING.HOFBIRTHDAY_CAKE_CONSTRUCTION_LOOT,
+		radius          = 1.2,
+		workable        = true,
+		burnable        = false,
+		onhitanim       = false,
+		onplaceanim     = false,
+		customonbuiltfx = false,
+		postinit        = function(inst)
+			inst.SoundEmitter:PlaySound("wintersfeast2019/winters_feast/table/food")
+		end,
+	},
+	
+	-- Anniversary Cake (Construction)
+	{
+		name            = "kyno_hofbirthday_cake_construction",
+		prefab_name     = "kyno_hofbirthday_cake_stage1_construction",
+		bank            = "kyno_hofbirthday_cake",
+		build           = "kyno_hofbirthday_cake",
+		anim            = "construction",
+		minimapicon     = "kyno_hofbirthday_cake",
+		fx              = "collapse_big",
+		tags            = { "anniversarycake" },
+		material        = "straw",
+		nameoverride    = "KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION",
+		loot            = TUNING.HOFBIRTHDAY_CAKE_CONSTRUCTION_LOOT,
+		radius          = 1.2,
+		workable        = true,
+		burnable        = false,
+		onhitanim       = false,
+		onplaceanim     = false,
+		customonbuiltfx = false,
+		postinit        = function(inst)
+			inst.SoundEmitter:PlaySound("dontstarve/common/place_structure_straw")
+		end,
+	},
+	
+	-- Anniversary Cake (Stage 1)
+	{
+		name            = "kyno_hofbirthday_cake_stage1_construction",
+		prefab_name     = "kyno_hofbirthday_cake_stage2_construction",
+		bank            = "kyno_hofbirthday_cake",
+		build           = "kyno_hofbirthday_cake",
+		anim            = "stage1",
+		minimapicon     = "kyno_hofbirthday_cake",
+		fx              = "collapse_big",
+		tags            = { "anniversarycake" },
+		onbuiltfx       = "kyno_hofbirthday_cake_fx_pink",
+		material        = "cloth",
+		nameoverride    = "KYNO_HOFBIRTHDAY_CAKE_STAGE",
+		radius          = 1.2,
+		workable        = false,
+		burnable        = true,
+		onhitanim       = false,
+		onplaceanim     = false,
+		customonbuiltfx = true,
+	},
+	
+	-- Anniversary Cake (Stage 2)
+	{
+		name            = "kyno_hofbirthday_cake_stage2_construction",
+		prefab_name     = "kyno_hofbirthday_cake_stage3_construction",
+		bank            = "kyno_hofbirthday_cake",
+		build           = "kyno_hofbirthday_cake",
+		anim            = "stage2",
+		minimapicon     = "kyno_hofbirthday_cake",
+		fx              = "collapse_big",
+		tags            = { "anniversarycake" },
+		onbuiltfx       = "kyno_hofbirthday_cake_fx_white",
+		material        = "cloth",
+		nameoverride    = "KYNO_HOFBIRTHDAY_CAKE_STAGE",
+		radius          = 1.2,
+		workable        = false,
+		burnable        = true,
+		onhitanim       = false,
+		onplaceanim     = false,
+		customonbuiltfx = true,
+	},
+	
+	-- Anniversary Cake (Stage 3)
+	{
+		name            = "kyno_hofbirthday_cake_stage3_construction",
+		prefab_name     = "kyno_hofbirthday_cake_stage4_construction",
+		bank            = "kyno_hofbirthday_cake",
+		build           = "kyno_hofbirthday_cake",
+		anim            = "stage3",
+		minimapicon     = "kyno_hofbirthday_cake",
+		fx              = "collapse_big",
+		tags            = { "anniversarycake" },
+		material        = "cloth",
+		nameoverride    = "KYNO_HOFBIRTHDAY_CAKE_STAGE",
+		radius          = 1.2,
+		workable        = false,
+		burnable        = true,
+		onhitanim       = false,
+		onplaceanim     = false,
+		customonbuiltfx = false,
+		postinit        = function(inst)
+			local fx = SpawnPrefab("kyno_hofbirthday_cake_fx_orange")
+			fx.Follower:FollowSymbol(inst.GUID, "level2", 0, 0, 0, true)
+		end,
+	},
+	
+	-- Anniversary Cake (Stage 4)
+	{
+		name            = "kyno_hofbirthday_cake_stage4_construction",
+		prefab_name     = "kyno_hofbirthday_cake_stage5_construction",
+		bank            = "kyno_hofbirthday_cake",
+		build           = "kyno_hofbirthday_cake",
+		anim            = "stage4",
+		minimapicon     = "kyno_hofbirthday_cake",
+		fx              = "collapse_big",
+		tags            = { "anniversarycake" },
+		material        = "cloth",
+		nameoverride    = "KYNO_HOFBIRTHDAY_CAKE_STAGE",
+		radius          = 1.2,
+		workable        = false,
+		burnable        = true,
+		onhitanim       = false,
+		onplaceanim     = false,
+		customonbuiltfx = false,
+		postinit        = function(inst)
+			local fx = SpawnPrefab("kyno_hofbirthday_cake_fx_white")
+			fx.Follower:FollowSymbol(inst.GUID, "level2", 0, 0, 0, true)
+		end,
+	},
+	
+	-- Anniversary Cake (Stage 5)
+	{
+		name            = "kyno_hofbirthday_cake_stage5_construction",
+		prefab_name     = "kyno_hofbirthday_cake",
+		bank            = "kyno_hofbirthday_cake",
+		build           = "kyno_hofbirthday_cake",
+		anim            = "stage5",
+		minimapicon     = "kyno_hofbirthday_cake",
+		fx              = "collapse_big",
+		tags            = { "anniversarycake" },
+		material        = "cloth",
+		nameoverride    = "KYNO_HOFBIRTHDAY_CAKE_STAGE",
+		radius          = 1.2,
+		workable        = false,
+		burnable        = true,
+		onhitanim       = false,
+		onplaceanim     = false,
+		customonbuiltfx = false,
+		postinit        = function(inst)
+			local fx = SpawnPrefab("kyno_hofbirthday_cake_fx_brown")
+			fx.Follower:FollowSymbol(inst.GUID, "level3", 0, 0, 0, true)
+		end,
 	},
 }
 

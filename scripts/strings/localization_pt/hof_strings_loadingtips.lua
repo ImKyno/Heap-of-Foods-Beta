@@ -110,7 +110,7 @@ local LOADINGTIPS   =
 	SHARKBOIREWARD  = "Frostjaw está desejando uma refeição requintada e recompensará aqueles que conseguirem satisfazer seu pedido.",
 	GHOSTPIRATE     = "Explorar Naufrágios de tripulações anteriores durante as Noites de Lua Cheia pode ser bem perigoso, já que Fantasmas Piratas podem ser encontrados vagando por lá. Assustador!",
 	HERMITWOBSTER   = "Lagostas Eremitas só podem ser encontradas na Ilha Moon Quay.",
-	SALTEDFISH      = "Peixe Salgado pode ser obtido deixando Peixe Seco secar por períodos mais longos em um Varal de Secagem.",
+	SALTEDFISH      = "Bacalhau pode ser obtido deixando Peixe Seco secar por períodos mais longos em um Varal de Secagem.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

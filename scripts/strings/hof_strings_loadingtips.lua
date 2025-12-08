@@ -110,7 +110,7 @@ local LOADINGTIPS   =
 	SHARKBOIREWARD  = "Frostjaw is craving for a exquisite meal and he will reward those who can accomplish his request.",
 	GHOSTPIRATE     = "Exploring Wrecks of previous crews at Full Moon Nights can be quite dangerous, as Pirate Ghosts can be found roaming around them. Spooky!",
 	HERMITWOBSTER   = "Hermit Wobsters can only be found at the Moon Quay Island.",
-	SALTEDFISH      = "Salted Fish can be acquired by letting Fishy Jerky drying for longer periods on a Drying Rack.",
+	SALTEDFISH      = "Stockfish can be acquired by letting Fishy Jerky drying for longer periods on a Drying Rack.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

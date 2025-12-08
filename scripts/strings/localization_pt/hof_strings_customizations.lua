@@ -64,6 +64,7 @@ STRINGS.UI.CUSTOMIZATIONSCREEN.SWORDFISHES = "Peixe-Espadas"
 -- World Settings
 ------------------------------------------------------------------------------------------------------------
 -- GLOBALSETTINGS
+STRINGS.UI.CUSTOMIZATIONSCREEN.HOFBIRTHDAY = "Aniversário do Amontoado de Comidas"
 STRINGS.UI.CUSTOMIZATIONSCREEN.OCEANHUNTS_SETTING = "Caças de Oceano"
 STRINGS.UI.CUSTOMIZATIONSCREEN.OCEANHUNTALTS_SETTING = "Surpresas nas Caças de Oceano"
 

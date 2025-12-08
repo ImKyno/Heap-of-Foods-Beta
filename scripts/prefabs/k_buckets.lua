@@ -74,9 +74,9 @@ local function emptyfn()
 	inst.components.finiteuses:SetUses(TUNING.KYNO_BUCKET_EMPTY_USES)
 	inst.components.finiteuses:SetOnFinished(inst.Remove)
 	
-	inst:AddComponent("tradable")
-	inst.components.tradable.goldvalue = 1
-	inst.components.tradable.tradefor = { "kyno_sapbucket_installer" }
+	-- inst:AddComponent("tradable")
+	-- inst.components.tradable.goldvalue = 1
+	-- inst.components.tradable.tradefor = { "kyno_sapbucket_installer" }
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
@@ -124,9 +124,9 @@ local function metalfn()
 	inst.components.fillable.showoceanaction = true
 	inst.components.fillable.acceptsoceanwater = true
 	
-	inst:AddComponent("tradable")
-	inst.components.tradable.goldvalue = 1
-	inst.components.tradable.tradefor = { "kyno_sapbucket_installer" }
+	-- inst:AddComponent("tradable")
+	-- inst.components.tradable.goldvalue = 1
+	-- inst.components.tradable.tradefor = { "kyno_sapbucket_installer" }
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
@@ -165,9 +165,9 @@ local function waterfn()
 	
 	inst:AddComponent("inspectable")
 	
-	inst:AddComponent("tradable")
-	inst.components.tradable.goldvalue = 1
-	inst.components.tradable.tradefor = { "kyno_sapbucket_installer" }
+	-- inst:AddComponent("tradable")
+	-- inst.components.tradable.goldvalue = 1
+	-- inst.components.tradable.tradefor = { "kyno_sapbucket_installer" }
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
