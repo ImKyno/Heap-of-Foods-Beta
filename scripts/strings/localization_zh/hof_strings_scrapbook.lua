@@ -107,6 +107,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLUBBER = "降低角色雨露值。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE_MONKEY = "这种食物能解除月湾岛的诅咒。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRAFTING = "这种食物能制造冒险家原型，并无需制作台即可建造物品。\n\n每件手工制品都会消耗他们的一小部分理智。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "食用此食物后，蜜蜂会在一定时间内对你保持友好。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "Increases Max Hunger by 15% for a certain amount of time.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "Increases Max Health by 15% for a certain amount of time.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "Increases Max Sanity by 15% for a certain amount of time.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含防腐粉末的料理可使腐败速率减半，并免除食用变质食物的惩罚。"
@@ -147,6 +150,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "该基地计划建立一个鱼�
 STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "投入海洋时会吸引邪天翁。"
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "一旦设置在海洋中，当鱼类靠近时就会触发，将其捕获。\n\n拾取被捕获的陷阱会将其中的生物放入你的物品栏。\n\n海洋陷阱可用适当的食物作为诱饵。"
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "晾晒时间越长，品质越好。"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CHEER = "Allows the crafting of items from the Heap of Foods Anniversary Event."
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use it to light up the Anniversary Cake and start the party!"
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "可以用种子喂它，让它下蛋。"
@@ -195,3 +200,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.WHALEOCEANCARCASS = "一具开始腐烂的鲸鱼�
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTRADER = "一只孤独的章鱼栖息在浩瀚的海洋中。\n\n海盗章鱼提供奖励以换取鱼类、饰品及特定鱼类加工食品。" 
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTREASURE = "海盗章鱼的宝箱在冒险家们交换时赠予他们。"
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS_FISHBONE = "拾取时召唤帕克白克斯。\n\n帕克白克斯会跟随拥有者. 只要帕克白克斯还活着，鱼的新鲜度就会是黄色的。"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Can be sliced using a Cleaver to obtain Slice of Anniversary Cake. Each Slice has a different flavor and effect.\n\nIncreases sanity of the survivors around it overtime.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Increases sanity of the survivors around it overtime.\n\nCelebrating the 5th Anniversary of Heap of Foods!"

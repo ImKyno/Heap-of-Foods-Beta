@@ -99,9 +99,17 @@ end)
 
 -- For slicing items into something else.
 AddAction("SLICE", STRINGS.ACTIONS.SLICE, function(act)
-	local sliceable = act.target and act.target.components.sliceable or nil
-	
-	if act.invobject and sliceable ~= nil then
+	local target = act.target
+	local sliceable = target and target.components.sliceable or nil
+
+	if sliceable == nil then
+		return false
+	end
+
+	if target:HasTag("sliceable_world") and sliceable ~= nil then
+		sliceable:OnSliceWorld(act.doer)
+		return true
+	elseif act.invobject and sliceable ~= nil then
 		sliceable:OnSlice()
 		act.doer.SoundEmitter:PlaySound("dontstarve/wilson/harvest_sticks")
 		return true
@@ -130,8 +138,8 @@ AddComponentAction("USEITEM", "slicer", function(inst, doer, target, actions, ri
 	local act = target.replica.stackable ~= nil and target.replica.stackable:IsStack() and 
 	(doer.components.playercontroller ~= nil and doer.components.playercontroller:IsControlPressed(CONTROL_FORCE_STACK)) and
 	ACTIONS.SLICESTACK or ACTIONS.SLICE
-	
-	if target:HasTag("sliceable") then
+
+	if target:HasTag("sliceable") or target:HasTag("sliceable_world") then
 		table.insert(actions, act)
 	end
 end)

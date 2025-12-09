@@ -112,6 +112,10 @@ local LOADINGTIPS   =
 	GHOSTPIRATE     = "在月圆时探索前任船员的沉船残骸相当危险，因为海盗幽灵常在沉船周围游荡。真吓人！",
 	HERMITWOBSTER   = "隐士沃布斯特只能在月亮码头岛上找到。",
 	SALTEDFISH      = "可以通过将鱼干放在晾衣架上晾晒更长时间来获得干鱼。",
+	BIRTHDAY5TH     = "Heap of Foods turns 5! Thank you for all these amazing years. And more to come!",
+	BIRTHDAY_CAKE1  = "Celebrate the Heap of Foods 5th Anniversary with a limited time event! Bake and assembly a giant cake, place balloons and party around!",
+	BIRTHDAY_CAKE2  = "The Anniversary Cake can be sliced using a Cleaver, each slice has a different flavor and effect.",
+	BIRTHDAY_CAKE3  = "The Anniversary Cake provides a soothing aura for those around it.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

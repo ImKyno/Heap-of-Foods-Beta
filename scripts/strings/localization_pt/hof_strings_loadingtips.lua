@@ -111,6 +111,10 @@ local LOADINGTIPS   =
 	GHOSTPIRATE     = "Explorar Naufrágios de tripulações anteriores durante as Noites de Lua Cheia pode ser bem perigoso, já que Fantasmas Piratas podem ser encontrados vagando por lá. Assustador!",
 	HERMITWOBSTER   = "Lagostas Eremitas só podem ser encontradas na Ilha Moon Quay.",
 	SALTEDFISH      = "Bacalhau pode ser obtido deixando Peixe Seco secar por períodos mais longos em um Varal de Secagem.",
+	BIRTHDAY5TH     = "O Amontoado de Comidas acaba de completar 5 anos! Muito obrigado por todos esses anos incríveis. E que venham muitos mais!",
+	BIRTHDAY_CAKE1  = "Celebre o 5º Aniversário do Amontoado de Comidas com um evento por tempo limitado! Asse e monte um bolo gigante, coloque balões e festeje sem parar!",
+	BIRTHDAY_CAKE2  = "O Bolo de Aniversário pode ser fatiado usando um Cutelo, cada fatia tem um sabor e efeito diferente.",
+	BIRTHDAY_CAKE3  = "O Bolo de Aniversário emite uma aura reconfortante para quem estiver por perto.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

@@ -14,18 +14,32 @@ local function onslicestack(self)
 	end
 end
 
+local function onsliceableworld(self)
+	if self.canbesliceworld then
+		self.inst:AddTag("sliceable_world")
+	else
+		self.inst:RemoveTag("sliceable_world")
+	end
+end
+
 local Sliceable = Class(function(self, inst)
 	self.inst = inst
 	self.product = nil -- The product your item will be sliced into.
+	self.productfn = nil -- Custom function for the sliced product.
 	self.slicesize = 1 -- The size of your sliced item, if it can be 1,2,3,4 slices etc.
 	self.slicestack = false -- If Cleaver can slice the entire stack of your item. (Unused)
+	
 	self.onslicefn = nil
 	self.onslicestackfn = nil
+	
+	self.onsliceworld = false
+	self.onsliceworldfn = nil
 end,
 nil,
 {
 	canbesliced = onsliceable,
 	canslicestack = onslicestack,
+	canbesliceworld = onsliceableworld,
 })
 
 function Sliceable:SetOnSliceFn(fn)
@@ -36,8 +50,20 @@ function Sliceable:SetOnSliceStackFn(fn)
 	self.onslicestackfn = fn
 end
 
+function Sliceable:SetWorldSlice(bool)
+	self.onsliceworld = bool
+end
+
+function Sliceable:SetOnWorldSliceFn(fn)
+	self.onsliceworldfn = fn
+end
+
 function Sliceable:SetProduct(product, number)
 	self.product = product
+end
+
+function Sliceable:SetProductFn(fn)
+	self.productfn = fn
 end
 
 function Sliceable:SetSliceSize(number)
@@ -106,6 +132,35 @@ function Sliceable:OnSliceStack(inst)
 	end
 	
 	item:Remove()
+end
+
+function Sliceable:OnSliceWorld(doer)
+	local inst = self.inst
+	local item = nil
+	
+	if self.productfn ~= nil then
+		item = self.productfn(inst)
+	elseif self.product ~= nil then
+		item = self.product
+    end
+
+	if item == nil then
+		return
+	end
+
+	local slice = SpawnPrefab(item)
+
+	if slice ~= nil then
+		if doer ~= nil and doer.components.inventory ~= nil then
+			doer.components.inventory:GiveItem(slice, nil, self.inst:GetPosition())
+		else
+			LaunchAt(slice, self.inst, nil, 1, 1)
+		end
+	end
+
+    if self.onsliceworldfn ~= nil then
+		self.onsliceworldfn(inst)
+	end
 end
 
 return Sliceable

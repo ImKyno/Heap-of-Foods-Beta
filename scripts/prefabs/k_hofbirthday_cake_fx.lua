@@ -1,6 +1,9 @@
 local assets =
 {
-    Asset("ANIM", "anim/cavein_dust_fx.zip"),
+	Asset("anim", "anim/boatrace_start.zip"),
+	Asset("ANIM", "anim/carnival_sparkle.zip"),
+	Asset("ANIM", "anim/carnival_streamer.zip"),
+	Asset("ANIM", "anim/cavein_dust_fx.zip"),
 }
 
 local function OnInit(inst)
@@ -46,6 +49,98 @@ local function fn()
 	return inst
 end
 
+local function sparklefx()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddFollower()
+	inst.entity:AddNetwork()
+
+	inst.AnimState:SetBank("carnival_sparkle")
+	inst.AnimState:SetBuild("carnival_sparkle")
+	inst.AnimState:PlayAnimation("sparkle")
+	inst.AnimState:SetFinalOffset(3)
+
+	inst:AddTag("FX")
+	inst:AddTag("NOCLICK")
+	
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst.persists = false
+
+	inst:ListenForEvent("animover", inst.Remove)
+
+	return inst
+end
+
+local function streamerfx()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddFollower()
+	inst.entity:AddNetwork()
+	
+	inst.AnimState:SetScale(1.5, 1.5, 1.5)
+
+	inst.AnimState:SetBank("carnival_streamer")
+	inst.AnimState:SetBuild("carnival_streamer")
+	inst.AnimState:PlayAnimation("streamer")
+	inst.AnimState:SetFinalOffset(3)
+
+	inst:AddTag("FX")
+	inst:AddTag("NOCLICK")
+	
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst.persists = false
+
+	inst:ListenForEvent("animover", inst.Remove)
+
+	return inst
+end
+
+local function fireworksfx()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddFollower()
+	inst.entity:AddNetwork()
+
+	inst.AnimState:SetBank("boatrace_start")
+	inst.AnimState:SetBuild("boatrace_start")
+	inst.AnimState:PlayAnimation("fireworks")
+	inst.AnimState:SetFinalOffset(3)
+
+	inst:AddTag("FX")
+	inst:AddTag("NOCLICK")
+	
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst.persists = false
+
+	inst:ListenForEvent("animover", inst.Remove)
+
+	return inst
+end
+
 local function whitefx()
 	local inst = fn()
 	
@@ -81,4 +176,7 @@ end
 return Prefab("kyno_hofbirthday_cake_fx_white", whitefx, assets),
 Prefab("kyno_hofbirthday_cake_fx_pink", pinkfx, assets),
 Prefab("kyno_hofbirthday_cake_fx_orange", orangefx, assets),
-Prefab("kyno_hofbirthday_cake_fx_brown", brownfx, assets)
+Prefab("kyno_hofbirthday_cake_fx_brown", brownfx, assets),
+Prefab("kyno_hofbirthday_cake_fx_sparkle", sparklefx, assets),
+Prefab("kyno_hofbirthday_cake_fx_streamer", streamerfx, assets),
+Prefab("kyno_hofbirthday_cake_fx_fireworks", fireworksfx, assets)

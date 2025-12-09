@@ -1,7 +1,7 @@
 -- Multiple buffs combined into one.
 -- Speed, Sleep, Defense, Strength, Fear, Fire Immunity, Fishing, Frog, Haste, Eater
 -- Work, Pirate, Worm, Crab, Amphibian, Planar Defense, Super Jellybeans, Moisture,
--- Poison Immunity, Acid Immunity, One Man Band
+-- Poison Immunity, Acid Immunity, One Man Band, Temperature, Bee Friendly
 local banddt = 1
 local FOLLOWER_ONEOF_TAGS = {"pig"}
 local FOLLOWER_CANT_TAGS = {"werepig", "merm", "player"}
@@ -241,6 +241,17 @@ local function OnAttached(inst, target)
 		EnableBand(target)
 	end
 	
+	-- Temperature
+	if target:HasTag("player") and target.components.temperature ~= nil then
+		target.components.temperature:SetFreezingHurtRate(TUNING.WILSON_HEALTH / 180)
+		target.components.temperature:SetOverheatHurtRate(TUNING.WILSON_HEALTH / 180)
+	end
+	
+	-- Bee Friendly
+	if not target:HasTag("beefriendly") then
+		target:AddTag("beefriendly")
+	end
+	
 	inst:ListenForEvent("death", function()
 		inst.components.debuff:Stop()
 	end, target)
@@ -349,6 +360,20 @@ local function OnDetached(inst, target)
 		return
 	else
 		DisableBand(target)
+	end
+	
+	-- Temperature
+	if target:HasTag("player") and target.components.temperature ~= nil then
+		target.components.temperature:SetFreezingHurtRate(TUNING.WILSON_HEALTH / TUNING.FREEZING_KILL_TIME)
+		target.components.temperature:SetOverheatHurtRate(TUNING.WILSON_HEALTH / TUNING.FREEZING_KILL_TIME)
+	elseif target:HasTag("bernieowner") and target.components.temperature ~= nil then
+		target.components.temperature:SetFreezingHurtRate(TUNING.WILSON_HEALTH / TUNING.WILLOW_FREEZING_KILL_TIME)
+		target.components.temperature:SetOverheatHurtRate(TUNING.WILSON_HEALTH / TUNING.WILLOW_OVERHEAT_KILL_TIME)
+	end
+	
+	-- Bee Friendly
+	if target:HasTag("beefriendly") then
+		target:RemoveTag("beefriendly")
 	end
 	
 	-- Slow down for a bit after using it.
@@ -535,6 +560,20 @@ local function OnExtended(inst, target)
 	else
 		DisableBand(target)
 		EnableBand(target)
+	end
+	
+	-- Temperature
+	if target:HasTag("player") and target.components.temperature ~= nil then
+		target.components.temperature:SetFreezingHurtRate(TUNING.WILSON_HEALTH / 180)
+		target.components.temperature:SetOverheatHurtRate(TUNING.WILSON_HEALTH / 180)
+	end
+	
+	-- Bee Friendly
+	if target:HasTag("beefriendly") then
+		target:RemoveTag("beefriendly")
+		target:AddTag("beefriendly")
+	else
+		target:AddTag("beefriendly")
 	end
 end
 

@@ -107,6 +107,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLUBBER = "Zmniejsza wilgotność ocal
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE_MONKEY = "To jedzenie może zdjąć klątwę Wyspy Księżycowej Przystani."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRAFTING = "To jedzenie pozwala ocalałemu tworzyć prototypy i wytwarzać przedmioty bez użycia stacji rzemieślniczej.\n\nKażdy wytworzony przedmiot zużywa niewielką ilość jego zdrowia psychicznego."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "Zjedzenie tego jedzenia sprawi, że wszystkie pszczoły będą przez pewien czas przyjaźnie nastawione do ciebie."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "Zwiększa maksymalny głód o 15% na pewien czas.\n\nŚwiętując 5. rocznicę Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "Zwiększa maksymalne zdrowie o 15% na pewien czas.\n\nŚwiętując 5. rocznicę Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "Zwiększa maksymalną poczytalność o 15% na pewien czas.\n\nŚwiętując 5. rocznicę Heap of Foods!"
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Może być dodany do jedzenia w garnku za pomocą przenośnej stacji przypraw.\n\nJedzenie przyprawione Preserver Powder zmniejsza czas psucia się o połowę i neguje kary za zepsute jedzenie."
@@ -147,6 +150,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "Plany fundamentów dla hodowli 
 STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "Przyciąga Malbatrossa, gdy zostanie wrzucony do oceanu."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Po ustawieniu w oceanie, uruchamia się, gdy ryba znajdzie się w pobliżu, łapiąc ją.\n\nZebranie złapanej pułapki umieszcza stworzenie w twoim ekwipunku.\n\nPułapki oceaniczne można przynęcić odpowiednim jedzeniem."
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Pozostawienie do wyschnięcia na dłuższy czas jeszcze bardziej poprawi jego jakość."
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CHEER = "Umożliwia tworzenie przedmiotów z Wydarzenia Rocznicowego Heap of Foods."
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Użyj, aby zapalić Tort Rocznicowy i rozpocząć imprezę!"
 
 -- Stworzenia.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Można karmić nasionami, aby złożyła jajko."
@@ -195,3 +200,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.WHALEOCEANCARCASS = "Szczątki wieloryba, które z
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTRADER = "Samotna ośmiornica żyjąca na rozległym oceanie.\n\nYaarctopus oferuje nagrody w zamian za Ryby, Błyskotki i niektóre Przygotowane Potrawy z Ryb."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTREASURE = "Skrzynia Yaarctopusa wręczana ocalałym podczas wymian."
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS_FISHBONE = "Przywołuje Packim Baggims po podniesieniu.\n\nPackim Baggims podąża za właścicielem. Dopóki Packim Baggims żyje, kolor ryby będzie pomarańczowy."
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Można pokroić Tasakiem, aby otrzymać Kawałek Tortu Rocznicowego. Każdy kawałek ma inny smak i efekt.\n\nStopniowo zwiększa poczytalność ocalałych w pobliżu.\n\nŚwiętujemy 5. Rocznicę Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Stopniowo zwiększa poczytalność ocalałych w pobliżu.\n\nŚwiętujemy 5. Rocznicę Heap of Foods!"

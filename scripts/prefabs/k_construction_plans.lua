@@ -151,8 +151,10 @@ local function MakeConstructionPlan(data)
 		inst:AddComponent("inspectable")
 		
 		inst:AddComponent("lootdropper")
-		inst.components.lootdropper:SetLoot(data.loot)
 		inst.components.lootdropper.spawn_loot_inside_prefab = true
+		if data.loot then
+			inst.components.lootdropper:SetLoot(data.loot)
+		end
 		
 		inst:AddComponent("constructionsite")
 		inst.components.constructionsite:SetConstructionPrefab("construction_container")
@@ -226,7 +228,6 @@ local constructions =
 		fx              = "collapse_big",
 		tags            = { "anniversarycake" },
 		material        = "straw",
-		loot            = TUNING.HOFBIRTHDAY_CAKE_CONSTRUCTION_LOOT,
 		radius          = 1.2,
 		workable        = true,
 		burnable        = false,
@@ -250,7 +251,6 @@ local constructions =
 		tags            = { "anniversarycake" },
 		material        = "straw",
 		nameoverride    = "KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION",
-		loot            = TUNING.HOFBIRTHDAY_CAKE_CONSTRUCTION_LOOT,
 		radius          = 1.2,
 		workable        = true,
 		burnable        = false,

@@ -107,6 +107,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLUBBER = "Reduz a umidade do sobreviv
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE_MONKEY = "Esta comida pode quebrar a maldição da Ilha da Lua Quay."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRAFTING = "Esta comida permite que um sobrevivente crie protótipos e construa itens sem precisar de uma estação de criação.\n\nCada item criado consome uma pequena quantidade de sanidade."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "Comer este alimento fará com que as abelhas fiquem amigáveis com você por um determinado período."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "Aumenta a Fome Máxima em 15% por um certo período de tempo.\n\nComemorando o 5º aniversário do Amontoado de Comidas!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "Aumenta a Vida Máxima em 15% por um certo período de tempo.\n\nComemorando o 5º aniversário do Amontoado de Comidas!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "Aumenta a Sanidade Máxima em 15% por um certo período de tempo.\n\nComemorando o 5º aniversário do Amontoado de Comidas!"
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Pó Conservante reduz pela metade o tempo de deterioração e anula penalidades de comida estragada."
@@ -147,6 +150,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "Os planos de fundação para um
 STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "Atrai o Malbatross quando lançado no oceano."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Uma vez colocado no oceano, será ativado quando um peixe se aproximar, capturando-o.\n\nColetar uma armadilha capturada colocará a criatura no seu inventário.\n\nArmadilhas do oceano podem ser iscas com alimento apropriado."
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Deixar secar por períodos mais longos melhorará ainda mais a sua qualidade."
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CHEER = "Permite fabricar itens do Evento de Aniversário do Amontoado de Comidas."
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use para acender o Bolo de Aniversário e começar a festa!"
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Pode ser alimentada com sementes para botar um ovo."
@@ -195,3 +200,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.WHALEOCEANCARCASS = "Um cadáver de baleia que com
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTRADER = "Um polvo solitário vivendo no vasto oceano.\n\nO Yaarctopus oferece recompensas em troca de Peixes, Bugigangas e certos Alimentos Preparados de Peixe."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTREASURE = "O baú do Yaarctopus dado aos sobreviventes durante suas trocas."
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS_FISHBONE = "Invoca o Saquinho Pacotinho ao ser coletado.\n\nO Saquinho Pacotinho seguirá quem o possui. Enquanto estiver vivo, a cor do peixe será laranja."
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Pode ser fatiado usando um Cutelo para obter Fatia de Bolo de Aniversário. Cada fatia tem um sabor e efeito diferente.\n\nAumenta a sanidade dos sobreviventes ao seu redor com o tempo.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Aumenta a sanidade dos sobreviventes ao seu redor com o tempo.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"

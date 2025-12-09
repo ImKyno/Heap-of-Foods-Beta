@@ -836,6 +836,16 @@ CONSTRUCTION_PLANS["kyno_fishfarmplot_construction"] =
 AddDeconstructRecipe("kyno_fishfarmplot", {Ingredient("rocks", 20)})
 
 -- HoF Anniversary Event.
+AddRecipe2("kyno_hofbirthday_candle", {Ingredient("kyno_hofbirthday_cheer", 1), Ingredient("twigs", 1), Ingredient("beeswax", 1)}, TECH.HOFBIRTHDAY,
+	{
+		numtogive           = 5,
+		hint_msg            = "NEEDSHOFBIRTHDAY",
+		atlas               = ModAtlas,
+		image               = "kyno_hofbirthday_candle.tex",
+	},
+	{"SPECIAL_EVENT", "LIGHT"}
+)
+
 AddRecipe2("kyno_hofbirthday_cake_empty_construction", {Ingredient("kyno_hofbirthday_cheer", 10), Ingredient("cutstone", 2)}, TECH.HOFBIRTHDAY,
 	{
 		min_spacing         = 2,
@@ -847,14 +857,15 @@ AddRecipe2("kyno_hofbirthday_cake_empty_construction", {Ingredient("kyno_hofbirt
 	{"SPECIAL_EVENT", "COOKING"}
 )
 
-AddRecipe2("kyno_hofbirthday_candle", {Ingredient("kyno_hofbirthday_cheer", 1), Ingredient("twigs", 1), Ingredient("beeswax", 1)}, TECH.HOFBIRTHDAY,
+AddRecipe2("kyno_hofbirthday_balloons", {Ingredient("kyno_hofbirthday_cheer", 2), Ingredient("log", 2), Ingredient("rope", 2)}, TECH.HOFBIRTHDAY,
 	{
-		numtogive           = 5,
+		min_spacing         = 1,
+		placer              = "kyno_hofbirthday_balloons_placer",
 		hint_msg            = "NEEDSHOFBIRTHDAY",
 		atlas               = ModAtlas,
-		image               = "kyno_hofbirthday_candle.tex",
+		image               = "kyno_hofbirthday_balloons.tex",
 	},
-	{"SPECIAL_EVENT", "LIGHT"}
+	{"SPECIAL_EVENT", "STRUCTURES", "DECOR"}
 )
 
 -- I would like to let players use alternative ingredients

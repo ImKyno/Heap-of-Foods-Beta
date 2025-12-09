@@ -107,6 +107,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLUBBER = "Decreases the moisture off 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CURSE_MONKEY = "This food can break off the Moon Quay Island curse."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRAFTING = "This food can make a survivor prototype and build items without the need of a crafting station.\n\nEach crafted item consumes a small amount of their sanity."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "Eating this food will make Bees friendly towards you for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "Increases Max Hunger by 15% for a certain amount of time.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "Increases Max Health by 15% for a certain amount of time.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "Increases Max Sanity by 15% for a certain amount of time.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
@@ -147,6 +150,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "The foundation plans for a Fish
 STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "Attracts the Malbatross when thrown into the ocean."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Once set on the ocean, it will trigger when a fish move nearby, capturing them.\n\nCollecting a captured trap will put the creature inside your inventory.\n\nOcean Traps can be baited with appropriated food."
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Leaving it to dry for longer periods will further enhance its quality."
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CHEER = "Allows the crafting of items from the Heap of Foods Anniversary Event."
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use it to light up the Anniversary Cake and start the party!"
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Can be feed with seeds to lay down an egg."
@@ -195,3 +200,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.WHALEOCEANCARCASS = "A whale carcass that has begu
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTRADER = "A lonely octopus living in the vast ocean.\n\nYaarctopus offers rewards in exchange for Fishes, Trinkets and certain Fish Prepared Foods." 
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTREASURE = "Yaarctopus' chest given to survivors during their exchanges."
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS_FISHBONE = "Summons Packim Baggims when picked up.\n\nPackim Baggims will follow the holder. While Packim Baggims is alive, the fish color will be orange."
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Can be sliced using a Cleaver to obtain Slice of Anniversary Cake. Each Slice has a different flavor and effect.\n\nIncreases sanity of the survivors around it overtime.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Increases sanity of the survivors around it overtime.\n\nCelebrating the 5th Anniversary of Heap of Foods!"

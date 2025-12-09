@@ -619,11 +619,11 @@ end))
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SLICE, function(inst, action)
 	local target = action.target or action.invobject
 	
-	if target:HasTag("sliceable") and not action.invobject:HasTag("professionalslicer") then
+	if target:HasAnyTag("sliceable", "sliceable_world") and not action.invobject:HasTag("professionalslicer") then
 		return inst:HasTag("fasthands") and "domediumaction" or "dolongaction"
 	end
 	
-	if target:HasTag("sliceable") and action.invobject:HasTag("professionalslicer") then
+	if target:HasAnyTag("sliceable", "sliceable_world") and action.invobject:HasTag("professionalslicer") then
 		return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
 	end
 end))
@@ -631,11 +631,11 @@ end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SLICE, function(inst, action)
 	local target = action.target or action.invobject
 	
-	if target:HasTag("sliceable") and not action.invobject:HasTag("professionalslicer") then
+	if target:HasAnyTag("sliceable", "sliceable_world") and not action.invobject:HasTag("professionalslicer") then
 		return inst:HasTag("fasthands") and "domediumaction" or "dolongaction"
 	end
 	
-	if target:HasTag("sliceable") and action.invobject:HasTag("professionalslicer") then
+	if target:HasAnyTag("sliceable", "sliceable_world") and action.invobject:HasTag("professionalslicer") then
 		return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
 	end
 end))

@@ -903,6 +903,8 @@ local function crabmeatfn()
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_crabmeat_cooked"
 
+	MakeSmallBurnable(inst)
+	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
@@ -1026,6 +1028,8 @@ local function crabkingmeatfn()
 	
 	inst:ListenForEvent("on_landed", WaterIdle)
 
+	MakeSmallBurnable(inst)
+	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst

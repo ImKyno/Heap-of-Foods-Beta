@@ -1078,6 +1078,16 @@ AddComponentPostInit("container", function(self)
 end)
 
 -- Get Anniversary Cheer when cooking.
+local function GetBaseFoodPrefab(prefab)
+	local spice_pos = prefab:find("_spice_")
+	
+	if spice_pos then
+		return prefab:sub(1, spice_pos - 1)
+	end
+	
+	return prefab
+end
+
 AddComponentPostInit("stewer", function(self)
 	local _Harvest = self.Harvest
 
@@ -1102,7 +1112,9 @@ AddComponentPostInit("stewer", function(self)
             harvester.components.inventory.GiveItem = _GiveItem
 
 			if result and loot_captured then
-				if not TUNING.HOFBIRTHDAY_BLOCKED_RECIPES[loot_captured.prefab] and _G.IsSpecialEventActive(_G.SPECIAL_EVENTS.HOFBIRTHDAY)
+				local base_loot = GetBaseFoodPrefab(loot_captured.prefab) -- Blocks spiced foods.
+				
+				if not TUNING.HOFBIRTHDAY_BLOCKED_RECIPES[base_loot] and _G.IsSpecialEventActive(_G.SPECIAL_EVENTS.HOFBIRTHDAY)
 				and math.random() <= TUNING.HOFBIRTHDAY_CHEER_CHANCE then
 					inv = harvester.components.inventory
 					local cheer = SpawnPrefab("kyno_hofbirthday_cheer")

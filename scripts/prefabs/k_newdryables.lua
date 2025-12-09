@@ -137,6 +137,9 @@ local function meat_fn(bank, build, anim, meat_name)
 
     inst:AddComponent("perishable")
 	inst.components.perishable:StartPerishing()
+	
+	MakeSmallBurnable(inst)
+    MakeSmallPropagator(inst)
 
     return inst
 end
