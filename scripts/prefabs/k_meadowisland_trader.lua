@@ -8,6 +8,10 @@ local assets =
     Asset("ANIM", "anim/merm_trader1_build.zip"),
 	Asset("ANIM", "anim/kyno_meadowisland_trader_build.zip"),
 	
+	-- Anniversary Event.
+	Asset("ANIM", "anim/kyno_hofbirthday_merm_build.zip"),
+	Asset("ANIM", "anim/kyno_hofbirthday_merm_trader_build.zip"),
+	
 	Asset("SOUND", "sound/merm.fsb"),
 	
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
@@ -76,7 +80,6 @@ local WARES                             =
 	
 	RANDOM_ULTRARARES                   =
 	{
-		-- TO DO: Sharkuttery Board
 		-- TO DO: Coffee Machine Kit
 		{
 			["kyno_bottlecap"]          = { recipe = "meadowislandtrader_kyno_bottlecap",         min = 3,  max = 6  },
@@ -263,7 +266,7 @@ local function OnTimerDone(inst, data)
 			local x, y, z = inst.Transform:GetWorldPosition()
 			
 			if IsAnyPlayerInRangeSq(x, y, z, PLAYER_CAMERA_SEE_DISTANCE_SQ, true) then
-				-- A nearby alive player is too close let us reschedule the timer.
+				-- A nearby alive player is too close, let us reschedule the timer.
 				inst.components.timer:StartTimer("refreshwares", 5)
 			else
 				inst:RerollWares()
@@ -358,8 +361,8 @@ local function OnWorldInit(inst)
 	
 	-- Anniversary Event.
 	if IsSpecialEventActive(SPECIAL_EVENTS.HOFBIRTHDAY) then
-		-- inst.AnimState:SetBuild("kyno_hofbirthday_merm_build")
-		-- inst.AnimState:AddOverrideBuild("kyno_hofbirthday_meadowisland_trader_build")	
+		inst.AnimState:SetBuild("kyno_hofbirthday_merm_build")
+		inst.AnimState:AddOverrideBuild("kyno_hofbirthday_merm_trader_build")
 	end
 end
 

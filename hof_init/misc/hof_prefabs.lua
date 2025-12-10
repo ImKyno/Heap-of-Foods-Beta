@@ -92,6 +92,7 @@ PrefabFiles =
 	"k_hofbirthday_candle",
 	"k_hofbirthday_cheer",
 	"k_hofbirthday_foods",
+	"k_hofbirthday_hats",
 	"k_hofbirthday_popcornmachine",
 	"k_humanmeat",
 	"k_island_marker",

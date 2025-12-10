@@ -44,6 +44,7 @@ local function MakeBirthdayFoods(data)
 		end
 	
 		inst:AddComponent("inspectable")
+		inst:AddComponent("tradable")
 
 		inst:AddComponent("inventoryitem")
 		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

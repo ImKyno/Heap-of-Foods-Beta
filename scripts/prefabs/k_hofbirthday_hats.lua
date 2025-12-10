@@ -1,7 +1,7 @@
 local function MakeHat(data)
 	local assets = 
 	{
-		Asset("ANIM", "anim/"..data.name..".zip"),
+		Asset("ANIM", "anim/"..data.build..".zip"),
 	
 		Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 		Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -9,7 +9,7 @@ local function MakeHat(data)
 	}
 
 	local function OnEquip(inst, owner, from_ground)
-		owner.AnimState:OverrideSymbol("swap_hat", "hat_birthday", "swap_hat")
+		owner.AnimState:OverrideSymbol("swap_hat", data.build, "swap_hat")
 	
 		owner.AnimState:Show("HAT")
 		owner.AnimState:Show("HAIR_HAT")
@@ -91,8 +91,8 @@ local hats =
 	-- Sammy's Unique Anniversary Hat
 	{
 		name      = "kyno_hofbirthday_sammyhat",
-		bank      = "hat_kyno_hofbirthday_sammy",
-		build     = "kyno_hofbirthday_sammyhat",
+		bank      = "hofbirthday_sammyhat",
+		build     = "hat_hofbirthday_sammy",
 		imagename = "kyno_hofbirthday_sammyhat",
 		
 	},
@@ -100,10 +100,10 @@ local hats =
 	-- We started doing the event on the 5th Anniversary, so its like the first.
 	-- 5th Anniversary (Hat 1)
 	{
-		name      = "kyno_hofbirthday_5_hat",
-		bank      = "hat_kyno_hofbirthday_5",
-		build     = "kyno_hofbirthday_5_hat",
-		imagename = "kyno_hofbirthday_5_hat",
+		name      = "kyno_hofbirthday_5hat",
+		bank      = "hofbirthday_5hat",
+		build     = "hat_hofbirthday_5",
+		imagename = "kyno_hofbirthday_5hat",
 	},
 }
 

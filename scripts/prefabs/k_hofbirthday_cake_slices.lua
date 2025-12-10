@@ -36,6 +36,8 @@ local function MakeCakeSlice(data)
 		if not TheWorld.ismastersim then
 			return inst
 		end
+		
+		inst:AddComponent("tradable")
 	
 		inst:AddComponent("inspectable")
 		inst.components.inspectable.nameoverride = "KYNO_HOFBIRTHDAY_CAKE_SLICE"
