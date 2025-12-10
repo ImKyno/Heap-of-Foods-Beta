@@ -2,6 +2,9 @@ local assets =
 {
 	Asset("ANIM", "anim/kyno_octopusking.zip"),
 	
+	-- Anniversary Event.
+	Asset("ANIM", "anim/kyno_hofbirthday_octopusking.zip"),
+	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 	
@@ -241,6 +244,13 @@ local function OnHaunt(inst, haunter)
 	return false
 end
 
+local function OnWorldInit(inst)
+	-- Anniversary Event.
+	if IsSpecialEventActive(SPECIAL_EVENTS.HOFBIRTHDAY) then
+		inst.AnimState:OverrideSymbol("octo_hat", "kyno_hofbirthday_octopusking", "octo_hat")
+	end
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -288,6 +298,8 @@ local function fn()
 	inst.components.trader:SetAcceptTest(AcceptTest)
 	inst.components.trader.onaccept = OnGetItemFromPlayer
 	inst.components.trader.onrefuse = OnRefuseItem
+	
+	inst:DoTaskInTime(0, OnWorldInit)
 	
 	-- Don't sleep on Lights Out worlds.
 	inst:ListenForEvent("clocksegschanged", function(world, data)

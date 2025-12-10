@@ -9,8 +9,8 @@ local assets =
 	Asset("ANIM", "anim/kyno_meadowisland_trader_build.zip"),
 	
 	-- Anniversary Event.
-	Asset("ANIM", "anim/kyno_hofbirthday_merm_build.zip"),
-	Asset("ANIM", "anim/kyno_hofbirthday_merm_trader_build.zip"),
+	-- Asset("ANIM", "anim/kyno_hofbirthday_merm_build.zip"),
+	-- Asset("ANIM", "anim/kyno_hofbirthday_merm_trader_build.zip"),
 	
 	Asset("SOUND", "sound/merm.fsb"),
 	
@@ -361,8 +361,8 @@ local function OnWorldInit(inst)
 	
 	-- Anniversary Event.
 	if IsSpecialEventActive(SPECIAL_EVENTS.HOFBIRTHDAY) then
-		-- inst.AnimState:SetBuild("kyno_hofbirthday_merm_build")
-		inst.AnimState:AddOverrideBuild("kyno_hofbirthday_merm_trader_build")
+		-- inst.AnimState:AddOverrideBuild("kyno_hofbirthday_merm_trader_build")
+		inst.AnimState:OverrideSymbol("swap_hat", "hat_hofbirthday_sammy", "swap_hat")
 	end
 end
 

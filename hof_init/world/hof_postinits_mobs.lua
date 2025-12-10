@@ -704,6 +704,39 @@ end
 AddPrefabPostInit("bee", BeePostInit)
 AddPrefabPostInit("killerbee", BeePostInit)
 
+-- Some NPCs changes hat during Anniversary Event.
+local function PigKingPostInit(inst)
+	local function OnWorldInit(inst)
+		if _G.IsSpecialEventActive(_G.SPECIAL_EVENTS.HOFBIRTHDAY) then
+			inst.AnimState:OverrideSymbol("pigking_headleaves", "kyno_hofbirthday_pigking", "pigking_headleaves")
+		end
+	end
+	
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:DoTaskInTime(0, OnWorldInit)
+end
+
+AddPrefabPostInit("pigking", PigKingPostInit)
+
+local function MonkeyQueenPostInit(inst)
+	local function OnWorldInit(inst)
+		if _G.IsSpecialEventActive(_G.SPECIAL_EVENTS.HOFBIRTHDAY) then
+			inst.AnimState:AddOverrideBuild("kyno_hofbirthday_monkey_queen")
+		end
+	end
+	
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:DoTaskInTime(0, OnWorldInit)
+end
+
+AddPrefabPostInit("monkeyqueen", MonkeyQueenPostInit)
+
 -- Leonidas remember me to not put LootTables inside postinit again, otherwise it will 
 -- increase the drop by +1 each time the entity spawns.
 local function ApplyLootTables()
