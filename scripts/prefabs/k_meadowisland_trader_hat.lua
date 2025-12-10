@@ -12,11 +12,14 @@ local function OnEquip(inst, owner, from_ground)
 	
 	owner.AnimState:Show("HAT")
 	owner.AnimState:Show("HAIR_HAT")
-	owner.AnimState:Show("HEAD_HAT")
 	
 	owner.AnimState:Hide("HAIR")
 	owner.AnimState:Hide("HAIR_NOHAT")
-	owner.AnimState:Hide("HEAD")
+	
+	if owner.isplayer then
+		owner.AnimState:Show("HEAD_HAT")
+		owner.AnimState:Hide("HEAD")
+	end
 	
 	if inst.components.fueled ~= nil then
 		inst.components.fueled:StartConsuming()
@@ -32,11 +35,14 @@ local function OnUnequip(inst, owner, from_ground)
 	
 	owner.AnimState:Hide("HAT")
 	owner.AnimState:Hide("HAIR_HAT")
-	owner.AnimState:Hide("HEAD_HAT")
 	
 	owner.AnimState:Show("HAIR")
 	owner.AnimState:Show("HAIR_NOHAT")
-	owner.AnimState:Show("HEAD")
+
+	if owner.isplayer then
+		owner.AnimState:Show("HEAD")
+		owner.AnimState:Hide("HEAD_HAT")
+	end
 	
 	if inst.components.fueled ~= nil then
 		inst.components.fueled:StopConsuming()

@@ -115,6 +115,7 @@ local LOADINGTIPS   =
 	BIRTHDAY_CAKE1  = "Celebre o 5º Aniversário do Amontoado de Comidas com um evento por tempo limitado! Asse e monte um bolo gigante, coloque balões e festeje sem parar!",
 	BIRTHDAY_CAKE2  = "O Bolo de Aniversário pode ser fatiado usando um Cutelo, cada fatia tem um sabor e efeito diferente.",
 	BIRTHDAY_CAKE3  = "O Bolo de Aniversário emite uma aura reconfortante para quem estiver por perto.",
+	BIRTHDAY_CHEER  = "Durante o Evento de Aniversário do Amontoado de Comidas, o Espirito de Aniversário pode ser obtido Cozinhando, Fermentando ou Temperando alimentos enquanto estiver usando um Chapéu de Aniversário.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

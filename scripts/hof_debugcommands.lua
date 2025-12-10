@@ -783,3 +783,55 @@ local function SpawnSammyWagon()
 		end
 	end
 ]]--
+
+function c_hoftestclothing(item)
+	local player = ConsoleCommandPlayer()
+    
+	if player ~= nil then
+		local prefabs = 
+		{
+			"wilson", 
+			"willow", 
+			"wolfgang", 
+			"wendy", 
+			"wx78", 
+			"wickerbottom", 
+			"woodie", 
+			"waxwell", 
+			"wes", 
+			"wathgrithr", 
+			"webber", 
+			"winona",
+			"wortox", 
+			"wormwood", 
+			"warly", 
+			"wurt", 
+			"walter", 
+			"wanda",
+		}
+
+		local columns = 3
+		local spacing = 2
+		local offset  = 4
+
+		local px, py, pz = player.Transform:GetWorldPosition()
+		local facing_angle = player.Transform:GetRotation() * DEGREES
+
+		local ox = math.cos(facing_angle) * offset
+		local oz = -math.sin(facing_angle) * offset
+
+		for i, prefab in ipairs(prefabs) do
+			local row = math.floor((i - 1) / columns)
+			local col = (i - 1) % columns
+
+			local x = px + ox + col * spacing
+			local z = pz + oz + row * spacing
+
+			local character = c_spawn(prefab)
+			character.Transform:SetPosition(x, py, z)
+
+			local equipment = c_spawn(item)
+			character.components.inventory:Equip(equipment)
+		end
+	end
+end

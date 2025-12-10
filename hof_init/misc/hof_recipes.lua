@@ -836,6 +836,16 @@ CONSTRUCTION_PLANS["kyno_fishfarmplot_construction"] =
 AddDeconstructRecipe("kyno_fishfarmplot", {Ingredient("rocks", 20)})
 
 -- Anniversary Event.
+AddRecipe2("kyno_hofbirthday_5hat", {}, TECH.HOFBIRTHDAY,
+	{
+		hint_msg           = "NEEDSHOFBIRTHDAY",
+		description        = "kyno_hofbirthday_hat",
+		atlas              = ModAtlas,
+		image              = "kyno_hofbirthday_5hat.tex",
+	},
+	{"SPECIAL_EVENT", "CLOTHING"}
+)
+
 AddRecipe2("kyno_hofbirthday_candle", {Ingredient("kyno_hofbirthday_cheer", 1), Ingredient("twigs", 1), Ingredient("beeswax", 1)}, TECH.HOFBIRTHDAY,
 	{
 		numtogive           = 5,

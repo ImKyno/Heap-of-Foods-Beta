@@ -1115,7 +1115,7 @@ AddComponentPostInit("stewer", function(self)
 				local base_loot = GetBaseFoodPrefab(loot_captured.prefab) -- Blocks spiced foods.
 				
 				if not TUNING.HOFBIRTHDAY_BLOCKED_RECIPES[base_loot] and _G.IsSpecialEventActive(_G.SPECIAL_EVENTS.HOFBIRTHDAY)
-				and math.random() <= TUNING.HOFBIRTHDAY_CHEER_CHANCE then
+				and harvester:HasTag("cheer_rewardable") --[[math.random() <= TUNING.HOFBIRTHDAY_CHEER_CHANCE]] then
 					inv = harvester.components.inventory
 					local cheer = SpawnPrefab("kyno_hofbirthday_cheer")
 					

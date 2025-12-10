@@ -151,6 +151,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "Przyciąga Malbatrossa, gdy zost
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Po ustawieniu w oceanie, uruchamia się, gdy ryba znajdzie się w pobliżu, łapiąc ją.\n\nZebranie złapanej pułapki umieszcza stworzenie w twoim ekwipunku.\n\nPułapki oceaniczne można przynęcić odpowiednim jedzeniem."
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Pozostawienie do wyschnięcia na dłuższy czas jeszcze bardziej poprawi jego jakość."
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Użyj, aby zapalić Tort Rocznicowy i rozpocząć imprezę!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Umożliwia gromadzenie się w celu świętowania rocznicy.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Specjalny kapelusz rocznicowy Sammy'ego.\nPozwala na zdobycie radości rocznicowej.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
 
 -- Stworzenia.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Można karmić nasionami, aby złożyła jajko."

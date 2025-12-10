@@ -151,6 +151,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "投入海洋时会吸引邪天�
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "一旦设置在海洋中，当鱼类靠近时就会触发，将其捕获。\n\n拾取被捕获的陷阱会将其中的生物放入你的物品栏。\n\n海洋陷阱可用适当的食物作为诱饵。"
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "晾晒时间越长，品质越好。"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use it to light up the Anniversary Cake and start the party!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Allows the gathering of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Sammy's special anniversary hat.\nAllows the gain of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "可以用种子喂它，让它下蛋。"

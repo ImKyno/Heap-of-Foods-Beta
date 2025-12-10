@@ -115,6 +115,7 @@ local LOADINGTIPS   =
 	BIRTHDAY_CAKE1  = "Świętuj 5. Rocznicę Heap of Foods podczas wydarzenia ograniczonego czasowo! Upiecz i złóż ogromny tort, postaw balony i baw się dobrze!",
 	BIRTHDAY_CAKE2  = "Tort Rocznicowy można pokroić Tasakiem — każdy kawałek ma inny smak i efekt.",
 	BIRTHDAY_CAKE3  = "Tort Rocznicowy zapewnia kojącą aurę dla osób w pobliżu.",
+	BIRTHDAY_CHEER  = "Podczas wydarzenia rocznicowego Heap of Foods, radość rocznicową można uzyskać poprzez gotowanie, warzenie lub doprawianie potraw, mając na sobie kapelusz rocznicowy.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

@@ -13,23 +13,55 @@ local function MakeHat(data)
 	
 		owner.AnimState:Show("HAT")
 		owner.AnimState:Show("HAIR_HAT")
-		owner.AnimState:Show("HEAD_HAT")
-	
+		
 		owner.AnimState:Hide("HAIR")
 		owner.AnimState:Hide("HAIR_NOHAT")
-		owner.AnimState:Hide("HEAD")
+
+		if owner.isplayer then
+			owner.AnimState:Show("HEAD_HAT")
+			owner.AnimState:Hide("HEAD")
+		end
+		
+		owner:AddTag("cheer_rewardable")
 	end
 
 	local function OnUnequip(inst, owner, from_ground)
 		owner.AnimState:ClearOverrideSymbol("swap_hat")
-	
+		
 		owner.AnimState:Hide("HAT")
 		owner.AnimState:Hide("HAIR_HAT")
-		owner.AnimState:Hide("HEAD_HAT")
 	
 		owner.AnimState:Show("HAIR")
 		owner.AnimState:Show("HAIR_NOHAT")
-		owner.AnimState:Show("HEAD")
+
+		if owner.isplayer then
+			owner.AnimState:Show("HEAD")
+			owner.AnimState:Hide("HEAD_HAT")
+		end
+		
+		owner:RemoveTag("cheer_rewardable")
+	end
+	
+	local function OnEquipToModel(inst, owner, from_ground)
+		owner:RemoveTag("cheer_rewardable")
+	end
+
+	local function OnEquipVanity(inst, owner, from_ground)
+		if owner ~= nil then
+			owner:RemoveTag("cheer_rewardable")
+		end
+	end
+
+	local function OnUnequipVanity(inst, owner)
+		if owner ~= nil then
+			if inst.components.equippable ~= nil then
+				inst.components.equippable:Unequip(owner)
+			end
+			
+			if inst.components.equippable:IsEquipped() then
+				owner:AddTag("cheer_rewardable")
+			end
+		end
 	end
 
 	local function fn()
@@ -61,9 +93,16 @@ local function MakeHat(data)
 			return inst
 		end
 		
-		inst:AddComponent("inspectable")
+		inst.onequipvanity = OnEquipVanity
+		inst.onunequipvanity = OnUnequipVanity
+		
 		inst:AddComponent("tradable")
 		inst:AddComponent("snowmandecor")
+		
+		inst:AddComponent("inspectable")
+		if data.nameoverride then
+			inst.components.inspectable.nameoverride = "KYNO_HOFBIRTHDAY_HAT"
+		end
 	
 		inst:AddComponent("waterproofer")
 		inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_SMALL)
@@ -77,6 +116,7 @@ local function MakeHat(data)
 		inst.components.equippable.dapperness = TUNING.DAPPERNESS_TINY
 		inst.components.equippable:SetOnEquip(OnEquip)
 		inst.components.equippable:SetOnUnequip(OnUnequip)
+		inst.components.equippable:SetOnEquipToModel(OnEquipToModel)
 
 		MakeHauntableLaunch(inst)
 
@@ -90,20 +130,22 @@ local hats =
 {
 	-- Sammy's Unique Anniversary Hat
 	{
-		name      = "kyno_hofbirthday_sammyhat",
-		bank      = "hofbirthday_sammyhat",
-		build     = "hat_hofbirthday_sammy",
-		imagename = "kyno_hofbirthday_sammyhat",
+		name         = "kyno_hofbirthday_sammyhat",
+		bank         = "hofbirthday_sammyhat",
+		build        = "hat_hofbirthday_sammy",
+		imagename    = "kyno_hofbirthday_sammyhat",
+		nameoverride = false,
 		
 	},
 	
 	-- We started doing the event on the 5th Anniversary, so its like the first.
 	-- 5th Anniversary (Hat 1)
 	{
-		name      = "kyno_hofbirthday_5hat",
-		bank      = "hofbirthday_5hat",
-		build     = "hat_hofbirthday_5",
-		imagename = "kyno_hofbirthday_5hat",
+		name         = "kyno_hofbirthday_5hat",
+		bank         = "hofbirthday_5hat",
+		build        = "hat_hofbirthday_5",
+		imagename    = "kyno_hofbirthday_5hat",
+		nameoverride = true,
 	},
 }
 

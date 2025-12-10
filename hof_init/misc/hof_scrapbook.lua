@@ -1416,6 +1416,45 @@ local HOF_SCRAPBOOK_ITEMS =
 		deps           = {"kyno_hofbirthday_cake", "kyno_hofbirthday_cheer"},
 		specialinfo    = "HOFBIRTHDAY_CANDLE",
 	},
+	
+	kyno_hofbirthday_sammyhat =
+	{
+		name           = "kyno_hofbirthday_sammyhat",
+		type           = "item",
+		subcat         = "clothing",
+		tex            = "kyno_hofbirthday_sammyhat.tex",
+		prefab         = "kyno_hofbirthday_sammyhat",
+		dapperness     = 0.022222222222222,
+		waterproofer   = 0.2,
+		bank           = "hofbirthday_sammyhat",
+		build          = "hat_hofbirthday_sammy",
+		anim           = "anim",
+		animoffsetx    = -15,
+		animoffsety    = 30,
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -80,
+		specialinfo    = "HOFBIRTHDAY_SAMMYHAT",
+	},
+	
+	kyno_hofbirthday_5hat =
+	{
+		name           = "kyno_hofbirthday_5hat",
+		speechname     = "kyno_hofbirthday_hat",
+		type           = "item",
+		subcat         = "clothing",
+		tex            = "kyno_hofbirthday_5hat.tex",
+		prefab         = "kyno_hofbirthday_5hat",
+		dapperness     = 0.022222222222222,
+		waterproofer   = 0.2,
+		bank           = "hofbirthday_5hat",
+		build          = "hat_hofbirthday_5",
+		anim           = "anim",
+		animoffsetx    = -15,
+		animoffsety    = 30,
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -80,
+		specialinfo    = "HOFBIRTHDAY_HAT5",
+	},
 }
 
 local HOF_SCRAPBOOK_FOODS =

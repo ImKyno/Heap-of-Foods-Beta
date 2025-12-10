@@ -361,7 +361,7 @@ local function OnWorldInit(inst)
 	
 	-- Anniversary Event.
 	if IsSpecialEventActive(SPECIAL_EVENTS.HOFBIRTHDAY) then
-		inst.AnimState:SetBuild("kyno_hofbirthday_merm_build")
+		-- inst.AnimState:SetBuild("kyno_hofbirthday_merm_build")
 		inst.AnimState:AddOverrideBuild("kyno_hofbirthday_merm_trader_build")
 	end
 end

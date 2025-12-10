@@ -151,6 +151,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "Atrai o Malbatross quando lança
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Uma vez colocado no oceano, será ativado quando um peixe se aproximar, capturando-o.\n\nColetar uma armadilha capturada colocará a criatura no seu inventário.\n\nArmadilhas do oceano podem ser iscas com alimento apropriado."
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Deixar secar por períodos mais longos melhorará ainda mais a sua qualidade."
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use para acender o Bolo de Aniversário e começar a festa!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Permite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Chapéu de aniversário especial do Sammy.\nPermite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Pode ser alimentada com sementes para botar um ovo."

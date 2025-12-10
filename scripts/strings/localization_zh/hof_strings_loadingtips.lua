@@ -116,6 +116,7 @@ local LOADINGTIPS   =
 	BIRTHDAY_CAKE1  = "Celebrate the Heap of Foods 5th Anniversary with a limited time event! Bake and assembly a giant cake, place balloons and party around!",
 	BIRTHDAY_CAKE2  = "The Anniversary Cake can be sliced using a Cleaver, each slice has a different flavor and effect.",
 	BIRTHDAY_CAKE3  = "The Anniversary Cake provides a soothing aura for those around it.",
+	BIRTHDAY_CHEER  = "During the Heap of Foods Anniversary Event the Anniversary Cheer can be obtained by Cooking, Brewing or Spicing foods while wearing an Anniversary Hat.",
 }
 
 for k, v in pairs(LOADINGTIPS) do
