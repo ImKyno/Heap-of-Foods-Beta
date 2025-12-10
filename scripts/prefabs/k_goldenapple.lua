@@ -52,6 +52,7 @@ local function fn()
 
 	inst:AddTag("fruit")
 	inst:AddTag("nosteal")
+	inst:AddTag("masterfood")
 	inst:AddTag("goldenapple")
 	inst:AddTag("warly_caneat")
 	inst:AddTag("saltbox_valid")

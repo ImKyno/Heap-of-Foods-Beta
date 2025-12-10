@@ -16,6 +16,7 @@ local assets =
 
 local prefabs =
 {
+	"kyno_hofbirthday_sammyhat",
 	"kyno_sammyhat",
 }
 
@@ -354,6 +355,12 @@ local function OnWorldInit(inst)
 	if TheWorld.components.wagboss_tracker and TheWorld.components.wagboss_tracker:IsWagbossDefeated() then
 		SetCelestialScionKilled(inst, true)
 	end
+	
+	-- Anniversary Event.
+	if IsSpecialEventActive(SPECIAL_EVENTS.HOFBIRTHDAY) then
+		-- inst.AnimState:SetBuild("kyno_hofbirthday_merm_build")
+		-- inst.AnimState:AddOverrideBuild("kyno_hofbirthday_meadowisland_trader_build")	
+	end
 end
 
 local function SetRevealed(inst, revealed)
@@ -389,15 +396,19 @@ local function OnEntitySleep(inst)
 end
 
 local function ShouldAcceptItem(inst, item)
-    if item.components.inventoryitem ~= nil and item:HasTag("sammyfood") and not inst:HasTag("hatless") then
+    if item.components.inventoryitem ~= nil and item:HasAnyTag("sammyfood", "anniversaryfood") and not inst:HasTag("hatless") then
         return true
     end
+end
+
+local function GetHatPrefab(inst)
+	return IsSpecialEventActive(SPECIAL_EVENTS.HOFBIRTHDAY) and "kyno_hofbirthday_sammyhat" or "kyno_sammyhat"
 end
 
 -- Sammy gives his hat to the player when gifted.
 local function OnGetItemFromPlayer(inst, giver, item)
 	local no_stock = not inst:HasStock()
-	local hat = SpawnPrefab("kyno_sammyhat")
+	local hat = SpawnPrefab(GetHatPrefab(inst))
 	
 	if hat ~= nil then
 		if giver ~= nil and giver.components.inventory ~= nil then

@@ -51,10 +51,11 @@ local function fn()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
+	
+	local minimap = inst.entity:AddMiniMapEntity()
+    inst.MiniMapEntity:SetIcon("kyno_hofbirthday_balloons.tex")
 
 	MakeObstaclePhysics(inst, .6)
-	
-	inst.AnimState:SetScale(1.5, 1.5, 1.5)
 
 	inst.AnimState:SetBank("kyno_hofbirthday_balloons")
 	inst.AnimState:SetBuild("kyno_hofbirthday_balloons")
@@ -90,4 +91,4 @@ local function fn()
 end
 
 return Prefab("kyno_hofbirthday_balloons", fn, assets, prefabs),
-MakePlacer("kyno_hofbirthday_balloons_placer", "kyno_hofbirthday_balloons", "kyno_hofbirthday_balloons", "idle", nil, nil, nil, 1.5, 1.5)
+MakePlacer("kyno_hofbirthday_balloons_placer", "kyno_hofbirthday_balloons", "kyno_hofbirthday_balloons", "idle")

@@ -150,7 +150,6 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "该基地计划建立一个鱼�
 STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "投入海洋时会吸引邪天翁。"
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "一旦设置在海洋中，当鱼类靠近时就会触发，将其捕获。\n\n拾取被捕获的陷阱会将其中的生物放入你的物品栏。\n\n海洋陷阱可用适当的食物作为诱饵。"
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "晾晒时间越长，品质越好。"
-STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CHEER = "Allows the crafting of items from the Heap of Foods Anniversary Event."
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use it to light up the Anniversary Cake and start the party!"
 
 -- Creatures.
@@ -200,5 +199,6 @@ STRINGS.SCRAPBOOK.SPECIALINFO.WHALEOCEANCARCASS = "一具开始腐烂的鲸鱼�
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTRADER = "一只孤独的章鱼栖息在浩瀚的海洋中。\n\n海盗章鱼提供奖励以换取鱼类、饰品及特定鱼类加工食品。" 
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTREASURE = "海盗章鱼的宝箱在冒险家们交换时赠予他们。"
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS_FISHBONE = "拾取时召唤帕克白克斯。\n\n帕克白克斯会跟随拥有者. 只要帕克白克斯还活着，鱼的新鲜度就会是黄色的。"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "Celebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Can be sliced using a Cleaver to obtain Slice of Anniversary Cake. Each Slice has a different flavor and effect.\n\nIncreases sanity of the survivors around it overtime.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Increases sanity of the survivors around it overtime.\n\nCelebrating the 5th Anniversary of Heap of Foods!"

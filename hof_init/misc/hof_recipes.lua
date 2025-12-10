@@ -835,7 +835,7 @@ CONSTRUCTION_PLANS["kyno_fishfarmplot_construction"] =
 
 AddDeconstructRecipe("kyno_fishfarmplot", {Ingredient("rocks", 20)})
 
--- HoF Anniversary Event.
+-- Anniversary Event.
 AddRecipe2("kyno_hofbirthday_candle", {Ingredient("kyno_hofbirthday_cheer", 1), Ingredient("twigs", 1), Ingredient("beeswax", 1)}, TECH.HOFBIRTHDAY,
 	{
 		numtogive           = 5,
@@ -846,7 +846,7 @@ AddRecipe2("kyno_hofbirthday_candle", {Ingredient("kyno_hofbirthday_cheer", 1), 
 	{"SPECIAL_EVENT", "LIGHT"}
 )
 
-AddRecipe2("kyno_hofbirthday_cake_empty_construction", {Ingredient("kyno_hofbirthday_cheer", 10), Ingredient("cutstone", 2)}, TECH.HOFBIRTHDAY,
+AddRecipe2("kyno_hofbirthday_cake_empty_construction", {Ingredient("kyno_hofbirthday_cheer", 10), Ingredient("marble", 2)}, TECH.HOFBIRTHDAY,
 	{
 		min_spacing         = 2,
 		placer              = "kyno_hofbirthday_cake_placer",
@@ -855,6 +855,18 @@ AddRecipe2("kyno_hofbirthday_cake_empty_construction", {Ingredient("kyno_hofbirt
 		image               = "kyno_hofbirthday_cake.tex",
 	},
 	{"SPECIAL_EVENT", "COOKING"}
+)
+
+AddRecipe2("kyno_hofbirthday_popcornmachine", {Ingredient("kyno_hofbirthday_cheer", 10), Ingredient("gears", 3), Ingredient("transistor", 2), 
+Ingredient("cutstone", 2)}, TECH.HOFBIRTHDAY,
+	{
+		min_spacing         = 1,
+		placer              = "kyno_hofbirthday_popcornmachine_placer",
+		hint_msg            = "NEEDSHOFBIRTHDAY",
+		atlas               = DefaultAtlas,
+		image               = "cutgrass.tex",
+	},
+	{"SPECIAL_EVENT", "COOKING", "STRUCTURES"}
 )
 
 AddRecipe2("kyno_hofbirthday_balloons", {Ingredient("kyno_hofbirthday_cheer", 2), Ingredient("log", 2), Ingredient("rope", 2)}, TECH.HOFBIRTHDAY,
@@ -943,6 +955,9 @@ CONSTRUCTION_PLANS["kyno_hofbirthday_cake_stage5_construction"] =
 
 AddDeconstructRecipe("kyno_hofbirthday_cake_stage5_construction", {Ingredient("kyno_flour", 5), 
 Ingredient("bird_egg", 5), Ingredient("kyno_milk_beefalo", 2), Ingredient("butter_beefalo", 1)})
+
+AddDeconstructRecipe("kyno_hofbirthday_cake", {Ingredient("kyno_flour", 5), Ingredient("kyno_hofbirthday_cheer", 1),
+Ingredient("bird_egg", 5), Ingredient("kyno_milk_beefalo", 5), Ingredient("butter_beefalo", 1), Ingredient("kyno_salt", 5)})
 
 -- Checking if Chum The Waters Mod is enabled to not add duplicates.
 if not TUNING.HOF_IS_CTW_ENABLED then

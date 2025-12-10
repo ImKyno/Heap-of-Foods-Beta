@@ -25,6 +25,12 @@ local events =
             inst.sg:GoToState("dotradehat", data)
         end
     end),
+	
+	EventHandler("dance", function(inst)
+		if not inst.sg:HasStateTag("busy") and not inst.sg:HasStateTag("dancing") then
+			inst.sg:GoToState("dance_start")
+		end
+	end),
 }
 
 local states = 
@@ -292,6 +298,63 @@ local states =
                 inst.sg:GoToState("trading") -- Let this state get out of trading.
             end),
         },
+		
+		onexit = function(inst)
+			if not inst.sg.statemem.keeprevealed then
+				inst:SetRevealed(false)
+			end
+		end,
+    },
+	
+	State{
+		name = "dance_start",
+		tags = { "idle", "revealed", "dancing" },
+
+        onenter = function(inst)
+			inst.Physics:Stop()
+			inst:ClearBufferedAction()
+			
+			inst:TryChatter("MEADOWISLANDTRADER_STARTDANCING", math.random(#STRINGS.MEADOWISLANDTRADER_STARTDANCING), 1.5)
+			
+			inst.AnimState:PlayAnimation("idle_happy")
+			inst.SoundEmitter:PlaySound("dontstarve/creatures/merm/attack")
+		end,
+
+		events =
+		{
+			EventHandler("animover", function(inst)
+				inst.sg:GoToState("dance_loop")
+            end),
+		},
+		
+		onexit = function(inst)
+			if not inst.sg.statemem.keeprevealed then
+				inst:SetRevealed(false)
+			end
+		end,
+    },
+	
+	State{
+		name = "dance_loop",
+		tags = { "idle", "revealed", "dancing" },
+
+        onenter = function(inst)
+			inst.Physics:Stop()
+			inst:ClearBufferedAction()
+			
+			inst.AnimState:PlayAnimation("idle_happy", true)
+		end,
+		
+		events =
+		{
+			EventHandler("animover", function(inst)
+				if inst.sg.mem.dancing then
+					inst.sg:GoToState("dance_loop")
+				else
+					inst.sg:GoToState("idle")
+				end
+            end),
+		},
 		
 		onexit = function(inst)
 			if not inst.sg.statemem.keeprevealed then

@@ -29,6 +29,7 @@ local function MakeCakeSlice(data)
 		inst:AddTag("itemshowcaser_valid")
 		inst:AddTag("beargerfur_sack_valid")
 		inst:AddTag("anniversarycake_slice")
+		inst:AddTag("anniversaryfood")
 
 		inst.entity:SetPristine()
 

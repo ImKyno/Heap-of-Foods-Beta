@@ -540,7 +540,7 @@ local function kitfn()
 	inst.AnimState:SetBuild("kyno_fishfarmplot_kit")
 	inst.AnimState:PlayAnimation("idle", true)
 	
-	inst:AddTag("usedeploystring")
+	inst:AddTag("deploykititem")
 	inst:AddTag("fishfarmplot_kit") -- For extra deploy range.
 	
 	inst.entity:SetPristine()

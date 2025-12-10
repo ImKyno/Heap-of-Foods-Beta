@@ -21,6 +21,14 @@ local function KeepFaceTargetFn(inst, target)
     return inst:IsNear(target, FACE_DIST)
 end
 
+local function GetDanceTargetFn(inst)
+	return FindClosestPlayerToInst(inst, FACE_DIST, true)
+end
+
+local function KeepDanceTargetFn(inst, target)
+	return inst:IsNear(target, FACE_DIST)
+end
+
 local function HasValidHome(inst)
 	local home = inst.components.homeseeker ~= nil and inst.components.homeseeker.home or nil
 
@@ -50,8 +58,33 @@ local function GetHomePos(inst)
     return HasValidHome(inst) and inst.components.homeseeker:GetHomePos()
 end
 
+local function Dance(inst)
+	inst:PushEvent("dance")
+end
+
+local function ShouldDance(inst)
+	local dancer = GetDanceTargetFn(inst)
+
+	if dancer ~= nil and dancer.sg:HasStateTag("dancing") then
+		inst.sg.mem.dancing = true
+		return true
+	end
+
+	if inst.sg.mem.dancing then
+		inst.sg.mem.dancing = nil
+	end
+	
+	return false
+end
+
 function MeadowIslandTraderBrain:OnStart()
+	local DanceNode = WhileNode(function() return ShouldDance(self.inst) end, "Dance",
+		PriorityNode({
+			ActionNode(function() Dance(self.inst) end),
+		}, .25))
     local root = PriorityNode({
+		DanceNode, -- DANCE BABY!
+
 		WhileNode(function() return TheWorld.state.isday end, "ShouldGoHome", 
 			DoAction(self.inst, GoHomeAction, "GoHome", true)), -- Priortize going home over trading.
 			
@@ -66,7 +99,7 @@ function MeadowIslandTraderBrain:OnStart()
                 FaceEntity(self.inst, GetFaceTargetFn, KeepFaceTargetFn, 2),
             })
         ),
-
+		
 		Wander(self.inst, GetHomePos, MAX_WANDER_DIST),
     }, .25)
     self.bt = BT(self.inst, root)

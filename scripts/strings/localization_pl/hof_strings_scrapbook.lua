@@ -150,7 +150,6 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOTKIT = "Plany fundamentów dla hodowli 
 STRINGS.SCRAPBOOK.SPECIALINFO.MALBATROSSFOOD = "Przyciąga Malbatrossa, gdy zostanie wrzucony do oceanu."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Po ustawieniu w oceanie, uruchamia się, gdy ryba znajdzie się w pobliżu, łapiąc ją.\n\nZebranie złapanej pułapki umieszcza stworzenie w twoim ekwipunku.\n\nPułapki oceaniczne można przynęcić odpowiednim jedzeniem."
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Pozostawienie do wyschnięcia na dłuższy czas jeszcze bardziej poprawi jego jakość."
-STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CHEER = "Umożliwia tworzenie przedmiotów z Wydarzenia Rocznicowego Heap of Foods."
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Użyj, aby zapalić Tort Rocznicowy i rozpocząć imprezę!"
 
 -- Stworzenia.
@@ -200,5 +199,6 @@ STRINGS.SCRAPBOOK.SPECIALINFO.WHALEOCEANCARCASS = "Szczątki wieloryba, które z
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTRADER = "Samotna ośmiornica żyjąca na rozległym oceanie.\n\nYaarctopus oferuje nagrody w zamian za Ryby, Błyskotki i niektóre Przygotowane Potrawy z Ryb."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTREASURE = "Skrzynia Yaarctopusa wręczana ocalałym podczas wymian."
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS_FISHBONE = "Przywołuje Packim Baggims po podniesieniu.\n\nPackim Baggims podąża za właścicielem. Dopóki Packim Baggims żyje, kolor ryby będzie pomarańczowy."
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "Świętujemy 5. Rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Można pokroić Tasakiem, aby otrzymać Kawałek Tortu Rocznicowego. Każdy kawałek ma inny smak i efekt.\n\nStopniowo zwiększa poczytalność ocalałych w pobliżu.\n\nŚwiętujemy 5. Rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Stopniowo zwiększa poczytalność ocalałych w pobliżu.\n\nŚwiętujemy 5. Rocznicę Heap of Foods!"

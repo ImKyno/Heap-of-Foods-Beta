@@ -168,7 +168,7 @@ end
 
 local function LaunchFireworks(inst)
 	local fireworks = SpawnPrefab("kyno_hofbirthday_cake_fx_fireworks")
-	fireworks.Follower:FollowSymbol(inst.GUID, "plate", 0, 0, 0, true)
+	fireworks.Follower:FollowSymbol(inst.GUID, "plate", 0, 400, 0, true)
 	
 	inst.SoundEmitter:PlaySound("yotd2024/startingpillar/launch_fireworks")
 end

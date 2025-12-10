@@ -273,22 +273,34 @@ params.popcornmachine =
 	{
 		slotpos =
 		{
-			Vector3(-2, 18, 0),
+			Vector3(0,   32 + 4,  0),
+			Vector3(0, -(32 + 4), 0),
 		},
 		
-		animbank = "ui_chest_1x1",
-		animbuild = "ui_chest_1x1",
+		animbank = "ui_chest_1x2",
+		animbuild = "ui_chest_1x2",
 		
 		pos = Vector3(0, 140, 0),
 		side_align_tip = 100,
     },
 
 	acceptsstacks = true,
-	type = "chest",
+	usespecificslotsforitems = true,
+	type = "cooker",
 }
 
 function params.popcornmachine.itemtestfn(container, item, slot)
-	return (item:HasTag("popcorn") and item:GetTimeAlive() <= 0)
+	if slot == 1 then
+		return item.prefab == "corn"
+	elseif slot == 2 then
+		return item:HasTag("popcorn") or item.prefab == "corn_cooked" and item:GetTimeAlive() <= 0
+	end
+	
+	if slot == nil then		
+		return item.prefab == "corn" or container:GetItemInSlot(1) == nil and item.prefab == "corn"
+	end
+	
+	return false
 end
 
 params.fishfarmplot = 
