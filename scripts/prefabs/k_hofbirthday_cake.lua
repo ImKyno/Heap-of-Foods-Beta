@@ -18,6 +18,7 @@ local prefabs =
 	"kyno_milk_beefalo",
 	"kyno_salt",
 
+	"kyno_hofbirthday_cakefire",
 	"kyno_hofbirthday_cake_fx_fireworks",
 	"kyno_hofbirthday_cake_fx_sparkle",
 	"kyno_hofbirthday_cake_fx_streamer",
@@ -86,7 +87,7 @@ local function RefreshCandles(inst)
 
 		if should_have_candles then
 			if not candle or not candle:IsValid() then
-				candle = SpawnPrefab("lighterfire")
+				candle = SpawnPrefab("kyno_hofbirthday_cakefire")
 				
 				if candle.Follower == nil then
 					candle.entity:AddFollower()
@@ -173,6 +174,10 @@ local function LaunchFireworks(inst)
 	inst.SoundEmitter:PlaySound("yotd2024/startingpillar/launch_fireworks")
 end
 
+local function PlayerAnnounceCakeDone(inst)
+	inst:PushEvent("hofbirthdaycakecomplete")
+end
+
 local function OnBuilt(inst, data)	
 	local fx = SpawnPrefab("kyno_hofbirthday_cake_fx_white")
 	fx.Follower:FollowSymbol(inst.GUID, "level3", 0, 0, 0, true)
@@ -192,6 +197,13 @@ local function OnBuilt(inst, data)
 	end)
 	
 	UpdateCakeAppearance(inst)
+	
+	local x, y, z = inst.Transform:GetWorldPosition()
+	local players = FindPlayersInRangeSq(x, y, z, 10 * 10, true)
+	
+	for _, player in ipairs(players) do
+		PlayerAnnounceCakeDone(player)
+	end
 end
 
 local function OnFinished(inst, worker)
@@ -220,8 +232,8 @@ local function fn()
 	inst.entity:AddLight()
 	inst.entity:AddNetwork()
 	
-	inst.Light:SetFalloff(0.9)
-	inst.Light:SetIntensity(0.9)
+	inst.Light:SetFalloff(0.8)
+	inst.Light:SetIntensity(0.75)
 	inst.Light:SetRadius(3)
 	inst.Light:Enable(false)
 	inst.Light:SetColour(197/255, 197/255, 10/255)

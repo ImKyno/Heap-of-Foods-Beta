@@ -14,7 +14,12 @@ local function oceanhuntbeastnearby(inst, data)
 	inst.components.talker:Say(_G.GetString(inst, "ANNOUNCE_KYNO_HUNT_BEAST_NEARBY"))
 end
 
+local function hofbirthdaycakecomplete(inst, data)
+	inst.components.talker:Say(_G.GetString(inst, "ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE"))
+end
+
 AddComponentPostInit("wisecracker", function(self)
 	self.inst:ListenForEvent("oceanhuntlosttrail", oceanhuntlosttrail)
 	self.inst:ListenForEvent("oceanhuntbeastnearby", oceanhuntbeastnearby)
+	self.inst:ListenForEvent("hofbirthdaycakecomplete", hofbirthdaycakecomplete)
 end)

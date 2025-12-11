@@ -2,8 +2,7 @@ local function MakeHat(data)
 	local assets = 
 	{
 		Asset("ANIM", "anim/"..data.build..".zip"),
-		
-		Asset("ANIM", "anim/kyno_hofbirthday_pigking.zip"),
+
 		Asset("ANIM", "anim/kyno_hofbirthday_monkey_queen.zip"),
 	
 		Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),

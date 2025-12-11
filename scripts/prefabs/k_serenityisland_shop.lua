@@ -2,12 +2,15 @@ local HOF_MAPUTIL = require("map/hof_maputil")
 
 local assets =
 {
-    Asset("ANIM", "anim/quagmire_elderswampig.zip"),
+	Asset("ANIM", "anim/quagmire_elderswampig.zip"),
+	
+	-- Anniversary Event.
+	Asset("ANIM", "anim/kyno_hofbirthday_serenityisland_shop.zip"),
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
 
-    Asset("SOUND", "sound/pig.fsb"),
+	Asset("SOUND", "sound/pig.fsb"),
 }
 
 local prefabs =
@@ -106,9 +109,15 @@ local function OnIsNight(inst, isnight)
 end
 
 local function TestItem(inst, item, giver)
-	if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" and not inst:HasTag("pigelder_gifted") then
-		return true -- Accept the Item.
-	elseif item.components.inventoryitem ~= nil and item.prefab == "turf_road" or item.prefab == "turf_deciduous" then
+	if not inst:HasTag("pigelder_gifted") then
+		if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" then
+			return true -- Accept the Item.
+		else
+			giver.components.talker:Say(GetString(giver, "ANNOUNCE_PIGELDER_FAIL"))
+		end
+	end
+	
+	if item.components.inventoryitem ~= nil and item.prefab == "turf_road" or item.prefab == "turf_deciduous" then
 		return true
 	elseif item.components.inventoryitem ~= nil and item.prefab == "cookingrecipecard" then
 		return true
@@ -222,6 +231,13 @@ local function RetrofitMapTags(inst)
 	{ "RoadPoison", "not_mainland", "nohasslers", "nohunt", "SerenityArea" })
 end
 
+local function OnWorldInit(inst)
+	-- Anniversary Event.
+	if IsSpecialEventActive(SPECIAL_EVENTS.HOFBIRTHDAY) then
+		inst.AnimState:AddOverrideBuild("kyno_hofbirthday_serenityisland_shop")
+	end
+end
+
 local function fn()
     local inst = CreateEntity()
 
@@ -296,6 +312,7 @@ local function fn()
 	inst:WatchWorldState("isnight", OnIsNight)
     OnIsNight(inst, TheWorld.state.isnight)
 	
+	inst:DoTaskInTime(0, OnWorldInit)
 	-- inst:DoTaskInTime(1, RetrofitMapTags)
 	
 	-- Pig Elder will wake up regardless in "Lights Out" worlds.

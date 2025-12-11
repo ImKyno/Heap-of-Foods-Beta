@@ -88,6 +88,7 @@ PrefabFiles =
 	"k_hofbirthday_balloons",
 	"k_hofbirthday_cake",
 	"k_hofbirthday_cake_fx",
+	"k_hofbirthday_cakefire",
 	"k_hofbirthday_cake_slices",
 	"k_hofbirthday_candle",
 	"k_hofbirthday_cheer",
