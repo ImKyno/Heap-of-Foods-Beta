@@ -248,6 +248,7 @@ AddRecipe2("meadowislandtrader_kyno_roe_pondfish", {Ingredient("bird_egg", 1)}, 
 		nounlock            = true, 
 		no_deconstruction   = true,
 		hint_msg            = "NEEDSMEADOWSHOP",
+		description         = "kyno_roe",
 		actionstr           = "MEADOWSHOP", 
 		sg_state            = "give", 
 		product             = "kyno_roe_pondfish",
@@ -617,7 +618,7 @@ AddRecipe2("meadowislandtrader_kyno_seeds_kit_rice", {Ingredient("kyno_aloe_seed
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_forgetmelots_seeds", {Ingredient("kyno_turnip_seeds", 3, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_kyno_seeds_kit_firenettles", {Ingredient("kyno_radish_seeds", 3, ModAtlas)}, TECH.LOST,
 	{
 		limitedamount       = true, 
 		nounlock            = true, 
@@ -625,15 +626,14 @@ AddRecipe2("meadowislandtrader_forgetmelots_seeds", {Ingredient("kyno_turnip_see
 		hint_msg            = "NEEDSMEADOWSHOP",
 		actionstr           = "MEADOWSHOP", 
 		sg_state            = "give", 
-		product             = "forgetmelots_seeds",
-		numtogive           = 3,
+		product             = "kyno_seeds_kit_firenettles",
 		atlas               = ModAtlas,
-		image               = "forgetmelots_seeds.tex",
+		image               = "kyno_seeds_kit_firenettles.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_tillweed_seeds", {Ingredient("kyno_fennel_seeds", 3, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_kyno_seeds_kit_forgetmelots", {Ingredient("kyno_turnip_seeds", 3, ModAtlas)}, TECH.LOST,
 	{
 		limitedamount       = true, 
 		nounlock            = true, 
@@ -641,15 +641,14 @@ AddRecipe2("meadowislandtrader_tillweed_seeds", {Ingredient("kyno_fennel_seeds",
 		hint_msg            = "NEEDSMEADOWSHOP",
 		actionstr           = "MEADOWSHOP", 
 		sg_state            = "give", 
-		product             = "tillweed_seeds",
-		numtogive           = 3,
+		product             = "kyno_seeds_kit_forgetmelots",
 		atlas               = ModAtlas,
-		image               = "tillweed_seeds.tex",
+		image               = "kyno_seeds_kit_forgetmelots.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_firenettles_seeds", {Ingredient("kyno_radish_seeds", 3, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_kyno_seeds_kit_tillweed", {Ingredient("kyno_fennel_seeds", 3, ModAtlas)}, TECH.LOST,
 	{
 		limitedamount       = true, 
 		nounlock            = true, 
@@ -657,10 +656,9 @@ AddRecipe2("meadowislandtrader_firenettles_seeds", {Ingredient("kyno_radish_seed
 		hint_msg            = "NEEDSMEADOWSHOP",
 		actionstr           = "MEADOWSHOP", 
 		sg_state            = "give", 
-		product             = "firenettles_seeds",
-		numtogive           = 3,
+		product             = "kyno_seeds_kit_tillweed",
 		atlas               = ModAtlas,
-		image               = "firenettles_seeds.tex",
+		image               = "kyno_seeds_kit_tillweed.tex",
 	},
 	{"CRAFTING_STATION"}
 )

@@ -41,107 +41,107 @@ local WARES                             =
 	ALWAYS                              = 
 	{
 		{
-			["kyno_itemslicer_gold"]    = { recipe = "meadowislandtrader_kyno_itemslicer_gold",   min = 6,  max = 6,  limit = 6  },
-			["kyno_bucket_metal"]       = { recipe = "meadowislandtrader_kyno_bucket_metal",      min = 6,  max = 6,  limit = 6  },
-			["kyno_pineapple"]          = { recipe = "meadowislandtrader_kyno_pineapple",         min = 6,  max = 20, limit = 20 },
-			["kyno_antchovycan"]        = { recipe = "meadowislandtrader_kyno_antchovycan",       min = 4,  max = 8,  limit = 8  },
-			["kyno_tunacan"]            = { recipe = "meadowislandtrader_kyno_tunacan",           min = 2,  max = 5,  limit = 5  },
-			["kyno_piko"]               = { recipe = "meadowislandtrader_kyno_piko",              min = 1,  max = 3,  limit = 3  },
-			["kyno_chicken2"]           = { recipe = "meadowislandtrader_kyno_chicken2",          min = 1,  max = 4,  limit = 4  },
-			["foliage"]                 = { recipe = "meadowislandtrader_foliage",                min = 10, max = 25, limit = 25 },
-			["barnacle"]                = { recipe = "meadowislandtrader_barnacle",               min = 5,  max = 12, limit = 12 },
+			["kyno_itemslicer_gold"]        = { recipe = "meadowislandtrader_kyno_itemslicer_gold",        min = 6,  max = 6,  limit = 6  },
+			["kyno_bucket_metal"]           = { recipe = "meadowislandtrader_kyno_bucket_metal",           min = 6,  max = 6,  limit = 6  },
+			["kyno_pineapple"]              = { recipe = "meadowislandtrader_kyno_pineapple",              min = 6,  max = 20, limit = 20 },
+			["kyno_antchovycan"]            = { recipe = "meadowislandtrader_kyno_antchovycan",            min = 4,  max = 8,  limit = 8  },
+			["kyno_tunacan"]                = { recipe = "meadowislandtrader_kyno_tunacan",                min = 2,  max = 5,  limit = 5  },
+			["kyno_piko"]                   = { recipe = "meadowislandtrader_kyno_piko",                   min = 1,  max = 3,  limit = 3  },
+			["kyno_chicken2"]               = { recipe = "meadowislandtrader_kyno_chicken2",               min = 1,  max = 4,  limit = 4  },
+			["foliage"]                     = { recipe = "meadowislandtrader_foliage",                     min = 10, max = 25, limit = 25 },
+			["barnacle"]                    = { recipe = "meadowislandtrader_barnacle",                    min = 5,  max = 12, limit = 12 },
 		},
 	},
 	
-	RANDOM_UNCOMMONS                    = 
+	RANDOM_UNCOMMONS                        = 
 	{
 		{
-			["kyno_meatcan"]            = { recipe = "meadowislandtrader_kyno_meatcan",           min = 3,  max = 6  }, 
-			["kyno_tomatocan"]          = { recipe = "meadowislandtrader_kyno_tomatocan",         min = 3,  max = 7  },
-			["kyno_beancan"]            = { recipe = "meadowislandtrader_kyno_beancan",           min = 3,  max = 8  },
-			["kyno_piko_orange"]        = { recipe = "meadowislandtrader_kyno_piko_orange",       min = 1,  max = 3  },
-			["kyno_shark_fin"]          = { recipe = "meadowislandtrader_kyno_shark_fin",         min = 1,  max = 7  },
-			["tallbirdegg"]             = { recipe = "meadowislandtrader_tallbirdegg",            min = 1,  max = 5  },
+			["kyno_meatcan"]                = { recipe = "meadowislandtrader_kyno_meatcan",                min = 3,  max = 6              }, 
+			["kyno_tomatocan"]              = { recipe = "meadowislandtrader_kyno_tomatocan",              min = 3,  max = 7              },
+			["kyno_beancan"]                = { recipe = "meadowislandtrader_kyno_beancan",                min = 3,  max = 8              },
+			["kyno_piko_orange"]            = { recipe = "meadowislandtrader_kyno_piko_orange",            min = 1,  max = 3              },
+			["kyno_shark_fin"]              = { recipe = "meadowislandtrader_kyno_shark_fin",              min = 1,  max = 7              },
+			["tallbirdegg"]                 = { recipe = "meadowislandtrader_tallbirdegg",                 min = 1,  max = 5              },
 		},
 	},
 	
-	RANDOM_RARES                        = 
+	RANDOM_RARES                            = 
 	{
 		{
-			["mandrake"]                = { recipe = "meadowislandtrader_mandrake",               min = 1,  max = 2  },
-			["nukashine_sugarfree"]     = { recipe = "meadowislandtrader_nukashine_sugarfree",    min = 1,  max = 4  },
-			["kyno_poison_froglegs"]    = { recipe = "meadowislandtrader_kyno_poison_froglegs",   min = 1,  max = 5  },
-			["kyno_crabkingmeat"]       = { recipe = "meadowislandtrader_kyno_crabkingmeat",      min = 1,  max = 3  },
-			["kyno_worm_bone"]          = { recipe = "meadowislandtrader_kyno_worm_bone",         min = 5,  max = 6  },
-			["dug_kyno_coffeebush"]     = { recipe = "meadowislandtrader_dug_kyno_coffeebush",    min = 3,  max = 6  },
-			["butter"]                  = { recipe = "meadowislandtrader_butter",                 min = 2,  max = 3  },
+			["mandrake"]                    = { recipe = "meadowislandtrader_mandrake",                    min = 1,  max = 2              },
+			["nukashine_sugarfree"]         = { recipe = "meadowislandtrader_nukashine_sugarfree",         min = 1,  max = 4              },
+			["kyno_poison_froglegs"]        = { recipe = "meadowislandtrader_kyno_poison_froglegs",        min = 1,  max = 5              },
+			["kyno_crabkingmeat"]           = { recipe = "meadowislandtrader_kyno_crabkingmeat",           min = 1,  max = 3              },
+			["kyno_worm_bone"]              = { recipe = "meadowislandtrader_kyno_worm_bone",              min = 5,  max = 6              },
+			["dug_kyno_coffeebush"]         = { recipe = "meadowislandtrader_dug_kyno_coffeebush",         min = 3,  max = 6              },
+			["butter"]                      = { recipe = "meadowislandtrader_butter",                      min = 2,  max = 3              },
 		},
 	},
 	
-	RANDOM_ULTRARARES                   =
+	RANDOM_ULTRARARES                       =
 	{
 		-- TO DO: Coffee Machine Kit
 		{
-			["kyno_bottlecap"]          = { recipe = "meadowislandtrader_kyno_bottlecap",         min = 3,  max = 6  },
+			["kyno_bottlecap"]              = { recipe = "meadowislandtrader_kyno_bottlecap",              min = 3,  max = 6              },
 		},
 	},
 	
 	-- Make sure to always have seasonal seeds available to trade.
-	SEASONAL                            = 
+	SEASONAL                                = 
 	{
-		[SEASONS.AUTUMN]                = 
+		[SEASONS.AUTUMN]                    = 
 		{
 			-- TO DO: Srawberry Seeds
-			["kyno_energycan"]          = { recipe = "meadowislandtrader_kyno_energycan",         min = 3,  max = 5  },
-			["oceanfish_small_6_inv"]   = { recipe = "meadowislandtrader_oceanfish_small_6_inv",  min = 1,  max = 3  },
+			["kyno_energycan"]              = { recipe = "meadowislandtrader_kyno_energycan",              min = 3,  max = 5              },
+			["oceanfish_small_6_inv"]       = { recipe = "meadowislandtrader_oceanfish_small_6_inv",       min = 1,  max = 3              },
 		},
 		
-		[SEASONS.WINTER]                = 
+		[SEASONS.WINTER]                    = 
 		{
 			-- TO DO: Artichoke Seeds
-			["kyno_cokecan"]            = { recipe = "meadowislandtrader_kyno_cokecan",           min = 3,  max = 5  },
-			["kyno_roe_pondfish"]       = { recipe = "meadowislandtrader_kyno_roe_pondfish",      min = 4,  max = 8  },
-			["forgetmelots_seeds"]      = { recipe = "meadowislandtrader_forgetmelots_seeds",     min = 3,  max = 6  },
-			["oceanfish_medium_8_inv"]  = { recipe = "meadowislandtrader_oceanfish_medium_8_inv", min = 1,  max = 3  },
+			["kyno_cokecan"]                = { recipe = "meadowislandtrader_kyno_cokecan",                min = 3,  max = 5              },
+			["kyno_roe_pondfish"]           = { recipe = "meadowislandtrader_kyno_roe_pondfish",           min = 4,  max = 8              },
+			["kyno_seeds_kit_forgetmelots"] = { recipe = "meadowislandtrader_kyno_seeds_kit_forgetmelots", min = 3,  max = 6              },
+			["oceanfish_medium_8_inv"]      = { recipe = "meadowislandtrader_oceanfish_medium_8_inv",      min = 1,  max = 3              },
 		},
 		
-		[SEASONS.SPRING]                = 
+		[SEASONS.SPRING]                    = 
 		{
-			["kyno_seeds_kit_rice"]     = { recipe = "meadowislandtrader_kyno_seeds_kit_rice",    min = 15, max = 15 },
-			["tillweed_seeds"]          = { recipe = "meadowislandtrader_tillweed_seeds",         min = 3,  max = 6  },
-			["oceanfish_small_7_inv"]   = { recipe = "meadowislandtrader_oceanfish_small_7_inv",  min = 1,  max = 3  },
+			["kyno_seeds_kit_rice"]         = { recipe = "meadowislandtrader_kyno_seeds_kit_rice",         min = 15, max = 15             },
+			["kyno_seeds_kit_tillweed"]     = { recipe = "meadowislandtrader_kyno_seeds_kit_tillweed",     min = 3,  max = 6              },
+			["oceanfish_small_7_inv"]       = { recipe = "meadowislandtrader_oceanfish_small_7_inv",       min = 1,  max = 3              },
 		},
 		
-		[SEASONS.SUMMER]                = 
+		[SEASONS.SUMMER]                    = 
 		{
 			-- TO DO: Melon Seeds
-			["kyno_sodacan"]            = { recipe = "meadowislandtrader_kyno_sodacan",           min = 3,  max = 5  },
-			["firenettles_seeds"]       = { recipe = "meadowislandtrader_firenettles_seeds",      min = 3,  max = 6  },
-			["oceanfish_small_8_inv"]   = { recipe = "meadowislandtrader_oceanfish_small_8_inv",  min = 1,  max = 3  },
-			["succulent_picked"]        = { recipe = "meadowislandtrader_succulent_picked",       min = 10, max = 25 },
+			["kyno_sodacan"]                = { recipe = "meadowislandtrader_kyno_sodacan",                min = 3,  max = 5              },
+			["kyno_seeds_kit_firenettles"]  = { recipe = "meadowislandtrader_kyno_seeds_kit_firenettles",  min = 3,  max = 6              },
+			["oceanfish_small_8_inv"]       = { recipe = "meadowislandtrader_oceanfish_small_8_inv",       min = 1,  max = 3              },
+			["succulent_picked"]            = { recipe = "meadowislandtrader_succulent_picked",            min = 10, max = 25             },
 		},
 	},
 	
-	SPECIAL                             = 
+	SPECIAL                                 = 
 	{
-		["isfullmoon"]                  =
+		["isfullmoon"]                      =
 		{
-			["moon_cap"]                = { recipe = "meadowislandtrader_moon_cap",               min = 3,  max = 9  },
+			["moon_cap"]                    = { recipe = "meadowislandtrader_moon_cap",                    min = 3,  max = 9              },
 		},
 
-		["islunarhailing"]              = 
+		["islunarhailing"]                  = 
 		{
-			["kyno_moon_froglegs"]      = { recipe = "meadowislandtrader_kyno_moon_froglegs",     min = 3,  max = 9  },
+			["kyno_moon_froglegs"]          = { recipe = "meadowislandtrader_kyno_moon_froglegs",          min = 3,  max = 9              },
 		},
 		
-		["fruitflykilled"]              =
+		["fruitflykilled"]                  =
 		{
 			-- Originally this was supposed to be 5% chance, but I know some people will complain.
 			-- So instead of being RNG based, at least kill that damn bug to get it, I guess.
 			
 			-- I was going to add Wicker's book here, but I found out you can't blueprint character items.
-			["slow_farmplot_blueprint"] = { recipe = "meadowislandtrader_slow_farmplot_blueprint",  min = 1, max = 2 },
-			["fast_farmplot_blueprint"] = { recipe = "meadowislandtrader_fast_farmplot_blueprint",  min = 1, max = 2 },
+			["slow_farmplot_blueprint"]     = { recipe = "meadowislandtrader_slow_farmplot_blueprint",     min = 1,  max = 2              },
+			["fast_farmplot_blueprint"]     = { recipe = "meadowislandtrader_fast_farmplot_blueprint",     min = 1,  max = 2              },
 		},
 	},
 }

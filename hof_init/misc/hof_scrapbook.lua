@@ -681,6 +681,63 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "BUNDLE",
 	},
 	
+	-- Seeds sold by Sammy won't have him as deps.
+	kyno_seeds_kit_rice = 
+	{
+		name           = "kyno_seeds_kit_rice",
+		speechname     = "kyno_seeds_kit",
+		type           = "item",
+		tex            = "kyno_seeds_kit_rice.tex",
+		prefab         = "kyno_seeds_kit_rice",
+		bank           = "kyno_seeds_kit",
+		build          = "kyno_seeds_kit",
+		anim           = "rice",
+		deps           = {"kyno_rice_seeds"},
+		specialinfo    = "BUNDLE",
+	},
+	
+	kyno_seeds_kit_firenettles = 
+	{
+		name           = "kyno_seeds_kit_firenettles",
+		speechname     = "kyno_seeds_kit",
+		type           = "item",
+		tex            = "kyno_seeds_kit_firenettles.tex",
+		prefab         = "kyno_seeds_kit_firenettles",
+		bank           = "kyno_seeds_kit",
+		build          = "kyno_seeds_kit",
+		anim           = "firenettles",
+		deps           = {"firenettles_seeds"},
+		specialinfo    = "BUNDLE",
+	},
+	
+	kyno_seeds_kit_forgetmelots = 
+	{
+		name           = "kyno_seeds_kit_forgetmelots",
+		speechname     = "kyno_seeds_kit",
+		type           = "item",
+		tex            = "kyno_seeds_kit_forgetmelots.tex",
+		prefab         = "kyno_seeds_kit_forgetmelots",
+		bank           = "kyno_seeds_kit",
+		build          = "kyno_seeds_kit",
+		anim           = "forgetmelots",
+		deps           = {"forgetmelots_seeds"},
+		specialinfo    = "BUNDLE",
+	},
+	
+	kyno_seeds_kit_tillweed = 
+	{
+		name           = "kyno_seeds_kit_tillweed",
+		speechname     = "kyno_seeds_kit",
+		type           = "item",
+		tex            = "kyno_seeds_kit_tillweed.tex",
+		prefab         = "kyno_seeds_kit_tillweed",
+		bank           = "kyno_seeds_kit",
+		build          = "kyno_seeds_kit",
+		anim           = "tillweed",
+		deps           = {"tillweed_seeds"},
+		specialinfo    = "BUNDLE",
+	},
+	
 	kyno_cookware_hanger_item =
 	{
 		name           = "kyno_cookware_hanger_item",

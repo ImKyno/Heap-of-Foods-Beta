@@ -236,7 +236,7 @@ end
 
 local function StartHungryTask(inst)
 	if inst.hungry_task ~= nil then
-		return -- já está rodando
+		return
 	end
 
 	local function DoHungrySplash()

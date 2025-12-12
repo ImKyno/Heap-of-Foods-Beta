@@ -13,7 +13,7 @@ local function CreateLight()
 	inst.Light:SetColour(200 / 255, 150 / 255, 50 / 255)
 	inst.Light:SetFalloff(.5)
 	inst.Light:SetRadius(.75)
-	inst.Light:Enable(false)
+	inst.Light:Enable(true)
 
 	return inst
 end
