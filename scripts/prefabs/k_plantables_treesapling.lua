@@ -118,15 +118,17 @@ local saplings =
 		bank       = "kyno_meadowisland_tree_sapling",
 		build      = "kyno_meadowisland_tree_sapling",
 		tags       = {"meadowisland_tree_sapling", "meadowisland_tree"},
+		scale      = .75,
 	},
 	
-	-- Tea Tree
+	-- Sugar Tree
 	{
 		name       = "kyno_sugartree_sapling",
 		growprefab = "kyno_sugartree_short",
 		bank       = "kyno_serenityisland_sapling",
 		build      = "kyno_serenityisland_sapling",
 		tags       = {"kyno_sugartree_sapling", "sugartree"},
+		scale      = .75,
 	},
 	
 	-- Palm Tree

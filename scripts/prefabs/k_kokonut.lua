@@ -104,6 +104,9 @@ local function kokonut()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
+	
+	inst:AddComponent("winter_treeseed")
+	inst.components.winter_treeseed:SetTree("kyno_winter_kokonuttree")
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

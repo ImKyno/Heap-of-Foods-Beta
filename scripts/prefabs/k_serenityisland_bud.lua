@@ -160,6 +160,9 @@ local function budfn()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+	
+	inst:AddComponent("winter_treeseed")
+	inst.components.winter_treeseed:SetTree("kyno_winter_sugartree")
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

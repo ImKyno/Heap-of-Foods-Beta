@@ -17,6 +17,7 @@ local prefabs =
     "twigs",
 	"ash",
 	"charcoal",
+	"pine_needles_chop",
 	
 	"kyno_kokonut",
 	"kyno_kokonut_halved",
@@ -367,7 +368,7 @@ local function chop_tree(inst, chopper, chops, level)
 	inst.AnimState:PushAnimation(inst.anims.sway1, true)
 	
 	local x, y, z = inst.Transform:GetWorldPosition()
-	SpawnPrefab("green_leaves_chop").Transform:SetPosition(x, y + math.random(), z)
+	SpawnPrefab("pine_needles_chop").Transform:SetPosition(x, y + math.random(), z)
 	
 	-- Chance for a Coconut to stomp you.
 	if inst.level == "tall" then

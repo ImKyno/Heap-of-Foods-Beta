@@ -195,6 +195,7 @@ PrefabFiles =
 	"k_whales_ocean_bubbles",
 	"k_whales_ocean_carcass",
 	"k_wildwheat",
+	"k_wintertrees",
 	"k_wobsters",
 	"k_wobster_den_monkeyisland",
 	"k_worm_bone",

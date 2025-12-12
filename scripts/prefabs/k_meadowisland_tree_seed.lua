@@ -106,6 +106,9 @@ local function fn()
 	inst:AddComponent("deployable")
 	inst.components.deployable:SetDeployMode(DEPLOYMODE.PLANT)
 	inst.components.deployable.ondeploy = OnDeploy
+	
+	inst:AddComponent("winter_treeseed")
+	inst.components.winter_treeseed:SetTree("kyno_winter_meadowisland_tree")
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

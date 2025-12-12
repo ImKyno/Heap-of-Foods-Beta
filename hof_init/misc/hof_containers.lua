@@ -446,3 +446,29 @@ for y = 2.5, -0.5, -1 do
 		table.insert(params.packimbaggimsfat.widget.slotpos, Vector3(75 * x - 75 * 2 + 75, 75 * y - 75 * 2 + 75, 0))
 	end
 end
+
+params.winter_tree_hof =
+{
+	widget =
+	{
+		slotpos = {},
+		
+		animbank = "ui_backpack_2x4",
+		animbuild = "ui_backpack_2x4",
+		
+		pos = Vector3(275, 0, 0),
+		side_align_tip = 100,
+	},
+	
+	acceptsstacks = false,
+	type = "cooker",
+}
+
+for y = 0, 3 do
+	table.insert(params.winter_tree_hof.widget.slotpos, Vector3(-162, -75 * y + 114, 0))
+	table.insert(params.winter_tree_hof.widget.slotpos, Vector3(-162 + 75, -75 * y + 114, 0))
+end
+
+function params.winter_tree_hof.itemtestfn(container, item, slot)
+	return item:HasTag("winter_ornament") and not container.inst:HasTag("burnt")
+end

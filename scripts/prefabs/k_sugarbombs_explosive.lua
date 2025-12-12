@@ -51,6 +51,8 @@ local function fn()
 
     MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "med", 0.65)
+	
+	inst.AnimState:SetScale(1.1, 1.1, 1.1)
 
     inst.AnimState:SetBank("sugarbombs")
     inst.AnimState:SetBuild("sugarbombs")

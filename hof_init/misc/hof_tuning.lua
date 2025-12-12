@@ -21,7 +21,7 @@ TUNING.HOF_DEBUG_MODE = false
 TUNING.HOF_RETROFIT_ENABLED = true
 
 -- Setting this to true will force our Special Event. It must be false during off-season.
-TUNING.HOF_SPECIAL_EVENTS_BIRTHDAY = false -- Anniversary Event | Period: December - January.
+TUNING.HOF_SPECIAL_EVENTS_BIRTHDAY = true -- Anniversary Event | Period: December - January.
 
 TUNING.HOF_COFFEEBUFF_DURATION = GetModConfigData("COFFEEDURATION") or 480
 

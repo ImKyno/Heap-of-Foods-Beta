@@ -78,6 +78,9 @@
         <Element name="kyno_whale_blue_ocean_carcass.tex" u1="0.81298828125" v1="0.3759765625" u2="0.87451171875" v2="0.4990234375" />
         <Element name="kyno_whale_white_ocean_carcass.tex" u1="0.87548828125" v1="0.3759765625" u2="0.93701171875" v2="0.4990234375" />
         <Element name="kyno_wildwheat.tex" u1="0.93798828125" v1="0.3759765625" u2="0.99951171875" v2="0.4990234375" />
-        <Element name="kyno_woodenkeg.tex" u1="0.00048828125" v1="0.3056640625" u2="0.06201171875" v2="0.4287109375" />
+        <Element name="kyno_winter_kokonuttree.tex" u1="0.00048828125" v1="0.3056640625" u2="0.06201171875" v2="0.4287109375" />
+        <Element name="kyno_winter_meadowisland_tree.tex" u1="0.06298828125" v1="0.2509765625" u2="0.12451171875" v2="0.3740234375" />
+        <Element name="kyno_winter_sugartree.tex" u1="0.12548828125" v1="0.2509765625" u2="0.18701171875" v2="0.3740234375" />
+        <Element name="kyno_woodenkeg.tex" u1="0.18798828125" v1="0.2509765625" u2="0.24951171875" v2="0.3740234375" />
     </Elements>
 </Atlas>
