@@ -81,6 +81,7 @@
         <Element name="kyno_winter_kokonuttree.tex" u1="0.00048828125" v1="0.3056640625" u2="0.06201171875" v2="0.4287109375" />
         <Element name="kyno_winter_meadowisland_tree.tex" u1="0.06298828125" v1="0.2509765625" u2="0.12451171875" v2="0.3740234375" />
         <Element name="kyno_winter_sugartree.tex" u1="0.12548828125" v1="0.2509765625" u2="0.18701171875" v2="0.3740234375" />
-        <Element name="kyno_woodenkeg.tex" u1="0.18798828125" v1="0.2509765625" u2="0.24951171875" v2="0.3740234375" />
+        <Element name="kyno_wobster_den_monkeyisland.tex" u1="0.18798828125" v1="0.2509765625" u2="0.24951171875" v2="0.3740234375" />
+        <Element name="kyno_woodenkeg.tex" u1="0.25048828125" v1="0.2509765625" u2="0.31201171875" v2="0.3740234375" />
     </Elements>
 </Atlas>

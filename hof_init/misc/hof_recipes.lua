@@ -867,6 +867,17 @@ AddRecipe2("kyno_hofbirthday_cake_empty_construction", {Ingredient("kyno_hofbirt
 	{"SPECIAL_EVENT", "COOKING"}
 )
 
+AddRecipe2("kyno_hofbirthday_balloons", {Ingredient("kyno_hofbirthday_cheer", 2), Ingredient("log", 2), Ingredient("rope", 2)}, TECH.HOFBIRTHDAY,
+	{
+		min_spacing         = 1,
+		placer              = "kyno_hofbirthday_balloons_placer",
+		hint_msg            = "NEEDSHOFBIRTHDAY",
+		atlas               = ModAtlas,
+		image               = "kyno_hofbirthday_balloons.tex",
+	},
+	{"SPECIAL_EVENT", "STRUCTURES", "DECOR"}
+)
+
 AddRecipe2("kyno_hofbirthday_popcornmachine", {Ingredient("kyno_hofbirthday_cheer", 10), Ingredient("gears", 3), Ingredient("transistor", 2), 
 Ingredient("cutstone", 2)}, TECH.HOFBIRTHDAY,
 	{
@@ -877,17 +888,6 @@ Ingredient("cutstone", 2)}, TECH.HOFBIRTHDAY,
 		image               = "cutgrass.tex",
 	},
 	{"SPECIAL_EVENT", "COOKING", "STRUCTURES"}
-)
-
-AddRecipe2("kyno_hofbirthday_balloons", {Ingredient("kyno_hofbirthday_cheer", 2), Ingredient("log", 2), Ingredient("rope", 2)}, TECH.HOFBIRTHDAY,
-	{
-		min_spacing         = 1,
-		placer              = "kyno_hofbirthday_balloons_placer",
-		hint_msg            = "NEEDSHOFBIRTHDAY",
-		atlas               = ModAtlas,
-		image               = "kyno_hofbirthday_balloons.tex",
-	},
-	{"SPECIAL_EVENT", "STRUCTURES", "DECOR"}
 )
 
 -- I would like to let players use alternative ingredients

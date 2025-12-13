@@ -174,7 +174,7 @@ local function basefn(build, loot_table_name, child_name)
 	inst.entity:AddNetwork()
 
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("wobster_den.png")
+	minimap:SetIcon("kyno_wobster_den_monkeyisland.tex")
 
 	inst:SetPhysicsRadiusOverride(2.35)
     MakeWaterObstaclePhysics(inst, 0.80, 2, 0.75)
