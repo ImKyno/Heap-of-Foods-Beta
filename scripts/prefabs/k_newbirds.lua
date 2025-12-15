@@ -184,7 +184,6 @@ local function makebird(name, soundname, no_feather, bank, custom_loot_setup, wa
     } or
     {
         "seeds",
-        "smallmeat",
         "cookedsmallmeat",
         "flint",
         "twigs",

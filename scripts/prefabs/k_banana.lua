@@ -12,7 +12,6 @@ local prefabs =
 {
 	"kyno_banana",
 	"kyno_banana_cooked",
-	"kyno_bananatree_sapling",
 }
 
 local function plant(inst, growtime)

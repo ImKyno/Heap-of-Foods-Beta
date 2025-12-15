@@ -12,7 +12,6 @@ local prefabs =
 	"dug_kyno_coffeebush",
 	
 	"twigs",
-	"ash",
 }
 
 local SEASON_BASEREGENTIME_TUNING_LOOKUP =

@@ -18,8 +18,6 @@ local assets =
 
 local prefabs =
 {
-	"log",
-	"ash",
 	"charcoal",
 
 	"kyno_sap",

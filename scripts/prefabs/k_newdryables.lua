@@ -21,30 +21,12 @@ local assets =
 }
 
 local prefabs = 
-{
-	"red_cap",
-	"green_cap",
-	"blue_cap",
-	"moon_cap",
-	"plantmeat",
-	"pigskin",
-	"smallmeat",
-	"meat",
-	"fishmeat_small",
-	"fishmeat",
-	
-	"kyno_seaweeds",
+{	
 	"kyno_humanmeat",
 	"kyno_crabmeat",
 	"kyno_crabkingmeat",
-	"kyno_poison_froglegs",
 	"kyno_moon_froglegs",
 	"kyno_jellyfish",
-	"kyno_jellyfish_dead",
-	
-	"spoiled_fish_small",
-	"spoiled_fish",
-	"spoiled_food",
 }
 
 local function cap_fn(bank, build, anim, cap_name)

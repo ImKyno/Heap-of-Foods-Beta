@@ -24,8 +24,6 @@ local prefabs =
 	"kyno_jellyfish_rainbow_light_fx",
 	"kyno_jellyfish_rainbow_light_greater",
 	"kyno_jellyfish_rainbow_light_fx_greater",
-
-	"spoiled_food",
 }
 
 local brain = require("brains/jellyfishrainbowoceanbrain")

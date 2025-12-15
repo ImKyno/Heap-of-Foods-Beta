@@ -28,14 +28,7 @@ local assets =
 
 local prefabs = 
 {
-	"spoiled_food",
 	"gridplacer_farmablesoil",
-	
-	"kyno_bacon_cooked",
-	"kyno_white_cap_cooked",
-	"kyno_wheat_cooked",
-	"kyno_salt",
-	"kyno_crabmeat_cooked",
 }
 
 local function GetFertilizerKey(inst)

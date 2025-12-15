@@ -18,13 +18,7 @@ local assets =
 local prefabs =
 {
 	"fishmeat_cooked",
-	"fishmeat_dried",
-	
-	"ocean_splash_med1",
-	"ocean_splash_med2",
-
 	"kyno_dogfish_dead",
-	"kyno_spoiled_fish_large",
 }
 
 local SWIMMING_COLLISION_MASK = COLLISION.GROUND + COLLISION.LAND_OCEAN_LIMITS + COLLISION.OBSTACLES + COLLISION.SMALLOBSTACLES

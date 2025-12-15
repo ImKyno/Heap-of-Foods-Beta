@@ -17,8 +17,6 @@ local prefabs =
 	"kyno_brainrock_nubbin",
 	
 	"rocks",
-	"ocean_splash_med1",
-	"spoiled_food",
 }
 
 local CORAL_STATE = 

@@ -18,7 +18,6 @@ local prefabs =
 	"kyno_parznip_cooked",
 	"kyno_parznip_seeds",
 	"kyno_parznip_big",
-	"spoiled_food",
 }
 
 local function fn()

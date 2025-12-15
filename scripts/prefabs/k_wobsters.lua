@@ -21,8 +21,6 @@ local assets =
 
 local prefabs =
 {
-	"spoiled_fish",
-	"ocean_splash_small1",
 	"wobster_monkeyisland_land",
 	"wobster_monkeyisland_dead",
 	"wobster_monkeyisland_dead_cooked",

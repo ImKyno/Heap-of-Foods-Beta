@@ -42,14 +42,7 @@ local prefabs =
 
 local fish_prefabs =
 {
-	"fishmeat_small",
     "fishmeat_small_cooked",
-	
-	"fishmeat",
-	"fishmeat_cooked",
-	
-	"spoiled_fish_small",
-    "spoiled_fish",
 }
 
 local ALL_PHASES     = { "day", "dusk", "night" }

@@ -10,8 +10,7 @@ local assets =
 
 local prefabs =
 {
-	"fishmeat_small",
-	"spoiled_fish_small",
+
 }
 
 local MIN_WEIGHT = TUNING.KYNO_ANTCHOVY_MIN_WEIGHT

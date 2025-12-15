@@ -12,7 +12,6 @@ local prefabs =
 	"kyno_aloe",
 	"kyno_aloe_cooked",
 	"kyno_aloe_seeds",
-	"spoiled_food",
 }
 
 local function fn()

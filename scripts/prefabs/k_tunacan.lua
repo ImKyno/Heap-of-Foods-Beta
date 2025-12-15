@@ -12,9 +12,7 @@ local assets =
 
 local prefabs =
 {
-    "fishmeat",
 	"fishmeat_cooked",
-	"spoiled_fish",
 	"kyno_tunacan_open",
 }    
 

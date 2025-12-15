@@ -10,9 +10,7 @@ local assets =
 
 local prefabs =
 {
-	"log",
-	"rope",
-	
+	"rope",	
 	"kyno_hofbirthday_cheer",
 }
 

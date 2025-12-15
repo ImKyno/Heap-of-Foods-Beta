@@ -13,7 +13,6 @@ local prefabs =
 {
 	"kyno_roe",
 	"kyno_roe_cooked",
-	"spoiled_food",
 }
 
 local function fn()
@@ -135,5 +134,5 @@ local function fn_cooked()
 	return inst
 end
 
-return Prefab("kyno_roe", fn, assets),
-Prefab("kyno_roe_cooked", fn_cooked, assets)
+return Prefab("kyno_roe", fn, assets, prefabs),
+Prefab("kyno_roe_cooked", fn_cooked, assets, prefabs)

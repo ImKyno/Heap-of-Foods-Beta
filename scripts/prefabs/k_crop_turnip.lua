@@ -12,7 +12,6 @@ local prefabs =
 	"kyno_turnip",
 	"kyno_turnip_cooked",
 	"kyno_turnip_seeds",
-	"spoiled_food",
 }
 
 local function fn()

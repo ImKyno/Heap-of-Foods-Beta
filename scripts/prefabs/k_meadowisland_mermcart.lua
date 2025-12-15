@@ -8,7 +8,6 @@ local assets =
 
 local prefabs =
 {
-	"collapse_big",
 	"small_puff",
 }
 

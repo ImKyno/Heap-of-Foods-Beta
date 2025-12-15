@@ -12,7 +12,6 @@ local assets =
 
 local prefabs =
 {
-	"collapse_big",
     "merm",
     "boards",
     "rocks",

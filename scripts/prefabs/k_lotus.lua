@@ -19,7 +19,6 @@ local prefabs =
 {
 	"kyno_lotus_flower",
 	"kyno_lotus_flower_cooked",
-	"spoiled_food",
 }
 
 local function onpickedfn(inst)

@@ -13,13 +13,10 @@ local assets =
 
 local prefabs =
 {
-    "log",
     "twigs",
-	"ash",
 	"charcoal",
 	"pine_needles_chop",
 	
-	"kyno_kokonut",
 	"kyno_kokonut_halved",
 	"kyno_kokonut_cooked",
     "kyno_kokonuttree_stump",

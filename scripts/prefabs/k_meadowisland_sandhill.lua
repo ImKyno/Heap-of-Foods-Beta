@@ -19,7 +19,6 @@ local prefabs =
 	"spidergland",
 	"yellowgem",
 	
-	"kyno_kokonut",
 	"kyno_piko",
 	"kyno_piko_orange",
 }

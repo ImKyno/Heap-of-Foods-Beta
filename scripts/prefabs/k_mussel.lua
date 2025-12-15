@@ -127,5 +127,5 @@ local function fn_cooked()
 	return inst
 end
 
-return Prefab("kyno_mussel", fn, assets),
-Prefab("kyno_mussel_cooked", fn_cooked, assets)
+return Prefab("kyno_mussel", fn, assets, prefabs),
+Prefab("kyno_mussel_cooked", fn_cooked, assets, prefabs)

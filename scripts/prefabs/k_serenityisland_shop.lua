@@ -15,7 +15,6 @@ local assets =
 
 local prefabs =
 {
-    "meat",
 	"cookingrecipecard",
 	"lobsterdinner",
 	"turf_road",

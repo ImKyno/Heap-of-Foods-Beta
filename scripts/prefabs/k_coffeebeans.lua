@@ -11,7 +11,6 @@ local prefabs =
 {
 	"kyno_coffeebeansbuff",
 	"kyno_coffeebeans_cooked",
-	"spoiled_food",
 }
 
 local function fn()

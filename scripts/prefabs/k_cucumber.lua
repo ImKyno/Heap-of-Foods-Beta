@@ -11,7 +11,6 @@ local prefabs =
 {
 	"kyno_cucumber",
 	"kyno_cucumber_seeds",
-	"spoiled_food",
 }
 
 local function fn()

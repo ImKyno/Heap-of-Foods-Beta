@@ -13,7 +13,6 @@ local assets =
 local prefabs = 
 {
 	"kyno_nukashinesugarfreebuff",
-	"spoiled_food",
 }
 
 local BEAT_SOUNDNAME = "BEAT_SOUND"

@@ -13,8 +13,6 @@ local prefabs =
 {
 	"kyno_humanmeat_cooked",
 	"kyno_humanmeat_dried",
-	
-	"spoiled_food",
 }
 
 local function fn()

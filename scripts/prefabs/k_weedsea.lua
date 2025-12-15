@@ -19,7 +19,6 @@ local assets =
 local prefabs =
 {
 	"kyno_seaweeds_ocean",
-	"kyno_seaweeds",
 	"kyno_seaweeds_cooked",
 	"kyno_seaweeds_dried",
 	"kyno_seaweeds_root",

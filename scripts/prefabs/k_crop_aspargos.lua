@@ -11,7 +11,6 @@ local prefabs =
 {
 	"asparagus",
 	"asparagus_cooked",
-	"spoiled_food",
 }
 
 local function fn()

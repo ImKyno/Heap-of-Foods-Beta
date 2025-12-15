@@ -16,11 +16,8 @@ local assets =
 local prefabs = 
 {
 	"kyno_jellyfish",
-	"kyno_jellyfish_dead",
 	"kyno_jellyfish_cooked",
 	"kyno_jellyfish_dried",
-
-	"spoiled_food",
 }
 
 local brain = require("brains/jellyfishoceanbrain")

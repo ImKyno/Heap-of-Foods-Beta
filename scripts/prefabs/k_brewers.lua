@@ -28,7 +28,6 @@ local prefabs =
     "collapse_small",
 	"wetgoop",
 	"wetgoop2",
-	"spoiled_food",
 
 	"kyno_product_bubble",
 }

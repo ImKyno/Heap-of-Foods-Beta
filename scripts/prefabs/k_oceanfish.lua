@@ -612,7 +612,6 @@ local function MakeFish(data)
 		data.cooking_product,
 		
 		"schoolherd_"..data.prefab,
-		"spoiled_fish",
 	}
 	
 	ConcatArrays(prefabs, data.loot, data.extra_prefabs)

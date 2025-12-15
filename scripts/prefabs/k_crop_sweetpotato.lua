@@ -12,7 +12,6 @@ local prefabs =
 	"kyno_sweetpotato",
 	"kyno_sweetpotato_cooked",
 	"kyno_sweetpotato_seeds",
-	"spoiled_food",
 }
 
 local function fn()

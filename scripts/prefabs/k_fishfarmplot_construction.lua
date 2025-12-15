@@ -19,7 +19,6 @@ local prefabs =
 {
 	"boards",
 	"construction_container",
-	"collapse_big",
 	"rope",
 
 	"kyno_fishfarmplot",

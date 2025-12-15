@@ -14,9 +14,7 @@ local assets =
 local prefabs =
 {
 	"ice",
-	"fishmeat",
 	"kyno_fishmeat_dried",
-	"kyno_spoiled_fish_large",
 }
 
 local function DoFlop(inst)

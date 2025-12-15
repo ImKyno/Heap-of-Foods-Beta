@@ -16,9 +16,6 @@ local prefabs =
 {
 	"kyno_poison_froglegs_cooked",
 	"kyno_moon_froglegs_cooked",
-	
-	"smallmeat_dried",
-	"spoiled_food",
 }
 
 local function fn(bank, build, anim)
@@ -204,6 +201,6 @@ local function fn_moon_cooked()
 end
 
 return Prefab("kyno_poison_froglegs", fn_poison, assets, prefabs),
-Prefab("kyno_poison_froglegs_cooked", fn_poison_cooked, assets),
+Prefab("kyno_poison_froglegs_cooked", fn_poison_cooked, assets, prefabs),
 Prefab("kyno_moon_froglegs", fn_moon, assets, prefabs),
 Prefab("kyno_moon_froglegs_cooked", fn_moon_cooked, assets, prefabs)

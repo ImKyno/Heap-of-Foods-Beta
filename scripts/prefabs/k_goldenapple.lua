@@ -11,8 +11,6 @@ local prefabs =
 {
 	"kyno_goldenapple_fx",
 	"kyno_goldenapplebuff",
-
-	"spoiled_food",
 }
 
 -- Gives a lot of buffs!

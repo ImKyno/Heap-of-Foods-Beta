@@ -12,7 +12,6 @@ local prefabs =
 	"kyno_radish",
 	"kyno_radish_cooked",
 	"kyno_radish_seeds",
-	"spoiled_food",
 }
 
 local function fn()

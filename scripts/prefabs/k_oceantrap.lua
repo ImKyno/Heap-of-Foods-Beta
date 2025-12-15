@@ -14,7 +14,6 @@ local assets =
 
 local prefabs =
 {
-	"kyno_seaweeds",
 	"kyno_jellyfish",
 	"kyno_messagebottle_empty",
 }

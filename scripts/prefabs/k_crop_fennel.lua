@@ -12,7 +12,6 @@ local prefabs =
 	"kyno_fennel",
 	"kyno_fennel_cooked",
 	"kyno_fennel_seeds",
-	"spoiled_food",
 }
 
 local function fn()

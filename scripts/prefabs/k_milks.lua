@@ -13,10 +13,6 @@ local prefabs =
 	
 	"kyno_milk_beefalo",
 	"kyno_milk_koalefant",
-	-- "kyno_milk_deer",
-	-- "kyno_milk_spat",
-	
-	"spoiled_food",
 }
 
 local s = .85

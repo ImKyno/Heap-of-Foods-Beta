@@ -5,7 +5,7 @@ local pinecone_assets =
 
 local pinecone_prefabs =
 {
-    "kyno_bananatree",
+
 }
 
 local function growtree(inst)

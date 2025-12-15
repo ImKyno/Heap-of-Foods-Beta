@@ -8,7 +8,6 @@ local assets =
 
 local prefabs_tree =
 {
-    "log",
     "twigs",
 	
 	"kyno_banana",
@@ -19,7 +18,7 @@ local prefabs_tree =
 
 local prefabs_stump =
 {
-    "ash",
+
 }
 
 local prefabs_burnt =

@@ -21,17 +21,10 @@ local prefabs =
 	"boards",
 	"rope",
 	"marsh_plant",
-	"collapse_big",
 	"splash_green_small",
-	"ocean_splash_med1",
-	"ocean_splash_med2",
 	
 	"kyno_fishfarmplot_shoal",
 	"kyno_fishfarmplot_shoal_marker",
-	
-	"kyno_fishfarmplot_rock1",
-	"kyno_fishfarmplot_rock2",
-	"kyno_fishfarmplot_rock3",
 }
 
 local function SpawnPlants(inst)

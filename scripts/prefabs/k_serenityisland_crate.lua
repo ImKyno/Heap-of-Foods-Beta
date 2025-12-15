@@ -14,7 +14,6 @@ local prefabs =
 	
 	"kyno_tunacan",
 	"kyno_mysterymeat",
-    "kyno_seaweeds",
 	"kyno_waterycress",
 	"kyno_taroroot",
 	"kyno_mussel",

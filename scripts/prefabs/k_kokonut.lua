@@ -9,10 +9,8 @@ local assets =
 
 local prefabs = 
 {
-	"kyno_kokonut",
 	"kyno_kokonut_cooked",
 	"kyno_kokonut_halved",
-	"kyno_kokonuttree_sapling",
 }
 
 local function OnPlant(inst, growtime)

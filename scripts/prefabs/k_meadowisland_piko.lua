@@ -19,7 +19,6 @@ local assets =
 
 local prefabs =
 {
-	"smallmeat",
 	"cookedsmallmeat",
 }
 

@@ -23,9 +23,7 @@ local grasspart_assets =
 local prefabs =
 {
 	"kyno_wheat",
-	
 	"dug_kyno_wildwheat",
-	"spoiled_food",
 	"grasspartfx",
 }
 

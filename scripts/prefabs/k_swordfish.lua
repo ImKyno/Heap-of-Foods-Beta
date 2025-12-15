@@ -19,12 +19,10 @@ local assets =
 local prefabs =
 {
 	"fishmeat_cooked",
-	"fishmeat_dried",
 	
 	"kyno_fishmeat_dried",
 	"kyno_swordfish_dead",
 	"kyno_swordfish_damage_fx",
-	"kyno_spoiled_fish_large",
 }
 
 local SWIMMING_COLLISION_MASK = COLLISION.GROUND + COLLISION.LAND_OCEAN_LIMITS + COLLISION.OBSTACLES + COLLISION.SMALLOBSTACLES

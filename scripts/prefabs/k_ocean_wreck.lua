@@ -11,7 +11,6 @@ local assets =
 local prefabs =
 {
 	"boards",
-	"collapse_big",
 	
 	"kyno_limpets",
 	"kyno_ghost_pirate",

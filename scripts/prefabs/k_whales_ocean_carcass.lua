@@ -23,7 +23,6 @@ local whale_white_assets =
 
 local prefabs =
 {
-	"fishmeat",
 	"boneshard",
 }
 

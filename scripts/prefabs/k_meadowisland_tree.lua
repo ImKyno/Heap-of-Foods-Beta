@@ -16,7 +16,6 @@ local prefabs =
 {
 	"green_leaves_chop",
 	"driftwood_log",
-	"ash",
 	"charcoal",
 
 	"kyno_oaktree_pod",
