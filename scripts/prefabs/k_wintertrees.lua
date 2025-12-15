@@ -306,42 +306,6 @@ end
 
 local GIFTING_PLAYER_RADIUS_SQ = 25 * 25
 
-local random_gift1 =
-{
-	moonrocknugget = 2.0,
-	gears          = 1.0,
-	compass        = 0.3,
-	sewing_kit     = 0.2,
-
-	redgem         = 0.2,
-	bluegem        = 0.2,
-	greengem       = 0.1,
-	orangegem      = 0.1,
-	yellowgem      = 0.1,
-
-	beefalohat     = 0.5,
-	winterhat      = 0.5,
-	earmuffshat    = 0.5,
-	catcoonhat     = 0.5,
-	molehat        = 0.5,
-}
-
-local random_gift2 =
-{
-	gears          = 0.2,
-	moonrocknugget = 0.2,
-
-	redgem         = 0.1,
-	bluegem        = 0.1,
-	greengem       = 0.1,
-	orangegem      = 0.1,
-	yellowgem      = 0.1,
-
-	walrushat      = 0.2,
-	cane           = 0.2,
-	panflute       = 0.1,
-}
-
 local function NobodySeesPoint(pt)
 	if TheWorld.Map:IsPointNearHole(pt) then
 		return false
@@ -379,7 +343,7 @@ local function DoGifting(inst)
 			for _, player in ipairs(players) do
 				local loot = {}
 
-				if player.components.wintertreegiftable ~= nil and player.components.wintertreegiftable:GetDaysSinceLastGift() >= 4 then
+				if player.components.wintertreegiftable ~= nil --[[and player.components.wintertreegiftable:GetDaysSinceLastGift() >= 4]] then
 					player.components.wintertreegiftable:OnGiftGiven()
 					
 					table.insert(loot, { prefab = "winter_food".. math.random(NUM_WINTERFOOD), stack = math.random(3) + (fully_decorated and 3 or 0)})
@@ -387,10 +351,12 @@ local function DoGifting(inst)
 					or math.random() < 0.5 and GetRandomFancyWinterOrnament()
 					or GetRandomFestivalEventWinterOrnament() })
 
-					table.insert(loot, { prefab = weighted_random_choice(random_gift1) })
+					table.insert(loot, { prefab = weighted_random_choice(TUNING.KYNO_WINTERTREE_GIFT1) })
 
 					if fully_decorated then
-						table.insert(loot, { prefab = weighted_random_choice(random_gift2) })
+						table.insert(loot, { prefab = weighted_random_choice(TUNING.KYNO_WINTERTREE_GIFT2) })
+						-- Some festive foods.
+						table.insert(loot, { prefab = weighted_random_choice(TUNING.KYNO_WINTERTREE_GIFT3) })
 					else
 						table.insert(loot, { prefab = PickRandomTrinket() })
 					end
@@ -775,7 +741,7 @@ local function KokonutTree_OnChop(inst, worker)
 	local x, y, z = inst.Transform:GetWorldPosition()
 	SpawnPrefab("pine_needles_chop").Transform:SetPosition(x, (inst.components.growable.stage == 4 and y - .3 or y) + math.random() * 2, z)
 	
-	if inst.components.growable.stage == 5 then
+	if inst.components.growable ~= nil and inst.components.growable.stage == 5 then
 		if math.random() <= TUNING.KYNO_KOKONUTTREE_KOKONUT_CHANCE then
 			local coconut = SpawnPrefab("kyno_kokonut")
 			local rad = chopper:GetPosition():Dist(inst:GetPosition())
@@ -829,14 +795,18 @@ local function AddHofWinterTree(treetype)
 		end
 	end
 	
-	for k, v in pairs(random_gift1) do
+	for k, v in pairs(TUNING.KYNO_WINTERTREE_GIFT1) do
 		table.insert(prefabs, k)
 	end
 	
-	for k, v in pairs(random_gift2) do
-		if random_gift1[k] == nil then
+	for k, v in pairs(TUNING.KYNO_WINTERTREE_GIFT2) do
+		if TUNING.KYNO_WINTERTREE_GIFT1[k] == nil then
 			table.insert(prefabs, k)
 		end
+	end
+	
+	for k, v in pairs(TUNING.KYNO_WINTERTREE_GIFT3) do
+		table.insert(prefabs, k)
 	end
 
 	local function OnSave(inst, data)

@@ -1151,10 +1151,10 @@ TUNING.KYNO_CRAFTINGBUFF_SANITY_PENALTY = -10
 
 TUNING.OCTOPUS_VALUES = 
 {
-	SEAFOOD = 1 + 3,
-	SEAFOOD_RARE = 5 + 3,
+	SEAFOOD          = 1 + 3,
+	SEAFOOD_RARE     = 5 + 3,
 
-	TRINKETS = 
+	TRINKETS         = 
 	{
 		-- RoG Trinkets 1-12
 		6 + 3, 8 + 3, 6 + 3, 7 + 3, 6 + 3, 7 + 3, 
@@ -1167,8 +1167,8 @@ TUNING.OCTOPUS_VALUES =
 		1 + 3, 1 + 3, 1 + 3, 1 + 3, 1 + 3, 1 + 3,
 	},
 
-	ANTLIONTRINKET = 8,
-	COTLTRINKET = 8,
+	ANTLIONTRINKET   = 8,
+	COTLTRINKET      = 8,
 	BOTTLECAPTRINKET = 25,
 }
 
@@ -1270,14 +1270,14 @@ TUNING.HOFBIRTHDAY_CAKE_CONSTRUCTION_LOOT =
 -- These are recipes that won't give you Anniversary Cheer.
 TUNING.HOFBIRTHDAY_BLOCKED_RECIPES =
 {
-	beefalofeed = true,
+	beefalofeed   = true,
 	duckyouglermz = true,
-	dustmeringue = true,
-	gorge_bread = true,
-	littlebread = true,
-	watercup = true,
-	wetgoop = true,
-	wetgoop2 = true,
+	dustmeringue  = true,
+	gorge_bread   = true,
+	littlebread   = true,
+	watercup      = true,
+	wetgoop       = true,
+	wetgoop2      = true,
 }
 
 TUNING.HOFBIRTHDAY_CHEER_CHANCE = 1.00--0.20
@@ -1315,3 +1315,61 @@ TUNING.KYNO_MEADOWISLAND_POND_TICK_PERIOD = 5
 TUNING.KYNO_MEADOWISLAND_POND_BATHBOMB_DURATION = 480 / 2
 TUNING.KYNO_MEADOWISLAND_POND_HEALTH_PER_SECOND = 1
 TUNING.KYNO_MEADOWISLAND_POND_SANITY_PER_SECOND = 1
+
+TUNING.KYNO_WINTERTREE_GIFT1 =
+{
+	moonrocknugget = 2.0,
+	gears          = 1.0,
+	compass        = 0.3,
+	sewing_kit     = 0.2,
+
+	redgem         = 0.2,
+	bluegem        = 0.2,
+	greengem       = 0.1,
+	orangegem      = 0.1,
+	yellowgem      = 0.1,
+
+	beefalohat     = 0.5,
+	winterhat      = 0.5,
+	earmuffshat    = 0.5,
+	catcoonhat     = 0.5,
+	molehat        = 0.5,
+}
+
+TUNING.KYNO_WINTERTREE_GIFT2 =
+{
+	gears          = 0.2,
+	moonrocknugget = 0.2,
+
+	redgem         = 0.1,
+	bluegem        = 0.1,
+	greengem       = 0.1,
+	orangegem      = 0.1,
+	yellowgem      = 0.1,
+
+	walrushat      = 0.2,
+	cane           = 0.2,
+	panflute       = 0.1,
+}
+
+TUNING.KYNO_WINTERTREE_GIFT3 =
+{
+	festive_berrysauce     = 0.3,
+	festive_bibingka       = 0.3,
+	festive_cabbagerolls   = 0.3,
+	festive_fishdish       = 0.3,
+	festive_goodgravy      = 0.3,
+	festive_latkes         = 0.3,
+	festive_lutefisk       = 0.3,
+	festive_mulledpunch    = 0.3,
+	festive_panettone      = 0.3,
+	festive_pavlova        = 0.3,
+	festive_pickledherring = 0.3,
+	festive_polishcookies  = 0.3,
+	festive_pumpkinpie     = 0.3,
+	festive_roastedturkey  = 0.3,
+	festive_stuffing       = 0.3,
+	festive_sweetpotato    = 0.3,
+	festive_tamales        = 0.3,
+	festive_tourtiere      = 0.3,
+}
