@@ -170,4 +170,4 @@ end
 
 return Prefab("kyno_oaktree_pod", fn, assets, prefabs),
 Prefab("kyno_oaktree_pod_cooked", fn_cooked, assets, prefabs),
-MakePlacer("kyno_oaktree_pod_placer", "kyno_meadowisland_tree_sapling", "kyno_meadowisland_tree_sapling", "planted")
+MakePlacer("kyno_oaktree_pod_placer", "kyno_meadowisland_tree_sapling", "kyno_meadowisland_tree_sapling", "planted", nil, nil, nil, .75)

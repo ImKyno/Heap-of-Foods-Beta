@@ -742,9 +742,10 @@ end
 local function SugarTree_Postinit(inst)
 	inst.AnimState:Hide("mouseover")
 	
+	inst.AnimState:AddOverrideBuild("sugartree_winter_build")
+
 	inst.AnimState:OverrideSymbol("mouseover", "quagmire_tree_cotton_trunk_build", "toggle_mouseover")
 	inst.AnimState:OverrideSymbol("sapling_deciduous", "kyno_serenityisland_sapling", "sapling")
-	
 end
 
 local function TeaTree_OnChop(inst, worker)
@@ -754,7 +755,7 @@ local function TeaTree_OnChop(inst, worker)
 	local VEC_CHANCE = .33
 	local RANDOM_CHANCE = .50
 
-	if inst.components.growable.stage == 5 then
+	if inst.components.growable ~= nil and inst.components.growable.stage == 5 then
 		if math.random() < TUNING.KYNO_MEADOWISLAND_TREE_DROP_CHANCE then
 			local item_to_drop = math.random() < RANDOM_CHANCE and "kyno_tealeaf" or "kyno_twiggynuts"
 			local item = SpawnPrefab(item_to_drop)
@@ -1049,7 +1050,7 @@ for i, v in ipairs({
 		
 		extrabuilds     =
 		{
-			"quagmire_tree_cotton_build",
+			"sugartree_winter_build",
 			"kyno_serenityisland_sapling",
 		},
 		

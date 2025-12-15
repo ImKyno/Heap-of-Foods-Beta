@@ -299,4 +299,4 @@ return Prefab("kyno_sugartree_bud", budfn, assets, prefabs),
 Prefab("kyno_sugartree_flower", flowerfn, assets, prefabs),
 Prefab("kyno_sugartree_flower_planted", plantedflowerfn, assets, prefabs),
 Prefab("kyno_sugartree_petals", petalsfn, assets, prefabs),
-MakePlacer("kyno_sugartree_bud_placer", "kyno_serenityisland_sapling", "kyno_serenityisland_sapling", "planted")
+MakePlacer("kyno_sugartree_bud_placer", "kyno_serenityisland_sapling", "kyno_serenityisland_sapling", "planted", nil, nil, nil, .75)
