@@ -598,7 +598,7 @@ local function StridentTridentPostinit(inst)
                 end
             end
             if affected_entity.prefab == "kyno_lotus_ocean" then
-                local uprooted_lotus_plant = SpawnPrefab("kyno_lotus_flower_root")
+                local uprooted_lotus_plant = SpawnPrefab("kyno_lotus_root")
                 if uprooted_lotus_plant ~= nil then
                     uprooted_lotus_plant.Transform:SetPosition(ae_x, ae_y, ae_z)
                     launch_away(uprooted_lotus_plant, position + Vector3(0.5*math.random(), 0, 0.5*math.random()))

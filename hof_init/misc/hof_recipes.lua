@@ -856,7 +856,7 @@ AddRecipe2("kyno_hofbirthday_candle", {Ingredient("kyno_hofbirthday_cheer", 1), 
 	{"SPECIAL_EVENT", "LIGHT"}
 )
 
-AddRecipe2("kyno_hofbirthday_cake_empty_construction", {Ingredient("kyno_hofbirthday_cheer", 10), Ingredient("marble", 2)}, TECH.HOFBIRTHDAY,
+AddRecipe2("kyno_hofbirthday_cake_empty_construction", {Ingredient("kyno_hofbirthday_cheer", 15), Ingredient("marble", 2)}, TECH.HOFBIRTHDAY,
 	{
 		min_spacing         = 2,
 		placer              = "kyno_hofbirthday_cake_placer",
@@ -867,7 +867,7 @@ AddRecipe2("kyno_hofbirthday_cake_empty_construction", {Ingredient("kyno_hofbirt
 	{"SPECIAL_EVENT", "COOKING"}
 )
 
-AddRecipe2("kyno_hofbirthday_balloons", {Ingredient("kyno_hofbirthday_cheer", 2), Ingredient("log", 2), Ingredient("rope", 2)}, TECH.HOFBIRTHDAY,
+AddRecipe2("kyno_hofbirthday_balloons", {Ingredient("kyno_hofbirthday_cheer", 3), Ingredient("log", 1), Ingredient("rope", 1)}, TECH.HOFBIRTHDAY,
 	{
 		min_spacing         = 1,
 		placer              = "kyno_hofbirthday_balloons_placer",
@@ -878,7 +878,7 @@ AddRecipe2("kyno_hofbirthday_balloons", {Ingredient("kyno_hofbirthday_cheer", 2)
 	{"SPECIAL_EVENT", "STRUCTURES", "DECOR"}
 )
 
-AddRecipe2("kyno_hofbirthday_popcornmachine", {Ingredient("kyno_hofbirthday_cheer", 10), Ingredient("gears", 3), Ingredient("transistor", 2), 
+AddRecipe2("kyno_hofbirthday_popcornmachine", {Ingredient("kyno_hofbirthday_cheer", 15), Ingredient("gears", 3), Ingredient("transistor", 2), 
 Ingredient("boards", 3)}, TECH.HOFBIRTHDAY,
 	{
 		hint_msg            = "NEEDSHOFBIRTHDAY",

@@ -204,3 +204,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS_FISHBONE = "Przywołuje Packim Baggi
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "Świętujemy 5. Rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Można pokroić Tasakiem, aby otrzymać Kawałek Tortu Rocznicowego. Każdy kawałek ma inny smak i efekt.\n\nStopniowo zwiększa poczytalność ocalałych w pobliżu.\n\nŚwiętujemy 5. Rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Stopniowo zwiększa poczytalność ocalałych w pobliżu.\n\nŚwiętujemy 5. Rocznicę Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Pojemnik z dwoma slotami, który przyjmuje kukurydzę do produkcji popcornu.\n\nUmieszczenie kukurydzy w pierwszym slocie pozwala wyprodukować 5 porcji popcornu.\n\nPodczas Rocznicy Heap of Foods będzie produkować Rocznicowy Popcorn.\n\nŚwiętując 5. Rocznicę Heap of Foods!"

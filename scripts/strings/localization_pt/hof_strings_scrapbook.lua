@@ -204,3 +204,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS_FISHBONE = "Invoca o Saquinho Pacoti
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "Comemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Pode ser fatiado usando um Cutelo para obter Fatia de Bolo de Aniversário. Cada fatia tem um sabor e efeito diferente.\n\nAumenta a sanidade dos sobreviventes ao seu redor com o tempo.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Aumenta a sanidade dos sobreviventes ao seu redor com o tempo.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Um recipiente de 2 slots que recebe milho para fazer pipoca.\n\nColocar milho no primeiro slot permite produzir 5 pipocas.\n\nDurante o Aniversário do Amontoado de Comidas, produzirá Pipoca de Aniversário.\n\nCelebrando o 5º Aniversário do Amontoado de Comidas!"

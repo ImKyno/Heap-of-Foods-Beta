@@ -457,6 +457,54 @@ local HOF_SCRAPBOOK_ITEMS =
 		deps           = {"kyno_seaweeds_ocean"},
 	},
 	
+	kyno_lotus_root    =
+	{
+		name           = "kyno_lotus_root",
+		type           = "item",
+		tex            = "kyno_lotus_root.tex",
+		prefab         = "kyno_lotus_root",
+		stacksize      = 40,
+		burnable       = true,
+		bank           = "kyno_plant_ocean_seeds",
+		build          = "kyno_plant_ocean_seeds",
+		anim           = "lotus",
+		animoffsety    = 10,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -30,
+		deps           = {"kyno_lotus_ocean"},
+	},
+	
+	kyno_taroroot_root =
+	{
+		name           = "kyno_taroroot_root",
+		type           = "item",
+		tex            = "kyno_taroroot_root.tex",
+		prefab         = "kyno_taroroot_root",
+		stacksize      = 40,
+		burnable       = true,
+		bank           = "kyno_plant_ocean_seeds",
+		build          = "kyno_plant_ocean_seeds",
+		anim           = "taroroot",
+		animoffsety    = 10,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -30,
+		deps           = {"kyno_taroroot_ocean"},
+	},
+	
+	kyno_waterycress_root =
+	{
+		name           = "kyno_waterycress_root",
+		type           = "item",
+		tex            = "kyno_waterycress_root.tex",
+		prefab         = "kyno_waterycress_root",
+		stacksize      = 40,
+		burnable       = true,
+		bank           = "kyno_plant_ocean_seeds",
+		build          = "kyno_plant_ocean_seeds",
+		anim           = "waterycress",
+		deps           = {"kyno_waterycress_ocean"},
+	},
+	
 	kyno_brewingrecipecard =
 	{
 		name           = "kyno_brewingrecipecard_scrapbook", -- Needed, because it would appear as {item}.
@@ -1511,6 +1559,28 @@ local HOF_SCRAPBOOK_ITEMS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -80,
 		specialinfo    = "HOFBIRTHDAY_HAT5",
+	},
+	
+	kyno_hofbirthday_popcornmachine =
+	{
+		name           = "kyno_hofbirthday_popcornmachine",
+		type           = "item",
+		subcat         = "structure",
+		tex            = "kyno_hofbirthday_popcornmachine.tex",
+		prefab         = "kyno_hofbirthday_popcornmachine",
+		workable       = "HAMMER",
+		fueledmax      = 800,
+		fueledrate     = 1,
+		fueledtype1    = "BURNABLE",
+		fueledtype2    = "CHEMICAL",
+		bank           = "kyno_hofbirthday_popcorn_machine",
+		build          = "kyno_hofbirthday_popcorn_machine",
+		overridesymbol = {"fuel", "kyno_hofbirthday_popcorn_machine", "fuel3"},
+		anim           = "idle_tier3",
+		animoffsety    = 20,
+		animoffsetbgy  = -50,
+		deps           = {"kyno_hofbirthday_cheer", "kyno_hofbirthday_popcorn", "corn", "corn_cooked", "transistor", "gears", "boards"},
+		specialinfo    = "HOFBIRTHDAY_POPCORNMACHINE",
 	},
 }
 
@@ -5322,7 +5392,7 @@ local HOF_SCRAPBOOK_FOODS =
 		bank           = "kyno_hofbirthday_cheer",
 		build          = "kyno_hofbirthday_cheer",
 		anim           = "idle_loop",
-		deps           = {"kyno_hofbirthday_cake", "kyno_hofbirthday_balloons", "kyno_hofbirthday_candle"},
+		deps           = {"kyno_hofbirthday_cake", "kyno_hofbirthday_balloons", "kyno_hofbirthday_candle", "kyno_hofbirthday_popcornmachine"},
 	},
 	
 	kyno_hofbirthday_cake_slice1 =
@@ -5413,7 +5483,7 @@ local HOF_SCRAPBOOK_FOODS =
 		animoffsety    = 10,
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -95,
-		deps           = {"corn", "spoiled_food"},
+		deps           = {"kyno_hofbirthday_popcornmachine", "corn", "spoiled_food"},
 		specialinfo    = "HOFBIRTHDAY",
 	},
 }

@@ -16,9 +16,9 @@ local assets =
 
 local prefabs =
 {
+	"kyno_lotus_root",
 	"kyno_lotus_flower",
 	"kyno_lotus_flower_cooked",
-	"kyno_lotus_flower_root",
 }
 
 local function onpickedfn(inst)
@@ -78,7 +78,7 @@ local function CheckBeached(inst)
 		
         inst:Remove()
 
-		local beached = SpawnPrefab("kyno_lotus_flower_root")
+		local beached = SpawnPrefab("kyno_lotus_root")
         beached.Transform:SetPosition(x, y, z)
     end
 end
@@ -304,7 +304,7 @@ local function lotus_root()
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_lotus_flower_root"
+	inst.components.inventoryitem.imagename = "kyno_lotus_root"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -315,5 +315,5 @@ end
 return Prefab("kyno_lotus_ocean", fn, assets, prefabs),
 Prefab("kyno_lotus_flower", lotus, assets, prefabs),
 Prefab("kyno_lotus_flower_cooked", lotus_cooked, assets, prefabs),
-Prefab("kyno_lotus_flower_root", lotus_root, assets, prefabs),
-MakePlacer("kyno_lotus_flower_root_placer", "lotus", "lotus", "idle_plant", false, false, false, nil, nil, nil, nil, 2)
+Prefab("kyno_lotus_root", lotus_root, assets, prefabs),
+MakePlacer("kyno_lotus_root_placer", "lotus", "lotus", "idle_plant", false, false, false, nil, nil, nil, nil, 2)
