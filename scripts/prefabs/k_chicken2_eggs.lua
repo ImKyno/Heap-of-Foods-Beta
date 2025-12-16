@@ -126,5 +126,5 @@ local function fn_cooked()
 	return inst
 end
 
-return Prefab("kyno_chicken_egg", fn, assets),
-Prefab("kyno_chicken_egg_cooked", fn_cooked, assets)
+return Prefab("kyno_chicken_egg", fn, assets, prefabs),
+Prefab("kyno_chicken_egg_cooked", fn_cooked, assets, prefabs)

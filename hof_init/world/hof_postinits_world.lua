@@ -598,7 +598,7 @@ local function StridentTridentPostinit(inst)
                 end
             end
             if affected_entity.prefab == "kyno_lotus_ocean" then
-                local uprooted_lotus_plant = SpawnPrefab("kyno_lotus_flower")
+                local uprooted_lotus_plant = SpawnPrefab("kyno_lotus_flower_root")
                 if uprooted_lotus_plant ~= nil then
                     uprooted_lotus_plant.Transform:SetPosition(ae_x, ae_y, ae_z)
                     launch_away(uprooted_lotus_plant, position + Vector3(0.5*math.random(), 0, 0.5*math.random()))
@@ -612,14 +612,14 @@ local function StridentTridentPostinit(inst)
                 end
             end
             if affected_entity.prefab == "kyno_taroroot_ocean" then
-                local uprooted_taroroot_plant = SpawnPrefab("kyno_taroroot")
+                local uprooted_taroroot_plant = SpawnPrefab("kyno_taroroot_root")
                 if uprooted_taroroot_plant ~= nil then
                     uprooted_taroroot_plant.Transform:SetPosition(ae_x, ae_y, ae_z)
                     launch_away(uprooted_taroroot_plant, position + Vector3(0.5*math.random(), 0, 0.5*math.random()))
                 end
             end
             if affected_entity.prefab == "kyno_waterycress_ocean" then
-                local uprooted_waterycress_plant = SpawnPrefab("kyno_waterycress")
+                local uprooted_waterycress_plant = SpawnPrefab("kyno_waterycress_root")
                 if uprooted_waterycress_plant ~= nil then
                     uprooted_waterycress_plant.Transform:SetPosition(ae_x, ae_y, ae_z)
                     launch_away(uprooted_waterycress_plant, position + Vector3(0.5*math.random(), 0, 0.5*math.random()))

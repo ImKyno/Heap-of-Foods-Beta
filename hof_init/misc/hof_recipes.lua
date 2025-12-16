@@ -879,13 +879,11 @@ AddRecipe2("kyno_hofbirthday_balloons", {Ingredient("kyno_hofbirthday_cheer", 2)
 )
 
 AddRecipe2("kyno_hofbirthday_popcornmachine", {Ingredient("kyno_hofbirthday_cheer", 10), Ingredient("gears", 3), Ingredient("transistor", 2), 
-Ingredient("cutstone", 2)}, TECH.HOFBIRTHDAY,
+Ingredient("boards", 3)}, TECH.HOFBIRTHDAY,
 	{
-		min_spacing         = 1,
-		placer              = "kyno_hofbirthday_popcornmachine_placer",
 		hint_msg            = "NEEDSHOFBIRTHDAY",
-		atlas               = DefaultAtlas,
-		image               = "cutgrass.tex",
+		atlas               = ModAtlas,
+		image               = "kyno_hofbirthday_popcornmachine.tex",
 	},
 	{"SPECIAL_EVENT", "COOKING", "STRUCTURES"}
 )

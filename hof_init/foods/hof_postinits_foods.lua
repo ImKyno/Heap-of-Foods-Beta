@@ -367,3 +367,12 @@ end
 for k, v in pairs(monkeyqueen_foods) do
 	AddPrefabPostInit(v, MonkeyQueenBribesPostInit)
 end
+
+-- Invalid Birdcage foods.
+local function BirdcagePostInit(inst)
+	local invalid_foods = UpvalueHacker.GetUpvalue(_G.Prefabs.birdcage.fn, "ShouldAcceptItem", "invalid_foods")
+	table.insert(invalid_foods, "kyno_chicken_egg")
+	table.insert(invalid_foods, "kyno_chicken_egg_cooked")
+end
+
+AddPrefabPostInit("birdcage", BirdcagePostInit)

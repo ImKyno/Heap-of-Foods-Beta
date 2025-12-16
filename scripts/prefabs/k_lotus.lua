@@ -3,7 +3,8 @@ require("worldsettingsutil")
 
 local assets =
 {
-    Asset("ANIM", "anim/lotus.zip"),
+	Asset("ANIM", "anim/lotus.zip"),
+	Asset("ANIM", "anim/kyno_plant_ocean_seeds.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -11,14 +12,13 @@ local assets =
 	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
-	
-    Asset("SOUND", "sound/common.fsb"),
 }
 
 local prefabs =
 {
 	"kyno_lotus_flower",
 	"kyno_lotus_flower_cooked",
+	"kyno_lotus_flower_root",
 }
 
 local function onpickedfn(inst)
@@ -78,7 +78,7 @@ local function CheckBeached(inst)
 		
         inst:Remove()
 
-		local beached = SpawnPrefab("kyno_lotus_flower")
+		local beached = SpawnPrefab("kyno_lotus_flower_root")
         beached.Transform:SetPosition(x, y, z)
     end
 end
@@ -177,7 +177,6 @@ local function lotus()
 	
 	inst:AddTag("veggie")
 	inst:AddTag("cookable")
-	inst:AddTag("deployedplant")
 	inst:AddTag("saltbox_valid")
 
 	inst.entity:SetPristine()
@@ -189,11 +188,6 @@ local function lotus()
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
-	
-	inst:AddComponent("deployable")
-    inst.components.deployable.ondeploy = ondeploy
-    inst.components.deployable:SetDeploySpacing(DEPLOYSPACING.MEDIUM)
-    inst.components.deployable:SetDeployMode(DEPLOYMODE.WATER)
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_LOTUS_HEALTH
@@ -274,7 +268,52 @@ local function lotus_cooked()
 	return inst
 end
 
+local function lotus_root()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+	inst.AnimState:SetBank("kyno_plant_ocean_seeds")
+	inst.AnimState:SetBuild("kyno_plant_ocean_seeds")
+	inst.AnimState:PlayAnimation("lotus")
+	
+	inst:AddTag("deployedplant")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("inspectable")
+	inst:AddComponent("bait")
+	inst:AddComponent("tradable")
+	
+	inst:AddComponent("deployable")
+    inst.components.deployable.ondeploy = ondeploy
+    inst.components.deployable:SetDeploySpacing(DEPLOYSPACING.MEDIUM)
+    inst.components.deployable:SetDeployMode(DEPLOYMODE.WATER)
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_lotus_flower_root"
+
+	MakeSmallBurnable(inst)
+	MakeSmallPropagator(inst)
+
+	return inst
+end
+
 return Prefab("kyno_lotus_ocean", fn, assets, prefabs),
 Prefab("kyno_lotus_flower", lotus, assets, prefabs),
 Prefab("kyno_lotus_flower_cooked", lotus_cooked, assets, prefabs),
-MakePlacer("kyno_lotus_flower_placer", "lotus", "lotus", "idle_plant", false, false, false, nil, nil, nil, nil, 2)
+Prefab("kyno_lotus_flower_root", lotus_root, assets, prefabs),
+MakePlacer("kyno_lotus_flower_root_placer", "lotus", "lotus", "idle_plant", false, false, false, nil, nil, nil, nil, 2)

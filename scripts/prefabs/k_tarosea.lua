@@ -1,8 +1,10 @@
+require("prefabutil")
 require("worldsettingsutil")
 
 local assets =
 {
-    Asset("ANIM", "anim/seataro.zip"),
+	Asset("ANIM", "anim/seataro.zip"),
+	Asset("ANIM", "anim/kyno_plant_ocean_seeds.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -10,8 +12,6 @@ local assets =
 	
 	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
-	
-    Asset("SOUND", "sound/common.fsb"),
 }
 
 local prefabs =
@@ -19,6 +19,8 @@ local prefabs =
 	"kyno_taroroot_ocean",
 	"kyno_taroroot",
 	"kyno_taroroot_cooked",
+	"kyno_taroroot_root",
+	
 	"spoiled_food",
 }
 
@@ -62,7 +64,7 @@ local function CheckBeached(inst)
 		
         inst:Remove()
 
-		local beached = SpawnPrefab("kyno_taroroot")
+		local beached = SpawnPrefab("kyno_taroroot_root")
         beached.Transform:SetPosition(x, y, z)
     end
 end
@@ -156,7 +158,6 @@ local function taroroot()
 	
 	inst:AddTag("veggie")
 	inst:AddTag("cookable")
-	inst:AddTag("deployedplant")
 	inst:AddTag("saltbox_valid")
 
 	inst.entity:SetPristine()
@@ -168,11 +169,6 @@ local function taroroot()
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
-	
-	inst:AddComponent("deployable")
-    inst.components.deployable.ondeploy = ondeploy
-    inst.components.deployable:SetDeploySpacing(DEPLOYSPACING.MEDIUM)
-    inst.components.deployable:SetDeployMode(DEPLOYMODE.WATER)
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_TAROROOT_HEALTH
@@ -253,12 +249,52 @@ local function taroroot_cooked()
 	return inst
 end
 
-local function taroplacer(inst)
-	local s = .7
-	inst.AnimState:SetScale(s, s, s)
+local function taroroot_root()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+	inst.AnimState:SetBank("kyno_plant_ocean_seeds")
+	inst.AnimState:SetBuild("kyno_plant_ocean_seeds")
+	inst.AnimState:PlayAnimation("taroroot")
+	
+	inst:AddTag("deployedplant")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("inspectable")
+	inst:AddComponent("bait")
+	inst:AddComponent("tradable")
+	
+	inst:AddComponent("deployable")
+    inst.components.deployable.ondeploy = ondeploy
+    inst.components.deployable:SetDeploySpacing(DEPLOYSPACING.MEDIUM)
+    inst.components.deployable:SetDeployMode(DEPLOYMODE.WATER)
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_taroroot_root"
+
+	MakeSmallBurnable(inst)
+	MakeSmallPropagator(inst)
+
+	return inst
 end
 
 return Prefab("kyno_taroroot_ocean", fn, assets, prefabs),
 Prefab("kyno_taroroot", taroroot, assets, prefabs),
 Prefab("kyno_taroroot_cooked", taroroot_cooked, assets, prefabs),
-MakePlacer("kyno_taroroot_placer", "seataro", "seataro", "idle_plant", false, false, false, nil, nil, nil, taroplacer, 2)
+Prefab("kyno_taroroot_root", taroroot_root, assets, prefabs),
+MakePlacer("kyno_taroroot_root_placer", "seataro", "seataro", "idle_plant", false, false, false, .7, nil, nil, nil, 2)

@@ -1,8 +1,16 @@
-require("prefabutil")
-
 local assets =
 {
-	Asset("ANIM", "anim/cartography_desk.zip"),
+	Asset("ANIM", "anim/kyno_hofbirthday_popcorn_machine.zip"),
+	
+	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
+	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
+	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
+	
+	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
+	
+	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
+	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
 
 local prefabs =
@@ -15,18 +23,82 @@ local prefabs =
 
 local MACHINE_STATES = 
 {
-	ON = "_on",
-	OFF = "_off",
+	LOW  = "_tier1",
+	MED  = "_tier2",
+	HIGH = "_tier3",
 }
 
 local POPCORN_PER_CORN = TUNING.KYNO_HOFBIRTHDAY_POPCORNMACHINE_CONSUME_CORN
 local POPCORN_INTERVAL = TUNING.KYNO_HOFBIRTHDAY_POPCORNMACHINE_INTERVAL
 
+local function GetMachineTier(inst)
+	local container = inst.components.container
+	
+	if container == nil then
+		return nil
+	end
+
+	local popcorn = container:GetItemInSlot(2)
+	
+	if popcorn == nil or popcorn.components.stackable == nil then
+		return nil
+	end
+
+	local amount = popcorn.components.stackable:StackSize()
+
+	if amount >= 20 then
+		return MACHINE_STATES.HIGH
+	elseif amount >= 10 then
+		return MACHINE_STATES.MED
+	elseif amount >= 1 then
+		return MACHINE_STATES.LOW
+	end
+
+	return nil
+end
+
+local function PlayMachineAnim(inst, baseanim, loop)
+	local tier = GetMachineTier(inst)
+	local anim = baseanim .. (tier or "")
+
+	if loop then
+		inst.AnimState:PlayAnimation(anim, true)
+	else
+		inst.AnimState:PlayAnimation(anim)
+	end
+end
+
+local function PlayMachinePopAnim(inst)
+	local tier = GetMachineTier(inst)
+
+	local popanim = "pop" .. (tier or "")
+	local workanim = "working" .. (tier or "")
+
+	inst.AnimState:PlayAnimation(popanim, false)
+	inst.AnimState:PushAnimation(workanim, true)
+end
+
+local function RefreshMachineAnim(inst)
+	if inst._pop_task ~= nil then
+		PlayMachineAnim(inst, "working", true)
+	else
+		PlayMachineAnim(inst, "idle")
+	end
+end
+
+local function OnPopcornStackChanged(popcorn, data)
+	local inst = popcorn._popcorn_machine
+	
+	if inst ~= nil and inst:IsValid() then
+		RefreshMachineAnim(inst)
+	end
+end
+
 local function OnHammred(inst, worker)
 	if inst.components.container ~= nil then 
 		inst.components.container:DropEverything() 
 	end
-	
+
 	inst.components.lootdropper:DropLoot()
 	
 	local fx = SpawnPrefab("collapse_small")
@@ -36,14 +108,38 @@ local function OnHammred(inst, worker)
 	inst:Remove()
 end
 
+local function OnHit(inst, worker)
+	if inst.components.container ~= nil and inst.components.container:IsOpen() then
+		inst.components.container:Close() -- This already plays the sound.
+	else
+		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
+	end
+	
+	local tier = GetMachineTier(inst)
+
+	local hitanim = "hit" .. (tier or "")
+	local nextanim
+
+	if inst._pop_task ~= nil then
+		nextanim = "working" .. (tier or "")
+	else
+		nextanim = "idle" .. (tier or "")
+	end
+
+	inst.AnimState:PlayAnimation(hitanim, false)
+	inst.AnimState:PushAnimation(nextanim, true)
+end
+
 local function StopWorking(inst)
 	if inst._pop_task ~= nil then
 		inst._pop_task:Cancel()
 		inst._pop_task = nil
 	end
 	
-	inst.AnimState:PlayAnimation("idle")
-	-- inst.SoundEmitter:KillSound("working_loop")
+	PlayMachineAnim(inst, "idle")
+	
+	inst.SoundEmitter:KillSound("rattle")
+	inst.SoundEmitter:KillSound("working")
 end
 
 local function GetPopcornPrefab(inst)
@@ -88,6 +184,8 @@ local function ProducePopcorn(inst)
 		local success = container:GiveItem(newpop, 2, pos)
 		
 		if success then
+			PlayMachinePopAnim(inst) -- Replaced with a fn so it doesn't cut the animation.
+			
 			inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 		
 			fueled:DoDelta(TUNING.KYNO_HOFBIRTHDAY_POPCORNMACHINE_CONSUME_FUEL)
@@ -126,35 +224,47 @@ local function StartWorking(inst)
 	if item == nil then
 		return
 	end
+
+	PlayMachineAnim(inst, "working", true)
 	
-	-- inst.AnimState:PlayAnimation("place") -- on anim
-	inst.AnimState:PushAnimation("idle")
-	-- inst.SoundEmitter:PlaySound(""dontstarve_DLC001/common/machine_melting"", "working_loop")
+	inst.SoundEmitter:KillSound("rattle")
+	inst.SoundEmitter:KillSound("working")
+	
+	inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_rattle", "rattle")
+	inst.SoundEmitter:PlaySound("hof_sounds/common/popcornmachine/working_loop", "working", 0.5)
 	
 	inst._pop_task = inst:DoPeriodicTask(POPCORN_INTERVAL, ProducePopcorn)
 end
 
-local function OnOpen(inst) 
-	-- inst.AnimState:PlayAnimation("open")
+local function OnOpen(inst)
+	if inst._pop_task ~= nil then
+		PlayMachineAnim(inst, "working_open", true)
+	else
+		PlayMachineAnim(inst, "open_idle")
+	end
+	
 	inst.SoundEmitter:PlaySound("dontstarve/common/icebox_open")
 end
 
 local function OnClose(inst)
-	-- inst.AnimState:PlayAnimation("close")
-	inst.SoundEmitter:PlaySound("dontstarve/common/icebox_close")
-	
+	RefreshMachineAnim(inst)	
 	StartWorking(inst)
+	
+	inst.SoundEmitter:PlaySound("dontstarve/common/icebox_close")
 end
 
 local function OnItemGet(inst, data)
-	if data.slot == 1 then
-		local item = data.item
-		
-		if item and item.prefab == "corn" then
+	if data.slot == 1 then		
+		if data.item and data.item.prefab == "corn" then
 			if inst.components.fueled ~= nil and not inst.components.fueled:IsEmpty() then
 				StartWorking(inst)
 			end
 		end
+	end
+	
+	if data.item ~= nil and data.slot == 2 then
+		data.item._popcorn_machine = inst
+		inst:ListenForEvent("stacksizechange", OnPopcornStackChanged, data.item)
 	end
 
 	inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
@@ -164,29 +274,107 @@ local function OnItemLose(inst, data)
 	if data.slot == 1 then
 		StopWorking(inst)
 	end
+	
+	if data.item ~= nil and data.slot == 2 then
+		inst:RemoveEventCallback("stacksizechange", OnPopcornStackChanged, data.item)
+		data.item._popcorn_machine = nil
+	end
+	
+	RefreshMachineAnim(inst)
 
 	inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
 end
 
 local function OnDropped(inst)
+	if inst.components.container ~= nil then
+		inst.components.container:Close()
+		inst.components.container.canbeopened = true
+	end
+
 	StartWorking(inst)
 end
 
 local function OnPutInInventory(inst)
+	if inst.components.container ~= nil then
+		inst.components.container:Close()
+		inst.components.container.canbeopened = false
+	end
+
 	StopWorking(inst)
 end
 
-local function OnAddFuel(inst)
-	inst.SoundEmitter:PlaySound("dontstarve_DLC001/common/machine_fuel")
+local function OnPutOnFurniture(inst)
+	if inst.components.workable ~= nil then
+		inst.components.workable:SetWorkable(false)
+	end
+	
+	if inst.components.container ~= nil then
+		inst.components.container:Close()
+		inst.components.container.canbeopened = true
+	end
+	
 	StartWorking(inst)
+end
+
+local function OnTakeOffFurniture(inst)
+	if inst.components.workable ~= nil then
+		inst.components.workable:SetWorkable(true)
+	end
+	
+	if inst.components.container ~= nil then
+		inst.components.container:Close()
+		inst.components.container.canbeopened = true
+	end
+	
+	StopWorking(inst)
+end
+
+local function OnTakeFuel(inst)
+	inst.SoundEmitter:PlaySound("dontstarve_DLC001/common/machine_fuel")
+	
+	local fuelAnim = "fuel"
+	local currentfuel = inst.components.fueled.currentfuel
+	local maxfuel = inst.components.fueled.maxfuel
+	
+	if inst.components.fueled ~= nil then
+		if currentfuel / maxfuel <= 0.01 then 
+			fuelAnim = "fuel"
+		elseif currentfuel / maxfuel <= 0.25 then 
+			fuelAnim = "fuel1"
+		elseif currentfuel / maxfuel <= 0.5 then
+			fuelAnim = "fuel2"
+		elseif currentfuel / maxfuel <= 1 then
+			fuelAnim = "fuel3"
+		end
+	end
+		
+	inst.AnimState:OverrideSymbol("fuel", "kyno_hofbirthday_popcorn_machine", fuelAnim)
+	
+	StartWorking(inst)
+end
+
+local function OnFuelSectionChange(old, new, inst)
+	local fuelAnim = "fuel"
+	local currentfuel = inst.components.fueled.currentfuel
+	local maxfuel = inst.components.fueled.maxfuel
+	
+	if inst.components.fueled ~= nil then
+		if currentfuel / maxfuel <= 0.01 then 
+			fuelAnim = "fuel"
+		elseif currentfuel / maxfuel <= 0.25 then 
+			fuelAnim = "fuel1"
+		elseif currentfuel / maxfuel <= 0.5 then
+			fuelAnim = "fuel2"
+		elseif currentfuel / maxfuel <= 1 then
+			fuelAnim = "fuel3"
+		end
+	end
+		
+	inst.AnimState:OverrideSymbol("fuel", "kyno_hofbirthday_popcorn_machine", fuelAnim)
 end
 
 local function OnFuelEmpty(inst)
 	StopWorking(inst)
-end
-
-local function OnBuilt(inst)
-
 end
 
 local function OnSave(inst, data)
@@ -203,15 +391,27 @@ local function OnLoad(inst, data)
 	local fueled = inst.components.fueled
 	local container = inst.components.container
 	
+	local working = false
+	
 	if fueled ~= nil and not fueled:IsEmpty() then
 		local item = container ~= nil and container:GetItemInSlot(1)
 		
 		if item ~= nil and item.prefab == "corn" then
 			StartWorking(inst)
+			working = true
 		end
 	else
 		StopWorking(inst)
 	end
+	
+	local popcorn = container and container:GetItemInSlot(2)
+	
+	if popcorn ~= nil then
+		popcorn._popcorn_machine = inst
+		inst:ListenForEvent("stacksizechange", OnPopcornStackChanged, popcorn)
+	end
+	
+	RefreshMachineAnim(inst)
 end
 
 local function fn()
@@ -220,21 +420,26 @@ local function fn()
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
+	inst.entity:AddFollower()
 	inst.entity:AddNetwork()
 	
+	inst.Transform:SetScale(1.2, 1.2, 1.2)
+	
 	local minimap = inst.entity:AddMiniMapEntity()
-    minimap:SetIcon("cartographydesk.png")
+    minimap:SetIcon("kyno_hofbirthday_popcornmachine.tex")
 
-	MakeObstaclePhysics(inst, 1)
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
 
-	inst.AnimState:SetBank("cartography_desk")
-	inst.AnimState:SetBuild("cartography_desk")
-	inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:SetBank("kyno_hofbirthday_popcorn_machine")
+	inst.AnimState:SetBuild("kyno_hofbirthday_popcorn_machine")
+	PlayMachineAnim(inst, "idle")
 
 	inst:AddTag("structure")
 	inst:AddTag("popcornmachine")
-
-	MakeSnowCoveredPristine(inst)
+	inst:AddTag("furnituredecor")
+	
+	inst.pickupsound = "metal"
 
 	inst.entity:SetPristine()
 
@@ -252,8 +457,19 @@ local function fn()
 	inst:AddComponent("lootdropper")
 	inst:AddComponent("inspectable")
 	
+	inst:AddComponent("furnituredecor")
+	inst.components.furnituredecor.onputonfurniture = OnPutOnFurniture
+	inst.components.furnituredecor.ontakeofffurniture = OnTakeOffFurniture
+	
 	inst:AddComponent("preserver")
 	inst.components.preserver:SetPerishRateMultiplier(0)
+	
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_hofbirthday_popcornmachine"
+	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
+	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
+	inst.components.inventoryitem:SetSinks(true)
 	
 	inst:AddComponent("container")
 	inst.components.container:WidgetSetup("popcornmachine")
@@ -263,8 +479,9 @@ local function fn()
 	inst.components.container.skipopensnd = true
 	
 	inst:AddComponent("fueled")
-	inst.components.fueled:SetTakeFuelFn(OnAddFuel)
+	inst.components.fueled:SetTakeFuelFn(OnTakeFuel)
 	inst.components.fueled:SetDepletedFn(OnFuelEmpty)
+	inst.components.fueled:SetSectionCallback(OnFuelSectionChange)
 	inst.components.fueled.secondaryfueltype = FUELTYPE.CHEMICAL
 	inst.components.fueled.maxfuel = TUNING.KYNO_HOFBIRTHDAY_POPCORNMACHINE_FUEL_MAX
 	inst.components.fueled:InitializeFuelLevel(TUNING.KYNO_HOFBIRTHDAY_POPCORNMACHINE_FUEL_MAX)
@@ -274,22 +491,19 @@ local function fn()
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammred)
+	inst.components.workable:SetOnWorkCallback(OnHit)
 	inst.components.workable:SetWorkLeft(4)
 
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
-	
-	inst:ListenForEvent("onbuilt", OnBuilt)
+
 	inst:ListenForEvent("itemget", OnItemGet)
 	inst:ListenForEvent("itemlose", OnItemLose)
 	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 
-	MakeSnowCovered(inst)
-
 	return inst
 end
 
-return Prefab("kyno_hofbirthday_popcornmachine", fn, assets, prefabs),
-MakePlacer("kyno_hofbirthday_popcornmachine_placer", "cartography_desk", "cartography_desk", "idle")
+return Prefab("kyno_hofbirthday_popcornmachine", fn, assets, prefabs)

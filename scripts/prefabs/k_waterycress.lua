@@ -1,8 +1,10 @@
+require("prefabutil")
 require("worldsettingsutil")
 
 local assets =
 {
 	Asset("ANIM", "anim/kyno_waterycress.zip"),
+	Asset("ANIM", "anim/kyno_plant_ocean_seeds.zip"),
 
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -15,6 +17,8 @@ local assets =
 local prefabs =
 {
 	"kyno_waterycress",
+	"kyno_waterycress_root",
+	
 	"spoiled_food",
 }
 
@@ -58,7 +62,7 @@ local function CheckBeached(inst)
 		
         inst:Remove()
 
-		local beached = SpawnPrefab("kyno_waterycress")
+		local beached = SpawnPrefab("kyno_waterycress_root")
         beached.Transform:SetPosition(x, y, z)
     end
 end
@@ -153,7 +157,6 @@ local function waterycress()
 
 	inst:AddTag("veggie")
 	inst:AddTag("modded_crop")
-	inst:AddTag("deployedplant")
 	inst:AddTag("saltbox_valid")
 
 	inst.entity:SetPristine()
@@ -171,11 +174,6 @@ local function waterycress()
 	inst.components.edible.hungervalue = TUNING.KYNO_WATERYCRESS_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_WATERYCRESS_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
-
-	inst:AddComponent("deployable")
-    inst.components.deployable.ondeploy = ondeploy
-    inst.components.deployable:SetDeploySpacing(DEPLOYSPACING.MEDIUM)
-    inst.components.deployable:SetDeployMode(DEPLOYMODE.WATER)
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
@@ -247,14 +245,51 @@ local function waterycress_cooked()
 	return inst
 end
 
-local function OnDeploy(inst, pt, deployer, rot)
-    local plant = SpawnPrefab("plant_normal_ground")
-    plant.components.crop:StartGrowing(inst.components.plantable.product, inst.components.plantable.growtime)
-    plant.Transform:SetPosition(pt.x, 0, pt.z)
-    plant.SoundEmitter:PlaySound("dontstarve/wilson/plant_seeds")
-    inst:Remove()
+local function waterycress_root()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+	inst.AnimState:SetBank("kyno_plant_ocean_seeds")
+	inst.AnimState:SetBuild("kyno_plant_ocean_seeds")
+	inst.AnimState:PlayAnimation("waterycress")
+	
+	inst:AddTag("deployedplant")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("inspectable")
+	inst:AddComponent("bait")
+	inst:AddComponent("tradable")
+	
+	inst:AddComponent("deployable")
+    inst.components.deployable.ondeploy = ondeploy
+    inst.components.deployable:SetDeploySpacing(DEPLOYSPACING.MEDIUM)
+    inst.components.deployable:SetDeployMode(DEPLOYMODE.WATER)
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_waterycress_root"
+
+	MakeSmallBurnable(inst)
+	MakeSmallPropagator(inst)
+
+	return inst
 end
 
 return Prefab("kyno_waterycress_ocean", fn, assets, prefabs),
 Prefab("kyno_waterycress", waterycress, assets, prefabs),
-MakePlacer("kyno_waterycress_placer", "kyno_waterycress", "kyno_waterycress", "idle_plant", false, false, false, nil, nil, nil, nil, 2)
+Prefab("kyno_waterycress_root", waterycress_root, assets, prefabs),
+MakePlacer("kyno_waterycress_root_placer", "kyno_waterycress", "kyno_waterycress", "idle_plant", false, false, false, nil, nil, nil, nil, 2)

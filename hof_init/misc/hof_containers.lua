@@ -293,7 +293,7 @@ function params.popcornmachine.itemtestfn(container, item, slot)
 	if slot == 1 then
 		return item.prefab == "corn"
 	elseif slot == 2 then
-		return item:HasTag("popcorn") or item.prefab == "corn_cooked" and item:GetTimeAlive() <= 0
+		return item:HasTag("popcorn") and item:GetTimeAlive() <= 0 or item.prefab == "corn_cooked" and item:GetTimeAlive() <= 0
 	end
 	
 	if slot == nil then		
