@@ -165,7 +165,6 @@ STRINGS_INGREDIENTS_JELLYFISH2 = "Água-vivas Arco-íris"
 STRINGS_INGREDIENTS_SWORDFISH = "Peixe-Espadas"
 STRINGS_INGREDIENTS_SUCCULENT = "Suculentas"
 
-STRINGS.ACTIONS.ACTIVATE.DESTROY = "Destruir"
 STRINGS.KYNO_HARVEST_SUGARTREE = "Colher Árvore Açucarada"
 STRINGS.KYNO_HARVEST_SUGARTREE_RUINED = "Colher Árvore Açucarada Arruinada"
 STRINGS.KYNO_HARVEST_SALTRACK = "Colher Varal de Carne"
@@ -184,6 +183,7 @@ STRINGS.KYNO_FEED_CHICKEN = "Alimentar"
 STRINGS.KYNO_BAKE_CAKE = "Assar Bolo de Aniversário"
 STRINGS.KYNO_BAKE_CAKE_STOP = "Parar de Assar Bolo de Aniversário´"
 
+STRINGS.ACTIONS.ACTIVATE.DESTROY = "Destruir"
 STRINGS.ACTIONS.SALT = "Adicionar Sal"
 STRINGS.ACTIONS.STORESOUL = "Guardar Alma"
 STRINGS.ACTIONS.FLAY = "Abater" -- This doesn't matter, ACTIONS.SLAUGHTER2 overrides it. But it's necessary for the AddAction.
@@ -197,6 +197,7 @@ STRINGS.ACTIONS.SLICESTACK = "Fatiar Pilha"
 STRINGS.ACTIONS.LEARNRECIPECARD = "Adicionar ao Livro de Culinária"
 STRINGS.ACTIONS.LEARNRECIPECARD2 = "Adicionar ao Livro de Fermentação"
 STRINGS.ACTIONS.BREEDFISH = "Procriar"
+STRINGS.ACTIONS.MAKEPOPCORN = "Fazer Pipoca"
 
 -- Edited strings for skill trees.
 STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Cogumelos plantados em um Plantador de Cogumelos crescem muito mais rápido.\nAprenda a plantar novos tipos de cogumelos nos Plantadores de Cogumelos."

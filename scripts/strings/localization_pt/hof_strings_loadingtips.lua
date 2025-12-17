@@ -79,6 +79,7 @@ local LOADINGTIPS   =
 	SAMMY1          = "Sammy pode ser encontrado na Ilha Beira-mar vendendo uma variedade de itens raros e ingredientes que não são fáceis de encontrar por aí.",
 	SAMMY2          = "Os produtos de Sammy mudam ao longo das estações e durante ocasiões especiais no mundo. Certifique-se de verificar seu inventário de vez em quando para ver o que ele oferece.",
 	SAMMY3          = "Após derrotar o Lord of the Fruit Flies, você deveria falar com o Sammy. Ele recompensará aqueles que se mostrarem dignos com alguns itens curiosos!",
+	SAMMY4          = "Se você dançar próximo ao Sammy ele se juntará também!",
 	JAWSBREAKER     = "Quebra-queixo pode ser usado para atrair Rockjaws e Gnarwails, matando-os instantaneamente. Mas não use muito perto de você.",
 	METALBUCKET     = "O que é melhor que um Balde? Um balde de metal resistente que não quebra ao ordenhar animais!",
 	LUNARTEQUILA    = "Se sentindo um pouco lunar? Por que não beber uma Tequila Iluminada para abrir sua mente para a verdade?",
@@ -111,11 +112,12 @@ local LOADINGTIPS   =
 	GHOSTPIRATE     = "Explorar Naufrágios de tripulações anteriores durante as Noites de Lua Cheia pode ser bem perigoso, já que Fantasmas Piratas podem ser encontrados vagando por lá. Assustador!",
 	HERMITWOBSTER   = "Lagostas Eremitas só podem ser encontradas na Ilha Moon Quay.",
 	SALTEDFISH      = "Bacalhau pode ser obtido deixando Peixe Seco secar por períodos mais longos em um Varal de Secagem.",
-	BIRTHDAY5TH     = "O Amontoado de Comidas acaba de completar 5 anos! Muito obrigado por todos esses anos incríveis. E que venham muitos mais!",
+	BIRTHDAY5TH     = "O Amontoado de Comidas acaba de completar cinco anos! Muito obrigado por todos esses anos incríveis. E que venham muitos mais!",
 	BIRTHDAY_CAKE1  = "Celebre o 5º Aniversário do Amontoado de Comidas com um evento por tempo limitado! Asse e monte um bolo gigante, coloque balões e festeje sem parar!",
 	BIRTHDAY_CAKE2  = "O Bolo de Aniversário pode ser fatiado usando um Cutelo, cada fatia tem um sabor e efeito diferente.",
 	BIRTHDAY_CAKE3  = "O Bolo de Aniversário emite uma aura reconfortante para quem estiver por perto.",
 	BIRTHDAY_CHEER  = "Durante o Evento de Aniversário do Amontoado de Comidas, o Espirito de Aniversário pode ser obtido Cozinhando, Fermentando ou Temperando alimentos enquanto estiver usando um Chapéu de Aniversário.",
+	BIRTHDAY_CORN   = "A Máquina de Pipoca pode produzir até cinco Pipocas por Milho. Durante o Aniversário do Amontoado de Comidas ela irá produzir Pipoca de Aniversário.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

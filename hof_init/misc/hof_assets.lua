@@ -43,8 +43,8 @@ Assets =
 	Asset("IMAGE", "images/tabimages/hof_tabimages.tex"),
 	Asset("ATLAS", "images/tabimages/hof_tabimages.xml"),
 
-	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
-	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
+	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 	
 	Asset("IMAGE", "images/colourcubesimages/meadow_day_cc.tex"),
 	Asset("IMAGE", "images/colourcubesimages/meadow_dusk_cc.tex"),
@@ -91,7 +91,7 @@ Assets =
 }
 
 -- Minimap Icons.
-AddMinimapAtlas("images/minimapimages/hof_minimapicons.xml")
+AddMinimapAtlas("images/minimapimages/hof_minimapimages.xml")
 
 -- Mod Icons.
 local HOF_ICONS =

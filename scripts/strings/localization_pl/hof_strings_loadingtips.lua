@@ -79,6 +79,7 @@ local LOADINGTIPS   =
 	SAMMY1          = "Sammy można znaleźć na Wyspie Nadmorskiej, gdzie sprzedaje różnorodne rzadkie przedmioty i składniki, których trudno znaleźć gdzie indziej.",
 	SAMMY2          = "Towary Sammy’ego zmieniają się w zależności od pór roku i specjalnych okazji. Sprawdzaj jego inwentarz od czasu do czasu, aby zobaczyć, co ma do zaoferowania.",
 	SAMMY3          = "Po pokonaniu Pana Much Owocowych, powinieneś sprawdzić Sammy'ego. Wynagrodzi tych, którzy okażą się godni, ciekawymi przedmiotami!",
+	SAMMY4          = "Jeśli zatańczysz obok Sammy'ego, on też się przyłączy!",
 	JAWSBREAKER     = "Jawsbreaker można użyć, aby zwabić Rockjaws i Gnarwails, zabijając je natychmiast. Ale nie używaj go zbyt blisko siebie.",
 	METALBUCKET     = "Co jest lepsze od wiadra? Solidne metalowe wiadro, które się nie złamie podczas dojenia zwierząt!",
 	LUNARTEQUILA    = "Czujesz się trochę po księżycowej stronie? Dlaczego nie napić się Oświeconej Tequili, aby otworzyć umysł na prawdę?",
@@ -116,6 +117,7 @@ local LOADINGTIPS   =
 	BIRTHDAY_CAKE2  = "Tort Rocznicowy można pokroić Tasakiem — każdy kawałek ma inny smak i efekt.",
 	BIRTHDAY_CAKE3  = "Tort Rocznicowy zapewnia kojącą aurę dla osób w pobliżu.",
 	BIRTHDAY_CHEER  = "Podczas wydarzenia rocznicowego Heap of Foods, radość rocznicową można uzyskać poprzez gotowanie, warzenie lub doprawianie potraw, mając na sobie kapelusz rocznicowy.",
+	BIRTHDAY_CORN   = "Maszyna do popcornu może wyprodukować 5 pocornów z jednej kukurydzy. A podczas rocznicy Heap of Foods będzie produkować rocznicowy popcorn.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

@@ -80,6 +80,7 @@ local LOADINGTIPS   =
 	SAMMY1          = "萨米可以在海滨岛上找到，他出售各种稀有物品和原料，这些东西在外面可不容易找到。",
 	SAMMY2          = "萨米的货物会随着季节和特殊世界事件的变化而变化。请务必定期查看他的小店，看看他有什么可供挑选的。",
 	SAMMY3          = "打败了果蝇之王后，你该去看看萨米了。他会给那些证明自己值得的人奖励一些奇妙的物品！",
+	SAMMY4          = "If you dance near Sammy he will tag along too!",
 	JAWSBREAKER     = "鲨鱼舔舔糖可用于引诱岩石大白鲨和一角鲸，并能瞬间将其击杀。但切勿在自己附近使用。",
 	METALBUCKET     = "什么比水桶更好？一个结实的金属水桶，在挤奶时不会破裂！",
 	LUNARTEQUILA    = "感觉有点儿迷迷糊糊？何不来一杯启明龙舌兰酒，让你的心灵敞开，接纳真相？",
@@ -112,11 +113,12 @@ local LOADINGTIPS   =
 	GHOSTPIRATE     = "在月圆时探索前任船员的沉船残骸相当危险，因为海盗幽灵常在沉船周围游荡。真吓人！",
 	HERMITWOBSTER   = "隐士沃布斯特只能在月亮码头岛上找到。",
 	SALTEDFISH      = "可以通过将鱼干放在晾衣架上晾晒更长时间来获得干鱼。",
-	BIRTHDAY5TH     = "Heap of Foods turns 5! Thank you for all these amazing years. And more to come!",
+	BIRTHDAY5TH     = "Heap of Foods turns five! Thank you for all these amazing years. And more to come!",
 	BIRTHDAY_CAKE1  = "Celebrate the Heap of Foods 5th Anniversary with a limited time event! Bake and assembly a giant cake, place balloons and party around!",
 	BIRTHDAY_CAKE2  = "The Anniversary Cake can be sliced using a Cleaver, each slice has a different flavor and effect.",
 	BIRTHDAY_CAKE3  = "The Anniversary Cake provides a soothing aura for those around it.",
 	BIRTHDAY_CHEER  = "During the Heap of Foods Anniversary Event the Anniversary Cheer can be obtained by Cooking, Brewing or Spicing foods while wearing an Anniversary Hat.",
+	BIRTHDAY_CORN   = "The Popcorn Machine can produce five pocorns per Corn. And during the Heap of Foods Anniversary it will produce Anniversary Popcorn.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

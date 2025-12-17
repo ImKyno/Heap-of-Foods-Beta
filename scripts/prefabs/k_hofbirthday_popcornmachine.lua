@@ -1,16 +1,14 @@
 local assets =
 {
-	Asset("ANIM", "anim/kyno_hofbirthday_popcorn_machine.zip"),
+	Asset("ANIM", "anim/ui_popcornmachine_1x2.zip"),
+	Asset("ANIM", "anim/kyno_hofbirthday_popcornmachine.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 	
-	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
-	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
-	
-	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
-	Asset("SOUND", "sound/hof_sfx.fsb"),
+	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 }
 
 local prefabs =
@@ -69,10 +67,32 @@ local function PlayMachineAnim(inst, baseanim, loop)
 end
 
 local function PlayMachinePopAnim(inst)
-	local tier = GetMachineTier(inst)
+	local container = inst.components.container
+	local popcorn = container ~= nil and container:GetItemInSlot(2)
+	
+	local amount = 0
+	local tier
+	local popanim
+	
+	if popcorn ~= nil and popcorn.components.stackable ~= nil then
+		amount = popcorn.components.stackable:StackSize()
+	end
+	
+	if amount >= 20 then
+		tier = 3
+	elseif amount >= 10 then
+		tier = 2
+	else
+		tier = 1
+	end
 
-	local popanim = "pop" .. (tier or "")
-	local workanim = "working" .. (tier or "")
+	if amount >= (tier == 3 and 20 or tier == 2 and 10 or 1) then
+		popanim = "pop_tier" .. tier .. "_loop"
+	else
+		popanim = "pop_tier" .. tier
+	end
+	
+	local workanim = "working_tier" .. tier
 
 	inst.AnimState:PlayAnimation(popanim, false)
 	inst.AnimState:PushAnimation(workanim, true)
@@ -95,24 +115,23 @@ local function OnPopcornStackChanged(popcorn, data)
 end
 
 local function OnHammred(inst, worker)
+	inst.AnimState:PlayAnimation("remove")
+	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_wood")
+
 	if inst.components.container ~= nil then 
 		inst.components.container:DropEverything() 
 	end
 
 	inst.components.lootdropper:DropLoot()
-	
-	local fx = SpawnPrefab("collapse_small")
-	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
-	fx:SetMaterial("metal")
 
-	inst:Remove()
+	inst:ListenForEvent("animover", inst.Remove)
 end
 
 local function OnHit(inst, worker)
 	if inst.components.container ~= nil and inst.components.container:IsOpen() then
 		inst.components.container:Close() -- This already plays the sound.
 	else
-		inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
+		inst.SoundEmitter:PlaySound("dontstarve/common/wardrobe_close")
 	end
 	
 	local tier = GetMachineTier(inst)
@@ -186,7 +205,7 @@ local function ProducePopcorn(inst)
 		if success then
 			PlayMachinePopAnim(inst) -- Replaced with a fn so it doesn't cut the animation.
 			
-			inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_close")
+			inst.SoundEmitter:PlaySound("summerevent/cannon/fire3")
 		
 			fueled:DoDelta(TUNING.KYNO_HOFBIRTHDAY_POPCORNMACHINE_CONSUME_FUEL)
 			inst._pop_count = inst._pop_count + 1
@@ -228,10 +247,7 @@ local function StartWorking(inst)
 	PlayMachineAnim(inst, "working", true)
 	
 	inst.SoundEmitter:KillSound("rattle")
-	inst.SoundEmitter:KillSound("working")
-	
-	inst.SoundEmitter:PlaySound("dontstarve/common/cookingpot_rattle", "rattle")
-	inst.SoundEmitter:PlaySound("hof_sounds/common/popcornmachine/working_loop", "working", 0.5)
+	inst.SoundEmitter:PlaySound("rifts3/sawhorse/proximity_lp", "rattle")
 	
 	inst._pop_task = inst:DoPeriodicTask(POPCORN_INTERVAL, ProducePopcorn)
 end
@@ -243,14 +259,14 @@ local function OnOpen(inst)
 		PlayMachineAnim(inst, "open_idle")
 	end
 	
-	inst.SoundEmitter:PlaySound("dontstarve/common/icebox_open")
+	inst.SoundEmitter:PlaySound("dontstarve/common/wardrobe_open")
 end
 
 local function OnClose(inst)
 	RefreshMachineAnim(inst)	
 	StartWorking(inst)
 	
-	inst.SoundEmitter:PlaySound("dontstarve/common/icebox_close")
+	inst.SoundEmitter:PlaySound("dontstarve/common/wardrobe_close")
 end
 
 local function OnItemGet(inst, data)
@@ -348,7 +364,7 @@ local function OnTakeFuel(inst)
 		end
 	end
 		
-	inst.AnimState:OverrideSymbol("fuel", "kyno_hofbirthday_popcorn_machine", fuelAnim)
+	inst.AnimState:OverrideSymbol("fuel", "kyno_hofbirthday_popcornmachine", fuelAnim)
 	
 	StartWorking(inst)
 end
@@ -370,7 +386,7 @@ local function OnFuelSectionChange(old, new, inst)
 		end
 	end
 		
-	inst.AnimState:OverrideSymbol("fuel", "kyno_hofbirthday_popcorn_machine", fuelAnim)
+	inst.AnimState:OverrideSymbol("fuel", "kyno_hofbirthday_popcornmachine", fuelAnim)
 end
 
 local function OnFuelEmpty(inst)
@@ -431,8 +447,8 @@ local function fn()
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-	inst.AnimState:SetBank("kyno_hofbirthday_popcorn_machine")
-	inst.AnimState:SetBuild("kyno_hofbirthday_popcorn_machine")
+	inst.AnimState:SetBank("kyno_hofbirthday_popcornmachine")
+	inst.AnimState:SetBuild("kyno_hofbirthday_popcornmachine")
 	PlayMachineAnim(inst, "idle")
 
 	inst:AddTag("structure")

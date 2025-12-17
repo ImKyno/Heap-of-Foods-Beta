@@ -10,8 +10,8 @@ local assets =
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 	
-	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
-	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
+	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 	
     Asset("SOUND", "sound/common.fsb"),
 }

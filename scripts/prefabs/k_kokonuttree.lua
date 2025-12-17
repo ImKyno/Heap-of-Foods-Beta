@@ -7,8 +7,8 @@ local assets =
 	
 	Asset("SOUND", "sound/forest.fsb"),
     
-	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
-	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
+	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 }
 
 local prefabs =

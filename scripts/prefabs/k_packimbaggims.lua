@@ -13,8 +13,8 @@ local assets =
 	Asset("ANIM", "anim/kyno_packimbaggims_feathers.zip"),
 	Asset("ANIM", "anim/kyno_packimbaggims_feathers_fire.zip"),
 	
-	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
-	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
+	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 	
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),

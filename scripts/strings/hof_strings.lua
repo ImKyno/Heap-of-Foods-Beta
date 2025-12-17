@@ -166,7 +166,6 @@ STRINGS_INGREDIENTS_JELLYFISH2 = "Rainbow Jellyfishes"
 STRINGS_INGREDIENTS_SWORDFISH = "Swordfishes"
 STRINGS_INGREDIENTS_SUCCULENT = "Succulents"
 
-STRINGS.ACTIONS.ACTIVATE.DESTROY = "Destroy"
 STRINGS.KYNO_HARVEST_SUGARTREE = "Harvest Sugarwood Tree"
 STRINGS.KYNO_HARVEST_SUGARTREE_RUINED = "Harvest Ruined Sugarwood Tree"
 STRINGS.KYNO_HARVEST_SALTRACK = "Harvest Salt Rack"
@@ -185,6 +184,7 @@ STRINGS.KYNO_FEED_CHICKEN = "Feed"
 STRINGS.KYNO_BAKE_CAKE = "Bake Anniversary Cake"
 STRINGS.KYNO_BAKE_CAKE_STOP = "Stop Baking Anniversary Cake"
 
+STRINGS.ACTIONS.ACTIVATE.DESTROY = "Destroy"
 STRINGS.ACTIONS.SALT = "Add Salt"
 STRINGS.ACTIONS.STORESOUL = "Store Soul"
 STRINGS.ACTIONS.FLAY = "Flay" -- This doesn't matter, ACTIONS.SLAUGHTER2 overrides it. But it's necessary for the AddAction.
@@ -198,6 +198,7 @@ STRINGS.ACTIONS.SLICESTACK = "Slice Stack"
 STRINGS.ACTIONS.LEARNRECIPECARD = "Add to Cookbook"
 STRINGS.ACTIONS.LEARNRECIPECARD2 = "Add to Brewbook"
 STRINGS.ACTIONS.BREEDFISH = "Breed"
+STRINGS.ACTIONS.MAKEPOPCORN = "Make Popcorn"
 
 -- Edited strings for skill trees.
 STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Mushrooms planted in a Mushroom Planter grow much faster.\nLearn how to plant new kinds of mushrooms in Mushroom Planters."

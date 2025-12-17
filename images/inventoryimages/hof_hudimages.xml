@@ -1,9 +1,1 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Atlas>
-	<Texture filename="hof_hudimages.tex" />
-	<Elements>
-		<Element name="fishfarmplot_slot_empty.tex" u1="0.001" u2="0.332333333333333" v2="0.999" v1="0.001" variant="" />
-		<Element name="fishfarmplot_slot_fish.tex" u1="0.334333333333333" u2="0.665666666666667" v2="0.999" v1="0.001" variant="" />
-		<Element name="fishfarmplot_slot_roe.tex" u1="0.667666666666667" u2="0.999" v2="0.999" v1="0.001" variant="" />
-	</Elements>
-</Atlas>
+<Atlas><Texture filename="hof_hudimages.tex" /><Elements><Element name="fishfarmplot_slot_fish.tex" u1="0.001953125" u2="0.263671875" v1="0.736328125" v2="0.998046875" /><Element name="fishfarmplot_slot_empty.tex" u1="0.283203125" u2="0.544921875" v1="0.736328125" v2="0.998046875" /><Element name="popcornmachine_slot_corn.tex" u1="0.564453125" u2="0.826171875" v1="0.736328125" v2="0.998046875" /><Element name="popcornmachine_slot_popcorn.tex" u1="0.001953125" u2="0.263671875" v1="0.455078125" v2="0.716796875" /><Element name="fishfarmplot_slot_roe.tex" u1="0.283203125" u2="0.544921875" v1="0.455078125" v2="0.716796875" /></Elements></Atlas>

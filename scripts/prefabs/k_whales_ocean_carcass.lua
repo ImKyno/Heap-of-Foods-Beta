@@ -3,8 +3,8 @@ local whale_blue_assets =
 	Asset("ANIM", "anim/kyno_whale_carcass.zip"),
 	Asset("ANIM", "anim/kyno_whale_blue_carcass_build.zip"),
 	
-	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
-	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
+	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 	
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
@@ -14,8 +14,8 @@ local whale_white_assets =
 	Asset("ANIM", "anim/kyno_whale_carcass.zip"),
 	Asset("ANIM", "anim/kyno_whale_white_carcass_build.zip"),
 	
-	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
-	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
+	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 	
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),

@@ -79,6 +79,7 @@ local LOADINGTIPS   =
 	SAMMY1          = "Sammy can be found on the Seaside Island selling an array of rare items and ingredients that you can't find so easily out there.",
 	SAMMY2          = "Sammy's wares changes throughout the seasons and during special world occasions. Make sure to check his inventory every now and then to see what he has to offer.",
 	SAMMY3          = "After defeating the Lord of the Fruit Flies, you should go check on Sammy. He will reward those who are proven worthy with some curious items!",
+	SAMMY4          = "If you dance near Sammy he will tag along too!",
 	JAWSBREAKER     = "Jawsbreaker can be used to lure Rockjaws and Gnarwails, killing them instantly. But don't use it too close to yourself.",
 	METALBUCKET     = "What's better than a Bucket? A sturdy metal bucket that will not break when milking animals!",
 	LUNARTEQUILA    = "Feeling a bit on your moon side? Why not drink an Enlightened Tequila to open your mind to the truth?",
@@ -111,11 +112,12 @@ local LOADINGTIPS   =
 	GHOSTPIRATE     = "Exploring Wrecks of previous crews at Full Moon Nights can be quite dangerous, as Pirate Ghosts can be found roaming around them. Spooky!",
 	HERMITWOBSTER   = "Hermit Wobsters can only be found at the Moon Quay Island.",
 	SALTEDFISH      = "Stockfish can be acquired by letting Fishy Jerky drying for longer periods on a Drying Rack.",
-	BIRTHDAY5TH     = "Heap of Foods turns 5! Thank you for all these amazing years. And more to come!",
+	BIRTHDAY5TH     = "Heap of Foods turns five! Thank you for all these amazing years. And more to come!",
 	BIRTHDAY_CAKE1  = "Celebrate the Heap of Foods 5th Anniversary with a limited time event! Bake and assembly a giant cake, place balloons and party around!",
 	BIRTHDAY_CAKE2  = "The Anniversary Cake can be sliced using a Cleaver, each slice has a different flavor and effect.",
 	BIRTHDAY_CAKE3  = "The Anniversary Cake provides a soothing aura for those around it.",
-	BIRTHDAY_CHEER  = "During the Heap of Foods Anniversary Event the Anniversary Cheer can be obtained by Cooking, Brewing or Spicing foods while wearing an Anniversary Hat.", 
+	BIRTHDAY_CHEER  = "During the Heap of Foods Anniversary Event the Anniversary Cheer can be obtained by Cooking, Brewing or Spicing foods while wearing an Anniversary Hat.",
+	BIRTHDAY_CORN   = "The Popcorn Machine can produce five Popcorns per Corn. And during the Heap of Foods Anniversary it will produce Anniversary Popcorn.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

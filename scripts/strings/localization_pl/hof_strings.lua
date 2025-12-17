@@ -165,7 +165,6 @@ STRINGS_INGREDIENTS_JELLYFISH2 = "Tęczowe meduzy"
 STRINGS_INGREDIENTS_SWORDFISH = "Miecze ryby"
 STRINGS_INGREDIENTS_SUCCULENT = "Sukulenty"
 
-STRINGS.ACTIONS.ACTIVATE.DESTROY = "Zniszcz"
 STRINGS.KYNO_HARVEST_SUGARTREE = "Zbierz z Drzewa Cukrowego"
 STRINGS.KYNO_HARVEST_SUGARTREE_RUINED = "Zbierz z Zrujnowanego Drzewa Cukrowego"
 STRINGS.KYNO_HARVEST_SALTRACK = "Zbierz z Solnej Półki"
@@ -184,6 +183,7 @@ STRINGS.KYNO_FEED_CHICKEN = "Nakarm"
 STRINGS.KYNO_BAKE_CAKE = "Upiecz tort rocznicowy"
 STRINGS.KYNO_BAKE_CAKE_STOP = "Przestań piec tort rocznicowy"
 
+STRINGS.ACTIONS.ACTIVATE.DESTROY = "Zniszcz"
 STRINGS.ACTIONS.SALT = "Dodaj Sól"
 STRINGS.ACTIONS.STORESOUL = "Przechowaj Duszę"
 STRINGS.ACTIONS.FLAY = "Obłup" -- To nie ma znaczenia, ACTIONS.SLAUGHTER2 nadpisuje to. Ale jest potrzebne dla AddAction.
@@ -197,6 +197,7 @@ STRINGS.ACTIONS.SLICESTACK = "Stos plasterków"
 STRINGS.ACTIONS.LEARNRECIPECARD = "Dodaj do książki kucharskiej"
 STRINGS.ACTIONS.LEARNRECIPECARD2 = "Dodaj do Brewbooka"
 STRINGS.ACTIONS.BREEDFISH = "Rasa"
+STRINGS.ACTIONS.MAKEPOPCORN = "Zrób popcorn"
 
 -- Edited strings for skill trees.
 STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Grzyby posadzone w Sadzarce Grzybów rosną znacznie szybciej.\nDowiedz się, jak sadzić nowe rodzaje grzybów w Sadzarce Grzybów."

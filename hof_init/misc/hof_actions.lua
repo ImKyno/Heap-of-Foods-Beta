@@ -870,6 +870,14 @@ ACTIONS.STORE.stroverridefn = function(act)
 		
 		return STRINGS.ACTIONS.STORE.GENERIC
 	end
+	
+	if target:HasTag("popcornmachine") then
+		if obj.prefab == "corn" then
+			return STRINGS.ACTIONS.MAKEPOPCORN
+		end
+		
+		return STRINGS.ACTIONS.STORE.GENERIC
+	end
 end
 
 ACTIONS.ADDFUEL.stroverridefn = function(act)

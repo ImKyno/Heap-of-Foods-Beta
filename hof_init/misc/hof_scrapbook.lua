@@ -1573,9 +1573,9 @@ local HOF_SCRAPBOOK_ITEMS =
 		fueledrate     = 1,
 		fueledtype1    = "BURNABLE",
 		fueledtype2    = "CHEMICAL",
-		bank           = "kyno_hofbirthday_popcorn_machine",
-		build          = "kyno_hofbirthday_popcorn_machine",
-		overridesymbol = {"fuel", "kyno_hofbirthday_popcorn_machine", "fuel3"},
+		bank           = "kyno_hofbirthday_popcornmachine",
+		build          = "kyno_hofbirthday_popcornmachine",
+		overridesymbol = {"fuel", "kyno_hofbirthday_popcornmachine", "fuel3"},
 		anim           = "idle_tier3",
 		animoffsety    = 20,
 		animoffsetbgy  = -50,
@@ -5333,8 +5333,9 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_meatrack_fishmeat",
 		anim           = "kyno_fishmeat_small_idle",
 		animoffsetx    = 15,
+		animoffsety    = -10,
 		animoffsetbgy  = -10,
-		deps           = {"fishmeat_small", "spoiled_food"},
+		deps           = {"meatrack", "meatrack_hermit", "fishmeat_small", "spoiled_food"},
 	},
 	
 	kyno_fishmeat_dried =
@@ -5354,8 +5355,9 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_meatrack_fishmeat",
 		anim           = "kyno_fishmeat_idle",
 		animoffsetx    = 15,
+		animoffsety    = -10,
 		animoffsetbgy  = -10,
-		deps           = {"eel", "fishmeat", "spoiled_food"},
+		deps           = {"meatrack", "meatrack_hermit", "fishmeat", "spoiled_food"},
 	},
 	
 	kyno_brainrock_coral =

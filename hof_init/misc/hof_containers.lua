@@ -273,12 +273,18 @@ params.popcornmachine =
 	{
 		slotpos =
 		{
-			Vector3(0,   32 + 4,  0),
-			Vector3(0, -(32 + 4), 0),
+			Vector3(0,   30 + 4,  0),
+			Vector3(0, -(36 + 4), 0),
 		},
 		
-		animbank = "ui_chest_1x2",
-		animbuild = "ui_chest_1x2",
+		slotbg =
+		{
+			{ image = "popcornmachine_slot_corn.tex",    atlas = "images/inventoryimages/hof_hudimages.xml" },
+			{ image = "popcornmachine_slot_popcorn.tex", atlas = "images/inventoryimages/hof_hudimages.xml" },
+		},
+		
+		animbank = "ui_popcornmachine_1x2",
+		animbuild = "ui_popcornmachine_1x2",
 		
 		pos = Vector3(0, 140, 0),
 		side_align_tip = 100,

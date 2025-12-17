@@ -6,8 +6,8 @@ local assets =
 	Asset("ANIM", "anim/quagmire_salt_rack.zip"),
 	Asset("ANIM", "anim/splash.zip"),
 
-	Asset("IMAGE", "images/minimapimages/hof_minimapicons.tex"),
-	Asset("ATLAS", "images/minimapimages/hof_minimapicons.xml"),
+	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 }
 
 local prefabs =
