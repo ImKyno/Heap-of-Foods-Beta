@@ -226,7 +226,7 @@ local function KokonutTree_GetAnimFn(inst)
     return sway
 end
 
--- Piko Trees alre always tall size.
+-- Piko Trees are always tall size.
 local PIKOTREE_ANIMSET_LIST = 
 {
 	"sway1_loop", "sway2_loop",
