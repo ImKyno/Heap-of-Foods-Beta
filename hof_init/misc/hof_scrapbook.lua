@@ -1392,6 +1392,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "BOOK_GARDENING",
 	},
 	
+	--[[
 	kyno_fishfarmplot_kit =
 	{
 		name           = "kyno_fishfarmplot_kit",
@@ -1408,6 +1409,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		deps           = {"boards", "rope", "kyno_fishfarmplot", "sharkboi"},
 		specialinfo    = "FISHFARMPLOTKIT",
 	},
+	]]--
 	
 	kyno_malbatrossfood =
 	{
@@ -16560,7 +16562,7 @@ local HOF_SCRAPBOOK_THINGS =
 		build          = "kyno_fishfarmplot_scrapbook",
 		anim           = "idle",
 		animoffsety    = -60,
-		deps           = {"kyno_fishfarmplot_kit", "pondfish", "kyno_roe_pondfish", "rocks", "chum"},
+		deps           = {"sharkboi", "pondfish", "kyno_roe_pondfish", "rocks", "chum"},
 		specialinfo    = "FISHFARMPLOT",
 	},
 	

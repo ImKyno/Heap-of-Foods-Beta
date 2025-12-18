@@ -403,6 +403,7 @@ local HOF_ICONS =
 	"kyno_fennel_oversized_rotten",
 	"kyno_fennel_oversized_waxed",
 	"kyno_fennel_seeds",
+	"kyno_fishfarmplot_construction",
 	"kyno_fishfarmplot_kit",
 	"kyno_fishmeat_dried",
 	"kyno_fishmeat_small_dried",

@@ -563,7 +563,7 @@ local function SharkBoiPostInit(inst)
 				return
 			end
 
-			local blueprint = "kyno_fishfarmplot_kit_blueprint"
+			local blueprint = "kyno_fishfarmplot_construction_blueprint"
 
 			if inst.sketchgiven == nil or inst.blueprintgiven == nil then
 				if _G.IsSpecialEventActive(_G.SPECIAL_EVENTS.WINTERS_FEAST) then
@@ -643,7 +643,7 @@ end
 
 AddPrefabPostInit("sharkboi", SharkBoiPostInit)
 
--- New fish that can be stored inside Tin Fishing' Bin.
+-- New fish that can be stored inside Tin Fishin' Bin.
 local fishes =
 {
 	"fish",

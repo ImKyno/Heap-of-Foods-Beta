@@ -253,10 +253,7 @@ local function fn()
 	end
 
 	inst:AddComponent("inspectable")
-	
 	inst:AddComponent("lootdropper")
-	inst.components.lootdropper:SetLoot({"boards", "boards", "boards", "rope", "rope"})
-	inst.components.lootdropper.spawn_loot_inside_prefab = true
 
 	inst:AddComponent("constructionsite")
 	inst.components.constructionsite:SetConstructionPrefab("construction_container")
@@ -275,4 +272,5 @@ local function fn()
 	return inst
 end
 
-return Prefab("kyno_fishfarmplot_construction", fn, assets, prefabs)
+return Prefab("kyno_fishfarmplot_construction", fn, assets, prefabs),
+MakePlacer("kyno_fishfarmplot_construction_placer", "kyno_fishfarmplot", "kyno_fishfarmplot", "idle", true, nil, nil, .9)
