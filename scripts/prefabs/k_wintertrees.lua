@@ -290,6 +290,8 @@ local function AddDecor(inst, data)
 				else
 					inst.AnimState:OverrideSymbol("plain"..data.slot, data.item.winter_ornament_build or "winter_ornaments", data.item.winter_ornamentid)
 				end
+				
+				inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/house/decor/stocking_place")
 			end
 		end
 	end
@@ -326,6 +328,35 @@ local function NoOverlap(pt)
 	return NobodySeesPoint(pt) and #TheSim:FindEntities(pt.x, 0, pt.z, .75, nil, INLIMBO_TAGS) <= 0
 end
 
+local function GetNiceHofWinterTreeGiftLoot(fully_decorated)
+	local loot = {}
+
+	table.insert(loot, { prefab = "winter_food".. math.random(NUM_WINTERFOOD), stack = math.random(3) + (fully_decorated and 3 or 0)})
+	table.insert(loot, { prefab = not fully_decorated and GetRandomBasicWinterOrnament()
+	or math.random() < 0.5 and GetRandomFancyWinterOrnament()
+	or GetRandomFestivalEventWinterOrnament() })
+
+	table.insert(loot, { prefab = weighted_random_choice(TUNING.KYNO_WINTERTREE_GIFT1) })
+
+	if fully_decorated then
+		table.insert(loot, { prefab = weighted_random_choice(TUNING.KYNO_WINTERTREE_GIFT2) })
+		table.insert(loot, { prefab = weighted_random_choice(TUNING.KYNO_WINTERTREE_GIFT3) }) -- Some festive foods.
+	else
+		table.insert(loot, { prefab = PickRandomTrinket() })
+	end
+
+	return loot
+end
+
+local function GetHofNaughtyWinterTreeGiftLoot()
+	local loot = {}
+
+	table.insert(loot, { prefab = "winter_food".. math.random(NUM_WINTERFOOD), stack = math.random(3) })
+	table.insert(loot, { prefab = "charcoal" })
+
+    return loot
+end
+
 local function DoGifting(inst)
 	if TheWorld.state.isnight then
 		local players = {}
@@ -346,6 +377,7 @@ local function DoGifting(inst)
 				if player.components.wintertreegiftable ~= nil --[[and player.components.wintertreegiftable:GetDaysSinceLastGift() >= 4]] then
 					player.components.wintertreegiftable:OnGiftGiven()
 					
+					--[[
 					table.insert(loot, { prefab = "winter_food".. math.random(NUM_WINTERFOOD), stack = math.random(3) + (fully_decorated and 3 or 0)})
 					table.insert(loot, { prefab = not fully_decorated and GetRandomBasicWinterOrnament()
 					or math.random() < 0.5 and GetRandomFancyWinterOrnament()
@@ -355,14 +387,17 @@ local function DoGifting(inst)
 
 					if fully_decorated then
 						table.insert(loot, { prefab = weighted_random_choice(TUNING.KYNO_WINTERTREE_GIFT2) })
-						-- Some festive foods.
-						table.insert(loot, { prefab = weighted_random_choice(TUNING.KYNO_WINTERTREE_GIFT3) })
+						table.insert(loot, { prefab = weighted_random_choice(TUNING.KYNO_WINTERTREE_GIFT3) }) -- Some festive foods.
 					else
 						table.insert(loot, { prefab = PickRandomTrinket() })
 					end
+					]]--
+
+					loot = GetNiceHofWinterTreeGiftLoot(fully_decorated)
 				else
-					table.insert(loot, { prefab = "winter_food".. math.random(NUM_WINTERFOOD), stack = math.random(3) })
-					table.insert(loot, { prefab = "charcoal" })
+					-- table.insert(loot, { prefab = "winter_food".. math.random(NUM_WINTERFOOD), stack = math.random(3) })
+					-- table.insert(loot, { prefab = "charcoal" })
+					loot = GetHofNaughtyWinterTreeGiftLoot()
 				end
 
 				local items = {}

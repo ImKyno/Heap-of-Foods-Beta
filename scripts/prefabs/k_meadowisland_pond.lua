@@ -1,7 +1,5 @@
 local assets =
-{
-	Asset("ANIM", "anim/hotspring_hermitcrab.zip"),
-	
+{	
 	Asset("ANIM", "anim/kyno_meadowisland_pond.zip"),
 	Asset("ANIM", "anim/kyno_meadowisland_planty.zip"),
 	

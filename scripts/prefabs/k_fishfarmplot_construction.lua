@@ -2,7 +2,7 @@ require("prefabutil")
 
 local assets =
 {
-	Asset("ANIM", "anim/hotspring_hermitcrab.zip"),
+	Asset("ANIM", "anim/hermithotspring.zip"),
 
     Asset("ANIM", "anim/kyno_fishfarmplot.zip"),
 	Asset("ANIM", "anim/kyno_fishfarmplot_kit.zip"),
@@ -51,15 +51,30 @@ local function DoSyncAnim(inst)
 			v.AnimState:SetTime(t)
 			v.AnimState:PushAnimation("peg_idle", false)
 		end
-	elseif not inst.pegs[1].AnimState:IsCurrentAnimation("peg_hit") then
-		for _, v in ipairs(inst.pegs) do
-			v.AnimState:PlayAnimation("peg_idle")
+		
+		inst.hole.AnimState:PlayAnimation("construction_hole_place")
+		inst.hole.AnimState:SetTime(t)
+		inst.hole.AnimState:PushAnimation("empty", false)
+	else
+		inst.hole.AnimState:PlayAnimation("empty")
+
+		if inst.AnimState:IsCurrentAnimation("construction_reveal") then
+			local t = inst.AnimState:GetCurrentAnimationTime()
+			
+			for _, v in ipairs(inst.pegs) do
+				v.AnimState:PlayAnimation("peg_reveal")
+				v.AnimState:SetTime(t)
+			end
+		elseif not inst.pegs[1].AnimState:IsCurrentAnimation("peg_hit") then
+			for _, v in ipairs(inst.pegs) do
+				v.AnimState:PlayAnimation("peg_idle")
+			end
 		end
 	end
 	
 	if inst.postupdating then
 		inst.postupdating = nil
-		inst.components.updatelooper:RemovePostUpdateFn(constr_DoSyncAnim)
+		inst.components.updatelooper:RemovePostUpdateFn(DoSyncAnim)
 	end
 end
 
@@ -75,14 +90,14 @@ local function OnSyncAnimDirty(inst)
 			
 			if inst.postupdating then
 				inst.postupdating = nil
-				inst.components.updatelooper:RemovePostUpdateFn(constr_DoSyncAnim)
+				inst.components.updatelooper:RemovePostUpdateFn(DoSyncAnim)
 			end
 		end
 	elseif TheWorld.ismastersim then
 		DoSyncAnim(inst)
 	elseif not inst.postupdating then
 		inst.postupdating = true
-		inst.components.updatelooper:AddPostUpdateFn(constr_DoSyncAnim)
+		inst.components.updatelooper:AddPostUpdateFn(DoSyncAnim)
 	end
 end
 
@@ -95,6 +110,26 @@ local function PushSyncAnim(inst, anim)
 	end
 end
 
+local function CreateHole()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+
+	inst.AnimState:SetBank("hermithotspring")
+	inst.AnimState:SetBuild("hermithotspring")
+	inst.AnimState:PlayAnimation("empty")
+	inst.AnimState:SetOrientation(ANIM_ORIENTATION.OnGroundFixed)
+	inst.AnimState:SetLayer(LAYER_BACKGROUND)
+	inst.AnimState:SetSortOrder(3)
+	inst.AnimState:SetFinalOffset(-1)
+	
+	inst:AddTag("FX")
+	inst.persists = false
+
+	return inst
+end
+
 local function CreatePeg()
 	local inst = CreateEntity()
 
@@ -103,8 +138,8 @@ local function CreatePeg()
 
 	inst.Transform:SetSixFaced()
 
-	inst.AnimState:SetBank("hotspring_hermitcrab")
-	inst.AnimState:SetBuild("hotspring_hermitcrab")
+	inst.AnimState:SetBank("hermithotspring")
+	inst.AnimState:SetBuild("hermithotspring")
 	
 	inst:AddTag("FX")
 	inst.persists = false
@@ -126,51 +161,27 @@ local PEGS =
 local function OnEntityWake(inst)
 	inst.OnEntityWake = nil
 
-	local x, _, z = inst.Transform:GetWorldPosition()
-	local prng = PRNG_Uniform(math.floor(x + 0.5) * math.floor(z + 0.5))
-	local vars = { 1 }
-	
-	for i = 2, 3 do
-		table.insert(vars, prng:RandInt(#vars + 1), i)
+	if inst.highlightchildren == nil then
+		inst.highlightchildren = {}
 	end
-
+	
 	inst.pegs = {}
-	
-	local rnd1
-	
+
 	for i, v in ipairs(PEGS) do
 		local peg = CreatePeg()
 		
 		peg.entity:SetParent(inst.entity)
 		inst.pegs[i] = peg
+		
+		table.insert(inst.highlightchildren, peg)
 
 		local theta = v.dir * DEGREES
 		peg.Transform:SetPosition(v.r * math.cos(theta), 0, -v.r * math.sin(theta))
 		peg.Transform:SetRotation(v.dir)
-
-		local rnd
-		
-		if i == 6 then
-			rnd = vars[1]
-			
-			if rnd == rnd1 then
-				rnd = vars[2]
-			end
-		else
-			rnd = prng:RandInt(#vars - 1)
-			rnd = table.remove(vars, rnd)
-			
-			table.insert(vars, rnd)
-			
-			if i == 1 then
-				rnd1 = rnd
-			end
-		end
-		
-		if rnd > 1 then
-			peg.AnimState:OverrideSymbol("peg_1", "hotspring_hermitcrab", "peg_"..tostring(rnd))
-		end
 	end
+	
+	inst.hole = CreateHole()
+	inst.hole.entity:SetParent(inst.entity)
 	
 	if not TheWorld.ismastersim then
 		inst:AddComponent("updatelooper")
@@ -230,8 +241,8 @@ local function fn()
 	inst:SetPhysicsRadiusOverride(5)
 	MakeObstaclePhysics(inst, inst.physicsradiusoverride)
 
-	inst.AnimState:SetBank("hotspring_hermitcrab")
-	inst.AnimState:SetBuild("hotspring_hermitcrab")
+	inst.AnimState:SetBank("hermithotspring")
+	inst.AnimState:SetBuild("hermithotspring")
 	inst.AnimState:PlayAnimation("construction_idle")
 	inst.AnimState:SetOrientation(ANIM_ORIENTATION.OnGround)
 	inst.AnimState:SetLayer(LAYER_BACKGROUND)
