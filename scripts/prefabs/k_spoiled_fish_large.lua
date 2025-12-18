@@ -97,6 +97,9 @@ local function fn()
 
 	inst.GetFertilizerKey = GetFertilizerKey
 
+	inst:AddComponent("driedsalticon")
+	inst.components.driedsalticon:SetCollectsOnDried(false)
+
 	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
@@ -116,9 +119,6 @@ local function fn()
 
 	inst:AddComponent("fertilizerresearchable")
 	inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)
-	
-	inst:AddComponent("driedsalticon")
-	inst.components.driedsalticon:SetCollectsOnDried(false)
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"boneshard", "boneshard", "spoiled_food"})

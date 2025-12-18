@@ -744,8 +744,8 @@ local function KokonutTree_OnChop(inst, worker)
 	if inst.components.growable ~= nil and inst.components.growable.stage == 5 then
 		if math.random() <= TUNING.KYNO_KOKONUTTREE_KOKONUT_CHANCE then
 			local coconut = SpawnPrefab("kyno_kokonut")
-			local rad = chopper:GetPosition():Dist(inst:GetPosition())
-			local vec = (chopper:GetPosition() - inst:GetPosition()):Normalize()
+			local rad = worker:GetPosition():Dist(inst:GetPosition())
+			local vec = (worker:GetPosition() - inst:GetPosition()):Normalize()
 			local offset = Vector3(vec.x * rad, 4, vec.z * rad)
 
 			coconut.Transform:SetPosition((inst:GetPosition() + offset):Get())

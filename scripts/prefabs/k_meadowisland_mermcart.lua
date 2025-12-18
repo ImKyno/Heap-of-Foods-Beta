@@ -444,6 +444,7 @@ local function fn()
 	inst.AnimState:PlayAnimation("empty")
 	
 	inst:AddTag("sammywagon")
+	inst:AddTag("donotautopick") -- Prevents Maxwell's minions from picking when its empty.
 	inst:AddTag("pickable_rummage_str")
 	
 	inst.entity:SetPristine()

@@ -325,12 +325,12 @@ end
 local function fn_seaweeds()
 	local inst = veggie_fn("kyno_meatrack_seaweeds", "kyno_meatrack_seaweeds", "seaweeds_idle", "kyno_seaweeds_dried")
 
+	inst:AddComponent("driedsalticon")
+	inst.components.driedsalticon:SetCollectsOnDried(true)
+
 	if not TheWorld.ismastersim then
         return inst
     end
-	
-	inst:AddComponent("driedsalticon")
-	inst.components.driedsalticon:SetCollectsOnDried(true)
 	
 	inst.components.edible.healthvalue = TUNING.KYNO_WEEDSEA_DRIED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_WEEDSEA_DRIED_HUNGER
@@ -416,13 +416,13 @@ local function fn_fishmeat_small()
 	inst:AddTag("fish")
 	inst:AddTag("fishmeat")
 	inst:AddTag("catfood")
+
+	inst:AddComponent("driedsalticon")
+	inst.components.driedsalticon:SetCollectsOnDried(true)
 	
 	if not TheWorld.ismastersim then
         return inst
     end
-	
-	inst:AddComponent("driedsalticon")
-	inst.components.driedsalticon:SetCollectsOnDried(true)
 	
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
@@ -445,13 +445,13 @@ local function fn_fishmeat()
 	inst:AddTag("fish")
 	inst:AddTag("fishmeat")
 	inst:AddTag("catfood")
+
+	inst:AddComponent("driedsalticon")
+	inst.components.driedsalticon:SetCollectsOnDried(true)
 	
 	if not TheWorld.ismastersim then
         return inst
     end
-	
-	inst:AddComponent("driedsalticon")
-	inst.components.driedsalticon:SetCollectsOnDried(true)
 	
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
