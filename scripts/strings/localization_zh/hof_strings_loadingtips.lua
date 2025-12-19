@@ -111,14 +111,14 @@ local LOADINGTIPS   =
 	OTTERDENS       = "在雨天进行海洋狩猎时，在狩猎结束后，水獭有可能出现。",
 	SHARKBOIREWARD  = "大霜鲨渴望享用一顿精致的盛宴，他将奖励那些能满足他要求的人。",
 	GHOSTPIRATE     = "在月圆时探索前任船员的沉船残骸相当危险，因为海盗幽灵常在沉船周围游荡。真吓人！",
-	HERMITWOBSTER   = "隐士沃布斯特只能在月亮码头岛上找到。",
+	HERMITWOBSTER   = "寄居龙虾只能在月亮码头上找到。",
 	SALTEDFISH      = "可以通过将鱼干放在晾衣架上晾晒更长时间来获得干鱼。",
-	BIRTHDAY5TH     = "Heap of Foods turns five! Thank you for all these amazing years!",
-	BIRTHDAY_CAKE1  = "Celebrate the Heap of Foods 5th Anniversary with a limited time event! Bake and assembly a giant cake, place balloons and party around!",
-	BIRTHDAY_CAKE2  = "The Anniversary Cake can be sliced using a Cleaver, each slice has a different flavor and effect.",
-	BIRTHDAY_CAKE3  = "The Anniversary Cake provides a soothing aura for those around it.",
-	BIRTHDAY_CHEER  = "During the Heap of Foods Anniversary Event the Anniversary Cheer can be obtained by Cooking, Brewing or Spicing foods while wearing an Anniversary Hat.",
-	BIRTHDAY_CORN   = "The Popcorn Machine can produce five pocorns per Corn. And during the Heap of Foods Anniversary it will produce Anniversary Popcorn.",
+	BIRTHDAY5TH     = "更多料理五岁啦！感谢这些精彩的岁月！",
+	BIRTHDAY_CAKE1  = "庆祝更多料理五周年，参与限时庆典活动！烘焙巨型蛋糕，布置气球，尽情狂欢！",
+	BIRTHDAY_CAKE2  = "周年庆蛋糕可用砍刀切开，每份蛋糕都拥有不同的风味与效果。",
+	BIRTHDAY_CAKE3  = "周年庆蛋糕能为周围的人提供一种舒缓的氛围。",
+	BIRTHDAY_CHEER  = "在更多料理周年庆典活动期间，玩家佩戴周年庆帽子烹饪、酿造或调味食物时，可获得周年庆贺礼。",
+	BIRTHDAY_CORN   = "投入爆米花机的每颗玉米可制作五份爆玉米花。在更多料理周年庆期间，它将制作周年庆纪念爆玉米花。",
 }
 
 for k, v in pairs(LOADINGTIPS) do
