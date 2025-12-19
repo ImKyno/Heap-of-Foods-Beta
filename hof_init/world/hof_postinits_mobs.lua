@@ -705,22 +705,6 @@ AddPrefabPostInit("bee", BeePostInit)
 AddPrefabPostInit("killerbee", BeePostInit)
 
 -- Some NPCs changes hat during Anniversary Event.
-local function PigKingPostInit(inst)
-	local function OnWorldInit(inst)
-		if _G.IsSpecialEventActive(_G.SPECIAL_EVENTS.HOFBIRTHDAY) then
-			inst.AnimState:OverrideSymbol("pigking_headleaves", "kyno_hofbirthday_pigking", "pigking_headleaves")
-		end
-	end
-	
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:DoTaskInTime(0, OnWorldInit)
-end
-
-AddPrefabPostInit("pigking", PigKingPostInit)
-
 local function MonkeyQueenPostInit(inst)
 	local function OnWorldInit(inst)
 		if _G.IsSpecialEventActive(_G.SPECIAL_EVENTS.HOFBIRTHDAY) then

@@ -39,8 +39,8 @@ ScrapbookData.chum.fueltype = "FISHFOOD"
 ScrapbookData.chum.fuelvalue = 270
 ScrapbookData.ghost.subcat = "ghost"
 ScrapbookData.lobsterdinner.specialinfo = "FOODEFFECTS_EXQUISITE"
--- ScrapbookData.fishmeat_small_dried.specialinfo = "DRYAGAIN"
--- ScrapbookData.fishmeat_dried.specialinfo = "DRYAGAIN"
+ScrapbookData.fishmeat_small_dried.specialinfo = "DRYAGAIN"
+ScrapbookData.fishmeat_dried.specialinfo = "DRYAGAIN"
 
 -- Sample deps for preparedfoods. Some special foods are likely to use their own deps though.
 local preparedfood_deps =
@@ -5337,7 +5337,7 @@ local HOF_SCRAPBOOK_FOODS =
 		animoffsetx    = 15,
 		animoffsety    = -10,
 		animoffsetbgy  = -10,
-		deps           = {"meatrack", "meatrack_hermit", "fishmeat_small", "spoiled_food"},
+		deps           = {"meatrack", "meatrack_hermit", "fishmeat_small_dried", "spoiled_food"},
 	},
 	
 	kyno_fishmeat_dried =
@@ -5359,7 +5359,7 @@ local HOF_SCRAPBOOK_FOODS =
 		animoffsetx    = 15,
 		animoffsety    = -10,
 		animoffsetbgy  = -10,
-		deps           = {"meatrack", "meatrack_hermit", "fishmeat", "spoiled_food"},
+		deps           = {"meatrack", "meatrack_hermit", "fishmeat_dried", "spoiled_food"},
 	},
 	
 	kyno_brainrock_coral =
@@ -5417,7 +5417,8 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_hofbirthday_cake_slices",
 		anim           = "idle1",
 		animoffsetx    = 10,
-		animoffsetbgy  = -30,
+		animoffsetbgx  = -15,
+		animoffsetbgy  = -50,
 		deps           = {"kyno_hofbirthday_cake", "spoiled_food"},
 		specialinfo    = "FOODEFFECTS_HOFBIRTHDAY_SLICE1",
 	},
@@ -5440,7 +5441,8 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_hofbirthday_cake_slices",
 		anim           = "idle2",
 		animoffsetx    = 10,
-		animoffsetbgy  = -30,
+		animoffsetbgx  = -15,
+		animoffsetbgy  = -50,
 		deps           = {"kyno_hofbirthday_cake", "spoiled_food"},
 		specialinfo    = "FOODEFFECTS_HOFBIRTHDAY_SLICE2",
 	},
@@ -5463,7 +5465,8 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_hofbirthday_cake_slices",
 		anim           = "idle3",
 		animoffsetx    = 10,
-		animoffsetbgy  = -30,
+		animoffsetbgx  = -15,
+		animoffsetbgy  = -50,
 		deps           = {"kyno_hofbirthday_cake", "spoiled_food"},
 		specialinfo    = "FOODEFFECTS_HOFBIRTHDAY_SLICE3",
 	},

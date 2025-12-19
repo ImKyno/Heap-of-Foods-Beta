@@ -10,14 +10,14 @@ if not (enabled_in_mim or enabled_in_game) then return end
 
 local categories =
 {
-    "Hof",
+	"Hof",
 }
 
 -- Register all the new categories.
 _G.KAACHIEVEMENT.CATEGORIES = _G.KAACHIEVEMENT.CATEGORIES or {}
-for i,v in ipairs(categories) do
-    _G.require("achievements/achievements_" .. string.lower(v))
-    table.insert(_G.KAACHIEVEMENT.CATEGORIES, v)
+for i, v in ipairs(categories) do
+	_G.require("achievements/achievements_" .. string.lower(v))
+	table.insert(_G.KAACHIEVEMENT.CATEGORIES, v)
 end
 
 print(modName, "Loaded achievementsmain.lua")
