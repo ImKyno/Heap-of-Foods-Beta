@@ -14,14 +14,12 @@ FrontEndAssets =
 	Asset("IMAGE", "images/customizationimages/hof_customizationimages_worldsettings.tex"),
 	Asset("ATLAS", "images/customizationimages/hof_customizationimages_worldsettings.xml"),
 
-    -- Accomplishments Mod.
-    -- Asset("IMAGE", "images/achievementsimages/hof_achievements_images.tex"),
-    -- Asset("ATLAS", "images/achievementsimages/hof_achievements_images.xml"),
+	-- Accomplishments Mod.
+	-- Asset("IMAGE", "images/achievementsimages/hof_achievements_images.tex"),
+	-- Asset("ATLAS", "images/achievementsimages/hof_achievements_images.xml"),
 
-    -- Asset("IMAGE", "images/achievementsimages/hof_achievements_buttons.tex"),
-    -- Asset("ATLAS", "images/achievementsimages/hof_achievements_buttons.xml"),
+	-- Asset("IMAGE", "images/achievementsimages/hof_achievements_buttons.tex"),
+	-- Asset("ATLAS", "images/achievementsimages/hof_achievements_buttons.xml"),
 }
 
 ReloadFrontEndAssets()
-
---_G.HOF_ChangeConfiguration("MODRETROFIT", 0)
