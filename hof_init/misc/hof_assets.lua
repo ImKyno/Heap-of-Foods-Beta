@@ -40,16 +40,19 @@ Assets =
 	Asset("IMAGE", "images/customizationimages/hof_customizationimages_worldsettings.tex"),
 	Asset("ATLAS", "images/customizationimages/hof_customizationimages_worldsettings.xml"),
 	
+	Asset("IMAGE", "images/colourcubesimages/meadow_day_cc.tex"),
+	Asset("IMAGE", "images/colourcubesimages/meadow_dusk_cc.tex"),
+	Asset("IMAGE", "images/colourcubesimages/meadow_night_cc.tex"),
+	Asset("IMAGE", "images/colourcubesimages/serenity_cc.tex"),
+	
 	Asset("IMAGE", "images/tabimages/hof_tabimages.tex"),
 	Asset("ATLAS", "images/tabimages/hof_tabimages.xml"),
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 	
-	Asset("IMAGE", "images/colourcubesimages/meadow_day_cc.tex"),
-	Asset("IMAGE", "images/colourcubesimages/meadow_dusk_cc.tex"),
-	Asset("IMAGE", "images/colourcubesimages/meadow_night_cc.tex"),
-	Asset("IMAGE", "images/colourcubesimages/serenity_cc.tex"),
+	Asset("IMAGE", "images/fishregistryimages/hof_fishregistryimages.tex"),
+	Asset("ATLAS", "images/fishregistryimages/hof_fishregistryimages.xml"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_hudimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_hudimages.xml"),

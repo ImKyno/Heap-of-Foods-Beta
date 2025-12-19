@@ -7,6 +7,29 @@ local assets =
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
+require("screens/fishregistrypopupscreen")
+
+local function StopUsingFishRegistry(inst, data)
+	local hat = inst.components.inventory ~= nil and inst.components.inventory:GetEquippedItem(EQUIPSLOTS.HEAD) or nil
+        
+	if hat ~= nil and data.statename ~= "fishregistry_open" then
+		hat.components.useableitem:StopUsingItem()
+	end
+end
+
+local function OnUseFishRegistry(inst)
+	local owner = inst.components.inventoryitem.owner
+        
+	if owner then
+		if not CanEntitySeeTarget(owner, inst) then
+			return false
+		end
+		
+		owner.sg:GoToState("fishregistry_open")
+		owner:ShowPopUp(POPUPS.FISHREGISTRY, true)
+	end
+end
+
 local function OnEquip(inst, owner, from_ground)
 	owner.AnimState:OverrideSymbol("swap_hat", "hat_sammy", "swap_hat")
 	
@@ -28,6 +51,8 @@ local function OnEquip(inst, owner, from_ground)
 	if owner.components.hunger ~= nil then
 		owner.components.hunger.burnratemodifiers:SetModifier(inst, TUNING.KYNO_SAMMYHAT_HUNGERRATE)
 	end
+	
+	inst:ListenForEvent("newstate", StopUsingFishRegistry, owner)
 end
 
 local function OnUnequip(inst, owner, from_ground)
@@ -51,6 +76,8 @@ local function OnUnequip(inst, owner, from_ground)
 	if owner.components.hunger ~= nil then
 		owner.components.hunger.burnratemodifiers:RemoveModifier(inst)
 	end
+	
+	inst:RemoveEventCallback("newstate", StopUsingFishRegistry, owner)
 end
 
 local function OnEquipToModel(inst, owner, from_ground)
@@ -112,6 +139,7 @@ local function fn()
 	inst:AddTag("hat")
 	inst:AddTag("waterproofer")
 	inst:AddTag("sammyhat")
+	inst:AddTag("fishinspector")
 	
 	inst.components.floater:SetSize("med")
 	inst.components.floater:SetVerticalOffset(0.1)
@@ -129,6 +157,9 @@ local function fn()
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
 	inst:AddComponent("snowmandecor")
+	
+	inst:AddComponent("useableitem")
+	inst.components.useableitem:SetOnUseFn(OnUseFishRegistry)
 	
 	inst:AddComponent("waterproofer")
 	inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_SMALL)

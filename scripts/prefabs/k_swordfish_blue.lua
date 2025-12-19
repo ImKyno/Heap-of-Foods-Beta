@@ -52,6 +52,14 @@ local function OnPickup(inst)
     end
 end
 
+local function GetFishKey(inst)
+	return inst.prefab
+end
+
+local function fishresearchfn(inst)
+	return inst:GetFishKey()
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -77,6 +85,9 @@ local function fn()
 	inst:AddTag("meat")
 	inst:AddTag("catfood")
 	inst:AddTag("largecreature")
+	inst:AddTag("fishresearchable")
+
+	inst.GetFishKey = GetFishKey
 
 	inst.entity:SetPristine()
 
@@ -90,6 +101,9 @@ local function fn()
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
 	inst:AddComponent("murderable")
+	
+	inst:AddComponent("fishresearchable")
+	inst.components.fishresearchable:SetResearchFn(fishresearchfn)
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT

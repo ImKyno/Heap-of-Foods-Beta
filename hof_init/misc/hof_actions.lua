@@ -656,6 +656,80 @@ AddComponentAction("INVENTORY", "learnablerecipecard", function(inst, doer, acti
 	table.insert(actions, ACTIONS.LEARNRECIPECARD)
 end)
 
+-- Action for researching fishes.
+AddAction("FISHREGISTRY_RESEARCH_FAIL", "Research", function(act)
+	local target = act.target or act.invobject
+	
+	if target then
+		if act.invobject and act.invobject.components.itemmimic then
+			return false, "ITEMMIMIC"
+		end
+
+		if target:HasTag("fishresearchable") then
+			return false, "GENERIC"
+		end
+	end
+
+	return false
+end)
+
+ACTIONS.FISHREGISTRY_RESEARCH_FAIL.priority = -1
+
+AddAction("FISHREGISTRY_RESEARCH", "Research", function(act)
+	local target = act.target or act.invobject
+
+	if target ~= nil then
+		if act.invobject and act.invobject.components.itemmimic then
+			return false, "ITEMMIMIC"
+		end
+
+		if target.components.fishresearchable then
+            target.components.fishresearchable:LearnFish(act.doer)
+
+			if act.doer.components.talker then
+				act.doer.components.talker:Say(_G.GetString(act.doer, "ANNOUNCE_FERTILIZER_RESEARCHED"), nil, target.components.inspectable.noanim)
+			end
+		end
+		
+		return true
+	end
+end)
+
+ACTIONS.FISHREGISTRY_RESEARCH.priority = 10
+
+local function FishRegistryResearch(inst, doer, actions)
+	if inst ~= doer and (doer.CanExamine == nil or doer:CanExamine()) then
+		local fishinspector = doer.replica.inventory ~= nil and doer.replica.inventory:EquipHasTag("fishinspector") or false
+		local fishkin = doer:HasAnyTag("fishkin", "angler")
+
+		if fishinspector or fishkin and inst.GetFishKey then
+			local act = _G.CLIENT_REQUESTED_ACTION
+
+			if not _G.TheNet:IsDedicated() and doer == _G.ThePlayer then
+				if inst:HasTag("fishresearchable") and not _G.TheFishRegistry:KnowsFish(inst:GetFishKey()) then
+					act = ACTIONS.FISHREGISTRY_RESEARCH
+				else
+					act = ACTIONS.FISHREGISTRY_RESEARCH_FAIL
+				end
+			end
+
+			if act == ACTIONS.FISHREGISTRY_RESEARCH or act == ACTIONS.FISHREGISTRY_RESEARCH_FAIL then
+				table.insert(actions, act)
+			end
+		end
+	end
+end
+
+AddComponentAction("SCENE", "fishresearchable", function(inst, doer, actions, right)
+	if right then
+		FishRegistryResearch(inst, doer, actions)
+	end
+end)
+
+AddComponentAction("INVENTORY", "fishresearchable", function(inst, doer, actions, right)
+	FishRegistryResearch(inst, doer, actions)
+end)
+
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 -- Hope they don't smack and bonk my head...
 local _FISHfn = ACTIONS.FISH.fn

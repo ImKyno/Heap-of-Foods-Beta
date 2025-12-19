@@ -242,6 +242,56 @@ AddStategraphState("wilson_client",
 	}
 )
 
+AddStategraphState("wilson",
+	State{
+		name = "fishregistry_open",
+		tags = { "doing" },
+
+		onenter = function(inst)
+			inst.components.locomotor:StopMoving()
+			inst.AnimState:PlayAnimation("idle_loop", true)
+		end,
+
+		timeline =
+		{
+			TimeEvent(8 * FRAMES, function(inst)
+				inst:PerformBufferedAction()
+			end),
+		},
+
+		onupdate = function(inst)
+			if not _G.CanEntitySeeTarget(inst, inst) then
+				inst.sg:GoToState("fishregistry_close")
+			end
+		end,
+
+		events =
+		{
+			EventHandler("ms_closepopup", function(inst, data)
+				if data.popup == POPUPS.FISHREGISTRY then
+					inst.sg:GoToState("fishregistry_close")
+				end
+			end),
+		},
+
+		onexit = function(inst)
+			inst:ShowPopUp(POPUPS.FISHREGISTRY, false)
+		end,
+	}
+)
+
+AddStategraphState("wilson",
+	State{
+		name = "fishregistry_close",
+		tags = { "idle", "nodangle" },
+
+		onenter = function(inst)
+			inst.components.locomotor:StopMoving()
+			inst.sg:GoToState(inst.components.inventory:GetEquippedItem(_G.EQUIPSLOTS.HANDS) ~= nil and "item_out" or "idle")
+		end,
+	}
+)
+
 -- Change the animations of some things.
 AddStategraphPostInit("wilson", function(self)
     local _givehandler       = self.actionhandlers[ACTIONS.GIVE].deststate
@@ -679,5 +729,38 @@ AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.LEARNRECIPECAR
 	
 	if target:HasTag("learnablerecipecard") then
 		return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
+	end
+end))
+
+-- Researchin Fishes.
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.FISHREGISTRY_RESEARCH_FAIL, function(inst, action)
+	local target = action.target or action.invobject
+	
+	if target:HasTag("fishresearchable") then
+		return "dolongaction"
+	end
+end))
+
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.FISHREGISTRY_RESEARCH_FAIL, function(inst, action)
+	local target = action.target or action.invobject
+	
+	if target:HasTag("fishresearchable") then
+		return "dolongaction"
+	end
+end))
+
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.FISHREGISTRY_RESEARCH, function(inst, action)
+	local target = action.target or action.invobject
+	
+	if target:HasTag("fishresearchable") then
+		return "dolongaction"
+	end
+end))
+
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.FISHREGISTRY_RESEARCH, function(inst, action)
+	local target = action.target or action.invobject
+	
+	if target:HasTag("fishresearchable") then
+		return "dolongaction"
 	end
 end))
