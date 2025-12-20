@@ -65,7 +65,24 @@ local FishRegistryPage = Class(Widget, function(self, parent_widget)
 	self.parent_default_focus = self.fish_grid
 end)
 
---------------------------------------------------------------------------
+local function MakeDetailsLine(root, x, y, scale, image_override)
+	local value_title_line = root:AddChild(Image(FISHREGISTRY_ATLAS, image_override or "details_line.tex"))
+	
+	value_title_line:SetScale(scale, scale)
+	value_title_line:SetPosition(x, y)
+	
+	return value_title_line
+end
+
+local function SetDetailsLine(list, visible)
+	for _, v in ipairs(list) do
+		if visible then
+			v:Show()
+		else
+			v:Hide()
+		end
+	end
+end
 
 function FishRegistryPage:BuildFishScrollGrid()
 	local row_w           = 160
@@ -126,8 +143,8 @@ function FishRegistryPage:BuildFishScrollGrid()
 		
 		w.fish_label = w.cell_root:AddChild(Text(font, font_size))
 		w.fish_label:SetPosition(0, 93)
-		w.fish_label:SetHAlign( ANCHOR_MIDDLE )
-		w.fish_label:SetVAlign( ANCHOR_MIDDLE )
+		w.fish_label:SetHAlign(ANCHOR_MIDDLE)
+		w.fish_label:SetVAlign(ANCHOR_MIDDLE)
 
 		w.fish_anim = w.cell_root:AddChild(UIAnim())
 		-- Scale and Position is defined below.
@@ -138,16 +155,20 @@ function FishRegistryPage:BuildFishScrollGrid()
 		w.world_icons  = {}
 		
 		w.phase_root = w.cell_root:AddChild(Widget("phases"))
-		w.phase_root:SetPosition(0, 35)
+		w.phase_root:SetPosition(0, 12)
+		w.phase_line = MakeDetailsLine(w.cell_root, 0, 25, 0.4)
 		
 		w.moon_root = w.cell_root:AddChild(Widget("moonphases"))
-		w.moon_root:SetPosition(0, 10)
+		w.moon_root:SetPosition(0, -22)
+		w.moon_line = MakeDetailsLine(w.cell_root, 0, -5, 0.4)
 
 		w.season_root = w.cell_root:AddChild(Widget("seasons"))
-		w.season_root:SetPosition(0, -15)
+		w.season_root:SetPosition(0, -56)
+		w.season_line = MakeDetailsLine(w.cell_root, 0, -40, 0.4)
 
 		w.world_root = w.cell_root:AddChild(Widget("worlds"))
-		w.world_root:SetPosition(0, -40)
+		w.world_root:SetPosition(0, -92)
+		w.world_line = MakeDetailsLine(w.cell_root, 0, -74, 0.4)
 
 		w.locked_icon = w.cell_root:AddChild(Image(FISHREGISTRY_ATLAS, "locked.tex"))
 		w.locked_icon:SetScale(0.5)
@@ -199,15 +220,23 @@ function FishRegistryPage:BuildFishScrollGrid()
 		
 		widget.cell_root:Show()
 		widget.data = data
+		
+		widget.detail_lines =
+		{
+			widget.phase_line,
+			widget.moon_line,
+			widget.season_line,
+			widget.world_line,
+		}
 
 		local known = TheFishRegistry:KnowsFish(data.fish)
 		
 		local fish_label_str = TheFishRegistry:KnowsFish(data.fish)
-		and STRINGS.NAMES[data.def.name] or STRINGS.UI.PLANTREGISTRY.MYSTERY_FERTILIZER
+		and STRINGS.NAMES[data.def.name] or STRINGS.FISHREGISTRY.MYSTERY_FISH
 		
 		widget.fish_label:SetMultilineTruncatedString(fish_label_str, 2, width_label)
 
-		if fish_label_str == STRINGS.UI.PLANTREGISTRY.MYSTERY_FERTILIZER then
+		if fish_label_str == STRINGS.FISHREGISTRY.MYSTERY_FISH then
 			widget.fish_label:SetColour(PLANTREGISTRYUICOLOURS.LOCKEDBROWN)
 		else
 			widget.fish_label:SetColour(PLANTREGISTRYUICOLOURS.UNLOCKEDBROWN)
@@ -219,8 +248,13 @@ function FishRegistryPage:BuildFishScrollGrid()
 			if data.def.bank ~= nil and data.def.build ~= nil and data.def.anim ~= nil then
 				widget.fish_anim:SetScale(data.def.scale)
 				widget.fish_anim:SetPosition(data.def.xpos, data.def.ypos)
+				
+				widget.fish_anim:GetAnimState():SetBank(data.def.build)
 				widget.fish_anim:GetAnimState():SetBuild(data.def.build)
-				widget.fish_anim:GetAnimState():SetBankAndPlayAnimation(data.def.bank, data.def.anim, false)
+				widget.fish_anim:GetAnimState():PushAnimation(data.def.anim, false)
+				widget.fish_anim:GetAnimState():Pause()
+				-- widget.fish_anim:GetAnimState():SetBankAndPlayAnimation(data.def.bank, data.def.anim, false)
+
 				widget.fish_anim:Show()
 			else
 				print("Heap of Foods Mod - Fish Registry: Missing fish anim data for", data.fish)
@@ -231,6 +265,8 @@ function FishRegistryPage:BuildFishScrollGrid()
 			BuildIconRow(widget.moon_root,   widget.moon_icons,   data.def.moonphases, MOONPHASE_ICONS)
 			BuildIconRow(widget.season_root, widget.season_icons, data.def.seasons,    SEASON_ICONS)
 			BuildIconRow(widget.world_root,  widget.world_icons,  data.def.worlds,     WORLD_ICONS)
+			
+			SetDetailsLine(widget.detail_lines, true)
 
 			widget.locked_icon:Hide()
 		else
@@ -241,6 +277,8 @@ function FishRegistryPage:BuildFishScrollGrid()
 			BuildIconRow(widget.moon_root,   widget.moon_icons,   nil)
 			BuildIconRow(widget.season_root, widget.season_icons, nil)
 			BuildIconRow(widget.world_root,  widget.world_icons,  nil)
+			
+			SetDetailsLine(widget.detail_lines, false)
 
 			widget.locked_icon:Show()
 		end

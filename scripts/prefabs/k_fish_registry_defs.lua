@@ -8,9 +8,9 @@ FISH_REGISTRY_DEFS.pondfish =
 	build          = "fish",
 	anim           = "idle", -- flop_pst
 	
-	scale          = 0.3,
-	xpos           = -4,
-	ypos           = 30,
+	scale          = 0.25,
+	xpos           = -5,
+	ypos           = 40,
 
 	phases         = { "day", "dusk", "night" },
 	moonphases     = { "new", "quarter", "half", "threequarter", "full" },
@@ -22,8 +22,13 @@ FISH_REGISTRY_DEFS.pondeel =
 {
 	name           = "PONDEEL",
 
-	atlas          = "images/inventoryimages2.xml",
-	image          = "pondeel.tex",
+	bank           = "eel",
+	build          = "eel",
+	anim           = "idle",
+	
+	scale          = 0.25,
+	xpos           = -5,
+	ypos           = 40,
 
 	phases         = { "day", "dusk", "night" },
 	moonphases     = { "new", "quarter", "half", "threequarter", "full" },
@@ -39,9 +44,9 @@ FISH_REGISTRY_DEFS.kyno_swordfish_blue =
 	build          = "kyno_swordfish_blue",
 	anim           = "idle",
 	
-	scale          = 0.15,
-	xpos           = 0,
-	ypos           = 30,
+	scale          = 0.12,
+	xpos           = 15,
+	ypos           = 45,
 
 	phases         = { "day", "dusk", "night" },
 	moonphases     = { "new", "quarter", "half", "threequarter", "full" },
