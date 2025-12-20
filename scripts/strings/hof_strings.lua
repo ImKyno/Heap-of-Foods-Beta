@@ -561,7 +561,7 @@ STRINGS.FISHREGISTRY =
 	MOONPHASE_THREEQUARTER = "Three Quarter Moon",
 	MOONPHASE_FULL = "Full Moon",
 	MOONHPASE_WAXING = "Waxing Moon", -- Unused.
-	MOONPHASE_ALTER = "Glassed Moon", -- Unused.
+	MOONPHASE_GLASSED = "Moonstorm",
 	
 	SEASON_AUTUMN = "Autumn",
 	SEASON_WINTER = "Winter",

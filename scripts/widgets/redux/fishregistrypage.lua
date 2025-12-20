@@ -10,34 +10,41 @@ local FISH_SORT_ORDER    = require("prefabs/k_fish_registry_defs").FISH_SORT_ORD
 
 local FISHREGISTRY_ATLAS = "images/fishregistryimages/hof_fishregistryimages.xml"
 
-local PHASE_ICONS        =
+-- TUNING instead of local function in case someone wants to add their modded fish.
+TUNING.FISHREGISTRY_PHASE_IDS       = { "day", "dusk", "night"                                       }
+TUNING.FISHREGISTRY_MOONPHASE_IDS   = { "new", "quarter", "half", "threequarter", "full", "glassed"  }
+TUNING.FISHREGISTRY_SEASON_IDS      = { "autumn", "winter", "spring", "summer"                       }
+TUNING.FISHREGISTRY_WORLD_IDS       = { "forest", "cave"                                             }
+
+TUNING.FISHREGISTRY_PHASE_ICONS     =
 {
-	day                  = { atlas = FISHREGISTRY_ATLAS, image = "phase_day.tex"          },
-	dusk                 = { atlas = FISHREGISTRY_ATLAS, image = "phase_dusk.tex"         },
-	night                = { atlas = FISHREGISTRY_ATLAS, image = "phase_night.tex"        },
+	day                             = { atlas = FISHREGISTRY_ATLAS, image = "phase_day.tex"          },
+	dusk                            = { atlas = FISHREGISTRY_ATLAS, image = "phase_dusk.tex"         },
+	night                           = { atlas = FISHREGISTRY_ATLAS, image = "phase_night.tex"        },
 }
 
-local MOONPHASE_ICONS    =
+TUNING.FISHREGISTRY_MOONPHASE_ICONS =
 {
-	new                  = { atlas = FISHREGISTRY_ATLAS, image = "moon_new.tex"           },
-	quarter              = { atlas = FISHREGISTRY_ATLAS, image = "moon_quarter.tex"       },
-	half                 = { atlas = FISHREGISTRY_ATLAS, image = "moon_half.tex"          },
-	threequarter         = { atlas = FISHREGISTRY_ATLAS, image = "moon_three_quarter.tex" },
-	full                 = { atlas = FISHREGISTRY_ATLAS, image = "moon_full.tex"          },
+	new                             = { atlas = FISHREGISTRY_ATLAS, image = "moon_new.tex"           },
+	quarter                         = { atlas = FISHREGISTRY_ATLAS, image = "moon_quarter.tex"       },
+	half                            = { atlas = FISHREGISTRY_ATLAS, image = "moon_half.tex"          },
+	threequarter                    = { atlas = FISHREGISTRY_ATLAS, image = "moon_three_quarter.tex" },
+	full                            = { atlas = FISHREGISTRY_ATLAS, image = "moon_full.tex"          },
+	glassed                         = { atlas = FISHREGISTRY_ATLAS, image = "moon_glassed.tex"       },
 }
 
-local SEASON_ICONS       =
+TUNING.FISHREGISTRY_SEASON_ICONS    =
 {
-	autumn               = { atlas = FISHREGISTRY_ATLAS, image = "season_autumn.tex"      },
-	winter               = { atlas = FISHREGISTRY_ATLAS, image = "season_winter.tex"      },
-	spring               = { atlas = FISHREGISTRY_ATLAS, image = "season_spring.tex"      },
-	summer               = { atlas = FISHREGISTRY_ATLAS, image = "season_summer.tex"      },
+	autumn                          = { atlas = FISHREGISTRY_ATLAS, image = "season_autumn.tex"      },
+	winter                          = { atlas = FISHREGISTRY_ATLAS, image = "season_winter.tex"      },
+	spring                          = { atlas = FISHREGISTRY_ATLAS, image = "season_spring.tex"      },
+	summer                          = { atlas = FISHREGISTRY_ATLAS, image = "season_summer.tex"      },
 }
 
-local WORLD_ICONS        =
+TUNING.FISHREGISTRY_WORLD_ICONS     =
 {
-	forest               = { atlas = FISHREGISTRY_ATLAS, image = "world_forest.tex"       },
-	cave                 = { atlas = FISHREGISTRY_ATLAS, image = "world_cave.tex",        },
+	forest                          = { atlas = FISHREGISTRY_ATLAS, image = "world_forest.tex"       },
+	cave                            = { atlas = FISHREGISTRY_ATLAS, image = "world_cave.tex",        },
 }
 
 local FishRegistryPage = Class(Widget, function(self, parent_widget)
@@ -112,34 +119,6 @@ function FishRegistryPage:BuildFishScrollGrid()
 		
 		w.fish_seperator = w.cell_root:AddChild(Image(FISHREGISTRY_ATLAS, "fish_entry_seperator.tex"))
 		w.fish_seperator:SetPosition(0, 75)
-
-		local _OnGainFocus = w.cell_root.OnGainFocus
-		
-        function w.cell_root.OnGainFocus()
-			_OnGainFocus(w.cell_root)
-			
-			TheFrontEnd:GetSound():PlaySound("dontstarve/HUD/click_mouseover", nil, ClickMouseoverSoundReduction())
-			
-			w.fish_label:SetColour(PLANTREGISTRYUICOLOURS.LOCKEDBROWN)
-			w.cell_root:SetTexture(FISHREGISTRY_ATLAS, "fish_entry_focus.tex")
-			w.fish_seperator:SetTexture(FISHREGISTRY_ATLAS, "fish_entry_seperator_focus.tex")
-		end
-
-		local _OnLoseFocus = w.cell_root.OnLoseFocus
-		
-		function w.cell_root.OnLoseFocus()
-			_OnLoseFocus(w.cell_root)
-			
-			if w.data and TheFishRegistry:KnowsFish(w.data.fish) then
-				w.cell_root:SetTexture(FISHREGISTRY_ATLAS, "fish_entry_active.tex")
-				w.fish_seperator:SetTexture(FISHREGISTRY_ATLAS, "fish_entry_seperator_active.tex")
-				w.fish_label:SetColour(PLANTREGISTRYUICOLOURS.UNLOCKEDBROWN)
-			else
-				w.cell_root:SetTexture(FISHREGISTRY_ATLAS, "fish_entry.tex")
-				w.fish_seperator:SetTexture(FISHREGISTRY_ATLAS, "fish_entry_seperator.tex")
-				w.fish_label:SetColour(PLANTREGISTRYUICOLOURS.LOCKEDBROWN)
-			end
-		end
 		
 		w.fish_label = w.cell_root:AddChild(Text(font, font_size))
 		w.fish_label:SetPosition(0, 93)
@@ -147,28 +126,55 @@ function FishRegistryPage:BuildFishScrollGrid()
 		w.fish_label:SetVAlign(ANCHOR_MIDDLE)
 
 		w.fish_anim = w.cell_root:AddChild(UIAnim())
-		-- Scale and Position is defined below.
+		w.fish_anim:Hide()
+		
+		w.phase_line  = MakeDetailsLine(w.cell_root, 0, 25, 0.4)
+		w.moon_line   = MakeDetailsLine(w.cell_root, 0, -5, 0.4)
+		w.season_line = MakeDetailsLine(w.cell_root, 0, -40, 0.4)
+		w.world_line  = MakeDetailsLine(w.cell_root, 0, -74, 0.4)
 
-		w.phase_icons  = {}
-		w.moon_icons   = {}
-		w.season_icons = {}
-		w.world_icons  = {}
+		w.detail_lines = { w.phase_line, w.moon_line, w.season_line, w.world_line }
+
+		local function CreateIcons(root, icon_map, list, icon_type)
+			local icons = {}
+    
+			for i, id in ipairs(list) do
+				local icondef = icon_map[id]
+				
+				if icondef then
+					local img = root:AddChild(Image(icondef.atlas, icondef.image))
+					
+					img:ScaleToSize(small_icon_size, small_icon_size)
+					img:Hide()
+					
+					local key = string.upper(icon_type.."_"..id)
+					
+					if STRINGS.FISHREGISTRY[key] then
+						img:SetHoverText(STRINGS.FISHREGISTRY[key], { offset_y = 35 })
+					end
+					
+					table.insert(icons, {id = id, img = img})
+				end
+			end
+			
+			return icons
+		end
 		
 		w.phase_root = w.cell_root:AddChild(Widget("phases"))
 		w.phase_root:SetPosition(0, 12)
-		w.phase_line = MakeDetailsLine(w.cell_root, 0, 25, 0.4)
-		
+		w.phase_icons = CreateIcons(w.phase_root, TUNING.FISHREGISTRY_PHASE_ICONS, TUNING.FISHREGISTRY_PHASE_IDS, "phase")
+
 		w.moon_root = w.cell_root:AddChild(Widget("moonphases"))
 		w.moon_root:SetPosition(0, -22)
-		w.moon_line = MakeDetailsLine(w.cell_root, 0, -5, 0.4)
+		w.moon_icons = CreateIcons(w.moon_root, TUNING.FISHREGISTRY_MOONPHASE_ICONS, TUNING.FISHREGISTRY_MOONPHASE_IDS, "moonphase")
 
 		w.season_root = w.cell_root:AddChild(Widget("seasons"))
-		w.season_root:SetPosition(0, -56)
-		w.season_line = MakeDetailsLine(w.cell_root, 0, -40, 0.4)
+		w.season_root:SetPosition(0, -57)
+		w.season_icons = CreateIcons(w.season_root, TUNING.FISHREGISTRY_SEASON_ICONS, TUNING.FISHREGISTRY_SEASON_IDS, "season")
 
 		w.world_root = w.cell_root:AddChild(Widget("worlds"))
 		w.world_root:SetPosition(0, -92)
-		w.world_line = MakeDetailsLine(w.cell_root, 0, -74, 0.4)
+		w.world_icons = CreateIcons(w.world_root, TUNING.FISHREGISTRY_WORLD_ICONS, TUNING.FISHREGISTRY_WORLD_IDS, "world")
 
 		w.locked_icon = w.cell_root:AddChild(Image(FISHREGISTRY_ATLAS, "locked.tex"))
 		w.locked_icon:SetScale(0.5)
@@ -176,38 +182,26 @@ function FishRegistryPage:BuildFishScrollGrid()
 
 		return w
 	end
-
-	local function BuildIconRow(root, icons, list, icon_map)
-		for i = #icons, 1, -1 do
-			if icons[i] ~= nil then
-				icons[i]:Kill()
-				icons[i] = nil
-			end
+	
+	local function UpdateIcons(icons, list)
+		for i, icon in ipairs(icons) do
+			icon.img:Hide()
 		end
 
-		if not list or not icon_map then
+		if not list or #list == 0 then
 			return
 		end
 
 		local count = #list
-		
-		if count <= 0 then
-			return
-		end
-
-		local start_x = -(count - 1) * icon_spacing * 0.5
+		local spacing = 26
+		local start_x = -(count - 1) * spacing * 0.5
 
 		for i, id in ipairs(list) do
-			local icondef = icon_map[id]
-			
-			if icondef ~= nil then
-				local img = root:AddChild(Image(icondef.atlas, icondef.image))
-			
-				img:ScaleToSize(small_icon_size, small_icon_size)
-				img:SetPosition(start_x + (i - 1) * icon_spacing, 0)
-				table.insert(icons, img)
-			else
-				print("Heap of Foods Mod - Fish Registry: Missing icon for id:", id)
+			for _, icon in ipairs(icons) do
+				if icon.id == id then
+					icon.img:SetPosition(start_x + (i - 1) * spacing, 0)
+					icon.img:Show()
+				end
 			end
 		end
 	end
@@ -220,67 +214,49 @@ function FishRegistryPage:BuildFishScrollGrid()
 		
 		widget.cell_root:Show()
 		widget.data = data
-		
-		widget.detail_lines =
-		{
-			widget.phase_line,
-			widget.moon_line,
-			widget.season_line,
-			widget.world_line,
-		}
 
-		local known = TheFishRegistry:KnowsFish(data.fish)
-		
 		local fish_label_str = TheFishRegistry:KnowsFish(data.fish)
 		and STRINGS.NAMES[data.def.name] or STRINGS.FISHREGISTRY.MYSTERY_FISH
 		
 		widget.fish_label:SetMultilineTruncatedString(fish_label_str, 2, width_label)
+		widget.fish_label:SetColour(fish_label_str == STRINGS.FISHREGISTRY.MYSTERY_FISH and PLANTREGISTRYUICOLOURS.LOCKEDBROWN or PLANTREGISTRYUICOLOURS.UNLOCKEDBROWN)
 
-		if fish_label_str == STRINGS.FISHREGISTRY.MYSTERY_FISH then
-			widget.fish_label:SetColour(PLANTREGISTRYUICOLOURS.LOCKEDBROWN)
-		else
-			widget.fish_label:SetColour(PLANTREGISTRYUICOLOURS.UNLOCKEDBROWN)
-		end
-
-		if known then
-			widget.cell_root:SetTexture(FISHREGISTRY_ATLAS, "fish_entry_active.tex")
+		if TheFishRegistry:KnowsFish(data.fish) then
+			widget.cell_root:SetTexture(FISHREGISTRY_ATLAS, "fish_entry_active.tex", "fish_entry_focus.tex")
+			widget.locked_icon:Hide()
 			
-			if data.def.bank ~= nil and data.def.build ~= nil and data.def.anim ~= nil then
+			if data.def.bank and data.def.build and data.def.anim then
+				widget.fish_anim:Show()
+                
 				widget.fish_anim:SetScale(data.def.scale)
 				widget.fish_anim:SetPosition(data.def.xpos, data.def.ypos)
 				
-				widget.fish_anim:GetAnimState():SetBank(data.def.build)
+				widget.fish_anim:GetAnimState():SetBank(data.def.bank)
 				widget.fish_anim:GetAnimState():SetBuild(data.def.build)
-				widget.fish_anim:GetAnimState():PushAnimation(data.def.anim, false)
+				widget.fish_anim:GetAnimState():SetBankAndPlayAnimation(data.def.bank, data.def.anim, false)
 				widget.fish_anim:GetAnimState():Pause()
-				-- widget.fish_anim:GetAnimState():SetBankAndPlayAnimation(data.def.bank, data.def.anim, false)
-
-				widget.fish_anim:Show()
 			else
-				print("Heap of Foods Mod - Fish Registry: Missing fish anim data for", data.fish)
 				widget.fish_anim:Hide()
 			end
 
-			BuildIconRow(widget.phase_root,  widget.phase_icons,  data.def.dayphases,  PHASE_ICONS)
-			BuildIconRow(widget.moon_root,   widget.moon_icons,   data.def.moonphases, MOONPHASE_ICONS)
-			BuildIconRow(widget.season_root, widget.season_icons, data.def.seasons,    SEASON_ICONS)
-			BuildIconRow(widget.world_root,  widget.world_icons,  data.def.worlds,     WORLD_ICONS)
-			
-			SetDetailsLine(widget.detail_lines, true)
+			UpdateIcons(widget.phase_icons,  data.def.phases)
+			UpdateIcons(widget.moon_icons,   data.def.moonphases)
+			UpdateIcons(widget.season_icons, data.def.seasons)
+			UpdateIcons(widget.world_icons,  data.def.worlds)
 
-			widget.locked_icon:Hide()
+			SetDetailsLine(widget.detail_lines, true)
 		else
 			widget.cell_root:SetTexture(FISHREGISTRY_ATLAS, "fish_entry.tex")
-			widget.fish_anim:Hide()
-
-			BuildIconRow(widget.phase_root,  widget.phase_icons,  nil)
-			BuildIconRow(widget.moon_root,   widget.moon_icons,   nil)
-			BuildIconRow(widget.season_root, widget.season_icons, nil)
-			BuildIconRow(widget.world_root,  widget.world_icons,  nil)
 			
-			SetDetailsLine(widget.detail_lines, false)
-
+			widget.fish_anim:Hide()
 			widget.locked_icon:Show()
+
+			UpdateIcons(widget.phase_icons,  nil)
+			UpdateIcons(widget.moon_icons,   nil)
+			UpdateIcons(widget.season_icons, nil)
+			UpdateIcons(widget.world_icons,  nil)
+
+			SetDetailsLine(widget.detail_lines, false)
 		end
 	end
 

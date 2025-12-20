@@ -19,7 +19,7 @@ function FishRegistryUpdater:LearnFish(fish)
 		local updated = self.fishregistry:LearnFish(fish)
 
 		if updated and TheFocalPoint.entity:GetParent() == self.inst then
-			TheFocalPoint.SoundEmitter:PlaySound("dontstarve/HUD/get_gold")
+			self.inst.TheFocalPoint.SoundEmitter:PlaySound("dontstarve/HUD/get_gold")
 		end
 
 		if updated and (TheNet:IsDedicated() or (TheWorld.ismastersim and self.inst ~= ThePlayer)) and self.inst.userid then
