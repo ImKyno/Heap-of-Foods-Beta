@@ -18,9 +18,11 @@ function FishRegistryUpdater:LearnFish(fish)
 	if fish then
 		local updated = self.fishregistry:LearnFish(fish)
 
+		--[[
 		if updated and TheFocalPoint.entity:GetParent() == self.inst then
-			self.inst.TheFocalPoint.SoundEmitter:PlaySound("dontstarve/HUD/get_gold")
+			TheFocalPoint.SoundEmitter:PlaySound("dontstarve/HUD/get_gold")
 		end
+		]]--
 
 		if updated and (TheNet:IsDedicated() or (TheWorld.ismastersim and self.inst ~= ThePlayer)) and self.inst.userid then
 			SendModRPCToClient(GetClientModRPC("FishRegistry", "LearnFish"), self.inst.userid, fish)

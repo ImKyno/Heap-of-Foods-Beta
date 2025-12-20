@@ -85,6 +85,14 @@ local function onpickup(inst)
     end
 end
 
+local function GetFishKey(inst)
+	return inst.prefab
+end
+
+local function fishresearchfn(inst)
+	return inst:GetFishKey()
+end
+
 local function commonfn(bank, build, char_anim_build, data)
     local inst = CreateEntity()
 
@@ -108,6 +116,7 @@ local function commonfn(bank, build, char_anim_build, data)
     inst:AddTag("meat")
     inst:AddTag("catfood")
 	inst:AddTag("smalloceancreature")
+	inst:AddTag("fishresearchable")
 	
 	if data.roe_time ~= nil and data.baby_time ~= nil then
 		inst:AddTag("fishfarmable")
@@ -116,6 +125,8 @@ local function commonfn(bank, build, char_anim_build, data)
 	if data.weight_min ~= nil and data.weight_max ~= nil then
 		inst:AddTag("weighable_fish")
 	end
+
+	inst.GetFishKey = GetFishKey
 
     inst.entity:SetPristine()
 
@@ -136,6 +147,9 @@ local function commonfn(bank, build, char_anim_build, data)
 
     inst:AddComponent("cookable")
     inst.components.cookable.product = data.cookable_product
+	
+	inst:AddComponent("fishresearchable")
+	inst.components.fishresearchable:SetResearchFn(fishresearchfn)
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot(data.loot)

@@ -19,6 +19,7 @@ function FishResearchable:LearnFish(doer)
 	
 	if fish then
 		doer:PushEvent("learnfish", { fish = fish })
+		doer:PushEvent("learnrecipecard") -- Despite the name, its just for playing a sound.
 	end
 end
 

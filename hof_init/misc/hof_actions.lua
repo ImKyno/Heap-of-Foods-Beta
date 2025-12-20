@@ -665,7 +665,7 @@ AddAction("FISHREGISTRY_RESEARCH_FAIL", "Research", function(act)
 			return false, "ITEMMIMIC"
 		end
 
-		if target:HasTag("fishresearchable") then
+		if target:HasAnyTag("fishresearchable", "fishresearchable_large") then
 			return false, "GENERIC"
 		end
 	end
@@ -738,6 +738,7 @@ function ACTIONS.FISH.fn(act, ...)
         act.doer.components.fishingrod:StartFishing(act.target, act.doer)
         return true
     end
+
     return _FISHfn(act, ...)
 end
 

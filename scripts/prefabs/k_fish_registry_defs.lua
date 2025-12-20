@@ -276,6 +276,24 @@ FISH_REGISTRY_DEFS.oceanfish_small_9_inv =
 	worlds         = ALL_WORLDS,
 }
 
+FISH_REGISTRY_DEFS.oceanfish_pufferfish_inv =
+{
+	name           = "OCEANFISH_PUFFERFISH_INV",
+	
+	bank           = "kyno_oceanfish_pufferfish",
+	build          = "kyno_oceanfish_pufferfish",
+	anim           = "flop_pst",
+	
+	scale          = 0.25,
+	xpos           = 0,
+	ypos           = 40,
+	
+	phases         = { "day" },
+	moonphases     = ALL_MOONPHASES,
+	seasons        = { "summer" },
+	worlds         = ALL_WORLDS,
+}
+
 FISH_REGISTRY_DEFS.oceanfish_medium_1_inv =
 {
 	name           = "OCEANFISH_MEDIUM_1_INV",
@@ -438,6 +456,186 @@ FISH_REGISTRY_DEFS.oceanfish_medium_9_inv =
 	worlds         = ALL_WORLDS,
 }
 
+FISH_REGISTRY_DEFS.oceanfish_sturgeon_inv =
+{
+	name           = "OCEANFISH_STURGEON_INV",
+	
+	bank           = "kyno_oceanfish_sturgeon",
+	build          = "kyno_oceanfish_sturgeon",
+	anim           = "flop_pst",
+	
+	scale          = 0.25,
+	xpos           = 5,
+	ypos           = 40,
+	
+	phases         = ALL_PHASES,
+	moonphases     = ALL_MOONPHASES,
+	seasons        = { "summer", "winter" },
+	worlds         = ALL_WORLDS,
+}
+
+FISH_REGISTRY_DEFS.kyno_tropicalfish =
+{
+	name           = "KYNO_TROPICALFISH",
+
+	bank           = "tropicalfish",
+	build          = "tropicalfish",
+	anim           = "idle",
+	
+	scale          = 0.20,
+	xpos           = -9,
+	ypos           = 40,
+
+	phases         = ALL_PHASES,
+	moonphases     = ALL_MOONPHASES,
+	seasons        = { "autumn" },
+	worlds         = ALL_WORLDS,
+}
+
+FISH_REGISTRY_DEFS.kyno_neonfish =
+{
+	name           = "KYNO_NEONFISH",
+
+	bank           = "neonfish",
+	build          = "neonfish",
+	anim           = "idle",
+	
+	scale          = 0.20,
+	xpos           = -9,
+	ypos           = 40,
+
+	phases         = ALL_PHASES,
+	moonphases     = ALL_MOONPHASES,
+	seasons        = { "winter" },
+	worlds         = ALL_WORLDS,
+}
+
+FISH_REGISTRY_DEFS.kyno_pierrotfish =
+{
+	name           = "KYNO_PEIRROTFISH",
+
+	bank           = "pierrotfish",
+	build          = "pierrotfish",
+	anim           = "idle",
+	
+	scale          = 0.20,
+	xpos           = -5,
+	ypos           = 40,
+
+	phases         = ALL_PHASES,
+	moonphases     = ALL_MOONPHASES,
+	seasons        = { "spring" },
+	worlds         = ALL_WORLDS,
+}
+
+FISH_REGISTRY_DEFS.kyno_grouper =
+{
+	name           = "KYNO_GROUPER",
+
+	bank           = "grouper",
+	build          = "grouper",
+	anim           = "idle",
+	
+	scale          = 0.20,
+	xpos           = -5,
+	ypos           = 40,
+
+	phases         = { "dusk", "night" },
+	moonphases     = ALL_MOONPHASES,
+	seasons        = ALL_SEASONS,
+	worlds         = ALL_WORLDS,
+}
+
+FISH_REGISTRY_DEFS.kyno_koi =
+{
+	name           = "KYNO_KOI",
+
+	bank           = "koi",
+	build          = "koi",
+	anim           = "idle",
+	
+	scale          = 0.20,
+	xpos           = -5,
+	ypos           = 40,
+
+	phases         = ALL_PHASES,
+	moonphases     = ALL_MOONPHASES,
+	seasons        = { "summer" },
+	worlds         = ALL_WORLDS,
+}
+
+FISH_REGISTRY_DEFS.kyno_salmonfish =
+{
+	name           = "KYNO_SALMONFISH",
+
+	bank           = "salmonfish",
+	build          = "salmonfish",
+	anim           = "idle",
+	
+	scale          = 0.20,
+	xpos           = -5,
+	ypos           = 40,
+
+	phases         = { "day", "dusk" },
+	moonphases     = ALL_MOONPHASES,
+	seasons        = ALL_SEASONS,
+	worlds         = ALL_WORLDS,
+}
+
+FISH_REGISTRY_DEFS.kyno_antchovy =
+{
+	name           = "KYNO_ANTCHOVY",
+
+	bank           = "kyno_antchovy",
+	build          = "kyno_antchovy",
+	anim           = "idle",
+	
+	scale          = 0.40,
+	xpos           = 0,
+	ypos           = 50,
+
+	phases         = ALL_PHASES,
+	moonphases     = ALL_MOONPHASES,
+	seasons        = ALL_SEASONS,
+	worlds         = ALL_WORLDS,
+}
+
+FISH_REGISTRY_DEFS.kyno_jellyfish =
+{
+	name           = "KYNO_JELLYFISH",
+
+	bank           = "kyno_jellyfish2",
+	build          = "kyno_jellyfish2",
+	anim           = "idle1",
+	
+	scale          = 0.20,
+	xpos           = 0,
+	ypos           = 47,
+
+	phases         = ALL_PHASES,
+	moonphases     = ALL_MOONPHASES,
+	seasons        = ALL_SEASONS,
+	worlds         = ALL_WORLDS,
+}
+
+FISH_REGISTRY_DEFS.kyno_jellyfish_rainbow =
+{
+	name           = "KYNO_JELLYFISH_RAINBOW",
+
+	bank           = "kyno_jellyfish2",
+	build          = "kyno_jellyfish2",
+	anim           = "idle2",
+	
+	scale          = 0.15,
+	xpos           = 0,
+	ypos           = 48,
+
+	phases         = { "dusk", "night" },
+	moonphases     = ALL_MOONPHASES,
+	seasons        = ALL_SEASONS,
+	worlds         = ALL_WORLDS,
+}
+
 FISH_REGISTRY_DEFS.kyno_swordfish_blue =
 {
 	name           = "KYNO_SWORDFISH_BLUE",
@@ -486,6 +684,7 @@ local FISH_SORT_ORDER =
 	"oceanfish_small_7_inv",
 	"oceanfish_small_8_inv",
 	"oceanfish_small_9_inv",
+	"oceanfish_pufferfish_inv",
 	"oceanfish_medium_1_inv",
 	"oceanfish_medium_2_inv",
 	"oceanfish_medium_3_inv",
@@ -495,6 +694,16 @@ local FISH_SORT_ORDER =
 	"oceanfish_medium_7_inv",
 	"oceanfish_medium_8_inv",
 	"oceanfish_medium_9_inv",
+	"oceanfish_sturgeon_inv",
+	"kyno_tropicalfish",
+	"kyno_neonfish",
+	"kyno_pierrotfish",
+	"kyno_grouper",
+	"kyno_koi",
+	"kyno_salmonfish",
+	"kyno_antchovy",
+	"kyno_jellyfish",
+	"kyno_jellyfish_rainbow",
 	"kyno_swordfish_blue",
 }
 

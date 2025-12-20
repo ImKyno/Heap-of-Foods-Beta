@@ -233,6 +233,14 @@ local function OnEaten(inst, eater)
     CreateLight(eater, "kyno_jellyfish_rainbow_light")
 end
 
+local function GetFishKey(inst)
+	return inst.prefab
+end
+
+local function fishresearchfn(inst)
+	return inst:GetFishKey()
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -366,8 +374,11 @@ local function jellyfish()
 	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
 	inst:AddTag("jellyfish_rainbow")
+	inst:AddTag("fishresearchable")
 	
 	inst.scrapbook_proxy = "kyno_jellyfish_rainbow_ocean"
+	
+	inst.GetFishKey = GetFishKey
 
 	inst.entity:SetPristine()
 
@@ -381,6 +392,9 @@ local function jellyfish()
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
+	
+	inst:AddComponent("fishresearchable")
+	inst.components.fishresearchable:SetResearchFn(fishresearchfn)
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_jellyfish_rainbow_cooked"
