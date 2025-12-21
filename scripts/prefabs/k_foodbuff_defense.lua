@@ -10,7 +10,10 @@ local function OnAttached(inst, target)
 		target:AddTag("groggy")
 		
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_dmgreductionbuff", TUNING.KYNO_DMGREDUCTIONBUFF_SPEED)
-		target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER)
+	end
+	
+	if target.components.health ~= nil then
+		target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER, "kyno_dmgreductionbuff")
 	end
 	
     inst:ListenForEvent("death", function()
@@ -23,7 +26,10 @@ local function OnDetached(inst, target)
 		target:RemoveTag("groggy")
 		
 		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_dmgreductionbuff")
-		target.components.health.externalabsorbmodifiers:RemoveModifier(target)
+	end
+	
+	if target.components.health ~= nil then
+		target.components.health.externalabsorbmodifiers:RemoveModifier(target, "kyno_dmgreductionbuff")
 	end
 	
 	if target.components.talker and target:HasTag("player") then 

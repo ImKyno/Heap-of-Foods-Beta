@@ -22,14 +22,8 @@ Assets =
 	Asset("ANIM", "anim/kyno_tree_rock_swaps.zip"),
 	Asset("ANIM", "anim/kyno_farmplot_scrapbook.zip"),
 	
-	-- Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_fennel.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_parznip.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_radish.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_rice.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_sweetpotato.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
+	Asset("IMAGE", "images/hof_fishregistry.tex"),
+	Asset("ATLAS", "images/hof_fishregistry.xml"),
 	
 	Asset("IMAGE", "images/hof_loadingtips_icon.tex"), 
 	Asset("ATLAS", "images/hof_loadingtips_icon.xml"),
@@ -50,9 +44,6 @@ Assets =
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
-	
-	Asset("IMAGE", "images/fishregistryimages/hof_fishregistryimages.tex"),
-	Asset("ATLAS", "images/fishregistryimages/hof_fishregistryimages.xml"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_hudimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_hudimages.xml"),
@@ -410,6 +401,7 @@ local HOF_ICONS =
 	"kyno_fishfarmplot_kit",
 	"kyno_fishmeat_dried",
 	"kyno_fishmeat_small_dried",
+	"kyno_fishregistryhat",
 	"kyno_floatilizer",
 	"kyno_flour",
 	"kyno_foliage",

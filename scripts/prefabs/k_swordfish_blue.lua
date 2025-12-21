@@ -99,7 +99,7 @@ local function fn()
 	inst:AddTag("meat")
 	inst:AddTag("catfood")
 	inst:AddTag("largecreature")
-	inst:AddTag("weighable_fish")
+	-- inst:AddTag("weighable_fish")
 	inst:AddTag("fishresearchable")
 
 	inst.GetFishKey = GetFishKey

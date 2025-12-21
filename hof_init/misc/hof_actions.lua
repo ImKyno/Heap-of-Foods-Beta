@@ -665,7 +665,7 @@ AddAction("FISHREGISTRY_RESEARCH_FAIL", "Research", function(act)
 			return false, "ITEMMIMIC"
 		end
 
-		if target:HasAnyTag("fishresearchable", "fishresearchable_large") then
+		if target:HasTag("fishresearchable") then
 			return false, "GENERIC"
 		end
 	end

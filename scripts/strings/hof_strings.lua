@@ -548,6 +548,8 @@ STRINGS.MEADOWISLANDTRADER_STARTDANCING =
 
 STRINGS.FISHREGISTRY =
 {
+	TITLE = "Fish Encyclopedia",
+	
 	MYSTERY_FISH = "Unknown Fish",
 	MISSING_FISH = "Missing Fish",
 	

@@ -118,7 +118,7 @@ local function MakeConstructionPlan(data)
 		inst.entity:AddNetwork()
 		
 		local minimap = inst.entity:AddMiniMapEntity()
-		minimap:SetIcon(data.minimapicon)
+		minimap:SetIcon(data.minimapicon..".tex")
 
 		inst.Transform:SetScale(data.scale or 1, data.scale or 1, data.scale or 1)
 		

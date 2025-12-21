@@ -1,4 +1,4 @@
-local FISH_REGISTRY_DEFS = require("prefabs/k_fish_registry_defs").FISH_REGISTRY_DEFS
+local FISHREGISTRY_DEFS = require("prefabs/k_fishregistry_defs").FISHREGISTRY_DEFS
 
 local FishRegistryData = Class(function(self)
 	self.fishes       = {}
@@ -76,7 +76,7 @@ function FishRegistryData:LearnFish(fish)
 		return false
 	end
 
-	if FISH_REGISTRY_DEFS[fish] == nil then
+	if FISHREGISTRY_DEFS[fish] == nil then
 		print("Heap of Foods Mod - Fish Registry: Unknown fish:", fish)
 		return false
 	end

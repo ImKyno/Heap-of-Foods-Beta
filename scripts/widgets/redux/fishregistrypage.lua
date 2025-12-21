@@ -5,10 +5,10 @@ local UIAnim             = require("widgets/uianim")
 local Widget             = require("widgets/widget")
 local TEMPLATES          = require("widgets/redux/templates")
 
-local FISH_REGISTRY_DEFS = require("prefabs/k_fish_registry_defs").FISH_REGISTRY_DEFS
-local FISH_SORT_ORDER    = require("prefabs/k_fish_registry_defs").FISH_SORT_ORDER
+local FISHREGISTRY_DEFS  = require("prefabs/k_fishregistry_defs").FISHREGISTRY_DEFS
+local FISH_SORT_ORDER    = require("prefabs/k_fishregistry_defs").FISH_SORT_ORDER
 
-local FISHREGISTRY_ATLAS = "images/fishregistryimages/hof_fishregistryimages.xml"
+local FISHREGISTRY_ATLAS = "images/hof_fishregistry.xml"
 
 -- TUNING instead of local function in case someone wants to add their modded fish.
 TUNING.FISHREGISTRY_PHASE_IDS       = { "day", "dusk", "night"                                       }
@@ -47,6 +47,41 @@ TUNING.FISHREGISTRY_WORLD_ICONS     =
 	cave                            = { atlas = FISHREGISTRY_ATLAS, image = "world_cave.tex",        },
 }
 
+-- Public API for other Mods.
+TUNING.FISHREGISTRY = TUNING.FISHREGISTRY or {}
+
+function TUNING.FISHREGISTRY.RegisterPhase(id, icon)
+	table.insert(TUNING.FISHREGISTRY_PHASE_IDS, id)
+	TUNING.FISHREGISTRY_PHASE_ICONS[id] = icon
+end
+
+function TUNING.FISHREGISTRY.RegisterMoonPhase(id, icon)
+	table.insert(TUNING.FISHREGISTRY_MOONPHASE_IDS, id)
+	TUNING.FISHREGISTRY_MOONPHASE_ICONS[id] = icon
+end
+
+function TUNING.FISHREGISTRY.RegisterSeason(id, icon)
+	table.insert(TUNING.FISHREGISTRY_SEASON_IDS, id)
+	TUNING.FISHREGISTRY_SEASON_ICONS[id] = icon
+end
+
+function TUNING.FISHREGISTRY.RegisterWorld(id, icon)
+	table.insert(TUNING.FISHREGISTRY_WORLD_IDS, id)
+	TUNING.FISHREGISTRY_WORLD_ICONS[id] = icon
+end
+
+local function MakeDecorativeTab(root, text)
+	local tab = root:AddChild(Image(FISHREGISTRY_ATLAS, "fish_tab_inactive.tex"))
+	tab:SetScale(.7, .7)
+	
+	tab.text = tab:AddChild(Text(HEADERFONT, 28, text, UICOLOURS.GOLD))
+	tab.text:SetPosition(0, -4)
+	tab.text:SetHAlign(ANCHOR_MIDDLE)
+	tab.text:SetVAlign(ANCHOR_MIDDLE)
+
+	return tab
+end
+
 local FishRegistryPage = Class(Widget, function(self, parent_widget)
 	Widget._ctor(self, "FishRegistryPage")
 
@@ -54,6 +89,10 @@ local FishRegistryPage = Class(Widget, function(self, parent_widget)
 	
 	self.root = self:AddChild(Widget("root"))
 	self.backdrop = self.root:AddChild(Image(FISHREGISTRY_ATLAS, "backdrop.tex"))
+	
+	self.decorative_tab = MakeDecorativeTab(self.root, STRINGS.FISHREGISTRY.TITLE)
+	self.decorative_tab:SetPosition(0, 285)
+	self.decorative_tab:MoveToBack()
 
 	self.fish_grid = self.root:AddChild(self:BuildFishScrollGrid())
 	self.fish_grid:SetPosition(-15, 0)
@@ -61,7 +100,7 @@ local FishRegistryPage = Class(Widget, function(self, parent_widget)
 	local fish_grid_data = {}
 	
 	for _, fish in ipairs(FISH_SORT_ORDER) do
-		local def = FISH_REGISTRY_DEFS[fish]
+		local def = FISHREGISTRY_DEFS[fish]
 		
 		if def then
 			table.insert(fish_grid_data, { fish = fish, def = def })
@@ -161,7 +200,7 @@ function FishRegistryPage:BuildFishScrollGrid()
 		end
 		
 		w.phase_root = w.cell_root:AddChild(Widget("phases"))
-		w.phase_root:SetPosition(0, 12)
+		w.phase_root:SetPosition(0, 9)
 		w.phase_icons = CreateIcons(w.phase_root, TUNING.FISHREGISTRY_PHASE_ICONS, TUNING.FISHREGISTRY_PHASE_IDS, "phase")
 
 		w.moon_root = w.cell_root:AddChild(Widget("moonphases"))
