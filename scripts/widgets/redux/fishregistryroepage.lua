@@ -91,6 +91,7 @@ function FishRegistryRoePage:BuildRoeScrollGrid()
 		w.roe_image = w.cell_root:AddChild(Image(FISHREGISTRY_ATLAS, "missing.tex"))
 		w.roe_image:SetPosition(0, 40)
 		w.roe_image:ScaleToSize(110, 110)
+		w.roe_image:Hide()
 
 		w.sep_top = w.cell_root:AddChild(Image(FISHREGISTRY_ATLAS, "details_line.tex"))
 		w.sep_top:SetPosition(0, 6)
@@ -132,6 +133,9 @@ function FishRegistryRoePage:BuildRoeScrollGrid()
 		{
 			widget.sep_top,
 			widget.sep_bottom,
+			
+			widget.roe_time_text,
+			widget.baby_time_text,
 
 			widget.roe_time_title,
 			widget.baby_time_title,
@@ -147,17 +151,24 @@ function FishRegistryRoePage:BuildRoeScrollGrid()
 			widget.cell_root:SetTexture(FISHREGISTRY_ATLAS, "fish_entry_active.tex", "fish_entry_focus.tex")
 			widget.locked_icon:Hide()
 			
-			local atlas = data.def.atlas or GetInventoryItemAtlas(data.def.image)
-			widget.roe_image:SetTexture(atlas, data.def.image..".tex")
+			if data.def.atlas and data.def.image then
+				widget.roe_image:Show()
 			
-			-- If no custom string is found, it will automatically calculate roe and baby times.
-			widget.roe_time_text:SetString(data.def.roe_string or FishRegistryGetRoeTimeString(data.def.roe_time))
-			widget.baby_time_text:SetString(data.def.baby_string or FishRegistryGetBabyTimeString(data.def.baby_time))
+				local atlas = data.def.atlas or GetInventoryItemAtlas(data.def.image)
+				widget.roe_image:SetTexture(atlas, data.def.image..".tex")
+			
+				-- If no custom string is found, it will automatically calculate roe and baby times.
+				widget.roe_time_text:SetString(data.def.roe_string or FishRegistryGetRoeTimeString(data.def.roe_time))
+				widget.baby_time_text:SetString(data.def.baby_string or FishRegistryGetBabyTimeString(data.def.baby_time))
+			else
+				widget.roe_image:Hide()
+			end
 
 			SetDetailsLine(widget.detail_lines, true)
 		else
 			widget.cell_root:SetTexture(FISHREGISTRY_ATLAS, "fish_entry.tex")
 			
+			widget.roe_image:Hide()
 			widget.locked_icon:Show()
 
 			SetDetailsLine(widget.detail_lines, false)

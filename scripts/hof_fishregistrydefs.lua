@@ -593,7 +593,7 @@ FISHREGISTRY_FISH_DEFS.kyno_neonfish =
 
 FISHREGISTRY_FISH_DEFS.kyno_pierrotfish =
 {
-	name             = "KYNO_PEIRROTFISH",
+	name             = "KYNO_PIERROTFISH",
 
 	bank             = "pierrotfish",
 	build            = "pierrotfish",
@@ -815,6 +815,375 @@ FISHREGISTRY_ROE_DEFS.kyno_roe_pondeel =
 	roe_string  = STRINGS.FISHREGISTRY.ROE_TIME_ONE_HALF_DAY,
 }
 
+FISHREGISTRY_ROE_DEFS.kyno_roe_wobster =
+{
+	name        = "KYNO_ROE_WOBSTER",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_wobster",
+	
+	roe_time    = TUNING.WOBSTER_ROETIME,
+	baby_time   = TUNING.WOBSTER_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_wobster_moonglass =
+{
+	name        = "KYNO_ROE_WOBSTER_MOONGLASS",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_wobster_moonglass",
+	
+	roe_time    = TUNING.WOBSTER_MOONGLASS_ROETIME,
+	baby_time   = TUNING.WOBSTER_MOONGLASS_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_wobster_monkeyisland =
+{
+	name        = "KYNO_ROE_WOBSTER_MONKEYISLAND",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_wobster_monkeyisland",
+	
+	roe_time    = TUNING.WOBSTER_MONKEYISLAND_ROETIME,
+	baby_time   = TUNING.WOBSTER_MONKEYISLAND_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_small_1 =
+{
+	name        = "KYNO_ROE_OCEANFISH_SMALL_1",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_small_1",
+	
+	roe_time    = TUNING.OCEANFISH_SMALL_ROETIME,
+	baby_time   = TUNING.OCEANFISH_SMALL_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_small_2 =
+{
+	name        = "KYNO_ROE_OCEANFISH_SMALL_2",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_small_2",
+	
+	roe_time    = TUNING.OCEANFISH_SMALL_ROETIME,
+	baby_time   = TUNING.OCEANFISH_SMALL_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_small_3 =
+{
+	name        = "KYNO_ROE_OCEANFISH_SMALL_3",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_small_3",
+	
+	roe_time    = TUNING.OCEANFISH_SMALL_ROETIME,
+	baby_time   = TUNING.OCEANFISH_SMALL_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_small_4 =
+{
+	name        = "KYNO_ROE_OCEANFISH_SMALL_4",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_small_4",
+	
+	roe_time    = TUNING.OCEANFISH_SMALL_ROETIME,
+	baby_time   = TUNING.OCEANFISH_SMALL_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_small_5 =
+{
+	name        = "KYNO_ROE_OCEANFISH_SMALL_5",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_small_5",
+	
+	roe_time    = TUNING.OCEANFISH_SMALL_ROETIME,
+	baby_time   = TUNING.OCEANFISH_SMALL_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_small_6 =
+{
+	name        = "KYNO_ROE_OCEANFISH_SMALL_6",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_small_6",
+	
+	roe_time    = TUNING.OCEANFISH_SMALL_ROETIME,
+	baby_time   = TUNING.OCEANFISH_SMALL_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_small_7 =
+{
+	name        = "KYNO_ROE_OCEANFISH_SMALL_7",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_small_7",
+	
+	roe_time    = TUNING.OCEANFISH_SMALL_ROETIME,
+	baby_time   = TUNING.OCEANFISH_SMALL_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_small_8 =
+{
+	name        = "KYNO_ROE_OCEANFISH_SMALL_8",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_small_8",
+	
+	roe_time    = TUNING.OCEANFISH_SMALL_ROETIME,
+	baby_time   = TUNING.OCEANFISH_SMALL_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_small_9 =
+{
+	name        = "KYNO_ROE_OCEANFISH_SMALL_9",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_small_9",
+	
+	roe_time    = TUNING.OCEANFISH_SMALL_ROETIME,
+	baby_time   = TUNING.OCEANFISH_SMALL_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_pufferfish =
+{
+	name        = "KYNO_ROE_OCEANFISH_PUFFERFISH",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_pufferfish",
+	
+	roe_time    = TUNING.OCEANFISH_SMALL_ROETIME,
+	baby_time   = TUNING.OCEANFISH_SMALL_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_medium_1 =
+{
+	name        = "KYNO_ROE_OCEANFISH_MEDIUM_1",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_medium_1",
+	
+	roe_time    = TUNING.OCEANFISH_MEDIUM_ROETIME,
+	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_medium_2 =
+{
+	name        = "KYNO_ROE_OCEANFISH_MEDIUM_2",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_medium_2",
+	
+	roe_time    = TUNING.OCEANFISH_MEDIUM_ROETIME,
+	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_medium_3 =
+{
+	name        = "KYNO_ROE_OCEANFISH_MEDIUM_3",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_medium_3",
+	
+	roe_time    = TUNING.OCEANFISH_MEDIUM_ROETIME,
+	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_medium_4 =
+{
+	name        = "KYNO_ROE_OCEANFISH_MEDIUM_4",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_medium_4",
+	
+	roe_time    = TUNING.OCEANFISH_MEDIUM_ROETIME,
+	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_medium_5 =
+{
+	name        = "KYNO_ROE_OCEANFISH_MEDIUM_5",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_medium_5",
+	
+	roe_time    = TUNING.OCEANFISH_MEDIUM_ROETIME,
+	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_medium_6 =
+{
+	name        = "KYNO_ROE_OCEANFISH_MEDIUM_6",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_medium_6",
+	
+	roe_time    = TUNING.OCEANFISH_MEDIUM_ROETIME,
+	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_medium_7 =
+{
+	name        = "KYNO_ROE_OCEANFISH_MEDIUM_7",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_medium_7",
+	
+	roe_time    = TUNING.OCEANFISH_MEDIUM_ROETIME,
+	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_medium_8 =
+{
+	name        = "KYNO_ROE_OCEANFISH_MEDIUM_8",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_medium_8",
+	
+	roe_time    = TUNING.OCEANFISH_MEDIUM_ROETIME,
+	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_medium_9 =
+{
+	name        = "KYNO_ROE_OCEANFISH_MEDIUM_9",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_medium_9",
+	
+	roe_time    = TUNING.OCEANFISH_MEDIUM_ROETIME,
+	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_sturgeon =
+{
+	name        = "KYNO_ROE_OCEANFISH_STURGEON",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_sturgeon",
+	
+	roe_time    = TUNING.OCEANFISH_MEDIUM_ROETIME,
+	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_tropicalfish =
+{
+	name        = "KYNO_ROE_TROPICALFISH",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_tropicalfish",
+	
+	roe_time    = TUNING.TROPICALFISH_ROETIME,
+	baby_time   = TUNING.TROPICALFISH_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_neonfish =
+{
+	name        = "KYNO_ROE_NEONFISH",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_neonfish",
+	
+	roe_time    = TUNING.NEONFISH_ROETIME,
+	baby_time   = TUNING.NEONFISH_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_pierrotfish =
+{
+	name        = "KYNO_ROE_PIERROTFISH",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_pierrotfish",
+	
+	roe_time    = TUNING.PIERROTFISH_ROETIME,
+	baby_time   = TUNING.PIERROTFISH_BABYTIME,
+	
+	roe_string  = STRINGS.FISHREGISTRY.ROE_TIME_ONE_HALF_DAY,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_grouper =
+{
+	name        = "KYNO_ROE_GROUPER",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_grouper",
+	
+	roe_time    = TUNING.GROUPER_ROETIME,
+	baby_time   = TUNING.GROUPER_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_koi =
+{
+	name        = "KYNO_ROE_KOI",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_koi",
+	
+	roe_time    = TUNING.TROPICALKOI_ROETIME,
+	baby_time   = TUNING.TROPICALKOI_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_salmonfish =
+{
+	name        = "KYNO_ROE_SALMONFISH",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_salmonfish",
+	
+	roe_time    = TUNING.SALMONFISH_ROETIME,
+	baby_time   = TUNING.SALMONFISH_BABYTIME,
+	
+	roe_string  = STRINGS.FISHREGISTRY.ROE_TIME_ONE_HALF_DAY,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_antchovy =
+{
+	name        = "KYNO_ROE_ANTCHOVY",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_antchovy",
+	
+	roe_time    = TUNING.ANTCHOVY_ROETIME,
+	baby_time   = TUNING.ANTCHOVY_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_jellyfish =
+{
+	name        = "KYNO_ROE_JELLYFISH",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_jellyfish",
+	
+	roe_time    = TUNING.JELLYFISH_ROETIME,
+	baby_time   = TUNING.JELLYFISH_BABYTIME,
+	
+	roe_string  = STRINGS.FISHREGISTRY.ROE_TIME_ONE_HALF_DAY,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_jellyfish_rainbow =
+{
+	name        = "KYNO_ROE_JELLYFISH_RAINBOW",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_jellyfish_rainbow",
+	
+	roe_time    = TUNING.JELLYFISH_RAINBOW_ROETIME,
+	baby_time   = TUNING.JELLYFISH_RAINBOW_BABYTIME,
+}
+
+FISHREGISTRY_ROE_DEFS.kyno_roe_swordfish_blue =
+{
+	name        = "KYNO_ROE_SWORDFISH_BLUE",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_swordfish_blue",
+	
+	roe_time    = TUNING.SWORDFISH_BLUE_ROETIME,
+	baby_time   = TUNING.SWORDFISH_BLUE_BABYTIME,
+}
+
 for roe, data in pairs(FISHREGISTRY_ROE_DEFS) do
 	if data.name == nil then
 		data.name = string.upper(roe)
@@ -833,6 +1202,39 @@ local ROE_SORT_ORDER =
 {
 	"kyno_roe_pondfish",
 	"kyno_roe_pondeel",
+	"kyno_roe_wobster",
+	"kyno_roe_wobster_moonglass",
+	"kyno_roe_wobster_monkeyisland",
+	"kyno_roe_oceanfish_small_1",
+	"kyno_roe_oceanfish_small_2",
+	"kyno_roe_oceanfish_small_3",
+	"kyno_roe_oceanfish_small_4",
+	"kyno_roe_oceanfish_small_5",
+	"kyno_roe_oceanfish_small_6",
+	"kyno_roe_oceanfish_small_7",
+	"kyno_roe_oceanfish_small_8",
+	"kyno_roe_oceanfish_small_9",
+	"kyno_roe_oceanfish_pufferfish",
+	"kyno_roe_oceanfish_medium_1",
+	"kyno_roe_oceanfish_medium_2",
+	"kyno_roe_oceanfish_medium_3",
+	"kyno_roe_oceanfish_medium_4",
+	"kyno_roe_oceanfish_medium_5",
+	"kyno_roe_oceanfish_medium_6",
+	"kyno_roe_oceanfish_medium_7",
+	"kyno_roe_oceanfish_medium_8",
+	"kyno_roe_oceanfish_medium_9",
+	"kyno_roe_oceanfish_sturgeon",
+	"kyno_roe_tropicalfish",
+	"kyno_roe_neonfish",
+	"kyno_roe_pierrotfish",
+	"kyno_roe_grouper",
+	"kyno_roe_koi",
+	"kyno_roe_salmonfish",
+	"kyno_roe_antchovy",
+	"kyno_roe_jellyfish",
+	"kyno_roe_jellyfish_rainbow",
+	"kyno_roe_swordfish_blue",
 }
 
 return 
