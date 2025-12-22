@@ -15,26 +15,6 @@ local HOF_HUMANMEAT       = GetModConfigData("HUMANMEAT")
 local HOF_KEEPFOOD        = GetModConfigData("KEEPFOOD")
 local HOF_ICEBOXSTACKSIZE = GetModConfigData("ICEBOXSTACKSIZE")
 
--- Fish Registry player extension.
-local function OnLearnFish(inst, data)
-	local fishregistryupdater = inst.components.fishregistryupdater
-    
-	if fishregistryupdater and data ~= nil and data.fish ~= nil then
-		fishregistryupdater:LearnFish(data.fish)
-	end
-end
-
-AddPlayerPostInit(function(inst)
-	inst:AddComponent("fishregistryupdater")
-
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-
-	inst.OnLearnFish = OnLearnFish
-	inst:ListenForEvent("learnfish", inst.OnLearnFish)
-end)
-
 -- Favorite Mod Foods.
 AddPrefabPostInit("wilson", function(inst)
     inst:AddTag("wislanhealer")
@@ -1333,6 +1313,37 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 	
 	self:ToggleEnchantedFX()
 	self:ToggleShadow2FX()
+end)
+
+-- Fish Registry player extension.
+local function OnLearnFish(inst, data)
+	local fishregistryupdater = inst.components.fishregistryupdater
+    
+	if fishregistryupdater and data ~= nil and data.fish ~= nil then
+		fishregistryupdater:LearnFish(data.fish)
+	end
+end
+
+local function OnLearnRoe(inst, data)
+	local fishregistryupdater = inst.components.fishregistryupdater
+    
+	if fishregistryupdater and data ~= nil and data.roe ~= nil then
+		fishregistryupdater:LearnRoe(data.roe)
+	end
+end
+
+AddPlayerPostInit(function(inst)
+	inst:AddComponent("fishregistryupdater")
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+
+	inst.OnLearnFish = OnLearnFish
+	inst.OnLearnRoe = OnLearnRoe
+	
+	inst:ListenForEvent("learnfish", inst.OnLearnFish)
+	inst:ListenForEvent("learnroe", inst.OnLearnRoe)
 end)
 
 -- HAHAHAHA YOU CAN'T EDIT SKILLTREE STRINGS WITH REGULAR METHODS 💀💀

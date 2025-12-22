@@ -1,98 +1,22 @@
-local Image              = require("widgets/image")
-local ImageButton        = require("widgets/imagebutton")
-local Text               = require("widgets/text")
-local UIAnim             = require("widgets/uianim")
-local Widget             = require("widgets/widget")
-local TEMPLATES          = require("widgets/redux/templates")
+local Image                   = require("widgets/image")
+local ImageButton             = require("widgets/imagebutton")
+local Text                    = require("widgets/text")
+local UIAnim                  = require("widgets/uianim")
+local Widget                  = require("widgets/widget")
+local TEMPLATES               = require("widgets/redux/templates")
 
-local FISHREGISTRY_DEFS  = require("prefabs/k_fishregistry_defs").FISHREGISTRY_DEFS
-local FISH_SORT_ORDER    = require("prefabs/k_fishregistry_defs").FISH_SORT_ORDER
+local FISHREGISTRY_FISH_DEFS  = require("hof_fishregistrydefs").FISHREGISTRY_FISH_DEFS
+local FISH_SORT_ORDER         = require("hof_fishregistrydefs").FISH_SORT_ORDER
 
-local FISHREGISTRY_ATLAS = "images/hof_fishregistry.xml"
+local FISHREGISTRY_ATLAS      = "images/hof_fishregistry.xml"
 
--- TUNING instead of local function in case someone wants to add their modded fish.
-TUNING.FISHREGISTRY_PHASE_IDS       = { "day", "dusk", "night"                                       }
-TUNING.FISHREGISTRY_MOONPHASE_IDS   = { "new", "quarter", "half", "threequarter", "full", "glassed"  }
-TUNING.FISHREGISTRY_SEASON_IDS      = { "autumn", "winter", "spring", "summer"                       }
-TUNING.FISHREGISTRY_WORLD_IDS       = { "forest", "cave"                                             }
-
-TUNING.FISHREGISTRY_PHASE_ICONS     =
-{
-	day                             = { atlas = FISHREGISTRY_ATLAS, image = "phase_day.tex"          },
-	dusk                            = { atlas = FISHREGISTRY_ATLAS, image = "phase_dusk.tex"         },
-	night                           = { atlas = FISHREGISTRY_ATLAS, image = "phase_night.tex"        },
-}
-
-TUNING.FISHREGISTRY_MOONPHASE_ICONS =
-{
-	new                             = { atlas = FISHREGISTRY_ATLAS, image = "moon_new.tex"           },
-	quarter                         = { atlas = FISHREGISTRY_ATLAS, image = "moon_quarter.tex"       },
-	half                            = { atlas = FISHREGISTRY_ATLAS, image = "moon_half.tex"          },
-	threequarter                    = { atlas = FISHREGISTRY_ATLAS, image = "moon_three_quarter.tex" },
-	full                            = { atlas = FISHREGISTRY_ATLAS, image = "moon_full.tex"          },
-	glassed                         = { atlas = FISHREGISTRY_ATLAS, image = "moon_glassed.tex"       },
-}
-
-TUNING.FISHREGISTRY_SEASON_ICONS    =
-{
-	autumn                          = { atlas = FISHREGISTRY_ATLAS, image = "season_autumn.tex"      },
-	winter                          = { atlas = FISHREGISTRY_ATLAS, image = "season_winter.tex"      },
-	spring                          = { atlas = FISHREGISTRY_ATLAS, image = "season_spring.tex"      },
-	summer                          = { atlas = FISHREGISTRY_ATLAS, image = "season_summer.tex"      },
-}
-
-TUNING.FISHREGISTRY_WORLD_ICONS     =
-{
-	forest                          = { atlas = FISHREGISTRY_ATLAS, image = "world_forest.tex"       },
-	cave                            = { atlas = FISHREGISTRY_ATLAS, image = "world_cave.tex",        },
-}
-
--- Public API for other Mods.
-TUNING.FISHREGISTRY = TUNING.FISHREGISTRY or {}
-
-function TUNING.FISHREGISTRY.RegisterPhase(id, icon)
-	table.insert(TUNING.FISHREGISTRY_PHASE_IDS, id)
-	TUNING.FISHREGISTRY_PHASE_ICONS[id] = icon
-end
-
-function TUNING.FISHREGISTRY.RegisterMoonPhase(id, icon)
-	table.insert(TUNING.FISHREGISTRY_MOONPHASE_IDS, id)
-	TUNING.FISHREGISTRY_MOONPHASE_ICONS[id] = icon
-end
-
-function TUNING.FISHREGISTRY.RegisterSeason(id, icon)
-	table.insert(TUNING.FISHREGISTRY_SEASON_IDS, id)
-	TUNING.FISHREGISTRY_SEASON_ICONS[id] = icon
-end
-
-function TUNING.FISHREGISTRY.RegisterWorld(id, icon)
-	table.insert(TUNING.FISHREGISTRY_WORLD_IDS, id)
-	TUNING.FISHREGISTRY_WORLD_ICONS[id] = icon
-end
-
-local function MakeDecorativeTab(root, text)
-	local tab = root:AddChild(Image(FISHREGISTRY_ATLAS, "fish_tab_inactive.tex"))
-	tab:SetScale(.7, .7)
-	
-	tab.text = tab:AddChild(Text(HEADERFONT, 28, text, UICOLOURS.GOLD))
-	tab.text:SetPosition(0, -4)
-	tab.text:SetHAlign(ANCHOR_MIDDLE)
-	tab.text:SetVAlign(ANCHOR_MIDDLE)
-
-	return tab
-end
-
-local FishRegistryPage = Class(Widget, function(self, parent_widget)
-	Widget._ctor(self, "FishRegistryPage")
+local FishRegistryFishPage = Class(Widget, function(self, parent_widget)
+	Widget._ctor(self, "FishRegistryFishPage")
 
 	self.parent_widget = parent_widget
 	
 	self.root = self:AddChild(Widget("root"))
-	self.backdrop = self.root:AddChild(Image(FISHREGISTRY_ATLAS, "backdrop.tex"))
-	
-	self.decorative_tab = MakeDecorativeTab(self.root, STRINGS.FISHREGISTRY.TITLE)
-	self.decorative_tab:SetPosition(0, 285)
-	self.decorative_tab:MoveToBack()
+	-- self.backdrop = self.root:AddChild(Image(FISHREGISTRY_ATLAS, "backdrop.tex"))
 
 	self.fish_grid = self.root:AddChild(self:BuildFishScrollGrid())
 	self.fish_grid:SetPosition(-15, 0)
@@ -100,7 +24,7 @@ local FishRegistryPage = Class(Widget, function(self, parent_widget)
 	local fish_grid_data = {}
 	
 	for _, fish in ipairs(FISH_SORT_ORDER) do
-		local def = FISHREGISTRY_DEFS[fish]
+		local def = FISHREGISTRY_FISH_DEFS[fish]
 		
 		if def then
 			table.insert(fish_grid_data, { fish = fish, def = def })
@@ -130,7 +54,7 @@ local function SetDetailsLine(list, visible)
 	end
 end
 
-function FishRegistryPage:BuildFishScrollGrid()
+function FishRegistryFishPage:BuildFishScrollGrid()
 	local row_w           = 160
 	local row_h           = 230
 	local row_spacing     = 2
@@ -176,26 +100,30 @@ function FishRegistryPage:BuildFishScrollGrid()
 
 		local function CreateIcons(root, icon_map, list, icon_type)
 			local icons = {}
-    
-			for i, id in ipairs(list) do
-				local icondef = icon_map[id]
-				
+
+			if type(list) ~= "table" then
+				return icons
+			end
+
+			for _, id in ipairs(list) do
+				local icondef = icon_map and icon_map[id]
+
 				if icondef then
 					local img = root:AddChild(Image(icondef.atlas, icondef.image))
-					
+			
 					img:ScaleToSize(small_icon_size, small_icon_size)
 					img:Hide()
-					
+
 					local key = string.upper(icon_type.."_"..id)
-					
+
 					if STRINGS.FISHREGISTRY[key] then
 						img:SetHoverText(STRINGS.FISHREGISTRY[key], { offset_y = 35 })
 					end
-					
-					table.insert(icons, {id = id, img = img})
+
+					table.insert(icons, { id = id, img = img })
 				end
 			end
-			
+
 			return icons
 		end
 		
@@ -267,8 +195,9 @@ function FishRegistryPage:BuildFishScrollGrid()
 			if data.def.bank and data.def.build and data.def.anim then
 				widget.fish_anim:Show()
                 
-				widget.fish_anim:SetScale(data.def.scale)
-				widget.fish_anim:SetPosition(data.def.xpos, data.def.ypos)
+				-- scale, xpos and ypos are not needed.
+				widget.fish_anim:SetScale(data.def.scale or 0.25)
+				widget.fish_anim:SetPosition(data.def.xpos or 0, data.def.ypos or 0)
 				
 				widget.fish_anim:GetAnimState():SetBank(data.def.bank)
 				widget.fish_anim:GetAnimState():SetBuild(data.def.build)
@@ -337,4 +266,4 @@ function FishRegistryPage:BuildFishScrollGrid()
 	return grid
 end
 
-return FishRegistryPage
+return FishRegistryFishPage

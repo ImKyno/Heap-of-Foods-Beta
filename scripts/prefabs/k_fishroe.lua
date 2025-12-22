@@ -7,6 +7,14 @@ local function MakeRoe(data)
 		Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 		Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 	}
+	
+	local function GetRoeKey(inst)
+		return inst.prefab
+	end
+
+	local function roeresearchfn(inst)
+		return inst:GetRoeKey()
+	end
 
 	local function fn()
 		local inst = CreateEntity()
@@ -28,6 +36,7 @@ local function MakeRoe(data)
 		inst:AddTag("roe")
 		inst:AddTag("cookable")
 		inst:AddTag("saltbox_valid")
+		inst:AddTag("roeresearchable")
 		
 		if data.veggie ~= nil then
 			inst:AddTag("veggie")
@@ -44,6 +53,8 @@ local function MakeRoe(data)
 				inst:AddTag(v)
 			end
 		end
+		
+		inst.GetRoeKey = GetRoeKey
 	
 		inst.entity:SetPristine()
 
@@ -54,15 +65,18 @@ local function MakeRoe(data)
 		inst:AddComponent("bait")
 		inst:AddComponent("selfstacker")
 		
-		inst:AddComponent("tradable")
-		inst.components.tradable.goldvalue = data.goldvalue or TUNING.GOLD_VALUES.MEAT
-		inst.components.tradable.octopusvalue = data.octopusvalue or TUNING.OCTOPUS_VALUES.SEAFOOD
+		inst:AddComponent("roeresearchable")
+		inst.components.roeresearchable:SetResearchFn(roeresearchfn)
 	
 		inst:AddComponent("inspectable")
 		inst.components.inspectable.nameoverride = "KYNO_ROE"
 	
 		inst:AddComponent("stackable")
 		inst.components.stackable.maxsize = data.stacksize or TUNING.STACK_SIZE_SMALLITEM
+		
+		inst:AddComponent("tradable")
+		inst.components.tradable.goldvalue = data.goldvalue or TUNING.GOLD_VALUES.MEAT
+		inst.components.tradable.octopusvalue = data.octopusvalue or TUNING.OCTOPUS_VALUES.SEAFOOD
 		
 		inst:AddComponent("edible")
 		inst.components.edible.healthvalue = data.healthvalue or TUNING.KYNO_ROE_HEALTH

@@ -1,7 +1,7 @@
-local _G                 = GLOBAL
-local require            = _G.require
-local UpvalueHacker      = require("hof_upvaluehacker")
-local FISHREGISTRY_DEFS  = require("prefabs/k_fishregistry_defs").FISHREGISTRY_DEFS
+local _G                      = GLOBAL
+local require                 = _G.require
+local UpvalueHacker           = require("hof_upvaluehacker")
+local FISHREGISTRY_FISH_DEFS  = require("hof_fishregistrydefs").FISHREGISTRY_FISH_DEFS
 
 require("hof_constants")
 

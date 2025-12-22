@@ -199,6 +199,7 @@ STRINGS.ACTIONS.LEARNRECIPECARD = "Add to Cookbook"
 STRINGS.ACTIONS.LEARNRECIPECARD2 = "Add to Brewbook"
 STRINGS.ACTIONS.BREEDFISH = "Breed"
 STRINGS.ACTIONS.MAKEPOPCORN = "Make Popcorn"
+STRINGS.ACTIONS.FISHREGISTRY_RESEARCH = "Research"
 
 -- Edited strings for skill trees.
 STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Mushrooms planted in a Mushroom Planter grow much faster.\nLearn how to plant new kinds of mushrooms in Mushroom Planters."
@@ -548,10 +549,20 @@ STRINGS.MEADOWISLANDTRADER_STARTDANCING =
 
 STRINGS.FISHREGISTRY =
 {
-	TITLE = "Fish Encyclopedia",
+	TAB_FISH = "Fishes",
+	TAB_ROE = "Roes",
 	
 	MYSTERY_FISH = "Unknown Fish",
 	MISSING_FISH = "Missing Fish",
+	
+	MYSTERY_ROE = "Unknown Roe",
+	MISSING_ROE = "Missing Roe",
+	
+	MYSTERY_BABY = "Unknown Offspring",
+	MISSING_BABY = "Unknown Offspring",
+	
+	MISSING_ROE_TIME = "Missing Roe Time",
+	MISSING_BABY_TIME = "Missing Offspring Time",
 	
 	PHASE_DAY = "Day",
 	PHASE_DUSK = "Dusk",
@@ -572,6 +583,26 @@ STRINGS.FISHREGISTRY =
 	
 	WORLD_FOREST = "Forest",
 	WORLD_CAVE = "Caves",
+	
+	ROE_TIME = "Roe Time",
+	BABY_TIME = "Offspring Time",
+	
+	ROE_TIME_HALF_DAY = "About half a day",
+	ROE_TIME_ONE_DAY = "About a day",
+	ROE_TIME_ONE_HALF_DAY = "More than a day",
+	ROE_TIME_TWO_DAY = "About two days",
+	ROE_TIME_THREE_DAY = "About three days",
+	ROE_TIME_MORE_DAY = "More than three days",
+	
+	BABY_TIME_HALF_DAY = "About half a day",
+	BABY_TIME_ONE_DAY = "About a day",
+	BABY_TIME_ONE_HALF_DAY = "More than a day",
+	BABY_TIME_TWO_DAY = "About two days",
+	BABY_TIME_THREE_DAY = "About three days",
+	BABY_TIME_FOUR_DAY = "About four days",
+	BABY_TIME_FIVE_DAY = "About five days",
+	BABY_TIME_SIX_DAY = "About six days",
+	BABY_TIME_MORE_DAY = "More than six days",
 }
 
 STRINGS.CHARACTERS.GENERIC.ANNOUNCE_KYNO_COFFEEBUFF_START = "Swift!"
@@ -1563,6 +1594,42 @@ STRINGS.CHARACTERS.WARLY.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Magnifique! A
 STRINGS.CHARACTERS.WURT.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Cake done! Party time, florp!"
 STRINGS.CHARACTERS.WALTER.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Cake complete! This is going to be the best celebration ever!"
 STRINGS.CHARACTERS.WANDA.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Just in time! Now, let's enjoy it before the moment slips away."
+
+STRINGS.CHARACTERS.GENERIC.ANNOUNCE_KYNO_FISH_RESEARCHED = "I've learned something new about this fish."
+STRINGS.CHARACTERS.WILLOW.ANNOUNCE_KYNO_FISH_RESEARCHED = "Heh. I poked at the fish until it made sense."
+STRINGS.CHARACTERS.WOLFGANG.ANNOUNCE_KYNO_FISH_RESEARCHED = "Wolfgang now knows much about tiny water meat!"
+STRINGS.CHARACTERS.WENDY.ANNOUNCE_KYNO_FISH_RESEARCHED = "Its secrets surface, as all things eventually do."
+STRINGS.CHARACTERS.WX78.ANNOUNCE_KYNO_FISH_RESEARCHED = "ANALYSIS COMPLETE. FISH DATA ACQUIRED."
+STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_KYNO_FISH_RESEARCHED = "Fascinating. This species yields new insights."
+STRINGS.CHARACTERS.WOODIE.ANNOUNCE_KYNO_FISH_RESEARCHED = "Well, ain't that somethin'. Learned a thing or two."
+STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KYNO_FISH_RESEARCHED = "Knowledge, even from a fish, has its uses."
+STRINGS.CHARACTERS.WATHGRITHR.ANNOUNCE_KYNO_FISH_RESEARCHED = "I have studied the ways of this sea-beast!"
+STRINGS.CHARACTERS.WEBBER.ANNOUNCE_KYNO_FISH_RESEARCHED = "We figured it out together!"
+STRINGS.CHARACTERS.WINONA.ANNOUNCE_KYNO_FISH_RESEARCHED = "Huh. Guess this fish taught me somethin' useful."
+STRINGS.CHARACTERS.WORTOX.ANNOUNCE_KYNO_FISH_RESEARCHED = "A fishy secret revealed! Hyuyu!"
+STRINGS.CHARACTERS.WORMWOOD.ANNOUNCE_KYNO_FISH_RESEARCHED = "Glub Glub Told Me Things!"
+STRINGS.CHARACTERS.WARLY.ANNOUNCE_KYNO_FISH_RESEARCHED = "Ah! Now I truly understand this ingredient."
+STRINGS.CHARACTERS.WURT.ANNOUNCE_KYNO_FISH_RESEARCHED = "Friend secrets learned!!"
+STRINGS.CHARACTERS.WALTER.ANNOUNCE_KYNO_FISH_RESEARCHED = "Cool! I learned a lot about this fish."
+STRINGS.CHARACTERS.WANDA.ANNOUNCE_KYNO_FISH_RESEARCHED = "Good. One less fish wasting my time."
+
+STRINGS.CHARACTERS.GENERIC.ANNOUNCE_KYNO_ROE_RESEARCHED = "I've learned something new about this roe."
+STRINGS.CHARACTERS.WILLOW.ANNOUNCE_KYNO_ROE_RESEARCHED = "Fish eggs, huh? Still learned something."
+STRINGS.CHARACTERS.WOLFGANG.ANNOUNCE_KYNO_ROE_RESEARCHED = "Wolfgang understands tiny fish eggs now!"
+STRINGS.CHARACTERS.WENDY.ANNOUNCE_KYNO_ROE_RESEARCHED = "So much life, never meant to be."
+STRINGS.CHARACTERS.WX78.ANNOUNCE_KYNO_ROE_RESEARCHED = "EGG ANALYSIS COMPLETE. DATA ACQUIRED."
+STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_KYNO_ROE_RESEARCHED = "Roe contains remarkable biological properties."
+STRINGS.CHARACTERS.WOODIE.ANNOUNCE_KYNO_ROE_RESEARCHED = "Guess even fish eggs got somethin' to teach."
+STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KYNO_ROE_RESEARCHED = "Potential, wasted in such a fragile form."
+STRINGS.CHARACTERS.WATHGRITHR.ANNOUNCE_KYNO_ROE_RESEARCHED = "Unborn warriors of the sea, studied well!"
+STRINGS.CHARACTERS.WEBBER.ANNOUNCE_KYNO_ROE_RESEARCHED = "We learned about the baby fish stuff!"
+STRINGS.CHARACTERS.WINONA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Not pretty, but useful. Knowledge is knowledge."
+STRINGS.CHARACTERS.WORTOX.ANNOUNCE_KYNO_ROE_RESEARCHED = "Eggy secrets! Hyuyu!"
+STRINGS.CHARACTERS.WORMWOOD.ANNOUNCE_KYNO_ROE_RESEARCHED = "Now Know About Little Glub Glubs"
+STRINGS.CHARACTERS.WARLY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Ah! Such delicate potential in these eggs."
+STRINGS.CHARACTERS.WURT.ANNOUNCE_KYNO_ROE_RESEARCHED = "Fish babies secrets! Glurp!"
+STRINGS.CHARACTERS.WALTER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Guess I know more about fish eggs now."
+STRINGS.CHARACTERS.WANDA.ANNOUNCE_KYNO_ROE_RESEARCHED = "So much future, all at once."
 
 STRINGS.NAMES.KYNO_ROE = "Roe" -- Deprecated, but kept for old worlds.
 STRINGS.NAMES.KYNO_ROE_PONDFISH = "Freshwater Fish Roe"

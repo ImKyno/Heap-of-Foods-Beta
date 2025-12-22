@@ -2,7 +2,7 @@ local Screen             = require("widgets/screen")
 local Widget             = require("widgets/widget")
 local ImageButton        = require("widgets/imagebutton")
 local TEMPLATES          = require("widgets/redux/templates")
-local FishRegistryWidget = require("widgets/redux/fishregistrypage")
+local FishRegistryWidget = require("widgets/redux/fishregistrywidget")
 
 local FishRegistryPopupScreen = Class(Screen, function(self, owner)
 	self.owner = owner

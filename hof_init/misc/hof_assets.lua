@@ -959,7 +959,7 @@ for k, v in pairs(HOF_SKIN_ICONS) do
 	RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", v..".tex")
 end
 
--- Dirty fix for icons for the Plant Registry and Farm Plants.
+-- Dirty fix for icons for the Plant Registry and Fish Registry.
 local _GetInventoryItemAtlas = _G.GetInventoryItemAtlas
 _G.GetInventoryItemAtlas = function(name, ...)
     local myatlas = _G.resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")
