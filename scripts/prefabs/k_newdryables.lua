@@ -445,6 +445,7 @@ local function fn_fishmeat()
 	inst:AddTag("fish")
 	inst:AddTag("fishmeat")
 	inst:AddTag("catfood")
+	inst:AddTag("sliceable")
 
 	inst:AddComponent("driedsalticon")
 	inst.components.driedsalticon:SetCollectsOnDried(true)
@@ -452,6 +453,10 @@ local function fn_fishmeat()
 	if not TheWorld.ismastersim then
         return inst
     end
+
+	inst:AddComponent("sliceable")
+	inst.components.sliceable:SetProduct("kyno_fishmeat_small_dried")
+	inst.components.sliceable:SetSliceSize(2)
 	
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD

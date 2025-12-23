@@ -459,15 +459,15 @@ AddRecipe2("kyno_brainrock_nubbin", {Ingredient("rocks", 6), Ingredient("kyno_br
 )
 SortAfter("kyno_brainrock_nubbin", "dock_woodposts_item", "SEAFARING")
 
-AddRecipe2("kyno_fishregistryhat", {Ingredient("strawhat", 1), Ingredient("oceanfishingbobber_ball", 3), Ingredient("kyno_seaweeds", 1, ModAtlas)}, TECH.FISHING_ONE,
+AddRecipe2("kyno_fishregistryhat", {Ingredient("strawhat", 1), Ingredient("oceanfishinglure_spinner_red", 3), Ingredient("kyno_seaweeds", 1, ModAtlas)}, TECH.FISHING_ONE,
 	{
 		atlas               = ModAtlas,
 		image               = "kyno_fishregistryhat.tex",
 	},
-	{"GARDENING", "FISHING"}
+	{"FISHING", "GARDENING"}
 )
+SortAfter("kyno_fishregistryhat", "tacklestation", "FISHING")
 SortAfter("kyno_fishregistryhat", "plantregistryhat", "GARDENING")
-SortAfter("kyno_fishregistryhat", "oceanfishinglure_hermit_heavy", "FISHING")
 
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{

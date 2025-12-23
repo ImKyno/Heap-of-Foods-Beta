@@ -306,6 +306,18 @@ local function MeatPostInit(inst)
 	inst.components.sliceable:SetSliceSize(2)
 end
 
+local function MeatDriedPostInit(inst)
+	inst:AddTag("sliceable")
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("sliceable")
+	inst.components.sliceable:SetProduct("smallmeat_dried")
+	inst.components.sliceable:SetSliceSize(2)
+end
+
 local function DrumstickPostInit(inst)
 	inst:AddTag("sliceable")
 	
@@ -330,9 +342,23 @@ local function FishMeatPostInit(inst)
 	inst.components.sliceable:SetSliceSize(2)
 end
 
+local function FishMeatDriedPostInit(inst)
+	inst:AddTag("sliceable")
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("sliceable")
+	inst.components.sliceable:SetProduct("fishmeat_small_dried")
+	inst.components.sliceable:SetSliceSize(2)
+end
+
 AddPrefabPostInit("meat", MeatPostInit)
+AddPrefabPostInit("meat_dried", MeatDriedPostInit)
 AddPrefabPostInit("drumstick", DrumstickPostInit)
 AddPrefabPostInit("fishmeat", FishMeatPostInit)
+AddPrefabPostInit("fishmeat_dried", FishMeatDriedPostInit)
 
 -- Make dried foods valid for Salt Box and Polar Bearger Bin.
 local dried_foods =
@@ -342,6 +368,8 @@ local dried_foods =
 	"monstermeat_dried",
 	"kelp_dried",
 	"humanmeat_dried",
+	"fishmeat_small_dried",
+	"fishmeat_dried",
 }
 
 local function DriedPostInit(inst)

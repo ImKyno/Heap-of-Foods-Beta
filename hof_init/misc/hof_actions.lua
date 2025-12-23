@@ -727,7 +727,9 @@ end
 
 AddComponentAction("SCENE", "fishresearchable", function(inst, doer, actions, right)
 	if right then
-		FishRegistryResearch(inst, doer, actions)
+		if inst.replica.inventoryitem and inst.replica.inventoryitem:CanBePickedUp(doer) then
+			FishRegistryResearch(inst, doer, actions)
+		end
 	end
 end)
 

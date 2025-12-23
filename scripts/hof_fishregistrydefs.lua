@@ -1,10 +1,20 @@
 -- DEFS for the Fish Registry. THIS FILE IS NOT MEANT TO BE EDITED BY OTHER MODS!
 -- For adding new fish/roe please refer to: hof_fishregistryapi.lua
 
-require("strings/hof_strings")
-
 local FISHREGISTRY_ATLAS           = "images/hof_fishregistry.xml"
 local FISHREGISTRY_INVENTORY_ATLAS = "images/inventoryimages/hof_inventoryimages.xml"
+
+local LANG = TUNING.HOF_LANGUAGE_CODE
+
+local STRINGS_PATH =
+{
+	en = "strings/hof_strings_fishregistry",
+	pt = "strings/localization_pt/hof_strings_fishregistry",
+	pl = "strings/localization_pl/hof_strings_fishregistry",
+	zh = "strings/localization_zh/hof_strings_fishregistry",
+}
+
+require((STRINGS_PATH[LANG] or STRINGS_PATH.en))
 
 -- Time thresholds (In days = TUNING.TOTAL_DAY_TIME = 480 seconds).
 TUNING.FISHREGISTRY_ROE_THRESHOLDS = TUNING.FISHREGISTRY_ROE_THRESHOLDS or

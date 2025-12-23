@@ -4,6 +4,28 @@ local require  = _G.require
 local TechTree = require("techtree")
 
 -- Mod Tunings.
+TUNING.HOF_DEBUG_MODE = false
+TUNING.HOF_RETROFIT_ENABLED = true
+
+TUNING.HOF_RESOURCES = .06
+TUNING.HOF_FLOATER = {"med", nil, 0.65}
+
+TUNING.HOF_MIN_OCEANSETPIECES = 1
+TUNING.HOF_MAX_OCEANSETPIECES = 3
+
+-- Setting this to true will force our Special Event. It must be false during off-season.
+TUNING.HOF_SPECIAL_EVENTS_BIRTHDAY = true -- Anniversary Event | Period: December - January.
+
+TUNING.HOF_COFFEEBUFF_DURATION = GetModConfigData("COFFEEDURATION") or 480
+
+TUNING.HOF_LANGUAGE_CODE = GetModConfigData("LANGUAGE") or "en"
+
+TUNING.HOF_IS_TAP_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
+TUNING.HOF_IS_NET_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
+TUNING.HOF_IS_TCP_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2174681153")
+TUNING.HOF_IS_HSP_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-3438589036")
+TUNING.HOF_IS_CTW_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-3424375006")
+
 TUNING.PROTOTYPER_TREES.MEALING_ONE      = TechTree.Create({ MEALING      = 1 })
 TUNING.PROTOTYPER_TREES.MEALING_TWO      = TechTree.Create({ MEALING      = 2 })
 
@@ -13,26 +35,6 @@ TUNING.PROTOTYPER_TREES.SERENITYSHOP_TWO = TechTree.Create({ SERENITYSHOP = 2 })
 TUNING.PROTOTYPER_TREES.MEADOWSHOP       = TechTree.Create({ MEADOWSHOP   = 1 })
 TUNING.PROTOTYPER_TREES.MEADOWSHOP_ONE   = TechTree.Create({ MEADOWSHOP   = 1 })
 TUNING.PROTOTYPER_TREES.MEADOWSHOP_TWO   = TechTree.Create({ MEADOWSHOP   = 2 })
-
-TUNING.HOF_RESOURCES = .06
-TUNING.HOF_FLOATER = {"med", nil, 0.65}
-
-TUNING.HOF_DEBUG_MODE = false
-TUNING.HOF_RETROFIT_ENABLED = true
-
--- Setting this to true will force our Special Event. It must be false during off-season.
-TUNING.HOF_SPECIAL_EVENTS_BIRTHDAY = true -- Anniversary Event | Period: December - January.
-
-TUNING.HOF_COFFEEBUFF_DURATION = GetModConfigData("COFFEEDURATION") or 480
-
-TUNING.HOF_IS_TAP_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
-TUNING.HOF_IS_NET_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
-TUNING.HOF_IS_TCP_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2174681153")
-TUNING.HOF_IS_HSP_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-3438589036")
-TUNING.HOF_IS_CTW_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-3424375006")
-
-TUNING.HOF_MIN_OCEANSETPIECES = 1
-TUNING.HOF_MAX_OCEANSETPIECES = 3
 
 TUNING.HOF_COOKPOTS =
 {
@@ -1341,18 +1343,19 @@ TUNING.KYNO_WINTERTREE_GIFT1 =
 
 TUNING.KYNO_WINTERTREE_GIFT2 =
 {
-	gears          = 0.2,
-	moonrocknugget = 0.2,
+	gears               = 0.2,
+	moonrocknugget      = 0.2,
 
-	redgem         = 0.1,
-	bluegem        = 0.1,
-	greengem       = 0.1,
-	orangegem      = 0.1,
-	yellowgem      = 0.1,
+	redgem              = 0.1,
+	bluegem             = 0.1,
+	greengem            = 0.1,
+	orangegem           = 0.1,
+	yellowgem           = 0.1,
 
-	walrushat      = 0.2,
-	cane           = 0.2,
-	panflute       = 0.1,
+	walrushat           = 0.2,
+	cane                = 0.2,
+	panflute            = 0.1,
+	nukashine_sugarfree = 0.1,
 }
 
 TUNING.KYNO_WINTERTREE_GIFT3 =

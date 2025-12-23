@@ -835,3 +835,58 @@ function c_hoftestclothing(item)
 		end
 	end
 end
+
+function c_hoftestfishregistry(who)
+	local player = UserToPlayer(who) or ConsoleCommandPlayer()
+    
+	local FISHES = require("hof_fishregistrydefs").FISHREGISTRY_FISH_DEFS
+	local ROES = require("hof_fishregistrydefs").FISHREGISTRY_ROE_DEFS
+
+	local MAX_SLOTS = 9
+	local SLOT_COUNT = 0
+	local treasurechest = nil
+
+	if player ~= nil then
+		local x, y, z = player.Transform:GetWorldPosition()
+		local offset = 0
+
+		c_select(player)
+		
+		player.components.inventory:Equip(c_spawn("krampus_sack",         nil, true))
+		player.components.inventory:Equip(c_spawn("kyno_fishregistryhat", nil, true))
+
+		local function SpawnNewChest()
+			treasurechest = SpawnPrefab("treasurechest")
+			treasurechest.Transform:SetPosition(x + offset, y, z)
+		
+			SLOT_COUNT = 0
+			offset = offset + 2
+		end
+
+		local function GivePrefab(prefab)
+			if SLOT_COUNT >= MAX_SLOTS then
+				SpawnNewChest()
+			end
+
+			if treasurechest ~= nil and treasurechest.components.container ~= nil then
+				local item = SpawnPrefab(prefab)
+				item.Transform:SetPosition(treasurechest.Transform:GetWorldPosition())
+				
+				if item ~= nil then
+					treasurechest.components.container:GiveItem(item)
+					SLOT_COUNT = SLOT_COUNT + 1
+				end
+			end
+		end
+
+		SpawnNewChest()
+
+		for fish_prefab, _ in pairs(FISHES) do
+			GivePrefab(fish_prefab)
+		end
+
+		for roe_prefab, _ in pairs(ROES) do
+			GivePrefab(roe_prefab)
+		end
+	end
+end

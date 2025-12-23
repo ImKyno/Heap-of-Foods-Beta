@@ -153,7 +153,6 @@ local function fn()
 	inst.components.equippable:SetOnEquip(OnEquip)
 	inst.components.equippable:SetOnUnequip(OnUnequip)
 	inst.components.equippable:SetOnEquipToModel(OnEquipToModel)
-	inst.components.equippable.insulated = true
 
 	MakeHauntableLaunch(inst)
 
