@@ -120,6 +120,10 @@ local function fn()
 	inst:AddComponent("waterproofer")
 	inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_SMALL)
 	
+	inst:AddComponent("insulator")
+	inst.components.insulator:SetSummer()
+	inst.components.insulator:SetInsulation(TUNING.INSULATION_SMALL)
+	
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_fishregistryhat"

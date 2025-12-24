@@ -19,7 +19,6 @@ function RoeResearchable:LearnRoe(doer)
 	
 	if roe then
 		doer:PushEvent("learnroe", { roe = roe })
-		doer:PushEvent("learnrecipecard") -- Despite the name, its just for playing a sound.
 	end
 end
 

@@ -1317,17 +1317,17 @@ end)
 
 -- Fish Registry player extension.
 local function OnLearnFish(inst, data)
-	local fishregistryupdater = inst.components.fishregistryupdater
+	local fishregistryupdater = data ~= nil and inst.components.fishregistryupdater
     
-	if fishregistryupdater and data ~= nil and data.fish ~= nil then
+	if fishregistryupdater then
 		fishregistryupdater:LearnFish(data.fish)
 	end
 end
 
 local function OnLearnRoe(inst, data)
-	local fishregistryupdater = inst.components.fishregistryupdater
+	local fishregistryupdater = data ~= nil and inst.components.fishregistryupdater
     
-	if fishregistryupdater and data ~= nil and data.roe ~= nil then
+	if fishregistryupdater then
 		fishregistryupdater:LearnRoe(data.roe)
 	end
 end
@@ -1338,7 +1338,7 @@ AddPlayerPostInit(function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-
+	
 	inst.OnLearnFish = OnLearnFish
 	inst.OnLearnRoe = OnLearnRoe
 	

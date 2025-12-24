@@ -103,11 +103,11 @@
 
 --]]-------------------------------------------------------------------------------------------------------------------------------------------------
 
-local FISHREGISTRY_FISH_DEFS  = require("hof_fishregistrydefs").FISHREGISTRY_FISH_DEFS
-local FISH_SORT_ORDER         = require("hof_fishregistrydefs").FISH_SORT_ORDER
+local FISHREGISTRY_FISH_DEFS  = require("prefabs/k_fishregistrydefs").FISHREGISTRY_FISH_DEFS
+local FISH_SORT_ORDER         = require("prefabs/k_fishregistrydefs").FISH_SORT_ORDER
 
-local FISHREGISTRY_ROE_DEFS   = require("hof_fishregistrydefs").FISHREGISTRY_ROE_DEFS
-local ROE_SORT_ORDER          = require("hof_fishregistrydefs").ROE_SORT_ORDER
+local FISHREGISTRY_ROE_DEFS   = require("prefabs/k_fishregistrydefs").FISHREGISTRY_ROE_DEFS
+local ROE_SORT_ORDER          = require("prefabs/k_fishregistrydefs").ROE_SORT_ORDER
 
 assert(FISHREGISTRY_FISH_DEFS, "Heap of Foods Mod - Fish Registry: Fish defs not loaded!")
 assert(FISHREGISTRY_ROE_DEFS,  "Heap of Foods Mod - Fish Registry: Roe defs not loaded!")

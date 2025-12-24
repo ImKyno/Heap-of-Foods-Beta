@@ -677,7 +677,6 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SLICE, function(inst,
 		return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
 	end
 end))
-
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SLICE, function(inst, action)
 	local target = action.target or action.invobject
 	
@@ -702,7 +701,6 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.SLICESTACK, function(
 		return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
 	end
 end))
-
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.SLICESTACK, function(inst, action)
 	local target = action.target or action.invobject
 	
@@ -723,7 +721,6 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.LEARNRECIPECARD, func
 		return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
 	end
 end))
-
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.LEARNRECIPECARD, function(inst, action)
 	local target = action.target or action.invobject
 	
@@ -732,35 +729,10 @@ AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.LEARNRECIPECAR
 	end
 end))
 
--- Researchin Fishes.
-AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.FISHREGISTRY_RESEARCH_FAIL, function(inst, action)
-	local target = action.target or action.invobject
-	
-	if target:HasAnyTag("fishresearchable", "roeresearchable") then
-		return "dolongaction"
-	end
-end))
-
-AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.FISHREGISTRY_RESEARCH_FAIL, function(inst, action)
-	local target = action.target or action.invobject
-	
-	if target:HasAnyTag("fishresearchable", "roeresearchable") then
-		return "dolongaction"
-	end
-end))
-
+-- Researching Fishes and Roes.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.FISHREGISTRY_RESEARCH, function(inst, action)
-	local target = action.target or action.invobject
-	
-	if target:HasAnyTag("fishresearchable", "roeresearchable") then
-		return "dolongaction"
-	end
+	return "dolongaction"
 end))
-
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.FISHREGISTRY_RESEARCH, function(inst, action)
-	local target = action.target or action.invobject
-	
-	if target:HasAnyTag("fishresearchable", "roeresearchable") then
-		return "dolongaction"
-	end
+	return "dolongaction"
 end))

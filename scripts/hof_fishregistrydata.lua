@@ -1,13 +1,10 @@
-local FISHREGISTRY_FISH_DEFS = require("hof_fishregistrydefs").FISHREGISTRY_FISH_DEFS
-local FISHREGISTRY_ROE_DEFS  = require("hof_fishregistrydefs").FISHREGISTRY_ROE_DEFS
+local FISHREGISTRY_FISH_DEFS = require("prefabs/k_fishregistrydefs").FISHREGISTRY_FISH_DEFS
+local FISHREGISTRY_ROE_DEFS  = require("prefabs/k_fishregistrydefs").FISHREGISTRY_ROE_DEFS
 
 local FishRegistryData = Class(function(self)
 	self.fishes        = {}
 	self.roes          = {}
 	self.filters       = {}
-	
-	self.dirty         = false
-	self.save_enabled  = true
 end)
 
 function FishRegistryData:GetKnownFishes()
@@ -31,36 +28,23 @@ function FishRegistryData:Save(force_save)
 		local str = DataDumper({ fishes = self.fishes, roes = self.roes, filters = self.filters }, nil, true)
 		
 		TheSim:SetPersistentString("hof_fishregistry", str, false)
-		self.dirty = false
 	end
 end
 
 function FishRegistryData:Load()
-	self.fishes   = {}
-	self.roes     = {}
-	self.filters  = {}
-	
-	local failed  = false
-
 	TheSim:GetPersistentString("hof_fishregistry", function(load_success, data)
 		if load_success and data ~= nil then
-			local success, fish_registry = RunInSandboxSafeCatchInfiniteLoops(data)
+			local success, fish_registry = RunInSandbox(data)
 			
-			if success and fish_registry and type(fish_registry) == "table" then
+			if success and fish_registry then
 				self.fishes   = fish_registry.fishes   or {}
 				self.roes     = fish_registry.roes     or {}
 				self.filters  = fish_registry.filters  or {}
 			else
 				print("Heap of Foods Mod - Fish Registry: Failed to load!")
-				failed = true
 			end
 		end
 	end)
-
-	if failed then
-		print("Heap of Foods Mod - Fish Registry: Erasing bad data!")
-		self:Save(true)
-	end
 end
 
 function FishRegistryData:ClearFilters()
@@ -82,21 +66,14 @@ end
 function FishRegistryData:LearnFish(fish)
 	if fish == nil then
 		print("Heap of Foods Mod - Fish Registry: Invalid Fish!")
-		return false
+		return
 	end
 
-	if FISHREGISTRY_FISH_DEFS[fish] == nil then
-		print("Heap of Foods Mod - Fish Registry: Unknown Fish:", fish)
-		return false
-	end
-
-	local updated = self.fishes[fish] ~= true
-    
+	local updated = self.fishes[fish] == nil
 	self.fishes[fish] = true
 
-	if updated then
-		self.dirty = true
-		self:Save()
+	if updated and self.save_enabled then
+		self:Save(true)
 	end
 
 	return updated
@@ -105,24 +82,75 @@ end
 function FishRegistryData:LearnRoe(roe)
 	if roe == nil then
 		print("Heap of Foods Mod - Fish Registry: Invalid Roe!")
-		return false
+		return
 	end
 
-	if FISHREGISTRY_ROE_DEFS[roe] == nil then
-		print("Heap of Foods Mod - Fish Registry: Unknown Roe:", roe)
-		return false
-	end
-
-	local updated = self.roes[roe] ~= true
-    
+	local updated = self.roes[roe] == nil
 	self.roes[roe] = true
 
-	if updated then
-		self.dirty = true
-		self:Save()
+	if updated and self.save_enabled then
+		self:Save(true)
 	end
 
 	return updated
+end
+
+-- DEBUG Unlocks.
+function FishRegistryData:UnlockFishes()
+	for fish in pairs(FISHREGISTRY_FISH_DEFS) do
+		self.fishes[fish] = true
+	end
+
+	self:Save(true)
+end
+
+function FishRegistryData:UnlockRoes()
+	for roe in pairs(FISHREGISTRY_ROE_DEFS) do
+		self.roes[roe] = true
+	end
+
+	self:Save(true)
+end
+
+function FishRegistryData:UnlockAll()
+	for fish in pairs(FISHREGISTRY_FISH_DEFS) do
+		self.fishes[fish] = true
+	end
+
+	for roe in pairs(FISHREGISTRY_ROE_DEFS) do
+		self.roes[roe] = true
+	end
+
+	self:Save(true)
+end
+
+-- DEBUG Locks.
+function FishRegistryData:LockFishes()
+	for fish in pairs(FISHREGISTRY_FISH_DEFS) do
+		self.fishes[fish] = false
+	end
+
+	self:Save(true)
+end
+
+function FishRegistryData:LockRoes()
+	for roe in pairs(FISHREGISTRY_ROE_DEFS) do
+		self.roes[roe] = false
+	end
+
+	self:Save(true)
+end
+
+function FishRegistryData:LockAll()
+	for fish in pairs(FISHREGISTRY_FISH_DEFS) do
+		self.fishes[fish] = false
+	end
+
+	for roe in pairs(FISHREGISTRY_ROE_DEFS) do
+		self.roes[roe] = false
+	end
+
+	self:Save(true)
 end
 
 return FishRegistryData

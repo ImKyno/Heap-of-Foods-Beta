@@ -5,8 +5,8 @@ local UIAnim                  = require("widgets/uianim")
 local Widget                  = require("widgets/widget")
 local TEMPLATES               = require("widgets/redux/templates")
 
-local FISHREGISTRY_FISH_DEFS  = require("hof_fishregistrydefs").FISHREGISTRY_FISH_DEFS
-local FISH_SORT_ORDER         = require("hof_fishregistrydefs").FISH_SORT_ORDER
+local FISHREGISTRY_FISH_DEFS  = require("prefabs/k_fishregistrydefs").FISHREGISTRY_FISH_DEFS
+local FISH_SORT_ORDER         = require("prefabs/k_fishregistrydefs").FISH_SORT_ORDER
 
 local FISHREGISTRY_ATLAS      = "images/hof_fishregistry.xml"
 

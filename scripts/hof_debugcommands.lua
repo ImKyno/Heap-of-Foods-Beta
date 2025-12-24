@@ -362,10 +362,10 @@ function c_hofsammywagon()
 
 		mermcart.Transform:SetPosition(x, 0, z)
 		
-		TheNet:Announce("Successfully spawned: Sammy's Wagon. Near: Sammy's Emporium.")
+		TheNet:Announce("Heap of Foods Mod - Successfully spawned: Sammy's Wagon. Near: Sammy's Emporium.")
 	else
-		TheNet:Announce("Could not spawn: Sammy's Wagon. Reason: Missing Sammy's Emporium.")
-		TheNet:Announce("Please Retrofit your world at Mod Configuration using option: Mermhuts.")
+		TheNet:Announce("Heap of Foods Mod - Could not spawn: Sammy's Wagon. Reason: Missing Sammy's Emporium.")
+		TheNet:Announce("Heap of Foods Mod - Please Retrofit your world at Mod Configuration using option: Mermhuts.")
 	end
 end
 
@@ -434,14 +434,14 @@ function c_hofareaaware(start)
 				print(player.components.areaaware:GetDebugString())
 			end)
 			
-			TheNet:Announce("Areaaware Debugging Started.")
+			TheNet:Announce("Heap of Foods Mod - Areaaware Debugging Started.")
 		else
 			if player.areatask ~= nil then
 				player.areatask:Cancel()
 				player.areatask = nil
 			end
 			
-			TheNet:Announce("Areaaware Debugging Stopped.")
+			TheNet:Announce("Heap of Foods Mod - Areaaware Debugging Stopped.")
 		end
 	end
 end
@@ -730,8 +730,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 	-- Can't this be removed by this function already?
 	TheNet:SendRemoteExecute('c_removeall("kyno_pebblecrab_spawner")')
 	TheNet:SendRemoteExecute('c_removeall("kyno_meadowflup_spawner")')
-	TheNet:Announce(layoutname.." Successfully removed. Please save and restart the world to perform Retrofitting.")
-	print("Heap of Foods Mod - Island Removed! | Prefabs removed: "..removed_ents)
+	TheNet:Announce("Heap of Foods Mod - "..layoutname.." Successfully removed. Please save and restart the world to perform Retrofitting.")
 end
 
 -- Deprecated stuff. Reference only.
@@ -839,8 +838,8 @@ end
 function c_hoftestfishregistry(who)
 	local player = UserToPlayer(who) or ConsoleCommandPlayer()
     
-	local FISHES = require("hof_fishregistrydefs").FISHREGISTRY_FISH_DEFS
-	local ROES = require("hof_fishregistrydefs").FISHREGISTRY_ROE_DEFS
+	local FISHES = require("prefabs/k_fishregistrydefs").FISHREGISTRY_FISH_DEFS
+	local ROES = require("prefabs/k_fishregistrydefs").FISHREGISTRY_ROE_DEFS
 
 	local MAX_SLOTS = 9
 	local SLOT_COUNT = 0

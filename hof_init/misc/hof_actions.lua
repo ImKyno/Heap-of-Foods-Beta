@@ -657,32 +657,10 @@ AddComponentAction("INVENTORY", "learnablerecipecard", function(inst, doer, acti
 end)
 
 -- Action for researching fishes.
-AddAction("FISHREGISTRY_RESEARCH_FAIL", STRINGS.ACTIONS.FISHREGISTRY_RESEARCH, function(act)
-	local target = act.target or act.invobject
-	
-	if target then
-		if act.invobject and act.invobject.components.itemmimic then
-			return false, "ITEMMIMIC"
-		end
-
-		if target:HasAnyTag("fishresearchable", "roeresearchable") then
-			return false, "GENERIC"
-		end
-	end
-
-	return false
-end)
-
-ACTIONS.FISHREGISTRY_RESEARCH_FAIL.priority = -1
-
 AddAction("FISHREGISTRY_RESEARCH", STRINGS.ACTIONS.FISHREGISTRY_RESEARCH, function(act)
 	local target = act.target or act.invobject
 
-	if target ~= nil then
-		if act.invobject and act.invobject.components.itemmimic then
-			return false, "ITEMMIMIC"
-		end
-		
+	if target then
 		if target.components.fishresearchable then
 			target.components.fishresearchable:LearnFish(act.doer)
 
@@ -691,36 +669,46 @@ AddAction("FISHREGISTRY_RESEARCH", STRINGS.ACTIONS.FISHREGISTRY_RESEARCH, functi
 			end
 		elseif target.components.roeresearchable then
 			target.components.roeresearchable:LearnRoe(act.doer)
-
+			
 			if act.doer.components.talker then
 				act.doer.components.talker:Say(_G.GetString(act.doer, "ANNOUNCE_KYNO_ROE_RESEARCHED"), nil, target.components.inspectable.noanim)
 			end
 		end
-		
-		return true
 	end
+
+	return true
 end)
 
 ACTIONS.FISHREGISTRY_RESEARCH.priority = 10
 
 local function FishRegistryResearch(inst, doer, actions)
 	if inst ~= doer and (doer.CanExamine == nil or doer:CanExamine()) then
-		local fishinspector = doer.replica.inventory ~= nil and doer.replica.inventory:EquipHasTag("fishinspector") or false
-		local fishkin = doer:HasAnyTag("fishkin", "angler")
+		local fishinspector = doer.replica.inventory and doer.replica.inventory:EquipHasTag("fishinspector") or false
 
-		if (fishinspector or fishkin) and (inst.GetFishKey or inst.GetRoeKey) then
-			local act = _G.CLIENT_REQUESTED_ACTION
+		if not fishinspector then
+			return
+		end
 
-			if not (_G.TheNet:IsDedicated() and doer == _G.ThePlayer) then
-				local can_research = (inst:HasTag("fishresearchable") and inst.GetFishKey and not _G.TheFishRegistry:KnowsFish(inst:GetFishKey()))
-				or (inst:HasTag("roeresearchable") and inst.GetRoeKey and not _G.TheFishRegistry:KnowsRoe(inst:GetRoeKey()))
+		local act = _G.CLIENT_REQUESTED_ACTION
 
-				act = can_research and ACTIONS.FISHREGISTRY_RESEARCH or ACTIONS.FISHREGISTRY_RESEARCH_FAIL
+		if not (_G.TheNet:IsDedicated() or doer ~= _G.ThePlayer) then
+			if inst:HasTag("fishresearchable") then
+				local key = inst:GetFishKey()
+				
+				if key and not _G.TheFishRegistry:KnowsFish(key) then
+					act = ACTIONS.FISHREGISTRY_RESEARCH
+				end
+			elseif inst:HasTag("roeresearchable") then
+				local key = inst:GetRoeKey()
+				
+				if key and not _G.TheFishRegistry:KnowsRoe(key) then
+					act = ACTIONS.FISHREGISTRY_RESEARCH
+				end
 			end
+		end
 
-			if act == ACTIONS.FISHREGISTRY_RESEARCH or act == ACTIONS.FISHREGISTRY_RESEARCH_FAIL then
-				table.insert(actions, act)
-			end
+		if act == ACTIONS.FISHREGISTRY_RESEARCH then
+			table.insert(actions, act)
 		end
 	end
 end
@@ -733,14 +721,14 @@ AddComponentAction("SCENE", "fishresearchable", function(inst, doer, actions, ri
 	end
 end)
 
+AddComponentAction("INVENTORY", "fishresearchable", function(inst, doer, actions, right)
+	FishRegistryResearch(inst, doer, actions)
+end)
+
 AddComponentAction("SCENE", "roeresearchable", function(inst, doer, actions, right)
 	if right then
 		FishRegistryResearch(inst, doer, actions)
 	end
-end)
-
-AddComponentAction("INVENTORY", "fishresearchable", function(inst, doer, actions, right)
-	FishRegistryResearch(inst, doer, actions)
 end)
 
 AddComponentAction("INVENTORY", "roeresearchable", function(inst, doer, actions, right)
