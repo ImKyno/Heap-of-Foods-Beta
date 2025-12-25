@@ -1056,24 +1056,18 @@ AddComponentPostInit("container", function(self)
 	local _OnUpdate = self.OnUpdate
 
 	function self:OnUpdate(dt)
-		if self.opencount == 0 then
-			self.inst:StopUpdatingComponent(self)
-			return
+		local old_distance = nil
+
+		if self.inst:HasTag("fishhatchery") then
+			old_distance = _G.CONTAINER_AUTOCLOSE_DISTANCE
+			_G.CONTAINER_AUTOCLOSE_DISTANCE = 6
 		end
 
-		for opener, _ in pairs(self.openlist) do
-			if self.inst ~= nil and self.inst:HasTag("fishhatchery") then
-				local old_distance = _G.CONTAINER_AUTOCLOSE_DISTANCE
-				_G.CONTAINER_AUTOCLOSE_DISTANCE = 6
+		_OnUpdate(self, dt)
 
-				_OnUpdate(self, dt)
-				_G.CONTAINER_AUTOCLOSE_DISTANCE = old_distance
-				
-				return
-			end
+		if old_distance ~= nil then
+			_G.CONTAINER_AUTOCLOSE_DISTANCE = old_distance
 		end
-
-		return _OnUpdate(self, dt)
 	end
 end)
 

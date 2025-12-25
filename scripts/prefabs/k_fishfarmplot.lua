@@ -434,6 +434,7 @@ local function fn()
 	minimap:SetIcon("kyno_fishfarmplot.tex")
 
 	MakeObstaclePhysics(inst, 5)
+	inst:SetPhysicsRadiusOverride(5)
 	
 	inst.AnimState:SetScale(.8, .8, .8)
 

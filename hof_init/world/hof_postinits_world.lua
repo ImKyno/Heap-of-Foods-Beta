@@ -1079,7 +1079,7 @@ local function GrottoPoolBigPostInit(inst)
 	inst:AddTag("pond")
 	
 	local function GetFish(inst)
-		return _G.TheWorld.state.iswinter and "kyno_swordfish_blue" or nil
+		return _G.TheWorld.state.iswinter and "kyno_swordfish_blue" or "pondfish" -- Can't be nil.
 	end
 
 	if not _G.TheWorld.ismastersim then
