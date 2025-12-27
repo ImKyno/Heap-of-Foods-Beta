@@ -1,13 +1,14 @@
 return Class(function(self, inst)
-
 	assert(TheWorld.ismastersim, "SugarflySpawner should not exist on client")
 
 	self.inst = inst
 
 	local _activeplayers = {}
 	local _scheduledtasks = {}
+	
 	local _worldstate = TheWorld.state
 	local _updating = false
+	
 	local _sugarflies = {}
 	local _maxsugarflies = TUNING.MAX_KYNO_SUGARFLIES
 
@@ -33,17 +34,22 @@ return Class(function(self, inst)
 	local function SpawnSugarflyForPlayer(player, reschedule)
 		local pt = player:GetPosition()
 		local ents = TheSim:FindEntities(pt.x, pt.y, pt.z, 64, SUGARFLY_TAGS)
+		
 		if #ents < _maxsugarflies then
 			local spawnflower = GetSpawnPoint(player)
+			
 			if spawnflower ~= nil then
 				local sugarfly = SpawnPrefab("kyno_sugarfly")
+				
 				if sugarfly.components.pollinator ~= nil then
 					sugarfly.components.pollinator:Pollinate(spawnflower)
 				end
+				
 				sugarfly.components.homeseeker:SetHome(spawnflower)
 				sugarfly.Physics:Teleport(spawnflower.Transform:GetWorldPosition())
 			end
 		end
+		
 		_scheduledtasks[player] = nil
 		reschedule(player)
 	end
@@ -66,9 +72,10 @@ return Class(function(self, inst)
 		if _worldstate.isday and not _worldstate.iswinter and _maxsugarflies > 0 then
 			if not _updating then
 				_updating = true
+				
 				for i, v in ipairs(_activeplayers) do
 					ScheduleSpawn(v, true)
-				end
+				end	
 			elseif force then
 				for i, v in ipairs(_activeplayers) do
 					CancelSpawn(v)
@@ -77,6 +84,7 @@ return Class(function(self, inst)
 			end
 		elseif _updating then
 			_updating = false
+			
 			for i, v in ipairs(_activeplayers) do
 				CancelSpawn(v)
 			end
@@ -99,7 +107,9 @@ return Class(function(self, inst)
 				return
 			end
 		end
+		
 		table.insert(_activeplayers, player)
+		
 		if _updating then
 			ScheduleSpawn(player, true)
 		end
@@ -110,6 +120,7 @@ return Class(function(self, inst)
 			if v == player then
 				CancelSpawn(player)
 				table.remove(_activeplayers, i)
+				
 				return
 			end
 		end
@@ -121,6 +132,7 @@ return Class(function(self, inst)
 
 	inst:WatchWorldState("isday", ToggleUpdate)
 	inst:WatchWorldState("iswinter", ToggleUpdate)
+	
 	inst:ListenForEvent("ms_playerjoined", OnPlayerJoined, TheWorld)
 	inst:ListenForEvent("ms_playerleft", OnPlayerLeft, TheWorld)
 
@@ -147,12 +159,15 @@ return Class(function(self, inst)
 	function self.StartTrackingFn(target)
 		if _sugarflies[target] == nil then
 			local restore = target.persists and 1 or 0
+			
 			target.persists = false
+			
 			if target.components.homeseeker == nil then
 				target:AddComponent("homeseeker")
 			else
 				restore = restore + 2
 			end
+			
 			_sugarflies[target] = restore
 			inst:ListenForEvent("entitysleep", OnTargetSleep, target)
 		end
@@ -164,11 +179,14 @@ return Class(function(self, inst)
 
 	function self.StopTrackingFn(target)
 		local restore = _sugarflies[target]
+		
 		if restore ~= nil then
 			target.persists = restore == 1 or restore == 3
+			
 			if restore < 2 then
 				target:RemoveComponent("homeseeker")
 			end
+			
 			_sugarflies[target] = nil
 			inst:RemoveEventCallback("entitysleep", OnTargetSleep, target)
 		end

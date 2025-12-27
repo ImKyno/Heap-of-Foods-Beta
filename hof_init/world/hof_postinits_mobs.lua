@@ -421,8 +421,8 @@ AddPrefabPostInit("crabking_mob_knight", function(inst) ReplaceLoot(inst.prefab,
 local pollinators = 
 {
 	"bee",
-	"butterfly",
-	"medal_bee", -- For mod compatibility: 能力勋章 Functional Medal.
+	-- "butterfly", -- Only Sugarflies and Bees can pollinate Sugar Flowers.
+	"medal_bee", -- Mod compatibility: 能力勋章 Functional Medal.
 }
 
 local function PollinatorPostIint(inst)

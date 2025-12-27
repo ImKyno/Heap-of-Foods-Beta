@@ -6,7 +6,7 @@ local STRINGS =
 {
 	NAME = 
 	{
-		"Heap of Foods",
+		"Heap of Foods - Beta Branch",
 		zh  = "更多料理 (Heap of Foods)",
 		zht = "食物堆積 (Heap of Foods)",
 		pt  = "Amontoado de Comidas (Heap of Foods)",
@@ -27,8 +27,8 @@ Cast your line, set your sail, and dive into the ocean! A wave of new aquatic cr
 
 Build yourself a Fish Hatchery to raise your own fish at the comfort of your base, explore the ocean in search of elusive creatures, take part in Ocean Hunts and find a friendly new companion.
 
-󰀌 Mod Version: 4.1-B
-󰀧 Update: Heap of Foods 5th Anniversary
+󰀌 Beta Branch Version: 4.1-B
+󰀧 Update: Heap of Foods 5th Anniversary (Fish Registry)
 ]],
 		zh  =
 [[
@@ -1470,8 +1470,8 @@ client_only_mod              = false
 
 server_filter_tags           = {"Heap of Foods", "HOF", "Cooking", "Entertainment", "Kyno"}
 
-icon                         = "ModiconHOF.tex"
-icon_atlas                   = "ModiconHOF.xml"
+icon                         = "ModiconHOFB.tex"
+icon_atlas                   = "ModiconHOFB.xml"
 
 local NONE_LABEL             = ""
 local NONE_OPTIONS           = 
