@@ -1160,6 +1160,7 @@ if not TUNING.HOF_IS_TCP_ENABLED then
 		AddPrefabPostInit(v, BeeBoxPostInit)
 	end
 end
+
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")
 

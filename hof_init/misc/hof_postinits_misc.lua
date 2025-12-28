@@ -1157,6 +1157,19 @@ AddComponentPostInit("pollinator", function(self)
 	end
 end)
 
+-- Can't aggro players that are stealthed.
+AddComponentPostInit("combat", function(self)
+	local _SetTarget = self.SetTarget
+
+	function self:SetTarget(target)
+		if target ~= nil and target:HasTag("player") and target:HasTag("stealthed") then
+			return false
+		end
+
+		return _SetTarget(self, target)
+	end
+end)
+
 -- Makes icons appear for containers that are integrated to player's inventory.
 AddClassPostConstruct("widgets/invslot", function(self)
 	if self.owner == _G.ThePlayer and self.container ~= nil and self.container.GetWidget ~= nil then
