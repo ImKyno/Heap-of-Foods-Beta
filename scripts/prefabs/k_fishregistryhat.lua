@@ -1,6 +1,6 @@
 local assets = 
 {
-	Asset("ANIM", "anim/hat_sammy.zip"),
+	Asset("ANIM", "anim/hat_fishregistry.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -31,7 +31,7 @@ local function OnUseFishRegistry(inst)
 end
 
 local function OnEquip(inst, owner, from_ground)
-	owner.AnimState:OverrideSymbol("swap_hat", "hat_sammy", "swap_hat")
+	owner.AnimState:OverrideSymbol("swap_hat", "hat_fishregistry", "swap_hat")
 	
 	owner.AnimState:Show("HAT")
 	owner.AnimState:Show("HAIR_HAT")
@@ -89,8 +89,8 @@ local function fn()
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-	inst.AnimState:SetBank("sammyhat")
-	inst.AnimState:SetBuild("hat_sammy")
+	inst.AnimState:SetBank("fishregistryhat")
+	inst.AnimState:SetBuild("hat_fishregistry")
 	inst.AnimState:PlayAnimation("anim")
 
 	inst:AddTag("hat")

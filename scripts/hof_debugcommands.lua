@@ -889,3 +889,58 @@ function c_hoftestfishregistry(who)
 		end
 	end
 end
+
+function c_hofrecipe(recipename)
+	local player = ConsoleCommandPlayer()
+
+	local recipe_sources = 
+	{
+		"hof_foodrecipes",
+		"hof_foodrecipes_warly",
+		"hof_foodrecipes_item",
+		"hof_foodrecipes_seasonal",
+		"hof_foodrecipes_keg",
+		"hof_foodrecipes_jar",
+	}
+
+	local recipe
+	local source_name
+
+	for _, path in ipairs(recipe_sources) do
+		local ok, recipes = pcall(require, path)
+		
+		if ok and recipes and recipes[recipename] then
+			recipe = recipes[recipename]
+			source_name = path
+			break
+		end
+	end
+
+	if not recipe then
+		TheNet:Announce("Heap of Foods Mod - Recipe not found!")
+		return
+	end
+
+	if not recipe.card_def or not recipe.card_def.ingredients then
+		TheNet:Announce("Heap of Foods Mod - This Recipe doesn't have a proper Recipe Card!")
+		return
+	end
+
+	if player ~= nil then
+		for _, data in ipairs(recipe.card_def.ingredients) do
+			local prefab = data[1]
+			local amount = data[2] or 1
+
+			for i = 1, amount do
+				local item = SpawnPrefab(prefab)
+				item.Transform:SetPosition(player.Transform:GetWorldPosition())
+				
+				if item then
+					player.components.inventory:GiveItem(item)
+				else
+					TheNet:Announce("Heap of Foods Mod - Couldn't give ingredients for Recipe!")
+				end
+			end
+		end
+	end
+end

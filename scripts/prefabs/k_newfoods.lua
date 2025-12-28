@@ -1,5 +1,14 @@
 local assets =
 {
+	Asset("ANIM", "anim/cook_pot_food.zip"),
+	
+	Asset("ANIM", "anim/kyno_foodrecipes_sw.zip"),
+	Asset("ANIM", "anim/kyno_foodrecipes_ham.zip"),
+	Asset("ANIM", "anim/kyno_foodrecipes_warly.zip"),
+	
+	Asset("ANIM", "anim/kyno_foodrecipes_seasonal_spooky.zip"),
+	Asset("ANIM", "anim/kyno_foodrecipes_seasonal_xmas.zip"),
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -10,7 +19,6 @@ local prefabs =
 	"spoiled_food",
 }
 
-----------------------------------------------------------------------------------------------------------
 -- Funcions for some special foods.
 local function FuelTaken(inst, taker)
 	if taker ~= nil and taker.SoundEmitter ~= nil then
@@ -51,22 +59,19 @@ local function NightVision_OnEntitySleep(inst)
 		inst._beatsoundtask = nil
 	end
 end
-----------------------------------------------------------------------------------------------------------
+
 local function MakePreparedFood(data)
 	local foodname = data.basename or data.name
 	local foodassets = assets
-
-	if data.overridebuild then
-        table.insert(foodassets, Asset("ANIM", "anim/"..data.overridebuild..".zip"))
-	end
-
+	
 	local spicename = data.spice ~= nil and string.lower(data.spice) or nil
-    if spicename ~= nil then
-        table.insert(foodassets, Asset("ANIM", "anim/spices.zip"))
+	
+	if spicename ~= nil then
+		table.insert(foodassets, Asset("ANIM", "anim/spices.zip"))
 		table.insert(foodassets, Asset("ANIM", "anim/kyno_spices.zip"))
-        table.insert(foodassets, Asset("ANIM", "anim/plate_food.zip"))
-        table.insert(foodassets, Asset("INV_IMAGE", spicename.."_over"))
-    end
+		table.insert(foodassets, Asset("ANIM", "anim/plate_food.zip"))
+		table.insert(foodassets, Asset("INV_IMAGE", spicename.."_over"))
+	end
 
 	local function DisplayNameFn(inst)
 		return subfmt(STRINGS.NAMES[data.spice.."_FOOD"], { food = STRINGS.NAMES[string.upper(data.basename)] })
@@ -81,10 +86,7 @@ local function MakePreparedFood(data)
 		inst.entity:AddNetwork()
 
 		MakeInventoryPhysics(inst)
-		
-		if data.pickupsound ~= nil then
-			inst.pickupsound = data.pickupsound
-		end
+		MakeInventoryFloatable(inst)
 
 		if data.scale ~= nil then
 			inst.AnimState:SetScale(data.scale, data.scale, data.scale)
@@ -104,15 +106,15 @@ local function MakePreparedFood(data)
 			inst:AddTag("spicedfood")
 
 			inst.inv_image_bg = { image = (data.basename or data.name)..".tex" }
-            inst.inv_image_bg.atlas = GetInventoryItemAtlas(inst.inv_image_bg.image)
+			inst.inv_image_bg.atlas = GetInventoryItemAtlas(inst.inv_image_bg.image)
 			
 			-- food_symbol_build = data.overridebuild or "cook_pot_food"
 		else
+			inst.AnimState:SetBank("kyno_foodrecipes")
 			inst.AnimState:SetBuild(data.overridebuild or "cook_pot_food")
-			inst.AnimState:SetBank(data.overridebuild or "cook_pot_food")
 		end
 
-		inst.AnimState:PlayAnimation(data.anim or "idle", false)
+		inst.AnimState:PlayAnimation(data.anim or data.name, false)
 		inst.AnimState:OverrideSymbol("swap_food", data.overridebuild or "cook_pot_food", data.basename or data.name)
 
 		inst:AddTag("preparedfood")
@@ -123,19 +125,22 @@ local function MakePreparedFood(data)
 		end
 
 		if data.tags ~= nil then
-			for i,v in pairs(data.tags) do
+			for i, v in pairs(data.tags) do
 				inst:AddTag(v)
 			end
 		end
 
 		if data.basename ~= nil then
 			inst:SetPrefabNameOverride(data.basename)
+			
 			if data.spice ~= nil then
 				inst.displaynamefn = DisplayNameFn
 			end
 		end
-
-		MakeInventoryFloatable(inst)
+		
+		if data.pickupsound ~= nil then
+			inst.pickupsound = data.pickupsound
+		end
 
 		inst.entity:SetPristine()
 
@@ -145,8 +150,17 @@ local function MakePreparedFood(data)
 
 		inst.food_symbol_build = food_symbol_build or data.overridebuild
 		inst.food_basename = data.basename
+		inst.wet_prefix = data.wet_prefix
 		
 		inst:AddComponent("bait")
+		
+		inst:AddComponent("stackable")
+		inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+		
+		inst:AddComponent("inspectable")
+		if data.nameoverride ~= nil then
+			inst.components.inspectable.nameoverride = data.nameoverride
+		end
 		
 		inst:AddComponent("tradable")
 		if data.rocktribute ~= nil then
@@ -157,52 +171,6 @@ local function MakePreparedFood(data)
 			inst.components.tradable.goldvalue = data.goldvalue
 		end
 		
-		inst:AddComponent("inspectable")
-		if data.nameoverride ~= nil then
-			inst.components.inspectable.nameoverride = data.nameoverride
-		end
-		
-		inst.wet_prefix = data.wet_prefix
-
-		inst:AddComponent("edible")
-		inst.components.edible.healthvalue = data.health
-		inst.components.edible.hungervalue = data.hunger
-		inst.components.edible.sanityvalue = data.sanity or 0
-		inst.components.edible.foodtype = data.foodtype or FOODTYPE.GENERIC
-		inst.components.edible.secondaryfoodtype = data.secondaryfoodtype or nil
-		inst.components.edible.temperaturedelta = data.temperature or 0
-		inst.components.edible.temperatureduration = data.temperatureduration or 0
-		inst.components.edible.nochill = data.nochill or nil
-		inst.components.edible.spice = data.spice
-		inst.components.edible:SetOnEatenFn(data.oneatenfn)
-		-- inst.components.edible.degrades_with_spoilage = data.degradespoilage or true
-		inst.components.edible.degrades_with_spoilage = data.degrades_with_spoilage == nil or data.degrades_with_spoilage
-
-		inst:AddComponent("inventoryitem")
-		if spicename ~= nil then
-			inst.components.inventoryitem:ChangeImageName(spicename.."_over")
-		elseif data.basename ~= nil then
-			inst.components.inventoryitem:ChangeImageName(data.basename)
-		else
-			inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-			inst.components.inventoryitem.imagename = data.name
-		end
-
-		inst:AddComponent("stackable")
-		inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-		if data.perishtime ~= nil and data.perishtime > 0 then
-			inst:AddComponent("perishable")
-			inst.components.perishable:SetPerishTime(data.perishtime)
-			inst.components.perishable:StartPerishing()
-			
-			if data.perishproduct ~= nil then 
-				inst.components.perishable.onperishreplacement = data.perishproduct
-			else
-				inst.components.perishable.onperishreplacement = "spoiled_food"
-			end
-		end
-
 		if inst:HasTag("soulstew") then
 			inst:AddComponent("soul")
 		end
@@ -218,17 +186,53 @@ local function MakePreparedFood(data)
 			inst.components.hauntable:SetHauntValue(TUNING.HAUNT_INSTANT_REZ)
 		end
 		
+		inst:AddComponent("inventoryitem")
+		if spicename ~= nil then
+			inst.components.inventoryitem:ChangeImageName(spicename.."_over")
+		elseif data.basename ~= nil then
+			inst.components.inventoryitem:ChangeImageName(data.basename)
+		else
+			inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+			inst.components.inventoryitem.imagename = data.name
+		end
+		
+		if data.perishtime ~= nil and data.perishtime > 0 then
+			inst:AddComponent("perishable")
+			inst.components.perishable:SetPerishTime(data.perishtime)
+			inst.components.perishable:StartPerishing()
+			
+			if data.perishproduct ~= nil then 
+				inst.components.perishable.onperishreplacement = data.perishproduct
+			else
+				inst.components.perishable.onperishreplacement = "spoiled_food"
+			end
+		end
+
+		inst:AddComponent("edible")
+		inst.components.edible.healthvalue = data.health
+		inst.components.edible.hungervalue = data.hunger
+		inst.components.edible.sanityvalue = data.sanity or 0
+		inst.components.edible.foodtype = data.foodtype or FOODTYPE.GENERIC
+		inst.components.edible.secondaryfoodtype = data.secondaryfoodtype or nil
+		inst.components.edible.temperaturedelta = data.temperature or 0
+		inst.components.edible.temperatureduration = data.temperatureduration or 0
+		inst.components.edible.nochill = data.nochill or nil
+		inst.components.edible.spice = data.spice
+		inst.components.edible:SetOnEatenFn(data.oneatenfn)
+		inst.components.edible.degrades_with_spoilage = data.degrades_with_spoilage == nil or data.degrades_with_spoilage
+		
 		if data.nightvision ~= nil then
 			inst.PlayBeatingSound = NightVision_PlayBeatingSound
 	
 			inst.OnEntityWake = NightVision_OnEntityWake
 			inst.OnEntitySleep = NightVision_OnEntitySleep
+			
 			inst:ListenForEvent("exitlimbo", inst.OnEntityWake)
 			inst:ListenForEvent("enterlimbo", inst.OnEntitySleep)
 		end
 
 		if data.fireproof ~= nil then
-			-- WHAT WE DO?
+
 		else
 			MakeSmallBurnable(inst)
 			MakeSmallPropagator(inst)

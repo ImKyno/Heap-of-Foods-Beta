@@ -12,7 +12,6 @@ local prefabs =
 	"spoiled_food",
 }
 
-----------------------------------------------------------------------------------------------------------
 -- Funcions for some special brews.
 local FERTILIZER_DEFS = require("prefabs/fertilizer_nutrient_defs").FERTILIZER_DEFS
 
@@ -59,26 +58,26 @@ local function NightVision_OnEntitySleep(inst)
 end
 
 local function CreateCore()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
 	
 	inst:AddTag("FX")
-    inst.persists = false
+	inst.persists = false
 	
 	inst.AnimState:SetScale(.8, .8, .8)
 
-    inst.AnimState:SetBank("horrorfuel")
-    inst.AnimState:SetBuild("horrorfuel")
-    inst.AnimState:PlayAnimation("scrapbook", true)
+	inst.AnimState:SetBank("horrorfuel")
+	inst.AnimState:SetBuild("horrorfuel")
+	inst.AnimState:PlayAnimation("scrapbook", true)
 	inst.AnimState:HideSymbol("blobs")
 	inst.AnimState:SetMultColour(1, 1, 1, 0.5)
-    inst.AnimState:UsePointFiltering(true)
-    inst.AnimState:SetFrame(math.random(inst.AnimState:GetCurrentAnimationNumFrames()) - 1)
-    inst.AnimState:SetFinalOffset(-2)
+	inst.AnimState:UsePointFiltering(true)
+	inst.AnimState:SetFrame(math.random(inst.AnimState:GetCurrentAnimationNumFrames()) - 1)
+	inst.AnimState:SetFinalOffset(-2)
 
-    return inst
+	return inst
 end
 ----------------------------------------------------------------------------------------------------------
 local function MakePreparedBrew(data)
@@ -88,6 +87,7 @@ local function MakePreparedBrew(data)
 	table.insert(foodassets, Asset("ANIM", "anim/"..foodname..".zip"))
 	
 	local spicename = data.spice ~= nil and string.lower(data.spice) or nil
+	
 	if spicename ~= nil then
 		foodassets = shallowcopy(assets)
 		table.insert(foodassets, Asset("ANIM", "anim/spices.zip"))
@@ -108,18 +108,7 @@ local function MakePreparedBrew(data)
 		inst.entity:AddNetwork()
 
 		MakeInventoryPhysics(inst)
-		
-		if data.isfertilizer ~= nil then
-			MakeDeployableFertilizerPristine(inst)
-
-			inst:AddTag("fertilizerresearchable")
-	
-			inst.GetFertilizerKey = GetFertilizerKey
-		end
-		
-		if data.pickupsound ~= nil then
-			inst.pickupsound = data.pickupsound
-		end
+		MakeInventoryFloatable(inst)
 		
 		if data.scale ~= nil then
 			inst.AnimState:SetScale(data.scale, data.scale, data.scale)
@@ -159,19 +148,30 @@ local function MakePreparedBrew(data)
 		end
 
 		if data.tags ~= nil then
-			for i,v in pairs(data.tags) do
+			for i, v in pairs(data.tags) do
 				inst:AddTag(v)
 			end
 		end
 
 		if data.basename ~= nil then
 			inst:SetPrefabNameOverride(data.basename)
+			
 			if data.spice ~= nil then
 				inst.displaynamefn = DisplayNameFn
 			end
 		end
+		
+		if data.pickupsound ~= nil then
+			inst.pickupsound = data.pickupsound
+		end
+		
+		if data.isfertilizer ~= nil then
+			MakeDeployableFertilizerPristine(inst)
 
-		MakeInventoryFloatable(inst)
+			inst:AddTag("fertilizerresearchable")
+	
+			inst.GetFertilizerKey = GetFertilizerKey
+		end
 		
 		if not TheNet:IsDedicated() then
 			if data.horrorfx then
@@ -195,27 +195,29 @@ local function MakePreparedBrew(data)
 
 		inst.food_symbol_build = food_symbol_build or data.overridebuild
 		inst.food_basename = data.basename
+		inst.wet_prefix = data.wet_prefix
 		
 		inst:AddComponent("bait")
+		
+		inst:AddComponent("stackable")
+		inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 		
 		inst:AddComponent("inspectable")
 		if data.nameoverride ~= nil then
 			inst.components.inspectable.nameoverride = data.nameoverride
 		end
 		
-		inst.wet_prefix = data.wet_prefix
-
-		inst:AddComponent("edible")
-		inst.components.edible.healthvalue = data.health
-		inst.components.edible.hungervalue = data.hunger
-		inst.components.edible.foodtype = data.foodtype or FOODTYPE.GENERIC
-		inst.components.edible.sanityvalue = data.sanity or 0
-		inst.components.edible.temperaturedelta = data.temperature or 0
-		inst.components.edible.temperatureduration = data.temperatureduration or 0
-		inst.components.edible.nochill = data.nochill or nil
-		inst.components.edible.spice = data.spice
-		inst.components.edible:SetOnEatenFn(data.oneatenfn)
-
+		inst:AddComponent("tradable")
+		if data.goldvalue ~= nil then
+			inst.components.tradable.goldvalue = data.goldvalue
+		end
+		
+		if data.isfuel ~= nil then
+			inst:AddComponent("fuel")
+			inst.components.fuel.fuelvalue = TUNING.MED_FUEL
+			inst.components.fuel:SetOnTakenFn(FuelTaken)
+		end
+		
 		inst:AddComponent("inventoryitem")
 		if spicename ~= nil then
 			inst.components.inventoryitem:ChangeImageName(spicename.."_over")
@@ -224,26 +226,6 @@ local function MakePreparedBrew(data)
 		else
 			inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 			inst.components.inventoryitem.imagename = data.name
-		end
-
-		inst:AddComponent("stackable")
-		inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-		if data.perishtime ~= nil and data.perishtime > 0 then
-			inst:AddComponent("perishable")
-			inst.components.perishable:SetPerishTime(data.perishtime)
-			inst.components.perishable:StartPerishing()
-			
-			if data.perishproduct ~= nil then 
-				inst.components.perishable.onperishreplacement = data.perishproduct
-			else
-				inst.components.perishable.onperishreplacement = "spoiled_food"
-			end
-		end
-		
-		inst:AddComponent("tradable")
-		if data.goldvalue ~= nil then
-			inst.components.tradable.goldvalue = data.goldvalue
 		end
 		
 		if data.isfertilizer ~= nil then
@@ -257,11 +239,28 @@ local function MakePreparedBrew(data)
 			inst.components.fertilizer:SetNutrients(data.nutrients)
 		end
 		
-		if data.isfuel ~= nil then
-			inst:AddComponent("fuel")
-			inst.components.fuel.fuelvalue = TUNING.MED_FUEL
-			inst.components.fuel:SetOnTakenFn(FuelTaken)
+		if data.perishtime ~= nil and data.perishtime > 0 then
+			inst:AddComponent("perishable")
+			inst.components.perishable:SetPerishTime(data.perishtime)
+			inst.components.perishable:StartPerishing()
+			
+			if data.perishproduct ~= nil then 
+				inst.components.perishable.onperishreplacement = data.perishproduct
+			else
+				inst.components.perishable.onperishreplacement = "spoiled_food"
+			end
 		end
+
+		inst:AddComponent("edible")
+		inst.components.edible.healthvalue = data.health
+		inst.components.edible.hungervalue = data.hunger
+		inst.components.edible.sanityvalue = data.sanity or 0
+		inst.components.edible.foodtype = data.foodtype or FOODTYPE.GENERIC
+		inst.components.edible.temperaturedelta = data.temperature or 0
+		inst.components.edible.temperatureduration = data.temperatureduration or 0
+		inst.components.edible.nochill = data.nochill or nil
+		inst.components.edible.spice = data.spice
+		inst.components.edible:SetOnEatenFn(data.oneatenfn)
 		
 		if data.nightvision ~= nil then
 			inst.PlayBeatingSound = NightVision_PlayBeatingSound
@@ -273,7 +272,7 @@ local function MakePreparedBrew(data)
 		end
 
 		if data.fireproof ~= nil then
-			-- WHAT WE DO?
+		
 		else
 			MakeSmallBurnable(inst)
 			MakeSmallPropagator(inst)

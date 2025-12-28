@@ -15,7 +15,8 @@ local kyno_foods =
 		sanity = -10,
 		cooktime = 0.5,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
-		potlevel = "med",
+		potlevel = "low",
+		overridebuild = "kyno_foodrecipes_sw",
 		floater = TUNING.HOF_FLOATER,
 		tags = {"honeyed", "fooddrink", "nospice"},
 		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 3}, {"honey", 1}}},
@@ -31,7 +32,8 @@ local kyno_foods =
 		hunger = 18.75,
 		sanity = 5,
 		cooktime = 1,
-		potlevel = "high",
+		potlevel = "med",
+		overridebuild = "kyno_foodrecipes_sw",
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_limpets", 3}, {"ice", 1}}},
 	},
@@ -49,6 +51,7 @@ local kyno_foods =
 		sanity = 10,
 		cooktime = 0.5,
 		potlevel = "med",
+		overridebuild = "kyno_foodrecipes_sw",
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_jellyfish", 1}, {"ice", 1}, {"twigs", 1}}},
 	},
@@ -65,6 +68,7 @@ local kyno_foods =
 		cooktime = 1,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NAUGHTINESS,
 		potlevel = "med",
+		overridebuild = "kyno_foodrecipes_sw",
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"twigs", 3}}},
 		oneatenfn = function(inst, eater)
@@ -87,6 +91,7 @@ local kyno_foods =
 		cooktime = 2,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
 		potlevel = "med",
+		overridebuild = "kyno_foodrecipes_sw",
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"pondfish", 1}, {"pondeel", 1}, {"wobster_sheller_land", 1}, {"barnacle", 1}}},
 	},
@@ -103,6 +108,7 @@ local kyno_foods =
 		sanity = 15,
 		cooktime = 3.5,
 		potlevel = "med",
+		overridebuild = "kyno_foodrecipes_ham",
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_beanbugs", 3}, {"monstermeat", 1}}},
 	},
@@ -117,7 +123,8 @@ local kyno_foods =
 		hunger = 150,
 		sanity = -5,
 		cooktime = 2,
-		potlevel = "high",
+		potlevel = "med",
+		overridebuild = "kyno_foodrecipes_ham",
 		floater = TUNING.HOF_FLOATER,
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_gummybug", 1}, {"honey", 3}}},
@@ -133,7 +140,8 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 5,
 		cooktime = 2,
-		potlevel = "high",
+		potlevel = "med",
+		overridebuild = "kyno_foodrecipes_ham",
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"slurtle_shellpieces", 2}, {"tomato", 2}}},
 	},
@@ -150,6 +158,7 @@ local kyno_foods =
 		hunger = 12.5,
 		sanity = 33,
 		cooktime = 0.5,
+		overridebuild = "kyno_foodrecipes_ham",
 		floater = TUNING.HOF_FLOATER,
 		tags = {"honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_tealeaf", 2}, {"honey", 1}, {"ice", 1}}},
@@ -169,6 +178,7 @@ local kyno_foods =
 		sanity = 33,
 		cooktime = 1,
 		potlevel = "low",
+		overridebuild = "kyno_foodrecipes_ham",
 		floater = TUNING.HOF_FLOATER,
 		tags = {"honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_tealeaf", 2}, {"honey", 2}}},
@@ -176,7 +186,7 @@ local kyno_foods =
 	
 	nettlelosange = 
 	{
-		test = function(cooker, names, tags) return names.firenettles and not tags.meat end,
+		test = function(cooker, names, tags) return tags.fireweed and not tags.meat end,
 		priority = 1,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
@@ -186,15 +196,16 @@ local kyno_foods =
 		hunger = 25,
 		sanity = -10,
 		cooktime = .5,
-		potlevel = "med",
 		nochill = true,
+		potlevel = "med",
+		overridebuild = "kyno_foodrecipes_ham",
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"firenettles", 1}, {"twigs", 3}}},
 	},
 	
 	nettlemeated =
 	{
-		test = function(cooker, names, tags) return (names.firenettles and names.firenettles >= 2) and (tags.meat and tags.meat >= 1) 
+		test = function(cooker, names, tags) return (tags.fireweed and tags.fireweed >= 2) and (tags.meat and tags.meat >= 1) 
 		and (not tags.monster or tags.monster <= 1) and not tags.inedible end,
 		priority = 1,
 		foodtype = FOODTYPE.MEAT,
@@ -205,8 +216,9 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = -5,
 		cooktime = 1,
-		potlevel = "high",
 		nochill = true,
+		potlevel = "high",
+		overridebuild = "kyno_foodrecipes_ham",
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"firenettles", 2}, {"smallmeat", 2}}},
 	},
@@ -224,6 +236,7 @@ local kyno_foods =
 		cooktime = 1,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BONESOUP,
 		potlevel = "med",
+		overridebuild = "kyno_foodrecipes_ham",
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_worm_bone", 2}, {"meat", 2}}},
 		prefabs = { "kyno_wormbuff" },
@@ -243,6 +256,7 @@ local kyno_foods =
 		sanity = 15,
 		cooktime = 2,
 		potlevel = "med",
+		overridebuild = "kyno_foodrecipes_ham",
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 2}, {"foliage", 1}, {"garlic", 1}}},
 	},
@@ -2486,7 +2500,7 @@ local kyno_foods =
 	
 	chimas =
 	{
-		test = function(cooker, names, tags) return ((names.tillweed or 0) + (names.tillweed or 0) >= 2) and tags.frozen end,
+		test = function(cooker, names, tags) return (tags.tillweed and tags.tillweed >= 2) and tags.frozen end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -2942,7 +2956,7 @@ local kyno_foods =
 	regularlasagna =
 	{
 		test = function(cooker, names, tags) return tags.meat and (names.tomato or names.tomato_cooked) and tags.flour
-		and not tags.monster and not tags.spotspice and not tags.wobster end,
+		and not tags.monster and not tags.spotspice and not tags.wobster and not tags.dairy end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FAST,
@@ -3138,7 +3152,7 @@ local kyno_foods =
 for k, recipe in pairs(kyno_foods) do
 	recipe.name = k
 	recipe.weight = 1
-	recipe.overridebuild = k
+	recipe.overridebuild = recipe.overridebuild or k
 	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages.xml"
 	recipe.cookbook_tex = k..".tex"
 end
