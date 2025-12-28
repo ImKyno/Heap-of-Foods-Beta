@@ -6,6 +6,10 @@ local assets =
 	Asset("ANIM", "anim/kyno_foodrecipes_ham.zip"),
 	Asset("ANIM", "anim/kyno_foodrecipes_warly.zip"),
 	
+	Asset("ANIM", "anim/kyno_foodrecipes_gorge.zip"),
+	Asset("ANIM", "anim/kyno_foodrecipes_gorge1.zip"),
+	Asset("ANIM", "anim/kyno_foodrecipes_gorge2.zip"),
+	
 	Asset("ANIM", "anim/kyno_foodrecipes_seasonal_spooky.zip"),
 	Asset("ANIM", "anim/kyno_foodrecipes_seasonal_xmas.zip"),
 

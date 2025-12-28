@@ -70,7 +70,7 @@ local function OnAttached(inst, target)
 	if target:HasTag("player") then
 		target:AddTag("mimicmosa_stealthed")
 	
-		target:AddTag("notarget")
+		target:AddTag("invisible")
 		target:AddTag("notraptrigger")
 		target:RemoveTag("scarytoprey")
 		
@@ -99,7 +99,7 @@ local function OnDetached(inst, target)
 	if target:HasTag("player") then
 		target:RemoveTag("mimicmosa_stealthed")
 
-		target:RemoveTag("notarget")
+		target:RemoveTag("invisible")
 		target:RemoveTag("notraptrigger")
 		target:AddTag("scarytoprey")
 		
@@ -124,10 +124,10 @@ local function OnExtended(inst, target)
 		target:RemoveTag("mimicmosa_stealthed")
 		target:AddTag("mimicmosa_stealthed")
 	
-		target:RemoveTag("notarget")
+		target:RemoveTag("invisible")
 		target:RemoveTag("notraptrigger")
 	
-		target:AddTag("notarget")
+		target:AddTag("invisible")
 		target:AddTag("notraptrigger")
 		target:RemoveTag("scarytoprey")
 		
