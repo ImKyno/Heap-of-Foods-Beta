@@ -1,6 +1,6 @@
 local assets =
 {
-    Asset("ANIM", "anim/sugarbombs.zip"),
+    Asset("ANIM", "anim/kyno_foodrecipes_cookpot1.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -54,9 +54,9 @@ local function fn()
 	
 	inst.AnimState:SetScale(1.1, 1.1, 1.1)
 
-    inst.AnimState:SetBank("sugarbombs")
-    inst.AnimState:SetBuild("sugarbombs")
-    inst.AnimState:PlayAnimation("idle")
+    inst.AnimState:SetBank("kyno_foodrecipes")
+    inst.AnimState:SetBuild("kyno_foodrecipes_cookpot1")
+    inst.AnimState:PlayAnimation("sugarbombs")
 
     inst:AddTag("preparedfood")
 	inst:AddTag("preparedfood_hof")

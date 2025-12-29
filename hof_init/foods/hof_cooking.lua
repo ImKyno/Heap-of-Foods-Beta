@@ -243,38 +243,10 @@ for _, recipe in pairs(seasonal_recipes) do if recipe.card_def then table.insert
 for _, recipe in pairs(item_recipes)     do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, cooker_name = "cookpot"}) end end
 for _, recipe in pairs(warly_recipes)    do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, cooker_name = "portablecookpot"}) end end
 
--- Previous dirty fix don't work anymore, will be using this one for now...
-local testfoods = {}
-for k, v in pairs(_G.MergeMaps(require("hof_foodrecipes"), require("hof_foodrecipes_seasonal"), require("hof_foodrecipes_warly"))) do 
-	testfoods[k] = true 
-end
-
-AddPrefabPostInit("portablespicer", function(inst)
-	if _G.TheWorld.ismastersim then	
-		local function ShowProduct(inst)
-			local product = inst.components.stewer.product
-			local recipe = cooking.GetRecipe(inst.prefab, product)
-			
-			if recipe ~= nil then
-				product = recipe.basename or product
-			end
-			
-			if testfoods[product] then
-				inst.AnimState:OverrideSymbol("swap_cooked", product, product)
-			end
-		end
-		
-		local _continuedonefn = inst.components.stewer.oncontinuedone
-		local _donecookfn = inst.components.stewer.ondonecooking
-		
-		inst.components.stewer.oncontinuedone = function(inst) _continuedonefn(inst) ShowProduct(inst) end
-		inst.components.stewer.ondonecooking = function(inst) _donecookfn(inst) ShowProduct(inst) end
-	end
-end)
-
 -- Inject Warly recipes in Chef's Specials page instead of Mod Recipes page in the Cookbook.
 -- I'm not sure if this can lead to problems in the future, will leave it on for now.
 local HOF_WARLYRECIPES = GetModConfigData("WARLYRECIPES")
+
 if HOF_WARLYRECIPES then
 	for k, recipe in pairs(warly_recipes) do
 		cooking.cookbook_recipes["mod"][k] = nil

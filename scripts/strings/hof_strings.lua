@@ -10588,7 +10588,7 @@ STRINGS.CHARACTERS.WANDA.DESCRIBE.SPICE_MIND = "For soothing the mind."
 
 STRINGS.NAMES.MOONBUTTERFLYMUFFIN = "Moon Muffin"
 
-STRINGS.NAMES.SUGARFLYMUFFIN = "Sugar Muffin"
+STRINGS.NAMES.SUGARFLYMUFFIN = "Sweet Muffin"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.SUGARFLYMUFFIN = "I threw the recipe away and just kind of winged it."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.SUGARFLYMUFFIN = "Heehee, look at that sugarfly stuck in the muffin."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.SUGARFLYMUFFIN = "Wolfgang did not know about bug muffin. I will taste."

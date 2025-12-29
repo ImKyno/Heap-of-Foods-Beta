@@ -38,12 +38,6 @@ local function HasValidHome(inst)
 	and not home:HasTag("burnt")
 end
 
-local function AllDayTest(inst)
-    if inst.segs and inst.segs["night"] + inst.segs["dusk"] <= 16 then
-        return true
-    end
-end
-
 local function GoHomeAction(inst)
 	if inst:CanChatter() then -- Let me go home!
 		inst:DoChatter("MEADOWISLANDTRADER_GOHOME", math.random(#STRINGS.MEADOWISLANDTRADER_GOHOME), 1)

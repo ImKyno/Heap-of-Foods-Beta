@@ -1,23 +1,3 @@
-local assets =
-{
-	Asset("ANIM", "anim/cook_pot_food.zip"),
-	
-	Asset("ANIM", "anim/kyno_foodrecipes_sw.zip"),
-	Asset("ANIM", "anim/kyno_foodrecipes_ham.zip"),
-	Asset("ANIM", "anim/kyno_foodrecipes_warly.zip"),
-	
-	Asset("ANIM", "anim/kyno_foodrecipes_gorge.zip"),
-	Asset("ANIM", "anim/kyno_foodrecipes_gorge1.zip"),
-	Asset("ANIM", "anim/kyno_foodrecipes_gorge2.zip"),
-	
-	Asset("ANIM", "anim/kyno_foodrecipes_seasonal_spooky.zip"),
-	Asset("ANIM", "anim/kyno_foodrecipes_seasonal_xmas.zip"),
-
-	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
-	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
-	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
-}
-
 local prefabs =
 {
 	"spoiled_food",
@@ -64,15 +44,25 @@ local function NightVision_OnEntitySleep(inst)
 	end
 end
 
-local function MakePreparedFood(data)
-	local foodname = data.basename or data.name
-	local foodassets = assets
+local function MakePreparedFood(data)	
+	local foodassets =
+	{
+		Asset("ANIM", "anim/kyno_spices.zip"),
+		Asset("ANIM", "anim/cook_pot_food.zip"),
+	
+		Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
+		Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
+		Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
+	}
+	
+	if data.overridebuild then
+		table.insert(foodassets, Asset("ANIM", "anim/"..data.overridebuild..".zip"))
+	end
 	
 	local spicename = data.spice ~= nil and string.lower(data.spice) or nil
 	
 	if spicename ~= nil then
 		table.insert(foodassets, Asset("ANIM", "anim/spices.zip"))
-		table.insert(foodassets, Asset("ANIM", "anim/kyno_spices.zip"))
 		table.insert(foodassets, Asset("ANIM", "anim/plate_food.zip"))
 		table.insert(foodassets, Asset("INV_IMAGE", spicename.."_over"))
 	end
@@ -101,9 +91,10 @@ local function MakePreparedFood(data)
 		local food_symbol_build = nil
 		
 		if spicename ~= nil then
-			inst.AnimState:SetBuild("plate_food")
 			inst.AnimState:SetBank("plate_food")
+			inst.AnimState:SetBuild("plate_food")
 			inst.AnimState:PlayAnimation("idle")
+			
 			inst.AnimState:OverrideSymbol("swap_garnish", "spices", spicename)
 			-- inst.AnimState:OverrideSymbol("swap_garnish", "kyno_spices", spicename)
 
@@ -112,13 +103,13 @@ local function MakePreparedFood(data)
 			inst.inv_image_bg = { image = (data.basename or data.name)..".tex" }
 			inst.inv_image_bg.atlas = GetInventoryItemAtlas(inst.inv_image_bg.image)
 			
-			-- food_symbol_build = data.overridebuild or "cook_pot_food"
+			food_symbol_build = data.overridebuild or "cook_pot_food"
 		else
 			inst.AnimState:SetBank("kyno_foodrecipes")
 			inst.AnimState:SetBuild(data.overridebuild or "cook_pot_food")
+			inst.AnimState:PlayAnimation(data.anim or data.name, false)
 		end
 
-		inst.AnimState:PlayAnimation(data.anim or data.name, false)
 		inst.AnimState:OverrideSymbol("swap_food", data.overridebuild or "cook_pot_food", data.basename or data.name)
 
 		inst:AddTag("preparedfood")

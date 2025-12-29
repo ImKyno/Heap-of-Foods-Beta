@@ -36,6 +36,7 @@ local function SpawnPlants(inst)
 
 	inst.plant_ents = {}
 	inst.plants = inst.plants or {}
+	inst.highlightchildren = inst.highlightchildren or {}
 
 	if #inst.plants == 0 then
 		local radius_x = 3.5
@@ -98,6 +99,9 @@ local function SpawnPlants(inst)
 			deco.Transform:SetPosition(unpack(data.pos))
 			deco.Transform:SetRotation(data.rot or 0)
 			deco.persists = false
+			
+			deco:AddTag("NOCLICK")
+			deco:AddTag("notarget")
 
 			if deco.AnimState and data.shade then
 				deco.AnimState:SetMultColour(data.shade, data.shade, data.shade, 1)
@@ -105,6 +109,7 @@ local function SpawnPlants(inst)
 			end
 
 			table.insert(inst.plant_ents, deco)
+			table.insert(inst.highlightchildren, deco)
 		end
 	end
 end
@@ -325,14 +330,10 @@ end
 local function OnItemGet(inst, data)
 	DoFishFarmSplash(inst)
 	UpdateFishArt(inst)
-	
-	if data.slot == 1 then
-		local fish = data.item
-		
-		if fish and fish:HasTag("fishfarmable") then
-			if inst.components.fueled ~= nil and not inst.components.fueled:IsEmpty() then
-				inst.components.fishfarmmanager:StartWorking()
-			end
+
+	if data and data.slot == 1 then
+		if inst.components.fueled ~= nil and not inst.components.fueled:IsEmpty() then
+			inst.components.fishfarmmanager:StartWorking()
 		end
 	end
 
@@ -342,7 +343,7 @@ end
 local function OnItemLose(inst, data)
 	UpdateFishArt(inst)
 	
-	if data.slot == 1 then
+	if data ~= nil and data.slot == 1 then
 		inst.components.fishfarmmanager:StopWorking()
 	end
 
@@ -392,6 +393,15 @@ local function OnEntityRemove(inst)
 	StopHungryTask(inst)
 end
 
+local function RefreshFishFarmState(inst)
+	if inst.components.fueled ~= nil and inst.components.fueled:IsEmpty() then
+		inst.components.fishfarmmanager:StopWorking()
+		StartHungryTask(inst)
+	else
+		inst.components.fishfarmmanager:StartWorking()
+	end
+end
+
 local function OnSave(inst, data)
 	if inst.plants ~= nil then
 		data.plants = inst.plants
@@ -403,16 +413,7 @@ local function OnLoad(inst, data)
 		inst.plants = data.plants
 	end
 	
-	if inst.components.fueled and not inst.components.fueled:IsEmpty() then
-		local container = inst.components.container
-		local fish = container and container:GetItemInSlot(1)
-
-		if fish and fish:HasTag("fishfarmable") then
-			inst.components.fishfarmmanager:StartWorking()
-		end
-	else
-		StartHungryTask(inst)
-	end
+	RefreshFishFarmState(inst)
 end
 
 local function OnInit(inst)
@@ -420,6 +421,7 @@ local function OnInit(inst)
 	
 	SpawnPlants(inst)
 	UpdateFishArt(inst)
+	RefreshFishFarmState(inst)
 end
 
 local function fn()
