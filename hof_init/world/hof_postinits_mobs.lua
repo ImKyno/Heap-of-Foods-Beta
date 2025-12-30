@@ -721,6 +721,10 @@ end
 
 AddPrefabPostInit("monkeyqueen", MonkeyQueenPostInit)
 
+-- Mosslings, Moose Goose and Bearger can now eat GOODIES.
+table.insert(_G.FOODGROUP.MOOSE.types, _G.FOODTYPE.GOODIES)
+table.insert(_G.FOODGROUP.BEARGER.types, _G.FOODTYPE.GOODIES)
+
 -- Leonidas remember me to not put LootTables inside postinit again, otherwise it will 
 -- increase the drop by +1 each time the entity spawns.
 local function ApplyLootTables()

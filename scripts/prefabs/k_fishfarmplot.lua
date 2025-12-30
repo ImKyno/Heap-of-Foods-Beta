@@ -20,7 +20,6 @@ local prefabs =
 {
 	"boards",
 	"rope",
-	"marsh_plant",
 	"splash_green_small",
 	
 	"kyno_fishfarmplot_shoal",
@@ -36,7 +35,6 @@ local function SpawnPlants(inst)
 
 	inst.plant_ents = {}
 	inst.plants = inst.plants or {}
-	inst.highlightchildren = inst.highlightchildren or {}
 
 	if #inst.plants == 0 then
 		local radius_x = 3.5
@@ -52,7 +50,7 @@ local function SpawnPlants(inst)
 			local z = math.sin(theta) * radius_z
 			local y = 0
 
-			local plant_prefab = inst.planttype or "marsh_plant"
+			local plant_prefab = "kyno_fishfarmplot_plant"
 			local plant_rot = math.random() * 360
 
 			table.insert(inst.plants, 
@@ -99,9 +97,6 @@ local function SpawnPlants(inst)
 			deco.Transform:SetPosition(unpack(data.pos))
 			deco.Transform:SetRotation(data.rot or 0)
 			deco.persists = false
-			
-			deco:AddTag("NOCLICK")
-			deco:AddTag("notarget")
 
 			if deco.AnimState and data.shade then
 				deco.AnimState:SetMultColour(data.shade, data.shade, data.shade, 1)
@@ -109,9 +104,10 @@ local function SpawnPlants(inst)
 			end
 
 			table.insert(inst.plant_ents, deco)
-			table.insert(inst.highlightchildren, deco)
 		end
 	end
+	
+	inst.highlightchildren = inst.plant_ents
 end
 
 local function DespawnPlants(inst)
@@ -412,13 +408,13 @@ local function OnLoad(inst, data)
 	if data and data.plants then
 		inst.plants = data.plants
 	end
-	
+
 	RefreshFishFarmState(inst)
 end
 
 local function OnInit(inst)
 	inst.task = nil
-	
+
 	SpawnPlants(inst)
 	UpdateFishArt(inst)
 	RefreshFishFarmState(inst)
@@ -452,9 +448,9 @@ local function fn()
 	inst:AddTag("watersource")
 	inst:AddTag("antlion_sinkhole_blocker")
 	inst:AddTag("birdblocker")
-	
+
 	inst.no_wet_prefix = true
-	
+
 	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
@@ -507,10 +503,8 @@ local function fn()
 	inst:ListenForEvent("itemlose", OnItemLose)
 	inst:ListenForEvent("onremove", OnEntityRemove)
 	
-	inst.planttype = "marsh_plant"
-	inst.dayspawn = true
 	inst.task = inst:DoTaskInTime(0, OnInit)
-	
+
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 

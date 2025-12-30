@@ -104,7 +104,8 @@ local function ApplyAmphibianBonusDamage(inst, target, damage, weapon)
 end
 
 local function OnTick(inst, target)
-	if target.components.health ~= nil and not target.components.health:IsDead() and not target:HasTag("playerghost") then
+	if target.components.hunger ~= nil and target.components.sanity ~= nil and target.components.health ~= nil 
+	and not target.components.health:IsDead() and not target:HasTag("playerghost") then
 		target.components.hunger:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
 		target.components.health:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
 		target.components.sanity:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
@@ -117,7 +118,9 @@ local function OnAttached(inst, target)
 	inst.entity:SetParent(target.entity)
 	inst.Transform:SetPosition(0, 0, 0)
 	
-	target:PushEvent("powerup")
+	if target:HasTag("player") then
+		target:PushEvent("powerup")
+	end
 	
 	if target.components.talker and target:HasTag("player") then 
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_GOLDENAPPLEBUFF_START"))
@@ -419,7 +422,9 @@ local function OnExtended(inst, target)
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_GOLDENAPPLEBUFF_START"))
 	end
 	
-	target.sg:GoToState("powerup")
+	if target:HasTag("player") then
+		target.sg:GoToState("powerup")
+	end
 	
 	if target.SoundEmitter ~= nil then
 		target.SoundEmitter:PlaySound("wolfgang2/characters/wolfgang/mighty")

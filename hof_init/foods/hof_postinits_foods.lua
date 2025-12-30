@@ -5,7 +5,6 @@ local resolvefilepath     = _G.resolvefilepath
 local ACTIONS             = _G.ACTIONS
 local STRINGS             = _G.STRINGS
 local SpawnPrefab         = _G.SpawnPrefab
-local cooking             = require("cooking")
 
 local HOF_ALCOHOLICDRINKS = GetModConfigData("ALCOHOLICDRINKS")
 

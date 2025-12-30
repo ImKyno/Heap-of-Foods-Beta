@@ -47,7 +47,10 @@ local function OnExtended(inst, target)
 		target:AddTag("groggy")
 		
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_dmgreductionbuff", TUNING.KYNO_DMGREDUCTIONBUFF_SPEED)
-		target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER)
+	end
+	
+	if target.components.health ~= nil then
+		target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER, "kyno_dmgreductionbuff")
 	end
 end
 

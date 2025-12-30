@@ -307,8 +307,82 @@ local function tiramisufn()
 
     return inst
 end
+----------------------------------------------------------------------
+-- TEA BUFF
+----------------------------------------------------------------------
+local function OnAttachedTea(inst, target)
+	inst.entity:SetParent(target.entity)
+    inst.Transform:SetPosition(0, 0, 0)
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
+	end
+	
+	if target.components.locomotor ~= nil then
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_teabuff", TUNING.KYNO_TEABUFF_SPEED)
+	end
+	
+    inst:ListenForEvent("death", function()
+        inst.components.debuff:Stop()
+    end, target)
+end
+
+local function OnTimerDoneTea(inst, data)
+    if data.name == "kyno_teabuff" then
+        inst.components.debuff:Stop()
+    end
+end
+
+local function OnDetachedTea(inst, target)
+	if target.components.locomotor ~= nil then
+		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_teabuff")
+	end
+
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_END"))
+	end
+	
+    inst:Remove()
+end
+
+local function OnExtendedTea(inst, target)
+    inst.components.timer:StopTimer("kyno_teabuff")
+    inst.components.timer:StartTimer("kyno_teabuff", TUNING.HOF_COFFEEBUFF_DURATION)
+	
+	if target.components.locomotor ~= nil then
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_TEABUFF_SPEED)
+	end
+end
+
+local function teafn()
+    if not TheWorld.ismastersim then 
+		return 
+	end
+
+    local inst = CreateEntity()
+    inst.entity:AddTransform()
+    inst.entity:Hide()
+  
+    inst.persists = false
+
+    inst:AddTag("CLASSIFIED")
+
+    inst:AddComponent("debuff")
+    inst.components.debuff:SetAttachedFn(OnAttachedTea)
+    inst.components.debuff:SetDetachedFn(OnDetachedTea)
+    inst.components.debuff:SetExtendedFn(OnExtendedTea)
+    inst.components.debuff.keepondespawn = true
+
+    inst:AddComponent("timer")
+	inst.components.timer:StartTimer("kyno_teabuff", TUNING.HOF_COFFEEBUFF_DURATION)
+	
+    inst:ListenForEvent("timerdone", OnTimerDone)
+
+    return inst
+end
 
 return Prefab("kyno_coffeebuff", fn),
 Prefab("kyno_coffeealtbuff", altfn),
 Prefab("kyno_mochabuff", mochafn),
-Prefab("kyno_tiramisubuff", tiramisufn)
+Prefab("kyno_tiramisubuff", tiramisufn),
+Prefab("kyno_teabuff", teafn)

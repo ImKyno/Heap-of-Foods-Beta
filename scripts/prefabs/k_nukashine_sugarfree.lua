@@ -1,6 +1,6 @@
 local assets =
 {
-    Asset("ANIM", "anim/nukashine.zip"),
+    Asset("ANIM", "anim/kyno_foodrecipes_keg.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -74,9 +74,9 @@ local function fn()
     MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "med", 0.65)
 
-    inst.AnimState:SetBank("nukashine")
-    inst.AnimState:SetBuild("nukashine")
-    inst.AnimState:PlayAnimation("idle")
+    inst.AnimState:SetBank("kyno_foodrecipes")
+    inst.AnimState:SetBuild("kyno_foodrecipes_keg")
+    inst.AnimState:PlayAnimation("nukashine")
 
     inst:AddTag("preparedfood")
 	inst:AddTag("preparedbrew")

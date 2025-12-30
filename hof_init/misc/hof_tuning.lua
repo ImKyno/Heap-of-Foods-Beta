@@ -1380,3 +1380,6 @@ TUNING.KYNO_WINTERTREE_GIFT3 =
 	festive_tamales        = 0.3,
 	festive_tourtiere      = 0.3,
 }
+
+TUNING.KYNO_TEABUFF_DURATION = 480
+TUNING.KYNO_TEABUFF_SPEED = 1.33
