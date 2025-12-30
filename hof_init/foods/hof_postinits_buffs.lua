@@ -104,6 +104,7 @@ if HOF_COFFEEBUFF_ENABLED then
 		AddPrefabPostInit(v, TropicalBouillabaissePostInit)
 	end
 	
+	--[[
 	local tea_spicebuff =
 	{
 		"tea_spice_garlic",
@@ -146,6 +147,7 @@ if HOF_COFFEEBUFF_ENABLED then
 	for k, v in pairs(tea_spicebuff) do
 		AddPrefabPostInit(v, TeaPostInit)
 	end
+	]]--
 end
 
 if HOF_GIANTSPAWNING then

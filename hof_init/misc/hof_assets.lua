@@ -84,8 +84,6 @@ Assets =
 	-- Asset("ATLAS", "images/achievementsimages/hof_achievements_buttons.xml"),
 }
 
-SetLoadingTipCategoryIcon("OTHER", "images/hof_loadingtips_icon.xml", "hof_loadingtips_icon.tex")
-
 -- Minimap Icons.
 AddMinimapAtlas("images/minimapimages/hof_minimapimages.xml")
 
