@@ -292,6 +292,14 @@ local function OnLoad(inst, data)
 	end
 end
 
+local function GetFishKey(inst)
+	return inst.prefab
+end
+
+local function fishresearchfn(inst)
+	return inst:GetFishKey()
+end
+
 local function waterfn(data)
 	local inst = CreateEntity()
 
@@ -463,6 +471,7 @@ local function inventoryfn(fish_def)
 	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
 	inst:AddTag("weighable_fish")
+	inst:AddTag("fishresearchable")
 
 	if fish_def.tags ~= nil then
 		for _, tag in ipairs(fish_def.tags) do
@@ -479,6 +488,8 @@ local function inventoryfn(fish_def)
 	end
 
 	inst.no_wet_prefix = true
+	
+	inst.GetFishKey = GetFishKey
 
 	inst.entity:SetPristine()
 	
@@ -491,6 +502,9 @@ local function inventoryfn(fish_def)
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("murderable")
+	
+	inst:AddComponent("fishresearchable")
+	inst.components.fishresearchable:SetResearchFn(fishresearchfn)
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT

@@ -133,16 +133,6 @@ local WARES                             =
 		{
 			["kyno_moon_froglegs"]          = { recipe = "meadowislandtrader_kyno_moon_froglegs",          min = 3,  max = 9              },
 		},
-		
-		["fruitflykilled"]                  =
-		{
-			-- Originally this was supposed to be 5% chance, but I know some people will complain.
-			-- So instead of being RNG based, at least kill that damn bug to get it, I guess.
-			
-			-- I was going to add Wicker's book here, but I found out you can't blueprint character items.
-			["slow_farmplot_blueprint"]     = { recipe = "meadowislandtrader_slow_farmplot_blueprint",     min = 1,  max = 2              },
-			["fast_farmplot_blueprint"]     = { recipe = "meadowislandtrader_fast_farmplot_blueprint",     min = 1,  max = 2              },
-		},
 	},
 }
 
@@ -330,7 +320,14 @@ local function SetLordFruitFlyKilled(inst, active)
 		inst.fruitflykilled = active
 		
 		if inst.fruitflykilled then
-			inst:AddWares(inst.WARES.SPECIAL["fruitflykilled"])
+			inst.WARES.ALWAYS[1]["slow_farmplot_blueprint"] = { recipe = "meadowislandtrader_slow_farmplot_blueprint", min = 1, max = 2 }
+			inst.FORGETABLE_RECIPES["meadowislandtrader_slow_farmplot_blueprint"] = true
+			
+			inst.WARES.ALWAYS[1]["fast_farmplot_blueprint"] = { recipe = "meadowislandtrader_fast_farmplot_blueprint", min = 1, max = 2 }
+			inst.FORGETABLE_RECIPES["meadowislandtrader_fast_farmplot_blueprint"] = true
+			
+			inst:AddWares({ ["slow_farmplot_blueprint"] = { recipe = "meadowislandtrader_slow_farmplot_blueprint", min = 1, max = 2 } })
+			inst:AddWares({ ["fast_farmplot_blueprint"] = { recipe = "meadowislandtrader_fast_farmplot_blueprint", min = 1, max = 2 } })
 		end
 	end
 end
@@ -355,6 +352,8 @@ local function OnWorldInit(inst)
 	inst:WatchWorldState("isfullmoon", inst.SetIsFullMoon)
 	inst:SetIsFullMoon(TheWorld.state.isfullmoon)
 	
+	-- Don't we need a LotFF tracker? I guess them being in WARES.ALWAYS will always override it on save/load anyway.
+
 	if TheWorld.components.wagboss_tracker and TheWorld.components.wagboss_tracker:IsWagbossDefeated() then
 		SetCelestialScionKilled(inst, true)
 	end

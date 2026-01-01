@@ -8,13 +8,16 @@ local actionhandlers =
 
 local events =
 {
-    CommonHandlers.OnStep(),
+	CommonHandlers.OnStep(),
 	CommonHandlers.OnLocomote(true, true),
-    EventHandler("attacked", function(inst) if not inst.components.health:IsDead() then inst.sg:GoToState("hit") end end),
-    EventHandler("death", function(inst, data)
+	
+	EventHandler("death", function(inst, data)
 		inst.sg:GoToState("death", data)
 	end),
-    EventHandler("trapped", function(inst) inst.sg:GoToState("trapped") end),
+	
+	EventHandler("trapped", function(inst)
+		inst.sg:GoToState("trapped")
+	end),
 }
 
 local function CrabSteps(inst)
@@ -26,7 +29,7 @@ local states =
     State{
 
         name = "idle",
-        tags = {"idle", "canrotate"},
+        tags = { "idle", "canrotate" },
 		
         onenter = function(inst)
             inst.Physics:Stop()
@@ -41,6 +44,7 @@ local states =
 
     State{
         name = "emerge",
+		
         onenter = function(inst, playanim)
             inst.Physics:Stop()
 			inst.SoundEmitter:PlaySound(inst.sounds.emerge)
@@ -66,7 +70,8 @@ local states =
 	
     State{
         name = "burrow",
-        tags = {"canrotate"},
+        tags = { "canrotate" },
+		
         onenter = function(inst)
             inst.Physics:Stop()
 			inst.SoundEmitter:PlaySound(inst.sounds.burrow)
@@ -87,6 +92,7 @@ local states =
 	
     State{
         name = "eat",
+		
         onenter = function(inst)
             inst.Physics:Stop()
             inst.AnimState:PlayAnimation("idle3", true)
@@ -101,7 +107,7 @@ local states =
 	
     State{
         name = "death",
-        tags = {"busy"},
+        tags = { "busy" },
 
         onenter = function(inst, data)
             inst.Physics:Stop()
@@ -119,12 +125,11 @@ local states =
 				inst.components.inventory:DropEverything(false, true)
 			end
         end,
-
     },
 
     State{
         name = "trapped",
-        tags = {"busy", "trapped"},
+        tags = { "busy", "trapped" },
 
         onenter = function(inst)
             inst.Physics:Stop()

@@ -31,7 +31,7 @@
 	For submitting your localization, send me a private message on Discord with all the changes ready to go. They'll be added 
 	to the mod accordingly, with proper credits to the authors in-game and Workshop Page.
 	
-	Discord Server Invite: https://discord.gg/apcsWvWtYz
+	Discord Server Invite: https://discord.gg/jjNr4Vvutn
 	My Discord: kynoox_
 
 	Happy translating!

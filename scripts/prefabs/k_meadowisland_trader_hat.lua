@@ -26,11 +26,11 @@ local function OnEquip(inst, owner, from_ground)
 	end
 	
 	if owner.components.hunger ~= nil then
-		owner.components.hunger.burnratemodifiers:SetModifier(inst, TUNING.KYNO_SAMMYHAT_HUNGERRATE)
+		owner.components.hunger.burnratemodifiers:SetModifier(inst, TUNING.KYNO_SAMMYHAT_HUNGERRATE, "sammyhat")
 	end
 end
 
-local function OnUnequip(inst, owner, from_ground)
+local function OnUnequip(inst, owner)
 	owner.AnimState:ClearOverrideSymbol("swap_hat")
 	
 	owner.AnimState:Hide("HAT")
@@ -49,7 +49,7 @@ local function OnUnequip(inst, owner, from_ground)
 	end
 	
 	if owner.components.hunger ~= nil then
-		owner.components.hunger.burnratemodifiers:RemoveModifier(inst)
+		owner.components.hunger.burnratemodifiers:RemoveModifier(inst, "sammyhat")
 	end
 end
 
@@ -59,7 +59,7 @@ local function OnEquipToModel(inst, owner, from_ground)
 	end
 	
 	if owner.components.hunger ~= nil then
-		owner.components.hunger.burnratemodifiers:RemoveModifier(inst)
+		owner.components.hunger.burnratemodifiers:RemoveModifier(inst, "sammyhat")
 	end
 end
 
@@ -75,7 +75,7 @@ local function OnEquipVanity(inst, owner, from_ground)
 		end
 	
 		if owner.components.hunger ~= nil then
-			owner.components.hunger.burnratemodifiers:RemoveModifier(inst)
+			owner.components.hunger.burnratemodifiers:RemoveModifier(inst, "sammyhat")
 		end
 	end
 end
@@ -153,7 +153,6 @@ local function fn()
 	inst.components.equippable:SetOnEquip(OnEquip)
 	inst.components.equippable:SetOnUnequip(OnUnequip)
 	inst.components.equippable:SetOnEquipToModel(OnEquipToModel)
-	inst.components.equippable.insulated = true
 
 	MakeHauntableLaunch(inst)
 

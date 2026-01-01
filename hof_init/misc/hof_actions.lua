@@ -656,6 +656,85 @@ AddComponentAction("INVENTORY", "learnablerecipecard", function(inst, doer, acti
 	table.insert(actions, ACTIONS.LEARNRECIPECARD)
 end)
 
+-- Action for researching fishes.
+AddAction("FISHREGISTRY_RESEARCH", STRINGS.ACTIONS.FISHREGISTRY_RESEARCH, function(act)
+	local target = act.target or act.invobject
+
+	if target then
+		if target.components.fishresearchable then
+			target.components.fishresearchable:LearnFish(act.doer)
+
+			if act.doer.components.talker then
+				act.doer.components.talker:Say(_G.GetString(act.doer, "ANNOUNCE_KYNO_FISH_RESEARCHED"), nil, target.components.inspectable.noanim)
+			end
+		elseif target.components.roeresearchable then
+			target.components.roeresearchable:LearnRoe(act.doer)
+			
+			if act.doer.components.talker then
+				act.doer.components.talker:Say(_G.GetString(act.doer, "ANNOUNCE_KYNO_ROE_RESEARCHED"), nil, target.components.inspectable.noanim)
+			end
+		end
+	end
+
+	return true
+end)
+
+ACTIONS.FISHREGISTRY_RESEARCH.priority = 10
+
+local function FishRegistryResearch(inst, doer, actions)
+	if inst ~= doer and (doer.CanExamine == nil or doer:CanExamine()) then
+		local fishinspector = doer.replica.inventory and doer.replica.inventory:EquipHasTag("fishinspector") or false
+
+		if not fishinspector then
+			return
+		end
+
+		local act = _G.CLIENT_REQUESTED_ACTION
+
+		if not (_G.TheNet:IsDedicated() or doer ~= _G.ThePlayer) then
+			if inst:HasTag("fishresearchable") then
+				local key = inst:GetFishKey()
+				
+				if key and not _G.TheFishRegistry:KnowsFish(key) then
+					act = ACTIONS.FISHREGISTRY_RESEARCH
+				end
+			elseif inst:HasTag("roeresearchable") then
+				local key = inst:GetRoeKey()
+				
+				if key and not _G.TheFishRegistry:KnowsRoe(key) then
+					act = ACTIONS.FISHREGISTRY_RESEARCH
+				end
+			end
+		end
+
+		if act == ACTIONS.FISHREGISTRY_RESEARCH then
+			table.insert(actions, act)
+		end
+	end
+end
+
+AddComponentAction("SCENE", "fishresearchable", function(inst, doer, actions, right)
+	if right then
+		if inst.replica.inventoryitem and inst.replica.inventoryitem:CanBePickedUp(doer) then
+			FishRegistryResearch(inst, doer, actions)
+		end
+	end
+end)
+
+AddComponentAction("INVENTORY", "fishresearchable", function(inst, doer, actions, right)
+	FishRegistryResearch(inst, doer, actions)
+end)
+
+AddComponentAction("SCENE", "roeresearchable", function(inst, doer, actions, right)
+	if right then
+		FishRegistryResearch(inst, doer, actions)
+	end
+end)
+
+AddComponentAction("INVENTORY", "roeresearchable", function(inst, doer, actions, right)
+	FishRegistryResearch(inst, doer, actions)
+end)
+
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 -- Hope they don't smack and bonk my head...
 local _FISHfn = ACTIONS.FISH.fn
@@ -664,6 +743,7 @@ function ACTIONS.FISH.fn(act, ...)
         act.doer.components.fishingrod:StartFishing(act.target, act.doer)
         return true
     end
+
     return _FISHfn(act, ...)
 end
 

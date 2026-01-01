@@ -46,6 +46,14 @@ local function GetBrewerForFood(foodname)
 		
 	return nil
 end
+
+local function GetBaseFoodPrefab(item)
+	if item ~= nil and item.food_basename ~= nil then
+		return item.food_basename
+	end
+
+	return item.prefab
+end
 	
 local function OnHammered(inst)
 	inst.components.lootdropper:DropLoot()
@@ -92,8 +100,9 @@ local function OnFoodGiven(inst, item, giver)
 	end
 	
 	item.Follower:FollowSymbol(inst.GUID, "swap_object", 0, 0, 0, true)
-		
-	local cooker = GetCookerForFood(item.prefab)
+	
+	local basefood = GetBaseFoodPrefab(item)
+	local cooker = GetCookerForFood(basefood) -- Spiced Foods relies on base prefab.
 	local brewer = GetBrewerForFood(item.prefab)
 		
 	inst.AnimState:ShowSymbol("cooker_overlay")

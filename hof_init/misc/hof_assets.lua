@@ -22,14 +22,8 @@ Assets =
 	Asset("ANIM", "anim/kyno_tree_rock_swaps.zip"),
 	Asset("ANIM", "anim/kyno_farmplot_scrapbook.zip"),
 	
-	-- Asset("ANIM", "anim/farm_plant_kyno_aloe.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_cucumber.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_fennel.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_parznip.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_radish.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_rice.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_sweetpotato.zip"),
-	-- Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
+	Asset("IMAGE", "images/hof_fishregistry.tex"),
+	Asset("ATLAS", "images/hof_fishregistry.xml"),
 	
 	Asset("IMAGE", "images/hof_loadingtips_icon.tex"), 
 	Asset("ATLAS", "images/hof_loadingtips_icon.xml"),
@@ -40,16 +34,16 @@ Assets =
 	Asset("IMAGE", "images/customizationimages/hof_customizationimages_worldsettings.tex"),
 	Asset("ATLAS", "images/customizationimages/hof_customizationimages_worldsettings.xml"),
 	
+	Asset("IMAGE", "images/colourcubesimages/meadow_day_cc.tex"),
+	Asset("IMAGE", "images/colourcubesimages/meadow_dusk_cc.tex"),
+	Asset("IMAGE", "images/colourcubesimages/meadow_night_cc.tex"),
+	Asset("IMAGE", "images/colourcubesimages/serenity_cc.tex"),
+	
 	Asset("IMAGE", "images/tabimages/hof_tabimages.tex"),
 	Asset("ATLAS", "images/tabimages/hof_tabimages.xml"),
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
-	
-	Asset("IMAGE", "images/colourcubesimages/meadow_day_cc.tex"),
-	Asset("IMAGE", "images/colourcubesimages/meadow_dusk_cc.tex"),
-	Asset("IMAGE", "images/colourcubesimages/meadow_night_cc.tex"),
-	Asset("IMAGE", "images/colourcubesimages/serenity_cc.tex"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_hudimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_hudimages.xml"),
@@ -407,6 +401,7 @@ local HOF_ICONS =
 	"kyno_fishfarmplot_kit",
 	"kyno_fishmeat_dried",
 	"kyno_fishmeat_small_dried",
+	"kyno_fishregistryhat",
 	"kyno_floatilizer",
 	"kyno_flour",
 	"kyno_foliage",
@@ -964,7 +959,7 @@ for k, v in pairs(HOF_SKIN_ICONS) do
 	RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", v..".tex")
 end
 
--- Dirty fix for icons for the Plant Registry and Farm Plants.
+-- Dirty fix for icons for the Plant Registry and Fish Registry.
 local _GetInventoryItemAtlas = _G.GetInventoryItemAtlas
 _G.GetInventoryItemAtlas = function(name, ...)
     local myatlas = _G.resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")

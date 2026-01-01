@@ -55,26 +55,64 @@ end
 local function EnableStealth(inst)
 	inst.stealthtask = inst:DoPeriodicTask(0, UpdateStealth)
 	
+	local fx = SpawnPrefab("shadow_puff_large_front")
+	fx.entity:SetParent(inst.entity)
+	
 	inst:ListenForEvent("mounted", MountedStealth)
 	inst:ListenForEvent("dismounted", DismountedStealth)
+	
+	ForceCombatGiveUp(inst)
+end
+
+local function BreakStealth(inst)
+	if inst:HasTag("stealthed") then
+		inst:RemoveTag("stealthed")
+	end
+	
+	if not inst.stealthbroken then
+		local fx = SpawnPrefab("shadow_puff_large_front")
+		fx.entity:SetParent(inst.entity)
+	end
+	
+	inst.stealthbroken = true
+	
+	DisableStealth(inst)
+
+	if inst._stealth_restore_task ~= nil then
+		inst._stealth_restore_task:Cancel()
+		inst._stealth_restore_task = nil
+	end
+
+	inst._stealth_restore_task = inst:DoTaskInTime(TUNING.KYNO_STEALTHBUFF_COOLDOWN, function(inst)
+		if inst:IsValid() and inst.components.debuffable ~= nil and inst.components.debuffable:HasDebuff("kyno_stealthbuff") then
+			inst:AddTag("stealthed")
+			
+			EnableStealth(inst)
+			inst.stealthbroken = false
+		end
+	end)
 end
 
 local function OnAttached(inst, target)
     inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0)
-
+	
 	local fx = SpawnPrefab("beeswax_spray_fx")
 	fx.entity:SetParent(target.entity)
     
 	-- Not good idea apply this to mobs...
 	if target:HasTag("player") then
+		target:AddTag("stealthed")
 		target:AddTag("mimicmosa_stealthed")
-	
-		target:AddTag("notarget")
+
 		target:AddTag("notraptrigger")
 		target:RemoveTag("scarytoprey")
 		
 		EnableStealth(target)
+		
+		target:ListenForEvent("doattack", BreakStealth)
+		target:ListenForEvent("onattackother", BreakStealth)
+		target:ListenForEvent("onthrown", BreakStealth)
 	end
 	
 	if target.components.talker and target:HasTag("player") then 
@@ -97,13 +135,22 @@ local function OnDetached(inst, target)
 	fx.entity:SetParent(target.entity)
 
 	if target:HasTag("player") then
+		target:RemoveTag("stealthed")
 		target:RemoveTag("mimicmosa_stealthed")
 
-		target:RemoveTag("notarget")
 		target:RemoveTag("notraptrigger")
 		target:AddTag("scarytoprey")
 		
 		DisableStealth(target)
+		
+		target:RemoveEventCallback("doattack", BreakStealth)
+		target:RemoveEventCallback("onattackother", BreakStealth)
+		target:RemoveEventCallback("onthrown", BreakStealth)
+		
+		if target._stealth_restore_task ~= nil then
+			target._stealth_restore_task:Cancel()
+			target._stealth_restore_task = nil
+		end
 	end
 	
 	if target.components.talker and target:HasTag("player") then 
@@ -121,17 +168,26 @@ local function OnExtended(inst, target)
 	fx.entity:SetParent(target.entity)
 	
 	if target:HasTag("player") then
+		target:RemoveTag("stealthed")
+		target:AddTag("stealthed")
+		
 		target:RemoveTag("mimicmosa_stealthed")
 		target:AddTag("mimicmosa_stealthed")
 	
-		target:RemoveTag("notarget")
 		target:RemoveTag("notraptrigger")
-	
-		target:AddTag("notarget")
+
 		target:AddTag("notraptrigger")
 		target:RemoveTag("scarytoprey")
 		
 		EnableStealth(target)
+		
+		target:RemoveEventCallback("doattack", BreakStealth)
+		target:RemoveEventCallback("onattackother", BreakStealth)
+		target:RemoveEventCallback("onthrown", BreakStealth)
+		
+		target:ListenForEvent("doattack", BreakStealth)
+		target:ListenForEvent("onattackother", BreakStealth)
+		target:ListenForEvent("onthrown", BreakStealth)
 	end
 	
 	if target.components.talker and target:HasTag("player") then 

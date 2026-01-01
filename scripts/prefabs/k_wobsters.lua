@@ -161,6 +161,14 @@ local function OnDroppedAsLoot(inst, data)
 	end
 end
 
+local function GetFishKey(inst)
+	return inst.prefab
+end
+
+local function fishresearchfn(inst)
+	return inst:GetFishKey()
+end
+
 local function water_wobster(bank_name, build_name, fish_def)
 	local inst = CreateEntity()
 
@@ -260,6 +268,7 @@ local function land_wobster(bank_name, build_name, nameoverride, fish_def, fadeo
 	inst:AddTag("smalloceancreature")
 	inst:AddTag("stunnedbybomb")
 	inst:AddTag("weighable_fish")
+	inst:AddTag("fishresearchable")
 	
 	if cook_product ~= nil then
 		inst:AddTag("cookable")
@@ -268,6 +277,8 @@ local function land_wobster(bank_name, build_name, nameoverride, fish_def, fadeo
 	inst:SetPrefabNameOverride(nameoverride)
 
 	MakeSmallPerishableCreaturePristine(inst)
+	
+	inst.GetFishKey = GetFishKey
 
 	inst.entity:SetPristine()
 
@@ -289,6 +300,9 @@ local function land_wobster(bank_name, build_name, nameoverride, fish_def, fadeo
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = nameoverride
+	
+	inst:AddComponent("fishresearchable")
+	inst.components.fishresearchable:SetResearchFn(fishresearchfn)
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT

@@ -1,6 +1,7 @@
-local _G            = GLOBAL
-local require       = _G.require
-local UpvalueHacker = require("hof_upvaluehacker")
+local _G                      = GLOBAL
+local require                 = _G.require
+local UpvalueHacker           = require("hof_upvaluehacker")
+local FISHREGISTRY_FISH_DEFS  = require("prefabs/k_fishregistrydefs").FISHREGISTRY_FISH_DEFS
 
 require("hof_constants")
 
@@ -338,13 +339,27 @@ local fishes         =
 }
 
 local function FishFarmablePostInit(inst)
+	local function GetFishKey(inst)
+		return inst.prefab
+	end
+
+	local function fishresearchfn(inst)
+		return inst:GetFishKey()
+	end
+
 	inst:AddTag("fishfarmable")
+	inst:AddTag("fishresearchable")
+
+	inst.GetFishKey = GetFishKey
 	
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
 	
 	inst:AddComponent("fishfarmable")
+	
+	inst:AddComponent("fishresearchable")
+	inst.components.fishresearchable:SetResearchFn(fishresearchfn)
 	
 	entry = fishes[inst.prefab]
 	if entry then

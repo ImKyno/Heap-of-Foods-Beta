@@ -20,7 +20,6 @@ local prefabs =
 {
 	"boards",
 	"rope",
-	"marsh_plant",
 	"splash_green_small",
 	
 	"kyno_fishfarmplot_shoal",
@@ -51,7 +50,7 @@ local function SpawnPlants(inst)
 			local z = math.sin(theta) * radius_z
 			local y = 0
 
-			local plant_prefab = inst.planttype or "marsh_plant"
+			local plant_prefab = "kyno_fishfarmplot_plant"
 			local plant_rot = math.random() * 360
 
 			table.insert(inst.plants, 
@@ -107,6 +106,8 @@ local function SpawnPlants(inst)
 			table.insert(inst.plant_ents, deco)
 		end
 	end
+	
+	inst.highlightchildren = inst.plant_ents
 end
 
 local function DespawnPlants(inst)
@@ -325,14 +326,10 @@ end
 local function OnItemGet(inst, data)
 	DoFishFarmSplash(inst)
 	UpdateFishArt(inst)
-	
-	if data.slot == 1 then
-		local fish = data.item
-		
-		if fish and fish:HasTag("fishfarmable") then
-			if inst.components.fueled ~= nil and not inst.components.fueled:IsEmpty() then
-				inst.components.fishfarmmanager:StartWorking()
-			end
+
+	if data and data.slot == 1 then
+		if inst.components.fueled ~= nil and not inst.components.fueled:IsEmpty() then
+			inst.components.fishfarmmanager:StartWorking()
 		end
 	end
 
@@ -342,7 +339,7 @@ end
 local function OnItemLose(inst, data)
 	UpdateFishArt(inst)
 	
-	if data.slot == 1 then
+	if data ~= nil and data.slot == 1 then
 		inst.components.fishfarmmanager:StopWorking()
 	end
 
@@ -392,6 +389,15 @@ local function OnEntityRemove(inst)
 	StopHungryTask(inst)
 end
 
+local function RefreshFishFarmState(inst)
+	if inst.components.fueled ~= nil and inst.components.fueled:IsEmpty() then
+		inst.components.fishfarmmanager:StopWorking()
+		StartHungryTask(inst)
+	else
+		inst.components.fishfarmmanager:StartWorking()
+	end
+end
+
 local function OnSave(inst, data)
 	if inst.plants ~= nil then
 		data.plants = inst.plants
@@ -402,24 +408,16 @@ local function OnLoad(inst, data)
 	if data and data.plants then
 		inst.plants = data.plants
 	end
-	
-	if inst.components.fueled and not inst.components.fueled:IsEmpty() then
-		local container = inst.components.container
-		local fish = container and container:GetItemInSlot(1)
 
-		if fish and fish:HasTag("fishfarmable") then
-			inst.components.fishfarmmanager:StartWorking()
-		end
-	else
-		StartHungryTask(inst)
-	end
+	RefreshFishFarmState(inst)
 end
 
 local function OnInit(inst)
 	inst.task = nil
-	
+
 	SpawnPlants(inst)
 	UpdateFishArt(inst)
+	RefreshFishFarmState(inst)
 end
 
 local function fn()
@@ -434,6 +432,7 @@ local function fn()
 	minimap:SetIcon("kyno_fishfarmplot.tex")
 
 	MakeObstaclePhysics(inst, 5)
+	inst:SetPhysicsRadiusOverride(5)
 	
 	inst.AnimState:SetScale(.8, .8, .8)
 
@@ -449,9 +448,9 @@ local function fn()
 	inst:AddTag("watersource")
 	inst:AddTag("antlion_sinkhole_blocker")
 	inst:AddTag("birdblocker")
-	
+
 	inst.no_wet_prefix = true
-	
+
 	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
@@ -504,10 +503,8 @@ local function fn()
 	inst:ListenForEvent("itemlose", OnItemLose)
 	inst:ListenForEvent("onremove", OnEntityRemove)
 	
-	inst.planttype = "marsh_plant"
-	inst.dayspawn = true
 	inst.task = inst:DoTaskInTime(0, OnInit)
-	
+
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 

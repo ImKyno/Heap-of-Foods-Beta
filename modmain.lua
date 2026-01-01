@@ -2,8 +2,6 @@
 local _G               = GLOBAL
 local require          = _G.require
 
-require("hof_main")
-
 -- Mod Strings and Localizations.
 -- If you want to contribute with your localization please head to "scripts/strings/hof_localization.lua" for more information.
 modimport("scripts/strings/hof_strings_loadingtips")
@@ -28,6 +26,8 @@ if localization then
 	end
 end
 
+require("hof_main") -- Fish Registry needs to load after STRINGS.
+
 -- Mod Dependencies.
 local hof_init_misc    =
 {
@@ -39,7 +39,7 @@ local hof_init_misc    =
 	"hof_recipes_hofbirthday",
 	"hof_recipes_serenity",
 	"hof_recipes_meadow",
-	"hof_brewbook",
+	"hof_popups",
 	"hof_actions",
 	"hof_stategraphs",
 	"hof_containers",
@@ -53,7 +53,6 @@ local hof_init_world   =
 {
 	"hof_tiledefs",
 	"hof_regrowth",
-	"hof_pollinator_component",
 	"hof_worldgen",
 	"hof_worldsettings",
 	"hof_messagebottletreasures",

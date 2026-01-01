@@ -83,13 +83,14 @@ require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_CITYSTONE] =
 	roadways    = true,
 }
 
-ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_PARKFIELD,  WORLD_TILES.DECIDUOUS, true)
-ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_CITYSTONE,  WORLD_TILES.ROCKY,     true)
-ChangeTileRenderOrder(WORLD_TILES.HOF_TIDALMARSH,      WORLD_TILES.MARSH,     true)
-ChangeTileRenderOrder(WORLD_TILES.HOF_FIELDS,          WORLD_TILES.DECIDUOUS, true)
+ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_PARKFIELD,     WORLD_TILES.DECIDUOUS,      true)
+ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_CITYSTONE,     WORLD_TILES.ROCKY,          true)
+ChangeTileRenderOrder(WORLD_TILES.HOF_TIDALMARSH,         WORLD_TILES.MARSH,          true)
+ChangeTileRenderOrder(WORLD_TILES.HOF_FIELDS,             WORLD_TILES.DECIDUOUS,      true)
 
 -- To match The Architect Pack and Not Enough Turfs.
-if TUNING.HOF_IS_TAP_ENABLED or TUNING.HOF_IS_NET_ENABLED then
+if WORLD_TILES.TIDALMARSH ~= nil and WORLD_TILES.FIELDS ~= nil and 
+WORLD_TILES.SWIRLGRASSMONO ~= nil and WORLD_TILES.PINKSTONE ~= nil then
 	ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_PARKFIELD, WORLD_TILES.SWIRLGRASSMONO, true)
 	ChangeTileRenderOrder(WORLD_TILES.QUAGMIRE_CITYSTONE, WORLD_TILES.PINKSTONE,      true)
 	ChangeTileRenderOrder(WORLD_TILES.HOF_TIDALMARSH,     WORLD_TILES.TIDALMARSH,     true)

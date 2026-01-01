@@ -73,6 +73,14 @@ local function OnLoad(inst, data)
 	end
 end
 
+local function GetFishKey(inst)
+	return inst.prefab
+end
+
+local function fishresearchfn(inst)
+	return inst:GetFishKey()
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -98,6 +106,9 @@ local function fn()
 	inst:AddTag("smalloceancreature")
 	inst:AddTag("antchovy")
 	inst:AddTag("weighable_fish")
+	inst:AddTag("fishresearchable")
+	
+	inst.GetFishKey = GetFishKey
 
 	inst.entity:SetPristine()
 
@@ -114,6 +125,9 @@ local function fn()
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
+	
+	inst:AddComponent("fishresearchable")
+	inst.components.fishresearchable:SetResearchFn(fishresearchfn)
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_TINYITEM

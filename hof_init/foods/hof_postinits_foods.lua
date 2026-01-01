@@ -1,12 +1,51 @@
 -- Common Dependencies.
-local _G              = GLOBAL
-local require         = _G.require
-local resolvefilepath = _G.resolvefilepath
-local ACTIONS         = _G.ACTIONS
-local STRINGS         = _G.STRINGS
-local SpawnPrefab     = _G.SpawnPrefab
+local _G                  = GLOBAL
+local require             = _G.require
+local resolvefilepath     = _G.resolvefilepath
+local ACTIONS             = _G.ACTIONS
+local STRINGS             = _G.STRINGS
+local SpawnPrefab         = _G.SpawnPrefab
 
 local HOF_ALCOHOLICDRINKS = GetModConfigData("ALCOHOLICDRINKS")
+
+--[[
+local HOF_FOODRECIPES     = {}
+
+for k, v in pairs(_G.MergeMaps(require("hof_foodrecipes"), require("hof_foodrecipes_seasonal"), require("hof_foodrecipes_warly"))) do 
+	HOF_FOODRECIPES[k]    = v
+end
+
+-- Fix for showing foods on Portable Seasoning Station.
+local function PortbaleSpicerPostInit(inst)
+	local function ShowProduct(inst)
+		local product = inst.components.stewer.product
+		local recipe = cooking.GetRecipe(inst.prefab, product)
+			
+		if recipe ~= nil then
+			product = recipe.basename or product
+		end
+
+		local hofrecipe = HOF_FOODRECIPES[product]
+		
+		if hofrecipe ~= nil then
+			local build = hofrecipe.overridebuild or product
+			inst.AnimState:OverrideSymbol("swap_cooked", build, product)
+		end
+	end
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+		
+	local _continuedonefn = inst.components.stewer.oncontinuedone
+	local _donecookfn = inst.components.stewer.ondonecooking
+		
+	inst.components.stewer.oncontinuedone = function(inst) _continuedonefn(inst) ShowProduct(inst) end
+	inst.components.stewer.ondonecooking = function(inst) _donecookfn(inst) ShowProduct(inst) end
+end
+
+AddPrefabPostInit("portablespicer", PortbaleSpicerPostInit)
+]]--
 
 local spices =
 {
@@ -267,33 +306,6 @@ for k, v in pairs(honeyed_foods) do
 	end
 end
 
--- Easter Egg for Pretzel. @Pep drew 2 sprites for it, would be a waste to not utilize both.
--- Basically Pretzel has a chance to be with a different sprite.
-local function PretzelHeartPostinit(inst)
-	local function ChangePretzelImage(inst)
-		inst.AnimState:PlayAnimation("idle2")
-		inst.AnimState:PushAnimation("idle2")
-
-		if inst.components.inventoryitem ~= nil then
-			inst.components.inventoryitem:ChangeImageName("pretzel_heart")
-		end
-	end
-
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-
-	if math.random() < 0.20 then
-		inst:DoTaskInTime(0, ChangePretzelImage)
-	end
-end
-
-AddPrefabPostInit("pretzel", PretzelHeartPostinit)
-
-for k, s in pairs(spices) do
-	AddPrefabPostInit("pretzel_spice_"..s, PretzelHeartPostinit)
-end
-
 local function MeatPostInit(inst)
 	inst:AddTag("sliceable")
 
@@ -303,6 +315,18 @@ local function MeatPostInit(inst)
 	
 	inst:AddComponent("sliceable")
 	inst.components.sliceable:SetProduct("smallmeat")
+	inst.components.sliceable:SetSliceSize(2)
+end
+
+local function MeatDriedPostInit(inst)
+	inst:AddTag("sliceable")
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("sliceable")
+	inst.components.sliceable:SetProduct("smallmeat_dried")
 	inst.components.sliceable:SetSliceSize(2)
 end
 
@@ -330,9 +354,23 @@ local function FishMeatPostInit(inst)
 	inst.components.sliceable:SetSliceSize(2)
 end
 
+local function FishMeatDriedPostInit(inst)
+	inst:AddTag("sliceable")
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("sliceable")
+	inst.components.sliceable:SetProduct("fishmeat_small_dried")
+	inst.components.sliceable:SetSliceSize(2)
+end
+
 AddPrefabPostInit("meat", MeatPostInit)
+AddPrefabPostInit("meat_dried", MeatDriedPostInit)
 AddPrefabPostInit("drumstick", DrumstickPostInit)
 AddPrefabPostInit("fishmeat", FishMeatPostInit)
+AddPrefabPostInit("fishmeat_dried", FishMeatDriedPostInit)
 
 -- Make dried foods valid for Salt Box and Polar Bearger Bin.
 local dried_foods =
@@ -342,6 +380,8 @@ local dried_foods =
 	"monstermeat_dried",
 	"kelp_dried",
 	"humanmeat_dried",
+	"fishmeat_small_dried",
+	"fishmeat_dried",
 }
 
 local function DriedPostInit(inst)

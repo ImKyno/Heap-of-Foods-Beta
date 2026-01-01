@@ -362,10 +362,10 @@ function c_hofsammywagon()
 
 		mermcart.Transform:SetPosition(x, 0, z)
 		
-		TheNet:Announce("Successfully spawned: Sammy's Wagon. Near: Sammy's Emporium.")
+		TheNet:Announce("Heap of Foods Mod - Successfully spawned: Sammy's Wagon. Near: Sammy's Emporium.")
 	else
-		TheNet:Announce("Could not spawn: Sammy's Wagon. Reason: Missing Sammy's Emporium.")
-		TheNet:Announce("Please Retrofit your world at Mod Configuration using option: Mermhuts.")
+		TheNet:Announce("Heap of Foods Mod - Could not spawn: Sammy's Wagon. Reason: Missing Sammy's Emporium.")
+		TheNet:Announce("Heap of Foods Mod - Please Retrofit your world at Mod Configuration using option: Mermhuts.")
 	end
 end
 
@@ -434,14 +434,14 @@ function c_hofareaaware(start)
 				print(player.components.areaaware:GetDebugString())
 			end)
 			
-			TheNet:Announce("Areaaware Debugging Started.")
+			TheNet:Announce("Heap of Foods Mod - Areaaware Debugging Started.")
 		else
 			if player.areatask ~= nil then
 				player.areatask:Cancel()
 				player.areatask = nil
 			end
 			
-			TheNet:Announce("Areaaware Debugging Stopped.")
+			TheNet:Announce("Heap of Foods Mod - Areaaware Debugging Stopped.")
 		end
 	end
 end
@@ -730,8 +730,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 	-- Can't this be removed by this function already?
 	TheNet:SendRemoteExecute('c_removeall("kyno_pebblecrab_spawner")')
 	TheNet:SendRemoteExecute('c_removeall("kyno_meadowflup_spawner")')
-	TheNet:Announce(layoutname.." Successfully removed. Please save and restart the world to perform Retrofitting.")
-	print("Heap of Foods Mod - Island Removed! | Prefabs removed: "..removed_ents)
+	TheNet:Announce("Heap of Foods Mod - "..layoutname.." Successfully removed. Please save and restart the world to perform Retrofitting.")
 end
 
 -- Deprecated stuff. Reference only.
@@ -832,6 +831,116 @@ function c_hoftestclothing(item)
 
 			local equipment = c_spawn(item)
 			character.components.inventory:Equip(equipment)
+		end
+	end
+end
+
+function c_hoftestfishregistry(who)
+	local player = UserToPlayer(who) or ConsoleCommandPlayer()
+    
+	local FISHES = require("prefabs/k_fishregistrydefs").FISHREGISTRY_FISH_DEFS
+	local ROES = require("prefabs/k_fishregistrydefs").FISHREGISTRY_ROE_DEFS
+
+	local MAX_SLOTS = 9
+	local SLOT_COUNT = 0
+	local treasurechest = nil
+
+	if player ~= nil then
+		local x, y, z = player.Transform:GetWorldPosition()
+		local offset = 0
+
+		c_select(player)
+		
+		player.components.inventory:Equip(c_spawn("krampus_sack",         nil, true))
+		player.components.inventory:Equip(c_spawn("kyno_fishregistryhat", nil, true))
+
+		local function SpawnNewChest()
+			treasurechest = SpawnPrefab("treasurechest")
+			treasurechest.Transform:SetPosition(x + offset, y, z)
+		
+			SLOT_COUNT = 0
+			offset = offset + 2
+		end
+
+		local function GivePrefab(prefab)
+			if SLOT_COUNT >= MAX_SLOTS then
+				SpawnNewChest()
+			end
+
+			if treasurechest ~= nil and treasurechest.components.container ~= nil then
+				local item = SpawnPrefab(prefab)
+				item.Transform:SetPosition(treasurechest.Transform:GetWorldPosition())
+				
+				if item ~= nil then
+					treasurechest.components.container:GiveItem(item)
+					SLOT_COUNT = SLOT_COUNT + 1
+				end
+			end
+		end
+
+		SpawnNewChest()
+
+		for fish_prefab, _ in pairs(FISHES) do
+			GivePrefab(fish_prefab)
+		end
+
+		for roe_prefab, _ in pairs(ROES) do
+			GivePrefab(roe_prefab)
+		end
+	end
+end
+
+function c_hofrecipe(recipename)
+	local player = ConsoleCommandPlayer()
+
+	local recipe_sources = 
+	{
+		"hof_foodrecipes",
+		"hof_foodrecipes_warly",
+		"hof_foodrecipes_item",
+		"hof_foodrecipes_seasonal",
+		"hof_foodrecipes_keg",
+		"hof_foodrecipes_jar",
+	}
+
+	local recipe
+	local source_name
+
+	for _, path in ipairs(recipe_sources) do
+		local ok, recipes = pcall(require, path)
+		
+		if ok and recipes and recipes[recipename] then
+			recipe = recipes[recipename]
+			source_name = path
+			break
+		end
+	end
+
+	if not recipe then
+		TheNet:Announce("Heap of Foods Mod - Recipe not found!")
+		return
+	end
+
+	if not recipe.card_def or not recipe.card_def.ingredients then
+		TheNet:Announce("Heap of Foods Mod - This Recipe doesn't have a proper Recipe Card!")
+		return
+	end
+
+	if player ~= nil then
+		for _, data in ipairs(recipe.card_def.ingredients) do
+			local prefab = data[1]
+			local amount = data[2] or 1
+
+			for i = 1, amount do
+				local item = SpawnPrefab(prefab)
+				item.Transform:SetPosition(player.Transform:GetWorldPosition())
+				
+				if item then
+					player.components.inventory:GiveItem(item)
+				else
+					TheNet:Announce("Heap of Foods Mod - Couldn't give ingredients for Recipe!")
+				end
+			end
 		end
 	end
 end

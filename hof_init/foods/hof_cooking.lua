@@ -10,10 +10,11 @@ require("craftpot/ingredienttags")
 -- New Vanilla Crock Pot Ingredients.
 AddIngredientValues({"slurtle_shellpieces"}, 	     {shell      = 1, 	 elemental  = 1})
 AddIngredientValues({"rabbit"}, 				     {rabbit     = 1})
-AddIngredientValues({"firenettles"}, 			     {veggie     = 0.5})
-AddIngredientValues({"foliage"}, 				     {veggie     = 0.25, foliage    = 1})
-AddIngredientValues({"foliage_dried"},               {veggie     = 0.25, foliage    = 1})
-AddIngredientValues({"succulent_picked"}, 		     {veggie     = 0.25, foliage    = 1,    succulent = 1}, false, true)
+AddIngredientValues({"firenettles"}, 			     {veggie     = 0.25, fireweed   = 1,    decoration = 1}, false, true)
+AddIngredientValues({"tillweed"},                    {veggie     = 0.25, tillweed   = 1,    decoration = 1}, false, true)
+AddIngredientValues({"forgetmelots"},                {veggie     = 0.25, forgetweed = 1,    decoration = 1}, false, true)
+AddIngredientValues({"foliage"}, 				     {veggie     = 0.25, foliage    = 1},                    false, true)
+AddIngredientValues({"succulent_picked"}, 		     {veggie     = 0.25, foliage    = 1,    succulent  = 1}, false, true)
 AddIngredientValues({"petals"}, 				     {decoration = 1})
 AddIngredientValues({"petals_evil"},                 {decoration = 1})
 AddIngredientValues({"gears"}, 					     {gears      = 1})
@@ -36,7 +37,6 @@ AddIngredientValues({"blue_cap"},                    {veggie     = 0.5,  mushroo
 AddIngredientValues({"moon_cap"},                    {veggie     = 0.5,  mushrooms  = 1},                          true)
 AddIngredientValues({"livinglog"},                   {inedible   = 1,    magic      = 1})
 AddIngredientValues({"spider"},                      {monster    = 1,    spider     = 1})
-AddIngredientValues({"tillweed"},                    {veggie     = 0.5,  weed       = 1})
 AddIngredientValues({"wagpunk_bits"}, 			     {junk       = 1})
 AddIngredientValues({"butter"},                      {fat        = 1,    dairy      = 1,    butter    = 1})
 AddIngredientValues({"baconeggs"},                   {prepfood   = 1}) -- Could use meat tag, but I don't want people using this as "filler" lol.
@@ -243,38 +243,10 @@ for _, recipe in pairs(seasonal_recipes) do if recipe.card_def then table.insert
 for _, recipe in pairs(item_recipes)     do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, cooker_name = "cookpot"}) end end
 for _, recipe in pairs(warly_recipes)    do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, cooker_name = "portablecookpot"}) end end
 
--- Previous dirty fix don't work anymore, will be using this one for now...
-local testfoods = {}
-for k, v in pairs(_G.MergeMaps(require("hof_foodrecipes"), require("hof_foodrecipes_seasonal"), require("hof_foodrecipes_warly"))) do 
-	testfoods[k] = true 
-end
-
-AddPrefabPostInit("portablespicer", function(inst)
-	if _G.TheWorld.ismastersim then	
-		local function ShowProduct(inst)
-			local product = inst.components.stewer.product
-			local recipe = cooking.GetRecipe(inst.prefab, product)
-			
-			if recipe ~= nil then
-				product = recipe.basename or product
-			end
-			
-			if testfoods[product] then
-				inst.AnimState:OverrideSymbol("swap_cooked", product, product)
-			end
-		end
-		
-		local _continuedonefn = inst.components.stewer.oncontinuedone
-		local _donecookfn = inst.components.stewer.ondonecooking
-		
-		inst.components.stewer.oncontinuedone = function(inst) _continuedonefn(inst) ShowProduct(inst) end
-		inst.components.stewer.ondonecooking = function(inst) _donecookfn(inst) ShowProduct(inst) end
-	end
-end)
-
 -- Inject Warly recipes in Chef's Specials page instead of Mod Recipes page in the Cookbook.
 -- I'm not sure if this can lead to problems in the future, will leave it on for now.
 local HOF_WARLYRECIPES = GetModConfigData("WARLYRECIPES")
+
 if HOF_WARLYRECIPES then
 	for k, recipe in pairs(warly_recipes) do
 		cooking.cookbook_recipes["mod"][k] = nil

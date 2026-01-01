@@ -165,6 +165,9 @@ STRINGS_INGREDIENTS_JELLYFISH = "水母"
 STRINGS_INGREDIENTS_JELLYFISH2 = "彩虹水母"
 STRINGS_INGREDIENTS_SWORDFISH = "剑鱼"
 STRINGS_INGREDIENTS_SUCCULENT = "多肉植物"
+STRINGS_INGREDIENTS_FIREWEED = "Fire Nettle Fronds"
+STRINGS_INGREDIENTS_FORGETWEED = "Forget-Me-Lots"
+STRINGS_INGREDIENTS_TILLWEED = "Tillweeds"
 
 STRINGS.KYNO_HARVEST_SUGARTREE = "收获糖木树"
 STRINGS.KYNO_HARVEST_SUGARTREE_RUINED = "收获感染的糖木树"
@@ -199,6 +202,7 @@ STRINGS.ACTIONS.LEARNRECIPECARD = "添加到烹饪指南"
 STRINGS.ACTIONS.LEARNRECIPECARD2 = "添加到酿造手册"
 STRINGS.ACTIONS.BREEDFISH = "品种"
 STRINGS.ACTIONS.MAKEPOPCORN = "制作爆玉米花"
+STRINGS.ACTIONS.FISHREGISTRY_RESEARCH = "Research"
 
 -- Edited strings for skill trees.
 STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "在蘑菇农场中种植的蘑菇生长速度更快。\n学习如何在蘑菇农场中种植新种类的蘑菇。"
@@ -544,6 +548,63 @@ STRINGS.MEADOWISLANDTRADER_STARTDANCING =
 	"陌生人，你可真会让我心情变好！",
 	"跳吧，跳吧，宝贝！",
 	"派对时间到啦！",
+}
+
+STRINGS.FISHREGISTRY =
+{
+	TAB_FISH = "Fishes",
+	TAB_ROE = "Roes",
+	
+	MYSTERY_FISH = "Unknown Fish",
+	MISSING_FISH = "Missing Fish",
+	
+	MYSTERY_ROE = "Unknown Roe",
+	MISSING_ROE = "Missing Roe",
+	
+	MYSTERY_BABY = "Unknown Offspring",
+	MISSING_BABY = "Missing Offspring",
+	
+	MISSING_ROE_TIME = "Missing Roe Time",
+	MISSING_BABY_TIME = "Missing Offspring Time",
+	
+	PHASE_DAY = "Day",
+	PHASE_DUSK = "Dusk",
+	PHASE_NIGHT = "Night",
+	
+	MOONPHASE_NEW = "New Moon",
+	MOONPHASE_QUARTER = "Quarter Moon",
+	MOONPHASE_HALF = "Half Moon",
+	MOONPHASE_THREEQUARTER = "Three Quarter Moon",
+	MOONPHASE_FULL = "Full Moon",
+	MOONPHASE_GLASSED = "Moonstorm",
+	
+	SEASON_AUTUMN = "Autumn",
+	SEASON_WINTER = "Winter",
+	SEASON_SPRING = "Spring",
+	SEASON_SUMMER = "Summer",
+	
+	WORLD_FOREST = "Forest",
+	WORLD_CAVE = "Caves",
+	
+	ROE_TIME = "Roe Time",
+	BABY_TIME = "Offspring Time",
+	
+	ROE_TIME_HALF_DAY = "About half a day",
+	ROE_TIME_ONE_DAY = "About a day",
+	ROE_TIME_ONE_HALF_DAY = "More than a day",
+	ROE_TIME_TWO_DAY = "About 2 days",
+	ROE_TIME_THREE_DAY = "About 3 days",
+	ROE_TIME_MORE_DAY = "More than 3 days",
+	
+	BABY_TIME_HALF_DAY = "About half a day",
+	BABY_TIME_ONE_DAY = "About a day",
+	BABY_TIME_ONE_HALF_DAY = "More than a day",
+	BABY_TIME_TWO_DAY = "About 2 days",
+	BABY_TIME_THREE_DAY = "About 3 days",
+	BABY_TIME_FOUR_DAY = "About 4 days",
+	BABY_TIME_FIVE_DAY = "About 5 days",
+	BABY_TIME_SIX_DAY = "About 6 days",
+	BABY_TIME_MORE_DAY = "More than 6 days",
 }
 
 STRINGS.CHARACTERS.GENERIC.ANNOUNCE_KYNO_COFFEEBUFF_START = "快！"
@@ -1535,6 +1596,42 @@ STRINGS.CHARACTERS.WARLY.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "太棒了！�
 STRINGS.CHARACTERS.WURT.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "蛋糕做好啦！开派对啦， 浮浪噗！"
 STRINGS.CHARACTERS.WALTER.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "蛋糕完成啦！这绝对会是史上最棒的庆祝活动！"
 STRINGS.CHARACTERS.WANDA.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "正好！趁着这美好时光尚未溜走，让我们尽情享受吧。"
+
+STRINGS.CHARACTERS.GENERIC.ANNOUNCE_KYNO_FISH_RESEARCHED = "I've learned something new about this fish."
+STRINGS.CHARACTERS.WILLOW.ANNOUNCE_KYNO_FISH_RESEARCHED = "Heh. I poked at the fish until it made sense."
+STRINGS.CHARACTERS.WOLFGANG.ANNOUNCE_KYNO_FISH_RESEARCHED = "Wolfgang now knows much about tiny water meat!"
+STRINGS.CHARACTERS.WENDY.ANNOUNCE_KYNO_FISH_RESEARCHED = "Its secrets surface, as all things eventually do."
+STRINGS.CHARACTERS.WX78.ANNOUNCE_KYNO_FISH_RESEARCHED = "ANALYSIS COMPLETE. FISH DATA ACQUIRED."
+STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_KYNO_FISH_RESEARCHED = "Fascinating. This species yields new insights."
+STRINGS.CHARACTERS.WOODIE.ANNOUNCE_KYNO_FISH_RESEARCHED = "Well, ain't that somethin'. Learned a thing or two."
+STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KYNO_FISH_RESEARCHED = "Knowledge, even from a fish, has its uses."
+STRINGS.CHARACTERS.WATHGRITHR.ANNOUNCE_KYNO_FISH_RESEARCHED = "I have studied the ways of this sea-beast!"
+STRINGS.CHARACTERS.WEBBER.ANNOUNCE_KYNO_FISH_RESEARCHED = "We figured it out together!"
+STRINGS.CHARACTERS.WINONA.ANNOUNCE_KYNO_FISH_RESEARCHED = "Huh. Guess this fish taught me somethin' useful."
+STRINGS.CHARACTERS.WORTOX.ANNOUNCE_KYNO_FISH_RESEARCHED = "A fishy secret revealed! Hyuyu!"
+STRINGS.CHARACTERS.WORMWOOD.ANNOUNCE_KYNO_FISH_RESEARCHED = "Glub Glub Told Me Things!"
+STRINGS.CHARACTERS.WARLY.ANNOUNCE_KYNO_FISH_RESEARCHED = "Ah! Now I truly understand this ingredient."
+STRINGS.CHARACTERS.WURT.ANNOUNCE_KYNO_FISH_RESEARCHED = "Friend secrets learned!!"
+STRINGS.CHARACTERS.WALTER.ANNOUNCE_KYNO_FISH_RESEARCHED = "Cool! I learned a lot about this fish."
+STRINGS.CHARACTERS.WANDA.ANNOUNCE_KYNO_FISH_RESEARCHED = "Good. One less fish wasting my time."
+
+STRINGS.CHARACTERS.GENERIC.ANNOUNCE_KYNO_ROE_RESEARCHED = "I've learned something new about this roe."
+STRINGS.CHARACTERS.WILLOW.ANNOUNCE_KYNO_ROE_RESEARCHED = "Fish eggs, huh? Still learned something."
+STRINGS.CHARACTERS.WOLFGANG.ANNOUNCE_KYNO_ROE_RESEARCHED = "Wolfgang understands tiny fish eggs now!"
+STRINGS.CHARACTERS.WENDY.ANNOUNCE_KYNO_ROE_RESEARCHED = "So much life, never meant to be."
+STRINGS.CHARACTERS.WX78.ANNOUNCE_KYNO_ROE_RESEARCHED = "EGG ANALYSIS COMPLETE. DATA ACQUIRED."
+STRINGS.CHARACTERS.WICKERBOTTOM.ANNOUNCE_KYNO_ROE_RESEARCHED = "Roe contains remarkable biological properties."
+STRINGS.CHARACTERS.WOODIE.ANNOUNCE_KYNO_ROE_RESEARCHED = "Guess even fish eggs got somethin' to teach."
+STRINGS.CHARACTERS.WAXWELL.ANNOUNCE_KYNO_ROE_RESEARCHED = "Potential, wasted in such a fragile form."
+STRINGS.CHARACTERS.WATHGRITHR.ANNOUNCE_KYNO_ROE_RESEARCHED = "Unborn warriors of the sea, studied well!"
+STRINGS.CHARACTERS.WEBBER.ANNOUNCE_KYNO_ROE_RESEARCHED = "We learned about the baby fish stuff!"
+STRINGS.CHARACTERS.WINONA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Not pretty, but useful. Knowledge is knowledge."
+STRINGS.CHARACTERS.WORTOX.ANNOUNCE_KYNO_ROE_RESEARCHED = "Eggy secrets! Hyuyu!"
+STRINGS.CHARACTERS.WORMWOOD.ANNOUNCE_KYNO_ROE_RESEARCHED = "Now Know About Little Glub Glubs"
+STRINGS.CHARACTERS.WARLY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Ah! Such delicate potential in these eggs."
+STRINGS.CHARACTERS.WURT.ANNOUNCE_KYNO_ROE_RESEARCHED = "Fish babies secrets! Glurp!"
+STRINGS.CHARACTERS.WALTER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Guess I know more about fish eggs now."
+STRINGS.CHARACTERS.WANDA.ANNOUNCE_KYNO_ROE_RESEARCHED = "So much future, all at once."
 
 STRINGS.NAMES.KYNO_ROE = "鱼卵"
 STRINGS.NAMES.KYNO_ROE_PONDFISH = "淡水鱼卵"
@@ -12716,3 +12813,23 @@ STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "太独特了！�
 STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "只有萨米戴这个？真走运，浮浪噗！"
 STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "来自我们特别小伙伴的特别装备！"
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "时光眷顾那些独具风格之人，比如萨米。"
+
+STRINGS.NAMES.KYNO_FISHREGISTRYHAT = "Angler Hat"
+STRINGS.RECIPE_DESC.KYNO_FISHREGISTRYHAT = "Every sailor needs to know what's biting the hook."
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_FISHREGISTRYHAT = "It's a practical hat for a dedicated fisherman."
+STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_FISHREGISTRYHAT = "Guess I gotta know my fish before I burn them."
+STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_FISHREGISTRYHAT = "Hat makes Wolfgang smarter about tiny fishes!"
+STRINGS.CHARACTERS.WENDY.DESCRIBE.KYNO_FISHREGISTRYHAT = "It records the lives that drift silently beneath the waves."
+STRINGS.CHARACTERS.WX78.DESCRIBE.KYNO_FISHREGISTRYHAT = "HEADWEAR ENABLES INCREASED ICHTHYOLOGICAL KNOWLEDGE"
+STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.KYNO_FISHREGISTRYHAT = "A useful headwear for the systematic study of fish species."
+STRINGS.CHARACTERS.WOODIE.DESCRIBE.KYNO_FISHREGISTRYHAT = "Helps me keep track of all the different kinds of fish."
+STRINGS.CHARACTERS.WAXWELL.DESCRIBE.KYNO_FISHREGISTRYHAT = "Knowledge is power. Even when it concerns fish."
+STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.KYNO_FISHREGISTRYHAT = "A thinking hat for those who face the creatures of the sea!"
+STRINGS.CHARACTERS.WEBBER.DESCRIBE.KYNO_FISHREGISTRYHAT = "We can learn all about fish with this!"
+STRINGS.CHARACTERS.WINONA.DESCRIBE.KYNO_FISHREGISTRYHAT = "Good for learning patterns. Fish got plenty of 'em."
+STRINGS.CHARACTERS.WORTOX.DESCRIBE.KYNO_FISHREGISTRYHAT = "A thinking cap for fishy facts! Hyuyu!"
+STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.KYNO_FISHREGISTRYHAT = "Fish Knowing Hat"
+STRINGS.CHARACTERS.WARLY.DESCRIBE.KYNO_FISHREGISTRYHAT = "Understanding fish is the first step to cooking them well."
+STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_FISHREGISTRYHAT = "Hat helps learn about fish-friends! florp!"
+STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_FISHREGISTRYHAT = "Great for writing down what kind of fish you find."
+STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_FISHREGISTRYHAT = "At least this helps me remember what I've already learned."

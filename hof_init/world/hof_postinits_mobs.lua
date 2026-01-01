@@ -421,8 +421,8 @@ AddPrefabPostInit("crabking_mob_knight", function(inst) ReplaceLoot(inst.prefab,
 local pollinators = 
 {
 	"bee",
-	"butterfly",
-	"medal_bee", -- For mod compatibility: 能力勋章 Functional Medal.
+	-- "butterfly", -- Only Sugarflies and Bees can pollinate Sugar Flowers.
+	"medal_bee", -- Mod compatibility: 能力勋章 Functional Medal.
 }
 
 local function PollinatorPostIint(inst)
@@ -720,6 +720,10 @@ local function MonkeyQueenPostInit(inst)
 end
 
 AddPrefabPostInit("monkeyqueen", MonkeyQueenPostInit)
+
+-- Mosslings, Moose Goose and Bearger can now eat GOODIES.
+table.insert(_G.FOODGROUP.MOOSE.types, _G.FOODTYPE.GOODIES)
+table.insert(_G.FOODGROUP.BEARGER.types, _G.FOODTYPE.GOODIES)
 
 -- Leonidas remember me to not put LootTables inside postinit again, otherwise it will 
 -- increase the drop by +1 each time the entity spawns.

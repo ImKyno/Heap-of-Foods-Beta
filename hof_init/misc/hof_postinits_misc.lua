@@ -1056,24 +1056,18 @@ AddComponentPostInit("container", function(self)
 	local _OnUpdate = self.OnUpdate
 
 	function self:OnUpdate(dt)
-		if self.opencount == 0 then
-			self.inst:StopUpdatingComponent(self)
-			return
+		local old_distance = nil
+
+		if self.inst:HasTag("fishhatchery") then
+			old_distance = _G.CONTAINER_AUTOCLOSE_DISTANCE
+			_G.CONTAINER_AUTOCLOSE_DISTANCE = 6
 		end
 
-		for opener, _ in pairs(self.openlist) do
-			if self.inst ~= nil and self.inst:HasTag("fishhatchery") then
-				local old_distance = _G.CONTAINER_AUTOCLOSE_DISTANCE
-				_G.CONTAINER_AUTOCLOSE_DISTANCE = 6
+		_OnUpdate(self, dt)
 
-				_OnUpdate(self, dt)
-				_G.CONTAINER_AUTOCLOSE_DISTANCE = old_distance
-				
-				return
-			end
+		if old_distance ~= nil then
+			_G.CONTAINER_AUTOCLOSE_DISTANCE = old_distance
 		end
-
-		return _OnUpdate(self, dt)
 	end
 end)
 
@@ -1143,6 +1137,36 @@ AddComponentPostInit("stewer", function(self)
 		end
 
 		return result
+	end
+end)
+
+-- Pollinators will also target Sugar Flowers as well.
+AddComponentPostInit("pollinator", function(self)
+	local _CanPollinate = self.CanPollinate
+	
+	function self:CanPollinate(flower, ...)
+		local FLOWER_TAGS = { "flower", "sugarflower" }
+
+		if self.inst:HasTag("sugarflowerpollinator") then -- Both Flowers.
+			return flower ~= nil and flower:HasOneOfTags(FLOWER_TAGS) and not table.contains(self.flowers, flower)
+		elseif self.inst:HasTag("sugarflowerpollinatoronly") then -- Only Sugar Flowers.
+			return flower ~= nil and flower:HasTag("sugarflower") and not table.contains(self.flowers, flower)
+		else
+			return _CanPollinate(self, flower, ...)
+		end
+	end
+end)
+
+-- Can't aggro players that are stealthed.
+AddComponentPostInit("combat", function(self)
+	local _SetTarget = self.SetTarget
+
+	function self:SetTarget(target)
+		if target ~= nil and target:HasTag("player") and target:HasTag("stealthed") then
+			return false
+		end
+
+		return _SetTarget(self, target)
 	end
 end)
 
@@ -1313,6 +1337,37 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 	
 	self:ToggleEnchantedFX()
 	self:ToggleShadow2FX()
+end)
+
+-- Fish Registry player extension.
+local function OnLearnFish(inst, data)
+	local fishregistryupdater = data ~= nil and inst.components.fishregistryupdater
+    
+	if fishregistryupdater then
+		fishregistryupdater:LearnFish(data.fish)
+	end
+end
+
+local function OnLearnRoe(inst, data)
+	local fishregistryupdater = data ~= nil and inst.components.fishregistryupdater
+    
+	if fishregistryupdater then
+		fishregistryupdater:LearnRoe(data.roe)
+	end
+end
+
+AddPlayerPostInit(function(inst)
+	inst:AddComponent("fishregistryupdater")
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst.OnLearnFish = OnLearnFish
+	inst.OnLearnRoe = OnLearnRoe
+	
+	inst:ListenForEvent("learnfish", inst.OnLearnFish)
+	inst:ListenForEvent("learnroe", inst.OnLearnRoe)
 end)
 
 -- HAHAHAHA YOU CAN'T EDIT SKILLTREE STRINGS WITH REGULAR METHODS 💀💀

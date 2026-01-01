@@ -18,21 +18,24 @@ local function makefn(bankname, buildname, animname, tag)
 		inst.AnimState:SetBuild(buildname)
 		inst.AnimState:PlayAnimation(animname)
 		
-		inst:AddTag("DECOR")
+		inst:AddTag("FX")
 		
-        if tag ~= nil then
-            inst:AddTag(tag)
-        end
-		
-		inst:SetPrefabNameOverride("ROCKS")
-        
 		inst.entity:SetPristine()
+		
+		if not TheWorld.ismastersim then
+			inst.OnEntityReplicated = function(inst) -- To hook up highlightchildren on clients.
+				local parent = inst.entity:GetParent()
+				
+				if parent ~= nil and parent.prefab == "kyno_fishfarmplot" then
+					parent.highlightchildren = parent.highlightchildren or {}
+					table.insert(parent.highlightchildren, inst)
+				end
+			end
 
-        if not TheWorld.ismastersim then
-            return inst
-        end
-
-		inst:AddComponent("inspectable")
+			return inst
+		end
+		
+		inst.persists = false
 
         return inst
     end
@@ -44,4 +47,5 @@ end
 
 return item("kyno_fishfarmplot_rock1", "farm_decor", "farm_decor", "1"),
 item("kyno_fishfarmplot_rock2", "farm_decor", "farm_decor", "2"),
-item("kyno_fishfarmplot_rock3", "farm_decor", "farm_decor", "8")
+item("kyno_fishfarmplot_rock3", "farm_decor", "farm_decor", "8"),
+item("kyno_fishfarmplot_plant", "marsh_plant", "marsh_plant", "idle")

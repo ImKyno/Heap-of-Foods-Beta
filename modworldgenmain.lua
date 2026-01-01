@@ -48,6 +48,12 @@ _G.DECIDUOUSFOREST_SHOP_GROUNDS          =
 	WORLD_TILES.GRASS,                   -- 4
 }
 
+-- Tile replacements if TAP or NET is enabled.
+if WORLD_TILES.TIDALMARSH ~= nil and WORLD_TILES.FIELDS ~= nil then
+	_G.MEADOWISLAND_GROUNDS[3] = WORLD_TILES.FIELDS
+	_G.MEADOWISLAND_GROUNDS[4] = WORLD_TILES.TIDALMARSH
+end
+
 Layouts["SerenityIsland"]                = StaticLayout.Get("map/static_layouts/hof_serenityisland2",
 {
 	start_mask                           = PLACE_MASK.IGNORE_IMPASSABLE,

@@ -1,11 +1,11 @@
 local function OnTick(inst, target)
-    if target.components.health ~= nil and
-        not target.components.health:IsDead() and
-        not target:HasTag("playerghost") then
-		target.components.sanity:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
-    else
-        inst.components.debuff:Stop()
-    end
+	if target.components.sanity ~= nil then
+		if target.components.health ~= nil and not target.components.health:IsDead() and not target:HasTag("playerghost") then
+			target.components.sanity:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
+		else
+			inst.components.debuff:Stop()
+		end
+	end
 end
 
 local function OnAttached(inst, target)

@@ -1,6 +1,7 @@
 local assets = 
 {
 	Asset("ANIM", "anim/kyno_jellyfish.zip"),
+	Asset("ANIM", "anim/kyno_jellyfish2.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_jellyfish.zip"),
 	
 	Asset("ANIM", "anim/trophyscale_fish_kyno_jellyfish.zip"),
@@ -165,6 +166,14 @@ local function OnPutInInventory(inst, guy)
 	end
 end
 
+local function GetFishKey(inst)
+	return inst.prefab
+end
+
+local function fishresearchfn(inst)
+	return inst:GetFishKey()
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -265,8 +274,11 @@ local function jellyfish()
 	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
 	inst:AddTag("jellyfish")
+	inst:AddTag("fishresearchable")
 	
 	inst.scrapbook_proxy = "kyno_jellyfish_ocean"
+	
+	inst.GetFishKey = GetFishKey
 
 	inst.entity:SetPristine()
 
@@ -280,6 +292,9 @@ local function jellyfish()
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
+	
+	inst:AddComponent("fishresearchable")
+	inst.components.fishresearchable:SetResearchFn(fishresearchfn)
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_jellyfish_cooked"

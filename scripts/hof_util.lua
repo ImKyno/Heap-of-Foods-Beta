@@ -293,3 +293,14 @@ function SpawnWhaleCarcassEnemies(inst, player)
 		-- print("SpawnWhaleCarcassEnemies - No enemies spawned.")
 	end
 end
+
+function ForceCombatGiveUp(player)
+	local x, y, z = player.Transform:GetWorldPosition()
+	local ents = TheSim:FindEntities(x, y, z, 30, { "_combat" }, { "INLIMBO" })
+
+	for _, ent in ipairs(ents) do
+		if ent.components.combat ~= nil and ent.components.combat.target == player then
+			ent.components.combat:GiveUp()
+		end
+	end
+end

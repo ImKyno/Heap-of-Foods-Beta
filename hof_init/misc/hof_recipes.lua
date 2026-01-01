@@ -459,6 +459,16 @@ AddRecipe2("kyno_brainrock_nubbin", {Ingredient("rocks", 6), Ingredient("kyno_br
 )
 SortAfter("kyno_brainrock_nubbin", "dock_woodposts_item", "SEAFARING")
 
+AddRecipe2("kyno_fishregistryhat", {Ingredient("strawhat", 1), Ingredient("oceanfishinglure_spinner_red", 3), Ingredient("kyno_seaweeds", 1, ModAtlas)}, TECH.FISHING_ONE,
+	{
+		atlas               = ModAtlas,
+		image               = "kyno_fishregistryhat.tex",
+	},
+	{"FISHING", "GARDENING"}
+)
+SortAfter("kyno_fishregistryhat", "tacklestation", "FISHING")
+SortAfter("kyno_fishregistryhat", "plantregistryhat", "GARDENING")
+
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
 		builder_tag         = "strongman",
@@ -472,7 +482,7 @@ SortAfter("potatosack2", "mighty_gym", "CHARACTER")
 SortBefore("potatosack2", "icebox", "CONTAINERS")
 SortBefore("potatosack2", "icebox", "COOKING")
 
-AddDeconstructRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)})
+AddDeconstructRecipe("potatosack", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)})
 
 -- Using Bananas instead of Cave Bananas.
 Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingredient("kyno_banana", 1, ModAtlas), Ingredient("cutreeds", 4)}, TECH.NONE,	
@@ -586,8 +596,6 @@ AddCharacterRecipe("transmute_foliage", {Ingredient("succulent_picked", 1)}, TEC
 	}
 )
 SortAfter("transmute_foliage", "transmute_succulent", "CHARACTER")
-
----
 
 AddCharacterRecipe("transmute_blue_cap", {Ingredient("moon_cap", 1)}, TECH.NONE,
 	{

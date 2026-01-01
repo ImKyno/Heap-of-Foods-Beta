@@ -48,6 +48,7 @@ PrefabFiles =
 	"k_fishfarmplot",
 	"k_fishfarmplot_construction",
 	"k_fishfarmplot_decor",
+	"k_fishregistryhat",
 	"k_fishroe",
 	"k_floatilizer",
 	"k_foodbuff_acidimmunity",

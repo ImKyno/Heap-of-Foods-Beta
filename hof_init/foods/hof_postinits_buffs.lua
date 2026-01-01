@@ -103,6 +103,51 @@ if HOF_COFFEEBUFF_ENABLED then
 	for k, v in pairs(tropicalbouillabaisse_spicebuff) do
 		AddPrefabPostInit(v, TropicalBouillabaissePostInit)
 	end
+	
+	--[[
+	local tea_spicebuff =
+	{
+		"tea_spice_garlic",
+		"tea_spice_sugar",
+		"tea_spice_chili",
+		"tea_spice_salt",
+		
+		"tea_spice_cure",
+		"tea_spice_fed",
+		"tea_spice_cold",
+		"tea_spice_fire",
+		"tea_spice_mind",
+		
+		"icedtea_spice_garlic",
+		"icedtea_spice_sugar",
+		"icedtea_spice_chili",
+		"icedtea_spice_salt",
+		
+		"icedtea_spice_cure",
+		"icedtea_spice_fed",
+		"icedtea_spice_cold",
+		"icedtea_spice_fire",
+		"icedtea_spice_mind",
+	}
+	
+	local function TeaPostInit(inst)
+		local function OnEaten(inst, eater)
+			eater:AddDebuff("kyno_teabuff", "kyno_teabuff")
+		end
+		
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+		
+		if inst.components.edible ~= nil then
+			inst.components.edible:SetOnEatenFn(OnEaten)
+		end
+	end
+	
+	for k, v in pairs(tea_spicebuff) do
+		AddPrefabPostInit(v, TeaPostInit)
+	end
+	]]--
 end
 
 if HOF_GIANTSPAWNING then

@@ -349,7 +349,7 @@ function FishFarmManager:GetDebugString()
 	
 	if fish_parent == nil then
 		print("-------------------------------------------------------")
-		print("---- FishFarmManager Debug - Fish Checker Status   ----")
+		print("---- FishFarmManager Debug - Fish Status Checker   ----")
 		print("No Main Fish Found!")
 		print("-------------------------------------------------------")
 		return

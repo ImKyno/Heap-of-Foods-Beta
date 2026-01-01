@@ -1079,7 +1079,7 @@ local function GrottoPoolBigPostInit(inst)
 	inst:AddTag("pond")
 	
 	local function GetFish(inst)
-		return _G.TheWorld.state.iswinter and "kyno_swordfish_blue" or nil
+		return _G.TheWorld.state.iswinter and "kyno_swordfish_blue" or "pondfish" -- Can't be nil.
 	end
 
 	if not _G.TheWorld.ismastersim then
@@ -1160,6 +1160,7 @@ if not TUNING.HOF_IS_TCP_ENABLED then
 		AddPrefabPostInit(v, BeeBoxPostInit)
 	end
 end
+
 -- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
 local FireDetector = require("components/firedetector")
 

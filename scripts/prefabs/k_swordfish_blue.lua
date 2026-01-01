@@ -17,6 +17,20 @@ local prefabs =
 	"kyno_fishmeat_dried",
 }
 
+local MIN_WEIGHT = TUNING.KYNO_SWORDFISH_BLUE_MIN_WEIGHT
+local MAX_WEIGHT = TUNING.KYNO_SWORDFISH_BLUE_MAX_WEIGHT
+
+local function OnDroppedAsLoot(inst, data)
+	if data ~= nil and data.dropper ~= nil then
+		inst.components.weighable.prefab_override_owner = data.dropper.prefab
+	end
+end
+
+local function CalcNewSize()
+	local p = 2 * math.random() - 1
+	return (p * p * p + 1) * 0.5
+end
+
 local function DoFlop(inst)
 	if not inst.components.inventoryitem.canbepickedup then
 		if inst.flop_task ~= nil then
@@ -52,6 +66,14 @@ local function OnPickup(inst)
     end
 end
 
+local function GetFishKey(inst)
+	return inst.prefab
+end
+
+local function fishresearchfn(inst)
+	return inst:GetFishKey()
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -77,6 +99,10 @@ local function fn()
 	inst:AddTag("meat")
 	inst:AddTag("catfood")
 	inst:AddTag("largecreature")
+	-- inst:AddTag("weighable_fish")
+	inst:AddTag("fishresearchable")
+
+	inst.GetFishKey = GetFishKey
 
 	inst.entity:SetPristine()
 
@@ -90,6 +116,14 @@ local function fn()
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
 	inst:AddComponent("murderable")
+	
+	inst:AddComponent("fishresearchable")
+	inst.components.fishresearchable:SetResearchFn(fishresearchfn)
+	
+	-- inst:AddComponent("weighable")
+	-- inst.components.weighable.type = TROPHYSCALE_TYPES.FISH
+	-- inst.components.weighable:Initialize(MIN_WEIGHT, MAX_WEIGHT)
+	-- inst.components.weighable:SetWeight(Lerp(MIN_WEIGHT, MAX_WEIGHT, CalcNewSize()))
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT

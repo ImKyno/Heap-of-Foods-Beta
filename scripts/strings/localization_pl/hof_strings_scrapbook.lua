@@ -46,7 +46,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_QUANTUM = "Unikalny smak Nuka-Coli to 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INSANITY = "Powoduje szaleństwo na krótki czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NIGHTVISION = "Daje widzenie w nocy przez określony czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NAUGHTY = "Spożycie tego jedzenia, stworzonego z części niewinnej duszy, spowoduje pojawienie się „Jego” w pobliżu."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HASTE = "Zwiększona prędkość wszystkich wykonywanych działań przez określony czas. Winona nie korzysta z tego efektu."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HASTE = "Zwiększona prędkość wszystkich wykonywanych działań przez określony czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLOOM = "Mieszanka kompostów wrzuconych do garnka, która może stymulować kwitnienie do jego maksymalnego potencjału.\n\n\"Sztuka!\" - Wormwood."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOUL = "Specjalne jedzenie przygotowane z zebraną Duszą.\n\nWortox może zjeść to jedzenie, aby uzyskać pełne korzyści, bez kar w przeciwieństwie do innych zwykłych jedzeń."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DEERCLOPS = "Zjedzenie tego jedzenia spowoduje pojawienie się Deerclopsa w pobliżu."
@@ -142,7 +142,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SLAUGHTERTOOL = "Narzędzia do rzezi, które natyc
 STRINGS.SCRAPBOOK.SPECIALINFO.SAPHEALER = "Potężny antidotum z właściwościami leczniczymi dla drzew.\n\nUżywając go na zniszczonych drzewach Sugarwood, przywrócisz je do normalnego stanu."
 STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER = "Do krojenia kawałków mięsa i innych przedmiotów."
 STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER2 = "Do krojenia kawałków mięsa i innych przedmiotów, szybciej!"
-STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHAT = "Zmniejsza głód o 15%."
+STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHAT = "Zmniejsza poziom głodu o 15%."
 STRINGS.SCRAPBOOK.SPECIALINFO.POTATOSACK = "Pojemnik na 6 slotów, który może przechowywać przedmioty związane z ziemniakami i utrzymywać je świeże przez dłuższy czas.\n\n„Ziemniaki są dobre dla brzucha!” - Wolfgang."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODSACK = "Wodoodporny pojemnik na 8 slotów, który utrzymuje składniki świeże, bez względu na pogodę.\n\nJego sprytny projekt nie tylko spowalnia psucie się jedzenia, ale może także przywrócić świeżość składnikom, które zaczęły się psuć.\n\nPulsuje magiczną lodową mocą, zamrażając wszystko w środku."
 STRINGS.SCRAPBOOK.SPECIALINFO.BOOK_GARDENING = "Szybko przyspiesza wzrost wszystkich roślin w pobliżu.\n\n„Starożytne tomisko oprawione w żywe korzenie, zakazane z powodu swojej przytłaczającej mocy kształtowania woli natury. Jego strony szepczą zapomniane słowa, które mogą ożywić samą ziemię, zmieniając zwykłą glebę w dziką, tętniącą życiem krainę.” - Nieznany Autor."
@@ -153,6 +153,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Pozostawienie do wyschnięcia na dłu�
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Użyj, aby zapalić Tort Rocznicowy i rozpocząć imprezę!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Umożliwia gromadzenie się w celu świętowania rocznicy.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Specjalny kapelusz rocznicowy Sammy'ego.\nPozwala na zdobycie radości rocznicowej.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Badania ryb i ikry przyczyniają się do wzbogacenia Rejestru Ryb."
 
 -- Stworzenia.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Można karmić nasionami, aby złożyła jajko."

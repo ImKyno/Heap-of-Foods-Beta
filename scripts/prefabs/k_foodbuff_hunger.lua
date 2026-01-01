@@ -1,8 +1,6 @@
 local function OnTick(inst, target)
-	if target.components.hunger then
-		if target.components.health ~= nil and
-			not target.components.health:IsDead() and
-			not target:HasTag("playerghost") then
+	if target.components.hunger ~= nil then
+		if target.components.health ~= nil and not target.components.health:IsDead() and not target:HasTag("playerghost") then
 			target.components.hunger:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
 		else
 			inst.components.debuff:Stop()

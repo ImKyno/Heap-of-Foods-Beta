@@ -42,3 +42,6 @@ AddFoodTag("jellyfish",         { name = STRINGS_INGREDIENTS_JELLYFISH,  atlas =
 AddFoodTag("jellyfish_rainbow", { name = STRINGS_INGREDIENTS_JELLYFISH2, atlas = "images/ingredientimages/hof_ingredientimages.xml" })
 AddFoodTag("swordfish",         { name = STRINGS_INGREDIENTS_SWORDFISH,  atlas = "images/ingredientimages/hof_ingredientimages.xml" })
 AddFoodTag("succulent",         { name = STRINGS_INGREDIENTS_SUCCULENT,  atlas = "images/ingredientimages/hof_ingredientimages.xml" })
+AddFoodTag("fireweed",          { name = STRINGS_INGREDIENTS_FIREWEED,   atlas = "images/ingredientimages/hof_ingredientimages.xml" })
+AddFoodTag("forgetweed",        { name = STRINGS_INGREDIENTS_FORGETWEED, atlas = "images/ingredientimages/hof_ingredientimages.xml" })
+AddFoodTag("tillweed",          { name = STRINGS_INGREDIENTS_TILLWEED,   atlas = "images/ingredientimages/hof_ingredientimages.xml" })
