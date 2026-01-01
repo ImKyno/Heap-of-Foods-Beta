@@ -142,7 +142,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SLAUGHTERTOOL = "Ferramentas de abate que matam in
 STRINGS.SCRAPBOOK.SPECIALINFO.SAPHEALER = "Antídoto poderoso com capacidades de cura para árvores.\n\nUsá-lo em árvores Sugarwood arruinadas as devolverá ao estágio normal."
 STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER = "Para cortar pedaços de carne e outras coisas."
 STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER2 = "Para cortar pedaços de carne e outras coisas, mais rápido!"
-STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHAT = "Reduz a fome em 15%."
+STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHAT = "Reduz o dreno de fome em 15%."
 STRINGS.SCRAPBOOK.SPECIALINFO.POTATOSACK = "Um contêiner de 6 espaços que pode armazenar itens relacionados a batatas e mantê-los frescos por mais tempo.\n\n“Batatas fortalecem a barriga!” - Wolfgang."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODSACK = "Um contêiner à prova d'água com 8 espaços que mantém seus ingredientes frescos, não importa o clima.\n\nSeu design inteligente retarda a deterioração e restaura a frescura de ingredientes que começaram a estragar.\n\nEle pulsa com um poder mágico gelado, congelando tudo dentro dele."
 STRINGS.SCRAPBOOK.SPECIALINFO.BOOK_GARDENING = "Faz todas as plantas próximas crescerem rapidamente.\n\n\"Um tomo antigo encadernado em raízes vivas, banido por seu poder esmagador de dobrar a vontade da natureza. Suas páginas sussurram palavras esquecidas que podem despertar a própria terra, transformando o solo em uma selva selvagem e viva.\" - Autor Desconhecido."
@@ -153,6 +153,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Deixar secar por períodos mais longos
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use para acender o Bolo de Aniversário e começar a festa!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Permite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Chapéu de aniversário especial do Sammy.\nPermite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Pesquisar peixes e ovas os adiciona ao Registro de Peixes."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Pode ser alimentada com sementes para botar um ovo."

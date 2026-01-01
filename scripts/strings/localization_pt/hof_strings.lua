@@ -12690,7 +12690,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Equipamento espe
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "O tempo favorece quem tem estilo exclusivo, como o Sammy."
 
 STRINGS.NAMES.KYNO_FISHREGISTRYHAT = "Chapéu de Pescador"
-STRINGS.RECIPE_DESC.KYNO_FISHREGISTRYHAT = "Todo pescador precisa saber o que está mordendo o anzol."
+STRINGS.RECIPE_DESC.KYNO_FISHREGISTRYHAT = "Todo marujo precisa saber o que está mordendo o anzol."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_FISHREGISTRYHAT = "É um chapéu prático para um pescador dedicado."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_FISHREGISTRYHAT = "Acho melhor conhecer meus peixes antes de queimá-los."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_FISHREGISTRYHAT = "Chapéu deixa Wolfgang mais esperto sobre peixinhos!"

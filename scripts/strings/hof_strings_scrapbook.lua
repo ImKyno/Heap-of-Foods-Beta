@@ -142,7 +142,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SLAUGHTERTOOL = "Butchering tools that instantly k
 STRINGS.SCRAPBOOK.SPECIALINFO.SAPHEALER = "Powerful antidote with healing capabilities for trees.\n\nUsing it on Ruined Sugarwood Trees will revert them back to their normal stage."
 STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER = "For slicing off meat chunks and other things."
 STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSLICER2 = "For slicing off meat chunks and other things, faster!"
-STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHAT = "Reduces hunger by 15%."
+STRINGS.SCRAPBOOK.SPECIALINFO.SAMMYHAT = "Reduces hunger rate by 15%."
 STRINGS.SCRAPBOOK.SPECIALINFO.POTATOSACK = "A 6 slot container that can store potato-related items and keep them fresh for longer periods.\n\n\"Potatoes is strong for belly!\" - Wolfgang."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODSACK = "An 8 slots waterproof container that keeps your ingredients fresh, no matter the weather.\n\nIts clever design not only slows spoilage, but can even restore freshness to ingredients that have begun to spoil.\n\nIt pulses with a magical icy power, freezing everything inside."
 STRINGS.SCRAPBOOK.SPECIALINFO.BOOK_GARDENING = "Rapidly grow up all kinds of plants nearby.\n\n\"An ancient tome bound in living roots, banished for its overwhelming power to bend nature's will. Its pages whisper forgotten words that can awaken the land itself, turning mere soil into untamed, living wilderness.\" - Unknown Author."
@@ -153,6 +153,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Leaving it to dry for longer periods w
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use it to light up the Anniversary Cake and start the party!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Allows the gathering of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Sammy's special anniversary hat.\nAllows the gain of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Researching fishes and roes adds to the Fish Registry."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Can be feed with seeds to lay down an egg."

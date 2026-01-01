@@ -12761,8 +12761,8 @@ STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Tylko Sammy nosi? 
 STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Specjalny sprzęt dla naszego wyjątkowego kumpla!"
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Czas sprzyja tym z wyjątkowym stylem, jak Sammy."
 
-STRINGS.NAMES.KYNO_FISHREGISTRYHAT = "Kapelusz Rybaka"
-STRINGS.RECIPE_DESC.KYNO_FISHREGISTRYHAT = "Każdy wędkarz musi wiedzieć, co bierze na haczyk."
+STRINGS.NAMES.KYNO_FISHREGISTRYHAT = "Kapelusz wędkarza"
+STRINGS.RECIPE_DESC.KYNO_FISHREGISTRYHAT = "Każdy żeglarz musi wiedzieć, co bierze na haczyk."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_FISHREGISTRYHAT = "To praktyczny kapelusz dla oddanego rybaka."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_FISHREGISTRYHAT = "Lepiej poznać ryby, zanim je spalę."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_FISHREGISTRYHAT = "Kapelusz czyni Wolfganga mądrzejszym o małych rybkach!"
