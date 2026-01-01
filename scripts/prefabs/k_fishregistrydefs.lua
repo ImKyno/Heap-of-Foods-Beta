@@ -6,6 +6,7 @@ local FISHREGISTRY_INVENTORY_ATLAS = "images/inventoryimages/hof_inventoryimages
 
 local LANG = TUNING.HOF_LANGUAGE_CODE
 
+--[[
 local STRINGS_PATH =
 {
 	en = "strings/hof_strings_fishregistry",
@@ -15,6 +16,7 @@ local STRINGS_PATH =
 }
 
 require((STRINGS_PATH[LANG] or STRINGS_PATH.en))
+]]--
 
 -- Time thresholds (In days = TUNING.TOTAL_DAY_TIME = 480 seconds).
 TUNING.FISHREGISTRY_ROE_THRESHOLDS = TUNING.FISHREGISTRY_ROE_THRESHOLDS or
@@ -58,9 +60,9 @@ TUNING.FISHREGISTRY_MOONPHASE_ICONS = TUNING.FISHREGISTRY_MOONPHASE_ICONS or
 	new          = { atlas = FISHREGISTRY_ATLAS, image = "moon_new.tex"           },
 	quarter      = { atlas = FISHREGISTRY_ATLAS, image = "moon_quarter.tex"       },
 	half         = { atlas = FISHREGISTRY_ATLAS, image = "moon_half.tex"          },
-	threequarter = { atlas = FISHREGISTRY_ATLAS, image = "moon_three_quarter.tex" },
+	threequarter = { atlas = FISHREGISTRY_ATLAS, image = "moon_threequarter.tex" },
 	full         = { atlas = FISHREGISTRY_ATLAS, image = "moon_full.tex"          },
-	glassed      = { atlas = FISHREGISTRY_ATLAS, image = "moon_glassed.tex"       },
+	glassed      = { atlas = FISHREGISTRY_ATLAS, image = "moon_glassed.tex"       }, -- Glassed Moon means Moonstorms in here.
 }
 
 TUNING.FISHREGISTRY_SEASON_ICONS = TUNING.FISHREGISTRY_SEASON_ICONS or
@@ -111,7 +113,7 @@ global("FISHREGISTRY_FISH_DEFS")
 FISHREGISTRY_FISH_DEFS = FISHREGISTRY_FISH_DEFS or {}
 
 local ALL_PHASES     = { "day", "dusk", "night" }
-local ALL_MOONPHASES = { "new", "quarter", "half", "threequarter", "full" } -- Must not include glassed!
+local ALL_MOONPHASES = { "new", "quarter", "half", "threequarter", "full" } -- Do not include Glassed Moon in here!
 local ALL_SEASONS    = { "autumn", "winter", "spring", "summer" }
 local ALL_WORLDS     = { "forest", "cave" }
 

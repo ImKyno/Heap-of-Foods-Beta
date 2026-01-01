@@ -482,7 +482,7 @@ SortAfter("potatosack2", "mighty_gym", "CHARACTER")
 SortBefore("potatosack2", "icebox", "CONTAINERS")
 SortBefore("potatosack2", "icebox", "COOKING")
 
-AddDeconstructRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)})
+AddDeconstructRecipe("potatosack", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)})
 
 -- Using Bananas instead of Cave Bananas.
 Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingredient("kyno_banana", 1, ModAtlas), Ingredient("cutreeds", 4)}, TECH.NONE,	

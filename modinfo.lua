@@ -6,7 +6,7 @@ local STRINGS =
 {
 	NAME = 
 	{
-		"Heap of Foods - Beta Branch",
+		"Heap of Foods",
 		zh  = "更多料理 (Heap of Foods)",
 		zht = "食物堆積 (Heap of Foods)",
 		pt  = "Amontoado de Comidas (Heap of Foods)",
@@ -28,7 +28,7 @@ Cast your line, set your sail, and dive into the ocean! A wave of new aquatic cr
 Build yourself a Fish Hatchery to raise your own fish at the comfort of your base, explore the ocean in search of elusive creatures, take part in Ocean Hunts and find a friendly new companion.
 
 󰀌 Beta Branch Version: 4.1-B
-󰀧 Update: Heap of Foods 5th Anniversary (Fish Registry)
+󰀧 Update: Heap of Foods 5th Anniversary
 ]],
 		zh  =
 [[

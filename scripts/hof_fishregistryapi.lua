@@ -1,12 +1,12 @@
 --[[-----------------------------------------------------------------------------------------------------------------
 
-	[ Fish Registry Public Mod API ]
-	[ This file is meant to be REQUIRED by other mods ]
+	[ Fish Registry Public Mod API ] 
+	[ This file is meant to be required by other Mods ]
 	
-	[ Import the FishRegistry API ]
+	* Import the Fish Registry API 
 		require("hof_fishregistryapi")
 
-	[ Add custom Fish ]
+	* Add custom Fish 
 		FishRegistryAddFish({
 			name         = "cool_fish",
 
@@ -25,7 +25,7 @@
 			ypos         = 40,   -- Recommended to be between 30-60.
 		})
 
-	[ Add custom Roe ]
+	* Add custom Roe 
 		FishRegistryAddRoe({
 			name         = "cool_roe",
 
@@ -40,7 +40,7 @@
 			baby_string  = "My Offspring String", -- But you can override them using these.
 		})
 
-	[ Add custom Phase, Moon Phase, Season and World ]
+	* Add custom Phase, Moon Phase, Season and World 
 		FishRegistryAddPhase("cool_phase", 
 		{
 			atlas        = "images/cool_phase.xml",
@@ -65,7 +65,7 @@
 			image        = "cool_world.tex",
 		})
 	
-	[ Make a Fish researchable and unlockable for the Fish Registry ]
+	* Make a Fish researchable and unlockable for the Fish Registry 
 
 		local function GetFishKey(inst)
 			return inst.prefab
@@ -75,15 +75,15 @@
 			return inst:GetFishKey()
 		end
 
-		* In the prefab constructor BEFORE the mastersim check
+		-- In the prefab constructor BEFORE the mastersim check
 		inst:AddTag("fishresearchable")
 		inst.GetFishKey = GetFishKey
 
-		* In the prefab constructor, AFTER the mastersim check
+		-- In the prefab constructor, AFTER the mastersim check
 		inst:AddComponent("fishresearchable")
 		inst.components.fishresearchable:SetResearchFn(fishresearchfn)
 		
-	[ Make a Roe researchable and unlockable for the Fish Registry ]
+	* Make a Roe researchable and unlockable for the Fish Registry ]
 	
 		local function GetRoeKey(inst)
 			return inst.prefab
@@ -93,13 +93,24 @@
 			return inst:GetRoeKey()
 		end
 
-		* In the prefab constructor BEFORE the mastersim check
+		-- In the prefab constructor BEFORE the mastersim check
 		inst:AddTag("roeresearchable")
 		inst.GetRoeKey = GetRoeKey
 
-		* In the prefab constructor, AFTER the mastersim check
+		-- In the prefab constructor, AFTER the mastersim check
 		inst:AddComponent("roeresearchable")
 		inst.components.roeresearchable:SetResearchFn(roeresearchfn)
+
+	[ Final Considerations ]
+	
+		If you run into a problem, have any inquiries or just need help, please join our Discord and head to the dedicated channel
+		exclusive to talk about the mod #hof-general. Otherwise you can also send me a private message on Discord, it
+		might take a while for me to reply you, but I'll do as soon as I can.
+	
+		Discord Server Invite: https://discord.gg/jjNr4Vvutn
+		My Discord: kynoox_
+
+		Happy fishing!
 
 --]]-------------------------------------------------------------------------------------------------------------------------------------------------
 
