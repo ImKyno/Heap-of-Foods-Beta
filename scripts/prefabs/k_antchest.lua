@@ -146,9 +146,9 @@ local function fn()
 	inst.AnimState:SetBuild("ant_chest")
 	inst.AnimState:PlayAnimation("closed", true)
 	
+	inst:AddTag("chest")
 	inst:AddTag("structure")
 	inst:AddTag("antchest")
-	inst:AddTag("chest")
 	
 	inst.entity:SetPristine()
 

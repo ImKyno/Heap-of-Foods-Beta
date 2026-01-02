@@ -212,19 +212,6 @@ for k, v in pairs(_G.MergeMaps(VanillaFood, WarlyFood)) do
 	end)
 end
 
--- Foods that will have their action "Eat" replaced to "Drink".
-local drinkable_foods =
-{
-    "winter_food8",
-    "goatmilk",
-}
-
-for k, v in pairs(drinkable_foods) do
-    AddPrefabPostInit(v, function(inst)
-        inst:AddTag("fooddrink")
-    end)
-end
-
 -- This will prevent some characters from drinking Alcoholic-like drinks.
 if HOF_ALCOHOLICDRINKS then
 	local restricted_characters =
@@ -306,71 +293,58 @@ for k, v in pairs(honeyed_foods) do
 	end
 end
 
-local function MeatPostInit(inst)
-	inst:AddTag("sliceable")
+local sliceable_foods =
+{
+	drumstick      =
+	{
+		product    = "smallmeat",
+		slicesize  = 1,
+	},
+	
+	fishmeat       =
+	{
+		product    = "fishmeat_small",
+		slicesize  = 2,
+	},
+	
+	fishmeat_dried =
+	{
+		product    = "fishmeat_small_dried",
+		slicesize  = 2,
+	},
 
+	meat           =
+	{
+		product    = "smallmeat",
+		slicesize  = 2,
+	},
+	
+	meat_dried     =
+	{
+		product    = "smallmeat_dried",
+		slicesize  = 2,
+	},
+}
+
+local function SliceablePostInit(inst)
+	inst:AddTag("sliceable")
+	
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
 	
 	inst:AddComponent("sliceable")
-	inst.components.sliceable:SetProduct("smallmeat")
-	inst.components.sliceable:SetSliceSize(2)
-end
-
-local function MeatDriedPostInit(inst)
-	inst:AddTag("sliceable")
-
-	if not _G.TheWorld.ismastersim then
-		return inst
+	
+	entry = sliceable_foods[inst.prefab]
+	if entry then
+		inst.components.sliceable:SetProduct(entry.product)
+		inst.components.sliceable:SetSliceSize(entry.slicesize)
 	end
-	
-	inst:AddComponent("sliceable")
-	inst.components.sliceable:SetProduct("smallmeat_dried")
-	inst.components.sliceable:SetSliceSize(2)
 end
 
-local function DrumstickPostInit(inst)
-	inst:AddTag("sliceable")
-	
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("sliceable")
-	inst.components.sliceable:SetProduct("smallmeat")
-	inst.components.sliceable:SetSliceSize(1)
+for k, v in pairs(sliceable_foods) do
+	AddPrefabPostInit(k, SliceablePostInit)
 end
-
-local function FishMeatPostInit(inst)
-	inst:AddTag("sliceable")
-
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("sliceable")
-	inst.components.sliceable:SetProduct("fishmeat_small")
-	inst.components.sliceable:SetSliceSize(2)
-end
-
-local function FishMeatDriedPostInit(inst)
-	inst:AddTag("sliceable")
-
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("sliceable")
-	inst.components.sliceable:SetProduct("fishmeat_small_dried")
-	inst.components.sliceable:SetSliceSize(2)
-end
-
-AddPrefabPostInit("meat", MeatPostInit)
-AddPrefabPostInit("meat_dried", MeatDriedPostInit)
-AddPrefabPostInit("drumstick", DrumstickPostInit)
-AddPrefabPostInit("fishmeat", FishMeatPostInit)
-AddPrefabPostInit("fishmeat_dried", FishMeatDriedPostInit)
 
 -- Make dried foods valid for Salt Box and Polar Bearger Bin.
 local dried_foods =
@@ -416,3 +390,18 @@ local function BirdcagePostInit(inst)
 end
 
 AddPrefabPostInit("birdcage", BirdcagePostInit)
+
+-- Valid Cooking Pots for the S0US-CH3F.
+local cooking_pots =
+{
+	"cookpot",
+	"archive_cookpot",
+}
+
+local function CookpotPostInit(inst)
+	inst:AddTag("cook_robot_cooker_valid")
+end
+
+for k, v in pairs(cooking_pots) do
+	AddPrefabPostInit(v, CookpotPostInit)
+end

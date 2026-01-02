@@ -735,6 +735,51 @@ AddComponentAction("INVENTORY", "roeresearchable", function(inst, doer, actions,
 	FishRegistryResearch(inst, doer, actions)
 end)
 
+-- This action is meant for creatures not for players!
+AddAction("TAKEFROMCONTAINER", "Take From", function(act)
+	local doer = act.doer
+	local container_inst = act.target
+	local item = act.invobject
+
+	if doer == nil or container_inst == nil or item == nil then
+		return false
+	end
+
+	local container = container_inst.components.container
+	local inventory = doer.components.inventory
+
+	if container == nil or inventory == nil then
+		return false
+	end
+
+	if not item:IsValid() then
+		return false
+	end
+	
+	if not container:IsOpen() then
+		doer:PushEvent("opencontainer", { container = container_inst })
+		container:Open(doer)
+	end
+
+	local taken_item
+
+	if item.components.stackable ~= nil and item.components.stackable:StackSize() > 1 then
+		taken_item = item.components.stackable:Get(1)
+	else
+		taken_item = container:RemoveItem(item, true)
+	end
+
+	if taken_item ~= nil then
+		taken_item.prevslot = nil
+		taken_item.prevcontainer = nil
+		
+		inventory:GiveItem(taken_item, nil, doer:GetPosition())
+		return true
+	end
+
+	return false
+end)
+
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 -- Hope they don't smack and bonk my head...
 local _FISHfn = ACTIONS.FISH.fn

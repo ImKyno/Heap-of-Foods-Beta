@@ -1383,3 +1383,14 @@ TUNING.KYNO_WINTERTREE_GIFT3 =
 
 TUNING.KYNO_TEABUFF_DURATION = 480
 TUNING.KYNO_TEABUFF_SPEED = 1.33
+
+TUNING.KYNO_COOK_ROBOT_WORK_RADIUS = 15
+TUNING.KYNO_COOK_ROBOT_INVENTORY_SLOTS = 5
+TUNING.KYNO_COOK_ROBOT_COOKINGPOTS =
+{
+	cookpot           = "cookpot",	
+	kyno_woodenkeg    = "kyno_woodenkeg",
+	kyno_preservesjar = "kyno_preservesjar",
+	
+	-- TODO: Support for Cookwares.
+}

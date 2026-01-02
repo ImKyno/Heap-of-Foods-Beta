@@ -478,3 +478,32 @@ end
 function params.winter_tree_hof.itemtestfn(container, item, slot)
 	return item:HasTag("winter_ornament") and not container.inst:HasTag("burnt")
 end
+
+params.cook_robot =
+{
+	widget =
+	{
+		slotpos =
+		{
+			Vector3(-2, 18, 0),
+		},
+		
+		slotbg =
+		{
+			{ image = "preparedfood_slot.tex", atlas = "images/hud2.xml" },
+		},
+		
+		animbank = "ui_chest_1x1",
+		animbuild = "ui_chest_1x1",
+		
+		pos = Vector3(0, 160, 0),
+		side_align_tip = 100,
+	},
+	
+	acceptsstacks = false,
+	type = "chest",
+}
+
+function params.cook_robot.itemtestfn(container, item, slot)
+	return item:HasAnyTag("preparedfood", "preparedbrew", "cook_bot_food_valid")
+end
