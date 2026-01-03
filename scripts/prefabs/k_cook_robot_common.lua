@@ -74,9 +74,9 @@ local function ClearSpawnPoint(inst)
 	inst.components.knownlocations:ForgetLocation(SPAWNPOINT_LOCAL_NAME)
 end
 
-local CONTAINER_MUST_ONEOF_TAGS = { "fridge", "saltbox", "antchest", "cook_robot_storage_valid" }
-local CONTAINER_CANT_TAGS       = { "cookrobot", "portablestorage", "mermonly", "mastercookware", "FX", "NOCLICK", "DECOR", "INLIMBO" }
-local ALLOWED_CONTAINER_TYPES   = { "chest", "pack", "cooker" }
+local CONTAINER_MUST_ONEOF_TAGS = { "cook_robot_storage_valid" }
+local CONTAINER_CANT_TAGS       = { "portablestorage", "mastercookware", "mermonly", "FX", "NOCLICK", "DECOR", "INLIMBO" }
+local ALLOWED_CONTAINER_TYPES   = { "chest", "pack", "cooker", "brewer" }
 
 local function FindNearestContainer(inst, item_prefab)
 	local x, y, z = COOK_ROBOT_DEFS.GetSpawnPoint(inst):Get()
@@ -105,7 +105,7 @@ local function FindNearestContainer(inst, item_prefab)
 end
 
 local COOKER_MUST_ONEOF_TAGS = { "cook_robot_cooker_valid" }
-local COOKER_CANT_TAGS       = { "cookrobot", "cook_robot_reserved", "portablestorage", "mermonly", "mastercookware", "FX", "NOCLICK", "DECOR", "INLIMBO" }
+local COOKER_CANT_TAGS       = { "cook_robot_reserved", "portablestorage", "mastercookware", "mermonly", "FX", "NOCLICK", "DECOR", "INLIMBO" }
 
 local function FindNearestCooker(inst, cooker_prefab)
 	local x, y, z = inst.Transform:GetWorldPosition()

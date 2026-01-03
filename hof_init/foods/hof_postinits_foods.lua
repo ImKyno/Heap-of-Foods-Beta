@@ -391,17 +391,35 @@ end
 
 AddPrefabPostInit("birdcage", BirdcagePostInit)
 
--- Valid Cooking Pots for the S0US-CH3F.
-local cooking_pots =
+-- Valid Cooking Pots and Containers for the S0US-CH3F.
+local cook_robot_pots =
 {
 	"cookpot",
 	"archive_cookpot",
 }
 
-local function CookpotPostInit(inst)
+local cook_robot_containers =
+{
+	"icebox",
+	"saltbox",
+	"fish_box",
+	"potatosack",
+	"treasurechest",
+	"dragonflychest",
+}
+
+local function CookRobotPotsPostInit(inst)
 	inst:AddTag("cook_robot_cooker_valid")
 end
 
-for k, v in pairs(cooking_pots) do
-	AddPrefabPostInit(v, CookpotPostInit)
+local function CookRobotContainersPostInit(inst)
+	inst:AddTag("cook_robot_storage_valid")
+end
+
+for k, v in pairs(cook_robot_pots) do
+	AddPrefabPostInit(v, CookRobotPotsPostInit)
+end
+
+for k, v in pairs(cook_robot_containers) do
+	AddPrefabPostInit(v, CookRobotContainersPostInit)
 end

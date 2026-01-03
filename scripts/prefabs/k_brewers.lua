@@ -263,6 +263,7 @@ local function kegfn()
 	inst:AddTag("structure")
 	inst:AddTag("brewer")
 	inst:AddTag("woodenkeg")
+	inst:AddTag("cook_robot_cooker_valid")
 
 	inst.entity:SetPristine()
 
@@ -340,6 +341,7 @@ local function preservejarfn()
 	inst:AddTag("structure")
 	inst:AddTag("brewer")
 	inst:AddTag("preservesjar")
+	inst:AddTag("cook_robot_cooker_valid")
 
 	inst.entity:SetPristine()
 

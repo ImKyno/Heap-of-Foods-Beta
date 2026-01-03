@@ -4,7 +4,7 @@ local cooking         = require("cooking")
 local brewing         = require("hof_brewing")
 local CookRobotCommon = require("prefabs/k_cook_robot_common")
 
-local ignorethese = { }
+local ignorethese     = { }
 
 local CookRobotBrain = Class(Brain, function(self, inst)
 	Brain._ctor(self, inst)
@@ -45,26 +45,41 @@ end
 
 local function HasFoodOrder(inst)
 	if inst.components.inventory == nil then
-		print("[CookRobot] HasFoodOrder = false (no inventory)")
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: HasFoodOrder: Robot doesn't have an inventory.")
+		end
+		
 		return false
 	end
 
-	print("[CookRobot] HasFoodOrder:", inst._foodorder_prefab or "nil")
+	if TUNING.HOF_DEBUG_MODE then
+		print("Heap of Foods Mod - Cook Robot: HasFoodOrder:", inst._foodorder_prefab or "nil.")
+	end	
+		
 	return inst._foodorder_prefab ~= nil
 end
 
 local function GetFoodOrder(inst)
 	if inst.components.inventory == nil then
-		print("[CookRobot] GetFoodOrder = nil (no inventory)")
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: GetFoodOrder: Robot doesn't have an inventory.")
+		end
+		
 		return nil
 	end
 	
 	if inst._foodorder_prefab == nil then
-		print("[CookRobot] GetFoodOrder = nil (no valid food)")
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: GetFoodOrder: No Valid Food.")
+		end
+		
 		return nil
 	end
 
-	print("[CookRobot] HasFoodOrder:", inst._foodorder_prefab or "nil")
+	if TUNING.HOF_DEBUG_MODE then
+		print("Heap of Foods Mod - Cook Robot: HasFoodOrder:", inst._foodorder_prefab or "nil.")
+	end
+
 	return inst._foodorder_prefab
 end
 
@@ -72,22 +87,36 @@ local function GetOrderRecipeData(inst)
 	local product_prefab = GetFoodOrder(inst)
 	
 	if product_prefab == nil then
-		print("[CookRobot] GetOrderRecipeData: product_prefab = nil")
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: GetOrderRecipeData: product_prefab is nil.")
+		end
+		
 		return nil
-    end
+	end
 
 	for cooker_type, station_prefab in pairs(TUNING.KYNO_COOK_ROBOT_COOKINGPOTS) do
-		print("[CookRobot] trying cooker_type:", cooker_type)
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: Trying cooker_type:", cooker_type)
+		end
 		
 		if cooker_type == "cookpot" then
 			local recipes = cooking.recipes[cooker_type]
-			print("[CookRobot] recipes table:", recipes ~= nil)
+			
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Cook Robot: Recipes table:", recipes ~= nil)
+			end
 			
 			local recipe = recipes and recipes[product_prefab]
-			print("[CookRobot] recipe found:", recipe ~= nil)
+			
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Cook Robot: Recipe found:", recipe ~= nil)
+			end
 			
 			if recipe ~= nil then
-				print("[CookRobot] VALID COOKING RECIPE FOUND")
+				if TUNING.HOF_DEBUG_MODE then
+					print("Heap of Foods Mod - Cook Robot: VALID COOKING RECIPE FOUND.")
+				end
+				
 				return 
 				{
 					system          = "cooking",
@@ -100,13 +129,21 @@ local function GetOrderRecipeData(inst)
 			end
 		elseif brewing and brewing.recipes and brewing.recipes[cooker_type] then
 			local recipes = brewing.recipes[cooker_type]
-			print("[CookRobot] recipes table:", recipes ~= nil)
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Cook Robot: Recipes table:", recipes ~= nil)
+			end
 			
 			local recipe = recipes and recipes[product_prefab]
-			print("[CookRobot] recipe found:", recipe ~= nil)
+			
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Cook Robot: Recipe found:", recipe ~= nil)
+			end
 			
 			if recipe ~= nil then
-				print("[CookRobot] VALID BREWING RECIPE FOUND")
+				if TUNING.HOF_DEBUG_MODE then
+					print("Heap of Foods Mod - Cook Robot: VALID BREWING RECIPE FOUND.")
+				end
+				
 				return 
 				{
 					system          = "brewing",
@@ -120,13 +157,20 @@ local function GetOrderRecipeData(inst)
 		end
 	end
 
-	print("[CookRobot] ❌ No recipe matched for", food.prefab)
+	if TUNING.HOF_DEBUG_MODE then
+		print("Heap of Foods Mod - Cook Robot: No recipe matched for", product_prefab)
+	end
+
 	return nil
 end
 
 local function HasValidOrder(inst)
 	local valid = GetOrderRecipeData(inst) ~= nil
-	print("[CookRobot] HasValidOrder:", valid)
+	
+	if TUNING.HOF_DEBUG_MODE then
+		print("Heap of Foods Mod - Cook Robot: HasValidOrder:", valid)
+	end
+	
 	return valid
 end
 
@@ -168,12 +212,6 @@ local function IsCookerAvailable(inst, cooker)
 			return false
 		end
 	end
-	
-	--[[
-	if container:IsOpen() then
-		return false
-	end
-	]]--
 
 	return true
 end
@@ -182,13 +220,18 @@ local function FindUsableCooker(inst)
 	local cooker = CookRobotCommon.FindNearestAvailableCooker(inst, IsCookerAvailable)
 	
 	if cooker == nil then
-		print("[CookRobot] No cooker found nearby")
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: No cooker found nearby")
+		end
+		
 		return nil
 	end
 
 	if cooker ~= nil then
-		print("[CookRobot] Found cooker:", cooker.prefab)
-		print("[CookRobot] Cooker is AVAILABLE:", cooker.prefab)
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: Found cooker:", cooker.prefab)
+			print("Heap of Foods Mod - Cook Robot: Cooker is AVAILABLE:", cooker.prefab)
+		end
 	end
 
 	return cooker
@@ -258,7 +301,10 @@ ReleaseCooker = function(inst)
 	inst._cooktask = nil
 	
 	if inst._pending_foodorder ~= nil then
-		print("[CookRobot] Switching to pending order:", inst._pending_foodorder)
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: Switching to pending order:", inst._pending_foodorder)
+		end
+		
 		inst._foodorder_prefab = inst._pending_foodorder
 		inst._pending_foodorder = nil
 	end
@@ -266,7 +312,10 @@ end
 
 local function EnsureTargetCooker(inst)
 	if inst._targetcooker ~= nil and IsCookerAvailable(inst, inst._targetcooker) then
-		print("[CookRobot] Reusing existing cooker")
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: Reusing existing cooker.")
+		end
+		
 		return true
 	end
 
@@ -278,13 +327,18 @@ local function EnsureTargetCooker(inst)
 		cooker._cook_robot_reserved_by = inst
 		cooker:AddTag("cook_robot_reserved")
 
-		print("[CookRobot] Cooker reserved:", cooker.prefab)
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: Cooker reserved:", cooker.prefab)
+		end
+		
 		BindCookingCallbacks(inst, cooker)
 
 		return true
 	end
 
-	print("[CookRobot] No valid cooker available")
+	if TUNING.HOF_DEBUG_MODE then
+		print("Heap of Foods Mod - Cook Robot: No valid cooker available.")
+	end
 
 	inst._targetcooker = nil
 	inst._returning_items = true
@@ -369,12 +423,16 @@ end
 local function CollectAvailableIngredients(inst, orderdata)
 	local available = {}
 	
-	print("[CookRobot] Collecting ingredients for:", orderdata.product)
+	if TUNING.HOF_DEBUG_MODE then
+		print("Heap of Foods Mod - Cook Robot: Collecting ingredients for:", orderdata.product)
+	end
 
 	local x, y, z = CookRobotCommon.GetSpawnPoint(inst):Get()
 	local ents = TheSim:FindEntities(x, y, z, TUNING.KYNO_COOK_ROBOT_WORK_RADIUS, nil, CookRobotCommon.CONTAINER_CANT_TAGS, CookRobotCommon.CONTAINER_MUST_ONEOF_TAGS)
 	
-	print("[CookRobot] Containers found:", #ents)
+	if TUNING.HOF_DEBUG_MODE then
+		print("Heap of Foods Mod - Cook Robot: Containers found:", #ents)
+	end
 
 	for _, container in ipairs(ents) do
 		if container.components.container ~= nil -- and not container.components.container:IsOpenedByOthers(inst)
@@ -393,28 +451,73 @@ local function CollectAvailableIngredients(inst, orderdata)
 		end
 	end
 	
-	print("[CookRobot] Available ingredients:", table.concat(available, ", "))
+	if TUNING.HOF_DEBUG_MODE then
+		print("Heap of Foods Mod - Cook Robot: Available ingredients:", table.concat(available, ", "))
+	end
 
 	return available
 end
 
 local function ResolveIngredientsForOrder(inst, orderdata)
-	local available = CollectAvailableIngredients(inst, orderdata)
-	
-	if available == nil or #available == 0 then
-		print("[CookRobot] No available ingredients")
-		return nil
+	if orderdata.system == "cooking" then
+		local available = CollectAvailableIngredients(inst, orderdata)
+        
+		if available == nil or #available == 0 then
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Cook Robot: No available ingredients,")
+			end
+			
+			return nil
+		end
+
+		local base = FindValidIngredientsToCook(orderdata, available)
+        
+		if base == nil then
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Cook Robot: No valid ingredient combination.")
+			end
+			
+			return nil
+		end
+
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: Base combo:", table.concat(base, ", "))
+		end
+
+		return FindValidIngredientsToFill(orderdata, base, available)
 	end
 
-	local base = FindValidIngredientsToCook(orderdata, available)
-	
-	if base == nil then
-		print("[CookRobot] No valid ingredient combination")
-		return nil
+	if orderdata.system == "brewing" then
+		local recipe = orderdata.recipe
+
+		if recipe == nil or recipe.card_def == nil or recipe.card_def.ingredients == nil then
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Cook Robot: Brewing recipe missing card_def.ingredients:", orderdata.product)
+			end
+			
+			return nil
+		end
+
+		local ingredients = {}
+
+		for _, data in ipairs(recipe.card_def.ingredients) do
+			local prefab = data[1]
+			local count = data[2]
+
+			for i = 1, count do
+				table.insert(ingredients, prefab)
+			end
+		end
+
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: Brewing ingredients resolved:", table.concat(ingredients, ", "))
+		end
+
+		return ingredients
 	end
 
-	print("[CookRobot] Base combo:", table.concat(base, ", "))
-	return FindValidIngredientsToFill(orderdata, base, available)
+	-- Fallback, but this shouldn't be happening.
+	return nil
 end
 
 local function FindAllIngredientInstances(inst, ingredient_list)
@@ -463,7 +566,10 @@ local function FindAllIngredientInstances(inst, ingredient_list)
 		end
 
 		if remaining > 0 then
-			print("[CookRobot] Missing ingredient:", prefab)
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Cook Robot: Missing ingredient:", prefab)
+			end
+
 			return nil
 		end
 	end
@@ -474,6 +580,19 @@ end
 local function InitCookTaskAction(inst)
 	if inst._cooktask ~= nil then
 		return nil
+	end
+	
+	if inst._targetcooker ~= nil then
+		local c = inst._targetcooker.components.container
+		
+		if c ~= nil and c:IsOpenedByOthers(inst) then
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Cook Robot: Reserved cooker opened by others, releasing")
+			end
+
+			ReleaseCooker(inst)
+			return nil
+		end
 	end
 
 	if not HasValidOrder(inst) then
@@ -545,7 +664,10 @@ local function OpenContainerAction(inst)
 	end
 
 	if not task._opened then
-		print("[CookRobot] Opening container:", container.prefab)
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: Opening container:", container.prefab)
+		end
+
 		task._opened = true
 		task.state = "take_item"
 		
@@ -567,15 +689,24 @@ local function CollectAllIngredientsAction(inst)
 	local entry = task.queue[1]
 	
 	if entry == nil then
-		print("[CookRobot] All ingredients collected")
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: All ingredients collected.")
+		end
+		
 		task.state = "insert_all"
 		return nil
 	end
 
 	if inst.components.inventory:IsFull() then
-		print("[CookRobot] Inventory is full")
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: Inventory is full.")
+		end
+
 		task.state = "fail"
 		inst._returning_items = true
+		
+		ReleaseCooker(inst)
+		
 		return nil
 	end
 
@@ -585,7 +716,9 @@ local function CollectAllIngredientsAction(inst)
 	if container ~= nil and item ~= nil then
 		inst.brain:IgnoreItem(item)
 
-		print("[CookRobot] Taking from container:", item.prefab)
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: Taking from container:", item.prefab)
+		end
 		
 		entry.count = entry.count - 1
 		
@@ -610,6 +743,9 @@ local function InsertAllIngredientsAction(inst)
 	if task.cooker.components.container:IsOpenedByOthers(inst) then
 		task.state = "fail"
 		inst._returning_items = true
+		
+		ReleaseCooker(inst)
+		
 		return nil
 	end
 
@@ -633,6 +769,9 @@ local function CookAction(inst)
 	if not task.cooker or not task.cooker:IsValid() then
 		task.state = "fail"
 		inst._returning_items = true
+		
+		ReleaseCooker(inst)
+		
 		return nil
 	end
 

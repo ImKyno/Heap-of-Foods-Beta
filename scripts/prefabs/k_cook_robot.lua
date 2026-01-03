@@ -363,8 +363,17 @@ local function GetFueledSectionSuffix(inst)
 	(section == SECTION_MED   and "_med") or ""
 end
 
+local function IsAbleToAccept(inst, item, giver)
+	if item ~= nil and item:HasAnyTag("preparedfood", "preparedbrew", "cook_bot_food_valid") then
+		return true
+	else
+		return false, "GENERIC"
+	end
+end
+
 local function ShouldAcceptItem(inst, item)
 	return not inst.components.inventoryitem:IsHeld() and item.components.equippable ~= nil and item.components.equippable.equipslot == EQUIPSLOTS.HEAD
+	or item:HasAnyTag("preparedfood", "preparedbrew", "cook_bot_food_valid")
 end
 
 local function OnGetItemFromPlayer(inst, giver, item)
@@ -380,10 +389,32 @@ local function OnGetItemFromPlayer(inst, giver, item)
 		end
 
 		inst.components.inventory:Equip(item)
+	elseif item:HasAnyTag("preparedfood", "preparedbrew", "cook_bot_food_valid") then
+		local newprefab = item.prefab
+		item:Remove()
 
-		inst.sg.mem.last_vocalization_time = GetTime()
-		inst.SoundEmitter:PlaySound("qol1/collector_robot/pickup_voice"..inst:GetFueledSectionSuffix())
+		if inst._cooktask ~= nil then
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Cook Robot: Busy, queued new order:", newprefab)
+			end
+		
+			inst._pending_foodorder = newprefab
+			return
+		end
+
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Cook Robot: New order applied immediately:", newprefab)
+		end
+
+		inst._foodorder_prefab = newprefab
+		inst._pending_foodorder = nil
+
+		inst._cooktask = nil
+		inst._targetcooker = nil
 	end
+	
+	inst.sg.mem.last_vocalization_time = GetTime()
+	inst.SoundEmitter:PlaySound("qol1/collector_robot/pickup_voice"..inst:GetFueledSectionSuffix())
 end
 
 local function OnRefuseItemFromPlayer(inst, giver, item)
@@ -446,64 +477,16 @@ local function OnTeleported(inst)
 	end
 end
 
-local function OnOpen(inst) 
-	if not inst:HasTag("broken") then
-		
-	end
-end
-
-local function OnClose(inst, doer)
-	if not inst:HasTag("broken") then
-	
-	end
-end
-
 local function CookingStart(inst)
 	if not inst:HasTag("broken") then
 		inst.components.inventoryitem.canbepickedup = false
-		
-		if inst.components.container ~= nil then
-			inst.components.container.canbeopened = false
-			inst.components.container:Close()
-		end
 	end
 end
 
 local function CookingStop(inst)
 	if not inst:HasTag("broken") then
 		inst.components.inventoryitem.canbepickedup = true
-		
-		if inst.components.container ~= nil then
-			inst.components.container.canbeopened = true
-		end
 	end
-end
-
-local function ShouldAcceptItem(inst, item)
-    return item ~= nil and item:HasAnyTag("preparedfood", "preparedbrew", "cook_bot_food_valid")
-end
-
-local function OnGetItemFromPlayer(inst, giver, item)
-	if item == nil or not item:IsValid() then
-		return
-	end
-
-	local newprefab = item.prefab
-	item:Remove()
-
-	if inst._cooktask ~= nil then
-		print("[CookRobot] Busy, queued new order:", newprefab)
-		inst._pending_foodorder = newprefab
-		return
-	end
-
-	print("[CookRobot] New order applied immediately:", newprefab)
-
-	inst._foodorder_prefab = newprefab
-	inst._pending_foodorder = nil
-
-	inst._cooktask = nil
-	inst._targetcooker = nil
 end
 
 local function fn()
@@ -554,14 +537,6 @@ local function fn()
 
 	if not TheWorld.ismastersim then
 		inst:ListenForEvent("origindirty", OnOriginDirty)
-
-		--[[
-		inst.OnEntityReplicated = function(inst) 
-			if not inst:HasTag("broken") then
-				inst.replica.container:WidgetSetup("cook_robot")
-			end
-		end
-		]]--
 		
 		return inst
 	end
@@ -594,17 +569,11 @@ local function fn()
 	inst.components.inventory.maxslots = TUNING.KYNO_COOK_ROBOT_INVENTORY_SLOTS
 	
 	inst:AddComponent("trader")
+	inst.components.trader:SetAbleToAcceptTest(IsAbleToAccept)
 	inst.components.trader:SetAcceptTest(ShouldAcceptItem)
-	inst.components.trader.onaccept = OnGetItemFromPlayer
-	-- inst.components.trader.onrefuse = OnRefuseItem
+	inst.components.trader:SetOnAccept(OnGetItemFromPlayer)
+	inst.components.trader:SetOnRefuse(OnRefuseItemFromPlayer)
 	inst.components.trader.deleteitemonaccept = false
-	
-	-- inst:AddComponent("container")
-	-- inst.components.container:WidgetSetup("cook_robot")
-	-- inst.components.container.onopenfn = OnOpen
-	-- inst.components.container.onclosefn = OnClose
-	-- inst.components.container.skipclosesnd = true
-	-- inst.components.container.skipopensnd = true
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.nobounce = true
@@ -635,11 +604,11 @@ local function fn()
 	inst:ListenForEvent("onreachdestination", inst.OnReachDestination)
 	inst:ListenForEvent("itemget", inst.OnInventoryChange)
 	inst:ListenForEvent("itemlose", inst.OnInventoryChange)
-	inst:ListenForEvent("equip",   inst.OnEquipSomething  )
+	inst:ListenForEvent("equip", inst.OnEquipSomething)
 	inst:ListenForEvent("unequip", inst.OnUnequipSomething)
 	inst:ListenForEvent("teleported", OnTeleported)
-	-- inst:ListenForEvent("cookrobot_start", CookingStart)
-	-- inst:ListenForEvent("cookrobot_stop", CookingStop)
+	inst:ListenForEvent("cookrobot_start", CookingStart)
+	inst:ListenForEvent("cookrobot_stop", CookingStop)
 
 	inst.OnLoad = OnLoad
 	inst.OnEntitySleep = OnEntitySleep

@@ -149,6 +149,7 @@ local function fn()
 	inst:AddTag("chest")
 	inst:AddTag("structure")
 	inst:AddTag("antchest")
+	inst:AddTag("cook_robot_storage_valid")
 	
 	inst.entity:SetPristine()
 

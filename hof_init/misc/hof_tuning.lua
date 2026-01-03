@@ -4,7 +4,7 @@ local require  = _G.require
 local TechTree = require("techtree")
 
 -- Mod Tunings.
-TUNING.HOF_DEBUG_MODE = false
+TUNING.HOF_DEBUG_MODE = true
 TUNING.HOF_RETROFIT_ENABLED = true
 
 TUNING.HOF_RESOURCES = .06
@@ -1384,13 +1384,14 @@ TUNING.KYNO_WINTERTREE_GIFT3 =
 TUNING.KYNO_TEABUFF_DURATION = 480
 TUNING.KYNO_TEABUFF_SPEED = 1.33
 
-TUNING.KYNO_COOK_ROBOT_WORK_RADIUS = 15
+TUNING.KYNO_COOK_ROBOT_WORK_RADIUS = 10
 TUNING.KYNO_COOK_ROBOT_INVENTORY_SLOTS = 5
 TUNING.KYNO_COOK_ROBOT_COOKINGPOTS =
 {
-	cookpot           = "cookpot",	
+	cookpot           = "cookpot",
 	kyno_woodenkeg    = "kyno_woodenkeg",
 	kyno_preservesjar = "kyno_preservesjar",
 	
-	-- TODO: Support for Cookwares.
+	-- TODO: Support for Cookwares (?)
+	-- Still not sure about them because you need fire pit to be fueled.
 }
