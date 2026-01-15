@@ -14,7 +14,7 @@ TUNING.HOF_MIN_OCEANSETPIECES = 1
 TUNING.HOF_MAX_OCEANSETPIECES = 3
 
 -- Setting this to true will force our Special Event. It must be false during off-season.
-TUNING.HOF_SPECIAL_EVENTS_BIRTHDAY = true -- Anniversary Event | Period: December - January.
+TUNING.HOF_SPECIAL_EVENTS_BIRTHDAY = false -- Anniversary Event | Period: December - January.
 
 TUNING.HOF_COFFEEBUFF_DURATION = GetModConfigData("COFFEEDURATION") or 480
 

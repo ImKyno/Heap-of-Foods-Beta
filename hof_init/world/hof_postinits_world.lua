@@ -1175,13 +1175,24 @@ end
 AddClassPostConstruct("components/birdspawner", function(self)
 	local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
 
-	BIRD_TYPES[WORLD_TILES.QUAGMIRE_PARKFIELD] = {"quagmire_pigeon"}
-	BIRD_TYPES[WORLD_TILES.QUAGMIRE_CITYSTONE] = {"quagmire_pigeon"}
+	BIRD_TYPES[WORLD_TILES.QUAGMIRE_PARKFIELD] = { "quagmire_pigeon" }
+	BIRD_TYPES[WORLD_TILES.QUAGMIRE_CITYSTONE] = { "quagmire_pigeon" }
 
-	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = {"toucan", "toucan_chubby"}
-	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = {"toucan", "toucan_chubby"}
-	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = {"kingfisher"}
+	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = { "toucan", "toucan_chubby" }
+	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = { "toucan", "toucan_chubby" }
+	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = { "kingfisher" }
 end)
+
+-- Compatibility for Not Enough Turfs so bird can land on their turfs too.
+if TUNING.HOF_IS_NET_ENABLED then
+	AddClassPostConstruct("components/birdspawner", function(self)
+		local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
+
+		BIRD_TYPES[WORLD_TILES.BEACH]          = { "toucan", "toucan_chubby" }
+		BIRD_TYPES[WORLD_TILES.TIDALMARSH]     = { "toucan", "toucan_chubby" }
+		BIRD_TYPES[WORLD_TILES.FIELDS]         = { "kingfisher" }
+	end)
+end
 
 -- Spawns Mist in static layouts, not using game's function because its too dense.
 AddSimPostInit(function()
