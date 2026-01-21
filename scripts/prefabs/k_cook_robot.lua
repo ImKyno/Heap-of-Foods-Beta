@@ -259,7 +259,7 @@ local function DoSleepTeleport(inst)
 		end
 	end
 
-	inst:StartOffscreenPickupTask(1.5)
+	-- inst:StartOffscreenPickupTask(1.5)
 end
 
 local function OnEntitySleep(inst)
@@ -543,8 +543,8 @@ local function fn()
 
 	inst.PICKUP_ARRIVE_DIST = 0
 
-	inst.DoOffscreenPickup = DoOffscreenPickup
-	inst.StartOffscreenPickupTask = StartOffscreenPickupTask
+	-- inst.DoOffscreenPickup = DoOffscreenPickup
+	-- inst.StartOffscreenPickupTask = StartOffscreenPickupTask
 
 	inst.GetFueledSectionMass = GetFueledSectionMass
 	inst.GetFueledSectionSuffix = GetFueledSectionSuffix
