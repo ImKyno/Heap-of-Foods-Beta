@@ -6,6 +6,7 @@ PrefabFiles =
 {
 	"worm_boss",
 	
+	"k_animalfeeder",
 	"k_antchest",
 	"k_antchovy",
 	"k_banana",
@@ -23,8 +24,8 @@ PrefabFiles =
 	"k_bugs",
 	"k_canneddrinks",
 	"k_cannedfoods",
-	"k_chicken2",
-	"k_chicken2_eggs",
+	"k_chicken",
+	"k_chickenhouse",
 	"k_coffeebeans",
 	"k_construction_plans",
 	"k_cook_robot",

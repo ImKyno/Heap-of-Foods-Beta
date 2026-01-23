@@ -2079,7 +2079,7 @@ local HOF_SCRAPBOOK_FOODS =
 		animoffsety    = 30,
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -120,
-		deps           = {"birdcage", "kyno_chicken2", "kyno_chicken_egg_cooked", "rottenegg"},
+		deps           = {"birdcage", "kyno_chicken2", "kyno_chicken_coop", "kyno_chicken_egg_cooked", "rottenegg"},
 	},
 	
 	kyno_chicken_egg_cooked =
@@ -2101,7 +2101,7 @@ local HOF_SCRAPBOOK_FOODS =
 		animoffsety    = 15,
 		animoffsetbgx  = -20,
 		animoffsetbgy  = -20,
-		deps           = {"kyno_chicken2", "kyno_chicken_egg", "rottenegg"},
+		deps           = {"kyno_chicken_egg", "rottenegg"},
 	},
 	
 	kyno_crabmeat      =
@@ -14843,6 +14843,7 @@ local HOF_SCRAPBOOK_CREATURES =
 	{
 		name           = "kyno_chicken2",
 		type           = "creature",
+		subcat         = "chicken",
 		tex            = "kyno_chicken2.tex",
 		prefab         = "kyno_chicken2",
 		health         = 75,
@@ -14851,9 +14852,26 @@ local HOF_SCRAPBOOK_CREATURES =
 		build          = "chicken",
 		anim           = "idle",
 		animoffsety    = 40,
-		animoffsetbgy  = -65,		
+		animoffsetbgy  = -65,
 		deps           = {"drumstick", "drumstick_cooked", "goose_feather", "kyno_chicken_egg"},
-		specialinfo    = "FEEDCHICKEN",
+	},
+	
+	kyno_chicken_coop  =
+	{
+		name           = "kyno_chicken_coop",
+		type           = "creature",
+		subcat         = "chicken",
+		tex            = "kyno_chicken_coop.tex",
+		prefab         = "kyno_chicken_coop",
+		health         = 75,
+		perishable     = 2400,
+		bank           = "chicken",
+		build          = "chicken_coop_build",
+		anim           = "idle",
+		animoffsety    = 40,
+		animoffsetbgy  = -65,
+		deps           = {"drumstick", "drumstick_cooked", "goose_feather", "kyno_chicken_egg"},
+		specialinfo    = "DOMESTICATEDCHICKEN",
 	},
 	
 	kyno_piko          =
@@ -16654,6 +16672,7 @@ local HOF_SCRAPBOOK_THINGS =
 		type           = "thing",
 		tex            = "kyno_hofbirthday_cake.tex",
 		prefab         = "kyno_hofbirthday_cake",
+		workable       = "SLICE",
 		sanityaura     = 0.66666666666667,
 		bank           = "kyno_hofbirthday_cake",
 		build          = "kyno_hofbirthday_cake",
@@ -16672,6 +16691,7 @@ local HOF_SCRAPBOOK_THINGS =
 		tex            = "kyno_hofbirthday_balloons.tex",
 		prefab         = "kyno_hofbirthday_balloons",
 		sanityaura     = 0.41666666666667,
+		workable       = "HAMMER",
 		burnable       = true,
 		bank           = "kyno_hofbirthday_balloons",
 		build          = "kyno_hofbirthday_balloons",
@@ -16683,6 +16703,23 @@ local HOF_SCRAPBOOK_THINGS =
 		animoffsetbgy  = -80,
 		deps           = {"kyno_hofbirthday_cheer", "log", "rope"},
 		specialinfo    = "HOFBIRTHDAY_BALLOONS",
+	},
+	
+	kyno_chickenhouse  =
+	{
+		name           = "kyno_chickenhouse",
+		type           = "thing",
+		subcat         = "structure",
+		tex            = "kyno_chickenhouse.tex",
+		prefab         = "kyno_chickenhouse",
+		workable       = "HAMMER",
+		burnable       = true,
+		harvestable    = true,
+		bank           = "kyno_chickenhouse",
+		build          = "kyno_chickenhouse",
+		anim           = "idle",
+		deps           = {"kyno_chicken_coop", "kyno_chicken_egg", "boards", "cutgrass", "researchlab2"},
+		specialinfo    = "CHICKENHOUSE",
 	},
 }
 

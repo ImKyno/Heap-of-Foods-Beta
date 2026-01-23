@@ -13,6 +13,8 @@ local assets =
 	Asset("ANIM", "anim/quagmire_crop_wheat.zip"),
 	Asset("ANIM", "anim/quagmire_salt.zip"),
 	Asset("ANIM", "anim/foliage.zip"),
+	
+	Asset("ANIM", "anim/kyno_chicken_eggs.zip"),
 	Asset("ANIM", "anim/kyno_cookingoil.zip"),
 	Asset("ANIM", "anim/kyno_sugar.zip"),
 	Asset("ANIM", "anim/kyno_crabkingmeat.zip"),
@@ -63,6 +65,7 @@ local function wheatfn()
 	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("cookable")
+	inst:AddTag("chickenfood")
 	inst:AddTag("gourmet_wheat")
 	inst:AddTag("gourmet_ingredient")
 
@@ -118,6 +121,7 @@ local function wheat_cookedfn()
 	inst.AnimState:SetBuild("quagmire_crop_wheat")
 	inst.AnimState:PlayAnimation("cooked")
 
+	inst:AddTag("chickenfood")
 	inst:AddTag("gourmet_wheat")
 	inst:AddTag("gourmet_ingredient")
 
@@ -1214,6 +1218,118 @@ local function leaffn()
     return inst
 end
 
+local function chicken_eggfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+	inst.AnimState:SetBank("kyno_chicken_eggs")
+	inst.AnimState:SetBuild("kyno_chicken_eggs")
+	inst.AnimState:PlayAnimation("idle")
+	
+	inst:AddTag("meat")
+	inst:AddTag("cookable")
+	inst:AddTag("saltbox_valid")
+	inst:AddTag("catfood")
+	inst:AddTag("chicken_egg")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("inspectable")
+	inst:AddComponent("bait")
+	
+	inst:AddComponent("tradable")
+	inst.components.tradable.goldvalue = 1
+
+   	inst:AddComponent("edible")
+	inst.components.edible.healthvalue = TUNING.KYNO_CHICKEN_EGG_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_CHICKEN_EGG_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_CHICKEN_EGG_SANITY
+	inst.components.edible.foodtype = FOODTYPE.MEAT
+	inst.components.edible.ismeat = true
+
+	inst:AddComponent("perishable")
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
+	inst.components.perishable:StartPerishing()
+	inst.components.perishable.onperishreplacement = "rottenegg"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_chicken_egg"
+
+	inst:AddComponent("cookable")
+	inst.components.cookable.product = "kyno_chicken_egg_cooked"
+	
+	MakeHauntableLaunchAndPerish(inst)
+
+	return inst
+end
+
+local function chicken_egg_cookedfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+	inst.AnimState:SetBank("kyno_chicken_eggs")
+	inst.AnimState:SetBuild("kyno_chicken_eggs")
+	inst.AnimState:PlayAnimation("cooked")
+	
+	inst:AddTag("meat")
+	inst:AddTag("chicken_egg")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("inspectable")
+	inst:AddComponent("bait")
+	
+	inst:AddComponent("tradable")
+	inst.components.tradable.goldvalue = 1
+
+	inst:AddComponent("edible")
+	inst.components.edible.healthvalue = TUNING.KYNO_CHICKEN_EGG_COOKED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_CHICKEN_EGG_COOKED_HUNGER 
+	inst.components.edible.sanityvalue = TUNING.KYNO_CHICKEN_EGG_COOKED_SANITY
+	inst.components.edible.foodtype = FOODTYPE.MEAT
+	inst.components.edible.ismeat = true
+	
+	inst:AddComponent("perishable")
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
+	inst.components.perishable:StartPerishing()
+	inst.components.perishable.onperishreplacement = "rottenegg"
+	
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_chicken_egg_cooked"
+
+	MakeHauntableLaunchAndPerish(inst)
+
+	return inst
+end
+
 return Prefab("kyno_wheat", wheatfn, assets, prefabs),
 Prefab("kyno_wheat_cooked", wheat_cookedfn, assets, prefabs),
 Prefab("kyno_flour", flourfn, assets, prefabs),
@@ -1235,4 +1351,6 @@ Prefab("kyno_crabkingmeat", crabkingmeatfn, assets, prefabs),
 Prefab("kyno_crabkingmeat_cooked", crabkingmeat_cookedfn, assets, prefabs),
 Prefab("kyno_oil", oilfn, assets, prefabs),
 Prefab("kyno_sugar", sugarfn, assets, prefabs),
-Prefab("kyno_tealeaf", leaffn, assets, prefabs)
+Prefab("kyno_tealeaf", leaffn, assets, prefabs),
+Prefab("kyno_chicken_egg", chicken_eggfn, assets, prefabs),
+Prefab("kyno_chicken_egg_cooked", chicken_egg_cookedfn, assets, prefabs)

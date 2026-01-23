@@ -168,6 +168,10 @@ local function ondeploy(inst, pt, deployer)
 	if deployer ~= nil and deployer.SoundEmitter ~= nil then
 		deployer.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant") 
 	end
+	
+	if inst.components.stackable ~= nil then
+		inst.components.stackable:Get():Remove()
+	end
 end
 
 local function itemfn()

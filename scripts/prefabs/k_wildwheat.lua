@@ -108,6 +108,7 @@ local function grass(name, stage)
 		inst:AddTag("renewable")
 		inst:AddTag("silviculture")
 		inst:AddTag("lunarplant_target")
+		inst:AddTag("pickablechickenfood")
 
 		inst.entity:SetPristine()
 

@@ -469,6 +469,19 @@ AddRecipe2("kyno_fishregistryhat", {Ingredient("strawhat", 1), Ingredient("ocean
 SortAfter("kyno_fishregistryhat", "tacklestation", "FISHING")
 SortAfter("kyno_fishregistryhat", "plantregistryhat", "GARDENING")
 
+AddRecipe2("kyno_chickenhouse", {Ingredient("kyno_chicken2", 3, ModAtlas, true), Ingredient("cutgrass", 3), Ingredient("boards", 3)}, TECH.SCIENCE_TWO,
+	{
+		placer              = "kyno_chickenhouse_placer",
+		min_spacing         = 1.75,
+		atlas               = ModAtlas,
+		image               = "kyno_chickenhouse.tex",
+	},
+	{"GARDENING"}
+)
+SortAfter("kyno_chickenhouse", "beebox", "GARDENING")
+
+AddDeconstructRecipe("kyno_chicken2", {}, { no_deconstruction = true })
+
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
 		builder_tag         = "strongman",

@@ -594,7 +594,7 @@ AddRecipe2("meadowislandtrader_kyno_chicken2", {Ingredient("crow", 1)}, TECH.LOS
 		nounlock            = true, 
 		no_deconstruction   = true,
 		hint_msg            = "NEEDSMEADOWSHOP",
-		actionstr           = "MEADOWSHOP", 
+		actionstr           = "MEADOWSHOP",
 		sg_state            = "give", 
 		product             = "kyno_chicken2",
 		atlas               = ModAtlas,
