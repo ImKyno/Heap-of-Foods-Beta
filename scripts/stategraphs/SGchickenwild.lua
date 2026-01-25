@@ -27,6 +27,10 @@ local events =
 		inst.sg:GoToState("trapped")
 	end),
 	
+	EventHandler("lay_egg", function(inst)
+		inst.sg:GoToState("lay_egg")
+	end),
+	
 	EventHandler("locomote", function(inst) 
 		if not inst.sg:HasStateTag("idle") and not inst.sg:HasStateTag("moving") then 
 			return
@@ -256,6 +260,39 @@ local states =
 		ontimeout = function(inst)
 			inst.sg:GoToState("idle")
 		end,
+	},
+	
+	State
+	{
+		name = "lay_egg",
+		tags = { "idle" },
+
+		onenter = function(inst)
+			inst.Physics:Stop()
+			
+			inst.AnimState:PlayAnimation("honk")
+			inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/buzzard/hurt")
+		end,
+		
+		timeline =
+		{
+			TimeEvent(15 * FRAMES, function(inst) 
+				inst.Physics:Stop()
+				inst.SoundEmitter:PlaySound("summerevent/cannon/fire3")
+				
+				if inst.components.playerprox ~= nil and inst.components.playerprox:IsPlayerClose() then
+					local egg = SpawnPrefab("kyno_chicken_egg")
+					egg.Transform:SetPosition(inst.Transform:GetWorldPosition())
+				end
+			end),
+		},
+
+		events =
+		{
+			EventHandler("animover", function(inst, data)
+				inst.sg:GoToState("idle")
+			end),
+		}
 	},
 }
 

@@ -156,8 +156,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Sammy's special anniversar
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Researching fishes and roes adds to the Fish Registry."
 
 -- Creatures.
-STRINGS.SCRAPBOOK.SPECIALINFO.WILDCHICKEN = "Can lay eggs after eating Wheat or Seeds if a survivor is nearby."
-STRINGS.SCRAPBOOK.SPECIALINFO.DOMESTICATEDCHICKEN = "Can lay eggs at the Chicken Coop after eating Wheat or Seeds."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Can lay eggs at the Chicken Coop after eating Wheat or Seeds."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Fluffy little buddies that loves to steal your most valuable items!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Kingfishers will often drop Tropical Kois from above. It's raining fish, literally!"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emits a colorful healthy glow during dusk and night."
@@ -207,4 +206,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "Celebrating the 5th Anniversary of 
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Can be sliced using a Cleaver to obtain Slice of Anniversary Cake. Each Slice has a different flavor and effect.\n\nIncreases sanity of the survivors around it overtime.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Increases sanity of the survivors around it overtime.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "A 2 slot container that will receive corn for making popcorn.\n\nPlacing corn in the first slot will allow producing 5 popcorns.\n\nDuring the Heap of Foods Anniversary it will produce Anniversary Popcorn instead.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
-STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "A shelter for Farm Chickens that can produce poultry products."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "A shelter for Chickens that can produce poultry products."

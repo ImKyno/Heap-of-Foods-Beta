@@ -90,7 +90,7 @@ local function fn()
 
 	inst:AddComponent("fueled")
 	inst.components.fueled.accepting = true
-	inst.components.fueled.fueltype = FUELTYPE.BURNABLE -- placeholder change to FUELTYPE.ANIMALFOOD later
+	inst.components.fueled.fueltype = FUELTYPE.ANIMALFOOD
 	inst.components.fueled:SetTakeFuelFn(OnAddFuel)
 	inst.components.fueled:SetDepletedFn(OnFuelEmpty)
 	inst.components.fueled.maxfuel = TUNING.KYNO_ANIMALFEEDER_FUEL_MAX

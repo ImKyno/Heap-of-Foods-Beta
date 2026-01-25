@@ -37,31 +37,37 @@ local function FindGroundFood(inst)
 end
 
 -- PRIORITY:
--- 1. Animal Trough.
--- 2. Pickables. This means the chicken will pick and store food inside its inventory.
--- 3. Food Inside Inventory.
--- 4. Food on Ground.
+-- 1. Food inside inventory. Foods from pickables or given.
+-- 2. Animal Trough.
+-- 3. Pickables. This means the chicken will pick and store food inside its inventory.
+-- 4. Food on ground.
 local function FindFoodAction(inst)
 	if inst._has_eaten_today then
 		return
 	end
 	
-	-- Feeder.
+	if inst._has_food_buffered then
+		if inst.components.inventory ~= nil and inst.components.eater ~= nil then
+			local food = inst.components.inventory:FindItem(function(item)
+				return inst.components.eater:CanEat(item)
+			end)
+
+			if food ~= nil then
+				return BufferedAction(inst, food, ACTIONS.EAT)
+			end
+		end
+	end
+	
+	local feeder = FindFeeder(inst)
+	
+	if feeder ~= nil then
+		return BufferedAction(inst, feeder, ACTIONS.EATFROM)
+	end
 
 	local pickable = FindPickableFood(inst)
 	
 	if pickable ~= nil then
 		return BufferedAction(inst, pickable, ACTIONS.PICK)
-	end
-
-	if inst.components.inventory ~= nil and inst.components.eater ~= nil then
-		local food = inst.components.inventory:FindItem(function(item)
-			return inst.components.eater:CanEat(item)
-		end)
-
-		if food ~= nil then
-			return BufferedAction(inst, food, ACTIONS.EAT)
-		end
 	end
 
 	local groundfood = FindGroundFood(inst)
@@ -98,9 +104,11 @@ function ChickenCoopBrain:OnStart()
 		BrainCommon.PanicTrigger(self.inst),
 		BrainCommon.ElectricFencePanicTrigger(self.inst),
 		
-		WhileNode(function() return self.inst.components.health.takingfiredamage end, "OnFire", Panic(self.inst)),
+		WhileNode(function() return self.inst.components.health.takingfiredamage end, "On Fire", Panic(self.inst)),
 		
-		WhileNode(function() return not TheWorld.state.iscaveday end, "CaveNightness",
+		WhileNode(function() return not TheWorld.state.iscaveday end, "Cave Nightness",
+			DoAction(self.inst, GoHomeAction, "GoHome", true)),
+		WhileNode(function() return TheWorld.state.iswinter end, "Is Winter",
 			DoAction(self.inst, GoHomeAction, "GoHome", true)),
 			
 		WhileNode(function() return self.inst:HasTag("butcher_fearable") end, "Fear Butcher", 
@@ -110,7 +118,7 @@ function ChickenCoopBrain:OnStart()
 			RunAway(self.inst, RUN_AWAY_PARAMS, SEE_PLAYER_DIST, STOP_RUN_DIST)),
 		
 		RunAway(self.inst, RUN_AWAY_PARAMS, SEE_PLAYER_DIST, STOP_RUN_DIST),		
-		RunAway(self.inst, "OnFire", SEE_PLAYER_DIST, STOP_RUN_DIST),
+		RunAway(self.inst, "On Fire", SEE_PLAYER_DIST, STOP_RUN_DIST),
 		
 		DoAction(self.inst, FindFoodAction),
 		Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_WANDER_DIST)

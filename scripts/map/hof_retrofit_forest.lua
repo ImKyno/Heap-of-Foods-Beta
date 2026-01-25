@@ -525,6 +525,7 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 		"MolesvilleDeciduous",
 		"DeciduousClearing",
 		"PondyGrass",
+		"PigKingdom", -- Required for Classic Worldgen.
 	}
 
 	local topology = savedata.map.topology

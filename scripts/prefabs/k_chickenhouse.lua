@@ -172,6 +172,19 @@ end
 
 local function OnChildSpawn(inst, child)
 	child.sg:GoToState("honk")
+	
+	if inst._chicken_data ~= nil and #inst._chicken_data > 0 then
+		local data = table.remove(inst._chicken_data, 1)
+
+		if data.name ~= nil and child.components.named ~= nil then
+			child.components.named:SetName(data.name)
+		end
+
+		if data.build ~= nil then
+			child._color_build = data.build
+			child.AnimState:AddOverrideBuild(data.build)
+		end
+	end
 end
 
 local function OnChildGoingHome(inst, data)
@@ -180,12 +193,21 @@ local function OnChildGoingHome(inst, data)
 	end
 
 	local chicken = data.child
+	
+	inst._chicken_data = inst._chicken_data or {}
+	
+	table.insert(inst._chicken_data,
+	{
+		name = chicken.components.named ~= nil and chicken.components.named.name or nil,
+		build = chicken._color_build,
+	})
 
 	if inst.components.harvestable ~= nil and chicken._has_eaten_today then
 		inst.components.harvestable:Grow() -- Chickens needs to eat something first in order to produce eggs.
 	end
 
 	chicken._has_eaten_today = false
+	chicken._has_food_buffered = false
 end
 
 local function TryStartSleepGrowing(inst)
@@ -235,13 +257,23 @@ local function OnSave(inst, data)
 	if inst:HasTag("burnt") or (inst.components.burnable ~= nil and inst.components.burnable:IsBurning()) then
 		data.burnt = true
 	end
+	
+	if inst._chicken_data then
+		data.chicken_data = inst._chicken_data
+	end
 end
 
 local function OnLoad(inst, data)
-	if data ~= nil and data.burnt then
-		inst.components.burnable.onburnt(inst)
-	else
-		UpdateLevel(inst)
+	if data ~= nil then
+		if data.chicken_data then
+			inst._chicken_data = data.chicken_data
+		end
+	
+		if data.burnt then
+			inst.components.burnable.onburnt(inst)
+		else
+			UpdateLevel(inst)
+		end
 	end
 end
 
@@ -278,6 +310,8 @@ local function fn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
+	
+	inst._chicken_data = nil
 	
 	inst:AddComponent("inspectable")
 	inst:AddComponent("lootdropper")

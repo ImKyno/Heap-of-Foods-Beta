@@ -780,6 +780,38 @@ AddAction("TAKEFROMCONTAINER", "Take From", function(act)
 	return false
 end)
 
+-- This action is meant for creatures not for players!
+AddAction("EATFROM", "Eat From", function(act)
+	local doer = act.doer
+	local target = act.target
+	
+	if doer == nil or target == nil then
+		return false
+	end
+
+	if doer._has_food_buffered or doer._has_eaten_today then
+		return false
+	end
+	
+	local fueled = target.components.fueled
+	
+	if fueled == nil or fueled:GetPercent() <= 0 then
+		return false
+	end
+	
+	fueled:DoDelta(-TUNING.KYNO_ANIMALFEEDER_CONSUME)
+
+	local food = SpawnPrefab("seeds")
+	
+	if food ~= nil and doer.components.inventory ~= nil then
+		doer.components.inventory:GiveItem(food, nil, doer:GetPosition())
+	end
+	
+	doer._has_food_buffered = true
+
+	return true
+end)
+
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 -- Hope they don't smack and bonk my head...
 local _FISHfn = ACTIONS.FISH.fn

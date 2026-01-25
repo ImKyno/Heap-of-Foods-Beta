@@ -156,7 +156,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Chapéu de aniversário es
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Pesquisar peixes e ovas os adiciona ao Registro de Peixes."
 
 -- Creatures.
-STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Pode ser alimentada com sementes para botar um ovo."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Colocará ovos no Galinheiro após comer Sementes ou Trigo."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Amiguinhos peludos que adoram roubar seus itens mais valiosos!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Martins-pescadores frequentemente deixam cair Kois Tropicais de cima. Chuva de peixes, literalmente!"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emite um brilho saudável e colorido ao entardecer e à noite."
@@ -206,3 +206,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "Comemorando o 5º Aniversário do A
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Pode ser fatiado usando um Cutelo para obter Fatia de Bolo de Aniversário. Cada fatia tem um sabor e efeito diferente.\n\nAumenta a sanidade dos sobreviventes ao seu redor com o tempo.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Aumenta a sanidade dos sobreviventes ao seu redor com o tempo.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Um recipiente de 2 slots que recebe milho para fazer pipoca.\n\nColocar milho no primeiro slot permite produzir 5 pipocas.\n\nDurante o Aniversário do Amontoado de Comidas, produzirá Pipoca de Aniversário.\n\nCelebrando o 5º Aniversário do Amontoado de Comidas!"
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "Um abrigo para Galinhas produzirem seus produtos."

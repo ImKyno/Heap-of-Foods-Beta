@@ -1663,7 +1663,7 @@ STRINGS.NAMES.KYNO_ROE_OCEANFISH_MEDIUM_9 = "Ovas de Peixe-doce"
 STRINGS.NAMES.KYNO_ROE_OCEANFISH_PUFFERFISH = "Ovas de Baiacu"
 STRINGS.NAMES.KYNO_ROE_OCEANFISH_STURGEON = "Ovas de Esturjão"
 
-STRINGS.RECIPE_DESC.KYNO_ROE = "Ovas de peixe prontas para cozinhar."
+STRINGS.RECIPE_DESC.KYNO_ROE_M = "Ovas de peixe prontas para cozinhar."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_ROE = "Filhotes de peixe."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_ROE = "Ughh! Que nojo!!"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_ROE = "Tem gosto de ovo."
@@ -1702,7 +1702,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_ROE_COOKED = "Cozinhei eles. Hehe."
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_ROE_COOKED = "Cheiro agradável."
 
 STRINGS.NAMES.KYNO_SHARK_FIN = "Barbatana de Tubarão"
-STRINGS.RECIPE_DESC.KYNO_SHARK_FIN = "Barbatana arrancada de um abominável tubarão."
+STRINGS.RECIPE_DESC.KYNO_SHARK_FIN_M = "Barbatana arrancada de um abominável tubarão."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_SHARK_FIN = "Uma barbatana elegante."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_SHARK_FIN = "A barbatana caiu."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_SHARK_FIN = "Perdi o resto do tubarão."
@@ -1973,7 +1973,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Vamos preparar, Wo
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Agora posso fazer café."
 
 STRINGS.NAMES.DUG_KYNO_COFFEEBUSH = "Planta de Café"
-STRINGS.RECIPE_DESC.DUG_KYNO_COFFEEBUSH = "Uma planta rara e exótica adorada por muitos."
+STRINGS.RECIPE_DESC.DUG_KYNO_COFFEEBUSH_M = "Uma planta rara e exótica adorada por muitos."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.DUG_KYNO_COFFEEBUSH = "É uma planta que eu poderia aprender a amar."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Esse arbusto floresce perto do fogo do vulcão!"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Arbusto de café é orgulhoso e forte."
@@ -5106,16 +5106,16 @@ STRINGS.NAMES.KYNO_SEEDS_KIT_TURNIP = "Pacote de Sementes de Nabo"
 STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_TURNIP = "UMA BOA QUANTIDADE DE SEMENTES DE NABO!"
 
 STRINGS.NAMES.KYNO_SEEDS_KIT_RICE = "Pacote de Sementes de Arroz"
-STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_RICE = "Um monte de sementes de arroz embrulhadas."
+STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_RICE_M = "Um monte de sementes de arroz embrulhadas."
 
 STRINGS.NAMES.KYNO_SEEDS_KIT_FIRENETTLES = "Pacote de Sementes de Urtiga Flamejante"
-STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_FIRENETTLES = "Cuidado! Essas sementes queimam."
+STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_FIRENETTLES_M = "Cuidado! Essas sementes queimam."
 
 STRINGS.NAMES.KYNO_SEEDS_KIT_FORGETMELOTS = "Pacote de Sementes de Nome-Esquecido"
-STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_FORGETMELOTS = "Não se esqueça de plantá-las enquanto pode!"
+STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_FORGETMELOTS_M = "Não se esqueça de plantá-las enquanto pode!"
 
 STRINGS.NAMES.KYNO_SEEDS_KIT_TILLWEED = "Pacote de Sementes de Tillweed"
-STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_TILLWEED = "Plante essas sementes e elas eventualmente se tornarão uma erva."
+STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_TILLWEED_M = "Plante essas sementes e elas eventualmente se tornarão uma erva."
 
 STRINGS.NAMES.KYNO_LOTUS_OCEAN = "Planta de Lótus"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_LOTUS_OCEAN = "A ciência está florescendo bem nesta estação."
@@ -6692,7 +6692,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_CRABMEAT_DRIED = "Uma carne branca? Curi
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_CRABMEAT_DRIED = "Carne de caranguejo, perfeita para pratos refinados."
 
 STRINGS.NAMES.KYNO_CRABKINGMEAT = "Carne de Rei Caranguejo"
-STRINGS.RECIPE_DESC.KYNO_CRABKINGMEAT = "Carne nobre de uma espécie rara de caranguejo."
+STRINGS.RECIPE_DESC.KYNO_CRABKINGMEAT_M = "Carne nobre de uma espécie rara de caranguejo."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_CRABKINGMEAT = "Sem imitações aqui."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_CRABKINGMEAT = "Precisa de mais fogo."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_CRABKINGMEAT = "É carne do grande pinçador."
@@ -6825,7 +6825,7 @@ STRINGS.CHARACTERS.WALTER.ANNOUNCE_PIKOTREE_TOOSMALL = "No acampamento, disseram
 STRINGS.CHARACTERS.WANDA.ANNOUNCE_PIKOTREE_TOOSMALL = "Isso vai levar algum tempo, ah..."
 
 STRINGS.NAMES.KYNO_CHICKEN2 = "Galinha"
-STRINGS.RECIPE_DESC.KYNO_CHICKEN2 = "Coloca ovos quando alimentada."
+STRINGS.RECIPE_DESC.KYNO_CHICKEN_M = "Uma ave capaz de dar penas e ovos quando domesticada."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_CHICKEN2 = "É uma galinha pequena."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_CHICKEN2 = "É uma galinha feia."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_CHICKEN2 = "Pássaro piador pequeno."
@@ -7458,8 +7458,8 @@ STRINGS.CHARACTERS.WURT.DESCRIBE.KYNO_WATERY_CRATE = "O que tem dentro?"
 STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_WATERY_CRATE = "Parece que devo verificar isso."
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_WATERY_CRATE = "Vamos abrir esta caixa."
 
-STRINGS.NAMES.KYNO_TUNACAN = "Atum"
-STRINGS.RECIPE_DESC.KYNO_TUNACAN = "Peixe preservado para jornadas marítimas."
+STRINGS.NAMES.KYNO_TUNACAN = "Atum Enlatado"
+STRINGS.RECIPE_DESC.KYNO_TUNACAN_M = "Peixe preservado para jornadas marítimas."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_TUNACAN = "De onde veio essa lata?"
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_TUNACAN = "Ah, mas eu gosto do meu com Ballphin!"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_TUNACAN = "Vou abrir com as mãos nuas!"
@@ -7498,19 +7498,19 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_TUNACAN_OPEN = "Peixe enlatado! Que aven
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_TUNACAN_OPEN = "Demorou menos do que eu esperava."
 
 STRINGS.NAMES.KYNO_TOMATOCAN = "Tomate Enlatado"
-STRINGS.RECIPE_DESC.KYNO_TOMATOCAN = "Para quando você estiver se sentindo saudável."
+STRINGS.RECIPE_DESC.KYNO_TOMATOCAN_M = "Para quando você estiver se sentindo saudável."
 STRINGS.NAMES.KYNO_TOMATOCAN_OPEN = "Enlatado de Tomate Aberto"
 
 STRINGS.NAMES.KYNO_BEANCAN = "Feijão Enlatado"
-STRINGS.RECIPE_DESC.KYNO_BEANCAN = "Para suas necessidades de sopa."
+STRINGS.RECIPE_DESC.KYNO_BEANCAN_M = "Para suas necessidades de sopa."
 STRINGS.NAMES.KYNO_BEANCAN_OPEN = "Feijão Enlatado Aberto"
 
 STRINGS.NAMES.KYNO_MEATCAN = "Carne Enlatada"
-STRINGS.RECIPE_DESC.KYNO_MEATCAN = "Carne enlatada que dura para sempre!"
+STRINGS.RECIPE_DESC.KYNO_MEATCAN_M = "Carne enlatada que dura para sempre!"
 STRINGS.NAMES.KYNO_MEATCAN_OPEN = "Carne Enlatada Aberta"
 
 STRINGS.NAMES.KYNO_ANTCHOVYCAN = "Formiganchovas Enlatadas"
-STRINGS.RECIPE_DESC.KYNO_ANTCHOVYCAN = "Mil formiganchovas!"
+STRINGS.RECIPE_DESC.KYNO_ANTCHOVYCAN_M = "Mil formiganchovas!"
 STRINGS.NAMES.KYNO_ANTCHOVYCAN_OPEN = "Formiganchovas Enlatadas Aberta"
 
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_CANNEDFOOD = "De onde veio essa lata?"
@@ -7550,13 +7550,13 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_CANNEDFOOD_OPEN = "Comida enlatada! Que 
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_CANNEDFOOD_OPEN = "Demorou menos do que eu esperava."
 
 STRINGS.NAMES.KYNO_SODACAN = "Refrigerante de Laranja"
-STRINGS.RECIPE_DESC.KYNO_SODACAN = "Não se sabe se é realmente laranja."
+STRINGS.RECIPE_DESC.KYNO_SODACAN_M = "Não se sabe se é realmente laranja."
 
 STRINGS.NAMES.KYNO_COKECAN = "Coca"
-STRINGS.RECIPE_DESC.KYNO_COKECAN = "Um refrigerante clássico."
+STRINGS.RECIPE_DESC.KYNO_COKECAN_M = "Um refrigerante clássico."
 
 STRINGS.NAMES.KYNO_ENERGYCAN = "Energético"
-STRINGS.RECIPE_DESC.KYNO_ENERGYCAN = "Cheio de energia poderosa."
+STRINGS.RECIPE_DESC.KYNO_ENERGYCAN_M = "Cheio de energia poderosa."
 
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_POP = "Que substância é esta?"
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_POP = "Será água do fogo? É estranha."
@@ -7922,7 +7922,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_BUCKET_EMPTY = "Agora posso carregar alg
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_BUCKET_EMPTY = "Ótimo!"
 
 STRINGS.NAMES.KYNO_BUCKET_METAL = "Balde de Metal"
-STRINGS.RECIPE_DESC.KYNO_BUCKET_METAL = "Um balde de metal que pode aguentar até a mais díficil das tarefas."
+STRINGS.RECIPE_DESC.KYNO_BUCKET_METAL_M = "Um balde de metal que pode aguentar até a mais díficil das tarefas."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_BUCKET_METAL = "Um balde resistente, melhor que os de madeira."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_BUCKET_METAL = "Sem graça, não posso queimar."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_BUCKET_METAL = "Balde de metal pequeno ajuda Wolfgang nas tarefas."
@@ -8220,7 +8220,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "É uma árvore,
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "Só uma árvore de chá, com esquilos."
 
 STRINGS.NAMES.KYNO_PIKO = "Esquilo"
-STRINGS.RECIPE_DESC.KYNO_PIKO = "Pequenos esquilos que roubam de tudo."
+STRINGS.RECIPE_DESC.KYNO_PIKO_M = "Pequenos esquilos que roubam de tudo."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_PIKO = "Ele é um pouco doido."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_PIKO = "Um esquilinho agitado."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_PIKO = "Pequeno, fraco e fofinho."
@@ -8240,7 +8240,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_PIKO = "Guarda mais coisas nas bochechas
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_PIKO = "Você é um fofinho."
 
 STRINGS.NAMES.KYNO_PIKO_ORANGE = "Esquilo Laranja"
-STRINGS.RECIPE_DESC.KYNO_PIKO_ORANGE = "Pequenos esquilos que roubam de tudo."
+STRINGS.RECIPE_DESC.KYNO_PIKO_ORANGE_M = "Pequenos esquilos que roubam de tudo."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_PIKO_ORANGE = "Por algum motivo estou com vontade de chá."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_PIKO_ORANGE = "Um esquilinho agitado."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_PIKO_ORANGE = "Pequeno, fraco e fofinho laranja."
@@ -8854,7 +8854,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_JUICE = "Faz tempo que não tomo um."
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_JUICE = "Prefiro um suco mais doce."
 
 STRINGS.NAMES.KYNO_POISON_FROGLEGS = "Perna de Sapo Venenosa"
-STRINGS.RECIPE_DESC.KYNO_POISON_FROGLEGS = "Pode causar envenenamento."
+STRINGS.RECIPE_DESC.KYNO_POISON_FROGLEGS_M = "Pode causar envenenamento."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_POISON_FROGLEGS = "Parece nociva."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_POISON_FROGLEGS = "Não sei se devo comer isso."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_POISON_FROGLEGS = "Partes de sapo perigosas!"
@@ -9623,7 +9623,7 @@ STRINGS.NAMES.KYNO_BOTTLECAP = "Tampinha"
 STRINGS.NAMES.KYNO_BOTTLECAP1 = "Tampa"
 STRINGS.NAMES.KYNO_BOTTLECAP2 = "Tampinha"
 STRINGS.NAMES.KYNO_BOTTLECAP3 = "Tampinha de Garrafa"
-STRINGS.RECIPE_DESC.KYNO_BOTTLECAP = "Moeda pós-apocalíptica."
+STRINGS.RECIPE_DESC.KYNO_BOTTLECAP_M = "Moeda pós-apocalíptica."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_BOTTLECAP = "Um item de outro mundo."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_BOTTLECAP = "De onde veio isso?"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_BOTTLECAP = "É daquela bebida!"
@@ -10026,7 +10026,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_PINEAPPLEBUSH = "Não toque, garota. Dei
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_PINEAPPLEBUSH = "Entendi. Todos os espinhos por aqui."
 
 STRINGS.NAMES.KYNO_PINEAPPLE = "Abacaxi"
-STRINGS.RECIPE_DESC.KYNO_PINEAPPLE = "Uma fruta dura e espinhosa."
+STRINGS.RECIPE_DESC.KYNO_PINEAPPLE_M = "Uma fruta dura e espinhosa."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_PINEAPPLE = "Precisa ser quebrado."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_PINEAPPLE = "Ai!"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_PINEAPPLE = "Wolfgang vai esmagar com as mãos nuas."
@@ -10239,7 +10239,7 @@ STRINGS.CHARACTERS.WANDA.DESCRIBE.STRAWBERRYGRINDER = "Ao menos é comestível, 
 
 STRINGS.NAMES.NUKASHINE = "Nukashine"
 STRINGS.NAMES.NUKASHINE_SUGARFREE = "Nukashine \"Sem Açúcar\""
-STRINGS.RECIPE_DESC.NUKASHINE_SUGARFREE = "Agora sem riscos de apagões!"
+STRINGS.RECIPE_DESC.NUKASHINE_SUGARFREE_M = "Agora sem riscos de apagões!"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.NUKASHINE = "Ugh, minha mente fica tonta."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.NUKASHINE = "Essa é uma viagem para recordar!"
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.NUKASHINE = "Bebida estranha faz a mente de Wolfgang explodir."
@@ -10278,7 +10278,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.ANTSLOG = "Tem que fazer o que for preciso pr
 STRINGS.CHARACTERS.WANDA.DESCRIBE.ANTSLOG = "Não era isso que eu estava esperando."
 
 STRINGS.NAMES.KYNO_WORM_BONE = "Osso de Minhoca"
-STRINGS.RECIPE_DESC.KYNO_WORM_BONE = "Definitivamente não são osssos normais."
+STRINGS.RECIPE_DESC.KYNO_WORM_BONE_M = "Definitivamente não são osssos normais."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_WORM_BONE = "Ha ha minhoca, eu tenho seu osso."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_WORM_BONE = "Haha. Eu tenho o osso dela."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_WORM_BONE = "Wolfgang venceu."
@@ -10807,7 +10807,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_ITEMSLICER = "Você vai fatiar com isso.
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_ITEMSLICER = "Para cortar os pedaços de carne mais duros."
 
 STRINGS.NAMES.KYNO_ITEMSLICER_GOLD = "Cutelo Sublime"
-STRINGS.RECIPE_DESC.KYNO_ITEMSLICER_GOLD = "Este ótimo cutelo pode cortar rapidamente através de qualquer coisa!"
+STRINGS.RECIPE_DESC.KYNO_ITEMSLICER_GOLD_M = "Este ótimo cutelo pode cortar rapidamente através de qualquer coisa!"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Gosto do corte desta ferramenta."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Ou posso simplesmente queimar o caminho."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Ah! Muito bom!"
@@ -11284,7 +11284,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.REGULARLASAGNA = "Vou cozinhar uma lasanha-mo
 STRINGS.CHARACTERS.WANDA.DESCRIBE.REGULARLASAGNA = "De dar água na boca."
 
 STRINGS.NAMES.KYNO_MOON_FROGLEGS = "Pernas de Sapo Lunar"
-STRINGS.RECIPE_DESC.KYNO_MOON_FROGLEGS = "Pernas de sapo infundido com poder da Lua!"
+STRINGS.RECIPE_DESC.KYNO_MOON_FROGLEGS_M = "Pernas de sapo infundido com poder da Lua!"
 STRINGS.NAMES.KYNO_MOON_FROGLEGS_COOKED = "Pernas de Sapo Lunar Cozidas"
 
 STRINGS.NAMES.FLTSANDWICH = "FLT"
@@ -11498,7 +11498,7 @@ STRINGS.CHARACTERS.WALTER.DESCRIBE.KYNO_SPORECAP_DARK_COOKED = "O fogo não neut
 STRINGS.CHARACTERS.WANDA.DESCRIBE.KYNO_SPORECAP_DARK_COOKED = "Queria voltar no tempo antes de cheirar isso."
 
 STRINGS.NAMES.KYNO_GOLDENAPPLE = "Maçã Dourada Encantada"
-STRINGS.RECIPE_DESC.KYNO_GOLDENAPPLE = "Dizem as lendas que guarda o poder dos deuses."
+STRINGS.RECIPE_DESC.KYNO_GOLDENAPPLE_M = "Dizem as lendas que guarda o poder dos deuses."
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_GOLDENAPPLE = "A ciência não consegue explicar o quão poderosa ela é."
 STRINGS.CHARACTERS.WILLOW.DESCRIBE.KYNO_GOLDENAPPLE = "É intensa, mas ao mesmo tempo, tranquilizante."
 STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.KYNO_GOLDENAPPLE = "Maçã poderosa!"

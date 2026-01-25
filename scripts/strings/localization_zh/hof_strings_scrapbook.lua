@@ -156,7 +156,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "萨米特别的周年庆�
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "研究鱼类和鱼卵会记录到鱼类图鉴中。"
 
 -- Creatures.
-STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "可以用种子喂它，让它下蛋。"
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Can lay eggs at the Chicken Coop after eating Wheat or Seeds."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "毛茸茸的小家伙，喜欢偷你最值钱的东西！"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "翠鸟经常会从上空投下热带锦鲤。真是一场鱼雨！"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "在黄昏和夜晚会发出色彩鲜艳的健康光芒。"
@@ -206,3 +206,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "可用砍刀切开周年纪念蛋糕。每份蛋糕风味与效果都不一样。\n\n随时间推移，逐渐提升周围幸存者的理智值。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "随时间推移，逐渐提升周围幸存者的理智值。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "一个2格容器，用于接收制作爆米花的玉米。\n\n将玉米放入第一个格子可生产5份爆米花。\n\n在更多料理周年庆期间，它会变为周年庆纪念爆米花。\n\n庆祝更多料理五周年！"
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "A shelter for Chickens that can produce poultry products."

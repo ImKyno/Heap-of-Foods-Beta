@@ -156,7 +156,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Specjalny kapelusz rocznic
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Badania ryb i ikry przyczyniają się do wzbogacenia Rejestru Ryb."
 
 -- Stworzenia.
-STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Można karmić nasionami, aby złożyła jajko."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Może znosić jaja w kurniku po zjedzeniu pszenicy lub nasion."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Puchate maluchy, które uwielbiają kraść twoje najcenniejsze przedmioty!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Zimorodki często upuszczają Tropikalne Karpie z góry. Dosłownie padają ryby!"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emituje kolorowe, zdrowe światło o zmierzchu i w nocy."
@@ -206,3 +206,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "Świętujemy 5. Rocznicę Heap of F
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Można pokroić Tasakiem, aby otrzymać Kawałek Tortu Rocznicowego. Każdy kawałek ma inny smak i efekt.\n\nStopniowo zwiększa poczytalność ocalałych w pobliżu.\n\nŚwiętujemy 5. Rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Stopniowo zwiększa poczytalność ocalałych w pobliżu.\n\nŚwiętujemy 5. Rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Pojemnik z dwoma slotami, który przyjmuje kukurydzę do produkcji popcornu.\n\nUmieszczenie kukurydzy w pierwszym slocie pozwala wyprodukować 5 porcji popcornu.\n\nPodczas Rocznicy Heap of Foods będzie produkować Rocznicowy Popcorn.\n\nŚwiętując 5. Rocznicę Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "Schronisko dla kurczaków, w którym można produkować produkty drobiowe."

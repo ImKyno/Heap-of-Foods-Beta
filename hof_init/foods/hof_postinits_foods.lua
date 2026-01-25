@@ -423,3 +423,25 @@ end
 for k, v in pairs(cook_robot_containers) do
 	AddPrefabPostInit(v, CookRobotContainersPostInit)
 end
+
+-- Make all seeds a valid fuel for Animal Trough.
+local function SeedsPostInit(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	if inst.components.edible ~= nil then
+		if inst.components.edible.foodtype == _G.FOODTYPE.SEEDS then
+			if not inst.components.fuel then
+				inst:AddComponent("fuel")
+			end
+	
+			if inst.components.fuel ~= nil then
+				inst.components.fuel.fueltype = _G.FUELTYPE.ANIMALFOOD
+				inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL
+			end
+		end
+	end
+end
+
+AddPrefabPostInitAny(SeedsPostInit)

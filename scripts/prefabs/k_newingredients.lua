@@ -84,6 +84,10 @@ local function wheatfn()
 	inst.components.edible.hungervalue = TUNING.KYNO_WHEAT_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_WHEAT_SANITY
 	inst.components.edible.foodtype = FOODTYPE.SEEDS
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
+	inst.components.fuel.fuelvalue = TUNING.MED_FUEL
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)

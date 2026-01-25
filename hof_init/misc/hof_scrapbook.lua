@@ -2079,7 +2079,7 @@ local HOF_SCRAPBOOK_FOODS =
 		animoffsety    = 30,
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -120,
-		deps           = {"birdcage", "kyno_chicken2", "kyno_chicken_coop", "kyno_chicken_egg_cooked", "rottenegg"},
+		deps           = {"kyno_chicken2", "kyno_chicken_egg_cooked", "kyno_chickenhouse", "rottenegg"},
 	},
 	
 	kyno_chicken_egg_cooked =
@@ -14843,7 +14843,6 @@ local HOF_SCRAPBOOK_CREATURES =
 	{
 		name           = "kyno_chicken2",
 		type           = "creature",
-		subcat         = "chicken",
 		tex            = "kyno_chicken2.tex",
 		prefab         = "kyno_chicken2",
 		health         = 75,
@@ -14853,25 +14852,8 @@ local HOF_SCRAPBOOK_CREATURES =
 		anim           = "idle",
 		animoffsety    = 40,
 		animoffsetbgy  = -65,
-		deps           = {"drumstick", "drumstick_cooked", "goose_feather", "kyno_chicken_egg"},
-	},
-	
-	kyno_chicken_coop  =
-	{
-		name           = "kyno_chicken_coop",
-		type           = "creature",
-		subcat         = "chicken",
-		tex            = "kyno_chicken_coop.tex",
-		prefab         = "kyno_chicken_coop",
-		health         = 75,
-		perishable     = 2400,
-		bank           = "chicken",
-		build          = "chicken_coop_build",
-		anim           = "idle",
-		animoffsety    = 40,
-		animoffsetbgy  = -65,
-		deps           = {"drumstick", "drumstick_cooked", "goose_feather", "kyno_chicken_egg"},
-		specialinfo    = "DOMESTICATEDCHICKEN",
+		deps           = {"drumstick", "drumstick_cooked", "goose_feather", "kyno_chicken_egg", "kyno_chickenhouse"},
+		specialinfo    = "CHICKEN",
 	},
 	
 	kyno_piko          =
@@ -16718,7 +16700,7 @@ local HOF_SCRAPBOOK_THINGS =
 		bank           = "kyno_chickenhouse",
 		build          = "kyno_chickenhouse",
 		anim           = "idle",
-		deps           = {"kyno_chicken_coop", "kyno_chicken_egg", "boards", "cutgrass", "researchlab2"},
+		deps           = {"kyno_chicken2", "kyno_chicken_egg", "boards", "cutgrass", "researchlab2"},
 		specialinfo    = "CHICKENHOUSE",
 	},
 }

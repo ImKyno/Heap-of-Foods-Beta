@@ -3,8 +3,8 @@ require("stategraphs/commonstates")
 local actionhandlers = 
 {
 	ActionHandler(ACTIONS.EAT, "eat_pre"),
+	ActionHandler(ACTIONS.EATFROM, "pick"),
 	ActionHandler(ACTIONS.PICK, "pick"),
-	ActionHandler(ACTIONS.LOOKAT, "eat_pre"),
 	ActionHandler(ACTIONS.GOHOME, "gohome"),
 }
 
@@ -267,7 +267,7 @@ local states =
 
 		onenter = function(inst)
 			inst.Physics:Stop()
-			inst.AnimState:PlayAnimation("peck", false)
+			inst.AnimState:PlayAnimation("idle", true)
 		end,
 
 		timeline =

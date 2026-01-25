@@ -4,7 +4,9 @@ local chicken_coop_brain = require("brains/chickencoopbrain")
 local assets =
 {
 	Asset("ANIM", "anim/chicken.zip"),
-	Asset("ANIM", "anim/chicken_coop_build.zip"),
+	Asset("ANIM", "anim/chicken_coop_1_build.zip"),
+	Asset("ANIM", "anim/chicken_coop_2_build.zip"),
+	Asset("ANIM", "anim/chicken_coop_3_build.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -40,6 +42,39 @@ SetSharedLootTable("kyno_chicken_coop",
 	{ "goose_feather", 1.00 },
 	{ "goose_feather", 0.50 },
 })
+
+local CHICKEN_COOP_VARIANTS =
+{
+	{
+		build = "chicken_coop_1_build",
+		icon  = "kyno_chicken_coop_1",
+	},
+	
+	{
+		build = "chicken_coop_2_build",
+		icon  = "kyno_chicken_coop_2",
+	},
+	
+	{
+		build = "chicken_coop_3_build",
+		icon  = "kyno_chicken_coop_3",
+	},
+}
+
+local function PickRandomChickenCoopVariant()
+	return CHICKEN_COOP_VARIANTS[math.random(#CHICKEN_COOP_VARIANTS)]
+end
+
+local function ApplyChickenCoopVariant(inst, variant)
+	inst.AnimState:AddOverrideBuild(variant.build)
+
+	if inst.components.inventoryitem ~= nil then
+		inst.components.inventoryitem:ChangeImageName(variant.icon)
+	end
+
+	inst._color_build = variant.build
+	inst._icon_name = variant.icon
+end
 
 local function SetHome(inst)
 	inst.components.knownlocations:RememberLocation("home", inst:GetPosition())
@@ -100,6 +135,16 @@ local function CanSleep(inst)
 	return DefaultSleepTest(inst)
 end
 
+local function CanSpawnEgg(inst)
+	if inst.components.inventoryitem:IsHeld() 
+	or inst.components.sleeper:IsAsleep() 
+	or inst.components.freezable:IsFrozen() then
+		return false
+	else
+		return true
+	end
+end
+
 local function OnEat(inst, food)
 	if inst:HasTag("chicken_coop") then
 		if inst._has_eaten_today then
@@ -111,6 +156,28 @@ local function OnEat(inst, food)
 				inst._has_eaten_today = true
 			end
 		end
+	elseif inst:HasTag("chicken_wild") and math.random() < TUNING.KYNO_CHICKEN_LAYEGG_CHANCE then
+		if food ~= nil and food.components.edible ~= nil then
+			if food.components.edible.foodtype == FOODTYPE.SEEDS or food:HasTag("chickenfood") then
+				if inst.components.playerprox ~= nil and inst.components.playerprox:IsPlayerClose() then -- Only lay egg if someone is nearby.
+					inst:PushEvent("lay_egg")
+				end
+			end
+		end
+	end
+end
+
+local function OnSave(inst, data)	
+	data.chicken_variant =
+	{
+		build = inst._color_build,
+		icon  = inst._icon_name,
+	}
+end
+
+local function OnLoad(inst, data)
+	if data ~= nil and data.chicken_variant then
+		ApplyChickenCoopVariant(inst, data.chicken_variant)
 	end
 end
 
@@ -133,7 +200,7 @@ local function restoredatafromtrap(inst, data)
     end
 end
 
-local function commonfn(bank, build, loottable, inventoryimage)
+local function commonfn(bank, build, loottable)
 	local inst = CreateEntity()
 	
 	inst.entity:AddTransform()
@@ -195,10 +262,6 @@ local function commonfn(bank, build, loottable, inventoryimage)
 	inst.components.health:SetMaxHealth(TUNING.KYNO_CHICKEN_HEALTH)
 	inst.components.health:StartRegen(5, 8)
 	
-	inst:AddComponent("named")
-	inst.components.named.possiblenames = STRINGS.KYNO_CHICKEN_NAMES
-	inst.components.named:PickNewName()
-	
 	inst:AddComponent("locomotor")
 	inst.components.locomotor.runspeed = TUNING.KYNO_CHICKEN_RUNSPEED
 	inst.components.locomotor:SetAllowPlatformHopping(true)
@@ -213,7 +276,6 @@ local function commonfn(bank, build, loottable, inventoryimage)
 	
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = inventoryimage
 	inst.components.inventoryitem.onputininventoryfn = OnInventory
 	inst.components.inventoryitem.nobounce = true
 	inst.components.inventoryitem.longpickup = true
@@ -234,7 +296,7 @@ local function commonfn(bank, build, loottable, inventoryimage)
 end
 
 local function chicken_wild(inst)
-	local inst = commonfn("chicken", "chicken", "kyno_chicken2", "kyno_chicken2")
+	local inst = commonfn("chicken", "chicken", "kyno_chicken2")
 	
 	inst:AddTag("chicken_wild")
 	
@@ -245,20 +307,42 @@ local function chicken_wild(inst)
 	inst:SetBrain(chicken_wild_brain)
 	inst:SetStateGraph("SGchickenwild")
 	
+	if inst.components.eater ~= nil then
+		inst.components.eater:SetOnEatFn(OnEat)
+	end
+	
+	if inst.components.inventoryitem ~= nil then
+		inst.components.inventoryitem.imagename = "kyno_chicken2"
+	end
+	
+	inst:AddComponent("playerprox")
+	inst.components.playerprox:SetTargetMode(inst.components.playerprox.TargetModes.AllPlayers)
+	inst.components.playerprox:SetOnPlayerNear(CanSpawnEgg)
+	inst.components.playerprox:SetDist(6, 40)
+	
 	inst:DoTaskInTime(0, SetHome)
 	
 	return inst
 end
 
 local function chicken_coop(inst)
-	local inst = commonfn("chicken", "chicken_coop_build", "kyno_chicken_coop", "kyno_chicken_coop")
+	local inst = commonfn("chicken", "chicken", "kyno_chicken_coop")
 	
+	inst:AddTag("_named")
 	inst:AddTag("chicken_coop")
+	
+	inst.scrapbook_proxy = "kyno_chicken2"
 	
 	if not TheWorld.ismastersim then
 		return inst
 	end
 	
+	inst:RemoveTag("_named")
+	
+	local variant = PickRandomChickenCoopVariant()
+	ApplyChickenCoopVariant(inst, variant)
+	
+	inst._has_food_buffered = false
 	inst._has_eaten_today = false
 
 	inst:SetBrain(chicken_coop_brain)
@@ -271,6 +355,13 @@ local function chicken_coop(inst)
 	if inst.components.eater ~= nil then
 		inst.components.eater:SetOnEatFn(OnEat)
 	end
+	
+	inst:AddComponent("named")
+	inst.components.named.possiblenames = STRINGS.KYNO_CHICKEN_NAMES
+	inst.components.named:PickNewName()
+	
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
 	
 	return inst
 end

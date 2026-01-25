@@ -137,6 +137,8 @@ AddIngredientValues({"kyno_blubber"},                {meat       = 1,    fat    
 AddIngredientValues({"kyno_brainrock_coral"},        {meat       = 0.5})
 AddIngredientValues({"kyno_fishmeat_small_dried"},   {meat       = 0.5,  fish      = 0.5,  salted    = 1})
 AddIngredientValues({"kyno_fishmeat_dried"},         {meat       = 1,    fish      = 1,    salted    = 1})
+AddIngredientValues({"kyno_chicken2"},               {meat       = 2,    chicken   = 1})
+AddIngredientValues({"kyno_chicken_coop"},           {meat       = 2,    chicken   = 1})
 
 local fishroes_meat =
 {
