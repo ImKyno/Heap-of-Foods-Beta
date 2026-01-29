@@ -334,10 +334,10 @@ local function SweetflyTrader(inst)
     if inst.components.inventoryitem ~= nil and not inst.components.tradable then
         inst:AddComponent("tradable")
         inst.components.tradable.goldvalue = 1
-        inst.components.tradable.tradefor = { "kyno_sweetfly" }
+        inst.components.tradable.tradefor = { "kyno_sugarfly" }
     else
         inst.components.tradable.goldvalue = 1
-        inst.components.tradable.tradefor = { "kyno_sweetfly" }
+        inst.components.tradable.tradefor = { "kyno_sugarfly" }
     end
 end
 

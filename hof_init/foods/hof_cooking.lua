@@ -135,8 +135,8 @@ AddIngredientValues({"kyno_swordfish_blue"},         {meat       = 1,    fish   
 AddIngredientValues({"wobster_monkeyisland_land"},   {meat       = 1,    fish      = 1,    wobster   = 1})
 AddIngredientValues({"kyno_blubber"},                {meat       = 1,    fat       = 1})
 AddIngredientValues({"kyno_brainrock_coral"},        {meat       = 0.5})
-AddIngredientValues({"kyno_fishmeat_small_dried"},   {meat       = 0.5,  fish      = 0.5,  salted    = 1})
-AddIngredientValues({"kyno_fishmeat_dried"},         {meat       = 1,    fish      = 1,    salted    = 1})
+AddIngredientValues({"kyno_fishmeat_small_dried"},   {meat       = 0.5,  fish      = 1,    salted    = 1})
+AddIngredientValues({"kyno_fishmeat_dried"},         {meat       = 1,    fish      = 2,    salted    = 1})
 AddIngredientValues({"kyno_chicken2"},               {meat       = 2,    chicken   = 1})
 AddIngredientValues({"kyno_chicken_coop"},           {meat       = 2,    chicken   = 1})
 
