@@ -112,7 +112,7 @@ local function TestItem(inst, item, giver)
 		if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" then
 			return true -- Accept the Item.
 		else
-			giver.components.talker:Say(GetString(giver, "ANNOUNCE_PIGELDER_FAIL"))
+			giver.components.talker:Say(GetString(giver, "ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL"))
 		end
 	end
 	
@@ -123,7 +123,7 @@ local function TestItem(inst, item, giver)
 	elseif inst:HasTag("pigelder_nighttrader") and item.components.tradable.goldvalue > 0 then -- Lights Out worlds.
 		return true
 	else
-		giver.components.talker:Say(GetString(giver, "ANNOUNCE_PIGELDER_FAIL"))
+		giver.components.talker:Say(GetString(giver, "ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL"))
 	end
 end
 

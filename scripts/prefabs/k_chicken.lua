@@ -341,9 +341,9 @@ local function chicken_coop(inst)
 	
 	local variant = PickRandomChickenCoopVariant()
 	ApplyChickenCoopVariant(inst, variant)
-	
-	inst._has_food_buffered = false
+
 	inst._has_eaten_today = false
+	inst._has_food_buffered = false
 
 	inst:SetBrain(chicken_coop_brain)
 	inst:SetStateGraph("SGchickencoop")

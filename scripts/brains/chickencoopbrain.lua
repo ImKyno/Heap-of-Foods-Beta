@@ -129,7 +129,9 @@ end
 
 function ChickenCoopBrain:OnInitializationComplete()
 	self.inst.components.knownlocations:RememberLocation("home", self.inst:GetPosition())
+
 	self.inst._has_eaten_today = false
+	self.inst._has_food_buffered = false
 end
 
 return ChickenCoopBrain

@@ -807,7 +807,7 @@ AddAction("EATFROM", "Eat From", function(act)
 		doer.components.inventory:GiveItem(food, nil, doer:GetPosition())
 	end
 	
-	doer._has_food_buffered = true
+	-- doer._has_food_buffered = true
 
 	return true
 end)

@@ -16699,6 +16699,7 @@ local HOF_SCRAPBOOK_THINGS =
 		harvestable    = true,
 		bank           = "kyno_chickenhouse",
 		build          = "kyno_chickenhouse",
+		hidesymbol     = {"egg", "egg2", "egg3", "egg4", "egg5", "egg6"},
 		anim           = "idle",
 		deps           = {"kyno_chicken2", "kyno_chicken_egg", "boards", "cutgrass", "researchlab2"},
 		specialinfo    = "CHICKENHOUSE",

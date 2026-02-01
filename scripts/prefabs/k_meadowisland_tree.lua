@@ -405,7 +405,7 @@ local function TestItem(inst, item, giver, level)
 	if item.components.inventoryitem and item:HasTag("squirrel") and inst.level == "tall" then
 		return true -- Infest the tree.
 	else
-		giver.components.talker:Say(GetString(giver, "ANNOUNCE_PIKOTREE_TOOSMALL"))
+		giver.components.talker:Say(GetString(giver, "ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL"))
 	end
 end
 

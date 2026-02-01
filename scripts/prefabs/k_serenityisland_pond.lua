@@ -49,7 +49,7 @@ local function TestItem(inst, item, giver)
 	if item.components.inventoryitem and item:HasTag("salt_rack_installer") then
 		return true -- Install the Salt Rack.
 	else
-		giver.components.talker:Say(GetString(giver, "ANNOUNCE_SALTRACK_FAIL"))
+		giver.components.talker:Say(GetString(giver, "ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL"))
 	end
 end
 

@@ -143,7 +143,7 @@ local function TestItem(inst, item, giver)
 	if item.components.inventoryitem and item:HasTag("sap_bucket_installer") then
 		return true -- Install the Sap Bucket.
 	else
-		giver.components.talker:Say(GetString(giver, "ANNOUNCE_SAPBUCKET_FAIL"))
+		giver.components.talker:Say(GetString(giver, "ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL"))
 	end
 end
 

@@ -20,12 +20,11 @@ local prefabs =
 	"collapse_small",
 }
 
-local levels =
+local EGG_STAGES =
 {
-	{ amount = 3, idle = "egg3", hit = "hit_egg3" },
-	{ amount = 2, idle = "egg2", hit = "hit_egg2" },
-	{ amount = 1, idle = "egg1", hit = "hit_egg1" },
-	{ amount = 0, idle = "idle", hit = "hit_idle" },
+	[1] = { "egg", "egg2"  },
+	[2] = { "egg3", "egg4" },
+	[3] = { "egg5", "egg6" },
 }
 
 local function TurnChickenWild(chicken)
@@ -84,8 +83,8 @@ end
 
 local function OnHit(inst, worker)
 	if not inst:HasTag("burnt") then
-		inst.AnimState:PlayAnimation(inst.anims.hit)
-		inst.AnimState:PushAnimation(inst.anims.idle, false)
+		inst.AnimState:PlayAnimation("hit")
+		inst.AnimState:PushAnimation("idle", true)
 	end
 end
 
@@ -134,26 +133,27 @@ local function OnEnterDark(inst)
 	StopSpawning(inst)
 end
 
-local function SetLevel(inst, level)
-	if not inst:HasTag("burnt") then
-		if inst.anims == nil then
-			inst.anims = { idle = level.idle, hit = level.hit }
-		else
-			inst.anims.idle = level.idle
-			inst.anims.hit = level.hit
-		end
-		
-		inst.AnimState:PlayAnimation(inst.anims.idle)
+local function OnRefreshEggs(inst)
+	if inst:HasTag("burnt") then
+		return
 	end
-end
 
-local function UpdateLevel(inst)
-	if not inst:HasTag("burnt") then
-		for k, v in pairs(levels) do
-			if inst.components.harvestable ~= nil and inst.components.harvestable.produce >= v.amount then
-				SetLevel(inst, v)
-				break
-			end
+	local h = inst.components.harvestable
+	local count = h ~= nil and h.produce or 0
+
+	if not inst.AnimState:IsCurrentAnimation("idle") then
+		inst.AnimState:PlayAnimation("idle", true)
+	end
+
+	for _, stage in pairs(EGG_STAGES) do
+		for _, symbol in ipairs(stage) do
+			inst.AnimState:HideSymbol(symbol)
+		end
+	end
+
+	for i = 1, math.min(count, #EGG_STAGES) do
+		for _, symbol in ipairs(EGG_STAGES[i]) do
+			inst.AnimState:ShowSymbol(symbol)
 		end
 	end
 end
@@ -166,12 +166,14 @@ local function OnHarvest(inst, picker, produce)
 			inst.components.harvestable:StopGrowing()
 		end
 		
-		UpdateLevel(inst)
+		OnRefreshEggs(inst)
 	end
 end
 
 local function OnChildSpawn(inst, child)
-	child.sg:GoToState("honk")
+	if not (TheWorld.state.iswinter or inst:HasTag("burnt")) then
+		child.sg:GoToState("honk")
+	end
 	
 	if inst._chicken_data ~= nil and #inst._chicken_data > 0 then
 		local data = table.remove(inst._chicken_data, 1)
@@ -204,6 +206,9 @@ local function OnChildGoingHome(inst, data)
 
 	if inst.components.harvestable ~= nil and chicken._has_eaten_today then
 		inst.components.harvestable:Grow() -- Chickens needs to eat something first in order to produce eggs.
+		
+		inst.AnimState:PlayAnimation("pick")
+		inst.SoundEmitter:PlaySound("summerevent/cannon/fire3")
 	end
 
 	chicken._has_eaten_today = false
@@ -235,7 +240,7 @@ end
 
 local function OnBuilt(inst)
 	inst.AnimState:PlayAnimation("place")
-	inst.AnimState:PushAnimation("idle", false)
+	inst.AnimState:PushAnimation("idle", true)
 	inst.SoundEmitter:PlaySound("dontstarve/common/rabbit_hutch_craft")
 end
 
@@ -272,7 +277,7 @@ local function OnLoad(inst, data)
 		if data.burnt then
 			inst.components.burnable.onburnt(inst)
 		else
-			UpdateLevel(inst)
+			OnRefreshEggs(inst)
 		end
 	end
 end
@@ -298,7 +303,7 @@ local function fn()
 
 	inst.AnimState:SetBank("kyno_chickenhouse")
 	inst.AnimState:SetBuild("kyno_chickenhouse")
-	inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:PlayAnimation("idle", true)
 
 	inst:AddTag("structure")
 	inst:AddTag("chickenhouse")
@@ -323,7 +328,7 @@ local function fn()
 	inst.components.workable:SetWorkLeft(4)
 
 	inst:AddComponent("harvestable")
-	inst.components.harvestable:SetUp("kyno_chicken_egg", 3, nil, OnHarvest, UpdateLevel)
+	inst.components.harvestable:SetUp("kyno_chicken_egg", 3, nil, OnHarvest, OnRefreshEggs)
 
 	inst:AddComponent("childspawner")
 	inst.components.childspawner.childname = "kyno_chicken_coop"
@@ -343,7 +348,7 @@ local function fn()
 		inst.components.childspawner:StartSpawning()
 	end
 
-	UpdateLevel(inst)
+	OnRefreshEggs(inst)
 
 	inst:WatchWorldState("iswinter", AsleepGrowth)
 	inst:WatchWorldState("iscaveday", OnIsCaveDay)

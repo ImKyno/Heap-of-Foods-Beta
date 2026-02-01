@@ -274,6 +274,7 @@ local states =
 		{
 			TimeEvent(10 * FRAMES, function(inst)				
 				inst:PerformBufferedAction()
+				inst._has_food_buffered = true -- ALWAYS HAPPENS. This means it has food and will start looking for it inside inventory.
 			end),
 		},
 

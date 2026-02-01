@@ -24,7 +24,7 @@ local prefabs =
 
 local function TestItem(inst, item, giver)
 	if item.components.inventoryitem and item:HasTag("sap_bucket_installer") then
-		giver.components.talker:Say(GetString(giver, "ANNOUNCE_SUGARTREE_TOOSMALL"))
+		giver.components.talker:Say(GetString(giver, "ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL"))
 	end
 end
 
