@@ -458,7 +458,7 @@ WEBBER.DESCRIBE.KYNO_CHICKEN2 = "Haha! We love chickens!"
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG = "A hard shelled egg."
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Fried just like mum did."
 
-WEBBER.DESCRIBE.KYNO_CHICKENHOUSE = "Heh, it's like a house just for birds!"
+WEBBER.DESCRIBE.KYNO_CHICKENHOUSE = "Heh, it's like a house just for chickens!"
 
 WEBBER.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Aww... So sad."
 

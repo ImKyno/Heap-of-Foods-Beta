@@ -46,6 +46,10 @@ SetSharedLootTable("kyno_chicken_coop",
 local CHICKEN_COOP_VARIANTS =
 {
 	{
+		build = "chicken",
+		icon  = "kyno_chicken2",
+	},
+	{
 		build = "chicken_coop_1_build",
 		icon  = "kyno_chicken_coop_1",
 	},

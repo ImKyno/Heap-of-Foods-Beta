@@ -50,6 +50,44 @@ local function WaterIdle(inst)
 	end
 end
 
+local function RefreshEggs(inst)
+	local stacksize = inst.components.stackable ~= nil and inst.components.stackable:StackSize() or 1
+	
+	if stacksize >= 30 then
+		inst.components.inventoryitem:ChangeImageName("kyno_chicken_egg_stack3")
+	elseif stacksize >= 20 then
+		inst.components.inventoryitem:ChangeImageName("kyno_chicken_egg_stack2")
+	elseif stacksize >= 10 then
+		inst.components.inventoryitem:ChangeImageName("kyno_chicken_egg_stack1")
+	else
+		inst.components.inventoryitem:ChangeImageName("kyno_chicken_egg")
+	end
+
+	inst.AnimState:ClearOverrideSymbol("egg1")
+
+	if stacksize >= 30 then
+		inst.AnimState:PlayAnimation("stack3", true)
+		inst._eggstyle = nil
+		return
+	elseif stacksize >= 20 then
+		inst.AnimState:PlayAnimation("stack2", true)
+		inst._eggstyle = nil
+		return
+	elseif stacksize >= 10 then
+		inst.AnimState:PlayAnimation("stack1", true)
+		inst._eggstyle = nil
+		return
+	end
+
+	inst.AnimState:PlayAnimation("idle", true)
+
+	if inst._eggstyle == nil then
+		inst._eggstyle = math.random(1, 5)
+	end
+
+	inst.AnimState:OverrideSymbol("egg1", "kyno_chicken_eggs", "egg"..inst._eggstyle)
+end
+
 local function wheatfn()
 	local inst = CreateEntity()
 
@@ -384,6 +422,7 @@ local function sprigfn()
 	inst:AddTag("gourmet_sprig")
 	inst:AddTag("gourmet_ingredient")
 	inst:AddTag("show_spoilage")
+	inst:AddTag("chickenfood")
 
     inst.entity:SetPristine()
 
@@ -412,6 +451,10 @@ local function sprigfn()
 	inst.components.edible.hungervalue = TUNING.KYNO_SPOTSPICE_LEAF_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_SPOTSPICE_LEAF_SANITY
 	inst.components.edible.foodtype = FOODTYPE.SEEDS
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
+	inst.components.fuel.fuelvalue = TUNING.MED_LARGE_FUEL
 	
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -1234,7 +1277,6 @@ local function chicken_eggfn()
 
 	inst.AnimState:SetBank("kyno_chicken_eggs")
 	inst.AnimState:SetBuild("kyno_chicken_eggs")
-	inst.AnimState:PlayAnimation("idle")
 	
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
@@ -1275,6 +1317,11 @@ local function chicken_eggfn()
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_chicken_egg_cooked"
+	
+	inst:DoTaskInTime(0, RefreshEggs)
+	
+	inst:ListenForEvent("ondropped", RefreshEggs)
+	inst:ListenForEvent("stacksizechange", RefreshEggs)
 	
 	MakeHauntableLaunchAndPerish(inst)
 

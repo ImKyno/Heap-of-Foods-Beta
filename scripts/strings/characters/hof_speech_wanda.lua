@@ -137,7 +137,7 @@ WANDA.DESCRIBE.KYNO_SPOTBUSH = "A shrub."
 
 WANDA.DESCRIBE.KYNO_SPOTSPICE_LEAF = "I guess, I can use this to make something..."
 
-WANDA.DESCRIBE.KYNO_MUSSEL = 
+WANDA.DESCRIBE.KYNO_MUSSEL = "I need some time to cook this properly."
 WANDA.DESCRIBE.KYNO_MUSSEL_COOKED = "Looks tasty."
 
 WANDA.DESCRIBE.KYNO_HUMANMEAT = "Ugh."
@@ -352,7 +352,7 @@ WANDA.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Yum!"
 WANDA.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "Weeds."
 WANDA.DESCRIBE.KYNO_SEAWEEDS = "Weeds."
 WANDA.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Cooked weeds."
-WANDA.DESCRIBE.KYNO_SEAWEEDS_DRIED = 
+WANDA.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Dried weeds from the sea."
 WANDA.DESCRIBE.KYNO_SEAWEEDS_ROOT = "The weed root, could plant it somewhere."
 
 WANDA.DESCRIBE.KYNO_TAROROOT_OCEAN = "Weird plant."
@@ -601,7 +601,7 @@ WANDA.DESCRIBE.KYNO_WINE = "It's been a while since I had one."
 WANDA.DESCRIBE.KYNO_JUICE = "I prefer a more sweeter juice."
 
 WANDA.DESCRIBE.KYNO_POISON_FROGLEGS = "Eating that will cost my precious time."
-WANDA.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = 
+WANDA.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "I don't think these are no longer poisonous."
 
 WANDA.DESCRIBE.POISONFROGGLEBUNWICH = "I've been told it's a local delicacy."
 

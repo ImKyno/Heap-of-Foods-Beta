@@ -460,7 +460,7 @@ WURT.DESCRIBE.KYNO_CHICKEN2 = "A chicken!"
 WURT.DESCRIBE.KYNO_CHICKEN_EGG = "Baby chicken inside?"
 WURT.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Don't want it!"
 
-WURT.DESCRIBE.KYNO_CHICKENHOUSE = "Chicken home! Eggs inside, florp."
+WURT.DESCRIBE.KYNO_CHICKENHOUSE = "Chicken home! Maybe eggs inside, florp."
 
 WURT.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Glurgh... It's broken."
 

@@ -67,6 +67,7 @@ local function fn()
 	inst:AddTag("renewable")
 	inst:AddTag("spotbush")
 	inst:AddTag("lunarplant_target")
+	inst:AddTag("pickablechickenfood")
 	
 	inst.entity:SetPristine()
 

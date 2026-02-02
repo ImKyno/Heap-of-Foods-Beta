@@ -445,3 +445,28 @@ local function SeedsPostInit(inst)
 end
 
 AddPrefabPostInitAny(SeedsPostInit)
+
+-- Valid Foods for the Display Stand.
+local itemshowcaser_foods =
+{
+	"batnosehat",
+	"dustmeringue",
+	
+	-- They're not Crock Pot foods...
+	-- "carnivalfood_corntea",
+	-- "yotp_food1",
+	-- "yotp_food2",
+	-- "yotp_food3",
+	-- "yotr_food1",
+	-- "yotr_food2",
+	-- "yotr_food3",
+	-- "yotr_food4",
+}
+
+local function ItemShowcaserItemsPostInit(inst)
+	inst:AddTag("itemshowcaser_valid")
+end
+
+for k, v in pairs(itemshowcaser_foods) do
+	AddPrefabPostInit(v, ItemShowcaserItemsPostInit)
+end

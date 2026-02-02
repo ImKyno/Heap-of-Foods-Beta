@@ -39,7 +39,7 @@ for _, v in pairs(hof_init_strings) do
 end
 
 for _, v in pairs(hof_init_strings_characters) do
-	require("strings/characters"..v)
+	require("strings/characters/"..v)
 end
 
 local HOF_LOCALIZATION = GetModConfigData("LANGUAGE")
@@ -52,7 +52,7 @@ if HOF_LOCALIZATION then
 	end
 	
 	for _, v in pairs(hof_init_strings_characters) do
-		require("strings/localization_"..HOF_LOCALIZATION.."/"..v)
+		require("strings/localization_"..HOF_LOCALIZATION.."/characters/"..v)
 	end
 end
 
