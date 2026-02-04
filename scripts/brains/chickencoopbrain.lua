@@ -11,6 +11,7 @@ local MAX_LEASH_DIST  = 10
 local MAX_WANDER_DIST = 15
 local STOP_RUN_DIST   = 7
 local SEE_PLAYER_DIST = 10
+local SEE_HOME_DIST   = 10 * 10
 local RUN_TIME_OUT    = 7
 
 local ChickenCoopBrain = Class(Brain, function(self, inst)
@@ -90,12 +91,22 @@ local RUN_AWAY_PARAMS =
 }
 
 local function GoHomeAction(inst)
-	if inst.components.homeseeker and
-		inst.components.homeseeker.home and
-		inst.components.homeseeker.home:IsValid() and
-		inst.sg:HasStateTag("trapped") == false then
+	if inst.components.homeseeker 
+	and inst.components.homeseeker.home 
+	and inst.components.homeseeker.home:IsValid()
+	and inst.sg:HasStateTag("trapped") == false 
+	and inst.components.homeseeker.home.components.burnable
+	and not inst.components.homeseeker.home.components.burnable:IsBurning() then
 		return BufferedAction(inst, inst.components.homeseeker.home, ACTIONS.GOHOME)
 	end
+end
+
+local function IsHomeOnFire(inst)
+	return inst.components.homeseeker
+	and inst.components.homeseeker.home
+	and inst.components.homeseeker.home.components.burnable
+	and inst.components.homeseeker.home.components.burnable:IsBurning()
+	and inst:GetDistanceSqToInst(inst.components.homeseeker.home) < SEE_HOME_DIST
 end
 
 function ChickenCoopBrain:OnStart()
@@ -104,7 +115,10 @@ function ChickenCoopBrain:OnStart()
 		BrainCommon.PanicTrigger(self.inst),
 		BrainCommon.ElectricFencePanicTrigger(self.inst),
 		
-		WhileNode(function() return self.inst.components.health.takingfiredamage end, "On Fire", Panic(self.inst)),
+		WhileNode(function() return self.inst.components.health.takingfiredamage end, "On Fire",
+			Panic(self.inst)),
+		WhileNode(function() return IsHomeOnFire(self.inst) end, "On Fire",
+			Panic(self.inst)),
 		
 		WhileNode(function() return not TheWorld.state.iscaveday end, "Cave Nightness",
 			DoAction(self.inst, GoHomeAction, "GoHome", true)),

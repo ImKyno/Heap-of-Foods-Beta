@@ -136,6 +136,19 @@ local function OnBuiltCrafted(inst)
 	inst.AnimState:PlayAnimation("place")
 end
 
+local function GetStatus(inst, viewer)
+	return (inst:HasTag("burnt") and "BURNT")
+	or (inst.components.burnable:IsBurning() and "BURNT")
+	or "GENERIC"
+end
+
+local function GetStatusFisher(inst, viewer)
+	return (inst:HasTag("burnt") and "BURNT")
+	or (inst.components.burnable:IsBurning() and "BURNT")
+	or (inst:HasTag("fishermermhut_crafted") and "CRAFTED")
+	or "GENERIC"
+end
+
 local function OnSave(inst, data)
     if inst:HasTag("burnt") or (inst.components.burnable ~= nil and inst.components.burnable:IsBurning()) then
         data.burnt = true
@@ -187,6 +200,7 @@ local function fn()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"boards", "rocks", "kyno_tropicalfish"})
@@ -263,6 +277,7 @@ local function fishfn()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatusFisher
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"boards", "rocks", "kyno_tropicalfish"})
@@ -337,7 +352,8 @@ local function craftfn()
 	inst:AddComponent("lootdropper")
 	
 	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "MERMHOUSE_CRAFTED"
+	inst.components.inspectable.nameoverride = "KYNO_MEADOWISLAND_FISHERMERMHUT"
+	inst.components.inspectable.getstatus = GetStatusFisher
 
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)

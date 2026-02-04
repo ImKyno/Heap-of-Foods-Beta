@@ -199,6 +199,13 @@ WILSON.DESCRIBE.DUG_KYNO_WILDWHEAT = "It's a tuft of wheat"
 
 WILSON.DESCRIBE.KYNO_MEALGRINDER = "The daily grind."
 
+WILSON.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Are those mushrooms? I'm stumped.",
+	PICKED = "They will grow back, eventually.",
+	BURNING = "Waste of precious mushrooms.",
+}
+
 WILSON.DESCRIBE.GORGE_BREAD = "A bread."
 WILSON.DESCRIBE.GORGE_SWEET_CHIPS = "Crunchy."
 WILSON.DESCRIBE.GORGE_VEGETABLE_SOUP = "All the veggies."
@@ -340,11 +347,23 @@ WILSON.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Ruined."
 
 WILSON.DESCRIBE.KYNO_SEEDS_KIT = "A packet full of seeds."
 
-WILSON.DESCRIBE.KYNO_LIMPETROCK = "I could fill a pail with all those snails."
+WILSON.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "I could fill a pail with all those snails.",
+	PICKED = "Will need to wait until the snails crawl back.",
+	WITHERED = "Not going to grow anything in this state.",
+}
+
 WILSON.DESCRIBE.KYNO_LIMPETS = "Maybe starving wouldn't be so bad."
 WILSON.DESCRIBE.KYNO_LIMPETS_COOKED = "Escargotcha!"
 
-WILSON.DESCRIBE.KYNO_LOTUS_OCEAN = "The science is blooming well this season."
+WILSON.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "The science is blooming well this season.",
+	PICKED = "Needs some time to regrow its flower.",
+	BURNING = "Oh no, that's really bad.",
+}
+
 WILSON.DESCRIBE.KYNO_LOTUS_ROOT = "Some wet plant I can plant to make more wet plants."
 WILSON.DESCRIBE.KYNO_LOTUS_FLOWER = "A lovely science flower."
 WILSON.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "A delicacy."
@@ -374,11 +393,27 @@ WILSON.DESCRIBE.CATFOOD = "A snack for my cat!"
 
 WILSON.DESCRIBE.KATFOOD = "A snack for my cat!"
 
-WILSON.DESCRIBE.KYNO_BANANATREE = "It's a rare banana tree."
+WILSON.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "It's a rare banana tree.",
+	PICKED = "Needs some time to regrow its product.",
+	CHOPPED = "No more bananas for it or me.",
+	BURNING = "Too bad we lost another rare tree.",
+	BURNT = "Nothing but ashes left.",
+}
+	
 WILSON.DESCRIBE.KYNO_BANANA = "It's mushy."
 WILSON.DESCRIBE.KYNO_BANANA_COOKED = "Yum!"
 
-WILSON.DESCRIBE.KYNO_KOKONUTTREE = "How tropical."
+WILSON.DESCRIBE.KYNO_KOKONUTTREE =
+{
+	GENERIC = "How tropical.",
+	PICKED = "I need to wait a little bit if I want more coconuts.",
+	CHOPPED = "It won't give me any coconuts now.",
+	BURNING = "I could've prevented that.",
+	BURNT = "Ashes to ashes.",
+}
+
 WILSON.DESCRIBE.KYNO_KOKONUT = "It requires a large nut hacker."
 WILSON.DESCRIBE.KYNO_KOKONUT_HALVED = "When I click them together, they make horsey sounds."
 WILSON.DESCRIBE.KYNO_KOKONUT_COOKED = "Now I just need a cake."
@@ -453,13 +488,22 @@ WILSON.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "No imitations here."
 
 WILSON.DESCRIBE.KYNO_SLAUGHTERTOOL = "Laboratory tools for surgical butchery."
 
-WILSON.DESCRIBE.KYNO_CHICKEN2 = "It's a little chicken."
+WILSON.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "It's a little chicken.",
+	COOP = "My very own chicken!",
+}
 
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG = "A small, chicken egg."
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "That is one impressively large breakfast."
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Sunny side yum!"
 
-WILSON.DESCRIBE.KYNO_CHICKENHOUSE = "A proper home for chickens."
+WILSON.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "A proper home for chickens.",
+	FULL = "The eggs are ready for harvest!",
+	BURNT = "The chickens got evicted.",
+}
 
 WILSON.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "All broken."
 
@@ -543,11 +587,31 @@ WILSON.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Just jerky enough."
 
 WILSON.DESCRIBE.KYNO_BREWBOOK = "I've always been hungry for knowledge."
 
-WILSON.DESCRIBE.KYNO_WOODENKEG = "I wonder what I can make using this."
+WILSON.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "I wonder what I can make using this.",
+	BREWING_LONG = "This will take some days to brew.",
+	BREWING_SHORT = "Only a couple hours left for my brew.",
+	DONE = "Looks like my brew is already done!",
+	BURNT = "Looks like I'm not going to see that brew anymore.",
+}
 
-WILSON.DESCRIBE.KYNO_PRESERVESJAR = "For the making of jams."
+WILSON.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "For the making of jams.",
+	BREWING_LONG = "Cured goodies sure takes a long time to make.",
+	BREWING_SHORT = "It's almost mine!",
+	DONE = "All that waiting game was totally worth it!",
+	BURNT = "That's a sad end.",
+}
 
-WILSON.DESCRIBE.KYNO_ANTCHEST = "Take its sweet time making honey."
+WILSON.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "Take its sweet time making honey.",
+	HONEY = "Looks like it's full of honeyed goods.",
+	NECTAR = "The nectar is being processed.",
+	BURNING = "All that sweetness is going up in smoke!",
+}
 
 WILSON.DESCRIBE.KYNO_NECTAR_POD = "I could use this to make honey."
 
@@ -557,13 +621,47 @@ WILSON.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Take that, tiny tree!"
 WILSON.DESCRIBE.KYNO_PIKO = "He's a bit of a nut job."
 WILSON.DESCRIBE.KYNO_PIKO_ORANGE = "For some reason I'm craving tea."
 
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_TREE = "What a lovely tree."
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "It's full of squirrels!"
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "What a lovely tree.",
+	CHOPPED = "All the tea leaves are mine now!",
+	BURNING = "Oh no!",
+	BURNT = "I could've prevented that.",
+}
+
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
+{
+	GENERIC = "It's full of squirrels!",
+	BURNING = "Good riddance. Now they don't have a tree to call home.",
+}
+
 WILSON.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "There must be a way to open it."
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "Who would live here?"
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "Doesn't smell very good."
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "These are some quite rare items in your display."
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "What are you selling today?"
+
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "Who would live here?",
+	BURNT = "Crispy.",
+}
+
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "Doesn't smell very good.",
+	CRAFTED = "It's actually kind of cute.",
+	BURNT = "Ugh, the smell!",
+}
+
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "These are some quite rare items in your display.",
+	OCCUPIED = "Seems like the shop is closed for now.",
+}
+
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "What are you selling today?",
+	EMPTY = "Its all empty. I'll come back later, Sammy.",
+}
+
 WILSON.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Hey! I remember you from that scary place."
 WILSON.DESCRIBE.KYNO_MEADOWISLAND_POND = "A pool, left by the tides."
 WILSON.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "It's a plant."
@@ -726,7 +824,11 @@ WILSON.DESCRIBE.PINACOLADA = "Icy."
 
 WILSON.DESCRIBE.CHIMAS = "A refreshing herb drink."
 
-WILSON.DESCRIBE.KYNO_GARDEN_SPRINKLER = "Water you think it's for?"
+WILSON.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "Water you think it's for?",
+	ON = "Keeps my farm plants watered and healthy.",
+}
 
 WILSON.DESCRIBE.KYNO_FOODSACK = "I hate when food has that not-so-fresh taste."
 
@@ -839,7 +941,11 @@ WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND = "Wild truffles! Someone must have sniffed
 WILSON.DESCRIBE.KYNO_TRUFFLES = "A rare and fragrant delicacy."
 WILSON.DESCRIBE.KYNO_TRUFFLES_COOKED = "The aroma is irresistible!"
 
-WILSON.DESCRIBE.KYNO_ITEMSHOWCASER = "A perfect place to show my culinary triumphs!"
+WILSON.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "A perfect place to show my culinary triumphs!",
+	FULL = "I'm very proud of myself for cooking such a magnificent dish.",
+}
 
 WILSON.DESCRIBE.KYNO_SPORECAP = "Looks... suspiciously unhealthy."
 WILSON.DESCRIBE.KYNO_SPORECAP_COOKED = "Still looks gross, but maybe edible now."
@@ -859,7 +965,15 @@ WILSON.DESCRIBE.TRUFFLEOIL = "Refined and aromatic! I wonder what I can cook wit
 
 WILSON.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Stuff for fishing!"
 WILSON.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Looks like the start of a fine fish hatchery."
-WILSON.DESCRIBE.KYNO_FISHFARMPLOT = "A place for fish to multiply."
+
+WILSON.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "A place for fish to multiply.",
+	FUEL_HIGH = "They are well fed!",
+	FUEL_MED = "They keep eating nicely.",
+	FUEL_LOW = "Going to need some fish food soon.",
+	EMPTY = "They have drained all the food.",
+}
 
 WILSON.DESCRIBE.KYNO_ANTCHOVY = "It's... a fish? Or a bug? Science is confused."
 WILSON.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "They're swarming together! Fascinating!"
@@ -916,7 +1030,12 @@ WILSON.DESCRIBE.MONKEYISLANDMEAL = "A royal dish fit to lift any curse!"
 WILSON.DESCRIBE.KYNO_BRAINROCK_LARVAE = "That's a baby brain!"
 WILSON.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "I want nubbin to do with that."
 WILSON.DESCRIBE.KYNO_BRAINROCK_CORAL = "Food for thought."
-WILSON.DESCRIBE.KYNO_BRAINROCK_ROCK = "I wonder what it's plotting..."
+
+WILSON.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "I wonder what it's plotting...",
+	PICKED = "It needs to rest its brain.",
+}
 
 WILSON.DESCRIBE.BRAINMETTERSOUP = "I'm feeling clever today."
 
@@ -933,9 +1052,28 @@ WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "For festive illumination!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "The spirit of a good party!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "A slice of celebration!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "A festive touch for celebrations!"
-WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "It pops corn magically!"
+
+WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "It pops corn magically!",
+	FUEL_HIGH = "Fuel supply running smoothly.",
+	FUEL_MED = "It can still produce some popcorn at this rate.",
+	FUEL_LOW = "I'm going to need more fuel soon.",
+	EMPTY = "No more popcorn until I refuel it.",
+}
+
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Popcorn for a big celebration!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Nothing says party like a pointy hat!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Wait. Why only him gets a special hat?"
 
 WILSON.DESCRIBE.KYNO_FISHREGISTRYHAT = "It's a practical hat for a dedicated fisherman."
+
+WILSON.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "A feeding trough for animals.",
+	FUEL_HIGH = "Plenty of food to go around.",
+	FUEL_MED = "It should last a while longer.",
+	FUEL_LOW = "Running low on food.",
+	EMPTY = "The animals must be hungry.",
+	BURNT = "No more feeding happening here.",
+}

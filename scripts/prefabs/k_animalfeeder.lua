@@ -38,8 +38,24 @@ local function OnHammered(inst, worker)
 	inst:Remove()
 end
 
+local function OnHit(inst)
+	if not inst:HasTag("burnt") then
+		inst.AnimState:PlayAnimation("hit")
+	end
+end
+
 local function OnBuilt(inst, data)
 	inst.SoundEmitter:PlaySound("dontstarve/common/place_structure_straw")
+end
+
+local function GetStatus(inst, viewer)
+	return (inst:HasTag("burnt") and "BURNT")
+	or (inst.components.burnable:IsBurning() and "BURNT")
+	or (inst.components.fueled:IsEmpty() and "EMPTY")
+	or (inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.20 and "FUEL_LOW") 
+	or (inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.50 and "FUEL_MED")
+	or (inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.70 and "FUEL_HIGH")
+	or "GENERIC"
 end
 
 local function OnSave(inst, data)
@@ -63,16 +79,18 @@ local function fn()
 	inst.entity:AddNetwork()
 
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("cartographydesk.png") -- placeholder icon
+	minimap:SetIcon("cartographydesk.png")
 
 	MakeObstaclePhysics(inst, .4)
 
-	inst.AnimState:SetBank("cartography_desk") -- placeholder animations
+	inst.AnimState:SetBank("cartography_desk")
 	inst.AnimState:SetBuild("cartography_desk")
 	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("structure")
 	inst:AddTag("animalfeeder")
+	
+	MakeSnowCoveredPristine(inst)
 
 	inst.entity:SetPristine()
 
@@ -80,8 +98,10 @@ local function fn()
 		return inst
 	end
 	
-	inst:AddComponent("inspectable")
 	inst:AddComponent("lootdropper")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
@@ -98,6 +118,10 @@ local function fn()
 	inst.components.fueled:SetSections(TUNING.KYNO_ANIMALFEEDER_SECTIONS)
 	
 	inst:ListenForEvent("onbuilt", OnBuilt)
+	
+	MakeSnowCovered(inst)
+	MakeLargeBurnable(inst)
+	MakeLargePropagator(inst)
 
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad

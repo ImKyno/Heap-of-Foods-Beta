@@ -89,6 +89,12 @@ local function OnCollide(inst, other)
     end
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.burnable:IsBurning() and "BURNING")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function OnPreLoad(inst, data)
     WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_LOTUS_GROWTIME)
 end
@@ -125,8 +131,10 @@ local function fn()
     local color = 0.75 + math.random() * 0.25
     inst.AnimState:SetMultColour(color, color, color, 1)
 
-    inst:AddComponent("inspectable")
 	inst:AddComponent("lootdropper")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"

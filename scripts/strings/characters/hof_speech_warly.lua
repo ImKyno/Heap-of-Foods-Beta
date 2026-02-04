@@ -199,6 +199,13 @@ WARLY.DESCRIBE.DUG_KYNO_WILDWHEAT = "A common ingredient for success around here
 
 WARLY.DESCRIBE.KYNO_MEALGRINDER = "Magnifique! A machine for grinding!"
 
+WARLY.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Ah! A natural source of fungi!",
+	PICKED = "Patience improves flavor.",
+	BURNING = "Mon dieu! Such waste!",
+}
+
 WARLY.DESCRIBE.GORGE_BREAD = "This! I can use this to make many dishes!"
 WARLY.DESCRIBE.GORGE_SWEET_CHIPS = "Sliced potatoes."
 WARLY.DESCRIBE.GORGE_VEGETABLE_SOUP = "A healthy and nice vegetable meal."
@@ -340,11 +347,23 @@ WARLY.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Oh no."
 
 WARLY.DESCRIBE.KYNO_SEEDS_KIT = "Cooking ingredients at its first stage."
 
-WARLY.DESCRIBE.KYNO_LIMPETROCK = "A petit snail farm!"
+WARLY.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "A petit snail farm!",
+	PICKED = "They will return with time.",
+	WITHERED = "Far from ideal conditions.",
+}
+
 WARLY.DESCRIBE.KYNO_LIMPETS = "They have a salty aroma."
 WARLY.DESCRIBE.KYNO_LIMPETS_COOKED = "Smooth, salty, scrumptious."
 
-WARLY.DESCRIBE.KYNO_LOTUS_OCEAN = "Mmm, lotus root..."
+WARLY.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "Mmm, lotus root...",
+	PICKED = "Patience improves flavor.",
+	BURNING = "Mon dieu! What a waste!",
+}
+
 WARLY.DESCRIBE.KYNO_LOTUS_ROOT = "I could plant it for a sustainable source of lotus flower."
 WARLY.DESCRIBE.KYNO_LOTUS_FLOWER = "I should cook something up with this."
 WARLY.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "A fine delicacy!"
@@ -374,11 +393,27 @@ WARLY.DESCRIBE.CATFOOD = "A gourmet food for cats."
 
 WARLY.DESCRIBE.KATFOOD = "A gourmet food for cats."
 
-WARLY.DESCRIBE.KYNO_BANANATREE = "That monkeys can't reach up here, ha!"
+WARLY.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "That monkeys can't reach up here, ha!",
+	PICKED = "Patience brings better flavor.",
+	CHOPPED = "A tragic culinary loss!",
+	BURNING = "Mon dieu! What a waste!",
+	BURNT = "Ruined beyond use.",
+}
+
 WARLY.DESCRIBE.KYNO_BANANA = "Just the flavor I needed!"
 WARLY.DESCRIBE.KYNO_BANANA_COOKED = "Could use some oats and a few chocolate chips..."
 
-WARLY.DESCRIBE.KYNO_KOKONUTTREE = "A good leaning tree."
+WARLY.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "A good leaning tree.",
+	PICKED = "Patience enhances flavor.",
+	CHOPPED = "A tragic culinary loss!",
+	BURNING = "Mon dieu! Such waste!",
+	BURNT = "Ruined beyond use.",
+}
+
 WARLY.DESCRIBE.KYNO_KOKONUT = "Its packaging is tough to open."
 WARLY.DESCRIBE.KYNO_KOKONUT_HALVED = "Delectable."
 WARLY.DESCRIBE.KYNO_KOKONUT_COOKED = "Could use rice and curry spices..."
@@ -453,13 +488,22 @@ WARLY.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Ah! A fine sea-meat!"
 
 WARLY.DESCRIBE.KYNO_SLAUGHTERTOOL = "The best tool for butchery."
 
-WARLY.DESCRIBE.KYNO_CHICKEN2 = "My delicious, delicious friend!"
+WARLY.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "My delicious, delicious friend!",
+	COOP = "I'll keep you around from now on.",
+}
 
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG = "Nature perfects food."
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "The culinary possibilities are truly... enormous!"
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Could use a few different herbs..."
 
-WARLY.DESCRIBE.KYNO_CHICKENHOUSE = "Ah! A reliable source of fresh ingredients."
+WARLY.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "Ah! A reliable source of fresh ingredients.",
+	FULL = "Such wonderful ingredients await!",
+	BURNT = "A culinary tragedy!",
+}
 
 WARLY.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "I've seen worse kitchens."
 
@@ -543,11 +587,31 @@ WARLY.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Could use chipotle..."
 
 WARLY.DESCRIBE.KYNO_BREWBOOK = "Ah, a fine catalogue of wines."
 
-WARLY.DESCRIBE.KYNO_WOODENKEG = "Can't wait to brew some Pale Ales!"
+WARLY.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "Can't wait to brew some Pale Ales!",
+	BREWING_LONG = "Patience makes the finest drink.",
+	BREWING_SHORT = "Nearly ready to serve.",
+	DONE = "Magnifique! It's finished!",
+	BURNT = "A total culinary disaster!",
+}
 
-WARLY.DESCRIBE.KYNO_PRESERVESJAR = "I can't decide what I should brew first!"
+WARLY.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "I can't decide what I should make first!",
+	BREWING_LONG = "Preservation is an art of patience.",
+	BREWING_SHORT = "Nearly ready to taste.",
+	DONE = "Magnifique! A success!",
+	BURNT = "A culinary heartbreak!",
+}
 
-WARLY.DESCRIBE.KYNO_ANTCHEST = "A honey maker!"
+WARLY.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "A honey maker!",
+	HONEY = "Magnificent honey reserves!",
+	NECTAR = "Patience makes perfection.",
+	BURNING = "A culinary catastrophe!",
+}
 
 WARLY.DESCRIBE.KYNO_NECTAR_POD = "The ingredients for honey making."
 
@@ -557,13 +621,47 @@ WARLY.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Not the finest of fine foods."
 WARLY.DESCRIBE.KYNO_PIKO = "Bonjour, mon amie."
 WARLY.DESCRIBE.KYNO_PIKO_ORANGE = "I prefer english breakfast."
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_TREE = "I could to so many things with tea tree leaves."
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "I could to so many things with tea tree leaves."
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "I could to so many things with tea tree leaves.",
+	CHOPPED = "Excellent ingredients, harvested.",
+	BURNING = "Mon dieu!",
+	BURNT = "Ruined.",
+}
+
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "I could to so many things with tea tree leaves.",
+	BURNING = "A most regrettable outcome.",
+}
+
 WARLY.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "I hope rations shipment lies within."
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "Fisherfolk live here. I can smell it."
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "Fisherfolk live here. I can smell it."
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "There must be tons of cooking ingredients in there."
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "Perhaps I should take a look at his wares."
+
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "Fisherfolk live here. I can smell it.",
+	BURNT = "Completely ruined.",
+}
+
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "Fisherfolk live here. I can smell it.",
+	CRAFTED = "Ah! Much more presentable!",
+	BURNT = "Aromatic in the worst way!",
+}
+
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "There must be tons of cooking ingredients in there.",
+	OCCUPIED = "Ah, closed for the moment.",
+}
+
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "Perhaps I should take a look at his wares.",
+	EMPTY = "Alas, nothing left to sample.",
+}
+
 WARLY.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "He seems decent enough to be a trader."
 WARLY.DESCRIBE.KYNO_MEADOWISLAND_POND = "It trap snacks."
 WARLY.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "I wonder if it is edible."
@@ -726,7 +824,11 @@ WARLY.DESCRIBE.PINACOLADA = "Refreshing."
 
 WARLY.DESCRIBE.CHIMAS = "A perfect mate."
 
-WARLY.DESCRIBE.KYNO_GARDEN_SPRINKLER = "It garnishes the plants with water."
+WARLY.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "It garnishes the plants with water.",
+	ON = "Perfect hydration for my ingredients!",
+}
 
 WARLY.DESCRIBE.KYNO_FOODSACK = "Wetter is better."
 
@@ -839,7 +941,11 @@ WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND = "Ahh, the scent of fresh truffles... promi
 WARLY.DESCRIBE.KYNO_TRUFFLES = "Magnifique! The aroma alone inspires recipes!"
 WARLY.DESCRIBE.KYNO_TRUFFLES_COOKED = "Perfection! The earth's perfume now edible."
 
-WARLY.DESCRIBE.KYNO_ITEMSHOWCASER = "Ah, magnifique! Every masterpiece deserves to be admired."
+WARLY.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "A stage awaits true cuisine!",
+	FULL = "Ah, magnifique! Every masterpiece deserves to be admired.",
+}
 
 WARLY.DESCRIBE.KYNO_SPORECAP = "Not the kind of mushroom for a fine meal."
 WARLY.DESCRIBE.KYNO_SPORECAP_COOKED = "Still not appetizing, but safer."
@@ -859,7 +965,15 @@ WARLY.DESCRIBE.TRUFFLEOIL = "Ah, magnifique! Perfect for a delicate drizzle over
 
 WARLY.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "It's a recipe for building!"
 WARLY.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Soon, fresh fish for my finest recipes!"
-WARLY.DESCRIBE.KYNO_FISHFARMPLOT = "A fine setup for fresh fish stock."
+
+WARLY.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "A fine setup for fresh fish stock.",
+	FUEL_HIGH = "The fish are thriving!",
+	FUEL_MED = "They are well maintained.",
+	FUEL_LOW = "They will need feeding soon.",
+	EMPTY = "Nothing left to sustain them.",
+}
 
 WARLY.DESCRIBE.KYNO_ANTCHOVY = "Hmm... crunchy yet salty, perhaps? Tr√®s bizarre!"
 WARLY.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "A buffet of confusion, non?"
@@ -916,7 +1030,12 @@ WARLY.DESCRIBE.MONKEYISLANDMEAL = "An exquisite fusion of sea and sweetness. Tr√
 WARLY.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Bonjour, mon petit amie."
 WARLY.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "No brain in sight. Perhaps later."
 WARLY.DESCRIBE.KYNO_BRAINROCK_CORAL = "Are these truly brain bits?"
-WARLY.DESCRIBE.KYNO_BRAINROCK_ROCK = "Chewy rock, with a clever finish."
+
+WARLY.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "Chewy rock, with a clever finish.",
+	PICKED = "It must regain its focus.",
+}
 
 WARLY.DESCRIBE.BRAINMETTERSOUP = "This helps you memorize many things."
 
@@ -933,9 +1052,28 @@ WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "A perfect finishing touch!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "To imbue my food with celebration spirit."
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "A lovely dessert to mark the occasion!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "A feast for the eyes, at least!"
-WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Ah, a gourmet popping apparatus."
+
+WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Ah, a gourmet popping apparatus.",
+	FUEL_HIGH = "Perfect heat control!",
+	FUEL_MED = "Still acceptable.",
+	FUEL_LOW = "It will need more fuel.",
+	EMPTY = "No heat, no magic.",
+}
+
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Ah, a simple yet delightful treat!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "A classy look for a fine celebration!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Tres unique! A hat from our sweetest Sammy!"
 
 WARLY.DESCRIBE.KYNO_FISHREGISTRYHAT = "Understanding fish is the first step to cooking them well."
+
+WARLY.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "One must feed the livestock properly.",
+	FUEL_HIGH = "A well-stocked trough!",
+	FUEL_MED = "Still sufficient.",
+	FUEL_LOW = "Running dangerously low.",
+	EMPTY = "Nothing left to serve.",
+	BURNT = "A most unfortunate loss.",
+}

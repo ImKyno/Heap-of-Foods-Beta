@@ -393,6 +393,14 @@ local function OnFuelEmpty(inst)
 	StopWorking(inst)
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.fueled:IsEmpty() and "EMPTY")
+	or (inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.25 and "FUEL_LOW") 
+	or (inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.50 and "FUEL_MED")
+	or (inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.70 and "FUEL_HIGH")
+	or "GENERIC"
+end
+
 local function OnSave(inst, data)
 	if inst._pop_count ~= nil and inst._pop_count > 0 then
 		data.pop_count = inst._pop_count
@@ -471,7 +479,9 @@ local function fn()
 	inst._pop_count = 0
 	
 	inst:AddComponent("lootdropper")
+	
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("furnituredecor")
 	inst.components.furnituredecor.onputonfurniture = OnPutOnFurniture

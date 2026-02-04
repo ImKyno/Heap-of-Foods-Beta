@@ -395,6 +395,11 @@ local function OnTimerDone(inst, data)
 	end
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.on_cooldown and "EMPTY")
+	or "GENERIC"
+end
+
 local function OnSave(inst, data)
     data.uses_left = inst.uses_left
     data.on_cooldown = inst.on_cooldown
@@ -462,8 +467,10 @@ local function fn()
 	inst.StopPicking = StopPicking
 
 	inst:AddComponent("timer")
-	inst:AddComponent("inspectable")
 	inst:AddComponent("lootdropper")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("pickable")
 	inst.components.pickable.picksound = "qol1/wagstaff_ruins/rummagepile_sml"

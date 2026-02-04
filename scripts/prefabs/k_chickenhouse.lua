@@ -71,7 +71,7 @@ local function OnHammered(inst, worker)
 			local x, y, z = inst.Transform:GetWorldPosition()
 
 			local wild = SpawnPrefab("kyno_chicken2")
-			wild.Transform:SetPosition(x + math.random() - 0.5, y, z + math.random() - 0.5)
+			wild.Transform:SetPosition(x, y, z)
 		end
 	end
 	
@@ -256,6 +256,26 @@ local function OnIgnite(inst)
 	end
 end
 
+local function OnBurnt(inst)
+	if inst.components.childspawner ~= nil then
+		for child in pairs(inst.components.childspawner.childrenoutside) do
+			TurnChickenWild(child)
+		end
+
+		inst.components.childspawner.childrenoutside = {}
+		inst.components.childspawner.numchildrenoutside = 0
+		
+		local inside = inst.components.childspawner.childreninside or 0
+
+		for i = 1, inside do
+			local x, y, z = inst.Transform:GetWorldPosition()
+
+			local wild = SpawnPrefab("kyno_chicken2")
+			wild.Transform:SetPosition(x, y, z)
+		end
+	end
+end
+
 local function OnBuilt(inst)
 	inst.AnimState:PlayAnimation("place")
 	inst.AnimState:PushAnimation("idle", true)
@@ -274,6 +294,13 @@ local function AsleepGrowth(inst)
 	if inst:IsAsleep() then
 		TryStartSleepGrowing(inst)
 	end
+end
+
+local function GetStatus(inst, viewer)
+	return (inst:HasTag("burnt") and "BURNT")
+	or (inst.components.burnable:IsBurning() and "BURNT")
+	or (inst.components.harvestable:CanBeHarvested() and "FULL")
+	or "GENERIC"
 end
 
 local function OnSave(inst, data)
@@ -349,8 +376,10 @@ local function fn()
 		giant = 0,
 	}
 	
-	inst:AddComponent("inspectable")
 	inst:AddComponent("lootdropper")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
@@ -386,6 +415,7 @@ local function fn()
 	
 	inst:ListenForEvent("onbuilt", OnBuilt)
 	inst:ListenForEvent("onignite", OnIgnite)
+	inst:ListenForEvent("onburnt", OnBurnt)
 	inst:ListenForEvent("enterlight", OnEnterLight)
 	inst:ListenForEvent("enterdark", OnEnterDark)
 	inst:ListenForEvent("childgoinghome", OnChildGoingHome)

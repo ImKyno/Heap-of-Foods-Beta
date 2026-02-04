@@ -199,6 +199,13 @@ WANDA.DESCRIBE.DUG_KYNO_WILDWHEAT = "You tend to find a lot of it around here."
 
 WANDA.DESCRIBE.KYNO_MEALGRINDER = "Time to grind some ingredients!"
 
+WANDA.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Life persists in unexpected ways.",
+	PICKED = "Just a matter of time.",
+	BURNING = "This outcome was avoidable.",
+}
+
 WANDA.DESCRIBE.GORGE_BREAD = "Finally! Bread!"
 WANDA.DESCRIBE.GORGE_SWEET_CHIPS = "They're pretty good."
 WANDA.DESCRIBE.GORGE_VEGETABLE_SOUP = "Let's eat it!"
@@ -340,11 +347,23 @@ WANDA.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Too bad."
 
 WANDA.DESCRIBE.KYNO_SEEDS_KIT = "Seeds."
 
-WANDA.DESCRIBE.KYNO_LIMPETROCK = "A rock that produces food?!"
+WANDA.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "A rock that produces food?!",
+	PICKED = "Just a matter of waiting.",
+	WITHERED = "This moment yields nothing.",
+}
+
 WANDA.DESCRIBE.KYNO_LIMPETS = "Snails."
 WANDA.DESCRIBE.KYNO_LIMPETS_COOKED = "Bye, bye, snails."
 
-WANDA.DESCRIBE.KYNO_LOTUS_OCEAN = "An edible flower."
+WANDA.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "An edible flower.",
+	PICKED = "It will return in time.",
+	BURNING = "This outcome was avoidable.",
+}
+
 WANDA.DESCRIBE.KYNO_LOTUS_ROOT = "The plant root, could plant it somewhere."
 WANDA.DESCRIBE.KYNO_LOTUS_FLOWER = "An edible flower."
 WANDA.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Yum!"
@@ -374,11 +393,27 @@ WANDA.DESCRIBE.CATFOOD = "It is time to feed the cats."
 
 WANDA.DESCRIBE.KATFOOD = "It is time to feed the cats."
 
-WANDA.DESCRIBE.KYNO_BANANATREE = "It takes time to grow bananas."
+WANDA.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "Rare things never last long.",
+	PICKED = "Just a matter of time.",
+	CHOPPED = "Its timeline ends here.",
+	BURNING = "This outcome was avoidable.",
+	BURNT = "Too late now.",
+}
+
 WANDA.DESCRIBE.KYNO_BANANA = "I like a quick snack with no fuss."
 WANDA.DESCRIBE.KYNO_BANANA_COOKED = "Why did I spend time cooking it?"
 
-WANDA.DESCRIBE.KYNO_KOKONUTTREE = "A palm tree."
+WANDA.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "A palm tree.",
+	PICKED = "Just a matter of waiting.",
+	CHOPPED = "Its time ends here.",
+	BURNING = "This was avoidable.",
+	BURNT = "Too late now.",
+}
+
 WANDA.DESCRIBE.KYNO_KOKONUT = "Gonna take some time to open it."
 WANDA.DESCRIBE.KYNO_KOKONUT_HALVED = "Double the time for eating it."
 WANDA.DESCRIBE.KYNO_KOKONUT_COOKED = "Less time now!"
@@ -453,13 +488,22 @@ WANDA.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "A crab meat, perfect for refined dishe
 
 WANDA.DESCRIBE.KYNO_SLAUGHTERTOOL = "I hope I don't have spare time to use this."
 
-WANDA.DESCRIBE.KYNO_CHICKEN2 = "Awww. A little chicken!"
+WANDA.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "Awww. A little chicken!",
+	COOP = "Secured in this moment.",
+}
 
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG = "What, you egg?"
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "I don't have time to wait for something this large to hatch."
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Whenever I make eggs they end up either undercooked or burnt."
 
-WANDA.DESCRIBE.KYNO_CHICKENHOUSE = "A well-timed solution for a steady supply of eggs."
+WANDA.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "A well-timed solution for a steady supply of eggs.",
+	FULL = "Right on schedule.",
+	BURNT = "Too late to save it now.",
+}
 
 WANDA.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "It's not time for fixing things! Only clocks."
 
@@ -543,11 +587,31 @@ WANDA.DESCRIBE.KYNO_PLANTMEAT_DRIED = "An old, tough piece of meat."
 
 WANDA.DESCRIBE.KYNO_BREWBOOK = "Brewing is so time consuming, look at all these ingredients and methods!"
 
-WANDA.DESCRIBE.KYNO_WOODENKEG = "This will sure take a long time to produce."
+WANDA.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "This will sure take a long time to produce.",
+	BREWING_LONG = "This timeline takes patience.",
+	BREWING_SHORT = "Almost there.",
+	DONE = "Right on schedule.",
+	BURNT = "Too late to change that.",
+}
 
-WANDA.DESCRIBE.KYNO_PRESERVESJAR = "This will sure take a long time to produce."
+WANDA.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "This will sure take a long time to produce.",
+	BREWING_LONG = "This timeline requires patience.",
+	BREWING_SHORT = "Almost there.",
+	DONE = "Exactly as planned.",
+	BURNT = "No second winds.",
+}
 
-WANDA.DESCRIBE.KYNO_ANTCHEST = "It's like the time is frozen inside of it."
+WANDA.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "It's like the time is frozen inside of it.",
+	HONEY = "Right on time.",
+	NECTAR = "Still in the middle of the process.",
+	BURNING = "Too late to stop that now.",
+}
 
 WANDA.DESCRIBE.KYNO_NECTAR_POD = "Needs a place and time to become honey."
 
@@ -557,13 +621,47 @@ WANDA.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Roasted just in time!"
 WANDA.DESCRIBE.KYNO_PIKO = "You're a cute little guy."
 WANDA.DESCRIBE.KYNO_PIKO_ORANGE = "You don't have much time left, because I'm making tea with you!"
 
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_TREE = "Just a oak tree."
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "Just a tea tree, with squirrels."
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "Just a tree.",
+	CHOPPED = "Its purpose has passed.",
+	BURNING = "This wasn't inevitable.",
+	BURNT = "Too late now.",
+}
+
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "Just a tea tree, with squirrels.",
+	BURNING = "This didn't have to happen.",
+}
+
 WANDA.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "It's just a wooden crate."
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "I don't have time to waste with them."
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "Perhaps I should learn how to fish someday."
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "I can tell, some of these items aren't from this plane of existence."
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "He's selling a bunch of assorted things."
+
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "I don't have time to waste with them.",
+	BURNT = "Too late to save it.",
+}
+
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "Perhaps I should learn how to fish someday.",
+	CRAFTED = "A noticeable improvement.",
+	BURNT = "Some things linger too long.",
+}
+
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "I can tell, some of these items aren't from this plane of existence.",
+	OCCUPIED = "Not the right moment for that.",
+}
+
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "He's selling a bunch of assorted things.",
+	EMPTY = "Nothing left this time.",
+}
+
 WANDA.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Have we met before? Please don't tell me."
 WANDA.DESCRIBE.KYNO_MEADOWISLAND_POND = "I could get some fish from this pond when I have some spare time."
 WANDA.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Plants."
@@ -726,7 +824,11 @@ WANDA.DESCRIBE.PINACOLADA = "Ahh, I was in need of this."
 
 WANDA.DESCRIBE.CHIMAS = "Not the tea party I was hoping for!"
 
-WANDA.DESCRIBE.KYNO_GARDEN_SPRINKLER = "It waters my plants, and saves me some time."
+WANDA.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "It waters my plants, and saves me some time.",
+	ON = "Working exactly as expected.",
+}
 
 WANDA.DESCRIBE.KYNO_FOODSACK = "A pratical container for cooling foods."
 
@@ -839,7 +941,11 @@ WANDA.DESCRIBE.KYNO_TRUFFLES_GROUND = "Time passes, and they grow on their own. 
 WANDA.DESCRIBE.KYNO_TRUFFLES = "Good things come to those who wait... like these."
 WANDA.DESCRIBE.KYNO_TRUFFLES_COOKED = "A taste worth the wait."
 
-WANDA.DESCRIBE.KYNO_ITEMSHOWCASER = "A reminder that even beauty spoils with time."
+WANDA.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "An empty moment.",
+	FULL = "A reminder that even beauty spoils with time.",
+}
 
 WANDA.DESCRIBE.KYNO_SPORECAP = "Time hasn't been kind to this mushroom."
 WANDA.DESCRIBE.KYNO_SPORECAP_COOKED = "Aged by fire, just like time."
@@ -859,7 +965,15 @@ WANDA.DESCRIBE.TRUFFLEOIL = "A timeless delicacy... if you can stomach the smell
 
 WANDA.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "What's a little more tampering going to hurt?"
 WANDA.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "It'll be done soon... I can feel it."
-WANDA.DESCRIBE.KYNO_FISHFARMPLOT = "A place where the future of fish begins."
+
+WANDA.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "A place where the future of fish begins.",
+	FUEL_HIGH = "No need to intervene yet.",
+	FUEL_MED = "Time is on their side.",
+	FUEL_LOW = "The balance is slipping.",
+	EMPTY = "Empty, exactly as predicted.",
+}
 
 WANDA.DESCRIBE.KYNO_ANTCHOVY = "I don't have time to classify hybrid fish-insects!"
 WANDA.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Another oddity I don't have time to study."
@@ -916,7 +1030,12 @@ WANDA.DESCRIBE.MONKEYISLANDMEAL = "Time heals all... or maybe it's this meal tha
 WANDA.DESCRIBE.KYNO_BRAINROCK_LARVAE = "I don't have time for babysitting."
 WANDA.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Babysitting is not my favourite pastime."
 WANDA.DESCRIBE.KYNO_BRAINROCK_CORAL = "Less time to think more time to act."
-WANDA.DESCRIBE.KYNO_BRAINROCK_ROCK = "You sure got a lot of time for thinking, don't you?"
+
+WANDA.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "You sure got a lot of time for thinking, don't you?",
+	PICKED = "Its thoughts are on pause.",
+}
 
 WANDA.DESCRIBE.BRAINMETTERSOUP = "Halves the time I need to think."
 
@@ -933,9 +1052,28 @@ WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "More candles. More pressure about time
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "I'm not sure I trust that stuff."
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "A slice won't waste too much time... hopefully."
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Celebrations are nice, while time permits..."
-WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Timely popcorn service."
+
+WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Timely popcorn service.",
+	FUEL_HIGH = "No need to intervene yet.",
+	FUEL_MED = "Time is slipping.",
+	FUEL_LOW = "Almost out of time.",
+	EMPTY = "Its moment has passed.",
+}
+
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "It's best eaten before it gets stale... like time itself."
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Well... I suppose even time travelers can celebrate."
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Time favors those with exclusive style, like Sammy."
 
 WANDA.DESCRIBE.KYNO_FISHREGISTRYHAT = "At least this helps me remember what I've already learned."
+
+WANDA.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "A place where food slowly disappears.",
+	FUEL_HIGH = "No need to worry for now.",
+	FUEL_MED = "Time will empty it soon enough.",
+	FUEL_LOW = "Running out of time… and feed.",
+	EMPTY = "Exactly as expected.",
+	BURNT = "That outcome was inevitable.",
+}

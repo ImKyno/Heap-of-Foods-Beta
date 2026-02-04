@@ -1,4 +1,3 @@
--- Garden Sprinkler from TAP.
 require("prefabutil")
 
 local assets =
@@ -29,6 +28,8 @@ local prefabs =
 	"kyno_water_spray",
 }
 
+local PLACER_SCALE = 1.5
+
 local function SpawnDrop(inst)
 	local drop = SpawnPrefab("kyno_raindrop")
 	local pt = Vector3(inst.Transform:GetWorldPosition())
@@ -49,13 +50,14 @@ local function TurnOn(inst)
 	
 	if not inst.waterSpray then
 		inst.waterSpray = SpawnPrefab("kyno_water_spray")
+		
 		local follower = inst.waterSpray.entity:AddFollower()
 		follower:FollowSymbol(inst.GUID, "top", 0, -100, 0)
 	end
 	
 	inst.droptask = inst:DoPeriodicTask(0.2, function() 
-		SpawnDrop(inst) 
-		SpawnDrop(inst) 
+		SpawnDrop(inst)
+		SpawnDrop(inst)
 	end)
 
 	inst.spraytask = inst:DoPeriodicTask(0.2, function()
@@ -101,89 +103,46 @@ local function OnFuelEmpty(inst)
 	inst.components.machine:TurnOff()
 end
 
-local function OnFuelSectionChange(old, new, inst)
-	local fuelAnim = 0
+local function UpdateFuelMeter(inst)
+	if inst then
+		local fueled = inst.components.fueled
+		local percent = fueled.currentfuel / fueled.maxfuel
+
+		percent = math.clamp(percent, 0, 1)
+
+		local fuelAnim 
 	
-	if inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.01 then fuelAnim = "0"
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.1 then fuelAnim = "1"
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.2 then fuelAnim = "2"
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.3 then fuelAnim = "3" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.4 then fuelAnim = "4" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.5 then fuelAnim = "5" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.6 then fuelAnim = "6" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.7 then fuelAnim = "7" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.8 then fuelAnim = "8" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.9 then fuelAnim = "9" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 1 then fuelAnim = "10" 
-	end 
-		
-	if inst then 
-		inst.AnimState:OverrideSymbol("swap_meter", "sprinkler_meter", fuelAnim) 
+		if percent <= 0.01 then
+			fuelAnim = "0"
+		else
+			fuelAnim = tostring(math.min(10, math.floor(percent * 10)))
+		end
+
+		inst.AnimState:OverrideSymbol("swap_meter", "sprinkler_meter", fuelAnim)
 	end
 end
 
-local function ontakefuelfn(inst)
+local function OnFuelSectionChange(old, new, inst)
+	UpdateFuelMeter(inst)
+end
+
+local function OnTakeFuelFn(inst)
+	UpdateFuelMeter(inst)
 	inst.SoundEmitter:PlaySound("hof_sounds/common/sprinkler/refuel")
-	
-	local fuelAnim = 0
-	if inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.01 then fuelAnim = "0"
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.1 then fuelAnim = "1"
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.2 then fuelAnim = "2"
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.3 then fuelAnim = "3" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.4 then fuelAnim = "4" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.5 then fuelAnim = "5" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.6 then fuelAnim = "6" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.7 then fuelAnim = "7" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.8 then fuelAnim = "8" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.9 then fuelAnim = "9" 
-		elseif inst and inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 1 then fuelAnim = "10" 
-	end 
-	
-	if inst then 
-		inst.AnimState:OverrideSymbol("swap_meter", "sprinkler_meter", fuelAnim) 
-	end
 end
 
 local function CanInteract(inst)
 	return true
 end
 
-local function GetStatus(inst, viewer)
-	if inst.on then
-		return "ON"
-	else
-		return "OFF"
-	end
-end
-
 local function OnEntitySleep(inst)
-    inst.SoundEmitter:KillSound("firesuppressor_idle")
-end
-
-local function OnSave(inst, data)
-	if inst:HasTag("burnt") or inst:HasTag("fire") then
-        data.burnt = true
-    end
-
-    data.on = inst.on
-end
-
-local function OnLoad(inst, data)
-	if data and data.burnt and inst.components.burnable and inst.components.burnable.onburnt then
-        inst.components.burnable.onburnt(inst)
-    end
-
-    inst.on = data.on and data.on or false
-end
-
-local function OnLoadPostPass(inst, newents, data)
-	-- Ehm what the sigma?
+	inst.SoundEmitter:KillSound("firesuppressor_idle")
 end
 
 local function UpdateSpray(inst)
 	OnFuelSectionChange(inst)
 	
-    local x, y, z = inst.Transform:GetWorldPosition()
+	local x, y, z = inst.Transform:GetWorldPosition()
 	local GARDENING_CANT_TAGS = { "pickable", "stump", "barren", "INLIMBO" } -- "withered",
 	local ents = TheSim:FindEntities(x, y, z, 8, nil, GARDENING_CANT_TAGS)
 
@@ -194,19 +153,19 @@ local function UpdateSpray(inst)
 	inst.moisture_targets_old = {}
 	
 	for GUID, v in pairs(inst.moisture_targets) do
-    	inst.moisture_targets_old[GUID] = v
+		inst.moisture_targets_old[GUID] = v
 	end
 	
-    inst.moisture_targets = {} 
+	inst.moisture_targets = {} 
 
-    for k, v in pairs(ents) do
+	for k, v in pairs(ents) do
 		if v.components.moisture ~= nil and v.components.inventory ~= nil and not v.components.inventory:IsWaterproof() then
 			v.components.moisture:DoDelta(0.1)		
 		end
 		
 		if v.components.burnable and not (v.components.inventoryitem and v.components.inventoryitem.owner) then
 			v.components.burnable:Extinguish()
-		end		
+		end
 		
 		if v.components.crop and v.components.crop.task then
 			v.components.crop.growthpercent = v.components.crop.growthpercent + (0.001)
@@ -214,47 +173,48 @@ local function UpdateSpray(inst)
 
 		--[[
 		if not (inst.components.growable.targettime == nil and inst.components.growable.pausedremaining == nil) then 
-		if v.components.growable ~= nil and v.components.growable:IsGrowing() then
-			v.components.growable:ExtendGrowTime(-0.2)
+			if v.components.growable ~= nil and v.components.growable:IsGrowing() then
+				v.components.growable:ExtendGrowTime(-0.2)
+			end
 		end
 		]]--
 	
 		if v then
 			local a, b, c = v.Transform:GetWorldPosition()
+			
 			if inst.components.wateryprotection then
 				inst.components.wateryprotection:SpreadProtectionAtPoint(a, b, c, 1)
 			end
-		end	
+		end
 
 		if v.components.witherable and v.components.witherable:IsWithered() then
 			v.components.witherable:ForceRejuvenate()
-		end	
-	end
-end
-
-local function OnDeplete(inst)
-	-- Ehm what the sigma?
-end
-
-local function OnHit(inst, worker)
-	if not inst:HasTag("burnt") then
-		if not inst.sg:HasStateTag("busy") then
-			inst.sg:GoToState("hit")
 		end
 	end
-	
-	inst.SoundEmitter:PlaySound("dontstarve_DLC001/common/firesupressor_impact")
 end
 
 local function OnHammered(inst, worker)
-	inst.components.lootdropper:DropLoot()
+	if inst.components.lootdropper ~= nil then
+		inst.components.lootdropper:DropLoot()
+	end
 	
-	SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
+	local fx = SpawnPrefab("collapse_small")
+	fx = Transform:SetPosition(inst.Transform:GetWorldPosition())
+	fx:SetMaterial("metal")
+	
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_metal")
 	inst.SoundEmitter:KillSound("idleloop")
 	
 	TurnOff(inst, true)
 	inst:Remove()
+end
+
+local function OnHit(inst, worker)
+	if not inst.sg:HasStateTag("busy") then
+		inst.sg:GoToState("hit")
+	end
+	
+	inst.SoundEmitter:PlaySound("dontstarve_DLC001/common/firesupressor_impact")
 end
 
 local function OnBuilt(inst)
@@ -264,42 +224,51 @@ local function OnBuilt(inst)
 	inst.SoundEmitter:PlaySound("hof_sounds/common/sprinkler/place")
 end
 
-local PLACER_SCALE = 1.5
+local function GetStatus(inst, viewer)
+	return (inst.on == true and "ON")
+	or "OFF"
+end
+
+local function OnSave(inst, data)
+    data.on = inst.on
+end
+
+local function OnLoad(inst, data)
+	inst.on = data.on and data.on or false
+end
 
 local function OnEnableHelper(inst, enabled)
-    if enabled then
-        if inst.helper == nil then
-            inst.helper = CreateEntity()
+	if enabled then
+		if inst.helper == nil then
+			inst.helper = CreateEntity()
 
-            inst.helper.entity:SetCanSleep(false)
-            inst.helper.persists = false
+			inst.helper.entity:SetCanSleep(false)
+			inst.helper.persists = false
 
-            inst.helper.entity:AddTransform()
-            inst.helper.entity:AddAnimState()
-
-            inst.helper:AddTag("CLASSIFIED")
-            inst.helper:AddTag("NOCLICK")
-            inst.helper:AddTag("placer")
-
-            inst.helper.Transform:SetScale(PLACER_SCALE, PLACER_SCALE, PLACER_SCALE)
-
-            inst.helper.AnimState:SetBank("sprinkler_placement")
-            inst.helper.AnimState:SetBuild("sprinkler_placement")
-            inst.helper.AnimState:PlayAnimation("idle")
-            inst.helper.AnimState:SetLightOverride(1)
+			inst.helper.entity:AddTransform()
+			inst.helper.entity:AddAnimState()
 			
-            inst.helper.AnimState:SetOrientation(ANIM_ORIENTATION.OnGround)
-            inst.helper.AnimState:SetLayer(LAYER_BACKGROUND)
-            inst.helper.AnimState:SetSortOrder(1)
-            inst.helper.AnimState:SetAddColour(0, .2, .5, 0)
+			inst.helper.Transform:SetScale(PLACER_SCALE, PLACER_SCALE, PLACER_SCALE)
 
-            inst.helper.entity:SetParent(inst.entity)
-        end
-		
-    elseif inst.helper ~= nil then
-        inst.helper:Remove()
-        inst.helper = nil
-    end
+			inst.helper.AnimState:SetBank("sprinkler_placement")
+			inst.helper.AnimState:SetBuild("sprinkler_placement")
+			inst.helper.AnimState:PlayAnimation("idle")
+			inst.helper.AnimState:SetLightOverride(1)
+			inst.helper.AnimState:SetOrientation(ANIM_ORIENTATION.OnGround)
+			inst.helper.AnimState:SetLayer(LAYER_BACKGROUND)
+			inst.helper.AnimState:SetSortOrder(1)
+			inst.helper.AnimState:SetAddColour(0, .2, .5, 0)
+			
+			inst.helper:AddTag("CLASSIFIED")
+			inst.helper:AddTag("NOCLICK")
+			inst.helper:AddTag("placer")
+
+			inst.helper.entity:SetParent(inst.entity)
+		end
+	elseif inst.helper ~= nil then
+		inst.helper:Remove()
+		inst.helper = nil
+	end
 end
 
 local function fn()
@@ -308,7 +277,7 @@ local function fn()
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
-    inst.entity:AddNetwork()
+	inst.entity:AddNetwork()
 
 	local minimap = inst.entity:AddMiniMapEntity()	
 	minimap:SetIcon("kyno_garden_sprinkler.tex")
@@ -324,12 +293,12 @@ local function fn()
 	inst:AddTag("structure")
 	inst:AddTag("firesupressor")
 	inst:AddTag("gardensprinkler")
-	inst:AddTag("tornado_immune") -- THANKS LEONIDAS
+	inst:AddTag("tornado_immune")
 	
 	if not TheNet:IsDedicated() then
-        inst:AddComponent("deployhelper")
-        inst.components.deployhelper.onenablehelper = OnEnableHelper
-    end
+		inst:AddComponent("deployhelper")
+		inst.components.deployhelper.onenablehelper = OnEnableHelper
+	end
 	
 	MakeSnowCoveredPristine(inst)
 
@@ -337,7 +306,7 @@ local function fn()
 
 	if not TheWorld.ismastersim then
 		return inst
-	end	
+	end
 	
 	inst.on = false
 	
@@ -353,14 +322,15 @@ local function fn()
 	inst.components.machine.cooldowntime = 0.5
 	
 	inst:AddComponent("fueled")
+	inst.components.fueled.accepting = true
+	inst.components.fueled.secondaryfueltype = FUELTYPE.CHEMICAL
+	inst.components.fueled:SetTakeFuelFn(OnTakeFuelFn)
 	inst.components.fueled:SetDepletedFn(OnFuelEmpty)
 	inst.components.fueled:SetSectionCallback(OnFuelSectionChange)
-	inst.components.fueled.ontakefuelfn = ontakefuelfn
-	inst.components.fueled:InitializeFuelLevel(350)
-	inst.components.fueled:SetSections(10)
-	inst.components.fueled.secondaryfueltype = FUELTYPE.CHEMICAL
-	inst.components.fueled.bonusmult = 5
-	inst.components.fueled.accepting = true
+	inst.components.fueled.bonusmult = TUNING.KYNO_GARDEN_SPRINKLER_BONUSMULT 
+	inst.components.fueled.maxfuel = TUNING.KYNO_GARDEN_SPRINKLER_MAXFUEL
+	inst.components.fueled:InitializeFuelLevel(TUNING.KYNO_GARDEN_SPRINKLER_MAXFUEL)
+	inst.components.fueled:SetSections(TUNING.KYNO_GARDEN_SPRINKLER_SECTIONS)
 	
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
@@ -375,7 +345,6 @@ local function fn()
 	inst.components.wateryprotection.addwetness = 1
 	inst.components.wateryprotection.protection_dist = 4
 	inst.components.wateryprotection:AddIgnoreTag("player")
-	inst.components.wateryprotection.onspreadprotectionfn = OnDeplete
 	
 	inst:SetStateGraph("SGgardensprinkler")
 
@@ -384,9 +353,8 @@ local function fn()
 	inst.waterSpray = nil
 
 	inst.OnSave = OnSave 
-    inst.OnLoad = OnLoad
-    inst.OnLoadPostPass = OnLoadPostPass
-    inst.OnEntitySleep = OnEntitySleep
+	inst.OnLoad = OnLoad
+	inst.OnEntitySleep = OnEntitySleep
 
 	MakeSnowCovered(inst, .01)
 	inst:ListenForEvent("onbuilt", OnBuilt)
@@ -395,30 +363,30 @@ local function fn()
 end
 
 local function placerfn(inst)
-    local placer2 = CreateEntity()
+	local placer2 = CreateEntity()
 
-    placer2.entity:SetCanSleep(false)
-    placer2.persists = false
+	placer2.entity:SetCanSleep(false)
+	placer2.persists = false
 
-    placer2.entity:AddTransform()
-    placer2.entity:AddAnimState()
+	placer2.entity:AddTransform()
+	placer2.entity:AddAnimState()
 
-    placer2:AddTag("CLASSIFIED")
-    placer2:AddTag("NOCLICK")
-    placer2:AddTag("placer")
+	local s = 1 / PLACER_SCALE
+	placer2.Transform:SetScale(s, s, s)
 
-    local s = 1 / PLACER_SCALE
-    placer2.Transform:SetScale(s, s, s)
-
-    placer2.AnimState:SetBank("garden_sprinkler")
-    placer2.AnimState:SetBuild("garden_sprinkler")
-    placer2.AnimState:PlayAnimation("idle_off")
+	placer2.AnimState:SetBank("garden_sprinkler")
+	placer2.AnimState:SetBuild("garden_sprinkler")
+	placer2.AnimState:PlayAnimation("idle_off")
 	placer2.AnimState:OverrideSymbol("swap_meter", "sprinkler_meter", "10")
 	placer2.AnimState:Hide("snow")
-    placer2.AnimState:SetLightOverride(1)
+	placer2.AnimState:SetLightOverride(1)
+	
+	placer2:AddTag("CLASSIFIED")
+	placer2:AddTag("NOCLICK")
+	placer2:AddTag("placer")
 
-    placer2.entity:SetParent(inst.entity)
-    inst.components.placer:LinkEntity(placer2)
+	placer2.entity:SetParent(inst.entity)
+	inst.components.placer:LinkEntity(placer2)
 end
 
 return Prefab("kyno_garden_sprinkler", fn, assets, prefabs),

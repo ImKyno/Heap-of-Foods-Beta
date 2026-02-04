@@ -1,5 +1,7 @@
 require("prefabutil")
+
 local brewing = require("hof_brewing")
+local TOTAL_BREWING_TIME = TUNING.TOTAL_DAY_TIME -- 480
 
 local assets =
 {
@@ -202,23 +204,35 @@ local function HarvestFn(inst, harvester)
     end
 
 	local bubble = GetBubble(inst)
+	
 	if bubble then
 		bubble:Remove()
 	end
-end
-
-local function GetStatus(inst)
-    return (inst:HasTag("burnt") and "BURNT")
-	or (inst.components.brewer:IsDone() and "DONE")
-	or (not inst.components.brewer:IsCooking() and "EMPTY")
-	or (inst.components.brewer:GetTimeToCook() > 15 and "COOKING_LONG")
-	or "COOKING_SHORT"
 end
 
 local function OnBuilt(inst)
     inst.AnimState:PlayAnimation("idle_empty")
     inst.AnimState:PushAnimation("idle_empty", false)
     inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
+end
+
+local function OnBurnt(inst)
+	local bubble = GetBubble(inst)
+	
+	if bubble then
+		bubble:Remove()
+	end
+	
+	inst.SoundEmitter:KillSound("brew_loop")
+end
+
+local function GetStatus(inst, viewer)
+	return (inst:HasTag("burnt") and "BURNT")
+	or (inst.components.burnable:IsBurning() and "BURNT")
+	or (inst.components.brewer:IsDone() and "DONE")
+	or (not inst.components.brewer:IsCooking() and "EMPTY")
+	or (inst.components.brewer:GetTimeToCook() > TOTAL_BREWING_TIME * 2 and "BREWING_LONG")
+	or "BREWING_SHORT"
 end
 
 local function OnSave(inst, data)
@@ -230,6 +244,7 @@ end
 local function OnLoad(inst, data)
     if data ~= nil and data.burnt then
         inst.components.burnable.onburnt(inst)
+		OnBurnt(inst)
     end
 end
 
@@ -279,6 +294,9 @@ local function kegfn()
 
 	inst:AddComponent("lootdropper")
 	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
+	
 	inst:AddComponent("brewer")
 	inst.components.brewer.onstartcooking = StartCookFn
 	inst.components.brewer.oncontinuecooking = ContinueCookFn
@@ -294,9 +312,6 @@ local function kegfn()
 	inst.components.container.skipclosesnd = true
 	inst.components.container.skipopensnd = true
 
-	inst:AddComponent("inspectable")
-	inst.components.inspectable.getstatus = GetStatus
-
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammered)
@@ -307,10 +322,10 @@ local function kegfn()
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 
 	inst:ListenForEvent("onbuilt", OnBuilt)
+	inst:ListenForEvent("onburnt", OnBurnt)
 
 	MakeMediumBurnable(inst, nil, nil, true)
-	MakeSmallPropagator(inst)
-
+	MakeLargePropagator(inst)
 	MakeSnowCovered(inst)
 
 	inst.OnSave = OnSave
@@ -356,6 +371,9 @@ local function preservejarfn()
     end
 
 	inst:AddComponent("lootdropper")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("brewer")
 	inst.components.brewer.onstartcooking = StartCookFn
@@ -372,9 +390,6 @@ local function preservejarfn()
 	inst.components.container.skipclosesnd = true
 	inst.components.container.skipopensnd = true
 
-	inst:AddComponent("inspectable")
-	inst.components.inspectable.getstatus = GetStatus
-
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammered)
@@ -385,10 +400,10 @@ local function preservejarfn()
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 
 	inst:ListenForEvent("onbuilt", OnBuilt)
+	inst:ListenForEvent("onburnt", OnBurnt)
 
 	MakeMediumBurnable(inst, nil, nil, true)
-	MakeSmallPropagator(inst)
-
+	MakeLargePropagator(inst)
 	MakeSnowCovered(inst)
 
 	inst.OnSave = OnSave

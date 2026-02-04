@@ -199,6 +199,13 @@ WENDY.DESCRIBE.DUG_KYNO_WILDWHEAT = "A better version of grass."
 
 WENDY.DESCRIBE.KYNO_MEALGRINDER = "I'am ground down the mealing stone of life."
 
+WENDY.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "They thrive on a stump made by death.",
+	PICKED = "It waits to give again.",
+	BURNING = "All things die. Even fungus.",
+}
+
 WENDY.DESCRIBE.GORGE_BREAD = "You can't do much alone."
 WENDY.DESCRIBE.GORGE_SWEET_CHIPS = "It all goes down into my mouth."
 WENDY.DESCRIBE.GORGE_VEGETABLE_SOUP = "I think even death tastes better than this."
@@ -340,11 +347,23 @@ WENDY.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Dead."
 
 WENDY.DESCRIBE.KYNO_SEEDS_KIT = "Ordinary seeds."
 
-WENDY.DESCRIBE.KYNO_LIMPETROCK = "Those look edible... sort of."
+WENDY.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "Those look edible... sort of.",
+	PICKED = "They have retreated.",
+	WITHERED = "A barren existence.",
+}
+
 WENDY.DESCRIBE.KYNO_LIMPETS = "They eat of the rock. I eat of them."
 WENDY.DESCRIBE.KYNO_LIMPETS_COOKED = "Depressing."
 
-WENDY.DESCRIBE.KYNO_LOTUS_OCEAN = "It flourishes on the waves of sorrow."
+WENDY.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "It flourishes on the waves of sorrow.",
+	PICKED = "It must wait to bloom again.",
+	BURNING = "Its end comes too soon.",
+}
+
 WENDY.DESCRIBE.KYNO_LOTUS_ROOT = "They desire a watery grave."
 WENDY.DESCRIBE.KYNO_LOTUS_FLOWER = "This beauty will also die."
 WENDY.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Its death was tasty."
@@ -374,11 +393,27 @@ WENDY.DESCRIBE.CATFOOD = "Food for cats."
 
 WENDY.DESCRIBE.KATFOOD = "Food for cats."
 
-WENDY.DESCRIBE.KYNO_BANANATREE = "Do you feel the sun now, poor plant?"
+WENDY.DESCRIBE.KYNO_BANANATREE = 
+{ 
+	GENERIC = "Do you feel the sun now, poor plant?",
+	PICKED = "It must wait to give again.",
+	CHOPPED = "Its life was cut short.",
+	BURNING = "A rare beauty lost to flame.",
+	BURNT = "Nothing remains but sorrow.",
+}
+
 WENDY.DESCRIBE.KYNO_BANANA = "The peel looks dangerous."
 WENDY.DESCRIBE.KYNO_BANANA_COOKED = "Warmed banana mush is so much better."
 
-WENDY.DESCRIBE.KYNO_KOKONUTTREE = "Its fruit bestows life, but only if I kill it."
+WENDY.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "Its fruit bestows life, but only if I kill it.",
+	PICKED = "It withholds its gifts.",
+	CHOPPED = "Its life was brief.",
+	BURNING = "Another loss to flame.",
+	BURNT = "Nothing remains but dust.",
+}
+
 WENDY.DESCRIBE.KYNO_KOKONUT = "What secrets must this fruit hide beneath its armor?"
 WENDY.DESCRIBE.KYNO_KOKONUT_HALVED = "Two havles that were once whole. Where are you now, Abigail?"
 WENDY.DESCRIBE.KYNO_KOKONUT_COOKED = "It's a little sweet."
@@ -453,13 +488,22 @@ WENDY.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Its insides are as horrid as its outsi
 
 WENDY.DESCRIBE.KYNO_SLAUGHTERTOOL = "Is all of life not a slaughter?"
 
-WENDY.DESCRIBE.KYNO_CHICKEN2 = "Hideous poultry."
+WENDY.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "Hideous poultry.",
+	COOP = "At least it has shelter now.",
+}
 
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG = "Life's inside."
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "It's too big for a chicken!"
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "No chicken will ever come of it."
 
-WENDY.DESCRIBE.KYNO_CHICKENHOUSE = "They lay eggs, then return to their quiet shelter."
+WENDY.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "They lay eggs, then return to their quiet shelter.",
+	FULL = "More eggs born into this cruel world.",
+	BURNT = "Their suffering has ended.",
+}
 
 WENDY.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Someone used to have something here, now there are gone."
 
@@ -543,11 +587,31 @@ WENDY.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Meat turned dry and delicious."
 
 WENDY.DESCRIBE.KYNO_BREWBOOK = "What's the point of filling my stomach when my heart remains empty..."
 
-WENDY.DESCRIBE.KYNO_WOODENKEG = "A barrel for making wine or other goodies."
+WENDY.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "A barrel for making wine or other goodies.",
+	BREWING_LONG = "Time drags on endlessly.",
+	BREWING_SHORT = "The waiting nears its end.",
+	DONE = "At least something turned out right.",
+	BURNT = "All effort, wasted.",
+}
 
-WENDY.DESCRIBE.KYNO_PRESERVESJAR = "A cask for making preserved products."
+WENDY.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "A cask for making preserved products.",
+	BREWING_LONG = "Time preserves all things... briefly.",
+	BREWING_SHORT = "Soon it will be over.",
+	DONE = "At least it survived.",
+	BURNT = "Reduced to nothing.",
+}
 
-WENDY.DESCRIBE.KYNO_ANTCHEST = "Still not sweet as Abigail."
+WENDY.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "Still not as sweet as Abigail.",
+	HONEY = "All this honey... for what purpose?",
+	NECTAR = "The slow march toward honey.",
+	BURNING = "Its labor ends in ash.",
+}
 
 WENDY.DESCRIBE.KYNO_NECTAR_POD = "Is it even worth turning this to honey?"
 
@@ -557,13 +621,47 @@ WENDY.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "I killed it to prolong my own life."
 WENDY.DESCRIBE.KYNO_PIKO = "Too naive to know pain."
 WENDY.DESCRIBE.KYNO_PIKO_ORANGE = "You exist to amuse others."
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_TREE = "I can sit under it and contemplate life's futility."
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "It would be better if wasn't for all the pikos."
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "I can sit under it and contemplate life's futility.",
+	CHOPPED = "Stripped of its purpose.",
+	BURNING = "Its end comes swiftly.",
+	BURNT = "Nothing remains.",
+}
+
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "It would be better if wasn't for all the pikos.",
+	BURNING = "Homelessness by flame.",
+}
+
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "It's just a box."
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "Time has broken it down."
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "How quaint."
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "I kinda want that backpack on the display."
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "Its full of goodies."
+
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "A lonely shelter for lonely creatures.",
+	BURNT = "Another home reduced to nothing.",
+}
+
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "How quaint.",
+	CRAFTED = "A modest improvement.",
+	BURNT = "The stench lingers even now.",
+}
+
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "I kinda want that backpack on the display.",
+	OCCUPIED = "Even merchants must rest.",
+}
+
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "Its full of goodies.",
+	EMPTY = "There is nothing left to take.",
+}
+
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "That imp thinks he can hide what he did from us."
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_POND = "When I gaze into this limpid pool I dream I can see Abigail."
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "It's a plant."
@@ -726,7 +824,11 @@ WENDY.DESCRIBE.PINACOLADA = "Cold and refreshing."
 
 WENDY.DESCRIBE.CHIMAS = "It looks like a plain."
 
-WENDY.DESCRIBE.KYNO_GARDEN_SPRINKLER = "It cannot water my parched soul."
+WENDY.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "It cannot water my parched soul.",
+	ON = "At least the plants are cared for.",
+}
 
 WENDY.DESCRIBE.KYNO_FOODSACK = "It slows the rot and decay."
 
@@ -839,7 +941,11 @@ WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND = "Even in darkness, they grow..."
 WENDY.DESCRIBE.KYNO_TRUFFLES = "Delicacies born from darkness."
 WENDY.DESCRIBE.KYNO_TRUFFLES_COOKED = "Darkness turned into warmth and flavor."
 
-WENDY.DESCRIBE.KYNO_ITEMSHOWCASER = "A display of fleeting beauty. All food decays... eventually."
+WENDY.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "A display of fleeting beauty. All food decays... eventually.",
+	FULL = "It will be gone soon enough.",
+}
 
 WENDY.DESCRIBE.KYNO_SPORECAP = "Even the mushrooms decay eventually..."
 WENDY.DESCRIBE.KYNO_SPORECAP_COOKED = "Cooking can't cleanse its sorrow."
@@ -859,7 +965,15 @@ WENDY.DESCRIBE.TRUFFLEOIL = "The essence of decay, bottled for indulgence."
 
 WENDY.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Shall I even bother building this?"
 WENDY.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "A watery grave... how poetic."
-WENDY.DESCRIBE.KYNO_FISHFARMPLOT = "Even in a hatchery, life begins quietly."
+
+WENDY.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "Even in a hatchery, life begins quietly.",
+	FUEL_HIGH = "Their hunger is satisfied.",
+	FUEL_MED = "The cycle continues.",
+	FUEL_LOW = "Hunger creeps in.",
+	EMPTY = "Only emptiness remains.",
+}
 
 WENDY.DESCRIBE.KYNO_ANTCHOVY = "Half fish, half ant... a life of confusion and suffering."
 WENDY.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "A buzzing, writhing mass of misery."
@@ -916,7 +1030,12 @@ WENDY.DESCRIBE.MONKEYISLANDMEAL = "Even the cursed deserve a taste of grace."
 WENDY.DESCRIBE.KYNO_BRAINROCK_LARVAE = "What a foul worm."
 WENDY.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Bare and completely devoid of life."
 WENDY.DESCRIBE.KYNO_BRAINROCK_CORAL = "Is that what I look like inside?"
-WENDY.DESCRIBE.KYNO_BRAINROCK_ROCK = "That's one smart-looking plant."
+
+WENDY.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "That's one smart-looking plant.",
+	PICKED = "It rests, as all minds must.",
+}
 
 WENDY.DESCRIBE.BRAINMETTERSOUP = "Its for kids."
 
@@ -933,9 +1052,28 @@ WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Each flame, a fleeting moment..."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Makes me think oh birthday parties with Abigail."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Sweetness can't fill the void within..."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "A temporary joy... destined to deflate."
-WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Quiet popping for quiet thoughts."
+
+WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Quiet popping for quiet thoughts.",
+	FUEL_HIGH = "It still has purpose.",
+	FUEL_MED = "Its time is running out.",
+	FUEL_LOW = "Soon it will fall silent.",
+	EMPTY = "Only quiet remains.",
+}
+
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "It pops... then gets eaten... like all fleeting joys."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "A symbol of forced joy... how fitting."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "For Sammy... the one who stands apart..."
 
 WENDY.DESCRIBE.KYNO_FISHREGISTRYHAT = "It records the lives that drift silently beneath the waves."
+
+WENDY.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "A small mercy for hungry creatures.",
+	FUEL_HIGH = "They will not starve today.",
+	FUEL_MED = "Sustenance dwindles.",
+	FUEL_LOW = "Hunger approaches.",
+	EMPTY = "Only emptiness remains.",
+	BURNT = "Ashes feed no one.",
+}

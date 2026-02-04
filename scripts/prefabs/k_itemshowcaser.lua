@@ -162,8 +162,9 @@ local function OnFoodTaken(inst, item, taker, wholestack)
 	end
 end
 
-local function GetStatus(inst)
-	return inst.components.inventoryitemholder:IsHolding() and "FULL" or nil
+local function GetStatus(inst, viewer)
+	return inst.components.inventoryitemholder:IsHolding() and "FULL" 
+	or "EMPTY"
 end
 
 local function OnBuilt(inst)

@@ -186,7 +186,7 @@ params.honeydeposit =
 }
 
 function params.honeydeposit.itemtestfn(container, item, slot)
-    return item:HasTag("honeyed") and not container.inst:HasTag("burnt")
+    return item:HasAnyTag("honeyed", "honey", "nectar") and not container.inst:HasTag("burnt")
 end
 
 -- Potato Sack.

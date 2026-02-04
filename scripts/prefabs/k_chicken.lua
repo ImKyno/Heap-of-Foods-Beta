@@ -171,6 +171,30 @@ local function OnEat(inst, food)
 	end
 end
 
+local function GetStatus(inst, viewer)
+	return (inst:HasTag("chicken_coop") and "COOP")
+	or "GENERIC"
+end
+
+local function SetTrapData(inst, data)
+    local lootdata = {}
+    local named = inst.components.named
+	
+	if named then
+		lootdata.named = {name = named.name}
+	end
+	
+    return lootdata
+end
+
+local function RestoreDataFromTrap(inst, data)
+    if data.named then
+		if inst.components.named then
+			inst.components.named:SetName(data.named.name)
+		end
+    end
+end
+
 local function OnSave(inst, data)	
 	data.chicken_variant =
 	{
@@ -183,25 +207,6 @@ local function OnLoad(inst, data)
 	if data ~= nil and data.chicken_variant then
 		ApplyChickenCoopVariant(inst, data.chicken_variant)
 	end
-end
-
-local function settrapdata(inst, data)
-    local lootdata = {}
-    local named = inst.components.named
-	
-	if named then
-		lootdata.named = {name = named.name}
-	end
-	
-    return lootdata
-end
-
-local function restoredatafromtrap(inst, data)
-    if data.named then
-		if inst.components.named then
-			inst.components.named:SetName(data.named.name)
-		end
-    end
 end
 
 local function commonfn(bank, build, loottable)
@@ -240,14 +245,16 @@ local function commonfn(bank, build, loottable)
 	end
 	
 	inst.sounds = ChickenSounds
-	inst.settrapdata = settrapdata
-	inst.restoredatafromtrap = restoredatafromtrap
+	inst.settrapdata = SetTrapData
+	inst.restoredatafromtrap = RestoreDataFromTrap
 	
 	inst:AddComponent("embarker")
 	inst:AddComponent("inventory")
-	inst:AddComponent("inspectable")
 	inst:AddComponent("knownlocations")
 	inst:AddComponent("homeseeker")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("sleeper")
 	inst.components.sleeper:SetSleepTest(CanSleep)

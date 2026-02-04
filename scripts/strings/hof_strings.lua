@@ -1951,3 +1951,6 @@ STRINGS.NAMES.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy's Anniversary Hat"
 
 STRINGS.NAMES.KYNO_FISHREGISTRYHAT = "Angler Hat"
 STRINGS.RECIPE_DESC.KYNO_FISHREGISTRYHAT = "Every sailor needs to know what's biting the hook."
+
+STRINGS.NAMES.KYNO_ANIMALFEEDER = "Feeding Trough"
+STRINGS.RECIPE_DESC.KYNO_ANIMALFEEDER = "Keeps your animals well-nourished."

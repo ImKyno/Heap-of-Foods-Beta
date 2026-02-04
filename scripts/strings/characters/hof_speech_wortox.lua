@@ -199,6 +199,13 @@ WORTOX.DESCRIBE.DUG_KYNO_WILDWHEAT = "Wheat that grows from richest earth."
 
 WORTOX.DESCRIBE.KYNO_MEALGRINDER = "A mortal machine for grinding food!"
 
+WORTOX.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "A mushroom metropolis!",
+	PICKED = "They'll return in their own time.",
+	BURNING = "That's unfortunate.",
+}
+
 WORTOX.DESCRIBE.GORGE_BREAD = "Mortal food looks like this?"
 WORTOX.DESCRIBE.GORGE_SWEET_CHIPS = "This food has something special on it!"
 WORTOX.DESCRIBE.GORGE_VEGETABLE_SOUP = "Just some vegetables."
@@ -340,11 +347,23 @@ WORTOX.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Ouch."
 
 WORTOX.DESCRIBE.KYNO_SEEDS_KIT = "Just some seeds."
 
-WORTOX.DESCRIBE.KYNO_LIMPETROCK = "Covered in good eating!"
+WORTOX.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "Covered in good eating!",
+	PICKED = "Gone to hide, snails inside!",
+	WITHERED = "Dry and dead, no more fed!",
+}
+
 WORTOX.DESCRIBE.KYNO_LIMPETS = "You'll be in my belly soon! Hyuyu!"
 WORTOX.DESCRIBE.KYNO_LIMPETS_COOKED = "Yum!"
 
-WORTOX.DESCRIBE.KYNO_LOTUS_OCEAN = "Pink flower!"
+WORTOX.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "Pink flower!",
+	PICKED = "Gone for now, take a bow!",
+	BURNING = "What a gash!",
+}
+
 WORTOX.DESCRIBE.KYNO_LOTUS_ROOT = "Sea stalk!"
 WORTOX.DESCRIBE.KYNO_LOTUS_FLOWER = "A pretty pink flower."
 WORTOX.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "It smells good, Hyuyu!"
@@ -374,11 +393,27 @@ WORTOX.DESCRIBE.CATFOOD = "Food for kitties! Hyuyu!"
 
 WORTOX.DESCRIBE.KATFOOD = "Food for kitties! Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_BANANATREE = "What do I see? An real banana tree!"
+WORTOX.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "What do I see? A real banana tree!",
+	PICKED = "No snacks for now.",
+	CHOPPED = "Chopped down!",
+	BURNING = "Flames everywhere!",
+	BURNT = "Ashes at last!",
+}
+
 WORTOX.DESCRIBE.KYNO_BANANA = "One of the least offensive mortal food flavors."
 WORTOX.DESCRIBE.KYNO_BANANA_COOKED = "It's cooked now. Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_KOKONUTTREE = "This tree has a big trunk. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "This tree has a big trunk. Hyuyu!",
+	PICKED = "No coconuts to be seen.",
+	CHOPPED = "Downed!",
+	BURNING = "It's burning, what a zap!",
+	BURNT = "Just ashes now.",
+}
+
 WORTOX.DESCRIBE.KYNO_KOKONUT = "A head nut!"
 WORTOX.DESCRIBE.KYNO_KOKONUT_HALVED = "Two coconuts from one?!"
 WORTOX.DESCRIBE.KYNO_KOKONUT_COOKED = "Even better than raw."
@@ -453,13 +488,22 @@ WORTOX.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "The humans like it, they do, they do!
 
 WORTOX.DESCRIBE.KYNO_SLAUGHTERTOOL = "I don't like this sort of prank."
 
-WORTOX.DESCRIBE.KYNO_CHICKEN2 = "A tiny bird."
+WORTOX.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "A tiny bird.",
+	COOP = "Home sweet coop! Hyuyu!",
+}
 
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG = "An egg from a chicken, or so I've heard."
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "A big shell for a tiny soul!"
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Probably a mortal thing."
 
-WORTOX.DESCRIBE.KYNO_CHICKENHOUSE = "A never ending supply of eggs!"
+WORTOX.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "A never ending supply of eggs!",
+	FULL = "Eggs galore! Oh, what fun!",
+	BURNT = "No more coop, no more cluck!",
+}
 
 WORTOX.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Hmm, I feel an odd aura from it."
 
@@ -543,11 +587,31 @@ WORTOX.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Mortals like this more when it's wet."
 
 WORTOX.DESCRIBE.KYNO_BREWBOOK = "Oh what shall I brew up next? Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_WOODENKEG = "This machine makes the things that mortals likes."
+WORTOX.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "This machine makes the things that mortals likes.",
+	BREWING_LONG = "Bubbling slow, nice and low!",
+	BREWING_SHORT = "Almost done!",
+	DONE = "It's finally ready!",
+	BURNT = "Ash and gloom.",
+}
 
-WORTOX.DESCRIBE.KYNO_PRESERVESJAR = "They told me this make a good thing with pomegranates. I must try!"
+WORTOX.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "They told me this make a good thing with pomegranates. I must try!",
+	BREWING_LONG = "It is bubbling nicely.",
+	BREWING_SHORT = "Almost done, from what I can tell.",
+	DONE = "Sweet!",
+	BURNT = "Oh no, its all gone!",
+}
 
-WORTOX.DESCRIBE.KYNO_ANTCHEST = "Making the sweet honey!"
+WORTOX.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "Making the sweet honey!",
+	HONEY = "Its full of honey! What a show!",
+	NECTAR = "Not ready yet?",
+	BURNING = "No more honey making now.",
+}
 
 WORTOX.DESCRIBE.KYNO_NECTAR_POD = "Sweet, sweet, nectar from bees!"
 
@@ -557,13 +621,47 @@ WORTOX.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Grub."
 WORTOX.DESCRIBE.KYNO_PIKO = "I see, you like doing some pranks like me! Hyuyu!"
 WORTOX.DESCRIBE.KYNO_PIKO_ORANGE = "Useful for making teas!"
 
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_TREE = "You look nice!"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "You look nice!"
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "You look nice!",
+	CHOPPED = "Stripped of all it had to give.",
+	BURNING = "That's unfortunate.",
+	BURNT = "Nothing left now.",
+}
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "You look nice!",
+	BURNING = "Flee if you value your life.",
+}
+
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "There's be a crate."
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "A stinky structure, to be sure."
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "They smell worse than me!"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "Me and Sammy went through a lot of places to get these items!"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "I hid a little thing in there. Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "A stinky structure, to be sure.",
+	BURNT = "Ashes and smoke.",
+}
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "They smell worse than me!",
+	CRAFTED = "Spruced up, nice!",
+	BURNT = "Burnt and foul.",
+}
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "Me and Sammy went through a lot of places to get these items!",
+	OCCUPIED = "No trading right now.",
+}
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "I hid a little thing in there. Hyuyu!",
+	EMPTY = "No goodies left.",
+}
+
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Don't tell anyone I brought you here!"
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_POND = "I see my future..."
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Hey! I'm gazing here!"
@@ -726,7 +824,11 @@ WORTOX.DESCRIBE.PINACOLADA = "I must admit, its very good and refreshing."
 
 WORTOX.DESCRIBE.CHIMAS = "A strange drink! Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_GARDEN_SPRINKLER = "Relief for the plants."
+WORTOX.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "Relief for the plants.",
+	ON = "Its working nicely.",
+}
 
 WORTOX.DESCRIBE.KYNO_FOODSACK = "For storing foods only."
 
@@ -839,7 +941,11 @@ WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND = "Hidden, but not from me! Hyuyu!"
 WORTOX.DESCRIBE.KYNO_TRUFFLES = "Oho! A treat from below!"
 WORTOX.DESCRIBE.KYNO_TRUFFLES_COOKED = "Sizzle and pop, now they're top!"
 
-WORTOX.DESCRIBE.KYNO_ITEMSHOWCASER = "A feast for the eyes, hyuyu!"
+WORTOX.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "Nothing in there yet.",
+	FULL = "A feast for the eyes, hyuyu!",
+}
 
 WORTOX.DESCRIBE.KYNO_SPORECAP = "Oh, what a blighted delight!"
 WORTOX.DESCRIBE.KYNO_SPORECAP_COOKED = "Toasted and tainted! What a combo!"
@@ -859,7 +965,15 @@ WORTOX.DESCRIBE.TRUFFLEOIL = "A slick trick of nature! How divine... or maybe sw
 
 WORTOX.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "But it's more fun to wing it!"
 WORTOX.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "A puddle becoming a palace for fishy folk! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_FISHFARMPLOT = "Tiny fishi, rise and play!"
+
+WORTOX.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "Tiny fish, rise and play!",
+	FUEL_HIGH = "They're are full belly.",
+	FUEL_MED = "It seems they are getting hungry.",
+	FUEL_LOW = "Food keeps getting low.",
+	EMPTY = "No more fish snacks, need to replenish it.",
+}
 
 WORTOX.DESCRIBE.KYNO_ANTCHOVY = "It wriggles and wiggles in two worlds! Hyuyu!"
 WORTOX.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "A merry swarm of mixy fishy bugs!"
@@ -916,7 +1030,12 @@ WORTOX.DESCRIBE.MONKEYISLANDMEAL = "A feast to free the beast. Hyuyu!"
 WORTOX.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Not the most intimidate sea monster."
 WORTOX.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Its a bald rock!"
 WORTOX.DESCRIBE.KYNO_BRAINROCK_CORAL = "You can't think out of your pocket."
-WORTOX.DESCRIBE.KYNO_BRAINROCK_ROCK = "Brain of the ocean."
+
+WORTOX.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "Brain of the ocean.",
+	PICKED = "No more thoughts, oh my!",
+}
 
 WORTOX.DESCRIBE.BRAINMETTERSOUP = "Maybe it will help me think of better pranks?"
 
@@ -933,9 +1052,28 @@ WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "A sparkle of fun for everyone!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "What kind of celebration will you bring?"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "A mortal treat, how sweet! Hyuyu!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Pop! I do love a good surprise!"
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Popcorn is a delightful treat, yes."
+
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Popcorn is a delightful treat, yes.",
+	FUEL_HIGH = "Plenty of fuel still.",
+	FUEL_MED = "It can still produce some.",
+	FUEL_LOW = "Fuel running low.",
+	EMPTY = "No fuel remaining.",
+}
+
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Pop! A snack of celebratory crack!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Oh ho! A hat for festive mischief!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Oh ho! A hat made for Sammy, unique and hammy!"
 
 WORTOX.DESCRIBE.KYNO_FISHREGISTRYHAT = "A thinking cap for fishy facts! Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Nibble and munch, a feeding hunch!",
+	FUEL_HIGH = "Full to the brim!",
+	FUEL_MED = "Not too bad, not too grim!",
+	FUEL_LOW = "Low, oh low!",
+	EMPTY = "No food left!",
+	BURNT = "Ash and smoke!",
+}

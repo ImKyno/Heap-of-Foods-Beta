@@ -113,9 +113,11 @@ local function ChopDownTree(inst, chopper)
 
 	inst.persists = false
 	inst:DoTaskInTime(14 * FRAMES, ChopTreeShake)
+	
+	local stump = SpawnPrefab("kyno_meadowisland_tree_stump").Transform:SetPosition(inst.Transform:GetWorldPosition())
+	stump.AnimState:PlayAnimation("stump_tall")
 
 	inst:ListenForEvent("animover", inst.Remove)
-	SpawnPrefab("kyno_meadowisland_tree_stump").Transform:SetPosition(inst.Transform:GetWorldPosition())
 end
 
 local function DigUp(inst, chopper)
@@ -144,8 +146,8 @@ local function OnBurnt(inst)
 		inst:RemoveComponent("spawner")
 	end
 
-    local burnt_tree = SpawnPrefab("kyno_meadowisland_tree_burnt")
-    burnt_tree.Transform:SetPosition(inst.Transform:GetWorldPosition())
+    local burnt = SpawnPrefab("kyno_meadowisland_tree_burnt").Transform:SetPosition(inst.Transform:GetWorldPosition())
+    burnt.AnimState:PlayAnimation("burnt_tall")
 	
     inst:Remove()
 end
@@ -206,6 +208,11 @@ local function OnOcuppied(inst, child)
     end
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.burnable:IsBurning() and "BURNING")
+	or "GENERIC"
+end
+
 local function OnSave(inst, data)
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
         data.burnt = true
@@ -263,8 +270,10 @@ local function fn()
     local color = 0.7
     inst.AnimState:SetMultColour(color, color, color, 1)
 
-	inst:AddComponent("inspectable")
 	inst:AddComponent("inventory")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 
 	-- Only make it a spawner if any pikos are enabled.
 	if TUNING.KYNO_PIKO_ENABLED or TUNING.KYNO_PIKO_ORANGE_ENABLED then

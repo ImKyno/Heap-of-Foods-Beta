@@ -1951,3 +1951,6 @@ STRINGS.NAMES.KYNO_HOFBIRTHDAY_SAMMYHAT = "Urodzinowy Kapelusz Sammy'ego"
 
 STRINGS.NAMES.KYNO_FISHREGISTRYHAT = "Kapelusz wędkarza"
 STRINGS.RECIPE_DESC.KYNO_FISHREGISTRYHAT = "Każdy żeglarz musi wiedzieć, co bierze na haczyk."
+
+STRINGS.NAMES.KYNO_ANIMALFEEDER = "Koryto do karmienia"
+STRINGS.RECIPE_DESC.KYNO_ANIMALFEEDER = "Zapewnia zwierzętom dobre odżywienie."

@@ -1951,3 +1951,6 @@ STRINGS.NAMES.KYNO_HOFBIRTHDAY_SAMMYHAT = "Chapéu de Aniversário do Sammy"
 
 STRINGS.NAMES.KYNO_FISHREGISTRYHAT = "Chapéu de Pescador"
 STRINGS.RECIPE_DESC.KYNO_FISHREGISTRYHAT = "Todo marujo precisa saber o que está mordendo o anzol."
+
+STRINGS.NAMES.KYNO_ANIMALFEEDER = "Cocho de Alimentação"
+STRINGS.RECIPE_DESC.KYNO_ANIMALFEEDER = "Mantém seus animais bem nutridos."

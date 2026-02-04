@@ -199,6 +199,13 @@ WOODIE.DESCRIBE.DUG_KYNO_WILDWHEAT = "Looks like kindling."
 
 WOODIE.DESCRIBE.KYNO_MEALGRINDER = "We just gotta grind and bear it."
 
+WOODIE.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Those mushrooms look mighty tasty.",
+	PICKED = "They'll be back soon enough.",
+	BURNING = "That's a real shame.",
+}
+
 WOODIE.DESCRIBE.GORGE_BREAD = "A loaf, eh?"
 WOODIE.DESCRIBE.GORGE_SWEET_CHIPS = "I really like them this way."
 WOODIE.DESCRIBE.GORGE_VEGETABLE_SOUP = "I must eat my veggies."
@@ -340,11 +347,23 @@ WOODIE.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Sheesh."
 
 WOODIE.DESCRIBE.KYNO_SEEDS_KIT = "We need to unwrap it first, Lucy."
 
-WOODIE.DESCRIBE.KYNO_LIMPETROCK = "I could make a snack out of those."
+WOODIE.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "I could make a snack out of those.",
+	PICKED = "Gotta give them time.",
+	WITHERED = "Dry as can be.",
+}
+
 WOODIE.DESCRIBE.KYNO_LIMPETS = "Some sort of water-dwelling snail."
 WOODIE.DESCRIBE.KYNO_LIMPETS_COOKED = "Dinner's on."
 
-WOODIE.DESCRIBE.KYNO_LOTUS_OCEAN = "Pretty nice, dontcha think Lucy?"
+WOODIE.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "Pretty nice, dontcha think Lucy?",
+	PICKED = "Needs a bit more time.",
+	BURNING = "That's not good!",
+}
+
 WOODIE.DESCRIBE.KYNO_LOTUS_ROOT = "Should plant this somewhere."
 WOODIE.DESCRIBE.KYNO_LOTUS_FLOWER = "That's a beaut."
 WOODIE.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Cooks up real good."
@@ -374,11 +393,27 @@ WOODIE.DESCRIBE.CATFOOD = "Here, here, kitty."
 
 WOODIE.DESCRIBE.KATFOOD = "Here, here, kitty."
 
-WOODIE.DESCRIBE.KYNO_BANANATREE = "Now I have my own banana tree."
+WOODIE.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "Now I have my own banana tree.",
+	PICKED = "Needs a bit more time, eh?",
+	CHOPPED = "Sorry about that, buddy.",
+	BURNING = "Whoa! That's not good!",
+	BURNT = "Burned right down.",
+}
+
 WOODIE.DESCRIBE.KYNO_BANANA = "It tastes tropical."
 WOODIE.DESCRIBE.KYNO_BANANA_COOKED = "I cooked it for some reason."
 
-WOODIE.DESCRIBE.KYNO_KOKONUTTREE = "Makes me pine for the lumber yards."
+WOODIE.DESCRIBE.KYNO_KOKONUTTREE =
+{
+	GENERIC = "Makes me pine for the lumber yards.",
+	PICKED = "Needs a bit more time.",
+	CHOPPED = "Sorry about that.",
+	BURNING = "Whoa! That's not good!",
+	BURNT = "Burned right down.",
+}
+
 WOODIE.DESCRIBE.KYNO_KOKONUT = "It's just a coconut."
 WOODIE.DESCRIBE.KYNO_KOKONUT_HALVED = "One for me and one for Lucy."
 WOODIE.DESCRIBE.KYNO_KOKONUT_COOKED = "Ready to eat."
@@ -453,13 +488,22 @@ WOODIE.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "That'll cook up real good."
 
 WOODIE.DESCRIBE.KYNO_SLAUGHTERTOOL = "No use gettin' Lucy dirty."
 
-WOODIE.DESCRIBE.KYNO_CHICKEN2 = "A bird's a bird."
+WOODIE.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "A bird's a bird.",
+	COOP = "I still hate them, but they're kind useful.",
+}
 
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG = "There's a chicken in there thinking chicken thoughts."
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "That's a lot of omelet, eh?"
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Well, it didn't became a chicken."
 
-WOODIE.DESCRIBE.KYNO_CHICKENHOUSE = "Nice little coop, eh? Keeps the chickens cozy."
+WOODIE.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "Nice little coop, eh? Keeps the chickens cozy.",
+	FULL = "Plenty of eggs in there, beauty!",
+	BURNT = "Ah... that's a real shame.",
+}
 
 WOODIE.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Should I fix that?"
 
@@ -543,11 +587,31 @@ WOODIE.DESCRIBE.KYNO_PLANTMEAT_DRIED = "It tastes like survival."
 
 WOODIE.DESCRIBE.KYNO_BREWBOOK = "Pretty handy. Luce, how aboot you read off the ingredients while I brew?"
 
-WOODIE.DESCRIBE.KYNO_WOODENKEG = "Now I can enjoy the making of beers."
+WOODIE.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "Now I can enjoy the making of beers.",
+	BREWING_LONG = "Gonna take a few days, eh?",
+	BREWING_SHORT = "Not much longer now.",
+	DONE = "Looks good and ready!",
+	BURNT = "Ah... That's a real shame.",
+}
 
-WOODIE.DESCRIBE.KYNO_PRESERVESJAR = "I want some jam, but what flavor?"
+WOODIE.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "I want some jam, but what flavor?",
+	BREWING_LONG = "Takes patience.", 
+	BREWING_SHORT = "Not long now.",
+	DONE = "Looks real tasty!",
+	BURNT = "That's a shame.",
+}
 
-WOODIE.DESCRIBE.KYNO_ANTCHEST = "That's neat."
+WOODIE.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "That's neat.",
+	HONEY = "Plenty of honey in there, eh?",
+	NECTAR = "They're still workin' on it.",
+	BURNING = "Aw nuts, that's gone too far.",
+}
 
 WOODIE.DESCRIBE.KYNO_NECTAR_POD = "Nectar makes honey, eh."
 
@@ -557,13 +621,47 @@ WOODIE.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Too late to plant this now."
 WOODIE.DESCRIBE.KYNO_PIKO = "They like tree almost as much as me."
 WOODIE.DESCRIBE.KYNO_PIKO_ORANGE = "They like tree almost as much as me."
 
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_TREE = "Well. Better get choppin'."
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "Well. Better get choppin'."
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "Well. Better get choppin'.",
+	CHOPPED = "Got what we needed.",
+	BURNING = "Careful!",
+	BURNT = "Burned clean through.",
+}
+
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "Well. Better get choppin'.",
+	BURNING = "Sorry, little guys.",
+}
+
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "That there's the box."
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "They're not the handiest."
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "I'd prefer a log cabin."
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "My eyes decieve me! The cursed bell is right there!"
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "Is that...? I can't believe in my eyes anymore."
+
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "They're not the handiest.",
+	BURNT = "Burned right down.",
+}
+
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "I'd prefer a log cabin.",
+	CRAFTED = "Not bad at all now.",
+	BURNT = "That's awful.",
+}
+
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "My eyes decieve me! The cursed bell is right there!",
+	OCCUPIED = "Guess I'll come back later, eh?",
+}
+
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "Is that...? I can't believe in my own eyes anymore.",
+	EMPTY = "Guess I'll check back later.",
+}
+
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "I wonder if he jumped with us in that portal when I wasn't looking."
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_POND = "Seems like a popular hangout spot for fishes."
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Plant."
@@ -726,7 +824,11 @@ WOODIE.DESCRIBE.PINACOLADA = "Ahhh, refreshing!"
 
 WOODIE.DESCRIBE.CHIMAS = "I can get used to this."
 
-WOODIE.DESCRIBE.KYNO_GARDEN_SPRINKLER = "Good for watering."
+WOODIE.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "Good for watering.",
+	ON = "Keeps things growin' nice, eh?",
+}
 
 WOODIE.DESCRIBE.KYNO_FOODSACK = "It's for holding my treasures."
 
@@ -839,7 +941,11 @@ WOODIE.DESCRIBE.KYNO_TRUFFLES_GROUND = "Heh, nothing like finding food straight 
 WOODIE.DESCRIBE.KYNO_TRUFFLES = "They smell a bit weird, but taste good."
 WOODIE.DESCRIBE.KYNO_TRUFFLES_COOKED = "Now that's some fine eating."
 
-WOODIE.DESCRIBE.KYNO_ITEMSHOWCASER = "Looks nice, eh? Almost too nice to eat."
+WOODIE.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "Nothing on it yet, eh?",
+	FULL = "Looks nice, eh? Almost too nice to eat.",
+}
 
 WOODIE.DESCRIBE.KYNO_SPORECAP = "Doesn't look like the kind you wanna eat, eh?"
 WOODIE.DESCRIBE.KYNO_SPORECAP_COOKED = "Better, but I still wouldn't trust it."
@@ -859,7 +965,15 @@ WOODIE.DESCRIBE.TRUFFLEOIL = "Smells a bit too fancy for my taste, eh?"
 
 WOODIE.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Well, better get building."
 WOODIE.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Good spot to raise some fish, eh?"
-WOODIE.DESCRIBE.KYNO_FISHFARMPLOT = "A hatchery for little fishies."
+
+WOODIE.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "A hatchery for little fishies.",
+	FUEL_HIGH = "They're eatin' real good!",
+	FUEL_MED = "Still doin' fine.",
+	FUEL_LOW = "Better toss some more food in.",
+	EMPTY = "All outta feed.",
+}
 
 WOODIE.DESCRIBE.KYNO_ANTCHOVY = "Now that's a catch, eh? Don't bite my logs though."
 WOODIE.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "That's a whole swarm, eh? Keep yer nets ready."
@@ -916,7 +1030,12 @@ WOODIE.DESCRIBE.MONKEYISLANDMEAL = "Now that's a strange combo, eh? But it works
 WOODIE.DESCRIBE.KYNO_BRAINROCK_LARVAE = "What a tiny little hoser."
 WOODIE.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Uncomfortable smooth."
 WOODIE.DESCRIBE.KYNO_BRAINROCK_CORAL = "How brainy."
-WOODIE.DESCRIBE.KYNO_BRAINROCK_ROCK = "What're you, some sort of keener?"
+
+WOODIE.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "What're you, some sort of keener?",
+	PICKED = "Guess it's takin' a break, eh?",
+}
 
 WOODIE.DESCRIBE.BRAINMETTERSOUP = "Even though I'm a grown up, I still like it."
 
@@ -933,9 +1052,28 @@ WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Sure brightens things up."
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Making me think about all the celebrations we had."
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Nothing beats anniversary cake, eh?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Ain't much of a party without balloons, eh?"
-WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Better not burn the forest, eh?"
+
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Better not burn the forest, eh?",
+	FUEL_HIGH = "Running smooth as butter.",
+	FUEL_MED = "Still kicking.",
+	FUEL_LOW = "Better toss in some fuel.",
+	EMPTY = "She's outta fuel.",
+}
+
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Perfect for celebrating, eh?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Well, it sure looks festive, eh?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "That's kinda nice."
 
 WOODIE.DESCRIBE.KYNO_FISHREGISTRYHAT = "Helps me keep track of all the different kinds of fish."
+
+WOODIE.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Keeps the animals happy, eh?",
+	FUEL_HIGH = "Full as can be!",
+	FUEL_MED = "Still got some feed in there.",
+	FUEL_LOW = "Better top it up soon.",
+	EMPTY = "All outta feed.",
+	BURNT = "Well, that's done for.",
+}
