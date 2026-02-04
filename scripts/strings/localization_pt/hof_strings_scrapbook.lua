@@ -3,8 +3,16 @@
 -- local require = _G.require
 -- local STRINGS = _G.STRINGS
 
--- Datas. (Unused)
-STRINGS.SCRAPBOOK.DATA_BREWER = "PODE PREPARAR BEBIDAS"
+-- General Data.
+STRINGS.SCRAPBOOK.DATA_BREWER = "PODE PREPARAR BEBIDA"
+STRINGS.SCRAPBOOK.DATA_OPENABLE = "PODE SER ABERTO"
+STRINGS.SCRAPBOOK.DATA_SLICEABLE = "PODE SER CORTADO"
+STRINGS.SCRAPBOOK.DATA_SLAUGHTERABLE = "PODE SER ABATIDO"
+STRINGS.SCRAPBOOK.DATA_MILKABLE = "PODE SER ORDENHADO"
+STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "PODE SER REPRODUZIDO"
+STRINGS.SCRAPBOOK.DATA_FISHFARM = "PODE REPRODUZIR PEIXES"
+
+-- Foodtypes.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "HORRÍVEL"
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDSOUL = "ALMA"
 STRINGS.SCRAPBOOK.FOODTYPE.ALCOHOLIC = "ALCÓLICO"
@@ -156,7 +164,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Chapéu de aniversário es
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Pesquisar peixes e ovas os adiciona ao Registro de Peixes."
 
 -- Creatures.
-STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Colocará ovos no Galinheiro após comer Sementes ou Trigo."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "A dieta delas consiste basicamente em Sementes, Trigo ou Rebento Folhoso.\n\nGalinhas Selvagens têm 33% de chance de botar ovos após se alimentarem. Elas têm uma pequena chance de botar um Ovo Grande.\n\nGalinhas criadas no Galinheiro podem botar ovos todos os dias após se alimentarem. Elas têm uma chance maior de colocar um Ovo Grande."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Amiguinhos peludos que adoram roubar seus itens mais valiosos!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Martins-pescadores frequentemente deixam cair Kois Tropicais de cima. Chuva de peixes, literalmente!"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emite um brilho saudável e colorido ao entardecer e à noite."

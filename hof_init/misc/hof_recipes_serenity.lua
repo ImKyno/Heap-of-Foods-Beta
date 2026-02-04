@@ -8,9 +8,9 @@ local TechTree         = require("techtree")
 local RecipeFilter     = require("recipes_filter")
 
 -- Atlases for Recipes.
-local DefaultAtlas     = "images/inventoryimages.xml"
-local DefaultAtlas1    = "images/inventoryimages1.xml"
-local ModAtlas         = "images/inventoryimages/hof_inventoryimages.xml"
+local DefaultAtlas        = "images/inventoryimages.xml"
+local DefaultAtlas1       = "images/inventoryimages1.xml"
+local ModAtlas            = "images/inventoryimages/hof_inventoryimages.xml"
 
 -- For sorting recipe.
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
@@ -48,9 +48,11 @@ end
 AddRecipe2("kyno_saltrack_installer_p", {Ingredient("kyno_salmonfish", 2, ModAtlas)}, TECH.SERENITYSHOP_ONE, 
 	{
 		nounlock 			= true,
-		no_deconstruction   = true,		
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give", 
+		description         = "kyno_saltrack_installer_p",
+		sg_state    		= "give",
 		product				= "kyno_saltrack_installer",
 		numtogive 			= 1, 
 		atlas 				= ModAtlas, 
@@ -63,7 +65,9 @@ AddRecipe2("kyno_crabtrap_installer_p", {Ingredient("quagmire_pigeon", 1)}, TECH
 	{
 		nounlock			= true,
 		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
+		hint_msg            = "NEEDSSERENITYSHOP",
+		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_crabtrap_installer_p",
 		sg_state			= "give",
 		product				= "kyno_crabtrap_installer",
 		numtogive			= 1,
@@ -77,7 +81,9 @@ AddRecipe2("kyno_sapbucket_installer_p", {Ingredient("kyno_salt", 3, ModAtlas)},
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_sapbucket_installer_p",
 		sg_state    		= "give",
 		product				= "kyno_sapbucket_installer",		
 		numtogive 			= 3, 
@@ -91,7 +97,9 @@ AddRecipe2("kyno_slaughtertool_p", {Ingredient("kyno_crabmeat", 2, ModAtlas)}, T
 	{
 		nounlock			= true,
 		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
+		hint_msg            = "NEEDSSERENITYSHOP",
+		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_slaughtertool_p",
 		sg_state			= "give",
 		product				= "kyno_slaughtertool",
 		numtogive			= 1,
@@ -105,7 +113,9 @@ AddRecipe2("kyno_kit_hanger_p", {Ingredient("bonestew", 1), Ingredient("gorge_ga
 	{
 		nounlock			= true,
 		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
+		hint_msg            = "NEEDSSERENITYSHOP",
+		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_cookware_kit_hanger_p",
 		sg_state			= "give",
 		product				= "kyno_cookware_kit_hanger",
 		numtogive			= 1,
@@ -119,7 +129,9 @@ AddRecipe2("kyno_kit_syrup_p", {Ingredient("taffy", 1), Ingredient("gorge_berry_
 	{
 		nounlock			= true,
 		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
+		hint_msg            = "NEEDSSERENITYSHOP",
+		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_cookware_kit_syrup_p",
 		sg_state			= "give",
 		product				= "kyno_cookware_kit_syrup",
 		numtogive			= 1,
@@ -133,7 +145,9 @@ AddRecipe2("kyno_kit_oven_p", {Ingredient("dragonpie", 1), Ingredient("gorge_bre
 	{
 		nounlock			= true,
 		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
+		hint_msg            = "NEEDSSERENITYSHOP",
+		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_cookware_kit_oven_p",
 		sg_state			= "give",
 		product				= "kyno_cookware_kit_oven",
 		numtogive			= 1,
@@ -147,7 +161,9 @@ AddRecipe2("kyno_kit_small_grill_p", {Ingredient("kabobs", 1), Ingredient("gorge
 	{
 		nounlock			= true,
 		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
+		hint_msg            = "NEEDSSERENITYSHOP",
+		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_cookware_kit_small_grill_p",
 		sg_state			= "give",
 		product				= "kyno_cookware_kit_small_grill",
 		numtogive			= 1,
@@ -161,7 +177,9 @@ AddRecipe2("kyno_kit_grill_p", {Ingredient("frogglebunwich", 1), Ingredient("gor
 	{
 		nounlock			= true,
 		no_deconstruction   = true,
-		actionstr			= "SERENITYSHOP",
+		hint_msg            = "NEEDSSERENITYSHOP",
+		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_cookware_kit_grill_p",
 		sg_state			= "give",
 		product				= "kyno_cookware_kit_grill",
 		numtogive			= 1,
@@ -175,7 +193,9 @@ AddRecipe2("kyno_sweetpotato_seeds_p", {Ingredient("potato_seeds", 3)}, TECH.SER
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_seeds_kit_sweetpotato_p",
 		sg_state    		= "give",
 		product				= "kyno_seeds_kit_sweetpotato",
 		atlas 				= ModAtlas, 
@@ -188,7 +208,9 @@ AddRecipe2("kyno_turnip_seeds_p", {Ingredient("garlic_seeds", 3)}, TECH.SERENITY
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_seeds_kit_turnip_p",
 		sg_state    		= "give",
 		product				= "kyno_seeds_kit_turnip",
 		atlas 				= ModAtlas, 
@@ -201,7 +223,9 @@ AddRecipe2("kyno_radish_seeds_p", {Ingredient("carrot_seeds", 3)}, TECH.SERENITY
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_seeds_kit_radish_p",
 		sg_state    		= "give",
 		product				= "kyno_seeds_kit_radish", 
 		atlas 				= ModAtlas, 
@@ -213,8 +237,10 @@ AddRecipe2("kyno_radish_seeds_p", {Ingredient("carrot_seeds", 3)}, TECH.SERENITY
 AddRecipe2("kyno_parznip_seeds_p", {Ingredient("pumpkin_seeds", 3)}, TECH.SERENITYSHOP_ONE,
 	{
 		nounlock 			= true,
-		no_deconstruction   = true,		
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_seeds_kit_parznip_p",
 		sg_state    		= "give",
 		product				= "kyno_seeds_kit_parznip",
 		atlas 				= ModAtlas, 
@@ -227,7 +253,9 @@ AddRecipe2("kyno_fennel_seeds_p", {Ingredient("durian_seeds", 3)}, TECH.SERENITY
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_seeds_kit_fennel_p",
 		sg_state    		= "give",
 		product				= "kyno_seeds_kit_fennel",
 		atlas 				= ModAtlas, 
@@ -240,7 +268,9 @@ AddRecipe2("kyno_cucumber_seeds_p", {Ingredient("watermelon_seeds", 3)}, TECH.SE
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_seeds_kit_cucumber_p",
 		sg_state    		= "give",
 		product				= "kyno_seeds_kit_cucumber",
 		atlas 				= ModAtlas, 
@@ -253,7 +283,9 @@ AddRecipe2("kyno_aloe_seeds_p", {Ingredient("asparagus_seeds", 3)}, TECH.SERENIT
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_seeds_kit_aloe_p",
 		sg_state    		= "give",
 		product				= "kyno_seeds_kit_aloe",
 		atlas 				= ModAtlas, 
@@ -266,7 +298,9 @@ AddRecipe2("kyno_saphealer_p", {Ingredient("kyno_sap_spoiled", 3, ModAtlas)}, TE
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
+		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_saphealer_p",
 		sg_state    		= "give",
 		product				= "kyno_saphealer",		
 		numtogive 			= 2, 
@@ -282,6 +316,7 @@ AddRecipe2("kyno_sugartree_petals_p", {Ingredient("kyno_sugarfly", 1, ModAtlas)}
 		no_deconstruction   = true,
 		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_sugartree_petals_p",
 		sg_state    		= "give",
 		product				= "kyno_sugartree_petals",		
 		numtogive 			= 3, 
@@ -314,6 +349,7 @@ AddRecipe2("kyno_sugartree_bud_p", {Ingredient("kyno_syrup", 3, ModAtlas)}, TECH
 		no_deconstruction   = true,
 		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "kyno_sugartree_bud_p",
 		sg_state    		= "give",
 		product				= "kyno_sugartree_bud",		
 		numtogive 			= 2, 
@@ -329,6 +365,7 @@ AddRecipe2("dug_kyno_spotbush_p", {Ingredient("kyno_spotspice_leaf", 3)}, TECH.L
 		no_deconstruction   = true,
 		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "dug_kyno_spotbush_p",
 		sg_state    		= "give",
 		product				= "dug_kyno_spotbush",		
 		numtogive 			= 2, 
@@ -344,6 +381,7 @@ AddRecipe2("dug_kyno_wildwheat_p", {Ingredient("kyno_wheat", 3)}, TECH.LOST,
 		no_deconstruction   = true,
 		hint_msg            = "NEEDSSERENITYSHOP",
 		actionstr 			= "SERENITYSHOP",
+		description         = "dug_kyno_wildwheat_p",
 		sg_state    		= "give",
 		product				= "dug_kyno_wildwheat",		
 		numtogive 			= 2, 

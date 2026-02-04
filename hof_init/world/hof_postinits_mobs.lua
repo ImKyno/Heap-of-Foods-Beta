@@ -492,7 +492,8 @@ end
 
 AddPrefabPostInit("pigman", PigmanPostInit)
 
--- Guaranteed Golden Apple for Wagstaff cutscene and chances afterwards.
+-- Guaranteed Golden Apple for Wagstaff cutscene and chances afterwards. -- Deprecated.
+--[[
 local GOLDENAPPLE_ADDED = false
 
 local function ScionPostInit(inst)
@@ -507,6 +508,7 @@ local function ScionPostInit(inst)
 end
 
 AddPrefabPostInit("alterguardian_phase4_lunarrift", ScionPostInit)
+]]--
 
 -- Frostjaw gives Fish Hatchery Foundation Kit blueprint and Special rewards.
 local function SharkBoiPostInit(inst)
@@ -733,7 +735,7 @@ local function ApplyLootTables()
 	end
 
 	if _G.LootTables and _G.LootTables.alterguardian_phase4_lunarrift then
-		table.insert(_G.LootTables.alterguardian_phase4_lunarrift, {"kyno_goldenapple", 0.10})
+		table.insert(_G.LootTables.alterguardian_phase4_lunarrift, {"kyno_goldenapple", 1.00})
 	end
 end
 

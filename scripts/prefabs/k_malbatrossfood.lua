@@ -130,6 +130,10 @@ local function fn()
 	inst.components.equippable:SetOnEquip(onequip)
 	inst.components.equippable:SetOnUnequip(onunequip)
 	inst.components.equippable.equipstack = true
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fueltype = FUELTYPE.FISHFOOD
+	inst.components.fuel.fuelvalue = TUNING.HUGE_FUEL * 2
 
 	inst:AddComponent("weapon")
 	inst.components.weapon:SetDamage(TUNING.UNARMED_DAMAGE)

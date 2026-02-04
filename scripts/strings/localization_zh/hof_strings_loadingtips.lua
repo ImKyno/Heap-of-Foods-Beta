@@ -36,7 +36,6 @@ local LOADINGTIPS   =
 	SPOTTYSHRUB     = "整个宁静群岛都能找到斑点灌木。它们可以用铲子带回家。",
 	SWEETFLOWER     = "甜花可作为甜味剂在烹饪锅中使用。",
 	LIMPETROCK      = "你只能在宁静群岛的螃蟹采石场或海滨岛的海滩上找到帽贝岩！",
-	CHICKEN         = "\"我在想这些鸡能不能给我一些蛋。可能我需要一些种子来引诱它们！\" -W",
 	SYRUPPOT        = "在糖浆锅中制作的糖浆，将在普通烹饪锅中烹饪时获得四单位，而不是一单位。",
 	COOKWARE        = "糖浆锅、烹饪锅、烤架和烤箱的烹饪速度比普通陶锅快。每种都有独特的加成效果！",
 	COOKWARE_PIT    = "要使用特殊炊具站进行烹饪，你需要先将它安装在火坑上。",
@@ -119,6 +118,11 @@ local LOADINGTIPS   =
 	BIRTHDAY_CAKE3  = "周年庆蛋糕能为周围的人提供一种舒缓的氛围。",
 	BIRTHDAY_CHEER  = "在更多料理周年庆典活动期间，玩家佩戴周年庆帽子烹饪、酿造或调味食物时，可获得周年庆贺礼。",
 	BIRTHDAY_CORN   = "投入爆米花机的每颗玉米可制作五份爆玉米花。在更多料理周年庆期间，它将制作周年庆纪念爆玉米花。",
+	CHICKEN1        = "\"I wonder if those Chickens could give me some eggs. I need some seeds to estimulate them!\" -W",
+	CHICKEN2        = "Chickens living in a Coop have a higher chance of laying Large Eggs.",
+	CHICKEN3        = "Chickens found in the wild have a small chance of laying Eggs after eating.",
+	CHICKEN4        = "Chickens living in a Coop will only produce Eggs if they eat something daily like Seeds, Wheats or Spotty Sprigs. They can also eat from the Feeding Trough.",
+	ANIMALFEEDER    = "The Feeding Trough can be used to feed some type of farm animals such as Chickens.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

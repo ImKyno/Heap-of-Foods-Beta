@@ -29,7 +29,7 @@ local function OnDrink(inst, eater)
 	end
 end
 
-local function fn(bank, build, anim, name)
+local function fn(bank, build, anim)
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
@@ -58,8 +58,6 @@ local function fn(bank, build, anim, name)
 		return inst
 	end
 	
-	inst.name = name
-	
 	inst:AddComponent("edible")
 	inst.components.edible:SetOnEatenFn(OnDrink)
 	inst.components.edible.foodtype = FOODTYPE.GOODIES -- Everyone can drink.
@@ -84,7 +82,7 @@ end
 
 -- Soda Can.
 local function soda_fn()
-	local inst = fn("kyno_pops", "kyno_pops", "sodacan", "kyno_sodacan")
+	local inst = fn("kyno_pops", "kyno_pops", "sodacan")
 
 	if not TheWorld.ismastersim then
         return inst
@@ -98,7 +96,7 @@ local function soda_fn()
 end
 
 local function coke_fn()
-	local inst = fn("kyno_pops", "kyno_pops", "cokecan", "kyno_cokecan")
+	local inst = fn("kyno_pops", "kyno_pops", "cokecan")
 
 	if not TheWorld.ismastersim then
         return inst
@@ -112,7 +110,7 @@ local function coke_fn()
 end
 
 local function energy_fn()
-	local inst = fn("kyno_pops", "kyno_pops", "energycan", "kyno_energycan")
+	local inst = fn("kyno_pops", "kyno_pops", "energycan")
 
 	if not TheWorld.ismastersim then
         return inst

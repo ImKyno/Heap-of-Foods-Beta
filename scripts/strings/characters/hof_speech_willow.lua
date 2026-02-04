@@ -456,6 +456,7 @@ WILLOW.DESCRIBE.KYNO_SLAUGHTERTOOL = "I'd rather burn things."
 WILLOW.DESCRIBE.KYNO_CHICKEN2 = "It's an ugly chicken."
 
 WILLOW.DESCRIBE.KYNO_CHICKEN_EGG = "It smells like a chicken's butt."
+WILLOW.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "I bet it would make a huge pop if I cooked it over a fire!"
 WILLOW.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Yuck. The yellow part is all runny."
 
 WILLOW.DESCRIBE.KYNO_CHICKENHOUSE = "At least it's not full of fire. Yet."

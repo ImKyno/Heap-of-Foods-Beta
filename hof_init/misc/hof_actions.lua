@@ -73,19 +73,38 @@ end)
 
 -- Action for the Slaughter Tools.
 AddAction("FLAY", STRINGS.ACTIONS.FLAY, function(act)
-	if act.target ~= nil and act.target.components.health ~= nil and not act.target.components.health:IsDead() 
-	and act.target.components.lootdropper ~= nil and act.invobject ~= nil and act.invobject.components.slaughteritem ~= nil then
-		act.invobject.components.slaughteritem:Slaughter(act.doer, act.target)
-        
-        -- This belongs to Accomplishments Mod.
-		local data = { doer = act.doer, target = act.target, tool = act.invobject }
-		act.doer:PushEvent("hof_FlayOther", data)
-		act.target:PushEvent("hof_Flayed", data)
+	local target = act.target
+	local tool = act.invobject
+	local doer = act.doer
 
-        return true
-    end
+	if target == nil or tool == nil or doer == nil then
+		return
+	end
+
+	if tool.components.slaughteritem == nil then
+		return
+	end
+
+	if target.components.inventoryitem ~= nil and target.components.inventoryitem:IsHeld() and target.components.lootdropper ~= nil then
+		tool.components.slaughteritem:SlaughterInsideInventory(doer, target)
+		
+		local data = { doer = doer, target = target, tool = tool }
+		doer:PushEvent("hof_FlayOther", data)
+		target:PushEvent("hof_Flayed", data)
+		
+		return true
+	end
+
+	if target.components.health ~= nil and not target.components.health:IsDead() and target.components.lootdropper ~= nil then
+		tool.components.slaughteritem:Slaughter(doer, target)
+		
+		local data = { doer = doer, target = target, tool = tool }
+		doer:PushEvent("hof_FlayOther", data)
+		target:PushEvent("hof_Flayed", data)
+		
+		return true
+	end
 end)
-
 
 ACTIONS.FLAY.distance = 2
 ACTIONS.FLAY.priority = 3

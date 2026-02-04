@@ -3,9 +3,16 @@
 -- local require = _G.require
 -- local STRINGS = _G.STRINGS
 
--- Datas. (Unused)
+-- General Data.
 STRINGS.SCRAPBOOK.DATA_BREWER = "CAN PREPARE DRINK"
-STRINGS.SCRAPBOOK.DATA_WORKABLE_SLICE = "CAN BE SLICED"
+STRINGS.SCRAPBOOK.DATA_OPENABLE = "CAN BE OPENED"
+STRINGS.SCRAPBOOK.DATA_SLICEABLE = "CAN BE SLICED"
+STRINGS.SCRAPBOOK.DATA_SLAUGHTERABLE = "CAN BE BUTCHERED" -- "SLAUGHTERED" word won't fit.
+STRINGS.SCRAPBOOK.DATA_MILKABLE = "CAN BE MILKED"
+STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "CAN BE BRED"
+STRINGS.SCRAPBOOK.DATA_FISHFARM = "CAN BREED FISHES"
+
+-- Foodtypes.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "HORRIBLE"
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDSOUL = "SOUL"
 STRINGS.SCRAPBOOK.FOODTYPE.ALCOHOLIC = "ALCOHOLIC"
@@ -157,7 +164,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Sammy's special anniversar
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Researching fishes and roes adds to the Fish Registry."
 
 -- Creatures.
-STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 33% chance of laying eggs after eating. They have a very small chance of laying an oversized egg.\n\nChickens living in a Coop can lay eggs everyday after eating. They have a higher chance of laying an oversized egg."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 33% chance of laying Eggs after eating. They have a small chance of laying an Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying an Large Egg."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Fluffy little buddies that loves to steal your most valuable items!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Kingfishers will often drop Tropical Kois from above. It's raining fish, literally!"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emits a colorful healthy glow during dusk and night."

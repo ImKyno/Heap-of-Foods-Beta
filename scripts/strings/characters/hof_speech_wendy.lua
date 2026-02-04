@@ -456,6 +456,7 @@ WENDY.DESCRIBE.KYNO_SLAUGHTERTOOL = "Is all of life not a slaughter?"
 WENDY.DESCRIBE.KYNO_CHICKEN2 = "Hideous poultry."
 
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG = "Life's inside."
+WENDY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "It's too big for a chicken!"
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "No chicken will ever come of it."
 
 WENDY.DESCRIBE.KYNO_CHICKENHOUSE = "They lay eggs, then return to their quiet shelter."

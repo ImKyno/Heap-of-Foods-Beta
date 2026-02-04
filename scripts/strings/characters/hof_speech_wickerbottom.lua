@@ -456,6 +456,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_SLAUGHTERTOOL = "Gruesome."
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN2 = "A domesticated Gallus Gallus"
 
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG = "Maybe it is fertilized."
+WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "An unusually large specimen of Gallus gallus."
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "If only I had some toast."
 
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKENHOUSE = "A simple enclosure suitable for domesticated fowl."

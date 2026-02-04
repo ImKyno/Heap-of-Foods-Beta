@@ -456,6 +456,7 @@ WAXWELL.DESCRIBE.KYNO_SLAUGHTERTOOL = "Não me importo de sujar as mãos com iss
 WAXWELL.DESCRIBE.KYNO_CHICKEN2 = "Ave repugnante."
 
 WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG = "Gosto de pensar nele como uma prisão para pintinhos."
+WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Eu me pergunto se o pássaro lá dentro é tão avantajado quanto sua casca."
 WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Ovo frito."
 
 WAXWELL.DESCRIBE.KYNO_CHICKENHOUSE = "Um abrigo humilde, mas bastante produtivo."

@@ -689,7 +689,7 @@ local function harvestfn(inst, doer)
 end
 
 local function GetStatus(inst)
-    return (inst:HasTag("burnt") and "BURNT")
+	return (inst:HasTag("burnt") and "BURNT")
 	or (inst.components.cookwarestewer:IsDone() and "DONE")
 	or (not inst.components.cookwarestewer:IsCooking() and "EMPTY")
 	or (inst.components.cookwarestewer:GetTimeToCook() > 15 and "COOKING_LONG")
@@ -880,6 +880,7 @@ local function syruppotfn()
 	inst.components.lootdropper:SetLoot({"kyno_cookware_syrup_pot"})
 
     inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "COOKPOT"
 	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("workable")
@@ -988,6 +989,7 @@ local function potfn(small)
 	end
 
     inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "COOKPOT"
 	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("workable")
@@ -1125,6 +1127,7 @@ local function elderpotfn()
 	-- inst.components.lootdropper:SetLoot({"kyno_cookware_syrup_pot"})
 
     inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "COOKPOT"
 	inst.components.inspectable.getstatus = GetStatus
 
 	-- inst:AddComponent("workable")

@@ -82,7 +82,7 @@ WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Pretty fishes are in swamp!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... wrong..."
 
-WURT.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Glurgh... pigfolk always bad...!"
+WURT.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Glurgh... pigfolk always bad..!"
 
 WURT.ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL = "Not yet? Okay..."
 
@@ -458,6 +458,7 @@ WURT.DESCRIBE.KYNO_SLAUGHTERTOOL = "Huh? What this for?"
 WURT.DESCRIBE.KYNO_CHICKEN2 = "A chicken!"
 
 WURT.DESCRIBE.KYNO_CHICKEN_EGG = "Baby chicken inside?"
+WURT.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Ooh! Big egg is heavy!"
 WURT.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Don't want it!"
 
 WURT.DESCRIBE.KYNO_CHICKENHOUSE = "Chicken home! Maybe eggs inside, florp."

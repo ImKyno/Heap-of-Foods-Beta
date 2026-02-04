@@ -456,6 +456,7 @@ WEBBER.DESCRIBE.KYNO_SLAUGHTERTOOL = "Eu não quero usar isso."
 WEBBER.DESCRIBE.KYNO_CHICKEN2 = "Haha! Amamos galinhas!"
 
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG = "Um ovo com casca dura."
+WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Será que tem um passarinho gigante lá dentro?"
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Frito como a mamãe fazia."
 
 WEBBER.DESCRIBE.KYNO_CHICKENHOUSE = "Heh, é como uma casa só para galinhas"

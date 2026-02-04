@@ -281,7 +281,8 @@ local states =
 				inst.SoundEmitter:PlaySound("summerevent/cannon/fire3")
 				
 				if inst.components.playerprox ~= nil and inst.components.playerprox:IsPlayerClose() then
-					local egg = SpawnPrefab("kyno_chicken_egg")
+					local egg_to_spawn = math.random() < TUNING.KYNO_CHICKEN_GIANT_EGG_CHANCE and "kyno_chicken_egg_large" or "kyno_chicken_egg"
+					local egg = SpawnPrefab(egg_to_spawn)
 					egg.Transform:SetPosition(inst.Transform:GetWorldPosition())
 				end
 			end),

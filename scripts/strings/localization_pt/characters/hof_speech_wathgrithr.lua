@@ -456,6 +456,7 @@ WATHGRITHR.DESCRIBE.KYNO_SLAUGHTERTOOL = "É uma arma de abate bestial!"
 WATHGRITHR.DESCRIBE.KYNO_CHICKEN2 = "Carne ambulante."
 
 WATHGRITHR.DESCRIBE.KYNO_CHICKEN_EGG = "Ovinho."
+WATHGRITHR.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Um banquete digno de um verdadeiro guerreiro do Norte!"
 WATHGRITHR.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Ovo quente."
 
 WATHGRITHR.DESCRIBE.KYNO_CHICKENHOUSE = "Uma fortaleza para criaturas que põem ovos!"

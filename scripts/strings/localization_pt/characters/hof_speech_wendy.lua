@@ -456,6 +456,7 @@ WENDY.DESCRIBE.KYNO_SLAUGHTERTOOL = "Não é toda a vida um abate?"
 WENDY.DESCRIBE.KYNO_CHICKEN2 = "Aves horríveis."
 
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG = "A vida está dentro."
+WENDY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Que ovo grande!"
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Nenhuma galinha nascerá disso."
 
 WENDY.DESCRIBE.KYNO_CHICKENHOUSE = "Elas põem ovos e depois retornam ao seu abrigo tranquilo."

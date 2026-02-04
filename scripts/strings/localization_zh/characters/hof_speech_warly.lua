@@ -456,6 +456,7 @@ WARLY.DESCRIBE.KYNO_SLAUGHTERTOOL = "最好的屠宰工具。"
 WARLY.DESCRIBE.KYNO_CHICKEN2 = "我美味可口的朋友！"
 
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG = "大自然使食物变得完美。"
+WARLY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "The culinary possibilities are truly... enormous!"
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "可以使用几种不同的草药......"
 
 WARLY.DESCRIBE.KYNO_CHICKENHOUSE = "啊！新鲜食材的可靠来源。"

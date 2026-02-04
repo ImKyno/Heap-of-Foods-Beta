@@ -455,7 +455,8 @@ WOLFGANG.DESCRIBE.KYNO_SLAUGHTERTOOL = "Wolfgang use to kill things."
 
 WOLFGANG.DESCRIBE.KYNO_CHICKEN2 = "Little cluck bird."
 
-WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG = "Poor chicken."
+WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG = "Is little chicken egg."
+WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Is egg for giant chicken, or egg for mighty Wolfgang?"
 WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Yum!"
 
 WOLFGANG.DESCRIBE.KYNO_CHICKENHOUSE = "Little house for tiny chickens!"

@@ -36,7 +36,6 @@ local LOADINGTIPS   =
 	SPOTTYSHRUB     = "Spotty Shrubs can be found all across the Serenity Archipelago. And they can be brought home using a Shovel.",
 	SWEETFLOWER     = "The Sweet Flower can be used in the Crock Pot as a Sweetener option.",
 	LIMPETROCK      = "The only place that you will find Limpet Rocks, is the Crab Quarry of Serenity Archipelago or the beach of Seaside Island!",
-	CHICKEN         = "\"I wonder if those Chickens could give me some eggs. I need some seeds to estimulate them!\" -W",
 	SYRUPPOT        = "Syrup made in the Syrup Pot will give Four units instead of One unit, when that's cooked on a normal Crock Pot.",
 	COOKWARE        = "Syrup Pots, Cookpots, Grills and Ovens cooks the food faster than a normal Crock Pot. And each one of them comes with exclusive bonuses!",
 	COOKWARE_PIT    = "To cook using the special Cookware stations, you need to install them above a Fire Pit first.",
@@ -118,6 +117,11 @@ local LOADINGTIPS   =
 	BIRTHDAY_CAKE3  = "The Anniversary Cake provides a soothing aura for those around it.",
 	BIRTHDAY_CHEER  = "During the Heap of Foods Anniversary Event the Anniversary Cheer can be obtained by Cooking and Brewing foods while wearing an Anniversary Hat.",
 	BIRTHDAY_CORN   = "The Popcorn Machine can produce five Popcorns per Corn. And during the Heap of Foods Anniversary it will produce Anniversary Popcorn.",
+	CHICKEN1        = "\"I wonder if those Chickens could give me some eggs. I need some seeds to estimulate them!\" -W",
+	CHICKEN2        = "Chickens living in a Coop have a higher chance of laying Large Eggs.",
+	CHICKEN3        = "Chickens found in the wild have a small chance of laying Eggs after eating.",
+	CHICKEN4        = "Chickens living in a Coop will only produce Eggs if they eat something daily like Seeds, Wheats or Spotty Sprigs. They can also eat from the Feeding Trough.",
+	ANIMALFEEDER    = "The Feeding Trough can be used to feed some type of farm animals such as Chickens.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

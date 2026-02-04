@@ -456,6 +456,7 @@ WORTOX.DESCRIBE.KYNO_SLAUGHTERTOOL = "I don't like this sort of prank."
 WORTOX.DESCRIBE.KYNO_CHICKEN2 = "A tiny bird."
 
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG = "An egg from a chicken, or so I've heard."
+WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "A big shell for a tiny soul!"
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Probably a mortal thing."
 
 WORTOX.DESCRIBE.KYNO_CHICKENHOUSE = "A never ending supply of eggs!"

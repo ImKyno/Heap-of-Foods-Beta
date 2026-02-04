@@ -456,6 +456,7 @@ WANDA.DESCRIBE.KYNO_SLAUGHTERTOOL = "Espero não ter tempo livre para usar isso.
 WANDA.DESCRIBE.KYNO_CHICKEN2 = "Awww. Uma galinha pequena!"
 
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG = "O quê, você ovo?"
+WANDA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Eu não tenho tempo para esperar algo desse tamanho chocar."
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Sempre que faço ovos, ficam crus ou queimados."
 
 WANDA.DESCRIBE.KYNO_CHICKENHOUSE = "Uma solução oportuna para um fornecimento constante de ovos."

@@ -456,6 +456,7 @@ WINONA.DESCRIBE.KYNO_SLAUGHTERTOOL = "Not my kinda tool."
 WINONA.DESCRIBE.KYNO_CHICKEN2 = "Love the look, little chicken."
 
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG = "Breakfast."
+WINONA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Now that's a lot of heavy lifting for one hen."
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "I always get bits of shell in there by accident."
 
 WINONA.DESCRIBE.KYNO_CHICKENHOUSE = "Built sturdy enough to keep chickens in line."

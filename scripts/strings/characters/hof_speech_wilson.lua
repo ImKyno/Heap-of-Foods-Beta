@@ -456,6 +456,7 @@ WILSON.DESCRIBE.KYNO_SLAUGHTERTOOL = "Laboratory tools for surgical butchery."
 WILSON.DESCRIBE.KYNO_CHICKEN2 = "It's a little chicken."
 
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG = "A small, chicken egg."
+WILSON.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "That is one impressively large breakfast."
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Sunny side yum!"
 
 WILSON.DESCRIBE.KYNO_CHICKENHOUSE = "A proper home for chickens."

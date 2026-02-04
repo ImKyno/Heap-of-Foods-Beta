@@ -15,6 +15,7 @@ local assets =
 	Asset("ANIM", "anim/foliage.zip"),
 	
 	Asset("ANIM", "anim/kyno_chicken_eggs.zip"),
+	Asset("ANIM", "anim/kyno_chicken_eggs_large.zip"),
 	Asset("ANIM", "anim/kyno_cookingoil.zip"),
 	Asset("ANIM", "anim/kyno_sugar.zip"),
 	Asset("ANIM", "anim/kyno_crabkingmeat.zip"),
@@ -182,6 +183,10 @@ local function wheat_cookedfn()
 	inst.components.edible.hungervalue = TUNING.KYNO_WHEAT_COOKED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_WHEAT_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.SEEDS
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
+	inst.components.fuel.fuelvalue = TUNING.MED_FUEL
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
@@ -1328,6 +1333,62 @@ local function chicken_eggfn()
 	return inst
 end
 
+local function chicken_egg_giantfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+
+	inst.AnimState:SetBank("kyno_chicken_eggs_large")
+	inst.AnimState:SetBuild("kyno_chicken_eggs_large")
+	inst.AnimState:PlayAnimation("idle", true)
+	inst.AnimState:OverrideSymbol("egg1", "kyno_chicken_eggs_large", "egg"..math.random(1, 5))
+	
+	inst:AddTag("meat")
+	inst:AddTag("cookable")
+	inst:AddTag("saltbox_valid")
+	inst:AddTag("catfood")
+	inst:AddTag("chicken_egg")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("inspectable")
+	inst:AddComponent("bait")
+	
+	inst:AddComponent("tradable")
+	inst.components.tradable.goldvalue = 5
+
+	inst:AddComponent("edible")
+	inst.components.edible.healthvalue = TUNING.KYNO_CHICKEN_EGG_GIANT_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_CHICKEN_EGG_GIANT_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_CHICKEN_EGG_GIANT_SANITY
+	inst.components.edible.foodtype = FOODTYPE.MEAT
+	inst.components.edible.ismeat = true
+
+	inst:AddComponent("perishable")
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
+	inst.components.perishable:StartPerishing()
+	inst.components.perishable.onperishreplacement = "rottenegg"
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_chicken_egg_large"
+
+	inst:AddComponent("cookable")
+	inst.components.cookable.product = "kyno_chicken_egg_cooked"
+	
+	MakeHauntableLaunchAndPerish(inst)
+
+	return inst
+end
+
 local function chicken_egg_cookedfn()
 	local inst = CreateEntity()
 
@@ -1404,4 +1465,5 @@ Prefab("kyno_oil", oilfn, assets, prefabs),
 Prefab("kyno_sugar", sugarfn, assets, prefabs),
 Prefab("kyno_tealeaf", leaffn, assets, prefabs),
 Prefab("kyno_chicken_egg", chicken_eggfn, assets, prefabs),
+Prefab("kyno_chicken_egg_large", chicken_egg_giantfn, assets, prefabs),
 Prefab("kyno_chicken_egg_cooked", chicken_egg_cookedfn, assets, prefabs)

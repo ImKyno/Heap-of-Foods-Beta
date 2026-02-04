@@ -3,8 +3,16 @@
 -- local require 		= _G.require
 -- local STRINGS		= _G.STRINGS
 
--- Datas. (Unused)
+-- General Data.
 STRINGS.SCRAPBOOK.DATA_BREWER = "可以喝酒"
+STRINGS.SCRAPBOOK.DATA_OPENABLE = "CAN BE OPENED"
+STRINGS.SCRAPBOOK.DATA_SLICEABLE = "CAN BE SLICED"
+STRINGS.SCRAPBOOK.DATA_SLAUGHTERABLE = "CAN BE SLAUGHTERED"
+STRINGS.SCRAPBOOK.DATA_MILKABLE = "CAN BE MILKED"
+STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "CAN BE BRED"
+STRINGS.SCRAPBOOK.DATA_FISHFARM = "CAN BREED FISHES"
+
+-- Foodtypes.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "可怕"
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDSOUL = "灵魂"
 STRINGS.SCRAPBOOK.FOODTYPE.ALCOHOLIC = "酒精"
@@ -156,7 +164,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "萨米特别的周年庆�
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "研究鱼类和鱼卵会记录到鱼类图鉴中。"
 
 -- Creatures.
-STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Can lay eggs at the Chicken Coop after eating Wheat or Seeds."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 33% chance of laying Eggs after eating. They have a very small chance of laying an Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying an Large Egg."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "毛茸茸的小家伙，喜欢偷你最值钱的东西！"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "翠鸟经常会从上空投下热带锦鲤。真是一场鱼雨！"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "在黄昏和夜晚会发出色彩鲜艳的健康光芒。"

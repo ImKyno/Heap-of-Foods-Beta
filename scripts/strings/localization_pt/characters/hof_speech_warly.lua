@@ -456,6 +456,7 @@ WARLY.DESCRIBE.KYNO_SLAUGHTERTOOL = "A melhor ferramenta para açougue."
 WARLY.DESCRIBE.KYNO_CHICKEN2 = "Meu delicioso, delicioso amigo!"
 
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG = "A natureza aperfeiçoa a comida."
+WARLY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "As possibilidades culinárias são verdadeiramente... enormes!"
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Poderia usar algumas ervas diferentes..."
 
 WARLY.DESCRIBE.KYNO_CHICKENHOUSE = "Ah! Uma fonte confiável de ingredientes frescos."

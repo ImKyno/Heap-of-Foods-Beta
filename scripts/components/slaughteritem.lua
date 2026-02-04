@@ -7,8 +7,10 @@ function SlaughterItem:Slaughter(doer, target)
 		return
 	end
 
-	target.components.health.invincible = false
-	target.components.health:Kill()
+	if target.components.health ~= nil then
+		target.components.health.invincible = false
+		target.components.health:Kill()
+	end
 	
 	if target.components.slaughterable ~= nil then
 		target.components.slaughterable:DropExtraLoot(doer)
@@ -38,6 +40,62 @@ function SlaughterItem:Slaughter(doer, target)
 	target:PushEvent("slaughtered", { doer = doer, target = target })
 
     self:MakeNearbyAnimalsAware(doer, target)
+end
+
+function SlaughterItem:SlaughterInsideInventory(doer, target)
+	if not target:HasTag("slaughterable") then
+		return
+	end
+
+	local owner = target.components.inventoryitem.owner
+	
+	if owner ~= nil and owner.components.inventory ~= nil then
+		owner.components.inventory:RemoveItem(target, true)
+	end
+
+	if target.components.lootdropper ~= nil then
+		local loot = target.components.lootdropper:GenerateLoot()
+
+		for _, prefab in ipairs(loot) do
+			local item = SpawnPrefab(prefab)
+			
+			if item ~= nil then
+				doer.components.inventory:GiveItem(item)
+			end
+		end
+	end
+
+	if target.components.slaughterable ~= nil then
+		target.components.slaughterable:DropExtraLoot(doer, function(item)
+			doer.components.inventory:GiveItem(item)
+		end)
+	end
+
+	if self.inst.components.finiteuses ~= nil then
+		self.inst.components.finiteuses:Use(1)
+	end
+
+	doer:AddTag("recent_butcher")
+
+	if doer.butcher_task ~= nil then
+		doer.butcher_task:Cancel()
+	end
+
+	doer.butcher_task = doer:DoTaskInTime(TUNING.KYNO_SLAUGHTERTOOLS_COOLDOWN, function()
+		if doer:IsValid() then
+			doer:RemoveTag("recent_butcher")
+			doer.butcher_task = nil
+		end
+	end)
+
+	if doer.components.talker ~= nil then
+		doer.components.talker:Say(GetString(doer, "ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED"))
+	end
+
+	target:PushEvent("slaughtered", { doer = doer, target = target })
+	-- target:Remove()
+	
+	self:MakeNearbyAnimalsAware(doer, target)
 end
 
 function SlaughterItem:MakeNearbyAnimalsAware(doer, target)

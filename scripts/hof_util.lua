@@ -304,3 +304,17 @@ function ForceCombatGiveUp(player)
 		end
 	end
 end
+
+function SpawnLootForPicker(prefab, amount, picker, pos)
+	for i = 1, amount do
+		local loot = SpawnPrefab(prefab)
+		
+		if loot ~= nil then
+			if picker ~= nil and picker.components.inventory ~= nil then
+				picker.components.inventory:GiveItem(loot, nil, pos)
+			else
+				LaunchAt(loot, inst, nil, 1, 1)
+			end
+		end
+	end
+end

@@ -456,6 +456,7 @@ WOODIE.DESCRIBE.KYNO_SLAUGHTERTOOL = "No use gettin' Lucy dirty."
 WOODIE.DESCRIBE.KYNO_CHICKEN2 = "A bird's a bird."
 
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG = "There's a chicken in there thinking chicken thoughts."
+WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "That's a lot of omelet, eh?"
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Well, it didn't became a chicken."
 
 WOODIE.DESCRIBE.KYNO_CHICKENHOUSE = "Nice little coop, eh? Keeps the chickens cozy."

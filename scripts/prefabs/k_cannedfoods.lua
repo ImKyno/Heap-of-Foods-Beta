@@ -85,7 +85,7 @@ local function OnOpenAntchovy(inst, pos, doer)
 	end
 end
 
-local function closed_fn(bank, build, anim, closed_name)
+local function closed_fn(bank, build, anim)
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
@@ -111,8 +111,6 @@ local function closed_fn(bank, build, anim, closed_name)
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
-	inst.name = closed_name
         
     inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_CANNEDFOOD"
@@ -134,7 +132,7 @@ local function closed_fn(bank, build, anim, closed_name)
     return inst
 end
 
-local function opened_fn(bank, build, anim, opened_name)
+local function opened_fn(bank, build, anim)
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
@@ -187,7 +185,7 @@ end
 
 -- Canned Toma Roots.
 local function closed_tomato()
-	local inst = closed_fn("kyno_cannedfoods", "kyno_cannedfoods", "tomato_closed", "kyno_tomatocan")
+	local inst = closed_fn("kyno_cannedfoods", "kyno_cannedfoods", "tomato_closed")
 	
 	if not TheWorld.ismastersim then
         return inst
@@ -197,7 +195,7 @@ local function closed_tomato()
 end
 
 local function opened_tomato()
-	local inst = opened_fn("kyno_cannedfoods", "kyno_cannedfoods", "tomato_opened", "kyno_tomatocan_open")
+	local inst = opened_fn("kyno_cannedfoods", "kyno_cannedfoods", "tomato_opened")
 
 	if not TheWorld.ismastersim then
         return inst
@@ -213,7 +211,7 @@ end
 
 -- Canned Beans.
 local function closed_bean()
-	local inst = closed_fn("kyno_cannedfoods", "kyno_cannedfoods", "bean_closed", "kyno_beancan")
+	local inst = closed_fn("kyno_cannedfoods", "kyno_cannedfoods", "bean_closed")
 		
 	if not TheWorld.ismastersim then
         return inst
@@ -223,7 +221,7 @@ local function closed_bean()
 end
 
 local function opened_bean()
-	local inst = opened_fn("kyno_cannedfoods", "kyno_cannedfoods", "bean_opened", "kyno_beancan_open")
+	local inst = opened_fn("kyno_cannedfoods", "kyno_cannedfoods", "bean_opened")
 	
 	if not TheWorld.ismastersim then
         return inst
@@ -239,7 +237,7 @@ end
 
 -- Canned Beef.
 local function closed_meat()
-	local inst = closed_fn("kyno_cannedfoods", "kyno_cannedfoods", "meat_closed", "kyno_meatcan")
+	local inst = closed_fn("kyno_cannedfoods", "kyno_cannedfoods", "meat_closed")
 	
 	if not TheWorld.ismastersim then
         return inst
@@ -249,7 +247,7 @@ local function closed_meat()
 end
 
 local function opened_meat()
-	local inst = opened_fn("kyno_cannedfoods", "kyno_cannedfoods", "meat_opened", "kyno_meatcan_open")
+	local inst = opened_fn("kyno_cannedfoods", "kyno_cannedfoods", "meat_opened")
 	
 	inst:AddTag("cattoy")
 
@@ -270,7 +268,7 @@ end
 
 -- Canned Ant-Chovy.
 local function closed_antchovy()
-	local inst = closed_fn("kyno_cannedfoods", "kyno_cannedfoods", "antchovy_closed", "kyno_antchovycan")
+	local inst = closed_fn("kyno_cannedfoods", "kyno_cannedfoods", "antchovy_closed")
 	
 	if not TheWorld.ismastersim then
         return inst

@@ -17,6 +17,7 @@ local prefabs =
 {
 	"kyno_chicken_coop",
 	"kyno_chicken_egg",
+	"kyno_chicken_egg_large",
 	"collapse_small",
 }
 
@@ -160,6 +161,15 @@ end
 
 local function OnHarvest(inst, picker, produce)
 	if not inst:HasTag("burnt") then
+		local pos = inst:GetPosition()
+		local data = inst._egg_result or { small = 0, giant = 0 }
+
+		-- Helper function from hof_util.lua
+		SpawnLootForPicker("kyno_chicken_egg", data.small, picker, pos)
+		SpawnLootForPicker("kyno_chicken_egg_large", data.giant, picker, pos)
+
+		inst._egg_result = { small = 0, giant = 0 }
+		
 		if inst.components.harvestable ~= nil then
 			inst.components.harvestable:SetGrowTime(nil)
 			inst.components.harvestable.pausetime = nil
@@ -206,6 +216,14 @@ local function OnChildGoingHome(inst, data)
 
 	if inst.components.harvestable ~= nil and chicken._has_eaten_today then
 		inst.components.harvestable:Grow() -- Chickens needs to eat something first in order to produce eggs.
+		
+		inst._egg_result = inst._egg_result or { small = 0, giant = 0 }
+
+		if math.random() < TUNING.KYNO_CHICKENHOUSE_GIANT_EGG_CHANCE then
+			inst._egg_result.giant = inst._egg_result.giant + 1
+		else
+			inst._egg_result.small = inst._egg_result.small + 1
+		end
 		
 		inst.AnimState:PlayAnimation("pick")
 		inst.SoundEmitter:PlaySound("summerevent/cannon/fire3")
@@ -266,12 +284,20 @@ local function OnSave(inst, data)
 	if inst._chicken_data then
 		data.chicken_data = inst._chicken_data
 	end
+	
+	if inst._egg_result then
+		data.egg_result = inst._egg_result
+	end
 end
 
 local function OnLoad(inst, data)
 	if data ~= nil then
 		if data.chicken_data then
 			inst._chicken_data = data.chicken_data
+		end
+		
+		if data.egg_result then
+			inst._egg_result = data.egg_result
 		end
 	
 		if data.burnt then
@@ -316,7 +342,12 @@ local function fn()
 		return inst
 	end
 	
-	inst._chicken_data = nil
+	inst._chicken_data = nil	
+	inst._egg_result =
+	{
+		small = 0,
+		giant = 0,
+	}
 	
 	inst:AddComponent("inspectable")
 	inst:AddComponent("lootdropper")
@@ -328,7 +359,7 @@ local function fn()
 	inst.components.workable:SetWorkLeft(4)
 
 	inst:AddComponent("harvestable")
-	inst.components.harvestable:SetUp("kyno_chicken_egg", 3, nil, OnHarvest, OnRefreshEggs)
+	inst.components.harvestable:SetUp(nil, 3, nil, OnHarvest, OnRefreshEggs)
 
 	inst:AddComponent("childspawner")
 	inst.components.childspawner.childname = "kyno_chicken_coop"

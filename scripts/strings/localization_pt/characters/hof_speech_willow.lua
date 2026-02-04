@@ -456,6 +456,7 @@ WILLOW.DESCRIBE.KYNO_SLAUGHTERTOOL = "Prefiro queimar coisas."
 WILLOW.DESCRIBE.KYNO_CHICKEN2 = "É uma galinha feia."
 
 WILLOW.DESCRIBE.KYNO_CHICKEN_EGG = "Cheira como o traseiro de uma galinha."
+WILLOW.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Aposto que faria um estalo enorme se eu o cozinhasse no fogo!"
 WILLOW.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Eca. A gema está toda líquida."
 
 WILLOW.DESCRIBE.KYNO_CHICKENHOUSE = "Pelo menos não está em chamas. Ainda."

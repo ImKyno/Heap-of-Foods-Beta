@@ -29,18 +29,93 @@ local ScrapbookScreen  = require("screens/redux/scrapbookscreen")
 	TUNING.HUGE_FUEL      = 270
 ]]--
 
--- Vanilla: red_cap, green_cap, blue_cap, moon_cap, plantmeat, monsterlasagna, lordfruitfly
--- potatosack, seeds, chum, barnacle, kelp, sharkboi, ghost, lobsterdinner
+-- Tweaks for vanilla content.
 table.insert(ScrapbookData.lordfruitfly.deps, "blueprint")
 table.insert(ScrapbookData.sharkboi.deps, "blueprint")
 
--- General Stuff for vanilla content.
 ScrapbookData.chum.fueltype = "FISHFOOD"
 ScrapbookData.chum.fuelvalue = 270
-ScrapbookData.ghost.subcat = "ghost"
+
 ScrapbookData.lobsterdinner.specialinfo = "FOODEFFECTS_EXQUISITE"
+
 ScrapbookData.fishmeat_small_dried.specialinfo = "DRYAGAIN"
 ScrapbookData.fishmeat_dried.specialinfo = "DRYAGAIN"
+ScrapbookData.fishmeat.sliceable = true
+ScrapbookData.fishmeat_dried.sliceable = true
+ScrapbookData.meat.sliceable = true
+ScrapbookData.meat_dried.sliceable = true
+ScrapbookData.drumstick.sliceable = true
+
+ScrapbookData.ghost.subcat = "ghost"
+ScrapbookData.beefalo.milkable = true
+ScrapbookData.beefalo.slaughterable = true
+ScrapbookData.koalefant_summer.milkable = true
+ScrapbookData.koalefant_summer.slaughterable = true
+ScrapbookData.koalefant_winter.milkable = true
+ScrapbookData.koalefant_winter.slaughterable = true
+ScrapbookData.lightninggoat.milkable = true
+ScrapbookData.lightninggoat.slaughterable = true
+ScrapbookData.grassgator.slaughterable = true
+ScrapbookData.perd.slaughterable = true
+ScrapbookData.deer.slaughterable = true
+
+local fishfarmables =
+{
+	"oceanfish_medium_1_inv",
+	"oceanfish_medium_2_inv",
+	"oceanfish_medium_3_inv",
+	"oceanfish_medium_4_inv",
+	"oceanfish_medium_5_inv",
+	"oceanfish_medium_6_inv",
+	"oceanfish_medium_7_inv",
+	"oceanfish_medium_8_inv",
+	"oceanfish_medium_9_inv",
+	"oceanfish_small_1_inv",
+	"oceanfish_small_2_inv",
+	"oceanfish_small_3_inv",
+	"oceanfish_small_4_inv",
+	"oceanfish_small_5_inv",
+	"oceanfish_small_6_inv",
+	"oceanfish_small_7_inv",
+	"oceanfish_small_8_inv",
+	"oceanfish_small_9_inv",
+	"pondeel",
+	"pondfish",
+	"wobster_moonglass_land",
+	"wobster_sheller_land",
+}
+
+for _, v in pairs(fishfarmables) do
+	if ScrapbookData[v] ~= nil then
+		ScrapbookData[v].fishfarmable = true
+	end
+end
+
+local animalfoods =
+{
+	"asparagus_seeds",
+	"carrot_seeds",
+	"corn_seeds",
+	"durian_seeds",
+	"eggplant_seeds",
+	"garlic_seeds",
+	"onion_seeds",
+	"pepper_seeds",
+	"pomegranate_seeds",
+	"potato_seeds",
+	"pumpkin_seeds",
+	"seeds",
+	"seeds_cooked",
+	"tomato_seeds",
+	"watermelon_seeds",
+}
+
+for _, v in pairs(animalfoods) do
+	if ScrapbookData[v] ~= nil then
+		ScrapbookData[v].fueltype = "ANIMALFOOD"
+		ScrapbookData[v].fuelvalue = 15
+	end
+end
 
 -- Sample deps for preparedfoods. Some special foods are likely to use their own deps though.
 local preparedfood_deps =
@@ -359,6 +434,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		tex            = "kyno_tunacan.tex",
 		prefab         = "kyno_tunacan",
 		stacksize      = 20,
+		openable       = true,
 		bank           = "kyno_tuna",
 		build          = "kyno_tuna",
 		anim           = "idle",
@@ -380,6 +456,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		tex            = "kyno_tomatocan.tex",
 		prefab         = "kyno_tomatocan",
 		stacksize      = 20,
+		openable       = true,
 		bank           = "kyno_cannedfoods",
 		build          = "kyno_cannedfoods",
 		anim           = "tomato_closed",
@@ -398,6 +475,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		tex            = "kyno_beancan.tex",
 		prefab         = "kyno_beancan",
 		stacksize      = 20,
+		openable       = true,
 		bank           = "kyno_cannedfoods",
 		build          = "kyno_cannedfoods",
 		anim           = "bean_closed",
@@ -416,6 +494,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		tex            = "kyno_meatcan.tex",
 		prefab         = "kyno_meatcan",
 		stacksize      = 20,
+		openable       = true,
 		bank           = "kyno_cannedfoods",
 		build          = "kyno_cannedfoods",
 		anim           = "meat_closed",
@@ -434,6 +513,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		tex            = "kyno_antchovycan.tex",
 		prefab         = "kyno_antchovycan",
 		stacksize      = 20,
+		openable       = true,
 		bank           = "kyno_cannedfoods",
 		build          = "kyno_cannedfoods",
 		anim           = "antchovy_closed",
@@ -1422,6 +1502,8 @@ local HOF_SCRAPBOOK_ITEMS =
 		prefab          = "kyno_malbatrossfood",
 		stacksize       = 20,
 		weapondamage    = 10,
+		fueltype        = "FISHFOOD",
+		fuelvalue       = 540,
 		bank            = "malbatross_pouch",
 		build           = "malbatross_pouch",
 		anim            = "idle",
@@ -1845,6 +1927,8 @@ local HOF_SCRAPBOOK_FOODS =
 		stacksize      = 40,
 		burnable       = true,
 		foodtype       = "SEEDS",
+		fueltype       = "ANIMALFOOD",
+		fuelvalue      = 45,
 		bank           = "quagmire_crop_wheat",
 		build          = "quagmire_crop_wheat",
 		anim           = "idle",
@@ -1866,6 +1950,8 @@ local HOF_SCRAPBOOK_FOODS =
 		stacksize      = 40,
 		burnable       = true,
 		foodtype       = "SEEDS",
+		fueltype       = "ANIMALFOOD",
+		fuelvalue      = 45,
 		bank           = "quagmire_crop_wheat",
 		build          = "quagmire_crop_wheat",
 		anim           = "cooked",
@@ -1902,6 +1988,8 @@ local HOF_SCRAPBOOK_FOODS =
 		stacksize      = 40,
 		burnable       = true,
 		foodtype       = "SEEDS",
+		fueltype       = "ANIMALFOOD",
+		fuelvalue      = 90,
 		bank           = "quagmire_spotspice_sprig",
 		build          = "quagmire_spotspice_sprig",
 		anim           = "idle",
@@ -2075,7 +2163,31 @@ local HOF_SCRAPBOOK_FOODS =
 		bank           = "kyno_chicken_eggs",
 		build          = "kyno_chicken_eggs",
 		anim           = "idle",
-		animoffsetx    = -5,
+		animoffsetx    = 30,
+		animoffsety    = 30,
+		animoffsetbgx  = -15,
+		animoffsetbgy  = -110,
+		deps           = {"kyno_chicken2", "kyno_chicken_egg_cooked", "kyno_chickenhouse", "rottenegg"},
+	},
+	
+	kyno_chicken_egg_large =
+	{
+		name           = "kyno_chicken_egg_large",
+		type           = "food",
+		tex            = "kyno_chicken_egg_large.tex",
+		prefab         = "kyno_chicken_egg_large",
+		healthvalue    = 10,
+		hungervalue    = 18.75,
+		sanityvalue    = 10,
+		perishable     = 2880,
+		foodtype       = "MEAT",
+		bank           = "kyno_chicken_eggs_large",
+		build          = "kyno_chicken_eggs_large",
+		animoffsetx    = 20,
+		animoffsety    = 15,
+		animoffsetbgx  = -15,
+		animoffsetbgy  = -100,
+		anim           = "idle",
 		deps           = {"kyno_chicken2", "kyno_chicken_egg_cooked", "kyno_chickenhouse", "rottenegg"},
 	},
 	
@@ -2372,6 +2484,8 @@ local HOF_SCRAPBOOK_FOODS =
 		stacksize      = 40,
 		burnable       = true,
 		foodtype       = "SEEDS",
+		fueltype       = "ANIMALFOOD",
+		fuelvalue      = 15,
 		bank           = "kyno_meadowisland_tree_sapling",
 		build          = "kyno_meadowisland_tree_sapling",
 		anim           = "cooked",
@@ -2410,6 +2524,7 @@ local HOF_SCRAPBOOK_FOODS =
 		sanityvalue    = 0,
 		perishable     = 1440,
 		foodtype       = "MEAT",
+		fishfarmable   = true,
 		bank           = "koi",
 		build          = "koi",
 		anim           = "idle",
@@ -2448,6 +2563,7 @@ local HOF_SCRAPBOOK_FOODS =
 		sanityvalue    = 0,
 		perishable     = 1440,
 		foodtype       = "MEAT",
+		fishfarmable   = true,
 		bank           = "neonfish",
 		build          = "neonfish",
 		anim           = "idle",
@@ -2488,6 +2604,7 @@ local HOF_SCRAPBOOK_FOODS =
 		sanityvalue    = 0,
 		perishable     = 1440,
 		foodtype       = "MEAT",
+		fishfarmable   = true,
 		bank           = "grouper",
 		build          = "grouper",
 		anim           = "idle",
@@ -2526,6 +2643,7 @@ local HOF_SCRAPBOOK_FOODS =
 		sanityvalue    = 0,
 		perishable     = 1440,
 		foodtype       = "MEAT",
+		fishfarmable   = true,
 		bank           = "tropicalfish",
 		build          = "tropicalfish",
 		anim           = "idle2",
@@ -2566,6 +2684,7 @@ local HOF_SCRAPBOOK_FOODS =
 		sanityvalue    = 0,
 		perishable     = 1440,
 		foodtype       = "MEAT",
+		fishfarmable   = true,
 		bank           = "pierrotfish",
 		build          = "pierrotfish",
 		anim           = "idle",
@@ -2604,6 +2723,7 @@ local HOF_SCRAPBOOK_FOODS =
 		sanityvalue    = 0,
 		perishable     = 1440,
 		foodtype       = "MEAT",
+		fishfarmable   = true,
 		bank           = "salmonfish",
 		build          = "salmonfish",
 		anim           = "idle2",
@@ -3557,7 +3677,7 @@ local HOF_SCRAPBOOK_FOODS =
 		prefab         = "kyno_kokonut",
 		perishable     = 7200,
 		stacksize      = 20,
-		workable       = "CHOP",
+		sliceable      = true,
 		burnable       = true,		
 		bank           = "kyno_kokonut",
 		build          = "kyno_kokonut",
@@ -4660,7 +4780,7 @@ local HOF_SCRAPBOOK_FOODS =
 		prefab         = "kyno_pineapple",
 		perishable     = 1440,
 		stacksize      = 20,
-		workable       = "CHOP",
+		sliceable      = true,
 		burnable       = true,	
 		foodtype       = "VEGGIE",
 		bank           = "kyno_pineapple",
@@ -4770,6 +4890,8 @@ local HOF_SCRAPBOOK_FOODS =
 		lure_radius     = 3,
 		burnable        = true,
 		foodtype        = "SEEDS",
+		fueltype        = "ANIMALFOOD",
+		fuelvalue       = 15,
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_aloe_seeds",
@@ -4793,6 +4915,8 @@ local HOF_SCRAPBOOK_FOODS =
 		lure_radius     = 3,
 		burnable        = true,
 		foodtype        = "SEEDS",
+		fueltype        = "ANIMALFOOD",
+		fuelvalue       = 15,
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_cucumber_seeds",
@@ -4816,6 +4940,8 @@ local HOF_SCRAPBOOK_FOODS =
 		lure_radius     = 3,
 		burnable        = true,
 		foodtype        = "SEEDS",
+		fueltype        = "ANIMALFOOD",
+		fuelvalue       = 15,
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_fennel_seeds",
@@ -4839,6 +4965,8 @@ local HOF_SCRAPBOOK_FOODS =
 		lure_radius     = 3,
 		burnable        = true,
 		foodtype        = "SEEDS",
+		fueltype        = "ANIMALFOOD",
+		fuelvalue       = 15,
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_parznip_seeds",
@@ -4862,6 +4990,8 @@ local HOF_SCRAPBOOK_FOODS =
 		lure_radius     = 3,
 		burnable        = true,
 		foodtype        = "SEEDS",
+		fueltype        = "ANIMALFOOD",
+		fuelvalue       = 15,
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_radish_seeds",
@@ -4885,6 +5015,8 @@ local HOF_SCRAPBOOK_FOODS =
 		lure_radius     = 3,
 		burnable        = true,
 		foodtype        = "SEEDS",
+		fueltype        = "ANIMALFOOD",
+		fuelvalue       = 15,
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_rice_seeds",
@@ -4908,6 +5040,8 @@ local HOF_SCRAPBOOK_FOODS =
 		lure_radius     = 3,
 		burnable        = true,
 		foodtype        = "SEEDS",
+		fueltype        = "ANIMALFOOD",
+		fuelvalue       = 15,
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_sweetpotato_seeds",
@@ -4931,6 +5065,8 @@ local HOF_SCRAPBOOK_FOODS =
 		lure_radius     = 3,
 		burnable        = true,
 		foodtype        = "SEEDS",
+		fueltype        = "ANIMALFOOD",
+		fuelvalue       = 15,
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_turnip_seeds",
@@ -4954,6 +5090,8 @@ local HOF_SCRAPBOOK_FOODS =
 		lure_radius     = 3,
 		burnable        = true,
 		foodtype        = "SEEDS",
+		fueltype        = "ANIMALFOOD",
+		fuelvalue       = 15,
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_forgetmelots_seeds",
@@ -4977,6 +5115,8 @@ local HOF_SCRAPBOOK_FOODS =
 		lure_radius     = 3,
 		burnable        = true,
 		foodtype        = "SEEDS",
+		fueltype        = "ANIMALFOOD",
+		fuelvalue       = 15,
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_firenettles_seeds",
@@ -5000,6 +5140,8 @@ local HOF_SCRAPBOOK_FOODS =
 		lure_radius     = 3,
 		burnable        = true,
 		foodtype        = "SEEDS",
+		fueltype        = "ANIMALFOOD",
+		fuelvalue       = 15,
 		bank            = "kyno_veggies",
 		build           = "kyno_veggies",
 		anim            = "kyno_tillweed_seeds",
@@ -5101,6 +5243,7 @@ local HOF_SCRAPBOOK_FOODS =
 		perishable      = 2880,
 		stacksize       = 60,
 		foodtype        = "MEAT",
+		fishfarmable    = true,
 		bank            = "kyno_antchovy",
 		build           = "kyno_antchovy",
 		anim            = "idle_alive",
@@ -5119,6 +5262,7 @@ local HOF_SCRAPBOOK_FOODS =
 		sanityvalue     = 0,
 		perishable      = 2880,
 		foodtype        = "MEAT",
+		fishfarmable    = true,
 		bank            = "kyno_swordfish_blue",
 		build           = "kyno_swordfish_blue",
 		anim            = "idle",
@@ -5366,6 +5510,7 @@ local HOF_SCRAPBOOK_FOODS =
 		perishable     = 9600,
 		stacksize      = 20,
 		foodtype       = "MEAT",
+		sliceable      = true,
 		burnable       = true,
 		bank           = "kyno_meatrack_fishmeat",
 		build          = "kyno_meatrack_fishmeat",
@@ -14840,6 +14985,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		prefab         = "kyno_chicken2",
 		health         = 75,
 		perishable     = 2400,
+		slaughterable  = true,
 		bank           = "chicken",
 		build          = "chicken",
 		anim           = "idle",
@@ -15037,6 +15183,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		sanityvalue    = 0,
 		perishable     = 480,
 		foodtype       = "MEAT",
+		fishfarmable   = true,
 		bank           = "kyno_oceanfish_pufferfish",
 		build          = "kyno_oceanfish_pufferfish",
 		anim           = "flop_pst",
@@ -15058,6 +15205,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		sanityvalue    = 0,
 		perishable     = 480,
 		foodtype       = "MEAT",
+		fishfarmable   = true,
 		bank           = "kyno_oceanfish_sturgeon",
 		build          = "kyno_oceanfish_sturgeon",
 		anim           = "flop_pst",
@@ -15094,6 +15242,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		prefab         = "kyno_jellyfish_ocean",
 		health         = 50,
 		perishable     = 480,
+		fishfarmable   = true,
 		bank           = "kyno_jellyfish",
 		build          = "kyno_jellyfish",
 		anim           = "idle",
@@ -15109,6 +15258,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		prefab         = "kyno_jellyfish_rainbow_ocean",
 		health         = 50,
 		perishable     = 480,
+		fishfarmable   = true,
 		bank           = "kyno_jellyfish_rainbow",
 		build          = "kyno_jellyfish_rainbow",
 		anim           = "idle",
@@ -15153,6 +15303,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		prefab         = "wobster_monkeyisland_land",
 		health         = 25,
 		perishable     = 1920,
+		fishfarmable   = true,
 		bank           = "lobster",
 		build          = "kyno_lobster_monkeyisland",
 		anim           = "idle",
@@ -15856,7 +16007,7 @@ local HOF_SCRAPBOOK_THINGS =
 		tex            = "kyno_preservesjar.tex",
 		prefab         = "kyno_preservesjar",
 		workable       = "HAMMER",
-		stewer         = true,
+		stewer         = true, -- Technically brewer, but the word won't fit.
 		burnable       = true,
 		bank           = "kyno_brewers_jar",
 		build          = "kyno_brewers_jar",
@@ -16547,6 +16698,7 @@ local HOF_SCRAPBOOK_THINGS =
 		fueledmax      = 2400, 
 		fueledrate     = 1,
 		fueledtype1    = "FISHFOOD",
+		fishfarm       = true,
 		bank           = "kyno_fishfarmplot_scrapbook",
 		build          = "kyno_fishfarmplot_scrapbook",
 		anim           = "idle",
@@ -16648,7 +16800,7 @@ local HOF_SCRAPBOOK_THINGS =
 		type           = "thing",
 		tex            = "kyno_hofbirthday_cake.tex",
 		prefab         = "kyno_hofbirthday_cake",
-		workable       = "SLICE",
+		sliceable      = true,
 		sanityaura     = 0.66666666666667,
 		bank           = "kyno_hofbirthday_cake",
 		build          = "kyno_hofbirthday_cake",
@@ -16803,6 +16955,11 @@ AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_PREPAREDBRE
 AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_PREPAREDFOODS_JAR)
 AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_CREATURES)
 AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_THINGS)
+
+if TUNING.HOF_SCRAPBOOK_EXTRAS then
+	ScrapbookData.kyno_woodenkeg.stewer = false
+	ScrapbookData.kyno_woodenkeg.brewer = true
+end
 
 -- For the Complementary Mod.
 -- Heap-of-Foods-Workshop-Spices / workshop-3438589036

@@ -456,6 +456,7 @@ WALTER.DESCRIBE.KYNO_SLAUGHTERTOOL = "Você não deve olhar, Woby!"
 WALTER.DESCRIBE.KYNO_CHICKEN2 = "Não consegue voar. Mas eu também não consigo."
 
 WALTER.DESCRIBE.KYNO_CHICKEN_EGG = "Há um pequeno amigo galinha aí dentro!"
+WALTER.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Uau! Eu deveria ganhar uma insígnia de mérito por achar isso!"
 WALTER.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Cheira como café da manhã pronto!"
 
 WALTER.DESCRIBE.KYNO_CHICKENHOUSE = "É seguro o suficiente para galinhas, provavelmente."

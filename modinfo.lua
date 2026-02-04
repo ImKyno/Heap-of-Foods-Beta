@@ -27,8 +27,8 @@ Cast your line, set your sail, and dive into the ocean! A wave of new aquatic cr
 
 Build yourself a Fish Hatchery to raise your own fish at the comfort of your base, explore the ocean in search of elusive creatures, take part in Ocean Hunts and find a friendly new companion.
 
-󰀌 Mod Version: 4.4-B
-󰀧 Update: The Fish Registry
+󰀌 Mod Version: 4.5-B
+󰀧 Update: Chicken Week
 ]],
 		zh  =
 [[
@@ -42,7 +42,7 @@ Build yourself a Fish Hatchery to raise your own fish at the comfort of your bas
 
 建造一座鱼苗孵化场，在你的基地里舒适地饲养属于你自己的鱼儿；探索海洋，寻找那些难以捉摸的生物；参与海洋狩猎，结识一位友好的新伙伴。
 
-󰀌 Mod 版本： 4.4-B
+󰀌 Mod 版本： 4.5-B
 󰀧 更新内容： 鱼类登记处
 ]],	
 		zht =
@@ -57,7 +57,7 @@ Build yourself a Fish Hatchery to raise your own fish at the comfort of your bas
 
 建造一座魚苗孵化場，在你的基地裡舒適地飼養屬於你自己的魚兒；探索海洋，尋找那些難以捉摸的生物；參與海洋狩獵，結識一位友好的新夥伴。
 
-󰀌 Mod 版本： 4.4-B
+󰀌 Mod 版本： 4.5-B
 󰀧 更新內容： 魚類登記處
 ]],	
 		pt  = 
@@ -72,7 +72,7 @@ Lance sua linha, prepare suas velas e mergulhe no oceano! Uma onda de novas cria
 
 Construa um viveiro de peixes para criar seus próprios peixes no conforto da sua base, explore o oceano em busca de criaturas elusivas, participe de caçadas oceânicas e encontre um novo companheiro amigável.
 
-󰀌 Versão do Mod: 4.4-B
+󰀌 Versão do Mod: 4.5-B
 󰀧 Atualização: O Registro de Peixes
 ]],
 		pl  =
@@ -87,7 +87,7 @@ Zarzuć wędkę, postaw żagle i zanurz się w oceanie! Czeka Cię fala nowych s
 
 Zbuduj sobie wylęgarnię ryb, aby hodować własne ryby w zaciszu swojej bazy, eksploruj ocean w poszukiwaniu nieuchwytnych stworzeń, weź udział w polowaniach na ryby i znajdź nowego, przyjaznego towarzysza.
 
-󰀌 Wersja Moda: 4.4-B
+󰀌 Wersja Moda: 4.5-B
 󰀧 Aktualizacja: Rejestr ryb
 ]],
 		es  =
@@ -102,7 +102,7 @@ Zbuduj sobie wylęgarnię ryb, aby hodować własne ryby w zaciszu swojej bazy, 
 
 Construye una piscifactoría para criar tus propios peces en la comodidad de tu base, explora el océano en busca de criaturas esquivas, participa en cacerías oceánicas y encuentra un nuevo compañero.
 
-󰀌 Versión del Mod: 4.4-B
+󰀌 Versión del Mod: 4.5-B
 󰀧 Actualización: El Registro de Peces
 ]],
 	},
@@ -1010,6 +1010,52 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 			},
 		},
 		
+		SCRAPBOOK2 =
+		{
+			NAME =
+			{
+				"Extra Mod Scrapbook Informations",
+				zh  = "额外模组剪贴簿信息",
+				zht = "額外模組剪貼簿信息",
+				pt  = "Informações Extras Scrapbook do Mod",
+				pl  = "Scrapbook Mod Extras",
+				es  = "Extras para Scrapbook del Mod",
+			},
+			
+			HOVER =
+			{
+				"Should additional informations for Mod Contents be shown on the Scrapbook?\n\Requires Mod Scrapbook to be enabled.",
+				zh  = "是否应在剪贴簿中显示模组内容的附加信息？\n\需要启用 Mod Scrapbook。",
+				zht = "是否應在剪貼簿中顯示模組內容的附加資訊？\n\需要啟用 Mod Scrapbook。",
+				pt  = "Permitir que informações adicionais sobre conteúdos do Mod sejam mostradas no Scrapbook?\n\Requer que o Scrapbook do Mod esteja ativado.",
+				pl  = "Czy w albumie powinny być wyświetlane dodatkowe informacje dotyczące zawartości modyfikacji?\n\Wymagana jest włączona funkcja Mod Scrapbook.",
+				es  = "¿Debería mostrarse información adicional sobre el contenido del Mod en el Scrapbook?\n\Requiere que Scrapbook del Mod esté habilitado.",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Original Mod Scrapbook without additional informations.",
+					zh  = "原版Mod剪贴簿，不含其他信息。",
+					zht = "原版Mod剪貼簿，不含其他資訊。",
+					pt  = "Scrapbook do Mod original sem informações adicionais.",
+					pl  = "Oryginalny Mod Scrapbook bez dodatkowych informacji.",
+					es  = "Original Scrapbook del Mod sin información adicional.",
+				},
+				
+				ENABLED =
+				{
+					"Mod Scrapbook with additional informations.",
+					zh  = "Mod Scrapbook，包含更多信息。",
+					zht = "Mod Scrapbook，包含更多資訊。",
+					pt  = "Scrapbook do Mod com informações adicionais.",
+					pl  = "Mod Scrapbook z dodatkowymi informacjami.",
+					es  = "Scrapbook del Mod con información adicional.",
+				},
+			},
+		},
+		
 		SERENITY_CC =
 		{
 			NAME =
@@ -1456,7 +1502,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "4.4-B"
+version                      = "4.5-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 
@@ -1789,6 +1835,22 @@ local FERTILIZER_OPTIONS     =
 	}
 }
 
+local SCRAPBOOK2_LABEL       = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK2.NAME)
+local SCRAPBOOK2_HOVER       = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK2.HOVER)
+local SCRAPBOOK2_OPTIONS     =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK2.HOVER_OPTIONS.DISABLED),
+		data                 = false
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK2.HOVER_OPTIONS.ENABLED),
+		data                 = true
+	}
+}
+
 local SERENITY_CC_LABEL      = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.NAME)
 local SERENITY_CC_HOVER      = ChooseTranslationTable(STRINGS.SETTINGS.SERENITY_CC.HOVER)
 local SERENITY_CC_OPTIONS    =
@@ -1938,6 +2000,7 @@ configuration_options        =
 	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,    options = FERTILIZER_OPTIONS,    default = false },
 	-- Experimental Options.
 	{ name                   = "EXPERIMENTAL",     label = EXPERIMENTAL_LABEL,  hover = EXPERIMENTAL_HOVER,  options = NONE_OPTIONS,          default = false },
+	{ name                   = "SCRAPBOOK2",       label = SCRAPBOOK2_LABEL,    hover = SCRAPBOOK2_HOVER,    options = SCRAPBOOK2_OPTIONS,    default = false },
 	{ name                   = "SERENITY_CC",      label = SERENITY_CC_LABEL,   hover = SERENITY_CC_HOVER,   options = SERENITY_CC_OPTIONS,   default = 0     },
 	{ name                   = "MEADOW_CC",        label = MEADOW_CC_LABEL,     hover = MEADOW_CC_HOVER,     options = MEADOW_CC_OPTIONS,     default = 0     },
 	{ name                   = "FULLMOONTRANS",    label = FULLMOON_LABEL,      hover = FULLMOON_HOVER,      options = FULLMOON_OPTIONS,      default = false },

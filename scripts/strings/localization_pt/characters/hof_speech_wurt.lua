@@ -458,6 +458,7 @@ WURT.DESCRIBE.KYNO_SLAUGHTERTOOL = "Huh? Para que serve isso?"
 WURT.DESCRIBE.KYNO_CHICKEN2 = "Uma galinha!"
 
 WURT.DESCRIBE.KYNO_CHICKEN_EGG = "Pintinho dentro?"
+WURT.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Ooh! Ovo de bico-bico grande! Pesado!"
 WURT.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Não quero!"
 
 WURT.DESCRIBE.KYNO_CHICKENHOUSE = "Casinha para galinhas! Talvez tenha ovos dentro?"

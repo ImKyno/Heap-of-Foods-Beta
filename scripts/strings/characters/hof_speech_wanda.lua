@@ -456,6 +456,7 @@ WANDA.DESCRIBE.KYNO_SLAUGHTERTOOL = "I hope I don't have spare time to use this.
 WANDA.DESCRIBE.KYNO_CHICKEN2 = "Awww. A little chicken!"
 
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG = "What, you egg?"
+WANDA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "I don't have time to wait for something this large to hatch."
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Whenever I make eggs they end up either undercooked or burnt."
 
 WANDA.DESCRIBE.KYNO_CHICKENHOUSE = "A well-timed solution for a steady supply of eggs."
@@ -601,7 +602,7 @@ WANDA.DESCRIBE.KYNO_WINE = "It's been a while since I had one."
 WANDA.DESCRIBE.KYNO_JUICE = "I prefer a more sweeter juice."
 
 WANDA.DESCRIBE.KYNO_POISON_FROGLEGS = "Eating that will cost my precious time."
-WANDA.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "I don't think these are no longer poisonous."
+WANDA.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "I still don't think these are no longer poisonous."
 
 WANDA.DESCRIBE.POISONFROGGLEBUNWICH = "I've been told it's a local delicacy."
 

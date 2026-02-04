@@ -127,11 +127,16 @@ _G.CONFIGS_HOF                =
 
 _G.CONFIGS_HOF.SEASONALFOOD   = GetModConfigData("SEASONALFOOD")
 _G.CONFIGS_HOF.SCRAPBOOK      = GetModConfigData("SCRAPBOOK")
+_G.CONFIGS_HOF.SCRAPBOOK_EXT  = GetModConfigData("SCRAPBOOK2")
 _G.CONFIGS_HOF.AUTORETROFIT   = GetModConfigData("AUTORETROFIT")
 
 if _G.CONFIGS_HOF.SCRAPBOOK then
 	modimport("hof_init/misc/hof_scrapbook")
 	modimport("hof_init/misc/hof_shinyloots") -- Requires Scrapbook to be enabled...
+end
+
+if _G.CONFIGS_HOF.SCRAPBOOK and _G.CONFIGS_HOF.SCRAPBOOK_EXT then
+	modimport("hof_init/misc/hof_scrapbook_postinits")
 end
 
 if _G.CONFIGS_HOF.AUTORETROFIT then
@@ -162,6 +167,7 @@ local mod_options =
 	{ name = "WARLYMEALGRINDER", default = false },
 	{ name = "FERTILIZERTWEAK",  default = false },
 
+	{ name = "SCRAPBOOK2",       default = false },
 	{ name = "SERENITY_CC",      default = false },
 	{ name = "MEADOW_CC",        default = false },
 	{ name = "FULLMOONTRANS",    default = false },

@@ -87,7 +87,10 @@ AddIngredientValues({"kyno_salmonfish"},		     {fish       = 1,    salmon     = 
 AddIngredientValues({"kyno_crabmeat"},			     {meat       = 0.5,  crab       = 1},                          true)
 AddIngredientValues({"kyno_crabmeat_dried"},	     {meat       = 0.5,  crab       = 1})
 AddIngredientValues({"kyno_crabkingmeat"},           {meat       = 1,    crab       = 2},                    true, true)
+AddIngredientValues({"kyno_chicken2"},               {meat       = 2,    chicken   = 1})
+AddIngredientValues({"kyno_chicken_coop"},           {meat       = 2,    chicken   = 1})
 AddIngredientValues({"kyno_chicken_egg"},		     {egg        = 1},                                             true)
+AddIngredientValues({"kyno_chicken_egg_large"},      {egg        = 4})
 AddIngredientValues({"kyno_bottle_soul"},		     {soul       = 1})
 AddIngredientValues({"kyno_milk_beefalo"},		     {dairy      = 0.5,  milk       = 1})
 AddIngredientValues({"kyno_milk_koalefant"},	     {dairy      = 0.5,  milk       = 1})
@@ -137,8 +140,6 @@ AddIngredientValues({"kyno_blubber"},                {meat       = 1,    fat    
 AddIngredientValues({"kyno_brainrock_coral"},        {meat       = 0.5})
 AddIngredientValues({"kyno_fishmeat_small_dried"},   {meat       = 0.5,  fish      = 1,    salted    = 1})
 AddIngredientValues({"kyno_fishmeat_dried"},         {meat       = 1,    fish      = 2,    salted    = 1})
-AddIngredientValues({"kyno_chicken2"},               {meat       = 2,    chicken   = 1})
-AddIngredientValues({"kyno_chicken_coop"},           {meat       = 2,    chicken   = 1})
 
 local fishroes_meat =
 {

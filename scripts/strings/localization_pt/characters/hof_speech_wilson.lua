@@ -456,6 +456,7 @@ WILSON.DESCRIBE.KYNO_SLAUGHTERTOOL = "Ferramentas de laboratório para açougue 
 WILSON.DESCRIBE.KYNO_CHICKEN2 = "É uma galinha pequena."
 
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG = "Um pequeno ovo de galinha."
+WILSON.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Isso é um café da manhã impressionantemente grande."
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Ovo frito delicioso!"
 
 WILSON.DESCRIBE.KYNO_CHICKENHOUSE = "Um abrigo para minhas galinhas."

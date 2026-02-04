@@ -80,7 +80,7 @@ WARLY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Ah... the protective effect has exp
 
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong, wrong..."
 
-WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You want something more delicious?"
+WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You want something else more delicious?"
 
 WARLY.ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL = "At this stage, it cannot do anything yet."
 
@@ -456,6 +456,7 @@ WARLY.DESCRIBE.KYNO_SLAUGHTERTOOL = "The best tool for butchery."
 WARLY.DESCRIBE.KYNO_CHICKEN2 = "My delicious, delicious friend!"
 
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG = "Nature perfects food."
+WARLY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "The culinary possibilities are truly... enormous!"
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Could use a few different herbs..."
 
 WARLY.DESCRIBE.KYNO_CHICKENHOUSE = "Ah! A reliable source of fresh ingredients."

@@ -456,6 +456,7 @@ WANDA.DESCRIBE.KYNO_SLAUGHTERTOOL = "我希望我没有空闲时间来使用它�
 WANDA.DESCRIBE.KYNO_CHICKEN2 = "哇。一只小鸡！"
 
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG = "什么，你这个蛋？"
+WANDA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "I don't have time to wait for something this large to hatch."
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "每当我做鸡蛋时，它们要么未烤熟，要么被烧焦。"
 
 WANDA.DESCRIBE.KYNO_CHICKENHOUSE = "确保鸡蛋稳定供应的及时解决方案。"

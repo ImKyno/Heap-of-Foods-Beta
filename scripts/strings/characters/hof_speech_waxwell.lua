@@ -456,6 +456,7 @@ WAXWELL.DESCRIBE.KYNO_SLAUGHTERTOOL = "I don't mind getting my hands dirty with 
 WAXWELL.DESCRIBE.KYNO_CHICKEN2 = "Foul fowl."
 
 WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG = "I like to think of it as a baby chicken prison."
+WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "I wonder if the bird inside is as oversized as its shell."
 WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Sunny side up."
 
 WAXWELL.DESCRIBE.KYNO_CHICKENHOUSE = "A humble shelter, but quite productive."

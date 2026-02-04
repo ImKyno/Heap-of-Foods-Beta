@@ -456,6 +456,7 @@ WINONA.DESCRIBE.KYNO_SLAUGHTERTOOL = "Não é meu tipo de ferramenta."
 WINONA.DESCRIBE.KYNO_CHICKEN2 = "Adoro o visual, pequena galinha."
 
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG = "Café da manhã."
+WINONA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Ora, isso dá um trabalhão danado para uma galinha só."
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Sempre acabo pegando pedacinhos de casca sem querer."
 
 WINONA.DESCRIBE.KYNO_CHICKENHOUSE = "Construída com robustez suficiente para manter as galinhas sob controle."
