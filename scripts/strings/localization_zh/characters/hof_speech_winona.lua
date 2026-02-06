@@ -90,6 +90,8 @@ WINONA.ANNOUNCE_KYNO_POTHANGER_FAIL = "它需要一个锅来做饭。"
 
 WINONA.ANNOUNCE_KYNO_CASSEROLE_FAIL = "不行。它需要一个砂锅。"
 
+WINONA.ANNOUNCE_KYNO_SAPHEALER_USED = "There you go, all fixed."
+
 WINONA.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "工具确实能让脏活更轻松。"
 
 WINONA.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "什么都没剩下。萨米肯定已经收拾走了。"
@@ -129,11 +131,23 @@ WINONA.DESCRIBE.KYNO_SYRUP = "就像树上的蜂蜜。"
 WINONA.DESCRIBE.KYNO_COFFEEBEANS = "过来找妈妈！"
 WINONA.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "兴奋！"
 
-WINONA.DESCRIBE.DUG_KYNO_COFFEEBUSH = "爪哇产地！"
-WINONA.DESCRIBE.KYNO_COFFEEBUSH = "爪哇产地！"
+WINONA.DESCRIBE.DUG_KYNO_COFFEEBUSH = "A coffee bush, incredible!"
 
-WINONA.DESCRIBE.DUG_KYNO_SPOTBUSH = "是的，我们可能会吃掉那个。"
-WINONA.DESCRIBE.KYNO_SPOTBUSH = "是的，我们可能会吃掉那个。"
+WINONA.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "Java!",
+	PICKED = "Needs time to refill.",
+	WITHERED = "Needs more planing.",
+}
+
+WINONA.DESCRIBE.DUG_KYNO_SPOTBUSH = "Needs a proper place."
+
+WINONA.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "Yeah, we could probably eat that.",
+	PICKED = "Needs time to bounce back.",
+	BURNING = "Well, that's ruined.",
+}
 
 WINONA.DESCRIBE.KYNO_SPOTSPICE_LEAF = "尝起来有点像……胡椒？"
 
@@ -194,10 +208,24 @@ WINONA.DESCRIBE.LONGPIGMEAL = "这是个糟糕的主意。"
 
 WINONA.DESCRIBE.CUCUMBERSALAD = "这就是我所说的健康食品。"
 
-WINONA.DESCRIBE.KYNO_WILDWHEAT = "满足你对小麦的所有需求。"
-WINONA.DESCRIBE.DUG_KYNO_WILDWHEAT = "满足你对小麦的所有需求。"
+WINONA.DESCRIBE.DUG_KYNO_WILDWHEAT = "Ready for replanting."
+
+WINONA.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "Could be useful.",
+	PICKED = "Needs time to bounce back.",
+	WITHERED = "Too dry to work.",
+	BURNING = "Well, that's ruined.",
+}
 
 WINONA.DESCRIBE.KYNO_MEALGRINDER = "啊！一项可能需要艰苦的工作！"
+
+WINONA.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Well, they don't LOOK poisonous.",
+	PICKED = "It's just a stump.",
+	BURNING = "That was avoidable.",
+}
 
 WINONA.DESCRIBE.GORGE_BREAD = "经典，你不觉得吗？"
 WINONA.DESCRIBE.GORGE_SWEET_CHIPS = "这可能会让某人工作几个小时。"
@@ -340,27 +368,57 @@ WINONA.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "啊 当!"
 
 WINONA.DESCRIBE.KYNO_SEEDS_KIT = "蔬菜种子。"
 
-WINONA.DESCRIBE.KYNO_LIMPETROCK = "看看这些巴尼。"
+WINONA.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "Just look at all these Barneys.",
+	PICKED = "Needs time to recover.",
+	WITHERED = "Nothing useful right now.",
+}
+
 WINONA.DESCRIBE.KYNO_LIMPETS = "他们摆脱了日常生活的喧嚣。"
 WINONA.DESCRIBE.KYNO_LIMPETS_COOKED = "还是有点粘。"
 
-WINONA.DESCRIBE.KYNO_LOTUS_OCEAN = "那些午餐会很棒！"
+WINONA.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "Those'd make a great lunch!",
+	PICKED = "Needs time to come back.",
+	BURNING = "That shouldn't be happening.",
+}
+
 WINONA.DESCRIBE.KYNO_LOTUS_ROOT = "现在我可以在任何地方种植它了。"
 WINONA.DESCRIBE.KYNO_LOTUS_FLOWER = "漂亮！"
 WINONA.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "嗯……好吃。"
 
-WINONA.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "名字说明了一切。"
+WINONA.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Name says it all.",
+	PICKED = "Needs time to refill.",
+	BURNING = "Well, that's not ideal.",
+}
+
 WINONA.DESCRIBE.KYNO_SEAWEEDS = "名字说明了一切。"
 WINONA.DESCRIBE.KYNO_SEAWEEDS_COOKED = "我想稍微好一点..."
 WINONA.DESCRIBE.KYNO_SEAWEEDS_DRIED = "吃点脆脆的会更好。"
 WINONA.DESCRIBE.KYNO_SEAWEEDS_ROOT = "现在我可以把它种在我想要的地方。"
 
-WINONA.DESCRIBE.KYNO_TAROROOT_OCEAN = "我可以在午餐时吃这个。"
+WINONA.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "I could eat this in the lunch.",
+	PICKED = "Water helps speed things up.",
+	BURNING = "There goes that.",
+}
+
 WINONA.DESCRIBE.KYNO_TAROROOT_ROOT = "现在我可以在任何地方种植它了。"
 WINONA.DESCRIBE.KYNO_TAROROOT = "看看有多奇怪！哈！"
 WINONA.DESCRIBE.KYNO_TAROROOT_COOKED = "那是不是变得更好了？我不知道。"
 
-WINONA.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "看起来很好吃。"
+WINONA.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "It looks delicious.",
+	PICKED = "Should refill soon enough.",
+	BURNING = "That didn't need to happen.",
+}
+
 WINONA.DESCRIBE.KYNO_WATERYCRESS_ROOT = "现在我可以在任何地方种植它了。"
 WINONA.DESCRIBE.KYNO_WATERYCRESS = "看起来很好吃。"
 
@@ -368,17 +426,40 @@ WINONA.DESCRIBE.WATERYCRESSBOWL = "汤永远不会出错。"
 
 WINONA.DESCRIBE.KYNO_SALT = "但是胡椒在哪里？"
 
+WINONA.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Simple setup.",
+	PICKED = "Needs time to refill.",
+	BURNING = "That didn't help.",
+}
+
 WINONA.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "他们顺势而为。"
 
 WINONA.DESCRIBE.CATFOOD = "给小伙伴的零食。"
 
 WINONA.DESCRIBE.KATFOOD = "给小伙伴的零食。"
 
-WINONA.DESCRIBE.KYNO_BANANATREE = "那是，呃，香蕉树。"
+WINONA.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "That's, uh, banana tree.",
+	PICKED = "Needs a bit to bounce back.",
+	CHOPPED = "That's that.",
+	BURNING = "I shouldn't have let that happen.",
+	BURNT = "Total loss.",
+}
+
 WINONA.DESCRIBE.KYNO_BANANA = "钾！"
 WINONA.DESCRIBE.KYNO_BANANA_COOKED = "烤熟的钾！"
 
-WINONA.DESCRIBE.KYNO_KOKONUTTREE = "酷头发，树。"
+WINONA.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "Cool hair, tree.",
+	PICKED = "Needs time to bounce back.",
+	CHOPPED = "That's that.",
+	BURNING = "Could've avoided this.",
+	BURNT = "Total loss.",
+}
+
 WINONA.DESCRIBE.KYNO_KOKONUT = "想象一下被其中一个人打到头上！"
 WINONA.DESCRIBE.KYNO_KOKONUT_HALVED = "你花一个钱买两个。噗。"
 WINONA.DESCRIBE.KYNO_KOKONUT_COOKED = "嗯。是的。现在已经烤好了。"
@@ -426,13 +507,43 @@ WINONA.DESCRIBE.TURF_STONECITY = "固体泥土。"
 WINONA.DESCRIBE.TURF_FIELDS = "泥土。"
 WINONA.DESCRIBE.TURF_TIDALMARSH = "沼泽。"
 
+WINONA.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Salt's ready for minin'.",
+	PICKED = "It needs a bit more time.",
+}
+
 WINONA.DESCRIBE.KYNO_SALTRACK_INSTALLER = "让我们开始吧！"
 
 WINONA.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "桶。最先进的农业技术。"
 
 WINONA.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "这里是小螃蟹。"
 
-WINONA.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "你是个大个子，嘿？"
+WINONA.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "You're a big guy, hey?",
+	SLEEPING = "I'll come back later.",
+}
+
+WINONA.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "It's a big, pink tree.",
+	CHOPPED = "That ain't growin' back.",
+	SAPPED = "That bucket's practically overflowing!",
+	PICKED = "I wish trees leaked a little faster.",
+	BURNING = "Total loss.",
+	BURNT = "Nothing salvageable.",
+}
+
+WINONA.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "It's lost some of its color.",
+	CHOPPED = "No fixing for that.",
+	SAPPED = "Still usable, I guess.",
+	PICKED = "It's a little buggy.", 
+	BURNING = "Scrap it.",
+	BURNT = "Done.",
+}
 
 WINONA.DESCRIBE.KYNO_SUGARTREE_BUD = "我听说它尝起来像糖。"
 
@@ -453,13 +564,22 @@ WINONA.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "我饿的时候脾气暴躁。哈！"
 
 WINONA.DESCRIBE.KYNO_SLAUGHTERTOOL = "不是我喜欢的工具。"
 
-WINONA.DESCRIBE.KYNO_CHICKEN2 = "喜欢这个造型，小鸡。"
+WINONA.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "Love the look, little chicken.",
+	COOP = "All set and settled.",
+}
 
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG = "早餐。"
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Now that's a lot of heavy lifting for one hen."
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "我总是不小心弄到一些贝壳。"
 
-WINONA.DESCRIBE.KYNO_CHICKENHOUSE = "结构坚固，足以约束鸡群。"
+WINONA.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "Built sturdy enough to keep chickens in line.",
+	FULL = "Looks like it's harvest time.",
+	BURNT = "Well... that'll need rebuilding.",
+}
 
 WINONA.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "我想我可以解决这个问题。"
 
@@ -482,8 +602,11 @@ WINONA.DESCRIBE.KYNO_COOKWARE_OVEN = "这是一个普通的烤箱。"
 WINONA.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "这是一个普通的烤箱。"
 WINONA.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "这是一个普通的烤箱。"
 
-WINONA.DESCRIBE.KYNO_ROCKFLIPPABLE = "想知道这块岩石下面是什么吗？"
-WINONA.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "想知道这块岩石下面是什么吗？"
+WINONA.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "Wonder what is under this rock?",
+	FLIPPED = "Yep. There it is.",
+}
 
 WINONA.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "这里有什么东西。"
 
@@ -526,7 +649,12 @@ WINONA.DESCRIBE.PEPPERROLLS = "他们在我嘴里开派对！"
 
 WINONA.DESCRIBE.KYNO_SAPHEALER = "这会让病痛消失。"
 
-WINONA.DESCRIBE.KYNO_OCEAN_WRECK = "短期内可能不会航行。"
+WINONA.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "Probably won't be sailing on that anytime soon.",
+	PICKED = "Nothing left to grab.",
+	BURNING = "Yep, that's done.",
+}
 
 WINONA.DESCRIBE.KYNO_GHOST_PIRATE = "哎呀。他本可以永远睡下去，但他回来了。"
 
@@ -543,11 +671,31 @@ WINONA.DESCRIBE.KYNO_PLANTMEAT_DRIED = "女孩，这肉干！"
 
 WINONA.DESCRIBE.KYNO_BREWBOOK = "拥有蓝图肯定会让酿造变得更容易！"
 
-WINONA.DESCRIBE.KYNO_WOODENKEG = "啊，我想念那些。"
+WINONA.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "Ahh, I miss those.",
+	BREWING_LONG = "This one's gonna take time.",
+	BREWING_SHORT = "Just about to be finished.",
+	DONE = "All done.",
+	BURNT = "That's a write-off.",
+}
 
-WINONA.DESCRIBE.KYNO_PRESERVESJAR = "现在我只需要原料就可以开始酿造了。"
+WINONA.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "Now I just need the ingredients to start brewing.",
+	BREWING_LONG = "These things take time.",
+	BREWING_SHORT = "Just about to be ready.",
+	DONE = "Looks good to go.",
+	BURNT = "Total loss.",
+}
 
-WINONA.DESCRIBE.KYNO_ANTCHEST = "它为我制作了所有的蜂蜜！"
+WINONA.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "It makes all the honey for me!",
+	HONEY = "Production looks good.",
+	NECTAR = "Still in the middle of processing.",
+	BURNING = "Well, that's a total loss.",
+}
 
 WINONA.DESCRIBE.KYNO_NECTAR_POD = "我想知道我能不能用这个做蜂蜜。"
 
@@ -557,13 +705,47 @@ WINONA.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "不费吹灰之力的一顿美餐。"
 WINONA.DESCRIBE.KYNO_PIKO = "这是一个小伙伴！"
 WINONA.DESCRIBE.KYNO_PIKO_ORANGE = "哦，我明白了。"
 
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_TREE = "嘿，小树！"
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "我希望他们不要偷我的工具。"
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "Hey little tree!",
+	CHOPPED = "Put to good use.",
+	BURNING = "That's not good.",
+	BURNT = "I couldn't save it.",
+}
+
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "I hope they don't steal my tools.",
+	BURNING = "That'll clear them out.",
+}
+
 WINONA.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "想知道里面有什么。"
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "我可以拆开它。"
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "工人们休息 5 分钟。"
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "那是苔藓之门的钥匙吗？"
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "那些是一些不错的巨大作物。"
+
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "I could disassemble that.",
+	BURNT = "Total loss.",
+}
+
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "Where the workers take five.",
+	CRAFTED = "Yeah, that's better.",
+	BURNT = "Smells even worse now.",
+}
+
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "Is that the key to the Mossy Gateway?",
+	OCCUPIED = "I guess Sammy is asleep right now.",
+}
+
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
+{
+	GENERIC = "Those are some nice oversized crops.",
+	EMPTY = "Sold out, huh?",
+}
+
 WINONA.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "他怎么会来到这里？"
 WINONA.DESCRIBE.KYNO_MEADOWISLAND_POND = "想知道它有多深......"
 WINONA.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "一株小小的植物。"
@@ -713,8 +895,15 @@ WINONA.DESCRIBE.RISOTTO = "它是如此细腻！"
 
 WINONA.DESCRIBE.RICESAKE = "有点软。我可以多喝点。"
 
-WINONA.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "不管付出什么代价，我都要得到那颗果实。"
-WINONA.DESCRIBE.KYNO_PINEAPPLEBUSH = "不管付出什么代价，我都要得到那颗果实。"
+WINONA.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Now I can plant you anywhere I want."
+
+WINONA.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "I'm getting that fruit, whatever it takes.",
+	PICKED = "It was all worth it.",
+	WITHERED = "Too dry to work.",
+	BURNING = "Well, that's ruined.",
+}
 
 WINONA.DESCRIBE.KYNO_PINEAPPLE = "想象一下被这样的东西砸到头的情景吧！"
 WINONA.DESCRIBE.KYNO_PINEAPPLE_HALVED = "只要一片就够了。"
@@ -726,7 +915,11 @@ WINONA.DESCRIBE.PINACOLADA = "坐下来，放松心情..."
 
 WINONA.DESCRIBE.CHIMAS = "虽然不是我的首选，但也不错。"
 
-WINONA.DESCRIBE.KYNO_GARDEN_SPRINKLER = "帮我浇水。"
+WINONA.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "Does all my watering for me.",
+	ON = "Running smooth.",
+}
 
 WINONA.DESCRIBE.KYNO_FOODSACK = "软乎乎的。"
 
@@ -835,11 +1028,21 @@ WINONA.DESCRIBE.RICEANDBEANS = "午餐。"
 
 WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "需要好好修一修。也许2026年会轮到我出手。"
 
-WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND = "地下宝藏，准备好收获了。"
+WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Underground treasures ready to harvest.",
+	PICKED = "Cleaned out.",
+	BURNING = "What a waste.",
+}
+
 WINONA.DESCRIBE.KYNO_TRUFFLES = "罕见的发现——大自然的美味佳肴。"
 WINONA.DESCRIBE.KYNO_TRUFFLES_COOKED = "烹饪让它们变得更棒了。"
 
-WINONA.DESCRIBE.KYNO_ITEMSHOWCASER = "挺整洁的架子。可惜不是用来干活的。"
+WINONA.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "Neat little stand. Guess it's not for actual work, though.",
+	FULL = "Yeah, that turned out good.",
+}
 
 WINONA.DESCRIBE.KYNO_SPORECAP = "这家伙的日子不太好过。"
 WINONA.DESCRIBE.KYNO_SPORECAP_COOKED = "至少它不会再碎掉了。"
@@ -859,7 +1062,15 @@ WINONA.DESCRIBE.TRUFFLEOIL = "哈，大概是有钱人用来煎东西的油吧�
 
 WINONA.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "让我们开始建造吧。"
 WINONA.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "看起来是个不错的开端。只是需要多花些功夫。"
-WINONA.DESCRIBE.KYNO_FISHFARMPLOT = "这个鱼苗场源源不断地供应鱼苗。"
+
+WINONA.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "This hatchery keeps the fish coming.",
+	FUEL_HIGH = "Running smooth.",
+	FUEL_MED = "Holding steady.",
+	FUEL_LOW = "Needs topping up soon.",
+	EMPTY = "Bone dry.",
+}
 
 WINONA.DESCRIBE.KYNO_ANTCHOVY = "这可真是奇怪的杂交啊！"
 WINONA.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "这活儿看起来简直像个移动的烂摊子！"
@@ -916,14 +1127,29 @@ WINONA.DESCRIBE.MONKEYISLANDMEAL = "这可真是一顿豪华万能餐呢！"
 WINONA.DESCRIBE.KYNO_BRAINROCK_LARVAE = "小黏液怪！"
 WINONA.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "嘿。 \"小不点\"." 
 WINONA.DESCRIBE.KYNO_BRAINROCK_CORAL = "或许我能设计出更棒的机器？"
-WINONA.DESCRIBE.KYNO_BRAINROCK_ROCK = "那可真是个大脑啊！"
+
+WINONA.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "That's a big brain right there!",
+	PICKED = "Shut itself off, I guess.",
+}
 
 WINONA.DESCRIBE.BRAINMETTERSOUP = "儿童餐。"
 
-WINONA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "你看起来是个很随和的人。"
+WINONA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "You seem to be a very chill dude.",
+	SLEEPING = "We doesn't seem to be waking up any time soon.",
+}
+
 WINONA.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "啊哈！属于我的宝藏。"
 
-WINONA.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "我会保管好这个。"
+WINONA.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "I'll hold onto this.",
+	WAITING = "Yeesh...",
+}
+
 WINONA.DESCRIBE.KYNO_PACKIMBAGGIMS = "你这家伙嘴巴真大。"
 
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "那将是一项艰巨的工作。"
@@ -933,9 +1159,28 @@ WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "来点火吧！"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "这让我想起查理。"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "辛苦工作一天后，理应享受的犒赏。"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "这确实让工作场所变得明亮起来！"
-WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "随时爆米花，真方便。"
+
+WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Popcorn on demand, nice and handy.",
+	FUEL_HIGH = "Running at peak efficiency.",
+	FUEL_MED = "Still holding together.",
+	FUEL_LOW = "Needs fuel soon.",
+	EMPTY = "Shut down.",
+}
+
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "这才是真正的派对气氛！"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "是时候开始派对了！"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "量身定制！萨米真是团队的一员了，对吧？"
 
 WINONA.DESCRIBE.KYNO_FISHREGISTRYHAT = "很适合学习规律，鱼可不少。"
+
+WINONA.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Built to keep things fed.",
+	FUEL_HIGH = "Stocked up nice and full.",
+	FUEL_MED = "Holding steady.",
+	FUEL_LOW = "Needs attention soon.",
+	EMPTY = "Bone dry.",
+	BURNT = "Total loss.",
+}

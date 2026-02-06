@@ -90,6 +90,8 @@ WILSON.ANNOUNCE_KYNO_POTHANGER_FAIL = "需要一个锅。"
 
 WILSON.ANNOUNCE_KYNO_CASSEROLE_FAIL = "需要一个砂锅。"
 
+WILSON.ANNOUNCE_KYNO_SAPHEALER_USED = "I must remind myself to not let this happen again."
+
 WILSON.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "科学说……肉可不会树上长！"
 
 WILSON.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "空了！萨米肯定把它清空了。"
@@ -129,11 +131,23 @@ WILSON.DESCRIBE.KYNO_SYRUP = "为食品添加甜味。"
 WILSON.DESCRIBE.KYNO_COFFEEBEANS = "他们需要一些烘焙。"
 WILSON.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "热量确实改善了它们。"
 
-WILSON.DESCRIBE.DUG_KYNO_COFFEEBUSH = "这是一种值得我慢慢欣赏的植物。"
-WILSON.DESCRIBE.KYNO_COFFEEBUSH = "这是一种我可以学会去爱的植物。"
+WILSON.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Now it can grow somewhere better."
 
-WILSON.DESCRIBE.DUG_KYNO_SPOTBUSH = "这让我想起了那些触手怪物。"
-WILSON.DESCRIBE.KYNO_SPOTBUSH = "这让我想起了那些触手怪物。"
+WILSON.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "This is a plant I could learn to love.",
+	PICKED = "I'll need to wait for the beans to grow back.",
+	WITHERED = "It's far too wet to produce anything.",
+}
+
+WILSON.DESCRIBE.DUG_KYNO_SPOTBUSH = "I should plant it somewhere suitable."
+
+WILSON.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "It reminds me of those tentacle monsters.",
+	PICKED = "It needs time to recover.",
+	BURNING = "There goes the shrub.",
+}
 
 WILSON.DESCRIBE.KYNO_SPOTSPICE_LEAF = "我可以把它磨成香料。"
 
@@ -194,10 +208,24 @@ WILSON.DESCRIBE.LONGPIGMEAL = "这是个糟糕的主意。"
 
 WILSON.DESCRIBE.CUCUMBERSALAD = "这就是我所说的健康食品。"
 
-WILSON.DESCRIBE.KYNO_WILDWHEAT = "这是一簇麦穗"
-WILSON.DESCRIBE.DUG_KYNO_WILDWHEAT = "这是一簇小麦"
+WILSON.DESCRIBE.DUG_KYNO_WILDWHEAT = "I should plant it somewhere better."
+
+WILSON.DESCRIBE.KYNO_WILDWHEAT =
+{
+	GENERIC = "Wild grain, growing freely.",
+	PICKED = "It needs time to grow back.",
+	WITHERED = "It's far too dry to survive.",
+	BURNING = "All that grain is lost.",
+}
 
 WILSON.DESCRIBE.KYNO_MEALGRINDER = "我可以用它粉碎东西。"
+
+WILSON.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Are those mushrooms? I'm stumped.",
+	PICKED = "They will grow back, eventually.",
+	BURNING = "Waste of precious mushrooms.",
+}
 
 WILSON.DESCRIBE.GORGE_BREAD = "蓬松的一块面包。"
 WILSON.DESCRIBE.GORGE_SWEET_CHIPS = "脆脆的。"
@@ -340,27 +368,57 @@ WILSON.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "坏掉了。"
 
 WILSON.DESCRIBE.KYNO_SEEDS_KIT = "满满一包种子"
 
-WILSON.DESCRIBE.KYNO_LIMPETROCK = "我可以装满一桶蜗牛。"
+WILSON.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "I could fill a pail with all those snails.",
+	PICKED = "Will need to wait until the snails crawl back.",
+	WITHERED = "Not going to grow anything in this state.",
+}
+
 WILSON.DESCRIBE.KYNO_LIMPETS = "也许挨饿不会那么糟糕。"
 WILSON.DESCRIBE.KYNO_LIMPETS_COOKED = "蜗牛！"
 
-WILSON.DESCRIBE.KYNO_LOTUS_OCEAN = "我可以吃吗？还是烧掉？"
+WILSON.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "The science is blooming well this season.",
+	PICKED = "Needs some time to regrow its flower.",
+	BURNING = "Oh no, that's really bad.",
+}
+
 WILSON.DESCRIBE.KYNO_LOTUS_ROOT = "某种湿生植物，我能种下它来培育更多湿生植物。"
 WILSON.DESCRIBE.KYNO_LOTUS_FLOWER = "一朵可爱的科学花。"
 WILSON.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "美味佳肴。"
 
-WILSON.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "这就是这里的食物吗？"
+WILSON.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Is that what passes for food around here?",
+	PICKED = "They'll grow back. I hope.",
+	BURNING = "Another marine plant lost to the fire.",
+}
+
 WILSON.DESCRIBE.KYNO_SEAWEEDS = "一种杂草。来自海洋。"
 WILSON.DESCRIBE.KYNO_SEAWEEDS_COOKED = "脆皮。"
 WILSON.DESCRIBE.KYNO_SEAWEEDS_DRIED = "咸！"
 WILSON.DESCRIBE.KYNO_SEAWEEDS_ROOT = "我可以种植一些湿粘液来制造更多湿粘液。"
 
-WILSON.DESCRIBE.KYNO_TAROROOT_OCEAN = "为什么它会在水中生长？"
+WILSON.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "So purple.",
+	PICKED = "These waters will help it grow back faster.",
+	BURNING = "Looks like I've lost another root.",
+}
+
 WILSON.DESCRIBE.KYNO_TAROROOT_ROOT = "有些湿球我能种下，再培育出更多湿球。"
 WILSON.DESCRIBE.KYNO_TAROROOT = "看起来像紫胡椒。"
 WILSON.DESCRIBE.KYNO_TAROROOT_COOKED = "它的紫色更少。"
 
-WILSON.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "这是新的。"
+WILSON.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "That's new.",
+	PICKED = "I hope this grows back soon enough.",
+	BURNING = "Well. That's unfortunate.",
+}
+
 WILSON.DESCRIBE.KYNO_WATERYCRESS_ROOT = "一些湿漉漉的杂草，我种下去还能长出更多湿漉漉的杂草。"
 WILSON.DESCRIBE.KYNO_WATERYCRESS = "这是新的。"
 
@@ -368,17 +426,40 @@ WILSON.DESCRIBE.WATERYCRESSBOWL = "闻起来像它的味道。"
 
 WILSON.DESCRIBE.KYNO_SALT = "里面全是盐。"
 
+WILSON.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Mussels are growing on it.",
+	PICKED = "I'll need to wait for more mussels.",
+	BURNING = "There go the mussels.",
+}
+
 WILSON.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "我真的要把它粘在那些贻贝上。"
 
 WILSON.DESCRIBE.CATFOOD = "给我的猫吃的零食！"
 
 WILSON.DESCRIBE.KATFOOD = "给我的猫吃的零食！"
 
-WILSON.DESCRIBE.KYNO_BANANATREE = "这是一棵普通的香蕉树。"
+WILSON.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "It's a rare banana tree.",
+	PICKED = "Needs some time to regrow its product.",
+	CHOPPED = "No more bananas for it or me.",
+	BURNING = "Too bad we lost another rare tree.",
+	BURNT = "Nothing but ashes left.",
+}
+
 WILSON.DESCRIBE.KYNO_BANANA = "它是糊状的。"
 WILSON.DESCRIBE.KYNO_BANANA_COOKED = "好吃！"
 
-WILSON.DESCRIBE.KYNO_KOKONUTTREE = "多么热带。"
+WILSON.DESCRIBE.KYNO_KOKONUTTREE =
+{
+	GENERIC = "How tropical.",
+	PICKED = "I need to wait a little bit if I want more coconuts.",
+	CHOPPED = "It won't give me any coconuts now.",
+	BURNING = "I could've prevented that.",
+	BURNT = "Ashes to ashes.",
+}
+
 WILSON.DESCRIBE.KYNO_KOKONUT = "这种水果必须在它的盔甲下隐藏什么秘密？"
 WILSON.DESCRIBE.KYNO_KOKONUT_HALVED = "当我同时点击它们时，它们会发出马蹄声。"
 WILSON.DESCRIBE.KYNO_KOKONUT_COOKED = "现在我只需要一块蛋糕。"
@@ -426,13 +507,43 @@ WILSON.DESCRIBE.TURF_STONECITY = "如此明亮和白色。"
 WILSON.DESCRIBE.TURF_FIELDS = "这是一块土地。"
 WILSON.DESCRIBE.TURF_TIDALMARSH = "沼泽地。"
 
+WILSON.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Salt has gathered on the rope.",
+	PICKED = "Science takes time.",
+}
+
 WILSON.DESCRIBE.KYNO_SALTRACK_INSTALLER = "用于从池塘中收获盐分。"
 
 WILSON.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "我们可以用它来收集树上的汁液。"
 
 WILSON.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "一个狡猾的陷阱。"
 
-WILSON.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "我猜你在这里负责？"
+WILSON.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "I guess you're in charge around here?",
+	SLEEPING = "Can't really wake up him right now.",
+}
+
+WILSON.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "It's full of delicious, delicious sap.",
+	CHOPPED = "Where'd the tree go? I'm stumped.",
+	SAPPED = "Sweet golden sap.",
+	PICKED = "Here sappy, sappy, sap.",
+	BURNING = "There goes the sap... and the tree.",
+	BURNT = "Just a charred reminder of poor decisions.",
+}
+
+WILSON.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "It looks ill.",
+	CHOPPED = "It wasn't much use anyway.",
+	SAPPED = "The sap is ruined, but harvestable.",
+	PICKED = "That's how you get ants.",
+	BURNING = "Probably for the best.",
+	BURNT = "No fixing for that.",
+}
 
 WILSON.DESCRIBE.KYNO_SUGARTREE_BUD = "它有糖味。"
 
@@ -453,13 +564,22 @@ WILSON.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "这里没有假货。"
 
 WILSON.DESCRIBE.KYNO_SLAUGHTERTOOL = "用于外科屠宰的实验室工具。"
 
-WILSON.DESCRIBE.KYNO_CHICKEN2 = "这是一只小鸡。"
+WILSON.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "It's a little chicken.",
+	COOP = "My very own chicken!",
+}
 
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG = "一枚小小的鸡蛋。"
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "That is one impressively large breakfast."
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "好喝！"
 
-WILSON.DESCRIBE.KYNO_CHICKENHOUSE = "一个适合养鸡的好地方。"
+WILSON.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "A proper home for chickens.",
+	FULL = "The eggs are ready for harvest!",
+	BURNT = "The chickens got evicted.",
+}
 
 WILSON.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "全部损坏。"
 
@@ -482,8 +602,11 @@ WILSON.DESCRIBE.KYNO_COOKWARE_OVEN = "科学需要原料。"
 WILSON.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "它需要原料才能发挥作用。"
 WILSON.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "它需要原料才能发挥作用。"
 
-WILSON.DESCRIBE.KYNO_ROCKFLIPPABLE = "你永远不知道你会在岩石下找到什么。"
-WILSON.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "你永远不知道你会在岩石下找到什么。"
+WILSON.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "You never know what you'll find under a rock.",
+	FLIPPED = "There was some stuff underneath it.",
+}
 
 WILSON.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "当然，我可以把它敲出来。"
 
@@ -526,7 +649,12 @@ WILSON.DESCRIBE.PEPPERROLLS = "满满一嘴！"
 
 WILSON.DESCRIBE.KYNO_SAPHEALER = "我不喝那个。"
 
-WILSON.DESCRIBE.KYNO_OCEAN_WRECK = "可怜的小船。"
+WILSON.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "Poor little boat.",
+	PICKED = "The snails will eventually grow back by the crashed vessel.",
+	BURNING = "Now I'm certain that it will sink.",
+}
 
 WILSON.DESCRIBE.KYNO_GHOST_PIRATE = "他遭遇了惨烈的结局。若我不逃离此地，我也将步其后尘。"
 
@@ -543,11 +671,31 @@ WILSON.DESCRIBE.KYNO_PLANTMEAT_DRIED = "够生涩了。"
 
 WILSON.DESCRIBE.KYNO_BREWBOOK = "我一直渴望知识。"
 
-WILSON.DESCRIBE.KYNO_WOODENKEG = "我想知道我能用这个做什么。"
+WILSON.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "I wonder what I can make using this.",
+	BREWING_LONG = "This will take some days to brew.",
+	BREWING_SHORT = "Only a couple hours left for my brew.",
+	DONE = "Looks like my brew is already done!",
+	BURNT = "Looks like I'm not going to see that brew anymore.",
+}
 
-WILSON.DESCRIBE.KYNO_PRESERVESJAR = "用于制作果酱。"
+WILSON.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "For the making of jams.",
+	BREWING_LONG = "Cured goodies sure takes a long time to make.",
+	BREWING_SHORT = "It's almost mine!",
+	DONE = "All that waiting game was totally worth it!",
+	BURNT = "That's a sad end.",
+}
 
-WILSON.DESCRIBE.KYNO_ANTCHEST = "慢慢来制作蜂蜜。"
+WILSON.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "Take its sweet time making honey.",
+	HONEY = "Looks like it's full of honeyed goods.",
+	NECTAR = "The nectar is being processed.",
+	BURNING = "All that sweetness is going up in smoke!",
+}
 
 WILSON.DESCRIBE.KYNO_NECTAR_POD = "我可以用它来做蜂蜜。"
 
@@ -557,13 +705,47 @@ WILSON.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "拿下它，小树！"
 WILSON.DESCRIBE.KYNO_PIKO = "他有点疯狂。"
 WILSON.DESCRIBE.KYNO_PIKO_ORANGE = "不知为何我想喝茶。"
 
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_TREE = "多可爱的树啊。"
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "全是松鼠！"
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "What a lovely tree.",
+	CHOPPED = "All the tea leaves are mine now!",
+	BURNING = "Oh no!",
+	BURNT = "I could've prevented that.",
+}
+
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
+{
+	GENERIC = "It's full of squirrels!",
+	BURNING = "Good riddance. Now they don't have a tree to call home.",
+}
+
 WILSON.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "一定有办法打开它。"
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "谁会住在这里？"
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "闻起来不太好。"
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "这些向你展示的一些非常罕见的物品。"
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "你今天卖什么？"
+
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "Who would live here?",
+	BURNT = "Crispy.",
+}
+
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "Doesn't smell very good.",
+	CRAFTED = "It's actually kind of cute.",
+	BURNT = "Ugh, the smell!",
+}
+
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "These are some quite rare items in your display.",
+	OCCUPIED = "Seems like the shop is closed for now.",
+}
+
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "What are you selling today?",
+	EMPTY = "Its all empty. I'll come back later, Sammy.",
+}
+
 WILSON.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "嘿！我记得你在那个可怕的地方。"
 WILSON.DESCRIBE.KYNO_MEADOWISLAND_POND = "潮汐留下的水池。"
 WILSON.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "这是一种植物。"
@@ -713,8 +895,15 @@ WILSON.DESCRIBE.RISOTTO = "好极了！"
 
 WILSON.DESCRIBE.RICESAKE = "再给我来一杯！*嗝*"
 
-WILSON.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "尖尖的！"
-WILSON.DESCRIBE.KYNO_PINEAPPLEBUSH = "尖尖的！"
+WILSON.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "I uprooted the whole thing."
+
+WILSON.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "Spiky!",
+	PICKED = "It needs time to grow another pineapple.",
+	WITHERED = "It's far too dry to grow anything.",
+	BURNING = "There goes the pineapple.",
+}
 
 WILSON.DESCRIBE.KYNO_PINEAPPLE = "它需要一个裂缝。"
 WILSON.DESCRIBE.KYNO_PINEAPPLE_HALVED = "一片精致的菠萝！"
@@ -726,7 +915,11 @@ WILSON.DESCRIBE.PINACOLADA = "冰冰的。"
 
 WILSON.DESCRIBE.CHIMAS = "清爽的香草饮料。"
 
-WILSON.DESCRIBE.KYNO_GARDEN_SPRINKLER = "你认为它是用来装水的吗？"
+WILSON.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "Water you think it's for?",
+	ON = "Keeps my farm plants watered and healthy.",
+}
 
 WILSON.DESCRIBE.KYNO_FOODSACK = "最讨厌食物带着不新鲜的味道了。"
 
@@ -835,11 +1028,21 @@ WILSON.DESCRIBE.RICEANDBEANS = "健康餐点选择。"
 
 WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "里面藏着什么秘密？也许2026年我们会知道。"
 
-WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND = "野生松露！有人一定嗅到了它们。"
+WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Wild truffles! Someone must have sniffed this out.",
+	PICKED = "I hope I can get more of them soon!",
+	BURNING = "Such waste of a delicacy!",
+}
+
 WILSON.DESCRIBE.KYNO_TRUFFLES = "一种稀有而芳香的美味。"
 WILSON.DESCRIBE.KYNO_TRUFFLES_COOKED = "这香气太诱人了！"
 
-WILSON.DESCRIBE.KYNO_ITEMSHOWCASER = "展示我烹饪成果的完美地方！"
+WILSON.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "A perfect place to show my culinary triumphs!",
+	FULL = "I'm very proud of myself for cooking such a magnificent dish.",
+}
 
 WILSON.DESCRIBE.KYNO_SPORECAP = "看起来……不太健康。"
 WILSON.DESCRIBE.KYNO_SPORECAP_COOKED = "还是很恶心，但也许能吃？"
@@ -859,7 +1062,15 @@ WILSON.DESCRIBE.TRUFFLEOIL = "精致又芳香！我想知道能用它做些什�
 
 WILSON.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "钓鱼装备！"
 WILSON.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "看起来像是一家优质鱼苗场的开端。"
-WILSON.DESCRIBE.KYNO_FISHFARMPLOT = "鱼类繁衍之地。"
+
+WILSON.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "A place for fish to multiply.",
+	FUEL_HIGH = "They are well fed!",
+	FUEL_MED = "They keep eating nicely.",
+	FUEL_LOW = "Going to need some fish food soon.",
+	EMPTY = "They have drained all the food.",
+}
 
 WILSON.DESCRIBE.KYNO_ANTCHOVY = "这……是鱼？还是虫？科学界都困惑了。"
 WILSON.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "它们正成群结队地聚集！太神奇了！"
@@ -916,14 +1127,29 @@ WILSON.DESCRIBE.MONKEYISLANDMEAL = "一道足以解除任何诅咒的皇家珍�
 WILSON.DESCRIBE.KYNO_BRAINROCK_LARVAE = "那是个婴儿脑！"
 WILSON.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "我才不想碰那个小东西呢。"
 WILSON.DESCRIBE.KYNO_BRAINROCK_CORAL = "值得深思。"
-WILSON.DESCRIBE.KYNO_BRAINROCK_ROCK = "我猜它在策划什么……"
+
+WILSON.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "I wonder what it's plotting...",
+	PICKED = "It needs to rest its brain.",
+}
 
 WILSON.DESCRIBE.BRAINMETTERSOUP = "今天我感觉自己特别聪明。"
 
-WILSON.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "我对这家伙简直毫无抵抗力。"
+WILSON.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "I'm a sucker for this guy.",
+	SLEEPING = "He's sleeping now. Won't be able to do any trades.",
+}
+
 WILSON.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "我希望那东西是防水的。"
 
-WILSON.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "这似乎是件我该随身携带的东西。"
+WILSON.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "This seems something I should carry around.",
+	WAITING = "Hmm, he must be around here somewhere...",
+}
+
 WILSON.DESCRIBE.KYNO_PACKIMBAGGIMS = "我敢打赌我能塞满一堆东西。"
 
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "天哪！我等不及要组装它了！"
@@ -933,9 +1159,28 @@ WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "为节日点亮！"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "好派对的精神！"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "一份庆祝！"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "为庆典增添节日氛围！"
-WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "它神奇地让玉米爆开！"
+
+WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "It pops corn magically!",
+	FUEL_HIGH = "Fuel supply running smoothly.",
+	FUEL_MED = "It can still produce some popcorn at this rate.",
+	FUEL_LOW = "I'm going to need more fuel soon.",
+	EMPTY = "No more popcorn until I refuel it.",
+}
+
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "爆米花，为盛大庆典准备！"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "没有什么比尖顶帽更能彰显派对氛围了！"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "等等。为什么只有他能戴特别的帽子？"
 
 WILSON.DESCRIBE.KYNO_FISHREGISTRYHAT = "一顶实用的帽子，献给认真的渔夫。"
+
+WILSON.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "A feeding trough for animals.",
+	FUEL_HIGH = "Plenty of food to go around.",
+	FUEL_MED = "It should last a while longer.",
+	FUEL_LOW = "Running low on food.",
+	EMPTY = "The animals must be hungry.",
+	BURNT = "No more feeding happening here.",
+}

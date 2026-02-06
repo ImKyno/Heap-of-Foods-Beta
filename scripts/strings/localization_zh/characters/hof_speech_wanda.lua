@@ -90,6 +90,8 @@ WANDA.ANNOUNCE_KYNO_POTHANGER_FAIL = "该去找个锅来煮这个了。"
 
 WANDA.ANNOUNCE_KYNO_CASSEROLE_FAIL = "找到正确的答案需要一些时间。"
 
+WANDA.ANNOUNCE_KYNO_SAPHEALER_USED = "This antidote shall give you a second chance."
+
 WANDA.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "时间终将耗尽，对所有人，对所有事物。"
 
 WANDA.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "空的？真是浪费我宝贵的时间。"
@@ -129,11 +131,23 @@ WANDA.DESCRIBE.KYNO_SYRUP = "啊哈。令人耳目一新。"
 WANDA.DESCRIBE.KYNO_COFFEEBEANS = "咖啡豆！"
 WANDA.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "我现在可以烤咖啡了。"
 
-WANDA.DESCRIBE.DUG_KYNO_COFFEEBUSH = "那是一丛咖啡吗？！"
-WANDA.DESCRIBE.KYNO_COFFEEBUSH = "那是一丛咖啡吗？！"
+WANDA.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Is that a coffee bush?!"
 
-WANDA.DESCRIBE.DUG_KYNO_SPOTBUSH = "灌木。"
-WANDA.DESCRIBE.KYNO_SPOTBUSH = "灌木。"
+WANDA.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "A plant people depend on.",
+	PICKED = "It needs time.",
+	WITHERED = "This moment isn't right.",
+}
+
+WANDA.DESCRIBE.DUG_KYNO_SPOTBUSH = "Its future depends on where it's planted."
+
+WANDA.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "A shrub.",
+	PICKED = "Time will restore it.",
+	BURNING = "That didn't have to happen.",
+}
 
 WANDA.DESCRIBE.KYNO_SPOTSPICE_LEAF = "我猜，我可以用它来做点什么……"
 
@@ -194,10 +208,24 @@ WANDA.DESCRIBE.LONGPIGMEAL = "不！"
 
 WANDA.DESCRIBE.CUCUMBERSALAD = "一份海沙拉。"
 
-WANDA.DESCRIBE.KYNO_WILDWHEAT = "在这里你往往能找到很多。"
-WANDA.DESCRIBE.DUG_KYNO_WILDWHEAT = "在这里你往往能找到很多。"
+WANDA.DESCRIBE.DUG_KYNO_WILDWHEAT = "Needs to be planted in a better place."
+
+WANDA.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "You tend to find a lot of it around here.",
+	PICKED = "It needs time.",
+	WITHERED = "This moment isn't right.",
+	BURNING = "That was avoidable.",
+}
 
 WANDA.DESCRIBE.KYNO_MEALGRINDER = "是时候研磨一些原料了！"
+
+WANDA.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Life persists in unexpected ways.",
+	PICKED = "Just a matter of time.",
+	BURNING = "This outcome was avoidable.",
+}
 
 WANDA.DESCRIBE.GORGE_BREAD = "终于！面包！"
 WANDA.DESCRIBE.GORGE_SWEET_CHIPS = "它们很不错。"
@@ -340,27 +368,57 @@ WANDA.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "太糟糕了。"
 
 WANDA.DESCRIBE.KYNO_SEEDS_KIT = "种子。"
 
-WANDA.DESCRIBE.KYNO_LIMPETROCK = "一块能生产食物的石头？！"
+WANDA.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "A rock that produces food?!",
+	PICKED = "Just a matter of waiting.",
+	WITHERED = "This moment yields nothing.",
+}
+
 WANDA.DESCRIBE.KYNO_LIMPETS = "蜗牛。"
 WANDA.DESCRIBE.KYNO_LIMPETS_COOKED = "再见，再见，蜗牛。"
 
-WANDA.DESCRIBE.KYNO_LOTUS_OCEAN = "一朵可食用的花。"
+WANDA.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "An edible flower.",
+	PICKED = "It will return in time.",
+	BURNING = "This outcome was avoidable.",
+}
+
 WANDA.DESCRIBE.KYNO_LOTUS_ROOT = "植物的根，可以种在某个地方。"
 WANDA.DESCRIBE.KYNO_LOTUS_FLOWER = "一朵可食用的花。"
 WANDA.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "好吃！"
 
-WANDA.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "杂草。"
+WANDA.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Weeds.",
+	PICKED = "It will return, given enough time.",
+	BURNING = "That wasn't supposed to happen.",
+}
+
 WANDA.DESCRIBE.KYNO_SEAWEEDS = "杂草。"
 WANDA.DESCRIBE.KYNO_SEAWEEDS_COOKED = "烤熟的杂草。"
 WANDA.DESCRIBE.KYNO_SEAWEEDS_DRIED = "来自海边的干枯海藻。"
 WANDA.DESCRIBE.KYNO_SEAWEEDS_ROOT = "杂草根，可以在某处种植。"
 
-WANDA.DESCRIBE.KYNO_TAROROOT_OCEAN = "奇怪的植物。"
+WANDA.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "Weird plant.",
+	PICKED = "It will return sooner than expected.",
+	BURNING = "This outcome was avoidable.",
+}
+
 WANDA.DESCRIBE.KYNO_TAROROOT_ROOT = "植物的根，可以种在某个地方。"
 WANDA.DESCRIBE.KYNO_TAROROOT = "嗯..."
 WANDA.DESCRIBE.KYNO_TAROROOT_COOKED = "闻起来很香......"
 
-WANDA.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "白菜，但是在这里？"
+WANDA.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "A brief moment of novelty.",
+	PICKED = "It should return soon enough.",
+	BURNING = "That ended sooner than expected.",
+}
+
 WANDA.DESCRIBE.KYNO_WATERYCRESS_ROOT = "杂草的根，可以种在某个地方。"
 WANDA.DESCRIBE.KYNO_WATERYCRESS = "白菜，但是在这里？"
 
@@ -368,17 +426,40 @@ WANDA.DESCRIBE.WATERYCRESSBOWL = "我喜欢这汤！"
 
 WANDA.DESCRIBE.KYNO_SALT = "只是盐。"
 
+WANDA.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "A slow harvest over time.",
+	PICKED = "This moment yields nothing.",
+	BURNING = "That wasn't inevitable.",
+}
+
 WANDA.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "迟早会有很多贻贝等着我。"
 
 WANDA.DESCRIBE.CATFOOD = "是时候喂猫了。"
 
 WANDA.DESCRIBE.KATFOOD = "是时候喂猫了。"
 
-WANDA.DESCRIBE.KYNO_BANANATREE = "种植香蕉需要时间。"
+WANDA.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "Rare things never last long.",
+	PICKED = "Just a matter of time.",
+	CHOPPED = "Its timeline ends here.",
+	BURNING = "This outcome was avoidable.",
+	BURNT = "Too late now.",
+}
+
 WANDA.DESCRIBE.KYNO_BANANA = "我喜欢没有大惊小怪的快餐。"
 WANDA.DESCRIBE.KYNO_BANANA_COOKED = "我为什么要花时间做饭？"
 
-WANDA.DESCRIBE.KYNO_KOKONUTTREE = "一棵椰子树。"
+WANDA.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "A palm tree.",
+	PICKED = "Just a matter of waiting.",
+	CHOPPED = "Its time ends here.",
+	BURNING = "This was avoidable.",
+	BURNT = "Too late now.",
+}
+
 WANDA.DESCRIBE.KYNO_KOKONUT = "需要一些时间才能打开它。"
 WANDA.DESCRIBE.KYNO_KOKONUT_HALVED = "吃的时间加倍。"
 WANDA.DESCRIBE.KYNO_KOKONUT_COOKED = "时间不多了！"
@@ -426,13 +507,43 @@ WANDA.DESCRIBE.TURF_STONECITY = "道路..."
 WANDA.DESCRIBE.TURF_FIELDS = "但愿时间能如此轻易地被培育出来。"
 WANDA.DESCRIBE.TURF_TIDALMARSH = "沼泽。"
 
+WANDA.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "All that waiting game just for some crystals.",
+	PICKED = "This will take some time.",
+}
+
 WANDA.DESCRIBE.KYNO_SALTRACK_INSTALLER = "我必须先组装它。"
 
 WANDA.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "从树上获取汁液需要一些时间。"
 
 WANDA.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "他们的时代已经到来。"
 
-WANDA.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "我知道时间对你做了什么。"
+WANDA.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "I see what the time has done to you.",
+	SLEEPING = "One day you will sleep forever.",
+}
+
+WANDA.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "A cycle of sweetness and time.",
+	CHOPPED = "Its future was cut short.",
+	SAPPED = "This is the right moment.",
+	PICKED = "The process continues.",
+	BURNING = "This wasn't inevitable.",
+	BURNT = "Too late to change it now.",
+}
+
+WANDA.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "Something went wrong in its timeline.",
+	CHOPPED = "No future left here.",
+	SAPPED = "Too late to fix it.",
+	PICKED = "It keeps repeating the mistake.",
+	BURNING = "This ends the loop.",
+	BURNT = "Time has closed on it.",
+}
 
 WANDA.DESCRIBE.KYNO_SUGARTREE_BUD = "我需要把它种在某个地方。"
 
@@ -453,13 +564,22 @@ WANDA.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "蟹肉，非常适合做精致的菜�
 
 WANDA.DESCRIBE.KYNO_SLAUGHTERTOOL = "我希望我没有空闲时间来使用它。"
 
-WANDA.DESCRIBE.KYNO_CHICKEN2 = "哇。一只小鸡！"
+WANDA.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "Awww. A little chicken!",
+	COOP = "Secured in this moment.",
+}
 
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG = "什么，你这个蛋？"
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "I don't have time to wait for something this large to hatch."
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "每当我做鸡蛋时，它们要么未烤熟，要么被烧焦。"
 
-WANDA.DESCRIBE.KYNO_CHICKENHOUSE = "确保鸡蛋稳定供应的及时解决方案。"
+WANDA.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "A well-timed solution for a steady supply of eggs.",
+	FULL = "Right on schedule.",
+	BURNT = "Too late to save it now.",
+}
 
 WANDA.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "现在不是修理东西的时候！只有时钟。"
 
@@ -482,8 +602,11 @@ WANDA.DESCRIBE.KYNO_COOKWARE_OVEN = "一个普通的旧烤箱。"
 WANDA.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "一个普通的旧烤箱。"
 WANDA.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "一个普通的旧烤箱。"
 
-WANDA.DESCRIBE.KYNO_ROCKFLIPPABLE = "猜猜，下面有什么东西。"
-WANDA.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "猜猜，下面有东西。"
+WANDA.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "Guess, there's something underneath.",
+	FLIPPED = "Time reveals all things.",
+}
 
 WANDA.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "让我们打开那个箱子。"
 
@@ -526,7 +649,12 @@ WANDA.DESCRIBE.PEPPERROLLS = "他们制作时间太长了......但他们很好�
 
 WANDA.DESCRIBE.KYNO_SAPHEALER = "这将及时修复树木。"
 
-WANDA.DESCRIBE.KYNO_OCEAN_WRECK = "他们没有足够的时间逃跑。"
+WANDA.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "They didn't had enough time to escape.",
+	PICKED = "Time will restore something here.",
+	BURNING = "That outcome is now certain.",
+}
 
 WANDA.DESCRIBE.KYNO_GHOST_PIRATE = "真棒。简直棒极了。"
 
@@ -543,11 +671,31 @@ WANDA.DESCRIBE.KYNO_PLANTMEAT_DRIED = "一块又老又硬的肉。"
 
 WANDA.DESCRIBE.KYNO_BREWBOOK = "酿造太费时间了，看看这些原料和方法！"
 
-WANDA.DESCRIBE.KYNO_WOODENKEG = "这肯定需要很长时间才能产生。"
+WANDA.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "This will sure take a long time to produce.",
+	BREWING_LONG = "This timeline takes patience.",
+	BREWING_SHORT = "Almost there.",
+	DONE = "Right on schedule.",
+	BURNT = "Too late to change that.",
+}
 
-WANDA.DESCRIBE.KYNO_PRESERVESJAR = "这肯定需要很长时间才能产生。"
+WANDA.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "This will sure take a long time to produce.",
+	BREWING_LONG = "This timeline requires patience.",
+	BREWING_SHORT = "Almost there.",
+	DONE = "Exactly as planned.",
+	BURNT = "No second winds.",
+}
 
-WANDA.DESCRIBE.KYNO_ANTCHEST = "时间仿佛凝固在其中。"
+WANDA.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "It's like the time is frozen inside of it.",
+	HONEY = "Right on time.",
+	NECTAR = "Still in the middle of the process.",
+	BURNING = "Too late to stop that now.",
+}
 
 WANDA.DESCRIBE.KYNO_NECTAR_POD = "需要一个地方和时间来成为蜂蜜。"
 
@@ -557,13 +705,47 @@ WANDA.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "烤得恰到好处！"
 WANDA.DESCRIBE.KYNO_PIKO = "你是个可爱的小家伙。"
 WANDA.DESCRIBE.KYNO_PIKO_ORANGE = "你的时间不多了，因为我正在和你泡茶！"
 
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_TREE = "只是一棵橡树。"
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "只是一棵茶树，有松鼠。"
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "Just a tree.",
+	CHOPPED = "Its purpose has passed.",
+	BURNING = "This wasn't inevitable.",
+	BURNT = "Too late now.",
+}
+
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "Just a tea tree, with squirrels.",
+	BURNING = "This didn't have to happen.",
+}
+
 WANDA.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "它只是一个木箱。"
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "我没时间跟他们浪费。"
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "或许我应该找一天学学钓鱼。"
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "我能看出，这些物品中的某些并不来自这个世界。"
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "他在卖一堆各式各样的东西。"
+
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "I don't have time to waste with them.",
+	BURNT = "Too late to save it.",
+}
+
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "Perhaps I should learn how to fish someday.",
+	CRAFTED = "A noticeable improvement.",
+	BURNT = "Some things linger too long.",
+}
+
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "I can tell, some of these items aren't from this plane of existence.",
+	OCCUPIED = "Not the right moment for that.",
+}
+
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "He's selling a bunch of assorted things.",
+	EMPTY = "Nothing left this time.",
+}
+
 WANDA.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "请告诉我，我们以前见过吗？"
 WANDA.DESCRIBE.KYNO_MEADOWISLAND_POND = "我如果有空的话，可以从这个池塘里抓些鱼来。"
 WANDA.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "植物。"
@@ -713,8 +895,15 @@ WANDA.DESCRIBE.RISOTTO = "没时间了。"
 
 WANDA.DESCRIBE.RICESAKE = "不是我喜欢的类型。"
 
-WANDA.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "我明白了。这里到处都是尖刺。"
-WANDA.DESCRIBE.KYNO_PINEAPPLEBUSH = "我明白了。这里到处都是尖刺。"
+WANDA.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "I see. All the spikes around here."
+
+WANDA.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "I see. All the spikes around here.",
+	PICKED = "It will return in time.",
+	WITHERED = "This moment isn't right.",
+	BURNING = "Its timeline ends here.",
+}
 
 WANDA.DESCRIBE.KYNO_PINEAPPLE = "我不能浪费时间去打开它。"
 WANDA.DESCRIBE.KYNO_PINEAPPLE_HALVED = "客气。"
@@ -726,7 +915,11 @@ WANDA.DESCRIBE.PINACOLADA = "啊，我正需要这个。"
 
 WANDA.DESCRIBE.CHIMAS = "这不是我期待的茶话会！"
 
-WANDA.DESCRIBE.KYNO_GARDEN_SPRINKLER = "它能浇灌我的植物，还能节省我的时间。"
+WANDA.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "It waters my plants, and saves me some time.",
+	ON = "Working exactly as expected.",
+}
 
 WANDA.DESCRIBE.KYNO_FOODSACK = "冷却食品的实用容器。"
 
@@ -835,11 +1028,21 @@ WANDA.DESCRIBE.RICEANDBEANS = "我明白，这很健康，但还是喜欢吃点�
 
 WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "时间会告诉我们……我猜2026年它会大声说话。"
 
-WANDA.DESCRIBE.KYNO_TRUFFLES_GROUND = "时间流逝，它们会自己生长。真令人印象深刻。"
+WANDA.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Time passes, and they grow on their own. Impressive.",
+	PICKED = "I'll have to wait for the next chance.",
+	BURNING = "That opportunity is gone for good.",
+}
+
 WANDA.DESCRIBE.KYNO_TRUFFLES = "好东西总是需要等待……就像这些。"
 WANDA.DESCRIBE.KYNO_TRUFFLES_COOKED = "值得等待的美味。"
 
-WANDA.DESCRIBE.KYNO_ITEMSHOWCASER = "提醒人们，就连美丽也会随时间腐朽。"
+WANDA.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "An empty moment.",
+	FULL = "A reminder that even beauty spoils with time.",
+}
 
 WANDA.DESCRIBE.KYNO_SPORECAP = "时间对它可不友好。"
 WANDA.DESCRIBE.KYNO_SPORECAP_COOKED = "被时间和火焰共同烘烤。"
@@ -859,7 +1062,15 @@ WANDA.DESCRIBE.TRUFFLEOIL = "永恒的美味……如果你能忍受那味道的
 
 WANDA.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "再多捣点乱有什么关系？"
 WANDA.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "很快就会完成……我能感觉到。"
-WANDA.DESCRIBE.KYNO_FISHFARMPLOT = "鱼类的未来由此启航。"
+
+WANDA.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "A place where the future of fish begins.",
+	FUEL_HIGH = "No need to intervene yet.",
+	FUEL_MED = "Time is on their side.",
+	FUEL_LOW = "The balance is slipping.",
+	EMPTY = "Empty, exactly as predicted.",
+}
 
 WANDA.DESCRIBE.KYNO_ANTCHOVY = "我哪有时间给鱼虫杂交体分类！"
 WANDA.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "另一件怪事，我没时间研究。"
@@ -916,14 +1127,29 @@ WANDA.DESCRIBE.MONKEYISLANDMEAL = "时间能治愈一切……或许，是这顿
 WANDA.DESCRIBE.KYNO_BRAINROCK_LARVAE = "我没时间带孩子。"
 WANDA.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "看孩子不是我最喜欢的消遣方式。"
 WANDA.DESCRIBE.KYNO_BRAINROCK_CORAL = "少花时间思考，多花时间行动。"
-WANDA.DESCRIBE.KYNO_BRAINROCK_ROCK = "你可真是闲得没事干，总想着这些事呢？"
+
+WANDA.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "You sure got a lot of time for thinking, don't you?",
+	PICKED = "Its thoughts are on pause.",
+}
 
 WANDA.DESCRIBE.BRAINMETTERSOUP = "将思考所需的时间缩短一半。"
 
-WANDA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "开始交易吧。我可没时间浪费。"
+WANDA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "Let's get trading. I don't have spare time to waste.",
+	SLEEPING = "This moment isn't right.",
+}
+
 WANDA.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "这奖励值得我花时间！"
 
-WANDA.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "希望这值得我花时间。"
+WANDA.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "I hope this is worth my time.",
+	WAITING = "His time has ran out.",
+}
+
 WANDA.DESCRIBE.KYNO_PACKIMBAGGIMS = "你挺可爱的。真的！"
 
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "我打算花相当长的时间来处理这件事。"
@@ -933,9 +1159,28 @@ WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "更多蜡烛。更多时间压力。"
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "我不确定我是否相信那些东西。"
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "吃一块应该不会浪费太多时间……希望如此。"
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "庆祝活动固然美好，但前提是时间允许……"
-WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "准时的爆米花服务。"
+
+WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Timely popcorn service.",
+	FUEL_HIGH = "No need to intervene yet.",
+	FUEL_MED = "Time is slipping.",
+	FUEL_LOW = "Almost out of time.",
+	EMPTY = "Its moment has passed.",
+}
+
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "最好趁新鲜时享用...就像时间本身一样。"
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "嗯……我想，连时间旅行者也能庆祝吧。"
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "时光眷顾那些独具风格之人，比如萨米。"
 
 WANDA.DESCRIBE.KYNO_FISHREGISTRYHAT = "至少它能帮我记住已经学过的东西。"
+
+WANDA.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "A place where food slowly disappears.",
+	FUEL_HIGH = "No need to worry for now.",
+	FUEL_MED = "Time will empty it soon enough.",
+	FUEL_LOW = "Running out of time… and feed.",
+	EMPTY = "Exactly as expected.",
+	BURNT = "That outcome was inevitable.",
+}

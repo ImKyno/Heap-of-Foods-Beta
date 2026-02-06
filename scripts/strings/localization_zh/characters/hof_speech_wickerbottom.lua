@@ -90,6 +90,8 @@ WICKERBOTTOM.ANNOUNCE_KYNO_POTHANGER_FAIL = "它需要一个烹饪锅。"
 
 WICKERBOTTOM.ANNOUNCE_KYNO_CASSEROLE_FAIL = "哦，天哪，它需要一个砂锅来烹饪食物。"
 
+WICKERBOTTOM.ANNOUNCE_KYNO_SAPHEALER_USED = "This medicine proved to be useful for eliminating potential threats."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "迅捷而必要的终结。自然向来务实。"
 
 WICKERBOTTOM.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "它似乎已完全耗尽。"
@@ -129,11 +131,23 @@ WICKERBOTTOM.DESCRIBE.KYNO_SYRUP = "甜味剂。"
 WICKERBOTTOM.DESCRIBE.KYNO_COFFEEBEANS = "咖啡因含量很高。"
 WICKERBOTTOM.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "啊，烤肉闻起来很香。"
 
-WICKERBOTTOM.DESCRIBE.DUG_KYNO_COFFEEBUSH = "咖啡属。"
-WICKERBOTTOM.DESCRIBE.KYNO_COFFEEBUSH = "咖啡丛属。"
+WICKERBOTTOM.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Transplantation should prove beneficial."
 
-WICKERBOTTOM.DESCRIBE.DUG_KYNO_SPOTBUSH = "我不熟悉这种植物。"
-WICKERBOTTOM.DESCRIBE.KYNO_SPOTBUSH = "我不熟悉这种植物。"
+WICKERBOTTOM.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "Coffea genus.",
+	PICKED = "It will regenerate in due time.",
+	WITHERED = "The environmental conditions are unsuitable.",
+}
+
+WICKERBOTTOM.DESCRIBE.DUG_KYNO_SPOTBUSH = "It should be replanted promptly."
+
+WICKERBOTTOM.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "I am not familiar with this species of plant.",
+	PICKED = "It will regenerate in time.",
+	BURNING = "Such carelessness!",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_SPOTSPICE_LEAF = "它通过了通用可食用性测试。"
 
@@ -194,10 +208,24 @@ WICKERBOTTOM.DESCRIBE.LONGPIGMEAL = "无话可说。"
 
 WICKERBOTTOM.DESCRIBE.CUCUMBERSALAD = "营养丰富！"
 
-WICKERBOTTOM.DESCRIBE.KYNO_WILDWHEAT = "一簇禾本科植物的茎秆。"
-WICKERBOTTOM.DESCRIBE.DUG_KYNO_WILDWHEAT = "一簇禾本科植物的茎秆。"
+WICKERBOTTOM.DESCRIBE.DUG_KYNO_WILDWHEAT = "It would benefit from proper cultivation."
+
+WICKERBOTTOM.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "A cluster graminoid stalks.",
+	PICKED = "It will regenerate naturally.",
+	WITHERED = "The soil conditions are unsuitable.",
+	BURNING = "Such waste of a valuable resource!",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_MEALGRINDER = "用于机械地将我们的原料粉末化。"
+
+WICKERBOTTOM.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "A wild cluster of edible mushrooms.",
+	PICKED = "The mycelium remains intact.",
+	BURNING = "Such a waste of a valuable specimen!",
+}
 
 WICKERBOTTOM.DESCRIBE.GORGE_BREAD = "我可以把它变成好东西。"
 WICKERBOTTOM.DESCRIBE.GORGE_SWEET_CHIPS = "烹饪的奇迹。"
@@ -340,27 +368,57 @@ WICKERBOTTOM.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "多么糟糕的结果。"
 
 WICKERBOTTOM.DESCRIBE.KYNO_SEEDS_KIT = "一包方便携带的蔬菜种子。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_LIMPETROCK = "这块巨石是各种腹足动物的家园。"
+WICKERBOTTOM.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "This boulder is home to various gastropods.",
+	PICKED = "They will return in time.",
+	WITHERED = "The conditions are inhospitable.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_LIMPETS = "普通髌骨。"
 WICKERBOTTOM.DESCRIBE.KYNO_LIMPETS_COOKED = "熟髌骨。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_OCEAN = "莲藕，非常漂亮。"
+WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "Nelumbo nucifera, Quite beautiful.",
+	PICKED = "It will regenerate in time.",
+	BURNING = "This is a botanical disaster!",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_ROOT = "我一直梦想成为一名水培园艺师。"
 WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_FLOWER = "莲花的花朵。非常鼓舞人心。"
 WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "健康益处很多。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "海藻。"
+WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Marine algae.",
+	PICKED = "It will regenerate in time.",
+	BURNING = "Highly unusual and extremely wasteful.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS = "我承认，我不是什么植物学家。"
 WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_COOKED = "蛋白质含量很高。"
 WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_DRIED = "我已经把藻类晒干了。"
 WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_ROOT = "我一直想成为一名水上园艺师。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT_OCEAN = "芋头！"
+WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "Colocasia esculenta!",
+	PICKED = "The environment will hasten its regrowth.",
+	BURNING = "Such a waste of a useful plant.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT_ROOT = "我一直梦想成为一名水培园艺师。"
 WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT = "芋头！"
 WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT_COOKED = "我介绍：熟芋头。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "金莲花！"
+WICKERBOTTOM.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "Nasturtium officinale!",
+	PICKED = "It should regenerate swiftly.",
+	BURNING = "Entirely avoidable.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_WATERYCRESS_ROOT = "我一直梦想成为一名水培园艺师。"
 WICKERBOTTOM.DESCRIBE.KYNO_WATERYCRESS = "金莲花！"
 
@@ -368,17 +426,40 @@ WICKERBOTTOM.DESCRIBE.WATERYCRESSBOWL = "臭，但很有营养。"
 
 WICKERBOTTOM.DESCRIBE.KYNO_SALT = "氯化钠。也称为食盐。"
 
+WICKERBOTTOM.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "A simple yet effective aquaculture method.",
+	PICKED = "The mussels will regrow in time.",
+	BURNING = "Such a waste of resources!",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "收获，软体动物。"
 
 WICKERBOTTOM.DESCRIBE.CATFOOD = "猫零食。"
 
 WICKERBOTTOM.DESCRIBE.KATFOOD = "猫零食。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_BANANATREE = "太阳有助于果实长得更好。"
+WICKERBOTTOM.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "The sun will help the fruits grow better.",
+	PICKED = "It will require time to regenerate.",
+	CHOPPED = "A regrettable loss of botanical value.",
+	BURNING = "Such negligence with a rare specimen!",
+	BURNT = "Completely destroyed.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_BANANA = "一种芭蕉!"
 WICKERBOTTOM.DESCRIBE.KYNO_BANANA_COOKED = "好一点。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_KOKONUTTREE = "我想坐在它下面拿着一本好书。"
+WICKERBOTTOM.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "I'd like to sit underneath it with a good book.",
+	PICKED = "It requires time to regenerate.",
+	CHOPPED = "A waste of a useful specimen.",
+	BURNING = "Such carelessness!",
+	BURNT = "Completely destroyed.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_KOKONUT = "多么巨大的种子！"
 WICKERBOTTOM.DESCRIBE.KYNO_KOKONUT_HALVED = "我设法撬开了它的外部防御。"
 WICKERBOTTOM.DESCRIBE.KYNO_KOKONUT_COOKED = "椰子肉，很好吃。"
@@ -426,13 +507,43 @@ WICKERBOTTOM.DESCRIBE.TURF_STONECITY = "地面。你踩在上面。"
 WICKERBOTTOM.DESCRIBE.TURF_FIELDS = "地面。你踩在上面。"
 WICKERBOTTOM.DESCRIBE.TURF_TIDALMARSH = "地面。你踩在上面。"
 
+WICKERBOTTOM.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Enough salt has crystallized to harvest.",
+	PICKED = "Salt deposits should form on the rack soon.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_SALTRACK_INSTALLER = "我们应该把它放在钠泉旁边。"
 
 WICKERBOTTOM.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "一个简单的砍树工具。"
 
 WICKERBOTTOM.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "用于诱捕海洋生物。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "他们的社会有着鲜明的社会阶级角色。"
+WICKERBOTTOM.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "Their society stark social class roles.",
+	SLEEPING = "He's currently busy sleeping.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "What unique coloring. I should like to press its leaves in my books!",
+	CHOPPED = "I should at least like to study its rings.",
+	SAPPED = "No sense letting it sit.",
+	PICKED = "Sap collection is under way.",
+	BURNING = "Such a waste of knowledge!",
+	BURNT = "Entirely destroyed.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "Its internal structure has been damaged, but it can still recover.",
+	CHOPPED = "It was unsalvageable.",
+	SAPPED = "Ruined, yet collectible.",
+	PICKED = "The insecta are drawn to the glucose.",
+	BURNING = "An unfortunate necessity.",
+	BURNT = "Completely lost.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_SUGARTREE_BUD = "一个混有糖的花蕾。"
 
@@ -453,13 +564,22 @@ WICKERBOTTOM.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "生的帝王蟹的肉"
 
 WICKERBOTTOM.DESCRIBE.KYNO_SLAUGHTERTOOL = "可怕。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN2 = "驯养的加鲁斯加鲁斯"
+WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "A wild Gallus Gallus",
+	COOP = "Safely housed and properly contained.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG = "也许它受精了。"
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "An unusually large specimen of Gallus gallus."
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "要是我有一些吐司就好了。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_CHICKENHOUSE = "适合饲养家禽的简易围栏。"
+WICKERBOTTOM.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "A simple enclosure suitable for domesticated fowl.",
+	FULL = "The egg production cycle is complete.",
+	BURNT = "A tragic loss of agricultural resources.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "它已经在这里很久了。"
 
@@ -482,8 +602,11 @@ WICKERBOTTOM.DESCRIBE.KYNO_COOKWARE_OVEN = "它最适合烘焙糖果。"
 WICKERBOTTOM.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "它最适合烘焙糖果。"
 WICKERBOTTOM.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "它最适合烘焙糖果。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_ROCKFLIPPABLE = "有趣的昆虫是在岩石下发现的。"
-WICKERBOTTOM.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "有趣的昆虫是在岩石下发现的。"
+WICKERBOTTOM.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "The most interesting insects are found under rocks.",
+	FLIPPED = "As expected, small organisms.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "我想知道它在海上漂流了多久？"
 
@@ -526,7 +649,12 @@ WICKERBOTTOM.DESCRIBE.PEPPERROLLS = "对我来说有点辣！"
 
 WICKERBOTTOM.DESCRIBE.KYNO_SAPHEALER = "这些内容应该是最有用的解毒剂。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_OCEAN_WRECK = "这艘船遭遇风暴。现在它属于大海。"
+WICKERBOTTOM.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "This ship got caught in a storm. Now it belongs to the sea.",
+	PICKED = "Marine life will recolonize it in time.",
+	BURNING = "This accelerates its deterioration.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_GHOST_PIRATE = "超自然海盗活动。"
 
@@ -543,11 +671,31 @@ WICKERBOTTOM.DESCRIBE.KYNO_PLANTMEAT_DRIED = "咸但令人满意。"
 
 WICKERBOTTOM.DESCRIBE.KYNO_BREWBOOK = "酿造观察的集合。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_WOODENKEG = "完美的酒桶。"
+WICKERBOTTOM.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "A perfect barrel for making beverages.",
+	BREWING_LONG = "The brewing process has just begun.",
+	BREWING_SHORT = "It is nearly complete.",
+	DONE = "The brew is ready for consumption.",
+	BURNT = "Utterly ruined.",
+}
 
-WICKERBOTTOM.DESCRIBE.KYNO_PRESERVESJAR = "它有很多用途，除了泡菜或果酱。"
+WICKERBOTTOM.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "It has many uses, besides pickles or jams.",
+	BREWING_LONG = "The curing process is proceeding slowly.",
+	BREWING_SHORT = "It is nearly finished.",
+	DONE = "Successfully preserved.",
+	BURNT = "A regrettable loss.",
+}
 
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHEST = "一个特别粘稠的蜂蜜促进者。"
+WICKERBOTTOM.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "A particularly sticky facilitator of honey.",
+	HONEY = "The honey reserves appear sufficient.",
+	NECTAR = "The nectar is undergoing conversion.",
+	BURNING = "Such a waste of valuable resources.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_NECTAR_POD = "我想知道这能不能变成蜂蜜。"
 
@@ -557,13 +705,47 @@ WICKERBOTTOM.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "我想要一杯合适的茶。"
 WICKERBOTTOM.DESCRIBE.KYNO_PIKO = "一个迷人的哺乳动物绒毛球。"
 WICKERBOTTOM.DESCRIBE.KYNO_PIKO_ORANGE = "一个有趣的哺乳动物绒毛球。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_TREE = "一个很好的山茶花例子。"
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "一个很好的山茶花例子。"
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "A fine example of Camellia Sinensis.",
+	CHOPPED = "All usable material has been collected.",
+	BURNING = "This is most unfortunate!",
+	BURNT = "A total loss.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "It is infested with squirrels.",
+	BURNING = "An unfortunate ecological disruption.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "里面有什么？"
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "明显破旧不堪。"
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "两栖棚屋。"
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "我想这就是他存放所有物品的地方。"
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "装满货物的小推车。"
+
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "A primitive yet functional dwelling.",
+	BURNT = "A regrettable loss of shelter.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "An amphibious shack.",
+	CRAFTED = "Much more suitable for habitation.",
+	BURNT = "The stench is most unpleasant.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "I guess that's where he keeps all his stock.",
+	OCCUPIED = "The shopkeeper appears to be resting.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "A wagon filled with wares.",
+	EMPTY = "It appears to be out of stock.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "看来我们又见面了，亲爱的。"
 WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_POND = "潮汐池是迷人的微生态系统！"
 WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "一种栖息于沼泽的根茎。"
@@ -713,8 +895,15 @@ WICKERBOTTOM.DESCRIBE.RISOTTO = "在一些地方，这是一种非常流行的�
 
 WICKERBOTTOM.DESCRIBE.RICESAKE = "适量饮酒。"
 
-WICKERBOTTOM.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "菠萝丛。不可思议！"
-WICKERBOTTOM.DESCRIBE.KYNO_PINEAPPLEBUSH = "菠萝丛。不可思议！"
+WICKERBOTTOM.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "I need to plant it somewhere."
+
+WICKERBOTTOM.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "A bush of Ananas comosus. Incredible.",
+	PICKED = "It will require time to regenerate.",
+	WITHERED = "The soil conditions are unsuitable.",
+	BURNING = "Such a waste of a useful plant!",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_PINEAPPLE = "好一个带刺的菠萝！"
 WICKERBOTTOM.DESCRIBE.KYNO_PINEAPPLE_HALVED = "差不多可以吃了。"
@@ -726,7 +915,11 @@ WICKERBOTTOM.DESCRIBE.PINACOLADA = "用菠萝和椰子制成的美味饮品。"
 
 WICKERBOTTOM.DESCRIBE.CHIMAS = "这是来自南方的经典佳酿。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_GARDEN_SPRINKLER = "补充急需的水分"
+WICKERBOTTOM.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "Some much needed hydration.",
+	ON = "It provides consistent hydration.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_FOODSACK = "保持我的补给凉爽！"
 
@@ -835,11 +1028,21 @@ WICKERBOTTOM.DESCRIBE.RICEANDBEANS = "一顿非常健康且营养丰富的午餐
 
 WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "它破败的状态暗示着未来的修复。我预测2026年会有动静。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND = "块菌！一种珍贵的地下美味。"
+WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Tuber melanosporum! A prized subterranean delicacy.",
+	PICKED = "It will take time for more to grow.",
+	BURNING = "An unforgivable waste.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES = "真正的松露，在美食界备受推崇。"
 WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_COOKED = "烹饪增强了它们独特的香气。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_ITEMSHOWCASER = "展示精致美食的恰当方式。"
+WICKERBOTTOM.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "A proper way to present fine gastronomy.",
+	FULL = "A fine example of culinary technique.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_SPORECAP = "真菌样本，呈现出严重的枯萎状态。"
 WICKERBOTTOM.DESCRIBE.KYNO_SPORECAP_COOKED = "经过加热后略有改善。"
@@ -859,7 +1062,15 @@ WICKERBOTTOM.DESCRIBE.TRUFFLEOIL = "一种由地下真菌提炼的精致烹饪�
 
 WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "哦，我真喜欢这个样子。"
 WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "一个受控水产养殖环境的良好开端。"
-WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT = "用于水产养殖繁殖的人工环境。"
+
+WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "An artificial environment for aquaculture reproduction.",
+	FUEL_HIGH = "The fish are well nourished.",
+	FUEL_MED = "Feeding levels remain adequate.",
+	FUEL_LOW = "Replenishment will soon be required.",
+	EMPTY = "The feed supply is exhausted.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY = "一只极为奇特的节肢动物-鱼类混合标本！"
 WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "罕见的跨物种群游行为！"
@@ -916,14 +1127,29 @@ WICKERBOTTOM.DESCRIBE.MONKEYISLANDMEAL = "水果与海鲜的迷人组合。出�
 WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_LARVAE = "海洋无脊椎动物的水螅体。"
 WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "未来的智慧花的底座。"
 WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_CORAL = "真有创意！"
-WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_ROCK = "蝇科脑属。"
+
+WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "Mussidae Brainus.",
+	PICKED = "It appears to require recuperation.",
+}
 
 WICKERBOTTOM.DESCRIBE.BRAINMETTERSOUP = "啊，这是经典的儿童餐。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "他就是这个生态系统的中心。"
+WICKERBOTTOM.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "He is the center of this ecosystem.",
+	SLEEPING = "It appears to be in a dormant state.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "看起来像是沉在海底很久了。"
 
-WICKERBOTTOM.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "这是什么鱼？"
+WICKERBOTTOM.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "What sort of fish was this?",
+	WAITING = "I think it needs some time.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_PACKIMBAGGIMS = "你好啊，羽毛学徒！"
 
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "我们需要更多原料才能烤制它。"
@@ -933,9 +1159,28 @@ WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "装饰性与传统庆典蜡烛�
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "这让我想起图书馆的庆祝活动。"
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "一种传统的庆典点心。"
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "乳胶气球。喜庆又可生物降解……但愿如此。"
-WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "一种将玉米转化为膨化食物的装置。"
+
+WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "A machine that converts corn to edible puffed snacks.",
+	FUEL_HIGH = "Fuel reserves are sufficient.",
+	FUEL_MED = "It will continue operating for a while.",
+	FUEL_LOW = "Replenishment will soon be necessary.",
+	EMPTY = "It requires refueling.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "高温导致内部水分迅速膨胀。真神奇！"
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "一种传统的锥形庆典配饰。"
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "一款定制派对配饰。"
 
 WICKERBOTTOM.DESCRIBE.KYNO_FISHREGISTRYHAT = "用于系统研究鱼类物种的实用头饰。"
+
+WICKERBOTTOM.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "A simple but effective feeding trough.",
+	FUEL_HIGH = "It is well stocked.",
+	FUEL_MED = "Supplies are diminishing.",
+	FUEL_LOW = "It requires replenishment soon.",
+	EMPTY = "It must be refilled immediately.",
+	BURNT = "Completely unusable now.",
+}

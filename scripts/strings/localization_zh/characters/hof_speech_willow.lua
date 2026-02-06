@@ -90,6 +90,8 @@ WILLOW.ANNOUNCE_KYNO_POTHANGER_FAIL = "笨蛋，这需要一个锅。"
 
 WILLOW.ANNOUNCE_KYNO_CASSEROLE_FAIL = "它需要的是烤箱，而不是那个。"
 
+WILLOW.ANNOUNCE_KYNO_SAPHEALER_USED = "I'll help you, but I'll also burn you later. Maybe..."
+
 WILLOW.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "嘿。火焰和鲜血——我最爱的两样东西。"
 
 WILLOW.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "哎呀，没什么可烧的……也没什么可偷的。"
@@ -129,11 +131,23 @@ WILLOW.DESCRIBE.KYNO_SYRUP = "嗯..."
 WILLOW.DESCRIBE.KYNO_COFFEEBEANS = "这些可以用火。"
 WILLOW.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "啊哈，香气。"
 
-WILLOW.DESCRIBE.DUG_KYNO_COFFEEBUSH = "这丛灌木在火山的火焰旁蓬勃生长！"
-WILLOW.DESCRIBE.KYNO_COFFEEBUSH = "这株灌木在火山火附近茂盛！"
+WILLOW.DESCRIBE.DUG_KYNO_COFFEEBUSH = "I need to move it to somewhere else."
 
-WILLOW.DESCRIBE.DUG_KYNO_SPOTBUSH = "闻起来有点大蒜味。"
-WILLOW.DESCRIBE.KYNO_SPOTBUSH = "闻起来有点胡椒味。"
+WILLOW.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "This bush flourishes near the volcano's fire!",
+	PICKED = "No beans right now.",
+	WITHERED = "Too dry. Boring.",
+}
+
+WILLOW.DESCRIBE.DUG_KYNO_SPOTBUSH = "Needs a new spot."
+
+WILLOW.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "It smells kind of pepper-y.",
+	PICKED = "Nothing left on it.",
+	BURNING = "Whoops.",
+}
 
 WILLOW.DESCRIBE.KYNO_SPOTSPICE_LEAF = "这是一片胡椒状灌木。"
 
@@ -194,10 +208,24 @@ WILLOW.DESCRIBE.LONGPIGMEAL = "咦吽~~."
 
 WILLOW.DESCRIBE.CUCUMBERSALAD = "我宁愿吃一碗火焰。"
 
-WILLOW.DESCRIBE.KYNO_WILDWHEAT = "小麦。"
-WILLOW.DESCRIBE.DUG_KYNO_WILDWHEAT = "小麦。"
+WILLOW.DESCRIBE.DUG_KYNO_WILDWHEAT = "Needs a new spot."
+
+WILLOW.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "Dry and scratchy.",
+	PICKED = "Nothing left now.",
+	WITHERED = "Too dry to care.",
+	BURNING = "Poof!",
+}
 
 WILLOW.DESCRIBE.KYNO_MEALGRINDER = "我可以用它粉碎东西。"
+
+WILLOW.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "They're so hideous they're almost cute.",
+	PICKED = "Hey! Give me more mushrooms!",
+	BURNING = "There they go!",
+}
 
 WILLOW.DESCRIBE.GORGE_BREAD = "这只是一个愚蠢的面包。"
 WILLOW.DESCRIBE.GORGE_SWEET_CHIPS = "我喜欢脆脆的。"
@@ -340,27 +368,57 @@ WILLOW.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "哈，好恶心。"
 
 WILLOW.DESCRIBE.KYNO_SEEDS_KIT = "里面有一些种子。"
 
-WILLOW.DESCRIBE.KYNO_LIMPETROCK = "那些恶心的食物正试图吃掉那块石头。"
+WILLOW.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "That gross food is trying to eat that rock.",
+	PICKED = "They all ran off.",
+	WITHERED = "Dry and boring.",
+}
+
 WILLOW.DESCRIBE.KYNO_LIMPETS = "一点点火焰，你就会变得美味。"
 WILLOW.DESCRIBE.KYNO_LIMPETS_COOKED = "非常好！"
 
-WILLOW.DESCRIBE.KYNO_LOTUS_OCEAN = "我可以吃吗？还是烧掉？"
+WILLOW.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "Can I eat it? Or burn it?",
+	PICKED = "No flowers right now.",
+	BURNING = "Now that's interesting!",
+}
+
 WILLOW.DESCRIBE.KYNO_LOTUS_ROOT = "一株湿漉漉的植物。"
 WILLOW.DESCRIBE.KYNO_LOTUS_FLOWER = "只是一朵愚蠢的花。"
 WILLOW.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "火让它变得更好。"
 
-WILLOW.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "湿透的海草。"
+WILLOW.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Soggy sea grass.",
+	PICKED = "Gone for now.",
+	BURNING = "Even the sea stuff burns!",
+}
+
 WILLOW.DESCRIBE.KYNO_SEAWEEDS = "湿透的海草。"
 WILLOW.DESCRIBE.KYNO_SEAWEEDS_COOKED = "加火后还不错。"
 WILLOW.DESCRIBE.KYNO_SEAWEEDS_DRIED = "健康的肉干。"
 WILLOW.DESCRIBE.KYNO_SEAWEEDS_ROOT = "一堆湿透的杂草。"
 
-WILLOW.DESCRIBE.KYNO_TAROROOT_OCEAN = "为什么它会在水中生长？"
+WILLOW.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "Why does it grow in water?",
+	PICKED = "It'll be back.",
+	BURNING = "Much better!",
+}
+
 WILLOW.DESCRIBE.KYNO_TAROROOT_ROOT = "湿漉漉的灯泡。"
 WILLOW.DESCRIBE.KYNO_TAROROOT = "绝对不是鸟。"
 WILLOW.DESCRIBE.KYNO_TAROROOT_COOKED = "对它使用火使它成为更美味的芋头根。"
 
-WILLOW.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "我可以烧掉它吗？"
+WILLOW.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "Can I burn it?",
+	PICKED = "It'll come back.",
+	BURNING = "Oops!",
+}
+
 WILLOW.DESCRIBE.KYNO_WATERYCRESS_ROOT = "一丛湿漉漉的杂草。"
 WILLOW.DESCRIBE.KYNO_WATERYCRESS = "我可以烧掉它吗？"
 
@@ -368,17 +426,40 @@ WILLOW.DESCRIBE.WATERYCRESSBOWL = "即使是水和蔬菜在火上也更美味。
 
 WILLOW.DESCRIBE.KYNO_SALT = "我所有的食物都需要一两撮。"
 
+WILLOW.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Slimy seafood on a stick.",
+	PICKED = "Nothing left now.",
+	BURNING = "Seafood roast!",
+}
+
 WILLOW.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "贻贝出于某种原因喜欢这个棒子。"
 
 WILLOW.DESCRIBE.CATFOOD = "呃。猫粮。"
 
 WILLOW.DESCRIBE.KATFOOD = "呃。猫粮。"
 
-WILLOW.DESCRIBE.KYNO_BANANATREE = "看起来可以燃烧！"
+WILLOW.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "Looks burnable!",
+	PICKED = "No bananas right now.",
+	CHOPPED = "Well, that's done.",
+	BURNING = "Hey! Now it's interesting!",
+	BURNT = "Toasted!",
+}
+
 WILLOW.DESCRIBE.KYNO_BANANA = "香蕉！"
 WILLOW.DESCRIBE.KYNO_BANANA_COOKED = "好吃！"
 
-WILLOW.DESCRIBE.KYNO_KOKONUTTREE = "你放弃树枝了吗，树？"
+WILLOW.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "You have a curious lack of branches.",
+	PICKED = "No coconuts right now.",
+	CHOPPED = "Oops.",
+	BURNING = "Now that's better!",
+	BURNT = "Crispy.",
+}
+
 WILLOW.DESCRIBE.KYNO_KOKONUT = "可食用的树。"
 WILLOW.DESCRIBE.KYNO_KOKONUT_HALVED = "啊哈！现在你是食物！"
 WILLOW.DESCRIBE.KYNO_KOKONUT_COOKED = "嗯，烤面包。"
@@ -426,13 +507,43 @@ WILLOW.DESCRIBE.TURF_STONECITY = "地面很无聊。"
 WILLOW.DESCRIBE.TURF_FIELDS = "地面很无聊。"
 WILLOW.DESCRIBE.TURF_TIDALMARSH = "吱吱声。"
 
+WILLOW.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Gotta dredge the salt up.",
+	PICKED = "Grow faster, salt crystals!",
+}
+
 WILLOW.DESCRIBE.KYNO_SALTRACK_INSTALLER = "我们可以用它来获取一些食盐。"
 
 WILLOW.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "现在我们可以从树上提取树液了。"
 
 WILLOW.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "这会显示那些螃蟹。"
 
-WILLOW.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "它们和我们这里的猪没什么不同。"
+WILLOW.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "They're not so different from the pigs back at our place.",
+	SLEEPING = "Ugh. Figures.",
+}
+
+WILLOW.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "Sticky tree.",
+	CHOPPED = "It's kinda useless now.",
+	SAPPED = "Sap's ready!",
+	PICKED = "It's taking forever!",
+	BURNING = "There we go!",
+	BURNT = "Pretty.",
+}
+
+WILLOW.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "You don't look so hot, tree.",
+	CHOPPED = "Good.",
+	SAPPED = "Ew.",
+	PICKED = "Stupid bugs.",
+	BURNING = "Finally!",
+	BURNT = "Much Better.",
+}
 
 WILLOW.DESCRIBE.KYNO_SUGARTREE_BUD = "我会烧掉它，但它会种下那棵糖树。"
 
@@ -453,13 +564,22 @@ WILLOW.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "需要更多火力。"
 
 WILLOW.DESCRIBE.KYNO_SLAUGHTERTOOL = "我宁愿烧东西。"
 
-WILLOW.DESCRIBE.KYNO_CHICKEN2 = "这是一只丑鸡。"
+WILLOW.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "It's an ugly chicken.",
+	COOP = "Heh, you're mine now!",
+}
 
 WILLOW.DESCRIBE.KYNO_CHICKEN_EGG = "闻起来像鸡屁股。"
 WILLOW.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "I bet it would make a huge pop if I cooked it over a fire!"
 WILLOW.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "糟糕。黄色的部分都流鼻涕了。"
 
-WILLOW.DESCRIBE.KYNO_CHICKENHOUSE = "至少它现在还没燃起熊熊大火。"
+WILLOW.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "At least it's not full of fire. Yet.",
+	FULL = "All those eggs... such potential for chaos.",
+	BURNT = "Heh. Kinda saw that coming.",
+}
 
 WILLOW.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "嘿，这就像我的老房子。"
 
@@ -482,8 +602,11 @@ WILLOW.DESCRIBE.KYNO_COOKWARE_OVEN = "现在我们正在做饭。"
 WILLOW.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "现在我们正在做饭。"
 WILLOW.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "现在我们正在做饭。"
 
-WILLOW.DESCRIBE.KYNO_ROCKFLIPPABLE = "不妨看看下面是什么。"
-WILLOW.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "不妨看看下面是什么。"
+WILLOW.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "Might as well see what's underneath.",
+	FLIPPED = "Ew. I knew it.",
+}
 
 WILLOW.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "这里有什么东西。"
 
@@ -526,7 +649,12 @@ WILLOW.DESCRIBE.PEPPERROLLS = "完全着火了！"
 
 WILLOW.DESCRIBE.KYNO_SAPHEALER = "这会帮助那些中毒的树木！"
 
-WILLOW.DESCRIBE.KYNO_OCEAN_WRECK = "有人后悔了。"
+WILLOW.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "Someone has regrets.",
+	PICKED = "Nothing left to scrape off.",
+	BURNING = "Heh. That'll do it.",
+}
 
 WILLOW.DESCRIBE.KYNO_GHOST_PIRATE = "你\"是··\"什么?"
 
@@ -543,11 +671,31 @@ WILLOW.DESCRIBE.KYNO_PLANTMEAT_DRIED = "多叶，但令人满意。"
 
 WILLOW.DESCRIBE.KYNO_BREWBOOK = "呃，按照说明酿造可不好玩！"
 
-WILLOW.DESCRIBE.KYNO_WOODENKEG = "看起来可以燃烧，但我不会这样做，但..."
+WILLOW.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "Looks burnable, but I won't do it, yet...",
+	BREWING_LONG = "Ugh, this is taking forever.",
+	BREWING_SHORT = "Almost done. Finally.",
+	DONE = "Hey! It's ready!",
+	BURNT = "Fire wins again!",
+}
 
-WILLOW.DESCRIBE.KYNO_PRESERVESJAR = "可燃，但很重要……呃。"
+WILLOW.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "Burnable, yet, important... Ugh.",
+	BREWING_LONG = "Ugh, this is taking forever.",
+	BREWING_SHORT = "Almost ready. Finally.",
+	DONE = "Hey! Sweet!",
+	BURNT = "Hahahaha!",
+}
 
-WILLOW.DESCRIBE.KYNO_ANTCHEST = "我不会烧掉它，只是因为它让我变得亲爱的。"
+WILLOW.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "I won't burn it, but only because it makes me honey.",
+	HONEY = "Sticky stuff everywhere. Heh.",
+	NECTAR = "Still not as fun as fire.",
+	BURNING = "Now THAT'S better!",
+}
 
 WILLOW.DESCRIBE.KYNO_NECTAR_POD = "这有什么用吗？"
 
@@ -557,13 +705,47 @@ WILLOW.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "我把它放火了，现在我可以�
 WILLOW.DESCRIBE.KYNO_PIKO = "松鼠小家伙。"
 WILLOW.DESCRIBE.KYNO_PIKO_ORANGE = "松鼠小家伙。"
 
-WILLOW.DESCRIBE.KYNO_MEADOWISLAND_TREE = "它会燃烧。这就是我关心的一切。"
-WILLOW.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "它会燃烧。这就是我所关心的。"
+WILLOW.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "It'll burn. That's all I care about.",
+	CHOPPED = "Guess that's that.",
+	BURNING = "Whoops.",
+	BURNT = "You look pretty this way.",
+}
+
+WILLOW.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "It'll burn. That's all I care about.",
+	BURNING = "That solves the problem.",
+}
+
 WILLOW.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "如果我把它烧掉，里面的东西也会烧掉......"
-WILLOW.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "如果它被烧毁，没人会在意。"
-WILLOW.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "鱼贩。"
-WILLOW.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "那是臭名昭著的旧钟吗？"
-WILLOW.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "我们就不能从他的小推车上拿走吗？"
+
+WILLOW.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "No one would care if this burned down.",
+	BURNT = "Much better.",
+}
+
+WILLOW.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "Fish mongers.",
+	CRAFTED = "Huh. Not terrible.",
+	BURNT = "Much Better.",
+}
+
+WILLOW.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "Is that the infamous Old Bell?",
+	OCCUPIED = "Figures. Nobody's around.",
+}
+
+WILLOW.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "Can't we just take from his wagon?",
+	EMPTY = "Lame. Nothing left.",
+}
+
 WILLOW.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "哦，太好了...我们又见面了。"
 WILLOW.DESCRIBE.KYNO_MEADOWISLAND_POND = "我想知道如果你冲洗它会朝哪个方向旋转？"
 WILLOW.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "全是植物。"
@@ -713,8 +895,15 @@ WILLOW.DESCRIBE.RISOTTO = "沃利肯定有做谷物的绝活。"
 
 WILLOW.DESCRIBE.RICESAKE = "我想威尔逊会喜欢这个的，嘿嘿。"
 
-WILLOW.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "好痛！它有细小的尖刺。"
-WILLOW.DESCRIBE.KYNO_PINEAPPLEBUSH = "好痛！它有细小的尖刺。"
+WILLOW.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Yanked it out."
+
+WILLOW.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "Ouuuch! It has tiny spikes.",
+	PICKED = "No fruit now.",
+	WITHERED = "Too dry and sad.",
+	BURNING = "Heh. Crispy.",
+}
 
 WILLOW.DESCRIBE.KYNO_PINEAPPLE = "哎哟！"
 WILLOW.DESCRIBE.KYNO_PINEAPPLE_HALVED = "看起来很好吃。"
@@ -726,7 +915,11 @@ WILLOW.DESCRIBE.PINACOLADA = "嗝。我敢打赌，火会让它变得更美味�
 
 WILLOW.DESCRIBE.CHIMAS = "草本。"
 
-WILLOW.DESCRIBE.KYNO_GARDEN_SPRINKLER = "最好别把我的火给灭了。"
+WILLOW.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "It better not put out any of my fires.",
+	ON = "Ugh. So wet.",
+}
 
 WILLOW.DESCRIBE.KYNO_FOODSACK = "我非得背着这湿漉漉的东西吗？"
 
@@ -835,11 +1028,21 @@ WILLOW.DESCRIBE.RICEANDBEANS = "需要更多烤豆虫。"
 
 WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "呃，好旧好干……正适合烧掉。也许等到2026年再说。"
 
-WILLOW.DESCRIBE.KYNO_TRUFFLES_GROUND = "只是蘑菇……烧起来更好。"
+WILLOW.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Just mushrooms... better when on fire.",
+	PICKED = "All gone for now.",
+	BURNING = "Ooops!",
+}
+
 WILLOW.DESCRIBE.KYNO_TRUFFLES = "高级蘑菇。也许我该把它们烧了。"
 WILLOW.DESCRIBE.KYNO_TRUFFLES_COOKED = "火让一切更好。即便是蘑菇。"
 
-WILLOW.DESCRIBE.KYNO_ITEMSHOWCASER = "终于有个不会烧掉的东西了……除非我想烧。"
+WILLOW.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "Finally, something that won't burn... unless I make it.",
+	FULL = "Huh, not bad.",
+}
 
 WILLOW.DESCRIBE.KYNO_SPORECAP = "也许烧掉是最安全的办法。"
 WILLOW.DESCRIBE.KYNO_SPORECAP_COOKED = "火能解决一切问题！"
@@ -859,7 +1062,15 @@ WILLOW.DESCRIBE.TRUFFLEOIL = "呃，闻起来好高档……但我敢打赌它�
 
 WILLOW.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "我宁可把东西烧毁，也不愿去建造它们。"
 WILLOW.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "唉，这么多水……不能烧掉吗？"
-WILLOW.DESCRIBE.KYNO_FISHFARMPLOT = "噢，小鱼在游来游去！"
+
+WILLOW.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "Ooh, tiny fish swimming around!",
+	FUEL_HIGH = "Well fed.",
+	FUEL_MED = "Still munching away.",
+	FUEL_LOW = "Almost outta food.",
+	EMPTY = "Nothing left for them.",
+}
 
 WILLOW.DESCRIBE.KYNO_ANTCHOVY = "恶心！闻起来像烧焦的鱼和虫子内脏！"
 WILLOW.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "哎呀，到处都是虫子和鱼！"
@@ -916,14 +1127,29 @@ WILLOW.DESCRIBE.MONKEYISLANDMEAL = "给猴子吃精致食物？怪怪的，但�
 WILLOW.DESCRIBE.KYNO_BRAINROCK_LARVAE = "哈哈，真恶心。"
 WILLOW.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "不错的秃斑石头。"
 WILLOW.DESCRIBE.KYNO_BRAINROCK_CORAL = "我或许能学会喜欢这种味道……"
-WILLOW.DESCRIBE.KYNO_BRAINROCK_ROCK = "绝妙的主意，就藏在这些普通的石头里。"
+
+WILLOW.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "Genius idea, hiding out with these dumb regular rocks.",
+	PICKED = "Guess it ran outta thoughts.",
+}
 
 WILLOW.DESCRIBE.BRAINMETTERSOUP = "适合小孩子。"
 
-WILLOW.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "他看起来有点昏昏欲睡。"
+WILLOW.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "He looks kinda dozy.",
+	SLEEPING = "Good. He's quiet now.",
+}
+
 WILLOW.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "这里满是海味！"
 
-WILLOW.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "这看起来很有意义。"
+WILLOW.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "This looks meaningful.",
+	WAITING = "It's still too wet to burn.",
+}
+
 WILLOW.DESCRIBE.KYNO_PACKIMBAGGIMS = "是友是敌？"
 
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "上面会有火吧？！"
@@ -933,9 +1159,28 @@ WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "终于！有东西可以烧了！"
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "这让我想起我的童年。"
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "蛋糕！火焰最好的朋友！"
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "要是它们能迸出火焰就好了！"
-WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "爆米花和火！完美组合！"
+
+WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Popcorn, fire, perfect combo!",
+	FUEL_HIGH = "Burning nice and steady.",
+	FUEL_MED = "Still popping.",
+	FUEL_LOW = "Needs more fuel.",
+	EMPTY = "No fire, no popcorn.",
+}
+
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "火烤得噼里啪啦响！这才是我的零食。"
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "着火的话更有趣。"
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "萨米有自己的帽子了？哼。好吧。挺可爱的。"
 
 WILLOW.DESCRIBE.KYNO_FISHREGISTRYHAT = "在烧掉它们之前，得先了解这些鱼。"
+
+WILLOW.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Keeps the critters fed.",
+	FUEL_HIGH = "So much food.",
+	FUEL_MED = "Still got some left.",
+	FUEL_LOW = "Almost empty.",
+	EMPTY = "Nothing left to munch on.",
+	BURNT = "Oops. Guess it caught fire.",
+}

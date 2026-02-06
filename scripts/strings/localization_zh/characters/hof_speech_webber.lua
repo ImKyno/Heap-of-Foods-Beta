@@ -90,6 +90,8 @@ WEBBER.ANNOUNCE_KYNO_POTHANGER_FAIL = "唉，或许用个烹饪锅比较好。"
 
 WEBBER.ANNOUNCE_KYNO_CASSEROLE_FAIL = "这不是应该放在那里的东西。"
 
+WEBBER.ANNOUNCE_KYNO_SAPHEALER_USED = "Yay! Now the tree is back on the beat."
+
 WEBBER.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "我们很抱歉……可是我们饿了……"
 
 WEBBER.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "哎呀，空空的……"
@@ -129,11 +131,23 @@ WEBBER.DESCRIBE.KYNO_SYRUP = "甜蜜！"
 WEBBER.DESCRIBE.KYNO_COFFEEBEANS = "这些气味非常……诱人。"
 WEBBER.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "这些让我们觉得很有趣。"
 
-WEBBER.DESCRIBE.DUG_KYNO_COFFEEBUSH = "这些看起来不好吃。"
-WEBBER.DESCRIBE.KYNO_COFFEEBUSH = "这些看起来不好吃。"
+WEBBER.DESCRIBE.DUG_KYNO_COFFEEBUSH = "We can plant it somewhere else!"
 
-WEBBER.DESCRIBE.DUG_KYNO_SPOTBUSH = "好酷的紫色灌木。"
-WEBBER.DESCRIBE.KYNO_SPOTBUSH = "好酷的紫色灌木。"
+WEBBER.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "These don't look tasty.",
+	PICKED = "No beans right now.",
+	WITHERED = "We need to give it a bit of ashes.",
+}
+
+WEBBER.DESCRIBE.DUG_KYNO_SPOTBUSH = "We should plant it somewhere!"
+
+WEBBER.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "What a cool purple shrub.",
+	PICKED = "Nothing to pick now.",
+	BURNING = "Hey! Stop that!",
+}
 
 WEBBER.DESCRIBE.KYNO_SPOTSPICE_LEAF = "它本身的味道不太好。"
 
@@ -194,10 +208,24 @@ WEBBER.DESCRIBE.LONGPIGMEAL = "呃。"
 
 WEBBER.DESCRIBE.CUCUMBERSALAD = "一天五份。"
 
-WEBBER.DESCRIBE.KYNO_WILDWHEAT = "原生态食品！"
-WEBBER.DESCRIBE.DUG_KYNO_WILDWHEAT = "原生态食品！"
+WEBBER.DESCRIBE.DUG_KYNO_WILDWHEAT = "We can plant it again!"
+
+WEBBER.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "A primary source food!",
+	PICKED = "Nothing left now.",
+	WITHERED = "It's all dried up.",
+	BURNING = "Hey! Stop that!",
+}
 
 WEBBER.DESCRIBE.KYNO_MEALGRINDER = "我们想做研磨！"
+
+WEBBER.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Those mushrooms are tiny.",
+	PICKED = "They'll come back later.",
+	BURNING = "Oh no!",
+}
 
 WEBBER.DESCRIBE.GORGE_BREAD = "妈妈总是说面包对大多数食物都有好处。"
 WEBBER.DESCRIBE.GORGE_SWEET_CHIPS = "非常脆！"
@@ -340,27 +368,57 @@ WEBBER.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "哇!"
 
 WEBBER.DESCRIBE.KYNO_SEEDS_KIT = "我们需要种植它们！"
 
-WEBBER.DESCRIBE.KYNO_LIMPETROCK = "这块石头上覆盖着食物！"
+WEBBER.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "This rock is covered in food things!",
+	PICKED = "They need time to come back.",
+	WITHERED = "Nothing's growing.",
+}
+
 WEBBER.DESCRIBE.KYNO_LIMPETS = "我们必须吃这些吗？"
 WEBBER.DESCRIBE.KYNO_LIMPETS_COOKED = "尝起来像海洋。"
 
-WEBBER.DESCRIBE.KYNO_LOTUS_OCEAN = "哇，好粉红！"
+WEBBER.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "Wow, it's so pink!",
+	PICKED = "No flower right now.",
+	BURNING = "Hey! Stop that!",
+}
+
 WEBBER.DESCRIBE.KYNO_LOTUS_ROOT = "我们应该把这个种在海洋的某个地方。"
 WEBBER.DESCRIBE.KYNO_LOTUS_FLOWER = "天哪，这太美了。"
 WEBBER.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "这看起来很好吃。"
 
-WEBBER.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "海洋沙拉..."
+WEBBER.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Salad of the sea...",
+	PICKED = "They'll grow back, right?",
+	BURNING = "Whoa! How is that even burning?!",
+}
+
 WEBBER.DESCRIBE.KYNO_SEAWEEDS = "海洋沙拉。"
 WEBBER.DESCRIBE.KYNO_SEAWEEDS_COOKED = "很咸。"
 WEBBER.DESCRIBE.KYNO_SEAWEEDS_DRIED = "它粘在我们的上颚！"
 WEBBER.DESCRIBE.KYNO_SEAWEEDS_ROOT = "我们应该把它种在海洋的某个地方。"
 
-WEBBER.DESCRIBE.KYNO_TAROROOT_OCEAN = "我们想吃掉它！"
+WEBBER.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "We want to eat it!",
+	PICKED = "It'll grow back soon.",
+	BURNING = "Hey! Stop that!",
+}
+
 WEBBER.DESCRIBE.KYNO_TAROROOT_ROOT = "我们应该把这个种在海洋的某个地方。"
 WEBBER.DESCRIBE.KYNO_TAROROOT = "废话，芋头。"
 WEBBER.DESCRIBE.KYNO_TAROROOT_COOKED = "妈妈知道我喜欢烤熟的。"
 
-WEBBER.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "这是水卷心菜！"
+WEBBER.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "It's a water cabbage!",
+	PICKED = "Hope it grows back soon.",
+	BURNING = "Hey! That wasn't nice!",
+}
+
 WEBBER.DESCRIBE.KYNO_WATERYCRESS_ROOT = "我们应该把这个种在海洋的某个地方。"
 WEBBER.DESCRIBE.KYNO_WATERYCRESS = "这是水卷心菜！"
 
@@ -368,17 +426,40 @@ WEBBER.DESCRIBE.WATERYCRESSBOWL = "嗯……暖暖我们的肚子。"
 
 WEBBER.DESCRIBE.KYNO_SALT = "我们不会在食物中使用太多盐。"
 
+WEBBER.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "They're growing on the stick!",
+	PICKED = "They'll come back later.",
+	BURNING = "Ahh! We need to stop the fire!",
+}
+
 WEBBER.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "贻贝在这上面做引体向上。"
 
 WEBBER.DESCRIBE.CATFOOD = "给我们朋友最好的食物！"
 
 WEBBER.DESCRIBE.KATFOOD = "给我们朋友最好的食物！"
 
-WEBBER.DESCRIBE.KYNO_BANANATREE = "这是一棵热带树！全是香蕉！"
+WEBBER.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "It's a tropical tree! Full of bananas!",
+	PICKED = "No bananas yet.",
+	CHOPPED = "Aw... it's gone.",
+	BURNING = "Hey! I need stop that!",
+	BURNT = "Now it's just ashes.",
+}
+
 WEBBER.DESCRIBE.KYNO_BANANA = "一捆香蕉。"
 WEBBER.DESCRIBE.KYNO_BANANA_COOKED = "热香蕉！"
 
-WEBBER.DESCRIBE.KYNO_KOKONUTTREE = "这棵树有礼物！"
+WEBBER.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "This tree has presents!",
+	PICKED = "No coconuts yet.",
+	CHOPPED = "Aww, it's gone.",
+	BURNING = "Hey! Stop that!",
+	BURNT = "Just ashes now.",
+}
+
 WEBBER.DESCRIBE.KYNO_KOKONUT = "食物！来自树！"
 WEBBER.DESCRIBE.KYNO_KOKONUT_HALVED = "现在我们每个人都有一个。"
 WEBBER.DESCRIBE.KYNO_KOKONUT_COOKED = "只需要一把小雨伞。"
@@ -426,13 +507,43 @@ WEBBER.DESCRIBE.TURF_STONECITY = "我们挖出的一些土地。"
 WEBBER.DESCRIBE.TURF_FIELDS = "我们挖出的一些土地。"
 WEBBER.DESCRIBE.TURF_TIDALMARSH = "我们挖出的一些土地。"
 
+WEBBER.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Salt's ready.",
+	PICKED = "We have to wait for more salt.",
+}
+
 WEBBER.DESCRIBE.KYNO_SALTRACK_INSTALLER = "我们应该把它安装在结晶的池塘里。"
 
 WEBBER.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "这是一个大桶。"
 
 WEBBER.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "我们可以把小螃蟹困在里面。"
 
-WEBBER.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "嗨，猪先生！"
+WEBBER.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "Hi, Mr. Pig!",
+	SLEEPING = "I think he's asleep.",
+}
+
+WEBBER.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "I wonder why the people left this nice place.",
+	CHOPPED = "Why would anyone do that?",
+	SAPPED = "Sticky, sticky sap!",
+	PICKED = "There isn't any sap yet.",
+	BURNING = "We must stop the fire!",
+	BURNT = "It's gone...",
+}
+
+WEBBER.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "Aw, now it's not as pink.",
+	CHOPPED = "Maybe that's better.",
+	SAPPED = "Ew, still sticky.",
+	PICKED = "Ew... The bugs got in it.",
+	BURNING = "Its for the best.",
+	BURNT = "All gone.",
+}
 
 WEBBER.DESCRIBE.KYNO_SUGARTREE_BUD = "糖！"
 
@@ -453,13 +564,22 @@ WEBBER.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "螃蟹看起来有点像蜘蛛。"
 
 WEBBER.DESCRIBE.KYNO_SLAUGHTERTOOL = "我不想用这个。"
 
-WEBBER.DESCRIBE.KYNO_CHICKEN2 = "哈哈！我们喜欢鸡！"
+WEBBER.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "Haha! We love chickens!",
+	COOP = "We get to keep it!",
+}
 
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG = "一个硬壳鸡蛋。"
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Is there a giant birdie inside?"
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "像妈妈一样煎。"
 
-WEBBER.DESCRIBE.KYNO_CHICKENHOUSE = "呵呵，简直就像是鸟儿的家！"
+WEBBER.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "Heh, it's like a house just for chickens!",
+	FULL = "Wow! So many eggs!",
+	BURNT = "Aw... now they don't have a home.",
+}
 
 WEBBER.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "哇……好伤心。"
 
@@ -482,8 +602,11 @@ WEBBER.DESCRIBE.KYNO_COOKWARE_OVEN = "妈妈说我在烤箱周围要小心。"
 WEBBER.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "妈妈说我在烤箱周围要小心。"
 WEBBER.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "妈妈说我在烤箱周围要小心。"
 
-WEBBER.DESCRIBE.KYNO_ROCKFLIPPABLE = "下面是什么？"
-WEBBER.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "下面是什么？"
+WEBBER.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "What's under here?",
+	FLIPPED = "Whoa! Look at that!",
+}
 
 WEBBER.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "泡泡糖。"
 
@@ -526,7 +649,12 @@ WEBBER.DESCRIBE.PEPPERROLLS = "对我们来说太热了！"
 
 WEBBER.DESCRIBE.KYNO_SAPHEALER = "这是药？"
 
-WEBBER.DESCRIBE.KYNO_OCEAN_WRECK = "提醒你尊重海洋。"
+WEBBER.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "A reminder to respect the sea.",
+	PICKED = "They'll come back later.",
+	BURNING = "Hey! Stop that!",
+}
 
 WEBBER.DESCRIBE.KYNO_GHOST_PIRATE = "普通海盗还不够可怕似的！"
 
@@ -543,11 +671,31 @@ WEBBER.DESCRIBE.KYNO_PLANTMEAT_DRIED = "效果好于预期。"
 
 WEBBER.DESCRIBE.KYNO_BREWBOOK = "现在我们永远不会忘记食谱！"
 
-WEBBER.DESCRIBE.KYNO_WOODENKEG = "它也会制作果汁吗？"
+WEBBER.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "Does it makes juices too?",
+	BREWING_LONG = "It's still working.",
+	BREWING_SHORT = "Almost done!",
+	DONE = "Hey, it's ready!",
+	BURNT = "Aww, it's gone.",
+}
 
-WEBBER.DESCRIBE.KYNO_PRESERVESJAR = "让我们用它做些泡菜吧！"
+WEBBER.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "Let's make some pickles with it!",
+	BREWING_LONG = "It's still working.",
+	BREWING_SHORT = "Almost done!",
+	DONE = "Yay! It's ready!",
+	BURNT = "Aw... it's ruined.",
+}
 
-WEBBER.DESCRIBE.KYNO_ANTCHEST = "哇！看看它能装多少蜂蜜。"
+WEBBER.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "Wow! Look at how much honey it can hold.",
+	HONEY = "Wow! So much honey!",
+	NECTAR = "They're still making it.",
+	BURNING = "Oh no!",
+}
 
 WEBBER.DESCRIBE.KYNO_NECTAR_POD = "蜘蛛不喜欢这个，但其他虫子喜欢！"
 
@@ -557,13 +705,47 @@ WEBBER.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "好吃。"
 WEBBER.DESCRIBE.KYNO_PIKO = "他是个忙碌的小家伙。"
 WEBBER.DESCRIBE.KYNO_PIKO_ORANGE = "我想知道他是否喜欢茶会。"
 
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_TREE = "嘿，橡树。"
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "嘿，松鼠们！"
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "Hey there, tree.",
+	CHOPPED = "We got all the leaves!",
+	BURNING = "Oh no!",
+	BURNT = "It's gone...",
+}
+
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "Hey there, squirrels!",
+	BURNING = "Their home is burning!",
+}
+
 WEBBER.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "哇，一个板条箱。"
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "闻起来有鱼腥味。"
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "我可以进来吗？"
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "看来萨米现在有了那扇门的钥匙。"
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "萨米喜欢展示他的商品。"
+
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "Smells fishy.",
+	BURNT = "Their house has burned down.",
+}
+
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "Can I come in?",
+	CRAFTED = "Hey, it looks nice now!",
+	BURNT = "Yuck! That smells worse!",
+}
+
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "It seems Sammy now has the key to that gateway.",
+	OCCUPIED = "I think Sammy is asleep.",
+}
+
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "Sammy likes to showcase his wares.",
+	EMPTY = "Aw, nothing left.",
+}
+
 WEBBER.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "很高兴再次见到你，萨米！"
 WEBBER.DESCRIBE.KYNO_MEADOWISLAND_POND = "这就像一个鱼缸……没有鱼缸！"
 WEBBER.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "那是一种口渴的植物。"
@@ -713,8 +895,15 @@ WEBBER.DESCRIBE.RISOTTO = "妈妈总是说，要吃蔬菜！"
 
 WEBBER.DESCRIBE.RICESAKE = "唉。"
 
-WEBBER.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "菠萝！"
-WEBBER.DESCRIBE.KYNO_PINEAPPLEBUSH = "菠萝！"
+WEBBER.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "A pineapple bush!"
+
+WEBBER.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "Pineapple!",
+	PICKED = "No pineapple now.",
+	WITHERED = "It's all dried up.",
+	BURNING = "Hey! Stop that!",
+}
 
 WEBBER.DESCRIBE.KYNO_PINEAPPLE = "松果和苹果。"
 WEBBER.DESCRIBE.KYNO_PINEAPPLE_HALVED = "松果和苹果!"
@@ -726,7 +915,11 @@ WEBBER.DESCRIBE.PINACOLADA = "我们已经能感受到海浪的气息！"
 
 WEBBER.DESCRIBE.CHIMAS = "这很好！"
 
-WEBBER.DESCRIBE.KYNO_GARDEN_SPRINKLER = "让我们一起来看看。"
+WEBBER.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "Let's run through it.",
+	ON = "It's watering everything!",
+}
 
 WEBBER.DESCRIBE.KYNO_FOODSACK = "呃，又湿又软。"
 
@@ -835,11 +1028,21 @@ WEBBER.DESCRIBE.RICEANDBEANS = "妈妈总是说：多吃蔬菜！"
 
 WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "现在看起来空空的……但我们2026年再回来看看！"
 
-WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND = "我们找到了藏起来的蘑菇！可以拿吗？"
+WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "We found hiding mushrooms! Can we pick them?",
+	PICKED = "We want more!",
+	BURNING = "Aw, we didn't even eat them!",
+}
+
 WEBBER.DESCRIBE.KYNO_TRUFFLES = "看起来很好吃！我们能吃吗？"
 WEBBER.DESCRIBE.KYNO_TRUFFLES_COOKED = "烤得香喷喷的！"
 
-WEBBER.DESCRIBE.KYNO_ITEMSHOWCASER = "我们可以给大家看看我们的点心！"
+WEBBER.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "We can show everyone our snacks!",
+	FULL = "Wow! Look what we made!",
+}
 
 WEBBER.DESCRIBE.KYNO_SPORECAP = "它看起来好难过……可怜的小蘑菇。"
 WEBBER.DESCRIBE.KYNO_SPORECAP_COOKED = "闻起来稍微好一点了！"
@@ -859,7 +1062,15 @@ WEBBER.DESCRIBE.TRUFFLEOIL = "闻起来怪怪的……但好像也有点香！"
 
 WEBBER.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "我们应该建造这个。"
 WEBBER.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "我们要养好多好多小鱼朋友！"
-WEBBER.DESCRIBE.KYNO_FISHFARMPLOT = "看！我们可以在这里养鱼！"
+
+WEBBER.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "Look! We can keep fish in here!",
+	FUEL_HIGH = "They're really full!",
+	FUEL_MED = "Still eating.",
+	FUEL_LOW = "Almost out of food!",
+	EMPTY = "Uh-oh, no more food.",
+}
 
 WEBBER.DESCRIBE.KYNO_ANTCHOVY = "我们无法判断它属于陆地还是水生生物！"
 WEBBER.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "它们无处不在！扭来扭去！"
@@ -916,14 +1127,29 @@ WEBBER.DESCRIBE.MONKEYISLANDMEAL = "香蕉和龙虾！我们原以为行不通�
 WEBBER.DESCRIBE.KYNO_BRAINROCK_LARVAE = "哎呀，你好呀。"
 WEBBER.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "它很快就会长出毛发。"
 WEBBER.DESCRIBE.KYNO_BRAINROCK_CORAL = "美味的头部肉！"
-WEBBER.DESCRIBE.KYNO_BRAINROCK_ROCK = "我想戳戳它，但怕我们的手会被卡住。"
+
+WEBBER.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "I want to poke it, but I'm afraid our hand will get stuck.",
+	PICKED = "It's sleepy now.",
+}
 
 WEBBER.DESCRIBE.BRAINMETTERSOUP = "就像妈妈以前给我们做的那个！"
 
-WEBBER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "看起来很友好。"
+WEBBER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "It looks friendly.",
+	SLEEPING = "Guess we shouldn't wake him.",
+}
+
 WEBBER.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "让我们看看里面吧！"
 
-WEBBER.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "我们好奇这是什么？"
+WEBBER.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "We wonder what is this?",
+	WAITING = "He was our new friend.",
+}
+
 WEBBER.DESCRIBE.KYNO_PACKIMBAGGIMS = "你好呀，大嘴巴的朋友！"
 
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "咱们最好赶紧开始烤了！"
@@ -933,9 +1159,28 @@ WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "我们应该许个愿！"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "它使我们充满平安与喜乐！"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "太棒了！我们爱蛋糕！"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "我们喜欢气球！"
-WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "好香！我们一起做爆米花吧！"
+
+WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Yum, let's make some popcorn together!",
+	FUEL_HIGH = "Lots more popcorn!",
+	FUEL_MED = "Still working!",
+	FUEL_LOW = "Almost out of fuel!",
+	EMPTY = "No more fuel...",
+}
+
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "它在我们嘴里噗噗地蹦！真有趣！"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "我们喜欢派对帽！"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "专为萨米准备的！"
 
 WEBBER.DESCRIBE.KYNO_FISHREGISTRYHAT = "我们可以用它学到所有关于鱼的事！"
+
+WEBBER.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "The animals eat from it!",
+	FUEL_HIGH = "Wow! Lots of food!",
+	FUEL_MED = "Still some left.",
+	FUEL_LOW = "Almost empty!",
+	EMPTY = "Uh-oh, no food!",
+	BURNT = "It's all burned up!",
+}

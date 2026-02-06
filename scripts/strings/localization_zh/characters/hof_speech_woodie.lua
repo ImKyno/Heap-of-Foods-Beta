@@ -90,6 +90,8 @@ WOODIE.ANNOUNCE_KYNO_POTHANGER_FAIL = "嗯，也许这里可以放个锅。"
 
 WOODIE.ANNOUNCE_KYNO_CASSEROLE_FAIL = "呃，不是这个。"
 
+WOODIE.ANNOUNCE_KYNO_SAPHEALER_USED = "I'll help you only once, tree."
+
 WOODIE.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "抱歉啦，小家伙。这就是生命的轮回，对吧？"
 
 WOODIE.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "哎呀，看来萨米刚把补给用光了。"
@@ -129,11 +131,23 @@ WOODIE.DESCRIBE.KYNO_SYRUP = "甜味剂。"
 WOODIE.DESCRIBE.KYNO_COFFEEBEANS = "我应该烤这些。"
 WOODIE.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "加拿大人喜欢他们的咖啡。"
 
-WOODIE.DESCRIBE.DUG_KYNO_COFFEEBUSH = "咖啡豆！"
-WOODIE.DESCRIBE.KYNO_COFFEEBUSH = "咖啡豆的妈妈！"
+WOODIE.DESCRIBE.DUG_KYNO_COFFEEBUSH = "All set for replanting."
 
-WOODIE.DESCRIBE.DUG_KYNO_SPOTBUSH = "看起来很有味道。"
-WOODIE.DESCRIBE.KYNO_SPOTBUSH = "看起来很有味道。"
+WOODIE.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "Coffee beans!",
+	PICKED = "Needs more time.",
+	WITHERED = "Needs more fertilizing.",
+}
+
+WOODIE.DESCRIBE.DUG_KYNO_SPOTBUSH = "Gotta plant it again."
+
+WOODIE.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "Looks real flavourful.",
+	PICKED = "Needs some time.",
+	BURNING = "That's not good.",
+}
 
 WOODIE.DESCRIBE.KYNO_SPOTSPICE_LEAF = "它让我的手指闻起来像胡椒。"
 
@@ -194,10 +208,24 @@ WOODIE.DESCRIBE.LONGPIGMEAL = "我应该把它放在某个地方。"
 
 WOODIE.DESCRIBE.CUCUMBERSALAD = "健康，但不是很耐吃。"
 
-WOODIE.DESCRIBE.KYNO_WILDWHEAT = "看起来像木柴。"
-WOODIE.DESCRIBE.DUG_KYNO_WILDWHEAT = "看起来像木柴。"
+WOODIE.DESCRIBE.DUG_KYNO_WILDWHEAT = "Best plant it somewhere else."
+
+WOODIE.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "Looks harvestable, eh?",
+	PICKED = "Needs more time.",
+	WITHERED = "Dry as a bone.",
+	BURNING = "Looks like kindling.",
+}
 
 WOODIE.DESCRIBE.KYNO_MEALGRINDER = "我们只需要磨。"
+
+WOODIE.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Those mushrooms look mighty tasty.",
+	PICKED = "They'll be back soon enough.",
+	BURNING = "That's a real shame.",
+}
 
 WOODIE.DESCRIBE.GORGE_BREAD = "一条面包，嗯？"
 WOODIE.DESCRIBE.GORGE_SWEET_CHIPS = "我真的很喜欢他们这样。"
@@ -340,27 +368,57 @@ WOODIE.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "哎呀。"
 
 WOODIE.DESCRIBE.KYNO_SEEDS_KIT = "我们得先拆开它，露西。"
 
-WOODIE.DESCRIBE.KYNO_LIMPETROCK = "我可以用这些做点心。"
+WOODIE.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "I could make a snack out of those.",
+	PICKED = "Gotta give them time.",
+	WITHERED = "Dry as can be.",
+}
+
 WOODIE.DESCRIBE.KYNO_LIMPETS = "某种水栖蜗牛。"
 WOODIE.DESCRIBE.KYNO_LIMPETS_COOKED = "晚餐开始了。"
 
-WOODIE.DESCRIBE.KYNO_LOTUS_OCEAN = "相当不错，你不觉得露西吗？"
+WOODIE.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "Pretty nice, dontcha think Lucy?",
+	PICKED = "Needs a bit more time.",
+	BURNING = "That's not good!",
+}
+
 WOODIE.DESCRIBE.KYNO_LOTUS_ROOT = "应该把这个种在某个地方。"
 WOODIE.DESCRIBE.KYNO_LOTUS_FLOWER = "那是个美女。"
 WOODIE.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "烤得真好。"
 
-WOODIE.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "它很粘，嗯？"
+WOODIE.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "It's slimy, eh?",
+	PICKED = "Needs time to come back.",
+	BURNING = "Didn't think that could happen.",
+}
+
 WOODIE.DESCRIBE.KYNO_SEAWEEDS = "黏糊糊的。"
 WOODIE.DESCRIBE.KYNO_SEAWEEDS_COOKED = "它有一种奇怪的质地。"
 WOODIE.DESCRIBE.KYNO_SEAWEEDS_DRIED = "它有点粘在我的舌头上。"
 WOODIE.DESCRIBE.KYNO_SEAWEEDS_ROOT = "应该把它种在某个地方。"
 
-WOODIE.DESCRIBE.KYNO_TAROROOT_OCEAN = "呃，我以前见过这个。"
+WOODIE.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "Eh, I've seen this one before once.",
+	PICKED = "Water'll help it grow back.",
+	BURNING = "Well, that's ruined.",
+}
+
 WOODIE.DESCRIBE.KYNO_TAROROOT_ROOT = "应该把这个种在某个地方。"
 WOODIE.DESCRIBE.KYNO_TAROROOT = "我敢打赌这会和辣椒搭配得很好。"
 WOODIE.DESCRIBE.KYNO_TAROROOT_COOKED = "嗯！"
 
-WOODIE.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "只是另一种蔬菜，嗯？"
+WOODIE.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "Just another vegetable, eh?",
+	PICKED = "Give it time.",
+	BURNING = "That's a shame.",
+}
+
 WOODIE.DESCRIBE.KYNO_WATERYCRESS_ROOT = "应该把这个种在某个地方。"
 WOODIE.DESCRIBE.KYNO_WATERYCRESS = "只是另一种蔬菜，嗯？"
 
@@ -368,17 +426,40 @@ WOODIE.DESCRIBE.WATERYCRESSBOWL = "这是用那些小树做成的汤。"
 
 WOODIE.DESCRIBE.KYNO_SALT = "它很咸。"
 
+WOODIE.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Seafood growin' on a stick, eh?",
+	PICKED = "Gotta give it time.",
+	BURNING = "That's a real shame.",
+}
+
 WOODIE.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "贻贝受够了这个东西。"
 
 WOODIE.DESCRIBE.CATFOOD = "这里，这里，小猫。"
 
 WOODIE.DESCRIBE.KATFOOD = "这里，这里，小猫。"
 
-WOODIE.DESCRIBE.KYNO_BANANATREE = "现在我有了自己的香蕉树。"
+WOODIE.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "Now I have my own banana tree.",
+	PICKED = "Needs a bit more time, eh?",
+	CHOPPED = "Sorry about that, buddy.",
+	BURNING = "Whoa! That's not good!",
+	BURNT = "Burned right down.",
+}
+
 WOODIE.DESCRIBE.KYNO_BANANA = "它尝起来很热带。"
 WOODIE.DESCRIBE.KYNO_BANANA_COOKED = "我出于某种原因烤了它。"
 
-WOODIE.DESCRIBE.KYNO_KOKONUTTREE = "让我为伐木场感到松了一口气。"
+WOODIE.DESCRIBE.KYNO_KOKONUTTREE =
+{
+	GENERIC = "Makes me pine for the lumber yards.",
+	PICKED = "Needs a bit more time.",
+	CHOPPED = "Sorry about that.",
+	BURNING = "Whoa! That's not good!",
+	BURNT = "Burned right down.",
+}
+
 WOODIE.DESCRIBE.KYNO_KOKONUT = "这只是一个椰子。"
 WOODIE.DESCRIBE.KYNO_KOKONUT_HALVED = "一个给我，一个给露西。"
 WOODIE.DESCRIBE.KYNO_KOKONUT_COOKED = "准备吃。"
@@ -426,13 +507,43 @@ WOODIE.DESCRIBE.TURF_STONECITY = "只是一些地面，嗯？"
 WOODIE.DESCRIBE.TURF_FIELDS = "只是一些地面，嗯？"
 WOODIE.DESCRIBE.TURF_TIDALMARSH = "只是一些地面，嗯？"
 
+WOODIE.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "It's ready.",
+	PICKED = "Gonna be a bit longer.",
+}
+
 WOODIE.DESCRIBE.KYNO_SALTRACK_INSTALLER = "必须设置一下。"
 
 WOODIE.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "我不是告诉大家树很好吃吗？"
 
 WOODIE.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "让我们捕获一些螃蟹。"
 
-WOODIE.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "我猜每个社团都必须有领袖。"
+WOODIE.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "Every society's gotta have a leader, I guess.",
+	SLEEPING = "Guess I'll come back later.",
+}
+
+WOODIE.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "It's beautiful!",
+	CHOPPED = "Cut down in its prime.",
+	SAPPED = "Thanks for the sap, tree.",
+	PICKED = "Fillin' up, slow as molasses.",
+	BURNING = "That's not good!",
+	BURNT = "Burned clean through.",
+}
+
+WOODIE.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "What troubles you, sister?",
+	CHOPPED = "Had to be done.",
+	SAPPED = "Still tappable, somehow.",
+	PICKED = "Hey, get away from that tree will ya!",
+	BURNING = "Probably best.",
+	BURNT = "Nothing left.",
+}
 
 WOODIE.DESCRIBE.KYNO_SUGARTREE_BUD = "你会长成一棵好树的，嗯？"
 
@@ -453,13 +564,22 @@ WOODIE.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "那会煮得很好。"
 
 WOODIE.DESCRIBE.KYNO_SLAUGHTERTOOL = "露西脏了没用。"
 
-WOODIE.DESCRIBE.KYNO_CHICKEN2 = "鸟就是鸟。"
+WOODIE.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "A bird's a bird.",
+	COOP = "I still hate them, but they're kind useful.",
+}
 
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG = "里面有只鸡在想鸡的想法。"
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "That's a lot of omelet, eh?"
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "嗯，它没有变成鸡。"
 
-WOODIE.DESCRIBE.KYNO_CHICKENHOUSE = "不错的小鸡舍，对吧？让鸟儿们住得暖和些。"
+WOODIE.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "Nice little coop, eh? Keeps the chickens cozy.",
+	FULL = "Plenty of eggs in there, beauty!",
+	BURNT = "Ah... that's a real shame.",
+}
 
 WOODIE.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "我应该解决这个问题吗？"
 
@@ -482,8 +602,11 @@ WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN = "小心火，露西。"
 WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "小心火，露西。"
 WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "小心火，露西。"
 
-WOODIE.DESCRIBE.KYNO_ROCKFLIPPABLE = "我们应该翻转它。"
-WOODIE.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "我们应该翻转它。"
+WOODIE.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "I should flip it.",
+	FLIPPED = "Yep. Figures.",
+}
 
 WOODIE.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "我希望永远不会如它一般。"
 
@@ -526,7 +649,12 @@ WOODIE.DESCRIBE.PEPPERROLLS = "呼！热！热！"
 
 WOODIE.DESCRIBE.KYNO_SAPHEALER = "闻起来很糟糕，但很管用！"
 
-WOODIE.DESCRIBE.KYNO_OCEAN_WRECK = "浪费了好木材。"
+WOODIE.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "A waste of good wood.",
+	PICKED = "Give it time, it'll grow stuff again.",
+	BURNING = "Well, that's the end of it.",
+}
 
 WOODIE.DESCRIBE.KYNO_GHOST_PIRATE = "也许他很友好？"
 
@@ -543,11 +671,31 @@ WOODIE.DESCRIBE.KYNO_PLANTMEAT_DRIED = "尝起来像生存。"
 
 WOODIE.DESCRIBE.KYNO_BREWBOOK = "非常方便。露西，你在我酿造的时候读出了成分？"
 
-WOODIE.DESCRIBE.KYNO_WOODENKEG = "现在我可以享受制作啤酒的乐趣了。"
+WOODIE.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "Now I can enjoy the making of beers.",
+	BREWING_LONG = "Gonna take a few days, eh?",
+	BREWING_SHORT = "Not much longer now.",
+	DONE = "Looks good and ready!",
+	BURNT = "Ah... That's a real shame.",
+}
 
-WOODIE.DESCRIBE.KYNO_PRESERVESJAR = "我想要一些果酱，但是什么口味的？"
+WOODIE.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "I want some jam, but what flavor?",
+	BREWING_LONG = "Takes patience.", 
+	BREWING_SHORT = "Not long now.",
+	DONE = "Looks real tasty!",
+	BURNT = "That's a shame.",
+}
 
-WOODIE.DESCRIBE.KYNO_ANTCHEST = "这很好。"
+WOODIE.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "That's neat.",
+	HONEY = "Plenty of honey in there, eh?",
+	NECTAR = "They're still workin' on it.",
+	BURNING = "Aw nuts, that's gone too far.",
+}
 
 WOODIE.DESCRIBE.KYNO_NECTAR_POD = "花蜜酿蜜，嗯。"
 
@@ -557,13 +705,47 @@ WOODIE.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "现在种植这个太晚了。"
 WOODIE.DESCRIBE.KYNO_PIKO = "他们几乎和我一样喜欢树。"
 WOODIE.DESCRIBE.KYNO_PIKO_ORANGE = "他们几乎和我一样喜欢树。"
 
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_TREE = "好吧。最好快点儿。"
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "好吧。最好快点。"
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "Well. Better get choppin'.",
+	CHOPPED = "Got what we needed.",
+	BURNING = "Careful!",
+	BURNT = "Burned clean through.",
+}
+
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "Well. Better get choppin'.",
+	BURNING = "Sorry, little guys.",
+}
+
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "就是那个盒子。"
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "它们不是最方便的。"
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "我更喜欢小木屋。"
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "我的眼睛在欺骗我！那该死的钟就在那儿！"
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "就是这样...？我再也不能相信我的眼睛了。"
+
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "They're not the handiest.",
+	BURNT = "Burned right down.",
+}
+
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "I'd prefer a log cabin.",
+	CRAFTED = "Not bad at all now.",
+	BURNT = "That's awful.",
+}
+
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "My eyes decieve me! The cursed bell is right there!",
+	OCCUPIED = "Guess I'll come back later, eh?",
+}
+
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "Is that...? I can't believe in my own eyes anymore.",
+	EMPTY = "Guess I'll check back later.",
+}
+
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "我想知道他是否在我不注意的时候和我们一起跳进了那个入口。"
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_POND = "看起来像是一个很受欢迎的鱼群聚居地。"
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "植物。"
@@ -713,8 +895,15 @@ WOODIE.DESCRIBE.RISOTTO = "非常细腻，你觉得呢，露西？"
 
 WOODIE.DESCRIBE.RICESAKE = "适量饮用，好吗，露西？露西...？"
 
-WOODIE.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "小心尖刺，露西！"
-WOODIE.DESCRIBE.KYNO_PINEAPPLEBUSH = "小心尖刺，露西！"
+WOODIE.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Pulled it right out."
+
+WOODIE.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "Be careful with the spikes, Lucy!",
+	PICKED = "Needs more time.",
+	WITHERED = "Dry as a bone.",
+	BURNING = "That's not good!",
+}
 
 WOODIE.DESCRIBE.KYNO_PINEAPPLE = "菠萝！"
 WOODIE.DESCRIBE.KYNO_PINEAPPLE_HALVED = "菠萝!"
@@ -726,7 +915,11 @@ WOODIE.DESCRIBE.PINACOLADA = "啊哈，神清气爽！"
 
 WOODIE.DESCRIBE.CHIMAS = "我已经习惯了。"
 
-WOODIE.DESCRIBE.KYNO_GARDEN_SPRINKLER = "利于浇水。"
+WOODIE.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "Good for watering.",
+	ON = "Keeps things growin' nice, eh?",
+}
 
 WOODIE.DESCRIBE.KYNO_FOODSACK = "用来装我的宝贝。"
 
@@ -835,11 +1028,21 @@ WOODIE.DESCRIBE.RICEANDBEANS = "它只是缺少一些美味的牛排和薯条。
 
 WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "见过更好的日子，对吧？我敢打赌2026年会变得热闹。"
 
-WOODIE.DESCRIBE.KYNO_TRUFFLES_GROUND = "嘿，没什么比直接从地里找吃的更好的了。"
+WOODIE.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Heh, nothing like finding food straight from the dirt.",
+	PICKED = "Maybe more will pop up.",
+	BURNING = "Ah, that's a real shame.",
+}
+
 WOODIE.DESCRIBE.KYNO_TRUFFLES = "闻起来有点怪，但味道不错。"
 WOODIE.DESCRIBE.KYNO_TRUFFLES_COOKED = "这才叫好吃的东西。"
 
-WOODIE.DESCRIBE.KYNO_ITEMSHOWCASER = "看起来不错，嗯？几乎太好看了舍不得吃。"
+WOODIE.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "Nothing on it yet, eh?",
+	FULL = "Looks nice, eh? Almost too nice to eat.",
+}
 
 WOODIE.DESCRIBE.KYNO_SPORECAP = "这可不是能吃的那种蘑菇，嗯？"
 WOODIE.DESCRIBE.KYNO_SPORECAP_COOKED = "好一点了，但我还是不信任它。"
@@ -859,7 +1062,15 @@ WOODIE.DESCRIBE.TRUFFLEOIL = "这味道有点太高档了，嗯？"
 
 WOODIE.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "好吧，还是赶紧动手吧。"
 WOODIE.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "养鱼的好地方，对吧？"
-WOODIE.DESCRIBE.KYNO_FISHFARMPLOT = "小鱼苗的孵化场。"
+
+WOODIE.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "A hatchery for little fishies.",
+	FUEL_HIGH = "They're eatin' real good!",
+	FUEL_MED = "Still doin' fine.",
+	FUEL_LOW = "Better toss some more food in.",
+	EMPTY = "All outta feed.",
+}
 
 WOODIE.DESCRIBE.KYNO_ANTCHOVY = "这下可有意思了，对吧？不过可别咬我的木头哦。"
 WOODIE.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "那可是一大群呢，对吧？把你们的网准备好。"
@@ -916,14 +1127,29 @@ WOODIE.DESCRIBE.MONKEYISLANDMEAL = "这组合可真够奇特的，对吧？但�
 WOODIE.DESCRIBE.KYNO_BRAINROCK_LARVAE = "真是个小混蛋。"
 WOODIE.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "不舒服的顺滑。"
 WOODIE.DESCRIBE.KYNO_BRAINROCK_CORAL = "真聪明。"
-WOODIE.DESCRIBE.KYNO_BRAINROCK_ROCK = "你算什么，什么热心肠的人？"
+
+WOODIE.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "What're you, some sort of keener?",
+	PICKED = "Guess it's takin' a break, eh?",
+}
 
 WOODIE.DESCRIBE.BRAINMETTERSOUP = "虽然我已经长大了，但我还是喜欢它。"
 
-WOODIE.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "你在这儿撑得住吗，伙计？"
+WOODIE.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "How you holding up out here, guy?",
+	SLEEPING = "Guess he's turning in.",
+}
+
 WOODIE.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "谢啦，兄弟！"
 
-WOODIE.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "这最好别招来什么羽毛害虫。"
+WOODIE.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "This better not attract any feathered vermin.",
+	WAITING = "It was bound to happen soon or later.",
+}
+
 WOODIE.DESCRIBE.KYNO_PACKIMBAGGIMS = "我能忍受他。"
 
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "我最好开始准备些材料了。"
@@ -933,9 +1159,28 @@ WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "确实让气氛活跃起来了。"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "让我不禁想起我们共同经历的那些欢庆时刻。"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "周年庆蛋糕最棒了，对吧？"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "没有气球，派对可就没意思了，对吧？"
-WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "最好别把森林点着，嗯？"
+
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Better not burn the forest, eh?",
+	FUEL_HIGH = "Running smooth as butter.",
+	FUEL_MED = "Still kicking.",
+	FUEL_LOW = "Better toss in some fuel.",
+	EMPTY = "She's outta fuel.",
+}
+
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "庆祝活动再合适不过了，对吧？"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "嗯，看起来真有节日气氛，对吧？"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "这还挺好的。"
 
 WOODIE.DESCRIBE.KYNO_FISHREGISTRYHAT = "帮我记住各种不同的鱼。"
+
+WOODIE.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Keeps the animals happy, eh?",
+	FUEL_HIGH = "Full as can be!",
+	FUEL_MED = "Still got some feed in there.",
+	FUEL_LOW = "Better top it up soon.",
+	EMPTY = "All outta feed.",
+	BURNT = "Well, that's done for.",
+}

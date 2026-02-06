@@ -144,6 +144,7 @@ local function fn()
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammered)
+	inst.components.workable:SetOnWorkCallback(OnHit)
 	inst.components.workable:SetWorkLeft(4)
 
 	inst:AddComponent("fueled")

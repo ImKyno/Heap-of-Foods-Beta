@@ -577,7 +577,7 @@ WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Probably a mortal thing."
 WORTOX.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "A never ending supply of eggs!",
-	FULL = "Eggs galore! Oh, what fun!",
+	FULL = "Eggs galore!",
 	BURNT = "No more coop, no more cluck!",
 }
 

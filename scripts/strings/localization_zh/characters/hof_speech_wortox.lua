@@ -90,6 +90,8 @@ WORTOX.ANNOUNCE_KYNO_POTHANGER_FAIL = "为什么不挂个锅呢？"
 
 WORTOX.ANNOUNCE_KYNO_CASSEROLE_FAIL = "有人告诉我需要一个砂锅。"
 
+WORTOX.ANNOUNCE_KYNO_SAPHEALER_USED = "You should be good to go now, tree!"
+
 WORTOX.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "咔嚓一声，人间的最后小憩！"
 
 WORTOX.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "哎呀，一个带轮子的空盒子！"
@@ -129,11 +131,23 @@ WORTOX.DESCRIBE.KYNO_SYRUP = "用于制作甜点。"
 WORTOX.DESCRIBE.KYNO_COFFEEBEANS = "加水。"
 WORTOX.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "没有热水？"
 
-WORTOX.DESCRIBE.DUG_KYNO_COFFEEBUSH = "一种奇怪的植物。"
-WORTOX.DESCRIBE.KYNO_COFFEEBUSH = "一种奇怪的植物。"
+WORTOX.DESCRIBE.DUG_KYNO_COFFEEBUSH = "A weird plant."
 
-WORTOX.DESCRIBE.DUG_KYNO_SPOTBUSH = "哦！灌木。"
-WORTOX.DESCRIBE.KYNO_SPOTBUSH = "哦！灌木。"
+WORTOX.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "Hot beans available!",
+	PICKED = "Nothing left for now.",
+	WITHERED = "It can't thrive like this.",
+}
+
+WORTOX.DESCRIBE.DUG_KYNO_SPOTBUSH = "It should be planted again."
+
+WORTOX.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "Oh! A shrub.",
+	PICKED = "Nothing to take right now.",
+	BURNING = "That's unfortunate.",
+}
 
 WORTOX.DESCRIBE.KYNO_SPOTSPICE_LEAF = "我舔了一个。鱼友！"
 
@@ -194,10 +208,24 @@ WORTOX.DESCRIBE.LONGPIGMEAL = "哦！人肉制成的食物。"
 
 WORTOX.DESCRIBE.CUCUMBERSALAD = "我不太喜欢吃东西。"
 
-WORTOX.DESCRIBE.KYNO_WILDWHEAT = "从最肥沃的土地上生长出来的小麦。"
-WORTOX.DESCRIBE.DUG_KYNO_WILDWHEAT = "从最肥沃的土地上生长出来的小麦。"
+WORTOX.DESCRIBE.DUG_KYNO_WILDWHEAT = "It should be planted again."
+
+WORTOX.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "Wheat that grows from richest earth.",
+	PICKED = "Nothing to take right now.",
+	WITHERED = "It can't survive like this.",
+	BURNING = "That's unfortunate.",
+}
 
 WORTOX.DESCRIBE.KYNO_MEALGRINDER = "一台用于研磨食物的机器！"
+
+WORTOX.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "A mushroom metropolis!",
+	PICKED = "They'll return in their own time.",
+	BURNING = "That's unfortunate.",
+}
 
 WORTOX.DESCRIBE.GORGE_BREAD = "人类的食物看起来像这样？"
 WORTOX.DESCRIBE.GORGE_SWEET_CHIPS = "这食物有特别之处！"
@@ -340,27 +368,57 @@ WORTOX.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "哎哟。"
 
 WORTOX.DESCRIBE.KYNO_SEEDS_KIT = "只是一些种子。"
 
-WORTOX.DESCRIBE.KYNO_LIMPETROCK = "吃得饱饱的！"
+WORTOX.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "Covered in good eating!",
+	PICKED = "Gone to hide, snails inside!",
+	WITHERED = "Dry and dead, no more fed!",
+}
+
 WORTOX.DESCRIBE.KYNO_LIMPETS = "你很快就会在我的肚子里！鱼鱼！"
 WORTOX.DESCRIBE.KYNO_LIMPETS_COOKED = "嗯！"
 
-WORTOX.DESCRIBE.KYNO_LOTUS_OCEAN = "粉红色的花！"
+WORTOX.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "Pink flower!",
+	PICKED = "Gone for now, take a bow!",
+	BURNING = "What a gash!",
+}
+
 WORTOX.DESCRIBE.KYNO_LOTUS_ROOT = "海茎！"
 WORTOX.DESCRIBE.KYNO_LOTUS_FLOWER = "一朵漂亮的粉红色花。"
 WORTOX.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "闻起来很香，鱼友！"
 
-WORTOX.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "被我的索具缠住了。"
+WORTOX.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Get's tangled in my rigging.",
+	PICKED = "Nothing left right now.",
+	BURNING = "That shouldn't be happening.",
+}
+
 WORTOX.DESCRIBE.KYNO_SEAWEEDS = "被我的索具缠住了。"
 WORTOX.DESCRIBE.KYNO_SEAWEEDS_COOKED = "烹饪不能让它成为食物。"
 WORTOX.DESCRIBE.KYNO_SEAWEEDS_DRIED = "这被认为是肉干？"
 WORTOX.DESCRIBE.KYNO_SEAWEEDS_ROOT = "海茎！"
 
-WORTOX.DESCRIBE.KYNO_TAROROOT_OCEAN = "芋头！鱼鱼！"
+WORTOX.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "A taro root! Hyuyu!",
+	PICKED = "It should grow back soon.",
+	BURNING = "That's unfortunate.",
+}
+
 WORTOX.DESCRIBE.KYNO_TAROROOT_ROOT = "海茎！"
 WORTOX.DESCRIBE.KYNO_TAROROOT = "我以前从未见过这样的东西！"
 WORTOX.DESCRIBE.KYNO_TAROROOT_COOKED = "我最喜欢的款待......无与伦比！"
 
-WORTOX.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "另一种植物。"
+WORTOX.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "Another plant.",
+	PICKED = "It will return in time.",
+	BURNING = "That's unfortunate.",
+}
+
 WORTOX.DESCRIBE.KYNO_WATERYCRESS_ROOT = "海茎！"
 WORTOX.DESCRIBE.KYNO_WATERYCRESS = "另一种植物。"
 
@@ -368,17 +426,40 @@ WORTOX.DESCRIBE.WATERYCRESSBOWL = "即使是人类食物，这也很奇怪。"
 
 WORTOX.DESCRIBE.KYNO_SALT = "嘶嘶！"
 
+WORTOX.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Mussels waiting quietly.",
+	PICKED = "Nothing to take right now.",
+	BURNING = "That's unfortunate.",
+}
+
 WORTOX.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "为了把贻贝引到我的肚子里！鱼鱼！"
 
 WORTOX.DESCRIBE.CATFOOD = "猫咪的食物！鱼鱼！"
 
 WORTOX.DESCRIBE.KATFOOD = "猫咪的食物！鱼鱼！"
 
-WORTOX.DESCRIBE.KYNO_BANANATREE = "我看到了什么？一棵真正的香蕉树！"
+WORTOX.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "What do I see? A real banana tree!",
+	PICKED = "No snacks for now.",
+	CHOPPED = "Chopped down!",
+	BURNING = "Flames everywhere!",
+	BURNT = "Ashes at last!",
+}
+
 WORTOX.DESCRIBE.KYNO_BANANA = "一种最不令人反感的人类食物口味。"
 WORTOX.DESCRIBE.KYNO_BANANA_COOKED = "现在烤好了。鱼友！"
 
-WORTOX.DESCRIBE.KYNO_KOKONUTTREE = "这棵树的树干很大。鱼友！"
+WORTOX.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "This tree has a big trunk. Hyuyu!",
+	PICKED = "No coconuts to be seen.",
+	CHOPPED = "Downed!",
+	BURNING = "It's burning, what a zap!",
+	BURNT = "Just ashes now.",
+}
+
 WORTOX.DESCRIBE.KYNO_KOKONUT = "一颗坚果！"
 WORTOX.DESCRIBE.KYNO_KOKONUT_HALVED = "一个椰子有两个？！"
 WORTOX.DESCRIBE.KYNO_KOKONUT_COOKED = "比生的还要好。"
@@ -426,13 +507,43 @@ WORTOX.DESCRIBE.TURF_STONECITY = "岩石地。"
 WORTOX.DESCRIBE.TURF_FIELDS = "草路。"
 WORTOX.DESCRIBE.TURF_TIDALMARSH = "非常柔软的地面。"
 
+WORTOX.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "The minerals are ready.",
+	PICKED = "The mortals crave these minerals.",
+}
+
 WORTOX.DESCRIBE.KYNO_SALTRACK_INSTALLER = "它是用来飞到池塘上方的。"
 
 WORTOX.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "这是用来填满树液的。"
 
 WORTOX.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "一旦我抓住他们，他们会觉得很傻！"
 
-WORTOX.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "天哪，你看起来病了！精神不振，鳃周围一片绿色。"
+WORTOX.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "My oh my, you look ill! Low of spirit, green 'round the gill.",
+	SLEEPING = "I should let him rest.",
+}
+
+WORTOX.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "Fweehee, what a special tree!",
+	CHOPPED = "That's a wrap on the sap.",
+	SAPPED = "Sweet, sugary sap!",
+	PICKED = "The tap will soon make sap!",
+	BURNING = "That's unfortunate.",
+	BURNT = "Nothing left now.",
+}
+
+WORTOX.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "An unfortunate mishap befell the tree sap.",
+	CHOPPED = "It served no purpose.",
+	SAPPED = "Ruined, but available.",
+	PICKED = "Those bugs are tree thugs!",
+	BURNING = "That ends it.",
+	BURNT = "Nothing remains.",
+}
 
 WORTOX.DESCRIBE.KYNO_SUGARTREE_BUD = "一颗树种。"
 
@@ -453,13 +564,22 @@ WORTOX.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "人类喜欢它，他们喜欢，他�
 
 WORTOX.DESCRIBE.KYNO_SLAUGHTERTOOL = "我不喜欢这种恶作剧。"
 
-WORTOX.DESCRIBE.KYNO_CHICKEN2 = "一只小鸟。"
+WORTOX.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "A tiny bird.",
+	COOP = "Home sweet coop! Hyuyu!",
+}
 
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG = "一只鸡的蛋，至少我听说过。"
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "A big shell for a tiny soul!"
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "可能是人类。"
 
-WORTOX.DESCRIBE.KYNO_CHICKENHOUSE = "鸡蛋供应源源不断！"
+WORTOX.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "A never ending supply of eggs!",
+	FULL = "Eggs galore!",
+	BURNT = "No more coop, no more cluck!",
+}
 
 WORTOX.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "嗯，我从它身上感觉到一种奇怪的气息。"
 
@@ -482,8 +602,11 @@ WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN = "这是人类用来做饭的东西。"
 WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "这是人类做饭的东西。"
 WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "这是人类做饭的东西。"
 
-WORTOX.DESCRIBE.KYNO_ROCKFLIPPABLE = "岩石下可以找到很多虫子。"
-WORTOX.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "岩石下可以找到很多虫子。"
+WORTOX.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "Plenty of bugs can be found under rocks.",
+	FLIPPED = "Now it's exposed.",
+}
 
 WORTOX.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "只是一个水上的箱子。"
 
@@ -526,7 +649,12 @@ WORTOX.DESCRIBE.PEPPERROLLS = "我会在 沃利不注意的时候用牙膏塞满
 
 WORTOX.DESCRIBE.KYNO_SAPHEALER = "苦涩难忍。"
 
-WORTOX.DESCRIBE.KYNO_OCEAN_WRECK = "好好休息。"
+WORTOX.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "Rest well.",
+	PICKED = "Nothing left for now.",
+	BURNING = "That seals its fate.",
+}
 
 WORTOX.DESCRIBE.KYNO_GHOST_PIRATE = "鬼魅般的面容！呜呜！"
 
@@ -543,11 +671,31 @@ WORTOX.DESCRIBE.KYNO_PLANTMEAT_DRIED = "人类在潮湿时更喜欢这样。"
 
 WORTOX.DESCRIBE.KYNO_BREWBOOK = "哦，接下来我要煮什么？鱼友！"
 
-WORTOX.DESCRIBE.KYNO_WOODENKEG = "这台机器制造人类喜欢的东西。"
+WORTOX.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "This machine makes the things that mortals likes.",
+	BREWING_LONG = "Bubbling slow, nice and low!",
+	BREWING_SHORT = "Almost done!",
+	DONE = "It's finally ready!",
+	BURNT = "Ash and gloom.",
+}
 
-WORTOX.DESCRIBE.KYNO_PRESERVESJAR = "他们告诉我用石榴做的好东西。我必须试试！"
+WORTOX.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "They told me this make a good thing with pomegranates. I must try!",
+	BREWING_LONG = "It is bubbling nicely.",
+	BREWING_SHORT = "Almost done, from what I can tell.",
+	DONE = "Sweet!",
+	BURNT = "Oh no, its all gone!",
+}
 
-WORTOX.DESCRIBE.KYNO_ANTCHEST = "制作甜蜜的蜂蜜！"
+WORTOX.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "Making the sweet honey!",
+	HONEY = "Its full of honey! What a show!",
+	NECTAR = "Not ready yet?",
+	BURNING = "No more honey making now.",
+}
 
 WORTOX.DESCRIBE.KYNO_NECTAR_POD = "甜蜜，甜蜜，蜜蜂的花蜜！"
 
@@ -557,13 +705,47 @@ WORTOX.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "蛴螬。"
 WORTOX.DESCRIBE.KYNO_PIKO = "我明白了，你喜欢像我一样恶作剧！"
 WORTOX.DESCRIBE.KYNO_PIKO_ORANGE = "用于泡茶！"
 
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_TREE = "你看起来不错！"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "你看起来不错！"
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "You look nice!",
+	CHOPPED = "Stripped of all it had to give.",
+	BURNING = "That's unfortunate.",
+	BURNT = "Nothing left now.",
+}
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "You look nice!",
+	BURNING = "Flee if you value your life.",
+}
+
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "有一个板条箱。"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "肯定是个臭结构。"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "他们闻起来比我还难闻！"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "我和萨米走过许多地方才找到这些物品！"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "我把一个小东西藏在里面了。嘻嘻！"
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "A stinky structure, to be sure.",
+	BURNT = "Ashes and smoke.",
+}
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "They smell worse than me!",
+	CRAFTED = "Spruced up, nice!",
+	BURNT = "Burnt and foul.",
+}
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "Me and Sammy went through a lot of places to get these items!",
+	OCCUPIED = "No trading right now.",
+}
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "I hid a little thing in there. Hyuyu!",
+	EMPTY = "No goodies left.",
+}
+
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "不要告诉任何人是我带你来的！"
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_POND = "我看到了我的未来……"
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "嘿！我在看这里！"
@@ -713,8 +895,15 @@ WORTOX.DESCRIBE.RISOTTO = "味道非常有趣，但还不够，就像灵魂一�
 
 WORTOX.DESCRIBE.RICESAKE = "有趣的饮料，呀哈！"
 
-WORTOX.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "愚蠢的水果。哼哼！"
-WORTOX.DESCRIBE.KYNO_PINEAPPLEBUSH = "愚蠢的水果。哼哼！"
+WORTOX.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Silly fruit bush. Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "Silly fruit. Hyuyu!",
+	PICKED = "Nothing to take right now.",
+	WITHERED = "It can't survive like this.",
+	BURNING = "That's unfortunate.",
+}
 
 WORTOX.DESCRIBE.KYNO_PINEAPPLE = "傻瓜水果。"
 WORTOX.DESCRIBE.KYNO_PINEAPPLE_HALVED = "傻瓜水果。"
@@ -726,7 +915,11 @@ WORTOX.DESCRIBE.PINACOLADA = "我必须承认，它非常好，令人神清气�
 
 WORTOX.DESCRIBE.CHIMAS = "一种奇怪的饮料，哼哼！"
 
-WORTOX.DESCRIBE.KYNO_GARDEN_SPRINKLER = "为植物解忧。"
+WORTOX.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "Relief for the plants.",
+	ON = "Its working nicely.",
+}
 
 WORTOX.DESCRIBE.KYNO_FOODSACK = "仅用于存放食物。"
 
@@ -835,11 +1028,21 @@ WORTOX.DESCRIBE.RICEANDBEANS = "人类的食物。"
 
 WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "呵呵！一座沉睡于时间中的房子……2026年再来偷看吧！"
 
-WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND = "嘻嘻！藏着，但藏不住我！"
+WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Hidden, but not from me! Hyuyu!",
+	PICKED = "Nothing left for now.",
+	BURNING = "That's unfortunate.",
+}
+
 WORTOX.DESCRIBE.KYNO_TRUFFLES = "噢！来自地下的美味！"
 WORTOX.DESCRIBE.KYNO_TRUFFLES_COOKED = "滋滋作响，现在完美了！"
 
-WORTOX.DESCRIBE.KYNO_ITEMSHOWCASER = "一场视觉盛宴，呜呜！"
+WORTOX.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "Nothing in there yet.",
+	FULL = "A feast for the eyes, hyuyu!",
+}
 
 WORTOX.DESCRIBE.KYNO_SPORECAP = "呵呵！腐败的美味！"
 WORTOX.DESCRIBE.KYNO_SPORECAP_COOKED = "烤焦又邪恶的美味！"
@@ -859,7 +1062,15 @@ WORTOX.DESCRIBE.TRUFFLEOIL = "大自然的滑溜恶作剧！神圣……还是�
 
 WORTOX.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "但即兴发挥更有趣！"
 WORTOX.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "水洼化作鱼族宫殿！嗯哼！"
-WORTOX.DESCRIBE.KYNO_FISHFARMPLOT = "小鱼鱼，快起来玩耍吧！"
+
+WORTOX.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "Tiny fish, rise and play!",
+	FUEL_HIGH = "They're are full belly.",
+	FUEL_MED = "It seems they are getting hungry.",
+	FUEL_LOW = "Food keeps getting low.",
+	EMPTY = "No more fish snacks, need to replenish it.",
+}
 
 WORTOX.DESCRIBE.KYNO_ANTCHOVY = "它在两个世界里蠕动扭摆！咿呀呀！"
 WORTOX.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "一群欢快的混合鱼虫！"
@@ -916,14 +1127,29 @@ WORTOX.DESCRIBE.MONKEYISLANDMEAL = "一场释放野性的盛宴。嗷呜！"
 WORTOX.DESCRIBE.KYNO_BRAINROCK_LARVAE = "并非最令人畏惧的海怪。"
 WORTOX.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "那是一块光秃秃的石头！"
 WORTOX.DESCRIBE.KYNO_BRAINROCK_CORAL = "你不能跳出自己的口袋来思考。"
-WORTOX.DESCRIBE.KYNO_BRAINROCK_ROCK = "海洋之脑。"
+
+WORTOX.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "Brain of the ocean.",
+	PICKED = "No more thoughts, oh my!",
+}
 
 WORTOX.DESCRIBE.BRAINMETTERSOUP = "也许这能帮我想出更好的恶作剧？"
 
-WORTOX.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "喂，你这老水手！"
+WORTOX.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "Ahoy, ye salty dog!",
+	SLEEPING = "Not open for trades right now.",
+}
+
 WORTOX.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "深海之宝！"
 
-WORTOX.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "一条死鱼。"
+WORTOX.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "A dead fish.",
+	WAITING = "Nothing remains the same.",
+}
+
 WORTOX.DESCRIBE.KYNO_PACKIMBAGGIMS = "那是我兄弟！"
 
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "我等不及要看到它完工了。噢耶！"
@@ -933,9 +1159,28 @@ WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "人人尽享欢乐时光！"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "你会带来怎样的庆祝？"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "人间美味，多么美味！嗯哼！"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "砰！我最爱惊喜啦！"
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "嘻嘻！爆米花是个恶作剧般的美味！"
+
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Popcorn is a delightful treat, yes.",
+	FUEL_HIGH = "Plenty of fuel still.",
+	FUEL_MED = "It can still produce some.",
+	FUEL_LOW = "Fuel running low.",
+	EMPTY = "No fuel remaining.",
+}
+
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "砰！一声欢庆的脆响零食！"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "哦嚯！一顶专为节日恶作剧准备的帽子！"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "哦嚯！专为萨米打造的帽子，独特又夸张！"
 
 WORTOX.DESCRIBE.KYNO_FISHREGISTRYHAT = "充满鱼味知识的思考帽！嘿嘿嘿！"
+
+WORTOX.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Nibble and munch, a feeding hunch!",
+	FUEL_HIGH = "Full to the brim!",
+	FUEL_MED = "Not too bad, not too grim!",
+	FUEL_LOW = "Low, oh low!",
+	EMPTY = "No food left!",
+	BURNT = "Ash and smoke!",
+}
