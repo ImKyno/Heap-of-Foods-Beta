@@ -723,7 +723,7 @@ local function FirePitCookwarePostinit(inst)
         if item.components.inventoryitem and item:HasTag("firepit_installer") then
             return true
         else
-            giver.components.talker:Say(GetString(giver, "ANNOUNCE_KYNO_FIREPITINSTALL_FAIL"))
+            giver:PushEvent("firepitinstallfail")
         end
     end
 

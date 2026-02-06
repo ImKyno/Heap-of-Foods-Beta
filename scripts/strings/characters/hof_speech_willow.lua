@@ -90,6 +90,8 @@ WILLOW.ANNOUNCE_KYNO_POTHANGER_FAIL = "Dummie, it requires a pot."
 
 WILLOW.ANNOUNCE_KYNO_CASSEROLE_FAIL = "It needs a pot-oven, not that."
 
+WILLOW.ANNOUNCE_KYNO_SAPHEALER_USED = "I'll help you, but I'll also burn you later. Maybe..."
+
 WILLOW.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Heh. Fire and blood, my two favorite things."
 
 WILLOW.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Aw, nothing to burn... or steal."
@@ -129,11 +131,23 @@ WILLOW.DESCRIBE.KYNO_SYRUP = "Mmmm..."
 WILLOW.DESCRIBE.KYNO_COFFEEBEANS = "These could use fire."
 WILLOW.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Ahhh, the aroma."
 
-WILLOW.DESCRIBE.DUG_KYNO_COFFEEBUSH = "This bush flourishes near the volcano's fire!"
-WILLOW.DESCRIBE.KYNO_COFFEEBUSH = "This bush flourishes near the volcano's fire!"
+WILLOW.DESCRIBE.DUG_KYNO_COFFEEBUSH = "I need to move it to somewhere else."
 
-WILLOW.DESCRIBE.DUG_KYNO_SPOTBUSH = "It smells kind of garlic-y."
-WILLOW.DESCRIBE.KYNO_SPOTBUSH = "It smells kind of pepper-y."
+WILLOW.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "This bush flourishes near the volcano's fire!",
+	PICKED = "No beans right now.",
+	WITHERED = "Too dry. Boring.",
+}
+
+WILLOW.DESCRIBE.DUG_KYNO_SPOTBUSH = "Needs a new spot."
+
+WILLOW.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "It smells kind of pepper-y.",
+	PICKED = "Nothing left on it.",
+	BURNING = "Whoops.",
+}
 
 WILLOW.DESCRIBE.KYNO_SPOTSPICE_LEAF = "It's a piece of that pepper-y bush."
 
@@ -194,8 +208,15 @@ WILLOW.DESCRIBE.LONGPIGMEAL = "Ewww."
 
 WILLOW.DESCRIBE.CUCUMBERSALAD = "I'd rather eat a bowl of flames."
 
-WILLOW.DESCRIBE.KYNO_WILDWHEAT = "Wheat."
-WILLOW.DESCRIBE.DUG_KYNO_WILDWHEAT = "Wheat."
+WILLOW.DESCRIBE.DUG_KYNO_WILDWHEAT = "Needs a new spot."
+
+WILLOW.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "Dry and scratchy.",
+	PICKED = "Nothing left now.",
+	WITHERED = "Too dry to care.",
+	BURNING = "Poof!",
+}
 
 WILLOW.DESCRIBE.KYNO_MEALGRINDER = "I can smash stuff down with it."
 
@@ -368,24 +389,49 @@ WILLOW.DESCRIBE.KYNO_LOTUS_ROOT = "A soggy plant."
 WILLOW.DESCRIBE.KYNO_LOTUS_FLOWER = "Just a dumb flower."
 WILLOW.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Fire makes it better."
 
-WILLOW.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "Soggy sea grass."
+WILLOW.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Soggy sea grass.",
+	PICKED = "Gone for now.",
+	BURNING = "Even the sea stuff burns!",
+}
+
 WILLOW.DESCRIBE.KYNO_SEAWEEDS = "Soggy sea grass."
 WILLOW.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Not bad once you add fire."
 WILLOW.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Healthy jerky."
 WILLOW.DESCRIBE.KYNO_SEAWEEDS_ROOT = "A bunch of soggy weeds."
 
-WILLOW.DESCRIBE.KYNO_TAROROOT_OCEAN = "Why does it grow in water?"
+WILLOW.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "Why does it grow in water?",
+	PICKED = "It'll be back.",
+	BURNING = "Much better!",
+}
+
 WILLOW.DESCRIBE.KYNO_TAROROOT_ROOT = "A soggy bulb."
 WILLOW.DESCRIBE.KYNO_TAROROOT = "Definitely not a bird."
 WILLOW.DESCRIBE.KYNO_TAROROOT_COOKED = "Using fire on it made it a tastier taro root."
 
-WILLOW.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "Can I burn it?"
+WILLOW.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "Can I burn it?",
+	PICKED = "It'll come back.",
+	BURNING = "Oops!",
+}
+
 WILLOW.DESCRIBE.KYNO_WATERYCRESS_ROOT = "A soggy weed."
 WILLOW.DESCRIBE.KYNO_WATERYCRESS = "Can I burn it?"
 
 WILLOW.DESCRIBE.WATERYCRESSBOWL = "Even water and vegetables taste better with fire."
 
 WILLOW.DESCRIBE.KYNO_SALT = "I need a pinch or two on all my food."
+
+WILLOW.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Slimy seafood on a stick.",
+	PICKED = "Nothing left now.",
+	BURNING = "Seafood roast!",
+}
 
 WILLOW.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "The mussels like this stick for some reason."
 
@@ -461,13 +507,43 @@ WILLOW.DESCRIBE.TURF_STONECITY = "The ground is boring."
 WILLOW.DESCRIBE.TURF_FIELDS = "The ground is boring."
 WILLOW.DESCRIBE.TURF_TIDALMARSH = "Squelchy."
 
+WILLOW.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Gotta dredge the salt up.",
+	PICKED = "Grow faster, salt crystals!",
+}
+
 WILLOW.DESCRIBE.KYNO_SALTRACK_INSTALLER = "We can use it to get some cooking salt."
 
 WILLOW.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Now we can get sap out of the trees."
 
 WILLOW.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "That'll show those crabs."
 
-WILLOW.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "They're not so different from the pigs back at our place."
+WILLOW.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "They're not so different from the pigs back at our place.",
+	SLEEPING = "Ugh. Figures.",
+}
+
+WILLOW.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "Sticky tree.",
+	CHOPPED = "It's kinda useless now.",
+	SAPPED = "Sap's ready!",
+	PICKED = "It's taking forever!",
+	BURNING = "There we go!",
+	BURNT = "Pretty.",
+}
+
+WILLOW.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "You don't look so hot, tree.",
+	CHOPPED = "Good.",
+	SAPPED = "Ew.",
+	PICKED = "Stupid bugs.",
+	BURNING = "Finally!",
+	BURNT = "Much Better.",
+}
 
 WILLOW.DESCRIBE.KYNO_SUGARTREE_BUD = "I'd burn it but it plants that sugar tree."
 
@@ -526,8 +602,11 @@ WILLOW.DESCRIBE.KYNO_COOKWARE_OVEN = "Now we're cooking."
 WILLOW.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Now we're cooking."
 WILLOW.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Now we're cooking."
 
-WILLOW.DESCRIBE.KYNO_ROCKFLIPPABLE = "Might as well see what's underneath."
-WILLOW.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "Might as well see what's underneath."
+WILLOW.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "Might as well see what's underneath.",
+	FLIPPED = "Ew. I knew it.",
+}
 
 WILLOW.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Something's fishy here."
 
@@ -570,7 +649,12 @@ WILLOW.DESCRIBE.PEPPERROLLS = "It's totally on fire!"
 
 WILLOW.DESCRIBE.KYNO_SAPHEALER = "This'll help that poisoned trees!"
 
-WILLOW.DESCRIBE.KYNO_OCEAN_WRECK = "Someone has regrets."
+WILLOW.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "Someone has regrets.",
+	PICKED = "Nothing left to scrape off.",
+	BURNING = "Heh. That'll do it.",
+}
 
 WILLOW.DESCRIBE.KYNO_GHOST_PIRATE = "What \"arrr\" you?"
 
@@ -811,8 +895,15 @@ WILLOW.DESCRIBE.RISOTTO = "Warly surely got the right skills for burning grains.
 
 WILLOW.DESCRIBE.RICESAKE = "I think Wilson will like this one, hehe."
 
-WILLOW.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Ouuuch! It has tiny spikes."
-WILLOW.DESCRIBE.KYNO_PINEAPPLEBUSH = "Ouuuch! It has tiny spikes."
+WILLOW.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Yanked it out."
+
+WILLOW.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "Ouuuch! It has tiny spikes.",
+	PICKED = "No fruit now.",
+	WITHERED = "Too dry and sad.",
+	BURNING = "Heh. Crispy.",
+}
 
 WILLOW.DESCRIBE.KYNO_PINEAPPLE = "Ouch!"
 WILLOW.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Looks yummy."
@@ -1039,10 +1130,20 @@ WILLOW.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WILLOW.DESCRIBE.BRAINMETTERSOUP = "Soup for kids."
 
-WILLOW.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "He looks kinda dozy."
+WILLOW.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "He looks kinda dozy.",
+	SLEEPING = "Good. He's quiet now.",
+}
+
 WILLOW.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "It's filled with sea treats!"
 
-WILLOW.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "This looks meaningful."
+WILLOW.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "This looks meaningful.",
+	WAITING = "It's still too wet to burn.",
+}
+
 WILLOW.DESCRIBE.KYNO_PACKIMBAGGIMS = "Friend or foe?"
 
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "There will be fire on top of it, right?!"

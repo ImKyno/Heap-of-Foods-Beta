@@ -130,6 +130,10 @@ local function Hof_AddData(self, data, makeentry, makesubentry, makesubiconentry
 	if data.fishfarm then
 		makeentry("icon_action.tex", STRINGS.SCRAPBOOK.DATA_FISHFARM)
 	end
+	
+	if data.animalfeeder then
+		makeentry("icon_action.tex", STRINGS.SCRAPBOOK.DATA_ANIMALFEEDER)
+	end
 end
 
 -- Modified PopulateInfoPanel for our needs.

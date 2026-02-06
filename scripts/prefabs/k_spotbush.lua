@@ -41,6 +41,12 @@ local function dig_up(inst, chopper)
 	inst:Remove()
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.burnable:IsBurning() and "BURNING")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function OnPreLoad(inst, data)
     WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_SPOTBUSH_GROWTIME)
 end
@@ -76,7 +82,9 @@ local function fn()
 	end
 	
 	inst:AddComponent("lootdropper")
+	
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
@@ -97,7 +105,7 @@ local function fn()
 
 	inst.OnPreLoad = OnPreLoad
 	
-	MakeSmallBurnable(inst)
+	MakeMediumBurnable(inst)
 	MakeSmallPropagator(inst)
 	
 	MakeNoGrowInWinter(inst)

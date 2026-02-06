@@ -228,6 +228,11 @@ local function OnChildGoingHome(inst, data)
 		inst.AnimState:PlayAnimation("pick")
 		inst.SoundEmitter:PlaySound("summerevent/cannon/fire3")
 	end
+	
+	-- Destroy anything left inside their inventory for clean up.
+	if chicken ~= nil and chicken.components.inventory ~= nil then
+		chicken.components.inventory:DestroyContents()
+	end
 
 	chicken._has_eaten_today = false
 	chicken._has_food_buffered = false

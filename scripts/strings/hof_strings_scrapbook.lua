@@ -11,6 +11,7 @@ STRINGS.SCRAPBOOK.DATA_SLAUGHTERABLE = "CAN BE BUTCHERED" -- "SLAUGHTERED" word 
 STRINGS.SCRAPBOOK.DATA_MILKABLE = "CAN BE MILKED"
 STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "CAN BE BRED"
 STRINGS.SCRAPBOOK.DATA_FISHFARM = "CAN BREED FISHES"
+STRINGS.SCRAPBOOK.DATA_ANIMALFEEDER = "CAN FEED ANIMALS"
 
 -- Foodtypes.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "HORRIBLE"
@@ -214,4 +215,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "Celebrating the 5th Anniversary of 
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Can be sliced using a Cleaver to obtain Slice of Anniversary Cake. Each Slice has a different flavor and effect.\n\nIncreases sanity of the survivors around it overtime.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Increases sanity of the survivors around it overtime.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "A 2 slot container that will receive corn for making popcorn.\n\nPlacing corn in the first slot will allow producing 5 popcorns.\n\nDuring the Heap of Foods Anniversary it will produce Anniversary Popcorn instead.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Some animals will feed from the contents stocked in this trough.\n\Seeds and Grains can be used as a primary food source."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "A shelter for Chickens that can produce poultry products."

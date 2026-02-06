@@ -143,7 +143,7 @@ local function TestItem(inst, item, giver)
 	if item.components.inventoryitem and item:HasTag("sap_bucket_installer") then
 		return true -- Install the Sap Bucket.
 	else
-		giver.components.talker:Say(GetString(giver, "ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL"))
+		giver:PushEvent("cookwareinstallfail")
 	end
 end
 
@@ -305,6 +305,24 @@ local function burnt_chopped(inst)
     inst:DoTaskInTime(40 * FRAMES, inst.Remove)
 end
 
+local function GetStatus(inst, viewer)
+	return (inst:HasTag("stump") and "CHOPPED")
+	or (inst:HasTag("burnt") and "BURNT")
+	or (inst.components.burnable ~= nil and inst.components.burnable:IsBurning() and "BURNING")
+	or (inst.components.pickable ~= nil and inst.components.pickable:CanBePicked() and "SAPPED")
+	or (inst.components.pickable ~= nil and not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
+local function GetStatusRuined(inst, viewer)
+	return (inst:HasTag("stump") and "CHOPPED")
+	or (inst:HasTag("burnt") and "BURNT")
+	or (inst.components.burnable ~= nil and inst.components.burnable:IsBurning() and "BURNING")
+	or (inst.components.pickable ~= nil and inst.components.pickable:CanBePicked() and "SAPPED")
+	or (inst.components.pickable ~= nil and not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function OnSave(inst, data)
 	data.sapped = inst.sapped
 	
@@ -381,7 +399,8 @@ local function treefn()
 	inst.components.lootdropper:SetLoot({"log", "log", "log", "kyno_sugartree_bud", "kyno_sap"})
 	
     inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE"
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("cookwareinstaller")
 	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
@@ -441,7 +460,8 @@ local function stumpfn()
     inst:AddComponent("lootdropper")
 	
     inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE"
+	inst.components.inspectable.getstatus = GetStatus
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
@@ -507,7 +527,8 @@ local function treesapfn()
 	inst.components.lootdropper:SetLoot({"kyno_sapbucket_installer"})
 	
     inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE"
+	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/quagmire/common/craft/sap_extractor"
@@ -605,7 +626,8 @@ local function ruinedfn()
 	inst.components.lootdropper:SetLoot({"kyno_sapbucket_installer"})
 	
     inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE_RUINED"
+	inst.components.inspectable.getstatus = GetStatusRuined
 
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/quagmire/common/craft/sap_extractor"
@@ -681,7 +703,8 @@ local function ruined2fn()
 	inst.components.lootdropper:SetLoot({"log", "log", "log", "kyno_sap_spoiled"})
 	
     inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE_RUINED"
+	inst.components.inspectable.getstatus = GetStatusRuined
 
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
@@ -742,7 +765,8 @@ local function burntfn()
     inst:AddComponent("lootdropper")
 	
 	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE"
+	inst.components.inspectable.getstatus = GetStatus
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
@@ -790,7 +814,8 @@ local function stump_ruinedfn()
     inst:AddComponent("lootdropper")
 	
     inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE_RUINED"
+	inst.components.inspectable.getstatus = GetStatusRuined
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.DIG)

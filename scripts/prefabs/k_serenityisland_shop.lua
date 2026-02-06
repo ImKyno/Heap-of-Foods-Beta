@@ -112,7 +112,7 @@ local function TestItem(inst, item, giver)
 		if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" then
 			return true -- Accept the Item.
 		else
-			giver.components.talker:Say(GetString(giver, "ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL"))
+			giver:PushEvent("serenityislandshopfail")
 		end
 	end
 	
@@ -123,7 +123,7 @@ local function TestItem(inst, item, giver)
 	elseif inst:HasTag("pigelder_nighttrader") and item.components.tradable.goldvalue > 0 then -- Lights Out worlds.
 		return true
 	else
-		giver.components.talker:Say(GetString(giver, "ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL"))
+		giver:PushEvent("serenityislandshopfail")
 	end
 end
 
@@ -204,6 +204,11 @@ local function OnGetItemFromPlayer(inst, giver, item, isnight)
 			end
 		end
 	end
+end
+
+local function GetStatus(inst, viewer)
+	return (not inst.components.trader.enabled and "SLEEPING")
+	or "GENERIC"
 end
 
 local function OnSave(inst, data)
@@ -291,8 +296,10 @@ local function fn()
 
 	inst.components.talker.ontalk = ontalk
 
-    inst:AddComponent("inspectable")
 	inst:AddComponent("craftingstation")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("playerprox")
 	inst.components.playerprox:SetDist(4, 7)

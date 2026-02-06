@@ -83,6 +83,14 @@ local function ontransplantfn(inst)
 	inst.components.pickable:MakeBarren()
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.burnable:IsBurning() and "BURNING")
+	or (inst.components.pickable:IsBarren() and "WITHERED")
+	-- or (inst.components.witherable ~= nil and inst.components.witherable:IsWithered() and "WITHERED")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function OnPreLoad(inst, data)
     WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_WILDWHEAT_GROWTIME)
 end
@@ -120,6 +128,11 @@ local function grass(name, stage)
 		
 		local color = 0.75 + math.random() * 0.25
 		inst.AnimState:SetMultColour(color, color, color, 1)
+		
+		inst:AddComponent("lootdropper")
+		
+		inst:AddComponent("inspectable")
+		inst.components.inspectable.getstatus = GetStatus
 
 		inst:AddComponent("pickable")
 		inst.components.pickable.picksound = "dontstarve/wilson/pickup_reeds"
@@ -136,9 +149,6 @@ local function grass(name, stage)
 		if stage == 1 then
 			inst.components.pickable:MakeBarren()
 		end
-
-		inst:AddComponent("lootdropper")
-		inst:AddComponent("inspectable")
 
 		inst:AddComponent("workable")
 		inst.components.workable:SetWorkAction(ACTIONS.DIG)

@@ -24,7 +24,7 @@ local prefabs =
 
 local function TestItem(inst, item, giver)
 	if item.components.inventoryitem and item:HasTag("sap_bucket_installer") then
-		giver.components.talker:Say(GetString(giver, "ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL"))
+        giver:PushEvent("treeinstallfail")
 	end
 end
 
@@ -201,6 +201,13 @@ local function burnt_chopped(inst)
     inst:DoTaskInTime(40 * FRAMES, inst.Remove)
 end
 
+local function GetStatus(inst, viewer)
+	return (inst:HasTag("stump") and "CHOPPED")
+	or (inst:HasTag("burnt") and "BURNT")
+	or (inst.components.burnable ~= nil and inst.components.burnable:IsBurning() and "BURNING")
+	or "GENERIC"
+end
+
 local function OnSave(inst, data)
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
         data.burnt = true
@@ -258,11 +265,12 @@ local function shortfn()
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"log", "kyno_sap"})
 	
-    inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
-	
 	inst:AddComponent("cookwareinstaller")
 	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE"
+	inst.components.inspectable.getstatus = GetStatus
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
@@ -328,7 +336,8 @@ local function short_burntfn()
     inst:AddComponent("lootdropper")
 	
 	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE"
+	inst.components.inspectable.getstatus = GetStatus
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
@@ -388,11 +397,12 @@ local function normalfn()
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"log", "log", "kyno_sugartree_bud", "kyno_sap"})
 	
-    inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
-	
 	inst:AddComponent("cookwareinstaller")
 	inst.components.cookwareinstaller:SetAcceptTest(TestItem)
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE"
+	inst.components.inspectable.getstatus = GetStatus
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
@@ -458,7 +468,8 @@ local function normal_burntfn()
     inst:AddComponent("lootdropper")
 	
 	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE"
+	inst.components.inspectable.getstatus = GetStatus
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)
@@ -505,7 +516,8 @@ local function stump_shortfn()
     inst:AddComponent("lootdropper")
 	
     inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE"
+	inst.components.inspectable.getstatus = GetStatus
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
@@ -560,7 +572,8 @@ local function stump_normalfn()
     inst:AddComponent("lootdropper")
 	
     inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SUGARWOODTREE"
+	inst.components.inspectable.nameoverride = "KYNO_SUGARTREE"
+	inst.components.inspectable.getstatus = GetStatus
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.DIG)

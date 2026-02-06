@@ -379,7 +379,7 @@ local function TestItem(inst, item, giver)
 	if item.components.inventoryitem and item:HasTag("pot_installer") then
 		return true -- Install the Pot.
 	else
-		giver.components.talker:Say(GetString(giver, "ANNOUNCE_KYNO_POTHANGER_FAIL"))
+		giver:PushEvent("pothangerinstallfail")
 	end
 end
 

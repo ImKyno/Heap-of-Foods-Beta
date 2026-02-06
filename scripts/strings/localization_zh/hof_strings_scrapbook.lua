@@ -11,6 +11,7 @@ STRINGS.SCRAPBOOK.DATA_SLAUGHTERABLE = "CAN BE SLAUGHTERED"
 STRINGS.SCRAPBOOK.DATA_MILKABLE = "CAN BE MILKED"
 STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "CAN BE BRED"
 STRINGS.SCRAPBOOK.DATA_FISHFARM = "CAN BREED FISHES"
+STRINGS.SCRAPBOOK.DATA_ANIMALFEEDER = "CAN FEED ANIMALS"
 
 -- Foodtypes.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "可怕"
@@ -214,4 +215,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "可用砍刀切开周年纪念蛋糕。每份蛋糕风味与效果都不一样。\n\n随时间推移，逐渐提升周围幸存者的理智值。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "随时间推移，逐渐提升周围幸存者的理智值。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "一个2格容器，用于接收制作爆米花的玉米。\n\n将玉米放入第一个格子可生产5份爆米花。\n\n在更多料理周年庆期间，它会变为周年庆纪念爆米花。\n\n庆祝更多料理五周年！"
+STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Some animals will feed from the food placed in this trough.\n\Seeds and Grains can be used as a primary food source."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "A shelter for Chickens that can produce poultry products."

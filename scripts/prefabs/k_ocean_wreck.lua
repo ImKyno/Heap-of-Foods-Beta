@@ -16,6 +16,8 @@ local prefabs =
 	"kyno_ghost_pirate",
 }
 
+local DAMAGE_SCALE = 0.5
+
 local MAST       = 1
 local BOW        = 2
 local MIDSHIP    = 3
@@ -194,13 +196,19 @@ local function OnFullMoon(inst)
 	end
 end
 
-local DAMAGE_SCALE = 0.5
 local function OnCollide(inst, data)
     local boat_physics = data.other.components.boatphysics
+	
     if boat_physics ~= nil then
         local hit_velocity = math.floor(math.abs(boat_physics:GetVelocity() * data.hit_dot_velocity) * DAMAGE_SCALE / boat_physics.max_velocity + 0.5)
         inst.components.workable:WorkedBy(data.other, hit_velocity * TUNING.EVERGREEN_CHOPS_SMALL)
     end
+end
+
+local function GetStatus(inst, viewer)
+	return (inst.components.burnable:IsBurning() and "BURNING")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
 end
 
 local function OnSave(inst, data)
@@ -248,6 +256,7 @@ local function fn()
 	inst:RemoveTag("_named")
 	
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("pickable")
 	inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"

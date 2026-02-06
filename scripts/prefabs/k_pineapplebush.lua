@@ -93,6 +93,14 @@ local function OnDigUp(inst, chopper)
     inst:Remove()
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.burnable:IsBurning() and "BURNING")
+	-- or (inst.components.witherable ~= nil and inst.components.witherable:IsWithered() and "WITHERED")
+	or (inst.components.pickable:IsBarren() and "WITHERED")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function OnPreLoad(inst, data)
     WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_PINEAPPLEBUSH_GROWTIME)
 end
@@ -129,7 +137,9 @@ local function fn()
     end
 	
 	inst:AddComponent("lootdropper")
+	
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
@@ -179,9 +189,9 @@ local function transplantablefn()
 	inst.components.inspectable.nameoverride = "KYNO_PINEAPPLEBUSH"
 	
 	inst.components.pickable.makebarrenfn = OnMakeBarren
+	inst.components.pickable.ontransplantfn = OnTransplant
 	inst.components.pickable.max_cycles = 20
 	inst.components.pickable.cycles_left = 20
-	inst.components.pickable.ontransplantfn = OnTransplant
 	
 	MakeWaxablePlant(inst)
 	

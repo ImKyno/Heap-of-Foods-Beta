@@ -90,6 +90,8 @@ WALTER.ANNOUNCE_KYNO_POTHANGER_FAIL = "We need a pot for that one."
 
 WALTER.ANNOUNCE_KYNO_CASSEROLE_FAIL = "It needs something else."
 
+WALTER.ANNOUNCE_KYNO_SAPHEALER_USED = "There you go, tree! All patched up."
+
 WALTER.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Camp rule #12: Always respect the food you hunt."
 
 WALTER.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Darn. I was hoping for something interesting."
@@ -129,11 +131,23 @@ WALTER.DESCRIBE.KYNO_SYRUP = "So sweet!"
 WALTER.DESCRIBE.KYNO_COFFEEBEANS = "Small enough to fit in the pot."
 WALTER.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Lets prepare them, Woby!"
 
-WALTER.DESCRIBE.DUG_KYNO_COFFEEBUSH = "It's a coffee bush I can't believe it!"
-WALTER.DESCRIBE.KYNO_COFFEEBUSH = "It's a coffee bush I can't believe it!"
+WALTER.DESCRIBE.DUG_KYNO_COFFEEBUSH = "It's a coffee bush, I can't believe it!"
 
-WALTER.DESCRIBE.DUG_KYNO_SPOTBUSH = "Just a shrub."
-WALTER.DESCRIBE.KYNO_SPOTBUSH = "Just a shrub."
+WALTER.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "Smells kinda strong.",
+	PICKED = "They will grow back soon enough.",
+	WITHERED = "Needs fertilizer.",
+}
+
+WALTER.DESCRIBE.DUG_KYNO_SPOTBUSH = "We should plant it again, right Woby?"
+
+WALTER.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "Just a shrub.",
+	PICKED = "Guess it'll grow back.",
+	BURNING = "Whoa! That's bad!",
+}
 
 WALTER.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Hmm. I could make a spice with this."
 
@@ -194,8 +208,15 @@ WALTER.DESCRIBE.LONGPIGMEAL = "Flesh is flesh."
 
 WALTER.DESCRIBE.CUCUMBERSALAD = "Even scavenged cucumbers can be food in the wilderness!"
 
-WALTER.DESCRIBE.KYNO_WILDWHEAT = "A patch of wheat plant."
-WALTER.DESCRIBE.DUG_KYNO_WILDWHEAT = "A patch of wheat plant."
+WALTER.DESCRIBE.DUG_KYNO_WILDWHEAT = "I could plant it somewhere better."
+
+WALTER.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "A patch of wheat plant.",
+	PICKED = "It will grow grains back, eventually.",
+	WITHERED = "Looks really dry.",
+	BURNING = "Whoa! That's bad!",
+}
 
 WALTER.DESCRIBE.KYNO_MEALGRINDER = "Hmm... What should I grind today?"
 
@@ -368,24 +389,49 @@ WALTER.DESCRIBE.KYNO_LOTUS_ROOT = "This needs to get planted."
 WALTER.DESCRIBE.KYNO_LOTUS_FLOWER = "Yum!"
 WALTER.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Neat!"
 
-WALTER.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "Wet, soppy weed."
+WALTER.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Wet, soppy weed.",
+	PICKED = "They'll come back, I think.",
+	BURNING = "How did THAT catch fire?!",
+}
+
 WALTER.DESCRIBE.KYNO_SEAWEEDS = "Wet, soppy weed."
 WALTER.DESCRIBE.KYNO_SEAWEEDS_COOKED = "A nice big pile of... food?"
 WALTER.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Maybe I could make a paper airplane out of it."
 WALTER.DESCRIBE.KYNO_SEAWEEDS_ROOT = "This needs to get planted."
 
-WALTER.DESCRIBE.KYNO_TAROROOT_OCEAN = "Maybe I can eat that..."
+WALTER.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "Maybe I can eat that...",
+	PICKED = "The water helps it grow faster.",
+	BURNING = "Oh no!",
+}
+
 WALTER.DESCRIBE.KYNO_TAROROOT_ROOT = "This needs to get planted."
 WALTER.DESCRIBE.KYNO_TAROROOT = "Even in the wilderness you have to eat your vegetables."
 WALTER.DESCRIBE.KYNO_TAROROOT_COOKED = "Oh, it's much better cooked!"
 
-WALTER.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "Cabbage, but here?"
+WALTER.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "A plant growing out here in the ocean?",
+	PICKED = "Hope it comes back fast.",
+	BURNING = "Whoa... didn't see that coming.",
+}
+
 WALTER.DESCRIBE.KYNO_WATERYCRESS_ROOT = "This needs to get planted."
-WALTER.DESCRIBE.KYNO_WATERYCRESS = "Cabbage, but here?"
+WALTER.DESCRIBE.KYNO_WATERYCRESS = "Slippery."
 
 WALTER.DESCRIBE.WATERYCRESSBOWL = "Watery vegetables. Mmmm... mmmm!"
 
 WALTER.DESCRIBE.KYNO_SALT = "Hey, I think it's salt!"
+
+WALTER.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "That's a neat way to get food.",
+	PICKED = "We gotta wait, girl.",
+	BURNING = "Well, that's bad.",
+}
 
 WALTER.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "I don't know what those sea creatures see in this stick."
 
@@ -461,13 +507,43 @@ WALTER.DESCRIBE.TURF_STONECITY = "Do I really need to drag these stones around w
 WALTER.DESCRIBE.TURF_FIELDS = "Do I really need to drag these turfs around with me?"
 WALTER.DESCRIBE.TURF_TIDALMARSH = "Do I really need to drag this dirt around with me?"
 
+WALTER.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Salt is ready for harvest!",
+	PICKED = "We must wait for it to dry out.",
+}
+
 WALTER.DESCRIBE.KYNO_SALTRACK_INSTALLER = "A rack for gathering salt!"
 
 WALTER.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "For gathering sap from trees, I know how to use that!"
 
 WALTER.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "You want some crabs for dinner, Woby?"
 
-WALTER.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "He's so different, compared to the other pigs!"
+WALTER.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "He's so different, compared to the other pigs!",
+	SLEEPING = "C'mon, Woby. We must let the elders sleep.",
+}
+
+WALTER.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "That's kinda cool!",
+	CHOPPED = "Guess that's it.",
+	SAPPED = "Looks ready.",
+	PICKED = "Still working.",
+	BURNING = "Careful!",
+	BURNT = "Nothing left, but ashes.",
+}
+
+WALTER.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "That doesn't look safe.",
+	CHOPPED = "Probably for the best.",
+	SAPPED = "Still there, somehow.",
+	PICKED = "Still messed up.",
+	BURNING = "Its for the best.",
+	BURNT = "Sorry.",
+}
 
 WALTER.DESCRIBE.KYNO_SUGARTREE_BUD = "Good enough to eat. Better as a tree!"
 
@@ -526,8 +602,11 @@ WALTER.DESCRIBE.KYNO_COOKWARE_OVEN = "What should I cook, Woby?"
 WALTER.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "What should I cook, Woby?"
 WALTER.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "What should I cook, Woby?"
 
-WALTER.DESCRIBE.KYNO_ROCKFLIPPABLE = "My grandma taught me to always look under rocks."
-WALTER.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "My grandma taught me to always look under rocks."
+WALTER.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "My grandma taught me to always look under rocks.",
+	FLIPPED = "That answers it.",
+}
 
 WALTER.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "That looks like something I should check."
 
@@ -570,7 +649,12 @@ WALTER.DESCRIBE.PEPPERROLLS = "Why does it taste minty...?"
 
 WALTER.DESCRIBE.KYNO_SAPHEALER = "A cure for too much sweetness."
 
-WALTER.DESCRIBE.KYNO_OCEAN_WRECK = "A grounded boat. I know how that feels."
+WALTER.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "A grounded boat. I know how that feels.",
+	PICKED = "Nothing left here.",
+	BURNING = "Yeah... that's sinking for sure.",
+}
 
 WALTER.DESCRIBE.KYNO_GHOST_PIRATE = "Arrr you from this crew? I suppose so."
 
@@ -812,7 +896,14 @@ WALTER.DESCRIBE.RISOTTO = "Ok girl, what about we stop for a while and eat?"
 WALTER.DESCRIBE.RICESAKE = "I'm not sure about this one. Maybe I should pass."
 
 WALTER.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Don't touch it, girl. Let me handle that."
-WALTER.DESCRIBE.KYNO_PINEAPPLEBUSH = "Don't touch it, girl. Let me handle that."
+
+WALTER.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "Don't touch it, girl. Let me handle that.",
+	PICKED = "It will grow back, eventually.",
+	WITHERED = "Needs fertilizer.",
+	BURNING = "Whoa! That's bad!",
+}
 
 WALTER.DESCRIBE.KYNO_PINEAPPLE = "A fine tropical fruit!"
 WALTER.DESCRIBE.KYNO_PINEAPPLE_HALVED = "A fine tropical fruit!"
@@ -1039,10 +1130,20 @@ WALTER.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WALTER.DESCRIBE.BRAINMETTERSOUP = "I guess this can help me think of better survival solutions!"
 
-WALTER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "Wow! I've never seen an octopus this close before."
+WALTER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "Wow! I've never seen an octopus this close before.",
+	SLEEPING = "I'll come back later.",
+}
+
 WALTER.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "How does he put things inside it?"
 
-WALTER.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "A dead fish. Just what I need."
+WALTER.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "A dead fish. Just what I need.",
+	WAITING = "Perhaps some bandage will patch him up?",
+}
+
 WALTER.DESCRIBE.KYNO_PACKIMBAGGIMS = "Ah! A new friend for you, Woby!"
 
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Let's go, Woby. Its time to gather some ingredients."

@@ -121,7 +121,7 @@ local LOADINGTIPS   =
 	CHICKEN2        = "Chickens living in a Coop have a higher chance of laying Large Eggs.",
 	CHICKEN3        = "Chickens found in the wild have a small chance of laying Eggs after eating.",
 	CHICKEN4        = "Chickens living in a Coop will only produce Eggs if they eat something daily like Seeds, Wheats or Spotty Sprigs. They can also eat from the Feeding Trough.",
-	ANIMALFEEDER    = "The Feeding Trough can be used to feed some type of farm animals such as Chickens.",
+	ANIMALFEEDER    = "The Feeding Trough can be used to feed some farm animals such as Chickens.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

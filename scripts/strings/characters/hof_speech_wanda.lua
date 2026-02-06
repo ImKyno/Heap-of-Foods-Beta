@@ -90,6 +90,8 @@ WANDA.ANNOUNCE_KYNO_POTHANGER_FAIL = "Time to find a cooking pot for that."
 
 WANDA.ANNOUNCE_KYNO_CASSEROLE_FAIL = "This will take some time to find the correct one."
 
+WANDA.ANNOUNCE_KYNO_SAPHEALER_USED = "This antidote shall give you a second chance."
+
 WANDA.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Time runs out for everyone, everything."
 
 WANDA.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Empty? What a waste of my precious time."
@@ -130,10 +132,22 @@ WANDA.DESCRIBE.KYNO_COFFEEBEANS = "Coffee beans!"
 WANDA.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "I can make coffee now."
 
 WANDA.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Is that a coffee bush?!"
-WANDA.DESCRIBE.KYNO_COFFEEBUSH = "Is that a coffee bush?!"
 
-WANDA.DESCRIBE.DUG_KYNO_SPOTBUSH = "A shrub."
-WANDA.DESCRIBE.KYNO_SPOTBUSH = "A shrub."
+WANDA.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "A plant people depend on.",
+	PICKED = "It needs time.",
+	WITHERED = "This moment isn't right.",
+}
+
+WANDA.DESCRIBE.DUG_KYNO_SPOTBUSH = "Its future depends on where it's planted."
+
+WANDA.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "A shrub.",
+	PICKED = "Time will restore it.",
+	BURNING = "That didn't have to happen.",
+}
 
 WANDA.DESCRIBE.KYNO_SPOTSPICE_LEAF = "I guess, I can use this to make something..."
 
@@ -194,8 +208,15 @@ WANDA.DESCRIBE.LONGPIGMEAL = "No!"
 
 WANDA.DESCRIBE.CUCUMBERSALAD = "A sea salad."
 
-WANDA.DESCRIBE.KYNO_WILDWHEAT = "You tend to find a lot of it around here."
-WANDA.DESCRIBE.DUG_KYNO_WILDWHEAT = "You tend to find a lot of it around here."
+WANDA.DESCRIBE.DUG_KYNO_WILDWHEAT = "Needs to be planted in a better place."
+
+WANDA.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "You tend to find a lot of it around here.",
+	PICKED = "It needs time.",
+	WITHERED = "This moment isn't right.",
+	BURNING = "That was avoidable.",
+}
 
 WANDA.DESCRIBE.KYNO_MEALGRINDER = "Time to grind some ingredients!"
 
@@ -368,24 +389,49 @@ WANDA.DESCRIBE.KYNO_LOTUS_ROOT = "The plant root, could plant it somewhere."
 WANDA.DESCRIBE.KYNO_LOTUS_FLOWER = "An edible flower."
 WANDA.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Yum!"
 
-WANDA.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "Weeds."
+WANDA.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Weeds.",
+	PICKED = "It will return, given enough time.",
+	BURNING = "That wasn't supposed to happen.",
+}
+
 WANDA.DESCRIBE.KYNO_SEAWEEDS = "Weeds."
 WANDA.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Cooked weeds."
 WANDA.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Dried weeds from the sea."
 WANDA.DESCRIBE.KYNO_SEAWEEDS_ROOT = "The weed root, could plant it somewhere."
 
-WANDA.DESCRIBE.KYNO_TAROROOT_OCEAN = "Weird plant."
+WANDA.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "Weird plant.",
+	PICKED = "It will return sooner than expected.",
+	BURNING = "This outcome was avoidable.",
+}
+
 WANDA.DESCRIBE.KYNO_TAROROOT_ROOT = "The plant root, could plant it somewhere."
 WANDA.DESCRIBE.KYNO_TAROROOT = "Hum..."
 WANDA.DESCRIBE.KYNO_TAROROOT_COOKED = "Smells nice..."
 
-WANDA.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "Water cabbage, but here?"
+WANDA.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "A brief moment of novelty.",
+	PICKED = "It should return soon enough.",
+	BURNING = "That ended sooner than expected.",
+}
+
 WANDA.DESCRIBE.KYNO_WATERYCRESS_ROOT = "The weed root, could plant it somewhere."
-WANDA.DESCRIBE.KYNO_WATERYCRESS = "Water cabbage, but here?"
+WANDA.DESCRIBE.KYNO_WATERYCRESS = "A brief moment of novelty."
 
 WANDA.DESCRIBE.WATERYCRESSBOWL = "I like this soup!"
 
 WANDA.DESCRIBE.KYNO_SALT = "Just salt."
+
+WANDA.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "A slow harvest over time.",
+	PICKED = "This moment yields nothing.",
+	BURNING = "That wasn't inevitable.",
+}
 
 WANDA.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "In time, there'll be plenty of mussels waiting for me."
 
@@ -461,13 +507,43 @@ WANDA.DESCRIBE.TURF_STONECITY = "Roads..."
 WANDA.DESCRIBE.TURF_FIELDS = "I wish time could be cultivated so easily."
 WANDA.DESCRIBE.TURF_TIDALMARSH = "Swampy."
 
+WANDA.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "All that waiting game just for some crystals.",
+	PICKED = "This will take some time.",
+}
+
 WANDA.DESCRIBE.KYNO_SALTRACK_INSTALLER = "I must assemble it first."
 
 WANDA.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Takes some time to get sap from trees."
 
 WANDA.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Their time has come."
 
-WANDA.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "I see what the time has done to you."
+WANDA.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "I see what the time has done to you.",
+	SLEEPING = "One day you will sleep forever.",
+}
+
+WANDA.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "A cycle of sweetness and time.",
+	CHOPPED = "Its future was cut short.",
+	SAPPED = "This is the right moment.",
+	PICKED = "The process continues.",
+	BURNING = "This wasn't inevitable.",
+	BURNT = "Too late to change it now.",
+}
+
+WANDA.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "Something went wrong in its timeline.",
+	CHOPPED = "No future left here.",
+	SAPPED = "Too late to fix it.",
+	PICKED = "It keeps repeating the mistake.",
+	BURNING = "This ends the loop.",
+	BURNT = "Time has closed on it.",
+}
 
 WANDA.DESCRIBE.KYNO_SUGARTREE_BUD = "I need to plant this somewhere."
 
@@ -526,8 +602,11 @@ WANDA.DESCRIBE.KYNO_COOKWARE_OVEN = "A regular old oven."
 WANDA.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "A regular old oven."
 WANDA.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "A regular old oven."
 
-WANDA.DESCRIBE.KYNO_ROCKFLIPPABLE = "Guess, there's something underneath."
-WANDA.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "Guess, there's something underneath."
+WANDA.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "Guess, there's something underneath.",
+	FLIPPED = "Time reveals all things.",
+}
 
 WANDA.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Let's open that crate."
 
@@ -570,7 +649,12 @@ WANDA.DESCRIBE.PEPPERROLLS = "They took far too long to make... but they're tast
 
 WANDA.DESCRIBE.KYNO_SAPHEALER = "This will fix the trees in time."
 
-WANDA.DESCRIBE.KYNO_OCEAN_WRECK = "They didn't had enough time to escape."
+WANDA.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "They didn't had enough time to escape.",
+	PICKED = "Time will restore something here.",
+	BURNING = "That outcome is now certain.",
+}
 
 WANDA.DESCRIBE.KYNO_GHOST_PIRATE = "Swell. Just swell."
 
@@ -812,7 +896,14 @@ WANDA.DESCRIBE.RISOTTO = "No time to lose on this one."
 WANDA.DESCRIBE.RICESAKE = "Not really my type."
 
 WANDA.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "I see. All the spikes around here."
-WANDA.DESCRIBE.KYNO_PINEAPPLEBUSH = "I see. All the spikes around here."
+
+WANDA.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "I see. All the spikes around here.",
+	PICKED = "It will return in time.",
+	WITHERED = "This moment isn't right.",
+	BURNING = "Its timeline ends here.",
+}
 
 WANDA.DESCRIBE.KYNO_PINEAPPLE = "Can't waste my time trying to crack this."
 WANDA.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Gracious."
@@ -1039,10 +1130,20 @@ WANDA.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WANDA.DESCRIBE.BRAINMETTERSOUP = "Halves the time I need to think."
 
-WANDA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "Let's get trading. I don't have spare time to waste."
+WANDA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "Let's get trading. I don't have spare time to waste.",
+	SLEEPING = "This moment isn't right.",
+}
+
 WANDA.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "A reward worth my time!"
 
-WANDA.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "I hope this is worth my time."
+WANDA.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "I hope this is worth my time.",
+	WAITING = "His time has ran out.",
+}
+
 WANDA.DESCRIBE.KYNO_PACKIMBAGGIMS = "You're kinda cute. Kinda!"
 
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "I'm going to spend a considered amount of time on this."

@@ -53,6 +53,12 @@ local function CheckGrow(inst)
 	end
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.burnable:IsBurning() and "BURNING")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function OnSave(inst, data)
 	if inst.rain > 0 then
 		data.rain = inst.rain
@@ -91,7 +97,9 @@ local function fn()
 	end
 	
 	inst:AddComponent("lootdropper")
+	
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)

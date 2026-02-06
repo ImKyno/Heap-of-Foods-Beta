@@ -121,7 +121,7 @@ local LOADINGTIPS   =
 	CHICKEN2        = "Galinhas criadas no Galinheiro têm uma chance maior de botar Ovos Grandes.",
 	CHICKEN3        = "Galinhas Selvagens têm uma pequena chance de botar Ovos depois de se alimentarem.",
 	CHICKEN4        = "Galinhas criadas no Galinheiro só botam ovos se comerem algo diariamente, como Sementes, Trigo ou Rebentos Folhosos. Elas também podem se alimentar no Cocho de Alimentação.",
-	ANIMALFEEDER    = "O Cocho de Alimentação pode ser usado para alimentar alguns tipos de animais de fazenda, como Galinhas.",
+	ANIMALFEEDER    = "O Cocho de Alimentação pode ser usado para alimentar alguns animais de fazenda, como Galinhas.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

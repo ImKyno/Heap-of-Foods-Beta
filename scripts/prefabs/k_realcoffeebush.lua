@@ -169,6 +169,12 @@ local function OnTransplant(inst)
 	inst.components.pickable:MakeBarren()
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.pickable:IsBarren() and "WITHERED")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function fn()
 	local inst = CreateEntity()
     
@@ -204,7 +210,9 @@ local function fn()
 	inst.AnimState:SetTime(math.random() * inst.AnimState:GetCurrentAnimationLength())
 	
 	inst:AddComponent("lootdropper")
+	
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)

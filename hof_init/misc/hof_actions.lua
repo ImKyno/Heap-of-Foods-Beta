@@ -683,15 +683,11 @@ AddAction("FISHREGISTRY_RESEARCH", STRINGS.ACTIONS.FISHREGISTRY_RESEARCH, functi
 		if target.components.fishresearchable then
 			target.components.fishresearchable:LearnFish(act.doer)
 
-			if act.doer.components.talker then
-				act.doer.components.talker:Say(_G.GetString(act.doer, "ANNOUNCE_KYNO_FISH_RESEARCHED"), nil, target.components.inspectable.noanim)
-			end
+			act.doer:PushEvent("fishregistryresearchfish")
 		elseif target.components.roeresearchable then
 			target.components.roeresearchable:LearnRoe(act.doer)
 			
-			if act.doer.components.talker then
-				act.doer.components.talker:Say(_G.GetString(act.doer, "ANNOUNCE_KYNO_ROE_RESEARCHED"), nil, target.components.inspectable.noanim)
-			end
+			act.doer:PushEvent("fishregistryresearchroe")
 		end
 	end
 
@@ -804,7 +800,7 @@ AddAction("EATFROM", "Eat From", function(act)
 	local doer = act.doer
 	local target = act.target
 	
-	if doer == nil or target == nil then
+	if doer == nil or target == nil or target:HasTag("burnt") then
 		return false
 	end
 
@@ -814,11 +810,13 @@ AddAction("EATFROM", "Eat From", function(act)
 	
 	local fueled = target.components.fueled
 	
-	if fueled == nil or fueled:GetPercent() <= 0 then
+	if fueled == nil or fueled:GetPercent() <= 0 or fueled:IsEmpty() then
 		return false
 	end
 	
 	fueled:DoDelta(-TUNING.KYNO_ANIMALFEEDER_CONSUME)
+	
+	target:PushEvent("onfeed") -- Handles animations and other stuff.
 
 	local food = SpawnPrefab("seeds")
 	
@@ -1059,6 +1057,10 @@ end
 ACTIONS.ADDFUEL.stroverridefn = function(act)
 	if act.target:HasTag("fishhatchery") then
 		return STRINGS.ACTIONS.FEED.GENERIC
+	end
+	
+	if act.target:HasTag("animalfeeder") then
+		return STRINGS.KYNO_ANIMALFEEDER_ADDFUEL
 	end
 end
 

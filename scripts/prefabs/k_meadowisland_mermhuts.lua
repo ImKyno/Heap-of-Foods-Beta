@@ -401,7 +401,7 @@ local function placerfn(player, placer)
         return
     end
 
-    if player and player.components.talker then
+    if player and player.components.talker ~= nil then
         player.components.talker:Say(GetString(player, "ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE"))
     end
 end

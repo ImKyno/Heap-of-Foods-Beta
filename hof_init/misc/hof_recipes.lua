@@ -469,6 +469,17 @@ AddRecipe2("kyno_fishregistryhat", {Ingredient("strawhat", 1), Ingredient("ocean
 SortAfter("kyno_fishregistryhat", "tacklestation", "FISHING")
 SortAfter("kyno_fishregistryhat", "plantregistryhat", "GARDENING")
 
+AddRecipe2("kyno_animalfeeder", {Ingredient("seeds", 3), Ingredient("kyno_wheat", 3, ModAtlas), Ingredient("boards", 3)}, TECH.SCIENCE_ONE,
+	{
+		placer              = "kyno_animalfeeder_placer",
+		min_spacing         = 1.5,
+		atlas               = ModAtlas,
+		image               = "kyno_animalfeeder.tex",
+	},
+	{"GARDENING"}
+)
+SortAfter("kyno_animalfeeder", "kyno_mushstump", "GARDENING")
+
 AddRecipe2("kyno_chickenhouse", {Ingredient("kyno_chicken2", 3, ModAtlas, true), Ingredient("cutgrass", 3), Ingredient("boards", 3)}, TECH.SCIENCE_TWO,
 	{
 		placer              = "kyno_chickenhouse_placer",

@@ -21,6 +21,7 @@ end)
 local function FindFeeder(inst)
 	return FindEntity(inst.components.homeseeker and inst.components.homeseeker.home or inst, SEE_FOOD_DIST, function(ent)
 		return ent:HasTag("animalfeeder") and ent.components.fueled ~= nil and ent.components.fueled:GetPercent() > 0 
+		and not ent.components.fueled:IsEmpty() and not ent:HasTag("burnt")
 	end)
 end
 

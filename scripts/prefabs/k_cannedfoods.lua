@@ -22,7 +22,7 @@ local prefabs =
 }    
 
 local function OnOpenCan(inst, pos, doer)
-	local name = inst.name
+	local name = inst.closed_name
 
 	if doer ~= nil and doer.SoundEmitter ~= nil then
 		doer.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
@@ -51,8 +51,6 @@ local function OnOpenCan(inst, pos, doer)
 end
 
 local function OnOpenAntchovy(inst, pos, doer)
-	local name = inst.name
-
 	if doer ~= nil and doer.SoundEmitter ~= nil then
 		doer.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
 	else
@@ -120,7 +118,7 @@ local function closed_fn(bank, build, anim)
     
     inst:AddComponent("inventoryitem")
     inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = closed_name
+	inst.components.inventoryitem.imagename = inst.closed_name
 	inst.components.inventoryitem:SetSinks(true)
     
     inst:AddComponent("tradable")
@@ -173,7 +171,7 @@ local function opened_fn(bank, build, anim)
     
     inst:AddComponent("inventoryitem")
     inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = opened_name
+	inst.components.inventoryitem.imagename = inst.opened_name
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
@@ -191,6 +189,8 @@ local function closed_tomato()
         return inst
     end
 	
+	inst.closed_name = "kyno_tomatocan"
+	
 	return inst
 end
 
@@ -200,6 +200,8 @@ local function opened_tomato()
 	if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.opened_name = "kyno_tomatocan_open"
 	
 	inst.components.edible.healthvalue = TUNING.KYNO_TOMATOCAN_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_TOMATOCAN_HUNGER
@@ -217,6 +219,8 @@ local function closed_bean()
         return inst
     end
 	
+	inst.closed_name = "kyno_beancan"
+	
 	return inst
 end
 
@@ -226,6 +230,8 @@ local function opened_bean()
 	if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.opened_name = "kyno_beancan_open"
 	
 	inst.components.edible.healthvalue = TUNING.KYNO_BEANCAN_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_BEANCAN_HUNGER
@@ -243,6 +249,8 @@ local function closed_meat()
         return inst
     end
 	
+	inst.closed_name = "kyno_meatcan"
+	
 	return inst
 end
 
@@ -254,6 +262,8 @@ local function opened_meat()
 	if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.opened_name = "kyno_meatcan_open"
 	
 	inst.components.tradable.goldvalue = 1 -- Only meat is valuable!
 
@@ -273,6 +283,8 @@ local function closed_antchovy()
 	if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.closed_name = "kyno_antchovycan"
 	
 	inst.components.unwrappable:SetOnUnwrappedFn(OnOpenAntchovy)
 	

@@ -24,8 +24,8 @@ local function OnDrink(inst, eater)
 		inst.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
 	end
 
-	if eater.components.talker and eater:HasTag("player") then 
-		eater.components.talker:Say(GetString(eater, "ANNOUNCE_KYNO_POPBUFF_START"))
+	if eater:HasTag("player") then 
+		eater:PushEvent("drankcannedrink")
 	end
 end
 
@@ -70,7 +70,6 @@ local function fn(bank, build, anim)
     
     inst:AddComponent("inventoryitem")
     inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = name
 	inst.components.inventoryitem:SetSinks(true)
     
     inst:AddComponent("perishable")
@@ -87,6 +86,8 @@ local function soda_fn()
 	if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.components.inventoryitem.imagename = "kyno_sodacan"
 
 	inst.components.edible.healthvalue = TUNING.KYNO_SODACAN_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_SODACAN_HUNGER
@@ -101,6 +102,8 @@ local function coke_fn()
 	if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.components.inventoryitem.imagename = "kyno_cokecan"
 
 	inst.components.edible.healthvalue = TUNING.KYNO_COKECAN_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_COKECAN_HUNGER
@@ -115,6 +118,8 @@ local function energy_fn()
 	if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.components.inventoryitem.imagename = "kyno_energycan"
 
 	inst.components.edible.healthvalue = TUNING.KYNO_ENERGYCAN_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_ENERGYCAN_HUNGER

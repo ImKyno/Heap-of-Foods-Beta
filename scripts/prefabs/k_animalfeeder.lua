@@ -2,25 +2,13 @@ require("prefabutil")
 
 local assets =
 {
-	Asset("ANIM", "anim/cartography_desk.zip"),
+	Asset("ANIM", "anim/kyno_animalfeeder.zip"),
 }
 
 local prefabs =
 {
 	"collapse_small",
 }
-
-local function OnAddFuel(inst)
-	inst.SoundEmitter:PlaySound("dontstarve_DLC001/common/machine_fuel")
-end
-
-local function OnFuelEmpty(inst)
-	-- Placeholder, do something here later.
-end
-
-local function OnFuelSectionChange(new, old, inst)
-	-- Placeholder, change animations here later.
-end
 
 local function OnHammered(inst, worker)
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
@@ -44,8 +32,54 @@ local function OnHit(inst)
 	end
 end
 
+local function OnInteract(inst)
+	if not inst:HasTag("burnt") then
+		inst.AnimState:PlayAnimation("interact")
+		inst.AnimState:PushAnimation("idle", true)
+		
+		inst.SoundEmitter:PlaySound("aqol/new_test/vegetation_grassy")
+	end
+end
+
+local function UpdateFoodSymbol(inst)
+	if inst then
+		local fueled = inst.components.fueled
+		local percent = fueled.currentfuel / fueled.maxfuel
+
+		if percent <= 0 then
+			inst.AnimState:HideSymbol("food")
+		elseif percent <= 0.20 then
+			inst.AnimState:OverrideSymbol("food", "kyno_animalfeeder", "food")
+		elseif percent <= 0.50 then
+			inst.AnimState:OverrideSymbol("food", "kyno_animalfeeder", "food")
+		elseif percent <= 1.00 then
+			inst.AnimState:OverrideSymbol("food", "kyno_animalfeeder", "food")
+		else
+			inst.AnimState:OverrideSymbol("food", "kyno_animalfeeder", "food")
+		end
+	end
+end
+
+local function OnAddFuel(inst)
+	if not inst:HasTag("burnt") then
+		OnInteract(inst)
+		UpdateFoodSymbol(inst)
+	end
+end
+
+local function OnFuelEmpty(inst)
+	UpdateFoodSymbol(inst)
+end
+
+local function OnFuelSectionChange(new, old, inst)
+	UpdateFoodSymbol(inst)
+end
+
 local function OnBuilt(inst, data)
-	inst.SoundEmitter:PlaySound("dontstarve/common/place_structure_straw")
+	inst.AnimState:PlayAnimation("place")
+	inst.AnimState:PushAnimation("idle", true)
+
+	inst.SoundEmitter:PlaySound("farming/common/farm/compost/place")
 end
 
 local function GetStatus(inst, viewer)
@@ -68,6 +102,8 @@ local function OnLoad(inst, data)
 	if data ~= nil and data.burnt and inst.components.burnable ~= nil and inst.components.burnable.onburnt ~= nil then
 		inst.components.burnable.onburnt(inst)
 	end
+
+	UpdateFoodSymbol(inst)
 end
 
 local function fn()
@@ -79,13 +115,15 @@ local function fn()
 	inst.entity:AddNetwork()
 
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("cartographydesk.png")
+	minimap:SetIcon("kyno_animalfeeder.tex")
 
-	MakeObstaclePhysics(inst, .4)
+	MakeObstaclePhysics(inst, 1)
+	
+	inst.AnimState:SetScale(1.1, 1.1, 1.1)
 
-	inst.AnimState:SetBank("cartography_desk")
-	inst.AnimState:SetBuild("cartography_desk")
-	inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:SetBank("kyno_animalfeeder")
+	inst.AnimState:SetBuild("kyno_animalfeeder")
+	inst.AnimState:PlayAnimation("idle", true)
 
 	inst:AddTag("structure")
 	inst:AddTag("animalfeeder")
@@ -118,9 +156,10 @@ local function fn()
 	inst.components.fueled:SetSections(TUNING.KYNO_ANIMALFEEDER_SECTIONS)
 	
 	inst:ListenForEvent("onbuilt", OnBuilt)
+	inst:ListenForEvent("onfeed", OnInteract)
 	
 	MakeSnowCovered(inst)
-	MakeLargeBurnable(inst)
+	MakeLargeBurnable(inst, nil, nil, true)
 	MakeLargePropagator(inst)
 
 	inst.OnSave = OnSave
@@ -130,4 +169,4 @@ local function fn()
 end
 
 return Prefab("kyno_animalfeeder", fn, assets, prefabs),
-MakePlacer("kyno_animalfeeder_placer", "cartography_desk", "cartography_desk", "idle")
+MakePlacer("kyno_animalfeeder_placer", "kyno_animalfeeder", "kyno_animalfeeder", "idle", false, nil, nil, 1.1)

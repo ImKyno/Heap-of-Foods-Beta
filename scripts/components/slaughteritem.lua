@@ -32,11 +32,8 @@ function SlaughterItem:Slaughter(doer, target)
 			doer.butcher_task = nil
 		end
 	end)
-	
-	if doer.components.talker ~= nil then
-		doer.components.talker:Say(GetString(doer, "ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED"))
-	end
-	
+
+	doer:PushEvent("slaughtertoolsused", { doer = doer, target = target })
 	target:PushEvent("slaughtered", { doer = doer, target = target })
 
     self:MakeNearbyAnimalsAware(doer, target)
@@ -87,11 +84,8 @@ function SlaughterItem:SlaughterInsideInventory(doer, target)
 			doer.butcher_task = nil
 		end
 	end)
-
-	if doer.components.talker ~= nil then
-		doer.components.talker:Say(GetString(doer, "ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED"))
-	end
-
+	
+	doer:PushEvent("slaughtertoolsused", { doer = doer, target = target })
 	target:PushEvent("slaughtered", { doer = doer, target = target })
 	-- target:Remove()
 	

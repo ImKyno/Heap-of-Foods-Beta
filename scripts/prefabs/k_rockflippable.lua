@@ -1,3 +1,4 @@
+require("worldsettingsutil")
 
 local assets =
 {
@@ -87,6 +88,7 @@ end
 
 local function onpickedfn(inst, picker)
 	inst.AnimState:PlayAnimation("flip_over", false)
+
 	local pt = Point(inst.Transform:GetWorldPosition())
 	inst.components.lootdropper:DropLoot(pt)
 	
@@ -129,7 +131,6 @@ local function OnWorked(inst, worker, workleft)
 		inst.components.lootdropper:DropLoot()
 	end
 
-	TheWorld:PushEvent("beginregrowth", inst)
 	inst:Remove()
 end
 
@@ -144,7 +145,15 @@ local function OnEntityWake(inst)
 	if inst.fliptask then
 		inst.fliptask:Cancel()
 	end
-	inst.fliptask = inst:DoPeriodicTask(10 + (math.random() * 10), function() DoWobbleTest(inst) end)
+	
+	inst.fliptask = inst:DoPeriodicTask(10 + (math.random() * 10), function()
+		DoWobbleTest(inst)
+	end)
+end
+
+local function GetStatus(inst, viewer)
+	return (not inst.components.pickable:CanBePicked() and "FLIPPED")
+	or "GENERIC"
 end
 
 local function OnSave(inst, data)
@@ -158,10 +167,15 @@ local function OnLoad(inst, data)
 		makebarrenfn(inst)
 		inst.components.pickable:MakeBarren()
 	end
+
 	if data and data.flipped then
 		inst.flipped = true
 		inst.AnimState:PlayAnimation("idle_flipped")
 	end
+end
+
+local function OnPreLoad(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_FLIPPABLE_GROWTIME)
 end
 
 local function fn()
@@ -191,8 +205,11 @@ local function fn()
     end
 	
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "KYNO_ROCKFLIPPABLE"
+	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("pickable")
+	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_FLIPPABLE_GROWTIME, true)
 	inst.components.pickable:SetUp(nil, TUNING.KYNO_FLIPPABLE_GROWTIME)
 	inst.components.pickable.getregentimefn = getregentimefn
 	inst.components.pickable.onpickedfn = onpickedfn
@@ -214,14 +231,20 @@ local function fn()
     inst.components.lootdropper.chancerandomloot = 1.0
 	inst.components.lootdropper.alwaysinfront = true
     
-	inst:DoTaskInTime(0, function() SetLoot(inst) end)
-	inst.fliptask = inst:DoPeriodicTask(10 + (math.random() * 10), function() DoWobbleTest(inst) end)
+	inst:DoTaskInTime(0, function()
+		SetLoot(inst)
+	end)
+
+	inst.fliptask = inst:DoPeriodicTask(10 + (math.random() * 10), function()
+		DoWobbleTest(inst)
+	end)
 
     inst.OnEntitySleep = OnEntitySleep
     inst.OnEntityWake = OnEntityWake
 	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
+	inst.OnPreLoad = OnPreLoad
 
 	AddToRegrowthManager(inst)
 

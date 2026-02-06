@@ -26,12 +26,12 @@ local prefabs =
 
 local function onpickedfn(inst)
     inst.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant")
-    inst.AnimState:PlayAnimation("picking")
+    -- inst.AnimState:PlayAnimation("picking")
     inst.AnimState:PushAnimation("picked", true)
 end
 
 local function onregenfn(inst)
-    inst.AnimState:PlayAnimation("grow")
+    -- inst.AnimState:PlayAnimation("grow")
     inst.AnimState:PushAnimation("idle_plant", true)
 end
 
@@ -75,6 +75,12 @@ local function OnCollide(inst, other)
     end
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.burnable:IsBurning() and "BURNING")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function OnPreLoad(inst, data)
     WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_TAROSEA_GROWTIME)
 end
@@ -108,17 +114,19 @@ local function fn()
     if not TheWorld.ismastersim then
         return inst
     end
-
-    inst:AddComponent("inspectable")
-	inst:AddComponent("lootdropper")
-	
-	inst:AddComponent("hauntable")
-    inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 	
 	inst.AnimState:SetTime(math.random() * 2)
 
     local color = 0.75 + math.random() * 0.25
     inst.AnimState:SetMultColour(color, color, color, 1)
+
+	inst:AddComponent("lootdropper")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
+	
+	inst:AddComponent("hauntable")
+    inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"

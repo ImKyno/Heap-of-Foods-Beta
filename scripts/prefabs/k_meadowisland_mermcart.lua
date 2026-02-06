@@ -288,8 +288,8 @@ end
 
 local function OnPicked(inst, picker)
 	if inst.on_cooldown then
-		if picker ~= nil and picker.components.talker ~= nil then
-			picker.components.talker:Say(GetString(picker, "ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY"))
+		if picker ~= nil then
+			picker:PushEvent("rummagewagonempty")
 		end
         
 		return

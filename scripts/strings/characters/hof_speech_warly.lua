@@ -90,6 +90,8 @@ WARLY.ANNOUNCE_KYNO_POTHANGER_FAIL = "Ah! I forgot about the pot!"
 
 WARLY.ANNOUNCE_KYNO_CASSEROLE_FAIL = "I must not forget the casserole dish!"
 
+WARLY.ANNOUNCE_KYNO_SAPHEALER_USED = "Ah, perfect! Now it can go back to producing delicious and sweet sap."
+
 WARLY.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Fresh ingredients make the finest cuisine."
 
 WARLY.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Empty pantry... how unfortunate."
@@ -130,10 +132,22 @@ WARLY.DESCRIBE.KYNO_COFFEEBEANS = "Glorious!"
 WARLY.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Could use hot water...!"
 
 WARLY.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Does that bush grow... coffee beans?!"
-WARLY.DESCRIBE.KYNO_COFFEEBUSH = "Does that bush grow... coffee beans?!"
 
-WARLY.DESCRIBE.DUG_KYNO_SPOTBUSH = "Oh! A spice maker shrub."
-WARLY.DESCRIBE.KYNO_SPOTBUSH = "Oh! A spice maker shrub."
+WARLY.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "Ah! The foundation of inspiration!",
+	PICKED = "Patience brings richer flavor.",
+	WITHERED = "This climate is cruel.",
+}
+
+WARLY.DESCRIBE.DUG_KYNO_SPOTBUSH = "It deserves a good place to grow."
+
+WARLY.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "Oh! A spice maker shrub.",
+	PICKED = "It will recover with time.",
+	BURNING = "Mon dieu! A loss!",
+}
 
 WARLY.DESCRIBE.KYNO_SPOTSPICE_LEAF = "You'll be a nice spice!"
 
@@ -194,8 +208,15 @@ WARLY.DESCRIBE.LONGPIGMEAL = "Some dishes probably shouldn't be made."
 
 WARLY.DESCRIBE.CUCUMBERSALAD = "Edible art!"
 
-WARLY.DESCRIBE.KYNO_WILDWHEAT = "A common ingredient for success around here."
-WARLY.DESCRIBE.DUG_KYNO_WILDWHEAT = "A common ingredient for success around here."
+WARLY.DESCRIBE.DUG_KYNO_WILDWHEAT = "Needs to be replanted with care."
+
+WARLY.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "A common ingredient for success around here.",
+	PICKED = "Patience refines flavor.",
+	WITHERED = "A cruel climate.",
+	BURNING = "Mon dieu! Such loss!",
+}
 
 WARLY.DESCRIBE.KYNO_MEALGRINDER = "Magnifique! A machine for grinding!"
 
@@ -368,24 +389,49 @@ WARLY.DESCRIBE.KYNO_LOTUS_ROOT = "I could plant it for a sustainable source of l
 WARLY.DESCRIBE.KYNO_LOTUS_FLOWER = "I should cook something up with this."
 WARLY.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "A fine delicacy!"
 
-WARLY.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "I do not have much experience with this ingredient."
+WARLY.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "I do not have much experience with this ingredient.",
+	PICKED = "Patience will reward us.",
+	BURNING = "Mon dieu! Such a pointless loss!",
+}
+
 WARLY.DESCRIBE.KYNO_SEAWEEDS = "I do not have much experience with this ingredient."
 WARLY.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Could use toasted sesame seeds..."
 WARLY.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Could use Tamari..."
 WARLY.DESCRIBE.KYNO_SEAWEEDS_ROOT = "I could plant it for a sustainable source of seaweed."
 
-WARLY.DESCRIBE.KYNO_TAROROOT_OCEAN = "Mmm... This would go well with fish!"
+WARLY.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "Mmm... This would go well with fish!",
+	PICKED = "It will return quickly, thanks to the water.",
+	BURNING = "Mon dieu! Such waste!",
+}
+
 WARLY.DESCRIBE.KYNO_TAROROOT_ROOT = "I could plant it for a sustainable source of taro roots."
 WARLY.DESCRIBE.KYNO_TAROROOT = "Aubergine!"
 WARLY.DESCRIBE.KYNO_TAROROOT_COOKED = "Could use pepper sauce and Parmesan..."
 
-WARLY.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "That would make a great salad!"
+WARLY.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "That would make a great salad!",
+	PICKED = "It will be worth the wait.",
+	BURNING = "Mon dieu! What a waste!",
+}
+
 WARLY.DESCRIBE.KYNO_WATERYCRESS_ROOT = "I could plant it for a sustainable source of watercress."
 WARLY.DESCRIBE.KYNO_WATERYCRESS = "That would make a great salad!"
 
 WARLY.DESCRIBE.WATERYCRESSBOWL = "Ah, a special dish."
 
 WARLY.DESCRIBE.KYNO_SALT = "Quelle chance! I've found salt!"
+
+WARLY.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Ah! Fresh shellfish, grown naturally!",
+	PICKED = "They will return with time.",
+	BURNING = "Mon dieu! What a waste!",
+}
 
 WARLY.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Mussels aren't strong enough to resist this stick!"
 
@@ -461,13 +507,43 @@ WARLY.DESCRIBE.TURF_STONECITY = "It's like an ingredient for the ground."
 WARLY.DESCRIBE.TURF_FIELDS = "It's like an ingredient for the ground."
 WARLY.DESCRIBE.TURF_TIDALMARSH = "It's like an ingredient for the ground."
 
+WARLY.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Fantastique! The salt crystals are ready for harvest.",
+	PICKED = "One must wait for the ingredients to be properly ready.",
+}
+
 WARLY.DESCRIBE.KYNO_SALTRACK_INSTALLER = "For gathering salt from the pond."
 
 WARLY.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "A bucket to gather tree Sweets."
 
 WARLY.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Time to catch some fine crabs!"
 
-WARLY.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "What do you have for me?"
+WARLY.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "What do you have for me?",
+	SLEEPING = "I shall return later.",
+}
+
+WARLY.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "Ah! Nature's own sweetener!",
+	CHOPPED = "A culinary tragedy!",
+	SAPPED = "Perfectly ready!",
+	PICKED = "Patience yields flavor.",
+	BURNING = "Mon dieu!",
+	BURNT = "Ruined!",
+}
+
+WARLY.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "Something spoiled along the way.",
+	CHOPPED = "Unusable.",
+	SAPPED = "Ruined, but intriguing.",
+	PICKED = "Still spoiled.",
+	BURNING = "Merciful end.",
+	BURNT = "Lost completely.",
+}
 
 WARLY.DESCRIBE.KYNO_SUGARTREE_BUD = "More useful as a tree than my recipes."
 
@@ -526,8 +602,11 @@ WARLY.DESCRIBE.KYNO_COOKWARE_OVEN = "Ah, perfect!"
 WARLY.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Ah, perfect!"
 WARLY.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Ah, perfect!"
 
-WARLY.DESCRIBE.KYNO_ROCKFLIPPABLE = "There may be some protein under there."
-WARLY.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "There may be some protein under there."
+WARLY.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "There may be some protein under there.",
+	FLIPPED = "Ah, hidden treasures!",
+}
 
 WARLY.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Let's open her up."
 
@@ -570,7 +649,12 @@ WARLY.DESCRIBE.PEPPERROLLS = "I like my dishes to be spicy!"
 
 WARLY.DESCRIBE.KYNO_SAPHEALER = "Could come in very handy."
 
-WARLY.DESCRIBE.KYNO_OCEAN_WRECK = "It sails no more."
+WARLY.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "It sails no more.",
+	PICKED = "The sea will provide again.",
+	BURNING = "Such a waste!",
+}
 
 WARLY.DESCRIBE.KYNO_GHOST_PIRATE = "He may be a nice fellow, but I don't intend to find out."
 
@@ -811,8 +895,15 @@ WARLY.DESCRIBE.RISOTTO = "Monseur Ramsey would approve this delicacy."
 
 WARLY.DESCRIBE.RICESAKE = "Ah! A modest use for rice. Perfect for small reunions."
 
-WARLY.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "A tropical delicacy."
-WARLY.DESCRIBE.KYNO_PINEAPPLEBUSH = "A tropical delicacy."
+WARLY.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "A tropical delicacy, I should plant it somewhere."
+
+WARLY.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "A tropical delicacy.",
+	PICKED = "Patience improves flavor.",
+	WITHERED = "This climate is unkind.",
+	BURNING = "Mon dieu! What a loss!",
+}
 
 WARLY.DESCRIBE.KYNO_PINEAPPLE = "Its packaging is tough to open."
 WARLY.DESCRIBE.KYNO_PINEAPPLE_HALVED = "A fine pineapple!"
@@ -1039,10 +1130,20 @@ WARLY.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WARLY.DESCRIBE.BRAINMETTERSOUP = "This helps you memorize many things."
 
-WARLY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "Try not think about his delicious tentacles..."
+WARLY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "Try not think about his delicious tentacles...",
+	SLEEPING = "Best to not disturb him.",
+}
+
 WARLY.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Any cold drinks in there?"
 
-WARLY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "Picked clean..."
+WARLY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "Picked clean...",
+	WAITING = "He's missing his other half...",
+}
+
 WARLY.DESCRIBE.KYNO_PACKIMBAGGIMS = "You have a big mouth, mister."
 
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Hmm. This is a whole new level of bakery."

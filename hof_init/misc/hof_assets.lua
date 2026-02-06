@@ -846,6 +846,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"icon_fuel_fishfood",
 	"kingfisher",
 	"kyno_aloe_ground",
+	"kyno_animalfeeder",
 	"kyno_antchest",
 	"kyno_aspargos_ground",
 	"kyno_bananatree",

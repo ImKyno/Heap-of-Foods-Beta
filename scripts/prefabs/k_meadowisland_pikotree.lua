@@ -114,8 +114,10 @@ local function ChopDownTree(inst, chopper)
 	inst.persists = false
 	inst:DoTaskInTime(14 * FRAMES, ChopTreeShake)
 	
-	local stump = SpawnPrefab("kyno_meadowisland_tree_stump").Transform:SetPosition(inst.Transform:GetWorldPosition())
+	local stump = SpawnPrefab("kyno_meadowisland_tree_stump")
+	stump.Transform:SetPosition(inst.Transform:GetWorldPosition())
 	stump.AnimState:PlayAnimation("stump_tall")
+	stump.level = "tall"
 
 	inst:ListenForEvent("animover", inst.Remove)
 end
@@ -146,8 +148,10 @@ local function OnBurnt(inst)
 		inst:RemoveComponent("spawner")
 	end
 
-    local burnt = SpawnPrefab("kyno_meadowisland_tree_burnt").Transform:SetPosition(inst.Transform:GetWorldPosition())
+    local burnt = SpawnPrefab("kyno_meadowisland_tree_burnt")
+	burnt.Transform:SetPosition(inst.Transform:GetWorldPosition())
     burnt.AnimState:PlayAnimation("burnt_tall")
+	burnt.level = "tall"
 	
     inst:Remove()
 end

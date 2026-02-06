@@ -90,6 +90,8 @@ WOODIE.ANNOUNCE_KYNO_POTHANGER_FAIL = "Mhm, maybe a pot here."
 
 WOODIE.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Eh, It's not this one."
 
+WOODIE.ANNOUNCE_KYNO_SAPHEALER_USED = "I'll help you only once, tree."
+
 WOODIE.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Sorry, critter. Circle of life, eh?"
 
 WOODIE.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Well, looks like Sammy's fresh outta supplies."
@@ -129,11 +131,23 @@ WOODIE.DESCRIBE.KYNO_SYRUP = "Quite maple."
 WOODIE.DESCRIBE.KYNO_COFFEEBEANS = "I should cook these up."
 WOODIE.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Canadians love their coffee."
 
-WOODIE.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Coffee beans!"
-WOODIE.DESCRIBE.KYNO_COFFEEBUSH = "Coffee beans!"
+WOODIE.DESCRIBE.DUG_KYNO_COFFEEBUSH = "All set for replanting."
 
-WOODIE.DESCRIBE.DUG_KYNO_SPOTBUSH = "Looks real flavourful."
-WOODIE.DESCRIBE.KYNO_SPOTBUSH = "Looks real flavourful."
+WOODIE.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "Coffee beans!",
+	PICKED = "Needs more time.",
+	WITHERED = "Needs more fertilizing.",
+}
+
+WOODIE.DESCRIBE.DUG_KYNO_SPOTBUSH = "Gotta plant it again."
+
+WOODIE.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "Looks real flavourful.",
+	PICKED = "Needs some time.",
+	BURNING = "That's not good.",
+}
 
 WOODIE.DESCRIBE.KYNO_SPOTSPICE_LEAF = "It makes my fingers smell like pepper."
 
@@ -194,8 +208,15 @@ WOODIE.DESCRIBE.LONGPIGMEAL = "I should put it away somewhere and respectful."
 
 WOODIE.DESCRIBE.CUCUMBERSALAD = "Healthy, but not very hardy."
 
-WOODIE.DESCRIBE.KYNO_WILDWHEAT = "Looks like kindling."
-WOODIE.DESCRIBE.DUG_KYNO_WILDWHEAT = "Looks like kindling."
+WOODIE.DESCRIBE.DUG_KYNO_WILDWHEAT = "Best plant it somewhere else."
+
+WOODIE.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "Looks harvestable, eh?",
+	PICKED = "Needs more time.",
+	WITHERED = "Dry as a bone.",
+	BURNING = "Looks like kindling.",
+}
 
 WOODIE.DESCRIBE.KYNO_MEALGRINDER = "We just gotta grind and bear it."
 
@@ -368,24 +389,49 @@ WOODIE.DESCRIBE.KYNO_LOTUS_ROOT = "Should plant this somewhere."
 WOODIE.DESCRIBE.KYNO_LOTUS_FLOWER = "That's a beaut."
 WOODIE.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Cooks up real good."
 
-WOODIE.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "It's slimy, eh?"
+WOODIE.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "It's slimy, eh?",
+	PICKED = "Needs time to come back.",
+	BURNING = "Didn't think that could happen.",
+}
+
 WOODIE.DESCRIBE.KYNO_SEAWEEDS = "It's slimy."
 WOODIE.DESCRIBE.KYNO_SEAWEEDS_COOKED = "It has a weird texture."
 WOODIE.DESCRIBE.KYNO_SEAWEEDS_DRIED = "It sort of sticks to my tongue."
 WOODIE.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Should plant this somewhere."
 
-WOODIE.DESCRIBE.KYNO_TAROROOT_OCEAN = "Eh, I've seen this one before once."
+WOODIE.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "Eh, I've seen this one before once.",
+	PICKED = "Water'll help it grow back.",
+	BURNING = "Well, that's ruined.",
+}
+
 WOODIE.DESCRIBE.KYNO_TAROROOT_ROOT = "Should plant this somewhere."
 WOODIE.DESCRIBE.KYNO_TAROROOT = "I bet this would go well with pepper."
 WOODIE.DESCRIBE.KYNO_TAROROOT_COOKED = "Yum!"
 
-WOODIE.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "Just another vegetable, eh?"
+WOODIE.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "Just another vegetable, eh?",
+	PICKED = "Give it time.",
+	BURNING = "That's a shame.",
+}
+
 WOODIE.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Should plant this somewhere."
 WOODIE.DESCRIBE.KYNO_WATERYCRESS = "Just another vegetable, eh?"
 
 WOODIE.DESCRIBE.WATERYCRESSBOWL = "It's a soup made out of those little trees."
 
 WOODIE.DESCRIBE.KYNO_SALT = "It's salty."
+
+WOODIE.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Seafood growin' on a stick, eh?",
+	PICKED = "Gotta give it time.",
+	BURNING = "That's a real shame.",
+}
 
 WOODIE.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "The mussels can't get enough of this thing."
 
@@ -461,13 +507,43 @@ WOODIE.DESCRIBE.TURF_STONECITY = "Just some ground, eh?"
 WOODIE.DESCRIBE.TURF_FIELDS = "Just some ground, eh?"
 WOODIE.DESCRIBE.TURF_TIDALMARSH = "Just some ground, eh?"
 
+WOODIE.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "It's ready.",
+	PICKED = "Gonna be a bit longer.",
+}
+
 WOODIE.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Gotta set'er up."
 
 WOODIE.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Didn't I tell everybody trees were delicious?"
 
 WOODIE.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Let's trap some crabs."
 
-WOODIE.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "Every society's gotta have a leader, I guess."
+WOODIE.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "Every society's gotta have a leader, I guess.",
+	SLEEPING = "Guess I'll come back later.",
+}
+
+WOODIE.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "It's beautiful!",
+	CHOPPED = "Cut down in its prime.",
+	SAPPED = "Thanks for the sap, tree.",
+	PICKED = "Fillin' up, slow as molasses.",
+	BURNING = "That's not good!",
+	BURNT = "Burned clean through.",
+}
+
+WOODIE.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "What troubles you, sister?",
+	CHOPPED = "Had to be done.",
+	SAPPED = "Still tappable, somehow.",
+	PICKED = "Hey, get away from that tree will ya!",
+	BURNING = "Probably best.",
+	BURNT = "Nothing left.",
+}
 
 WOODIE.DESCRIBE.KYNO_SUGARTREE_BUD = "You will grow into a nice tree, eh?"
 
@@ -526,8 +602,11 @@ WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN = "Be careful around that fire, Lucy."
 WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Be careful around that fire, Lucy."
 WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Be careful around that fire, Lucy."
 
-WOODIE.DESCRIBE.KYNO_ROCKFLIPPABLE = "We should flip it."
-WOODIE.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "We should flip it."
+WOODIE.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "I should flip it.",
+	FLIPPED = "Yep. Figures.",
+}
 
 WOODIE.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "I hope to never end up in one of those."
 
@@ -570,7 +649,12 @@ WOODIE.DESCRIBE.PEPPERROLLS = "Hoo! Hot! Hot!"
 
 WOODIE.DESCRIBE.KYNO_SAPHEALER = "Smells awful, but it works!"
 
-WOODIE.DESCRIBE.KYNO_OCEAN_WRECK = "A waste of good wood."
+WOODIE.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "A waste of good wood.",
+	PICKED = "Give it time, it'll grow stuff again.",
+	BURNING = "Well, that's the end of it.",
+}
 
 WOODIE.DESCRIBE.KYNO_GHOST_PIRATE = "Maybe he's friendly?"
 
@@ -811,8 +895,15 @@ WOODIE.DESCRIBE.RISOTTO = "It's very creamy, what do you think, Lucy?"
 
 WOODIE.DESCRIBE.RICESAKE = "Drink it in moderation alright, Lucy? Lucy...?"
 
-WOODIE.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Be careful with the spikes, Lucy!"
-WOODIE.DESCRIBE.KYNO_PINEAPPLEBUSH = "Be careful with the spikes, Lucy!"
+WOODIE.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Pulled it right out."
+
+WOODIE.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "Be careful with the spikes, Lucy!",
+	PICKED = "Needs more time.",
+	WITHERED = "Dry as a bone.",
+	BURNING = "That's not good!",
+}
 
 WOODIE.DESCRIBE.KYNO_PINEAPPLE = "Pineapple!"
 WOODIE.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Pineapple!"
@@ -1039,10 +1130,20 @@ WOODIE.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WOODIE.DESCRIBE.BRAINMETTERSOUP = "Even though I'm a grown up, I still like it."
 
-WOODIE.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "How you holding up out here, guy?"
+WOODIE.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "How you holding up out here, guy?",
+	SLEEPING = "Guess he's turning in.",
+}
+
 WOODIE.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Thanks for the stuff, guy!"
 
-WOODIE.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "This better not attract any feathered vermin."
+WOODIE.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "This better not attract any feathered vermin.",
+	WAITING = "It was bound to happen soon or later.",
+}
+
 WOODIE.DESCRIBE.KYNO_PACKIMBAGGIMS = "I can tolerate him."
 
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "I better start gathering some ingredients for this."
