@@ -1028,7 +1028,13 @@ WARLY.DESCRIBE.RICEANDBEANS = "A simple lunch entrée."
 
 WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Hmm... smells like potential. I'll be back for a taste in 2026."
 
-WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND = "Ahh, the scent of fresh truffles... promising!"
+WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Ahh, the scent of fresh truffles... promising!",
+	PICKED = "Such patience is required.",
+	BURNING = "Mon dieu! A culinary tragedy!",
+}
+
 WARLY.DESCRIBE.KYNO_TRUFFLES = "Magnifique! The aroma alone inspires recipes!"
 WARLY.DESCRIBE.KYNO_TRUFFLES_COOKED = "Perfection! The earth's perfume now edible."
 

@@ -1028,7 +1028,13 @@ WATHGRITHR.DESCRIBE.RICEANDBEANS = "Eww!"
 
 WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "A hall once proud, now fallen. It shall rise anew in the year of destiny: 2026!"
 
-WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND = "Not meat, but maybe worthy of a feast!"
+WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Not meat, but maybe worthy of a feast!",
+	PICKED = "Claimed!",
+	BURNING = "Slain by flames!",
+}
+
 WATHGRITHR.DESCRIBE.KYNO_TRUFFLES = "Mushrooms again... but maybe they belong in a feast."
 WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_COOKED = "Still not meat... but smells worthy of battle!"
 

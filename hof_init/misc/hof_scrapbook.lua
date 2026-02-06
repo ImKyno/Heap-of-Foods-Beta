@@ -113,7 +113,7 @@ local animalfoods =
 for _, v in pairs(animalfoods) do
 	if ScrapbookData[v] ~= nil then
 		ScrapbookData[v].fueltype = "ANIMALFOOD"
-		ScrapbookData[v].fuelvalue = 15
+		ScrapbookData[v].fuelvalue = 45
 	end
 end
 
@@ -1928,7 +1928,7 @@ local HOF_SCRAPBOOK_FOODS =
 		burnable       = true,
 		foodtype       = "SEEDS",
 		fueltype       = "ANIMALFOOD",
-		fuelvalue      = 45,
+		fuelvalue      = 90,
 		bank           = "quagmire_crop_wheat",
 		build          = "quagmire_crop_wheat",
 		anim           = "idle",
@@ -1951,7 +1951,7 @@ local HOF_SCRAPBOOK_FOODS =
 		burnable       = true,
 		foodtype       = "SEEDS",
 		fueltype       = "ANIMALFOOD",
-		fuelvalue      = 45,
+		fuelvalue      = 90,
 		bank           = "quagmire_crop_wheat",
 		build          = "quagmire_crop_wheat",
 		anim           = "cooked",
@@ -1989,7 +1989,7 @@ local HOF_SCRAPBOOK_FOODS =
 		burnable       = true,
 		foodtype       = "SEEDS",
 		fueltype       = "ANIMALFOOD",
-		fuelvalue      = 90,
+		fuelvalue      = 180,
 		bank           = "quagmire_spotspice_sprig",
 		build          = "quagmire_spotspice_sprig",
 		anim           = "idle",

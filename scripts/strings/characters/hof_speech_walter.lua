@@ -1028,9 +1028,15 @@ WALTER.DESCRIBE.RICEANDBEANS = "Simple and balanced dish."
 
 WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "An abandoned place always has a story... maybe we'll learn it in 2026!"
 
-WALTER.DESCRIBE.KYNO_TRUFFLES_GROUND = "Nature always hides surprises... even underground!"
+WALTER.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Nature always hides surprises... even underground!",
+	PICKED = "Hope more show up later.",
+	BURNING = "Aw man, that was a rare resource.",
+}
+
 WALTER.DESCRIBE.KYNO_TRUFFLES = "Truffles! A rare treasure from the wild."
-WALTER.DESCRIBE.KYNO_TRUFFLES_COOKED = "Roasted and ready — smells amazing!"
+WALTER.DESCRIBE.KYNO_TRUFFLES_COOKED = "Roasted and ready, smells amazing!"
 
 WALTER.DESCRIBE.KYNO_ITEMSHOWCASER = 
 {

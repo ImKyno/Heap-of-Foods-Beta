@@ -37,7 +37,7 @@ local function OnInteract(inst)
 		inst.AnimState:PlayAnimation("interact")
 		inst.AnimState:PushAnimation("idle", true)
 		
-		inst.SoundEmitter:PlaySound("aqol/new_test/vegetation_grassy")
+		inst.SoundEmitter:PlaySound("dontstarve/wilson/pickup_reeds")
 	end
 end
 

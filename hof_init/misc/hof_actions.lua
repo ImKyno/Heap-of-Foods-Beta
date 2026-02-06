@@ -1060,7 +1060,7 @@ ACTIONS.ADDFUEL.stroverridefn = function(act)
 	end
 	
 	if act.target:HasTag("animalfeeder") then
-		return STRINGS.KYNO_ANIMALFEEDER_ADDFUEL
+		return STRINGS.KYNO_REFILL
 	end
 end
 

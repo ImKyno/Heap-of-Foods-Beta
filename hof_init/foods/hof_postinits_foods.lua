@@ -431,14 +431,14 @@ local function SeedsPostInit(inst)
 	end
 	
 	if inst.components.edible ~= nil then
-		if inst.components.edible.foodtype == _G.FOODTYPE.SEEDS then
+		if inst.components.edible.foodtype == _G.FOODTYPE.SEEDS and not inst:HasTag("gourmet_ingredient") then
 			if not inst.components.fuel then
 				inst:AddComponent("fuel")
 			end
 	
 			if inst.components.fuel ~= nil then
 				inst.components.fuel.fueltype = _G.FUELTYPE.ANIMALFOOD
-				inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL
+				inst.components.fuel.fuelvalue = TUNING.MED_FUEL
 			end
 		end
 	end

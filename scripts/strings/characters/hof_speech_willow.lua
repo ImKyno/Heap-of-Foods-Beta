@@ -1028,7 +1028,13 @@ WILLOW.DESCRIBE.RICEANDBEANS = "Needs more burnt beans."
 
 WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Ugh, it's so old and dry... perfect for burning. Maybe I'll wait ‘til 2026."
 
-WILLOW.DESCRIBE.KYNO_TRUFFLES_GROUND = "Just mushrooms... better when on fire."
+WILLOW.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Just mushrooms... better when on fire.",
+	PICKED = "All gone for now.",
+	BURNING = "Ooops!",
+}
+
 WILLOW.DESCRIBE.KYNO_TRUFFLES = "Fancy mushrooms. Maybe I'll burn them."
 WILLOW.DESCRIBE.KYNO_TRUFFLES_COOKED = "Fire makes everything better. Even mushrooms."
 

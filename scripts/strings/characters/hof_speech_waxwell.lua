@@ -1028,7 +1028,13 @@ WAXWELL.DESCRIBE.RICEANDBEANS = "I could use something better next time."
 
 WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Patience... all things resurface with time. 2026, perhaps?"
 
-WAXWELL.DESCRIBE.KYNO_TRUFFLES_GROUND = "A delicacy fit for refined tastes, even here."
+WAXWELL.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "A delicacy fit for refined tastes, even here.",
+	PICKED = "Gone for now.",
+	BURNING = "A needless loss.",
+}
+
 WAXWELL.DESCRIBE.KYNO_TRUFFLES = "The finer things in life, even here."
 WAXWELL.DESCRIBE.KYNO_TRUFFLES_COOKED = "Ah, properly prepared sophistication."
 

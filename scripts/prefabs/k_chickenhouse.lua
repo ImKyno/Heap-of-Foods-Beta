@@ -284,6 +284,7 @@ end
 local function OnBuilt(inst)
 	inst.AnimState:PlayAnimation("place")
 	inst.AnimState:PushAnimation("idle", true)
+
 	inst.SoundEmitter:PlaySound("dontstarve/common/rabbit_hutch_craft")
 end
 
@@ -352,12 +353,14 @@ local function fn()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddLightWatcher()
 	inst.entity:AddNetwork()
+	
+	local minimap = inst.entity:AddMiniMapEntity()
+	minimap:SetIcon("kyno_chickenhouse.tex")
 
 	inst:SetDeploySmartRadius(1.25)
 	MakeObstaclePhysics(inst, .5)
-
-	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("kyno_chickenhouse.tex")
+	
+	inst.AnimState:SetScale(1.2, 1.2, 1.2)
 
 	inst.AnimState:SetBank("kyno_chickenhouse")
 	inst.AnimState:SetBuild("kyno_chickenhouse")
@@ -442,4 +445,4 @@ local function fn()
 end
 
 return Prefab("kyno_chickenhouse", fn, assets, prefabs),
-MakePlacer("kyno_chickenhouse_placer", "kyno_chickenhouse", "kyno_chickenhouse", "idle")
+MakePlacer("kyno_chickenhouse_placer", "kyno_chickenhouse", "kyno_chickenhouse", "idle", false, nil, nil, 1.2)

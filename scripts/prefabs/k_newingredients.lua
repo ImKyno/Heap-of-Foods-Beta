@@ -126,7 +126,7 @@ local function wheatfn()
 	
 	inst:AddComponent("fuel")
 	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
-	inst.components.fuel.fuelvalue = TUNING.MED_FUEL
+	inst.components.fuel.fuelvalue = TUNING.MED_LARGE_FUEL
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
@@ -186,7 +186,7 @@ local function wheat_cookedfn()
 	
 	inst:AddComponent("fuel")
 	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
-	inst.components.fuel.fuelvalue = TUNING.MED_FUEL
+	inst.components.fuel.fuelvalue = TUNING.MED_LARGE_FUEL
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
@@ -424,9 +424,9 @@ local function sprigfn()
     inst.AnimState:SetBuild("quagmire_spotspice_sprig")
     inst.AnimState:PlayAnimation("idle")
 
+	inst:AddTag("show_spoilage")
 	inst:AddTag("gourmet_sprig")
 	inst:AddTag("gourmet_ingredient")
-	inst:AddTag("show_spoilage")
 	inst:AddTag("chickenfood")
 
     inst.entity:SetPristine()
@@ -459,7 +459,7 @@ local function sprigfn()
 	
 	inst:AddComponent("fuel")
 	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
-	inst.components.fuel.fuelvalue = TUNING.MED_LARGE_FUEL
+	inst.components.fuel.fuelvalue = TUNING.LARGE_FUEL
 	
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

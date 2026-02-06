@@ -1028,7 +1028,13 @@ WOODIE.DESCRIBE.RICEANDBEANS = "Its just missing some nice steak and fries."
 
 WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Seen better days, eh bud? Bet it's gonna get real busy come 2026."
 
-WOODIE.DESCRIBE.KYNO_TRUFFLES_GROUND = "Heh, nothing like finding food straight from the dirt."
+WOODIE.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Heh, nothing like finding food straight from the dirt.",
+	PICKED = "Maybe more will pop up.",
+	BURNING = "Ah, that's a real shame.",
+}
+
 WOODIE.DESCRIBE.KYNO_TRUFFLES = "They smell a bit weird, but taste good."
 WOODIE.DESCRIBE.KYNO_TRUFFLES_COOKED = "Now that's some fine eating."
 

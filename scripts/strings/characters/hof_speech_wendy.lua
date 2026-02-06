@@ -1028,7 +1028,13 @@ WENDY.DESCRIBE.RICEANDBEANS = "It's a very simple meal, but it will do."
 
 WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Even ruins remember their purpose... perhaps it will awaken in 2026."
 
-WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND = "Even in darkness, they grow..."
+WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Even in darkness, they grow...",
+	PICKED = "Gone, like most good things.",
+	BURNING = "Destroyed before it could be enjoyed.",
+}
+
 WENDY.DESCRIBE.KYNO_TRUFFLES = "Delicacies born from darkness."
 WENDY.DESCRIBE.KYNO_TRUFFLES_COOKED = "Darkness turned into warmth and flavor."
 

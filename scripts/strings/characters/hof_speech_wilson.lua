@@ -137,7 +137,7 @@ WILSON.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "This is a plant I could learn to love.",
 	PICKED = "I'll need to wait for the beans to grow back.",
-	WITHERED = "It's far too dry to produce anything.",
+	WITHERED = "It's far too wet to produce anything.",
 }
 
 WILSON.DESCRIBE.DUG_KYNO_SPOTBUSH = "I should plant it somewhere suitable."
@@ -1028,7 +1028,13 @@ WILSON.DESCRIBE.RICEANDBEANS = "A healthy meal option."
 
 WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "What secrets hide in there? Maybe we'll find out... in 2026."
 
-WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND = "Wild truffles! Someone must have sniffed this out."
+WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Wild truffles! Someone must have sniffed this out.",
+	PICKED = "I hope I can get more of them soon!",
+	BURNING = "Such waste of a delicacy!",
+}
+
 WILSON.DESCRIBE.KYNO_TRUFFLES = "A rare and fragrant delicacy."
 WILSON.DESCRIBE.KYNO_TRUFFLES_COOKED = "The aroma is irresistible!"
 

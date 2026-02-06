@@ -1028,7 +1028,13 @@ WOLFGANG.DESCRIBE.RICEANDBEANS = "Is healthy cooked little beans!"
 
 WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Little house looks weak... maybe become strong again next year!"
 
-WOLFGANG.DESCRIBE.KYNO_TRUFFLES_GROUND = "Tiny mushrooms hiding in ground! Wolfgang found them!"
+WOLFGANG.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Tiny mushrooms hiding in ground! Wolfgang found them!",
+	PICKED = "Wolfgang wants more!",
+	BURNING = "Fire ruin good food!",
+}
+
 WOLFGANG.DESCRIBE.KYNO_TRUFFLES = "Strong smell! Wolfgang hungry now."
 WOLFGANG.DESCRIBE.KYNO_TRUFFLES_COOKED = "Mmm! Strong smell and strong taste!"
 

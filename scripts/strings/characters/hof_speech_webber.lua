@@ -1028,7 +1028,13 @@ WEBBER.DESCRIBE.RICEANDBEANS = "Mum always say: Eat your veggies!"
 
 WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Looks empty now... but we'll come back and check again in 2026!"
 
-WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND = "We found hiding mushrooms! Can we pick them?"
+WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "We found hiding mushrooms! Can we pick them?",
+	PICKED = "We want more!",
+	BURNING = "Aw, we didn't even eat them!",
+}
+
 WEBBER.DESCRIBE.KYNO_TRUFFLES = "They look tasty! Should we eat them?"
 WEBBER.DESCRIBE.KYNO_TRUFFLES_COOKED = "Toasty and delicious!"
 

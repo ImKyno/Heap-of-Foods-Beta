@@ -1028,7 +1028,13 @@ WANDA.DESCRIBE.RICEANDBEANS = "I get it, its nice and healthy but I prefer some 
 
 WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Time will tell... and I suspect it'll speak loudest in 2026."
 
-WANDA.DESCRIBE.KYNO_TRUFFLES_GROUND = "Time passes, and they grow on their own. Impressive."
+WANDA.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Time passes, and they grow on their own. Impressive.",
+	PICKED = "I'll have to wait for the next chance.",
+	BURNING = "That opportunity is gone for good.",
+}
+
 WANDA.DESCRIBE.KYNO_TRUFFLES = "Good things come to those who wait... like these."
 WANDA.DESCRIBE.KYNO_TRUFFLES_COOKED = "A taste worth the wait."
 

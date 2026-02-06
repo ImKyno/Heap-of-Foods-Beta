@@ -1,8 +1,3 @@
--- Wspólne zależności.
--- local _G      = GLOBAL
--- local require = _G.require
--- local STRINGS = _G.STRINGS
-
 -- Dane ogólne.
 STRINGS.SCRAPBOOK.DATA_BREWER = "MOŻNA PRZYGOTOWAĆ NAPÓJ"
 STRINGS.SCRAPBOOK.DATA_OPENABLE = "MOŻNA OTWIERAĆ"
@@ -165,7 +160,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Specjalny kapelusz rocznic
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Badania ryb i ikry przyczyniają się do wzbogacenia Rejestru Ryb."
 
 -- Stworzenia.
-STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Może znosić jaja w kurniku po zjedzeniu pszenicy lub nasion."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Ich dieta opiera się na nasionach, pszenicy lub gałązkach cętkowanych.\n\nKury żyjące na wolności mają 40% szans na zniesienie jaj po jedzeniu. Mają bardzo małe szanse na zniesienie dużego jaja.\n\nKury żyjące w kurniku mogą znosić jaja codziennie po jedzeniu. Mają większe szanse na zniesienie dużego jaja."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Puchate maluchy, które uwielbiają kraść twoje najcenniejsze przedmioty!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Zimorodki często upuszczają Tropikalne Karpie z góry. Dosłownie padają ryby!"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emituje kolorowe, zdrowe światło o zmierzchu i w nocy."

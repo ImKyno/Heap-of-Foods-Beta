@@ -120,7 +120,7 @@ local LOADINGTIPS   =
 	CHICKEN1        = "\"I wonder if those Chickens could give me some eggs. I need some seeds to estimulate them!\" -W",
 	CHICKEN2        = "Chickens living in a Coop have a higher chance of laying Large Eggs.",
 	CHICKEN3        = "Chickens found in the wild have a small chance of laying Eggs after eating.",
-	CHICKEN4        = "Chickens living in a Coop will only produce Eggs if they eat something daily like Seeds, Wheats or Spotty Sprigs. They can also eat from the Feeding Trough.",
+	CHICKEN4        = "Chickens living in a Coop will only produce Eggs if they eat something daily like Seeds or Grains. They can also eat from the Feeding Trough.",
 	ANIMALFEEDER    = "The Feeding Trough can be used to feed some farm animals such as Chickens.",
 }
 

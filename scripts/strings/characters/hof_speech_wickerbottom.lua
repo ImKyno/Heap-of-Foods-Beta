@@ -1028,7 +1028,13 @@ WICKERBOTTOM.DESCRIBE.RICEANDBEANS = "A very healthy and nutritive lunch."
 
 WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Its dilapidated state suggests future restoration. I predict activity in 2026."
 
-WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND = "Tuber melanosporum! A prized subterranean delicacy."
+WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Tuber melanosporum! A prized subterranean delicacy.",
+	PICKED = "It will take time for more to grow.",
+	BURNING = "An unforgivable waste.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES = "True truffles, highly esteemed in gastronomy."
 WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_COOKED = "Cooking enhances their unique aroma."
 

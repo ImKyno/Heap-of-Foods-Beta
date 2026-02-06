@@ -1028,7 +1028,13 @@ WORTOX.DESCRIBE.RICEANDBEANS = "Mortal food."
 
 WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Ho ho! A home asleep in time... let's peek again in 2026!"
 
-WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND = "Hidden, but not from me! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Hidden, but not from me! Hyuyu!",
+	PICKED = "Nothing left for now.",
+	BURNING = "That's unfortunate.",
+}
+
 WORTOX.DESCRIBE.KYNO_TRUFFLES = "Oho! A treat from below!"
 WORTOX.DESCRIBE.KYNO_TRUFFLES_COOKED = "Sizzle and pop, now they're top!"
 

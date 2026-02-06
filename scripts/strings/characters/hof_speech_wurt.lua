@@ -1030,7 +1030,13 @@ WURT.DESCRIBE.RICEANDBEANS = "Yummy!"
 
 WURT.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Scary house... but maybe something yummy inside later, florp? 2026?"
 
-WURT.DESCRIBE.KYNO_TRUFFLES_GROUND = "Mushrooms! Glorp! I like them!"
+WURT.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Mushrooms! Glorp! I like them!",
+	PICKED = "No more food.",
+	BURNING = "Fire ruin good stuff!",
+}
+
 WURT.DESCRIBE.KYNO_TRUFFLES = "Glorp! Smells strong... but tastes nice!"
 WURT.DESCRIBE.KYNO_TRUFFLES_COOKED = "Glorp! Smells yummy now!"
 

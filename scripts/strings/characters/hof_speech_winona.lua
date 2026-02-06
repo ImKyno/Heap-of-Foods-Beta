@@ -1028,7 +1028,13 @@ WINONA.DESCRIBE.RICEANDBEANS = "Lunch."
 
 WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Needs a real fixer-upper job. Maybe they'll put me on it in 2026."
 
-WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND = "Underground treasures ready to harvest."
+WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Underground treasures ready to harvest.",
+	PICKED = "Cleaned out.",
+	BURNING = "What a waste.",
+}
+
 WINONA.DESCRIBE.KYNO_TRUFFLES = "A rare find — nature's gourmet treat."
 WINONA.DESCRIBE.KYNO_TRUFFLES_COOKED = "Cooking sure brings out the best in them."
 

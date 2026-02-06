@@ -1,8 +1,3 @@
--- Common Dependencies.
--- local _G      = GLOBAL
--- local require = _G.require
--- local STRINGS = _G.STRINGS
-
 -- General Data.
 STRINGS.SCRAPBOOK.DATA_BREWER = "CAN PREPARE DRINK"
 STRINGS.SCRAPBOOK.DATA_OPENABLE = "CAN BE OPENED"
@@ -165,7 +160,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Sammy's special anniversar
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Researching fishes and roes adds to the Fish Registry."
 
 -- Creatures.
-STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 33% chance of laying Eggs after eating. They have a small chance of laying an Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying an Large Egg."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 40% chance of laying Eggs after eating. They have a small chance of laying an Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying an Large Egg."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Fluffy little buddies that loves to steal your most valuable items!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Kingfishers will often drop Tropical Kois from above. It's raining fish, literally!"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emits a colorful healthy glow during dusk and night."

@@ -622,6 +622,10 @@ local function ruinedfn()
         return inst
     end
 	
+	inst.flies = SpawnPrefab("flies")
+	inst.flies.entity:SetParent(inst.entity)
+	inst.flies.Transform:SetPosition(0, 0, 0)
+	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"kyno_sapbucket_installer"})
 	
@@ -698,6 +702,10 @@ local function ruined2fn()
     if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.flies = SpawnPrefab("flies")
+	inst.flies.entity:SetParent(inst.entity)
+	inst.flies.Transform:SetPosition(0, 0, 0)
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"log", "log", "log", "kyno_sap_spoiled"})
