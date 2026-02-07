@@ -90,6 +90,8 @@ WORTOX.ANNOUNCE_KYNO_POTHANGER_FAIL = "Por que não pendurar uma panela em vez d
 
 WORTOX.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Mortais dizem que colocam \"caçarolas\" aqui."
 
+WORTOX.ANNOUNCE_KYNO_SAPHEALER_USED = "Está pronta para voltar ao trabalho!"
+
 WORTOX.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Corte e clique! O último cochilo de um mortal!"
 
 WORTOX.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Oh não, uma caixa vazia sobre rodas!"
@@ -129,11 +131,23 @@ WORTOX.DESCRIBE.KYNO_SYRUP = "Para fazer doces."
 WORTOX.DESCRIBE.KYNO_COFFEEBEANS = "Só precisa de água."
 WORTOX.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Sem água quente?"
 
-WORTOX.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Uma planta estranha."
-WORTOX.DESCRIBE.KYNO_COFFEEBUSH = "Uma planta estranha."
+WORTOX.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Uma planta estranha que precisa ser plantada em solo quente."
 
-WORTOX.DESCRIBE.DUG_KYNO_SPOTBUSH = "Oh! Um arbusto."
-WORTOX.DESCRIBE.KYNO_SPOTBUSH = "Oh! Um arbusto."
+WORTOX.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "Grãos quentes disponíveis!",
+	PICKED = "Nada sobrando por enquanto.",
+	WITHERED = "Não consegue prosperar assim.",
+}
+
+WORTOX.DESCRIBE.DUG_KYNO_SPOTBUSH = "Oh! Um arbusto, preciso plantá-lo."
+
+WORTOX.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "Oh! Um arbusto.",
+	PICKED = "Nada para pegar agora.",
+	BURNING = "Que azar.",
+}
 
 WORTOX.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Lambi um. Hyuyu!"
 
@@ -194,10 +208,24 @@ WORTOX.DESCRIBE.LONGPIGMEAL = "Oh! Comida feita de carne humana."
 
 WORTOX.DESCRIBE.CUCUMBERSALAD = "Não gosto muito de comer."
 
-WORTOX.DESCRIBE.KYNO_WILDWHEAT = "Trigo que cresce na terra mais rica."
-WORTOX.DESCRIBE.DUG_KYNO_WILDWHEAT = "Trigo que cresce na terra mais rica."
+WORTOX.DESCRIBE.DUG_KYNO_WILDWHEAT = "Precisa ser plantado."
+
+WORTOX.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "Trigo que cresce da terra mais rica.",
+	PICKED = "Nada para pegar agora.",
+	WITHERED = "Não consegue sobreviver assim.",
+	BURNING = "Que azar.",
+}
 
 WORTOX.DESCRIBE.KYNO_MEALGRINDER = "Uma máquina mortal para moer alimentos!"
+
+WORTOX.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Uma metrópole de cogumelos!",
+	PICKED = "Eles voltarão no tempo certo.",
+	BURNING = "Que azar.",
+}
 
 WORTOX.DESCRIBE.GORGE_BREAD = "Comida mortal parece assim?"
 WORTOX.DESCRIBE.GORGE_SWEET_CHIPS = "Esta comida tem algo especial!"
@@ -340,33 +368,70 @@ WORTOX.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Ai."
 
 WORTOX.DESCRIBE.KYNO_SEEDS_KIT = "Apenas algumas sementes."
 
-WORTOX.DESCRIBE.KYNO_LIMPETROCK = "Coberta de coisas gostosas!"
+WORTOX.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "Coberto de boa comida!",
+	PICKED = "Sumiram pra se esconder, caracóis lá dentro!",
+	WITHERED = "Seco e morto, não alimenta mais!",
+}
+
 WORTOX.DESCRIBE.KYNO_LIMPETS = "Logo estarão na minha barriga! Hyuyu!"
 WORTOX.DESCRIBE.KYNO_LIMPETS_COOKED = "Humm!"
 
-WORTOX.DESCRIBE.KYNO_LOTUS_OCEAN = "Flor rosa!"
+WORTOX.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "Flor rosa!",
+	PICKED = "Foi-se por ora, faça uma reverência!",
+	BURNING = "Que estrago!",
+}
+
 WORTOX.DESCRIBE.KYNO_LOTUS_ROOT = "Caule do mar!"
 WORTOX.DESCRIBE.KYNO_LOTUS_FLOWER = "Uma bela flor rosa."
 WORTOX.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Cheiro bom, Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "Fica preso nas minhas cordas."
+WORTOX.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Se enrola no meu cordame.",
+	PICKED = "Nada sobrando agora.",
+	BURNING = "Isso não deveria acontecer.",
+}
+
 WORTOX.DESCRIBE.KYNO_SEAWEEDS = "Fica preso nas minhas cordas."
 WORTOX.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Cozinhar não faz isso virar comida."
 WORTOX.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Isso se passa por jerky?"
 WORTOX.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Caule marinho!"
 
-WORTOX.DESCRIBE.KYNO_TAROROOT_OCEAN = "Uma raiz de taro! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "Uma raiz de taro! Hyuyu!",
+	PICKED = "Deve crescer de novo em breve.",
+	BURNING = "Que azar.",
+}
+
 WORTOX.DESCRIBE.KYNO_TAROROOT_ROOT = "Caule do mar!"
 WORTOX.DESCRIBE.KYNO_TAROROOT = "Nunca vi algo assim antes!"
 WORTOX.DESCRIBE.KYNO_TAROROOT_COOKED = "Meu petisco favorito... imbatível!"
 
-WORTOX.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "Mais uma planta."
+WORTOX.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "Outra planta.",
+	PICKED = "Ela voltará com o tempo.",
+	BURNING = "Que azar.",
+}
+
 WORTOX.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Caule do mar!"
 WORTOX.DESCRIBE.KYNO_WATERYCRESS = "Mais uma planta."
 
 WORTOX.DESCRIBE.WATERYCRESSBOWL = "Mesmo para comida humana, isso é estranho."
 
-WORTOX.DESCRIBE.KYNO_SALT = "Ssss!"
+WORTOX.DESCRIBE.KYNO_SALT = "Ssssal!"
+
+WORTOX.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Mexilhões esperando quietinhos.",
+	PICKED = "Nada para pegar agora.",
+	BURNING = "Que azar.",
+}
 
 WORTOX.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Para atrair mexilhões para minha barriga! Hyuyu!"
 
@@ -374,11 +439,27 @@ WORTOX.DESCRIBE.CATFOOD = "Comida para gatinhos! Hyuyu!"
 
 WORTOX.DESCRIBE.KATFOOD = "Comida para gatinhos! Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_BANANATREE = "O que vejo? Uma árvore de banana de verdade!"
+WORTOX.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "O que vejo? Uma bananeira de verdade!",
+	PICKED = "Sem lanchinhos por enquanto.",
+	CHOPPED = "Cortada!",
+	BURNING = "Chamas por toda parte!",
+	BURNT = "Cinzas, finalmente!",
+}
+
 WORTOX.DESCRIBE.KYNO_BANANA = "Um dos sabores mortais menos ofensivos."
 WORTOX.DESCRIBE.KYNO_BANANA_COOKED = "Agora está cozida. Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_KOKONUTTREE = "Essa árvore tem um tronco grande. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "Esta árvore tem um tronco grande. Hyuyu!",
+	PICKED = "Nenhum coco à vista.",
+	CHOPPED = "Derrubada!",
+	BURNING = "Está queimando, que choque!",
+	BURNT = "Agora só restam cinzas.",
+}
+
 WORTOX.DESCRIBE.KYNO_KOKONUT = "Uma noz de cabeça!"
 WORTOX.DESCRIBE.KYNO_KOKONUT_HALVED = "Dois cocos de um só?!"
 WORTOX.DESCRIBE.KYNO_KOKONUT_COOKED = "Ainda melhor que cru."
@@ -426,13 +507,43 @@ WORTOX.DESCRIBE.TURF_STONECITY = "Chão de pedras."
 WORTOX.DESCRIBE.TURF_FIELDS = "Caminho de grama."
 WORTOX.DESCRIBE.TURF_TIDALMARSH = "Chão bem mole."
 
+WORTOX.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Os minerais estão prontos.",
+	PICKED = "Os mortais desejam esses minerais.",
+}
+
 WORTOX.DESCRIBE.KYNO_SALTRACK_INSTALLER = "É feito para ficar sobre um lago."
 
 WORTOX.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "É para encher de seiva."
 
 WORTOX.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Eles vão se sentir bobos quando eu pegá-los!"
 
-WORTOX.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "Minha nossa, você parece doente! Desanimado, esverdeado perto das guelras."
+WORTOX.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "Oh, minha nossa, você parece doente! Espírito fraco, esverdeado nas guelras.",
+	SLEEPING = "É melhor deixá-lo descansar.",
+}
+
+WORTOX.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "Fweehee, que árvore especial!",
+	CHOPPED = "Fim da extração de seiva.",
+	SAPPED = "Seiva doce e açucarada!",
+	PICKED = "A torneira logo fará seiva!",
+	BURNING = "Que azar.",
+	BURNT = "Nada restou agora.",
+}
+
+WORTOX.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "Um infeliz acidente aconteceu com a seiva da árvore.",
+	CHOPPED = "Não serviu para nada.",
+	SAPPED = "Arruinada, mas disponível.",
+	PICKED = "Esses insetos são bandidos da árvore!",
+	BURNING = "Isso acaba com tudo.",
+	BURNT = "Nada restou.",
+}
 
 WORTOX.DESCRIBE.KYNO_SUGARTREE_BUD = "Uma semente de árvore."
 
@@ -453,13 +564,22 @@ WORTOX.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Os humanos gostam, realmente gostam!"
 
 WORTOX.DESCRIBE.KYNO_SLAUGHTERTOOL = "Não gosto desse tipo de brincadeira."
 
-WORTOX.DESCRIBE.KYNO_CHICKEN2 = "Um passarinho minúsculo."
+WORTOX.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "Um passarinho.",
+	COOP = "Lar doce galinheiro! Hyuyu!",
+}
 
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG = "Um ovo de galinha, ou pelo menos é o que dizem."
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Uma casca grande para uma alma pequenina."
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Provavelmente algo mortal."
 
-WORTOX.DESCRIBE.KYNO_CHICKENHOUSE = "Um suprimento infinito de ovos!"
+WORTOX.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "Um suprimento infinito de ovos!",
+	FULL = "Ovos à vontade!",
+	BURNT = "Sem galinheiro, sem cocoricó!",
+}
 
 WORTOX.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Hmm, sinto uma aura estranha."
 
@@ -482,8 +602,11 @@ WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN = "É uma coisa que mortais cozinham."
 WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "É uma coisa que mortais cozinham."
 WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "É uma coisa que mortais cozinham."
 
-WORTOX.DESCRIBE.KYNO_ROCKFLIPPABLE = "Muitos insetos podem ser encontrados debaixo das pedras."
-WORTOX.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "Muitos insetos podem ser encontrados debaixo das pedras."
+WORTOX.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "Muitos insetos podem ser encontrados sob as pedras.",
+	FLIPPED = "Agora está exposto.",
+}
 
 WORTOX.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Apenas uma caixa sobre a água."
 
@@ -526,7 +649,12 @@ WORTOX.DESCRIBE.PEPPERROLLS = "Vou encher com pasta de dente quando Warly não e
 
 WORTOX.DESCRIBE.KYNO_SAPHEALER = "Amargo e doentio."
 
-WORTOX.DESCRIBE.KYNO_OCEAN_WRECK = "Descanse bem."
+WORTOX.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "Descanse em paz.",
+	PICKED = "Não há nada por enquanto.",
+	BURNING = "Isso fecha seu destino.",
+}
 
 WORTOX.DESCRIBE.KYNO_GHOST_PIRATE = "Um rosto fantasmagórico! Hyuyu!"
 
@@ -543,11 +671,31 @@ WORTOX.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Mortais gostam mais quando está úmida.
 
 WORTOX.DESCRIBE.KYNO_BREWBOOK = "O que eu devo fermentar agora? Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_WOODENKEG = "Esta máquina faz as coisas que mortais gostam."
+WORTOX.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "Esta máquina faz coisas que os mortais gostam.",
+	BREWING_LONG = "Borbulhando devagar, bem tranquilo!",
+	BREWING_SHORT = "Quase pronto!",
+	DONE = "Finalmente está pronto!",
+	BURNT = "Cinzas e tristeza.",
+}
 
-WORTOX.DESCRIBE.KYNO_PRESERVESJAR = "Disseram que isso faz algo bom com romãs. Preciso tentar!"
+WORTOX.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "Disseram que isso faz algo bom com romãs. Preciso tentar!",
+	BREWING_LONG = "Está borbulhando bem.",
+	BREWING_SHORT = "Quase pronto, pelo que posso ver.",
+	DONE = "Doce!",
+	BURNT = "Ah não, acabou tudo!",
+}
 
-WORTOX.DESCRIBE.KYNO_ANTCHEST = "Fazendo o doce mel!"
+WORTOX.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "Produzindo mel doce!",
+	HONEY = "Está cheio de mel! Que espetáculo!",
+	NECTAR = "Ainda não está pronto?",
+	BURNING = "Chega de fazer mel agora.",
+}
 
 WORTOX.DESCRIBE.KYNO_NECTAR_POD = "Doce, doce, néctar das abelhas!"
 
@@ -557,13 +705,47 @@ WORTOX.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Comidinha."
 WORTOX.DESCRIBE.KYNO_PIKO = "Vejo que você gosta de travessuras como eu! Hyuyu!"
 WORTOX.DESCRIBE.KYNO_PIKO_ORANGE = "Útil para fazer chás!"
 
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_TREE = "Você parece legal!"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "Você parece legal!"
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "Você parece bonita!",
+	CHOPPED = "Despojada de tudo que tinha a oferecer.",
+	BURNING = "Que azar.",
+	BURNT = "Nada restou agora.",
+}
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "Você parece bonita!",
+	BURNING = "Fuja se valoriza sua vida.",
+}
+
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Ali está um caixote."
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "Uma estrutura fedorenta, com certeza."
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "Cheiram pior do que eu!"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "Eu e Sammy percorremos muitos lugares para conseguir esses itens!"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "Escondi uma coisinha ali. Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "Uma estrutura fedida, com certeza.",
+	BURNT = "Cinzas e fumaça.",
+}
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "Eles cheiram pior que eu!",
+	CRAFTED = "Arrumada, ficou boa!",
+	BURNT = "Queimada e nojenta.",
+}
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "Eu e Sammy passamos por muitos lugares para conseguir esses itens!",
+	OCCUPIED = "Sem trocas agora.",
+}
+
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "Escondi uma coisinha aí dentro. Hyuyu!",
+	EMPTY = "Sem guloseimas restantes.",
+}
+
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Não conte a ninguém que eu trouxe você aqui!"
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_POND = "Vejo meu futuro..."
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Ei! Estou olhando aqui!"
@@ -713,8 +895,15 @@ WORTOX.DESCRIBE.RISOTTO = "Tem gosto engraçado, mas não o suficiente, como alm
 
 WORTOX.DESCRIBE.RICESAKE = "Bebida engraçada. Hyuyu!"
 
-WORTOX.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Fruta boba. Hyuyu!"
-WORTOX.DESCRIBE.KYNO_PINEAPPLEBUSH = "Fruta boba. Hyuyu!"
+WORTOX.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Arbusto de fruta boba. Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "Fruta Boba. Hyuyu!",
+	PICKED = "Não há nada para pegar por enquanto.",
+	WITHERED = "Não consegue sobreviver deste jeito.",
+	BURNING = "Isso é terrível.",
+}
 
 WORTOX.DESCRIBE.KYNO_PINEAPPLE = "Fruta boba."
 WORTOX.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Fruta boba."
@@ -726,7 +915,11 @@ WORTOX.DESCRIBE.PINACOLADA = "Devo admitir, é muito boa e refrescante."
 
 WORTOX.DESCRIBE.CHIMAS = "Uma bebida estranha! Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_GARDEN_SPRINKLER = "Alívio para as plantas."
+WORTOX.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "Alívio para as plantas.",
+	ON = "Está funcionando perfeitamente.",
+}
 
 WORTOX.DESCRIBE.KYNO_FOODSACK = "Apenas para guardar comida."
 
@@ -835,11 +1028,21 @@ WORTOX.DESCRIBE.RICEANDBEANS = "Comida mortal."
 
 WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Ho ho! Uma casa adormecida no tempo... vamos espiar de novo em 2026!"
 
-WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND = "Heehee! Escondidinhas, mas não de mim!"
+WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Escondidas, mas não de mim! Hyuyu!",
+	PICKED = "Nada sobrando por enquanto.",
+	BURNING = "Que azar.",
+}
+
 WORTOX.DESCRIBE.KYNO_TRUFFLES = "Heehee! Um presentinho da terra para meu estômago!"
 WORTOX.DESCRIBE.KYNO_TRUFFLES_COOKED = "Hiss! Quentes e cheirosas — um banquete para um diabrinho!"
 
-WORTOX.DESCRIBE.KYNO_ITEMSHOWCASER = "Um banquete pros olhos, hyuyu!"
+WORTOX.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "Ainda não há nada aí.",
+	FULL = "Um banquete para os olhos, Hyuyu!",
+}
 
 WORTOX.DESCRIBE.KYNO_SPORECAP = "Hehe! Um deleite apodrecido!"
 WORTOX.DESCRIBE.KYNO_SPORECAP_COOKED = "Tostado e amaldiçoado!"
@@ -859,7 +1062,15 @@ WORTOX.DESCRIBE.TRUFFLEOIL = "Um truque escorregadio da natureza! Divino... ou s
 
 WORTOX.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Mas improvisar é muito mais divertido! Hyuyu!"
 WORTOX.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Uma poça virando um palácio pros peixinhos! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_FISHFARMPLOT = "Peixinhos! Nadem e brinquem! Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "Peixinhos, levantem e brinquem!",
+	FUEL_HIGH = "Barrigas bem cheias.",
+	FUEL_MED = "Parece que estão ficando com fome.",
+	FUEL_LOW = "A comida está acabando.",
+	EMPTY = "Sem petiscos de peixe, precisa reabastecer.",
+}
 
 WORTOX.DESCRIBE.KYNO_ANTCHOVY = "Ele se contorce entre dois mundos! Hyuyu!"
 WORTOX.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Um alegre enxame de peixes e insetos! Hyuyu!"
@@ -916,14 +1127,29 @@ WORTOX.DESCRIBE.MONKEYISLANDMEAL = "Um banquete para libertar a fera. Hyuyu!"
 WORTOX.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Não é o monstro marinho mais intimidador."
 WORTOX.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "É uma pedra careca!"
 WORTOX.DESCRIBE.KYNO_BRAINROCK_CORAL = "Você não pode pensar do bolso."
-WORTOX.DESCRIBE.KYNO_BRAINROCK_ROCK = "Cérebro do oceano."
+
+WORTOX.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "Cérebro do oceano.",
+	PICKED = "Sem mais pensamentos, ai de mim!",
+}
 
 WORTOX.DESCRIBE.BRAINMETTERSOUP = "Talvez me ajude a inventar pegadinhas melhores?"
 
-WORTOX.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "Ahoy, seu cachorro salgado!"
+WORTOX.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "Ahoy, seu cão salgado!",
+	SLEEPING = "Não está aberto para trocas agora.",
+}
+
 WORTOX.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Tesouros das profundezas!"
 
-WORTOX.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "Um peixe morto."
+WORTOX.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "Um peixe morto.",
+	WAITING = "Nada permanece igual.",
+}
+
 WORTOX.DESCRIBE.KYNO_PACKIMBAGGIMS = "Esse é meu camarada!"
 
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Mal posso esperar para ver pronto! Hyuyu!"
@@ -933,9 +1159,28 @@ WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Um brilho de diversão para todos!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Que tipo de festa você trará?"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Um agrado mortal, que lindo! Hyuyu!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Pop! Adoro uma boa surpresa!"
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Hehe! Pipoca é um lanche travesso e delicioso!"
+
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Pipoca é um deleite maravilhoso, sim.",
+	FUEL_HIGH = "Ainda tem bastante combustível.",
+	FUEL_MED = "Ainda pode produzir um pouco.",
+	FUEL_LOW = "Combustível acabando.",
+	EMPTY = "Sem combustível restante.",
+}
+
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Pop! Um lanchinho de estalo comemorativo!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Hoho! Um chapéu para travessuras festivas!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Ho ho! Um chapéu só do Sammy, tão especial quanto ele!"
 
 WORTOX.DESCRIBE.KYNO_FISHREGISTRYHAT = "Um chapéu pensante cheio de fatos peixosos!"
+
+WORTOX.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Bicar e mastigar, uma ideia de alimentar!",
+	FUEL_HIGH = "Cheio até a borda!",
+	FUEL_MED = "Nada mal, nada terrível!",
+	FUEL_LOW = "Baixo, tão baixo!",
+	EMPTY = "Sem comida!",
+	BURNT = "Cinzas e fumaça!",
+}

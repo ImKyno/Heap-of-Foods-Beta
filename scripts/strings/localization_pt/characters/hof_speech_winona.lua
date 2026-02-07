@@ -90,6 +90,8 @@ WINONA.ANNOUNCE_KYNO_POTHANGER_FAIL = "Precisa de uma panela para cozinhar."
 
 WINONA.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Não é isso."
 
+WINONA.ANNOUNCE_KYNO_SAPHEALER_USED = "Pronto, te consertei."
+
 WINONA.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "As ferramentas tornam o trabalho sujo mais fácil."
 
 WINONA.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Nada sobrou. Sammy deve ter guardado tudo já."
@@ -129,11 +131,23 @@ WINONA.DESCRIBE.KYNO_SYRUP = "É como mel da árvore."
 WINONA.DESCRIBE.KYNO_COFFEEBEANS = "Venham para mim!"
 WINONA.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Animada!"
 
-WINONA.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Java!"
-WINONA.DESCRIBE.KYNO_COFFEEBUSH = "Java!"
+WINONA.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Um arbusto de Java! Necessita de lugar quente."
 
-WINONA.DESCRIBE.DUG_KYNO_SPOTBUSH = "Sim, provavelmente podemos comer isso."
-WINONA.DESCRIBE.KYNO_SPOTBUSH = "Sim, provavelmente podemos comer isso."
+WINONA.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "Café!",
+	PICKED = "Precisa de um tempo para se recuperar.",
+	WITHERED = "Precisa de mais cuidado.",
+}
+
+WINONA.DESCRIBE.DUG_KYNO_SPOTBUSH = "Preciso plantá-la primeiro."
+
+WINONA.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "É, provavelmente dá pra comer isso.",
+	PICKED = "Precisa de um tempo pra se recuperar.",
+	BURNING = "Bom, isso estragou tudo.",
+}
 
 WINONA.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Tem gosto de... pimenta?"
 
@@ -194,10 +208,24 @@ WINONA.DESCRIBE.LONGPIGMEAL = "Foi uma péssima ideia."
 
 WINONA.DESCRIBE.CUCUMBERSALAD = "Isso sim é comida saudável."
 
-WINONA.DESCRIBE.KYNO_WILDWHEAT = "Para todas as suas necessidades de trigo."
-WINONA.DESCRIBE.DUG_KYNO_WILDWHEAT = "Para todas as suas necessidades de trigo."
+WINONA.DESCRIBE.DUG_KYNO_WILDWHEAT = "Preciso plantar essa muda de trigo."
+
+WINONA.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "Pode ser útil.",
+	PICKED = "Precisa de um tempo pra se recuperar.",
+	WITHERED = "Seco demais pra funcionar.",
+	BURNING = "Bom, isso estragou.",
+}
 
 WINONA.DESCRIBE.KYNO_MEALGRINDER = "Ah! Um trabalho que precisa de esforço!"
+
+WINONA.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Bem, pelo menos NÃO PARECE venenoso.",
+	PICKED = "É só um toco.",
+	BURNING = "Dava pra ter evitado.",
+}
 
 WINONA.DESCRIBE.GORGE_BREAD = "Um clássico, não acha?"
 WINONA.DESCRIBE.GORGE_SWEET_CHIPS = "Isso poderia fazer alguém trabalhar por horas."
@@ -340,27 +368,57 @@ WINONA.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Ah, droga!"
 
 WINONA.DESCRIBE.KYNO_SEEDS_KIT = "Sementes de vegetais."
 
-WINONA.DESCRIBE.KYNO_LIMPETROCK = "Olha só todos esses Barneys."
+WINONA.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "Olha só quantos Barneys.",
+	PICKED = "Precisa de tempo pra se recuperar.",
+	WITHERED = "Nada de útil agora.",
+}
+
 WINONA.DESCRIBE.KYNO_LIMPETS = "Eles estão livres do agito da vida diária."
 WINONA.DESCRIBE.KYNO_LIMPETS_COOKED = "Ainda um pouco gosmento."
 
-WINONA.DESCRIBE.KYNO_LOTUS_OCEAN = "Daria um ótimo almoço!"
+WINONA.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "Isso daria um ótimo almoço!",
+	PICKED = "Precisa de tempo pra voltar.",
+	BURNING = "Isso não deveria estar acontecendo.",
+}
+
 WINONA.DESCRIBE.KYNO_LOTUS_ROOT = "Agora posso plantar onde eu quiser."
 WINONA.DESCRIBE.KYNO_LOTUS_FLOWER = "Bonita!"
 WINONA.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Humm... saboroso."
 
-WINONA.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "O nome já diz tudo."
+WINONA.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "O nome já diz tudo.",
+	PICKED = "Precisa de tempo pra se recuperar.",
+	BURNING = "Bom, isso não é ideal.",
+}
+
 WINONA.DESCRIBE.KYNO_SEAWEEDS = "O nome já diz tudo."
 WINONA.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Um pouco melhor, eu acho..."
 WINONA.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Fica melhor com um pouco de crocância."
 WINONA.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Agora posso plantar onde quiser."
 
-WINONA.DESCRIBE.KYNO_TAROROOT_OCEAN = "Eu poderia comer no almoço."
+WINONA.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "Daria pra comer isso no almoço.",
+	PICKED = "A água ajuda a acelerar.",
+	BURNING = "Já era.",
+}
+
 WINONA.DESCRIBE.KYNO_TAROROOT_ROOT = "Agora posso plantar onde eu quiser."
 WINONA.DESCRIBE.KYNO_TAROROOT = "Olha como é esquisita! Ha!"
 WINONA.DESCRIBE.KYNO_TAROROOT_COOKED = "Isso melhorou? Não sei."
 
-WINONA.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "Parece delicioso."
+WINONA.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "Parece delicioso.",
+	PICKED = "Logo deve crescer de novo.",
+	BURNING = "Isso não precisava acontecer.",
+}
+
 WINONA.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Agora posso plantar onde eu quiser."
 WINONA.DESCRIBE.KYNO_WATERYCRESS = "Parece delicioso."
 
@@ -368,17 +426,40 @@ WINONA.DESCRIBE.WATERYCRESSBOWL = "Nunca se erra com sopa."
 
 WINONA.DESCRIBE.KYNO_SALT = "Mas cadê a pimenta?"
 
+WINONA.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Montagem simples.",
+	PICKED = "Precisa de tempo pra se recuperar.",
+	BURNING = "Isso não ajudou.",
+}
+
 WINONA.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Eles se grudam nela."
 
 WINONA.DESCRIBE.CATFOOD = "Lanches para o pequeno amigo."
 
 WINONA.DESCRIBE.KATFOOD = "Lanches para o pequeno amigo."
 
-WINONA.DESCRIBE.KYNO_BANANATREE = "Essa é, uh, uma árvore de banana."
+WINONA.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "É, uh, uma bananeira.",
+	PICKED = "Precisa de um tempo pra se recuperar.",
+	CHOPPED = "É isso.",
+	BURNING = "Eu não devia ter deixado isso acontecer.",
+	BURNT = "Perda total.",
+}
+
 WINONA.DESCRIBE.KYNO_BANANA = "Potássio!"
 WINONA.DESCRIBE.KYNO_BANANA_COOKED = "Potássio cozido!"
 
-WINONA.DESCRIBE.KYNO_KOKONUTTREE = "Cabelo legal, árvore."
+WINONA.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "Belo cabelo, árvore.",
+	PICKED = "Precisa de tempo pra se recuperar.",
+	CHOPPED = "É isso.",
+	BURNING = "Dava pra evitar.",
+	BURNT = "Perda total.",
+}
+
 WINONA.DESCRIBE.KYNO_KOKONUT = "Imagine levar um coco desses na cabeça!"
 WINONA.DESCRIBE.KYNO_KOKONUT_HALVED = "Você recebe dois pelo preço de um. Pfft."
 WINONA.DESCRIBE.KYNO_KOKONUT_COOKED = "Hmmm. Sim. Agora está cozido."
@@ -426,13 +507,43 @@ WINONA.DESCRIBE.TURF_STONECITY = "Terra sólida."
 WINONA.DESCRIBE.TURF_FIELDS = "Terra gramada."
 WINONA.DESCRIBE.TURF_TIDALMARSH = "Pantanoso."
 
+WINONA.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "O sal tá pronto pra mineração.",
+	PICKED = "Precisa de mais um tempo.",
+}
+
 WINONA.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Vamos montar!"
 
 WINONA.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Balde. A tecnologia agrícola mais avançada."
 
 WINONA.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Aqui, caranguezinho."
 
-WINONA.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "Você é grandão, hein?"
+WINONA.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "Você é grandão, hein?",
+	SLEEPING = "Volto mais tarde.",
+}
+
+WINONA.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "É uma grande árvore rosa.",
+	CHOPPED = "Isso não vai crescer de novo.",
+	SAPPED = "Esse balde tá quase transbordando!",
+	PICKED = "Queria que as árvores vazassem mais rápido.",
+	BURNING = "Perda total.",
+	BURNT = "Nada aproveitável.",
+}
+
+WINONA.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "Perdeu um pouco da cor.",
+	CHOPPED = "Não tem conserto.",
+	SAPPED = "Ainda dá pra usar, eu acho.",
+	PICKED = "Tá meio bugado.",
+	BURNING = "Descarta.",
+	BURNT = "Acabou.",
+}
 
 WINONA.DESCRIBE.KYNO_SUGARTREE_BUD = "Ouvi dizer que tem gosto de açúcar."
 
@@ -453,13 +564,22 @@ WINONA.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Fico irritada quando estou com fome. 
 
 WINONA.DESCRIBE.KYNO_SLAUGHTERTOOL = "Não é meu tipo de ferramenta."
 
-WINONA.DESCRIBE.KYNO_CHICKEN2 = "Adoro o visual, pequena galinha."
+WINONA.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "Adorei o visual, galinhazinha.",
+	COOP = "Você é minha agora!",
+}
 
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG = "Café da manhã."
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Ora, isso dá um trabalhão danado para uma galinha só."
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Sempre acabo pegando pedacinhos de casca sem querer."
 
-WINONA.DESCRIBE.KYNO_CHICKENHOUSE = "Construída com robustez suficiente para manter as galinhas sob controle."
+WINONA.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "Construído forte o suficiente pra manter as galinhas na linha.",
+	FULL = "Parece que tá na hora da colheita.",
+	BURNT = "Bom... vai precisar reconstruir.",
+}
 
 WINONA.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Acho que consigo consertar isso."
 
@@ -482,8 +602,11 @@ WINONA.DESCRIBE.KYNO_COOKWARE_OVEN = "É um forno comum."
 WINONA.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "É um forno comum."
 WINONA.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "É um forno comum."
 
-WINONA.DESCRIBE.KYNO_ROCKFLIPPABLE = "Será que tem algo debaixo dessa pedra?"
-WINONA.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "Será que tem algo debaixo dessa pedra?"
+WINONA.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "O que será que tem embaixo dessa pedra?",
+	FLIPPED = "É. Tá aí.",
+}
 
 WINONA.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Essa abertura ainda está bem recente."
 
@@ -526,7 +649,12 @@ WINONA.DESCRIBE.PEPPERROLLS = "Está rolando uma festa na minha boca!"
 
 WINONA.DESCRIBE.KYNO_SAPHEALER = "Isso vai curar a doença."
 
-WINONA.DESCRIBE.KYNO_OCEAN_WRECK = "Provavelmente não vai navegar nesse tão cedo."
+WINONA.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "Provavelmente não vou navegar nisso tão cedo.",
+	PICKED = "Não sobrou nada pra pegar.",
+	BURNING = "É, acabou.",
+}
 
 WINONA.DESCRIBE.KYNO_GHOST_PIRATE = "Ah. Podia ter dormido eternamente, mas resolveu voltar."
 
@@ -543,11 +671,31 @@ WINONA.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Garota, essa carne é jerky!"
 
 WINONA.DESCRIBE.KYNO_BREWBOOK = "Ter um plano faz a fermentação ser mais fácil!"
 
-WINONA.DESCRIBE.KYNO_WOODENKEG = "Ahh, que saudade disso."
+WINONA.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "Ahh, sinto falta disso.",
+	BREWING_LONG = "Esse vai demorar.",
+	BREWING_SHORT = "Quase pronto.",
+	DONE = "Tudo pronto.",
+	BURNT = "Perda total.",
+}
 
-WINONA.DESCRIBE.KYNO_PRESERVESJAR = "Agora só preciso dos ingredientes para começar."
+WINONA.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "Agora só faltam os ingredientes.",
+	BREWING_LONG = "Essas coisas levam tempo.",
+	BREWING_SHORT = "Quase pronto.",
+	DONE = "Parece bom.",
+	BURNT = "Perda total.",
+}
 
-WINONA.DESCRIBE.KYNO_ANTCHEST = "Ele faz todo o mel por mim!"
+WINONA.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "Ele faz todo o mel pra mim!",
+	HONEY = "A produção tá indo bem.",
+	NECTAR = "Ainda processando.",
+	BURNING = "Bom, perda total.",
+}
 
 WINONA.DESCRIBE.KYNO_NECTAR_POD = "Será que posso fazer mel disso?"
 
@@ -557,13 +705,47 @@ WINONA.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Boa refeição com pouco esforço."
 WINONA.DESCRIBE.KYNO_PIKO = "É um amiguinho!"
 WINONA.DESCRIBE.KYNO_PIKO_ORANGE = "Ah, entendi."
 
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_TREE = "Oi, arvorezinha!"
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "Espero que não roubem minhas ferramentas."
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "Ei, arvorezinha!",
+	CHOPPED = "Bem aproveitada.",
+	BURNING = "Isso não é bom.",
+	BURNT = "Não consegui salvar.",
+}
+
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "Espero que eles não roubem minhas ferramentas.",
+	BURNING = "Isso vai espantar eles.",
+}
+
 WINONA.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Me pergunto o que tem dentro."
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "Eu poderia desmontar isso."
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "Onde os trabalhadores fazem pausa."
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "É a chave do Portal Musgoso?"
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "Essas são algumas colheitas enormes."
+
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "Eu poderia desmontar isso.",
+	BURNT = "Perda total.",
+}
+
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "Onde os trabalhadores dão uma pausa.",
+	CRAFTED = "Agora sim.",
+	BURNT = "Cheira ainda pior agora.",
+}
+
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "Essa é a chave do Portal Musgoso?",
+	OCCUPIED = "Acho que o Sammy tá dormindo.",
+}
+
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
+{
+	GENERIC = "Essas são umas colheitas bem grandes.",
+	EMPTY = "Esgotado, hein?",
+}
+
 WINONA.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Como ele acabou aqui?"
 WINONA.DESCRIBE.KYNO_MEADOWISLAND_POND = "Me pergunto quão profunda ela é..."
 WINONA.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Uma plantinha pequenina."
@@ -713,8 +895,15 @@ WINONA.DESCRIBE.RISOTTO = "Está tão cremoso!"
 
 WINONA.DESCRIBE.RICESAKE = "É meio suave. Eu poderia beber mais."
 
-WINONA.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Vou pegar essa fruta, custe o que custar."
-WINONA.DESCRIBE.KYNO_PINEAPPLEBUSH = "Vou pegar essa fruta, custe o que custar."
+WINONA.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Agora posso plantar onde eu quiser."
+
+WINONA.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "Vou pegar essa fruta, custe o que custar.",
+	PICKED = "Valeu a pena.",
+	WITHERED = "Muito quente para trabalhar.",
+	BURNING = "É, está arruinada.",
+}
 
 WINONA.DESCRIBE.KYNO_PINEAPPLE = "Imagine levar um na cabeça!"
 WINONA.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Uma fatia é suficiente."
@@ -726,7 +915,11 @@ WINONA.DESCRIBE.PINACOLADA = "Relaxando e aproveitando a vibe..."
 
 WINONA.DESCRIBE.CHIMAS = "Não é minha primeira opção, mas é bom."
 
-WINONA.DESCRIBE.KYNO_GARDEN_SPRINKLER = "Faz toda a rega para mim."
+WINONA.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "Faz toda a rega por mim.",
+	ON = "Funcionando direitinho.",
+}
 
 WINONA.DESCRIBE.KYNO_FOODSACK = "Gosmenta."
 
@@ -835,11 +1028,21 @@ WINONA.DESCRIBE.RICEANDBEANS = "Almoço."
 
 WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Precisa de uma boa reforma. Talvez me chamem em 2026."
 
-WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND = "Tesouros subterrâneos prontos pra colheita."
+WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Tesouros subterrâneos prontos pra colher.",
+	PICKED = "Limpo e recolhido.",
+	BURNING = "Que desperdício.",
+}
+
 WINONA.DESCRIBE.KYNO_TRUFFLES = "Podem parecer simples, mas valem ouro na cozinha."
 WINONA.DESCRIBE.KYNO_TRUFFLES_COOKED = "O fogo fez mágica aqui."
 
-WINONA.DESCRIBE.KYNO_ITEMSHOWCASER = "Um suporte bem arrumado. Pena que não serve pra trabalhar."
+WINONA.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "Um suportezinho arrumado. Mas não serve pra trabalho de verdade.",
+	FULL = "É, ficou bom.",
+}
 
 WINONA.DESCRIBE.KYNO_SPORECAP = "Esse aí já viu dias melhores."
 WINONA.DESCRIBE.KYNO_SPORECAP_COOKED = "Pelo menos não está se desmanchando."
@@ -859,7 +1062,15 @@ WINONA.DESCRIBE.TRUFFLEOIL = "Hmm. Acho que é isso que os ricos usam pra fritar
 
 WINONA.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Mãos à obra!"
 WINONA.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Parece um bom começo. Só precisa de um pouco de esforço."
-WINONA.DESCRIBE.KYNO_FISHFARMPLOT = "Esse viveiro mantém os peixes vindo sem parar."
+
+WINONA.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "Esse viveiro mantém os peixes vindo.",
+	FUEL_HIGH = "Rodando liso.",
+	FUEL_MED = "Se mantendo estável.",
+	FUEL_LOW = "Vai precisar reabastecer logo.",
+	EMPTY = "Seco até o osso.",
+}
 
 WINONA.DESCRIBE.KYNO_ANTCHOVY = "Agora isso é uma mistura bem estranha!"
 WINONA.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Parece um caos ambulante pra eu consertar!"
@@ -916,14 +1127,29 @@ WINONA.DESCRIBE.MONKEYISLANDMEAL = "Essa sim é uma refeição curativa e chique
 WINONA.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Pequeno gosmento!"
 WINONA.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Heh. \"Mini\"."
 WINONA.DESCRIBE.KYNO_BRAINROCK_CORAL = "Talvez eu consiga pensar em máquinas melhores para fazer?"
-WINONA.DESCRIBE.KYNO_BRAINROCK_ROCK = "Que cérebro enorme!"
+
+WINONA.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "Isso aí é um baita cérebro!",
+	PICKED = "Acho que desligou sozinho.",
+}
 
 WINONA.DESCRIBE.BRAINMETTERSOUP = "Prato para os pequenos."
 
-WINONA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "Você parece bem tranquilo."
+WINONA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "Você parece um cara bem tranquilo.",
+	SLEEPING = "Não parece que vai acordar tão cedo.",
+}
+
 WINONA.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Aha! Tesouros para mim."
 
-WINONA.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "Vou guardar isso comigo."
+WINONA.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "Vou ficar com isso.",
+	WAITING = "Aff...",
+}
+
 WINONA.DESCRIBE.KYNO_PACKIMBAGGIMS = "Você tem uma boca grande, hein?"
 
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Vai dar bastante trabalho."
@@ -933,9 +1159,28 @@ WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Vamos acender tudo!"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Me faz pensar na Charlie."
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Um agrado merecido após um dia de trabalho duro."
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Dão um belo brilho ao ambiente de trabalho!"
-WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Pipoca sob demanda, prática e eficiente."
+
+WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Pipoca sob demanda. Prático.",
+	FUEL_HIGH = "Funcionando no máximo.",
+	FUEL_MED = "Ainda se mantendo.",
+	FUEL_LOW = "Vai precisar de combustível logo.",
+	EMPTY = "Desligado.",
+}
+
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Agora sim, combustível de festa de verdade!"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Hora de começar a festa!"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Feito sob medida! Sammy faz mesmo parte da turma, hein?"
 
 WINONA.DESCRIBE.KYNO_FISHREGISTRYHAT = "Bom pra aprender padrões. Peixe tem um monte deles."
+
+WINONA.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Feito pra manter todo mundo alimentado.",
+	FUEL_HIGH = "Bem abastecido.",
+	FUEL_MED = "Segurando firme.",
+	FUEL_LOW = "Vai precisar de atenção logo.",
+	EMPTY = "Seco até o osso.",
+	BURNT = "Perda total.",
+}

@@ -90,6 +90,8 @@ WEBBER.ANNOUNCE_KYNO_POTHANGER_FAIL = "Argh, talvez uma panela seria melhor."
 
 WEBBER.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Humm, não é o correto para colocar aí."
 
+WEBBER.ANNOUNCE_KYNO_SAPHEALER_USED = "Yay! Agora a árvore está de volta ao normal."
+
 WEBBER.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Desculpe... mas estamos com fome..."
 
 WEBBER.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Ah, está vazio..."
@@ -129,11 +131,23 @@ WEBBER.DESCRIBE.KYNO_SYRUP = "Doce!"
 WEBBER.DESCRIBE.KYNO_COFFEEBEANS = "Eles têm cheiro muito... adulto."
 WEBBER.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Nos deixam engraçados."
 
-WEBBER.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Esses não parecem saborosos."
-WEBBER.DESCRIBE.KYNO_COFFEEBUSH = "Esses não parecem saborosos."
+WEBBER.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Devo replantar isso o quanto antes."
 
-WEBBER.DESCRIBE.DUG_KYNO_SPOTBUSH = "Que arbusto roxo legal."
-WEBBER.DESCRIBE.KYNO_SPOTBUSH = "Que arbusto roxo legal."
+WEBBER.DESCRIBE.KYNO_COFFEEBUSH =
+{
+	GENERIC = "Isso não parece muito gostoso.",
+	PICKED = "Sem grãos por enquanto.",
+	WITHERED = "Precisamos dar um pouco de cinzas para ela.",
+}
+
+WEBBER.DESCRIBE.DUG_KYNO_SPOTBUSH = "Precisamos replantá-lo!"
+
+WEBBER.DESCRIBE.KYNO_SPOTBUSH =
+{
+	GENERIC = "Que arbusto roxo legal.",
+	PICKED = "Nada para colher agora.",
+	BURNING = "Ei! Para com isso!",
+}
 
 WEBBER.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Não tem um gosto muito bom sozinho."
 
@@ -194,10 +208,24 @@ WEBBER.DESCRIBE.LONGPIGMEAL = "Ugh."
 
 WEBBER.DESCRIBE.CUCUMBERSALAD = "Cinco porções por dia."
 
-WEBBER.DESCRIBE.KYNO_WILDWHEAT = "Uma fonte primária de alimento!"
-WEBBER.DESCRIBE.DUG_KYNO_WILDWHEAT = "Uma fonte primária de alimento!"
+WEBBER.DESCRIBE.DUG_KYNO_WILDWHEAT = "Precisa ser plantado."
+
+WEBBER.DESCRIBE.KYNO_WILDWHEAT =
+{
+	GENERIC = "Uma fonte primária de comida!",
+	PICKED = "Não sobrou nada agora.",
+	WITHERED = "Está todo seco.",
+	BURNING = "Ei! Para com isso!",
+}
 
 WEBBER.DESCRIBE.KYNO_MEALGRINDER = "Queremos fazer a moagem!"
+
+WEBBER.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Esses cogumelos são minúsculos.",
+	PICKED = "Eles vão voltar depois.",
+	BURNING = "Ah não!",
+}
 
 WEBBER.DESCRIBE.GORGE_BREAD = "Mamãe sempre disse que pão é bom na maioria das comidas."
 WEBBER.DESCRIBE.GORGE_SWEET_CHIPS = "São muito crocantes!"
@@ -340,33 +368,70 @@ WEBBER.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Uau!"
 
 WEBBER.DESCRIBE.KYNO_SEEDS_KIT = "Precisamos plantá-las!"
 
-WEBBER.DESCRIBE.KYNO_LIMPETROCK = "Esta pedra está coberta de comida!"
+WEBBER.DESCRIBE.KYNO_LIMPETROCK =
+{
+	GENERIC = "Essa pedra está coberta de coisas comestíveis!",
+	PICKED = "Eles precisam de tempo para voltar.",
+	WITHERED = "Nada está crescendo.",
+}
+
 WEBBER.DESCRIBE.KYNO_LIMPETS = "Temos que comer isso?"
 WEBBER.DESCRIBE.KYNO_LIMPETS_COOKED = "Tem gosto de oceano."
 
-WEBBER.DESCRIBE.KYNO_LOTUS_OCEAN = "Uau, é tão rosa!"
+WEBBER.DESCRIBE.KYNO_LOTUS_OCEAN =
+{
+	GENERIC = "Uau, é tão rosa!",
+	PICKED = "Sem flor agora.",
+	BURNING = "Ei! Para com isso!",
+}
+
 WEBBER.DESCRIBE.KYNO_LOTUS_ROOT = "A gente devia plantar isso em algum lugar no oceano."
 WEBBER.DESCRIBE.KYNO_LOTUS_FLOWER = "Nossa, que linda!"
 WEBBER.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Parece delicioso."
 
-WEBBER.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "Salada do mar..."
+WEBBER.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
+{
+	GENERIC = "Salada do mar...",
+	PICKED = "Eles vão crescer de novo, né?",
+	BURNING = "Uau! Como isso está queimando?!",
+}
+
 WEBBER.DESCRIBE.KYNO_SEAWEEDS = "A salada do mar."
 WEBBER.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Bem salgado."
 WEBBER.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Gruda no teto da boca!"
 WEBBER.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Devemos plantar em algum lugar do oceano."
 
-WEBBER.DESCRIBE.KYNO_TAROROOT_OCEAN = "Queremos comer!"
+WEBBER.DESCRIBE.KYNO_TAROROOT_OCEAN =
+{
+	GENERIC = "A gente quer comer isso!",
+	PICKED = "Vai crescer de novo logo.",
+	BURNING = "Ei! Para com isso!",
+}
+
 WEBBER.DESCRIBE.KYNO_TAROROOT_ROOT = "A gente devia plantar isso em algum lugar no oceano."
 WEBBER.DESCRIBE.KYNO_TAROROOT = "Blé, raiz de taro."
 WEBBER.DESCRIBE.KYNO_TAROROOT_COOKED = "Mamãe sabia que eu gosto dele cozido."
 
-WEBBER.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "É um repolho aquático!"
+WEBBER.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
+{
+	GENERIC = "É um agrião!",
+	PICKED = "Tomara que cresça de novo logo.",
+	BURNING = "Ei! Isso não foi legal!",
+}
+
 WEBBER.DESCRIBE.KYNO_WATERYCRESS_ROOT = "A gente devia plantar isso em algum lugar no oceano."
-WEBBER.DESCRIBE.KYNO_WATERYCRESS = "É um repolho aquático!"
+WEBBER.DESCRIBE.KYNO_WATERYCRESS = "É um agrião!"
 
 WEBBER.DESCRIBE.WATERYCRESSBOWL = "Mmmm... aquece nossa barriga."
 
 WEBBER.DESCRIBE.KYNO_SALT = "Não usamos muito sal na nossa comida."
+
+WEBBER.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Eles estão crescendo no graveto!",
+	PICKED = "Eles vão voltar depois.",
+	BURNING = "Ahh! Precisamos parar o fogo!",
+}
 
 WEBBER.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Os mexilhões fazem flexões nela."
 
@@ -374,11 +439,27 @@ WEBBER.DESCRIBE.CATFOOD = "A melhor comida para nossos amigos!"
 
 WEBBER.DESCRIBE.KATFOOD = "A melhor comida para nossos amigos!"
 
-WEBBER.DESCRIBE.KYNO_BANANATREE = "É uma árvore tropical! Cheia de bananas!"
+WEBBER.DESCRIBE.KYNO_BANANATREE =
+{
+	GENERIC = "É uma árvore tropical! Cheia de bananas!",
+	PICKED = "Sem bananas ainda.",
+	CHOPPED = "Ah... ela se foi.",
+	BURNING = "Ei! Preciso parar isso!",
+	BURNT = "Agora são só cinzas.",
+}
+
 WEBBER.DESCRIBE.KYNO_BANANA = "Um cacho de bananas."
 WEBBER.DESCRIBE.KYNO_BANANA_COOKED = "Bananas quentinhas!"
 
-WEBBER.DESCRIBE.KYNO_KOKONUTTREE = "Essa árvore tem presentes!"
+WEBBER.DESCRIBE.KYNO_KOKONUTTREE =
+{
+	GENERIC = "Essa árvore tem presentes!",
+	PICKED = "Sem cocos ainda.",
+	CHOPPED = "Ahh, ela se foi.",
+	BURNING = "Ei! Para com isso!",
+	BURNT = "Agora só restam cinzas.",
+}
+
 WEBBER.DESCRIBE.KYNO_KOKONUT = "Comida! Da árvore!"
 WEBBER.DESCRIBE.KYNO_KOKONUT_HALVED = "Agora há um para cada um de nós."
 WEBBER.DESCRIBE.KYNO_KOKONUT_COOKED = "Só precisa de um guarda-chuvinha."
@@ -426,13 +507,43 @@ WEBBER.DESCRIBE.TURF_STONECITY = "Algum chão que cavamos."
 WEBBER.DESCRIBE.TURF_FIELDS = "Algum chão que cavamos."
 WEBBER.DESCRIBE.TURF_TIDALMARSH = "Algum chão que cavamos."
 
+WEBBER.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "O sal está pronto.",
+	PICKED = "Temos que esperar mais sal.",
+}
+
 WEBBER.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Devemos colocá-lo no lago salgado."
 
 WEBBER.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "É um balde grandão."
 
 WEBBER.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Podemos pegar pequenos caranguejos com isso."
 
-WEBBER.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "Oi, Sr. Porco!"
+WEBBER.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
+{
+	GENERIC = "Oi, Sr. Porco!",
+	SLEEPING = "Acho que ele está dormindo.",
+}
+
+WEBBER.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "Me pergunto por que as pessoas deixaram esse lugar tão bonito.",
+	CHOPPED = "Por que alguém faria isso?",
+	SAPPED = "Seiva grudenta, grudenta!",
+	PICKED = "Ainda não tem seiva.",
+	BURNING = "Precisamos parar o fogo!",
+	BURNT = "Ela se foi...",
+}
+
+WEBBER.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "Ah, agora não está tão rosa.",
+	CHOPPED = "Talvez seja melhor assim.",
+	SAPPED = "Eca, ainda está grudenta.",
+	PICKED = "Eca... os insetos entraram nela.",
+	BURNING = "É melhor assim.",
+	BURNT = "Tudo acabou.",
+}
 
 WEBBER.DESCRIBE.KYNO_SUGARTREE_BUD = "Açúcar!"
 
@@ -453,13 +564,22 @@ WEBBER.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Caranguejos parecem aranhas."
 
 WEBBER.DESCRIBE.KYNO_SLAUGHTERTOOL = "Eu não quero usar isso."
 
-WEBBER.DESCRIBE.KYNO_CHICKEN2 = "Haha! Amamos galinhas!"
+WEBBER.DESCRIBE.KYNO_CHICKEN2 =
+{
+	GENERIC = "Haha! A gente ama galinhas!",
+	COOP = "A gente pode ficar com ela!",
+}
 
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG = "Um ovo com casca dura."
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Será que tem um passarinho gigante lá dentro?"
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Frito como a mamãe fazia."
 
-WEBBER.DESCRIBE.KYNO_CHICKENHOUSE = "Heh, é como uma casa só para galinhas"
+WEBBER.DESCRIBE.KYNO_CHICKENHOUSE =
+{
+	GENERIC = "Heh, é tipo uma casa só para galinhas!",
+	FULL = "Uau! Tantos ovos!",
+	BURNT = "Ah... agora elas não têm mais um lar.",
+}
 
 WEBBER.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Aww... Tão triste."
 
@@ -482,8 +602,11 @@ WEBBER.DESCRIBE.KYNO_COOKWARE_OVEN = "Mamãe disse para eu ter cuidado perto do 
 WEBBER.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Mamãe disse para eu ter cuidado perto do forno."
 WEBBER.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Mamãe disse para eu ter cuidado perto do forno."
 
-WEBBER.DESCRIBE.KYNO_ROCKFLIPPABLE = "O que tem aqui embaixo?"
-WEBBER.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "O que tem aqui embaixo?"
+WEBBER.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "O que será que tem aqui embaixo?",
+	FLIPPED = "Whoa! Olha isso!",
+}
 
 WEBBER.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Blub blub."
 
@@ -526,7 +649,12 @@ WEBBER.DESCRIBE.PEPPERROLLS = "Está quente demais para nós!"
 
 WEBBER.DESCRIBE.KYNO_SAPHEALER = "Isso é remédio?"
 
-WEBBER.DESCRIBE.KYNO_OCEAN_WRECK = "Um lembrete para respeitar o mar."
+WEBBER.DESCRIBE.KYNO_OCEAN_WRECK =
+{
+	GENERIC = "Um lembrete para respeitar o mar.",
+	PICKED = "Eles vão voltar depois.",
+	BURNING = "Ei! Para com isso!",
+}
 
 WEBBER.DESCRIBE.KYNO_GHOST_PIRATE = "Como se piratas normais já não fossem assustadores o bastante!"
 
@@ -543,11 +671,31 @@ WEBBER.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Funcionou melhor do que esperávamos."
 
 WEBBER.DESCRIBE.KYNO_BREWBOOK = "Agora nunca esqueceremos uma receita!"
 
-WEBBER.DESCRIBE.KYNO_WOODENKEG = "Ele também faz sucos?"
+WEBBER.DESCRIBE.KYNO_WOODENKEG =
+{
+	EMPTY = "Será que também faz sucos?",
+	BREWING_LONG = "Ainda está funcionando.",
+	BREWING_SHORT = "Quase pronto!",
+	DONE = "Ei, está pronto!",
+	BURNT = "Ah, ele se foi.",
+}
 
-WEBBER.DESCRIBE.KYNO_PRESERVESJAR = "Vamos fazer picles com isso!"
+WEBBER.DESCRIBE.KYNO_PRESERVESJAR =
+{
+	EMPTY = "Vamos fazer alguns picles com isso!",
+	BREWING_LONG = "Ainda está funcionando.",
+	BREWING_SHORT = "Quase pronto!",
+	DONE = "Yay! Está pronto!",
+	BURNT = "Ah... está arruinado.",
+}
 
-WEBBER.DESCRIBE.KYNO_ANTCHEST = "Uau! Olhe quanto mel ele pode armazenar."
+WEBBER.DESCRIBE.KYNO_ANTCHEST =
+{
+	GENERIC = "Uau! Olha quanto mel cabe aqui.",
+	HONEY = "Uau! Tanto mel!",
+	NECTAR = "Eles ainda estão produzindo.",
+	BURNING = "Ah não!",
+}
 
 WEBBER.DESCRIBE.KYNO_NECTAR_POD = "Aranhas não gostam, mas outros insetos sim!"
 
@@ -557,13 +705,47 @@ WEBBER.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Delícia."
 WEBBER.DESCRIBE.KYNO_PIKO = "Ele é um camarada ocupado."
 WEBBER.DESCRIBE.KYNO_PIKO_ORANGE = "Será que ele gosta de chás da tarde?"
 
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_TREE = "Oi, árvore."
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "Oi, esquilos!"
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_TREE =
+{
+	GENERIC = "Oi, árvore.",
+	CHOPPED = "Pegamos todas as folhas!",
+	BURNING = "Ah não!",
+	BURNT = "Ela se foi...",
+}
+
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
+{
+	GENERIC = "Oi, esquilos!",
+	BURNING = "A casa deles está queimando!",
+}
+
 WEBBER.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Uau, um caixote."
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "Cheira a peixe."
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "Posso entrar?"
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "Parece que Sammy agora tem a chave daquele portal."
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "Sammy gosta de mostrar suas mercadorias."
+
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
+{
+	GENERIC = "Cheira a peixe.",
+	BURNT = "A casa deles queimou.",
+}
+
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
+{
+	GENERIC = "Posso entrar?",
+	CRAFTED = "Ei, agora ficou bonito!",
+	BURNT = "Eca! Isso cheira ainda pior!",
+}
+
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
+{
+	GENERIC = "Parece que o Sammy agora tem a chave daquele portal.",
+	OCCUPIED = "Acho que o Sammy está dormindo.",
+}
+
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
+{
+	GENERIC = "O Sammy gosta de mostrar suas mercadorias.",
+	EMPTY = "Ah, não sobrou nada.",
+}
+
 WEBBER.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Que bom te ver de novo, Sammy!"
 WEBBER.DESCRIBE.KYNO_MEADOWISLAND_POND = "É como um aquário... sem o aquário!"
 WEBBER.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Essa planta está com sede."
@@ -713,8 +895,15 @@ WEBBER.DESCRIBE.RISOTTO = "Mamãe sempre dizia: coma seus legumes!"
 
 WEBBER.DESCRIBE.RICESAKE = "Bleh."
 
-WEBBER.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Abacaxi!"
-WEBBER.DESCRIBE.KYNO_PINEAPPLEBUSH = "Abacaxi!"
+WEBBER.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Precisamos plantar em outro lugar adequado!"
+
+WEBBER.DESCRIBE.KYNO_PINEAPPLEBUSH =
+{
+	GENERIC = "Abacaxi!",
+	PICKED = "Sem abacaxi agora.",
+	WITHERED = "Está todo seco.",
+	BURNING = "Ei! Para com isso!",
+}
 
 WEBBER.DESCRIBE.KYNO_PINEAPPLE = "Pinho e maçã!"
 WEBBER.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Pinho e maçã!"
@@ -726,7 +915,11 @@ WEBBER.DESCRIBE.PINACOLADA = "Já podemos sentir as ondas do mar!"
 
 WEBBER.DESCRIBE.CHIMAS = "Está bom!"
 
-WEBBER.DESCRIBE.KYNO_GARDEN_SPRINKLER = "Vamos correr por dentro dele."
+WEBBER.DESCRIBE.KYNO_GARDEN_SPRINKLER =
+{
+	OFF = "Vamos correr por ele.",
+	ON = "Está regando tudo!",
+}
 
 WEBBER.DESCRIBE.KYNO_FOODSACK = "Eww, está molhada e gosmenta."
 
@@ -835,11 +1028,21 @@ WEBBER.DESCRIBE.RICEANDBEANS = "Mamãe sempre dizia: Coma seus vegetais!"
 
 WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Parece vazia agora... mas voltaremos aqui em 2026!"
 
-WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND = "Achamos cogumelos escondidos! Podemos pegá-los?"
-WEBBER.DESCRIBE.KYNO_TRUFFLES = "Cheiram estranho… mas bom estranho!"
+WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND =
+{
+	GENERIC = "Encontramos cogumelos escondidos! Podemos pegar?",
+	PICKED = "Queremos mais!",
+	BURNING = "Ah, nem deu tempo de comer!",
+}
+
+WEBBER.DESCRIBE.KYNO_TRUFFLES = "Cheiram estranho... mas bom estranho!"
 WEBBER.DESCRIBE.KYNO_TRUFFLES_COOKED = "Cheiram ainda melhor agora!"
 
-WEBBER.DESCRIBE.KYNO_ITEMSHOWCASER = "Podemos mostrar nossos lanches pra todo mundo!"
+WEBBER.DESCRIBE.KYNO_ITEMSHOWCASER =
+{
+	EMPTY = "Podemos mostrar nossos lanches para todo mundo!",
+	FULL = "Uau! Olha o que a gente fez!",
+}
 
 WEBBER.DESCRIBE.KYNO_SPORECAP = "Parece tão triste... pobrezinho."
 WEBBER.DESCRIBE.KYNO_SPORECAP_COOKED = "Cheira um pouquinho melhor agora!"
@@ -859,7 +1062,15 @@ WEBBER.DESCRIBE.TRUFFLEOIL = "Cheira estranho... mas meio gostoso também!"
 
 WEBBER.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Vamos construir isso juntos!"
 WEBBER.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Vamos criar muitos amiguinhos peixes!"
-WEBBER.DESCRIBE.KYNO_FISHFARMPLOT = "Olha! Podemos guardar peixes aqui!"
+
+WEBBER.DESCRIBE.KYNO_FISHFARMPLOT =
+{
+	GENERIC = "Olha! Dá pra criar peixes aqui!",
+	FUEL_HIGH = "Eles estão bem cheios!",
+	FUEL_MED = "Ainda estão comendo.",
+	FUEL_LOW = "Quase sem comida!",
+	EMPTY = "Eita, acabou a comida.",
+}
 
 WEBBER.DESCRIBE.KYNO_ANTCHOVY = "Não dá pra saber se vive na terra ou na água!"
 WEBBER.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Estão por toda parte! Tão mexidas!"
@@ -916,14 +1127,29 @@ WEBBER.DESCRIBE.MONKEYISLANDMEAL = "Bananas e lagosta! Achamos que não funciona
 WEBBER.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Ah, oi."
 WEBBER.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Vai crescer cabelo em breve."
 WEBBER.DESCRIBE.KYNO_BRAINROCK_CORAL = "Cabeças gostosas!"
-WEBBER.DESCRIBE.KYNO_BRAINROCK_ROCK = "Quero cutucá-la, mas tenho medo de ficar com a mão presa."
+
+WEBBER.DESCRIBE.KYNO_BRAINROCK_ROCK =
+{
+	GENERIC = "Quero cutucar, mas tenho medo da mão ficar presa.",
+	PICKED = "Agora está dormindo.",
+}
 
 WEBBER.DESCRIBE.BRAINMETTERSOUP = "É igual a que a mamãe fazia pra gente!"
 
-WEBBER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "Parece amigável."
+WEBBER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
+{
+	GENERIC = "Ele parece amigável.",
+	SLEEPING = "Acho melhor não acordá-lo.",
+}
+
 WEBBER.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Vamos ver o que tem dentro!"
 
-WEBBER.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "Ficamos nos perguntando o que é isso?"
+WEBBER.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
+{
+	GENERIC = "A gente se pergunta o que é isso.",
+	WAITING = "Ele era nosso novo amigo.",
+}
+
 WEBBER.DESCRIBE.KYNO_PACKIMBAGGIMS = "Olá, amigo de boca grande!"
 
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Melhor começarmos a assar já!"
@@ -933,9 +1159,28 @@ WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Vamos fazer um pedido!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Nos enche de paz e alegria!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Eba! Nós adoramos bolo!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "A gente adora balões!"
-WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Hmm, vamos fazer pipoca juntos!"
+
+WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
+{
+	GENERIC = "Yum, vamos fazer pipoca juntos!",
+	FUEL_HIGH = "Muito mais pipoca!",
+	FUEL_MED = "Ainda funcionando!",
+	FUEL_LOW = "Quase sem combustível!",
+	EMPTY = "Sem combustível...",
+}
+
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Ela estoura na nossa boca! Divertido!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "A gente adora chapéus de festa!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Só para o Sammy!"
 
 WEBBER.DESCRIBE.KYNO_FISHREGISTRYHAT = "A gente pode aprender tudo sobre peixes com isso!"
+
+WEBBER.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Os animais comem aqui!",
+	FUEL_HIGH = "Uau! Muita comida!",
+	FUEL_MED = "Ainda tem um pouco.",
+	FUEL_LOW = "Quase vazio!",
+	EMPTY = "Eita, sem comida!",
+	BURNT = "Está todo queimado!",
+}

@@ -90,6 +90,8 @@ WOLFGANG.ANNOUNCE_KYNO_POTHANGER_FAIL = "Não, talvez uma panela!"
 
 WOLFGANG.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Forno precisa de uma caçarola!"
 
+WOLFGANG.ANNOUNCE_KYNO_SAPHEALER_USED = "Wolfgang usa poderosa medicina para ajudar árvore ser poderosa de novo!"
+
 WOLFGANG.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Wolfgang vai deixar a carne forte e saborosa!"
 
 WOLFGANG.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "O carrinho está vazio."
@@ -129,11 +131,23 @@ WOLFGANG.DESCRIBE.KYNO_SYRUP = "Gosma açucarada gostosa!"
 WOLFGANG.DESCRIBE.KYNO_COFFEEBEANS = "Pequenos grãos dão força ao Wolfgang!"
 WOLFGANG.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Grãos amargos!"
 
-WOLFGANG.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Arbusto de café é orgulhoso e forte."
-WOLFGANG.DESCRIBE.KYNO_COFFEEBUSH = "Arbusto de café é orgulhoso e forte."
+WOLFGANG.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Arbusto de café precisa de chão quente!"
 
-WOLFGANG.DESCRIBE.DUG_KYNO_SPOTBUSH = "É um pequeno arbusto para comer."
-WOLFGANG.DESCRIBE.KYNO_SPOTBUSH = "É um pequeno arbusto para comer."
+WOLFGANG.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "Arbusto de café é orgulhoso e forte.",
+	PICKED = "Sem grãos por enquanto.",
+	WITHERED = "Planta está fraca.",
+}
+
+WOLFGANG.DESCRIBE.DUG_KYNO_SPOTBUSH = "Precisa plantar."
+
+WOLFGANG.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "É um pequeno arbusto para comer.",
+	PICKED = "Arbusto vazio.",
+	BURNING = "Fogo devora o arbusto!",
+}
 
 WOLFGANG.DESCRIBE.KYNO_SPOTSPICE_LEAF = "É um bom enfeite."
 
@@ -194,10 +208,24 @@ WOLFGANG.DESCRIBE.LONGPIGMEAL = "É carne... humana..."
 
 WOLFGANG.DESCRIBE.CUCUMBERSALAD = "Não é espinafre, mas talvez funcione!"
 
-WOLFGANG.DESCRIBE.KYNO_WILDWHEAT = "É uma planta de trigo."
-WOLFGANG.DESCRIBE.DUG_KYNO_WILDWHEAT = "É uma planta de trigo."
+WOLFGANG.DESCRIBE.DUG_KYNO_WILDWHEAT = "É uma muda de trigo."
+
+WOLFGANG.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "Grama alta de comida!",
+	PICKED = "Comida acabou por agora.",
+	WITHERED = "Planta está fraca.",
+	BURNING = "Fogo devora o grão!",
+}
 
 WOLFGANG.DESCRIBE.KYNO_MEALGRINDER = "Devemos moer grãos para pão!"
+
+WOLFGANG.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Wolfgang poderia usar em sopas.",
+	PICKED = "Wolfgang deve esperar por mais cogumelos.",
+	BURNING = "Fogo devora os cogumelos!",
+}
 
 WOLFGANG.DESCRIBE.GORGE_BREAD = "É pão."
 WOLFGANG.DESCRIBE.GORGE_SWEET_CHIPS = "São batatinhas crocantes!"
@@ -340,27 +368,57 @@ WOLFGANG.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Inútil para Wolfgang!"
 
 WOLFGANG.DESCRIBE.KYNO_SEEDS_KIT = "Sementes minúsculas dentro."
 
-WOLFGANG.DESCRIBE.KYNO_LIMPETROCK = "Parece pequenos caracóis para comer!"
+WOLFGANG.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "Parece pequenos caracóis para comer!",
+	PICKED = "Comidinha acabou.",
+	WITHERED = "Nada vive aqui.",
+}
+
 WOLFGANG.DESCRIBE.KYNO_LIMPETS = "É caracol? Talvez."
 WOLFGANG.DESCRIBE.KYNO_LIMPETS_COOKED = "É gosmento ao descer."
 
-WOLFGANG.DESCRIBE.KYNO_LOTUS_OCEAN = "É uma plantinha de lago pequena."
+WOLFGANG.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "É uma plantinha fraca do lago.",
+	PICKED = "Planta precisa descansar.",
+	BURNING = "Fogo ruim!",
+}
+
 WOLFGANG.DESCRIBE.KYNO_LOTUS_ROOT = "Molenga."
 WOLFGANG.DESCRIBE.KYNO_LOTUS_FLOWER = "É uma flor de lago pequena."
 WOLFGANG.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Wolfgang vai comer agora."
 
-WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "Estranhas algas do mar."
+WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Ervas estranhas do mar.",
+	PICKED = "Sem mais comida agora.",
+	BURNING = "Fogo vence a planta aquática!",
+}
+
 WOLFGANG.DESCRIBE.KYNO_SEAWEEDS = "Uma erva, do mar."
 WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_COOKED = "O estômago forte de Wolfgang vai devorar!"
 WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_DRIED = "É comestível."
 WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Mole."
 
-WOLFGANG.DESCRIBE.KYNO_TAROROOT_OCEAN = "É uma plantinha roxa! Ha ha!"
+WOLFGANG.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "É uma plantinha roxa! Ha ha!",
+	PICKED = "Água ajuda a crescer.",
+	BURNING = "Raiz se foi!",
+}
+
 WOLFGANG.DESCRIBE.KYNO_TAROROOT_ROOT = "Molenga."
 WOLFGANG.DESCRIBE.KYNO_TAROROOT = "Não é pimenta!"
 WOLFGANG.DESCRIBE.KYNO_TAROROOT_COOKED = "Não tem gema! A gema é a parte mais forte!"
 
-WOLFGANG.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "É um vegetal molhado pequeno."
+WOLFGANG.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "É um vegetalzinho molhado.",
+	PICKED = "Vai crescer de novo.",
+	BURNING = "Fogo vence planta aquática!",
+}
+
 WOLFGANG.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Molenga."
 WOLFGANG.DESCRIBE.KYNO_WATERYCRESS = "É um vegetal molhado pequeno."
 
@@ -368,17 +426,40 @@ WOLFGANG.DESCRIBE.WATERYCRESSBOWL = "É quente na barriga do Wolfgang."
 
 WOLFGANG.DESCRIBE.KYNO_SALT = "Faz a comida ficar gostosa."
 
+WOLFGANG.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Graveto atrai comidinhas!",
+	PICKED = "Comidinha acabou, precisa esperar.",
+	BURNING = "Fogo devora a comida!",
+}
+
 WOLFGANG.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Mexilhões adoram essa vareta."
 
 WOLFGANG.DESCRIBE.CATFOOD = "É comida para os pequenos amigos!"
 
 WOLFGANG.DESCRIBE.KATFOOD = "É comida para os pequenos amigos!"
 
-WOLFGANG.DESCRIBE.KYNO_BANANATREE = "Olá, árvore de cabeça para baixo."
+WOLFGANG.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "Olá, árvore de cabeça para baixo.",
+	PICKED = "Árvore precisa descansar.",
+	CHOPPED = "Árvore se foi.",
+	BURNING = "Fogo está comendo a bananeira!",
+	BURNT = "Árvore foi totalmente destruída.",
+}
+
 WOLFGANG.DESCRIBE.KYNO_BANANA = "É doce!"
 WOLFGANG.DESCRIBE.KYNO_BANANA_COOKED = "Está quente e gostosa!"
 
-WOLFGANG.DESCRIBE.KYNO_KOKONUTTREE = "Árvore tão jovial."
+WOLFGANG.DESCRIBE.KYNO_KOKONUTTREE =
+{
+	GENERIC = "Árvore alegre.",
+	PICKED = "Árvore precisa descansar.",
+	CHOPPED = "Árvore se foi.",
+	BURNING = "Fogo devora o coqueiro!",
+	BURNT = "Árvore foi totalmente destruída.",
+}
+
 WOLFGANG.DESCRIBE.KYNO_KOKONUT = "Wolfgang vai esmagar com as mãos."
 WOLFGANG.DESCRIBE.KYNO_KOKONUT_HALVED = "Wolfgang não teve problema em quebrar a casca dura."
 WOLFGANG.DESCRIBE.KYNO_KOKONUT_COOKED = "O coco está cozido."
@@ -426,13 +507,43 @@ WOLFGANG.DESCRIBE.TURF_STONECITY = "Pedras para pisar."
 WOLFGANG.DESCRIBE.TURF_FIELDS = "Pedras para pisar."
 WOLFGANG.DESCRIBE.TURF_TIDALMARSH = "Pedras para pisar."
 
+WOLFGANG.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Está pronto!",
+	PICKED = "Ainda não está pronto.",
+}
+
 WOLFGANG.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Mãos poderosas fazem o trabalho rápido."
 
 WOLFGANG.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "É para pegar a gosma gostosa da árvore."
 
 WOLFGANG.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Serve para pegar pequenos pinçadores."
 
-WOLFGANG.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "Parece um bom camarada!"
+WOLFGANG.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
+{
+	GENERIC = "Parece um bom sujeito!",
+	SLEEPING = "Chefe está dormindo.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "É uma pequena árvore de gosma gostosa.",
+	CHOPPED = "Árvore foi cortada!",
+	SAPPED = "Baldezinho está cheio!",
+	PICKED = "Balde precisa encher.",
+	BURNING = "Fogo devora a árvore!",
+	BURNT = "Árvore se foi.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "Árvorezinha está machucada.",
+	CHOPPED = "Árvore ruim se foi.",
+	SAPPED = "Coisa grudenta ruim.",
+	PICKED = "Wolfgang vai esmagar criaturinhas.",
+	BURNING = "Fogo resolve!",
+	BURNT = "Tudo se foi!",
+}
 
 WOLFGANG.DESCRIBE.KYNO_SUGARTREE_BUD = "É uma sementinha rosa da árvore, ha ha!"
 
@@ -453,13 +564,22 @@ WOLFGANG.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "É carne do grande pinçador."
 
 WOLFGANG.DESCRIBE.KYNO_SLAUGHTERTOOL = "Wolfgang usa para matar coisas."
 
-WOLFGANG.DESCRIBE.KYNO_CHICKEN2 = "Pássaro piador pequeno."
+WOLFGANG.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "Pássaro piador pequeno.",
+	COOP = "Galinha pertence à Wolfgang!",
+}
 
 WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG = "É ovo pequeno de galinha."
 WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "É ovo para galinha gigante, ou ovo para o poderoso Wolfgang?"
 WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Delicioso!"
 
-WOLFGANG.DESCRIBE.KYNO_CHICKENHOUSE = "Pequena casinha para galinhas!"
+WOLFGANG.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "Pequena casinha para galinhas!",
+	FULL = "Casa está cheia de ovos poderosos!",
+	BURNT = "As galinhas não foram fortes o suficiente.",
+}
 
 WOLFGANG.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Está quebrado."
 
@@ -482,8 +602,11 @@ WOLFGANG.DESCRIBE.KYNO_COOKWARE_OVEN = "Amigos! Wolfgang vai cozinhar para você
 WOLFGANG.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Amigos! Wolfgang vai cozinhar para vocês!"
 WOLFGANG.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Amigos! Wolfgang vai cozinhar para vocês!"
 
-WOLFGANG.DESCRIBE.KYNO_ROCKFLIPPABLE = "Wolfgang forte. Wolfgang vira."
-WOLFGANG.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "Wolfgang forte. Wolfgang vira."
+WOLFGANG.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "Wolfgang forte. Wolfgang vira.",
+	FLIPPED = "Coisinhas estavam escondidas!",
+}
 
 WOLFGANG.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Não gosto disso. É assustador."
 
@@ -526,7 +649,12 @@ WOLFGANG.DESCRIBE.PEPPERROLLS = "Wolfgang gosta de um desafio apimentado!"
 
 WOLFGANG.DESCRIBE.KYNO_SAPHEALER = "Wolfgang vai ajudar as pequenas árvores!"
 
-WOLFGANG.DESCRIBE.KYNO_OCEAN_WRECK = "Não é forte o suficiente para flutuar."
+WOLFGANG.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "Não é forte o suficiente para flutuar.",
+	PICKED = "Sem mais comidinha.",
+	BURNING = "Barco está acabado!",
+}
 
 WOLFGANG.DESCRIBE.KYNO_GHOST_PIRATE = "Aaaaaaaaaahrrrr!!"
 
@@ -543,11 +671,31 @@ WOLFGANG.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Parece vegetal, mas tem gosto de carne
 
 WOLFGANG.DESCRIBE.KYNO_BREWBOOK = "É um livro de coisas para encher a barriga poderosa de Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_WOODENKEG = "Pequeno barril faz coisas boas para Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "Barrilzinho faz coisa boa para Wolfgang!",
+	BREWING_LONG = "Bebida forte precisa de paciência forte.",
+	BREWING_SHORT = "Bebida quase pronta!",
+	DONE = "Ha! Bebida pronta!",
+	BURNT = "Sem bebida para Wolfgang.",
+}
 
-WOLFGANG.DESCRIBE.KYNO_PRESERVESJAR = "Pequeno barril ajuda Wolfgang a fazer doces!"
+WOLFGANG.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "Barrilzinho ajuda Wolfgang a fazer coisa doce!",
+	BREWING_LONG = "Boa comida precisa de tempo.",
+	BREWING_SHORT = "Quase pronto!",
+	DONE = "Ha! Conservas prontas!",
+	BURNT = "Tudo se foi.",
+}
 
-WOLFGANG.DESCRIBE.KYNO_ANTCHEST = "Doces para Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "Coisa doce para Wolfgang!",
+	HONEY = "Baú cheio de mel doce!",
+	NECTAR = "Abelhas trabalham duro no néctar.",
+	BURNING = "Oh não! Baú doce está queimando!",
+}
 
 WOLFGANG.DESCRIBE.KYNO_NECTAR_POD = "É doce como mel."
 
@@ -557,13 +705,47 @@ WOLFGANG.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Wolfgang come pequena árvore bebê
 WOLFGANG.DESCRIBE.KYNO_PIKO = "Pequeno, fraco e fofinho."
 WOLFGANG.DESCRIBE.KYNO_PIKO_ORANGE = "Pequeno, fraco e fofinho laranja."
 
-WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_TREE = "É forte, mas não tão forte quanto Wolfgang."
-WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "Ha. Está infestada de pequenos!"
+WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "É forte, mas não forte como Wolfgang.",
+	CHOPPED = "Wolfgang pegou todas as folhas!",
+	BURNING = "Fogo é ruim!",
+	BURNT = "Árvore se foi.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "Ha. Está infestada de carinhas!",
+	BURNING = "Fogo espanta eles!",
+}
+
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Posso esmagar."
-WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "A casa não era forte o suficiente."
-WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "Casa feia!"
-WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "Amigo peixe tem muitas coisas raras ali."
-WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "Tem muitas coisas à venda."
+
+WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "Casa de gente estranha.",
+	BURNT = "Casa não era forte o suficiente.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "Casa feia!",
+	CRAFTED = "Casa parece melhor agora.",
+	BURNT = "Cheiro muito ruim!",
+}
+
+WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "Amigo peixe tem muitas coisas raras aí.",
+	OCCUPIED = "Vendedor está dormindo.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "Tem muitas coisas à venda.",
+	EMPTY = "Nada mais para vasculhar.",
+}
+
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Que bom te ver, amigo."
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_POND = "Peixinhos beliscam os dedos quando eu os coloco dentro."
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "É planta."
@@ -713,8 +895,15 @@ WOLFGANG.DESCRIBE.RISOTTO = "Pequenos cogumelos com arroz, Wolfgang gosta!"
 
 WOLFGANG.DESCRIBE.RICESAKE = "Oohh..."
 
-WOLFGANG.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Fruta espinhosa!"
-WOLFGANG.DESCRIBE.KYNO_PINEAPPLEBUSH = "Fruta espinhosa!"
+WOLFGANG.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Precisa ser transplantada!"
+
+WOLFGANG.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "Fruta espinhosa!",
+	PICKED = "Sem fruta por enquanto.",
+	WITHERED = "Arbusto é fraco.",
+	BURNING = "Fogo queimou o arbusto todo!",
+}
 
 WOLFGANG.DESCRIBE.KYNO_PINEAPPLE = "Wolfgang vai esmagar com as mãos nuas."
 WOLFGANG.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Wolfgang gosta."
@@ -726,7 +915,11 @@ WOLFGANG.DESCRIBE.PINACOLADA = "Fria!"
 
 WOLFGANG.DESCRIBE.CHIMAS = "Mistura estranha, mas Wolfgang bebe mesmo assim!"
 
-WOLFGANG.DESCRIBE.KYNO_GARDEN_SPRINKLER = "Weeee. Wolfgang vai brincar no aspersor!"
+WOLFGANG.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "O aspersor está dormindo.",
+	ON = "Weeee! Wolfgang vai brincar no aspersor!",
+}
 
 WOLFGANG.DESCRIBE.KYNO_FOODSACK = "Wolfgang pode carregar ainda mais coisas!"
 
@@ -835,11 +1028,21 @@ WOLFGANG.DESCRIBE.RICEANDBEANS = "São feijões cozidos saudáveis!"
 
 WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Casinha fraca... talvez fique forte em 2026!"
 
-WOLFGANG.DESCRIBE.KYNO_TRUFFLES_GROUND = "Pequenos cogumelos escondidos no chão! Wolfgang os encontrou!"
+WOLFGANG.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Cogumelinhos escondidos no chão! Wolfgang achou!",
+	PICKED = "Wolfgang quer mais!",
+	BURNING = "Fogo estraga boa comida!",
+}
+
 WOLFGANG.DESCRIBE.KYNO_TRUFFLES = "Pequenas e saborosas! Wolfgang come todas!"
 WOLFGANG.DESCRIBE.KYNO_TRUFFLES_COOKED = "Agora Wolfgang come trufas quentinhas!"
 
-WOLFGANG.DESCRIBE.KYNO_ITEMSHOWCASER = "Wolfgang mostra comida! Deixa Wolfgang orgulhoso e com fome!"
+WOLFGANG.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "Wolfgang mostra comida! Deixa Wolfgang orgulhoso e com fome!",
+	FULL = "Wolfgang fez refeição poderosa!",
+}
 
 WOLFGANG.DESCRIBE.KYNO_SPORECAP = "Cogumelo doente! Wolfgang não gosta!"
 WOLFGANG.DESCRIBE.KYNO_SPORECAP_COOKED = "Agora cogumelo parece menos doente!"
@@ -859,7 +1062,15 @@ WOLFGANG.DESCRIBE.TRUFFLEOIL = "Frasco pequeno faz cheiro grande! Wolfgang não 
 
 WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Se Wolfgang construir, os peixes virão!"
 WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Wolfgang fará lago grande para peixinhos pequenos!"
-WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT = "Peixes fortes moram aqui!"
+
+WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "Peixes fortes vivem aqui!",
+	FUEL_HIGH = "Peixes estão bem alimentados!",
+	FUEL_MED = "Peixes comem bem.",
+	FUEL_LOW = "Peixes precisam de mais comida.",
+	EMPTY = "Sem comida para peixes.",
+}
 
 WOLFGANG.DESCRIBE.KYNO_ANTCHOVY = "Peixe-inseto pequenino! Wolfgang não sabe se come ou corre!"
 WOLFGANG.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Muitos peixinhos-insetos! Wolfgang deve esmagar?"
@@ -916,14 +1127,29 @@ WOLFGANG.DESCRIBE.MONKEYISLANDMEAL = "Comida forte para maldição fraca de maca
 WOLFGANG.DESCRIBE.KYNO_BRAINROCK_LARVAE = "É pequeno e inofensivo."
 WOLFGANG.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Haha. Pedra careca."
 WOLFGANG.DESCRIBE.KYNO_BRAINROCK_CORAL = "Heh heh. Esmaga sob o toque de Wolfgang."
-WOLFGANG.DESCRIBE.KYNO_BRAINROCK_ROCK = "O cérebro de Wolfgang vai socar esse cérebro."
+
+WOLFGANG.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "Cérebro de Wolfgang vai socar esse cérebro.",
+	PICKED = "Pedra está cansada.",
+}
 
 WOLFGANG.DESCRIBE.BRAINMETTERSOUP = "A sopa tem pouquinhas letrinhas, haha."
 
-WOLFGANG.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "Criatura forte! Dê muitas coisas boas ao Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "Criatura forte! Dá coisas boas para Wolfgang!",
+	SLEEPING = "Rei está dormindo.",
+}
+
 WOLFGANG.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Dê seus tesouros ao Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "É um osso. Eu gosto."
+WOLFGANG.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "É um osso. Wolfgang gosta.",
+	WAITING = "Osso parece magro demais.",
+}
+
 WOLFGANG.DESCRIBE.KYNO_PACKIMBAGGIMS = "Olá, amigo robusto!"
 
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Wolfgang fará o bolo mais poderoso de todos!"
@@ -933,9 +1159,28 @@ WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Varinhas de fogo para bolo gigante!
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Faz Wolfgang pensar em amigos!"
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "É fatia pequenina... mas Wolfgang ainda fica feliz!"
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Wolfgang gosta de balões! Fazem feliz!"
-WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Wolfgang gosta de pipoca grandona!"
+
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNACHINE = 
+{
+	GENERIC = "Wolfgang gosta de pipoca grande!",
+	FUEL_HIGH = "Muito combustível para pipoca!",
+	FUEL_MED = "Ainda estourando bem.",
+	FUEL_LOW = "Combustível ficando fraco.",
+	EMPTY = "Sem combustível. Sem pipoca.",
+}
+
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Comida que estoura para Wolfgang!"
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Chapéu de festa para Wolfgang forte!"
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy deve ser forte para usar chapéu especial!"
 
 WOLFGANG.DESCRIBE.KYNO_FISHREGISTRYHAT = "Chapéu deixa Wolfgang mais esperto sobre peixinhos!"
+
+WOLFGANG.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Animais comem daqui.",
+	FUEL_HIGH = "Comedouro está bem cheio!",
+	FUEL_MED = "Ainda forte com comida.",
+	FUEL_LOW = "Comida está acabando.",
+	EMPTY = "Sem comida para animais.",
+	BURNT = "Comedouro não existe mais.",
+}

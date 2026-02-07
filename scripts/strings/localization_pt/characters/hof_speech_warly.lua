@@ -90,6 +90,8 @@ WARLY.ANNOUNCE_KYNO_POTHANGER_FAIL = "Ah! Esqueci da panela!"
 
 WARLY.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Não devo esquecer a caçarola!"
 
+WARLY.ANNOUNCE_KYNO_SAPHEALER_USED = "Ah, perfeito! Agora pode voltar a produzir seiva deliciosa e doce."
+
 WARLY.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Ingredientes frescos fazem a melhor cozinha."
 
 WARLY.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Despensa vazia... que infelicidade."
@@ -129,11 +131,23 @@ WARLY.DESCRIBE.KYNO_SYRUP = "Com certeza vai render bons doces!"
 WARLY.DESCRIBE.KYNO_COFFEEBEANS = "Gloriosos!"
 WARLY.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Precisa de água quente...!"
 
-WARLY.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Esse arbusto cresce... grãos de café?!"
-WARLY.DESCRIBE.KYNO_COFFEEBUSH = "Esse arbusto cresce... grãos de café?!"
+WARLY.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Aquele arbusto cultiva... grãos de café?!"
 
-WARLY.DESCRIBE.DUG_KYNO_SPOTBUSH = "Oh! Um arbusto que produz tempero."
-WARLY.DESCRIBE.KYNO_SPOTBUSH = "Oh! Um arbusto que produz tempero."
+WARLY.DESCRIBE.KYNO_COFFEEBUSH = 
+{
+	GENERIC = "Ah! O alicerce da inspiração!",
+	PICKED = "A paciência traz um sabor mais rico.",
+	WITHERED = "Este clima é cruel.",
+}
+
+WARLY.DESCRIBE.DUG_KYNO_SPOTBUSH = "Merece um bom lugar para crescer."
+
+WARLY.DESCRIBE.KYNO_SPOTBUSH = 
+{
+	GENERIC = "Oh! Um arbusto produtor de especiarias.",
+	PICKED = "Recuperará com o tempo.",
+	BURNING = "Mon dieu! Uma perda!",
+}
 
 WARLY.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Você vai virar um bom tempero!"
 
@@ -194,10 +208,24 @@ WARLY.DESCRIBE.LONGPIGMEAL = "Alguns pratos provavelmente não deveriam ser feit
 
 WARLY.DESCRIBE.CUCUMBERSALAD = "Arte comestível!"
 
-WARLY.DESCRIBE.KYNO_WILDWHEAT = "Um ingrediente comum para o sucesso por aqui."
-WARLY.DESCRIBE.DUG_KYNO_WILDWHEAT = "Um ingrediente comum para o sucesso por aqui."
+WARLY.DESCRIBE.DUG_KYNO_WILDWHEAT = "Precisa de ser replantado com cuidado."
+
+WARLY.DESCRIBE.KYNO_WILDWHEAT = 
+{
+	GENERIC = "Um ingrediente comum para o sucesso por aqui.",
+	PICKED = "A paciência refina o sabor.",
+	WITHERED = "Um clima cruel.",
+	BURNING = "Mon dieu! Que perda!",
+}
 
 WARLY.DESCRIBE.KYNO_MEALGRINDER = "Magnifique! Uma máquina para moer!"
+
+WARLY.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Ah! Uma fonte natural de fungos!",
+	PICKED = "A paciência melhora o sabor.",
+	BURNING = "Mon dieu! Que desperdício!",
+}
 
 WARLY.DESCRIBE.GORGE_BREAD = "Isso! Posso usar para muitas receitas!"
 WARLY.DESCRIBE.GORGE_SWEET_CHIPS = "Batatas fatiadas."
@@ -340,27 +368,57 @@ WARLY.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Ah não."
 
 WARLY.DESCRIBE.KYNO_SEEDS_KIT = "Ingredientes de cozinha em seu estágio inicial."
 
-WARLY.DESCRIBE.KYNO_LIMPETROCK = "Uma pequena fazenda de caracóis!"
+WARLY.DESCRIBE.KYNO_LIMPETROCK = 
+{
+	GENERIC = "Uma pequena quinta de caracóis!",
+	PICKED = "Eles voltarão com o tempo.",
+	WITHERED = "Longe das condições ideais.",
+}
+
 WARLY.DESCRIBE.KYNO_LIMPETS = "Cheiram a sal."
 WARLY.DESCRIBE.KYNO_LIMPETS_COOKED = "Suave, salgada, deliciosa."
 
-WARLY.DESCRIBE.KYNO_LOTUS_OCEAN = "Humm, raiz de lótus..."
+WARLY.DESCRIBE.KYNO_LOTUS_OCEAN = 
+{
+	GENERIC = "Mmm, raiz de lótus...",
+	PICKED = "A paciência melhora o sabor.",
+	BURNING = "Mon dieu! Que desperdício!",
+}
+
 WARLY.DESCRIBE.KYNO_LOTUS_ROOT = "Posso plantar isso para ter uma fonte sustentável de flor de lótus."
 WARLY.DESCRIBE.KYNO_LOTUS_FLOWER = "Devo cozinhar algo com isso."
 WARLY.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Uma iguaria fina!"
 
-WARLY.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "Não tenho muita experiência com este ingrediente."
+WARLY.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+{
+	GENERIC = "Não tenho muita experiência com este ingrediente.",
+	PICKED = "A paciência recompensar-nos-á.",
+	BURNING = "Mon dieu! Que perda inútil!",
+}
+
 WARLY.DESCRIBE.KYNO_SEAWEEDS = "Não tenho muita experiência com este ingrediente."
 WARLY.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Poderia usar gergelim torrado..."
 WARLY.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Poderia usar Tamari..."
 WARLY.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Posso plantar para ter uma fonte sustentável de algas."
 
-WARLY.DESCRIBE.KYNO_TAROROOT_OCEAN = "Mmm... Combina bem com peixe!"
+WARLY.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+{
+	GENERIC = "Mmm... Isto iria bem com peixe!",
+	PICKED = "Voltará rapidamente, graças à água.",
+	BURNING = "Mon dieu! Que desperdício!",
+}
+
 WARLY.DESCRIBE.KYNO_TAROROOT_ROOT = "Posso plantar isso para ter uma fonte sustentável de raízes de taro."
 WARLY.DESCRIBE.KYNO_TAROROOT = "Berinjela!"
 WARLY.DESCRIBE.KYNO_TAROROOT_COOKED = "Poderia usar molho de pimenta e parmesão..."
 
-WARLY.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "Isso faria uma ótima salada!"
+WARLY.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+{
+	GENERIC = "Isso daria uma bela salada!",
+	PICKED = "Valerá a pena a espera.",
+	BURNING = "Mon dieu! Que desperdício!",
+}
+
 WARLY.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Posso plantar isso para ter uma fonte sustentável de agrião."
 WARLY.DESCRIBE.KYNO_WATERYCRESS = "Isso faria uma ótima salada!"
 
@@ -368,17 +426,40 @@ WARLY.DESCRIBE.WATERYCRESSBOWL = "Ah, um prato especial."
 
 WARLY.DESCRIBE.KYNO_SALT = "Quelle chance! Encontrei sal!"
 
+WARLY.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Ah! Marisco fresco, cultivado naturalmente!",
+	PICKED = "Eles voltarão com o tempo.",
+	BURNING = "Mon dieu! Que desperdício!",
+}
+
 WARLY.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Mexilhões não resistem a esta vareta!"
 
 WARLY.DESCRIBE.CATFOOD = "Uma comida gourmet para gatos."
 
 WARLY.DESCRIBE.KATFOOD = "Uma comida gourmet para gatos."
 
-WARLY.DESCRIBE.KYNO_BANANATREE = "Que os macacos não alcançam, ha!"
+WARLY.DESCRIBE.KYNO_BANANATREE = 
+{
+	GENERIC = "Aqueles macacos não conseguem chegar aqui acima, ha!",
+	PICKED = "A paciência traz melhor sabor.",
+	CHOPPED = "Uma trágica perda culinária!",
+	BURNING = "Mon dieu! Que desperdício!",
+	BURNT = "Arruinado além de uso.",
+}
+
 WARLY.DESCRIBE.KYNO_BANANA = "Exatamente o sabor que eu precisava!"
 WARLY.DESCRIBE.KYNO_BANANA_COOKED = "Poderia usar aveia e algumas gotas de chocolate..."
 
-WARLY.DESCRIBE.KYNO_KOKONUTTREE = "Uma árvore bem inclinada."
+WARLY.DESCRIBE.KYNO_KOKONUTTREE = 
+{
+	GENERIC = "Uma boa árvore inclinada.",
+	PICKED = "A paciência realça o sabor.",
+	CHOPPED = "Uma trágica perda culinária!",
+	BURNING = "Mon dieu! Que desperdício!",
+	BURNT = "Arruinado além de uso.",
+}
+
 WARLY.DESCRIBE.KYNO_KOKONUT = "Sua casca é difícil de abrir."
 WARLY.DESCRIBE.KYNO_KOKONUT_HALVED = "Delicioso."
 WARLY.DESCRIBE.KYNO_KOKONUT_COOKED = "Poderia usar arroz e especiarias..."
@@ -426,13 +507,43 @@ WARLY.DESCRIBE.TURF_STONECITY = "É como um ingrediente para o chão."
 WARLY.DESCRIBE.TURF_FIELDS = "É como um ingrediente para o chão."
 WARLY.DESCRIBE.TURF_TIDALMARSH = "É como um ingrediente para o chão."
 
+WARLY.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Fantastique! Os cristais de sal estão prontos para a colheita.",
+	PICKED = "Deve-se esperar que os ingredientes estejam devidamente prontos.",
+}
+
 WARLY.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Para colher sal do lago."
 
 WARLY.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Um balde para coletar doces da árvore."
 
 WARLY.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Hora de pegar alguns bons caranguejos!"
 
-WARLY.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "O que você tem para mim?"
+WARLY.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+{
+	GENERIC = "O que tens para mim?",
+	SLEEPING = "Voltarei mais tarde.",
+}
+
+WARLY.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "Ah! O próprio adoçante da natureza!",
+	CHOPPED = "Uma tragédia culinária!",
+	SAPPED = "Perfeitamente pronto!",
+	PICKED = "A paciência rende sabor.",
+	BURNING = "Mon dieu!",
+	BURNT = "Arruinado!",
+}
+
+WARLY.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "Algo se estragou pelo caminho.",
+	CHOPPED = "Inutilizável.",
+	SAPPED = "Arruinado, mas intrigante.",
+	PICKED = "Ainda estragado.",
+	BURNING = "Fim misericordioso.",
+	BURNT = "Completamente perdido.",
+}
 
 WARLY.DESCRIBE.KYNO_SUGARTREE_BUD = "Mais útil como árvore do que nas minhas receitas."
 
@@ -453,13 +564,22 @@ WARLY.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Ah! Uma ótima carne do mar!"
 
 WARLY.DESCRIBE.KYNO_SLAUGHTERTOOL = "A melhor ferramenta para açougue."
 
-WARLY.DESCRIBE.KYNO_CHICKEN2 = "Meu delicioso, delicioso amigo!"
+WARLY.DESCRIBE.KYNO_CHICKEN2 = 
+{
+	GENERIC = "Meu delicioso, delicioso amigo!",
+	COOP = "Vou manter-te por aqui de agora em diante.",
+}
 
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG = "A natureza aperfeiçoa a comida."
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "As possibilidades culinárias são verdadeiramente... enormes!"
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Poderia usar algumas ervas diferentes..."
 
-WARLY.DESCRIBE.KYNO_CHICKENHOUSE = "Ah! Uma fonte confiável de ingredientes frescos."
+WARLY.DESCRIBE.KYNO_CHICKENHOUSE = 
+{
+	GENERIC = "Ah! Uma fonte fiável de ingredientes frescos.",
+	FULL = "Que ingredientes maravilhosos aguardam!",
+	BURNT = "Uma tragédia culinária!",
+}
 
 WARLY.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Já vi cozinhas piores."
 
@@ -482,8 +602,11 @@ WARLY.DESCRIBE.KYNO_COOKWARE_OVEN = "Ah, perfeito!"
 WARLY.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Ah, perfeito!"
 WARLY.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Ah, perfeito!"
 
-WARLY.DESCRIBE.KYNO_ROCKFLIPPABLE = "Pode ter proteína debaixo daqui."
-WARLY.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "Pode ter proteína debaixo daqui."
+WARLY.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+{
+	GENERIC = "Pode haver alguma proteína ali debaixo.",
+	FLIPPED = "Ah, tesouros escondidos!",
+}
 
 WARLY.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Vamos abrir."
 
@@ -526,7 +649,12 @@ WARLY.DESCRIBE.PEPPERROLLS = "Gosto dos meus pratos apimentados!"
 
 WARLY.DESCRIBE.KYNO_SAPHEALER = "Pode ser muito útil."
 
-WARLY.DESCRIBE.KYNO_OCEAN_WRECK = "Não navega mais."
+WARLY.DESCRIBE.KYNO_OCEAN_WRECK = 
+{
+	GENERIC = "Já não navega mais.",
+	PICKED = "O mar proverá novamente.",
+	BURNING = "Que desperdício!",
+}
 
 WARLY.DESCRIBE.KYNO_GHOST_PIRATE = "Pode até ser um bom sujeito, mas não quero descobrir."
 
@@ -543,11 +671,31 @@ WARLY.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Poderia usar chipotle..."
 
 WARLY.DESCRIBE.KYNO_BREWBOOK = "Ah, um ótimo catálogo de vinhos."
 
-WARLY.DESCRIBE.KYNO_WOODENKEG = "Mal posso esperar para fazer algumas Pale Ales!"
+WARLY.DESCRIBE.KYNO_WOODENKEG = 
+{
+	EMPTY = "Mal posso esperar para fabricar algumas Pale Ales!",
+	BREWING_LONG = "A paciência faz a melhor bebida.",
+	BREWING_SHORT = "Quase pronto para servir.",
+	DONE = "Magnifique! Está terminado!",
+	BURNT = "Um desastre culinário total!",
+}
 
-WARLY.DESCRIBE.KYNO_PRESERVESJAR = "Não sei qual devo preparar primeiro!"
+WARLY.DESCRIBE.KYNO_PRESERVESJAR = 
+{
+	EMPTY = "Não consigo decidir o que devo fazer primeiro!",
+	BREWING_LONG = "A preservação é uma arte de paciência.",
+	BREWING_SHORT = "Quase pronto para provar.",
+	DONE = "Magnifique! Um sucesso!",
+	BURNT = "Um desgosto culinário!",
+}
 
-WARLY.DESCRIBE.KYNO_ANTCHEST = "Um fabricante de mel!"
+WARLY.DESCRIBE.KYNO_ANTCHEST = 
+{
+	GENERIC = "Um produtor de mel!",
+	HONEY = "Reservas de mel magníficas!",
+	NECTAR = "A paciência faz a perfeição.",
+	BURNING = "Uma catástrofe culinária!",
+}
 
 WARLY.DESCRIBE.KYNO_NECTAR_POD = "Ingredientes para fazer mel."
 
@@ -557,13 +705,47 @@ WARLY.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Não é a melhor das comidas."
 WARLY.DESCRIBE.KYNO_PIKO = "Bonjour, mon amie."
 WARLY.DESCRIBE.KYNO_PIKO_ORANGE = "Prefiro chá da manhã inglês."
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_TREE = "Posso fazer tantas coisas com as folhas desta árvore de chá."
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "Posso fazer tantas coisas com as folhas desta árvore de chá."
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+{
+	GENERIC = "Poderia fazer tantas coisas com folhas de árvore do chá.",
+	CHOPPED = "Excelentes ingredientes, colhidos.",
+	BURNING = "Mon dieu!",
+	BURNT = "Arruinado.",
+}
+
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+{
+	GENERIC = "Poderia fazer tantas coisas com folhas de árvore do chá.",
+	BURNING = "Um resultado muito lamentável.",
+}
+
 WARLY.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Espero que haja mantimentos dentro."
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "Pescadores vivem aqui. Eu sinto o cheiro."
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "Pescadores vivem aqui. Eu sinto o cheiro."
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "Deve ter toneladas de ingredientes culinários ali."
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "Talvez eu deva conferir suas mercadorias."
+
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+{
+	GENERIC = "Gente da pesca vive aqui. Consigo cheirar.",
+	BURNT = "Completamente arruinado.",
+}
+
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+{
+	GENERIC = "Gente da pesca vive aqui. Consigo cheirar.",
+	CRAFTED = "Ah! Muito mais apresentável!",
+	BURNT = "Aromático da pior maneira!",
+}
+
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+{
+	GENERIC = "Deve haver toneladas de ingredientes de cozinha lá dentro.",
+	OCCUPIED = "Ah, fechado de momento.",
+}
+
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+{
+	GENERIC = "Talvez devesse dar uma vista de olhos na mercadoria dele.",
+	EMPTY = "Infelizmente, nada resta para provar.",
+}
+
 WARLY.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Ele parece decente o suficiente para ser um comerciante."
 WARLY.DESCRIBE.KYNO_MEADOWISLAND_POND = "Aprisiona lanches."
 WARLY.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Me pergunto se é comestível."
@@ -713,8 +895,15 @@ WARLY.DESCRIBE.RISOTTO = "Monsieur Ramsey aprovaria esta delícia."
 
 WARLY.DESCRIBE.RICESAKE = "Ah! Um uso modesto para arroz. Perfeito para pequenas reuniões."
 
-WARLY.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Uma iguaria tropical."
-WARLY.DESCRIBE.KYNO_PINEAPPLEBUSH = "Uma iguaria tropical."
+WARLY.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Uma iguaria tropical, devia plantá-la algures."
+
+WARLY.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+{
+	GENERIC = "Uma iguaria tropical.",
+	PICKED = "A paciência melhora o sabor.",
+	WITHERED = "Este clima é indelicado.",
+	BURNING = "Mon dieu! Que perda!",
+}
 
 WARLY.DESCRIBE.KYNO_PINEAPPLE = "Difícil de abrir."
 WARLY.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Um belo abacaxi!"
@@ -726,7 +915,11 @@ WARLY.DESCRIBE.PINACOLADA = "Refrescante."
 
 WARLY.DESCRIBE.CHIMAS = "Um mate perfeito."
 
-WARLY.DESCRIBE.KYNO_GARDEN_SPRINKLER = "Garante água para as plantas."
+WARLY.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+{
+	OFF = "Guarnece as plantas com água.",
+	ON = "Hidratação perfeita para os meus ingredientes!",
+}
 
 WARLY.DESCRIBE.KYNO_FOODSACK = "Mais molhado é melhor."
 
@@ -835,11 +1028,21 @@ WARLY.DESCRIBE.RICEANDBEANS = "Um simples prato de almoço."
 
 WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Hmm... cheira a potencial. Voltarei para provar em 2026."
 
-WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND = "Ahh, o aroma de trufas frescas… promissor!"
+WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+{
+	GENERIC = "Ahh, o aroma de trufas frescas... promissor!",
+	PICKED = "Tal paciência é necessária.",
+	BURNING = "Mon dieu! Uma tragédia culinária!",
+}
+
 WARLY.DESCRIBE.KYNO_TRUFFLES = "Mon dieu! Que aroma! Mal posso esperar para cozinhar."
 WARLY.DESCRIBE.KYNO_TRUFFLES_COOKED = "Magnifique! Agora sim, um prato digno de um chef."
 
-WARLY.DESCRIBE.KYNO_ITEMSHOWCASER = "Ah, magnifique! Toda obra-prima merece ser admirada."
+WARLY.DESCRIBE.KYNO_ITEMSHOWCASER = 
+{
+	EMPTY = "Um palco aguarda pela verdadeira culinária!",
+	FULL = "Ah, magnifique! Cada obra-prima merece ser admirada.",
+}
 
 WARLY.DESCRIBE.KYNO_SPORECAP = "Definitivamente não é para uma boa refeição."
 WARLY.DESCRIBE.KYNO_SPORECAP_COOKED = "Mais seguro, mas ainda intragável."
@@ -859,7 +1062,15 @@ WARLY.DESCRIBE.TRUFFLEOIL = "Ah, magnifique! Perfeito para regar legumes assados
 
 WARLY.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Uma receita de construção, por assim dizer!"
 WARLY.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Em breve, peixes frescos para minhas melhores receitas!"
-WARLY.DESCRIBE.KYNO_FISHFARMPLOT = "Um belo arranjo para garantir peixe fresquinho."
+
+WARLY.DESCRIBE.KYNO_FISHFARMPLOT = 
+{
+	GENERIC = "Uma bela configuração para stock de peixe fresco.",
+	FUEL_HIGH = "Os peixes estão a prosperar!",
+	FUEL_MED = "Estão bem mantidos.",
+	FUEL_LOW = "Precisarão de alimentação em breve.",
+	EMPTY = "Nada resta para os sustentar.",
+}
 
 WARLY.DESCRIBE.KYNO_ANTCHOVY = "Hmm... crocante e salgado, talvez? Très bizarre!"
 WARLY.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Um bufê de confusão, non?"
@@ -916,14 +1127,29 @@ WARLY.DESCRIBE.MONKEYISLANDMEAL = "Uma fusão requintada de mar e doçura. Très
 WARLY.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Bonjour, mon petit amie."
 WARLY.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Nenhum cérebro à vista. Talvez depois."
 WARLY.DESCRIBE.KYNO_BRAINROCK_CORAL = "São realmente pedaços de cérebro?"
-WARLY.DESCRIBE.KYNO_BRAINROCK_ROCK = "Pedra mastigável, com um final inteligente."
+
+WARLY.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+{
+	GENERIC = "Rocha elástica, com um final inteligente.",
+	PICKED = "Deve recuperar o seu foco.",
+}
 
 WARLY.DESCRIBE.BRAINMETTERSOUP = "Isso ajuda a memorizar muitas coisas."
 
-WARLY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "Tente não pensar em seus tentáculos deliciosos..."
+WARLY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+{
+	GENERIC = "Tenta não pensar nos seus tentáculos deliciosos...",
+	SLEEPING = "Melhor não o incomodar.",
+}
+
 WARLY.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Tem alguma bebida gelada aí?"
 
-WARLY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "Bem limpo..."
+WARLY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+{
+	GENERIC = "Limpo até ao osso...",
+	WAITING = "Falta-lhe a outra metade...",
+}
+
 WARLY.DESCRIBE.KYNO_PACKIMBAGGIMS = "Você tem uma boca grande, senhor."
 
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Hmm... isso é panificação em um novo nível."
@@ -933,9 +1159,28 @@ WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Um toque final perfeito!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Para temperar meus pratos com espírito de celebração!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Uma bela sobremesa para marcar a ocasião!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Um banquete para os olhos, ao menos!"
-WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Ah, um aparelho gourmet para estourar milho."
+
+WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+{
+	GENERIC = "Ah, um aparelho de pipocas gourmet.",
+	FUEL_HIGH = "Controlo de calor perfeito!",
+	FUEL_MED = "Ainda aceitável.",
+	FUEL_LOW = "Vai precisar de mais combustível.",
+	EMPTY = "Sem calor, sem magia.",
+}
+
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Ah, um petisco simples, mas delicioso!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Um visual elegante para uma celebração especial!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Très unique! Um chapéu para o nosso doce Sammy!"
 
 WARLY.DESCRIBE.KYNO_FISHREGISTRYHAT = "Entender os peixes é o primeiro passo para cozinhá-los bem."
+
+WARLY.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Deve-se alimentar o gado adequadamente.",
+	FUEL_HIGH = "Um comedouro bem abastecido!",
+	FUEL_MED = "Ainda suficiente.",
+	FUEL_LOW = "A ficar perigosamente baixo.",
+	EMPTY = "Nada resta para servir.",
+	BURNT = "Uma perda muito infeliz.",
+}

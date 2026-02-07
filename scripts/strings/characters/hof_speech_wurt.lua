@@ -569,7 +569,7 @@ WURT.DESCRIBE.KYNO_SLAUGHTERTOOL = "Huh? What this for?"
 WURT.DESCRIBE.KYNO_CHICKEN2 = 
 {
 	GENERIC = "A chicken!",
-	COOP = "Bird live here now.",
+	COOP = "Chicken live here now.",
 }
 
 WURT.DESCRIBE.KYNO_CHICKEN_EGG = "Baby chicken inside?"
@@ -580,7 +580,7 @@ WURT.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Chicken home! Maybe eggs inside, florp.",
 	FULL = "Heap of eggs!",
-	BURNT = "Bird house broke...",
+	BURNT = "Chicken house broke...",
 }
 
 WURT.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Glurgh... It's broken."
