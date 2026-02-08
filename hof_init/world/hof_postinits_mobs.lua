@@ -723,6 +723,42 @@ end
 
 AddPrefabPostInit("monkeyqueen", MonkeyQueenPostInit)
 
+-- Morons at Klei made this stupid thing's loot table a local variable, holy fuck...
+local function WormBossSegmentPostInit(inst)
+	local function GenerateLoot(inst, pos, loot)
+		local loottable = 
+		{
+			kyno_worm_bone = 20,
+		}
+	
+		-- Helper function from hof_util.lua
+		local choice = _G.ChooseWeightedRandom(loottable)
+
+		if loot then
+			choice = loot
+		end
+
+		if choice ~= nil then
+			inst.components.lootdropper:FlingItem(SpawnPrefab(choice), pos)
+		end
+	end
+	
+	local function OnAnimOver(inst)
+		if inst.AnimState:IsCurrentAnimation("segment_death_pst") then
+			GenerateLoot(inst)
+		end
+	end
+	
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst.OnAnimOver = OnAnimOver
+	inst:ListenForEvent("animover", inst.OnAnimOver)
+end
+
+AddPrefabPostInit("worm_boss_segment", WormBossSegmentPostInit)
+
 -- Mosslings, Moose Goose and Bearger can now eat GOODIES.
 table.insert(_G.FOODGROUP.MOOSE.types, _G.FOODTYPE.GOODIES)
 table.insert(_G.FOODGROUP.BEARGER.types, _G.FOODTYPE.GOODIES)

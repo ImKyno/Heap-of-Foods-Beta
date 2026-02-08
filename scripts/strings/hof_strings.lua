@@ -630,7 +630,7 @@ STRINGS.NAMES.KYNO_WHEAT_COOKED = "Toasted Wheat"
 
 STRINGS.NAMES.KYNO_FLOUR = "Flour"
 STRINGS.NAMES.KYNO_FLOUR_P = "Flour"
-STRINGS.RECIPE_DESC.KYNO_FLOUR = "All multi-purpose flour, useful in many aspects."
+STRINGS.RECIPE_DESC.KYNO_FLOUR = "A common cooking ingredient made from crushed wheat seeds."
 
 STRINGS.NAMES.KYNO_SPOTSPICE = "Spot Spice"
 STRINGS.RECIPE_DESC.KYNO_SPOTSPICE = "One teaspoon of delicious spice."
@@ -1786,6 +1786,9 @@ STRINGS.NAMES.TRUFFLEOIL = "Truffle Oil"
 
 STRINGS.NAMES.KYNO_MALBATROSSFOOD = "Bewitching Fish Food"
 STRINGS.RECIPE_DESC.KYNO_MALBATROSSFOOD = "A special kind of chum that can attract a threatening foe."
+
+STRINGS.NAMES.KYNO_MALBATROSSFOOD_BLUEPRINT = "Bewitching Fish Food Blueprint"
+STRINGS.RECIPE_DESC.KYNO_MALBATROSSFOOD_BLUEPRINT = "Get chummy with this special fish food!"
 
 STRINGS.NAMES.KYNO_FISHFARMPLOT_KIT = "Fish Hatchery Foundation Kit"
 STRINGS.RECIPE_DESC.KYNO_FISHFARMPLOT_KIT = "Raise your own fish to produce offspring and roe."

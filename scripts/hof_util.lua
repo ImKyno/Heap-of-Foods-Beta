@@ -318,3 +318,30 @@ function SpawnLootForPicker(prefab, amount, picker, pos)
 		end
 	end
 end
+
+function ChooseWeightedRandom(choices)
+	local function weighted_total(choices)
+		local total = 0
+		
+		for choice, weight in pairs(choices) do
+			total = total + weight
+		end
+		
+		return total
+	end
+
+	local threshold = math.random() * weighted_total(choices)
+	local last_choice
+	
+	for choice, weight in pairs(choices) do
+		threshold = threshold - weight
+		
+		if threshold <= 0 then
+			return choice
+		end
+		
+		last_choice = choice
+	end
+
+	return last_choice
+end

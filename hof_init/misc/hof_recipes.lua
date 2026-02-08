@@ -748,6 +748,21 @@ AddCharacterRecipe("transmute_kyno_worm_bone", {Ingredient("fossil_piece", 1)}, 
 )
 SortAfter("transmute_kyno_worm_bone", "transmute_fossil_piece", "CHARACTER")
 
+AddRecipe2("hermitshop_kyno_malbatrossfood_blueprint", {Ingredient("messagebottleempty", 10)}, TECH.HERMITCRABSHOP_SEVEN,
+	{
+		nounlock            = true,
+		no_deconstruction   = true,
+		actionstr           = "HERMITCRABSHOP",
+		description         = "kyno_malbatrossfood_blueprint",
+		sg_state            = "give",
+		product             = "kyno_malbatrossfood_blueprint",
+		atlas               = DefaultAtlas,
+		image               = "blueprint_rare.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+SortAfter("hermitshop_kyno_malbatrossfood_blueprint", "hermitshop_chum_blueprint", "CRAFTING_STATION")
+
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 if HOF_WARLYMEALGRINDER then
 	AddRecipe2("kyno_flour_w", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE, 

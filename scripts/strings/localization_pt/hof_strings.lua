@@ -630,7 +630,7 @@ STRINGS.NAMES.KYNO_WHEAT_COOKED = "Trigo Tostado"
 
 STRINGS.NAMES.KYNO_FLOUR = "Farinha"
 STRINGS.NAMES.KYNO_FLOUR_P = "Farinha"
-STRINGS.RECIPE_DESC.KYNO_FLOUR = "Trigo do chão, ou é mato?"
+STRINGS.RECIPE_DESC.KYNO_FLOUR = "Um ingrediente culinário comum feito de sementes de trigo trituradas."
 
 STRINGS.NAMES.KYNO_SPOTSPICE = "Tempero"
 STRINGS.RECIPE_DESC.KYNO_SPOTSPICE = "Uma colher de tempero delicioso."
@@ -1786,6 +1786,9 @@ STRINGS.NAMES.TRUFFLEOIL = "Óleo de Trufas"
 
 STRINGS.NAMES.KYNO_MALBATROSSFOOD = "Isca Encantada"
 STRINGS.RECIPE_DESC.KYNO_MALBATROSSFOOD = "Um tipo especial de isca que pode atrair um inimigo perigoso."
+
+STRINGS.NAMES.KYNO_MALBATROSSFOOD_BLUEPRINT = "Planta de Isca Encantada"
+STRINGS.RECIPE_DESC.KYNO_MALBATROSSFOOD_BLUEPRINT = "Faça amizade com seus peixes usando esta ração especial!"
 
 STRINGS.NAMES.KYNO_FISHFARMPLOT_KIT = "Kit de Viveiro de Peixes"
 STRINGS.RECIPE_DESC.KYNO_FISHFARMPLOT_KIT = "Crie seus próprios peixes para gerar filhotes e ovas."

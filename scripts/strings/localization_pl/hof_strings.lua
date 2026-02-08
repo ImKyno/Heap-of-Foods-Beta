@@ -631,7 +631,7 @@ STRINGS.NAMES.KYNO_WHEAT_COOKED = "Prażona Pszenica"
 
 STRINGS.NAMES.KYNO_FLOUR = "Mąka"
 STRINGS.NAMES.KYNO_FLOUR_P = "Mąka"
-STRINGS.RECIPE_DESC.KYNO_FLOUR = "Zmielona pszenica, czy to trawa?"
+STRINGS.RECIPE_DESC.KYNO_FLOUR = "Popularny składnik potraw, wytwarzany z rozgniecionych nasion pszenicy."
 
 STRINGS.NAMES.KYNO_SPOTSPICE = "Punkt Przyprawy"
 STRINGS.RECIPE_DESC.KYNO_SPOTSPICE = "Jedna łyżeczka pysznej przyprawy."
@@ -1787,6 +1787,9 @@ STRINGS.NAMES.TRUFFLEOIL = "Olej Truflowy"
 
 STRINGS.NAMES.KYNO_MALBATROSSFOOD = "Zaczarowana Przynęta"
 STRINGS.RECIPE_DESC.KYNO_MALBATROSSFOOD = "Specjalna przynęta, która może zwabić groźnego przeciwnika."
+
+STRINGS.NAMES.KYNO_MALBATROSSFOOD_BLUEPRINT = "Plan Zaczarowana Przynęta"
+STRINGS.RECIPE_DESC.KYNO_MALBATROSSFOOD_BLUEPRINT = "Zaprzyjaźnij się z tą specjalną karmą dla ryb!"
 
 STRINGS.NAMES.KYNO_FISHFARMPLOT_KIT = "Zestaw do Hodowli Ryb"
 STRINGS.RECIPE_DESC.KYNO_FISHFARMPLOT_KIT = "Hoduj własne ryby, aby zdobyć ikrę i młode."

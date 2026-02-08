@@ -9559,10 +9559,8 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		build          = "kyno_foodrecipes_cookpot1",
 		overridesymbol = {"swap_food", "kyno_foodrecipes_cookpot1", "pineapplecake"},
 		anim           = "pineapplecake",
-		animoffsetx    = 12,
-		animoffsety    = -10,
-		animoffsetbgx  = -30,
-		animoffsetbgy  = -40,
+		animoffsetbgx  = -10,
+		animoffsetbgy  = -60,
 		deps           = preparedfood_deps,
 	},
 	
