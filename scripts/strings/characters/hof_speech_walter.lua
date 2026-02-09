@@ -140,7 +140,7 @@ WALTER.DESCRIBE.KYNO_COFFEEBUSH =
 	WITHERED = "Needs fertilizer.",
 }
 
-WALTER.DESCRIBE.DUG_KYNO_SPOTBUSH = "We should plant it again, right Woby?"
+WALTER.DESCRIBE.DUG_KYNO_SPOTBUSH = "We should plant it again, right, Woby?"
 
 WALTER.DESCRIBE.KYNO_SPOTBUSH = 
 {

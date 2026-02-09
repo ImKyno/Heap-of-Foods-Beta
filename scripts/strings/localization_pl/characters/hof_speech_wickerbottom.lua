@@ -90,6 +90,8 @@ WICKERBOTTOM.ANNOUNCE_KYNO_POTHANGER_FAIL = "Potrzebny jest garnek do gotowania.
 
 WICKERBOTTOM.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Ojej, do gotowania potrzebne jest naczynie żaroodporne."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_SAPHEALER_USED = "Ten lek okazał się użyteczny w eliminowaniu potencjalnych zagrożeń."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Szybki i potrzebny koniec. Natura jest pragmatyczna."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Wygląda na całkowicie opróżniony."
@@ -129,11 +131,23 @@ WICKERBOTTOM.DESCRIBE.KYNO_SYRUP = "Środek słodzący."
 WICKERBOTTOM.DESCRIBE.KYNO_COFFEEBEANS = "Bardzo wysokie stężenie kofeiny."
 WICKERBOTTOM.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Ach, ten zapach prażenia, cudowny."
 
-WICKERBOTTOM.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Rodzaj Coffea."
-WICKERBOTTOM.DESCRIBE.KYNO_COFFEEBUSH = "Rodzaj Coffea."
+WICKERBOTTOM.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Przesadzenie powinno przynieść korzyści."
 
-WICKERBOTTOM.DESCRIBE.DUG_KYNO_SPOTBUSH = "Nie znam tego gatunku rośliny."
-WICKERBOTTOM.DESCRIBE.KYNO_SPOTBUSH = "Nie znam tego gatunku rośliny."
+WICKERBOTTOM.DESCRIBE.KYNO_COFFEEBUSH =
+{
+	GENERIC = "Rodzaj Coffea.",
+	PICKED = "Zregeneruje się w odpowiednim czasie.",
+	WITHERED = "Warunki środowiskowe są nieodpowiednie.",
+}
+
+WICKERBOTTOM.DESCRIBE.DUG_KYNO_SPOTBUSH = "Należy go niezwłocznie ponownie zasadzić."
+
+WICKERBOTTOM.DESCRIBE.KYNO_SPOTBUSH =
+{
+	GENERIC = "Nie jestem zaznajomiona z tym gatunkiem rośliny.",
+	PICKED = "Zregeneruje się z czasem.",
+	BURNING = "Cóż za nieostrożność!",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Przechodzi uniwersalny test jadalności."
 
@@ -194,10 +208,24 @@ WICKERBOTTOM.DESCRIBE.LONGPIGMEAL = "Brak słów."
 
 WICKERBOTTOM.DESCRIBE.CUCUMBERSALAD = "Pełna składników odżywczych!"
 
-WICKERBOTTOM.DESCRIBE.KYNO_WILDWHEAT = "Zbiór łodyg trawowych."
-WICKERBOTTOM.DESCRIBE.DUG_KYNO_WILDWHEAT = "Zbiór łodyg trawowych."
+WICKERBOTTOM.DESCRIBE.DUG_KYNO_WILDWHEAT = "Odpowiednia uprawa przyniosłaby temu korzyści."
+
+WICKERBOTTOM.DESCRIBE.KYNO_WILDWHEAT =
+{
+	GENERIC = "Skupisko źdźbeł roślin z rodziny traw.",
+	PICKED = "Zregeneruje się w sposób naturalny.",
+	WITHERED = "Warunki glebowe są nieodpowiednie.",
+	BURNING = "Cóż za marnotrawstwo cennego zasobu!",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_MEALGRINDER = "Do mechanicznego mielenia składników."
+
+WICKERBOTTOM.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Dziko rosnące skupisko jadalnych grzybów.",
+	PICKED = "Grzybnia pozostała nienaruszona.",
+	BURNING = "Cóż za marnotrawstwo cennego okazu!",
+}
 
 WICKERBOTTOM.DESCRIBE.GORGE_BREAD = "Mogłabym zrobić z tego coś dobrego."
 WICKERBOTTOM.DESCRIBE.GORGE_SWEET_CHIPS = "Cud kulinarny."
@@ -340,27 +368,57 @@ WICKERBOTTOM.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Co za okropny los."
 
 WICKERBOTTOM.DESCRIBE.KYNO_SEEDS_KIT = "Poręczny pakiet nasion warzyw."
 
-WICKERBOTTOM.DESCRIBE.KYNO_LIMPETROCK = "Ta skała jest domem dla różnych gastropodów."
+WICKERBOTTOM.DESCRIBE.KYNO_LIMPETROCK =
+{
+	GENERIC = "Ten głaz jest siedliskiem różnych ślimaków.",
+	PICKED = "Z czasem powrócą.",
+	WITHERED = "Warunki są nieprzyjazne dla życia.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_LIMPETS = "Patella vulgata."
 WICKERBOTTOM.DESCRIBE.KYNO_LIMPETS_COOKED = "Gotowane Patella vulgata."
 
-WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_OCEAN = "Nelumbo nucifera, całkiem piękne."
+WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_OCEAN =
+{
+	GENERIC = "Nelumbo nucifera. Całkiem piękna.",
+	PICKED = "Zregeneruje się z czasem.",
+	BURNING = "To botaniczna katastrofa!",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_ROOT = "Zawsze chciałam zostać ogrodnikiem wodnym."
 WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_FLOWER = "Kwiat Nelumbo nucifera. Jest naprawdę inspirujący."
 WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Korzyści zdrowotne są liczne."
 
-WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "Algi morskie."
+WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
+{
+	GENERIC = "Algi morskie.",
+	PICKED = "Zregenerują się z czasem.",
+	BURNING = "Wysoce nietypowe i skrajnie marnotrawne.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS = "Przyznam, że nie jestem zbyt dobrym fykologiem."
 WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Bardzo bogate w białko."
 WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Wysuszyłam algi."
 WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Zawsze chciałam zostać ogrodnikiem wodnym."
 
-WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT_OCEAN = "Colocasia esculenta!"
+WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT_OCEAN =
+{
+	GENERIC = "Colocasia esculenta!",
+	PICKED = "Środowisko przyspieszy jej odrost.",
+	BURNING = "Cóż za marnotrawstwo użytecznej rośliny.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT_ROOT = "Zawsze chciałam zostać ogrodnikiem wodnym."
 WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT = "Colocasia esculenta!"
 WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT_COOKED = "Oto gotowana Colocasia esculenta."
 
-WICKERBOTTOM.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "Nasturtium officinale!"
+WICKERBOTTOM.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
+{
+	GENERIC = "Nasturtium officinale!",
+	PICKED = "Powinna szybko się zregenerować.",
+	BURNING = "Całkowicie do uniknięcia.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Zawsze chciałam zostać ogrodnikiem wodnym."
 WICKERBOTTOM.DESCRIBE.KYNO_WATERYCRESS = "Nasturtium officinale!"
 
@@ -368,17 +426,40 @@ WICKERBOTTOM.DESCRIBE.WATERYCRESSBOWL = "Śmierdząca, ale dość pożywna."
 
 WICKERBOTTOM.DESCRIBE.KYNO_SALT = "Chlorek sodu. Znany również jako sól kuchenna."
 
+WICKERBOTTOM.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Prosta, lecz skuteczna metoda akwakultury.",
+	PICKED = "Małże odrosną z czasem.",
+	BURNING = "Cóż za marnotrawstwo zasobów!",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Do zbioru, mięczaki."
 
 WICKERBOTTOM.DESCRIBE.CATFOOD = "Przysmak dla kotów."
 
 WICKERBOTTOM.DESCRIBE.KATFOOD = "Przysmak dla kotów."
 
-WICKERBOTTOM.DESCRIBE.KYNO_BANANATREE = "Słońce pomoże owocom rosnąć lepiej."
+WICKERBOTTOM.DESCRIBE.KYNO_BANANATREE =
+{
+	GENERIC = "Słońce pomoże owocom lepiej dojrzewać.",
+	PICKED = "Będzie wymagać czasu na regenerację.",
+	CHOPPED = "Godna pożałowania utrata wartości botanicznej.",
+	BURNING = "Takie zaniedbanie wobec rzadkiego okazu!",
+	BURNT = "Całkowicie zniszczone.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_BANANA = "Musa paradisiaca Linn!"
 WICKERBOTTOM.DESCRIBE.KYNO_BANANA_COOKED = "Trochę lepsze."
 
-WICKERBOTTOM.DESCRIBE.KYNO_KOKONUTTREE = "Chciałabym usiąść pod nią z dobrą książką."
+WICKERBOTTOM.DESCRIBE.KYNO_KOKONUTTREE =
+{
+	GENERIC = "Chętnie usiadłabym pod nim z dobrą książką.",
+	PICKED = "Wymaga czasu na regenerację.",
+	CHOPPED = "Marnotrawstwo użytecznego okazu.",
+	BURNING = "Cóż za nieostrożność!",
+	BURNT = "Całkowicie zniszczone.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_KOKONUT = "Jakie ogromne nasiono!"
 WICKERBOTTOM.DESCRIBE.KYNO_KOKONUT_HALVED = "Udało mi się przełamać jej zewnętrzne obrony."
 WICKERBOTTOM.DESCRIBE.KYNO_KOKONUT_COOKED = "Miąższ kokosa, całkiem smaczny."
@@ -426,13 +507,43 @@ WICKERBOTTOM.DESCRIBE.TURF_STONECITY = "Ziemia. Stąpasz po niej."
 WICKERBOTTOM.DESCRIBE.TURF_FIELDS = "Ziemia. Stąpasz po niej."
 WICKERBOTTOM.DESCRIBE.TURF_TIDALMARSH = "Ziemia. Stąpasz po niej."
 
+WICKERBOTTOM.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Wystarczająca ilość soli skrystalizowała się do zbioru.",
+	PICKED = "Złoża soli wkrótce ponownie utworzą się na stojaku.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Powinniśmy postawić go przy solnym źródle."
 
 WICKERBOTTOM.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Prosty przyrząd do pozyskiwania soku z drzew."
 
 WICKERBOTTOM.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Do łapania morskich stworzeń."
 
-WICKERBOTTOM.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "Ich społeczeństwo ma wyraźne role społeczne."
+WICKERBOTTOM.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
+{
+	GENERIC = "Ich społeczeństwo cechują wyraźne role klasowe.",
+	SLEEPING = "Obecnie jest zajęty spaniem.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "Cóż za niezwykłe zabarwienie. Chętnie sprasowałabym jego liście w moich księgach!",
+	CHOPPED = "Przynajmniej mogłabym zbadać jego słoje.",
+	SAPPED = "Nie ma sensu pozwalać, by się marnowało.",
+	PICKED = "Pozyskiwanie soku jest w toku.",
+	BURNING = "Cóż za marnotrawstwo wiedzy!",
+	BURNT = "Całkowicie zniszczone.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "Jego struktura wewnętrzna została uszkodzona, lecz wciąż może się zregenerować.",
+	CHOPPED = "Nie nadawało się do uratowania.",
+	SAPPED = "Zniszczone, lecz wciąż możliwe do zebrania.",
+	PICKED = "Owady są przyciągane przez glukozę.",
+	BURNING = "Niefortunna konieczność.",
+	BURNT = "Całkowicie utracone.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_SUGARTREE_BUD = "Pączek zmieszany z cukrem."
 
@@ -453,13 +564,22 @@ WICKERBOTTOM.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Surowe mięso Paralithodes."
 
 WICKERBOTTOM.DESCRIBE.KYNO_SLAUGHTERTOOL = "Odrażające."
 
-WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN2 = "Udomowiony Gallus Gallus"
+WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN2 =
+{
+	GENERIC = "Dziki osobnik Gallus gallus.",
+	COOP = "Bezpiecznie umieszczony i właściwie odizolowany.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG = "Może jest zapłodnione."
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_LARGE = "Niezwykle duży okaz Gallus gallus."
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Gdybym tylko miała trochę tostów."
 
-WICKERBOTTOM.DESCRIBE.KYNO_CHICKENHOUSE = "Proste ogrodzenie odpowiednie dla drobiu domowego."
+WICKERBOTTOM.DESCRIBE.KYNO_CHICKENHOUSE =
+{
+	GENERIC = "Proste ogrodzenie odpowiednie dla udomowionego drobiu.",
+	FULL = "Cykl produkcji jaj został zakończony.",
+	BURNT = "Tragiczna strata zasobów rolniczych.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Leży tu od bardzo dawna."
 
@@ -482,8 +602,11 @@ WICKERBOTTOM.DESCRIBE.KYNO_COOKWARE_OVEN = "Najlepiej nadaje się do wypieków."
 WICKERBOTTOM.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Najlepiej nadaje się do wypieków."
 WICKERBOTTOM.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Najlepiej nadaje się do wypieków."
 
-WICKERBOTTOM.DESCRIBE.KYNO_ROCKFLIPPABLE = "Najciekawsze owady znajdują się pod kamieniami."
-WICKERBOTTOM.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "Najciekawsze owady znajdują się pod kamieniami."
+WICKERBOTTOM.DESCRIBE.KYNO_ROCKFLIPPABLE =
+{
+	GENERIC = "Najciekawsze owady można znaleźć pod kamieniami.",
+	FLIPPED = "Zgodnie z oczekiwaniami — drobne organizmy.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Ciekawe, jak długo dryfowała na morzu?"
 
@@ -526,7 +649,12 @@ WICKERBOTTOM.DESCRIBE.PEPPERROLLS = "Trochę za ostre dla mnie!"
 
 WICKERBOTTOM.DESCRIBE.KYNO_SAPHEALER = "Składniki powinny tworzyć bardzo skuteczne antidotum."
 
-WICKERBOTTOM.DESCRIBE.KYNO_OCEAN_WRECK = "Statek złapał burzę. Teraz należy do morza."
+WICKERBOTTOM.DESCRIBE.KYNO_OCEAN_WRECK =
+{
+	GENERIC = "Ten statek wpadł w sztorm. Teraz należy do morza.",
+	PICKED = "Życie morskie z czasem ponownie go zasiedli.",
+	BURNING = "Przyspiesza to proces degradacji.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_GHOST_PIRATE = "Paranormalna aktywność piracka."
 
@@ -543,11 +671,31 @@ WICKERBOTTOM.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Słone, ale satysfakcjonujące."
 
 WICKERBOTTOM.DESCRIBE.KYNO_BREWBOOK = "Zbiór obserwacji dotyczących warzenia."
 
-WICKERBOTTOM.DESCRIBE.KYNO_WOODENKEG = "Idealna beczka do robienia napojów."
+WICKERBOTTOM.DESCRIBE.KYNO_WOODENKEG =
+{
+	EMPTY = "Idealna beczka do przygotowywania napojów.",
+	BREWING_LONG = "Proces fermentacji dopiero się rozpoczął.",
+	BREWING_SHORT = "Jest niemal ukończony.",
+	DONE = "Napój jest gotowy do spożycia.",
+	BURNT = "Całkowicie zniszczona.",
+}
 
-WICKERBOTTOM.DESCRIBE.KYNO_PRESERVESJAR = "Ma wiele zastosowań, oprócz kiszonek i dżemów."
+WICKERBOTTOM.DESCRIBE.KYNO_PRESERVESJAR =
+{
+	EMPTY = "Ma wiele zastosowań, nie tylko do przetworów.",
+	BREWING_LONG = "Proces konserwacji przebiega powoli.",
+	BREWING_SHORT = "Jest niemal zakończony.",
+	DONE = "Pomyślnie zakonserwowane.",
+	BURNT = "Godna pożałowania strata.",
+}
 
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHEST = "Szczególnie lepka maszyna do produkcji miodu."
+WICKERBOTTOM.DESCRIBE.KYNO_ANTCHEST =
+{
+	GENERIC = "Szczególnie lepki pośrednik w pozyskiwaniu miodu.",
+	HONEY = "Zapas miodu wydaje się wystarczający.",
+	NECTAR = "Nektar przechodzi proces przekształcania.",
+	BURNING = "Cóż za marnotrawstwo cennych zasobów.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_NECTAR_POD = "Zastanawiam się, czy można to w jakiś sposób zamienić w miód."
 
@@ -557,13 +705,47 @@ WICKERBOTTOM.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Wolałabym porządną filiżank
 WICKERBOTTOM.DESCRIBE.KYNO_PIKO = "Urocza, futrzasta istotka."
 WICKERBOTTOM.DESCRIBE.KYNO_PIKO_ORANGE = "Zabawnie nazwany, futrzasty ssak."
 
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_TREE = "Świetny przykład Camellia Sinensis."
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "Znakomity okaz Camellia Sinensis."
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_TREE =
+{
+	GENERIC = "Doskonały przykład Camellia sinensis.",
+	CHOPPED = "Cały użyteczny materiał został zebrany.",
+	BURNING = "To niezwykle niefortunne!",
+	BURNT = "Całkowita strata.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
+{
+	GENERIC = "Jest zainfekowane wiewiórkami.",
+	BURNING = "Niefortunne zaburzenie ekologiczne.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Co jest w środku?"
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "Oczywiście zrujnowana."
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "Amfibiacyjna chata."
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "Chyba tu trzyma cały swój towar."
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "Wóz pełen towarów."
+
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
+{
+	GENERIC = "Prymitywne, lecz funkcjonalne schronienie.",
+	BURNT = "Godna pożałowania utrata schronienia.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
+{
+	GENERIC = "Amfibijna chata.",
+	CRAFTED = "Znacznie bardziej odpowiednia do zamieszkania.",
+	BURNT = "Odór jest wyjątkowo nieprzyjemny.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
+{
+	GENERIC = "Przypuszczam, że tam przechowuje cały swój towar.",
+	OCCUPIED = "Sprzedawca zdaje się odpoczywać.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
+{
+	GENERIC = "Wóz wypełniony towarami.",
+	EMPTY = "Wygląda na to, że jest pusty.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Wygląda na to, że znowu się spotykamy, drogi Sammy."
 WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_POND = "Przybrzeżne kałuże to fascynujące mikroekosystemy!"
 WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Bagienny kłącz."
@@ -713,8 +895,15 @@ WICKERBOTTOM.DESCRIBE.RISOTTO = "Bardzo popularny sposób przygotowywania ryżu 
 
 WICKERBOTTOM.DESCRIBE.RICESAKE = "Pić z umiarem."
 
-WICKERBOTTOM.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Krzew Ananas comosus. Niezwykłe."
-WICKERBOTTOM.DESCRIBE.KYNO_PINEAPPLEBUSH = "Krzew Ananas comosus. Niezwykłe."
+WICKERBOTTOM.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Muszę posadzić to w odpowiednim miejscu."
+
+WICKERBOTTOM.DESCRIBE.KYNO_PINEAPPLEBUSH =
+{
+	GENERIC = "Krzew Ananas comosus. Niezwykłe.",
+	PICKED = "Będzie potrzebować czasu na regenerację.",
+	WITHERED = "Warunki glebowe są nieodpowiednie.",
+	BURNING = "Co za marnotrawstwo użytecznej rośliny!",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_PINEAPPLE = "Ależ kolczasty ananas!"
 WICKERBOTTOM.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Prawie gotowy do spożycia."
@@ -726,7 +915,11 @@ WICKERBOTTOM.DESCRIBE.PINACOLADA = "Przyjemny napój z Ananas comosus i Cocos nu
 
 WICKERBOTTOM.DESCRIBE.CHIMAS = "Klasyczny napój z południa."
 
-WICKERBOTTOM.DESCRIBE.KYNO_GARDEN_SPRINKLER = "Dawka niezbędnego nawodnienia."
+WICKERBOTTOM.DESCRIBE.KYNO_GARDEN_SPRINKLER =
+{
+	OFF = "Bardzo potrzebne nawodnienie.",
+	ON = "Zapewnia stałe nawadnianie.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_FOODSACK = "Zachowuje moje zapasy chłodne!"
 
@@ -835,11 +1028,21 @@ WICKERBOTTOM.DESCRIBE.RICEANDBEANS = "Bardzo zdrowy i pożywny obiad."
 
 WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Jego stan wskazuje na przyszłą renowację. Przewiduję ruch w 2026."
 
-WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND = "Tuber melanosporum! Cenna podziemna delicja."
+WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND =
+{
+	GENERIC = "Tuber melanosporum! Ceniony podziemny przysmak.",
+	PICKED = "Minie trochę czasu, zanim pojawią się kolejne.",
+	BURNING = "Niewybaczalne marnotrawstwo.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES = "Prawdziwe trufle, wysoko cenione w gastronomii."
 WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_COOKED = "Gotowanie podkreśla ich wyjątkowy aromat."
 
-WICKERBOTTOM.DESCRIBE.KYNO_ITEMSHOWCASER = "Odpowiedni sposób na prezentację dobrej kuchni."
+WICKERBOTTOM.DESCRIBE.KYNO_ITEMSHOWCASER =
+{
+	EMPTY = "Odpowiedni sposób prezentowania wykwintnej gastronomii.",
+	FULL = "Znakomity przykład kunsztu kulinarnego.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_SPORECAP = "Przykład zaawansowanego stadium obumarłego grzyba."
 WICKERBOTTOM.DESCRIBE.KYNO_SPORECAP_COOKED = "Podgrzanie nieco poprawiło jego stan."
@@ -859,7 +1062,15 @@ WICKERBOTTOM.DESCRIBE.TRUFFLEOIL = "Wyrafinowany składnik kulinarny pozyskany z
 
 WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Och, wygląda całkiem obiecująco."
 WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Dobry początek kontrolowanego środowiska akwakultury."
-WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT = "Sztuczne środowisko do rozmnażania wodnego."
+
+WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT =
+{
+	GENERIC = "Sztuczne środowisko do rozmnażania w akwakulturze.",
+	FUEL_HIGH = "Ryby są dobrze odżywione.",
+	FUEL_MED = "Poziom karmienia pozostaje wystarczający.",
+	FUEL_LOW = "Wkrótce konieczne będzie uzupełnienie.",
+	EMPTY = "Zapas paszy został wyczerpany.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY = "Wyjątkowo osobliwy okaz łączący cechy ryby i stawonoga!"
 WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Rzadkie skupisko międzygatunkowego zachowania stadnego!"
@@ -916,14 +1127,29 @@ WICKERBOTTOM.DESCRIBE.MONKEYISLANDMEAL = "Fascynująca mieszanka owoców i owoc�
 WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Polip morskiego bezkręgowca."
 WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Podstawa przyszłego rozkwitu mózgu."
 WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_CORAL = "Genialne!"
-WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_ROCK = "Mussidae Brainus."
+
+WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_ROCK =
+{
+	GENERIC = "Mussidae Brainus.",
+	PICKED = "Wygląda na to, że wymaga regeneracji.",
+}
 
 WICKERBOTTOM.DESCRIBE.BRAINMETTERSOUP = "Ah, klasyczny posiłek dla dzieci."
 
-WICKERBOTTOM.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "On jest centrum tego ekosystemu."
+WICKERBOTTOM.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
+{
+	GENERIC = "Jest centrum tego ekosystemu.",
+	SLEEPING = "Zdaje się być w stanie uśpienia.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Wygląda jakby leżała na dnie oceanu."
 
-WICKERBOTTOM.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "Jaką rybą był ten?"
+WICKERBOTTOM.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
+{
+	GENERIC = "Jakiego rodzaju ryba to była?",
+	WAITING = "Sądzę, że potrzebuje jeszcze trochę czasu.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_PACKIMBAGGIMS = "Witaj, pierzasty uczniu!"
 
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Potrzebujemy więcej składników, by go upiec."
@@ -933,9 +1159,28 @@ WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Dekoracyjne, tradycyjne świecz
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Przypomina mi świętowania w bibliotece."
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Tradycyjny deser okolicznościowy."
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Balony lateksowe. Uroczyste i biodegradowalne... mam nadzieję."
-WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Maszyna przekształcająca kukurydzę w jadalne przekąski."
+
+WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
+{
+	GENERIC = "Maszyna przetwarzająca kukurydzę w jadalne, prażone przekąski.",
+	FUEL_HIGH = "Zapas paliwa jest wystarczający.",
+	FUEL_MED = "Będzie działać jeszcze przez pewien czas.",
+	FUEL_LOW = "Wkrótce konieczne będzie uzupełnienie paliwa.",
+	EMPTY = "Wymaga ponownego zatankowania.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Ciepło powoduje gwałtowne rozszerzanie się wilgoci. Fascynujące!"
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Tradycyjny, stożkowy dodatek do świętowania."
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Przyjęciowy dodatek wykonany na zamówienie."
 
 WICKERBOTTOM.DESCRIBE.KYNO_FISHREGISTRYHAT = "Użyteczne nakrycie głowy do systematycznego badania gatunków ryb."
+
+WICKERBOTTOM.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Proste, lecz skuteczne koryto paszowe.",
+	FUEL_HIGH = "Jest dobrze zaopatrzone.",
+	FUEL_MED = "Zapasy się zmniejszają.",
+	FUEL_LOW = "Wkrótce będzie wymagało uzupełnienia.",
+	EMPTY = "Musi zostać natychmiast napełnione.",
+	BURNT = "Całkowicie bezużyteczne.",
+}

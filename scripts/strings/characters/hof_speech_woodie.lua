@@ -567,7 +567,7 @@ WOODIE.DESCRIBE.KYNO_SLAUGHTERTOOL = "No use gettin' Lucy dirty."
 WOODIE.DESCRIBE.KYNO_CHICKEN2 = 
 {
 	GENERIC = "A bird's a bird.",
-	COOP = "I still hate them, but they're kind useful.",
+	COOP = "I still hate them, but they're kinda useful.",
 }
 
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG = "There's a chicken in there thinking chicken thoughts."

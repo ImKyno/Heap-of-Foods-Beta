@@ -305,7 +305,7 @@ function ForceCombatGiveUp(player)
 	end
 end
 
-function SpawnLootForPicker(prefab, amount, picker, pos)
+function SpawnLootForPicker(prefab, amount, picker, pos, inst)
 	for i = 1, amount do
 		local loot = SpawnPrefab(prefab)
 		

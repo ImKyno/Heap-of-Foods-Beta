@@ -44,6 +44,26 @@ local function TurnChickenWild(chicken)
 	end
 end
 
+local function OnRemoveChickens(inst)
+	if inst.components.childspawner ~= nil then
+		for child in pairs(inst.components.childspawner.childrenoutside) do
+			TurnChickenWild(child)
+		end
+
+		inst.components.childspawner.childrenoutside = {}
+		inst.components.childspawner.numchildrenoutside = 0
+		
+		local inside = inst.components.childspawner.childreninside or 0
+
+		for i = 1, inside do
+			local x, y, z = inst.Transform:GetWorldPosition()
+
+			local wild = SpawnPrefab("kyno_chicken2")
+			wild.Transform:SetPosition(x, y, z)
+		end
+	end
+end
+
 local function OnHammered(inst, worker)
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
 		inst.components.burnable:Extinguish()
@@ -163,12 +183,16 @@ local function OnHarvest(inst, picker, produce)
 	if not inst:HasTag("burnt") then
 		local pos = inst:GetPosition()
 		local data = inst._egg_result or { small = 0, giant = 0 }
-
-		-- Helper function from hof_util.lua
-		SpawnLootForPicker("kyno_chicken_egg", data.small, picker, pos)
-		SpawnLootForPicker("kyno_chicken_egg_large", data.giant, picker, pos)
+		
+		if (data.small or 0) <= 0 and (data.giant or 0) <= 0 then
+			return
+		end
 
 		inst._egg_result = { small = 0, giant = 0 }
+
+		-- Helper function from hof_util.lua
+		SpawnLootForPicker("kyno_chicken_egg", data.small, picker, pos, inst)
+		SpawnLootForPicker("kyno_chicken_egg_large", data.giant, picker, pos, inst)
 		
 		if inst.components.harvestable ~= nil then
 			inst.components.harvestable:SetGrowTime(nil)
@@ -258,26 +282,6 @@ local function OnIgnite(inst)
 	if inst.components.childspawner ~= nil then
 		inst.components.childspawner:ReleaseAllChildren()
 		inst.components.childspawner:StopSpawning()
-	end
-end
-
-local function OnBurnt(inst)
-	if inst.components.childspawner ~= nil then
-		for child in pairs(inst.components.childspawner.childrenoutside) do
-			TurnChickenWild(child)
-		end
-
-		inst.components.childspawner.childrenoutside = {}
-		inst.components.childspawner.numchildrenoutside = 0
-		
-		local inside = inst.components.childspawner.childreninside or 0
-
-		for i = 1, inside do
-			local x, y, z = inst.Transform:GetWorldPosition()
-
-			local wild = SpawnPrefab("kyno_chicken2")
-			wild.Transform:SetPosition(x, y, z)
-		end
 	end
 end
 
@@ -423,10 +427,11 @@ local function fn()
 	
 	inst:ListenForEvent("onbuilt", OnBuilt)
 	inst:ListenForEvent("onignite", OnIgnite)
-	inst:ListenForEvent("onburnt", OnBurnt)
 	inst:ListenForEvent("enterlight", OnEnterLight)
 	inst:ListenForEvent("enterdark", OnEnterDark)
 	inst:ListenForEvent("childgoinghome", OnChildGoingHome)
+	inst:ListenForEvent("onburnt", OnRemoveChickens)
+	inst:ListenForEvent("ondeconstructstructure", OnRemoveChickens)
 	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad

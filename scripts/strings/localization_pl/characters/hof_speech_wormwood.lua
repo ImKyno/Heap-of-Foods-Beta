@@ -90,6 +90,8 @@ WORMWOOD.ANNOUNCE_KYNO_POTHANGER_FAIL = "Chce czegoś innego"
 
 WORMWOOD.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Nie to?"
 
+WORMWOOD.ANNOUNCE_KYNO_SAPHEALER_USED = "Sok pomaga przyjacielowi!"
+
 WORMWOOD.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Och... Przestań się ruszać..."
 
 WORMWOOD.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Wszystko zniknęło."
@@ -129,11 +131,23 @@ WORMWOOD.DESCRIBE.KYNO_SYRUP = "Robi słodkie rzeczy"
 WORMWOOD.DESCRIBE.KYNO_COFFEEBEANS = "Błyskawiczne jagody!"
 WORMWOOD.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Ładnie pachnie."
 
-WORMWOOD.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Przyjaciel Zoomberry"
-WORMWOOD.DESCRIBE.KYNO_COFFEEBUSH = "Przyjaciel zoomberry!"
+WORMWOOD.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Przyjaciel Zoomberry potrzebuje ziemi"
 
-WORMWOOD.DESCRIBE.DUG_KYNO_SPOTBUSH = "Witaj, Przyjacielu!"
-WORMWOOD.DESCRIBE.KYNO_SPOTBUSH = "Witaj, Przyjacielu!"
+WORMWOOD.DESCRIBE.KYNO_COFFEEBUSH =
+{
+	GENERIC = "Przyjaciel Zoomberry",
+	PICKED = "Pusty",
+	WITHERED = "Przyjaciel potrzebuje pomocy",
+}
+
+WORMWOOD.DESCRIBE.DUG_KYNO_SPOTBUSH = "Cześć, przyjacielu"
+
+WORMWOOD.DESCRIBE.KYNO_SPOTBUSH =
+{
+	GENERIC = "Przyjaciel ma fioletowe włosy",
+	PICKED = "Gdzie podziały się włosy przyjaciela?",
+	BURNING = "Przyjaciel cierpi!",
+}
 
 WORMWOOD.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Mały listek."
 
@@ -194,10 +208,24 @@ WORMWOOD.DESCRIBE.LONGPIGMEAL = "Mmm...."
 
 WORMWOOD.DESCRIBE.CUCUMBERSALAD = "Chcę to zjeść"
 
-WORMWOOD.DESCRIBE.KYNO_WILDWHEAT = "Przyjaciel"
-WORMWOOD.DESCRIBE.DUG_KYNO_WILDWHEAT = "Przyjaciel"
+WORMWOOD.DESCRIBE.DUG_KYNO_WILDWHEAT = "Przyjaciel potrzebuje ziemi"
+
+WORMWOOD.DESCRIBE.KYNO_WILDWHEAT =
+{
+	GENERIC = "Przyjaciel",
+	PICKED = "Pusty",
+	WITHERED = "Przyjaciel niezadowolony",
+	BURNING = "Boli!!",
+}
 
 WORMWOOD.DESCRIBE.KYNO_MEALGRINDER = "Maszyna kamienna"
+
+WORMWOOD.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Przyjaciele! Impreza!",
+	PICKED = "Och. Przyjaciele odeszli",
+	BURNING = "Boli!",
+}
 
 WORMWOOD.DESCRIBE.GORGE_BREAD = "Puszyste"
 WORMWOOD.DESCRIBE.GORGE_SWEET_CHIPS = "Chipsy"
@@ -340,27 +368,57 @@ WORMWOOD.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Nieee!"
 
 WORMWOOD.DESCRIBE.KYNO_SEEDS_KIT = "Przyjaciele w środku?"
 
-WORMWOOD.DESCRIBE.KYNO_LIMPETROCK = "Skały, które rosną rzeczy"
+WORMWOOD.DESCRIBE.KYNO_LIMPETROCK =
+{
+	GENERIC = "Skały, które rosną jedzenie",
+	PICKED = "Ślimaki zniknęły",
+	WITHERED = "Brak życia",
+}
+
 WORMWOOD.DESCRIBE.KYNO_LIMPETS = "Skałowe Glub Gluby"
 WORMWOOD.DESCRIBE.KYNO_LIMPETS_COOKED = "Wchodzi do Brzucha"
 
-WORMWOOD.DESCRIBE.KYNO_LOTUS_OCEAN = "Cześć!"
+WORMWOOD.DESCRIBE.KYNO_LOTUS_OCEAN =
+{
+	GENERIC = "Cześć!",
+	PICKED = "Odpoczywa",
+	BURNING = "Boli!",
+}
+
 WORMWOOD.DESCRIBE.KYNO_LOTUS_ROOT = "Potrzeba morza"
 WORMWOOD.DESCRIBE.KYNO_LOTUS_FLOWER = "Brzuszkowe rzeczy!"
 WORMWOOD.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Dobre w brzuszku"
 
-WORMWOOD.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "Mniam"
+WORMWOOD.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
+{
+	GENERIC = "Mniam",
+	PICKED = "Na razie zniknęło?",
+	BURNING = "Boli bardzo!",
+}
+
 WORMWOOD.DESCRIBE.KYNO_SEAWEEDS = "Mniam"
 WORMWOOD.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Piłka Morskiej Pyzy"
 WORMWOOD.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Już nie ma morza w morskiej pyzie"
 WORMWOOD.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Potrzebuje Morza"
 
-WORMWOOD.DESCRIBE.KYNO_TAROROOT_OCEAN = "Witaj Przyjacielu!"
+WORMWOOD.DESCRIBE.KYNO_TAROROOT_OCEAN =
+{
+	GENERIC = "Cześć, przyjacielu!",
+	PICKED = "Przyjaciel dobrze rośnie",
+	BURNING = "Boli!!",
+}
+
 WORMWOOD.DESCRIBE.KYNO_TAROROOT_ROOT = "Potrzeba morza"
 WORMWOOD.DESCRIBE.KYNO_TAROROOT = "Mmm... Purpurowe"
 WORMWOOD.DESCRIBE.KYNO_TAROROOT_COOKED = "Brzuszek zadowolony"
 
-WORMWOOD.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "Jedzenie do brzuszka."
+WORMWOOD.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
+{
+	GENERIC = "Cześć",
+	PICKED = "Przyjaciel śpi",
+	BURNING = "Ogień!!!",
+}
+
 WORMWOOD.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Potrzeba morza"
 WORMWOOD.DESCRIBE.KYNO_WATERYCRESS = "Jedzenie do brzuszka."
 
@@ -368,17 +426,40 @@ WORMWOOD.DESCRIBE.WATERYCRESSBOWL = "Woda ze sticków"
 
 WORMWOOD.DESCRIBE.KYNO_SALT = "Hmm..."
 
+WORMWOOD.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Patyk z jedzeniem",
+	PICKED = "Pusty",
+	BURNING = "Boli patyk!",
+}
+
 WORMWOOD.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Patyk pływa!"
 
 WORMWOOD.DESCRIBE.CATFOOD = "Jedzenie dla kotów."
 
 WORMWOOD.DESCRIBE.KATFOOD = "Jedzenie dla kotów."
 
-WORMWOOD.DESCRIBE.KYNO_BANANATREE = "Przyjaciel z słodkimi włosami"
+WORMWOOD.DESCRIBE.KYNO_BANANATREE =
+{
+	GENERIC = "Przyjaciel ze słodkimi włosami",
+	PICKED = "Potrzebuje odpoczynku",
+	CHOPPED = "Przyjaciel zniknął",
+	BURNING = "Przyjaciel cierpi!",
+	BURNT = "Zniknął na zawsze",
+}
+
 WORMWOOD.DESCRIBE.KYNO_BANANA = "Słodkie włosy od przyjaciela!"
 WORMWOOD.DESCRIBE.KYNO_BANANA_COOKED = "Mmm..."
 
-WORMWOOD.DESCRIBE.KYNO_KOKONUTTREE = "Ładne włosy!"
+WORMWOOD.DESCRIBE.KYNO_KOKONUTTREE =
+{
+	GENERIC = "Ładne włosy!",
+	PICKED = "Przyjaciel potrzebuje odpoczynku",
+	CHOPPED = "Och nie",
+	BURNING = "Przyjaciel cierpi",
+	BURNT = "Przyjaciel zniknął",
+}
+
 WORMWOOD.DESCRIBE.KYNO_KOKONUT = "Piłka pełna rzeczy do jedzenia"
 WORMWOOD.DESCRIBE.KYNO_KOKONUT_HALVED = "Rzeczy do brzucha"
 WORMWOOD.DESCRIBE.KYNO_KOKONUT_COOKED = "Ciepłe."
@@ -426,13 +507,43 @@ WORMWOOD.DESCRIBE.TURF_STONECITY = "Nie Ziemia"
 WORMWOOD.DESCRIBE.TURF_FIELDS = "Ziemia"
 WORMWOOD.DESCRIBE.TURF_TIDALMARSH = "Mokry Piasek"
 
+WORMWOOD.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "Gotowe!",
+	PICKED = "Zbieram pyszne kamienie",
+}
+
 WORMWOOD.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Zbiera Smaczne Kamyki"
 
 WORMWOOD.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Złośliwa Metalowa Rzecz"
 
 WORMWOOD.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Ziemny więzień szczypczyków"
 
-WORMWOOD.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "Owinięty ramię, kręty ogon"
+WORMWOOD.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
+{
+	GENERIC = "Owinięte ramię, kręcący się ogon",
+	SLEEPING = "Śpi",
+}
+
+WORMWOOD.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "Słodki przyjaciel!",
+	CHOPPED = "Przepraszam!",
+	SAPPED = "Pełne wnętrzności przyjaciela",
+	PICKED = "Och, przyjacielu. Przepraszam",
+	BURNING = "Boli bardzo!",
+	BURNT = "Zniknęło...",
+}
+
+WORMWOOD.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "AUĆ! Przyjaciel cierpi",
+	CHOPPED = "Zniknęło",
+	SAPPED = "Zły sok",
+	PICKED = "Robaki zraniły przyjaciela!",
+	BURNING = "Boli",
+	BURNT = "Zniknęło na zawsze",
+}
 
 WORMWOOD.DESCRIBE.KYNO_SUGARTREE_BUD = "Chcesz to w brzuchu? Czy w ziemi?"
 
@@ -453,13 +564,22 @@ WORMWOOD.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Gałąź spod ziemi, szczypiorek."
 
 WORMWOOD.DESCRIBE.KYNO_SLAUGHTERTOOL = "Złe rzeczy"
 
-WORMWOOD.DESCRIBE.KYNO_CHICKEN2 = "Ba-gawk!"
+WORMWOOD.DESCRIBE.KYNO_CHICKEN2 =
+{
+	GENERIC = "Ba-gawk!",
+	COOP = "Ba-gawk teraz bezpieczny",
+}
 
 WORMWOOD.DESCRIBE.KYNO_CHICKEN_EGG = "Mały Klik Klik"
 WORMWOOD.DESCRIBE.KYNO_CHICKEN_LARGE = "Wielkie kliknięcie, kliknięcie w środku?"
 WORMWOOD.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Wchodzi do brzuszka"
 
-WORMWOOD.DESCRIBE.KYNO_CHICKENHOUSE = "Kliknij Kliknij Strona główna"
+WORMWOOD.DESCRIBE.KYNO_CHICKENHOUSE =
+{
+	GENERIC = "Dom Ba-gawk",
+	FULL = "Jajka gotowe!",
+	BURNT = "Ba-gawk zniknął?",
+}
 
 WORMWOOD.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Zepsute."
 
@@ -482,8 +602,11 @@ WORMWOOD.DESCRIBE.KYNO_COOKWARE_OVEN = "Daje Jedzonku Ognistą Kąpiel"
 WORMWOOD.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Daje Jedzonku Ognistą Kąpiel"
 WORMWOOD.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Daje Jedzonku Ognistą Kąpiel"
 
-WORMWOOD.DESCRIBE.KYNO_ROCKFLIPPABLE = "Coś się ukrywa?"
-WORMWOOD.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "Coś się ukrywa?"
+WORMWOOD.DESCRIBE.KYNO_ROCKFLIPPABLE =
+{
+	GENERIC = "Coś się chowa?",
+	FLIPPED = "Znalazłem rzeczy",
+}
 
 WORMWOOD.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Drewniane tonące!"
 
@@ -526,7 +649,12 @@ WORMWOOD.DESCRIBE.PEPPERROLLS = "Pyszne kawałki"
 
 WORMWOOD.DESCRIBE.KYNO_SAPHEALER = "Naprawiacz chorób"
 
-WORMWOOD.DESCRIBE.KYNO_OCEAN_WRECK = "Ratuj drewno!"
+WORMWOOD.DESCRIBE.KYNO_OCEAN_WRECK =
+{
+	GENERIC = "Ratuj drewno!",
+	PICKED = "Czekam",
+	BURNING = "Boli",
+}
 
 WORMWOOD.DESCRIBE.KYNO_GHOST_PIRATE = "Latający Człowiek"
 
@@ -543,11 +671,31 @@ WORMWOOD.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Wysuszone rzeczy do brzuszka"
 
 WORMWOOD.DESCRIBE.KYNO_BREWBOOK = "Rzeczy do brzuszka"
 
-WORMWOOD.DESCRIBE.KYNO_WOODENKEG = "Drewniane pudełko?"
+WORMWOOD.DESCRIBE.KYNO_WOODENKEG =
+{
+	EMPTY = "Drewniane pudełko?",
+	BREWING_LONG = "Pracuje",
+	BREWING_SHORT = "Prawie gotowe?",
+	DONE = "Gotowe!",
+	BURNT = "Zniknęło",
+}
 
-WORMWOOD.DESCRIBE.KYNO_PRESERVESJAR = "Drewniane pudełko?"
+WORMWOOD.DESCRIBE.KYNO_PRESERVESJAR =
+{
+	EMPTY = "Drewniane pudełko?",
+	BREWING_LONG = "Pracuje",
+	BREWING_SHORT = "Prawie gotowe?",
+	DONE = "Gotowe!",
+	BURNT = "Zniknęło",
+}
 
-WORMWOOD.DESCRIBE.KYNO_ANTCHEST = "Słodki sok! Gdzie jest Buzz?"
+WORMWOOD.DESCRIBE.KYNO_ANTCHEST =
+{
+	GENERIC = "Sok od bzyczenia! Gdzie jest Bzyczenie?",
+	HONEY = "Słodkości!",
+	NECTAR = "Nie gotowe",
+	BURNING = "Boli!",
+}
 
 WORMWOOD.DESCRIBE.KYNO_NECTAR_POD = "Słodkie!"
 
@@ -557,13 +705,47 @@ WORMWOOD.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Nie dla Ziemi teraz."
 WORMWOOD.DESCRIBE.KYNO_PIKO = "Puchaty Rabuszek"
 WORMWOOD.DESCRIBE.KYNO_PIKO_ORANGE = "Puchaty Rabuszek"
 
-WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_TREE = "Śpi?"
-WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "Śpi z przyjaciółmi?"
+WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_TREE =
+{
+	GENERIC = "Śpi?",
+	CHOPPED = "Przyjaciel dał kawałki włosów",
+	BURNING = "Boli!",
+	BURNT = "Zniknęło",
+}
+
+WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
+{
+	GENERIC = "Śpi z przyjaciółmi?",
+	BURNING = "Boli!",
+}
+
 WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Drewniani przyjaciele zrobili pudełko!"
-WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "Dom Glub Glub Ludzi"
-WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "Dom Glub Glub człowieka"
-WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "Ma Wiele Rzeczy W Srodku"
-WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "Rzeczy"
+
+WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
+{
+	GENERIC = "Dom Glub Glub Człowieka",
+	BURNT = "Dom Glub Glub Człowieka zniknął",
+}
+
+WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
+{
+	GENERIC = "Dom Glub Glub Człowieka",
+	CRAFTED = "Lepszy dom",
+	BURNT = "Śmierdzi źle",
+}
+
+WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
+{
+	GENERIC = "W środku dużo rzeczy",
+	OCCUPIED = "Śpi?",
+}
+
+WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
+{
+	GENERIC = "Rzeczy",
+	EMPTY = "Nic",
+}
+
 WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Cześć!"
 WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_POND = "Dom dla Glub Glub"
 WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Cześć, mały!"
@@ -713,8 +895,15 @@ WORMWOOD.DESCRIBE.RISOTTO = "Ziarna i Przyjaciele"
 
 WORMWOOD.DESCRIBE.RICESAKE = "Wodny zbożek?"
 
-WORMWOOD.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Cześć, Przyjacielu!"
-WORMWOOD.DESCRIBE.KYNO_PINEAPPLEBUSH = "Cześć, Przyjacielu!"
+WORMWOOD.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Przyjaciel potrzebuje ziemi"
+
+WORMWOOD.DESCRIBE.KYNO_PINEAPPLEBUSH =
+{
+	GENERIC = "Cześć, przyjacielu!",
+	PICKED = "Gdzie podziały się kolce przyjaciela?",
+	WITHERED = "Zbyt suche",
+	BURNING = "Przyjaciel cierpi!",
+}
 
 WORMWOOD.DESCRIBE.KYNO_PINEAPPLE = "Kłuje."
 WORMWOOD.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Brzuchociesz."
@@ -726,7 +915,11 @@ WORMWOOD.DESCRIBE.PINACOLADA = "Przyjaciel?"
 
 WORMWOOD.DESCRIBE.CHIMAS = "Trawa?"
 
-WORMWOOD.DESCRIBE.KYNO_GARDEN_SPRINKLER = "Robi wodne powietrze."
+WORMWOOD.DESCRIBE.KYNO_GARDEN_SPRINKLER =
+{
+	OFF = "Pomaga przyjaciołom",
+	ON = "Przyjaciele szczęśliwi dzięki chlapiącej metalowej rzeczy",
+}
 
 WORMWOOD.DESCRIBE.KYNO_FOODSACK = "Trzyma Jedzonko Świeże"
 
@@ -835,11 +1028,21 @@ WORMWOOD.DESCRIBE.RICEANDBEANS = "Coś do Brzuszka"
 
 WORMWOOD.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Stary dom... może wkrótce nowe życie..."
 
-WORMWOOD.DESCRIBE.KYNO_TRUFFLES_GROUND = "Przyjaciel rośnie w ziemi!"
+WORMWOOD.DESCRIBE.KYNO_TRUFFLES_GROUND =
+{
+	GENERIC = "Przyjaciel rośnie w ziemi!",
+	PICKED = "Zniknęło",
+	BURNING = "Przyjaciel cierpi!",
+}
+
 WORMWOOD.DESCRIBE.KYNO_TRUFFLES = "Pachnący przyjaciel pokarm."
 WORMWOOD.DESCRIBE.KYNO_TRUFFLES_COOKED = "Ciepłe jedzenie przyjaciela!"
 
-WORMWOOD.DESCRIBE.KYNO_ITEMSHOWCASER = "Pokazać jedzenie przyjaciołom!"
+WORMWOOD.DESCRIBE.KYNO_ITEMSHOWCASER =
+{
+	EMPTY = "Pokaż jedzenie przyjaciołom",
+	FULL = "Jedzenie wygląda ładnie",
+}
 
 WORMWOOD.DESCRIBE.KYNO_SPORECAP = "Przyjaciel... chory..."
 WORMWOOD.DESCRIBE.KYNO_SPORECAP_COOKED = "Ciepły przyjaciel! Lepszy?"
@@ -859,7 +1062,15 @@ WORMWOOD.DESCRIBE.TRUFFLEOIL = "Silny zapach."
 
 WORMWOOD.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Plany Jeziora"
 WORMWOOD.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Rosnący Wodny Domek!"
-WORMWOOD.DESCRIBE.KYNO_FISHFARMPLOT = "Glub Glub Domek"
+
+WORMWOOD.DESCRIBE.KYNO_FISHFARMPLOT =
+{
+	GENERIC = "Dom Glub Glub",
+	FUEL_HIGH = "Glub Glub szczęśliwy!",
+	FUEL_MED = "Glub Glub je",
+	FUEL_LOW = "Potrzebuje przekąsek wkrótce",
+	EMPTY = "Brak przekąsek",
+}
 
 WORMWOOD.DESCRIBE.KYNO_ANTCHOVY = "Przyjaciel rybo-owad! Cześć!"
 WORMWOOD.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Wielu przyjaciół rybo-owadów!"
@@ -916,14 +1127,29 @@ WORMWOOD.DESCRIBE.MONKEYISLANDMEAL = "Glub Glub i Przyjaciel"
 WORMWOOD.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Potrzebuje kamienia"
 WORMWOOD.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Słodki mokry kamień-bobasek"
 WORMWOOD.DESCRIBE.KYNO_BRAINROCK_CORAL = "Myślę..."
-WORMWOOD.DESCRIBE.KYNO_BRAINROCK_ROCK = "Myślący Kamień"
+
+WORMWOOD.DESCRIBE.KYNO_BRAINROCK_ROCK =
+{
+	GENERIC = "Myśląca skała",
+	PICKED = "Myśląca skała zmęczona",
+}
 
 WORMWOOD.DESCRIBE.BRAINMETTERSOUP = "Przemyślany brzuszek"
 
-WORMWOOD.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "Facet z dużymi ramionami"
+WORMWOOD.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
+{
+	GENERIC = "Duży gość z ramionami",
+	SLEEPING = "Śpi",
+}
+
 WORMWOOD.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Rzeczy od Faceta z Dużymi Ramionami!"
 
-WORMWOOD.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "Przyjaciel Tweet lubi cię!"
+WORMWOOD.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
+{
+	GENERIC = "Przyjaciel Tweeter cię lubi!",
+	WAITING = "Gdzie podział się Tweeter?",
+}
+
 WORMWOOD.DESCRIBE.KYNO_PACKIMBAGGIMS = "Przyjaciel Tweet"
 
 WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Brak Rzeczy"
@@ -933,9 +1159,28 @@ WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Światło dla Wielkiego Tortu!"
 WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Przyjaciele..."
 WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Słodkie Brzusio Jedzonko!"
 WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Latający przyjaciele! Cześć!"
-WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Robi Pop!"
+
+WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
+{
+	GENERIC = "Maszynka do popcornu",
+	FUEL_HIGH = "Maszynka do popcornu szczęśliwa",
+	FUEL_MED = "Działa",
+	FUEL_LOW = "Maszynka wygląda na głodną",
+	EMPTY = "Pusta",
+}
+
 WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Pop pop!"
 WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Imprezowy Kapelusz! Jupi!"
 WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Kapelusz Przyjaciela!"
 
 WORMWOOD.DESCRIBE.KYNO_FISHREGISTRYHAT = "Kapelusz Znający Ryby"
+
+WORMWOOD.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Miejsce na jedzenie",
+	FUEL_HIGH = "Dużo jedzenia",
+	FUEL_MED = "Trochę jedzenia",
+	FUEL_LOW = "Mało jedzenia",
+	EMPTY = "Brak jedzenia",
+	BURNT = "Zniknęło",
+}

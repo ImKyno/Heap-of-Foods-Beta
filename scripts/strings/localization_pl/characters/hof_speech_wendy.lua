@@ -90,6 +90,8 @@ WENDY.ANNOUNCE_KYNO_POTHANGER_FAIL = "Potrzebny jest garnek, a nie to, ugh."
 
 WENDY.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Muszę tu postawić naczynie żaroodporne."
 
+WENDY.ANNOUNCE_KYNO_SAPHEALER_USED = "Życie znów rozkwita, a cykl trwa dalej."
+
 WENDY.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Życie się kończy, i tak też musi ich..."
 
 WENDY.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Tak pusty jak moja dusza."
@@ -129,11 +131,23 @@ WENDY.DESCRIBE.KYNO_SYRUP = "Nie tak słodki jak Abigail."
 WENDY.DESCRIBE.KYNO_COFFEEBEANS = "Wyglądają pobudzająco."
 WENDY.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Kto by pomyślał, że wola życia może mieć formę ziarenka?"
 
-WENDY.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Ta roślina czerpie siłę z ognistej śmierci."
-WENDY.DESCRIBE.KYNO_COFFEEBUSH = "Czerpie pożywienie ze śmiercionośnego ognia."
+WENDY.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Wyrwana z ziemi, lecz nie skazana na zagładę."
 
-WENDY.DESCRIBE.DUG_KYNO_SPOTBUSH = "Chyba można to zjeść."
-WENDY.DESCRIBE.KYNO_SPOTBUSH = "Chyba można to zjeść."
+WENDY.DESCRIBE.KYNO_COFFEEBUSH =
+{
+	GENERIC = "Ta roślina czerpie pożywienie z ognistej śmierci.",
+	PICKED = "Nie ma już nic do zaoferowania.",
+	WITHERED = "Życie się z niej wycofuje.",
+}
+
+WENDY.DESCRIBE.DUG_KYNO_SPOTBUSH = "Przemieszczona, lecz nie zniknęła."
+
+WENDY.DESCRIBE.KYNO_SPOTBUSH =
+{
+	GENERIC = "Przypuszczam, że może być jadalna.",
+	PICKED = "Nie ma już nic więcej do dania.",
+	BURNING = "Jej koniec jest szybki.",
+}
 
 WENDY.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Wyrwaliśmy go z jego domu na krzewie."
 
@@ -194,10 +208,24 @@ WENDY.DESCRIBE.LONGPIGMEAL = "Niegdyś śmiertelny, teraz jedzenie."
 
 WENDY.DESCRIBE.CUCUMBERSALAD = "Ugh, kolejne warzywa."
 
-WENDY.DESCRIBE.KYNO_WILDWHEAT = "Lepsza wersja trawy."
-WENDY.DESCRIBE.DUG_KYNO_WILDWHEAT = "Lepsza wersja trawy."
+WENDY.DESCRIBE.DUG_KYNO_WILDWHEAT = "Przemieszczona, lecz pełna nadziei."
+
+WENDY.DESCRIBE.KYNO_WILDWHEAT =
+{
+	GENERIC = "Lepsza wersja trawy.",
+	PICKED = "Teraz nic nie oferuje.",
+	WITHERED = "Życie się z niej cofa.",
+	BURNING = "Jej koniec jest szybki.",
+}
 
 WENDY.DESCRIBE.KYNO_MEALGRINDER = "Jestem zmielona kamieniem życia."
+
+WENDY.DESCRIBE.KYNO_MUSHSTUMP =
+{
+	GENERIC = "Rozkwitają na pniu stworzonym przez śmierć.",
+	PICKED = "Czeka, by znów dać.",
+	BURNING = "Wszystko umiera. Nawet grzyby.",
+}
 
 WENDY.DESCRIBE.GORGE_BREAD = "Nic nie da się z tym zrobić samemu."
 WENDY.DESCRIBE.GORGE_SWEET_CHIPS = "Wszystko trafia do moich ust."
@@ -340,27 +368,57 @@ WENDY.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Martwy."
 
 WENDY.DESCRIBE.KYNO_SEEDS_KIT = "Zwykłe nasiona."
 
-WENDY.DESCRIBE.KYNO_LIMPETROCK = "Wyglądają jadalnie... trochę."
+WENDY.DESCRIBE.KYNO_LIMPETROCK =
+{
+	GENERIC = "Wyglądają na jadalne... w pewnym sensie.",
+	PICKED = "Wycofały się.",
+	WITHERED = "Jałowa egzystencja.",
+}
+
 WENDY.DESCRIBE.KYNO_LIMPETS = "Jedzą z tej skały. Ja jem z nich."
 WENDY.DESCRIBE.KYNO_LIMPETS_COOKED = "Depresyjne."
 
-WENDY.DESCRIBE.KYNO_LOTUS_OCEAN = "Rozkwita na falach smutku."
+WENDY.DESCRIBE.KYNO_LOTUS_OCEAN =
+{
+	GENERIC = "Rozkwita na falach smutku.",
+	PICKED = "Musi poczekać, by znów zakwitnąć.",
+	BURNING = "Jej koniec nadchodzi zbyt wcześnie.",
+}
+
 WENDY.DESCRIBE.KYNO_LOTUS_ROOT = "Pragną wodnego grobu."
 WENDY.DESCRIBE.KYNO_LOTUS_FLOWER = "Ta piękność również umrze."
 WENDY.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Jego śmierć była smaczna."
 
-WENDY.DESCRIBE.KYNO_SEAWEEDS_OCEAN = "Zielna roślina."
+WENDY.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
+{
+	GENERIC = "Pożywna wodorost.",
+	PICKED = "W końcu powróci.",
+	BURNING = "Nawet morze nie potrafi jej ochronić.",
+}
+
 WENDY.DESCRIBE.KYNO_SEAWEEDS = "Nawet morze jest opanowane przez chwasty."
 WENDY.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Lepsze, ale to nadal chwast."
 WENDY.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Dłużej tak wytrzyma. Smakuje lepiej."
 WENDY.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Pragną wodnego grobu."
 
-WENDY.DESCRIBE.KYNO_TAROROOT_OCEAN = "Zwykła roślina wodna."
+WENDY.DESCRIBE.KYNO_TAROROOT_OCEAN =
+{
+	GENERIC = "Zwykłe wodne warzywo.",
+	PICKED = "Powróci z czasem.",
+	BURNING = "Kolejny cichy koniec.",
+}
+
 WENDY.DESCRIBE.KYNO_TAROROOT_ROOT = "Pragną wodnego grobu."
 WENDY.DESCRIBE.KYNO_TAROROOT = "Prawie trujący psiankowaty. Prawie."
 WENDY.DESCRIBE.KYNO_TAROROOT_COOKED = "Gotowanie tego psiankowatego uczyniło go jeszcze mniej trującym."
 
-WENDY.DESCRIBE.KYNO_WATERYCRESS_OCEAN = "Potrzebuje wody, by żyć."
+WENDY.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
+{
+	GENERIC = "Wymaga wody, by żyć.",
+	PICKED = "Powróci na krótko.",
+	BURNING = "Zniknęła, zanim naprawdę zaczęła żyć.",
+}
+
 WENDY.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Pragną wodnego grobu."
 WENDY.DESCRIBE.KYNO_WATERYCRESS = "Potrzebuje wody, by żyć."
 
@@ -368,17 +426,40 @@ WENDY.DESCRIBE.WATERYCRESSBOWL = "Zupa wodna."
 
 WENDY.DESCRIBE.KYNO_SALT = "Dodaje smaku..."
 
+WENDY.DESCRIBE.KYNO_MUSSELSTICK =
+{
+	GENERIC = "Życie trzymające się desperacko.",
+	PICKED = "Teraz nic nie daje.",
+	BURNING = "Wszelka obietnica stracona.",
+}
+
 WENDY.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Małże trzymają się tego patyka. Głupcy."
 
 WENDY.DESCRIBE.CATFOOD = "Jedzenie dla kotów."
 
 WENDY.DESCRIBE.KATFOOD = "Jedzenie dla kotów."
 
-WENDY.DESCRIBE.KYNO_BANANATREE = "Czy czujesz teraz słońce, biedna rośliny?"
+WENDY.DESCRIBE.KYNO_BANANATREE =
+{
+	GENERIC = "Czy czujesz teraz słońce, biedna roślino?",
+	PICKED = "Musi poczekać, by znów dać.",
+	CHOPPED = "Jej życie zostało brutalnie skrócone.",
+	BURNING = "Rzadkie piękno stracone w płomieniach.",
+	BURNT = "Nie pozostało nic prócz smutku.",
+}
+
 WENDY.DESCRIBE.KYNO_BANANA = "Skórka wygląda niebezpiecznie."
 WENDY.DESCRIBE.KYNO_BANANA_COOKED = "Podgrzany bananowy kleik jest o wiele lepszy."
 
-WENDY.DESCRIBE.KYNO_KOKONUTTREE = "Jej owoce dają życie, ale tylko jeśli je zabiję."
+WENDY.DESCRIBE.KYNO_KOKONUTTREE =
+{
+	GENERIC = "Jej owoc daje życie, ale tylko jeśli ją zabiję.",
+	PICKED = "Wstrzymuje swoje dary.",
+	CHOPPED = "Jej życie było krótkie.",
+	BURNING = "Kolejna strata w płomieniach.",
+	BURNT = "Nie pozostało nic prócz pyłu.",
+}
+
 WENDY.DESCRIBE.KYNO_KOKONUT = "Jakie tajemnice musi skrywać ten owoc pod swoją zbroją?"
 WENDY.DESCRIBE.KYNO_KOKONUT_HALVED = "Dwie połówki, które kiedyś były całością. Gdzie teraz jesteś, Abigail?"
 WENDY.DESCRIBE.KYNO_KOKONUT_COOKED = "Jest trochę słodki."
@@ -426,13 +507,43 @@ WENDY.DESCRIBE.TURF_STONECITY = "Trochę ziemi."
 WENDY.DESCRIBE.TURF_FIELDS = "Trochę ziemi."
 WENDY.DESCRIBE.TURF_TIDALMARSH = "To tylko ziemia."
 
+WENDY.DESCRIBE.KYNO_SALTRACK =
+{
+	GENERIC = "There is salt to be had.",
+	PICKED = "There is no salt, yet.",
+}
+
 WENDY.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Służy do zbierania soli ze stawu."
 
 WENDY.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Do zbierania soków z drzew."
 
 WENDY.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Życie to pułapka."
 
-WENDY.DESCRIBE.KYNO_SERENITYISLAND_SHOP = "Jak się masz, panie?"
+WENDY.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
+{
+	GENERIC = "Jak się pan miewa, proszę pana?",
+	SLEEPING = "Nawet władza musi odpocząć.",
+}
+
+WENDY.DESCRIBE.KYNO_SUGARTREE =
+{
+	GENERIC = "Ma w sobie chorowite piękno.",
+	CHOPPED = "Wszystko musi się skończyć.",
+	SAPPED = "Mogę je teraz zebrać.",
+	PICKED = "Jak sztylet w serce. Drzewne serce.",
+	BURNING = "Okrutny koniec.",
+	BURNT = "Nie pozostało nic prócz popiołu.",
+}
+
+WENDY.DESCRIBE.KYNO_SUGARTREE_RUINED =
+{
+	GENERIC = "Jej życie gaśnie.",
+	CHOPPED = "W pewnym sensie miłosierne.",
+	SAPPED = "Zgniłe w samym środku.",
+	PICKED = "Cała ta ofiara na nic.",
+	BURNING = "Wreszcie koniec.",
+	BURNT = "Pozostał tylko popiół.",
+}
 
 WENDY.DESCRIBE.KYNO_SUGARTREE_BUD = "Czyni życie na wyspie nieco bardziej znośnym."
 
@@ -453,13 +564,22 @@ WENDY.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Wnętrze tak ohydne, jak wierzch."
 
 WENDY.DESCRIBE.KYNO_SLAUGHTERTOOL = "Czy całe życie to nie jest rzeź?"
 
-WENDY.DESCRIBE.KYNO_CHICKEN2 = "Ohydne drób."
+WENDY.DESCRIBE.KYNO_CHICKEN2 =
+{
+	GENERIC = "Odrażający drób.",
+	COOP = "Przynajmniej ma teraz schronienie.",
+}
 
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG = "Życie jest w środku."
 WENDY.DESCRIBE.KYNO_CHICKEN_LARGE = "Jest za duży na kurczaka!"
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Żaden kurczak z tego nie wyjdzie."
 
-WENDY.DESCRIBE.KYNO_CHICKENHOUSE = "Składają jaja, a następnie wracają do swego spokojnego schronienia."
+WENDY.DESCRIBE.KYNO_CHICKENHOUSE =
+{
+	GENERIC = "Składają jaja, potem wracają do cichego schronienia.",
+	FULL = "Więcej jaj narodzonych w tym okrutnym świecie.",
+	BURNT = "Ich cierpienie dobiegło końca.",
+}
 
 WENDY.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Kiedyś coś tu było, ale teraz to przepadło."
 
@@ -482,8 +602,11 @@ WENDY.DESCRIBE.KYNO_COOKWARE_OVEN = "Wygląda w porządku."
 WENDY.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Wygląda w porządku."
 WENDY.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Wygląda w porządku."
 
-WENDY.DESCRIBE.KYNO_ROCKFLIPPABLE = "Gdybym tylko mogła schować się pod kamieniem."
-WENDY.DESCRIBE.KYNO_ROCKFLIPPABLE_CAVE = "Gdybym tylko mogła schować się pod kamieniem."
+WENDY.DESCRIBE.KYNO_ROCKFLIPPABLE =
+{
+	GENERIC = "Gdybym tylko mogła ukryć się pod kamieniem.",
+	FLIPPED = "Ujawnione, lecz nieimponujące.",
+}
 
 WENDY.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Nie jestem ponad plądrowanie skrzyń po łupy."
 
@@ -526,7 +649,12 @@ WENDY.DESCRIBE.PEPPERROLLS = "Są tak dobre, że prawie zapomniałam o moim przy
 
 WENDY.DESCRIBE.KYNO_SAPHEALER = "Eliksir, by powstrzymać chorobę."
 
-WENDY.DESCRIBE.KYNO_OCEAN_WRECK = "Załoga prawdopodobnie nie żyje..."
+WENDY.DESCRIBE.KYNO_OCEAN_WRECK =
+{
+	GENERIC = "Załoga zapewne nie żyje...",
+	PICKED = "Pozostała tylko cierpliwość.",
+	BURNING = "Jej los jest przesądzony.",
+}
 
 WENDY.DESCRIBE.KYNO_GHOST_PIRATE = "Przyszły przyjaciel Abigail?"
 
@@ -543,11 +671,31 @@ WENDY.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Mięso wysuszone i pyszne."
 
 WENDY.DESCRIBE.KYNO_BREWBOOK = "Po co napełniać brzuch, kiedy serce pozostaje puste..."
 
-WENDY.DESCRIBE.KYNO_WOODENKEG = "Beczka do robienia wina lub innych smakołyków."
+WENDY.DESCRIBE.KYNO_WOODENKEG =
+{
+	EMPTY = "Beczka do robienia wina lub innych specjałów.",
+	BREWING_LONG = "Czas ciągnie się bez końca.",
+	BREWING_SHORT = "Oczekiwanie dobiega końca.",
+	DONE = "Przynajmniej coś się udało.",
+	BURNT = "Cały wysiłek na marne.",
+}
 
-WENDY.DESCRIBE.KYNO_PRESERVESJAR = "Beczka do robienia przetworów."
+WENDY.DESCRIBE.KYNO_PRESERVESJAR =
+{
+	EMPTY = "Naczynie do przygotowywania przetworów.",
+	BREWING_LONG = "Czas zachowuje wszystko... na krótko.",
+	BREWING_SHORT = "Wkrótce to się skończy.",
+	DONE = "Przynajmniej to przetrwało.",
+	BURNT = "Zredukowane do niczego.",
+}
 
-WENDY.DESCRIBE.KYNO_ANTCHEST = "Wciąż nie tak słodki jak Abigail."
+WENDY.DESCRIBE.KYNO_ANTCHEST =
+{
+	GENERIC = "Wciąż nie tak słodkie jak Abigail.",
+	HONEY = "Tyle miodu... w jakim celu?",
+	NECTAR = "Powolny marsz ku miodowi.",
+	BURNING = "Jej praca kończy się w popiele.",
+}
 
 WENDY.DESCRIBE.KYNO_NECTAR_POD = "Czy warto przekształcać to w miód?"
 
@@ -557,13 +705,47 @@ WENDY.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Zabiłam je, by przedłużyć własne 
 WENDY.DESCRIBE.KYNO_PIKO = "Zbyt naiwny, by znać ból."
 WENDY.DESCRIBE.KYNO_PIKO_ORANGE = "Istniejesz, by zabawiać innych."
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_TREE = "Mogę usiąść pod nim i kontemplować bezsens życia."
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = "Byłoby lepsze, gdyby nie te wszystkie pikos."
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_TREE =
+{
+	GENERIC = "Mogę usiąść pod nim i rozmyślać o daremności życia.",
+	CHOPPED = "Pozbawione swojego celu.",
+	BURNING = "Jego koniec nadchodzi szybko.",
+	BURNT = "Nic nie pozostało.",
+}
+
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
+{
+	GENERIC = "Byłoby lepiej, gdyby nie było tych wszystkich piko.",
+	BURNING = "Bezdomność przez płomienie.",
+}
+
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "To tylko pudełko."
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = "Czas go zniszczył."
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = "Jaki uroczy."
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_SHOP = "Trochę chcę tego plecaka z wystawy."
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = "Jest pełen smakołyków."
+
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
+{
+	GENERIC = "Samotne schronienie dla samotnych istot.",
+	BURNT = "Kolejny dom obrócony w nicość.",
+}
+
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
+{
+	GENERIC = "Jak uroczo.",
+	CRAFTED = "Skromna poprawa.",
+	BURNT = "Smród wciąż się utrzymuje.",
+}
+
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
+{
+	GENERIC = "Trochę chcę ten plecak z wystawy.",
+	OCCUPIED = "Nawet kupcy muszą odpocząć.",
+}
+
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
+{
+	GENERIC = "Pełne różnych smakołyków.",
+	EMPTY = "Nie ma już nic do zabrania.",
+}
+
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Ten diabełek myśli, że może ukryć, co nam zrobił."
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_POND = "Gdy patrzę w tę przejrzystą wodę, wydaje mi się, że widzę Abigail."
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "To tylko roślina."
@@ -713,8 +895,15 @@ WENDY.DESCRIBE.RISOTTO = "Chyba sam ryż i trochę warzyw nie jest takie złe...
 
 WENDY.DESCRIBE.RICESAKE = "Warzywny alkohol? Bleh."
 
-WENDY.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Tropikalny owoc."
-WENDY.DESCRIBE.KYNO_PINEAPPLEBUSH = "Tropikalny owoc."
+WENDY.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Usunięte z ziemi."
+
+WENDY.DESCRIBE.KYNO_PINEAPPLEBUSH =
+{
+	GENERIC = "Tropikalny krzew owocowy.",
+	PICKED = "Nie ma już nic więcej do dania.",
+	WITHERED = "Życie się z niej wycofuje.",
+	BURNING = "Jej koniec jest szybki.",
+}
 
 WENDY.DESCRIBE.KYNO_PINEAPPLE = "Opancerzony owoc."
 WENDY.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Gdybym tylko mogła się tym z kimś podzielić."
@@ -726,7 +915,11 @@ WENDY.DESCRIBE.PINACOLADA = "Zimne i orzeźwiające."
 
 WENDY.DESCRIBE.CHIMAS = "Wygląda nijako."
 
-WENDY.DESCRIBE.KYNO_GARDEN_SPRINKLER = "Nie podleje mojej wyschniętej duszy."
+WENDY.DESCRIBE.KYNO_GARDEN_SPRINKLER =
+{
+	OFF = "Nie potrafi nawodnić mojej wyschniętej duszy.",
+	ON = "Przynajmniej rośliny są zaopiekowane.",
+}
 
 WENDY.DESCRIBE.KYNO_FOODSACK = "Spowalnia gnicie i rozkład."
 
@@ -835,11 +1028,21 @@ WENDY.DESCRIBE.RICEANDBEANS = "Bardzo prosty posiłek, ale wystarczy."
 
 WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Nawet ruiny pamiętają swój cel... może obudzą się w 2026."
 
-WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND = "Nawet w ciemności rosną..."
+WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND =
+{
+	GENERIC = "Nawet w ciemności rosną...",
+	PICKED = "Zniknęły, jak większość dobrych rzeczy.",
+	BURNING = "Zniszczone, zanim można było się nimi nacieszyć.",
+}
+
 WENDY.DESCRIBE.KYNO_TRUFFLES = "Delicje zrodzone z ciemności."
 WENDY.DESCRIBE.KYNO_TRUFFLES_COOKED = "Ciemność zmieniła się w ciepło i smak."
 
-WENDY.DESCRIBE.KYNO_ITEMSHOWCASER = "Pokaz ulotnego piękna. Całe jedzenie kiedyś gnije."
+WENDY.DESCRIBE.KYNO_ITEMSHOWCASER =
+{
+	EMPTY = "Wystawa ulotnego piękna. Całe jedzenie gnije... w końcu.",
+	FULL = "Wkrótce i to zniknie.",
+}
 
 WENDY.DESCRIBE.KYNO_SPORECAP = "Nawet grzyby muszą kiedyś umrzeć."
 WENDY.DESCRIBE.KYNO_SPORECAP_COOKED = "Ogień nie wypali smutku."
@@ -859,7 +1062,15 @@ WENDY.DESCRIBE.TRUFFLEOIL = "Esencja rozkładu, zamknięta w butelce dla przyjem
 
 WENDY.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Czy jest sens to w ogóle budować?"
 WENDY.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Wodny grób... jakże poetyckie."
-WENDY.DESCRIBE.KYNO_FISHFARMPLOT = "Nawet w hodowli życie zaczyna się w ciszy."
+
+WENDY.DESCRIBE.KYNO_FISHFARMPLOT =
+{
+	GENERIC = "Nawet w wylęgarni życie zaczyna się po cichu.",
+	FUEL_HIGH = "Ich głód został zaspokojony.",
+	FUEL_MED = "Cykl trwa dalej.",
+	FUEL_LOW = "Głód zaczyna się zbliżać.",
+	EMPTY = "Pozostaje tylko pustka.",
+}
 
 WENDY.DESCRIBE.KYNO_ANTCHOVY = "Pół ryba, pół mrówka... życie pełne cierpienia i zagubienia."
 WENDY.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Bzycząca, wijąca się masa cierpienia."
@@ -916,14 +1127,29 @@ WENDY.DESCRIBE.MONKEYISLANDMEAL = "Nawet przeklęci zasługują na odrobinę ła
 WENDY.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Co za paskudny robak."
 WENDY.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Goły i całkowicie pozbawiony życia."
 WENDY.DESCRIBE.KYNO_BRAINROCK_CORAL = "Czy tak wyglądam w środku?"
-WENDY.DESCRIBE.KYNO_BRAINROCK_ROCK = "Wygląda na bardzo inteligentną roślinę."
+
+WENDY.DESCRIBE.KYNO_BRAINROCK_ROCK =
+{
+	GENERIC = "To jedna z tych inteligentnie wyglądających roślin.",
+	PICKED = "Odpoczywa, jak wszystkie umysły muszą.",
+}
 
 WENDY.DESCRIBE.BRAINMETTERSOUP = "To dla dzieci."
 
-WENDY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = "Zazdroszczę mu spokoju."
+WENDY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
+{
+	GENERIC = "Zazdroszczę jego zadowolenia.",
+	SLEEPING = "Nawet królowie muszą odpocząć.",
+}
+
 WENDY.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "To nie wygląda na niezawodne miejsce do przechowywania rzeczy."
 
-WENDY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = "Martwa rybka. Wygląda ważnie."
+WENDY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
+{
+	GENERIC = "Martwa rybia rzecz. Wygląda na ważną.",
+	WAITING = "Osiągnęła swój naturalny stan.",
+}
+
 WENDY.DESCRIBE.KYNO_PACKIMBAGGIMS = "Nie powierzyłabym mu ryby, ale może moje rzeczy..."
 
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Więc, zacznijmy piec."
@@ -933,9 +1159,28 @@ WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Każdy płomień – chwilowa iskierka
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Przypomina mi urodzinowe imprezy z Abigail."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Słodycz nie wypełni pustki wewnątrz..."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Chwila radości... skazana na zniknięcie."
-WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Ciche pyknięcia dla cichych myśli."
+
+WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
+{
+	GENERIC = "Ciche pukanie dla cichych myśli.",
+	FUEL_HIGH = "Wciąż ma swój cel.",
+	FUEL_MED = "Jej czas się kończy.",
+	FUEL_LOW = "Wkrótce zapadnie cisza.",
+	EMPTY = "Pozostaje tylko cisza.",
+}
+
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Wybucha... a potem znika... jak ulotne szczęście."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Symbol wymuszonej radości... jakże trafne."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Dla Sammy'ego... tego, który stoi ponad innymi..."
 
 WENDY.DESCRIBE.KYNO_FISHREGISTRYHAT = "Zapisuje życie dryfujące cicho pod falami."
+
+WENDY.DESCRIBE.KYNO_ANIMALFEEDER =
+{
+	GENERIC = "Mała łaska dla głodnych istot.",
+	FUEL_HIGH = "Dziś nie będą głodować.",
+	FUEL_MED = "Pożywienie się kończy.",
+	FUEL_LOW = "Głód nadchodzi.",
+	EMPTY = "Pozostaje tylko pustka.",
+	BURNT = "Popiół nikogo nie nakarmi.",
+}
