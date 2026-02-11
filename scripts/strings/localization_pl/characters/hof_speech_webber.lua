@@ -78,6 +78,9 @@ WEBBER.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "O nie... znów strasznie wygląda."
 WEBBER.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Wow! Jesteśmy dużo twardsi niż wcześniej!"
 WEBBER.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "O-o... już nie jesteśmy tacy twardzi."
 
+WEBBER.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Łał! Teraz bijemy naprawdę mocno!"
+WEBBER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Już nie jesteśmy tacy miażdżący."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie tego."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sądzimy, że to nie jest właściwy posiłek, jakiego potrzebuje."
@@ -1184,3 +1187,7 @@ WEBBER.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "O nie, nie ma jedzenia!",
 	BURNT = "Wszystko się spaliło!",
 }
+
+WEBBER.DESCRIBE.CHICKENNUGGETS = "Lubimy je! Są w sam raz!"
+
+WEBBER.DESCRIBE.CHICKENWINGS = "Pikantne! Pikantne! BARDZO PIKANTNE!"

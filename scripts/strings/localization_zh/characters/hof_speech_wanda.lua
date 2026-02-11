@@ -78,6 +78,9 @@ WANDA.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "理智从来不会停留太久……"
 WANDA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "很好。多加一层保护就能节省宝贵的时间。"
 WANDA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "就这样了。时机至关重要。"
 
+WANDA.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Short bursts of recklessness!"
+WANDA.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Good. I prefer calculated risks."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "不……我需要别的。"
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "我想我还有时间给你弄只龙虾。"
@@ -1184,3 +1187,7 @@ WANDA.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Exactly as expected.",
 	BURNT = "That outcome was inevitable.",
 }
+
+WANDA.DESCRIBE.CHICKENNUGGETS = "I don't have time for this."
+
+WANDA.DESCRIBE.CHICKENWINGS = "Burns now, regrets later."

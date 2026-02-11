@@ -78,6 +78,9 @@ WAXWELL.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Sanidade é tão fugaz..."
 WAXWELL.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Ah... os próprios planos se curvam para me proteger."
 WAXWELL.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Hmph. Os planos retiram seu favor."
 
+WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Que brutalidade intoxicante."
+WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Que tediosamente comum outra vez."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de algo diferente."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Você não é fácil, hein?"
@@ -1184,3 +1187,7 @@ WAXWELL.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Completamente esgotado.",
 	BURNT = "Arruinado além de qualquer recuperação.",
 }
+
+WAXWELL.DESCRIBE.CHICKENNUGGETS = "Uma indulgência vulgar."
+
+WAXWELL.DESCRIBE.CHICKENWINGS = "Grosseiro, mas eficaz."

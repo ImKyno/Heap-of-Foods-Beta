@@ -78,6 +78,9 @@ WENDY.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "A clareza se vai... e a escuridão volt
 WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Até o invisível me protege do sofrimento."
 WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "O escudo invisível se dissipou."
 
+WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Dor por dor. Uma troca justa."
+WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "A fúria se vai, como tudo vai."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."
@@ -1184,3 +1187,7 @@ WENDY.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Só o vazio permanece.",
 	BURNT = "Cinzas não alimentam ninguém.",
 }
+
+WENDY.DESCRIBE.CHICKENNUGGETS = "Até a galinha foi despedaçada."
+
+WENDY.DESCRIBE.CHICKENWINGS = "Dor, até no sabor."

@@ -78,6 +78,9 @@ WANDA.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "A sanidade nunca dura o suficiente..."
 WANDA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Bom. Um pouco mais de proteção economiza tempo precioso."
 WANDA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "E lá se foi. Tempo é tudo."
 
+WANDA.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Explosões curtas de imprudência!"
+WANDA.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Ótimo. Prefiro riscos calculados."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não... Preciso de algo diferente."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Acho que tenho tempo de pegar uma lagosta para você."
@@ -1184,3 +1187,7 @@ WANDA.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "O tempo da última refeição já passou faz muito.",
 	BURNT = "Fogo e tempo o destruíram.",
 }
+
+WANDA.DESCRIBE.CHICKENNUGGETS = "Eu não tenho tempo pra isso."
+
+WANDA.DESCRIBE.CHICKENWINGS = "Arde agora, arrepende depois."

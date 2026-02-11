@@ -78,6 +78,9 @@ WURT.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Brains feel funny again, glorp..."
 WURT.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Feel strong, florp!"
 WURT.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Feeling weak, glurgh..."
 
+WURT.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Wurt strong! But squishy, too!"
+WURT.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Wurt not extra strong anymore..."
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Pretty fishes are in swamp!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... wrong..."
@@ -1186,3 +1189,7 @@ WURT.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Empty!",
 	BURNT = "Fire ruin it! Glurgh...",
 }
+
+WURT.DESCRIBE.CHICKENNUGGETS = "Poor chickens... *snif*"
+
+WURT.DESCRIBE.CHICKENWINGS = "Why do that to chicken?!"

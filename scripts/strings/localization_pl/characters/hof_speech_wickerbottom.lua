@@ -78,6 +78,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Moja kognicja wróciła do normy
 WICKERBOTTOM.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Fascynujące. Energie wzmacniają moje ciało."
 WICKERBOTTOM.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Szkoda. Wzmocnienie się rozproszyło."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Tymczasowy wzrost agresji i podatności na obrażenia."
+WICKERBOTTOM.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Moja kondycja zdaje się ustabilizowana."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzeba czegoś jeszcze."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. Chyba mówił coś o homarach."
@@ -1184,3 +1187,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Musi zostać natychmiast napełnione.",
 	BURNT = "Całkowicie bezużyteczne.",
 }
+
+WICKERBOTTOM.DESCRIBE.CHICKENNUGGETS = "Nadmiernie przetworzony produkt drobiowy."
+
+WICKERBOTTOM.DESCRIBE.CHICKENWINGS = "Ptasie przydatki bogate w kapsaicynę."

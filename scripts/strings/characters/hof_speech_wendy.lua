@@ -78,6 +78,9 @@ WENDY.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Clarity fades... the darkness returns."
 WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Even the unseen shields me from harm."
 WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "The unseen shield has faded."
 
+WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Pain for pain. A fair exchange."
+WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "The fury fades, as all things do."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to gather?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Of course it's not what this stupid creature wants."
@@ -1184,3 +1187,7 @@ WENDY.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Only emptiness remains.",
 	BURNT = "Ashes feed no one.",
 }
+
+WENDY.DESCRIBE.CHICKENNUGGETS = "Even the chicken was broken into pieces."
+
+WENDY.DESCRIBE.CHICKENWINGS = "Pain, even in flavor."

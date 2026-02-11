@@ -78,6 +78,9 @@ WENDY.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "明晰渐逝……黑暗重临。"
 WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "即使是看不见的屏障也能保护我免受伤害。"
 WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "那看不见的屏障已经消失了。"
 
+WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Pain for pain. A fair exchange."
+WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "The fury fades, as all things do."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "或许可以收集些什么？"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "当然，这并非这只愚蠢的生物所希望的。"
@@ -1184,3 +1187,7 @@ WENDY.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Only emptiness remains.",
 	BURNT = "Ashes feed no one.",
 }
+
+WENDY.DESCRIBE.CHICKENNUGGETS = "Even the chicken was broken into pieces."
+
+WENDY.DESCRIBE.CHICKENWINGS = "Pain, even in flavor."

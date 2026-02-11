@@ -78,6 +78,9 @@ WENDY.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Jasność znika... ciemność powraca."
 WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Nawet to, czego nie widać, chroni mnie przed krzywdą."
 WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Niewidzialna tarcza zniknęła."
 
+WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Ból za ból. Sprawiedliwa wymiana."
+WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Furia przemija, jak wszystko."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może warto coś zebrać?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Oczywiście, że nie tego chce to głupie stworzenie."
@@ -1184,3 +1187,7 @@ WENDY.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Pozostaje tylko pustka.",
 	BURNT = "Popiół nikogo nie nakarmi.",
 }
+
+WENDY.DESCRIBE.CHICKENNUGGETS = "Nawet kurczak został rozbity na kawałki."
+
+WENDY.DESCRIBE.CHICKENWINGS = "Ból, nawet w smaku."

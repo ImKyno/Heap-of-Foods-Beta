@@ -78,6 +78,9 @@ WATHGRITHR.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Minha mente enfraquece na batalha 
 WATHGRITHR.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Os deuses me concederam seu escudo!"
 WATHGRITHR.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "O escudo dos deuses me abandona!"
 
+WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_START = "A fúria da batalha corre em minhas veias!"
+WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_END = "A fúria da batalha enfraquece..."
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Errado!"
@@ -1184,3 +1187,7 @@ WATHGRITHR.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "O cocho permanece vazio!",
 	BURNT = "Abatido pelo fogo!",
 }
+
+WATHGRITHR.DESCRIBE.CHICKENNUGGETS = "A carne foi moldada sem honra!"
+
+WATHGRITHR.DESCRIBE.CHICKENWINGS = "Asas em chamas dignas de um guerreiro!"

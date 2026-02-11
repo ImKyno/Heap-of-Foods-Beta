@@ -78,6 +78,9 @@ WANDA.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Sanity never stays long enough..."
 WANDA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Good. A little extra protection saves precious time."
 WANDA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "There it goes. Timing is everything."
 
+WANDA.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Short bursts of recklessness!"
+WANDA.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Good. I prefer calculated risks."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "No... I need something different."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I guess I have some time to get a wobster for you."
@@ -1184,3 +1187,7 @@ WANDA.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Exactly as expected.",
 	BURNT = "That outcome was inevitable.",
 }
+
+WANDA.DESCRIBE.CHICKENNUGGETS = "I don't have time for this."
+
+WANDA.DESCRIBE.CHICKENWINGS = "Burns now, regrets later."

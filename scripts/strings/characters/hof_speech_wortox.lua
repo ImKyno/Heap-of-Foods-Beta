@@ -78,6 +78,9 @@ WORTOX.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Oh boo, confusion again!"
 WORTOX.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "You can't hurt me now!"
 WORTOX.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Back to being a little more squishy."
 
+WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Such delicious danger!"
+WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Aw, the risky fun is over!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I know this prank was good, but let's get the real thing."
@@ -1184,3 +1187,7 @@ WORTOX.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "No food left!",
 	BURNT = "Ash and smoke!",
 }
+
+WORTOX.DESCRIBE.CHICKENNUGGETS = "Tiny chicken nuggets."
+
+WORTOX.DESCRIBE.CHICKENWINGS = "Hot-hot wings, hot, hot!"

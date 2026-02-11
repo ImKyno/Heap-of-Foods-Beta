@@ -78,6 +78,9 @@ WALTER.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Ei! Eu tava pensando direitinho!"
 WALTER.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Agora eu definitivamente me sinto mais seguro."
 WALTER.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Acho que não posso mais contar com isso."
 
+WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Uau! Eu me sinto destemido! Talvez destemido demais..."
+WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Ok, respira fundo. De volta ao normal."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Coisa errada!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, não é este."
@@ -1184,3 +1187,7 @@ WALTER.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Acho que é hora de comer.",
 	BURNT = "Isso não acabou bem.",
 }
+
+WALTER.DESCRIBE.CHICKENNUGGETS = "Não seria minha primeira opção para acampar, mas vai servir."
+
+WALTER.DESCRIBE.CHICKENWINGS = "Arde, mas vale a pena!"

@@ -88,6 +88,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXQUISITE = "Exquisite meal"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CURSE_MONKEY = "Breaks monkey curse"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRAFTING = "Stimulates the brain"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BEEFRIENDLY = "Pacifies nearby bees"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BERSERKER = "Stimulates aggression"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Green-ish vegetable, the king of grasslands and rainforests. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "One of the many sea gifts, very appreciated by men of culture. -W"
@@ -1957,3 +1958,7 @@ STRINGS.RECIPE_DESC.KYNO_FISHREGISTRYHAT = "Every sailor needs to know what's bi
 
 STRINGS.NAMES.KYNO_ANIMALFEEDER = "Feeding Trough"
 STRINGS.RECIPE_DESC.KYNO_ANIMALFEEDER = "Keeps your animals well-nourished."
+
+STRINGS.NAMES.CHICKENNUGGETS = "Chicken Nuggets"
+
+STRINGS.NAMES.CHICKENWINGS = "Hot Chicken Wings"

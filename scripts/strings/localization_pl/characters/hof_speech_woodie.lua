@@ -78,6 +78,9 @@ WOODIE.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "No i koniec dobrych myśli."
 WOODIE.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Czuję się, jakby nic nie mogło mnie teraz powalić!"
 WOODIE.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "No cóż, znowu trzeba uważać."
 
+WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Chyba macham mocniej niż zwykle!"
+WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Spokojnie, wracamy do normy."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może coś do podniesienia?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. On chce czegoś innego."
@@ -1184,3 +1187,7 @@ WOODIE.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Brak karmy.",
 	BURNT = "Cóż, koniec z tym.",
 }
+
+WOODIE.DESCRIBE.CHICKENNUGGETS = "Dobry kąsek, co nie?"
+
+WOODIE.DESCRIBE.CHICKENWINGS = "Te mają niezłego kopa!"

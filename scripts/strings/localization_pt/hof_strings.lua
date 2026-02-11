@@ -88,6 +88,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXQUISITE = "Refeição luxuosa"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CURSE_MONKEY = "Quebra a maldição do macaco"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRAFTING = "Estimula o cérebro"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BEEFRIENDLY = "Pacifica abelhas próximas"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BERSERKER = "Estimula agressão"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Vegetal esverdeado, o rei das pastagens e florestas tropicais. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Um dos muitos presentes do mar, muito apreciado pelos homens de cultura. -W"
@@ -1957,3 +1958,7 @@ STRINGS.RECIPE_DESC.KYNO_FISHREGISTRYHAT = "Todo marujo precisa saber o que est�
 
 STRINGS.NAMES.KYNO_ANIMALFEEDER = "Cocho de Alimentação"
 STRINGS.RECIPE_DESC.KYNO_ANIMALFEEDER = "Mantém seus animais bem nutridos."
+
+STRINGS.NAMES.CHICKENNUGGETS = "Nuggets de Frango"
+
+STRINGS.NAMES.CHICKENWINGS = "Asinhas de Frango Flamejantes"

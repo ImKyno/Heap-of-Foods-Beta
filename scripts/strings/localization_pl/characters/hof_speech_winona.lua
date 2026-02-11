@@ -78,6 +78,9 @@ WINONA.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Tracę koncentrację... niedobrze."
 WINONA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "To całkiem solidna dodatkowa ochrona."
 WINONA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Ochrona zniknęła!"
 
+WINONA.ANNOUNCE_KYNO_BERSERKERBUFF_START = "No dobra, większy cios, ale muszę uważać."
+WINONA.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Z powrotem do normalnego zużycia."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie, może coś innego."
@@ -1184,3 +1187,7 @@ WINONA.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Kompletnie puste.",
 	BURNT = "Całkowita strata.",
 }
+
+WINONA.DESCRIBE.CHICKENNUGGETS = "Szybkie, proste, robi robotę."
+
+WINONA.DESCRIBE.CHICKENWINGS = "To dopiero stawia na nogi."

@@ -35,9 +35,41 @@ table.insert(ScrapbookData.sharkboi.deps, "blueprint")
 
 ScrapbookData.chum.fueltype = "FISHFOOD"
 ScrapbookData.chum.fuelvalue = 270
+ScrapbookData.potatosack.speechname = "potatosack"
+ScrapbookData.potatosack.craftingprefab = "wolfgang"
+ScrapbookData.potatosack.burnable = true
+ScrapbookData.potatosack.deps = {"cutgrass", "papyrus", "rope", "potato", "potato_cooked", "potato_seeds", "kyno_sweetpotato", "kyno_sweetpotato_cooked", "kyno_sweetpotato_seeds"}
+ScrapbookData.potatosack.specialinfo = "POTATOSACK"
 
 ScrapbookData.lobsterdinner.specialinfo = "FOODEFFECTS_EXQUISITE"
+ScrapbookData.monstertartare.healthvalue = -20
+ScrapbookData.monstertartare.hungervalue = 62.5
+ScrapbookData.monstertartare.sanityvalue = -20
+ScrapbookData.monstertartare.specialinfo = "FOODEFFECTS_MONSTERFOOD"
 
+ScrapbookData.red_cap.deps = {"red_cap_cooked", "kyno_red_cap_dried", "meatrack", "meatrack_hermit", "spoiled_food"}
+ScrapbookData.green_cap.deps = {"green_cap_cooked", "kyno_green_cap_dried", "meatrack", "meatrack_hermit", "spoiled_food"}
+ScrapbookData.blue_cap.deps = {"blue_cap_cooked", "kyno_blue_cap_dried", "meatrack", "meatrack_hermit", "spoiled_food"}
+ScrapbookData.moon_cap.deps = {"moon_cap_cooked", "kyno_moon_cap_dried", "meatrack", "meatrack_hermit", "spoiled_food"}
+ScrapbookData.plantmeat.deps = {"plantmeat_cooked", "kyno_plantmeat_dried", "meatrack", "meatrack_hermit", "spoiled_food"}
+ScrapbookData.firenettles.animoffsety = -15
+ScrapbookData.firenettles.animoffsetbgx = -15
+ScrapbookData.firenettles.animoffsetbgy = -25
+ScrapbookData.firenettles_dried.scale = 2
+ScrapbookData.firenettles_dried.animoffsetx = 10
+ScrapbookData.firenettles_dried.animoffsety = -10
+ScrapbookData.firenettles_dried.animoffsetbgx = -20
+ScrapbookData.firenettles_dried.animoffsetbgy = 20
+ScrapbookData.forgetmelots.anim = "idle2"
+ScrapbookData.forgetmelots.animoffsety = -10
+ScrapbookData.forgetmelots.animoffsetbgy = -20
+ScrapbookData.forgetmelots_dried.animoffsetbgx = -10
+ScrapbookData.forgetmelots_dried.animoffsetbgy = -20
+ScrapbookData.tillweed.animoffsetx = 30
+ScrapbookData.tillweed.animoffsety = 50
+ScrapbookData.tillweed.animoffsetbgy = -100
+ScrapbookData.tillweed_dried.animoffsetx = -5
+ScrapbookData.tillweed_dried.animoffsetbgx = -15
 ScrapbookData.fishmeat_small_dried.specialinfo = "DRYAGAIN"
 ScrapbookData.fishmeat_dried.specialinfo = "DRYAGAIN"
 ScrapbookData.fishmeat.sliceable = true
@@ -135,23 +167,6 @@ local preparedfood_deps =
 -- Scrapbook Entries tables.
 local HOF_SCRAPBOOK_ITEMS =
 {
-	potatosack         =
-	{
-		name           = "potatosack",
-		speechname     = "potatosack",
-		type           = "item",
-		tex            = "potato_sack_full.tex",
-		prefab         = "potatosack",
-		craftingprefab = "wolfgang",
-		workable       = "HAMMER",
-		burnable       = true,
-		bank           = "potato_sack_empty",
-		build          = "potato_sack",
-		anim           = "idle_full",
-		deps           = {"cutgrass", "papyrus", "rope"},
-		specialinfo    = "POTATOSACK",
-	},
-
 	turf_pinkpark      =
 	{
 		name           = "turf_pinkpark",
@@ -1691,170 +1706,6 @@ local HOF_SCRAPBOOK_ITEMS =
 
 local HOF_SCRAPBOOK_FOODS =
 {
-	red_cap            = 
-	{
-		name           = "red_cap",
-		type           = "food",
-		tex            = "red_cap.tex",
-		prefab         = "red_cap",
-		healthvalue    = -20,
-		hungervalue    = 12.5,
-		sanityvalue    = 0,
-		perishable     = 4800,
-		stacksize      = 40,
-		burnable       = true,
-		foodtype       = "VEGGIE",
-		bank           = "mushrooms",
-		build          = "mushrooms",
-		anim           = "red_cap",
-		deps           = {"red_cap_cooked", "kyno_red_cap_dried", "meatrack", "meatrack_hermit", "spoiled_food"},
-	},
-	
-	green_cap          = 
-	{
-		name           = "green_cap",
-		type           = "food",
-		tex            = "green_cap.tex",
-		prefab         = "green_cap",
-		healthvalue    = 0,
-		hungervalue    = 12.5,
-		sanityvalue    = -50,
-		perishable     = 4800,
-		stacksize      = 40,
-		burnable       = true,
-		foodtype       = "VEGGIE",
-		bank           = "mushrooms",
-		build          = "mushrooms",
-		anim           = "green_cap",
-		deps           = {"green_cap_cooked", "kyno_green_cap_dried", "meatrack", "meatrack_hermit", "spoiled_food"},
-	},
-	
-	blue_cap           = 
-	{
-		name           = "blue_cap",
-		type           = "food",
-		tex            = "blue_cap.tex",
-		prefab         = "blue_cap",
-		healthvalue    = 20,
-		hungervalue    = 12.5,
-		sanityvalue    = -15,
-		perishable     = 4800,
-		stacksize      = 40,
-		burnable       = true,
-		foodtype       = "VEGGIE",
-		bank           = "mushrooms",
-		build          = "mushrooms",
-		anim           = "blue_cap",
-		deps           = {"blue_cap_cooked", "kyno_blue_cap_dried", "meatrack", "meatrack_hermit", "spoiled_food"},
-	},
-	
-	moon_cap           = 
-	{
-		name           = "moon_cap",
-		type           = "food",
-		tex            = "moon_cap.tex",
-		prefab         = "moon_cap",
-		healthvalue    = 0,
-		hungervalue    = 12.5,
-		sanityvalue    = 10,
-		perishable     = 4800,
-		stacksize      = 40,
-		burnable       = true,
-		foodtype       = "VEGGIE",
-		bank           = "mushrooms",
-		build          = "mushrooms",
-		anim           = "moon_cap",
-		deps           = {"moon_cap_cooked", "kyno_moon_cap_dried", "meatrack", "meatrack_hermit", "spoiled_food"},
-	},
-	
-	plantmeat          =
-	{
-		name           = "plantmeat",
-		type           = "food",
-		tex            = "plantmeat.tex",
-		prefab         = "plantmeat",
-		healthvalue    = 0,
-		hungervalue    = 12.5,
-		sanityvalue    = -10,
-		perishable     = 2880,
-		stacksize      = 20,
-		foodtype       = "MEAT",
-		bank           = "plant_meat",
-		build          = "plant_meat",
-		anim           = "raw",
-		deps           = {"plantmeat_cooked", "kyno_plantmeat_dried", "meatrack", "meatrack_hermit", "spoiled_food"},
-	},
-	
-	-- I've edited the weeds animation files to be compatible with Farm Plots.
-	firenettles        =
-	{
-		name           = "firenettles", 
-		type           = "food",
-		tex            = "firenettles.tex",
-		prefab         = "firenettles",
-		healthvalue    = -3,
-		hungervalue    = 0,
-		sanityvalue    = -5,
-		perishable     = 1440,
-		fueltype       = "BURNABLE",
-		fuelvalue      = 15,
-		stacksize      = 40,
-		burnable       = true,
-		foodtype       = "VEGGIE",
-		bank           = "firenettles",
-		build          = "firenettles",
-		anim           = "idle",
-		animoffsetbgx  = -15,
-		animoffsetbgy  = -25,
-		deps           = {"spoiled_food"},
-	},
-	
-	forgetmelots       =
-	{
-		name           = "forgetmelots", 
-		type           = "food",
-		tex            = "forgetmelots.tex",
-		prefab         = "forgetmelots",
-		healthvalue    = 0,
-		hungervalue    = 0,
-		sanityvalue    = 1,
-		perishable     = 1440,
-		fueltype       = "BURNABLE",
-		fuelvalue      = 7.5,
-		stacksize      = 40,
-		burnable       = true,
-		foodtype       = "VEGGIE",
-		bank           = "forgetmelots",
-		build          = "forgetmelots",
-		anim           = "idle2",
-		animoffsetbgy  = -20,
-		deps           = {"spoiled_food"},
-	},
-	
-	tillweed           = 
-	{
-		name           = "tillweed", 
-		type           = "food",
-		tex            = "tillweed.tex",
-		prefab         = "tillweed",
-		healthvalue    = 1,
-		hungervalue    = 0,
-		sanityvalue    = 0,
-		perishable     = 2880,
-		fueltype       = "BURNABLE",
-		fuelvalue      = 7.5,
-		stacksize      = 40,
-		burnable       = true,
-		foodtype       = "VEGGIE",
-		bank           = "tillweed",
-		build          = "tillweed",
-		anim           = "idle",
-		animoffsetx    = 30,
-		animoffsety    = 30,
-		animoffsetbgy  = -80,
-		deps           = {"spoiled_food"},
-	},
-	
 	wetgoop2           =
 	{
 		name           = "wetgoop2",
@@ -2078,7 +1929,7 @@ local HOF_SCRAPBOOK_FOODS =
 		tex            = "kyno_oil.tex",
 		prefab         = "kyno_oil",
 		healthvalue    = 0,
-		hungervalue    = 3.375,
+		hungervalue    = 2.375,
 		sanityvalue    = -10,
 		stacksize      = 40,
 		foodtype       = "VEGGIE",
@@ -2179,7 +2030,6 @@ local HOF_SCRAPBOOK_FOODS =
 		healthvalue    = 5,
 		hungervalue    = 18.75,
 		sanityvalue    = 5,
-		perishable     = 2880,
 		foodtype       = "MEAT",
 		bank           = "kyno_chicken_eggs_large",
 		build          = "kyno_chicken_eggs_large",
@@ -6020,8 +5870,8 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
         type           = "food",
 		tex            = "gorge_bread.tex",
         prefab         = "gorge_bread",
-		healthvalue    = 3,
-		hungervalue    = 12.5,
+		healthvalue    = 1,
+		hungervalue    = 6.375,
 		sanityvalue    = 0,
         perishable     = 19200,
         foodtype       = "VEGGIE",
@@ -7379,9 +7229,9 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
         type           = "food",
 		tex            = "kyno_syrup.tex",
         prefab         = "kyno_syrup",
-		healthvalue    = 3,
-		hungervalue    = 9.375,
-		sanityvalue    = 0,
+		healthvalue    = 0,
+		hungervalue    = 6.375,
+		sanityvalue    = 3,
         perishable     = 19200,
         foodtype       = "GOODIES",
 		burnable       = true,
@@ -8374,8 +8224,8 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		tex            = "littlebread.tex",
         prefab         = "littlebread",
 		healthvalue    = 0,
-		hungervalue    = 12.5,
-		sanityvalue    = 5,
+		hungervalue    = 6.375,
+		sanityvalue    = 1,
         perishable     = 19200,
         foodtype       = "VEGGIE",
 		burnable       = true,
@@ -9849,33 +9699,55 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		deps           = preparedfood_deps,
 		specialinfo    = "FOODEFFECTS_CRAFTING",
 	},
+	
+	chickennuggets     =
+	{
+		name           = "chickennuggets",
+		type           = "food",
+		tex            = "chickennuggets.tex",
+		prefab         = "chickennuggets",
+		healthvalue    = 15,
+		hungervalue    = 32.5,
+		sanityvalue    = 5,
+		perishable     = 3840,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "kyno_foodrecipes",
+		build          = "kyno_foodrecipes_cookpot1",
+		overridesymbol = {"swap_food", "kyno_foodrecipes_cookpot1", "chickennuggets"},
+		anim           = "chickennuggets",
+		animoffsetbgx  = -10,
+		animoffsetbgy  = -10,
+		deps           = preparedfood_deps,
+	},
+	
+	chickenwings       =
+	{
+		name           = "chickenwings",
+		type           = "food",
+		tex            = "chickenwings.tex",
+		prefab         = "chickenwings",
+		healthvalue    = -15,
+		hungervalue    = 42.5,
+		sanityvalue    = 10,
+		perishable     = 3840,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "kyno_foodrecipes",
+		build          = "kyno_foodrecipes_cookpot1",
+		overridesymbol = {"swap_food", "kyno_foodrecipes_cookpot1", "chickenwings"},
+		anim           = "chickenwings",
+		animoffsety    = 10,
+		animoffsetbgy  = -40,
+		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_BERSERKER",
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =
 { 
-	-- monstertartare needs to be keep up to date.
-	-- I don't know how to override base game items yet.
-	monstertartare     =
-	{
-		name           = "monstertartare",	
-        type           = "food",
-		tex            = "monstertartare.tex",
-        prefab         = "monstertartare",
-		healthvalue    = -20,
-		hungervalue    = 62.5,
-		sanityvalue    = -20,
-        perishable     = 4800,
-        foodtype       = "MEAT",
-		burnable       = true,
-		stacksize      = 40,
-		bank           = "cook_pot_food",
-		build          = "cook_pot_food",
-		overridesymbol = {"swap_food", "cook_pot_food", "monstertartare"},
-		anim           = "idle",
-        deps           = {"portablecookpot", "spoiled_food"},
-		specialinfo    = "FOODEFFECTS_MONSTERFOOD",
-	},
-
 	musselbouillabaise =
 	{
 		name           = "musselbouillabaise",	
@@ -14956,25 +14828,6 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 
 local HOF_SCRAPBOOK_CREATURES =
 {
-	--[[
-	lordfruitfly       = 
-	{
-		name           = "lordfruitfly", 
-		type           = "giant",
-		subcat         = "smallepic",
-		prefab         = "lordfruitfly",
-		tex            = "lordfruitfly.tex", 
-		health         = 1500, 
-		sanityaura     = -0.41666666666667,
-		damage         = 25, 
-		bank           = "fruitfly",
-		build          = "fruitfly_evil",  
-		anim           = "idle", 
-		animoffsety    = 70, 
-		deps           = {"fruitfly", "fruitflyfruit", "plantmeat", "blueprint"},
-	},
-	]]--
-	
 	kyno_chicken2      =
 	{
 		name           = "kyno_chicken2",

@@ -78,6 +78,9 @@ WANDA.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Rozsądek nigdy nie trwa długo..."
 WANDA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Dobrze. Trochę dodatkowej ochrony oszczędza cenny czas."
 WANDA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "I po wszystkim. Czas to podstawa."
 
+WANDA.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Krótkie wybuchy brawury. Jakże wyczerpujące."
+WANDA.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Dobrze. Wolę ryzyko pod kontrolą."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie... Potrzebuję czegoś innego."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Chyba mam trochę czasu, żeby kupić ci homara."
@@ -1184,3 +1187,7 @@ WANDA.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Dokładnie tak, jak się spodziewałem.",
 	BURNT = "Ten wynik był nieunikniony.",
 }
+
+WANDA.DESCRIBE.CHICKENNUGGETS = "Nie mam na to czasu."
+
+WANDA.DESCRIBE.CHICKENWINGS = "Piecze teraz, żal później."

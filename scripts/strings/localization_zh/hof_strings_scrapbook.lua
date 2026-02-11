@@ -114,6 +114,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "食用此食物后，�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "在一定时间内将最大饥饿值提升15%。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "在一定时间内将最大健康值提升15%。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "在一定时间内将最大理智值提升15%。\n\n庆祝更多料理五周年！"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BERSERKER = "Increased damage and decreased damage resistance for a certain amount of time."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含防腐粉末的料理可使腐败速率减半，并免除食用变质食物的惩罚。"

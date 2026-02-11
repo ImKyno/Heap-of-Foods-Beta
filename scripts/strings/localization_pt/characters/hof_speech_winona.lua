@@ -78,6 +78,9 @@ WINONA.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Perdendo o foco... nada bom."
 WINONA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Uma bela camada extra de proteção."
 WINONA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Proteção acabou!"
 
+WINONA.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Beleza, mais impacto, mas melhor eu tomar cuidado."
+WINONA.ANNOUNCE_KYNO_BERSERKERBUFF_END = "De volta ao desgaste normal."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, talvez outra coisa."
@@ -1184,3 +1187,7 @@ WINONA.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Seco até o osso.",
 	BURNT = "Perda total.",
 }
+
+WINONA.DESCRIBE.CHICKENNUGGETS = "Rápido, fácil, resolve o problema."
+
+WINONA.DESCRIBE.CHICKENWINGS = "Isso sim te acorda."

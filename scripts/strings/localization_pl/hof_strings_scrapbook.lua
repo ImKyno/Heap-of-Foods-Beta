@@ -114,6 +114,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "Zjedzenie tego jedzenia
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "Zwiększa maksymalny głód o 15% na pewien czas.\n\nŚwiętując 5. rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "Zwiększa maksymalne zdrowie o 15% na pewien czas.\n\nŚwiętując 5. rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "Zwiększa maksymalną poczytalność o 15% na pewien czas.\n\nŚwiętując 5. rocznicę Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BERSERKER = "Zwiększone obrażenia i zmniejszona odporność na obrażenia przez pewien czas."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Może być dodany do jedzenia w garnku za pomocą przenośnej stacji przypraw.\n\nJedzenie przyprawione Preserver Powder zmniejsza czas psucia się o połowę i neguje kary za zepsute jedzenie."

@@ -78,6 +78,9 @@ WOLFGANG.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Mózg Wolfgang znowu słaby!"
 WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Wolfgang jest chroniony potężną mocą!"
 WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Moc opuszcza Wolfganga..."
 
+WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Wolfgang jest NIEPOWSTRZYMANY! Miażdżyć wszystko!"
+WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Wolfgang już nie czuje wielkiej furii..."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "This is not what is needed."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mocny świnia nie chce tego."
@@ -1184,3 +1187,7 @@ WOLFGANG.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Nie ma jedzenia dla zwierząt.",
 	BURNT = "Karmnik już nie istnieje.",
 }
+
+WOLFGANG.DESCRIBE.CHICKENNUGGETS = "Małe kawałki kurczaka czynią Wolfganga trochę silnym."
+
+WOLFGANG.DESCRIBE.CHICKENWINGS = "Pikantne skrzydełka czynią Wolfganga BARDZO SILNYM!"

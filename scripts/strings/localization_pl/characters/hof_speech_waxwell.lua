@@ -78,6 +78,9 @@ WAXWELL.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Rozsądek tak łatwo ucieka..."
 WAXWELL.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Ach... same plany naginają się, by mnie chronić."
 WAXWELL.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Hmph. Plany cofają swoje względy."
 
+WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Jakże odurzająca brutalność."
+WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Znów boleśnie przeciętne."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję do tego czegoś innego."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie jesteś łatwy, prawda?"
@@ -1184,3 +1187,7 @@ WAXWELL.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Całkowicie opróżnione.",
 	BURNT = "Zniszczone bez możliwości naprawy.",
 }
+
+WAXWELL.DESCRIBE.CHICKENNUGGETS = "Dość pospolita przyjemność."
+
+WAXWELL.DESCRIBE.CHICKENWINGS = "Prostackie, lecz skuteczne."

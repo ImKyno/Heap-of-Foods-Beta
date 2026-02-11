@@ -78,6 +78,9 @@ WOODIE.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Aw, there go the good thoughts."
 WOODIE.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Feels like nothin' can knock me down right now!"
 WOODIE.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Well, back to bein' careful."
 
+WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Guess I'm swingin' harder than usual!"
+WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Easy there, back to normal."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to pick it up?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. He wants something else."
@@ -1184,3 +1187,7 @@ WOODIE.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "All outta feed.",
 	BURNT = "Well, that's done for.",
 }
+
+WOODIE.DESCRIBE.CHICKENNUGGETS = "Good snack, eh?"
+
+WOODIE.DESCRIBE.CHICKENWINGS = "These got a real kick to 'em!"

@@ -78,6 +78,9 @@ WATHGRITHR.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "My mind dulls to battle once more!
 WATHGRITHR.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Gods have grant me their shield!"
 WATHGRITHR.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Their shield abandons me!"
 
+WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Rage of battle surges through me!"
+WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_END = "The battle-fury wanes..."
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wrong feast! Beast wants a more delightful food!"
@@ -1184,3 +1187,7 @@ WATHGRITHR.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "The trough stands barren!",
 	BURNT = "Slain by fire!",
 }
+
+WATHGRITHR.DESCRIBE.CHICKENNUGGETS = "The flesh is dishonorably shaped!"
+
+WATHGRITHR.DESCRIBE.CHICKENWINGS = "Fiery wings fit for a warrior!"

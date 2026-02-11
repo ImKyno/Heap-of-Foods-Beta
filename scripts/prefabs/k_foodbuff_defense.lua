@@ -12,7 +12,7 @@ local function OnAttached(inst, target)
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_dmgreductionbuff", TUNING.KYNO_DMGREDUCTIONBUFF_SPEED)
 	end
 	
-	if target.components.health ~= nil then
+	if target.components.health ~= nil and target:HasTag("player") then
 		target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER, "kyno_dmgreductionbuff")
 	end
 	
@@ -28,7 +28,7 @@ local function OnDetached(inst, target)
 		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_dmgreductionbuff")
 	end
 	
-	if target.components.health ~= nil then
+	if target.components.health ~= nil and target:HasTag("player") then
 		target.components.health.externalabsorbmodifiers:RemoveModifier(target, "kyno_dmgreductionbuff")
 	end
 	
@@ -49,7 +49,7 @@ local function OnExtended(inst, target)
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_dmgreductionbuff", TUNING.KYNO_DMGREDUCTIONBUFF_SPEED)
 	end
 	
-	if target.components.health ~= nil then
+	if target.components.health ~= nil and target:HasTag("player") then
 		target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER, "kyno_dmgreductionbuff")
 	end
 end

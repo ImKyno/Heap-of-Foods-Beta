@@ -270,8 +270,8 @@ local kyno_foods =
 		priority = 1,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SUPERSLOW,
-		health = 3,
-		hunger = 12.5,
+		health = 1,
+		hunger = 6.375,
 		sanity = 0,
 		cooktime = 1,
 		stacksize = 3,
@@ -1257,9 +1257,9 @@ local kyno_foods =
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
-		health = 3,
-		hunger = 9.375,
-		sanity = 0,
+		health = 0,
+		hunger = 6.375,
+		sanity = 3,
 		cooktime = 1,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_gorge",
@@ -2081,8 +2081,8 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		health = 0,
-		hunger = 12.5,
-		sanity = 5,
+		hunger = 6.375,
+		sanity = 1,
 		cooktime = 1,
 		stacksize = 3,
 		potlevel = "low",
@@ -2828,7 +2828,7 @@ local kyno_foods =
 	coxinha =
 	{
 		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) and tags.flour and tags.oil
-		and tags.spotspice end,
+		and (names.garlic or names.garlic_cooked) end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
@@ -3177,6 +3177,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		tags = {"truffles"},
 		card_def = {ingredients = {{"kyno_truffles", 2}, {"kyno_flour", 1}, {"meat", 1}}},
+		prefabs = { "kyno_trufflesbuff" },
 		oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_trufflesbuff", "kyno_trufflesbuff")
 		end,
@@ -3304,6 +3305,45 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_brainrock_coral", 1}, {"kyno_jellyfish", 1}, {"kyno_seaweeds", 2}}},
 		oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_craftingbuff", "kyno_craftingbuff")
+		end,
+	},
+	
+	chickennuggets =
+	{
+		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) and tags.flour and tags.oil and tags.spotspice end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FASTISH,
+		health = 15,
+		hunger = 32.5,
+		sanity = 5,
+		cooktime = .5,
+		potlevel = "low",
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"drumstick", 1}, {"kyno_flour", 1}, {"kyno_oil", 1}, {"garlic", 1}}},
+	},
+	
+	chickenwings =
+	{
+		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) and tags.oil and tags.spotspice and tags.fireweed end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FASTISH,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = -15,
+		hunger = 42.5,
+		sanity = 10,
+		cooktime = 1,
+		potlevel = "med",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BERSERKER,
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"drumstick", 1}, {"kyno_oil", 1}, {"kyno_spotspice", 1}, {"firenettles", 1}}},
+		prefabs = { "kyno_berserkerbuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_berserkerbuff", "kyno_berserkerbuff")
 		end,
 	},
 }

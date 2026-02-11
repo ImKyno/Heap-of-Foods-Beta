@@ -78,6 +78,9 @@ WILSON.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Back to worrying again..."
 WILSON.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "I feel otherworldly forces reinforcing my defenses!"
 WILSON.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "The protection is wearing off."
 
+WILSON.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Fascinating! My strength has increased, though at a cost..."
+WILSON.ANNOUNCE_KYNO_BERSERKERBUFF_END = "My heightened aggression seems to have subsided."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It's not this one."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "He wants something else."
@@ -1184,3 +1187,7 @@ WILSON.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "The animals must be hungry.",
 	BURNT = "No more feeding happening here.",
 }
+
+WILSON.DESCRIBE.CHICKENNUGGETS = "Processed, breaded, and oddly fascinating."
+
+WILSON.DESCRIBE.CHICKENWINGS = "Never underestimate the power of brand recognition."

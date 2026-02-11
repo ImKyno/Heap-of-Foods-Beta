@@ -78,6 +78,9 @@ WAXWELL.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Sanity is so fleeting..."
 WAXWELL.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Shadows protect me!"
 WAXWELL.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "The shadows have withdraw their favor."
 
+WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Such intoxicating brutality."
+WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_END = "How dreadfully mundane again."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else for this."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You're not easy, aren't you?"
@@ -1184,3 +1187,7 @@ WAXWELL.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Completely drained.",
 	BURNT = "Ruined beyond recovery.",
 }
+
+WAXWELL.DESCRIBE.CHICKENNUGGETS = "A lowbrow indulgence."
+
+WAXWELL.DESCRIBE.CHICKENWINGS = "Crude, but effective."

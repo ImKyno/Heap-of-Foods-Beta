@@ -78,6 +78,9 @@ WURT.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Cabeça estranha de novo, glorp..."
 WURT.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Sentir forte, florp!"
 WURT.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Sentindo fraco, glurgh..."
 
+WURT.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Wurt forte! Mas molinha também!"
+WURT.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Wurt não tá super forte mais..."
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Peixes bonitinhos sempre estão no pantano!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... errado..."
@@ -1186,3 +1189,7 @@ WURT.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Vazio!",
 	BURNT = "Fogo estragou tudo! Glurgh...",
 }
+
+WURT.DESCRIBE.CHICKENNUGGETS = "Pobre galinhas... *snif*"
+
+WURT.DESCRIBE.CHICKENWINGS = "Porque fazer isso com as galinhas?!"

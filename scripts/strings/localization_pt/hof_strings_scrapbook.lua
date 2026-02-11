@@ -42,7 +42,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SANITYREGEN = "Proporciona regeneraç�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUPERREGEN = "Proporciona super regeneração corporal por um curto período."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WORMLIGHT = "Emite um brilho saudável por um curto período."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ALCOHOL = "Aumenta o dano e diminui a velocidade de movimento por um determinado período. Beba com moderação."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ALCOHOL2 = "Aumenta a resistência a dano e diminui a velocidade de movimento por um determinado período. Beba com moderação."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ALCOHOL2 = "Aumenta a resistência à dano e diminui a velocidade de movimento por um determinado período. Beba com moderação."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RUM = "Aumenta o dano contra piratas por um determinado período.\n\nNem as chamas nem as profundezas puderam me alcançar."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_TEQUILA = "Teleporta o sobrevivente para uma localização aleatória no mapa."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA = "O sabor único da Nuka-Cola é resultado da combinação de dezessete essências de frutas, balanceadas para realçar o sabor clássico de cola. Mate sua sede!"
@@ -114,6 +114,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "Comer este alimento far
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "Aumenta a Fome Máxima em 15% por um certo período de tempo.\n\nComemorando o 5º aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "Aumenta a Vida Máxima em 15% por um certo período de tempo.\n\nComemorando o 5º aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "Aumenta a Sanidade Máxima em 15% por um certo período de tempo.\n\nComemorando o 5º aniversário do Amontoado de Comidas!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BERSERKER = "Aumenta o dano e diminui a resistência à dano por um certo período de tempo."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Pó Conservante reduz pela metade o tempo de deterioração e anula penalidades de comida estragada."

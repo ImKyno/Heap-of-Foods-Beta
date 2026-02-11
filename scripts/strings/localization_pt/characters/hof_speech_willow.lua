@@ -78,6 +78,9 @@ WILLOW.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Ótimo, as coisas assustadoras voltara
 WILLOW.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Heh! Boa sorte tentando me machucar agora!"
 WILLOW.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Ahh, foi divertido enquanto durou."
 
+WILLOW.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Isso! Deixa tudo queimar!"
+WILLOW.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Ah, o fogo já apagou?"
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso colocar algo diferente aqui!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, coisa errada!"
@@ -1184,3 +1187,7 @@ WILLOW.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Nada sobrando pra mastigar.",
 	BURNT = "Oops. Acho que pegou fogo.",
 }
+
+WILLOW.DESCRIBE.CHICKENNUGGETS = "Não está pegando fogo. Decepcionante."
+
+WILLOW.DESCRIBE.CHICKENWINGS = "SIM! Finalmente, uma comida que queima de volta!"

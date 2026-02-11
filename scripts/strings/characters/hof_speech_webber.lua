@@ -78,6 +78,9 @@ WEBBER.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Uh-oh... things look spooky again."
 WEBBER.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Woah! We feel way tougher than before!"
 WEBBER.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Uh-oh... we don't feel so tough anymore."
 
+WEBBER.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Whoa! We hit super hard now!"
+WEBBER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "We feel less smashy now."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Not this one."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "We think this isn't the correct meal he wants."
@@ -1184,3 +1187,7 @@ WEBBER.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Uh-oh, no food!",
 	BURNT = "It's all burned up!",
 }
+
+WEBBER.DESCRIBE.CHICKENNUGGETS = "We like them! They're fun-sized!"
+
+WEBBER.DESCRIBE.CHICKENWINGS = "Spicy! Spicy! SPICY!"

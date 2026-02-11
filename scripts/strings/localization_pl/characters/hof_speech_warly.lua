@@ -78,6 +78,9 @@ WARLY.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Moje kulinarne skupienie znika..."
 WARLY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Ach! Niezwykle solidne uczucie ochrony!"
 WARLY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Ach... efekt ochronny wygasł."
 
+WARLY.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Ach! Jakaż śmiała i lekkomyślna witalność!"
+WARLY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Intensywność opadła."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Źle, źle..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Masz ochotę na coś jeszcze pyszniejszego?"
@@ -1184,3 +1187,7 @@ WARLY.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Nic do podania.",
 	BURNT = "Niezwykle bolesna strata.",
 }
+
+WARLY.DESCRIBE.CHICKENNUGGETS = "Nieco prymitywne, lecz pocieszające."
+
+WARLY.DESCRIBE.CHICKENWINGS = "Ach! Jakże śmiały profil przypraw!"

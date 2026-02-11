@@ -1,7 +1,7 @@
 local function OnTick(inst, target)
 	if target.components.sanity ~= nil then
 		if target.components.health ~= nil and not target.components.health:IsDead() and not target:HasTag("playerghost") then
-			target.components.sanity:DoDelta(-10)
+			target.components.sanity:DoDelta(TUNING.KYNO_INSANITYBUFF_TICK_VALUE, nil, "kyno_insanitybuff")
 		else
 			inst.components.debuff:Stop()
 		end

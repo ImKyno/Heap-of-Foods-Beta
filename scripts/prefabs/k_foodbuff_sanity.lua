@@ -19,31 +19,8 @@ local function OnAttached(inst, target)
     end, target)
 end
 
-local function OnAttachedSanity(inst, target)
-	inst.entity:SetParent(target.entity)
-    inst.Transform:SetPosition(0, 0, 0)
-	
-	if target.components.talker and target:HasTag("player") then 
-		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_SANITYRATEBUFF_START"))
-	end
-	
-	if target.components.sanity ~= nil then
-		target.components.sanity.externalmodifiers:SetModifier(target, TUNING.KYNO_SANITYRATEBUFF_MODIFIER)
-	end
-	
-    inst:ListenForEvent("death", function()
-        inst.components.debuff:Stop()
-    end, target)
-end
-
 local function OnTimerDone(inst, data)
     if data.name == "regenover" then
-        inst.components.debuff:Stop()
-    end
-end
-
-local function OnTimerDoneSanity(inst, data)
-    if data.name == "kyno_sanityratebuff" then
         inst.components.debuff:Stop()
     end
 end
@@ -54,27 +31,6 @@ local function OnExtended(inst, target)
 	
     inst.task:Cancel()
     inst.task = inst:DoPeriodicTask(TUNING.JELLYBEAN_TICK_RATE, OnTick, nil, target)
-end
-
-local function OnExtendedSanity(inst, target)
-	inst.components.timer:StopTimer("kyno_sanityratebuff")
-    inst.components.timer:StartTimer("kyno_sanityratebuff", TUNING.KYNO_SANITYRATEBUFF_DURATION)
-	
-	if target.components.sanity ~= nil then
-		target.components.sanity.externalmodifiers:SetModifier(target, TUNING.KYNO_SANITYRATEBUFF_MODIFIER)
-	end
-end
-
-local function OnDetachedSanity(inst, target)	
-	if target.components.sanity ~= nil then
-		target.components.sanity.externalmodifiers:RemoveModifier(target, "kyno_sanityratebuff")
-	end
-	
-	if target.components.talker and target:HasTag("player") then 
-		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_SANITYRATEBUFF_END"))
-	end
-	
-    inst:Remove()
 end
 
 local function fn()
@@ -103,6 +59,52 @@ local function fn()
     inst:ListenForEvent("timerdone", OnTimerDone)
 
     return inst
+end
+----------------------------------------------------------------------
+-- SANITYRATE BUFF
+----------------------------------------------------------------------
+local function OnAttachedSanity(inst, target)
+	inst.entity:SetParent(target.entity)
+    inst.Transform:SetPosition(0, 0, 0)
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_SANITYRATEBUFF_START"))
+	end
+	
+	if target.components.sanity ~= nil then
+		target.components.sanity.externalmodifiers:SetModifier(target, TUNING.KYNO_SANITYRATEBUFF_MODIFIER, "kyno_sanityratebuff")
+	end
+	
+    inst:ListenForEvent("death", function()
+        inst.components.debuff:Stop()
+    end, target)
+end
+
+local function OnTimerDoneSanity(inst, data)
+    if data.name == "kyno_sanityratebuff" then
+        inst.components.debuff:Stop()
+    end
+end
+
+local function OnExtendedSanity(inst, target)
+	inst.components.timer:StopTimer("kyno_sanityratebuff")
+    inst.components.timer:StartTimer("kyno_sanityratebuff", TUNING.KYNO_SANITYRATEBUFF_DURATION)
+	
+	if target.components.sanity ~= nil then
+		target.components.sanity.externalmodifiers:SetModifier(target, TUNING.KYNO_SANITYRATEBUFF_MODIFIER, "kyno_sanityratebuff")
+	end
+end
+
+local function OnDetachedSanity(inst, target)	
+	if target.components.sanity ~= nil then
+		target.components.sanity.externalmodifiers:RemoveModifier(target, "kyno_sanityratebuff")
+	end
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_SANITYRATEBUFF_END"))
+	end
+	
+    inst:Remove()
 end
 
 local function sanityfn()

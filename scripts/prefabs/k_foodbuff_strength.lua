@@ -60,71 +60,6 @@ local function OnTimerDone(inst, data)
     end
 end
 
----------------------------
--- Med Buff.
----------------------------
-
-local function OnAttachedMed(inst, target)	
-	inst.entity:SetParent(target.entity)
-    inst.Transform:SetPosition(0, 0, 0)
-
-	if target.components.talker and target:HasTag("player") then 
-		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_START"))
-	end
-	
-	if target.components.locomotor ~= nil and target:HasTag("player") then
-		target:AddTag("groggy")
-		
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_strengthbuff_med", TUNING.KYNO_ALCOHOL_SPEED)
-	end	
-		
-	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_MEDSMALL, "kyno_strengthbuff_med")
-	end
-	
-    inst:ListenForEvent("death", function()
-        inst.components.debuff:Stop()
-    end, target)
-end
-
-local function OnDetachedMed(inst, target)
-	if target.components.locomotor ~= nil and target:HasTag("player") then
-		target:RemoveTag("groggy")
-		
-		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_strengthbuff_med")
-	end
-	
-	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.externaldamagemultipliers:RemoveModifier(target, "kyno_strengthbuff_med")
-	end
-	
-	if target.components.talker and target:HasTag("player") then 
-		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_END"))
-	end
-	
-    inst:Remove()
-end
-
-local function OnExtendedMed(inst, target)
-    inst.components.timer:StopTimer("kyno_strengthbuff_med")
-    inst.components.timer:StartTimer("kyno_strengthbuff_med", TUNING.KYNO_ALCOHOL_DURATION_MEDSMALL)
-	
-	if target.components.locomotor ~= nil and target:HasTag("player") then
-		target:AddTag("groggy")
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_strengthbuff_med", TUNING.KYNO_ALCOHOL_SPEED)
-	end
-	
-	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_MEDSMALL, "kyno_strengthbuff_med")
-	end
-end
-
-local function OnTimerDoneMed(inst, data)
-    if data.name == "kyno_strengthbuff_med" then
-        inst.components.debuff:Stop()
-    end
-end
-
 local function fn()
 	local inst = CreateEntity()
 
@@ -151,6 +86,69 @@ local function fn()
     inst:ListenForEvent("timerdone", OnTimerDone)
 	
     return inst
+end
+----------------------------------------------------------------------
+-- STRENGTH MED BUFF
+----------------------------------------------------------------------
+local function OnAttachedMed(inst, target)	
+	inst.entity:SetParent(target.entity)
+    inst.Transform:SetPosition(0, 0, 0)
+
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_START"))
+	end
+	
+	if target.components.locomotor ~= nil and target:HasTag("player") then
+		target:AddTag("groggy")
+		
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_strengthbuff", TUNING.KYNO_ALCOHOL_SPEED)
+	end	
+		
+	if target.components.combat ~= nil and target:HasTag("player") then
+		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_MEDSMALL, "kyno_strengthbuff")
+	end
+	
+    inst:ListenForEvent("death", function()
+        inst.components.debuff:Stop()
+    end, target)
+end
+
+local function OnDetachedMed(inst, target)
+	if target.components.locomotor ~= nil and target:HasTag("player") then
+		target:RemoveTag("groggy")
+		
+		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_strengthbuff")
+	end
+	
+	if target.components.combat ~= nil and target:HasTag("player") then
+		target.components.combat.externaldamagemultipliers:RemoveModifier(target, "kyno_strengthbuff")
+	end
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_END"))
+	end
+	
+    inst:Remove()
+end
+
+local function OnExtendedMed(inst, target)
+    inst.components.timer:StopTimer("kyno_strengthbuff_med")
+    inst.components.timer:StartTimer("kyno_strengthbuff_med", TUNING.KYNO_ALCOHOL_DURATION_MEDSMALL)
+	
+	if target.components.locomotor ~= nil and target:HasTag("player") then
+		target:AddTag("groggy")
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_strengthbuff", TUNING.KYNO_ALCOHOL_SPEED)
+	end
+	
+	if target.components.combat ~= nil and target:HasTag("player") then
+		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_MEDSMALL, "kyno_strengthbuff")
+	end
+end
+
+local function OnTimerDoneMed(inst, data)
+    if data.name == "kyno_strengthbuff_med" then
+        inst.components.debuff:Stop()
+    end
 end
 
 local function medfn()

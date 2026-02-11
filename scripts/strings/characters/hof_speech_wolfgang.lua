@@ -78,6 +78,9 @@ WOLFGANG.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Wolfgang brain get fuzzy again!"
 WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Wolfgang is protected by mighty power!"
 WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "The power leaves Wolfgang..."
 
+WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Wolfgang is UNSTOPPABLE! Smash all things!"
+WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Wolfgang no longer feels mighty rage..."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Is not the correct one."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mighty pig do not want this."
@@ -1184,3 +1187,7 @@ WOLFGANG.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "No food for animals.",
 	BURNT = "Feeder is no more.",
 }
+
+WOLFGANG.DESCRIBE.CHICKENNUGGETS = "Tiny chicken pieces make Wolfgang slightly strong."
+
+WOLFGANG.DESCRIBE.CHICKENWINGS = "Spicy wings make Wolfgang VERY STRONG!"

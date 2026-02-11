@@ -78,6 +78,9 @@ WORTOX.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Ojej, znowu zamieszanie!"
 WORTOX.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Teraz nie możesz mnie zranić!"
 WORTOX.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Znowu trochę bardziej miękki."
 
+WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Heehee! Jakież to pysznie niebezpieczne!"
+WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Och, ryzykowna zabawa się skończyła!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję czegoś jeszcze."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wiem, że ten żart był niezły, ale przejdźmy do konkretów."
@@ -1184,3 +1187,7 @@ WORTOX.DESCRIBE.KYNO_ANIMALFEEDER =
 	EMPTY = "Nie ma już jedzenia!",
 	BURNT = "Popiół i dym!",
 }
+
+WORTOX.DESCRIBE.CHICKENNUGGETS = "Chrup-chrup kawałeczki! Heehee!"
+
+WORTOX.DESCRIBE.CHICKENWINGS = "Gorące skrzydełka, palące igraszki!"
