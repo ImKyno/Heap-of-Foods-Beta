@@ -24,6 +24,7 @@ PrefabFiles =
 	"k_cannedfoods",
 	"k_chicken",
 	"k_chicken_eggs",
+	"k_chicken_eggs_fx",
 	"k_chickenhouse",
 	"k_coffeebeans",
 	"k_construction_plans",

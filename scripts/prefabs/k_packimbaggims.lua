@@ -532,6 +532,8 @@ local function fxfn(bank, build, scale)
 	end
 	
 	inst.persists = false
+	
+	inst:ListenForEvent("animover", inst.Remove)
 
 	return inst
 end

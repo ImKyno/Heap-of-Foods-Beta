@@ -4,21 +4,11 @@ local assets =
 	Asset("ANIM", "anim/kyno_chicken_eggs_large.zip"),
 	
 	Asset("ANIM", "anim/swap_chicken_eggs_large.zip"),
-	-- Asset("ANIM", "anim/swap_chicken_eggs_large1.zip"),
-	-- Asset("ANIM", "anim/swap_chicken_eggs_large2.zip"),
-	-- Asset("ANIM", "anim/swap_chicken_eggs_large3.zip"),
-	-- Asset("ANIM", "anim/swap_chicken_eggs_large4.zip"),
-	-- Asset("ANIM", "anim/swap_chicken_eggs_large5.zip"),
 }
 
 local projectile_assets =
 {
 	Asset("ANIM", "anim/swap_chicken_eggs_large.zip"),
-	-- Asset("ANIM", "anim/swap_chicken_eggs_large1.zip"),
-	-- Asset("ANIM", "anim/swap_chicken_eggs_large2.zip"),
-	-- Asset("ANIM", "anim/swap_chicken_eggs_large3.zip"),
-	-- Asset("ANIM", "anim/swap_chicken_eggs_large4.zip"),
-	-- Asset("ANIM", "anim/swap_chicken_eggs_large5.zip"),
 }
 
 local prefabs =
@@ -27,14 +17,16 @@ local prefabs =
 	"reticule",
 	"reticuleaoe",
 	"reticuleaoeping",
-	"waterplant_burr_burst",
+	
+	"kyno_chicken_egg_fx",
 }
 
 local projectile_prefabs =
 {
 	"splash_sink",
-	"waterplant_burr_burst",
+	"kyno_chicken_egg_fx",
 }
+
 local PROJECTILE_LAUNCH_OFFSET = Vector3(1.0, 8.0, 0)
 
 local EGG_MUSTHAVE_TAGS  = { "_combat" }
@@ -81,6 +73,8 @@ local function RefreshEggs(inst)
 end
 
 local function RefreshLargeEggs(inst)
+	inst.AnimState:ClearOverrideSymbol("egg1")
+
 	if inst._eggstyle == nil then
 		inst._eggstyle = math.random(1, 5)
 	end
@@ -89,11 +83,54 @@ local function RefreshLargeEggs(inst)
 	inst.components.inventoryitem:ChangeImageName("kyno_chicken_egg_large"..inst._eggstyle)
 end
 
-local function DoExplode(inst, thrower, target, no_hit_tags, damage)
+local function ShouldNotAggro(attacker, target)
+	local targets_target = target.components.combat ~= nil and target.components.combat.target or nil
+	
+	return targets_target ~= nil and targets_target:IsValid() and targets_target ~= attacker and attacker ~= nil and attacker:IsValid()
+	and (GetTime() - target.components.combat.lastwasattackedbytargettime) < 4
+	and (targets_target.components.health ~= nil and not targets_target.components.health:IsDead())
+end
+
+local function SetDebuffs(target, fx, numstacks)
+	local speed = TUNING.KYNO_CHICKEN_EGG_GIANT_SLOW ^ numstacks
+	local damage = TUNING.KYNO_CHICKEN_EGG_GIANT_DAMAGEMOD ^ numstacks
+	
+	if target.components.locomotor then
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_chickeneggbuff", speed)
+	end
+	
+	if target.components.combat then
+		target.components.combat.externaldamagemultipliers:SetModifier(target, damage, "kyno_chickeneggbuff")
+	end
+	
+	fx:SetFXLevel(numstacks)
+end
+
+local function DoRefresh(target, data)
+	table.remove(data.tasks, 1)
+	
+	if #data.tasks > 0 then
+		SetDebuffs(target, data.fx, #data.tasks)
+	else
+		data.fx:KillFX()
+		
+		if target.components.locomotor then
+			target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_chickeneggbuff")
+		end
+		
+		if target.components.combat then
+			target.components.combat.externaldamagemultipliers:RemoveModifier(target, "kyno_chickeneggbuff")
+		end
+		
+		target._slow = nil
+	end
+end
+
+local function DoExplode(inst, thrower, target, no_hit_tags, damage, ismaintarget)
 	local bx, by, bz = inst.Transform:GetWorldPosition()
 
 	-- Find anything nearby that we might want to interact with.
-	local entities = TheSim:FindEntities(bx, by, bz, TUNING.KYNO_CHICKEN_EGG_ATTACK_AOE * 1.5, EGG_MUSTHAVE_TAGS, no_hit_tags)
+	local entities = TheSim:FindEntities(bx, by, bz, TUNING.KYNO_CHICKEN_EGG_GIANT_ATTACK_AOE * 1.5, EGG_MUSTHAVE_TAGS, no_hit_tags)
 
 	-- If we have a thrower with a combat component, we need to do some manipulation to become a proper combat target.
 	if thrower ~= nil and thrower.components.combat ~= nil and thrower:IsValid() then
@@ -116,6 +153,35 @@ local function DoExplode(inst, thrower, target, no_hit_tags, damage)
 
 			if not v.components.health:IsDead() and v:HasTag("stunnedbybomb") then
 				v:PushEvent("stunbomb")
+			end
+			
+			if v.components.locomotor then
+				local data = v._slow
+				local shouldrefresh
+		
+				if data == nil then
+					data = { tasks = {}, fx = SpawnPrefab("kyno_chicken_egg_slow_fx") }
+					data.fx.entity:SetParent(v.entity)
+					data.fx:StartFX(v, not ismaintarget and math.random() * 0.3 or nil)
+			
+					v._slow = data
+			
+					shouldrefresh = true
+				elseif #data.tasks < TUNING.KYNO_CHICKEN_EGG_GIANT_STACK then
+					shouldrefresh = true
+				else
+					table.remove(data.tasks, 1):Cancel()
+				end
+
+				table.insert(data.tasks, v:DoTaskInTime(TUNING.KYNO_CHICKEN_EGG_GIANT_DURATION, DoRefresh, data))
+
+				if shouldrefresh then
+					SetDebuffs(v, data.fx, #data.tasks)
+				end
+
+				if not (ismaintarget or ShouldNotAggro(attacker, v)) and v.components.combat and v.components.combat:CanBeAttacked() then
+					v:PushEvent("attacked", { attacker = attacker, damage = 0, weapon = inst })
+				end
 			end
 		end
 	end
@@ -149,6 +215,17 @@ local function SetThrownPhysics(inst)
 	inst.Physics:SetCapsule(0.2, 0.2)
 end
 
+local function SpawnEggCrackEffects(inst)
+	local x, y, z = inst.Transform:GetWorldPosition()
+	
+	local fx1 = SpawnPrefab("kyno_chicken_egg_fx")
+	fx1.Transform:SetPosition(x, y, z)
+	fx1.SoundEmitter:PlaySound("dangerous_sea/creatures/water_plant/burr_burst")
+	
+	local fx2 = SpawnPrefab("kyno_swordfish_damage_fx")
+	fx2.Transform:SetPosition(x, y, z)
+end
+
 local function OnInventoryThrown(inst)
 	inst:AddTag("NOCLICK")
 	inst.persists = false
@@ -171,12 +248,12 @@ local function OnInventoryHit(inst, attacker, target)
 		SpawnPrefab("splash_sink").Transform:SetPosition(x, y, z)
 	end
 
-	SpawnPrefab("waterplant_burr_burst").Transform:SetPosition(x, y, z)
+	SpawnEggCrackEffects(inst)
 
 	if TheNet:GetPVPEnabled() then
-		DoExplode(inst, attacker, target, NO_TAGS_PVP, TUNING.KYNO_CHICKEN_EGG_DAMAGE)
+		DoExplode(inst, attacker, target, NO_TAGS_PVP, TUNING.KYNO_CHICKEN_EGG_GIANT_DAMAGE, true)
 	else
-		DoExplode(inst, attacker, target, NO_TAGS_PLAYER, TUNING.KYNO_CHICKEN_EGG_DAMAGE)
+		DoExplode(inst, attacker, target, NO_TAGS_PLAYER, TUNING.KYNO_CHICKEN_EGG_GIANT_DAMAGE, true)
 	end
 
 	inst:Remove()
@@ -214,9 +291,9 @@ local function OnHit(inst, attacker, target)
 		SpawnPrefab("splash_sink").Transform:SetPosition(x, y, z)
 	end
 
-	SpawnPrefab("waterplant_burr_burst").Transform:SetPosition(x, y, z)
+	SpawnEggCrackEffects(inst)
 
-	DoExplode(inst, attacker, target, NO_TAGS_CHICKENEGG, TUNING.KYNO_CHICKEN_EGG_DAMAGE)
+	DoExplode(inst, attacker, target, NO_TAGS_CHICKENEGG, TUNING.KYNO_CHICKEN_EGG_GIANT_DAMAGE, true)
 
 	inst:Remove()
 end
@@ -398,6 +475,9 @@ local function chicken_egg_giantfn()
 	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoadLarge
+	
+	inst:ListenForEvent("ondropped", RefreshLargeEggs)
+	inst:ListenForEvent("onputininventory", RefreshLargeEggs)
 	
 	MakeHauntableLaunchAndPerish(inst)
 

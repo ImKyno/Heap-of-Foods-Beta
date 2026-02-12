@@ -159,6 +159,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Użyj, aby zapalić Tort Roc
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Umożliwia gromadzenie się w celu świętowania rocznicy.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Specjalny kapelusz rocznicowy Sammy'ego.\nPozwala na zdobycie radości rocznicowej.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Badania ryb i ikry przyczyniają się do wzbogacenia Rejestru Ryb."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Ogromne jajko, które można rzucić.\n\nZmniejsza obrażenia zadawane przez cel oraz jego prędkość ruchu o 10% na 20 sekund. Efekt kumuluje się do 3 razy, maksymalnie do 30%.\n\n\"Nawet jajka są bronią na polu bitwy!\" - Wigfrid."
 
 -- Stworzenia.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Ich dieta opiera się na nasionach, pszenicy lub gałązkach cętkowanych.\n\nKury żyjące na wolności mają 40% szans na zniesienie jaj po jedzeniu. Mają bardzo małe szanse na zniesienie dużego jaja.\n\nKury żyjące w kurniku mogą znosić jaja codziennie po jedzeniu. Mają większe szanse na zniesienie dużego jaja."
