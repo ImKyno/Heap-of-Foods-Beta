@@ -311,6 +311,7 @@ local FruitTreeShopRooms =
 	"MolesvilleDeciduous",
 	"DeciduousClearing",
 	"PondyGrass",
+	"PigKingdom", -- Needed for Classic Worldgen.
 }
 
 for k, roomname in pairs(FruitTreeShopRooms) do
@@ -360,7 +361,7 @@ AddTaskSetPreInitAny(function(tasksetdata)
     if tasksetdata.location ~= "forest" then
         return
     end
-	
+
 	if not tasksetdata.ocean_prefill_setpieces then 
 		tasksetdata.ocean_prefill_setpieces = {}
 	end

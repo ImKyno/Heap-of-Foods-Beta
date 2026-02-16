@@ -234,7 +234,7 @@ local function TestItem(inst, item, giver)
 	if item.components.inventoryitem and item:HasTag("casserole_installer") then
 		return true -- Install the Pot.
 	else
-		giver.components.talker:Say(GetString(giver, "ANNOUNCE_CASSEROLE_FAIL"))
+		giver:PushEvent("casseroleinstallfail")
 	end
 end
 
@@ -733,6 +733,7 @@ local function casserolefn(small)
 	inst.components.container.skipopensnd = true
 
     inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "COOKPOT"
 	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("lootdropper")

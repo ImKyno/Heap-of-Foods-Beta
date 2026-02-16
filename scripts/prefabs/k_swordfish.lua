@@ -308,6 +308,8 @@ local function fx()
 	
 	inst.persists = false
 	
+	inst:ListenForEvent("animover", inst.Remove)
+
 	return inst
 end
 

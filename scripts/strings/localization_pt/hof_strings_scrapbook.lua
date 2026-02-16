@@ -1,10 +1,14 @@
--- Common Dependencies.
--- local _G      = GLOBAL
--- local require = _G.require
--- local STRINGS = _G.STRINGS
+-- General Data.
+STRINGS.SCRAPBOOK.DATA_BREWER = "PODE PREPARAR BEBIDA"
+STRINGS.SCRAPBOOK.DATA_OPENABLE = "PODE SER ABERTO"
+STRINGS.SCRAPBOOK.DATA_SLICEABLE = "PODE SER CORTADO"
+STRINGS.SCRAPBOOK.DATA_SLAUGHTERABLE = "PODE SER ABATIDO"
+STRINGS.SCRAPBOOK.DATA_MILKABLE = "PODE SER ORDENHADO"
+STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "PODE SER REPRODUZIDO"
+STRINGS.SCRAPBOOK.DATA_FISHFARM = "PODE REPRODUZIR PEIXES"
+STRINGS.SCRAPBOOK.DATA_ANIMALFEEDER = "PODE ALIMENTAR ANIMAIS"
 
--- Datas. (Unused)
-STRINGS.SCRAPBOOK.DATA_BREWER = "PODE PREPARAR BEBIDAS"
+-- Foodtypes.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "HORRÍVEL"
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDSOUL = "ALMA"
 STRINGS.SCRAPBOOK.FOODTYPE.ALCOHOLIC = "ALCÓLICO"
@@ -38,7 +42,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SANITYREGEN = "Proporciona regeneraç�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUPERREGEN = "Proporciona super regeneração corporal por um curto período."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WORMLIGHT = "Emite um brilho saudável por um curto período."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ALCOHOL = "Aumenta o dano e diminui a velocidade de movimento por um determinado período. Beba com moderação."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ALCOHOL2 = "Aumenta a resistência a dano e diminui a velocidade de movimento por um determinado período. Beba com moderação."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_ALCOHOL2 = "Aumenta a resistência à dano e diminui a velocidade de movimento por um determinado período. Beba com moderação."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RUM = "Aumenta o dano contra piratas por um determinado período.\n\nNem as chamas nem as profundezas puderam me alcançar."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_TEQUILA = "Teleporta o sobrevivente para uma localização aleatória no mapa."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA = "O sabor único da Nuka-Cola é resultado da combinação de dezessete essências de frutas, balanceadas para realçar o sabor clássico de cola. Mate sua sede!"
@@ -68,7 +72,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE = "Nukashine foi criada por 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE2 = "Agora sem risco de apagões! Aproveite a festa!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BONESOUP = "Aumenta o dano contra vermes por um determinado período."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_REVIVER = "Revive instantaneamente um jogador morto quando assombrado."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOCHA = "Aumenta velocidade de movimento, resistência ao sono e diminui a perda de fome por um determinado período.\n\nAumenta brevemente a temperatura."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOCHA = "Aumenta velocidade de movimento, resistência ao sono e diminui a perda de fome por um certo período de tempo.\n\nAumenta brevemente a temperatura."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSFREEZING = "Aumenta brevemente a temperatura e torna menos suscetível ao congelamento."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSOVERHEAT = "Diminui brevemente a temperatura e torna menos suscetível ao superaquecimento."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FISHING = "Aumenta o rendimento da pesca por um determinado período."
@@ -110,6 +114,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "Comer este alimento far
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "Aumenta a Fome Máxima em 15% por um certo período de tempo.\n\nComemorando o 5º aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "Aumenta a Vida Máxima em 15% por um certo período de tempo.\n\nComemorando o 5º aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "Aumenta a Sanidade Máxima em 15% por um certo período de tempo.\n\nComemorando o 5º aniversário do Amontoado de Comidas!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BERSERKER = "Aumenta o dano e diminui a resistência à dano por um certo período de tempo."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERRATE = "Diminui a perda de fome por um certo período de tempo."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Pó Conservante reduz pela metade o tempo de deterioração e anula penalidades de comida estragada."
@@ -154,9 +160,10 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use para acender o Bolo de A
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Permite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Chapéu de aniversário especial do Sammy.\nPermite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Pesquisar peixes e ovas os adiciona ao Registro de Peixes."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Um ovo gigante que pode ser arremessado.\n\nReduz o dano causado e a velocidade de movimento do alvo em 10% por 20 segundos. O efeito acumula até 3 vezes, totalizando 30%.\n\n\"Até ovos são armas no campo de batalha!\" - Wigfrid."
 
 -- Creatures.
-STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Pode ser alimentada com sementes para botar um ovo."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "A dieta delas consiste basicamente em Sementes, Trigo ou Rebento Folhoso.\n\nGalinhas Selvagens têm 40% de chance de botar ovos após se alimentarem. Elas têm uma pequena chance de botar um Ovo Grande.\n\nGalinhas criadas no Galinheiro podem botar ovos todos os dias após se alimentarem. Elas têm uma chance maior de colocar um Ovo Grande."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Amiguinhos peludos que adoram roubar seus itens mais valiosos!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Martins-pescadores frequentemente deixam cair Kois Tropicais de cima. Chuva de peixes, literalmente!"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emite um brilho saudável e colorido ao entardecer e à noite."
@@ -206,3 +213,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "Comemorando o 5º Aniversário do A
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Pode ser fatiado usando um Cutelo para obter Fatia de Bolo de Aniversário. Cada fatia tem um sabor e efeito diferente.\n\nAumenta a sanidade dos sobreviventes ao seu redor com o tempo.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Aumenta a sanidade dos sobreviventes ao seu redor com o tempo.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Um recipiente de 2 slots que recebe milho para fazer pipoca.\n\nColocar milho no primeiro slot permite produzir 5 pipocas.\n\nDurante o Aniversário do Amontoado de Comidas, produzirá Pipoca de Aniversário.\n\nCelebrando o 5º Aniversário do Amontoado de Comidas!"
+STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Alguns animais se alimentarão da comida posta neste cocho.\n\Sementes e Grãos podem ser usados como fonte principal de comida."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "Um abrigo para Galinhas produzirem seus produtos."

@@ -8,7 +8,7 @@ local function OnAttached(inst, target)
 	end
 	
 	if target.components.talker and target:HasTag("player") then 
-		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START"))
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START"))
 	end
 	
     inst:ListenForEvent("death", function()
@@ -17,7 +17,7 @@ local function OnAttached(inst, target)
 end
 
 local function OnTimerDone(inst, data)
-    if data.name == "kyno_enlightenmentbuff" then
+    if data.name == "kyno_planardefensebuff" then
         inst.components.debuff:Stop()
     end
 end
@@ -29,7 +29,7 @@ local function OnDetached(inst, target)
 	end
 	
 	if target.components.talker and target:HasTag("player") then 
-		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_END"))
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END"))
 	end
 	
     inst:Remove()
@@ -45,7 +45,7 @@ local function OnExtended(inst, target)
 	end
 	
 	if target.components.talker and target:HasTag("player") then 
-		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START"))
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START"))
 	end
 end
 

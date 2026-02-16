@@ -304,3 +304,44 @@ function ForceCombatGiveUp(player)
 		end
 	end
 end
+
+function SpawnLootForPicker(prefab, amount, picker, pos, inst)
+	for i = 1, amount do
+		local loot = SpawnPrefab(prefab)
+		
+		if loot ~= nil then
+			if picker ~= nil and picker.components.inventory ~= nil then
+				picker.components.inventory:GiveItem(loot, nil, pos)
+			else
+				LaunchAt(loot, inst, nil, 1, 1)
+			end
+		end
+	end
+end
+
+function ChooseWeightedRandom(choices)
+	local function weighted_total(choices)
+		local total = 0
+		
+		for choice, weight in pairs(choices) do
+			total = total + weight
+		end
+		
+		return total
+	end
+
+	local threshold = math.random() * weighted_total(choices)
+	local last_choice
+	
+	for choice, weight in pairs(choices) do
+		threshold = threshold - weight
+		
+		if threshold <= 0 then
+			return choice
+		end
+		
+		last_choice = choice
+	end
+
+	return last_choice
+end

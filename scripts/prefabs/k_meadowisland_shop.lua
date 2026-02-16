@@ -166,6 +166,11 @@ local function OnIsDay(inst, isday)
 	end
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.spawner:IsOccupied() and "OCCUPIED")
+	or "GENERIC"
+end
+
 local function RetrofitMapTags(inst)
 	local info = HOF_MAPUTIL.GetLayoutInfoFromPrefab(inst, 671, 736, 61, 61)
 
@@ -221,6 +226,7 @@ local function fn(oldshop)
 	end
 
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("spawner")
 	inst.components.spawner:Configure("kyno_meadowisland_seller", 10) -- TUNING.TOTAL_DAY_TIME

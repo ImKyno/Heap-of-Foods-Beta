@@ -116,6 +116,14 @@ local function tree_onload(inst, data)
     end
 end
 
+local function GetStatus(inst, viewer)
+	return (inst:HasTag("stump") and "CHOPPED")
+	or (inst:HasTag("burnt") and "BURNT")
+	or (inst.components.burnable:IsBurning() and "BURNING")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function tree_fn()
     local inst = CreateEntity()
 
@@ -146,7 +154,9 @@ local function tree_fn()
     inst.AnimState:SetTime(math.random() * 2)
 	
 	inst:AddComponent("lootdropper")
+	
     inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/wilson/pickup_reeds"
@@ -215,7 +225,7 @@ local function stump_fn()
     inst.AnimState:SetBuild("kyno_bananatree")
     inst.AnimState:PlayAnimation("idle_stump")
 	
-	inst:AddTag("plant")
+	inst:AddTag("stump")
 
     inst:SetPrefabNameOverride("kyno_bananatree")
 
@@ -226,7 +236,9 @@ local function stump_fn()
     end
 
     inst:AddComponent("lootdropper")
+	
     inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.DIG)
@@ -284,7 +296,7 @@ local function burnt_fn()
 
     inst:SetPrefabNameOverride("kyno_bananatree")
 	
-	inst:AddTag("plant")
+	inst:AddTag("burnt")
 
     inst.entity:SetPristine()
 
@@ -293,7 +305,9 @@ local function burnt_fn()
     end
 
     inst:AddComponent("inspectable")
+	
     inst:AddComponent("lootdropper")
+	inst.components.inspectable.getstatus = GetStatus
 
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.CHOP)

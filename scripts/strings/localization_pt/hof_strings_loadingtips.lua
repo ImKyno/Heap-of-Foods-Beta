@@ -36,7 +36,6 @@ local LOADINGTIPS   =
 	SPOTTYSHRUB     = "Arbustos Folhosos podem ser encontrados por todo o Arquipélago da Serenidade. E podem ser levados para casa usando uma Pá.",
 	SWEETFLOWER     = "A Flor Doce pode ser usada na Panela de Barro como opção de adoçante.",
 	LIMPETROCK      = "O único lugar onde você encontrará Rochas de Lapa é na Pedreira de Caranguejos do Arquipélago da Serenidade ou na praia da Ilha Beira-mar!",
-	CHICKEN         = "\"Me pergunto se essas Galinhas poderiam me dar alguns ovos. Preciso de algumas sementes para estimulá-las!\" -W",
 	SYRUPPOT        = "O Xarope feito na Panela de Xarope dará três unidades em vez de uma, quando feito em uma Panela de Barro normal.",
 	COOKWARE        = "Panelas de Xarope, Panela de Cozinhar, Grelhas e Fornos cozinham os alimentos mais rápido que uma Panela de Barro normal. Cada uma tem um benefício exclusivo.",
 	COOKWARE_PIT    = "Para cozinhar usando as estações especiais de Cozinha, você precisa instalá-las acima de uma Fogueira primeiro.",
@@ -118,6 +117,11 @@ local LOADINGTIPS   =
 	BIRTHDAY_CAKE3  = "O Bolo de Aniversário emite uma aura reconfortante para quem estiver por perto.",
 	BIRTHDAY_CHEER  = "Durante o Evento de Aniversário do Amontoado de Comidas, o Espirito de Aniversário pode ser obtido Cozinhando, Fermentando ou Temperando alimentos enquanto estiver usando um Chapéu de Aniversário.",
 	BIRTHDAY_CORN   = "A Máquina de Pipoca pode produzir até cinco Pipocas por Milho. Durante o Aniversário do Amontoado de Comidas ela irá produzir Pipoca de Aniversário.",
+	CHICKEN1        = "\"Me pergunto se essas Galinhas poderiam me dar alguns ovos. Preciso de algumas sementes para estimulá-las!\" -W",
+	CHICKEN2        = "Galinhas criadas no Galinheiro têm uma chance maior de botar Ovos Grandes.",
+	CHICKEN3        = "Galinhas Selvagens têm uma pequena chance de botar Ovos depois de se alimentarem.",
+	CHICKEN4        = "Galinhas criadas no Galinheiro só botam ovos se comerem algo diariamente, como Sementes, Trigo ou Rebentos Folhosos. Elas também podem se alimentar no Cocho de Alimentação.",
+	ANIMALFEEDER    = "O Cocho de Alimentação pode ser usado para alimentar alguns animais de fazenda, como Galinhas.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

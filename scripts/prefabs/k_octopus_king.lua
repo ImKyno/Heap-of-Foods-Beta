@@ -244,6 +244,11 @@ local function OnHaunt(inst, haunter)
 	return false
 end
 
+local function GetStatus(inst, viewer)
+	return (not inst.components.trader.enabled and "SLEEPING")
+	or "GENERIC"
+end
+
 local function OnWorldInit(inst)
 	-- Anniversary Event.
 	if IsSpecialEventActive(SPECIAL_EVENTS.HOFBIRTHDAY) then
@@ -289,6 +294,7 @@ local function fn()
 	end
 
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)

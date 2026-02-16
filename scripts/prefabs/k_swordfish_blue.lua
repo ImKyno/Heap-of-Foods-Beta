@@ -101,6 +101,7 @@ local function fn()
 	inst:AddTag("largecreature")
 	-- inst:AddTag("weighable_fish")
 	inst:AddTag("fishresearchable")
+	inst:AddTag("fish_box_valid")
 
 	inst.GetFishKey = GetFishKey
 

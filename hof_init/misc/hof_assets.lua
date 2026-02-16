@@ -145,6 +145,12 @@ local HOF_ICONS =
 	"cheese_koalefant",
 	"cheese_white",
 	"cheese_yellow",
+	"chickenburger",
+	"chickeneggsoup",
+	"chickeneggstew",
+	"chickennuggets",
+	"chickenrotisserie",
+	"chickenwings",
 	"chimas",
 	"chipsbag",
 	"chocolate_black",
@@ -357,8 +363,19 @@ local HOF_ICONS =
 	"kyno_bucket_metal",
 	"kyno_bucket_water",
 	"kyno_chicken2",
+	"kyno_chicken_coop_1",
+	"kyno_chicken_coop_2",
+	"kyno_chicken_coop_3",
 	"kyno_chicken_egg",
 	"kyno_chicken_egg_cooked",
+	"kyno_chicken_egg_large1",
+	"kyno_chicken_egg_large2",
+	"kyno_chicken_egg_large3",
+	"kyno_chicken_egg_large4",
+	"kyno_chicken_egg_large5",
+	"kyno_chicken_egg_stack1",
+	"kyno_chicken_egg_stack2",
+	"kyno_chicken_egg_stack3",
 	"kyno_coffeebeans",
 	"kyno_coffeebeans_cooked",
 	"kyno_cokecan",
@@ -840,12 +857,14 @@ local HOF_SCRAPBOOK_ICONS =
 	"icon_fuel_fishfood",
 	"kingfisher",
 	"kyno_aloe_ground",
+	"kyno_animalfeeder",
 	"kyno_antchest",
 	"kyno_aspargos_ground",
 	"kyno_bananatree",
 	"kyno_brainrock_rock",
 	"kyno_brainrock_sprout",
 	"kyno_chicken2",
+	"kyno_chickenhouse",
 	"kyno_coffeebush",
 	"kyno_cookware_big",
 	"kyno_cookware_grill",
@@ -959,7 +978,6 @@ for k, v in pairs(HOF_SKIN_ICONS) do
 	RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", v..".tex")
 end
 
--- Dirty fix for icons for the Plant Registry and Fish Registry.
 local _GetInventoryItemAtlas = _G.GetInventoryItemAtlas
 _G.GetInventoryItemAtlas = function(name, ...)
     local myatlas = _G.resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")
@@ -969,4 +987,15 @@ _G.GetInventoryItemAtlas = function(name, ...)
     end
 
     return _GetInventoryItemAtlas(name, ...)
+end
+
+local _GetScrapbookIconAtlas_Internal = _G.GetScrapbookIconAtlas_Internal
+_G.GetScrapbookIconAtlas_Internal = function(name, ...)
+	local myatlas = _G.resolvefilepath("images/scrapbookimages/hof_scrapbookimages.xml")
+	
+	if _G.TheSim:AtlasContains(myatlas, name) then
+		return myatlas
+	end
+	
+	return _GetScrapbookIconAtlas_Internal(name, ...)
 end

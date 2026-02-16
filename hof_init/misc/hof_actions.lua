@@ -73,19 +73,38 @@ end)
 
 -- Action for the Slaughter Tools.
 AddAction("FLAY", STRINGS.ACTIONS.FLAY, function(act)
-	if act.target ~= nil and act.target.components.health ~= nil and not act.target.components.health:IsDead() 
-	and act.target.components.lootdropper ~= nil and act.invobject ~= nil and act.invobject.components.slaughteritem ~= nil then
-		act.invobject.components.slaughteritem:Slaughter(act.doer, act.target)
-        
-        -- This belongs to Accomplishments Mod.
-		local data = { doer = act.doer, target = act.target, tool = act.invobject }
-		act.doer:PushEvent("hof_FlayOther", data)
-		act.target:PushEvent("hof_Flayed", data)
+	local target = act.target
+	local tool = act.invobject
+	local doer = act.doer
 
-        return true
-    end
+	if target == nil or tool == nil or doer == nil then
+		return
+	end
+
+	if tool.components.slaughteritem == nil then
+		return
+	end
+
+	if target.components.inventoryitem ~= nil and target.components.inventoryitem:IsHeld() and target.components.lootdropper ~= nil then
+		tool.components.slaughteritem:SlaughterInsideInventory(doer, target)
+		
+		local data = { doer = doer, target = target, tool = tool }
+		doer:PushEvent("hof_FlayOther", data)
+		target:PushEvent("hof_Flayed", data)
+		
+		return true
+	end
+
+	if target.components.health ~= nil and not target.components.health:IsDead() and target.components.lootdropper ~= nil then
+		tool.components.slaughteritem:Slaughter(doer, target)
+		
+		local data = { doer = doer, target = target, tool = tool }
+		doer:PushEvent("hof_FlayOther", data)
+		target:PushEvent("hof_Flayed", data)
+		
+		return true
+	end
 end)
-
 
 ACTIONS.FLAY.distance = 2
 ACTIONS.FLAY.priority = 3
@@ -664,15 +683,11 @@ AddAction("FISHREGISTRY_RESEARCH", STRINGS.ACTIONS.FISHREGISTRY_RESEARCH, functi
 		if target.components.fishresearchable then
 			target.components.fishresearchable:LearnFish(act.doer)
 
-			if act.doer.components.talker then
-				act.doer.components.talker:Say(_G.GetString(act.doer, "ANNOUNCE_KYNO_FISH_RESEARCHED"), nil, target.components.inspectable.noanim)
-			end
+			act.doer:PushEvent("fishregistryresearchfish")
 		elseif target.components.roeresearchable then
 			target.components.roeresearchable:LearnRoe(act.doer)
 			
-			if act.doer.components.talker then
-				act.doer.components.talker:Say(_G.GetString(act.doer, "ANNOUNCE_KYNO_ROE_RESEARCHED"), nil, target.components.inspectable.noanim)
-			end
+			act.doer:PushEvent("fishregistryresearchroe")
 		end
 	end
 
@@ -733,6 +748,85 @@ end)
 
 AddComponentAction("INVENTORY", "roeresearchable", function(inst, doer, actions, right)
 	FishRegistryResearch(inst, doer, actions)
+end)
+
+-- This action is meant for creatures not for players!
+AddAction("TAKEFROMCONTAINER", "Take From", function(act)
+	local doer = act.doer
+	local container_inst = act.target
+	local item = act.invobject
+
+	if doer == nil or container_inst == nil or item == nil then
+		return false
+	end
+
+	local container = container_inst.components.container
+	local inventory = doer.components.inventory
+
+	if container == nil or inventory == nil then
+		return false
+	end
+
+	if not item:IsValid() then
+		return false
+	end
+	
+	if not container:IsOpen() then
+		doer:PushEvent("opencontainer", { container = container_inst })
+		container:Open(doer)
+	end
+
+	local taken_item
+
+	if item.components.stackable ~= nil and item.components.stackable:StackSize() > 1 then
+		taken_item = item.components.stackable:Get(1)
+	else
+		taken_item = container:RemoveItem(item, true)
+	end
+
+	if taken_item ~= nil then
+		taken_item.prevslot = nil
+		taken_item.prevcontainer = nil
+		
+		inventory:GiveItem(taken_item, nil, doer:GetPosition())
+		return true
+	end
+
+	return false
+end)
+
+-- This action is meant for creatures not for players!
+AddAction("EATFROM", "Eat From", function(act)
+	local doer = act.doer
+	local target = act.target
+	
+	if doer == nil or target == nil or target:HasTag("burnt") then
+		return false
+	end
+
+	if doer._has_food_buffered or doer._has_eaten_today then
+		return false
+	end
+	
+	local fueled = target.components.fueled
+	
+	if fueled == nil or fueled:GetPercent() <= 0 or fueled:IsEmpty() then
+		return false
+	end
+	
+	fueled:DoDelta(-TUNING.KYNO_ANIMALFEEDER_CONSUME)
+	
+	target:PushEvent("onfeed") -- Handles animations and other stuff.
+
+	local food = SpawnPrefab("seeds")
+	
+	if food ~= nil and doer.components.inventory ~= nil then
+		doer.components.inventory:GiveItem(food, nil, doer:GetPosition())
+	end
+	
+	-- doer._has_food_buffered = true
+
+	return true
 end)
 
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
@@ -963,6 +1057,10 @@ end
 ACTIONS.ADDFUEL.stroverridefn = function(act)
 	if act.target:HasTag("fishhatchery") then
 		return STRINGS.ACTIONS.FEED.GENERIC
+	end
+	
+	if act.target:HasTag("animalfeeder") then
+		return STRINGS.KYNO_REFILL
 	end
 end
 

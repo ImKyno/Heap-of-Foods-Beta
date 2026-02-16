@@ -24,12 +24,12 @@ local function OnDrink(inst, eater)
 		inst.SoundEmitter:PlaySound("hof_sounds/common/tunacan/open")
 	end
 
-	if eater.components.talker and eater:HasTag("player") then 
-		eater.components.talker:Say(GetString(eater, "ANNOUNCE_KYNO_POPBUFF_START"))
+	if eater:HasTag("player") then 
+		eater:PushEvent("drankcannedrink")
 	end
 end
 
-local function fn(bank, build, anim, name)
+local function fn(bank, build, anim)
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
@@ -58,8 +58,6 @@ local function fn(bank, build, anim, name)
 		return inst
 	end
 	
-	inst.name = name
-	
 	inst:AddComponent("edible")
 	inst.components.edible:SetOnEatenFn(OnDrink)
 	inst.components.edible.foodtype = FOODTYPE.GOODIES -- Everyone can drink.
@@ -72,7 +70,6 @@ local function fn(bank, build, anim, name)
     
     inst:AddComponent("inventoryitem")
     inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = name
 	inst.components.inventoryitem:SetSinks(true)
     
     inst:AddComponent("perishable")
@@ -84,11 +81,13 @@ end
 
 -- Soda Can.
 local function soda_fn()
-	local inst = fn("kyno_pops", "kyno_pops", "sodacan", "kyno_sodacan")
+	local inst = fn("kyno_pops", "kyno_pops", "sodacan")
 
 	if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.components.inventoryitem.imagename = "kyno_sodacan"
 
 	inst.components.edible.healthvalue = TUNING.KYNO_SODACAN_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_SODACAN_HUNGER
@@ -98,11 +97,13 @@ local function soda_fn()
 end
 
 local function coke_fn()
-	local inst = fn("kyno_pops", "kyno_pops", "cokecan", "kyno_cokecan")
+	local inst = fn("kyno_pops", "kyno_pops", "cokecan")
 
 	if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.components.inventoryitem.imagename = "kyno_cokecan"
 
 	inst.components.edible.healthvalue = TUNING.KYNO_COKECAN_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_COKECAN_HUNGER
@@ -112,11 +113,13 @@ local function coke_fn()
 end
 
 local function energy_fn()
-	local inst = fn("kyno_pops", "kyno_pops", "energycan", "kyno_energycan")
+	local inst = fn("kyno_pops", "kyno_pops", "energycan")
 
 	if not TheWorld.ismastersim then
         return inst
     end
+	
+	inst.components.inventoryitem.imagename = "kyno_energycan"
 
 	inst.components.edible.healthvalue = TUNING.KYNO_ENERGYCAN_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_ENERGYCAN_HUNGER

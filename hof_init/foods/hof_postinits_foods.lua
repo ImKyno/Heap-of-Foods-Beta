@@ -292,6 +292,7 @@ for k, v in pairs(honeyed_foods) do
 		AddPrefabPostInit(v.."_spice_"..s, HoneyFoodsPostinit)
 	end
 end
+
 local sliceable_foods =
 {
 	drumstick      =
@@ -389,3 +390,83 @@ local function BirdcagePostInit(inst)
 end
 
 AddPrefabPostInit("birdcage", BirdcagePostInit)
+
+-- Valid Cooking Pots and Containers for the S0US-CH3F.
+local cook_robot_pots =
+{
+	"cookpot",
+	"archive_cookpot",
+}
+
+local cook_robot_containers =
+{
+	"icebox",
+	"saltbox",
+	"fish_box",
+	"potatosack",
+	"treasurechest",
+	"dragonflychest",
+}
+
+local function CookRobotPotsPostInit(inst)
+	inst:AddTag("cook_robot_cooker_valid")
+end
+
+local function CookRobotContainersPostInit(inst)
+	inst:AddTag("cook_robot_storage_valid")
+end
+
+for k, v in pairs(cook_robot_pots) do
+	AddPrefabPostInit(v, CookRobotPotsPostInit)
+end
+
+for k, v in pairs(cook_robot_containers) do
+	AddPrefabPostInit(v, CookRobotContainersPostInit)
+end
+
+-- Make all seeds a valid fuel for Animal Trough.
+local function SeedsPostInit(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	if inst.components.edible ~= nil then
+		if inst.components.edible.foodtype == _G.FOODTYPE.SEEDS and not inst:HasTag("gourmet_ingredient") then
+			if not inst.components.fuel then
+				inst:AddComponent("fuel")
+			end
+	
+			if inst.components.fuel ~= nil then
+				inst.components.fuel.fueltype = _G.FUELTYPE.ANIMALFOOD
+				inst.components.fuel.fuelvalue = TUNING.MED_FUEL
+			end
+		end
+	end
+end
+
+AddPrefabPostInitAny(SeedsPostInit)
+
+-- Valid Foods for the Display Stand.
+local itemshowcaser_foods =
+{
+	"batnosehat",
+	"dustmeringue",
+	
+	-- They're not Crock Pot foods...
+	-- "carnivalfood_corntea",
+	-- "yotp_food1",
+	-- "yotp_food2",
+	-- "yotp_food3",
+	-- "yotr_food1",
+	-- "yotr_food2",
+	-- "yotr_food3",
+	-- "yotr_food4",
+}
+
+local function ItemShowcaserItemsPostInit(inst)
+	inst:AddTag("itemshowcaser_valid")
+end
+
+for k, v in pairs(itemshowcaser_foods) do
+	AddPrefabPostInit(v, ItemShowcaserItemsPostInit)
+end

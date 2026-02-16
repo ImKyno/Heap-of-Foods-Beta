@@ -202,6 +202,11 @@ local function OnCollide(inst, data)
 	end
 end
 
+local function GetStatus(inst, viewer)
+	return (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function OnPreLoad(inst, data)
 	WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_BRAINROCK_ROCK_GROWTIME)
 end
@@ -241,8 +246,10 @@ local function fn()
 		return inst
 	end
 
-    inst:AddComponent("inspectable")
 	inst:AddComponent("lighttweener")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("sanityaura")
     inst.components.sanityaura.aurafn = SanityAura

@@ -398,6 +398,14 @@ local function RefreshFishFarmState(inst)
 	end
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.fueled:IsEmpty() and "EMPTY")
+	or (inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.20 and "FUEL_LOW")
+	or (inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.50 and "FUEL_MED")
+	or (inst.components.fueled.currentfuel / inst.components.fueled.maxfuel <= 0.70 and "FUEL_HIGH") 
+	or "GENERIC"
+end
+
 local function OnSave(inst, data)
 	if inst.plants ~= nil then
 		data.plants = inst.plants
@@ -461,9 +469,11 @@ local function fn()
 		return inst
 	end
 	
-	inst:AddComponent("inspectable")
 	inst:AddComponent("savedrotation")
 	inst:AddComponent("watersource")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper.spawn_loot_inside_prefab = true

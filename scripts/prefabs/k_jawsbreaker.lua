@@ -131,8 +131,10 @@ local function fn()
 	inst.components.reticule.ease = true
 
 	inst:AddTag("allow_action_on_impassable")
+	inst:AddTag("itemshowcaser_valid")
 	inst:AddTag("jawsbreaker")
 	inst:AddTag("honeyed")
+	inst:AddTag("nospice")
 	
 	inst.entity:SetPristine()
 	

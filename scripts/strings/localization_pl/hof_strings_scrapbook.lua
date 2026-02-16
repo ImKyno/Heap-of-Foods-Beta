@@ -1,10 +1,14 @@
--- Wspólne zależności.
--- local _G      = GLOBAL
--- local require = _G.require
--- local STRINGS = _G.STRINGS
+-- Dane ogólne.
+STRINGS.SCRAPBOOK.DATA_BREWER = "MOŻNA PRZYGOTOWAĆ NAPÓJ"
+STRINGS.SCRAPBOOK.DATA_OPENABLE = "MOŻNA OTWIERAĆ"
+STRINGS.SCRAPBOOK.DATA_SLICEABLE = "MOŻNA KROJIĆ"
+STRINGS.SCRAPBOOK.DATA_SLAUGHTERABLE = "MOŻNA UBOJĄĆ"
+STRINGS.SCRAPBOOK.DATA_MILKABLE = "MOŻNA DOIĆ"
+STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "MOŻNA HODOWAĆ"
+STRINGS.SCRAPBOOK.DATA_FISHFARM = "MOŻNA HODOWAĆ RYBY"
+STRINGS.SCRAPBOOK.DATA_ANIMALFEEDER = "MOŻNA KARMIĆ ZWIERZĘTA"
 
--- Dane. (Nie używane)
-STRINGS.SCRAPBOOK.DATA_BREWER = "MOŻE PRZYGOTOWAĆ NAPÓJ"
+-- Rodzaj żywności.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "OKROPNY"
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDSOUL = "DUSZA"
 STRINGS.SCRAPBOOK.FOODTYPE.ALCOHOLIC = "ALKOHOL"
@@ -110,6 +114,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "Zjedzenie tego jedzenia
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "Zwiększa maksymalny głód o 15% na pewien czas.\n\nŚwiętując 5. rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "Zwiększa maksymalne zdrowie o 15% na pewien czas.\n\nŚwiętując 5. rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "Zwiększa maksymalną poczytalność o 15% na pewien czas.\n\nŚwiętując 5. rocznicę Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BERSERKER = "Zwiększone obrażenia i zmniejszona odporność na obrażenia przez pewien czas."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERRATE = "Zmniejszone uczucie głodu przez pewien czas."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Może być dodany do jedzenia w garnku za pomocą przenośnej stacji przypraw.\n\nJedzenie przyprawione Preserver Powder zmniejsza czas psucia się o połowę i neguje kary za zepsute jedzenie."
@@ -154,9 +160,10 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Użyj, aby zapalić Tort Roc
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Umożliwia gromadzenie się w celu świętowania rocznicy.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Specjalny kapelusz rocznicowy Sammy'ego.\nPozwala na zdobycie radości rocznicowej.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Badania ryb i ikry przyczyniają się do wzbogacenia Rejestru Ryb."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Ogromne jajko, które można rzucić.\n\nZmniejsza obrażenia zadawane przez cel oraz jego prędkość ruchu o 10% na 20 sekund. Efekt kumuluje się do 3 razy, maksymalnie do 30%.\n\n\"Nawet jajka są bronią na polu bitwy!\" - Wigfrid."
 
 -- Stworzenia.
-STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "Można karmić nasionami, aby złożyła jajko."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Ich dieta opiera się na nasionach, pszenicy lub gałązkach cętkowanych.\n\nKury żyjące na wolności mają 40% szans na zniesienie jaj po jedzeniu. Mają bardzo małe szanse na zniesienie dużego jaja.\n\nKury żyjące w kurniku mogą znosić jaja codziennie po jedzeniu. Mają większe szanse na zniesienie dużego jaja."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "Puchate maluchy, które uwielbiają kraść twoje najcenniejsze przedmioty!"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Zimorodki często upuszczają Tropikalne Karpie z góry. Dosłownie padają ryby!"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emituje kolorowe, zdrowe światło o zmierzchu i w nocy."
@@ -206,3 +213,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "Świętujemy 5. Rocznicę Heap of F
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "Można pokroić Tasakiem, aby otrzymać Kawałek Tortu Rocznicowego. Każdy kawałek ma inny smak i efekt.\n\nStopniowo zwiększa poczytalność ocalałych w pobliżu.\n\nŚwiętujemy 5. Rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Stopniowo zwiększa poczytalność ocalałych w pobliżu.\n\nŚwiętujemy 5. Rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Pojemnik z dwoma slotami, który przyjmuje kukurydzę do produkcji popcornu.\n\nUmieszczenie kukurydzy w pierwszym slocie pozwala wyprodukować 5 porcji popcornu.\n\nPodczas Rocznicy Heap of Foods będzie produkować Rocznicowy Popcorn.\n\nŚwiętując 5. Rocznicę Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Niektóre zwierzęta będą żywić się pokarmem umieszczonym w tym korycie.\n\nNasiona i ziarna mogą być wykorzystywane jako podstawowe źródło pożywienia."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "Schronisko dla kurczaków, w którym można produkować produkty drobiowe."

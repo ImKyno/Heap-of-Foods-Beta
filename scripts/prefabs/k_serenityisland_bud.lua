@@ -266,9 +266,9 @@ local function petalsfn()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 	
 	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = 0
-	inst.components.edible.hungervalue = 0
-	inst.components.edible.sanityvalue = 5
+	inst.components.edible.healthvalue = TUNING.KYNO_SUGARFLOWER_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_SUGARFLOWER_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_SUGARFLOWER_SANITY
 	inst.components.edible.foodtype = FOODTYPE.GOODIES
 
 	inst:AddComponent("inventoryitem")

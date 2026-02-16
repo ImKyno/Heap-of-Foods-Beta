@@ -334,10 +334,10 @@ local function SweetflyTrader(inst)
     if inst.components.inventoryitem ~= nil and not inst.components.tradable then
         inst:AddComponent("tradable")
         inst.components.tradable.goldvalue = 1
-        inst.components.tradable.tradefor = { "kyno_sweetfly" }
+        inst.components.tradable.tradefor = { "kyno_sugarfly" }
     else
         inst.components.tradable.goldvalue = 1
-        inst.components.tradable.tradefor = { "kyno_sweetfly" }
+        inst.components.tradable.tradefor = { "kyno_sugarfly" }
     end
 end
 
@@ -723,7 +723,7 @@ local function FirePitCookwarePostinit(inst)
         if item.components.inventoryitem and item:HasTag("firepit_installer") then
             return true
         else
-            giver.components.talker:Say(GetString(giver, "ANNOUNCE_FIREPITINSTALL_FAIL"))
+            giver:PushEvent("firepitinstallfail")
         end
     end
 
@@ -961,8 +961,6 @@ local function PotatoSackPostinit(inst)
 			inst.components.container:Close()
 		end
 	end
-	
-	inst.scrapbook_proxy = "potatosack2" -- Fix for missing Scrapbook CRAFTING_FILTER.
 
 	if not _G.TheWorld.ismastersim then
 		inst.OnEntityReplicated = function(inst) inst.replica.container:WidgetSetup("potatosack") end

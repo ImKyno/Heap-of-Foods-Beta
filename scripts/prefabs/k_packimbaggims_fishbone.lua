@@ -168,6 +168,11 @@ local function OnDropped(inst)
 	end
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.respawntask ~= nil and "WAITING")
+	or "GENERIC"
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -198,7 +203,9 @@ local function fn()
 	end
 	
 	inst:AddComponent("leader")
+	
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)

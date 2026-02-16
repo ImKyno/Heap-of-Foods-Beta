@@ -33,18 +33,18 @@ local function OnHit(inst, attacker, target)
 	inst:Remove()
 end
 
-local function onequip(inst, owner)
+local function OnEquip(inst, owner)
 	owner.AnimState:OverrideSymbol("swap_object", "swap_malbatross_pouch", "swap_malbatross_pouch")
 	owner.AnimState:Show("ARM_carry")
 	owner.AnimState:Hide("ARM_normal")
 end
 
-local function onunequip(inst, owner)
+local function OnUnequip(inst, owner)
 	owner.AnimState:Hide("ARM_carry")
 	owner.AnimState:Show("ARM_normal")
 end
 
-local function onthrown(inst)
+local function OnThrown(inst)
 	inst:AddTag("NOCLICK")
 	inst.persists = false
 
@@ -77,7 +77,7 @@ local function OnAddProjectile(inst)
 	inst.components.complexprojectile:SetHorizontalSpeed(15)
 	inst.components.complexprojectile:SetGravity(-35)
 	inst.components.complexprojectile:SetLaunchOffset(Vector3(.25, 1, 0))
-	inst.components.complexprojectile:SetOnLaunch(onthrown)
+	inst.components.complexprojectile:SetOnLaunch(OnThrown)
 	inst.components.complexprojectile:SetOnHit(OnHit)
 end
 
@@ -127,9 +127,13 @@ local function fn()
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
 
 	inst:AddComponent("equippable")
-	inst.components.equippable:SetOnEquip(onequip)
-	inst.components.equippable:SetOnUnequip(onunequip)
+	inst.components.equippable:SetOnEquip(OnEquip)
+	inst.components.equippable:SetOnUnequip(OnUnequip)
 	inst.components.equippable.equipstack = true
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fueltype = FUELTYPE.FISHFOOD
+	inst.components.fuel.fuelvalue = TUNING.HUGE_FUEL * 2
 
 	inst:AddComponent("weapon")
 	inst.components.weapon:SetDamage(TUNING.UNARMED_DAMAGE)

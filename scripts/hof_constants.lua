@@ -17,9 +17,10 @@ HOF_FOODTYPES    =
 }
 
 -- New FUELTYPE for Fish Hatchery.
-HOF_FUELTYPES =
+HOF_FUELTYPES  =
 {
-	FISHFOOD  = "FISHFOOD",
+	FISHFOOD   = "FISHFOOD",
+	ANIMALFOOD = "ANIMALFOOD",
 }
 
 -- New NAUGHTINESS values for innocent creatures.

@@ -11,7 +11,7 @@ local function OnAttached(inst, target)
 	end
 	
 	if target.components.grogginess ~= nil then
-		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE)
+		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE, "kyno_coffeebuff")
 	end
 	
     inst:ListenForEvent("death", function()
@@ -45,12 +45,16 @@ local function OnExtended(inst, target)
     inst.components.timer:StopTimer("kyno_coffeebuff")
     inst.components.timer:StartTimer("kyno_coffeebuff", TUNING.HOF_COFFEEBUFF_DURATION)
 	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
+	end
+	
 	if target.components.locomotor ~= nil then
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
 	end
 	
 	if target.components.grogginess ~= nil then
-		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE)
+		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE, "kyno_coffeebuff")
 	end
 end
 
@@ -88,7 +92,7 @@ local function OnAttachedAlt(inst, target)
     inst.Transform:SetPosition(0, 0, 0)
 	
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeealtbuff", TUNING.KYNO_COFFEEBUFF_SPEED)
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
 	end
 	
     inst:ListenForEvent("death", function()
@@ -104,7 +108,7 @@ end
 
 local function OnDetachedAlt(inst, target)
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_coffeealtbuff")
+		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_coffeebuff")
 	end
 	
     inst:Remove()
@@ -115,7 +119,7 @@ local function OnExtendedAlt(inst, target)
     inst.components.timer:StartTimer("kyno_coffeealtbuff", TUNING.KYNO_GOLDENAPPLEBUFF_DURATION)
 	
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeealtbuff", TUNING.KYNO_COFFEEBUFF_SPEED)
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_COFFEEBUFF_SPEED)
 	end
 end
 
@@ -157,15 +161,15 @@ local function OnAttachedMocha(inst, target)
 	end
 	
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_mochabuff", TUNING.KYNO_MOCHABUFF_SPEED)
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_MOCHABUFF_SPEED)
 	end
 	
 	if target.components.grogginess ~= nil then
-		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE)
+		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE, "kyno_coffeebuff")
 	end
 	
 	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.HUNGERRATEBUFF_MODIFIER, "kyno_mochabuff")
+		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.KYNO_MOCHABUFF_HUNGERRATE, "kyno_hungerratebuff")
 	end
 	
     inst:ListenForEvent("death", function()
@@ -181,15 +185,15 @@ end
 
 local function OnDetachedMocha(inst, target)	
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_mochabuff")
+		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_coffeebuff")
 	end
 	
 	if target.components.grogginess ~= nil then
-        target.components.grogginess:RemoveResistanceSource(target, "kyno_mochabuff")
+        target.components.grogginess:RemoveResistanceSource(target, "kyno_coffeebuff")
     end
 
 	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:RemoveModifier(target, "kyno_mochabuff")
+		target.components.hunger.burnratemodifiers:RemoveModifier(target, "kyno_hungerratebuff")
 	end
 	
 	if target.components.talker and target:HasTag("player") then 
@@ -203,16 +207,20 @@ local function OnExtendedMocha(inst, target)
     inst.components.timer:StopTimer("kyno_mochabuff")
     inst.components.timer:StartTimer("kyno_mochabuff", TUNING.HOF_COFFEEBUFF_DURATION)
 	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
+	end
+	
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_mochabuff", TUNING.KYNO_MOCHABUFF_SPEED)
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_MOCHABUFF_SPEED)
 	end
 	
 	if target.components.grogginess ~= nil then
-		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE)
+		target.components.grogginess:AddResistanceSource(target, TUNING.SLEEPRESISTBUFF_VALUE, "kyno_coffeebuff")
 	end
 	
 	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.HUNGERRATEBUFF_MODIFIER, "kyno_mochabuff")
+		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.KYNO_MOCHABUFF_HUNGERRATE, "kyno_hungerratebuff")
 	end
 end
 
@@ -250,7 +258,7 @@ local function OnAttachedTiramisu(inst, target)
     inst.Transform:SetPosition(0, 0, 0)
 	
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_tiramisubuff", TUNING.KYNO_TIRAMISUBUFF_SPEED)
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_TIRAMISUBUFF_SPEED)
 	end
 	
     inst:ListenForEvent("death", function()
@@ -266,7 +274,7 @@ end
 
 local function OnDetachedTiramisu(inst, target)	
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_tiramisubuff")
+		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_coffeebuff")
 	end
 	
     inst:Remove()
@@ -277,7 +285,7 @@ local function OnExtendedTiramisu(inst, target)
     inst.components.timer:StartTimer("kyno_tiramisubuff", TUNING.HOF_COFFEEBUFF_DURATION)
 	
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_tiramisubuff", TUNING.KYNO_TIRAMISUBUFF_SPEED)
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_TIRAMISUBUFF_SPEED)
 	end
 end
 
@@ -319,7 +327,7 @@ local function OnAttachedTea(inst, target)
 	end
 	
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_teabuff", TUNING.KYNO_TEABUFF_SPEED)
+		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_TEABUFF_SPEED)
 	end
 	
     inst:ListenForEvent("death", function()
@@ -335,7 +343,7 @@ end
 
 local function OnDetachedTea(inst, target)
 	if target.components.locomotor ~= nil then
-		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_teabuff")
+		target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_coffeebuff")
 	end
 
 	if target.components.talker and target:HasTag("player") then 
@@ -348,6 +356,10 @@ end
 local function OnExtendedTea(inst, target)
     inst.components.timer:StopTimer("kyno_teabuff")
     inst.components.timer:StartTimer("kyno_teabuff", TUNING.HOF_COFFEEBUFF_DURATION)
+	
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_COFFEEBUFF_START"))
+	end
 	
 	if target.components.locomotor ~= nil then
 		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_coffeebuff", TUNING.KYNO_TEABUFF_SPEED)

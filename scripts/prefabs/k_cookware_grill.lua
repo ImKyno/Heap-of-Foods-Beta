@@ -535,6 +535,7 @@ local function grillsmallfn()
 	inst.components.container.skipopensnd = true
 
     inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "COOKPOT"
 	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("lootdropper")
@@ -619,6 +620,7 @@ local function grillbigfn()
 	inst.components.container.skipopensnd = true
 
     inst:AddComponent("inspectable")
+	inst.components.inspectable.nameoverride = "COOKPOT"
 	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("lootdropper")

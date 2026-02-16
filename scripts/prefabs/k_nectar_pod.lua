@@ -55,7 +55,6 @@ local function fn()
     inst.AnimState:PlayAnimation("idle")
 	
 	inst:AddTag("nectar")
-	inst:AddTag("honeyed")
 	
 	inst.entity:SetPristine()
 

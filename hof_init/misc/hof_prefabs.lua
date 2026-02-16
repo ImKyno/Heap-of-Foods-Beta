@@ -3,9 +3,8 @@ local _G = GLOBAL
 
 -- Prefabs.
 PrefabFiles =
-{
-	"worm_boss",
-	
+{	
+	"k_animalfeeder",
 	"k_antchest",
 	"k_antchovy",
 	"k_banana",
@@ -23,10 +22,13 @@ PrefabFiles =
 	"k_bugs",
 	"k_canneddrinks",
 	"k_cannedfoods",
-	"k_chicken2",
-	"k_chicken2_eggs",
+	"k_chicken",
+	"k_chicken_eggs",
+	"k_chicken_eggs_fx",
+	"k_chickenhouse",
 	"k_coffeebeans",
 	"k_construction_plans",
+	"k_cook_robot",
 	"k_cookware_fire",
 	"k_cookware_grill",
 	"k_cookware_kits",
@@ -53,6 +55,7 @@ PrefabFiles =
 	"k_floatilizer",
 	"k_foodbuff_acidimmunity",
 	"k_foodbuff_beefriendly",
+	"k_foodbuff_berserker",
 	"k_foodbuff_birthday",
 	"k_foodbuff_coffee",
 	"k_foodbuff_crafting",

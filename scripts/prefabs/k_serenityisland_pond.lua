@@ -41,7 +41,9 @@ local function OnHammered(inst, worker)
 
 	SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
 	SpawnPrefab("kyno_pond_salt").Transform:SetPosition(inst.Transform:GetWorldPosition())
+	
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_stone")
+	
 	inst:Remove()
 end
 
@@ -49,7 +51,7 @@ local function TestItem(inst, item, giver)
 	if item.components.inventoryitem and item:HasTag("salt_rack_installer") then
 		return true -- Install the Salt Rack.
 	else
-		giver.components.talker:Say(GetString(giver, "ANNOUNCE_SALTRACK_FAIL"))
+		giver:PushEvent("cookwareinstallfail")
 	end
 end
 
@@ -65,22 +67,30 @@ local function OnGetItemFromPlayer(inst, giver, item)
 	inst:Remove()
 end
 
-local rack_defs = 
-{
-	rack = { { 0, 0, 0 } },
-}
-
 local function DoSplash(inst)
 	if inst:HasTag("saltpondrack") then
-		inst:DoTaskInTime(5 +math.random() * 5, function() DoSplash(inst) end)
+		inst:DoTaskInTime(5 +math.random() * 5, function()
+			DoSplash(inst)
+		end)
+		
 		inst.AnimState:PlayAnimation("splash")
 		inst.AnimState:PushAnimation("idle", true)
 	end
 end
 
+local function GetStatus(inst, viewer)
+	return (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function OnPreLoad(inst, data)
     WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_SALTRACK_REGROW_TIME)
 end
+
+local rack_defs = 
+{
+	rack = { { 0, 0, 0 } },
+}
 
 local function pondfn()
 	local inst = CreateEntity()
@@ -203,13 +213,17 @@ local function rackfn()
     end
 
 	local decor_items = rack_defs
+	
 	inst.decor = {}
+	
 	for item_name, data in pairs(decor_items) do
 		for l, offset in pairs(data) do
 			local item_inst = SpawnPrefab("kyno_pond_rack")
+			
 			item_inst.AnimState:PushAnimation("idle", true)
 			item_inst.entity:SetParent(inst.entity)
 			item_inst.Transform:SetPosition(offset[1], offset[2], offset[3])
+			
 			table.insert(inst.decor, item_inst)
 		end
 	end
@@ -217,7 +231,7 @@ local function rackfn()
 	inst.AnimState:SetTime(math.random() * 2)
 
 	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_SALT_RACK"
+	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"kyno_saltrack_installer"})

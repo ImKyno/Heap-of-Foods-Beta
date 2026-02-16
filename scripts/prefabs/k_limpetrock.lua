@@ -100,6 +100,12 @@ local function makefullfn(inst)
 	inst.AnimState:PlayAnimation(pickanim(inst))
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.witherable:IsWithered() and "WITHERED")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function OnPreLoad(inst, data)
     WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_LIMPETROCK_GROWTIME)
 end
@@ -132,8 +138,10 @@ local function fn()
         return inst
     end
 	
-	inst:AddComponent("inspectable")
 	inst:AddComponent("witherable")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetChanceLootTable("limpetrockempty")

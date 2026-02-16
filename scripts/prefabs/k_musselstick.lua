@@ -2,7 +2,7 @@ require("prefabutil")
 
 local assets =
 {
-    Asset("ANIM", "anim/kyno_musselstick.zip"),	
+	Asset("ANIM", "anim/kyno_musselstick.zip"),	
 	Asset("ANIM", "anim/kyno_musselstick_item.zip"),
 
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
@@ -15,76 +15,108 @@ local assets =
 
 local prefabs =
 {
-    "kyno_mussel",
+	"kyno_mussel",
 	"kyno_musselstick_item",
 }
 
 local DAMAGE_SCALE = 0.5
 
-local function onpickedfn(inst)
-    inst.AnimState:PlayAnimation("idle_empty")
-    inst.AnimState:PushAnimation("idle_empty", true)
+local function OnPicked(inst)
+	inst.AnimState:PlayAnimation("idle_empty")
+	inst.AnimState:PushAnimation("idle_empty", true)
 	
 	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant")
+	
 	inst:RemoveTag("stick_full")
 end
 
-local function onregenfn(inst)
-    inst.AnimState:PlayAnimation("empty_to_small")
-    inst.AnimState:PlayAnimation("small_to_full")
+local function OnRegen(inst)
+	inst.AnimState:PlayAnimation("empty_to_small")
+	inst.AnimState:PlayAnimation("small_to_full")
 	inst.AnimState:PushAnimation("idle_full", true)
 	
 	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant")
+	
 	inst:AddTag("stick_full")
 end
 
-local function makeemptyfn(inst)
-    inst.AnimState:PlayAnimation("idle_empty")
-    inst.AnimState:PushAnimation("idle_empty", true)
+local function OnMakeEmpty(inst)
+	inst.AnimState:PlayAnimation("idle_empty")
+	inst.AnimState:PushAnimation("idle_empty", true)
+	
 	inst:RemoveTag("stick_full")
 end
 
-local function onhammered(inst, worker)
+local function OnHammered(inst, worker)
 	if inst:HasTag("fire") and inst.components.burnable then
 		inst.components.burnable:Extinguish()
 	end
 	
-	inst.components.lootdropper:DropLoot()
+	if inst.components.lootdropper ~= nil then
+		inst.components.lootdropper:DropLoot()
+	end
 	
-	SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
-	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_wood")
+	local fx = SpawnPrefab("collapse_small")
+	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
+	fx:SetMaterial("wood")
+	
 	inst:Remove()
 end
 
-local function onbuilt(inst)
+local function OnBuilt(inst)
     inst.AnimState:PlayAnimation("idle_empty")
     inst.AnimState:PushAnimation("idle_empty", true)
+	
 	inst.components.pickable:MakeEmpty()
 end
 
-local function OnCollide(inst, data)
-    local boat_physics = data.other.components.boatphysics
+
+local function OnDeploy(inst, pt, deployer)
+    local stick = SpawnPrefab("kyno_musselstick")
 	
-    if boat_physics ~= nil then
-        local hit_velocity = math.floor(math.abs(boat_physics:GetVelocity() * data.hit_dot_velocity) * DAMAGE_SCALE / boat_physics.max_velocity + 0.5)
-        inst.components.workable:WorkedBy(data.other, hit_velocity * TUNING.SEASTACK_MINE)
-    end
+	if stick ~= nil then
+		stick.components.pickable:MakeEmpty()
+		stick.Transform:SetPosition(pt:Get())
+	end
+	
+	if deployer ~= nil and deployer.SoundEmitter ~= nil then
+		deployer.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant") 
+	end
+	
+	if inst.components.stackable ~= nil then
+		inst.components.stackable:Get():Remove()
+	end
 end
 
-local function onsave(inst, data)
+local function OnCollide(inst, data)
+	local boat_physics = data.other.components.boatphysics
+	
+	if boat_physics ~= nil then
+		local hit_velocity = math.floor(math.abs(boat_physics:GetVelocity() * data.hit_dot_velocity) * DAMAGE_SCALE / boat_physics.max_velocity + 0.5)
+		inst.components.workable:WorkedBy(data.other, hit_velocity * TUNING.SEASTACK_MINE)
+	end
+end
+
+local function GetStatus(inst, viewer)
+	return (inst.components.burnable:IsBurning() and "BURNING")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
+local function OnSave(inst, data)
 	if inst:HasTag("burnt") or inst:HasTag("fire") then
-        data.burnt = true
-    end
+		data.burnt = true
+	end
 	
 	if inst:HasTag("stick_full") then
 		data.stickfull = true
 	end
 end
 
-local function onload(inst, data)
+local function OnLoad(inst, data)
 	if data and data.burnt then
-        inst.components.burnable.onburnt(inst)
-    end
+		inst.components.burnable.onburnt(inst)
+	end
 	
 	if data and data.stickfull then
 		inst.AnimState:PlayAnimation("idle_full", true)
@@ -115,8 +147,6 @@ local function fn()
 	inst:AddTag("silviculture") 
 	inst:AddTag("musselfarm")
 	
-	inst:SetPrefabNameOverride("kyno_musselstick_item")
-	
     inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
@@ -124,6 +154,7 @@ local function fn()
     end
 
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
     inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"twigs", "twigs", "rope", "boards"})
@@ -132,42 +163,29 @@ local function fn()
 	inst:AddComponent("pickable")
     inst.components.pickable.picksound = "turnoftides/common/together/water/harvest_plant"
 	inst.components.pickable:SetUp("kyno_mussel", TUNING.KYNO_MUSSELSTICK_GROWTIME, 3)
-    inst.components.pickable.onregenfn = onregenfn
-    inst.components.pickable.onpickedfn = onpickedfn
-    inst.components.pickable.makeemptyfn = makeemptyfn
+    inst.components.pickable.onregenfn = OnRegen
+    inst.components.pickable.onpickedfn = OnPicked
+    inst.components.pickable.makeemptyfn = OnMakeEmpty
 	
 	inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
-	inst.components.workable:SetOnFinishCallback(onhammered)
+	inst.components.workable:SetOnFinishCallback(OnHammered)
     inst.components.workable:SetWorkLeft(TUNING.KYNO_MUSSELSTICK_WORKLEFT)
 	
     inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 
 	inst:ListenForEvent("on_collide", OnCollide)
-	inst:ListenForEvent("onbuilt", onbuilt)
+	inst:ListenForEvent("onbuilt", OnBuilt)
 	
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
     MakeHauntableLaunch(inst)
 
-	inst.OnSave = onsave 
-    inst.OnLoad = onload
+	inst.OnSave = OnSave
+    inst.OnLoad = OnLoad
 
     return inst
-end
-
-local function ondeploy(inst, pt, deployer)
-    local stick = SpawnPrefab("kyno_musselstick")
-	
-	if stick ~= nil then
-		stick.components.pickable:MakeEmpty()
-		stick.Transform:SetPosition(pt:Get())
-	end
-	
-	if deployer ~= nil and deployer.SoundEmitter ~= nil then
-		deployer.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant") 
-	end
 end
 
 local function itemfn()
@@ -192,7 +210,7 @@ local function itemfn()
     end
 
     inst:AddComponent("deployable")
-    inst.components.deployable.ondeploy = ondeploy
+    inst.components.deployable.ondeploy = OnDeploy
     inst.components.deployable:SetDeploySpacing(DEPLOYSPACING.MEDIUM)
     inst.components.deployable:SetDeployMode(DEPLOYMODE.WATER)
 

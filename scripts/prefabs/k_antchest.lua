@@ -108,6 +108,14 @@ local function RefreshAntChestBuild(inst, minimap)
     end
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.burnable:IsBurning() and "BURNING")
+	or (inst.components.container:HasItemWithTag("honeyed", 1) and "HONEY")
+	or (inst.components.container:Has("honey", 1) and "HONEY")
+	or (inst.components.container:Has("kyno_nectar_pod", 1) and "NECTAR")
+	or "GENERIC"
+end
+
 local function OnSave(inst, data)
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
 		data.burnt = true
@@ -146,9 +154,10 @@ local function fn()
 	inst.AnimState:SetBuild("ant_chest")
 	inst.AnimState:PlayAnimation("closed", true)
 	
+	inst:AddTag("chest")
 	inst:AddTag("structure")
 	inst:AddTag("antchest")
-	inst:AddTag("chest")
+	inst:AddTag("cook_robot_storage_valid")
 	
 	inst.entity:SetPristine()
 
@@ -161,8 +170,10 @@ local function fn()
         return inst
     end
 	
-	inst:AddComponent("inspectable")
 	inst:AddComponent("lootdropper")
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("preserver")
 	inst.components.preserver:SetPerishRateMultiplier(TUNING.KYNO_ANTCHEST_PERISH_MULT)

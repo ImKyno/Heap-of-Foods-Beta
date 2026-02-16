@@ -49,6 +49,12 @@ local function onbuilt(inst)
     inst.AnimState:PlayAnimation("empty", true)
 end
 
+local function GetStatus(inst, viewer)
+	return (inst.components.burnable:IsBurning() and "BURNING")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
+
 local function fn()
 	local inst = CreateEntity()
     
@@ -84,7 +90,8 @@ local function fn()
 	inst:AddComponent("lootdropper")
 	
 	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "QUAGMIRE_MUSHROOMSTUMP"
+	inst.components.inspectable.nameoverride = "KYNO_MUSHSTUMP"
+	inst.components.inspectable.getstatus = GetStatus
 	
 	inst:AddComponent("hauntable")
     inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)

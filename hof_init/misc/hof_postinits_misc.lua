@@ -667,6 +667,7 @@ end
 
 -- Allows us to edit some stuff for waxed plants.
 local WAXED_PLANTS = require("prefabs/waxed_plant_common")
+
 local function Common_CreateWaxedPlant(inst, data)
 	if data.minimapicon2 ~= nil then -- For using .tex instead.
 		inst.MiniMapEntity:SetIcon(data.minimapicon2..".tex")
@@ -675,7 +676,6 @@ end
 
 local _CreateWaxedPlant = WAXED_PLANTS.CreateWaxedPlant
 function WAXED_PLANTS.CreateWaxedPlant(data, ...)
-
 	local _common_postinit = data.common_postinit
 	
 	data.common_postinit = function(inst, ...)

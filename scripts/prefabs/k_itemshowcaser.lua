@@ -116,6 +116,13 @@ local function OnFoodGiven(inst, item, giver)
 	else
 		inst.AnimState:OverrideSymbol("cooker_overlay", "kyno_itemshowcaser", "swap_cooker")
 	end
+	
+	-- SPECIAL CASES!
+	if item ~= nil then
+		if item.prefab == "batnosehat" and item.components.perishable ~= nil then
+			item.components.perishable:StopPerishing()
+		end
+	end
 end
 
 local function OnFoodTaken(inst, item, taker, wholestack)
@@ -146,10 +153,18 @@ local function OnFoodTaken(inst, item, taker, wholestack)
 		
 	inst.AnimState:ClearOverrideSymbol("cooker_overlay")
 	inst.AnimState:HideSymbol("cooker_overlay")
+	
+	-- SPECIAL CASES!
+	if item ~= nil then
+		if item.prefab == "batnosehat" and item.components.perishable ~= nil then
+			item.components.perishable:StopPerishing()
+		end
+	end
 end
 
-local function GetStatus(inst)
-	return inst.components.inventoryitemholder:IsHolding() and "FULL" or nil
+local function GetStatus(inst, viewer)
+	return inst.components.inventoryitemholder:IsHolding() and "FULL" 
+	or "EMPTY"
 end
 
 local function OnBuilt(inst)

@@ -13,6 +13,7 @@ local assets =
 	Asset("ANIM", "anim/quagmire_crop_wheat.zip"),
 	Asset("ANIM", "anim/quagmire_salt.zip"),
 	Asset("ANIM", "anim/foliage.zip"),
+
 	Asset("ANIM", "anim/kyno_cookingoil.zip"),
 	Asset("ANIM", "anim/kyno_sugar.zip"),
 	Asset("ANIM", "anim/kyno_crabkingmeat.zip"),
@@ -63,6 +64,7 @@ local function wheatfn()
 	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("cookable")
+	inst:AddTag("chickenfood")
 	inst:AddTag("gourmet_wheat")
 	inst:AddTag("gourmet_ingredient")
 
@@ -81,6 +83,10 @@ local function wheatfn()
 	inst.components.edible.hungervalue = TUNING.KYNO_WHEAT_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_WHEAT_SANITY
 	inst.components.edible.foodtype = FOODTYPE.SEEDS
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
+	inst.components.fuel.fuelvalue = TUNING.MED_LARGE_FUEL
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
@@ -118,6 +124,7 @@ local function wheat_cookedfn()
 	inst.AnimState:SetBuild("quagmire_crop_wheat")
 	inst.AnimState:PlayAnimation("cooked")
 
+	inst:AddTag("chickenfood")
 	inst:AddTag("gourmet_wheat")
 	inst:AddTag("gourmet_ingredient")
 
@@ -136,6 +143,10 @@ local function wheat_cookedfn()
 	inst.components.edible.hungervalue = TUNING.KYNO_WHEAT_COOKED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_WHEAT_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.SEEDS
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
+	inst.components.fuel.fuelvalue = TUNING.MED_LARGE_FUEL
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
@@ -373,9 +384,10 @@ local function sprigfn()
     inst.AnimState:SetBuild("quagmire_spotspice_sprig")
     inst.AnimState:PlayAnimation("idle")
 
+	inst:AddTag("show_spoilage")
 	inst:AddTag("gourmet_sprig")
 	inst:AddTag("gourmet_ingredient")
-	inst:AddTag("show_spoilage")
+	inst:AddTag("chickenfood")
 
     inst.entity:SetPristine()
 
@@ -404,6 +416,10 @@ local function sprigfn()
 	inst.components.edible.hungervalue = TUNING.KYNO_SPOTSPICE_LEAF_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_SPOTSPICE_LEAF_SANITY
 	inst.components.edible.foodtype = FOODTYPE.SEEDS
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
+	inst.components.fuel.fuelvalue = TUNING.LARGE_FUEL
 	
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

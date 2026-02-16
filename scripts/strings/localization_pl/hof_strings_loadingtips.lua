@@ -36,7 +36,6 @@ local LOADINGTIPS   =
 	SPOTTYSHRUB     = "Krzewy Plamy można znaleźć na całym Archipelagu Spokoju. Można je zabrać do domu za pomocą Łopaty.",
 	SWEETFLOWER     = "Słodki Kwiat może być użyty w Crock Pocie jako opcja słodzenia.",
 	LIMPETROCK      = "Jedynym miejscem, w którym znajdziesz Limpet Rocks, jest Kamieniołom Krabów w Archipelagu Spokoju lub plaża na Wyspie Nadmorskiej!",
-	CHICKEN         = "\"Zastanawiam się, czy te Kury mogłyby dawać mi jajka. Potrzebuję nasion, żeby je pobudzić!\" -W",
 	SYRUPPOT        = "Syrop zrobiony w Garnku do Syropu da cztery jednostki zamiast jednej, gdy zostanie ugotowany w zwykłym Garnku.",
 	COOKWARE        = "Garnki do syropu, garnki, grille i piekarniki gotują jedzenie szybciej niż zwykły Crock Pot. Każdy z nich ma także wyjątkowe bonusy!",
 	COOKWARE_PIT    = "Aby gotować przy użyciu specjalnych stacji kuchennych, musisz najpierw zainstalować je na Ognisku.",
@@ -118,6 +117,11 @@ local LOADINGTIPS   =
 	BIRTHDAY_CAKE3  = "Tort Rocznicowy zapewnia kojącą aurę dla osób w pobliżu.",
 	BIRTHDAY_CHEER  = "Podczas wydarzenia rocznicowego Heap of Foods, radość rocznicową można uzyskać poprzez gotowanie, warzenie lub doprawianie potraw, mając na sobie kapelusz rocznicowy.",
 	BIRTHDAY_CORN   = "Maszyna do popcornu może wyprodukować 5 pocornów z jednej kukurydzy. A podczas rocznicy Heap of Foods będzie produkować rocznicowy popcorn.",
+	CHICKEN1        = "\"Zastanawiam się, czy te Kury mogłyby dawać mi jajka. Potrzebuję nasion, żeby je pobudzić!\" -W",
+	CHICKEN2        = "Kury żyjące w kurniku mają większą szansę na zniesienie dużych jaj.",
+	CHICKEN3        = "Kury żyjące na wolności mają niewielką szansę na zniesienie jaj po zjedzeniu.",
+	CHICKEN4        = "Kury żyjące w kurniku będą znosić jaja tylko wtedy, gdy będą codziennie jeść coś, np. nasiona, pszenicę lub pędy cętkowane. Mogą również jeść z karmnika.",
+	ANIMALFEEDER    = "Koryto do karmienia może być używane do karmienia niektórych zwierząt gospodarskich, np. kur.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

@@ -17,7 +17,7 @@ local function fn()
 	
 	inst:AddTag("FX")
 	inst:AddTag("NOCLICK")
-	inst:AddTag("NOBLOCKER")
+	inst:AddTag("NOBLOCK")
     
 	inst.persists = false
 	

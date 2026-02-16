@@ -128,22 +128,22 @@ local function OnAttached(inst, target)
 	
 	-- Speed, Sleep
 	if target.components.grogginess ~= nil then
-		target.components.grogginess:AddImmunitySource(target)
+		target.components.grogginess:AddImmunitySource(target, "kyno_goldenapplebuff")
 	end
 	
 	-- Defense
-	if target.components.health ~= nil then
-		target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER, "kyno_goldenapplebuff")
+	if target.components.health ~= nil and target:HasTag("player") then
+		target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.KYNO_GOLDENAPPLEBUFF_DAMAGEMOD, "kyno_dmgreductionbuff")
 	end
 	
 	-- Strength
 	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_SMALL, "kyno_goldenapplebuff")
+		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_GOLDENAPPLEBUFF_STRENGTH, "kyno_strengthbuff")
 	end
 	
 	-- Hunger Rate
 	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.HUNGERRATEBUFF_MODIFIER, "kyno_goldenapplebuff")
+		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.KYNO_GOLDENAPPLEBUFF_HUNGERRATE, "kyno_hungerbuff")
 	end
 	
 	-- Fear
@@ -208,7 +208,7 @@ local function OnAttached(inst, target)
 	
 	-- Planar Defense
 	if target.components.planardefense ~= nil then 
-		target.components.planardefense:AddBonus(target, TUNING.KYNO_PLANARDEFENSEBUFF_BONUS, "kyno_goldenapplebuff")
+		target.components.planardefense:AddBonus(target, TUNING.KYNO_GOLDENAPPLEBUFF_PLANARMOD, "kyno_planardefensebuff")
 	end
 	
 	-- Super Jellybeans
@@ -225,7 +225,9 @@ local function OnAttached(inst, target)
 		target:AddComponent("moistureimmunity")
 	end
 	
-	target.components.moistureimmunity:AddSource(target)
+	if target.components.moistureimmunity ~= nil then
+		target.components.moistureimmunity:AddSource(target)
+	end
 	
 	-- Poison Immunity
 	if not target:HasTag("sporecloudimmune") then
@@ -268,17 +270,17 @@ local function OnDetached(inst, target)
 	
 	-- Defense
 	if target.components.health ~= nil then
-		target.components.health.externalabsorbmodifiers:RemoveModifier(target)
+		target.components.health.externalabsorbmodifiers:RemoveModifier(target, "kyno_dmgreductionbuff")
 	end
 	
 	-- Strength
 	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.externaldamagemultipliers:RemoveModifier(target, "kyno_goldenapplebuff")
+		target.components.combat.externaldamagemultipliers:RemoveModifier(target, "kyno_strengthbuff")
 	end
 	
 	-- Hunger Rate
 	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:RemoveModifier(target, "kyno_goldenapplebuff")
+		target.components.hunger.burnratemodifiers:RemoveModifier(target, "kyno_hungerbuff")
 	end
 	
 	-- Fear
@@ -336,7 +338,7 @@ local function OnDetached(inst, target)
 	
 	-- Planar Defense
 	if target.components.planardefense ~= nil then
-		target.components.planardefense:RemoveBonus(target, "kyno_goldenapplebuff")
+		target.components.planardefense:RemoveBonus(target, "kyno_planardefensebuff")
 	end
 	
 	-- Moisture
@@ -432,22 +434,22 @@ local function OnExtended(inst, target)
 
 	-- Speed, Sleep
 	if target.components.grogginess ~= nil then
-		target.components.grogginess:AddImmunitySource(target)
+		target.components.grogginess:AddImmunitySource(target, "kyno_goldenapplebuff")
 	end
 	
 	-- Defense
-	if target.components.health ~= nil then
-		target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.BUFF_PLAYERABSORPTION_MODIFIER, "kyno_goldenapplebuff")
+	if target.components.health ~= nil and target:HasTag("player") then
+		target.components.health.externalabsorbmodifiers:SetModifier(target, TUNING.KYNO_GOLDENAPPLEBUFF_DAMAGEMOD, "kyno_dmgreductionbuff")
 	end
 	
 	-- Strength
 	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_ALCOHOL_STRENGTH_SMALL, "kyno_goldenapplebuff")
+		target.components.combat.externaldamagemultipliers:SetModifier(target, TUNING.KYNO_GOLDENAPPLEBUFF_STRENGTH, "kyno_strengthbuff")
 	end
 	
 	-- Hunger Rate
 	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.HUNGERRATEBUFF_MODIFIER, "kyno_goldenapplebuff")
+		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.KYNO_GOLDENAPPLEBUFF_HUNGERRATE, "kyno_hungerbuff")
 	end
 	
 	-- Fear
@@ -524,7 +526,7 @@ local function OnExtended(inst, target)
 	
 	-- Planar Defense
 	if target.components.planardefense ~= nil then 
-		target.components.planardefense:AddBonus(target, TUNING.KYNO_PLANARDEFENSEBUFF_BONUS, "kyno_goldenapplebuff")
+		target.components.planardefense:AddBonus(target, TUNING.KYNO_GOLDENAPPLEBUFF_PLANARMOD, "kyno_planardefensebuff")
 	end
 	
 	-- Super Jellybeans
@@ -541,7 +543,9 @@ local function OnExtended(inst, target)
 		target:AddComponent("moistureimmunity")
 	end
 	
-	target.components.moistureimmunity:AddSource(target)
+	if target.components.moistureimmunity ~= nil then
+		target.components.moistureimmunity:AddSource(target)
+	end
 	
 	-- Poison Immunity
 	if target:HasTag("sporecloudimmune") then

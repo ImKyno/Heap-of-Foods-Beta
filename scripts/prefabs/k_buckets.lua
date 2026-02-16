@@ -28,11 +28,73 @@ local function OnFill(inst, from_object)
 			inst.components.inventory:DropItem(waterbucket)
 		end
 	end
-		
-	inst:Remove()
+	
 	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/emerge/small")
 	
+	inst:Remove()
+	
 	return true
+end
+
+local function OnFillWithRain(inst)
+	local x, y, z = inst.Transform:GetWorldPosition()
+	
+	local filled = SpawnPrefab("kyno_bucket_water")
+	local fillfx = SpawnPrefab("splash")
+
+	if filled ~= nil then
+		filled.Transform:SetPosition(x, y, z)
+		fillfx.Transform:SetPosition(x, y, z)
+	end
+
+	inst:Remove()
+end
+
+local function OnRainTick(inst)
+	if not TheWorld.state.israining or inst.components.inventoryitem:IsHeld() then
+		return
+	end
+
+	inst._rainfilltime = inst._rainfilltime + 1
+
+	if inst._rainfilltime >= TUNING.KYNO_BUCKET_WATER_RAIN_TIMER then
+		OnFillWithRain(inst)
+	end
+end
+
+local function OnStartRainFill(inst)
+	if inst._rainfilltask == nil then
+		inst._rainfilltask = inst:DoPeriodicTask(1, OnRainTick)
+	end
+end
+
+local function OnStopRainFill(inst, reset)
+	if inst._rainfilltask ~= nil then
+		inst._rainfilltask:Cancel()
+		inst._rainfilltask = nil
+	end
+
+	if reset then
+		inst._rainfilltime = 0
+	end
+end
+
+local function OnIsRaining(inst, israining)
+	if israining and not inst.components.inventoryitem:IsHeld() then
+		OnStartRainFill(inst)
+	else
+		OnStopRainFill(inst, false) -- This pauses the timer. Not actually a reset.
+	end
+end
+
+local function OnDropped(inst)
+	if TheWorld.state.israining then
+		OnStartRainFill(inst)
+	end
+end
+
+local function OnPutInInventory(inst)
+	OnStopRainFill(inst, true) -- This resets the timer!
 end
 
 local function emptyfn()
@@ -73,10 +135,6 @@ local function emptyfn()
 	inst.components.finiteuses:SetMaxUses(TUNING.KYNO_BUCKET_EMPTY_USES)
 	inst.components.finiteuses:SetUses(TUNING.KYNO_BUCKET_EMPTY_USES)
 	inst.components.finiteuses:SetOnFinished(inst.Remove)
-	
-	-- inst:AddComponent("tradable")
-	-- inst.components.tradable.goldvalue = 1
-	-- inst.components.tradable.tradefor = { "kyno_sapbucket_installer" }
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
@@ -116,6 +174,9 @@ local function metalfn()
 		return inst
 	end
 	
+	inst._rainfilltime = 0
+	inst._rainfilltask = nil
+	
 	inst:AddComponent("inspectable")
 	inst:AddComponent("milker")
 	
@@ -123,14 +184,20 @@ local function metalfn()
 	inst.components.fillable.overrideonfillfn = OnFill
 	inst.components.fillable.showoceanaction = true
 	inst.components.fillable.acceptsoceanwater = true
-	
-	-- inst:AddComponent("tradable")
-	-- inst.components.tradable.goldvalue = 1
-	-- inst.components.tradable.tradefor = { "kyno_sapbucket_installer" }
 
 	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
+	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_bucket_metal"
+	
+	inst:WatchWorldState("israining", OnIsRaining)
+	
+	inst:DoTaskInTime(0, function()
+		if TheWorld.state.israining and not inst.components.inventoryitem:IsHeld() then
+			OnStartRainFill(inst)
+		end
+	end)
 
 	return inst
 end
@@ -156,6 +223,7 @@ local function waterfn()
 	inst:AddTag("bucket_water")
 	
 	inst.pickupsound = "metal"
+	inst.no_wet_prefix = true
 
 	inst.entity:SetPristine()
 
@@ -164,10 +232,6 @@ local function waterfn()
 	end
 	
 	inst:AddComponent("inspectable")
-	
-	-- inst:AddComponent("tradable")
-	-- inst.components.tradable.goldvalue = 1
-	-- inst.components.tradable.tradefor = { "kyno_sapbucket_installer" }
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

@@ -893,7 +893,7 @@ local kyno_foods_jar =
 	mayonnaise = 
 	{
 		test = function(brewer, names, tags) return tags.egg and tags.oil and names.kyno_salt
-		and not names.kyno_chicken_egg and not names.tallbirdegg and not names.nightmarefuel end,
+		and not tags.chickenegg and not names.tallbirdegg and not names.nightmarefuel end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -915,7 +915,7 @@ local kyno_foods_jar =
 	
 	mayonnaise_chicken = 
 	{
-		test = function(brewer, names, tags) return names.kyno_chicken_egg and tags.oil and names.kyno_salt and not names.nightmarefuel end,
+		test = function(brewer, names, tags) return tags.chickenegg and tags.oil and names.kyno_salt and not names.nightmarefuel end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,

@@ -259,14 +259,6 @@ local function GrowTall(inst)
 	PushSway(inst)
 end
 
-local function inspect_tree(inst)
-	if inst:HasTag("burnt") then
-		return "BURNT"
-	elseif inst:HasTag("stump") then
-		return "CHOPPED"
-	end
-end
-
 local growth_stages =
 {
 	{
@@ -505,6 +497,13 @@ local function makeemptyfn(inst, level, coconut)
 	end
 end
 
+local function GetStatus(inst, viewer)
+	return (inst:HasTag("stump") and "CHOPPED")
+	or (inst:HasTag("burnt") and "BURNT")
+	or (inst.components.burnable:IsBurning() and "BURNING")
+	or (not inst.components.pickable:CanBePicked() and "PICKED")
+	or "GENERIC"
+end
 
 local function onsave(inst, data)
 	if inst:HasTag("burnt") or inst:HasTag("fire") then
@@ -641,7 +640,7 @@ local function OnEntityWake(inst)
 
 	if not inst.components.inspectable then
 		inst:AddComponent("inspectable")
-		inst.components.inspectable.getstatus = inspect_tree
+		inst.components.inspectable.getstatus = GetStatus
 	end
 end
 
@@ -691,7 +690,7 @@ local function makefn(build, stage, data, level, coconut)
 		inst:AddComponent("lootdropper")
 		
 		inst:AddComponent("inspectable")
-		inst.components.inspectable.getstatus = inspect_tree
+		inst.components.inspectable.getstatus = GetStatus
 
 		inst:AddComponent("pickable")
 		inst.components.pickable.picksound = "dontstarve/wilson/pickup_reeds"

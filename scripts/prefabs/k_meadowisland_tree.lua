@@ -238,14 +238,6 @@ local function GrowTall(inst)
 	PushSway(inst)
 end
 
-local function inspect_tree(inst)
-	if inst:HasTag("burnt") then
-		return "BURNT"
-	elseif inst:HasTag("stump") then
-		return "CHOPPED"
-	end
-end
-
 local growth_stages =
 {
 	{
@@ -405,7 +397,7 @@ local function TestItem(inst, item, giver, level)
 	if item.components.inventoryitem and item:HasTag("squirrel") and inst.level == "tall" then
 		return true -- Infest the tree.
 	else
-		giver.components.talker:Say(GetString(giver, "ANNOUNCE_PIKOTREE_TOOSMALL"))
+		giver:PushEvent("treeinstallfail")
 	end
 end
 
@@ -419,6 +411,13 @@ local function OnGetItemFromPlayer(inst, giver, item)
 	end
 	
 	inst:Remove()
+end
+
+local function GetStatus(inst, viewer)
+	return (inst:HasTag("stump") and "CHOPPED")
+	or (inst:HasTag("burnt") and "BURNT")
+	or (inst.components.burnable:IsBurning() and "BURNING")
+	or "GENERIC"
 end
 
 local function onsave(inst, data)
@@ -529,7 +528,7 @@ local function OnEntityWake(inst)
 
 	if not inst.components.inspectable then
 		inst:AddComponent("inspectable")
-		inst.components.inspectable.getstatus = inspect_tree
+		inst.components.inspectable.getstatus = GetStatus
 	end
 end
 
@@ -581,7 +580,7 @@ local function makefn(build, stage, data, level)
 		inst:AddComponent("lootdropper")
 
 		inst:AddComponent("inspectable")
-		inst.components.inspectable.getstatus = inspect_tree
+		inst.components.inspectable.getstatus = GetStatus
 		
 		inst:AddComponent("cookwareinstaller")
 		inst.components.cookwareinstaller:SetAcceptTest(TestItem)

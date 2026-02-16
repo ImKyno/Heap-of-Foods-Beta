@@ -61,9 +61,7 @@ local function OnHammered(inst, worker)
 end
 
 local function OnTimerDone(inst, data)
-    if data.name == "replenish_crate" then
-        inst.SoundEmitter:PlaySound("dontstarve/common/fishingpole_fishcaught")
-		
+    if data.name == "replenish_crate" then		
 		local crate = SpawnPrefab("kyno_meadowisland_crate")
 		crate.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		
@@ -213,7 +211,7 @@ local function fn()
     inst.components.burnable:SetOnBurntFn(OnBurnt)
 	MakeSmallPropagator(inst)
 	
-	AddToRegrowthManager(inst)
+	-- AddToRegrowthManager(inst)
 
     inst.OnSave = OnSave
     inst.OnLoad = OnLoad

@@ -3,7 +3,6 @@
 ---------------------------------------------------------------------------
 -- Cake Slice Chocolate
 ---------------------------------------------------------------------------
-
 local function ApplyChocolateBuff(inst, bonus)
 	if inst._bonusmaxhunger then
 		return false
@@ -112,7 +111,6 @@ end
 ---------------------------------------------------------------------------
 -- Cake Slice Pineapple
 ---------------------------------------------------------------------------
-
 local function ApplyPineappleBuff(inst, bonus)
 	if inst._bonusmaxhealth then
 		return false
@@ -221,7 +219,6 @@ end
 ---------------------------------------------------------------------------
 -- Cake Slice Sweet Flower
 ---------------------------------------------------------------------------
-
 local function ApplySweetFlowerBuff(inst, bonus)
 	if inst._bonusmaxsanity then
 		return false
@@ -322,7 +319,7 @@ local function slice3fn()
 	inst:AddComponent("timer")
 	inst.components.timer:StartTimer("kyno_slice3birthdaybuff", TUNING.KYNO_HOFBIRTHDAY_CAKE_SLICE3_DURATION)
 	
-    inst:ListenForEvent("kyno_slice3birthdaybuff", OnTimerDoneSweetFlower)
+    inst:ListenForEvent("timerdone", OnTimerDoneSweetFlower)
 
     return inst
 end

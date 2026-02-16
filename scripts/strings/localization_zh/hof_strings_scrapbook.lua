@@ -1,10 +1,14 @@
--- Common Dependencies.
--- local _G 			= GLOBAL
--- local require 		= _G.require
--- local STRINGS		= _G.STRINGS
-
--- Datas. (Unused)
+-- General Data.
 STRINGS.SCRAPBOOK.DATA_BREWER = "可以喝酒"
+STRINGS.SCRAPBOOK.DATA_OPENABLE = "CAN BE OPENED"
+STRINGS.SCRAPBOOK.DATA_SLICEABLE = "CAN BE SLICED"
+STRINGS.SCRAPBOOK.DATA_SLAUGHTERABLE = "CAN BE SLAUGHTERED"
+STRINGS.SCRAPBOOK.DATA_MILKABLE = "CAN BE MILKED"
+STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "CAN BE BRED"
+STRINGS.SCRAPBOOK.DATA_FISHFARM = "CAN BREED FISHES"
+STRINGS.SCRAPBOOK.DATA_ANIMALFEEDER = "CAN FEED ANIMALS"
+
+-- Foodtypes.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "可怕"
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDSOUL = "灵魂"
 STRINGS.SCRAPBOOK.FOODTYPE.ALCOHOLIC = "酒精"
@@ -110,6 +114,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEEFRIENDLY = "食用此食物后，�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "在一定时间内将最大饥饿值提升15%。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "在一定时间内将最大健康值提升15%。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "在一定时间内将最大理智值提升15%。\n\n庆祝更多料理五周年！"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BERSERKER = "Increased damage and decreased damage resistance for a certain amount of time."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含防腐粉末的料理可使腐败速率减半，并免除食用变质食物的惩罚。"
@@ -154,9 +159,11 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "用它点亮周年庆蛋糕�
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "可收集周年庆贺礼。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "萨米特别的周年庆帽子。\n可获得周年庆贺礼。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "研究鱼类和鱼卵会记录到鱼类图鉴中。"
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "An oversized egg that can be thrown.\n\nReduces target's damage and movement speed by 10% for 20 seconds. Effects stack up to 3 times for a total of 30%.\n\n\"Even eggs are weapons on the battlefield!\" - Wigfrid."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERRATE = "Decreased hunger loss for a certain amount of time."
 
 -- Creatures.
-STRINGS.SCRAPBOOK.SPECIALINFO.FEEDCHICKEN = "可以用种子喂它，让它下蛋。"
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 40% chance of laying Eggs after eating. They have a very small chance of laying a Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying a Large Egg."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIKO = "毛茸茸的小家伙，喜欢偷你最值钱的东西！"
 STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "翠鸟经常会从上空投下热带锦鲤。真是一场鱼雨！"
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "在黄昏和夜晚会发出色彩鲜艳的健康光芒。"
@@ -206,3 +213,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CAKE = "可用砍刀切开周年纪念蛋糕。每份蛋糕风味与效果都不一样。\n\n随时间推移，逐渐提升周围幸存者的理智值。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "随时间推移，逐渐提升周围幸存者的理智值。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "一个2格容器，用于接收制作爆米花的玉米。\n\n将玉米放入第一个格子可生产5份爆米花。\n\n在更多料理周年庆期间，它会变为周年庆纪念爆米花。\n\n庆祝更多料理五周年！"
+STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Some animals will feed from the food placed in this trough.\n\Seeds and Grains can be used as a primary food source."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "A shelter for Chickens that can produce poultry products."

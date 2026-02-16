@@ -469,6 +469,30 @@ AddRecipe2("kyno_fishregistryhat", {Ingredient("strawhat", 1), Ingredient("ocean
 SortAfter("kyno_fishregistryhat", "tacklestation", "FISHING")
 SortAfter("kyno_fishregistryhat", "plantregistryhat", "GARDENING")
 
+AddRecipe2("kyno_animalfeeder", {Ingredient("seeds", 3), Ingredient("kyno_wheat", 3, ModAtlas), Ingredient("boards", 3)}, TECH.SCIENCE_ONE,
+	{
+		placer              = "kyno_animalfeeder_placer",
+		min_spacing         = 1.5,
+		atlas               = ModAtlas,
+		image               = "kyno_animalfeeder.tex",
+	},
+	{"GARDENING"}
+)
+SortAfter("kyno_animalfeeder", "kyno_mushstump", "GARDENING")
+
+AddRecipe2("kyno_chickenhouse", {Ingredient("kyno_chicken2", 3, ModAtlas, true), Ingredient("cutgrass", 3), Ingredient("boards", 3)}, TECH.SCIENCE_TWO,
+	{
+		placer              = "kyno_chickenhouse_placer",
+		min_spacing         = 1.75,
+		atlas               = ModAtlas,
+		image               = "kyno_chickenhouse.tex",
+	},
+	{"GARDENING"}
+)
+SortAfter("kyno_chickenhouse", "beebox", "GARDENING")
+
+AddDeconstructRecipe("kyno_chicken2", {}, { no_deconstruction = true })
+
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
 		builder_tag         = "strongman",
@@ -723,6 +747,21 @@ AddCharacterRecipe("transmute_kyno_worm_bone", {Ingredient("fossil_piece", 1)}, 
 	}
 )
 SortAfter("transmute_kyno_worm_bone", "transmute_fossil_piece", "CHARACTER")
+
+AddRecipe2("hermitshop_kyno_malbatrossfood_blueprint", {Ingredient("messagebottleempty", 10)}, TECH.HERMITCRABSHOP_SEVEN,
+	{
+		nounlock            = true,
+		no_deconstruction   = true,
+		actionstr           = "HERMITCRABSHOP",
+		description         = "kyno_malbatrossfood_blueprint",
+		sg_state            = "give",
+		product             = "kyno_malbatrossfood_blueprint",
+		atlas               = DefaultAtlas,
+		image               = "blueprint_rare.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+SortAfter("hermitshop_kyno_malbatrossfood_blueprint", "hermitshop_chum_blueprint", "CRAFTING_STATION")
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 if HOF_WARLYMEALGRINDER then

@@ -13,16 +13,46 @@ local hof_init_strings =
 	"hof_strings_skinprefabs",
 }
 
+local hof_init_strings_characters =
+{
+	"hof_speech_wilson",
+	"hof_speech_willow",
+	"hof_speech_wolfgang",
+	"hof_speech_wendy",
+	"hof_speech_wx78",
+	"hof_speech_wickerbottom",
+	"hof_speech_woodie",
+	"hof_speech_waxwell",
+	"hof_speech_wathgrithr",
+	"hof_speech_webber",
+	"hof_speech_winona",
+	"hof_speech_wortox",
+	"hof_speech_wormwood",
+	"hof_speech_warly",
+	"hof_speech_wurt",
+	"hof_speech_walter",
+	"hof_speech_wanda",
+}
+
 for _, v in pairs(hof_init_strings) do
 	require("strings/"..v)
 end
 
-local localization = GetModConfigData("LANGUAGE")
-if localization then
-	modimport("scripts/strings/localization_"..localization.."/hof_strings_loadingtips")
+for _, v in pairs(hof_init_strings_characters) do
+	require("strings/characters/"..v)
+end
+
+local HOF_LOCALIZATION = GetModConfigData("LANGUAGE")
+
+if HOF_LOCALIZATION then
+	modimport("scripts/strings/localization_"..HOF_LOCALIZATION.."/hof_strings_loadingtips")
 
 	for _, v in pairs(hof_init_strings) do
-		require("strings/localization_"..localization.."/"..v)
+		require("strings/localization_"..HOF_LOCALIZATION.."/"..v)
+	end
+	
+	for _, v in pairs(hof_init_strings_characters) do
+		require("strings/localization_"..HOF_LOCALIZATION.."/characters/"..v)
 	end
 end
 
@@ -97,11 +127,16 @@ _G.CONFIGS_HOF                =
 
 _G.CONFIGS_HOF.SEASONALFOOD   = GetModConfigData("SEASONALFOOD")
 _G.CONFIGS_HOF.SCRAPBOOK      = GetModConfigData("SCRAPBOOK")
+_G.CONFIGS_HOF.SCRAPBOOK_EXT  = GetModConfigData("SCRAPBOOK2")
 _G.CONFIGS_HOF.AUTORETROFIT   = GetModConfigData("AUTORETROFIT")
 
 if _G.CONFIGS_HOF.SCRAPBOOK then
 	modimport("hof_init/misc/hof_scrapbook")
 	modimport("hof_init/misc/hof_shinyloots") -- Requires Scrapbook to be enabled...
+end
+
+if _G.CONFIGS_HOF.SCRAPBOOK and _G.CONFIGS_HOF.SCRAPBOOK_EXT then
+	modimport("hof_init/misc/hof_scrapbook_postinits")
 end
 
 if _G.CONFIGS_HOF.AUTORETROFIT then
@@ -132,6 +167,7 @@ local mod_options =
 	{ name = "WARLYMEALGRINDER", default = false },
 	{ name = "FERTILIZERTWEAK",  default = false },
 
+	{ name = "SCRAPBOOK2",       default = false },
 	{ name = "SERENITY_CC",      default = false },
 	{ name = "MEADOW_CC",        default = false },
 	{ name = "FULLMOONTRANS",    default = false },

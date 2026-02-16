@@ -105,9 +105,11 @@ AddComponentPostInit("regrowthmanager", function(self)
         return TUNING.KYNO_CRATE_REGROWTH_TIME_MULT
     end)
 	
+	--[[
 	self:SetRegrowthForType("kyno_meadowisland_crate", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_meadowisland_crate", function()
         return TUNING.KYNO_ISLANDCRATE_REGROWTH_TIME_MULT
     end)
+	]]--
 	
 	self:SetRegrowthForType("kyno_wildwheat", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_wildwheat", function()
         return TUNING.KYNO_WILDWHEAT_REGROWTH_TIME_MULT
