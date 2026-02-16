@@ -27,8 +27,8 @@ Cast your line, set your sail, and dive into the ocean! A wave of new aquatic cr
 
 Build yourself a Fish Hatchery to raise your own fish at the comfort of your base, explore the ocean in search of elusive creatures, take part in Ocean Hunts and find a friendly new companion.
 
-󰀌 Mod Version: 4.5-B
-󰀧 Update: Chicken Week
+󰀌 Mod Version: 4.4-B
+󰀧 Update: The Fish Registry
 ]],
 		zh  =
 [[
