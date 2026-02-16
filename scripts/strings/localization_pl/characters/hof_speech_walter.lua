@@ -81,6 +81,9 @@ WALTER.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Chyba nie mogę już na to liczyć
 WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Wow! Czuję się nieustraszony! Może aż za bardzo..."
 WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Dobra, głęboki oddech. Z powrotem do normy."
 
+WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Super! Mogę dłużej wytrzymać bez jedzenia!"
+WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Chyba znów pora na przekąskę."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zła rzecz!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmm, nie w tym przypadku."
@@ -1191,3 +1194,11 @@ WALTER.DESCRIBE.KYNO_ANIMALFEEDER =
 WALTER.DESCRIBE.CHICKENNUGGETS = "Nie nadaje się za bardzo na posiłek kempingowy, ale może być."
 
 WALTER.DESCRIBE.CHICKENWINGS = "Pikantne, ale warto!"
+
+WALTER.DESCRIBE.CHICKENBURGER = "Idealne jedzenie na szlak!"
+
+WALTER.DESCRIBE.CHICKENEGGSOUP = "Idealna na rozgrzanie po długim dniu."
+
+WALTER.DESCRIBE.CHICKENEGGSTEW = "Jak prawdziwy posiłek przy ognisku."
+
+WALTER.DESCRIBE.CHICKENROTISSERIE = "Byłoby świetne na obozową kolację!"

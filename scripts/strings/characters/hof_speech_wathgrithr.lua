@@ -81,6 +81,9 @@ WATHGRITHR.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Their shield abandons me!"
 WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Rage of battle surges through me!"
 WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_END = "The battle-fury wanes..."
 
+WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "My body endures without feast!"
+WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The call of hunger returns!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wrong feast! Beast wants a more delightful food!"
@@ -1191,3 +1194,11 @@ WATHGRITHR.DESCRIBE.KYNO_ANIMALFEEDER =
 WATHGRITHR.DESCRIBE.CHICKENNUGGETS = "The flesh is dishonorably shaped!"
 
 WATHGRITHR.DESCRIBE.CHICKENWINGS = "Fiery wings fit for a warrior!"
+
+WATHGRITHR.DESCRIBE.CHICKENBURGER = "A poultry feast trapped in bread!"
+
+WATHGRITHR.DESCRIBE.CHICKENEGGSOUP = "A warm broth of birdly honor!"
+
+WATHGRITHR.DESCRIBE.CHICKENEGGSTEW = "A stew worthy of a warrior's hunger!"
+
+WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "A worthy roast, fit for a warrior's feast."

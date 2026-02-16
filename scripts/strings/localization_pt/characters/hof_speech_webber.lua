@@ -81,6 +81,9 @@ WEBBER.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Ih... a gente não tá mais tão r
 WEBBER.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Uau! A gente tá batendo super forte agora!"
 WEBBER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "A gente tá menos esmagador agora."
 
+WEBBER.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "A gente não sente fome tão rápido!"
+WEBBER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Uh-oh, a fome voltou."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Achamos que isso não é o que ele quer."
@@ -1191,3 +1194,11 @@ WEBBER.DESCRIBE.KYNO_ANIMALFEEDER =
 WEBBER.DESCRIBE.CHICKENNUGGETS = "A gente gosta! São do tamanho certo!"
 
 WEBBER.DESCRIBE.CHICKENWINGS = "Apimentado! Apimentado! APIMENTADO!"
+
+WEBBER.DESCRIBE.CHICKENBURGER = "A gente gosta de hambúrguer! Esse faz có-có!"
+
+WEBBER.DESCRIBE.CHICKENEGGSOUP = "É tipo um abraço numa tigela!"
+
+WEBBER.DESCRIBE.CHICKENEGGSTEW = "O cheiro está muito bom!"
+
+WEBBER.DESCRIBE.CHICKENROTISSERIE = "Tá girando! E o cheiro é incrível!"

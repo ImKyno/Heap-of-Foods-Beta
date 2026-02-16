@@ -81,6 +81,9 @@ WAXWELL.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Hmph. Os planos retiram seu favor
 WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Que brutalidade intoxicante."
 WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Que tediosamente comum outra vez."
 
+WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Que conveniente."
+WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "A fome é uma inconveniência tediosa."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de algo diferente."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Você não é fácil, hein?"
@@ -1191,3 +1194,11 @@ WAXWELL.DESCRIBE.KYNO_ANIMALFEEDER =
 WAXWELL.DESCRIBE.CHICKENNUGGETS = "Uma indulgência vulgar."
 
 WAXWELL.DESCRIBE.CHICKENWINGS = "Grosseiro, mas eficaz."
+
+WAXWELL.DESCRIBE.CHICKENBURGER = "Simples, mas irritantemente satisfatório."
+
+WAXWELL.DESCRIBE.CHICKENEGGSOUP = "Comida modesta, mas eficaz."
+
+WAXWELL.DESCRIBE.CHICKENEGGSTEW = "Sustento simples, preparado de forma adequada."
+
+WAXWELL.DESCRIBE.CHICKENROTISSERIE = "Decadente, porém inegavelmente prático."

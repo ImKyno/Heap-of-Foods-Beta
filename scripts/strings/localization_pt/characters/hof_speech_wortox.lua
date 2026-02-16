@@ -81,6 +81,9 @@ WORTOX.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "De volta a ser um pouquinho mais f
 WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Que perigo delicioso!"
 WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Ah, a diversão arriscada acabou!"
 
+WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "A fome ficou mais lenta!"
+WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "A barriga volta a roncar!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de outra coisa."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sei que essa brincadeira foi boa, mas vou trazer o correto agora."
@@ -1191,3 +1194,11 @@ WORTOX.DESCRIBE.KYNO_ANIMALFEEDER =
 WORTOX.DESCRIBE.CHICKENNUGGETS = "Petisco-pedacinho! Heehee!"
 
 WORTOX.DESCRIBE.CHICKENWINGS = "Asinhas quentinhas, ardinhas!"
+
+WORTOX.DESCRIBE.CHICKENBURGER = "Um pão-pássaro delicioso! Hyuyu!"
+
+WORTOX.DESCRIBE.CHICKENEGGSOUP = "Sopa saborosa! Hyuyu!"
+
+WORTOX.DESCRIBE.CHICKENEGGSTEW = "Uma panela borbulhante de prazer mortal! Hyuyu!"
+
+WORTOX.DESCRIBE.CHICKENROTISSERIE = "Girado! Hyuyu!"

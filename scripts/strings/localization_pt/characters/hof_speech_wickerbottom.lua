@@ -81,6 +81,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Uma pena. Meu reforço se di
 WICKERBOTTOM.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Um surto temporário de agressividade e vulnerabilidade."
 WICKERBOTTOM.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Minha constituição parece estabilizada."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Uma redução temporária no gasto calórico."
+WICKERBOTTOM.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Minha taxa metabólica foi normalizada."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Precisa de algo diferente."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não. Acho que ele mencionou wobsters."
@@ -1191,3 +1194,11 @@ WICKERBOTTOM.DESCRIBE.KYNO_ANIMALFEEDER =
 WICKERBOTTOM.DESCRIBE.CHICKENNUGGETS = "Um produto avícola excessivamente processado."
 
 WICKERBOTTOM.DESCRIBE.CHICKENWINGS = "Apêndices aviários ricos em capsaicina."
+
+WICKERBOTTOM.DESCRIBE.CHICKENBURGER = "Uma releitura moderna do sanduíche."
+
+WICKERBOTTOM.DESCRIBE.CHICKENEGGSOUP = "Um restaurador clássico à base de caldo."
+
+WICKERBOTTOM.DESCRIBE.CHICKENEGGSTEW = "Um ensopado nutritivo, rico em proteínas."
+
+WICKERBOTTOM.DESCRIBE.CHICKENROTISSERIE = "Um método extremamente eficiente de assar aves."

@@ -81,6 +81,9 @@ WILLOW.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Och, było fajnie, póki trwało."
 WILLOW.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Tak! Niech wszystko płonie!"
 WILLOW.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Och, ogień już zgasł?"
 
+WILLOW.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Hej, nie robię się głodna tak szybko!"
+WILLOW.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Ech, głód już wrócił?"
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Muszę tu coś umieścić!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ech, nie to!"
@@ -1191,3 +1194,11 @@ WILLOW.DESCRIBE.KYNO_ANIMALFEEDER =
 WILLOW.DESCRIBE.CHICKENNUGGETS = "Nawet się nie pali. Rozczarowanie."
 
 WILLOW.DESCRIBE.CHICKENWINGS = "TAK! Wreszcie jedzenie, które oddaje ogniem!"
+
+WILLOW.DESCRIBE.CHICKENBURGER = "Nadal się nie pali, ale może być."
+
+WILLOW.DESCRIBE.CHICKENEGGSOUP = "Ciepła, nudna, nie pali się."
+
+WILLOW.DESCRIBE.CHICKENEGGSTEW = "Gorący gulasz. Nadal przydałoby się więcej ognia."
+
+WILLOW.DESCRIBE.CHICKENROTISSERIE = "To dopiero właściwe użycie ognia."

@@ -81,6 +81,9 @@ WILLOW.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Aww, that was fun while it lasted.
 WILLOW.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Yeah! Let it all burn!"
 WILLOW.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Aw, the fire's out already?"
 
+WILLOW.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Hey, I'm not getting hungry so fast!"
+WILLOW.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Ugh, hunger's back already?"
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need to put something in here!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, wrong thing!"
@@ -1191,3 +1194,11 @@ WILLOW.DESCRIBE.KYNO_ANIMALFEEDER =
 WILLOW.DESCRIBE.CHICKENNUGGETS = "Not on fire. Disappointing."
 
 WILLOW.DESCRIBE.CHICKENWINGS = "YES! Finally, food that burns back!"
+
+WILLOW.DESCRIBE.CHICKENBURGER = "Still not on fire, but acceptable."
+
+WILLOW.DESCRIBE.CHICKENEGGSOUP = "Warm, boring, not on fire."
+
+WILLOW.DESCRIBE.CHICKENEGGSTEW = "Hot stew. Still could use more fire."
+
+WILLOW.DESCRIBE.CHICKENROTISSERIE = "Now that's a proper use of fire."

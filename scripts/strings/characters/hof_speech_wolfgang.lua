@@ -81,6 +81,9 @@ WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "The power leaves Wolfgang..."
 WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Wolfgang is UNSTOPPABLE! Smash all things!"
 WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Wolfgang no longer feels mighty rage..."
 
+WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Wolfgang stays full longer!"
+WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Wolfgang is hungry again..."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Is not the correct one."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mighty pig do not want this."
@@ -1191,3 +1194,11 @@ WOLFGANG.DESCRIBE.KYNO_ANIMALFEEDER =
 WOLFGANG.DESCRIBE.CHICKENNUGGETS = "Tiny chicken pieces make Wolfgang slightly strong."
 
 WOLFGANG.DESCRIBE.CHICKENWINGS = "Spicy wings make Wolfgang VERY STRONG!"
+
+WOLFGANG.DESCRIBE.CHICKENBURGER = "Chicken sandwich make Wolfgang strong!"
+
+WOLFGANG.DESCRIBE.CHICKENEGGSOUP = "Soup make Wolfgang feel strong and cozy!"
+
+WOLFGANG.DESCRIBE.CHICKENEGGSTEW = "Big stew make Wolfgang very full!"
+
+WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Spinning chicken make Wolfgang very hungry!"

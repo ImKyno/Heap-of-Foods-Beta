@@ -81,6 +81,9 @@ WARLY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Ach... efekt ochronny wygasł."
 WARLY.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Ach! Jakaż śmiała i lekkomyślna witalność!"
 WARLY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Intensywność opadła."
 
+WARLY.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Ach! Jakże satysfakcjonująca wydajność!"
+WARLY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Mój apetyt powrócił w pełni."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Źle, źle..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Masz ochotę na coś jeszcze pyszniejszego?"
@@ -1191,3 +1194,11 @@ WARLY.DESCRIBE.KYNO_ANIMALFEEDER =
 WARLY.DESCRIBE.CHICKENNUGGETS = "Nieco prymitywne, lecz pocieszające."
 
 WARLY.DESCRIBE.CHICKENWINGS = "Ach! Jakże śmiały profil przypraw!"
+
+WARLY.DESCRIBE.CHICKENBURGER = "Ach! Rustykalne podejście do klasycznego pomysłu."
+
+WARLY.DESCRIBE.CHICKENEGGSOUP = "Ach! Komfort w najczystszej postaci."
+
+WARLY.DESCRIBE.CHICKENEGGSTEW = "Ach! Rustykalne, sycące i bardzo satysfakcjonujące."
+
+WARLY.DESCRIBE.CHICKENROTISSERIE = "Ach! Powolne pieczenie daje soczystą nagrodę."

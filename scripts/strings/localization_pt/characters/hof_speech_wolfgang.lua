@@ -81,6 +81,9 @@ WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "O poder deixa Wolfgang..."
 WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Wolfgang está IMPARÁVEL! Esmaga tudo!"
 WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Wolfgang não sente mais a grande fúria..."
 
+WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Wolfgang fica cheio por mais tempo!"
+WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Wolfgang está com fome de novo..."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é o correto."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Porco poderoso não quer isso."
@@ -1191,3 +1194,11 @@ WOLFGANG.DESCRIBE.KYNO_ANIMALFEEDER =
 WOLFGANG.DESCRIBE.CHICKENNUGGETS = "Pedacinhos de galinha deixam Wolfgang um pouco forte."
 
 WOLFGANG.DESCRIBE.CHICKENWINGS = "Asas apimentadas deixam Wolfgang MUITO FORTE!"
+
+WOLFGANG.DESCRIBE.CHICKENBURGER = "Sanduíche de galinha deixa Wolfgang forte!"
+
+WOLFGANG.DESCRIBE.CHICKENEGGSOUP = "Sopa deixa Wolfgang forte e aconchegado!"
+
+WOLFGANG.DESCRIBE.CHICKENEGGSTEW = "Ensopado grande deixa Wolfgang bem cheio!"
+
+WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Galinha girando deixa Wolfgang com muita fome!"

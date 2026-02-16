@@ -81,6 +81,9 @@ WOODIE.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Bom, hora de voltar a ter cuidado.
 WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Acho que tô batendo mais forte que o normal!"
 WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Calma aí, de volta ao normal."
 
+WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Bom! Não vou precisar de um lanche tão cedo."
+WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Voltando a sentir fome."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo diferente se encaixe aqui"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, ele não quer isso."
@@ -1191,3 +1194,11 @@ WOODIE.DESCRIBE.KYNO_ANIMALFEEDER =
 WOODIE.DESCRIBE.CHICKENNUGGETS = "Um lanchinho bom, hein?"
 
 WOODIE.DESCRIBE.CHICKENWINGS = "Essas têm um belo coice!"
+
+WOODIE.DESCRIBE.CHICKENBURGER = "Isso sim é uma refeição decente, hein?"
+
+WOODIE.DESCRIBE.CHICKENEGGSOUP = "Cai muito bem num dia frio, hein?"
+
+WOODIE.DESCRIBE.CHICKENEGGSTEW = "Ensopado bom e honesto. Sem reclamações."
+
+WOODIE.DESCRIBE.CHICKENROTISSERIE = "Cheira a almoço de domingo, hein?"

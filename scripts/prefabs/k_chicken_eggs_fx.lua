@@ -79,13 +79,15 @@ local function slowfn()
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddNetwork()
-
-	inst:AddTag("FX")
-	inst:AddTag("NOCLICK")
+	
+	inst.AnimState:SetAddColour(0.9, 0.85, 0.7, 0)
 
 	inst.AnimState:SetBank("slingshotammo_slow_fx")
 	inst.AnimState:SetBuild("slingshotammo_slow_fx")
 	inst.AnimState:SetFinalOffset(7)
+	
+	inst:AddTag("FX")
+	inst:AddTag("NOCLICK")
 
 	inst.entity:SetPristine()
 

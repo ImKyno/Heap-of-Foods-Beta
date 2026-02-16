@@ -81,6 +81,9 @@ WATHGRITHR.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "O escudo dos deuses me abandon
 WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_START = "A fúria da batalha corre em minhas veias!"
 WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_END = "A fúria da batalha enfraquece..."
 
+WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Meu corpo resiste sem banquetes!"
+WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "O chamado da fome retorna!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Errado!"
@@ -1191,3 +1194,11 @@ WATHGRITHR.DESCRIBE.KYNO_ANIMALFEEDER =
 WATHGRITHR.DESCRIBE.CHICKENNUGGETS = "A carne foi moldada sem honra!"
 
 WATHGRITHR.DESCRIBE.CHICKENWINGS = "Asas em chamas dignas de um guerreiro!"
+
+WATHGRITHR.DESCRIBE.CHICKENBURGER = "Um banquete de ave aprisionado em pão!"
+
+WATHGRITHR.DESCRIBE.CHICKENEGGSOUP = "Um caldo quente de honra aviária!"
+
+WATHGRITHR.DESCRIBE.CHICKENEGGSTEW = "Um ensopado digno da fome de um guerreiro!"
+
+WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "Um assado digno, adequado a um banquete guerreiro."

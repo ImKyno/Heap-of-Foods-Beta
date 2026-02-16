@@ -81,6 +81,9 @@ WANDA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "E lá se foi. Tempo é tudo."
 WANDA.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Explosões curtas de imprudência!"
 WANDA.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Ótimo. Prefiro riscos calculados."
 
+WANDA.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Pelo menos a fome desacelera."
+WANDA.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "O tempo alcança tudo. A fome também."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não... Preciso de algo diferente."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Acho que tenho tempo de pegar uma lagosta para você."
@@ -1191,3 +1194,11 @@ WANDA.DESCRIBE.KYNO_ANIMALFEEDER =
 WANDA.DESCRIBE.CHICKENNUGGETS = "Eu não tenho tempo pra isso."
 
 WANDA.DESCRIBE.CHICKENWINGS = "Arde agora, arrepende depois."
+
+WANDA.DESCRIBE.CHICKENBURGER = "Rápido de comer. Nenhum tempo desperdiçado."
+
+WANDA.DESCRIBE.CHICKENEGGSOUP = "Reconfortante e eficiente."
+
+WANDA.DESCRIBE.CHICKENEGGSTEW = "Demora pra fazer. Rápido de comer."
+
+WANDA.DESCRIBE.CHICKENROTISSERIE = "Pelo menos a espera vale a pena."

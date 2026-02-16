@@ -81,6 +81,9 @@ WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Moc opuszcza Wolfganga..."
 WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Wolfgang jest NIEPOWSTRZYMANY! Miażdżyć wszystko!"
 WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Wolfgang już nie czuje wielkiej furii..."
 
+WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Wolfgang dłużej jest syty!"
+WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Wolfgang znowu głodny..."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "This is not what is needed."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mocny świnia nie chce tego."
@@ -1191,3 +1194,11 @@ WOLFGANG.DESCRIBE.KYNO_ANIMALFEEDER =
 WOLFGANG.DESCRIBE.CHICKENNUGGETS = "Małe kawałki kurczaka czynią Wolfganga trochę silnym."
 
 WOLFGANG.DESCRIBE.CHICKENWINGS = "Pikantne skrzydełka czynią Wolfganga BARDZO SILNYM!"
+
+WOLFGANG.DESCRIBE.CHICKENBURGER = "Kanapka z kurczakiem czyni Wolfganga silnym!"
+
+WOLFGANG.DESCRIBE.CHICKENEGGSOUP = "Zupa sprawia, że Wolfgang jest silny i przytulny!"
+
+WOLFGANG.DESCRIBE.CHICKENEGGSTEW = "Duży gulasz sprawia, że Wolfgang jest bardzo syty!"
+
+WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Kręcący się kurczak bardzo głodzi Wolfganga!"

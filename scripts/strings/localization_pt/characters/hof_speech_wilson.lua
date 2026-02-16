@@ -81,6 +81,9 @@ WILSON.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "A proteção está desaparecendo."
 WILSON.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Fascinante! Minha força aumentou, embora tenha um preço..."
 WILSON.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Minha agressividade elevada parece ter passado."
 
+WILSON.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Interessante! Meu metabolismo parece mais eficiente."
+WILSON.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Minha taxa de fome parece ter voltado ao normal."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ele quer outra coisa."
@@ -1191,3 +1194,11 @@ WILSON.DESCRIBE.KYNO_ANIMALFEEDER =
 WILSON.DESCRIBE.CHICKENNUGGETS = "Processados, empanados e curiosamente fascinantes."
 
 WILSON.DESCRIBE.CHICKENWINGS = "Nunca subestime o poder de reconhecimento da marca."
+
+WILSON.DESCRIBE.CHICKENBURGER = "Uma fusão fascinante de ave e pão."
+
+WILSON.DESCRIBE.CHICKENEGGSOUP = "Uma solução proteica simples e nutritiva."
+
+WILSON.DESCRIBE.CHICKENEGGSTEW = "Uma combinação reforçada de ave e ovos."
+
+WILSON.DESCRIBE.CHICKENROTISSERIE = "O calor rotacional garante um cozimento uniforme."

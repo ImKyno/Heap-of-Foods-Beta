@@ -81,6 +81,9 @@ WOODIE.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Well, back to bein' careful."
 WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Guess I'm swingin' harder than usual!"
 WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Easy there, back to normal."
 
+WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Nice! Won't need a snack so soon."
+WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Back to feelin' peckish again."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to pick it up?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. He wants something else."
@@ -1191,3 +1194,11 @@ WOODIE.DESCRIBE.KYNO_ANIMALFEEDER =
 WOODIE.DESCRIBE.CHICKENNUGGETS = "Good snack, eh?"
 
 WOODIE.DESCRIBE.CHICKENWINGS = "These got a real kick to 'em!"
+
+WOODIE.DESCRIBE.CHICKENBURGER = "Now that's a proper meal, eh?"
+
+WOODIE.DESCRIBE.CHICKENEGGSOUP = "Hits the spot on a cold day, eh?"
+
+WOODIE.DESCRIBE.CHICKENEGGSTEW = "Good, solid stew. Can't complain."
+
+WOODIE.DESCRIBE.CHICKENROTISSERIE = "Smells like a Sunday supper, eh?"

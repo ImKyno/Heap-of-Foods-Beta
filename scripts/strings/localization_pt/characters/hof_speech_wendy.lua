@@ -81,6 +81,9 @@ WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "O escudo invisível se dissipou."
 WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Dor por dor. Uma troca justa."
 WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "A fúria se vai, como tudo vai."
 
+WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Até a fome se cala por um tempo."
+WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "O vazio retorna."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."
@@ -1191,3 +1194,11 @@ WENDY.DESCRIBE.KYNO_ANIMALFEEDER =
 WENDY.DESCRIBE.CHICKENNUGGETS = "Até a galinha foi despedaçada."
 
 WENDY.DESCRIBE.CHICKENWINGS = "Dor, até no sabor."
+
+WENDY.DESCRIBE.CHICKENBURGER = "Comida reconfortante, adiando o desespero por um instante."
+
+WENDY.DESCRIBE.CHICKENEGGSOUP = "Um calor silencioso em um mundo frio."
+
+WENDY.DESCRIBE.CHICKENEGGSTEW = "A vida, reduzida a uma panela."
+
+WENDY.DESCRIBE.CHICKENROTISSERIE = "Girando sem parar, como todas as coisas."

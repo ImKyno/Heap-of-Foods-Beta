@@ -78,8 +78,11 @@ WORTOX.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Ojej, znowu zamieszanie!"
 WORTOX.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Teraz nie możesz mnie zranić!"
 WORTOX.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Znowu trochę bardziej miękki."
 
-WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Heehee! Jakież to pysznie niebezpieczne!"
+WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Jakież to pysznie niebezpieczne!"
 WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Och, ryzykowna zabawa się skończyła!"
+
+WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Głód zwolnił pościg!"
+WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Brzuszek znów burczy!"
 
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję czegoś jeszcze."
 
@@ -1191,3 +1194,11 @@ WORTOX.DESCRIBE.KYNO_ANIMALFEEDER =
 WORTOX.DESCRIBE.CHICKENNUGGETS = "Chrup-chrup kawałeczki! Heehee!"
 
 WORTOX.DESCRIBE.CHICKENWINGS = "Gorące skrzydełka, palące igraszki!"
+
+WORTOX.DESCRIBE.CHICKENBURGER = "Bułka i ptak w duecie! Hyuyu!"
+
+WORTOX.DESCRIBE.CHICKENEGGSOUP = "Zupna, podejrzana przyjemność! Hyuyu!"
+
+WORTOX.DESCRIBE.CHICKENEGGSTEW = "Bulgotający garnek śmiertelnej rozkoszy! Hyuyu!"
+
+WORTOX.DESCRIBE.CHICKENROTISSERIE = "W kółko kręci się ptaszek! Hyuyu!"

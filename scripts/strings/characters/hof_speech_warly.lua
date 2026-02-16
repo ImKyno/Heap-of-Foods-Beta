@@ -81,6 +81,9 @@ WARLY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Ah... the protective effect has exp
 WARLY.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Ah! A bold and reckless vigor!"
 WARLY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "The intensity has mellowed."
 
+WARLY.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Ah! A most satisfying efficiency!"
+WARLY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "My appetite returns in full."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong, wrong..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You want something else more delicious?"
@@ -1191,3 +1194,11 @@ WARLY.DESCRIBE.KYNO_ANIMALFEEDER =
 WARLY.DESCRIBE.CHICKENNUGGETS = "A bit crude, but comforting."
 
 WARLY.DESCRIBE.CHICKENWINGS = "Ah! Such a bold spice profile!"
+
+WARLY.DESCRIBE.CHICKENBURGER = "Ah! A rustic take on a classic concept."
+
+WARLY.DESCRIBE.CHICKENEGGSOUP = "Ah! Comfort in its purest form."
+
+WARLY.DESCRIBE.CHICKENEGGSTEW = "Ah! Rustic, rich, and deeply satisfying."
+
+WARLY.DESCRIBE.CHICKENROTISSERIE = "Ah! Even roasting yields such succulent reward."

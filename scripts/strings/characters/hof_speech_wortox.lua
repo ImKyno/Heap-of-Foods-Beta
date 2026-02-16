@@ -81,6 +81,9 @@ WORTOX.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Back to being a little more squish
 WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Such delicious danger!"
 WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Aw, the risky fun is over!"
 
+WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Hunger slows its chase!"
+WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The tummy grumbles once more!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I know this prank was good, but let's get the real thing."
@@ -1191,3 +1194,11 @@ WORTOX.DESCRIBE.KYNO_ANIMALFEEDER =
 WORTOX.DESCRIBE.CHICKENNUGGETS = "Tiny chicken nuggets."
 
 WORTOX.DESCRIBE.CHICKENWINGS = "Hot-hot wings, hot, hot!"
+
+WORTOX.DESCRIBE.CHICKENBURGER = "A bun-bird delight! Hyuyu!"
+
+WORTOX.DESCRIBE.CHICKENEGGSOUP = "Soupy sustenance! Hyuyu!"
+
+WORTOX.DESCRIBE.CHICKENEGGSTEW = "A bubbling pot of mortal delight! Hyuyu!"
+
+WORTOX.DESCRIBE.CHICKENROTISSERIE = "Rounded!"

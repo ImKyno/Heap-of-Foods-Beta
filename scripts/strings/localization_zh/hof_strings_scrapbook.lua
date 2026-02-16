@@ -160,6 +160,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "可收集周年庆贺礼。\n\
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "萨米特别的周年庆帽子。\n可获得周年庆贺礼。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "研究鱼类和鱼卵会记录到鱼类图鉴中。"
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "An oversized egg that can be thrown.\n\nReduces target's damage and movement speed by 10% for 20 seconds. Effects stack up to 3 times for a total of 30%.\n\n\"Even eggs are weapons on the battlefield!\" - Wigfrid."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERRATE = "Decreased hunger loss for a certain amount of time."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 40% chance of laying Eggs after eating. They have a very small chance of laying a Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying a Large Egg."

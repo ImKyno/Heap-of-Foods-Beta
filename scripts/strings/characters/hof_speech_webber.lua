@@ -81,6 +81,9 @@ WEBBER.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Uh-oh... we don't feel so tough an
 WEBBER.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Whoa! We hit super hard now!"
 WEBBER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "We feel less smashy now."
 
+WEBBER.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "We don't feel hungry as fast!"
+WEBBER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Uh-oh, we're hungry again."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Not this one."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "We think this isn't the correct meal he wants."
@@ -1191,3 +1194,11 @@ WEBBER.DESCRIBE.KYNO_ANIMALFEEDER =
 WEBBER.DESCRIBE.CHICKENNUGGETS = "We like them! They're fun-sized!"
 
 WEBBER.DESCRIBE.CHICKENWINGS = "Spicy! Spicy! SPICY!"
+
+WEBBER.DESCRIBE.CHICKENBURGER = "We like burgers! This one's clucky!"
+
+WEBBER.DESCRIBE.CHICKENEGGSOUP = "It's like a hug in a bowl!"
+
+WEBBER.DESCRIBE.CHICKENEGGSTEW = "It smells really good!"
+
+WEBBER.DESCRIBE.CHICKENROTISSERIE = "It's spinning! And it smells amazing!"

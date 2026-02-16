@@ -72,7 +72,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE = "Nukashine foi criada por 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE2 = "Agora sem risco de apagões! Aproveite a festa!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BONESOUP = "Aumenta o dano contra vermes por um determinado período."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_REVIVER = "Revive instantaneamente um jogador morto quando assombrado."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOCHA = "Aumenta velocidade de movimento, resistência ao sono e diminui a perda de fome por um determinado período.\n\nAumenta brevemente a temperatura."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOCHA = "Aumenta velocidade de movimento, resistência ao sono e diminui a perda de fome por um certo período de tempo.\n\nAumenta brevemente a temperatura."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSFREEZING = "Aumenta brevemente a temperatura e torna menos suscetível ao congelamento."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSOVERHEAT = "Diminui brevemente a temperatura e torna menos suscetível ao superaquecimento."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FISHING = "Aumenta o rendimento da pesca por um determinado período."
@@ -115,6 +115,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "Aumenta a Fome M
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "Aumenta a Vida Máxima em 15% por um certo período de tempo.\n\nComemorando o 5º aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "Aumenta a Sanidade Máxima em 15% por um certo período de tempo.\n\nComemorando o 5º aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BERSERKER = "Aumenta o dano e diminui a resistência à dano por um certo período de tempo."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERRATE = "Diminui a perda de fome por um certo período de tempo."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Pó Conservante reduz pela metade o tempo de deterioração e anula penalidades de comida estragada."

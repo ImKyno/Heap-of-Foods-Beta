@@ -81,6 +81,9 @@ WINONA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Ochrona zniknęła!"
 WINONA.ANNOUNCE_KYNO_BERSERKERBUFF_START = "No dobra, większy cios, ale muszę uważać."
 WINONA.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Z powrotem do normalnego zużycia."
 
+WINONA.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "To pozwoli mi działać dłużej."
+WINONA.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "No dobra, czas znów coś zjeść."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie, może coś innego."
@@ -1191,3 +1194,11 @@ WINONA.DESCRIBE.KYNO_ANIMALFEEDER =
 WINONA.DESCRIBE.CHICKENNUGGETS = "Szybkie, proste, robi robotę."
 
 WINONA.DESCRIBE.CHICKENWINGS = "To dopiero stawia na nogi."
+
+WINONA.DESCRIBE.CHICKENBURGER = "Poręczne, sycące i wydajne."
+
+WINONA.DESCRIBE.CHICKENEGGSOUP = "Prosta, gorąca i stawia na nogi."
+
+WINONA.DESCRIBE.CHICKENEGGSTEW = "Utrzymuje cię sytym i na nogach."
+
+WINONA.DESCRIBE.CHICKENROTISSERIE = "Powolny obrót, równe pieczenie. Szanuję to."

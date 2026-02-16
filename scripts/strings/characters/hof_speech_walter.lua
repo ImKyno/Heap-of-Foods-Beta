@@ -81,6 +81,9 @@ WALTER.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Guess I can't rely on that anymore
 WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Whoa! I feel fearless! Maybe too fearless..."
 WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Okay, deep breaths. Back to normal."
 
+WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Cool! I can last longer without eating!"
+WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Guess it's snack time again."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong thing!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, not this one."
@@ -1191,3 +1194,11 @@ WALTER.DESCRIBE.KYNO_ANIMALFEEDER =
 WALTER.DESCRIBE.CHICKENNUGGETS = "Not very fit for a camping meal, but that will do."
 
 WALTER.DESCRIBE.CHICKENWINGS = "Spicy, but worth it!"
+
+WALTER.DESCRIBE.CHICKENBURGER = "Perfect trail food!"
+
+WALTER.DESCRIBE.CHICKENEGGSOUP = "Perfect for warming up after a long day."
+
+WALTER.DESCRIBE.CHICKENEGGSTEW = "Feels like a real camp meal."
+
+WALTER.DESCRIBE.CHICKENROTISSERIE = "That'd make a great camp dinner!"

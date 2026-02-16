@@ -1053,7 +1053,7 @@ local kyno_foods =
 	gorge_pot_roast =
 	{
 		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and tags.veggie and tags.spotspice and not tags.fish 
-		and not tags.monster end,
+		and not tags.monster and not tags.chicken end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,
@@ -3344,6 +3344,74 @@ local kyno_foods =
 		prefabs = { "kyno_berserkerbuff" },
 		oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_berserkerbuff", "kyno_berserkerbuff")
+		end,
+	},
+	
+	chickenburger =
+	{
+		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) and tags.foliage and tags.chickenegg and tags.bread end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_MED,
+		health = 15,
+		hunger = 62.5,
+		sanity = 10,
+		cooktime = 1,
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"drumstick", 1}, {"foliage", 1}, {"kyno_chicken_egg", 1}, {"gorge_bread", 1}}},
+	},
+	
+	chickeneggsoup =
+	{
+		test = function(cooker, names, tags) return tags.chickenegg and tags.succulent and tags.spotspice and (names.onion or names.onion_cooked) end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_SLOW,
+		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 5,
+		hunger = 25,
+		sanity = 25,
+		cooktime = 1.2,
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_chicken_egg", 1}, {"succulent_picked", 1}, {"kyno_spotspice", 1}, {"onion", 1}}},
+	},
+	
+	chickeneggstew =
+	{
+		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) and tags.chickenegg and tags.spotspice
+		and (names.kyno_aloe or names.kyno_aloe_cooked) end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_MED,
+		health = 30,
+		hunger = 62.5,
+		sanity = 5,
+		cooktime = 1.3,
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"drumstick", 1}, {"kyno_chicken_egg", 1}, {"kyno_spotspice", 1}, {"kyno_aloe", 1}}},
+	},
+	
+	chickenrotisserie =
+	{
+		test = function(cooker, names, tags) return tags.chicken and tags.spotspice and tags.veggie and not tags.inedible end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 30,
+		hunger = 150,
+		sanity = 10,
+		cooktime = 2.5,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HUNGERRATE,
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_chicken2", 1}, {"kyno_spotspice", 1}, {"carrot", 2}}},
+		prefabs = { "kyno_hungerratebuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_hungerratebuff", "kyno_hungerratebuff")
 		end,
 	},
 }

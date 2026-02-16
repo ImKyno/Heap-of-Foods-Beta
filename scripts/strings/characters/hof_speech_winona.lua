@@ -81,6 +81,9 @@ WINONA.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Protection's gone!"
 WINONA.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Alright, more punch, but I better watch myself."
 WINONA.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Back to regular wear and tear."
 
+WINONA.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "That'll keep me goin' longer."
+WINONA.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Alright, time for another meal."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nope."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope, something else, maybe."
@@ -1191,3 +1194,11 @@ WINONA.DESCRIBE.KYNO_ANIMALFEEDER =
 WINONA.DESCRIBE.CHICKENNUGGETS = "Quick, easy, gets the job done."
 
 WINONA.DESCRIBE.CHICKENWINGS = "Now that wakes you up."
+
+WINONA.DESCRIBE.CHICKENBURGER = "Portable, filling, and efficient."
+
+WINONA.DESCRIBE.CHICKENEGGSOUP = "Simple, hot, and keeps you goin'."
+
+WINONA.DESCRIBE.CHICKENEGGSTEW = "Keeps you fed and on your feet."
+
+WINONA.DESCRIBE.CHICKENROTISSERIE = "Slow turn, steady cook. I respect that."

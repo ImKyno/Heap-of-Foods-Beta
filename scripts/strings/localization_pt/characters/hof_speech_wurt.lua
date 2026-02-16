@@ -78,8 +78,11 @@ WURT.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Cabeça estranha de novo, glorp..."
 WURT.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Sentir forte, florp!"
 WURT.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Sentindo fraco, glurgh..."
 
-WURT.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Wurt forte! Mas molinha também!"
-WURT.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Wurt não tá super forte mais..."
+WURT.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Forte! Mas molinha também!"
+WURT.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Não tá super forte mais..."
+
+WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Fica cheia por mais tempo!"
+WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Com fome de novo..."
 
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Peixes bonitinhos sempre estão no pantano!"
 
@@ -1193,3 +1196,11 @@ WURT.DESCRIBE.KYNO_ANIMALFEEDER =
 WURT.DESCRIBE.CHICKENNUGGETS = "Pobre galinhas... *snif*"
 
 WURT.DESCRIBE.CHICKENWINGS = "Porque fazer isso com as galinhas?!"
+
+WURT.DESCRIBE.CHICKENBURGER = "Porque fazer isso com as galinhas?!"
+
+WURT.DESCRIBE.CHICKENEGGSOUP = "É bastante quente."
+
+WURT.DESCRIBE.CHICKENEGGSTEW = "Eca!"
+
+WURT.DESCRIBE.CHICKENROTISSERIE = "Nããão! Passarinho coitado!"

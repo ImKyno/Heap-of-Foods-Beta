@@ -81,6 +81,9 @@ WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Niewidzialna tarcza zniknęła."
 WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Ból za ból. Sprawiedliwa wymiana."
 WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Furia przemija, jak wszystko."
 
+WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Nawet głód na chwilę cichnie."
+WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Pustka powraca."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może warto coś zebrać?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Oczywiście, że nie tego chce to głupie stworzenie."
@@ -1191,3 +1194,11 @@ WENDY.DESCRIBE.KYNO_ANIMALFEEDER =
 WENDY.DESCRIBE.CHICKENNUGGETS = "Nawet kurczak został rozbity na kawałki."
 
 WENDY.DESCRIBE.CHICKENWINGS = "Ból, nawet w smaku."
+
+WENDY.DESCRIBE.CHICKENBURGER = "Pocieszenie, które na chwilę oddala rozpacz."
+
+WENDY.DESCRIBE.CHICKENEGGSOUP = "Ciche ciepło w zimnym świecie."
+
+WENDY.DESCRIBE.CHICKENEGGSTEW = "Życie, sprowadzone do garnka."
+
+WENDY.DESCRIBE.CHICKENROTISSERIE = "Kręci się bez końca, jak wszystko."

@@ -81,6 +81,9 @@ WAXWELL.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "The shadows have withdraw their f
 WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Such intoxicating brutality."
 WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_END = "How dreadfully mundane again."
 
+WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "How convenient."
+WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Hunger is such a tedious nuisance."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else for this."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You're not easy, aren't you?"
@@ -1191,3 +1194,11 @@ WAXWELL.DESCRIBE.KYNO_ANIMALFEEDER =
 WAXWELL.DESCRIBE.CHICKENNUGGETS = "A lowbrow indulgence."
 
 WAXWELL.DESCRIBE.CHICKENWINGS = "Crude, but effective."
+
+WAXWELL.DESCRIBE.CHICKENBURGER = "Simple, yet annoyingly satisfying."
+
+WAXWELL.DESCRIBE.CHICKENEGGSOUP = "Modest fare, but effective."
+
+WAXWELL.DESCRIBE.CHICKENEGGSTEW = "Simple sustenance, prepared adequately."
+
+WAXWELL.DESCRIBE.CHICKENROTISSERIE = "Decadent, yet undeniably practical."

@@ -81,6 +81,9 @@ WAXWELL.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Hmph. Plany cofają swoje względ
 WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Jakże odurzająca brutalność."
 WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Znów boleśnie przeciętne."
 
+WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Jakież to wygodne."
+WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Głód to doprawdy nużąca niedogodność."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję do tego czegoś innego."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie jesteś łatwy, prawda?"
@@ -1191,3 +1194,11 @@ WAXWELL.DESCRIBE.KYNO_ANIMALFEEDER =
 WAXWELL.DESCRIBE.CHICKENNUGGETS = "Dość pospolita przyjemność."
 
 WAXWELL.DESCRIBE.CHICKENWINGS = "Prostackie, lecz skuteczne."
+
+WAXWELL.DESCRIBE.CHICKENBURGER = "Proste, a jednak irytująco satysfakcjonujące."
+
+WAXWELL.DESCRIBE.CHICKENEGGSOUP = "Skromne danie, lecz skuteczne."
+
+WAXWELL.DESCRIBE.CHICKENEGGSTEW = "Proste pożywienie, przygotowane poprawnie."
+
+WAXWELL.DESCRIBE.CHICKENROTISSERIE = "Dekadenckie, lecz niezaprzeczalnie praktyczne."

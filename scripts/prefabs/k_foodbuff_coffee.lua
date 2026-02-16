@@ -169,7 +169,7 @@ local function OnAttachedMocha(inst, target)
 	end
 	
 	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.KYNO_MOCHABUFF_HUNGERRATE, "kyno_hungerbuff")
+		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.KYNO_MOCHABUFF_HUNGERRATE, "kyno_hungerratebuff")
 	end
 	
     inst:ListenForEvent("death", function()
@@ -193,7 +193,7 @@ local function OnDetachedMocha(inst, target)
     end
 
 	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:RemoveModifier(target, "kyno_hungerbuff")
+		target.components.hunger.burnratemodifiers:RemoveModifier(target, "kyno_hungerratebuff")
 	end
 	
 	if target.components.talker and target:HasTag("player") then 
@@ -220,7 +220,7 @@ local function OnExtendedMocha(inst, target)
 	end
 	
 	if target.components.hunger ~= nil then
-		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.KYNO_MOCHABUFF_HUNGERRATE, "kyno_hungerbuff")
+		target.components.hunger.burnratemodifiers:SetModifier(target, TUNING.KYNO_MOCHABUFF_HUNGERRATE, "kyno_hungerratebuff")
 	end
 end
 

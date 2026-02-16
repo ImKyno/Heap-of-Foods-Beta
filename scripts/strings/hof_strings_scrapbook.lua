@@ -115,6 +115,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "Increases Max Hu
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "Increases Max Health by 15% for a certain amount of time.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "Increases Max Sanity by 15% for a certain amount of time.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BERSERKER = "Increased damage and decreased damage resistance for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERRATE = "Decreased hunger loss for a certain amount of time."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."

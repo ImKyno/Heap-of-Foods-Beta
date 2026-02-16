@@ -81,6 +81,9 @@ WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "那看不见的屏障已经消失�
 WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Pain for pain. A fair exchange."
 WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "The fury fades, as all things do."
 
+WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Even hunger grows quieter."
+WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The emptiness returns."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "或许可以收集些什么？"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "当然，这并非这只愚蠢的生物所希望的。"
@@ -1191,3 +1194,11 @@ WENDY.DESCRIBE.KYNO_ANIMALFEEDER =
 WENDY.DESCRIBE.CHICKENNUGGETS = "Even the chicken was broken into pieces."
 
 WENDY.DESCRIBE.CHICKENWINGS = "Pain, even in flavor."
+
+WENDY.DESCRIBE.CHICKENBURGER = "Comfort food, briefly delaying despair."
+
+WENDY.DESCRIBE.CHICKENEGGSOUP = "A quiet warmth in a cold world."
+
+WENDY.DESCRIBE.CHICKENEGGSTEW = "Life, boiled down into a pot."
+
+WENDY.DESCRIBE.CHICKENROTISSERIE = "Turning endlessly, as all things do."
