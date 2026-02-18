@@ -78,11 +78,11 @@ WAXWELL.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "理智如此短暂……"
 WAXWELL.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "阴影会保护我！"
 WAXWELL.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "阴影已收回了它们的恩惠。"
 
-WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Such intoxicating brutality."
-WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_END = "How dreadfully mundane again."
+WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_START = "如此令人沉醉的暴行。"
+WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_END = "又变得如此可怕地平凡了。"
 
-WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "How convenient."
-WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Hunger is such a tedious nuisance."
+WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "真是方便。"
+WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "饥饿真是个无聊的麻烦事。"
 
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "我还需要别的东西。"
 
@@ -96,7 +96,7 @@ WAXWELL.ANNOUNCE_KYNO_POTHANGER_FAIL = "现在我需要一个煮饭的锅，太�
 
 WAXWELL.ANNOUNCE_KYNO_CASSEROLE_FAIL = "错了，错了。"
 
-WAXWELL.ANNOUNCE_KYNO_SAPHEALER_USED = "You're cured, at last!"
+WAXWELL.ANNOUNCE_KYNO_SAPHEALER_USED = "你总算被治好了！"
 
 WAXWELL.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "残酷？或许吧。但完全必要。"
 
@@ -137,22 +137,22 @@ WAXWELL.DESCRIBE.KYNO_SYRUP = "烹饪糖浆"
 WAXWELL.DESCRIBE.KYNO_COFFEEBEANS = "看到这些颜色很奇怪。"
 WAXWELL.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "比生的好，但也许有更好的方法来准备它们？"
 
-WAXWELL.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Hm. I'm unable to get a reading."
+WAXWELL.DESCRIBE.DUG_KYNO_COFFEEBUSH = "嗯。我看不出什么名堂。"
 
 WAXWELL.DESCRIBE.KYNO_COFFEEBUSH = 
 {
-	GENERIC = "A plant with purpose.",
-	PICKED = "Temporarily exhausted.",
-	WITHERED = "Unproductive.",
+	GENERIC = "一株有使命感的植物。",
+	PICKED = "暂时耗尽了。",
+	WITHERED = "毫无产出。",
 }
 
-WAXWELL.DESCRIBE.DUG_KYNO_SPOTBUSH = "What an aromatic bush."
+WAXWELL.DESCRIBE.DUG_KYNO_SPOTBUSH = "好一株香气扑鼻的灌木。"
 
 WAXWELL.DESCRIBE.KYNO_SPOTBUSH = 
 {
-	GENERIC = "Aromatic.",
-	PICKED = "Depleted.",
-	BURNING = "Predictable.",
+	GENERIC = "香气扑鼻。",
+	PICKED = "耗尽了。",
+	BURNING = "不出所料。",
 }
 
 WAXWELL.DESCRIBE.KYNO_SPOTSPICE_LEAF = "这会让事情变得更有趣。"
@@ -218,19 +218,19 @@ WAXWELL.DESCRIBE.KYNO_WILDWHEAT = "簇生。"
 
 WAXWELL.DESCRIBE.KYNO_WILDWHEAT =
 {
-	GENERIC = "Crude, but useful.",
-	PICKED = "Depleted.",
-	WITHERED = "Pathetic.",
-	BURNING = "Ruined.",
+	GENERIC = "粗糙，但有用。",
+	PICKED = "耗尽了。",
+	WITHERED = "可悲。",
+	BURNING = "毁了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_MEALGRINDER = "这看起来需要艰苦的工作。"
 
 WAXWELL.DESCRIBE.KYNO_MUSHSTUMP =
 {
-	GENERIC = "I could, perhaps, produce a makeshift garnish.",
-	PICKED = "It's as hollow as this withered world.",
-	BURNING = "Needlessly destroyed.",
+	GENERIC = "我或许，能弄出个临时的配菜。",
+	PICKED = "它就像这个腐朽的世界一样空洞。",
+	BURNING = "毫无必要地毁掉了。",
 }
 
 WAXWELL.DESCRIBE.GORGE_BREAD = "哼。我需要用这个来做点什么。"
@@ -376,9 +376,9 @@ WAXWELL.DESCRIBE.KYNO_SEEDS_KIT = "耕作是一项杂乱的工作。"
 
 WAXWELL.DESCRIBE.KYNO_LIMPETROCK = 
 {
-	GENERIC = "Could be used as a food source in a pinch.",
-	PICKED = "They've withdrawn.",
-	WITHERED = "Utterly unproductive.",
+	GENERIC = "紧急关头，倒能当个食物来源。",
+	PICKED = "它们撤退了。",
+	WITHERED = "彻底没有产出。",
 }
 
 WAXWELL.DESCRIBE.KYNO_LIMPETS = "黏糊糊的，难以消化。"
@@ -386,9 +386,9 @@ WAXWELL.DESCRIBE.KYNO_LIMPETS_COOKED = "美味佳肴？真的吗？"
 
 WAXWELL.DESCRIBE.KYNO_LOTUS_OCEAN = 
 {
-	GENERIC = "How dainty.",
-	PICKED = "Temporarily depleted.",
-	BURNING = "A careless loss.",
+	GENERIC = "真是娇俏。",
+	PICKED = "暂时耗尽了。",
+	BURNING = "粗心的损失。",
 }
 
 WAXWELL.DESCRIBE.KYNO_LOTUS_ROOT = "为几株湿漉漉的植物，竟要费这么大功夫。"
@@ -397,9 +397,9 @@ WAXWELL.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "一个人到期了。"
 
 WAXWELL.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
 {
-	GENERIC = "Sea garbage.",
-	PICKED = "Temporarily depleted.",
-	BURNING = "An unnecessary loss.",
+	GENERIC = "海洋垃圾。",
+	PICKED = "暂时耗尽了。",
+	BURNING = "没必要的损失。",
 }
 
 WAXWELL.DESCRIBE.KYNO_SEAWEEDS = "海洋垃圾。"
@@ -409,9 +409,9 @@ WAXWELL.DESCRIBE.KYNO_SEAWEEDS_ROOT = "为一些湿草做的工作太多了。"
 
 WAXWELL.DESCRIBE.KYNO_TAROROOT_OCEAN = 
 {
-	GENERIC = "I don't enjoy them.",
-	PICKED = "It will recover.",
-	BURNING = "Careless.",
+	GENERIC = "我不喜欢这玩意儿。",
+	PICKED = "它会恢复的。",
+	BURNING = "粗心大意。",
 }
 
 WAXWELL.DESCRIBE.KYNO_TAROROOT_ROOT = "为几株湿漉漉的植物，竟要费这么大功夫。"
@@ -420,9 +420,9 @@ WAXWELL.DESCRIBE.KYNO_TAROROOT_COOKED = "至少更精致一点。"
 
 WAXWELL.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
 {
-	GENERIC = "Interesting, at least.",
-	PICKED = "Temporarily depleted.",
-	BURNING = "Careless.",
+	GENERIC = "至少，有点意思。",
+	PICKED = "暂时耗尽了。",
+	BURNING = "粗心大意。",
 }
 
 WAXWELL.DESCRIBE.KYNO_WATERYCRESS_ROOT = "为几株湿漉漉的植物，竟要费这么大功夫。"
@@ -434,9 +434,9 @@ WAXWELL.DESCRIBE.KYNO_SALT = "添加太多是感官上的盐。"
 
 WAXWELL.DESCRIBE.KYNO_MUSSELSTICK =
 {
-	GENERIC = "Primitive, but functional.",
-	PICKED = "Depleted.",
-	BURNING = "Needlessly destroyed.",
+	GENERIC = "原始，但能用。",
+	PICKED = "耗尽了。",
+	BURNING = "无谓地毁掉了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "贻贝无法抗拒。"
@@ -447,11 +447,11 @@ WAXWELL.DESCRIBE.KATFOOD = "猫粮。"
 
 WAXWELL.DESCRIBE.KYNO_BANANATREE = 
 { 
-	GENERIC = "Hmph. I know it's different from that one, but I'm not buying it yet.",
-	PICKED = "Depleted, for now.",
-	CHOPPED = "Disposed of.",
-	BURNING = "A careless end.",
-	BURNT = "Erased completely.",
+	GENERIC = "哼。我知道它和那棵不一样，但我还没法相信。",
+	PICKED = "暂时耗尽了。",
+	CHOPPED = "处理掉了。",
+	BURNING = "粗心的结局。",
+	BURNT = "彻底抹除了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_BANANA = "哼。尝起来像香蕉。"
@@ -459,11 +459,11 @@ WAXWELL.DESCRIBE.KYNO_BANANA_COOKED = "现在好多了。"
 
 WAXWELL.DESCRIBE.KYNO_KOKONUTTREE = 
 {
-	GENERIC = "How luxurious.",
-	PICKED = "Depleted.",
-	CHOPPED = "Disposed of.",
-	BURNING = "A careless end.",
-	BURNT = "Gone.",
+	GENERIC = "真是奢华。",
+	PICKED = "耗尽了。",
+	CHOPPED = "处理掉了。",
+	BURNING = "粗心的结局。",
+	BURNT = "没了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_KOKONUT = "会对人的脑袋造成相当大的伤害。"
@@ -515,8 +515,8 @@ WAXWELL.DESCRIBE.TURF_TIDALMARSH = "它似乎是一块草皮。"
 
 WAXWELL.DESCRIBE.KYNO_SALTRACK =
 {
-	GENERIC = "Ah. It's ready.",
-	PICKED = "Any method to improve the food around here is welcome.",
+	GENERIC = "啊。准备好了。",
+	PICKED = "任何能改善这儿食物的方法，都值得欢迎。",
 }
 
 WAXWELL.DESCRIBE.KYNO_SALTRACK_INSTALLER = "在我们组装之前只是没用的木棍。"
@@ -527,28 +527,28 @@ WAXWELL.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "晚餐应该随时到。"
 
 WAXWELL.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
 {
-	GENERIC = "Charmed, I'm sure.",
-	SLEEPING = "Business is closed for today.",
+	GENERIC = "很荣幸，想必是。",
+	SLEEPING = "今天歇业了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_SUGARTREE =
 {
-	GENERIC = "A sickly sweet aroma wafts from its branches.",
-	CHOPPED = "It won't produce sap now.",
-	SAPPED = "The sap is ready for collection.",
-	PICKED = "It is filling. Ever so slowly.",
-	BURNING = "Predictable.",
-	BURNT = "Reduced to nothing.",
+	GENERIC = "一股甜腻的香气从枝头飘来。",
+	CHOPPED = "现在它产不了树汁了。",
+	SAPPED = "树汁可以采集了。",
+	PICKED = "它正在恢复。慢得令人发指。",
+	BURNING = "不出所料。",
+	BURNT = "化为乌有。",
 }
 
 WAXWELL.DESCRIBE.KYNO_SUGARTREE_RUINED =
 {
-	GENERIC = "This tree has seen better days.",
-	CHOPPED = "Disposed of.",
-	SAPPED = "Still exploitable.",
-	PICKED = "Well it's ruined now.",
-	BURNING = "Efficient.",
-	BURNT = "Erased.",
+	GENERIC = "这棵树风光不再了。",
+	CHOPPED = "处理掉了。",
+	SAPPED = "仍可利用。",
+	PICKED = "好吧，现在彻底毁了。",
+	BURNING = "高效。",
+	BURNT = "抹除了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_SUGARTREE_BUD = "如果我想要更多的树，我需要这个。"
@@ -572,19 +572,19 @@ WAXWELL.DESCRIBE.KYNO_SLAUGHTERTOOL = "我不介意弄脏我的手。"
 
 WAXWELL.DESCRIBE.KYNO_CHICKEN2 = 
 {
-	GENERIC = "Foul fowl.",
-	COOP = "At least it's productive.",
+	GENERIC = "恶劣的禽类。",
+	COOP = "至少它还能下蛋。",
 }
 
 WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG = "我喜欢把它想象成一个小鸡监狱。"
-WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "I wonder if the bird inside is as oversized as its shell."
+WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "我在想，里面的鸟是不是也跟它的壳一样大得离谱。"
 WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "阳光面朝上。"
 
 WAXWELL.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
-	GENERIC = "A humble shelter, but quite productive.",
-	FULL = "They've been quite productive.",
-	BURNT = "Reduced to ashes. How predictable.",
+	GENERIC = "简陋的住所，但挺能产的。",
+	FULL = "它们还挺能生的。",
+	BURNT = "化为灰烬了。多么不出所料。",
 }
 
 WAXWELL.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "我感觉很好。"
@@ -610,8 +610,8 @@ WAXWELL.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "事情变得更方便了�
 
 WAXWELL.DESCRIBE.KYNO_ROCKFLIPPABLE = 
 {
-	GENERIC = "What will this unearth?",
-	FLIPPED = "Predictable.",
+	GENERIC = "这能翻出什么来？",
+	FLIPPED = "不出所料。",
 }
 
 WAXWELL.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "并非所有人都能找到最后的安息之地。"
@@ -657,9 +657,9 @@ WAXWELL.DESCRIBE.KYNO_SAPHEALER = "治愈树木的方法。"
 
 WAXWELL.DESCRIBE.KYNO_OCEAN_WRECK = 
 {
-	GENERIC = "It stood no chance.",
-	PICKED = "Stripped clean.",
-	BURNING = "Utterly ruined.",
+	GENERIC = "它毫无胜算。",
+	PICKED = "搜刮干净了。",
+	BURNING = "彻底毁了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_GHOST_PIRATE = "我绝不会落得同样的下场！"
@@ -679,28 +679,28 @@ WAXWELL.DESCRIBE.KYNO_BREWBOOK = "很好。如果我能掌握黑暗艺术，那�
 
 WAXWELL.DESCRIBE.KYNO_WOODENKEG = 
 {
-	EMPTY = "Sure, some wine will go nice around here.",
-	BREWING_LONG = "A slow, tedious process.",
-	BREWING_SHORT = "Nearly finished.",
-	DONE = "At last.",
-	BURNT = "A predictable failure.",
+	EMPTY = "行吧，来点葡萄酒在这儿倒是不错。",
+	BREWING_LONG = "一个缓慢、乏味的过程。",
+	BREWING_SHORT = "快完成了。",
+	DONE = "终于。",
+	BURNT = "意料之中的失败。",
 }
 
 WAXWELL.DESCRIBE.KYNO_PRESERVESJAR = 
 {
-	EMPTY = "Quality of ingredients makes no difference to the finished product.",
-	BREWING_LONG = "This process drags on.",
-	BREWING_SHORT = "Nearly finished.",
-	DONE = "Acceptable results.",
-	BURNT = "Ruined.",
+	EMPTY = "食材的品质对成品毫无影响。",
+	BREWING_LONG = "这过程真够拖沓的。",
+	BREWING_SHORT = "快完成了。",
+	DONE = "尚可接受的结果。",
+	BURNT = "毁了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_ANTCHEST = 
 {
-	GENERIC = "Endless labor for a bit of sweetness.",
-	HONEY = "At least their efforts pay off.",
-	NECTAR = "Still refining the product.",
-	BURNING = "Reduced to charred excess.",
+	GENERIC = "为了一点甜味，无休止的劳作。",
+	HONEY = "至少它们的努力没白费。",
+	NECTAR = "还在提炼产品。",
+	BURNING = "烧成焦炭了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_NECTAR_POD = "需要一个合适的容器来变成蜂蜜。"
@@ -713,43 +713,43 @@ WAXWELL.DESCRIBE.KYNO_PIKO_ORANGE = "真有趣。"
 
 WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
 {
-	GENERIC = "It's a tree. What did I expect.",
-	CHOPPED = "Useful, at least.",
-	BURNING = "Careless.",
-	BURNT = "Reduced to nothing.",
+	GENERIC = "一棵树而已。我还能指望什么。",
+	CHOPPED = "至少，还有点用。",
+	BURNING = "粗心大意。",
+	BURNT = "化为乌有。",
 }
 
 WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
-	GENERIC = "It's a tree, full of squirrels. What did I expect.",
-	BURNING = "Problem solved.",
+	GENERIC = "一棵树，满是松鼠。我还能指望什么。",
+	BURNING = "问题解决了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "也许我可以撬开它。"
 
 WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
 {
-	GENERIC = "They copied the pigs, but they're even less intelligent.",
-	BURNT = "Utterly destroyed.",
+	GENERIC = "他们抄袭了猪人，但甚至更蠢。",
+	BURNT = "彻底毁了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
 {
-	GENERIC = "I suppose everyone needs to live somewhere...",
-	CRAFTED = "An improvement, at least.",
-	BURNT = "Disgusting, even now.",
+	GENERIC = "我想，谁都得有个地方住……",
+	CRAFTED = "至少，算是改进了。",
+	BURNT = "就算烧成这样，还是恶心。",
 }
 
 WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
 {
-	GENERIC = "How did he acquire all of those items?",
-	OCCUPIED = "Business is closed, it seems.",
+	GENERIC = "他是怎么搞到这些东西的？",
+	OCCUPIED = "看来是歇业了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
 {
-	GENERIC = "He sure knows how to make a proper showcase.",
-	EMPTY = "Utterly depleted.",
+	GENERIC = "他倒是挺会摆摊的。",
+	EMPTY = "彻底空了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "太好了，他不知怎么找到了进入这个领域的方法。"
@@ -901,14 +901,14 @@ WAXWELL.DESCRIBE.RISOTTO = "呈奶油状。"
 
 WAXWELL.DESCRIBE.RICESAKE = "进展顺利... *嗝*"
 
-WAXWELL.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "I could plant some of them near my camping site."
+WAXWELL.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "我可以在营地附近种上几棵。"
 
 WAXWELL.DESCRIBE.KYNO_PINEAPPLEBUSH = 
 {
-	GENERIC = "A fitting throne for the king of the fruits.",
-	PICKED = "Depleted.",
-	WITHERED = "Pathetic.",
-	BURNING = "Predictable.",
+	GENERIC = "水果之王的合适宝座。",
+	PICKED = "耗尽了。",
+	WITHERED = "可悲。",
+	BURNING = "不出所料。",
 }
 
 WAXWELL.DESCRIBE.KYNO_PINEAPPLE = "水果之王。"
@@ -923,8 +923,8 @@ WAXWELL.DESCRIBE.CHIMAS = "苦乐参半。"
 
 WAXWELL.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
 {
-	OFF = "Good. Now I don't have to water by hand.",
-	ON = "Efficient, at least.",
+	OFF = "很好。这下不用我亲手浇水了。",
+	ON = "至少，挺高效。",
 }
 
 WAXWELL.DESCRIBE.KYNO_FOODSACK = "虽不能让我变强，但能多几个口袋。"
@@ -1036,9 +1036,9 @@ WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "耐心……一切都会随时间�
 
 WAXWELL.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
-	GENERIC = "A delicacy fit for refined tastes, even here.",
-	PICKED = "Gone for now.",
-	BURNING = "A needless loss.",
+	GENERIC = "配得上精致品味的佳肴，即便在此处也是如此。",
+	PICKED = "暂时没了。",
+	BURNING = "无谓的损失。",
 }
 
 WAXWELL.DESCRIBE.KYNO_TRUFFLES = "生活中的精致之物，即便在这里也有。"
@@ -1046,8 +1046,8 @@ WAXWELL.DESCRIBE.KYNO_TRUFFLES_COOKED = "啊，精致的准备方式。"
 
 WAXWELL.DESCRIBE.KYNO_ITEMSHOWCASER = 
 {
-	EMPTY = "Acceptable craftsmanship.",
-	FULL = "A touch of sophistication for my culinary art.",
+	EMPTY = "尚可的工艺。",
+	FULL = "为我的厨艺添上一抹精致感。",
 }
 
 WAXWELL.DESCRIBE.KYNO_SPORECAP = "这世界的腐败体现在这蘑菇上。"
@@ -1071,11 +1071,11 @@ WAXWELL.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "一项相当...黏糊糊的�
 
 WAXWELL.DESCRIBE.KYNO_FISHFARMPLOT = 
 {
-	GENERIC = "How tedious... yet practical.",
-	FUEL_HIGH = "An abundance of feed.",
-	FUEL_MED = "Sufficient, for now.",
-	FUEL_LOW = "Neglect is showing.",
-	EMPTY = "Completely depleted.",
+	GENERIC = "多么乏味……却又实用。",
+	FUEL_HIGH = "饲料充足。",
+	FUEL_MED = "暂时够用。",
+	FUEL_LOW = "疏忽的迹象。",
+	EMPTY = "彻底耗尽了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_ANTCHOVY = "究竟是何等怪诞的实验造就了这东西？"
@@ -1136,24 +1136,24 @@ WAXWELL.DESCRIBE.KYNO_BRAINROCK_CORAL = "现在我能为己所用，驾驭它的
 
 WAXWELL.DESCRIBE.KYNO_BRAINROCK_ROCK = 
 {
-	GENERIC = "I wonder what's thinking?",
-	PICKED = "Its thoughts have gone quiet.",
+	GENERIC = "我在想，是什么在思考？",
+	PICKED = "它的思绪沉寂了。",
 }
 
 WAXWELL.DESCRIBE.BRAINMETTERSOUP = "算不上国王的盛宴，但勉强凑合吧。"
 
 WAXWELL.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
 {
-	GENERIC = "I could use his generosity to my advantage.",
-	SLEEPING = "Not interested in business right now.",
+	GENERIC = "我可以利用他的慷慨为自己谋利。",
+	SLEEPING = "现在没兴趣做生意。",
 }
 
 WAXWELL.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "看起来……烂透了。"
 
 WAXWELL.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
 {
-	GENERIC = "I think I should hold onto it.",
-	WAITING = "His spirit is free now.",
+	GENERIC = "我想我该留着它。",
+	WAITING = "它的灵魂如今自由了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_PACKIMBAGGIMS = "他惹人厌的外表，因其实用价值和甘愿效劳的姿态而稍显温和。"
@@ -1168,11 +1168,11 @@ WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "多么幼稚啊……*叹气*"
 
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
 {
-	GENERIC = "Popcorn, delightful and convenient.",
-	FUEL_HIGH = "It performs adequately.",
-	FUEL_MED = "Still operational.",
-	FUEL_LOW = "Efficiency is declining.",
-	EMPTY = "Completely inert.",
+	GENERIC = "爆米花，令人愉悦又便捷。",
+	FUEL_HIGH = "它表现得还算合格。",
+	FUEL_MED = "仍在运转。",
+	FUEL_LOW = "效率正在下降。",
+	EMPTY = "完全不动了。",
 }
 
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "如此简单的食物竟带来如此惊喜的美味享受。"
@@ -1183,22 +1183,22 @@ WAXWELL.DESCRIBE.KYNO_FISHREGISTRYHAT = "知识就是力量，即使是关于鱼
 
 WAXWELL.DESCRIBE.KYNO_ANIMALFEEDER =
 {
-	GENERIC = "A necessary chore made tangible.",
-	FUEL_HIGH = "An excess of feed.",
-	FUEL_MED = "Adequate, for now.",
-	FUEL_LOW = "Neglect is showing.",
-	EMPTY = "Completely drained.",
-	BURNT = "Ruined beyond recovery.",
+	GENERIC = "一件被具象化的必要杂务。",
+	FUEL_HIGH = "饲料过剩。",
+	FUEL_MED = "暂时够用。",
+	FUEL_LOW = "疏忽的迹象。",
+	EMPTY = "彻底空了。",
+	BURNT = "毁得没法修了。",
 }
 
-WAXWELL.DESCRIBE.CHICKENNUGGETS = "A lowbrow indulgence."
+WAXWELL.DESCRIBE.CHICKENNUGGETS = "一种粗俗的放纵。"
 
-WAXWELL.DESCRIBE.CHICKENWINGS = "Crude, but effective."
+WAXWELL.DESCRIBE.CHICKENWINGS = "粗犷，但有效。"
 
-WAXWELL.DESCRIBE.CHICKENBURGER = "Simple, yet annoyingly satisfying."
+WAXWELL.DESCRIBE.CHICKENBURGER = "简单，却意外地让人满足。"
 
-WAXWELL.DESCRIBE.CHICKENEGGSOUP = "Modest fare, but effective."
+WAXWELL.DESCRIBE.CHICKENEGGSOUP = "普通的食物，但管用。"
 
-WAXWELL.DESCRIBE.CHICKENEGGSTEW = "Simple sustenance, prepared adequately."
+WAXWELL.DESCRIBE.CHICKENEGGSTEW = "简单的吃食，做得还算到位。"
 
-WAXWELL.DESCRIBE.CHICKENROTISSERIE = "Decadent, yet undeniably practical."
+WAXWELL.DESCRIBE.CHICKENROTISSERIE = "奢靡，却又不可否认地实用。"

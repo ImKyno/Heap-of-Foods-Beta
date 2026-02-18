@@ -78,11 +78,11 @@ WORMWOOD.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "头又晕了……"
 WORMWOOD.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "硬！安全！"
 WORMWOOD.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "再次柔软"
 
-WORMWOOD.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Hit Harder! Get Hurt More!"
-WORMWOOD.ANNOUNCE_KYNO_BERSERKERBUFF_END = "No More Big Hurting"
+WORMWOOD.ANNOUNCE_KYNO_BERSERKERBUFF_START = "打更狠！受伤更多！"
+WORMWOOD.ANNOUNCE_KYNO_BERSERKERBUFF_END = "不疼了"
 
-WORMWOOD.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Not Hungry Fast"
-WORMWOOD.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Hungry Again"
+WORMWOOD.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "不饿得快"
+WORMWOOD.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "又饿了"
 
 WORMWOOD.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "不"
 
@@ -96,7 +96,7 @@ WORMWOOD.ANNOUNCE_KYNO_POTHANGER_FAIL = "想要别的"
 
 WORMWOOD.ANNOUNCE_KYNO_CASSEROLE_FAIL = "不要这个？"
 
-WORMWOOD.ANNOUNCE_KYNO_SAPHEALER_USED = "Juice Helps Friend!"
+WORMWOOD.ANNOUNCE_KYNO_SAPHEALER_USED = "汁液帮朋友！"
 
 WORMWOOD.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "哦……别再动啦……."
 
@@ -137,22 +137,22 @@ WORMWOOD.DESCRIBE.KYNO_SYRUP = "做甜的东西"
 WORMWOOD.DESCRIBE.KYNO_COFFEEBEANS = "太棒了！"
 WORMWOOD.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "闻起来很香"
 
-WORMWOOD.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Zoomberry Friend Needs Dirt"
+WORMWOOD.DESCRIBE.DUG_KYNO_COFFEEBUSH = "咖啡朋友需要土"
 
 WORMWOOD.DESCRIBE.KYNO_COFFEEBUSH = 
 {
-	GENERIC = "Zoomberry friend",
-	PICKED = "Empty",
-	WITHERED = "Friend Needs Help",
+	GENERIC = "咖啡朋友",
+	PICKED = "空了",
+	WITHERED = "朋友需要帮助",
 }
 
-WORMWOOD.DESCRIBE.DUG_KYNO_SPOTBUSH = "Hello Friend"
+WORMWOOD.DESCRIBE.DUG_KYNO_SPOTBUSH = "你好朋友"
 
 WORMWOOD.DESCRIBE.KYNO_SPOTBUSH = 
 {
-	GENERIC = "Friend Has Purple Hair",
-	PICKED = "Where Did Friend Hair Go?",
-	BURNING = "Friend Hurt!",
+	GENERIC = "朋友有紫色头发",
+	PICKED = "朋友头发去哪儿了？",
+	BURNING = "朋友受伤了！",
 }
 
 WORMWOOD.DESCRIBE.KYNO_SPOTSPICE_LEAF = "小枝"
@@ -214,23 +214,23 @@ WORMWOOD.DESCRIBE.LONGPIGMEAL = "嗯...."
 
 WORMWOOD.DESCRIBE.CUCUMBERSALAD = "想吃"
 
-WORMWOOD.DESCRIBE.DUG_KYNO_WILDWHEAT = "Friend Needs Dirt"
+WORMWOOD.DESCRIBE.DUG_KYNO_WILDWHEAT = "朋友需要土"
 
 WORMWOOD.DESCRIBE.KYNO_WILDWHEAT = 
 {
-	GENERIC = "Friend",
-	PICKED = "Empty",
-	WITHERED = "Friend Not Happy",
-	BURNING = "Hurts!!",
+	GENERIC = "朋友",
+	PICKED = "空了",
+	WITHERED = "朋友不开心",
+	BURNING = "疼！！",
 }
 
 WORMWOOD.DESCRIBE.KYNO_MEALGRINDER = "石头机器"
 
 WORMWOOD.DESCRIBE.KYNO_MUSHSTUMP =
 {
-	GENERIC = "Friends! Party!",
-	PICKED = "Oh. Friends Gone",
-	BURNING = "Hurts!",
+	GENERIC = "朋友们！派对！",
+	PICKED = "哦。朋友们走了",
+	BURNING = "疼！",
 }
 
 WORMWOOD.DESCRIBE.GORGE_BREAD = "蓬松的"
@@ -376,9 +376,9 @@ WORMWOOD.DESCRIBE.KYNO_SEEDS_KIT = "里面有朋友吗？"
 
 WORMWOOD.DESCRIBE.KYNO_LIMPETROCK = 
 {
-	GENERIC = "Rocks That Grows Stuff",
-	PICKED = "Snails Gone",
-	WITHERED = "No Life",
+	GENERIC = "长东西的石头",
+	PICKED = "蜗牛没了",
+	WITHERED = "没生命",
 }
 
 WORMWOOD.DESCRIBE.KYNO_LIMPETS = "攀岩"
@@ -386,9 +386,9 @@ WORMWOOD.DESCRIBE.KYNO_LIMPETS_COOKED = "进肚子"
 
 WORMWOOD.DESCRIBE.KYNO_LOTUS_OCEAN = 
 {
-	GENERIC = "Hello!",
-	PICKED = "Resting",
-	BURNING = "Hurts!",
+	GENERIC = "你好！",
+	PICKED = "休息中",
+	BURNING = "疼！",
 }
 
 WORMWOOD.DESCRIBE.KYNO_LOTUS_ROOT = "需要海洋"
@@ -397,9 +397,9 @@ WORMWOOD.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "肚子很好"
 
 WORMWOOD.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
 {
-	GENERIC = "Yum",
-	PICKED = "Gone For Now?",
-	BURNING = "Hurts Bad!",
+	GENERIC = "好吃",
+	PICKED = "暂时没了？",
+	BURNING = "好疼！",
 }
 
 WORMWOOD.DESCRIBE.KYNO_SEAWEEDS = "好吃"
@@ -409,9 +409,9 @@ WORMWOOD.DESCRIBE.KYNO_SEAWEEDS_ROOT = "需要海洋"
 
 WORMWOOD.DESCRIBE.KYNO_TAROROOT_OCEAN = 
 {
-	GENERIC = "Hello Friend!",
-	PICKED = "Friend Growing Well",
-	BURNING = "Hurts!!",
+	GENERIC = "你好朋友！",
+	PICKED = "朋友长得好",
+	BURNING = "疼！！",
 }
 
 WORMWOOD.DESCRIBE.KYNO_TAROROOT_ROOT = "需要海洋"
@@ -420,9 +420,9 @@ WORMWOOD.DESCRIBE.KYNO_TAROROOT_COOKED = "肚皮喜欢它"
 
 WORMWOOD.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
 {
-	GENERIC = "Belly Stuff",
-	PICKED = "Friend Is Sleeping",
-	BURNING = "Fire!!!",
+	GENERIC = "肚肚的东西",
+	PICKED = "朋友在睡觉",
+	BURNING = "火！！！",
 }
 
 WORMWOOD.DESCRIBE.KYNO_WATERYCRESS_ROOT = "需要海洋"
@@ -434,9 +434,9 @@ WORMWOOD.DESCRIBE.KYNO_SALT = "嗯..."
 
 WORMWOOD.DESCRIBE.KYNO_MUSSELSTICK =
 {
-	GENERIC = "Food Stick",
-	PICKED = "Empty",
-	BURNING = "Hurts Stick!",
+	GENERIC = "食物棍子",
+	PICKED = "空了",
+	BURNING = "棍子疼！",
 }
 
 WORMWOOD.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "棍子在游泳！"
@@ -447,11 +447,11 @@ WORMWOOD.DESCRIBE.KATFOOD = "猫粮"
 
 WORMWOOD.DESCRIBE.KYNO_BANANATREE = 
 {
-	GENERIC = "Friend With Sweet Hair",
-	PICKED = "Needs Rest",
-	CHOPPED = "Friend Gone",
-	BURNING = "Friend Hurts!",
-	BURNT = "Gone Forever",
+	GENERIC = "有甜甜头发的朋友",
+	PICKED = "需要休息",
+	CHOPPED = "朋友没了",
+	BURNING = "朋友疼！",
+	BURNT = "永远没了",
 }
 
 WORMWOOD.DESCRIBE.KYNO_BANANA = "朋友的甜美头发！"
@@ -459,11 +459,11 @@ WORMWOOD.DESCRIBE.KYNO_BANANA_COOKED = "嗯..."
 
 WORMWOOD.DESCRIBE.KYNO_KOKONUTTREE = 
 {
-	GENERIC = "Nice Hair!",
-	PICKED = "Friend Needs Rest",
-	CHOPPED = "Oh No",
-	BURNING = "Friend Hurts",
-	BURNT = "Friend Is Gone",
+	GENERIC = "好头发！",
+	PICKED = "朋友需要休息",
+	CHOPPED = "哦不",
+	BURNING = "朋友疼",
+	BURNT = "朋友没了",
 }
 
 WORMWOOD.DESCRIBE.KYNO_KOKONUT = "肚皮球"
@@ -515,8 +515,8 @@ WORMWOOD.DESCRIBE.TURF_TIDALMARSH = "黏糊糊的泥土"
 
 WORMWOOD.DESCRIBE.KYNO_SALTRACK =
 {
-	GENERIC = "Done!",
-	PICKED = "Getting Tasty Rocks",
+	GENERIC = "好了！",
+	PICKED = "在做好吃的石头",
 }
 
 WORMWOOD.DESCRIBE.KYNO_SALTRACK_INSTALLER = "得到美味的岩石"
@@ -527,28 +527,28 @@ WORMWOOD.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "地牢监狱"
 
 WORMWOOD.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
 {
-	GENERIC = "Wrapped Arm Twirly Tail",
-	SLEEPING = "Sleeping",
+	GENERIC = "裹着手臂 卷曲尾巴",
+	SLEEPING = "睡觉中",
 }
 
 WORMWOOD.DESCRIBE.KYNO_SUGARTREE =
 {
-	GENERIC = "Sweet Friend!",
-	CHOPPED = "Sorry!",
-	SAPPED = "Full Of Friend Insides",
-	PICKED = "Oh, Friend. Sorry",
-	BURNING = "Hurts Bad!",
-	BURNT = "Gone...",
+	GENERIC = "甜甜的朋友！",
+	CHOPPED = "对不起！",
+	SAPPED = "装满朋友的内脏",
+	PICKED = "哦，朋友。对不起",
+	BURNING = "好疼！",
+	BURNT = "没了……",
 }
 
 WORMWOOD.DESCRIBE.KYNO_SUGARTREE_RUINED =
 {
-	GENERIC = "OUCH! Friend Hurt",
-	CHOPPED = "Gone",
-	SAPPED = "Bad Juice",
-	PICKED = "Bugs Hurt friend!",
-	BURNING = "Hurts",
-	BURNT = "Gone Forever",
+	GENERIC = "疼！朋友受伤了",
+	CHOPPED = "没了",
+	SAPPED = "坏汁",
+	PICKED = "虫子伤害朋友！",
+	BURNING = "疼",
+	BURNT = "永远没了",
 }
 
 WORMWOOD.DESCRIBE.KYNO_SUGARTREE_BUD = "想在肚子里？还是在泥土里？"
@@ -572,19 +572,19 @@ WORMWOOD.DESCRIBE.KYNO_SLAUGHTERTOOL = "卑鄙的事情"
 
 WORMWOOD.DESCRIBE.KYNO_CHICKEN2 = 
 {
-	GENERIC = "Ba-gawk!",
-	COOP = "Ba-gawk Safe Now",
+	GENERIC = "咯-咯！",
+	COOP = "咯-咯 现在安全了",
 }
 
 WORMWOOD.DESCRIBE.KYNO_CHICKEN_EGG = "宝贝点击点击"
-WORMWOOD.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Big Click Click Inside?"
+WORMWOOD.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "里面有大咔哒咔哒？"
 WORMWOOD.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "进肚子"
 
 WORMWOOD.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
-	GENERIC = "Ba-gawk Home",
-	FULL = "Eggs Ready!",
-	BURNT = "Ba-gawk Gone?",
+	GENERIC = "咯咯家",
+	FULL = "蛋好了！",
+	BURNT = "咯咯没了？",
 }
 
 WORMWOOD.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "损坏"
@@ -610,8 +610,8 @@ WORMWOOD.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "给食物提供火浴。
 
 WORMWOOD.DESCRIBE.KYNO_ROCKFLIPPABLE = 
 {
-	GENERIC = "Things hiding?",
-	FLIPPED = "Found Things",
+	GENERIC = "有东西藏着？",
+	FLIPPED = "找到东西了",
 }
 
 WORMWOOD.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "木头！淹死！"
@@ -657,9 +657,9 @@ WORMWOOD.DESCRIBE.KYNO_SAPHEALER = "生病的修理工"
 
 WORMWOOD.DESCRIBE.KYNO_OCEAN_WRECK = 
 {
-	GENERIC = "Save The Wood!",
-	PICKED = "Waiting",
-	BURNING = "Hurts",
+	GENERIC = "救救木头！",
+	PICKED = "等待中",
+	BURNING = "疼",
 }
 
 WORMWOOD.DESCRIBE.KYNO_GHOST_PIRATE = "飘飘人"
@@ -679,28 +679,28 @@ WORMWOOD.DESCRIBE.KYNO_BREWBOOK = "肚子里的东西"
 
 WORMWOOD.DESCRIBE.KYNO_WOODENKEG = 
 {
-	EMPTY = "Wooden Box?",
-	BREWING_LONG = "Working",
-	BREWING_SHORT = "Almost Ready?",
-	DONE = "Ready!",
-	BURNT = "Gone",
+	EMPTY = "木头盒子？",
+	BREWING_LONG = "工作中",
+	BREWING_SHORT = "快好了？",
+	DONE = "好了！",
+	BURNT = "没了",
 }
 
 WORMWOOD.DESCRIBE.KYNO_PRESERVESJAR = 
 {
-	EMPTY = "Wooden Box?",
-	BREWING_LONG = "Working",
-	BREWING_SHORT = "Almost Ready?",
-	DONE = "Ready!",
-	BURNT = "Gone",
+	EMPTY = "木头盒子？",
+	BREWING_LONG = "工作中",
+	BREWING_SHORT = "快好了？",
+	DONE = "好了！",
+	BURNT = "没了",
 }
 
 WORMWOOD.DESCRIBE.KYNO_ANTCHEST = 
 {
-	GENERIC = "Buzz juice! Where's Buzz?",
-	HONEY = "Sweet Stuff!",
-	NECTAR = "Not Ready",
-	BURNING = "Hurts!",
+	GENERIC = "嗡嗡汁！嗡嗡去哪儿了？",
+	HONEY = "甜甜的东西！",
+	NECTAR = "没好",
+	BURNING = "疼！",
 }
 
 WORMWOOD.DESCRIBE.KYNO_NECTAR_POD = "甜蜜！"
@@ -713,43 +713,43 @@ WORMWOOD.DESCRIBE.KYNO_PIKO_ORANGE = "蓬松的纳伯"
 
 WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
 {
-	GENERIC = "Sleeping?",
-	CHOPPED = "Friend Gave Pieces of Hair",
-	BURNING = "Hurts!",
-	BURNT = "Gone",
+	GENERIC = "睡着了？",
+	CHOPPED = "朋友给了头发碎片",
+	BURNING = "疼！",
+	BURNT = "没了",
 }
 
 WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
 {
-	GENERIC = "Sleeping With Friends?",
-	BURNING = "Hurts!",
+	GENERIC = "和朋友一起睡着了？",
+	BURNING = "疼！",
 }
 
 WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "木友们做了一个盒子！"
 
 WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
 {
-	GENERIC = "Glub Glub Man Home",
-	BURNT = "Glub Glub Man Home Gone",
+	GENERIC = "咕噜咕噜人家",
+	BURNT = "咕噜咕噜人家没了",
 }
 
 WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
 {
-	GENERIC = "Glub Glub Man Home",
-	CRAFTED = "Better Home",
-	BURNT = "Smells Bad",
+	GENERIC = "咕噜咕噜人家",
+	CRAFTED = "更好的家",
+	BURNT = "好臭",
 }
 
 WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
 {
-	GENERIC = "Has Many Stuff Inside",
-	OCCUPIED = "Sleeping?",
+	GENERIC = "里面有很多东西",
+	OCCUPIED = "睡着了？",
 }
 
 WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
 {
-	GENERIC = "Stuff",
-	EMPTY = "Nothing",
+	GENERIC = "东西",
+	EMPTY = "没有",
 }
 
 WORMWOOD.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "你好！"
@@ -901,14 +901,14 @@ WORMWOOD.DESCRIBE.RISOTTO = "谷物和朋友们"
 
 WORMWOOD.DESCRIBE.RICESAKE = "谷物水？"
 
-WORMWOOD.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Friend Needs Soil"
+WORMWOOD.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "朋友需要土"
 
 WORMWOOD.DESCRIBE.KYNO_PINEAPPLEBUSH = 
 {
-	GENERIC = "Hi Friend!",
-	PICKED = "Where Did Friend Spikes Go?",
-	WITHERED = "Too Dry",
-	BURNING = "Friend Hurt!",
+	GENERIC = "嗨朋友！",
+	PICKED = "朋友的刺刺去哪儿了？",
+	WITHERED = "太干了",
+	BURNING = "朋友疼！",
 }
 
 WORMWOOD.DESCRIBE.KYNO_PINEAPPLE = "多刺"
@@ -923,8 +923,8 @@ WORMWOOD.DESCRIBE.CHIMAS = "青草?"
 
 WORMWOOD.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
 {
-	OFF = "Helps Friends",
-	ON = "Friends Are Happy With Splashy Metal Thing",
+	OFF = "帮朋友们",
+	ON = "朋友们很开心 有会溅水的金属东西",
 }
 
 WORMWOOD.DESCRIBE.KYNO_FOODSACK = "保持肚子里东西新鲜"
@@ -1036,9 +1036,9 @@ WORMWOOD.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "老房子……也许很快会有
 
 WORMWOOD.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
-	GENERIC = "Friend Grows In Dirt!",
-	PICKED = "Gone",
-	BURNING = "Friend Hurt!",
+	GENERIC = "朋友长在土里！",
+	PICKED = "没了",
+	BURNING = "朋友疼！",
 }
 
 WORMWOOD.DESCRIBE.KYNO_TRUFFLES = "有味道的朋友食物。"
@@ -1046,8 +1046,8 @@ WORMWOOD.DESCRIBE.KYNO_TRUFFLES_COOKED = "温暖的朋友食物！"
 
 WORMWOOD.DESCRIBE.KYNO_ITEMSHOWCASER = 
 {
-	EMPTY = "Show Food To Friends",
-	FULL = "Food Looking Nice",
+	EMPTY = "给朋友们看食物",
+	FULL = "食物看着不错",
 }
 
 WORMWOOD.DESCRIBE.KYNO_SPORECAP = "朋友……生病了……"
@@ -1071,11 +1071,11 @@ WORMWOOD.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "水培种植！"
 
 WORMWOOD.DESCRIBE.KYNO_FISHFARMPLOT = 
 {
-	GENERIC = "Glub Glub Home",
-	FUEL_HIGH = "Fish Happy!",
-	FUEL_MED = "Fish Eating",
-	FUEL_LOW = "Need Snacks Soon",
-	EMPTY = "No More Snacks",
+	GENERIC = "咕噜咕噜的家",
+	FUEL_HIGH = "鱼开心！",
+	FUEL_MED = "鱼在吃",
+	FUEL_LOW = "很快需要零食",
+	EMPTY = "没有零食了",
 }
 
 WORMWOOD.DESCRIBE.KYNO_ANTCHOVY = "虫虫怪怪的朋友！你好呀！"
@@ -1136,24 +1136,24 @@ WORMWOOD.DESCRIBE.KYNO_BRAINROCK_CORAL = "思考中..."
 
 WORMWOOD.DESCRIBE.KYNO_BRAINROCK_ROCK = 
 {
-	GENERIC = "Thinky Rock",
-	PICKED = "Thinky Rock Tired",
+	GENERIC = "会想的石头",
+	PICKED = "会想的石头累了",
 }
 
 WORMWOOD.DESCRIBE.BRAINMETTERSOUP = "细腻的东西"
 
 WORMWOOD.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
 {
-	GENERIC = "Big Arms Guy",
-	SLEEPING = "Sleeping",
+	GENERIC = "大胳膊的家伙",
+	SLEEPING = "睡觉中",
 }
 
 WORMWOOD.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "来自大块头的装备！"
 
 WORMWOOD.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
 {
-	GENERIC = "Friend Tweeter Likes You!",
-	WAITING = "Where Did Tweeter Go?",
+	GENERIC = "啾啾朋友喜欢你！",
+	WAITING = "啾啾去哪儿了？",
 }
 
 WORMWOOD.DESCRIBE.KYNO_PACKIMBAGGIMS = "大嘴朋友"
@@ -1168,11 +1168,11 @@ WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "飘飘的朋友们！嗨！"
 
 WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
 {
-	GENERIC = "Pop Maker",
-	FUEL_HIGH = "Pop Maker Is Happy",
-	FUEL_MED = "Working",
-	FUEL_LOW = "Pop Maker Looks Hungry",
-	EMPTY = "Empty",
+	GENERIC = "蹦蹦制造机",
+	FUEL_HIGH = "蹦蹦制造机开心",
+	FUEL_MED = "工作中",
+	FUEL_LOW = "蹦蹦制造机看起来饿了",
+	EMPTY = "空了",
 }
 
 WORMWOOD.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "砰砰"
@@ -1183,22 +1183,22 @@ WORMWOOD.DESCRIBE.KYNO_FISHREGISTRYHAT = "懂鱼的帽子"
 
 WORMWOOD.DESCRIBE.KYNO_ANIMALFEEDER =
 {
-	GENERIC = "Food Place",
-	FUEL_HIGH = "Lots Of Food",
-	FUEL_MED = "Some Food",
-	FUEL_LOW = "Little Food",
-	EMPTY = "No Food",
-	BURNT = "Gone",
+	GENERIC = "放食物的地方",
+	FUEL_HIGH = "好多食物",
+	FUEL_MED = "一些食物",
+	FUEL_LOW = "一点点食物",
+	EMPTY = "没食物",
+	BURNT = "没了",
 }
 
-WORMWOOD.DESCRIBE.CHICKENNUGGETS = "Ba-gawk Pieces"
+WORMWOOD.DESCRIBE.CHICKENNUGGETS = "咯咯碎片"
 
-WORMWOOD.DESCRIBE.CHICKENWINGS = "Hurts Belly"
+WORMWOOD.DESCRIBE.CHICKENWINGS = "肚子疼"
 
-WORMWOOD.DESCRIBE.CHICKENBURGER = "Ba-gawk Hug bread"
+WORMWOOD.DESCRIBE.CHICKENBURGER = "咯咯抱着面包"
 
-WORMWOOD.DESCRIBE.CHICKENEGGSOUP = "Warm Egg Water"
+WORMWOOD.DESCRIBE.CHICKENEGGSOUP = "热热的蛋水"
 
-WORMWOOD.DESCRIBE.CHICKENEGGSTEW = "Ba-gawk Bath"
+WORMWOOD.DESCRIBE.CHICKENEGGSTEW = "咯咯洗澡"
 
-WORMWOOD.DESCRIBE.CHICKENROTISSERIE = "Hot Ba-gawk."
+WORMWOOD.DESCRIBE.CHICKENROTISSERIE = "热热的咯咯。"

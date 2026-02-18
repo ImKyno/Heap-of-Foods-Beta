@@ -78,11 +78,11 @@ WATHGRITHR.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "我的心智再度钝化于战斗�
 WATHGRITHR.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "诸神赐予我盾牌！"
 WATHGRITHR.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "他们的盾牌抛弃了我！"
 
-WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Rage of battle surges through me!"
-WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_END = "The battle-fury wanes..."
+WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_START = "战斗的狂怒在我体内奔涌！"
+WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_END = "战意渐消……"
 
-WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "My body endures without feast!"
-WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The call of hunger returns!"
+WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "我的身躯无需盛宴亦能支撑！"
+WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "饥饿的呼唤，回来了！"
 
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "错误的！"
 
@@ -96,7 +96,7 @@ WATHGRITHR.ANNOUNCE_KYNO_POTHANGER_FAIL = "我需要在这里放一个锅来做�
 
 WATHGRITHR.ANNOUNCE_KYNO_CASSEROLE_FAIL = "不是那个！"
 
-WATHGRITHR.ANNOUNCE_KYNO_SAPHEALER_USED = "Gods have helped me revive this fallen warrior tree!"
+WATHGRITHR.ANNOUNCE_KYNO_SAPHEALER_USED = "众神助我，让这棵倒下的战士之树重获新生！"
 
 WATHGRITHR.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "盛宴的华美谢幕！"
 
@@ -137,22 +137,22 @@ WATHGRITHR.DESCRIBE.KYNO_SYRUP = "众神甘露，献给众神。"
 WATHGRITHR.DESCRIBE.KYNO_COFFEEBEANS = "我拿的是黑色。"
 WATHGRITHR.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "闻起来充满活力。"
 
-WATHGRITHR.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Needs hot soil."
+WATHGRITHR.DESCRIBE.DUG_KYNO_COFFEEBUSH = "需要炙热的土壤。"
 
 WATHGRITHR.DESCRIBE.KYNO_COFFEEBUSH = 
 {
-	GENERIC = "Just add water?",
-	PICKED = "Its bounty sleeps!",
-	WITHERED = "It withers in weakness!",
+	GENERIC = "加点水就行了？",
+	PICKED = "它的战利品沉睡了！",
+	WITHERED = "它因软弱而枯萎！",
 }
 
-WATHGRITHR.DESCRIBE.DUG_KYNO_SPOTBUSH = "Needs proper planting."
+WATHGRITHR.DESCRIBE.DUG_KYNO_SPOTBUSH = "需要妥善栽种。"
 
 WATHGRITHR.DESCRIBE.KYNO_SPOTBUSH = 
 {
-	GENERIC = "Spice for the fanciest of foods.",
-	PICKED = "Its bounty sleeps!",
-	BURNING = "Slain by flames!",
+	GENERIC = "给最精致的食物用的香料。",
+	PICKED = "它的战利品沉睡了！",
+	BURNING = "被火焰斩杀了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_SPOTSPICE_LEAF = "这是一根调味小枝。"
@@ -214,23 +214,23 @@ WATHGRITHR.DESCRIBE.LONGPIGMEAL = "向你阵亡的勇士致敬！"
 
 WATHGRITHR.DESCRIBE.CUCUMBERSALAD = "蔬菜是给动物吃的。动物是用来吃的。"
 
-WATHGRITHR.DESCRIBE.DUG_KYNO_WILDWHEAT = "Better plant it already!"
+WATHGRITHR.DESCRIBE.DUG_KYNO_WILDWHEAT = "最好现在就种下！"
 
 WATHGRITHR.DESCRIBE.KYNO_WILDWHEAT = 
 {
-	GENERIC = "That could be useful.",
-	PICKED = "Its bounty sleeps!",
-	WITHERED = "It withers in weakness!",
-	BURNING = "Slain by flames!",
+	GENERIC = "或许能派上用场。",
+	PICKED = "它的战利品沉睡了！",
+	WITHERED = "它因软弱而枯萎！",
+	BURNING = "被火焰斩杀了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_MEALGRINDER = "小麦武器！"
 
 WATHGRITHR.DESCRIBE.KYNO_MUSHSTUMP =
 {
-	GENERIC = "Growing non-meat fungus.",
-	PICKED = "'Tis vanquished.",
-	BURNING = "Destroyed by flames!",
+	GENERIC = "长着非肉的菌类。",
+	PICKED = "已被征服。",
+	BURNING = "被火焰摧毁了！",
 }
 
 WATHGRITHR.DESCRIBE.GORGE_BREAD = "啊哈。这可不适合像我这样的勇士！"
@@ -376,9 +376,9 @@ WATHGRITHR.DESCRIBE.KYNO_SEEDS_KIT = "恶心。"
 
 WATHGRITHR.DESCRIBE.KYNO_LIMPETROCK = 
 {
-	GENERIC = "The meat stone!",
-	PICKED = "They flee from harvest!",
-	WITHERED = "The stone bears no bounty!",
+	GENERIC = "这肉石头！",
+	PICKED = "它们逃离了收获！",
+	WITHERED = "这石头毫无战利品！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_LIMPETS = "石头肉！"
@@ -386,9 +386,9 @@ WATHGRITHR.DESCRIBE.KYNO_LIMPETS_COOKED = "让我们大饱眼福！"
 
 WATHGRITHR.DESCRIBE.KYNO_LOTUS_OCEAN = 
 {
-	GENERIC = "Freya looks down upon this.",
-	PICKED = "It gathers strength!",
-	BURNING = "Struck down by flames!",
+	GENERIC = "弗雷娅眷顾着此物。",
+	PICKED = "它在积蓄力量！",
+	BURNING = "被火焰击倒了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_LOTUS_ROOT = "我才不需要它！"
@@ -397,9 +397,9 @@ WATHGRITHR.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "我不想吃这个。"
 
 WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
 {
-	GENERIC = "A weed I cannot crush under my boot.",
-	PICKED = "They retreat!",
-	BURNING = "Consumed by flames despite the waves!",
+	GENERIC = "一种我靴子碾不碎的杂草。",
+	PICKED = "它们撤退了！",
+	BURNING = "顶着浪头，竟被火焰吞噬了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS = "水生植物污物！"
@@ -409,9 +409,9 @@ WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS_ROOT = "我没有用它！"
 
 WATHGRITHR.DESCRIBE.KYNO_TAROROOT_OCEAN = 
 {
-	GENERIC = "'Tis be a water vegetable, how can this be possible!",
-	PICKED = "It gathers strength!",
-	BURNING = "Slain by flames!",
+	GENERIC = "这是个水里的蔬菜，这怎么可能！",
+	PICKED = "它在积蓄力量！",
+	BURNING = "被火焰斩杀了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_TAROROOT_ROOT = "我才不需要它！"
@@ -420,9 +420,9 @@ WATHGRITHR.DESCRIBE.KYNO_TAROROOT_COOKED = "弱者的食物。"
 
 WATHGRITHR.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
 {
-	GENERIC = "I hate it.",
-	PICKED = "It shall rise again!",
-	BURNING = "Felled by flame!",
+	GENERIC = "我讨厌这玩意儿。",
+	PICKED = "它必将卷土重来！",
+	BURNING = "被火焰放倒了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_WATERYCRESS_ROOT = "我才不需要它！"
@@ -434,9 +434,9 @@ WATHGRITHR.DESCRIBE.KYNO_SALT = "它很咸。"
 
 WATHGRITHR.DESCRIBE.KYNO_MUSSELSTICK =
 {
-	GENERIC = "Shell-bound morsels await harvest!",
-	PICKED = "They retreat!",
-	BURNING = "Slain by flames!",
+	GENERIC = "壳中藏着的小块肉，静待收获！",
+	PICKED = "它们撤退了！",
+	BURNING = "被火焰斩杀了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "愚蠢的贻贝会爬上这根木棍。"
@@ -447,11 +447,11 @@ WATHGRITHR.DESCRIBE.KATFOOD = "这是为了勇敢的猫！"
 
 WATHGRITHR.DESCRIBE.KYNO_BANANATREE = 
 {
-	GENERIC = "A flimsy monkey tree.",
-	PICKED = "It must gather strength!",
-	CHOPPED = "Felled like a weak foe!",
-	BURNING = "It burns in battle!",
-	BURNT = "Vanquished by flames!",
+	GENERIC = "一棵脆弱的猴子树。",
+	PICKED = "它必须积蓄力量！",
+	CHOPPED = "像砍翻弱敌一样放倒了！",
+	BURNING = "它在战斗中燃烧！",
+	BURNT = "被火焰征服了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_BANANA = "猴子食物。"
@@ -459,11 +459,11 @@ WATHGRITHR.DESCRIBE.KYNO_BANANA_COOKED = "热猴粮。"
 
 WATHGRITHR.DESCRIBE.KYNO_KOKONUTTREE = 
 {
-	GENERIC = "Do you forsake branches, tree?",
-	PICKED = "It must gather strength!",
-	CHOPPED = "Felled like a foe!",
-	BURNING = "It burns in battle!",
-	BURNT = "Vanquished by flames!",
+	GENERIC = "你抛弃了树枝吗，树啊？",
+	PICKED = "它必须积蓄力量！",
+	CHOPPED = "像砍翻敌人一样放倒了！",
+	BURNING = "它在战斗中燃烧！",
+	BURNT = "被火焰征服了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_KOKONUT = "最坚硬的水果。"
@@ -515,8 +515,8 @@ WATHGRITHR.DESCRIBE.TURF_TIDALMARSH = "战场的一部分。"
 
 WATHGRITHR.DESCRIBE.KYNO_SALTRACK =
 {
-	GENERIC = "'Tis ready to be pillaged!",
-	PICKED = "An ally to meat awaits!",
+	GENERIC = "这玩意儿准备好被掠夺了！",
+	PICKED = "肉的盟友，静候在此！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_SALTRACK_INSTALLER = "我会好好利用你。"
@@ -527,28 +527,28 @@ WATHGRITHR.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "它会捕获海肉。"
 
 WATHGRITHR.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
 {
-	GENERIC = "Your liege.",
-	SLEEPING =  "He slumbers!",
+	GENERIC = "你的君主在此。",
+	SLEEPING =  "他正安眠！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_SUGARTREE =
 {
-	GENERIC = "The nectar of the gods dwells within.",
-	CHOPPED = "It has been chopped.",
-	SAPPED = "I have acquired the nectar!",
-	PICKED = "I've no patience for thee, sap!",
-	BURNING = "Slain by flames!",
-	BURNT = "Vanquished!",
+	GENERIC = "众神的甘露蕴藏其中。",
+	CHOPPED = "它已被砍伐。",
+	SAPPED = "我已取得甘露！",
+	PICKED = "我对你毫无耐心，树汁！",
+	BURNING = "被火焰斩杀了！",
+	BURNT = "被征服了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_SUGARTREE_RUINED =
 {
-	GENERIC = "It hath been wounded!",
-	CHOPPED = "Felled in shame!",
-	SAPPED = "Corrupted bounty!",
-	PICKED = "It hath been fouled by tiny beasts!",
-	BURNING = "Cleansed by flames!",
-	BURNT = "Farewell!",
+	GENERIC = "它受伤了！",
+	CHOPPED = "耻辱地被放倒了！",
+	SAPPED = "腐化的战利品！",
+	PICKED = "它被小兽们玷污了！",
+	BURNING = "被火焰净化了！",
+	BURNT = "永别了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_SUGARTREE_BUD = "它没有肉让我很生气。"
@@ -572,19 +572,19 @@ WATHGRITHR.DESCRIBE.KYNO_SLAUGHTERTOOL = "这是一种残忍的屠杀武器！"
 
 WATHGRITHR.DESCRIBE.KYNO_CHICKEN2 = 
 {
-	GENERIC = "Tis walking meat.",
-	COOP = "The beast is claimed!",
+	GENERIC = "此乃行走的肉。",
+	COOP = "这野兽已被征服！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_CHICKEN_EGG = "鸡蛋。"
-WATHGRITHR.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "A feast fit for a true warrior of the North!"
+WATHGRITHR.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "一场配得上真正北方勇士的盛宴！"
 WATHGRITHR.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "热鸡蛋。"
 
 WATHGRITHR.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
-	GENERIC = "A hall for egg-laying beasts!",
-	FULL = "The eggs await their glorious fate!",
-	BURNT = "The coop has fallen in battle!",
+	GENERIC = "产卵之兽的厅堂！",
+	FULL = "鸡蛋正等待着它们光荣的宿命！",
+	BURNT = "鸡舍已在战斗中陨落！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "破东西！"
@@ -610,8 +610,8 @@ WATHGRITHR.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "我要在你里面做�
 
 WATHGRITHR.DESCRIBE.KYNO_ROCKFLIPPABLE = 
 {
-	GENERIC = "Stone! Reveal to me thine secrets!",
-	FLIPPED = "They scatter before me!",
+	GENERIC = "石头！向我揭示你的秘密！",
+	FLIPPED = "它们在我面前四散而逃！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "掠夺！"
@@ -657,9 +657,9 @@ WATHGRITHR.DESCRIBE.KYNO_SAPHEALER = "树木疾病的根源。"
 
 WATHGRITHR.DESCRIBE.KYNO_OCEAN_WRECK = 
 {
-	GENERIC = "Longships litter the path to Valhalla.",
-	PICKED = "The spoils have fled!",
-	BURNING = "It sinks in flames!",
+	GENERIC = "长船散落在通往英灵殿的路上。",
+	PICKED = "战利品逃走了！",
+	BURNING = "它葬身火海！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_GHOST_PIRATE = "去吧，灵魂！"
@@ -679,28 +679,28 @@ WATHGRITHR.DESCRIBE.KYNO_BREWBOOK = "如果你问我，这里面的非肉类菜�
 
 WATHGRITHR.DESCRIBE.KYNO_WOODENKEG = 
 {
-	EMPTY = "The gods liquor-maker!",
-	BREWING_LONG = "The drink must age with honor!",
-	BREWING_SHORT = "Soon the feast shall begin!",
-	DONE = "The brew is ready for warriors!",
-	BURNT = "Destroyed by flames!",
+	EMPTY = "众神的酿酒器！",
+	BREWING_LONG = "此酒必须荣耀地陈化！",
+	BREWING_SHORT = "盛宴即将开始！",
+	DONE = "此酿已为勇士备好！",
+	BURNT = "被火焰摧毁了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_PRESERVESJAR = 
 {
-	EMPTY = "It's not my kind...",
-	BREWING_LONG = "The feast must wait!",
-	BREWING_SHORT = "Soon the feast is mine!",
-	DONE = "The spoils are ready!",
-	BURNT = "Destroyed by flames!",
+	EMPTY = "这非我所好……",
+	BREWING_LONG = "盛宴必须等待！",
+	BREWING_SHORT = "盛宴很快就是我的了！",
+	DONE = "战利品备好了！",
+	BURNT = "被火焰摧毁了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_ANTCHEST = 
 {
-	GENERIC = "A shieldmaiden has no use for a honey maker!",
-	HONEY = "I have no use for all that honey.",
-	NECTAR = "They seem to be converting nasty nectar into nasty honey!",
-	BURNING = "The hall burns in glorious flames!",
+	GENERIC = "一个女武神用不着什么产蜜的家伙！",
+	HONEY = "那些蜂蜜，我用不上。",
+	NECTAR = "它们似乎在把那恶心的花蜜变成恶心的蜂蜜！",
+	BURNING = "厅堂在荣耀的火焰中燃烧！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_NECTAR_POD = "昆虫的食物，不配当盾女。"
@@ -713,43 +713,43 @@ WATHGRITHR.DESCRIBE.KYNO_PIKO_ORANGE = "我没有用它。"
 
 WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
 {
-	GENERIC = "'Tis an adequate tree.",
-	CHOPPED = "Its bounty is claimed!",
-	BURNING = "It burns in battle!",
-	BURNT = "Felled by flames!",
+	GENERIC = "此树尚可。",
+	CHOPPED = "它的战利品已被夺取！",
+	BURNING = "它在战斗中燃烧！",
+	BURNT = "被火焰放倒了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
 {
-	GENERIC = "'Tis an adequate tree.",
-	BURNING = "Their hall falls to flames!",
+	GENERIC = "此树尚可。",
+	BURNING = "它们的厅堂葬身火海！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "交出你的秘密，盒子！"
 
 WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
 {
-	GENERIC = "Is this dwelling made of fish?",
-	BURNT = "Laid low by flame!",
+	GENERIC = "这住处是鱼做的吗？",
+	BURNT = "被火焰放倒了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
 {
-	GENERIC = "The fisherfolk dwell here.",
-	CRAFTED = "A hall worthy of its dweller!",
-	BURNT = "The stench of defeat!",
+	GENERIC = "渔夫们住在此处。",
+	CRAFTED = "配得上其居住者的厅堂！",
+	BURNT = "这战败的恶臭！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
 {
-	GENERIC = "The hanging sausages looks tasty!",
-	OCCUPIED = "The merchant slumbers!",
+	GENERIC = "挂着的香肠看起来真美味！",
+	OCCUPIED = "商贩在打盹！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
 {
-	GENERIC = "Blergh, where are all the meats?",
-	EMPTY = "Sammy's wagon is barren!",
+	GENERIC = "呃，肉都去哪儿了？",
+	EMPTY = "萨米的车空空如也！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "它是各种商品的优秀交易者。"
@@ -901,14 +901,14 @@ WATHGRITHR.DESCRIBE.RISOTTO = "那是给弱者的食物！"
 
 WATHGRITHR.DESCRIBE.RICESAKE = "神的饮料！"
 
-WATHGRITHR.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Torn from the ground!"
+WATHGRITHR.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "从地里扯出来的！"
 
 WATHGRITHR.DESCRIBE.KYNO_PINEAPPLEBUSH = 
 {
-	GENERIC = "Argh! Its surrounded by spikes.",
-	PICKED = "Its bounty is spent!",
-	WITHERED = "It withers in defeat!",
-	BURNING = "Slain by flames!",
+	GENERIC = "啊！它周身布满尖刺。",
+	PICKED = "它的战利品耗尽了！",
+	WITHERED = "它在落败中枯萎！",
+	BURNING = "被火焰斩杀了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_PINEAPPLE = "这种水果拥有高贵的盔甲。"
@@ -923,8 +923,8 @@ WATHGRITHR.DESCRIBE.CHIMAS = "茶！"
 
 WATHGRITHR.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
 {
-	OFF = "Rain comes from within it's workings.",
-	ON = "Rain without thunder!",
+	OFF = "雨从它的机关里来。",
+	ON = "无雷之雨！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_FOODSACK = "恶心，但确实实用。"
@@ -1036,9 +1036,9 @@ WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "曾经的殿堂，如今已陨�
 
 WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
-	GENERIC = "Not meat, but maybe worthy of a feast!",
-	PICKED = "Claimed!",
-	BURNING = "Slain by flames!",
+	GENERIC = "不是肉，但或许配得上一场盛宴！",
+	PICKED = "已夺取！",
+	BURNING = "被火焰斩杀了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_TRUFFLES = "又是蘑菇……但也许适合盛宴。"
@@ -1046,8 +1046,8 @@ WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_COOKED = "还是不是肉……但香气值得
 
 WATHGRITHR.DESCRIBE.KYNO_ITEMSHOWCASER = 
 {
-	EMPTY = "Bah! I need no showcase for my glorious feasts!",
-	FULL = "A glorious offering!",
+	EMPTY = "呸！我光荣的盛宴何须展示柜！",
+	FULL = "一份荣耀的献礼！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_SPORECAP = "脆弱的真菌，不配战斗。"
@@ -1071,11 +1071,11 @@ WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "斗鱼池！赞同。"
 
 WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT = 
 {
-	GENERIC = "A pond to raise new warriors of the water!",
-	FUEL_HIGH = "They feast well!",
-	FUEL_MED = "They grow hungry!",
-	FUEL_LOW = "The feast wanes!",
-	EMPTY = "No food remains!",
+	GENERIC = "一个养育水中新战士的池塘！",
+	FUEL_HIGH = "它们正享受着盛宴！",
+	FUEL_MED = "它们有些饿了！",
+	FUEL_LOW = "盛宴即将结束！",
+	EMPTY = "没有食物了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_ANTCHOVY = "半虫半鱼！双倍的盛宴！"
@@ -1136,24 +1136,24 @@ WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_CORAL = "我吃了它，就能获得它的知
 
 WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_ROCK = 
 {
-	GENERIC = "A mystical, all-knowing water rock!",
-	PICKED = "Its mind slumbers!",
+	GENERIC = "一块神秘而全知的水中之石！",
+	PICKED = "它的心智沉睡了！",
 }
 
 WATHGRITHR.DESCRIBE.BRAINMETTERSOUP = "哼！给小鬼们的饭菜！"
 
 WATHGRITHR.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
 {
-	GENERIC = "He seems open to bartering.",
-	SLEEPING = "The sea-king slumbers!",
+	GENERIC = "他看起来愿意交易。",
+	SLEEPING = "海王安眠了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "圣柜存放着祭品。"
 
 WATHGRITHR.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
 {
-	GENERIC = "A curious bauble.",
-	WAITING = "An unfortunate casualty of battle.",
+	GENERIC = "一件有趣的小玩意儿。",
+	WAITING = "一场战斗中的不幸伤亡。",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_PACKIMBAGGIMS = "你可愿随我共赴英灵殿？"
@@ -1168,11 +1168,11 @@ WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "勇士不拿气球作战！"
 
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
 {
-	GENERIC = "A worthy popcorn contraption!",
-	FUEL_HIGH = "It roars with power!",
-	FUEL_MED = "Still strong!",
-	FUEL_LOW = "The fire weakens!",
-	EMPTY = "The forge sleeps!",
+	GENERIC = "一台值得一战的爆米花装置！",
+	FUEL_HIGH = "它咆哮着，充满力量！",
+	FUEL_MED = "依然强劲！",
+	FUEL_LOW = "火焰在减弱！",
+	EMPTY = "熔炉沉睡了！",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "玉米爆裂，热力开战！哈！"
@@ -1183,22 +1183,22 @@ WATHGRITHR.DESCRIBE.KYNO_FISHREGISTRYHAT = "面对海中生物之人的思考之
 
 WATHGRITHR.DESCRIBE.KYNO_ANIMALFEEDER =
 {
-	GENERIC = "A trough for the beasts!",
-	FUEL_HIGH = "A feast fit for warriors!",
-	FUEL_MED = "They shall endure!",
-	FUEL_LOW = "The feast wanes!",
-	EMPTY = "The trough stands barren!",
-	BURNT = "Slain by fire!",
+	GENERIC = "给野兽用的食槽！",
+	FUEL_HIGH = "配得上勇士的盛宴！",
+	FUEL_MED = "它们能撑下去！",
+	FUEL_LOW = "盛宴即将结束！",
+	EMPTY = "食槽空空如也！",
+	BURNT = "被火焰斩杀了！",
 }
 
-WATHGRITHR.DESCRIBE.CHICKENNUGGETS = "The flesh is dishonorably shaped!"
+WATHGRITHR.DESCRIBE.CHICKENNUGGETS = "这肉被塑成了有失荣誉的形状！"
 
-WATHGRITHR.DESCRIBE.CHICKENWINGS = "Fiery wings fit for a warrior!"
+WATHGRITHR.DESCRIBE.CHICKENWINGS = "烈焰鸡翅，配得上勇士！"
 
-WATHGRITHR.DESCRIBE.CHICKENBURGER = "A poultry feast trapped in bread!"
+WATHGRITHR.DESCRIBE.CHICKENBURGER = "被囚禁在面包中的禽肉盛宴！"
 
-WATHGRITHR.DESCRIBE.CHICKENEGGSOUP = "A warm broth of birdly honor!"
+WATHGRITHR.DESCRIBE.CHICKENEGGSOUP = "一碗温热的、蕴含禽类荣誉的肉汤！"
 
-WATHGRITHR.DESCRIBE.CHICKENEGGSTEW = "A stew worthy of a warrior's hunger!"
+WATHGRITHR.DESCRIBE.CHICKENEGGSTEW = "配得上勇士饥饿的炖菜！"
 
-WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "A worthy roast, fit for a warrior's feast."
+WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "值得一战的烤禽，配得上勇士的盛宴。"

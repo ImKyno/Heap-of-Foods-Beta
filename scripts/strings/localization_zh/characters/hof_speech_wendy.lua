@@ -78,11 +78,11 @@ WENDY.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "明晰渐逝……黑暗重临。"
 WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "即使是看不见的屏障也能保护我免受伤害。"
 WENDY.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "那看不见的屏障已经消失了。"
 
-WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Pain for pain. A fair exchange."
-WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "The fury fades, as all things do."
+WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_START = "以痛还痛。一场公平的交易。"
+WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "狂怒消逝，如同万物一般。"
 
-WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Even hunger grows quieter."
-WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The emptiness returns."
+WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "就连饥饿，也变得更安静了。"
+WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "空虚，回来了。"
 
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "或许可以收集些什么？"
 
@@ -96,7 +96,7 @@ WENDY.ANNOUNCE_KYNO_POTHANGER_FAIL = "它需要的是一个锅，而不是这个
 
 WENDY.ANNOUNCE_KYNO_CASSEROLE_FAIL = "我需要在这里放一个砂锅菜盘。"
 
-WENDY.ANNOUNCE_KYNO_SAPHEALER_USED = "Life blossoms again, and so the cycle continues."
+WENDY.ANNOUNCE_KYNO_SAPHEALER_USED = "生命再次绽放，循环往复，周而复始。"
 
 WENDY.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "生命终将消逝，他们的生命也必将如此……"
 
@@ -137,22 +137,22 @@ WENDY.DESCRIBE.KYNO_SYRUP = "不像阿比盖尔那么甜。"
 WENDY.DESCRIBE.KYNO_COFFEEBEANS = "这些看起来很刺激。"
 WENDY.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "生命的意志是以豆子的形式出现的？"
 
-WENDY.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Uprooted, yet not doomed."
+WENDY.DESCRIBE.DUG_KYNO_COFFEEBUSH = "被连根拔起，却未注定消亡。"
 
 WENDY.DESCRIBE.KYNO_COFFEEBUSH = 
 {
-	GENERIC = "This plant takes nourishment from fiery death.",
-	PICKED = "It has nothing left to give.",
-	WITHERED = "Life withdraws from it.",
+	GENERIC = "这植物，从炽烈的死亡中汲取养分。",
+	PICKED = "它已没什么能给予的了。",
+	WITHERED = "生命正从它体内退去。",
 }
 
-WENDY.DESCRIBE.DUG_KYNO_SPOTBUSH = "Displaced, but not gone."
+WENDY.DESCRIBE.DUG_KYNO_SPOTBUSH = "被挪了地方，但并未消失。"
 
 WENDY.DESCRIBE.KYNO_SPOTBUSH = 
 {
-	GENERIC = "I suppose it could be edible.",
-	PICKED = "It has nothing more to give.",
-	BURNING = "Its end is swift.",
+	GENERIC = "想来，它应该是能吃的。",
+	PICKED = "它已没什么能给予的了。",
+	BURNING = "它的终结，来得如此之快。",
 }
 
 WENDY.DESCRIBE.KYNO_SPOTSPICE_LEAF = "我们把它从灌木上的家中撕了下来。"
@@ -214,23 +214,23 @@ WENDY.DESCRIBE.LONGPIGMEAL = "曾经是人类，现在是食物。"
 
 WENDY.DESCRIBE.CUCUMBERSALAD = "呃，更多蔬菜。"
 
-WENDY.DESCRIBE.DUG_KYNO_WILDWHEAT = "Displaced, yet hopeful."
+WENDY.DESCRIBE.DUG_KYNO_WILDWHEAT = "被挪了地方，却仍怀希望。"
 
 WENDY.DESCRIBE.KYNO_WILDWHEAT = 
 {
-	GENERIC = "A better version of grass.",
-	PICKED = "It offers nothing now.",
-	WITHERED = "Life retreats from it.",
-	BURNING = "Its end is swift.",
+	GENERIC = "比草高级一点的版本。",
+	PICKED = "它现在什么也给不了。",
+	WITHERED = "生命正从它身上退去。",
+	BURNING = "它的终结，来得如此之快。",
 }
 
 WENDY.DESCRIBE.KYNO_MEALGRINDER = "磨碎生命的磨粉机。"
 
 WENDY.DESCRIBE.KYNO_MUSHSTUMP =
 {
-	GENERIC = "They thrive on a stump made by death.",
-	PICKED = "It waits to give again.",
-	BURNING = "All things die. Even fungus.",
+	GENERIC = "它们在由死亡造就的树桩上繁茂生长。",
+	PICKED = "它在等待，准备再次给予。",
+	BURNING = "万物皆会死去。即便是菌类。",
 }
 
 WENDY.DESCRIBE.GORGE_BREAD = "你一个人做不了太多事情。"
@@ -376,9 +376,9 @@ WENDY.DESCRIBE.KYNO_SEEDS_KIT = "普通的种子。"
 
 WENDY.DESCRIBE.KYNO_LIMPETROCK = 
 {
-	GENERIC = "Those look edible... sort of.",
-	PICKED = "They have retreated.",
-	WITHERED = "A barren existence.",
+	GENERIC = "那些看着能吃……大概吧。",
+	PICKED = "它们撤退了。",
+	WITHERED = "一种荒芜的存在。",
 }
 
 WENDY.DESCRIBE.KYNO_LIMPETS = "它们吃岩石。我吃它们。"
@@ -386,9 +386,9 @@ WENDY.DESCRIBE.KYNO_LIMPETS_COOKED = "令人沮丧。"
 
 WENDY.DESCRIBE.KYNO_LOTUS_OCEAN = 
 {
-	GENERIC = "It flourishes on the waves of sorrow.",
-	PICKED = "It must wait to bloom again.",
-	BURNING = "Its end comes too soon.",
+	GENERIC = "它在悲伤的波浪上繁茂生长。",
+	PICKED = "它必须等待，才能再次绽放。",
+	BURNING = "它的终结，来得太早了。",
 }
 
 WENDY.DESCRIBE.KYNO_LOTUS_ROOT = "他们渴望水葬。"
@@ -397,9 +397,9 @@ WENDY.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "它的死很美味。"
 
 WENDY.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
 {
-	GENERIC = "A hearty weed.",
-	PICKED = "It will return, eventually.",
-	BURNING = "Even the sea cannot protect it.",
+	GENERIC = "一种顽强的杂草。",
+	PICKED = "它终将归来。",
+	BURNING = "连大海也无法保护它。",
 }
 
 WENDY.DESCRIBE.KYNO_SEAWEEDS = "即使是大海也长满了杂草。"
@@ -409,9 +409,9 @@ WENDY.DESCRIBE.KYNO_SEAWEEDS_ROOT = "他们想要一个水坟。"
 
 WENDY.DESCRIBE.KYNO_TAROROOT_OCEAN = 
 {
-	GENERIC = "Just an ordinary water vegetable.",
-	PICKED = "It will return in time.",
-	BURNING = "Another quiet end.",
+	GENERIC = "只是个普通的水里长的蔬菜。",
+	PICKED = "假以时日，它自会归来。",
+	BURNING = "假以时日，它自会归来。",
 }
 
 WENDY.DESCRIBE.KYNO_TAROROOT_ROOT = "他们渴望水葬。"
@@ -420,9 +420,9 @@ WENDY.DESCRIBE.KYNO_TAROROOT_COOKED = "烹制这种茄属植物使其更不致�
 
 WENDY.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
 {
-	GENERIC = "Requires water in order to live.",
-	PICKED = "It will return, briefly.",
-	BURNING = "Gone before it truly lived.",
+	GENERIC = "需要水才能活着。",
+	PICKED = "它会回来的，短暂地。",
+	BURNING = "在真正活过之前，就已消逝。",
 }
 
 WENDY.DESCRIBE.KYNO_WATERYCRESS_ROOT = "他们渴望水葬。"
@@ -434,9 +434,9 @@ WENDY.DESCRIBE.KYNO_SALT = "它增加了风味......"
 
 WENDY.DESCRIBE.KYNO_MUSSELSTICK =
 {
-	GENERIC = "Life clinging desperately.",
-	PICKED = "It gives nothing now.",
-	BURNING = "All promise, lost.",
+	GENERIC = "生命在绝望地攀附。",
+	PICKED = "它现在什么也给不了。",
+	BURNING = "一切希望，尽失。",
 }
 
 WENDY.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "贻贝粘在这根棍子上。傻瓜。"
@@ -447,11 +447,11 @@ WENDY.DESCRIBE.KATFOOD = "猫粮。"
 
 WENDY.DESCRIBE.KYNO_BANANATREE = 
 { 
-	GENERIC = "Do you feel the sun now, poor plant?",
-	PICKED = "It must wait to give again.",
-	CHOPPED = "Its life was cut short.",
-	BURNING = "A rare beauty lost to flame.",
-	BURNT = "Nothing remains but sorrow.",
+	GENERIC = "你现在能感受到阳光吗，可怜的植物？",
+	PICKED = "它必须等待，才能再次给予。",
+	CHOPPED = "它的生命被截短了。",
+	BURNING = "一份罕有的美丽，葬身火海。",
+	BURNT = "什么都未留下，只余悲伤。",
 }
 
 WENDY.DESCRIBE.KYNO_BANANA = "果皮看起来很危险。"
@@ -459,11 +459,11 @@ WENDY.DESCRIBE.KYNO_BANANA_COOKED = "热香蕉泥好多了。"
 
 WENDY.DESCRIBE.KYNO_KOKONUTTREE = 
 {
-	GENERIC = "Its fruit bestows life, but only if I kill it.",
-	PICKED = "It withholds its gifts.",
-	CHOPPED = "Its life was brief.",
-	BURNING = "Another loss to flame.",
-	BURNT = "Nothing remains but dust.",
+	GENERIC = "它的果实赋予生命，但只有杀死它才能获得。",
+	PICKED = "它收回了自己的馈赠。",
+	CHOPPED = "它的生命如此短暂。",
+	BURNING = "又一个葬身火海的损失。",
+	BURNT = "什么都不剩，唯余尘埃。",
 }
 
 WENDY.DESCRIBE.KYNO_KOKONUT = "这种水果必须在它的盔甲下隐藏什么秘密？"
@@ -515,8 +515,8 @@ WENDY.DESCRIBE.TURF_TIDALMARSH = "它只是地面。"
 
 WENDY.DESCRIBE.KYNO_SALTRACK =
 {
-	GENERIC = "There is salt to be had.",
-	PICKED = "There is no salt, yet.",
+	GENERIC = "有盐可取。",
+	PICKED = "还没有盐。",
 }
 
 WENDY.DESCRIBE.KYNO_SALTRACK_INSTALLER = "这是用来从池塘里收集盐分的。"
@@ -527,28 +527,28 @@ WENDY.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "生活是个陷阱。"
 
 WENDY.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
 {
-	GENERIC = "How do you do, sir?",
-	SLEEPING = "Even authority must rest.",
+	GENERIC = "您好啊，先生？",
+	SLEEPING = "即便是权威，也需要休息。",
 }
 
 WENDY.DESCRIBE.KYNO_SUGARTREE =
 {
-	GENERIC = "It has a sickly beauty.",
-	CHOPPED = "All things must end.",
-	SAPPED = "I can harvest it now.",
-	PICKED = "Like a dagger through the heart. A tree heart.",
-	BURNING = "A cruel end.",
-	BURNT = "Nothing left but ashes.",
+	GENERIC = "它有一种病态的美。",
+	CHOPPED = "万物终有尽时。",
+	SAPPED = "我现在可以收获了。",
+	PICKED = "匕首刺穿心脏。树的心里。",
+	BURNING = "残酷的终结。",
+	BURNT = "什么都不剩，唯余灰烬。",
 }
 
 WENDY.DESCRIBE.KYNO_SUGARTREE_RUINED =
 {
-	GENERIC = "Its life ebbs.",
-	CHOPPED = "Merciful, in a way.",
-	SAPPED = "Rotten at its core.",
-	PICKED = "All that sacrifice for nothing.",
-	BURNING = "An ending, at last.",
-	BURNT = "Only ash remains.",
+	GENERIC = "它的生命在消逝。",
+	CHOPPED = "某种意义上，也算仁慈。",
+	SAPPED = "内核已经腐朽。",
+	PICKED = "所有的牺牲，都付诸东流。",
+	BURNING = "终于，迎来了终结。",
+	BURNT = "只剩灰烬。",
 }
 
 WENDY.DESCRIBE.KYNO_SUGARTREE_BUD = "让岛上的生活几乎不宜居。"
@@ -572,19 +572,19 @@ WENDY.DESCRIBE.KYNO_SLAUGHTERTOOL = "所有的生命都不是屠杀吗？"
 
 WENDY.DESCRIBE.KYNO_CHICKEN2 = 
 {
-	GENERIC = "Hideous poultry.",
-	COOP = "At least it has shelter now.",
+	GENERIC = "丑陋的家禽。",
+	COOP = "至少它现在有地方住了。",
 }
 
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG = "生命在里面。"
-WENDY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "It's too big for a chicken!"
+WENDY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "对一只鸡来说，太大了。"
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "不会有鸡肉出来。"
 
 WENDY.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
-	GENERIC = "They lay eggs, then return to their quiet shelter.",
-	FULL = "More eggs born into this cruel world.",
-	BURNT = "Their suffering has ended.",
+	GENERIC = "它们生下蛋，然后回到安静的窝里。",
+	FULL = "又有更多的蛋，来到这个残酷的世界。",
+	BURNT = "它们的苦难，结束了。",
 }
 
 WENDY.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "以前有人在这里有东西，现在没有了。"
@@ -610,8 +610,8 @@ WENDY.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "看起来不错。"
 
 WENDY.DESCRIBE.KYNO_ROCKFLIPPABLE = 
 {
-	GENERIC = "If only I could hide under a rock.",
-	FLIPPED = "Revealed, but unimpressive.",
+	GENERIC = "要是我也能躲在石头下面就好了。",
+	FLIPPED = "显露出来了，却也没什么意思。",
 }
 
 WENDY.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "我不会为了里面的东西毁掉箱子。"
@@ -657,9 +657,9 @@ WENDY.DESCRIBE.KYNO_SAPHEALER = "预防疾病的药水。"
 
 WENDY.DESCRIBE.KYNO_OCEAN_WRECK = 
 {
-	GENERIC = "Its crew is probably dead...",
-	PICKED = "Only patience remains.",
-	BURNING = "Its fate is sealed.",
+	GENERIC = "它的船员，大概都死了吧……",
+	PICKED = "唯余耐心。",
+	BURNING = "它的命运，已然注定。",
 }
 
 WENDY.DESCRIBE.KYNO_GHOST_PIRATE = "艾比盖尔的未来朋友？"
@@ -679,28 +679,28 @@ WENDY.DESCRIBE.KYNO_BREWBOOK = "当我的心空空如也时，填饱肚子有什
 
 WENDY.DESCRIBE.KYNO_WOODENKEG = 
 {
-	EMPTY = "A barrel for making wine or other goodies.",
-	BREWING_LONG = "Time drags on endlessly.",
-	BREWING_SHORT = "The waiting nears its end.",
-	DONE = "At least something turned out right.",
-	BURNT = "All effort, wasted.",
+	EMPTY = "一个用来酿酒或做其他好东西的桶。",
+	BREWING_LONG = "时间无尽地拖曳着。",
+	BREWING_SHORT = "等待，快结束了。",
+	DONE = "至少，有件事成了。",
+	BURNT = "一切努力，付诸东流。",
 }
 
 WENDY.DESCRIBE.KYNO_PRESERVESJAR = 
 {
-	EMPTY = "A cask for making preserved products.",
-	BREWING_LONG = "Time preserves all things... briefly.",
-	BREWING_SHORT = "Soon it will be over.",
-	DONE = "At least it survived.",
-	BURNT = "Reduced to nothing.",
+	EMPTY = "一个用来做腌制品的罐子。",
+	BREWING_LONG = "时间保存万物……短暂地。",
+	BREWING_SHORT = "很快就要结束了。",
+	DONE = "至少，它幸存了下来。",
+	BURNT = "化为乌有。",
 }
 
 WENDY.DESCRIBE.KYNO_ANTCHEST = 
 {
-	GENERIC = "Still not as sweet as Abigail.",
-	HONEY = "All this honey... for what purpose?",
-	NECTAR = "The slow march toward honey.",
-	BURNING = "Its labor ends in ash.",
+	GENERIC = "仍不及阿比盖尔甜美。",
+	HONEY = "所有这些蜂蜜……有何意义？",
+	NECTAR = "向着蜂蜜的缓慢进程。",
+	BURNING = "它的辛劳，终结于灰烬。",
 }
 
 WENDY.DESCRIBE.KYNO_NECTAR_POD = "把它变成蜂蜜值得吗？"
@@ -713,43 +713,43 @@ WENDY.DESCRIBE.KYNO_PIKO_ORANGE = "你的存在是为了取悦他人。"
 
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
 {
-	GENERIC = "I can sit under it and contemplate life's futility.",
-	CHOPPED = "Stripped of its purpose.",
-	BURNING = "Its end comes swiftly.",
-	BURNT = "Nothing remains.",
+	GENERIC = "我可以坐在下面，思考生命的徒劳。",
+	CHOPPED = "被剥去了存在的意义。",
+	BURNING = "它的终结，来得很快。",
+	BURNT = "什么都不剩了。",
 }
 
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
 {
-	GENERIC = "It would be better if wasn't for all the pikos.",
-	BURNING = "Homelessness by flame.",
+	GENERIC = "如果没有那些松鼠就好了。",
+	BURNING = "因火焰而流离失所。",
 }
 
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "这只是一个盒子。"
 
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
 {
-	GENERIC = "A lonely shelter for lonely creatures.",
-	BURNT = "Another home reduced to nothing.",
+	GENERIC = "为孤独的生物准备的孤独的栖身之所。",
+	BURNT = "又一个化为乌有的家。",
 }
 
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
 {
-	GENERIC = "How quaint.",
-	CRAFTED = "A modest improvement.",
-	BURNT = "The stench lingers even now.",
+	GENERIC = "真是别致。",
+	CRAFTED = "稍有改进。",
+	BURNT = "那股臭味，至今仍在。",
 }
 
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
 {
-	GENERIC = "I kinda want that backpack on the display.",
-	OCCUPIED = "Even merchants must rest.",
+	GENERIC = "我有点想要展示架上那个背包。",
+	OCCUPIED = "就算是商人，也得休息。",
 }
 
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
 {
-	GENERIC = "Its full of goodies.",
-	EMPTY = "There is nothing left to take.",
+	GENERIC = "里面全是好东西。",
+	EMPTY = "没什么可拿的了。",
 }
 
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "那个小恶魔以为他能瞒着我们。"
@@ -901,14 +901,14 @@ WENDY.DESCRIBE.RISOTTO = "我想，只吃米饭和蔬菜也不错..."
 
 WENDY.DESCRIBE.RICESAKE = "蔬菜酒精饮料？唉。"
 
-WENDY.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Removed from the earth."
+WENDY.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "从大地中剥离。"
 
 WENDY.DESCRIBE.KYNO_PINEAPPLEBUSH = 
 {
-	GENERIC = "A tropical fruit bush.",
-	PICKED = "It has nothing more to give.",
-	WITHERED = "Life retreats from it.",
-	BURNING = "Its end is swift.",
+	GENERIC = "一株热带水果灌木。",
+	PICKED = "它已没什么能给予的了。",
+	WITHERED = "生命正从它身上退去。",
+	BURNING = "它的终结，来得如此之快。",
 }
 
 WENDY.DESCRIBE.KYNO_PINEAPPLE = "装甲水果。"
@@ -923,8 +923,8 @@ WENDY.DESCRIBE.CHIMAS = "看起来很普通。"
 
 WENDY.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
 {
-	OFF = "It cannot water my parched soul.",
-	ON = "At least the plants are cared for.",
+	OFF = "它浇灌不了我干涸的灵魂。",
+	ON = "至少，植物们被照料着。",
 }
 
 WENDY.DESCRIBE.KYNO_FOODSACK = "它能延缓腐烂和衰变。"
@@ -1036,9 +1036,9 @@ WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "即便废墟也会记得它的使命
 
 WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
-	GENERIC = "Even in darkness, they grow...",
-	PICKED = "Gone, like most good things.",
-	BURNING = "Destroyed before it could be enjoyed.",
+	GENERIC = "即便在黑暗中，它们也在生长……",
+	PICKED = "没了，如同大多数美好的事物。",
+	BURNING = "在能被享用之前，就被摧毁了。",
 }
 
 WENDY.DESCRIBE.KYNO_TRUFFLES = "诞生于黑暗的美味。"
@@ -1046,8 +1046,8 @@ WENDY.DESCRIBE.KYNO_TRUFFLES_COOKED = "黑暗化为温暖与滋味。"
 
 WENDY.DESCRIBE.KYNO_ITEMSHOWCASER = 
 {
-	EMPTY = "A display of fleeting beauty. All food decays... eventually.",
-	FULL = "It will be gone soon enough.",
+	EMPTY = "展示着转瞬即逝的美。所有食物都会腐烂……终归如此。",
+	FULL = "它很快就会消失的。",
 }
 
 WENDY.DESCRIBE.KYNO_SPORECAP = "连蘑菇也会慢慢腐烂。"
@@ -1071,11 +1071,11 @@ WENDY.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "水葬...多么富有诗意。"
 
 WENDY.DESCRIBE.KYNO_FISHFARMPLOT = 
 {
-	GENERIC = "Even in a hatchery, life begins quietly.",
-	FUEL_HIGH = "Their hunger is satisfied.",
-	FUEL_MED = "The cycle continues.",
-	FUEL_LOW = "Hunger creeps in.",
-	EMPTY = "Only emptiness remains.",
+	GENERIC = "即便在孵化场里，生命也是安静地开始。",
+	FUEL_HIGH = "它们的饥饿被满足了。",
+	FUEL_MED = "循环，仍在继续。",
+	FUEL_LOW = "饥饿，悄然逼近。",
+	EMPTY = "唯余空虚。",
 }
 
 WENDY.DESCRIBE.KYNO_ANTCHOVY = "半鱼半蚁……一生困惑与痛苦。"
@@ -1136,24 +1136,24 @@ WENDY.DESCRIBE.KYNO_BRAINROCK_CORAL = "这就是我内心的模样吗？"
 
 WENDY.DESCRIBE.KYNO_BRAINROCK_ROCK = 
 {
-	GENERIC = "That's one smart-looking plant.",
-	PICKED = "It rests, as all minds must.",
+	GENERIC = "一株看起来挺聪明的植物。",
+	PICKED = "它在休息，如同所有心智一样。",
 }
 
 WENDY.DESCRIBE.BRAINMETTERSOUP = "这是给孩子的。"
 
 WENDY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
 {
-	GENERIC = "I envy his contentment.",
-	SLEEPING = "Even kings must rest.",
+	GENERIC = "我羡慕他的满足。",
+	SLEEPING = "即便是王者，也必须休息。",
 }
 
 WENDY.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "那地方看起来不太适合存放东西。"
 
 WENDY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
 {
-	GENERIC = "A dead fish thingy. Looks important.",
-	WAITING = "It's reached its natural state.",
+	GENERIC = "一个死掉的鱼玩意儿。看起来挺重要。",
+	WAITING = "它已回归自然状态。",
 }
 
 WENDY.DESCRIBE.KYNO_PACKIMBAGGIMS = "我连条鱼都不放心交给他，但或许我的破船……"
@@ -1168,11 +1168,11 @@ WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "短暂的欢愉……注定要消散
 
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
 {
-	GENERIC = "Quiet popping for quiet thoughts.",
-	FUEL_HIGH = "It still has purpose.",
-	FUEL_MED = "Its time is running out.",
-	FUEL_LOW = "Soon it will fall silent.",
-	EMPTY = "Only quiet remains.",
+	GENERIC = "安静的爆裂声，配得上安静的思绪。",
+	FUEL_HIGH = "它仍有存在的意义。",
+	FUEL_MED = "它的时间不多了。",
+	FUEL_LOW = "很快，它就会归于沉寂。",
+	EMPTY = "只余寂静。",
 }
 
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "它迸发……然后被吞噬……就像所有短暂的欢愉。"
@@ -1183,22 +1183,22 @@ WENDY.DESCRIBE.KYNO_FISHREGISTRYHAT = "它记录着波涛之下悄然漂流的�
 
 WENDY.DESCRIBE.KYNO_ANIMALFEEDER =
 {
-	GENERIC = "A small mercy for hungry creatures.",
-	FUEL_HIGH = "They will not starve today.",
-	FUEL_MED = "Sustenance dwindles.",
-	FUEL_LOW = "Hunger approaches.",
-	EMPTY = "Only emptiness remains.",
-	BURNT = "Ashes feed no one.",
+	GENERIC = "对饥饿生灵的一点小小仁慈。",
+	FUEL_HIGH = "它们今天不会挨饿了。",
+	FUEL_MED = "食物正在减少。",
+	FUEL_LOW = "饥饿正在逼近。",
+	EMPTY = "唯余空虚。",
+	BURNT = "灰烬喂不饱任何人。",
 }
 
-WENDY.DESCRIBE.CHICKENNUGGETS = "Even the chicken was broken into pieces."
+WENDY.DESCRIBE.CHICKENNUGGETS = "连鸡也被碎尸万段了。"
 
-WENDY.DESCRIBE.CHICKENWINGS = "Pain, even in flavor."
+WENDY.DESCRIBE.CHICKENWINGS = "就连味道里，也带着痛楚。"
 
-WENDY.DESCRIBE.CHICKENBURGER = "Comfort food, briefly delaying despair."
+WENDY.DESCRIBE.CHICKENBURGER = "慰藉的食物，短暂地延缓着绝望。"
 
-WENDY.DESCRIBE.CHICKENEGGSOUP = "A quiet warmth in a cold world."
+WENDY.DESCRIBE.CHICKENEGGSOUP = "寒冷世界中的一抹安静温暖。"
 
-WENDY.DESCRIBE.CHICKENEGGSTEW = "Life, boiled down into a pot."
+WENDY.DESCRIBE.CHICKENEGGSTEW = "生命，被熬煮在一口锅里。"
 
-WENDY.DESCRIBE.CHICKENROTISSERIE = "Turning endlessly, as all things do."
+WENDY.DESCRIBE.CHICKENROTISSERIE = "无休止地转动，如同万物一般。"
