@@ -72,6 +72,10 @@ local function RefreshEggs(inst)
 	inst.AnimState:OverrideSymbol("egg1", "kyno_chicken_eggs", "egg"..inst._eggstyle)
 end
 
+local function GetLargeEggImage(style)
+	return style == 1 and "kyno_chicken_egg_large" or "kyno_chicken_egg_large"..style
+end
+
 local function RefreshLargeEggs(inst)
 	inst.AnimState:ClearOverrideSymbol("egg1")
 
@@ -80,7 +84,7 @@ local function RefreshLargeEggs(inst)
 	end
 	
 	inst.AnimState:OverrideSymbol("egg1", "kyno_chicken_eggs_large", "egg"..inst._eggstyle)
-	inst.components.inventoryitem:ChangeImageName("kyno_chicken_egg_large"..inst._eggstyle)
+	inst.components.inventoryitem:ChangeImageName(GetLargeEggImage(inst._eggstyle))
 end
 
 local function ShouldNotAggro(attacker, target)
@@ -449,7 +453,7 @@ local function chicken_egg_giantfn()
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_chicken_egg_large1"
+	inst.components.inventoryitem.imagename = "kyno_chicken_egg_large"
 	
 	inst:AddComponent("complexprojectile")
 	inst.components.complexprojectile:SetHorizontalSpeed(15)

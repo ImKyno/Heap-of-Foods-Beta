@@ -91,6 +91,35 @@ local RUN_AWAY_PARAMS =
 	end,
 }
 
+local HOME_TAGS = { "chickenhouse" }
+local HOME_NOTAGS = { "burnt", "fire" }
+
+local function FindHome(inst)
+	if inst.components.homeseeker == nil then
+		inst:AddComponent("homeseeker")
+	end
+
+	if inst.components.homeseeker ~= nil and inst.components.homeseeker.home == nil then
+		local new_home = FindEntity(inst, MAX_WANDER_DIST, nil, HOME_TAGS, HOME_NOTAGS)
+		
+		if new_home ~= nil and new_home.components.childspawner ~= nil then
+			if not new_home.components.childspawner:IsFull() then
+				new_home.components.childspawner:TakeOwnership(inst)
+			end
+		end
+	end
+end
+
+local function ShouldGoHome(inst)
+	FindHome(inst)
+
+	local home = inst.components.homeseeker.home
+	
+	if home ~= nil and home:IsValid() then
+		return true
+	end
+end
+
 local function GoHomeAction(inst)
 	if inst.components.homeseeker 
 	and inst.components.homeseeker.home 
@@ -121,10 +150,10 @@ function ChickenCoopBrain:OnStart()
 		WhileNode(function() return IsHomeOnFire(self.inst) end, "On Fire",
 			Panic(self.inst)),
 		
-		WhileNode(function() return not TheWorld.state.iscaveday end, "Cave Nightness",
-			DoAction(self.inst, GoHomeAction, "GoHome", true)),
-		WhileNode(function() return TheWorld.state.iswinter end, "Is Winter",
-			DoAction(self.inst, GoHomeAction, "GoHome", true)),
+		WhileNode(function() return not TheWorld.state.iscaveday and ShouldGoHome(self.inst) end, "Is Bed Time",
+			DoAction(self.inst, GoHomeAction, "Go Home", true)),
+		WhileNode(function() return TheWorld.state.iswinter and ShouldGoHome(self.inst) end, "Is Winter",
+			DoAction(self.inst, GoHomeAction, "Go Home", true)),
 			
 		WhileNode(function() return self.inst:HasTag("butcher_fearable") end, "Fear Butcher", 
 			RunAway(self.inst, "recent_butcher", SEE_PLAYER_DIST, STOP_RUN_DIST)),
@@ -145,8 +174,8 @@ end
 function ChickenCoopBrain:OnInitializationComplete()
 	self.inst.components.knownlocations:RememberLocation("home", self.inst:GetPosition())
 
-	self.inst._has_eaten_today = false
-	self.inst._has_food_buffered = false
+	-- self.inst._has_eaten_today = false
+	-- self.inst._has_food_buffered = false
 end
 
 return ChickenCoopBrain

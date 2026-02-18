@@ -15522,7 +15522,6 @@ local HOF_SCRAPBOOK_THINGS =
 	kyno_sugartree     =
 	{
 		name           = "kyno_sugartree",
-		speechname     = "quagmire_sugarwoodtree",
 		type           = "thing",
 		subcat         = "tree",
 		tex            = "kyno_sugartree.tex",
@@ -15543,7 +15542,7 @@ local HOF_SCRAPBOOK_THINGS =
 	kyno_sugartree_sapped =
 	{
 		name           = "kyno_sugartree_sapped_scrapbook",
-		speechname     = "quagmire_sugarwoodtree",
+		speechname     = "kyno_sugartree",
 		type           = "thing",
 		subcat         = "tree",
 		tex            = "kyno_sugartree_sapped.tex",
@@ -15563,7 +15562,6 @@ local HOF_SCRAPBOOK_THINGS =
 	kyno_sugartree_ruined =
 	{
 		name           = "kyno_sugartree_ruined_scrapbook",
-		speechname     = "quagmire_sugarwoodtree",
 		type           = "thing",
 		subcat         = "tree",
 		tex            = "kyno_sugartree_ruined.tex",
@@ -15583,7 +15581,7 @@ local HOF_SCRAPBOOK_THINGS =
 	kyno_sugartree_ruined2 =
 	{
 		name           = "kyno_sugartree_ruined2",
-		speechname     = "quagmire_sugarwoodtree",
+		speechname     = "kyno_sugartree_ruined",
 		type           = "thing",
 		subcat         = "tree",
 		tex            = "kyno_sugartree_ruined2.tex",
@@ -15763,7 +15761,7 @@ local HOF_SCRAPBOOK_THINGS =
 	kyno_fishermermhut_wurt =
 	{
 		name           = "kyno_fishermermhut_wurt",
-		speechname     = "mermhouse_crafted",
+		speechname     = "kyno_meadowisland_fishermermhut",
 		type           = "thing",
 		subcat         = "structure",
 		tex            = "kyno_fishermermhut_wurt.tex",
@@ -16396,7 +16394,6 @@ local HOF_SCRAPBOOK_THINGS =
 	kyno_musselstick   =
 	{
 		name           = "kyno_musselstick",
-		speechname     = "kyno_musselstick_item",
 		type           = "thing",
 		subcat         = "structure",
 		tex            = "kyno_musselstick.tex",
@@ -16418,7 +16415,6 @@ local HOF_SCRAPBOOK_THINGS =
 	kyno_mushstump     =
 	{
 		name           = "kyno_mushstump",
-		speechname     = "quagmire_mushroomstump",
 		type           = "thing",
 		subcat         = "structure",
 		tex            = "kyno_mushstump.tex",

@@ -84,27 +84,36 @@ local function SetHome(inst)
 	inst.components.knownlocations:RememberLocation("home", inst:GetPosition())
 end
 
-local function SetNewHome(inst)
-	inst.components.knownlocations:ForgetLocation("home")
-	inst:DoTaskInTime(1, SetHome) -- Set home again.
-end
-
 local function OnCooked(inst, cooker, chef)
 	inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/buzzard/hurt")
 end
 
-local function OnInventory(inst)
-	inst:ClearBufferedAction()
-end
-
 local function OnPickUp(inst)
-	if not inst:HasTag("chicken_coop") then
+	inst:ClearBufferedAction()
+	
+	if inst._color_build and inst._icon_name then
+		ApplyChickenCoopVariant(inst,
+		{
+			build = inst._color_build,
+			icon = inst._icon_name,
+		})
+	end
+
+	if inst:HasTag("chicken_wild") then
 		inst:PushEvent("detachchild") -- No longer part of the spawner.
 	end
 end
 
-local function OnDropped(inst)	
-	if inst.components.sleeper ~= nil then
+local function OnDropped(inst)
+	if inst._color_build and inst._icon_name then
+		ApplyChickenCoopVariant(inst,
+		{
+			build = inst._color_build,
+			icon = inst._icon_name,
+		})
+	end
+
+	if not TheWorld.state.iscaveday and inst.components.sleeper ~= nil then
 		inst.components.sleeper:GoToSleep()
 	end
 end
@@ -124,13 +133,16 @@ end
 local function OnDeath(inst, data)
 	local owner = inst.components.inventoryitem:GetGrandOwner()
 	
-	if inst.components.lootdropper and owner then
+	if inst.components.lootdropper ~= nil and owner ~= nil then
 		local loots = inst.components.lootdropper:GenerateLoot()
 		inst:Remove()
 			
 		for k, v in pairs(loots) do
 			local loot = SpawnPrefab(v)
-			owner.components.inventory:GiveItem(loot)
+			
+			if owner.components.inventory ~= nil then
+				owner.components.inventory:GiveItem(loot)
+			end
 		end
 	end
 end
@@ -171,41 +183,75 @@ local function OnEat(inst, food)
 	end
 end
 
-local function GetStatus(inst, viewer)
-	return (inst:HasTag("chicken_coop") and "COOP")
-	or "GENERIC"
-end
+local function SetTrapData(inst)
+	local data = {}
 
-local function SetTrapData(inst, data)
-    local lootdata = {}
-    local named = inst.components.named
-	
-	if named then
-		lootdata.named = {name = named.name}
+	if inst.components.named ~= nil then
+		data.named = { name = inst.components.named.name }
 	end
 	
-    return lootdata
+	if inst:HasTag("chicken_coop") then
+		data.chicken_variant =
+		{
+			build = inst._color_build,
+			icon = inst._icon_name,
+		}
+		
+		if inst._has_eaten_today then
+			data.has_eaten_today = true
+		end
+	end
+
+	return data
 end
 
 local function RestoreDataFromTrap(inst, data)
-    if data.named then
-		if inst.components.named then
-			inst.components.named:SetName(data.named.name)
+	if data == nil then
+		return
+	end
+
+	if data.named ~= nil and inst.components.named ~= nil then
+		inst.components.named:SetName(data.named.name)
+	end
+	
+	if inst:HasTag("chicken_coop") then
+		if data.chicken_variant ~= nil then
+			inst._color_build = data.chicken_variant.build
+			inst._icon_name = data.chicken_variant.icon
+
+			inst:DoTaskInTime(0, function()
+				ApplyChickenCoopVariant(inst, data.chicken_variant)
+			end)
 		end
-    end
+		
+		inst._has_eaten_today = data.has_eaten_today or false
+	end
+end
+
+local function GetStatus(inst, viewer)
+	return (inst:HasTag("chicken_coop") and "COOP")
+	or "GENERIC"
 end
 
 local function OnSave(inst, data)	
 	data.chicken_variant =
 	{
 		build = inst._color_build,
-		icon  = inst._icon_name,
+		icon = inst._icon_name,
 	}
+	
+	if inst._has_eaten_today then
+		data.has_eaten_today = true
+	end
 end
 
 local function OnLoad(inst, data)
-	if data ~= nil and data.chicken_variant then
-		ApplyChickenCoopVariant(inst, data.chicken_variant)
+	if data ~= nil then
+		if data.chicken_variant then
+			ApplyChickenCoopVariant(inst, data.chicken_variant)
+		end
+		
+		inst._has_eaten_today = data.has_eaten_today or false
 	end
 end
 
@@ -287,13 +333,12 @@ local function commonfn(bank, build, loottable)
 	
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.onputininventoryfn = OnInventory
 	inst.components.inventoryitem.nobounce = true
 	inst.components.inventoryitem.longpickup = true
 	inst.components.inventoryitem.canbepickedup = false
 	inst.components.inventoryitem:SetSinks(true)
-	
-	inst:ListenForEvent("onpickup", OnPickUp)
+
+	inst:ListenForEvent("onputininventory", OnPickUp)
 	inst:ListenForEvent("ondropped", OnDropped)
 	inst:ListenForEvent("gotosleep", OnSleep)
 	inst:ListenForEvent("onwakeup", OnWakeUp)
@@ -301,7 +346,7 @@ local function commonfn(bank, build, loottable)
 
 	MakeSmallBurnableCharacter(inst, "body")
 	MakeTinyFreezableCharacter(inst, "chest")
-	MakeFeedableSmallLivestock(inst, TUNING.RABBIT_PERISH_TIME, OnInventory, OnDropped)
+	MakeFeedableSmallLivestock(inst, TUNING.RABBIT_PERISH_TIME, OnPickUp, OnDropped)
 
 	return inst
 end
@@ -349,9 +394,6 @@ local function chicken_coop(inst)
 	end
 	
 	inst:RemoveTag("_named")
-	
-	local variant = PickRandomChickenCoopVariant()
-	ApplyChickenCoopVariant(inst, variant)
 
 	inst._has_eaten_today = false
 	inst._has_food_buffered = false
@@ -370,6 +412,19 @@ local function chicken_coop(inst)
 	inst:AddComponent("named")
 	inst.components.named.possiblenames = STRINGS.KYNO_CHICKEN_NAMES
 	inst.components.named:PickNewName()
+	
+	inst:DoTaskInTime(0, function()
+		if inst._color_build == nil or inst._icon_name == nil then
+			local variant = PickRandomChickenCoopVariant()
+			ApplyChickenCoopVariant(inst, variant)
+		else
+			ApplyChickenCoopVariant(inst,
+			{
+				build = inst._color_build,
+				icon = inst._icon_name,
+			})
+		end
+	end)
 	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
