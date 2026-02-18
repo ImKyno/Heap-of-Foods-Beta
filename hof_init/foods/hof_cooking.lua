@@ -86,8 +86,8 @@ AddIngredientValues({"kyno_pierrotfish"},		     {fish       = 0.5,  meat       =
 AddIngredientValues({"kyno_salmonfish"},		     {fish       = 1,    salmon     = 1},                          true)
 AddIngredientValues({"kyno_crabmeat"},			     {meat       = 0.5,  crab       = 1},                    true, true)
 AddIngredientValues({"kyno_crabkingmeat"},           {meat       = 1,    crab       = 2},                    true, true)
-AddIngredientValues({"kyno_chicken2"},               {meat       = 3,    chicken    = 1})
-AddIngredientValues({"kyno_chicken_coop"},           {meat       = 3,    chicken    = 1})
+AddIngredientValues({"kyno_chicken2"},               {chicken    = 1}) -- No longer has meat value, I know what you did.
+AddIngredientValues({"kyno_chicken_coop"},           {chicken    = 1})
 AddIngredientValues({"kyno_chicken_egg"},		     {egg        = 1,    chickenegg = 1},                          true)
 AddIngredientValues({"kyno_chicken_egg_large"},      {egg        = 2,    chickenegg = 2})
 AddIngredientValues({"kyno_bottle_soul"},		     {soul       = 1})

@@ -1201,4 +1201,4 @@ WILSON.DESCRIBE.CHICKENEGGSOUP = "A simple yet nourishing protein solution."
 
 WILSON.DESCRIBE.CHICKENEGGSTEW = "A hearty combination of poultry and eggs."
 
-WILSON.DESCRIBE.CHICKENROTISSERIE = "Rotational heat ensures even cooking."
+WILSON.DESCRIBE.CHICKENROTISSERIE = "Winner, winner! Chicken dinner!"

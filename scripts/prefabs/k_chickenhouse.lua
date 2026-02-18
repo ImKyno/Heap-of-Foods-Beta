@@ -220,6 +220,11 @@ local function OnChildSpawn(inst, child)
 			child._color_build = data.build
 			child.AnimState:AddOverrideBuild(data.build)
 		end
+		
+		if data.icon ~= nil and child.components.inventoryitem ~= nil then
+			child._icon_name = data.icon
+			child.components.inventoryitem:ChangeImageName(data.icon)
+		end
 	end
 end
 
@@ -236,6 +241,7 @@ local function OnChildGoingHome(inst, data)
 	{
 		name = chicken.components.named ~= nil and chicken.components.named.name or nil,
 		build = chicken._color_build,
+		icon = chicken._icon_name,
 	})
 
 	if inst.components.harvestable ~= nil and chicken._has_eaten_today then
