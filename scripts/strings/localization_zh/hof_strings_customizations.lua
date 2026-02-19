@@ -47,6 +47,7 @@ STRINGS.UI.CUSTOMIZATIONSCREEN.SANDHILLS = "沙堆"
 STRINGS.UI.CUSTOMIZATIONSCREEN.TEATREES = "茶树"
 STRINGS.UI.CUSTOMIZATIONSCREEN.TIDALPOOLS = "潮汐池"
 
+-- WORLDGEN CREATURES
 STRINGS.UI.CUSTOMIZATIONSCREEN.ANTCHOVIES = "蚁头凤尾小鱼"
 STRINGS.UI.CUSTOMIZATIONSCREEN.CHICKENS = "鸡"
 STRINGS.UI.CUSTOMIZATIONSCREEN.DOGFISHES = "狗鱼"
@@ -64,6 +65,7 @@ STRINGS.UI.CUSTOMIZATIONSCREEN.SWORDFISHES = "剑鱼"
 ------------------------------------------------------------------------------------------------------------
 -- World Settings
 ------------------------------------------------------------------------------------------------------------
+
 -- GLOBALSETTINGS
 STRINGS.UI.CUSTOMIZATIONSCREEN.HOFBIRTHDAY = "更多料理周年庆"
 STRINGS.UI.CUSTOMIZATIONSCREEN.OCEANHUNTS_SETTING = "海洋狩猎"

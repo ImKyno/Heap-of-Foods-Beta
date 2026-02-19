@@ -115,6 +115,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE1 = "在一定时间�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "在一定时间内将最大健康值提升15%。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "在一定时间内将最大理智值提升15%。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BERSERKER = "在一定时间内，伤害值提升且伤害抗性降低。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERRATE = "在一定时间内减少饥饿损失。"
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含防腐粉末的料理可使腐败速率减半，并免除食用变质食物的惩罚。"
@@ -159,8 +160,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "用它点亮周年庆蛋糕�
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "可收集周年庆贺礼。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "萨米特别的周年庆帽子。\n可获得周年庆贺礼。\n\n庆祝更多料理五周年！"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "研究鱼类和鱼卵会记录到鱼类图鉴中。"
-STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "一个可以投掷的超大号鸡蛋。\n\n降低目标10%的伤害与移动速度，持续20秒。效果最多叠加3次，总计降低30%。\n\n\"就连鸡蛋在战场上也是武器！\" - Wigfrid."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERRATE = "在一定时间内减少饥饿损失。"
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "一个可以投掷或孵化的超大号蛋。\n\n降低目标10%的伤害与移动速度，持续20秒。效果最多叠加3次，总计降低30%。\n\n\"就连鸡蛋在战场上也是武器！\" - Wigfrid."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "靠近热源即可孵化。"
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "它们的饮食以种子、小麦或斑点小枝为基础。\n\n在野外发现的鸡在进食后有40%的几率产下鸡蛋。它们产下更大的蛋的几率非常低。\n\n鸡舍里的鸡吃完食后每天都能下蛋，且产出更大的蛋的概率更高。"

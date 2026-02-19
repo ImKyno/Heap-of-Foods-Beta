@@ -47,6 +47,7 @@ STRINGS.UI.CUSTOMIZATIONSCREEN.SANDHILLS = "Pilhas de Areia"
 STRINGS.UI.CUSTOMIZATIONSCREEN.TEATREES = "Árvores Chá"
 STRINGS.UI.CUSTOMIZATIONSCREEN.TIDALPOOLS = "Poças de Maré"
 
+-- WORLDGEN CREATURES
 STRINGS.UI.CUSTOMIZATIONSCREEN.ANTCHOVIES = "Formiganchovas"
 STRINGS.UI.CUSTOMIZATIONSCREEN.CHICKENS = "Galinhas"
 STRINGS.UI.CUSTOMIZATIONSCREEN.DOGFISHES = "Peixe-Cachorros"
@@ -60,9 +61,11 @@ STRINGS.UI.CUSTOMIZATIONSCREEN.PIKOSORANGE = "Esquilos Laranjas"
 STRINGS.UI.CUSTOMIZATIONSCREEN.PUFFERMONSTERS = "Puffernauts"
 STRINGS.UI.CUSTOMIZATIONSCREEN.SUGARFLIES = "Borboletas de Açúcar"
 STRINGS.UI.CUSTOMIZATIONSCREEN.SWORDFISHES = "Peixe-Espadas"
+
 ------------------------------------------------------------------------------------------------------------
 -- World Settings
 ------------------------------------------------------------------------------------------------------------
+
 -- GLOBALSETTINGS
 STRINGS.UI.CUSTOMIZATIONSCREEN.HOFBIRTHDAY = "Aniversário do Amontoado de Comidas"
 STRINGS.UI.CUSTOMIZATIONSCREEN.OCEANHUNTS_SETTING = "Caças de Oceano"

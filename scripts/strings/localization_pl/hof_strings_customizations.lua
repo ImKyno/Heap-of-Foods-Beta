@@ -65,6 +65,7 @@ STRINGS.UI.CUSTOMIZATIONSCREEN.SWORDFISHES = "Mieczniki"
 ------------------------------------------------------------------------------------------------------------
 -- World Settings
 ------------------------------------------------------------------------------------------------------------
+
 -- GLOBALSETTINGS
 STRINGS.UI.CUSTOMIZATIONSCREEN.HOFBIRTHDAY = "Rocznica Heap of Food"
 STRINGS.UI.CUSTOMIZATIONSCREEN.OCEANHUNTS_SETTING = "Oceaniczne łowy"

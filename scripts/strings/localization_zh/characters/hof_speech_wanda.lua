@@ -580,6 +580,12 @@ WANDA.DESCRIBE.KYNO_CHICKEN_EGG = "什么，你这个蛋？"
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "我可没时间等这么大的东西孵化。"
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "每当我做鸡蛋时，它们要么未烤熟，要么被烧焦。"
 
+WANDA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "快一点吧，我可没一整天。",
+	HATCHING = "是是是，快出来，别让我等到老。",
+}
+
 WANDA.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "一个时机恰到好处的解决方案，确保持续的鸡蛋供应。",

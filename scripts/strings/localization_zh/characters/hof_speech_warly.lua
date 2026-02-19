@@ -580,6 +580,12 @@ WARLY.DESCRIBE.KYNO_CHICKEN_EGG = "大自然使食物变得完美。"
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "它的烹饪潜力，简直是……巨大！"
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "可以使用几种不同的草药......"
 
+WARLY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "耐心点，它还没“熟”——我是说，孵化好。",
+	HATCHING = "啊！新鲜的食材——呃，我是说伙伴！",
+}
+
 WARLY.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "啊！一个可靠的新鲜食材来源。",
