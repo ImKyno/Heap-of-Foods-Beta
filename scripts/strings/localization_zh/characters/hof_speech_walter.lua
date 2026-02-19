@@ -3,14 +3,14 @@ local WALTER = STRINGS.CHARACTERS.WALTER
 WALTER.ANNOUNCE_KYNO_COFFEEBUFF_START = "我们开始吧！"
 WALTER.ANNOUNCE_KYNO_COFFEEBUFF_END = "等等我，沃比！我现在太慢了！"
 
-WALTER.ANNOUNCE_KYNO_HASTEBUFF_START = "让我们看看你能不能跟上，女孩！"
+WALTER.ANNOUNCE_KYNO_HASTEBUFF_START = "让我们看看你能不能跟上，沃比！"
 WALTER.ANNOUNCE_KYNO_HASTEBUFF_END = "好的，让我们休息一下。"
 
 WALTER.ANNOUNCE_KYNO_POPBUFF_START = "（嗝！）我敢打赌你不会像我一样吵闹！"
 WALTER.ANNOUNCE_KYNO_POPBUFF_END = "那是多么疯狂的饮料！"
 
-WALTER.ANNOUNCE_KYNO_FROGBUFF_START = "我们看起来够像青蛙吗，女孩？"
-WALTER.ANNOUNCE_KYNO_FROGBUFF_END = "我想恢复正常了，女孩！"
+WALTER.ANNOUNCE_KYNO_FROGBUFF_START = "我们看起来够像青蛙吗，沃比？"
+WALTER.ANNOUNCE_KYNO_FROGBUFF_END = "我想恢复正常了，沃比！"
 
 WALTER.ANNOUNCE_KYNO_PIRATEBUFF_START = "(嗝!) 沃比，我打赌你的噪音肯定比不上我！"
 WALTER.ANNOUNCE_KYNO_PIRATEBUFF_END = "这是多么疯狂的饮料啊!"
@@ -25,16 +25,16 @@ WALTER.ANNOUNCE_KYNO_FISHINGBUFF_START = "钓鱼和愤怒！"
 WALTER.ANNOUNCE_KYNO_FISHINGBUFF_END = "我们现在必须有耐心地钓鱼了。"
 
 WALTER.ANNOUNCE_KYNO_SANITYRATEBUFF_START = "是时候放松一会儿了。"
-WALTER.ANNOUNCE_KYNO_SANITYRATEBUFF_END = "好了，女孩，我的思绪又回到了正轨。"
+WALTER.ANNOUNCE_KYNO_SANITYRATEBUFF_END = "好了，沃比，我的思绪又回到了正轨。"
 
 WALTER.ANNOUNCE_KYNO_EATERBUFF_START = "帮助我吃更多的食物。"
 WALTER.ANNOUNCE_KYNO_EATERBUFF_END = "吃饭的时候要有耐心。"
 
 WALTER.ANNOUNCE_KYNO_WORMBUFF_START = "猎虫开始了！"
-WALTER.ANNOUNCE_KYNO_WORMBUFF_END = "狩猎结束了，女孩。"
+WALTER.ANNOUNCE_KYNO_WORMBUFF_END = "狩猎结束了，沃比。"
 
 WALTER.ANNOUNCE_KYNO_CRABBUFF_START = "螃蟹狩猎开始了！"
-WALTER.ANNOUNCE_KYNO_CRABBUFF_END = "狩猎结束了，女孩。"
+WALTER.ANNOUNCE_KYNO_CRABBUFF_END = "狩猎结束了，沃比。"
 
 WALTER.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(嗝！) 我希望你不能像我一样吵闹，沃比！"
 WALTER.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "那是多么疯狂的青蛙饮料啊！"
@@ -42,7 +42,7 @@ WALTER.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "那是多么疯狂的青蛙饮料啊�
 WALTER.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START = "别害怕，沃比。"
 WALTER.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_END = "噢，它已经走了？"
 
-WALTER.ANNOUNCE_KYNO_STEALTHBUFF_START = "嘘！现在安静，女孩！"
+WALTER.ANNOUNCE_KYNO_STEALTHBUFF_START = "嘘！现在安静，沃比！"
 WALTER.ANNOUNCE_KYNO_STEALTHBUFF_END = "我的隐身不见了！"
 
 WALTER.ANNOUNCE_KYNO_FEARBUFF_START = "我已经无所畏惧了！"
@@ -78,11 +78,11 @@ WALTER.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "喂！我当时可是头脑清醒的�
 WALTER.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "我现在感觉安全多了。"
 WALTER.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "看来我不能再指望它了。"
 
-WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Whoa! I feel fearless! Maybe too fearless..."
-WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Okay, deep breaths. Back to normal."
+WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_START = "哇！我觉得自己无所畏惧！也许是太无所畏惧了..."
+WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "好，深呼吸。恢复正常。"
 
-WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Cool! I can last longer without eating!"
-WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Guess it's snack time again."
+WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "酷！不吃东西也能撑更久了！"
+WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "看来又是吃零食的时间了。"
 
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "做错了！"
 
@@ -96,7 +96,7 @@ WALTER.ANNOUNCE_KYNO_POTHANGER_FAIL = "我们需要一个锅来煮它。"
 
 WALTER.ANNOUNCE_KYNO_CASSEROLE_FAIL = "它还需要一些其他的东西。"
 
-WALTER.ANNOUNCE_KYNO_SAPHEALER_USED = "There you go, tree! All patched up."
+WALTER.ANNOUNCE_KYNO_SAPHEALER_USED = "搞定啦，大树！给你修补好了。"
 
 WALTER.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "露营守则第12条：永远尊重你猎取的食物。"
 
@@ -137,22 +137,22 @@ WALTER.DESCRIBE.KYNO_SYRUP = "太甜了！"
 WALTER.DESCRIBE.KYNO_COFFEEBEANS = "可以放进锅里。"
 WALTER.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "让我们准备它们，沃比！"
 
-WALTER.DESCRIBE.DUG_KYNO_COFFEEBUSH = "It's a coffee bush, I can't believe it!"
+WALTER.DESCRIBE.DUG_KYNO_COFFEEBUSH = "这是一棵咖啡丛，我简直不敢相信！"
 
 WALTER.DESCRIBE.KYNO_COFFEEBUSH = 
 {
-	GENERIC = "Smells kinda strong.",
-	PICKED = "They will grow back soon enough.",
-	WITHERED = "Needs fertilizer.",
+	GENERIC = "闻起来有点冲。",
+	PICKED = "它们很快就会长回来的。",
+	WITHERED = "需要施肥了。",
 }
 
-WALTER.DESCRIBE.DUG_KYNO_SPOTBUSH = "We should plant it again, right Woby?"
+WALTER.DESCRIBE.DUG_KYNO_SPOTBUSH = "我们得把它再种回去，对吧沃比？"
 
 WALTER.DESCRIBE.KYNO_SPOTBUSH = 
 {
-	GENERIC = "Just a shrub.",
-	PICKED = "Guess it'll grow back.",
-	BURNING = "Whoa! That's bad!",
+	GENERIC = "只是一棵灌木而已。",
+	PICKED = "猜猜它还会长回来的。",
+	BURNING = "哇！糟透了！",
 }
 
 WALTER.DESCRIBE.KYNO_SPOTSPICE_LEAF = "嗯。我可以用这个来调味。"
@@ -214,27 +214,27 @@ WALTER.DESCRIBE.LONGPIGMEAL = "肉即肉。"
 
 WALTER.DESCRIBE.CUCUMBERSALAD = "即使是黄瓜也可以成为荒野中的食物！"
 
-WALTER.DESCRIBE.DUG_KYNO_WILDWHEAT = "I could plant it somewhere better."
+WALTER.DESCRIBE.DUG_KYNO_WILDWHEAT = "我可以把它种在更好的地方。"
 
 WALTER.DESCRIBE.KYNO_WILDWHEAT = 
 {
-	GENERIC = "A patch of wheat plant.",
-	PICKED = "It will grow grains back, eventually.",
-	WITHERED = "Looks really dry.",
-	BURNING = "Whoa! That's bad!",
+	GENERIC = "一片小麦植株。",
+	PICKED = "它最终还会长出谷粒来的。",
+	WITHERED = "看起来干透了。",
+	BURNING = "哇！糟透了！",
 }
 
 WALTER.DESCRIBE.KYNO_MEALGRINDER = "嗯……我今天应该磨什么？"
 
 WALTER.DESCRIBE.KYNO_MUSHSTUMP =
 {
-	GENERIC = "That's kinda cool!",
-	PICKED = "Guess they'll grow back.",
-	BURNING = "Whoa! That's bad!",
+	GENERIC = "这还挺酷的嘛！",
+	PICKED = "估计它们还会长回来的。",
+	BURNING = "哇！糟透了！",
 }
 
 WALTER.DESCRIBE.GORGE_BREAD = "想要一块吗，沃比？"
-WALTER.DESCRIBE.GORGE_SWEET_CHIPS = "来点吧，女孩。"
+WALTER.DESCRIBE.GORGE_SWEET_CHIPS = "来点吧，沃比。"
 WALTER.DESCRIBE.GORGE_VEGETABLE_SOUP = "吃你的蔬菜！"
 WALTER.DESCRIBE.GORGE_JELLY_SANDWICH = "好吃！"
 WALTER.DESCRIBE.GORGE_FISH_STEW = "太饱了！"
@@ -247,20 +247,20 @@ WALTER.DESCRIBE.GORGE_MEAT_SKEWERS = "这些小肉块非常美味！"
 WALTER.DESCRIBE.GORGE_STONE_SOUP = "我喜欢喝汤。"
 WALTER.DESCRIBE.GORGE_CROQUETTE = "炸丸子不错。"
 WALTER.DESCRIBE.GORGE_ROAST_VEGETABLES = "健康餐！"
-WALTER.DESCRIBE.GORGE_MEATLOAF = "你想来一块吗，女孩？"
+WALTER.DESCRIBE.GORGE_MEATLOAF = "你想来一块吗，沃比？"
 WALTER.DESCRIBE.GORGE_CARROT_SOUP = "我喜欢喝汤。"
 WALTER.DESCRIBE.GORGE_FISHPIE = "我可以改良一下这个派。"
 WALTER.DESCRIBE.GORGE_FISHCHIPS = "太脆了！"
 WALTER.DESCRIBE.GORGE_MEATPIE = "厚重的馅饼。"
-WALTER.DESCRIBE.GORGE_SLIDERS = "我们得多做点了，女孩。"
-WALTER.DESCRIBE.GORGE_JELLY_ROLL = "要果冻吗，女孩？"
-WALTER.DESCRIBE.GORGE_CARROT_CAKE = "我给你切一块，女孩。"
+WALTER.DESCRIBE.GORGE_SLIDERS = "我们得多做点了，沃比。"
+WALTER.DESCRIBE.GORGE_JELLY_ROLL = "要果冻吗，沃比？"
+WALTER.DESCRIBE.GORGE_CARROT_CAKE = "我给你切一块，沃比。"
 WALTER.DESCRIBE.GORGE_GARLICMASHED = "我们快吃吧。"
 WALTER.DESCRIBE.GORGE_GARLICBREAD = "美味可口。"
 WALTER.DESCRIBE.GORGE_TOMATO_SOUP = "我喜欢喝汤。"
 WALTER.DESCRIBE.GORGE_SAUSAGE = "这个给你，沃比。"
 WALTER.DESCRIBE.GORGE_CANDIEDFISH = "甜甜的鱼。"
-WALTER.DESCRIBE.GORGE_STUFFEDMUSHROOM = "健康餐."
+WALTER.DESCRIBE.GORGE_STUFFEDMUSHROOM = "健康餐。"
 WALTER.DESCRIBE.GORGE_BRUSCHETTA = "漂亮的滑杆。"
 WALTER.DESCRIBE.GORGE_HAMBURGER = "酷！一个汉堡包。"
 WALTER.DESCRIBE.GORGE_FISHBURGER = "酷！一个带鱼的汉堡包。"
@@ -274,18 +274,18 @@ WALTER.DESCRIBE.GORGE_CANDY = "不要吃太多，否则你会胃痛。"
 WALTER.DESCRIBE.GORGE_BREAD_PUDDING = "非常美味。"
 WALTER.DESCRIBE.GORGE_BERRY_TART = "一道不错的浆果菜。"
 WALTER.DESCRIBE.GORGE_MACARONI = "不错！"
-WALTER.DESCRIBE.GORGE_BAGEL_AND_FISH = "闻起来不错，你觉得呢，女孩？"
+WALTER.DESCRIBE.GORGE_BAGEL_AND_FISH = "闻起来不错，你觉得呢，沃比？"
 WALTER.DESCRIBE.GORGE_GRILLED_CHEESE = "融化的奶酪让我口渴难耐。"
 WALTER.DESCRIBE.GORGE_CREAMMUSHROOM = "营养汤！"
 WALTER.DESCRIBE.GORGE_MANICOTTI = "上好的通心粉里有上好的奶酪。"
 WALTER.DESCRIBE.GORGE_CHEESEBURGER = "酷！一个带鱼的汉堡包。"
 WALTER.DESCRIBE.GORGE_FETTUCCINE = "好!"
 WALTER.DESCRIBE.GORGE_ONION_SOUP = "哦，我希望这股味道不会持续太久。"
-WALTER.DESCRIBE.GORGE_BREADED_CUTLET = "来一口吧，女孩"
-WALTER.DESCRIBE.GORGE_CREAMY_FISH = "来，咬一口，女孩。"
+WALTER.DESCRIBE.GORGE_BREADED_CUTLET = "来一口吧，沃比"
+WALTER.DESCRIBE.GORGE_CREAMY_FISH = "来，咬一口，沃比。"
 WALTER.DESCRIBE.GORGE_PIZZA = "啊哈！即使在这里我们也有披萨！"
-WALTER.DESCRIBE.GORGE_POT_ROAST = "帮我一把，女孩。"
-WALTER.DESCRIBE.GORGE_CRAB_CAKE = "下次，我会做一些像你的东西，女孩。"
+WALTER.DESCRIBE.GORGE_POT_ROAST = "帮我一把，沃比。"
+WALTER.DESCRIBE.GORGE_CRAB_CAKE = "下次，我会做一些像你的东西，沃比。"
 WALTER.DESCRIBE.GORGE_STEAK_FRITES = "薯条不能吃太多"
 WALTER.DESCRIBE.GORGE_SHOOTER_SANDWICH = "做工精细的牛肉三明治。"
 WALTER.DESCRIBE.GORGE_BACON_WRAPPED = "一顿简单的早餐。"
@@ -376,9 +376,9 @@ WALTER.DESCRIBE.KYNO_SEEDS_KIT = "打开包装！"
 
 WALTER.DESCRIBE.KYNO_LIMPETROCK = 
 {
-	GENERIC = "There are sea creatures stuck to that rock. And they're edible!",
-	PICKED = "They'll come back later.",
-	WITHERED = "Nothing left here.",
+	GENERIC = "那块石头上粘着些海洋生物。而且它们能吃！",
+	PICKED = "它们之后还会长出来的。",
+	WITHERED = "这里啥也不剩了。",
 }
 
 WALTER.DESCRIBE.KYNO_LIMPETS = "嗯……岩石上的食物。美食。"
@@ -386,9 +386,9 @@ WALTER.DESCRIBE.KYNO_LIMPETS_COOKED = "我听说最好的食物来自岩石。"
 
 WALTER.DESCRIBE.KYNO_LOTUS_OCEAN = 
 {
-	GENERIC = "An aquatic flower, looks nice.",
-	PICKED = "Guess it'll grow back.",
-	BURNING = "Hey! That's not okay!",
+	GENERIC = "一种水生花卉，看着挺不错。",
+	PICKED = "猜猜它还会长回来的。",
+	BURNING = "嘿！这样可不行！",
 }
 
 WALTER.DESCRIBE.KYNO_LOTUS_ROOT = "这需要被种植。"
@@ -397,9 +397,9 @@ WALTER.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "整洁！"
 
 WALTER.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
 {
-	GENERIC = "Wet, soppy weed.",
-	PICKED = "They'll come back, I think.",
-	BURNING = "How did THAT catch fire?!",
+	GENERIC = "湿漉漉、软趴趴的杂草。",
+	PICKED = "它们应该还会长回来吧，我觉得。",
+	BURNING = "那玩意儿是怎么烧起来的？！",
 }
 
 WALTER.DESCRIBE.KYNO_SEAWEEDS = "湿漉漉的杂草。"
@@ -409,9 +409,9 @@ WALTER.DESCRIBE.KYNO_SEAWEEDS_ROOT = "这需要种植。"
 
 WALTER.DESCRIBE.KYNO_TAROROOT_OCEAN = 
 {
-	GENERIC = "Maybe I can eat that...",
-	PICKED = "The water helps it grow faster.",
-	BURNING = "Oh no!",
+	GENERIC = "也许我可以吃那个……",
+	PICKED = "水能帮助它长得更快。",
+	BURNING = "哦不！",
 }
 
 WALTER.DESCRIBE.KYNO_TAROROOT_ROOT = "这需要被种植。"
@@ -420,9 +420,9 @@ WALTER.DESCRIBE.KYNO_TAROROOT_COOKED = "哦，烤熟了好多了！"
 
 WALTER.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
 {
-	GENERIC = "A plant growing out here in the ocean?",
-	PICKED = "Hope it comes back fast.",
-	BURNING = "Whoa... didn't see that coming.",
+	GENERIC = "这儿海里也能长植物？",
+	PICKED = "希望它快点长回来。",
+	BURNING = "哇……真没想到。",
 }
 
 WALTER.DESCRIBE.KYNO_WATERYCRESS_ROOT = "这需要被种植。"
@@ -434,9 +434,9 @@ WALTER.DESCRIBE.KYNO_SALT = "嘿，我想是盐！"
 
 WALTER.DESCRIBE.KYNO_MUSSELSTICK =
 {
-	GENERIC = "That's a neat way to get food.",
-	PICKED = "We gotta wait, girl.",
-	BURNING = "Well, that's bad.",
+	GENERIC = "这是获取食物的巧妙方法。",
+	PICKED = "我们得等等，沃比。",
+	BURNING = "嗯，糟透了。",
 }
 
 WALTER.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "我不知道那些海洋生物在这根木棍上看到了什么。"
@@ -447,11 +447,11 @@ WALTER.DESCRIBE.KATFOOD = "我想知道沃比是否也喜欢这个？"
 
 WALTER.DESCRIBE.KYNO_BANANATREE = 
 {
-	GENERIC = "You look way more beautiful when on the sun!",
-	PICKED = "Guess it'll grow back later.",
-	CHOPPED = "Bummer!",
-	BURNING = "Hey! Someone stop that!",
-	BURNT = "Nothing left at all.",
+	GENERIC = "你在阳光下看起来更美！",
+	PICKED = "估计它晚点还会长回来的。",
+	CHOPPED = "真倒霉！",
+	BURNING = "嘿！谁能拦着点！",
+	BURNT = "啥也不剩了。",
 }
 
 WALTER.DESCRIBE.KYNO_BANANA = "我不介意停下来吃点零食。"
@@ -459,18 +459,18 @@ WALTER.DESCRIBE.KYNO_BANANA_COOKED = "嗯...这是一根热香蕉。"
 
 WALTER.DESCRIBE.KYNO_KOKONUTTREE = 
 {
-	GENERIC = "These trees look different from the air.",
-	PICKED = "Guess I gotta wait.",
-	CHOPPED = "Just a stump to sit on now.",
-	BURNING = "Hey! Someone stop that already!",
-	BURNT = "Nothing left.",
+	GENERIC = "这些树从空中看不一样。",
+	PICKED = "看来我得等等了。",
+	CHOPPED = "现在只是个可以坐的树桩了。",
+	BURNING = "嘿！谁能赶紧拦着点！",
+	BURNT = "啥也不剩了。",
 }
 
 WALTER.DESCRIBE.KYNO_KOKONUT = "一个难以破解的椰子。"
-WALTER.DESCRIBE.KYNO_KOKONUT_HALVED = "它现在适合弹弓。"
+WALTER.DESCRIBE.KYNO_KOKONUT_HALVED = "它现在适合弹弓了。"
 WALTER.DESCRIBE.KYNO_KOKONUT_COOKED = "看起来不错！"
 
-WALTER.DESCRIBE.BOWLOFPOPCORN = "我没有什么可以筹款的……"
+WALTER.DESCRIBE.BOWLOFPOPCORN = "我没什么可以募捐的了……"
 
 WALTER.DESCRIBE.FIGJUICE = "放松和提神。"
 
@@ -515,8 +515,8 @@ WALTER.DESCRIBE.TURF_TIDALMARSH = "我真的需要随身携带这些泥土吗？
 
 WALTER.DESCRIBE.KYNO_SALTRACK =
 {
-	GENERIC = "Salt is ready for harvest!",
-	PICKED = "We must wait for it to dry out.",
+	GENERIC = "盐可以收获了！",
+	PICKED = "我们得等它晒干。",
 }
 
 WALTER.DESCRIBE.KYNO_SALTRACK_INSTALLER = "收集盐的架子！"
@@ -527,36 +527,36 @@ WALTER.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "你想要一些螃蟹当晚餐吗，�
 
 WALTER.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
 {
-	GENERIC = "He's so different, compared to the other pigs!",
-	SLEEPING = "C'mon, Woby. We must let the elders sleep.",
+	GENERIC = "他跟其他猪很不一样！",
+	SLEEPING = "来吧，沃比。我们得让老人家睡觉。",
 }
 
 WALTER.DESCRIBE.KYNO_SUGARTREE =
 {
-	GENERIC = "That's kinda cool!",
-	CHOPPED = "Guess that's it.",
-	SAPPED = "Looks ready.",
-	PICKED = "Still working.",
-	BURNING = "Careful!",
-	BURNT = "Nothing left, but ashes.",
+	GENERIC = "这还挺酷的嘛！",
+	CHOPPED = "估计就这样了。",
+	SAPPED = "看起来准备好了。",
+	PICKED = "还在工作中。",
+	BURNING = "小心！",
+	BURNT = "啥也不剩，只有灰烬。",
 }
 
 WALTER.DESCRIBE.KYNO_SUGARTREE_RUINED =
 {
-	GENERIC = "That doesn't look safe.",
-	CHOPPED = "Probably for the best.",
-	SAPPED = "Still there, somehow.",
-	PICKED = "Still messed up.",
-	BURNING = "Its for the best.",
-	BURNT = "Sorry.",
+	GENERIC = "那看起来不安全。",
+	CHOPPED = "也许这样最好。",
+	SAPPED = "不知为何还在那儿。",
+	PICKED = "还是一团糟。",
+	BURNING = "这样最好。",
+	BURNT = "抱歉。",
 }
 
-WALTER.DESCRIBE.KYNO_SUGARTREE_BUD = "足够吃。比树好！"
+WALTER.DESCRIBE.KYNO_SUGARTREE_BUD = "足够吃了。比树好！"
 
-WALTER.DESCRIBE.KYNO_SUGARTREE_FLOWER = "上面有错误吗？"
-WALTER.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "上面有错误吗？"
+WALTER.DESCRIBE.KYNO_SUGARTREE_FLOWER = "上面有虫子吗？"
+WALTER.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "上面有虫子吗？"
 
-WALTER.DESCRIBE.KYNO_SUGARTREE_PETALS = "上面有错误吗？"
+WALTER.DESCRIBE.KYNO_SUGARTREE_PETALS = "上面有虫子吗？"
 
 WALTER.DESCRIBE.KYNO_PEBBLECRAB = "一只形状像石头的螃蟹！"
 
@@ -572,22 +572,22 @@ WALTER.DESCRIBE.KYNO_SLAUGHTERTOOL = "你不能看，沃比！"
 
 WALTER.DESCRIBE.KYNO_CHICKEN2 = 
 {
-	GENERIC = "Can't fly. But then neither can I.",
-	COOP = "Guess it's mine now!",
+	GENERIC = "不会飞。但我也飞不起来。",
+	COOP = "估计现在它是我的了！",
 }
 
 WALTER.DESCRIBE.KYNO_CHICKEN_EGG = "里面有一只小鸡！"
-WALTER.DESCRIBE.KYNO_CHICKEN_LARGE = "Wow! I should earn a merit badge for finding this!"
+WALTER.DESCRIBE.KYNO_CHICKEN_LARGE = "哇！发现这个我该得个奖章！"
 WALTER.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "闻起来像是早饭做好了！"
 
 WALTER.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
-	GENERIC = "Looks safe enough for chickens. Probably.",
-	FULL = "That's a lot of eggs! Neat!",
-	BURNT = "Guess it wasn't fireproof.",
+	GENERIC = "对鸡来说看起来足够安全。大概吧。",
+	FULL = "好多蛋啊！真不错！",
+	BURNT = "看来它不防火。",
 }
 
-WALTER.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "我知道装修房子的一两件事！"
+WALTER.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "装修房子这事儿我也懂点！"
 
 WALTER.DESCRIBE.KYNO_COOKWARE_KIT = "嘿，沃比，你能帮我解决这个问题吗？"
 WALTER.DESCRIBE.KYNO_COOKWARE_SYRUP = "我们需要一些树液来做这件事。"
@@ -610,8 +610,8 @@ WALTER.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "我应该烤什么，沃�
 
 WALTER.DESCRIBE.KYNO_ROCKFLIPPABLE = 
 {
-	GENERIC = "My grandma taught me to always look under rocks.",
-	FLIPPED = "That answers it.",
+	GENERIC = "我奶奶教过我，记得总往石头下面看看。",
+	FLIPPED = "这下明白了。",
 }
 
 WALTER.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "这看起来我应该检查一下。"
@@ -643,11 +643,11 @@ WALTER.DESCRIBE.CHEESE_YELLOW = "来，吃一口，沃比。"
 WALTER.DESCRIBE.CHEESE_WHITE = "来，吃一口，沃比。"
 WALTER.DESCRIBE.CHEESE_KOALEFANT = "来，吃一口，沃比。"
 
-WALTER.DESCRIBE.MILK_BOX = "你想要一些吗，女孩？"
+WALTER.DESCRIBE.MILK_BOX = "你想要一些吗，沃比？"
 
 WALTER.DESCRIBE.WATERCUP = "清爽！"
 
-WALTER.DESCRIBE.HONEYJAR = "来，吃一点，女孩。"
+WALTER.DESCRIBE.HONEYJAR = "来，吃一点，沃比。"
 
 WALTER.DESCRIBE.CRAB_ARTICHOKE = "味道不错！"
 
@@ -657,9 +657,9 @@ WALTER.DESCRIBE.KYNO_SAPHEALER = "治疗过多的甜味。"
 
 WALTER.DESCRIBE.KYNO_OCEAN_WRECK = 
 {
-	GENERIC = "A grounded boat. I know how that feels.",
-	PICKED = "Nothing left here.",
-	BURNING = "Yeah... that's sinking for sure.",
+	GENERIC = "一艘搁浅的船。我知道那种感觉。",
+	PICKED = "这里啥也不剩了。",
+	BURNING = "是啊……这肯定要沉了。",
 }
 
 WALTER.DESCRIBE.KYNO_GHOST_PIRATE = "你也是这船上的水手？大概吧。"
@@ -679,82 +679,82 @@ WALTER.DESCRIBE.KYNO_BREWBOOK = "看来我有新指南要背了！"
 
 WALTER.DESCRIBE.KYNO_WOODENKEG = 
 {
-	EMPTY = "What flavor of juice do you want, Woby?",
-	BREWING_LONG = "Guess I'll have to wait.",
-	BREWING_SHORT = "Not much longer now.",
-	DONE = "It's finished!",
-	BURNT = "Well... that didn't work.",
+	EMPTY = "你想要什么口味的果汁，沃比？",
+	BREWING_LONG = "看来我得等等了。",
+	BREWING_SHORT = "很快就好。",
+	DONE = "完成了！",
+	BURNT = "唉……没成功。",
 }
 
 WALTER.DESCRIBE.KYNO_PRESERVESJAR = 
 {
-	EMPTY = "What about some jam, Woby?",
-	BREWING_LONG = "Guess I'll have to wait.",
-	BREWING_SHORT = "Almost ready.",
-	DONE = "Nice! It worked!",
-	BURNT = "That's too bad.",
+	EMPTY = "来点果酱怎么样，沃比？",
+	BREWING_LONG = "看来我得等等了。",
+	BREWING_SHORT = "快好了。",
+	DONE = "太棒了！成功了！",
+	BURNT = "太可惜了。",
 }
 
 WALTER.DESCRIBE.KYNO_ANTCHEST = 
 {
-	GENERIC = "I need the storage space, but I want the honey.",
-	HONEY = "That's a lot of honey!",
-	NECTAR = "Guess it needs more time.",
-	BURNING = "That's not good.",
+	GENERIC = "我需要储物空间，但也想要蜂蜜。",
+	HONEY = "好多蜂蜜啊！",
+	NECTAR = "估计还需要点时间。",
+	BURNING = "那可不好。",
 }
 
 WALTER.DESCRIBE.KYNO_NECTAR_POD = "我需要找到能把它变成蜂蜜的东西。"
 
 WALTER.DESCRIBE.KYNO_OAKTREE_POD = "让我们种下它吧，沃比！"
-WALTER.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "为了咀嚼……"
+WALTER.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "用来嚼着吃……"
 
 WALTER.DESCRIBE.KYNO_PIKO = "它的脸颊比沃比拥有更多的存储空间。"
 WALTER.DESCRIBE.KYNO_PIKO_ORANGE = "嗯。它有一种奇怪的咖啡因气味......"
 
 WALTER.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
 {
-	GENERIC = "It's a tree, Woby. There's nothing there, unless...",
-	CHOPPED = "Your leaves are going to be very useful.",
-	BURNING = "Careful, Woby!",
-	BURNT = "Nothing left, but ashes.",
+	GENERIC = "这是一棵树，沃比。那儿啥也没有，除非……",
+	CHOPPED = "你的叶子会很有用的。",
+	BURNING = "小心，沃比！",
+	BURNT = "啥也不剩，只有灰烬。",
 }
 
 WALTER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
 {
-	GENERIC = "It's a tree, Woby. There's nothing there, unless...",
-	BURNING = "Whoa, that's messed up!",
+	GENERIC = "这是一棵树，沃比。那儿啥也没有，除非……",
+	BURNING = "哇，这下糟了！",
 }
 
 WALTER.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "不是典型的宝箱，但它确实有效。"
 
 WALTER.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
 {
-	GENERIC = "I bet that wood is full of termites.",
-	BURNT = "Well... that happened.",
+	GENERIC = "我敢打赌那木头里全是白蚁。",
+	BURNT = "唉……就这样了。",
 }
 
 WALTER.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
 {
-	GENERIC = "I bet that wood is full of termites.",
-	CRAFTED = "Hey, it actually looks good!",
-	BURNT = "Smelly!",
+	GENERIC = "我敢打赌那木头里全是白蚁。",
+	CRAFTED = "嘿，它看起来还不错！",
+	BURNT = "好臭！",
 }
 
 WALTER.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
 {
-	GENERIC = "We should ask him if he got any special treats for you, Woby.",
-	OCCUPIED = "His shop is not open right now.",
+	GENERIC = "我们该问问他有没有给你准备什么特别的东西，沃比。",
+	OCCUPIED = "他的店现在没开门。",
 }
 
 WALTER.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
 {
-	GENERIC = "I think I saw a snake oil in there.",
-	EMPTY = "All sold out already.",
+	GENERIC = "我好像看到里面有蛇油。",
+	EMPTY = "已经卖光了。",
 }
 
-WALTER.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "这是我第一次看到一个拥有交易技巧的人鱼。"
+WALTER.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "这是我第一次看到一个会做生意的鱼人。"
 WALTER.DESCRIBE.KYNO_MEADOWISLAND_POND = "需要一根钓鱼竿..."
-WALTER.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "猜猜它会是什么是乐趣的一半。"
+WALTER.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "猜猜它会是什么，乐趣就在其中。"
 WALTER.DESCRIBE.KYNO_MEADOWISLAND_SANDHILL = "一堆均匀的沙粒。"
 WALTER.DESCRIBE.KYNO_MEADOWISLAND_MERMFISHER = "生来就是鱼。"
 
@@ -762,8 +762,8 @@ WALTER.DESCRIBE.KYNO_SAMMYHAT = "我已经有自己的帽子了。"
 
 WALTER.DESCRIBE.KINGFISHER = "多么符合空气动力学的喙！"
 
-WALTER.DESCRIBE.TOUCAN = "好大的账单！"
-WALTER.DESCRIBE.TOUCAN_CHUBBY = "好大的账单！"
+WALTER.DESCRIBE.TOUCAN = "好大的嘴！"
+WALTER.DESCRIBE.TOUCAN_CHUBBY = "好大的嘴！"
 
 WALTER.DESCRIBE.WETGOOP2 = "呃……也许沃比会想要它……"
 
@@ -789,8 +789,8 @@ WALTER.DESCRIBE.KYNO_WINE = "不是我喜欢的。"
 
 WALTER.DESCRIBE.KYNO_JUICE = "我已经有一段时间没有了。"
 
-WALTER.DESCRIBE.KYNO_POISON_FROGLEGS = "女孩，别吃那个！"
-WALTER.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "女孩，别吃那个！"
+WALTER.DESCRIBE.KYNO_POISON_FROGLEGS = "沃比，别吃那个！"
+WALTER.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "沃比，别吃那个！"
 
 WALTER.DESCRIBE.POISONFROGGLEBUNWICH = "如果你足够努力，你可以把任何东西做成三明治。"
 
@@ -800,16 +800,16 @@ WALTER.DESCRIBE.KYNO_OIL = "不，！这不是用来喝酒的！"
 
 WALTER.DESCRIBE.BERRYSUNDAE = "不要吃太多，否则你会冻僵的！"
 
-WALTER.DESCRIBE.CHOCOLATE_BLACK = "对不起女孩，你不能吃它，遗憾的是。"
-WALTER.DESCRIBE.CHOCOLATE_WHITE = "对不起女孩，你不能吃它，很遗憾。"
+WALTER.DESCRIBE.CHOCOLATE_BLACK = "对不起沃比，你不能吃它，遗憾的是。"
+WALTER.DESCRIBE.CHOCOLATE_WHITE = "对不起沃比，你不能吃它，很遗憾。"
 
 WALTER.DESCRIBE.TRICOLORDANGO = "它比看起来好得多。"
  
-WALTER.DESCRIBE.FRIESFRENCH = "想要一些吗，女孩？"
+WALTER.DESCRIBE.FRIESFRENCH = "想要一些吗，沃比？"
 
 WALTER.DESCRIBE.PIRATERUM = "我必须对此保持谨慎。"
 
-WALTER.DESCRIBE.TWISTEDTEQUILA = "我觉得这杯酒不适合你喝，女孩。"
+WALTER.DESCRIBE.TWISTEDTEQUILA = "我觉得这杯酒不适合你喝，沃比。"
 
 WALTER.DESCRIBE.ONIONRINGS = "洋葱浸在油里，有趣！"
 
@@ -821,17 +821,17 @@ WALTER.DESCRIBE.CINNAMONROLL = "无法用言语来形容这个面包有多甜。
 
 WALTER.DESCRIBE.GUMMYBEARGERS = "我在这种食物中闻到了危险的味道！"
 
-WALTER.DESCRIBE.PRETZEL = "你想要一些吗，女孩？"
+WALTER.DESCRIBE.PRETZEL = "你想要一些吗，沃比？"
 
 WALTER.DESCRIBE.CORNINCUP = "杯子里放一些玉米听起来不错。"
 
 WALTER.DESCRIBE.COTTONCANDY = "我不应该吃太多糖。"
 
-WALTER.DESCRIBE.ROASTEDHAZELNUTS = "我想你可以吃一些，女孩……"
+WALTER.DESCRIBE.ROASTEDHAZELNUTS = "我想你可以吃一些，沃比……"
 
 WALTER.DESCRIBE.MONSTERMUFFIN = "这需要进一步调查！"
 
-WALTER.DESCRIBE.PINKCAKE = "只是给我和 沃比 的一小块。"
+WALTER.DESCRIBE.PINKCAKE = "只是给我和沃比的一小块。"
 
 WALTER.DESCRIBE.CHIPSBAG = "为什么袋子的一半是空的？"
 
@@ -842,7 +842,7 @@ WALTER.DESCRIBE.HOTHOUND = "我会为你再做一份，沃比！"
 WALTER.DESCRIBE.MILKSHAKE = "对于牛奶来说非常甜。"
 WALTER.DESCRIBE.MILKSHAKE_PRISMATIC = "对于牛奶来说非常甜。"
 
-WALTER.DESCRIBE.NACHOS = "慢慢吃吧，女孩。"
+WALTER.DESCRIBE.NACHOS = "慢慢吃吧，沃比。"
 
 WALTER.DESCRIBE.BANANA_PUDDING = "好吃！"
 
@@ -893,27 +893,27 @@ WALTER.DESCRIBE.BERRYBOMBS = "现在我们真的陷入困境了......"
 
 WALTER.DESCRIBE.ONIGIRIS = "这真是一道美味的点心。"
 
-WALTER.DESCRIBE.OMURICE = "好了，女孩，再咬一口！"
+WALTER.DESCRIBE.OMURICE = "好了，沃比，再咬一口！"
 
 WALTER.DESCRIBE.PAELLA = "谁能想到米饭会这么好吃呢？"
 
-WALTER.DESCRIBE.RISOTTO = "好吧，女孩，我们停下来吃点东西怎么样？"
+WALTER.DESCRIBE.RISOTTO = "好吧，沃比，我们停下来吃点东西怎么样？"
 
 WALTER.DESCRIBE.RICESAKE = "我不确定这个。也许我应该放弃。"
 
-WALTER.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Don't touch it, girl. Let me handle that."
+WALTER.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "别碰它，沃比。让我来处理。"
 
 WALTER.DESCRIBE.KYNO_PINEAPPLEBUSH = 
 {
-	GENERIC = "Don't touch it, girl. Let me handle that.",
-	PICKED = "It will grow back, eventually.",
-	WITHERED = "Needs fertilizer.",
-	BURNING = "Whoa! That's bad!",
+	GENERIC = "别碰它，沃比。让我来处理。",
+	PICKED = "它最终还会长回来的。",
+	WITHERED = "需要施肥了。",
+	BURNING = "哇！糟透了！",
 }
 
 WALTER.DESCRIBE.KYNO_PINEAPPLE = "很好的热带水果!"
 WALTER.DESCRIBE.KYNO_PINEAPPLE_HALVED = "很好的热带水果!"
-WALTER.DESCRIBE.KYNO_PINEAPPLE_COOKED = "来，咬一口，女孩。"
+WALTER.DESCRIBE.KYNO_PINEAPPLE_COOKED = "来，咬一口，沃比。"
 
 WALTER.DESCRIBE.PIZZA_TROPICAL = "谁在乎呢？这是披萨！"
 
@@ -923,13 +923,13 @@ WALTER.DESCRIBE.CHIMAS = "有点令人兴奋。"
 
 WALTER.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
 {
-	OFF = "I'll be honest, I'm probably going to run through it.",
-	ON = "Keeping the garden healthy!",
+	OFF = "老实说，我可能会冲过去玩水。",
+	ON = "保持花园健康！",
 }
 
 WALTER.DESCRIBE.KYNO_FOODSACK = "沃比也能胜任这项工作... 我觉得"
 
-WALTER.DESCRIBE.GUMMYWORMS = "你看到了什么，女孩？"
+WALTER.DESCRIBE.GUMMYWORMS = "你看到了什么，沃比？"
 
 WALTER.DESCRIBE.SMORES = "我们当时做了很多这样的零食!"
 
@@ -940,13 +940,13 @@ WALTER.DESCRIBE.ANTSLOG = "为了在这里生存，你必须做你需要做的..
 WALTER.DESCRIBE.KYNO_WORM_BONE = "这骨头里没有肉，但我想用来做汤一定不错。"
 
 WALTER.DESCRIBE.SPOOKY_BRAIN_NOODLES = "不害怕它。"
-WALTER.DESCRIBE.SPOOKY_BURGERZILLA = "嘿，女孩，你现在为什么这么害怕？"
+WALTER.DESCRIBE.SPOOKY_BURGERZILLA = "嘿，沃比，你现在为什么这么害怕？"
 WALTER.DESCRIBE.SPOOKY_DEADBREAD = "只是一个普通的面包。"
 WALTER.DESCRIBE.SPOOKY_JELLYBEANS = "别紧张，这不是真的眼球。"
 WALTER.DESCRIBE.SPOOKY_POPSICLE = "闻起来像雨林。"
 WALTER.DESCRIBE.SPOOKY_PUMPKINCREAM = "这吓不倒我！"
 WALTER.DESCRIBE.SPOOKY_SKULLCANDY = "不要困扰。"
-WALTER.DESCRIBE.SPOOKY_TACODILE = "别担心，女孩。它不会咬你的。"
+WALTER.DESCRIBE.SPOOKY_TACODILE = "别担心，沃比。它不会咬你的。"
 
 WALTER.DESCRIBE.BUTTER_BEEFALO = "它看起来很棒。"
 WALTER.DESCRIBE.BUTTER_GOAT = "一块山羊黄油。"
@@ -954,7 +954,7 @@ WALTER.DESCRIBE.BUTTER_KOALEFANT = "一个明智的决定与成分。"
 
 WALTER.DESCRIBE.SPICE_CURE = "这样我们就可以吃更少的罐头食品和更健康的食物。"
 WALTER.DESCRIBE.SPICE_COLD = "好冷！"
-WALTER.DESCRIBE.SPICE_FIRE = "小心点，女孩。它燃烧得很亮。"
+WALTER.DESCRIBE.SPICE_FIRE = "小心点，沃比。它燃烧得很亮。"
 WALTER.DESCRIBE.SPICE_FED = "多吃，多做。"
 WALTER.DESCRIBE.SPICE_MIND = "一种放松身心的糖。"
 
@@ -968,13 +968,13 @@ WALTER.DESCRIBE.MEATWALTZ = "其中使用了一些不安全的方法。"
 
 WALTER.DESCRIBE.COMPLETEBREAKFAST = "沃比！你需要帮我完成这件事！我一个人受不了。"
 
-WALTER.DESCRIBE.DUMPLINGS = "你也想咬一口吗，女孩？"
+WALTER.DESCRIBE.DUMPLINGS = "你也想咬一口吗，沃比？"
 
 WALTER.DESCRIBE.WARLYICEDTEA = "放松和清爽。"
 
 WALTER.DESCRIBE.WARLYTEA = "我过去常常去参加茶会。"
 
-WALTER.DESCRIBE.KYNO_TEALEAF = "姑娘，我们去泡点茶吧！"
+WALTER.DESCRIBE.KYNO_TEALEAF = "沃比，我们去泡点茶吧！"
 
 WALTER.DESCRIBE.KYNO_ITEMSLICER = "你会用它切东西的。"
 WALTER.DESCRIBE.KYNO_ITEMSLICER_GOLD = "你会用它切东西的。"
@@ -997,7 +997,7 @@ WALTER.DESCRIBE.SHARKSUSHI = "啊，真没见过有人真的用鲨鱼做寿司�
 
 WALTER.DESCRIBE.WOBSTERBREADED = "一只裹面包屑的海虫！"
 
-WALTER.DESCRIBE.LAZYPURRITO = "你想要吗，女孩？"
+WALTER.DESCRIBE.LAZYPURRITO = "你想要吗，沃比？"
 
 WALTER.DESCRIBE.HORCHATA = "健康的饮料！"
 
@@ -1019,14 +1019,14 @@ WALTER.DESCRIBE.MIMICMOSA = "这真的能让我隐形吗？"
 
 WALTER.DESCRIBE.POMEGRANATEPIE = "一种不错的派。"
 
-WALTER.DESCRIBE.PINEAPPLECAKE = "看来你也想要一份，是吗，女孩？"
+WALTER.DESCRIBE.PINEAPPLECAKE = "看来你也想要一份，是吗，沃比？"
 
 WALTER.DESCRIBE.PASTY_MEAT = "一款相当不错的零食，但油分含量较高。"
 WALTER.DESCRIBE.PASTY_CHEESE = "一款相当不错的零食，但油分含量较高。"
 
-WALTER.DESCRIBE.BRIGADEIRO = "抱歉，女孩。这个你不能要。"
+WALTER.DESCRIBE.BRIGADEIRO = "抱歉，沃比。这个你不能要。"
 
-WALTER.DESCRIBE.REGULARLASAGNA = "我待会儿给你做一份巨无霸千层饼，女孩。"
+WALTER.DESCRIBE.REGULARLASAGNA = "我待会儿给你做一份巨无霸千层饼，沃比。"
 
 WALTER.DESCRIBE.FLTSANDWICH = "哦，真好！更多的蛙腿三明治。"
 
@@ -1036,9 +1036,9 @@ WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "被遗弃的地方总有故事…�
 
 WALTER.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
-	GENERIC = "Nature always hides surprises... even underground!",
-	PICKED = "Hope more show up later.",
-	BURNING = "Aw man, that was a rare resource.",
+	GENERIC = "大自然总是藏着惊喜……甚至在地下！",
+	PICKED = "希望之后能再长出更多。",
+	BURNING = "啊，那是个稀有资源啊。",
 }
 
 WALTER.DESCRIBE.KYNO_TRUFFLES = "松露！来自野外的稀有宝藏。"
@@ -1046,14 +1046,14 @@ WALTER.DESCRIBE.KYNO_TRUFFLES_COOKED = "烤好了，准备就绪——香气扑�
 
 WALTER.DESCRIBE.KYNO_ITEMSHOWCASER = 
 {
-	EMPTY = "Great for displaying camp meals! Looks professional!",
-	FULL = "Hey, that's actually pretty cool!",
+	EMPTY = "用来展示营地美食很棒！看起来很专业！",
+	FULL = "嘿，这还挺酷的嘛！",
 }
 
 WALTER.DESCRIBE.KYNO_SPORECAP = "新物种！但可能有毒。"
 WALTER.DESCRIBE.KYNO_SPORECAP_COOKED = "看起来没那么危险了。"
 
-WALTER.DESCRIBE.KYNO_SPORECAP_DARK = "危险物种！不要靠近呼吸！"
+WALTER.DESCRIBE.KYNO_SPORECAP_DARK = "危险物种！靠近呼吸时要小心！"
 WALTER.DESCRIBE.KYNO_SPORECAP_DARK_COOKED = "火没能中和毒素！"
 
 WALTER.DESCRIBE.KYNO_GOLDENAPPLE = "我这辈子从没见过金苹果！"
@@ -1071,11 +1071,11 @@ WALTER.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "就像搭建营地……但对
 
 WALTER.DESCRIBE.KYNO_FISHFARMPLOT = 
 {
-	GENERIC = "Looks like a proper fish nursery!",
-	FUEL_HIGH = "They're doing great!",
-	FUEL_MED = "Still plenty of food.",
-	FUEL_LOW = "Almost out of food.",
-	EMPTY = "I Guess they ate it all.",
+	GENERIC = "看起来像个正经的鱼苗养殖场！",
+	FUEL_HIGH = "它们状态不错！",
+	FUEL_MED = "食物还很充足。",
+	FUEL_LOW = "食物快吃完了。",
+	EMPTY = "我猜它们都吃光了。",
 }
 
 WALTER.DESCRIBE.KYNO_ANTCHOVY = "新物种！等沃比看到这个就知道了！"
@@ -1108,7 +1108,7 @@ WALTER.DESCRIBE.KYNO_SWORDFISH_DEAD = "哎呀，他撑不了多久呢。"
 WALTER.DESCRIBE.SWORDFISHFEAST = "哇！演示做得真棒。"
 
 WALTER.DESCRIBE.KYNO_DOGFISH = "喂，沃比！我给你找了个朋友！"
-WALTER.DESCRIBE.KYNO_DOGFISH_DEAD = "嗯，我想现在该是你吃晚饭的时候了，姑娘。"
+WALTER.DESCRIBE.KYNO_DOGFISH_DEAD = "嗯，我想现在该是你吃晚饭的时候了，沃比。"
 
 WALTER.DESCRIBE.KYNO_SPOILED_FISH_LARGE = "它坏了，我该扔掉它。"
 
@@ -1132,28 +1132,28 @@ WALTER.DESCRIBE.MONKEYISLANDMEAL = "哇，这简直是一场碗里的冒险！"
 
 WALTER.DESCRIBE.KYNO_BRAINROCK_LARVAE = "婴儿般纯真的头脑，即将萌发新芽。"
 WALTER.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "你还需要些水才能长大，对吧？"
-WALTER.DESCRIBE.KYNO_BRAINROCK_CORAL = "嘿，女孩，你在想什么呢？"
+WALTER.DESCRIBE.KYNO_BRAINROCK_CORAL = "嘿，沃比，你在想什么呢？"
 
 WALTER.DESCRIBE.KYNO_BRAINROCK_ROCK = 
 {
-	GENERIC = "Sure it has a bigger brain than Woby in her small form.",
-	PICKED = "Guess it needs a nap.",
+	GENERIC = "肯定比小体型的沃比脑子大。",
+	PICKED = "估计它需要打个盹。",
 }
 
 WALTER.DESCRIBE.BRAINMETTERSOUP = "我想这能帮我想到更好的生存方案！"
 
 WALTER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
 {
-	GENERIC = "Wow! I've never seen an octopus this close before.",
-	SLEEPING = "I'll come back later.",
+	GENERIC = "哇！我以前从未如此近距离地看过章鱼。",
+	SLEEPING = "我待会儿再来。",
 }
 
 WALTER.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "他是怎么把东西放进去的？"
 
 WALTER.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
 {
-	GENERIC = "A dead fish. Just what I need.",
-	WAITING = "Perhaps some bandage will patch him up?",
+	GENERIC = "一条死鱼。正是我需要的。",
+	WAITING = "也许包扎一下能治好他？",
 }
 
 WALTER.DESCRIBE.KYNO_PACKIMBAGGIMS = "啊！沃比，你有个新朋友啦！"
@@ -1168,11 +1168,11 @@ WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "气球总能让派对更有趣！"
 
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
 {
-	GENERIC = "Popcorn ready to eat!",
-	FUEL_HIGH = "It's got plenty of fuel.",
-	FUEL_MED = "Still popping.",
-	FUEL_LOW = "Almost out of fuel.",
-	EMPTY = "I Guess it's empty.",
+	GENERIC = "爆米花可以吃了！",
+	FUEL_HIGH = "燃料还很充足。",
+	FUEL_MED = "还在爆。",
+	FUEL_LOW = "快没燃料了。",
+	EMPTY = "我猜它是空的。",
 }
 
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "非常适合篝火晚会和派对！"
@@ -1183,22 +1183,22 @@ WALTER.DESCRIBE.KYNO_FISHREGISTRYHAT = "很适合记录你发现的鱼类。"
 
 WALTER.DESCRIBE.KYNO_ANIMALFEEDER =
 {
-	GENERIC = "A feeding trough for animals.",
-	FUEL_HIGH = "They're set for a while.",
-	FUEL_MED = "Should keep them going.",
-	FUEL_LOW = "Almost out of food.",
-	EMPTY = "Guess it's feeding time.",
-	BURNT = "That didn't go well.",
+	GENERIC = "一个动物饲料槽。",
+	FUEL_HIGH = "它们够吃一阵子了。",
+	FUEL_MED = "应该能维持一阵。",
+	FUEL_LOW = "快没食物了。",
+	EMPTY = "估计该喂食了。",
+	BURNT = "这可不太妙。",
 }
 
-WALTER.DESCRIBE.CHICKENNUGGETS = "Not very fit for a camping meal, but that will do."
+WALTER.DESCRIBE.CHICKENNUGGETS = "不太适合露营餐，但也凑合吧。"
 
-WALTER.DESCRIBE.CHICKENWINGS = "Spicy, but worth it!"
+WALTER.DESCRIBE.CHICKENWINGS = "辣，但值得一试！"
 
-WALTER.DESCRIBE.CHICKENBURGER = "Perfect trail food!"
+WALTER.DESCRIBE.CHICKENBURGER = "完美的徒步旅行食物！"
 
-WALTER.DESCRIBE.CHICKENEGGSOUP = "Perfect for warming up after a long day."
+WALTER.DESCRIBE.CHICKENEGGSOUP = "漫长的一天过后，喝这个暖暖身子正合适。"
 
-WALTER.DESCRIBE.CHICKENEGGSTEW = "Feels like a real camp meal."
+WALTER.DESCRIBE.CHICKENEGGSTEW = "感觉像真正的营地大餐。"
 
-WALTER.DESCRIBE.CHICKENROTISSERIE = "That'd make a great camp dinner!"
+WALTER.DESCRIBE.CHICKENROTISSERIE = "这会是顿很棒的营地晚餐！"

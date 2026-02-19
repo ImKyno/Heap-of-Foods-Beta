@@ -79,7 +79,7 @@ local LOADINGTIPS   =
 	SAMMY1          = "萨米可以在海滨岛上找到，他出售各种稀有物品和原料，这些东西在外面可不容易找到。",
 	SAMMY2          = "萨米的货物会随着季节和特殊世界事件的变化而变化。请务必定期查看他的小店，看看他有什么可供挑选的。",
 	SAMMY3          = "打败了果蝇之王后，你该去看看萨米了。他会给那些证明自己值得的人奖励一些奇妙的物品！",
-	SAMMY4          = "If you dance near Sammy he will tag along too!",
+	SAMMY4          = "如果你在萨米附近跳舞，他也会跟着一起跳！",
 	JAWSBREAKER     = "鲨鱼舔舔糖可用于引诱岩石大白鲨和一角鲸，并能瞬间将其击杀。但切勿在自己附近使用。",
 	METALBUCKET     = "什么比水桶更好？一个结实的金属水桶，在挤奶时不会破裂！",
 	LUNARTEQUILA    = "感觉有点儿迷迷糊糊？何不来一杯启明龙舌兰酒，让你的心灵敞开，接纳真相？",
@@ -118,11 +118,11 @@ local LOADINGTIPS   =
 	BIRTHDAY_CAKE3  = "周年庆蛋糕能为周围的人提供一种舒缓的氛围。",
 	BIRTHDAY_CHEER  = "在更多料理周年庆典活动期间，玩家佩戴周年庆帽子烹饪、酿造或调味食物时，可获得周年庆贺礼。",
 	BIRTHDAY_CORN   = "投入爆米花机的每颗玉米可制作五份爆玉米花。在更多料理周年庆期间，它将制作周年庆纪念爆玉米花。",
-	CHICKEN1        = "\"I wonder if those Chickens could give me some eggs. I need some seeds to estimulate them!\" -W",
-	CHICKEN2        = "Chickens living in a Coop have a higher chance of laying Large Eggs.",
-	CHICKEN3        = "Chickens found in the wild have a small chance of laying Eggs after eating.",
-	CHICKEN4        = "Chickens living in a Coop will only produce Eggs if they eat something daily like Seeds, Wheats or Spotty Sprigs. They can also eat from the Feeding Trough.",
-	ANIMALFEEDER    = "The Feeding Trough can be used to feed some farm animals such as Chickens.",
+	CHICKEN1        = "\"我不知道那些鸡能不能给我下些蛋。我需要些种子来刺激它们产蛋！\" -W",
+	CHICKEN2        = "住在鸡舍里的鸡有更高的几率产下更大的蛋。",
+	CHICKEN3        = "在野外发现的鸡吃完食物后，有很小的几率会下蛋。",
+	CHICKEN4        = "住在鸡舍里的鸡只有在每天吃了东西（比如种子、小麦或斑点小枝）后才会产蛋。它们也可以从饲料槽中进食。",
+	ANIMALFEEDER    = "饲料槽可以用来喂养一些农场动物，比如鸡。",
 }
 
 for k, v in pairs(LOADINGTIPS) do

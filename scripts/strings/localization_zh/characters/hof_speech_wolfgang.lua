@@ -78,11 +78,11 @@ WOLFGANG.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "沃尔夫冈的大脑又糊涂起来
 WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "沃尔夫冈受到强大力量的保护！"
 WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "沃尔夫冈失去了力量……"
 
-WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Wolfgang is UNSTOPPABLE! Smash all things!"
-WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Wolfgang no longer feels mighty rage..."
+WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_START = "沃尔夫冈势不可挡！砸烂一切！"
+WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_END = "沃尔夫冈不再感到那强大的狂怒了……"
 
-WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Wolfgang stays full longer!"
-WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Wolfgang is hungry again..."
+WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "沃尔夫冈能饱得更久了！"
+WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "沃尔夫冈又饿了……"
 
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "不是正确的答案。"
 
@@ -96,7 +96,7 @@ WOLFGANG.ANNOUNCE_KYNO_POTHANGER_FAIL = "不，也许是个锅！"
 
 WOLFGANG.ANNOUNCE_KYNO_CASSEROLE_FAIL = "烤箱需要一个小锅！"
 
-WOLFGANG.ANNOUNCE_KYNO_SAPHEALER_USED = "Wolfgang uses medicine to help poor tree be mighty again!"
+WOLFGANG.ANNOUNCE_KYNO_SAPHEALER_USED = "沃尔夫冈用药帮助可怜的树，让它再次变得强大！"
 
 WOLFGANG.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "沃尔夫冈让肉质鲜美又饱满！"
 
@@ -137,22 +137,22 @@ WOLFGANG.DESCRIBE.KYNO_SYRUP = "美味的糖浆！"
 WOLFGANG.DESCRIBE.KYNO_COFFEEBEANS = "小豆子给沃尔夫冈力量！"
 WOLFGANG.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "真苦，是苦豆！"
 
-WOLFGANG.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Plant will grow again in better place!"
+WOLFGANG.DESCRIBE.DUG_KYNO_COFFEEBUSH = "植物会在更好的地方再长大！"
 
 WOLFGANG.DESCRIBE.KYNO_COFFEEBUSH = 
 {
-	GENERIC = "Coffee bush is pround, strong.",
-	PICKED = "No beans for now.",
-	WITHERED = "Plant is weak.",
+	GENERIC = "咖啡灌木又骄傲，又强壮。",
+	PICKED = "现在没豆子了。",
+	WITHERED = "植物好弱。",
 }
 
-WOLFGANG.DESCRIBE.DUG_KYNO_SPOTBUSH = "Bush needs ground!"
+WOLFGANG.DESCRIBE.DUG_KYNO_SPOTBUSH = "灌木需要土地！"
 
 WOLFGANG.DESCRIBE.KYNO_SPOTBUSH = 
 {
-	GENERIC = "Is little shrub for eating.",
-	PICKED = "Bush empty.",
-	BURNING = "Fire eats bush!",
+	GENERIC = "是能吃的小灌木。",
+	PICKED = "灌木空了。",
+	BURNING = "火在吃灌木！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_SPOTSPICE_LEAF = "很不错的小装饰。"
@@ -214,23 +214,23 @@ WOLFGANG.DESCRIBE.LONGPIGMEAL = "是人...肉..."
 
 WOLFGANG.DESCRIBE.CUCUMBERSALAD = "不是菠菜，但也许还能用！"
 
-WOLFGANG.DESCRIBE.DUG_KYNO_WILDWHEAT = "Plant needs ground!"
+WOLFGANG.DESCRIBE.DUG_KYNO_WILDWHEAT = "植物需要土地！"
 
 WOLFGANG.DESCRIBE.KYNO_WILDWHEAT = 
 {
-	GENERIC = "Tall food grass!",
-	PICKED = "Food gone for now.",
-	WITHERED = "Plant is weak.",
-	BURNING = "Fire eats grain!",
+	GENERIC = "高高的食物草！",
+	PICKED = "食物暂时没了。",
+	WITHERED = "植物好弱。",
+	BURNING = "火在吃谷物！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_MEALGRINDER = "我们必须研磨谷物来做面包！"
 
 WOLFGANG.DESCRIBE.KYNO_MUSHSTUMP =
 {
-	GENERIC = "Wolfgang could use in soups.",
-	PICKED = "Wolfgang must wait for more mushrooms.",
-	BURNING = "Fire eats mushrooms!",
+	GENERIC = "沃尔夫冈可以拿来煮汤。",
+	PICKED = "沃尔夫冈必须等更多蘑菇。",
+	BURNING = "火在吃蘑菇！",
 }
 
 WOLFGANG.DESCRIBE.GORGE_BREAD = "是面包。"
@@ -376,9 +376,9 @@ WOLFGANG.DESCRIBE.KYNO_SEEDS_KIT = "里面有小小的种子"
 
 WOLFGANG.DESCRIBE.KYNO_LIMPETROCK = 
 {
-	GENERIC = "Looks like tiny snails for eating!",
-	PICKED = "Tiny food is gone.",
-	WITHERED = "Nothing lives here.",
+	GENERIC = "看起来像是能吃的小蜗牛！",
+	PICKED = "小食物没了。",
+	WITHERED = "这里啥也没活着。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_LIMPETS = "是蜗牛吗？也许吧。"
@@ -386,9 +386,9 @@ WOLFGANG.DESCRIBE.KYNO_LIMPETS_COOKED = "下去很粘。"
 
 WOLFGANG.DESCRIBE.KYNO_LOTUS_OCEAN = 
 {
-	GENERIC = "Is puny pond plant.",
-	PICKED = "Plant needs rest.",
-	BURNING = "Bad fire!",
+	GENERIC = "是弱小的池塘植物。",
+	PICKED = "植物需要休息。",
+	BURNING = "坏火！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_LOTUS_ROOT = "软趴趴的。"
@@ -397,9 +397,9 @@ WOLFGANG.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "沃尔夫冈现在吃掉你。"
 
 WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
 {
-	GENERIC = "Strange weeds from the seas.",
-	PICKED = "No more food now.",
-	BURNING = "Fire beat water weed!",
+	GENERIC = "海里来的奇怪杂草。",
+	PICKED = "现在没食物了。",
+	BURNING = "火打败水草了！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_SEAWEEDS = "一种来自大海的杂草。"
@@ -409,9 +409,9 @@ WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_ROOT = "软软的。"
 
 WOLFGANG.DESCRIBE.KYNO_TAROROOT_OCEAN = 
 {
-	GENERIC = "Is little purple plant! Ha ha!",
-	PICKED = "Water helps it grow.",
-	BURNING = "Root is gone!",
+	GENERIC = "是小小的紫色植物！哈哈哈！",
+	PICKED = "水能帮它长大。",
+	BURNING = "根没了！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_TAROROOT_ROOT = "软趴趴的。"
@@ -420,9 +420,9 @@ WOLFGANG.DESCRIBE.KYNO_TAROROOT_COOKED = "没有蛋黄！蛋黄是最强的部�
 
 WOLFGANG.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
 {
-	GENERIC = "Is little wet vegetable.",
-	PICKED = "Will grow again.",
-	BURNING = "Fire beats water plant!",
+	GENERIC = "是小小的湿蔬菜。",
+	PICKED = "会再长大的。",
+	BURNING = "火打败水草了！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_WATERYCRESS_ROOT = "软趴趴的。"
@@ -434,9 +434,9 @@ WOLFGANG.DESCRIBE.KYNO_SALT = "让食物变得美味。"
 
 WOLFGANG.DESCRIBE.KYNO_MUSSELSTICK =
 {
-	GENERIC = "Stick attracts tiny food!",
-	PICKED = "Tiny food gone, must wait.",
-	BURNING = "Fire eats food!",
+	GENERIC = "棍子吸引小食物！",
+	PICKED = "小食物没了，必须等。",
+	BURNING = "火在吃食物！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "贻贝喜欢小棍子。"
@@ -447,11 +447,11 @@ WOLFGANG.DESCRIBE.KATFOOD = "是给小伙伴们的食物！"
 
 WOLFGANG.DESCRIBE.KYNO_BANANATREE = 
 {
-	GENERIC = "Hello, upside-down tree.",
-	PICKED = "Tree needs rest.",
-	CHOPPED = "Tree is gone.",
-	BURNING = "Fire is eating banana tree!",
-	BURNT = "Tree is very gone.",
+	GENERIC = "你好，倒着长的树。",
+	PICKED = "树需要休息。",
+	CHOPPED = "树没了。",
+	BURNING = "火在吃香蕉树！",
+	BURNT = "树彻底没了。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_BANANA = "好甜！"
@@ -459,11 +459,11 @@ WOLFGANG.DESCRIBE.KYNO_BANANA_COOKED = "又热又好吃！"
 
 WOLFGANG.DESCRIBE.KYNO_KOKONUTTREE =
 {
-	GENERIC = "Such jovial tree.",
-	PICKED = "Tree needs rest.",
-	CHOPPED = "Tree is gone.",
-	BURNING = "Fire eats coconut tree!",
-	BURNT = "Tree is very gone.",
+	GENERIC = "多么快活的树啊。",
+	PICKED = "树需要休息。",
+	CHOPPED = "树没了。",
+	BURNING = "火在吃椰子树！",
+	BURNT = "树彻底没了。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_KOKONUT = "沃尔夫冈 会赤手空拳碾碎。"
@@ -515,8 +515,8 @@ WOLFGANG.DESCRIBE.TURF_TIDALMARSH = "阶梯石。"
 
 WOLFGANG.DESCRIBE.KYNO_SALTRACK =
 {
-	GENERIC = "Is ready!",
-	PICKED = "Is not ready yet.",
+	GENERIC = "好了！",
+	PICKED = "还没好。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_SALTRACK_INSTALLER = "强大的双手可以快速完成工作。"
@@ -527,28 +527,28 @@ WOLFGANG.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "用于抓小钳子。"
 
 WOLFGANG.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
-	GENERIC = "He seems like good fellow!",
-	SLEEPING = "Boss is sleeping.",
+	GENERIC = "他看着像个好伙计！",
+	SLEEPING = "老板在睡觉。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_SUGARTREE =
 {
-	GENERIC = "Is little tree of yummy goop.",
-	CHOPPED = "Tree has been cut down!",
-	SAPPED = "Little bucket is full!",
-	PICKED = "Little bucket needs to fill up.",
-	BURNING = "Fire eats tree!",
-	BURNT = "Tree is gone.",
+	GENERIC = "是长着好吃糊糊的小树。",
+	CHOPPED = "树被砍倒了！",
+	SAPPED = "小桶满了！",
+	PICKED = "小桶需要装满。",
+	BURNING = "火在吃树！",
+	BURNT = "树没了。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_SUGARTREE_RUINED =
 {
-	GENERIC = "Little tree has boo-boo.",
-	CHOPPED = "Bad tree gone.",
-	SAPPED = "Sticky bad stuff.",
-	PICKED = "Wolfgang will crush tiny creatures.",
-	BURNING = "Fire fix!",
-	BURNT = "All gone!",
+	GENERIC = "小树受伤了。",
+	CHOPPED = "坏树没了。",
+	SAPPED = "黏糊糊的坏东西。",
+	PICKED = "沃尔夫冈要捏碎小虫子。",
+	BURNING = "火在修！",
+	BURNT = "全没了！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_SUGARTREE_BUD = "是小粉红树种子，哈哈！"
@@ -572,19 +572,19 @@ WOLFGANG.DESCRIBE.KYNO_SLAUGHTERTOOL = "沃尔夫冈用来杀人。"
 
 WOLFGANG.DESCRIBE.KYNO_CHICKEN2 = 
 {
-	GENERIC = "Little cluck bird.",
-	COOP = "Chicken belongs to Wolfgang!",
+	GENERIC = "咯咯叫的小鸟。",
+	COOP = "鸡属于沃尔夫冈了！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG = "可怜的鸡。"
-WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Is egg for giant chicken, or egg for mighty Wolfgang?"
+WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "是给巨鸡的蛋，还是给强大的沃尔夫冈的？"
 WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "好吃！"
 
 WOLFGANG.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
-	GENERIC = "Little house for tiny chickens!",
-	FULL = "House is full of mighty eggs!",
-	BURNT = "Chickens were not strong enough.",
+	GENERIC = "给小鸡的小房子！",
+	FULL = "房子里全是强大的蛋！",
+	BURNT = "鸡还不够强壮。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "坏了。"
@@ -610,8 +610,8 @@ WOLFGANG.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "朋友们！沃尔夫冈
 
 WOLFGANG.DESCRIBE.KYNO_ROCKFLIPPABLE = 
 {
-	GENERIC = "Wolfgang strong. Wolfgang flip.",
-	FLIPPED = "Tiny things were hiding!",
+	GENERIC = "沃尔夫冈强壮。沃尔夫冈翻。",
+	FLIPPED = "小东西在躲藏！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "我不喜欢这个。太吓人了。"
@@ -657,9 +657,9 @@ WOLFGANG.DESCRIBE.KYNO_SAPHEALER = "沃尔夫冈会帮助小树！"
 
 WOLFGANG.DESCRIBE.KYNO_OCEAN_WRECK = 
 {
-	GENERIC = "Not mighty enough to float.",
-	PICKED = "No more tiny food.",
-	BURNING = "Boat is finished!",
+	GENERIC = "不够强壮，浮不起来。",
+	PICKED = "没有小食物了。",
+	BURNING = "船完了！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_GHOST_PIRATE = "啊啊啊！！"
@@ -679,28 +679,28 @@ WOLFGANG.DESCRIBE.KYNO_BREWBOOK = "这是一本可以填满沃尔夫冈大肚子
 
 WOLFGANG.DESCRIBE.KYNO_WOODENKEG = 
 {
-	EMPTY = "Little barrel makes good stuff for Wolfgang!",
-	BREWING_LONG = "Strong brew needs strong patience.",
-	BREWING_SHORT = "Brew almost ready!",
-	DONE = "Ha! Drink is done!",
-	BURNT = "No drink for Wolfgang.",
+	EMPTY = "小桶能给沃尔夫冈做好东西！",
+	BREWING_LONG = "强大的酿造需要强大的耐心。",
+	BREWING_SHORT = "快好了！",
+	DONE = "哈！喝的东西好了！",
+	BURNT = "沃尔夫冈没得喝了。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_PRESERVESJAR = 
 {
-	EMPTY = "Little cask helps Wolfgang make sweet stuff!",
-	BREWING_LONG = "Good food needs long time.",
-	BREWING_SHORT = "Almost ready!",
-	DONE = "Ha! Preserves are done!",
-	BURNT = "All gone.",
+	EMPTY = "小罐子帮沃尔夫冈做好吃的东西！",
+	BREWING_LONG = "好吃的需要很长时间。",
+	BREWING_SHORT = "快好了！",
+	DONE = "哈！腌好了！",
+	BURNT = "全没了。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_ANTCHEST = 
 {
-	GENERIC = "Sweet stuff for Wolfgang!",
-	HONEY = "Chest is full of sweet honey!",
-	NECTAR = "Bees work hard on nectar.",
-	BURNING = "Oh no! Sweet chest is burning!",
+	GENERIC = "给沃尔夫冈的甜东西！",
+	HONEY = "箱子里装满了甜甜的蜂蜜！",
+	NECTAR = "蜜蜂在努力酿花蜜。",
+	BURNING = "哦不！甜箱子着火了！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_NECTAR_POD = "像蜂蜜一样甜。"
@@ -713,43 +713,43 @@ WOLFGANG.DESCRIBE.KYNO_PIKO_ORANGE = "微小的、微弱的橙色绒毛。"
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
 {
-	GENERIC = "Is strong but not strong like Wolfgang.",
-	CHOPPED = "Wolfgang take all leaves!",
-	BURNING = "Fire bad!",
-	BURNT = "Tree is gone.",
+	GENERIC = "很强壮，但没有沃尔夫冈强壮。",
+	CHOPPED = "沃尔夫冈拿走所有叶子！",
+	BURNING = "火坏！",
+	BURNT = "树没了。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
 {
-	GENERIC = "Ha. It is infested with little guys!",
-	BURNING = "Fire chase them away!",
+	GENERIC = "哈。里面全是小家伙！",
+	BURNING = "火把它们赶走！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "我可以粉碎。"
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
 {
-	GENERIC = "Weird-looking people house.",
-	BURNT = "The house was not strong enough.",
+	GENERIC = "长得怪的家伙的房子。",
+	BURNT = "房子不够强壮。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
 {
-	GENERIC = "Ugly house!",
-	CRAFTED = "House looks nicer now.",
-	BURNT = "Smell is very bad!",
+	GENERIC = "丑房子！",
+	CRAFTED = "房子现在好看多了。",
+	BURNT = "味道非常难闻！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
 {
-	GENERIC = "Fish buddy has many rare stuff in there.",
-	OCCUPIED = "Shop man is sleeping.",
+	GENERIC = "鱼伙计里面有很多稀罕东西。",
+	OCCUPIED = "店老板在睡觉。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
 {
-	GENERIC = "Has many stuff selling.",
-	EMPTY = "Nothing left to rummage.",
+	GENERIC = "有很多东西在卖。",
+	EMPTY = "没啥可翻的了。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "很高兴见到你，伙计。"
@@ -901,14 +901,14 @@ WOLFGANG.DESCRIBE.RISOTTO = "小蘑菇配米饭，沃尔夫冈很喜欢！"
 
 WOLFGANG.DESCRIBE.RICESAKE = "哦..."
 
-WOLFGANG.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Needs transplant!"
+WOLFGANG.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "需要移植！"
 
 WOLFGANG.DESCRIBE.KYNO_PINEAPPLEBUSH = 
 {
-	GENERIC = "Spiky fruit!",
-	PICKED = "No fruit right now.",
-	WITHERED = "Bush is weak.",
-	BURNING = "Fire eats bush!",
+	GENERIC = "带刺的水果！",
+	PICKED = "现在没水果了。",
+	WITHERED = "灌木好弱。",
+	BURNING = "火在吃灌木！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_PINEAPPLE = "沃尔夫冈会徒手碾碎。"
@@ -923,8 +923,8 @@ WOLFGANG.DESCRIBE.CHIMAS = "奇怪的酿造，但沃尔夫冈还是喝了！"
 
 WOLFGANG.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
 {
-	OFF = "Sprayer is sleeping.",
-	ON = "Weeee! Wolfgang play in sprinkler!",
+	OFF = "洒水器在睡觉。",
+	ON = "哇哦！沃尔夫冈在洒水器里玩！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_FOODSACK = "沃尔夫冈能背更多东西了！"
@@ -1036,9 +1036,9 @@ WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "小房子好弱……也许2026�
 
 WOLFGANG.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
-	GENERIC = "Tiny mushrooms hiding in ground! Wolfgang found them!",
-	PICKED = "Wolfgang wants more!",
-	BURNING = "Fire ruin good food!",
+	GENERIC = "小蘑菇藏在地里！沃尔夫冈找到它们了！",
+	PICKED = "沃尔夫冈还想要更多！",
+	BURNING = "火毁了好吃的！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_TRUFFLES = "味道好浓！沃尔夫冈饿了！"
@@ -1046,8 +1046,8 @@ WOLFGANG.DESCRIBE.KYNO_TRUFFLES_COOKED = "嗯！味道强烈又美味！"
 
 WOLFGANG.DESCRIBE.KYNO_ITEMSHOWCASER = 
 {
-	EMPTY = "Wolfgang show food! Make Wolfgang proud and hungry!",
-	FULL = "Wolfgang made mighty meal!",
+	EMPTY = "沃尔夫冈展示食物！让沃尔夫冈骄傲又饥饿！",
+	FULL = "沃尔夫冈做了强大的大餐！",
 }
 
 WOLFGANG.DESCRIBE.KYNO_SPORECAP = "小蘑菇生病了！"
@@ -1062,7 +1062,7 @@ WOLFGANG.DESCRIBE.TRUFFLESGRINDER = "沃尔夫冈吃高级泥巴三明治会变�
 
 WOLFGANG.DESCRIBE.SPORECAPPIE = "沃尔夫冈不确定是食物还是毒药……"
 
-WOLFGANG.DESCRIBE.SPORECAP_SKEWERS = "Wolfgang喜欢蘑菇串！好吃！"
+WOLFGANG.DESCRIBE.SPORECAP_SKEWERS = "沃尔夫冈喜欢蘑菇串！好吃！"
 
 WOLFGANG.DESCRIBE.TRUFFLEOIL = "小瓶子，大味道！沃尔夫冈不知道是饿了还是怕了。"
 
@@ -1071,11 +1071,11 @@ WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "沃尔夫冈要为小鱼们�
 
 WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT = 
 {
-	GENERIC = "Strong fish live here!",
-	FUEL_HIGH = "Fish are very full!",
-	FUEL_MED = "Fish eat good.",
-	FUEL_LOW = "Fish need more food.",
-	EMPTY = "No food for fish.",
+	GENERIC = "强大的鱼住在这里！",
+	FUEL_HIGH = "鱼吃得很饱！",
+	FUEL_MED = "鱼吃得不错。",
+	FUEL_LOW = "鱼需要更多食物。",
+	EMPTY = "没东西给鱼吃了。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_ANTCHOVY = "小鱼虫！沃尔夫冈不确定它究竟是美味还是可怕。"
@@ -1136,24 +1136,24 @@ WOLFGANG.DESCRIBE.KYNO_BRAINROCK_CORAL = "嘿嘿，它在沃尔夫冈触碰下�
 
 WOLFGANG.DESCRIBE.KYNO_BRAINROCK_ROCK = 
 {
-	GENERIC = "Wolfgang's brain will punch this brain.",
-	PICKED = "Rock is tired.",
+	GENERIC = "沃尔夫冈的大脑要揍这个大脑。",
+	PICKED = "石头累了。",
 }
 
 WOLFGANG.DESCRIBE.BRAINMETTERSOUP = "汤没有几个字母呢，哈哈。"
 
 WOLFGANG.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
 {
-	GENERIC = "Strong creature! Give Wolfgang many good things!",
-	SLEEPING = "King is sleeping.",
+	GENERIC = "强大的生物！给沃尔夫冈很多好东西！",
+	SLEEPING = "国王在睡觉。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "把你的宝藏交给沃尔夫冈！"
 
 WOLFGANG.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
 {
-	GENERIC = "Is bone. I like it.",
-	WAITING = "Bone looking way skinny.",
+	GENERIC = "是骨头。沃尔夫冈喜欢。",
+	WAITING = "骨头看起来好瘦。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_PACKIMBAGGIMS = "你好啊，强壮的朋友！"
@@ -1168,11 +1168,11 @@ WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "沃尔夫冈喜欢派对气球！
 
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
 {
-	GENERIC = "Wolfgang likes big popcorn!",
-	FUEL_HIGH = "Plenty fuel for popcorn!",
-	FUEL_MED = "Still popping good.",
-	FUEL_LOW = "Fuel getting weak.",
-	EMPTY = "No fuel. No popcorn.",
+	GENERIC = "沃尔夫冈喜欢大爆米花！",
+	FUEL_HIGH = "很多燃料做爆米花！",
+	FUEL_MED = "还在好好爆。",
+	FUEL_LOW = "燃料变弱了。",
+	EMPTY = "没燃料。没爆米花。",
 }
 
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "给沃尔夫冈的小小爆米花！"
@@ -1183,22 +1183,22 @@ WOLFGANG.DESCRIBE.KYNO_FISHREGISTRYHAT = "帽子让沃尔夫冈更懂小鱼！"
 
 WOLFGANG.DESCRIBE.KYNO_ANIMALFEEDER =
 {
-	GENERIC = "Animals eat from this.",
-	FUEL_HIGH = "Trough is very full!",
-	FUEL_MED = "Still strong with food.",
-	FUEL_LOW = "Food is getting weak.",
-	EMPTY = "No food for animals.",
-	BURNT = "Feeder is no more.",
+	GENERIC = "动物们从这个吃东西。",
+	FUEL_HIGH = "食槽非常满！",
+	FUEL_MED = "食物还很充足。",
+	FUEL_LOW = "食物变少了。",
+	EMPTY = "没东西给动物吃了。",
+	BURNT = "食槽没了。",
 }
 
-WOLFGANG.DESCRIBE.CHICKENNUGGETS = "Tiny chicken pieces make Wolfgang slightly strong."
+WOLFGANG.DESCRIBE.CHICKENNUGGETS = "小小的鸡肉块让沃尔夫冈变强了一点点。"
 
-WOLFGANG.DESCRIBE.CHICKENWINGS = "Spicy wings make Wolfgang VERY STRONG!"
+WOLFGANG.DESCRIBE.CHICKENWINGS = "辣鸡翅让沃尔夫冈非常非常强壮！"
 
-WOLFGANG.DESCRIBE.CHICKENBURGER = "Chicken sandwich make Wolfgang strong!"
+WOLFGANG.DESCRIBE.CHICKENBURGER = "鸡肉三明治让沃尔夫冈变强！"
 
-WOLFGANG.DESCRIBE.CHICKENEGGSOUP = "Soup make Wolfgang feel strong and cozy!"
+WOLFGANG.DESCRIBE.CHICKENEGGSOUP = "汤让沃尔夫冈又强又舒服！"
 
-WOLFGANG.DESCRIBE.CHICKENEGGSTEW = "Big stew make Wolfgang very full!"
+WOLFGANG.DESCRIBE.CHICKENEGGSTEW = "大炖菜让沃尔夫冈非常饱！"
 
-WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Spinning chicken make Wolfgang very hungry!"
+WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "转着圈的鸡让沃尔夫冈非常饿！"

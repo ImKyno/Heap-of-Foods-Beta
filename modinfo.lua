@@ -43,7 +43,7 @@ Build yourself a Fish Hatchery to raise your own fish at the comfort of your bas
 建造一座鱼苗孵化场，在你的基地里舒适地饲养属于你自己的鱼儿；探索海洋，寻找那些难以捉摸的生物；参与海洋狩猎，结识一位友好的新伙伴。
 
 󰀌 Mod 版本： 4.6-B
-󰀧 更新内容： 鸡肉周
+󰀧 更新内容： 养殖周
 ]],	
 		zht =
 [[

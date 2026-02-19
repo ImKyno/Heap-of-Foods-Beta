@@ -78,11 +78,11 @@ WURT.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "大脑又开始怪怪的，咕噜..."
 WURT.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "加油，小家伙！"
 WURT.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "感觉虚弱，咕噜……"
 
-WURT.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Strong! But squishy, too!"
-WURT.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Not extra strong anymore..."
+WURT.ANNOUNCE_KYNO_BERSERKERBUFF_START = "强壮！但也是软软的！"
+WURT.ANNOUNCE_KYNO_BERSERKERBUFF_END = "不再特别强壮了……"
 
-WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Sstay full longer!"
-WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Hungry again..."
+WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "饱得更久了！"
+WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "又饿了……"
 
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "沼泽里有漂亮的鱼！"
 
@@ -98,7 +98,7 @@ WURT.ANNOUNCE_KYNO_POTHANGER_FAIL = "呃，不想这样？"
 
 WURT.ANNOUNCE_KYNO_CASSEROLE_FAIL = "咕噜……不是这个……"
 
-WURT.ANNOUNCE_KYNO_SAPHEALER_USED = "Tree is nice again, yay!"
+WURT.ANNOUNCE_KYNO_SAPHEALER_USED = "树又好了，耶！"
 
 WURT.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "咕噜……为什么所有事情都这么暴力？"
 
@@ -139,22 +139,22 @@ WURT.DESCRIBE.KYNO_SYRUP = "粘甜的！"
 WURT.DESCRIBE.KYNO_COFFEEBEANS = "能给人能量的豆子。"
 WURT.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "需要一些东西......"
 
-WURT.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Needs dirt!"
+WURT.DESCRIBE.DUG_KYNO_COFFEEBUSH = "需要土！"
 
 WURT.DESCRIBE.KYNO_COFFEEBUSH = 
 {
-	GENERIC = "Hot beans!",
-	PICKED = "No beans now.",
-	WITHERED = "Needs ash to grow, florp.",
+	GENERIC = "热乎乎的豆子！",
+	PICKED = "现在没豆子了。",
+	WITHERED = "需要灰才能长，浮浪噗。",
 }
 
-WURT.DESCRIBE.DUG_KYNO_SPOTBUSH = "Plant need ground!"
+WURT.DESCRIBE.DUG_KYNO_SPOTBUSH = "植物需要地！"
 
 WURT.DESCRIBE.KYNO_SPOTBUSH = 
 {
-	GENERIC = "Pink shrub, florp.",
-	PICKED = "No stuff now.",
-	BURNING = "Bad fire!",
+	GENERIC = "粉色的灌木，浮浪噗。",
+	PICKED = "现在没东西了。",
+	BURNING = "坏火！",
 }
 
 WURT.DESCRIBE.KYNO_SPOTSPICE_LEAF = "小装饰，小花。"
@@ -216,23 +216,23 @@ WURT.DESCRIBE.LONGPIGMEAL = "这是个糟糕的主意。."
 
 WURT.DESCRIBE.CUCUMBERSALAD = "看起来不错，但味道..."
 
-WURT.DESCRIBE.DUG_KYNO_WILDWHEAT = "Grass tuft, flort."
+WURT.DESCRIBE.DUG_KYNO_WILDWHEAT = "一簇草，浮浪噗。"
 
 WURT.DESCRIBE.KYNO_WILDWHEAT = 
 {
-	GENERIC = "Grass, flort.",
-	PICKED = "No food now.",
-	WITHERED = "Needs water.",
-	BURNING = "Need to stop the fire!!",
+	GENERIC = "草，浮浪噗。",
+	PICKED = "现在没食物了。",
+	WITHERED = "需要水。",
+	BURNING = "得把火扑灭！！",
 }
 
 WURT.DESCRIBE.KYNO_MEALGRINDER = "咕噜咕噜……我该如何使用它？"
 
 WURT.DESCRIBE.KYNO_MUSHSTUMP =
 {
-	GENERIC = "Ooooh, this where mushrooms grow!",
-	PICKED = "No more mushroom..?",
-	BURNING = "Bad fire!",
+	GENERIC = "哦哦哦，蘑菇长在这儿！",
+	PICKED = "没有蘑菇了……？",
+	BURNING = "坏火！",
 }
 
 WURT.DESCRIBE.GORGE_BREAD = "哦……闻起来很香，沃比！"
@@ -378,9 +378,9 @@ WURT.DESCRIBE.KYNO_SEEDS_KIT = "微小的碎片"
 
 WURT.DESCRIBE.KYNO_LIMPETROCK = 
 {
-	GENERIC = "It's growing meat... Glurgh.",
-	PICKED = "Meat is hiding!",
-	WITHERED = "Too dry.",
+	GENERIC = "长着肉……咕噜。",
+	PICKED = "肉躲起来了！",
+	WITHERED = "太干了。",
 }
 
 WURT.DESCRIBE.KYNO_LIMPETS = "蜗牛..."
@@ -388,9 +388,9 @@ WURT.DESCRIBE.KYNO_LIMPETS_COOKED = "烤熟的蜗牛，小花。"
 
 WURT.DESCRIBE.KYNO_LOTUS_OCEAN = 
 {
-	GENERIC = "Aww...",
-	PICKED = "No flower now, florp.",
-	BURNING = "Bad fire! Bad!",
+	GENERIC = "啊……",
+	PICKED = "现在没花了，浮浪噗。",
+	BURNING = "坏火！坏！",
 }
 
 WURT.DESCRIBE.KYNO_LOTUS_ROOT = "我得把它们种在水里，浮浪噗。"
@@ -399,9 +399,9 @@ WURT.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "我想吃它。"
 
 WURT.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
 {
-	GENERIC = "Weeds.",
-	PICKED = "They grow back later.",
-	BURNING = "Fire hurt sea plants!",
+	GENERIC = "杂草。",
+	PICKED = "它们晚点会再长出来的。",
+	BURNING = "火伤害海里的植物了！",
 }
 
 WURT.DESCRIBE.KYNO_SEAWEEDS = "很滑！"
@@ -411,20 +411,20 @@ WURT.DESCRIBE.KYNO_SEAWEEDS_ROOT = "我要把它们种在水里，花花公子�
 
 WURT.DESCRIBE.KYNO_TAROROOT_OCEAN = 
 {
-	GENERIC = "Pretty!",
-	PICKED = "Water help it grow, florp!",
-	BURNING = "Noooo!",
+	GENERIC = "漂亮！",
+	PICKED = "水帮它长大，浮浪噗！",
+	BURNING = "不——！",
 }
 
-WURT.DESCRIBE.KYNO_TAROROOT_ROOT = "我得把它们种在水里， 浮浪噗。"
+WURT.DESCRIBE.KYNO_TAROROOT_ROOT = "我得把它们种在水里，浮浪噗。"
 WURT.DESCRIBE.KYNO_TAROROOT = "大紫好吃！"
 WURT.DESCRIBE.KYNO_TAROROOT_COOKED = "带出紫色的味道，小花。"
 
 WURT.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
 {
-	GENERIC = "I want it!",
-	PICKED = "Grow back soon!",
-	BURNING = "Fire bad for water plants!",
+	GENERIC = "我想要！",
+	PICKED = "快点长回来！",
+	BURNING = "火对水里的植物不好！",
 }
 
 WURT.DESCRIBE.KYNO_WATERYCRESS_ROOT = "我得把它们种在水里，浮浪噗。"
@@ -436,9 +436,9 @@ WURT.DESCRIBE.KYNO_SALT = "奇怪的小锅。"
 
 WURT.DESCRIBE.KYNO_MUSSELSTICK =
 {
-	GENERIC = "Friends are trapped!",
-	PICKED = "No mussels now!",
-	BURNING = "Bad fire!",
+	GENERIC = "朋友们被困住了！",
+	PICKED = "现在没贻贝了！",
+	BURNING = "坏火！",
 }
 
 WURT.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "咕噜……抓朋友……"
@@ -449,11 +449,11 @@ WURT.DESCRIBE.KATFOOD = "小猫的食物，咕噜咕噜。"
 
 WURT.DESCRIBE.KYNO_BANANATREE = 
 {
-	GENERIC = "See fruits up there!!",
-	PICKED = "No yellow food now.",
-	CHOPPED = "Tree gone, flort.",
-	BURNING = "Bad fire!",
-	BURNT = "All gone.",
+	GENERIC = "上面有水果！！",
+	PICKED = "现在没黄色食物了。",
+	CHOPPED = "树没了，浮浪噗。",
+	BURNING = "坏火！",
+	BURNT = "全没了。",
 }
 
 WURT.DESCRIBE.KYNO_BANANA = "嗯……好水果，花花公子。"
@@ -461,11 +461,11 @@ WURT.DESCRIBE.KYNO_BANANA_COOKED = "好吃！"
 
 WURT.DESCRIBE.KYNO_KOKONUTTREE = 
 {
-	GENERIC = "Big leaves!",
-	PICKED = "No coconuts for now, florp.",
-	CHOPPED = "Tree gone.",
-	BURNING = "Bad fire!!",
-	BURNT = "All gone. *snif*",
+	GENERIC = "大叶子！",
+	PICKED = "现在没椰子了，浮浪噗。",
+	CHOPPED = "树没了。",
+	BURNING = "坏火！！",
+	BURNT = "全没了。*抽泣*",
 }
 
 WURT.DESCRIBE.KYNO_KOKONUT = "树坚果！"
@@ -517,8 +517,8 @@ WURT.DESCRIBE.TURF_TIDALMARSH = "记得我回家，小花。"
 
 WURT.DESCRIBE.KYNO_SALTRACK =
 {
-	GENERIC = "There stuff growing on it!",
-	PICKED = "How this supposed to work, florp?",
+	GENERIC = "上面长东西了！",
+	PICKED = "这玩意儿怎么弄啊，浮浪噗？",
 }
 
 WURT.DESCRIBE.KYNO_SALTRACK_INSTALLER = "这会越过咸水池吗？"
@@ -529,28 +529,28 @@ WURT.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "看起来像小房子！"
 
 WURT.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
 {
-	GENERIC = "Something weird about that Pigfolk!",
-	SLEEPING = "Sssh! Pigfolk sleeping.",
+	GENERIC = "那个猪人怪怪的！",
+	SLEEPING = "嘘！猪人在睡觉。",
 }
 
 WURT.DESCRIBE.KYNO_SUGARTREE =
 {
-	GENERIC = "There sweet stuff inside!",
-	CHOPPED = "Someone took tree! Not me!",
-	SAPPED = "Mmm, it full of sweet stuff!",
-	PICKED = "Aww... nothing left.",
-	BURNING = "Bad fire!",
-	BURNT = "All gone.",
+	GENERIC = "里面有甜甜的东西！",
+	CHOPPED = "有人把树弄走了！不是我！",
+	SAPPED = "嗯，里面装满了甜甜的东西！",
+	PICKED = "啊……啥都没了。",
+	BURNING = "坏火！",
+	BURNT = "全没了。",
 }
 
 WURT.DESCRIBE.KYNO_SUGARTREE_RUINED =
 {
-	GENERIC = "Tree okay?",
-	CHOPPED = "Tree gone.",
-	SAPPED = "Bad sticky.",
-	PICKED = "Blegh, there bugs stuck in the sweet stuff.",
-	BURNING = "Fire clean!",
-	BURNT = "All gone.",
+	GENERIC = "树还好吗？",
+	CHOPPED = "树没了。",
+	SAPPED = "坏黏黏。",
+	PICKED = "噗呃，甜甜的东西里有虫子卡住了。",
+	BURNING = "火清洁！"",
+	BURNT = "全没了。",
 }
 
 WURT.DESCRIBE.KYNO_SUGARTREE_BUD = "小种子尝起来很有趣，花花公子。"
@@ -574,19 +574,19 @@ WURT.DESCRIBE.KYNO_SLAUGHTERTOOL = "嗯？这是为了什么？"
 
 WURT.DESCRIBE.KYNO_CHICKEN2 = 
 {
-	GENERIC = "A chicken!",
-	COOP = "Bird live here now.",
+	GENERIC = "一只鸡！",
+	COOP = "鸟现在住这儿了。",
 }
 
 WURT.DESCRIBE.KYNO_CHICKEN_EGG = "里面有小鸡？"
-WURT.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Ooh! Big egg is heavy!"
+WURT.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "哦！大蛋好重！"
 WURT.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "不要！"
 
 WURT.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
-	GENERIC = "Chicken home! Maybe eggs inside, florp.",
-	FULL = "Heap of eggs!",
-	BURNT = "Bird house broke...",
+	GENERIC = "鸡的家！里面可能有蛋，浮浪噗。",
+	FULL = "一堆蛋！",
+	BURNT = "鸟的房子坏了……",
 }
 
 WURT.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "咕噜……它坏了。"
@@ -612,8 +612,8 @@ WURT.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "想知道要烤什么..."
 
 WURT.DESCRIBE.KYNO_ROCKFLIPPABLE = 
 {
-	GENERIC = "Flip! Flip!",
-	FLIPPED = "Found stuff!",
+	GENERIC = "翻！翻！",
+	FLIPPED = "找到东西了！",
 }
 
 WURT.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "里面有什么？"
@@ -659,9 +659,9 @@ WURT.DESCRIBE.KYNO_SAPHEALER = "适合甜树的嘘声，花花公子。"
 
 WURT.DESCRIBE.KYNO_OCEAN_WRECK = 
 {
-	GENERIC = "Broken ships...",
-	PICKED = "Snails gone now.",
-	BURNING = "Bad fire!",
+	GENERIC = "破船……",
+	PICKED = "蜗牛现在没了。",
+	BURNING = "坏火！",
 }
 
 WURT.DESCRIBE.KYNO_GHOST_PIRATE = "他飘着呢！！！"
@@ -681,28 +681,28 @@ WURT.DESCRIBE.KYNO_BREWBOOK = "就像这个，有食物图片！"
 
 WURT.DESCRIBE.KYNO_WOODENKEG = 
 {
-	EMPTY = "Strange.",
-	BREWING_LONG = "Taking long time, flort.",
-	BREWING_SHORT = "Almost done, florp!",
-	DONE = "Ready!",
-	BURNT = "Fire ruin it...",
+	EMPTY = "好奇怪。",
+	BREWING_LONG = "要好久，浮浪噗。",
+	BREWING_SHORT = "快好了，浮浪噗！",
+	DONE = "好了！",
+	BURNT = "火毁了它……",
 }
 
 WURT.DESCRIBE.KYNO_PRESERVESJAR = 
 {
-	EMPTY = "Its smelly, florp.",
-	BREWING_LONG = "Taking long time.",
-	BREWING_SHORT = "Almost mine!",
-	DONE = "Sweet stuff!",
-	BURNT = "Fire ruin it.",
+	EMPTY = "好臭，浮浪噗。",
+	BREWING_LONG = "要好久。",
+	BREWING_SHORT = "快是我的了！",
+	DONE = "甜甜的东西！",
+	BURNT = "火毁了它。",
 }
 
 WURT.DESCRIBE.KYNO_ANTCHEST = 
 {
-	GENERIC = "Sweet yums maker!",
-	HONEY = "Full of sweet goodies, florp.",
-	NECTAR = "Still waiting.",
-	BURNING = "Bad fire! Ruins everything!",
+	GENERIC = "做甜好吃的东西的机器！",
+	HONEY = "装满了好吃的甜东西，浮浪噗。",
+	NECTAR = "还在等。",
+	BURNING = "坏火！毁了一切！",
 }
 
 WURT.DESCRIBE.KYNO_NECTAR_POD = "嗯嗯嗯！"
@@ -715,43 +715,43 @@ WURT.DESCRIBE.KYNO_PIKO_ORANGE = "哇！花式尾巴！"
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
 {
-	GENERIC = "Nice looking tree!",
-	CHOPPED = "Leaves mine now, flort.",
-	BURNING = "Bad fire!",
-	BURNT = "All gone, florp.",
+	GENERIC = "好看的树！",
+	CHOPPED = "叶子现在是我的了，浮浪噗。",
+	BURNING = "坏火！",
+	BURNT = "全没了，浮浪噗。",
 }
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
 {
-	GENERIC = "Full of squirrels, glurrp...",
-	BURNING = "Bad fire! Bad!",
+	GENERIC = "好多松鼠，咕噜噗……",
+	BURNING = "坏火！坏！",
 }
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "一个盒子。"
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
 {
-	GENERIC = "Home is where swamp is, flort.",
-	BURNT = "Home gone...",
+	GENERIC = "家在沼泽的地方，浮浪噗。",
+	BURNT = "家没了……",
 }
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
 {
-	GENERIC = "Home is where swamp is, flort.",
-	CRAFTED = "Home looks nice now!",
-	BURNT = "Stinky..!",
+	GENERIC = "家在沼泽的地方，浮浪噗。",
+	CRAFTED = "家现在好看了！",
+	BURNT = "好臭……！",
 }
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
 {
-	GENERIC = "Friend has many stuff inside house!",
-	OCCUPIED = "Friend must be sleeping, florp.",
+	GENERIC = "朋友家里面好多东西！",
+	OCCUPIED = "朋友肯定在睡觉，浮浪噗。",
 }
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
 {
-	GENERIC = "Friend stuff!",
-	EMPTY = "All gone, florp.",
+	GENERIC = "朋友的东西！",
+	EMPTY = "全没了，浮浪噗。",
 }
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "终于找到一个正常的人了！"
@@ -903,14 +903,14 @@ WURT.DESCRIBE.RISOTTO = "很细腻, 浮浪噗。"
 
 WURT.DESCRIBE.RICESAKE = "咕噜..."
 
-WURT.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Glorp!! Spiky!!"
+WURT.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "咕噜！！有刺！！"
 
 WURT.DESCRIBE.KYNO_PINEAPPLEBUSH = 
 {
-	GENERIC = "Glorp!! Spiky!!",
-	PICKED = "No fruit now, florp.",
-	WITHERED = "Too dry.",
-	BURNING = "Ahh! Its on fire!!",
+	GENERIC = "咕噜！！有刺！",
+	PICKED = "现在没水果了，浮浪噗。",
+	WITHERED = "太干了。",
+	BURNING = "啊！！着火了！！",
 }
 
 WURT.DESCRIBE.KYNO_PINEAPPLE = "长满尖刺的水果!!"
@@ -925,8 +925,8 @@ WURT.DESCRIBE.CHIMAS = "太好了!"
 
 WURT.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
 {
-	OFF = "Helpful for plants, florp.",
-	ON = "Water good!",
+	OFF = "对植物有帮助，浮浪噗。",
+	ON = "水好！",
 }
 
 WURT.DESCRIBE.KYNO_FOODSACK = "保持食物新鲜"
@@ -1038,9 +1038,9 @@ WURT.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "可怕的房子……不过也许以�
 
 WURT.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
-	GENERIC = "Mushrooms! Glorp! I like them!",
-	PICKED = "No more food.",
-	BURNING = "Fire ruin good stuff!",
+	GENERIC = "蘑菇！咕噜！我喜欢！",
+	PICKED = "没食物了。",
+	BURNING = "火毁了好东西！",
 }
 
 WURT.DESCRIBE.KYNO_TRUFFLES = "味道很浓……但很好吃！"
@@ -1048,8 +1048,8 @@ WURT.DESCRIBE.KYNO_TRUFFLES_COOKED = "现在闻起来真香！"
 
 WURT.DESCRIBE.KYNO_ITEMSHOWCASER = 
 {
-	EMPTY = "For showing food, florp! But... can I eat after?",
-	FULL = "Food looking fancy, florp.",
+	EMPTY = "用来展示食物的，浮浪噗！但是……之后能吃吗？",
+	FULL = "食物看着好高级，浮浪噗。",
 }
 
 WURT.DESCRIBE.KYNO_SPORECAP = "呱！味道好臭！"
@@ -1073,11 +1073,11 @@ WURT.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "这是鱼友们的乐园，浮�
 
 WURT.DESCRIBE.KYNO_FISHFARMPLOT = 
 {
-	GENERIC = "Home for fishy friends! Yay~",
-	FUEL_HIGH = "Fish eat good!",
-	FUEL_MED = "Still okay.",
-	FUEL_LOW = "Need more food!",
-	EMPTY = "Fish hungry!",
+	GENERIC = "鱼鱼朋友的家！耶~",
+	FUEL_HIGH = "鱼吃得好！",
+	FUEL_MED = "还行。",
+	FUEL_LOW = "需要更多食物！",
+	EMPTY = "鱼饿了！",
 }
 
 WURT.DESCRIBE.KYNO_ANTCHOVY = "咕噜！鱼腥味……怪怪的……"
@@ -1138,24 +1138,24 @@ WURT.DESCRIBE.KYNO_BRAINROCK_CORAL = "咕噜！这食物伤大脑！"
 
 WURT.DESCRIBE.KYNO_BRAINROCK_ROCK = 
 {
-	GENERIC = "It smart rock!",
-	PICKED = "Rock quiet now.",
+	GENERIC = "是聪明的石头！",
+	PICKED = "石头现在安静了。",
 }
 
 WURT.DESCRIBE.BRAINMETTERSOUP = "喝汤能促进思考，浮浪噗？"
 
 WURT.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
 {
-	GENERIC = "What you want?",
-	SLEEPING = "Sea king sleeping now, florp.",
+	GENERIC = "你想要什么？",
+	SLEEPING = "海王现在睡觉了，浮浪噗。",
 }
 
 WURT.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "里面有好多东西！！"
 
 WURT.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
 {
-	GENERIC = "Poor fishy!",
-	WAITING = "Taking nap?",
+	GENERIC = "可怜的小鱼鱼！",
+	WAITING = "在打盹？",
 }
 
 WURT.DESCRIBE.KYNO_PACKIMBAGGIMS = "哎呀……一只友好的小鸟儿！"
@@ -1170,11 +1170,11 @@ WURT.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "漂浮的小东西，浮浪噗！"
 
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
 {
-	GENERIC = "Popcorn, good for Wurt!",
-	FUEL_HIGH = "Still going, florp!",
-	FUEL_MED = "Okay for now.",
-	FUEL_LOW = "Needs fuel, flort.",
-	EMPTY = "No more popcorn popping...",
+	GENERIC = "爆米花，对沃特好！",
+	FUEL_HIGH = "还在转，浮浪噗！",
+	FUEL_MED = "暂时还行。",
+	FUEL_LOW = "需要燃料，浮浪噗。",
+	EMPTY = "没有爆米花爆了……",
 }
 
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "玉米噼里啪啦！有趣的食物，浮浪噗！"
@@ -1185,22 +1185,22 @@ WURT.DESCRIBE.KYNO_FISHREGISTRYHAT = "帽子帮忙了解鱼朋友！咕噜！"
 
 WURT.DESCRIBE.KYNO_ANIMALFEEDER =
 {
-	GENERIC = "Cute animals eat here, florp.",
-	FUEL_HIGH = "Lots of food! Good.",
-	FUEL_MED = "Still okay.",
-	FUEL_LOW = "Needs more food soon.",
-	EMPTY = "Empty!",
-	BURNT = "Fire ruin it! Glurgh...",
+	GENERIC = "可爱的动物们在这儿吃饭，浮浪噗。",
+	FUEL_HIGH = "好多食物！好。",
+	FUEL_MED = "还行。",
+	FUEL_LOW = "很快需要更多食物。",
+	EMPTY = "空了！",
+	BURNT = "火毁了它！咕噜……",
 }
 
-WURT.DESCRIBE.CHICKENNUGGETS = "Poor chicken... *snif*"
+WURT.DESCRIBE.CHICKENNUGGETS = "可怜的鸡……*抽泣*"
 
-WURT.DESCRIBE.CHICKENWINGS = "Why do that to chicken?!"
+WURT.DESCRIBE.CHICKENWINGS = "为什么要对鸡做这种事？！"
 
-WURT.DESCRIBE.CHICKENBURGER = "Why do this to chicken?!"
+WURT.DESCRIBE.CHICKENBURGER = "为什么要对鸡做这种事？！"
 
-WURT.DESCRIBE.CHICKENEGGSOUP = "It very warm."
+WURT.DESCRIBE.CHICKENEGGSOUP = "很暖和。"
 
-WURT.DESCRIBE.CHICKENEGGSTEW = "Yuck!"
+WURT.DESCRIBE.CHICKENEGGSTEW = "恶心！"
 
-WURT.DESCRIBE.CHICKENROTISSERIE = "Nooo! Poor bird!"
+WURT.DESCRIBE.CHICKENROTISSERIE = "不——！可怜的鸟！"
