@@ -56,7 +56,14 @@ local function UpdateFoodSymbol(inst)
 			inst.AnimState:HideSymbol("food")
 		else
 			inst.AnimState:ShowSymbol("food")
-			inst.AnimState:OverrideSymbol("food", "kyno_animalfeeder", "food")
+
+			if percent <= 0.20 then
+				inst.AnimState:OverrideSymbol("food", "kyno_animalfeeder", "food2")
+			elseif percent <= 0.50 then
+				inst.AnimState:OverrideSymbol("food", "kyno_animalfeeder", "food1")
+			else
+				inst.AnimState:OverrideSymbol("food", "kyno_animalfeeder", "food")
+			end
 		end
 	end
 end
