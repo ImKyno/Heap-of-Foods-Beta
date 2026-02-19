@@ -580,6 +580,12 @@ WOODIE.DESCRIBE.KYNO_CHICKEN_EGG = "Jest tam kurczak, myślący kurczęce myśli
 WOODIE.DESCRIBE.KYNO_CHICKEN_LARGE = "Sporo omletu, co?"
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Cóż, nie stało się z tego kurczak."
 
+WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Daj mu jeszcze chwilę, co?",
+	HATCHING = "No proszę! Maluch już wychodzi!",
+}
+
 WOODIE.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Ładny mały kurnik, co? Kurczaki mają wygodnie.",

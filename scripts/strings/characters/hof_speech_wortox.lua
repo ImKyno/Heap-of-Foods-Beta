@@ -580,6 +580,12 @@ WORTOX.DESCRIBE.KYNO_CHICKEN_EGG = "An egg from a chicken, or so I've heard."
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "A big shell for a tiny soul!"
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Probably a mortal thing."
 
+WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Still hatching.",
+	HATCHING = "Out you go!",
+}
+
 WORTOX.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "A never ending supply of eggs!",

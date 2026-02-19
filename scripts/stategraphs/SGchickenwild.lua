@@ -105,7 +105,7 @@ local states =
 	State
 	{
 		name = "honk",
-		tags = { "idle" },
+		tags = { "busy", "honking" },
 
 		onenter = function(inst)
 			inst.Physics:Stop()
@@ -125,7 +125,7 @@ local states =
 	State
 	{
 		name = "eat_pre",
-		tags = { "idle", "eating" },
+		tags = { "busy", "eating" },
 
 		onenter = function(inst)
 			inst.Physics:Stop()
@@ -149,7 +149,7 @@ local states =
 	State
 	{
 		name = "eat",
-		tags = { "idle", "eating" },
+		tags = { "busy", "eating" },
 
         onenter = function(inst)
             inst.Physics:Stop()
@@ -166,7 +166,7 @@ local states =
 	State
 	{
 		name = "eat_pst",
-		tags = { "idle", "eating" },
+		tags = { "busy", "eating" },
 
 		onenter = function(inst)
 			inst.Physics:Stop()
@@ -176,14 +176,16 @@ local states =
 
 		events =
 		{
-			EventHandler("animover", function(inst) inst.sg:GoToState("idle") end),
+			EventHandler("animover", function(inst)
+				inst.sg:GoToState("idle")
+			end),
 		},
 	},
 	
 	State
 	{
 		name = "hop",
-		tags = {"moving", "canrotate", "hopping"},
+		tags = { "moving", "canrotate", "hopping" },
         
 		onenter = function(inst) 
 			inst.AnimState:PlayAnimation("hop")
@@ -241,7 +243,9 @@ local states =
 
 		events =
 		{
-			EventHandler("animover", function(inst) inst.sg:GoToState("run") end),
+			EventHandler("animover", function(inst)
+				inst.sg:GoToState("run")
+			end),
 		},
 	},
 	
@@ -265,7 +269,7 @@ local states =
 	State
 	{
 		name = "lay_egg",
-		tags = { "idle" },
+		tags = { "busy", "laying" },
 
 		onenter = function(inst)
 			inst.Physics:Stop()
@@ -276,7 +280,7 @@ local states =
 		
 		timeline =
 		{
-			TimeEvent(15 * FRAMES, function(inst) 
+			TimeEvent(18 * FRAMES, function(inst) 
 				inst.Physics:Stop()
 				inst.SoundEmitter:PlaySound("summerevent/cannon/fire3")
 				

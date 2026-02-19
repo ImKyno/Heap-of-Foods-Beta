@@ -580,6 +580,12 @@ WALTER.DESCRIBE.KYNO_CHICKEN_EGG = "There is a tiny chicken buddy in there!"
 WALTER.DESCRIBE.KYNO_CHICKEN_LARGE = "Wow! I should earn a merit badge for finding this!"
 WALTER.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Smells like breakfast is ready!"
 
+WALTER.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Nature sure takes its time sometimes.",
+	HATCHING = "Whoa! It's about to hatch, Woby!",
+}
+
 WALTER.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "Looks safe enough for chickens. Probably.",

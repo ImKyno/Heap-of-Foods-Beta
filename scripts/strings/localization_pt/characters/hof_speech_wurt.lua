@@ -582,6 +582,12 @@ WURT.DESCRIBE.KYNO_CHICKEN_EGG = "Pintinho dentro?"
 WURT.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Ooh! Ovo de bico-bico grande! Pesado!"
 WURT.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Não quero!"
 
+WURT.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Ovo mexendo, florp.",
+	HATCHING = "Bebê passarinho vindo!!",
+}
+
 WURT.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "Casa de galinha! Talvez tenha ovos dentro, florp.",

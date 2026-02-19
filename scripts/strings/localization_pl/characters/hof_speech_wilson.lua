@@ -580,6 +580,12 @@ WILSON.DESCRIBE.KYNO_CHICKEN_EGG = "Małe jajko kurczaka."
 WILSON.DESCRIBE.KYNO_CHICKEN_LARGE = "To było naprawdę imponujące śniadanie."
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Jajko na słoneczku, pycha!"
 
+WILSON.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Potrzebuje jeszcze trochę czasu, by się całkowicie wykluć.",
+	HATCHING = "Fascynujące! Zaraz się wykluje!",
+}
+
 WILSON.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Porządny dom dla kur.",

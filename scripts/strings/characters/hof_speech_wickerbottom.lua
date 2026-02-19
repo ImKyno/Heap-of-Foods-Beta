@@ -580,6 +580,12 @@ WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG = "Maybe it is fertilized."
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "An unusually large specimen of Gallus gallus."
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "If only I had some toast."
 
+WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "The incubation process is still underway.",
+	HATCHING = "Ah, the chick is about to pip through the shell.",
+}
+
 WICKERBOTTOM.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "A simple enclosure suitable for domesticated fowl.",

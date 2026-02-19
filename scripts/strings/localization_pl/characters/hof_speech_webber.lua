@@ -580,6 +580,12 @@ WEBBER.DESCRIBE.KYNO_CHICKEN_EGG = "Jajko z twardą skorupą."
 WEBBER.DESCRIBE.KYNO_CHICKEN_LARGE = "Czy w środku jest gigantyczny ptaszek?"
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Smażone, jak mama robiła."
 
+WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Rusza się tam w środku!",
+	HATCHING = "Cześć, kurczaczku! Możesz wyjść!",
+}
+
 WEBBER.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Heh, to jak domek tylko dla kur!",

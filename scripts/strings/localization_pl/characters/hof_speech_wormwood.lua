@@ -580,6 +580,12 @@ WORMWOOD.DESCRIBE.KYNO_CHICKEN_EGG = "Mały Klik Klik"
 WORMWOOD.DESCRIBE.KYNO_CHICKEN_LARGE = "Wielkie kliknięcie, kliknięcie w środku?"
 WORMWOOD.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Wchodzi do brzuszka"
 
+	WORMWOOD.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Mały przyjaciel śpi w środku.",
+	HATCHING = "Mały przyjaciel wychodzi!",
+}
+
 WORMWOOD.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Dom Ba-gawk",

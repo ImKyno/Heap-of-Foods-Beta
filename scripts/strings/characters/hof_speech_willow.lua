@@ -580,6 +580,12 @@ WILLOW.DESCRIBE.KYNO_CHICKEN_EGG = "It smells like a chicken's butt."
 WILLOW.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "I bet it would make a huge pop if I cooked it over a fire!"
 WILLOW.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Yuck. The yellow part is all runny."
 
+WILLOW.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "C'mon, break already!",
+	HATCHING = "It's cracking! Do it again!",
+}
+
 WILLOW.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "At least it's not full of fire. Yet.",

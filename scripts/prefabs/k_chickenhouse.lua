@@ -159,8 +159,11 @@ local function OnRefreshEggs(inst)
 		return
 	end
 
-	local h = inst.components.harvestable
-	local count = h ~= nil and h.produce or 0
+	local count = 0
+
+	if inst._egg_result ~= nil then
+		count = (inst._egg_result.small or 0) + (inst._egg_result.giant or 0)
+	end
 
 	if not inst.AnimState:IsCurrentAnimation("idle") then
 		inst.AnimState:PlayAnimation("idle", true)
@@ -245,15 +248,21 @@ local function OnChildGoingHome(inst, data)
 	})
 
 	if inst.components.harvestable ~= nil and chicken._has_eaten_today then
-		inst.components.harvestable:Grow() -- Chickens needs to eat something first in order to produce eggs.
-		
 		inst._egg_result = inst._egg_result or { small = 0, giant = 0 }
+		
+		local total = (inst._egg_result.small or 0) + (inst._egg_result.giant or 0)
+
+		if total >= 3 then
+			return
+		end
 
 		if math.random() < TUNING.KYNO_CHICKENHOUSE_GIANT_EGG_CHANCE then
 			inst._egg_result.giant = inst._egg_result.giant + 1
 		else
 			inst._egg_result.small = inst._egg_result.small + 1
 		end
+		
+		inst.components.harvestable:Grow() -- Chickens needs to eat something first in order to produce eggs.
 		
 		inst.AnimState:PlayAnimation("pick")
 		inst.SoundEmitter:PlaySound("summerevent/cannon/fire3")
@@ -268,19 +277,42 @@ local function OnChildGoingHome(inst, data)
 	chicken._has_food_buffered = false
 end
 
-local function TryStartSleepGrowing(inst)
-	if CanStartGrowing(inst) then
-		inst.components.harvestable:SetGrowTime(TUNING.KYNO_CHICKENHOUSE_GROWTIME)
-		inst.components.harvestable:StartGrowing()
-	elseif inst.components.harvestable ~= nil then
-		inst.components.harvestable:PauseGrowing()
-	end
-end
+-- We need to simulate producing eggs while offscreen
+-- because chickens will not eat anything thus no eggs count increase
+-- to compensate for that it will take longer to produce something.
+local function ProduceEggsAsleep(inst)
+	if inst:IsAsleep()
+	and not TheWorld.state.iswinter
+	and not inst:HasTag("burnt") then
+		if inst.components.childspawner == nil then
+			return
+		end
 
-local function StopSleepGrowing(inst)
-	if not inst:HasTag("burnt") and inst.components.harvestable ~= nil then
-		inst.components.harvestable:SetGrowTime(nil)
-		inst.components.harvestable:PauseGrowing()
+		local chickens = inst.components.childspawner.childreninside or 0
+		
+		if chickens <= 0 then
+			return
+		end
+
+		inst._egg_result = inst._egg_result or { small = 0, giant = 0 }
+
+		local total = (inst._egg_result.small or 0) + (inst._egg_result.giant or 0)
+
+		if total >= 3 then
+			return
+		end
+
+		if math.random() < TUNING.KYNO_CHICKENHOUSE_GIANT_EGG_CHANCE then
+			inst._egg_result.giant = inst._egg_result.giant + 1
+		else
+			inst._egg_result.small = inst._egg_result.small + 1
+		end
+
+		if inst.components.harvestable ~= nil then
+			inst.components.harvestable:Grow()
+		end
+
+		OnRefreshEggs(inst)
 	end
 end
 
@@ -291,25 +323,35 @@ local function OnIgnite(inst)
 	end
 end
 
+local function OnEntityWake(inst)
+	if inst._egg_task ~= nil then
+		inst._egg_task:Cancel()
+		inst._egg_task = nil
+	end
+end
+
+local function OnEntitySleep(inst)
+	if inst._egg_task ~= nil then
+		return
+	end
+
+	inst._egg_task = inst:DoPeriodicTask(TUNING.KYNO_CHICKENHOUSE_GROWTIME, function(inst)
+		if inst:HasTag("burnt")
+		or TheWorld.state.iswinter
+		or inst.components.childspawner == nil
+		or (inst.components.childspawner.childreninside or 0) <= 0 then
+			return
+		end
+		
+		ProduceEggsAsleep(inst)
+	end)
+end
+
 local function OnBuilt(inst)
 	inst.AnimState:PlayAnimation("place")
 	inst.AnimState:PushAnimation("idle", true)
 
 	inst.SoundEmitter:PlaySound("dontstarve/common/rabbit_hutch_craft")
-end
-
-local function OnEntityWake(inst)
-	StopSleepGrowing(inst)
-end
-
-local function OnEntitySleep(inst)
-	TryStartSleepGrowing(inst)
-end
-
-local function AsleepGrowth(inst)
-	if inst:IsAsleep() then
-		TryStartSleepGrowing(inst)
-	end
 end
 
 local function GetStatus(inst, viewer)
@@ -342,7 +384,7 @@ local function OnLoad(inst, data)
 		if data.egg_result then
 			inst._egg_result = data.egg_result
 		end
-	
+
 		if data.burnt then
 			inst.components.burnable.onburnt(inst)
 		else
@@ -387,7 +429,7 @@ local function fn()
 		return inst
 	end
 	
-	inst._chicken_data = nil	
+	inst._chicken_data = nil
 	inst._egg_result =
 	{
 		small = 0,
@@ -428,7 +470,6 @@ local function fn()
 
 	OnRefreshEggs(inst)
 
-	inst:WatchWorldState("iswinter", AsleepGrowth)
 	inst:WatchWorldState("iscaveday", OnIsCaveDay)
 	
 	inst:ListenForEvent("onbuilt", OnBuilt)

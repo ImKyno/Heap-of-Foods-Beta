@@ -18,6 +18,7 @@ local prefabs =
 	"reticuleaoe",
 	"reticuleaoeping",
 	
+	"kyno_chicken2",
 	"kyno_chicken_egg_fx",
 }
 
@@ -302,6 +303,68 @@ local function OnHit(inst, attacker, target)
 	inst:Remove()
 end
 
+-- Hatching Chickens 101 by Ms. Wickerbottom.
+local function OnPutInInventory(inst)
+	if inst.components.hatchableegg ~= nil then
+		inst.components.hatchableegg:StopUpdating()
+	end
+end
+
+local function OnDropped(inst)
+	if inst.components.hatchableegg ~= nil then
+		inst.components.hatchableegg:StartUpdating()
+	end
+end
+
+local function OnCrack(inst)
+	inst.SoundEmitter:PlaySound("dontstarve/creatures/egg/egg_hatch_crack")
+	inst:Remove()
+end
+
+local function OnHatch(inst)
+	local fx = SpawnPrefab("kyno_chicken_egg_fx")
+	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
+	
+	local chicken = SpawnPrefab("kyno_chicken2")
+    chicken.Transform:SetPosition(inst.Transform:GetWorldPosition())
+    
+	if chicken.components.sleeper ~= nil then
+		chicken.components.sleeper:GoToSleep()
+	end
+	
+	chicken.SoundEmitter:PlaySound("dontstarve/creatures/egg/egg_hatch_crack")
+	
+	inst:Remove()
+end
+
+local function OnCheckHatch(inst)
+    if not inst:IsAsleep()
+	and inst.components.hatchableegg ~= nil
+	and inst.components.inventoryitem ~= nil
+	and not inst.components.inventoryitem:IsHeld() then
+		local x, _, z = inst.Transform:GetWorldPosition()
+		
+		if TheWorld.Map:IsVisualGroundAtPoint(x, 0, z) then
+			OnHatch(inst)
+		end
+	end
+end
+
+local function OnEaten(inst, eater)
+	if eater.components.talker ~= nil then
+		eater.components.talker:Say(GetString(eater, "EAT_FOOD", "TALLBIRDEGG_CRACKED"))
+	end
+end
+
+local function GetStatus(inst, viewer)
+	local egg = inst.components.hatchableegg
+	local timeleft = egg and egg:GetHatchTimeLeft()
+
+	return timeleft and (timeleft <= 240 and "HATCHING"
+	or timeleft >= 480 and "GENERIC")
+	or nil
+end
+
 local function OnSave(inst, data)
 	data.eggstyle = inst._eggstyle
 end
@@ -320,6 +383,12 @@ local function OnLoadLarge(inst, data)
 	end
 	
 	inst:DoTaskInTime(0, RefreshLargeEggs)
+end
+
+local function OnLoadPostPass(inst)
+	if inst.components.inventoryitem ~= nil and inst.components.inventoryitem:IsHeld() then
+		OnPutInInventory(inst)
+	end
 end
 
 local function chicken_eggfn()
@@ -395,6 +464,7 @@ local function chicken_egg_giantfn()
 
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
 	
 	inst.Transform:SetTwoFaced()
@@ -446,12 +516,9 @@ local function chicken_egg_giantfn()
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
 
-	-- inst:AddComponent("perishable")
-	-- inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
-	-- inst.components.perishable:StartPerishing()
-	-- inst.components.perishable.onperishreplacement = "rottenegg"
-
 	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
+	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_chicken_egg_large"
 	
@@ -471,6 +538,11 @@ local function chicken_egg_giantfn()
 	inst.components.combat:SetRange(TUNING.WATERPLANT.ATTACK_AOE)
 	inst.components.combat:SetKeepTargetFunction(KeepTargetFn)
 	
+	inst:AddComponent("hatchableegg")
+	inst.components.hatchableegg:SetHeatTypes(true, false)
+	inst.components.hatchableegg:StartCrackMode("kyno_chicken_egg_large_cracked", TUNING.KYNO_CHICKEN_EGG_GIANT_CRACKTIME)
+	inst.components.hatchableegg:SetOnCrackFn(OnCrack)
+	
 	inst:AddComponent("equippable")
 	inst.components.equippable:SetOnEquip(OnEquip)
 	inst.components.equippable:SetOnUnequip(OnUnequip)
@@ -479,9 +551,75 @@ local function chicken_egg_giantfn()
 	
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoadLarge
+	inst.OnLoadPostPass = OnLoadPostPass
 	
 	inst:ListenForEvent("ondropped", RefreshLargeEggs)
 	inst:ListenForEvent("onputininventory", RefreshLargeEggs)
+	
+	MakeHauntableLaunchAndPerish(inst)
+
+	return inst
+end
+
+local function chicken_egg_crackedfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+	
+	inst.Transform:SetTwoFaced()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+	inst.AnimState:SetBank("kyno_chicken_eggs_large")
+	inst.AnimState:SetBuild("kyno_chicken_eggs_large")
+	inst.AnimState:PlayAnimation("idle_happy", true)
+	inst.AnimState:OverrideSymbol("egg1", "kyno_chicken_eggs_large", "egg_cracked")
+	
+	inst:AddTag("meat")
+	inst:AddTag("cookable")
+	inst:AddTag("catfood")
+	inst:AddTag("chicken_egg")
+	inst:AddTag("donotautopick")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
+	
+	inst:AddComponent("tradable")
+	inst.components.tradable.goldvalue = 5
+	
+	inst:AddComponent("cookable")
+	inst.components.cookable.product = "kyno_chicken_egg_cooked"
+
+	inst:AddComponent("edible")
+	inst.components.edible:SetOnEatenFn(OnEaten)
+	inst.components.edible.healthvalue = TUNING.KYNO_CHICKEN_EGG_GIANT_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_CHICKEN_EGG_GIANT_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_CHICKEN_EGG_GIANT_SANITY
+	inst.components.edible.foodtype = FOODTYPE.MEAT
+	inst.components.edible.ismeat = true
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
+	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_chicken_egg_large_cracked"
+	
+	inst:AddComponent("hatchableegg")
+	inst.components.hatchableegg:SetAllowedPhases(true, true, true)
+	inst.components.hatchableegg:StartIncubateMode(TUNING.KYNO_CHICKEN_EGG_GIANT_HATCHTIME)
+	inst.components.hatchableegg:SetOnHatchFn(OnCheckHatch)
+	
+	inst.OnLoadPostPass = OnLoadPostPass
 	
 	MakeHauntableLaunchAndPerish(inst)
 
@@ -591,5 +729,6 @@ end
 
 return Prefab("kyno_chicken_egg", chicken_eggfn, assets, prefabs),
 Prefab("kyno_chicken_egg_large", chicken_egg_giantfn, assets, prefabs),
+Prefab("kyno_chicken_egg_large_cracked", chicken_egg_crackedfn, assets, prefabs),
 Prefab("kyno_chicken_egg_cooked", chicken_egg_cookedfn, assets, prefabs),
 Prefab("kyno_chicken_egg_large_projectile", projectilefn, projectile_assets, projectile_prefabs)

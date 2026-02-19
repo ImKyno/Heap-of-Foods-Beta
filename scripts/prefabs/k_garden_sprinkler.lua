@@ -199,7 +199,7 @@ local function OnHammered(inst, worker)
 	end
 	
 	local fx = SpawnPrefab("collapse_small")
-	fx = Transform:SetPosition(inst.Transform:GetWorldPosition())
+	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
 	fx:SetMaterial("metal")
 	
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_metal")

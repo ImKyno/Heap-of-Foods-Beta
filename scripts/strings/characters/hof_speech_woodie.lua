@@ -580,6 +580,12 @@ WOODIE.DESCRIBE.KYNO_CHICKEN_EGG = "There's a chicken in there thinking chicken 
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "That's a lot of omelet, eh?"
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Well, it didn't became a chicken."
 
+WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Give it a bit, eh?",
+	HATCHING = "There she goes! Little one's comin' out!",
+}
+
 WOODIE.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "Nice little coop, eh? Keeps the chickens cozy.",

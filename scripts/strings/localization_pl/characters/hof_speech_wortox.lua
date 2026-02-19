@@ -580,6 +580,12 @@ WORTOX.DESCRIBE.KYNO_CHICKEN_EGG = "Jajko od kurczaka, tak słyszałem."
 WORTOX.DESCRIBE.KYNO_CHICKEN_LARGE = "Duża muszla dla małej duszy!"
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Pewnie to coś dla śmiertelnych."
 
+WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Tik-tak robi mała skorupka!",
+	HATCHING = "Wyskakuj! Hee hee!",
+}
+
 WORTOX.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Niekończący się zapas jaj!",

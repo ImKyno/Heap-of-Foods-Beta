@@ -580,6 +580,12 @@ WILSON.DESCRIBE.KYNO_CHICKEN_EGG = "Um pequeno ovo de galinha."
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Isso é um café da manhã impressionantemente grande."
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Ovo frito delicioso!"
 
+WILSON.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Ainda precisa de um pouco mais de tempo para chocar completamente.",
+	HATCHING = "Eu acho que irá chocar em breve!",
+}
+
 WILSON.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Um abrigo adequado para as minhas galinhas.",

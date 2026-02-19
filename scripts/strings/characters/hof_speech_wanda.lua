@@ -580,6 +580,12 @@ WANDA.DESCRIBE.KYNO_CHICKEN_EGG = "What, you egg?"
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "I don't have time to wait for something this large to hatch."
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Whenever I make eggs they end up either undercooked or burnt."
 
+WANDA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Oh, hurry up. I haven't got all day.",
+	HATCHING = "Yes, yes, out you come before I grow old waiting.",
+}
+
 WANDA.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "A well-timed solution for a steady supply of eggs.",

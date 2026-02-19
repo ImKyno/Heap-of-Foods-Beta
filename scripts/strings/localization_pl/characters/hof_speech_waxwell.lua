@@ -580,6 +580,12 @@ WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG = "Lubię myśleć o tym jak o więzieniu dla 
 WAXWELL.DESCRIBE.KYNO_CHICKEN_LARGE = "Zastanawiam się, czy ptak w środku jest tak duży jak jego skorupa."
 WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Jajko na słoneczku."
 
+WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Czy naprawdę musimy czekać na każde trywialne narodziny?",
+	HATCHING = "Wreszcie. Proszę się pospieszyć.",
+}
+
 WAXWELL.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "Skromne schronienie, ale całkiem wydajne.",

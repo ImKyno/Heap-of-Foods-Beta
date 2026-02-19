@@ -580,6 +580,12 @@ WARLY.DESCRIBE.KYNO_CHICKEN_EGG = "Przyroda perfekcyjnie tworzy jedzenie."
 WARLY.DESCRIBE.KYNO_CHICKEN_LARGE = "Możliwości kulinarne są naprawdę... ogromne!"
 WARLY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Przydałoby się kilka innych ziół..."
 
+WARLY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Cierpliwości, musi się jeszcze... wykluć.",
+	HATCHING = "Ach! Świeży składnik— to znaczy, towarzysz!",
+}
+
 WARLY.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Ach! Niezawodne źródło świeżych składników.",

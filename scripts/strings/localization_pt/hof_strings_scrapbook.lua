@@ -160,7 +160,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use para acender o Bolo de A
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Permite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Chapéu de aniversário especial do Sammy.\nPermite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Pesquisar peixes e ovas os adiciona ao Registro de Peixes."
-STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Um ovo gigante que pode ser arremessado.\n\nReduz o dano causado e a velocidade de movimento do alvo em 10% por 20 segundos. O efeito acumula até 3 vezes, totalizando 30%.\n\n\"Até ovos são armas no campo de batalha!\" - Wigfrid."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Um ovo gigante que pode ser arremessado ou chocado.\n\nReduz o dano causado e a velocidade de movimento do alvo em 10% por 20 segundos. O efeito acumula até 3 vezes, totalizando 30%.\n\n\"Até ovos são armas no campo de batalha!\" - Wigfrid."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Pode ser chocado se estiver próximo a uma fonte de calor."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "A dieta delas consiste basicamente em Sementes, Trigo ou Rebento Folhoso.\n\nGalinhas Selvagens têm 40% de chance de botar ovos após se alimentarem. Elas têm uma pequena chance de botar um Ovo Grande.\n\nGalinhas criadas no Galinheiro podem botar ovos todos os dias após se alimentarem. Elas têm uma chance maior de colocar um Ovo Grande."

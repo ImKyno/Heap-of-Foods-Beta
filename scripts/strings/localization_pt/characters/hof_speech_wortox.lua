@@ -580,6 +580,12 @@ WORTOX.DESCRIBE.KYNO_CHICKEN_EGG = "Um ovo de galinha, ou pelo menos é o que di
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Uma casca grande para uma alma pequenina."
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Provavelmente algo mortal."
 
+WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Tic-tac faz a casquinha!",
+	HATCHING = "Pula pra fora!",
+}
+
 WORTOX.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "Um suprimento infinito de ovos!",

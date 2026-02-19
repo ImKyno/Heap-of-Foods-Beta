@@ -580,6 +580,12 @@ WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG = "É ovo pequeno de galinha."
 WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "É ovo para galinha gigante, ou ovo para o poderoso Wolfgang?"
 WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Delicioso!"
 
+WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Passarinho pequeno ainda escondido no ovo.",
+	HATCHING = "Ha! Bebê passarinho saindo em breve!",
+}
+
 WOLFGANG.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "Pequena casinha para galinhas!",

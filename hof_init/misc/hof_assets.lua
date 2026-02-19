@@ -369,6 +369,7 @@ local HOF_ICONS =
 	"kyno_chicken_egg",
 	"kyno_chicken_egg_cooked",
 	"kyno_chicken_egg_large",
+	"kyno_chicken_egg_large_cracked",
 	"kyno_chicken_egg_large2",
 	"kyno_chicken_egg_large3",
 	"kyno_chicken_egg_large4",

@@ -580,6 +580,12 @@ WANDA.DESCRIBE.KYNO_CHICKEN_EGG = "O quê, você ovo?"
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Eu não tenho tempo para esperar algo desse tamanho chocar."
 WANDA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Sempre que faço ovos, ficam crus ou queimados."
 
+WANDA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Ah, vamos logo. Não tenho o dia todo.",
+	HATCHING = "Sim, sim, saia logo antes que eu envelheça esperando.",
+}
+
 WANDA.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "Um lugar onde o tempo passa entre cacarejos.",

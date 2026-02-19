@@ -580,6 +580,12 @@ WINONA.DESCRIBE.KYNO_CHICKEN_EGG = "Café da manhã."
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Ora, isso dá um trabalhão danado para uma galinha só."
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Sempre acabo pegando pedacinhos de casca sem querer."
 
+WINONA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Ainda em produção.",
+	HATCHING = "Parece que tá pronto pra sair da linha!",
+}
+
 WINONA.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "Construído forte o suficiente pra manter as galinhas na linha.",

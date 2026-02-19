@@ -580,6 +580,12 @@ WENDY.DESCRIBE.KYNO_CHICKEN_EGG = "Life's inside."
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "It's too big for a chicken!"
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "No chicken will ever come of it."
 
+WENDY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Another fragile life waiting to face the inevitable.",
+	HATCHING = "It emerges, unaware of its tragic fate.",
+}
+
 WENDY.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "They lay eggs, then return to their quiet shelter.",

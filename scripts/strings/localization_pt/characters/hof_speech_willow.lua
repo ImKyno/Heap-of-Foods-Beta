@@ -580,6 +580,12 @@ WILLOW.DESCRIBE.KYNO_CHICKEN_EGG = "Cheira como o traseiro de uma galinha."
 WILLOW.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Aposto que faria um estalo enorme se eu o cozinhasse no fogo!"
 WILLOW.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Eca. A gema está toda líquida."
 
+WILLOW.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Anda logo, quebra de uma vez!",
+	HATCHING = "Tá rachando! Faz de novo!",
+}
+
 WILLOW.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Não está em chamas. Ainda...",

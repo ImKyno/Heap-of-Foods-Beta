@@ -44,17 +44,18 @@ end
 local function UpdateFoodSymbol(inst)
 	if inst then
 		local fueled = inst.components.fueled
+		
+		if not fueled or fueled.maxfuel <= 0 then
+			inst.AnimState:HideSymbol("food")
+			return
+		end
+
 		local percent = fueled.currentfuel / fueled.maxfuel
 
 		if percent <= 0 then
 			inst.AnimState:HideSymbol("food")
-		elseif percent <= 0.20 then
-			inst.AnimState:OverrideSymbol("food", "kyno_animalfeeder", "food")
-		elseif percent <= 0.50 then
-			inst.AnimState:OverrideSymbol("food", "kyno_animalfeeder", "food")
-		elseif percent <= 1.00 then
-			inst.AnimState:OverrideSymbol("food", "kyno_animalfeeder", "food")
 		else
+			inst.AnimState:ShowSymbol("food")
 			inst.AnimState:OverrideSymbol("food", "kyno_animalfeeder", "food")
 		end
 	end
@@ -152,6 +153,7 @@ local function fn()
 	inst.components.fueled.fueltype = FUELTYPE.ANIMALFOOD
 	inst.components.fueled:SetTakeFuelFn(OnAddFuel)
 	inst.components.fueled:SetDepletedFn(OnFuelEmpty)
+	inst.components.fueled:SetSectionCallback(OnFuelSectionChange)
 	inst.components.fueled.maxfuel = TUNING.KYNO_ANIMALFEEDER_FUEL_MAX
 	inst.components.fueled:InitializeFuelLevel(TUNING.KYNO_ANIMALFEEDER_FUEL_MAX)
 	inst.components.fueled:SetSections(TUNING.KYNO_ANIMALFEEDER_SECTIONS)

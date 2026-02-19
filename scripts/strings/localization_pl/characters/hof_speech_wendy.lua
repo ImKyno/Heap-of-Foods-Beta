@@ -580,6 +580,12 @@ WENDY.DESCRIBE.KYNO_CHICKEN_EGG = "Życie jest w środku."
 WENDY.DESCRIBE.KYNO_CHICKEN_LARGE = "Jest za duży na kurczaka!"
 WENDY.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Żaden kurczak z tego nie wyjdzie."
 
+WENDY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Kolejne kruche życie czeka na nieuniknione.",
+	HATCHING = "Wyłania się, nieświadome swojego tragicznego losu.",
+}
+
 WENDY.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Składają jaja, potem wracają do cichego schronienia.",

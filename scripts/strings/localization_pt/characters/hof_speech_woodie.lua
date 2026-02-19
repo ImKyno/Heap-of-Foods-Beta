@@ -580,6 +580,12 @@ WOODIE.DESCRIBE.KYNO_CHICKEN_EGG = "Há uma galinha pensando pensamentos de gali
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Isso dá um bocado de omelete, hein?"
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Bem, não virou uma galinha."
 
+WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Dá mais um tempinho, hein?",
+	HATCHING = "Olha só! O ele tá saindo!",
+}
+
 WOODIE.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "Um galinheiro bonitinho, né? Mantém as galinhas confortáveis.",

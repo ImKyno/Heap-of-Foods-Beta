@@ -580,6 +580,12 @@ WATHGRITHR.DESCRIBE.KYNO_CHICKEN_EGG = "Jajkowy."
 WATHGRITHR.DESCRIBE.KYNO_CHICKEN_LARGE = "Uczta godna prawdziwego wojownika Północy!"
 WATHGRITHR.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Gorące jajko."
 
+WATHGRITHR.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Mały wojownik zbiera siły w skorupie!",
+	HATCHING = "Wyjdź na świat, mały czempionie!",
+}
+
 WATHGRITHR.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Hala dla jajożernych bestii!",

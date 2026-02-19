@@ -580,6 +580,12 @@ WILSON.DESCRIBE.KYNO_CHICKEN_EGG = "A small, chicken egg."
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "That is one impressively large breakfast."
 WILSON.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Sunny side yum!"
 
+WILSON.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "It still need some time to fully hatch.",
+	HATCHING = "I think it will hatch very soon!",
+}
+
 WILSON.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
 	GENERIC = "A proper home for chickens.",

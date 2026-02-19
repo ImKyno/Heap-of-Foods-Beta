@@ -580,6 +580,12 @@ WEBBER.DESCRIBE.KYNO_CHICKEN_EGG = "Um ovo com casca dura."
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Será que tem um passarinho gigante lá dentro?"
 WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Frito como a mamãe fazia."
 
+WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
+{
+	GENERIC = "Tá se mexendo lá dentro!",
+	HATCHING = "Oi, pintinho! Pode sair!",
+}
+
 WEBBER.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Heh, é tipo uma casa só para galinhas!",

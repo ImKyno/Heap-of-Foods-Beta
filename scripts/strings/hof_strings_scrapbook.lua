@@ -160,7 +160,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use it to light up the Anniv
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Allows the gathering of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Sammy's special anniversary hat.\nAllows the gain of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Researching fishes and roes adds to the Fish Registry."
-STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "An oversized egg that can be thrown.\n\nReduces target's damage and movement speed by 10% for 20 seconds. Effects stack up to 3 times for a total of 30%.\n\n\"Even eggs are weapons on the battlefield!\" - Wigfrid."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "An oversized egg that can be thrown or hatched.\n\nReduces target's damage and movement speed by 10% for 20 seconds. Effects stack up to 3 times for a total of 30%.\n\n\"Even eggs are weapons on the battlefield!\" - Wigfrid."
+STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Can be hatched when near a source of heat."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 40% chance of laying Eggs after eating. They have a small chance of laying a Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying a Large Egg."
