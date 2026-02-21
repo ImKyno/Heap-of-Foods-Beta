@@ -27,7 +27,7 @@ Cast your line, set your sail, and dive into the ocean! A wave of new aquatic cr
 
 Build yourself a Fish Hatchery to raise your own fish at the comfort of your base, explore the ocean in search of elusive creatures, take part in Ocean Hunts and find a friendly new companion.
 
-󰀌 Mod Version: 4.6-B
+󰀌 Mod Version: 4.7-B
 󰀧 Update: Chicken Week
 ]],
 		zh  =
@@ -42,7 +42,7 @@ Build yourself a Fish Hatchery to raise your own fish at the comfort of your bas
 
 建造一座鱼苗孵化场，在你的基地里舒适地饲养属于你自己的鱼儿；探索海洋，寻找那些难以捉摸的生物；参与海洋狩猎，结识一位友好的新伙伴。
 
-󰀌 Mod 版本： 4.6-B
+󰀌 Mod 版本： 4.7-B
 󰀧 更新内容： 养殖周
 ]],	
 		zht =
@@ -57,7 +57,7 @@ Build yourself a Fish Hatchery to raise your own fish at the comfort of your bas
 
 建造一座魚苗孵化場，在你的基地裡舒適地飼養屬於你自己的魚兒；探索海洋，尋找那些難以捉摸的生物；參與海洋狩獵，結識一位友好的新夥伴。
 
-󰀌 Mod 版本： 4.6-B
+󰀌 Mod 版本： 4.7-B
 󰀧 更新內容： 雞肉週
 ]],	
 		pt  = 
@@ -72,7 +72,7 @@ Lance sua linha, prepare suas velas e mergulhe no oceano! Uma onda de novas cria
 
 Construa um viveiro de peixes para criar seus próprios peixes no conforto da sua base, explore o oceano em busca de criaturas elusivas, participe de caçadas oceânicas e encontre um novo companheiro amigável.
 
-󰀌 Versão do Mod: 4.6-B
+󰀌 Versão do Mod: 4.7-B
 󰀧 Atualização: Semana da Galinha
 ]],
 		pl  =
@@ -87,7 +87,7 @@ Zarzuć wędkę, postaw żagle i zanurz się w oceanie! Czeka Cię fala nowych s
 
 Zbuduj sobie wylęgarnię ryb, aby hodować własne ryby w zaciszu swojej bazy, eksploruj ocean w poszukiwaniu nieuchwytnych stworzeń, weź udział w polowaniach na ryby i znajdź nowego, przyjaznego towarzysza.
 
-󰀌 Wersja Moda: 4.6-B
+󰀌 Wersja Moda: 4.7-B
 󰀧 Aktualizacja: Tydzień Kurczaka
 ]],
 		es  =
@@ -102,7 +102,7 @@ Zbuduj sobie wylęgarnię ryb, aby hodować własne ryby w zaciszu swojej bazy, 
 
 Construye una piscifactoría para criar tus propios peces en la comodidad de tu base, explora el océano en busca de criaturas esquivas, participa en cacerías oceánicas y encuentra un nuevo compañero.
 
-󰀌 Versión del Mod: 4.6-B
+󰀌 Versión del Mod: 4.7-B
 󰀧 Actualización: Semana del Pollo
 ]],
 	},
@@ -872,48 +872,48 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 			},
 		},
 		
-		KEEPFOOD =
+		WARLYSPICES =
 		{
 			NAME =
 			{
-				"Halt Food Spoilage",
-				zh  = "防止食物腐败",
-				zht = "防止食物腐敗",
-				pt  = "Parar Deteorização da Comida",
-				pl  = "Zatrzymaj psucie się jedzenia",
-				es  = "Detener la descomposición de alimentos",
+				"Chef's Complementary Spices",
+				zh  = "厨师的辅助香料",
+				zht = "廚師的輔助香料",
+				pt  = "Temperos Complementares do Chef",
+				pl  = "Zonunkhira Zowonjezera za Chef",
+				es  = "Especias Complementarias del Chef",
 			},
 			
 			HOVER =
 			{
-				"Should food spoil if its inside the Crock Pot?",
-				zh  = "料理在烹饪锅中是否变质？",
-				zht = "料理在烹飪鍋中是否變質？",
-				pt  = "Permitir que as comidas estraguem se estiverem na Panela?",
-				pl  = "Czy jedzenie powinno się psuć, jeśli jest w garnku Crock Pot?",
-				es  = "¿Debería la comida echarse a perder si está dentro de la Olla?",
+				"Should Warly be able to craft and use an array of new Mod Spices?\nNot recommended to be disabled afterwards.",
+				zh  = "Warly 是否应该能够制作并使用一系列新的模组香料？\n不建议之后将其禁用。",
+				zht = "Warly 是否應該能夠製作並使用一系列新的模組香料？\n不建議之後將其停用。",
+				pt  = "Permitir que Warly fabrique e use uma variedade de novos Temperos do Mod?\nNão é recomendado desativar depois.",
+				pl  = "Czy Warly powinien mieć możliwość tworzenia i używania nowych przypraw z modów?\nNie zaleca się wyłączania tej opcji później.",
+				es  = "¿Debería Warly poder fabricar y usar una variedad de nuevas Especias de Mods?\nNo se recomienda desactivarlo posteriormente.",
 			},
 			
 			HOVER_OPTIONS =
 			{
 				DISABLED =
 				{
-					"Food will spoil inside Crock Pot, Portable Crock Pot, etc.",
-					zh  = "料理在烹饪锅、便携式烹饪锅等锅中会变质。",
-					zht = "料理在烹飪鍋、便攜式烹飪鍋等鍋中會變質。",
-					pt  = "As comidas estragarão na Panela, Panela Portátil, etc.",
-					pl  = "Jedzenie będzie się psuć w garnku Crock Pot, przenośnym Crock Pot itp.",
-					es  = "La comida se echará a perder dentro de la Olla, Olla portátil, etc.",
+					"Warly will only be able to craft and use Vanilla Spices.",
+					zh  = "Warly 只能制作并使用原版香料。",
+					zht = "Warly 只能製作並使用原版香料。",
+					pt  = "Warly só poderá fabricar e usar Temperos padrões.",
+					pl  = "Warly będzie mógł tworzyć i używać wyłącznie domyślnych przypraw.",
+					es  = "Warly solo podrá fabricar y usar Especias Vanilla.",
 				},
 				
 				ENABLED =
 				{
-					"Food will not spoil inside Crock Pot, Portable Crock Pot, etc.",
-					zh  = "料理在烹饪锅、便携式烹饪锅等锅中不会变质。",
-					zht = "料理在烹飪鍋、便攜式烹飪鍋等鍋中不會變質。",
-					pt  = "As comidas não estragarão na Panela, Panela Portátil, etc.",
-					pl  = "Jedzenie nie będzie się psuć w garnku Crock Pot, przenośnym Crock Pot itp.",
-					es  = "La comida no se echará a perder dentro de la Olla, Olla portátil, etc.",
+					"Warly will be able to craft and use Vanilla and Mod Spices.",
+					zh  = "Warly 可以制作并使用原版和模组香料。",
+					zht = "Warly 可以製作並使用原版與模組香料。",
+					pt  = "Warly poderá fabricar e usar Temperos padrões e do Mod.",
+					pl  = "Warly będzie mógł tworzyć i używać zarówno domyślnych, jak i modowanych przypraw.",
+					es  = "Warly podrá fabricar y usar Especias Vanilla y del Mod.",
 				},
 			},
 		},
@@ -960,6 +960,52 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 					pt  = "O Moinho de Moagem do Warly terá as receitas da Pedra de Preparação.",
 					pl  = "Przenośny młyn Warly'ego będzie miał przepisy z Kamienia Mielenia.",
 					es  = "El Molino Portátil de Warly tendrá las recetas de la Piedra de Molienda.",
+				},
+			},
+		},
+		
+		KEEPFOOD =
+		{
+			NAME =
+			{
+				"Halt Food Spoilage",
+				zh  = "防止食物腐败",
+				zht = "防止食物腐敗",
+				pt  = "Parar Deteorização da Comida",
+				pl  = "Zatrzymaj psucie się jedzenia",
+				es  = "Detener la descomposición de alimentos",
+			},
+			
+			HOVER =
+			{
+				"Should food spoil if its inside the Crock Pot?",
+				zh  = "料理在烹饪锅中是否变质？",
+				zht = "料理在烹飪鍋中是否變質？",
+				pt  = "Permitir que as comidas estraguem se estiverem na Panela?",
+				pl  = "Czy jedzenie powinno się psuć, jeśli jest w garnku Crock Pot?",
+				es  = "¿Debería la comida echarse a perder si está dentro de la Olla?",
+			},
+			
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Food will spoil inside Crock Pot, Portable Crock Pot, etc.",
+					zh  = "料理在烹饪锅、便携式烹饪锅等锅中会变质。",
+					zht = "料理在烹飪鍋、便攜式烹飪鍋等鍋中會變質。",
+					pt  = "As comidas estragarão na Panela, Panela Portátil, etc.",
+					pl  = "Jedzenie będzie się psuć w garnku Crock Pot, przenośnym Crock Pot itp.",
+					es  = "La comida se echará a perder dentro de la Olla, Olla portátil, etc.",
+				},
+				
+				ENABLED =
+				{
+					"Food will not spoil inside Crock Pot, Portable Crock Pot, etc.",
+					zh  = "料理在烹饪锅、便携式烹饪锅等锅中不会变质。",
+					zht = "料理在烹飪鍋、便攜式烹飪鍋等鍋中不會變質。",
+					pt  = "As comidas não estragarão na Panela, Panela Portátil, etc.",
+					pl  = "Jedzenie nie będzie się psuć w garnku Crock Pot, przenośnym Crock Pot itp.",
+					es  = "La comida no se echará a perder dentro de la Olla, Olla portátil, etc.",
 				},
 			},
 		},
@@ -1502,7 +1548,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "4.6-B"
+version                      = "4.7-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 
@@ -1787,18 +1833,18 @@ local WARLYRECIPES_OPTIONS   =
 	}
 }
 
-local KEEPFOOD_LABEL         = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.NAME)
-local KEEPFOOD_HOVER         = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.HOVER)
-local KEEPFOOD_OPTIONS       =
+local WARLYSPICES_LABEL      = ChooseTranslationTable(STRINGS.SETTINGS.WARLYSPICES.NAME)
+local WARLYSPICES_HOVER      = ChooseTranslationTable(STRINGS.SETTINGS.WARLYSPICES.HOVER)
+local WARLYSPICES_OPTIONS    =
 {
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
-		hover                = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.HOVER_OPTIONS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.WARLYSPICES.HOVER_OPTIONS.DISABLED),
 		data                 = false
 	},
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
-		hover                = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.HOVER_OPTIONS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.WARLYSPICES.HOVER_OPTIONS.ENABLED),
 		data                 = true
 	}
 }
@@ -1815,6 +1861,22 @@ local WARLYGRINDER_OPTIONS   =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.WARLYGRINDER.HOVER_OPTIONS.ENABLED),
+		data                 = true
+	}
+}
+
+local KEEPFOOD_LABEL         = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.NAME)
+local KEEPFOOD_HOVER         = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.HOVER)
+local KEEPFOOD_OPTIONS       =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.HOVER_OPTIONS.DISABLED),
+		data                 = false
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.KEEPFOOD.HOVER_OPTIONS.ENABLED),
 		data                 = true
 	}
 }
@@ -1995,8 +2057,9 @@ configuration_options        =
 	{ name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,        options = NONE_OPTIONS,          default = false },
 	{ name                   = "SCRAPBOOK",        label = SCRAPBOOK_LABEL,     hover = SCRAPBOOK_HOVER,     options = SCRAPBOOK_OPTIONS,     default = true  },
 	{ name                   = "WARLYRECIPES",     label = WARLYRECIPES_LABEL,  hover = WARLYRECIPES_HOVER,  options = WARLYRECIPES_OPTIONS,  default = true  },
-	{ name                   = "KEEPFOOD",         label = KEEPFOOD_LABEL,      hover = KEEPFOOD_HOVER,      options = KEEPFOOD_OPTIONS,      default = false },
+	{ name                   = "WARLYSPICES",      label = WARLYSPICES_LABEL,   hover = WARLYSPICES_HOVER,   options = WARLYSPICES_OPTIONS,   default = false },
 	{ name                   = "WARLYMEALGRINDER", label = WARLYGRINDER_LABEL,  hover = WARLYGRINDER_HOVER,  options = WARLYGRINDER_OPTIONS,  default = false },
+	{ name                   = "KEEPFOOD",         label = KEEPFOOD_LABEL,      hover = KEEPFOOD_HOVER,      options = KEEPFOOD_OPTIONS,      default = false },
 	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,    options = FERTILIZER_OPTIONS,    default = false },
 	-- Experimental Options.
 	{ name                   = "EXPERIMENTAL",     label = EXPERIMENTAL_LABEL,  hover = EXPERIMENTAL_HOVER,  options = NONE_OPTIONS,          default = false },
@@ -2007,8 +2070,6 @@ configuration_options        =
 	
 	-- Retrofitting Options.
 	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false },
- -- { name                   = "MODRETROFITFORCE", label = RETROFITFORCE_LABEL, hover = RETROFITFORCE_HOVER, options = RETROFITFORCE_OPTIONS, default = false },
- -- { name                   = "MODRETROFIT",      label = RETROFIT_LABEL,      hover = RETROFIT_HOVER,      options = RETROFIT_OPTIONS,      default = 0     },
 	{ name                   = "AUTORETROFIT",     label = AUTORETROFIT_LABEL,  hover = AUTORETROFIT_HOVER,  options = AUTORETROFIT_OPTIONS,  default = false },
 	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,     options = MODTRADES_OPTIONS,     default = true  },
 }

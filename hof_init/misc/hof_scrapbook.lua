@@ -16945,8 +16945,8 @@ if TUNING.HOF_SCRAPBOOK_EXTRAS then
 	ScrapbookData.kyno_woodenkeg.brewer = true
 end
 
--- For the Complementary Mod.
--- Heap-of-Foods-Workshop-Spices / workshop-3438589036
-if TUNING.HOF_IS_HSP_ENABLED then
+-- Complementary Mod Spices for Warly.
+if TUNING.HOF_WARLYSPICES then
+	-- print("Heap of Foods Mod - Added Modded Spices to the Scrapbook.")
 	AddExtraScrapBookItem(ScrapbookData, ScrapbookPrefabs, HOF_SCRAPBOOK_SPICES)
 end

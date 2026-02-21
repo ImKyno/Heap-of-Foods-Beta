@@ -119,27 +119,16 @@ for _, v in pairs(hof_init_foods) do
 	modimport("hof_init/foods/"..v)
 end
 
--- Mod Options.
-_G.CONFIGS_HOF                =
-{
-	ENABLEDMODS               = {}
-}
-
-_G.CONFIGS_HOF.SEASONALFOOD   = GetModConfigData("SEASONALFOOD")
-_G.CONFIGS_HOF.SCRAPBOOK      = GetModConfigData("SCRAPBOOK")
-_G.CONFIGS_HOF.SCRAPBOOK_EXT  = GetModConfigData("SCRAPBOOK2")
-_G.CONFIGS_HOF.AUTORETROFIT   = GetModConfigData("AUTORETROFIT")
-
-if _G.CONFIGS_HOF.SCRAPBOOK then
+if TUNING.HOF_SCRAPBOOK then
 	modimport("hof_init/misc/hof_scrapbook")
 	modimport("hof_init/misc/hof_shinyloots") -- Requires Scrapbook to be enabled...
 end
 
-if _G.CONFIGS_HOF.SCRAPBOOK and _G.CONFIGS_HOF.SCRAPBOOK_EXT then
+if TUNING.HOF_SCRAPBOOK and TUNING.HOF_SCRAPBOOK_EXTRAS then
 	modimport("hof_init/misc/hof_scrapbook_postinits")
 end
 
-if _G.CONFIGS_HOF.AUTORETROFIT then
+if TUNING.HOF_AUTORETROFIT then
 	modimport("hof_init/world/hof_retrofit")
 end
 
@@ -147,39 +136,38 @@ end
 -- modimport("achievementsmain")
 
 -- Testing Mod Options.
---[[
-local mod_options = 
-{
-	{ name = "LANGUAGE",         default = false },
+if TUNING.HOF_DEBUG_MODE then
+	local mod_options = 
+	{
+		{ name = "LANGUAGE",         default = false },
 
-	{ name = "SEASONALFOOD",     default = false },
-	{ name = "HUMANMEAT",        default = true  },
-	{ name = "GIANTSPAWNING",    default = true  },
-	{ name = "ALCOHOLICDRINKS",  default = true  },
-	{ name = "ICEBOXSTACKSIZE",  default = false },
-	{ name = "COFFEESPEED",      default = true  },
-	{ name = "COFFEEDURATION",   default = 480   },
-	{ name = "COFFEEDROPRATE",   default = 4     },
+		{ name = "SEASONALFOOD",     default = false },
+		{ name = "HUMANMEAT",        default = true  },
+		{ name = "GIANTSPAWNING",    default = true  },
+		{ name = "ALCOHOLICDRINKS",  default = true  },
+		{ name = "ICEBOXSTACKSIZE",  default = false },
+		{ name = "COFFEESPEED",      default = true  },
+		{ name = "COFFEEDURATION",   default = 480   },
+		{ name = "COFFEEDROPRATE",   default = 4     },
 
-	{ name = "SCRAPBOOK",        default = true  },
-	{ name = "WARLYRECIPES",     default = true  },
-	{ name = "KEEPFOOD",         default = false },
-	{ name = "WARLYMEALGRINDER", default = false },
-	{ name = "FERTILIZERTWEAK",  default = false },
+		{ name = "SCRAPBOOK",        default = true  },
+		{ name = "WARLYRECIPES",     default = true  },
+		{ name = "WARLYSPICES",      default = false },
+		{ name = "WARLYMEALGRINDER", default = false },
+		{ name = "KEEPFOOD",         default = false },
+		{ name = "FERTILIZERTWEAK",  default = false },
 
-	{ name = "SCRAPBOOK2",       default = false },
-	{ name = "SERENITY_CC",      default = false },
-	{ name = "MEADOW_CC",        default = false },
-	{ name = "FULLMOONTRANS",    default = false },
+		{ name = "SCRAPBOOK2",       default = false },
+		{ name = "SERENITY_CC",      default = false },
+		{ name = "MEADOW_CC",        default = false },
+		{ name = "FULLMOONTRANS",    default = false },
 
-	{ name = "RETROCOMPAT",      default = false },
- -- { name = "MODRETROFITFORCE", default = false },
- -- { name = "MODRETROFIT",      default = 0     },
-	{ name = "MODTRADES",        default = false },
-}
+		{ name = "RETROCOMPAT",      default = false },
+		{ name = "MODTRADES",        default = false },
+	}
 
-for _, option in ipairs(mod_options) do
-	local value = GetModConfigData(option.name)
-	print(string.format("HOF CONFIG - %s = %s", option.name, tostring(value)))
+	for _, option in ipairs(mod_options) do
+		local value = GetModConfigData(option.name)
+		print(string.format("Heap of Foods Mod - Config: %s = %s", option.name, tostring(value)))
+	end
 end
-]]--

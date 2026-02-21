@@ -16,9 +16,7 @@ local HOF_KEEPFOOD        = GetModConfigData("KEEPFOOD")
 local HOF_ICEBOXSTACKSIZE = GetModConfigData("ICEBOXSTACKSIZE")
 
 -- Favorite Mod Foods.
-AddPrefabPostInit("wilson", function(inst)
-    inst:AddTag("wislanhealer")
-	
+AddPrefabPostInit("wilson", function(inst)	
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
@@ -40,9 +38,7 @@ AddPrefabPostInit("willow", function(inst)
     end
 end)
 
-AddPrefabPostInit("wolfgang", function(inst)
-    inst:AddTag("mightyman")
-	
+AddPrefabPostInit("wolfgang", function(inst)	
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
@@ -186,6 +182,14 @@ AddPrefabPostInit("wormwood", function(inst)
 end)
 
 AddPrefabPostInit("warly", function(inst)
+	if TUNING.HOF_WARLYSPICES then
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Added spicemaker tag to Warly.")
+		end
+		
+		inst:AddTag("spicemaker")
+	end
+	
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end

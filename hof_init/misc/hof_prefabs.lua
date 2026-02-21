@@ -204,3 +204,12 @@ PrefabFiles =
 	"k_wobster_den_monkeyisland",
 	"k_worm_bone",
 }
+
+-- Complementary Mod Spices for Warly.
+if TUNING.HOF_WARLYSPICES then
+	if TUNING.HOF_DEBUG_MODE then
+		print("Heap of Foods Mod - Added Modded Spices prefabs.")
+	end
+
+	table.insert(PrefabFiles, "k_newspices")
+end
