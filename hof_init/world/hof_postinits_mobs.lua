@@ -68,7 +68,7 @@ AddPrefabPostInit("catcoon", function(inst)
 	local _OnGetItemFromPlayer
 
 	local function OnGetItemFromPlayer(inst, giver, item)
-		if inst.components.sleeper:IsAsleep() then
+		if inst.components.sleeper ~= nil and inst.components.sleeper:IsAsleep() then
 			inst.components.sleeper:WakeUp()
 		end
 		
@@ -231,26 +231,32 @@ local function MilkableBeefaloPostinit(inst)
 		local kick_chance
 
 		if inst:HasTag("domesticated") then
-			kick_chance = 0
+			kick_chance = TUNING.MILKABLE_KICK_CHANCE_DOMESTICATED
 		elseif milker:HasTag("beefalo") then
-			kick_chance = 10
+			kick_chance = TUNING.MILKABLE_KICK_CHANCE_BEEFALOHAT
 		else
-			kick_chance = 70
+			kick_chance = TUNING.MILKABLE_KICK_CHANCE_NORMAL
 		end
+		
+		local should_kick = false
 
-		if math.random(100) <= kick_chance and milker.components.combat and not inst:HasTag("sleeping")
-		and not inst:HasTag("is_frozen") and not inst:HasTag("is_thawing") then
+		if milker.components.luckuser ~= nil then
+			should_kick = TryLuckRoll(milker, kick_chance, HofLuckFormulas.MilkableAnimalKick)
+		else
+			should_kick = math.random() <= kick_chance
+		end
+		
+		if should_kick and milker.components.combat ~= nil and inst.components.sleeper ~= nil and inst.components.freezable ~= nil
+		and not inst.components.sleeper:IsAsleep()
+		and not (inst.components.freezable:IsFrozen()
+		or inst.components.freezable:IsThawing()) then
 			inst.AnimState:PlayAnimation("atk", false)
 			inst.SoundEmitter:PlaySound("dontstarve/beefalo/angry")
+			
 			milker.components.combat:GetAttacked(inst, TUNING.MILKABLE_NORMAL_DAMAGE)
 			milker:PushEvent("kick")
-		elseif inst:HasTag("domesticated") then
-			if not inst:HasTag("sleeping") then
-				inst.AnimState:PlayAnimation("bellow", false)
-				inst.SoundEmitter:PlaySound("dontstarve/beefalo/grunt")
-			end
 		else
-			if not inst:HasTag("sleeping") then
+			if inst.components.sleeper ~= nil and not inst.components.sleeper:IsAsleep() then
 				inst.AnimState:PlayAnimation("bellow", false)
 				inst.SoundEmitter:PlaySound("dontstarve/beefalo/grunt")
 			end
@@ -270,20 +276,33 @@ local function MilkableKoalefantPostinit(inst)
 	local function OnMilked(inst, milker)
 		local kick_chance
 
-		if milker:HasTag("beefalo") then
-			kick_chance = 10
+		if inst:HasTag("domesticated") then
+			kick_chance = TUNING.MILKABLE_KICK_CHANCE_DOMESTICATED
+		elseif milker:HasTag("beefalo") then
+			kick_chance = TUNING.MILKABLE_KICK_CHANCE_BEEFALOHAT
 		else
-			kick_chance = 70
+			kick_chance = TUNING.MILKABLE_KICK_CHANCE_NORMAL
 		end
+		
+		local should_kick = false
 
-		if math.random(100) <= kick_chance and milker.components.combat and not inst:HasTag("sleeping")
-		and not inst:HasTag("is_frozen") and not inst:HasTag("is_thawing") then
+		if milker.components.luckuser ~= nil then
+			should_kick = _G.TryLuckRoll(milker, kick_chance, HofLuckFormulas.MilkableAnimalKick)
+		else
+			should_kick = math.random() <= kick_chance
+		end
+		
+		if should_kick and milker.components.combat ~= nil and inst.components.sleeper ~= nil and inst.components.freezable ~= nil
+		and not inst.components.sleeper:IsAsleep()
+		and not (inst.components.freezable:IsFrozen()
+		or inst.components.freezable:IsThawing()) then
 			inst.AnimState:PlayAnimation("atk", false)
 			inst.SoundEmitter:PlaySound("dontstarve/creatures/koalefant/angry")
+			
 			milker.components.combat:GetAttacked(inst, TUNING.MILKABLE_KOALEFANT_DAMAGE)
 			milker:PushEvent("kick")
 		else
-			if not inst:HasTag("sleeping") then
+			if inst.components.sleeper ~= nil and not inst.components.sleeper:IsAsleep() then
 				inst.AnimState:PlayAnimation("bellow", false)
 				inst.SoundEmitter:PlaySound("dontstarve/creatures/koalefant/grunt")
 			end
@@ -301,22 +320,27 @@ end
 
 local function MilkableVoltGoatPostinit(inst)
 	local function OnMilked(inst, milker)
-		local kick_chance
+		local kick_chance = TUNING.MILKABLE_KICK_CHANCE_NORMAL
 
-		if milker:HasTag("beefalo") then
-			kick_chance = 10
+		local should_kick = false
+
+		if milker.components.luckuser ~= nil then
+			should_kick = _G.TryLuckRoll(milker, kick_chance, HofLuckFormulas.MilkableAnimalKick)
 		else
-			kick_chance = 70
+			should_kick = math.random() <= kick_chance
 		end
-
-		if math.random(100) <= kick_chance and milker.components.combat and not inst:HasTag("sleeping")
-		and not inst:HasTag("is_frozen") and not inst:HasTag("is_thawing") then
+		
+		if should_kick and milker.components.combat ~= nil and inst.components.sleeper ~= nil and inst.components.freezable ~= nil
+		and not inst.components.sleeper:IsAsleep()
+		and not (inst.components.freezable:IsFrozen()
+		or inst.components.freezable:IsThawing()) then
 			inst.AnimState:PlayAnimation("taunt", false)
 			inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/lightninggoat/taunt")
+			
 			milker.components.combat:GetAttacked(inst, TUNING.MILKABLE_LIGHTNINGGOAT_DAMAGE)
 			milker:PushEvent("kick")
 		else
-			if not inst:HasTag("sleeping") then
+			if inst.components.sleeper ~= nil and not inst.components.sleeper:IsAsleep() then
 				inst.AnimState:PlayAnimation("bleet", false)
 				inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/lightninggoat/bleet")
 			end

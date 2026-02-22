@@ -1,14 +1,55 @@
+function SpawnLootForPicker(prefab, amount, picker, pos, inst)
+	for i = 1, amount do
+		local loot = SpawnPrefab(prefab)
+		
+		if loot ~= nil then
+			if picker ~= nil and picker.components.inventory ~= nil then
+				picker.components.inventory:GiveItem(loot, nil, pos)
+			else
+				LaunchAt(loot, inst, nil, 1, 1)
+			end
+		end
+	end
+end
+
+function ChooseWeightedRandom(choices)
+	local function weighted_total(choices)
+		local total = 0
+		
+		for choice, weight in pairs(choices) do
+			total = total + weight
+		end
+		
+		return total
+	end
+
+	local threshold = math.random() * weighted_total(choices)
+	local last_choice
+	
+	for choice, weight in pairs(choices) do
+		threshold = threshold - weight
+		
+		if threshold <= 0 then
+			return choice
+		end
+		
+		last_choice = choice
+	end
+
+	return last_choice
+end
+
 local function TogglePickable(pickable, isspring)
-    if isspring then
-        pickable:Pause()
-    else
-        pickable:Resume()
-    end
+	if isspring then
+		pickable:Pause()
+	else
+		pickable:Resume()
+	end
 end
 
 function MakeNoGrowInSpring(inst)
-    inst.components.pickable:WatchWorldState("isspring", TogglePickable)
-    TogglePickable(inst.components.pickable, TheWorld.state.isspring)
+	inst.components.pickable:WatchWorldState("isspring", TogglePickable)
+	TogglePickable(inst.components.pickable, TheWorld.state.isspring)
 end
 
 function IsSerenityBiome(inst)
@@ -232,6 +273,48 @@ function OnFoodNaughtiness(inst, eater)
 	end
 end
 
+function OnFoodRollFortune(inst, eater)
+	if math.random() < 0.01 then
+		if math.random() < 0.50 then
+			if eater.components.health ~= nil then
+				eater.components.health:DoDelta(999)
+			end
+			
+			if eater.components.hunger ~= nil then
+				eater.components.hunger:DoDelta(999)
+			end
+			
+			if eater.components.sanity ~= nil then
+				eater.components.sanity:DoDelta(999)
+			end
+
+			if eater.components.talker ~= nil and eater:HasTag("player") then
+				eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_GOOD)]) -- Good luck!
+			end
+		else
+			if eater.components.health ~= nil then
+				eater.components.health:SetPercent(.2)
+			end
+			
+			if eater.components.hunger ~= nil then
+				eater.components.hunger:DoDelta(-999)
+			end
+			
+			if eater.components.sanity ~= nil then
+				eater.components.sanity:DoDelta(-999)
+			end
+			
+			if eater.components.talker ~= nil and eater:HasTag("player") then
+				eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_BAD)]) -- Bad luck!
+			end
+		end
+	else
+		if eater.components.talker ~= nil and eater:HasTag("player") then
+			eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_QUOTES[math.random(#STRINGS.FORTUNE_COOKIE_QUOTES)]) -- Just say some random quote.
+		end
+	end
+end
+
 function GetOceanTrapInventoryPrefab(fish)
 	if TUNING.HOF_OCEANTRAP_PREFAB_INDEX[fish.prefab] ~= nil then
 		return TUNING.HOF_OCEANTRAP_PREFAB_INDEX[fish.prefab]
@@ -303,45 +386,4 @@ function ForceCombatGiveUp(player)
 			ent.components.combat:GiveUp()
 		end
 	end
-end
-
-function SpawnLootForPicker(prefab, amount, picker, pos, inst)
-	for i = 1, amount do
-		local loot = SpawnPrefab(prefab)
-		
-		if loot ~= nil then
-			if picker ~= nil and picker.components.inventory ~= nil then
-				picker.components.inventory:GiveItem(loot, nil, pos)
-			else
-				LaunchAt(loot, inst, nil, 1, 1)
-			end
-		end
-	end
-end
-
-function ChooseWeightedRandom(choices)
-	local function weighted_total(choices)
-		local total = 0
-		
-		for choice, weight in pairs(choices) do
-			total = total + weight
-		end
-		
-		return total
-	end
-
-	local threshold = math.random() * weighted_total(choices)
-	local last_choice
-	
-	for choice, weight in pairs(choices) do
-		threshold = threshold - weight
-		
-		if threshold <= 0 then
-			return choice
-		end
-		
-		last_choice = choice
-	end
-
-	return last_choice
 end

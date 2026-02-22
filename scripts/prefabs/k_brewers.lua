@@ -41,24 +41,6 @@ for k, v in pairs(brewing.recipes.kyno_preservesjar) do
 	table.insert(prefabs, v.name)
 end
 
-local function GetProductIcon(inst)
-	if not inst.producticon or not inst.producticon:IsValid() then
-		local x, y, z = inst.Transform:GetWorldPosition()
-		local ents = TheSim:FindEntities(x,y,z, 0.01)
-		
-		inst.producticon = nil
-		
-		for k, v in pairs(ents) do
-			if v.prefab == "kyno_product_bubble" then
-				inst.producticon = v
-				break
-			end
-		end
-	end
-	
-	return inst.producticon
-end
-
 local function OnHammered(inst, worker)
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
 		inst.components.burnable:Extinguish()
@@ -145,18 +127,10 @@ end
 local function SetProductSymbol(inst, product, overridebuild)
 	local recipe = brewing.GetBrewing(inst.prefab, product)
 	local overridesymbol = (recipe ~= nil and recipe.overridesymbolname) or product
-
-	local product_image = SpawnPrefab("kyno_product_bubble")
-	product_image.entity:SetParent(inst.entity)
-	product_image.AnimState:SetFinalOffset(5)
-
-	if inst:HasTag("woodenkeg") then
-		product_image.AnimState:PlayAnimation("product_keg", false)
-	else
-		product_image.AnimState:PlayAnimation("product_jar", false)
-	end
-
-	product_image.AnimState:OverrideSymbol("product_image", resolvefilepath("images/inventoryimages/hof_inventoryimages.xml"), overridesymbol..".tex")
+	
+	inst.AnimState:ShowSymbol("product_sign")
+	inst.AnimState:ShowSymbol("product_image")
+	inst.AnimState:OverrideSymbol("product_image", resolvefilepath("images/inventoryimages/hof_inventoryimages.xml"), overridesymbol..".tex")
 end
 
 local function ShowProductImage(inst)
@@ -166,9 +140,19 @@ local function ShowProductImage(inst)
 	end
 end
 
+local function HideProductImage(inst)
+	inst.AnimState:HideSymbol("goop")
+	inst.AnimState:HideSymbol("product_sign")
+	inst.AnimState:HideSymbol("product_image")
+	
+	inst.AnimState:ClearOverrideSymbol("goop")
+	inst.AnimState:ClearOverrideSymbol("product_image")
+end
+
 local function DoneCookFn(inst, product)
 	if not inst:HasTag("burnt") then
 		ShowProductImage(inst)
+
 		inst.AnimState:ShowSymbol("goop")
 
 		local brewer = (inst:HasTag("woodenkeg") and "kyno_brewers_keg") or "kyno_brewers_jar"
@@ -190,6 +174,7 @@ end
 local function ContinueDoneFn(inst, product)
 	if not inst:HasTag("burnt") then
 		ShowProductImage(inst)
+
 		inst.AnimState:ShowSymbol("goop")
 		
 		local brewer = (inst:HasTag("woodenkeg") and "kyno_brewers_keg") or "kyno_brewers_jar"
@@ -216,19 +201,11 @@ end
 
 local function HarvestFn(inst, harvester)
 	if not inst:HasTag("burnt") then
-		inst.AnimState:HideSymbol("goop")
-		inst.AnimState:ClearOverrideSymbol("goop")
-		
 		inst.AnimState:PlayAnimation("idle", true)
-		
 		inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
 	end
 
-	local product_icon = GetProductIcon(inst)
-	
-	if product_icon then
-		product_icon:Remove()
-	end
+	HideProductImage(inst)
 end
 
 local function OnBuilt(inst)
@@ -239,12 +216,7 @@ local function OnBuilt(inst)
 end
 
 local function OnBurnt(inst)
-	local product_icon = GetProductIcon(inst)
-	
-	if product_icon then
-		product_icon:Remove()
-	end
-	
+	HideProductImage(inst)
 	inst.SoundEmitter:KillSound("brew_loop")
 end
 
@@ -299,7 +271,6 @@ local function commonfn(bank, build, minimapicon, tags, physics, scale)
 	inst.AnimState:SetBank(bank)
 	inst.AnimState:SetBuild(build)
 	inst.AnimState:PlayAnimation("idle", true)
-	inst.AnimState:HideSymbol("goop")
 	
 	inst:AddTag("structure")
 	inst:AddTag("brewer")
@@ -311,6 +282,7 @@ local function commonfn(bank, build, minimapicon, tags, physics, scale)
 		end
 	end
 	
+	HideProductImage(inst)
 	MakeSnowCoveredPristine(inst)
 	
 	inst.entity:SetPristine()
@@ -376,7 +348,7 @@ local function jarfn()
 end
 
 local function placerfn(inst)
-	inst.AnimState:HideSymbol("goop")
+	HideProductImage(inst)
 end
 
 return Prefab("kyno_woodenkeg", kegfn, assets, prefabs),

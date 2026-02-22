@@ -17,15 +17,15 @@ local STRINGS =
 	DESCRIPTION =
 	{
 [[
-󰀄 Adds over +200 brand new Crock Pot dishes alongside new ingredients to use. Happy Cooking!
+󰀄 Adds over 200 brand-new Crock Pot dishes alongside new ingredients to use. Happy Cooking!
 
-󰀠 Also features brand new Biomes somewhere in the Ocean!
+󰀠 Also features brand-new Biomes somewhere in the Ocean!
 󰀦 Complete Recipe Sheet on the Mod Page!
 
 󰀏 Featuring the Gone Fishing Update:
-Cast your line, set your sail, and dive into the ocean! A wave of new aquatic creatures awaits, whether you're a seasoned angler or just an apprentice there's always something to catch!
+Cast your line, set your sail, and dive into the ocean! A wave of new aquatic creatures awaits, whether you're a seasoned angler or just an apprentice, there's always something to catch!
 
-Build yourself a Fish Hatchery to raise your own fish at the comfort of your base, explore the ocean in search of elusive creatures, take part in Ocean Hunts and find a friendly new companion.
+Build yourself a Fish Hatchery to raise your own fish in the comfort of your base, explore the ocean in search of elusive creatures, take part in Ocean Hunts and find a friendly new companion.
 
 󰀌 Mod Version: 4.7-B
 󰀧 Update: Chicken Week
@@ -62,7 +62,7 @@ Build yourself a Fish Hatchery to raise your own fish at the comfort of your bas
 ]],	
 		pt  = 
 [[
-󰀄 Adiciona +200 novas comidas para a Panela, além de ingredientes novos para cozinhar!
+󰀄 Adiciona mais de 200 novas comidas para a Panela, além de ingredientes novos para cozinhar!
 
 󰀠 Também acrescenta novos biomas em algum lugar do alto mar!
 󰀦 Lista completa de Receitas disponível na página do Mod!
@@ -324,7 +324,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 			
 			HOVER =
 			{
-				"Should Players drop Long Pigs upon death?\nNote: If disabled, this will cause some Recipes to be uncookable.",
+				"Should players drop Long Pigs upon death?\nNote: If disabled, this will cause some Recipes to be uncookable.",
 				zh  = "玩家死亡时是否掉落人肉？\n注意：如果禁用，可能会导致无法制作某些料理。",
 				zht = "玩家死亡時是否應該掉落長豬？\n注意：如果停用，此設定將導致某些食譜無法烹飪。",
 				pt  = "Permitir que Jogadores deixem cair Carne Humana quando morrem?\nNota: Se desabilitado, pode impedir certas comidas de serem feitas.",
@@ -370,7 +370,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 			
 			HOVER =
 			{
-				"How many Coffee Plants Dragonfly should drop?",
+				"How many Coffee Plants should Dragonfly drop?",
 				zh  = "龙蝇掉落多少数量的咖啡丛？",
 				zht = "龍蠅應掉落多少咖啡植物？",
 				pt  = "Quantas Plantas de Café a Libélula deve deixar cair?",
@@ -978,7 +978,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 			
 			HOVER =
 			{
-				"Should food spoil if its inside the Crock Pot?",
+				"Should food spoil if it's inside the Crock Pot?",
 				zh  = "料理在烹饪锅中是否变质？",
 				zht = "料理在烹飪鍋中是否變質？",
 				pt  = "Permitir que as comidas estraguem se estiverem na Panela?",
@@ -1060,7 +1060,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 		{
 			NAME =
 			{
-				"Extra Mod Scrapbook Informations",
+				"Extra Mod Scrapbook Information",
 				zh  = "额外模组剪贴簿信息",
 				zht = "額外模組剪貼簿信息",
 				pt  = "Informações Extras Scrapbook do Mod",
@@ -1070,7 +1070,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 			
 			HOVER =
 			{
-				"Should additional informations for Mod Contents be shown on the Scrapbook?\n\Requires Mod Scrapbook to be enabled.",
+				"Should additional information about Mod Contents be shown in the Scrapbook?\n\Requires Mod Scrapbook to be enabled.",
 				zh  = "是否应在剪贴簿中显示模组内容的附加信息？\n\需要启用 Mod Scrapbook。",
 				zht = "是否應在剪貼簿中顯示模組內容的附加資訊？\n\需要啟用 Mod Scrapbook。",
 				pt  = "Permitir que informações adicionais sobre conteúdos do Mod sejam mostradas no Scrapbook?\n\Requer que o Scrapbook do Mod esteja ativado.",
@@ -1082,7 +1082,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 			{
 				DISABLED =
 				{
-					"Original Mod Scrapbook without additional informations.",
+					"Original Mod Scrapbook without additional information.",
 					zh  = "原版Mod剪贴簿，不含其他信息。",
 					zht = "原版Mod剪貼簿，不含其他資訊。",
 					pt  = "Scrapbook do Mod original sem informações adicionais.",
@@ -1092,7 +1092,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 				
 				ENABLED =
 				{
-					"Mod Scrapbook with additional informations.",
+					"Mod Scrapbook with additional information.",
 					zh  = "Mod Scrapbook，包含更多信息。",
 					zht = "Mod Scrapbook，包含更多資訊。",
 					pt  = "Scrapbook do Mod com informações adicionais.",
@@ -1116,7 +1116,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 			
 			HOVER =
 			{
-				"This option is experimental and its under testing.\n\Should the Serenity Archipelago have special Colour Cubes?", 
+				"This option is experimental and it's under testing.\n\Should the Serenity Archipelago have special Colour Cubes?", 
 				zh  = "此选项为实验性功能，正在测试中。\n是否应为宁静群岛启用特殊 色块？",
 				zht = "此選項為實驗性功能，正在測試中。\n是否應為寧靜群島啟用特殊 色塊？",
 				pt  = "Esta opção é experimental e está em teste.\nO Arquipélago da Serenidade deve ter Colour Cubes especiais?",
@@ -1173,7 +1173,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 
 					HOVER =
 					{
-						"Static Mode Should work for both scenarios. Requires Server Restart.",
+						"Static Mode should work for both scenarios. Requires Server Restart.",
 						zh  = "静态模式适用于所有场景。需要重启服务器。",
 						zht = "靜態模式適用於所有場景。需要重新啟動伺服器。",
 						pt  = "Modo Estático funciona para ambos cenários. Requer Restart do Servidor.",
@@ -1198,7 +1198,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 			
 			HOVER =
 			{
-				"This option is experimental and its under testing.\n\Should the Seaside Island have special Colour Cubes?", 
+				"This option is experimental and it's under testing.\n\Should the Seaside Island have special Colour Cubes?", 
 				zh  = "此选项为实验性功能，正在测试中。\n是否应为海滨岛启用特殊 色块？",
 				zht = "此選項為實驗性功能，正在測試中。\n是否應為海濱島啟用特殊 色塊？",
 				pt  = "Esta opção é experimental e está em teste.\nA Ilha Beira-mar deve ter Colour Cubes especiais?",
@@ -1255,7 +1255,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 
 					HOVER =
 					{
-						"Static Mode Should work for both scenarios. Requires Server Restart.",
+						"Static Mode should work for both scenarios. Requires Server Restart.",
 						zh  = "静态模式适用于所有场景。需要重启服务器。",
 						zht = "靜態模式適用於所有場景。需要重新啟動伺服器。",
 						pt  = "Modo Estático funciona para ambos cenários. Requer Restart do Servidor.",
@@ -1372,7 +1372,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 			
 			HOVER =
 			{
-				"If your world is missing the Mod Contents enable this option.\nThis option will be set as \"Updated\" once the retrofitting is finished!",
+				"If your world is missing the Mod Contents enable this option.\nThis option will be set to \"Updated\" once the retrofitting is finished!",
 				zh  = "如果你的世界缺少Mod内容，请启用此选项。\n改造完成后，该选项将被设置为 \"已更新\"！",
 				zht = "如果你的世界缺少Mod內容，請啟用此選項。\n改造完成後，該選項將被設置為 \"已更新\"！",
 				pt  = "Se seu mundo está faltando algum conteúdo ative esta opção.\nEsta opção irá ficar como \"Atualizado\ assim que a retrocompatibilidade for finalizada!",
@@ -1467,7 +1467,7 @@ Construye una piscifactoría para criar tus propios peces en la comodidad de tu 
 			
 			HOVER =
 			{
-				"Should the Server check every time if the World needs any Retrofits during initialization? This option does not auto-disable afterwards.",
+				"Should the server check during initialization whether the world needs any retrofits? This option does not auto-disable afterwards.",
 				zh  = "服务器是否应在初始化期间每次检查世界是否需要改造？ 此选项之后不会自动禁用。",
 				zht = "伺服器是否應在初始化期間每次檢查世界是否需要改造？ 此選項之後不會自動禁用。",
 				pt  = "Permitir que o Servidor cheque toda vez se o Mundo precisa de algum Retrofit durante a inicialização? Esta opção não é desativada automaticamente depois.",

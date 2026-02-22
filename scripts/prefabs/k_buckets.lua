@@ -97,6 +97,19 @@ local function OnPutInInventory(inst)
 	OnStopRainFill(inst, true) -- This resets the timer!
 end
 
+local function OnUse(inst)
+    local owner = inst.components.inventoryitem:GetGrandOwner() or inst.components.inventoryitem.owner
+	local bucket = SpawnPrefab("kyno_bucket_metal")
+	
+	if owner ~= nil then
+		if owner.components.inventory ~= nil then
+			owner.components.inventory:GiveItem(bucket, nil, owner:GetPosition())
+		end
+	end
+
+	inst:Remove()
+end
+
 local function emptyfn()
 	local inst = CreateEntity()
 
@@ -221,6 +234,7 @@ local function waterfn()
 
 	inst:AddTag("bucket")
 	inst:AddTag("bucket_water")
+	inst:AddTag("watersource")
 	
 	inst.pickupsound = "metal"
 	inst.no_wet_prefix = true
@@ -232,6 +246,18 @@ local function waterfn()
 	end
 	
 	inst:AddComponent("inspectable")
+	
+	inst:AddComponent("watersource")
+	inst.components.watersource.onusefn = OnUse
+	
+	inst:AddComponent("wateryprotection")
+	inst.components.wateryprotection.extinguishheatpercent = TUNING.KYNO_BUCKET_WATER_EXTINGUISH_HEAT_PERCENT
+	inst.components.wateryprotection.temperaturereduction = TUNING.KYNO_BUCKET_WATER_TEMP_REDUCTION
+	inst.components.wateryprotection.witherprotectiontime = TUNING.KYNO_BUCKET_WATER_PROTECTION_TIME
+	inst.components.wateryprotection.addwetness = TUNING.KYNO_BUCKET_WATER_WETNESS_AMOUNT
+	inst.components.wateryprotection.protection_dist = TUNING.KYNO_BUCKET_WATER_PROTECTION_DIST
+	inst.components.wateryprotection:AddIgnoreTag("player")
+	inst.components.wateryprotection.onspreadprotectionfn = OnUse
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

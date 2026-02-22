@@ -1578,27 +1578,7 @@ local kyno_foods =
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"papyrus", 1}, {"honey", 2}}},
 		oneatenfn = function(inst, eater)
-			if math.random() < 0.01 then
-				if math.random() < 0.50 then
-					eater.components.health:DoDelta(999)
-					eater.components.hunger:DoDelta(999)
-					eater.components.sanity:DoDelta(999)
-					if eater.components.talker and eater:HasTag("player") then
-						eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_GOOD)])
-					end
-				else
-					eater.components.health:SetPercent(.2)
-					eater.components.hunger:DoDelta(-999)
-					eater.components.sanity:DoDelta(-999)
-					if eater.components.talker and eater:HasTag("player") then
-						eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_BAD)])
-					end
-				end
-			else
-				if eater.components.talker and eater:HasTag("player") then
-					eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_QUOTES[math.random(#STRINGS.FORTUNE_COOKIE_QUOTES)])
-				end
-			end
+			OnFoodRollFortune(inst, eater)
 		end,
 	},
 	
@@ -1620,8 +1600,8 @@ local kyno_foods =
 		oneatenfn = function(inst, eater)
 			local bones = SpawnPrefab("boneshard")
 			bones.components.stackable.stacksize = 2
-			if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost") 
-			and not eater.components.inventory:IsFull() then 
+			if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() 
+			and not eater:HasTag("playerghost") then 
 				eater.components.inventory:GiveItem(bones)
 			end
 		end,

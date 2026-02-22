@@ -228,15 +228,21 @@ local function RerollWares(inst)
 	inst:AddWares(inst.WARES.ALWAYS[1])
 	-- inst:AddWares(inst.WARES.STARTER[1])
     
-	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_UNCOMMONS_ODDS then -- 25%
+	local x, y, z = inst.Transform:GetWorldPosition()
+	local players = FindPlayersInRange(x, y, z, 35, true)
+	
+	-- if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_UNCOMMONS_ODDS then -- 25%
+	if math.random() < GetEntitiesLuckChance(players, TUNING.KYNO_MEADOWISLANDTRADER_UNCOMMONS_ODDS, HofLuckFormulas.SammyInventory) then
 		inst:AddWares(inst.WARES.RANDOM_UNCOMMONS[math.random(#inst.WARES.RANDOM_UNCOMMONS)])
 	end
 	
-	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_RARES_ODDS then -- 10%
+	-- if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_RARES_ODDS then -- 10%
+	if math.random() < GetEntitiesLuckChance(players, TUNING.KYNO_MEADOWISLANDTRADER_RARES_ODDS, HofLuckFormulas.SammyInventory) then
 		inst:AddWares(inst.WARES.RANDOM_RARES[math.random(#inst.WARES.RANDOM_RARES)])
 	end
 	
-	if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_ULTRARARES_ODDS then -- 5%
+	-- if math.random() < TUNING.KYNO_MEADOWISLANDTRADER_ULTRARARES_ODDS then -- 5%
+	if math.random() < GetEntitiesLuckChance(players, TUNING.KYNO_MEADOWISLANDTRADER_ULTRARARES_ODDS, HofLuckFormulas.SammyInventory) then
 		inst:AddWares(inst.WARES.RANDOM_ULTRARARES[math.random(#inst.WARES.RANDOM_ULTRARARES)])
 	end
 	

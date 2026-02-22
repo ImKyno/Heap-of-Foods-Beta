@@ -35,132 +35,129 @@ local LOOT =
 {
 	CRITTERS =
 	{
-		{ weight = 4, prefab = "penguin",          targetplayer = true,  state = "attack",    tuning = PENGUIN_ENABLED,            season = "winter" }, -- 57.14%
-		{ weight = 4, prefab = "frog",             targetplayer = true,  state = "attack",    tuning = "FROG_POND_ENABLED",        season = "spring" }, -- 57.14%
-		{ weight = 4, prefab = "slurper",          targetplayer = true,  state = "headslurp", tuning = nil,                        season = "summer" }, -- 57.14%
-		{ weight = 4, prefab = "kyno_piko",        targetplayer = false, state = "look",      tuning = "KYNO_PIKO_ENABLED",        season = nil      }, -- 57.14%
-		{ weight = 2, prefab = "mole",             targetplayer = false, state = "peek",      tuning = "MOLE_ENABLED",             season = nil      }, -- 28.57%
-		{ weight = 2, prefab = "squid",            targetplayer = true,  state = "attack",    tuning = SQUID_ENABLED,              season = nil      }, -- 28.57%
-		{ weight = 2, prefab = "kyno_chicken2",    targetplayer = false, state = "honk",      tuning = "KYNO_CHICKEN_ENABLED",     season = nil      }, -- 28.57%
-		{ weight = 1, prefab = "kyno_piko_orange", targetplayer = false, state = "look",      tuning = "KYNO_PIKO_ORANGE_ENABLED", season = nil      }, -- 14.29%
+		{ weight = 4, prefab = "penguin",          targetplayer = true,  state = "attack",    tuning = PENGUIN_ENABLED,            season = "winter", luck_mod = "bad" }, -- 57.14%
+		{ weight = 4, prefab = "frog",             targetplayer = true,  state = "attack",    tuning = "FROG_POND_ENABLED",        season = "spring", luck_mod = "bad" }, -- 57.14%
+		{ weight = 4, prefab = "slurper",          targetplayer = true,  state = "headslurp", tuning = nil,                        season = "summer", luck_mod = "bad" }, -- 57.14%
+		{ weight = 4, prefab = "kyno_piko",        targetplayer = false, state = "look",      tuning = "KYNO_PIKO_ENABLED",        season = nil,      luck_mod = "bad" }, -- 57.14%
+		{ weight = 2, prefab = "squid",            targetplayer = true,  state = "attack",    tuning = SQUID_ENABLED,              season = nil,      luck_mod = "bad" }, -- 28.57%
+		{ weight = 1, prefab = "kyno_piko_orange", targetplayer = false, state = "look",      tuning = "KYNO_PIKO_ORANGE_ENABLED", season = nil,      luck_mod = "bad" }, -- 14.29%
 	},
 	
 	ITEMS =
 	{
 		-- AUTUMN
-		{ weight = 8, prefab = "corn_seeds",             amount = {3, 9},     season = "autumn" }, -- 25%
-		{ weight = 8, prefab = "eggplant_seeds",         amount = {3, 9},     season = "autumn" },
-		{ weight = 8, prefab = "potato_seeds",           amount = {3, 9},     season = "autumn" },
-		{ weight = 8, prefab = "kyno_turnip_seeds",      amount = {3, 9},     season = "autumn" },
-		{ weight = 8, prefab = "kyno_parznip_seeds",     amount = {3, 9},     season = "autumn" },
-		{ weight = 4, prefab = "manrabbit_tail",         amount = {1, 3},     season = "autumn" }, -- 12.5%
-		{ weight = 4, prefab = "pigskin",                amount = {1, 3},     season = "autumn" },
-		{ weight = 4, prefab = "beefalowool",            amount = {1, 5},     season = "autumn" },
-		{ weight = 2, prefab = "steelwool",              amount = {1, 3},     season = "autumn" }, -- 6.25%
-		{ weight = 2, prefab = "tentaclespots",          amount = {1, 3},     season = "autumn" },
-		{ weight = 2, prefab = "gears",                  amount = {1, 3},     season = "autumn" },
-		{ weight = 1, prefab = "furtuft",                amount = {1, 15},    season = "autumn" }, -- 3.125%
-		{ weight = 1, prefab = "potato_oversized",       amount = 1,          season = "autumn" },         
-		{ weight = 1, prefab = "corn_oversized",         amount = 1,          season = "autumn" },
+		{ weight = 8, prefab = "corn_seeds",             amount = {3, 9},     season = "autumn", luck_mod = "bad"  }, -- 25%
+		{ weight = 8, prefab = "eggplant_seeds",         amount = {3, 9},     season = "autumn", luck_mod = nil    },
+		{ weight = 8, prefab = "potato_seeds",           amount = {3, 9},     season = "autumn", luck_mod = nil    },
+		{ weight = 8, prefab = "kyno_turnip_seeds",      amount = {3, 9},     season = "autumn", luck_mod = nil    },
+		{ weight = 8, prefab = "kyno_parznip_seeds",     amount = {3, 9},     season = "autumn", luck_mod = nil    },
+		{ weight = 4, prefab = "manrabbit_tail",         amount = {1, 3},     season = "autumn", luck_mod = "good" }, -- 12.5%
+		{ weight = 4, prefab = "pigskin",                amount = {1, 3},     season = "autumn", luck_mod = "good" },
+		{ weight = 4, prefab = "beefalowool",            amount = {1, 5},     season = "autumn", luck_mod = nil    },
+		{ weight = 2, prefab = "steelwool",              amount = {1, 3},     season = "autumn", luck_mod = "good" }, -- 6.25%
+		{ weight = 2, prefab = "tentaclespots",          amount = {1, 3},     season = "autumn", luck_mod = "good" },
+		{ weight = 2, prefab = "gears",                  amount = {1, 3},     season = "autumn", luck_mod = "good" },
+		{ weight = 1, prefab = "furtuft",                amount = {1, 15},    season = "autumn", luck_mod = nil    }, -- 3.125%
+		{ weight = 1, prefab = "potato_oversized",       amount = 1,          season = "autumn", luck_mod = "good" },         
+		{ weight = 1, prefab = "corn_oversized",         amount = 1,          season = "autumn", luck_mod = "good" },
 		
 		-- WINTER
-		{ weight = 8, prefab = "garlic_seeds",           amount = {3, 9},     season = "winter" },
-		{ weight = 8, prefab = "pumpkin_seeds",          amount = {3, 9},     season = "winter" },
-		{ weight = 8, prefab = "asparagus_seeds",        amount = {3, 9},     season = "winter" },
-		{ weight = 8, prefab = "kyno_radish_seeds",      amount = {3, 9},     season = "winter" },
-		{ weight = 8, prefab = "kyno_fennel_seeds",      amount = {3, 9},     season = "winter" },
-		{ weight = 4, prefab = "trunkvest_summer",                            season = "winter" },
-		{ weight = 4, prefab = "catcoonhat",                                  season = "winter" },
-		{ weight = 2, prefab = "winterhat",                                   season = "winter" },
-		{ weight = 1, prefab = "walrus_tusk",                                 season = "winter" },
-		{ weight = 1, prefab = "garlic_oversized",       amount = 1,          season = "winter" },         
-		{ weight = 1, prefab = "pumpkin_oversized",      amount = 1,          season = "winter" },
+		{ weight = 8, prefab = "garlic_seeds",           amount = {3, 9},     season = "winter", luck_mod = "bad"  },
+		{ weight = 8, prefab = "pumpkin_seeds",          amount = {3, 9},     season = "winter", luck_mod = nil    },
+		{ weight = 8, prefab = "asparagus_seeds",        amount = {3, 9},     season = "winter", luck_mod = nil    },
+		{ weight = 8, prefab = "kyno_radish_seeds",      amount = {3, 9},     season = "winter", luck_mod = nil    },
+		{ weight = 8, prefab = "kyno_fennel_seeds",      amount = {3, 9},     season = "winter", luck_mod = nil    },
+		{ weight = 4, prefab = "trunkvest_summer",                            season = "winter", luck_mod = nil    },
+		{ weight = 4, prefab = "catcoonhat",                                  season = "winter", luck_mod = nil    },
+		{ weight = 2, prefab = "winterhat",                                   season = "winter", luck_mod = nil    },
+		{ weight = 1, prefab = "walrus_tusk",                                 season = "winter", luck_mod = "good" },
+		{ weight = 1, prefab = "garlic_oversized",       amount = 1,          season = "winter", luck_mod = "good" },         
+		{ weight = 1, prefab = "pumpkin_oversized",      amount = 1,          season = "winter", luck_mod = "good" },
 		
 		-- SPRING
-		{ weight = 8, prefab = "durian_seeds",           amount = {3, 9},     season = "spring" },
-		{ weight = 8, prefab = "watermelon_seeds",       amount = {3, 9},     season = "spring" },
-		{ weight = 8, prefab = "pomegranate_seeds",      amount = {3, 9},     season = "spring" },
-		{ weight = 8, prefab = "kyno_aloe_seeds",        amount = {3, 9},     season = "spring" },
-		{ weight = 8, prefab = "kyno_cucumber_seeds",    amount = {3, 9},     season = "spring" },
-		{ weight = 4, prefab = "umbrella",                                    season = "spring" },
-		{ weight = 2, prefab = "rainhat",                                     season = "spring" },
-		{ weight = 1, prefab = "kyno_parznip_oversized", amount = 1,          season = "spring" },         
-		{ weight = 1, prefab = "kyno_radish_oversized",  amount = 1,          season = "spring" },
+		{ weight = 8, prefab = "durian_seeds",           amount = {3, 9},     season = "spring", luck_mod = "bad"  },
+		{ weight = 8, prefab = "watermelon_seeds",       amount = {3, 9},     season = "spring", luck_mod = "bad"  },
+		{ weight = 8, prefab = "pomegranate_seeds",      amount = {3, 9},     season = "spring", luck_mod = "bad"  },
+		{ weight = 8, prefab = "kyno_aloe_seeds",        amount = {3, 9},     season = "spring", luck_mod = nil    },
+		{ weight = 8, prefab = "kyno_cucumber_seeds",    amount = {3, 9},     season = "spring", luck_mod = nil    },
+		{ weight = 4, prefab = "umbrella",                                    season = "spring", luck_mod = nil    },
+		{ weight = 2, prefab = "rainhat",                                     season = "spring", luck_mod = nil    },
+		{ weight = 1, prefab = "kyno_parznip_oversized", amount = 1,          season = "spring", luck_mod = "good" },         
+		{ weight = 1, prefab = "kyno_radish_oversized",  amount = 1,          season = "spring", luck_mod = "good" },
 		
 		-- SUMMER
-		{ weight = 8, prefab = "dragonfruit_seeds",      amount = {3, 9},     season = "summer" },
-		{ weight = 8, prefab = "pepper_seeds",           amount = {3, 9},     season = "summer" },
-		{ weight = 8, prefab = "onion_seeds",            amount = {3, 9},     season = "summer" },
-		{ weight = 8, prefab = "kyno_rice_seeds",        amount = {3, 9},     season = "summer" },
-		{ weight = 8, prefab = "kyno_sweetpotato_seeds", amount = {3, 9},     season = "summer" },
-		{ weight = 4, prefab = "minifan",                                     season = "summer" },
-		{ weight = 2, prefab = "reflectivevest",                              season = "summer" },
-		{ weight = 2, prefab = "icehat",                                      season = "summer" },
-		{ weight = 2, prefab = "watermelonhat",                               season = "summer" },
-		{ weight = 1, prefab = "hawaiianshirt",                               season = "summer" },
-		{ weight = 8, prefab = SWEETPOTATO_OVERSIZED,    amount = 1,          season = "summer" },         
-		{ weight = 1, prefab = "kyno_turnip_oversized",  amount = 1,          season = "summer" },
+		{ weight = 8, prefab = "dragonfruit_seeds",      amount = {3, 9},     season = "summer", luck_mod = "good" },
+		{ weight = 8, prefab = "pepper_seeds",           amount = {3, 9},     season = "summer", luck_mod = "good" },
+		{ weight = 8, prefab = "onion_seeds",            amount = {3, 9},     season = "summer", luck_mod = nil    },
+		{ weight = 8, prefab = "kyno_rice_seeds",        amount = {3, 9},     season = "summer", luck_mod = nil    },
+		{ weight = 8, prefab = "kyno_sweetpotato_seeds", amount = {3, 9},     season = "summer", luck_mod = nil    },
+		{ weight = 4, prefab = "minifan",                                     season = "summer", luck_mod = "good" },
+		{ weight = 2, prefab = "reflectivevest",                              season = "summer", luck_mod = "bad"  },
+		{ weight = 2, prefab = "icehat",                                      season = "summer", luck_mod = "bad"  },
+		{ weight = 2, prefab = "watermelonhat",                               season = "summer", luck_mod = "bad"  },
+		{ weight = 1, prefab = "hawaiianshirt",                               season = "summer", luck_mod = "good" },
+		{ weight = 8, prefab = SWEETPOTATO_OVERSIZED,    amount = 1,          season = "summer", luck_mod = "good" },         
+		{ weight = 1, prefab = "kyno_turnip_oversized",  amount = 1,          season = "summer", luck_mod = "good" },
 		
 		-- ALL TIMES
-		{ weight = 8, prefab = "kyno_wheat",             amount = {3, 10},    season = nil },
-		{ weight = 8, prefab = "kyno_flour",             amount = {3, 10},    season = nil },
-		{ weight = 8, prefab = "foliage",                amount = {4, 8},     season = nil },
-		{ weight = 8, prefab = "lightbulb",              amount = {4, 8},     season = nil },
-		{ weight = 8, prefab = "succulent_picked",       amount = {4, 8},     season = nil },
-		{ weight = 4, prefab = "marblebean",             amount = {3, 10},    season = nil },
-		{ weight = 4, prefab = "slurtle_shellpieces",    amount = {3, 10},    season = nil },
-		{ weight = 4, prefab = "livinglog",              amount = {3, 5},     season = nil },
-		{ weight = 4, prefab = "bedroll_straw",                               season = nil },
-		{ weight = 2, prefab = EMPTY_PREFAB,                                  season = nil }, -- Get nothing :steammocking:
-		{ weight = 2, prefab = "bedroll_furry",                               season = nil },
-		{ weight = 2, prefab = "rabbithat",                                   season = nil },
-		{ weight = 2, prefab = "dug_berrybush_juicy",    amount = {2, 4},     season = nil },
-		{ weight = 2, prefab = "dug_berrybush",          amount = {2, 4},     season = nil },
-		{ weight = 2, prefab = "dug_berrybush2",         amount = {2, 4},     season = nil },
-		{ weight = 2, prefab = "kyno_sammyhat",                               season = nil },
-		{ weight = 2, prefab = "trinket_4",              amount = {1, 2},     season = nil },
-		{ weight = 2, prefab = "trinket_5",              amount = {1, 2},     season = nil },
-		{ weight = 2, prefab = "trinket_10",             amount = {1, 2},     season = nil },
-		{ weight = 2, prefab = "trinket_11",             amount = {1, 2},     season = nil },
-		{ weight = 2, prefab = "trinket_13",             amount = {1, 2},     season = nil },
-		{ weight = 2, prefab = "trinket_18",             amount = {1, 2},     season = nil },
-		{ weight = 2, prefab = "trinket_22",             amount = {1, 2},     season = nil },
-		{ weight = 2, prefab = "trinket_24",             amount = {1, 2},     season = nil },
-		{ weight = 2, prefab = "trinket_25",             amount = {1, 2},     season = nil },
-		{ weight = 2, prefab = "trinket_26",             amount = {1, 2},     season = nil },
-		{ weight = 1, prefab = "wormlight_lesser",       amount = {3, 5},     season = nil },
-		{ weight = 1, prefab = "deer_antler1",                                season = nil },
-		{ weight = 1, prefab = "deer_antler2",                                season = nil },
-		{ weight = 1, prefab = "deer_antler3",                                season = nil },
-		{ weight = 1, prefab = "honeycomb",              amount = {2, 4},     season = nil },
-		{ weight = 1, prefab = "blueprint",                                   season = nil },
-		{ weight = 1, prefab = "dug_trap_starfish",      amount = {1, 3},     season = nil },
-		{ weight = 1, prefab = "batnose",                amount = {1, 3},     season = nil },
-		{ weight = 1, prefab = "saddle_race",                                 season = nil },
-		{ weight = 1, prefab = "sewing_kit",                                  season = nil },
-		{ weight = 1, prefab = "wormlight",              amount = {1, 3},     season = nil },
-		{ weight = 1, prefab = "pondeel",                amount = {1, 2},     season = nil },
+		{ weight = 8, prefab = "kyno_wheat",             amount = {3, 10},    season = nil, luck_mod = "bad"   },
+		{ weight = 8, prefab = "kyno_flour",             amount = {3, 10},    season = nil, luck_mod = "bad"   },
+		{ weight = 8, prefab = "foliage",                amount = {4, 8},     season = nil, luck_mod = nil     },
+		{ weight = 8, prefab = "lightbulb",              amount = {4, 8},     season = nil, luck_mod = "good"  },
+		{ weight = 8, prefab = "succulent_picked",       amount = {4, 8},     season = nil, luck_mod = nil     },
+		{ weight = 4, prefab = "marblebean",             amount = {3, 10},    season = nil, luck_mod = "good"  },
+		{ weight = 4, prefab = "slurtle_shellpieces",    amount = {3, 10},    season = nil, luck_mod = "good"  },
+		{ weight = 4, prefab = "livinglog",              amount = {3, 5},     season = nil, luck_mod = "good"  },
+		{ weight = 4, prefab = "bedroll_straw",                               season = nil, luck_mod = "bad"   },
+		{ weight = 2, prefab = EMPTY_PREFAB,                                  season = nil, luck_mod = "bad"   }, -- Get nothing :steammocking:
+		{ weight = 2, prefab = "bedroll_furry",                               season = nil, luck_mod = "good"  },
+		{ weight = 2, prefab = "rabbithat",                                   season = nil, luck_mod = "good"  },
+		{ weight = 2, prefab = "dug_berrybush_juicy",    amount = {2, 4},     season = nil, luck_mod = nil     },
+		{ weight = 2, prefab = "dug_berrybush",          amount = {2, 4},     season = nil, luck_mod = nil     },
+		{ weight = 2, prefab = "dug_berrybush2",         amount = {2, 4},     season = nil, luck_mod = nil     },
+		{ weight = 2, prefab = "trinket_4",              amount = {1, 2},     season = nil, luck_mod = nil     },
+		{ weight = 2, prefab = "trinket_5",              amount = {1, 2},     season = nil, luck_mod = nil     },
+		{ weight = 2, prefab = "trinket_10",             amount = {1, 2},     season = nil, luck_mod = nil     },
+		{ weight = 2, prefab = "trinket_11",             amount = {1, 2},     season = nil, luck_mod = nil     },
+		{ weight = 2, prefab = "trinket_13",             amount = {1, 2},     season = nil, luck_mod = nil     },
+		{ weight = 2, prefab = "trinket_18",             amount = {1, 2},     season = nil, luck_mod = nil     },
+		{ weight = 2, prefab = "trinket_22",             amount = {1, 2},     season = nil, luck_mod = nil     },
+		{ weight = 2, prefab = "trinket_24",             amount = {1, 2},     season = nil, luck_mod = nil     },
+		{ weight = 2, prefab = "trinket_25",             amount = {1, 2},     season = nil, luck_mod = nil     },
+		{ weight = 2, prefab = "trinket_26",             amount = {1, 2},     season = nil, luck_mod = nil     },
+		{ weight = 1, prefab = "wormlight_lesser",       amount = {3, 5},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "deer_antler1",                                season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "deer_antler2",                                season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "deer_antler3",                                season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "honeycomb",              amount = {2, 4},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "blueprint",                                   season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "dug_trap_starfish",      amount = {1, 3},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "batnose",                amount = {1, 3},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "saddle_race",                                 season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "sewing_kit",                                  season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "wormlight",              amount = {1, 3},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "pondeel",                amount = {1, 2},     season = nil, luck_mod = nil     },
 		
 		-- COOKPOT FOODS
-		{ weight = 2, prefab = "jawsbreaker",            amount = {3, 5},     season = nil },
-		{ weight = 2, prefab = "gorge_caramel_cube",     amount = {3, 5},     season = nil },
-		{ weight = 1, prefab = "bunnystew",              amount = {1, 5},     season = nil },
-		{ weight = 1, prefab = "seafoodgumbo",           amount = {1, 3},     season = nil },
-		{ weight = 1, prefab = "watermelonicle",         amount = {1, 5},     season = nil },
-		{ weight = 1, prefab = "bananapop",              amount = {1, 4},     season = nil },
-		{ weight = 1, prefab = "taffy",                  amount = {1, 5},     season = nil },
-		{ weight = 1, prefab = "powcake",                amount = {1, 7},     season = nil },
-		{ weight = 1, prefab = "pumpkincookie",          amount = {1, 4},     season = nil },
-		{ weight = 1, prefab = "jammypreserves",         amount = {1, 5},     season = nil },
-		{ weight = 1, prefab = "fruitmedley",            amount = {1, 4},     season = nil },
-		{ weight = 1, prefab = "waffles",                amount = {1, 3},     season = nil },
-		{ weight = 1, prefab = "unagi",                  amount = {1, 4},     season = nil },
-		{ weight = 1, prefab = "sweettea",               amount = {1, 3},     season = nil },
-		{ weight = 1, prefab = "fishsticks",             amount = {1, 4},     season = nil },
-		{ weight = 1, prefab = "ceviche",                amount = {1, 3},     season = nil },
-		{ weight = 1, prefab = "veggieomlet",            amount = {1, 4},     season = nil },
-		{ weight = 1, prefab = "beefalotreat",           amount = {1, 3},     season = nil },
-		{ weight = 1, prefab = "mandrakesoup",           amount = 1,          season = nil },
+		{ weight = 2, prefab = "jawsbreaker",            amount = {3, 5},     season = nil, luck_mod = "good"  },
+		{ weight = 2, prefab = "gorge_caramel_cube",     amount = {3, 5},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "bunnystew",              amount = {1, 5},     season = nil, luck_mod = "bad"   },
+		{ weight = 1, prefab = "seafoodgumbo",           amount = {1, 3},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "watermelonicle",         amount = {1, 5},     season = nil, luck_mod = "bad"   },
+		{ weight = 1, prefab = "bananapop",              amount = {1, 4},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "taffy",                  amount = {1, 5},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "powcake",                amount = {1, 7},     season = nil, luck_mod = "bad"   },
+		{ weight = 1, prefab = "pumpkincookie",          amount = {1, 4},     season = nil, luck_mod = "bad"   },
+		{ weight = 1, prefab = "jammypreserves",         amount = {1, 5},     season = nil, luck_mod = "bad"   },
+		{ weight = 1, prefab = "fruitmedley",            amount = {1, 4},     season = nil, luck_mod = "bad"   },
+		{ weight = 1, prefab = "waffles",                amount = {1, 3},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "unagi",                  amount = {1, 4},     season = nil, luck_mod = "bad"   },
+		{ weight = 1, prefab = "sweettea",               amount = {1, 3},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "fishsticks",             amount = {1, 4},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "ceviche",                amount = {1, 3},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "veggieomlet",            amount = {1, 4},     season = nil, luck_mod = "bad"   },
+		{ weight = 1, prefab = "beefalotreat",           amount = {1, 3},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "mandrakesoup",           amount = 1,          season = nil, luck_mod = "good"  },
 	},
 }
 
@@ -181,6 +178,33 @@ for _, item in ipairs(LOOT.ITEMS) do
 	if item.prefab ~= EMPTY_PREFAB then
 		table.insert(prefabs, item.prefab)
 	end
+end
+
+local function ModifyWeightByLuck(loot, base_weight, luck)
+	if loot.luck_mod == nil or luck == 0 then
+		return base_weight
+	end
+
+	luck = math.clamp(luck, -3, 3)
+
+	local reciprocal = 4
+	local max_boost = 0.7 -- Max boost of 70%.
+
+	local new_weight = base_weight
+
+	if loot.luck_mod == "good" and luck > 0 then
+		local factor = (reciprocal / (reciprocal + luck))
+		local boost = (1 - factor) * max_boost
+		new_weight = base_weight * (1 + boost)
+	end
+
+	if loot.luck_mod == "bad" and luck < 0 then
+		local factor = (reciprocal / (reciprocal + math.abs(luck)))
+		local boost = (1 - factor) * max_boost
+		new_weight = base_weight * (1 + boost)
+	end
+
+	return new_weight
 end
 
 local function OnSeasonChange(inst, season)
@@ -261,7 +285,23 @@ local function SpawnWagonLoot(inst, picker, nopickup)
 		end
 	end
 
-	local choice = weighted_random_choice(WEIGHTED_ITEM_TABLE)
+	-- local choice = weighted_random_choice(WEIGHTED_ITEM_TABLE)
+	
+	local luck = picker.components.luckuser ~= nil and picker.components.luckuser:GetLuck() or 0
+	local modified_table = {}
+
+	for loot, weight in pairs(WEIGHTED_ITEM_TABLE) do
+		modified_table[loot] = ModifyWeightByLuck(loot, weight, luck)
+	end
+
+	local choice = weighted_random_choice(modified_table)
+	
+	-- If we are lucky and got something bad, reroll it.
+	if luck >= 1.5 and choice.luck_mod == "bad" then
+		if math.random() < TUNING.KYNO_MERMCART_LUCK_REROLL_CHANCE then
+			choice = weighted_random_choice(modified_table)
+		end
+	end
 
 	if choice.prefab ~= nil and choice.prefab ~= EMPTY_PREFAB and IsCorrectSeason(choice) then
 		local amount = 1

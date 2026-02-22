@@ -459,7 +459,7 @@ AddComponentPostInit("fishingrod", function(self)
 			end)
 				
 			-- Random chance for one more extra fish.
-			if math.random() < TUNING.KYNO_FISHINGBUFF_EXTRA_FISH_CHANCE then
+			if _G.TryLuckRoll(self.fisherman, TUNING.KYNO_FISHINGBUFF_EXTRA_FISH_CHANCE, HofLuckFormulas.SkilledFisherman) then
 				local extraFish2 = SpawnPrefab(self.caughtfish.prefab)
 				
 				if self.fisherman ~= nil and extraFish2.components.weighable ~= nil then

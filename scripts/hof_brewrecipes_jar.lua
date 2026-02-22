@@ -1638,7 +1638,7 @@ local kyno_foods_jar =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and not (eater.components.health ~= nil and eater.components.health:IsDead()) and
 			not eater:HasTag("playerghost") then
-				if math.random() < TUNING.KYNO_PUFFERFISH_KILL_CHANCE then -- Chance to die eating this, haha.
+				if TryLuckRoll(eater, TUNING.KYNO_PUFFERFISH_KILL_CHANCE, HofLuckFormulas.PufferfishPoison) then -- Chance to die eating this, haha.
 					eater.components.health:SetInvincible(false)
 					eater.components.health:Kill()
 				end
