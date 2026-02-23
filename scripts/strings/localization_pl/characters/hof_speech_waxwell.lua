@@ -577,7 +577,7 @@ WAXWELL.DESCRIBE.KYNO_CHICKEN2 =
 }
 
 WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG = "Lubię myśleć o tym jak o więzieniu dla kurczaka."
-WAXWELL.DESCRIBE.KYNO_CHICKEN_LARGE = "Zastanawiam się, czy ptak w środku jest tak duży jak jego skorupa."
+WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Zastanawiam się, czy ptak w środku jest tak duży jak jego skorupa."
 WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Jajko na słoneczku."
 
 WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =

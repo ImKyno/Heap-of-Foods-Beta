@@ -363,11 +363,18 @@ return Class(function(self, inst)
 		local spawn_pt = GetSpawnPoint(pt, TUNING.WATERFOWLHUNT_BEAST_SPAWN_DIST, hunt)
 	
 		if spawn_pt ~= nil then
-			hunt.huntedbeast = SpawnPrefab(
-				_spawnoverride or
-				(math.random() <= GetAlternateBeastChance() and GetRandomBeastPrefab(_alternate_beast_prefabs)) or
-				GetRandomBeastPrefab(_beast_prefabs)
-			)
+			local base_chance = GetAlternateBeastChance()
+			local use_alternate = false
+
+			if hunt.activeplayer ~= nil and hunt.activeplayer.components.luckuser ~= nil then
+				use_alternate = TryLuckRoll(hunt.activeplayer, base_chance, HofLuckFormulas.OceanHuntAlternateBeast)
+			else
+				use_alternate = math.random() <= base_chance
+			end
+
+			hunt.huntedbeast = SpawnPrefab(_spawnoverride 
+			or (use_alternate and GetRandomBeastPrefab(_alternate_beast_prefabs)) 
+			or GetRandomBeastPrefab(_beast_prefabs))
 
 			if hunt.huntedbeast ~= nil then
 				hunt.huntedbeast.Physics:Teleport(spawn_pt:Get())

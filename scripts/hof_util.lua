@@ -274,43 +274,51 @@ function OnFoodNaughtiness(inst, eater)
 end
 
 function OnFoodRollFortune(inst, eater)
-	if math.random() < 0.01 then
-		if math.random() < 0.50 then
+	if math.random() < TUNING.KYNO_FORTUNECOOKIEBUFF_TRIGGER_CHANCE then
+		local good_luck = false
+
+		if eater.components.luckuser ~= nil then
+			good_luck = TryLuckRoll(eater, TUNING.KYNO_FORTUNECOOKIEBUFF_GOODLUCK_CHANCE, HofLuckFormulas.FoodFortuneGood)
+		else
+			good_luck = math.random() < TUNING.KYNO_FORTUNECOOKIEBUFF_GOODLUCK_CHANCE
+		end
+
+		if good_luck then
 			if eater.components.health ~= nil then
-				eater.components.health:DoDelta(999)
+				eater.components.health:DoDelta(9999)
 			end
-			
+            
 			if eater.components.hunger ~= nil then
-				eater.components.hunger:DoDelta(999)
+				eater.components.hunger:DoDelta(9999)
 			end
-			
+            
 			if eater.components.sanity ~= nil then
-				eater.components.sanity:DoDelta(999)
+				eater.components.sanity:DoDelta(9999)
 			end
 
 			if eater.components.talker ~= nil and eater:HasTag("player") then
-				eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_GOOD)]) -- Good luck!
+				eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_GOOD[math.random(#STRINGS.FORTUNE_COOKIE_GOOD)])
 			end
-		else
+        else
 			if eater.components.health ~= nil then
 				eater.components.health:SetPercent(.2)
 			end
-			
+            
 			if eater.components.hunger ~= nil then
-				eater.components.hunger:DoDelta(-999)
+				eater.components.hunger:DoDelta(-9999)
 			end
-			
+            
 			if eater.components.sanity ~= nil then
-				eater.components.sanity:DoDelta(-999)
+				eater.components.sanity:DoDelta(-9999)
 			end
-			
+
 			if eater.components.talker ~= nil and eater:HasTag("player") then
-				eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_BAD)]) -- Bad luck!
+				eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_BAD)])
 			end
 		end
-	else
+    else
 		if eater.components.talker ~= nil and eater:HasTag("player") then
-			eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_QUOTES[math.random(#STRINGS.FORTUNE_COOKIE_QUOTES)]) -- Just say some random quote.
+			eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_QUOTES[math.random(#STRINGS.FORTUNE_COOKIE_QUOTES)])
 		end
 	end
 end
@@ -340,19 +348,28 @@ function SpawnWhaleCarcassEnemies(inst, player)
 	end
 			
 	local spawn_pt = EnemySpawnPoint(inst:GetPosition())
-	local roll = math.random()
-	
-	if roll < TUNING.KYNO_WHALE_PIRATE_CHANCE and TUNING.PIRATE_RAIDS_ENABLED and player ~= nil and TheWorld.components.piratespawner ~= nil then
+	local spawn_pirate = false
+	local spawn_enemy = false
+
+	if player ~= nil and player.components.luckuser ~= nil then
+		spawn_pirate = TryLuckRoll(player, TUNING.KYNO_WHALE_PIRATE_CHANCE, HofLuckFormulas.WhaleCarcassEnemies)
+		spawn_enemy = not spawn_pirate and TryLuckRoll(player, TUNING.KYNO_WHALE_ENEMY_CHANCE, HofLuckFormulas.WhaleCarcassEnemies)
+	else
+		local roll = math.random()
+		spawn_pirate = roll < TUNING.KYNO_WHALE_PIRATE_CHANCE
+		spawn_enemy = not spawn_pirate and roll < TUNING.KYNO_WHALE_ENEMY_CHANCE
+	end
+
+	if spawn_pirate and TUNING.PIRATE_RAIDS_ENABLED and player ~= nil and TheWorld.components.piratespawner ~= nil then
 		local platform = player:GetCurrentPlatform()
 		
 		if platform ~= nil then
 			TheWorld.components.piratespawner:SpawnPiratesForPlayer(player)
-			-- print("SpawnWhaleCarcassEnemies - Pirates spawned.")
 		end
-	elseif roll < TUNING.KYNO_WHALE_ENEMY_CHANCE and player ~= nil then
+	elseif spawn_enemy and player ~= nil then
 		if spawn_pt ~= nil then
 			local prefab = nil
-			
+            
 			if TUNING.SHARK_SPAWN_CHANCE > 0 and TUNING.GNARWAIL_SPAWN_CHANCE > 0 then
 				prefab = math.random() < TUNING.KYNO_WHALE_SHARK_CHANCE and "shark" or "gnarwail"
 			elseif TUNING.SHARK_SPAWN_CHANCE > 0 then
@@ -362,18 +379,14 @@ function SpawnWhaleCarcassEnemies(inst, player)
 			else
 				return
 			end
-			
+            
 			local enemy = SpawnPrefab(prefab)
 			enemy.Physics:Teleport(spawn_pt:Get())
-			
+            
 			if enemy.components.combat ~= nil then
 				enemy.components.combat:SetTarget(player)
 			end
-			
-			-- print("SpawnWhaleCarcassEnemies - Shark/Gnarwail spawned.")
 		end
-	else 
-		-- print("SpawnWhaleCarcassEnemies - No enemies spawned.")
 	end
 end
 

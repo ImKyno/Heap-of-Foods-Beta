@@ -577,7 +577,7 @@ WALTER.DESCRIBE.KYNO_CHICKEN2 =
 }
 
 WALTER.DESCRIBE.KYNO_CHICKEN_EGG = "There is a tiny chicken buddy in there!"
-WALTER.DESCRIBE.KYNO_CHICKEN_LARGE = "Wow! I should earn a merit badge for finding this!"
+WALTER.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Wow! I should earn a merit badge for finding this!"
 WALTER.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Smells like breakfast is ready!"
 
 WALTER.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =

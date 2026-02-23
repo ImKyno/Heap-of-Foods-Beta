@@ -577,7 +577,7 @@ WINONA.DESCRIBE.KYNO_CHICKEN2 =
 }
 
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG = "Śniadanie."
-WINONA.DESCRIBE.KYNO_CHICKEN_LARGE = "To naprawdę sporo wysiłku jak na jedną kurę."
+WINONA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "To naprawdę sporo wysiłku jak na jedną kurę."
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Zawsze przypadkiem wsadzam kawałki skorupki."
 
 WINONA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =

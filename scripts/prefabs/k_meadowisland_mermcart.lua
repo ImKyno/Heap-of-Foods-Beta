@@ -130,11 +130,10 @@ local LOOT =
 		{ weight = 1, prefab = "deer_antler2",                                season = nil, luck_mod = "good"  },
 		{ weight = 1, prefab = "deer_antler3",                                season = nil, luck_mod = "good"  },
 		{ weight = 1, prefab = "honeycomb",              amount = {2, 4},     season = nil, luck_mod = "good"  },
-		{ weight = 1, prefab = "blueprint",                                   season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "blueprint",                                   season = nil, luck_mod = nil     },
 		{ weight = 1, prefab = "dug_trap_starfish",      amount = {1, 3},     season = nil, luck_mod = "good"  },
 		{ weight = 1, prefab = "batnose",                amount = {1, 3},     season = nil, luck_mod = "good"  },
-		{ weight = 1, prefab = "saddle_race",                                 season = nil, luck_mod = "good"  },
-		{ weight = 1, prefab = "sewing_kit",                                  season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "sewing_kit",                                  season = nil, luck_mod = nil     },
 		{ weight = 1, prefab = "wormlight",              amount = {1, 3},     season = nil, luck_mod = "good"  },
 		{ weight = 1, prefab = "pondeel",                amount = {1, 2},     season = nil, luck_mod = nil     },
 		
@@ -142,20 +141,20 @@ local LOOT =
 		{ weight = 2, prefab = "jawsbreaker",            amount = {3, 5},     season = nil, luck_mod = "good"  },
 		{ weight = 2, prefab = "gorge_caramel_cube",     amount = {3, 5},     season = nil, luck_mod = "good"  },
 		{ weight = 1, prefab = "bunnystew",              amount = {1, 5},     season = nil, luck_mod = "bad"   },
-		{ weight = 1, prefab = "seafoodgumbo",           amount = {1, 3},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "seafoodgumbo",           amount = {1, 3},     season = nil, luck_mod = nil     },
 		{ weight = 1, prefab = "watermelonicle",         amount = {1, 5},     season = nil, luck_mod = "bad"   },
-		{ weight = 1, prefab = "bananapop",              amount = {1, 4},     season = nil, luck_mod = "good"  },
-		{ weight = 1, prefab = "taffy",                  amount = {1, 5},     season = nil, luck_mod = "good"  },
+		{ weight = 1, prefab = "bananapop",              amount = {1, 4},     season = nil, luck_mod = nil     },
+		{ weight = 1, prefab = "taffy",                  amount = {1, 5},     season = nil, luck_mod = nil     },
 		{ weight = 1, prefab = "powcake",                amount = {1, 7},     season = nil, luck_mod = "bad"   },
-		{ weight = 1, prefab = "pumpkincookie",          amount = {1, 4},     season = nil, luck_mod = "bad"   },
+		{ weight = 1, prefab = "pumpkincookie",          amount = {1, 4},     season = nil, luck_mod = nil     },
 		{ weight = 1, prefab = "jammypreserves",         amount = {1, 5},     season = nil, luck_mod = "bad"   },
 		{ weight = 1, prefab = "fruitmedley",            amount = {1, 4},     season = nil, luck_mod = "bad"   },
-		{ weight = 1, prefab = "waffles",                amount = {1, 3},     season = nil, luck_mod = "good"  },
-		{ weight = 1, prefab = "unagi",                  amount = {1, 4},     season = nil, luck_mod = "bad"   },
+		{ weight = 1, prefab = "waffles",                amount = {1, 3},     season = nil, luck_mod = nil     },
+		{ weight = 1, prefab = "unagi",                  amount = {1, 4},     season = nil, luck_mod = nil     },
 		{ weight = 1, prefab = "sweettea",               amount = {1, 3},     season = nil, luck_mod = "good"  },
-		{ weight = 1, prefab = "fishsticks",             amount = {1, 4},     season = nil, luck_mod = "good"  },
-		{ weight = 1, prefab = "ceviche",                amount = {1, 3},     season = nil, luck_mod = "good"  },
-		{ weight = 1, prefab = "veggieomlet",            amount = {1, 4},     season = nil, luck_mod = "bad"   },
+		{ weight = 1, prefab = "fishsticks",             amount = {1, 4},     season = nil, luck_mod = nil     },
+		{ weight = 1, prefab = "ceviche",                amount = {1, 3},     season = nil, luck_mod = nil     },
+		{ weight = 1, prefab = "veggieomlet",            amount = {1, 4},     season = nil, luck_mod = nil     },
 		{ weight = 1, prefab = "beefalotreat",           amount = {1, 3},     season = nil, luck_mod = "good"  },
 		{ weight = 1, prefab = "mandrakesoup",           amount = 1,          season = nil, luck_mod = "good"  },
 	},
@@ -297,7 +296,7 @@ local function SpawnWagonLoot(inst, picker, nopickup)
 	local choice = weighted_random_choice(modified_table)
 	
 	-- If we are lucky and got something bad, reroll it.
-	if luck >= 1.5 and choice.luck_mod == "bad" then
+	if luck > 1 and choice.luck_mod == "bad" then
 		if math.random() < TUNING.KYNO_MERMCART_LUCK_REROLL_CHANCE then
 			choice = weighted_random_choice(modified_table)
 		end

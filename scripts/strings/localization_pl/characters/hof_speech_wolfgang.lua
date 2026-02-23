@@ -577,7 +577,7 @@ WOLFGANG.DESCRIBE.KYNO_CHICKEN2 =
 }
 
 WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG = "Biedny kurczak."
-WOLFGANG.DESCRIBE.KYNO_CHICKEN_LARGE = "Czy jajko jest dla wielkiego kurczaka, czy dla potężnego Wolfganga?"
+WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Czy jajko jest dla wielkiego kurczaka, czy dla potężnego Wolfganga?"
 WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Pycha!"
 
 WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =

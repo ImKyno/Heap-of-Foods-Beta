@@ -59,9 +59,11 @@ end
 HofLuckFormulas =
 {
 	SammyInventory = CommonChanceLuckHyperbolic(1.5, 1, -2), -- This takes into account every player.
-	FortuneCookie = CommonChanceLuckHyperbolic(3, 6, 3),
+	FoodFortuneGood = CommonChanceUnluckHyperbolicAndLuckMult(1),
 	PufferfishPoison = CommonChanceUnluckMultAndLuckHyperbolic(8, 0.15),
 	SkilledFisherman = CommonChanceLuckAdditive(0.2),
 	MilkableAnimalKick = CommonChanceUnluckMultAndLuckHyperbolic(10, 0.1),
+	OceanHuntAlternateBeast = CommonChanceUnluckMultAndLuckHyperbolic(3, 0.5),
+	WhaleCarcassEnemies = CommonChanceUnluckMultAndLuckHyperbolic(4, 0.35),
 	OversizedCropSpawn = CommonChanceLuckAdditive(0.1),
 }
