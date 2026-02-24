@@ -236,6 +236,8 @@ local OCEANFISHES                  =
 		set_hook_time              = SET_HOOK_TIME_SHORT,
 		breach_fx                  = BREACH_FX_MEDIUM,
 		
+		luckitem                   = { luck = TUNING.KYNO_LUCK_HUGE },
+		
 		loot                       = LOOT.LARGE, 
 		heavy_loot                 = HEAVY_LOOT.LARGE, -- Sturgeons are very big.
 		

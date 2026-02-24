@@ -11,46 +11,68 @@ local function MakeHat(data)
 	}
 
 	local function OnEquip(inst, owner, from_ground)
-		owner.AnimState:OverrideSymbol("swap_hat", data.build, "swap_hat")
+		if owner ~= nil then
+			owner.AnimState:OverrideSymbol("swap_hat", data.build, "swap_hat")
 	
-		owner.AnimState:Show("HAT")
-		owner.AnimState:Show("HAIR_HAT")
+			owner.AnimState:Show("HAT")
+			owner.AnimState:Show("HAIR_HAT")
 		
-		owner.AnimState:Hide("HAIR")
-		owner.AnimState:Hide("HAIR_NOHAT")
+			owner.AnimState:Hide("HAIR")
+			owner.AnimState:Hide("HAIR_NOHAT")
 
-		if owner.isplayer then
-			owner.AnimState:Show("HEAD_HAT")
-			owner.AnimState:Hide("HEAD")
-		end
+			if owner.isplayer then
+				owner.AnimState:Show("HEAD_HAT")
+				owner.AnimState:Hide("HEAD")
+			end
 		
-		owner:AddTag("cheer_rewardable")
+			owner:AddTag("cheer_rewardable")
+		
+			if owner.components.luckuser ~= nil then
+				owner.components.luckuser:SetLuckSource(TUNING.KYNO_LUCK_MED, inst)
+			end
+		end
 	end
 
 	local function OnUnequip(inst, owner, from_ground)
-		owner.AnimState:ClearOverrideSymbol("swap_hat")
+		if owner ~= nil then
+			owner.AnimState:ClearOverrideSymbol("swap_hat")
 		
-		owner.AnimState:Hide("HAT")
-		owner.AnimState:Hide("HAIR_HAT")
+			owner.AnimState:Hide("HAT")
+			owner.AnimState:Hide("HAIR_HAT")
 	
-		owner.AnimState:Show("HAIR")
-		owner.AnimState:Show("HAIR_NOHAT")
+			owner.AnimState:Show("HAIR")
+			owner.AnimState:Show("HAIR_NOHAT")
 
-		if owner.isplayer then
-			owner.AnimState:Show("HEAD")
-			owner.AnimState:Hide("HEAD_HAT")
-		end
+			if owner.isplayer then
+				owner.AnimState:Show("HEAD")
+				owner.AnimState:Hide("HEAD_HAT")
+			end
 		
-		owner:RemoveTag("cheer_rewardable")
+			owner:RemoveTag("cheer_rewardable")
+			
+			if owner.components.luckuser ~= nil then
+				owner.components.luckuser:RemoveLuckSource(inst)
+			end
+		end
 	end
 	
 	local function OnEquipToModel(inst, owner, from_ground)
-		owner:RemoveTag("cheer_rewardable")
+		if owner ~= nil then
+			owner:RemoveTag("cheer_rewardable")
+		end
+		
+		if owner.components.luckuser ~= nil then
+			owner.components.luckuser:RemoveLuckSource(inst)
+		end
 	end
 
 	local function OnEquipVanity(inst, owner, from_ground)
 		if owner ~= nil then
 			owner:RemoveTag("cheer_rewardable")
+			
+			if owner.components.luckuser ~= nil then
+				owner.components.luckuser:RemoveLuckSource(inst)
+			end
 		end
 	end
 
@@ -62,6 +84,10 @@ local function MakeHat(data)
 			
 			if inst.components.equippable:IsEquipped() then
 				owner:AddTag("cheer_rewardable")
+				
+				if owner.components.luckuser ~= nil then
+					owner.components.luckuser:SetLuckSource(TUNING.KYNO_LUCK_MED, inst)
+				end
 			end
 		end
 	end
@@ -82,6 +108,7 @@ local function MakeHat(data)
 		inst.AnimState:PlayAnimation("anim")
 
 		inst:AddTag("hat")
+		inst:AddTag("luckysource")
 		inst:AddTag("waterproofer")
 		inst:AddTag("anniversaryhat")
 	

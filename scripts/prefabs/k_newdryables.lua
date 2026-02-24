@@ -286,6 +286,7 @@ local function fn_humanmeat()
 	local inst = meat_fn("kyno_meatrack_humanmeat", "kyno_meatrack_humanmeat", "humanmeat_idle", "kyno_humanmeat_dried")
 	
 	inst:AddTag("human_meat")
+	inst:AddTag("unluckyitem")
 	
 	if not TheWorld.ismastersim then
         return inst
@@ -299,6 +300,11 @@ local function fn_humanmeat()
 	
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
 	inst.components.perishable.onperishreplacement = "spoiled_food"
+	
+	if inst.components.inventoryitem ~= nil then
+		inst:AddComponent("luckitem")
+		inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_LARGE)
+	end
 	
 	return inst
 end

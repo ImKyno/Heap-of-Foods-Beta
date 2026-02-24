@@ -482,6 +482,7 @@ local function chicken_egg_giantfn()
 	inst:AddTag("chicken_egg")
 	inst:AddTag("weapon")
 	inst:AddTag("noattack")
+	inst:AddTag("luckyitem")
 	inst:AddTag("projectile")
 	inst:AddTag("complexprojectile")
 	
@@ -521,6 +522,9 @@ local function chicken_egg_giantfn()
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_chicken_egg_large"
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_TINY)
 	
 	inst:AddComponent("complexprojectile")
 	inst.components.complexprojectile:SetHorizontalSpeed(15)
@@ -582,6 +586,7 @@ local function chicken_egg_crackedfn()
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
 	inst:AddTag("catfood")
+	inst:AddTag("luckyitem")
 	inst:AddTag("chicken_egg")
 	inst:AddTag("donotautopick")
 
@@ -599,6 +604,9 @@ local function chicken_egg_crackedfn()
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_chicken_egg_cooked"
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_TINY)
 
 	inst:AddComponent("edible")
 	inst.components.edible:SetOnEatenFn(OnEaten)

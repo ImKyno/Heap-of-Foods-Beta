@@ -118,6 +118,10 @@ local function MakePreparedFood(data)
 		if data.fireproof ~= nil then
 			inst:AddTag("fireprooffood")
 		end
+		
+		if data.luckitem ~= nil then
+			inst:AddTag(data.luckitem.luck > 0 and "luckyitem" or "unluckyitem")
+		end
 
 		if data.tags ~= nil then
 			for i, v in pairs(data.tags) do
@@ -189,6 +193,11 @@ local function MakePreparedFood(data)
 		else
 			inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 			inst.components.inventoryitem.imagename = data.name
+		end
+		
+		if data.luckitem ~= nil then
+			inst:AddComponent("luckitem")
+			inst.components.luckitem:SetLuck(data.luckitem.luck)
 		end
 		
 		if data.perishtime ~= nil and data.perishtime > 0 then

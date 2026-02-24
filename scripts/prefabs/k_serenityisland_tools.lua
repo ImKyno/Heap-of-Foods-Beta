@@ -203,8 +203,9 @@ local function slaughterfn()
 	inst.AnimState:SetBuild("quagmire_slaughtertool")
 	inst.AnimState:PlayAnimation("idle")
 
-	inst:AddTag("slaughter_tool")
 	inst:AddTag("sharp")
+	inst:AddTag("unluckyitem")
+	inst:AddTag("slaughter_tool")
 	
 	inst.GetSlaughterActionString = GetSlaughterActionString
 
@@ -220,6 +221,9 @@ local function slaughterfn()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_slaughtertool"
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_MED)
 	
 	inst:AddComponent("finiteuses")
     inst.components.finiteuses:SetMaxUses(TUNING.KYNO_SLAUGHTERTOOLS_USES)

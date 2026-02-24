@@ -982,6 +982,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RUM,
 		overridebuild = "kyno_foodrecipes_keg",
 		floater = TUNING.HOF_FLOATER,
+		luckitem = { luck = -TUNING.KYNO_LUCK_MED },
 		tags = {"fooddrink", "alcoholic_drink", "honeyed", "monkeyqueenbribe"},
 		card_def = {ingredients = {{"durian", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
 		prefabs = { "kyno_piratebuff" },
@@ -1043,21 +1044,12 @@ local kyno_foods_keg =
 		oneatenfn = function(inst, eater)
 			eater:PushEvent("bottlecap")
 
-			if math.random() < 0.05 then
+			if TryLuckRoll(eater, TUNING.KYNO_NUKACOLA_BOTTLECAP_CHANCE, HofLuckFormulas.NukaColaBottleCap) then
 				local cap = SpawnPrefab("kyno_bottlecap")
-				if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost")
-				and not eater.components.inventory:IsFull() then
+				if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost") then
 					eater.components.inventory:GiveItem(cap)
 				end
 			end
-			
-			--[[
-			if eater ~= nil and eater.SoundEmitter ~= nil then
-				eater.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
-			else
-				inst.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
-			end
-			]]--
 		end,
 	},
 
@@ -1082,21 +1074,12 @@ local kyno_foods_keg =
         oneatenfn = function(inst, eater)
 			eater:PushEvent("bottlecap")
 
-			if math.random() < 0.05 then
+			if TryLuckRoll(eater, TUNING.KYNO_NUKACOLA_BOTTLECAP_CHANCE, HofLuckFormulas.NukaColaBottleCap) then
 				local cap = SpawnPrefab("kyno_bottlecap")
-				if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost")
-				and not eater.components.inventory:IsFull() then
+				if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost") then
 					eater.components.inventory:GiveItem(cap)
 				end
 			end
-			
-			--[[
-			if eater ~= nil and eater.SoundEmitter ~= nil then
-				eater.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
-			else
-				inst.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
-			end
-			]]--
 
             if eater.wormlight ~= nil then
                 if eater.wormlight.prefab == "wormlight_light_greater" then
@@ -1139,16 +1122,6 @@ local kyno_foods_keg =
 		prefabs = { "kyno_nukashinebuff" },
 		oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_nukashinebuff", "kyno_nukashinebuff")
-			
-			--[[
-			if eater ~= nil and eater.SoundEmitter ~= nil then
-				eater.SoundEmitter:PlaySound("hof_sounds/common/nukashine/open")
-				eater.SoundEmitter:PlaySound("hof_sounds/common/nukashine/drink")
-			else
-				inst.SoundEmitter:PlaySound("hof_sounds/common/nukashine/open")
-				inst.SoundEmitter:PlaySound("hof_sounds/common/nukashine/drink")
-			end
-			]]--
 		end,
 	},
 
@@ -1165,6 +1138,7 @@ local kyno_foods_keg =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_DAMAGEREDUCTION,
 		overridebuild = "kyno_foodrecipes_keg",
 		floater = TUNING.HOF_FLOATER,
+		luckitem = { luck = TUNING.KYNO_LUCK_MED },
 		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"kyno_rice", 2}, {"ice", 1}}},
 		prefabs = { "kyno_dmgreductionbuff" },

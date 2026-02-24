@@ -29,6 +29,7 @@ local function fn()
     inst:AddTag("meat")
 	inst:AddTag("catfood")
 	inst:AddTag("shark_fin")
+	inst:AddTag("unluckyitem")
 
     inst.entity:SetPristine()
 
@@ -45,6 +46,9 @@ local function fn()
     inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_shark_fin"
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_MED)
 	
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM

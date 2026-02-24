@@ -368,6 +368,7 @@ local function jellyfish()
 	inst:AddTag("fishfarmable")
 	inst:AddTag("catfood")
 	inst:AddTag("cookable")
+	inst:AddTag("luckyitem")
 	inst:AddTag("show_spoilage")
 	inst:AddTag("weighable_fish")
 	inst:AddTag("small_livestock")
@@ -419,6 +420,9 @@ local function jellyfish()
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_rainbow_jellyfish"
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_HUGE)
 	
 	inst:AddComponent("fishfarmable")
 	inst.components.fishfarmable:SetTimes(TUNING.JELLYFISH_RAINBOW_ROETIME, TUNING.JELLYFISH_RAINBOW_BABYTIME)

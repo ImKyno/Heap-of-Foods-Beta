@@ -130,11 +130,12 @@ local function fn()
 	inst.components.reticule.targetfn = ReticuleTargetFn
 	inst.components.reticule.ease = true
 
-	inst:AddTag("allow_action_on_impassable")
-	inst:AddTag("itemshowcaser_valid")
-	inst:AddTag("jawsbreaker")
 	inst:AddTag("honeyed")
 	inst:AddTag("nospice")
+	inst:AddTag("luckyitem")
+	inst:AddTag("jawsbreaker")
+	inst:AddTag("allow_action_on_impassable")
+	inst:AddTag("itemshowcaser_valid")
 	
 	inst.entity:SetPristine()
 	
@@ -152,6 +153,9 @@ local function fn()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "jawsbreaker"
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_MEDLARGE)
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM

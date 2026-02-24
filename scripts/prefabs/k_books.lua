@@ -77,7 +77,7 @@ local function MaximizePlant(inst)
 	end
 end
 
-local function TryGrowth(inst, maximize)
+local function TryGrowth(inst, maximize, reader)
 	if not inst:IsValid()
 		or inst:IsInLimbo()
 		or (inst.components.witherable ~= nil and inst.components.witherable:IsWithered()) then
@@ -160,11 +160,15 @@ local function TryGrowth(inst, maximize)
 					local good_seasons = plant_def.good_seasons or {}
 					
 					if not inst:HasTag("weed") then
-						if good_seasons[current_season] and math.random() < TUNING.KYNO_GROWTH_OVERSIZED_CHANCE then
+						-- if good_seasons[current_season] and math.random() < TUNING.KYNO_GROWTH_OVERSIZED_CHANCE then
+						if reader ~= nil and reader.components.luckuser ~= nil and good_seasons[current_season] 
+						and TryLuckRoll(reader, TUNING.KYNO_GROWTH_OVERSIZED_CHANCE, HofLuckFormulas.HorticultureOversizedCrop) then
 							inst.is_oversized = true
 						end
 					else
-						if math.random() < TUNING.KYNO_GROWTH_OVERSIZED_CHANCE then
+						-- if math.random() < TUNING.KYNO_GROWTH_OVERSIZED_CHANCE then
+						if reader ~= nil and reader.components.luckuser ~= nil
+						and TryLuckRoll(reader, TUNING.KYNO_GROWTH_OVERSIZED_CHANCE, HofLuckFormulas.HorticultureOversizedCrop) then
 							inst.is_oversized = true
 						end
 					end
@@ -295,7 +299,7 @@ local function GardeningSpellFn()
 	return inst
 end
 
-local function DoGardeningSpell(x, z, max_targets, maximize)
+local function DoGardeningSpell(x, z, max_targets, maximize, reader)
     local ents = TheSim:FindEntities(x, 0, z, 30, nil, GARDENING_CANT_TAGS, GARDENING_ONEOF_TAGS)
     local grow_targets = {}
 
@@ -371,13 +375,15 @@ local function DoGardeningSpell(x, z, max_targets, maximize)
 
 	local target = table.remove(grow_targets, math.random(#grow_targets))
     
-	TryGrowth(target)
+	TryGrowth(target, true, reader)
 
 	if #grow_targets > 0 then
 		local timevar = 1 - 1 / (#grow_targets + 1)
 		
 		for _, v in ipairs(grow_targets) do
-			v:DoTaskInTime(timevar * math.random(), TryGrowth)
+			v:DoTaskInTime(timevar * math.random(), function(target)
+				TryGrowth(target, true, reader)
+			end)
 		end
 	end
 
@@ -405,10 +411,10 @@ local book_defs =
 		deps = { "kyno_book_gardening_spell" },	
 		fn = function(inst, reader)
 			local x, y, z = reader.Transform:GetWorldPosition()
-			return DoGardeningSpell(x, z, nil, true)
+			return DoGardeningSpell(x, z, nil, true, reader)
 		end,
 		
-		perusefn = function(inst,reader)
+		perusefn = function(inst, reader)
 			if reader.peruse_gardening then
 				reader.peruse_gardening(reader)
 			end

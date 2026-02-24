@@ -70,6 +70,7 @@ local kyno_foods =
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_sw",
 		floater = TUNING.HOF_FLOATER,
+		luckitem = { luck = -TUNING.KYNO_LUCK_MEDLARGE },
 		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"twigs", 3}}},
 		oneatenfn = function(inst, eater)
 			OnFoodNaughtiness(inst, eater)
@@ -1196,6 +1197,7 @@ local kyno_foods =
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_gorge",
 		floater = TUNING.HOF_FLOATER,
+		luckitem = { luck = TUNING.KYNO_LUCK_MEDLARGE },
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_syrup", 2}, {"goatmilk", 2}}},
 	},
@@ -1396,6 +1398,7 @@ local kyno_foods =
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_cookpot",
 		floater = TUNING.HOF_FLOATER,
+		luckitem = { luck = -TUNING.KYNO_LUCK_HUGE },
 		card_def = {ingredients = {{"kyno_humanmeat", 3}, {"boneshard", 1}}},
 	},
 	
@@ -2599,6 +2602,7 @@ local kyno_foods =
 		potlevel = "low",
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		floater = TUNING.HOF_FLOATER,
+		luckitem = { luck = TUNING.KYNO_LUCK_SUPERTINY },
 		card_def = {ingredients = {{"kyno_sugar", 2}, {"kyno_wheat", 2}}},
 	},
 	
@@ -2905,6 +2909,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NAUGHTINESS,
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		floater = TUNING.HOF_FLOATER,
+		luckitem = { luck = -TUNING.KYNO_LUCK_MEDLARGE },
 		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"kyno_rice", 3}}},
 		oneatenfn = function(inst, eater)
 			OnFoodNaughtiness(inst, eater)

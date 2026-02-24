@@ -8,58 +8,64 @@ local assets =
 }
 
 local function OnEquip(inst, owner, from_ground)
-	owner.AnimState:OverrideSymbol("swap_hat", "hat_sammy", "swap_hat")
+	if owner ~= nil then
+		owner.AnimState:OverrideSymbol("swap_hat", "hat_sammy", "swap_hat")
 	
-	owner.AnimState:Show("HAT")
-	owner.AnimState:Show("HAIR_HAT")
+		owner.AnimState:Show("HAT")
+		owner.AnimState:Show("HAIR_HAT")
 	
-	owner.AnimState:Hide("HAIR")
-	owner.AnimState:Hide("HAIR_NOHAT")
+		owner.AnimState:Hide("HAIR")
+		owner.AnimState:Hide("HAIR_NOHAT")
 	
-	if owner.isplayer then
-		owner.AnimState:Show("HEAD_HAT")
-		owner.AnimState:Hide("HEAD")
-	end
+		if owner.isplayer then
+			owner.AnimState:Show("HEAD_HAT")
+			owner.AnimState:Hide("HEAD")
+		end
 	
-	if inst.components.fueled ~= nil then
-		inst.components.fueled:StartConsuming()
-	end
+		if inst.components.fueled ~= nil then
+			inst.components.fueled:StartConsuming()
+		end
 	
-	if owner.components.hunger ~= nil then
-		owner.components.hunger.burnratemodifiers:SetModifier(inst, TUNING.KYNO_SAMMYHAT_HUNGERRATE, "sammyhat")
+		if owner.components.hunger ~= nil then
+			owner.components.hunger.burnratemodifiers:SetModifier(inst, TUNING.KYNO_SAMMYHAT_HUNGERRATE, "sammyhat")
+		end
 	end
 end
 
 local function OnUnequip(inst, owner)
-	owner.AnimState:ClearOverrideSymbol("swap_hat")
+	if owner ~= nil then
+		owner.AnimState:ClearOverrideSymbol("swap_hat")
 	
-	owner.AnimState:Hide("HAT")
-	owner.AnimState:Hide("HAIR_HAT")
+		owner.AnimState:Hide("HAT")
+		owner.AnimState:Hide("HAIR_HAT")
 	
-	owner.AnimState:Show("HAIR")
-	owner.AnimState:Show("HAIR_NOHAT")
+		owner.AnimState:Show("HAIR")
+		owner.AnimState:Show("HAIR_NOHAT")
 
-	if owner.isplayer then
-		owner.AnimState:Show("HEAD")
-		owner.AnimState:Hide("HEAD_HAT")
-	end
+		if owner.isplayer then
+			owner.AnimState:Show("HEAD")
+			owner.AnimState:Hide("HEAD_HAT")
+		end
 	
-	if inst.components.fueled ~= nil then
-		inst.components.fueled:StopConsuming()
-	end
+		if inst.components.fueled ~= nil then
+			inst.components.fueled:StopConsuming()
+		end
 	
-	if owner.components.hunger ~= nil then
-		owner.components.hunger.burnratemodifiers:RemoveModifier(inst, "sammyhat")
+		if owner.components.hunger ~= nil then
+			owner.components.hunger.burnratemodifiers:RemoveModifier(inst, "sammyhat")
+		end
 	end
 end
 
 local function OnEquipToModel(inst, owner, from_ground)
-	if inst.components.fueled ~= nil then
-		inst.components.fueled:StopConsuming()
-	end
+	if owner ~= nil then
+		if inst.components.fueled ~= nil then
+			inst.components.fueled:StopConsuming()
+		end
 	
-	if owner.components.hunger ~= nil then
-		owner.components.hunger.burnratemodifiers:RemoveModifier(inst, "sammyhat")
+		if owner.components.hunger ~= nil then
+			owner.components.hunger.burnratemodifiers:RemoveModifier(inst, "sammyhat")
+		end
 	end
 end
 

@@ -98,6 +98,7 @@ local function fn()
 	inst:AddTag("pondfish")
 	inst:AddTag("meat")
 	inst:AddTag("catfood")
+	inst:AddTag("unluckyitem")
 	inst:AddTag("largecreature")
 	-- inst:AddTag("weighable_fish")
 	inst:AddTag("fishresearchable")
@@ -154,6 +155,9 @@ local function fn()
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPickup)
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_swordfish_blue"
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_HUGE)
 
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_FISH_LARGE_HEALTH

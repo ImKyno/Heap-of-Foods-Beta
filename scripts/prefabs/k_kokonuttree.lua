@@ -361,7 +361,8 @@ local function chop_tree(inst, chopper, chops, level)
 	
 	-- Chance for a Coconut to stomp you.
 	if inst.level == "tall" then
-		if math.random() <= TUNING.KYNO_KOKONUTTREE_KOKONUT_CHANCE and inst:HasTag("has_coconut") then
+		-- if math.random() <= TUNING.KYNO_KOKONUTTREE_KOKONUT_CHANCE and inst:HasTag("has_coconut") then
+		if inst:HasTag("has_coconut") and TryLuckRoll(chopper, TUNING.KYNO_KOKONUTTREE_KOKONUT_CHANCE, HofLuckFormulas.DropCoconutFromTree) then
 			local coconut = SpawnPrefab("kyno_kokonut")
 			local rad = chopper:GetPosition():Dist(inst:GetPosition())
 			local vec = (chopper:GetPosition() - inst:GetPosition()):Normalize()

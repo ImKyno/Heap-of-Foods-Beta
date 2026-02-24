@@ -118,7 +118,8 @@ local function OnHammered(inst, worker)
 		inst.components.burnable:Extinguish()
 	end
 	
-	if math.random() < TUNING.KYNO_OCEAN_WRECK_GHOST_CHANCE then
+	-- if math.random() < TUNING.KYNO_OCEAN_WRECK_GHOST_CHANCE then
+	if TryLuckRoll(worker, TUNING.KYNO_OCEAN_WRECK_GHOST_CHANCE, HofLuckFormulas.OceanWreckPirateGhost) then
 		local ghost = SpawnPrefab("kyno_ghost_pirate")
 		if ghost then
 			local pos = Point(inst.Transform:GetWorldPosition())

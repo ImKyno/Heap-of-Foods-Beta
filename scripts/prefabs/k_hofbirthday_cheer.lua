@@ -21,6 +21,8 @@ local function fn()
 	inst.AnimState:SetBank("kyno_hofbirthday_cheer")
 	inst.AnimState:SetBuild("kyno_hofbirthday_cheer")
 	inst.AnimState:PlayAnimation("idle_loop", true)
+	
+	inst:AddTag("luckyitem")
 
 	inst.entity:SetPristine()
 
@@ -36,6 +38,9 @@ local function fn()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_hofbirthday_cheer"
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_SUPERTINY)
 
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = 0

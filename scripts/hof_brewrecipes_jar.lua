@@ -993,6 +993,7 @@ local kyno_foods_jar =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REHUNGER,
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
+		luckitem = { luck = -TUNING.KYNO_LUCK_MED },
 		card_def = {ingredients = {{"mayonnaise", 1}, {"kyno_spotspice", 1}, {"kyno_cucumber", 1}}},
 		oneatenfn = function(inst, eater)
             eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")

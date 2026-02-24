@@ -35,8 +35,8 @@ local function OnPutInInv(inst, owner)
 end
 
 local function OnEaten(inst, eater)
-	-- Incredible! An astonishing 10% chance of being blown up.
-	if math.random() < .10 then
+	-- Incredible! An astonishing chance of being blown up.
+	if TryLuckRoll(eater, TUNING.KYNO_SUGARBOMBS_EXPLODE_CHANCE, HofLuckFormulas.SugarBombsExplosion) then
 		inst.components.explosive:OnBurnt()
 	end
 end
@@ -62,6 +62,7 @@ local function fn()
 	inst:AddTag("preparedfood_hof")
 	inst:AddTag("molebait")
     inst:AddTag("explosive")
+	inst:AddTag("luckyitem")
 	
 	inst.pickupsound = "grainy"
 
@@ -76,11 +77,14 @@ local function fn()
 
     inst:AddComponent("explosive")
     inst.components.explosive:SetOnExplodeFn(OnExplodeFn)
-    inst.components.explosive.explosivedamage = TUNING.SUGARBOMBS_DAMAGE
+    inst.components.explosive.explosivedamage = TUNING.KYNO_SUGARBOMBS_DAMAGE
 
     inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "sugarbombs_explosive"
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_SUPERTINY)
 	
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM

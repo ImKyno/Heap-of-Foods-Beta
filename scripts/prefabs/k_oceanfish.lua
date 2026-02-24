@@ -486,6 +486,10 @@ local function inventoryfn(fish_def)
 	if fish_def.roe_time ~= nil and fish_def.baby_time ~= nil then
 		inst:AddTag("fishfarmable")
 	end
+	
+	if fish_def.luckitem ~= nil then
+		inst:AddTag(fish_def.luckitem.luck > 0 and "luckyitem" or "unluckyitem")
+	end
 
 	inst.no_wet_prefix = true
 	
@@ -553,6 +557,11 @@ local function inventoryfn(fish_def)
 		inst:AddComponent("cookable")
 		inst.components.cookable.product = fish_def.cooking_product
 		inst.components.cookable.oncooked = fish_def.oncooked_fn
+	end
+	
+	if fish_def.luckitem ~= nil then
+		inst:AddComponent("luckitem")
+		inst.components.luckitem:SetLuck(fish_def.luckitem.luck)
 	end
 
 	if fish_def.heater ~= nil then

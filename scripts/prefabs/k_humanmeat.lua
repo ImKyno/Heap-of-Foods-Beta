@@ -33,6 +33,7 @@ local function fn()
 	inst:AddTag("human_meat")
 	inst:AddTag("dryable")
 	inst:AddTag("cookable")
+	inst:AddTag("unluckyitem")
 	inst:AddTag("lureplant_bait")
 
 	inst.entity:SetPristine()
@@ -66,6 +67,9 @@ local function fn()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_humanmeat"
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_LARGE)
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_humanmeat_cooked"
@@ -97,6 +101,7 @@ local function fn_cooked()
 	
 	inst:AddTag("meat")
 	inst:AddTag("human_meat")
+	inst:AddTag("unluckyitem")
 
 	inst.entity:SetPristine()
 
@@ -128,6 +133,9 @@ local function fn_cooked()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_humanmeat_cooked"
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_LARGE)
 
 	MakeHauntableLaunchAndPerish(inst)
 

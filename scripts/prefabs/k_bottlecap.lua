@@ -22,6 +22,7 @@ local function fn()
     inst.AnimState:PlayAnimation("idle")
 
     inst:AddTag("molebait")
+	inst:AddTag("luckyitem")
     inst:AddTag("quakedebris")
 	inst:AddTag("hof_trinket")
 	inst:AddTag("_named")
@@ -46,6 +47,9 @@ local function fn()
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_bottlecap"
     inst.components.inventoryitem:SetSinks(true)
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_SMALL)
 
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_TINYITEM
