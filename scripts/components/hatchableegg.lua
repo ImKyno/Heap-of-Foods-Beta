@@ -23,6 +23,8 @@ local HatchableEgg = Class(function(self, inst)
 	self.incubate_mode = false
 	self.hatch_time = 600
 	self.progress = 0
+	self.ready_to_hatch = false
+	self.has_hatched = false
 	self.onhatchfn = nil
 
 	self.allowed_phases =
@@ -177,7 +179,7 @@ function HatchableEgg:OnUpdate(dt)
 		return
 	end
 
-    if self.incubate_mode then
+    if self.incubate_mode and not self.ready_to_hatch then
 		if not self:IsNearValidHeat() then
 			return
 		end
@@ -189,11 +191,18 @@ function HatchableEgg:OnUpdate(dt)
 		self.progress = self.progress + dt
 
 		if self.progress >= self.hatch_time then
-			self:StopUpdating()
+			self.progress = self.hatch_time
+			self.ready_to_hatch = true
+		end
+		
+		if self.ready_to_hatch and not self.has_hatched then
+			self.has_hatched = true
 
 			if self.onhatchfn then
 				self.onhatchfn(self.inst)
 			end
+
+			self:StopUpdating()
 		end
 	end
 end

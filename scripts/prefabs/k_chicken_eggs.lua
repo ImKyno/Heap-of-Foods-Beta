@@ -338,13 +338,14 @@ local function OnHatch(inst)
 end
 
 local function OnCheckHatch(inst)
-    if not inst:IsAsleep()
+	if inst.components.inventoryitem ~= nil
 	and inst.components.hatchableegg ~= nil
-	and inst.components.inventoryitem ~= nil
+	and inst.components.playerprox ~= nil
+	and inst.components.playerprox:IsPlayerClose() -- Can't use inst:IsAsleep(), check if someone is nearby instead.
 	and not inst.components.inventoryitem:IsHeld() then
 		local x, _, z = inst.Transform:GetWorldPosition()
 		
-		if TheWorld.Map:IsVisualGroundAtPoint(x, 0, z) then
+		if TheWorld.Map:IsVisualGroundAtPoint(x, 0, z) and inst.components.hatchableegg.ready_to_hatch then
 			OnHatch(inst)
 		end
 	end
@@ -423,6 +424,7 @@ local function chicken_eggfn()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 1
+	inst.components.tradable.rocktribute = 1
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_CHICKEN_EGG_HEALTH
@@ -506,6 +508,7 @@ local function chicken_egg_giantfn()
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
+	inst.components.tradable.rocktribute = 2
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_chicken_egg_cooked"
@@ -604,9 +607,6 @@ local function chicken_egg_crackedfn()
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_chicken_egg_cooked"
-	
-	inst:AddComponent("luckitem")
-	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_TINY)
 
 	inst:AddComponent("edible")
 	inst.components.edible:SetOnEatenFn(OnEaten)
@@ -621,6 +621,14 @@ local function chicken_egg_crackedfn()
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_chicken_egg_large_cracked"
+	
+	inst:AddComponent("luckitem")
+	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_TINY)
+	
+	inst:AddComponent("playerprox")
+	inst.components.playerprox:SetTargetMode(inst.components.playerprox.TargetModes.AnyPlayer)
+	inst.components.playerprox:SetOnPlayerNear(OnCheckHatch)
+	inst.components.playerprox:SetDist(8, 16)
 	
 	inst:AddComponent("hatchableegg")
 	inst.components.hatchableegg:SetAllowedPhases(true, true, true)

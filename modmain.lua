@@ -170,4 +170,4 @@ if TUNING.HOF_DEBUG_MODE then
 		local value = GetModConfigData(option.name)
 		print(string.format("Heap of Foods Mod - Config: %s = %s", option.name, tostring(value)))
 	end
-end
+end	

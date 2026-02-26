@@ -351,7 +351,7 @@ local function commonfn(bank, build, loottable)
 	return inst
 end
 
-local function chicken_wild(inst)
+local function chicken_wild()
 	local inst = commonfn("chicken", "chicken", "kyno_chicken2")
 	
 	inst:AddTag("chicken_wild")
@@ -381,7 +381,7 @@ local function chicken_wild(inst)
 	return inst
 end
 
-local function chicken_coop(inst)
+local function chicken_coop()
 	local inst = commonfn("chicken", "chicken", "kyno_chicken_coop")
 	
 	inst:AddTag("_named")
