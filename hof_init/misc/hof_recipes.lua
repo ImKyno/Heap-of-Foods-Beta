@@ -280,7 +280,7 @@ SortAfter("kyno_musselstick_item", "kyno_fishfarmplot_construction", "FISHING")
 AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2), Ingredient("flint", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO, 
 	{
 		placer 				= "kyno_mealgrinder_placer", 
-		min_spacing 		= 1, 
+		min_spacing 		= 1.75, 
 		atlas 				= ModAtlas, 
 		image 				= "kyno_mealgrinder.tex",
 	},
@@ -291,7 +291,7 @@ SortAfter("kyno_mealgrinder", "wintersfeastoven", "COOKING")
 AddRecipe2("kyno_mushstump", {Ingredient("spoiled_food", 4), Ingredient("poop", 3), Ingredient("livinglog", 2)}, TECH.SCIENCE_TWO, 
 	{
 		placer 				= "kyno_mushstump_placer", 
-		min_spacing			= 1, 
+		min_spacing			= 1.75, 
 		atlas 				= ModAtlas, 
 		image 				= "kyno_mushroomstump.tex",
 	},
@@ -338,7 +338,7 @@ SortAfter("kyno_brewbook", "cookbook", "COOKING")
 AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
 	{
 		placer 				= "kyno_woodenkeg_placer", 
-		min_spacing			= 1, 
+		min_spacing			= 2.5, 
 		atlas 				= ModAtlas, 
 		image 				= "kyno_woodenkeg.tex",
 	},
@@ -350,7 +350,7 @@ SortAfter("kyno_woodenkeg", "cookpot", "STRUCTURES")
 AddRecipe2("kyno_preservesjar", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
 	{
 		placer 				= "kyno_preservesjar_placer", 
-		min_spacing			= 1, 
+		min_spacing			= 1.75, 
 		atlas 				= ModAtlas, 
 		image 				= "kyno_preservesjar.tex",
 	},
@@ -362,7 +362,7 @@ SortAfter("kyno_preservesjar", "kyno_woodenkeg", "STRUCTURES")
 AddRecipe2("kyno_antchest", {Ingredient("honeycomb", 1), Ingredient("honey", 6), Ingredient("boards", 2)}, TECH.LOST,
 	{
 		placer				= "kyno_antchest_placer",
-		min_spacing			= 1,
+		min_spacing			= 1.75,
 		atlas				= ModAtlas,
 		image				= "kyno_antchest_honey.tex",
 	},
@@ -375,7 +375,7 @@ SortAfter("kyno_antchest", "saltbox", "COOKING")
 AddRecipe2("kyno_garden_sprinkler", {Ingredient("gears", 3), Ingredient("ice", 15), Ingredient("trinket_6", 3)}, TECH.LOST,
 	{
 		placer              = "kyno_garden_sprinkler_placer",
-		min_spacing         = 1,
+		min_spacing         = 3,
 		atlas               = ModAtlas,
 		image               = "kyno_garden_sprinkler.tex",
 	},
@@ -440,6 +440,15 @@ AddRecipe2("kyno_messagebottle_empty", {Ingredient("moonglass", 3)}, TECH.SCIENC
 	{"REFINE"}
 )
 
+AddRecipe2("kyno_malbatrossfood", {Ingredient("chum", 1), Ingredient("oceanfish_medium_2_inv", 2), Ingredient("kyno_mysterymeat", 1, ModAtlas)}, TECH.LOST, 
+	{
+		atlas 				= ModAtlas,
+		image 				= "kyno_malbatrossfood.tex",
+	},
+	{"FISHING"}
+)
+SortAfter("kyno_malbatrossfood", "chum", "FISHING")
+
 AddRecipe2("kyno_oceantrap", {Ingredient("kyno_seaweeds", 4, ModAtlas), Ingredient("kyno_messagebottle_empty", 2, ModAtlas), Ingredient("kyno_jellyfish", 1, ModAtlas)}, TECH.FISHING_ONE,
 	{
 		atlas               = ModAtlas,
@@ -472,7 +481,7 @@ SortAfter("kyno_fishregistryhat", "plantregistryhat", "GARDENING")
 AddRecipe2("kyno_animalfeeder", {Ingredient("seeds", 3), Ingredient("kyno_wheat", 3, ModAtlas), Ingredient("boards", 3)}, TECH.SCIENCE_ONE,
 	{
 		placer              = "kyno_animalfeeder_placer",
-		min_spacing         = 1.5,
+		min_spacing         = 3,
 		atlas               = ModAtlas,
 		image               = "kyno_animalfeeder.tex",
 	},
@@ -483,7 +492,7 @@ SortAfter("kyno_animalfeeder", "kyno_mushstump", "GARDENING")
 AddRecipe2("kyno_chickenhouse", {Ingredient("kyno_chicken2", 3, ModAtlas, true), Ingredient("cutgrass", 3), Ingredient("boards", 3)}, TECH.SCIENCE_TWO,
 	{
 		placer              = "kyno_chickenhouse_placer",
-		min_spacing         = 1.75,
+		min_spacing         = 3,
 		atlas               = ModAtlas,
 		image               = "kyno_chickenhouse.tex",
 	},
@@ -538,7 +547,7 @@ AddCharacterRecipe("wendy_sugarfly", {Ingredient("ghostflower", 3), Ingredient("
 AddCharacterRecipe("kyno_fishermermhut_wurt", {Ingredient("boards", 4), Ingredient("cutreeds", 3), Ingredient("kyno_tropicalfish", 2, ModAtlas)}, TECH.SCIENCE_ONE,
 	{
 		placer              = "kyno_fishermermhut_wurt_placer",
-		min_spacing         = 1,
+		min_spacing         = 1.75,
 		testfn              = IsTidalMarshLand,
 		builder_tag         = "merm_builder",
 		atlas               = ModAtlas,
@@ -884,18 +893,6 @@ CONSTRUCTION_PLANS["kyno_fishfarmplot_construction"] =
 }
 
 AddDeconstructRecipe("kyno_fishfarmplot", {Ingredient("rocks", 20)})
-
--- Checking if Chum The Waters Mod is enabled to not add duplicates.
-if not TUNING.HOF_IS_CTW_ENABLED then
-	AddRecipe2("kyno_malbatrossfood", {Ingredient("chum", 1), Ingredient("oceanfish_medium_2_inv", 2), Ingredient("kyno_mysterymeat", 1, ModAtlas)}, TECH.LOST, 
-		{
-			atlas 				= ModAtlas,
-			image 				= "kyno_malbatrossfood.tex",
-		},
-		{"FISHING"}
-	)
-	SortAfter("kyno_malbatrossfood", "chum", "FISHING")
-end
 
 -- Complementary Mod Spices for Warly.
 if TUNING.HOF_WARLYSPICES then

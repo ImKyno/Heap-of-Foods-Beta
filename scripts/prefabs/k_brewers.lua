@@ -340,7 +340,7 @@ local function commonfn(bank, build, minimapicon, tags, physics, scale)
 end
 
 local function kegfn()
-	return commonfn("kyno_brewers_keg", "kyno_brewers_keg", "kyno_woodenkeg", {"woodenkeg"}, .6)
+	return commonfn("kyno_brewers_keg", "kyno_brewers_keg", "kyno_woodenkeg", {"woodenkeg"}, .6, 1.1)
 end
 
 local function jarfn()
@@ -353,5 +353,5 @@ end
 
 return Prefab("kyno_woodenkeg", kegfn, assets, prefabs),
 Prefab("kyno_preservesjar", jarfn, assets, prefabs),
-MakePlacer("kyno_woodenkeg_placer", "kyno_brewers_keg", "kyno_brewers_keg", "idle"),
+MakePlacer("kyno_woodenkeg_placer", "kyno_brewers_keg", "kyno_brewers_keg", "idle", false, nil, nil, 1.1, nil, nil, placerfn),
 MakePlacer("kyno_preservesjar_placer", "kyno_brewers_jar", "kyno_brewers_jar", "idle", false, nil, nil, 1.8, nil, nil, placerfn)

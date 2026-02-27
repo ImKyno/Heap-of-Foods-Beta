@@ -262,7 +262,7 @@ local function CoffeeBushTest(inst, pt, mouseover, deployer)
 		return false
 	end
 
-	local radius = inst.replica.inventoryitem ~= nil and inst.replica.inventoryitem:DeploySpacingRadius() or DEPLOYSPACING_RADIUS[DEPLOYSPACING.MEDIUM]
+	local radius = inst.replica.inventoryitem ~= nil and inst.replica.inventoryitem:DeploySpacingRadius() or DEPLOYSPACING_RADIUS[DEPLOYSPACING.PLACER_DEFAULT]
     return TheWorld.Map:IsDeployPointClear(pt, inst, radius)
 end
 
@@ -278,7 +278,6 @@ local plantables =
 		deploymode     = DEPLOYMODE.CUSTOM,
 		fuel           = true,
 		fireproof      = true,
-		mediumspacing  = true,
 		waxable        = true,
 		customdeploy   = true,
 		customdeployfn = CoffeeBushTest,
@@ -294,7 +293,6 @@ local plantables =
 		inventoryimage = "dug_kyno_spotbush",
 		deploymode     = DEPLOYMODE.PLANT,
 		fuel           = true,
-		mediumspacing  = true,
 		waxable        = true,
 	},
 	

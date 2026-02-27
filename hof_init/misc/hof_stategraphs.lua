@@ -394,11 +394,11 @@ end)
 
 -- Klei made sharks don't actually eat food, they just remove it from the scene...
 local function groundsound(inst)
-    local x,y,z = inst.Transform:GetWorldPosition()
+    local x, y, z = inst.Transform:GetWorldPosition()
 	
     if inst:GetCurrentPlatform() then
         inst.SoundEmitter:PlaySound("dangerous_sea/creatures/shark/boat_land")
-    elseif _G.TheWorld.Map:IsVisualGroundAtPoint(x,y,z) then
+    elseif _G.TheWorld.Map:IsVisualGroundAtPoint(x, y, z) then
         PlayFootstep(inst)
     end
 end
@@ -469,100 +469,98 @@ AddStategraphPostInit("shark", function(sg)
 	end
 end)
 
--- Checking if Chum The Waters Mod is enabled to not add duplicates.
-if not TUNING.HOF_IS_CTW_ENABLED then
-	AddStategraphState("catcoon",
-		State{
-			name = "pawground2",
-			tags = {"busy"},
+AddStategraphState("catcoon",
+	State{
+		name = "pawground2",
+		tags = { "busy" },
 
-			onenter = function(inst)
-				inst.Physics:Stop()
-				inst.AnimState:PlayAnimation("action")
-				inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/pickup")
-			end,
+		onenter = function(inst)
+			inst.Physics:Stop()
+			inst.AnimState:PlayAnimation("action")
+			inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/pickup")
+		end,
 
-			onexit = function(inst)
+		onexit = function(inst)
 
-			end,
+		end,
 
-			timeline =
-			{
-				TimeEvent(6  * FRAMES, function(inst) PlayFootstep(inst) end),
-				TimeEvent(13 * FRAMES, function(inst) PlayFootstep(inst) end),
-				TimeEvent(20 * FRAMES, function(inst) PlayFootstep(inst) end),
-				TimeEvent(27 * FRAMES, function(inst) PlayFootstep(inst) end),
-				TimeEvent(34 * FRAMES, function(inst) PlayFootstep(inst) end),
-				TimeEvent(42 * FRAMES, function(inst) PlayFootstep(inst) end),
-			},
+		timeline =
+		{
+			TimeEvent(6  * FRAMES, function(inst) PlayFootstep(inst) end),
+			TimeEvent(13 * FRAMES, function(inst) PlayFootstep(inst) end),
+			TimeEvent(20 * FRAMES, function(inst) PlayFootstep(inst) end),
+			TimeEvent(27 * FRAMES, function(inst) PlayFootstep(inst) end),
+			TimeEvent(34 * FRAMES, function(inst) PlayFootstep(inst) end),
+			TimeEvent(42 * FRAMES, function(inst) PlayFootstep(inst) end),
+		},
 
-			events =
-			{
-				EventHandler("animover", function(inst) inst.sg:GoToState("mysterymeat") end),
-			},
-		}
-	)
+		events =
+		{
+			EventHandler("animover", function(inst) inst.sg:GoToState("mysterymeat") end),
+		},
+	}
+)
 
-	AddStategraphState("catcoon",
-		State{
-			name = "mysterymeat",
-			tags = {"busy", "hairball", "mysterymeat"},
+AddStategraphState("catcoon",
+	State{
+		name = "mysterymeat",
+		tags = { "busy", "hairball", "mysterymeat" },
 
-			onenter = function(inst)
-				inst.Physics:Stop()
-				inst.AnimState:PushAnimation("furball", false)
+		onenter = function(inst)
+			inst.Physics:Stop()
+			inst.AnimState:PushAnimation("furball", false)
 			
-				inst.hairballfollowup = math.random() <= .75
+			inst.hairballfollowup = math.random() <= .75
 				
-				if inst.hairballfollowup then
-					inst.AnimState:PushAnimation("idle_loop", false)
-					inst.AnimState:PushAnimation("action", false)
-				end
-			end,
+			if inst.hairballfollowup then
+				inst.AnimState:PushAnimation("idle_loop", false)
+				inst.AnimState:PushAnimation("action", false)
+			end
+		end,
 
-			onexit = function(inst)
+		onexit = function(inst)
 
-			end,
+		end,
 
-			timeline =
-			{
-				TimeEvent(37 * FRAMES, function(inst) inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/hairball_vomit") end),
-				TimeEvent(46 * FRAMES, function(inst)
-					inst.vomit = _G.SpawnPrefab("kyno_mysterymeat")
+		timeline =
+		{
+			TimeEvent(37 * FRAMES, function(inst) inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/hairball_vomit") end),
+			TimeEvent(46 * FRAMES, function(inst)
+
+				inst.vomit = _G.SpawnPrefab("kyno_mysterymeat")
 				
-					if inst.vomit ~= nil then
-						local downvec = _G.TheCamera:GetDownVec()
-						local face = math.atan2(downvec.z, downvec.x) * (180 / math.pi)
-						local pos = inst:GetPosition() + downvec:Normalize()
+				if inst.vomit ~= nil then
+					local downvec = _G.TheCamera:GetDownVec()
+					local face = math.atan2(downvec.z, downvec.x) * (180 / math.pi)
+					local pos = inst:GetPosition() + downvec:Normalize()
 						
-						inst.Transform:SetRotation(-face)
-						inst.vomit.Transform:SetPosition(pos.x, pos.y, pos.z)
+					inst.Transform:SetRotation(-face)
+					inst.vomit.Transform:SetPosition(pos.x, pos.y, pos.z)
 						
-						inst.vomit:AddTag("nosteal")
-						inst.vomit:RemoveTag("cattoy")
+					inst.vomit:AddTag("nosteal")
+					inst.vomit:RemoveTag("cattoy")
 					
-						if inst.vomit.components.inventoryitem and inst.vomit.components.inventoryitem.ondropfn then
-							inst.vomit.components.inventoryitem.ondropfn(inst.vomit)
-						end
-					
-						if inst.vomit.components.weighable ~= nil then
-							inst.vomit.components.weighable.prefab_override_owner = inst.prefab
-						end
+					if inst.vomit.components.inventoryitem ~= nil and inst.vomit.components.inventoryitem.ondropfn then
+						inst.vomit.components.inventoryitem.ondropfn(inst.vomit)
 					end
+					
+					if inst.vomit.components.weighable ~= nil then
+						inst.vomit.components.weighable.prefab_override_owner = inst.prefab
+					end
+				end
 
-					inst:PerformBufferedAction()
-				end),
-			},
+				inst:PerformBufferedAction()
+			end),
+		},
 
-			events =
-			{
-				EventHandler("animqueueover", function(inst)
-					inst.sg:GoToState("idle")
-				end),
-			},
-		}
-	)
-end
+		events =
+		{
+			EventHandler("animqueueover", function(inst)
+				inst.sg:GoToState("idle")
+			end),
+		},
+	}
+)
 
 -- Brewbook Action Stategraph.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)
