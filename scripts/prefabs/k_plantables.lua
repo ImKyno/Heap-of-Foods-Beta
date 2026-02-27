@@ -221,17 +221,40 @@ end
 local function CoffeeBushTest(inst, pt, mouseover, deployer)
 	local tile = TheWorld.Map:GetTileAtPoint(pt.x, pt.y, pt.z)
 	
-	local VALID_TILES             =
+	local VALID_TILES              =
 	{
-		[WORLD_TILES.DESERT_DIRT] = true,
-		[WORLD_TILES.VENT]        = true,
+		[WORLD_TILES.DESERT_DIRT]  = true,
+		[WORLD_TILES.VENT]         = true,
 	}
 	
+	--[[
 	if TUNING.HOF_IS_TAP_ENABLED or TUNING.HOF_IS_NET_ENABLED then
 		VALID_TILES[WORLD_TILES.VOLCANO]      = true
 		VALID_TILES[WORLD_TILES.VOLCANO_ROCK] = true
 		VALID_TILES[WORLD_TILES.MAGMAFIELD]   = true
 		VALID_TILES[WORLD_TILES.ASH]          = true
+		VALID_TILES[WORLD_TILES.FORGEROCK]    = true
+	end
+	]]--
+	
+	-- Yes it's ugly but clients cannot validate the TUNING above...
+	if WORLD_TILES.VOLCANO then
+		VALID_TILES[WORLD_TILES.VOLCANO]      = true
+	end
+	
+	if WORLD_TILES.VOLCANO_ROCK then
+		VALID_TILES[WORLD_TILES.VOLCANO_ROCK] = true
+	end
+	
+	if WORLD_TILES.MAGMAFIELD then
+		VALID_TILES[WORLD_TILES.MAGMAFIELD]   = true
+	end
+	
+	if WORLD_TILES.ASH then
+		VALID_TILES[WORLD_TILES.ASH]          = true
+	end
+	
+	if WORLD_TILES.FORGEROCK then
 		VALID_TILES[WORLD_TILES.FORGEROCK]    = true
 	end
     
