@@ -1348,6 +1348,8 @@ STRINGS.RECIPE_DESC.OCEANFISH_SMALL_7_INV_M = "Peixes raros das águas da primav
 STRINGS.RECIPE_DESC.OCEANFISH_SMALL_8_INV_M = "Peixes raros das águas do verão."
 STRINGS.RECIPE_DESC.SUCCULENT_PICKED_M = "Plantas de verão."
 STRINGS.RECIPE_DESC.MOON_CAP_M = "Cogumelo infundidos com o poder da Lua."
+STRINGS.RECIPE_DESC.TRINKET_4_M = "Ele vai tomar conta do seu jardim por você."
+STRINGS.RECIPE_DESC.TRINKET_13_M = "Isso não é suborno! Eu juro!"
 
 STRINGS.NAMES.SLOW_FARMPLOT_BLUEPRINT = "Planta de Fazenda Básica"
 STRINGS.RECIPE_DESC.SLOW_FARMPLOT_BLUEPRINT = "Um passeio pela nostalgia."

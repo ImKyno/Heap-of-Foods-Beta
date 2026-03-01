@@ -1348,6 +1348,8 @@ STRINGS.RECIPE_DESC.OCEANFISH_SMALL_7_INV_M = "Rzadkie ryby z wód źródlanych.
 STRINGS.RECIPE_DESC.OCEANFISH_SMALL_8_INV_M = "Rzadkie ryby z wód letnich."
 STRINGS.RECIPE_DESC.SUCCULENT_PICKED_M = "Rośliny letnie."
 STRINGS.RECIPE_DESC.MOON_CAP_M = "Grzyby nasycone mocą Księżyca."
+STRINGS.RECIPE_DESC.TRINKET_4_M = "Będzie czuwał nad Twoim ogrodem."
+STRINGS.RECIPE_DESC.TRINKET_13_M = "To nie jest przekupstwo! Przysięgam!"
 
 STRINGS.NAMES.SLOW_FARMPLOT_BLUEPRINT = "Podstawowy Plan Farmy"
 STRINGS.RECIPE_DESC.SLOW_FARMPLOT_BLUEPRINT = "Spacer po nostalgii."

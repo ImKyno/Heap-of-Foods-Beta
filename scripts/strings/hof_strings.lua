@@ -1348,6 +1348,8 @@ STRINGS.RECIPE_DESC.OCEANFISH_SMALL_7_INV_M = "Rare fish from spring waters."
 STRINGS.RECIPE_DESC.OCEANFISH_SMALL_8_INV_M = "Rare fish from summer waters."
 STRINGS.RECIPE_DESC.SUCCULENT_PICKED_M = "Summer plants."
 STRINGS.RECIPE_DESC.MOON_CAP_M = "Mushrooms infused with the power of the Moon."
+STRINGS.RECIPE_DESC.TRINKET_4_M = "He will keep an eye on your garden for you."
+STRINGS.RECIPE_DESC.TRINKET_13_M = "This is not bribery! I swear!"
 
 STRINGS.NAMES.SLOW_FARMPLOT_BLUEPRINT = "Basic Farm Blueprint"
 STRINGS.RECIPE_DESC.SLOW_FARMPLOT_BLUEPRINT = "A stroll through nostalgia."
@@ -1639,7 +1641,7 @@ STRINGS.NAMES.NUKASHINE = "Nukashine"
 STRINGS.NAMES.NUKASHINE_SUGARFREE = "\"Sugar-Free\" Nukashine"
 STRINGS.RECIPE_DESC.NUKASHINE_SUGARFREE_M = "Now without the risk of blackouts!"
 
-STRINGS.NAMES.ANTSLOG = "Ants On a Living Log"
+STRINGS.NAMES.ANTSLOG = "Ants on a Living Log"
 
 STRINGS.NAMES.KYNO_WORM_BONE = "Worm Bone"
 STRINGS.RECIPE_DESC.KYNO_WORM_BONE_M = "Definitely not regular bones."

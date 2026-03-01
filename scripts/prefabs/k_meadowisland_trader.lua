@@ -50,6 +50,8 @@ local WARES                             =
 			["kyno_chicken2"]               = { recipe = "meadowislandtrader_kyno_chicken2",               min = 1,  max = 4,  limit = 4  },
 			["foliage"]                     = { recipe = "meadowislandtrader_foliage",                     min = 10, max = 25, limit = 25 },
 			["barnacle"]                    = { recipe = "meadowislandtrader_barnacle",                    min = 5,  max = 12, limit = 12 },
+			["trinket_4"]                   = { recipe = "meadowislandtrader_trinket_4",                   min = 3,  max = 5,  limit = 5  }, -- Gnome.
+			["trinket_13"]                  = { recipe = "meadowislandtrader_trinket_13",                  min = 3,  max = 5,  limit = 5  }, -- Gnomette.
 		},
 	},
 	

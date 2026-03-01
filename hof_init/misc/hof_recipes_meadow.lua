@@ -11,6 +11,7 @@ local RecipeFilter     = require("recipes_filter")
 local DefaultAtlas     = "images/inventoryimages.xml"
 local DefaultAtlas1    = "images/inventoryimages1.xml"
 local DefaultAtlas2    = "images/inventoryimages2.xml"
+local DefaultAtlas3    = "images/inventoryimages3.xml"
 local ModAtlas         = "images/inventoryimages/hof_inventoryimages.xml"
 
 -- For sorting recipe.
@@ -169,6 +170,38 @@ AddRecipe2("meadowislandtrader_barnacle", {Ingredient("fishmeat_small", 1)}, TEC
 		product             = "barnacle",
 		atlas               = DefaultAtlas1,
 		image               = "barnacle.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+AddRecipe2("meadowislandtrader_trinket_4", {Ingredient("goldnugget", 5)}, TECH.LOST,
+	{
+		limitedamount       = true, 
+		nounlock            = true, 
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSMEADOWSHOP",
+		actionstr           = "MEADOWSHOP",
+		description         = "trinket_4_m",
+		sg_state            = "give", 
+		product             = "trinket_4",
+		atlas               = DefaultAtlas3,
+		image               = "trinket_4.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+AddRecipe2("meadowislandtrader_trinket_13", {Ingredient("goldnugget", 5)}, TECH.LOST,
+	{
+		limitedamount       = true, 
+		nounlock            = true, 
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSMEADOWSHOP",
+		actionstr           = "MEADOWSHOP",
+		description         = "trinket_13_m",
+		sg_state            = "give", 
+		product             = "trinket_13",
+		atlas               = DefaultAtlas3,
+		image               = "trinket_13.tex",
 	},
 	{"CRAFTING_STATION"}
 )
