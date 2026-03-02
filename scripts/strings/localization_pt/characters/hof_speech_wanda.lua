@@ -1210,3 +1210,6 @@ WANDA.DESCRIBE.CHICKENEGGSOUP = "Reconfortante e eficiente."
 WANDA.DESCRIBE.CHICKENEGGSTEW = "Demora pra fazer. Rápido de comer."
 
 WANDA.DESCRIBE.CHICKENROTISSERIE = "Pelo menos a espera vale a pena."
+
+WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Um breve momento de conforto."
+WANDA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Doce, mas passageiro."

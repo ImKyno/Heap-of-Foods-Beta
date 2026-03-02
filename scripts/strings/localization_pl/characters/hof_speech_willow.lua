@@ -1210,3 +1210,6 @@ WILLOW.DESCRIBE.CHICKENEGGSOUP = "Ciepła, nudna, nie pali się."
 WILLOW.DESCRIBE.CHICKENEGGSTEW = "Gorący gulasz. Nadal przydałoby się więcej ognia."
 
 WILLOW.DESCRIBE.CHICKENROTISSERIE = "To dopiero właściwe użycie ognia."
+
+WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Hm. Wolę, gdy wrze."
+WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Za słodkie. Potrzeba dymu."

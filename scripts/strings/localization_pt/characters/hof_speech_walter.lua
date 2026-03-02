@@ -1210,3 +1210,6 @@ WALTER.DESCRIBE.CHICKENEGGSOUP = "Perfeita pra esquentar depois de um longo dia.
 WALTER.DESCRIBE.CHICKENEGGSTEW = "Parece uma refeição de acampamento de verdade."
 
 WALTER.DESCRIBE.CHICKENROTISSERIE = "Isso daria um ótimo jantar de acampamento!"
+
+WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Perfeito pra uma noite tranquila na fogueira."
+WALTER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Tem gosto de aventura no campo."

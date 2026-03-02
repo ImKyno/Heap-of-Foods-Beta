@@ -1210,3 +1210,6 @@ WOLFGANG.DESCRIBE.CHICKENEGGSOUP = "Zupa sprawia, że Wolfgang jest silny i przy
 WOLFGANG.DESCRIBE.CHICKENEGGSTEW = "Duży gulasz sprawia, że Wolfgang jest bardzo syty!"
 
 WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Kręcący się kurczak bardzo głodzi Wolfganga!"
+
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Ciepły napój czyni Wolfganga silnym!"
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodki napój dla potężnego Wolfganga!"

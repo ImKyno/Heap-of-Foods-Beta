@@ -1210,3 +1210,6 @@ WOODIE.DESCRIBE.CHICKENEGGSOUP = "Hits the spot on a cold day, eh?"
 WOODIE.DESCRIBE.CHICKENEGGSTEW = "Good, solid stew. Can't complain."
 
 WOODIE.DESCRIBE.CHICKENROTISSERIE = "Smells like a Sunday supper, eh?"
+
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Nice and calming, eh?"
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Smells like spring, eh?"

@@ -1210,3 +1210,6 @@ WATHGRITHR.DESCRIBE.CHICKENEGGSOUP = "Um caldo quente de honra aviária!"
 WATHGRITHR.DESCRIBE.CHICKENEGGSTEW = "Um ensopado digno da fome de um guerreiro!"
 
 WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "Um assado digno, adequado a um banquete guerreiro."
+
+WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Uma guerreira prefere hidromel, mas isto serve!"
+WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Doce como o canto de uma donzela!"

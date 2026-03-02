@@ -1210,3 +1210,6 @@ WAXWELL.DESCRIBE.CHICKENEGGSOUP = "Skromne danie, lecz skuteczne."
 WAXWELL.DESCRIBE.CHICKENEGGSTEW = "Proste pożywienie, przygotowane poprawnie."
 
 WAXWELL.DESCRIBE.CHICKENROTISSERIE = "Dekadenckie, lecz niezaprzeczalnie praktyczne."
+
+WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Przynajmniej jest wyrafinowane."
+WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Zaskakująco gustowne."

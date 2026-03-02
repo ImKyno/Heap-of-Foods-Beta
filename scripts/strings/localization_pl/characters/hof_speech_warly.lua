@@ -1210,3 +1210,6 @@ WARLY.DESCRIBE.CHICKENEGGSOUP = "Ach! Komfort w najczystszej postaci."
 WARLY.DESCRIBE.CHICKENEGGSTEW = "Ach! Rustykalne, sycące i bardzo satysfakcjonujące."
 
 WARLY.DESCRIBE.CHICKENROTISSERIE = "Ach! Powolne pieczenie daje soczystą nagrodę."
+
+WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Delikatnie zaparzone do perfekcji."
+WARLY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Uroczy, słodki bukiet w filiżance."

@@ -162,6 +162,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Specjalny kapelusz rocznic
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Badania ryb i ikry przyczyniają się do wzbogacenia Rejestru Ryb."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Ogromne jajko, którym można rzucać lub które można wykluć.\n\nZmniejsza obrażenia zadawane przez cel oraz jego prędkość ruchu o 10% na 20 sekund. Efekt kumuluje się do 3 razy, maksymalnie do 30%.\n\n\"Nawet jajka są bronią na polu bitwy!\" - Wigfrid."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Można wykluć się w pobliżu źródła ciepła."
+STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "Zadbaj o swoje rany i ochłódź się dzięki tej z troską przygotowanej miksturze od Pearl."
+STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "Ukoisz swój umysł i ochronisz go przed strasznymi wrogami dzięki tej z troską przygotowanej miksturze od Pearl."
 
 -- Stworzenia.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Ich dieta opiera się na nasionach, pszenicy lub gałązkach cętkowanych.\n\nKury żyjące na wolności mają 40% szans na zniesienie jaj po jedzeniu. Mają bardzo małe szanse na zniesienie dużego jaja.\n\nKury żyjące w kurniku mogą znosić jaja codziennie po jedzeniu. Mają większe szanse na zniesienie dużego jaja."

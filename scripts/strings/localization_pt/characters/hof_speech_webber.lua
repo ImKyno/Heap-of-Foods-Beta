@@ -1210,3 +1210,6 @@ WEBBER.DESCRIBE.CHICKENEGGSOUP = "É tipo um abraço numa tigela!"
 WEBBER.DESCRIBE.CHICKENEGGSTEW = "O cheiro está muito bom!"
 
 WEBBER.DESCRIBE.CHICKENROTISSERIE = "Tá girando! E o cheiro é incrível!"
+
+WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Cheira até que bem!"
+WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Tem gosto de flores!"

@@ -1210,3 +1210,6 @@ WILSON.DESCRIBE.CHICKENEGGSOUP = "Proste, a zarazem pożywne rozwiązanie białk
 WILSON.DESCRIBE.CHICKENEGGSTEW = "Pożywne połączenie drobiu i jaj."
 
 WILSON.DESCRIBE.CHICKENROTISSERIE = "Obrotowe ciepło zapewnia równomierne pieczenie. Fascynujące."
+
+WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Kojąca filiżanka herbaty z aloesu."
+WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Zachwycająco słodka herbata kwiatowa."

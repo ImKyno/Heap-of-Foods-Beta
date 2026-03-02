@@ -1210,3 +1210,6 @@ WILLOW.DESCRIBE.CHICKENEGGSOUP = "Warm, boring, not on fire."
 WILLOW.DESCRIBE.CHICKENEGGSTEW = "Hot stew. Still could use more fire."
 
 WILLOW.DESCRIBE.CHICKENROTISSERIE = "Now that's a proper use of fire."
+
+WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Hmph. I prefer it boiling."
+WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Too sweet. Needs smoke."

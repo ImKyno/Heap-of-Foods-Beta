@@ -1210,3 +1210,6 @@ WATHGRITHR.DESCRIBE.CHICKENEGGSOUP = "A warm broth of birdly honor!"
 WATHGRITHR.DESCRIBE.CHICKENEGGSTEW = "A stew worthy of a warrior's hunger!"
 
 WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "A worthy roast, fit for a warrior's feast."
+
+WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A warrior prefers mead, but this shall do!"
+WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet as a maiden's song!"

@@ -1210,3 +1210,6 @@ WOODIE.DESCRIBE.CHICKENEGGSOUP = "Idealna na zimny dzień, co nie?"
 WOODIE.DESCRIBE.CHICKENEGGSTEW = "Dobry, porządny gulasz. Nie ma co narzekać."
 
 WOODIE.DESCRIBE.CHICKENROTISSERIE = "Pachnie jak niedzielny obiad, co nie?"
+
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Całkiem uspokajające, co?"
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Pachnie wiosną, co?"

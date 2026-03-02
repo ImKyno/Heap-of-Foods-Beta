@@ -89,6 +89,7 @@ PrefabFiles =
 	"k_ghost_pirate",
 	"k_goldenapple",
 	"k_goldenapple_fx",
+	"k_hermitcrabtea",
 	"k_hofbirthday_balloons",
 	"k_hofbirthday_cake",
 	"k_hofbirthday_cake_fx",

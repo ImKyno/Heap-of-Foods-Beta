@@ -1210,3 +1210,6 @@ WINONA.DESCRIBE.CHICKENEGGSOUP = "Simple, hot, and keeps you goin'."
 WINONA.DESCRIBE.CHICKENEGGSTEW = "Keeps you fed and on your feet."
 
 WINONA.DESCRIBE.CHICKENROTISSERIE = "Slow turn, steady cook. I respect that."
+
+WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Good for a quick break."
+WINONA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Not bad at all."

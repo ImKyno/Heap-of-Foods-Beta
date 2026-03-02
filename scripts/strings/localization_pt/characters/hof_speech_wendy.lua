@@ -1210,3 +1210,6 @@ WENDY.DESCRIBE.CHICKENEGGSOUP = "Um calor silencioso em um mundo frio."
 WENDY.DESCRIBE.CHICKENEGGSTEW = "A vida, reduzida a uma panela."
 
 WENDY.DESCRIBE.CHICKENROTISSERIE = "Girando sem parar, como todas as coisas."
+
+WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Um calor amargo para um mundo amargo."
+WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A doçura desaparece, como tudo."

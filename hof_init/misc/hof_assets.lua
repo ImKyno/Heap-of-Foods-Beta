@@ -884,6 +884,8 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_fishfarmplot",
 	"kyno_garden_sprinkler",
 	"kyno_ghost_pirate",
+	"kyno_hermitcrabtea_aloe",
+	"kyno_hermitcrabtea_sugartree_petals",
 	"kyno_hofbirthday_balloons",
 	"kyno_hofbirthday_cake",
 	"kyno_itemshowcaser",

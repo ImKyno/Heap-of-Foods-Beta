@@ -1210,3 +1210,6 @@ WORTOX.DESCRIBE.CHICKENEGGSOUP = "Zupna, podejrzana przyjemność! Hyuyu!"
 WORTOX.DESCRIBE.CHICKENEGGSTEW = "Bulgotający garnek śmiertelnej rozkoszy! Hyuyu!"
 
 WORTOX.DESCRIBE.CHICKENROTISSERIE = "W kółko kręci się ptaszek! Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Listna psota w filiżance!"
+WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodkie łyczki i figlarne podskoki!"

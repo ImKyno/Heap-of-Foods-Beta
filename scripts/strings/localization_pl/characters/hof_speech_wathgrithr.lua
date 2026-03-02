@@ -1210,3 +1210,6 @@ WATHGRITHR.DESCRIBE.CHICKENEGGSOUP = "Ciepły bulion ptasiej chwały!"
 WATHGRITHR.DESCRIBE.CHICKENEGGSTEW = "Gulasz warty głodu wojownika!"
 
 WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "Godna pieczeń, odpowiednia na wojowniczą ucztę."
+
+WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Wojowniczka woli miód pitny, lecz to wystarczy!"
+WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodkie jak pieśń dziewicy!"

@@ -1210,3 +1210,6 @@ WILSON.DESCRIBE.CHICKENEGGSOUP = "A simple yet nourishing protein solution."
 WILSON.DESCRIBE.CHICKENEGGSTEW = "A hearty combination of poultry and eggs."
 
 WILSON.DESCRIBE.CHICKENROTISSERIE = "Winner, winner! Chicken dinner!"
+
+WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A soothing cup of aloe tea."
+WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A delightfully sweet floral tea."

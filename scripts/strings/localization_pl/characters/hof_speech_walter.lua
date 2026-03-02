@@ -1210,3 +1210,6 @@ WALTER.DESCRIBE.CHICKENEGGSOUP = "Idealna na rozgrzanie po długim dniu."
 WALTER.DESCRIBE.CHICKENEGGSTEW = "Jak prawdziwy posiłek przy ognisku."
 
 WALTER.DESCRIBE.CHICKENROTISSERIE = "Byłoby świetne na obozową kolację!"
+
+WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Idealne na spokojny wieczór przy ognisku."
+WALTER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Smakuje jak przygoda na łące."

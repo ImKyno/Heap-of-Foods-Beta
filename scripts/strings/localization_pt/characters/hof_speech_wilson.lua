@@ -1210,3 +1210,6 @@ WILSON.DESCRIBE.CHICKENEGGSOUP = "Uma solução proteica simples e nutritiva."
 WILSON.DESCRIBE.CHICKENEGGSTEW = "Uma combinação reforçada de ave e ovos."
 
 WILSON.DESCRIBE.CHICKENROTISSERIE = "O calor rotacional garante um cozimento uniforme."
+
+WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Uma reconfortante xícara de chá de aloe."
+WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Um chá floral deliciosamente doce."

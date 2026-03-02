@@ -5570,6 +5570,44 @@ local HOF_SCRAPBOOK_FOODS =
 		deps           = {"kyno_hofbirthday_popcornmachine", "corn", "spoiled_food"},
 		specialinfo    = "HOFBIRTHDAY",
 	},
+	
+	kyno_hermitcrabtea_aloe = 
+	{
+		name           = "kyno_hermitcrabtea_aloe",
+		type           = "food",
+		tex            = "kyno_hermitcrabtea_aloe.tex",
+		prefab         = "kyno_hermitcrabtea_aloe",
+		healthvalue    = 15,
+		hungervalue    = 0,
+		sanityvalue    = 0,
+		foodtype       = "GOODIES",
+		finiteuses     = 10,
+		bank           = "hermitcrab_tea",
+		build          = "kyno_hermitcrab_tea",
+		overridesymbol = {"tea_bottle", "kyno_hermitcrab_tea", "tea_bottle_aloe"},
+		anim           = "idle1",
+		deps           = {"messagebottleempty", "hermitcrab_teashop"},
+		specialinfo    = "HERMITCRABTEA_ALOE",
+	},
+	
+	kyno_hermitcrabtea_sugartree_petals = 
+	{
+		name           = "kyno_hermitcrabtea_sugartree_petals",
+		type           = "food",
+		tex            = "kyno_hermitcrabtea_sugartree_petals.tex",
+		prefab         = "kyno_hermitcrabtea_sugartree_petals",
+		healthvalue    = 0,
+		hungervalue    = 0,
+		sanityvalue    = 15,
+		foodtype       = "GOODIES",
+		finiteuses     = 10,
+		bank           = "hermitcrab_tea",
+		build          = "kyno_hermitcrab_tea",
+		overridesymbol = {"tea_bottle", "kyno_hermitcrab_tea", "tea_bottle_sugartree_petals"},
+		anim           = "idle1",
+		deps           = {"messagebottleempty", "hermitcrab_teashop"},
+		specialinfo    = "HERMITCRABTEA_SUGARTREE_PETALS",
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS =

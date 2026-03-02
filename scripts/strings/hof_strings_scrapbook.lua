@@ -162,6 +162,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Sammy's special anniversar
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Researching fish and roes adds to the Fish Registry."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "An oversized egg that can be thrown or hatched.\n\nReduces target's damage and movement speed by 10% for 20 seconds. Effects stack up to 3 times for a total of 30%.\n\n\"Even eggs are weapons on the battlefield!\" - Wigfrid."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Can be hatched when near a source of heat."
+STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "Tend to your wounds and cool yourself with this lovingly brewed concoction from Pearl."
+STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "Soothe your mind and protect it against scary foes with this lovingly brewed concoction from Pearl."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 40% chance of laying Eggs after eating. They have a small chance of laying a Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying a Large Egg."

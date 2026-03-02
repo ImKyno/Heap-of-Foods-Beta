@@ -1212,3 +1212,6 @@ WURT.DESCRIBE.CHICKENEGGSOUP = "Jest bardzo ciepło."
 WURT.DESCRIBE.CHICKENEGGSTEW = "Fuj!"
 
 WURT.DESCRIBE.CHICKENROTISSERIE = "Nieee! Biedny ptak! To nie jedzenie, florp!"
+
+WURT.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Ciepły napój z rośliny, flort."
+WURT.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodki napój z kwiatka, florp."

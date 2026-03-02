@@ -1210,3 +1210,6 @@ WENDY.DESCRIBE.CHICKENEGGSOUP = "A quiet warmth in a cold world."
 WENDY.DESCRIBE.CHICKENEGGSTEW = "Life, boiled down into a pot."
 
 WENDY.DESCRIBE.CHICKENROTISSERIE = "Turning endlessly, as all things do."
+
+WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A bitter warmth for a bitter world."
+WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweetness fades, like all things."

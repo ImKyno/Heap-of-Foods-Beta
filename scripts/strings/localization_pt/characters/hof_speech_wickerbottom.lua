@@ -1210,3 +1210,6 @@ WICKERBOTTOM.DESCRIBE.CHICKENEGGSOUP = "Um restaurador clássico à base de cald
 WICKERBOTTOM.DESCRIBE.CHICKENEGGSTEW = "Um ensopado nutritivo, rico em proteínas."
 
 WICKERBOTTOM.DESCRIBE.CHICKENROTISSERIE = "Um método extremamente eficiente de assar aves."
+
+WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Uma infusão herbal devidamente preparada."
+WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Uma infusão agradavelmente aromática."

@@ -1210,3 +1210,6 @@ WENDY.DESCRIBE.CHICKENEGGSOUP = "Ciche ciepło w zimnym świecie."
 WENDY.DESCRIBE.CHICKENEGGSTEW = "Życie, sprowadzone do garnka."
 
 WENDY.DESCRIBE.CHICKENROTISSERIE = "Kręci się bez końca, jak wszystko."
+
+WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Gorzka ciepłota dla gorzkiego świata."
+WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodycz przemija, jak wszystko."

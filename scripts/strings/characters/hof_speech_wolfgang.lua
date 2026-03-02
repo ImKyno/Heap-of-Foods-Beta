@@ -1210,3 +1210,6 @@ WOLFGANG.DESCRIBE.CHICKENEGGSOUP = "Soup make Wolfgang feel strong and cozy!"
 WOLFGANG.DESCRIBE.CHICKENEGGSTEW = "Big stew make Wolfgang very full!"
 
 WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Spinning chicken make Wolfgang very hungry!"
+
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Warm drink makes Wolfgang strong!"
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet drink for mighty Wolfgang!"

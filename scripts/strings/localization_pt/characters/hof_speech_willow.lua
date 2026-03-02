@@ -1210,3 +1210,6 @@ WILLOW.DESCRIBE.CHICKENEGGSOUP = "Quente, sem graça, não pega fogo."
 WILLOW.DESCRIBE.CHICKENEGGSTEW = "Ensopado quente. Ainda podia ter mais fogo."
 
 WILLOW.DESCRIBE.CHICKENROTISSERIE = "Agora sim, um uso adequado do fogo."
+
+WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Hm. Eu prefiro fervendo."
+WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Doce demais. Precisa de fumaça."

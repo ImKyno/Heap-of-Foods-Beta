@@ -277,7 +277,7 @@ AddRecipe2("kyno_musselstick_item", {Ingredient("twigs", 3), Ingredient("rope", 
 SortAfter("kyno_musselstick_item", "ocean_trawler_kit", "GARDENING")
 SortAfter("kyno_musselstick_item", "kyno_fishfarmplot_construction", "FISHING")
 
-AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2), Ingredient("flint", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO, 
+AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2), Ingredient("flint", 2), Ingredient("marble", 2)}, TECH.SCIENCE_ONE, 
 	{
 		placer 				= "kyno_mealgrinder_placer", 
 		min_spacing 		= 1.75, 
@@ -335,7 +335,7 @@ AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ingredient("kyno_wheat", 
 )
 SortAfter("kyno_brewbook", "cookbook", "COOKING")
 
-AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
+AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 3)}, TECH.SCIENCE_ONE,
 	{
 		placer 				= "kyno_woodenkeg_placer", 
 		min_spacing			= 2.5, 
@@ -347,7 +347,7 @@ AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 3), Ingredient("rope", 2), In
 SortAfter("kyno_woodenkeg", "cookpot", "COOKING")
 SortAfter("kyno_woodenkeg", "cookpot", "STRUCTURES")
 
-AddRecipe2("kyno_preservesjar", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 2), Ingredient("hammer", 0)}, TECH.SCIENCE_TWO,
+AddRecipe2("kyno_preservesjar", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 3)}, TECH.SCIENCE_ONE,
 	{
 		placer 				= "kyno_preservesjar_placer", 
 		min_spacing			= 1.75, 
@@ -359,7 +359,7 @@ AddRecipe2("kyno_preservesjar", {Ingredient("boards", 3), Ingredient("rope", 2),
 SortAfter("kyno_preservesjar", "kyno_woodenkeg", "COOKING")
 SortAfter("kyno_preservesjar", "kyno_woodenkeg", "STRUCTURES")
 
-AddRecipe2("kyno_antchest", {Ingredient("honeycomb", 1), Ingredient("honey", 6), Ingredient("boards", 2)}, TECH.LOST,
+AddRecipe2("kyno_antchest", {Ingredient("honeycomb", 1), Ingredient("honey", 12), Ingredient("boards", 3)}, TECH.LOST,
 	{
 		placer				= "kyno_antchest_placer",
 		min_spacing			= 1.75,
@@ -861,12 +861,50 @@ end
 
 -- Replace the Bucket-o-Poop recipe with ours.
 if HOF_FERTILIZERTWEAK then
-	Recipe2("fertilizer",	{Ingredient("poop", 3), Ingredient("kyno_bucket_empty", 1, ModAtlas)}, TECH.SCIENCE_TWO,
+	Recipe2("fertilizer", {Ingredient("poop", 3), Ingredient("kyno_bucket_empty", 1, ModAtlas)}, TECH.SCIENCE_TWO,
 		{
 			atlas 				= DefaultAtlas,
 			image       		= "fertilizer.tex",
 		},	
 		{"GARDENING"}
+	)
+end
+
+-- Pearl Tea Shop.
+local NUM_TEASHOP_LEVELS = 3
+local NUM_COMMON_PETALS_FOR_TEASHOP_LEVEL = { 8, 6, 4 }
+local NUM_RARE_PETALS_FOR_TEASHOP_LEVEL = { 6, 4, 2 }
+for i = 1, NUM_TEASHOP_LEVELS do
+	local num_common_petals = NUM_COMMON_PETALS_FOR_TEASHOP_LEVEL[i]
+	local num_rare_petals = NUM_RARE_PETALS_FOR_TEASHOP_LEVEL[i]
+	
+	AddRecipe2("kyno_hermitcrabtea_aloe_"..i, {Ingredient("messagebottleempty", 1), Ingredient("kyno_aloe_dried", num_rare_petals, ModAtlas)}, TECH.LOST,
+		{ 
+			nounlock            = true,
+			manufactured        = true,
+			actionstr           = "HERMITCRABSHOP",
+			hint_msg            = "NEEDSHERMITCRAB_TEASHOP",
+			product             = "kyno_hermitcrabtea_aloe",
+			sg_state            = "give",
+			atlas               = ModAtlas,
+			image               = "kyno_hermitcrabtea_aloe.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
+	
+	AddRecipe2("kyno_hermitcrabtea_sugartree_petals_"..i, {Ingredient("messagebottleempty", 1), 
+	Ingredient("kyno_sugartree_petals_dried", num_common_petals, ModAtlas)}, TECH.LOST,
+		{ 
+			nounlock            = true,
+			manufactured        = true,
+			actionstr           = "HERMITCRABSHOP",
+			hint_msg            = "NEEDSHERMITCRAB_TEASHOP",
+			product             = "kyno_hermitcrabtea_sugartree_petals",
+			sg_state            = "give",
+			atlas               = ModAtlas,
+			image               = "kyno_hermitcrabtea_sugartree_petals.tex",
+		},
+		{"CRAFTING_STATION"}
 	)
 end
 

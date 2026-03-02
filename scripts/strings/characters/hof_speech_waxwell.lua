@@ -1210,3 +1210,6 @@ WAXWELL.DESCRIBE.CHICKENEGGSOUP = "Modest fare, but effective."
 WAXWELL.DESCRIBE.CHICKENEGGSTEW = "Simple sustenance, prepared adequately."
 
 WAXWELL.DESCRIBE.CHICKENROTISSERIE = "Decadent, yet undeniably practical."
+
+WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "At least it's refined."
+WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Surprisingly tasteful."

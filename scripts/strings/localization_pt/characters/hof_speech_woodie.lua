@@ -1210,3 +1210,6 @@ WOODIE.DESCRIBE.CHICKENEGGSOUP = "Cai muito bem num dia frio, hein?"
 WOODIE.DESCRIBE.CHICKENEGGSTEW = "Ensopado bom e honesto. Sem reclamações."
 
 WOODIE.DESCRIBE.CHICKENROTISSERIE = "Cheira a almoço de domingo, hein?"
+
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Bem calmante, né?"
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Cheira a primavera, né?"

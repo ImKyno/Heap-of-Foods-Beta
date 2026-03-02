@@ -1210,3 +1210,6 @@ WOLFGANG.DESCRIBE.CHICKENEGGSOUP = "Sopa deixa Wolfgang forte e aconchegado!"
 WOLFGANG.DESCRIBE.CHICKENEGGSTEW = "Ensopado grande deixa Wolfgang bem cheio!"
 
 WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Galinha girando deixa Wolfgang com muita fome!"
+
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Bebida quente deixa Wolfgang forte!"
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Bebida doce para poderoso Wolfgang!"

@@ -5,6 +5,7 @@ local resolvefilepath     = _G.resolvefilepath
 local ACTIONS             = _G.ACTIONS
 local STRINGS             = _G.STRINGS
 local SpawnPrefab         = _G.SpawnPrefab
+local UpvalueHacker       = require("hof_upvaluehacker")
 
 local HOF_ALCOHOLICDRINKS = GetModConfigData("ALCOHOLICDRINKS")
 
@@ -470,3 +471,19 @@ end
 for k, v in pairs(itemshowcaser_foods) do
 	AddPrefabPostInit(v, ItemShowcaserItemsPostInit)
 end
+
+local pearl_teas =
+{
+	"kyno_hermitcrabtea_aloe",
+	"kyno_hermitcrabtea_sugartree_petals",
+}
+
+local function HermitCrabTeaShopPostInit(inst)
+	local TEA_RECIPES = UpvalueHacker.GetUpvalue(_G.Prefabs.hermitcrab_teashop.fn, "MakePrototyper", "UpdateRecipes", "TEA_RECIPES")
+	
+	for k, v in pairs(pearl_teas) do
+		table.insert(TEA_RECIPES, v)
+	end
+end
+
+AddPrefabPostInit("hermitcrab_teashop", HermitCrabTeaShopPostInit)

@@ -1,9 +1,9 @@
-local FERTILIZER_DEFS = require("prefabs/fertilizer_nutrient_defs").FERTILIZER_DEFS
-local sort_order = require("prefabs/fertilizer_nutrient_defs").SORTED_FERTILIZERS
+local FERTILIZER_DEFS                       = require("prefabs/fertilizer_nutrient_defs").FERTILIZER_DEFS
+local sort_order                            = require("prefabs/fertilizer_nutrient_defs").SORTED_FERTILIZERS
 
 local HOF_FERTILIZER_DEFS                   = {}
 
-HOF_FERTILIZER_DEFS.ash                     = { nutrients  = TUNING.ASH_NUTRIENTS                                                  }
+HOF_FERTILIZER_DEFS.ash                     = { nutrients = TUNING.ASH_NUTRIENTS                                                   }
 HOF_FERTILIZER_DEFS.kyno_mysterymeat        = { nutrients = TUNING.KYNO_MYSTERYMEAT_NUTRIENTS                                      }
 HOF_FERTILIZER_DEFS.kyno_floatilizer        = { nutrients = TUNING.KYNO_FLOATILIZER_NUTRIENTS, uses = TUNING.KYNO_FLOATILIZER_USES }
 HOF_FERTILIZER_DEFS.kyno_sap_spoiled        = { nutrients = TUNING.KYNO_SAP_SPOILED_NUTRIENTS                                      }

@@ -1210,3 +1210,6 @@ WICKERBOTTOM.DESCRIBE.CHICKENEGGSOUP = "Klasyczny, regenerujący bulion."
 WICKERBOTTOM.DESCRIBE.CHICKENEGGSTEW = "Odżywczy gulasz bogaty w białko."
 
 WICKERBOTTOM.DESCRIBE.CHICKENROTISSERIE = "Wysoce efektywna metoda pieczenia drobiu."
+
+WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Właściwie zaparzony napar ziołowy."
+WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Przyjemnie aromatyczny napar."
