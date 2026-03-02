@@ -301,6 +301,7 @@ WILSON.DESCRIBE.DUCKYOUGLERMZ = "Cheira muito mal, ugh."
 
 WILSON.DESCRIBE.KYNO_ALOE = "Científica e nutritiva."
 WILSON.DESCRIBE.KYNO_ALOE_COOKED = "Eu cozinhei!"
+WILSON.DESCRIBE.KYNO_ALOE_DRIED = "Eu sequei isso!"
 WILSON.DESCRIBE.KYNO_ALOE_GROUND = "Científica e nutritiva."
 WILSON.DESCRIBE.KYNO_ALOE_SEEDS = "É uma semente."
 WILSON.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "É uma semente."
@@ -557,6 +558,7 @@ WILSON.DESCRIBE.KYNO_SUGARTREE_FLOWER = "É bonita. E cheira a açúcar."
 WILSON.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "É bonita. E cheira a açúcar."
 
 WILSON.DESCRIBE.KYNO_SUGARTREE_PETALS = "É bonita. E cheira a açúcar."
+WILSON.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Algumas belas flores secas."
 
 WILSON.DESCRIBE.KYNO_PEBBLECRAB = "Essa pedra está viva!"
 

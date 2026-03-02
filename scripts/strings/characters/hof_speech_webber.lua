@@ -301,6 +301,7 @@ WEBBER.DESCRIBE.DUCKYOUGLERMZ = "Eeewww!"
 
 WEBBER.DESCRIBE.KYNO_ALOE = "I bet this is good for us!"
 WEBBER.DESCRIBE.KYNO_ALOE_COOKED = "I cooked it!"
+WEBBER.DESCRIBE.KYNO_ALOE_DRIED = "Looks dried enough for us."
 WEBBER.DESCRIBE.KYNO_ALOE_GROUND = "I bet this is good for us!"
 WEBBER.DESCRIBE.KYNO_ALOE_SEEDS = "We could grow something with these."
 WEBBER.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "We could grow something with these."
@@ -557,6 +558,7 @@ WEBBER.DESCRIBE.KYNO_SUGARTREE_FLOWER = "We agree that flowers are nice."
 WEBBER.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "We agree that flowers are nice."
 
 WEBBER.DESCRIBE.KYNO_SUGARTREE_PETALS = "We agree that flowers are nice."
+WEBBER.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Dried sweet flower."
 
 WEBBER.DESCRIBE.KYNO_PEBBLECRAB = "Don't be afraid!"
 

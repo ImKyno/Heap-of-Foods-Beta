@@ -45,10 +45,6 @@ AddComponentPostInit("regrowthmanager", function(self)
         return not (_worldstate.isnight) and TUNING.KYNO_LIMPETROCK_REGROWTH_TIME_MULT or 0
     end)
 	
-	self:SetRegrowthForType("kyno_ocean_wreck", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_ocean_wreck", function()
-        return not (_worldstate.isnight) and TUNING.KYNO_OCEAN_WRECK_REGROWTH_TIME_MULT or 0
-    end)
-	
 	--[[
 	self:SetRegrowthForType("kyno_sugartree_flower", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_sugartree_flower", function()
         return not (_worldstate.isnight or _worldstate.iswinter or _worldstate.snowlevel > 0) and TUNING.KYNO_SUGARFLOWER_REGROWTH_TIME_MULT or 0
@@ -63,6 +59,7 @@ AddComponentPostInit("regrowthmanager", function(self)
         return TUNING.KYNO_FLIPPABLE_REGROWTH_TIME_MULT
     end)
 	
+	--[[
 	self:SetRegrowthForType("kyno_mushstump_natural", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_mushstump_natural", function()
         return not (_worldstate.isday) and TUNING.KYNO_MUSHSTUMP_REGROWTH_TIME_MULT or 0
     end)
@@ -70,6 +67,7 @@ AddComponentPostInit("regrowthmanager", function(self)
 	self:SetRegrowthForType("kyno_mushstump_cave", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_mushstump_cave", function()
         return not (_worldstate.isday) and TUNING.KYNO_MUSHSTUMP_REGROWTH_TIME_MULT or 0
     end)
+	]]--
 	
 	self:SetRegrowthForType("kyno_fennel_ground", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_fennel_ground", function()
         return TUNING.KYNO_FENNEL_REGROWTH_TIME_MULT
@@ -99,6 +97,10 @@ AddComponentPostInit("regrowthmanager", function(self)
 	self:SetRegrowthForType("kyno_serenityisland_crate", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_serenityisland_crate", function()
         return TUNING.KYNO_CRATE_REGROWTH_TIME_MULT
     end)
+
+	self:SetRegrowthForType("kyno_meadowisland_crate", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_meadowisland_crate", function()
+        return TUNING.KYNO_ISLANDCRATE_REGROWTH_TIME_MULT
+    end)
 	]]--
 	
 	self:SetRegrowthForType("kyno_watery_crate", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_watery_crate", function()
@@ -106,18 +108,14 @@ AddComponentPostInit("regrowthmanager", function(self)
     end)
 	
 	--[[
-	self:SetRegrowthForType("kyno_meadowisland_crate", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_meadowisland_crate", function()
-        return TUNING.KYNO_ISLANDCRATE_REGROWTH_TIME_MULT
-    end)
-	]]--
-	
 	self:SetRegrowthForType("kyno_wildwheat", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_wildwheat", function()
         return TUNING.KYNO_WILDWHEAT_REGROWTH_TIME_MULT
     end)
-	
+
 	self:SetRegrowthForType("kyno_spotbush", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_spotbush", function()
         return TUNING.KYNO_SPOTBUSH_REGROWTH_TIME_MULT
     end)
+	]]--
 	
 	self:SetRegrowthForType("kyno_ocean_wreck", TUNING.KYNO_PLANT_REGROWTH_TIME, "kyno_ocean_wreck", function()
         return TUNING.KYNO_OCEAN_WRECK_REGROWTH_TIME_MULT

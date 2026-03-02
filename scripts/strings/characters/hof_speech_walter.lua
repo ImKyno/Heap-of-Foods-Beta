@@ -301,6 +301,7 @@ WALTER.DESCRIBE.DUCKYOUGLERMZ = "Smelly."
 
 WALTER.DESCRIBE.KYNO_ALOE = "Low cost medicine."
 WALTER.DESCRIBE.KYNO_ALOE_COOKED = "I cooked away some of the medication."
+WALTER.DESCRIBE.KYNO_ALOE_DRIED = "Looks edible enough."
 WALTER.DESCRIBE.KYNO_ALOE_GROUND = "Low cost medicine."
 WALTER.DESCRIBE.KYNO_ALOE_SEEDS = "Yep, those are seeds!"
 WALTER.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Yep, those are seeds!"
@@ -557,6 +558,7 @@ WALTER.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Are there any bugs on it?"
 WALTER.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Are there any bugs on it?"
 
 WALTER.DESCRIBE.KYNO_SUGARTREE_PETALS = "Are there any bugs on it?"
+WALTER.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Some dried flowers."
 
 WALTER.DESCRIBE.KYNO_PEBBLECRAB = "A crab shaped like a rock!"
 

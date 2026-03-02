@@ -301,6 +301,7 @@ WAXWELL.DESCRIBE.DUCKYOUGLERMZ = "Por que isso existe?"
 
 WAXWELL.DESCRIBE.KYNO_ALOE = "Devo comê-la."
 WAXWELL.DESCRIBE.KYNO_ALOE_COOKED = "Devo comê-la."
+WAXWELL.DESCRIBE.KYNO_ALOE_DRIED = "É uma melhora, suponho."
 WAXWELL.DESCRIBE.KYNO_ALOE_GROUND = "Devo comê-la."
 WAXWELL.DESCRIBE.KYNO_ALOE_SEEDS = "Tal trabalho é inferior a mim."
 WAXWELL.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Tal trabalho é inferior a mim."
@@ -557,6 +558,7 @@ WAXWELL.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Sinto um impulso irracional de pisar n
 WAXWELL.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Sinto um impulso irracional de pisar nela."
 
 WAXWELL.DESCRIBE.KYNO_SUGARTREE_PETALS = "Sinto um impulso irracional de pisar nela."
+WAXWELL.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Melhor agora."
 
 WAXWELL.DESCRIBE.KYNO_PEBBLECRAB = "Não pode se esconder de mim."
 

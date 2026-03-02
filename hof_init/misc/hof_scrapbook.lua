@@ -1971,11 +1971,29 @@ local HOF_SCRAPBOOK_FOODS =
 		perishable     = 4800,
 		stacksize      = 40,
 		burnable       = true,
-		foodtype       = "GOODIES",
+		foodtype       = "VEGGIE",
 		bank           = "kyno_serenityisland_bud",
 		build          = "kyno_serenityisland_bud",
 		anim           = "idle",
-		deps           = {"kyno_serenityisland_shop", "kyno_sugartree_flower", "kyno_sugar", "spoiled_food"},
+		deps           = {"meatrack", "meatrack_hermit", "kyno_serenityisland_shop", "kyno_sugartree_flower", "kyno_sugartree_petals_dried", "kyno_sugar", "spoiled_food"},
+	},
+	
+	kyno_sugartree_petals_dried =
+	{
+		name           = "kyno_sugartree_petals_dried",
+		type           = "food",
+		tex            = "kyno_sugartree_petals_dried.tex",
+		prefab         = "kyno_sugartree_petals_dried",
+		healthvalue    = 0,
+		hungervalue    = 0,
+		sanityvalue    = 5,
+		stacksize      = 40,
+		burnable       = true,
+		foodtype       = "VEGGIE",
+		bank           = "kyno_meatrack_sweetflower",
+		build          = "kyno_meatrack_sweetflower",
+		anim           = "kyno_sugartree_petals_idle",
+		deps           = {"kyno_sugartree_petals", "meatrack", "meatrack_hermit"},
 	},
 	
 	kyno_sugarflywings =
@@ -3162,8 +3180,8 @@ local HOF_SCRAPBOOK_FOODS =
 		anim           = "kyno_aloe",
 		animoffsety    = 10,
 		animoffsetbgy  = -70,
-		deps           = {"kyno_aloe_ground", "kyno_aloe_cooked", "farm_plant_kyno_aloe", "kyno_aloe_oversized", "kyno_aloe_seeds", 
-		"seeds", "spoiled_food"},
+		deps           = {"meatrack", "meatrack_hermit", "kyno_aloe_ground", "kyno_aloe_cooked", "kyno_aloe_dried", "farm_plant_kyno_aloe", "kyno_aloe_oversized", 
+		"kyno_aloe_seeds", "seeds", "spoiled_food"},
 	},
 	
 	kyno_aloe_cooked   =
@@ -3183,6 +3201,25 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_veggies",
 		anim           = "kyno_aloe_cooked",
 		deps           = {"kyno_aloe", "spoiled_food"},
+	},
+	
+	kyno_aloe_dried    =
+	{
+		name           = "kyno_aloe_dried",
+		type           = "food",
+		tex            = "kyno_aloe_dried.tex",
+		prefab         = "kyno_aloe_dried",
+		healthvalue    = 6,
+		hungervalue    = 18.75,
+		sanityvalue    = 0,
+		perishable     = 9600,
+		stacksize      = 40,
+		burnable       = true,
+		foodtype       = "VEGGIE",
+		bank           = "kyno_meatrack_aloe",
+		build          = "kyno_meatrack_aloe",
+		anim           = "kyno_aloe_idle",
+		deps           = {"kyno_aloe", "meatrack", "meatrack_hermit", "spoiled_food"},
 	},
 	
 	kyno_cucumber      =

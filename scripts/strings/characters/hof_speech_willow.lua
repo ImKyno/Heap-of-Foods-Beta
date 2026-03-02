@@ -301,6 +301,7 @@ WILLOW.DESCRIBE.DUCKYOUGLERMZ = "It stinks!"
 
 WILLOW.DESCRIBE.KYNO_ALOE = "Gross. It's all gooey inside."
 WILLOW.DESCRIBE.KYNO_ALOE_COOKED = "I put fire on it."
+WILLOW.DESCRIBE.KYNO_ALOE_DRIED = "Not burnt enough."
 WILLOW.DESCRIBE.KYNO_ALOE_GROUND = "Gross. It's all gooey inside."
 WILLOW.DESCRIBE.KYNO_ALOE_SEEDS = "Some seeds."
 WILLOW.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Some seeds."
@@ -557,6 +558,7 @@ WILLOW.DESCRIBE.KYNO_SUGARTREE_FLOWER = "I don't have time to waste on flowers."
 WILLOW.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "I don't have time to waste on flowers."
 
 WILLOW.DESCRIBE.KYNO_SUGARTREE_PETALS = "I don't have time to waste on flowers."
+WILLOW.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Needs more fire."
 
 WILLOW.DESCRIBE.KYNO_PEBBLECRAB = "Don't worry, I won't kick you."
 

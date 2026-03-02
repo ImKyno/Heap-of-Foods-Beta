@@ -303,6 +303,7 @@ WURT.DESCRIBE.DUCKYOUGLERMZ = "Glurgh... cheira mal!!"
 
 WURT.DESCRIBE.KYNO_ALOE = "Planta verde, florp."
 WURT.DESCRIBE.KYNO_ALOE_COOKED = "Planta tostada!"
+WURT.DESCRIBE.KYNO_ALOE_DRIED = "Planta seca, florp."
 WURT.DESCRIBE.KYNO_ALOE_GROUND = "Planta verde, florp."
 WURT.DESCRIBE.KYNO_ALOE_SEEDS = "Faça mais lanchinhos saborosos!"
 WURT.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Faça mais lanchinhos saborosos!"
@@ -559,6 +560,7 @@ WURT.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Glurgh, planta tão feia."
 WURT.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Glurgh, planta tão feia."
 
 WURT.DESCRIBE.KYNO_SUGARTREE_PETALS = "Glurgh, planta tão feia."
+WURT.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Ha ha! Toma essa, flor!"
 
 WURT.DESCRIBE.KYNO_PEBBLECRAB = "Aww, tão fofo, florp!"
 

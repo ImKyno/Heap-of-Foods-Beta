@@ -301,6 +301,7 @@ WOODIE.DESCRIBE.DUCKYOUGLERMZ = "Ugh... Jakie to okropne pachnie!"
 
 WOODIE.DESCRIBE.KYNO_ALOE = "Słyszałem, że aloes jest dobry dla zdrowia."
 WOODIE.DESCRIBE.KYNO_ALOE_COOKED = "Chyba mogę to zjeść."
+WOODIE.DESCRIBE.KYNO_ALOE_DRIED = "Wysuszone."
 WOODIE.DESCRIBE.KYNO_ALOE_GROUND = "Słyszałem, że aloes jest zdrowy."
 WOODIE.DESCRIBE.KYNO_ALOE_SEEDS = "Maleńkie nasiona."
 WOODIE.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Maleńkie nasiona."
@@ -557,6 +558,7 @@ WOODIE.DESCRIBE.KYNO_SUGARTREE_FLOWER = "To urocze."
 WOODIE.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "To urocze."
 
 WOODIE.DESCRIBE.KYNO_SUGARTREE_PETALS = "To urocze."
+WOODIE.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Już nie takie urocze, co?"
 
 WOODIE.DESCRIBE.KYNO_PEBBLECRAB = "Nie widzę powodu, żeby nie zostawić go w spokoju."
 

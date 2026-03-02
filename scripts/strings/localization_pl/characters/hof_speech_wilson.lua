@@ -301,6 +301,7 @@ WILSON.DESCRIBE.DUCKYOUGLERMZ = "To bardzo źle pachnie, bleh."
 
 WILSON.DESCRIBE.KYNO_ALOE = "Naukowa i zdrowa."
 WILSON.DESCRIBE.KYNO_ALOE_COOKED = "Udało mi się go upiec!"
+WILSON.DESCRIBE.KYNO_ALOE_DRIED = "Wysuszyłem to!"
 WILSON.DESCRIBE.KYNO_ALOE_GROUND = "Naukowy i pożywny."
 WILSON.DESCRIBE.KYNO_ALOE_SEEDS = "To nasiono."
 WILSON.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "To nasiono."
@@ -557,6 +558,7 @@ WILSON.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Jest ładny. I pachnie cukrem."
 WILSON.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Jest ładny. I pachnie cukrem."
 
 WILSON.DESCRIBE.KYNO_SUGARTREE_PETALS = "Jest ładny. I pachnie cukrem."
+WILSON.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Kilka ładnych suszonych kwiatów."
 
 WILSON.DESCRIBE.KYNO_PEBBLECRAB = "To kamień... żywy!"
 

@@ -14,19 +14,11 @@ local assets =
 	Asset("ANIM", "anim/kyno_meatrack_moon_froglegs.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_jellyfish.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_fishmeat.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_aloe.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
-}
-
-local prefabs = 
-{	
-	"kyno_humanmeat",
-	"kyno_crabmeat",
-	"kyno_crabkingmeat",
-	"kyno_moon_froglegs",
-	"kyno_jellyfish",
 }
 
 local function cap_fn(bank, build, anim, cap_name)
@@ -126,7 +118,7 @@ local function meat_fn(bank, build, anim, meat_name)
     return inst
 end
 
-local function veggie_fn(bank, build, anim, veggie_name)
+local function veggie_fn(bank, build, anim, veggie_name, perishable)
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
@@ -163,63 +155,23 @@ local function veggie_fn(bank, build, anim, veggie_name)
 	inst:AddComponent("edible")
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
-    inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
-	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
+	if perishable then
+		inst:AddComponent("perishable")
+		inst.components.perishable:SetPerishTime(TUNING.PERISH_PRESERVED)
+		inst.components.perishable:StartPerishing()
+		inst.components.perishable.onperishreplacement = "spoiled_food"
+	end
 	
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 
 	return inst
 end
-
-local function fn_pigskin()
-	local inst = CreateEntity()
-
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddNetwork()
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst)
-
-	inst.AnimState:SetBank("kyno_meatrack_pigskin")
-	inst.AnimState:SetBuild("kyno_meatrack_pigskin")
-	inst.AnimState:PlayAnimation("pigskin_idle")
-	
-	inst:AddTag("dried_pigskin")
-
-	inst.entity:SetPristine()
-
-	if not TheWorld.ismastersim then
-		return inst
-	end
-	
-	inst:AddComponent("inspectable")
-	
-	inst:AddComponent("tradable")
-	inst.components.tradable.goldvalue = 10
-
-    inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_pigskin_dried"
-	
-    inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
-	inst:AddComponent("edible")
-	inst.components.edible.foodtype = FOODTYPE.HORRIBLE
-	
-	MakeSmallBurnable(inst)
-    MakeSmallPropagator(inst)
-    MakeHauntableLaunchAndIgnite(inst)
-
-	return inst
-end
 	
 local function fn_red()
 	local inst = cap_fn("kyno_meatrack_red_cap", "kyno_meatrack_red_cap", "red_cap_idle", "kyno_red_cap_dried")
+	
+	inst.pickupsound = "vegetation_firm"
 
 	if not TheWorld.ismastersim then
         return inst
@@ -236,6 +188,8 @@ end
 
 local function fn_green()
 	local inst = cap_fn("kyno_meatrack_green_cap", "kyno_meatrack_green_cap", "green_cap_idle", "kyno_green_cap_dried")
+	
+	inst.pickupsound = "vegetation_firm"
 
 	if not TheWorld.ismastersim then
         return inst
@@ -252,6 +206,8 @@ end
 
 local function fn_blue()
 	local inst = cap_fn("kyno_meatrack_blue_cap", "kyno_meatrack_blue_cap", "blue_cap_idle", "kyno_blue_cap_dried")
+	
+	inst.pickupsound = "vegetation_firm"
 
 	if not TheWorld.ismastersim then
         return inst
@@ -268,6 +224,8 @@ end
 
 local function fn_moon()
 	local inst = cap_fn("kyno_meatrack_moon_cap", "kyno_meatrack_moon_cap", "moon_cap_idle", "kyno_moon_cap_dried")
+	
+	inst.pickupsound = "vegetation_firm"
 
 	if not TheWorld.ismastersim then
         return inst
@@ -329,7 +287,9 @@ local function fn_plantmeat()
 end 
 
 local function fn_seaweeds()
-	local inst = veggie_fn("kyno_meatrack_seaweeds", "kyno_meatrack_seaweeds", "seaweeds_idle", "kyno_seaweeds_dried")
+	local inst = veggie_fn("kyno_meatrack_seaweeds", "kyno_meatrack_seaweeds", "seaweeds_idle", "kyno_seaweeds_dried", true)
+	
+	inst.pickupsound = "vegetation_firm"
 
 	inst:AddComponent("driedsalticon")
 	inst.components.driedsalticon:SetCollectsOnDried(true)
@@ -477,16 +437,54 @@ local function fn_fishmeat()
 	return inst
 end
 
-return Prefab("kyno_red_cap_dried", fn_red, assets, prefabs),
-Prefab("kyno_green_cap_dried", fn_green, assets, prefabs),
-Prefab("kyno_blue_cap_dried", fn_blue, assets, prefabs),
-Prefab("kyno_moon_cap_dried", fn_moon, assets, prefabs),
-Prefab("kyno_plantmeat_dried", fn_plantmeat, assets, prefabs),
-Prefab("kyno_humanmeat_dried", fn_humanmeat, assets, prefabs),
-Prefab("kyno_seaweeds_dried", fn_seaweeds, assets, prefabs),
-Prefab("kyno_pigskin_dried", fn_pigskin, assets, prefabs),
-Prefab("kyno_crabmeat_dried", fn_crabmeat, assets, prefabs),
-Prefab("kyno_crabkingmeat_dried", fn_crabkingmeat, assets, prefabs),
-Prefab("kyno_jellyfish_dried", fn_jellyfish, assets, prefabs),
-Prefab("kyno_fishmeat_small_dried", fn_fishmeat_small, assets, prefabs),
-Prefab("kyno_fishmeat_dried", fn_fishmeat, assets, prefabs)
+local function fn_aloe()
+	local inst = veggie_fn("kyno_meatrack_aloe", "kyno_meatrack_aloe", "kyno_aloe_idle", "kyno_aloe_dried", true)
+	
+	inst.pickupsound = "vegetation_firm"
+	
+	if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst.components.edible.healthvalue = TUNING.KYNO_ALOE_DRIED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_ALOE_DRIED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_ALOE_DRIED_SANITY
+	
+	return inst
+end
+
+local function fn_sugartree_petals()
+	local inst = veggie_fn("kyno_meatrack_sweetflower", "kyno_meatrack_sweetflower", "kyno_sugartree_petals_idle", "kyno_sugartree_petals_dried", false)
+	
+	inst:AddTag("cattoy")
+	
+	inst.pickupsound = "vegetation_grassy"
+	
+	if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL
+	
+	inst.components.edible.healthvalue = TUNING.KYNO_SUGARFLOWER_DRIED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_SUGARFLOWER_DRIED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_SUGARFLOWER_DRIED_SANITY
+	
+	return inst
+end
+
+return Prefab("kyno_red_cap_dried", fn_red, assets),
+Prefab("kyno_green_cap_dried", fn_green, assets),
+Prefab("kyno_blue_cap_dried", fn_blue, assets),
+Prefab("kyno_moon_cap_dried", fn_moon, assets),
+Prefab("kyno_plantmeat_dried", fn_plantmeat, assets),
+Prefab("kyno_humanmeat_dried", fn_humanmeat, assets),
+Prefab("kyno_seaweeds_dried", fn_seaweeds, assets),
+Prefab("kyno_crabmeat_dried", fn_crabmeat, assets),
+Prefab("kyno_crabkingmeat_dried", fn_crabkingmeat, assets),
+Prefab("kyno_jellyfish_dried", fn_jellyfish, assets),
+Prefab("kyno_fishmeat_small_dried", fn_fishmeat_small, assets),
+Prefab("kyno_fishmeat_dried", fn_fishmeat, assets),
+Prefab("kyno_aloe_dried", fn_aloe, assets),
+Prefab("kyno_sugartree_petals_dried", fn_sugartree_petals, assets)

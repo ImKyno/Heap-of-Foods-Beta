@@ -301,6 +301,7 @@ WILLOW.DESCRIBE.DUCKYOUGLERMZ = "Fede!"
 
 WILLOW.DESCRIBE.KYNO_ALOE = "Argh. É toda gosmenta por dentro."
 WILLOW.DESCRIBE.KYNO_ALOE_COOKED = "Coloquei fogo nela."
+WILLOW.DESCRIBE.KYNO_ALOE_DRIED = "Não está queimado o suficiente."
 WILLOW.DESCRIBE.KYNO_ALOE_GROUND = "Argh. É toda gosmenta por dentro."
 WILLOW.DESCRIBE.KYNO_ALOE_SEEDS = "Algumas sementes."
 WILLOW.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Algumas sementes."
@@ -557,6 +558,7 @@ WILLOW.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Não tenho tempo a perder com flores."
 WILLOW.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Não tenho tempo a perder com flores."
 
 WILLOW.DESCRIBE.KYNO_SUGARTREE_PETALS = "Não tenho tempo a perder com flores."
+WILLOW.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Precisa de mais fogo."
 
 WILLOW.DESCRIBE.KYNO_PEBBLECRAB = "Não se preocupe, não vou chutar você."
 

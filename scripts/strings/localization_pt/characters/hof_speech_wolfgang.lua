@@ -301,6 +301,7 @@ WOLFGANG.DESCRIBE.DUCKYOUGLERMZ = "Comida de cheiro ruim!"
 
 WOLFGANG.DESCRIBE.KYNO_ALOE = "Wolfgang come tudo."
 WOLFGANG.DESCRIBE.KYNO_ALOE_COOKED = "Isso deixa Wolfgang grande e forte."
+WOLFGANG.DESCRIBE.KYNO_ALOE_DRIED = "Pequeno aloe está seco o bastante."
 WOLFGANG.DESCRIBE.KYNO_ALOE_GROUND = "Wolfgang come tudo."
 WOLFGANG.DESCRIBE.KYNO_ALOE_SEEDS = "Semente é muito pequena."
 WOLFGANG.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Semente é muito pequena."
@@ -557,6 +558,7 @@ WOLFGANG.DESCRIBE.KYNO_SUGARTREE_FLOWER = "São muito bonitas."
 WOLFGANG.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "São muito bonitas."
 
 WOLFGANG.DESCRIBE.KYNO_SUGARTREE_PETALS = "São muito bonitas."
+WOLFGANG.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Não são tão bonitas agora."
 
 WOLFGANG.DESCRIBE.KYNO_PEBBLECRAB = "Olá, pequeno pinçador!"
 

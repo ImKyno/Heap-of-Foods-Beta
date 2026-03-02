@@ -112,7 +112,6 @@ local function fn()
 	MakeHauntableIgnite(inst)
 
 	MakeWaxablePlant(inst)
-	AddToRegrowthManager(inst)
 
 	return inst
 end

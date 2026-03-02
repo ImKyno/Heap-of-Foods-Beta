@@ -301,6 +301,7 @@ WARLY.DESCRIBE.DUCKYOUGLERMZ = "Mon dieu!"
 
 WARLY.DESCRIBE.KYNO_ALOE = "Talvez eu coloque isso em alguma bebida."
 WARLY.DESCRIBE.KYNO_ALOE_COOKED = "Posso colocar isso em alguma receita."
+WARLY.DESCRIBE.KYNO_ALOE_DRIED = "Sempre dá pra cozinhar algo com isso!"
 WARLY.DESCRIBE.KYNO_ALOE_GROUND = "Talvez eu coloque isso em alguma bebida."
 WARLY.DESCRIBE.KYNO_ALOE_SEEDS = "Futuros ingredientes, apenas esperando para crescer!"
 WARLY.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Futuros ingredientes, apenas esperando para crescer!"
@@ -553,10 +554,11 @@ WARLY.DESCRIBE.KYNO_SUGARTREE_RUINED =
 
 WARLY.DESCRIBE.KYNO_SUGARTREE_BUD = "Mais útil como árvore do que nas minhas receitas."
 
-WARLY.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Charmant. Será que posso usar isso em uma das minhas receitas?"
-WARLY.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Charmant. Será que posso usar isso em uma das minhas receitas?"
+WARLY.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Charmosa. Será que posso usar isso em uma das minhas receitas?"
+WARLY.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Charmosa. Será que posso usar isso em uma das minhas receitas?"
 
-WARLY.DESCRIBE.KYNO_SUGARTREE_PETALS = "Charmant. Será que posso usar isso em uma das minhas receitas?"
+WARLY.DESCRIBE.KYNO_SUGARTREE_PETALS = "Charmosa. Será que posso usar isso em uma das minhas receitas?"
+WARLY.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Tão charmosa."
 
 WARLY.DESCRIBE.KYNO_PEBBLECRAB = "Um bom caranguejo para meus pratos!"
 

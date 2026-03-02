@@ -301,6 +301,7 @@ WALTER.DESCRIBE.DUCKYOUGLERMZ = "Fedido."
 
 WALTER.DESCRIBE.KYNO_ALOE = "Remédio de baixo custo."
 WALTER.DESCRIBE.KYNO_ALOE_COOKED = "Cozinhei e perdi um pouco do efeito medicinal."
+WALTER.DESCRIBE.KYNO_ALOE_DRIED = "Parece comestível o bastante."
 WALTER.DESCRIBE.KYNO_ALOE_GROUND = "Remédio de baixo custo."
 WALTER.DESCRIBE.KYNO_ALOE_SEEDS = "Sim, são sementes!"
 WALTER.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Sim, são sementes!"
@@ -557,6 +558,7 @@ WALTER.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Há algum inseto nela?"
 WALTER.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Há algum inseto nela?"
 
 WALTER.DESCRIBE.KYNO_SUGARTREE_PETALS = "Há algum inseto nela?"
+WALTER.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Algumas flores secas."
 
 WALTER.DESCRIBE.KYNO_PEBBLECRAB = "Um caranguejo em forma de pedra!"
 

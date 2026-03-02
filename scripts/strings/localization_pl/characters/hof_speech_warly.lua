@@ -301,6 +301,7 @@ WARLY.DESCRIBE.DUCKYOUGLERMZ = "Mon dieu!"
 
 WARLY.DESCRIBE.KYNO_ALOE = "Może jest napój, do którego pasuje."
 WARLY.DESCRIBE.KYNO_ALOE_COOKED = "Mogę to dodać do czegoś."
+WARLY.DESCRIBE.KYNO_ALOE_DRIED = "Zawsze można coś z tym ugotować!"
 WARLY.DESCRIBE.KYNO_ALOE_GROUND = "Może dodać go do jakiegoś napoju?"
 WARLY.DESCRIBE.KYNO_ALOE_SEEDS = "Przyszłe składniki, czekające na wzrost!"
 WARLY.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Przyszłe składniki, czekające na wzrost!"
@@ -557,6 +558,7 @@ WARLY.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Urocze. Zastanawiam się, czy mogę to u
 WARLY.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Urocze. Zastanawiam się, czy mogę to użyć w moich przepisach."
 
 WARLY.DESCRIBE.KYNO_SUGARTREE_PETALS = "Urocze. Zastanawiam się, czy mogę to użyć w moich przepisach."
+WARLY.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Takie urocze."
 
 WARLY.DESCRIBE.KYNO_PEBBLECRAB = "Świetny krab do moich dań!"
 

@@ -301,6 +301,7 @@ WATHGRITHR.DESCRIBE.DUCKYOUGLERMZ = "Que refeição profana!"
 
 WATHGRITHR.DESCRIBE.KYNO_ALOE = "Bah! Não há carne aqui!"
 WATHGRITHR.DESCRIBE.KYNO_ALOE_COOKED = "Falta carne!"
+WATHGRITHR.DESCRIBE.KYNO_ALOE_DRIED = "Bah! Não é bom o bastante, falta carne!"
 WATHGRITHR.DESCRIBE.KYNO_ALOE_GROUND = "Bah! Não há carne aqui!"
 WATHGRITHR.DESCRIBE.KYNO_ALOE_SEEDS = "Pequenos pedaços da natureza."
 WATHGRITHR.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Pequenos pedaços da natureza."
@@ -557,6 +558,7 @@ WATHGRITHR.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Uma flor de açúcar de Freya."
 WATHGRITHR.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Uma flor de açúcar de Freya."
 
 WATHGRITHR.DESCRIBE.KYNO_SUGARTREE_PETALS = "Uma flor de açúcar de Freya."
+WATHGRITHR.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Está ainda mais bela agora!"
 
 WATHGRITHR.DESCRIBE.KYNO_PEBBLECRAB = "Não podes se esconder de mim!"
 

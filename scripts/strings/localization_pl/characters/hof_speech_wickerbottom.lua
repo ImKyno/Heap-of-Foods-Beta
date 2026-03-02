@@ -301,6 +301,7 @@ WICKERBOTTOM.DESCRIBE.DUCKYOUGLERMZ = "To po prostu..."
 
 WICKERBOTTOM.DESCRIBE.KYNO_ALOE = "Aloes. Roślina o wielu zastosowaniach."
 WICKERBOTTOM.DESCRIBE.KYNO_ALOE_COOKED = "Znany jest ze swoich właściwości przeczyszczających."
+WICKERBOTTOM.DESCRIBE.KYNO_ALOE_DRIED = "Ach! Wysuszony sukulent, gotowy do spożycia."
 WICKERBOTTOM.DESCRIBE.KYNO_ALOE_GROUND = "Aloes. Roślina o wielu zastosowaniach."
 WICKERBOTTOM.DESCRIBE.KYNO_ALOE_SEEDS = "Nie zacznie rosnąć, dopóki nie zostanie zasadzone, drogi."
 WICKERBOTTOM.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Nie zacznie rosnąć, dopóki nie zostanie zasadzone, drogi."
@@ -557,6 +558,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_SUGARTREE_FLOWER = "To dziki kwiat, nie znam tego gat
 WICKERBOTTOM.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "To dziki kwiat, nie znam tego gatunku."
 
 WICKERBOTTOM.DESCRIBE.KYNO_SUGARTREE_PETALS = "To dziki kwiat, nie znam tego gatunku."
+WICKERBOTTOM.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Suszony dziki kwiat."
 
 WICKERBOTTOM.DESCRIBE.KYNO_PEBBLECRAB = "Chciałabym przyjrzeć się tej skorupie bliżej."
 

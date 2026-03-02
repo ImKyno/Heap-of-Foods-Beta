@@ -301,6 +301,7 @@ WARLY.DESCRIBE.DUCKYOUGLERMZ = "Mon dieu!"
 
 WARLY.DESCRIBE.KYNO_ALOE = "Perhaps there's a drink I put this into."
 WARLY.DESCRIBE.KYNO_ALOE_COOKED = "I can add this to something."
+WARLY.DESCRIBE.KYNO_ALOE_DRIED = "There's always something to cook with this!"
 WARLY.DESCRIBE.KYNO_ALOE_GROUND = "Perhaps there's a drink I put this into."
 WARLY.DESCRIBE.KYNO_ALOE_SEEDS = "Future ingredients, just waiting to be grown!"
 WARLY.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Future ingredients, just waiting to be grown!"
@@ -557,6 +558,7 @@ WARLY.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Charmant. I wonder if I can use that in 
 WARLY.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Charmant. I wonder if I can use that in one of my recipes."
 
 WARLY.DESCRIBE.KYNO_SUGARTREE_PETALS = "Charmant. I wonder if I can use that in one of my recipes."
+WARLY.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "So charmant."
 
 WARLY.DESCRIBE.KYNO_PEBBLECRAB = "A fine crab for my dishes!"
 

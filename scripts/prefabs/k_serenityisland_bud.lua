@@ -3,6 +3,8 @@ local assets =
 	Asset("ANIM", "anim/kyno_serenityisland_bud.zip"),
 	Asset("ANIM", "anim/kyno_serenityisland_sapling.zip"),
 	
+	Asset("ANIM", "anim/kyno_meatrack_sweetflower.zip"),
+	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -14,6 +16,7 @@ local prefabs =
 	"kyno_sugartree_flower",
 	"kyno_sugartree_flower_planted",
 	"kyno_sugartree_petals",
+	"kyno_sugartree_petals_dried",
 	"kyno_sugartree_sapling",
 }
 
@@ -155,6 +158,10 @@ local function budfn()
 	inst:AddComponent("tradable")
 	inst:AddComponent("lootdropper")
 	
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_sugartree_bud"
+	
 	inst:AddComponent("fuel")
 	inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL
 
@@ -163,9 +170,6 @@ local function budfn()
 	
 	inst:AddComponent("winter_treeseed")
 	inst.components.winter_treeseed:SetTree("kyno_winter_sugartree")
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	
 	inst:AddComponent("deployable")
 	inst.components.deployable:SetDeployMode(DEPLOYMODE.PLANT)
@@ -239,12 +243,17 @@ local function petalsfn()
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
+	inst.AnimState:SetScale(1.2, 1.2, 1.2)
+
 	inst.AnimState:SetBank("kyno_serenityisland_bud")
 	inst.AnimState:SetBuild("kyno_serenityisland_bud")
 	inst.AnimState:PlayAnimation("idle", false)
 	
-	inst:AddTag("show_spoilage")
 	inst:AddTag("cattoy")
+	inst:AddTag("dryable")
+	inst:AddTag("show_spoilage")
+	
+	inst.pickupsound = "vegetation_grassy"
 
 	inst.entity:SetPristine()
 
@@ -256,9 +265,16 @@ local function petalsfn()
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	inst:AddComponent("lootdropper")
+	
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_sugartree_petals"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL
 	
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
@@ -269,10 +285,13 @@ local function petalsfn()
 	inst.components.edible.healthvalue = TUNING.KYNO_SUGARFLOWER_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_SUGARFLOWER_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_SUGARFLOWER_SANITY
-	inst.components.edible.foodtype = FOODTYPE.GOODIES
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.edible.foodtype = FOODTYPE.VEGGIE
+	
+	inst:AddComponent("dryable")
+	inst.components.dryable:SetProduct("kyno_sugartree_petals_dried")
+	inst.components.dryable:SetBuildFile("kyno_meatrack_sweetflower")
+	inst.components.dryable:SetDriedBuildFile("kyno_meatrack_sweetflower")
+	inst.components.dryable:SetDryTime(TUNING.DRY_FAST)
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

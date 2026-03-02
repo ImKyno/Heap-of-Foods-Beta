@@ -301,6 +301,7 @@ WANDA.DESCRIBE.DUCKYOUGLERMZ = "Não tenho palavras para isso."
 
 WANDA.DESCRIBE.KYNO_ALOE = "Uma planta medicinal."
 WANDA.DESCRIBE.KYNO_ALOE_COOKED = "Sem mais efeito medicinal."
+WANDA.DESCRIBE.KYNO_ALOE_DRIED = "Ainda é comestível."
 WANDA.DESCRIBE.KYNO_ALOE_GROUND = "Uma planta medicinal."
 WANDA.DESCRIBE.KYNO_ALOE_SEEDS = "Apenas sementes."
 WANDA.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Apenas sementes."
@@ -557,6 +558,7 @@ WANDA.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Tenho coisas mais importantes para fazer
 WANDA.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Tenho coisas mais importantes para fazer do que colher flores."
 
 WANDA.DESCRIBE.KYNO_SUGARTREE_PETALS = "Tenho coisas mais importantes para fazer do que colher flores."
+WANDA.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Leva um tempo para secá-las."
 
 WANDA.DESCRIBE.KYNO_PEBBLECRAB = "É um pequeno caranguejo."
 

@@ -162,7 +162,6 @@ local function grass(name, stage)
 		MakeHauntableIgnite(inst)
 
 		MakeWaxablePlant(inst)
-		AddToRegrowthManager(inst)
 		
 		inst.OnPreLoad = OnPreLoad
 

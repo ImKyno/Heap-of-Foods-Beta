@@ -15,7 +15,7 @@ AddSimPostInit(function()
 end)
 
 local function AddNewVeggie(name, veggie_health, veggie_hunger, veggie_sanity ,veggie_perish, veggie_cooked_health,
-veggie_cooked_hunger, veggie_cooked_sanity, veggie_cooked_perish, chance)
+veggie_cooked_hunger, veggie_cooked_sanity, veggie_cooked_perish, chance, dryable, dryable_product, dryable_raw_build, dryable_dried_build)
     KYNO_VEGGIES[name]        =
 	{
         health                = veggie_health,
@@ -31,6 +31,10 @@ veggie_cooked_hunger, veggie_cooked_sanity, veggie_cooked_perish, chance)
         cooked_float_settings = {"small", 0.2, 1},
 
         seed_weight           = chance,
+		can_dry               = dryable,
+		dry_product           = dryable_product,
+		dry_raw_build         = dryable_raw_build,
+		dry_dried_build       = dryable_dried_build,
     }
 end
 
@@ -44,7 +48,11 @@ AddNewVeggie("kyno_aloe",
 	TUNING.KYNO_ALOE_COOKED_HUNGER,
 	TUNING.KYNO_ALOE_COOKED_SANITY,
 	TUNING.PERISH_FAST,
-	TUNING.SEED_CHANCE_RARE
+	TUNING.SEED_CHANCE_RARE,
+	true,
+	"kyno_aloe_dried",
+	"kyno_meatrack_aloe",
+	"kyno_meatrack_aloe"
 )
 
 AddNewVeggie("kyno_fennel",
@@ -56,7 +64,11 @@ AddNewVeggie("kyno_fennel",
 	TUNING.KYNO_FENNEL_COOKED_HUNGER,
 	TUNING.KYNO_FENNEL_COOKED_SANITY,
 	TUNING.PERISH_FAST,
-	TUNING.SEED_CHANCE_RARE
+	TUNING.SEED_CHANCE_RARE,
+	false,
+	nil,
+	nil,
+	nil
 )
 
 AddNewVeggie("kyno_parznip",
@@ -68,7 +80,11 @@ AddNewVeggie("kyno_parznip",
 	TUNING.KYNO_PARZNIP_COOKED_HUNGER,
 	TUNING.KYNO_PARZNIP_COOKED_SANITY,
 	TUNING.PERISH_FAST,
-	TUNING.SEED_CHANCE_UNCOMMON
+	TUNING.SEED_CHANCE_UNCOMMON,
+	false,
+	nil,
+	nil,
+	nil
 )
 
 AddNewVeggie("kyno_radish",
@@ -81,7 +97,11 @@ AddNewVeggie("kyno_radish",
 	TUNING.KYNO_RADISH_COOKED_HUNGER,
 	TUNING.KYNO_RADISH_COOOKED_SANITY,
 	TUNING.PERISH_FAST,
-	TUNING.SEED_CHANCE_COMMON
+	TUNING.SEED_CHANCE_COMMON,
+	false,
+	nil,
+	nil,
+	nil
 )
 
 AddNewVeggie("kyno_rice",
@@ -93,7 +113,11 @@ AddNewVeggie("kyno_rice",
 	TUNING.KYNO_RICE_COOKED_HUNGER,
 	TUNING.KYNO_RICE_COOKED_SANITY,
 	TUNING.PERISH_MED,
-	TUNING.SEED_CHANCE_UNCOMMON
+	TUNING.SEED_CHANCE_UNCOMMON,
+	false,
+	nil,
+	nil,
+	nil
 )
 
 AddNewVeggie("kyno_cucumber",
@@ -105,7 +129,11 @@ AddNewVeggie("kyno_cucumber",
 	TUNING.KYNO_CUCUMBER_COOKED_HUNGER,
 	TUNING.KYNO_CUCUMBER_COOKED_SANITY,
 	TUNING.PERISH_FAST,
-	TUNING.SEED_CHANCE_COMMON
+	TUNING.SEED_CHANCE_COMMON,
+	false,
+	nil,
+	nil,
+	nil
 )
 
 AddNewVeggie("kyno_sweetpotato",
@@ -117,7 +145,11 @@ AddNewVeggie("kyno_sweetpotato",
 	TUNING.KYNO_SWEETPOTATO_COOKED_HUNGER,
 	TUNING.KYNO_SWEETPOTATO_COOKED_SANITY,
 	TUNING.PERISH_FAST,
-	TUNING.SEED_CHANCE_UNCOMMON
+	TUNING.SEED_CHANCE_UNCOMMON,
+	false,
+	nil,
+	nil,
+	nil
 )
 
 AddNewVeggie("kyno_turnip",
@@ -129,7 +161,11 @@ AddNewVeggie("kyno_turnip",
 	TUNING.KYNO_TURNIP_COOKED_HUNGER,
 	TUNING.KYNO_TURNIP_COOKED_SANITY,
 	TUNING.PERISH_FAST,
-	TUNING.SEED_CHANCE_UNCOMMON
+	TUNING.SEED_CHANCE_UNCOMMON,
+	false,
+	nil,
+	nil,
+	nil
 )
 
 local PLANT_DEFS        = require("prefabs/farm_plant_defs").PLANT_DEFS

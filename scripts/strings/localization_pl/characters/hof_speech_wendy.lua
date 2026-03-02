@@ -301,6 +301,7 @@ WENDY.DESCRIBE.DUCKYOUGLERMZ = "Odrażające i okropne."
 
 WENDY.DESCRIBE.KYNO_ALOE = "Umiera, by inni mogli żyć."
 WENDY.DESCRIBE.KYNO_ALOE_COOKED = "Upieczony kaktus."
+WENDY.DESCRIBE.KYNO_ALOE_DRIED = "Tak suche jak moje życie."
 WENDY.DESCRIBE.KYNO_ALOE_GROUND = "Umiera, by inni mogli żyć."
 WENDY.DESCRIBE.KYNO_ALOE_SEEDS = "Roślina, która czeka na swoje istnienie."
 WENDY.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Roślina, która czeka na swoje istnienie."
@@ -557,6 +558,7 @@ WENDY.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Są różowate i radosne. Fuj."
 WENDY.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Są różowate i radosne. Fuj."
 
 WENDY.DESCRIBE.KYNO_SUGARTREE_PETALS = "Są różowate i radosne. Fuj."
+WENDY.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Wysuszyłam ich esencję życia."
 
 WENDY.DESCRIBE.KYNO_PEBBLECRAB = "Gdybym miała taką skorupę, nigdy bym nie wyszła."
 

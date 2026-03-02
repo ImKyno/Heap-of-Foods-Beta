@@ -20,8 +20,6 @@ local function dig_up(inst, chopper)
 	if inst:HasTag("mushroom_stump_natural") then
 		inst.components.lootdropper:SpawnLootPrefab("kyno_white_cap")
 		inst.components.lootdropper:SpawnLootPrefab("livinglog")
-		
-		TheWorld:PushEvent("beginregrowth", inst)
 	else
 		inst.components.lootdropper:DropLoot()
 	end
@@ -67,7 +65,7 @@ local function fn()
 	
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_mushroomstump.tex")
-	minimap:SetPriority(2) -- From -2
+	minimap:SetPriority(2)
 	
 	local s = .8
 	inst.AnimState:SetScale(s, s, s)
@@ -128,18 +126,11 @@ local function naturalfn()
 	if not TheWorld.ismastersim then
         return inst
     end
-
-	AddToRegrowthManager(inst)
 	
 	return inst
-end
-
-local function mushplacefn(inst)
-	local s = .8
-	inst.AnimState:SetScale(s, s, s)
 end
 
 return Prefab("kyno_mushstump", fn, assets, prefabs),
 Prefab("kyno_mushstump_natural", naturalfn, assets, prefabs),
 Prefab("kyno_mushstump_cave", naturalfn, assets, prefabs),
-MakePlacer("kyno_mushstump_placer", "kyno_mushroomstump", "kyno_mushroomstump", "idle", false, nil, nil, nil, nil, nil, mushplacefn)
+MakePlacer("kyno_mushstump_placer", "kyno_mushroomstump", "kyno_mushroomstump", "idle", false, nil, nil, .8)

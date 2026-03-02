@@ -301,6 +301,7 @@ WORTOX.DESCRIBE.DUCKYOUGLERMZ = "Fede!"
 
 WORTOX.DESCRIBE.KYNO_ALOE = "Gosmenta."
 WORTOX.DESCRIBE.KYNO_ALOE_COOKED = "Saboroso!"
+WORTOX.DESCRIBE.KYNO_ALOE_DRIED = "Um pouco menos grudento."
 WORTOX.DESCRIBE.KYNO_ALOE_GROUND = "Gosmenta."
 WORTOX.DESCRIBE.KYNO_ALOE_SEEDS = "Plante a semente e você terá alimento!"
 WORTOX.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Plante a semente e você terá alimento!"
@@ -557,6 +558,7 @@ WORTOX.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Pétalas perfumadas para colher."
 WORTOX.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Pétalas perfumadas para colher."
 
 WORTOX.DESCRIBE.KYNO_SUGARTREE_PETALS = "Pétalas perfumadas para colher."
+WORTOX.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Bem sequinhas!"
 
 WORTOX.DESCRIBE.KYNO_PEBBLECRAB = "Que criatura engraçada!"
 

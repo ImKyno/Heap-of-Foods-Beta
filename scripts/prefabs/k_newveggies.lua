@@ -16,6 +16,8 @@ local assets_veggies =
 	-- Asset("ANIM", "anim/farm_plant_kyno_sweetpotato.zip"),
 	-- Asset("ANIM", "anim/farm_plant_kyno_turnip.zip"),
 	
+	Asset("ANIM", "anim/kyno_meatrack_aloe.zip"),
+	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -267,6 +269,13 @@ local function MakeVeggie(name)
         inst.entity:AddNetwork()
 
         MakeInventoryPhysics(inst)
+		
+		local float = KYNO_VEGGIES[name].float_settings
+        if float ~= nil then
+            MakeInventoryFloatable(inst, float[1], float[2], float[3])
+        else
+            MakeInventoryFloatable(inst)
+        end
 
         inst.AnimState:SetBank("kyno_veggies")
         inst.AnimState:SetBuild("kyno_veggies")
@@ -278,18 +287,21 @@ local function MakeVeggie(name)
 		inst:AddTag("cookable")
 		inst:AddTag("saltbox_valid")
 			
-        local float = KYNO_VEGGIES[name].float_settings
-        if float ~= nil then
-            MakeInventoryFloatable(inst, float[1], float[2], float[3])
-        else
-            MakeInventoryFloatable(inst)
-        end
+        local can_dry = KYNO_VEGGIES[name].can_dry
+		if can_dry then
+			inst:AddTag("dryable")
+		end
 
         inst.entity:SetPristine()
 
         if not TheWorld.ismastersim then
             return inst
         end
+		
+		inst:AddComponent("inspectable")
+		inst:AddComponent("bait")
+        inst:AddComponent("tradable")
+        inst:AddComponent("inventoryitem")
 
         inst:AddComponent("edible")
         inst.components.edible.healthvalue = KYNO_VEGGIES[name].health or 0
@@ -302,15 +314,17 @@ local function MakeVeggie(name)
         inst.components.perishable:SetPerishTime(KYNO_VEGGIES[name].perishtime)
         inst.components.perishable:StartPerishing()
         inst.components.perishable.onperishreplacement = "spoiled_food"
+		
+		if can_dry then
+			inst:AddComponent("dryable")
+			inst.components.dryable:SetProduct(KYNO_VEGGIES[name].dry_product)
+			inst.components.dryable:SetBuildFile(KYNO_VEGGIES[name].dry_raw_build)
+			inst.components.dryable:SetDriedBuildFile(KYNO_VEGGIES[name].dry_dried_build)
+			inst.components.dryable:SetDryTime(TUNING.DRY_FAST)
+		end
 
         inst:AddComponent("stackable")
         inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-        inst:AddComponent("inspectable")
-        inst:AddComponent("inventoryitem")
-
-        inst:AddComponent("bait")
-        inst:AddComponent("tradable")
 		
 		inst:AddComponent("cookable")
 		inst.components.cookable.product = name .. "_cooked"

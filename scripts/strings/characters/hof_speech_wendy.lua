@@ -301,6 +301,7 @@ WENDY.DESCRIBE.DUCKYOUGLERMZ = "Disgusting and horrible."
 
 WENDY.DESCRIBE.KYNO_ALOE = "It dies so that others may live."
 WENDY.DESCRIBE.KYNO_ALOE_COOKED = "Cooked cactus."
+WENDY.DESCRIBE.KYNO_ALOE_DRIED = "As dried as my life."
 WENDY.DESCRIBE.KYNO_ALOE_GROUND = "It dies so that others may live."
 WENDY.DESCRIBE.KYNO_ALOE_SEEDS = "It's a plant that's waiting to be."
 WENDY.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "It's a plant that's waiting to be."
@@ -557,6 +558,7 @@ WENDY.DESCRIBE.KYNO_SUGARTREE_FLOWER = "They are pink-ish and cheery. Yuck."
 WENDY.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "They are pink-ish and cheery. Yuck."
 
 WENDY.DESCRIBE.KYNO_SUGARTREE_PETALS = "They are pink-ish and cheery. Yuck."
+WENDY.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "I've dried their life essence."
 
 WENDY.DESCRIBE.KYNO_PEBBLECRAB = "Had I such a shell, I would never emerge."
 
