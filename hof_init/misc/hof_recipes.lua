@@ -891,6 +891,9 @@ for i = 1, NUM_TEASHOP_LEVELS do
 		},
 		{"CRAFTING_STATION"}
 	)
+	SortAfter("kyno_hermitcrabtea_aloe_1", "hermitcrabtea_succulent_picked_1", "CRAFTING_STATION")
+	SortAfter("kyno_hermitcrabtea_aloe_2", "hermitcrabtea_succulent_picked_2", "CRAFTING_STATION")
+	SortAfter("kyno_hermitcrabtea_aloe_3", "hermitcrabtea_succulent_picked_3", "CRAFTING_STATION")
 	
 	AddRecipe2("kyno_hermitcrabtea_sugartree_petals_"..i, {Ingredient("messagebottleempty", 1), 
 	Ingredient("kyno_sugartree_petals_dried", num_common_petals, ModAtlas)}, TECH.LOST,
@@ -906,6 +909,9 @@ for i = 1, NUM_TEASHOP_LEVELS do
 		},
 		{"CRAFTING_STATION"}
 	)
+	SortAfter("kyno_hermitcrabtea_sugartree_petals_1", "hermitcrabtea_petals_evil_1", "CRAFTING_STATION")
+	SortAfter("kyno_hermitcrabtea_sugartree_petals_2", "hermitcrabtea_petals_evil_2", "CRAFTING_STATION")
+	SortAfter("kyno_hermitcrabtea_sugartree_petals_3", "hermitcrabtea_petals_evil_3", "CRAFTING_STATION")
 end
 
 -- Construction Plans.

@@ -216,17 +216,6 @@ function params.potatosack.itemtestfn(container, item, slot)
 	return item:HasTag("potatosack_valid") and not container.inst:HasTag("burnt")
 end
 
--- Hack for portablespicer to not accept items with "nospice" tag.
-function containers.params.portablespicer.itemtestfn(container, item, slot)
-    return item.prefab ~= "wetgoop"
-	and (
-			(slot == 1 and item:HasTag("preparedfood") and not item:HasTag("spicedfood") and not item:HasTag("nospice")) or
-			(slot == 2 and item:HasTag("spice")) or
-			(slot == nil and (item:HasTag("spice") or (item:HasTag("preparedfood") and not item:HasTag("spicedfood") and not item:HasTag("nospice"))))
-		)
-	and not container.inst:HasTag("burnt")
-end
-
 -- Food Sack.
 params.foodsack =
 {
@@ -382,11 +371,6 @@ function params.fishfarmplot.itemtestfn(container, item, slot)
 	return false
 end
 
--- Tin Fishing' Bin accepts more kinds of fish.
-function containers.params.fish_box.itemtestfn(container, item, slot)
-    return item:HasAnyTag("smalloceancreature", "fish_box_valid")
-end
-
 params.octopustraderchest =
 {
 	widget =
@@ -477,4 +461,41 @@ end
 
 function params.winter_tree_hof.itemtestfn(container, item, slot)
 	return item:HasTag("winter_ornament") and not container.inst:HasTag("burnt")
+end
+
+-- Tweaks for vanilla containers.
+-- Hack for portablespicer to not accept items with "nospice" tag.
+function containers.params.portablespicer.itemtestfn(container, item, slot)
+    return item.prefab ~= "wetgoop"
+	and (
+			(slot == 1 and item:HasTag("preparedfood") and not item:HasTag("spicedfood") and not item:HasTag("nospice")) or
+			(slot == 2 and item:HasTag("spice")) or
+			(slot == nil and (item:HasTag("spice") or (item:HasTag("preparedfood") and not item:HasTag("spicedfood") and not item:HasTag("nospice"))))
+		)
+	and not container.inst:HasTag("burnt")
+end
+
+-- Tin Fishing' Bin accepts more kinds of fish.
+function containers.params.fish_box.itemtestfn(container, item, slot)
+    return item:HasAnyTag("smalloceancreature", "fish_box_valid")
+end
+
+function containers.params.sisturn.itemtestfn(container, item, slot)
+	local owner
+    
+	if TheWorld.ismastersim then
+		owner = container.inst.components.container:GetOpeners()[1]
+	elseif ThePlayer and container:IsOpenedBy(ThePlayer) then
+		owner = ThePlayer
+	end
+
+	-- NOTE: can have no owner when loading.
+	if not owner or (owner.components.skilltreeupdater and owner.components.skilltreeupdater:IsActivated("wendy_sisturn_3")) then
+		return item.prefab == "petals" 
+		or item.prefab     == "moon_tree_blossom" 
+		or item.prefab     == "petals_evil"
+		or item.prefab     == "kyno_sugartree_petals"
+	end
+
+	return item.prefab == "petals" or item.prefab == "kyno_sugartree_petals"
 end

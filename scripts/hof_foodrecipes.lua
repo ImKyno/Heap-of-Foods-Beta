@@ -1440,7 +1440,7 @@ local kyno_foods =
 		hunger = 25,
 		sanity = 15,
 		cooktime = 1,
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CAT,
+		-- oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CAT,
 		potlevel = "low",
 		overridebuild = "kyno_foodrecipes_cookpot",
 		floater = TUNING.HOF_FLOATER,
@@ -1457,7 +1457,7 @@ local kyno_foods =
 		hunger = 15,
 		sanity = 30,
 		cooktime = 1.5,
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KAT,
+		-- oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KAT,
 		potlevel = "low",
 		overridebuild = "kyno_foodrecipes_cookpot",
 		floater = TUNING.HOF_FLOATER,
@@ -1549,7 +1549,7 @@ local kyno_foods =
 		hunger = 62.5,
 		sanity = -10,
 		cooktime = 1.2,
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOUL,
+		-- oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOUL,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_cookpot",
 		floater = TUNING.HOF_FLOATER,
@@ -2945,9 +2945,9 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_beanbugs", 1}, {"kyno_flour", 1}, {"kyno_rice", 2}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater.SoundEmitter ~= nil then
-				eater.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/death", "lazypurrit", 0.5)
+				eater.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/death", "lazypurrito", 0.5)
 			else
-				inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/death", "lazypurrit", 0.5)
+				inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/catcoon/death", "lazypurrito", 0.5)
 			end
 		end,
 	},
