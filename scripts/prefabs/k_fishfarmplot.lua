@@ -323,6 +323,31 @@ local function OnClose(inst)
 	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant")
 end
 
+local function OnGetNewOwner(fish)
+	if fish == nil or not fish:IsValid() then
+		return
+	end
+
+	if fish._owner_task ~= nil then
+		fish._owner_task:Cancel()
+	end
+
+	fish._owner_task = fish:DoPeriodicTask(1, function(inst)
+		if inst.components.inventoryitem ~= nil then
+			local owner = inst.components.inventoryitem:GetGrandOwner() or inst.components.inventoryitem.owner
+			
+			if owner ~= nil and owner:HasTag("player") then
+				if inst.components.weighable ~= nil then
+					inst.components.weighable:SetPlayerAsOwner(owner)
+				end
+
+				inst._owner_task:Cancel()
+				inst._owner_task = nil
+			end
+		end
+	end)
+end
+
 local function OnItemGet(inst, data)
 	DoFishFarmSplash(inst)
 	UpdateFishArt(inst)
@@ -338,9 +363,29 @@ end
 
 local function OnItemLose(inst, data)
 	UpdateFishArt(inst)
+
+	local VALID_OFFSPRING_SLOTS = 
+	{
+		[3] = true,
+		[4] = true,
+		[5] = true,
+		[6] = true,
+		[7] = true,
+		[8] = true,
+	}
 	
-	if data ~= nil and data.slot == 1 then
-		inst.components.fishfarmmanager:StopWorking()
+	if data then
+		if data.prev_item and VALID_OFFSPRING_SLOTS[data.slot] then
+			local item = data.prev_item
+
+			if item:HasTag("fishfarmable") then
+				OnGetNewOwner(item)
+			end
+		end
+
+		if data.slot == 1 then
+			inst.components.fishfarmmanager:StopWorking()
+		end
 	end
 
 	inst.SoundEmitter:PlaySound("dontstarve/common/fishingpole_fishcaught")
