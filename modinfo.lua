@@ -28,7 +28,7 @@ Cast your line, set your sail, and dive into the ocean! A wave of new aquatic cr
 Build yourself a Fish Hatchery to raise your own fish in the comfort of your base, explore the ocean in search of elusive creatures, take part in Ocean Hunts and find a friendly new companion.
 
 󰀌 Mod Version: 4.7-B
-󰀧 Update: Chicken Week
+󰀧 Update: Petals and Preserves
 ]],
 		zh  =
 [[
@@ -43,7 +43,7 @@ Build yourself a Fish Hatchery to raise your own fish in the comfort of your bas
 建造一座鱼苗孵化场，在你的基地里舒适地饲养属于你自己的鱼儿；探索海洋，寻找那些难以捉摸的生物；参与海洋狩猎，结识一位友好的新伙伴。
 
 󰀌 Mod 版本： 4.7-B
-󰀧 更新内容： 养殖周
+󰀧 更新内容： 花瓣与蜜饯
 ]],	
 		zht =
 [[
@@ -58,7 +58,7 @@ Build yourself a Fish Hatchery to raise your own fish in the comfort of your bas
 建造一座魚苗孵化場，在你的基地裡舒適地飼養屬於你自己的魚兒；探索海洋，尋找那些難以捉摸的生物；參與海洋狩獵，結識一位友好的新夥伴。
 
 󰀌 Mod 版本： 4.7-B
-󰀧 更新內容： 雞肉週
+󰀧 更新內容： 花瓣與蜜餞
 ]],	
 		pt  = 
 [[
@@ -73,7 +73,7 @@ Lance sua linha, prepare suas velas e mergulhe no oceano! Uma onda de novas cria
 Construa um viveiro de peixes para criar seus próprios peixes no conforto da sua base, explore o oceano em busca de criaturas elusivas, participe de caçadas oceânicas e encontre um novo companheiro amigável.
 
 󰀌 Versão do Mod: 4.7-B
-󰀧 Atualização: Semana da Galinha
+󰀧 Atualização: Pétalas e Conservas
 ]],
 		pl  =
 [[
@@ -88,7 +88,7 @@ Zarzuć wędkę, postaw żagle i zanurz się w oceanie! Czeka Cię fala nowych s
 Zbuduj sobie wylęgarnię ryb, aby hodować własne ryby w zaciszu swojej bazy, eksploruj ocean w poszukiwaniu nieuchwytnych stworzeń, weź udział w polowaniach na ryby i znajdź nowego, przyjaznego towarzysza.
 
 󰀌 Wersja Moda: 4.7-B
-󰀧 Aktualizacja: Tydzień Kurczaka
+󰀧 Aktualizacja: Płatki i Konserwy
 ]],
 		es  =
 [[
@@ -103,7 +103,7 @@ Zbuduj sobie wylęgarnię ryb, aby hodować własne ryby w zaciszu swojej bazy, 
 Construye una piscifactoría para criar tus propios peces en la comodidad de tu base, explora el océano en busca de criaturas esquivas, participa en cacerías oceánicas y encuentra un nuevo compañero.
 
 󰀌 Versión del Mod: 4.7-B
-󰀧 Actualización: Semana del Pollo
+󰀧 Actualización: Pétalos y Conservas
 ]],
 	},
 
