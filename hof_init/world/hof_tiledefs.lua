@@ -70,7 +70,7 @@ require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_PARKFIELD] =
 	name        = "pinkpark",  
 	bank_build  = "kyno_turfs_hof", 
 	anim        = "pinkpark",  
-	pickupsound = "rock", 
+	pickupsound = "vegetation_grassy", 
 }
 
 require("worldtiledefs").turf[WORLD_TILES.QUAGMIRE_CITYSTONE] = 

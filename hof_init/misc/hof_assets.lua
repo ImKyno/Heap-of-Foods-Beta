@@ -17,11 +17,6 @@ Assets =
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 	
-	Asset("ANIM", "anim/kyno_turfs_hof.zip"),
-	Asset("ANIM", "anim/kyno_sisturn_build.zip"),
-	Asset("ANIM", "anim/kyno_tree_rock_swaps.zip"),
-	Asset("ANIM", "anim/kyno_farmplot_scrapbook.zip"),
-	
 	Asset("IMAGE", "images/hof_fishregistry.tex"),
 	Asset("ATLAS", "images/hof_fishregistry.xml"),
 	

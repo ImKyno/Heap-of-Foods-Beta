@@ -132,6 +132,7 @@ PrefabFiles =
 	"k_mealgrinder",
 	"k_messagebottle",
 	"k_milks",
+	"k_miscellaneous",
 	"k_mushstump",
 	"k_mussel",
 	"k_musselstick",
