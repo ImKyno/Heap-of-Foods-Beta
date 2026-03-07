@@ -101,35 +101,14 @@ AddPrefabPostInit("catcoon", function(inst)
     inst.components.lootdropper:AddChanceLoot("kyno_gummybug", 0.35)
 end)
 
---[[
--- Some Birds Spawns Roe Periodically.
-AddPrefabPostInit("puffin", function(inst)
-    if inst.components.periodicspawner ~= nil then
-        inst.components.periodicspawner:SetPrefab("kyno_roe_pondfish")
-        inst.components.periodicspawner:SetDensityInRange(20, 2)
-        inst.components.periodicspawner:SetMinimumSpacing(8)
-    end
+AddPrefabPostInit("worm", function(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	inst.components.lootdropper:AddChanceLoot("kyno_worm_bone", 0.40)
+	inst.components.lootdropper:AddChanceLoot("kyno_worm_bone", 0.20)
 end)
-
-AddPrefabPostInit("canary", function(inst)
-    if inst.components.periodicspawner ~= nil then
-        inst.components.periodicspawner:SetPrefab("kyno_roe_pondfish")
-        inst.components.periodicspawner:SetDensityInRange(20, 2)
-        inst.components.periodicspawner:SetMinimumSpacing(8)
-    end
-end)
-
--- If T.A.P is enabled, make sure Cormorant Spawns Roe too.
-if TUNING.HOF_IS_TAP_ENABLED then
-    AddPrefabPostInit("cormorant", function(inst)
-        if inst.components.periodicspawner ~= nil then
-            inst.components.periodicspawner:SetPrefab("kyno_roe_pondfish")
-            inst.components.periodicspawner:SetDensityInRange(20, 2)
-            inst.components.periodicspawner:SetMinimumSpacing(8)
-        end
-    end)
-end
-]]--
 
 -- Prime Mate has very small chance of dropping Pirate's Rum
 AddPrefabPostInit("prime_mate", function(inst)

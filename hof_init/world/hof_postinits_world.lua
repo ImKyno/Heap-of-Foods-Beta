@@ -1199,39 +1199,6 @@ end
 
 AddPrefabPostInit("sisturn", SisturnPostInit)
 
--- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
-local FireDetector = require("components/firedetector")
-
-local FIRESUPRESSOR_IGNORE_TAGS = {"fireproof"}
-local NOTAGS_FIRESUPPRESSOR = UpvalueHacker.GetUpvalue(FireDetector.ActivateEmergencyMode, "OnDetectEmergencyTargets", "NOTAGS")
-
-for k, v in pairs(FIRESUPRESSOR_IGNORE_TAGS) do
-    table.insert(NOTAGS_FIRESUPPRESSOR, v)
-end
-
--- New birds will spawn when landing on these turfs.
-AddClassPostConstruct("components/birdspawner", function(self)
-	local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
-
-	BIRD_TYPES[WORLD_TILES.QUAGMIRE_PARKFIELD] = { "quagmire_pigeon" }
-	BIRD_TYPES[WORLD_TILES.QUAGMIRE_CITYSTONE] = { "quagmire_pigeon" }
-
-	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = { "toucan", "toucan_chubby" }
-	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = { "toucan", "toucan_chubby" }
-	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = { "kingfisher" }
-end)
-
--- Compatibility for Not Enough Turfs so bird can land on their turfs too.
-if TUNING.HOF_IS_NET_ENABLED then
-	AddClassPostConstruct("components/birdspawner", function(self)
-		local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
-
-		BIRD_TYPES[WORLD_TILES.BEACH]          = { "toucan", "toucan_chubby" }
-		BIRD_TYPES[WORLD_TILES.TIDALMARSH]     = { "toucan", "toucan_chubby" }
-		BIRD_TYPES[WORLD_TILES.FIELDS]         = { "kingfisher" }
-	end)
-end
-
 -- Spawns Mist in static layouts, not using game's function because its too dense.
 AddSimPostInit(function()
 	if not _G.TheWorld or not _G.TheWorld.topology or not _G.TheWorld.topology.nodes then

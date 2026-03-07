@@ -84,6 +84,9 @@ WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_END = "How dreadfully mundane again."
 WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "How convenient."
 WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Hunger is such a tedious nuisance."
 
+WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The darkness feels... familiar."
+WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_END = "How unfortunate. The dark bites again."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else for this."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You're not easy, aren't you?"
@@ -1107,6 +1110,7 @@ WAXWELL.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Given enough time I could build a s
 
 WAXWELL.DESCRIBE.KYNO_OCEANTRAP = "The curiosity will get the best of you eventually."
 
+WAXWELL.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Even the fish here are creatures of the night."
 WAXWELL.DESCRIBE.OCEANFISH_PUFFERFISH = "A balloon full of venom. How dreadful."
 WAXWELL.DESCRIBE.OCEANFISH_STURGEON = "It looks as though it swam straight out of the fossil record."
 
@@ -1213,3 +1217,5 @@ WAXWELL.DESCRIBE.CHICKENROTISSERIE = "Decadent, yet undeniably practical."
 
 WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "At least it's refined."
 WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Surprisingly tasteful."
+
+WAXWELL.DESCRIBE.SOULJUICE = "A refined beverage... with a sinister touch."

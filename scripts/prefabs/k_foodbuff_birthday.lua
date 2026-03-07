@@ -4,11 +4,11 @@
 -- Cake Slice Chocolate
 ---------------------------------------------------------------------------
 local function ApplyChocolateBuff(inst, bonus)
-	if inst._bonusmaxhunger then
+	if inst._bonusmaxhunger2 then
 		return false
 	end
 	
-	inst._bonusmaxhunger = bonus
+	inst._bonusmaxhunger2 = bonus
 
 	if inst.components.hunger ~= nil then
 		local current_hunger = inst.hunger_percent or inst.components.hunger:GetPercent()
@@ -22,7 +22,7 @@ local function ApplyChocolateBuff(inst, bonus)
 end
 
 local function RemoveChocolateBuff(inst)
-	if not inst._bonusmaxhunger then
+	if not inst._bonusmaxhunger2 then
 		return
 	end
     
@@ -30,11 +30,11 @@ local function RemoveChocolateBuff(inst)
 		local current_hunger = inst.hunger_percent or inst.components.hunger:GetPercent()
 		inst.hunger_percent = nil
 	
-		inst.components.hunger:SetMax(inst.components.hunger.max - inst._bonusmaxhunger)
+		inst.components.hunger:SetMax(inst.components.hunger.max - inst._bonusmaxhunger2)
 		inst.components.hunger:SetPercent(current_hunger)
 	end
 	
-	inst._bonusmaxhunger = nil
+	inst._bonusmaxhunger2 = nil
 end
 
 local function OnAttachedChocolate(inst, target)	
@@ -112,11 +112,11 @@ end
 -- Cake Slice Pineapple
 ---------------------------------------------------------------------------
 local function ApplyPineappleBuff(inst, bonus)
-	if inst._bonusmaxhealth then
+	if inst._bonusmaxhealth2 then
 		return false
 	end
 	
-	inst._bonusmaxhealth = bonus
+	inst._bonusmaxhealth2 = bonus
 
 	if inst.components.health ~= nil then
 		local current_health = inst.health_percent or inst.components.health:GetPercent()
@@ -130,7 +130,7 @@ local function ApplyPineappleBuff(inst, bonus)
 end
 
 local function RemovePineappleBuff(inst)	
-	if not inst._bonusmaxhealth then
+	if not inst._bonusmaxhealth2 then
 		return
 	end
     
@@ -138,11 +138,11 @@ local function RemovePineappleBuff(inst)
 		local current_health = inst.health_percent or inst.components.health:GetPercent()
 		inst.health_percent = nil
 	
-		inst.components.health:SetMaxHealth(inst.components.health.maxhealth - inst._bonusmaxhealth)
+		inst.components.health:SetMaxHealth(inst.components.health.maxhealth - inst._bonusmaxhealth2)
 		inst.components.health:SetPercent(current_health)
 	end
 	
-	inst._bonusmaxhealth = nil
+	inst._bonusmaxhealth2 = nil
 end
 
 local function OnAttachedPineapple(inst, target)
@@ -220,11 +220,11 @@ end
 -- Cake Slice Sweet Flower
 ---------------------------------------------------------------------------
 local function ApplySweetFlowerBuff(inst, bonus)
-	if inst._bonusmaxsanity then
+	if inst._bonusmaxsanity2 then
 		return false
 	end
 	
-	inst._bonusmaxsanity = bonus
+	inst._bonusmaxsanity2 = bonus
 
 	if inst.components.sanity ~= nil then
 		local current_sanity = inst.sanity_percent or inst.components.sanity:GetPercent()
@@ -238,7 +238,7 @@ local function ApplySweetFlowerBuff(inst, bonus)
 end
 
 local function RemoveSweetFlowerBuff(inst)
-	if not inst._bonusmaxsanity then
+	if not inst._bonusmaxsanity2 then
 		return
 	end
     
@@ -246,11 +246,11 @@ local function RemoveSweetFlowerBuff(inst)
 		local current_sanity = inst.sanity_percent or inst.components.sanity:GetPercent()
 		inst.sanity_percent = nil
 		
-		inst.components.sanity:SetMax(inst.components.sanity.max - inst._bonusmaxsanity)
+		inst.components.sanity:SetMax(inst.components.sanity.max - inst._bonusmaxsanity2)
 		inst.components.sanity:SetPercent(current_sanity)
 	end
 	
-	inst._bonusmaxsanity = nil
+	inst._bonusmaxsanity2 = nil
 end
 
 local function OnAttachedSweetFlower(inst, target)

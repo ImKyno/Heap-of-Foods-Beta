@@ -84,6 +84,9 @@ WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Aw, the risky fun is over!"
 WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Hunger slows its chase!"
 WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The tummy grumbles once more!"
 
+WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The darkness tickles rather than bites!"
+WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Oh dear! The dark bites again!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I know this prank was good, but let's get the real thing."
@@ -1107,6 +1110,7 @@ WORTOX.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "She's empty."
 
 WORTOX.DESCRIBE.KYNO_OCEANTRAP = "They won't see this one coming. Hyuyu!"
 
+WORTOX.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "A midnight swimmer!"
 WORTOX.DESCRIBE.OCEANFISH_PUFFERFISH = "So full of air and yet so deadly! Hyuyu!"
 WORTOX.DESCRIBE.OCEANFISH_STURGEON = "So ancient! I bet it's seen all sorts of mortal mischief!"
 
@@ -1213,3 +1217,5 @@ WORTOX.DESCRIBE.CHICKENROTISSERIE = "Rounded!"
 
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Steeped in leafy mischief!"
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet sips!"
+
+WORTOX.DESCRIBE.SOULJUICE = "Souls and fruit! What a treat!"

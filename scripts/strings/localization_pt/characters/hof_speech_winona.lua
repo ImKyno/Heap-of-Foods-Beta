@@ -84,6 +84,9 @@ WINONA.ANNOUNCE_KYNO_BERSERKERBUFF_END = "De volta ao desgaste normal."
 WINONA.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Isso vai me manter firme por mais tempo."
 WINONA.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Certo, hora de comer de novo."
 
+WINONA.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Hã. A ela não é problema agora."
+WINONA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Bom, voltei a ter medo dela..."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, talvez outra coisa."
@@ -1107,6 +1110,7 @@ WINONA.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Posso te usar pra alguma coisa."
 
 WINONA.DESCRIBE.KYNO_OCEANTRAP = "Pegadora de jantar!"
 
+WINONA.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Acho que esse aí trabalha no turno da noite."
 WINONA.DESCRIBE.OCEANFISH_PUFFERFISH = "Parece uma bolinha de estresse com espinhos. Passo."
 WINONA.DESCRIBE.OCEANFISH_STURGEON = "Peixe velho e resistente. Respeito."
 
@@ -1213,3 +1217,5 @@ WINONA.DESCRIBE.CHICKENROTISSERIE = "Giro lento, cozimento constante. Respeito i
 
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Bom pra uma pausa rápida."
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Nada mal."
+
+WINONA.DESCRIBE.SOULJUICE = "Isso é um tipo bem estranho de bebida energética."

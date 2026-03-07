@@ -159,6 +159,7 @@ local OCEANFISHES                  =
 			tiredout_angles        = { has_tention = 80, low_tention = 120},
 		},
 
+		schoolphases               = { "day" }, -- Not to be confused with phases below! This is for the schoolspawner.
 		schoolmin                  = SCHOOL_SIZE.LARGE.min,
 		schoolmax                  = SCHOOL_SIZE.LARGE.max,
 		schoolrange                = SCHOOL_AREA.LARGE,
@@ -200,6 +201,69 @@ local OCEANFISHES                  =
 		worlds                     = ALL_WORLDS,
 	},
 
+	oceanfish_midnight_carp        = 
+	{
+		prefab                     = "oceanfish_midnight_carp",
+		bank                       = "kyno_oceanfish_midnight_carp",
+		build                      = "kyno_oceanfish_midnight_carp",
+		
+		weight_min                 = TUNING.KYNO_OCEANFISH_MIDNIGHT_CARP_MIN_WEIGHT,
+		weight_max                 = TUNING.KYNO_OCEANFISH_MIDNIGHT_CARP_MAX_WEIGHT,
+
+		walkspeed                  = TUNING.KYNO_OCEANFISH_MIDNIGHT_CARP_WALKSPEED,
+		runspeed                   = TUNING.KYNO_OCEANFISH_MIDNIGHT_CARP_RUNSPEED,
+		
+		stamina                    =
+		{
+			drain_rate             = 0.01,
+			recover_rate           = 0.10,
+			struggle_times	       = { low = 5, r_low = 1, high = 6, r_high = 6 },
+			tired_times		       = { low = 4, r_low = 1, high = 2, r_high = 0 },
+			tiredout_angles        = { has_tention = 60, low_tention = 90 },
+		},
+		
+		schoolphases               = { "night" },
+		schoolmin                  = SCHOOL_SIZE.MEDIUM.min,
+		schoolmax                  = SCHOOL_SIZE.MEDIUM.max,
+		schoolrange                = SCHOOL_AREA.SMALL,
+		schoollifetimemin          = SCHOOL_WORLD_TIME.MEDIUM.min,
+		schoollifetimemax          = SCHOOL_WORLD_TIME.MEDIUM.max,
+
+		herdwandermin              = WANDER_DIST.MEDIUM.min,
+		herdwandermax              = WANDER_DIST.MEDIUM.max,
+		herdarrivedist             = ARRIVE_DIST.MEDIUM,
+		herdwanderdelaymin         = WANDER_DELAY.SHORT.min,
+		herdwanderdelaymax         = WANDER_DELAY.SHORT.max,
+
+		set_hook_time              = SET_HOOK_TIME_SHORT,
+		breach_fx                  = BREACH_FX_MEDIUM,
+		
+		loot                       = LOOT.LARGE, 
+		heavy_loot                 = HEAVY_LOOT.MEAT,
+		
+		cooking_product            = COOKING_PRODUCT.MEDIUM,
+		perish_product             = PERISH.MEDIUM,
+		fishtype                   = "meat",
+
+		lures                      = TUNING.OCEANFISH_LURE_PREFERENCE.OMNI,
+		diet                       = DIET.MEAT,
+		cooker_ingredient_value    = COOKER_INGREDIENT_MEDIUM,
+		edible_values              = EDIBLE_VALUES_MEDIUM_MEAT,
+
+		dynamic_shadow             = SHADOW_LARGE,
+		
+		roe_prefab                 = "kyno_roe_oceanfish_midnight_carp",
+		baby_prefab                = "oceanfish_midnight_carp_inv",
+		
+		roe_time                   = TUNING.OCEANFISH_MEDIUM_ROETIME,
+		baby_time                  = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+		
+		phases                     = { "night" },
+		moonphases                 = ALL_MOONPHASES,
+		seasons                    = { "autumn", "winter" },
+		worlds                     = ALL_WORLDS,
+	},
+
 	oceanfish_sturgeon             = 
 	{
 		prefab                     = "oceanfish_sturgeon",
@@ -221,6 +285,7 @@ local OCEANFISHES                  =
 			tiredout_angles        = { has_tention = 45, low_tention = 90 },
 		},
 
+		schoolphases               = ALL_PHASES,
 		schoolmin                  = SCHOOL_SIZE.MEDIUM.min,
 		schoolmax                  = SCHOOL_SIZE.MEDIUM.max,
 		schoolrange                = SCHOOL_AREA.SMALL,
@@ -270,11 +335,19 @@ for k, v in pairs(OCEANFISHES) do
 end
 
 -- Pufferfish school locations.
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_HAZARDOUS].oceanfish_pufferfish = SCHOOL_VERY_COMMON
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_pufferfish     = SCHOOL_UNCOMMON
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_pufferfish     = SCHOOL_RARE
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_HAZARDOUS].oceanfish_pufferfish  = SCHOOL_VERY_COMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_pufferfish      = SCHOOL_UNCOMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_pufferfish      = SCHOOL_RARE
+
+-- Midnight Carp school locations.
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_midnight_carp   = SCHOOL_VERY_COMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_midnight_carp   = SCHOOL_UNCOMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_COASTAL].oceanfish_midnight_carp = SCHOOL_RARE
+SCHOOL_WEIGHTS[SEASONS.WINTER][WORLD_TILES.OCEAN_COASTAL].oceanfish_midnight_carp = SCHOOL_VERY_COMMON
+SCHOOL_WEIGHTS[SEASONS.WINTER][WORLD_TILES.OCEAN_ROUGH].oceanfish_midnight_carp   = SCHOOL_UNCOMMON
+SCHOOL_WEIGHTS[SEASONS.WINTER][WORLD_TILES.OCEAN_SWELL].oceanfish_midnight_carp   = SCHOOL_RARE
 
 -- Sturgeon school locations.
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_BRINEPOOL].oceanfish_sturgeon   = SCHOOL_COMMON
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_sturgeon       = SCHOOL_UNCOMMON
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_sturgeon       = SCHOOL_RARE
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_BRINEPOOL].oceanfish_sturgeon    = SCHOOL_COMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_sturgeon        = SCHOOL_UNCOMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_sturgeon        = SCHOOL_RARE

@@ -84,6 +84,9 @@ WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Easy there, back to normal."
 WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Nice! Won't need a snack so soon."
 WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Back to feelin' peckish again."
 
+WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Guess the dark ain't so bad after all, eh?"
+WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Alright, now it's spooky again."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to pick it up?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. He wants something else."
@@ -1107,6 +1110,7 @@ WOODIE.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "What was in it?"
 
 WOODIE.DESCRIBE.KYNO_OCEANTRAP = "I'm looking forward to a seafood dinner."
 
+WOODIE.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Eh, looks like it prefers fishin' after dark."
 WOODIE.DESCRIBE.OCEANFISH_PUFFERFISH = "Yikes, that one's got more spikes than a porcupine, eh?"
 WOODIE.DESCRIBE.OCEANFISH_STURGEON = "Now that's a fish with history, eh?"
 
@@ -1213,3 +1217,5 @@ WOODIE.DESCRIBE.CHICKENROTISSERIE = "Smells like a Sunday supper, eh?"
 
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Nice and calming, eh?"
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Smells like spring, eh?"
+
+WOODIE.DESCRIBE.SOULJUICE = "That's a strange kind of juice, eh?"

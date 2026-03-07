@@ -151,6 +151,9 @@ local function MakePreparedFood(data)
 		inst.food_basename = data.basename
 		inst.wet_prefix = data.wet_prefix
 		
+		-- For refunding Empty Bottles when harvesting.
+		inst.bottlesize = data.bottlesize or 1
+		
 		inst:AddComponent("bait")
 		
 		inst:AddComponent("stackable")
@@ -170,7 +173,7 @@ local function MakePreparedFood(data)
 			inst.components.tradable.goldvalue = data.goldvalue
 		end
 		
-		if inst:HasTag("soulstew") then
+		if inst:HasTag("preparedsoul") then
 			inst:AddComponent("soul")
 		end
 		

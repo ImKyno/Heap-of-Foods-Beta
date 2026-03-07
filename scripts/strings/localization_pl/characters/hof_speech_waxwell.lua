@@ -84,6 +84,9 @@ WAXWELL.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Znów boleśnie przeciętne."
 WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Jakież to wygodne."
 WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Głód to doprawdy nużąca niedogodność."
 
+WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność wydaje się... znajoma."
+WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Jakże niefortunnie. Ciemność znów kąsa."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję do tego czegoś innego."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie jesteś łatwy, prawda?"
@@ -1107,6 +1110,7 @@ WAXWELL.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Z wystarczającą ilością czasu m
 
 WAXWELL.DESCRIBE.KYNO_OCEANTRAP = "Ciekawość w końcu cię zgubi."
 
+WAXWELL.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Nawet ryby tutaj są stworzeniami nocy."
 WAXWELL.DESCRIBE.OCEANFISH_PUFFERFISH = "Balon pełen jadu. Straszne."
 WAXWELL.DESCRIBE.OCEANFISH_STURGEON = "Wygląda, jakby właśnie wypłynęła z zapisu kopalnego."
 
@@ -1213,3 +1217,5 @@ WAXWELL.DESCRIBE.CHICKENROTISSERIE = "Dekadenckie, lecz niezaprzeczalnie praktyc
 
 WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Przynajmniej jest wyrafinowane."
 WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Zaskakująco gustowne."
+
+WAXWELL.DESCRIBE.SOULJUICE = "Wyrafinowany napój... z nieco złowieszczym akcentem."

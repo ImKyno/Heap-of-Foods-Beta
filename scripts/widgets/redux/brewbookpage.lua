@@ -188,9 +188,9 @@ end
 
 function BrewbookPage:_GetCookingTimeString(cooktime)
 	return cooktime == nil and STRINGS.UI.COOKBOOK.COOKINGTIME_UNKNOWN
-	or cooktime < 1.0 and STRINGS.UI.COOKBOOK.COOKINGTIME_SHORT
-	or cooktime < 2.0 and STRINGS.UI.COOKBOOK.COOKINGTIME_AVERAGE
-	or cooktime < 2.5 and STRINGS.UI.COOKBOOK.COOKINGTIME_LONG
+	or cooktime < 25 and STRINGS.UI.COOKBOOK.COOKINGTIME_SHORT
+	or cooktime < 49 and STRINGS.UI.COOKBOOK.COOKINGTIME_AVERAGE
+	or cooktime < 73 and STRINGS.UI.COOKBOOK.COOKINGTIME_LONG
 	or STRINGS.UI.COOKBOOK.COOKINGTIME_VERY_LONG
 end
 
@@ -254,19 +254,19 @@ function BrewbookPage:PopulateRecipeDetailPanel(data)
 			local details_y = y + 85
 			local status_scale = 0.7
 
-			local health = data.recipe_def.health ~= nil and math.floor(10*data.recipe_def.health)/10 or nil
+			local health = data.recipe_def.health2 or (data.recipe_def.health ~= nil and math.floor(10*data.recipe_def.health)/10) or nil
 			self.health_status = details_root:AddChild(TEMPLATES.MakeUIStatusBadge((health ~= nil and health >= 0) and "health" or "health_bad"))
 			self.health_status:SetPosition(details_x-60, details_y)
 			self.health_status.status_value:SetString(health or STRINGS.UI.COOKBOOK.STAT_UNKNOWN)
 			self.health_status:SetScale(status_scale)
 
-			local hunger = data.recipe_def.hunger ~= nil and math.floor(10*data.recipe_def.hunger)/10 or nil
+			local hunger = data.recipe_def.hunger2 or (data.recipe_def.hunger ~= nil and math.floor(10*data.recipe_def.hunger)/10) or nil
 			self.hunger_status = details_root:AddChild(TEMPLATES.MakeUIStatusBadge((hunger ~= nil and hunger >= 0) and "hunger" or "hunger_bad"))
 			self.hunger_status:SetPosition(details_x, details_y)
 			self.hunger_status.status_value:SetString(hunger or STRINGS.UI.COOKBOOK.STAT_UNKNOWN)
 			self.hunger_status:SetScale(status_scale)
 
-			local sanity = data.recipe_def.sanity ~= nil and math.floor(10*data.recipe_def.sanity)/10 or nil
+			local sanity = data.recipe_def.sanity2 or (data.recipe_def.sanity ~= nil and math.floor(10*data.recipe_def.sanity)/10) or nil
 			self.sanity_status = details_root:AddChild(TEMPLATES.MakeUIStatusBadge((sanity ~= nil and sanity >= 0) and "sanity" or "sanity_bad"))
 			self.sanity_status:SetPosition(details_x+60, details_y)
 			self.sanity_status.status_value:SetString(sanity or STRINGS.UI.COOKBOOK.STAT_UNKNOWN)

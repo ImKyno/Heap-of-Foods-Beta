@@ -84,6 +84,9 @@ WILLOW.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Aw, the fire's out already?"
 WILLOW.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Hey, I'm not getting hungry so fast!"
 WILLOW.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Ugh, hunger's back already?"
 
+WILLOW.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The dark doesn't scare me anymore!"
+WILLOW.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The dark is creepy again..."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need to put something in here!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, wrong thing!"
@@ -1107,6 +1110,7 @@ WILLOW.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "It's a bottle."
 
 WILLOW.DESCRIBE.KYNO_OCEANTRAP = "C'mon, swim inside! It's cozy in there!"
 
+WILLOW.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "A fish that likes the dark? I get it."
 WILLOW.DESCRIBE.OCEANFISH_PUFFERFISH = "Heh. It's just full of hot air, like Maxwell!"
 WILLOW.DESCRIBE.OCEANFISH_STURGEON = "Old fish, smells even older."
 
@@ -1213,3 +1217,5 @@ WILLOW.DESCRIBE.CHICKENROTISSERIE = "Now that's a proper use of fire."
 
 WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Hmph. I prefer it boiling."
 WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Too sweet. Needs smoke."
+
+WILLOW.DESCRIBE.SOULJUICE = "Looks spooky. I like it."

@@ -84,6 +84,9 @@ WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Ok, respira fundo. De volta ao normal.
 WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Legal! Dá pra aguentar mais sem comer!"
 WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Acho que é hora do lanche de novo."
 
+WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Eu não tenho medo da escuridão!"
+WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Eu ainda não possuo medo da escuridão."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Coisa errada!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, não é este."
@@ -1107,6 +1110,7 @@ WALTER.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Legal. Uma garrafa vazia. Era o que 
 
 WALTER.DESCRIBE.KYNO_OCEANTRAP = "Parece que dá pra prender peixes dentro."
 
+WALTER.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Parece um peixe que sai quando a fogueira já está apagando."
 WALTER.DESCRIBE.OCEANFISH_PUFFERFISH = "Um clássico mecanismo de defesa marinho. Muito legal!"
 WALTER.DESCRIBE.OCEANFISH_STURGEON = "Uau! Um fóssil vivo! Incrível!"
 
@@ -1213,3 +1217,5 @@ WALTER.DESCRIBE.CHICKENROTISSERIE = "Isso daria um ótimo jantar de acampamento!
 
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Perfeito pra uma noite tranquila na fogueira."
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Tem gosto de aventura no campo."
+
+WALTER.DESCRIBE.SOULJUICE = "Não tenho certeza se isso conta como suco..."

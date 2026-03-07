@@ -84,6 +84,9 @@ WILSON.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Moja podwyższona agresja najwyraźnie
 WILSON.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Fascynujące! Mój metabolizm wydaje się bardziej wydajny."
 WILSON.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Tempo głodu najwyraźniej wróciło do normy."
 
+WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciekawe. Ciemność już mnie nie przeraża."
+WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ach... ciemność znów jest niepokojąca."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "To nie to."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "On chce coś innego."
@@ -1107,6 +1110,7 @@ WILSON.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Po prostu pusta butelka."
 
 WILSON.DESCRIBE.KYNO_OCEANTRAP = "Na najbardziej śmiercionośny połów."
 
+WILSON.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Ciekawy karp, który woli osłonę nocy."
 WILSON.DESCRIBE.OCEANFISH_PUFFERFISH = "Ostrożnie! Wygląda... niebezpiecznie nadmuchiwana."
 WILSON.DESCRIBE.OCEANFISH_STURGEON = "Bardzo stara ryba... praktycznie prehistoryczna!"
 
@@ -1213,3 +1217,5 @@ WILSON.DESCRIBE.CHICKENROTISSERIE = "Obrotowe ciepło zapewnia równomierne piec
 
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Kojąca filiżanka herbaty z aloesu."
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Zachwycająco słodka herbata kwiatowa."
+
+WILSON.DESCRIBE.SOULJUICE = "Ciekawa mieszanka energii duszy i granatu."

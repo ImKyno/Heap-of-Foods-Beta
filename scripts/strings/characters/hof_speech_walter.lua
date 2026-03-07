@@ -84,6 +84,9 @@ WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Okay, deep breaths. Back to normal."
 WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Cool! I can last longer without eating!"
 WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Guess it's snack time again."
 
+WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_START = "I'm not afraid of the darkness."
+WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "I still hold no fear of the darkness."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong thing!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, not this one."
@@ -1107,6 +1110,7 @@ WALTER.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Swell. An empty bottle. Just what I 
 
 WALTER.DESCRIBE.KYNO_OCEANTRAP = "It looks like it can trap fish inside."
 
+WALTER.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Looks like a fish that comes out when the campfire's low."
 WALTER.DESCRIBE.OCEANFISH_PUFFERFISH = "A classic ocean defense mechanism. So cool!"
 WALTER.DESCRIBE.OCEANFISH_STURGEON = "Wow! A living fossil! That's incredible!"
 
@@ -1213,3 +1217,5 @@ WALTER.DESCRIBE.CHICKENROTISSERIE = "That'd make a great camp dinner!"
 
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Perfect for a quiet campfire evening."
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Tastes like a meadow adventure."
+
+WALTER.DESCRIBE.SOULJUICE = "I’m not sure if this counts as juice..."

@@ -648,8 +648,9 @@ end
 -- I am going to manually register them in here...
 local FISH_DATA_HOF = 
 {
-	oceanfish_pufferfish = true,
-	oceanfish_sturgeon = true,
+	oceanfish_pufferfish    = true,
+	oceanfish_sturgeon      = true,
+	oceanfish_midnight_carp = true,
 }
 
 for prefab_name, fish_def in pairs(FISH_DATA.fish) do

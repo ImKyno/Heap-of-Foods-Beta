@@ -84,6 +84,9 @@ WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "A fúria se vai, como tudo vai."
 WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Até a fome se cala por um tempo."
 WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "O vazio retorna."
 
+WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_START = "A escuridão me abraça gentilmente."
+WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "A escuridão voltou a parecer hostil."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."
@@ -1107,6 +1110,7 @@ WENDY.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Vazia. Como minha alma."
 
 WENDY.DESCRIBE.KYNO_OCEANTRAP = "Venham, criaturas do mar! Um lanchinho delicioso espera!"
 
+WENDY.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Ele nada onde a luz não ousa seguir."
 WENDY.DESCRIBE.OCEANFISH_PUFFERFISH = "Ele se infla de medo... sei bem como é."
 WENDY.DESCRIBE.OCEANFISH_STURGEON = "Viveu muitos anos... talvez até demais."
 
@@ -1213,3 +1217,5 @@ WENDY.DESCRIBE.CHICKENROTISSERIE = "Girando sem parar, como todas as coisas."
 
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Um calor amargo para um mundo amargo."
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A doçura desaparece, como tudo."
+
+WENDY.DESCRIBE.SOULJUICE = "Um gosto agridoce de vida e morte."

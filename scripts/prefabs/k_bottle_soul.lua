@@ -15,14 +15,15 @@ local prefabs =
 local function OnLanded(inst)
 	local x, y, z = inst.Transform:GetWorldPosition()
 	if TheWorld.Map:IsOceanAtPoint(x, y, z, false) then
-		inst.AnimState:PlayAnimation("idle_empty_water")
+		inst.AnimState:PlayAnimation("idle_water", true)
 	else
-		inst.AnimState:PlayAnimation("idle_empty")
+		inst.AnimState:PlayAnimation("idle", true)
 	end
 end
 
 local function OnInventory(inst, owner)
 	local owner = inst.components.inventoryitem:GetGrandOwner()
+	
 	if owner:HasTag("soulstealer") then
 		inst.components.unwrappable.canbeunwrapped = true
 	else
@@ -72,7 +73,7 @@ local function fn()
 
     inst.AnimState:SetBank("kyno_bottle_soul")
     inst.AnimState:SetBuild("kyno_bottle_soul")
-    inst.AnimState:PlayAnimation("idle_empty")
+    inst.AnimState:PlayAnimation("idle", true)
 	
 	inst:AddTag("bottled_soul")
     

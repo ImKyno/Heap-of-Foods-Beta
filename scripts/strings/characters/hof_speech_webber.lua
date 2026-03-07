@@ -84,6 +84,9 @@ WEBBER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "We feel less smashy now."
 WEBBER.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "We don't feel hungry as fast!"
 WEBBER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Uh-oh, we're hungry again."
 
+WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The dark doesn't bother us anymore!"
+WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Uh oh! The dark is scary again."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Not this one."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "We think this isn't the correct meal he wants."
@@ -1107,6 +1110,7 @@ WEBBER.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "We wish it was filled with soda pop.
 
 WEBBER.DESCRIBE.KYNO_OCEANTRAP = "Things swim in. Dinner comes out."
 
+WEBBER.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Whoa! A spooky night fish!"
 WEBBER.DESCRIBE.OCEANFISH_PUFFERFISH = "Ouch! We don't wanna hug that one."
 WEBBER.DESCRIBE.OCEANFISH_STURGEON = "It looks so old! Maybe it knows fish stories!"
 
@@ -1213,3 +1217,5 @@ WEBBER.DESCRIBE.CHICKENROTISSERIE = "It's spinning! And it smells amazing!"
 
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "It smells kinda nice!"
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "It tastes like flowers!"
+
+WEBBER.DESCRIBE.SOULJUICE = "Whoa! It smells kinda spooky!"

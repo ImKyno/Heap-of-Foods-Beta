@@ -52,7 +52,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NIGHTVISION = "Gives off night vision 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NAUGHTY = "Eating this food made with parts from a poor and innocent soul will cause \"Him\" to spawn nearby."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HASTE = "Increased speed for all performed actions for a certain amount of time. Some actions are not affected."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLOOM = "A mix of composts thrown together in a cooking pot that can stimulate bloomness to its maximum potential.\n\n\"Art!\" - Wormwood."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOUL = "A special food made with a harvested Soul.\n\nWortox can eat this food to gain the full benefits of it with no penalties unlike other mundane foods."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOUL = "A special food made with a harvested Soul.\n\nWortox can eat this food to gain its benefits based on his Naughty and Nice inclination."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOUL2 = "A special food made with a harvested Soul.\n\nWortox can eat this food to gain its benefits based on his Naughty and Nice inclination.\n\nBriefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DEERCLOPS = "Eating this food will cause Deerclops to spawn nearby."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEARGER = "Eating this food will cause Bearger to spawn nearby."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FORTUNE = "Crack one to see what the destiny has reserved for you."
@@ -116,6 +117,12 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "Increases Max He
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "Increases Max Sanity by 15% for a certain amount of time.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BERSERKER = "Increased damage and decreased damage resistance for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERRATE = "Decreased hunger loss for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DARKNESS = "This food can make a survivor unafraid of the darkness a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHEALTH = "Increases Max Health by 30% for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHUNGER = "Increases Max Hunger by 30% for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXSANITY = "Increases Max Sanity by 30% for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "Increases Max Health by 30% for a certain amount of time.\nBriefly decreases the temperature."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "Increases Max Health, Hunger and Sanity by 15% for a certain amount of time.\n\nBriefly decreases the temperature."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."

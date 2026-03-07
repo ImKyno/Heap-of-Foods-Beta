@@ -74,6 +74,7 @@ local function DoubleHarvest(self, harvester)
                     loot.components.perishable:SetPercent(self.product_spoilage * spoilpercent)
                     loot.components.perishable:StartPerishing()
                 end
+				
                 if harvester ~= nil and harvester.components.inventory ~= nil then
                     harvester.components.inventory:GiveItem(loot, nil, self.inst:GetPosition())
                 else

@@ -162,6 +162,10 @@ local function CanSpawnEgg(inst)
 end
 
 local function OnEat(inst, food)
+	if inst.components.perishable ~= nil then
+		inst.components.perishable:SetPercent(1)
+	end
+
 	if inst:HasTag("chicken_coop") then
 		if inst._has_eaten_today then
 			return
@@ -284,6 +288,8 @@ local function commonfn(bank, build, loottable)
 	inst:AddTag("smallcreature")
 	inst:AddTag("slaughterable")
 	
+	MakeFeedableSmallLivestockPristine(inst)
+	
 	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
@@ -317,6 +323,7 @@ local function commonfn(bank, build, loottable)
 	
 	inst:AddComponent("health")
 	inst.components.health:SetMaxHealth(TUNING.KYNO_CHICKEN_HEALTH)
+	inst.components.health.murdersound = "dontstarve_DLC001/creatures/buzzard/hurt"
 	inst.components.health:StartRegen(5, 8)
 	
 	inst:AddComponent("locomotor")

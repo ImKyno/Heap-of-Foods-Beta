@@ -549,6 +549,24 @@ FISHREGISTRY_FISH_DEFS.oceanfish_medium_9_inv =
 	worlds           = ALL_WORLDS,
 }
 
+FISHREGISTRY_FISH_DEFS.oceanfish_midnight_carp_inv =
+{
+	name             = "OCEANFISH_MIDNIGHT_CARP_INV",
+	
+	bank             = "kyno_oceanfish_midnight_carp",
+	build            = "kyno_oceanfish_midnight_carp",
+	anim             = "flop_pst",
+	
+	scale            = 0.25,
+	xpos             = 0,
+	ypos             = 37,
+	
+	phases           = { "night" },
+	moonphases       = ALL_MOONPHASES,
+	seasons          = { "autumn", "winter" },
+	worlds           = ALL_WORLDS,
+}
+
 FISHREGISTRY_FISH_DEFS.oceanfish_sturgeon_inv =
 {
 	name             = "OCEANFISH_STURGEON_INV",
@@ -787,6 +805,7 @@ local FISH_SORT_ORDER =
 	"oceanfish_medium_7_inv",
 	"oceanfish_medium_8_inv",
 	"oceanfish_medium_9_inv",
+	"oceanfish_midnight_carp_inv",
 	"oceanfish_sturgeon_inv",
 	"kyno_tropicalfish",
 	"kyno_neonfish",
@@ -1069,6 +1088,17 @@ FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_medium_9 =
 	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
 }
 
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_midnight_carp =
+{
+	name        = "KYNO_ROE_OCEANFISH_MIDNIGHT_CARP",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_midnight_carp",
+	
+	roe_time    = TUNING.OCEANFISH_MEDIUM_ROETIME,
+	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+}
+
 FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_sturgeon =
 {
 	name        = "KYNO_ROE_OCEANFISH_STURGEON",
@@ -1236,6 +1266,7 @@ local ROE_SORT_ORDER =
 	"kyno_roe_oceanfish_medium_7",
 	"kyno_roe_oceanfish_medium_8",
 	"kyno_roe_oceanfish_medium_9",
+	"kyno_roe_oceanfish_midnight_carp",
 	"kyno_roe_oceanfish_sturgeon",
 	"kyno_roe_tropicalfish",
 	"kyno_roe_neonfish",

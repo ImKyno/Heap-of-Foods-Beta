@@ -84,6 +84,9 @@ WANDA.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Ótimo. Prefiro riscos calculados."
 WANDA.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Pelo menos a fome desacelera."
 WANDA.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "O tempo alcança tudo. A fome também."
 
+WANDA.ANNOUNCE_KYNO_DARKNESSBUFF_START = "A escuridão perdeu sua urgência."
+WANDA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "E a escuridão volta a ser perigosa."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não... Preciso de algo diferente."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Acho que tenho tempo de pegar uma lagosta para você."
@@ -1107,6 +1110,7 @@ WANDA.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Será que posso fazer um relógio de 
 
 WANDA.DESCRIBE.KYNO_OCEANTRAP = "Uma prisão para criaturas do mar."
 
+WANDA.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Um peixe das horas tardias."
 WANDA.DESCRIBE.OCEANFISH_PUFFERFISH = "Hora de desinflar, espinhoso."
 WANDA.DESCRIBE.OCEANFISH_STURGEON = "Um peixe que sobreviveu às eras... entendo bem isso."
 
@@ -1213,3 +1217,5 @@ WANDA.DESCRIBE.CHICKENROTISSERIE = "Pelo menos a espera vale a pena."
 
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Um breve momento de conforto."
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Doce, mas passageiro."
+
+WANDA.DESCRIBE.SOULJUICE = "Tempo e almas em forma líquida."

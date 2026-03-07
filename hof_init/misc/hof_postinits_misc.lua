@@ -350,6 +350,10 @@ AddPrefabPostInit("ash", AshPostinit)
 if HOF_KEEPFOOD then
 	for k, v in pairs(TUNING.HOF_COOKPOTS) do
 		AddPrefabPostInit(v, function(inst)
+			if not _G.TheWorld.ismastersim then
+				return inst
+			end
+			
 			if inst.components.stewer then
 				inst.components.stewer.onspoil = function()
 					inst.components.stewer.spoiltime = 1
@@ -1123,6 +1127,25 @@ AddComponentPostInit("stewer", function(self)
 						_G.LaunchAt(cheer, self.inst, nil, 1, 1)
 					end
 				end
+				
+				-- For refunding Empty Bottles when harvesting.
+				if loot_captured and loot_captured.prefab == base_loot and loot_captured:HasTag("bottled") then
+					local amount = loot_captured.bottlesize or 1
+
+					for i = 1, amount do
+						local bottle = SpawnPrefab("messagebottleempty")
+						
+						if bottle then
+							local inv = harvester.components.inventory
+							
+							if inv then
+								inv:GiveItem(bottle, nil, self.inst:GetPosition())
+							else
+								_G.LaunchAt(bottle, self.inst, nil, 1, 1)
+							end
+						end
+					end
+				end
 			end
 
 			return result
@@ -1171,6 +1194,97 @@ AddComponentPostInit("combat", function(self)
 		end
 
 		return _SetTarget(self, target)
+	end
+end)
+
+-- Anything with "fireproof" tag will be ignored by Ice Flingomatic.
+local FireDetector = require("components/firedetector")
+
+local FIRESUPRESSOR_IGNORE_TAGS = {"fireproof"}
+local NOTAGS_FIRESUPPRESSOR = UpvalueHacker.GetUpvalue(FireDetector.ActivateEmergencyMode, "OnDetectEmergencyTargets", "NOTAGS")
+
+for k, v in pairs(FIRESUPRESSOR_IGNORE_TAGS) do
+    table.insert(NOTAGS_FIRESUPPRESSOR, v)
+end
+
+-- New birds will spawn when landing on these turfs.
+AddClassPostConstruct("components/birdspawner", function(self)
+	local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
+
+	BIRD_TYPES[WORLD_TILES.QUAGMIRE_PARKFIELD] = { "quagmire_pigeon" }
+	BIRD_TYPES[WORLD_TILES.QUAGMIRE_CITYSTONE] = { "quagmire_pigeon" }
+
+	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = { "toucan", "toucan_chubby" }
+	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = { "toucan", "toucan_chubby" }
+	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = { "kingfisher" }
+end)
+
+-- Compatibility for Not Enough Turfs so bird can land on their turfs too.
+if TUNING.HOF_IS_NET_ENABLED then
+	AddClassPostConstruct("components/birdspawner", function(self)
+		local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
+
+		BIRD_TYPES[WORLD_TILES.BEACH]          = { "toucan", "toucan_chubby" }
+		BIRD_TYPES[WORLD_TILES.TIDALMARSH]     = { "toucan", "toucan_chubby" }
+		BIRD_TYPES[WORLD_TILES.FIELDS]         = { "kingfisher" }
+	end)
+end
+
+-- schoolspawner component modified to allow schools to spawn during specific phases.
+local function PhaseAllowed(schooldata)
+	if schooldata.schoolphases == nil then
+		return true -- Vanilla fishes doesn't have this requirement.
+	end
+
+	local current = _G.TheWorld.state.phase
+
+	if type(schooldata.schoolphases) == "table" then
+		for _, phase in ipairs(schooldata.schoolphases) do
+			if phase == current then
+				return true
+			end
+		end
+		
+		return false
+	end
+
+	return schooldata.schoolphases == current
+end
+
+AddComponentPostInit("schoolspawner", function(self)
+	local SpawnSchool = self.SpawnSchool
+	local _PickSchool = UpvalueHacker.GetUpvalue(SpawnSchool, "PickSchool")
+
+	local function NewPickSchool(spawnpoint)
+		local schooldata = _PickSchool(spawnpoint)
+
+		if schooldata == nil then
+			return nil
+		end
+
+		if PhaseAllowed(schooldata) then
+			return schooldata
+		end
+			
+		return nil
+	end
+
+	UpvalueHacker.SetUpvalue(SpawnSchool, NewPickSchool, "PickSchool")
+end)
+
+-- Fake stats for showing nice values on Cookbook.
+-- i.e: Wortox loses sanity if he's Nice inclined, but will show as positive values.
+AddClassPostConstruct("widgets/redux/cookbookpage_crockpot", function(self)
+	local _PopulateRecipeDetailPanel = self.PopulateRecipeDetailPanel
+	
+	function self:PopulateRecipeDetailPanel(data)
+		if data and data.recipe_def then
+			data.recipe_def.health = data.recipe_def.health2 or data.recipe_def.health
+			data.recipe_def.hunger = data.recipe_def.hunger2 or data.recipe_def.hunger
+			data.recipe_def.sanity = data.recipe_def.sanity2 or data.recipe_def.sanity
+		end
+
+		return _PopulateRecipeDetailPanel(self, data)
 	end
 end)
 

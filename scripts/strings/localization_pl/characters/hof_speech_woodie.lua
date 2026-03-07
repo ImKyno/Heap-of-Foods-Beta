@@ -84,6 +84,9 @@ WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Spokojnie, wracamy do normy."
 WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Świetnie! Przekąska nieprędko będzie potrzebna."
 WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Znów robię się głodny."
 
+WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Chyba ta ciemność nie jest taka zła, co?"
+WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Dobra, teraz znowu jest strasznie."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może coś do podniesienia?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. On chce czegoś innego."
@@ -1107,6 +1110,7 @@ WOODIE.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Ciekawe, co w niej było?"
 
 WOODIE.DESCRIBE.KYNO_OCEANTRAP = "Już się nie mogę doczekać kolacji z owoców morza."
 
+WOODIE.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Wygląda na to, że woli łowienie po zmroku."
 WOODIE.DESCRIBE.OCEANFISH_PUFFERFISH = "O rany, ma więcej kolców niż jeżozwierz, co?"
 WOODIE.DESCRIBE.OCEANFISH_STURGEON = "To ryba z historią, co?"
 
@@ -1213,3 +1217,5 @@ WOODIE.DESCRIBE.CHICKENROTISSERIE = "Pachnie jak niedzielny obiad, co nie?"
 
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Całkiem uspokajające, co?"
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Pachnie wiosną, co?"
+
+WOODIE.DESCRIBE.SOULJUICE = "To dość dziwny sok, co?"

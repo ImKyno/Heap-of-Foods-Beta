@@ -84,6 +84,9 @@ WILSON.ANNOUNCE_KYNO_BERSERKERBUFF_END = "My heightened aggression seems to have
 WILSON.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Interesting! My metabolism seems more efficient."
 WILSON.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "My hunger rate appears to be normal again."
 
+WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The darkness no longer frightens me."
+WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Tthe darkness feels unsettling again."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It's not this one."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "He wants something else."
@@ -1107,6 +1110,7 @@ WILSON.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Just an empty bottle."
 
 WILSON.DESCRIBE.KYNO_OCEANTRAP = "For the deadliest catch."
 
+WILSON.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "A curious carp that prefers the cover of night."
 WILSON.DESCRIBE.OCEANFISH_PUFFERFISH = "Careful! It looks... dangerously inflatable."
 WILSON.DESCRIBE.OCEANFISH_STURGEON = "A very old fish... practically prehistoric!"
 
@@ -1213,3 +1217,5 @@ WILSON.DESCRIBE.CHICKENROTISSERIE = "Winner, winner! Chicken dinner!"
 
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A soothing cup of aloe tea."
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A delightfully sweet floral tea."
+
+WILSON.DESCRIBE.SOULJUICE = "A curious blend of soul energy and pomegranate."

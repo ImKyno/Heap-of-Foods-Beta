@@ -84,6 +84,9 @@ WEBBER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "A gente tá menos esmagador agora."
 WEBBER.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "A gente não sente fome tão rápido!"
 WEBBER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Uh-oh, a fome voltou."
 
+WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_START = "O escuro não incomoda mais a gente!"
+WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Uh oh! O escuro voltou a assustar."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Achamos que isso não é o que ele quer."
@@ -1107,6 +1110,7 @@ WEBBER.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Queríamos que tivesse refrigerante 
 
 WEBBER.DESCRIBE.KYNO_OCEANTRAP = "As coisas entram. O jantar sai."
 
+WEBBER.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Uau! Um peixe noturno assustador!"
 WEBBER.DESCRIBE.OCEANFISH_PUFFERFISH = "Ai! Não queremos abraçar esse aí."
 WEBBER.DESCRIBE.OCEANFISH_STURGEON = "Parece tão velho! Aposto que sabe várias histórias de peixes!"
 
@@ -1213,3 +1217,5 @@ WEBBER.DESCRIBE.CHICKENROTISSERIE = "Tá girando! E o cheiro é incrível!"
 
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Cheira até que bem!"
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Tem gosto de flores!"
+
+WEBBER.DESCRIBE.SOULJUICE = "Uau! Cheira meio assustador!"

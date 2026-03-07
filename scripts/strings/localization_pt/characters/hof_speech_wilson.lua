@@ -84,6 +84,9 @@ WILSON.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Minha agressividade elevada parece ter
 WILSON.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Interessante! Meu metabolismo parece mais eficiente."
 WILSON.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Minha taxa de fome parece ter voltado ao normal."
 
+WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_START = "A escuridão não me assusta mais."
+WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ah... a escuridão voltou a ser perturbadora."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ele quer outra coisa."
@@ -1107,6 +1110,7 @@ WILSON.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Apenas uma garrafa vazia."
 
 WILSON.DESCRIBE.KYNO_OCEANTRAP = "Para a captura mais mortal."
 
+WILSON.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Uma carpa curiosa que prefere a proteção da noite."
 WILSON.DESCRIBE.OCEANFISH_PUFFERFISH = "Cuidado! Parece... perigosamente inflável."
 WILSON.DESCRIBE.OCEANFISH_STURGEON = "Um peixe muito antigo... praticamente pré-histórico!"
 
@@ -1213,3 +1217,5 @@ WILSON.DESCRIBE.CHICKENROTISSERIE = "O calor rotacional garante um cozimento uni
 
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Uma reconfortante xícara de chá de aloe."
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Um chá floral deliciosamente doce."
+
+WILSON.DESCRIBE.SOULJUICE = "Uma curiosa mistura de energia de alma e romã."

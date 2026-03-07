@@ -84,6 +84,9 @@ WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Wolfgang não sente mais a grande f�
 WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Wolfgang fica cheio por mais tempo!"
 WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Wolfgang está com fome de novo..."
 
+WOLFGANG.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Wolfgang não tem medo do escuro agora!"
+WOLFGANG.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Escuro é assustador de novo..."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é o correto."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Porco poderoso não quer isso."
@@ -1107,6 +1110,7 @@ WOLFGANG.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "É só garrafa."
 
 WOLFGANG.DESCRIBE.KYNO_OCEANTRAP = "Peixinho não tem chance."
 
+WOLFGANG.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Peixe noturno pequeno. Wolfgang poderia comer muitos!"
 WOLFGANG.DESCRIBE.OCEANFISH_PUFFERFISH = "Peixinho pequeno, mas cheio de espinhos! Wolfgang precisa ter cuidado!"
 WOLFGANG.DESCRIBE.OCEANFISH_STURGEON = "Peixe forte! Wolfgang respeita peixe forte!"
 
@@ -1213,3 +1217,5 @@ WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Galinha girando deixa Wolfgang com muita 
 
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Bebida quente deixa Wolfgang forte!"
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Bebida doce para poderoso Wolfgang!"
+
+WOLFGANG.DESCRIBE.SOULJUICE = "Bebida pequena, mas forte como Wolfgang!"

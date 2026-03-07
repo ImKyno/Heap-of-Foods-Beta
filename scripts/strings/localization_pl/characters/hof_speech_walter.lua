@@ -84,6 +84,9 @@ WALTER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Dobra, głęboki oddech. Z powrotem do
 WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Super! Mogę dłużej wytrzymać bez jedzenia!"
 WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Chyba znów pora na przekąskę."
 
+WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Hej, teraz mogę poradzić sobie z ciemnością!"
+WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Uh... wolałem, kiedy ciemność nie była straszna."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zła rzecz!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmm, nie w tym przypadku."
@@ -1107,6 +1110,7 @@ WALTER.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Świetnie. Pusta butelka. Dokładnie
 
 WALTER.DESCRIBE.KYNO_OCEANTRAP = "Wygląda, jakby mogła uwięzić ryby w środku."
 
+WALTER.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Wygląda na rybę, która wychodzi, gdy ognisko przygasa."
 WALTER.DESCRIBE.OCEANFISH_PUFFERFISH = "Klasyczny morski mechanizm obronny. Super!"
 WALTER.DESCRIBE.OCEANFISH_STURGEON = "Wow! Żywy skamieniały! Niesamowite!"
 
@@ -1213,3 +1217,5 @@ WALTER.DESCRIBE.CHICKENROTISSERIE = "Byłoby świetne na obozową kolację!"
 
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Idealne na spokojny wieczór przy ognisku."
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Smakuje jak przygoda na łące."
+
+WALTER.DESCRIBE.SOULJUICE = "Nie jestem pewien, czy to można nazwać sokiem..."

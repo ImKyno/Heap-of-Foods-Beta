@@ -175,11 +175,43 @@ local function DoubleHarvest(self, harvester)
                     loot.components.perishable:SetPercent(self.product_spoilage * spoilpercent)
                     loot.components.perishable:StartPerishing()
                 end
+				
                 if harvester ~= nil and harvester.components.inventory ~= nil then
                     harvester.components.inventory:GiveItem(loot, nil, self.inst:GetPosition())
                 else
                     LaunchAt(loot, self.inst, nil, 1, 1)
                 end
+				
+				-- Anniverary Event. Chance to get Anniversary Cheer when cooking.
+				if not TUNING.HOFBIRTHDAY_BLOCKED_RECIPES[loot.prefab] and IsSpecialEventActive(SPECIAL_EVENTS.HOFBIRTHDAY) 
+				and harvester:HasTag("cheer_rewardable") --[[math.random() <= TUNING.HOFBIRTHDAY_CHEER_CHANCE]]  then
+					local cheer = SpawnPrefab("kyno_hofbirthday_cheer")
+					
+					if harvester ~= nil and harvester.components.inventory ~= nil then
+						harvester.components.inventory:GiveItem(cheer, nil, self.inst:GetPosition())
+					else
+						LaunchAt(cheer, self.inst, nil, 1, 1)
+					end
+				end
+				
+				-- For refunding Empty Bottles when harvesting.
+				if harvester ~= nil and loot ~= nil and loot:HasTag("bottled") then
+					local amount = loot.bottlesize or 1
+
+					for i = 1, amount do
+						local bottle = SpawnPrefab("messagebottleempty")
+						
+						if bottle then
+							local inv = harvester.components.inventory
+							
+							if inv then
+								inv:GiveItem(bottle, nil, self.inst:GetPosition())
+							else
+								LaunchAt(bottle, self.inst, nil, 1, 1)
+							end
+						end
+					end
+				end
             end
 			
             self.product = nil

@@ -84,6 +84,9 @@ WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Furia bitwy słabnie..."
 WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Ciało moje wytrzymuje bez uczty!"
 WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Powraca zew głodu!"
 
+WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Cienie nie budzą lęku w sercu wojowniczki!"
+WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Cienie znów wzywają do bitwy!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zło!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie ta uczta! Bestia chce pyszniejszego jedzenia!"
@@ -1107,6 +1110,7 @@ WATHGRITHR.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Pusta z wiadomości i napoju. Sz
 
 WATHGRITHR.DESCRIBE.KYNO_OCEANTRAP = "Przynieś mi łupy morza!"
 
+WATHGRITHR.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Księżycowa pływaczka z cienistych wód!"
 WATHGRITHR.DESCRIBE.OCEANFISH_PUFFERFISH = "Noszę zbroję z kolców! Godny morski przeciwnik!"
 WATHGRITHR.DESCRIBE.OCEANFISH_STURGEON = "Potężna ryba legend! Uczta będzie wspaniała!"
 
@@ -1213,3 +1217,5 @@ WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "Godna pieczeń, odpowiednia na wojownic
 
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Wojowniczka woli miód pitny, lecz to wystarczy!"
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodkie jak pieśń dziewicy!"
+
+WATHGRITHR.DESCRIBE.SOULJUICE = "Napój wojownika dotknięty przez błądzące dusze!"

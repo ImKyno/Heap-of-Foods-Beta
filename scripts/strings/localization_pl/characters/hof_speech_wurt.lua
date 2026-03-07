@@ -84,6 +84,9 @@ WURT.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Już nie super silna..."
 WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Syta na dłużej!"
 WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Znowu głodna..."
 
+WURT.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność nie straszna teraz! florp!"
+WURT.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ciemność znów straszna!!"
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Ładne rybki w bagnie!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... źle..."
@@ -1109,6 +1112,7 @@ WURT.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Brak rzeczy, florp."
 
 WURT.DESCRIBE.KYNO_OCEANTRAP = "Glurgh! Złe dla moich rybich przyjaciół..."
 
+WURT.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Ciemnowodna ryba! florp!"
 WURT.DESCRIBE.OCEANFISH_PUFFERFISH = "Rybny przyjaciel ma dużo kolców, florp!"
 WURT.DESCRIBE.OCEANFISH_STURGEON = "Duża, stara ryba! Bardzo silna, florp!"
 
@@ -1215,3 +1219,5 @@ WURT.DESCRIBE.CHICKENROTISSERIE = "Nieee! Biedny ptak! To nie jedzenie, florp!"
 
 WURT.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Ciepły napój z rośliny, flort."
 WURT.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodki napój z kwiatka, florp."
+
+WURT.DESCRIBE.SOULJUICE = "Dziwny czerwony napój! florp."

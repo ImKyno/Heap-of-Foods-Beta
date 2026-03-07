@@ -84,6 +84,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_BERSERKERBUFF_END = "My constitution appears stabiliz
 WICKERBOTTOM.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "A temporary reduction in caloric expenditure."
 WICKERBOTTOM.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "My metabolic rate has normalized."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_DARKNESSBUFF_START = "My fear of the dark appears to have subsided."
+WICKERBOTTOM.ANNOUNCE_KYNO_DARKNESSBUFF_END = "My aversion to darkness has returned."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It requires something else."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. I think he said something about wobsters."
@@ -1107,6 +1110,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "I do like when there is a manu
 
 WICKERBOTTOM.DESCRIBE.KYNO_OCEANTRAP = "Place it near the creature's den."
 
+WICKERBOTTOM.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "A carp adapted to nocturnal behavior. Fascinating."
 WICKERBOTTOM.DESCRIBE.OCEANFISH_PUFFERFISH = "Ah, Tetraodontidae. Best handled with extreme caution."
 WICKERBOTTOM.DESCRIBE.OCEANFISH_STURGEON = "Acipenseridae! Remarkably ancient lineage, fascinating!"
 
@@ -1213,3 +1217,5 @@ WICKERBOTTOM.DESCRIBE.CHICKENROTISSERIE = "A most efficient method of roasting p
 
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A properly infused herbal tisane."
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A pleasantly aromatic infusion."
+
+WICKERBOTTOM.DESCRIBE.SOULJUICE = "An intriguing infusion of soul essence and fruit."

@@ -84,6 +84,9 @@ WARLY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Intensywność opadła."
 WARLY.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Ach! Jakże satysfakcjonująca wydajność!"
 WARLY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Mój apetyt powrócił w pełni."
 
+WARLY.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ach! Nawet najciemniejsza noc wydaje się przyjazna."
+WARLY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Noc odzyskuje swój groźny charakter."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Źle, źle..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Masz ochotę na coś jeszcze pyszniejszego?"
@@ -1107,6 +1110,7 @@ WARLY.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Ciekawe, jaki trunek był w niej wcze
 
 WARLY.DESCRIBE.KYNO_OCEANTRAP = "Mogę zwabić tu pyszne stworzenia morskie!"
 
+WARLY.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Ach, ryba, która ukazuje się w świetle księżyca!"
 WARLY.DESCRIBE.OCEANFISH_PUFFERFISH = "Ah, ryba fugu... bardzo niebezpieczna, jeśli źle przygotowana."
 WARLY.DESCRIBE.OCEANFISH_STURGEON = "Marzenia o kawiorze zaczynają się tutaj, mon ami!"
 
@@ -1213,3 +1217,5 @@ WARLY.DESCRIBE.CHICKENROTISSERIE = "Ach! Powolne pieczenie daje soczystą nagrod
 
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Delikatnie zaparzone do perfekcji."
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Uroczy, słodki bukiet w filiżance."
+
+WARLY.DESCRIBE.SOULJUICE = "Ach! Niezwykła, lecz zachwycająca mikstura!"

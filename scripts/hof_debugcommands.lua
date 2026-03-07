@@ -899,8 +899,8 @@ function c_hofrecipe(recipename)
 		"hof_foodrecipes_warly",
 		"hof_foodrecipes_item",
 		"hof_foodrecipes_seasonal",
-		"hof_foodrecipes_keg",
-		"hof_foodrecipes_jar",
+		"hof_brewrecipes_keg",
+		"hof_brewrecipes_jar",
 	}
 
 	local recipe

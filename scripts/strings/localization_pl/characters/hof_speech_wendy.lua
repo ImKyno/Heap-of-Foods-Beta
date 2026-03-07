@@ -84,6 +84,9 @@ WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Furia przemija, jak wszystko."
 WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Nawet głód na chwilę cichnie."
 WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Pustka powraca."
 
+WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność obejmuje mnie łagodnie."
+WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ciemność znów wydaje się wroga."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może warto coś zebrać?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Oczywiście, że nie tego chce to głupie stworzenie."
@@ -1107,6 +1110,7 @@ WENDY.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Pusta. Jak moja dusza."
 
 WENDY.DESCRIBE.KYNO_OCEANTRAP = "Chodźcie, stworzenia morza! Czeka was pyszna przekąska!"
 
+WENDY.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Pływa tam, gdzie światło nie odważy się podążyć."
 WENDY.DESCRIBE.OCEANFISH_PUFFERFISH = "Nadyma się ze strachu... Znam to uczucie."
 WENDY.DESCRIBE.OCEANFISH_STURGEON = "Przeżyła wiele lat... może zbyt wiele."
 
@@ -1213,3 +1217,5 @@ WENDY.DESCRIBE.CHICKENROTISSERIE = "Kręci się bez końca, jak wszystko."
 
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Gorzka ciepłota dla gorzkiego świata."
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodycz przemija, jak wszystko."
+
+WENDY.DESCRIBE.SOULJUICE = "Gorzko-słodki smak życia i śmierci."

@@ -96,6 +96,7 @@ AddBrewingValues({"kyno_truffles"},             {veggie     = 1,   mushrooms    
 AddBrewingValues({"kyno_sporecap"},             {veggie     = 0.5, mushrooms     = 1, monster = 0.5})
 AddBrewingValues({"kyno_sporecap_dark"},        {veggie     = 0.5, mushrooms     = 1, monster = 0.5})
 AddBrewingValues({"truffleoil"},                {oil        = 1})
+AddBrewingValues({"kyno_bottle_soul"},          {soul       = 1})
 
 local fishroes =
 {
@@ -114,6 +115,7 @@ local fishroes =
 	"kyno_roe_oceanfish_medium_7",
 	"kyno_roe_oceanfish_medium_8",
 	"kyno_roe_oceanfish_medium_9",
+	"kyno_roe_oceanfish_midnight_carp",
 	"kyno_roe_oceanfish_pufferfish",
 	"kyno_roe_oceanfish_small_1",
 	"kyno_roe_oceanfish_small_2",

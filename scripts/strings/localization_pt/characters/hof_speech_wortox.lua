@@ -84,6 +84,9 @@ WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Ah, a diversão arriscada acabou!"
 WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "A fome ficou mais lenta!"
 WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "A barriga volta a roncar!"
 
+WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "A escuridão faz cócegas em vez de morder!"
+WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "A escuridão voltou a morder!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de outra coisa."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sei que essa brincadeira foi boa, mas vou trazer o correto agora."
@@ -1107,6 +1110,7 @@ WORTOX.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Ela está vazia."
 
 WORTOX.DESCRIBE.KYNO_OCEANTRAP = "Eles não vão ver essa chegando. Hyuyu!"
 
+WORTOX.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Um nadador da meia-noite!"
 WORTOX.DESCRIBE.OCEANFISH_PUFFERFISH = "Tão cheio de ar e ainda assim tão mortal! Hyuyu!"
 WORTOX.DESCRIBE.OCEANFISH_STURGEON = "Tão antigo! Aposto que já viu muita travessura mortal! Hyuyu!"
 
@@ -1213,3 +1217,5 @@ WORTOX.DESCRIBE.CHICKENROTISSERIE = "Girado! Hyuyu!"
 
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Travessura em forma de chá!"
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Golinhos doces!"
+
+WORTOX.DESCRIBE.SOULJUICE = "Almas e frutas! Que delícia!"

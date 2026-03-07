@@ -84,6 +84,9 @@ WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_END = "The battle-fury wanes..."
 WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "My body endures without feast!"
 WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The call of hunger returns!"
 
+WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The shadows hold no terror for a warrior!"
+WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The shadows seek battle once more!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wrong feast! Beast wants a more delightful food!"
@@ -1107,6 +1110,7 @@ WATHGRITHR.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Empty of both messages and drink
 
 WATHGRITHR.DESCRIBE.KYNO_OCEANTRAP = "Bring me spoils of the sea!"
 
+WATHGRITHR.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "A moonlit swimmer from shadowed waters!"
 WATHGRITHR.DESCRIBE.OCEANFISH_PUFFERFISH = "It wears armor of spikes! A worthy sea foe!"
 WATHGRITHR.DESCRIBE.OCEANFISH_STURGEON = "A mighty fish of legend! I shall feast well!"
 
@@ -1213,3 +1217,5 @@ WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "A worthy roast, fit for a warrior's fea
 
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A warrior prefers mead, but this shall do!"
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet as a maiden's song!"
+
+WATHGRITHR.DESCRIBE.SOULJUICE = "A warrior's draught touched by wandering souls!"

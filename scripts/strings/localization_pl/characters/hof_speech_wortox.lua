@@ -84,6 +84,9 @@ WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Och, ryzykowna zabawa się skończyła
 WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Głód zwolnił pościg!"
 WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Brzuszek znów burczy!"
 
+WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność raczej łaskocze niż gryzie!"
+WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Och nie! Ciemność znów gryzie!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję czegoś jeszcze."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wiem, że ten żart był niezły, ale przejdźmy do konkretów."
@@ -1107,6 +1110,7 @@ WORTOX.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Jest pusta."
 
 WORTOX.DESCRIBE.KYNO_OCEANTRAP = "Nie zauważą tej. Hyuyu!"
 
+WORTOX.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Nocny pływak! Hee hee!"
 WORTOX.DESCRIBE.OCEANFISH_PUFFERFISH = "Tyle powietrza, a jednak tak śmiercionośna! Hyuyu!"
 WORTOX.DESCRIBE.OCEANFISH_STURGEON = "Taka starożytna! Pewnie widziała już wiele śmiertelnych psot! Hyuyu!"
 
@@ -1213,3 +1217,5 @@ WORTOX.DESCRIBE.CHICKENROTISSERIE = "W kółko kręci się ptaszek! Hyuyu!"
 
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Listna psota w filiżance!"
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodkie łyczki i figlarne podskoki!"
+
+WORTOX.DESCRIBE.SOULJUICE = "Dusze i owoce! Co za uczta!"

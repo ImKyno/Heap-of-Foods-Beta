@@ -254,6 +254,14 @@ local function RerollWares(inst)
 		inst:AddWares(seasonalwares)
 	end
 	
+	if inst.isfullmoon then
+		inst:AddWares(inst.WARES.SPECIAL["isfullmoon"])
+    end
+
+	if inst.islunarhailing then
+		inst:AddWares(inst.WARES.SPECIAL["islunarhailing"])
+	end
+	
 	inst:EnablePrototyper(inst:HasTag("revealed"))
 	-- inst:EnablePrototyper(inst:HasStock())
 end
@@ -263,8 +271,8 @@ local function OnTimerDone(inst, data)
 		if data.name == "refreshwares" then
 			local x, y, z = inst.Transform:GetWorldPosition()
 			
-			if IsAnyPlayerInRangeSq(x, y, z, PLAYER_CAMERA_SEE_DISTANCE_SQ, true) then
-				-- A nearby alive player is too close, let us reschedule the timer.
+			if IsAnyPlayerInRangeSq(x, y, z, PLAYER_CAMERA_SEE_DISTANCE_SQ, true) and inst.entity:IsVisible() then
+				-- We are outside and a nearby alive player is too close, let us reschedule the timer.
 				inst.components.timer:StartTimer("refreshwares", 5)
 			else
 				inst:RerollWares()
@@ -354,12 +362,6 @@ local function SetCelestialScionKilled(inst, active)
 end
 
 local function OnWorldInit(inst)
-	inst:WatchWorldState("islunarhailing", inst.SetIsLunarHailing)
-	inst:SetIsLunarHailing(TheWorld.state.islunarhailing)
-	
-	inst:WatchWorldState("isfullmoon", inst.SetIsFullMoon)
-	inst:SetIsFullMoon(TheWorld.state.isfullmoon)
-	
 	-- Don't we need a LotFF tracker? I guess them being in WARES.ALWAYS will always override it on save/load anyway.
 
 	if TheWorld.components.wagboss_tracker and TheWorld.components.wagboss_tracker:IsWagbossDefeated() then
@@ -532,9 +534,6 @@ local function fn()
 
 	inst:SetBrain(brain)
 	inst:SetStateGraph("SGmeadowislandtrader")
-
-	inst.inittask = inst:DoTaskInTime(0, Initialize)
-	inst:DoTaskInTime(0, OnWorldInit)
 	
 	inst:ListenForEvent("ms_lordfruitflykilled", function(world, data)
 		SetLordFruitFlyKilled(inst, true)
@@ -543,6 +542,15 @@ local function fn()
 	inst:ListenForEvent("wagboss_defeated", function(world, data)
 		SetCelestialScionKilled(inst, true)
 	end, TheWorld)
+	
+	inst:WatchWorldState("islunarhailing", inst.SetIsLunarHailing)
+	inst:SetIsLunarHailing(TheWorld.state.islunarhailing)
+	
+	inst:WatchWorldState("isfullmoon", inst.SetIsFullMoon)
+	inst:SetIsFullMoon(TheWorld.state.isfullmoon)
+	
+	inst.inittask = inst:DoTaskInTime(0, Initialize)
+	inst:DoTaskInTime(0, OnWorldInit)
 	
 	-- We somehow got a Sammy without a home. Kill it! Kill it with fire!
 	--[[

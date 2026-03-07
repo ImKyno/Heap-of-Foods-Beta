@@ -84,6 +84,9 @@ WATHGRITHR.ANNOUNCE_KYNO_BERSERKERBUFF_END = "A fúria da batalha enfraquece..."
 WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Meu corpo resiste sem banquetes!"
 WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "O chamado da fome retorna!"
 
+WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_START = "As sombras não trazem terror a uma guerreira!"
+WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_END = "As sombras buscam batalha mais uma vez!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Errado!"
@@ -1107,6 +1110,7 @@ WATHGRITHR.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Vazia de mensagem e bebida. Que 
 
 WATHGRITHR.DESCRIBE.KYNO_OCEANTRAP = "Traga-me os despojos do mar!"
 
+WATHGRITHR.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Uma nadadora iluminada pela lua das águas sombrias!"
 WATHGRITHR.DESCRIBE.OCEANFISH_PUFFERFISH = "Veste uma armadura de espinhos! Um inimigo digno do mar!"
 WATHGRITHR.DESCRIBE.OCEANFISH_STURGEON = "Um peixe lendário e poderoso! Um banquete digno!"
 
@@ -1213,3 +1217,5 @@ WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "Um assado digno, adequado a um banquete
 
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Uma guerreira prefere hidromel, mas isto serve!"
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Doce como o canto de uma donzela!"
+
+WATHGRITHR.DESCRIBE.SOULJUICE = "Uma bebida de guerreiro tocada por almas errantes!"

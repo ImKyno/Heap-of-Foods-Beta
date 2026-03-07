@@ -1036,7 +1036,7 @@ local kyno_foods_keg =
 		health = -5,
 		hunger = 12.5,
 		sanity = 60,
-		cooktime = 48,
+		cooktime = 24,
 		overridebuild = "kyno_foodrecipes_keg",
 		floater = TUNING.HOF_FLOATER,
 		tags = {"fooddrink"},
@@ -1101,6 +1101,70 @@ local kyno_foods_keg =
                 end
             end
         end,
+	},
+	
+	nukacola_dark =
+	{
+		test = function(cooker, names, tags) return names.nukacola and names.horrorfuel and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = 30,
+		hunger = 62.5,
+		sanity = -30,
+		cooktime = 72,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MAXHEALTH,
+		nameoverride = "NUKACOLA",
+		overridebuild = "kyno_foodrecipes_keg",
+		floater = TUNING.HOF_FLOATER,
+		tags = {"fooddrink"},
+		card_def = {ingredients = {{"nukacola", 1}, {"horrorfuel", 1}, {"ice", 1}}},
+		prefabs = { "kyno_maxhealthbuff" },
+		oneatenfn = function(inst, eater)
+			eater:PushEvent("bottlecap")
+			eater:AddDebuff("kyno_maxhealthbuff", "kyno_maxhealthbuff")
+
+			if TryLuckRoll(eater, TUNING.KYNO_NUKACOLA_BOTTLECAP_CHANCE, HofLuckFormulas.NukaColaBottleCap) then
+				local cap = SpawnPrefab("kyno_bottlecap")
+				if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost") then
+					eater.components.inventory:GiveItem(cap)
+				end
+			end
+		end,
+	},
+	
+	nukacola_twist =
+	{
+		test = function(cooker, names, tags) return names.nukacola and names.cactus_flower and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = 30,
+		hunger = 30,
+		sanity = 30,
+		cooktime = 72,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MAXOMNI,
+		nameoverride = "NUKACOLA",
+		overridebuild = "kyno_foodrecipes_keg",
+		floater = TUNING.HOF_FLOATER,
+		tags = {"fooddrink"},
+		card_def = {ingredients = {{"nukacola", 1}, {"cactus_flower", 1}, {"ice", 1}}},
+		prefabs = { "kyno_maxomnibuff" },
+		oneatenfn = function(inst, eater)
+			eater:PushEvent("bottlecap")
+			eater:AddDebuff("kyno_maxomnibuff", "kyno_maxomnibuff")
+
+			if TryLuckRoll(eater, TUNING.KYNO_NUKACOLA_BOTTLECAP_CHANCE, HofLuckFormulas.NukaColaBottleCap) then
+				local cap = SpawnPrefab("kyno_bottlecap")
+				if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() and not eater:HasTag("playerghost") then
+					eater.components.inventory:GiveItem(cap)
+				end
+			end
+		end,
 	},
 	
 	nukashine =
@@ -1251,6 +1315,47 @@ local kyno_foods_keg =
 		prefabs = { "kyno_stealthbuff" },
 		oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_stealthbuff", "kyno_stealthbuff")
+		end,
+	},
+	
+	souljuice =
+	{
+		test = function(brewer, names, tags) return names.kyno_bottle_soul and names.pomegranate and tags.frozen end,
+		priority = 100,
+		foodtype = FOODTYPE.PREPAREDSOUL,
+		perishtime = nil,
+		fireproof = true,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+        temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 0,
+		hunger = 0,
+		sanity = 0,
+		health2 = 40, -- health2, hunger2, sanity2 are fake stats just to appear nice on Brewbook.
+		hunger2 = 100,
+		sanity2 = 20,
+		cooktime = 48,
+		bottlesize = 1,
+		overridebuild = "kyno_foodrecipes_keg",
+		floater = TUNING.HOF_FLOATER,
+		tags = {"fooddrink", "preparedsoul", "bottled"},
+		card_def = {ingredients = {{"kyno_bottle_soul", 1}, {"pomegranate", 1}, {"ice", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater:HasTag("soulstealer") and eater.components.health ~= nil and not eater.components.health:IsDead() and
+			not eater:HasTag("playerghost") and eater.components.hunger ~= nil and eater.components.sanity ~= nil then
+				eater.components.hunger:DoDelta(TUNING.SOULJUICE_HUNGER)
+				
+				-- Nice inclination makes you lose sanity. Naughty inclination heals for less.
+				if eater.wortox_inclination == "nice" then
+					eater.components.health:DoDelta(TUNING.SOULJUICE_HEALTH_NICE)
+					eater.components.sanity:DoDelta(TUNING.SOULJUICE_SANITY_NICE)
+				elseif eater.wortox_inclination == "naughty" then
+					eater.components.health:DoDelta(TUNING.SOULJUICE_HEALTH_NAUGHTY)
+					eater.components.sanity:DoDelta(TUNING.SOULJUICE_SANITY_NAUGHTY)
+				else
+					eater.components.health:DoDelta(TUNING.SOULJUICE_HEALTH)
+					eater.components.sanity:DoDelta(TUNING.SOULJUICE_SANITY)
+				end
+			end
 		end,
 	},
 

@@ -84,6 +84,9 @@ WURT.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Not extra strong anymore..."
 WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Stay full longer!"
 WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Hungry again..."
 
+WURT.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Dark not scary now! florp!"
+WURT.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Dark scary again!!"
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Pretty fishes are in swamp!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... wrong..."
@@ -1109,6 +1112,7 @@ WURT.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "It lacks stuff, florp."
 
 WURT.DESCRIBE.KYNO_OCEANTRAP = "Glurgh! Bad for fishy friends..."
 
+WURT.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Dark water friend!"
 WURT.DESCRIBE.OCEANFISH_PUFFERFISH = "Fishy friend have many pointy bits, florp!"
 WURT.DESCRIBE.OCEANFISH_STURGEON = "Big old fishy! Very strong, florp!"
 
@@ -1215,3 +1219,5 @@ WURT.DESCRIBE.CHICKENROTISSERIE = "Nooo! Poor bird!"
 
 WURT.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Warm plant drink, flort."
 WURT.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet flower drink, florp!"
+
+WURT.DESCRIBE.SOULJUICE = "Strange red drink! florp."

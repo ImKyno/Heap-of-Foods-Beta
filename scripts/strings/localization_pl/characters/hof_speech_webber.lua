@@ -84,6 +84,9 @@ WEBBER.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Już nie jesteśmy tacy miażdżący."
 WEBBER.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Nie głodniejemy tak szybko!"
 WEBBER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "O nie, znowu jesteśmy głodni."
 
+WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność już nas nie przeraża!"
+WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "O nie... ciemność znów jest straszna."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie tego."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sądzimy, że to nie jest właściwy posiłek, jakiego potrzebuje."
@@ -1107,6 +1110,7 @@ WEBBER.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Chcielibyśmy, żeby była pełna na
 
 WEBBER.DESCRIBE.KYNO_OCEANTRAP = "Wchodzą stworzenia, wychodzi kolacja."
 
+WEBBER.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Łał! Straszna nocna ryba!"
 WEBBER.DESCRIBE.OCEANFISH_PUFFERFISH = "Ała! Nie chcemy go przytulać."
 WEBBER.DESCRIBE.OCEANFISH_STURGEON = "Wygląda tak staro! Może zna rybie opowieści!"
 
@@ -1213,3 +1217,5 @@ WEBBER.DESCRIBE.CHICKENROTISSERIE = "Kręci się! I pachnie niesamowicie!"
 
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Całkiem ładnie pachnie!"
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Smakuje jak kwiatki!"
+
+WEBBER.DESCRIBE.SOULJUICE = "Łał! Pachnie trochę strasznie!"

@@ -156,6 +156,7 @@ local fishroes_meat =
 	"kyno_roe_oceanfish_medium_7",
 	"kyno_roe_oceanfish_medium_8",
 	"kyno_roe_oceanfish_medium_9",
+	"kyno_roe_oceanfish_midnight_carp",
 	"kyno_roe_oceanfish_pufferfish",
 	"kyno_roe_oceanfish_small_1",
 	"kyno_roe_oceanfish_small_2",
@@ -196,6 +197,11 @@ local oceanfishes =
 	oceanfish_pufferfish_inv =
 	{
 		meat = 0.5, fish = 0.5,
+	},
+
+	oceanfish_midnight_carp_inv =
+	{
+		meat = 1, fish = 1,
 	},
 	
 	oceanfish_sturgeon_inv =

@@ -315,6 +315,12 @@ local fishroes =
 		hungervalue         = TUNING.KYNO_ROE_OCEANFISH_PUFFERFISH_HUNGER,
 		sanityvalue         = TUNING.KYNO_ROE_OCEANFISH_PUFFERFISH_SANITY,
 	},
+
+	{
+		name                = "oceanfish_midnight_carp",
+		goldvalue           = 2,
+		stacksize           = TUNING.STACK_SIZE_MEDITEM,
+	},
 	
 	{
 		name                = "oceanfish_sturgeon",

@@ -52,7 +52,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NIGHTVISION = "Daje widzenie w nocy pr
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NAUGHTY = "Spożycie tego jedzenia, stworzonego z części niewinnej duszy, spowoduje pojawienie się „Jego” w pobliżu."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HASTE = "Zwiększona prędkość wszystkich wykonywanych działań przez określony czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BLOOM = "Mieszanka kompostów wrzuconych do garnka, która może stymulować kwitnienie do jego maksymalnego potencjału.\n\n\"Sztuka!\" - Wormwood."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOUL = "Specjalne jedzenie przygotowane z zebraną Duszą.\n\nWortox może zjeść to jedzenie, aby uzyskać pełne korzyści, bez kar w przeciwieństwie do innych zwykłych jedzeń."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOUL = "Specjalne jedzenie przygotowane z zebranej Duszy.\n\nWortox może zjeść to jedzenie, aby otrzymać korzyści zależne od jego skłonności Niegrzecznej lub Grzecznej."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOUL2 = "Specjalne jedzenie przygotowane z zebranej Duszy.\n\nWortox może zjeść to jedzenie, aby otrzymać korzyści zależne od jego skłonności Niegrzecznej lub Grzecznej.\n\nKrótko obniża temperaturę."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DEERCLOPS = "Zjedzenie tego jedzenia spowoduje pojawienie się Deerclopsa w pobliżu."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BEARGER = "Zjedzenie tego jedzenia spowoduje pojawienie się Beargera w pobliżu."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FORTUNE = "Złam jednego, aby sprawdzić, co los dla ciebie przygotował."
@@ -116,6 +117,12 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE2 = "Zwiększa maksym
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HOFBIRTHDAY_SLICE3 = "Zwiększa maksymalną poczytalność o 15% na pewien czas.\n\nŚwiętując 5. rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BERSERKER = "Zwiększone obrażenia i zmniejszona odporność na obrażenia przez pewien czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HUNGERRATE = "Zmniejszone uczucie głodu przez pewien czas."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_DARKNESS = "To jedzenie może sprawić, że ocalały przez pewien czas nie będzie bał się ciemności."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHEALTH = "Zwiększa maksymalne zdrowie o 30% na pewien czas."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHUNGER = "Zwiększa maksymalny głód o 30% na pewien czas."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXSANITY = "Zwiększa maksymalną poczytalność o 30% na pewien czas."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "Zwiększa maksymalne zdrowie o 30% na pewien czas.\nKrótko obniża temperaturę."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "Zwiększa maksymalne zdrowie, głód i zdrowie psychiczne o 15% na określony czas.\n\nKrótko obniża temperaturę."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Może być dodany do jedzenia w garnku za pomocą przenośnej stacji przypraw.\n\nJedzenie przyprawione Preserver Powder zmniejsza czas psucia się o połowę i neguje kary za zepsute jedzenie."

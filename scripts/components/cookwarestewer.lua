@@ -453,6 +453,25 @@ function CookwareStewer:Harvest(harvester)
 						LaunchAt(cheer, self.inst, nil, 1, 1)
 					end
 				end
+				
+				-- For refunding Empty Bottles when harvesting.
+				if harvester ~= nil and loot ~= nil and loot:HasTag("bottled") then
+					local amount = loot.bottlesize or 1
+
+					for i = 1, amount do
+						local bottle = SpawnPrefab("messagebottleempty")
+						
+						if bottle then
+							local inv = harvester.components.inventory
+							
+							if inv then
+								inv:GiveItem(bottle, nil, self.inst:GetPosition())
+							else
+								LaunchAt(bottle, self.inst, nil, 1, 1)
+							end
+						end
+					end
+				end
 			end
 			
 			self.product = nil

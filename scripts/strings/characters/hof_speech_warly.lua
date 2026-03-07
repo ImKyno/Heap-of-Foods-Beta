@@ -84,6 +84,9 @@ WARLY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "The intensity has mellowed."
 WARLY.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Ah! A most satisfying efficiency!"
 WARLY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "My appetite returns in full."
 
+WARLY.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ah! Even the darkest night feels welcoming."
+WARLY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The night regains its dreadful bite."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong, wrong..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You want something else more delicious?"
@@ -1107,6 +1110,7 @@ WARLY.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "I wonder what vintage used to be in t
 
 WARLY.DESCRIBE.KYNO_OCEANTRAP = "I can trick some delicious sea creatures into this!"
 
+WARLY.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Ah, a fish that reveals itself under moonlight!"
 WARLY.DESCRIBE.OCEANFISH_PUFFERFISH = "Ah, le poisson fugu... very dangerous if not prepared right."
 WARLY.DESCRIBE.OCEANFISH_STURGEON = "Caviar dreams begin here, mon ami!"
 
@@ -1213,3 +1217,5 @@ WARLY.DESCRIBE.CHICKENROTISSERIE = "Ah! Even roasting yields such succulent rewa
 
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Delicately steeped to perfection."
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A charmingly sweet bouquet in a cup."
+
+WARLY.DESCRIBE.SOULJUICE = "Ah! A most unusual concoction!"

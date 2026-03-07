@@ -1545,25 +1545,40 @@ local kyno_foods =
 	
 	soulstew = 
 	{
-		test = function(cooker, names, tags) return names.kyno_bottle_soul and (names.boneshard and names.boneshard >= 2) end,
-		priority = 1,
+		test = function(cooker, names, tags) return (names.kyno_bottle_soul and names.kyno_bottle_soul >= 2) and names.boneshard end,
+		priority = 10,
 		foodtype = FOODTYPE.PREPAREDSOUL,
 		perishtime = nil,
-		health = 10,
-		hunger = 62.5,
-		sanity = -10,
+		fireproof = true,
+		health = 0,
+		hunger = 0,
+		sanity = 0,
+		health2 = 30,
+		hunger2 = 75,
+		sanity2 = 15,
 		cooktime = 1.2,
-		-- oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOUL,
+		bottlesize = 2,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_cookpot",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"soulstew"},
-		card_def = {ingredients = {{"kyno_bottle_soul", 2}, {"boneshard", 2}}},
+		tags = {"preparedsoul", "bottled"},
+		card_def = {ingredients = {{"kyno_bottle_soul", 2}, {"boneshard", 1}, {"twigs", 1}}},
 		oneatenfn = function(inst, eater)
-			if eater:HasTag("soulstealer") then
-				eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH)
-				eater.components.hunger:DoDelta(TUNING.SOULSTEW_HUNGER)	
-				eater.components.sanity:DoDelta(TUNING.SOULSTEW_SANITY)
+			if eater:HasTag("soulstealer") and eater.components.health ~= nil and not eater.components.health:IsDead() and
+			not eater:HasTag("playerghost") and eater.components.hunger ~= nil and eater.components.sanity ~= nil then
+				eater.components.hunger:DoDelta(TUNING.SOULSTEW_HUNGER)
+				
+				-- Nice inclination makes you lose sanity. Naughty inclination heals for less.
+				if eater.wortox_inclination == "nice" then
+					eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH_NICE)
+					eater.components.sanity:DoDelta(TUNING.SOULSTEW_SANITY_NICE)
+				elseif eater.wortox_inclination == "naughty" then
+					eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH_NAUGHTY)
+					eater.components.sanity:DoDelta(TUNING.SOULSTEW_SANITY_NAUGHTY)
+				else
+					eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH)
+					eater.components.sanity:DoDelta(TUNING.SOULSTEW_SANITY)
+				end
 			end
 		end,
 	},

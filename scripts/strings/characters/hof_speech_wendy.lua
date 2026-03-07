@@ -84,6 +84,9 @@ WENDY.ANNOUNCE_KYNO_BERSERKERBUFF_END = "The fury fades, as all things do."
 WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Even hunger grows quieter."
 WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The emptiness returns."
 
+WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The darkness embraces me gently."
+WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The darkness feels hostile once more."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to gather?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Of course it's not what this stupid creature wants."
@@ -1107,6 +1110,7 @@ WENDY.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Empty. Like my soul."
 
 WENDY.DESCRIBE.KYNO_OCEANTRAP = "Come, creatures of the sea! Enjoy a lovely snack!"
 
+WENDY.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "It swims where the light dares not follow."
 WENDY.DESCRIBE.OCEANFISH_PUFFERFISH = "It puffs up in fear... I know the feeling."
 WENDY.DESCRIBE.OCEANFISH_STURGEON = "It has seen many years... too many, perhaps."
 
@@ -1213,3 +1217,5 @@ WENDY.DESCRIBE.CHICKENROTISSERIE = "Turning endlessly, as all things do."
 
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A bitter warmth for a bitter world."
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweetness fades, like all things."
+
+WENDY.DESCRIBE.SOULJUICE = "A bittersweet taste of life and death."

@@ -84,6 +84,9 @@ WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Calma aí, de volta ao normal."
 WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Bom! Não vou precisar de um lanche tão cedo."
 WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Voltando a sentir fome."
 
+WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Acho que o escuro nem é tão ruim assim, hein?"
+WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Certo, agora voltou a ficar assustador."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo diferente se encaixe aqui"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, ele não quer isso."
@@ -1107,6 +1110,7 @@ WOODIE.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "O que tinha dentro?"
 
 WOODIE.DESCRIBE.KYNO_OCEANTRAP = "Mal posso esperar por um jantar de frutos do mar."
 
+WOODIE.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "É, parece que prefere pescar depois do anoitecer."
 WOODIE.DESCRIBE.OCEANFISH_PUFFERFISH = "Caramba, esse tem mais espinhos que um porco-espinho, hein?"
 WOODIE.DESCRIBE.OCEANFISH_STURGEON = "Esse aí tem história, hein?"
 
@@ -1213,3 +1217,5 @@ WOODIE.DESCRIBE.CHICKENROTISSERIE = "Cheira a almoço de domingo, hein?"
 
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Bem calmante, né?"
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Cheira a primavera, né?"
+
+WOODIE.DESCRIBE.SOULJUICE = "Esse é um tipo estranho de suco, hein?"
