@@ -148,7 +148,14 @@ local function OnDeath(inst, data)
 end
 
 local function CanSleep(inst)
-	return DefaultSleepTest(inst)
+	local watchlight = inst.LightWatcher ~= nil or (inst.components.sleeper and inst.components.sleeper.watchlight)
+
+	if inst:HasTag("chicken_coop") then
+		return DefaultSleepTest(inst)
+	else
+		return not TheWorld:HasTag("cave") and TheWorld.state.isnight
+		or (TheWorld:HasTag("cave") and TheWorld.state.iscavenight and (not watchlight or not inst:IsInLight()))
+	end
 end
 
 local function CanSpawnEgg(inst)

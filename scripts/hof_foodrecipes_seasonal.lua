@@ -145,11 +145,14 @@ local kyno_foods_seasonal =
 	
 	festive_mulledpunch = 
 	{
-		test = function(cooker, names, tags) return tags.syrup and tags.sweetener and tags.frozen and not names.forgetmelots 
-		and not tags.meat and not tags.berries and not tags.fruit and not names.cutlichen and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
+		test = function(cooker, names, tags) return tags.syrup and tags.sweetener and tags.frozen and not tags.forgetweed
+		and not tags.meat and not tags.berries and not tags.fruit and not tags.jellyfish and not names.cutlichen 
+		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 15,
 		hunger = 12.5,
 		sanity = 33,
@@ -464,7 +467,7 @@ local kyno_foods_seasonal =
 		health = 40,
 		hunger = 12.5,
 		sanity = -20,
-		cooktime = .10,
+		cooktime = 1.0,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_seasonal_spooky",
 		floater = TUNING.HOF_FLOATER,
@@ -481,8 +484,9 @@ local kyno_foods_seasonal =
 	
 	spooky_pumpkincream =
 	{
-		test = function(cooker, names, tags) return names.pumpkin and names.kyno_pineapple_halved and (names.pomegranate or names.pomegranate_cooked)
-		and tags.dairy and not names.pumpkin_cooked and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
+		test = function(cooker, names, tags) return names.pumpkin and (names.kyno_pineapple_halved or names.kyno_pineapple_cooked)
+		and (names.pomegranate or names.pomegranate_cooked) and tags.dairy and not names.pumpkin_cooked 
+		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,

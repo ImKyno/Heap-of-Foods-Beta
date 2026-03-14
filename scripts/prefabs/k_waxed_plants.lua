@@ -411,7 +411,6 @@ local ret =
 		animset         = COFFEEBUSH_ANIMSET,
 		getanim_fn      = CoffeeBush_GetAnimFn,
 		assets          = ASSETS,
-		deployspacing   = DEPLOYSPACING.MEDIUM,
     }),
 	
 	WAXED_PLANTS.CreateWaxedPlant(
@@ -426,7 +425,6 @@ local ret =
 		animset       = SPOTBUSH_ANIMSET,
 		getanim_fn    = SpotBush_GetAnimFn,
 		assets        = ASSETS,
-		deployspacing = DEPLOYSPACING.MEDIUM,
     }),
 	
 	WAXED_PLANTS.CreateWaxedPlant(

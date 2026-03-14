@@ -99,7 +99,7 @@ AddPrefabPostInit("waxwell", function(inst)
 
     if inst.components.foodaffinity ~= nil then
         inst.components.foodaffinity:AddPrefabAffinity("gorge_crab_roll", TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("teared",          TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("caviar",          TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 
@@ -155,7 +155,7 @@ AddPrefabPostInit("wortox", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("jellyopop",         TUNING.AFFINITY_15_CALORIES_HUGE)
+        inst.components.foodaffinity:AddPrefabAffinity("pomegranatepie",    TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_pomegranate", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 
@@ -205,13 +205,14 @@ AddPrefabPostInit("wurt", function(inst)
 	end
 	
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("duriansoup",    1.93)
-		inst.components.foodaffinity:AddPrefabAffinity("jelly_durian",  1.93)
-		inst.components.foodaffinity:AddPrefabAffinity("wine_durian",   1.93)
-		inst.components.foodaffinity:AddPrefabAffinity("duriansplit",   1.93)
-		inst.components.foodaffinity:AddPrefabAffinity("duriansoup",    1.93)
-		inst.components.foodaffinity:AddPrefabAffinity("durianchicken", 1.93)
-		inst.components.foodaffinity:AddPrefabAffinity("monstermuffin", 1.33)
+		-- Wurt had too many favorite foods. This is to keep her in line with others.
+		-- These will now only negate the negative stats...
+		inst.components.foodaffinity:AddPrefabAffinity("duriansplit",   1.33)
+        inst.components.foodaffinity:AddPrefabAffinity("duriansoup",    1.33)
+		inst.components.foodaffinity:AddPrefabAffinity("wine_durian",   1.33)
+
+		inst.components.foodaffinity:AddPrefabAffinity("durianchicken", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("jelly_durian",  TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 	
 	if inst.components.locomotor ~= nil then
@@ -247,8 +248,10 @@ AddPrefabPostInit("wonkey", function(inst)
 	end
 
     if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("coconutwater", TUNING.AFFINITY_15_CALORIES_HUGE)
-		inst.components.foodaffinity:AddPrefabAffinity("jelly_banana", TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("kyno_banana",       TUNING.AFFINITY_15_CALORIES_SMALL)
+        inst.components.foodaffinity:AddPrefabAffinity("banana_pudding",    TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("jelly_banana",      TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("jelly_cave_banana", TUNING.AFFINITY_15_CALORIES_HUGE)
     end
 end)
 

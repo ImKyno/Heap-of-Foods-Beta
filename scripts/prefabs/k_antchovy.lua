@@ -129,9 +129,6 @@ local function fn()
 	inst:AddComponent("fishresearchable")
 	inst.components.fishresearchable:SetResearchFn(fishresearchfn)
 	
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_TINYITEM
-	
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
 	inst.components.perishable:StartPerishing()

@@ -51,6 +51,7 @@ local function beefalofn()
 	inst.components.edible.healthvalue = TUNING.KYNO_MILK_BEEFALO_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_MILK_BEEFALO_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_MILK_BEEFALO_SANITY
+	inst.components.edible.foodtype = FOODTYPE.GENERIC
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FASTISH)
@@ -103,6 +104,7 @@ local function koalefantfn()
 	inst.components.edible.healthvalue = TUNING.KYNO_MILK_KOALEFANT_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_MILK_KOALEFANT_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_MILK_KOALEFANT_SANITY
+	inst.components.edible.foodtype = FOODTYPE.GENERIC
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FASTISH)

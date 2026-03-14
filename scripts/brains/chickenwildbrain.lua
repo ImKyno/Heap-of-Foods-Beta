@@ -67,14 +67,6 @@ local RUN_AWAY_PARAMS =
 	end,
 }
 
-local function GoHomeAction(inst)
-	if inst.components.homeseeker and
-		inst.components.homeseeker.home and
-		inst.components.homeseeker.home:IsValid() and
-		inst.sg:HasStateTag("trapped") == false then
-		return BufferedAction(inst, inst.components.homeseeker.home, ACTIONS.GOHOME)
-	end
-end
 
 function ChickenWildBrain:OnStart()
 	local root = PriorityNode(
@@ -85,18 +77,12 @@ function ChickenWildBrain:OnStart()
 		WhileNode(function() return self.inst.components.health.takingfiredamage end, "OnFire", Panic(self.inst)),
 		-- WhileNode(function() return self.inst.components.health:GetPercent() < .50 end, "LowHealth",
 			-- RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST)),	
-		
-		-- WhileNode(function() return not TheWorld.state.iscaveday end, "CaveNightness",
-			-- DoAction(self.inst, GoHomeAction, "GoHome", true)),
 			
 		WhileNode(function() return GetTime() - self.inst.components.combat:GetLastAttackedTime() <= RUN_TIME_OUT end, "Attacked",
 			RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST)),
 			
 		RunAway(self.inst, RUN_AWAY_PARAMS, SEE_PLAYER_DIST, STOP_RUN_DIST),
 		RunAway(self.inst, "OnFire", SEE_PLAYER_DIST, STOP_RUN_DIST),
-		
-		EventNode(self.inst, "GoHome",
-			DoAction(self.inst, GoHomeAction, "GoHome", true)),
 		
 		DoAction(self.inst, FindFoodAction),
 		Wander(self.inst, function() return self.inst.components.knownlocations:GetLocation("home") end, MAX_WANDER_DIST)

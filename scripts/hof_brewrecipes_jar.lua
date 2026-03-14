@@ -20,6 +20,7 @@ local kyno_foods_jar =
 		nameoverride = "KYNO_JELLY",
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"berries", 2}, {"honey", 1}}},
 	},
 	
@@ -37,6 +38,7 @@ local kyno_foods_jar =
 		nameoverride = "KYNO_JELLY",
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"berries_juicy", 2}, {"honey", 1}}},
 	},
 	
@@ -54,6 +56,7 @@ local kyno_foods_jar =
 		nameoverride = "KYNO_JELLY",
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"pomegranate", 2}, {"honey", 1}}},
 	},
 	
@@ -71,6 +74,7 @@ local kyno_foods_jar =
 		nameoverride = "KYNO_JELLY",
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"dragonfruit", 2}, {"honey", 1}}},
 	},
 	
@@ -88,7 +92,7 @@ local kyno_foods_jar =
 		nameoverride = "KYNO_JELLY",
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"monkeyqueenbribe"},
+		tags = {"honeyed", "monkeyqueenbribe"},
 		card_def = {ingredients = {{"cave_banana", 2}, {"honey", 1}}},
 	},
 	
@@ -106,12 +110,12 @@ local kyno_foods_jar =
 		nameoverride = "KYNO_JELLY",
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"monstermeat"},
+		tags = {"honeyed", "monstermeat"},
 		card_def = {ingredients = {{"durian", 2}, {"honey", 1}}},
 		oneatenfn = function(inst, eater)
-			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm") and
-			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm") 
+			and not (eater.components.health ~= nil and eater.components.health:IsDead()) 
+			and not eater:HasTag("playerghost") then
 				eater.components.health:DoDelta(5)
 				eater.components.sanity:DoDelta(20)
 			end
@@ -132,6 +136,7 @@ local kyno_foods_jar =
 		nameoverride = "KYNO_JELLY",
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"watermelon", 2}, {"honey", 1}}},
 	},
 	
@@ -149,6 +154,7 @@ local kyno_foods_jar =
 		nameoverride = "KYNO_JELLY",
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"fig", 2}, {"honey", 1}}},
 	},
 	
@@ -167,6 +173,7 @@ local kyno_foods_jar =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLOW,
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"wormlight_lesser", 2}, {"honey", 1}}},
 		prefabs = { "wormlight_light_greater" },
         oneatenfn = function(inst, eater)
@@ -207,7 +214,7 @@ local kyno_foods_jar =
 		nameoverride = "KYNO_JELLY",
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"monkeyqueenbribe"},
+		tags = {"honeyed", "monkeyqueenbribe"},
 		card_def = {ingredients = {{"kyno_banana", 2}, {"honey", 1}}},
 	},
 	
@@ -225,6 +232,7 @@ local kyno_foods_jar =
 		nameoverride = "KYNO_JELLY",
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_kokonut_halved", 2}, {"honey", 1}}},
 	},
 	
@@ -242,6 +250,7 @@ local kyno_foods_jar =
 		nameoverride = "KYNO_JELLY",
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_pineapple_halved", 2}, {"honey", 1}}},
 	},
 	
@@ -261,6 +270,7 @@ local kyno_foods_jar =
 		nameoverride = "KYNO_JELLY",
 		overridebuild = "kyno_foodrecipes_jar",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"ancientfruit_nightvision", 2}, {"honey", 1}}},
 		prefabs = { "kyno_nightvisionbuff" },
         oneatenfn = function(inst, eater)
@@ -995,6 +1005,7 @@ local kyno_foods_jar =
 		floater = TUNING.HOF_FLOATER,
 		luckitem = { luck = -TUNING.KYNO_LUCK_MED },
 		card_def = {ingredients = {{"mayonnaise", 1}, {"kyno_spotspice", 1}, {"kyno_cucumber", 1}}},
+		prefabs = { "kyno_insanitybuff" },
 		oneatenfn = function(inst, eater)
             eater:AddDebuff("kyno_hungerregenbuff", "kyno_hungerregenbuff")
         end,
@@ -1004,8 +1015,8 @@ local kyno_foods_jar =
 	{
 		test = function(brewer, names, tags) return names.kyno_milk_beefalo and (names.kyno_milk_beefalo == 2) and names.kyno_salt end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
-		perishtime = TUNING.PERISH_SLOW,
+		foodtype = FOODTYPE.GENERIC,
+		perishtime = TUNING.PERISH_SUPERSLOW,
 		health = 0,
 		hunger = 25,
 		sanity = 40,
@@ -1019,8 +1030,8 @@ local kyno_foods_jar =
 	{
 		test = function(brewer, names, tags) return names.goatmilk and (names.goatmilk == 2) and names.kyno_salt end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
-		perishtime = TUNING.PERISH_SLOW,
+		foodtype = FOODTYPE.GENERIC,
+		perishtime = TUNING.PERISH_SUPERSLOW,
 		health = 25,
 		hunger = 40,
 		sanity = 0,
@@ -1034,8 +1045,8 @@ local kyno_foods_jar =
 	{
 		test = function(brewer, names, tags) return names.kyno_milk_koalefant and (names.kyno_milk_koalefant == 2) and names.kyno_salt end,
 		priority = 30,
-		foodtype = FOODTYPE.VEGGIE,
-		perishtime = TUNING.PERISH_SLOW,
+		foodtype = FOODTYPE.GENERIC,
+		perishtime = TUNING.PERISH_SUPERSLOW,
 		health = 20,
 		hunger = 25,
 		sanity = 20,
@@ -1238,7 +1249,7 @@ local kyno_foods_jar =
 		overridebuild = "kyno_foodrecipes_jar1",
 		floater = TUNING.HOF_FLOATER,
 		prefabs = { "kyno_jellyfish_rainbow_light_greater" },
-		card_def = {ingredients = {{"kyno_roe_jellyfish", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
+		card_def = {ingredients = {{"kyno_roe_jellyfish_rainbow", 1}, {"kyno_salt", 1}, {"kyno_spotspice", 1}}},
 		oneatenfn = function(inst, eater)
             if eater.wormlight ~= nil then
                 if eater.wormlight.prefab == "kyno_jellyfish_rainbow_light_greater" then

@@ -169,6 +169,25 @@ local function OnExtended(inst, target)
 	
 	if target:HasTag("player") then
 		target:RemoveTag("stealthed")
+		target:RemoveTag("mimicmosa_stealthed")
+
+		target:RemoveTag("notraptrigger")
+		target:AddTag("scarytoprey")
+		
+		DisableStealth(target)
+		
+		target:RemoveEventCallback("doattack", BreakStealth)
+		target:RemoveEventCallback("onattackother", BreakStealth)
+		target:RemoveEventCallback("onthrown", BreakStealth)
+		
+		if target._stealth_restore_task ~= nil then
+			target._stealth_restore_task:Cancel()
+			target._stealth_restore_task = nil
+		end
+	end
+	
+	if target:HasTag("player") then
+		target:RemoveTag("stealthed")
 		target:AddTag("stealthed")
 		
 		target:RemoveTag("mimicmosa_stealthed")

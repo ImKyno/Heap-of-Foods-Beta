@@ -2345,7 +2345,7 @@ local HOF_SCRAPBOOK_FOODS =
 		perishable     = 19200,
 		stacksize      = 40,
 		burnable       = true,
-		foodtype       = "VEGGIE",
+		foodtype       = "SEEDS",
 		bank           = "kyno_twiggynuts",
 		build          = "kyno_twiggynuts",
 		anim           = "idle",
@@ -2419,7 +2419,7 @@ local HOF_SCRAPBOOK_FOODS =
 		type           = "food",
 		tex            = "kyno_koi.tex",
 		prefab         = "kyno_koi",
-		healthvalue    = 8,
+		healthvalue    = 4,
 		hungervalue    = 25,
 		sanityvalue    = 0,
 		perishable     = 1440,
@@ -2458,7 +2458,7 @@ local HOF_SCRAPBOOK_FOODS =
 		type           = "food",
 		tex            = "kyno_neonfish.tex",
 		prefab         = "kyno_neonfish",
-		healthvalue    = 8,
+		healthvalue    = 4,
 		hungervalue    = 25,
 		sanityvalue    = 0,
 		perishable     = 1440,
@@ -2499,7 +2499,7 @@ local HOF_SCRAPBOOK_FOODS =
 		type           = "food",
 		tex            = "kyno_grouper.tex",
 		prefab         = "kyno_grouper",
-		healthvalue    = 8,
+		healthvalue    = 4,
 		hungervalue    = 25,
 		sanityvalue    = 0,
 		perishable     = 1440,
@@ -2559,9 +2559,9 @@ local HOF_SCRAPBOOK_FOODS =
 		type           = "food",
 		tex            = "kyno_tropicalfish_cooked.tex",
 		prefab         = "kyno_tropicalfish_cooked",
-		healthvalue    = 8,
-		hungervalue    = 25,
-		sanityvalue    = 5,
+		healthvalue    = 3,
+		hungervalue    = 12.5,
+		sanityvalue    = 1,
 		perishable     = 1440,
 		stacksize      = 20,
 		foodtype       = "MEAT",
@@ -2600,9 +2600,9 @@ local HOF_SCRAPBOOK_FOODS =
 		type           = "food",
 		tex            = "kyno_pierrotfish_cooked.tex",
 		prefab         = "kyno_pierrotfish_cooked",
-		healthvalue    = 8,
-		hungervalue    = 25,
-		sanityvalue    = 5,
+		healthvalue    = 3,
+		hungervalue    = 12.5,
+		sanityvalue    = 1,
 		perishable     = 1440,
 		stacksize      = 20,
 		foodtype       = "MEAT",
@@ -2638,9 +2638,9 @@ local HOF_SCRAPBOOK_FOODS =
 		type           = "food",
 		tex            = "kyno_salmonfish_cooked.tex",
 		prefab         = "kyno_salmonfish_cooked",
-		healthvalue    = 8,
-		hungervalue    = 25,
-		sanityvalue    = 5,
+		healthvalue    = 3,
+		hungervalue    = 12.5,
+		sanityvalue    = 1,
 		perishable     = 1440,
 		stacksize      = 20,
 		foodtype       = "MEAT",
@@ -3240,7 +3240,7 @@ local HOF_SCRAPBOOK_FOODS =
 		tex            = "kyno_cucumber.tex",
 		prefab         = "kyno_cucumber",
 		healthvalue    = 1,
-		hungervalue    = 12,
+		hungervalue    = 12.5,
 		sanityvalue    = -5,
 		perishable     = 4800,
 		stacksize      = 40,
@@ -5711,6 +5711,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -30,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	jellyopop          =
@@ -8298,7 +8299,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -90,
 		deps           = preparedfood_deps,
-		specialinfo    = "FOODEFFECTS_PLAYERMONSTER",
+		specialinfo    = "FOODEFFECTS_MONSTERFOOD",
 	},
 	
 	pinkcake           =
@@ -8577,7 +8578,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -90,
 		deps           = preparedfood_deps,
-		specialinfo    = "FOODEFFECTS_PLAYERMONSTER2",
+		specialinfo    = "FOODEFFECTS_MONSTERFOOD2",
 	},
 	
 	duriansoup         =
@@ -8601,7 +8602,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -90,
 		deps           = preparedfood_deps,
-		specialinfo    = "FOODEFFECTS_PLAYERMONSTER3",
+		specialinfo    = "FOODEFFECTS_MONSTERFOOD3",
 	},
 	
 	durianmeated       =
@@ -8649,7 +8650,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -80,
 		deps           = preparedfood_deps,
-		specialinfo    = "FOODEFFECTS_PLAYERMONSTER",
+		specialinfo    = "FOODEFFECTS_WURTFOOD",
 	},
 	
 	berrybombs         =
@@ -11210,6 +11211,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	wine_berries_juicy =
@@ -11235,6 +11237,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	wine_pomegranate   =
@@ -11260,6 +11263,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	wine_dragonfruit   =
@@ -11285,6 +11289,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	wine_cave_banana   =
@@ -11310,6 +11315,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	wine_durian        =
@@ -11335,6 +11341,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_MONSTERFOOD2",
 	},
 	
 	wine_watermelon    =
@@ -11360,6 +11367,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	wine_fig           =
@@ -11385,6 +11393,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	wine_glowberry     =
@@ -11436,6 +11445,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	wine_kokonut       =
@@ -11461,6 +11471,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	wine_pineapple     =
@@ -11486,6 +11497,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	wine_nightberry    =
@@ -11536,6 +11548,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_corn         =
@@ -11560,6 +11573,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_eggplant     =
@@ -11584,6 +11598,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_pumpkin      =
@@ -11608,6 +11623,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_lichen       =
@@ -11632,6 +11648,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_cactus       =
@@ -11656,6 +11673,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_garlic       =
@@ -11680,6 +11698,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_asparagus    =
@@ -11704,6 +11723,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_onion        =
@@ -11728,6 +11748,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_tomato       =
@@ -11752,6 +11773,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_potato       =
@@ -11776,6 +11798,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_pepper       =
@@ -11800,6 +11823,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_INCREASETEMP",
 	},
 	
 	juice_redcap       =
@@ -11824,6 +11848,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_greencap     =
@@ -11848,6 +11873,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_bluecap      =
@@ -11872,6 +11898,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_mooncap      =
@@ -11921,6 +11948,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_avocado      =
@@ -11945,6 +11973,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_whitecap     =
@@ -11969,6 +11998,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_aloe         =
@@ -11993,6 +12023,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_radish       =
@@ -12017,6 +12048,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_sweetpotato  =
@@ -12041,6 +12073,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_lotus        =
@@ -12065,6 +12098,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_seaweeds     =
@@ -12089,6 +12123,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_taroroot     =
@@ -12113,6 +12148,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_waterycress  =
@@ -12137,6 +12173,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_cucumber     =
@@ -12161,6 +12198,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_parznip      =
@@ -12185,6 +12223,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_turnip       =
@@ -12209,6 +12248,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_fennel       =
@@ -12233,6 +12273,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_truffles     =
@@ -12282,6 +12323,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	juice_sporecap_dark =
@@ -12306,6 +12348,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
         deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 	
 	beer               =
@@ -12962,6 +13005,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		animoffsetbgx  = -25,
 		animoffsetbgy  = -120,
         deps           = {"kyno_preservesjar", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_MONSTERFOOD",
 	},
 	
 	jelly_watermelon   =
@@ -14126,8 +14170,8 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		healthvalue    = 0,
 		hungervalue    = 25,
 		sanityvalue    = 40,
-		perishable     = 7200,
-		foodtype       = "VEGGIE",
+		perishable     = 19200,
+		foodtype       = "GENERIC",
 		burnable       = true,
 		stacksize      = 40,
 		bank           = "kyno_foodrecipes",
@@ -14149,8 +14193,8 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		healthvalue    = 25,
 		hungervalue    = 40,
 		sanityvalue    = 0,
-		perishable     = 7200,
-		foodtype       = "VEGGIE",
+		perishable     = 19200,
+		foodtype       = "GENERIC",
 		burnable       = true,
 		stacksize      = 40,
 		bank           = "kyno_foodrecipes",
@@ -14172,8 +14216,8 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		healthvalue    = 20,
 		hungervalue    = 25,
 		sanityvalue    = 20,
-		perishable     = 7200,
-		foodtype       = "VEGGIE",
+		perishable     = 19200,
+		foodtype       = "GENERIC",
 		burnable       = true,
 		stacksize      = 40,
 		bank           = "kyno_foodrecipes",

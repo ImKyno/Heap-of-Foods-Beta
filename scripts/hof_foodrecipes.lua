@@ -28,6 +28,8 @@ local kyno_foods =
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 60,
 		hunger = 18.75,
 		sanity = 5,
@@ -1686,6 +1688,8 @@ local kyno_foods =
 		priority = 1,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_PRESERVED,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 25,
 		hunger = 0,
 		sanity = 20,
@@ -1798,7 +1802,7 @@ local kyno_foods =
 		cooktime = 1.6,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_cookpot",
-		floater = {"med", nil, 0.55},
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_spotspice", 1}, {"pepper", 2}}},
 	},
 	
@@ -1953,7 +1957,7 @@ local kyno_foods =
 	
 	gummyworms =
 	{
-		test = function(cooker, names, tags) return names.kyno_gummybug and names.kyno_sugar and names.ancientfruit_nightvision end,
+		test = function(cooker, names, tags) return tags.gummybug and names.kyno_sugar and names.ancientfruit_nightvision end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SLOW,
@@ -2052,7 +2056,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		health = -10,
-		hunger = 50, -- 67 Wurt.
+		hunger = 50,
 		sanity = -15,
 		cooktime = 2,
 		potlevel = "low",
@@ -2061,9 +2065,9 @@ local kyno_foods =
 		tags = {"honeyed", "monstermeat"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"nightmarefuel", 1}, {"honey", 2}}},
 		oneatenfn = function(inst, eater)
-			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm") and
-			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			if eater ~= nil and eater:HasTag("playermonster") 
+			and not (eater.components.health ~= nil and eater.components.health:IsDead()) 
+			and not eater:HasTag("playerghost") then
 				eater.components.health:DoDelta(10)
 				eater.components.sanity:DoDelta(15)
 			end
@@ -2138,7 +2142,7 @@ local kyno_foods =
 	
 	milkshake =
 	{
-		test = function(cooker, names, tags) return tags.milk and tags.berries and (tags.sweetener and tags.sweetener >= 2) and not tags.syrup end,
+		test = function(cooker, names, tags) return tags.milk and tags.berries and tags.sweetener and tags.frozen and not tags.syrup end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FAST,
@@ -2152,7 +2156,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot",
 		floater = TUNING.HOF_FLOATER,
 		tags = {"honeyed"},
-		card_def = {ingredients = {{"goatmilk", 1}, {"berries", 1}, {"honey", 2}}},
+		card_def = {ingredients = {{"goatmilk", 1}, {"berries", 1}, {"honey", 1}, {"ice", 1}}},
 	},
 	
 	banana_pudding =
@@ -2290,7 +2294,7 @@ local kyno_foods =
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = -5,
-		hunger = 32.5, -- 65 Wurt.
+		hunger = 32.5,
 		sanity = -15,
 		cooktime = 1,
 		potlevel = "med",
@@ -2299,9 +2303,9 @@ local kyno_foods =
 		tags = {"monstermeat"},
 		card_def = {ingredients = {{"durian", 1}, {"ice", 1}, {"cave_banana", 2}}},
 		oneatenfn = function(inst, eater)
-			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm") and
-			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			if eater ~= nil and eater:HasTag("playermonster")
+			and not (eater.components.health ~= nil and eater.components.health:IsDead()) 
+			and not eater:HasTag("playerghost") then
 				eater.components.health:DoDelta(5)
 				eater.components.sanity:DoDelta(15)
 			end
@@ -2317,7 +2321,7 @@ local kyno_foods =
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = -15,
-		hunger = 37.5, -- 75 Wurt.
+		hunger = 37.5,
 		sanity = 0,
 		cooktime = 1.5,
 		potlevel = "high",
@@ -2326,9 +2330,9 @@ local kyno_foods =
 		tags = {"monstermeat"},
 		card_def = {ingredients = {{"durian", 1}, {"carrot", 3}}},
 		oneatenfn = function(inst, eater)
-			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm") and
-			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			if eater ~= nil and eater:HasTag("playermonster") 
+			and not (eater.components.health ~= nil and eater.components.health:IsDead()) 
+			and not eater:HasTag("playerghost") then
 				eater.components.health:DoDelta(15)
 			end
 		end,
@@ -2336,8 +2340,8 @@ local kyno_foods =
 	
 	durianmeated =
 	{
-		test = function(cooker, names, tags) return (names.monstermeat or names.monstermeat_cooked) and 
-		(names.durian or names.durian_cooked) end,
+		test = function(cooker, names, tags) return (names.monstermeat or names.monstermeat_cooked or names.monstermeat_dried) 
+		and (names.durian or names.durian_cooked) end,
 		priority = 40,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,
@@ -2350,9 +2354,9 @@ local kyno_foods =
 		tags = {"monstermeat"},
 		card_def = {ingredients = {{"monstermeat", 1}, {"durian", 1}, {"twigs", 2}}},
 		oneatenfn = function(inst, eater)
-			if eater ~= nil and eater:HasTag("playermonster") and
-			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			if eater ~= nil and eater:HasTag("playermonster") 
+			and not (eater.components.health ~= nil and eater.components.health:IsDead()) 
+			and not eater:HasTag("playerghost") then
 				eater.components.health:DoDelta(20)
 				eater.components.sanity:DoDelta(5)
 			end
@@ -2367,7 +2371,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FASTISH,
 		health = -10,
-		hunger = 45, -- 90 Wurt.
+		hunger = 45,
 		sanity = -30,
 		cooktime = 1,
 		scale = 1.8,
@@ -2501,8 +2505,9 @@ local kyno_foods =
 	
 	lunarsoup =
 	{
-		test = function(cooker, names, tags) return (names.carrot or names.carrot_cooked) and (names.moon_cap or names.moon_cap_cooked) 
-		and ((names.rock_avocado_fruit_ripe or 0) + (names.rock_avocado_fruit_ripe_cooked or 0) >= 2) and not tags.meat end,
+		test = function(cooker, names, tags) return (names.carrot or names.carrot_cooked) and (names.moon_cap or names.moon_cap_cooked 
+		or names.kyno_moon_cap_dried) and ((names.rock_avocado_fruit_ripe or 0) + (names.rock_avocado_fruit_ripe_cooked or 0) >= 2) 
+		and not tags.meat end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -2553,8 +2558,8 @@ local kyno_foods =
 	
 	wobstermonster =
 	{
-		test = function(cooker, names, tags) return tags.wobster and (names.monstermeat or names.monstermeat_cooked) and
-		(tags.veggie and tags.veggie >= 2) end,
+		test = function(cooker, names, tags) return tags.wobster and (names.monstermeat or names.monstermeat_cooked
+		or names.monstermeat_dried) and tags.veggie and tags.frozen end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
@@ -2568,7 +2573,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		floater = TUNING.HOF_FLOATER,
 		tags = {"monstermeat"},
-		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"monstermeat", 1}, {"carrot", 2}}},
+		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"monstermeat", 1}, {"carrot", 1}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
@@ -3201,7 +3206,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPORECAP,
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"monstermeat", "acidrainimmune"},
+		tags = {"honeyed", "monstermeat", "acidrainimmune"},
 		card_def = {ingredients = {{"kyno_sporecap", 2}, {"kyno_flour", 1}, {"honey", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
@@ -3258,7 +3263,7 @@ local kyno_foods =
 		scale = 1.5,
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		floater = TUNING.HOF_FLOATER,
-		tags = {"sharkboifood", "exquisite"},
+		tags = {"honeyed", "sharkboifood", "exquisite"},
 		card_def = {ingredients = {{"kyno_swordfish_dead", 1}, {"cheese_yellow", 1}, {"fig", 1}, {"honey", 1}}},
 	},
 	
@@ -3324,7 +3329,7 @@ local kyno_foods =
 		potlevel = "low",
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		floater = TUNING.HOF_FLOATER,
-		card_def = {ingredients = {{"drumstick", 1}, {"kyno_flour", 1}, {"kyno_oil", 1}, {"garlic", 1}}},
+		card_def = {ingredients = {{"drumstick", 1}, {"kyno_flour", 1}, {"kyno_oil", 1}, {"kyno_spotspice", 1}}},
 	},
 	
 	chickenwings =

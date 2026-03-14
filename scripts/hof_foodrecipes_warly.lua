@@ -129,17 +129,19 @@ local kyno_warly_foods =
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FAST,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 20,
 		hunger = 12.5,
 		sanity = 33,
 		cooktime = 0.5,
 		potlevel = "med",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
 		overridebuild = "kyno_foodrecipes_warly",
 		floater = TUNING.HOF_FLOATER,
 		tags = {"masterfood", "honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_piko", 1}, {"kyno_tealeaf", 1}, {"honey", 1}, {"ice", 1}}},
 		prefabs = { "buff_sleepresistance" },
-        oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SLEEP_RESISTANCE,
         oneatenfn = function(inst, eater)
             if eater.components.grogginess ~= nil and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
@@ -252,7 +254,7 @@ local kyno_warly_foods =
 		health = 20,
 		hunger = 8,
 		sanity = 60,
-		cooktime = .10,
+		cooktime = 1.0,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_warly",
 		floater = TUNING.HOF_FLOATER,
@@ -283,7 +285,7 @@ local kyno_warly_foods =
 	
 	milkshake_prismatic =
 	{
-		test = function(cooker, names, tags) return names.kyno_jellyfish_rainbow_dead and tags.milk and tags.berries and tags.syrup end,
+		test = function(cooker, names, tags) return names.kyno_jellyfish_rainbow_dead and tags.milk and tags.syrup and tags.frozen end,
 		priority = 10,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FAST,
@@ -292,14 +294,14 @@ local kyno_warly_foods =
 		health = 60,
 		hunger = 12.5,
 		sanity = 60,
-		cooktime = .10,
+		cooktime = 1.0,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLOW,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_warly",
 		floater = TUNING.HOF_FLOATER,
 		tags = {"masterfood", "honeyed"},
 		prefabs = { "kyno_jellyfish_rainbow_light_greater" },
-		card_def = {ingredients = {{"kyno_jellyfish_rainbow_dead", 1}, {"goatmilk", 1}, {"berries", 1}, {"kyno_syrup", 1}}},
+		card_def = {ingredients = {{"kyno_jellyfish_rainbow_dead", 1}, {"goatmilk", 1}, {"ice", 1}, {"kyno_syrup", 1}}},
 		oneatenfn = function(inst, eater)
             if eater.wormlight ~= nil then
                 if eater.wormlight.prefab == "kyno_jellyfish_rainbow_light_greater" then
@@ -411,7 +413,7 @@ local kyno_warly_foods =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 20,
 		hunger = 12.5,
 		sanity = 5,
@@ -430,7 +432,7 @@ local kyno_warly_foods =
 		perishtime = TUNING.PERISH_MED,
 		perishproduct = "warlyicedtea",
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
-		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 40,
 		hunger = 25,
 		sanity = 10,
@@ -488,7 +490,7 @@ local kyno_warly_foods =
 		end,
 	},
 	
-	tiramisu = -- Dry + Small Speed buffs.
+	tiramisu =
 	{
 		test = function(cooker, names, tags) return names.kyno_coffeebeans_cooked and tags.chocolate and tags.dairy and not names.kyno_coffeebeans end,
 		priority = 30,

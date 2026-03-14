@@ -45,7 +45,7 @@ local function fn()
 	inst.components.edible.healthvalue = TUNING.KYNO_TWIGGYNUTS_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_TWIGGYNUTS_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_TWIGGYNUTS_SANITY
-	inst.components.edible.foodtype = FOODTYPE.VEGGIE
+	inst.components.edible.foodtype = FOODTYPE.SEEDS
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERSLOW)

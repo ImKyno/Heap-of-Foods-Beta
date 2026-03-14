@@ -302,7 +302,6 @@ local plantables =
 		bank           = "kyno_wheat",
 		build          = "kyno_wheat",
 		tags           = {"wildwheat"},
-		nameoverride   = "DUG_GRASS",
 		inventoryimage = "dug_kyno_wildwheat",
 		deploymode     = DEPLOYMODE.PLANT,
 		fuel           = true,
