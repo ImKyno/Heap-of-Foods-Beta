@@ -475,27 +475,28 @@ function containers.params.portablespicer.itemtestfn(container, item, slot)
 	and not container.inst:HasTag("burnt")
 end
 
--- Tin Fishing' Bin accepts more kinds of fish.
+-- Tin Fishin' Bin accepts more kinds of fish.
 function containers.params.fish_box.itemtestfn(container, item, slot)
     return item:HasAnyTag("smalloceancreature", "fish_box_valid")
 end
 
-function containers.params.sisturn.itemtestfn(container, item, slot)
-	local owner
-    
-	if TheWorld.ismastersim then
-		owner = container.inst.components.container:GetOpeners()[1]
-	elseif ThePlayer and container:IsOpenedBy(ThePlayer) then
-		owner = ThePlayer
+local sisturn_itemtestfn = containers.params.sisturn.itemtestfn
+containers.params.sisturn.itemtestfn = function(container, item, slot)
+	if item.prefab == "kyno_sugartree_petals" then
+		local owner
+
+		if TheWorld.ismastersim then
+			owner = container.inst.components.container:GetOpeners()[1]
+		elseif ThePlayer and container:IsOpenedBy(ThePlayer) then
+			owner = ThePlayer
+		end
+
+		if not owner or (owner.components.skilltreeupdater and owner.components.skilltreeupdater:IsActivated("wendy_sisturn_3")) then
+			return true
+		end
+
+		return true
 	end
 
-	-- NOTE: can have no owner when loading.
-	if not owner or (owner.components.skilltreeupdater and owner.components.skilltreeupdater:IsActivated("wendy_sisturn_3")) then
-		return item.prefab == "petals" 
-		or item.prefab     == "moon_tree_blossom" 
-		or item.prefab     == "petals_evil"
-		or item.prefab     == "kyno_sugartree_petals"
-	end
-
-	return item.prefab == "petals" or item.prefab == "kyno_sugartree_petals"
+	return sisturn_itemtestfn(container, item, slot)
 end

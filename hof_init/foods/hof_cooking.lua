@@ -26,7 +26,7 @@ AddIngredientValues({"glommerfuel"}, 			     {poop       = 1})
 AddIngredientValues({"papyrus"},				     {paper      = 1,    roughage   = 1})
 AddIngredientValues({"deerclops_eyeball"},           {boss       = 1,    meat       = 2})
 AddIngredientValues({"bearger_fur"},                 {inedible   = 1,    boss       = 1})
-AddIngredientValues({"horn"},					     {horn       = 1})
+AddIngredientValues({"horn"},					     {horn       = 1,    inedible   = 1})
 AddIngredientValues({"kelp"},                        {veggie     = 0.5,  algae      = 0.5},                  true, true)
 AddIngredientValues({"milkywhites"},                 {dairy      = 1,    milk       = 1})
 AddIngredientValues({"goatmilk"},                    {dairy      = 1,    milk       = 1})
@@ -42,8 +42,8 @@ AddIngredientValues({"spider"},                      {monster    = 1,    spider 
 AddIngredientValues({"wagpunk_bits"}, 			     {junk       = 1})
 AddIngredientValues({"butter"},                      {fat        = 1,    dairy      = 1,    butter    = 1})
 AddIngredientValues({"baconeggs"},                   {prepfood   = 1}) -- Could use meat tag, but I don't want people using this as "filler" lol.
-AddIngredientValues({"townportaltalisman"},          {rocks      = 1,    elemental  = 1,    boss      = 1})
-AddIngredientValues({"lavae_egg"},                   {boss       = 1,    lavaegg    = 1})
+AddIngredientValues({"townportaltalisman"},          {boss       = 1,    elemental  = 1,    rocks     = 1})
+AddIngredientValues({"lavae_egg"},                   {boss       = 1,    lavaegg    = 1,    egg       = 2})
 AddIngredientValues({"wobster_sheller_land"},        {meat       = 1,    fish       = 1,    wobster   = 1})
 
 -- New Mod Crock Pot Ingredients.

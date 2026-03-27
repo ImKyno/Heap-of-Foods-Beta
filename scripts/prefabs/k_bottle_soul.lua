@@ -22,12 +22,15 @@ local function OnLanded(inst)
 end
 
 local function OnInventory(inst, owner)
-	local owner = inst.components.inventoryitem:GetGrandOwner()
+	local inventoryitem = inst.components.inventoryitem
+	local owner = inventoryitem:GetGrandOwner() or inventoryitem.owner
 	
-	if owner:HasTag("soulstealer") then
-		inst.components.unwrappable.canbeunwrapped = true
-	else
-		inst.components.unwrappable.canbeunwrapped = false
+	if owner ~= nil then
+		if owner:HasTag("soulstealer") then
+			inst.components.unwrappable.canbeunwrapped = true
+		else
+			inst.components.unwrappable.canbeunwrapped = false
+		end
 	end
 end
 
@@ -45,7 +48,7 @@ local function OnOpenBottle(inst, pos, doer)
 	local soul = SpawnPrefab("wortox_soul")
 	local bottle = SpawnPrefab("messagebottleempty")
 	
-	if doer.components.inventory and doer:HasTag("player") and doer:HasTag("soulstealer") 
+	if doer ~= nil and doer.components.inventory ~= nil and doer:HasTag("player") and doer:HasTag("soulstealer") 
 	and not doer.components.health:IsDead() and not doer:HasTag("playerghost") then 
 		doer.components.inventory:GiveItem(soul)
 		doer.components.inventory:GiveItem(bottle)

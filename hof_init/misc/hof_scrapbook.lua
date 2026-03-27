@@ -2,10 +2,8 @@
 -- Common Dependencies.
 local _G               = GLOBAL
 local require          = _G.require
-local resolvefilepath  = _G.resolvefilepath
 local ScrapbookPrefabs = require("scrapbook_prefabs")
 local ScrapbookData    = require("screens/redux/scrapbookdata")
-local ScrapbookScreen  = require("screens/redux/scrapbookscreen")
 
 -- Perishable References.
 --[[
