@@ -1199,6 +1199,26 @@ end
 
 AddPrefabPostInit("sisturn", SisturnPostInit)
 
+local function WaspHivePostInit(inst)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+	
+	if inst.components.playerprox ~= nil then
+		local _OnNear = inst.components.playerprox.onnear
+		
+		inst.components.playerprox:SetOnPlayerNear(function(inst, target)
+			if target ~= nil and target:HasTag("beefriendly") then
+				return
+			end
+			
+			return _OnNear(inst, target)
+		end)
+	end
+end
+
+AddPrefabPostInit("wasphive", WaspHivePostInit)
+
 -- Spawns Mist in static layouts, not using game's function because its too dense.
 AddSimPostInit(function()
 	if not _G.TheWorld or not _G.TheWorld.topology or not _G.TheWorld.topology.nodes then

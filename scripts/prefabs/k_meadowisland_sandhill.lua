@@ -84,7 +84,6 @@ local function OnWorked(inst, worker, workleft, numworks)
 	local spawns = math.min(math.ceil(prevworkleft) - math.ceil(workleft), math.ceil(prevworkleft))
 
 	if spawns > 0 then
-
 		local pt = Vector3(inst.Transform:GetWorldPosition())
 		local hispos = Vector3(worker.Transform:GetWorldPosition())
 		local he_right = ((hispos - pt):Dot(TheCamera:GetRightVec()) > 0)
@@ -128,6 +127,7 @@ end
 local function LongUpdate(inst, dt)
     if inst.targettime then
         local time = GetTime()
+
         if inst.targettime > time + dt then
 			local time_to_regen = inst.targettime - time - dt
 			StartRegen(inst, time_to_regen)

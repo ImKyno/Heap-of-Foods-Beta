@@ -22,6 +22,7 @@ local CraftingFilterAtlas  = "images/tabimages/hof_tabimages.xml"
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 local function SortRecipe(a, b, filter_name, offset)
     local filter = _G.CRAFTING_FILTERS[filter_name]
+
     if filter and filter.recipes then
         for sortvalue, product in ipairs(filter.recipes) do
             if product == a then
@@ -31,6 +32,7 @@ local function SortRecipe(a, b, filter_name, offset)
         end
 
         local target_position = #filter.recipes + 1
+
         for sortvalue, product in ipairs(filter.recipes) do
             if product == b then
                 target_position = sortvalue + offset
@@ -76,9 +78,11 @@ table.insert(TechTree.AVAILABLE_TECH, "HOFBIRTHDAY")
 
 TechTree.Create = function(t)
 	t = t or {}
+
 	for i, v in ipairs(TechTree.AVAILABLE_TECH) do
 	    t[v] = t[v] or 0
 	end
+
 	return t
 end
 

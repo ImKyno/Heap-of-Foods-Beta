@@ -1,10 +1,9 @@
 require("tuning")
 
-local official_foods = {}
-local brewerrecipes = {}
-local brewbook_recipes = {}
-
-local MOD_BREWBOOK_CATEGORY = {"keg", "jar"}
+local official_foods        = {}
+local brewerrecipes         = {}
+local brewbook_recipes      = {}
+local MOD_BREWBOOK_CATEGORY = { "keg", "jar" }
 
 global("AddBrewerRecipe")
 AddBrewerRecipe = function(brewer, recipe, is_mod_food)
@@ -18,12 +17,14 @@ AddBrewerRecipe = function(brewer, recipe, is_mod_food)
 	if not brewerrecipes[brewer] then
 		brewerrecipes[brewer] = {}
 	end
+
 	brewerrecipes[brewer][recipe.name] = recipe
 
 	if brewer ~= "portablespicer" and not recipe.no_brewbook then
 		if not brewbook_recipes[recipe.brewbook_category] then
 			brewbook_recipes[recipe.brewbook_category] = {}
 		end
+
 		if not brewbook_recipes[recipe.brewbook_category][recipe.name] then
 			brewbook_recipes[recipe.brewbook_category][recipe.name] = recipe
 		end
@@ -60,14 +61,14 @@ AddBrewingValues = function(names, tags, cancook, candry)
 			brewingredients[name.."_dried"] = {tags={}}
 		end
 
-		for tagname,tagval in pairs(tags) do
+		for tagname, tagval in pairs(tags) do
 			brewingredients[name].tags[tagname] = tagval
 
 			if cancook then
 				brewingredients[name.."_cooked"].tags.precook = 1
 				brewingredients[name.."_cooked"].tags[tagname] = tagval
 			end
-			
+
 			if candry then
 				brewingredients[name.."_dried"].tags.dried = 1
 				brewingredients[name.."_dried"].tags[tagname] = tagval
@@ -78,41 +79,52 @@ end
 
 global("IsModBrewingProduct")
 IsModBrewingProduct = function(brewer, name)
+	--[[
 	local enabledmods = ModManager:GetEnabledModNames()
-    for i,v in ipairs(enabledmods) do
-        local mod = ModManager:GetMod(v)
-        if mod.brewerrecipes and mod.brewerrecipes[brewer] and table.contains(mod.brewerrecipes[brewer], name) then
-            return true
-        end
-    end
-    return false
+
+	for i, v in ipairs(enabledmods) do
+		local mod = ModManager:GetMod(v)
+
+		if mod.brewerrecipes and mod.brewerrecipes[brewer] and table.contains(mod.brewerrecipes[brewer], name) then
+			return true
+		end
+	end
+
+	return false
+	]]--
+
+	return brewerrecipes[brewer] and brewerrecipes[brewer][name] ~= nil
 end
 
 local aliases =
 {
-	cookedsmallmeat = "smallmeat_cooked",
+	cookedsmallmeat   = "smallmeat_cooked",
 	cookedmonstermeat = "monstermeat_cooked",
-	cookedmeat = "meat_cooked",
+	cookedmeat        = "meat_cooked",
 }
 
 local function IsBrewingIngredient(prefabname)
-    return brewingredients[aliases[prefabname] or prefabname] ~= nil
+	return brewingredients[aliases[prefabname] or prefabname] ~= nil
 end
 
 local function GetBrewingValues(prefablist)
-    local prefabs = {}
-    local tags = {}
-    for k,v in pairs(prefablist) do
-        local name = aliases[v] or v
-        prefabs[name] = (prefabs[name] or 0) + 1
-        local data = brewingredients[name]
-        if data ~= nil then
-            for kk, vv in pairs(data.tags) do
-                tags[kk] = (tags[kk] or 0) + vv
-            end
-        end
-    end
-    return { tags = tags, names = prefabs }
+	local prefabs = {}
+	local tags    = {}
+
+	for k,v in pairs(prefablist) do
+		local name = aliases[v] or v
+		prefabs[name] = (prefabs[name] or 0) + 1
+
+		local data = brewingredients[name]
+
+		if data ~= nil then
+			for kk, vv in pairs(data.tags) do
+				tags[kk] = (tags[kk] or 0) + vv
+			end
+		end
+	end
+
+	return { tags = tags, names = prefabs }
 end
 
 local function GetBrewing(brewer, product)
@@ -125,7 +137,7 @@ GetCandidateBrewing = function(brewer, ingdata)
 	local recipes = brewerrecipes[brewer] or {}
 	local candidates = {}
 
-	for k,v in pairs(recipes) do
+	for k, v in pairs(recipes) do
 		if v.test(brewer, ingdata.names, ingdata.tags) then
 			table.insert(candidates, v)
 		end
@@ -141,8 +153,10 @@ GetCandidateBrewing = function(brewer, ingdata)
 			if k > 1 and (v.priority or 0) < val then
 				break
 			end
+
 			table.insert(top_candidates, v)
 		end
+
 		return top_candidates
 	end
 
@@ -155,7 +169,8 @@ local function CalculateBrewing(brewer, names)
 
 	table.sort( candidates, function(a,b) return (a.weight or 1) > (b.weight or 1) end )
 	local total = 0
-	for k,v in pairs(candidates) do
+
+	for k, v in pairs(candidates) do
 		total = total + (v.weight or 1)
 	end
 
@@ -163,12 +178,24 @@ local function CalculateBrewing(brewer, names)
 	local idx = 1
 	while idx <= #candidates do
 		val = val - candidates[idx].weight
+
 		if val <= 0 then
 			return candidates[idx].name, candidates[idx].cooktime or 1
 		end
 
-		idx = idx+1
+		idx = idx + 1
 	end
 end
 
-return { CalculateBrewing = CalculateBrewing, IsBrewingIngredient = IsBrewingIngredient, recipes = brewerrecipes, brewingredients = brewingredients, GetBrewing = GetBrewing, brewbook_recipes = brewbook_recipes, recipe_cards = recipe_cards, HasModBrewerFood = HasModBrewerFood, IsModBrewerFood = IsModBrewerFood}
+return
+{
+	CalculateBrewing    = CalculateBrewing,
+	IsBrewingIngredient = IsBrewingIngredient,
+	recipes             = brewerrecipes,
+	brewingredients     = brewingredients,
+	GetBrewing          = GetBrewing,
+	brewbook_recipes    = brewbook_recipes,
+	recipe_cards        = recipe_cards,
+	HasModBrewerFood    = HasModBrewerFood,
+	IsModBrewerFood     = IsModBrewerFood
+}

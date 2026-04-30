@@ -170,7 +170,7 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 				local world_top, world_left = left * 4 - (map_width * 0.5 * 4), top * 4 - (map_height * 0.5 * 4)
 				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
 				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", 
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", "wormhole", 
 					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
 				})
 				
@@ -299,7 +299,7 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 				local world_top, world_left = left * 4 - (map_width * 0.5 * 4), top * 4 - (map_height * 0.5 * 4)
 				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
 				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", 
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", "wormhole",
 					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
 				})
 				
@@ -445,7 +445,7 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 
 				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
 				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", 
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", "wormhole",
 					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
 				})
 				
@@ -667,6 +667,7 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 				sanityrock = true,
 				lunarrift_portal = true,
 				lunarrift_crystal_big = true,
+				wormhole = true,
 			}
 			
 			print(string.format("Retrofitting for Heap of Foods Mod - Clearing area: (%.2f, %.2f), radius %.2f", world_x, world_y, radius))
@@ -857,6 +858,7 @@ local function HofRetrofitting_DinaMemorial(map, savedata)
 				mandrake_planted = true,
 				lunarrift_portal = true,
 				lunarrift_crystal_big = true,
+				wormhole = true,
 			}
 			
 			print(string.format("Retrofitting for Heap of Foods Mod - Clearing area: (%.2f, %.2f), radius %.2f", world_x, world_y, radius))
@@ -998,7 +1000,7 @@ local function HofRetrofitting_OctopusKingShop(map, savedata)
 
 				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
 				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", 
+					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", "wormhole",
 					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
 				})
 				
