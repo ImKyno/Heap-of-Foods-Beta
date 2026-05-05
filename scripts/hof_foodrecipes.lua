@@ -387,7 +387,7 @@ local kyno_foods =
 	
 	gorge_potato_soup = 
 	{
-		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 3) and tags.succulent end,
+		test = function(cooker, names, tags) return (tags.potato and tags.potato >= 3) and tags.succulent end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -452,7 +452,8 @@ local kyno_foods =
 	
 	gorge_croquette = 
 	{
-		test = function(cooker, names, tags) return (names.potato and names.potato >= 2) and tags.egg and tags.flour and not names.potato_cooked end,
+		test = function(cooker, names, tags) return (tags.potato and tags.potato >= 2) and tags.egg and tags.flour
+		and not names.potato_cooked and not names.kyno_sweetpotato_cooked end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -460,6 +461,7 @@ local kyno_foods =
 		hunger = 50,
 		sanity = 10,
 		cooktime = .75,
+		stacksize = 2,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_gorge",
 		floater = TUNING.HOF_FLOATER,
@@ -534,7 +536,7 @@ local kyno_foods =
 
 	gorge_fishchips =
 	{
-		test = function(cooker, names, tags) return tags.fish and tags.flour and ((names.potato or 0) + (names.potato_cooked or 0) >= 2) end,
+		test = function(cooker, names, tags) return tags.fish and tags.flour and tags.potato end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
@@ -620,7 +622,7 @@ local kyno_foods =
 	gorge_garlicmashed =
 	{
 		test = function(cooker, names, tags) return ((names.garlic or 0) + (names.garlic_cooked or 0) >= 2) and 
-		(names.potato or names.potato_cooked) and tags.spotspice and not tags.bread and not tags.meat and not tags.fish end,
+		tags.potato and tags.spotspice and not tags.bread and not tags.meat and not tags.fish end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
@@ -1092,7 +1094,7 @@ local kyno_foods =
 	
 	gorge_steak_frites =
 	{
-		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and ((names.potato or 0) + (names.potato_cooked or 0) >= 2) end,
+		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and tags.potato end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,

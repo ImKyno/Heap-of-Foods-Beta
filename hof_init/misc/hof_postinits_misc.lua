@@ -16,15 +16,15 @@ local HOF_KEEPFOOD        = GetModConfigData("KEEPFOOD")
 local HOF_ICEBOXSTACKSIZE = GetModConfigData("ICEBOXSTACKSIZE")
 
 -- Favorite Mod Foods.
-AddPrefabPostInit("wilson", function(inst)	
+AddPrefabPostInit("wilson", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("gorge_steak_frites", TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("gorge_steak_frites", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("wine_dragonfruit", TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 AddPrefabPostInit("willow", function(inst)
@@ -32,21 +32,21 @@ AddPrefabPostInit("willow", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("feijoada",       TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("feijoada",       TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("pickles_pepper", TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
-AddPrefabPostInit("wolfgang", function(inst)	
+AddPrefabPostInit("wolfgang", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("gorge_potato_soup", TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("gorge_potato_soup", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("pickles_potato",    TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 AddPrefabPostInit("wendy", function(inst)
@@ -54,10 +54,10 @@ AddPrefabPostInit("wendy", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("icedtea",   TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("icedtea",   TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_fig", TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 AddPrefabPostInit("wx78", function(inst)
@@ -65,20 +65,20 @@ AddPrefabPostInit("wx78", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("bowlofgears", TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("bowlofgears", TUNING.AFFINITY_15_CALORIES_HUGE)
+	end
 end)
 
 AddPrefabPostInit("wickerbottom", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("tea",      TUNING.AFFINITY_15_CALORIES_HUGE)
+
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("tea",      TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("teagreen", TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 AddPrefabPostInit("woodie", function(inst)
@@ -86,10 +86,10 @@ AddPrefabPostInit("woodie", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("gorge_sliders", TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("gorge_sliders", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("beer",          TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 AddPrefabPostInit("waxwell", function(inst)
@@ -97,21 +97,21 @@ AddPrefabPostInit("waxwell", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("gorge_crab_roll", TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("gorge_crab_roll", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("caviar",          TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 AddPrefabPostInit("wes", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("sharkfinsoup", TUNING.AFFINITY_15_CALORIES_HUGE)
+
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("sharkfinsoup", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("tartarsauce",  TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 AddPrefabPostInit("wathgrithr", function(inst)
@@ -121,10 +121,10 @@ AddPrefabPostInit("wathgrithr", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("gorge_pot_roast", TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("gorge_pot_roast", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("mead",            TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 AddPrefabPostInit("webber", function(inst)
@@ -132,10 +132,10 @@ AddPrefabPostInit("webber", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("cottoncandy", TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("cottoncandy", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("mayonnaise",  TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 AddPrefabPostInit("winona", function(inst)
@@ -143,10 +143,10 @@ AddPrefabPostInit("winona", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("coffee",  TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("coffee",  TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("paleale", TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 AddPrefabPostInit("wortox", function(inst)
@@ -154,14 +154,14 @@ AddPrefabPostInit("wortox", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("pomegranatepie",    TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("pomegranatepie",    TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_pomegranate", TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 
-    if inst.components.eater ~= nil then
-        inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODTYPE.PREPAREDSOUL, FOODGROUP.OMNI })
-    end
+	if inst.components.eater ~= nil then
+		inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODTYPE.PREPAREDSOUL, FOODGROUP.OMNI })
+	end
 end)
 
 AddPrefabPostInit("wormwood", function(inst)
@@ -171,14 +171,14 @@ AddPrefabPostInit("wormwood", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("gummy_cake",    TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("gummy_cake",    TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_kokonut", TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 
-    if inst.components.eater ~= nil then
-        inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODGROUP.OMNI, FOODTYPE.PREPAREDPOOP })
-    end
+	if inst.components.eater ~= nil then
+		inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODGROUP.OMNI, FOODTYPE.PREPAREDPOOP })
+	end
 end)
 
 AddPrefabPostInit("warly", function(inst)
@@ -186,14 +186,14 @@ AddPrefabPostInit("warly", function(inst)
 		if TUNING.HOF_DEBUG_MODE then
 			print("Heap of Foods Mod - Added spicemaker tag to Warly.")
 		end
-		
+
 		inst:AddTag("spicemaker")
 	end
-	
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	if inst.components.eater ~= nil then
 		inst.components.eater:SetPrefersEatingTag("warly_caneat") -- New tag that allows Warly to eat stuff.
 	end
@@ -203,18 +203,18 @@ AddPrefabPostInit("wurt", function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
-    if inst.components.foodaffinity ~= nil then
+
+	if inst.components.foodaffinity ~= nil then
 		-- Wurt had too many favorite foods. This is to keep her in line with others.
 		-- These will now only negate the negative stats...
 		inst.components.foodaffinity:AddPrefabAffinity("duriansplit",   1.33)
-        inst.components.foodaffinity:AddPrefabAffinity("duriansoup",    1.33)
+		inst.components.foodaffinity:AddPrefabAffinity("duriansoup",    1.33)
 		inst.components.foodaffinity:AddPrefabAffinity("wine_durian",   1.33)
 
 		inst.components.foodaffinity:AddPrefabAffinity("durianchicken", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_durian",  TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
-	
+	end
+
 	if inst.components.locomotor ~= nil then
 		inst.components.locomotor:SetFasterOnGroundTile(WORLD_TILES.HOF_TIDALMARSH, true)
 	end
@@ -225,10 +225,10 @@ AddPrefabPostInit("walter", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("smores",             TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("smores",             TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("mayonnaise_chicken", TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 AddPrefabPostInit("wanda", function(inst)
@@ -236,10 +236,10 @@ AddPrefabPostInit("wanda", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
-        inst.components.foodaffinity:AddPrefabAffinity("gorge_candy", TUNING.AFFINITY_15_CALORIES_HUGE)
+	if inst.components.foodaffinity ~= nil then
+		inst.components.foodaffinity:AddPrefabAffinity("gorge_candy", TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("nukacola",    TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 AddPrefabPostInit("wonkey", function(inst)
@@ -247,12 +247,12 @@ AddPrefabPostInit("wonkey", function(inst)
 		return inst
 	end
 
-    if inst.components.foodaffinity ~= nil then
+	if inst.components.foodaffinity ~= nil then
 		inst.components.foodaffinity:AddPrefabAffinity("kyno_banana",       TUNING.AFFINITY_15_CALORIES_SMALL)
-        inst.components.foodaffinity:AddPrefabAffinity("banana_pudding",    TUNING.AFFINITY_15_CALORIES_HUGE)
+		inst.components.foodaffinity:AddPrefabAffinity("banana_pudding",    TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_banana",      TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_cave_banana", TUNING.AFFINITY_15_CALORIES_HUGE)
-    end
+	end
 end)
 
 -- Action for storing Souls inside bottles. (Only Wortox).
@@ -262,30 +262,30 @@ end)
 
 -- Players Have a Chance to Drop Long Pig. Except WX-78, Wurt, Wortox and Wormwood.
 if HOF_HUMANMEAT then
-    local longpig_characters =
+	local longpig_characters =
 	{
-        "wilson",
-        "willow",
-        "wolfgang",
-        "wendy",
-        "wickerbottom",
-        "woodie",
-        "waxwell",
-        "wes",
-        "webber",
-        "wathgrithr",
-        "winona",
-        "warly",
-        "walter",
-        "wanda",
-    }
+		"wilson",
+		"willow",
+		"wolfgang",
+		"wendy",
+		"wickerbottom",
+		"woodie",
+		"waxwell",
+		"wes",
+		"webber",
+		"wathgrithr",
+		"winona",
+		"warly",
+		"walter",
+		"wanda",
+	}
 
 	local function LongPigPostinit(inst)
 		local function OnDeathLongPig(inst)
 			if math.random() < 0.33 then
 				local x, y, z = inst.Transform:GetWorldPosition()
 				local humanmeat = SpawnPrefab("kyno_humanmeat")
-				
+
 				if humanmeat ~= nil then
 					if humanmeat.Physics ~= nil then
 						local speed = 1 + math.random()
@@ -306,45 +306,45 @@ if HOF_HUMANMEAT then
 		inst:ListenForEvent("death", OnDeathLongPig)
 	end
 
-    for k,v in pairs(longpig_characters) do
-        AddPrefabPostInit(v, LongPigPostinit)
-    end
+	for k,v in pairs(longpig_characters) do
+		AddPrefabPostInit(v, LongPigPostinit)
+	end
 end
 
 -- Ashes are Now a Fertilizer. Also using the Nutrients of Manure as placeholder for now, check "ash.lua".
 local function AshPostinit(inst)
 	local FERTILIZER_DEFS = require("prefabs/fertilizer_nutrient_defs").FERTILIZER_DEFS
 
-    local function GetFertilizerKey(inst)
-        return inst.prefab
-    end
+	local function GetFertilizerKey(inst)
+		return inst.prefab
+	end
 
-    local function fertilizerresearchfn(inst)
-        return inst:GetFertilizerKey()
-    end
+	local function fertilizerresearchfn(inst)
+		return inst:GetFertilizerKey()
+	end
 
-    MakeDeployableFertilizerPristine(inst)
+	MakeDeployableFertilizerPristine(inst)
 
-    inst:AddTag("fertilizerresearchable")
-    inst:AddTag("coffeefertilizer2")
-    inst:AddTag("fertilizer_volcanic")
-	
-    inst.GetFertilizerKey = GetFertilizerKey
+	inst:AddTag("fertilizerresearchable")
+	inst:AddTag("coffeefertilizer2")
+	inst:AddTag("fertilizer_volcanic")
 
-    if not _G.TheWorld.ismastersim then
-        return inst
-    end
+	inst.GetFertilizerKey = GetFertilizerKey
 
-    inst:AddComponent("fertilizerresearchable")
-    inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
 
-    inst:AddComponent("fertilizer")
-    inst.components.fertilizer.fertilizervalue = TUNING.SPOILEDFOOD_FERTILIZE
-    inst.components.fertilizer.soil_cycles = TUNING.SPOILEDFOOD_SOILCYCLES
-    inst.components.fertilizer.withered_cycles = TUNING.SPOILEDFOOD_WITHEREDCYCLES
-    inst.components.fertilizer:SetNutrients(FERTILIZER_DEFS.ash.nutrients)
+	inst:AddComponent("fertilizerresearchable")
+	inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)
 
-    MakeDeployableFertilizer(inst)
+	inst:AddComponent("fertilizer")
+	inst.components.fertilizer.fertilizervalue = TUNING.SPOILEDFOOD_FERTILIZE
+	inst.components.fertilizer.soil_cycles = TUNING.SPOILEDFOOD_SOILCYCLES
+	inst.components.fertilizer.withered_cycles = TUNING.SPOILEDFOOD_WITHEREDCYCLES
+	inst.components.fertilizer:SetNutrients(FERTILIZER_DEFS.ash.nutrients)
+
+	MakeDeployableFertilizer(inst)
 end
 
 AddPrefabPostInit("ash", AshPostinit)
@@ -356,7 +356,7 @@ if HOF_KEEPFOOD then
 			if not _G.TheWorld.ismastersim then
 				return inst
 			end
-			
+
 			if inst.components.stewer then
 				inst.components.stewer.onspoil = function()
 					inst.components.stewer.spoiltime = 1
@@ -368,20 +368,20 @@ if HOF_KEEPFOOD then
 	end
 end
 
--- For using Salt on Crock Pot foods. 
 AddComponentPostInit("edible", function(self, inst)
-    if not inst.components.saltable and inst:HasTag("preparedfood") then
-        inst:AddComponent("saltable")
-    end
-	
-	-- Stuffed Starch spice tweak.
+	-- For using Salt on Crock Pot foods.
+	if not inst.components.saltable and not inst:HasTag("fooddrink") and inst:HasTag("preparedfood") then
+		inst:AddComponent("saltable")
+	end
+
+	--[[
 	function self:GetHunger(eater)
 		local multiplier = 1
 		local spice_source = self.spice
-		
-		local ignore_spoilage = not self.degrades_with_spoilage or self.hungervalue < 0 or 
+
+		local ignore_spoilage = not self.degrades_with_spoilage or self.hungervalue < 0 or
 		(eater ~= nil and eater.components.eater ~= nil and eater.components.eater.ignoresspoilage)
-		
+
 		if not ignore_spoilage and self.inst.components.perishable ~= nil then
 			if self.inst.components.perishable:IsStale() then
 				multiplier = eater ~= nil and eater.components.eater ~= nil and eater.components.eater.stale_hunger or self.stale_hunger
@@ -390,37 +390,66 @@ AddComponentPostInit("edible", function(self, inst)
 				spice_source = nil
 			end
 		end
-		
+
 		if eater ~= nil and eater.components.foodaffinity ~= nil then
 			local affinity_bonus = eater.components.foodaffinity:GetAffinity(self.inst)
-			
+
 			if affinity_bonus ~= nil then
 				multiplier = multiplier * affinity_bonus
 			end
 		end
-		
+
 		if spice_source and TUNING.SPICE_MULTIPLIERS[spice_source] and TUNING.SPICE_MULTIPLIERS[spice_source].HUNGER then
 			multiplier = multiplier + TUNING.SPICE_MULTIPLIERS[spice_source].HUNGER
 		end
-		
+
 		return multiplier * self.hungervalue
+	end
+	]]--
+
+	-- Stuffed Starch spice tweak.
+	local _GetHunger = self.GetHunger
+
+	function self:GetHunger(eater)
+		local hunger = _GetHunger(self, eater)
+
+		local multiplier = 1
+		local spice_source = self.spice
+
+		local ignore_spoilage = not self.degrades_with_spoilage or self.hungervalue < 0 or
+		(eater ~= nil and eater.components.eater ~= nil and eater.components.eater.ignoresspoilage)
+
+		if not ignore_spoilage and self.inst.components.perishable ~= nil then
+			if self.inst.components.perishable:IsStale() then
+				multiplier = eater ~= nil and eater.components.eater ~= nil and eater.components.eater.stale_hunger or self.stale_hunger
+			elseif self.inst.components.perishable:IsSpoiled() then
+				multiplier = eater ~= nil and eater.components.eater ~= nil and eater.components.eater.spoiled_hunger or self.spoiled_hunger
+				spice_source = nil
+			end
+		end
+
+		if spice_source and TUNING.SPICE_MULTIPLIERS[spice_source] and TUNING.SPICE_MULTIPLIERS[spice_source].HUNGER then
+			hunger = hunger + (self.hungervalue * TUNING.SPICE_MULTIPLIERS[spice_source].HUNGER)
+		end
+
+		return hunger
 	end
 end)
 
 -- inst.components.debuffable:RemoveAllDebuffs()
 AddComponentPostInit("debuffable", function(self)
-    function self:RemoveAllDebuffs()
-        for name, _ in pairs(self.debuffs) do
-            self:RemoveDebuff(name)
-        end
-    end
+	function self:RemoveAllDebuffs()
+		for name, _ in pairs(self.debuffs) do
+			self:RemoveDebuff(name)
+		end
+	end
 end)
 
 -- Uuugh. Our mod spices have a nasty bug regarding foodaffinity, I don't know how to fix it yet.
 -- This is a temporary workaround for it to work with favorite foods.
 AddComponentPostInit("foodaffinity", function(self)
 	 local spicedfoods = _G.MergeMaps(require("spicedfoods"), require("hof_spicedfoods"))
-	
+
 	function self:GetFoodBasePrefab(food)
 		local prefab = food.prefab
 		return spicedfoods[prefab] and spicedfoods[prefab].basename or prefab
@@ -429,22 +458,22 @@ end)
 
 -- For increasing fishing yields.
 AddComponentPostInit("fishingrod", function(self)
-    local oldReel = self.Reel
-	
-    function self:Reel(...)
-        local ret = {oldReel(self, ...)}
+	local oldReel = self.Reel
+
+	function self:Reel(...)
+		local ret = {oldReel(self, ...)}
 
 		if self.target ~= nil and self.caughtfish ~= nil and self.fisherman ~= nil and self.fisherman:HasTag("skilledfisherman") then
 			local extraFish = SpawnPrefab(self.caughtfish.prefab)
-			
+
 			if self.fisherman ~= nil and extraFish.components.weighable ~= nil then
 				extraFish.components.weighable:SetPlayerAsOwner(self.fisherman)
 			end
-            
+
 			local spawnPos = self.fisherman:GetPosition()
 			local offset = spawnPos - self.target:GetPosition()
 			spawnPos = spawnPos + offset:GetNormalized()
-            
+
 			self.inst:DoTaskInTime(.8, function()
 				if extraFish.Physics ~= nil then
 					extraFish.Physics:Teleport(spawnPos:Get())
@@ -452,19 +481,19 @@ AddComponentPostInit("fishingrod", function(self)
 					extraFish.Transform:SetPosition(spawnPos:Get())
 				end
 			end)
-				
+
 			-- Random chance for one more extra fish.
 			if _G.TryLuckRoll(self.fisherman, TUNING.KYNO_FISHINGBUFF_EXTRA_FISH_CHANCE, HofLuckFormulas.SkilledFisherman) then
 				local extraFish2 = SpawnPrefab(self.caughtfish.prefab)
-				
+
 				if self.fisherman ~= nil and extraFish2.components.weighable ~= nil then
 					extraFish2.components.weighable:SetPlayerAsOwner(self.fisherman)
 				end
-					
+
 				local spawnPos = self.fisherman:GetPosition()
 				local offset = spawnPos - self.target:GetPosition()
 				spawnPos = spawnPos + offset:GetNormalized()
-				
+
 				self.inst:DoTaskInTime(.8, function()
 					if extraFish2.Physics ~= nil then
 						extraFish2.Physics:Teleport(spawnPos:Get())
@@ -475,8 +504,8 @@ AddComponentPostInit("fishingrod", function(self)
 			end
 		end
 
-        return unpack(ret)
-    end
+		return unpack(ret)
+	end
 end)
 
 -- Antchovy special case that don't let them sink right after catching it.
@@ -485,7 +514,7 @@ AddComponentPostInit("fishingrod", function(self)
 
 	function self:Reel(...)
 		local ret = {oldReel(self, ...)}
-		
+
 		if self.caughtfish ~= nil and self.fisherman ~= nil and self.fisherman.components.inventory ~= nil then
 			local fish = self.caughtfish
 
@@ -514,11 +543,11 @@ end)
 -- For trading and learning Recipe Cards.
 local function CookingRecipeCardPostInit(inst)
 	inst:AddTag("learnablerecipecard")
-	
+
 	if not _G.TheWorld.ismastersim then
-        return inst
-    end
-	
+		return inst
+	end
+
 	inst:AddComponent("tradable")
 	inst:AddComponent("learnablerecipecard")
 end
@@ -532,25 +561,25 @@ local function PlayerClassifiedPostInit(inst)
 			TheFocalPoint.SoundEmitter:PlaySound("dontstarve/HUD/get_gold")
 		end
 	end
-	
+
 	local function OnSaltFoodEvent(inst)
 		if inst._parent ~= nil and TheFocalPoint.entity:GetParent() == inst._parent then
 			TheFocalPoint.SoundEmitter:PlaySound("dontstarve/quagmire/common/cooking/salt_shake")
 		end
 	end
-	
+
 	local function OnPlayNukashineEvent(inst)
 		if inst._parent ~= nil and TheFocalPoint.entity:GetParent() == inst._parent then
 			TheFocalPoint.SoundEmitter:KillSound("open_nukashine")
 			TheFocalPoint.SoundEmitter:KillSound("drink_nukashine")
 			TheFocalPoint.SoundEmitter:KillSound("nukashine_jukebox")
-		
+
 			TheFocalPoint.SoundEmitter:PlaySound("hof_sounds/common/nukashine/open", "open_nukashine")
 			TheFocalPoint.SoundEmitter:PlaySound("hof_sounds/common/nukashine/drink", "drink_nukashine")
 			TheFocalPoint.SoundEmitter:PlaySound("hof_sounds/music/jukebox", "nukashine_jukebox")
 		end
 	end
-	
+
 	local function OnStopNukashineEvent(inst)
 		if inst._parent ~= nil and TheFocalPoint.entity:GetParent() == inst._parent then
 			TheFocalPoint.SoundEmitter:KillSound("open_nukashine")
@@ -558,25 +587,25 @@ local function PlayerClassifiedPostInit(inst)
 			TheFocalPoint.SoundEmitter:KillSound("nukashine_jukebox")
 		end
 	end
-	
+
 	local function OnPirateRumEvent(inst)
 		if inst._parent ~= nil and TheFocalPoint.entity:GetParent() == inst._parent then
 			TheFocalPoint.SoundEmitter:PlaySound("hof_sounds/common/piraterum/laugh", "piraterum", 0.5)
 		end
 	end
-	
+
 	local function OnBottleCapEvent(inst)
 		if inst._parent ~= nil and TheFocalPoint.entity:GetParent() == inst._parent then
 			TheFocalPoint.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
 		end
 	end
-	
+
 	local function OnPlayGoldenAppleEvent(inst)
 		if inst._parent ~= nil and TheFocalPoint.entity:GetParent() == inst._parent then
 			TheFocalPoint.SoundEmitter:PlaySound("dontstarve/quagmire/music/gorge_win", "goldenapple", 0.5)
 		end
 	end
-	
+
 	local function OnStopGoldenAppleEvent(inst)
 		if inst._parent ~= nil and TheFocalPoint.entity:GetParent() == inst._parent then
 			TheFocalPoint.SoundEmitter:PlaySound("dontstarve/quagmire/transform/music/2")
@@ -586,31 +615,31 @@ local function PlayerClassifiedPostInit(inst)
 	local function OnLearnRecipeCard(parent)
 		parent.player_classified.learnrecipecardevent:push()
 	end
-	
+
 	local function OnSaltFood(parent)
 		parent.player_classified.saltfoodevent:push()
 	end
-	
+
 	local function OnPlayNukashine(parent)
 		parent.player_classified.playnukashineevent:push()
 	end
-	
+
 	local function OnStopNukashine(parent)
 		parent.player_classified.stopnukashineevent:push()
 	end
-	
+
 	local function OnPirateRum(parent)
 		parent.player_classified.piraterumevent:push()
 	end
-	
+
 	local function OnBottleCap(parent)
 		parent.player_classified.bottlecapevent:push()
 	end
-	
+
 	local function OnPlayGoldenApple(parent)
 		parent.player_classified.playgoldenappleevent:push()
 	end
-	
+
 	local function OnStopGoldenApple(parent)
 		parent.player_classified.stopgoldenappleevent:push()
 	end
@@ -636,7 +665,7 @@ local function PlayerClassifiedPostInit(inst)
 		inst:ListenForEvent("buff.playgoldenapple",   OnPlayGoldenAppleEvent)
 		inst:ListenForEvent("buff.stopgoldenapple",   OnStopGoldenAppleEvent)
 	end
-	
+
 	inst.learnrecipecardevent = net_event(inst.GUID, "action.learnrecipecard")
 	inst.saltfoodevent        = net_event(inst.GUID, "action.salt")
 	inst.playnukashineevent   = net_event(inst.GUID, "buff.playnukashine")
@@ -659,7 +688,7 @@ function FishingRod:OnUpdate()
 		if not self.fisherman:IsValid()
 		or (not self.fisherman.sg:HasStateTag("fishing") and not self.fisherman.sg:HasStateTag("catchfish"))
 		or (self.inst.components.equippable and not self.inst.components.equippable.isequipped) then
-            self:StopFishing()
+			self:StopFishing()
 		end
 	end
 end
@@ -676,7 +705,7 @@ end
 local _CreateWaxedPlant = WAXED_PLANTS.CreateWaxedPlant
 function WAXED_PLANTS.CreateWaxedPlant(data, ...)
 	local _common_postinit = data.common_postinit
-	
+
 	data.common_postinit = function(inst, ...)
 		Common_CreateWaxedPlant(inst, data)
 		return _common_postinit ~= nil and _common_postinit(inst, ...) or nil
@@ -689,29 +718,29 @@ if HOF_ICEBOXSTACKSIZE then
 	local function ElastispacerPostInit(inst)
 		local function OnUpgrade(inst, performer, upgraded_from_item)
 			local numupgrades = inst.components.upgradeable.numupgrades
-	
+
 			if numupgrades == 1 then
 				inst._chestupgrade_stacksize = true
-		
+
 				if inst.components.container ~= nil then
 					inst.components.container:Close()
 					inst.components.container:EnableInfiniteStackSize(true)
 				end
-		
+
 				if upgraded_from_item then
 					local x, y, z = inst.Transform:GetWorldPosition()
 					local fx = SpawnPrefab("chestupgrade_stacksize_fx")
 					fx.Transform:SetPosition(x, y, z)
 				end
 			end
-	
+
 			inst.components.upgradeable.upgradetype = nil
 
 			if inst.components.lootdropper ~= nil then
 				inst.components.lootdropper:SetLoot({"alterguardianhatshard"})
 			end
 		end
-	
+
 		local function OnLoadPostPass(inst, newents, data)
 			if inst.components.upgradeable ~= nil and inst.components.upgradeable.numupgrades > 0 then
 				OnUpgrade(inst)
@@ -725,15 +754,15 @@ if HOF_ICEBOXSTACKSIZE then
 				end
 			end
 		end
-	
+
 		if not _G.TheWorld.ismastersim then
 			return inst
 		end
-	
+
 		inst:AddComponent("upgradeable")
 		inst.components.upgradeable.upgradetype = UPGRADETYPES.CHEST
 		inst.components.upgradeable:SetOnUpgradeFn(OnUpgrade)
-	
+
 		inst.OnLoadPostPass = OnLoadPostPass
 	end
 
@@ -742,14 +771,14 @@ if HOF_ICEBOXSTACKSIZE then
 end
 
 local function WobyRackPostInit(inst)
-	local CS = 
+	local CS =
 	{
-		r = 0.4, 
-		g = 0.4, 
-		b = 0.6, 
+		r = 0.4,
+		g = 0.4,
+		b = 0.6,
 		a = 0.5,
 	}
-	
+
 	local function ApplyColourToSlot(slotfx, r, g, b, a)
 		if slotfx and slotfx.AnimState then
 			slotfx.AnimState:SetMultColour(r, g, b, a)
@@ -758,11 +787,11 @@ local function WobyRackPostInit(inst)
 			slotfx.AnimState:SetSymbolMultColour("swap_dried", r, g, b, a)
 		end
 	end
-	
+
 	local function StealthMultColour(inst)
 		inst.AnimState:SetMultColour(CS.r, CS.g, CS.b, CS.a)
 		inst.AnimState:SetSymbolMultColour("rack", CS.r, CS.g, CS.b, CS.a)
-		
+
 		if inst.slots ~= nil then
 			for _, v in ipairs(inst.slots) do
 				if v.fx ~= nil then
@@ -771,11 +800,11 @@ local function WobyRackPostInit(inst)
 			end
 		end
 	end
-	
+
 	local function DefaultMultColour(inst)
 		inst.AnimState:SetMultColour(1, 1, 1, 1)
 		inst.AnimState:SetSymbolMultColour("rack", 1, 1, 1, 1)
-		
+
 		if inst.slots ~= nil then
 			for _, v in ipairs(inst.slots) do
 				if v.fx ~= nil then
@@ -787,28 +816,28 @@ local function WobyRackPostInit(inst)
 
 	local function RackStealth(inst)
 		local parent = inst.entity:GetParent()
-		
+
 		if parent and parent:HasTag("mimicmosa_stealthed") then
 			StealthMultColour(inst)
 		else
 			DefaultMultColour(inst)
 		end
 	end
-	
+
 	inst:DoPeriodicTask(0, RackStealth)
 end
 
 AddPrefabPostInit("woby_rack_swap_fx", WobyRackPostInit)
 
 local function SaddleShadowPostInit(inst)
-	local CS = 
+	local CS =
 	{
-		r = 0.4, 
-		g = 0.4, 
-		b = 0.6, 
+		r = 0.4,
+		g = 0.4,
+		b = 0.6,
 		a = 0.5,
 	}
-	
+
 	local function StealthMultColour(inst)
 		if inst.fx then
 			for i, fx in ipairs(inst.fx) do
@@ -818,7 +847,7 @@ local function SaddleShadowPostInit(inst)
 			end
 		end
 	end
-	
+
 	local function DefaultMultColour(inst)
 		if inst.fx then
 			for i, fx in ipairs(inst.fx) do
@@ -828,10 +857,10 @@ local function SaddleShadowPostInit(inst)
 			end
 		end
 	end
-	
+
 	local function SaddleStealth(inst)
 		local parent = inst.entity:GetParent()
-		
+
 		if parent:HasTag("mimicmosa_stealthed") then
 			StealthMultColour(inst)
 		else
@@ -846,7 +875,7 @@ AddPrefabPostInit("saddle_shadow_fx", SaddleShadowPostInit)
 
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 -- Correct animations for new ocean creatures inside Scale-o-Matic.
-local function TrophyScaleFishPostInit(inst)	
+local function TrophyScaleFishPostInit(inst)
 	local function SetFish(inst, item_data)
 		if item_data then
 			if item_data.prefab == "kyno_jellyfish" then
@@ -862,7 +891,7 @@ local function TrophyScaleFishPostInit(inst)
 				inst.AnimState:OverrideSymbol("claw_type1a", "kyno_lobster_monkeyisland", "claw_type3a")
 				inst.AnimState:OverrideSymbol("claw_type2b", "kyno_lobster_monkeyisland", "claw_type3b")
 				inst.AnimState:HideSymbol("claw_type2a")
-				
+
 				inst:DoTaskInTime(1, function(inst)
 					inst.AnimState:OverrideSymbol("claw_type2b", "kyno_lobster_monkeyisland", "claw_type3b")
 				end)
@@ -873,7 +902,7 @@ local function TrophyScaleFishPostInit(inst)
 			if item_data.prefab == "kyno_jellyfish_rainbow" then
 				local light = SpawnPrefab("kyno_jellyfish_rainbow_light")
 				light.components.spell:SetTarget(inst)
-				
+
 				if light:IsValid() then
 					if not light.components.spell.target then
 						light:Remove()
@@ -900,7 +929,7 @@ local function TrophyScaleFishPostInit(inst)
 	end
 
 	local _OnLoad = inst.OnLoad
-	
+
 	inst.OnLoad = function(inst, ...)
 		if inst.components.trophyscale ~= nil then
 			local item_data = inst.components.trophyscale:GetItemData()
@@ -911,7 +940,7 @@ local function TrophyScaleFishPostInit(inst)
 			_OnLoad(inst, ...)
 		end
 	end
-	
+
 	inst:ListenForEvent("onnewtrophy", OnNewTrophy)
 end
 
@@ -943,28 +972,28 @@ AddComponentPostInit("trap", function(self)
 		if self.inst:HasTag("smalloceanfish_trap") and target ~= nil and target:HasTag("smalloceanfish") and not target:HasTag("partiallyhooked") then
 			self.target = target
 			self.captured_fish = target
-			
+
 			self.issprung = true
 
 			local loot_prefab = TUNING.HOF_OCEANTRAP_PREFAB_INDEX[target.prefab] or (target.prefab .. "_inv")
 			self.lootprefabs = { loot_prefab }
-			
+
 			if self.bait ~= nil then
 				if self.bait:IsValid() then
 					self.bait:Remove()
 				end
-				
+
 				if self.RemoveBait ~= nil then
 					self:RemoveBait()
 				end
-				
+
 				self.bait = nil
 			end
 
 			if self.captured_fish ~= nil and self.captured_fish:IsValid() then
 				self.captured_fish:RemoveFromScene()
 			end
-			
+
 			self:StopUpdating()
 			self.inst:PushEvent("springtrap")
 
@@ -978,13 +1007,13 @@ AddComponentPostInit("trap", function(self)
 		if self.inst:HasTag("smalloceanfish_trap") and self.captured_fish ~= nil then
 			local fish = self.captured_fish
 			local pos = self.inst:GetPosition()
-		
+
 			local loot_prefab = TUNING.HOF_OCEANTRAP_PREFAB_INDEX[fish.prefab] or (fish.prefab .. "_inv")
 			local loot = SpawnPrefab(loot_prefab)
 
 			if loot ~= nil then
 				loot.Transform:SetPosition(pos:Get())
-				
+
 				if doer ~= nil and doer.components.inventory ~= nil then
 					doer.components.inventory:GiveItem(loot)
 				end
@@ -1000,7 +1029,7 @@ AddComponentPostInit("trap", function(self)
 		end
 
 		_Harvest(self, doer)
-    end
+	end
 
 	function self:OnSave()
 		local data, refs = _OnSave ~= nil and _OnSave(self) or {}, {}
@@ -1026,7 +1055,7 @@ AddComponentPostInit("trap", function(self)
 		if _OnLoad ~= nil then
 			_OnLoad(self, data)
 		end
-		
+
 		if self.inst:HasTag("smalloceanfish_trap") and data ~= nil then
 			if data.loot ~= nil then
 				self.lootprefabs = type(data.loot) == "table" and data.loot or { data.loot }
@@ -1034,7 +1063,7 @@ AddComponentPostInit("trap", function(self)
 
 			if data.captured_fish_prefab ~= nil then
 				local fish = SpawnPrefab(data.captured_fish_prefab)
-				
+
 				if fish ~= nil then
 					fish:RemoveFromScene()
 					self.captured_fish = fish
@@ -1073,11 +1102,11 @@ end)
 -- Get Anniversary Cheer when cooking.
 local function GetBaseFoodPrefab(prefab)
 	local spice_pos = prefab:find("_spice_")
-	
+
 	if spice_pos then
 		return prefab:sub(1, spice_pos - 1)
 	end
-	
+
 	return prefab
 end
 
@@ -1091,44 +1120,44 @@ AddComponentPostInit("stewer", function(self)
 
 		local product_prefab = self.product
 		local loot_captured = nil
-		
+
 		if harvester and harvester.components.inventory then
 			local _GiveItem = harvester.components.inventory.GiveItem
-			
+
 			harvester.components.inventory.GiveItem = function(inv, item, ...)
 				loot_captured = item
 				return _GiveItem(inv, item, ...)
 			end
 
 			local result = _Harvest(self, harvester, ...)
-			
-            harvester.components.inventory.GiveItem = _GiveItem
+
+			harvester.components.inventory.GiveItem = _GiveItem
 
 			if result and loot_captured then
 				local base_loot = GetBaseFoodPrefab(loot_captured.prefab) -- Blocks spiced foods.
-				
+
 				if not TUNING.HOFBIRTHDAY_BLOCKED_RECIPES[base_loot] and _G.IsSpecialEventActive(_G.SPECIAL_EVENTS.HOFBIRTHDAY)
 				and harvester:HasTag("cheer_rewardable") --[[math.random() <= TUNING.HOFBIRTHDAY_CHEER_CHANCE]] then
 					inv = harvester.components.inventory
 					local cheer = SpawnPrefab("kyno_hofbirthday_cheer")
-					
+
 					if inv then
 						inv:GiveItem(cheer, nil, self.inst:GetPosition())
 					else
 						_G.LaunchAt(cheer, self.inst, nil, 1, 1)
 					end
 				end
-				
+
 				-- For refunding Empty Bottles when harvesting.
 				if loot_captured and loot_captured.prefab == base_loot and loot_captured:HasTag("bottled") then
 					local amount = loot_captured.bottlesize or 1
 
 					for i = 1, amount do
 						local bottle = SpawnPrefab("messagebottleempty")
-						
+
 						if bottle then
 							local inv = harvester.components.inventory
-							
+
 							if inv then
 								inv:GiveItem(bottle, nil, self.inst:GetPosition())
 							else
@@ -1143,11 +1172,11 @@ AddComponentPostInit("stewer", function(self)
 		end
 
 		local result = _Harvest(self, harvester, ...)
-		
+
 		if result and product_prefab then
 			local loot = SpawnPrefab(product_prefab)
 
-			if loot and not TUNING.HOFBIRTHDAY_BLOCKED_RECIPES[loot.prefab] and 
+			if loot and not TUNING.HOFBIRTHDAY_BLOCKED_RECIPES[loot.prefab] and
 			_G.IsSpecialEventActive(_G.SPECIAL_EVENTS.HOFBIRTHDAY) and math.random() <= TUNING.HOFBIRTHDAY_CHEER_CHANCE then
 				local cheer = SpawnPrefab("kyno_hofbirthday_cheer")
 				_G.LaunchAt(cheer, self.inst, nil, 1, 1)
@@ -1161,7 +1190,7 @@ end)
 -- Pollinators will also target Sugar Flowers as well.
 AddComponentPostInit("pollinator", function(self)
 	local _CanPollinate = self.CanPollinate
-	
+
 	function self:CanPollinate(flower, ...)
 		local FLOWER_TAGS = { "flower", "sugarflower" }
 
@@ -1195,7 +1224,7 @@ local FIRESUPRESSOR_IGNORE_TAGS = {"fireproof"}
 local NOTAGS_FIRESUPPRESSOR = UpvalueHacker.GetUpvalue(FireDetector.ActivateEmergencyMode, "OnDetectEmergencyTargets", "NOTAGS")
 
 for k, v in pairs(FIRESUPRESSOR_IGNORE_TAGS) do
-    table.insert(NOTAGS_FIRESUPPRESSOR, v)
+	table.insert(NOTAGS_FIRESUPPRESSOR, v)
 end
 
 -- New birds will spawn when landing on these turfs.
@@ -1235,7 +1264,7 @@ local function PhaseAllowed(schooldata)
 				return true
 			end
 		end
-		
+
 		return false
 	end
 
@@ -1256,7 +1285,7 @@ AddComponentPostInit("schoolspawner", function(self)
 		if PhaseAllowed(schooldata) then
 			return schooldata
 		end
-			
+
 		return nil
 	end
 
@@ -1267,7 +1296,7 @@ end)
 -- i.e: Wortox loses sanity if he's Nice inclined, but will show as positive values.
 AddClassPostConstruct("widgets/redux/cookbookpage_crockpot", function(self)
 	local _PopulateRecipeDetailPanel = self.PopulateRecipeDetailPanel
-	
+
 	function self:PopulateRecipeDetailPanel(data)
 		if data and data.recipe_def then
 			data.recipe_def.health = data.recipe_def.health2 or data.recipe_def.health
@@ -1294,45 +1323,45 @@ end)
 -- Cool effect for enchanted items.
 AddClassPostConstruct("widgets/itemtile", function(self)
 	local UIAnim = require("widgets/uianim")
-	
+
 	local function _StartUpdating(self, flag)
 		if next(self.updatingflags) == nil then
 			self:StartUpdating()
 		end
-		
+
 		self.updatingflags[flag] = true
 	end
 
 	local function _StopUpdating(self, flag)
 		self.updatingflags[flag] = nil
-        
+
 		if next(self.updatingflags) == nil then
 			self:StopUpdating()
 		end
 	end
-	
+
 	function self:StartUpdatingEnchanted()
 		self.updateenchanteddelay = 0
 		_StartUpdating(self, "enchanted")
 	end
-	
+
 	function self:StopUpdatingEnchanted()
 		_StopUpdating(self, "enchanted")
 		self.updateenchanteddelay = nil
 	end
-	
+
 	function self:StartUpdatingShadow2()
 		self.updateshadow2delay = 0
 		_StartUpdating(self, "shadow2")
 	end
-	
+
 	function self:StopUpdatingShadow2()
 		_StopUpdating(self, "shadow2")
 		self.updateshadow2delay = nil
 	end
-	
+
 	local _OnUpdate = self.OnUpdate
-	
+
 	function self:OnUpdate(dt)
 		if _OnUpdate then
 			_OnUpdate(self, dt)
@@ -1340,17 +1369,17 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 
 		if self.updatingflags and self.updatingflags.enchanted then
 			self.updateenchanteddelay = (self.updateenchanteddelay or 0) + dt
-			
+
 			if self.updateenchanteddelay > 0.2 then
 				self.updateenchanteddelay = 0
 
 				self:CheckEnchantedFX()
 			end
 		end
-		
+
 		if self.updatingflags and self.updatingflags.shadow2 then
 			self.updateshadow2delay = (self.updateshadow2delay or 0) + dt
-			
+
 			if self.updateshadow2delay > 0.2 then
 				self.updateshadow2delay = 0
 
@@ -1358,7 +1387,7 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 			end
 		end
 	end
-	
+
 	function self:CheckEnchantedFX()
 		if self.item:HasTag("goldenapple") then
 			self.enchantedfx:Show()
@@ -1366,7 +1395,7 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 			self.enchantedfx:Hide()
 		end
 	end
-	
+
 	function self:CheckShadow2FX()
 		if self.item:HasTag("shadow_fooditem") then
 			self.shadow2fx:Show()
@@ -1387,7 +1416,7 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 				self.enchantedfx:GetAnimState():AnimateWhilePaused(false)
 				self.enchantedfx:SetClickable(false)
 			end
-			
+
 			if self.item:HasTag("goldenapple") then
 				self:CheckEnchantedFX()
 				self:StartUpdatingEnchanted()
@@ -1399,7 +1428,7 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 			self.enchantedfx = nil
 		end
 	end
-	
+
 	function self:ToggleShadow2FX()
 		if self.showequipshadow2fx or (self.item and self.item:HasTag("shadow_fooditem")) then
 			if self.shadow2fx == nil then
@@ -1412,7 +1441,7 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 				self.shadow2fx:GetAnimState():AnimateWhilePaused(false)
 				self.shadow2fx:SetClickable(false)
 			end
-			
+
 			if self.item:HasTag("shadow_fooditem") then
 				self:CheckShadow2FX()
 				self:StartUpdatingShadow2()
@@ -1426,7 +1455,7 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 	end
 
 	local _SetIsEquip = self.SetIsEquip
-	
+
 	function self:SetIsEquip(isequip)
 		local enchantedfx = isequip and self.item:HasTag("goldenapple")
 		local shadow2fx = isequip and self.item:HasTag("shadow_fooditem")
@@ -1435,15 +1464,15 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 			self.showequipenchantedfx = enchantedfx or nil
 			self:ToggleEnchantedFX()
 		end
-		
+
 		if not self.showequipshadow2fx == shadow2fx then
 			self.showequipshadow2fx = shadow2fx or nil
 			self:ToggleShadow2FX()
 		end
-		
+
 		return _SetIsEquip(self, isequip)
 	end
-	
+
 	self:ToggleEnchantedFX()
 	self:ToggleShadow2FX()
 end)
@@ -1451,7 +1480,7 @@ end)
 -- Fish Registry player extension.
 local function OnLearnFish(inst, data)
 	local fishregistryupdater = data ~= nil and inst.components.fishregistryupdater
-    
+
 	if fishregistryupdater then
 		fishregistryupdater:LearnFish(data.fish)
 	end
@@ -1459,7 +1488,7 @@ end
 
 local function OnLearnRoe(inst, data)
 	local fishregistryupdater = data ~= nil and inst.components.fishregistryupdater
-    
+
 	if fishregistryupdater then
 		fishregistryupdater:LearnRoe(data.roe)
 	end
@@ -1471,10 +1500,10 @@ AddPlayerPostInit(function(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst.OnLearnFish = OnLearnFish
 	inst.OnLearnRoe = OnLearnRoe
-	
+
 	inst:ListenForEvent("learnfish", inst.OnLearnFish)
 	inst:ListenForEvent("learnroe", inst.OnLearnRoe)
 end)

@@ -172,6 +172,7 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 				{
 					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", "wormhole", 
 					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
+					"hermithouse", "meatrack_hermit", "beebox_hermit", "moon_fissure_plugged",
 				})
 				
 				if ents_to_remove ~= nil then
@@ -301,6 +302,7 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 				{
 					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", "wormhole",
 					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
+					"hermithouse", "meatrack_hermit", "beebox_hermit", "moon_fissure_plugged",
 				})
 				
 				if ents_to_remove ~= nil then
@@ -447,6 +449,7 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 				{
 					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", "wormhole",
 					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
+					"hermithouse", "meatrack_hermit", "beebox_hermit", "moon_fissure_plugged",
 				})
 				
 				if ents_to_remove ~= nil then
@@ -1002,6 +1005,7 @@ local function HofRetrofitting_OctopusKingShop(map, savedata)
 				{
 					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", "wormhole",
 					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
+					"hermithouse", "meatrack_hermit", "beebox_hermit", "moon_fissure_plugged",
 				})
 				
 				if ents_to_remove ~= nil then

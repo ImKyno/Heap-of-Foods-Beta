@@ -20,7 +20,7 @@ local STRINGS =
 󰀄 Adds over 200 brand-new Crock Pot dishes alongside new ingredients to use. Happy Cooking!
 
 󰀠 Also features brand-new Biomes somewhere in the Ocean!
-󰀦 Complete Recipe Sheet on the Mod Page!
+󰀦 Learn how to cook every recipe at: https://heap-of-foods.com
 
 󰀏 Featuring the Gone Fishing Update:
 Cast your line, set your sail, and dive into the ocean! A wave of new aquatic creatures awaits, whether you're a seasoned angler or just an apprentice, there's always something to catch!
@@ -35,7 +35,7 @@ Build yourself a Fish Hatchery to raise your own fish in the comfort of your bas
 󰀄 新增 200+ 道全新烹饪锅料理，以及一些新的食材。烹饪愉快！
 
 󰀠 还新增了海洋中的全新生物群系！
-󰀦 完整食谱表可在 Mod 页面查看！
+󰀦 学习如何制作所有食谱：https://heap-of-foods.com
 
 󰀏 全新“钓鱼之旅”更新：
 抛下鱼线，扬起风帆，驶入浩瀚的海洋！无数全新的水生生物正等待着你，无论你是经验丰富的垂钓老手还是初出茅庐的新手，总有值得你去捕获的猎物！
@@ -50,7 +50,7 @@ Build yourself a Fish Hatchery to raise your own fish in the comfort of your bas
 󰀄 新增超過 +200 道全新慢燉鍋菜餚，以及可使用的新食材。快樂烹飪！
 
 󰀠 還新增了海洋中的全新生物群系！
-󰀦 完整食譜表可在 Mod 頁面查看！
+󰀦 學習如何製作所有食譜：https://heap-of-foods.com
 
 󰀏 全新「釣魚之旅」更新：
 拋下魚線，揚起風帆，潛入浩瀚的海洋！無數全新的水生生物正等著你，無論你是經驗豐富的釣老手還是初出茅廬的新手，總有值得你去捕獲的獵物！
@@ -65,7 +65,7 @@ Build yourself a Fish Hatchery to raise your own fish in the comfort of your bas
 󰀄 Adiciona mais de 200 novas comidas para a Panela, além de ingredientes novos para cozinhar!
 
 󰀠 Também acrescenta novos biomas em algum lugar do alto mar!
-󰀦 Lista completa de Receitas disponível na página do Mod!
+󰀦 Aprenda a cozinhar todas as receitas em: https://heap-of-foods.com
 
 󰀏 Apresentando a atualização Hora da Pescaria:
 Lance sua linha, prepare suas velas e mergulhe no oceano! Uma onda de novas criaturas aquáticas aguarda por você. Seja você um pescador experiente ou apenas um aprendiz, sempre há algo para fisgar!
@@ -80,7 +80,7 @@ Construa um viveiro de peixes para criar seus próprios peixes no conforto da su
 󰀄 Dodaje ponad +200 zupełnie nowych potraw do Crock Pota wraz z nowymi składnikami do wykorzystania. Smacznego gotowania!
 
 󰀠 Zawiera również zupełnie nowe biomasy gdzieś na Oceanie!
-󰀦 Pełna lista przepisów dostępna na stronie Moda!
+󰀦 Naucz się gotować wszystkie przepisy na: https://heap-of-foods.com
 
 󰀏 Przedstawiamy aktualizację Czas wędkowania:
 Zarzuć wędkę, postaw żagle i zanurz się w oceanie! Czeka Cię fala nowych stworzeń wodnych – niezależnie od tego, czy jesteś doświadczonym wędkarzem, czy dopiero zaczynasz, zawsze znajdziesz coś do złowienia!
@@ -95,7 +95,7 @@ Zbuduj sobie wylęgarnię ryb, aby hodować własne ryby w zaciszu swojej bazy, 
 󰀄 ¡Agrega más de +200 nuevos platos para la Olla, junto con nuevos ingredientes para cocinar!
 
 󰀠 ¡También incluye nuevos biomas en algún lugar del mar abierto!
-󰀦 ¡Lista completa de recetas disponible en la página del Mod!
+󰀦 Aprende a cocinar todas las recetas en: https://heap-of-foods.com
 
 󰀏 Presentando la actualización Tiempo de Pesca:
 ¡Lanza tu caña, iza las velas y sumérgete en el océano! Una oleada de nuevas criaturas acuáticas te espera. Tanto si eres un pescador experimentado como si acabas de empezar, ¡siempre hay algo que pescar!

@@ -1,17 +1,17 @@
 -- Gives all Mod Ingredients for the Mod recipes.
 function c_hofingredients()
-    local player = ConsoleCommandPlayer()
-	
-    if player ~= nil then
-        c_select(player)
-		
-        player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
+	local player = ConsoleCommandPlayer()
+
+	if player ~= nil then
+		c_select(player)
+
+		player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
 		c_give("cookbook",         nil, true)
-        c_give("kyno_syrup", 		40, true)
-        c_give("kyno_flour", 		40, true)
-        c_give("kyno_spotspice", 	40, true)
-        c_give("kyno_bacon", 		40, true)
-        c_give("gorge_bread", 		40, true)
+		c_give("kyno_syrup", 		40, true)
+		c_give("kyno_flour", 		40, true)
+		c_give("kyno_spotspice", 	40, true)
+		c_give("kyno_bacon", 		40, true)
+		c_give("gorge_bread", 		40, true)
 		c_give("kyno_white_cap",    40, true)
 		c_give("kyno_aloe",         40, true)
 		c_give("kyno_radish",       40, true)
@@ -31,16 +31,16 @@ function c_hofingredients()
 		c_give("kyno_mussel",       40, true)
 		c_give("kyno_shark_fin",    40, true)
 		c_give("kyno_coffeebeans",  40, true)
-    end
+	end
 end
 
 -- Gives all the Shipwrecked foods.
 function c_hofswfoods()
 	local player = ConsoleCommandPlayer()
-	
-    if player ~= nil then
-        c_select(player)
-		
+
+	if player ~= nil then
+		c_select(player)
+
 		c_give("coffee", 				40, true)
 		c_give("bisque",           	 	40, true)
 		c_give("jellyopop",         	40, true)
@@ -54,10 +54,10 @@ end
 -- Gives all the Hamlet foods.
 function c_hofhamfoods()
 	local player = ConsoleCommandPlayer()
-	
-    if player ~= nil then
-        c_select(player)
-		
+
+	if player ~= nil then
+		c_select(player)
+
 		c_give("feijoada",				40, true)
 		c_give("gummy_cake",			40, true)
 		c_give("hardshell_tacos", 		40, true)
@@ -72,10 +72,10 @@ end
 -- Gives all the Other-related foods.
 function c_hofotherfoods()
 	local player = ConsoleCommandPlayer()
-	
+
 	if player ~= nil then
 		c_select(player)
-		
+
 		c_give("bubbletea",				40, true)
 		c_give("frenchonionsoup",		40, true)
 		c_give("slaw",					40, true)
@@ -95,11 +95,11 @@ end
 -- Give all the Mod vegetables.
 function c_hofveggies()
 	local player = ConsoleCommandPlayer()
-	
-    if player ~= nil then
-        c_select(player)
-		
-        player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
+
+	if player ~= nil then
+		c_select(player)
+
+		player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
 		c_give("kyno_aloe",               40, true)
 		c_give("kyno_aloe_cooked",        40, true)
 		c_give("kyno_aloe_seeds",         40, true)
@@ -134,10 +134,10 @@ end
 -- Quick command for testing Coffee Bushes and Coffee.
 function c_hoftestcoffee()
 	local player = ConsoleCommandPlayer()
-	
-    if player ~= nil then
-        c_select(player)
-		
+
+	if player ~= nil then
+		c_select(player)
+
 		c_give("shovel", 			   	   nil, true)
 		c_give("dug_kyno_coffeebush",		10, true)
 		c_give("ash",                       40, true)
@@ -149,14 +149,14 @@ end
 -- Quick command for testing foods on Crock Pots.
 function c_hofcrockpots()
 	local player = ConsoleCommandPlayer()
-	
+
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
 	local sector = 2*math.pi/n
-	
+
 	for i = 1, n, 1 do
 		local crockpot = SpawnPrefab("cookpot")
-		
+
 		if crockpot then
 			crockpot.Transform:SetPosition(x + 5 * math.cos(i * sector), y, z + 5 * math.sin(i * sector))
 		end
@@ -166,14 +166,14 @@ end
 -- Quick command for testing foods on Warly's Crock Pots.
 function c_hofwarlycrockpots()
 	local player = ConsoleCommandPlayer()
-	
+
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
 	local sector = 2*math.pi/n
-	
+
 	for i = 1, n, 1 do
 		local crockpot = SpawnPrefab("portablecookpot")
-		
+
 		if crockpot then
 			crockpot.Transform:SetPosition(x + 4 * math.cos(i * sector), y, z + 4 * math.sin(i * sector))
 		end
@@ -182,15 +182,15 @@ end
 
 -- Quick Test on Serenity Archipelago stuff.
 function c_hofserenityisland()
-    local player = ConsoleCommandPlayer()
-	
-    if player ~= nil then
-        c_select(player)
-		
+	local player = ConsoleCommandPlayer()
+
+	if player ~= nil then
+		c_select(player)
+
 		local islandshop = c_findnext("kyno_serenityisland_shop")
-		
+
 		player.Physics:Teleport(islandshop.Transform:GetWorldPosition())
-        player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
+		player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
 		c_give("kyno_slaughtertool",			 nil, true)
 		c_give("kyno_sapbucket_installer",        10, true)
 		c_give("kyno_saltrack_installer",         10, true)
@@ -206,32 +206,32 @@ end
 -- Quick Test on Seaside Island stuff.
 function c_hofmeadowisland()
 	local player = ConsoleCommandPlayer()
-	
-    if player ~= nil then
-        c_select(player)
-		
+
+	if player ~= nil then
+		c_select(player)
+
 		local shop = c_findnext("kyno_meadowisland_shop")
-		
+
 		player.Physics:Teleport(shop.Transform:GetWorldPosition())
-        player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
-		c_give("kyno_piko",        nil, true) 
+		player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
+		c_give("kyno_piko",        nil, true)
 		c_give("kyno_piko_orange", nil, true)
 		c_give("kyno_kokonut",     40,  true)
 		c_give("moonglassaxe",     nil, true)
 	end
 end
-		
+
 -- Quick command for testing foods on Wooden Kegs and Preserves Jars.
 function c_hofkegs()
 	local player = ConsoleCommandPlayer()
-	
+
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
 	local sector = 2*math.pi/n
-	
+
 	for i = 1, n, 1 do
 		local crockpot = SpawnPrefab("kyno_woodenkeg")
-		
+
 		if crockpot then
 			crockpot.Transform:SetPosition(x + 5 * math.cos(i * sector), y, z + 5 * math.sin(i * sector))
 		end
@@ -240,14 +240,14 @@ end
 
 function c_hofjars()
 	local player = ConsoleCommandPlayer()
-	
+
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
 	local sector = 2*math.pi/n
-	
+
 	for i = 1, n, 1 do
 		local crockpot = SpawnPrefab("kyno_preservesjar")
-		
+
 		if crockpot then
 			crockpot.Transform:SetPosition(x + 5 * math.cos(i * sector), y, z + 5 * math.sin(i * sector))
 		end
@@ -257,31 +257,31 @@ end
 -- Quick command to test Monster Foods.
 function c_hofmonsterfoods()
 	local player = ConsoleCommandPlayer()
-	
-    if player ~= nil then
-        c_select(player)
-		
-        player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
+
+	if player ~= nil then
+		c_select(player)
+
+		player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
 		c_give("cookbook",         nil, true)
-        c_give("monsterlasagna", 	40, true)
-        c_give("monstertartare", 	40, true)
-        c_give("monstermuffin", 	40, true)
-        c_give("duriansoup", 		40, true)
-        c_give("duriansplit", 		40, true)
+		c_give("monsterlasagna", 	40, true)
+		c_give("monstertartare", 	40, true)
+		c_give("monstermuffin", 	40, true)
+		c_give("duriansoup", 		40, true)
+		c_give("duriansplit", 		40, true)
 		c_give("durianchicken",     40, true)
 		c_give("durianmeated",      40, true)
 		c_give("wobstermonster",    40, true)
 		c_give("spidercake",        40, true)
-    end
-end	
+	end
+end
 
 -- Gives all dryable items.
 function c_hofdryables()
 	local player = ConsoleCommandPlayer()
-	
-    if player ~= nil then
-        c_select(player)
-		
+
+	if player ~= nil then
+		c_select(player)
+
 		player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
 		c_give("red_cap",                   40, true)
 		c_give("green_cap",                 40, true)
@@ -302,10 +302,10 @@ end
 -- Gives all fish roe items.
 function c_hoffishroes()
 	local player = ConsoleCommandPlayer()
-	
+
 	if player ~= nil then
 		c_select(player)
-		
+
 		player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
 		c_give("kyno_roe_pondfish",             40, true)
 		c_give("kyno_roe_pondeel",              40, true)
@@ -347,21 +347,21 @@ end
 -- In case someone needs to spawn Sammy's Wagon.
 function c_hofsammywagon()
 	local player = ConsoleCommandPlayer()
-	
+
 	local house = TheSim:FindFirstEntityWithTag("sammyhouse")
-	
+
 	if house then
 		local mermcart = SpawnPrefab("kyno_meadowisland_mermcart")
-		
+
 		local x, y, z = house.Transform:GetWorldPosition()
-		
+
 		local theta = -3 -- -3
 		local radius = 4 -- 4
 		local x = x + radius * math.cos(theta)
 		local z = z - radius * math.sin(theta)
 
 		mermcart.Transform:SetPosition(x, 0, z)
-		
+
 		TheNet:Announce("Heap of Foods Mod - Successfully spawned: Sammy's Wagon. Near: Sammy's Emporium.")
 	else
 		TheNet:Announce("Heap of Foods Mod - Could not spawn: Sammy's Wagon. Reason: Missing Sammy's Emporium.")
@@ -370,24 +370,24 @@ function c_hofsammywagon()
 end
 
 local function _SpawnLayout_AddFn(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
-    local x = (points_x[current_pos_idx] - width/2.0)  * TILE_SCALE
-    local y = (points_y[current_pos_idx] - height/2.0) * TILE_SCALE
+	local x = (points_x[current_pos_idx] - width/2.0)  * TILE_SCALE
+	local y = (points_y[current_pos_idx] - height/2.0) * TILE_SCALE
 
-    x = math.floor(x*100) / 100.0
-    y = math.floor(y*100) / 100.0
+	x = math.floor(x*100) / 100.0
+	y = math.floor(y*100) / 100.0
 
-    prefab_data.x = x
-    prefab_data.z = y
+	prefab_data.x = x
+	prefab_data.z = y
 
-    prefab_data.prefab = prefab
+	prefab_data.prefab = prefab
 
-    local ent = SpawnSaveRecord(prefab_data)
+	local ent = SpawnSaveRecord(prefab_data)
 
-    ent:LoadPostPass(Ents, FunctionOrValue(prefab_data.data))
+	ent:LoadPostPass(Ents, FunctionOrValue(prefab_data.data))
 
-    if ent.components.scenariorunner ~= nil then
-        ent.components.scenariorunner:Run()
-    end
+	if ent.components.scenariorunner ~= nil then
+		ent.components.scenariorunner:Run()
+	end
 end
 
 local obj_layout = require("map/object_layout")
@@ -396,51 +396,51 @@ local LAYOUT_CANT_TAGS = { "player", "INLIMBO", "FX", "multiplayer_portal", "irr
 -- Testing Setpieces.
 -- If its not working for you consider using: require("debugcommands") d_spawnlayout("layoutname")
 function c_hofspawnlayout(name)
-    local layout  = obj_layout.LayoutForDefinition(name)
-    local map_width, map_height = TheWorld.Map:GetSize()
+	local layout  = obj_layout.LayoutForDefinition(name)
+	local map_width, map_height = TheWorld.Map:GetSize()
 
-    local add_fn = 
+	local add_fn =
 	{
-        fn = _SpawnLayout_AddFn,
-        args = {entitiesOut={}, width=map_width, height=map_height, rand_offset=false}
-    }
+		fn = _SpawnLayout_AddFn,
+		args = {entitiesOut={}, width=map_width, height=map_height, rand_offset=false}
+	}
 
-    local offset = 3 --layout.ground ~= nil and (#layout.ground / 2) or 0
-    local size = layout.ground ~= nil and (#layout.ground * TILE_SCALE) or nil
+	local offset = 3 --layout.ground ~= nil and (#layout.ground / 2) or 0
+	local size = layout.ground ~= nil and (#layout.ground * TILE_SCALE) or nil
 
-    local pos  = ConsoleWorldPosition()
-    local x, z = TheWorld.Map:GetTileCoordsAtPoint(pos:Get())
+	local pos  = ConsoleWorldPosition()
+	local x, z = TheWorld.Map:GetTileCoordsAtPoint(pos:Get())
 
-    if size ~= nil then
-        for i, ent in ipairs(TheSim:FindEntities(pos.x, 0, pos.z, size, nil, LAYOUT_CANT_TAGS)) do
-            ent:Remove()
-        end
-    end
+	if size ~= nil then
+		for i, ent in ipairs(TheSim:FindEntities(pos.x, 0, pos.z, size, nil, LAYOUT_CANT_TAGS)) do
+			ent:Remove()
+		end
+	end
 
-    obj_layout.Place({x-offset, z-offset}, name, add_fn, nil, TheWorld.Map)
+	obj_layout.Place({x-offset, z-offset}, name, add_fn, nil, TheWorld.Map)
 end
 
 function c_hofareaaware(start)
 	local player = ConsoleCommandPlayer()
-	
+
 	if player ~= nil then
 		if player.areatask ~= nil then
 			player.areatask:Cancel()
 			player.areatask = nil
 		end
-		
+
 		if start then
 			player.areatask = player:DoPeriodicTask(1, function()
 				print(player.components.areaaware:GetDebugString())
 			end)
-			
+
 			TheNet:Announce("Heap of Foods Mod - Areaaware Debugging Started.")
 		else
 			if player.areatask ~= nil then
 				player.areatask:Cancel()
 				player.areatask = nil
 			end
-			
+
 			TheNet:Announce("Heap of Foods Mod - Areaaware Debugging Stopped.")
 		end
 	end
@@ -451,7 +451,7 @@ end
 -- Feel free to copy this function and modify to your own needs!
 
 -- We are replacing tiles with WORLD_TILES.OCEAN_ROUGH, but it can be any tile, really.
--- This function also makes use of Flood Fill with some helpers to "jump" gaps and find 
+-- This function also makes use of Flood Fill with some helpers to "jump" gaps and find
 -- the nearest correspondent tile to remove, its nice for setpieces that are "archipelagos".
 
 -- c_hofremoveisland("SerenityIsland", "serenity_marker", 3, true)
@@ -587,10 +587,10 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"toucan",
 		"waterplant",
 		"waterplant_baby",
-        "kyno_wildwheat",
-    }
+		"kyno_wildwheat",
+	}
 
-    local tiles_to_replace = 
+	local tiles_to_replace =
 	{
 		WORLD_TILES.QUAGMIRE_CITYSTONE,
 		WORLD_TILES.QUAGMIRE_PARKFIELD,
@@ -606,7 +606,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 	}
 
 	local marker = TheSim:FindFirstEntityWithTag(marker_tag)
-	
+
 	if not marker or not marker:IsValid() then
 		print("Marker '"..marker_tag.."' not found!")
 		return
@@ -616,7 +616,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 
 	local layout_ents = TheSim:FindEntities(px, py, pz, 200, nil, {"player", "FX", "INLIMBO"})
 	local filtered = {}
-	
+
 	for _, ent in ipairs(layout_ents) do
 		if ent:IsValid() and ent.prefab ~= nil then
 			for _, name in ipairs(center_prefabs) do
@@ -627,54 +627,54 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 			end
 		end
 	end
-	
+
 	if #filtered > 0 then
 		local sum_x, sum_z = 0, 0
-		
+
 		for _, ent in ipairs(filtered) do
 			local ex, _, ez = ent.Transform:GetWorldPosition()
-			
+
 			sum_x = sum_x + ex
 			sum_z = sum_z + ez
 		end
-		
+
 		px = sum_x / #filtered
 		pz = sum_z / #filtered
-    end
+	end
 
 	local cx, cz = map:GetTileCoordsAtPoint(px, 0, pz)
 	local visited = {}
-	
+
 	local function FloodFillAdvanced(x, z, base_tile)
 		local key = x..","..z
-		
-		if visited[key] then 
-			return 
+
+		if visited[key] then
+			return
 		end
-        
-		if x < 0 or z < 0 or x >= map_width or z >= map_height then 
-			return 
+
+		if x < 0 or z < 0 or x >= map_width or z >= map_height then
+			return
 		end
 
 		local current_tile = map:GetTile(x, z)
 		local match = false
-		
+
 		for _, t in ipairs(tiles_to_replace) do
 			if current_tile == t then
 				match = true
 				break
 			end
 		end
-		
-		if not match then 
-			return 
+
+		if not match then
+			return
 		end
 
 		visited[key] = true
 		map:SetTile(x, z, WORLD_TILES.OCEAN_ROUGH)
 
 		local dirs = {{1,0},{-1,0},{0,1},{0,-1}}
-        
+
 		for _, d in ipairs(dirs) do
 			FloodFillAdvanced(x + d[1], z + d[2], current_tile)
 		end
@@ -683,7 +683,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 			for dz = -max_jump, max_jump do
 				if math.abs(dx) + math.abs(dz) > 1 then
 					local nx, nz = x + dx, z + dz
-					
+
 					if not visited[nx..","..nz] and map:GetTile(nx, nz) == current_tile then
 						FloodFillAdvanced(nx, nz, current_tile)
 					end
@@ -693,12 +693,12 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 	end
 
 	FloodFillAdvanced(cx, cz, map:GetTile(cx, cz))
-	
+
 	if floodagain then
 		for dx = -max_jump*5, max_jump*5 do
 			for dz = -max_jump*5, max_jump*5 do
 				local nx, nz = cx + dx, cz + dz
-			
+
 				if nx >= 0 and nz >= 0 and nx < map_width and nz < map_height then
 					local tile = map:GetTile(nx, nz)
 
@@ -714,7 +714,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 
 	local ents = TheSim:FindEntities(px, py, pz, 150, nil, {"player", "FX", "INLIMBO"})
 	local removed_ents = 0
-	
+
 	for _, ent in ipairs(ents) do
 		if ent and ent:IsValid() and ent.prefab then
 			for _, prefab_name in ipairs(prefabs_to_remove) do
@@ -726,7 +726,7 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 			end
 		end
 	end
-	
+
 	-- Can't this be removed by this function already?
 	TheNet:SendRemoteExecute('c_removeall("kyno_pebblecrab_spawner")')
 	TheNet:SendRemoteExecute('c_removeall("kyno_meadowflup_spawner")')
@@ -738,17 +738,17 @@ end
 local function SpawnSammyWagon()
 		local house = TheSim:FindFirstEntityWithTag("sammyhouse")
 		local mermcart = SpawnPrefab("kyno_meadowisland_mermcart")
-	
+
 		local x, y, z = house.Transform:GetWorldPosition()
-	
+
 		local theta = -3 -- -3
 		local radius = 4 -- 4
 		local x = x + radius * math.cos(theta)
 		local z = z - radius * math.sin(theta)
-	
+
 		mermcart.Transform:SetPosition(x, 0, z)
 	end
-	
+
 	-- Deprecated. Use Wurt to build Fishermerm Huts.
 	local function RetrofitMermhuts()
 		local count = 0
@@ -765,14 +765,14 @@ local function SpawnSammyWagon()
 			end
 		end
 	end
-	
+
 	-- Deprecated. Old worlds without this prefab will be Retrofitted.
 	local function RetrofitSammyShop()
 		local newshop = TheSim:FindFirstEntityWithTag("mermhouse_seaside")
 		local sammyhouse = TheSim:FindFirstEntityWithTag("sammyhouse") -- Don't let them have more shops.
 		local sammywagon = TheSim:FindFirstEntityWithTag("sammywagon")
-	
-		if newshop ~= nil and not sammyhouse then 
+
+		if newshop ~= nil and not sammyhouse then
 			ReplacePrefab(newshop, "kyno_meadowisland_shop")
 			SpawnSammyWagon()
 		end
@@ -785,27 +785,27 @@ local function SpawnSammyWagon()
 
 function c_hoftestclothing(item)
 	local player = ConsoleCommandPlayer()
-    
+
 	if player ~= nil then
-		local prefabs = 
+		local prefabs =
 		{
-			"wilson", 
-			"willow", 
-			"wolfgang", 
-			"wendy", 
-			"wx78", 
-			"wickerbottom", 
-			"woodie", 
-			"waxwell", 
-			"wes", 
-			"wathgrithr", 
-			"webber", 
+			"wilson",
+			"willow",
+			"wolfgang",
+			"wendy",
+			"wx78",
+			"wickerbottom",
+			"woodie",
+			"waxwell",
+			"wes",
+			"wathgrithr",
+			"webber",
 			"winona",
-			"wortox", 
-			"wormwood", 
-			"warly", 
-			"wurt", 
-			"walter", 
+			"wortox",
+			"wormwood",
+			"warly",
+			"wurt",
+			"walter",
 			"wanda",
 		}
 
@@ -837,7 +837,7 @@ end
 
 function c_hoftestfishregistry(who)
 	local player = UserToPlayer(who) or ConsoleCommandPlayer()
-    
+
 	local FISHES = require("prefabs/k_fishregistrydefs").FISHREGISTRY_FISH_DEFS
 	local ROES = require("prefabs/k_fishregistrydefs").FISHREGISTRY_ROE_DEFS
 
@@ -850,14 +850,14 @@ function c_hoftestfishregistry(who)
 		local offset = 0
 
 		c_select(player)
-		
+
 		player.components.inventory:Equip(c_spawn("krampus_sack",         nil, true))
 		player.components.inventory:Equip(c_spawn("kyno_fishregistryhat", nil, true))
 
 		local function SpawnNewChest()
 			treasurechest = SpawnPrefab("treasurechest")
 			treasurechest.Transform:SetPosition(x + offset, y, z)
-		
+
 			SLOT_COUNT = 0
 			offset = offset + 2
 		end
@@ -870,7 +870,7 @@ function c_hoftestfishregistry(who)
 			if treasurechest ~= nil and treasurechest.components.container ~= nil then
 				local item = SpawnPrefab(prefab)
 				item.Transform:SetPosition(treasurechest.Transform:GetWorldPosition())
-				
+
 				if item ~= nil then
 					treasurechest.components.container:GiveItem(item)
 					SLOT_COUNT = SLOT_COUNT + 1
@@ -893,7 +893,7 @@ end
 function c_hofrecipe(recipename)
 	local player = ConsoleCommandPlayer()
 
-	local recipe_sources = 
+	local recipe_sources =
 	{
 		"hof_foodrecipes",
 		"hof_foodrecipes_warly",
@@ -908,7 +908,7 @@ function c_hofrecipe(recipename)
 
 	for _, path in ipairs(recipe_sources) do
 		local ok, recipes = pcall(require, path)
-		
+
 		if ok and recipes and recipes[recipename] then
 			recipe = recipes[recipename]
 			source_name = path
@@ -934,7 +934,7 @@ function c_hofrecipe(recipename)
 			for i = 1, amount do
 				local item = SpawnPrefab(prefab)
 				item.Transform:SetPosition(player.Transform:GetWorldPosition())
-				
+
 				if item then
 					player.components.inventory:GiveItem(item)
 				else
@@ -942,5 +942,17 @@ function c_hofrecipe(recipename)
 				end
 			end
 		end
+	end
+end
+
+-- Command for revealing the minimap without freezing the game!
+function c_hofrevealmap()
+	local S = "local p,m=UserToPlayer(\"%s\"),TheWorld.Map local w,h=m:GetSize() StartStaticThread(function() for x=0,w,9 do for y=0,h,9 do p.player_classified.MapExplorer:RevealArea(m:GetTileCenterPoint(x,y)) end Yield() end end)"
+	local s = S:format((ThePlayer or AllPlayers[1]).userid)
+
+	if TheNet:GetIsClient() then
+		TheNet:SendRemoteExecute(s)
+	else
+		ExecuteConsoleCommand(s)
 	end
 end

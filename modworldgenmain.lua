@@ -54,7 +54,7 @@ if WORLD_TILES.TIDALMARSH ~= nil and WORLD_TILES.FIELDS ~= nil then
 	_G.MEADOWISLAND_GROUNDS[4] = WORLD_TILES.TIDALMARSH
 end
 
-Layouts["SerenityIsland"]                = StaticLayout.Get("map/static_layouts/hof_serenityisland2",
+Layouts["SerenityIsland"]                = StaticLayout.Get("map/static_layouts/hof_serenityisland",
 {
 	start_mask                           = PLACE_MASK.IGNORE_IMPASSABLE,
 	fill_mask                            = PLACE_MASK.IGNORE_IMPASSABLE,
@@ -67,7 +67,7 @@ Layouts["SerenityIsland"]                = StaticLayout.Get("map/static_layouts/
 })
 Layouts["SerenityIsland"].ground_types   = _G.SERENITYISLAND_GROUNDS
 
-Layouts["MeadowIsland"]                  = StaticLayout.Get("map/static_layouts/hof_meadowisland2",
+Layouts["MeadowIsland"]                  = StaticLayout.Get("map/static_layouts/hof_meadowisland",
 {
 	start_mask                           = PLACE_MASK.IGNORE_IMPASSABLE,
 	fill_mask                            = PLACE_MASK.IGNORE_IMPASSABLE,
@@ -80,11 +80,8 @@ Layouts["MeadowIsland"]                  = StaticLayout.Get("map/static_layouts/
 })
 Layouts["MeadowIsland"].ground_types     = _G.MEADOWISLAND_GROUNDS
 
-Layouts["Oasis"]                         = StaticLayout.Get("map/static_layouts/hof_oasis_beach")
+Layouts["Oasis"]                         = StaticLayout.Get("map/static_layouts/hof_oasis")
 Layouts["Oasis"].ground_types            = { WORLD_TILES.MONKEY_GROUND }
-Layouts["SerenityIslandShop"]            = StaticLayout.Get("map/static_layouts/hof_serenityisland_shop")
-Layouts["MeadowIslandShop"]              = StaticLayout.Get("map/static_layouts/hof_meadowisland_shop")
-Layouts["MeadowIslandShop"].ground_types = _G.MEADOWISLAND_SHOP_GROUNDS
 
 local hof_ocean_setpieces                =
 {

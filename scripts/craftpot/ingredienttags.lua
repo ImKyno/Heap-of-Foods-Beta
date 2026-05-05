@@ -47,3 +47,4 @@ AddFoodTag("forgetweed",        { name = STRINGS_INGREDIENTS_FORGETWEED, atlas =
 AddFoodTag("tillweed",          { name = STRINGS_INGREDIENTS_TILLWEED,   atlas = "images/ingredientimages/hof_ingredientimages.xml" })
 AddFoodTag("chicken",           { name = STRINGS_INGREDIENTS_CHICKEN,    atlas = "images/ingredientimages/hof_ingredientimages.xml" })
 AddFoodTag("chickenegg",        { name = STRINGS_INGREDIENTS_CHICKENEGG, atlas = "images/ingredientimages/hof_ingredientimages.xml" })
+AddFoodTag("potato",            { name = STRINGS_INGREDIENTS_POTATO,     atlas = "images/ingredientimages/hof_ingredientimages.xml" })

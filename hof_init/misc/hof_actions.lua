@@ -16,10 +16,10 @@ local EQUIPPED = COMPONENT_ACTIONS.EQUIPPED
 
 local _ExtraDeployDist = ACTIONS.DEPLOY.extra_arrive_dist
 local function ExtraDeployDist(doer, dest, bufferedaction, ...)
-    if dest ~= nil and doer:IsValid() then
+	if dest ~= nil and doer:IsValid() then
 		local invobject = bufferedaction and bufferedaction.invobject or nil
 		local inventoryitem = invobject and invobject.replica.inventoryitem
-        
+
 		if invobject:HasTag("fishfarmplot_kit") then
 			return 5
 		end
@@ -32,14 +32,14 @@ ACTIONS.DEPLOY.extra_arrive_dist = ExtraDeployDist
 
 -- Coffee Plant can be Only Fertilized by Ashes.
 AddComponentAction("USEITEM", "fertilizer", function(inst, doer, target, actions)
-    if actions[1] == ACTIONS.FERTILIZE and inst:HasTag("coffeefertilizer2") ~= target:HasTag("kyno_coffeebush") then
-        actions[1] = nil
-    end
-	
+	if actions[1] == ACTIONS.FERTILIZE and inst:HasTag("coffeefertilizer2") ~= target:HasTag("kyno_coffeebush") then
+		actions[1] = nil
+	end
+
 	-- Island Adventures.
 	if actions[1] == ACTIONS.FERTILIZE and inst:HasTag("fertilizer_volcanic") ~= target:HasTag("volcanicplant") then
-        actions[1] = nil
-    end
+		actions[1] = nil
+	end
 end)
 
 -- Don't ask why this is needed, I don't know too.
@@ -54,7 +54,7 @@ end)
 -- Action for the Salt.
 AddAction("SALT", STRINGS.ACTIONS.SALT, function(act)
 	local saltable = act.target and act.target.components.saltable or nil
-	
+
 	if act.invobject and saltable ~= nil then
 		saltable:AddSalt()
 		act.doer:PushEvent("saltfood") -- Play a cool sound, yay.
@@ -87,21 +87,21 @@ AddAction("FLAY", STRINGS.ACTIONS.FLAY, function(act)
 
 	if target.components.inventoryitem ~= nil and target.components.inventoryitem:IsHeld() and target.components.lootdropper ~= nil then
 		tool.components.slaughteritem:SlaughterInsideInventory(doer, target)
-		
+
 		local data = { doer = doer, target = target, tool = tool }
 		doer:PushEvent("hof_FlayOther", data)
 		target:PushEvent("hof_Flayed", data)
-		
+
 		return true
 	end
 
 	if target.components.health ~= nil and not target.components.health:IsDead() and target.components.lootdropper ~= nil then
 		tool.components.slaughteritem:Slaughter(doer, target)
-		
+
 		local data = { doer = doer, target = target, tool = tool }
 		doer:PushEvent("hof_FlayOther", data)
 		target:PushEvent("hof_Flayed", data)
-		
+
 		return true
 	end
 end)
@@ -141,7 +141,7 @@ ACTIONS.SLICE.mount_valid = true
 AddAction("SLICESTACK", STRINGS.ACTIONS.SLICESTACK, function(act)
 	local sliceable = act.target and act.target.components.sliceable or nil
 	local owner = act.invobject.components.inventoryitem:GetGrandOwner()
-	
+
 	if act.invobject and sliceable ~= nil then
 		sliceable:OnSliceStack()
 		owner.SoundEmitter:PlaySound("dontstarve/wilson/harvest_sticks")
@@ -154,7 +154,7 @@ ACTIONS.SLICESTACK.mount_valid = true
 
 -- For slicing items inside the inventory, such as Coconuts.
 AddComponentAction("USEITEM", "slicer", function(inst, doer, target, actions, right)
-	local act = target.replica.stackable ~= nil and target.replica.stackable:IsStack() and 
+	local act = target.replica.stackable ~= nil and target.replica.stackable:IsStack() and
 	(doer.components.playercontroller ~= nil and doer.components.playercontroller:IsControlPressed(CONTROL_FORCE_STACK)) and
 	ACTIONS.SLICESTACK or ACTIONS.SLICE
 
@@ -164,7 +164,7 @@ AddComponentAction("USEITEM", "slicer", function(inst, doer, target, actions, ri
 end)
 
 AddComponentAction("INVENTORY", "slicer", function(inst, doer, actions, right)
-	local act = inst.replica.stackable ~= nil and inst.replica.stackable:IsStack() and 
+	local act = inst.replica.stackable ~= nil and inst.replica.stackable:IsStack() and
 	(doer.components.playercontroller ~= nil and doer.components.playercontroller:IsControlPressed(CONTROL_FORCE_STACK)) and
 	ACTIONS.SLICESTACK or ACTIONS.SLICE
 
@@ -175,13 +175,13 @@ end)
 
 AddAction("STORESOUL", STRINGS.ACTIONS.STORESOUL, function(act)
 	local bottle = act.target and act.target.components.unwrappable or nil
-	
+
 	if act.invobject:HasTag("soul") and act.target:HasTag("soul_storage") then
 		local bottle_soul = SpawnPrefab("kyno_bottle_soul")
-		
-		act.doer.components.inventory:GiveItem(bottle_soul) 
+
+		act.doer.components.inventory:GiveItem(bottle_soul)
 		act.doer.SoundEmitter:PlaySound("dontstarve/characters/wortox/soul/hop_out")
-		
+
 		act.invobject.components.stackable:Get(1):Remove()
 		act.target.components.stackable:Get(1):Remove()
 		return true
@@ -200,7 +200,7 @@ end)
 -- Action for healing Ruined Sugarwood Trees.
 AddAction("SAPHEAL", STRINGS.ACTIONS.SAPHEAL, function(act)
 	 if act.target ~= nil and act.target:HasTag("sap_healable") then
-	    act.invobject.components.saphealer:Heal(act.target)
+		act.invobject.components.saphealer:Heal(act.target)
 		return true
 	end
 end)
@@ -216,15 +216,15 @@ end)
 -- Action for Milking animals. If Beefalo Milk mod is enabled, use their system instead?
 AddAction("PULLMILK", STRINGS.ACTIONS.PULLMILK, function(act)
 	local milkable = act.target and act.target.components.milkableanimal or nil
-	
+
 	if act.invobject and milkable ~= nil then
 		act.target.components.milkableanimal:Milk(act.doer)
 		act.doer.SoundEmitter:PlaySound("turnoftides/common/together/water/emerge/small")
-		
+
 		if act.invobject.components.finiteuses ~= nil then
 			act.invobject.components.finiteuses:Use(1)
 		end
-		
+
 		return true
 	end
 end)
@@ -234,7 +234,7 @@ ACTIONS.PULLMILK.mount_valid = true
 ACTIONS.PULLMILK.encumbered_valid = true
 
 AddComponentAction("USEITEM", "milker", function(inst, doer, target, actions)
-	if target and target:HasTag("milkableanimal") and inst:HasTag("bucket") 
+	if target and target:HasTag("milkableanimal") and inst:HasTag("bucket")
 	and not target:HasTag("is_frozen") and not target:HasTag("is_thawing") then
 		table.insert(actions, ACTIONS.PULLMILK)
 	end
@@ -243,96 +243,96 @@ end)
 -- Action for Brewing.
 AddAction("BREWER", STRINGS.ACTIONS.BREWER, function(act)
 	if act.target.components.cooker ~= nil then
-        local cook_pos = act.target:GetPosition()
-        local ingredient = act.doer.components.inventory:RemoveItem(act.invobject)
+		local cook_pos = act.target:GetPosition()
+		local ingredient = act.doer.components.inventory:RemoveItem(act.invobject)
 
-        ingredient.Transform:SetPosition(cook_pos:Get())
+		ingredient.Transform:SetPosition(cook_pos:Get())
 
-        if not act.target.components.cooker:CanCook(ingredient, act.doer) then
-            act.doer.components.inventory:GiveItem(ingredient, nil, cook_pos)
-            return false
-        end
+		if not act.target.components.cooker:CanCook(ingredient, act.doer) then
+			act.doer.components.inventory:GiveItem(ingredient, nil, cook_pos)
+			return false
+		end
 
-        if ingredient.components.health ~= nil and ingredient.components.combat ~= nil then
-            act.doer:PushEvent("killed", { victim = ingredient })
-        end
+		if ingredient.components.health ~= nil and ingredient.components.combat ~= nil then
+			act.doer:PushEvent("killed", { victim = ingredient })
+		end
 
-        local product = act.target.components.cooker:CookItem(ingredient, act.doer)
-        if product ~= nil then
-            act.doer.components.inventory:GiveItem(product, nil, cook_pos)
-            return true
-        elseif ingredient:IsValid() then
-            act.doer.components.inventory:GiveItem(ingredient, nil, cook_pos)
-        end
-        return false
-    elseif act.target.components.brewer ~= nil then
-        if act.target.components.brewer:IsCooking() then
-            return true
-        end
-        local container = act.target.components.container
-        if container ~= nil and container:IsOpenedByOthers(act.doer) then
-            return false, "INUSE"
-        elseif not act.target.components.brewer:CanCook() then
-            return false
-        end
-        act.target.components.brewer:StartCooking(act.doer)
-        return true
-    elseif act.target.components.cookable ~= nil
-        and act.invobject ~= nil
-        and act.invobject.components.cooker ~= nil then
+		local product = act.target.components.cooker:CookItem(ingredient, act.doer)
+		if product ~= nil then
+			act.doer.components.inventory:GiveItem(product, nil, cook_pos)
+			return true
+		elseif ingredient:IsValid() then
+			act.doer.components.inventory:GiveItem(ingredient, nil, cook_pos)
+		end
+		return false
+	elseif act.target.components.brewer ~= nil then
+		if act.target.components.brewer:IsCooking() then
+			return true
+		end
+		local container = act.target.components.container
+		if container ~= nil and container:IsOpenedByOthers(act.doer) then
+			return false, "INUSE"
+		elseif not act.target.components.brewer:CanCook() then
+			return false
+		end
+		act.target.components.brewer:StartCooking(act.doer)
+		return true
+	elseif act.target.components.cookable ~= nil
+		and act.invobject ~= nil
+		and act.invobject.components.cooker ~= nil then
 
-        local cook_pos = act.target:GetPosition()
+		local cook_pos = act.target:GetPosition()
 
-        if act.doer:GetPosition():Dist(cook_pos) > 2 then
-            return false, "TOOFAR"
-        end
+		if act.doer:GetPosition():Dist(cook_pos) > 2 then
+			return false, "TOOFAR"
+		end
 
-        local owner = act.target.components.inventoryitem:GetGrandOwner()
-        local container = owner ~= nil and (owner.components.inventory or owner.components.container) or nil
-        local stacked = act.target.components.stackable ~= nil and act.target.components.stackable:IsStack()
-        local ingredient = stacked and act.target.components.stackable:Get() or act.target
+		local owner = act.target.components.inventoryitem:GetGrandOwner()
+		local container = owner ~= nil and (owner.components.inventory or owner.components.container) or nil
+		local stacked = act.target.components.stackable ~= nil and act.target.components.stackable:IsStack()
+		local ingredient = stacked and act.target.components.stackable:Get() or act.target
 
-        if ingredient ~= act.target then
-            ingredient.Transform:SetPosition(cook_pos:Get())
-        end
+		if ingredient ~= act.target then
+			ingredient.Transform:SetPosition(cook_pos:Get())
+		end
 
-        if not act.invobject.components.cooker:CanCook(ingredient, act.doer) then
-            if container ~= nil then
-                container:GiveItem(ingredient, nil, cook_pos)
-            elseif stacked and ingredient ~= act.target then
-                act.target.components.stackable:SetStackSize(act.target.components.stackable:StackSize() + 1)
-                ingredient:Remove()
-            end
-            return false
-        end
+		if not act.invobject.components.cooker:CanCook(ingredient, act.doer) then
+			if container ~= nil then
+				container:GiveItem(ingredient, nil, cook_pos)
+			elseif stacked and ingredient ~= act.target then
+				act.target.components.stackable:SetStackSize(act.target.components.stackable:StackSize() + 1)
+				ingredient:Remove()
+			end
+			return false
+		end
 
-        if ingredient.components.health ~= nil and ingredient.components.combat ~= nil then
-            act.doer:PushEvent("killed", { victim = ingredient })
-        end
+		if ingredient.components.health ~= nil and ingredient.components.combat ~= nil then
+			act.doer:PushEvent("killed", { victim = ingredient })
+		end
 
-        local product = act.invobject.components.cooker:CookItem(ingredient, act.doer)
-        if product ~= nil then
-            if container ~= nil then
-                container:GiveItem(product, nil, cook_pos)
-            else
-                product.Transform:SetPosition(cook_pos:Get())
-                if stacked and product.Physics ~= nil then
-                    local angle = math.random() * 2 * PI
-                    local speed = math.random() * 2
-                    product.Physics:SetVel(speed * math.cos(angle), GetRandomWithVariance(8, 4), speed * math.sin(angle))
-                end
-            end
-            return true
-        elseif ingredient:IsValid() then
-            if container ~= nil then
-                container:GiveItem(ingredient, nil, cook_pos)
-            elseif stacked and ingredient ~= act.target then
-                act.target.components.stackable:SetStackSize(act.target.components.stackable:StackSize() + 1)
-                ingredient:Remove()
-            end
-        end
-        return false
-    end
+		local product = act.invobject.components.cooker:CookItem(ingredient, act.doer)
+		if product ~= nil then
+			if container ~= nil then
+				container:GiveItem(product, nil, cook_pos)
+			else
+				product.Transform:SetPosition(cook_pos:Get())
+				if stacked and product.Physics ~= nil then
+					local angle = math.random() * 2 * PI
+					local speed = math.random() * 2
+					product.Physics:SetVel(speed * math.cos(angle), GetRandomWithVariance(8, 4), speed * math.sin(angle))
+				end
+			end
+			return true
+		elseif ingredient:IsValid() then
+			if container ~= nil then
+				container:GiveItem(ingredient, nil, cook_pos)
+			elseif stacked and ingredient ~= act.target then
+				act.target.components.stackable:SetStackSize(act.target.components.stackable:StackSize() + 1)
+				ingredient:Remove()
+			end
+		end
+		return false
+	end
 end)
 
 ACTIONS.BREWER.priority = 1
@@ -358,9 +358,9 @@ end)
 
 -- Action for reading the Brewbook.
 AddAction("READBREWBOOK", STRINGS.ACTIONS.READBREWBOOK, function(act)
-    local target = act.target or act.invobject
-	
-    if target ~= nil and act.doer ~= nil then
+	local target = act.target or act.invobject
+
+	if target ~= nil and act.doer ~= nil then
 		if target.components.brewbook ~= nil then
 			target.components.brewbook:Read(act.doer)
 			return true
@@ -379,25 +379,25 @@ end)
 -- Action for installing Cookware on Fire Pit / Tools.
 AddAction("INSTALLCOOKWARE", STRINGS.ACTIONS.INSTALLCOOKWARE, function(act)
 	local target = act.target or act.invobject
-	
+
 	if target ~= nil and act.doer ~= nil then
 		if act.target.components.cookwareinstaller ~= nil then
-            local count
+			local count
 
-            if act.target.components.cookwareinstaller:IsAcceptingStacks() then
-                count = (
-                    act.target.components.inventory ~= nil and
-                    act.target.components.inventory:CanAcceptCount(act.invobject)
-                ) or (
-                    act.invobject.components.stackable ~= nil and
-                    act.invobject.components.stackable.stacksize
-                )
-                or 1
+			if act.target.components.cookwareinstaller:IsAcceptingStacks() then
+				count = (
+					act.target.components.inventory ~= nil and
+					act.target.components.inventory:CanAcceptCount(act.invobject)
+				) or (
+					act.invobject.components.stackable ~= nil and
+					act.invobject.components.stackable.stacksize
+				)
+				or 1
 
-                if count <= 0 then
-                    return false
-                end
-            end
+				if count <= 0 then
+					return false
+				end
+			end
 
 			local able, reason = act.target.components.cookwareinstaller:AbleToAccept(act.invobject, act.doer, count)
 			if not able then
@@ -419,108 +419,108 @@ AddComponentAction("USEITEM", "cookwareinstallable", function(inst, doer, target
 	if target:HasTag("cookware_installable") and not target:HasTag("firepit_with_cookware") then
 		table.insert(actions, ACTIONS.INSTALLCOOKWARE)
 	end
-	
+
 	if target:HasTag("cookware_post_installable") and not target:HasTag("firepit_with_cookware") then
 		table.insert(actions, ACTIONS.INSTALLCOOKWARE)
 	end
-	
+
 	if target:HasTag("cookware_other_installable") then
 		table.insert(actions, ACTIONS.INSTALLCOOKWARE)
-	end 
+	end
 end)
 
 AddAction("COOKWARECOOK", STRINGS.ACTIONS.COOK, function(act)
 	if act.target.components.cooker ~= nil then
-        local cook_pos = act.target:GetPosition()
-        local ingredient = act.doer.components.inventory:RemoveItem(act.invobject)
+		local cook_pos = act.target:GetPosition()
+		local ingredient = act.doer.components.inventory:RemoveItem(act.invobject)
 
-        ingredient.Transform:SetPosition(cook_pos:Get())
+		ingredient.Transform:SetPosition(cook_pos:Get())
 
-        if not act.target.components.cooker:CanCook(ingredient, act.doer) then
-            act.doer.components.inventory:GiveItem(ingredient, nil, cook_pos)
-            return false
-        end
+		if not act.target.components.cooker:CanCook(ingredient, act.doer) then
+			act.doer.components.inventory:GiveItem(ingredient, nil, cook_pos)
+			return false
+		end
 
-        if ingredient.components.health ~= nil and ingredient.components.combat ~= nil then
-            act.doer:PushEvent("killed", { victim = ingredient })
-        end
+		if ingredient.components.health ~= nil and ingredient.components.combat ~= nil then
+			act.doer:PushEvent("killed", { victim = ingredient })
+		end
 
-        local product = act.target.components.cooker:CookItem(ingredient, act.doer)
-        if product ~= nil then
-            act.doer.components.inventory:GiveItem(product, nil, cook_pos)
-            return true
-        elseif ingredient:IsValid() then
-            act.doer.components.inventory:GiveItem(ingredient, nil, cook_pos)
-        end
-        return false
-    elseif act.target.components.cookwarestewer ~= nil then
-        if act.target.components.cookwarestewer:IsCooking() then
-            return true
-        end
-        local container = act.target.components.container
-        if container ~= nil and container:IsOpenedByOthers(act.doer) then
-            return false, "INUSE"
-        elseif not act.target.components.cookwarestewer:CanCook() then
-            return false
-        end
-        act.target.components.cookwarestewer:StartCooking(act.doer)
-        return true
-    elseif act.target.components.cookable ~= nil
-        and act.invobject ~= nil
-        and act.invobject.components.cooker ~= nil then
+		local product = act.target.components.cooker:CookItem(ingredient, act.doer)
+		if product ~= nil then
+			act.doer.components.inventory:GiveItem(product, nil, cook_pos)
+			return true
+		elseif ingredient:IsValid() then
+			act.doer.components.inventory:GiveItem(ingredient, nil, cook_pos)
+		end
+		return false
+	elseif act.target.components.cookwarestewer ~= nil then
+		if act.target.components.cookwarestewer:IsCooking() then
+			return true
+		end
+		local container = act.target.components.container
+		if container ~= nil and container:IsOpenedByOthers(act.doer) then
+			return false, "INUSE"
+		elseif not act.target.components.cookwarestewer:CanCook() then
+			return false
+		end
+		act.target.components.cookwarestewer:StartCooking(act.doer)
+		return true
+	elseif act.target.components.cookable ~= nil
+		and act.invobject ~= nil
+		and act.invobject.components.cooker ~= nil then
 
-        local cook_pos = act.target:GetPosition()
+		local cook_pos = act.target:GetPosition()
 
-        if act.doer:GetPosition():Dist(cook_pos) > 2 then
-            return false, "TOOFAR"
-        end
+		if act.doer:GetPosition():Dist(cook_pos) > 2 then
+			return false, "TOOFAR"
+		end
 
-        local owner = act.target.components.inventoryitem:GetGrandOwner()
-        local container = owner ~= nil and (owner.components.inventory or owner.components.container) or nil
-        local stacked = act.target.components.stackable ~= nil and act.target.components.stackable:IsStack()
-        local ingredient = stacked and act.target.components.stackable:Get() or act.target
+		local owner = act.target.components.inventoryitem:GetGrandOwner()
+		local container = owner ~= nil and (owner.components.inventory or owner.components.container) or nil
+		local stacked = act.target.components.stackable ~= nil and act.target.components.stackable:IsStack()
+		local ingredient = stacked and act.target.components.stackable:Get() or act.target
 
-        if ingredient ~= act.target then
-            ingredient.Transform:SetPosition(cook_pos:Get())
-        end
+		if ingredient ~= act.target then
+			ingredient.Transform:SetPosition(cook_pos:Get())
+		end
 
-        if not act.invobject.components.cooker:CanCook(ingredient, act.doer) then
-            if container ~= nil then
-                container:GiveItem(ingredient, nil, cook_pos)
-            elseif stacked and ingredient ~= act.target then
-                act.target.components.stackable:SetStackSize(act.target.components.stackable:StackSize() + 1)
-                ingredient:Remove()
-            end
-            return false
-        end
+		if not act.invobject.components.cooker:CanCook(ingredient, act.doer) then
+			if container ~= nil then
+				container:GiveItem(ingredient, nil, cook_pos)
+			elseif stacked and ingredient ~= act.target then
+				act.target.components.stackable:SetStackSize(act.target.components.stackable:StackSize() + 1)
+				ingredient:Remove()
+			end
+			return false
+		end
 
-        if ingredient.components.health ~= nil and ingredient.components.combat ~= nil then
-            act.doer:PushEvent("killed", { victim = ingredient })
-        end
+		if ingredient.components.health ~= nil and ingredient.components.combat ~= nil then
+			act.doer:PushEvent("killed", { victim = ingredient })
+		end
 
-        local product = act.invobject.components.cooker:CookItem(ingredient, act.doer)
-        if product ~= nil then
-            if container ~= nil then
-                container:GiveItem(product, nil, cook_pos)
-            else
-                product.Transform:SetPosition(cook_pos:Get())
-                if stacked and product.Physics ~= nil then
-                    local angle = math.random() * 2 * PI
-                    local speed = math.random() * 2
-                    product.Physics:SetVel(speed * math.cos(angle), GetRandomWithVariance(8, 4), speed * math.sin(angle))
-                end
-            end
-            return true
-        elseif ingredient:IsValid() then
-            if container ~= nil then
-                container:GiveItem(ingredient, nil, cook_pos)
-            elseif stacked and ingredient ~= act.target then
-                act.target.components.stackable:SetStackSize(act.target.components.stackable:StackSize() + 1)
-                ingredient:Remove()
-            end
-        end
-        return false
-    end
+		local product = act.invobject.components.cooker:CookItem(ingredient, act.doer)
+		if product ~= nil then
+			if container ~= nil then
+				container:GiveItem(product, nil, cook_pos)
+			else
+				product.Transform:SetPosition(cook_pos:Get())
+				if stacked and product.Physics ~= nil then
+					local angle = math.random() * 2 * PI
+					local speed = math.random() * 2
+					product.Physics:SetVel(speed * math.cos(angle), GetRandomWithVariance(8, 4), speed * math.sin(angle))
+				end
+			end
+			return true
+		elseif ingredient:IsValid() then
+			if container ~= nil then
+				container:GiveItem(ingredient, nil, cook_pos)
+			elseif stacked and ingredient ~= act.target then
+				act.target.components.stackable:SetStackSize(act.target.components.stackable:StackSize() + 1)
+				ingredient:Remove()
+			end
+		end
+		return false
+	end
 end)
 
 ACTIONS.COOKWARECOOK.priority = 1
@@ -548,9 +548,9 @@ local function GetFirepit(inst)
 	if not inst.firepit or not inst.firepit:IsValid() or not inst.firepit.components.fueled then
 		local x,y,z = inst.Transform:GetWorldPosition()
 		local ents = _G.TheSim:FindEntities(x,y,z, 0.1, {"firepit"})
-		
+
 		inst.firepit = nil
-		
+
 		for _,v in ipairs(ents) do
 			if v.prefab == "firepit" then
 				inst.firepit = v
@@ -558,7 +558,7 @@ local function GetFirepit(inst)
 			end
 		end
 	end
-	
+
 	return inst.firepit
 end
 
@@ -574,7 +574,7 @@ ACTIONS.STORE.fn = function(act, ...)
 
 		if item ~= nil and target.components.container ~= nil and not target.components.container:CanTakeItemInSlot(item) then
 			local firepit = GetFirepit(target)
-			
+
 			if firepit ~= nil and firepit.components.fueled ~= nil then
 				local fuel_item = item
 
@@ -599,18 +599,18 @@ end
 
 local _HARVESTfn = ACTIONS.HARVEST.fn
 function ACTIONS.HARVEST.fn(act, ...)
-    if act.target and act.target.components.brewer and act.target:HasTag("brewer") then
-        return act.target.components.brewer:Harvest(act.doer)
-    elseif act.target and act.target.components.cookwarestewer and act.target:HasTag("cookwarestewer") then
+	if act.target and act.target.components.brewer and act.target:HasTag("brewer") then
+		return act.target.components.brewer:Harvest(act.doer)
+	elseif act.target and act.target.components.cookwarestewer and act.target:HasTag("cookwarestewer") then
 		return act.target.components.cookwarestewer:Harvest(act.doer)
 	else
-        return _HARVESTfn(act, ...)
-    end
+		return _HARVESTfn(act, ...)
+	end
 end
 
 local function GetIngredients(card)
 	local ret = {}
-	
+
 	for i, data in pairs(card.ingredients) do
 		for j = 1, data[2] do
 			table.insert(ret, data[1])
@@ -627,7 +627,7 @@ AddAction("LEARNRECIPECARD", STRINGS.ACTIONS.LEARNRECIPECARD, function(act)
 	if target ~= nil and act.doer ~= nil then
 		local cooker_recipes = cooking.recipes[target.cooker_name]
 		local brewer_recipes = brewing.recipes[target.brewer_name]
-		
+
 		if target:HasTag("brewingrecipecard") then
 			if brewer_recipes then
 				local card_def = brewer_recipes[target.recipe_name] and brewer_recipes[target.recipe_name].card_def
@@ -639,12 +639,12 @@ AddAction("LEARNRECIPECARD", STRINGS.ACTIONS.LEARNRECIPECARD, function(act)
 					return true
 				else
 					target:Remove() -- Just remove if no card_def found.
-					
+
 					-- Say they can't learn the card as well...
-					if act.doer.components.talker and act.doer:HasTag("player") then 
+					if act.doer.components.talker and act.doer:HasTag("player") then
 						act.doer.components.talker:Say(GetDescription(act.doer, target))
 					end
-					
+
 					return true
 				end
 			end
@@ -659,11 +659,11 @@ AddAction("LEARNRECIPECARD", STRINGS.ACTIONS.LEARNRECIPECARD, function(act)
 					return true
 				else
 					target:Remove()
-					
-					if act.doer.components.talker and act.doer:HasTag("player") then 
+
+					if act.doer.components.talker and act.doer:HasTag("player") then
 						act.doer.components.talker:Say(GetDescription(act.doer, target))
 					end
-					
+
 					return true
 				end
 			end
@@ -671,7 +671,7 @@ AddAction("LEARNRECIPECARD", STRINGS.ACTIONS.LEARNRECIPECARD, function(act)
 	end
 end)
 
-AddComponentAction("INVENTORY", "learnablerecipecard", function(inst, doer, actions)	
+AddComponentAction("INVENTORY", "learnablerecipecard", function(inst, doer, actions)
 	table.insert(actions, ACTIONS.LEARNRECIPECARD)
 end)
 
@@ -686,7 +686,7 @@ AddAction("FISHREGISTRY_RESEARCH", STRINGS.ACTIONS.FISHREGISTRY_RESEARCH, functi
 			act.doer:PushEvent("fishregistryresearchfish")
 		elseif target.components.roeresearchable then
 			target.components.roeresearchable:LearnRoe(act.doer)
-			
+
 			act.doer:PushEvent("fishregistryresearchroe")
 		end
 	end
@@ -709,13 +709,13 @@ local function FishRegistryResearch(inst, doer, actions)
 		if not (_G.TheNet:IsDedicated() or doer ~= _G.ThePlayer) then
 			if inst:HasTag("fishresearchable") then
 				local key = inst:GetFishKey()
-				
+
 				if key and not _G.TheFishRegistry:KnowsFish(key) then
 					act = ACTIONS.FISHREGISTRY_RESEARCH
 				end
 			elseif inst:HasTag("roeresearchable") then
 				local key = inst:GetRoeKey()
-				
+
 				if key and not _G.TheFishRegistry:KnowsRoe(key) then
 					act = ACTIONS.FISHREGISTRY_RESEARCH
 				end
@@ -770,7 +770,7 @@ AddAction("TAKEFROMCONTAINER", "Take From", function(act)
 	if not item:IsValid() then
 		return false
 	end
-	
+
 	if not container:IsOpen() then
 		doer:PushEvent("opencontainer", { container = container_inst })
 		container:Open(doer)
@@ -787,7 +787,7 @@ AddAction("TAKEFROMCONTAINER", "Take From", function(act)
 	if taken_item ~= nil then
 		taken_item.prevslot = nil
 		taken_item.prevcontainer = nil
-		
+
 		inventory:GiveItem(taken_item, nil, doer:GetPosition())
 		return true
 	end
@@ -799,7 +799,7 @@ end)
 AddAction("EATFROM", "Eat From", function(act)
 	local doer = act.doer
 	local target = act.target
-	
+
 	if doer == nil or target == nil or target:HasTag("burnt") then
 		return false
 	end
@@ -807,23 +807,23 @@ AddAction("EATFROM", "Eat From", function(act)
 	if doer._has_food_buffered or doer._has_eaten_today then
 		return false
 	end
-	
+
 	local fueled = target.components.fueled
-	
+
 	if fueled == nil or fueled:GetPercent() <= 0 or fueled:IsEmpty() then
 		return false
 	end
-	
+
 	fueled:DoDelta(-TUNING.KYNO_ANIMALFEEDER_CONSUME)
-	
+
 	target:PushEvent("onfeed") -- Handles animations and other stuff.
 
 	local food = SpawnPrefab("seeds")
-	
+
 	if food ~= nil and doer.components.inventory ~= nil then
 		doer.components.inventory:GiveItem(food, nil, doer:GetPosition())
 	end
-	
+
 	-- doer._has_food_buffered = true
 
 	return true
@@ -833,34 +833,34 @@ end)
 -- Hope they don't smack and bonk my head...
 local _FISHfn = ACTIONS.FISH.fn
 function ACTIONS.FISH.fn(act, ...)
-    if act.doer and act.doer.components.fishingrod then
-        act.doer.components.fishingrod:StartFishing(act.target, act.doer)
-        return true
-    end
+	if act.doer and act.doer.components.fishingrod then
+		act.doer.components.fishingrod:StartFishing(act.target, act.doer)
+		return true
+	end
 
-    return _FISHfn(act, ...)
+	return _FISHfn(act, ...)
 end
 
 local _USEITEMfishingrod = USEITEM.fishingrod
 function USEITEM.fishingrod(inst, doer, target, actions, ...)
-    if inst.replica.fishingrod:HasCaughtFish() then
-        if doer.sg == nil or doer.sg:HasStateTag("fishing") then
-            table.insert(actions, ACTIONS.REEL)
-        end
-    else
-        return _USEITEMfishingrod(inst, doer, target, actions, ...)
-    end
+	if inst.replica.fishingrod:HasCaughtFish() then
+		if doer.sg == nil or doer.sg:HasStateTag("fishing") then
+			table.insert(actions, ACTIONS.REEL)
+		end
+	else
+		return _USEITEMfishingrod(inst, doer, target, actions, ...)
+	end
 end
 
 local _EQUIPPEDfishingrod = EQUIPPED.fishingrod
 function EQUIPPED.fishingrod(inst, doer, target, actions, ...)
-    if inst.replica.fishingrod:HasCaughtFish() then
-        if doer.sg == nil or doer.sg:HasStateTag("fishing") then
-            table.insert(actions, ACTIONS.REEL)
-        end
-    else
-        return _EQUIPPEDfishingrod(inst, doer, target, actions, ...)
-    end
+	if inst.replica.fishingrod:HasCaughtFish() then
+		if doer.sg == nil or doer.sg:HasStateTag("fishing") then
+			table.insert(actions, ACTIONS.REEL)
+		end
+	else
+		return _EQUIPPEDfishingrod(inst, doer, target, actions, ...)
+	end
 end
 
 -- Don't let Metal Bucket be filled with items.
@@ -887,27 +887,27 @@ ACTIONS.GIVE.stroverridefn = function(act)
 	if act.target:HasTag("serenity_installable") and act.invobject:HasTag("serenity_installer") then
 		return subfmt(STRINGS.KYNO_INSTALL_INSTALLER, {item = act.invobject:GetBasicDisplayName()})
 	end
-	
+
 	if act.target:HasTag("sugartree_installable") and act.invobject:HasTag("serenity_installer") then
 		return subfmt(STRINGS.KYNO_INSTALL_TAPPER, {item = act.invobject:GetBasicDisplayName()})
 	end
-	
+
 	if act.target:HasTag("cookingpot_hanger") and act.invobject:HasTag("pot_installer") then
 		return subfmt(STRINGS.KYNO_INSTALL_POT, {item = act.invobject:GetBasicDisplayName()})
 	end
-	
+
 	if act.target:HasTag("serenity_oven") and act.invobject:HasTag("casserole_installer") then
 		return subfmt(STRINGS.KYNO_INSTALL_POT, {item = act.invobject:GetBasicDisplayName()})
 	end
-	
+
 	if act.target:HasTag("elderpot_rubble") and act.invobject:HasTag("serenity_repairtool") then
 		return subfmt(STRINGS.KYNO_REPAIR_TOOL, {item = act.invobject:GetBasicDisplayName()})
 	end
-	
+
 	if act.target:HasTag("infestable_tree") and act.invobject:HasTag("squirrel") then
 		return subfmt(STRINGS.KYNO_INFEST_TREE, {item = act.invobject:GetBasicDisplayName()})
 	end
-	
+
 	if act.target:HasTag("chicken2") then
 		return subfmt(STRINGS.KYNO_FEED_CHICKEN, {item = act.invobject:GetBasicDisplayName()})
 	end
@@ -917,30 +917,30 @@ ACTIONS.PICK.stroverridefn = function(act)
 	if act.target.prefab == "kyno_sugartree_sapped" then
 		return STRINGS.KYNO_HARVEST_SUGARTREE
 	end
-	
+
 	if act.target.prefab == "kyno_sugartree_ruined" then
 		return STRINGS.KYNO_HARVEST_SUGARTREE_RUINED
 	end
-	
+
 	if act.target.prefab == "kyno_saltrack" then
 		return STRINGS.KYNO_HARVEST_SALTRACK
 	end
-	
+
 	if act.target.prefab == "kyno_cookware_syrup" then
 		return STRINGS.KYNO_HARVEST_POTSYRUP
 	end
-	
+
 	if act.target.prefab == "kyno_rockflippable" then
 		return STRINGS.KYNO_PICKUP_ROCKFLIPPABLE
 	end
-	
+
 	if act.target.prefab == "kyno_rockflippable_cave" then
 		return STRINGS.KYNO_PICKUP_ROCKFLIPPABLE
 	end
 end
 
 ACTIONS.FLAY.stroverridefn = function(act)
-    return act.invobject ~= nil
+	return act.invobject ~= nil
 	and act.invobject.GetSlaughterActionString ~= nil
 	and act.invobject:GetSlaughterActionString(act.target)
 	or nil
@@ -948,11 +948,11 @@ end
 
 ACTIONS.EAT.stroverridefn = function(act)
 	local obj = act.target or act.invobject
-	
+
 	if obj:HasTag("drinkable_food") then -- Was officially added, kept just in case.
-		return STRINGS.KYNO_DRINK_FOOD 
+		return STRINGS.KYNO_DRINK_FOOD
 	end
-	
+
 	if obj:HasTag("goldenapple") then
 		return STRINGS.KYNO_CONSUME_FOOD
 	end
@@ -960,11 +960,11 @@ end
 
 ACTIONS.UNWRAP.stroverridefn = function(act)
 	local obj = act.target or act.invobject
-	
+
 	if obj:HasTag("canned_food") then
 		return STRINGS.KYNO_OPEN_CAN
 	end
-	
+
 	if obj:HasTag("bottled_soul") then
 		return STRINGS.KYNO_OPEN_BOTTLE_SOUL
 	end
@@ -1021,35 +1021,35 @@ ACTIONS.STORE.stroverridefn = function(act)
 		return STRINGS.ACTIONS.COOK
 	end
 
-	if target:HasTag("cookwarestewer") then		
+	if target:HasTag("cookwarestewer") then
 		if cancook then
 			return STRINGS.ACTIONS.COOK
 		end
-		
+
 		if isfuel and not cancook then
 			return STRINGS.ACTIONS.ADDFUEL
 		end
 
 		return STRINGS.ACTIONS.COOK
 	end
-	
+
 	if target:HasTag("brewer") then
 		return STRINGS.ACTIONS.BREWER
 	end
-	
+
 	if target:HasTag("fishhatchery") then
 		if obj:HasTag("fishfarmable") then
 			return STRINGS.ACTIONS.BREEDFISH
 		end
-		
+
 		return STRINGS.ACTIONS.STORE.GENERIC
 	end
-	
+
 	if target:HasTag("popcornmachine") then
 		if obj.prefab == "corn" then
 			return STRINGS.ACTIONS.MAKEPOPCORN
 		end
-		
+
 		return STRINGS.ACTIONS.STORE.GENERIC
 	end
 end
@@ -1058,7 +1058,7 @@ ACTIONS.ADDFUEL.stroverridefn = function(act)
 	if act.target:HasTag("fishhatchery") then
 		return STRINGS.ACTIONS.FEED.GENERIC
 	end
-	
+
 	if act.target:HasTag("animalfeeder") then
 		return STRINGS.KYNO_REFILL
 	end
@@ -1067,20 +1067,20 @@ end
 ACTIONS.INSTALLCOOKWARE.stroverridefn = function(act)
 	if act.target:HasTag("cookware_post_installable") then
 		return STRINGS.KYNO_INSTALL_POT
-	end 
-	
+	end
+
 	if act.target:HasTag("elderpot_rubble") then
 		return STRINGS.KYNO_REPAIR_TOOL
 	end
-	
-	if act.target:HasTag("infestable_tree") then 
+
+	if act.target:HasTag("infestable_tree") then
 		return STRINGS.KYNO_INFEST_TREE
 	end
-	
+
 	if act.target:HasTag("cookware_other_installable") then
 		return STRINGS.KYNO_INSTALL_INSTALLER
 	end
-	
+
 	if act.target:HasTag("cookware_pond_installable") then
 		return STRINGS.KYNO_INSTALL_SALTRACK
 	end
@@ -1095,7 +1095,7 @@ end
 ACTIONS.CONSTRUCT.stroverridefn = function(act)
 	if act.target ~= nil and act.target:HasTag("anniversarycake") then
 		return STRINGS.KYNO_BAKE_CAKE
-    end
+	end
 end
 
 ACTIONS.STOPCONSTRUCTION.stroverridefn = function(act)
