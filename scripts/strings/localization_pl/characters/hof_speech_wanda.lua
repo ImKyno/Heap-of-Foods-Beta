@@ -31,12 +31,12 @@ WANDA.ANNOUNCE_KYNO_EATERBUFF_START = "Mogę teraz jeść wszystkie rodzaje sło
 WANDA.ANNOUNCE_KYNO_EATERBUFF_END = "Łakomstwo wróciło do normalnego stanu."
 
 WANDA.ANNOUNCE_KYNO_WORMBUFF_START = "Nie ma czasu do stracenia! Ruszajmy."
-WANDA.ANNOUNCE_KYNO_WORMBUFF_END = "Ech… mój czas dobiegł końca."
+WANDA.ANNOUNCE_KYNO_WORMBUFF_END = "Ech... mój czas dobiegł końca."
 
 WANDA.ANNOUNCE_KYNO_CRABBUFF_START = "Nie ma czasu do stracenia! Ruszajmy."
-WANDA.ANNOUNCE_KYNO_CRABBUFF_END = "Ech… mój czas dobiegł końca."
+WANDA.ANNOUNCE_KYNO_CRABBUFF_END = "Ech... mój czas dobiegł końca."
 
-WANDA.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(buuurp!) Och, cóż… wybaczcie moje maniery."
+WANDA.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(buuurp!) Och, cóż... wybaczcie moje maniery."
 WANDA.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "Czuję się znowu młodo po tym napoju."
 
 WANDA.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START = "Księżyc pochłania."
@@ -87,6 +87,8 @@ WANDA.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Czas wszystko dogania. Głód też."
 WANDA.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność straciła swoją pilność."
 WANDA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "A teraz ciemność znów staje się niebezpieczna."
 
+WANDA.ANNOUNCE_KYNO_LUCKBUFF_END = "I tak po prostu... koniec."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie... Potrzebuję czegoś innego."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Chyba mam trochę czasu, żeby kupić ci homara."
@@ -113,6 +115,8 @@ WANDA.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "W samą porę! Skorzystajmy z te
 
 WANDA.ANNOUNCE_KYNO_FISH_RESEARCHED = "Dobrze. Jedna ryba mniej marnująca mój czas."
 WANDA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Tyle przyszłości naraz."
+
+WANDA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... wystarczająco efektywne."
 
 WANDA.DESCRIBE.KYNO_ROE = "Pierwszy raz widzę coś takiego."
 WANDA.DESCRIBE.KYNO_ROE_COOKED = "Całkiem ładnie pachnie."

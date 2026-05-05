@@ -87,6 +87,8 @@ WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The emptiness returns."
 WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The darkness embraces me gently."
 WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The darkness feels hostile once more."
 
+WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Even fleeting fortune eventually fades."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to gather?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Of course it's not what this stupid creature wants."
@@ -113,6 +115,8 @@ WENDY.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "A fleeting celebration... but pl
 
 WENDY.ANNOUNCE_KYNO_FISH_RESEARCHED = "Its secrets surface, as all things eventually do."
 WENDY.ANNOUNCE_KYNO_ROE_RESEARCHED = "So much life, never meant to be."
+
+WENDY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "A fleeting comfort... soon forgotten."
 
 WENDY.DESCRIBE.KYNO_ROE = "The beginnings of life..."
 WENDY.DESCRIBE.KYNO_ROE_COOKED = "I spared them in the pain of hatching."

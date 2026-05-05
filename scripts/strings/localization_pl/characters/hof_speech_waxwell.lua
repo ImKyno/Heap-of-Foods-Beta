@@ -87,6 +87,8 @@ WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Głód to doprawdy nużąca niedogod
 WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność wydaje się... znajoma."
 WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Jakże niefortunnie. Ciemność znów kąsa."
 
+WAXWELL.ANNOUNCE_KYNO_LUCKBUFF_END = "Przewidywalne. Szczęście nigdy nie trwa."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję do tego czegoś innego."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie jesteś łatwy, prawda?"
@@ -113,6 +115,8 @@ WAXWELL.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Nareszcie. Tort godny tej okaz
 
 WAXWELL.ANNOUNCE_KYNO_FISH_RESEARCHED = "Wiedza, nawet od ryby, bywa użyteczna."
 WAXWELL.ANNOUNCE_KYNO_ROE_RESEARCHED = "Potencjał zmarnowany w tak kruchej formie."
+
+WAXWELL.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Zadowalające, jak sądzę."
 
 WAXWELL.DESCRIBE.KYNO_ROE = "Surowe rybie jajka. Fantastycznie."
 WAXWELL.DESCRIBE.KYNO_ROE_COOKED = "Rybie jajka są teraz ugotowane."

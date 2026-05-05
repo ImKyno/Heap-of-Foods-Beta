@@ -87,6 +87,8 @@ WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Hunger is such a tedious nuisance."
 WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The darkness feels... familiar."
 WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_END = "How unfortunate. The dark bites again."
 
+WAXWELL.ANNOUNCE_KYNO_LUCKBUFF_END = "Predictable. Fortune never lasts."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else for this."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You're not easy, aren't you?"
@@ -113,6 +115,8 @@ WAXWELL.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "At last. A proper cake for a p
 
 WAXWELL.ANNOUNCE_KYNO_FISH_RESEARCHED = "Knowledge, even from a fish, has its uses."
 WAXWELL.ANNOUNCE_KYNO_ROE_RESEARCHED = "Potential, wasted in such a fragile form."
+
+WAXWELL.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Acceptable, I suppose."
 
 WAXWELL.DESCRIBE.KYNO_ROE = "Raw fish eggs. Fantastic."
 WAXWELL.DESCRIBE.KYNO_ROE_COOKED = "The fish eggs are cooked now."

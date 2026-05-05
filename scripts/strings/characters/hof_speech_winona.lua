@@ -87,6 +87,8 @@ WINONA.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Alright, time for another meal."
 WINONA.ANNOUNCE_KYNO_DARKNESSBUFF_START = "She ain't a problem right now!"
 WINONA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Welp, back to being scared of her again."
 
+WINONA.ANNOUNCE_KYNO_LUCKBUFF_END = "Alright, back to real odds."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nope."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope, something else, maybe."
@@ -113,6 +115,8 @@ WINONA.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Cake's up! Nice work, guys!"
 
 WINONA.ANNOUNCE_KYNO_FISH_RESEARCHED = "Huh. Guess this fish taught me somethin' useful."
 WINONA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Not pretty, but useful. Knowledge is knowledge."
+
+WINONA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Gets the job done."
 
 WINONA.DESCRIBE.KYNO_ROE = "Roe, roe, roe my fish... I'm going nuts out here."
 WINONA.DESCRIBE.KYNO_ROE_COOKED = "At least they didn't have faces."

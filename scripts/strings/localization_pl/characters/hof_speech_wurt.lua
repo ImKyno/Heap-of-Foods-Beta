@@ -37,7 +37,7 @@ WURT.ANNOUNCE_KYNO_CRABBUFF_START = "Glurgh, nie chcę skrzywdzić kraba!"
 WURT.ANNOUNCE_KYNO_CRABBUFF_END = "Juhu! Koniec walki!"
 
 WURT.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(buuurp!) Hehe, zabawne dźwięki, flort."
-WURT.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "Uughh… brzuch trochę boli, flort."
+WURT.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "Uughh... brzuch trochę boli, flort."
 
 WURT.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START = "Ouuh...!"
 WURT.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_END = "Wo-wee... Trochę zmęczony, florp."
@@ -87,6 +87,8 @@ WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Znowu głodna..."
 WURT.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność nie straszna teraz! florp!"
 WURT.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ciemność znów straszna!!"
 
+WURT.ANNOUNCE_KYNO_LUCKBUFF_END = "Szczęście poszło, florp..."
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Ładne rybki w bagnie!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... źle..."
@@ -115,6 +117,8 @@ WURT.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Tort gotowy! Czas na zabawę, glo
 
 WURT.ANNOUNCE_KYNO_FISH_RESEARCHED = "Sekrety przyjaciela poznane!!"
 WURT.ANNOUNCE_KYNO_ROE_RESEARCHED = "Sekrety rybich dzieci! Glurp!"
+
+WURT.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Smaczne, florp!"
 
 WURT.DESCRIBE.KYNO_ROE = "Mali przyjaciele!"
 WURT.DESCRIBE.KYNO_ROE_COOKED = "Nieeeeeee!"
@@ -996,7 +1000,7 @@ WURT.DESCRIBE.COXINHA = "Blergh."
 
 WURT.DESCRIBE.LAZYDESSERT = "Twardy."
 
-WURT.DESCRIBE.CRABKINGFEAST = "Glurgh… wielka kupa mięsa."
+WURT.DESCRIBE.CRABKINGFEAST = "Glurgh... wielka kupa mięsa."
 
 WURT.DESCRIBE.PIENAPPLE = "Kolczaste, ale bardzo smaczne, florp!"
 

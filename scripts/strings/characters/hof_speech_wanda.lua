@@ -87,6 +87,8 @@ WANDA.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Time catches up. So does hunger."
 WANDA.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The darkness has lost its urgency."
 WANDA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "And the darkness becomes dangerous again."
 
+WANDA.ANNOUNCE_KYNO_LUCKBUFF_END = "And just like that... it ends."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "No... I need something different."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I guess I have some time to get a wobster for you."
@@ -113,6 +115,8 @@ WANDA.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Just in time! Now, let's enjoy i
 
 WANDA.ANNOUNCE_KYNO_FISH_RESEARCHED = "Good. One less fish wasting my time."
 WANDA.ANNOUNCE_KYNO_ROE_RESEARCHED = "So much future, all at once."
+
+WANDA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... efficient enough."
 
 WANDA.DESCRIBE.KYNO_ROE = "It's my first time seeing this."
 WANDA.DESCRIBE.KYNO_ROE_COOKED = "Smells nice."
@@ -1198,7 +1202,7 @@ WANDA.DESCRIBE.KYNO_ANIMALFEEDER =
 	GENERIC = "A place where food slowly disappears.",
 	FUEL_HIGH = "No need to worry for now.",
 	FUEL_MED = "Time will empty it soon enough.",
-	FUEL_LOW = "Running out of time… and feed.",
+	FUEL_LOW = "Running out of time... and feed.",
 	EMPTY = "Exactly as expected.",
 	BURNT = "That outcome was inevitable.",
 }

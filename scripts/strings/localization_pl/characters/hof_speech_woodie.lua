@@ -87,6 +87,8 @@ WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Znów robię się głodny."
 WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Chyba ta ciemność nie jest taka zła, co?"
 WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Dobra, teraz znowu jest strasznie."
 
+WOODIE.ANNOUNCE_KYNO_LUCKBUFF_END = "No cóż, było miło póki trwało."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może coś do podniesienia?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. On chce czegoś innego."
@@ -113,6 +115,8 @@ WOODIE.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Gotowe! Wygląda świetnie, co?
 
 WOODIE.ANNOUNCE_KYNO_FISH_RESEARCHED = "No proszę. Nauczyłem się jednej czy dwóch rzeczy."
 WOODIE.ANNOUNCE_KYNO_ROE_RESEARCHED = "Chyba nawet rybie jajka mają coś do nauczenia."
+
+WOODIE.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Nieźle, co?"
 
 WOODIE.DESCRIBE.KYNO_ROE = "Garść przyszłych ryb, co?"
 WOODIE.DESCRIBE.KYNO_ROE_COOKED = "Lepiej zjeść, zanim się zepsują."

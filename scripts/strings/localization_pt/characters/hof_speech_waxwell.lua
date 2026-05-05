@@ -87,6 +87,8 @@ WAXWELL.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "A fome é uma inconveniência tedios
 WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_START = "A escuridão parece... familiar."
 WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Que pena. A escuridão voltou a morder."
 
+WAXWELL.ANNOUNCE_KYNO_LUCKBUFF_END = "Previsível. A sorte nunca dura."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de algo diferente."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Você não é fácil, hein?"
@@ -113,6 +115,8 @@ WAXWELL.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Finalmente. Um bolo digno do e
 
 WAXWELL.ANNOUNCE_KYNO_FISH_RESEARCHED = "Conhecimento, até vindo de um peixe, tem sua utilidade."
 WAXWELL.ANNOUNCE_KYNO_ROE_RESEARCHED = "Potencial desperdiçado em uma forma tão frágil."
+
+WAXWELL.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Aceitável, suponho."
 
 WAXWELL.DESCRIBE.KYNO_ROE = "Ovos de peixe crus. Fantástico."
 WAXWELL.DESCRIBE.KYNO_ROE_COOKED = "Os ovos de peixe estão cozidos agora."

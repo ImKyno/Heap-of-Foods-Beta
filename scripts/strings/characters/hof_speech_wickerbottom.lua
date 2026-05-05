@@ -87,6 +87,8 @@ WICKERBOTTOM.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "My metabolic rate has normalize
 WICKERBOTTOM.ANNOUNCE_KYNO_DARKNESSBUFF_START = "My fear of the dark appears to have subsided."
 WICKERBOTTOM.ANNOUNCE_KYNO_DARKNESSBUFF_END = "My aversion to darkness has returned."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_LUCKBUFF_END = "The statistical advantage has expired."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It requires something else."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. I think he said something about wobsters."
@@ -113,6 +115,8 @@ WICKERBOTTOM.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "A splendid confectionary 
 
 WICKERBOTTOM.ANNOUNCE_KYNO_FISH_RESEARCHED = "Fascinating. This species yields new insights."
 WICKERBOTTOM.ANNOUNCE_KYNO_ROE_RESEARCHED = "Roe contains remarkable biological properties."
+
+WICKERBOTTOM.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "A surprisingly well-balanced meal."
 
 WICKERBOTTOM.DESCRIBE.KYNO_ROE = "The first stage in the fish life cycle."
 WICKERBOTTOM.DESCRIBE.KYNO_ROE_COOKED = "The first and last stages of this life cycle."

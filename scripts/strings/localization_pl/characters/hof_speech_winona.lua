@@ -87,6 +87,8 @@ WINONA.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "No dobra, czas znów coś zjeść."
 WINONA.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Huh. Ciemność teraz nie jest problemem."
 WINONA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "No cóż, znowu boję się ciemności."
 
+WINONA.ANNOUNCE_KYNO_LUCKBUFF_END = "Dobra, teraz tylko rzeczywistość."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie, może coś innego."
@@ -113,6 +115,8 @@ WINONA.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Tort gotowy! Dobra robota, ekip
 
 WINONA.ANNOUNCE_KYNO_FISH_RESEARCHED = "Hm. Chyba ta ryba nauczyła mnie czegoś przydatnego."
 WINONA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Nieładne, ale użyteczne. Wiedza to wiedza."
+
+WINONA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Spełnia swoje zadanie."
 
 WINONA.DESCRIBE.KYNO_ROE = "Ikra, ikra, ikra rybka... Chyba wariuję."
 WINONA.DESCRIBE.KYNO_ROE_COOKED = "Przynajmniej nie miały twarzy."
@@ -451,7 +455,7 @@ WINONA.DESCRIBE.KATFOOD = "Przysmak dla małego kumpla."
 
 WINONA.DESCRIBE.KYNO_BANANATREE =
 {
-	GENERIC = "To, ee… drzewo bananowe.",
+	GENERIC = "To, ee... drzewo bananowe.",
 	PICKED = "Potrzebuje chwili, żeby się zregenerować.",
 	CHOPPED = "I po sprawie.",
 	BURNING = "Nie powinnam była do tego dopuścić.",
@@ -1016,7 +1020,7 @@ WINONA.DESCRIBE.WOBSTERCOCKTAIL = "To by dużo kosztowało! Na szczęście tu je
 
 WINONA.DESCRIBE.LAVAEEGGBOILED = "Ręce mi płoną, auć!"
 
-WINONA.DESCRIBE.POMEGRANATETEA = "Ah… trafia w punkt."
+WINONA.DESCRIBE.POMEGRANATETEA = "Ah... trafia w punkt."
 
 WINONA.DESCRIBE.TIRAMISU = "Przypomina latte."
 

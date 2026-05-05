@@ -87,6 +87,8 @@ WILSON.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "My hunger rate appears to be normal a
 WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The darkness no longer frightens me."
 WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Tthe darkness feels unsettling again."
 
+WILSON.ANNOUNCE_KYNO_LUCKBUFF_END = "It seems my luck has run out."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It's not this one."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "He wants something else."
@@ -113,6 +115,8 @@ WILSON.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "The cake is done! Time to celeb
 
 WILSON.ANNOUNCE_KYNO_FISH_RESEARCHED = "I've learned something new about this fish."
 WILSON.ANNOUNCE_KYNO_ROE_RESEARCHED = "I've learned something new about this roe."
+
+WILSON.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "That was quite an interesting recipe."
 
 WILSON.DESCRIBE.KYNO_ROE = "Fish babies."
 WILSON.DESCRIBE.KYNO_ROE_COOKED = "Roe, sunny side up."

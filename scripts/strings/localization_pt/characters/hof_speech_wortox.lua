@@ -87,6 +87,8 @@ WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "A barriga volta a roncar!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "A escuridão faz cócegas em vez de morder!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "A escuridão voltou a morder!"
 
+WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Ahh, a diversão acabou!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de outra coisa."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sei que essa brincadeira foi boa, mas vou trazer o correto agora."
@@ -113,6 +115,8 @@ WORTOX.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Ohoho! O grande bolo está pron
 
 WORTOX.ANNOUNCE_KYNO_FISH_RESEARCHED = "Um segredo peixeiro revelado! Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_ROE_RESEARCHED = "Segredinhos ovados! Hyuyu!"
+
+WORTOX.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Um petisco mortal bem gostoso!"
 
 WORTOX.DESCRIBE.KYNO_ROE = "Ovos de peixe."
 WORTOX.DESCRIBE.KYNO_ROE_COOKED = "Ovos de peixe assados."

@@ -87,6 +87,8 @@ WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Brzuszek znów burczy!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność raczej łaskocze niż gryzie!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Och nie! Ciemność znów gryzie!"
 
+WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Och, zabawa się skończyła!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję czegoś jeszcze."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wiem, że ten żart był niezły, ale przejdźmy do konkretów."
@@ -113,6 +115,8 @@ WORTOX.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Ohoho! Wielki tort gotów do pa
 
 WORTOX.ANNOUNCE_KYNO_FISH_RESEARCHED = "Rybi sekret ujawniony! Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_ROE_RESEARCHED = "Jajeczne sekreciki! Hyuyu!"
+
+WORTOX.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Smakołyk dla śmiertelników!"
 
 WORTOX.DESCRIBE.KYNO_ROE = "Rybie jajka."
 WORTOX.DESCRIBE.KYNO_ROE_COOKED = "Pieczone rybie jajka."

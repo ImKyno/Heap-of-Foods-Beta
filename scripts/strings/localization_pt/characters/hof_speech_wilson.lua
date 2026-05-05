@@ -87,6 +87,8 @@ WILSON.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Minha taxa de fome parece ter voltado
 WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_START = "A escuridão não me assusta mais."
 WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ah... a escuridão voltou a ser perturbadora."
 
+WILSON.ANNOUNCE_KYNO_LUCKBUFF_END = "Parece que minha sorte acabou."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ele quer outra coisa."
@@ -113,6 +115,8 @@ WILSON.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "O bolo está pronto! Hora de co
 
 WILSON.ANNOUNCE_KYNO_FISH_RESEARCHED = "Aprendi algo novo sobre este peixe."
 WILSON.ANNOUNCE_KYNO_ROE_RESEARCHED = "Aprendi algo novo sobre essas ovas."
+
+WILSON.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Essa foi uma receita bem interessante."
 
 WILSON.DESCRIBE.KYNO_ROE = "Filhotes de peixe."
 WILSON.DESCRIBE.KYNO_ROE_COOKED = "Ovas, fritas do lado certo."
@@ -992,7 +996,7 @@ WILSON.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Gosto do corte desta ferramenta."
 
 WILSON.DESCRIBE.COXINHA = "É um lanche de frango da tarde."
 
-WILSON.DESCRIBE.LAZYDESSERT = "Hah! O trocadilho é… Ha… você entende."
+WILSON.DESCRIBE.LAZYDESSERT = "Hah! O trocadilho é... Ha... você entende."
 
 WILSON.DESCRIBE.CRABKINGFEAST = "É pequeno na panela, mas enorme aqui fora!"
 

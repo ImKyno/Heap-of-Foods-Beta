@@ -87,6 +87,8 @@ WEBBER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Uh-oh, a fome voltou."
 WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_START = "O escuro não incomoda mais a gente!"
 WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Uh oh! O escuro voltou a assustar."
 
+WEBBER.ANNOUNCE_KYNO_LUCKBUFF_END = "Ah não... nossa sorte acabou."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Achamos que isso não é o que ele quer."
@@ -113,6 +115,8 @@ WEBBER.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Yay! O bolo ficou pronto!"
 
 WEBBER.ANNOUNCE_KYNO_FISH_RESEARCHED = "Descobrimos juntos!"
 WEBBER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Aprendemos sobre as coisas de peixinhos bebês!"
+
+WEBBER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Delicioso! Nós gostamos!"
 
 WEBBER.DESCRIBE.KYNO_ROE = "Não são ovos de aranha."
 WEBBER.DESCRIBE.KYNO_ROE_COOKED = "Não são os ovos que estamos acostumados."

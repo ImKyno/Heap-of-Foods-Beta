@@ -87,6 +87,8 @@ WILSON.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Tempo głodu najwyraźniej wróciło 
 WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciekawe. Ciemność już mnie nie przeraża."
 WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ach... ciemność znów jest niepokojąca."
 
+WILSON.ANNOUNCE_KYNO_LUCKBUFF_END = "Wygląda na to, że moja szczęście się skończyło."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "To nie to."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "On chce coś innego."
@@ -113,6 +115,8 @@ WILSON.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Tort gotowy! Czas świętować!
 
 WILSON.ANNOUNCE_KYNO_FISH_RESEARCHED = "Nauczyłem się czegoś nowego o tej rybie."
 WILSON.ANNOUNCE_KYNO_ROE_RESEARCHED = "Nauczyłem się czegoś nowego o tej ikrze."
+
+WILSON.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "To był dość interesujący przepis."
 
 WILSON.DESCRIBE.KYNO_ROE = "Rybie dzieci."
 WILSON.DESCRIBE.KYNO_ROE_COOKED = "Ikra, podana na ciepło."
@@ -934,7 +938,7 @@ WILSON.DESCRIBE.CHIMAS = "Orzeźwiający napar z ziół."
 
 WILSON.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
-	OFF = "Woda… do czego to właściwie służy?",
+	OFF = "Woda... do czego to właściwie służy?",
 	ON = "Utrzymuje moje uprawy nawodnione i zdrowe.",
 }
 
@@ -992,7 +996,7 @@ WILSON.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Lubię sposób, w jaki to tnie."
 
 WILSON.DESCRIBE.COXINHA = "To kurczakowa przekąska na popołudnie."
 
-WILSON.DESCRIBE.LAZYDESSERT = "Ha! Słowna gra jest… Ha… Wiesz o co chodzi."
+WILSON.DESCRIBE.LAZYDESSERT = "Ha! Słowna gra jest... Ha... Wiesz o co chodzi."
 
 WILSON.DESCRIBE.CRABKINGFEAST = "W garnku małe, a tutaj ogromne!"
 
@@ -1000,7 +1004,7 @@ WILSON.DESCRIBE.PIENAPPLE = "Nie wygląda jak moje włosy, Willow."
 
 WILSON.DESCRIBE.JAWSBREAKER = "Wygląda bardzo kusząco."
 
-WILSON.DESCRIBE.AVOCADOTOAST = "Chleb i owoce… trochę nudno."
+WILSON.DESCRIBE.AVOCADOTOAST = "Chleb i owoce... trochę nudno."
 
 WILSON.DESCRIBE.RICEPUDDING = "Chyba całkiem w porządku."
 

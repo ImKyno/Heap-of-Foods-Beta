@@ -87,6 +87,8 @@ WANDA.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "O tempo alcança tudo. A fome também.
 WANDA.ANNOUNCE_KYNO_DARKNESSBUFF_START = "A escuridão perdeu sua urgência."
 WANDA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "E a escuridão volta a ser perigosa."
 
+WANDA.ANNOUNCE_KYNO_LUCKBUFF_END = "E assim... acabou."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não... Preciso de algo diferente."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Acho que tenho tempo de pegar uma lagosta para você."
@@ -113,6 +115,8 @@ WANDA.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Bem na hora! Vamos aproveitar an
 
 WANDA.ANNOUNCE_KYNO_FISH_RESEARCHED = "Ótimo. Um peixe a menos desperdiçando meu tempo."
 WANDA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Tanto futuro, tudo de uma vez."
+
+WANDA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... eficiente o suficiente."
 
 WANDA.DESCRIBE.KYNO_ROE = "É minha primeira vez vendo isso."
 WANDA.DESCRIBE.KYNO_ROE_COOKED = "Cheiro agradável."

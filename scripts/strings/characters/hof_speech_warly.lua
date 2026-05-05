@@ -87,6 +87,8 @@ WARLY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "My appetite returns in full."
 WARLY.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ah! Even the darkest night feels welcoming."
 WARLY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The night regains its dreadful bite."
 
+WARLY.ANNOUNCE_KYNO_LUCKBUFF_END = "Timing’s over. Shame."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong, wrong..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You want something else more delicious?"
@@ -113,6 +115,8 @@ WARLY.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Magnifique! A cake worthy of cel
 
 WARLY.ANNOUNCE_KYNO_FISH_RESEARCHED = "Ah! Now I truly understand this ingredient."
 WARLY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Ah! Such delicate potential in these eggs."
+
+WARLY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... not bad at all."
 
 WARLY.DESCRIBE.KYNO_ROE = "I can make caviar with canapes!"
 WARLY.DESCRIBE.KYNO_ROE_COOKED = "Could use a squeeze of fresh lemon."

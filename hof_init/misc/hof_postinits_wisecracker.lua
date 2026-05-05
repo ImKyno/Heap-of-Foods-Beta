@@ -96,6 +96,12 @@ local function FishRegistryRoeResearched(inst, data)
 	end
 end
 
+local function DailyRecipeEaten(inst, data)
+	if inst.components.talker ~= nil then
+		inst.components.talker:Say(_G.GetString(inst, "ANNOUNCE_KYNO_DAILYRECIPE_EATEN"))
+	end
+end
+
 AddComponentPostInit("wisecracker", function(self)
 	self.inst:ListenForEvent("firepitinstallfail", FirepitInstallFail)
 	self.inst:ListenForEvent("cookwareinstallfail", CookwareInstallFail)
@@ -112,4 +118,5 @@ AddComponentPostInit("wisecracker", function(self)
 	self.inst:ListenForEvent("hofbirthdaycakecomplete", BirthdayCakeComplete)
 	self.inst:ListenForEvent("fishregistryresearchfish", FishRegistryFishResearched)
 	self.inst:ListenForEvent("fishregistryresearchroe", FishRegistryRoeResearched)
+	self.inst:ListenForEvent("dailyrecipeeaten", DailyRecipeEaten)
 end)

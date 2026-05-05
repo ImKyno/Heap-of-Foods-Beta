@@ -37,7 +37,7 @@ WARLY.ANNOUNCE_KYNO_CRABBUFF_START = "Sezon polowania na kraby znów otwarty!"
 WARLY.ANNOUNCE_KYNO_CRABBUFF_END = "Mon dieu! Muszę chwilę odpocząć."
 
 WARLY.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(buuurp...) Przepraszam bardzo..."
-WARLY.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "To było orzeźwiające i…"
+WARLY.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "To było orzeźwiające i..."
 
 WARLY.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START = "Już idę."
 WARLY.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_END = "Wracam do normy..."
@@ -87,6 +87,8 @@ WARLY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Mój apetyt powrócił w pełni."
 WARLY.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ach! Nawet najciemniejsza noc wydaje się przyjazna."
 WARLY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Noc odzyskuje swój groźny charakter."
 
+WARLY.ANNOUNCE_KYNO_LUCKBUFF_END = "Czas się skończył. Szkoda."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Źle, źle..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Masz ochotę na coś jeszcze pyszniejszego?"
@@ -113,6 +115,8 @@ WARLY.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Magnifique! Tort godny świętow
 
 WARLY.ANNOUNCE_KYNO_FISH_RESEARCHED = "Ach! Teraz naprawdę rozumiem ten składnik."
 WARLY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Ach! Jaki delikatny potencjał w tych jajach."
+
+WARLY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... nieźle."
 
 WARLY.DESCRIBE.KYNO_ROE = "Mogę zrobić kawior z kanapkami!"
 WARLY.DESCRIBE.KYNO_ROE_COOKED = "Przydałoby się trochę świeżej cytryny."

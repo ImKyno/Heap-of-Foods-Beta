@@ -31,10 +31,10 @@ WATHGRITHR.ANNOUNCE_KYNO_EATERBUFF_START = "Gotowa do jedzenia!"
 WATHGRITHR.ANNOUNCE_KYNO_EATERBUFF_END = "Usta czują się oszołomione!"
 
 WATHGRITHR.ANNOUNCE_KYNO_WORMBUFF_START = "Pole bitwy czeka!"
-WATHGRITHR.ANNOUNCE_KYNO_WORMBUFF_END = "Bitwa skończona… na razie!"
+WATHGRITHR.ANNOUNCE_KYNO_WORMBUFF_END = "Bitwa skończona... na razie!"
 
 WATHGRITHR.ANNOUNCE_KYNO_CRABBUFF_START = "Pole bitwy czeka!"
-WATHGRITHR.ANNOUNCE_KYNO_CRABBUFF_END = "Bitwa skończona… na razie!"
+WATHGRITHR.ANNOUNCE_KYNO_CRABBUFF_END = "Bitwa skończona... na razie!"
 
 WATHGRITHR.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(buuurp!) To jest dziwny żabi napój!"
 WATHGRITHR.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "Dziwne efekty zniknęły!"
@@ -87,6 +87,8 @@ WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Powraca zew głodu!"
 WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Cienie nie budzą lęku w sercu wojowniczki!"
 WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Cienie znów wzywają do bitwy!"
 
+WATHGRITHR.ANNOUNCE_KYNO_LUCKBUFF_END = "Los odebrał swoją łaskę!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zło!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie ta uczta! Bestia chce pyszniejszego jedzenia!"
@@ -113,6 +115,8 @@ WATHGRITHR.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Wieża uczty ukończona! Ni
 
 WATHGRITHR.ANNOUNCE_KYNO_FISH_RESEARCHED = "Zgłębiłam zwyczaje tej morskiej bestii!"
 WATHGRITHR.ANNOUNCE_KYNO_ROE_RESEARCHED = "Nienarodzeni wojownicy mórz, dobrze zbadani!"
+
+WATHGRITHR.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Uczta godna wojownika!"
 
 WATHGRITHR.DESCRIBE.KYNO_ROE = "Może pewnego dnia staniecie się prawdziwym mięsem."
 WATHGRITHR.DESCRIBE.KYNO_ROE_COOKED = "Już nigdy nie staniecie się prawdziwym mięsem."
@@ -994,7 +998,7 @@ WATHGRITHR.DESCRIBE.COXINHA = "Śliskie i oleiste, a do tego kurczak!"
 
 WATHGRITHR.DESCRIBE.LAZYDESSERT = "Potwór czeka na ucztę!"
 
-WATHGRITHR.DESCRIBE.CRABKINGFEAST = "Jak to możliwe… Nieważne."
+WATHGRITHR.DESCRIBE.CRABKINGFEAST = "Jak to możliwe... Nieważne."
 
 WATHGRITHR.DESCRIBE.PIENAPPLE = "Kolczasty owoc przegrał tę bitwę, nie zasługuje na jedzenie."
 

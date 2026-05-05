@@ -87,6 +87,8 @@ WICKERBOTTOM.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Mój metabolizm wrócił do nor
 WICKERBOTTOM.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Mój strach przed ciemnością zdaje się ustąpił."
 WICKERBOTTOM.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Moja niechęć do ciemności powróciła."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_LUCKBUFF_END = "Przewaga statystyczna wygasła."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzeba czegoś jeszcze."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. Chyba mówił coś o homarach."
@@ -113,6 +115,8 @@ WICKERBOTTOM.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Wspaniałe cukiernicze os
 
 WICKERBOTTOM.ANNOUNCE_KYNO_FISH_RESEARCHED = "Fascynujące. Ten gatunek dostarcza nowych wniosków."
 WICKERBOTTOM.ANNOUNCE_KYNO_ROE_RESEARCHED = "Ikra zawiera niezwykłe właściwości biologiczne."
+
+WICKERBOTTOM.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Zaskakująco zrównoważony posiłek."
 
 WICKERBOTTOM.DESCRIBE.KYNO_ROE = "Pierwszy etap cyklu życia ryb."
 WICKERBOTTOM.DESCRIBE.KYNO_ROE_COOKED = "Pierwszy i ostatni etap tego cyklu życia."

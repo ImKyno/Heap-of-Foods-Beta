@@ -87,6 +87,8 @@ WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The tummy grumbles once more!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The darkness tickles rather than bites!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Oh dear! The dark bites again!"
 
+WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Awww, the fun’s over!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I know this prank was good, but let's get the real thing."
@@ -113,6 +115,8 @@ WORTOX.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Ohoho! The grand cake is ready 
 
 WORTOX.ANNOUNCE_KYNO_FISH_RESEARCHED = "A fishy secret revealed! Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_ROE_RESEARCHED = "Eggy secrets! Hyuyu!"
+
+WORTOX.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "A tasty little mortal treat!"
 
 WORTOX.DESCRIBE.KYNO_ROE = "Fish eggs."
 WORTOX.DESCRIBE.KYNO_ROE_COOKED = "Roasted fish eggs."

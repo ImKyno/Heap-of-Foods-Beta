@@ -87,6 +87,8 @@ WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Wolfgang znowu głodny..."
 WOLFGANG.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Wolfgang nie boi się teraz ciemności!"
 WOLFGANG.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ciemność znowu straszna..."
 
+WOLFGANG.ANNOUNCE_KYNO_LUCKBUFF_END = "Szczęście się skończyło. Wolfgang nadal silny!"
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "To nie jest potrzebne."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mocny świnia nie chce tego."
@@ -113,6 +115,8 @@ WOLFGANG.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Potężny tort ukończony! Wo
 
 WOLFGANG.ANNOUNCE_KYNO_FISH_RESEARCHED = "Wolfgang teraz dużo wie o małym wodnym mięsie!"
 WOLFGANG.ANNOUNCE_KYNO_ROE_RESEARCHED = "Wolfgang teraz rozumie małe rybie jajka!"
+
+WOLFGANG.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Wolfgang czuje się silniejszy!"
 
 WOLFGANG.DESCRIBE.KYNO_ROE = "Jest jajkowe."
 WOLFGANG.DESCRIBE.KYNO_ROE_COOKED = "Małe jajka mniej śmierdzą teraz."

@@ -52,7 +52,7 @@ WILLOW.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_START = "Estou pegando fogo de poder! Acho 
 WILLOW.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_END = "Ei! Quem roubou meu poder de fogo?!"
 
 WILLOW.ANNOUNCE_KYNO_TRUFFLESBUFF_START = "Hehe, os porquinhos me adoram!"
-WILLOW.ANNOUNCE_KYNO_TRUFFLESBUFF_END = "Ahh, os porquinhos… já se foram."
+WILLOW.ANNOUNCE_KYNO_TRUFFLESBUFF_END = "Ahh, os porquinhos... já se foram."
 
 WILLOW.ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START = "Hehe! Quero ver o ácido me queimar agora!"
 -- No ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_END, because we are using default strings for that.
@@ -87,6 +87,8 @@ WILLOW.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Aff, a fome já voltou?"
 WILLOW.ANNOUNCE_KYNO_DARKNESSBUFF_START = "O escuro não me assusta mais!"
 WILLOW.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Agora o escuro voltou a ser assustador."
 
+WILLOW.ANNOUNCE_KYNO_LUCKBUFF_END = "Ótimo. Voltou a má sorte de sempre."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso colocar algo diferente aqui!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, coisa errada!"
@@ -113,6 +115,8 @@ WILLOW.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Finalmente! Agora vamos acender
 
 WILLOW.ANNOUNCE_KYNO_FISH_RESEARCHED = "Heh. Cutucar o peixe até fazer sentido funcionou."
 WILLOW.ANNOUNCE_KYNO_ROE_RESEARCHED = "Ovos de peixe, hein? Ainda assim aprendi algo."
+
+WILLOW.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Até que foi bom. Mas podia pegar fogo."
 
 WILLOW.DESCRIBE.KYNO_ROE = "Ughh! Que nojo!!"
 WILLOW.DESCRIBE.KYNO_ROE_COOKED = "Cozinhei, mas ainda são nojentas."

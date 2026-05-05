@@ -87,6 +87,8 @@ WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Back to feelin' peckish again."
 WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Guess the dark ain't so bad after all, eh?"
 WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Alright, now it's spooky again."
 
+WOODIE.ANNOUNCE_KYNO_LUCKBUFF_END = "Well, that was nice while it lasted."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to pick it up?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. He wants something else."
@@ -113,6 +115,8 @@ WOODIE.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "All done! Looks great, eh?"
 
 WOODIE.ANNOUNCE_KYNO_FISH_RESEARCHED = "Well, ain't that somethin'. Learned a thing or two."
 WOODIE.ANNOUNCE_KYNO_ROE_RESEARCHED = "Guess even fish eggs got somethin' to teach."
+
+WOODIE.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Not too shabby, eh?"
 
 WOODIE.DESCRIBE.KYNO_ROE = "A handful of future fish, eh?"
 WOODIE.DESCRIBE.KYNO_ROE_COOKED = "Better eat'em before they go bad."

@@ -87,6 +87,8 @@ WEBBER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "O nie, znowu jesteśmy głodni."
 WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność już nas nie przeraża!"
 WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "O nie... ciemność znów jest straszna."
 
+WEBBER.ANNOUNCE_KYNO_LUCKBUFF_END = "Och nie... nasze szczęście zniknęło."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie tego."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sądzimy, że to nie jest właściwy posiłek, jakiego potrzebuje."
@@ -113,6 +115,8 @@ WEBBER.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Jeej! Tort jest gotowy!"
 
 WEBBER.ANNOUNCE_KYNO_FISH_RESEARCHED = "Razem to rozgryźliśmy!"
 WEBBER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Dowiedzieliśmy się o rybich maluchach!"
+
+WEBBER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Smaczne! Podobało nam się!"
 
 WEBBER.DESCRIBE.KYNO_ROE = "To nie są jaja pająków."
 WEBBER.DESCRIBE.KYNO_ROE_COOKED = "Nie takie jajka, do jakich jesteśmy przyzwyczajeni."

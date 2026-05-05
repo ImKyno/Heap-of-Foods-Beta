@@ -87,6 +87,8 @@ WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Com fome de novo..."
 WURT.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Escuro não assusta agora! florp!"
 WURT.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Escuro assusta de novo!!"
 
+WURT.ANNOUNCE_KYNO_LUCKBUFF_END = "Sorte acabou, florp..."
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Peixes bonitinhos sempre estão no pantano!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... errado..."
@@ -115,6 +117,8 @@ WURT.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Bolo pronto! Hora da festa, florp
 
 WURT.ANNOUNCE_KYNO_FISH_RESEARCHED = "Segredos de amigo aprendidos!!"
 WURT.ANNOUNCE_KYNO_ROE_RESEARCHED = "Segredos de bebês peixe! Glurp!"
+
+WURT.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Gostoso, florp!"
 
 WURT.DESCRIBE.KYNO_ROE = "Amiguinhos!"
 WURT.DESCRIBE.KYNO_ROE_COOKED = "Nããão!"

@@ -87,6 +87,8 @@ WILLOW.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Ugh, hunger's back already?"
 WILLOW.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The dark doesn't scare me anymore!"
 WILLOW.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The dark is creepy again..."
 
+WILLOW.ANNOUNCE_KYNO_LUCKBUFF_END = "Great. Back to normal bad luck."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need to put something in here!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, wrong thing!"
@@ -113,6 +115,8 @@ WILLOW.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Finally! Now set the candles on
 
 WILLOW.ANNOUNCE_KYNO_FISH_RESEARCHED = "Heh. I poked at the fish until it made sense."
 WILLOW.ANNOUNCE_KYNO_ROE_RESEARCHED = "Fish eggs, huh? Still learned something."
+
+WILLOW.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Not bad. Could use fire though."
 
 WILLOW.DESCRIBE.KYNO_ROE = "Ughh! That's nasty!!"
 WILLOW.DESCRIBE.KYNO_ROE_COOKED = "I cooked them, but they're still nasty."

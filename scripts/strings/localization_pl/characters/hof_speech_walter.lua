@@ -87,6 +87,8 @@ WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Chyba znów pora na przekąskę."
 WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Hej, teraz mogę poradzić sobie z ciemnością!"
 WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Uh... wolałem, kiedy ciemność nie była straszna."
 
+WALTER.ANNOUNCE_KYNO_LUCKBUFF_END = "Chyba szczęście się skończyło."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zła rzecz!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmm, nie w tym przypadku."
@@ -113,6 +115,8 @@ WALTER.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Tort ukończony! To będzie naj
 
 WALTER.ANNOUNCE_KYNO_FISH_RESEARCHED = "Super! Sporo się nauczyłem o tej rybie."
 WALTER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Chyba wiem teraz więcej o rybich jajach."
+
+WALTER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Dobra posiłek biwakowy!"
 
 WALTER.DESCRIBE.KYNO_ROE = "Pierwszy raz to widzę."
 WALTER.DESCRIBE.KYNO_ROE_COOKED = "Usmażyłem je. Hehe."

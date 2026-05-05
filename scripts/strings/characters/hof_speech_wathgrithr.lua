@@ -87,6 +87,8 @@ WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The call of hunger returns!"
 WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The shadows hold no terror for a warrior!"
 WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The shadows seek battle once more!"
 
+WATHGRITHR.ANNOUNCE_KYNO_LUCKBUFF_END = "Fate has withdrawn its favor!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wrong feast! Beast wants a more delightful food!"
@@ -113,6 +115,8 @@ WATHGRITHR.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "The feast-tower is finished
 
 WATHGRITHR.ANNOUNCE_KYNO_FISH_RESEARCHED = "I have studied the ways of this sea-beast!"
 WATHGRITHR.ANNOUNCE_KYNO_ROE_RESEARCHED = "Unborn warriors of the sea, studied well!"
+
+WATHGRITHR.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "A feast worthy of a warrior!"
 
 WATHGRITHR.DESCRIBE.KYNO_ROE = "One day you may be true meat."
 WATHGRITHR.DESCRIBE.KYNO_ROE_COOKED = "You shall never be true meat now."

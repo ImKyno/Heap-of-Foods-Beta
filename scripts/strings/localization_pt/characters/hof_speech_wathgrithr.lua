@@ -87,6 +87,8 @@ WATHGRITHR.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "O chamado da fome retorna!"
 WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_START = "As sombras não trazem terror a uma guerreira!"
 WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_END = "As sombras buscam batalha mais uma vez!"
 
+WATHGRITHR.ANNOUNCE_KYNO_LUCKBUFF_END = "O destino retirou seu favor!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Errado!"
@@ -113,6 +115,8 @@ WATHGRITHR.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "A torre do banquete está c
 
 WATHGRITHR.ANNOUNCE_KYNO_FISH_RESEARCHED = "Estudei os costumes desta besta marinha!"
 WATHGRITHR.ANNOUNCE_KYNO_ROE_RESEARCHED = "Guerreiros não nascidos do mar, bem estudados!"
+
+WATHGRITHR.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Um banquete digno de um guerreiro!"
 
 WATHGRITHR.DESCRIBE.KYNO_ROE = "Um dia você será carne de verdade."
 WATHGRITHR.DESCRIBE.KYNO_ROE_COOKED = "Agora você nunca será carne de verdade."

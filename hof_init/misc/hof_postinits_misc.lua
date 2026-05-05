@@ -1501,6 +1501,39 @@ AddPlayerPostInit(function(inst)
 		return inst
 	end
 
+	-- Daily Recipes.
+	if inst.components.eater ~= nil then
+		inst.components.eater:SetOnEatFn(function(inst, food)
+			if food == nil then
+				return
+			end
+
+			local bonus = TUNING.KYNO_DAILYRECIPE_BONUS
+			local base_recipe = GetBaseFoodPrefab(food.prefab)
+
+			if _G.TheWorld.components.dailyrecipe ~= nil then
+				local recipe = _G.TheWorld.components.dailyrecipe:GetCurrentRecipe()
+
+				if base_recipe == recipe then
+					if inst.components.health ~= nil then
+						inst.components.health:DoDelta(bonus)
+					end
+
+					if inst.components.hunger ~= nil then
+						inst.components.hunger:DoDelta(bonus)
+					end
+
+					if inst.components.sanity ~= nil then
+						inst.components.sanity:DoDelta(bonus)
+					end
+
+					inst:AddDebuff("kyno_luckbuff", "kyno_luckbuff")
+					inst:PushEvent("dailyrecipeeaten")
+				end
+			end
+		end)
+	end
+
 	inst.OnLearnFish = OnLearnFish
 	inst.OnLearnRoe = OnLearnRoe
 

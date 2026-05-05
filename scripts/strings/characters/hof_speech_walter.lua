@@ -87,6 +87,8 @@ WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Guess it's snack time again."
 WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_START = "I'm not afraid of the darkness."
 WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "I still hold no fear of the darkness."
 
+WALTER.ANNOUNCE_KYNO_LUCKBUFF_END = "I Guess the lucky streak is over."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong thing!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, not this one."
@@ -113,6 +115,8 @@ WALTER.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Cake complete! This is going to
 
 WALTER.ANNOUNCE_KYNO_FISH_RESEARCHED = "Cool! I learned a lot about this fish."
 WALTER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Guess I know more about fish eggs now."
+
+WALTER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "That was a solid camp meal!"
 
 WALTER.DESCRIBE.KYNO_ROE = "My first time seeing one of them."
 WALTER.DESCRIBE.KYNO_ROE_COOKED = "I cooked them. Hehe."

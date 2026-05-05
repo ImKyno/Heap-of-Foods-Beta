@@ -87,6 +87,8 @@ WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "O vazio retorna."
 WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_START = "A escuridão me abraça gentilmente."
 WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "A escuridão voltou a parecer hostil."
 
+WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Até a sorte passageira desaparece."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."
@@ -113,6 +115,8 @@ WENDY.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Uma celebração passageira... m
 
 WENDY.ANNOUNCE_KYNO_FISH_RESEARCHED = "Seus segredos vêm à tona, como tudo acaba fazendo."
 WENDY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Tanta vida, nunca destinada a existir."
+
+WENDY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Um conforto passageiro... logo esquecido."
 
 WENDY.DESCRIBE.KYNO_ROE = "O começo da vida..."
 WENDY.DESCRIBE.KYNO_ROE_COOKED = "Poupei-os da dor de nascer."

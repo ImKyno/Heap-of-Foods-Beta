@@ -87,6 +87,8 @@ WALTER.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Acho que é hora do lanche de novo."
 WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Eu não tenho medo da escuridão!"
 WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Eu ainda não possuo medo da escuridão."
 
+WALTER.ANNOUNCE_KYNO_LUCKBUFF_END = "Acho que a sorte acabou."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Coisa errada!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, não é este."
@@ -113,6 +115,8 @@ WALTER.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Bolo completado! Essa vai ser a
 
 WALTER.ANNOUNCE_KYNO_FISH_RESEARCHED = "Legal! Aprendi bastante sobre esse peixe."
 WALTER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Acho que sei mais sobre ovos de peixe agora."
+
+WALTER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Essa foi uma boa refeição de acampamento!"
 
 WALTER.DESCRIBE.KYNO_ROE = "Minha primeira vez vendo um deles."
 WALTER.DESCRIBE.KYNO_ROE_COOKED = "Cozinhei eles. Hehe."

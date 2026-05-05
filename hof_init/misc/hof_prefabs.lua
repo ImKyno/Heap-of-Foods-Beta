@@ -72,6 +72,7 @@ PrefabFiles =
 	"k_foodbuff_haste",
 	"k_foodbuff_hunger",
 	"k_foodbuff_insanity",
+	"k_foodbuff_luck",
 	"k_foodbuff_maxstats",
 	"k_foodbuff_mobs",
 	"k_foodbuff_nightvision",

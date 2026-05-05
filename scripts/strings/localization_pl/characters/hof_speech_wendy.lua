@@ -31,12 +31,12 @@ WENDY.ANNOUNCE_KYNO_EATERBUFF_START = "Czuję, że moje zęby stają się mocnie
 WENDY.ANNOUNCE_KYNO_EATERBUFF_END = "Zwykłe zęby znów działają..."
 
 WENDY.ANNOUNCE_KYNO_WORMBUFF_START = "Morskie robaki poczują mój gniew."
-WENDY.ANNOUNCE_KYNO_WORMBUFF_END = "Mój gniew na robaki zniknął… na razie."
+WENDY.ANNOUNCE_KYNO_WORMBUFF_END = "Mój gniew na robaki zniknął... na razie."
 
 WENDY.ANNOUNCE_KYNO_CRABBUFF_START = "Morskie kraby poczują mój gniew."
-WENDY.ANNOUNCE_KYNO_CRABBUFF_END = "Mój gniew na kraby zniknął… na razie."
+WENDY.ANNOUNCE_KYNO_CRABBUFF_END = "Mój gniew na kraby zniknął... na razie."
 
-WENDY.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(buuurp!) Ech… przepraszam."
+WENDY.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(buuurp!) Ech... przepraszam."
 WENDY.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "Koniec z tym żabim napojem."
 
 WENDY.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START = "Oświeć mnie!"
@@ -87,6 +87,8 @@ WENDY.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Pustka powraca."
 WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność obejmuje mnie łagodnie."
 WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ciemność znów wydaje się wroga."
 
+WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Nawet ulotne szczęście przemija."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może warto coś zebrać?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Oczywiście, że nie tego chce to głupie stworzenie."
@@ -109,10 +111,12 @@ WENDY.ANNOUNCE_KYNO_HUNT_LOST_TRAIL = "Nawet ślad w końcu tonie..."
 WENDY.ANNOUNCE_KYNO_HUNT_LOST_TRAIL_RAIN = "Deszcz topi nawet nadzieję..."
 WENDY.ANNOUNCE_KYNO_HUNT_BEAST_NEARBY = "Śmierć budzi się w głębinach..."
 
-WENDY.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Chwila krótkiej radości… lecz miła."
+WENDY.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Chwila krótkiej radości... lecz miła."
 
 WENDY.ANNOUNCE_KYNO_FISH_RESEARCHED = "Jej sekrety wypływają na powierzchnię, jak wszystko."
 WENDY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Tyle życia, które nigdy nie miało się narodzić."
+
+WENDY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Przelotny komfort... szybko zapomniany."
 
 WENDY.DESCRIBE.KYNO_ROE = "Początek życia..."
 WENDY.DESCRIBE.KYNO_ROE_COOKED = "Oszczędziłam im bólu wyklucia."
