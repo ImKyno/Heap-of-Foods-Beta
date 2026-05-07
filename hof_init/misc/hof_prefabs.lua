@@ -3,7 +3,7 @@ local _G = GLOBAL
 
 -- Prefabs.
 PrefabFiles =
-{	
+{
 	"k_animalfeeder",
 	"k_antchest",
 	"k_antchovy",

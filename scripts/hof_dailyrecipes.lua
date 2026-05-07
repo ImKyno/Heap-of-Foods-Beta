@@ -84,7 +84,7 @@ end
 
 CollectIngredients()
 
-local function GetDailyRecipe(custom_seed, excluded)
+local function GetDailyRecipeSeed(custom_seed, excluded)
 	local recipes = CollectRecipes()
 
 	local valid = {}
@@ -115,11 +115,23 @@ local function GetDailyRecipe(custom_seed, excluded)
 	end
 	]]--
 
-	-- return recipe or "None"
 	return valid[index]
 end
 
--- Format: Fancy Name
+local function GetDailyRecipe()
+	local shard = TheWorld.net
+
+	if shard ~= nil and shard._dailyrecipe ~= nil then
+		local recipe = shard._dailyrecipe:value()
+
+		if recipe ~= nil and recipe ~= "" then
+			return recipe
+		end
+	end
+
+	return GetDailyRecipeSeed()
+end
+
 local function GetDailyRecipeName()
 	local recipe = GetDailyRecipe()
 
@@ -131,8 +143,7 @@ local function GetDailyRecipeName()
 	return STRINGS.NAMES[key] or recipe
 end
 
--- Format: Fancy Name [prefab]
-local function GetDailyRecipePrefab(recipe)
+local function GetDailyRecipePrefab()
 	local recipe = GetDailyRecipe()
 
 	if recipe == nil then
@@ -177,9 +188,7 @@ local function GetDailyRecipeCard(recipe)
 	if cooking ~= nil and cooking.recipe_cards ~= nil then
 		for _, card in ipairs(cooking.recipe_cards) do
 			if card.recipe_name == recipe then
-				return {
-					cooker = card.cooker_name,
-				}
+				return { cooker = card.cooker_name }
 			end
 		end
 	end
@@ -187,9 +196,7 @@ local function GetDailyRecipeCard(recipe)
 	if brewing ~= nil and brewing.recipe_cards ~= nil then
 		for _, card in ipairs(brewing.recipe_cards) do
 			if card.recipe_name == recipe then
-				return {
-					cooker = card.brewer_name,
-				}
+				return { cooker = card.brewer_name }
 			end
 		end
 	end
@@ -202,8 +209,7 @@ local function GetDailyRecipeData(prefab)
 	local carddata = GetDailyRecipeCard(prefab)
 	local card = CARD_DEFS[prefab]
 
-	return
-	{
+	return {
 		prefab     = prefab,
 		name       = STRINGS.NAMES[string.upper(prefab)] or prefab,
 
@@ -216,7 +222,7 @@ local function GetDailyRecipeData(prefab)
 	}
 end
 
-return
+return 
 {
 	GetDailyRecipe       = GetDailyRecipe,
 	GetDailyRecipeName   = GetDailyRecipeName,

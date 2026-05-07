@@ -2,6 +2,8 @@ local cooking = require("cooking")
 local brewing = require("hof_brewing")
 local DAILY_RECIPES = require("hof_dailyrecipes")
 
+local ROTATION_SECONDS = 24 * 60 * 60
+
 local function GetDailyRecipeDef(prefab)
 	if cooking ~= nil and cooking.cookbook_recipes ~= nil then
 		for category, list in pairs(cooking.cookbook_recipes) do
@@ -60,15 +62,43 @@ local DailyRecipe = Class(function(self, inst)
 	self.custom_seed = nil
 	self.excluded = {}
 
-	self.current_seed = nil
-	self.current_recipe = nil
+	self.forced_recipe = nil
 
 	self._task = inst:DoPeriodicTask(10, function()
 		self:CheckForUpdate()
 	end)
 end)
 
+function DailyRecipe:SetForcedDailyRecipe(recipe, sync)
+	sync = sync ~= false
+
+	self.forced_recipe = recipe
+	self.current_recipe = recipe
+
+	if self.inst._dailyrecipe ~= nil then
+		self.inst._dailyrecipe:set(recipe or "")
+	end
+
+	self.inst:PushEvent("dailyrecipechanged", { old = self.current_recipe, new = recipe })
+
+	if sync then
+		SendModRPCToShard(GetShardModRPC("DailyRecipe", "SetForcedDailyRecipe"), nil, recipe)
+	end
+end
+
+function DailyRecipe:GetForcedDailyRecipe()
+	return self.forced_recipe
+end
+
+function DailyRecipe:ClearForcedDailyRecipe()
+	self:SetForcedDailyRecipe(nil)
+end
+
 function DailyRecipe:GetDailyRecipe()
+	if self.forced_recipe ~= nil then
+		return self.forced_recipe
+	end
+
 	return DAILY_RECIPES.GetDailyRecipe(self.custom_seed, self.excluded)
 end
 
@@ -78,6 +108,7 @@ function DailyRecipe:GetDailyRecipeName()
 
 	if recipe == nil then
 		return "None"
+
 	end
 
 	local key = string.upper(recipe)
@@ -90,7 +121,7 @@ function DailyRecipe:GetDailyRecipePrefab()
 
 	if recipe == nil then
 		return "None"
-	end
+end
 
 	local key = string.upper(recipe)
 	local name = STRINGS.NAMES[key] or recipe
@@ -102,8 +133,7 @@ function DailyRecipe:GetDailyRecipeData(prefab)
 	local data = GetDailyRecipeDef(prefab)
 	local carddata = GetDailyRecipeCard(prefab)
 
-	return
-	{
+	return {
 		prefab     = prefab,
 		name       = STRINGS.NAMES[string.upper(prefab)] or prefab,
 
@@ -111,32 +141,49 @@ function DailyRecipe:GetDailyRecipeData(prefab)
 		system     = data and data.system or nil,
 		category   = data and data.category or nil,
 
+
 		cooker     = carddata and carddata.cooker or nil,
 		recipes    = nil,
 	}
 end
 
 function DailyRecipe:CheckForUpdate()
-	local new_seed = math.floor(os.time() / (24 * 60 * 60))
+	if self.forced_recipe ~= nil then
+		if self.inst._dailyrecipe ~= nil then
+			self.inst._dailyrecipe:set(self.forced_recipe)
+		end
+
+		return
+	end
+
+	local new_seed = math.floor(os.time() / ROTATION_SECONDS)
 
 	if new_seed ~= self.current_seed then
 		self.current_seed = new_seed
 
-		local old_recipe = self.current_recipe
 		local new_recipe = self:GetDailyRecipe()
 
-		self.current_recipe = new_recipe
-
-		if old_recipe ~= nil and old_recipe ~= new_recipe then
-			self.inst:PushEvent("dailyrecipechanged", { old = old_recipe, new = new_recipe })
+		if self.inst._dailyrecipe ~= nil then
+			self.inst._dailyrecipe:set(new_recipe or "")
 		end
+
+		self.inst:PushEvent("dailyrecipechanged", { old = self.current_recipe, new = new_recipe })
+		self.current_recipe = new_recipe
 	end
 end
 
 function DailyRecipe:OnPostInit()
-	self.current_seed = math.floor(os.time() / (24 * 60 * 60))
-	self.current_recipe = self:GetDailyRecipe()
-	self:CheckForUpdate()
+	self.current_seed = math.floor(os.time() / ROTATION_SECONDS)
+
+	local recipe = self:GetDailyRecipe()
+
+	self.inst:DoTaskInTime(0, function()
+		if self.inst._dailyrecipe ~= nil then
+			self.inst._dailyrecipe:set(recipe or "")
+		end
+
+		self:CheckForUpdate()
+	end)
 end
 
 return DailyRecipe

@@ -20,7 +20,7 @@ local function OnHammered(inst, worker)
 	end
 
 	if inst.components.pickable ~= nil and inst.components.pickable:CanBePicked() then
-		local dailyrecipe = TheWorld.components.dailyrecipe
+		local dailyrecipe = TheWorld.net.components.dailyrecipe
 
 		if dailyrecipe ~= nil then
 			local recipe = dailyrecipe:GetDailyRecipe()
@@ -50,7 +50,7 @@ local function OnPicked(inst, picker)
 		inst.components.activatable.inactive = true
 	end
 
-	local dailyrecipe = TheWorld.components.dailyrecipe
+	local dailyrecipe = TheWorld.net.components.dailyrecipe
 
 	if dailyrecipe ~= nil then
 		local recipe = dailyrecipe:GetDailyRecipe()
@@ -99,10 +99,10 @@ local function OnActivate(inst, doer)
 end
 
 local function UpdateRecipeSymbol(inst, data)
-	local dailyrecipe = TheWorld.components.dailyrecipe
+	local dailyrecipe = TheWorld.net.components.dailyrecipe
 	local product = dailyrecipe ~= nil and dailyrecipe:GetDailyRecipe()
 
-	if product ~= nil then
+	if product then
 		local build = resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")
 		local symbol = product..".tex"
 
@@ -128,7 +128,7 @@ local function GetVerb()
 end
 
 local function GetDescription(inst, viewer)
-	local dailyrecipe = TheWorld.components.dailyrecipe
+	local dailyrecipe = TheWorld.net.components.dailyrecipe
 	local CHARACTER = STRINGS.CHARACTERS[string.upper(viewer.prefab)] or STRINGS.CHARACTERS.GENERIC
 	local DESCRIBE = CHARACTER.DESCRIBE.KYNO_DAILYRECIPE_SIGN
 
@@ -141,6 +141,10 @@ local function GetDescription(inst, viewer)
 	end
 
 	return DESCRIBE.NONE
+end
+
+local function OnEntityWake(inst)
+	UpdateRecipeSymbol(inst)
 end
 
 local function OnLoad(inst, data)
@@ -211,11 +215,12 @@ local function fn()
 		end
 
 		UpdateRecipeSymbol(inst, data) -- data comes from TheWorld.
-	end, TheWorld)
+	end, TheWorld.net)
 
 	MakeSnowCovered(inst)
 	SetLunarHailBuildupAmountSmall(inst)
 
+	inst.OnEntityWake = OnEntityWake
 	inst.OnLoad = OnLoad
 
 	return inst

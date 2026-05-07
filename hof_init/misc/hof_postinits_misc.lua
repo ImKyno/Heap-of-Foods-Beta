@@ -1517,8 +1517,8 @@ AddPlayerPostInit(function(inst)
 			local bonus = TUNING.KYNO_DAILYRECIPE_BONUS
 			local base_recipe = GetBaseFoodPrefab(food.prefab)
 
-			if _G.TheWorld.components.dailyrecipe ~= nil then
-				local recipe = _G.TheWorld.components.dailyrecipe:GetDailyRecipe()
+			if _G.TheWorld ~= nil and _G.TheWorld.net ~= nil and _G.TheWorld.net.components.dailyrecipe ~= nil then
+				local recipe = _G.TheWorld.net.components.dailyrecipe:GetDailyRecipe()
 
 				if base_recipe == recipe then
 					if inst.components.health ~= nil then

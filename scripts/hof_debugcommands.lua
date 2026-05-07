@@ -963,6 +963,6 @@ function c_hofdailyrecipe()
 	local player = ConsoleCommandPlayer()
 
 	if player ~= nil then
-		TheNet:Announce("Recipe of the Day: "..TheWorld.components.dailyrecipe:GetDailyRecipeName()) 
+		TheNet:Announce("Recipe of the Day: "..TheWorld.net.components.dailyrecipe:GetDailyRecipeName()) 
 	end
 end

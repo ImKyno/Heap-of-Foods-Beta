@@ -6,16 +6,27 @@ local ACTIONS         = _G.ACTIONS
 local STRINGS         = _G.STRINGS
 local SpawnPrefab     = _G.SpawnPrefab
 local UpvalueHacker   = require("hof_upvaluehacker")
+local DAILY_RECIPES   = require("hof_dailyrecipes")
 
 require("hof_util")
 
-AddPrefabPostInit("world", function(inst)
-	if not _G.TheWorld.ismastersim then
-		return inst
-	end
+local world_networks =
+{
+	"forest",
+	"cave",
+}
 
-	inst:AddComponent("dailyrecipe")
-end)
+for k, v in pairs(world_networks) do
+	AddPrefabPostInit(v.."_network", function(inst)
+		inst._dailyrecipe = net_string(inst.GUID, "dailyrecipe._dailyrecipe", "dailyrecipe_dirty")
+
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+
+		inst:AddComponent("dailyrecipe")
+	end)
+end
 
 AddPrefabPostInit("forest", function(inst)
 	if not _G.TheWorld.ismastersim then

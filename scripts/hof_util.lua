@@ -406,7 +406,7 @@ function SpawnDailyRecipeCard(recipe, giver, pos, inst)
 		return nil
 	end
 
-	local data = TheWorld.components.dailyrecipe ~= nil and TheWorld.components.dailyrecipe:GetDailyRecipeData(recipe)
+	local data = TheWorld.net.components.dailyrecipe ~= nil and TheWorld.net.components.dailyrecipe:GetDailyRecipeData(recipe)
 
 	if data == nil then
 		return nil

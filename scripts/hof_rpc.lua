@@ -13,3 +13,11 @@ AddClientModRPCHandler("FishRegistry", "LearnRoe", function(roe)
 		updater:LearnRoe(roe)
 	end
 end)
+
+AddShardModRPCHandler("DailyRecipe", "SetForcedDailyRecipe", function(shardid, recipe)
+	local shard = TheWorld.net
+
+	if shard ~= nil and shard.components.dailyrecipe ~= nil then
+		shard.components.dailyrecipe:SetForcedDailyRecipe(recipe, false)
+	end
+end)

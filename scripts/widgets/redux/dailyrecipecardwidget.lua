@@ -36,8 +36,16 @@ local DailyRecipeCardWidget = Class(Widget, function(self, owner, data)
 	self.details_root.panel_width = 350
 	self.details_root.panel_height = 500
 
+	self._onrecipechanged = function()
+		self:RefreshDailyRecipe()
+	end
+
+	self.inst:ListenForEvent("dailyrecipe_dirty", self._onrecipechanged, TheWorld.net)
+
 	if data ~= nil then
 		self:BuildDailyRecipeCard(data)
+	else
+		self:RefreshDailyRecipe()
 	end
 end)
 
@@ -389,6 +397,17 @@ function DailyRecipeCardWidget:BuildDailyRecipeCard(data)
 		desc:SetRegionSize(320, 200)
 		desc:SetHAlign(ANCHOR_MIDDLE)
 	end
+end
+
+function DailyRecipeCardWidget:RefreshDailyRecipe()
+	local recipe = DAILY_RECIPES.GetDailyRecipe()
+	
+	if recipe == nil then
+		return
+	end
+
+	local data = DAILY_RECIPES.GetDailyRecipeData(recipe)
+	self:BuildDailyRecipeCard(data)
 end
 
 return DailyRecipeCardWidget
