@@ -50,7 +50,7 @@ local function ApplyIslandColourCube(self, island)
 		_G.TheWorld:PushEvent("overridecolourcube", cc)
 	else
 		if TUNING.HOF_DEBUG_MODE then
-			print("Heap of Foods Mod - Warning! ColourCube is nil for Island:", island.name, "World Phase:", phase)
+			print("Heap of Foods Mod - WARNING! ColourCube is nil for Island:", island.name, "World Phase:", phase)
 		end
 	end
 end

@@ -1223,3 +1223,12 @@ WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Uma guerreira prefere hidromel, m
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Doce como o canto de uma donzela!"
 
 WATHGRITHR.DESCRIBE.SOULJUICE = "Uma bebida de guerreiro tocada por almas errantes!"
+
+WATHGRITHR.DESCRIBE.KYNO_DAILYRECIPE = "Nenhum banquete digno de canção hoje."
+WATHGRITHR.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Eis! O banquete do dia é %s!",
+	NONE = "Nenhum banquete digno de canção hoje.",
+	BURNING = "As chamas consomem o banquete!",
+	BURNT = "Restam apenas cinzas da refeição.",
+}

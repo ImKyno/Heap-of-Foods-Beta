@@ -1223,3 +1223,12 @@ WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Całkiem uspokajające, co?"
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Pachnie wiosną, co?"
 
 WOODIE.DESCRIBE.SOULJUICE = "To dość dziwny sok, co?"
+
+WOODIE.DESCRIBE.KYNO_DAILYRECIPE = "Chyba dziś nie ma specjalnego."
+WOODIE.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Wygląda na to, że dzisiejsze specjalne to %s, co?",
+	NONE = "Chyba dziś nie ma specjalnego.",
+	BURNING = "Trochę gorąco tam, co?",
+	BURNT = "No i po wszystkim.",
+}

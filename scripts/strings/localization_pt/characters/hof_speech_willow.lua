@@ -1223,3 +1223,12 @@ WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Hm. Eu prefiro fervendo."
 WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Doce demais. Precisa de fumaça."
 
 WILLOW.DESCRIBE.SOULJUICE = "Parece assustador. Eu gostei."
+
+WILLOW.DESCRIBE.KYNO_DAILYRECIPE = "Sem pratos especiais hoje? Chato."
+WILLOW.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "O prato especial de hoje deveria ser inflamável.",
+	NONE = "Sem pratos especiais hoje? Chato.",
+	BURNING = "Agora SIM é especial!",
+	BURNT = "Heh. Torrado.",
+}

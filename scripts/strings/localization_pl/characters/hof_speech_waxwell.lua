@@ -1223,3 +1223,12 @@ WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Przynajmniej jest wyrafinowane."
 WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Zaskakująco gustowne."
 
 WAXWELL.DESCRIBE.SOULJUICE = "Wyrafinowany napój... z nieco złowieszczym akcentem."
+
+WAXWELL.DESCRIBE.KYNO_DAILYRECIPE = "Brak dań specjalnych. Żenujące."
+WAXWELL.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Najwyraźniej dzisiejsze danie specjalne to %s.",
+	NONE = "Brak dań specjalnych. Żenujące.",
+	BURNING = "Cóż za niedbalstwo.",
+	BURNT = "Zamienione w popiół. Typowe.",
+}

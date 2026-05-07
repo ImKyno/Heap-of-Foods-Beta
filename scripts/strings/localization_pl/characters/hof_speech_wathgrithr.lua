@@ -1223,3 +1223,12 @@ WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Wojowniczka woli miód pitny, lec
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodkie jak pieśń dziewicy!"
 
 WATHGRITHR.DESCRIBE.SOULJUICE = "Napój wojownika dotknięty przez błądzące dusze!"
+
+WATHGRITHR.DESCRIBE.KYNO_DAILYRECIPE = "Brak uczty godnej pieśni."
+WATHGRITHR.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Oto! Dzisiejsza uczta to %s!",
+	NONE = "Brak uczty godnej pieśni.",
+	BURNING = "Ogień pochłania ucztę!",
+	BURNT = "Pozostał jedynie popiół.",
+}

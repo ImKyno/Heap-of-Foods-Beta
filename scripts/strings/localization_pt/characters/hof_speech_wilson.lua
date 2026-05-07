@@ -1223,3 +1223,12 @@ WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Uma reconfortante xícara de chá de 
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Um chá floral deliciosamente doce."
 
 WILSON.DESCRIBE.SOULJUICE = "Uma curiosa mistura de energia de alma e romã."
+
+WILSON.DESCRIBE.KYNO_DAILYRECIPE = "Sem pratos especiais por hoje."
+WILSON.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "O prato especial do dia é %s.",
+	NONE = "Sem pratos especiais por hoje.",
+	BURNING = "Está pegando fogo!",
+	BURNT = "Acho que o prato especial de hoje são cinzas.",
+}

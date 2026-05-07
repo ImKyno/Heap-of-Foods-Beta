@@ -1223,3 +1223,12 @@ WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Listna psota w filiżance!"
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodkie łyczki i figlarne podskoki!"
 
 WORTOX.DESCRIBE.SOULJUICE = "Dusze i owoce! Co za uczta!"
+
+WORTOX.DESCRIBE.KYNO_DAILYRECIPE = "Dziś brak smacznych niespodzianek?"
+WORTOX.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Dzisiejszy śmiertelny przysmak to %s! Hyuyu!",
+	NONE = "Dziś brak smacznych niespodzianek?",
+	BURNING = "Ognista zabawa! Hyuyu!",
+	BURNT = "Zamienione w popiół i sadzę!",
+}

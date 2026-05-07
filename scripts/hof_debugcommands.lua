@@ -966,3 +966,19 @@ function c_hofdailyrecipe()
 		TheNet:Announce("Recipe of the Day: "..TheWorld.net.components.dailyrecipe:GetDailyRecipeName()) 
 	end
 end
+
+function c_hofforcedailyrecipe(recipe)
+	local player = ConsoleCommandPlayer()
+
+	if player ~= nil then
+		if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
+			local dailyrecipe = TheWorld.net.components.dailyrecipe
+			dailyrecipe:SetForcedDailyRecipe(recipe)
+
+			local forced_recipe_name = dailyrecipe:GetDailyRecipePrefab() or "None"
+			TheNet:Announce(string.format("WARNING! Changed Daily Recipe to: %s (Forced).", forced_recipe_name))
+		else
+			TheNet:Announce("The Server doesn't have permission to change the Daily Recipe!")
+		end
+	end
+end

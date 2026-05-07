@@ -1223,3 +1223,12 @@ WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Ciepły napój czyni Wolfganga siln
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodki napój dla potężnego Wolfganga!"
 
 WOLFGANG.DESCRIBE.SOULJUICE = "Mały napój, ale silny jak Wolfgang!"
+
+WOLFGANG.DESCRIBE.KYNO_DAILYRECIPE = "Dziś nie ma specjalnego jedzenia?"
+WOLFGANG.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Wolfgang chce zjeść %s!",
+	NONE = "Dziś nie ma specjalnego jedzenia?",
+	BURNING = "Ogień gotuje szybciej!",
+	BURNT = "Teraz jedzenie jest za bardzo ugotowane.",
+}

@@ -111,15 +111,11 @@ local function UpdateRecipeSymbol(inst, data)
 		inst.AnimState:OverrideSymbol("recipe", "kyno_dailyrecipe_sign", "recipe")
 	end
 
-	inst.AnimState:PlayAnimation("hit")
-	inst.AnimState:PushAnimation("idle", true)
-
 	inst.SoundEmitter:PlaySound("dontstarve/common/together/draw")
 end
 
 local function OnBuilt(inst, data)
 	inst.AnimState:PlayAnimation("place")
-	inst.AnimState:PushAnimation("idle", true)
 	inst.SoundEmitter:PlaySound("dontstarve/common/sign_craft")
 end
 
@@ -144,6 +140,7 @@ local function GetDescription(inst, viewer)
 end
 
 local function OnEntityWake(inst)
+	UpdateState(inst)
 	UpdateRecipeSymbol(inst)
 end
 
@@ -214,6 +211,7 @@ local function fn()
 			inst.components.pickable:Regen()
 		end
 
+		UpdateState(inst)
 		UpdateRecipeSymbol(inst, data) -- data comes from TheWorld.
 	end, TheWorld.net)
 
@@ -226,5 +224,9 @@ local function fn()
 	return inst
 end
 
+local function PlacerFn(inst)
+	inst.AnimState:Hide("card")
+end
+
 return Prefab("kyno_dailyrecipe_sign", fn, assets, prefabs),
-MakePlacer("kyno_dailyrecipe_sign_placer", "kyno_dailyrecipe_sign", "kyno_dailyrecipe_sign", "idle")
+MakePlacer("kyno_dailyrecipe_sign_placer", "kyno_dailyrecipe_sign", "kyno_dailyrecipe_sign", "idle", false, nil, nil, nil, nil, nil, PlacerFn)

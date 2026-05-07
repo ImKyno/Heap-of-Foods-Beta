@@ -1223,3 +1223,12 @@ WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Cheira até que bem!"
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Tem gosto de flores!"
 
 WEBBER.DESCRIBE.SOULJUICE = "Uau! Cheira meio assustador!"
+
+WEBBER.DESCRIBE.KYNO_DAILYRECIPE = "Não tem comida especial hoje?"
+WEBBER.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Ooo! O especial de hoje é %s!",
+	NONE = "Não tem comida especial hoje?",
+	BURNING = "Tá pegando fogo!",
+	BURNT = "Ah... estragou.",
+}

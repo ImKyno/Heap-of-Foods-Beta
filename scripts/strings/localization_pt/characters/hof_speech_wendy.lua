@@ -1223,3 +1223,12 @@ WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Um calor amargo para um mundo amargo."
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A doçura desaparece, como tudo."
 
 WENDY.DESCRIBE.SOULJUICE = "Um gosto agridoce de vida e morte."
+
+WENDY.DESCRIBE.KYNO_DAILYRECIPE = "Nada especial hoje. Apropriado."
+WENDY.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "O prato especial de hoje é %s.",
+	NONE = "Nada especial hoje. Apropriado.",
+	BURNING = "Como tudo, isso vira cinzas.",
+	BURNT = "Uma memória arruinada de uma refeição.",
+}

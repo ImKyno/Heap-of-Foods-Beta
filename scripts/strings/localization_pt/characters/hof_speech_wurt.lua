@@ -1225,3 +1225,12 @@ WURT.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Bebida quente de planta, flort."
 WURT.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Bebida doce de flor, florp!"
 
 WURT.DESCRIBE.SOULJUICE = "Bebida vermelha estranha! florp."
+
+WURT.DESCRIBE.KYNO_DAILYRECIPE = "Sem comida especial hoje, florp."
+WURT.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Comida especial é %s, florp!",
+	NONE = "Sem comida especial hoje, florp.",
+	BURNING = "Muito fogo, florp!",
+	BURNT = "Só cinzas agora, florp.",
+}

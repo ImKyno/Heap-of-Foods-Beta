@@ -1223,3 +1223,12 @@ WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Właściwie zaparzony napar zio
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Przyjemnie aromatyczny napar."
 
 WICKERBOTTOM.DESCRIBE.SOULJUICE = "Intrygujący napar z esencji duszy i owocu."
+
+WICKERBOTTOM.DESCRIBE.KYNO_DAILYRECIPE = "Dziś brak polecanych dań."
+WICKERBOTTOM.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Ach, dzisiejsze danie specjalne to %s.",
+	NONE = "Dziś brak polecanych dań.",
+	BURNING = "To wygląda niebezpiecznie.",
+	BURNT = "Niestety utracono informacje.",
+}

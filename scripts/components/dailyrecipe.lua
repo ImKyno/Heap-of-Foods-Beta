@@ -4,6 +4,10 @@ local DAILY_RECIPES = require("hof_dailyrecipes")
 
 local ROTATION_SECONDS = 24 * 60 * 60
 
+-- c_announce(TheWorld.net.components.dailyrecipe:GetDailyRecipe())
+-- print(require("hof_dailyrecipes").GetDailyRecipe())
+-- print(TheWorld.net._dailyrecipe:value())
+
 local function GetDailyRecipeDef(prefab)
 	if cooking ~= nil and cooking.cookbook_recipes ~= nil then
 		for category, list in pairs(cooking.cookbook_recipes) do
@@ -69,20 +73,26 @@ local DailyRecipe = Class(function(self, inst)
 	end)
 end)
 
+-- Please only force recipes when testing something.
+-- It is highly unrecommended for actual gameplay, since it changes the Seed and messes with clients.
+-- Forced Daily Recipes WILL NOT be saved during onload to preserve data!
+-- Do not call this directly! Use the command instead: c_hofforcedailyrecipe(recipe)
 function DailyRecipe:SetForcedDailyRecipe(recipe, sync)
-	sync = sync ~= false
+	if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
+		sync = sync ~= false
 
-	self.forced_recipe = recipe
-	self.current_recipe = recipe
+		self.forced_recipe = recipe
+		self.current_recipe = recipe
 
-	if self.inst._dailyrecipe ~= nil then
-		self.inst._dailyrecipe:set(recipe or "")
-	end
+		if self.inst._dailyrecipe ~= nil then
+			self.inst._dailyrecipe:set(recipe or "")
+		end
 
-	self.inst:PushEvent("dailyrecipechanged", { old = self.current_recipe, new = recipe })
+		self.inst:PushEvent("dailyrecipechanged", { old = self.current_recipe, new = recipe })
 
-	if sync then
-		SendModRPCToShard(GetShardModRPC("DailyRecipe", "SetForcedDailyRecipe"), nil, recipe)
+		if sync then
+			SendModRPCToShard(GetShardModRPC("DailyRecipe", "SetForcedDailyRecipe"), nil, recipe)
+		end
 	end
 end
 

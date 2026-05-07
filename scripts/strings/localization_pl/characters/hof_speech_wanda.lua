@@ -1223,3 +1223,12 @@ WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Krótka chwila komfortu."
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodkie, ale ulotne."
 
 WANDA.DESCRIBE.SOULJUICE = "Czas i dusze w płynnej formie."
+
+WANDA.DESCRIBE.KYNO_DAILYRECIPE = "Dziś nic wartego uwagi."
+WANDA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Dzisiejsze danie specjalne to %s.",
+	NONE = "Dziś nic wartego uwagi.",
+	BURNING = "Cóż... kiepskie wyczucie czasu.",
+	BURNT = "Za późno, żeby to uratować.",
+}

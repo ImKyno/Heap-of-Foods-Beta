@@ -1223,3 +1223,12 @@ WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Kojąca filiżanka herbaty z aloesu."
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Zachwycająco słodka herbata kwiatowa."
 
 WILSON.DESCRIBE.SOULJUICE = "Ciekawa mieszanka energii duszy i granatu."
+
+WILSON.DESCRIBE.KYNO_DAILYRECIPE = "Brak dań specjalnych na dziś."
+WILSON.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Dzisiejsze danie specjalne to %s.",
+	NONE = "Brak dań specjalnych na dziś.",
+	BURNING = "Płonie!",
+	BURNT = "Myślę, że dzisiejsze danie specjalne to popioły.",
+}

@@ -1223,3 +1223,12 @@ WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Idealne na spokojny wieczór przy ogn
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Smakuje jak przygoda na łące."
 
 WALTER.DESCRIBE.SOULJUICE = "Nie jestem pewien, czy to można nazwać sokiem..."
+
+WALTER.DESCRIBE.KYNO_DAILYRECIPE = "Chyba dziś nie ma specjalnego posiłku."
+WALTER.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Hej! Dzisiejsze specjalne to %s!",
+	NONE = "Chyba dziś nie ma specjalnego posiłku.",
+	BURNING = "O nie! To niedobrze!",
+	BURNT = "Chyba przegapiliśmy obiad.",
+}

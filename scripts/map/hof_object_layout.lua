@@ -481,7 +481,7 @@ local function ReserveAndPlaceLayout(node_id, layout, prefabs, add_entity, posit
 			add_entity.fn(prefabs[idx].prefab, {points_x}, {points_y}, 1, add_entity.args.entitiesOut, add_entity.args.width, add_entity.args.height, add_entity.args.debug_prefab_list, prefabs[idx].properties, false)
 		end
 	else
-		print("Warning! Could not find a spot for "..layout.name.." in node "..node_id)
+		print("WARNING! Could not find a spot for "..layout.name.." in node "..node_id)
 	end
 
 end

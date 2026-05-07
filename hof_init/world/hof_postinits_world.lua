@@ -10,23 +10,21 @@ local DAILY_RECIPES   = require("hof_dailyrecipes")
 
 require("hof_util")
 
-local world_networks =
-{
-	"forest",
-	"cave",
-}
-
-for k, v in pairs(world_networks) do
-	AddPrefabPostInit(v.."_network", function(inst)
+AddPrefabPostInitAny(function(inst)
+	if _G.TheWorld.net == inst then
 		inst._dailyrecipe = net_string(inst.GUID, "dailyrecipe._dailyrecipe", "dailyrecipe_dirty")
 
 		if not _G.TheWorld.ismastersim then
 			return inst
 		end
-
+    
 		inst:AddComponent("dailyrecipe")
-	end)
-end
+
+		if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
+			print("Heap of Foods Mod - DailyRecipe component added to:", inst)
+		end
+	end
+end)
 
 AddPrefabPostInit("forest", function(inst)
 	if not _G.TheWorld.ismastersim then

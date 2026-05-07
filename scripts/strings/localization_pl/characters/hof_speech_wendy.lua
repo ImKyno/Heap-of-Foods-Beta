@@ -1223,3 +1223,12 @@ WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Gorzka ciepłota dla gorzkiego świata
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodycz przemija, jak wszystko."
 
 WENDY.DESCRIBE.SOULJUICE = "Gorzko-słodki smak życia i śmierci."
+
+WENDY.DESCRIBE.KYNO_DAILYRECIPE = "Dziś nic specjalnego. Jak zwykle."
+WENDY.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Dzisiejsze danie specjalne to %s.",
+	NONE = "Dziś nic specjalnego. Jak zwykle.",
+	BURNING = "Jak wszystko, zamienia się w popiół.",
+	BURNT = "Zniszczone wspomnienie posiłku.",
+}

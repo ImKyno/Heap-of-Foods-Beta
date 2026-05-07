@@ -1223,3 +1223,12 @@ WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Um breve momento de conforto."
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Doce, mas passageiro."
 
 WANDA.DESCRIBE.SOULJUICE = "Tempo e almas em forma líquida."
+
+WANDA.DESCRIBE.KYNO_DAILYRECIPE = "Nada digno de nota hoje."
+WANDA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "O especial de hoje é %s.",
+	NONE = "Nada digno de nota hoje.",
+	BURNING = "Bem... péssimo timing.",
+	BURNT = "Tarde demais pra salvar isso.",
+}

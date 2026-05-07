@@ -54,7 +54,9 @@ local function CollectRecipes()
 	for _, modname in ipairs(WEB_RECIPES_LIST) do
 		local ok, recipes = pcall(require, "website/" .. modname)
 
-		-- print("Heap of Foods Mod - DailyRecipe: LOADING", modname, ok, recipes and "OK" or "NIL")
+		if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
+			print("Heap of Foods Mod - DailyRecipe: LOADING", modname, ok, recipes and "OK" or "NIL")
+		end
 
 		if ok and type(recipes) == "table" then
 			for _, recipe in ipairs(recipes) do
@@ -72,7 +74,9 @@ local function CollectIngredients()
 	for _, modname in ipairs(MOD_RECIPES_LIST) do
 		local ok, recipes = pcall(require, modname)
 
-		-- print("Heap of Foods Mod - DailyRecipe: LOADING", modname, ok, type(recipes))
+		if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
+			print("Heap of Foods Mod - DailyRecipe: LOADING", modname, ok, type(recipes))
+		end
 
 		if ok and type(recipes) == "table" then
 			for k, v in pairs(recipes) do
@@ -80,7 +84,9 @@ local function CollectIngredients()
 					CARD_DEFS[k] = v
 
 					if v.card_def then
-						-- print("Heap of Foods Mod - DailyRecipe: CARD_DEF", k)
+						if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
+							print("Heap of Foods Mod - DailyRecipe: CARD_DEF", k)
+						end
 					end
 				end
 			end
@@ -122,18 +128,6 @@ local function GetDailyRecipeSeed(custom_seed, excluded)
 	local seed = GetDailySeed(custom_seed)
 	local hash = JSHash(seed)
 	local index = (hash % #valid) + 1
-
-	--[[
-	print("Heap of Foods Mod - DailyRecipe: Seed", seed)
-	print("Heap of Foods Mod - DailyRecipe: Index", index)
-	print("Heap of Foods Mod - DailyRecipe: Recipe", recipe)
-	print("Heap of Foods Mod - DailyRecipe: List Size", #list)
-	print("Heap of Foods Mod - DailyRecipe: First 20 Recipes")
-
-	for i = 1, 20 do
-		print(i, list[i])
-	end
-	]]--
 
 	return valid[index]
 end
