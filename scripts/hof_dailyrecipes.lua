@@ -25,6 +25,14 @@ local MOD_RECIPES_LIST =
 
 local CARD_DEFS = {}
 
+local RECIPES_BLACKLIST =
+{
+	["gorge_bread"]   = true,
+	["kyno_syrup"]    = true,
+	["littlebread"]   = true,
+	["watercup"]      = true,
+}
+
 -- Hash convertion for Lua <> JavaScript so we can use the same Seed.
 local function JSHash(seed)
 	local v = (seed * 1103515245 + 12345)
@@ -84,13 +92,25 @@ end
 
 CollectIngredients()
 
+local function GetBlacklistRecipes(recipe, excluded)
+	if RECIPES_BLACKLIST[recipe] then
+		return true
+	end
+
+	if excluded and excluded[recipe] then
+		return true
+	end
+
+	return false
+end
+
 local function GetDailyRecipeSeed(custom_seed, excluded)
 	local recipes = CollectRecipes()
 
 	local valid = {}
 
 	for _, r in ipairs(recipes) do
-		if not excluded or not excluded[r] then
+		if not GetBlacklistRecipes(r, excluded) then
 			table.insert(valid, r)
 		end
 	end
