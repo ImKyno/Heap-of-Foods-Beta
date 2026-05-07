@@ -1223,3 +1223,12 @@ WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "At least it's refined."
 WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Surprisingly tasteful."
 
 WAXWELL.DESCRIBE.SOULJUICE = "A refined beverage... with a sinister touch."
+
+WAXWELL.DESCRIBE.KYNO_DAILYRECIPE = "No special dishes. How uninspired."
+WAXWELL.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Apparently, today's special is %s.",
+	NONE = "No special dishes. How uninspired.",
+	BURNING = "How utterly careless.",
+	BURNT = "Reduced to cinders. Typical.",
+}

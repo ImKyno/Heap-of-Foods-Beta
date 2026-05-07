@@ -1,19 +1,19 @@
 local brewing = require("hof_brewing")
 
 local assets =
-{	
-    Asset("ANIM", "anim/kyno_brewingrecipecard.zip"),
-	
+{
+	Asset("ANIM", "anim/kyno_brewingrecipecard.zip"),
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
 local function SetRecipe(inst, recipe_name, brewer_name)
-    inst.recipe_name = recipe_name
-    inst.brewer_name = brewer_name
+	inst.recipe_name = recipe_name
+	inst.brewer_name = brewer_name
 
-    inst.components.named:SetName(subfmt(STRINGS.NAMES.KYNO_BREWINGRECIPECARD, { item = STRINGS.NAMES[string.upper(recipe_name)] or recipe_name }))
+	inst.components.named:SetName(subfmt(STRINGS.NAMES.KYNO_BREWINGRECIPECARD, { item = STRINGS.NAMES[string.upper(recipe_name)] or recipe_name }))
 end
 
 local function PickRandomRecipe(inst)
@@ -39,8 +39,8 @@ local function GetDesc(inst, viewer)
 end
 
 local function OnSave(inst, data)
-    data.r = inst.recipe_name
-    data.b = inst.brewer_name
+	data.r = inst.recipe_name
+	data.b = inst.brewer_name
 end
 
 local function OnLoad(inst, data)
@@ -50,54 +50,56 @@ local function OnLoad(inst, data)
 end
 
 local function fn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddSoundEmitter()
-    inst.entity:AddNetwork()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "med", nil, 0.75)
 
-    inst.AnimState:SetBank("kyno_brewingrecipecard")
-    inst.AnimState:SetBuild("kyno_brewingrecipecard")
-    inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:SetBank("kyno_brewingrecipecard")
+	inst.AnimState:SetBuild("kyno_brewingrecipecard")
+	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("brewingrecipecard")
 	inst:AddTag("learnablerecipecard")
 
-    inst.entity:SetPristine()
+	inst.pickupsound = "paper"
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
 	inst:AddComponent("named")
 	inst:AddComponent("erasablepaper")
 	inst:AddComponent("tradable")
 	inst:AddComponent("learnablerecipecard")
 
-    inst:AddComponent("inspectable")
+	inst:AddComponent("inspectable")
 	inst.components.inspectable.getspecialdescription = GetDesc
 
-    inst:AddComponent("inventoryitem")
+	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_brewingrecipecard"
 
-    inst:AddComponent("fuel")
-    inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL
 
-    MakeSmallBurnable(inst, TUNING.SMALL_BURNTIME)
-    MakeSmallPropagator(inst)
-    MakeHauntableLaunch(inst)
-	
+	MakeSmallBurnable(inst, TUNING.SMALL_BURNTIME)
+	MakeSmallPropagator(inst)
+	MakeHauntableLaunch(inst)
+
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 
 	PickRandomRecipe(inst)
 
-    return inst
+	return inst
 end
 
 return Prefab("kyno_brewingrecipecard", fn, assets)

@@ -1223,3 +1223,12 @@ WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Perfect for a quiet campfire evening.
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Tastes like a meadow adventure."
 
 WALTER.DESCRIBE.SOULJUICE = "I’m not sure if this counts as juice..."
+
+WALTER.DESCRIBE.KYNO_DAILYRECIPE = "Guess there's no special meal today."
+WALTER.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Hey! Today's special is %s!",
+	NONE = "Guess there's no special meal today.",
+	BURNING = "Uh-oh! That's not good!",
+	BURNT = "Looks like we missed dinner.",
+}

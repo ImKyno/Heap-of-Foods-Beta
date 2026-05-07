@@ -506,6 +506,16 @@ SortAfter("kyno_chickenhouse", "beebox", "GARDENING")
 
 AddDeconstructRecipe("kyno_chicken2", {}, { no_deconstruction = true })
 
+AddRecipe2("kyno_dailyrecipe_sign", {Ingredient("boards", 1), Ingredient("papyrus", 1), Ingredient("featherpencil", 1)}, TECH.SCIENCE_ONE,
+	{
+		placer              = "kyno_dailyrecipe_sign_placer",
+		min_spacing         = 2,
+		atlas               = ModAtlas,
+		image               = "kyno_dailyrecipe_sign.tex",
+	},
+	{"STRUCTURES", "COOKING"}
+)
+
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
 		builder_tag         = "strongman",

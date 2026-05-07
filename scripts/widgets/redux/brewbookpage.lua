@@ -19,9 +19,9 @@ local function MakeDetailsLine(details_root, x, y, scale, image_override)
 end
 
 local BrewbookPage = Class(Widget, function(self, parent_screen, category)
-    Widget._ctor(self, "BrewbookPage")
+	Widget._ctor(self, "BrewbookPage")
 
-    self.parent_screen = parent_screen
+	self.parent_screen = parent_screen
 	self.category = category or "cookbook"
 
 	self:CreateRecipeBook()
@@ -62,30 +62,30 @@ function BrewbookPage:CreateRecipeBook()
 	local panel_root = self
 
 	self.gridroot = panel_root:AddChild(Widget("grid_root"))
-    self.gridroot:SetPosition(-180, -35)
+	self.gridroot:SetPosition(-180, -35)
 
-    self.recipe_grid = self.gridroot:AddChild( self:BuildRecipeBook() )
-    self.recipe_grid:SetPosition(-15, 0)
+	self.recipe_grid = self.gridroot:AddChild( self:BuildRecipeBook() )
+	self.recipe_grid:SetPosition(-15, 0)
 	local grid_w, grid_h = self.recipe_grid:GetScrollRegionSize()
 
 	local boarder_scale = 0.75
 	local grid_boarder = self.gridroot:AddChild(Image("images/quagmire_recipebook.xml", "quagmire_recipe_line.tex"))
 	grid_boarder:SetScale(boarder_scale, boarder_scale)
-    grid_boarder:SetPosition(-3, grid_h/2 + 1)
+	grid_boarder:SetPosition(-3, grid_h/2 + 1)
 	grid_boarder = self.gridroot:AddChild(Image("images/quagmire_recipebook.xml", "quagmire_recipe_line.tex"))
 	grid_boarder:SetScale(boarder_scale, -boarder_scale)
-    grid_boarder:SetPosition(-3, -grid_h/2)
+	grid_boarder:SetPosition(-3, -grid_h/2)
 
 	local details_decor_root = panel_root:AddChild(Widget("details_root"))
 	details_decor_root:SetPosition(grid_w/2 + 30, 0)
 
 	local details_decor = details_decor_root:AddChild(Image("images/quagmire_recipebook.xml", "quagmire_recipe_menu_block.tex"))
-    details_decor:ScaleToSize(360, 500)
+	details_decor:ScaleToSize(360, 500)
 	details_decor = details_decor_root:AddChild(Image("images/quagmire_recipebook.xml", "quagmire_recipe_corner_decoration.tex"))
-    details_decor:ScaleToSize(100, 100)
+	details_decor:ScaleToSize(100, 100)
 	details_decor:SetPosition(-120, -190)
 	details_decor = details_decor_root:AddChild(Image("images/quagmire_recipebook.xml", "quagmire_recipe_corner_decoration.tex"))
-    details_decor:ScaleToSize(-100, 100)
+	details_decor:ScaleToSize(-100, 100)
 	details_decor:SetPosition(120, -190)
 
 	self.details_root = panel_root:AddChild(Widget("details_root"))
@@ -99,14 +99,14 @@ function BrewbookPage:CreateRecipeBook()
 	local dis_x = -310
 	local dis_y = 238
 	dis_y = dis_y - 18/2
-    local completed = panel_root:AddChild(Text(HEADERFONT, 18, STRINGS.UI.COOKBOOK.DISCOVERED_RECIPES, UICOLOURS.BROWN_DARK))
+	local completed = panel_root:AddChild(Text(HEADERFONT, 18, STRINGS.UI.COOKBOOK.DISCOVERED_RECIPES, UICOLOURS.BROWN_DARK))
 	completed:SetHAlign(ANCHOR_RIGHT)
 	completed:SetPosition(dis_x, dis_y)
 	dis_y = dis_y - 18/2
 	MakeDetailsLine(panel_root, dis_x, dis_y-4, .5, "quagmire_recipe_line_short.tex")
 	dis_y = dis_y - 10
 	dis_y = dis_y - 18/2
-    completed = panel_root:AddChild(Text(HEADERFONT, 18, subfmt(STRINGS.UI.XPUTILS.XPPROGRESS, {num=self.num_recipes_discovered, max=#self.all_recipes}), UICOLOURS.BROWN_DARK))
+	completed = panel_root:AddChild(Text(HEADERFONT, 18, subfmt(STRINGS.UI.XPUTILS.XPPROGRESS, {num=self.num_recipes_discovered, max=#self.all_recipes}), UICOLOURS.BROWN_DARK))
 	completed:SetHAlign(ANCHOR_RIGHT)
 	completed:SetPosition(dis_x, dis_y)
 	dis_y = dis_y - 18/2
@@ -214,8 +214,8 @@ function BrewbookPage:PopulateRecipeDetailPanel(data)
 	local image_size = 110
 
 	local name_font_size = 34
-	local title_font_size = 18 
-	local body_font_size = 16 
+	local title_font_size = 18
+	local body_font_size = 16
 	local value_title_font_size = 18
 	local value_body_font_size = 16
 
@@ -373,18 +373,18 @@ function BrewbookPage:PopulateRecipeDetailPanel(data)
 end
 
 function BrewbookPage:BuildRecipeBook()
-    local base_size = 128
-    local cell_size = 73
-    local row_w = cell_size
-    local row_h = cell_size;
-    local reward_width = 80
-    local row_spacing = 5
+	local base_size = 128
+	local cell_size = 73
+	local row_w = cell_size
+	local row_h = cell_size;
+	local reward_width = 80
+	local row_spacing = 5
 
 	local food_size = cell_size + 20
 	local icon_size = 20 / (cell_size/base_size)
 
-    local function ScrollWidgetsCtor(context, index)
-        local w = Widget("recipe-cell-".. index)
+	local function ScrollWidgetsCtor(context, index)
+		local w = Widget("recipe-cell-".. index)
 
 		w.cell_root = w:AddChild(ImageButton("images/quagmire_recipebook.xml", "cookbook_unknown.tex", "cookbook_unknown_selected.tex"))
 		w.cell_root:SetFocusScale(cell_size/base_size + .05, cell_size/base_size + .05)
@@ -392,21 +392,21 @@ function BrewbookPage:BuildRecipeBook()
 
 		w.focus_forward = w.cell_root
 
-        w.cell_root.ongainfocusfn = function() self.recipe_grid:OnWidgetFocus(w) end
+		w.cell_root.ongainfocusfn = function() self.recipe_grid:OnWidgetFocus(w) end
 
 		w.recipie_root = w.cell_root.image:AddChild(Widget("recipe_root"))
 
-        w.food_img = w.recipie_root:AddChild(Image("images/global.xml", "square.tex"))
+		w.food_img = w.recipie_root:AddChild(Image("images/global.xml", "square.tex"))
 
 		w.partiallyknown_icon = w.recipie_root:AddChild(Image("images/quagmire_recipebook.xml", "cookbook_unknown_icon.tex"))
 		w.partiallyknown_icon:ScaleToSize(icon_size, icon_size)
-        w.partiallyknown_icon:SetPosition(-base_size/2 + 22, base_size/2 - 25)
+		w.partiallyknown_icon:SetPosition(-base_size/2 + 22, base_size/2 - 25)
 
 		w.isnew_anim = w.recipie_root:AddChild(UIAnim())
-        w.isnew_anim:GetAnimState():SetBank("cookbook_newrecipe")
-        w.isnew_anim:GetAnimState():SetBuild("cookbook_newrecipe")
-        w.isnew_anim:GetAnimState():PlayAnimation("anim", true)
-        w.isnew_anim:GetAnimState():SetTime(math.random() * w.isnew_anim:GetAnimState():GetCurrentAnimationLength())
+		w.isnew_anim:GetAnimState():SetBank("cookbook_newrecipe")
+		w.isnew_anim:GetAnimState():SetBuild("cookbook_newrecipe")
+		w.isnew_anim:GetAnimState():PlayAnimation("anim", true)
+		w.isnew_anim:GetAnimState():SetTime(math.random() * w.isnew_anim:GetAnimState():GetCurrentAnimationLength())
 		w.isnew_anim:SetPosition(base_size/2 - 22, base_size/2 - 25)
 
 		w.cell_root:SetOnClick(function()
@@ -427,9 +427,9 @@ function BrewbookPage:BuildRecipeBook()
 
 		return w
 
-    end
+	end
 
-    local function ScrollWidgetSetData(context, widget, data, index)
+	local function ScrollWidgetSetData(context, widget, data, index)
 		widget.data = data
 		if data ~= nil then
 			widget.cell_root:Show()
@@ -461,9 +461,9 @@ function BrewbookPage:BuildRecipeBook()
 			widget:Disable()
 			widget.cell_root:Hide()
 		end
-    end
+	end
 
-    self.all_recipes = {}
+	self.all_recipes = {}
 	self.filtered_recipes = {}
 	self.num_recipes_discovered = 0
 	self.num_foods_eaten = 0
@@ -512,35 +512,35 @@ function BrewbookPage:BuildRecipeBook()
 		data.index = i
 	end
 
-    local grid = TEMPLATES.ScrollingGrid(
-        {},
-        {
-            context = {},
-            widget_width  = row_w+row_spacing,
-            widget_height = row_h+row_spacing,
+	local grid = TEMPLATES.ScrollingGrid(
+		{},
+		{
+			context = {},
+			widget_width  = row_w+row_spacing,
+			widget_height = row_h+row_spacing,
 			force_peek    = true,
-            num_visible_rows = 5,
-            num_columns      = 5,
-            item_ctor_fn = ScrollWidgetsCtor,
-            apply_fn     = ScrollWidgetSetData,
-            scrollbar_offset = 20,
-            scrollbar_height_offset = -60
-        })
+			num_visible_rows = 5,
+			num_columns      = 5,
+			item_ctor_fn = ScrollWidgetsCtor,
+			apply_fn     = ScrollWidgetSetData,
+			scrollbar_offset = 20,
+			scrollbar_height_offset = -60
+		})
 
 	grid.up_button:SetTextures("images/quagmire_recipebook.xml", "quagmire_recipe_scroll_arrow_hover.tex")
-    grid.up_button:SetScale(0.5)
+	grid.up_button:SetScale(0.5)
 
 	grid.down_button:SetTextures("images/quagmire_recipebook.xml", "quagmire_recipe_scroll_arrow_hover.tex")
-    grid.down_button:SetScale(-0.5)
+	grid.down_button:SetScale(-0.5)
 
 	grid.scroll_bar_line:SetTexture("images/quagmire_recipebook.xml", "quagmire_recipe_scroll_bar.tex")
 	grid.scroll_bar_line:SetScale(.8)
 
 	grid.position_marker:SetTextures("images/quagmire_recipebook.xml", "quagmire_recipe_scroll_handle.tex")
 	grid.position_marker.image:SetTexture("images/quagmire_recipebook.xml", "quagmire_recipe_scroll_handle.tex")
-    grid.position_marker:SetScale(.6)
+	grid.position_marker:SetScale(.6)
 
-    return grid
+	return grid
 end
 
 function BrewbookPage:_sortfn_default(a, b)
@@ -579,7 +579,7 @@ function BrewbookPage:ApplySort()
 		or									function(a, b) return self:_sortfn_default(a, b) end
 	)
 
-    self.recipe_grid:SetItemsData(self.filtered_recipes)
+	self.recipe_grid:SetItemsData(self.filtered_recipes)
 	self:_DoFocusHookups()
 end
 

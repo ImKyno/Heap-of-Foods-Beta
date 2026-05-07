@@ -16,6 +16,9 @@ Assets =
 {
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
+
+	Asset("IMAGE", "images/hof_dailyrecipecard.tex"),
+	Asset("ATLAS", "images/hof_dailyrecipecard.xml"),
 	
 	Asset("IMAGE", "images/hof_fishregistry.tex"),
 	Asset("ATLAS", "images/hof_fishregistry.xml"),
@@ -879,6 +882,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_cookware_small_grill",
 	"kyno_cookware_syrup",
 	"kyno_cucumber_ground",
+	"kyno_dailyrecipe_sign",
 	"kyno_deciduousforest_shop",
 	"kyno_dogfish",
 	"kyno_fennel_ground",

@@ -1503,7 +1503,13 @@ AddPlayerPostInit(function(inst)
 
 	-- Daily Recipes.
 	if inst.components.eater ~= nil then
+		local _oneatfn = inst.components.eater.oneatfn
+
 		inst.components.eater:SetOnEatFn(function(inst, food)
+			if _oneatfn ~= nil then
+				_oneatfn(inst, food)
+			end
+
 			if food == nil then
 				return
 			end
@@ -1512,7 +1518,7 @@ AddPlayerPostInit(function(inst)
 			local base_recipe = GetBaseFoodPrefab(food.prefab)
 
 			if _G.TheWorld.components.dailyrecipe ~= nil then
-				local recipe = _G.TheWorld.components.dailyrecipe:GetCurrentRecipe()
+				local recipe = _G.TheWorld.components.dailyrecipe:GetDailyRecipe()
 
 				if base_recipe == recipe then
 					if inst.components.health ~= nil then

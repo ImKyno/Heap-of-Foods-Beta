@@ -1,7 +1,7 @@
 function SpawnLootForPicker(prefab, amount, picker, pos, inst)
 	for i = 1, amount do
 		local loot = SpawnPrefab(prefab)
-		
+
 		if loot ~= nil then
 			if picker ~= nil and picker.components.inventory ~= nil then
 				picker.components.inventory:GiveItem(loot, nil, pos)
@@ -15,24 +15,24 @@ end
 function ChooseWeightedRandom(choices)
 	local function weighted_total(choices)
 		local total = 0
-		
+
 		for choice, weight in pairs(choices) do
 			total = total + weight
 		end
-		
+
 		return total
 	end
 
 	local threshold = math.random() * weighted_total(choices)
 	local last_choice
-	
+
 	for choice, weight in pairs(choices) do
 		threshold = threshold - weight
-		
+
 		if threshold <= 0 then
 			return choice
 		end
-		
+
 		last_choice = choice
 	end
 
@@ -57,7 +57,7 @@ function IsSerenityBiome(inst)
 		local node = TheWorld.Map:FindNodeAtPoint(inst.Transform:GetWorldPosition())
 		return node and node.tags and table.contains(node.tags, "SerenityArea")
 	end
-	
+
 	return false
 end
 
@@ -66,7 +66,7 @@ function IsSerenityBiomeAtPoint(x, y, z)
 		local node = TheWorld.Map:FindNodeAtPoint(x, y, z)
 		return node and node.tags and table.contains(node.tags, "SerenityArea")
 	end
-	
+
 	return false
 end
 
@@ -75,7 +75,7 @@ function IsMeadowBiome(inst)
 		local node = TheWorld.Map:FindNodeAtPoint(inst.Transform:GetWorldPosition())
 		return node and node.tags and table.contains(node.tags, "MeadowArea")
 	end
-	
+
 	return false
 end
 
@@ -84,7 +84,7 @@ function IsMeadowBiomeAtPoint(x, y, z)
 		local node = TheWorld.Map:FindNodeAtPoint(x, y, z)
 		return node and node.tags and table.contains(node.tags, "MeadowArea")
 	end
-	
+
 	return false
 end
 
@@ -93,7 +93,7 @@ function IsWreckBiome(inst)
 		local node = TheWorld.Map:FindNodeAtPoint(inst.Transform:GetWorldPosition())
 		return node and node.tags and table.contains(node.tags, "WreckArea")
 	end
-	
+
 	return false
 end
 
@@ -102,14 +102,14 @@ function IsWreckBiomeAtPoint(x, y, z)
 		local node = TheWorld.Map:FindNodeAtPoint(x, y, z)
 		return node and node.tags and table.contains(node.tags, "WreckArea")
 	end
-	
+
 	return false
 end
 
 local function GetRandomPosition(caster, teleportee, target_in_ocean)
 	if target_in_ocean then
 		local pt = TheWorld.Map:FindRandomPointInOcean(20)
-		
+
 		if pt ~= nil then
 			return pt
 		end
@@ -119,11 +119,11 @@ local function GetRandomPosition(caster, teleportee, target_in_ocean)
 		or FindSwimmableOffset(from_pt, math.random() * 2 * PI, 60, 16)
 		or FindSwimmableOffset(from_pt, math.random() * 2 * PI, 30, 16)
 		or FindSwimmableOffset(from_pt, math.random() * 2 * PI, 15, 16)
-		
+
 		if offset ~= nil then
 			return from_pt + offset
 		end
-			
+
 		return teleportee:GetPosition()
 	else
 		local centers = {}
@@ -133,7 +133,7 @@ local function GetRandomPosition(caster, teleportee, target_in_ocean)
 				table.insert(centers, {x = node.x, z = node.y})
 			end
 		end
-				
+
 		if #centers > 0 then
 			local pos = centers[math.random(#centers)]
 			return Point(pos.x, 0, pos.z)
@@ -160,15 +160,15 @@ local function TeleportEnd(teleportee, locpos, loctarget, eater)
 		teleportee.sg:GoToState(teleportee:HasTag("playerghost") and "appear" or "wakeup")
 	else
 		teleportee:Show()
-		
+
 		if teleportee.DynamicShadow ~= nil then
 			teleportee.DynamicShadow:Enable(true)
 		end
-		
+
 		if teleportee.components.health ~= nil then
 			teleportee.components.health:SetInvincible(false)
 		end
-		
+
 		teleportee:PushEvent("teleported")
 	end
 end
@@ -205,18 +205,18 @@ local function TeleportStart(teleportee, eater, caster, loctarget, target_in_oce
 	teleportfx.Transform:SetPosition(teleportee.Transform:GetWorldPosition())
 
 	local isplayer = teleportee:HasTag("player")
-	
+
 	if isplayer then
 		teleportee.sg:GoToState("forcetele")
 	else
 		if teleportee.components.health ~= nil then
 			teleportee.components.health:SetInvincible(true)
 		end
-		
+
 		if teleportee.DynamicShadow ~= nil then
 			teleportee.DynamicShadow:Enable(false)
 		end
-		
+
 		teleportee:Hide()
 	end
 
@@ -232,7 +232,7 @@ local TELEPORT_CANT_TAGS = { "playerghost", "INLIMBO" }
 
 function OnFoodTeleport(inst, eater)
 	local caster = inst.components.inventoryitem.owner or eater
-	
+
 	if eater == nil then
 		eater = caster
 	end
@@ -250,23 +250,23 @@ end
 
 function OnFoodNaughtiness(inst, eater)
 	SpawnPrefab("krampuswarning_lvl3").Transform:SetPosition(inst.Transform:GetWorldPosition())
-			
+
 	local function KrampusSpawnPoint(pt)
 		if not TheWorld.Map:IsAboveGroundAtPoint(pt:Get()) then
 			pt = FindNearbyLand(pt, 1) or pt
 		end
-				
+
 		local offset = FindWalkableOffset(pt, math.random() * 2 * PI, 15, 12, true)
-		
+
 		if offset ~= nil then
 			offset.x = offset.x + pt.x
 			offset.z = offset.z + pt.z
 			return offset
 		end
 	end
-			
+
 	local spawn_pt = KrampusSpawnPoint(eater:GetPosition())
-	
+
 	if spawn_pt ~= nil then
 		local krampus = SpawnPrefab("krampus")
 		krampus.Physics:Teleport(spawn_pt:Get())
@@ -287,11 +287,11 @@ function OnFoodRollFortune(inst, eater)
 			if eater.components.health ~= nil then
 				eater.components.health:DoDelta(9999)
 			end
-            
+
 			if eater.components.hunger ~= nil then
 				eater.components.hunger:DoDelta(9999)
 			end
-            
+
 			if eater.components.sanity ~= nil then
 				eater.components.sanity:DoDelta(9999)
 			end
@@ -299,15 +299,15 @@ function OnFoodRollFortune(inst, eater)
 			if eater.components.talker ~= nil and eater:HasTag("player") then
 				eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_GOOD[math.random(#STRINGS.FORTUNE_COOKIE_GOOD)])
 			end
-        else
+		else
 			if eater.components.health ~= nil then
 				eater.components.health:SetPercent(.2)
 			end
-            
+
 			if eater.components.hunger ~= nil then
 				eater.components.hunger:DoDelta(-9999)
 			end
-            
+
 			if eater.components.sanity ~= nil then
 				eater.components.sanity:DoDelta(-9999)
 			end
@@ -316,7 +316,7 @@ function OnFoodRollFortune(inst, eater)
 				eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_BAD[math.random(#STRINGS.FORTUNE_COOKIE_BAD)])
 			end
 		end
-    else
+	else
 		if eater.components.talker ~= nil and eater:HasTag("player") then
 			eater.components.talker:Say(STRINGS.FORTUNE_COOKIE_QUOTES[math.random(#STRINGS.FORTUNE_COOKIE_QUOTES)])
 		end
@@ -327,9 +327,9 @@ function GetOceanTrapInventoryPrefab(fish)
 	if TUNING.HOF_OCEANTRAP_PREFAB_INDEX[fish.prefab] ~= nil then
 		return TUNING.HOF_OCEANTRAP_PREFAB_INDEX[fish.prefab]
 	end
-    
+
 	-- Default fallback for oceanfish.
-    return fish.prefab.."_inv"
+	return fish.prefab.."_inv"
 end
 
 function SpawnWhaleCarcassEnemies(inst, player)
@@ -339,14 +339,14 @@ function SpawnWhaleCarcassEnemies(inst, player)
 		end
 
 		local offset = FindSwimmableOffset(pt, math.random() * 8 * PI, 20, 12, true)
-		
+
 		if offset ~= nil then
 			offset.x = offset.x + pt.x
 			offset.z = offset.z + pt.z
 			return offset
 		end
 	end
-			
+
 	local spawn_pt = EnemySpawnPoint(inst:GetPosition())
 	local spawn_pirate = false
 	local spawn_enemy = false
@@ -362,14 +362,14 @@ function SpawnWhaleCarcassEnemies(inst, player)
 
 	if spawn_pirate and TUNING.PIRATE_RAIDS_ENABLED and player ~= nil and TheWorld.components.piratespawner ~= nil then
 		local platform = player:GetCurrentPlatform()
-		
+
 		if platform ~= nil then
 			TheWorld.components.piratespawner:SpawnPiratesForPlayer(player)
 		end
 	elseif spawn_enemy and player ~= nil then
 		if spawn_pt ~= nil then
 			local prefab = nil
-            
+
 			if TUNING.SHARK_SPAWN_CHANCE > 0 and TUNING.GNARWAIL_SPAWN_CHANCE > 0 then
 				prefab = math.random() < TUNING.KYNO_WHALE_SHARK_CHANCE and "shark" or "gnarwail"
 			elseif TUNING.SHARK_SPAWN_CHANCE > 0 then
@@ -379,10 +379,10 @@ function SpawnWhaleCarcassEnemies(inst, player)
 			else
 				return
 			end
-            
+
 			local enemy = SpawnPrefab(prefab)
 			enemy.Physics:Teleport(spawn_pt:Get())
-            
+
 			if enemy.components.combat ~= nil then
 				enemy.components.combat:SetTarget(player)
 			end
@@ -399,4 +399,47 @@ function ForceCombatGiveUp(player)
 			ent.components.combat:GiveUp()
 		end
 	end
+end
+
+function SpawnDailyRecipeCard(recipe, giver, pos, inst)
+	if recipe == nil then
+		return nil
+	end
+
+	local data = TheWorld.components.dailyrecipe ~= nil and TheWorld.components.dailyrecipe:GetDailyRecipeData(recipe)
+
+	if data == nil then
+		return nil
+	end
+
+	local isbrewing = data.system == "brewing"
+
+	local prefab = isbrewing and "kyno_brewingrecipecard" or "cookingrecipecard"
+	local card = SpawnPrefab(prefab)
+
+	if card == nil then
+		return nil
+	end
+
+	card.recipe_name = recipe
+
+	if isbrewing then
+		card.brewer_name = data.cooker
+	else
+		card.cooker_name = data.cooker
+	end
+
+	if card.components.named ~= nil then
+		card.components.named:SetName(subfmt(STRINGS.NAMES.COOKINGRECIPECARD, { item = data.name }))
+	end
+
+	if giver ~= nil and giver.components.inventory ~= nil then
+		giver.components.inventory:GiveItem(card)
+	elseif pos ~= nil then
+		card.Transform:SetPosition(pos:Get())
+	else
+		LaunchAt(card, inst, nil, 1, 1)
+	end
+
+	return card
 end

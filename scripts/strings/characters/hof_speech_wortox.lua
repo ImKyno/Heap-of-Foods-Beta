@@ -1223,3 +1223,12 @@ WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Steeped in leafy mischief!"
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet sips!"
 
 WORTOX.DESCRIBE.SOULJUICE = "Souls and fruit! What a treat!"
+
+WORTOX.DESCRIBE.KYNO_DAILYRECIPE = "No tasty surprises today?"
+WORTOX.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Today's mortal delight is %s! Hyuyu!",
+	NONE = "No tasty surprises today?",
+	BURNING = "Fiery fun! Hyuyu!",
+	BURNT = "Reduced to sooty bits!",
+}

@@ -1223,3 +1223,12 @@ WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Delicately steeped to perfection."
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A charmingly sweet bouquet in a cup."
 
 WARLY.DESCRIBE.SOULJUICE = "Ah! A most unusual concoction!"
+
+WARLY.DESCRIBE.KYNO_DAILYRECIPE = "No spécialité du jour today."
+WARLY.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Ah! Today's special is %s.",
+	NONE = "No spécialité du jour today.",
+	BURNING = "Mon dieu! It's burning!",
+	BURNT = "A culinary tragedy.",
+}

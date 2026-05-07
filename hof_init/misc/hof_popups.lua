@@ -1,20 +1,24 @@
 -- Common Dependencies.
-local _G                      = GLOBAL
-local require                 = _G.require
+local _G                         = GLOBAL
+local require                    = _G.require
 
 -- The Brewbook
-local cooking                 = require("cooking")
-local brewing                 = require("hof_brewing")
-local CookbookData            = require("cookbookdata")
-local BrewbookPopupScreen     = require("screens/brewbookpopupscreen")
+local cooking                    = require("cooking")
+local brewing                    = require("hof_brewing")
+local CookbookData               = require("cookbookdata")
+local BrewbookPopupScreen        = require("screens/brewbookpopupscreen")
 
 -- Fish Registry.
-local FishRegistryData        = require("hof_fishregistrydata")
-local FishRegistryPopupScreen = require("screens/fishregistrypopupscreen")
+local FishRegistryData           = require("hof_fishregistrydata")
+local FishRegistryPopupScreen    = require("screens/fishregistrypopupscreen")
+
+-- Daily Recipe Card
+local DailyRecipeCardPopupScreen = require("screens/dailyrecipecardpopupscreen")
 
 -- New Popups.
 AddPopup("BREWBOOK")
 AddPopup("FISHREGISTRY")
+AddPopup("DAILYRECIPECARD")
 
 _G.POPUPS.BREWBOOK.fn = function(inst, show)
 	if inst.HUD then
@@ -25,12 +29,23 @@ _G.POPUPS.BREWBOOK.fn = function(inst, show)
 		end
 	end
 end
+
 _G.POPUPS.FISHREGISTRY.fn = function(inst, show)
 	if inst.HUD then
 		if not show then
 			inst.HUD:CloseFishRegistryScreen()
 		elseif not inst.HUD:OpenFishRegistryScreen() then
 			_G.POPUPS.FISHREGISTRY:Close(inst)
+		end
+	end
+end
+
+_G.POPUPS.DAILYRECIPECARD.fn = function(inst, show)
+	if inst.HUD then
+		if not show then
+			inst.HUD:CloseDailyRecipeCardScreen()
+		elseif not inst.HUD:OpenDailyRecipeCardScreen() then
+			_G.POPUPS.DAILYRECIPECARD:Close(inst)
 		end
 	end
 end
@@ -42,35 +57,54 @@ AddClassPostConstruct("screens/playerhud", function(playerhud)
 			if self.brewbookscreen.inst:IsValid() then
 				_G.TheFrontEnd:PopScreen(self.brewbookscreen)
 			end
-			
-			self.brewbookscreen = nil			
+
+			self.brewbookscreen = nil
 		end
 	end
-	
+
 	playerhud.OpenBrewbookScreen = function(self)
 		self:CloseBrewbookScreen()
 		self.brewbookscreen = BrewbookPopupScreen(self.owner)
 		self:OpenScreenUnderPause(self.brewbookscreen)
-		
+
 		return true
 	end
-	
+
 	-- Fish Registry.
 	playerhud.CloseFishRegistryScreen = function(self)
 		if self.fishregistryscreen then
 			if self.fishregistryscreen.inst:IsValid() then
 				_G.TheFrontEnd:PopScreen(self.fishregistryscreen)
 			end
-			
-			self.fishregistryscreen = nil			
+
+			self.fishregistryscreen = nil
 		end
 	end
-	
+
 	playerhud.OpenFishRegistryScreen = function(self)
 		self:CloseFishRegistryScreen()
 		self.fishregistryscreen = FishRegistryPopupScreen(self.owner)
 		self:OpenScreenUnderPause(self.fishregistryscreen)
-		
+
+		return true
+	end
+
+	-- Daily Recipe Card.
+	playerhud.CloseDailyRecipeCardScreen = function(self)
+		if self.dailyrecipecardscreen then
+			if self.dailyrecipecardscreen.inst:IsValid() then
+				_G.TheFrontEnd:PopScreen(self.dailyrecipecardscreen)
+			end
+
+			self.dailyrecipecardscreen = nil
+		end
+	end
+
+	playerhud.OpenDailyRecipeCardScreen = function(self)
+		self:CloseDailyRecipeCardScreen()
+		self.dailyrecipecardscreen = DailyRecipeCardPopupScreen(self.owner)
+		self:OpenScreenUnderPause(self.dailyrecipecardscreen)
+
 		return true
 	end
 end)
@@ -81,11 +115,11 @@ end)
 local _IsValidEntry = CookbookData.IsValidEntry
 CookbookData.IsValidEntry = function(self, product)
 	local ret = false
-	
+
 	if _IsValidEntry ~= nil then
 		ret = _IsValidEntry(self, product)
 	end
-    
+
 	for brewer, recipes in pairs(brewing.brewbook_recipes) do
 		if recipes[product] ~= nil then
 			return true

@@ -1223,3 +1223,12 @@ WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A properly infused herbal tisan
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A pleasantly aromatic infusion."
 
 WICKERBOTTOM.DESCRIBE.SOULJUICE = "An intriguing infusion of soul essence and fruit."
+
+WICKERBOTTOM.DESCRIBE.KYNO_DAILYRECIPE = "No featured meals today."
+WICKERBOTTOM.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Ah, today's featured dish is %s.",
+	NONE = "No featured meals today.",
+	BURNING = "That seems unsafe.",
+	BURNT = "A regrettable loss of information.",
+}

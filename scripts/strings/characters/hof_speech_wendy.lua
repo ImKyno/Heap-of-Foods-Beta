@@ -1223,3 +1223,12 @@ WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A bitter warmth for a bitter world."
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweetness fades, like all things."
 
 WENDY.DESCRIBE.SOULJUICE = "A bittersweet taste of life and death."
+
+WENDY.DESCRIBE.KYNO_DAILYRECIPE = "Nothing special today. How fitting."
+WENDY.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Today's special is %s.",
+	NONE = "Nothing special today. How fitting.",
+	BURNING = "Like all things, it returns to ash.",
+	BURNT = "A ruined memory of a meal.",
+}

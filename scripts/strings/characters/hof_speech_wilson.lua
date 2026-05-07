@@ -1223,3 +1223,12 @@ WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A soothing cup of aloe tea."
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A delightfully sweet floral tea."
 
 WILSON.DESCRIBE.SOULJUICE = "A curious blend of soul energy and pomegranate."
+
+WILSON.DESCRIBE.KYNO_DAILYRECIPE = "No special dishes for today."
+WILSON.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{ 
+	GENERIC = "Today's special is %s.",
+	NONE = "No special dishes for today.",
+	BURNING = "It's on fire!",
+	BURNT = "I think today's special is ashes.",
+}

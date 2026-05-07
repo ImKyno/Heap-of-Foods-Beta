@@ -22,10 +22,10 @@ local STRINGS =
 󰀠 Also features brand-new Biomes somewhere in the Ocean!
 󰀦 Learn how to cook every recipe at: https://heap-of-foods.com
 
-󰀏 Featuring the Gone Fishing Update:
-Cast your line, set your sail, and dive into the ocean! A wave of new aquatic creatures awaits, whether you're a seasoned angler or just an apprentice, there's always something to catch!
+󰀏 Featuring the Recipe of the Day Update:
+Daily Recipes are featured dishes selected everyday from the recipe pool. All players share the same recipe regardless of the world.
 
-Build yourself a Fish Hatchery to raise your own fish in the comfort of your base, explore the ocean in search of elusive creatures, take part in Ocean Hunts and find a friendly new companion.
+Each day, one recipe will be randomly selected. Eating the daily recipe grants bonus Health, Hunger and Sanity, alongside the dish’s original stats. It also increases Luck for a certain period.
 
 󰀌 Mod Version: 5.1-B
 󰀧 Update: Recipe of the Day
@@ -37,10 +37,10 @@ Build yourself a Fish Hatchery to raise your own fish in the comfort of your bas
 󰀠 还新增了海洋中的全新生物群系！
 󰀦 学习如何制作所有食谱：https://heap-of-foods.com
 
-󰀏 全新“钓鱼之旅”更新：
-抛下鱼线，扬起风帆，驶入浩瀚的海洋！无数全新的水生生物正等待着你，无论你是经验丰富的垂钓老手还是初出茅庐的新手，总有值得你去捕获的猎物！
+󰀏 每日食谱更新：
+每日食谱是从食谱库中每天随机挑选的特色菜肴。所有玩家无论身处哪个世界，都共享相同的食谱。
 
-建造一座鱼苗孵化场，在你的基地里舒适地饲养属于你自己的鱼儿；探索海洋，寻找那些难以捉摸的生物；参与海洋狩猎，结识一位友好的新伙伴。
+每天都会随机选择一道食谱。食用每日食谱除了菜肴本身的属性外，还能额外提升生命值、饥饿值和理智值。此外，食用后一段时间内还能提升幸运值。
 
 󰀌 Mod 版本： 5.1-B
 󰀧 更新内容： 今日食谱
@@ -52,10 +52,10 @@ Build yourself a Fish Hatchery to raise your own fish in the comfort of your bas
 󰀠 還新增了海洋中的全新生物群系！
 󰀦 學習如何製作所有食譜：https://heap-of-foods.com
 
-󰀏 全新「釣魚之旅」更新：
-拋下魚線，揚起風帆，潛入浩瀚的海洋！無數全新的水生生物正等著你，無論你是經驗豐富的釣老手還是初出茅廬的新手，總有值得你去捕獲的獵物！
+󰀏 每日食譜更新：
+每日食譜是從食譜庫中隨機挑選的特色菜餚。所有玩家無論身處哪個世界，都將共享相同的食譜。
 
-建造一座魚苗孵化場，在你的基地裡舒適地飼養屬於你自己的魚兒；探索海洋，尋找那些難以捉摸的生物；參與海洋狩獵，結識一位友好的新夥伴。
+每天都會隨機選出一道食譜。食用每日食譜除了菜餚本身的屬性外，還能額外提升生命值、飢餓值和理智值。此外，食用後一段時間內還能提升幸運值。
 
 󰀌 Mod 版本： 5.1-B
 󰀧 更新內容： 今日食譜
@@ -67,10 +67,10 @@ Build yourself a Fish Hatchery to raise your own fish in the comfort of your bas
 󰀠 Também acrescenta novos biomas em algum lugar do alto mar!
 󰀦 Aprenda a cozinhar todas as receitas em: https://heap-of-foods.com
 
-󰀏 Apresentando a atualização Hora da Pescaria:
-Lance sua linha, prepare suas velas e mergulhe no oceano! Uma onda de novas criaturas aquáticas aguarda por você. Seja você um pescador experiente ou apenas um aprendiz, sempre há algo para fisgar!
+󰀏 Apresentando a atualização Receita do Dia:
+As Receitas Diárias são pratos em destaque selecionados diariamente do banco de receitas. Todos os jogadores compartilham a mesma receita, independentemente do mundo.
 
-Construa um viveiro de peixes para criar seus próprios peixes no conforto da sua base, explore o oceano em busca de criaturas elusivas, participe de caçadas oceânicas e encontre um novo companheiro amigável.
+A cada dia, uma receita será selecionada aleatoriamente. Consumir a receita diária concede bônus de Saúde, Fome e Sanidade, além dos atributos originais do prato. Também aumenta a Sorte por um determinado período.
 
 󰀌 Versão do Mod: 5.1-B
 󰀧 Atualização: Receita do Dia
@@ -82,10 +82,10 @@ Construa um viveiro de peixes para criar seus próprios peixes no conforto da su
 󰀠 Zawiera również zupełnie nowe biomasy gdzieś na Oceanie!
 󰀦 Naucz się gotować wszystkie przepisy na: https://heap-of-foods.com
 
-󰀏 Przedstawiamy aktualizację Czas wędkowania:
-Zarzuć wędkę, postaw żagle i zanurz się w oceanie! Czeka Cię fala nowych stworzeń wodnych – niezależnie od tego, czy jesteś doświadczonym wędkarzem, czy dopiero zaczynasz, zawsze znajdziesz coś do złowienia!
+󰀏 Przedstawiamy aktualizację Przepisu Dnia:
+Codzienne Przepisy to wyróżnione dania wybierane codziennie z puli przepisów. Wszyscy gracze korzystają z tego samego przepisu, niezależnie od świata.
 
-Zbuduj sobie wylęgarnię ryb, aby hodować własne ryby w zaciszu swojej bazy, eksploruj ocean w poszukiwaniu nieuchwytnych stworzeń, weź udział w polowaniach na ryby i znajdź nowego, przyjaznego towarzysza.
+Każdego dnia losowo wybierany jest jeden przepis. Spożywanie przepisu dnia zapewnia premię do zdrowia, głodu i zdrowia psychicznego, a także do oryginalnych statystyk potrawy. Zwiększa również szczęście na określony czas.
 
 󰀌 Wersja Moda: 5.1-B
 󰀧 Aktualizacja: Przepis dnia
@@ -97,10 +97,10 @@ Zbuduj sobie wylęgarnię ryb, aby hodować własne ryby w zaciszu swojej bazy, 
 󰀠 ¡También incluye nuevos biomas en algún lugar del mar abierto!
 󰀦 Aprende a cocinar todas las recetas en: https://heap-of-foods.com
 
-󰀏 Presentando la actualización Tiempo de Pesca:
-¡Lanza tu caña, iza las velas y sumérgete en el océano! Una oleada de nuevas criaturas acuáticas te espera. Tanto si eres un pescador experimentado como si acabas de empezar, ¡siempre hay algo que pescar!
+󰀏 Presentando la actualización Receta del día:
+Las recetas diarias son platos destacados que se seleccionan cada día del repertorio. Todos los jugadores comparten la misma receta, independientemente del mundo.
 
-Construye una piscifactoría para criar tus propios peces en la comodidad de tu base, explora el océano en busca de criaturas esquivas, participa en cacerías oceánicas y encuentra un nuevo compañero.
+Cada día se selecciona una receta al azar. Al consumir la receta del día, se obtienen bonificaciones de salud, hambre y cordura, además de las estadísticas originales del plato. También aumenta la suerte durante un tiempo determinado.
 
 󰀌 Versión del Mod: 5.1-B
 󰀧 Actualización: Receta del día

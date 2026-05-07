@@ -1,0 +1,6 @@
+<Atlas>
+    <Texture filename="hof_dailyrecipecard.tex" />
+    <Elements>
+        <Element name="hof_dailyrecipecard.tex" u1="0.00048828125" v1="0.31689453125" u2="0.50634765625" v2="0.99951171875" />
+    </Elements>
+</Atlas>

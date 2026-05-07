@@ -43,6 +43,7 @@ PrefabFiles =
 	"k_crop_sweetpotato",
 	"k_crop_turnip",
 	"k_cucumber",
+	"k_dailyrecipe_sign",
 	"k_deciduousforest_shop",
 	"k_dogfish",
 	"k_fertilizer_nutrient_defs",

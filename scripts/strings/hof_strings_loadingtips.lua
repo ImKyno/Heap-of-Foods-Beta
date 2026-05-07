@@ -122,6 +122,9 @@ local LOADINGTIPS   =
 	CHICKEN3        = "Chickens found in the wild have a small chance of laying Eggs after eating.",
 	CHICKEN4        = "Chickens living in a Coop will only produce Eggs if they eat something daily like Seeds or Grains. They can also eat from the Feeding Trough.",
 	ANIMALFEEDER    = "The Feeding Trough can be used to feed some farm animals such as Chickens.",
+	WEBSITE         = "Did you know Heap of Foods has an official Website? Well, now you do. Learn how to cook every recipe at: https://heap-of-foods.com",
+	DAILYRECIPES1   = "Daily Recipes are featured dishes selected everyday from the recipe pool. All players share the same recipe regardless of the world. Each day, one recipe will be randomly selected. Eating the daily recipe grants bonus Health, Hunger and Sanity, alongside the dish’s original stats. It also increases Luck for a certain period.",
+	DAILYRECIPES2   = "You can check the current Daily Recipe by building a Daily Recipe Board or through the Mod's official Website.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

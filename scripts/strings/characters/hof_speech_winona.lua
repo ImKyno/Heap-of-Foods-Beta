@@ -1223,3 +1223,12 @@ WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Good for a quick break."
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Not bad at all."
 
 WINONA.DESCRIBE.SOULJUICE = "That's one strange energy drink."
+
+WINONA.DESCRIBE.KYNO_DAILYRECIPE = "Nothing on the menu today."
+WINONA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Today's menu is %s.",
+	NONE = "Nothing on the menu today.",
+	BURNING = "Welp, there goes the sign.",
+	BURNT = "Can't fix that anymore.",
+}

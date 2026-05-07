@@ -223,3 +223,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Stopniowo zwiększa poczyt
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Pojemnik z dwoma slotami, który przyjmuje kukurydzę do produkcji popcornu.\n\nUmieszczenie kukurydzy w pierwszym slocie pozwala wyprodukować 5 porcji popcornu.\n\nPodczas Rocznicy Heap of Foods będzie produkować Rocznicowy Popcorn.\n\nŚwiętując 5. Rocznicę Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Niektóre zwierzęta będą żywić się pokarmem umieszczonym w tym korycie.\n\nNasiona i ziarna mogą być wykorzystywane jako podstawowe źródło pożywienia."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "Schronisko dla kurczaków, w którym można produkować produkty drobiowe."
+STRINGS.SCRAPBOOK.SPECIALINFO.DAILYRECIPE_SIGN = "Śledzi codzienne przepisy i umożliwia ich krótki przegląd."

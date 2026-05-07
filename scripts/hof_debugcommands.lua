@@ -956,3 +956,13 @@ function c_hofrevealmap()
 		ExecuteConsoleCommand(s)
 	end
 end
+
+-- Command for getting the Recipe of the Day.
+-- See it through the website: https://heap-of-foods.com
+function c_hofdailyrecipe()
+	local player = ConsoleCommandPlayer()
+
+	if player ~= nil then
+		TheNet:Announce("Recipe of the Day: "..TheWorld.components.dailyrecipe:GetDailyRecipeName()) 
+	end
+end

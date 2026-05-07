@@ -1223,3 +1223,12 @@ WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A brief moment of comfort."
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet, but fleeting."
 
 WANDA.DESCRIBE.SOULJUICE = "Time and souls in liquid form."
+
+WANDA.DESCRIBE.KYNO_DAILYRECIPE = "Nothing noteworthy today."
+WANDA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "Just in time! Today's special is %s.",
+	NONE = "Nothing noteworthy today.",
+	BURNING = "Well, that's unfortunate timing.",
+	BURNT = "Too late to save it now.",
+}

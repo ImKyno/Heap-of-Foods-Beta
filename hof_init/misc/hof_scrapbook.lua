@@ -17104,6 +17104,26 @@ local HOF_SCRAPBOOK_THINGS =
 		deps           = {"kyno_chicken2", "kyno_chicken_egg", "boards", "cutgrass", "researchlab2"},
 		specialinfo    = "CHICKENHOUSE",
 	},
+
+	kyno_dailyrecipe_sign =
+	{
+		name           = "kyno_dailyrecipe_sign",
+		speechname     = "kyno_dailyrecipe",
+		type           = "thing",
+		subcat         = "structure",
+		tex            = "kyno_dailyrecipe_sign.tex",
+		prefab         = "kyno_dailyrecipe_sign",
+		activatable    = "DAILYRECIPE",
+		workable       = "HAMMER",
+		pickable       = true,
+		bank           = "kyno_dailyrecipe_sign",
+		build          = "kyno_dailyrecipe_sign",
+		hidesymbol     = {"card"},
+		overridesymbol = {"recipe", "kyno_dailyrecipe_sign", "recipe"},
+		anim           = "idle",
+		deps           = {"boards", "papyrus", "featherpencil", "researchlab"},
+		specialinfo    = "DAILYRECIPE_SIGN",
+	},
 }
 
 local HOF_SCRAPBOOK_SPICES =

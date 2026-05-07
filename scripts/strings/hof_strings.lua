@@ -1,6 +1,16 @@
 STRINGS.BREWBOOK_TITLE = "Brewbook"
 STRINGS.BREWBOOK_DESC = "The Constant's guide to brewery"
 
+STRINGS.DAILYRECIPE = "Recipe of the Day"
+STRINGS.DAILYRECIPE_INGREDIENTS = "Recipe Example"
+STRINGS.DAILYRECIPE_DESCRIPTION =
+[[
+Eating the Daily Recipe grants bonus stats:
++15 Health | +15 Hunger | +15 Sanity
+
+It also grants +2 Luck for a certain period.
+]]
+
 STRINGS.UI.CRAFTING_FILTERS.MEALING = "Food Ingredients"
 STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP = "Elder's Supplies"
 STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP = "Sammy's Emporium"
@@ -166,6 +176,7 @@ STRINGS.KYNO_REFILL = "Refill"
 
 STRINGS.ACTIONS.OPEN_CRAFTING.MEALING = "Grind at"
 STRINGS.ACTIONS.ACTIVATE.DESTROY = "Destroy"
+STRINGS.ACTIONS.ACTIVATE.DAILYRECIPE = "See"
 STRINGS.ACTIONS.SALT = "Add Salt"
 STRINGS.ACTIONS.STORESOUL = "Store Soul"
 STRINGS.ACTIONS.FLAY = "Flay" -- This doesn't matter, ACTIONS.SLAUGHTER2 overrides it. But it's necessary for the AddAction.
@@ -1998,3 +2009,6 @@ STRINGS.NAMES.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet Flower Tea"
 STRINGS.RECIPE_DESC.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A drink to ease the mind of disturbing forces."
 
 STRINGS.NAMES.SOULJUICE = "Velvet Soul"
+
+STRINGS.NAMES.KYNO_DAILYRECIPE_SIGN = "Daily Recipe Board"
+STRINGS.RECIPE_DESC.KYNO_DAILYRECIPE_SIGN = "The classic way of telling people what to eat."

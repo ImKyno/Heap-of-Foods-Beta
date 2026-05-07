@@ -1,6 +1,16 @@
 STRINGS.BREWBOOK_TITLE = "Livro de Fermentação"
 STRINGS.BREWBOOK_DESC = "O Guia do Constante para fermentação"
 
+STRINGS.DAILYRECIPE = "Receita do Dia"
+STRINGS.DAILYRECIPE_INGREDIENTS = "Exemplo de Receita"
+STRINGS.DAILYRECIPE_DESCRIPTION =
+[[
+Comer a receita do dia concede bônus de atributos:
++15 Vida | +15 Fome | +15 Sanidade
+
+Também concede +2 de Sorte por um certo período.
+]]
+
 STRINGS.UI.CRAFTING_FILTERS.MEALING = "Ingredientes Culinários"
 STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP = "Suprimentos do Ancião"
 STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP = "Empório do Sammy"
@@ -166,6 +176,7 @@ STRINGS.KYNO_REFILL = "Reabastecer"
 
 STRINGS.ACTIONS.OPEN_CRAFTING.MEALING = "Produzir em"
 STRINGS.ACTIONS.ACTIVATE.DESTROY = "Destruir"
+STRINGS.ACTIONS.ACTIVATE.DAILYRECIPE = "Ver"
 STRINGS.ACTIONS.SALT = "Adicionar Sal"
 STRINGS.ACTIONS.STORESOUL = "Guardar Alma"
 STRINGS.ACTIONS.FLAY = "Abater" -- This doesn't matter, ACTIONS.SLAUGHTER2 overrides it. But it's necessary for the AddAction.
@@ -1998,3 +2009,6 @@ STRINGS.NAMES.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Chá de Flor Doce"
 STRINGS.RECIPE_DESC.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Uma bebida para acalmar a mente de forças perturbadoras."
 
 STRINGS.NAMES.SOULJUICE = "Alma de Veludo"
+
+STRINGS.NAMES.KYNO_DAILYRECIPE_SIGN = "Quadro de Receita Diária"
+STRINGS.RECIPE_DESC.KYNO_DAILYRECIPE_SIGN = "A maneira clássica de dizer às pessoas o que comer."

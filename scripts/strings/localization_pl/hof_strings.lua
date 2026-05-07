@@ -1,6 +1,16 @@
 STRINGS.BREWBOOK_TITLE = "Książka piwowarska"
 STRINGS.BREWBOOK_DESC = "Przewodnik po browarnictwie w Stałej"
 
+STRINGS.DAILYRECIPE = "Przepis dnia"
+STRINGS.DAILYRECIPE_INGREDIENTS = "Przykładowy Przepis"
+STRINGS.DAILYRECIPE_DESCRIPTION =
+[[
+Zjedzenie dziennego przepisu zapewnia bonusy do statystyk:
++15 Zdrowia | +15 Głodu | +15 Zdrowia Psychicznego
+
+Dodatkowo zapewnia +2 Szczęścia na pewien czas.
+]]
+
 STRINGS.UI.CRAFTING_FILTERS.MEALING = "Składniki spożywcze"
 STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP = "Zapasy Starszego"
 STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP = "Miodosytnia Sammiego"
@@ -166,6 +176,7 @@ STRINGS.KYNO_REFILL = "Wkład"
 
 STRINGS.ACTIONS.OPEN_CRAFTING.MEALING = "Miel w"
 STRINGS.ACTIONS.ACTIVATE.DESTROY = "Zniszcz"
+STRINGS.ACTIONS.ACTIVATE.DAILYRECIPE = "Widzieć"
 STRINGS.ACTIONS.SALT = "Dodaj Sól"
 STRINGS.ACTIONS.STORESOUL = "Przechowaj Duszę"
 STRINGS.ACTIONS.FLAY = "Obłup" -- To nie ma znaczenia, ACTIONS.SLAUGHTER2 nadpisuje to. Ale jest potrzebne dla AddAction.
@@ -1998,3 +2009,6 @@ STRINGS.NAMES.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Herbata Cukrowe Płatki"
 STRINGS.RECIPE_DESC.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Napój, który koi umysł nękany niepokojącymi siłami."
 
 STRINGS.NAMES.SOULJUICE = "Aksamitna Dusza"
+
+STRINGS.NAMES.KYNO_DAILYRECIPE_SIGN = "Tablica z przepisami dnia"
+STRINGS.RECIPE_DESC.KYNO_DAILYRECIPE_SIGN = "Klasyczny sposób na wskazanie ludziom, co mają jeść."

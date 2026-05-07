@@ -122,6 +122,9 @@ local LOADINGTIPS   =
 	CHICKEN3        = "Galinhas Selvagens têm uma pequena chance de botar Ovos depois de se alimentarem.",
 	CHICKEN4        = "Galinhas criadas no Galinheiro só botam ovos se comerem algo diariamente, como Sementes, Trigo ou Rebentos Folhosos. Elas também podem se alimentar no Cocho de Alimentação.",
 	ANIMALFEEDER    = "O Cocho de Alimentação pode ser usado para alimentar alguns animais de fazenda, como Galinhas.",
+	WEBSITE         = "Você sabia que o Amontoado de Comidas tem um site oficial? Pois é, agora sabe. Aprenda a cozinhar todas as receitas em: https://heap-of-foods.com",
+	DAILYRECIPES1   = "Receitas Diárias são pratos especiais selecionados todos os dias a partir do conjunto de receitas. Todos os jogadores compartilham a mesma receita, independentemente do mundo. A cada dia, uma receita é escolhida aleatoriamente. Comer a receita do dia concede bônus de Vida, Fome e Sanidade, além dos atributos originais do prato. Também aumenta a Sorte por um certo período.",
+	DAILYRECIPES2   = "Você pode verificar a Receita Diária atual construindo um Quadro de Receitas Diária ou através do site oficial do Mod.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

@@ -1223,3 +1223,12 @@ WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A warrior prefers mead, but this 
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet as a maiden's song!"
 
 WATHGRITHR.DESCRIBE.SOULJUICE = "A warrior's draught touched by wandering souls!"
+
+WATHGRITHR.DESCRIBE.KYNO_DAILYRECIPE = "No feast worthy of song today."
+WATHGRITHR.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
+{
+	GENERIC = "The feast of the day is %s!",
+	NONE = "No feast worthy of song today.",
+	BURNING = "The flames consume the feast!",
+	BURNT = "Only ashes remain of the banquet.",
+}

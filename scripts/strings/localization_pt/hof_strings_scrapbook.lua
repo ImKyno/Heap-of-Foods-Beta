@@ -223,3 +223,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Aumenta a sanidade dos sob
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Um recipiente de 2 slots que recebe milho para fazer pipoca.\n\nColocar milho no primeiro slot permite produzir 5 pipocas.\n\nDurante o Aniversário do Amontoado de Comidas, produzirá Pipoca de Aniversário.\n\nCelebrando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Alguns animais se alimentarão da comida posta neste cocho.\n\Sementes e Grãos podem ser usados como fonte principal de comida."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "Um abrigo para Galinhas produzirem seus produtos."
+STRINGS.SCRAPBOOK.SPECIALINFO.DAILYRECIPE_SIGN = "Registra Receitas Diárias e permite uma breve visualização das mesmas."
