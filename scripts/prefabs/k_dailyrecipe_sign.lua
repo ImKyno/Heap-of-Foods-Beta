@@ -44,7 +44,10 @@ end
 
 local function OnPicked(inst, picker)
 	inst.AnimState:PlayAnimation("pick")
-	inst.AnimState:HideSymbol("card")
+
+	inst:ListenForEvent("animover", function()
+		inst.AnimState:HideSymbol("card")
+	end)
 
 	if inst.components.activatable ~= nil then
 		inst.components.activatable.inactive = true
