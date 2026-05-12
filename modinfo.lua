@@ -27,7 +27,7 @@ Daily Recipes are featured dishes selected everyday from the recipe pool. All pl
 
 Each day, one recipe will be randomly selected. Eating the daily recipe grants bonus Health, Hunger and Sanity, alongside the dish’s original stats. It also increases Luck for a certain period.
 
-󰀌 Mod Version: 5.1-B
+󰀌 Mod Version: 5.2-B
 󰀧 Update: Recipe of the Day
 ]],
 		zh  =
@@ -42,7 +42,7 @@ Each day, one recipe will be randomly selected. Eating the daily recipe grants b
 
 每天都会随机选择一道食谱。食用每日食谱除了菜肴本身的属性外，还能额外提升生命值、饥饿值和理智值。此外，食用后一段时间内还能提升幸运值。
 
-󰀌 Mod 版本： 5.1-B
+󰀌 Mod 版本： 5.2-B
 󰀧 更新内容： 今日食谱
 ]],	
 		zht =
@@ -57,7 +57,7 @@ Each day, one recipe will be randomly selected. Eating the daily recipe grants b
 
 每天都會隨機選出一道食譜。食用每日食譜除了菜餚本身的屬性外，還能額外提升生命值、飢餓值和理智值。此外，食用後一段時間內還能提升幸運值。
 
-󰀌 Mod 版本： 5.1-B
+󰀌 Mod 版本： 5.2-B
 󰀧 更新內容： 今日食譜
 ]],	
 		pt  = 
@@ -72,7 +72,7 @@ As Receitas Diárias são pratos em destaque selecionados diariamente do banco d
 
 A cada dia, uma receita será selecionada aleatoriamente. Consumir a receita diária concede bônus de Saúde, Fome e Sanidade, além dos atributos originais do prato. Também aumenta a Sorte por um determinado período.
 
-󰀌 Versão do Mod: 5.1-B
+󰀌 Versão do Mod: 5.2-B
 󰀧 Atualização: Receita do Dia
 ]],
 		pl  =
@@ -87,7 +87,7 @@ Codzienne Przepisy to wyróżnione dania wybierane codziennie z puli przepisów.
 
 Każdego dnia losowo wybierany jest jeden przepis. Spożywanie przepisu dnia zapewnia premię do zdrowia, głodu i zdrowia psychicznego, a także do oryginalnych statystyk potrawy. Zwiększa również szczęście na określony czas.
 
-󰀌 Wersja Moda: 5.1-B
+󰀌 Wersja Moda: 5.2-B
 󰀧 Aktualizacja: Przepis dnia
 ]],
 		es  =
@@ -102,7 +102,7 @@ Las recetas diarias son platos destacados que se seleccionan cada día del reper
 
 Cada día se selecciona una receta al azar. Al consumir la receta del día, se obtienen bonificaciones de salud, hambre y cordura, además de las estadísticas originales del plato. También aumenta la suerte durante un tiempo determinado.
 
-󰀌 Versión del Mod: 5.1-B
+󰀌 Versión del Mod: 5.2-B
 󰀧 Actualización: Receta del día
 ]],
 	},
@@ -1548,7 +1548,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "5.1-B"
+version                      = "5.2-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 

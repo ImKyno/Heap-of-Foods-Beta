@@ -125,8 +125,9 @@ end
 
 local function GetDescription(inst, viewer)
 	local dailyrecipe = TheWorld.net.components.dailyrecipe
-	local CHARACTER = STRINGS.CHARACTERS[string.upper(viewer.prefab)] or STRINGS.CHARACTERS.GENERIC
-	local DESCRIBE = CHARACTER.DESCRIBE.KYNO_DAILYRECIPE_SIGN
+	local CHARACTER = STRINGS.CHARACTERS[string.upper(viewer.prefab)]
+	local DESCRIBE = CHARACTER and CHARACTER.DESCRIBE.KYNO_DAILYRECIPE_SIGN 
+	or STRINGS.CHARACTERS.GENERIC.DESCRIBE.KYNO_DAILYRECIPE_SIGN
 
 	if dailyrecipe ~= nil then
 		local recipe = dailyrecipe:GetDailyRecipeName()
