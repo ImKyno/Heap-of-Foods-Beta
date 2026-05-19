@@ -1093,9 +1093,6 @@ WOODIE.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Acabou a ração.",
 }
 
-WOODIE.DESCRIBE.KYNO_ANTCHOVY = "Agora esse sim é um bom peixe, hein? Só não morda meus troncos."
-WOODIE.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "É um enxame inteiro, hein? Melhor preparar as redes."
-
 WOODIE.DESCRIBE.AGEDROE = "Ufa, que salgado!"
 WOODIE.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Meio gosmento, mas o pessoal chique adora, né?"
 

@@ -1093,9 +1093,6 @@ WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "O suprimento de ração se esgotou.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY = "Um espécime artrópode-pisciforme deveras peculiar!"
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Uma rara congregação de comportamento interestadual de cardume!"
-
 WICKERBOTTOM.DESCRIBE.AGEDROE = "Difere dovas comuns principalmente pelo recipiente."
 WICKERBOTTOM.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Uma iguaria de ovas preservadas de esturjão. Exquisito."
 

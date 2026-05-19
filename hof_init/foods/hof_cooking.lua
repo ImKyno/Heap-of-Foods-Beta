@@ -129,7 +129,6 @@ AddIngredientValues({"kyno_truffles"},               {veggie     = 1,    mushroo
 AddIngredientValues({"kyno_sporecap"},               {veggie     = 0.5,  mushrooms = 1,    monster   = 0.5},       true)
 AddIngredientValues({"kyno_sporecap_dark"},          {veggie     = 0.5,  mushrooms = 1,    monster   = 0.5},       true)
 AddIngredientValues({"truffleoil"},                  {oil        = 1})
-AddIngredientValues({"kyno_antchovy"},               {meat       = 0.25, fish      = 0.25, antchovy  = 1})
 AddIngredientValues({"kyno_jellyfish"},              {monster    = 1,    fish      = 1,    jellyfish = 1},   true, true)
 AddIngredientValues({"kyno_jellyfish_dead"},         {monster    = 1,    fish      = 1,    jellyfish = 1})
 AddIngredientValues({"kyno_jellyfish_rainbow"},      {monster    = 1,    fish      = 1,    jellyfish = 1},         true)
@@ -145,7 +144,6 @@ AddIngredientValues({"kyno_fishmeat_dried"},         {meat       = 1,    fish   
 
 local fishroes_meat =
 {
-	"kyno_roe_antchovy",
 	"kyno_roe_grouper",
 	"kyno_roe_jellyfish",
 	"kyno_roe_jellyfish_rainbow",

@@ -1093,9 +1093,6 @@ WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Zapas paszy został wyczerpany.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY = "Wyjątkowo osobliwy okaz łączący cechy ryby i stawonoga!"
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Rzadkie skupisko międzygatunkowego zachowania stadnego!"
-
 WICKERBOTTOM.DESCRIBE.AGEDROE = "Różni się od zwykłej ikry głównie słoikiem."
 WICKERBOTTOM.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Delikates z konserwowanej ikry jesiotra. Wyborne."
 

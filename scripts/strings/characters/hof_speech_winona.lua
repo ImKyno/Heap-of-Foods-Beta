@@ -1093,9 +1093,6 @@ WINONA.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Bone dry.",
 }
 
-WINONA.DESCRIBE.KYNO_ANTCHOVY = "Now that's some weird cross-breeding!"
-WINONA.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Looks like a moving mess of work for me!"
-
 WINONA.DESCRIBE.AGEDROE = "I made them fancy, but they're still fish eggs."
 WINONA.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "I guess this is what fancy folks call dinner."
 

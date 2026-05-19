@@ -1093,9 +1093,6 @@ WILSON.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Toda a comida acabou.",
 }
 
-WILSON.DESCRIBE.KYNO_ANTCHOVY = "É... um peixe? Ou um inseto? A ciência está confusa."
-WILSON.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Elas estão se aglomerando! Fascinante!"
-
 WILSON.DESCRIBE.AGEDROE = "Nunca provei isso antes de vir pra cá."
 WILSON.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Caviar! Tem um gosto melhor do que parece."
 

@@ -1093,9 +1093,6 @@ WENDY.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Only emptiness remains.",
 }
 
-WENDY.DESCRIBE.KYNO_ANTCHOVY = "Half fish, half ant... a life of confusion and suffering."
-WENDY.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "A buzzing, writhing mass of misery."
-
 WENDY.DESCRIBE.AGEDROE = "I took their life to sustain my own."
 WENDY.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Life from death... delicious irony."
 

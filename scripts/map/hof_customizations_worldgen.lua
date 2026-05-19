@@ -28,7 +28,6 @@ local customizations_worldgen =
 	weedsea         = { desc = "worldgen_frequency_descriptions", group = "hof_ocean",     order = 6,  world = { "forest" }},
 	
 	-- OCEANCREATURES
-	antchovies      = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 2,  world = { "forest" }},
 	chickens        = { desc = "yesno_descriptions",              group = "hof_creatures", order = 0,  world = { "forest" }},
 	dogfishes       = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 5,  world = { "forest" }},
 	hermitwobsters  = { desc = "yesno_descriptions",              group = "hof_creatures", order = 6,  world = { "forest" }},
@@ -78,7 +77,6 @@ map.TRANSLATE_TO_PREFABS["taroroots"]       = { "kyno_taroroot_ocean" }
 map.TRANSLATE_TO_PREFABS["waterycresses"]   = { "kyno_waterycress_ocean" }
 map.TRANSLATE_TO_PREFABS["weedsea"]         = { "kyno_seaweeds_ocean" }
 
-map.TRANSLATE_TO_PREFABS["antchovies"]      = { "kyno_antchovy_spawner" }
 map.TRANSLATE_TO_PREFABS["chickens"]        = { "kyno_chicken", "kyno_chicken2", "kyno_chicken2_herd" }
 map.TRANSLATE_TO_PREFABS["dogfishes"]       = { "kyno_dogfish", "kyno_dogfish_spawner" }
 map.TRANSLATE_TO_PREFABS["fishermerms"]     = { "kyno_meadowisland_mermfisher" }

@@ -522,28 +522,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		deps           = {"sunkenchest", "kyno_serenityisland_crate", "kyno_meadowisland_crate", "kyno_meatcan_open"},
 		specialinfo    = "CANNEDFOOD",
 	},
-	
-	kyno_antchovycan   =
-	{
-		name           = "kyno_antchovycan",
-		speechname     = "kyno_cannedfood",
-		type           = "item",
-		subcat         = "canned",
-		tex            = "kyno_antchovycan.tex",
-		prefab         = "kyno_antchovycan",
-		stacksize      = 20,
-		openable       = true,
-		bank           = "kyno_cannedfoods",
-		build          = "kyno_cannedfoods",
-		anim           = "antchovy_closed",
-		animoffsetx    = 30,
-		animoffsety    = -20,
-		animoffsetbgx  = -30,
-		animoffsetbgy  = -90,
-		deps           = {"sunkenchest", "kyno_serenityisland_crate", "kyno_antchovy"},
-		specialinfo    = "CANNEDFOOD",
-	},
-	
+
 	kyno_seaweeds_root =
 	{
 		name           = "kyno_seaweeds_root",
@@ -4210,27 +4189,6 @@ local HOF_SCRAPBOOK_FOODS =
 		deps            = {"kyno_koi", "kyno_roe_cooked", "spoiled_food"},
 	},
 	
-	kyno_roe_antchovy   =
-	{
-		name            = "kyno_roe_antchovy",
-		speechname      = "kyno_roe",
-		type            = "food",
-		subcat          = "fishroe",
-		tex             = "kyno_roe_antchovy.tex",
-		prefab          = "kyno_roe_antchovy",
-		healthvalue     = 1,
-		hungervalue     = 4.6875,
-		sanityvalue     = 0,
-		perishable      = 2880,
-		stacksize       = 20,
-		burnable        = true,
-		foodtype        = "MEAT",
-		bank            = "kyno_roe",
-		build           = "kyno_roe",
-		anim            = "idle_antchovy",
-		deps            = {"kyno_antchovy", "kyno_roe_cooked", "spoiled_food"},
-	},
-	
 	kyno_roe_swordfish_blue =
 	{
 		name            = "kyno_roe_swordfish_blue",
@@ -5170,26 +5128,6 @@ local HOF_SCRAPBOOK_FOODS =
 		animoffsetbgy   = -15,
 		deps            = {"alterguardian_phase4_lunarrift", "spoiled_food"},
 		specialinfo     = "FOODEFFECTS_GOLDENAPPLE",
-	},
-	
-	kyno_antchovy       =
-	{
-		name            = "kyno_antchovy",
-		type            = "food",
-		tex             = "kyno_antchovy.tex",
-		prefab          = "kyno_antchovy",
-		healthvalue     = 0,
-		hungervalue     = 9.375,
-		sanityvalue     = 3,
-		perishable      = 2880,
-		stacksize       = 60,
-		foodtype        = "MEAT",
-		fishfarmable    = true,
-		bank            = "kyno_antchovy",
-		build           = "kyno_antchovy",
-		anim            = "idle_alive",
-		animoffsetx     = -25,
-		deps            = {"kyno_antchovycan", "kyno_roe_antchovy", "spoiled_fish_small"},
 	},
 	
 	kyno_swordfish_blue =
@@ -14588,32 +14526,6 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		animoffsetbgx  = -20,
 		animoffsetbgy  = -130,
 		deps           = {"kyno_preservesjar", "kyno_roe_koi", "spoiled_food"},
-	},
-	
-	agedroe_antchovy   =
-	{
-		name           = "agedroe_antchovy",
-		speechname     = "agedroe",
-        type           = "food",
-		subcat         = "agedroe",
-		tex            = "agedroe_antchovy.tex",
-        prefab         = "agedroe_antchovy",
-		healthvalue    = 5,
-		hungervalue    = 10,
-		sanityvalue    = 5,
-        perishable     = 9600,
-        foodtype       = "MEAT",
-		burnable       = true,
-		stacksize      = 40,
-		bank           = "kyno_foodrecipes",
-		build          = "kyno_foodrecipes_jar1",
-		overridesymbol = {"swap_food", "kyno_foodrecipes_jar1", "agedroe_antchovy"},
-		anim           = "agedroe_antchovy",
-		animoffsetx    = 12,
-		animoffsety    = 8,
-		animoffsetbgx  = -20,
-		animoffsetbgy  = -130,
-		deps           = {"kyno_preservesjar", "kyno_roe_antchovy", "spoiled_food"},
 	},
 	
 	agedroe_swordfish_blue =

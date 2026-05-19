@@ -1093,9 +1093,6 @@ WARLY.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Nothing left to sustain them.",
 }
 
-WARLY.DESCRIBE.KYNO_ANTCHOVY = "Hmm... crunchy yet salty, perhaps? Très bizarre!"
-WARLY.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "A buffet of confusion, non?"
-
 WARLY.DESCRIBE.AGEDROE = "Eat it with a clamshell or the flavor will be ruined."
 WARLY.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Aged to perfection. A true delicacy!"
 

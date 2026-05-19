@@ -1093,9 +1093,6 @@ WOODIE.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Brak karmy.",
 }
 
-WOODIE.DESCRIBE.KYNO_ANTCHOVY = "To dopiero połów, co? Byle nie gryzł moich bali."
-WOODIE.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Cały rój, co? Lepiej przygotuj sieć."
-
 WOODIE.DESCRIBE.AGEDROE = "Uff, ale słone!"
 WOODIE.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Trochę śliskie, ale eleganccy ludzie to lubią, co?"
 

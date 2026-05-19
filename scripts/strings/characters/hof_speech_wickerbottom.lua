@@ -1093,9 +1093,6 @@ WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "The feed supply is exhausted.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY = "A most peculiar arthropod-piscine specimen!"
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "A rare congregation of cross-species schooling behavior!"
-
 WICKERBOTTOM.DESCRIBE.AGEDROE = "Differentiated from roe chiefly by the jar."
 WICKERBOTTOM.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "A delicacy of preserved sturgeon roe. Exquisite."
 

@@ -1093,9 +1093,6 @@ WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Sem comida para peixes.",
 }
 
-WOLFGANG.DESCRIBE.KYNO_ANTCHOVY = "Peixe-inseto pequenino! Wolfgang não sabe se come ou corre!"
-WOLFGANG.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Muitos peixinhos-insetos! Wolfgang deve esmagar?"
-
 WOLFGANG.DESCRIBE.AGEDROE = "Ovinhos pequenos fazem Wolfgang se sentir importante!"
 WOLFGANG.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Ovos minúsculos fazem Wolfgang se sentir grande e chique!"
 

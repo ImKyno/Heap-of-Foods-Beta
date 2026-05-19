@@ -1093,9 +1093,6 @@ WINONA.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Seco até o osso.",
 }
 
-WINONA.DESCRIBE.KYNO_ANTCHOVY = "Agora isso é uma mistura bem estranha!"
-WINONA.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Parece um caos ambulante pra eu consertar!"
-
 WINONA.DESCRIBE.AGEDROE = "Parece sofisticado, mas ainda são ovos de peixe."
 WINONA.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Acho que é isso que os ricos chamam de jantar."
 

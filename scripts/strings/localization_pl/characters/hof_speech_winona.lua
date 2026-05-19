@@ -1093,9 +1093,6 @@ WINONA.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Kompletnie wyschnięte.",
 }
 
-WINONA.DESCRIBE.KYNO_ANTCHOVY = "Ależ dziwaczne skrzyżowanie gatunków!"
-WINONA.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Wygląda jak ruszający się bałagan do naprawy!"
-
 WINONA.DESCRIBE.AGEDROE = "Wygląda luksusowo, ale to wciąż jajka ryb."
 WINONA.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Chyba tak wygląda kolacja dla bogaczy."
 

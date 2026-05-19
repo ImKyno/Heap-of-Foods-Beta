@@ -1093,9 +1093,6 @@ WALTER.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Acho que eles comeram tudo.",
 }
 
-WALTER.DESCRIBE.KYNO_ANTCHOVY = "Uma nova espécie! Espere até a Woby ver isso!"
-WALTER.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Ficam juntinhas... como formigas! Ou peixes!"
-
 WALTER.DESCRIBE.AGEDROE = "Ah, ovos de peixe..."
 WALTER.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Então é assim que o caviar tem gosto... legal!"
 

@@ -1093,9 +1093,6 @@ WENDY.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Só o vazio permanece.",
 }
 
-WENDY.DESCRIBE.KYNO_ANTCHOVY = "Meio peixe, meio formiga... uma vida de confusão e sofrimento."
-WENDY.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Uma massa vibrante de miséria."
-
 WENDY.DESCRIBE.AGEDROE = "Tomei suas vidas para sustentar a minha."
 WENDY.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Vida vinda da morte... que ironia deliciosa."
 

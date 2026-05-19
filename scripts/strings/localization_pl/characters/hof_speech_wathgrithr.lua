@@ -1093,9 +1093,6 @@ WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Nie ma już jedzenia!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_ANTCHOVY = "Pół owad, pół ryba! Podwójna uczta!"
-WATHGRITHR.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Ławica godna mojej włóczni!"
-
 WATHGRITHR.DESCRIBE.AGEDROE = "Wolałabym całą rybę!"
 WATHGRITHR.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Jajka potężnych bestii morskich! Przekąska wojowniczki!"
 

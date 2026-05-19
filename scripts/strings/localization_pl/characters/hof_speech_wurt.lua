@@ -1095,9 +1095,6 @@ WURT.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Rybki głodne!",
 }
 
-WURT.DESCRIBE.KYNO_ANTCHOVY = "Glurp! Rybi zapach... dziwny..."
-WURT.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Glurgh! Za dużo rybich przyjaciół naraz!"
-
 WURT.DESCRIBE.AGEDROE = "Nieeeeeee!"
 WURT.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Dlaczego jesz rybie dzieci, florp?!"
 

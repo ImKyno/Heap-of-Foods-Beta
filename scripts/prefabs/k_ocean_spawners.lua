@@ -1,16 +1,13 @@
 require("worldsettingsutil")
 
 local assets =
-{	
-	Asset("ANIM", "anim/kyno_antchovy_ocean.zip"),
-
+{
 	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 }
 
 local prefabs =
 {
-	"kyno_antchovy",
 	"kyno_jellyfish_ocean",
 	"kyno_jellyfish_rainbow_ocean",
 }
@@ -221,98 +218,8 @@ local function puffermonsterfn()
     return inst
 end
 
--- FUCK. I need to use the cursed fishable component because antchovy unique component does not work
--- because its unfinished and I will not try to mess with it. Yeah you gonna usa regular rod on ocean.
-local antchovy_defs = 
-{
-	mouseover = { { 0, 0, 0 } },
-}
-
-local function antchovyfn()
-	local inst = CreateEntity()
-	
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddNetwork()
-	
-	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("kyno_antchovy_ocean.tex")
-	minimap:SetPriority(-5)
-	
-	inst:SetPhysicsRadiusOverride(6)
-	
-	inst.AnimState:SetMultColour(.5, .5, .5, 1)
-	
-	inst.AnimState:SetBank("kyno_antchovy_ocean")
-	inst.AnimState:SetBuild("kyno_antchovy_ocean")
-	inst.AnimState:PlayAnimation("group_pre")
-	inst.AnimState:PushAnimation(math.random() < .5 and "group_loop1" or "group_loop2")
-	inst.AnimState:SetLayer(LAYER_BACKGROUND)
-	inst.AnimState:SetSortOrder(1)
-	
-	inst:AddTag("NOBLOCK")
-	inst:AddTag("antchovyspawner")
-	inst:AddTag("ignorewalkableplatforms")
-	inst:AddTag("birdblocker")
-	
-	inst.no_wet_prefix = true
-	
-	inst.entity:SetPristine()
-
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
-	local decor_items = antchovy_defs
-	inst.decor = {}
-	
-	for item_name, data in pairs(decor_items) do
-		for i, offset in pairs(data) do
-			local item_inst = SpawnPrefab("kyno_antchovy_mouseover")
-			item_inst.AnimState:PushAnimation("mouseover")
-			item_inst.entity:SetParent(inst.entity)
-			item_inst.Transform:SetPosition(offset[1], offset[2], offset[3])
-			table.insert(inst.decor, item_inst)
-		end
-	end
-	
-	inst:AddComponent("fishable")
-	inst.components.fishable:AddFish("kyno_antchovy")
-	inst.components.fishable.maxfish = TUNING.KYNO_ANTCHOVY_MAX_FISH
-	inst.components.fishable:SetRespawnTime(TUNING.KYNO_ANTCHOVY_REGROW_TIME)
-	
-	return inst
-end
-
-local function mouseoverfn()
-	local inst = CreateEntity()
-	
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddNetwork()
-	
-	inst.AnimState:SetMultColour(1, 1, 1, 0)
-	
-	inst.AnimState:SetBank("kyno_antchovy_ocean")
-	inst.AnimState:SetBuild("kyno_antchovy_ocean")
-	inst.AnimState:PlayAnimation("mouseover")
-	inst.AnimState:SetLayer(LAYER_BACKGROUND)
-	
-	inst:AddTag("FX")
-	
-	inst.entity:SetPristine()
-
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
-	return inst
-end
-
 return Prefab("kyno_jellyfish_spawner", jellyfishfn, assets, prefabs),
 Prefab("kyno_jellyfish_rainbow_spawner", jellyfishrainbowfn, assets, prefabs),
 Prefab("kyno_swordfish_spawner", swordfishfn, assets, prefabs),
 Prefab("kyno_puffermonster_spawner", puffermonsterfn, assets, prefabs),
-Prefab("kyno_dogfish_spawner", dogfishfn, assets, prefabs),
-Prefab("kyno_antchovy_spawner", antchovyfn, assets, prefabs),
-Prefab("kyno_antchovy_mouseover", mouseoverfn, assets)
+Prefab("kyno_dogfish_spawner", dogfishfn, assets, prefabs)

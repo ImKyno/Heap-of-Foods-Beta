@@ -234,13 +234,6 @@ local RoomPrefabs =
 		"PondyGrass",
 	},
 	
-	kyno_antchovy_spawner =
-	{
-		"OceanCoastal",
-		"OceanSwell",
-		"OceanRough",
-	},
-	
 	kyno_jellyfish_spawner =
 	{
 		"OceanCoastal",
@@ -279,7 +272,6 @@ local PrefabValues =
 	["kyno_wildwheat"]                 = .04,
 	["kyno_truffles_ground"]           = .2,  -- Want truffles to be slightly rare and be like cacti.
 	["kyno_radish_ground"]             = .7,
-	["kyno_antchovy_spawner"]          = .1,
 	["kyno_jellyfish_spawner"]         = .09,
 	["kyno_jellyfish_rainbow_spawner"] = .09,
 	["kyno_dogfish_spawner"]           = .1,

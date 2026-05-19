@@ -693,24 +693,6 @@ FISHREGISTRY_FISH_DEFS.kyno_salmonfish =
 	worlds           = ALL_WORLDS,
 }
 
-FISHREGISTRY_FISH_DEFS.kyno_antchovy =
-{
-	name             = "KYNO_ANTCHOVY",
-
-	bank             = "kyno_antchovy",
-	build            = "kyno_antchovy",
-	anim             = "idle",
-	
-	scale            = 0.40,
-	xpos             = 0,
-	ypos             = 50,
-
-	phases           = ALL_PHASES,
-	moonphases       = ALL_MOONPHASES,
-	seasons          = ALL_SEASONS,
-	worlds           = ALL_WORLDS,
-}
-
 FISHREGISTRY_FISH_DEFS.kyno_jellyfish =
 {
 	name             = "KYNO_JELLYFISH",
@@ -813,7 +795,6 @@ local FISH_SORT_ORDER =
 	"kyno_grouper",
 	"kyno_koi",
 	"kyno_salmonfish",
-	"kyno_antchovy",
 	"kyno_jellyfish",
 	"kyno_jellyfish_rainbow",
 	"kyno_swordfish_blue",
@@ -1180,17 +1161,6 @@ FISHREGISTRY_ROE_DEFS.kyno_roe_salmonfish =
 	roe_string  = STRINGS.FISHREGISTRY.ROE_TIME_ONE_HALF_DAY,
 }
 
-FISHREGISTRY_ROE_DEFS.kyno_roe_antchovy =
-{
-	name        = "KYNO_ROE_ANTCHOVY",
-	
-	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
-	image       = "kyno_roe_antchovy",
-	
-	roe_time    = TUNING.ANTCHOVY_ROETIME,
-	baby_time   = TUNING.ANTCHOVY_BABYTIME,
-}
-
 FISHREGISTRY_ROE_DEFS.kyno_roe_jellyfish =
 {
 	name        = "KYNO_ROE_JELLYFISH",
@@ -1274,7 +1244,6 @@ local ROE_SORT_ORDER =
 	"kyno_roe_grouper",
 	"kyno_roe_koi",
 	"kyno_roe_salmonfish",
-	"kyno_roe_antchovy",
 	"kyno_roe_jellyfish",
 	"kyno_roe_jellyfish_rainbow",
 	"kyno_roe_swordfish_blue",

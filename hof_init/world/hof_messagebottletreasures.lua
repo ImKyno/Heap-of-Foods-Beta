@@ -93,7 +93,6 @@ local hof_presets =
 			kyno_meatcan = 1, 
 			kyno_beancan = 1,
 			kyno_tunacan = 1,
-			kyno_antchovycan = 1,
 		},
 	
 		randomly_selected_loot =

@@ -1093,9 +1093,6 @@ WANDA.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Puste, dokładnie tak, jak przewidywano.",
 }
 
-WANDA.DESCRIBE.KYNO_ANTCHOVY = "Nie mam czasu na klasyfikowanie rybo-owadów!"
-WANDA.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Kolejna dziwaczność, której nie mam czasu badać."
-
 WANDA.DESCRIBE.AGEDROE = "Pierwszy raz to widzę."
 WANDA.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Dojrzał idealnie... świetna nagroda za mój czas."
 

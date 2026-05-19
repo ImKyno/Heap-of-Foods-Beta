@@ -1093,9 +1093,6 @@ WILLOW.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Não sobrou nada pra eles.",
 }
 
-WILLOW.DESCRIBE.KYNO_ANTCHOVY = "Eca! Cheira a peixe queimado e tripas de inseto!"
-WILLOW.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Ugh, insetos e peixes por toda parte!"
-
 WILLOW.DESCRIBE.AGEDROE = "Ovos de peixe num pote. Maravilha..."
 WILLOW.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Eca, ovos de peixe velhos. Por que os ricos comem isso?"
 

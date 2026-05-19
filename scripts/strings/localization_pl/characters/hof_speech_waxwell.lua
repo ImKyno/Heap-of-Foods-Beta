@@ -1093,9 +1093,6 @@ WAXWELL.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Całkowicie wyczerpane.",
 }
 
-WAXWELL.DESCRIBE.KYNO_ANTCHOVY = "Jakie groteskowe eksperymenty stworzyły to coś?"
-WAXWELL.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Małe potworki natury znów się zebrały."
-
 WAXWELL.DESCRIBE.AGEDROE = "Posiłek godny mojego statusu."
 WAXWELL.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Ach, smak wyrafinowania... nareszcie."
 

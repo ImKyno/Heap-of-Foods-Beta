@@ -508,38 +508,6 @@ AddComponentPostInit("fishingrod", function(self)
 	end
 end)
 
--- Antchovy special case that don't let them sink right after catching it.
-AddComponentPostInit("fishingrod", function(self)
-	local oldReel = self.Reel
-
-	function self:Reel(...)
-		local ret = {oldReel(self, ...)}
-
-		if self.caughtfish ~= nil and self.fisherman ~= nil and self.fisherman.components.inventory ~= nil then
-			local fish = self.caughtfish
-
-			if fish:HasTag("antchovy") and fish.components.inventoryitem ~= nil then
-				fish.components.inventoryitem:SetSinks(false)
-
-				if self.fisherman.components.inventory:GiveItem(fish, nil, self.fisherman:GetPosition()) then
-					fish:DoTaskInTime(3, function(f)
-						if f:IsValid() and f.components.inventoryitem ~= nil then
-							f.components.inventoryitem:SetSinks(true)
-							f:AddTag("antchovy_sinkable")
-						end
-					end)
-				else
-					fish.Transform:SetPosition(self.fisherman.Transform:GetWorldPosition())
-					fish.components.inventoryitem:SetSinks(true)
-					fish:AddTag("antchovy_sinkable")
-				end
-			end
-		end
-
-		return unpack(ret)
-	end
-end)
-
 -- For trading and learning Recipe Cards.
 local function CookingRecipeCardPostInit(inst)
 	inst:AddTag("learnablerecipecard")

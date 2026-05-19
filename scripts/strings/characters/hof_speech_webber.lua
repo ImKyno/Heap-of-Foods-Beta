@@ -1093,9 +1093,6 @@ WEBBER.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Uh-oh, no more food.",
 }
 
-WEBBER.DESCRIBE.KYNO_ANTCHOVY = "We can't tell if it belongs on land or in water!"
-WEBBER.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "They're everywhere! So wiggly!"
-
 WEBBER.DESCRIBE.AGEDROE = "So fancy!"
 WEBBER.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "They're so tiny! Can we really eat these?"
 

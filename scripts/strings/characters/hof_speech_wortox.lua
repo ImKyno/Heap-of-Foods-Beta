@@ -1093,9 +1093,6 @@ WORTOX.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "No more fish snacks, need to replenish it.",
 }
 
-WORTOX.DESCRIBE.KYNO_ANTCHOVY = "It wriggles and wiggles in two worlds! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "A merry swarm of mixy fishy bugs!"
-
 WORTOX.DESCRIBE.AGEDROE = "Snooty fish eggs!"
 WORTOX.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Little pearls of ocean delight, hyuyu!"
 

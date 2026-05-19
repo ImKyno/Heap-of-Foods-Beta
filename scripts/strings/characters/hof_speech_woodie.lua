@@ -1093,9 +1093,6 @@ WOODIE.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "All outta feed.",
 }
 
-WOODIE.DESCRIBE.KYNO_ANTCHOVY = "Now that's a catch, eh? Don't bite my logs though."
-WOODIE.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "That's a whole swarm, eh? Keep yer nets ready."
-
 WOODIE.DESCRIBE.AGEDROE = "Whew, that's salty."
 WOODIE.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Kinda slimy, but fancy folk love it, eh?"
 

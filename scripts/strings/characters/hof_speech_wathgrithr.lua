@@ -1093,9 +1093,6 @@ WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "No food remains!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_ANTCHOVY = "Tis half bug, half fish! Twice the feast!"
-WATHGRITHR.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "A school worthy of my spear!"
-
 WATHGRITHR.DESCRIBE.AGEDROE = "I would have rathered the fish."
 WATHGRITHR.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "The eggs of mighty sea beasts! A warrior's snack!"
 

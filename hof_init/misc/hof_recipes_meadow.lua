@@ -430,22 +430,6 @@ AddRecipe2("meadowislandtrader_kyno_bottlecap", {Ingredient("gears", 1)}, TECH.L
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_kyno_antchovycan", {Ingredient("smallmeat", 1)}, TECH.LOST,
-	{
-		limitedamount       = true, 
-		nounlock            = true, 
-		no_deconstruction   = true,
-		hint_msg            = "NEEDSMEADOWSHOP",
-		actionstr           = "MEADOWSHOP",
-		description         = "kyno_antchovycan_m",
-		sg_state            = "give", 
-		product             = "kyno_antchovycan",
-		atlas               = ModAtlas,
-		image               = "kyno_antchovycan.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-
 AddRecipe2("meadowislandtrader_kyno_tunacan", {Ingredient("meat", 1)}, TECH.LOST,
 	{
 		limitedamount       = true, 

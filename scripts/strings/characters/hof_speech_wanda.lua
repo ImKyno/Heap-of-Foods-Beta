@@ -1093,9 +1093,6 @@ WANDA.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Empty, exactly as predicted.",
 }
 
-WANDA.DESCRIBE.KYNO_ANTCHOVY = "I don't have time to classify hybrid fish-insects!"
-WANDA.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Another oddity I don't have time to study."
-
 WANDA.DESCRIBE.AGEDROE = "It's my first time seeing this."
 WANDA.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Aged just right... a fine reward for my time."
 

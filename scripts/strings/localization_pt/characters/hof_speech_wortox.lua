@@ -1093,9 +1093,6 @@ WORTOX.DESCRIBE.KYNO_FISHFARMPLOT =
 	EMPTY = "Sem petiscos de peixe, precisa reabastecer.",
 }
 
-WORTOX.DESCRIBE.KYNO_ANTCHOVY = "Ele se contorce entre dois mundos! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Um alegre enxame de peixes e insetos! Hyuyu!"
-
 WORTOX.DESCRIBE.AGEDROE = "Ovos de peixe metidos à besta! Hyuyu!"
 WORTOX.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Pequenas pérolas de prazer oceânico, hyuyu!"
 
