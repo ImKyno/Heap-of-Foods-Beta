@@ -963,7 +963,16 @@ function c_hofdailyrecipe()
 	local player = ConsoleCommandPlayer()
 
 	if player ~= nil then
-		TheNet:Announce("Recipe of the Day: "..TheWorld.net.components.dailyrecipe:GetDailyRecipeName()) 
+		TheNet:Announce("Recipe of the Day: "..TheWorld.net.components.dailyrecipe:GetDailyRecipeName())
+	end
+end
+
+function c_hofdailyrecipetimeleft()
+	local player = ConsoleCommandPlayer()
+
+	if player ~= nil then
+		local timeleft = TheWorld.net.components.dailyrecipe.GetDailyRecipeTimeLeft()
+		TheNet:Announce(string.format("Next Daily Recipe available in: %s", timeleft))
 	end
 end
 

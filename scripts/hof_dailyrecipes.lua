@@ -170,15 +170,28 @@ local function GetDailyRecipePrefab()
 	return string.format("%s [%s]", name, recipe)
 end
 
+local function GetDailyRecipeTimeLeft()
+	local current_time = os.time()
+
+	local elapsed = current_time % ROTATION_SECONDS
+	local remaining = ROTATION_SECONDS - elapsed
+
+	if remaining >= ROTATION_SECONDS then
+		remaining = 0
+	end
+
+	local hours = math.floor(remaining / 3600)
+	local minutes = math.floor((remaining % 3600) / 60)
+	local seconds = remaining % 60
+
+	return string.format("%02d:%02d:%02d", hours, minutes, seconds)
+end
+
 local function GetDailyRecipeDef(prefab)
 	if cooking ~= nil and cooking.cookbook_recipes ~= nil then
 		for category, list in pairs(cooking.cookbook_recipes) do
 			if list[prefab] ~= nil then
-				return {
-					def      = list[prefab],
-					system   = "cooking",
-					category = category
-				}
+				return { def = list[prefab], system = "cooking", category = category }
 			end
 		end
 	end
@@ -186,11 +199,7 @@ local function GetDailyRecipeDef(prefab)
 	if brewing ~= nil and brewing.brewbook_recipes ~= nil then
 		for category, list in pairs(brewing.brewbook_recipes) do
 			if list[prefab] ~= nil then
-				return {
-					def      = list[prefab],
-					system   = "brewing",
-					category = category
-				}
+				return { def = list[prefab], system = "brewing", category = category }
 			end
 		end
 	end
@@ -238,8 +247,9 @@ end
 
 return 
 {
-	GetDailyRecipe       = GetDailyRecipe,
-	GetDailyRecipeName   = GetDailyRecipeName,
-	GetDailyRecipePrefab = GetDailyRecipePrefab,
-	GetDailyRecipeData   = GetDailyRecipeData,
+	GetDailyRecipe         = GetDailyRecipe,
+	GetDailyRecipeName     = GetDailyRecipeName,
+	GetDailyRecipePrefab   = GetDailyRecipePrefab,
+	GetDailyRecipeTimeLeft = GetDailyRecipeTimeLeft,
+	GetDailyRecipeData     = GetDailyRecipeData,
 }

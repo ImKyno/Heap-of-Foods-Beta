@@ -45,7 +45,7 @@ end
 local function OnPicked(inst, picker)
 	inst.AnimState:PlayAnimation("pick")
 
-	inst:ListenForEvent("animover", function()
+	inst:DoTaskInTime(0.1, function()
 		inst.AnimState:HideSymbol("card")
 	end)
 
@@ -65,7 +65,7 @@ local function OnPicked(inst, picker)
 end
 
 local function OnRegen(inst)
-	inst.AnimState:PlayAnimation("pick")
+	inst.AnimState:PlayAnimation("hit")
 	inst.AnimState:ShowSymbol("card")
 
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/harvest_sticks")
@@ -93,14 +93,6 @@ local function UpdateState(inst)
 	end
 end
 
-local function OnActivate(inst, doer)
-	if doer ~= nil and doer:HasTag("player") then
-		doer:ShowPopUp(POPUPS.DAILYRECIPECARD, true)
-	end
-
-	UpdateState(inst)
-end
-
 local function UpdateRecipeSymbol(inst, data)
 	local dailyrecipe = TheWorld.net.components.dailyrecipe
 	local product = dailyrecipe ~= nil and dailyrecipe:GetDailyRecipe()
@@ -115,6 +107,14 @@ local function UpdateRecipeSymbol(inst, data)
 	end
 
 	inst.SoundEmitter:PlaySound("dontstarve/common/together/draw")
+end
+
+local function OnActivate(inst, doer)
+	if doer ~= nil and doer:HasTag("player") then
+		doer:ShowPopUp(POPUPS.DAILYRECIPECARD, true)
+	end
+
+	UpdateState(inst)
 end
 
 local function OnBuilt(inst, data)
@@ -144,6 +144,11 @@ local function GetDescription(inst, viewer)
 end
 
 local function OnEntityWake(inst)
+	UpdateState(inst)
+	UpdateRecipeSymbol(inst)
+end
+
+local function OnEntitySleep(inst)
 	UpdateState(inst)
 	UpdateRecipeSymbol(inst)
 end
@@ -211,19 +216,30 @@ local function fn()
 
 	inst:ListenForEvent("onbuilt", OnBuilt)
 	inst:ListenForEvent("dailyrecipechanged", function(_, data)
-		if inst.components.pickable ~= nil then
-			inst.components.pickable:Regen()
+		local recipe_old = data ~= nil and data.old or nil
+		local recipe_new = data ~= nil and data.new or nil
+
+		if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
+			print("Heap of Foods Mod - Daily Recipe Board: Old Recipe", recipe_old)
+			print("Heap of Foods Mod - Daily Recipe Board: New Recipe", recipe_new)
 		end
 
+		if recipe_old ~= nil and recipe_new ~= nil and recipe_new ~= recipe_old then
+			if inst.components.pickable ~= nil then
+				inst.components.pickable:Regen()
+			end
+		end
+		
 		UpdateState(inst)
 		UpdateRecipeSymbol(inst, data) -- data comes from TheWorld.
 	end, TheWorld.net)
 
+	inst.OnEntityWake = OnEntityWake
+	inst.OnEntitySleep = OnEntitySleep
+	inst.OnLoad = OnLoad
+
 	MakeSnowCovered(inst)
 	SetLunarHailBuildupAmountSmall(inst)
-
-	inst.OnEntityWake = OnEntityWake
-	inst.OnLoad = OnLoad
 
 	return inst
 end
