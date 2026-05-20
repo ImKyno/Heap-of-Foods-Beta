@@ -142,15 +142,24 @@ for k, v in pairs(fishroes) do
 end
 
 -- Import the Beverages.
-local brewer_jar   = {"kyno_preservesjar"}
-local brewer_keg   = {"kyno_woodenkeg"}
+local brewer_jar    = {"kyno_preservesjar"}
+local brewer_keg    = {"kyno_woodenkeg"}
+local brewer_warly  = {"kyno_portablebrewer"}
 
-local jar_recipes  = require("hof_brewrecipes_jar")
-local keg_recipes  = require("hof_brewrecipes_keg")
-local recipe_cards = require("hof_brewing").recipe_cards
+local jar_recipes   = require("hof_brewrecipes_jar")
+local keg_recipes   = require("hof_brewrecipes_keg")
+-- local warly_recipes = require("hof_brewrecipes_warly")
+local recipe_cards  = require("hof_brewing").recipe_cards
 
-for _, brewer in pairs(brewer_jar)  do for _, recipe in pairs(jar_recipes) do AddBrewerRecipe(brewer, recipe) end end
-for _, brewer in pairs(brewer_keg)  do for _, recipe in pairs(keg_recipes) do AddBrewerRecipe(brewer, recipe) end end
+for _, brewer in pairs(brewer_jar)    do for _, recipe in pairs(jar_recipes)   do AddBrewerRecipe(brewer, recipe) end end
+for _, brewer in pairs(brewer_keg)    do for _, recipe in pairs(keg_recipes)   do AddBrewerRecipe(brewer, recipe) end end
 
-for _, recipe in pairs(jar_recipes) do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_preservesjar"}) end end
-for _, recipe in pairs(keg_recipes) do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_woodenkeg"}) end end
+-- Portable Brewer.
+-- for _, brewer in pairs(brewer_warly) do for _, recipe in pairs(warly_recipes) do AddBrewerRecipe(brewer, recipe) end end
+for _, brewer in pairs(brewer_warly)  do for _, recipe in pairs(jar_recipes)   do AddBrewerRecipe(brewer, recipe) end end
+for _, brewer in pairs(brewer_warly)  do for _, recipe in pairs(keg_recipes)   do AddBrewerRecipe(brewer, recipe) end end
+
+-- Brewing Recipe Cards.
+for _, recipe in pairs(jar_recipes)   do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_preservesjar"})   end end
+for _, recipe in pairs(keg_recipes)   do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_woodenkeg"})      end end
+-- for _, recipe in pairs(warly_recipes) do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_portablebrewer"}) end end

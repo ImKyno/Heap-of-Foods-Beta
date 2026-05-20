@@ -5,11 +5,10 @@ local TOTAL_BREWING_TIME = TUNING.TOTAL_DAY_TIME -- 480
 
 local assets =
 {
-	Asset("ANIM", "anim/cook_pot_food.zip"),
 	Asset("ANIM", "anim/ui_brewer_1x3.zip"),
 
-	Asset("ANIM", "anim/kyno_brewers_keg.zip"),
-	Asset("ANIM", "anim/kyno_brewers_jar.zip"),
+	Asset("ANIM", "anim/portable_cook_pot.zip"),
+	Asset("ANIM", "anim/cook_pot_food.zip"),
 
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -21,13 +20,20 @@ local assets =
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
 
+local assets_item =
+{
+	Asset("ANIM", "anim/portable_cook_pot.zip"),
+}
+
 local prefabs =
 {
 	"collapse_small",
-	"wetgoop",
-	"wetgoop2",
+	"kyno_portablebrewer_item",
+}
 
-	"kyno_product_bubble",
+local prefabs_item =
+{
+	"kyno_portablebrewer",
 }
 
 for k, v in pairs(brewing.recipes.kyno_woodenkeg) do
@@ -38,49 +44,61 @@ for k, v in pairs(brewing.recipes.kyno_preservesjar) do
 	table.insert(prefabs, v.name)
 end
 
-local function OnHammered(inst, worker)
-	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
-		inst.components.burnable:Extinguish()
-	end
-
-	if not inst:HasTag("burnt") then
-		if inst.components.brewer ~= nil and inst.components.brewer.product ~= nil and inst.components.brewer:IsDone() then
-			inst.components.brewer:Harvest()
-		end
+local function OnChangeToItem(inst)
+	if inst.components.brewer.product ~= nil and inst.components.brewer:IsDone() then
+		inst.components.brewer:Harvest()
 	end
 
 	if inst.components.container ~= nil then
 		inst.components.container:DropEverything()
 	end
 
-	if inst.components.lootdropper ~= nil then
-		inst.components.lootdropper:DropLoot()
+	local item = SpawnPrefab("kyno_portablebrewer_item")
+	item.Transform:SetPosition(inst.Transform:GetWorldPosition())
+
+	item.AnimState:PlayAnimation("collapse")
+	item.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_destroy")
+end
+
+local function OnHammered(inst)
+	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
+		inst.components.burnable:Extinguish()
 	end
 
-	local fx = SpawnPrefab("collapse_small")
-	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
-
-	inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_destroy")
+	if inst:HasTag("burnt") then
+		inst.components.lootdropper:SpawnLootPrefab("ash")
+		local fx = SpawnPrefab("collapse_small")
+		fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		fx:SetMaterial("metal")
+	else
+		OnChangeToItem(inst)
+	end
 
 	inst:Remove()
 end
 
-local function OnHit(inst, worker)
+local function OnHit(inst)
 	if not inst:HasTag("burnt") then
 		if inst.components.brewer ~= nil then
 			if inst.components.brewer:IsCooking() then
-				inst.AnimState:PlayAnimation("hit")
-				inst.AnimState:PushAnimation("brew_loop", true)
+				-- inst.AnimState:PlayAnimation("hit")
+				-- inst.AnimState:PushAnimation("brew_loop", true)
+				inst.AnimState:PlayAnimation("hit_cooking")
+				inst.AnimState:PushAnimation("cooking_loop", true)
 			elseif inst.components.brewer:IsDone() then
-				inst.AnimState:PlayAnimation("hit")
-				inst.AnimState:PushAnimation("idle", true)
+				-- inst.AnimState:PlayAnimation("hit")
+				-- inst.AnimState:PushAnimation("idle", true)
+				inst.AnimState:PlayAnimation("hit_full")
+				inst.AnimState:PushAnimation("idle_full", false)
 			else
 				if inst.components.container ~= nil and inst.components.container:IsOpen() then
 					inst.components.container:Close()
 				end
 
-				inst.AnimState:PlayAnimation("hit")
-				inst.AnimState:PushAnimation("idle", true)
+				-- inst.AnimState:PlayAnimation("hit")
+				-- inst.AnimState:PushAnimation("idle", true)
+				inst.AnimState:PlayAnimation("hit_empty")
+				inst.AnimState:PushAnimation("idle_empty", false)
 			end
 		end
 	end
@@ -89,10 +107,12 @@ end
 local function StartCookFn(inst)
 	if not inst:HasTag("burnt") then
 		if inst.components.container ~= nil and inst.components.container:IsOpen() then
-			inst.AnimState:PlayAnimation("close")
-			inst.AnimState:PushAnimation("brew_loop", true)
+			-- inst.AnimState:PlayAnimation("close")
+			-- inst.AnimState:PushAnimation("brew_loop", true)
+			inst.AnimState:PlayAnimation("cooking_loop", true)
 		else
-			inst.AnimState:PushAnimation("brew_loop", true)
+			-- inst.AnimState:PushAnimation("brew_loop", true)
+			inst.AnimState:PlayAnimation("cooking_loop", true)
 		end
 
 		inst.SoundEmitter:KillSound("brew_loop")
@@ -102,8 +122,9 @@ end
 
 local function OnOpen(inst)
 	if not inst:HasTag("burnt") then
-		inst.AnimState:PlayAnimation("open")
-		inst.AnimState:PushAnimation("idle_open", true)
+		-- inst.AnimState:PlayAnimation("open")
+		-- inst.AnimState:PushAnimation("idle_open", true)
+		inst.AnimState:PlayAnimation("cooking_pre_loop")
 
 		inst.SoundEmitter:KillSound("brew_loop")
 		inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
@@ -113,7 +134,8 @@ end
 local function OnClose(inst)
 	if not inst:HasTag("burnt") then
 		if not inst.components.brewer:IsCooking() then
-			inst.AnimState:PlayAnimation("close")
+			-- inst.AnimState:PlayAnimation("close")
+			inst.AnimState:PlayAnimation("idle_empty")
 			inst.SoundEmitter:KillSound("brew_loop")
 		end
 
@@ -152,16 +174,16 @@ local function DoneCookFn(inst, product)
 
 		inst.AnimState:ShowSymbol("goop")
 
-		local brewer = (inst:HasTag("woodenkeg") and "kyno_brewers_keg") or "kyno_brewers_jar"
 		local recipe = inst.components.brewer ~= nil and inst.components.brewer.product
 
 		if recipe ~= nil and recipe == "wetgoop2" then
-			inst.AnimState:OverrideSymbol("goop", brewer, "goop_spoiled")
+			inst.AnimState:OverrideSymbol("goop", "portable_cook_pot", "goop_spoiled")
 		else
-			inst.AnimState:OverrideSymbol("goop", brewer, "goop")
+			inst.AnimState:OverrideSymbol("goop", "portable_cook_pot", "goop")
 		end
 
-		inst.AnimState:PlayAnimation("idle", true)
+		-- inst.AnimState:PlayAnimation("idle", true)
+		inst.AnimState:PushAnimation("idle_full", false)
 
 		inst.SoundEmitter:KillSound("brew_loop")
 		inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_harvest")
@@ -174,22 +196,23 @@ local function ContinueDoneFn(inst, product)
 
 		inst.AnimState:ShowSymbol("goop")
 
-		local brewer = (inst:HasTag("woodenkeg") and "kyno_brewers_keg") or "kyno_brewers_jar"
 		local recipe = inst.components.brewer ~= nil and inst.components.brewer.product
 
 		if recipe ~= nil and recipe == "wetgoop2" then
-			inst.AnimState:OverrideSymbol("goop", brewer, "goop_spoiled")
+			inst.AnimState:OverrideSymbol("goop", "portable_cook_pot", "goop_spoiled")
 		else
-			inst.AnimState:OverrideSymbol("goop", brewer, "goop")
+			inst.AnimState:OverrideSymbol("goop", "portable_cook_pot", "goop")
 		end
 
-		inst.AnimState:PlayAnimation("idle", true)
+		-- inst.AnimState:PlayAnimation("idle", true)
+		inst.AnimState:PushAnimation("idle_full", false)
 	end
 end
 
 local function ContinueCookFn(inst)
 	if not inst:HasTag("burnt") then
-		inst.AnimState:PlayAnimation("brew_loop", true)
+		-- inst.AnimState:PlayAnimation("brew_loop", true)
+		inst.AnimState:PlayAnimation("cooking_loop", true)
 
 		inst.SoundEmitter:KillSound("brew_loop")
 		inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_loop", "brew_loop")
@@ -198,23 +221,60 @@ end
 
 local function HarvestFn(inst, harvester)
 	if not inst:HasTag("burnt") then
-		inst.AnimState:PlayAnimation("idle", true)
+		-- inst.AnimState:PlayAnimation("idle", true)
+		inst.AnimState:PlayAnimation("idle_empty")
 		inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
 	end
 
 	HideProductImage(inst)
 end
 
-local function OnBuilt(inst)
-	inst.AnimState:PlayAnimation("place")
-	inst.AnimState:PushAnimation("idle", true)
-
-	inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
-end
-
 local function OnBurnt(inst)
+	DefaultBurntStructureFn(inst)
+	RemovePhysicsColliders(inst)
+
+	SpawnPrefab("ash").Transform:SetPosition(inst.Transform:GetWorldPosition())
+
 	HideProductImage(inst)
 	inst.SoundEmitter:KillSound("brew_loop")
+
+	if inst.components.workable ~= nil then
+		inst:RemoveComponent("workable")
+	end
+
+	if inst.components.portablestructure ~= nil then
+		inst:RemoveComponent("portablestructure")
+	end
+
+	inst.persists = false
+
+	inst:AddTag("FX")
+	inst:AddTag("NOCLICK")
+
+	inst:ListenForEvent("animover", ErodeAway)
+	inst.AnimState:PlayAnimation("burnt_collapse")
+end
+
+local function OnDismantle(inst)
+	OnChangeToItem(inst)
+	inst:Remove()
+end
+
+local function OnDeploy(inst, pt, deployer)
+	local brewer = SpawnPrefab("kyno_portablebrewer")
+	
+	if brewer ~= nil then
+		brewer.Physics:SetCollides(false)
+		brewer.Physics:Teleport(pt.x, 0, pt.z)
+		brewer.Physics:SetCollides(true)
+
+		brewer.AnimState:PlayAnimation("place")
+		brewer.AnimState:PushAnimation("idle_empty", false)
+		brewer.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
+
+		inst:Remove()
+		PreventCharacterCollisionsWithPlacedObjects(brewer)
+	end
 end
 
 local function GetStatus(inst, viewer)
@@ -241,16 +301,7 @@ local function OnLoad(inst, data)
 	end
 end
 
-local function OnLoadPostPass(inst, newents, data)
-	if data and data.additems and inst.components.container ~= nil then
-		for i, itemname in ipairs(data.additems) do
-			local ent = SpawnPrefab(itemname)
-			inst.components.container:GiveItem(ent)
-		end
-	end
-end
-
-local function commonfn(bank, build, minimapicon, tags, physics, scale)
+local function fn()
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
@@ -259,28 +310,21 @@ local function commonfn(bank, build, minimapicon, tags, physics, scale)
 	inst.entity:AddNetwork()
 
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon(minimapicon..".tex")
+	minimap:SetIcon("portablecookpot.png")
 
-	MakeObstaclePhysics(inst, physics)
+	inst:SetDeploySmartRadius(DEPLOYSPACING_RADIUS[DEPLOYSPACING.DEFAULT] / 2)
+	inst:SetPhysicsRadiusOverride(.5)
 
-	inst.AnimState:SetScale(scale or 1, scale or 1, scale or 1)
+	MakeObstaclePhysics(inst, inst.physicsradiusoverride)
 
-	inst.AnimState:SetBank(bank)
-	inst.AnimState:SetBuild(build)
-	inst.AnimState:PlayAnimation("idle", true)
+	inst.AnimState:SetBank("portable_cook_pot")
+	inst.AnimState:SetBuild("portable_cook_pot")
+	inst.AnimState:PlayAnimation("idle_empty")
 
-	inst:AddTag("structure")
 	inst:AddTag("brewer")
+	inst:AddTag("structure")
+	inst:AddTag("mastercookware")
 	inst:AddTag("cook_robot_cooker_valid")
-
-	if tags ~= nil then
-		for i, v in pairs(tags) do
-			inst:AddTag(v)
-		end
-	end
-
-	HideProductImage(inst)
-	MakeSnowCoveredPristine(inst)
 
 	inst.entity:SetPristine()
 
@@ -299,7 +343,14 @@ local function commonfn(bank, build, minimapicon, tags, physics, scale)
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
 
+	inst:AddComponent("portablestructure")
+	inst.components.portablestructure:SetOnDismantleFn(OnDismantle)
+
+	inst:AddComponent("hauntable")
+	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
+
 	inst:AddComponent("brewer")
+	inst.components.brewer.brewtimemult = .1--TUNING.PORTABLE_COOK_POT_TIME_MULTIPLIER -- .8
 	inst.components.brewer.onstartcooking = StartCookFn
 	inst.components.brewer.oncontinuecooking = ContinueCookFn
 	inst.components.brewer.oncontinuedone = ContinueDoneFn
@@ -317,38 +368,58 @@ local function commonfn(bank, build, minimapicon, tags, physics, scale)
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammered)
 	inst.components.workable:SetOnWorkCallback(OnHit)
-	inst.components.workable:SetWorkLeft(4)
-
-	inst:AddComponent("hauntable")
-	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
-
-	inst:ListenForEvent("onbuilt", OnBuilt)
-	inst:ListenForEvent("onburnt", OnBurnt)
+	inst.components.workable:SetWorkLeft(2)
 
 	MakeMediumBurnable(inst, nil, nil, true)
-	MakeLargePropagator(inst)
-	MakeSnowCovered(inst)
+	MakeSmallPropagator(inst)
+	inst.components.burnable:SetFXLevel(2)
+	inst.components.burnable:SetOnBurntFn(OnBurnt)
 
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
-	inst.OnLoadPostPass = OnLoadPostPass
 
 	return inst
 end
 
-local function kegfn()
-	return commonfn("kyno_brewers_keg", "kyno_brewers_keg", "kyno_woodenkeg", {"woodenkeg"}, .6, 1.1)
+local function itemfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst, "med", 0.1, 0.8)
+
+	inst.AnimState:SetBank("portable_cook_pot")
+	inst.AnimState:SetBuild("portable_cook_pot")
+	inst.AnimState:PlayAnimation("idle_ground")
+
+	inst:AddTag("portableitem")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
+
+	inst:AddComponent("deployable")
+	inst.components.deployable.restrictedtag = "masterchef"
+	inst.components.deployable.ondeploy = OnDeploy
+
+	inst:AddComponent("hauntable")
+	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
+
+	MakeMediumBurnable(inst)
+	MakeSmallPropagator(inst)
+
+	return inst
 end
 
-local function jarfn()
-	return commonfn("kyno_brewers_jar", "kyno_brewers_jar", "kyno_preservesjar", {"preservesjar"}, .5, 1.8)
-end
-
-local function placerfn(inst)
-	HideProductImage(inst)
-end
-
-return Prefab("kyno_woodenkeg", kegfn, assets, prefabs),
-Prefab("kyno_preservesjar", jarfn, assets, prefabs),
-MakePlacer("kyno_woodenkeg_placer", "kyno_brewers_keg", "kyno_brewers_keg", "idle", false, nil, nil, 1.1, nil, nil, placerfn),
-MakePlacer("kyno_preservesjar_placer", "kyno_brewers_jar", "kyno_brewers_jar", "idle", false, nil, nil, 1.8, nil, nil, placerfn)
+return Prefab("kyno_portablebrewer", fn, assets, prefabs),
+Prefab("kyno_portablebrewer_item", itemfn, assets_item, prefabs_item),
+MakePlacer("kyno_portablebrewer_item_placer", "portable_cook_pot", "portable_cook_pot", "idle_empty")

@@ -935,6 +935,7 @@ AddRecipe2("kyno_fishfarmplot_construction", {}, TECH.LOST,
 	{
 		placer              = "kyno_fishfarmplot_construction_placer",
 		min_spacing         = 5,
+		testfn              = function(pt) return TheWorld.Map:GetPlatformAtPoint(pt.x, 0, pt.z, 0.5) == nil end,
 		nameoverride        = "kyno_fishfarmplot",
 		description         = "kyno_fishfarmplot_kit",
 		atlas               = ModAtlas,

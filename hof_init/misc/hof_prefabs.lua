@@ -161,6 +161,7 @@ PrefabFiles =
 	"k_pineapplebush",
 	"k_plantables",
 	"k_plantables_treesapling",
+	"k_portablebrewer",
 	"k_product_bubble",
 	"k_puffermonster",
 	"k_raindrop",
