@@ -1,31 +1,30 @@
 --[[
 	WARNING FOR LOCALIZATION:
-	
+
 	* DON'T COPY THIS FILE TO YOUR LOCALIZATION FOLDER!
 
-	* This is separated from the other localization files 
-	because it needs to load for both client and server. 
-	
+	* This is separated from the other localization files
+	because it needs to load for both client and server.
+
 	* For some fucking reason LOC can't be GLOBAL server-side
-	but it needs to be GLOBAL while client-side. I don't know 
+	but it needs to be GLOBAL while client-side. I don't know
 	how to switch between them while initializating the world.
-	
+
 	* If we load both strings and hof_worldsettings.lua from client
 	we can't apply any changes to worldgen. And if we load both
 	strings and hof_worldsettings.lua from server, we will crash.
-	
+
 ]]--
 
--- Common Dependencies.
 local _G      = GLOBAL
 local require = _G.require
 local STRINGS = _G.STRINGS
 local locale  = _G.LOC.GetLocaleCode()
 
-modimport("hof_init/misc/hof_tuning")
+modimport("main/misc/hof_tuning")
 
 local function ChooseTranslationTable(tbl)
-    return tbl[locale] or tbl[1]
+	return tbl[locale] or tbl[1]
 end
 
 local STRINGS_CUSTOMIZATION =
@@ -40,7 +39,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Zasoby",
 		es  = "Montón de Alimentos - Recursos",
 	},
-	
+
 	RESOURCES_OCEAN =
 	{
 		"Heap of Foods - Ocean Resources",
@@ -50,7 +49,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Zasoby oceaniczne",
 		es  = "Montón de Alimentos - Recursos oceánicos",
 	},
-	
+
 	SERENITYISLAND =
 	{
 		"Heap of Foods - Serenity Archipelago",
@@ -60,7 +59,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Archipelag Spokoju",
 		es  = "Montón de Alimentos - Archipiélago de Serenidad",
 	},
-	
+
 	MEADOWISLAND =
 	{
 		"Heap of Foods - Seaside Island",
@@ -70,7 +69,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Wyspa Nadmorska",
 		es  = "Montón de Alimentos - Isla Costera",
 	},
-	
+
 	CREATURES =
 	{
 		"Heap of Foods - Creatures and Spawners",
@@ -80,7 +79,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Stworzenia",
 		es  = "Montón de Alimentos - Criaturas",
 	},
-	
+
 	-- WORLDSETTINGS
 	WORLD =
 	{
@@ -91,7 +90,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Świat",
 		es  = "Montón de Alimentos - Mundo",
 	},
-	
+
 	RESOURCES_REGROW =
 	{
 		"Heap of Foods - Resources Regrowth",
@@ -101,7 +100,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Odnowa zasobów",
 		es  = "Montón de Alimentos - Regeneración de recursos",
 	},
-	
+
 	RESOURCES_OCEAN_REGROW =
 	{
 		"Heap of Foods - Ocean Resources Regrowth",
@@ -121,7 +120,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Odnowa Archipelagu Spokoju",
 		es  = "Montón de Alimentos - Regeneración del Archipiélago de Serenidad",
 	},
-	
+
 	MEADOWISLAND_REGROW =
 	{
 		"Heap of Foods - Seaside Island Regrowth",
@@ -150,19 +149,19 @@ AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_creatures_r", ChooseTranslatio
 local function ChooseTranslationTable2()
 	-- Try to load strings if we have the localization files.
 	local ok, strings = _G.pcall(require, "strings/localization_" .. locale .. "/hof_strings_customizations")
-	
+
 	if ok and strings then
 		return strings
 	end
 
-    -- Fallback to english if we don't have them.
+	-- Fallback to english if we don't have them.
 	local ok2, fallback = _G.pcall(require, "strings/hof_strings_customizations")
-	
+
 	if ok2 and fallback then
 		return fallback
 	end
 
-    -- HOW DID WE GET HERE? Fallback if even english can't be loaded.
+	-- HOW DID WE GET HERE? Fallback if even english can't be loaded.
 	print("Heap of Foods Mod - Failed to load World Settings Localization!")
 	return {}
 end
@@ -173,11 +172,11 @@ ChooseTranslationTable2()
 local function ChooseTranslationTable2()
 	-- Try to load strings if we have the localization files.
 	local ok, strings = pcall(require, "strings/localization_" .. locale .. "/hof_strings_customizations")
-	
+
 	if not ok or strings == nil or _G.next(strings) == nil then
 		-- Fallback to english if we don't have them.
 		local ok2, fallback = pcall(require, "strings/hof_strings_customizations")
-		
+
 		if ok2 and fallback ~= nil then
 			print("Heap of Foods Mod - No Localization found! Using English as default.")
 			return fallback

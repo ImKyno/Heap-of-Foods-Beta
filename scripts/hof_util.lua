@@ -443,3 +443,12 @@ function SpawnDailyRecipeCard(recipe, giver, pos, inst)
 
 	return card
 end
+
+-- Use to replace loot prefabs in their LootTables.
+function ReplaceLootTablePrefab(prefab, from, to)
+	for i, tbl in ipairs(LootTables[prefab]) do
+		if tbl[1] == from then
+			tbl[1] = to
+		end
+	end
+end

@@ -1,4 +1,3 @@
--- Common Dependencies.
 local _G            = GLOBAL
 local require       = _G.require
 local STRINGS       = _G.STRINGS
