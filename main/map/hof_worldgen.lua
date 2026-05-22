@@ -380,10 +380,19 @@ AddTaskSetPreInitAny(function(tasksetdata)
 end)
 
 -- Caves Worldgen.
-local CAVE_TASKS_DATA = require("map/tasks/hof_cave_tasks")
-local CAVE_TASKS_LIST = { "SunkenForest" }
+local CAVE_TASKS_DATA  = require("map/tasks/hof_cave_tasks")
+local CAVE_TASKS_LIST  = { "SunkenForest" }
 
-AddTaskPreInit("MudLights", function(data)
+local MUD_TASKS_LIST   =
+{ 
+	"MudCave", 
+	"MudLights", 
+	"MudPit",
+}
+
+local CAVE_RANDOM_TASK = MUD_TASKS_LIST[math.random(#MUD_TASKS_LIST)]
+
+AddTaskPreInit(CAVE_RANDOM_TASK, function(data)
 	if data.keys_given ~= nil then
 		table.insert(data.keys_given, KEYS.SUNKENFOREST)
 	end

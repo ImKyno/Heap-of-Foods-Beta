@@ -6,11 +6,11 @@ require("map/hof_lockandkey")
 
 local INIT_WORLDGEN =
 {
-    "worldtiledefs",
-    "worldtilenoise",
-    "static_layouts", -- Needs to load after hof_worldtiledefs.
+	"worldtiledefs",
+	"worldtilenoise",
+	"static_layouts", -- Needs to load after hof_worldtiledefs.
 	"storygen",
-    "worldgen",
+	"worldgen",
 	"worldsettings",
 }
 

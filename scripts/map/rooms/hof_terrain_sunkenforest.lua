@@ -3,7 +3,7 @@ require("map/room_functions")
 AddRoom("SunkenForestEntrance",
 {
 	colour = { r = 0.7, g = 0.7, b = 0.7, a = 0.9 },
-	value  = WORLD_TILES.DECIDUOUS,
+	value  = WORLD_TILES.HOF_SUNKENFOREST_NOISE,
 
 	tags   = { "Hutch_Fishbowl", "SunkenForestArea" },
 	type   = NODE_TYPE.Room,
@@ -21,7 +21,7 @@ AddRoom("SunkenForestEntrance",
 AddRoom("SunkenForestRivers",
 {
 	colour = { r = 0.7, g = 0.7, b = 0.7, a = 0.9 },
-	value  = WORLD_TILES.DECIDUOUS,
+	value  = WORLD_TILES.HOF_SUNKENFOREST_RIVER_NOISE,
 
 	tags   = { "Hutch_Fishbowl", "SunkenForestArea" },
 	type   = NODE_TYPE.Room,
@@ -39,7 +39,7 @@ AddRoom("SunkenForestRivers",
 AddRoom("SunkenForestPlains",
 {
 	colour = { r = 0.7, g = 0.7, b = 0.7, a = 0.9 },
-	value  = WORLD_TILES.DECIDUOUS,
+	value  = WORLD_TILES.HOF_SUNKENFOREST_NOISE,
 
 	tags   = { "Hutch_Fishbowl", "SunkenForestArea" },
 	type   = NODE_TYPE.Room,
@@ -57,7 +57,7 @@ AddRoom("SunkenForestPlains",
 AddRoom("SunkenForestMandrakes",
 {
 	colour = { r = 0.7, g = 0.7, b = 0.7, a = 0.9 },
-	value  = WORLD_TILES.DECIDUOUS,
+	value  = WORLD_TILES.HOF_SUNKENFOREST_NOISE,
 
 	tags   = { "Hutch_Fishbowl", "SunkenForestArea" },
 	type   = NODE_TYPE.Room,
@@ -75,7 +75,7 @@ AddRoom("SunkenForestMandrakes",
 local BGSunkenForest =
 {
 	colour = { r = 0.7, g = 0.7, b = 0.7, a = 0.9 },
-	value  = WORLD_TILES.DECIDUOUS,
+	value  = WORLD_TILES.HOF_SUNKENFOREST_RIVER_NOISE,
 
 	tags   = { "Hutch_Fishbowl", "SunkenForestArea" },
 	type   = NODE_TYPE.Room,

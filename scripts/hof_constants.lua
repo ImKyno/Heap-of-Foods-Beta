@@ -9,7 +9,7 @@ local HOF_PICKUP_SOUNDS  = {}
 local HOF_SPECIAL_EVENTS = {}
 
 -- New FOODTYPE just for showing the correct string on Cookbook.
-HOF_FOODTYPES    = 
+HOF_FOODTYPES    =
 {
 	PREPAREDSOUL = "PREPAREDSOUL",
 	PREPAREDPOOP = "PREPAREDPOOP",
@@ -82,7 +82,7 @@ end
 for k, v in pairs(HOF_NAUGHTY_VALUE) do
 	NAUGHTY_VALUE[k] = v
 end
-	
+
 for k, v in pairs(HOF_PICKABLE_FOODS) do
 	PICKABLE_FOOD_PRODUCTS[k] = v
 end
