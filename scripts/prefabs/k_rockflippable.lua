@@ -3,7 +3,7 @@ require("worldsettingsutil")
 local assets =
 {
 	Asset("ANIM", "anim/rock_flipping.zip"),
-	
+
 	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 }
@@ -18,29 +18,29 @@ local function SetLoot(inst)
 	local ground = TheWorld
 	local pt = Vector3(inst.Transform:GetWorldPosition())
 	local tile = ground.Map:GetTileAtPoint(pt.x, pt.y, pt.z)
-    
-	if tile == GROUND.SAVANNA then
+
+	if tile == WORLD_TILES.SAVANNA then
 		inst.components.lootdropper:AddRandomLoot("kyno_beanbugs",   15)
 		inst.components.lootdropper:AddRandomLoot("rocks",            5)
 		inst.components.lootdropper:AddRandomLoot("flint",            5)
 		inst.components.lootdropper:AddRandomLoot("cutgrass",         3)
 		inst.components.lootdropper:AddRandomLoot("nitre",            3)
 		inst.components.lootdropper:AddRandomLoot("kyno_gummybug",    1)
-	elseif tile == GROUND.DECIDUOUS then
+	elseif tile == WORLD_TILES.DECIDUOUS then
 		inst.components.lootdropper:AddRandomLoot("kyno_gummybug",   15)
 		inst.components.lootdropper:AddRandomLoot("rocks",            5)
 		inst.components.lootdropper:AddRandomLoot("flint",            5)
 		inst.components.lootdropper:AddRandomLoot("acorn",            3)
 		inst.components.lootdropper:AddRandomLoot("kyno_beanbugs",    1)
 		inst.components.lootdropper:AddRandomLoot("mole",            .1)
-	elseif tile == GROUND.ROCKY then
+	elseif tile == WORLD_TILES.ROCKY then
 		inst.components.lootdropper:AddRandomLoot("kyno_beanbugs",    5)
 		inst.components.lootdropper:AddRandomLoot("kyno_gummybug",    5)
 		inst.components.lootdropper:AddRandomLoot("rocks",            5)
 		inst.components.lootdropper:AddRandomLoot("flint",            5)
 		inst.components.lootdropper:AddRandomLoot("goldnugget",       3)
 		inst.components.lootdropper:AddRandomLoot("spider",           1)
-	elseif tile == GROUND.UNDERROCK then
+	elseif tile == WORLD_TILES.UNDERROCK then
 		inst.components.lootdropper:AddRandomLoot("bat",             10)
 		inst.components.lootdropper:AddRandomLoot("snurtle",          8)
 		inst.components.lootdropper:AddRandomLoot("slurtle",          8)
@@ -61,19 +61,6 @@ local function SetLoot(inst)
 	end
 end
 
-local function ontransplantfn(inst)
-	if inst.components.pickable ~= nil then
-		inst.components.pickable:MakeBarren()
-	end
-end
-
-local function makeemptyfn(inst)
-end
-
-local function makebarrenfn(inst)
-
-end
-
 local function DoWobble(inst)
 	if inst.AnimState:IsCurrentAnimation("idle") then
 		inst.AnimState:PlayAnimation("wobble")
@@ -87,45 +74,45 @@ local function DoWobbleTest(inst)
 	end
 end
 
-local function onpickedfn(inst, picker)
+local function OnPicked(inst, picker)
 	inst.AnimState:PlayAnimation("flip_over", false)
 	inst.SoundEmitter:PlaySound("monkeyisland/cannon/place")
 
 	local pt = Point(inst.Transform:GetWorldPosition())
 	inst.components.lootdropper:DropLoot(pt)
-	
+
 	inst.flipped = true
 end
 
-local function getregentimefn(inst)
+local function OnGetRegenTime(inst)
 	if inst.components.pickable ~= nil then
 		local num_cycles_passed = math.min(inst.components.pickable.max_cycles - inst.components.pickable.cycles_left, 0)
-		return TUNING.KYNO_FLIPPABLE_ROCK_REPOPULATE_TIME + TUNING.KYNO_FLIPPABLE_ROCK_REPOPULATE_INCREASE * num_cycles_passed + math.random() 
+		return TUNING.KYNO_FLIPPABLE_ROCK_REPOPULATE_TIME + TUNING.KYNO_FLIPPABLE_ROCK_REPOPULATE_INCREASE * num_cycles_passed + math.random()
 		* TUNING.KYNO_FLIPPABLE_ROCK_REPOPULATE_VARIANCE
 	else
 		return TUNING.KYNO_FLIPPABLE_ROCK_REPOPULATE_TIME
 	end
 end
 
-local function makefullfn(inst)
+local function OnMakeFull(inst)
 	if inst.components.pickable ~= nil then
 		inst.AnimState:PlayAnimation("flip_close")
 	end
-	
+
 	inst.AnimState:PushAnimation("idle")
 	inst.SoundEmitter:PlaySound("monkeyisland/cannon/place")
-	
-	inst:DoTaskInTime(0,function()
+
+	inst:DoTaskInTime(0, function()
 		SetLoot(inst)
 	end)
-	
+
 	inst.flipped = false
 end
 
 local function OnWorked(inst, worker, workleft)
 	local pt = Point(inst.Transform:GetWorldPosition())
 	SpawnPrefab("rock_break_fx").Transform:SetPosition(pt:Get())
-	
+
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/rock_break")
 	inst.components.lootdropper:SpawnLootPrefab("rocks")
 
@@ -151,7 +138,7 @@ local function OnEntityWake(inst)
 	if inst.fliptask then
 		inst.fliptask:Cancel()
 	end
-	
+
 	inst.fliptask = inst:DoPeriodicTask(10 + (math.random() * 10), function()
 		DoWobbleTest(inst)
 	end)
@@ -169,11 +156,6 @@ local function OnSave(inst, data)
 end
 
 local function OnLoad(inst, data)
-	if data and data.makebarren then
-		makebarrenfn(inst)
-		inst.components.pickable:MakeBarren()
-	end
-
 	if data and data.flipped then
 		inst.flipped = true
 		inst.AnimState:PlayAnimation("idle_flipped")
@@ -181,35 +163,35 @@ local function OnLoad(inst, data)
 end
 
 local function OnPreLoad(inst, data)
-    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_FLIPPABLE_GROWTIME)
+	WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_FLIPPABLE_GROWTIME)
 end
 
 local function fn()
 	local inst = CreateEntity()
-	
+
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
-	
+
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_rockflippable.tex")
-	
+
 	MakeObstaclePhysics(inst, .1)
 
 	inst.AnimState:SetBank("flipping_rock")
 	inst.AnimState:SetBuild("rock_flipping")
 	inst.AnimState:PlayAnimation("idle", true)
-	
+
 	inst:AddTag("rock")
 	inst:AddTag("flippable")
-	
+
 	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_ROCKFLIPPABLE"
 	inst.components.inspectable.getstatus = GetStatus
@@ -217,12 +199,9 @@ local function fn()
 	inst:AddComponent("pickable")
 	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_FLIPPABLE_GROWTIME, true)
 	inst.components.pickable:SetUp(nil, TUNING.KYNO_FLIPPABLE_GROWTIME)
-	inst.components.pickable.getregentimefn = getregentimefn
-	inst.components.pickable.onpickedfn = onpickedfn
-	inst.components.pickable.makeemptyfn = makeemptyfn
-	inst.components.pickable.makebarrenfn = makebarrenfn
-	inst.components.pickable.makefullfn = makefullfn
-	inst.components.pickable.ontransplantfn = ontransplantfn
+	inst.components.pickable.getregentimefn = OnGetRegenTime
+	inst.components.pickable.onpickedfn = OnPicked
+	inst.components.pickable.makefullfn = OnMakeFull
 	inst.components.pickable.max_cycles = TUNING.KYNO_FLIPPABLE_ROCK_CYCLES + math.random(2)
 	inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
 	inst.components.pickable.quickpick = true
@@ -233,10 +212,10 @@ local function fn()
 	inst.components.workable:SetOnFinishCallback(OnWorked)
 
 	inst:AddComponent("lootdropper")
-    inst.components.lootdropper.numrandomloot = 1
-    inst.components.lootdropper.chancerandomloot = 1.0
+	inst.components.lootdropper.numrandomloot = 1
+	inst.components.lootdropper.chancerandomloot = 1.0
 	inst.components.lootdropper.alwaysinfront = true
-    
+
 	inst:DoTaskInTime(0, function()
 		SetLoot(inst)
 	end)
@@ -245,9 +224,9 @@ local function fn()
 		DoWobbleTest(inst)
 	end)
 
-    inst.OnEntitySleep = OnEntitySleep
-    inst.OnEntityWake = OnEntityWake
-	
+	inst.OnEntitySleep = OnEntitySleep
+	inst.OnEntityWake = OnEntityWake
+
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 	inst.OnPreLoad = OnPreLoad

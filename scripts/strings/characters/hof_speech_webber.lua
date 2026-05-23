@@ -517,9 +517,9 @@ WEBBER.DESCRIBE.KYNO_SALMONFISH = "Mom said fish oil is good for our brain."
 WEBBER.DESCRIBE.KYNO_SALMONFISH_COOKED = "Smells good!"
 
 WEBBER.DESCRIBE.TURF_PINKPARK = "Adorable!"
-WEBBER.DESCRIBE.TURF_STONECITY = "Some ground that we dug up."
+WEBBER.DESCRIBE.TURF_STONECITY = "Hard stone flooring."
 WEBBER.DESCRIBE.TURF_FIELDS = "Some ground that we dug up."
-WEBBER.DESCRIBE.TURF_TIDALMARSH = "Some ground that we dug up."
+WEBBER.DESCRIBE.TURF_TIDALMARSH = "It's a bit slippery!"
 
 WEBBER.DESCRIBE.KYNO_SALTRACK =
 {

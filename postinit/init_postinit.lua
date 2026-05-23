@@ -20,6 +20,7 @@ local INIT_POSTINIT_BRAINS =
 
 local INIT_POSTINIT_COMPONENTS =
 {
+	"ambientsound",
 	"birdspawner",
 	"combat",
 	"container",
@@ -40,6 +41,11 @@ local INIT_POSTINIT_COMPONENTS =
 	"wisecracker",
 }
 
+local INIT_POSTINIT_MAP =
+{
+	"terrain",
+}
+
 local INIT_POSTINIT_PREFABS =
 {
 	"any",
@@ -52,7 +58,6 @@ local INIT_POSTINIT_PREFABS =
 	"bee",
 	"beebox",
 	"beefalo",
-
 	"beequeen",
 	"birdcage",
 	"catcoon",
@@ -154,6 +159,10 @@ end
 
 for _, v in pairs(INIT_POSTINIT_COMPONENTS) do
 	modimport("postinit/components/"..v)
+end
+
+for _, v in pairs(INIT_POSTINIT_MAP) do
+	modimport("postinit/map/"..v)
 end
 
 for _, v in pairs(INIT_POSTINIT_PREFABS) do

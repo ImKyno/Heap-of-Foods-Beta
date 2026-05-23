@@ -518,7 +518,7 @@ WALTER.DESCRIBE.KYNO_SALMONFISH_COOKED = "Você gosta de salmão também, Woby?"
 
 WALTER.DESCRIBE.TURF_PINKPARK = "Prefiro as azuis."
 WALTER.DESCRIBE.TURF_STONECITY = "Realmente preciso carregar essas pedras comigo?"
-WALTER.DESCRIBE.TURF_FIELDS = "Realmente preciso carregar essas terras comigo?"
+WALTER.DESCRIBE.TURF_FIELDS = "Realmente preciso carregar essa terra comigo?"
 WALTER.DESCRIBE.TURF_TIDALMARSH = "Realmente preciso carregar essa terra comigo?"
 
 WALTER.DESCRIBE.KYNO_SALTRACK =

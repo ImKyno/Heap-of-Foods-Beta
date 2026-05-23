@@ -18,12 +18,11 @@ local INIT_MAIN_MISC =
 
 local INIT_MAIN_WORLD =
 {
-	-- "worldtiledefs",
-	-- "worldtilenoise",
-	-- "static_layouts",
-	-- "storygen",
-	-- "worldgen",
-	-- "worldsettings",
+	"worldtiledefs",
+	"static_layouts",
+	"storygen",
+	"worldgen",
+	"worldsettings",
 	"messagebottletreasures",
 	"data_oceanfish",
 	"data_tree_rock",

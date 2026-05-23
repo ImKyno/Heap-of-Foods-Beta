@@ -90,6 +90,5 @@ return {
     "agedroe_salmonfish",
     "agedroe_jellyfish",
     "agedroe_jellyfish_rainbow",
-    "agedroe_antchovy",
     "agedroe_swordfish_blue",
 }

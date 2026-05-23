@@ -27,7 +27,7 @@ local customizations_worldgen =
 	waterycresses   = { desc = "worldgen_frequency_descriptions", group = "hof_ocean",     order = 5,  world = { "forest" }},
 	weedsea         = { desc = "worldgen_frequency_descriptions", group = "hof_ocean",     order = 6,  world = { "forest" }},
 	
-	-- OCEANCREATURES
+	-- CREATURES
 	chickens        = { desc = "yesno_descriptions",              group = "hof_creatures", order = 0,  world = { "forest" }},
 	dogfishes       = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 5,  world = { "forest" }},
 	hermitwobsters  = { desc = "yesno_descriptions",              group = "hof_creatures", order = 6,  world = { "forest" }},

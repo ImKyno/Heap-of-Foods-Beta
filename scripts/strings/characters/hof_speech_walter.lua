@@ -518,8 +518,8 @@ WALTER.DESCRIBE.KYNO_SALMONFISH_COOKED = "Do you like salmon too, Woby?"
 
 WALTER.DESCRIBE.TURF_PINKPARK = "I prefer blue ones."
 WALTER.DESCRIBE.TURF_STONECITY = "Do I really need to drag these stones around with me?"
-WALTER.DESCRIBE.TURF_FIELDS = "Do I really need to drag these turfs around with me?"
-WALTER.DESCRIBE.TURF_TIDALMARSH = "Do I really need to drag this dirt around with me?"
+WALTER.DESCRIBE.TURF_FIELDS = "A patch of grass."
+WALTER.DESCRIBE.TURF_TIDALMARSH = "Squishy and slippery ground!"
 
 WALTER.DESCRIBE.KYNO_SALTRACK =
 {

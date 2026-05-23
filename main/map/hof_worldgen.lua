@@ -3,9 +3,7 @@ local require = _G.require
 local LOCKS   = _G.LOCKS
 local KEYS    = _G.KEYS
 
-require("map/hof_terrain")
 require("map/hof_lockandkey")
-
 modimport("main/misc/hof_tuning")
 
 local TERRAIN_FILTERS =
@@ -377,51 +375,4 @@ AddTaskSetPreInitAny(function(tasksetdata)
 
 	table.insert(tasksetdata.required_prefabs, "kyno_dinamemorial_marker")
 	table.insert(tasksetdata.required_prefabs, "kyno_deciduousforest_shop")
-end)
-
--- Caves Worldgen.
-local CAVE_TASKS_DATA  = require("map/tasks/hof_cave_tasks")
-local CAVE_TASKS_LIST  = { "SunkenForest" }
-
-local MUD_TASKS_LIST   =
-{ 
-	"MudCave", 
-	"MudLights", 
-	"MudPit",
-}
-
-local CAVE_RANDOM_TASK = MUD_TASKS_LIST[math.random(#MUD_TASKS_LIST)]
-
-AddTaskPreInit(CAVE_RANDOM_TASK, function(data)
-	if data.keys_given ~= nil then
-		table.insert(data.keys_given, KEYS.SUNKENFOREST)
-	end
-end)
-
-AddTaskSetPreInitAny(function(tasksetdata)
-	if tasksetdata.location ~= "cave" then
-		return
-	end
-
-	if tasksetdata.tasks and #tasksetdata.tasks > 1 then
-		for i, v in ipairs(CAVE_TASKS_LIST) do
-			table.insert(tasksetdata.tasks, v)
-		end
-	end
-
-	if not tasksetdata.required_prefabs then
-		tasksetdata.required_prefabs = {}
-	end
-
-	-- table.insert(tasksetdata.required_prefabs, "kyno_sunkenforest_test")
-end)
-
-AddLevelPreInitAny(function(level)
-	if level.location ~= "cave" then
-		return
-	end
-
-	if level.tasks ~= nil then
-		table.insert(level.tasks, "SunkenForest")
-	end
 end)
