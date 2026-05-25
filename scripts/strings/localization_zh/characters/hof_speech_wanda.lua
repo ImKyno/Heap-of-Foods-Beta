@@ -1047,7 +1047,13 @@ WANDA.DESCRIBE.FLTSANDWICH = "用青蛙带我飞向月球。"
 
 WANDA.DESCRIBE.RICEANDBEANS = "我明白，这很健康，但还是喜欢吃点甜食！"
 
-WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "时间会告诉我们……我猜2026年它会大声说话。"
+WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "时间对这栋建筑并不友好。",
+	REPAIRED = "这是更值得花时间的事情。",
+	OCCUPIED = "他把宝贵时间浪费在里面睡觉。",
+	OCCUPIED_REPAIRED = "至少他现在是在个稳固的地方休息。",
+}
 
 WANDA.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1228,4 +1234,10 @@ WANDA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "今天没什么值得注意的。",
 	BURNING = "嗯……真是不合时宜。",
 	BURNT = "现在已经太晚了。",
+}
+
+WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "先修理？真是低效的拖延。",
+	HOUSE_REPAIRED = "终于好了。别再浪费时间了。",
 }

@@ -1047,7 +1047,13 @@ WEBBER.DESCRIBE.FLTSANDWICH = "Biedne żabki."
 
 WEBBER.DESCRIBE.RICEANDBEANS = "Mama zawsze mówiła: jedz warzywa!"
 
-WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Teraz wygląda na pusty... ale wrócimy tu w 2026!"
+WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Ten dom wygląda trochę na zepsuty.",
+	REPAIRED = "Teraz wygląda miło i przytulnie!",
+	OCCUPIED = "Mamy nadzieję, że jest mu tam wygodnie.",
+	OCCUPIED_REPAIRED = "Ciii... on śpi.",
+}
 
 WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1228,4 +1234,10 @@ WEBBER.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Dziś nie ma specjalnego jedzenia?",
 	BURNING = "Ale gorące!",
 	BURNT = "Och... zepsute.",
+}
+
+WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Wygląda na to, że nas toleruje i chce naszej pomocy!",
+	HOUSE_REPAIRED = "Cześć, panie! Chcesz teraz handlować?",
 }

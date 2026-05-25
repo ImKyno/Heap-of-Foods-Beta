@@ -1047,7 +1047,13 @@ WAXWELL.DESCRIBE.FLTSANDWICH = "Te żaby na to zasłużyły."
 
 WAXWELL.DESCRIBE.RICEANDBEANS = "Następnym razem przydałoby się coś lepszego."
 
-WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Cierpliwości... wszystko wraca z czasem. Może w 2026?"
+WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Co za żałosna wymówka sklepu.",
+	REPAIRED = "Wreszcie coś reprezentacyjnego.",
+	OCCUPIED = "Dobrowolnie bym tam nie spał.",
+	OCCUPIED_REPAIRED = "Przynajmniej kupiec ma teraz jakieś standardy.",
+}
 
 WAXWELL.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WAXWELL.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Brak dań specjalnych. Żenujące.",
 	BURNING = "Cóż za niedbalstwo.",
 	BURNT = "Zamienione w popiół. Typowe.",
+}
+
+WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Najwyraźniej muszę najpierw zająć się jego domowymi problemami.",
+	HOUSE_REPAIRED = "Znacznie lepiej. Teraz pokaż mi swój asortyment.",
 }

@@ -94,7 +94,7 @@ function DeciduousForestTraderBrain:OnStart()
 			})
 		),
 
-		IfNode(function() return not self.inst:IsHomeRepaired() and not self.inst:IsNearMerm()
+		IfNode(function() return not self.inst:IsHouseRepaired() and not self.inst:IsNearMerm()
 		and self.inst:CanChatter() and GetFaceTargetFn(self.inst) ~= nil end, "HouseBroken",
 			SequenceNode({
 				ActionNode(function()
@@ -104,7 +104,7 @@ function DeciduousForestTraderBrain:OnStart()
 			})
 		),
 
-		IfNode(function() return self.inst:IsHomeRepaired() and not self.inst:HasStock() and self.inst:CanChatter() end, "NoStock",
+		IfNode(function() return self.inst:IsHouseRepaired() and not self.inst:HasStock() and self.inst:CanChatter() end, "NoStock",
 			SequenceNode({
 				ActionNode(function()
 					self.inst:DoChatter("DECIDUOUSFORESTTRADER_OUTOFSTOCK", math.random(#STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCK), 15)

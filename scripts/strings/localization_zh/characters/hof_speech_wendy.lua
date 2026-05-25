@@ -1047,7 +1047,13 @@ WENDY.DESCRIBE.FLTSANDWICH = "绿色和青蛙的元素太多了。"
 
 WENDY.DESCRIBE.RICEANDBEANS = "这是一顿非常简单的饭菜，但足够了。"
 
-WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "即便废墟也会记得它的使命……也许它会在2026年醒来。"
+WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "这里正在崩塌，就像世间万物一样。",
+	REPAIRED = "只是暂时逃离 inevitable 的腐朽罢了。",
+	OCCUPIED = "连睡眠也无法掩盖这里的凄凉。",
+	OCCUPIED_REPAIRED = "至少他现在还能暂时安稳休息。",
+}
 
 WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WENDY.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "今天没有特别的东西。很合适。",
 	BURNING = "如同一切，终将化为灰烬。",
 	BURNT = "一顿饭的残破记忆。",
+}
+
+WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "他破碎的家映照着疲惫的灵魂。",
+	HOUSE_REPAIRED = "也许交易能缓解孤独。",
 }

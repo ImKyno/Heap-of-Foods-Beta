@@ -492,7 +492,7 @@ local states =
 			inst.Physics:Stop()
 			inst.AnimState:PlayAnimation("idle_happy", true)
 
-			inst:TryChatter("DECIDUOUSFORESTTRADER_APPRECIATE", math.random(#STRINGS.DECIDUOUSFORESTTRADER_APPRECIATE), 10)
+			inst:DoChatter("DECIDUOUSFORESTTRADER_APPRECIATE", math.random(#STRINGS.DECIDUOUSFORESTTRADER_APPRECIATE), 10)
 			inst.SoundEmitter:PlaySound(PlayTalkingSound)
 
 			inst:SetRevealed(true)

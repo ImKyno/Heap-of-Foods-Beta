@@ -1047,7 +1047,13 @@ WALTER.DESCRIBE.FLTSANDWICH = "哦，真好！更多的蛙腿三明治。"
 
 WALTER.DESCRIBE.RICEANDBEANS = "简单而均衡的菜肴。"
 
-WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "被遗弃的地方总有故事……也许2026年我们会知道！"
+WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "这地方真的需要修一修。",
+	REPAIRED = "现在这小建筑可体面多了。",
+	OCCUPIED = "希望他睡在里面没事。",
+	OCCUPIED_REPAIRED = "看起来他休息得不错。",
+}
 
 WALTER.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WALTER.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "今天好像没有特别餐。",
 	BURNING = "哦不！不好了！",
 	BURNT = "看来我们错过晚餐了。",
+}
+
+WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "我想我们应该先帮他修好房子，沃比。",
+	HOUSE_REPAIRED = "你的房子现在看起来真不错，先生！",
 }

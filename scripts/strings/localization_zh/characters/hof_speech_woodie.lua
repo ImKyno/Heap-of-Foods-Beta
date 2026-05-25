@@ -1047,7 +1047,13 @@ WOODIE.DESCRIBE.FLTSANDWICH = "BLT三明治仿制版！"
 
 WOODIE.DESCRIBE.RICEANDBEANS = "它只是缺少一些美味的牛排和薯条。"
 
-WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "见过更好的日子，对吧？我敢打赌2026年会变得热闹。"
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "这地方得修修了， eh？",
+	REPAIRED = "现在才像个正经的小商店。",
+	OCCUPIED = "希望里面那家伙睡得还行。",
+	OCCUPIED_REPAIRED = "现在看起来够舒服，可以小睡一会儿了。",
+}
 
 WOODIE.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WOODIE.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "今天好像没有特色。",
 	BURNING = "有点热啊。",
 	BURNT = "这下完了。",
+}
+
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "他想先把房子修好，也怪不得他，eh？",
+	HOUSE_REPAIRED = "这就好多了。有什么有用的东西吗，eh？",
 }

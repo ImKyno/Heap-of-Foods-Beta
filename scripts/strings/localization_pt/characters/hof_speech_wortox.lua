@@ -1047,7 +1047,13 @@ WORTOX.DESCRIBE.FLTSANDWICH = "É feito com carne de sapo lunar."
 
 WORTOX.DESCRIBE.RICEANDBEANS = "Comida mortal."
 
-WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Ho ho! Uma casa adormecida no tempo... vamos espiar de novo em 2026!"
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Uma loja em ruínas!",
+	REPAIRED = "Tudo consertado e terrivelmente arrumadinho!",
+	OCCUPIED = "O porquinho cochila em seu pequeno covil.",
+	OCCUPIED_REPAIRED = "O mercador sonha enquanto o luar brilha!",
+}
 
 WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WORTOX.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Sem surpresas gostosas hoje?",
 	BURNING = "Diversão em chamas! Hyuyu!",
 	BURNT = "Virou cinzas e fuligem!",
+}
+
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Ele parece me tolerar. Nada de trocas até sua casa ser remendada!",
+	HOUSE_REPAIRED = "Uma casa firme e mercadorias reluzentes!",
 }

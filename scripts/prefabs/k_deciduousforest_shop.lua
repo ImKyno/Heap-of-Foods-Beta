@@ -206,6 +206,13 @@ local function OnBuilt(inst, isday)
 	end)
 end
 
+local function GetStatus(inst, viewer)
+	return ((inst.components.spawner:IsOccupied() and inst.HouseRepaired) and "OCCUPIED_REPAIRED")
+	or ((inst.components.spawner:IsOccupied() and not inst.HouseRepaired) and "OCCUPIED")
+	or (inst.HouseRepaired and "REPAIRED")
+	or "GENERIC"
+end
+
 local function OnSave(inst, data)
 	data.repaired = inst.HouseRepaired
 end
@@ -267,8 +274,10 @@ local function fn()
 	inst.HouseRepaired = false
 	inst.SetRepaired = SetHouseRepaired
 
-	inst:AddComponent("inspectable")
 	inst:AddComponent("named")
+
+	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("spawner")
 	inst.components.spawner:Configure("kyno_deciduousforest_seller", 10)

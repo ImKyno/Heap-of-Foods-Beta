@@ -1047,7 +1047,13 @@ WANDA.DESCRIBE.FLTSANDWICH = "Fly me to the moon with frogs."
 
 WANDA.DESCRIBE.RICEANDBEANS = "I get it, its nice and healthy but I prefer some sweets instead!"
 
-WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Time will tell... and I suspect it'll speak loudest in 2026."
+WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Time has not been kind to this building.",
+	REPAIRED = "A much better use of time.",
+	OCCUPIED = "He's wasting valuable time sleeping in there.",
+	OCCUPIED_REPAIRED = "At least he's resting somewhere stable.",
+}
 
 WANDA.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WANDA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Nothing noteworthy today.",
 	BURNING = "Well, that's unfortunate timing.",
 	BURNT = "Too late to save it now.",
+}
+
+WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Repairs first? What an inefficient delay.",
+	HOUSE_REPAIRED = "Finally. Let's not waste any more time.",
 }

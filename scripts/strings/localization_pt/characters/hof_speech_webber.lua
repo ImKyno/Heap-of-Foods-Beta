@@ -1047,7 +1047,13 @@ WEBBER.DESCRIBE.FLTSANDWICH = "Coitados dos sapos."
 
 WEBBER.DESCRIBE.RICEANDBEANS = "Mamãe sempre dizia: Coma seus vegetais!"
 
-WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Parece vazia agora... mas voltaremos aqui em 2026!"
+WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Essa casa parece meio quebrada.",
+	REPAIRED = "Agora ela parece legal e aconchegante!",
+	OCCUPIED = "Esperamos que ele esteja confortável aí dentro.",
+	OCCUPIED_REPAIRED = "Shh... ele está dormindo.",
+}
 
 WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1228,4 +1234,10 @@ WEBBER.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Não tem comida especial hoje?",
 	BURNING = "Tá pegando fogo!",
 	BURNT = "Ah... estragou.",
+}
+
+WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Ele parece nos tolerar e quer nossa ajuda!",
+	HOUSE_REPAIRED = "Oi, moço! Quer trocar agora?",
 }

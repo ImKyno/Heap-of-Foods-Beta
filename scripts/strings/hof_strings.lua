@@ -544,7 +544,7 @@ STRINGS.MEADOWISLANDTRADER_STARTDANCING =
 STRINGS.DECIDUOUSFORESTTRADER = "Partitio\nThe %s"
 STRINGS.DECIDUOUSFORESTTRADER_TITLES = 
 {
-	"Prideful Merchant", 
+	"Proud Merchant", 
 	"Masterwork Pig", 
 	"Great Merchant", 
 	"Salespig",

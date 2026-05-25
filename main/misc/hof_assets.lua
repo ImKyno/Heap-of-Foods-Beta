@@ -902,6 +902,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_cookware_syrup",
 	"kyno_cucumber_ground",
 	"kyno_dailyrecipe_sign",
+	"kyno_deciduousforest_seller",
 	"kyno_deciduousforest_shop",
 	"kyno_dogfish",
 	"kyno_fennel_ground",

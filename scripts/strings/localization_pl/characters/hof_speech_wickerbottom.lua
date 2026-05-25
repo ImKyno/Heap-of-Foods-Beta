@@ -1047,7 +1047,13 @@ WICKERBOTTOM.DESCRIBE.FLTSANDWICH = "Żaba to dobry zamiennik bekonu."
 
 WICKERBOTTOM.DESCRIBE.RICEANDBEANS = "Bardzo zdrowy i pożywny obiad."
 
-WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Jego stan wskazuje na przyszłą renowację. Przewiduję ruch w 2026."
+WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Ta konstrukcja jest w opłakanym stanie.",
+	REPAIRED = "Teraz to znacznie bardziej zdatny do życia budynek.",
+	OCCUPIED = "Nie wyobrażam sobie spokojnego snu w takich warunkach.",
+	OCCUPIED_REPAIRED = "Wygląda na to, że kupiec odpoczywa.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1228,4 +1234,10 @@ WICKERBOTTOM.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Dziś brak polecanych dań.",
 	BURNING = "To wygląda niebezpiecznie.",
 	BURNT = "Niestety utracono informacje.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Wygląda na to, że nie chce handlować, dopóki jego dom nie zostanie odrestaurowany.",
+	HOUSE_REPAIRED = "Dzień dobry. Omówmy twoje towary.",
 }

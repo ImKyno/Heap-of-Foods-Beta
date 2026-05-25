@@ -1047,7 +1047,13 @@ WALTER.DESCRIBE.FLTSANDWICH = "Ah, ótimo! Mais sanduíches de sapo."
 
 WALTER.DESCRIBE.RICEANDBEANS = "Prato simples e equilibrado."
 
-WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Um lugar abandonado sempre tem uma história... talvez em 2026 a conheçamos!"
+WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Esse lugar realmente precisa de alguns reparos.",
+	REPAIRED = "Agora isso sim é um pequeno prédio respeitável.",
+	OCCUPIED = "Espero que ele esteja bem dormindo aí dentro.",
+	OCCUPIED_REPAIRED = "Parece que ele está descansando bem.",
+}
 
 WALTER.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WALTER.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Acho que não tem refeição especial hoje.",
 	BURNING = "Opa! Isso não é bom!",
 	BURNT = "Parece que perdemos o jantar.",
+}
+
+WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Acho que deveríamos ajudar a consertar a casa dele primeiro, Woby.",
+	HOUSE_REPAIRED = "Sua casa ficou ótima agora, senhor!",
 }

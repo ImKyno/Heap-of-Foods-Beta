@@ -1047,7 +1047,13 @@ WALTER.DESCRIBE.FLTSANDWICH = "Oh nice! More frog sandwiches."
 
 WALTER.DESCRIBE.RICEANDBEANS = "Simple and balanced dish."
 
-WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "An abandoned place always has a story... maybe we'll learn it in 2026!"
+WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "This place really needs some repairs.",
+	REPAIRED = "Now that's a respectable little building.",
+	OCCUPIED = "I hope he's okay sleeping in there.",
+	OCCUPIED_REPAIRED = "Looks like he's getting some good rest.",
+}
 
 WALTER.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WALTER.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Guess there's no special meal today.",
 	BURNING = "Uh-oh! That's not good!",
 	BURNT = "Looks like we missed dinner.",
+}
+
+WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Guess we should help repair his place first, Woby.",
+	HOUSE_REPAIRED = "Your house looks great now, mister!",
 }

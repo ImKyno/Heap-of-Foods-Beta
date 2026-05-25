@@ -1047,7 +1047,13 @@ WARLY.DESCRIBE.FLTSANDWICH = "If we don't have bacon, use frog meat instead!"
 
 WARLY.DESCRIBE.RICEANDBEANS = "A simple lunch entrée."
 
-WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Hmm... smells like potential. I'll be back for a taste in 2026."
+WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "This establishment is in desperate need of renovation.",
+	REPAIRED = "Ah, much more welcoming now.",
+	OCCUPIED = "I hope the poor fellow can rest properly.",
+	OCCUPIED_REPAIRED = "A well-earned rest for the merchant.",
+}
 
 WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WARLY.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "No spécialité du jour today.",
 	BURNING = "Mon dieu! It's burning!",
 	BURNT = "A culinary tragedy.",
+}
+
+WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "A proper home before proper business, hm?",
+	HOUSE_REPAIRED = "Wonderful! What ingredients do you offer?",
 }

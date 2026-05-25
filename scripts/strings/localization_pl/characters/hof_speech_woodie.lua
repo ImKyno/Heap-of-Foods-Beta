@@ -1047,7 +1047,13 @@ WOODIE.DESCRIBE.FLTSANDWICH = "BLT w wersji imitacyjnej!"
 
 WOODIE.DESCRIBE.RICEANDBEANS = "Brakuje tylko porządnego steka i frytek."
 
-WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Bywało lepiej, co? Założę się, że w 2026 będzie tu tłoczno."
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "To miejsce potrzebuje naprawy, co nie?",
+	REPAIRED = "No, teraz to porządny mały sklepik.",
+	OCCUPIED = "Mam nadzieję, że gość dobrze tam śpi.",
+	OCCUPIED_REPAIRED = "Teraz wygląda wystarczająco przytulnie na drzemkę.",
+}
 
 WOODIE.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1228,4 +1234,10 @@ WOODIE.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Chyba dziś nie ma specjalnego.",
 	BURNING = "Trochę gorąco tam, co?",
 	BURNT = "No i po wszystkim.",
+}
+
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Nie można go winić za to, że chce najpierw naprawionego domu, co nie?",
+	HOUSE_REPAIRED = "No, teraz lepiej. Masz coś przydatnego, co?",
 }

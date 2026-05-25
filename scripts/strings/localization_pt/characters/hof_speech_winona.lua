@@ -1047,7 +1047,13 @@ WINONA.DESCRIBE.FLTSANDWICH = "Humm, sim. Prefiro bacon do que carne de sapo."
 
 WINONA.DESCRIBE.RICEANDBEANS = "Almoço."
 
-WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Precisa de uma boa reforma. Talvez me chamem em 2026."
+WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Esse lugar precisa de um trabalho sério de reparo.",
+	REPAIRED = "Agora isso sim é um trabalho sólido.",
+	OCCUPIED = "Não parece muito confortável aí dentro.",
+	OCCUPIED_REPAIRED = "Parece que o cara finalmente tem um lugar decente pra descansar.",
+}
 
 WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WINONA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Nada no cardápio hoje.",
 	BURNING = "Bom, lá se foi a placa.",
 	BURNT = "Não dá mais pra consertar isso.",
+}
+
+WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Acho que os reparos vêm antes dos negócios.",
+	HOUSE_REPAIRED = "Pronto. Vamos fechar um acordo.",
 }

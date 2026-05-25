@@ -1047,7 +1047,13 @@ WANDA.DESCRIBE.FLTSANDWICH = "Zabierz mnie na księżyc z żabami."
 
 WANDA.DESCRIBE.RICEANDBEANS = "Rozumiem, zdrowe i w ogóle, ale wolę jednak coś słodkiego!"
 
-WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Czas pokaże... a najgłośniej przemówi w 2026."
+WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Czas nie był łaskawy dla tego budynku.",
+	REPAIRED = "Znacznie lepsze wykorzystanie czasu.",
+	OCCUPIED = "Marnuje cenny czas śpiąc tam.",
+	OCCUPIED_REPAIRED = "Przynajmniej odpoczywa teraz w stabilnym miejscu.",
+}
 
 WANDA.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1228,4 +1234,10 @@ WANDA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Dziś nic wartego uwagi.",
 	BURNING = "Cóż... kiepskie wyczucie czasu.",
 	BURNT = "Za późno, żeby to uratować.",
+}
+
+WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Najpierw naprawy? Co za nieefektywne opóźnienie.",
+	HOUSE_REPAIRED = "Wreszcie. Nie traćmy więcej czasu.",
 }

@@ -1047,7 +1047,13 @@ WENDY.DESCRIBE.FLTSANDWICH = "Za dużo zielonego i żabiego."
 
 WENDY.DESCRIBE.RICEANDBEANS = "Bardzo prosty posiłek, ale wystarczy."
 
-WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Nawet ruiny pamiętają swój cel... może obudzą się w 2026."
+WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "To miejsce się rozpada, tak jak wszystko inne.",
+	REPAIRED = "Tymczasowe schronienie przed nieuniknionym rozkładem.",
+	OCCUPIED = "Nawet sen nie ukryje nędzy tego miejsca.",
+	OCCUPIED_REPAIRED = "Przynajmniej może teraz spokojnie odpocząć.",
+}
 
 WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1228,4 +1234,10 @@ WENDY.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Dziś nic specjalnego. Jak zwykle.",
 	BURNING = "Jak wszystko, zamienia się w popiół.",
 	BURNT = "Zniszczone wspomnienie posiłku.",
+}
+
+WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Jego zniszczony dom odzwierciedla zmęczoną duszę.",
+	HOUSE_REPAIRED = "Być może handel łagodzi samotność.",
 }

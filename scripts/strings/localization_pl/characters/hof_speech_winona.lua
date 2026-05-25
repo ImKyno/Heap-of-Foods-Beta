@@ -1047,7 +1047,13 @@ WINONA.DESCRIBE.FLTSANDWICH = "Mhm, zdecydowanie wolę bekon od żabiego mięsa.
 
 WINONA.DESCRIBE.RICEANDBEANS = "Obiad."
 
-WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Przydałaby się porządna naprawa. Może zajmę się tym w 2026."
+WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "To miejsce potrzebuje poważnych napraw.",
+	REPAIRED = "To dopiero solidna robota.",
+	OCCUPIED = "Nie wygląda tam zbyt wygodnie.",
+	OCCUPIED_REPAIRED = "Wygląda na to, że facet ma wreszcie porządne miejsce do odpoczynku.",
+}
 
 WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1228,4 +1234,10 @@ WINONA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Dziś nic w menu.",
 	BURNING = "No i po tablicy.",
 	BURNT = "Tego już się nie naprawi.",
+}
+
+WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Wygląda na to, że naprawy są ważniejsze niż interesy.",
+	HOUSE_REPAIRED = "No dobra. Zróbmy interes.",
 }

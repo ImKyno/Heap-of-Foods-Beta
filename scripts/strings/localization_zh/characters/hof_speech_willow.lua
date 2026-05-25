@@ -1047,7 +1047,13 @@ WILLOW.DESCRIBE.FLTSANDWICH = "里面没有生菜。"
 
 WILLOW.DESCRIBE.RICEANDBEANS = "需要更多烤豆虫。"
 
-WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "呃，好旧好干……正适合烧掉。也许等到2026年再说。"
+WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "那破棚子快塌了。",
+	REPAIRED = "真无聊。现在看起来一点都不易燃了。",
+	OCCUPIED = "怎么会有人愿意睡在那种破地方？",
+	OCCUPIED_REPAIRED = "至少他现在有个像样的地方睡觉了。",
+}
 
 WILLOW.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WILLOW.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "今天没有特色菜？真无聊。",
 	BURNING = "这才叫特色！",
 	BURNT = "呵，烤焦了。",
+}
+
+WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "呃，先帮他修房子？真无聊。",
+	HOUSE_REPAIRED = "好了，老头。把货拿出来看看。",
 }

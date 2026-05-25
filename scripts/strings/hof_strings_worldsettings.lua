@@ -38,6 +38,7 @@ local STRINGS_CUSTOMIZATION =
 		pt  = "Amontoado de Comidas - Recursos",
 		pl  = "Stos jedzenia - Zasoby",
 		es  = "Montón de Alimentos - Recursos",
+		vi  = "Kho thực phẩm - Tài nguyên",
 	},
 
 	RESOURCES_OCEAN =
@@ -48,6 +49,7 @@ local STRINGS_CUSTOMIZATION =
 		pt  = "Amontoado de Comidas - Recursos do Oceano",
 		pl  = "Stos jedzenia - Zasoby oceaniczne",
 		es  = "Montón de Alimentos - Recursos oceánicos",
+		vi  = "Kho thực phẩm - Tài nguyên đại dương",
 	},
 
 	SERENITYISLAND =
@@ -58,6 +60,7 @@ local STRINGS_CUSTOMIZATION =
 		pt  = "Amontoado de Comidas - Arquipélago da Serenidade",
 		pl  = "Stos jedzenia - Archipelag Spokoju",
 		es  = "Montón de Alimentos - Archipiélago de Serenidad",
+		vi  = "Kho thực phẩm - Quần đảo Serenity",
 	},
 
 	MEADOWISLAND =
@@ -68,6 +71,7 @@ local STRINGS_CUSTOMIZATION =
 		pt  = "Amontoado de Comidas - Ilha Beira-mar",
 		pl  = "Stos jedzenia - Wyspa Nadmorska",
 		es  = "Montón de Alimentos - Isla Costera",
+		vi  = "Kho thực phẩm - Đảo ven biển",
 	},
 
 	CREATURES =
@@ -78,6 +82,7 @@ local STRINGS_CUSTOMIZATION =
 		pt  = "Amontoado de Comidas - Criaturas",
 		pl  = "Stos jedzenia - Stworzenia",
 		es  = "Montón de Alimentos - Criaturas",
+		vi  = "Kho thực phẩm - Sinh vật và điểm sinh sản",
 	},
 
 	-- WORLDSETTINGS
@@ -89,6 +94,7 @@ local STRINGS_CUSTOMIZATION =
 		pt  = "Amontoado de Comidas - Mundo",
 		pl  = "Stos jedzenia - Świat",
 		es  = "Montón de Alimentos - Mundo",
+		vi  = "Kho thực phẩm - Thế giới",
 	},
 
 	RESOURCES_REGROW =
@@ -99,6 +105,7 @@ local STRINGS_CUSTOMIZATION =
 		pt  = "Amontoado de Comidas - Regeneração de Recursos",
 		pl  = "Stos jedzenia - Odnowa zasobów",
 		es  = "Montón de Alimentos - Regeneración de recursos",
+		vi  = "Kho thực phẩm - Tái tạo nguồn lực",
 	},
 
 	RESOURCES_OCEAN_REGROW =
@@ -109,6 +116,7 @@ local STRINGS_CUSTOMIZATION =
 		pt  = "Amontoado de Comidas - Regeneração de Recursos Oceânicos",
 		pl  = "Stos jedzenia - Odnowa zasobów oceanicznych",
 		es  = "Montón de Alimentos - Regeneración de recursos oceánicos",
+		vi  = "Kho thực phẩm - Sự phục hồi tài nguyên đại dương",
 	},
 
 	SERENITYISLAND_REGROW =
@@ -119,6 +127,7 @@ local STRINGS_CUSTOMIZATION =
 		pt  = "Amontoado de Comidas - Regeneração do Arquipélago da Serenidade",
 		pl  = "Stos jedzenia - Odnowa Archipelagu Spokoju",
 		es  = "Montón de Alimentos - Regeneración del Archipiélago de Serenidad",
+		vi  = "Kho thực phẩm - Sự tái sinh của quần đảo Serenity",
 	},
 
 	MEADOWISLAND_REGROW =
@@ -129,6 +138,7 @@ local STRINGS_CUSTOMIZATION =
 		pt  = "Amontoado de Comidas - Regeneração da Ilha Beira-mar",
 		pl  = "Stos jedzenia - Odnowa Wyspy Nadmorskiej",
 		es  = "Montón de Alimentos - Regeneración de la Isla Costera",
+		vi  = "Kho thực phẩm - Sự tái sinh của đảo ven biển",
 	},
 }
 

@@ -1047,7 +1047,13 @@ WOLFGANG.DESCRIBE.FLTSANDWICH = "Frog sandwich, yum!"
 
 WOLFGANG.DESCRIBE.RICEANDBEANS = "Is healthy cooked little beans!"
 
-WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Little house looks weak... maybe become strong again next year!"
+WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Tiny house needs mighty repairs!",
+	REPAIRED = "Now is strong little house.",
+	OCCUPIED = "Wolfgang would not sleep in weak house.",
+	OCCUPIED_REPAIRED = "Pig man sleeps safely now.",
+}
 
 WOLFGANG.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WOLFGANG.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "No special food today?",
 	BURNING = "Fire cooks food faster!",
 	BURNT = "Now food is too cooked.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Tiny trader wants house fixed first.",
+	HOUSE_REPAIRED = "Now we trade like strong friends!",
 }

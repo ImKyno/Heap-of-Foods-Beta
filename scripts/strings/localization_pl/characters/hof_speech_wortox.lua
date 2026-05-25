@@ -1047,7 +1047,13 @@ WORTOX.DESCRIBE.FLTSANDWICH = "Zrobione z księżycowego żabiego mięsa."
 
 WORTOX.DESCRIBE.RICEANDBEANS = "Jedzenie śmiertelników."
 
-WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Ho ho! Dom uśpiony w czasie... zobaczmy go znowu w 2026!"
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Sklep w ruinie!",
+	REPAIRED = "Naprawiony i straszliwie schludny!",
+	OCCUPIED = "Świnka drzemie w swojej małej norce.",
+	OCCUPIED_REPAIRED = "Kupiec śni, gdy księżyc lśni!",
+}
 
 WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1228,4 +1234,10 @@ WORTOX.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Dziś brak smacznych niespodzianek?",
 	BURNING = "Ognista zabawa! Hyuyu!",
 	BURNT = "Zamienione w popiół i sadzę!",
+}
+
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Wygląda na to, że mnie toleruje. Żadnego handlu, dopóki jego dom nie zostanie załatany!",
+	HOUSE_REPAIRED = "Solidny dom i błyszczące towary!",
 }

@@ -1047,7 +1047,13 @@ WOLFGANG.DESCRIBE.FLTSANDWICH = "Sanduíche de sapo, yum!"
 
 WOLFGANG.DESCRIBE.RICEANDBEANS = "São feijões cozidos saudáveis!"
 
-WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Casinha fraca... talvez fique forte em 2026!"
+WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Casinha precisa de reparos poderosos!",
+	REPAIRED = "Agora é uma casinha forte.",
+	OCCUPIED = "Wolfgang não dormiria em casa fraca.",
+	OCCUPIED_REPAIRED = "Homem-porco dorme em segurança agora.",
+}
 
 WOLFGANG.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WOLFGANG.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Não tem comida especial hoje?",
 	BURNING = "Fogo cozinha mais rápido!",
 	BURNT = "Agora comida passou do ponto.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Pequeno comerciante quer casa consertada primeiro.",
+	HOUSE_REPAIRED = "Agora negociamos como amigos fortes!",
 }

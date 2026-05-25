@@ -327,23 +327,6 @@ AddRecipe2("kyno_sugartree_petals_p", {Ingredient("kyno_sugarfly", 1, ModAtlas)}
 	{"CRAFTING_STATION"}
 )
 
---[[
-AddRecipe2("kyno_sugarfly_p", {Ingredient("butterfly", 1)}, TECH.LOST,
-	{
-		nounlock 			= true,
-		no_deconstruction   = true,
-		hint_msg            = "NEEDSSERENITYSHOP",
-		actionstr 			= "SERENITYSHOP",
-		sg_state    		= "give",
-		product				= "kyno_sugarfly",
-		numtogive 			= 1,
-		atlas 				= ModAtlas,
-		image				= "kyno_sugarfly.tex",
-	},
-	{"CRAFTING_STATION"}
-)
-]]--
-
 AddRecipe2("kyno_sugartree_bud_p", {Ingredient("kyno_syrup", 3, ModAtlas)}, TECH.LOST,
 	{
 		nounlock 			= true,

@@ -1047,7 +1047,13 @@ WILLOW.DESCRIBE.FLTSANDWICH = "Brakuje sałaty."
 
 WILLOW.DESCRIBE.RICEANDBEANS = "Przydałoby się więcej przypalonej fasoli."
 
-WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Ble, takie stare i suche... idealne do spalenia. Może poczekam do 2026."
+WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Ta rudera zaraz się rozpadnie.",
+	REPAIRED = "Nuda. Przestało wyglądać na łatwopalne.",
+	OCCUPIED = "Jak można spać w takiej dziurze?",
+	OCCUPIED_REPAIRED = "Przynajmniej ma teraz porządne miejsce do spania.",
+}
 
 WILLOW.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1228,4 +1234,10 @@ WILLOW.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Dziś brak dań specjalnych? Nuda.",
 	BURNING = "Teraz TO jest specjalne!",
 	BURNT = "Heh. Zwęglone.",
+}
+
+WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Ugh, najpierw naprawić jego dom? Co za nuda.",
+	HOUSE_REPAIRED = "Dobra, staruszku. Pokaż towar.",
 }

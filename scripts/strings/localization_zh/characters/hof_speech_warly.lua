@@ -1047,7 +1047,13 @@ WARLY.DESCRIBE.FLTSANDWICH = "如果没有培根，就用蛙腿代替吧！"
 
 WARLY.DESCRIBE.RICEANDBEANS = "一道简单的午餐主菜。"
 
-WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "嗯……闻起来充满潜力。2026年我会回来尝一尝。"
+WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "这家店急需翻修。",
+	REPAIRED = "啊，现在温馨多了。",
+	OCCUPIED = "希望那个可怜家伙能好好休息。",
+	OCCUPIED_REPAIRED = "这是商人应得的休息。",
+}
 
 WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WARLY.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "今天没有今日特餐。",
 	BURNING = "天啊！着火了！",
 	BURNT = "一场料理悲剧。",
+}
+
+WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "先有合适的家，才有合适的生意，嗯？",
+	HOUSE_REPAIRED = "太好了！你提供什么食材？",
 }

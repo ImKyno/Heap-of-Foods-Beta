@@ -1047,7 +1047,13 @@ WICKERBOTTOM.DESCRIBE.FLTSANDWICH = "Frog makes a nice substitute for bacon."
 
 WICKERBOTTOM.DESCRIBE.RICEANDBEANS = "A very healthy and nutritive lunch."
 
-WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Its dilapidated state suggests future restoration. I predict activity in 2026."
+WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "The structure is in a dreadful state of disrepair.",
+	REPAIRED = "A much more habitable establishment now.",
+	OCCUPIED = "I cannot imagine restful sleep in such conditions.",
+	OCCUPIED_REPAIRED = "It appears the merchant is resting.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WICKERBOTTOM.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "No featured meals today.",
 	BURNING = "That seems unsafe.",
 	BURNT = "A regrettable loss of information.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "He seems unwilling to trade before his home is restored.",
+	HOUSE_REPAIRED = "Good day. Let us discuss your wares.",
 }

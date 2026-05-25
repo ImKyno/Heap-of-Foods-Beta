@@ -15299,6 +15299,21 @@ local HOF_SCRAPBOOK_CREATURES =
 		specialinfo    = "SAMMY",
 	},
 
+	kyno_deciduousforest_seller =
+	{
+		name           = "kyno_deciduousforest_seller_scrapbook",
+		type           = "creature",
+		subcat         = "pig",
+		tex            = "kyno_deciduousforest_seller.tex",
+		prefab         = "kyno_deciduousforest_seller",
+		bank           = "pigman",
+		build          = "kyno_deciduousforest_trader_build",
+		anim           = "idle_loop",
+		hide           = {"ARM_carry", "ARM_carry_up"},
+		deps           = {"kyno_deciduousforest_shop"},
+		specialinfo    = "PARTITIO",
+	},
+
 	oceanfish_midnight_carp_inv =
 	{
 		name           = "oceanfish_midnight_carp_inv",
@@ -15614,14 +15629,15 @@ local HOF_SCRAPBOOK_THINGS =
 
 	kyno_deciduousforest_shop =
 	{
-		name           = "kyno_deciduousforest_shop",
+		name           = "kyno_deciduousforest_shop_repaired",
 		type           = "POI",
 		tex            = "kyno_deciduousforest_shop.tex",
 		prefab         = "kyno_deciduousforest_shop",
 		bank           = "kyno_deciduousforest_shop",
 		build          = "kyno_deciduousforest_shop",
 		anim           = "idle",
-		specialinfo    = "DECIDUOUSSHOP",
+		deps           = {"kyno_deciduousforest_seller"},
+		specialinfo    = "PARTITIOHOUSE",
 	},
 
 	kyno_octopusking_ocean =

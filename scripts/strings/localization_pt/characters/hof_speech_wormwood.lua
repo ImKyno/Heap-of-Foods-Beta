@@ -1047,7 +1047,13 @@ WORMWOOD.DESCRIBE.FLTSANDWICH = "Sapo"
 
 WORMWOOD.DESCRIBE.RICEANDBEANS = "Para barriga"
 
-WORMWOOD.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Casa velha... talvez nova vida... em breve..."
+WORMWOOD.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Casa Quebrada",
+	REPAIRED = "Casa Melhor",
+	OCCUPIED = "Amigo Porco Dorme",
+	OCCUPIED_REPAIRED = "Amigo Porco Seguro",
+}
 
 WORMWOOD.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WORMWOOD.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Sem comida hoje",
 	BURNING = "Quente quente!",
 	BURNT = "Sumiu",
+}
+
+WORMWOOD.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Casa Machucada. Quer Ajuda Primeiro.",
+	HOUSE_REPAIRED = "Trocar Agora, Sim?",
 }

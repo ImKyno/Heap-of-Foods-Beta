@@ -1047,7 +1047,13 @@ WATHGRITHR.DESCRIBE.FLTSANDWICH = "Mięsna kanapka!"
 
 WATHGRITHR.DESCRIBE.RICEANDBEANS = "Fuj!"
 
-WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Kiedyś dumny dom, teraz w ruinie. W 2026 roku powstanie na nowo!"
+WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Ta sala bardzo ucierpiała od okrucieństwa czasu!",
+	REPAIRED = "Znów godne schronienie!",
+	OCCUPIED = "Niech kupiec znajdzie odpoczynek w tych murach.",
+	OCCUPIED_REPAIRED = "Kupiec śpi spokojnie w swojej odnowionej hali.",
+}
 
 WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1228,4 +1234,10 @@ WATHGRITHR.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Brak uczty godnej pieśni.",
 	BURNING = "Ogień pochłania ucztę!",
 	BURNT = "Pozostał jedynie popiół.",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Kupiec żąda pomocy przed handlem!",
+	HOUSE_REPAIRED = "Witaj, handlarzu! Okaż swe skarby!",
 }

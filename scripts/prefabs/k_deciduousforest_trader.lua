@@ -258,14 +258,13 @@ local function OnEntitySleep(inst)
 	end
 end
 
-local function IsHomeRepaired(inst)
+local function IsHouseRepaired(inst)
 	local home = inst.components.homeseeker ~= nil and inst.components.homeseeker.home or nil
-
 	return home ~= nil and home:IsValid() and home.HouseRepaired
 end
 
 local function CanTrade(inst)
-	return IsHomeRepaired(inst) and inst:HasStock()
+	return IsHouseRepaired(inst) and inst:HasStock()
 end
 
 local function IsNearMerm(inst)
@@ -282,7 +281,7 @@ end
 -- Unlike Sammy, Partitio does not have a regular hat, just his anniversary one.
 -- We can only get it if the event is currently active.
 local function ShouldAcceptItem(inst, item, giver)
-	if not inst:IsHomeRepaired() then
+	if not inst:IsHouseRepaired() then
 		return false
 	end
 
@@ -320,6 +319,11 @@ local function AllNightTest(inst)
 	end
 
 	return false
+end
+
+local function GetStatus(inst, viewer)
+	return (IsHouseRepaired(inst) and "HOUSE_REPAIRED")
+	or "GENERIC"
 end
 
 local function fn()
@@ -398,13 +402,15 @@ local function fn()
 	inst.SetHatless = SetHatless
 
 	inst.AllNightTest = AllNightTest
-	inst.IsHomeRepaired = IsHomeRepaired
+	inst.IsHouseRepaired = IsHouseRepaired
 	inst.CanTrade = CanTrade
 	inst.IsNearMerm = IsNearMerm
 
 	inst:AddComponent("craftingstation")
 	inst:AddComponent("knownlocations")
+	
 	inst:AddComponent("inspectable")
+	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("locomotor")
 	inst.components.locomotor.walkspeed = TUNING.KYNO_DECIDUOUSFORESTTRADER_WALKSPEED

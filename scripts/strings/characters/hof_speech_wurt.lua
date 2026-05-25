@@ -1049,7 +1049,13 @@ WURT.DESCRIBE.FLTSANDWICH = "Blergh!"
 
 WURT.DESCRIBE.RICEANDBEANS = "Yummy!"
 
-WURT.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Scary house... but maybe something yummy inside later, florp? 2026?"
+WURT.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Ha! Stupid pig house falling apart!",
+	REPAIRED = "Glurgh... Pig fixed dumb house!",
+	OCCUPIED = "He be sleeping in there, florp.",
+	OCCUPIED_REPAIRED = "Glurgh... it better before this.",
+}
 
 WURT.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1230,4 +1236,10 @@ WURT.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "No special foods today, florp.",
 	BURNING = "Too much fire, florp!",
 	BURNT = "Just ashes now, florp.",
+}
+
+WURT.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "GLORP! Not helping you!",
+	HOUSE_REPAIRED = "GLORP! HE WON'T trade with me!",
 }

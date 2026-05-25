@@ -14,18 +14,29 @@ STRINGS.DAILYRECIPE_DESCRIPTION =
 STRINGS.UI.CRAFTING_FILTERS.MEALING = "食物成分"
 STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP = "长者的补给品"
 STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP = "萨米的小店"
+STRINGS.UI.CRAFTING_FILTERS.DECIDUOUSSHOP = "帕提提欧的仓库"
+
 STRINGS.UI.CRAFTING.NEEDSMEALING_ONE = "使用碾磨石研磨这种成分！"
 STRINGS.UI.CRAFTING.NEEDSMEALING_TWO = "使用碾磨石研磨这种成分！"
+
 STRINGS.UI.CRAFTING.NEEDSSERENITYSHOP = "找一个非常友好的人来完成这个交易！"
 STRINGS.UI.CRAFTING.NEEDSSERENITYSHOP_ONE = "找一个非常友好的人来完成这个交易！"
 STRINGS.UI.CRAFTING.NEEDSSERENITYSHOP_TWO = "找一个非常友好的人来完成这个交易！"
+
 STRINGS.UI.CRAFTING.NEEDSMEADOWSHOP = "寻找萨米完成交易！"
 STRINGS.UI.CRAFTING.NEEDSMEADOWSHOP_ONE = "寻找萨米完成交易！"
 STRINGS.UI.CRAFTING.NEEDSMEADOWSHOP_TWO = "寻找萨米完成交易！"
+
+STRINGS.UI.CRAFTING.NEEDSDECIDUOUSSHOP = "去寻找那位古怪的商人来完成这笔交易！"
+STRINGS.UI.CRAFTING.NEEDSDECIDUOUSSHOP_ONE = "去寻找那位古怪的商人来完成这笔交易！"
+STRINGS.UI.CRAFTING.NEEDSDECIDUOUSSHOP_TWO = "去寻找那位古怪的商人来完成这笔交易！"
+
 STRINGS.UI.CRAFTING.NEEDSHOFBIRTHDAY = "更多料理周年庆期间限量供应！"
+
 STRINGS.UI.CRAFTING.RECIPEACTION.MEALGRINDER = "研磨"
 STRINGS.UI.CRAFTING.RECIPEACTION.SERENITYSHOP = "交易"
-STRINGS.UI.CRAFTING.RECIPEACTION.MEADOWSHOP = "兑换" -- Trade?
+STRINGS.UI.CRAFTING.RECIPEACTION.MEADOWSHOP = "兑换"
+STRINGS.UI.CRAFTING.RECIPEACTION.DECIDUOUSSHOP = "兑换"
 
 STRINGS.UI.SPECIAL_EVENT_NAMES.HOFBIRTHDAY = "更多料理周年庆纪念"
 
@@ -528,6 +539,147 @@ STRINGS.MEADOWISLANDTRADER_STARTDANCING =
 	"陌生人，你可真会让我心情变好！",
 	"跳吧，跳吧，宝贝！",
 	"派对时间到啦！",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER = "帕提提欧\n%s"
+STRINGS.DECIDUOUSFORESTTRADER_TITLES = 
+{
+	"骄傲的商人", 
+	"工艺大师猪", 
+	"大商人", 
+	"销售猪",
+	"落叶林商贩",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCK =
+{
+	"我没有更多东西可以交易了！",
+	"晚点再来吧，朋友",
+	"我需要一点时间补货",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCKTRADES = 
+{
+	"你把我的货全买光了！我需要时间弄更多货！",
+	"暂时就这些了，晚点再来吧！",
+	"以后再来看看更多商品，好吗？",
+	"我现在没有什么好东西了，快走吧",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_STARTTRADING = 
+{
+	"买点东西吧！",
+	"你好，朋友！来交易吧",
+	"嘿，要不要交换点东西？",
+	"你想要什么？",
+	"快选吧！我不能浪费时间！",
+	"你有好吃的东西给我吗？",
+	"别找那个鱼人了，跟我交易吧！",
+	"我有好东西，朋友！",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_NOTRADES = 
+{
+	"也许下次吧",
+	"没有你感兴趣的吗，朋友？",
+	"别再回来问同样的东西了！",
+	"别回来了！",
+	"也许长老能帮你",
+	"下次再来吧，朋友",
+	"那就别浪费我的时间",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_MADETRADE = 
+{
+	"谢谢",
+	"你真不错！",
+	"干得好，朋友",
+	"对，对！这会很有用",
+	"很高兴和你做生意",
+	"记得再来，好吗？",
+	"谢谢，老板！",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_DOTRADE = 
+{
+	"好选择，朋友！",
+	"马上来，你还需要什么？",
+	"对，对，这个很好",
+	"你的购物品味真不错！",
+	"希望这能帮到你！",
+	"继续买吧！",
+	"这会在很多方面帮到你！",
+	"很棒的选择！还需要别的吗？",
+	"居然真的有人花钱买这个？",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_DOTRADEHAT =
+{
+	"你想要我的帽子？好吧",
+	"给你，朋友！你可以把我的帽子当作友谊的象征",
+	"我总能再给自己做一顶帽子！",
+	"以后如果还需要帽子，再来找我吧，朋友！",
+	"谢谢！这让我想起了童年！拿着吧",
+	"我的旧帽子？好吧，你可以拿走",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_REFUSE =
+{
+	"我不需要那个！",
+	"我不要！",
+	"我很好，谢谢",
+	"给我别的东西！",
+	"那个不行，朋友！",
+	"没兴趣！",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_REFUSE_RUNDOWN =
+{
+	"帮帮我，朋友！",
+	"我需要帮忙修房子！",
+	"你愿意帮忙吗？好吗？",
+	"我现在还不能做生意！",
+	"先帮忙！之后再交易，朋友！",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_REFUSE_MERM =
+{
+	"不和鱼人交易！",
+	"离我的货物远点！",
+	"我不和你这种家伙做生意！",
+	"我的商店只欢迎好人！",
+	"鱼人禁止入内！",
+	"吼啊啊！滚开！",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_GOHOME =
+{
+	"午睡时间！",
+	"睡觉时间！",
+	"我的班结束了！",
+	"回头见，朋友。我现在得休息了",
+	"再见！",
+	"你知道去哪找我！",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_STARTDANCING = 
+{
+	"来跳舞吧！",
+	"开派对啦，朋友！",
+	"跳舞吧，跳舞吧，朋友！",
+	"你真会活跃气氛啊，朋友！",
+	"派对时间！",
+}
+
+STRINGS.DECIDUOUSFORESTTRADER_APPRECIATE =
+{
+	"谢谢你的帮助，朋友！",
+	"非常感谢！",
+	"现在我可以开始做生意了！",
+	"哦哦！谢谢！",
+	"做生意的时间到了！",
+	"你真不错，朋友",
+	"我很感激你的帮助！",
 }
 
 STRINGS.FISHREGISTRY =
@@ -1782,6 +1934,7 @@ STRINGS.NAMES.FLTSANDWICH = "F.L.T.三明治"
 STRINGS.NAMES.RICEANDBEANS = "豆虫饭"
 
 STRINGS.NAMES.KYNO_DECIDUOUSFOREST_SHOP = "破旧的房子"
+STRINGS.NAMES.KYNO_DECIDUOUSFOREST_SHOP_REPAIRED = "帕提提欧的仓库"
 
 STRINGS.NAMES.KYNO_TRUFFLES_GROUND = "松露"
 STRINGS.NAMES.KYNO_TRUFFLES = "松露"
@@ -1974,6 +2127,7 @@ STRINGS.NAMES.KYNO_HOFBIRTHDAY_5HAT = "周年庆帽子"
 STRINGS.RECIPE_DESC.KYNO_HOFBIRTHDAY_HAT = "戴上它，派对即刻开启！"
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_SAMMYHAT = "萨米的周年庆帽子"
+STRINGS.NAMES.KYNO_HOFBIRTHDAY_PARTITIOHAT = "帕提提欧周年纪念帽"
 
 STRINGS.NAMES.KYNO_FISHREGISTRYHAT = "钓鱼帽"
 STRINGS.RECIPE_DESC.KYNO_FISHREGISTRYHAT = "每个水手都该知道什么在咬钩。"
@@ -2003,3 +2157,6 @@ STRINGS.NAMES.SOULJUICE = "天鹅绒之魂"
 
 STRINGS.NAMES.KYNO_DAILYRECIPE_SIGN = "每日食谱板"
 STRINGS.RECIPE_DESC.KYNO_DAILYRECIPE_SIGN = "告诉人们该吃什么的传统方法。"
+
+STRINGS.NAMES.KYNO_DECIDUOUSFOREST_SELLER = "帕提提欧\n商人" -- Placeholder.
+STRINGS.NAMES.KYNO_DECIDUOUSFOREST_SELLER_SCRAPBOOK = "帕提提欧"

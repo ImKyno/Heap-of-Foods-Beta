@@ -1047,7 +1047,13 @@ WATHGRITHR.DESCRIBE.FLTSANDWICH = "Meat sandwich!"
 
 WATHGRITHR.DESCRIBE.RICEANDBEANS = "Eww!"
 
-WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "A hall once proud, now fallen. It shall rise anew in the year of destiny: 2026!"
+WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "This hall has suffered greatly from time's cruelty!",
+	REPAIRED = "A worthy shelter once more!",
+	OCCUPIED = "May the merchant still find rest within these walls.",
+	OCCUPIED_REPAIRED = "The trader slumbers soundly in his restored hall.",
+}
 
 WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WATHGRITHR.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "No feast worthy of song today.",
 	BURNING = "The flames consume the feast!",
 	BURNT = "Only ashes remain of the banquet.",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "The merchant demands aid before barter!",
+	HOUSE_REPAIRED = "Hail, trader! Reveal thy treasures!",
 }

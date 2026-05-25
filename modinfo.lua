@@ -12,6 +12,7 @@ local STRINGS =
 		pt  = "Amontoado de Comidas (Heap of Foods)",
 		pl  = "Stos jedzenia (Heap of Foods)",
 		es  = "Montón de Alimentos (Heap of Foods)",
+		vi  = "Kho thực phẩm (Heap of Foods)",
 	},
 	
 	DESCRIPTION =
@@ -105,6 +106,21 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 󰀌 Versión del Mod: 5.3-B
 󰀧 Actualización: Receta del día
 ]],
+		vi  =
+[[
+󰀄 Thêm hơn 200 món ăn hoàn toàn mới cho Nồi Hầm cùng với nhiều nguyên liệu mới để sử dụng. Chúc nấu ăn vui vẻ!
+
+󰀠 Ngoài ra còn có các Quần Xã Sinh Vật hoàn toàn mới xuất hiện đâu đó ngoài Đại Dương!
+󰀦 Tìm hiểu cách nấu mọi công thức tại: https://heap-of-foods.com
+
+󰀏 Bao gồm bản cập nhật Công Thức Trong Ngày:
+Công thức Trong Ngày là những món ăn đặc biệt được chọn ngẫu nhiên mỗi ngày từ danh sách công thức. Tất cả người chơi sẽ nhận cùng một công thức bất kể thế giới nào.
+
+Mỗi ngày, một công thức sẽ được chọn ngẫu nhiên. Ăn món ăn trong ngày sẽ nhận thêm Máu, Đói và Tinh Thần ngoài chỉ số gốc của món ăn. Ngoài ra còn tăng May Mắn trong một khoảng thời gian nhất định.
+
+󰀌 Phiên bản Mod: 5.3-B
+󰀧 Cập nhật: Công Thức Trong Ngày
+]],
 	},
 
 	SETTINGS = 
@@ -117,6 +133,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 			pt  = "Desativado",
 			pl  = "Wyłączony",
 			es  = "Desactivada",
+			vi  = "Vô hiệu hóa",
 		},
 		
 		ENABLED =
@@ -127,6 +144,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 			pt  = "Ativado",
 			pl  = "Włączony",
 			es  = "Activada",
+			vi  = "Đã bật",
 		},
 
 		GENERAL =
@@ -139,6 +157,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Opções Gerais",
 				pl  = "Opcje ogólne",
 				es  = "Opciones generales",
+				vi  = "Tùy chọn chung",
 			},
 			
 			HOVER =
@@ -149,6 +168,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Opções gerais para o Mod inteiro.",
 				pl  = "Ogólne opcje dla całego moda.",
 				es  = "Opciones generales para todo el mod.",
+				vi  = "Các tùy chọn chung cho toàn bộ mod.",
 			},
 		},
 		
@@ -162,6 +182,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Opções de Miscelânea",
 				pl  = "Różne opcje",
 				es  = "Opciones varias",
+				vi  = "Tùy chọn khác",
 			},
 			
 			HOVER =
@@ -172,6 +193,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Opções de miscelânea para o mod.",
 				pl  = "Różne opcje dla moda.",
 				es  = "Opciones varias para el mod.",
+				vi  = "Các tùy chọn linh tinh cho mod.",
 			},
 		},
 		
@@ -185,6 +207,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Opções Experimentais",
 				pl  = "Opcje Eksperymentalne",
 				es  = "Opciones Experimentales",
+				vi  = "Tùy chọn thử nghiệm",
 			},
 			
 			HOVER =
@@ -195,6 +218,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Opções experimentais do Mod. Em fase de testes!",
 				pl  = "Eksperymentalne opcje moda. W fazie testów!",
 				es  = "Opciones experimentales del mod. ¡En fase de prueba!",
+				vi  = "Các tùy chọn thử nghiệm cho mod. Đang được kiểm tra!",
 			},
 		},
 		
@@ -208,6 +232,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Opções de Retrofit",
 				pl  = "Opcje modernizacji",
 				es  = "Opciones de Retrofit",
+				vi  = "Tùy chọn cải tạo",
 			},
 			
 			HOVER =
@@ -218,6 +243,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Opções de retrofitting para mundos antigos.",
 				pl  = "Opcje modernizacji starych światów.",
 				es  = "Opciones de retrofitting para mundos antiguos.",
+				vi  = "Tùy chọn cải tạo cho thế giới cũ.",
 			},
 		},
 		
@@ -231,6 +257,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Idioma",
 				pl  = "Język",
 				es  = "Idioma",
+				vi  = "Ngôn ngữ",
 			},
 
 			HOVER =
@@ -241,6 +268,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Escolha o idioma do Mod.\nVocê pode enviar sua tradução em nosso Discord.",
 				pl  = "Wybierz język moda.\nMożesz przesłać swoje tłumaczenie na naszym Discordzie.",
 				es  = "Elige el idioma para el mod.\nPuedes enviar tu traducción en nuestro Discord.",
+				vi  = "Chọn ngôn ngữ cho mod.\nBạn có thể gửi bản dịch của mình trên Discord của chúng tôi.",
 			},
 
 			HOVER_OPTIONS =
@@ -251,6 +279,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Português",
 				pl  = "Polski",
 				es  = "Español",
+				vi  = "Tiếng Việt",
 				
 				DESCRIPTION =
 				{
@@ -260,6 +289,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Autor: Desconhecido",
 					pl  = "Autor: Dr_Brzeszczot",
 					es  = "Autor: Desconocido",
+					vi  = "Tác giả: Saikuno",
 				},
 			},
 		},
@@ -274,6 +304,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Receitas Sazonais",
 				pl  = "Przepisy sezonowe",
 				es  = "Recetas de temporada",
+				vi  = "Công thức theo mùa",
 			},
 			
 			HOVER =
@@ -284,6 +315,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que as Receitas Sazonais sejam cozinhadas somente em Eventos Especiais?",
 				pl  = "Czy sezonowe przepisy mogą być gotowane tylko podczas specjalnych wydarzeń?",
 				es  = "¿Las recetas de temporada solo pueden cocinarse durante eventos especiales?",
+				vi  = "Các công thức theo mùa chỉ nên được nấu trong các sự kiện đặc biệt?",
 			},
 			
 			HOVER_OPTIONS =
@@ -296,6 +328,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Receitas Sazonais podem ser cozinhadas sem nenhuma restrição.",
 					pl  = "Sezonowe przepisy można gotować bez żadnych ograniczeń.",
 					es  = "Las recetas de temporada se pueden cocinar sin restricciones.",
+					vi  = "Công thức theo mùa có thể được nấu mà không có hạn chế.",
 				},
 				
 				ENABLED =
@@ -306,6 +339,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Receitas Sazonais só podem ser cozinhadas durante Eventos Especiais.",
 					pl  = "Sezonowe przepisy można gotować tylko wtedy, gdy aktywne są specjalne wydarzenia.",
 					es  = "Las recetas de temporada solo se pueden cocinar cuando los eventos especiales están activos.",
+					vi  = "Công thức theo mùa chỉ có thể được nấu khi sự kiện đặc biệt đang diễn ra.",
 				},
 			},
 		},
@@ -320,6 +354,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Receitas de Carne Humana",
 				pl  = "Przepisy z długiego wieprza",
 				es  = "Recetas de Cerdo Largo",
+				vi  = "Công thức thịt người",
 			},
 			
 			HOVER =
@@ -330,6 +365,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que Jogadores deixem cair Carne Humana quando morrem?\nNota: Se desabilitado, pode impedir certas comidas de serem feitas.",
 				pl  = "Czy gracze powinni upuszczać długiego wieprza po śmierci?\nUwaga: Jeśli ta opcja jest wyłączona, niektóre przepisy staną się niemożliwe do ugotowania.",
 				es  = "¿Deberían los jugadores soltar cerdo largo al morir?\nNota: Si se desactiva, algunas recetas no podrán cocinarse.",
+				vi  = "Người chơi có nên rơi Thịt Người khi chết?\nLưu ý: Nếu tắt, một số công thức sẽ không thể nấu được.",
 			},
 			
 			HOVER_OPTIONS =
@@ -342,6 +378,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Jogadores não deixarão cair Carne Humana quando morrem.",
 					pl  = "Gracze nie upuszczą długiego wieprza po śmierci.",
 					es  = "Los jugadores no soltarán cerdo largo al morir.",
+					vi  = "Người chơi sẽ không rơi Thịt Người khi chết.",
 				},
 				
 				ENABLED =
@@ -352,6 +389,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Jogadores podem ter a chance de deixar cair Carne Humana quando morrem.",
 					pl  = "Gracze mogą mieć szansę upuścić długiego wieprza po śmierci.",
 					es  = "Los jugadores pueden tener la posibilidad de soltar cerdo largo al morir.",
+					vi  = "Người chơi có thể có cơ hội rơi Thịt Người khi chết.",
 				},
 			},
 		},
@@ -366,6 +404,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Taxa de Drop da Planta de Café",
 				pl  = "Wskaźnik wypadania roślin kawy",
 				es  = "Tasa de caída de plantas de café",
+				vi  = "Tỷ lệ rơi đồ của cây cà phê",
 			},
 			
 			HOVER =
@@ -376,6 +415,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Quantas Plantas de Café a Libélula deve deixar cair?",
 				pl  = "Ile roślin kawy powinna upuścić Smocza Mucha?",
 				es  = "¿Cuántas plantas de café debería soltar la Libélula?",
+				vi  = "Chuồn chuồn nên thả bao nhiêu cây cà phê?",
 			},
 			
 			HOVER_OPTIONS =
@@ -388,6 +428,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "A Libélula não deixará cair nenhuma Planta de Café.",
 					pl  = "Smocza Mucha nie upuści roślin kawy.",
 					es  = "La Libélula no soltará plantas de café.",
+					vi  = "Chuồn chuồn sẽ không thả cây cà phê.",
 				},
 				
 				AMOUNT4 =
@@ -398,6 +439,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "A Libélula deixará cair 4 Plantas de Café.",
 					pl  = "Smocza Mucha upuści 4 roślin kawy.",
 					es  = "La Libélula soltará 4 plantas de café.",
+					vi  = "Chuồn chuồn sẽ thả 4 cây cà phê.",
 				},
 				
 				AMOUNT8 =
@@ -408,6 +450,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "A Libélula deixará cair 8 Plantas de Café.",
 					pl  = "Smocza Mucha upuści 8 roślin kawy.",
 					es  = "La Libélula soltará 8 plantas de café.",
+					vi  = "Chuồn chuồn sẽ thả 8 cây cà phê.",
 				},
 				
 				AMOUNT12 =
@@ -418,6 +461,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "A Libélula deixará cair 12 Plantas de Café.",
 					pl  = "Smocza Mucha upuści 12 roślin kawy.",
 					es  = "La Libélula soltará 12 plantas de café.",
+					vi  = "Chuồn chuồn sẽ thả 12 cây cà phê.",
 				},
 				
 				AMOUNT16 =
@@ -428,6 +472,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "A Libélula deixará cair 16 Plantas de Café.",
 					pl  = "Smocza Mucha upuści 16 roślin kawy.",
 					es  = "La Libélula soltará 16 plantas de café.",
+					vi  = "Chuồn chuồn sẽ thả 16 cây cà phê.",
 				},
 			},
 		},
@@ -442,6 +487,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Restrição Alcoólica",
 				pl  = "Ograniczenie alkoholu",
 				es  = "Restricción alcohólica",
+				vi  = "Hạn chế đồ uống có cồn",
 			},
 			
 			HOVER =
@@ -452,6 +498,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que alguns personagens sejam impedidos de beber bebidas alcoólicas?",
 				pl  = "Czy niektórzy bohaterowie powinni być niezdolni do picia napojów alkoholowych?",
 				es  = "¿Deberían algunos personajes no poder beber bebidas alcohólicas?",
+				vi  = "Một số nhân vật có nên không thể uống đồ uống có cồn?",
 			},
 			
 			HOVER_OPTIONS =
@@ -464,6 +511,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Todos os personagens podem beber bebidas alcoólicas.",
 					pl  = "Wszyscy bohaterowie mogą pić napoje alkoholowe.",
 					es  = "Todos los personajes pueden beber bebidas alcohólicas.",
+					vi  = "Tất cả nhân vật đều có thể uống đồ uống có cồn.",
 				},
 				
 				ENABLED =
@@ -472,8 +520,9 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					zh  = "一些角色，比如韦伯，温蒂等。不能饮酒。",
 					zht = "一些角色，比如韋伯、溫蒂等，不能飲酒。",
 					pt  = "Alguns personagens como Webber, Wendy, etc. Não poderão beber bebidas alcoólicas.",
-					pl  = "Niektórzy bohaterowie, tacy jak Webber, Wendy itp., nie mogą pić napojów alkoholowych.",
-					es  = "Algunos personajes como Webber, Wendy, etc., no podrán beber bebidas alcohólicas.",
+					pl  = "Niektórzy bohaterowie, tacy jak Webber, Wendy itp. nie mogą pić napojów alkoholowych.",
+					es  = "Algunos personajes como Webber, Wendy, etc. no podrán beber bebidas alcohólicas.",
+					vi  = "Một số nhân vật như Webber, Wendy, v.v. không thể uống đồ uống có cồn.",
 				},
 			},
 		},
@@ -488,6 +537,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Spawn de Gigantes das Comidas",
 				pl  = "Giganci z jedzenia",
 				es  = "Gigantes de la comida",
+				vi  = "Khổng lồ từ thức ăn",
 			},
 			
 			HOVER =
@@ -498,6 +548,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que Gigantes apareçam se Jogadores comerem suas comidas especiais?",
 				pl  = "Czy giganci powinni się pojawiać, gdy gracze jedzą swoje specjalne potrawy?",
 				es  = "¿Deberían aparecer gigantes cuando los jugadores coman sus comidas especiales?",
+				vi  = "Người chơi có nên triệu hồi Khổng Lồ khi ăn món ăn đặc biệt của họ?",
 			},
 			
 			HOVER_OPTIONS =
@@ -510,6 +561,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Jogadores não irão spawnar Gigantes quando comerem suas comidas especiais.",
 					pl  = "Gracze nie przywołają gigantów po zjedzeniu swoich specjalnych potraw.",
 					es  = "Los jugadores no invocarán gigantes al comer sus comidas especiales.",
+					vi  = "Người chơi sẽ không triệu hồi Khổng Lồ khi ăn món ăn đặc biệt.",
 				},
 				
 				ENABLED =
@@ -520,6 +572,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Jogadores irão spawnar Gigantes quando comerem suas comidas especiais.",
 					pl  = "Gracze przywołają gigantów po zjedzeniu swoich specjalnych potraw.",
 					es  = "Los jugadores invocarán gigantes al comer sus comidas especiales.",
+					vi  = "Người chơi sẽ triệu hồi Khổng Lồ khi ăn món ăn đặc biệt.",
 				},
 			},
 		},
@@ -534,6 +587,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Elastipaçador para Geladeiras",
 				pl  = "Elastispacer do lodówek",
 				es  = "Elastiespaciador para refrigeradores",
+				vi  = "Elastispacer cho tủ lạnh",
 			},
 			
 			HOVER =
@@ -544,6 +598,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que o Elastipaçador funcione para Geladeiras?\nNota:Pode causar erros visuais se for desabilitado posteriormente.",
 				pl  = "Czy Elastispacer powinien móc ulepszać lodówki i solne skrzynie?\nUwaga: Wyłączenie później może powodować błędy wizualne.",
 				es  = "¿Debería el Elastiespaciador poder mejorar las neveras y las cajas de sal?\nNota: Si se desactiva posteriormente, puede causar errores visuales.",
+				vi  = "Elastispacer có nên nâng cấp Ice Box và Salt Box?\nLưu ý: Nếu tắt sau đó có thể gây lỗi hiển thị.",
 			},
 			
 			HOVER_OPTIONS =
@@ -556,6 +611,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "O Elastipaçador não irá funcionar para Geladeiras.",
 					pl  = "Elastispacer nie będzie ulepszał lodówek ani solnych skrzyń.",
 					es  = "El Elastiespaciador no mejorará las neveras ni las cajas de sal.",
+					vi  = "Elastispacer sẽ không nâng cấp Ice Box và Salt Box.",
 				},
 				
 				ENABLED =
@@ -566,6 +622,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "O Elastipaçador irá funcionar para Geladeiras, permitindo pilhas infinitas de itens.",
 					pl  = "Elastispacer ulepszy lodówki i solne skrzynie, umożliwiając nieskończone stosy przedmiotów.",
 					es  = "El Elastiespaciador mejorará las neveras y las cajas de sal, permitiendo pilas infinitas de objetos.",
+					vi  = "Elastispacer sẽ nâng cấp Ice Box và Salt Box để xếp chồng vật phẩm vô hạn.",
 				},
 			},
 		},
@@ -580,6 +637,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Efeito de Velocidade",
 				pl  = "Efekt prędkości",
 				es  = "Efecto de velocidad",
+				vi  = "Hiệu ứng tốc độ từ thức ăn",
 			},
 			
 			HOVER =
@@ -590,6 +648,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que as comidas proporcionem Efeito de Velocidade?\n\Isto só se aplica à certas comidas.",
 				pl  = "Czy jedzenie powinno dawać efekt prędkości po spożyciu?\nTa opcja dotyczy tylko niektórych potraw.",
 				es  = "¿Deberían los alimentos otorgar el efecto de velocidad al consumirse?\nEsta opción solo se aplica a ciertos alimentos.",
+				vi  = "Thức ăn có nên cho Hiệu ứng Tốc độ khi ăn?\n\Tùy chọn này chỉ áp dụng cho một số món ăn.",
 			},
 			
 			HOVER_OPTIONS =
@@ -602,6 +661,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "As comidas não irão proporcionar o Efeito de Velocidade quando ingeridas.",
 					pl  = "Jedzenie nie będzie dawało efektu prędkości po spożyciu.",
 					es  = "Los alimentos no otorgarán el efecto de velocidad al consumirse.",
+					vi  = "Thức ăn sẽ không cho Hiệu ứng Tốc độ khi ăn.",
 				},
 				
 				ENABLED =
@@ -612,6 +672,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "As comidas irão proporcionar o Efeito de Velocidade quando ingeridas.",
 					pl  = "Jedzenie będzie dawało efekt prędkości po spożyciu.",
 					es  = "Los alimentos otorgarán el efecto de velocidad al consumirse.",
+					vi  = "Thức ăn sẽ cho Hiệu ứng Tốc độ khi ăn.",
 				},
 			},
 		},
@@ -626,6 +687,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Duração do Efeito de Velocidade",
 				pl  = "Czas trwania efektu prędkości",
 				es  = "Duración del efecto de velocidad",
+				vi  = "Thời gian hiệu ứng tốc độ",
 			},
 			
 			HOVER =
@@ -636,6 +698,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "O quão longo deve ser o Efeito de Velocidade das comidas?",
 				pl  = "Jak długo powinien trwać efekt prędkości z jedzenia?",
 				es  = "¿Cuánto debería durar el efecto de velocidad otorgado por los alimentos?",
+				vi  = "Hiệu ứng Tốc độ từ thức ăn nên kéo dài bao lâu?",
 			},
 			
 			HOVER_OPTIONS =
@@ -650,6 +713,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Super Curto",
 						pl  = "Bardzo krótki",
 						es  = "Muy corto",
+						vi  = "Rất ngắn",
 					},
 					
 					HOVER =
@@ -660,6 +724,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "O Efeito de Velocidade irá durar por 2 minutos.",
 						pl  = "Efekt prędkości będzie trwał 2 minuty.",
 						es  = "El efecto de velocidad durará 2 minutos.",
+						vi  = "Hiệu ứng Tốc độ sẽ kéo dài 2 phút.",
 					},
 				},
 				
@@ -673,6 +738,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Curto",
 						pl  = "Krótki",
 						es  = "Corto",
+						vi  = "Ngắn",
 					},
 					
 					HOVER =
@@ -683,6 +749,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "O Efeito de Velocidade irá durar por meio dia.",
 						pl  = "Efekt prędkości będzie trwał przez pół dnia.",
 						es  = "El efecto de velocidad durará medio día.",
+						vi  = "Hiệu ứng Tốc độ sẽ kéo dài nửa ngày.",
 					},
 				},
 				
@@ -696,6 +763,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Padrão",
 						pl  = "Domyślny",
 						es  = "Predeterminado",
+						vi  = "Mặc định",
 					},
 					
 					HOVER =
@@ -706,6 +774,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "O Efeito de Velocidade irá durar 1 dia.",
 						pl  = "Efekt prędkości będzie trwał 1 dzień.",
 						es  = "El efecto de velocidad durará 1 día.",
+						vi  = "Hiệu ứng Tốc độ sẽ kéo dài 1 ngày.",
 					},
 				},
 				
@@ -719,6 +788,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Mediano",
 						pl  = "Średni",
 						es  = "Promedio",
+						vi  = "Trung bình",
 					},
 					
 					HOVER =
@@ -729,6 +799,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "O Efeito de Velocidade irá durar 1 dia e meio.",
 						pl  = "Efekt prędkości będzie trwał 1.5 dnia.",
 						es  = "El efecto de velocidad durará 1.5 días.",
+						vi  = "Hiệu ứng Tốc độ sẽ kéo dài 1.5 ngày.",
 					},
 				},
 				
@@ -742,6 +813,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Longo",
 						pl  = "Długi",
 						es  = "Largo",
+						vi  = "Dài",
 					},
 					
 					HOVER =
@@ -752,6 +824,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "O Efeito de Velocidade irá durar 2 dias.",
 						pl  = "Efekt prędkości będzie trwał 2 dni.",
 						es  = "El efecto de velocidad durará 2 días.",
+						vi  = "Hiệu ứng Tốc độ sẽ kéo dài 2 ngày.",
 					},
 				},
 				
@@ -765,6 +838,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Super Longo",
 						pl  = "Bardzo długi",
 						es  = "Muy largo",
+						vi  = "Rất dài",
 					},
 					
 					HOVER =
@@ -775,6 +849,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "O Efeito de Velocidade irá durar 4 dias.",
 						pl  = "Efekt prędkości będzie trwał 4 dni.",
 						es  = "El efecto de velocidad durará 4 días.",
+						vi  = "Hiệu ứng Tốc độ sẽ kéo dài 4 ngày.",
 					},
 				},
 			},
@@ -790,6 +865,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Scrapbook do Mod",
 				pl  = "Księga modyfikacji",
 				es  = "Scrapbook del Mod",
+				vi  = "Sổ tay Mod",
 			},
 			
 			HOVER =
@@ -800,6 +876,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que os conteúdos do Mod sejam adicionados ao Scrapbook?",
 				pl  = "Czy zawartość moda powinna być dodana do księgi?",
 				es  = "¿Deberían añadirse los contenidos del mod al Scrapbook?",
+				vi  = "Nội dung của mod có nên được thêm vào Sổ tay?",
 			},
 			
 			HOVER_OPTIONS =
@@ -812,6 +889,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Scrapbook Padrão.",
 					pl  = "Domyślna księga.",
 					es  = "Scrapbook predeterminado.",
+					vi  = "Sổ tay mặc định.",
 				},
 				
 				ENABLED =
@@ -822,6 +900,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Os conteúdos do Mod serão adicionados ao Scrapbook.",
 					pl  = "Zawartość moda zostanie dodana do księgi.",
 					es  = "Los contenidos del mod se añadirán al Scrapbook.",
+					vi  = "Nội dung của mod sẽ được thêm vào Sổ tay.",
 				},
 			},
 		},
@@ -836,6 +915,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Página Especiais do Chef",
 				pl  = "Strona Kuchnia Specjalności Warly'ego",
 				es  = "Página de Especialidades del Chef",
+				vi  = "Trang Công thức Đặc biệt của Đầu bếp",
 			},
 			
 			HOVER =
@@ -846,6 +926,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que as Receitas do Warly apareçam na página \"Especiais do Chefe\" ao invés de \"Receitas do Mod\" no Livro de Receitas?",
 				pl  = "Czy przepisy Warly'ego powinny pojawiać się na stronie \"Specjalności Szefa\" zamiast w \"Przepisach Moda\" w książce kucharskiej?",
 				es  = "¿Deberían las recetas de Warly aparecer en la página \"Especialidades del Chef\" en lugar de en \"Recetas del Mod\" en el libro de cocina?",
+				vi  = "Công thức của Warly có nên xuất hiện trong \"Đặc sản Đầu bếp\" thay vì \"Công thức Mod\" trong Sách nấu ăn?",
 			},
 			
 			HOVER_OPTIONS =
@@ -858,6 +939,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "As Receitas do Warly irão aparecer na página \"Receitas do Mod\" no Livro de Receitas.",
 					pl  = "Przepisy Warly'ego pojawią się na stronie \"Przepisy Moda\" w książce kucharskiej.",
 					es  = "Las recetas de Warly aparecerán en la página \"Recetas del Mod\" del libro de cocina.",
+					vi  = "Công thức của Warly sẽ xuất hiện trong trang \"Công thức Mod\" của Sách nấu ăn.",
 				},
 				
 				ENABLED =
@@ -868,6 +950,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "As Receitas do Warly irão aparecer na página \"Especiais do Chefe\" no Livro de Receitas.",
 					pl  = "Przepisy Warly'ego pojawią się na stronie \"Specjalności Szefa\" w książce kucharskiej.",
 					es  = "Las recetas de Warly aparecerán en la página \"Especialidades del Chef\" del libro de cocina.",
+					vi  = "Công thức của Warly sẽ xuất hiện trong trang \"Đặc sản Đầu bếp\" của Sách nấu ăn.",
 				},
 			},
 		},
@@ -882,6 +965,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Temperos Complementares do Chef",
 				pl  = "Zonunkhira Zowonjezera za Chef",
 				es  = "Especias Complementarias del Chef",
+				vi  = "Gia vị bổ sung của Đầu bếp",
 			},
 			
 			HOVER =
@@ -892,6 +976,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que Warly fabrique e use uma variedade de novos Temperos do Mod?\nNão é recomendado desativar depois.",
 				pl  = "Czy Warly powinien mieć możliwość tworzenia i używania nowych przypraw z modów?\nNie zaleca się wyłączania tej opcji później.",
 				es  = "¿Debería Warly poder fabricar y usar una variedad de nuevas Especias de Mods?\nNo se recomienda desactivarlo posteriormente.",
+				vi  = "Warly có nên có thể chế tạo và sử dụng nhiều loại Gia vị Mod mới?\nKhông khuyến khích tắt sau đó.",
 			},
 			
 			HOVER_OPTIONS =
@@ -904,6 +989,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Warly só poderá fabricar e usar Temperos padrões.",
 					pl  = "Warly będzie mógł tworzyć i używać wyłącznie domyślnych przypraw.",
 					es  = "Warly solo podrá fabricar y usar Especias Vanilla.",
+					vi  = "Warly chỉ có thể chế tạo và sử dụng Gia vị mặc định.",
 				},
 				
 				ENABLED =
@@ -914,6 +1000,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Warly poderá fabricar e usar Temperos padrões e do Mod.",
 					pl  = "Warly będzie mógł tworzyć i używać zarówno domyślnych, jak i modowanych przypraw.",
 					es  = "Warly podrá fabricar y usar Especias Vanilla y del Mod.",
+					vi  = "Warly sẽ có thể chế tạo và sử dụng cả Gia vị mặc định và Gia vị Mod.",
 				},
 			},
 		},
@@ -928,6 +1015,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Receitas do Moinho de Moagem",
 				pl  = "Przepisy przenośnego młyna Warly'ego",
 				es  = "Recetas del Molino Portátil",
+				vi  = "Công thức Cối xay cầm tay",
 			},
 			
 			HOVER =
@@ -938,6 +1026,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que o Moinho de Moagem do Warly tenha as receitas da Pedra de Preparação?",
 				pl  = "Czy przenośny młyn Warly'ego powinien mieć przepisy z Kamienia Mielenia?",
 				es  = "¿Debería el Molino Portátil de Warly tener las recetas de la Piedra de Molienda?",
+				vi  = "Cối xay cầm tay của Warly có nên có công thức từ Mealing Stone?",
 			},
 			
 			HOVER_OPTIONS =
@@ -950,6 +1039,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "O Moinho de Moagem do Warly não terá as receitas da Pedra de Preparação.",
 					pl  = "Przenośny młyn Warly'ego nie będzie miał przepisów z Kamienia Mielenia.",
 					es  = "El Molino Portátil de Warly no tendrá las recetas de la Piedra de Molienda.",
+					vi  = "Cối xay cầm tay của Warly sẽ không có công thức từ Mealing Stone.",
 				},
 				
 				ENABLED =
@@ -960,6 +1050,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "O Moinho de Moagem do Warly terá as receitas da Pedra de Preparação.",
 					pl  = "Przenośny młyn Warly'ego będzie miał przepisy z Kamienia Mielenia.",
 					es  = "El Molino Portátil de Warly tendrá las recetas de la Piedra de Molienda.",
+					vi  = "Cối xay cầm tay của Warly sẽ có công thức từ Mealing Stone.",
 				},
 			},
 		},
@@ -974,6 +1065,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Parar Deteorização da Comida",
 				pl  = "Zatrzymaj psucie się jedzenia",
 				es  = "Detener la descomposición de alimentos",
+				vi  = "Ngăn hư hỏng thức ăn",
 			},
 			
 			HOVER =
@@ -984,6 +1076,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que as comidas estraguem se estiverem na Panela?",
 				pl  = "Czy jedzenie powinno się psuć, jeśli jest w garnku Crock Pot?",
 				es  = "¿Debería la comida echarse a perder si está dentro de la Olla?",
+				vi  = "Thức ăn có nên hỏng nếu ở trong Crock Pot?",
 			},
 			
 			HOVER_OPTIONS =
@@ -996,6 +1089,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "As comidas estragarão na Panela, Panela Portátil, etc.",
 					pl  = "Jedzenie będzie się psuć w garnku Crock Pot, przenośnym Crock Pot itp.",
 					es  = "La comida se echará a perder dentro de la Olla, Olla portátil, etc.",
+					vi  = "Thức ăn sẽ hỏng trong Crock Pot, Portable Crock Pot, v.v.",
 				},
 				
 				ENABLED =
@@ -1006,6 +1100,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "As comidas não estragarão na Panela, Panela Portátil, etc.",
 					pl  = "Jedzenie nie będzie się psuć w garnku Crock Pot, przenośnym Crock Pot itp.",
 					es  = "La comida no se echará a perder dentro de la Olla, Olla portátil, etc.",
+					vi  = "Thức ăn sẽ không hỏng trong Crock Pot, Portable Crock Pot, v.v.",
 				},
 			},
 		},
@@ -1020,6 +1115,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Receita do Balde de Cocô",
 				pl  = "Przepis na Wiadro Kupu",
 				es  = "Receta del Cubo de Caca",
+				vi  = "Công thức Bucket-o-Poop",
 			},
 			
 			HOVER =
@@ -1030,6 +1126,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que o Balde de Cocô use o Balde ao invés de seus ingredientes padrões?",
 				pl  = "Czy Wiadro Kupu powinno używać Wiadra zamiast swojej domyślnej receptury?",
 				es  = "¿Debería el Cubo de Caca usar el Cubo en lugar de su receta predeterminada?",
+				vi  = "Bucket-o-Poop có nên dùng Bucket thay vì công thức mặc định?",
 			},
 			
 			HOVER_OPTIONS =
@@ -1042,6 +1139,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "O Balde de Cocô não irá usar o Balde. (Ingredientes padrão).",
 					pl  = "Wiadro Kupu nie będzie używać Wiadra. (Domyślna receptura).",
 					es  = "El Cubo de Caca no usará el Cubo. (Receta predeterminada).",
+					vi  = "Bucket-o-Poop sẽ không dùng Bucket. (Công thức mặc định).",
 				},
 				
 				ENABLED =
@@ -1052,6 +1150,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "O Balde de Cocô irá usar o Balde como parte de seus ingredientes.",
 					pl  = "Wiadro Kupu będzie używać Wiadra jako składnika w przepisie.",
 					es  = "El Cubo de Caca usará el Cubo como ingrediente de su receta.",
+					vi  = "Bucket-o-Poop sẽ dùng Bucket làm nguyên liệu chế tạo.",
 				},
 			},
 		},
@@ -1066,6 +1165,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Informações Extras Scrapbook do Mod",
 				pl  = "Scrapbook Mod Extras",
 				es  = "Extras para Scrapbook del Mod",
+				vi  = "Thông tin Sổ tay Mod bổ sung",
 			},
 			
 			HOVER =
@@ -1076,6 +1176,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que informações adicionais sobre conteúdos do Mod sejam mostradas no Scrapbook?\n\Requer que o Scrapbook do Mod esteja ativado.",
 				pl  = "Czy w albumie powinny być wyświetlane dodatkowe informacje dotyczące zawartości modyfikacji?\n\Wymagana jest włączona funkcja Mod Scrapbook.",
 				es  = "¿Debería mostrarse información adicional sobre el contenido del Mod en el Scrapbook?\n\Requiere que Scrapbook del Mod esté habilitado.",
+				vi  = "Có nên hiển thị thông tin bổ sung về Nội dung Mod trong Sổ tay?\n\Yêu cầu bật Sổ tay Mod.",
 			},
 			
 			HOVER_OPTIONS =
@@ -1088,6 +1189,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Scrapbook do Mod original sem informações adicionais.",
 					pl  = "Oryginalny Mod Scrapbook bez dodatkowych informacji.",
 					es  = "Original Scrapbook del Mod sin información adicional.",
+					vi  = "Sổ tay Mod gốc không có thông tin bổ sung.",
 				},
 				
 				ENABLED =
@@ -1098,6 +1200,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Scrapbook do Mod com informações adicionais.",
 					pl  = "Mod Scrapbook z dodatkowymi informacjami.",
 					es  = "Scrapbook del Mod con información adicional.",
+					vi  = "Sổ tay Mod có thông tin bổ sung.",
 				},
 			},
 		},
@@ -1112,6 +1215,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "CC do Arquipélago da Serenidade",
 				pl  = "CC Archipelagu Spokoju",
 				es  = "CC del Archipiélago de la Serenidad",
+				vi  = "CC Quần đảo Serenity",
 			},
 			
 			HOVER =
@@ -1122,6 +1226,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Esta opção é experimental e está em teste.\nO Arquipélago da Serenidade deve ter Colour Cubes especiais?",
 				pl  = "Ta opcja jest eksperymentalna i w fazie testów.\nCzy Archipelag Spokoju powinien mieć specjalne Colour Cubes?",
 				es  = "Esta opción es experimental y está en pruebas.\n¿Debería el Archipiélago de la Serenidad tener Colour Cubes especiales?",
+				vi  = "Tùy chọn này là thử nghiệm và đang được kiểm tra.\n\Quần đảo Serenity có nên có Colour Cubes đặc biệt?",
 			},
 			
 			HOVER_OPTIONS =
@@ -1134,6 +1239,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Colour Cubes padrão para o Arquipélago da Serenidade.",
 					pl  = "Domyślny Colour Cubes dla Archipelagu Spokoju.",
 					es  = "Colour Cubes predeterminados para el Archipiélago de la Serenidad.",
+					vi  = "Colour Cubes mặc định cho Quần đảo Serenity.",
 				},
 				
 				MARKER =
@@ -1146,6 +1252,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Modo Marcador",
 						pl  = "Tryb Marker",
 						es  = "Modo Marcador",
+						vi  = "Chế độ Marker",
 					},
 					
 					HOVER =
@@ -1156,6 +1263,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Modo Marcador funciona somente em Mundos Novos/Retrofitados.",
 						pl  = "Tryb Marker działa tylko w nowych lub poddanych retrofitowi światach.",
 						es  = "El Modo Marcador solo funciona en Mundos Nuevos o Retroadaptados.",
+						vi  = "Chế độ Marker chỉ hoạt động với Thế giới Mới/Đã cải tạo.",
 					},
 				},
 				
@@ -1169,6 +1277,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Modo Estático",
 						pl  = "Tryb Statyczny",
 						es  = "Modo Estático",
+						vi  = "Chế độ Tĩnh",
 					},
 
 					HOVER =
@@ -1179,6 +1288,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Modo Estático funciona para ambos cenários. Requer Restart do Servidor.",
 						pl  = "Tryb Statyczny powinien działać w obu scenariuszach. Wymaga ponownego uruchomienia serwera.",
 						es  = "El Modo Estático debería funcionar en ambos escenarios. Requiere reiniciar el servidor.",
+						vi  = "Chế độ Tĩnh sẽ hoạt động cho cả hai trường hợp. Yêu cầu khởi động lại máy chủ.",
 					},
 				},
 			},
@@ -1194,6 +1304,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "CC da Ilha Beira-mar",
 				pl  = "CC Wyspy Nadmorskiej",
 				es  = "CC de la Isla Costera",
+				vi  = "CC Đảo ven biển",
 			},
 			
 			HOVER =
@@ -1204,6 +1315,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Esta opção é experimental e está em teste.\nA Ilha Beira-mar deve ter Colour Cubes especiais?",
 				pl  = "Ta opcja jest eksperymentalna i w fazie testów.\nCzy Wyspa Nadmorska powinna mieć specjalny Colour Cubes?",
 				es  = "Esta opción es experimental y está en pruebas.\n¿Debería la Isla Costera tener Colour Cubes especiales?",
+				vi  = "Tùy chọn này là thử nghiệm và đang được kiểm tra.\n\Đảo ven biển có nên có Colour Cubes đặc biệt?",
 			},
 			
 			HOVER_OPTIONS =
@@ -1216,6 +1328,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Colour Cubes padrão para a Ilha Beira-mar.",
 					pl  = "Domyślny Colour Cubes dla Wyspy Nadmorskiej.",
 					es  = "Colour Cubes predeterminados para la Isla Costera.",
+					vi  = "Colour Cubes mặc định cho Đảo ven biển.",
 				},
 				
 				MARKER =
@@ -1228,6 +1341,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Modo Marcador",
 						pl  = "Tryb Marker",
 						es  = "Modo Marcador",
+						vi  = "Chế độ Marker",
 					},
 					
 					HOVER =
@@ -1238,6 +1352,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Modo Marcador funciona somente em Mundos Novos/Retrofitados.",
 						pl  = "Tryb Marker działa tylko w nowych lub poddanych retrofitowi światach.",
 						es  = "El Modo Marcador solo funciona en Mundos Nuevos o Retroadaptados.",
+						vi  = "Chế độ Marker chỉ hoạt động với Thế giới Mới/Đã cải tạo.",
 					},
 				},
 				
@@ -1251,6 +1366,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Modo Estático",
 						pl  = "Tryb Statyczny",
 						es  = "Modo Estático",
+						vi  = "Chế độ Tĩnh",
 					},
 
 					HOVER =
@@ -1261,6 +1377,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 						pt  = "Modo Estático funciona para ambos cenários. Requer Restart do Servidor.",
 						pl  = "Tryb Statyczny powinien działać w obu scenariuszach. Wymaga ponownego uruchomienia serwera.",
 						es  = "El Modo Estático debería funcionar en ambos escenarios. Requiere reiniciar el servidor.",
+						vi  = "Chế độ Tĩnh sẽ hoạt động cho cả hai trường hợp. Yêu cầu khởi động lại máy chủ.",
 					},
 				},
 			},
@@ -1276,6 +1393,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Transformações da Lua Cheia",
 				pl  = "Transformacje Pełni Księżyca",
 				es  = "Transformaciones de la Luna Llena",
+				vi  = "Biến hình Trăng tròn",
 			},
 			
 			HOVER =
@@ -1286,6 +1404,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que algumas coisas se transformem na Lua Cheia?\nAtualmente afeta: Cogumelos.",
 				pl  = "Czy niektóre rzeczy powinny ulegać przemianie podczas nocy pełni księżyca?\nAktualnie dotyczy to: Grzybów.",
 				es  = "¿Deberían transformarse algunas cosas durante las noches de luna llena?\nActualmente afecta a: los hongos.",
+				vi  = "Một số thứ có nên biến hình trong đêm Trăng Tròn?\nHiện tại ảnh hưởng đến: Nấm.",
 			},
 			
 			HOVER_OPTIONS =
@@ -1298,6 +1417,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Algumas coisas não se transformam durante as noites de lua cheia.",
 					pl  = "Niektóre rzeczy nie ulegną zmianie podczas nocy pełni księżyca.",
 					es  = "Algunas cosas no se transformarán durante las noches de luna llena.",
+					vi  = "Một số thứ sẽ không biến hình trong đêm Trăng Tròn.",
 				},
 				
 				ENABLED =
@@ -1308,147 +1428,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Algumas coisas se transformarão durante as noites de lua cheia.",
 					pl  = "Podczas nocy pełni księżyca pewne rzeczy ulegają zmianie.",
 					es  = "Algunas cosas se transformarán durante las noches de luna llena.",
-				},
-			},
-		},
-		
-		RETROFIT_FORCE =
-		{
-			NAME =
-			{
-				"Force Retrofit",
-				zh  = "强制改造",
-				zht = "強制改造",
-				pt  = "Forçar Retrofit",
-				pl  = "Wymuś Retrofit",
-				es  = "Forzar Retrofit",
-			},
-			
-			HOVER =
-			{
-				"If you are unable to Retrofit Mod Contents enable this option.\nWARNING: Caution is advised, you may end up with unwanted content.",
-				zh  = "如果无法改造模组内容，请启用此选项。\n警告：请谨慎使用，否则可能产生不想要的内容。",
-				zht = "如果無法改造模組內容，請啟用此選項。\n警告：請謹慎使用，否則可能產生不想要的內容。",
-				pt  = "Se você não conseguir fazer Retrofit dos conteúdos do Mod, habilite esta opção.\nAVISO: Use com cautela, você pode acabar com conteúdos indesejados.",
-				pl  = "Jeśli nie możesz zastosować retrofitu zawartości moda, włącz tę opcję.\nOSTRZEŻENIE: Używaj ostrożnie, możesz otrzymać niepożądaną zawartość.",
-				es  = "Si no puedes realizar el Retrofit del contenido del mod, activa esta opción.\nADVERTENCIA: Se recomienda precaución, podrías obtener contenido no deseado si se usa descuidadamente.",
-			},
-			
-			HOVER_OPTIONS =
-			{
-				DISABLED =
-				{
-					"The Mod will try retrofitting using the default settings.",
-					zh  = "模组将尝试使用默认设置进行改造。",
-					zht = "模組將嘗試使用預設設置進行改造。",
-					pt  = "O Mod tentará aplicar retrofit usando as configurações padrão.",
-					pl  = "Mod spróbuje zastosować retrofit używając domyślnych ustawień.",
-					es  = "El mod intentará realizar el retrofit usando la configuración predeterminada.",
-				},
-				
-				ENABLED =
-				{
-					"The Mod will override default settings to force a Retrofit.",
-					zh  = "模组将覆盖默认设置以强制执行改造。",
-					zht = "模組將覆蓋預設設置以強制執行改造。",
-					pt  = "O mod irá sobrescrever as configurações padrão para forçar um retrofit.",
-					pl  = "Mod nadpisze domyślne ustawienia, aby wymusić retrofit.",
-					es  = "El mod sobrescribirá la configuración predeterminada para forzar un retrofit.",
-				},
-			},
-		},
-		
-		RETROFIT =
-		{
-			NAME =
-			{
-				"Retrofit Contents",
-				zh  = "改造内容",
-				zht = "改造內容",
-				pt  = "Fazer Retro. de Conteúdos",
-				pl  = "Zawartość retrofitowana",
-				es  = "Contenido de Reacondicionamiento",
-			},
-			
-			HOVER =
-			{
-				"If your world is missing the Mod Contents enable this option.\nThis option will be set to \"Updated\" once the retrofitting is finished!",
-				zh  = "如果你的世界缺少Mod内容，请启用此选项。\n改造完成后，该选项将被设置为 \"已更新\"！",
-				zht = "如果你的世界缺少Mod內容，請啟用此選項。\n改造完成後，該選項將被設置為 \"已更新\"！",
-				pt  = "Se seu mundo está faltando algum conteúdo ative esta opção.\nEsta opção irá ficar como \"Atualizado\ assim que a retrocompatibilidade for finalizada!",
-				pl  = "Jeśli w twoim świecie brakuje zawartości moda, włącz tę opcję.\nOpcja zostanie ustawiona jako \"Zaktualizowana\" po zakończeniu retrofitowania!",
-				es  = "Si a tu mundo le falta el contenido del mod, activa esta opción.\n¡Esta opción se marcará como \"Actualizado\" una vez que se complete el reacondicionamiento!",
-			},
-			
-			HOVER_OPTIONS =
-			{
-				UPDATED =
-				{
-					NAME =
-					{
-						"Updated",
-						zh  = "已更新",
-						zht = "已更新",
-						pt  = "Atualizado",
-						pl  = "Zaktualizowane",
-						es  = "Actualizado",
-					},
-					
-					HOVER =
-					{
-						"Your world is already updated with the Mod Contents.",
-						zh  = "你的世界已更新了Mod的内容。",
-						zht = "你的世界已更新了Mod的內容。",
-						pt  = "Seu mundo já está atualizado com os conteúdos do Mod.",
-						pl  = "Twój świat jest już zaktualizowany o zawartość moda.",
-						es  = "Tu mundo ya está actualizado con los contenidos del mod.",
-					},
-				},
-				
-				OCEAN =
-				{
-					NAME =
-					{
-						"Retrofit Ocean",
-						zh  = "海洋改造",
-						zht = "海洋改造",
-						pt  = "Retro. do Oceano",
-						pl  = "Przebudowa oceanu",
-						es  = "Océano Retrofitado",
-					},
-					
-					HOVER =
-					{
-						"Mod Ocean Setpieces will be generated during server initialization.",
-						zh  = "海洋布景将在服务器初始化期间生成。",
-						zht = "海洋布景將在伺服器初始化期間生成。",
-						pt  = "As Setpieces de Oceano serão geradas durante a inicialização do servidor.",
-						pl  = "Elementy oceanu zostaną wygenerowane podczas inicjalizacji serwera.",
-						es  = "Las piezas del océano se generarán durante la inicialización del servidor.",
-					},
-				},
-				
-				MERMHUT =
-				{
-					NAME =
-					{
-						"Retrofit Mermhuts",
-						zh  = "鱼人屋改造",
-						zht = "鱼人屋改造",
-						pt  = "Retro. de Mermhuts",
-						pl  = "Retrofit Mermhuts",
-						es  = "Mermhuts Retrofitados",
-					},
-					
-					HOVER =
-					{
-						"Mod Mermhuts will be generated during server initialization.",
-						zh  = "Mod的鱼人屋会在服务器初始化期间生成。",
-						zht = "Mod的鱼人屋會在伺服器初始化期間生成。",
-						pt  = "Os Mermhuts do Mod serão geradas durante a inicialização do servidor.",
-						pl  = "Mermhuty moda zostaną wygenerowane podczas inicjalizacji serwera.",
-						es  = "Los Mermhuts del mod se generarán durante la inicialización del servidor.",
-					},
+					vi  = "Một số thứ sẽ biến hình trong đêm Trăng Tròn.",
 				},
 			},
 		},
@@ -1463,6 +1443,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Retrofit Automático",
 				pl  = "Automatyczna Modernizacja",
 				es  = "Retrofit Automático",
+				vi  = "Tự động cải tạo",
 			},
 			
 			HOVER =
@@ -1473,6 +1454,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que o Servidor cheque toda vez se o Mundo precisa de algum Retrofit durante a inicialização? Esta opção não é desativada automaticamente depois.",
 				pl  = "Czy serwer powinien sprawdzać za każdym razem, czy świat wymaga modernizacji podczas inicjalizacji? Ta opcja nie zostanie automatycznie wyłączona później.",
 				es  = "¿Debe el Servidor comprobar cada vez si el Mundo necesita algún Retrofit durante la inicialización? Esta opción no se desactivará automáticamente después.",
+				vi  = "Máy chủ có nên kiểm tra trong lúc khởi tạo xem thế giới có cần cải tạo không? Tùy chọn này sẽ không tự tắt sau đó.",
 			},
 			
 			HOVER_OPTIONS =
@@ -1485,6 +1467,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "O Servidor não irá checar por Retrofits durante a inicialização.",
 					pl  = "Serwer nie będzie sprawdzał modernizacji podczas inicjalizacji.",
 					es  = "El Servidor no comprobará los Retrofits durante la inicialización.",
+					vi  = "Máy chủ sẽ không kiểm tra cải tạo trong lúc khởi tạo.",
 				},
 				
 				ENABLED =
@@ -1495,6 +1478,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "O Servidor irá checar por Retrofits durante a inicialização.",
 					pl  = "Serwer będzie sprawdzał modernizacje podczas inicjalizacji.",
 					es  = "El Servidor comprobará los Retrofits durante la inicialización.",
+					vi  = "Máy chủ sẽ kiểm tra cải tạo trong lúc khởi tạo.",
 				},
 			},
 		},
@@ -1509,6 +1493,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Retro. de Trocas",
 				pl  = "Handel Retrofitowany",
 				es  = "Intercambios Retrofitados",
+				vi  = "Cải tạo giao dịch",
 			},
 			
 			HOVER =
@@ -1519,6 +1504,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 				pt  = "Permitir que o Rei Porco aceite certos itens em troca de itens do Mod?\nIsso também se aplica ao Porco Ancião em mundos Lights Out.",
 				pl  = "Czy Król Świń powinien móc wymieniać przedmioty na przedmioty z moda?\nDotyczy to również Starszego Świni w światach Lights Out.",
 				es  = "¿Debería el Rey Cerdo poder intercambiar objetos por objetos del mod?\nEsto también se aplica al Anciano Cerdo en mundos Lights Out.",
+				vi  = "Pig King có nên có thể đổi vật phẩm lấy vật phẩm Mod?\nĐiều này cũng áp dụng cho Pig Elder trong thế giới Lights Out.",
 			},
 			
 			HOVER_OPTIONS =
@@ -1531,6 +1517,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Não será possível fazer trocas por itens do Mod.",
 					pl  = "Niektóre przedmioty nie mogą być wymienione na przedmioty z moda.",
 					es  = "Ciertos objetos no se pueden intercambiar por objetos del mod.",
+					vi  = "Một số vật phẩm không thể đổi lấy vật phẩm Mod.",
 				},
 				
 				ENABLED =
@@ -1541,6 +1528,7 @@ Cada día se selecciona una receta al azar. Al consumir la receta del día, se o
 					pt  = "Será possível fazer trocas por itens do Mod.",
 					pl  = "Niektóre przedmioty można wymienić na przedmioty z moda.",
 					es  = "Ciertos objetos se pueden intercambiar por objetos del mod.",
+					vi  = "Một số vật phẩm có thể đổi lấy vật phẩm Mod.",
 				},
 			},
 		},
@@ -1628,7 +1616,7 @@ local LANGUAGE_OPTIONS       =
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.pl,
 		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.pl,
 		data                 = "pl"
-	}
+	},
 	--[[
 	{
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.es,
@@ -1636,6 +1624,11 @@ local LANGUAGE_OPTIONS       =
 		data                 = "es", -- We also don't have Spanish.
 	},
 	]]--
+	{
+		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.vi,
+		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.vi,
+		data                 = "vi"
+	}
 }
 
 local SEASONALFOOD_LABEL     = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.NAME)
@@ -1968,43 +1961,6 @@ local FULLMOON_OPTIONS       =
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.FULLMOON.HOVER_OPTIONS.ENABLED),
 		data                 = true
-	}
-}
-
-local RETROFITFORCE_LABEL    = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.NAME)
-local RETROFITFORCE_HOVER    = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.HOVER)
-local RETROFITFORCE_OPTIONS  =
-{
-	{
-		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
-		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.HOVER_OPTIONS.DISABLED),
-		data                 = false
-	},
-	{
-		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
-		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT_FORCE.HOVER_OPTIONS.ENABLED),
-		data                 = true
-	}
-}
-
-local RETROFIT_LABEL         = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.NAME)
-local RETROFIT_HOVER         = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER)
-local RETROFIT_OPTIONS       =
-{
-	{
-		description          = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.UPDATED.NAME),
-		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.UPDATED.HOVER),
-		data                 = 0
-	},
-	{
-		description          = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.OCEAN.NAME),
-		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.OCEAN.HOVER),
-		data                 = 1
-	},
-	{
-		description          = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.MERMHUT.NAME),
-		hover                = ChooseTranslationTable(STRINGS.SETTINGS.RETROFIT.HOVER_OPTIONS.MERMHUT.HOVER),
-		data                 = 2
 	}
 }
 

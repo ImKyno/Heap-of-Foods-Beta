@@ -1047,7 +1047,13 @@ WILSON.DESCRIBE.FLTSANDWICH = "It's like a BLT. But with frog instead!"
 
 WILSON.DESCRIBE.RICEANDBEANS = "A healthy meal option."
 
-WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "What secrets hide in there? Maybe we'll find out... in 2026."
+WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "This building needs a repair, urgently.",
+	REPAIRED = "It looks way better to live in there now.",
+	OCCUPIED = "I doubt he can sleep comfortable in there.",
+	OCCUPIED_REPAIRED = "He must be sleeping right now.",
+}
 
 WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WILSON.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "No special dishes for today.",
 	BURNING = "It's on fire!",
 	BURNT = "I think today's special is ashes.",
+}
+
+WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "He won't trade with me unless I help repair his house first.",
+	HOUSE_REPAIRED = "Hello, sir! What do you have for trade?",
 }

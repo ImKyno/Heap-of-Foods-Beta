@@ -1047,7 +1047,13 @@ WAXWELL.DESCRIBE.FLTSANDWICH = "Those frogs deserve it."
 
 WAXWELL.DESCRIBE.RICEANDBEANS = "I could use something better next time."
 
-WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Patience... all things resurface with time. 2026, perhaps?"
+WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "What a miserable excuse for a storefront.",
+	REPAIRED = "Finally, something presentable.",
+	OCCUPIED = "I wouldn't sleep there voluntarily.",
+	OCCUPIED_REPAIRED = "At least the merchant has standards now.",
+}
 
 WAXWELL.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WAXWELL.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "No special dishes. How uninspired.",
 	BURNING = "How utterly careless.",
 	BURNT = "Reduced to cinders. Typical.",
+}
+
+WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Apparently I must indulge his domestic concerns first.",
+	HOUSE_REPAIRED = "Much better. Now, show me your inventory.",
 }

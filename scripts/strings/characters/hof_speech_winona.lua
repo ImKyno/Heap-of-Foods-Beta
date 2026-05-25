@@ -1047,7 +1047,13 @@ WINONA.DESCRIBE.FLTSANDWICH = "Mhm, yep. I definetely prefer bacon over frog mea
 
 WINONA.DESCRIBE.RICEANDBEANS = "Lunch."
 
-WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Needs a real fixer-upper job. Maybe they'll put me on it in 2026."
+WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "This place needs some serious repair work.",
+	REPAIRED = "Now that's solid craftsmanship.",
+	OCCUPIED = "Doesn't look too comfortable in there.",
+	OCCUPIED_REPAIRED = "Looks like the guy finally has a decent place to rest.",
+}
 
 WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WINONA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Nothing on the menu today.",
 	BURNING = "Welp, there goes the sign.",
 	BURNT = "Can't fix that anymore.",
+}
+
+WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Guess repairs come before business.",
+	HOUSE_REPAIRED = "There we go. Let's make a deal.",
 }

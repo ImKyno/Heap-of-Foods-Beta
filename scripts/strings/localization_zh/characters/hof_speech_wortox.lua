@@ -1047,7 +1047,13 @@ WORTOX.DESCRIBE.FLTSANDWICH = "它是由明眼青蛙腿制成的。"
 
 WORTOX.DESCRIBE.RICEANDBEANS = "人类的食物。"
 
-WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "呵呵！一座沉睡于时间中的房子……2026年再来偷看吧！"
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "一间破败的商店！",
+	REPAIRED = "修好了，而且整洁得可怕！",
+	OCCUPIED = "小猪正在他的小窝里打盹。",
+	OCCUPIED_REPAIRED = "商人做着梦，月光正闪耀！",
+}
 
 WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WORTOX.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "今天没有有趣的惊喜？",
 	BURNING = "火焰乐趣！呼呼！",
 	BURNT = "变成灰烬和焦渣！",
+}
+
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "他似乎还能容忍我。在房子修好前可不做交易！",
+	HOUSE_REPAIRED = "坚固的房屋和闪亮的货物！",
 }

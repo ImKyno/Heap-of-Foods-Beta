@@ -51,23 +51,26 @@ local function SortAfter(a, b, filter_name)
 	SortRecipe(a, b, filter_name, 1)
 end
 
+-- Using Bananas instead of Cave Bananas.
+AllRecipes["wormwood_reeds"].ingredients = {Ingredient("kyno_banana", 1, ModAtlas)}
+
 -- Wurt can craft her structures on Tidal Marsh ground.
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=3435352667
 local _IsMarshLand = AllRecipes["mermhouse_crafted"].testfn
 local function IsTidalMarshLand(pt, rot, ...)
-	return _G.TheWorld.Map:GetTileAtPoint(pt.x, pt.y, pt.z) == WORLD_TILES.HOF_TIDALMARSH
+	return _G.TheWorld.Map:GetTileAtPoint(pt.x, pt.y, pt.z) == _G.WORLD_TILES.HOF_TIDALMARSH
 	or _IsMarshLand(pt, rot, ...)
 end
 
-AllRecipes["mermhouse_crafted"].testfn = IsTidalMarshLand
+AllRecipes["mermhouse_crafted"].testfn       = IsTidalMarshLand
 AllRecipes["mermthrone_construction"].testfn = IsTidalMarshLand
-AllRecipes["mermwatchtower"].testfn = IsTidalMarshLand
-AllRecipes["offering_pot"].testfn = IsTidalMarshLand
-AllRecipes["offering_pot_upgraded"].testfn = IsTidalMarshLand
-AllRecipes["merm_toolshed"].testfn = IsTidalMarshLand
-AllRecipes["merm_toolshed_upgraded"].testfn = IsTidalMarshLand
-AllRecipes["merm_armory"].testfn = IsTidalMarshLand
-AllRecipes["merm_armory_upgraded"].testfn = IsTidalMarshLand
+AllRecipes["mermwatchtower"].testfn          = IsTidalMarshLand
+AllRecipes["offering_pot"].testfn            = IsTidalMarshLand
+AllRecipes["offering_pot_upgraded"].testfn   = IsTidalMarshLand
+AllRecipes["merm_toolshed"].testfn           = IsTidalMarshLand
+AllRecipes["merm_toolshed_upgraded"].testfn  = IsTidalMarshLand
+AllRecipes["merm_armory"].testfn             = IsTidalMarshLand
+AllRecipes["merm_armory_upgraded"].testfn    = IsTidalMarshLand
 
 -- Custom TechTree for Stations.
 table.insert(TechTree.AVAILABLE_TECH, "MEALING")
@@ -558,22 +561,6 @@ SortBefore("potatosack2", "icebox", "COOKING")
 
 AddDeconstructRecipe("potatosack", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)})
 
--- Using Bananas instead of Cave Bananas.
-Recipe2("wormwood_reeds", {Ingredient(_G.CHARACTER_INGREDIENT.HEALTH, 15), Ingredient("kyno_banana", 1, ModAtlas), Ingredient("cutreeds", 4)}, TECH.NONE,
-	{
-		allowautopick       = true,
-		no_deconstruction   = true,
-		actionstr           = "GROW",
-		product             = "dug_monkeytail",
-		builder_skill       = "wormwood_reedscrafting",
-		sg_state            = "form_monkey",
-		description         = "wormwood_reeds",
-		atlas 			    = DefaultAtlas1,
-		image               = "dug_monkeytail.tex",
-	},
-	{"CHARACTER"}
-)
-
 AddCharacterRecipe("wendy_sugarfly", {Ingredient("ghostflower", 3), Ingredient("kyno_sugarflywings", 1)}, TECH.NONE,
 	{
 		no_deconstruction   = true,
@@ -902,13 +889,7 @@ end
 
 -- Replace the Bucket-o-Poop recipe with ours.
 if HOF_FERTILIZERTWEAK then
-	Recipe2("fertilizer", {Ingredient("poop", 3), Ingredient("kyno_bucket_empty", 1, ModAtlas)}, TECH.SCIENCE_TWO,
-		{
-			atlas 				= DefaultAtlas,
-			image       		= "fertilizer.tex",
-		},
-		{"GARDENING"}
-	)
+	AllRecipes["fertilizer"].ingredients = {Ingredient("poop", 3), Ingredient("kyno_bucket_empty", 1, ModAtlas)}
 end
 
 -- Pearl Tea Shop.

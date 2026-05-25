@@ -1047,7 +1047,13 @@ WOODIE.DESCRIBE.FLTSANDWICH = "BLT imitation!"
 
 WOODIE.DESCRIBE.RICEANDBEANS = "Its just missing some nice steak and fries."
 
-WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Seen better days, eh bud? Bet it's gonna get real busy come 2026."
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "That place needs fixin', eh?",
+	REPAIRED = "Now that's a proper little shop.",
+	OCCUPIED = "Hope the fella's sleepin' alright in there.",
+	OCCUPIED_REPAIRED = "Looks cozy enough for a nap now.",
+}
 
 WOODIE.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1228,4 +1234,10 @@ WOODIE.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	NONE = "Guess there's no special today.",
 	BURNING = "Bit hot there, eh?",
 	BURNT = "That's done for.",
+}
+
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Can't blame him fer wantin' his house fixed first.",
+	HOUSE_REPAIRED = "Now that's better. Got anything useful, eh?",
 }
