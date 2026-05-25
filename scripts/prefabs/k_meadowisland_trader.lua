@@ -35,10 +35,10 @@ local sounds =
 
 local FORGETABLE_RECIPES = {} -- Recipes that do not have a limit flag will be forgot on rerolling.
 
-local WARES                             = 
+local WARES                                 = 
 {	
 	-- Make sure there is at least one trade that has min = 1 in this table.
-	ALWAYS                              = 
+	ALWAYS                                  = 
 	{
 		{
 			["kyno_itemslicer_gold"]        = { recipe = "meadowislandtrader_kyno_itemslicer_gold",        min = 6,  max = 6,  limit = 6  },
@@ -184,7 +184,7 @@ local function OnActivate(inst)
 	end
 	
 	inst.sg.mem.didtrade = true
-	inst:PushEvent("dotrade", {no_stock = no_stock, })
+	inst:PushEvent("dotrade", { no_stock = no_stock })
 end
 
 local function HasStock(inst)
@@ -430,7 +430,7 @@ local function OnGetItemFromPlayer(inst, giver, item)
 	end
 
 	inst.sg:GoToState("dotradehat")
-	inst:PushEvent("dotrade", {no_stock = no_stock, })
+	inst:PushEvent("dotrade", { no_stock = no_stock })
 end
 
 local function OnRefuseItem(inst, item)
@@ -554,7 +554,7 @@ local function fn()
 	-- We somehow got a Sammy without a home. Kill it! Kill it with fire!
 	--[[
 	inst:DoTaskInTime(2, function(inst)
-		print("Heap of Foods - Found a Sammy without a home. Removing it!")
+		print("Heap of Foods Mod - Found a Sammy without a home. Removing it!")
 		if inst.components.homeseeker == nil then
 			inst:Remove()
 		end

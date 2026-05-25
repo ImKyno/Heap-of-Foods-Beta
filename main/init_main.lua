@@ -7,6 +7,7 @@ local INIT_MAIN_MISC =
 	"prefabs",
 	"skins",
 	"recipes",
+	"recipes_deciduous",
 	"recipes_hofbirthday",
 	"recipes_serenity",
 	"recipes_meadow",

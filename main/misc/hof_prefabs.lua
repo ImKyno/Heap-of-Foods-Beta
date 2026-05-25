@@ -42,6 +42,7 @@ PrefabFiles =
 	"k_cucumber",
 	"k_dailyrecipe_sign",
 	"k_deciduousforest_shop",
+	"k_deciduousforest_trader",
 	"k_dogfish",
 	"k_fertilizer_nutrient_defs",
 	"k_fishes",

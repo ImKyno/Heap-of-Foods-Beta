@@ -73,6 +73,7 @@ AllRecipes["merm_armory_upgraded"].testfn = IsTidalMarshLand
 table.insert(TechTree.AVAILABLE_TECH, "MEALING")
 table.insert(TechTree.AVAILABLE_TECH, "SERENITYSHOP")
 table.insert(TechTree.AVAILABLE_TECH, "MEADOWSHOP")
+table.insert(TechTree.AVAILABLE_TECH, "DECIDUOUSSHOP")
 table.insert(TechTree.AVAILABLE_TECH, "HOFBIRTHDAY")
 
 TechTree.Create = function(t)
@@ -86,28 +87,34 @@ TechTree.Create = function(t)
 end
 
 -- Mealing Stone.
-_G.TECH.NONE.MEALING      = 0
-_G.TECH.MEALING_ONE       = { MEALING          = 1  }
-_G.TECH.MEALING_TWO       = { MEALING          = 2  }
+_G.TECH.NONE.MEALING       = 0
+_G.TECH.MEALING_ONE        = { MEALING          = 1  }
+_G.TECH.MEALING_TWO        = { MEALING          = 2  }
 
 -- Pig Elder.
-_G.TECH.NONE.SERENITYSHOP = 0
-_G.TECH.SERENITYSHOP_ONE  = { SERENITYSHOP     = 1  }
-_G.TECH.SERENITYSHOP_TWO  = { SERENITYSHOP     = 2  }
+_G.TECH.NONE.SERENITYSHOP  = 0
+_G.TECH.SERENITYSHOP_ONE   = { SERENITYSHOP     = 1  }
+_G.TECH.SERENITYSHOP_TWO   = { SERENITYSHOP     = 2  }
 
 -- Sammy The Trader.
-_G.TECH.NONE.MEADOWSHOP   = 0
-_G.TECH.MEADOWSHOP_ONE    = { MEADOWSHOP       = 1  }
-_G.TECH.MEADOWSHOP_TWO    = { MEADOWSHOP       = 2  }
+_G.TECH.NONE.MEADOWSHOP    = 0
+_G.TECH.MEADOWSHOP_ONE     = { MEADOWSHOP       = 1  }
+_G.TECH.MEADOWSHOP_TWO     = { MEADOWSHOP       = 2  }
+
+-- Partitio The Trader.
+_G.TECH.NONE.DECIDUOUSSHOP = 0
+_G.TECH.DECIDUOUSSHOP_ONE  = { DECIDUOUSSHOP    = 1  }
+_G.TECH.DECIDUOUSSHOP_TWO  = { DECIDUOUSSHOP    = 2  }
 
 -- HoF Anniversary.
-_G.TECH.NONE.HOFBIRTHDAY  = 0
-_G.TECH.HOFBIRTHDAY       = { SCIENCE          = 10 }
+_G.TECH.NONE.HOFBIRTHDAY   = 0
+_G.TECH.HOFBIRTHDAY        = { SCIENCE          = 10 }
 
 for k, v in pairs(TUNING.PROTOTYPER_TREES) do
 	v.MEALING 		= 0
 	v.SERENITYSHOP 	= 0
 	v.MEADOWSHOP    = 0
+	v.DECIDUOUSSHOP = 0
 	v.HOFBIRTHDAY   = 0
 end
 
@@ -124,36 +131,48 @@ for i, v in pairs(_G.AllRecipes) do
 		v.level.MEADOWSHOP = 0
 	end
 
+	if v.level.DECIDUOUSSHOP == nil then
+		v.level.DECIDUOUSSHOP = 0
+	end
+
 	if v.level.HOFBIRTHDAY == nil then
 		v.level.HOFBIRTHDAY = 0
 	end
 end
 
 -- Custom Recipe Filters.
-local HOF_FILTERS            =
+local HOF_FILTERS  =
 {
-	MEALING                  =
+	MEALING        =
 	{
-		name                 = "MEALING",
-		atlas                = CraftingFilterAtlas,
-		image                = "kyno_tab_mealing.tex",
-		custom_pos           = true,
+		name       = "MEALING",
+		atlas      = CraftingFilterAtlas,
+		image      = "kyno_tab_mealing.tex",
+		custom_pos = true,
 	},
 
-	SERENITYSHOP             =
+	SERENITYSHOP   =
 	{
-		name                 = "SERENITYSHOP",
-		atlas                = CraftingFilterAtlas,
-		image                = "kyno_tab_serenity.tex",
-		custom_pos           = true,
+		name       = "SERENITYSHOP",
+		atlas      = CraftingFilterAtlas,
+		image      = "kyno_tab_serenity.tex",
+		custom_pos = true,
 	},
 
-	MEADOWSHOP               =
+	MEADOWSHOP     =
 	{
-		name                 = "MEADOWSHOP",
-		atlas                = CraftingFilterAtlas,
-		image                = "kyno_tab_meadow.tex",
-		custom_pos           = true,
+		name       = "MEADOWSHOP",
+		atlas      = CraftingFilterAtlas,
+		image      = "kyno_tab_meadow.tex",
+		custom_pos = true,
+	},
+
+	DECIDUOUSSHOP  =
+	{
+		name       = "DECIDUOUSSHOP",
+		atlas      = CraftingFilterAtlas,
+		image      = "kyno_tab_deciduous.tex",
+		custom_pos = true,
 	},
 }
 
@@ -162,33 +181,42 @@ for k, filter in pairs(HOF_FILTERS) do
 end
 
 -- Custom Prototyper and Crafting Stations.
-local HOF_PROTOTYPERS        =
+local HOF_PROTOTYPERS           =
 {
-	kyno_mealgrinder         =
+	kyno_mealgrinder            =
 	{
-		icon_atlas           = CraftingFilterAtlas,
-		icon_image           = "kyno_tab_mealing.tex",
-		is_crafting_station  = true,
-		action_str           = "MEALING",
-		filter_text          = _G.STRINGS.UI.CRAFTING_FILTERS.MEALING,
+		icon_atlas              = CraftingFilterAtlas,
+		icon_image              = "kyno_tab_mealing.tex",
+		is_crafting_station     = true,
+		action_str              = "MEALING",
+		filter_text             = _G.STRINGS.UI.CRAFTING_FILTERS.MEALING,
 	},
 
-	kyno_serenityisland_shop =
+	kyno_serenityisland_shop    =
 	{
-		icon_atlas			 = CraftingFilterAtlas,
-		icon_image			 = "kyno_tab_serenity.tex",
-		is_crafting_station	 = true,
-		action_str			 = "TRADE",
-		filter_text			 = _G.STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP,
+		icon_atlas			    = CraftingFilterAtlas,
+		icon_image			    = "kyno_tab_serenity.tex",
+		is_crafting_station	    = true,
+		action_str			    = "TRADE",
+		filter_text			    = _G.STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP,
 	},
 
-	kyno_meadowisland_seller =
+	kyno_meadowisland_seller    =
 	{
-		icon_atlas           = CraftingFilterAtlas,
-		icon_image           = "kyno_tab_meadow.tex",
-		is_crafting_station  = true,
-		action_str           = "TRADE",
-		filter_text          = _G.STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP,
+		icon_atlas              = CraftingFilterAtlas,
+		icon_image              = "kyno_tab_meadow.tex",
+		is_crafting_station     = true,
+		action_str              = "TRADE",
+		filter_text             = _G.STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP,
+	},
+
+	kyno_deciduousforest_seller =
+	{
+		icon_atlas              = CraftingFilterAtlas,
+		icon_image              = "kyno_tab_deciduous.tex",
+		is_crafting_station     = true,
+		action_str              = "TRADE",
+		filter_text             = _G.STRINGS.UI.CRAFTING_FILTERS.DECIDUOUSSHOP,
 	},
 }
 

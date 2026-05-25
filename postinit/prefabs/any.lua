@@ -36,5 +36,16 @@ local function DailyRecipePostInit(inst)
 	end
 end
 
+local function PigFriendlyPostInit(inst)
+	if inst:HasTag("player") and not inst:HasTag("playermerm") then
+		inst:AddTag("pigfriendly")
+	end
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+end
+
 AddPrefabPostInitAny(SeedsPostInit)
 AddPrefabPostInitAny(DailyRecipePostInit)
+AddPrefabPostInitAny(PigFriendlyPostInit)

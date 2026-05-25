@@ -442,6 +442,7 @@ local HOF_ICONS =
 	"kyno_hofbirthday_cheer",
 	"kyno_hofbirthday_popcorn",
 	"kyno_hofbirthday_popcornmachine",
+	"kyno_hofbirthday_partitiohat",
 	"kyno_hofbirthday_sammyhat",
 	"kyno_humanmeat",
 	"kyno_humanmeat_cooked",
