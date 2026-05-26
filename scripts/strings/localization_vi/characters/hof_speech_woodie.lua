@@ -1,1237 +1,1258 @@
 local WOODIE = STRINGS.CHARACTERS.WOODIE
 
-WOODIE.ANNOUNCE_KYNO_COFFEEBUFF_START = "More speed, more trees down!"
-WOODIE.ANNOUNCE_KYNO_COFFEEBUFF_END = "I feel slow, all of sudden."
+WOODIE.ANNOUNCE_KYNO_COFFEEBUFF_START = "Nhanh hơn, hạ được nhiều cây hơn!"
+WOODIE.ANNOUNCE_KYNO_COFFEEBUFF_END = "Tự nhiên thấy chậm lại quá."
 
-WOODIE.ANNOUNCE_KYNO_HASTEBUFF_START = "Speed up the hands for picking up logs."
-WOODIE.ANNOUNCE_KYNO_HASTEBUFF_END = "Oouf. My hands are dazed!"
+WOODIE.ANNOUNCE_KYNO_HASTEBUFF_START = "Tay nhanh hơn để nhặt gỗ nhanh hơn."
+WOODIE.ANNOUNCE_KYNO_HASTEBUFF_END = "Oouf. Tay mình choáng váng rồi!"
 
-WOODIE.ANNOUNCE_KYNO_POPBUFF_START = "(buurp!) Ooh, did you see that, Lucy?"
-WOODIE.ANNOUNCE_KYNO_POPBUFF_END = "Need to take a break from that drink."
+WOODIE.ANNOUNCE_KYNO_POPBUFF_START = "(ợợ!) Ồ, em thấy không, Lucy?"
+WOODIE.ANNOUNCE_KYNO_POPBUFF_END = "Phải nghỉ uống thứ đó một chút thôi."
 
-WOODIE.ANNOUNCE_KYNO_FROGBUFF_START = "A moment of peace between me and them, eh?"
-WOODIE.ANNOUNCE_KYNO_FROGBUFF_END = "I need to get far from frogs now."
+WOODIE.ANNOUNCE_KYNO_FROGBUFF_START = "Một khoảnh khắc yên bình giữa mình và tụi nó, nhỉ?"
+WOODIE.ANNOUNCE_KYNO_FROGBUFF_END = "Giờ mình nên tránh xa ếch ra."
 
-WOODIE.ANNOUNCE_KYNO_PIRATEBUFF_START = "(buurp!) Get ready, Lucy!"
-WOODIE.ANNOUNCE_KYNO_PIRATEBUFF_END = "Need to take a break from that drink."
+WOODIE.ANNOUNCE_KYNO_PIRATEBUFF_START = "(ợợ!) Sẵn sàng đi, Lucy!"
+WOODIE.ANNOUNCE_KYNO_PIRATEBUFF_END = "Phải nghỉ uống thứ đó một chút thôi."
 
-WOODIE.ANNOUNCE_KYNO_FREEZEBUFF_START = "Uff, is it winter already?"
-WOODIE.ANNOUNCE_KYNO_FREEZEBUFF_END = "It was fun while it lasted."
+WOODIE.ANNOUNCE_KYNO_FREEZEBUFF_START = "Uff, mùa đông tới rồi hả?"
+WOODIE.ANNOUNCE_KYNO_FREEZEBUFF_END = "Vui được chừng nào hay chừng đó."
 
-WOODIE.ANNOUNCE_KYNO_FIREBUFF_START = "Firewatch!"
-WOODIE.ANNOUNCE_KYNO_FIREBUFF_END = "It was fun while it lasted."
+WOODIE.ANNOUNCE_KYNO_FIREBUFF_START = "Canh lửa đây!"
+WOODIE.ANNOUNCE_KYNO_FIREBUFF_END = "Vui được chừng nào hay chừng đó."
 
-WOODIE.ANNOUNCE_KYNO_FISHINGBUFF_START = "Time to try some new activities."
-WOODIE.ANNOUNCE_KYNO_FISHINGBUFF_END = "Ah, c'mon! Just one more fish..."
+WOODIE.ANNOUNCE_KYNO_FISHINGBUFF_START = "Tới lúc thử hoạt động mới rồi."
+WOODIE.ANNOUNCE_KYNO_FISHINGBUFF_END = "À, thôi nào! Thêm một con cá nữa thôi..."
 
-WOODIE.ANNOUNCE_KYNO_SANITYRATEBUFF_START = "It's so calming now."
-WOODIE.ANNOUNCE_KYNO_SANITYRATEBUFF_END = "I still feel a bit dazed."
+WOODIE.ANNOUNCE_KYNO_SANITYRATEBUFF_START = "Giờ thấy bình yên ghê."
+WOODIE.ANNOUNCE_KYNO_SANITYRATEBUFF_END = "Mình vẫn còn hơi choáng."
 
-WOODIE.ANNOUNCE_KYNO_EATERBUFF_START = "Ready to chip some logs, Lucy?"
-WOODIE.ANNOUNCE_KYNO_EATERBUFF_END = "Its like my teeth have been stunned."
+WOODIE.ANNOUNCE_KYNO_EATERBUFF_START = "Sẵn sàng gặm vài khúc gỗ chưa, Lucy?"
+WOODIE.ANNOUNCE_KYNO_EATERBUFF_END = "Cứ như răng mình bị tê hết vậy."
 
-WOODIE.ANNOUNCE_KYNO_WORMBUFF_START = "Let's get fighting!"
-WOODIE.ANNOUNCE_KYNO_WORMBUFF_END = "I need to rest for a while."
+WOODIE.ANNOUNCE_KYNO_WORMBUFF_START = "Chiến thôi nào!"
+WOODIE.ANNOUNCE_KYNO_WORMBUFF_END = "Mình cần nghỉ một lát."
 
-WOODIE.ANNOUNCE_KYNO_CRABBUFF_START = "Let's get fighting!"
-WOODIE.ANNOUNCE_KYNO_CRABBUFF_END = "I need to rest for a while."
+WOODIE.ANNOUNCE_KYNO_CRABBUFF_START = "Chiến thôi nào!"
+WOODIE.ANNOUNCE_KYNO_CRABBUFF_END = "Mình cần nghỉ một lát."
 
-WOODIE.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(buurp!) Ooh, did you see that, Lucy?"
-WOODIE.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "Need to take a break from that frog drink."
+WOODIE.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(ợợ!) Ồ, em thấy không, Lucy?"
+WOODIE.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "Phải nghỉ uống thứ nước ếch đó một chút thôi."
 
-WOODIE.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START = "I can see the truth!"
-WOODIE.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_END = "My mind is a bit dazed."
+WOODIE.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START = "Mình nhìn thấy sự thật rồi!"
+WOODIE.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_END = "Đầu óc mình hơi choáng."
 
-WOODIE.ANNOUNCE_KYNO_STEALTHBUFF_START = "Lucy, be quiet, won't ya?"
-WOODIE.ANNOUNCE_KYNO_STEALTHBUFF_END = "Alright, you got me."
+WOODIE.ANNOUNCE_KYNO_STEALTHBUFF_START = "Lucy, im lặng chút nhé?"
+WOODIE.ANNOUNCE_KYNO_STEALTHBUFF_END = "Được rồi, bị phát hiện rồi."
 
-WOODIE.ANNOUNCE_KYNO_FEARBUFF_START = "Well, isn't that a load off my mind!"
-WOODIE.ANNOUNCE_KYNO_FEARBUFF_END = "Whoa, that scary feeling is back!"
+WOODIE.ANNOUNCE_KYNO_FEARBUFF_START = "Chà, đúng là nhẹ đầu hẳn!"
+WOODIE.ANNOUNCE_KYNO_FEARBUFF_END = "Whoa, cảm giác đáng sợ đó quay lại rồi!"
 
-WOODIE.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_START = "The power consumes me!"
-WOODIE.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_END = "Well, that didn't last long."
+WOODIE.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_START = "Sức mạnh đang nuốt lấy mình!"
+WOODIE.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_END = "Chà, thứ đó chẳng kéo dài lâu."
 
-WOODIE.ANNOUNCE_KYNO_TRUFFLESBUFF_START = "Well, looks like I've got a whole entourage now!"
-WOODIE.ANNOUNCE_KYNO_TRUFFLESBUFF_END = "Looks like our piggy crew has wandered off."
+WOODIE.ANNOUNCE_KYNO_TRUFFLESBUFF_START = "Chà, có vẻ giờ mình có cả đoàn tùy tùng rồi!"
+WOODIE.ANNOUNCE_KYNO_TRUFFLESBUFF_END = "Có vẻ đội heo con của mình đi mất rồi."
 
-WOODIE.ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START = "Guess I'm safe from the burn, eh?"
+WOODIE.ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START = "Chắc mình an toàn khỏi bị bỏng rồi, eh?"
 -- No ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_END, because we are using default strings for that.
 
-WOODIE.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_START = "Guess I'm tougher than the swamp today!"
-WOODIE.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_END = "Back to being vulnerable, eh?"
+WOODIE.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_START = "Chắc hôm nay mình cứng hơn cả đầm lầy rồi!"
+WOODIE.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_END = "Lại quay về dễ dính độc rồi, eh?"
 
-WOODIE.ANNOUNCE_KYNO_CRAFTINGBUFF_START = "Guess I'm thinkin' clearer than a fresh-cut log, eh?"
-WOODIE.ANNOUNCE_KYNO_CRAFTINGBUFF_END = "Guess that bright idea burned out, eh?"
+WOODIE.ANNOUNCE_KYNO_CRAFTINGBUFF_START = "Chắc đầu óc mình sáng hơn khúc gỗ mới chặt rồi, eh?"
+WOODIE.ANNOUNCE_KYNO_CRAFTINGBUFF_END = "Chắc ý tưởng sáng đó tắt mất rồi, eh?"
 
-WOODIE.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_START = "Looks like the bees ain't lookin' for trouble anymore."
-WOODIE.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_END = "Welp. The bees are cranky again."
+WOODIE.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_START = "Có vẻ lũ ong không muốn gây chuyện nữa."
+WOODIE.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_END = "Chà. Lũ ong lại cáu kỉnh rồi."
 
-WOODIE.ANNOUNCE_KYNO_MAXHEALTHBUFF_START = "Feeling sturdy, eh?"
-WOODIE.ANNOUNCE_KYNO_MAXHEALTHBUFF_END = "Well, that's over."
+WOODIE.ANNOUNCE_KYNO_MAXHEALTHBUFF_START = "Thấy chắc khỏe ghê, eh?"
+WOODIE.ANNOUNCE_KYNO_MAXHEALTHBUFF_END = "Chà, hết rồi."
 
-WOODIE.ANNOUNCE_KYNO_MAXHUNGERBUFF_START = "Guess I can pack more grub now, eh?"
-WOODIE.ANNOUNCE_KYNO_MAXHUNGERBUFF_END = "Well, that was short-lived."
+WOODIE.ANNOUNCE_KYNO_MAXHUNGERBUFF_START = "Chắc giờ mình nhét được thêm đồ ăn rồi, eh?"
+WOODIE.ANNOUNCE_KYNO_MAXHUNGERBUFF_END = "Chà, ngắn ngủi thật."
 
-WOODIE.ANNOUNCE_KYNO_MAXSANITYBUFF_START = "Feels like the ol' brain's working better, eh?"
-WOODIE.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Aw, there go the good thoughts."
+WOODIE.ANNOUNCE_KYNO_MAXSANITYBUFF_START = "Có vẻ cái đầu cũ đang hoạt động tốt hơn, eh?"
+WOODIE.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Aw, mấy ý nghĩ tốt đi mất rồi."
 
-WOODIE.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Feels like nothin' can knock me down right now!"
-WOODIE.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Well, back to bein' careful."
+WOODIE.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Cảm giác như giờ chẳng có gì hạ gục được mình!"
+WOODIE.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Chà, lại phải cẩn thận rồi."
 
-WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Guess I'm swingin' harder than usual!"
-WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Easy there, back to normal."
+WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Chắc mình vung mạnh hơn thường ngày!"
+WOODIE.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Bình tĩnh nào, quay lại bình thường thôi."
 
-WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Nice! Won't need a snack so soon."
-WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Back to feelin' peckish again."
+WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Tốt đó! Chưa cần ăn vặt sớm đâu."
+WOODIE.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Lại thấy hơi đói rồi."
 
-WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Guess the dark ain't so bad after all, eh?"
-WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Alright, now it's spooky again."
+WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Chắc bóng tối cũng không tệ lắm, eh?"
+WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Được rồi, giờ lại thấy rợn rồi."
 
-WOODIE.ANNOUNCE_KYNO_LUCKBUFF_END = "Well, that was nice while it lasted."
+WOODIE.ANNOUNCE_KYNO_LUCKBUFF_END = "Chà, lúc còn hiệu lực thì cũng hay."
 
-WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to pick it up?"
+WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để nhấc nó lên?"
 
-WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. He wants something else."
+WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không. Ông ấy muốn thứ khác."
 
-WOODIE.ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL = "She's too young to handle that."
+WOODIE.ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL = "Cô ấy còn quá non để chịu được thứ đó."
 
-WOODIE.ANNOUNCE_KYNO_FIREPITINSTALL_FAIL = "No use in here."
+WOODIE.ANNOUNCE_KYNO_FIREPITINSTALL_FAIL = "Ở đây không dùng được."
 
-WOODIE.ANNOUNCE_KYNO_POTHANGER_FAIL = "Mhm, maybe a pot here."
+WOODIE.ANNOUNCE_KYNO_POTHANGER_FAIL = "Mhm, có lẽ đặt cái nồi ở đây."
 
-WOODIE.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Eh, It's not this one."
+WOODIE.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Eh, không phải cái này."
 
-WOODIE.ANNOUNCE_KYNO_SAPHEALER_USED = "I'll help you only once, tree."
+WOODIE.ANNOUNCE_KYNO_SAPHEALER_USED = "Tôi chỉ giúp cô lần này thôi nhé, cây à."
 
-WOODIE.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Sorry, critter. Circle of life, eh?"
+WOODIE.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Xin lỗi nhé, sinh vật nhỏ. Vòng đời mà, eh?"
 
-WOODIE.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Well, looks like Sammy's fresh outta supplies."
+WOODIE.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Chà, có vẻ Sammy hết sạch đồ tiếp tế rồi."
 
-WOODIE.ANNOUNCE_KYNO_HUNT_LOST_TRAIL = "Lost the trail, Lucy. Too much water around."
-WOODIE.ANNOUNCE_KYNO_HUNT_LOST_TRAIL_RAIN = "Rain's too heavy, Lucy. Can't track nothin' now."
-WOODIE.ANNOUNCE_KYNO_HUNT_BEAST_NEARBY = "Something's moving out there... and it ain't driftwood!"
+WOODIE.ANNOUNCE_KYNO_HUNT_LOST_TRAIL = "Mất dấu rồi, Lucy. Quanh đây nhiều nước quá."
+WOODIE.ANNOUNCE_KYNO_HUNT_LOST_TRAIL_RAIN = "Mưa nặng quá, Lucy. Giờ chẳng lần được gì nữa."
+WOODIE.ANNOUNCE_KYNO_HUNT_BEAST_NEARBY = "Có thứ gì đó đang động ngoài kia... và không phải gỗ trôi đâu!"
 
-WOODIE.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "All done! Looks great, eh?"
+WOODIE.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Xong rồi! Trông tuyệt đó, eh?"
 
-WOODIE.ANNOUNCE_KYNO_FISH_RESEARCHED = "Well, ain't that somethin'. Learned a thing or two."
-WOODIE.ANNOUNCE_KYNO_ROE_RESEARCHED = "Guess even fish eggs got somethin' to teach."
+WOODIE.ANNOUNCE_KYNO_FISH_RESEARCHED = "Chà, cũng ra gì đấy. Học được một hai điều."
+WOODIE.ANNOUNCE_KYNO_ROE_RESEARCHED = "Chắc ngay cả trứng cá cũng có thứ để dạy mình."
 
-WOODIE.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Not too shabby, eh?"
+WOODIE.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Không tệ chút nào, eh?"
 
-WOODIE.DESCRIBE.KYNO_ROE = "A handful of future fish, eh?"
-WOODIE.DESCRIBE.KYNO_ROE_COOKED = "Better eat'em before they go bad."
+WOODIE.DESCRIBE.KYNO_ROE = "Một nắm cá tương lai, eh?"
+WOODIE.DESCRIBE.KYNO_ROE_COOKED = "Ăn trước khi chúng hỏng thôi."
 
-WOODIE.DESCRIBE.KYNO_SHARK_FIN = "I'm sure the shark won't miss this."
+WOODIE.DESCRIBE.KYNO_SHARK_FIN = "Chắc con cá mập sẽ không nhớ cái này đâu."
 
-WOODIE.DESCRIBE.KYNO_BEANBUGS = "That's a funny little guy."
-WOODIE.DESCRIBE.KYNO_BEANBUGS_COOKED = "It's no Maple Baked Beans."
+WOODIE.DESCRIBE.KYNO_BEANBUGS = "Anh bạn nhỏ buồn cười ghê."
+WOODIE.DESCRIBE.KYNO_BEANBUGS_COOKED = "Không phải Đậu Nướng Maple rồi."
 
-WOODIE.DESCRIBE.KYNO_GUMMYBUG = "Met a lot of those guys in the Rockies."
-WOODIE.DESCRIBE.KYNO_GUMMYBUG_COOKED = "How hungry am I?"
+WOODIE.DESCRIBE.KYNO_GUMMYBUG = "Gặp khá nhiều mấy anh bạn này ở Rockies."
+WOODIE.DESCRIBE.KYNO_GUMMYBUG_COOKED = "Mình đói tới mức nào rồi?"
 
-WOODIE.DESCRIBE.KYNO_WHEAT = "Such a fancy shade of gold."
-WOODIE.DESCRIBE.KYNO_WHEAT_COOKED = "Such a fancy shade of gold."
+WOODIE.DESCRIBE.KYNO_WHEAT = "Một sắc vàng khá sang đó."
+WOODIE.DESCRIBE.KYNO_WHEAT_COOKED = "Một sắc vàng khá sang đó."
 
-WOODIE.DESCRIBE.KYNO_FLOUR = "It's for breads, eh?"
+WOODIE.DESCRIBE.KYNO_FLOUR = "Dùng làm bánh mì, eh?"
 
-WOODIE.DESCRIBE.KYNO_SPOTSPICE = "You only need a pinch to get the flavour."
+WOODIE.DESCRIBE.KYNO_SPOTSPICE = "Chỉ cần một nhúm là đủ lên vị rồi."
 
-WOODIE.DESCRIBE.KYNO_SAP = "Tree sap. From a tree."
-WOODIE.DESCRIBE.KYNO_SAP_SPOILED = "That's a shame, eh?"
+WOODIE.DESCRIBE.KYNO_SAP = "Nhựa cây. Từ một cái cây."
+WOODIE.DESCRIBE.KYNO_SAP_SPOILED = "Tiếc thật đó, eh?"
 
-WOODIE.DESCRIBE.KYNO_SYRUP = "Quite maple."
+WOODIE.DESCRIBE.KYNO_SYRUP = "Khá là maple."
 
-WOODIE.DESCRIBE.KYNO_COFFEEBEANS = "I should cook these up."
-WOODIE.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Canadians love their coffee."
+WOODIE.DESCRIBE.KYNO_COFFEEBEANS = "Mình nên rang mấy hạt này."
+WOODIE.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Người Canada mê cà phê mà."
 
-WOODIE.DESCRIBE.DUG_KYNO_COFFEEBUSH = "All set for replanting."
+WOODIE.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Sẵn sàng đem trồng lại."
 
 WOODIE.DESCRIBE.KYNO_COFFEEBUSH = 
 {
-	GENERIC = "Coffee beans!",
-	PICKED = "Needs more time.",
-	WITHERED = "Needs more fertilizing.",
+	GENERIC = "Hạt cà phê!",
+	PICKED = "Cần thêm thời gian.",
+	WITHERED = "Cần bón phân thêm.",
 }
 
-WOODIE.DESCRIBE.DUG_KYNO_SPOTBUSH = "Gotta plant it again."
+WOODIE.DESCRIBE.DUG_KYNO_SPOTBUSH = "Phải trồng lại nó thôi."
 
 WOODIE.DESCRIBE.KYNO_SPOTBUSH = 
 {
-	GENERIC = "Looks real flavourful.",
-	PICKED = "Needs some time.",
-	BURNING = "That's not good.",
+	GENERIC = "Trông đậm vị thật đấy.",
+	PICKED = "Cần chút thời gian.",
+	BURNING = "Vậy không ổn rồi.",
 }
 
-WOODIE.DESCRIBE.KYNO_SPOTSPICE_LEAF = "It makes my fingers smell like pepper."
+WOODIE.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Nó làm ngón tay mình có mùi tiêu."
 
-WOODIE.DESCRIBE.KYNO_MUSSEL = "Those look like good eating."
-WOODIE.DESCRIBE.KYNO_MUSSEL_COOKED = "These look tasty."
+WOODIE.DESCRIBE.KYNO_MUSSEL = "Trông có vẻ ăn ngon đấy."
+WOODIE.DESCRIBE.KYNO_MUSSEL_COOKED = "Mấy con này trông ngon đó."
 
-WOODIE.DESCRIBE.KYNO_HUMANMEAT = "Should probably put it away somewhere nice and respectful."
-WOODIE.DESCRIBE.KYNO_HUMANMEAT_COOKED = "That's not exactly what we had in mind."
-WOODIE.DESCRIBE.KYNO_HUMANMEAT_DRIED = "Desperate times, eh?"
+WOODIE.DESCRIBE.KYNO_HUMANMEAT = "Chắc nên cất nó ở đâu đó tử tế và tôn trọng."
+WOODIE.DESCRIBE.KYNO_HUMANMEAT_COOKED = "Đó không hẳn là điều tụi mình nghĩ tới."
+WOODIE.DESCRIBE.KYNO_HUMANMEAT_DRIED = "Thời thế khó khăn mà, eh?"
 
-WOODIE.DESCRIBE.COFFEE = "Good ol' joe."
+WOODIE.DESCRIBE.COFFEE = "Cà phê đen thân quen."
 
-WOODIE.DESCRIBE.BISQUE = "Hearty."
+WOODIE.DESCRIBE.BISQUE = "Chắc bụng."
 
-WOODIE.DESCRIBE.JELLYOPOP = "I guess this is a dessert island, eh?"
+WOODIE.DESCRIBE.JELLYOPOP = "Chắc đây là đảo tráng miệng rồi, eh?"
 
-WOODIE.DESCRIBE.SHARKFINSOUP = "He'll swim in my stomach from now on."
+WOODIE.DESCRIBE.SHARKFINSOUP = "Từ giờ nó sẽ bơi trong bao tử mình."
 
-WOODIE.DESCRIBE.TROPICALBOUILLABAISSE = "It's a bit fishy."
+WOODIE.DESCRIBE.TROPICALBOUILLABAISSE = "Hơi tanh một chút."
 
-WOODIE.DESCRIBE.MUSSELBOUILLABAISE = "Best meal I've seen in awhile, eh?"
+WOODIE.DESCRIBE.MUSSELBOUILLABAISE = "Bữa ngon nhất mình thấy gần đây đó, eh?"
 
-WOODIE.DESCRIBE.SWEETPOTATOSOUFFLE = "Pretty extravagant."
+WOODIE.DESCRIBE.SWEETPOTATOSOUFFLE = "Khá cầu kỳ đấy."
 
-WOODIE.DESCRIBE.FEIJOADA = "Those little beans sure make for good food."
+WOODIE.DESCRIBE.FEIJOADA = "Mấy hạt đậu nhỏ đó đúng là làm đồ ăn ngon."
 
-WOODIE.DESCRIBE.GUMMY_CAKE = "I prefer Naniamo bars."
+WOODIE.DESCRIBE.GUMMY_CAKE = "Mình thích bánh Nanaimo hơn."
 
-WOODIE.DESCRIBE.HARDSHELL_TACOS = "I like the crunch."
+WOODIE.DESCRIBE.HARDSHELL_TACOS = "Mình thích độ giòn."
 
-WOODIE.DESCRIBE.ICEDTEA = "Nice and refreshing."
+WOODIE.DESCRIBE.ICEDTEA = "Mát và đã khát."
 
-WOODIE.DESCRIBE.NETTLELOSANGE = "Good for clearing the nose, eh?"
+WOODIE.DESCRIBE.NETTLELOSANGE = "Tốt để thông mũi đó, eh?"
 
-WOODIE.DESCRIBE.SNAKEBONESOUP = "Nothin' like a nice warm bowl of soup."
+WOODIE.DESCRIBE.SNAKEBONESOUP = "Không gì bằng một bát súp nóng ngon lành."
 
-WOODIE.DESCRIBE.STEAMEDHAMSANDWICH = "Mouth watering hamburgers."
+WOODIE.DESCRIBE.STEAMEDHAMSANDWICH = "Hamburger thơm tới chảy nước miệng."
 
-WOODIE.DESCRIBE.TEA = "I could go for some tea."
+WOODIE.DESCRIBE.TEA = "Mình uống chút trà cũng được."
 
-WOODIE.DESCRIBE.BUBBLETEA = "Nice and refreshing."
+WOODIE.DESCRIBE.BUBBLETEA = "Mát và đã khát."
 
-WOODIE.DESCRIBE.FRENCHONIONSOUP = "Nothin' like a nice warm bowl of soup."
+WOODIE.DESCRIBE.FRENCHONIONSOUP = "Không gì bằng một bát súp nóng ngon lành."
 
-WOODIE.DESCRIBE.SLAW = "It's like a forest in a bowl."
+WOODIE.DESCRIBE.SLAW = "Giống cả khu rừng trong một cái bát."
 
-WOODIE.DESCRIBE.LOTUSBOWL = "Cooks up real good."
+WOODIE.DESCRIBE.LOTUSBOWL = "Nấu lên ngon thật."
 
-WOODIE.DESCRIBE.POI = "What is this thing?"
+WOODIE.DESCRIBE.POI = "Thứ này là gì vậy?"
 
-WOODIE.DESCRIBE.JELLYBEAN_HUNGER = "You can barely taste the bean!"
-WOODIE.DESCRIBE.JELLYBEAN_SUPER = "You can barely taste the bean!"
-WOODIE.DESCRIBE.JELLYBEAN_SANITY = "You can barely taste the bean!"
+WOODIE.DESCRIBE.JELLYBEAN_HUNGER = "Gần như chẳng nếm thấy vị đậu!"
+WOODIE.DESCRIBE.JELLYBEAN_SUPER = "Gần như chẳng nếm thấy vị đậu!"
+WOODIE.DESCRIBE.JELLYBEAN_SANITY = "Gần như chẳng nếm thấy vị đậu!"
 
-WOODIE.DESCRIBE.BOWLOFGEARS = "It's not for us Lucy, eh?"
+WOODIE.DESCRIBE.BOWLOFGEARS = "Không dành cho tụi mình đâu Lucy, eh?"
 
-WOODIE.DESCRIBE.LONGPIGMEAL = "I should put it away somewhere and respectful."
+WOODIE.DESCRIBE.LONGPIGMEAL = "Mình nên cất nó ở đâu đó tử tế và tôn trọng."
 
-WOODIE.DESCRIBE.CUCUMBERSALAD = "Healthy, but not very hardy."
+WOODIE.DESCRIBE.CUCUMBERSALAD = "Lành mạnh, nhưng không no lâu lắm."
 
-WOODIE.DESCRIBE.DUG_KYNO_WILDWHEAT = "Best plant it somewhere else."
+WOODIE.DESCRIBE.DUG_KYNO_WILDWHEAT = "Tốt nhất trồng nó ở chỗ khác."
 
 WOODIE.DESCRIBE.KYNO_WILDWHEAT = 
 {
-	GENERIC = "Looks harvestable, eh?",
-	PICKED = "Needs more time.",
-	WITHERED = "Dry as a bone.",
-	BURNING = "Looks like kindling.",
+	GENERIC = "Trông thu hoạch được đó, eh?",
+	PICKED = "Cần thêm thời gian.",
+	WITHERED = "Khô như xương.",
+	BURNING = "Trông như củi mồi.",
 }
 
-WOODIE.DESCRIBE.KYNO_MEALGRINDER = "We just gotta grind and bear it."
+WOODIE.DESCRIBE.KYNO_MEALGRINDER = "Mình chỉ cần nghiến răng mà nghiền thôi."
 
 WOODIE.DESCRIBE.KYNO_MUSHSTUMP =
 {
-	GENERIC = "Those mushrooms look mighty tasty.",
-	PICKED = "They'll be back soon enough.",
-	BURNING = "That's a real shame.",
+	GENERIC = "Mấy cây nấm đó trông ngon lành đấy.",
+	PICKED = "Chúng sẽ sớm mọc lại thôi.",
+	BURNING = "Tiếc thật đó.",
 }
 
-WOODIE.DESCRIBE.GORGE_BREAD = "A loaf, eh?"
-WOODIE.DESCRIBE.GORGE_SWEET_CHIPS = "I really like them this way."
-WOODIE.DESCRIBE.GORGE_VEGETABLE_SOUP = "I must eat my veggies."
-WOODIE.DESCRIBE.GORGE_JELLY_SANDWICH = "This one is a classic breakfast for me."
-WOODIE.DESCRIBE.GORGE_FISH_STEW = "Good eating, that."
-WOODIE.DESCRIBE.GORGE_MEAT_STEW = "Sticks to your ribs."
-WOODIE.DESCRIBE.GORGE_ONION_CAKE = "This cake tastes good!"
-WOODIE.DESCRIBE.GORGE_POTATO_PANCAKES = "Ahh, how I missed you!"
-WOODIE.DESCRIBE.GORGE_POTATO_SOUP = "Hearty."
-WOODIE.DESCRIBE.GORGE_FISHBALL_SKEWERS = "Easy to make food, yet good."
-WOODIE.DESCRIBE.GORGE_MEAT_SKEWERS = "Easy to make food, yet good."
-WOODIE.DESCRIBE.GORGE_STONE_SOUP = "Hearty."
-WOODIE.DESCRIBE.GORGE_CROQUETTE = "They smell nice."
-WOODIE.DESCRIBE.GORGE_ROAST_VEGETABLES = "A balanced meal, eh?"
-WOODIE.DESCRIBE.GORGE_MEATLOAF = "Do you want a piece, Lucy?"
-WOODIE.DESCRIBE.GORGE_CARROT_SOUP = "Hearty."
-WOODIE.DESCRIBE.GORGE_FISHPIE = "I tried my best."
-WOODIE.DESCRIBE.GORGE_FISHCHIPS = "How nice this is!"
-WOODIE.DESCRIBE.GORGE_MEATPIE = "Looks promising."
-WOODIE.DESCRIBE.GORGE_SLIDERS = "I used to eat them all the time back then."
-WOODIE.DESCRIBE.GORGE_JELLY_ROLL = "Shall we jam, Lucy?"
-WOODIE.DESCRIBE.GORGE_CARROT_CAKE = "Nutritious!"
-WOODIE.DESCRIBE.GORGE_GARLICMASHED = "Smelling good."
-WOODIE.DESCRIBE.GORGE_GARLICBREAD = "We just need some steak now."
-WOODIE.DESCRIBE.GORGE_TOMATO_SOUP = "Hearty."
-WOODIE.DESCRIBE.GORGE_SAUSAGE = "This is so tasty!"
-WOODIE.DESCRIBE.GORGE_CANDIEDFISH = "Sweet enough for me."
-WOODIE.DESCRIBE.GORGE_STUFFEDMUSHROOM = "Stuffed champignon, eh?"
-WOODIE.DESCRIBE.GORGE_BRUSCHETTA = "It tastes good."
-WOODIE.DESCRIBE.GORGE_HAMBURGER = "I used to buy some in Toronto."
-WOODIE.DESCRIBE.GORGE_FISHBURGER = "I used to buy some in Toronto."
-WOODIE.DESCRIBE.GORGE_MUSHROOMBURGER = "I used to buy some in Toronto."
-WOODIE.DESCRIBE.GORGE_FISH_STEAK = "Good eating, that."
-WOODIE.DESCRIBE.GORGE_CURRY = "Ahh, the good old curry."
-WOODIE.DESCRIBE.GORGE_SPAGHETTI = "All the meats!"
-WOODIE.DESCRIBE.GORGE_POACHEDFISH = "Splendid!"
-WOODIE.DESCRIBE.GORGE_SHEPHERD_PIE = "Smells good."
-WOODIE.DESCRIBE.GORGE_CANDY = "Sugary. Good."
-WOODIE.DESCRIBE.GORGE_BREAD_PUDDING = "The good ol' reliable."
-WOODIE.DESCRIBE.GORGE_BERRY_TART = "Can be improved."
-WOODIE.DESCRIBE.GORGE_MACARONI = "This one is real good."
-WOODIE.DESCRIBE.GORGE_BAGEL_AND_FISH = "Looks good, eh?"
-WOODIE.DESCRIBE.GORGE_GRILLED_CHEESE = "It was very popular back then."
-WOODIE.DESCRIBE.GORGE_CREAMMUSHROOM = "Its good, eh?"
-WOODIE.DESCRIBE.GORGE_MANICOTTI = "This is great!"
-WOODIE.DESCRIBE.GORGE_CHEESEBURGER = "I used to buy some in Toronto."
-WOODIE.DESCRIBE.GORGE_FETTUCCINE = "Mouth-watering."
-WOODIE.DESCRIBE.GORGE_ONION_SOUP = "Oh my mouth gonna be a mess after this meal."
-WOODIE.DESCRIBE.GORGE_BREADED_CUTLET = "A nice snack to go alongside other things."
-WOODIE.DESCRIBE.GORGE_CREAMY_FISH = "Smelling good."
-WOODIE.DESCRIBE.GORGE_PIZZA = "Hey, this' looking good don't ya think, Lucy?"
-WOODIE.DESCRIBE.GORGE_POT_ROAST = "Its big!"
-WOODIE.DESCRIBE.GORGE_CRAB_CAKE = "Cute crab cake."
-WOODIE.DESCRIBE.GORGE_STEAK_FRITES = "This is a classic one."
-WOODIE.DESCRIBE.GORGE_SHOOTER_SANDWICH = "What a great sandwich!"
-WOODIE.DESCRIBE.GORGE_BACON_WRAPPED = "Needs eggs."
-WOODIE.DESCRIBE.GORGE_CRAB_ROLL = "Very nice crab meat."
-WOODIE.DESCRIBE.GORGE_MEAT_WELLINGTON = "That's nice."
-WOODIE.DESCRIBE.GORGE_CRAB_RAVIOLI = "Very nice crab meat."
-WOODIE.DESCRIBE.GORGE_CARAMEL_CUBE = "I'll take a bite."
-WOODIE.DESCRIBE.GORGE_SCONE = "One bit will not hurt, eh."
-WOODIE.DESCRIBE.GORGE_TRIFLE = "One bit will not hurt, eh."
-WOODIE.DESCRIBE.GORGE_CHEESECAKE = "Dontcha want a piece, Lucy?"
+WOODIE.DESCRIBE.GORGE_BREAD = "Một ổ bánh mì, eh?"
+WOODIE.DESCRIBE.GORGE_SWEET_CHIPS = "Mình rất thích kiểu này."
+WOODIE.DESCRIBE.GORGE_VEGETABLE_SOUP = "Mình phải ăn rau củ thôi."
+WOODIE.DESCRIBE.GORGE_JELLY_SANDWICH = "Món này là bữa sáng kinh điển của mình."
+WOODIE.DESCRIBE.GORGE_FISH_STEW = "Ăn ngon đó."
+WOODIE.DESCRIBE.GORGE_MEAT_STEW = "Ăn chắc bụng lắm."
+WOODIE.DESCRIBE.GORGE_ONION_CAKE = "Cái bánh này ngon đó!"
+WOODIE.DESCRIBE.GORGE_POTATO_PANCAKES = "Ahh, nhớ món này quá!"
+WOODIE.DESCRIBE.GORGE_POTATO_SOUP = "Chắc bụng."
+WOODIE.DESCRIBE.GORGE_FISHBALL_SKEWERS = "Đồ ăn dễ làm mà vẫn ngon."
+WOODIE.DESCRIBE.GORGE_MEAT_SKEWERS = "Đồ ăn dễ làm mà vẫn ngon."
+WOODIE.DESCRIBE.GORGE_STONE_SOUP = "Chắc bụng."
+WOODIE.DESCRIBE.GORGE_CROQUETTE = "Mùi thơm đó."
+WOODIE.DESCRIBE.GORGE_ROAST_VEGETABLES = "Một bữa cân bằng, eh?"
+WOODIE.DESCRIBE.GORGE_MEATLOAF = "Em muốn một miếng không, Lucy?"
+WOODIE.DESCRIBE.GORGE_CARROT_SOUP = "Chắc bụng."
+WOODIE.DESCRIBE.GORGE_FISHPIE = "Mình đã cố hết sức rồi."
+WOODIE.DESCRIBE.GORGE_FISHCHIPS = "Món này tuyệt ghê!"
+WOODIE.DESCRIBE.GORGE_MEATPIE = "Trông hứa hẹn đấy."
+WOODIE.DESCRIBE.GORGE_SLIDERS = "Hồi xưa mình ăn chúng suốt."
+WOODIE.DESCRIBE.GORGE_JELLY_ROLL = "Mình quẩy mứt chứ, Lucy?"
+WOODIE.DESCRIBE.GORGE_CARROT_CAKE = "Bổ dưỡng!"
+WOODIE.DESCRIBE.GORGE_GARLICMASHED = "Mùi ngon ghê."
+WOODIE.DESCRIBE.GORGE_GARLICBREAD = "Giờ chỉ cần thêm bít tết nữa."
+WOODIE.DESCRIBE.GORGE_TOMATO_SOUP = "Chắc bụng."
+WOODIE.DESCRIBE.GORGE_SAUSAGE = "Món này ngon quá!"
+WOODIE.DESCRIBE.GORGE_CANDIEDFISH = "Đủ ngọt với mình rồi."
+WOODIE.DESCRIBE.GORGE_STUFFEDMUSHROOM = "Nấm champignon nhồi, eh?"
+WOODIE.DESCRIBE.GORGE_BRUSCHETTA = "Vị ngon đó."
+WOODIE.DESCRIBE.GORGE_HAMBURGER = "Hồi ở Toronto mình từng hay mua vài cái."
+WOODIE.DESCRIBE.GORGE_FISHBURGER = "Hồi ở Toronto mình từng hay mua vài cái."
+WOODIE.DESCRIBE.GORGE_MUSHROOMBURGER = "Hồi ở Toronto mình từng hay mua vài cái."
+WOODIE.DESCRIBE.GORGE_FISH_STEAK = "Ăn ngon đó."
+WOODIE.DESCRIBE.GORGE_CURRY = "Ahh, món cà ri xưa cũ thân quen."
+WOODIE.DESCRIBE.GORGE_SPAGHETTI = "Toàn là thịt!"
+WOODIE.DESCRIBE.GORGE_POACHEDFISH = "Tuyệt!"
+WOODIE.DESCRIBE.GORGE_SHEPHERD_PIE = "Mùi thơm đó."
+WOODIE.DESCRIBE.GORGE_CANDY = "Nhiều đường. Tốt."
+WOODIE.DESCRIBE.GORGE_BREAD_PUDDING = "Món đáng tin cậy xưa cũ."
+WOODIE.DESCRIBE.GORGE_BERRY_TART = "Có thể cải thiện thêm."
+WOODIE.DESCRIBE.GORGE_MACARONI = "Món này ngon thật."
+WOODIE.DESCRIBE.GORGE_BAGEL_AND_FISH = "Trông ngon đó, eh?"
+WOODIE.DESCRIBE.GORGE_GRILLED_CHEESE = "Hồi đó món này nổi tiếng lắm."
+WOODIE.DESCRIBE.GORGE_CREAMMUSHROOM = "Món này ngon đó, eh?"
+WOODIE.DESCRIBE.GORGE_MANICOTTI = "Tuyệt thật!"
+WOODIE.DESCRIBE.GORGE_CHEESEBURGER = "Hồi ở Toronto mình từng hay mua vài cái."
+WOODIE.DESCRIBE.GORGE_FETTUCCINE = "Thơm tới chảy nước miệng."
+WOODIE.DESCRIBE.GORGE_ONION_SOUP = "Ôi, ăn món này xong miệng mình loạn hết."
+WOODIE.DESCRIBE.GORGE_BREADED_CUTLET = "Một món ăn vặt ngon để ăn kèm thứ khác."
+WOODIE.DESCRIBE.GORGE_CREAMY_FISH = "Mùi thơm đó."
+WOODIE.DESCRIBE.GORGE_PIZZA = "Này, trông ngon đấy, em thấy sao Lucy?"
+WOODIE.DESCRIBE.GORGE_POT_ROAST = "Nó to ghê!"
+WOODIE.DESCRIBE.GORGE_CRAB_CAKE = "Bánh cua dễ thương."
+WOODIE.DESCRIBE.GORGE_STEAK_FRITES = "Món này kinh điển đấy."
+WOODIE.DESCRIBE.GORGE_SHOOTER_SANDWICH = "Một cái sandwich tuyệt vời!"
+WOODIE.DESCRIBE.GORGE_BACON_WRAPPED = "Cần thêm trứng."
+WOODIE.DESCRIBE.GORGE_CRAB_ROLL = "Thịt cua rất ngon."
+WOODIE.DESCRIBE.GORGE_MEAT_WELLINGTON = "Món này ổn đấy."
+WOODIE.DESCRIBE.GORGE_CRAB_RAVIOLI = "Thịt cua rất ngon."
+WOODIE.DESCRIBE.GORGE_CARAMEL_CUBE = "Mình sẽ cắn một miếng."
+WOODIE.DESCRIBE.GORGE_SCONE = "Một miếng cũng chẳng hại gì, eh."
+WOODIE.DESCRIBE.GORGE_TRIFLE = "Một miếng cũng chẳng hại gì, eh."
+WOODIE.DESCRIBE.GORGE_CHEESECAKE = "Em không muốn một miếng sao, Lucy?"
 
-WOODIE.DESCRIBE.DUCKYOUGLERMZ = "Ugh... What a bad smell!"
+WOODIE.DESCRIBE.DUCKYOUGLERMZ = "Ugh... Mùi tệ quá!"
 
-WOODIE.DESCRIBE.KYNO_ALOE = "I hear aloe's good for you."
-WOODIE.DESCRIBE.KYNO_ALOE_COOKED = "I guess I can eat it."
-WOODIE.DESCRIBE.KYNO_ALOE_DRIED = "Dried out."
-WOODIE.DESCRIBE.KYNO_ALOE_GROUND = "I hear aloe's good for you."
-WOODIE.DESCRIBE.KYNO_ALOE_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.FARM_PLANT_KYNO_ALOE = "I hear aloe's good for you."
-WOODIE.DESCRIBE.KYNO_ALOE_OVERSIZED = "I hear aloe's good for you."
-WOODIE.DESCRIBE.KYNO_ALOE_OVERSIZED_ROTTEN = "Sheesh."
+WOODIE.DESCRIBE.KYNO_ALOE = "Nghe nói lô hội tốt cho mình."
+WOODIE.DESCRIBE.KYNO_ALOE_COOKED = "Chắc mình ăn được."
+WOODIE.DESCRIBE.KYNO_ALOE_DRIED = "Khô queo rồi."
+WOODIE.DESCRIBE.KYNO_ALOE_GROUND = "Nghe nói lô hội tốt cho mình."
+WOODIE.DESCRIBE.KYNO_ALOE_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.FARM_PLANT_KYNO_ALOE = "Nghe nói lô hội tốt cho mình."
+WOODIE.DESCRIBE.KYNO_ALOE_OVERSIZED = "Nghe nói lô hội tốt cho mình."
+WOODIE.DESCRIBE.KYNO_ALOE_OVERSIZED_ROTTEN = "Trời đất."
 
-WOODIE.DESCRIBE.KYNO_CUCUMBER = "Could cook it up real nice."
-WOODIE.DESCRIBE.KYNO_CUCUMBER_COOKED = "Good eatin' right there, if you ask me."
-WOODIE.DESCRIBE.KYNO_CUCUMBER_GROUND = "Could cook it up real nice."
-WOODIE.DESCRIBE.KYNO_CUCUMBER_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.KNOWN_KYNO_CUCUMBER_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.FARM_PLANT_KYNO_CUCUMBER = "Could cook it up real nice."
-WOODIE.DESCRIBE.KYNO_CUCUMBER_OVERSIZED = "Could cook it up real nice."
-WOODIE.DESCRIBE.KYNO_CUCUMBER_OVERSIZED_ROTTEN = "Sheesh."
+WOODIE.DESCRIBE.KYNO_CUCUMBER = "Nấu lên chắc ngon lắm."
+WOODIE.DESCRIBE.KYNO_CUCUMBER_COOKED = "Nếu hỏi mình thì món này ngon đó."
+WOODIE.DESCRIBE.KYNO_CUCUMBER_GROUND = "Nấu lên chắc ngon lắm."
+WOODIE.DESCRIBE.KYNO_CUCUMBER_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.KNOWN_KYNO_CUCUMBER_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.FARM_PLANT_KYNO_CUCUMBER = "Nấu lên chắc ngon lắm."
+WOODIE.DESCRIBE.KYNO_CUCUMBER_OVERSIZED = "Nấu lên chắc ngon lắm."
+WOODIE.DESCRIBE.KYNO_CUCUMBER_OVERSIZED_ROTTEN = "Trời đất."
 
-WOODIE.DESCRIBE.KYNO_RADISH = "Kinda tiny, aren't they?"
-WOODIE.DESCRIBE.KYNO_RADISH_COOKED = "I have to eat my vegetables."
-WOODIE.DESCRIBE.KYNO_RADISH_GROUND = "Kinda tiny, aren't they?"
-WOODIE.DESCRIBE.KYNO_RADISH_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.KNOWN_KYNO_RADISH_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.FARM_PLANT_KYNO_RADISH = "Kinda tiny, aren't they?"
-WOODIE.DESCRIBE.KYNO_RADISH_OVERSIZED = "Kinda tiny, aren't they?"
-WOODIE.DESCRIBE.KYNO_RADISH_OVERSIZED_ROTTEN = "Sheesh."
+WOODIE.DESCRIBE.KYNO_RADISH = "Hơi nhỏ nhỉ?"
+WOODIE.DESCRIBE.KYNO_RADISH_COOKED = "Mình phải ăn rau củ thôi."
+WOODIE.DESCRIBE.KYNO_RADISH_GROUND = "Hơi nhỏ nhỉ?"
+WOODIE.DESCRIBE.KYNO_RADISH_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.KNOWN_KYNO_RADISH_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.FARM_PLANT_KYNO_RADISH = "Hơi nhỏ nhỉ?"
+WOODIE.DESCRIBE.KYNO_RADISH_OVERSIZED = "Hơi nhỏ nhỉ?"
+WOODIE.DESCRIBE.KYNO_RADISH_OVERSIZED_ROTTEN = "Trời đất."
 
-WOODIE.DESCRIBE.KYNO_FENNEL = "I want some!"
-WOODIE.DESCRIBE.KYNO_FENNEL_COOKED = "Those are good."
-WOODIE.DESCRIBE.KYNO_FENNEL_GROUND = "I want some!"
-WOODIE.DESCRIBE.KYNO_FENNEL_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.KNOWN_KYNO_FENNEL_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.FARM_PLANT_KYNO_FENNEL = "I want some!"
-WOODIE.DESCRIBE.KYNO_FENNEL_OVERSIZED = "I want some!"
-WOODIE.DESCRIBE.KYNO_FENNEL_OVERSIZED_ROTTEN = "Sheesh."
+WOODIE.DESCRIBE.KYNO_FENNEL = "Mình muốn một ít!"
+WOODIE.DESCRIBE.KYNO_FENNEL_COOKED = "Mấy thứ này ngon đó."
+WOODIE.DESCRIBE.KYNO_FENNEL_GROUND = "Mình muốn một ít!"
+WOODIE.DESCRIBE.KYNO_FENNEL_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.KNOWN_KYNO_FENNEL_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.FARM_PLANT_KYNO_FENNEL = "Mình muốn một ít!"
+WOODIE.DESCRIBE.KYNO_FENNEL_OVERSIZED = "Mình muốn một ít!"
+WOODIE.DESCRIBE.KYNO_FENNEL_OVERSIZED_ROTTEN = "Trời đất."
 
-WOODIE.DESCRIBE.KYNO_SWEETPOTATO = "I'll cook this up good!"
-WOODIE.DESCRIBE.KYNO_SWEETPOTATO_COOKED = "Could use some marshmallows."
-WOODIE.DESCRIBE.KYNO_SWEETPOTATO_GROUND = "I'll cook this up good!"
-WOODIE.DESCRIBE.KYNO_SWEETPOTATO_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.KNOWN_KYNO_SWEETPOTATO_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.FARM_PLANT_KYNO_SWEETPOTATO = "I'll cook this up good!"
-WOODIE.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED = "I'll cook this up good!"
-WOODIE.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED_ROTTEN = "Sheesh."
+WOODIE.DESCRIBE.KYNO_SWEETPOTATO = "Mình sẽ nấu món này thật ngon!"
+WOODIE.DESCRIBE.KYNO_SWEETPOTATO_COOKED = "Có thêm kẹo dẻo thì hợp."
+WOODIE.DESCRIBE.KYNO_SWEETPOTATO_GROUND = "Mình sẽ nấu món này thật ngon!"
+WOODIE.DESCRIBE.KYNO_SWEETPOTATO_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.KNOWN_KYNO_SWEETPOTATO_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.FARM_PLANT_KYNO_SWEETPOTATO = "Mình sẽ nấu món này thật ngon!"
+WOODIE.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED = "Mình sẽ nấu món này thật ngon!"
+WOODIE.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED_ROTTEN = "Trời đất."
 
-WOODIE.DESCRIBE.KYNO_PARZNIP = "That's rabbit food."
-WOODIE.DESCRIBE.KYNO_PARZNIP_COOKED = "That's rabbit food."
-WOODIE.DESCRIBE.KYNO_PARZNIP_EATEN = "That's rabbit food."
-WOODIE.DESCRIBE.KYNO_PARZNIP_GROUND = "That's rabbit food."
-WOODIE.DESCRIBE.KYNO_PARZNIP_BIG = "That's because of the underground eh?"
-WOODIE.DESCRIBE.KYNO_PARZNIP_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.KNOWN_KYNO_PARZNIP_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.FARM_PLANT_KYNO_PARZNIP = "That's rabbit food."
-WOODIE.DESCRIBE.KYNO_PARZNIP_OVERSIZED = "That's rabbit food."
-WOODIE.DESCRIBE.KYNO_PARZNIP_OVERSIZED_ROTTEN = "Sheesh."
+WOODIE.DESCRIBE.KYNO_PARZNIP = "Đồ ăn cho thỏ đó."
+WOODIE.DESCRIBE.KYNO_PARZNIP_COOKED = "Đồ ăn cho thỏ đó."
+WOODIE.DESCRIBE.KYNO_PARZNIP_EATEN = "Đồ ăn cho thỏ đó."
+WOODIE.DESCRIBE.KYNO_PARZNIP_GROUND = "Đồ ăn cho thỏ đó."
+WOODIE.DESCRIBE.KYNO_PARZNIP_BIG = "Do ở dưới đất nên vậy hả?"
+WOODIE.DESCRIBE.KYNO_PARZNIP_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.KNOWN_KYNO_PARZNIP_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.FARM_PLANT_KYNO_PARZNIP = "Đồ ăn cho thỏ đó."
+WOODIE.DESCRIBE.KYNO_PARZNIP_OVERSIZED = "Đồ ăn cho thỏ đó."
+WOODIE.DESCRIBE.KYNO_PARZNIP_OVERSIZED_ROTTEN = "Trời đất."
 
-WOODIE.DESCRIBE.KYNO_TURNIP = "From the community garden."
-WOODIE.DESCRIBE.KYNO_TURNIP_COOKED = "Cooked real nice."
-WOODIE.DESCRIBE.KYNO_TURNIP_GROUND = "From the community garden."
-WOODIE.DESCRIBE.KYNO_TURNIP_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.KNOWN_KYNO_TURNIP_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.FARM_PLANT_KYNO_TURNIP = "From the community garden."
-WOODIE.DESCRIBE.KYNO_TURNIP_OVERSIZED = "From the community garden."
-WOODIE.DESCRIBE.KYNO_TURNIP_OVERSIZED_ROTTEN = "Sheesh."
+WOODIE.DESCRIBE.KYNO_TURNIP = "Từ vườn cộng đồng."
+WOODIE.DESCRIBE.KYNO_TURNIP_COOKED = "Nấu lên ngon thật."
+WOODIE.DESCRIBE.KYNO_TURNIP_GROUND = "Từ vườn cộng đồng."
+WOODIE.DESCRIBE.KYNO_TURNIP_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.KNOWN_KYNO_TURNIP_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.FARM_PLANT_KYNO_TURNIP = "Từ vườn cộng đồng."
+WOODIE.DESCRIBE.KYNO_TURNIP_OVERSIZED = "Từ vườn cộng đồng."
+WOODIE.DESCRIBE.KYNO_TURNIP_OVERSIZED_ROTTEN = "Trời đất."
 
-WOODIE.DESCRIBE.KYNO_RICE = "Not my first option, but it'll do."
-WOODIE.DESCRIBE.KYNO_RICE_COOKED = "Not my first option, but it'll do."
-WOODIE.DESCRIBE.KYNO_RICE_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.KNOWN_KYNO_RICE_SEEDS = "Tiny seeds."
-WOODIE.DESCRIBE.FARM_PLANT_KYNO_RICE = "From the community garden."
-WOODIE.DESCRIBE.KYNO_RICE_OVERSIZED = "From the community garden."
-WOODIE.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Sheesh."
+WOODIE.DESCRIBE.KYNO_RICE = "Không phải lựa chọn đầu tiên, nhưng cũng được."
+WOODIE.DESCRIBE.KYNO_RICE_COOKED = "Không phải lựa chọn đầu tiên, nhưng cũng được."
+WOODIE.DESCRIBE.KYNO_RICE_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.KNOWN_KYNO_RICE_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.FARM_PLANT_KYNO_RICE = "Từ vườn cộng đồng."
+WOODIE.DESCRIBE.KYNO_RICE_OVERSIZED = "Từ vườn cộng đồng."
+WOODIE.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Trời đất."
 
-WOODIE.DESCRIBE.KYNO_SEEDS_KIT = "We need to unwrap it first, Lucy."
+WOODIE.DESCRIBE.KYNO_SEEDS_KIT = "Mình cần mở gói ra trước đã, Lucy."
 
 WOODIE.DESCRIBE.KYNO_LIMPETROCK = 
 {
-	GENERIC = "I could make a snack out of those.",
-	PICKED = "Gotta give them time.",
-	WITHERED = "Dry as can be.",
+	GENERIC = "Mình có thể biến mấy thứ đó thành đồ ăn vặt.",
+	PICKED = "Phải cho chúng chút thời gian.",
+	WITHERED = "Khô hết mức rồi.",
 }
 
-WOODIE.DESCRIBE.KYNO_LIMPETS = "Some sort of water-dwelling snail."
-WOODIE.DESCRIBE.KYNO_LIMPETS_COOKED = "Dinner's on."
+WOODIE.DESCRIBE.KYNO_LIMPETS = "Một loại ốc sống dưới nước nào đó."
+WOODIE.DESCRIBE.KYNO_LIMPETS_COOKED = "Bữa tối sẵn sàng rồi."
 
 WOODIE.DESCRIBE.KYNO_LOTUS_OCEAN = 
 {
-	GENERIC = "Pretty nice, dontcha think Lucy?",
-	PICKED = "Needs a bit more time.",
-	BURNING = "That's not good!",
+	GENERIC = "Đẹp đấy, em thấy sao Lucy?",
+	PICKED = "Cần thêm chút thời gian.",
+	BURNING = "Vậy không ổn rồi!",
 }
 
-WOODIE.DESCRIBE.KYNO_LOTUS_ROOT = "Should plant this somewhere."
-WOODIE.DESCRIBE.KYNO_LOTUS_FLOWER = "That's a beaut."
-WOODIE.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Cooks up real good."
+WOODIE.DESCRIBE.KYNO_LOTUS_ROOT = "Nên trồng cái này ở đâu đó."
+WOODIE.DESCRIBE.KYNO_LOTUS_FLOWER = "Đẹp đó."
+WOODIE.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Nấu lên ngon thật."
 
 WOODIE.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
 {
-	GENERIC = "It's slimy, eh?",
-	PICKED = "Needs time to come back.",
-	BURNING = "Didn't think that could happen.",
+	GENERIC = "Nó nhớt nhỉ?",
+	PICKED = "Cần thời gian để mọc lại.",
+	BURNING = "Không nghĩ chuyện đó xảy ra được.",
 }
 
-WOODIE.DESCRIBE.KYNO_SEAWEEDS = "It's slimy."
-WOODIE.DESCRIBE.KYNO_SEAWEEDS_COOKED = "It has a weird texture."
-WOODIE.DESCRIBE.KYNO_SEAWEEDS_DRIED = "It sort of sticks to my tongue."
-WOODIE.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Should plant this somewhere."
+WOODIE.DESCRIBE.KYNO_SEAWEEDS = "Nó nhớt."
+WOODIE.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Kết cấu hơi kỳ."
+WOODIE.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Nó hơi dính vào lưỡi mình."
+WOODIE.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Nên trồng cái này ở đâu đó."
 
 WOODIE.DESCRIBE.KYNO_TAROROOT_OCEAN = 
 {
-	GENERIC = "Eh, I've seen this one before once.",
-	PICKED = "Water'll help it grow back.",
-	BURNING = "Well, that's ruined.",
+	GENERIC = "Eh, hình như mình từng thấy cái này một lần rồi.",
+	PICKED = "Nước sẽ giúp nó mọc lại.",
+	BURNING = "Chà, hỏng rồi.",
 }
 
-WOODIE.DESCRIBE.KYNO_TAROROOT_ROOT = "Should plant this somewhere."
-WOODIE.DESCRIBE.KYNO_TAROROOT = "I bet this would go well with pepper."
-WOODIE.DESCRIBE.KYNO_TAROROOT_COOKED = "Yum!"
+WOODIE.DESCRIBE.KYNO_TAROROOT_ROOT = "Nên trồng cái này ở đâu đó."
+WOODIE.DESCRIBE.KYNO_TAROROOT = "Mình cá là món này hợp với tiêu."
+WOODIE.DESCRIBE.KYNO_TAROROOT_COOKED = "Ngon!"
 
 WOODIE.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
 {
-	GENERIC = "Just another vegetable, eh?",
-	PICKED = "Give it time.",
-	BURNING = "That's a shame.",
+	GENERIC = "Lại thêm một loại rau nữa, eh?",
+	PICKED = "Cho nó chút thời gian.",
+	BURNING = "Tiếc thật.",
 }
 
-WOODIE.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Should plant this somewhere."
-WOODIE.DESCRIBE.KYNO_WATERYCRESS = "Just another vegetable, eh?"
+WOODIE.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Nên trồng cái này ở đâu đó."
+WOODIE.DESCRIBE.KYNO_WATERYCRESS = "Lại thêm một loại rau nữa, eh?"
 
-WOODIE.DESCRIBE.WATERYCRESSBOWL = "It's a soup made out of those little trees."
+WOODIE.DESCRIBE.WATERYCRESSBOWL = "Là súp nấu từ mấy cái cây nhỏ đó."
 
-WOODIE.DESCRIBE.KYNO_SALT = "It's salty."
+WOODIE.DESCRIBE.KYNO_SALT = "Nó mặn."
 
 WOODIE.DESCRIBE.KYNO_MUSSELSTICK =
 {
-	GENERIC = "Seafood growin' on a stick, eh?",
-	PICKED = "Gotta give it time.",
-	BURNING = "That's a real shame.",
+	GENERIC = "Hải sản mọc trên que, eh?",
+	PICKED = "Phải cho nó chút thời gian.",
+	BURNING = "Tiếc thật đó.",
 }
 
-WOODIE.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "The mussels can't get enough of this thing."
+WOODIE.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Lũ trai mê cái này lắm."
 
-WOODIE.DESCRIBE.CATFOOD = "Here, here, kitty."
+WOODIE.DESCRIBE.CATFOOD = "Lại đây, lại đây, mèo con."
 
-WOODIE.DESCRIBE.KATFOOD = "Here, here, kitty."
+WOODIE.DESCRIBE.KATFOOD = "Lại đây, lại đây, mèo con."
 
 WOODIE.DESCRIBE.KYNO_BANANATREE = 
 {
-	GENERIC = "Now I have my own banana tree.",
-	PICKED = "Needs a bit more time, eh?",
-	CHOPPED = "Sorry about that, buddy.",
-	BURNING = "Whoa! That's not good!",
-	BURNT = "Burned right down.",
+	GENERIC = "Giờ mình có cây chuối riêng rồi.",
+	PICKED = "Cần thêm chút thời gian, eh?",
+	CHOPPED = "Xin lỗi nhé, anh bạn.",
+	BURNING = "Whoa! Vậy không ổn rồi!",
+	BURNT = "Cháy rụi rồi.",
 }
 
-WOODIE.DESCRIBE.KYNO_BANANA = "It tastes tropical."
-WOODIE.DESCRIBE.KYNO_BANANA_COOKED = "I cooked it for some reason."
+WOODIE.DESCRIBE.KYNO_BANANA = "Vị nhiệt đới thật."
+WOODIE.DESCRIBE.KYNO_BANANA_COOKED = "Không hiểu sao mình lại nấu nó."
 
 WOODIE.DESCRIBE.KYNO_KOKONUTTREE =
 {
-	GENERIC = "Makes me pine for the lumber yards.",
-	PICKED = "Needs a bit more time.",
-	CHOPPED = "Sorry about that.",
-	BURNING = "Whoa! That's not good!",
-	BURNT = "Burned right down.",
+	GENERIC = "Làm mình nhớ mấy bãi gỗ xẻ.",
+	PICKED = "Cần thêm chút thời gian.",
+	CHOPPED = "Xin lỗi nhé.",
+	BURNING = "Whoa! Vậy không ổn rồi!",
+	BURNT = "Cháy rụi rồi.",
 }
 
-WOODIE.DESCRIBE.KYNO_KOKONUT = "It's just a coconut."
-WOODIE.DESCRIBE.KYNO_KOKONUT_HALVED = "One for me and one for Lucy."
-WOODIE.DESCRIBE.KYNO_KOKONUT_COOKED = "Ready to eat."
+WOODIE.DESCRIBE.KYNO_KOKONUT = "Chỉ là một trái dừa thôi."
+WOODIE.DESCRIBE.KYNO_KOKONUT_HALVED = "Một nửa cho mình, một nửa cho Lucy."
+WOODIE.DESCRIBE.KYNO_KOKONUT_COOKED = "Sẵn sàng ăn rồi."
 
-WOODIE.DESCRIBE.BOWLOFPOPCORN = "Cooked with the goodness of corn!"
+WOODIE.DESCRIBE.BOWLOFPOPCORN = "Được nấu bằng sự ngon lành của bắp!"
 
-WOODIE.DESCRIBE.FIGJUICE = "Nice and refreshing."
+WOODIE.DESCRIBE.FIGJUICE = "Mát và đã khát."
 
-WOODIE.DESCRIBE.COCONUTWATER = "Nice and refreshing."
+WOODIE.DESCRIBE.COCONUTWATER = "Mát và đã khát."
 
-WOODIE.DESCRIBE.EYEBALLSPAGHETTI = "Don't look at me, food!"
+WOODIE.DESCRIBE.EYEBALLSPAGHETTI = "Đừng nhìn mình nữa, đồ ăn!"
 
-WOODIE.DESCRIBE.FORGETMELOTS_SEEDS = "Tiny seeds."
+WOODIE.DESCRIBE.FORGETMELOTS_SEEDS = "Hạt nhỏ xíu."
 
-WOODIE.DESCRIBE.FIRENETTLES_SEEDS = "Tiny seeds."
+WOODIE.DESCRIBE.FIRENETTLES_SEEDS = "Hạt nhỏ xíu."
 
-WOODIE.DESCRIBE.TILLWEED_SEEDS = "Tiny seeds."
+WOODIE.DESCRIBE.TILLWEED_SEEDS = "Hạt nhỏ xíu."
 
-WOODIE.DESCRIBE.KYNO_FLOATILIZER = "Poop belongs in a bucket, not on the ground."
+WOODIE.DESCRIBE.KYNO_FLOATILIZER = "Phân nên ở trong xô, không phải trên đất."
 
-WOODIE.DESCRIBE.KYNO_TWIGGYNUTS = "Oh. Some nuts from the tree I've chopped."
+WOODIE.DESCRIBE.KYNO_TWIGGYNUTS = "Ồ. Vài hạt từ cái cây mình đã chặt."
 
-WOODIE.DESCRIBE.KYNO_REPAIRTOOL = "Patch'er up, eh?"
+WOODIE.DESCRIBE.KYNO_REPAIRTOOL = "Vá nó lại thôi, eh?"
 
-WOODIE.DESCRIBE.KYNO_KOI = "Sorry bud, but your whiskers don't hold a candle to mine."
-WOODIE.DESCRIBE.KYNO_KOI_COOKED = "Sorry bud, but your whiskers don't hold a candle to mine."
+WOODIE.DESCRIBE.KYNO_KOI = "Xin lỗi anh bạn, nhưng râu của ngươi không có cửa với râu mình đâu."
+WOODIE.DESCRIBE.KYNO_KOI_COOKED = "Xin lỗi anh bạn, nhưng râu của ngươi không có cửa với râu mình đâu."
 
-WOODIE.DESCRIBE.KYNO_TROPICALFISH = "Are you ready to become fish'n'chips?"
-WOODIE.DESCRIBE.KYNO_TROPICALFISH_COOKED = "Smoked fish, eh?"
+WOODIE.DESCRIBE.KYNO_TROPICALFISH = "Sẵn sàng thành fish and chips chưa?"
+WOODIE.DESCRIBE.KYNO_TROPICALFISH_COOKED = "Cá hun khói, eh?"
 
-WOODIE.DESCRIBE.KYNO_NEONFISH = "Nice colours on that one."
-WOODIE.DESCRIBE.KYNO_NEONFISH_COOKED = "Lookes like I'll be eating for a day."
+WOODIE.DESCRIBE.KYNO_NEONFISH = "Màu con này đẹp đó."
+WOODIE.DESCRIBE.KYNO_NEONFISH_COOKED = "Có vẻ hôm nay mình sẽ có cái ăn."
 
-WOODIE.DESCRIBE.KYNO_GROUPER = "Looks like dinner."
-WOODIE.DESCRIBE.KYNO_GROUPER_COOKED = "Caught and cooked it myself."
+WOODIE.DESCRIBE.KYNO_GROUPER = "Trông như bữa tối."
+WOODIE.DESCRIBE.KYNO_GROUPER_COOKED = "Tự tay bắt, tự tay nấu."
  
-WOODIE.DESCRIBE.KYNO_PIERROTFISH = "Always did like fishing."
-WOODIE.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Mmm... roast fish."
+WOODIE.DESCRIBE.KYNO_PIERROTFISH = "Mình vốn thích câu cá mà."
+WOODIE.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Mmm... cá nướng."
 
-WOODIE.DESCRIBE.KYNO_SALMONFISH = "Need a good cedar plank to cook it on."
-WOODIE.DESCRIBE.KYNO_SALMONFISH_COOKED = "Tastes like home."
+WOODIE.DESCRIBE.KYNO_SALMONFISH = "Cần một tấm gỗ tuyết tùng ngon để nướng nó."
+WOODIE.DESCRIBE.KYNO_SALMONFISH_COOKED = "Vị như quê nhà."
 
-WOODIE.DESCRIBE.TURF_PINKPARK = "A beauty."
-WOODIE.DESCRIBE.TURF_STONECITY = "Just some ground, eh?"
-WOODIE.DESCRIBE.TURF_FIELDS = "It's a nice path of grass."
-WOODIE.DESCRIBE.TURF_TIDALMARSH = "A bit too slimy."
+WOODIE.DESCRIBE.TURF_PINKPARK = "Đẹp đó."
+WOODIE.DESCRIBE.TURF_STONECITY = "Chỉ là ít đất thôi, eh?"
+WOODIE.DESCRIBE.TURF_FIELDS = "Chỉ là ít đất thôi, eh?"
+WOODIE.DESCRIBE.TURF_TIDALMARSH = "Chỉ là ít đất thôi, eh?"
 
 WOODIE.DESCRIBE.KYNO_SALTRACK =
 {
-	GENERIC = "It's ready.",
-	PICKED = "Gonna be a bit longer.",
+	GENERIC = "Sẵn sàng rồi.",
+	PICKED = "Sẽ còn lâu thêm chút.",
 }
 
-WOODIE.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Gotta set'er up."
+WOODIE.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Phải dựng nó lên thôi."
 
-WOODIE.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Didn't I tell everybody trees were delicious?"
+WOODIE.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Mình đã bảo mọi người cây cũng ngon rồi mà?"
 
-WOODIE.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Let's trap some crabs."
+WOODIE.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Đi bẫy vài con cua nào."
 
 WOODIE.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
 {
-	GENERIC = "Every society's gotta have a leader, I guess.",
-	SLEEPING = "Guess I'll come back later.",
+	GENERIC = "Xã hội nào chắc cũng cần người đứng đầu, mình đoán vậy.",
+	SLEEPING = "Chắc mình quay lại sau.",
 }
 
 WOODIE.DESCRIBE.KYNO_SUGARTREE =
 {
-	GENERIC = "It's beautiful!",
-	CHOPPED = "Cut down in its prime.",
-	SAPPED = "Thanks for the sap, tree.",
-	PICKED = "Fillin' up, slow as molasses.",
-	BURNING = "That's not good!",
-	BURNT = "Burned clean through.",
+	GENERIC = "Nó đẹp thật!",
+	CHOPPED = "Bị chặt khi đang đẹp nhất.",
+	SAPPED = "Cảm ơn nhựa nhé, cây à.",
+	PICKED = "Đang đầy lên, chậm như mật mía.",
+	BURNING = "Vậy không ổn rồi!",
+	BURNT = "Cháy xuyên sạch rồi.",
 }
 
 WOODIE.DESCRIBE.KYNO_SUGARTREE_RUINED =
 {
-	GENERIC = "What troubles you, sister?",
-	CHOPPED = "Had to be done.",
-	SAPPED = "Still tappable, somehow.",
-	PICKED = "Hey, get away from that tree will ya!",
-	BURNING = "Probably best.",
-	BURNT = "Nothing left.",
+	GENERIC = "Chuyện gì làm cô khổ vậy, chị cây?",
+	CHOPPED = "Việc phải làm thôi.",
+	SAPPED = "Không hiểu sao vẫn lấy nhựa được.",
+	PICKED = "Này, tránh xa cái cây đó ra được không!",
+	BURNING = "Có lẽ vậy là tốt nhất.",
+	BURNT = "Chẳng còn gì.",
 }
 
-WOODIE.DESCRIBE.KYNO_SUGARTREE_BUD = "You will grow into a nice tree, eh?"
+WOODIE.DESCRIBE.KYNO_SUGARTREE_BUD = "Rồi cô sẽ lớn thành một cái cây đẹp, eh?"
 
-WOODIE.DESCRIBE.KYNO_SUGARTREE_FLOWER = "That's cute."
-WOODIE.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "That's cute."
+WOODIE.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Dễ thương đó."
+WOODIE.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Dễ thương đó."
 
-WOODIE.DESCRIBE.KYNO_SUGARTREE_PETALS = "That's cute."
-WOODIE.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Not so cute now, eh?"
+WOODIE.DESCRIBE.KYNO_SUGARTREE_PETALS = "Dễ thương đó."
+WOODIE.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Giờ không dễ thương lắm rồi, eh?"
 
-WOODIE.DESCRIBE.KYNO_PEBBLECRAB = "I don't see any reason to bother the little fella."
+WOODIE.DESCRIBE.KYNO_PEBBLECRAB = "Mình chẳng thấy lý do gì để làm phiền anh bạn nhỏ này."
 
-WOODIE.DESCRIBE.KYNO_CRABMEAT = "That'll cook up real good."
-WOODIE.DESCRIBE.KYNO_CRABMEAT_COOKED = "I wouldn't mind a taste of that."
-WOODIE.DESCRIBE.KYNO_CRABMEAT_DRIED = "That'll cook up real good."
+WOODIE.DESCRIBE.KYNO_CRABMEAT = "Nấu lên sẽ ngon lắm."
+WOODIE.DESCRIBE.KYNO_CRABMEAT_COOKED = "Mình cũng muốn nếm thử một miếng."
+WOODIE.DESCRIBE.KYNO_CRABMEAT_DRIED = "Nấu lên sẽ ngon lắm."
 
-WOODIE.DESCRIBE.KYNO_CRABKINGMEAT = "That'll cook up real good."
-WOODIE.DESCRIBE.KYNO_CRABKINGMEAT_COOKED = "That'll cook up real good."
-WOODIE.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "That'll cook up real good."
+WOODIE.DESCRIBE.KYNO_CRABKINGMEAT = "Nấu lên sẽ ngon lắm."
+WOODIE.DESCRIBE.KYNO_CRABKINGMEAT_COOKED = "Nấu lên sẽ ngon lắm."
+WOODIE.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Nấu lên sẽ ngon lắm."
 
-WOODIE.DESCRIBE.KYNO_SLAUGHTERTOOL = "No use gettin' Lucy dirty."
+WOODIE.DESCRIBE.KYNO_SLAUGHTERTOOL = "Không cần làm bẩn Lucy."
 
 WOODIE.DESCRIBE.KYNO_CHICKEN2 = 
 {
-	GENERIC = "A bird's a bird.",
-	COOP = "I still hate them, but they're kinda useful.",
+	GENERIC = "Chim thì vẫn là chim.",
+	COOP = "Mình vẫn ghét chúng, nhưng cũng khá hữu dụng.",
 }
 
-WOODIE.DESCRIBE.KYNO_CHICKEN_EGG = "There's a chicken in there thinking chicken thoughts."
-WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "That's a lot of omelet, eh?"
-WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Well, it didn't became a chicken."
+WOODIE.DESCRIBE.KYNO_CHICKEN_EGG = "Có một con gà trong đó đang nghĩ chuyện gà."
+WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Chừng này chắc làm được nhiều trứng chiên lắm, eh?"
+WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Chà, nó đã không thành gà."
 
 WOODIE.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 {
-	GENERIC = "Give it a bit, eh?",
-	HATCHING = "There she goes! Little one's comin' out!",
+	GENERIC = "Cho nó thêm chút thời gian, eh?",
+	HATCHING = "Nó ra rồi kìa! Bé con đang chui ra!",
 }
 
 WOODIE.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
-	GENERIC = "Nice little coop, eh? Keeps the chickens cozy.",
-	FULL = "Plenty of eggs in there, beauty!",
-	BURNT = "Ah... that's a real shame.",
+	GENERIC = "Chuồng nhỏ đẹp đó, eh? Giữ lũ gà ấm áp.",
+	FULL = "Trong đó nhiều trứng lắm, đẹp đấy!",
+	BURNT = "Ah... tiếc thật đó.",
 }
 
-WOODIE.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Should I fix that?"
+WOODIE.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Mình có nên sửa cái đó không?"
 
-WOODIE.DESCRIBE.KYNO_COOKWARE_KIT = "I'm not into that kitchen stuff, but I can try."
-WOODIE.DESCRIBE.KYNO_COOKWARE_SYRUP = "You have to have sap to make syrup."
-WOODIE.DESCRIBE.KYNO_COOKWARE_SYRUP_POT = "You have to have sap to make syrup."
-WOODIE.DESCRIBE.KYNO_COOKWARE_BIG_POT = "Maybe I could test out some new recipes."
-WOODIE.DESCRIBE.KYNO_COOKWARE_BIG = "Maybe I could test out some new recipes."
-WOODIE.DESCRIBE.KYNO_COOKWARE_SMALL_POT = "I only know a handful of recipes, but I'm real good at them."
-WOODIE.DESCRIBE.KYNO_COOKWARE_SMALL = "I only know a handful of recipes, but I'm real good at them."
-WOODIE.DESCRIBE.KYNO_COOKWARE_GRILL = "Ready for the May two-four."
-WOODIE.DESCRIBE.KYNO_COOKWARE_GRILL_ITEM = "Better set this up."
-WOODIE.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL = "Wanna BBQ, Lucy?"
-WOODIE.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL_ITEM = "Better set this up."
-WOODIE.DESCRIBE.KYNO_COOKWARE_ELDER = "You have to have sap to make syrup."
-WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN_ITEM = "Be careful around that fire, Lucy."
-WOODIE.DESCRIBE.KYNO_COOKWARE_CASSEROLE = "It's good for the oven."
-WOODIE.DESCRIBE.KYNO_COOKWARE_SMALL_CASSEROLE = "I'll just make something small."
-WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN = "Be careful around that fire, Lucy."
-WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Be careful around that fire, Lucy."
-WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Be careful around that fire, Lucy."
+WOODIE.DESCRIBE.KYNO_COOKWARE_KIT = "Mình không rành chuyện bếp núc lắm, nhưng thử cũng được."
+WOODIE.DESCRIBE.KYNO_COOKWARE_SYRUP = "Muốn làm xi-rô thì phải có nhựa cây."
+WOODIE.DESCRIBE.KYNO_COOKWARE_SYRUP_POT = "Muốn làm xi-rô thì phải có nhựa cây."
+WOODIE.DESCRIBE.KYNO_COOKWARE_BIG_POT = "Có lẽ mình thử vài công thức mới được."
+WOODIE.DESCRIBE.KYNO_COOKWARE_BIG = "Có lẽ mình thử vài công thức mới được."
+WOODIE.DESCRIBE.KYNO_COOKWARE_SMALL_POT = "Mình chỉ biết vài công thức thôi, nhưng làm món nào ra món đó."
+WOODIE.DESCRIBE.KYNO_COOKWARE_SMALL = "Mình chỉ biết vài công thức thôi, nhưng làm món nào ra món đó."
+WOODIE.DESCRIBE.KYNO_COOKWARE_GRILL = "Sẵn sàng cho kỳ nghỉ tháng Năm rồi."
+WOODIE.DESCRIBE.KYNO_COOKWARE_GRILL_ITEM = "Tốt nhất nên dựng cái này lên."
+WOODIE.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL = "Muốn làm BBQ không, Lucy?"
+WOODIE.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL_ITEM = "Tốt nhất nên dựng cái này lên."
+WOODIE.DESCRIBE.KYNO_COOKWARE_ELDER = "Muốn làm xi-rô thì phải có nhựa cây."
+WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN_ITEM = "Cẩn thận với lửa nhé, Lucy."
+WOODIE.DESCRIBE.KYNO_COOKWARE_CASSEROLE = "Cái này hợp để cho vào lò."
+WOODIE.DESCRIBE.KYNO_COOKWARE_SMALL_CASSEROLE = "Mình làm món gì nhỏ nhỏ thôi."
+WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN = "Cẩn thận với lửa nhé, Lucy."
+WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Cẩn thận với lửa nhé, Lucy."
+WOODIE.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Cẩn thận với lửa nhé, Lucy."
 
 WOODIE.DESCRIBE.KYNO_ROCKFLIPPABLE = 
 {
-	GENERIC = "I should flip it.",
-	FLIPPED = "Yep. Figures.",
+	GENERIC = "Mình nên lật nó lên.",
+	FLIPPED = "Ừ. Đúng như đoán.",
 }
 
-WOODIE.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "I hope to never end up in one of those."
+WOODIE.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Hy vọng mình không bao giờ phải nằm trong một cái như thế."
 
-WOODIE.DESCRIBE.KYNO_SUGARFLY = "I never trusted those things, eh?"
-WOODIE.DESCRIBE.KYNO_SUGARFLYWINGS = "I'm sorry! I'm a terrible person!"
+WOODIE.DESCRIBE.KYNO_SUGARFLY = "Mình chưa bao giờ tin mấy thứ đó, eh?"
+WOODIE.DESCRIBE.KYNO_SUGARFLYWINGS = "Xin lỗi! Mình đúng là người tệ quá!"
 
-WOODIE.DESCRIBE.KYNO_WATERY_CRATE = "I hope to never end up in one of those."
+WOODIE.DESCRIBE.KYNO_WATERY_CRATE = "Hy vọng mình không bao giờ phải nằm trong một cái như thế."
 
-WOODIE.DESCRIBE.KYNO_TUNACAN = "Lucy'll open'er up."
-WOODIE.DESCRIBE.KYNO_TUNACAN_OPEN = "Lucy did a good job."
+WOODIE.DESCRIBE.KYNO_TUNACAN = "Lucy sẽ mở nó ra."
+WOODIE.DESCRIBE.KYNO_TUNACAN_OPEN = "Lucy làm tốt lắm."
 
-WOODIE.DESCRIBE.KYNO_CANNEDFOOD = "Lucy'll open'er up."
-WOODIE.DESCRIBE.KYNO_CANNEDFOOD_OPEN = "Lucy did a good job."
+WOODIE.DESCRIBE.KYNO_CANNEDFOOD = "Lucy sẽ mở nó ra."
+WOODIE.DESCRIBE.KYNO_CANNEDFOOD_OPEN = "Lucy làm tốt lắm."
 
-WOODIE.DESCRIBE.KYNO_POP = "Is this safe for consumption?"
+WOODIE.DESCRIBE.KYNO_POP = "Thứ này uống có an toàn không?"
 
-WOODIE.DESCRIBE.KYNO_MYSTERYMEAT = "What on earth is that!"
+WOODIE.DESCRIBE.KYNO_MYSTERYMEAT = "Cái quái gì thế này!"
 
-WOODIE.DESCRIBE.KYNO_BOTTLE_SOUL = "Cruel."
+WOODIE.DESCRIBE.KYNO_BOTTLE_SOUL = "Tàn nhẫn quá."
 
-WOODIE.DESCRIBE.SOULSTEW = "Cruel."
+WOODIE.DESCRIBE.SOULSTEW = "Tàn nhẫn quá."
 
-WOODIE.DESCRIBE.FORTUNECOOKIE = "I don't believe in such things."
+WOODIE.DESCRIBE.FORTUNECOOKIE = "Mình không tin mấy thứ kiểu này."
 
-WOODIE.DESCRIBE.HORNOCUPIA = "A feast!"
+WOODIE.DESCRIBE.HORNOCUPIA = "Một bữa tiệc!"
 
-WOODIE.DESCRIBE.CHEESE_YELLOW = "Ahh, I miss those."
-WOODIE.DESCRIBE.CHEESE_WHITE = "I've never eaten one of these before."
-WOODIE.DESCRIBE.CHEESE_KOALEFANT = "Ahh, I miss those."
+WOODIE.DESCRIBE.CHEESE_YELLOW = "Ahh, nhớ mấy thứ này ghê."
+WOODIE.DESCRIBE.CHEESE_WHITE = "Mình chưa từng ăn loại này trước đây."
+WOODIE.DESCRIBE.CHEESE_KOALEFANT = "Ahh, nhớ mấy thứ này ghê."
 
-WOODIE.DESCRIBE.MILK_BOX = "Pretty good, eh?"
+WOODIE.DESCRIBE.MILK_BOX = "Khá ổn đó, eh?"
 
-WOODIE.DESCRIBE.WATERCUP = "Just some water, eh?"
+WOODIE.DESCRIBE.WATERCUP = "Chỉ là chút nước thôi, eh?"
 
-WOODIE.DESCRIBE.HONEYJAR = "Sweet, sweet, honey!"
+WOODIE.DESCRIBE.HONEYJAR = "Mật ong ngọt ngào, ngọt ngào!"
 
-WOODIE.DESCRIBE.CRAB_ARTICHOKE = "I could eat this everyday."
+WOODIE.DESCRIBE.CRAB_ARTICHOKE = "Mình ăn món này mỗi ngày cũng được."
 
-WOODIE.DESCRIBE.PEPPERROLLS = "Hoo! Hot! Hot!"
+WOODIE.DESCRIBE.PEPPERROLLS = "Hoo! Cay! Cay quá!"
 
-WOODIE.DESCRIBE.KYNO_SAPHEALER = "Smells awful, but it works!"
+WOODIE.DESCRIBE.KYNO_SAPHEALER = "Mùi kinh thật, nhưng có tác dụng!"
 
 WOODIE.DESCRIBE.KYNO_OCEAN_WRECK = 
 {
-	GENERIC = "A waste of good wood.",
-	PICKED = "Give it time, it'll grow stuff again.",
-	BURNING = "Well, that's the end of it.",
+	GENERIC = "Phí gỗ tốt quá.",
+	PICKED = "Cho nó thời gian, rồi lại có thứ mọc lên thôi.",
+	BURNING = "Chà, vậy là hết rồi.",
 }
 
-WOODIE.DESCRIBE.KYNO_GHOST_PIRATE = "Maybe he's friendly?"
+WOODIE.DESCRIBE.KYNO_GHOST_PIRATE = "Biết đâu hắn thân thiện?"
 
-WOODIE.DESCRIBE.KYNO_BUCKET_EMPTY = "This can come in handy."
-WOODIE.DESCRIBE.KYNO_BUCKET_METAL = "This can come in handy."
-WOODIE.DESCRIBE.KYNO_BUCKET_WATER = "Good clean water, eh?"
+WOODIE.DESCRIBE.KYNO_BUCKET_EMPTY = "Cái này sẽ có lúc hữu dụng."
+WOODIE.DESCRIBE.KYNO_BUCKET_METAL = "Cái này sẽ có lúc hữu dụng."
+WOODIE.DESCRIBE.KYNO_BUCKET_WATER = "Nước sạch tốt lành, eh?"
 
-WOODIE.DESCRIBE.KYNO_MILK_BEEFALO = "Do you want some, Lucy?"
-WOODIE.DESCRIBE.KYNO_MILK_KOALEFANT = "Do you want some, Lucy?"
+WOODIE.DESCRIBE.KYNO_MILK_BEEFALO = "Em muốn uống chút không, Lucy?"
+WOODIE.DESCRIBE.KYNO_MILK_KOALEFANT = "Em muốn uống chút không, Lucy?"
 
-WOODIE.DESCRIBE.KYNO_CAP_DRIED = "I don't mind eating one now, eh?"
+WOODIE.DESCRIBE.KYNO_CAP_DRIED = "Giờ ăn một cái cũng không tệ, eh?"
 
-WOODIE.DESCRIBE.KYNO_PLANTMEAT_DRIED = "It tastes like survival."
+WOODIE.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Nó có vị sinh tồn."
 
-WOODIE.DESCRIBE.KYNO_BREWBOOK = "Pretty handy. Luce, how aboot you read off the ingredients while I brew?"
+WOODIE.DESCRIBE.KYNO_BREWBOOK = "Khá tiện đó. Luce, em đọc nguyên liệu cho anh lúc anh ủ nhé?"
 
 WOODIE.DESCRIBE.KYNO_WOODENKEG = 
 {
-	EMPTY = "Now I can enjoy the making of beers.",
-	BREWING_LONG = "Gonna take a few days, eh?",
-	BREWING_SHORT = "Not much longer now.",
-	DONE = "Looks good and ready!",
-	BURNT = "Ah... That's a real shame.",
+	EMPTY = "Giờ mình có thể tận hưởng việc làm bia rồi.",
+	BREWING_LONG = "Sẽ mất vài ngày đó, eh?",
+	BREWING_SHORT = "Không còn lâu nữa đâu.",
+	DONE = "Trông ổn và sẵn sàng rồi!",
+	BURNT = "Ah... Tiếc thật đó.",
 }
 
 WOODIE.DESCRIBE.KYNO_PRESERVESJAR = 
 {
-	EMPTY = "I want some jam, but what flavor?",
-	BREWING_LONG = "Takes patience.", 
-	BREWING_SHORT = "Not long now.",
-	DONE = "Looks real tasty!",
-	BURNT = "That's a shame.",
+	EMPTY = "Mình muốn chút mứt, nhưng vị gì đây?",
+	BREWING_LONG = "Cần kiên nhẫn.", 
+	BREWING_SHORT = "Sắp xong rồi.",
+	DONE = "Trông ngon thật đó!",
+	BURNT = "Tiếc thật.",
 }
 
 WOODIE.DESCRIBE.KYNO_ANTCHEST = 
 {
-	GENERIC = "That's neat.",
-	HONEY = "Plenty of honey in there, eh?",
-	NECTAR = "They're still workin' on it.",
-	BURNING = "Aw nuts, that's gone too far.",
+	GENERIC = "Hay ho đó.",
+	HONEY = "Trong đó đầy mật ong rồi, eh?",
+	NECTAR = "Chúng vẫn đang làm việc.",
+	BURNING = "Ôi chết, chuyện này đi quá xa rồi.",
 }
 
-WOODIE.DESCRIBE.KYNO_NECTAR_POD = "Nectar makes honey, eh."
+WOODIE.DESCRIBE.KYNO_NECTAR_POD = "Mật hoa tạo ra mật ong, eh."
 
-WOODIE.DESCRIBE.KYNO_OAKTREE_POD = "I better plant you now, so I can chop you later, eh."
-WOODIE.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Too late to plant this now."
+WOODIE.DESCRIBE.KYNO_OAKTREE_POD = "Tốt nhất trồng ngươi ngay, để sau này mình còn chặt, eh."
+WOODIE.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Giờ thì trồng cái này muộn quá rồi."
 
-WOODIE.DESCRIBE.KYNO_PIKO = "They like tree almost as much as me."
-WOODIE.DESCRIBE.KYNO_PIKO_ORANGE = "They like tree almost as much as me."
+WOODIE.DESCRIBE.KYNO_PIKO = "Chúng thích cây gần bằng mình."
+WOODIE.DESCRIBE.KYNO_PIKO_ORANGE = "Chúng thích cây gần bằng mình."
 
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
 {
-	GENERIC = "Well. Better get choppin'.",
-	CHOPPED = "Got what we needed.",
-	BURNING = "Careful!",
-	BURNT = "Burned clean through.",
+	GENERIC = "Chà. Tốt nhất bắt đầu chặt thôi.",
+	CHOPPED = "Lấy được thứ cần rồi.",
+	BURNING = "Cẩn thận!",
+	BURNT = "Cháy xuyên sạch rồi.",
 }
 
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
 {
-	GENERIC = "Well. Better get choppin'.",
-	BURNING = "Sorry, little guys.",
+	GENERIC = "Chà. Tốt nhất bắt đầu chặt thôi.",
+	BURNING = "Xin lỗi nhé, mấy anh bạn nhỏ.",
 }
 
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "That there's the box."
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Đó là cái thùng."
 
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
 {
-	GENERIC = "They're not the handiest.",
-	BURNT = "Burned right down.",
+	GENERIC = "Chúng không khéo tay cho lắm.",
+	BURNT = "Cháy rụi rồi.",
 }
 
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
 {
-	GENERIC = "I'd prefer a log cabin.",
-	CRAFTED = "Not bad at all now.",
-	BURNT = "That's awful.",
+	GENERIC = "Mình thích nhà gỗ hơn.",
+	CRAFTED = "Giờ thì không tệ chút nào.",
+	BURNT = "Tệ thật.",
 }
 
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
 {
-	GENERIC = "My eyes decieve me! The cursed bell is right there!",
-	OCCUPIED = "Guess I'll come back later, eh?",
+	GENERIC = "Mắt mình lừa mình rồi! Cái chuông bị nguyền ở ngay đó!",
+	OCCUPIED = "Chắc mình quay lại sau, eh?",
 }
 
 WOODIE.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
 {
-	GENERIC = "Is that...? I can't believe in my own eyes anymore.",
-	EMPTY = "Guess I'll check back later.",
+	GENERIC = "Đó là...? Mình không còn tin vào mắt mình nữa.",
+	EMPTY = "Chắc mình quay lại kiểm tra sau.",
 }
 
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "I wonder if he jumped with us in that portal when I wasn't looking."
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_POND = "Seems like a popular hangout spot for fishes."
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Plant."
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_SANDHILL = "It's a big pile of sand."
-WOODIE.DESCRIBE.KYNO_MEADOWISLAND_MERMFISHER = "I don't know aboot that guy."
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Không biết có phải ông ấy nhảy theo tụi mình vào cổng lúc mình không để ý không."
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_POND = "Có vẻ là chỗ tụ tập ưa thích của cá."
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Cây."
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_SANDHILL = "Một đống cát to."
+WOODIE.DESCRIBE.KYNO_MEADOWISLAND_MERMFISHER = "Mình không chắc về gã đó đâu."
 
-WOODIE.DESCRIBE.KYNO_SAMMYHAT = "Isn't this the cap of merchants and mailmen?"
+WOODIE.DESCRIBE.KYNO_SAMMYHAT = "Đây chẳng phải mũ của thương nhân với người đưa thư sao?"
 
-WOODIE.DESCRIBE.KINGFISHER = "Quite beak on that one, eh?"
+WOODIE.DESCRIBE.KINGFISHER = "Cái mỏ con này khá là ra trò, eh?"
 
-WOODIE.DESCRIBE.TOUCAN = "Pretty fancy lookin' bird, that."
-WOODIE.DESCRIBE.TOUCAN_CHUBBY = "Pretty fancy lookin' bird, that."
+WOODIE.DESCRIBE.TOUCAN = "Con chim này trông bảnh thật."
+WOODIE.DESCRIBE.TOUCAN_CHUBBY = "Con chim này trông bảnh thật."
 
-WOODIE.DESCRIBE.WETGOOP2 = "Better than some of the things I've eaten!"
+WOODIE.DESCRIBE.WETGOOP2 = "Vẫn còn hơn vài thứ mình từng ăn!"
 
-WOODIE.DESCRIBE.BEER = "It is so good to see they again!"
+WOODIE.DESCRIBE.BEER = "Mừng quá khi gặp lại mấy thứ này!"
 
-WOODIE.DESCRIBE.PALEALE = "It is so good to see they again!"
+WOODIE.DESCRIBE.PALEALE = "Mừng quá khi gặp lại mấy thứ này!"
 
-WOODIE.DESCRIBE.TEAGREEN = "Almost makes me forget where I am."
+WOODIE.DESCRIBE.TEAGREEN = "Gần như làm mình quên mất đang ở đâu."
 
-WOODIE.DESCRIBE.TEARED = "Almost makes me forget where I am."
+WOODIE.DESCRIBE.TEARED = "Gần như làm mình quên mất đang ở đâu."
 
-WOODIE.DESCRIBE.MEAD = "A sip wouldn't be too harsh, eh?"
+WOODIE.DESCRIBE.MEAD = "Nhấp một ngụm chắc không nặng lắm, eh?"
 
-WOODIE.DESCRIBE.KYNO_JELLY = "Now to find peanut butter."
+WOODIE.DESCRIBE.KYNO_JELLY = "Giờ phải tìm bơ đậu phộng nữa."
 
-WOODIE.DESCRIBE.KYNO_MAYONNAISE = "It's tasteful and creamy."
+WOODIE.DESCRIBE.KYNO_MAYONNAISE = "Béo mịn và ngon đấy."
 
-WOODIE.DESCRIBE.TARTARSAUCE = "It can't be..."
+WOODIE.DESCRIBE.TARTARSAUCE = "Không thể nào..."
 
-WOODIE.DESCRIBE.KYNO_PICKLES = "I do like pickles, specially the pumpkin ones."
+WOODIE.DESCRIBE.KYNO_PICKLES = "Mình thích đồ muối chua, nhất là bí ngô muối."
 
-WOODIE.DESCRIBE.KYNO_WINE = "*Glup* Ahhh, refreshing."
+WOODIE.DESCRIBE.KYNO_WINE = "*Ực* Ahhh, đã khát."
 
-WOODIE.DESCRIBE.KYNO_JUICE = "*Glup* Ahhh, refreshing."
+WOODIE.DESCRIBE.KYNO_JUICE = "*Ực* Ahhh, đã khát."
 
-WOODIE.DESCRIBE.KYNO_POISON_FROGLEGS = "Those legs look toxic."
-WOODIE.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "I don't know, eh...?"
+WOODIE.DESCRIBE.KYNO_POISON_FROGLEGS = "Mấy cái chân đó trông độc hại quá."
+WOODIE.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "Mình không chắc đâu, eh...?"
 
-WOODIE.DESCRIBE.POISONFROGGLEBUNWICH = "You can really taste the caves."
+WOODIE.DESCRIBE.POISONFROGGLEBUNWICH = "Nếm được cả vị hang động trong đó."
 
-WOODIE.DESCRIBE.KYNO_BREWINGRECIPECARD = "Looks like somethin' was written here, but it faded away."
+WOODIE.DESCRIBE.KYNO_BREWINGRECIPECARD = "Có vẻ từng có chữ viết ở đây, nhưng mờ hết rồi."
 
-WOODIE.DESCRIBE.KYNO_OIL = "Perhaps it's sunflower oil, eh?"
+WOODIE.DESCRIBE.KYNO_OIL = "Có lẽ là dầu hướng dương, eh?"
 
-WOODIE.DESCRIBE.BERRYSUNDAE = "Only after I've chopped enough!"
+WOODIE.DESCRIBE.BERRYSUNDAE = "Chỉ ăn sau khi mình chặt đủ cây!"
 
-WOODIE.DESCRIBE.CHOCOLATE_BLACK = "It's nice to have some chunk of chocolate sometimes, eh?"
-WOODIE.DESCRIBE.CHOCOLATE_WHITE = "It's nice to have some chunk of chocolate sometimes, eh?"
+WOODIE.DESCRIBE.CHOCOLATE_BLACK = "Thỉnh thoảng có miếng sô-cô-la cũng hay, eh?"
+WOODIE.DESCRIBE.CHOCOLATE_WHITE = "Thỉnh thoảng có miếng sô-cô-la cũng hay, eh?"
 
-WOODIE.DESCRIBE.TRICOLORDANGO = "Never had heard of those, but they're great!"
+WOODIE.DESCRIBE.TRICOLORDANGO = "Chưa từng nghe tới mấy món này, nhưng ngon đó!"
  
-WOODIE.DESCRIBE.FRIESFRENCH = "Junk food, eh?"
+WOODIE.DESCRIBE.FRIESFRENCH = "Đồ ăn vặt kém lành mạnh, eh?"
 
-WOODIE.DESCRIBE.PIRATERUM = "Dangerous!"
+WOODIE.DESCRIBE.PIRATERUM = "Nguy hiểm!"
 
-WOODIE.DESCRIBE.TWISTEDTEQUILA = "Not good to get drunk while chopping trees."
+WOODIE.DESCRIBE.TWISTEDTEQUILA = "Say xỉn lúc chặt cây thì không hay đâu."
 
-WOODIE.DESCRIBE.ONIONRINGS = "Never thought onions could be used this way."
+WOODIE.DESCRIBE.ONIONRINGS = "Chưa từng nghĩ hành tây có thể dùng kiểu này."
 
-WOODIE.DESCRIBE.DONUTS = "Directly into my mouth!"
-WOODIE.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Directly into my mouth!"
-WOODIE.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Directly into my mouth!"
+WOODIE.DESCRIBE.DONUTS = "Cho thẳng vào miệng mình nào!"
+WOODIE.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Cho thẳng vào miệng mình nào!"
+WOODIE.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Cho thẳng vào miệng mình nào!"
  
-WOODIE.DESCRIBE.CINNAMONROLL = "That's one heavy bun."
+WOODIE.DESCRIBE.CINNAMONROLL = "Cái bánh cuộn này nặng bụng đấy."
 
-WOODIE.DESCRIBE.GUMMYBEARGERS = "There's something odd about these guys."
+WOODIE.DESCRIBE.GUMMYBEARGERS = "Mấy anh bạn này có gì đó kỳ kỳ."
 
-WOODIE.DESCRIBE.PRETZEL = "It has a funny format."
+WOODIE.DESCRIBE.PRETZEL = "Hình dáng buồn cười ghê."
 
-WOODIE.DESCRIBE.CORNINCUP = "I like corn, but not at all."
+WOODIE.DESCRIBE.CORNINCUP = "Mình thích bắp, nhưng không hẳn kiểu này."
 
-WOODIE.DESCRIBE.COTTONCANDY = "Circus food, eh?"
+WOODIE.DESCRIBE.COTTONCANDY = "Đồ ăn rạp xiếc, eh?"
 
-WOODIE.DESCRIBE.ROASTEDHAZELNUTS = "I used to eat this all they, back then when chopping trees."
+WOODIE.DESCRIBE.ROASTEDHAZELNUTS = "Hồi còn chặt cây mình từng ăn món này suốt."
 
-WOODIE.DESCRIBE.MONSTERMUFFIN = "I know a real muffin when I see one. This is an impostor!"
+WOODIE.DESCRIBE.MONSTERMUFFIN = "Mình biết muffin thật khi nhìn thấy. Cái này là hàng giả!"
 
-WOODIE.DESCRIBE.PINKCAKE = "I guess it's someone's birthday."
+WOODIE.DESCRIBE.PINKCAKE = "Chắc sinh nhật ai đó."
 
-WOODIE.DESCRIBE.CHIPSBAG = "Want some, Lucy?"
+WOODIE.DESCRIBE.CHIPSBAG = "Muốn ăn không, Lucy?"
 
-WOODIE.DESCRIBE.LITTLEBREAD = "A loaf, eh?"
+WOODIE.DESCRIBE.LITTLEBREAD = "Một ổ bánh mì, eh?"
 
-WOODIE.DESCRIBE.HOTHOUND = "I find it very tasteful."
+WOODIE.DESCRIBE.HOTHOUND = "Mình thấy nó rất ngon."
 
-WOODIE.DESCRIBE.MILKSHAKE = "Shake, shake, shake it all."
-WOODIE.DESCRIBE.MILKSHAKE_PRISMATIC = "Shake, shake, shake it all."
+WOODIE.DESCRIBE.MILKSHAKE = "Lắc, lắc, lắc cho đều."
+WOODIE.DESCRIBE.MILKSHAKE_PRISMATIC = "Lắc, lắc, lắc cho đều."
 
-WOODIE.DESCRIBE.NACHOS = "Careful, Lucy, you going to make a mess!"
+WOODIE.DESCRIBE.NACHOS = "Cẩn thận, Lucy, em sẽ làm bừa bộn đấy!"
 
-WOODIE.DESCRIBE.BANANA_PUDDING = "Looks tasty!"
+WOODIE.DESCRIBE.BANANA_PUDDING = "Trông ngon đó!"
 
-WOODIE.DESCRIBE.SEA_PUDDING = "Eh, I don't know if I want to eat that."
+WOODIE.DESCRIBE.SEA_PUDDING = "Eh, mình không biết có muốn ăn thứ đó không."
 
-WOODIE.DESCRIBE.TOM_KHA_SOUP = "Eh, its very good! Want a piece, Lucy?"
+WOODIE.DESCRIBE.TOM_KHA_SOUP = "Eh, ngon thật! Muốn một miếng không, Lucy?"
 
-WOODIE.DESCRIBE.MINERTREAT = "A few sips will not hurt, eh?"
+WOODIE.DESCRIBE.MINERTREAT = "Nhấp vài ngụm cũng chẳng hại gì, eh?"
 
-WOODIE.DESCRIBE.RADISHSALAD = "Healthy, but not very hardy."
+WOODIE.DESCRIBE.RADISHSALAD = "Lành mạnh, nhưng không no lâu lắm."
 
-WOODIE.DESCRIBE.PUMPKIN_SOUP = "Hearty."
+WOODIE.DESCRIBE.PUMPKIN_SOUP = "Chắc bụng."
 
-WOODIE.DESCRIBE.ALGAE_SOUP = "Hearty."
+WOODIE.DESCRIBE.ALGAE_SOUP = "Chắc bụng."
 
-WOODIE.DESCRIBE.PARZNIP_SOUP = "Hearty."
+WOODIE.DESCRIBE.PARZNIP_SOUP = "Chắc bụng."
 
-WOODIE.DESCRIBE.NETTLEMEATED = "It's not back bacon, but it'll do."
+WOODIE.DESCRIBE.NETTLEMEATED = "Không phải bacon Canada, nhưng cũng được."
 
 WOODIE.DESCRIBE.KYNO_SUGAR = "Mmmmm-mmmmmm."
 
-WOODIE.DESCRIBE.KYNO_BOTTLECAP = "I bet we can buy things if we get more caps!"
+WOODIE.DESCRIBE.KYNO_BOTTLECAP = "Mình cá là gom thêm nắp chai thì mua được đồ!"
 
-WOODIE.DESCRIBE.NUKACOLA = "Not bad for a cola. Not bad at all."
-WOODIE.DESCRIBE.NUKACOLA_QUANTUM = "Not bad for a cola. Not bad at all."
+WOODIE.DESCRIBE.NUKACOLA = "Không tệ với một lon cola. Không tệ chút nào."
+WOODIE.DESCRIBE.NUKACOLA_QUANTUM = "Không tệ với một lon cola. Không tệ chút nào."
 
-WOODIE.DESCRIBE.LIVINGSANDWICH = "I don't know what everyone talks about it. It's just an ordinary sandwich to me."
+WOODIE.DESCRIBE.LIVINGSANDWICH = "Mình không hiểu mọi người nói gì về nó. Với mình nó chỉ là sandwich bình thường."
 
-WOODIE.DESCRIBE.DURIANSPLIT = "Only after I've chopped enough!"
+WOODIE.DESCRIBE.DURIANSPLIT = "Chỉ ăn sau khi mình chặt đủ cây!"
 
-WOODIE.DESCRIBE.DURIANSOUP = "Nothin' like a nice warm bowl of soup."
+WOODIE.DESCRIBE.DURIANSOUP = "Không gì bằng một bát súp nóng ngon lành."
 
-WOODIE.DESCRIBE.DURIANMEATED = "It smells really bad."
+WOODIE.DESCRIBE.DURIANMEATED = "Mùi nó tệ thật."
 
-WOODIE.DESCRIBE.DURIANCHICKEN = "Turkey day is here again, I guess?"
+WOODIE.DESCRIBE.DURIANCHICKEN = "Lại tới ngày ăn gà tây rồi, mình đoán vậy?"
 
-WOODIE.DESCRIBE.LUNARSOUP = "Fly me to the moon..."
+WOODIE.DESCRIBE.LUNARSOUP = "Đưa mình bay lên mặt trăng..."
 
-WOODIE.DESCRIBE.PURPLEWOBSTERSOUP = "Smelling good, eh?"
+WOODIE.DESCRIBE.PURPLEWOBSTERSOUP = "Mùi thơm đó, eh?"
 
-WOODIE.DESCRIBE.WOBSTERMONSTER = "Ocean monsters, eh?"
+WOODIE.DESCRIBE.WOBSTERMONSTER = "Quái vật biển, eh?"
 
-WOODIE.DESCRIBE.SPIDERCAKE = "Well, they deserved it."
+WOODIE.DESCRIBE.SPIDERCAKE = "Chà, chúng đáng bị vậy."
 
-WOODIE.DESCRIBE.SUGARBOMBS = "Little bombs of sugar."
+WOODIE.DESCRIBE.SUGARBOMBS = "Những quả bom đường nhỏ."
 
-WOODIE.DESCRIBE.BERRYBOMBS = "Now to find peanut butter."
+WOODIE.DESCRIBE.BERRYBOMBS = "Giờ phải tìm bơ đậu phộng nữa."
 
-WOODIE.DESCRIBE.ONIGIRIS = "What do you think, Lucy?"
+WOODIE.DESCRIBE.ONIGIRIS = "Em nghĩ sao, Lucy?"
 
-WOODIE.DESCRIBE.OMURICE = "I like the tomato sauce over it!"
+WOODIE.DESCRIBE.OMURICE = "Mình thích lớp xốt cà chua bên trên!"
 
-WOODIE.DESCRIBE.PAELLA = "I could eat this all day."
+WOODIE.DESCRIBE.PAELLA = "Mình ăn món này cả ngày cũng được."
 
-WOODIE.DESCRIBE.RISOTTO = "It's very creamy, what do you think, Lucy?"
+WOODIE.DESCRIBE.RISOTTO = "Béo mịn thật, em thấy sao, Lucy?"
 
-WOODIE.DESCRIBE.RICESAKE = "Drink it in moderation alright, Lucy? Lucy...?"
+WOODIE.DESCRIBE.RICESAKE = "Uống điều độ nhé, Lucy? Lucy...?"
 
-WOODIE.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Pulled it right out."
+WOODIE.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Nhổ thẳng nó lên rồi."
 
 WOODIE.DESCRIBE.KYNO_PINEAPPLEBUSH = 
 {
-	GENERIC = "Be careful with the spikes, Lucy!",
-	PICKED = "Needs more time.",
-	WITHERED = "Dry as a bone.",
-	BURNING = "That's not good!",
+	GENERIC = "Cẩn thận mấy cái gai nhé, Lucy!",
+	PICKED = "Cần thêm thời gian.",
+	WITHERED = "Khô như xương.",
+	BURNING = "Vậy không ổn rồi!",
 }
 
-WOODIE.DESCRIBE.KYNO_PINEAPPLE = "Pineapple!"
-WOODIE.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Pineapple!"
-WOODIE.DESCRIBE.KYNO_PINEAPPLE_COOKED = "Take a slice, Lucy."
+WOODIE.DESCRIBE.KYNO_PINEAPPLE = "Dứa!"
+WOODIE.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Dứa!"
+WOODIE.DESCRIBE.KYNO_PINEAPPLE_COOKED = "Lấy một lát đi, Lucy."
 
-WOODIE.DESCRIBE.PIZZA_TROPICAL = "Not a big fan of those."
+WOODIE.DESCRIBE.PIZZA_TROPICAL = "Không mê món này lắm."
 
-WOODIE.DESCRIBE.PINACOLADA = "Ahhh, refreshing!"
+WOODIE.DESCRIBE.PINACOLADA = "Ahhh, đã khát!"
 
-WOODIE.DESCRIBE.CHIMAS = "I can get used to this."
+WOODIE.DESCRIBE.CHIMAS = "Mình có thể quen với thứ này."
 
 WOODIE.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
 {
-	OFF = "Good for watering.",
-	ON = "Keeps things growin' nice, eh?",
+	OFF = "Tốt để tưới cây.",
+	ON = "Giữ mọi thứ lớn lên ngon lành, eh?",
 }
 
-WOODIE.DESCRIBE.KYNO_FOODSACK = "It's for holding my treasures."
+WOODIE.DESCRIBE.KYNO_FOODSACK = "Dùng để chứa kho báu của mình."
 
-WOODIE.DESCRIBE.GUMMYWORMS = "Don't fear them!"
+WOODIE.DESCRIBE.GUMMYWORMS = "Đừng sợ chúng!"
 
-WOODIE.DESCRIBE.SMORES = "Its a nice cream cracker."
+WOODIE.DESCRIBE.SMORES = "Một cái bánh quy kem ngon đó."
 
-WOODIE.DESCRIBE.NUKASHINE = "I feel and odd and devilish aura coming from that drink."
+WOODIE.DESCRIBE.NUKASHINE = "Mình cảm thấy có luồng khí lạ và quỷ quái từ thứ đồ uống đó."
 
-WOODIE.DESCRIBE.ANTSLOG = "I'm not sure what I'm looking at, Lucy..."
+WOODIE.DESCRIBE.ANTSLOG = "Mình không chắc mình đang nhìn cái gì nữa, Lucy..."
 
-WOODIE.DESCRIBE.KYNO_WORM_BONE = "A good bone's always good for somethin'."
+WOODIE.DESCRIBE.KYNO_WORM_BONE = "Một khúc xương tốt thì lúc nào cũng có ích."
 
 WOODIE.DESCRIBE.SPOOKY_BRAIN_NOODLES = "Eeck."
-WOODIE.DESCRIBE.SPOOKY_BURGERZILLA = "Hey, this one is actually good."
-WOODIE.DESCRIBE.SPOOKY_DEADBREAD = "A fluffy bread, eh?"
-WOODIE.DESCRIBE.SPOOKY_JELLYBEANS = "Great halloween treat."
-WOODIE.DESCRIBE.SPOOKY_POPSICLE = "This is brilliant!"
-WOODIE.DESCRIBE.SPOOKY_PUMPKINCREAM = "What a combination!"
-WOODIE.DESCRIBE.SPOOKY_SKULLCANDY = "Unholy!"
-WOODIE.DESCRIBE.SPOOKY_TACODILE = "Smells good."
+WOODIE.DESCRIBE.SPOOKY_BURGERZILLA = "Này, cái này thật ra ngon đó."
+WOODIE.DESCRIBE.SPOOKY_DEADBREAD = "Một ổ bánh mì mềm xốp, eh?"
+WOODIE.DESCRIBE.SPOOKY_JELLYBEANS = "Kẹo Halloween tuyệt đó."
+WOODIE.DESCRIBE.SPOOKY_POPSICLE = "Cái này xuất sắc!"
+WOODIE.DESCRIBE.SPOOKY_PUMPKINCREAM = "Kết hợp hay thật!"
+WOODIE.DESCRIBE.SPOOKY_SKULLCANDY = "Báng bổ quá!"
+WOODIE.DESCRIBE.SPOOKY_TACODILE = "Mùi ngon đó."
 
-WOODIE.DESCRIBE.BUTTER_BEEFALO = "Its butter! I think..."
-WOODIE.DESCRIBE.BUTTER_GOAT = "Ack. I hope this is worth the trouble we had for getting it."
-WOODIE.DESCRIBE.BUTTER_KOALEFANT = "Its similar to regular butter, but it tastes better than it."
+WOODIE.DESCRIBE.BUTTER_BEEFALO = "Là bơ! Chắc vậy..."
+WOODIE.DESCRIBE.BUTTER_GOAT = "Ack. Hy vọng công sức lấy thứ này đáng giá."
+WOODIE.DESCRIBE.BUTTER_KOALEFANT = "Nó giống bơ thường, nhưng vị ngon hơn."
 
-WOODIE.DESCRIBE.SPICE_CURE = "That will keep our food alive for longer, don't you like it, Lucy?"
-WOODIE.DESCRIBE.SPICE_COLD = "Winter is coming!"
-WOODIE.DESCRIBE.SPICE_FIRE = "Hell on earth!"
-WOODIE.DESCRIBE.SPICE_FED = "I can already sense the smell."
-WOODIE.DESCRIBE.SPICE_MIND = "Everyone needs to relax for a bit, eh?"
+WOODIE.DESCRIBE.SPICE_CURE = "Nó sẽ giữ đồ ăn của mình sống lâu hơn, em thích không, Lucy?"
+WOODIE.DESCRIBE.SPICE_COLD = "Mùa đông đang tới!"
+WOODIE.DESCRIBE.SPICE_FIRE = "Địa ngục giữa trần gian!"
+WOODIE.DESCRIBE.SPICE_FED = "Mình đã ngửi thấy mùi rồi."
+WOODIE.DESCRIBE.SPICE_MIND = "Ai cũng cần thư giãn một chút, eh?"
 
-WOODIE.DESCRIBE.SUGARFLYMUFFIN = "Crunchy! ...But soft?"
+WOODIE.DESCRIBE.SUGARFLYMUFFIN = "Giòn! ...Nhưng lại mềm?"
 
-WOODIE.DESCRIBE.EELTACOS = "Tastes like the deep sea."
+WOODIE.DESCRIBE.EELTACOS = "Có vị như biển sâu."
 
-WOODIE.DESCRIBE.MEATSKILLET = "Needs more pepper."
+WOODIE.DESCRIBE.MEATSKILLET = "Cần thêm tiêu."
 
-WOODIE.DESCRIBE.MEATWALTZ = "Undercooked."
+WOODIE.DESCRIBE.MEATWALTZ = "Chưa chín kỹ."
 
-WOODIE.DESCRIBE.COMPLETEBREAKFAST = "Too much to be my breakfast."
+WOODIE.DESCRIBE.COMPLETEBREAKFAST = "Hơi nhiều cho bữa sáng của mình."
 
-WOODIE.DESCRIBE.DUMPLINGS = "They are pretty good, huh."
+WOODIE.DESCRIBE.DUMPLINGS = "Mấy món này khá ngon ha."
 
-WOODIE.DESCRIBE.WARLYICEDTEA = "Nice and refreshing."
+WOODIE.DESCRIBE.WARLYICEDTEA = "Mát và đã khát."
 
-WOODIE.DESCRIBE.WARLYTEA = "I could go for some tea."
+WOODIE.DESCRIBE.WARLYTEA = "Mình uống chút trà cũng được."
 
-WOODIE.DESCRIBE.KYNO_TEALEAF = "Let's go make some tea, Lucy!"
+WOODIE.DESCRIBE.KYNO_TEALEAF = "Đi pha chút trà nào, Lucy!"
 
-WOODIE.DESCRIBE.KYNO_ITEMSLICER = "Oh, that's a thing for choppin'."
-WOODIE.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Oh, that's a thing for choppin'."
+WOODIE.DESCRIBE.KYNO_ITEMSLICER = "Ồ, đây là đồ để chặt."
+WOODIE.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Ồ, đây là đồ để chặt."
 
-WOODIE.DESCRIBE.COXINHA = "Not bad, not bad..."
+WOODIE.DESCRIBE.COXINHA = "Không tệ, không tệ..."
 
-WOODIE.DESCRIBE.LAZYDESSERT = "Fake caramel candy!"
+WOODIE.DESCRIBE.LAZYDESSERT = "Kẹo caramel giả!"
 
-WOODIE.DESCRIBE.CRABKINGFEAST = "It's really big."
+WOODIE.DESCRIBE.CRABKINGFEAST = "Nó to thật."
 
-WOODIE.DESCRIBE.PIENAPPLE = "Remove the spikes before eating."
+WOODIE.DESCRIBE.PIENAPPLE = "Nhớ bỏ gai trước khi ăn."
 
-WOODIE.DESCRIBE.JAWSBREAKER = "I can't chew that."
+WOODIE.DESCRIBE.JAWSBREAKER = "Mình nhai không nổi cái này."
 
-WOODIE.DESCRIBE.AVOCADOTOAST = "I prefer something else for breakfast."
+WOODIE.DESCRIBE.AVOCADOTOAST = "Mình thích món khác cho bữa sáng hơn."
 
-WOODIE.DESCRIBE.RICEPUDDING = "It's milky."
+WOODIE.DESCRIBE.RICEPUDDING = "Nó béo sữa."
 
-WOODIE.DESCRIBE.SHARKSUSHI = "It looks delicious."
+WOODIE.DESCRIBE.SHARKSUSHI = "Trông ngon thật."
 
-WOODIE.DESCRIBE.WOBSTERBREADED = "Smells really good!"
+WOODIE.DESCRIBE.WOBSTERBREADED = "Mùi thơm quá!"
 
-WOODIE.DESCRIBE.LAZYPURRITO = "Why do my food is looking like animals lately?"
+WOODIE.DESCRIBE.LAZYPURRITO = "Sao dạo này đồ ăn của mình cứ giống động vật vậy?"
 
-WOODIE.DESCRIBE.HORCHATA = "Not my favorite."
+WOODIE.DESCRIBE.HORCHATA = "Không phải món mình thích nhất."
 
-WOODIE.DESCRIBE.WOBSTERCOCKTAIL = "Woah, its beatiful."
+WOODIE.DESCRIBE.WOBSTERCOCKTAIL = "Whoa, đẹp thật."
 
-WOODIE.DESCRIBE.LAVAEEGGBOILED = "Fiercy and flaming."
+WOODIE.DESCRIBE.LAVAEEGGBOILED = "Bốc lửa và rực cháy."
 
-WOODIE.DESCRIBE.POMEGRANATETEA = "Nice and refreshing."
+WOODIE.DESCRIBE.POMEGRANATETEA = "Mát và đã khát."
 
-WOODIE.DESCRIBE.TIRAMISU = "Two in one, I'm in!"
+WOODIE.DESCRIBE.TIRAMISU = "Hai trong một, mình tham gia!"
 
-WOODIE.DESCRIBE.TOADSTOOLCOLA = "I don't think this is safe."
+WOODIE.DESCRIBE.TOADSTOOLCOLA = "Mình không nghĩ thứ này an toàn."
 
-WOODIE.DESCRIBE.TEPACHE = "A refreshing pineapple drink."
+WOODIE.DESCRIBE.TEPACHE = "Một thức uống dứa sảng khoái."
 
-WOODIE.DESCRIBE.LUNARTEQUILA = "The moon...!"
+WOODIE.DESCRIBE.LUNARTEQUILA = "Mặt trăng...!"
 
-WOODIE.DESCRIBE.MIMICMOSA = "I could use it to sneak past some creatures."
+WOODIE.DESCRIBE.MIMICMOSA = "Mình có thể dùng nó để lẻn qua vài sinh vật."
 
-WOODIE.DESCRIBE.POMEGRANATEPIE = "Mhm. Pies are always nice, eh?"
+WOODIE.DESCRIBE.POMEGRANATEPIE = "Mhm. Bánh nướng lúc nào cũng ổn, eh?"
 
-WOODIE.DESCRIBE.PINEAPPLECAKE = "This cake will fill me for days!"
+WOODIE.DESCRIBE.PINEAPPLECAKE = "Cái bánh này đủ no mấy ngày!"
 
-WOODIE.DESCRIBE.PASTY_MEAT = "It has more oil than meat."
-WOODIE.DESCRIBE.PASTY_CHEESE = "It has more oil than cheese."
+WOODIE.DESCRIBE.PASTY_MEAT = "Nhiều dầu hơn thịt."
+WOODIE.DESCRIBE.PASTY_CHEESE = "Nhiều dầu hơn phô mai."
 
-WOODIE.DESCRIBE.BRIGADEIRO = "This little dude is delicious!"
+WOODIE.DESCRIBE.BRIGADEIRO = "Anh bạn nhỏ này ngon ghê!"
 
-WOODIE.DESCRIBE.REGULARLASAGNA = "We don't talk about monster lasagna."
+WOODIE.DESCRIBE.REGULARLASAGNA = "Tụi mình không nói về lasagna quái vật."
 
-WOODIE.DESCRIBE.FLTSANDWICH = "BLT imitation!"
+WOODIE.DESCRIBE.FLTSANDWICH = "Bản nhái BLT!"
 
-WOODIE.DESCRIBE.RICEANDBEANS = "Its just missing some nice steak and fries."
+WOODIE.DESCRIBE.RICEANDBEANS = "Chỉ thiếu bít tết ngon với khoai chiên nữa thôi."
 
 WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 {
-	GENERIC = "That place needs fixin', eh?",
-	REPAIRED = "Now that's a proper little shop.",
-	OCCUPIED = "Hope the fella's sleepin' alright in there.",
-	OCCUPIED_REPAIRED = "Looks cozy enough for a nap now.",
+	GENERIC = "Chỗ đó cần sửa chữa đấy, eh?",
+	REPAIRED = "Giờ mới đúng là một cửa hàng nhỏ tử tế.",
+	OCCUPIED = "Hy vọng anh chàng đó ngủ ngon trong đó.",
+	OCCUPIED_REPAIRED = "Giờ nhìn đủ ấm cúng để chợp mắt rồi.",
 }
 
 WOODIE.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
-	GENERIC = "Heh, nothing like finding food straight from the dirt.",
-	PICKED = "Maybe more will pop up.",
-	BURNING = "Ah, that's a real shame.",
+	GENERIC = "Heh, chẳng gì bằng tìm được đồ ăn ngay trong đất.",
+	PICKED = "Có lẽ sẽ có thêm mọc lên.",
+	BURNING = "Ah, tiếc thật đó.",
 }
 
-WOODIE.DESCRIBE.KYNO_TRUFFLES = "They smell a bit weird, but taste good."
-WOODIE.DESCRIBE.KYNO_TRUFFLES_COOKED = "Now that's some fine eating."
+WOODIE.DESCRIBE.KYNO_TRUFFLES = "Mùi hơi lạ, nhưng ăn ngon."
+WOODIE.DESCRIBE.KYNO_TRUFFLES_COOKED = "Giờ mới đúng là đồ ăn ngon."
 
 WOODIE.DESCRIBE.KYNO_ITEMSHOWCASER = 
 {
-	EMPTY = "Nothing on it yet, eh?",
-	FULL = "Looks nice, eh? Almost too nice to eat.",
+	EMPTY = "Chưa có gì trên đó, eh?",
+	FULL = "Trông đẹp đó, eh? Gần như đẹp tới mức không nỡ ăn.",
 }
 
-WOODIE.DESCRIBE.KYNO_SPORECAP = "Doesn't look like the kind you wanna eat, eh?"
-WOODIE.DESCRIBE.KYNO_SPORECAP_COOKED = "Better, but I still wouldn't trust it."
+WOODIE.DESCRIBE.KYNO_SPORECAP = "Trông không giống loại nên ăn đâu, eh?"
+WOODIE.DESCRIBE.KYNO_SPORECAP_COOKED = "Đỡ hơn, nhưng mình vẫn không tin nó."
 
-WOODIE.DESCRIBE.KYNO_SPORECAP_DARK = "That's one nasty shroom, eh?"
-WOODIE.DESCRIBE.KYNO_SPORECAP_DARK_COOKED = "Still smells awful, eh?"
+WOODIE.DESCRIBE.KYNO_SPORECAP_DARK = "Đúng là cây nấm tởm thật, eh?"
+WOODIE.DESCRIBE.KYNO_SPORECAP_DARK_COOKED = "Vẫn bốc mùi kinh khủng, eh?"
 
-WOODIE.DESCRIBE.KYNO_GOLDENAPPLE = "It's so alluring and rare that makes me want to not eat it."
+WOODIE.DESCRIBE.KYNO_GOLDENAPPLE = "Nó quyến rũ và hiếm đến mức làm mình không nỡ ăn."
 
-WOODIE.DESCRIBE.TRUFFLESGRINDER = "Never thought I'd eat dirt and call it fancy, eh?"
+WOODIE.DESCRIBE.TRUFFLESGRINDER = "Chưa từng nghĩ mình sẽ ăn đất mà gọi là sang, eh?"
 
-WOODIE.DESCRIBE.SPORECAPPIE = "Looks like somethin' I shouldn't eat, eh?"
+WOODIE.DESCRIBE.SPORECAPPIE = "Trông như thứ mình không nên ăn, eh?"
 
-WOODIE.DESCRIBE.SPORECAP_SKEWERS = "Nothing like campfire mushrooms, eh?"
+WOODIE.DESCRIBE.SPORECAP_SKEWERS = "Không gì bằng nấm nướng lửa trại, eh?"
 
-WOODIE.DESCRIBE.TRUFFLEOIL = "Smells a bit too fancy for my taste, eh?"
+WOODIE.DESCRIBE.TRUFFLEOIL = "Mùi hơi sang quá so với khẩu vị mình, eh?"
 
-WOODIE.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Well, better get building."
-WOODIE.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Good spot to raise some fish, eh?"
+WOODIE.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Chà, tốt nhất bắt tay xây thôi."
+WOODIE.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Chỗ tốt để nuôi vài con cá, eh?"
 
 WOODIE.DESCRIBE.KYNO_FISHFARMPLOT = 
 {
-	GENERIC = "A hatchery for little fishies.",
-	FUEL_HIGH = "They're eatin' real good!",
-	FUEL_MED = "Still doin' fine.",
-	FUEL_LOW = "Better toss some more food in.",
-	EMPTY = "All outta feed.",
+	GENERIC = "Trại ươm cho mấy con cá nhỏ.",
+	FUEL_HIGH = "Chúng ăn ngon lành lắm!",
+	FUEL_MED = "Vẫn ổn cả.",
+	FUEL_LOW = "Tốt nhất ném thêm chút thức ăn vào.",
+	EMPTY = "Hết sạch thức ăn rồi.",
 }
 
-WOODIE.DESCRIBE.AGEDROE = "Whew, that's salty."
-WOODIE.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Kinda slimy, but fancy folk love it, eh?"
+WOODIE.DESCRIBE.AGEDROE = "Whew, mặn thật."
+WOODIE.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Hơi nhớt, nhưng dân sang chảnh mê món này lắm, eh?"
 
-WOODIE.DESCRIBE.KYNO_SWORDFISH_BLUE = "Poor fella's gone lake-soft, eh? Can't handle the waves anymore."
+WOODIE.DESCRIBE.KYNO_SWORDFISH_BLUE = "Anh bạn tội nghiệp mềm như cá hồ rồi, eh? Không chịu nổi sóng nữa."
 
-WOODIE.DESCRIBE.KYNO_JELLYFISH = "That's a jellyfish, don'tcha know."
-WOODIE.DESCRIBE.KYNO_JELLYFISH_DEAD = "The life's all but drained out of it, eh?"
-WOODIE.DESCRIBE.KYNO_JELLYFISH_COOKED = "I think this is as edible as it gets."
-WOODIE.DESCRIBE.KYNO_JELLYFISH_DRIED = "Jerky! The food of my people."
+WOODIE.DESCRIBE.KYNO_JELLYFISH = "Đó là sứa, em biết mà."
+WOODIE.DESCRIBE.KYNO_JELLYFISH_DEAD = "Sức sống gần như rút cạn rồi, eh?"
+WOODIE.DESCRIBE.KYNO_JELLYFISH_COOKED = "Mình nghĩ ăn được tới mức này là hết cỡ rồi."
+WOODIE.DESCRIBE.KYNO_JELLYFISH_DRIED = "Khô dai! Món ăn của dân mình."
 
-WOODIE.DESCRIBE.KYNO_JELLYFISH_RAINBOW = "Floating along."
-WOODIE.DESCRIBE.KYNO_JELLYFISH_RAINBOW_DEAD = "I don't think my little buddy's getting up anytime soon."
-WOODIE.DESCRIBE.KYNO_JELLYFISH_RAINBOW_COOKED = "As good of eating as anything around here."
+WOODIE.DESCRIBE.KYNO_JELLYFISH_RAINBOW = "Cứ trôi nổi thôi."
+WOODIE.DESCRIBE.KYNO_JELLYFISH_RAINBOW_DEAD = "Mình không nghĩ anh bạn nhỏ này sẽ dậy sớm đâu."
+WOODIE.DESCRIBE.KYNO_JELLYFISH_RAINBOW_COOKED = "Ăn cũng ổn như mọi thứ quanh đây."
 
-WOODIE.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "What was in it?"
+WOODIE.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Bên trong từng có gì vậy?"
 
-WOODIE.DESCRIBE.KYNO_OCEANTRAP = "I'm looking forward to a seafood dinner."
+WOODIE.DESCRIBE.KYNO_OCEANTRAP = "Mình đang mong một bữa hải sản đây."
 
-WOODIE.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Eh, looks like it prefers fishin' after dark."
-WOODIE.DESCRIBE.OCEANFISH_PUFFERFISH = "Yikes, that one's got more spikes than a porcupine, eh?"
-WOODIE.DESCRIBE.OCEANFISH_STURGEON = "Now that's a fish with history, eh?"
+WOODIE.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Eh, trông như nó thích đi câu sau khi trời tối."
+WOODIE.DESCRIBE.OCEANFISH_PUFFERFISH = "Ối, con này còn nhiều gai hơn nhím nữa, eh?"
+WOODIE.DESCRIBE.OCEANFISH_STURGEON = "Đúng là con cá có lịch sử, eh?"
 
-WOODIE.DESCRIBE.KYNO_SWORDFISH = "That there's one pointy fish."
-WOODIE.DESCRIBE.KYNO_SWORDFISH_DEAD = "Sorry, guy."
+WOODIE.DESCRIBE.KYNO_SWORDFISH = "Đúng là một con cá nhọn hoắt."
+WOODIE.DESCRIBE.KYNO_SWORDFISH_DEAD = "Xin lỗi nhé, anh bạn."
 
-WOODIE.DESCRIBE.SWORDFISHFEAST = "Fancy fish, eh? Still smells like the docks."
+WOODIE.DESCRIBE.SWORDFISHFEAST = "Cá sang chảnh, eh? Vẫn có mùi bến cảng."
 
-WOODIE.DESCRIBE.KYNO_DOGFISH = "Nice doggy."
-WOODIE.DESCRIBE.KYNO_DOGFISH_DEAD = "It wants to be dinner."
+WOODIE.DESCRIBE.KYNO_DOGFISH = "Cún ngoan."
+WOODIE.DESCRIBE.KYNO_DOGFISH_DEAD = "Nó muốn thành bữa tối."
 
-WOODIE.DESCRIBE.KYNO_SPOILED_FISH_LARGE = "I think it's time to throw this out."
+WOODIE.DESCRIBE.KYNO_SPOILED_FISH_LARGE = "Mình nghĩ tới lúc vứt cái này rồi."
 
-WOODIE.DESCRIBE.WOBSTER_MONKEYISLAND = "Heh. Fancy little fella, eh?"
-WOODIE.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD = "Well, that's the circle of life, eh?"
-WOODIE.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD_COOKED = "Now that's good eatin', eh?"
+WOODIE.DESCRIBE.WOBSTER_MONKEYISLAND = "Heh. Anh bạn nhỏ sang chảnh, eh?"
+WOODIE.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD = "Chà, vòng đời mà, eh?"
+WOODIE.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD_COOKED = "Giờ mới đúng là món ngon, eh?"
 
-WOODIE.DESCRIBE.KYNO_PUFFERMONSTER = "Careful, that one looks like trouble, eh?"
+WOODIE.DESCRIBE.KYNO_PUFFERMONSTER = "Cẩn thận, con đó trông rắc rối lắm, eh?"
 
-WOODIE.DESCRIBE.KYNO_WHALE_OCEAN_BUBBLES = "I know you're down there, buddy."
-WOODIE.DESCRIBE.KYNO_WHALE_BLUE_OCEAN = "Give'r!"
-WOODIE.DESCRIBE.KYNO_WHALE_WHITE_OCEAN = "It's strong, and very free."
-WOODIE.DESCRIBE.KYNO_WHALE_OCEAN_CARCASS = "That's a big guy, eh."
+WOODIE.DESCRIBE.KYNO_WHALE_OCEAN_BUBBLES = "Mình biết anh ở dưới đó, anh bạn."
+WOODIE.DESCRIBE.KYNO_WHALE_BLUE_OCEAN = "Tiến lên nào!"
+WOODIE.DESCRIBE.KYNO_WHALE_WHITE_OCEAN = "Nó mạnh mẽ, và rất tự do."
+WOODIE.DESCRIBE.KYNO_WHALE_OCEAN_CARCASS = "Anh bạn to xác thật đó, eh."
 
-WOODIE.DESCRIBE.KYNO_BLUBBER = "Quit your blubbering."
+WOODIE.DESCRIBE.KYNO_BLUBBER = "Thôi đừng rên rỉ nữa."
 
-WOODIE.DESCRIBE.KYNO_FISHMEAT_SMALL_DRIED = "Tastes like a lake in summer. Not bad, eh?"
-WOODIE.DESCRIBE.KYNO_FISHMEAT_DRIED = "Now that's some proper jerky, eh?"
+WOODIE.DESCRIBE.KYNO_FISHMEAT_SMALL_DRIED = "Vị như hồ nước mùa hè. Không tệ, eh?"
+WOODIE.DESCRIBE.KYNO_FISHMEAT_DRIED = "Giờ mới đúng là khô cá tử tế, eh?"
 
-WOODIE.DESCRIBE.MONKEYISLANDMEAL = "Now that's a strange combo, eh? But it works!"
+WOODIE.DESCRIBE.MONKEYISLANDMEAL = "Đúng là kết hợp lạ, eh? Nhưng hiệu quả!"
 
-WOODIE.DESCRIBE.KYNO_BRAINROCK_LARVAE = "What a tiny little hoser."
-WOODIE.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Uncomfortable smooth."
-WOODIE.DESCRIBE.KYNO_BRAINROCK_CORAL = "How brainy."
+WOODIE.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Đúng là tên nhỏ khó ưa."
+WOODIE.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Trơn nhẵn đến khó chịu."
+WOODIE.DESCRIBE.KYNO_BRAINROCK_CORAL = "Não nề thật."
 
 WOODIE.DESCRIBE.KYNO_BRAINROCK_ROCK = 
 {
-	GENERIC = "What're you, some sort of keener?",
-	PICKED = "Guess it's takin' a break, eh?",
+	GENERIC = "Ngươi là kiểu mọt sách gì vậy?",
+	PICKED = "Chắc nó đang nghỉ một chút, eh?",
 }
 
-WOODIE.DESCRIBE.BRAINMETTERSOUP = "Even though I'm a grown up, I still like it."
+WOODIE.DESCRIBE.BRAINMETTERSOUP = "Dù trưởng thành rồi, mình vẫn thích món này."
 
 WOODIE.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
 {
-	GENERIC = "How you holding up out here, guy?",
-	SLEEPING = "Guess he's turning in.",
+	GENERIC = "Ngoài này ông ổn chứ, anh bạn?",
+	SLEEPING = "Chắc ông ấy đi ngủ rồi.",
 }
 
-WOODIE.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Thanks for the stuff, guy!"
+WOODIE.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Cảm ơn vì đống đồ nhé, anh bạn!"
 
 WOODIE.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
 {
-	GENERIC = "This better not attract any feathered vermin.",
-	WAITING = "It was bound to happen soon or later.",
+	GENERIC = "Tốt nhất đừng kéo lũ chim phiền phức tới.",
+	WAITING = "Sớm muộn gì cũng xảy ra thôi.",
 }
 
-WOODIE.DESCRIBE.KYNO_PACKIMBAGGIMS = "I can tolerate him."
+WOODIE.DESCRIBE.KYNO_PACKIMBAGGIMS = "Mình chịu được nó."
 
-WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "I better start gathering some ingredients for this."
-WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_STAGE = "I'm going to need more stuff for it."
-WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE = "That's a mighty fine-lookin' cake, eh?"
-WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Sure brightens things up."
-WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Making me think about all the celebrations we had."
-WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Nothing beats anniversary cake, eh?"
-WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Ain't much of a party without balloons, eh?"
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Tốt nhất mình bắt đầu gom nguyên liệu cho cái này."
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_STAGE = "Mình sẽ cần thêm đồ cho nó."
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE = "Đúng là một cái bánh trông ngon lành, eh?"
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Làm mọi thứ sáng sủa hẳn."
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Làm mình nhớ tới những buổi ăn mừng trước đây."
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Không gì bằng bánh kỷ niệm, eh?"
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Không có bóng bay thì đâu ra tiệc, eh?"
 
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
 {
-	GENERIC = "Better not burn the forest, eh?",
-	FUEL_HIGH = "Running smooth as butter.",
-	FUEL_MED = "Still kicking.",
-	FUEL_LOW = "Better toss in some fuel.",
-	EMPTY = "She's outta fuel.",
+	GENERIC = "Tốt nhất đừng đốt cả khu rừng, eh?",
+	FUEL_HIGH = "Chạy mượt như bơ.",
+	FUEL_MED = "Vẫn còn hoạt động.",
+	FUEL_LOW = "Tốt nhất thêm chút nhiên liệu.",
+	EMPTY = "Hết nhiên liệu rồi.",
 }
 
-WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Perfect for celebrating, eh?"
-WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Well, it sure looks festive, eh?"
-WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "That's kinda nice."
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Hoàn hảo để ăn mừng, eh?"
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Chà, trông đúng là lễ hội đó, eh?"
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Cũng dễ thương đấy."
 
-WOODIE.DESCRIBE.KYNO_FISHREGISTRYHAT = "Helps me keep track of all the different kinds of fish."
+WOODIE.DESCRIBE.KYNO_FISHREGISTRYHAT = "Giúp mình nhớ đủ loại cá khác nhau."
 
 WOODIE.DESCRIBE.KYNO_ANIMALFEEDER =
 {
-	GENERIC = "Keeps the animals happy, eh?",
-	FUEL_HIGH = "Full as can be!",
-	FUEL_MED = "Still got some feed in there.",
-	FUEL_LOW = "Better top it up soon.",
-	EMPTY = "All outta feed.",
-	BURNT = "Well, that's done for.",
+	GENERIC = "Giữ cho lũ động vật vui vẻ, eh?",
+	FUEL_HIGH = "Đầy hết cỡ rồi!",
+	FUEL_MED = "Vẫn còn chút thức ăn trong đó.",
+	FUEL_LOW = "Tốt nhất sớm đổ thêm.",
+	EMPTY = "Hết sạch thức ăn rồi.",
+	BURNT = "Chà, cái đó xong đời rồi.",
 }
 
-WOODIE.DESCRIBE.CHICKENNUGGETS = "Good snack, eh?"
+WOODIE.DESCRIBE.CHICKENNUGGETS = "Món ăn vặt ngon đó, eh?"
 
-WOODIE.DESCRIBE.CHICKENWINGS = "These got a real kick to 'em!"
+WOODIE.DESCRIBE.CHICKENWINGS = "Mấy cái này cay đáo để!"
 
-WOODIE.DESCRIBE.CHICKENBURGER = "Now that's a proper meal, eh?"
+WOODIE.DESCRIBE.CHICKENBURGER = "Giờ mới đúng là một bữa tử tế, eh?"
 
-WOODIE.DESCRIBE.CHICKENEGGSOUP = "Hits the spot on a cold day, eh?"
+WOODIE.DESCRIBE.CHICKENEGGSOUP = "Đúng thứ cần trong ngày lạnh, eh?"
 
-WOODIE.DESCRIBE.CHICKENEGGSTEW = "Good, solid stew. Can't complain."
+WOODIE.DESCRIBE.CHICKENEGGSTEW = "Món hầm chắc bụng. Không phàn nàn gì."
 
-WOODIE.DESCRIBE.CHICKENROTISSERIE = "Smells like a Sunday supper, eh?"
+WOODIE.DESCRIBE.CHICKENROTISSERIE = "Mùi như bữa tối Chủ Nhật, eh?"
 
-WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Nice and calming, eh?"
-WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Smells like spring, eh?"
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Dịu nhẹ và dễ chịu, eh?"
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Mùi như mùa xuân, eh?"
 
-WOODIE.DESCRIBE.SOULJUICE = "That's a strange kind of juice, eh?"
+WOODIE.DESCRIBE.SOULJUICE = "Đúng là loại nước ép kỳ lạ, eh?"
 
-WOODIE.DESCRIBE.KYNO_DAILYRECIPE = "Guess there's no special today."
+WOODIE.DESCRIBE.KYNO_DAILYRECIPE = "Chắc hôm nay không có món đặc biệt."
 WOODIE.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 {
-	GENERIC = "Looks like today's special is %s, eh?",
-	NONE = "Guess there's no special today.",
-	BURNING = "Bit hot there, eh?",
-	BURNT = "That's done for.",
+	GENERIC = "Có vẻ món đặc biệt hôm nay là %s, eh?",
+	NONE = "Chắc hôm nay không có món đặc biệt.",
+	BURNING = "Hơi nóng đó, eh?",
+	BURNT = "Cái đó xong đời rồi.",
 }
+
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Không thể trách ông ấy vì muốn sửa nhà trước, eh?",
+	HOUSE_REPAIRED = "Giờ thì tốt hơn rồi. Có gì hữu ích không, eh?",
+}
+
+WOODIE.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Tôi không thể dùng cậu cho mấy cây này đâu, Lucy.",
+	CHOPPED = "Tốn công hơn hầu hết mọi thứ.",
+	BLOOMING = "Nhìn nó nở hoa kìa!",
+	BURNING = "Đúng là đáng tiếc quá.",
+	BURNT = "Tội nghiệp, xong đời rồi.",
+}
+
+WOODIE.DESCRIBE.KYNO_CAVETUBER = "Tốt hơn là đừng ăn cho tới khi nó chín."
+WOODIE.DESCRIBE.KYNO_CAVETUBER_COOKED = "Không có gì đặc biệt, chỉ là vài củ thôi."
+
+WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Ờ, giờ nó chín rồi."
+WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Ồ, trông sang đấy."

@@ -5575,6 +5575,86 @@ local HOF_SCRAPBOOK_FOODS =
 		deps           = {"messagebottleempty", "hermitcrab_teashop"},
 		specialinfo    = "HERMITCRABTEA_SUGARTREE_PETALS",
 	},
+
+	kyno_cavetuber     =
+	{
+		name           = "kyno_cavetuber",
+		type           = "food",
+		tex            = "kyno_cavetuber.tex",
+		prefab         = "kyno_cavetuber",
+		healthvalue    = -10,
+		hungervalue    = 12.5,
+		sanityvalue    = 0,
+		perishable     = 9600,
+		stacksize      = 10,
+		foodtype       = "VEGGIE",
+		burnable       = true,
+		bank           = "kyno_cavetuber",
+		build          = "kyno_cavetuber",
+		anim           = "idle",
+		animoffsetx    = -10,
+		animoffsety    = 20,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -80,
+		deps           = {"kyno_cavetubertree", "kyno_cavetuber_cooked"},
+	},
+
+	kyno_cavetuber_cooked =
+	{
+		name           = "kyno_cavetuber_cooked",
+		type           = "food",
+		tex            = "kyno_cavetuber_cooked.tex",
+		prefab         = "kyno_cavetuber_cooked",
+		healthvalue    = -5,
+		hungervalue    = 22.5,
+		sanityvalue    = 0,
+		perishable     = 2880,
+		stacksize      = 10,
+		foodtype       = "VEGGIE",
+		burnable       = true,
+		bank           = "kyno_cavetuber",
+		build          = "kyno_cavetuber",
+		anim           = "cooked",
+		deps           = {"kyno_cavetuber"},
+	},
+
+	kyno_cavetuber_blooming =
+	{
+		name           = "kyno_cavetuber_blooming",
+		type           = "food",
+		tex            = "kyno_cavetuber_blooming.tex",
+		prefab         = "kyno_cavetuber_blooming",
+		healthvalue    = 10,
+		hungervalue    = 12.5,
+		sanityvalue    = 5,
+		perishable     = 9600,
+		stacksize      = 10,
+		foodtype       = "VEGGIE",
+		burnable       = true,
+		bank           = "kyno_cavetuber_blooming",
+		build          = "kyno_cavetuber_blooming",
+		anim           = "idle",
+		deps           = {"kyno_cavetubertree", "kyno_cavetuber_blooming_cooked"},
+	},
+
+	kyno_cavetuber_blooming_cooked =
+	{
+		name           = "kyno_cavetuber_blooming_cooked",
+		type           = "food",
+		tex            = "kyno_cavetuber_blooming_cooked.tex",
+		prefab         = "kyno_cavetuber_blooming_cooked",
+		healthvalue    = 15,
+		hungervalue    = 25.5,
+		sanityvalue    = 5,
+		perishable     = 2880,
+		stacksize      = 10,
+		foodtype       = "VEGGIE",
+		burnable       = true,
+		bank           = "kyno_cavetuber_blooming",
+		build          = "kyno_cavetuber_blooming",
+		anim           = "cooked",
+		deps           = {"kyno_cavetuber_blooming"},
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS =
@@ -17050,6 +17130,22 @@ local HOF_SCRAPBOOK_THINGS =
 		anim           = "idle",
 		deps           = {"boards", "papyrus", "featherpencil", "researchlab"},
 		specialinfo    = "DAILYRECIPE_SIGN",
+	},
+
+	kyno_cavetubertree =
+	{
+		name           = "kyno_cavetubertree",
+		type           = "thing",
+		subcat         = "tree",
+		tex            = "kyno_cavetubertree.tex",
+		prefab         = "kyno_cavetubertree",
+		workable       = "CHOP",
+		burnable       = true,
+		bank           = "kyno_tubertree",
+		build          = "kyno_tuber_tree_build",
+		anim           = "idle_tall",
+		deps           = {"charcoal", "kyno_cavetuber", "kyno_cavetuber_blooming"},
+		specialinfo    = "CAVETUBERTREE",
 	},
 }
 

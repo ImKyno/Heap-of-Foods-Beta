@@ -1241,3 +1241,18 @@ WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Ele parece não querer negociar antes que sua casa seja restaurada.",
 	HOUSE_REPAIRED = "Bom dia. Vamos discutir suas mercadorias.",
 }
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "É resistente demais para um machado comum.",
+	CHOPPED = "A persistência valeu a pena.",
+	BLOOMING = "Parece estar prosperando.",
+	BURNING = "Que desperdício de potencial botânico.",
+	BURNT = "Nada resta além de carvão.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER = "É bastante venenoso quando não está maduro."
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_COOKED = "Suspeito que o veneno não tenha saído no cozimento."
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Ainda deve ser cozido."
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Tubérculos cozidos são básicos em muitas culturas."

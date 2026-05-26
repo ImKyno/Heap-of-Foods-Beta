@@ -259,6 +259,14 @@ local RoomPrefabs =
 		"OceanRough",
 		"OceanHazardous",
 	},
+
+	kyno_cavetubertree =
+	{
+		"BatCave",
+		"BattyCave",
+		"FernyBatCave",
+		"BGBatCaveRoom",
+	},
 }
 
 -- Special case where we want more or less prefabs spawns in rooms.
@@ -274,6 +282,7 @@ local PrefabValues =
 	["kyno_jellyfish_rainbow_spawner"] = .09,
 	["kyno_dogfish_spawner"]           = .1,
 	["kyno_puffermonster_spawner"]     = .2,
+	["kyno_cavetubertree"]             = .5,
 }
 
 for prefab, rooms in pairs(RoomPrefabs) do

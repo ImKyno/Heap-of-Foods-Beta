@@ -1241,3 +1241,18 @@ WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Wygląda na to, że naprawy są ważniejsze niż interesy.",
 	HOUSE_REPAIRED = "No dobra. Zróbmy interes.",
 }
+
+WINONA.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "To będzie wymagało czegoś więcej niż zwykła siekiera.",
+	CHOPPED = "Ciężka praca się opłaca.",
+	BLOOMING = "Wygląda całkiem zdrowo.",
+	BURNING = "No cóż, i po wszystkim.",
+	BURNT = "Nie zostało nic wartego uratowania.",
+}
+
+WINONA.DESCRIBE.KYNO_CAVETUBER = "Nie wygląda na dojrzały."
+WINONA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Czy mogę to teraz zjeść?"
+
+WINONA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "To sezon na bulwy."
+WINONA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Och. Liczyłam na frytki."

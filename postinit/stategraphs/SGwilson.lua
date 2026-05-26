@@ -4,18 +4,18 @@ local ACTIONS = _G.ACTIONS
 require("stategraphs/commonstates")
 
 -- Change the animations of some things.
-AddStategraphPostInit("wilson", function(self)
-	local _givehandler       = self.actionhandlers[ACTIONS.GIVE].deststate
-	local _pickhandler       = self.actionhandlers[ACTIONS.PICK].deststate
-	local _harvesthandler    = self.actionhandlers[ACTIONS.HARVEST].deststate
-	local _buildhandler      = self.actionhandlers[ACTIONS.BUILD].deststate
-	local _dismantlehandler  = self.actionhandlers[ACTIONS.DISMANTLE].deststate
-	local _takeitemhandler   = self.actionhandlers[ACTIONS.TAKEITEM].deststate
-	local _takesinglehandler = self.actionhandlers[ACTIONS.TAKESINGLEITEM].deststate
-	local _eathandler        = self.actionhandlers[ACTIONS.EAT].deststate
+AddStategraphPostInit("wilson", function(sg)
+	local _givehandler       = sg.actionhandlers[ACTIONS.GIVE].deststate
+	local _pickhandler       = sg.actionhandlers[ACTIONS.PICK].deststate
+	local _harvesthandler    = sg.actionhandlers[ACTIONS.HARVEST].deststate
+	local _buildhandler      = sg.actionhandlers[ACTIONS.BUILD].deststate
+	local _dismantlehandler  = sg.actionhandlers[ACTIONS.DISMANTLE].deststate
+	local _takeitemhandler   = sg.actionhandlers[ACTIONS.TAKEITEM].deststate
+	local _takesinglehandler = sg.actionhandlers[ACTIONS.TAKESINGLEITEM].deststate
+	local _eathandler        = sg.actionhandlers[ACTIONS.EAT].deststate
 
 	-- More sofisticated animation for repairing things.
-	self.actionhandlers[ACTIONS.GIVE].deststate = function(inst, action, ...)
+	sg.actionhandlers[ACTIONS.GIVE].deststate = function(inst, action, ...)
 		local target = action.target or action.invobject
 
 		if target and target:HasTags({"trader", "serenity_installable"}) then
@@ -26,7 +26,7 @@ AddStategraphPostInit("wilson", function(self)
 	end
 
 	-- Currently for Pineapple Bushes and Palm Trees.
-	self.actionhandlers[ACTIONS.PICK].deststate = function(inst, action, ...)
+	sg.actionhandlers[ACTIONS.PICK].deststate = function(inst, action, ...)
 		local target = action.target or action.invobject
 
 		if target and target:HasTags({"plant", "pickable_tall"}) and inst.components.rider ~= nil and not inst.components.rider:IsRiding() then
@@ -41,7 +41,7 @@ AddStategraphPostInit("wilson", function(self)
 		return _pickhandler(inst, action, ...)
 	end
 
-	self.actionhandlers[ACTIONS.HARVEST].deststate = function(inst, action, ...)
+	sg.actionhandlers[ACTIONS.HARVEST].deststate = function(inst, action, ...)
 		local target = action.target or action.invobject
 
 		if inst:HasTag("fasthands") then
@@ -51,7 +51,7 @@ AddStategraphPostInit("wilson", function(self)
 		return _harvesthandler(inst, action, ...)
 	end
 
-	self.actionhandlers[ACTIONS.BUILD].deststate = function(inst, action, ...)
+	sg.actionhandlers[ACTIONS.BUILD].deststate = function(inst, action, ...)
 		local target = action.target or action.invobject
 
 		if inst:HasTag("fasthands") then
@@ -61,7 +61,7 @@ AddStategraphPostInit("wilson", function(self)
 		return _buildhandler(inst, action, ...)
 	end
 
-	self.actionhandlers[ACTIONS.DISMANTLE].deststate = function(inst, action, ...)
+	sg.actionhandlers[ACTIONS.DISMANTLE].deststate = function(inst, action, ...)
 		local target = action.target or action.invobject
 
 		if inst:HasTag("fasthands") then
@@ -71,7 +71,7 @@ AddStategraphPostInit("wilson", function(self)
 		return _dismantlehandler(inst, action, ...)
 	end
 
-	self.actionhandlers[ACTIONS.TAKEITEM].deststate = function(inst, action, ...)
+	sg.actionhandlers[ACTIONS.TAKEITEM].deststate = function(inst, action, ...)
 		local target = action.target or action.invobject
 
 		if inst:HasTag("fasthands") then
@@ -81,7 +81,7 @@ AddStategraphPostInit("wilson", function(self)
 		return _takeitemhandler(inst, action, ...)
 	end
 
-	self.actionhandlers[ACTIONS.TAKESINGLEITEM].deststate = function(inst, action, ...)
+	sg.actionhandlers[ACTIONS.TAKESINGLEITEM].deststate = function(inst, action, ...)
 		local target = action.target or action.invobject
 
 		if inst:HasTag("fasthands") then
@@ -92,7 +92,7 @@ AddStategraphPostInit("wilson", function(self)
 	end
 
 	-- Makes eating faster with any food.
-	self.actionhandlers[ACTIONS.EAT].deststate = function(inst, action, ...)
+	sg.actionhandlers[ACTIONS.EAT].deststate = function(inst, action, ...)
 		local target = action.target or action.invobject
 
 		if inst:HasTag("fasteater") then
@@ -100,5 +100,21 @@ AddStategraphPostInit("wilson", function(self)
 		end
 
 		return _eathandler(inst, action, ...)
+	end
+
+	-- Recoil when chopping Cave Tuber Trees.
+	local _chop1 = sg.states["chop"].timeline[1].fn
+	sg.states["chop"].timeline[1].fn = function(inst, ...)
+		local invobj = inst.bufferedaction ~= nil and inst.bufferedaction.invobject or nil
+		local target = inst.sg.statemem.action ~= nil and inst.sg.statemem.action:IsValid()
+		and inst.sg.statemem.action.target ~= nil and inst.sg.statemem.action.target:HasTag("cavetubertree")
+
+		if target ~= nil and invobj ~= nil and invobj.components.tool ~= nil
+		and not invobj.components.tool:CanDoToughWork() then
+			inst.sg.statemem.recoilstate = "attack_recoil"
+			inst:PerformBufferedAction()
+		else
+			_chop1(inst, ...)
+		end
 	end
 end)

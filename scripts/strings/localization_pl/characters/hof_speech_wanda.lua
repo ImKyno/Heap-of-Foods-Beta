@@ -1241,3 +1241,18 @@ WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Najpierw naprawy? Co za nieefektywne opóźnienie.",
 	HOUSE_REPAIRED = "Wreszcie. Nie traćmy więcej czasu.",
 }
+
+WANDA.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "To drzewo marnuje mój czas.",
+	CHOPPED = "Wreszcie się z nim uporałam.",
+	BLOOMING = "Przynajmniej coś tutaj na dole jest produktywne.",
+	BURNING = "Przewidywalny rezultat.",
+	BURNT = "Kolejny nieunikniony koniec.",
+}
+
+WANDA.DESCRIBE.KYNO_CAVETUBER = "Potrzebuje więcej czasu, by dojrzeć."
+WANDA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Nadal niedogotowane i trujące."
+
+WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Idealne wyczucie czasu!"
+WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Ugotowane dokładnie na czas."

@@ -1243,3 +1243,18 @@ WURT.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "GLORP! Not helping you!",
 	HOUSE_REPAIRED = "GLORP! HE WON'T trade with me!",
 }
+
+WURT.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Tree too tough, flort!",
+	CHOPPED = "Finally chopped down!",
+	BLOOMING = "Pretty cave tree, florp.",
+	BURNING = "Oh no! Burning!",
+	BURNT = "Dead tree now.",
+}
+
+WURT.DESCRIBE.KYNO_CAVETUBER = "Not ready?"
+WURT.DESCRIBE.KYNO_CAVETUBER_COOKED = "Think not safe yet, florp."
+
+WURT.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Seems ready! flort."
+WURT.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Yum!"

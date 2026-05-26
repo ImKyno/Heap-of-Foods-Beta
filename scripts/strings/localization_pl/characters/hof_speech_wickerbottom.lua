@@ -1241,3 +1241,18 @@ WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Wygląda na to, że nie chce handlować, dopóki jego dom nie zostanie odrestaurowany.",
 	HOUSE_REPAIRED = "Dzień dobry. Omówmy twoje towary.",
 }
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Jest zbyt twarde dla zwykłej siekiery.",
+	CHOPPED = "Wytrwałość się opłaciła.",
+	BLOOMING = "Wygląda na to, że dobrze się rozwija.",
+	BURNING = "Co za marnotrawstwo potencjału botanicznego.",
+	BURNT = "Nie zostało nic poza węglem.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER = "Jest dość trujący, gdy nie jest dojrzały."
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_COOKED = "Podejrzewam, że trucizna nie została wygotowana."
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Nadal powinien zostać ugotowany."
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Gotowane bulwy są podstawą wielu kultur."

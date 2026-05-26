@@ -1241,3 +1241,18 @@ WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Nie można go winić za to, że chce najpierw naprawionego domu, co nie?",
 	HOUSE_REPAIRED = "No, teraz lepiej. Masz coś przydatnego, co?",
 }
+
+WOODIE.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Nie mogę cię użyć do tych drzew, Lucy.",
+	CHOPPED = "Wymagało więcej wysiłku niż większość.",
+	BLOOMING = "Patrz, jak kwitnie!",
+	BURNING = "Aż serce boli.",
+	BURNT = "Biedactwo już skończone.",
+}
+
+WOODIE.DESCRIBE.KYNO_CAVETUBER = "Lepiej go nie jeść, dopóki nie dojrzeje."
+WOODIE.DESCRIBE.KYNO_CAVETUBER_COOKED = "Nic wyszukanego, tylko trochę bulw."
+
+WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "No, teraz dojrzał."
+WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "No proszę, to już luksus."

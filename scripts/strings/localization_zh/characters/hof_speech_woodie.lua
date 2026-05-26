@@ -1049,7 +1049,7 @@ WOODIE.DESCRIBE.RICEANDBEANS = "它只是缺少一些美味的牛排和薯条。
 
 WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 {
-	GENERIC = "这地方得修修了， eh？",
+	GENERIC = "这地方得修修了？",
 	REPAIRED = "现在才像个正经的小商店。",
 	OCCUPIED = "希望里面那家伙睡得还行。",
 	OCCUPIED_REPAIRED = "现在看起来够舒服，可以小睡一会儿了。",
@@ -1238,6 +1238,21 @@ WOODIE.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 
 WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 {
-	GENERIC = "他想先把房子修好，也怪不得他，eh？",
-	HOUSE_REPAIRED = "这就好多了。有什么有用的东西吗，eh？",
+	GENERIC = "他想先把房子修好，也怪不得他？",
+	HOUSE_REPAIRED = "这就好多了。有什么有用的东西吗？",
 }
+
+WOODIE.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "露西，我没法用你来砍这些树。",
+	CHOPPED = "比大多数树费劲多了。",
+	BLOOMING = "看看它开花啦！",
+	BURNING = "真让人心疼。",
+	BURNT = "可怜的小东西完蛋了。",
+}
+
+WOODIE.DESCRIBE.KYNO_CAVETUBER = "最好等它成熟后再吃。"
+WOODIE.DESCRIBE.KYNO_CAVETUBER_COOKED = "没什么特别的，只是些块茎。"
+
+WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "好了，现在成熟了。"
+WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "这可真高级。"

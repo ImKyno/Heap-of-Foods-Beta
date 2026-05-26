@@ -1241,3 +1241,18 @@ WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "He seems unwilling to trade before his home is restored.",
 	HOUSE_REPAIRED = "Good day. Let us discuss your wares.",
 }
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "It' too tough for a regular axe.",
+	CHOPPED = "Persistence has paid off.",
+	BLOOMING = "It seems to be flourishing.",
+	BURNING = "Such a waste of botanical potential.",
+	BURNT = "Nothing remains but charcoal.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER = "It's rather poisonous when it's not ripe."
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_COOKED = "I suspect the poison has not been cooked out."
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "It should still be cooked."
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Cooked tubers are a staple in many cultures."

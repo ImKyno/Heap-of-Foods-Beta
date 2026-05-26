@@ -1241,3 +1241,18 @@ WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "The merchant demands aid before barter!",
 	HOUSE_REPAIRED = "Hail, trader! Reveal thy treasures!",
 }
+
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "This tree cannot be felled by a mere axe.",
+	CHOPPED = "Victory over the wooden beast!",
+	BLOOMING = "It blossoms with fierce vitality!",
+	BURNING = "The flames consume it gloriously!",
+	BURNT = "Its saga ends in ash.",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER = "'Tis unripe non-meat."
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_COOKED = "Fire does nothing to make it edible!"
+
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "'Tis ripe non-meat."
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "I care not if it is cooked."

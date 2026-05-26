@@ -5,17 +5,18 @@ local customizations_worldgen =
 	-- WORLDGEN
 	aloes           = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 0,  world = { "forest" }},
 	asparaguses     = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 1,  world = { "forest", "cave" }},
-	coffeebushes    = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 2,  world = { "cave" }},
-	fennels         = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 3,  world = { "cave" }},
-	giantparznips   = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 4,  world = { "cave" }},
-	mushstumps      = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 5,  world = { "forest", "cave" }},
-	truffles        = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 6,  world = { "forest" }},
-	parznips        = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 7,  world = { "cave" }},
-	radishes        = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 8,  world = { "forest" }},
-	rockflippables  = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 9,  world = { "forest", "cave" }},
-	sweetpotatoes   = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 10, world = { "forest" }},
-	turnips         = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 11, world = { "forest", "cave" }},
-	wildwheats      = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 12, world = { "forest" }},
+	cavetubertrees  = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 2,  world = { "cave" }},
+	coffeebushes    = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 3,  world = { "cave" }},
+	fennels         = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 4,  world = { "cave" }},
+	giantparznips   = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 5,  world = { "cave" }},
+	mushstumps      = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 6,  world = { "forest", "cave" }},
+	truffles        = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 7,  world = { "forest" }},
+	parznips        = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 8,  world = { "cave" }},
+	radishes        = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 9,  world = { "forest" }},
+	rockflippables  = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 10, world = { "forest", "cave" }},
+	sweetpotatoes   = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 11, world = { "forest" }},
+	turnips         = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 12, world = { "forest", "cave" }},
+	wildwheats      = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 13, world = { "forest" }},
 	
 	-- OCEANGEN
 	brainrocks      = { desc = "yesno_descriptions",              group = "hof_ocean",     order = 7,  world = { "forest" }},
@@ -58,6 +59,7 @@ local customizations_worldgen =
 
 map.TRANSLATE_TO_PREFABS["aloes"]           = { "kyno_aloe_ground" }
 map.TRANSLATE_TO_PREFABS["asparaguses"]     = { "kyno_aspargos_ground" }
+map.TRANSLATE_TO_PREFABS["cavetubertrees"]  = { "kyno_cavetubertrees" }
 map.TRANSLATE_TO_PREFABS["coffeebushes"]    = { "kyno_coffeebush" }
 map.TRANSLATE_TO_PREFABS["fennels"]         = { "kyno_fennel_ground" }
 map.TRANSLATE_TO_PREFABS["giantparznips"]   = { "kyno_parznip_big" }

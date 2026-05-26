@@ -162,7 +162,7 @@ end
 
 local function OnCakeSliced(inst)	
 	inst.components.finiteuses:Use(1)
-	inst.SoundEmitter:PlaySound("aqol/new_test/cloth")
+	inst.SoundEmitter:PlaySound("dontstarve/common/plant") -- aqol/new_test/cloth
 	
 	UpdateCakeAppearance(inst)
 end

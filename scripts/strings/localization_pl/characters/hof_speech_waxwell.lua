@@ -1241,3 +1241,18 @@ WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Najwyraźniej muszę najpierw zająć się jego domowymi problemami.",
 	HOUSE_REPAIRED = "Znacznie lepiej. Teraz pokaż mi swój asortyment.",
 }
+
+WAXWELL.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Zwykła siekiera tego nie zetnie.",
+	CHOPPED = "Wreszcie.",
+	BLOOMING = "Rozkwita mimo jaskiń.",
+	BURNING = "Przynajmniej ogień pozostaje niezawodny.",
+	BURNT = "Zrujnowane ponad wszelką użyteczność.",
+}
+
+WAXWELL.DESCRIBE.KYNO_CAVETUBER = "Wygląda na niedojrzały."
+WAXWELL.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ugh. Czy ja w ogóle powinienem to jeść?"
+
+WAXWELL.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Przynajmniej jest jadalny."
+WAXWELL.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Wygląda... jadalnie?"

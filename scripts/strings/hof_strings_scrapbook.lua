@@ -225,3 +225,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "A 2 slot container t
 STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Some animals will feed from the contents stocked in this trough.\n\Seeds and Grains can be used as a primary food source."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "A shelter for Chickens that can produce poultry products."
 STRINGS.SCRAPBOOK.SPECIALINFO.DAILYRECIPE_SIGN = "Keeps track of Daily Recipes and allows a brief review of them."
+STRINGS.SCRAPBOOK.SPECIALINFO.CAVETUBERTREE = "Requires a sturdy axe to be chopped down. If the stump is left behind it will grow back after some days, producing more Tuber.\n\nDuring the Spring it starts blooming and becomes ripe."

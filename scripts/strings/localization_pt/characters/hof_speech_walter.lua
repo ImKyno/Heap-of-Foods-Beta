@@ -1241,3 +1241,18 @@ WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Acho que deveríamos ajudar a consertar a casa dele primeiro, Woby.",
 	HOUSE_REPAIRED = "Sua casa ficou ótima agora, senhor!",
 }
+
+WALTER.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Parece mais resistente que árvores normais, Woby.",
+	CHOPPED = "Isso demorou uma eternidade!",
+	BLOOMING = "Acho que plantas das cavernas também florescem.",
+	BURNING = "Aw, que azar.",
+	BURNT = "Não sobrou nada agora.",
+}
+
+WALTER.DESCRIBE.KYNO_CAVETUBER = "Parece venenoso."
+WALTER.DESCRIBE.KYNO_CAVETUBER_COOKED = "Melhor não comer isso!"
+
+WALTER.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Hmph. Acho que agora é seguro comer, Woby."
+WALTER.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Tem gosto de batata-doce!"

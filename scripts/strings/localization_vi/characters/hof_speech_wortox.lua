@@ -1,1237 +1,1258 @@
 local WORTOX = STRINGS.CHARACTERS.WORTOX
 
-WORTOX.ANNOUNCE_KYNO_COFFEEBUFF_START = "I can pursuit Krampus now! Hyuyu!"
-WORTOX.ANNOUNCE_KYNO_COFFEEBUFF_END = "I'm no longer that fast, I suppose."
+WORTOX.ANNOUNCE_KYNO_COFFEEBUFF_START = "Giờ ta đuổi kịp Krampus rồi! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_COFFEEBUFF_END = "Chà, chắc ta không còn nhanh như lúc nãy nữa."
 
-WORTOX.ANNOUNCE_KYNO_HASTEBUFF_START = "Fast paws!"
-WORTOX.ANNOUNCE_KYNO_HASTEBUFF_END = "Paws slowing down..."
+WORTOX.ANNOUNCE_KYNO_HASTEBUFF_START = "Móng vuốt nhanh như chớp!"
+WORTOX.ANNOUNCE_KYNO_HASTEBUFF_END = "Móng vuốt chậm lại rồi..."
 
-WORTOX.ANNOUNCE_KYNO_POPBUFF_START = "(buurp...) What a funny mortal drink! Hyuyu!"
-WORTOX.ANNOUNCE_KYNO_POPBUFF_END = "That was a funny mortal drink, for sure!"
+WORTOX.ANNOUNCE_KYNO_POPBUFF_START = "(ợ...) Đồ uống phàm nhân buồn cười thật! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_POPBUFF_END = "Đúng là một món uống phàm nhân buồn cười!"
 
-WORTOX.ANNOUNCE_KYNO_FROGBUFF_START = "Shall I prank the frogs? Hyuyu!"
-WORTOX.ANNOUNCE_KYNO_FROGBUFF_END = "No more pranks about frogs, for now..."
+WORTOX.ANNOUNCE_KYNO_FROGBUFF_START = "Ta có nên trêu mấy con ếch không nhỉ? Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_FROGBUFF_END = "Tạm thời hết trò đùa với ếch rồi..."
 
-WORTOX.ANNOUNCE_KYNO_PIRATEBUFF_START = "(buurp...) What a funny mortal drink! Hyuyu!"
-WORTOX.ANNOUNCE_KYNO_PIRATEBUFF_END = "That was a funny mortal drink, for sure!"
+WORTOX.ANNOUNCE_KYNO_PIRATEBUFF_START = "(ợ...) Đồ uống phàm nhân buồn cười thật! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_PIRATEBUFF_END = "Đúng là một món uống phàm nhân buồn cười!"
 
-WORTOX.ANNOUNCE_KYNO_FREEZEBUFF_START = "Icy!"
-WORTOX.ANNOUNCE_KYNO_FREEZEBUFF_END = "It looks like I can't freeze others anymore."
+WORTOX.ANNOUNCE_KYNO_FREEZEBUFF_START = "Lạnh cóng!"
+WORTOX.ANNOUNCE_KYNO_FREEZEBUFF_END = "Có vẻ ta không thể đóng băng kẻ khác nữa rồi."
 
-WORTOX.ANNOUNCE_KYNO_FIREBUFF_START = "Time to burn down the circus!"
-WORTOX.ANNOUNCE_KYNO_FIREBUFF_END = "Flames are over!"
+WORTOX.ANNOUNCE_KYNO_FIREBUFF_START = "Đến lúc đốt rạp xiếc rồi!"
+WORTOX.ANNOUNCE_KYNO_FIREBUFF_END = "Lửa tắt rồi!"
 
-WORTOX.ANNOUNCE_KYNO_FISHINGBUFF_START = "Waterfowl hunting!"
-WORTOX.ANNOUNCE_KYNO_FISHINGBUFF_END = "Fishing powers wears off."
+WORTOX.ANNOUNCE_KYNO_FISHINGBUFF_START = "Đi săn chim nước thôi!"
+WORTOX.ANNOUNCE_KYNO_FISHINGBUFF_END = "Sức câu cá tan biến rồi."
 
-WORTOX.ANNOUNCE_KYNO_SANITYRATEBUFF_START = "Mind goes numb!"
-WORTOX.ANNOUNCE_KYNO_SANITYRATEBUFF_END = "Soothing has ended."
+WORTOX.ANNOUNCE_KYNO_SANITYRATEBUFF_START = "Đầu óc tê tê rồi!"
+WORTOX.ANNOUNCE_KYNO_SANITYRATEBUFF_END = "Cảm giác êm dịu hết rồi."
 
-WORTOX.ANNOUNCE_KYNO_EATERBUFF_START = "Mortal food is very soft to eat now1"
-WORTOX.ANNOUNCE_KYNO_EATERBUFF_END = "Back to normal plans of eating. Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_EATERBUFF_START = "Đồ ăn phàm nhân giờ mềm miệng quá đi!"
+WORTOX.ANNOUNCE_KYNO_EATERBUFF_END = "Lại ăn uống như bình thường thôi. Hyuyu!"
 
-WORTOX.ANNOUNCE_KYNO_WORMBUFF_START = "They won't see it coming!"
-WORTOX.ANNOUNCE_KYNO_WORMBUFF_END = "Are we done already?"
+WORTOX.ANNOUNCE_KYNO_WORMBUFF_START = "Chúng sẽ không kịp trở tay đâu!"
+WORTOX.ANNOUNCE_KYNO_WORMBUFF_END = "Xong nhanh vậy sao?"
 
-WORTOX.ANNOUNCE_KYNO_CRABBUFF_START = "They won't see it coming!"
-WORTOX.ANNOUNCE_KYNO_CRABBUFF_END = "Are we done already?"
+WORTOX.ANNOUNCE_KYNO_CRABBUFF_START = "Chúng sẽ không kịp trở tay đâu!"
+WORTOX.ANNOUNCE_KYNO_CRABBUFF_END = "Xong nhanh vậy sao?"
 
-WORTOX.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(buurp...) What a funny mortal drink! Hyuyu!"
-WORTOX.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "That was a funny mortal drink, for sure!"
+WORTOX.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(ợ...) Đồ uống phàm nhân buồn cười thật! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "Đúng là một món uống phàm nhân buồn cười!"
 
-WORTOX.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START = "Immensurable power!"
-WORTOX.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_END = "The power is now gone!"
+WORTOX.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START = "Sức mạnh khôn lường!"
+WORTOX.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_END = "Sức mạnh biến mất rồi!"
 
-WORTOX.ANNOUNCE_KYNO_STEALTHBUFF_START = "Let's go prank someone! Hyuyu!"
-WORTOX.ANNOUNCE_KYNO_STEALTHBUFF_END = "I need more time invisible for some good pranks!"
+WORTOX.ANNOUNCE_KYNO_STEALTHBUFF_START = "Đi trêu ai đó thôi! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_STEALTHBUFF_END = "Ta cần tàng hình lâu hơn để bày trò cho đã!"
 
-WORTOX.ANNOUNCE_KYNO_FEARBUFF_START = "Hee hee! The scary things are just silly now!"
-WORTOX.ANNOUNCE_KYNO_FEARBUFF_END = "Aww, the fun is over. The big bad things are scary again."
+WORTOX.ANNOUNCE_KYNO_FEARBUFF_START = "Hí hí! Mấy thứ đáng sợ giờ chỉ buồn cười thôi!"
+WORTOX.ANNOUNCE_KYNO_FEARBUFF_END = "Aww, cuộc vui hết rồi. Mấy thứ dữ dằn lại đáng sợ rồi."
 
-WORTOX.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_START = "Oh-ho! A divine fruit filled with immortal mischief!"
-WORTOX.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_END = "Oh fiddlesticks, the fun has fizzled!"
+WORTOX.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_START = "Ô hô! Một quả thần thánh đầy trò quỷ bất tử!"
+WORTOX.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_END = "Ôi xui xẻo, cuộc vui xì hơi mất rồi!"
 
-WORTOX.ANNOUNCE_KYNO_TRUFFLESBUFF_START = "I don't think they are friendly! Hyuyu!"
-WORTOX.ANNOUNCE_KYNO_TRUFFLESBUFF_END = "My porcine admirers are gone."
+WORTOX.ANNOUNCE_KYNO_TRUFFLESBUFF_START = "Ta không nghĩ chúng thân thiện đâu! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_TRUFFLESBUFF_END = "Những kẻ hâm mộ heo của ta đi mất rồi."
 
-WORTOX.ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START = "No sting can reach me now! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START = "Giờ chẳng vết châm nào chạm được tới ta! Hyuyu!"
 -- No ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_END, because we are using default strings for that.
 
-WORTOX.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_START = "No mortal ailment shall plague me!"
-WORTOX.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_END = "Back to being mortal again! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_START = "Chẳng thứ bệnh phàm trần nào quấy được ta!"
+WORTOX.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_END = "Lại phàm phàm tục tục như xưa rồi! Hyuyu!"
 
-WORTOX.ANNOUNCE_KYNO_CRAFTINGBUFF_START = "My mind is doing cartwheels of creativity! Hyuyu!"
-WORTOX.ANNOUNCE_KYNO_CRAFTINGBUFF_END = "My cleverness has gone kaput! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_CRAFTINGBUFF_START = "Đầu óc ta đang lộn nhào vì sáng tạo! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_CRAFTINGBUFF_END = "Trí khôn lanh của ta tiêu tùng rồi! Hyuyu!"
 
-WORTOX.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_START = "The buzzers bring no stingers for me!"
-WORTOX.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_END = "The buzzers wish to poke me again, I see!"
+WORTOX.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_START = "Lũ vo ve không chích ta nữa rồi!"
+WORTOX.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_END = "Lũ vo ve lại muốn chích ta nữa, ta thấy rồi!"
 
-WORTOX.ANNOUNCE_KYNO_MAXHEALTHBUFF_START = "More mortal stamina for me! Hyuyu!"
-WORTOX.ANNOUNCE_KYNO_MAXHEALTHBUFF_END = "Mortal fragility returns! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_MAXHEALTHBUFF_START = "Thêm sức bền phàm trần cho ta! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_MAXHEALTHBUFF_END = "Sự mong manh phàm tục quay lại rồi! Hyuyu!"
 
-WORTOX.ANNOUNCE_KYNO_MAXHUNGERBUFF_START = "Oh ho! Space for more mortal food!"
-WORTOX.ANNOUNCE_KYNO_MAXHUNGERBUFF_END = "Oh, gone? How rude!"
+WORTOX.ANNOUNCE_KYNO_MAXHUNGERBUFF_START = "Ô hô! Có thêm chỗ cho đồ ăn phàm nhân!"
+WORTOX.ANNOUNCE_KYNO_MAXHUNGERBUFF_END = "Ơ, hết rồi sao? Bất lịch sự quá!"
 
-WORTOX.ANNOUNCE_KYNO_MAXSANITYBUFF_START = "What delightful mortal clarity!"
-WORTOX.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Oh boo, confusion again!"
+WORTOX.ANNOUNCE_KYNO_MAXSANITYBUFF_START = "Tỉnh táo kiểu phàm nhân thật thú vị!"
+WORTOX.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Ôi chán, lại rối tung rồi!"
 
-WORTOX.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "You can't hurt me now!"
-WORTOX.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Back to being a little more squishy."
+WORTOX.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Giờ ngươi không làm đau ta được đâu!"
+WORTOX.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Lại mềm hơn một chút rồi."
 
-WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Such delicious danger!"
-WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Aw, the risky fun is over!"
+WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Nguy hiểm mới ngon làm sao!"
+WORTOX.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Aw, trò vui liều lĩnh hết rồi!"
 
-WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Hunger slows its chase!"
-WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The tummy grumbles once more!"
+WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Cơn đói đuổi chậm lại rồi!"
+WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Bao tử lại réo nữa rồi!"
 
-WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The darkness tickles rather than bites!"
-WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Oh dear! The dark bites again!"
+WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Bóng tối chỉ cù lét chứ không cắn nữa!"
+WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ôi trời! Bóng tối lại cắn rồi!"
 
-WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Awww, the fun’s over!"
+WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Awww, cuộc vui hết rồi!"
 
-WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else."
+WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cơ."
 
-WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I know this prank was good, but let's get the real thing."
+WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ta biết trò đùa này hay lắm, nhưng lấy đồ thật đi nào."
 
-WORTOX.ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL = "They say, only a big tree can handle such thing!"
+WORTOX.ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL = "Người ta bảo, chỉ cây lớn mới chịu nổi thứ này!"
 
-WORTOX.ANNOUNCE_KYNO_FIREPITINSTALL_FAIL = "Nope!"
+WORTOX.ANNOUNCE_KYNO_FIREPITINSTALL_FAIL = "Không đâu!"
 
-WORTOX.ANNOUNCE_KYNO_POTHANGER_FAIL = "Why not hanger a pot instead of that?"
+WORTOX.ANNOUNCE_KYNO_POTHANGER_FAIL = "Sao không treo một cái nồi thay vì thứ đó?"
 
-WORTOX.ANNOUNCE_KYNO_CASSEROLE_FAIL = "I was told that it needs a casserole dish."
+WORTOX.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Ta nghe bảo nó cần một đĩa hầm."
 
-WORTOX.ANNOUNCE_KYNO_SAPHEALER_USED = "You should be good to go now, tree!"
+WORTOX.ANNOUNCE_KYNO_SAPHEALER_USED = "Giờ ngươi ổn rồi đấy, cây à!"
 
-WORTOX.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Snip and snap! A mortal's final nap!"
+WORTOX.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Cắt cái rụp! Phàm nhân ngủ giấc cuối cùng!"
 
-WORTOX.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Oh boo, an empty box on wheels!"
+WORTOX.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Ôi chán, một cái hộp rỗng có bánh xe!"
 
-WORTOX.ANNOUNCE_KYNO_HUNT_LOST_TRAIL = "Hoppity flop! The trail just popped!"
-WORTOX.ANNOUNCE_KYNO_HUNT_LOST_TRAIL_RAIN = "Splish splash! The trail went splash!"
-WORTOX.ANNOUNCE_KYNO_HUNT_BEAST_NEARBY = "A sea feast draws near! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_HUNT_LOST_TRAIL = "Nhảy lóc cóc! Dấu vết nổ cái bóp!"
+WORTOX.ANNOUNCE_KYNO_HUNT_LOST_TRAIL_RAIN = "Tõm tòm tom! Dấu vết trôi cái tõm!"
+WORTOX.ANNOUNCE_KYNO_HUNT_BEAST_NEARBY = "Một bữa tiệc biển đang tới gần! Hyuyu!"
 
-WORTOX.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Ohoho! The grand cake is ready to partake!"
+WORTOX.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Ohoho! Chiếc bánh lớn đã sẵn sàng để thưởng thức!"
 
-WORTOX.ANNOUNCE_KYNO_FISH_RESEARCHED = "A fishy secret revealed! Hyuyu!"
-WORTOX.ANNOUNCE_KYNO_ROE_RESEARCHED = "Eggy secrets! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_FISH_RESEARCHED = "Một bí mật tanh tanh đã lộ ra! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_ROE_RESEARCHED = "Bí mật trứng cá! Hyuyu!"
 
-WORTOX.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "A tasty little mortal treat!"
+WORTOX.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Một món phàm nhân nhỏ xinh ngon lành!"
 
-WORTOX.DESCRIBE.KYNO_ROE = "Fish eggs."
-WORTOX.DESCRIBE.KYNO_ROE_COOKED = "Roasted fish eggs."
+WORTOX.DESCRIBE.KYNO_ROE = "Trứng cá."
+WORTOX.DESCRIBE.KYNO_ROE_COOKED = "Trứng cá nướng."
 
-WORTOX.DESCRIBE.KYNO_SHARK_FIN = "The shark left his rudder!"
+WORTOX.DESCRIBE.KYNO_SHARK_FIN = "Con cá mập bỏ quên bánh lái rồi!"
 
-WORTOX.DESCRIBE.KYNO_BEANBUGS = "Jumping beans!"
-WORTOX.DESCRIBE.KYNO_BEANBUGS_COOKED = "Dead."
+WORTOX.DESCRIBE.KYNO_BEANBUGS = "Đậu nhảy!"
+WORTOX.DESCRIBE.KYNO_BEANBUGS_COOKED = "Chết rồi."
 
-WORTOX.DESCRIBE.KYNO_GUMMYBUG = "A land eel."
-WORTOX.DESCRIBE.KYNO_GUMMYBUG_COOKED = "I'd rather eat my tail..."
+WORTOX.DESCRIBE.KYNO_GUMMYBUG = "Một con lươn trên cạn."
+WORTOX.DESCRIBE.KYNO_GUMMYBUG_COOKED = "Ta thà ăn đuôi mình còn hơn..."
 
-WORTOX.DESCRIBE.KYNO_WHEAT = "The mortals grind it up with big rocks."
-WORTOX.DESCRIBE.KYNO_WHEAT_COOKED = "The mortals grind it up with big rocks."
+WORTOX.DESCRIBE.KYNO_WHEAT = "Người phàm nghiền nó bằng mấy tảng đá to."
+WORTOX.DESCRIBE.KYNO_WHEAT_COOKED = "Người phàm nghiền nó bằng mấy tảng đá to."
 
-WORTOX.DESCRIBE.KYNO_FLOUR = "Mortal ingredient for food."
+WORTOX.DESCRIBE.KYNO_FLOUR = "Nguyên liệu phàm nhân để nấu ăn."
 
-WORTOX.DESCRIBE.KYNO_SPOTSPICE = "Mortals say grinding it brings out the flavor."
+WORTOX.DESCRIBE.KYNO_SPOTSPICE = "Người phàm nói nghiền ra thì dậy vị hơn."
 
-WORTOX.DESCRIBE.KYNO_SAP = "Sticky, icky sap!"
-WORTOX.DESCRIBE.KYNO_SAP_SPOILED = "Whoops-a-doodle!"
+WORTOX.DESCRIBE.KYNO_SAP = "Nhựa cây dính dính, nhớp nhớp!"
+WORTOX.DESCRIBE.KYNO_SAP_SPOILED = "Úi chà chà!"
 
-WORTOX.DESCRIBE.KYNO_SYRUP = "For making sweet treats."
+WORTOX.DESCRIBE.KYNO_SYRUP = "Dùng để làm món ngọt."
 
-WORTOX.DESCRIBE.KYNO_COFFEEBEANS = "Just add water."
-WORTOX.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "No hot water?"
+WORTOX.DESCRIBE.KYNO_COFFEEBEANS = "Chỉ cần thêm nước."
+WORTOX.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Không có nước nóng sao?"
 
-WORTOX.DESCRIBE.DUG_KYNO_COFFEEBUSH = "A weird plant."
+WORTOX.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Một cái cây kỳ quặc."
 
 WORTOX.DESCRIBE.KYNO_COFFEEBUSH = 
 {
-	GENERIC = "Hot beans available!",
-	PICKED = "Nothing left for now.",
-	WITHERED = "It can't thrive like this.",
+	GENERIC = "Có hạt nóng hổi rồi!",
+	PICKED = "Giờ chẳng còn gì nữa.",
+	WITHERED = "Nó không sống khỏe nổi thế này đâu.",
 }
 
-WORTOX.DESCRIBE.DUG_KYNO_SPOTBUSH = "It should be planted again."
+WORTOX.DESCRIBE.DUG_KYNO_SPOTBUSH = "Nên trồng nó lại."
 
 WORTOX.DESCRIBE.KYNO_SPOTBUSH = 
 {
-	GENERIC = "Oh! A shrub.",
-	PICKED = "Nothing to take right now.",
-	BURNING = "That's unfortunate.",
+	GENERIC = "Ồ! Một bụi cây.",
+	PICKED = "Giờ không có gì để lấy.",
+	BURNING = "Thật không may.",
 }
 
-WORTOX.DESCRIBE.KYNO_SPOTSPICE_LEAF = "I licked one. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Ta đã liếm thử một lá. Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_MUSSEL = "I love a mussel!"
-WORTOX.DESCRIBE.KYNO_MUSSEL_COOKED = "Yes! That's good! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_MUSSEL = "Ta thích trai lắm!"
+WORTOX.DESCRIBE.KYNO_MUSSEL_COOKED = "Đúng rồi! Món này ngon! Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_HUMANMEAT = "Human flesh, ho."
-WORTOX.DESCRIBE.KYNO_HUMANMEAT_COOKED = "Cooked humans..."
-WORTOX.DESCRIBE.KYNO_HUMANMEAT_DRIED = "Dried human flesh."
+WORTOX.DESCRIBE.KYNO_HUMANMEAT = "Thịt người, hô."
+WORTOX.DESCRIBE.KYNO_HUMANMEAT_COOKED = "Người đã nấu chín..."
+WORTOX.DESCRIBE.KYNO_HUMANMEAT_DRIED = "Thịt người phơi khô."
 
-WORTOX.DESCRIBE.COFFEE = "Delicious!"
+WORTOX.DESCRIBE.COFFEE = "Ngon tuyệt!"
 
-WORTOX.DESCRIBE.BISQUE = "Delightful snack."
+WORTOX.DESCRIBE.BISQUE = "Món ăn nhẹ tuyệt hảo."
 
 WORTOX.DESCRIBE.JELLYOPOP = "Yay!"
 
-WORTOX.DESCRIBE.SHARKFINSOUP = "Now I get the bite back, Hyuyu!"
+WORTOX.DESCRIBE.SHARKFINSOUP = "Giờ ta lấy lại cú cắn rồi, Hyuyu!"
 
-WORTOX.DESCRIBE.TROPICALBOUILLABAISSE = "Hearty fish soup!"
+WORTOX.DESCRIBE.TROPICALBOUILLABAISSE = "Súp cá no nê!"
 
-WORTOX.DESCRIBE.MUSSELBOUILLABAISE = "A delicacy."
+WORTOX.DESCRIBE.MUSSELBOUILLABAISE = "Một món cao lương."
 
-WORTOX.DESCRIBE.SWEETPOTATOSOUFFLE = "A tasty piece of crumpet."
+WORTOX.DESCRIBE.SWEETPOTATOSOUFFLE = "Một miếng bánh nhỏ ngon lành."
 
-WORTOX.DESCRIBE.FEIJOADA = "Reminds me of Brazil."
+WORTOX.DESCRIBE.FEIJOADA = "Làm ta nhớ tới Brazil."
 
-WORTOX.DESCRIBE.GUMMY_CAKE = "More chewy than a week with Krampii!"
+WORTOX.DESCRIBE.GUMMY_CAKE = "Dai hơn cả một tuần với Krampii!"
 
-WORTOX.DESCRIBE.HARDSHELL_TACOS = "Full of crunch."
+WORTOX.DESCRIBE.HARDSHELL_TACOS = "Giòn tan đầy miệng."
 
-WORTOX.DESCRIBE.ICEDTEA = "Relief to be sure."
+WORTOX.DESCRIBE.ICEDTEA = "Đúng là nhẹ cả người."
 
-WORTOX.DESCRIBE.NETTLELOSANGE = "A bunch of fresh air, Hyuyu!"
+WORTOX.DESCRIBE.NETTLELOSANGE = "Một luồng khí tươi mát, Hyuyu!"
 
-WORTOX.DESCRIBE.SNAKEBONESOUP = "A hearty brew."
+WORTOX.DESCRIBE.SNAKEBONESOUP = "Một nồi nước hầm đậm đà."
 
-WORTOX.DESCRIBE.STEAMEDHAMSANDWICH = "HAMBURGERS!!!"
+WORTOX.DESCRIBE.STEAMEDHAMSANDWICH = "HAMBURGER!!!"
 
-WORTOX.DESCRIBE.TEA = "Ah, a fine brew."
+WORTOX.DESCRIBE.TEA = "À, một ấm trà ngon."
 
-WORTOX.DESCRIBE.BUBBLETEA = "Relief to be sure."
+WORTOX.DESCRIBE.BUBBLETEA = "Đúng là nhẹ cả người."
 
-WORTOX.DESCRIBE.FRENCHONIONSOUP = "A hearty brew."
+WORTOX.DESCRIBE.FRENCHONIONSOUP = "Một nồi nước hầm đậm đà."
 
-WORTOX.DESCRIBE.SLAW = "Physical food doens't sit well with me."
+WORTOX.DESCRIBE.SLAW = "Đồ ăn vật chất chẳng hợp với ta lắm."
 
-WORTOX.DESCRIBE.LOTUSBOWL = "Flower chips!"
+WORTOX.DESCRIBE.LOTUSBOWL = "Khoai hoa!"
 
-WORTOX.DESCRIBE.POI = "So pink!"
+WORTOX.DESCRIBE.POI = "Hồng quá!"
 
-WORTOX.DESCRIBE.JELLYBEAN_HUNGER = "I do not want those in my bellybean!"
-WORTOX.DESCRIBE.JELLYBEAN_SUPER = "I do not want those in my bellybean!"
-WORTOX.DESCRIBE.JELLYBEAN_SANITY = "I do not want those in my bellybean!"
+WORTOX.DESCRIBE.JELLYBEAN_HUNGER = "Ta không muốn mấy thứ đó trong hạt đậu bao tử của ta đâu!"
+WORTOX.DESCRIBE.JELLYBEAN_SUPER = "Ta không muốn mấy thứ đó trong hạt đậu bao tử của ta đâu!"
+WORTOX.DESCRIBE.JELLYBEAN_SANITY = "Ta không muốn mấy thứ đó trong hạt đậu bao tử của ta đâu!"
 
-WORTOX.DESCRIBE.BOWLOFGEARS = "Not human food."
+WORTOX.DESCRIBE.BOWLOFGEARS = "Không phải đồ ăn cho con người."
 
-WORTOX.DESCRIBE.LONGPIGMEAL = "Oh! Food made of human flesh."
+WORTOX.DESCRIBE.LONGPIGMEAL = "Ồ! Đồ ăn làm từ thịt người."
 
-WORTOX.DESCRIBE.CUCUMBERSALAD = "I don't really like eating."
+WORTOX.DESCRIBE.CUCUMBERSALAD = "Ta thật sự không thích ăn uống lắm."
 
-WORTOX.DESCRIBE.DUG_KYNO_WILDWHEAT = "It should be planted again."
+WORTOX.DESCRIBE.DUG_KYNO_WILDWHEAT = "Nên trồng nó lại."
 
 WORTOX.DESCRIBE.KYNO_WILDWHEAT = 
 {
-	GENERIC = "Wheat that grows from richest earth.",
-	PICKED = "Nothing to take right now.",
-	WITHERED = "It can't survive like this.",
-	BURNING = "That's unfortunate.",
+	GENERIC = "Lúa mì mọc từ mảnh đất màu mỡ nhất.",
+	PICKED = "Giờ không có gì để lấy.",
+	WITHERED = "Nó không sống nổi thế này đâu.",
+	BURNING = "Thật không may.",
 }
 
-WORTOX.DESCRIBE.KYNO_MEALGRINDER = "A mortal machine for grinding food!"
+WORTOX.DESCRIBE.KYNO_MEALGRINDER = "Một cái máy phàm nhân dùng để nghiền thức ăn!"
 
 WORTOX.DESCRIBE.KYNO_MUSHSTUMP =
 {
-	GENERIC = "A mushroom metropolis!",
-	PICKED = "They'll return in their own time.",
-	BURNING = "That's unfortunate.",
+	GENERIC = "Một đô thị nấm!",
+	PICKED = "Chúng sẽ trở lại khi tới lúc.",
+	BURNING = "Thật không may.",
 }
 
-WORTOX.DESCRIBE.GORGE_BREAD = "Mortal food looks like this?"
-WORTOX.DESCRIBE.GORGE_SWEET_CHIPS = "This food has something special on it!"
-WORTOX.DESCRIBE.GORGE_VEGETABLE_SOUP = "Just some vegetables."
-WORTOX.DESCRIBE.GORGE_JELLY_SANDWICH = "The jelly's the core of it."
-WORTOX.DESCRIBE.GORGE_FISH_STEW = "What a meal!"
-WORTOX.DESCRIBE.GORGE_MEAT_STEW = "Mortals like drinking goop like this."
-WORTOX.DESCRIBE.GORGE_ONION_CAKE = "Mortal food. Useless."
-WORTOX.DESCRIBE.GORGE_POTATO_PANCAKES = "Mortal food."
-WORTOX.DESCRIBE.GORGE_POTATO_SOUP = "Delightful snack."
-WORTOX.DESCRIBE.GORGE_FISHBALL_SKEWERS = "Seems edible."
-WORTOX.DESCRIBE.GORGE_MEAT_SKEWERS = "Seems edible."
-WORTOX.DESCRIBE.GORGE_STONE_SOUP = "Delightful snack."
-WORTOX.DESCRIBE.GORGE_CROQUETTE = "Not my first option."
-WORTOX.DESCRIBE.GORGE_ROAST_VEGETABLES = "Veggies."
-WORTOX.DESCRIBE.GORGE_MEATLOAF = "More bread?"
-WORTOX.DESCRIBE.GORGE_CARROT_SOUP = "Delightful snack."
-WORTOX.DESCRIBE.GORGE_FISHPIE = "This one looks silly. Hyuyu!"
-WORTOX.DESCRIBE.GORGE_FISHCHIPS = "Crunchy."
-WORTOX.DESCRIBE.GORGE_MEATPIE = "Appropriate human meal."
-WORTOX.DESCRIBE.GORGE_SLIDERS = "So little!"
-WORTOX.DESCRIBE.GORGE_JELLY_ROLL = "Slimy!"
-WORTOX.DESCRIBE.GORGE_CARROT_CAKE = "They do love this kind of food right?"
-WORTOX.DESCRIBE.GORGE_GARLICMASHED = "I can't wait for this."
-WORTOX.DESCRIBE.GORGE_GARLICBREAD = "What's so special about this bread?"
-WORTOX.DESCRIBE.GORGE_TOMATO_SOUP = "Delightful snack."
-WORTOX.DESCRIBE.GORGE_SAUSAGE = "Funny food. Hyuyu!"
-WORTOX.DESCRIBE.GORGE_CANDIEDFISH = "Too sweet for me."
-WORTOX.DESCRIBE.GORGE_STUFFEDMUSHROOM = "Not my first option."
-WORTOX.DESCRIBE.GORGE_BRUSCHETTA = "Meat topping would've been better."
-WORTOX.DESCRIBE.GORGE_HAMBURGER = "Krampii said this one is special."
-WORTOX.DESCRIBE.GORGE_FISHBURGER = "Krampii said this one is special."
-WORTOX.DESCRIBE.GORGE_MUSHROOMBURGER = "Krampii said this one is special."
-WORTOX.DESCRIBE.GORGE_FISH_STEAK = "What a meal!"
-WORTOX.DESCRIBE.GORGE_CURRY = "Why is it so special to some?"
-WORTOX.DESCRIBE.GORGE_SPAGHETTI = "Physical food is so hilarious."
-WORTOX.DESCRIBE.GORGE_POACHEDFISH = "Poached fish with dip."
-WORTOX.DESCRIBE.GORGE_SHEPHERD_PIE = "Almost good. Almost."
-WORTOX.DESCRIBE.GORGE_CANDY = "It's very chewy and sweet."
-WORTOX.DESCRIBE.GORGE_BREAD_PUDDING = "Human dessert."
-WORTOX.DESCRIBE.GORGE_BERRY_TART = "Its simple but great."
-WORTOX.DESCRIBE.GORGE_MACARONI = "The bowl is full!"
-WORTOX.DESCRIBE.GORGE_BAGEL_AND_FISH = "It's great but not enough to satisfy my hunger."
-WORTOX.DESCRIBE.GORGE_GRILLED_CHEESE = "This seems to be pouplar between mortals."
-WORTOX.DESCRIBE.GORGE_CREAMMUSHROOM = "Not a fan of this kind of soup."
-WORTOX.DESCRIBE.GORGE_MANICOTTI = "Almost a cannelloni."
-WORTOX.DESCRIBE.GORGE_CHEESEBURGER = "Krampii said this one is special."
-WORTOX.DESCRIBE.GORGE_FETTUCCINE = "Ordinary."
-WORTOX.DESCRIBE.GORGE_ONION_SOUP = "What a funny dish! Hyuyu!"
-WORTOX.DESCRIBE.GORGE_BREADED_CUTLET = "Mortal food doesn't satisfy me."
-WORTOX.DESCRIBE.GORGE_CREAMY_FISH = "The taste isn't very good for me."
-WORTOX.DESCRIBE.GORGE_PIZZA = "Mortals says this food is one of the best."
-WORTOX.DESCRIBE.GORGE_POT_ROAST = "Stuffed!"
-WORTOX.DESCRIBE.GORGE_CRAB_CAKE = "Looks funny."
-WORTOX.DESCRIBE.GORGE_STEAK_FRITES = "Decent mortal food."
-WORTOX.DESCRIBE.GORGE_SHOOTER_SANDWICH = "Lunch time, I suppose."
-WORTOX.DESCRIBE.GORGE_BACON_WRAPPED = "Cool appearance."
-WORTOX.DESCRIBE.GORGE_CRAB_ROLL = "Crusty."
-WORTOX.DESCRIBE.GORGE_MEAT_WELLINGTON = "That chef surely make good food."
-WORTOX.DESCRIBE.GORGE_CRAB_RAVIOLI = "Crusty."
-WORTOX.DESCRIBE.GORGE_CARAMEL_CUBE = "Companion cube?"
-WORTOX.DESCRIBE.GORGE_SCONE = "I don't like mortal food."
-WORTOX.DESCRIBE.GORGE_TRIFLE = "I don't like mortal food."
-WORTOX.DESCRIBE.GORGE_CHEESECAKE = "I don't see the cheese..."
+WORTOX.DESCRIBE.GORGE_BREAD = "Đồ ăn phàm nhân trông thế này sao?"
+WORTOX.DESCRIBE.GORGE_SWEET_CHIPS = "Món này có gì đó đặc biệt đấy!"
+WORTOX.DESCRIBE.GORGE_VEGETABLE_SOUP = "Chỉ là chút rau củ thôi."
+WORTOX.DESCRIBE.GORGE_JELLY_SANDWICH = "Phần thạch mới là linh hồn của nó."
+WORTOX.DESCRIBE.GORGE_FISH_STEW = "Một bữa ăn ra trò!"
+WORTOX.DESCRIBE.GORGE_MEAT_STEW = "Người phàm thích uống thứ sền sệt thế này."
+WORTOX.DESCRIBE.GORGE_ONION_CAKE = "Đồ ăn phàm nhân. Vô dụng."
+WORTOX.DESCRIBE.GORGE_POTATO_PANCAKES = "Đồ ăn phàm nhân."
+WORTOX.DESCRIBE.GORGE_POTATO_SOUP = "Món ăn nhẹ tuyệt hảo."
+WORTOX.DESCRIBE.GORGE_FISHBALL_SKEWERS = "Có vẻ ăn được."
+WORTOX.DESCRIBE.GORGE_MEAT_SKEWERS = "Có vẻ ăn được."
+WORTOX.DESCRIBE.GORGE_STONE_SOUP = "Món ăn nhẹ tuyệt hảo."
+WORTOX.DESCRIBE.GORGE_CROQUETTE = "Không phải lựa chọn đầu tiên của ta."
+WORTOX.DESCRIBE.GORGE_ROAST_VEGETABLES = "Rau củ."
+WORTOX.DESCRIBE.GORGE_MEATLOAF = "Lại bánh mì nữa sao?"
+WORTOX.DESCRIBE.GORGE_CARROT_SOUP = "Món ăn nhẹ tuyệt hảo."
+WORTOX.DESCRIBE.GORGE_FISHPIE = "Món này trông ngộ ghê. Hyuyu!"
+WORTOX.DESCRIBE.GORGE_FISHCHIPS = "Giòn rụm."
+WORTOX.DESCRIBE.GORGE_MEATPIE = "Một bữa ăn đúng kiểu con người."
+WORTOX.DESCRIBE.GORGE_SLIDERS = "Nhỏ xíu!"
+WORTOX.DESCRIBE.GORGE_JELLY_ROLL = "Nhớt nhát!"
+WORTOX.DESCRIBE.GORGE_CARROT_CAKE = "Họ thích kiểu đồ ăn này lắm đúng không?"
+WORTOX.DESCRIBE.GORGE_GARLICMASHED = "Ta nóng lòng muốn thử món này."
+WORTOX.DESCRIBE.GORGE_GARLICBREAD = "Bánh mì này có gì đặc biệt vậy?"
+WORTOX.DESCRIBE.GORGE_TOMATO_SOUP = "Món ăn nhẹ tuyệt hảo."
+WORTOX.DESCRIBE.GORGE_SAUSAGE = "Món ăn buồn cười. Hyuyu!"
+WORTOX.DESCRIBE.GORGE_CANDIEDFISH = "Quá ngọt với ta."
+WORTOX.DESCRIBE.GORGE_STUFFEDMUSHROOM = "Không phải lựa chọn đầu tiên của ta."
+WORTOX.DESCRIBE.GORGE_BRUSCHETTA = "Có thịt phủ lên thì ngon hơn."
+WORTOX.DESCRIBE.GORGE_HAMBURGER = "Krampii nói món này đặc biệt."
+WORTOX.DESCRIBE.GORGE_FISHBURGER = "Krampii nói món này đặc biệt."
+WORTOX.DESCRIBE.GORGE_MUSHROOMBURGER = "Krampii nói món này đặc biệt."
+WORTOX.DESCRIBE.GORGE_FISH_STEAK = "Một bữa ăn ra trò!"
+WORTOX.DESCRIBE.GORGE_CURRY = "Sao vài người lại thấy nó đặc biệt nhỉ?"
+WORTOX.DESCRIBE.GORGE_SPAGHETTI = "Đồ ăn vật chất thật tức cười."
+WORTOX.DESCRIBE.GORGE_POACHEDFISH = "Cá chần kèm nước chấm."
+WORTOX.DESCRIBE.GORGE_SHEPHERD_PIE = "Gần ngon. Gần thôi."
+WORTOX.DESCRIBE.GORGE_CANDY = "Nó rất dai và ngọt."
+WORTOX.DESCRIBE.GORGE_BREAD_PUDDING = "Món tráng miệng của con người."
+WORTOX.DESCRIBE.GORGE_BERRY_TART = "Đơn giản nhưng tuyệt."
+WORTOX.DESCRIBE.GORGE_MACARONI = "Cái bát đầy ắp rồi!"
+WORTOX.DESCRIBE.GORGE_BAGEL_AND_FISH = "Ngon đấy, nhưng chưa đủ làm ta hết đói."
+WORTOX.DESCRIBE.GORGE_GRILLED_CHEESE = "Món này có vẻ phổ biến với người phàm."
+WORTOX.DESCRIBE.GORGE_CREAMMUSHROOM = "Ta không mê kiểu súp này."
+WORTOX.DESCRIBE.GORGE_MANICOTTI = "Gần giống cannelloni."
+WORTOX.DESCRIBE.GORGE_CHEESEBURGER = "Krampii nói món này đặc biệt."
+WORTOX.DESCRIBE.GORGE_FETTUCCINE = "Bình thường."
+WORTOX.DESCRIBE.GORGE_ONION_SOUP = "Một món ăn buồn cười làm sao! Hyuyu!"
+WORTOX.DESCRIBE.GORGE_BREADED_CUTLET = "Đồ ăn phàm nhân chẳng làm ta thỏa mãn."
+WORTOX.DESCRIBE.GORGE_CREAMY_FISH = "Vị này không hợp với ta lắm."
+WORTOX.DESCRIBE.GORGE_PIZZA = "Người phàm nói món này thuộc hàng ngon nhất."
+WORTOX.DESCRIBE.GORGE_POT_ROAST = "Nhồi đầy!"
+WORTOX.DESCRIBE.GORGE_CRAB_CAKE = "Trông buồn cười đấy."
+WORTOX.DESCRIBE.GORGE_STEAK_FRITES = "Đồ ăn phàm nhân tạm được."
+WORTOX.DESCRIBE.GORGE_SHOOTER_SANDWICH = "Chắc là tới giờ ăn trưa rồi."
+WORTOX.DESCRIBE.GORGE_BACON_WRAPPED = "Ngoại hình hay đấy."
+WORTOX.DESCRIBE.GORGE_CRAB_ROLL = "Giòn vỏ."
+WORTOX.DESCRIBE.GORGE_MEAT_WELLINGTON = "Đầu bếp đó chắc biết nấu ăn đấy."
+WORTOX.DESCRIBE.GORGE_CRAB_RAVIOLI = "Giòn vỏ."
+WORTOX.DESCRIBE.GORGE_CARAMEL_CUBE = "Khối đồng hành sao?"
+WORTOX.DESCRIBE.GORGE_SCONE = "Ta không thích đồ ăn phàm nhân."
+WORTOX.DESCRIBE.GORGE_TRIFLE = "Ta không thích đồ ăn phàm nhân."
+WORTOX.DESCRIBE.GORGE_CHEESECAKE = "Ta chẳng thấy phô mai đâu cả..."
 
-WORTOX.DESCRIBE.DUCKYOUGLERMZ = "Stinks!"
+WORTOX.DESCRIBE.DUCKYOUGLERMZ = "Hôi quá!"
 
-WORTOX.DESCRIBE.KYNO_ALOE = "Gooey."
-WORTOX.DESCRIBE.KYNO_ALOE_COOKED = "Tasty!"
-WORTOX.DESCRIBE.KYNO_ALOE_GROUND = "Gooey."
-WORTOX.DESCRIBE.KYNO_ALOE_DRIED = "A little less gooey."
-WORTOX.DESCRIBE.KYNO_ALOE_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.FARM_PLANT_KYNO_ALOE = "Gooey."
-WORTOX.DESCRIBE.KYNO_ALOE_OVERSIZED = "Gooey."
-WORTOX.DESCRIBE.KYNO_ALOE_OVERSIZED_ROTTEN = "Ouch."
+WORTOX.DESCRIBE.KYNO_ALOE = "Nhớp nháp."
+WORTOX.DESCRIBE.KYNO_ALOE_COOKED = "Ngon!"
+WORTOX.DESCRIBE.KYNO_ALOE_GROUND = "Nhớp nháp."
+WORTOX.DESCRIBE.KYNO_ALOE_DRIED = "Bớt nhớp hơn một chút."
+WORTOX.DESCRIBE.KYNO_ALOE_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.FARM_PLANT_KYNO_ALOE = "Nhớp nháp."
+WORTOX.DESCRIBE.KYNO_ALOE_OVERSIZED = "Nhớp nháp."
+WORTOX.DESCRIBE.KYNO_ALOE_OVERSIZED_ROTTEN = "Ối."
 
-WORTOX.DESCRIBE.KYNO_CUCUMBER = "Cucumber would be of no help."
-WORTOX.DESCRIBE.KYNO_CUCUMBER_COOKED = "Mortals have such funny tastes."
-WORTOX.DESCRIBE.KYNO_CUCUMBER_GROUND = "Cucumber would be of no help."
-WORTOX.DESCRIBE.KYNO_CUCUMBER_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.KNOWN_KYNO_CUCUMBER_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.FARM_PLANT_KYNO_CUCUMBER = "Cucumber would be of no help."
-WORTOX.DESCRIBE.KYNO_CUCUMBER_OVERSIZED = "Cucumber would be of no help."
-WORTOX.DESCRIBE.KYNO_CUCUMBER_OVERSIZED_ROTTEN = "Ouch."
+WORTOX.DESCRIBE.KYNO_CUCUMBER = "Dưa chuột cũng chẳng giúp ích gì đâu."
+WORTOX.DESCRIBE.KYNO_CUCUMBER_COOKED = "Người phàm có khẩu vị buồn cười thật."
+WORTOX.DESCRIBE.KYNO_CUCUMBER_GROUND = "Dưa chuột cũng chẳng giúp ích gì đâu."
+WORTOX.DESCRIBE.KYNO_CUCUMBER_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.KNOWN_KYNO_CUCUMBER_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.FARM_PLANT_KYNO_CUCUMBER = "Dưa chuột cũng chẳng giúp ích gì đâu."
+WORTOX.DESCRIBE.KYNO_CUCUMBER_OVERSIZED = "Dưa chuột cũng chẳng giúp ích gì đâu."
+WORTOX.DESCRIBE.KYNO_CUCUMBER_OVERSIZED_ROTTEN = "Ối."
 
-WORTOX.DESCRIBE.KYNO_RADISH = "Red! Like me!"
-WORTOX.DESCRIBE.KYNO_RADISH_COOKED = "A vegetable brew."
-WORTOX.DESCRIBE.KYNO_RADISH_GROUND = "Red! Like me!"
-WORTOX.DESCRIBE.KYNO_RADISH_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.KNOWN_KYNO_RADISH_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.FARM_PLANT_KYNO_RADISH = "Red! Like me!"
-WORTOX.DESCRIBE.KYNO_RADISH_OVERSIZED = "Red! Like me!"
-WORTOX.DESCRIBE.KYNO_RADISH_OVERSIZED_ROTTEN = "Ouch."
+WORTOX.DESCRIBE.KYNO_RADISH = "Đỏ! Giống ta!"
+WORTOX.DESCRIBE.KYNO_RADISH_COOKED = "Một nồi rau củ hầm."
+WORTOX.DESCRIBE.KYNO_RADISH_GROUND = "Đỏ! Giống ta!"
+WORTOX.DESCRIBE.KYNO_RADISH_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.KNOWN_KYNO_RADISH_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.FARM_PLANT_KYNO_RADISH = "Đỏ! Giống ta!"
+WORTOX.DESCRIBE.KYNO_RADISH_OVERSIZED = "Đỏ! Giống ta!"
+WORTOX.DESCRIBE.KYNO_RADISH_OVERSIZED_ROTTEN = "Ối."
 
-WORTOX.DESCRIBE.KYNO_FENNEL = "A green carrot!"
-WORTOX.DESCRIBE.KYNO_FENNEL_COOKED = "I'd add a bit of cinnamon."
-WORTOX.DESCRIBE.KYNO_FENNEL_GROUND = "A green carrot!"
-WORTOX.DESCRIBE.KYNO_FENNEL_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.KNOWN_KYNO_FENNEL_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.FARM_PLANT_KYNO_FENNEL = "A green carrot!"
-WORTOX.DESCRIBE.KYNO_FENNEL_OVERSIZED = "A green carrot!"
-WORTOX.DESCRIBE.KYNO_FENNEL_OVERSIZED_ROTTEN = "Ouch."
+WORTOX.DESCRIBE.KYNO_FENNEL = "Một củ cà rốt xanh!"
+WORTOX.DESCRIBE.KYNO_FENNEL_COOKED = "Ta sẽ thêm chút quế."
+WORTOX.DESCRIBE.KYNO_FENNEL_GROUND = "Một củ cà rốt xanh!"
+WORTOX.DESCRIBE.KYNO_FENNEL_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.KNOWN_KYNO_FENNEL_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.FARM_PLANT_KYNO_FENNEL = "Một củ cà rốt xanh!"
+WORTOX.DESCRIBE.KYNO_FENNEL_OVERSIZED = "Một củ cà rốt xanh!"
+WORTOX.DESCRIBE.KYNO_FENNEL_OVERSIZED_ROTTEN = "Ối."
 
-WORTOX.DESCRIBE.KYNO_SWEETPOTATO = "A sweetie!"
-WORTOX.DESCRIBE.KYNO_SWEETPOTATO_COOKED = "Hot grub!"
-WORTOX.DESCRIBE.KYNO_SWEETPOTATO_GROUND = "A sweetie!"
-WORTOX.DESCRIBE.KYNO_SWEETPOTATO_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.KNOWN_KYNO_SWEETPOTATO_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.FARM_PLANT_KYNO_SWEETPOTATO = "A sweetie!"
-WORTOX.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED = "A sweetie!"
-WORTOX.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED_ROTTEN = "Ouch."
+WORTOX.DESCRIBE.KYNO_SWEETPOTATO = "Một củ ngọt ngào!"
+WORTOX.DESCRIBE.KYNO_SWEETPOTATO_COOKED = "Món nóng hổi!"
+WORTOX.DESCRIBE.KYNO_SWEETPOTATO_GROUND = "Một củ ngọt ngào!"
+WORTOX.DESCRIBE.KYNO_SWEETPOTATO_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.KNOWN_KYNO_SWEETPOTATO_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.FARM_PLANT_KYNO_SWEETPOTATO = "Một củ ngọt ngào!"
+WORTOX.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED = "Một củ ngọt ngào!"
+WORTOX.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED_ROTTEN = "Ối."
 
-WORTOX.DESCRIBE.KYNO_PARZNIP = "Non-imps like to eat things like this."
-WORTOX.DESCRIBE.KYNO_PARZNIP_COOKED = "Non-imps like to eat things like this."
-WORTOX.DESCRIBE.KYNO_PARZNIP_EATEN = "Non-imps like to eat things like this."
-WORTOX.DESCRIBE.KYNO_PARZNIP_GROUND = "Non-imps like to eat things like this."
-WORTOX.DESCRIBE.KYNO_PARZNIP_BIG = "Giant parsnips."
-WORTOX.DESCRIBE.KYNO_PARZNIP_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.KNOWN_KYNO_PARZNIP_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.FARM_PLANT_KYNO_PARZNIP = "Non-imps like to eat things like this."
-WORTOX.DESCRIBE.KYNO_PARZNIP_OVERSIZED = "Non-imps like to eat things like this."
-WORTOX.DESCRIBE.KYNO_PARZNIP_OVERSIZED_ROTTEN = "Ouch."
+WORTOX.DESCRIBE.KYNO_PARZNIP = "Những kẻ không phải tiểu quỷ thích ăn mấy thứ này."
+WORTOX.DESCRIBE.KYNO_PARZNIP_COOKED = "Những kẻ không phải tiểu quỷ thích ăn mấy thứ này."
+WORTOX.DESCRIBE.KYNO_PARZNIP_EATEN = "Những kẻ không phải tiểu quỷ thích ăn mấy thứ này."
+WORTOX.DESCRIBE.KYNO_PARZNIP_GROUND = "Những kẻ không phải tiểu quỷ thích ăn mấy thứ này."
+WORTOX.DESCRIBE.KYNO_PARZNIP_BIG = "Củ cải vàng khổng lồ."
+WORTOX.DESCRIBE.KYNO_PARZNIP_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.KNOWN_KYNO_PARZNIP_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.FARM_PLANT_KYNO_PARZNIP = "Những kẻ không phải tiểu quỷ thích ăn mấy thứ này."
+WORTOX.DESCRIBE.KYNO_PARZNIP_OVERSIZED = "Những kẻ không phải tiểu quỷ thích ăn mấy thứ này."
+WORTOX.DESCRIBE.KYNO_PARZNIP_OVERSIZED_ROTTEN = "Ối."
 
-WORTOX.DESCRIBE.KYNO_TURNIP = "That's a tiny turnip."
-WORTOX.DESCRIBE.KYNO_TURNIP_COOKED = "Cooked, but not into a dish."
-WORTOX.DESCRIBE.KYNO_TURNIP_GROUND = "That's a tiny turnip."
-WORTOX.DESCRIBE.KYNO_TURNIP_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.KNOWN_KYNO_TURNIP_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.FARM_PLANT_KYNO_TURNIP = "That's a tiny turnip."
-WORTOX.DESCRIBE.KYNO_TURNIP_OVERSIZED = "That's a tiny turnip."
-WORTOX.DESCRIBE.KYNO_TURNIP_OVERSIZED_ROTTEN = "Ouch."
+WORTOX.DESCRIBE.KYNO_TURNIP = "Một củ cải nhỏ xíu."
+WORTOX.DESCRIBE.KYNO_TURNIP_COOKED = "Đã nấu, nhưng chưa thành món."
+WORTOX.DESCRIBE.KYNO_TURNIP_GROUND = "Một củ cải nhỏ xíu."
+WORTOX.DESCRIBE.KYNO_TURNIP_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.KNOWN_KYNO_TURNIP_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.FARM_PLANT_KYNO_TURNIP = "Một củ cải nhỏ xíu."
+WORTOX.DESCRIBE.KYNO_TURNIP_OVERSIZED = "Một củ cải nhỏ xíu."
+WORTOX.DESCRIBE.KYNO_TURNIP_OVERSIZED_ROTTEN = "Ối."
 
-WORTOX.DESCRIBE.KYNO_RICE = "Not bad, not bad!"
-WORTOX.DESCRIBE.KYNO_RICE_COOKED = "Not bad, not bad!"
-WORTOX.DESCRIBE.KYNO_RICE_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.KNOWN_KYNO_RICE_SEEDS = "Grow a seed and you shall feed!"
-WORTOX.DESCRIBE.FARM_PLANT_KYNO_RICE = "That's a tiny rice."
-WORTOX.DESCRIBE.KYNO_RICE_OVERSIZED = "That's a tiny rice."
-WORTOX.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Ouch."
+WORTOX.DESCRIBE.KYNO_RICE = "Không tệ, không tệ!"
+WORTOX.DESCRIBE.KYNO_RICE_COOKED = "Không tệ, không tệ!"
+WORTOX.DESCRIBE.KYNO_RICE_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.KNOWN_KYNO_RICE_SEEDS = "Trồng một hạt, có món để nhai!"
+WORTOX.DESCRIBE.FARM_PLANT_KYNO_RICE = "Một cây lúa nhỏ xíu."
+WORTOX.DESCRIBE.KYNO_RICE_OVERSIZED = "Một cây lúa nhỏ xíu."
+WORTOX.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Ối."
 
-WORTOX.DESCRIBE.KYNO_SEEDS_KIT = "Just some seeds."
+WORTOX.DESCRIBE.KYNO_SEEDS_KIT = "Chỉ là vài hạt giống thôi."
 
 WORTOX.DESCRIBE.KYNO_LIMPETROCK = 
 {
-	GENERIC = "Covered in good eating!",
-	PICKED = "Gone to hide, snails inside!",
-	WITHERED = "Dry and dead, no more fed!",
+	GENERIC = "Phủ đầy món ngon!",
+	PICKED = "Ốc trong đá, trốn mất rồi!",
+	WITHERED = "Khô và chết, hết đồ ăn rồi!",
 }
 
-WORTOX.DESCRIBE.KYNO_LIMPETS = "You'll be in my belly soon! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_LIMPETS_COOKED = "Yum!"
+WORTOX.DESCRIBE.KYNO_LIMPETS = "Ngươi sắp vào bao tử ta rồi! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_LIMPETS_COOKED = "Ngon!"
 
 WORTOX.DESCRIBE.KYNO_LOTUS_OCEAN = 
 {
-	GENERIC = "Pink flower!",
-	PICKED = "Gone for now, take a bow!",
-	BURNING = "What a gash!",
+	GENERIC = "Hoa hồng hồng!",
+	PICKED = "Tạm biệt nhé, cúi chào nào!",
+	BURNING = "Một vết cháy đau điếng!",
 }
 
-WORTOX.DESCRIBE.KYNO_LOTUS_ROOT = "Sea stalk!"
-WORTOX.DESCRIBE.KYNO_LOTUS_FLOWER = "A pretty pink flower."
-WORTOX.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "It smells good, Hyuyu!"
+WORTOX.DESCRIBE.KYNO_LOTUS_ROOT = "Thân cây biển!"
+WORTOX.DESCRIBE.KYNO_LOTUS_FLOWER = "Một bông hoa hồng xinh."
+WORTOX.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Mùi thơm đấy, Hyuyu!"
 
 WORTOX.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
 {
-	GENERIC = "Get's tangled in my rigging.",
-	PICKED = "Nothing left right now.",
-	BURNING = "That shouldn't be happening.",
+	GENERIC = "Nó cứ mắc vào dây dợ của ta.",
+	PICKED = "Giờ chẳng còn gì cả.",
+	BURNING = "Chuyện đó lẽ ra không nên xảy ra.",
 }
 
-WORTOX.DESCRIBE.KYNO_SEAWEEDS = "Get's tangled in my rigging."
-WORTOX.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Cooking it don't make it food."
-WORTOX.DESCRIBE.KYNO_SEAWEEDS_DRIED = "This is suppose to pass for jerky?"
-WORTOX.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Sea stalk!"
+WORTOX.DESCRIBE.KYNO_SEAWEEDS = "Nó cứ mắc vào dây dợ của ta."
+WORTOX.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Nấu lên cũng chẳng biến nó thành đồ ăn."
+WORTOX.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Thứ này mà cũng được tính là thịt khô sao?"
+WORTOX.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Thân cây biển!"
 
 WORTOX.DESCRIBE.KYNO_TAROROOT_OCEAN = 
 {
-	GENERIC = "A taro root! Hyuyu!",
-	PICKED = "It should grow back soon.",
-	BURNING = "That's unfortunate.",
+	GENERIC = "Một củ khoai môn! Hyuyu!",
+	PICKED = "Nó sẽ mọc lại sớm thôi.",
+	BURNING = "Thật không may.",
 }
 
-WORTOX.DESCRIBE.KYNO_TAROROOT_ROOT = "Sea stalk!"
-WORTOX.DESCRIBE.KYNO_TAROROOT = "I've never seen such a thing before!"
-WORTOX.DESCRIBE.KYNO_TAROROOT_COOKED = "My favourite treat... it can't be beat!"
+WORTOX.DESCRIBE.KYNO_TAROROOT_ROOT = "Thân cây biển!"
+WORTOX.DESCRIBE.KYNO_TAROROOT = "Ta chưa từng thấy thứ nào như thế này!"
+WORTOX.DESCRIBE.KYNO_TAROROOT_COOKED = "Món khoái khẩu của ta... chẳng gì hơn được!"
 
 WORTOX.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
 {
-	GENERIC = "Another plant.",
-	PICKED = "It will return in time.",
-	BURNING = "That's unfortunate.",
+	GENERIC = "Lại một cái cây nữa.",
+	PICKED = "Rồi nó sẽ quay lại thôi.",
+	BURNING = "Thật không may.",
 }
 
-WORTOX.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Sea stalk!"
-WORTOX.DESCRIBE.KYNO_WATERYCRESS = "Another plant."
+WORTOX.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Thân cây biển!"
+WORTOX.DESCRIBE.KYNO_WATERYCRESS = "Lại một cái cây nữa."
 
-WORTOX.DESCRIBE.WATERYCRESSBOWL = "Even for human food, this is odd."
+WORTOX.DESCRIBE.WATERYCRESSBOWL = "Ngay cả với đồ ăn con người, món này cũng lạ."
 
 WORTOX.DESCRIBE.KYNO_SALT = "Hissss!"
 
 WORTOX.DESCRIBE.KYNO_MUSSELSTICK =
 {
-	GENERIC = "Mussels waiting quietly.",
-	PICKED = "Nothing to take right now.",
-	BURNING = "That's unfortunate.",
+	GENERIC = "Trai đang chờ rất ngoan.",
+	PICKED = "Giờ không có gì để lấy.",
+	BURNING = "Thật không may.",
 }
 
-WORTOX.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "For luring mussels into my belly! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Dùng để dụ trai vào bao tử ta! Hyuyu!"
 
-WORTOX.DESCRIBE.CATFOOD = "Food for kitties! Hyuyu!"
+WORTOX.DESCRIBE.CATFOOD = "Đồ ăn cho mèo con! Hyuyu!"
 
-WORTOX.DESCRIBE.KATFOOD = "Food for kitties! Hyuyu!"
+WORTOX.DESCRIBE.KATFOOD = "Đồ ăn cho mèo con! Hyuyu!"
 
 WORTOX.DESCRIBE.KYNO_BANANATREE = 
 {
-	GENERIC = "What do I see? A real banana tree!",
-	PICKED = "No snacks for now.",
-	CHOPPED = "Chopped down!",
-	BURNING = "Flames everywhere!",
-	BURNT = "Ashes at last!",
+	GENERIC = "Ta thấy gì đây? Một cây chuối thật!",
+	PICKED = "Giờ chưa có đồ ăn vặt.",
+	CHOPPED = "Bị chặt rồi!",
+	BURNING = "Lửa khắp nơi!",
+	BURNT = "Cuối cùng chỉ còn tro!",
 }
 
-WORTOX.DESCRIBE.KYNO_BANANA = "One of the least offensive mortal food flavors."
-WORTOX.DESCRIBE.KYNO_BANANA_COOKED = "It's cooked now. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_BANANA = "Một trong những vị đồ ăn phàm nhân ít khó chịu nhất."
+WORTOX.DESCRIBE.KYNO_BANANA_COOKED = "Giờ nó chín rồi. Hyuyu!"
 
 WORTOX.DESCRIBE.KYNO_KOKONUTTREE = 
 {
-	GENERIC = "This tree has a big trunk. Hyuyu!",
-	PICKED = "No coconuts to be seen.",
-	CHOPPED = "Downed!",
-	BURNING = "It's burning, what a zap!",
-	BURNT = "Just ashes now.",
+	GENERIC = "Cây này có cái thân to ghê. Hyuyu!",
+	PICKED = "Chẳng thấy trái dừa nào cả.",
+	CHOPPED = "Đổ rồi!",
+	BURNING = "Nó đang cháy, thật giật mình!",
+	BURNT = "Giờ chỉ còn tro.",
 }
 
-WORTOX.DESCRIBE.KYNO_KOKONUT = "A head nut!"
-WORTOX.DESCRIBE.KYNO_KOKONUT_HALVED = "Two coconuts from one?!"
-WORTOX.DESCRIBE.KYNO_KOKONUT_COOKED = "Even better than raw."
+WORTOX.DESCRIBE.KYNO_KOKONUT = "Một hạt đầu!"
+WORTOX.DESCRIBE.KYNO_KOKONUT_HALVED = "Một trái thành hai trái dừa sao?!"
+WORTOX.DESCRIBE.KYNO_KOKONUT_COOKED = "Còn ngon hơn ăn sống."
 
-WORTOX.DESCRIBE.BOWLOFPOPCORN = "One of the greatest mortal foods!"
+WORTOX.DESCRIBE.BOWLOFPOPCORN = "Một trong những món phàm nhân tuyệt nhất!"
 
-WORTOX.DESCRIBE.FIGJUICE = "Relief to be sure."
+WORTOX.DESCRIBE.FIGJUICE = "Đúng là nhẹ cả người."
 
-WORTOX.DESCRIBE.COCONUTWATER = "Relief to be sure."
+WORTOX.DESCRIBE.COCONUTWATER = "Đúng là nhẹ cả người."
 
-WORTOX.DESCRIBE.EYEBALLSPAGHETTI = "I know this will not end good."
+WORTOX.DESCRIBE.EYEBALLSPAGHETTI = "Ta biết chuyện này sẽ chẳng kết thúc tốt đẹp."
 
-WORTOX.DESCRIBE.FORGETMELOTS_SEEDS = "Grow a seed and you shall feed!"
+WORTOX.DESCRIBE.FORGETMELOTS_SEEDS = "Trồng một hạt, có món để nhai!"
 
-WORTOX.DESCRIBE.FIRENETTLES_SEEDS = "Grow a seed and you shall feed!"
+WORTOX.DESCRIBE.FIRENETTLES_SEEDS = "Trồng một hạt, có món để nhai!"
 
-WORTOX.DESCRIBE.TILLWEED_SEEDS = "Grow a seed and you shall feed!"
+WORTOX.DESCRIBE.TILLWEED_SEEDS = "Trồng một hạt, có món để nhai!"
 
-WORTOX.DESCRIBE.KYNO_FLOATILIZER = "That's some poo! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_FLOATILIZER = "Một đống phân đấy! Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_TWIGGYNUTS = "Nuts."
+WORTOX.DESCRIBE.KYNO_TWIGGYNUTS = "Hạt."
 
-WORTOX.DESCRIBE.KYNO_REPAIRTOOL = "One is always handy."
+WORTOX.DESCRIBE.KYNO_REPAIRTOOL = "Có một cái lúc nào cũng tiện."
 
-WORTOX.DESCRIBE.KYNO_KOI = "I'm afraid your journey has been cut short."
-WORTOX.DESCRIBE.KYNO_KOI_COOKED = "I'm afraid your journey has been cut short."
+WORTOX.DESCRIBE.KYNO_KOI = "E là chuyến đi của ngươi phải dừng ở đây rồi."
+WORTOX.DESCRIBE.KYNO_KOI_COOKED = "E là chuyến đi của ngươi phải dừng ở đây rồi."
 
-WORTOX.DESCRIBE.KYNO_TROPICALFISH = "Hi!"
-WORTOX.DESCRIBE.KYNO_TROPICALFISH_COOKED = "Oh. It's gone."
+WORTOX.DESCRIBE.KYNO_TROPICALFISH = "Chào!"
+WORTOX.DESCRIBE.KYNO_TROPICALFISH_COOKED = "Ồ. Nó đi mất rồi."
 
-WORTOX.DESCRIBE.KYNO_NEONFISH = "This is a blue fishy."
-WORTOX.DESCRIBE.KYNO_NEONFISH_COOKED = "A fine cooked fish!"
+WORTOX.DESCRIBE.KYNO_NEONFISH = "Một chú cá xanh xanh."
+WORTOX.DESCRIBE.KYNO_NEONFISH_COOKED = "Một con cá nấu chín tuyệt hảo!"
 
-WORTOX.DESCRIBE.KYNO_GROUPER = "You got the look."
-WORTOX.DESCRIBE.KYNO_GROUPER_COOKED = "Ready for my belly!"
+WORTOX.DESCRIBE.KYNO_GROUPER = "Ngươi có vẻ ngoài được đấy."
+WORTOX.DESCRIBE.KYNO_GROUPER_COOKED = "Sẵn sàng vào bao tử ta rồi!"
  
-WORTOX.DESCRIBE.KYNO_PIERROTFISH = "Stripy fishy."
-WORTOX.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Down the mouth!"
+WORTOX.DESCRIBE.KYNO_PIERROTFISH = "Cá sọc sọc."
+WORTOX.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Trôi xuống miệng nào!"
 
-WORTOX.DESCRIBE.KYNO_SALMONFISH = "It doesn't like the air, oh no."
-WORTOX.DESCRIBE.KYNO_SALMONFISH_COOKED = "So long, sweet fish soul!"
+WORTOX.DESCRIBE.KYNO_SALMONFISH = "Nó không thích không khí đâu, ôi không."
+WORTOX.DESCRIBE.KYNO_SALMONFISH_COOKED = "Vĩnh biệt nhé, linh hồn cá ngọt ngào!"
 
-WORTOX.DESCRIBE.TURF_PINKPARK = "Almost red like me. Hyuyu!"
-WORTOX.DESCRIBE.TURF_STONECITY = "Ground of rockyness."
-WORTOX.DESCRIBE.TURF_FIELDS = "Grass path."
-WORTOX.DESCRIBE.TURF_TIDALMARSH = "Quite squishy ground."
+WORTOX.DESCRIBE.TURF_PINKPARK = "Gần đỏ như ta rồi. Hyuyu!"
+WORTOX.DESCRIBE.TURF_STONECITY = "Mặt đất toàn đá."
+WORTOX.DESCRIBE.TURF_FIELDS = "Lối cỏ."
+WORTOX.DESCRIBE.TURF_TIDALMARSH = "Mặt đất khá mềm nhũn."
 
 WORTOX.DESCRIBE.KYNO_SALTRACK =
 {
-	GENERIC = "The minerals are ready.",
-	PICKED = "The mortals crave these minerals.",
+	GENERIC = "Khoáng chất sẵn sàng rồi.",
+	PICKED = "Người phàm thèm mấy khoáng chất này lắm.",
 }
 
-WORTOX.DESCRIBE.KYNO_SALTRACK_INSTALLER = "It's meant to go above a pond."
+WORTOX.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Nó phải được đặt trên ao."
 
-WORTOX.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "It's for filling up with sap."
+WORTOX.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Nó dùng để hứng nhựa cây."
 
-WORTOX.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "They'll feel so silly once I catch them!"
+WORTOX.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Chúng sẽ thấy mình ngốc làm sao khi bị ta bắt! "
 
 WORTOX.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
 {
-	GENERIC = "My oh my, you look ill! Low of spirit, green 'round the gill.",
-	SLEEPING = "I should let him rest.",
+	GENERIC = "Ôi chao ôi chao, trông ngươi ốm yếu quá! Tinh thần cạn kiệt, mang cá xanh lè.",
+	SLEEPING = "Ta nên để ông ấy nghỉ.",
 }
 
 WORTOX.DESCRIBE.KYNO_SUGARTREE =
 {
-	GENERIC = "Fweehee, what a special tree!",
-	CHOPPED = "That's a wrap on the sap.",
-	SAPPED = "Sweet, sugary sap!",
-	PICKED = "The tap will soon make sap!",
-	BURNING = "That's unfortunate.",
-	BURNT = "Nothing left now.",
+	GENERIC = "Fweehee, đúng là cái cây đặc biệt!",
+	CHOPPED = "Vậy là hết màn nhựa cây.",
+	SAPPED = "Nhựa ngọt, ngọt như đường!",
+	PICKED = "Cái vòi sẽ sớm cho nhựa thôi!",
+	BURNING = "Thật không may.",
+	BURNT = "Giờ chẳng còn gì.",
 }
 
 WORTOX.DESCRIBE.KYNO_SUGARTREE_RUINED =
 {
-	GENERIC = "An unfortunate mishap befell the tree sap.",
-	CHOPPED = "It served no purpose.",
-	SAPPED = "Ruined, but available.",
-	PICKED = "Those bugs are tree thugs!",
-	BURNING = "That ends it.",
-	BURNT = "Nothing remains.",
+	GENERIC = "Một tai họa đáng tiếc đã giáng xuống nhựa cây.",
+	CHOPPED = "Nó chẳng còn tác dụng gì nữa.",
+	SAPPED = "Hỏng rồi, nhưng vẫn dùng được.",
+	PICKED = "Lũ bọ đúng là côn đồ của cây!",
+	BURNING = "Vậy là hết.",
+	BURNT = "Chẳng còn gì sót lại.",
 }
 
-WORTOX.DESCRIBE.KYNO_SUGARTREE_BUD = "A tree seed."
+WORTOX.DESCRIBE.KYNO_SUGARTREE_BUD = "Một hạt cây."
 
-WORTOX.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Perfumed petals to pick and pluck."
-WORTOX.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Perfumed petals to pick and pluck."
+WORTOX.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Cánh hoa thơm để hái và bứt."
+WORTOX.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Cánh hoa thơm để hái và bứt."
 
-WORTOX.DESCRIBE.KYNO_SUGARTREE_PETALS = "Perfumed petals to pick and pluck."
-WORTOX.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Nicely dried!"
+WORTOX.DESCRIBE.KYNO_SUGARTREE_PETALS = "Cánh hoa thơm để hái và bứt."
+WORTOX.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Khô đẹp đấy!"
 
-WORTOX.DESCRIBE.KYNO_PEBBLECRAB = "What a funny creature!"
+WORTOX.DESCRIBE.KYNO_PEBBLECRAB = "Một sinh vật buồn cười làm sao!"
 
-WORTOX.DESCRIBE.KYNO_CRABMEAT = "The humans like it, they do, they do!"
-WORTOX.DESCRIBE.KYNO_CRABMEAT_COOKED = "They like it more like this, I hear!"
-WORTOX.DESCRIBE.KYNO_CRABMEAT_DRIED = "The humans like it, they do, they do!"
+WORTOX.DESCRIBE.KYNO_CRABMEAT = "Con người thích món này, thích lắm, thích lắm!"
+WORTOX.DESCRIBE.KYNO_CRABMEAT_COOKED = "Ta nghe nói họ còn thích kiểu này hơn!"
+WORTOX.DESCRIBE.KYNO_CRABMEAT_DRIED = "Con người thích món này, thích lắm, thích lắm!"
 
-WORTOX.DESCRIBE.KYNO_CRABKINGMEAT = "The humans like it, they do, they do!"
-WORTOX.DESCRIBE.KYNO_CRABKINGMEAT_COOKED = "The humans like it, they do, they do!"
-WORTOX.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "The humans like it, they do, they do!"
+WORTOX.DESCRIBE.KYNO_CRABKINGMEAT = "Con người thích món này, thích lắm, thích lắm!"
+WORTOX.DESCRIBE.KYNO_CRABKINGMEAT_COOKED = "Con người thích món này, thích lắm, thích lắm!"
+WORTOX.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Con người thích món này, thích lắm, thích lắm!"
 
-WORTOX.DESCRIBE.KYNO_SLAUGHTERTOOL = "I don't like this sort of prank."
+WORTOX.DESCRIBE.KYNO_SLAUGHTERTOOL = "Ta không thích kiểu trò đùa này."
 
 WORTOX.DESCRIBE.KYNO_CHICKEN2 = 
 {
-	GENERIC = "A tiny bird.",
-	COOP = "Home sweet coop! Hyuyu!",
+	GENERIC = "Một chú chim bé tí.",
+	COOP = "Chuồng ơi chuồng ngọt ngào! Hyuyu!",
 }
 
-WORTOX.DESCRIBE.KYNO_CHICKEN_EGG = "An egg from a chicken, or so I've heard."
-WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "A big shell for a tiny soul!"
-WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Probably a mortal thing."
+WORTOX.DESCRIBE.KYNO_CHICKEN_EGG = "Trứng từ gà, ta nghe nói thế."
+WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Cái vỏ to cho một linh hồn bé xíu!"
+WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Chắc là thứ của người phàm."
 
 WORTOX.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 {
-	GENERIC = "Still hatching.",
-	HATCHING = "Out you go!",
+	GENERIC = "Vẫn đang nở.",
+	HATCHING = "Ra ngoài nào!",
 }
 
 WORTOX.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
-	GENERIC = "A never ending supply of eggs!",
-	FULL = "Eggs galore!",
-	BURNT = "No more coop, no more cluck!",
+	GENERIC = "Nguồn trứng bất tận!",
+	FULL = "Trứng tràn trề!",
+	BURNT = "Hết chuồng, hết cục tác!",
 }
 
-WORTOX.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Hmm, I feel an odd aura from it."
+WORTOX.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Hmm, ta cảm thấy một luồng khí lạ từ nó."
 
-WORTOX.DESCRIBE.KYNO_COOKWARE_KIT = "Mortal stuff for cooking. Hyuyu!"
-WORTOX.DESCRIBE.KYNO_COOKWARE_SYRUP = "Mortals don't like raw tree insides."
-WORTOX.DESCRIBE.KYNO_COOKWARE_SYRUP_POT = "Mortals don't like raw tree insides."
-WORTOX.DESCRIBE.KYNO_COOKWARE_BIG_POT = "Mortals don't like it when you burn the things inside."
-WORTOX.DESCRIBE.KYNO_COOKWARE_BIG = "Mortals don't like it when you burn the things inside."
-WORTOX.DESCRIBE.KYNO_COOKWARE_SMALL_POT = "A little vessel for mortal food."
-WORTOX.DESCRIBE.KYNO_COOKWARE_SMALL = "A little vessel for mortal food."
-WORTOX.DESCRIBE.KYNO_COOKWARE_GRILL = "Mortals have lots of different cooking things."
-WORTOX.DESCRIBE.KYNO_COOKWARE_GRILL_ITEM = "We need to build that, yes indeed."
-WORTOX.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL = "Mortals cook stuff on it."
-WORTOX.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL_ITEM = "We need to build that, yes indeed."
-WORTOX.DESCRIBE.KYNO_COOKWARE_ELDER = "Mortals don't like raw tree insides."
-WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN_ITEM = "We need to build that, yes indeed."
-WORTOX.DESCRIBE.KYNO_COOKWARE_CASSEROLE = "I wonder how the wyrm got a taste for mortal food."
-WORTOX.DESCRIBE.KYNO_COOKWARE_SMALL_CASSEROLE = "This dish is so itty bitty!"
-WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN = "It's a thing mortals cook with."
-WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "It's a thing mortals cook with."
-WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "It's a thing mortals cook with."
+WORTOX.DESCRIBE.KYNO_COOKWARE_KIT = "Đồ phàm nhân dùng để nấu nướng. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_COOKWARE_SYRUP = "Người phàm không thích ruột cây còn sống."
+WORTOX.DESCRIBE.KYNO_COOKWARE_SYRUP_POT = "Người phàm không thích ruột cây còn sống."
+WORTOX.DESCRIBE.KYNO_COOKWARE_BIG_POT = "Người phàm không thích khi ngươi đốt cháy đồ bên trong."
+WORTOX.DESCRIBE.KYNO_COOKWARE_BIG = "Người phàm không thích khi ngươi đốt cháy đồ bên trong."
+WORTOX.DESCRIBE.KYNO_COOKWARE_SMALL_POT = "Một cái nồi nhỏ cho đồ ăn phàm nhân."
+WORTOX.DESCRIBE.KYNO_COOKWARE_SMALL = "Một cái nồi nhỏ cho đồ ăn phàm nhân."
+WORTOX.DESCRIBE.KYNO_COOKWARE_GRILL = "Người phàm có lắm thứ để nấu nướng thật."
+WORTOX.DESCRIBE.KYNO_COOKWARE_GRILL_ITEM = "Ta cần dựng nó lên, đúng vậy thật đấy."
+WORTOX.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL = "Người phàm nấu đồ trên nó."
+WORTOX.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL_ITEM = "Ta cần dựng nó lên, đúng vậy thật đấy."
+WORTOX.DESCRIBE.KYNO_COOKWARE_ELDER = "Người phàm không thích ruột cây còn sống."
+WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN_ITEM = "Ta cần dựng nó lên, đúng vậy thật đấy."
+WORTOX.DESCRIBE.KYNO_COOKWARE_CASSEROLE = "Không biết con mãng xà kia sao lại mê đồ ăn phàm nhân nhỉ."
+WORTOX.DESCRIBE.KYNO_COOKWARE_SMALL_CASSEROLE = "Cái đĩa này bé xíu xìu xiu!"
+WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN = "Một thứ người phàm dùng để nấu."
+WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Một thứ người phàm dùng để nấu."
+WORTOX.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Một thứ người phàm dùng để nấu."
 
 WORTOX.DESCRIBE.KYNO_ROCKFLIPPABLE = 
 {
-	GENERIC = "Plenty of bugs can be found under rocks.",
-	FLIPPED = "Now it's exposed.",
+	GENERIC = "Có thể tìm thấy khối bọ dưới đá.",
+	FLIPPED = "Giờ thì nó lộ ra rồi.",
 }
 
-WORTOX.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Just a crate on the water."
+WORTOX.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Chỉ là một cái thùng trên mặt nước."
 
-WORTOX.DESCRIBE.KYNO_SUGARFLY = "Pretty as the sunset."
-WORTOX.DESCRIBE.KYNO_SUGARFLYWINGS = "Fly away, sweet soul."
+WORTOX.DESCRIBE.KYNO_SUGARFLY = "Đẹp như hoàng hôn."
+WORTOX.DESCRIBE.KYNO_SUGARFLYWINGS = "Bay đi nào, linh hồn ngọt ngào."
 
-WORTOX.DESCRIBE.KYNO_WATERY_CRATE = "Just a crate on the water."
+WORTOX.DESCRIBE.KYNO_WATERY_CRATE = "Chỉ là một cái thùng trên mặt nước."
 
-WORTOX.DESCRIBE.KYNO_TUNACAN = "Fish in a can!"
-WORTOX.DESCRIBE.KYNO_TUNACAN_OPEN = "Fish in a can!"
+WORTOX.DESCRIBE.KYNO_TUNACAN = "Cá trong lon!"
+WORTOX.DESCRIBE.KYNO_TUNACAN_OPEN = "Cá trong lon!"
 
-WORTOX.DESCRIBE.KYNO_CANNEDFOOD = "Food in a can! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_CANNEDFOOD_OPEN = "Food in a can! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_CANNEDFOOD = "Đồ ăn trong lon! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_CANNEDFOOD_OPEN = "Đồ ăn trong lon! Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_POP = "I don't know exactly what is that."
+WORTOX.DESCRIBE.KYNO_POP = "Ta không biết chính xác đó là gì."
 
-WORTOX.DESCRIBE.KYNO_MYSTERYMEAT = "I'll be eating well tonight!"
+WORTOX.DESCRIBE.KYNO_MYSTERYMEAT = "Tối nay ta được ăn ngon rồi!"
 
-WORTOX.DESCRIBE.KYNO_BOTTLE_SOUL = "It looks tasty. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_BOTTLE_SOUL = "Trông ngon đấy. Hyuyu!"
 
-WORTOX.DESCRIBE.SOULSTEW = "It looks tasty. Hyuyu!"
+WORTOX.DESCRIBE.SOULSTEW = "Trông ngon đấy. Hyuyu!"
 
-WORTOX.DESCRIBE.FORTUNECOOKIE = "I'm always lucky! Hyuyu!"
+WORTOX.DESCRIBE.FORTUNECOOKIE = "Ta lúc nào cũng may mắn! Hyuyu!"
 
-WORTOX.DESCRIBE.HORNOCUPIA = "What a funny use for a horn!"
+WORTOX.DESCRIBE.HORNOCUPIA = "Dùng cái sừng kiểu này vui thật!"
 
-WORTOX.DESCRIBE.CHEESE_YELLOW = "Smelly!"
-WORTOX.DESCRIBE.CHEESE_WHITE = "This one smells worse than the yellow one! Hyuyu!"
-WORTOX.DESCRIBE.CHEESE_KOALEFANT = "Smelly!"
+WORTOX.DESCRIBE.CHEESE_YELLOW = "Nặng mùi!"
+WORTOX.DESCRIBE.CHEESE_WHITE = "Cái này còn nặng mùi hơn cái vàng! Hyuyu!"
+WORTOX.DESCRIBE.CHEESE_KOALEFANT = "Nặng mùi!"
 
-WORTOX.DESCRIBE.MILK_BOX = "It tastes good."
+WORTOX.DESCRIBE.MILK_BOX = "Vị ngon đấy."
 
-WORTOX.DESCRIBE.WATERCUP = "Just water. It seems mortals can't live without it."
+WORTOX.DESCRIBE.WATERCUP = "Chỉ là nước. Có vẻ người phàm không thể sống thiếu nó."
 
-WORTOX.DESCRIBE.HONEYJAR = "It's gooey! Hyuyu!"
+WORTOX.DESCRIBE.HONEYJAR = "Nó dẻo dính! Hyuyu!"
 
-WORTOX.DESCRIBE.CRAB_ARTICHOKE = "It looks delicious. But I can't say the same for the taste!"
+WORTOX.DESCRIBE.CRAB_ARTICHOKE = "Trông ngon đấy. Nhưng vị thì ta không dám chắc!"
 
-WORTOX.DESCRIBE.PEPPERROLLS = "I'll stuff them with toothpaste when Warly's not looking. Hyuyu!"
+WORTOX.DESCRIBE.PEPPERROLLS = "Ta sẽ nhét kem đánh răng vào khi Warly không nhìn. Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_SAPHEALER = "Sickly bitter."
+WORTOX.DESCRIBE.KYNO_SAPHEALER = "Đắng kiểu bệnh bệnh."
 
 WORTOX.DESCRIBE.KYNO_OCEAN_WRECK = 
 {
-	GENERIC = "Rest well.",
-	PICKED = "Nothing left for now.",
-	BURNING = "That seals its fate.",
+	GENERIC = "Yên nghỉ nhé.",
+	PICKED = "Giờ chẳng còn gì.",
+	BURNING = "Vậy là số phận đã định.",
 }
 
-WORTOX.DESCRIBE.KYNO_GHOST_PIRATE = "A ghostly visage! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_GHOST_PIRATE = "Một bóng ma hiện hình! Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_BUCKET_EMPTY = "Mortals use this to gather stuff."
-WORTOX.DESCRIBE.KYNO_BUCKET_METAL = "Mortals use this to gather stuff."
-WORTOX.DESCRIBE.KYNO_BUCKET_WATER = "A bucket of liquid life! Splishy splashy!"
+WORTOX.DESCRIBE.KYNO_BUCKET_EMPTY = "Người phàm dùng cái này để gom đồ."
+WORTOX.DESCRIBE.KYNO_BUCKET_METAL = "Người phàm dùng cái này để gom đồ."
+WORTOX.DESCRIBE.KYNO_BUCKET_WATER = "Một xô sự sống lỏng! Tõm tóe tõm!"
 
-WORTOX.DESCRIBE.KYNO_MILK_BEEFALO = "Please, no thanks."
-WORTOX.DESCRIBE.KYNO_MILK_KOALEFANT = "Please, no thanks."
+WORTOX.DESCRIBE.KYNO_MILK_BEEFALO = "Thôi, xin miễn."
+WORTOX.DESCRIBE.KYNO_MILK_KOALEFANT = "Thôi, xin miễn."
 
-WORTOX.DESCRIBE.KYNO_CAP_DRIED = "Dried mortal food."
+WORTOX.DESCRIBE.KYNO_CAP_DRIED = "Đồ ăn phàm nhân phơi khô."
 
-WORTOX.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Mortals like this more when it's wet."
+WORTOX.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Người phàm thích món này hơn khi nó còn ướt."
 
-WORTOX.DESCRIBE.KYNO_BREWBOOK = "Oh what shall I brew up next? Hyuyu!"
+WORTOX.DESCRIBE.KYNO_BREWBOOK = "Ôi, tiếp theo ta sẽ ủ món gì đây? Hyuyu!"
 
 WORTOX.DESCRIBE.KYNO_WOODENKEG = 
 {
-	EMPTY = "This machine makes the things that mortals likes.",
-	BREWING_LONG = "Bubbling slow, nice and low!",
-	BREWING_SHORT = "Almost done!",
-	DONE = "It's finally ready!",
-	BURNT = "Ash and gloom.",
+	EMPTY = "Cái máy này làm ra thứ người phàm thích.",
+	BREWING_LONG = "Sủi chậm rì, êm thật nhỉ!",
+	BREWING_SHORT = "Sắp xong rồi!",
+	DONE = "Cuối cùng cũng sẵn sàng!",
+	BURNT = "Tro tàn và u ám.",
 }
 
 WORTOX.DESCRIBE.KYNO_PRESERVESJAR = 
 {
-	EMPTY = "They told me this make a good thing with pomegranates. I must try!",
-	BREWING_LONG = "It is bubbling nicely.",
-	BREWING_SHORT = "Almost done, from what I can tell.",
-	DONE = "Sweet!",
-	BURNT = "Oh no, its all gone!",
+	EMPTY = "Họ bảo cái này làm món ngon với lựu. Ta phải thử!",
+	BREWING_LONG = "Nó đang sủi rất đẹp.",
+	BREWING_SHORT = "Theo ta thấy thì sắp xong rồi.",
+	DONE = "Ngọt!",
+	BURNT = "Ôi không, mất sạch rồi!",
 }
 
 WORTOX.DESCRIBE.KYNO_ANTCHEST = 
 {
-	GENERIC = "Making the sweet honey!",
-	HONEY = "Its full of honey! What a show!",
-	NECTAR = "Not ready yet?",
-	BURNING = "No more honey making now.",
+	GENERIC = "Đang làm mật ngọt!",
+	HONEY = "Đầy mật rồi! Xem kìa!",
+	NECTAR = "Chưa sẵn sàng sao?",
+	BURNING = "Giờ hết làm mật rồi.",
 }
 
-WORTOX.DESCRIBE.KYNO_NECTAR_POD = "Sweet, sweet, nectar from bees!"
+WORTOX.DESCRIBE.KYNO_NECTAR_POD = "Mật hoa ngọt, thật ngọt từ ong!"
 
-WORTOX.DESCRIBE.KYNO_OAKTREE_POD = "Plantable and growable tree mechanism."
-WORTOX.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Grub."
+WORTOX.DESCRIBE.KYNO_OAKTREE_POD = "Cơ chế cây có thể trồng và lớn."
+WORTOX.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Đồ ăn."
 
-WORTOX.DESCRIBE.KYNO_PIKO = "I see, you like doing some pranks like me! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_PIKO_ORANGE = "Useful for making teas!"
+WORTOX.DESCRIBE.KYNO_PIKO = "Ra vậy, ngươi cũng thích bày trò như ta! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_PIKO_ORANGE = "Hữu ích để pha trà!"
 
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
 {
-	GENERIC = "You look nice!",
-	CHOPPED = "Stripped of all it had to give.",
-	BURNING = "That's unfortunate.",
-	BURNT = "Nothing left now.",
+	GENERIC = "Trông ngươi được đấy!",
+	CHOPPED = "Bị lột sạch mọi thứ có thể cho đi.",
+	BURNING = "Thật không may.",
+	BURNT = "Giờ chẳng còn gì.",
 }
 
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
 {
-	GENERIC = "You look nice!",
-	BURNING = "Flee if you value your life.",
+	GENERIC = "Trông ngươi được đấy!",
+	BURNING = "Muốn giữ mạng thì chạy đi.",
 }
 
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "There's be a crate."
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Có một cái thùng đây."
 
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
 {
-	GENERIC = "A stinky structure, to be sure.",
-	BURNT = "Ashes and smoke.",
+	GENERIC = "Một công trình hôi hám, chắc chắn rồi.",
+	BURNT = "Tro và khói.",
 }
 
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
 {
-	GENERIC = "They smell worse than me!",
-	CRAFTED = "Spruced up, nice!",
-	BURNT = "Burnt and foul.",
+	GENERIC = "Chúng còn hôi hơn ta!",
+	CRAFTED = "Được tân trang rồi, đẹp đấy!",
+	BURNT = "Cháy khét và hôi.",
 }
 
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
 {
-	GENERIC = "Me and Sammy went through a lot of places to get these items!",
-	OCCUPIED = "No trading right now.",
+	GENERIC = "Ta và Sammy đã đi qua rất nhiều nơi để lấy mấy món này!",
+	OCCUPIED = "Giờ chưa trao đổi được.",
 }
 
 WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
 {
-	GENERIC = "I hid a little thing in there. Hyuyu!",
-	EMPTY = "No goodies left.",
+	GENERIC = "Ta giấu một thứ nhỏ nhỏ trong đó. Hyuyu!",
+	EMPTY = "Hết đồ ngon rồi.",
 }
 
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Don't tell anyone I brought you here!"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_POND = "I see my future..."
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Hey! I'm gazing here!"
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SANDHILL = "Sandy and Junior."
-WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMFISHER = "At least he's catching fish for me, Hyuyu!"
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Đừng nói với ai là ta đưa ngươi tới đây nhé!"
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_POND = "Ta thấy tương lai của mình..."
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Này! Ta đang ngắm mà!"
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_SANDHILL = "Sandy và Junior."
+WORTOX.DESCRIBE.KYNO_MEADOWISLAND_MERMFISHER = "Ít nhất hắn cũng đang bắt cá cho ta, Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_SAMMYHAT = "It smells like fish."
+WORTOX.DESCRIBE.KYNO_SAMMYHAT = "Nó có mùi cá."
 
-WORTOX.DESCRIBE.KINGFISHER = "Big bill!"
+WORTOX.DESCRIBE.KINGFISHER = "Mỏ to!"
 
-WORTOX.DESCRIBE.TOUCAN = "Your name wouldn't be Sam, would it?"
-WORTOX.DESCRIBE.TOUCAN_CHUBBY = "Your name wouldn't be Sam, would it?"
+WORTOX.DESCRIBE.TOUCAN = "Tên ngươi không phải Sam chứ?"
+WORTOX.DESCRIBE.TOUCAN_CHUBBY = "Tên ngươi không phải Sam chứ?"
 
-WORTOX.DESCRIBE.WETGOOP2 = "How repulsive. Hyuyu!"
+WORTOX.DESCRIBE.WETGOOP2 = "Kinh tởm làm sao. Hyuyu!"
 
-WORTOX.DESCRIBE.BEER = "Why do mortals like that so much?"
+WORTOX.DESCRIBE.BEER = "Sao người phàm lại thích thứ đó đến vậy?"
 
-WORTOX.DESCRIBE.PALEALE = "Why do mortals like that so much?"
+WORTOX.DESCRIBE.PALEALE = "Sao người phàm lại thích thứ đó đến vậy?"
 
-WORTOX.DESCRIBE.TEAGREEN = "A little sip will do the trick."
+WORTOX.DESCRIBE.TEAGREEN = "Một ngụm nhỏ là đủ hiệu nghiệm."
 
-WORTOX.DESCRIBE.TEARED = "A little sip will do the trick."
+WORTOX.DESCRIBE.TEARED = "Một ngụm nhỏ là đủ hiệu nghiệm."
 
-WORTOX.DESCRIBE.MEAD = "Funny taste! Hyuyu!"
+WORTOX.DESCRIBE.MEAD = "Vị buồn cười! Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_JELLY = "Oh no, it's in my fur."
+WORTOX.DESCRIBE.KYNO_JELLY = "Ôi không, nó dính vào lông ta rồi."
 
-WORTOX.DESCRIBE.KYNO_MAYONNAISE = "Yum!"
+WORTOX.DESCRIBE.KYNO_MAYONNAISE = "Ngon!"
 
-WORTOX.DESCRIBE.TARTARSAUCE = "I like it! Hyuyu!"
+WORTOX.DESCRIBE.TARTARSAUCE = "Ta thích nó! Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_PICKLES = "Humm... so they're made of their own?"
+WORTOX.DESCRIBE.KYNO_PICKLES = "Humm... vậy là chúng tự làm từ chính mình sao?"
 
-WORTOX.DESCRIBE.KYNO_WINE = "Funny and bitter drink. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_WINE = "Đồ uống buồn cười và đắng. Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_JUICE = "It's very refreshing!"
+WORTOX.DESCRIBE.KYNO_JUICE = "Rất sảng khoái!"
 
-WORTOX.DESCRIBE.KYNO_POISON_FROGLEGS = "Toxins!"
-WORTOX.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "There's a joke around it. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_POISON_FROGLEGS = "Độc tố!"
+WORTOX.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "Có trò đùa quanh món này đấy. Hyuyu!"
 
-WORTOX.DESCRIBE.POISONFROGGLEBUNWICH = "Mortals are weird."
+WORTOX.DESCRIBE.POISONFROGGLEBUNWICH = "Người phàm thật kỳ quặc."
 
-WORTOX.DESCRIBE.KYNO_BREWINGRECIPECARD = "How mysterious, the card is blank!"
+WORTOX.DESCRIBE.KYNO_BREWINGRECIPECARD = "Bí ẩn làm sao, tấm thẻ trống trơn!"
 
-WORTOX.DESCRIBE.KYNO_OIL = "A food-maker ingredient!"
+WORTOX.DESCRIBE.KYNO_OIL = "Nguyên liệu làm đồ ăn!"
 
-WORTOX.DESCRIBE.BERRYSUNDAE = "I could probably stomach that."
+WORTOX.DESCRIBE.BERRYSUNDAE = "Chắc ta nuốt nổi món đó."
 
-WORTOX.DESCRIBE.CHOCOLATE_BLACK = "A common mortal dessert. Hyuyu!"
-WORTOX.DESCRIBE.CHOCOLATE_WHITE = "A common mortal dessert. Hyuyu!"
+WORTOX.DESCRIBE.CHOCOLATE_BLACK = "Một món tráng miệng phàm nhân phổ biến. Hyuyu!"
+WORTOX.DESCRIBE.CHOCOLATE_WHITE = "Một món tráng miệng phàm nhân phổ biến. Hyuyu!"
 
-WORTOX.DESCRIBE.TRICOLORDANGO = "Looks like a dessert to me."
+WORTOX.DESCRIBE.TRICOLORDANGO = "Trông giống món tráng miệng với ta."
  
-WORTOX.DESCRIBE.FRIESFRENCH = "Mortal junk food. Hyuyu!"
+WORTOX.DESCRIBE.FRIESFRENCH = "Đồ ăn vặt phàm nhân. Hyuyu!"
 
-WORTOX.DESCRIBE.PIRATERUM = "No mortal could resist to know what is inside! Hyuyu!"
+WORTOX.DESCRIBE.PIRATERUM = "Chẳng người phàm nào cưỡng lại nổi việc muốn biết bên trong có gì! Hyuyu!"
 
-WORTOX.DESCRIBE.TWISTEDTEQUILA = "Mortal's cocktail. Made with blue plants."
+WORTOX.DESCRIBE.TWISTEDTEQUILA = "Cocktail của người phàm. Làm từ cây xanh."
 
-WORTOX.DESCRIBE.ONIONRINGS = "I wonder if its that good as they say."
+WORTOX.DESCRIBE.ONIONRINGS = "Không biết nó có ngon như lời đồn không."
 
-WORTOX.DESCRIBE.DONUTS = "Mortals seems to like this one in particularly."
-WORTOX.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Mortals seems to like this one in particularly."
-WORTOX.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Mortals seems to like this one in particularly."
+WORTOX.DESCRIBE.DONUTS = "Có vẻ người phàm đặc biệt thích món này."
+WORTOX.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Có vẻ người phàm đặc biệt thích món này."
+WORTOX.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Có vẻ người phàm đặc biệt thích món này."
  
-WORTOX.DESCRIBE.CINNAMONROLL = "Sweet bun. Hyuyu!"
+WORTOX.DESCRIBE.CINNAMONROLL = "Bánh cuộn ngọt. Hyuyu!"
 
-WORTOX.DESCRIBE.GUMMYBEARGERS = "Wonder if it comes with a little prank?"
+WORTOX.DESCRIBE.GUMMYBEARGERS = "Không biết có kèm trò đùa nhỏ nào không?"
 
-WORTOX.DESCRIBE.PRETZEL = "Crunchy!"
+WORTOX.DESCRIBE.PRETZEL = "Giòn!"
 
-WORTOX.DESCRIBE.CORNINCUP = "I don't like many mortal foods."
+WORTOX.DESCRIBE.CORNINCUP = "Ta không thích nhiều món phàm nhân lắm."
 
-WORTOX.DESCRIBE.COTTONCANDY = "This mortal food, sounds a bit funny. Hyuyu!"
+WORTOX.DESCRIBE.COTTONCANDY = "Món phàm nhân này nghe hơi buồn cười. Hyuyu!"
 
-WORTOX.DESCRIBE.ROASTEDHAZELNUTS = "I can make many puns with this!"
+WORTOX.DESCRIBE.ROASTEDHAZELNUTS = "Ta có thể chơi chữ được khối với món này!"
 
-WORTOX.DESCRIBE.MONSTERMUFFIN = "I see no warm in this muffin."
+WORTOX.DESCRIBE.MONSTERMUFFIN = "Ta chẳng thấy ấm áp gì trong cái muffin này."
 
-WORTOX.DESCRIBE.PINKCAKE = "Why do mortals always eat those when celebrating their own birthday?"
+WORTOX.DESCRIBE.PINKCAKE = "Sao người phàm cứ ăn mấy thứ này khi mừng sinh nhật của chính họ nhỉ?"
 
-WORTOX.DESCRIBE.CHIPSBAG = "It's so crunchy! Hyuyu!"
+WORTOX.DESCRIBE.CHIPSBAG = "Giòn rụm thật! Hyuyu!"
 
-WORTOX.DESCRIBE.LITTLEBREAD = "Mortal food looks like this?"
+WORTOX.DESCRIBE.LITTLEBREAD = "Đồ ăn phàm nhân trông thế này sao?"
 
-WORTOX.DESCRIBE.HOTHOUND = "Do you like the name I gave to it? Sounds funny to me."
+WORTOX.DESCRIBE.HOTHOUND = "Ngươi thích cái tên ta đặt cho nó không? Ta thấy nghe vui đấy."
 
-WORTOX.DESCRIBE.MILKSHAKE = "This is surely a peculiar beverage."
-WORTOX.DESCRIBE.MILKSHAKE_PRISMATIC = "This is surely a peculiar beverage."
+WORTOX.DESCRIBE.MILKSHAKE = "Đây chắc chắn là một món uống kỳ lạ."
+WORTOX.DESCRIBE.MILKSHAKE_PRISMATIC = "Đây chắc chắn là một món uống kỳ lạ."
 
-WORTOX.DESCRIBE.NACHOS = "That cheese dip looks good, enough..."
+WORTOX.DESCRIBE.NACHOS = "Nước chấm phô mai đó trông cũng được..."
 
-WORTOX.DESCRIBE.BANANA_PUDDING = "Its just a bunch of bananas!"
+WORTOX.DESCRIBE.BANANA_PUDDING = "Chỉ là cả đống chuối thôi!"
 
-WORTOX.DESCRIBE.SEA_PUDDING = "Its just a bunch of fishes!"
+WORTOX.DESCRIBE.SEA_PUDDING = "Chỉ là cả đống cá thôi!"
 
-WORTOX.DESCRIBE.TOM_KHA_SOUP = "Vegetables throwed together in a bowl."
+WORTOX.DESCRIBE.TOM_KHA_SOUP = "Rau củ bị ném chung vào một cái bát."
 
-WORTOX.DESCRIBE.MINERTREAT = "What a funny and curious mortal food! Hyuyu!"
+WORTOX.DESCRIBE.MINERTREAT = "Một món phàm nhân thật buồn cười và tò mò! Hyuyu!"
 
-WORTOX.DESCRIBE.RADISHSALAD = "I don't really like eating."
+WORTOX.DESCRIBE.RADISHSALAD = "Ta thật sự không thích ăn uống lắm."
 
-WORTOX.DESCRIBE.PUMPKIN_SOUP = "Delightful snack."
+WORTOX.DESCRIBE.PUMPKIN_SOUP = "Món ăn nhẹ tuyệt hảo."
 
-WORTOX.DESCRIBE.ALGAE_SOUP = "Delightful snack."
+WORTOX.DESCRIBE.ALGAE_SOUP = "Món ăn nhẹ tuyệt hảo."
 
-WORTOX.DESCRIBE.PARZNIP_SOUP = "Delightful snack."
+WORTOX.DESCRIBE.PARZNIP_SOUP = "Món ăn nhẹ tuyệt hảo."
 
-WORTOX.DESCRIBE.NETTLEMEATED = "A bit of this meat will clear it!"
+WORTOX.DESCRIBE.NETTLEMEATED = "Một chút thịt này sẽ làm thông thoáng ngay!"
 
-WORTOX.DESCRIBE.KYNO_SUGAR = "Yum!"
+WORTOX.DESCRIBE.KYNO_SUGAR = "Ngon!"
 
-WORTOX.DESCRIBE.KYNO_BOTTLECAP = "They were all over the place there!"
+WORTOX.DESCRIBE.KYNO_BOTTLECAP = "Chúng nằm rải rác khắp nơi ở đó!"
 
-WORTOX.DESCRIBE.NUKACOLA = "Did you like the recipe I brought from there?"
-WORTOX.DESCRIBE.NUKACOLA_QUANTUM = "Did you like the recipe I brought from there?"
+WORTOX.DESCRIBE.NUKACOLA = "Ngươi thích công thức ta mang từ nơi đó về chứ?"
+WORTOX.DESCRIBE.NUKACOLA_QUANTUM = "Ngươi thích công thức ta mang từ nơi đó về chứ?"
 
-WORTOX.DESCRIBE.LIVINGSANDWICH = "That's a bun a mortal cannot handle! Hyuyu!"
+WORTOX.DESCRIBE.LIVINGSANDWICH = "Đó là ổ bánh mà người phàm không kham nổi! Hyuyu!"
 
-WORTOX.DESCRIBE.DURIANSPLIT = "I could probably stomach that."
+WORTOX.DESCRIBE.DURIANSPLIT = "Chắc ta nuốt nổi món đó."
 
-WORTOX.DESCRIBE.DURIANSOUP = "A hearty brew."
+WORTOX.DESCRIBE.DURIANSOUP = "Một nồi nước hầm đậm đà."
 
-WORTOX.DESCRIBE.DURIANMEATED = "I love a good stinky food!"
+WORTOX.DESCRIBE.DURIANMEATED = "Ta thích đồ ăn hôi ngon lành!"
 
-WORTOX.DESCRIBE.DURIANCHICKEN = "A very hearty mortal feast."
+WORTOX.DESCRIBE.DURIANCHICKEN = "Một bữa tiệc phàm nhân rất thịnh soạn."
 
-WORTOX.DESCRIBE.LUNARSOUP = "A strange soup, indeed."
+WORTOX.DESCRIBE.LUNARSOUP = "Đúng là một món súp kỳ lạ."
 
-WORTOX.DESCRIBE.PURPLEWOBSTERSOUP = "Its smelly."
+WORTOX.DESCRIBE.PURPLEWOBSTERSOUP = "Nó hôi đấy."
 
-WORTOX.DESCRIBE.WOBSTERMONSTER = "A fine prank! Hyuyu!"
+WORTOX.DESCRIBE.WOBSTERMONSTER = "Một trò đùa tuyệt hảo! Hyuyu!"
 
-WORTOX.DESCRIBE.SPIDERCAKE = "Wilson's most sane food prank! Hyuyu!"
+WORTOX.DESCRIBE.SPIDERCAKE = "Trò đùa đồ ăn tỉnh táo nhất của Wilson! Hyuyu!"
 
-WORTOX.DESCRIBE.SUGARBOMBS = "A little explosion!"
+WORTOX.DESCRIBE.SUGARBOMBS = "Một vụ nổ nhỏ!"
 
-WORTOX.DESCRIBE.BERRYBOMBS = "Oh no, it's in my fur."
+WORTOX.DESCRIBE.BERRYBOMBS = "Ôi không, nó dính vào lông ta rồi."
 
-WORTOX.DESCRIBE.ONIGIRIS = "Milled grains."
+WORTOX.DESCRIBE.ONIGIRIS = "Ngũ cốc đã xay."
 
-WORTOX.DESCRIBE.OMURICE = "I've seen that writing before, in one of my many travels! Hyuyu!"
+WORTOX.DESCRIBE.OMURICE = "Ta từng thấy kiểu chữ đó rồi, trong một chuyến đi nào đó của ta! Hyuyu!"
 
-WORTOX.DESCRIBE.PAELLA = "I heard its a pretty popular dish somewhere."
+WORTOX.DESCRIBE.PAELLA = "Ta nghe nói đây là món khá nổi tiếng ở đâu đó."
 
-WORTOX.DESCRIBE.RISOTTO = "Tastes very funny, but not enough, like souls. Hyuyu!"
+WORTOX.DESCRIBE.RISOTTO = "Vị rất buồn cười, nhưng vẫn chưa đủ, như linh hồn. Hyuyu!"
 
-WORTOX.DESCRIBE.RICESAKE = "Funny drink. Hyuyu!"
+WORTOX.DESCRIBE.RICESAKE = "Đồ uống buồn cười. Hyuyu!"
 
-WORTOX.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Silly fruit bush. Hyuyu!"
+WORTOX.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Bụi trái cây ngốc nghếch. Hyuyu!"
 
 WORTOX.DESCRIBE.KYNO_PINEAPPLEBUSH = 
 {
-	GENERIC = "Silly fruit. Hyuyu!",
-	PICKED = "Nothing to take right now.",
-	WITHERED = "It can't survive like this.",
-	BURNING = "That's unfortunate.",
+	GENERIC = "Trái cây ngốc nghếch. Hyuyu!",
+	PICKED = "Giờ không có gì để lấy.",
+	WITHERED = "Nó không sống nổi thế này đâu.",
+	BURNING = "Thật không may.",
 }
 
-WORTOX.DESCRIBE.KYNO_PINEAPPLE = "Silly fruit."
-WORTOX.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Silly fruit."
-WORTOX.DESCRIBE.KYNO_PINEAPPLE_COOKED = "Silly fruit."
+WORTOX.DESCRIBE.KYNO_PINEAPPLE = "Trái cây ngốc nghếch."
+WORTOX.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Trái cây ngốc nghếch."
+WORTOX.DESCRIBE.KYNO_PINEAPPLE_COOKED = "Trái cây ngốc nghếch."
 
-WORTOX.DESCRIBE.PIZZA_TROPICAL = "Silly mortals, how they've changed you."
+WORTOX.DESCRIBE.PIZZA_TROPICAL = "Người phàm ngốc nghếch, họ đã biến ngươi thành thế này."
 
-WORTOX.DESCRIBE.PINACOLADA = "I must admit, its very good and refreshing."
+WORTOX.DESCRIBE.PINACOLADA = "Ta phải thừa nhận, nó rất ngon và sảng khoái."
 
-WORTOX.DESCRIBE.CHIMAS = "A strange drink! Hyuyu!"
+WORTOX.DESCRIBE.CHIMAS = "Một món uống kỳ lạ! Hyuyu!"
 
 WORTOX.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
 {
-	OFF = "Relief for the plants.",
-	ON = "Its working nicely.",
+	OFF = "Cứu cánh cho cây cối.",
+	ON = "Nó hoạt động ngon lành.",
 }
 
-WORTOX.DESCRIBE.KYNO_FOODSACK = "For storing foods only."
+WORTOX.DESCRIBE.KYNO_FOODSACK = "Chỉ dùng để đựng đồ ăn."
 
-WORTOX.DESCRIBE.GUMMYWORMS = "They got a silly taste."
+WORTOX.DESCRIBE.GUMMYWORMS = "Chúng có vị ngốc nghếch."
 
-WORTOX.DESCRIBE.SMORES = "A silly mortal food."
+WORTOX.DESCRIBE.SMORES = "Một món phàm nhân ngốc nghếch."
 
-WORTOX.DESCRIBE.NUKASHINE = "It was a little trick to get this one! I should go back to Appalachia sometimes. Hyuyu!"
+WORTOX.DESCRIBE.NUKASHINE = "Ta đã phải dùng mẹo nhỏ để lấy món này! Thỉnh thoảng ta nên quay lại Appalachia. Hyuyu!"
 
-WORTOX.DESCRIBE.ANTSLOG = "Next time Maxwell eat this, I should replace it with real ants. Hyuyu!"
+WORTOX.DESCRIBE.ANTSLOG = "Lần tới Maxwell ăn món này, ta nên đổi thành kiến thật. Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_WORM_BONE = "A treasure from the worm."
+WORTOX.DESCRIBE.KYNO_WORM_BONE = "Một báu vật từ con sâu."
 
-WORTOX.DESCRIBE.SPOOKY_BRAIN_NOODLES = "Mindfulness."
-WORTOX.DESCRIBE.SPOOKY_BURGERZILLA = "Oh! I can't tell them, but its actually a living creature!"
-WORTOX.DESCRIBE.SPOOKY_DEADBREAD = "Just another common bread."
-WORTOX.DESCRIBE.SPOOKY_JELLYBEANS = "What if I change them to real eyeballs next time...?"
-WORTOX.DESCRIBE.SPOOKY_POPSICLE = "This mortal food is quite strange."
-WORTOX.DESCRIBE.SPOOKY_PUMPKINCREAM = "Odd."
-WORTOX.DESCRIBE.SPOOKY_SKULLCANDY = "I thought these were for musical purposes!"
-WORTOX.DESCRIBE.SPOOKY_TACODILE = "Don't worry. It will not escape through my portal."
+WORTOX.DESCRIBE.SPOOKY_BRAIN_NOODLES = "Tâm trí tĩnh tại."
+WORTOX.DESCRIBE.SPOOKY_BURGERZILLA = "Ồ! Ta không thể nói với họ, nhưng nó thật ra là sinh vật sống!"
+WORTOX.DESCRIBE.SPOOKY_DEADBREAD = "Chỉ là một ổ bánh mì bình thường khác."
+WORTOX.DESCRIBE.SPOOKY_JELLYBEANS = "Nếu lần sau ta đổi chúng thành nhãn cầu thật thì sao...?"
+WORTOX.DESCRIBE.SPOOKY_POPSICLE = "Món phàm nhân này khá kỳ lạ."
+WORTOX.DESCRIBE.SPOOKY_PUMPKINCREAM = "Kỳ quặc."
+WORTOX.DESCRIBE.SPOOKY_SKULLCANDY = "Ta tưởng mấy thứ này dùng cho âm nhạc chứ!"
+WORTOX.DESCRIBE.SPOOKY_TACODILE = "Đừng lo. Nó sẽ không thoát qua cổng của ta đâu."
 
-WORTOX.DESCRIBE.BUTTER_BEEFALO = "It is really butter."
-WORTOX.DESCRIBE.BUTTER_GOAT = "It is really butter from goats."
-WORTOX.DESCRIBE.BUTTER_KOALEFANT = "That beast have some nice uses! Hyuyu!"
+WORTOX.DESCRIBE.BUTTER_BEEFALO = "Nó đúng là bơ."
+WORTOX.DESCRIBE.BUTTER_GOAT = "Nó đúng là bơ từ dê."
+WORTOX.DESCRIBE.BUTTER_KOALEFANT = "Con thú đó có vài công dụng hay đấy! Hyuyu!"
 
-WORTOX.DESCRIBE.SPICE_CURE = "A clever technique."
-WORTOX.DESCRIBE.SPICE_COLD = "Is it winter already?"
-WORTOX.DESCRIBE.SPICE_FIRE = "Humans needs to be cautious about it! Hyuyu!"
-WORTOX.DESCRIBE.SPICE_FED = "Just more hunger to burn!"
-WORTOX.DESCRIBE.SPICE_MIND = "Relaxing powder!"
+WORTOX.DESCRIBE.SPICE_CURE = "Một kỹ thuật thông minh."
+WORTOX.DESCRIBE.SPICE_COLD = "Đã tới mùa đông rồi sao?"
+WORTOX.DESCRIBE.SPICE_FIRE = "Con người cần cẩn thận với nó đấy! Hyuyu!"
+WORTOX.DESCRIBE.SPICE_FED = "Chỉ thêm cơn đói để đốt thôi!"
+WORTOX.DESCRIBE.SPICE_MIND = "Bột thư giãn!"
 
-WORTOX.DESCRIBE.SUGARFLYMUFFIN = "Muffin to see here, my dear."
+WORTOX.DESCRIBE.SUGARFLYMUFFIN = "Không có muffin gì để xem đâu, bạn hiền."
 
-WORTOX.DESCRIBE.EELTACOS = "More mortal food."
+WORTOX.DESCRIBE.EELTACOS = "Lại đồ ăn phàm nhân."
 
-WORTOX.DESCRIBE.MEATSKILLET = "Mortal food."
+WORTOX.DESCRIBE.MEATSKILLET = "Đồ ăn phàm nhân."
 
-WORTOX.DESCRIBE.MEATWALTZ = "She will learn, eventually."
+WORTOX.DESCRIBE.MEATWALTZ = "Rồi cô ấy sẽ học được thôi."
 
-WORTOX.DESCRIBE.COMPLETEBREAKFAST = "His stomach must be twice as big as mine! Hyuyu!"
+WORTOX.DESCRIBE.COMPLETEBREAKFAST = "Bao tử của hắn chắc to gấp đôi của ta! Hyuyu!"
 
-WORTOX.DESCRIBE.DUMPLINGS = "An old mortal food."
+WORTOX.DESCRIBE.DUMPLINGS = "Một món phàm nhân xưa cũ."
 
-WORTOX.DESCRIBE.WARLYICEDTEA = "Relief to be sure."
+WORTOX.DESCRIBE.WARLYICEDTEA = "Đúng là nhẹ cả người."
 
-WORTOX.DESCRIBE.WARLYTEA = "Ah, a fine brew."
+WORTOX.DESCRIBE.WARLYTEA = "À, một ấm trà ngon."
 
-WORTOX.DESCRIBE.KYNO_TEALEAF = "Its for making tea."
+WORTOX.DESCRIBE.KYNO_TEALEAF = "Nó dùng để pha trà."
 
-WORTOX.DESCRIBE.KYNO_ITEMSLICER = "Kitchen utensil."
-WORTOX.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Chef's kitchen utensil."
+WORTOX.DESCRIBE.KYNO_ITEMSLICER = "Dụng cụ nhà bếp."
+WORTOX.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Dụng cụ nhà bếp của đầu bếp."
 
-WORTOX.DESCRIBE.COXINHA = "Chicken snacks!"
+WORTOX.DESCRIBE.COXINHA = "Đồ ăn vặt từ gà!"
 
-WORTOX.DESCRIBE.LAZYDESSERT = "This is going to be one of the best pranks ever! Hyuyu!"
+WORTOX.DESCRIBE.LAZYDESSERT = "Đây sẽ là một trong những trò đùa hay nhất từ trước tới giờ! Hyuyu!"
 
-WORTOX.DESCRIBE.CRABKINGFEAST = "I can't almost fit it in my mouth!"
+WORTOX.DESCRIBE.CRABKINGFEAST = "Ta suýt không nhét vừa vào miệng!"
 
-WORTOX.DESCRIBE.PIENAPPLE = "A pie! And its all mine! Hyuyu!"
+WORTOX.DESCRIBE.PIENAPPLE = "Một cái bánh! Và nó hoàn toàn là của ta! Hyuyu!"
 
-WORTOX.DESCRIBE.JAWSBREAKER = "I don't think my mouth can handle it."
+WORTOX.DESCRIBE.JAWSBREAKER = "Ta không nghĩ miệng mình chịu nổi nó."
 
-WORTOX.DESCRIBE.AVOCADOTOAST = "Doesn't fill my stomach too much."
+WORTOX.DESCRIBE.AVOCADOTOAST = "Không làm đầy bao tử ta được mấy."
 
-WORTOX.DESCRIBE.RICEPUDDING = "Milk makes everything better."
+WORTOX.DESCRIBE.RICEPUDDING = "Sữa làm mọi thứ ngon hơn."
 
-WORTOX.DESCRIBE.SHARKSUSHI = "They say have been saying this is top quality meal."
+WORTOX.DESCRIBE.SHARKSUSHI = "Nghe nói người ta cứ bảo đây là bữa ăn thượng hạng."
 
-WORTOX.DESCRIBE.WOBSTERBREADED = "Looks like dinner to me."
+WORTOX.DESCRIBE.WOBSTERBREADED = "Trông như bữa tối của ta."
 
-WORTOX.DESCRIBE.LAZYPURRITO = "Do I have to make eight more of these?"
+WORTOX.DESCRIBE.LAZYPURRITO = "Ta có phải làm thêm tám cái nữa không?"
 
-WORTOX.DESCRIBE.HORCHATA = "My paws are freezing!"
+WORTOX.DESCRIBE.HORCHATA = "Móng vuốt ta đông cứng rồi!"
 
-WORTOX.DESCRIBE.WOBSTERCOCKTAIL = "Its bright red like me!"
+WORTOX.DESCRIBE.WOBSTERCOCKTAIL = "Nó đỏ rực như ta!"
 
-WORTOX.DESCRIBE.LAVAEEGGBOILED = "My paws are burning! Hyuyu!"
+WORTOX.DESCRIBE.LAVAEEGGBOILED = "Móng vuốt ta đang cháy! Hyuyu!"
 
-WORTOX.DESCRIBE.POMEGRANATETEA = "My favorite mortal drink!"
+WORTOX.DESCRIBE.POMEGRANATETEA = "Món uống phàm nhân yêu thích của ta!"
 
-WORTOX.DESCRIBE.TIRAMISU = "Coffee in a nice bowl."
+WORTOX.DESCRIBE.TIRAMISU = "Cà phê trong một cái bát xinh."
 
-WORTOX.DESCRIBE.TOADSTOOLCOLA = "Froggy!"
+WORTOX.DESCRIBE.TOADSTOOLCOLA = "Ếch ộp!"
 
-WORTOX.DESCRIBE.TEPACHE = "Pineapple juice in a cask."
+WORTOX.DESCRIBE.TEPACHE = "Nước dứa trong thùng."
 
-WORTOX.DESCRIBE.LUNARTEQUILA = "It has quite the side effect."
+WORTOX.DESCRIBE.LUNARTEQUILA = "Nó có tác dụng phụ khá mạnh."
 
-WORTOX.DESCRIBE.MIMICMOSA = "Perfect for setting up tricks! Hyuyu!"
+WORTOX.DESCRIBE.MIMICMOSA = "Hoàn hảo để bày trò! Hyuyu!"
 
-WORTOX.DESCRIBE.POMEGRANATEPIE = "One of my favorite mortal foods!"
+WORTOX.DESCRIBE.POMEGRANATEPIE = "Một trong những món phàm nhân yêu thích của ta!"
 
-WORTOX.DESCRIBE.PINEAPPLECAKE = "I wish I could have a pomegranate cake."
+WORTOX.DESCRIBE.PINEAPPLECAKE = "Ước gì ta có một cái bánh lựu."
 
-WORTOX.DESCRIBE.PASTY_MEAT = "Sounds like lunch."
-WORTOX.DESCRIBE.PASTY_CHEESE = "Sounds like lunch."
+WORTOX.DESCRIBE.PASTY_MEAT = "Nghe như bữa trưa."
+WORTOX.DESCRIBE.PASTY_CHEESE = "Nghe như bữa trưa."
 
-WORTOX.DESCRIBE.BRIGADEIRO = "I'm craving it a little bit."
+WORTOX.DESCRIBE.BRIGADEIRO = "Ta hơi thèm nó rồi."
 
-WORTOX.DESCRIBE.REGULARLASAGNA = "Pungent pasta."
+WORTOX.DESCRIBE.REGULARLASAGNA = "Mì ống nặng mùi."
 
-WORTOX.DESCRIBE.FLTSANDWICH = "Its made with lunar frog meat."
+WORTOX.DESCRIBE.FLTSANDWICH = "Nó được làm từ thịt ếch mặt trăng."
 
-WORTOX.DESCRIBE.RICEANDBEANS = "Mortal food."
+WORTOX.DESCRIBE.RICEANDBEANS = "Đồ ăn phàm nhân."
 
 WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 {
-	GENERIC = "A shop in shambles!",
-	REPAIRED = "All fixed up and dreadfully tidy!",
-	OCCUPIED = "The piggy snoozes in his little den.",
-	OCCUPIED_REPAIRED = "The merchant dreams while moonbeams gleam!",
+	GENERIC = "Một cửa hàng tan hoang!",
+	REPAIRED = "Đã sửa xong và gọn gàng đến phát sợ!",
+	OCCUPIED = "Chú heo nhỏ đang ngủ trong hang của mình.",
+	OCCUPIED_REPAIRED = "Thương nhân mơ màng dưới ánh trăng lung linh!",
 }
 
 WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
-	GENERIC = "Hidden, but not from me! Hyuyu!",
-	PICKED = "Nothing left for now.",
-	BURNING = "That's unfortunate.",
+	GENERIC = "Ẩn rồi, nhưng không thoát khỏi ta! Hyuyu!",
+	PICKED = "Giờ chẳng còn gì.",
+	BURNING = "Thật không may.",
 }
 
-WORTOX.DESCRIBE.KYNO_TRUFFLES = "Oho! A treat from below!"
-WORTOX.DESCRIBE.KYNO_TRUFFLES_COOKED = "Sizzle and pop, now they're top!"
+WORTOX.DESCRIBE.KYNO_TRUFFLES = "Ô hô! Một món ngon từ lòng đất!"
+WORTOX.DESCRIBE.KYNO_TRUFFLES_COOKED = "Xèo xèo bốp bốp, giờ ngon hết chóp!"
 
 WORTOX.DESCRIBE.KYNO_ITEMSHOWCASER = 
 {
-	EMPTY = "Nothing in there yet.",
-	FULL = "A feast for the eyes, hyuyu!",
+	EMPTY = "Trong đó chưa có gì.",
+	FULL = "Một bữa tiệc cho đôi mắt, hyuyu!",
 }
 
-WORTOX.DESCRIBE.KYNO_SPORECAP = "Oh, what a blighted delight!"
-WORTOX.DESCRIBE.KYNO_SPORECAP_COOKED = "Toasted and tainted! What a combo!"
+WORTOX.DESCRIBE.KYNO_SPORECAP = "Ôi, một niềm vui tàn lụi!"
+WORTOX.DESCRIBE.KYNO_SPORECAP_COOKED = "Nướng chín mà vẫn độc! Kết hợp hay đấy!"
 
-WORTOX.DESCRIBE.KYNO_SPORECAP_DARK = "Hehe! A poisonous little prank!"
-WORTOX.DESCRIBE.KYNO_SPORECAP_DARK_COOKED = "Oh ho! A meal of mischief!"
+WORTOX.DESCRIBE.KYNO_SPORECAP_DARK = "Hehe! Một trò đùa độc nhỏ xinh!"
+WORTOX.DESCRIBE.KYNO_SPORECAP_DARK_COOKED = "Ô hô! Một bữa ăn đầy tinh quái!"
 
-WORTOX.DESCRIBE.KYNO_GOLDENAPPLE = "I have seen this in another dimension made out of blocks!"
+WORTOX.DESCRIBE.KYNO_GOLDENAPPLE = "Ta từng thấy nó ở một chiều không gian làm bằng khối!"
 
-WORTOX.DESCRIBE.TRUFFLESGRINDER = "Ho ho! A mortal treat made of earthy sweets!"
+WORTOX.DESCRIBE.TRUFFLESGRINDER = "Hô hô! Một món phàm nhân làm từ vị ngọt đất đai!"
 
-WORTOX.DESCRIBE.SPORECAPPIE = "A deadly delight for daring mortals! Hyuyu!"
+WORTOX.DESCRIBE.SPORECAPPIE = "Món ngon chết người cho phàm nhân gan dạ! Hyuyu!"
 
-WORTOX.DESCRIBE.SPORECAP_SKEWERS = "Spores on sticks, what a mortal trick! Hyuyu!"
+WORTOX.DESCRIBE.SPORECAP_SKEWERS = "Bào tử xiên que, đúng trò phàm nhân! Hyuyu!"
 
-WORTOX.DESCRIBE.TRUFFLEOIL = "A slick trick of nature! How divine... or maybe swine?"
+WORTOX.DESCRIBE.TRUFFLEOIL = "Một trò trơn tuột của tự nhiên! Thật thần thánh... hay là heo thánh?"
 
-WORTOX.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "But it's more fun to wing it!"
-WORTOX.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "A puddle becoming a palace for fishy folk! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Nhưng ứng biến mới vui hơn!"
+WORTOX.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Một vũng nước đang hóa thành cung điện cho dân cá! Hyuyu!"
 
 WORTOX.DESCRIBE.KYNO_FISHFARMPLOT = 
 {
-	GENERIC = "Tiny fish, rise and play!",
-	FUEL_HIGH = "They're are full belly.",
-	FUEL_MED = "It seems they are getting hungry.",
-	FUEL_LOW = "Food keeps getting low.",
-	EMPTY = "No more fish snacks, need to replenish it.",
+	GENERIC = "Cá nhỏ ơi, trồi lên chơi nào!",
+	FUEL_HIGH = "Bao tử chúng no căng rồi.",
+	FUEL_MED = "Có vẻ chúng bắt đầu đói.",
+	FUEL_LOW = "Đồ ăn cứ vơi dần.",
+	EMPTY = "Hết đồ ăn vặt cho cá rồi, cần châm thêm.",
 }
 
-WORTOX.DESCRIBE.AGEDROE = "Snooty fish eggs!"
-WORTOX.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Little pearls of ocean delight, hyuyu!"
+WORTOX.DESCRIBE.AGEDROE = "Trứng cá kiêu kỳ!"
+WORTOX.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Những viên ngọc nhỏ từ đại dương, hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_SWORDFISH_BLUE = "He forgot how to swim! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_SWORDFISH_BLUE = "Hắn quên cách bơi rồi! Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_JELLYFISH = "It's squishy."
-WORTOX.DESCRIBE.KYNO_JELLYFISH_DEAD = "Not so shocking now?"
-WORTOX.DESCRIBE.KYNO_JELLYFISH_COOKED = "Shockingly tasty! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_JELLYFISH_DRIED = "Chewy!"
+WORTOX.DESCRIBE.KYNO_JELLYFISH = "Nó mềm nhũn."
+WORTOX.DESCRIBE.KYNO_JELLYFISH_DEAD = "Giờ không còn giật mình nữa chứ?"
+WORTOX.DESCRIBE.KYNO_JELLYFISH_COOKED = "Ngon đến giật mình! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_JELLYFISH_DRIED = "Dai!"
 
-WORTOX.DESCRIBE.KYNO_JELLYFISH_RAINBOW = "Its very colorful."
-WORTOX.DESCRIBE.KYNO_JELLYFISH_RAINBOW_DEAD = "It's not moving anymore!"
-WORTOX.DESCRIBE.KYNO_JELLYFISH_RAINBOW_COOKED = "Still full of colors. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_JELLYFISH_RAINBOW = "Nó rất sặc sỡ."
+WORTOX.DESCRIBE.KYNO_JELLYFISH_RAINBOW_DEAD = "Nó không cử động nữa rồi!"
+WORTOX.DESCRIBE.KYNO_JELLYFISH_RAINBOW_COOKED = "Vẫn đầy màu sắc. Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "She's empty."
+WORTOX.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Nó trống rỗng."
 
-WORTOX.DESCRIBE.KYNO_OCEANTRAP = "They won't see this one coming. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_OCEANTRAP = "Chúng sẽ không kịp trở tay đâu. Hyuyu!"
 
-WORTOX.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "A midnight swimmer!"
-WORTOX.DESCRIBE.OCEANFISH_PUFFERFISH = "So full of air and yet so deadly! Hyuyu!"
-WORTOX.DESCRIBE.OCEANFISH_STURGEON = "So ancient! I bet it's seen all sorts of mortal mischief!"
+WORTOX.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Kẻ bơi đêm!"
+WORTOX.DESCRIBE.OCEANFISH_PUFFERFISH = "Đầy hơi mà vẫn chết người! Hyuyu!"
+WORTOX.DESCRIBE.OCEANFISH_STURGEON = "Cổ xưa thật! Chắc nó từng thấy đủ trò nghịch của người phàm!"
 
-WORTOX.DESCRIBE.KYNO_SWORDFISH = "A fight with vibrant fighting spirit! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_SWORDFISH_DEAD = "You put a good fight."
+WORTOX.DESCRIBE.KYNO_SWORDFISH = "Một trận chiến với tinh thần chiến đấu rực rỡ! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_SWORDFISH_DEAD = "Ngươi đã chiến đấu khá lắm."
 
-WORTOX.DESCRIBE.SWORDFISHFEAST = "Oh ho! A sharp meal to tickle my tongue!"
+WORTOX.DESCRIBE.SWORDFISHFEAST = "Ô hô! Một bữa ăn sắc bén để chọc lét lưỡi ta!"
 
-WORTOX.DESCRIBE.KYNO_DOGFISH = "Salty dog!"
-WORTOX.DESCRIBE.KYNO_DOGFISH_DEAD = "It will not swim anymore."
+WORTOX.DESCRIBE.KYNO_DOGFISH = "Chó biển mặn mòi!"
+WORTOX.DESCRIBE.KYNO_DOGFISH_DEAD = "Nó sẽ không bơi nữa."
 
-WORTOX.DESCRIBE.KYNO_SPOILED_FISH_LARGE = "Smelly fish carcass."
+WORTOX.DESCRIBE.KYNO_SPOILED_FISH_LARGE = "Xác cá hôi thối."
 
-WORTOX.DESCRIBE.WOBSTER_MONKEYISLAND = "A shiny shell for a shiny soul!"
-WORTOX.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD = "No more spark in that shiny shell."
-WORTOX.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD_COOKED = "What a delightful little sea morsel! Hyuyu!"
+WORTOX.DESCRIBE.WOBSTER_MONKEYISLAND = "Một lớp vỏ lấp lánh cho linh hồn lấp lánh!"
+WORTOX.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD = "Không còn tia sáng nào trong lớp vỏ lấp lánh đó."
+WORTOX.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD_COOKED = "Một miếng ngon biển cả nhỏ xinh! Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_PUFFERMONSTER = "Ho ho! A fishy full of fury and fumes!"
+WORTOX.DESCRIBE.KYNO_PUFFERMONSTER = "Hô hô! Một con cá đầy giận dữ và khí độc!"
 
-WORTOX.DESCRIBE.KYNO_WHALE_OCEAN_BUBBLES = "The devil awaits for me! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_WHALE_BLUE_OCEAN = "It looks sad."
-WORTOX.DESCRIBE.KYNO_WHALE_WHITE_OCEAN = "The devil reveals itself once again! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_WHALE_OCEAN_CARCASS = "Gonna explode soon!"
+WORTOX.DESCRIBE.KYNO_WHALE_OCEAN_BUBBLES = "Ác quỷ đang đợi ta! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_WHALE_BLUE_OCEAN = "Trông nó buồn quá."
+WORTOX.DESCRIBE.KYNO_WHALE_WHITE_OCEAN = "Ác quỷ lại hiện nguyên hình! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_WHALE_OCEAN_CARCASS = "Sắp nổ tung rồi!"
 
-WORTOX.DESCRIBE.KYNO_BLUBBER = "No one will catch me blubbering!"
+WORTOX.DESCRIBE.KYNO_BLUBBER = "Không ai bắt được ta khóc nhè đâu!"
 
-WORTOX.DESCRIBE.KYNO_FISHMEAT_SMALL_DRIED = "A mortal treat from the deep, hehe!"
-WORTOX.DESCRIBE.KYNO_FISHMEAT_DRIED = "A salty mortal morsel, hehe!"
+WORTOX.DESCRIBE.KYNO_FISHMEAT_SMALL_DRIED = "Một món phàm nhân từ biển sâu, hehe!"
+WORTOX.DESCRIBE.KYNO_FISHMEAT_DRIED = "Một miếng phàm nhân mằn mặn, hehe!"
 
-WORTOX.DESCRIBE.MONKEYISLANDMEAL = "A feast to free the beast. Hyuyu!"
+WORTOX.DESCRIBE.MONKEYISLANDMEAL = "Một bữa tiệc để giải phóng con quái. Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Not the most intimidate sea monster."
-WORTOX.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Its a bald rock!"
-WORTOX.DESCRIBE.KYNO_BRAINROCK_CORAL = "You can't think out of your pocket."
+WORTOX.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Không phải quái biển đáng sợ nhất."
+WORTOX.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Nó là một hòn đá hói!"
+WORTOX.DESCRIBE.KYNO_BRAINROCK_CORAL = "Ngươi không thể nghĩ ra khỏi túi đâu."
 
 WORTOX.DESCRIBE.KYNO_BRAINROCK_ROCK = 
 {
-	GENERIC = "Brain of the ocean.",
-	PICKED = "No more thoughts, oh my!",
+	GENERIC = "Bộ não của đại dương.",
+	PICKED = "Hết suy nghĩ rồi, ôi chao!",
 }
 
-WORTOX.DESCRIBE.BRAINMETTERSOUP = "Maybe it will help me think of better pranks?"
+WORTOX.DESCRIBE.BRAINMETTERSOUP = "Có lẽ nó sẽ giúp ta nghĩ ra trò đùa hay hơn?"
 
 WORTOX.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
 {
-	GENERIC = "Ahoy, ye salty dog!",
-	SLEEPING = "Not open for trades right now.",
+	GENERIC = "Ahoi, đồ chó biển mặn mòi!",
+	SLEEPING = "Giờ chưa mở cửa trao đổi.",
 }
 
-WORTOX.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Treasures from the depths!"
+WORTOX.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Kho báu từ đáy sâu!"
 
 WORTOX.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
 {
-	GENERIC = "A dead fish.",
-	WAITING = "Nothing remains the same.",
+	GENERIC = "Một con cá chết.",
+	WAITING = "Không có gì mãi như cũ.",
 }
 
-WORTOX.DESCRIBE.KYNO_PACKIMBAGGIMS = "That's my mate!"
+WORTOX.DESCRIBE.KYNO_PACKIMBAGGIMS = "Đó là bạn đồng hành của ta!"
 
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "I can't wait to see it finished. Hyuyu!"
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_STAGE = "I need to nab more stuff."
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE = "I'll sneak a slice when no one sees!"
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "A sparkle of fun for everyone!"
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "What kind of celebration will you bring?"
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "A mortal treat, how sweet! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Pop! I do love a good surprise!"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Ta nóng lòng muốn thấy nó hoàn thành. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_STAGE = "Ta cần chôm thêm đồ."
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE = "Ta sẽ lén lấy một lát khi không ai thấy!"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Một tia lấp lánh vui vẻ cho mọi người!"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Ngươi sẽ mang tới kiểu ăn mừng gì đây?"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Một món phàm nhân, ngọt làm sao! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Bốp! Ta thích những bất ngờ hay ho!"
 
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
 {
-	GENERIC = "Popcorn is a delightful treat, yes.",
-	FUEL_HIGH = "Plenty of fuel still.",
-	FUEL_MED = "It can still produce some.",
-	FUEL_LOW = "Fuel running low.",
-	EMPTY = "No fuel remaining.",
+	GENERIC = "Bắp rang là món ngon thú vị, đúng vậy.",
+	FUEL_HIGH = "Vẫn còn nhiều nhiên liệu.",
+	FUEL_MED = "Nó vẫn còn làm được thêm chút nữa.",
+	FUEL_LOW = "Nhiên liệu sắp cạn rồi.",
+	EMPTY = "Không còn nhiên liệu.",
 }
 
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Pop! A snack of celebratory crack!"
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Oh ho! A hat for festive mischief!"
-WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Oh ho! A hat made for Sammy, unique and hammy!"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Bốp! Một món ăn mừng giòn rốp!"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Ô hô! Một cái mũ cho trò nghịch lễ hội!"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Ô hô! Một cái mũ dành cho Sammy, độc đáo và hài hước!"
 
-WORTOX.DESCRIBE.KYNO_FISHREGISTRYHAT = "A thinking cap for fishy facts! Hyuyu!"
+WORTOX.DESCRIBE.KYNO_FISHREGISTRYHAT = "Một chiếc mũ suy nghĩ cho kiến thức về cá! Hyuyu!"
 
 WORTOX.DESCRIBE.KYNO_ANIMALFEEDER =
 {
-	GENERIC = "Nibble and munch, a feeding hunch!",
-	FUEL_HIGH = "Full to the brim!",
-	FUEL_MED = "Not too bad, not too grim!",
-	FUEL_LOW = "Low, oh low!",
-	EMPTY = "No food left!",
-	BURNT = "Ash and smoke!",
+	GENERIC = "Gặm nhấm và nhai nhóp nhép, một máng ăn đây!",
+	FUEL_HIGH = "Đầy tới miệng!",
+	FUEL_MED = "Không quá tệ, không quá thảm!",
+	FUEL_LOW = "Thấp rồi, ôi thấp rồi!",
+	EMPTY = "Hết đồ ăn!",
+	BURNT = "Tro và khói!",
 }
 
-WORTOX.DESCRIBE.CHICKENNUGGETS = "Tiny chicken nuggets."
+WORTOX.DESCRIBE.CHICKENNUGGETS = "Những miếng gà nugget bé xíu."
 
-WORTOX.DESCRIBE.CHICKENWINGS = "Hot-hot wings, hot, hot!"
+WORTOX.DESCRIBE.CHICKENWINGS = "Cánh cay-nóng, nóng, nóng!"
 
-WORTOX.DESCRIBE.CHICKENBURGER = "A bun-bird delight! Hyuyu!"
+WORTOX.DESCRIBE.CHICKENBURGER = "Niềm vui chim kẹp bánh! Hyuyu!"
 
-WORTOX.DESCRIBE.CHICKENEGGSOUP = "Soupy sustenance! Hyuyu!"
+WORTOX.DESCRIBE.CHICKENEGGSOUP = "Món súp no lòng! Hyuyu!"
 
-WORTOX.DESCRIBE.CHICKENEGGSTEW = "A bubbling pot of mortal delight! Hyuyu!"
+WORTOX.DESCRIBE.CHICKENEGGSTEW = "Một nồi niềm vui phàm nhân sủi bọt! Hyuyu!"
 
-WORTOX.DESCRIBE.CHICKENROTISSERIE = "Rounded!"
+WORTOX.DESCRIBE.CHICKENROTISSERIE = "Tròn quay!"
 
-WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Steeped in leafy mischief!"
-WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet sips!"
+WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Ngâm trong trò nghịch lá cây!"
+WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Ngụm ngọt!"
 
-WORTOX.DESCRIBE.SOULJUICE = "Souls and fruit! What a treat!"
+WORTOX.DESCRIBE.SOULJUICE = "Linh hồn và trái cây! Đúng là món ngon!"
 
-WORTOX.DESCRIBE.KYNO_DAILYRECIPE = "No tasty surprises today?"
+WORTOX.DESCRIBE.KYNO_DAILYRECIPE = "Hôm nay không có bất ngờ ngon lành sao?"
 WORTOX.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 {
-	GENERIC = "Today's mortal delight is %s! Hyuyu!",
-	NONE = "No tasty surprises today?",
-	BURNING = "Fiery fun! Hyuyu!",
-	BURNT = "Reduced to sooty bits!",
+	GENERIC = "Món phàm nhân hôm nay là %s! Hyuyu!",
+	NONE = "Hôm nay không có bất ngờ ngon lành sao?",
+	BURNING = "Vui lửa cháy! Hyuyu!",
+	BURNT = "Thành mấy mẩu than muội rồi!",
 }
+
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Ông ấy có vẻ chịu đựng được ta. Không giao dịch cho tới khi nhà được vá xong!",
+	HOUSE_REPAIRED = "Một ngôi nhà vững chắc và hàng hóa sáng bóng!",
+}
+
+WORTOX.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Ồ! Một cái cây nhỏ cứng đầu!",
+	CHOPPED = "Cuối cùng cũng đổ xuống!",
+	BLOOMING = "Nó nở hoa dưới lòng đất. Thật kỳ lạ!",
+	BURNING = "Lách tách bùng nổ, hyuyu!",
+	BURNT = "Giờ chỉ còn tro bụi và nỗi buồn.",
+}
+
+WORTOX.DESCRIBE.KYNO_CAVETUBER = "Củ nghịch ngợm!"
+WORTOX.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ta không nghĩ cái này an toàn để ăn đâu."
+
+WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Một củ có hoa. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Nó có vị như bất kỳ món ăn phàm trần nào khác."

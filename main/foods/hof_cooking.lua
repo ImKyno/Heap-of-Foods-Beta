@@ -140,6 +140,8 @@ AddIngredientValues({"kyno_blubber"},                {meat       = 1,    fat    
 AddIngredientValues({"kyno_brainrock_coral"},        {meat       = 0.5})
 AddIngredientValues({"kyno_fishmeat_small_dried"},   {meat       = 0.5,  fish      = 1,    salted    = 1})
 AddIngredientValues({"kyno_fishmeat_dried"},         {meat       = 1,    fish      = 2,    salted    = 1})
+AddIngredientValues({"kyno_cavetuber"},              {veggie     = 1,    tuber     = 1,    monster   = 1},         true)
+AddIngredientValues({"kyno_cavetuber_blooming"},     {veggie     = 1,    tuber     = 1},                           true)
 
 local fishroes_meat =
 {

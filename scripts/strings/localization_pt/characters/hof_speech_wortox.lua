@@ -1241,3 +1241,18 @@ WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Ele parece me tolerar. Nada de trocas até sua casa ser remendada!",
 	HOUSE_REPAIRED = "Uma casa firme e mercadorias reluzentes!",
 }
+
+WORTOX.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Oh! Uma arvorezinha teimosa!",
+	CHOPPED = "Finalmente caiu!",
+	BLOOMING = "Ela floresce sob a terra. Curioso!",
+	BURNING = "Crepita e estala, hyuyu!",
+	BURNT = "Agora só restam fuligem e tristeza.",
+}
+
+WORTOX.DESCRIBE.KYNO_CAVETUBER = "Tubérculo travesso!"
+WORTOX.DESCRIBE.KYNO_CAVETUBER_COOKED = "Não acho seguro comer isso."
+
+WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Um tubérculo florido. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Tem gosto igual a qualquer comida mortal."

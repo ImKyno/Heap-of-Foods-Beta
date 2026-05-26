@@ -225,3 +225,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Một vật chứa 2
 STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Một số động vật sẽ ăn từ lượng thức ăn được tích trữ trong máng này.\n\nHạt Giống và Ngũ Cốc có thể được dùng làm nguồn thức ăn chính."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "Một nơi trú ẩn cho Gà, có thể tạo ra các sản phẩm gia cầm."
 STRINGS.SCRAPBOOK.SPECIALINFO.DAILYRECIPE_SIGN = "Theo dõi Công Thức Hôm Nay và cho phép xem lại nhanh chúng."
+STRINGS.SCRAPBOOK.SPECIALINFO.CAVETUBERTREE = "Cần một chiếc rìu chắc chắn để chặt hạ. Nếu gốc cây được giữ lại, nó sẽ mọc lại sau vài ngày và tạo ra thêm nhiều củ.\n\nTrong mùa Xuân, nó sẽ bắt đầu nở hoa và chín."

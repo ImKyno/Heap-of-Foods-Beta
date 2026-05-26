@@ -1241,3 +1241,18 @@ WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "He won't trade with me unless I help repair his house first.",
 	HOUSE_REPAIRED = "Hello, sir! What do you have for trade?",
 }
+
+WILSON.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "A regular axe won't cut it.",
+	CHOPPED = "I guess that was worth the trouble.",
+	BLOOMING = "It is blooming vigorously.",
+	BURNING = "What a shame!",
+	BURNT = "Another tree lost to the fire."
+}
+
+WILSON.DESCRIBE.KYNO_CAVETUBER = "Too bad tuber."
+WILSON.DESCRIBE.KYNO_CAVETUBER_COOKED = "I wonder if it's still poisonous?"
+
+WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "It's a blooming tuber!"
+WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Did I cook the flower too?"

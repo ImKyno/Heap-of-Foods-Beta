@@ -225,3 +225,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Um recipiente de 2 s
 STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Alguns animais se alimentarão da comida posta neste cocho.\n\Sementes e Grãos podem ser usados como fonte principal de comida."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "Um abrigo para Galinhas produzirem seus produtos."
 STRINGS.SCRAPBOOK.SPECIALINFO.DAILYRECIPE_SIGN = "Registra Receitas Diárias e permite uma breve visualização das mesmas."
+STRINGS.SCRAPBOOK.SPECIALINFO.CAVETUBERTREE = "Requer um machado resistente para ser derrubada. Se o toco for deixado para trás, ela crescerá novamente após alguns dias, produzindo mais Tubérculos.\n\nDurante a Primavera ela começa a florescer e amadurece."

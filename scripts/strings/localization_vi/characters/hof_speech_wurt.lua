@@ -1,1239 +1,1260 @@
 local WURT = STRINGS.CHARACTERS.WURT
 
-WURT.ANNOUNCE_KYNO_COFFEEBUFF_START = "Glurp!!! I'm fast!"
-WURT.ANNOUNCE_KYNO_COFFEEBUFF_END = "Speed gone, florp."
+WURT.ANNOUNCE_KYNO_COFFEEBUFF_START = "Glurp!!! Mình nhanh quá!"
+WURT.ANNOUNCE_KYNO_COFFEEBUFF_END = "Hết nhanh rồi, florp."
 
-WURT.ANNOUNCE_KYNO_HASTEBUFF_START = "So faaast!!"
-WURT.ANNOUNCE_KYNO_HASTEBUFF_END = "Glurgh, hands not fast anymore?"
+WURT.ANNOUNCE_KYNO_HASTEBUFF_START = "Nhanh quáaaa!!"
+WURT.ANNOUNCE_KYNO_HASTEBUFF_END = "Glurgh, tay không nhanh nữa hả?"
 
-WURT.ANNOUNCE_KYNO_POPBUFF_START = "(buurp!) Hehe, funny noises, flort."
-WURT.ANNOUNCE_KYNO_POPBUFF_END = "Uughh... stomach hurts a little, flort."
+WURT.ANNOUNCE_KYNO_POPBUFF_START = "(ợ!) Hehe, tiếng vui ghê, flort."
+WURT.ANNOUNCE_KYNO_POPBUFF_END = "Uughh... bao tử hơi đau, flort."
 
-WURT.ANNOUNCE_KYNO_FROGBUFF_START = "Glurgh, what happened?"
-WURT.ANNOUNCE_KYNO_FROGBUFF_END = "Where frogs go?"
+WURT.ANNOUNCE_KYNO_FROGBUFF_START = "Glurgh, chuyện gì vậy?"
+WURT.ANNOUNCE_KYNO_FROGBUFF_END = "Ếch đi đâu rồi?"
 
-WURT.ANNOUNCE_KYNO_PIRATEBUFF_START = "(buurp!) Hehe, funny noises, flort."
-WURT.ANNOUNCE_KYNO_PIRATEBUFF_END = "Uughh... stomach hurts a little, flort."
+WURT.ANNOUNCE_KYNO_PIRATEBUFF_START = "(ợ!) Hehe, tiếng vui ghê, flort."
+WURT.ANNOUNCE_KYNO_PIRATEBUFF_END = "Uughh... bao tử hơi đau, flort."
 
-WURT.ANNOUNCE_KYNO_FREEZEBUFF_START = "Hands feels cold, florp."
-WURT.ANNOUNCE_KYNO_FREEZEBUFF_END = "Bye, bye, cold!"
+WURT.ANNOUNCE_KYNO_FREEZEBUFF_START = "Tay thấy lạnh, florp."
+WURT.ANNOUNCE_KYNO_FREEZEBUFF_END = "Tạm biệt, lạnh!"
 
-WURT.ANNOUNCE_KYNO_FIREBUFF_START = "Hands feels fuzzy and warm, florp."
-WURT.ANNOUNCE_KYNO_FIREBUFF_END = "Bye, bye, flames!"
+WURT.ANNOUNCE_KYNO_FIREBUFF_START = "Tay thấy tê tê với ấm ấm, florp."
+WURT.ANNOUNCE_KYNO_FIREBUFF_END = "Tạm biệt, lửa!"
 
-WURT.ANNOUNCE_KYNO_FISHINGBUFF_START = "Time to get some new friends!"
-WURT.ANNOUNCE_KYNO_FISHINGBUFF_END = "Nooo! Where all fishes go?"
+WURT.ANNOUNCE_KYNO_FISHINGBUFF_START = "Tới giờ kiếm bạn mới rồi!"
+WURT.ANNOUNCE_KYNO_FISHINGBUFF_END = "Khônggg! Cá đi đâu hết rồi?"
 
-WURT.ANNOUNCE_KYNO_SANITYRATEBUFF_START = "Aw, so relaxing, florp."
-WURT.ANNOUNCE_KYNO_SANITYRATEBUFF_END = "Feeling a bit dizzy, florp."
+WURT.ANNOUNCE_KYNO_SANITYRATEBUFF_START = "Aw, dễ chịu quá, florp."
+WURT.ANNOUNCE_KYNO_SANITYRATEBUFF_END = "Thấy hơi chóng mặt, florp."
 
-WURT.ANNOUNCE_KYNO_EATERBUFF_START = "Teeth feels funny, glorp."
-WURT.ANNOUNCE_KYNO_EATERBUFF_END = "Funny itch at teeth gone, florp."
+WURT.ANNOUNCE_KYNO_EATERBUFF_START = "Răng thấy lạ lạ, glorp."
+WURT.ANNOUNCE_KYNO_EATERBUFF_END = "Ngứa răng lạ lạ hết rồi, florp."
 
-WURT.ANNOUNCE_KYNO_WORMBUFF_START = "Glurgh, don't wanna hurt crabby!"
-WURT.ANNOUNCE_KYNO_WORMBUFF_END = "Yay, no more fight!"
+WURT.ANNOUNCE_KYNO_WORMBUFF_START = "Glurgh, không muốn làm đau cua đâu!"
+WURT.ANNOUNCE_KYNO_WORMBUFF_END = "Yay, khỏi đánh nhau nữa!"
 
-WURT.ANNOUNCE_KYNO_CRABBUFF_START = "Glurgh, don't wanna hurt crabby!"
-WURT.ANNOUNCE_KYNO_CRABBUFF_END = "Yay, no more fight!"
+WURT.ANNOUNCE_KYNO_CRABBUFF_START = "Glurgh, không muốn làm đau cua đâu!"
+WURT.ANNOUNCE_KYNO_CRABBUFF_END = "Yay, khỏi đánh nhau nữa!"
 
-WURT.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(buurp!) Hehe, funny noises, flort."
-WURT.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "Uughh... stomach hurts a little, flort."
+WURT.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(ợ!) Hehe, tiếng vui ghê, flort."
+WURT.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "Uughh... bao tử hơi đau, flort."
 
 WURT.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START = "Ouuh...!"
-WURT.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_END = "Wo-wee... Feeling a bit tired, florp."
+WURT.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_END = "Wo-wee... thấy hơi mệt, florp."
 
-WURT.ANNOUNCE_KYNO_STEALTHBUFF_START = "Hehe, lets hide!"
-WURT.ANNOUNCE_KYNO_STEALTHBUFF_END = "Gone already?"
+WURT.ANNOUNCE_KYNO_STEALTHBUFF_START = "Hehe, trốn thôi!"
+WURT.ANNOUNCE_KYNO_STEALTHBUFF_END = "Hết rồi hả?"
 
-WURT.ANNOUNCE_KYNO_FEARBUFF_START = "Hmph! Wurt not scared of anything! This just prove it!"
-WURT.ANNOUNCE_KYNO_FEARBUFF_END = "The scary feelings are back! Wurt not like this!!!"
+WURT.ANNOUNCE_KYNO_FEARBUFF_START = "Hmph! Wurt không sợ gì hết! Cái này chứng minh rồi!"
+WURT.ANNOUNCE_KYNO_FEARBUFF_END = "Cảm giác sợ quay lại rồi! Wurt không thích đâu!!!"
 
-WURT.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_START = "Glurp! Sparkly fruit make me feel funny!"
-WURT.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_END = "Glurp... sparkle feeling gone!"
+WURT.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_START = "Glurp! Trái lấp lánh làm mình thấy lạ lạ!"
+WURT.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_END = "Glurp... cảm giác lấp lánh hết rồi!"
 
-WURT.ANNOUNCE_KYNO_TRUFFLESBUFF_START = "I am not making friends with them!"
+WURT.ANNOUNCE_KYNO_TRUFFLESBUFF_START = "Mình không làm bạn với tụi nó đâu!"
 WURT.ANNOUNCE_KYNO_TRUFFLESBUFF_END = "Glurgh..."
 
-WURT.ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START = "No burny rain now!"
+WURT.ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START = "Mưa rát không làm đau nữa!"
 -- No ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_END, because we are using default strings for that.
 
-WURT.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_START = "No poison! Me happy!"
-WURT.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_END = "Glurgh... feeling sick!"
+WURT.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_START = "Không độc! Mình vui!"
+WURT.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_END = "Glurgh... thấy bệnh bệnh!"
 
-WURT.ANNOUNCE_KYNO_CRAFTINGBUFF_START = "Glurp! I'm feeling smarty-smart!"
-WURT.ANNOUNCE_KYNO_CRAFTINGBUFF_END = "Glurp, head all fuzzy again."
+WURT.ANNOUNCE_KYNO_CRAFTINGBUFF_START = "Glurp! Mình thấy thông minh-minh!"
+WURT.ANNOUNCE_KYNO_CRAFTINGBUFF_END = "Glurp, đầu lại mù mù rồi."
 
-WURT.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_START = "Buzz bugs nice now, florp!"
-WURT.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_END = "Buzz bugs angry again, glorp!"
+WURT.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_START = "Bọ vo ve giờ hiền rồi, florp!"
+WURT.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_END = "Bọ vo ve lại giận rồi, glorp!"
 
-WURT.ANNOUNCE_KYNO_MAXHEALTHBUFF_START = "So strong now! Florp!"
-WURT.ANNOUNCE_KYNO_MAXHEALTHBUFF_END = "Feel squishy again... florp."
+WURT.ANNOUNCE_KYNO_MAXHEALTHBUFF_START = "Giờ mạnh lắm! Florp!"
+WURT.ANNOUNCE_KYNO_MAXHEALTHBUFF_END = "Lại thấy mềm nhũn... florp."
 
-WURT.ANNOUNCE_KYNO_MAXHUNGERBUFF_START = "Glorp! Can eat lots now!"
-WURT.ANNOUNCE_KYNO_MAXHUNGERBUFF_END = "Hunger small again, florp..."
+WURT.ANNOUNCE_KYNO_MAXHUNGERBUFF_START = "Glorp! Giờ ăn được nhiều lắm!"
+WURT.ANNOUNCE_KYNO_MAXHUNGERBUFF_END = "Cơn đói nhỏ lại rồi, florp..."
 
-WURT.ANNOUNCE_KYNO_MAXSANITYBUFF_START = "Head no spin anymore! Florpt!"
-WURT.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Brains feel funny again, glorp..."
+WURT.ANNOUNCE_KYNO_MAXSANITYBUFF_START = "Đầu hết quay rồi! Florpt!"
+WURT.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Não lại thấy lạ lạ, glorp..."
 
-WURT.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Feel strong, florp!"
-WURT.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Feeling weak, glurgh..."
+WURT.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Thấy mạnh, florp!"
+WURT.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Thấy yếu rồi, glurgh..."
 
-WURT.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Strong! But squishy, too!"
-WURT.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Not extra strong anymore..."
+WURT.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Mạnh! Nhưng cũng mềm nhũn!"
+WURT.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Không còn mạnh thêm nữa..."
 
-WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Stay full longer!"
-WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Hungry again..."
+WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "No lâu hơn!"
+WURT.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Lại đói rồi..."
 
-WURT.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Dark not scary now! florp!"
-WURT.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Dark scary again!!"
+WURT.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Tối không đáng sợ nữa! florp!"
+WURT.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Tối lại đáng sợ rồi!!"
 
-WURT.ANNOUNCE_KYNO_LUCKBUFF_END = "Luck gone, florp..."
+WURT.ANNOUNCE_KYNO_LUCKBUFF_END = "May mắn hết rồi, florp..."
 
-WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Pretty fishes are in swamp!"
+WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Cá đẹp ở trong đầm lầy!"
 
-WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... wrong..."
+WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... sai rồi..."
 
-WURT.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Glurgh... pigfolk always bad..!"
+WURT.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Glurgh... dân heo lúc nào cũng xấu..!"
 
-WURT.ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL = "Not yet? Okay..."
+WURT.ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL = "Chưa được hả? Được thôi..."
 
-WURT.ANNOUNCE_KYNO_FIREPITINSTALL_FAIL = "No? Okay."
+WURT.ANNOUNCE_KYNO_FIREPITINSTALL_FAIL = "Không hả? Được thôi."
 
-WURT.ANNOUNCE_KYNO_POTHANGER_FAIL = "Ugh, not want dis?"
+WURT.ANNOUNCE_KYNO_POTHANGER_FAIL = "Ugh, không muốn cái này hả?"
 
-WURT.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Glurgh... not this..."
+WURT.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Glurgh... không phải cái này..."
 
-WURT.ANNOUNCE_KYNO_SAPHEALER_USED = "Tree is nice again, yay!"
+WURT.ANNOUNCE_KYNO_SAPHEALER_USED = "Cây tốt lại rồi, yay!"
 
-WURT.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Glurp... why everything gotta be so violent?"
+WURT.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Glurp... sao cái gì cũng phải bạo lực vậy?"
 
-WURT.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Nothing here, florp..."
+WURT.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Không có gì ở đây, florp..."
 
-WURT.ANNOUNCE_KYNO_HUNT_LOST_TRAIL = "Bubbles gone! Beast run away, florp!"
-WURT.ANNOUNCE_KYNO_HUNT_LOST_TRAIL_RAIN = "Rain wash everything, glorp!"
-WURT.ANNOUNCE_KYNO_HUNT_BEAST_NEARBY = "Big Water Beast very close! Very scary, florp!"
+WURT.ANNOUNCE_KYNO_HUNT_LOST_TRAIL = "Bong bóng mất rồi! Quái chạy mất rồi, florp!"
+WURT.ANNOUNCE_KYNO_HUNT_LOST_TRAIL_RAIN = "Mưa rửa trôi hết rồi, glorp!"
+WURT.ANNOUNCE_KYNO_HUNT_BEAST_NEARBY = "Quái Nước To ở rất gần! Đáng sợ quá, florp!"
 
-WURT.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Cake done! Party time, florp!"
+WURT.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Bánh xong rồi! Tới giờ tiệc, florp!"
 
-WURT.ANNOUNCE_KYNO_FISH_RESEARCHED = "Friend secrets learned!!"
-WURT.ANNOUNCE_KYNO_ROE_RESEARCHED = "Fish babies secrets! Glurp!"
+WURT.ANNOUNCE_KYNO_FISH_RESEARCHED = "Học được bí mật của bạn rồi!!"
+WURT.ANNOUNCE_KYNO_ROE_RESEARCHED = "Bí mật em bé cá! Glurp!"
 
-WURT.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Tasty, florp!"
+WURT.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Ngon, florp!"
 
-WURT.DESCRIBE.KYNO_ROE = "Little friends!"
-WURT.DESCRIBE.KYNO_ROE_COOKED = "Nooooooooo!"
+WURT.DESCRIBE.KYNO_ROE = "Bạn nhỏ!"
+WURT.DESCRIBE.KYNO_ROE_COOKED = "Khôngggggggg!"
 
-WURT.DESCRIBE.KYNO_SHARK_FIN = "Poor little shark, lost his fin, florp."
+WURT.DESCRIBE.KYNO_SHARK_FIN = "Cá mập bé tội nghiệp, mất vây rồi, florp."
 
-WURT.DESCRIBE.KYNO_BEANBUGS = "Funny bugs, florp!"
-WURT.DESCRIBE.KYNO_BEANBUGS_COOKED = "I'm so sorry..."
+WURT.DESCRIBE.KYNO_BEANBUGS = "Bọ vui ghê, florp!"
+WURT.DESCRIBE.KYNO_BEANBUGS_COOKED = "Mình xin lỗi..."
 
-WURT.DESCRIBE.KYNO_GUMMYBUG = "Hi, little friend!"
-WURT.DESCRIBE.KYNO_GUMMYBUG_COOKED = "I'm so sorry!"
+WURT.DESCRIBE.KYNO_GUMMYBUG = "Chào bạn nhỏ!"
+WURT.DESCRIBE.KYNO_GUMMYBUG_COOKED = "Mình xin lỗi!"
 
-WURT.DESCRIBE.KYNO_WHEAT = "It like grass, with hidden snacks!"
-WURT.DESCRIBE.KYNO_WHEAT_COOKED = "It like grass, with hidden snacks!"
+WURT.DESCRIBE.KYNO_WHEAT = "Nó giống cỏ, có đồ ăn giấu bên trong!"
+WURT.DESCRIBE.KYNO_WHEAT_COOKED = "Nó giống cỏ, có đồ ăn giấu bên trong!"
 
-WURT.DESCRIBE.KYNO_FLOUR = "Powder, florp."
+WURT.DESCRIBE.KYNO_FLOUR = "Bột, florp."
 
-WURT.DESCRIBE.KYNO_SPOTSPICE = "Oooh, it taste good!"
+WURT.DESCRIBE.KYNO_SPOTSPICE = "Oooh, vị ngon ghê!"
 
-WURT.DESCRIBE.KYNO_SAP = "Mmmm, so sweet!!"
-WURT.DESCRIBE.KYNO_SAP_SPOILED = "Glurgh... not so good anymore."
+WURT.DESCRIBE.KYNO_SAP = "Mmmm, ngọt quá!!"
+WURT.DESCRIBE.KYNO_SAP_SPOILED = "Glurgh... không ngon nữa rồi."
 
-WURT.DESCRIBE.KYNO_SYRUP = "Sticky sweet!"
+WURT.DESCRIBE.KYNO_SYRUP = "Ngọt dính dính!"
 
-WURT.DESCRIBE.KYNO_COFFEEBEANS = "Beans."
-WURT.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Needs something..."
+WURT.DESCRIBE.KYNO_COFFEEBEANS = "Hạt."
+WURT.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Cần thêm gì đó..."
 
-WURT.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Needs dirt!"
+WURT.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Cần đất!"
 
 WURT.DESCRIBE.KYNO_COFFEEBUSH = 
 {
-	GENERIC = "Hot beans!",
-	PICKED = "No beans now.",
-	WITHERED = "Needs ash to grow, florp.",
+	GENERIC = "Hạt nóng!",
+	PICKED = "Giờ không có hạt.",
+	WITHERED = "Cần tro để lớn, florp.",
 }
 
-WURT.DESCRIBE.DUG_KYNO_SPOTBUSH = "Plant need ground!"
+WURT.DESCRIBE.DUG_KYNO_SPOTBUSH = "Cây cần đất!"
 
 WURT.DESCRIBE.KYNO_SPOTBUSH = 
 {
-	GENERIC = "Pink shrub, florp.",
-	PICKED = "No stuff now.",
-	BURNING = "Bad fire!",
+	GENERIC = "Bụi hồng, florp.",
+	PICKED = "Giờ không có đồ.",
+	BURNING = "Lửa xấu!",
 }
 
-WURT.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Little garnish, flort."
+WURT.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Đồ trang trí nhỏ, flort."
 
-WURT.DESCRIBE.KYNO_MUSSEL = "Meat inshell'd within, florp."
-WURT.DESCRIBE.KYNO_MUSSEL_COOKED = "Good!"
+WURT.DESCRIBE.KYNO_MUSSEL = "Thịt ở trong vỏ, florp."
+WURT.DESCRIBE.KYNO_MUSSEL_COOKED = "Ngon!"
 
-WURT.DESCRIBE.KYNO_HUMANMEAT = "Nuh-uh."
-WURT.DESCRIBE.KYNO_HUMANMEAT_COOKED = "Glurgh, scale-less smell even worse cooked."
-WURT.DESCRIBE.KYNO_HUMANMEAT_DRIED = "Nah."
+WURT.DESCRIBE.KYNO_HUMANMEAT = "Không-ừm."
+WURT.DESCRIBE.KYNO_HUMANMEAT_COOKED = "Glurgh, không-vảy nấu lên còn hôi hơn."
+WURT.DESCRIBE.KYNO_HUMANMEAT_DRIED = "Không."
 
-WURT.DESCRIBE.COFFEE = "Zooommm!!!"
+WURT.DESCRIBE.COFFEE = "Vùùùmmm!!!"
 
-WURT.DESCRIBE.BISQUE = "It's a soup, florp."
+WURT.DESCRIBE.BISQUE = "Là súp đó, florp."
 
-WURT.DESCRIBE.JELLYOPOP = "Poor friend is now dead, florp."
+WURT.DESCRIBE.JELLYOPOP = "Bạn tội nghiệp giờ chết rồi, florp."
 
-WURT.DESCRIBE.SHARKFINSOUP = "Nooooooooo!"
+WURT.DESCRIBE.SHARKFINSOUP = "Khôngggggggg!"
 
-WURT.DESCRIBE.TROPICALBOUILLABAISSE = "Nooooooooo!"
+WURT.DESCRIBE.TROPICALBOUILLABAISSE = "Khôngggggggg!"
 
-WURT.DESCRIBE.MUSSELBOUILLABAISE = "Yum!"
+WURT.DESCRIBE.MUSSELBOUILLABAISE = "Ngon!"
 
-WURT.DESCRIBE.SWEETPOTATOSOUFFLE = "Sweet!"
+WURT.DESCRIBE.SWEETPOTATOSOUFFLE = "Ngọt!"
 
-WURT.DESCRIBE.FEIJOADA = "Brazilian food, florp!"
+WURT.DESCRIBE.FEIJOADA = "Đồ ăn Brazil, florp!"
 
-WURT.DESCRIBE.GUMMY_CAKE = "Chewy and sweet, florp."
+WURT.DESCRIBE.GUMMY_CAKE = "Dai dai ngọt ngọt, florp."
 
-WURT.DESCRIBE.HARDSHELL_TACOS = "Crunchy!"
+WURT.DESCRIBE.HARDSHELL_TACOS = "Giòn!"
 
-WURT.DESCRIBE.ICEDTEA = "Cold, burrt!"
+WURT.DESCRIBE.ICEDTEA = "Lạnh, burrt!"
 
-WURT.DESCRIBE.NETTLELOSANGE = "Snout goodies, flort!"
+WURT.DESCRIBE.NETTLELOSANGE = "Đồ ngon cho mõm, flort!"
 
-WURT.DESCRIBE.SNAKEBONESOUP = "Bone soup, florp."
+WURT.DESCRIBE.SNAKEBONESOUP = "Súp xương, florp."
 
-WURT.DESCRIBE.STEAMEDHAMSANDWICH = "I don't like it so much."
+WURT.DESCRIBE.STEAMEDHAMSANDWICH = "Mình không thích nó lắm."
 
-WURT.DESCRIBE.TEA = "Sweet and relaxing, florp."
+WURT.DESCRIBE.TEA = "Ngọt và dễ chịu, florp."
 
-WURT.DESCRIBE.BUBBLETEA = "Cold, burrt!"
+WURT.DESCRIBE.BUBBLETEA = "Lạnh, burrt!"
 
-WURT.DESCRIBE.FRENCHONIONSOUP = "Onion soup, florp."
+WURT.DESCRIBE.FRENCHONIONSOUP = "Súp hành, florp."
 
-WURT.DESCRIBE.SLAW = "This the best!!"
+WURT.DESCRIBE.SLAW = "Cái này ngon nhất!!"
 
-WURT.DESCRIBE.LOTUSBOWL = "Good flowers, florp!"
+WURT.DESCRIBE.LOTUSBOWL = "Hoa ngon, florp!"
 
-WURT.DESCRIBE.POI = "This the best!!"
+WURT.DESCRIBE.POI = "Cái này ngon nhất!!"
 
-WURT.DESCRIBE.JELLYBEAN_HUNGER = "A good bean."
-WURT.DESCRIBE.JELLYBEAN_SUPER = "A good bean."
-WURT.DESCRIBE.JELLYBEAN_SANITY = "A good bean."
+WURT.DESCRIBE.JELLYBEAN_HUNGER = "Hạt đậu ngon."
+WURT.DESCRIBE.JELLYBEAN_SUPER = "Hạt đậu ngon."
+WURT.DESCRIBE.JELLYBEAN_SANITY = "Hạt đậu ngon."
 
-WURT.DESCRIBE.BOWLOFGEARS = "Not food, florp."
+WURT.DESCRIBE.BOWLOFGEARS = "Không phải đồ ăn, florp."
 
-WURT.DESCRIBE.LONGPIGMEAL = "Nuh-uh."
+WURT.DESCRIBE.LONGPIGMEAL = "Không-ừm."
 
-WURT.DESCRIBE.CUCUMBERSALAD = "Look good, but taste okay."
+WURT.DESCRIBE.CUCUMBERSALAD = "Trông ngon, vị cũng được."
 
-WURT.DESCRIBE.DUG_KYNO_WILDWHEAT = "Grass tuft, flort."
+WURT.DESCRIBE.DUG_KYNO_WILDWHEAT = "Bụi cỏ, flort."
 
 WURT.DESCRIBE.KYNO_WILDWHEAT = 
 {
-	GENERIC = "Grass, flort.",
-	PICKED = "No food now.",
-	WITHERED = "Needs water.",
-	BURNING = "Need to stop the fire!!",
+	GENERIC = "Cỏ, flort.",
+	PICKED = "Giờ không có đồ ăn.",
+	WITHERED = "Cần nước.",
+	BURNING = "Phải dập lửa!!",
 }
 
-WURT.DESCRIBE.KYNO_MEALGRINDER = "Glurp... How do I use this?"
+WURT.DESCRIBE.KYNO_MEALGRINDER = "Glurp... dùng cái này sao đây?"
 
 WURT.DESCRIBE.KYNO_MUSHSTUMP =
 {
-	GENERIC = "Ooooh, this where mushrooms grow!",
-	PICKED = "No more mushroom..?",
-	BURNING = "Bad fire!",
+	GENERIC = "Ooooh, đây là chỗ nấm mọc!",
+	PICKED = "Không còn nấm nữa..?",
+	BURNING = "Lửa xấu!",
 }
 
-WURT.DESCRIBE.GORGE_BREAD = "Ohh... It smells good, florp!"
-WURT.DESCRIBE.GORGE_SWEET_CHIPS = "Crunch... crunch..."
-WURT.DESCRIBE.GORGE_VEGETABLE_SOUP = "Yum!"
-WURT.DESCRIBE.GORGE_JELLY_SANDWICH = "Yummy!"
-WURT.DESCRIBE.GORGE_FISH_STEW = "Nooooooooo!"
+WURT.DESCRIBE.GORGE_BREAD = "Ohh... mùi thơm ghê, florp!"
+WURT.DESCRIBE.GORGE_SWEET_CHIPS = "Rộp... rộp..."
+WURT.DESCRIBE.GORGE_VEGETABLE_SOUP = "Ngon!"
+WURT.DESCRIBE.GORGE_JELLY_SANDWICH = "Ngon quá!"
+WURT.DESCRIBE.GORGE_FISH_STEW = "Khôngggggggg!"
 WURT.DESCRIBE.GORGE_MEAT_STEW = "Glurgh."
-WURT.DESCRIBE.GORGE_ONION_CAKE = "Tasty!"
-WURT.DESCRIBE.GORGE_POTATO_PANCAKES = "Tasty!"
-WURT.DESCRIBE.GORGE_POTATO_SOUP = "It's a soup, florp."
-WURT.DESCRIBE.GORGE_FISHBALL_SKEWERS = "Noooo! Fishies gone!!"
+WURT.DESCRIBE.GORGE_ONION_CAKE = "Ngon!"
+WURT.DESCRIBE.GORGE_POTATO_PANCAKES = "Ngon!"
+WURT.DESCRIBE.GORGE_POTATO_SOUP = "Là súp đó, florp."
+WURT.DESCRIBE.GORGE_FISHBALL_SKEWERS = "Khônggg! Cá biến mất rồi!!"
 WURT.DESCRIBE.GORGE_MEAT_SKEWERS = "Glurgh..."
-WURT.DESCRIBE.GORGE_STONE_SOUP = "It's a soup, florp."
-WURT.DESCRIBE.GORGE_CROQUETTE = "Yum!"
-WURT.DESCRIBE.GORGE_ROAST_VEGETABLES = "Yummy!"
+WURT.DESCRIBE.GORGE_STONE_SOUP = "Là súp đó, florp."
+WURT.DESCRIBE.GORGE_CROQUETTE = "Ngon!"
+WURT.DESCRIBE.GORGE_ROAST_VEGETABLES = "Ngon quá!"
 WURT.DESCRIBE.GORGE_MEATLOAF = "Blergh, florp."
-WURT.DESCRIBE.GORGE_CARROT_SOUP = "It's a soup, florp."
-WURT.DESCRIBE.GORGE_FISHPIE = "Nooooo!"
-WURT.DESCRIBE.GORGE_FISHCHIPS = "Noooooooo!"
-WURT.DESCRIBE.GORGE_MEATPIE = "Yuck."
+WURT.DESCRIBE.GORGE_CARROT_SOUP = "Là súp đó, florp."
+WURT.DESCRIBE.GORGE_FISHPIE = "Khôngggg!"
+WURT.DESCRIBE.GORGE_FISHCHIPS = "Khônggggggg!"
+WURT.DESCRIBE.GORGE_MEATPIE = "Eo."
 WURT.DESCRIBE.GORGE_SLIDERS = "Blergh!"
-WURT.DESCRIBE.GORGE_JELLY_ROLL = "Yum!"
-WURT.DESCRIBE.GORGE_CARROT_CAKE = "Looks yummy, florp."
-WURT.DESCRIBE.GORGE_GARLICMASHED = "Smell good, flort."
-WURT.DESCRIBE.GORGE_GARLICBREAD = "Yum!"
-WURT.DESCRIBE.GORGE_TOMATO_SOUP = "It's a soup, florp."
+WURT.DESCRIBE.GORGE_JELLY_ROLL = "Ngon!"
+WURT.DESCRIBE.GORGE_CARROT_CAKE = "Trông ngon, florp."
+WURT.DESCRIBE.GORGE_GARLICMASHED = "Mùi thơm, flort."
+WURT.DESCRIBE.GORGE_GARLICBREAD = "Ngon!"
+WURT.DESCRIBE.GORGE_TOMATO_SOUP = "Là súp đó, florp."
 WURT.DESCRIBE.GORGE_SAUSAGE = "Glurgh..."
-WURT.DESCRIBE.GORGE_CANDIEDFISH = "Noooooo!"
-WURT.DESCRIBE.GORGE_STUFFEDMUSHROOM = "Yummmmmmm, florp"
-WURT.DESCRIBE.GORGE_BRUSCHETTA = "Yum!"
-WURT.DESCRIBE.GORGE_HAMBURGER = "Glurgh... it has meat."
-WURT.DESCRIBE.GORGE_FISHBURGER = "Glurgh... it has meat."
-WURT.DESCRIBE.GORGE_MUSHROOMBURGER = "Glurgh... it has meat."
-WURT.DESCRIBE.GORGE_FISH_STEAK = "Nooooooooo!"
+WURT.DESCRIBE.GORGE_CANDIEDFISH = "Khônggggg!"
+WURT.DESCRIBE.GORGE_STUFFEDMUSHROOM = "Ngonnnnnnn, florp"
+WURT.DESCRIBE.GORGE_BRUSCHETTA = "Ngon!"
+WURT.DESCRIBE.GORGE_HAMBURGER = "Glurgh... có thịt."
+WURT.DESCRIBE.GORGE_FISHBURGER = "Glurgh... có thịt."
+WURT.DESCRIBE.GORGE_MUSHROOMBURGER = "Glurgh... có thịt."
+WURT.DESCRIBE.GORGE_FISH_STEAK = "Khôngggggggg!"
 WURT.DESCRIBE.GORGE_CURRY = "Glurgh..."
-WURT.DESCRIBE.GORGE_SPAGHETTI = "Glurgh... hunks of yuck."
-WURT.DESCRIBE.GORGE_POACHEDFISH = "*Sniff*"
+WURT.DESCRIBE.GORGE_SPAGHETTI = "Glurgh... cục ghê ghê."
+WURT.DESCRIBE.GORGE_POACHEDFISH = "*Sụt sịt*"
 WURT.DESCRIBE.GORGE_SHEPHERD_PIE = "Glurgh..."
-WURT.DESCRIBE.GORGE_CANDY = "MMMMMMMMMM! ITH THO CHEWY!"
-WURT.DESCRIBE.GORGE_BREAD_PUDDING = "Sweet, florp."
-WURT.DESCRIBE.GORGE_BERRY_TART = "Berries!"
-WURT.DESCRIBE.GORGE_MACARONI = "Delicious"
-WURT.DESCRIBE.GORGE_BAGEL_AND_FISH = "Nooooo!"
-WURT.DESCRIBE.GORGE_GRILLED_CHEESE = "Tasty, florp."
-WURT.DESCRIBE.GORGE_CREAMMUSHROOM = "Yum!"
-WURT.DESCRIBE.GORGE_MANICOTTI = "Yummy!"
-WURT.DESCRIBE.GORGE_CHEESEBURGER = "Glurgh... it has meat."
-WURT.DESCRIBE.GORGE_FETTUCCINE = "Smells great, florp."
-WURT.DESCRIBE.GORGE_ONION_SOUP = "Yum!"
+WURT.DESCRIBE.GORGE_CANDY = "MMMMMMMMMM! NÓ DAI QUÁÁ!"
+WURT.DESCRIBE.GORGE_BREAD_PUDDING = "Ngọt, florp."
+WURT.DESCRIBE.GORGE_BERRY_TART = "Quả mọng!"
+WURT.DESCRIBE.GORGE_MACARONI = "Ngon"
+WURT.DESCRIBE.GORGE_BAGEL_AND_FISH = "Khôngggg!"
+WURT.DESCRIBE.GORGE_GRILLED_CHEESE = "Ngon, florp."
+WURT.DESCRIBE.GORGE_CREAMMUSHROOM = "Ngon!"
+WURT.DESCRIBE.GORGE_MANICOTTI = "Ngon quá!"
+WURT.DESCRIBE.GORGE_CHEESEBURGER = "Glurgh... có thịt."
+WURT.DESCRIBE.GORGE_FETTUCCINE = "Mùi thơm quá, florp."
+WURT.DESCRIBE.GORGE_ONION_SOUP = "Ngon!"
 WURT.DESCRIBE.GORGE_BREADED_CUTLET = "Glurgh..."
-WURT.DESCRIBE.GORGE_CREAMY_FISH = "*Sniff* *sniff*"
-WURT.DESCRIBE.GORGE_PIZZA = "Glurgh... It does not taste good..."
+WURT.DESCRIBE.GORGE_CREAMY_FISH = "*Sụt sịt* *sụt sịt*"
+WURT.DESCRIBE.GORGE_PIZZA = "Glurgh... ăn không ngon..."
 WURT.DESCRIBE.GORGE_POT_ROAST = "Glurgh..."
-WURT.DESCRIBE.GORGE_CRAB_CAKE = "Poor crab *Sniff*"
+WURT.DESCRIBE.GORGE_CRAB_CAKE = "Cua tội nghiệp *Sụt sịt*"
 WURT.DESCRIBE.GORGE_STEAK_FRITES = "Blergh..."
 WURT.DESCRIBE.GORGE_SHOOTER_SANDWICH = "Glurp..."
 WURT.DESCRIBE.GORGE_BACON_WRAPPED = "Glurgh..."
-WURT.DESCRIBE.GORGE_CRAB_ROLL = "Nooo!"
+WURT.DESCRIBE.GORGE_CRAB_ROLL = "Khônggg!"
 WURT.DESCRIBE.GORGE_MEAT_WELLINGTON = "Blergh..."
-WURT.DESCRIBE.GORGE_CRAB_RAVIOLI = "Nooo!"
+WURT.DESCRIBE.GORGE_CRAB_RAVIOLI = "Khônggg!"
 WURT.DESCRIBE.GORGE_CARAMEL_CUBE = "Wow!!!"
-WURT.DESCRIBE.GORGE_SCONE = "Sweet!"
-WURT.DESCRIBE.GORGE_TRIFLE = "Sweet!"
-WURT.DESCRIBE.GORGE_CHEESECAKE = "Yummy!"
+WURT.DESCRIBE.GORGE_SCONE = "Ngọt!"
+WURT.DESCRIBE.GORGE_TRIFLE = "Ngọt!"
+WURT.DESCRIBE.GORGE_CHEESECAKE = "Ngon quá!"
 
-WURT.DESCRIBE.DUCKYOUGLERMZ = "Glurgh... smells bad!!"
+WURT.DESCRIBE.DUCKYOUGLERMZ = "Glurgh... hôi quá!!"
 
-WURT.DESCRIBE.KYNO_ALOE = "Green plant, florp."
-WURT.DESCRIBE.KYNO_ALOE_COOKED = "Fwooshed plant!"
-WURT.DESCRIBE.KYNO_ALOE_DRIED = "Dried plant, florp."
-WURT.DESCRIBE.KYNO_ALOE_GROUND = "Green plant, florp."
-WURT.DESCRIBE.KYNO_ALOE_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.FARM_PLANT_KYNO_ALOE = "Green plant, florp."
-WURT.DESCRIBE.KYNO_ALOE_OVERSIZED = "Green plant, florp."
+WURT.DESCRIBE.KYNO_ALOE = "Cây xanh, florp."
+WURT.DESCRIBE.KYNO_ALOE_COOKED = "Cây bị xèo!"
+WURT.DESCRIBE.KYNO_ALOE_DRIED = "Cây khô, florp."
+WURT.DESCRIBE.KYNO_ALOE_GROUND = "Cây xanh, florp."
+WURT.DESCRIBE.KYNO_ALOE_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.FARM_PLANT_KYNO_ALOE = "Cây xanh, florp."
+WURT.DESCRIBE.KYNO_ALOE_OVERSIZED = "Cây xanh, florp."
 WURT.DESCRIBE.KYNO_ALOE_OVERSIZED_ROTTEN = "Awww!"
 
-WURT.DESCRIBE.KYNO_CUCUMBER = "Sea snack!"
-WURT.DESCRIBE.KYNO_CUCUMBER_COOKED = "Slimy!"
-WURT.DESCRIBE.KYNO_CUCUMBER_GROUND = "Sea snack!"
-WURT.DESCRIBE.KYNO_CUCUMBER_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.KNOWN_KYNO_CUCUMBER_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.FARM_PLANT_KYNO_CUCUMBER = "Sea snack!"
-WURT.DESCRIBE.KYNO_CUCUMBER_OVERSIZED = "Sea snack!"
+WURT.DESCRIBE.KYNO_CUCUMBER = "Đồ ăn vặt biển!"
+WURT.DESCRIBE.KYNO_CUCUMBER_COOKED = "Nhớt!"
+WURT.DESCRIBE.KYNO_CUCUMBER_GROUND = "Đồ ăn vặt biển!"
+WURT.DESCRIBE.KYNO_CUCUMBER_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.KNOWN_KYNO_CUCUMBER_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.FARM_PLANT_KYNO_CUCUMBER = "Đồ ăn vặt biển!"
+WURT.DESCRIBE.KYNO_CUCUMBER_OVERSIZED = "Đồ ăn vặt biển!"
 WURT.DESCRIBE.KYNO_CUCUMBER_OVERSIZED_ROTTEN = "Awww!"
 
-WURT.DESCRIBE.KYNO_RADISH = "Ball of num nums!"
-WURT.DESCRIBE.KYNO_RADISH_COOKED = "Cooked!"
-WURT.DESCRIBE.KYNO_RADISH_GROUND = "Ball of num nums!"
-WURT.DESCRIBE.KYNO_RADISH_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.KNOWN_KYNO_RADISH_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.FARM_PLANT_KYNO_RADISH = "Ball of num nums!"
-WURT.DESCRIBE.KYNO_RADISH_OVERSIZED = "Ball of num nums!"
+WURT.DESCRIBE.KYNO_RADISH = "Cục ngon ngon!"
+WURT.DESCRIBE.KYNO_RADISH_COOKED = "Nấu rồi!"
+WURT.DESCRIBE.KYNO_RADISH_GROUND = "Cục ngon ngon!"
+WURT.DESCRIBE.KYNO_RADISH_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.KNOWN_KYNO_RADISH_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.FARM_PLANT_KYNO_RADISH = "Cục ngon ngon!"
+WURT.DESCRIBE.KYNO_RADISH_OVERSIZED = "Cục ngon ngon!"
 WURT.DESCRIBE.KYNO_RADISH_OVERSIZED_ROTTEN = "Awww!"
 
-WURT.DESCRIBE.KYNO_FENNEL = "Yummy!"
-WURT.DESCRIBE.KYNO_FENNEL_COOKED = "Yummy!"
-WURT.DESCRIBE.KYNO_FENNEL_GROUND = "Yummy!"
-WURT.DESCRIBE.KYNO_FENNEL_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.KNOWN_KYNO_FENNEL_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.FARM_PLANT_KYNO_FENNEL = "Yummy!"
-WURT.DESCRIBE.KYNO_FENNEL_OVERSIZED = "Yummy!"
+WURT.DESCRIBE.KYNO_FENNEL = "Ngon quá!"
+WURT.DESCRIBE.KYNO_FENNEL_COOKED = "Ngon quá!"
+WURT.DESCRIBE.KYNO_FENNEL_GROUND = "Ngon quá!"
+WURT.DESCRIBE.KYNO_FENNEL_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.KNOWN_KYNO_FENNEL_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.FARM_PLANT_KYNO_FENNEL = "Ngon quá!"
+WURT.DESCRIBE.KYNO_FENNEL_OVERSIZED = "Ngon quá!"
 WURT.DESCRIBE.KYNO_FENNEL_OVERSIZED_ROTTEN = "Awww!"
 
-WURT.DESCRIBE.KYNO_SWEETPOTATO = "Sweet treat!"
-WURT.DESCRIBE.KYNO_SWEETPOTATO_COOKED = "Hot sweet treat, florp!"
-WURT.DESCRIBE.KYNO_SWEETPOTATO_GROUND = "Sweet treat!"
-WURT.DESCRIBE.KYNO_SWEETPOTATO_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.KNOWN_KYNO_SWEETPOTATO_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.FARM_PLANT_KYNO_SWEETPOTATO = "Sweet treat!"
-WURT.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED = "Sweet treat!"
+WURT.DESCRIBE.KYNO_SWEETPOTATO = "Đồ ngọt ngon!"
+WURT.DESCRIBE.KYNO_SWEETPOTATO_COOKED = "Đồ ngọt nóng, florp!"
+WURT.DESCRIBE.KYNO_SWEETPOTATO_GROUND = "Đồ ngọt ngon!"
+WURT.DESCRIBE.KYNO_SWEETPOTATO_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.KNOWN_KYNO_SWEETPOTATO_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.FARM_PLANT_KYNO_SWEETPOTATO = "Đồ ngọt ngon!"
+WURT.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED = "Đồ ngọt ngon!"
 WURT.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED_ROTTEN = "Awww!"
 
-WURT.DESCRIBE.KYNO_PARZNIP = "Tasty root!"
-WURT.DESCRIBE.KYNO_PARZNIP_COOKED = "Tasty root!"
-WURT.DESCRIBE.KYNO_PARZNIP_EATEN = "Tasty root!"
-WURT.DESCRIBE.KYNO_PARZNIP_GROUND = "Tasty root!"
-WURT.DESCRIBE.KYNO_PARZNIP_BIG = "Tasty giant root!!"
-WURT.DESCRIBE.KYNO_PARZNIP_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.KNOWN_KYNO_PARZNIP_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.FARM_PLANT_KYNO_PARZNIP = "Tasty root!"
-WURT.DESCRIBE.KYNO_PARZNIP_OVERSIZED = "Tasty root!"
+WURT.DESCRIBE.KYNO_PARZNIP = "Củ ngon!"
+WURT.DESCRIBE.KYNO_PARZNIP_COOKED = "Củ ngon!"
+WURT.DESCRIBE.KYNO_PARZNIP_EATEN = "Củ ngon!"
+WURT.DESCRIBE.KYNO_PARZNIP_GROUND = "Củ ngon!"
+WURT.DESCRIBE.KYNO_PARZNIP_BIG = "Củ khổng lồ ngon!!"
+WURT.DESCRIBE.KYNO_PARZNIP_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.KNOWN_KYNO_PARZNIP_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.FARM_PLANT_KYNO_PARZNIP = "Củ ngon!"
+WURT.DESCRIBE.KYNO_PARZNIP_OVERSIZED = "Củ ngon!"
 WURT.DESCRIBE.KYNO_PARZNIP_OVERSIZED_ROTTEN = "Awww!"
 
-WURT.DESCRIBE.KYNO_TURNIP = "Mmm, turnip!"
-WURT.DESCRIBE.KYNO_TURNIP_COOKED = "Hot turnip!"
-WURT.DESCRIBE.KYNO_TURNIP_GROUND = "Mmm, turnip!"
-WURT.DESCRIBE.KYNO_TURNIP_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.KNOWN_KYNO_TURNIP_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.FARM_PLANT_KYNO_TURNIP = "Mmm, turnip!"
-WURT.DESCRIBE.KYNO_TURNIP_OVERSIZED = "Mmm, turnip!"
+WURT.DESCRIBE.KYNO_TURNIP = "Mmm, củ cải!"
+WURT.DESCRIBE.KYNO_TURNIP_COOKED = "Củ cải nóng!"
+WURT.DESCRIBE.KYNO_TURNIP_GROUND = "Mmm, củ cải!"
+WURT.DESCRIBE.KYNO_TURNIP_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.KNOWN_KYNO_TURNIP_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.FARM_PLANT_KYNO_TURNIP = "Mmm, củ cải!"
+WURT.DESCRIBE.KYNO_TURNIP_OVERSIZED = "Mmm, củ cải!"
 WURT.DESCRIBE.KYNO_TURNIP_OVERSIZED_ROTTEN = "Awww!"
 
-WURT.DESCRIBE.KYNO_RICE = "Its... great."
-WURT.DESCRIBE.KYNO_RICE_COOKED = "Its... great."
-WURT.DESCRIBE.KYNO_RICE_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.KNOWN_KYNO_RICE_SEEDS = "Make more tasty snacks!"
-WURT.DESCRIBE.FARM_PLANT_KYNO_RICE = "Mmm, rice!"
-WURT.DESCRIBE.KYNO_RICE_OVERSIZED = "Mmm, rice!"
+WURT.DESCRIBE.KYNO_RICE = "Nó... tuyệt."
+WURT.DESCRIBE.KYNO_RICE_COOKED = "Nó... tuyệt."
+WURT.DESCRIBE.KYNO_RICE_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.KNOWN_KYNO_RICE_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.FARM_PLANT_KYNO_RICE = "Mmm, gạo!"
+WURT.DESCRIBE.KYNO_RICE_OVERSIZED = "Mmm, gạo!"
 WURT.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Awww!"
 
-WURT.DESCRIBE.KYNO_SEEDS_KIT = "Tiny bits."
+WURT.DESCRIBE.KYNO_SEEDS_KIT = "Mấy mẩu bé xíu."
 
 WURT.DESCRIBE.KYNO_LIMPETROCK = 
 {
-	GENERIC = "It's growing meat... Glurgh.",
-	PICKED = "Meat is hiding!",
-	WITHERED = "Too dry.",
+	GENERIC = "Nó đang mọc thịt... Glurgh.",
+	PICKED = "Thịt đang trốn!",
+	WITHERED = "Khô quá.",
 }
 
-WURT.DESCRIBE.KYNO_LIMPETS = "Snails..."
-WURT.DESCRIBE.KYNO_LIMPETS_COOKED = "Cooked snails, florp."
+WURT.DESCRIBE.KYNO_LIMPETS = "Ốc..."
+WURT.DESCRIBE.KYNO_LIMPETS_COOKED = "Ốc nấu rồi, florp."
 
 WURT.DESCRIBE.KYNO_LOTUS_OCEAN = 
 {
 	GENERIC = "Aww...",
-	PICKED = "No flower now, florp.",
-	BURNING = "Bad fire! Bad!",
+	PICKED = "Giờ không có hoa, florp.",
+	BURNING = "Lửa xấu! Xấu!",
 }
 
-WURT.DESCRIBE.KYNO_LOTUS_ROOT = "I need to plant them in the water, florp."
-WURT.DESCRIBE.KYNO_LOTUS_FLOWER = "Aww... I love it!"
-WURT.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "I want to eat it."
+WURT.DESCRIBE.KYNO_LOTUS_ROOT = "Mình cần trồng nó trong nước, florp."
+WURT.DESCRIBE.KYNO_LOTUS_FLOWER = "Aww... Mình thích nó!"
+WURT.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Mình muốn ăn nó."
 
 WURT.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
 {
-	GENERIC = "Weeds.",
-	PICKED = "They grow back later.",
-	BURNING = "Fire hurt sea plants!",
+	GENERIC = "Cỏ dại.",
+	PICKED = "Lát nữa nó mọc lại.",
+	BURNING = "Lửa làm đau cây biển!",
 }
 
-WURT.DESCRIBE.KYNO_SEAWEEDS = "Slippery!"
-WURT.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Yum yum!"
-WURT.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Lasts longer..."
-WURT.DESCRIBE.KYNO_SEAWEEDS_ROOT = "I need to plant them in the water, florp."
+WURT.DESCRIBE.KYNO_SEAWEEDS = "Trơn!"
+WURT.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Ngon ngon!"
+WURT.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Để được lâu hơn..."
+WURT.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Mình cần trồng nó trong nước, florp."
 
 WURT.DESCRIBE.KYNO_TAROROOT_OCEAN = 
 {
-	GENERIC = "Pretty!",
-	PICKED = "Water help it grow, florp!",
-	BURNING = "Noooo!",
+	GENERIC = "Đẹp quá!",
+	PICKED = "Nước giúp nó lớn, florp!",
+	BURNING = "Khônggg!",
 }
 
-WURT.DESCRIBE.KYNO_TAROROOT_ROOT = "I need to plant them in the water, florp."
-WURT.DESCRIBE.KYNO_TAROROOT = "Big purple yummy!"
-WURT.DESCRIBE.KYNO_TAROROOT_COOKED = "Brings out purple flavor, flort."
+WURT.DESCRIBE.KYNO_TAROROOT_ROOT = "Mình cần trồng nó trong nước, florp."
+WURT.DESCRIBE.KYNO_TAROROOT = "Cục tím to ngon!"
+WURT.DESCRIBE.KYNO_TAROROOT_COOKED = "Làm vị tím ngon hơn, flort."
 
 WURT.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
 {
-	GENERIC = "I want it!",
-	PICKED = "Grow back soon!",
-	BURNING = "Fire bad for water plants!",
+	GENERIC = "Mình muốn nó!",
+	PICKED = "Mọc lại sớm nha!",
+	BURNING = "Lửa xấu cho cây nước!",
 }
 
-WURT.DESCRIBE.KYNO_WATERYCRESS_ROOT = "I need to plant them in the water, florp."
-WURT.DESCRIBE.KYNO_WATERYCRESS = "I want it!"
+WURT.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Mình cần trồng nó trong nước, florp."
+WURT.DESCRIBE.KYNO_WATERYCRESS = "Mình muốn nó!"
 
-WURT.DESCRIBE.WATERYCRESSBOWL = "Smelly water, flort."
+WURT.DESCRIBE.WATERYCRESSBOWL = "Nước hôi, flort."
 
-WURT.DESCRIBE.KYNO_SALT = "Weird little pot."
+WURT.DESCRIBE.KYNO_SALT = "Cái nồi nhỏ kỳ lạ."
 
 WURT.DESCRIBE.KYNO_MUSSELSTICK =
 {
-	GENERIC = "Friends are trapped!",
-	PICKED = "No mussels now!",
-	BURNING = "Bad fire!",
+	GENERIC = "Bạn bè bị kẹt rồi!",
+	PICKED = "Giờ không có trai!",
+	BURNING = "Lửa xấu!",
 }
 
-WURT.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Glurgh... stick for catching friends..."
+WURT.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Glurgh... que để bắt bạn bè..."
 
-WURT.DESCRIBE.CATFOOD = "Food for kitties, glurp."
+WURT.DESCRIBE.CATFOOD = "Đồ ăn cho mèo, glurp."
 
-WURT.DESCRIBE.KATFOOD = "Food for kitties, glurp."
+WURT.DESCRIBE.KATFOOD = "Đồ ăn cho mèo, glurp."
 
 WURT.DESCRIBE.KYNO_BANANATREE = 
 {
-	GENERIC = "See fruits up there!!",
-	PICKED = "No yellow food now.",
-	CHOPPED = "Tree gone, flort.",
-	BURNING = "Bad fire!",
-	BURNT = "All gone.",
+	GENERIC = "Thấy trái ở trên kia kìa!!",
+	PICKED = "Giờ không có đồ ăn vàng.",
+	CHOPPED = "Cây mất rồi, flort.",
+	BURNING = "Lửa xấu!",
+	BURNT = "Hết sạch.",
 }
 
-WURT.DESCRIBE.KYNO_BANANA = "Mmm... good fruit, florp."
-WURT.DESCRIBE.KYNO_BANANA_COOKED = "Yummy!"
+WURT.DESCRIBE.KYNO_BANANA = "Mmm... trái cây ngon, florp."
+WURT.DESCRIBE.KYNO_BANANA_COOKED = "Ngon quá!"
 
 WURT.DESCRIBE.KYNO_KOKONUTTREE = 
 {
-	GENERIC = "Big leaves!",
-	PICKED = "No coconuts for now, florp.",
-	CHOPPED = "Tree gone.",
-	BURNING = "Bad fire!!",
-	BURNT = "All gone. *snif*",
+	GENERIC = "Lá to!",
+	PICKED = "Giờ chưa có dừa, florp.",
+	CHOPPED = "Cây mất rồi.",
+	BURNING = "Lửa xấu!!",
+	BURNT = "Hết sạch. *sụt sịt*",
 }
 
-WURT.DESCRIBE.KYNO_KOKONUT = "Tree nut!"
-WURT.DESCRIBE.KYNO_KOKONUT_HALVED = "Half greatness, florp."
-WURT.DESCRIBE.KYNO_KOKONUT_COOKED = "Yummy!"
+WURT.DESCRIBE.KYNO_KOKONUT = "Hạt của cây!"
+WURT.DESCRIBE.KYNO_KOKONUT_HALVED = "Một nửa tuyệt vời, florp."
+WURT.DESCRIBE.KYNO_KOKONUT_COOKED = "Ngon quá!"
 
-WURT.DESCRIBE.BOWLOFPOPCORN = "They 'sploded!"
+WURT.DESCRIBE.BOWLOFPOPCORN = "Chúng nổ cái bốp!"
 
-WURT.DESCRIBE.FIGJUICE = "Cold, burrt!"
+WURT.DESCRIBE.FIGJUICE = "Lạnh, burrt!"
 
-WURT.DESCRIBE.COCONUTWATER = "It tastes sweet, florp."
+WURT.DESCRIBE.COCONUTWATER = "Vị ngọt, florp."
 
 WURT.DESCRIBE.EYEBALLSPAGHETTI = "Glurgh..."
 
-WURT.DESCRIBE.FORGETMELOTS_SEEDS = "Make more tasty snacks!"
+WURT.DESCRIBE.FORGETMELOTS_SEEDS = "Làm thêm đồ ăn ngon!"
 
-WURT.DESCRIBE.FIRENETTLES_SEEDS = "Make more tasty snacks!"
+WURT.DESCRIBE.FIRENETTLES_SEEDS = "Làm thêm đồ ăn ngon!"
 
-WURT.DESCRIBE.TILLWEED_SEEDS = "Make more tasty snacks!"
+WURT.DESCRIBE.TILLWEED_SEEDS = "Làm thêm đồ ăn ngon!"
 
-WURT.DESCRIBE.KYNO_FLOATILIZER = "What? It just some poop."
+WURT.DESCRIBE.KYNO_FLOATILIZER = "Gì? Chỉ là phân thôi mà."
 
-WURT.DESCRIBE.KYNO_TWIGGYNUTS = "Yum!"
+WURT.DESCRIBE.KYNO_TWIGGYNUTS = "Ngon!"
 
-WURT.DESCRIBE.KYNO_REPAIRTOOL = "The fixer, glorp."
+WURT.DESCRIBE.KYNO_REPAIRTOOL = "Đồ sửa chữa, glorp."
 
-WURT.DESCRIBE.KYNO_KOI = "You very pretty, florp."
-WURT.DESCRIBE.KYNO_KOI_COOKED = "(Sniff)"
+WURT.DESCRIBE.KYNO_KOI = "Bạn đẹp quá, florp."
+WURT.DESCRIBE.KYNO_KOI_COOKED = "(Sụt sịt)"
 
-WURT.DESCRIBE.KYNO_TROPICALFISH = "Hello little one."
-WURT.DESCRIBE.KYNO_TROPICALFISH_COOKED = "Noooooo!"
+WURT.DESCRIBE.KYNO_TROPICALFISH = "Chào bạn nhỏ."
+WURT.DESCRIBE.KYNO_TROPICALFISH_COOKED = "Khônggggg!"
 
-WURT.DESCRIBE.KYNO_NEONFISH = "Hello friend!"
-WURT.DESCRIBE.KYNO_NEONFISH_COOKED = "(Sniff)"
+WURT.DESCRIBE.KYNO_NEONFISH = "Chào bạn!"
+WURT.DESCRIBE.KYNO_NEONFISH_COOKED = "(Sụt sịt)"
 
-WURT.DESCRIBE.KYNO_GROUPER = "Hello, purple friend!"
-WURT.DESCRIBE.KYNO_GROUPER_COOKED = "(Sniff) poor fish..."
+WURT.DESCRIBE.KYNO_GROUPER = "Chào, bạn tím!"
+WURT.DESCRIBE.KYNO_GROUPER_COOKED = "(Sụt sịt) cá tội nghiệp..."
  
-WURT.DESCRIBE.KYNO_PIERROTFISH = "Hello yellow friend!"
-WURT.DESCRIBE.KYNO_PIERROTFISH_COOKED = "(Sniff) poor little fish..."
+WURT.DESCRIBE.KYNO_PIERROTFISH = "Chào bạn vàng!"
+WURT.DESCRIBE.KYNO_PIERROTFISH_COOKED = "(Sụt sịt) cá nhỏ tội nghiệp..."
 
-WURT.DESCRIBE.KYNO_SALMONFISH = "Hello fishy!"
-WURT.DESCRIBE.KYNO_SALMONFISH_COOKED = "Nooooo!!"
+WURT.DESCRIBE.KYNO_SALMONFISH = "Chào cá nhỏ!"
+WURT.DESCRIBE.KYNO_SALMONFISH_COOKED = "Khôngggg!!"
 
-WURT.DESCRIBE.TURF_PINKPARK = "Pink turf!!!"
-WURT.DESCRIBE.TURF_STONECITY = "Stones..."
-WURT.DESCRIBE.TURF_FIELDS = "Ground."
-WURT.DESCRIBE.TURF_TIDALMARSH = "Remembers me home, florp."
+WURT.DESCRIBE.TURF_PINKPARK = "Nền hồng!!!"
+WURT.DESCRIBE.TURF_STONECITY = "Đá..."
+WURT.DESCRIBE.TURF_FIELDS = "Đất."
+WURT.DESCRIBE.TURF_TIDALMARSH = "Làm mình nhớ nhà, florp."
 
 WURT.DESCRIBE.KYNO_SALTRACK =
 {
-	GENERIC = "There stuff growing on it!",
-	PICKED = "How this supposed to work, florp?",
+	GENERIC = "Có đồ mọc trên đó!",
+	PICKED = "Cái này hoạt động sao vậy, florp?",
 }
 
-WURT.DESCRIBE.KYNO_SALTRACK_INSTALLER = "This go over salty pond?"
+WURT.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Cái này đặt trên ao mặn hả?"
 
-WURT.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Holds sweet tree stuff!"
+WURT.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Giữ đồ ngọt của cây!"
 
-WURT.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Look like little bouse!"
+WURT.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Trông như nhà nhỏ!"
 
 WURT.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
 {
-	GENERIC = "Something weird about that Pigfolk!",
-	SLEEPING = "Sssh! Pigfolk sleeping.",
+	GENERIC = "Dân Heo đó có gì kỳ kỳ!",
+	SLEEPING = "Sssh! Dân Heo đang ngủ.",
 }
 
 WURT.DESCRIBE.KYNO_SUGARTREE =
 {
-	GENERIC = "There sweet stuff inside!",
-	CHOPPED = "Someone took tree! Not me!",
-	SAPPED = "Mmm, it full of sweet stuff!",
-	PICKED = "Aww... nothing left.",
-	BURNING = "Bad fire!",
-	BURNT = "All gone.",
+	GENERIC = "Có đồ ngọt bên trong!",
+	CHOPPED = "Ai đó lấy cây rồi! Không phải mình!",
+	SAPPED = "Mmm, nó đầy đồ ngọt!",
+	PICKED = "Aww... không còn gì.",
+	BURNING = "Lửa xấu!",
+	BURNT = "Hết sạch.",
 }
 
 WURT.DESCRIBE.KYNO_SUGARTREE_RUINED =
 {
-	GENERIC = "Tree okay?",
-	CHOPPED = "Tree gone.",
-	SAPPED = "Bad sticky.",
-	PICKED = "Blegh, there bugs stuck in the sweet stuff.",
-	BURNING = "Fire clean!",
-	BURNT = "All gone.",
+	GENERIC = "Cây ổn không?",
+	CHOPPED = "Cây mất rồi.",
+	SAPPED = "Dính dính xấu.",
+	PICKED = "Blegh, có bọ kẹt trong đồ ngọt.",
+	BURNING = "Lửa làm sạch!",
+	BURNT = "Hết sạch.",
 }
 
-WURT.DESCRIBE.KYNO_SUGARTREE_BUD = "Little seed tastes funny, florp."
+WURT.DESCRIBE.KYNO_SUGARTREE_BUD = "Hạt nhỏ vị buồn cười, florp."
 
-WURT.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Glurgh, such ugly plant."
-WURT.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Glurgh, such ugly plant."
+WURT.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Glurgh, cây xấu quá."
+WURT.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Glurgh, cây xấu quá."
 
-WURT.DESCRIBE.KYNO_SUGARTREE_PETALS = "Glurgh, such ugly plant."
-WURT.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Ha ha! Take this, flower!"
+WURT.DESCRIBE.KYNO_SUGARTREE_PETALS = "Glurgh, cây xấu quá."
+WURT.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Ha ha! Đáng đời, hoa!"
 
-WURT.DESCRIBE.KYNO_PEBBLECRAB = "Aww, it so cute, florp!"
+WURT.DESCRIBE.KYNO_PEBBLECRAB = "Aww, nó dễ thương quá, florp!"
 
-WURT.DESCRIBE.KYNO_CRABMEAT = "(Sniff) poor crab..."
-WURT.DESCRIBE.KYNO_CRABMEAT_COOKED = "Glurph... can't look..."
-WURT.DESCRIBE.KYNO_CRABMEAT_DRIED = "(Sniff) poor crab..."
+WURT.DESCRIBE.KYNO_CRABMEAT = "(Sụt sịt) cua tội nghiệp..."
+WURT.DESCRIBE.KYNO_CRABMEAT_COOKED = "Glurph... không dám nhìn..."
+WURT.DESCRIBE.KYNO_CRABMEAT_DRIED = "(Sụt sịt) cua tội nghiệp..."
 
-WURT.DESCRIBE.KYNO_CRABKINGMEAT = "(Sniff) poor crab..."
-WURT.DESCRIBE.KYNO_CRABKINGMEAT_COOKED = "(Sniff) poor crab..."
-WURT.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "(Sniff) poor crab..."
+WURT.DESCRIBE.KYNO_CRABKINGMEAT = "(Sụt sịt) cua tội nghiệp..."
+WURT.DESCRIBE.KYNO_CRABKINGMEAT_COOKED = "(Sụt sịt) cua tội nghiệp..."
+WURT.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "(Sụt sịt) cua tội nghiệp..."
 
-WURT.DESCRIBE.KYNO_SLAUGHTERTOOL = "Huh? What this for?"
+WURT.DESCRIBE.KYNO_SLAUGHTERTOOL = "Hả? Cái này để làm gì?"
 
 WURT.DESCRIBE.KYNO_CHICKEN2 = 
 {
-	GENERIC = "A chicken!",
-	COOP = "Chicken live here now.",
+	GENERIC = "Một con gà!",
+	COOP = "Gà sống ở đây rồi.",
 }
 
-WURT.DESCRIBE.KYNO_CHICKEN_EGG = "Baby chicken inside?"
-WURT.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Ooh! Big egg is heavy!"
-WURT.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Don't want it!"
+WURT.DESCRIBE.KYNO_CHICKEN_EGG = "Có gà con bên trong hả?"
+WURT.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Ooh! Trứng to nặng quá!"
+WURT.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Không muốn đâu!"
 
 WURT.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 {
-	GENERIC = "Egg wiggly, florp.",
-	HATCHING = "Baby bird coming!!",
+	GENERIC = "Trứng động đậy, florp.",
+	HATCHING = "Chim con sắp ra!!",
 }
 
 WURT.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
-	GENERIC = "Chicken home! Maybe eggs inside, florp.",
-	FULL = "Heap of eggs!",
-	BURNT = "Chicken house broke...",
+	GENERIC = "Nhà gà! Có thể có trứng bên trong, florp.",
+	FULL = "Cả đống trứng!",
+	BURNT = "Nhà gà hỏng rồi...",
 }
 
-WURT.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Glurgh... It's broken."
+WURT.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Glurgh... Nó hỏng rồi."
 
-WURT.DESCRIBE.KYNO_COOKWARE_KIT = "Oh-oh-oh, a present? For me?"
-WURT.DESCRIBE.KYNO_COOKWARE_SYRUP = "Is for sweet stuff."
-WURT.DESCRIBE.KYNO_COOKWARE_SYRUP_POT = "Is for sweet stuff."
-WURT.DESCRIBE.KYNO_COOKWARE_BIG_POT = "Is just normal pot, florp."
-WURT.DESCRIBE.KYNO_COOKWARE_BIG = "Is just normal pot, florp."
-WURT.DESCRIBE.KYNO_COOKWARE_SMALL_POT = "Bitty pot."
-WURT.DESCRIBE.KYNO_COOKWARE_SMALL = "Bitty pot."
-WURT.DESCRIBE.KYNO_COOKWARE_GRILL = "Make food hot and tasty."
-WURT.DESCRIBE.KYNO_COOKWARE_GRILL_ITEM = "Is for making food hot and tasty!"
-WURT.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL = "Teeny food cooker."
-WURT.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL_ITEM = "Teeny food cooker."
-WURT.DESCRIBE.KYNO_COOKWARE_ELDER = "Is for sweet stuff."
-WURT.DESCRIBE.KYNO_COOKWARE_OVEN_ITEM = "Food cooker."
-WURT.DESCRIBE.KYNO_COOKWARE_CASSEROLE = "Not good with breakable things..."
-WURT.DESCRIBE.KYNO_COOKWARE_SMALL_CASSEROLE = "Is so teeny tiny!"
-WURT.DESCRIBE.KYNO_COOKWARE_OVEN = "Wonder what to cook..."
-WURT.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Wonder what to cook..."
-WURT.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Wonder what to cook..."
+WURT.DESCRIBE.KYNO_COOKWARE_KIT = "Ô-ô-ô, quà hả? Cho mình hả?"
+WURT.DESCRIBE.KYNO_COOKWARE_SYRUP = "Dùng làm đồ ngọt."
+WURT.DESCRIBE.KYNO_COOKWARE_SYRUP_POT = "Dùng làm đồ ngọt."
+WURT.DESCRIBE.KYNO_COOKWARE_BIG_POT = "Chỉ là nồi bình thường thôi, florp."
+WURT.DESCRIBE.KYNO_COOKWARE_BIG = "Chỉ là nồi bình thường thôi, florp."
+WURT.DESCRIBE.KYNO_COOKWARE_SMALL_POT = "Nồi bé xíu."
+WURT.DESCRIBE.KYNO_COOKWARE_SMALL = "Nồi bé xíu."
+WURT.DESCRIBE.KYNO_COOKWARE_GRILL = "Làm đồ ăn nóng và ngon."
+WURT.DESCRIBE.KYNO_COOKWARE_GRILL_ITEM = "Dùng để làm đồ ăn nóng và ngon!"
+WURT.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL = "Đồ nấu ăn bé tí."
+WURT.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL_ITEM = "Đồ nấu ăn bé tí."
+WURT.DESCRIBE.KYNO_COOKWARE_ELDER = "Dùng làm đồ ngọt."
+WURT.DESCRIBE.KYNO_COOKWARE_OVEN_ITEM = "Đồ nấu ăn."
+WURT.DESCRIBE.KYNO_COOKWARE_CASSEROLE = "Không giỏi với đồ dễ vỡ..."
+WURT.DESCRIBE.KYNO_COOKWARE_SMALL_CASSEROLE = "Nó bé xíu xiu!"
+WURT.DESCRIBE.KYNO_COOKWARE_OVEN = "Không biết nấu gì đây..."
+WURT.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Không biết nấu gì đây..."
+WURT.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Không biết nấu gì đây..."
 
 WURT.DESCRIBE.KYNO_ROCKFLIPPABLE = 
 {
-	GENERIC = "Flip! Flip!",
-	FLIPPED = "Found stuff!",
+	GENERIC = "Lật! Lật!",
+	FLIPPED = "Tìm thấy đồ rồi!",
 }
 
-WURT.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Whats inside?"
+WURT.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Bên trong có gì?"
 
-WURT.DESCRIBE.KYNO_SUGARFLY = "It ugly, but fun to chase, florp."
-WURT.DESCRIBE.KYNO_SUGARFLYWINGS = "Pluck, pluck!"
+WURT.DESCRIBE.KYNO_SUGARFLY = "Nó xấu, nhưng đuổi vui, florp."
+WURT.DESCRIBE.KYNO_SUGARFLYWINGS = "Nhổ, nhổ!"
 
-WURT.DESCRIBE.KYNO_WATERY_CRATE = "Whats inside?"
+WURT.DESCRIBE.KYNO_WATERY_CRATE = "Bên trong có gì?"
 
-WURT.DESCRIBE.KYNO_TUNACAN = "Noooo! Fishies inside?!"
-WURT.DESCRIBE.KYNO_TUNACAN_OPEN = "Noooo! Fishies, friends... (sob)"
+WURT.DESCRIBE.KYNO_TUNACAN = "Khônggg! Có cá bên trong hả?!"
+WURT.DESCRIBE.KYNO_TUNACAN_OPEN = "Khônggg! Cá, bạn bè... (nức nở)"
 
-WURT.DESCRIBE.KYNO_CANNEDFOOD = "Food inside?"
-WURT.DESCRIBE.KYNO_CANNEDFOOD_OPEN = "Tasty food inside little metal thing, florp."
+WURT.DESCRIBE.KYNO_CANNEDFOOD = "Có đồ ăn bên trong?"
+WURT.DESCRIBE.KYNO_CANNEDFOOD_OPEN = "Đồ ăn ngon trong thứ kim loại nhỏ, florp."
 
-WURT.DESCRIBE.KYNO_POP = "Glorp, funny taste."
+WURT.DESCRIBE.KYNO_POP = "Glorp, vị buồn cười."
 
-WURT.DESCRIBE.KYNO_MYSTERYMEAT = "Yuck"
+WURT.DESCRIBE.KYNO_MYSTERYMEAT = "Eo"
 
-WURT.DESCRIBE.KYNO_BOTTLE_SOUL = "Glurgh... What is it...?"
+WURT.DESCRIBE.KYNO_BOTTLE_SOUL = "Glurgh... Cái gì vậy...?"
 
-WURT.DESCRIBE.SOULSTEW = "Glurgh... What is it...?"
+WURT.DESCRIBE.SOULSTEW = "Glurgh... Cái gì vậy...?"
 
-WURT.DESCRIBE.FORTUNECOOKIE = "Little story inside of it, florp."
+WURT.DESCRIBE.FORTUNECOOKIE = "Có câu chuyện nhỏ bên trong, florp."
 
-WURT.DESCRIBE.HORNOCUPIA = "Full of yummies, florp!"
+WURT.DESCRIBE.HORNOCUPIA = "Đầy đồ ngon, florp!"
 
-WURT.DESCRIBE.CHEESE_YELLOW = "Yum!"
-WURT.DESCRIBE.CHEESE_WHITE = "Yummy!"
-WURT.DESCRIBE.CHEESE_KOALEFANT = "Yum!"
+WURT.DESCRIBE.CHEESE_YELLOW = "Ngon!"
+WURT.DESCRIBE.CHEESE_WHITE = "Ngon quá!"
+WURT.DESCRIBE.CHEESE_KOALEFANT = "Ngon!"
 
-WURT.DESCRIBE.MILK_BOX = "Tastes good, florp."
+WURT.DESCRIBE.MILK_BOX = "Vị ngon, florp."
 
-WURT.DESCRIBE.WATERCUP = "*Glup*"
+WURT.DESCRIBE.WATERCUP = "*Ực*"
 
-WURT.DESCRIBE.HONEYJAR = "Sweet, yummy!"
+WURT.DESCRIBE.HONEYJAR = "Ngọt, ngon!"
 
-WURT.DESCRIBE.CRAB_ARTICHOKE = "Awww, nooo!"
+WURT.DESCRIBE.CRAB_ARTICHOKE = "Awww, khônggg!"
 
-WURT.DESCRIBE.PEPPERROLLS = "Glurgh... spicy!"
+WURT.DESCRIBE.PEPPERROLLS = "Glurgh... cay!"
 
-WURT.DESCRIBE.KYNO_SAPHEALER = "Good for sweet tree boo boos, florp."
+WURT.DESCRIBE.KYNO_SAPHEALER = "Tốt cho vết đau của cây ngọt, florp."
 
 WURT.DESCRIBE.KYNO_OCEAN_WRECK = 
 {
-	GENERIC = "Broken ships...",
-	PICKED = "Snails gone now.",
-	BURNING = "Bad fire!",
+	GENERIC = "Tàu hỏng...",
+	PICKED = "Giờ ốc đi rồi.",
+	BURNING = "Lửa xấu!",
 }
 
-WURT.DESCRIBE.KYNO_GHOST_PIRATE = "He's floating!!!"
+WURT.DESCRIBE.KYNO_GHOST_PIRATE = "Ông ấy đang bay!!!"
 
-WURT.DESCRIBE.KYNO_BUCKET_EMPTY = "Place thingies inside, florp."
-WURT.DESCRIBE.KYNO_BUCKET_METAL = "Place things inside, florp."
-WURT.DESCRIBE.KYNO_BUCKET_WATER = "Glurp! Fresh and nice!"
+WURT.DESCRIBE.KYNO_BUCKET_EMPTY = "Để đồ linh tinh bên trong, florp."
+WURT.DESCRIBE.KYNO_BUCKET_METAL = "Để đồ bên trong, florp."
+WURT.DESCRIBE.KYNO_BUCKET_WATER = "Glurp! Tươi và ngon!"
 
-WURT.DESCRIBE.KYNO_MILK_BEEFALO = "Tasty, florp."
-WURT.DESCRIBE.KYNO_MILK_KOALEFANT = "Tasty, florp."
+WURT.DESCRIBE.KYNO_MILK_BEEFALO = "Ngon, florp."
+WURT.DESCRIBE.KYNO_MILK_KOALEFANT = "Ngon, florp."
 
-WURT.DESCRIBE.KYNO_CAP_DRIED = "Tasty!"
+WURT.DESCRIBE.KYNO_CAP_DRIED = "Ngon!"
 
-WURT.DESCRIBE.KYNO_PLANTMEAT_DRIED = "It smell bad."
+WURT.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Nó mùi hôi."
 
-WURT.DESCRIBE.KYNO_BREWBOOK = "Like this one, has pictures of food!"
+WURT.DESCRIBE.KYNO_BREWBOOK = "Thích cái này, có hình đồ ăn!"
 
 WURT.DESCRIBE.KYNO_WOODENKEG = 
 {
-	EMPTY = "Strange.",
-	BREWING_LONG = "Taking long time, flort.",
-	BREWING_SHORT = "Almost done, florp!",
-	DONE = "Ready!",
-	BURNT = "Fire ruin it...",
+	EMPTY = "Kỳ lạ.",
+	BREWING_LONG = "Lâu quá, flort.",
+	BREWING_SHORT = "Sắp xong rồi, florp!",
+	DONE = "Sẵn sàng!",
+	BURNT = "Lửa làm hỏng rồi...",
 }
 
 WURT.DESCRIBE.KYNO_PRESERVESJAR = 
 {
-	EMPTY = "Its smelly, florp.",
-	BREWING_LONG = "Taking long time.",
-	BREWING_SHORT = "Almost mine!",
-	DONE = "Sweet stuff!",
-	BURNT = "Fire ruin it.",
+	EMPTY = "Nó hôi hôi, florp.",
+	BREWING_LONG = "Lâu quá.",
+	BREWING_SHORT = "Sắp là của mình rồi!",
+	DONE = "Đồ ngọt!",
+	BURNT = "Lửa làm hỏng rồi.",
 }
 
 WURT.DESCRIBE.KYNO_ANTCHEST = 
 {
-	GENERIC = "Sweet yums maker!",
-	HONEY = "Full of sweet goodies, florp.",
-	NECTAR = "Still waiting.",
-	BURNING = "Bad fire! Ruins everything!",
+	GENERIC = "Máy làm đồ ngọt ngon!",
+	HONEY = "Đầy đồ ngọt ngon, florp.",
+	NECTAR = "Vẫn đang chờ.",
+	BURNING = "Lửa xấu! Phá hết mọi thứ!",
 }
 
-WURT.DESCRIBE.KYNO_NECTAR_POD = "Yum yums!"
+WURT.DESCRIBE.KYNO_NECTAR_POD = "Đồ ngon ngon!"
 
-WURT.DESCRIBE.KYNO_OAKTREE_POD = "Tree inside, florp?"
-WURT.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Fwooshed!"
+WURT.DESCRIBE.KYNO_OAKTREE_POD = "Có cây bên trong, florp?"
+WURT.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Bị xèo rồi!"
 
-WURT.DESCRIBE.KYNO_PIKO = "Is stealing stuff!!"
-WURT.DESCRIBE.KYNO_PIKO_ORANGE = "Ooo! Fancy tails!"
+WURT.DESCRIBE.KYNO_PIKO = "Nó đang trộm đồ!!"
+WURT.DESCRIBE.KYNO_PIKO_ORANGE = "Ooo! Đuôi xịn!"
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
 {
-	GENERIC = "Nice looking tree!",
-	CHOPPED = "Leaves mine now, flort.",
-	BURNING = "Bad fire!",
-	BURNT = "All gone, florp.",
+	GENERIC = "Cây nhìn đẹp!",
+	CHOPPED = "Lá giờ của mình rồi, flort.",
+	BURNING = "Lửa xấu!",
+	BURNT = "Hết sạch rồi, florp.",
 }
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
 {
-	GENERIC = "Full of squirrels, glurrp...",
-	BURNING = "Bad fire! Bad!",
+	GENERIC = "Đầy sóc, glurrp...",
+	BURNING = "Lửa xấu! Xấu!",
 }
 
-WURT.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "A box."
+WURT.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Một cái hộp."
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
 {
-	GENERIC = "Home is where swamp is, flort.",
-	BURNT = "Home gone...",
+	GENERIC = "Nhà là nơi có đầm lầy, flort.",
+	BURNT = "Nhà mất rồi...",
 }
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
 {
-	GENERIC = "Home is where swamp is, flort.",
-	CRAFTED = "Home looks nice now!",
-	BURNT = "Stinky..!",
+	GENERIC = "Nhà là nơi có đầm lầy, flort.",
+	CRAFTED = "Giờ nhà nhìn đẹp rồi!",
+	BURNT = "Hôi quá..!",
 }
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
 {
-	GENERIC = "Friend has many stuff inside house!",
-	OCCUPIED = "Friend must be sleeping, florp.",
+	GENERIC = "Bạn có nhiều đồ trong nhà!",
+	OCCUPIED = "Chắc bạn đang ngủ, florp.",
 }
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
 {
-	GENERIC = "Friend stuff!",
-	EMPTY = "All gone, florp.",
+	GENERIC = "Đồ của bạn!",
+	EMPTY = "Hết sạch rồi, florp.",
 }
 
-WURT.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Finally find someone normal!"
-WURT.DESCRIBE.KYNO_MEADOWISLAND_POND = "Home for fishy friends!"
-WURT.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Swamp plant."
-WURT.DESCRIBE.KYNO_MEADOWISLAND_SANDHILL = "Hill o' sand, florp."
-WURT.DESCRIBE.KYNO_MEADOWISLAND_MERMFISHER = "New friend!"
+WURT.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Cuối cùng cũng tìm được người bình thường!"
+WURT.DESCRIBE.KYNO_MEADOWISLAND_POND = "Nhà cho bạn cá!"
+WURT.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Cây đầm lầy."
+WURT.DESCRIBE.KYNO_MEADOWISLAND_SANDHILL = "Đồi cát, florp."
+WURT.DESCRIBE.KYNO_MEADOWISLAND_MERMFISHER = "Bạn mới!"
 
-WURT.DESCRIBE.KYNO_SAMMYHAT = "Cool hat from friend!"
+WURT.DESCRIBE.KYNO_SAMMYHAT = "Mũ ngầu từ bạn!"
 
-WURT.DESCRIBE.KINGFISHER = "It has a large beak, florp."
+WURT.DESCRIBE.KINGFISHER = "Nó có cái mỏ lớn, florp."
 
-WURT.DESCRIBE.TOUCAN = "Big nose!"
-WURT.DESCRIBE.TOUCAN_CHUBBY = "Big nose!"
+WURT.DESCRIBE.TOUCAN = "Mũi to!"
+WURT.DESCRIBE.TOUCAN_CHUBBY = "Mũi to!"
 
-WURT.DESCRIBE.WETGOOP2 = "Usually like wet goopy things..."
+WURT.DESCRIBE.WETGOOP2 = "Thường thì thích đồ ướt nhão..."
 
 WURT.DESCRIBE.BEER = "Glergh..."
 
 WURT.DESCRIBE.PALEALE = "Glergh..."
 
-WURT.DESCRIBE.TEAGREEN = "Mmm... is nice, florp."
+WURT.DESCRIBE.TEAGREEN = "Mmm... ngon đó, florp."
 
-WURT.DESCRIBE.TEARED = "Mmm... is nice, florp."
+WURT.DESCRIBE.TEARED = "Mmm... ngon đó, florp."
 
-WURT.DESCRIBE.MEAD = "Blergh, it makes head feels fuzzy..."
+WURT.DESCRIBE.MEAD = "Blergh, nó làm đầu thấy mù mù..."
 
-WURT.DESCRIBE.KYNO_JELLY = "Got claws all sticky."
+WURT.DESCRIBE.KYNO_JELLY = "Móng vuốt dính hết rồi."
 
-WURT.DESCRIBE.KYNO_MAYONNAISE = "Yummy!"
+WURT.DESCRIBE.KYNO_MAYONNAISE = "Ngon quá!"
 
 WURT.DESCRIBE.TARTARSAUCE = "Glurgh..."
 
-WURT.DESCRIBE.KYNO_PICKLES = "Tasty!"
+WURT.DESCRIBE.KYNO_PICKLES = "Ngon!"
 
-WURT.DESCRIBE.KYNO_WINE = "Tastes funny..."
+WURT.DESCRIBE.KYNO_WINE = "Vị buồn cười..."
 
-WURT.DESCRIBE.KYNO_JUICE = "*Glup* Tastes funny..."
+WURT.DESCRIBE.KYNO_JUICE = "*Ực* Vị buồn cười..."
 
-WURT.DESCRIBE.KYNO_POISON_FROGLEGS = "(sniff, sniff) Ewww!"
-WURT.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "(sniff, sniff) Ewww!"
+WURT.DESCRIBE.KYNO_POISON_FROGLEGS = "(ngửi, ngửi) Ewww!"
+WURT.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "(ngửi, ngửi) Ewww!"
 
-WURT.DESCRIBE.POISONFROGGLEBUNWICH = "This a bad sandwich."
+WURT.DESCRIBE.POISONFROGGLEBUNWICH = "Đây là bánh kẹp xấu."
 
-WURT.DESCRIBE.KYNO_BREWINGRECIPECARD = "Glurgh... can't read it!"
+WURT.DESCRIBE.KYNO_BREWINGRECIPECARD = "Glurgh... không đọc được!"
 
-WURT.DESCRIBE.KYNO_OIL = "Glurgh, has bad taste, florp."
+WURT.DESCRIBE.KYNO_OIL = "Glurgh, vị dở, florp."
 
-WURT.DESCRIBE.BERRYSUNDAE = "Cold treat!"
+WURT.DESCRIBE.BERRYSUNDAE = "Đồ lạnh ngon!"
 
-WURT.DESCRIBE.CHOCOLATE_BLACK = "Yummy!"
-WURT.DESCRIBE.CHOCOLATE_WHITE = "Yummy!"
+WURT.DESCRIBE.CHOCOLATE_BLACK = "Ngon quá!"
+WURT.DESCRIBE.CHOCOLATE_WHITE = "Ngon quá!"
 
-WURT.DESCRIBE.TRICOLORDANGO = "So sweet!"
+WURT.DESCRIBE.TRICOLORDANGO = "Ngọt quá!"
  
-WURT.DESCRIBE.FRIESFRENCH = "Yum!"
+WURT.DESCRIBE.FRIESFRENCH = "Ngon!"
 
-WURT.DESCRIBE.PIRATERUM = "Glurgh... not drink that!"
+WURT.DESCRIBE.PIRATERUM = "Glurgh... không uống đâu!"
 
-WURT.DESCRIBE.TWISTEDTEQUILA = "Glurgh, smells weird!"
+WURT.DESCRIBE.TWISTEDTEQUILA = "Glurgh, mùi kỳ kỳ!"
 
-WURT.DESCRIBE.ONIONRINGS = "Glorp!! Crunchy veggie so good!"
+WURT.DESCRIBE.ONIONRINGS = "Glorp!! Rau giòn ngon quá!"
 
-WURT.DESCRIBE.DONUTS = "Sweet!"
-WURT.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Sweet!"
-WURT.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Sweet!"
+WURT.DESCRIBE.DONUTS = "Ngọt!"
+WURT.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Ngọt!"
+WURT.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Ngọt!"
  
-WURT.DESCRIBE.CINNAMONROLL = "Sweet!"
+WURT.DESCRIBE.CINNAMONROLL = "Ngọt!"
 
-WURT.DESCRIBE.GUMMYBEARGERS = "Sweet little bears!!"
+WURT.DESCRIBE.GUMMYBEARGERS = "Gấu nhỏ ngọt ngọt!!"
 
-WURT.DESCRIBE.PRETZEL = "Yummy, florp."
+WURT.DESCRIBE.PRETZEL = "Ngon quá, florp."
 
-WURT.DESCRIBE.CORNINCUP = "Eat cob for extra crunchy snack, flort."
+WURT.DESCRIBE.CORNINCUP = "Ăn cả lõi cho giòn thêm, flort."
 
-WURT.DESCRIBE.COTTONCANDY = "Yummy!"
+WURT.DESCRIBE.COTTONCANDY = "Ngon quá!"
 
-WURT.DESCRIBE.ROASTEDHAZELNUTS = "Crunchy little tree things, florp."
+WURT.DESCRIBE.ROASTEDHAZELNUTS = "Mấy thứ cây nhỏ giòn giòn, florp."
 
-WURT.DESCRIBE.MONSTERMUFFIN = "Tastes good, florp."
+WURT.DESCRIBE.MONSTERMUFFIN = "Vị ngon, florp."
 
-WURT.DESCRIBE.PINKCAKE = "Is like cakes from fairly tales!!"
+WURT.DESCRIBE.PINKCAKE = "Giống bánh trong truyện cổ tích!!"
 
-WURT.DESCRIBE.CHIPSBAG = "Crunchy potatoes, florp."
+WURT.DESCRIBE.CHIPSBAG = "Khoai giòn, florp."
 
-WURT.DESCRIBE.LITTLEBREAD = "Ohh... It smells good, florp!"
+WURT.DESCRIBE.LITTLEBREAD = "Ohh... Mùi thơm ghê, florp!"
 
 WURT.DESCRIBE.HOTHOUND = "Glorgh..."
 
-WURT.DESCRIBE.MILKSHAKE = "Very very sweetie!!"
-WURT.DESCRIBE.MILKSHAKE_PRISMATIC = "Very very sweetie!!"
+WURT.DESCRIBE.MILKSHAKE = "Ngọt thật thật nhiều!!"
+WURT.DESCRIBE.MILKSHAKE_PRISMATIC = "Ngọt thật thật nhiều!!"
 
-WURT.DESCRIBE.NACHOS = "Glurgh... fingers dirty..."
+WURT.DESCRIBE.NACHOS = "Glurgh... bẩn tay..."
 
-WURT.DESCRIBE.BANANA_PUDDING = "Tasty!"
+WURT.DESCRIBE.BANANA_PUDDING = "Ngon!"
 
-WURT.DESCRIBE.SEA_PUDDING = "Noooooooo!"
+WURT.DESCRIBE.SEA_PUDDING = "Khônggggggg!"
 
-WURT.DESCRIBE.TOM_KHA_SOUP = "Yummy!"
+WURT.DESCRIBE.TOM_KHA_SOUP = "Ngon quá!"
 
-WURT.DESCRIBE.MINERTREAT = "Aah! Looks tasty!"
+WURT.DESCRIBE.MINERTREAT = "Aah! Trông ngon!"
 
-WURT.DESCRIBE.RADISHSALAD = "Look good, but taste okay."
+WURT.DESCRIBE.RADISHSALAD = "Trông ngon, vị cũng được."
 
-WURT.DESCRIBE.PUMPKIN_SOUP = "It's a soup, florp."
+WURT.DESCRIBE.PUMPKIN_SOUP = "Là súp đó, florp."
 
-WURT.DESCRIBE.ALGAE_SOUP = "It's a soup, florp."
+WURT.DESCRIBE.ALGAE_SOUP = "Là súp đó, florp."
 
-WURT.DESCRIBE.PARZNIP_SOUP = "It's a soup, florp."
+WURT.DESCRIBE.PARZNIP_SOUP = "Là súp đó, florp."
 
 WURT.DESCRIBE.NETTLEMEATED = "Glurgh..."
 
-WURT.DESCRIBE.KYNO_SUGAR = "Hello my sweet!"
+WURT.DESCRIBE.KYNO_SUGAR = "Chào đồ ngọt của mình!"
 
-WURT.DESCRIBE.KYNO_BOTTLECAP = "Shiny!"
+WURT.DESCRIBE.KYNO_BOTTLECAP = "Lấp lánh!"
 
 WURT.DESCRIBE.NUKACOLA = "Fwoosh!"
 WURT.DESCRIBE.NUKACOLA_QUANTUM = "Fwoosh!"
 
 WURT.DESCRIBE.LIVINGSANDWICH = "Blergh..."
 
-WURT.DESCRIBE.DURIANSPLIT = "Cold treat!"
+WURT.DESCRIBE.DURIANSPLIT = "Đồ lạnh ngon!"
 
-WURT.DESCRIBE.DURIANSOUP = "Durian soup, florp."
+WURT.DESCRIBE.DURIANSOUP = "Súp sầu riêng, florp."
 
-WURT.DESCRIBE.DURIANMEATED = "Tasty, smell like swamp!!"
+WURT.DESCRIBE.DURIANMEATED = "Ngon, mùi giống đầm lầy!!"
 
-WURT.DESCRIBE.DURIANCHICKEN = "Aha! Nice feast!"
+WURT.DESCRIBE.DURIANCHICKEN = "Aha! Tiệc ngon!"
 
-WURT.DESCRIBE.LUNARSOUP = "Veggies!!"
+WURT.DESCRIBE.LUNARSOUP = "Rau củ!!"
 
-WURT.DESCRIBE.PURPLEWOBSTERSOUP = "Nooooooooo!"
+WURT.DESCRIBE.PURPLEWOBSTERSOUP = "Khônggggggg!"
 
 WURT.DESCRIBE.WOBSTERMONSTER = "Glurgh..."
 
 WURT.DESCRIBE.SPIDERCAKE = "Ewww."
 
-WURT.DESCRIBE.SUGARBOMBS = "Yummy!"
+WURT.DESCRIBE.SUGARBOMBS = "Ngon quá!"
 
-WURT.DESCRIBE.BERRYBOMBS = "Got claws all sticky."
+WURT.DESCRIBE.BERRYBOMBS = "Móng vuốt dính hết rồi."
 
-WURT.DESCRIBE.ONIGIRIS = "Snack!!"
+WURT.DESCRIBE.ONIGIRIS = "Đồ ăn vặt!!"
 
-WURT.DESCRIBE.OMURICE = "Snack time! florp."
+WURT.DESCRIBE.OMURICE = "Giờ ăn vặt! florp."
 
-WURT.DESCRIBE.PAELLA = "Yummy!"
+WURT.DESCRIBE.PAELLA = "Ngon quá!"
 
-WURT.DESCRIBE.RISOTTO = "Creamy, florp."
+WURT.DESCRIBE.RISOTTO = "Béo mịn, florp."
 
 WURT.DESCRIBE.RICESAKE = "Glurgh..."
 
-WURT.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Glorp!! Spiky!!"
+WURT.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Glorp!! Có gai!!"
 
 WURT.DESCRIBE.KYNO_PINEAPPLEBUSH = 
 {
-	GENERIC = "Glorp!! Spiky!!",
-	PICKED = "No fruit now, florp.",
-	WITHERED = "Too dry.",
-	BURNING = "Ahh! Its on fire!!",
+	GENERIC = "Glorp!! Có gai!!",
+	PICKED = "Giờ không có trái, florp.",
+	WITHERED = "Khô quá.",
+	BURNING = "Ahh! Nó cháy rồi!!",
 }
 
-WURT.DESCRIBE.KYNO_PINEAPPLE = "Spiky fruit!!"
-WURT.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Spiky fruit!!"
-WURT.DESCRIBE.KYNO_PINEAPPLE_COOKED = "Smells nice, florp."
+WURT.DESCRIBE.KYNO_PINEAPPLE = "Trái cây có gai!!"
+WURT.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Trái cây có gai!!"
+WURT.DESCRIBE.KYNO_PINEAPPLE_COOKED = "Mùi thơm, florp."
 
 WURT.DESCRIBE.PIZZA_TROPICAL = "Glurgh..."
 
-WURT.DESCRIBE.PINACOLADA = "Yum!"
+WURT.DESCRIBE.PINACOLADA = "Ngon!"
 
-WURT.DESCRIBE.CHIMAS = "Yummm!"
+WURT.DESCRIBE.CHIMAS = "Ngonnn!"
 
 WURT.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
 {
-	OFF = "Helpful for plants, florp.",
-	ON = "Water good!",
+	OFF = "Giúp ích cho cây, florp.",
+	ON = "Nước tốt!",
 }
 
-WURT.DESCRIBE.KYNO_FOODSACK = "Keeps food fresh!"
+WURT.DESCRIBE.KYNO_FOODSACK = "Giữ đồ ăn tươi!"
 
-WURT.DESCRIBE.GUMMYWORMS = "Yum!"
+WURT.DESCRIBE.GUMMYWORMS = "Ngon!"
 
-WURT.DESCRIBE.SMORES = "Yummy!"
+WURT.DESCRIBE.SMORES = "Ngon quá!"
 
 WURT.DESCRIBE.NUKASHINE = "Blergh!"
 
-WURT.DESCRIBE.ANTSLOG = "Strange food!"
+WURT.DESCRIBE.ANTSLOG = "Đồ ăn kỳ lạ!"
 
-WURT.DESCRIBE.KYNO_WORM_BONE = "Poor wormy."
+WURT.DESCRIBE.KYNO_WORM_BONE = "Sâu tội nghiệp."
 
-WURT.DESCRIBE.SPOOKY_BRAIN_NOODLES = "Not fear...!"
+WURT.DESCRIBE.SPOOKY_BRAIN_NOODLES = "Không sợ đâu...!"
 WURT.DESCRIBE.SPOOKY_BURGERZILLA = "Oooo!"
-WURT.DESCRIBE.SPOOKY_DEADBREAD = "Scary!"
+WURT.DESCRIBE.SPOOKY_DEADBREAD = "Đáng sợ!"
 WURT.DESCRIBE.SPOOKY_JELLYBEANS = "Oooo!"
-WURT.DESCRIBE.SPOOKY_POPSICLE = "Good and icy!"
-WURT.DESCRIBE.SPOOKY_PUMPKINCREAM = "Smelly!"
-WURT.DESCRIBE.SPOOKY_SKULLCANDY = "Scary"
-WURT.DESCRIBE.SPOOKY_TACODILE = "Scary!"
+WURT.DESCRIBE.SPOOKY_POPSICLE = "Ngon và lạnh!"
+WURT.DESCRIBE.SPOOKY_PUMPKINCREAM = "Hôi!"
+WURT.DESCRIBE.SPOOKY_SKULLCANDY = "Đáng sợ"
+WURT.DESCRIBE.SPOOKY_TACODILE = "Đáng sợ!"
 
-WURT.DESCRIBE.BUTTER_BEEFALO = "Yummers!"
-WURT.DESCRIBE.BUTTER_GOAT = "Yummies!"
-WURT.DESCRIBE.BUTTER_KOALEFANT = "Yum!"
+WURT.DESCRIBE.BUTTER_BEEFALO = "Ngonnn!"
+WURT.DESCRIBE.BUTTER_GOAT = "Ngon quá!"
+WURT.DESCRIBE.BUTTER_KOALEFANT = "Ngon!"
 
-WURT.DESCRIBE.SPICE_CURE = "Good for saving food."
+WURT.DESCRIBE.SPICE_CURE = "Tốt để giữ đồ ăn."
 WURT.DESCRIBE.SPICE_COLD = "Brrrr!"
-WURT.DESCRIBE.SPICE_FIRE = "Ouch, ouch!"
-WURT.DESCRIBE.SPICE_FED = "Tasty!"
+WURT.DESCRIBE.SPICE_FIRE = "Đau, đau!"
+WURT.DESCRIBE.SPICE_FED = "Ngon!"
 WURT.DESCRIBE.SPICE_MIND = "ZzZZZzz..."
 
-WURT.DESCRIBE.SUGARFLYMUFFIN = "Tasty"
+WURT.DESCRIBE.SUGARFLYMUFFIN = "Ngon"
 
-WURT.DESCRIBE.EELTACOS = "Eel not happy in there..."
+WURT.DESCRIBE.EELTACOS = "Lươn không vui trong đó..."
 
 WURT.DESCRIBE.MEATSKILLET = "Blergh"
 
 WURT.DESCRIBE.MEATWALTZ = "Glergh..."
 
-WURT.DESCRIBE.COMPLETEBREAKFAST = "Too much food, florp!"
+WURT.DESCRIBE.COMPLETEBREAKFAST = "Nhiều đồ ăn quá, florp!"
 
 WURT.DESCRIBE.DUMPLINGS = "Errgh..."
 
-WURT.DESCRIBE.WARLYICEDTEA = "Cold, burrt!"
+WURT.DESCRIBE.WARLYICEDTEA = "Lạnh, burrt!"
 
-WURT.DESCRIBE.WARLYTEA = "Sweet and relaxing, florp."
+WURT.DESCRIBE.WARLYTEA = "Ngọt và dễ chịu, florp."
 
-WURT.DESCRIBE.KYNO_TEALEAF = "Smells funny, florp."
+WURT.DESCRIBE.KYNO_TEALEAF = "Mùi buồn cười, florp."
 
-WURT.DESCRIBE.KYNO_ITEMSLICER = "Slashy!"
-WURT.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Slashy!"
+WURT.DESCRIBE.KYNO_ITEMSLICER = "Dao chém!"
+WURT.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Dao chém!"
 
 WURT.DESCRIBE.COXINHA = "Blergh."
 
-WURT.DESCRIBE.LAZYDESSERT = "Is hard."
+WURT.DESCRIBE.LAZYDESSERT = "Cứng quá."
 
-WURT.DESCRIBE.CRABKINGFEAST = "Glurgh... big meat pile."
+WURT.DESCRIBE.CRABKINGFEAST = "Glurgh... đống thịt to."
 
-WURT.DESCRIBE.PIENAPPLE = "Spiky but very good tasty, florp!"
+WURT.DESCRIBE.PIENAPPLE = "Có gai nhưng vị ngon lắm, florp!"
 
-WURT.DESCRIBE.JAWSBREAKER = "Glurgh... Can't eat!"
+WURT.DESCRIBE.JAWSBREAKER = "Glurgh... Không ăn được!"
 
-WURT.DESCRIBE.AVOCADOTOAST = "Tasty bread with fruit, florp!"
+WURT.DESCRIBE.AVOCADOTOAST = "Bánh mì ngon với trái cây, florp!"
 
-WURT.DESCRIBE.RICEPUDDING = "Is tasty, florp."
+WURT.DESCRIBE.RICEPUDDING = "Nó ngon, florp."
 
-WURT.DESCRIBE.SHARKSUSHI = "Nooooooo! Poor shark!"
+WURT.DESCRIBE.SHARKSUSHI = "Khônggggggg! Cá mập tội nghiệp!"
 
-WURT.DESCRIBE.WOBSTERBREADED = "No more pinching..."
+WURT.DESCRIBE.WOBSTERBREADED = "Không còn kẹp nữa..."
 
 WURT.DESCRIBE.LAZYPURRITO = "Awwww!"
 
-WURT.DESCRIBE.HORCHATA = "Yummy!"
+WURT.DESCRIBE.HORCHATA = "Ngon quá!"
 
-WURT.DESCRIBE.WOBSTERCOCKTAIL = "Nooo!"
+WURT.DESCRIBE.WOBSTERCOCKTAIL = "Khônggg!"
 
-WURT.DESCRIBE.LAVAEEGGBOILED = "Ack, ack. Is hot, florp!"
+WURT.DESCRIBE.LAVAEEGGBOILED = "Ack, ack. Nó nóng, florp!"
 
-WURT.DESCRIBE.POMEGRANATETEA = "Cold, burrt!"
+WURT.DESCRIBE.POMEGRANATETEA = "Lạnh, burrt!"
 
-WURT.DESCRIBE.TIRAMISU = "Yummy"
+WURT.DESCRIBE.TIRAMISU = "Ngon quá"
 
-WURT.DESCRIBE.TOADSTOOLCOLA = "Glorp, strange taste!"
+WURT.DESCRIBE.TOADSTOOLCOLA = "Glorp, vị kỳ lạ!"
 
-WURT.DESCRIBE.TEPACHE = "Yum!"
+WURT.DESCRIBE.TEPACHE = "Ngon!"
 
-WURT.DESCRIBE.LUNARTEQUILA = "Moon?"
+WURT.DESCRIBE.LUNARTEQUILA = "Trăng?"
 
-WURT.DESCRIBE.MIMICMOSA = "Ooooh, boo!"
+WURT.DESCRIBE.MIMICMOSA = "Ooooh, hù!"
 
-WURT.DESCRIBE.POMEGRANATEPIE = "Yummies!"
+WURT.DESCRIBE.POMEGRANATEPIE = "Ngon quá!"
 
-WURT.DESCRIBE.PINEAPPLECAKE = "Looking tasty!"
+WURT.DESCRIBE.PINEAPPLECAKE = "Trông ngon!"
 
-WURT.DESCRIBE.PASTY_MEAT = "Not eating that, florp!"
-WURT.DESCRIBE.PASTY_CHEESE = "Yum!"
+WURT.DESCRIBE.PASTY_MEAT = "Không ăn cái đó đâu, florp!"
+WURT.DESCRIBE.PASTY_CHEESE = "Ngon!"
 
-WURT.DESCRIBE.BRIGADEIRO = "I want more!"
+WURT.DESCRIBE.BRIGADEIRO = "Muốn thêm nữa!"
 
-WURT.DESCRIBE.REGULARLASAGNA = "What... in this?"
+WURT.DESCRIBE.REGULARLASAGNA = "Có... gì trong này?"
 
 WURT.DESCRIBE.FLTSANDWICH = "Blergh!"
 
-WURT.DESCRIBE.RICEANDBEANS = "Yummy!"
+WURT.DESCRIBE.RICEANDBEANS = "Ngon quá!"
 
 WURT.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 {
-	GENERIC = "Ha! Stupid pig house falling apart!",
-	REPAIRED = "Glurgh... Pig fixed dumb house!",
-	OCCUPIED = "He be sleeping in there, florp.",
-	OCCUPIED_REPAIRED = "Glurgh... it better before this.",
+	GENERIC = "Ha! Nhà heo ngu ngốc sắp sập rồi!",
+	REPAIRED = "Glurgh... Heo sửa nhà ngu!",
+	OCCUPIED = "Hắn đang ngủ trong đó, florp.",
+	OCCUPIED_REPAIRED = "Glurgh... tốt hơn trước nhiều rồi.",
 }
 
 WURT.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
-	GENERIC = "Mushrooms! Glorp! I like them!",
-	PICKED = "No more food.",
-	BURNING = "Fire ruin good stuff!",
+	GENERIC = "Nấm! Glorp! Mình thích nấm!",
+	PICKED = "Hết đồ ăn rồi.",
+	BURNING = "Lửa phá đồ ngon!",
 }
 
-WURT.DESCRIBE.KYNO_TRUFFLES = "Glorp! Smells strong... but tastes nice!"
-WURT.DESCRIBE.KYNO_TRUFFLES_COOKED = "Glorp! Smells yummy now!"
+WURT.DESCRIBE.KYNO_TRUFFLES = "Glorp! Mùi mạnh... nhưng vị ngon!"
+WURT.DESCRIBE.KYNO_TRUFFLES_COOKED = "Glorp! Giờ mùi ngon rồi!"
 
 WURT.DESCRIBE.KYNO_ITEMSHOWCASER = 
 {
-	EMPTY = "For showing food, florp! But... can I eat after?",
-	FULL = "Food looking fancy, florp.",
+	EMPTY = "Dùng để trưng đồ ăn, florp! Nhưng... sau đó mình ăn được không?",
+	FULL = "Đồ ăn nhìn sang ghê, florp.",
 }
 
-WURT.DESCRIBE.KYNO_SPORECAP = "Bluhh! Smell bad!"
-WURT.DESCRIBE.KYNO_SPORECAP_COOKED = "Still yucky, florp!"
+WURT.DESCRIBE.KYNO_SPORECAP = "Bluhh! Mùi hôi!"
+WURT.DESCRIBE.KYNO_SPORECAP_COOKED = "Vẫn ghê, florp!"
 
-WURT.DESCRIBE.KYNO_SPORECAP_DARK = "Glurp! Bad smell!"
-WURT.DESCRIBE.KYNO_SPORECAP_DARK_COOKED = "Glorp... not good food!"
+WURT.DESCRIBE.KYNO_SPORECAP_DARK = "Glurp! Mùi xấu!"
+WURT.DESCRIBE.KYNO_SPORECAP_DARK_COOKED = "Glorp... không phải đồ ăn ngon!"
 
-WURT.DESCRIBE.KYNO_GOLDENAPPLE = "Ooo! Shiny!"
+WURT.DESCRIBE.KYNO_GOLDENAPPLE = "Ooo! Lấp lánh!"
 
-WURT.DESCRIBE.TRUFFLESGRINDER = "Smells funny... but tasty, florp."
+WURT.DESCRIBE.TRUFFLESGRINDER = "Mùi buồn cười... nhưng chắc ngon, florp."
 
-WURT.DESCRIBE.SPORECAPPIE = "Glurgh... smells nice, but bad inside!"
+WURT.DESCRIBE.SPORECAPPIE = "Glurgh... mùi thơm, nhưng bên trong xấu!"
 
-WURT.DESCRIBE.SPORECAP_SKEWERS = "Mushrooms on stick! Yummy, florp!"
+WURT.DESCRIBE.SPORECAP_SKEWERS = "Nấm trên que! Ngon quá, florp!"
 
-WURT.DESCRIBE.TRUFFLEOIL = "Smell weird, florp... but maybe tasty?"
+WURT.DESCRIBE.TRUFFLEOIL = "Mùi kỳ kỳ, florp... nhưng có khi ngon?"
 
-WURT.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Looks easy to build!"
-WURT.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Is place for fish friends, florp!"
+WURT.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Trông dễ xây!"
+WURT.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Là chỗ cho bạn cá, florp!"
 
 WURT.DESCRIBE.KYNO_FISHFARMPLOT = 
 {
-	GENERIC = "Home for fishy friends! Yay~",
-	FUEL_HIGH = "Fish eat good!",
-	FUEL_MED = "Still okay.",
-	FUEL_LOW = "Need more food!",
-	EMPTY = "Fish hungry!",
+	GENERIC = "Nhà cho bạn cá! Yay~",
+	FUEL_HIGH = "Cá ăn ngon!",
+	FUEL_MED = "Vẫn ổn.",
+	FUEL_LOW = "Cần thêm đồ ăn!",
+	EMPTY = "Cá đói rồi!",
 }
 
-WURT.DESCRIBE.AGEDROE = "Nooooooooo!"
-WURT.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Why you eat fish babies, florp?!"
+WURT.DESCRIBE.AGEDROE = "Khônggggggg!"
+WURT.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Sao lại ăn em bé cá, florp?!"
 
-WURT.DESCRIBE.KYNO_SWORDFISH_BLUE = "Glurp?! How fish forget to swim, florp?!"
+WURT.DESCRIBE.KYNO_SWORDFISH_BLUE = "Glurp?! Sao cá quên bơi được, florp?!"
 
-WURT.DESCRIBE.KYNO_JELLYFISH = "A strange squish fish!"
-WURT.DESCRIBE.KYNO_JELLYFISH_DEAD = "Noooo!"
-WURT.DESCRIBE.KYNO_JELLYFISH_COOKED = "Noooo!"
-WURT.DESCRIBE.KYNO_JELLYFISH_DRIED = "Noooo! *sob*"
+WURT.DESCRIBE.KYNO_JELLYFISH = "Một con cá mềm kỳ lạ!"
+WURT.DESCRIBE.KYNO_JELLYFISH_DEAD = "Khônggg!"
+WURT.DESCRIBE.KYNO_JELLYFISH_COOKED = "Khônggg!"
+WURT.DESCRIBE.KYNO_JELLYFISH_DRIED = "Khônggg! *nức nở*"
 
-WURT.DESCRIBE.KYNO_JELLYFISH_RAINBOW = "Its pretty fishy!"
-WURT.DESCRIBE.KYNO_JELLYFISH_RAINBOW_DEAD = "*sob*"
-WURT.DESCRIBE.KYNO_JELLYFISH_RAINBOW_COOKED = "Poor friend... *sob*"
+WURT.DESCRIBE.KYNO_JELLYFISH_RAINBOW = "Bạn cá đẹp quá!"
+WURT.DESCRIBE.KYNO_JELLYFISH_RAINBOW_DEAD = "*nức nở*"
+WURT.DESCRIBE.KYNO_JELLYFISH_RAINBOW_COOKED = "Bạn tội nghiệp... *nức nở*"
 
-WURT.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "It lacks stuff, florp."
+WURT.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Nó thiếu đồ, florp."
 
-WURT.DESCRIBE.KYNO_OCEANTRAP = "Glurgh! Bad for fishy friends..."
+WURT.DESCRIBE.KYNO_OCEANTRAP = "Glurgh! Không tốt cho bạn cá..."
 
-WURT.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Dark water friend!"
-WURT.DESCRIBE.OCEANFISH_PUFFERFISH = "Fishy friend have many pointy bits, florp!"
-WURT.DESCRIBE.OCEANFISH_STURGEON = "Big old fishy! Very strong, florp!"
+WURT.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Bạn nước tối!"
+WURT.DESCRIBE.OCEANFISH_PUFFERFISH = "Bạn cá có nhiều chỗ nhọn, florp!"
+WURT.DESCRIBE.OCEANFISH_STURGEON = "Bạn cá già to! Mạnh lắm, florp!"
 
-WURT.DESCRIBE.KYNO_SWORDFISH = "Glorp! Scary fishy!"
-WURT.DESCRIBE.KYNO_SWORDFISH_DEAD = "*sniff*"
+WURT.DESCRIBE.KYNO_SWORDFISH = "Glorp! Bạn cá đáng sợ!"
+WURT.DESCRIBE.KYNO_SWORDFISH_DEAD = "*sụt sịt*"
 
-WURT.DESCRIBE.SWORDFISHFEAST = "Glurgh... poor fishy friend..."
+WURT.DESCRIBE.SWORDFISHFEAST = "Glurgh... bạn cá tội nghiệp..."
 
-WURT.DESCRIBE.KYNO_DOGFISH = "Is dog and fish? Friend like Walter's pet!"
-WURT.DESCRIBE.KYNO_DOGFISH_DEAD = "Nooo! *sob*"
+WURT.DESCRIBE.KYNO_DOGFISH = "Là chó và cá hả? Bạn giống thú cưng của Walter!"
+WURT.DESCRIBE.KYNO_DOGFISH_DEAD = "Khônggg! *nức nở*"
 
-WURT.DESCRIBE.KYNO_SPOILED_FISH_LARGE = "Poor friend. *sob*"
+WURT.DESCRIBE.KYNO_SPOILED_FISH_LARGE = "Bạn tội nghiệp. *nức nở*"
 
-WURT.DESCRIBE.WOBSTER_MONKEYISLAND = "Glorp! Fancy wobster friend!"
-WURT.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD = "Nooo! Poor wobster friend!"
-WURT.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD_COOKED = "Glurgh! Bad! Why everyone keep cooking my fishy friends?"
+WURT.DESCRIBE.WOBSTER_MONKEYISLAND = "Glorp! Bạn Wobster sang ghê!"
+WURT.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD = "Khônggg! Bạn Wobster tội nghiệp!"
+WURT.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD_COOKED = "Glurgh! Xấu! Sao ai cũng cứ nấu bạn cá của mình vậy?"
 
-WURT.DESCRIBE.KYNO_PUFFERMONSTER = "Glurp! Mean fishy, puff puff!"
+WURT.DESCRIBE.KYNO_PUFFERMONSTER = "Glurp! Bạn cá xấu tính, phồng phồng!"
 
-WURT.DESCRIBE.KYNO_WHALE_OCEAN_BUBBLES = "Glorp! Maybe find pretty fishes?"
-WURT.DESCRIBE.KYNO_WHALE_BLUE_OCEAN = "Poor friend looks sad."
-WURT.DESCRIBE.KYNO_WHALE_WHITE_OCEAN = "Glorp! Big bad fishy!"
-WURT.DESCRIBE.KYNO_WHALE_OCEAN_CARCASS = "Glorp! Poor friend is getting bigger and bigger..."
+WURT.DESCRIBE.KYNO_WHALE_OCEAN_BUBBLES = "Glorp! Có thể tìm cá đẹp?"
+WURT.DESCRIBE.KYNO_WHALE_BLUE_OCEAN = "Bạn tội nghiệp nhìn buồn quá."
+WURT.DESCRIBE.KYNO_WHALE_WHITE_OCEAN = "Glorp! Bạn cá to xấu tính!"
+WURT.DESCRIBE.KYNO_WHALE_OCEAN_CARCASS = "Glorp! Bạn tội nghiệp càng lúc càng to..."
 
-WURT.DESCRIBE.KYNO_BLUBBER = "Its blubbering, florp."
+WURT.DESCRIBE.KYNO_BLUBBER = "Nó đang nhũn nhũn, florp."
 
-WURT.DESCRIBE.KYNO_FISHMEAT_SMALL_DRIED = "Glurgh... poor little fish..."
-WURT.DESCRIBE.KYNO_FISHMEAT_DRIED = "Why do this to fish, florp?"
+WURT.DESCRIBE.KYNO_FISHMEAT_SMALL_DRIED = "Glurgh... cá nhỏ tội nghiệp..."
+WURT.DESCRIBE.KYNO_FISHMEAT_DRIED = "Sao lại làm vậy với cá, florp?"
 
-WURT.DESCRIBE.MONKEYISLANDMEAL = "Why did that to poor wobster? *snif*"
+WURT.DESCRIBE.MONKEYISLANDMEAL = "Sao làm vậy với Wobster tội nghiệp? *sụt sịt*"
 
-WURT.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Is little worm, florp."
-WURT.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Egg of brain water rock."
-WURT.DESCRIBE.KYNO_BRAINROCK_CORAL = "Glurgh! Bad food for brain!"
+WURT.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Là sâu nhỏ, florp."
+WURT.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Trứng của đá não nước."
+WURT.DESCRIBE.KYNO_BRAINROCK_CORAL = "Glurgh! Đồ ăn xấu cho não!"
 
 WURT.DESCRIBE.KYNO_BRAINROCK_ROCK = 
 {
-	GENERIC = "It smart rock!",
-	PICKED = "Rock quiet now.",
+	GENERIC = "Nó là đá thông minh!",
+	PICKED = "Giờ đá im rồi.",
 }
 
-WURT.DESCRIBE.BRAINMETTERSOUP = "Soup helps think, florp?"
+WURT.DESCRIBE.BRAINMETTERSOUP = "Súp giúp nghĩ, florp?"
 
 WURT.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
 {
-	GENERIC = "What you want?",
-	SLEEPING = "Sea king sleeping now, florp.",
+	GENERIC = "Ông muốn gì?",
+	SLEEPING = "Vua biển đang ngủ rồi, florp.",
 }
 
-WURT.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Has many stuff inside!!"
+WURT.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Có nhiều đồ bên trong!!"
 
 WURT.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
 {
-	GENERIC = "Poor fishy!",
-	WAITING = "Taking nap?",
+	GENERIC = "Cá tội nghiệp!",
+	WAITING = "Đang ngủ hả?",
 }
 
-WURT.DESCRIBE.KYNO_PACKIMBAGGIMS = "Aww... a friendly birdie!"
+WURT.DESCRIBE.KYNO_PACKIMBAGGIMS = "Aww... chim bạn thân thiện!"
 
-WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Gaa! We need more ingredients to cook, florp."
-WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_STAGE = "Cake is looking biiig!"
-WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE = "Big cake for big party, florp!"
-WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Fire sticks for cake! Fun!"
-WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "It look tasty."
-WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Mmm! More sweeties!"
-WURT.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Pretty floaty things, florp!"
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Gaa! Cần thêm nguyên liệu để nấu, florp."
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_STAGE = "Bánh nhìn to quáá!"
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE = "Bánh to cho tiệc to, florp!"
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Que lửa cho bánh! Vui!"
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Nhìn ngon."
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Mmm! Thêm đồ ngọt!"
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Mấy thứ bay bay đẹp quá, florp!"
 
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
 {
-	GENERIC = "Popcorn, good for Wurt!",
-	FUEL_HIGH = "Still going, florp!",
-	FUEL_MED = "Okay for now.",
-	FUEL_LOW = "Needs fuel, flort.",
-	EMPTY = "No more popcorn popping...",
+	GENERIC = "Bắp rang, tốt cho Wurt!",
+	FUEL_HIGH = "Vẫn chạy, florp!",
+	FUEL_MED = "Giờ vẫn ổn.",
+	FUEL_LOW = "Cần nhiên liệu, flort.",
+	EMPTY = "Không còn bắp nổ bốp nữa...",
 }
 
-WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Corn go pop! Funny food, florp!"
-WURT.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Birthday hat for me? Florpt!"
-WURT.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Only Sammy wear this? Lucky florp!"
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Bắp nổ bốp! Đồ ăn vui ghê, florp!"
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Mũ sinh nhật cho mình hả? Florpt!"
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Chỉ Sammy được đội cái này hả? May mắn ghê, florp!"
 
-WURT.DESCRIBE.KYNO_FISHREGISTRYHAT = "Hat helps learn about fish-friends! florp!"
+WURT.DESCRIBE.KYNO_FISHREGISTRYHAT = "Mũ giúp học về bạn cá! florp!"
 
 WURT.DESCRIBE.KYNO_ANIMALFEEDER =
 {
-	GENERIC = "Cute animals eat here, florp.",
-	FUEL_HIGH = "Lots of food! Good.",
-	FUEL_MED = "Still okay.",
-	FUEL_LOW = "Needs more food soon.",
-	EMPTY = "Empty!",
-	BURNT = "Fire ruin it! Glurgh...",
+	GENERIC = "Thú dễ thương ăn ở đây, florp.",
+	FUEL_HIGH = "Nhiều đồ ăn! Tốt.",
+	FUEL_MED = "Vẫn ổn.",
+	FUEL_LOW = "Sắp cần thêm đồ ăn.",
+	EMPTY = "Trống trơn!",
+	BURNT = "Lửa phá rồi! Glurgh...",
 }
 
-WURT.DESCRIBE.CHICKENNUGGETS = "Poor chickens... *snif*"
+WURT.DESCRIBE.CHICKENNUGGETS = "Gà tội nghiệp... *sụt sịt*"
 
-WURT.DESCRIBE.CHICKENWINGS = "Why do that to chicken?!"
+WURT.DESCRIBE.CHICKENWINGS = "Sao làm vậy với gà?!"
 
-WURT.DESCRIBE.CHICKENBURGER = "Why do this to chicken?!"
+WURT.DESCRIBE.CHICKENBURGER = "Sao làm cái này với gà?!"
 
-WURT.DESCRIBE.CHICKENEGGSOUP = "It very warm."
+WURT.DESCRIBE.CHICKENEGGSOUP = "Nó ấm lắm."
 
-WURT.DESCRIBE.CHICKENEGGSTEW = "Yuck!"
+WURT.DESCRIBE.CHICKENEGGSTEW = "Eo!"
 
-WURT.DESCRIBE.CHICKENROTISSERIE = "Nooo! Poor bird!"
+WURT.DESCRIBE.CHICKENROTISSERIE = "Khônggg! Chim tội nghiệp!"
 
-WURT.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Warm plant drink, flort."
-WURT.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet flower drink, florp!"
+WURT.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Đồ uống cây ấm, flort."
+WURT.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Đồ uống hoa ngọt, florp!"
 
-WURT.DESCRIBE.SOULJUICE = "Strange red drink! florp."
+WURT.DESCRIBE.SOULJUICE = "Đồ uống đỏ kỳ lạ! florp."
 
-WURT.DESCRIBE.KYNO_DAILYRECIPE = "No special foods today, florp."
+WURT.DESCRIBE.KYNO_DAILYRECIPE = "Hôm nay không có đồ ăn đặc biệt, florp."
 WURT.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 {
-	GENERIC = "Special food is %s, florp!",
-	NONE = "No special foods today, florp.",
-	BURNING = "Too much fire, florp!",
-	BURNT = "Just ashes now, florp.",
+	GENERIC = "Đồ ăn đặc biệt là %s, florp!",
+	NONE = "Hôm nay không có đồ ăn đặc biệt, florp.",
+	BURNING = "Nhiều lửa quá, florp!",
+	BURNT = "Giờ chỉ còn tro, florp.",
 }
+
+WURT.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "GLORP! Không giúp đâu!",
+	HOUSE_REPAIRED = "GLORP! ÔNG ẤY sẽ không giao dịch với mình!",
+}
+
+WURT.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Cây quá cứng, flort!",
+	CHOPPED = "Cuối cùng cũng chặt được!",
+	BLOOMING = "Cây hang động đẹp quá, florp.",
+	BURNING = "Ôi không! Cháy rồi!",
+	BURNT = "Giờ là cây chết.",
+}
+
+WURT.DESCRIBE.KYNO_CAVETUBER = "Chưa sẵn sàng?"
+WURT.DESCRIBE.KYNO_CAVETUBER_COOKED = "Nghĩ vẫn chưa an toàn đâu, florp."
+
+WURT.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Có vẻ sẵn sàng rồi! flort."
+WURT.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Ngon!"

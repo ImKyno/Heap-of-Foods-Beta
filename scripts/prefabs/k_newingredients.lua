@@ -2,7 +2,7 @@ local FERTILIZER_DEFS = require("prefabs/fertilizer_nutrient_defs").FERTILIZER_D
 
 local assets =
 {
-    Asset("ANIM", "anim/quagmire_flour.zip"),
+	Asset("ANIM", "anim/quagmire_flour.zip"),
 	Asset("ANIM", "anim/quagmire_syrup.zip"),
 	Asset("ANIM", "anim/quagmire_spotspice_ground.zip"),
 	Asset("ANIM", "anim/quagmire_spotspice_sprig.zip"),
@@ -18,26 +18,28 @@ local assets =
 	Asset("ANIM", "anim/kyno_sugar.zip"),
 	Asset("ANIM", "anim/kyno_crabkingmeat.zip"),
 	Asset("ANIM", "anim/kyno_tealeaf.zip"),
-	
+	Asset("ANIM", "anim/kyno_cavetuber.zip"),
+	Asset("ANIM", "anim/kyno_cavetuber_blooming.zip"),
+
 	Asset("ANIM", "anim/kyno_meatrack_crabmeat.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_crabkingmeat.zip"),
-	
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
-local prefabs = 
+local prefabs =
 {
 	"gridplacer_farmablesoil",
 }
 
 local function GetFertilizerKey(inst)
-    return inst.prefab
+	return inst.prefab
 end
 
 local function fertilizerresearchfn(inst)
-    return inst:GetFertilizerKey()
+	return inst:GetFertilizerKey()
 end
 
 local function WaterIdle(inst)
@@ -73,28 +75,10 @@ local function wheatfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	inst:AddComponent("inspectable")
-
-   	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = TUNING.KYNO_WHEAT_HEALTH
-	inst.components.edible.hungervalue = TUNING.KYNO_WHEAT_HUNGER
-	inst.components.edible.sanityvalue = TUNING.KYNO_WHEAT_SANITY
-	inst.components.edible.foodtype = FOODTYPE.SEEDS
-	
-	inst:AddComponent("fuel")
-	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
-	inst.components.fuel.fuelvalue = TUNING.MED_LARGE_FUEL
-
-	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
-	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
-
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
@@ -102,6 +86,24 @@ local function wheatfn()
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_wheat_cooked"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
+   	inst:AddComponent("edible")
+	inst.components.edible.healthvalue = TUNING.KYNO_WHEAT_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_WHEAT_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_WHEAT_SANITY
+	inst.components.edible.foodtype = FOODTYPE.SEEDS
+
+	inst:AddComponent("perishable")
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
+	inst.components.perishable:StartPerishing()
+	inst.components.perishable.onperishreplacement = "spoiled_food"
+
+	inst:AddComponent("fuel")
+	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
+	inst.components.fuel.fuelvalue = TUNING.MED_LARGE_FUEL
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -133,32 +135,32 @@ local function wheat_cookedfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	inst:AddComponent("inspectable")
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_wheat_cooked"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_WHEAT_COOKED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_WHEAT_COOKED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_WHEAT_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.SEEDS
-	
-	inst:AddComponent("fuel")
-	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
-	inst.components.fuel.fuelvalue = TUNING.MED_LARGE_FUEL
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_wheat_cooked"
+	inst:AddComponent("fuel")
+	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
+	inst.components.fuel.fuelvalue = TUNING.MED_LARGE_FUEL
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -168,56 +170,56 @@ local function wheat_cookedfn()
 end
 
 local function flourfn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddNetwork()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "small", 0.05)
 
-    inst.AnimState:SetBank("quagmire_flour")
-    inst.AnimState:SetBuild("quagmire_flour")
-    inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:SetBank("quagmire_flour")
+	inst.AnimState:SetBuild("quagmire_flour")
+	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("gourmet_flour")
 	inst:AddTag("gourmet_ingredient")
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
-    inst:AddComponent("inspectable")
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
 
-    inst:AddComponent("inventoryitem")
+	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_flour"
-	
-    inst:AddComponent("stackable")
+
+	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
+
 	MakeHauntableLaunchAndPerish(inst)
 
-    return inst
+	return inst
 end
 
 local function sapfn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddNetwork()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "small", 0.05)
 
-    inst.AnimState:SetBank("quagmire_sap")
-    inst.AnimState:SetBuild("quagmire_sap")
-    inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:SetBank("quagmire_sap")
+	inst.AnimState:SetBuild("quagmire_sap")
+	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("honeyed")
 	inst:AddTag("gourmet_sap")
@@ -225,245 +227,195 @@ local function sapfn()
 	inst:AddTag("sap_fishfarmbait")
 	inst:AddTag("show_spoilage")
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
 	inst:AddComponent("bait")
-    inst:AddComponent("inspectable")
+	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-	
-	inst:AddComponent("fuel")
-    inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL
 
-    inst:AddComponent("inventoryitem")
+	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_sap"
-	
-    inst:AddComponent("stackable")
+
+	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
-	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
-	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "kyno_sap_spoiled"
-	
+
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_SAP_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_SAP_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_SAP_SANITY
 	inst.components.edible.foodtype = FOODTYPE.GOODIES
 
+	inst:AddComponent("perishable")
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
+	inst.components.perishable:StartPerishing()
+	inst.components.perishable.onperishreplacement = "kyno_sap_spoiled"
+
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL
+
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
-    return inst
+	return inst
 end
 
 local function sap_ruinedfn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddNetwork()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "small", 0.05)
 	MakeDeployableFertilizerPristine(inst)
 
-    inst.AnimState:SetBank("quagmire_sap")
-    inst.AnimState:SetBuild("quagmire_sap")
-    inst.AnimState:PlayAnimation("idle_spoiled")
+	inst.AnimState:SetBank("quagmire_sap")
+	inst.AnimState:SetBuild("quagmire_sap")
+	inst.AnimState:PlayAnimation("idle_spoiled")
 
 	inst:AddTag("gourmet_sap_spoiled")
 	inst:AddTag("gourmet_ingredient")
 	inst:AddTag("fertilizerresearchable")
-	
+
 	inst.GetFertilizerKey = GetFertilizerKey
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
-    inst:AddComponent("inspectable")
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-	
-	inst:AddComponent("fuel")
-    inst.components.fuel.fuelvalue = TUNING.LARGE_FUEL
 
-    inst:AddComponent("inventoryitem")
+	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_sap_spoiled"
-	
-    inst:AddComponent("stackable")
+
+	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
+
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.LARGE_FUEL
+
 	inst:AddComponent("fertilizerresearchable")
 	inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)
-	
+
 	inst:AddComponent("fertilizer")
 	inst.components.fertilizer.fertilizervalue = TUNING.GUANO_FERTILIZE
 	inst.components.fertilizer.soil_cycles = TUNING.GUANO_SOILCYCLES
 	inst.components.fertilizer.withered_cycles = TUNING.GUANO_WITHEREDCYCLES
 	inst.components.fertilizer:SetNutrients(FERTILIZER_DEFS.kyno_sap_spoiled.nutrients)
-	
+
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 	MakeDeployableFertilizer(inst)
 
-    return inst
-end
-
-local function syrupfn()
-    local inst = CreateEntity()
-
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddNetwork()
-
-    MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst, "small", 0.05)
-
-    inst.AnimState:SetBank("quagmire_syrup")
-    inst.AnimState:SetBuild("quagmire_syrup")
-    inst.AnimState:PlayAnimation("idle")
-
-	inst:AddTag("gourmet_syrup")
-	inst:AddTag("gourmet_ingredient")
-	inst:AddTag("show_spoilage")
-
-    inst.entity:SetPristine()
-
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
-    inst:AddComponent("inspectable")
-	inst:AddComponent("tradable")
-
-    inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_syrup"
-	
-    inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
-	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERSLOW)
-	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
-	
-	inst:AddComponent("edible")
-	inst.components.edible.healthvalue = TUNING.KYNO_SYRUP_HEALTH
-	inst.components.edible.hungervalue = TUNING.KYNO_SYRUP_HUNGER
-	inst.components.edible.sanityvalue = TUNING.KYNO_SYRUP_SANITY
-	inst.components.edible.foodtype = FOODTYPE.GOODIES
-
-	MakeHauntableLaunchAndPerish(inst)
-
-    return inst
+	return inst
 end
 
 local function sprigfn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddNetwork()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "small", 0.05)
 
-    inst.AnimState:SetBank("quagmire_spotspice_sprig")
-    inst.AnimState:SetBuild("quagmire_spotspice_sprig")
-    inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:SetBank("quagmire_spotspice_sprig")
+	inst.AnimState:SetBuild("quagmire_spotspice_sprig")
+	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("show_spoilage")
 	inst:AddTag("gourmet_sprig")
 	inst:AddTag("gourmet_ingredient")
 	inst:AddTag("chickenfood")
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
 	inst:AddComponent("bait")
-    inst:AddComponent("inspectable")
+	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
 
-    inst:AddComponent("inventoryitem")
+	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_spotspice_leaf"
-	
-    inst:AddComponent("stackable")
+
+	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
-	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
-	inst.components.perishable:StartPerishing()
-	inst.components.perishable.onperishreplacement = "spoiled_food"
-	
+
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_SPOTSPICE_LEAF_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_SPOTSPICE_LEAF_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_SPOTSPICE_LEAF_SANITY
 	inst.components.edible.foodtype = FOODTYPE.SEEDS
-	
+
+	inst:AddComponent("perishable")
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
+	inst.components.perishable:StartPerishing()
+	inst.components.perishable.onperishreplacement = "spoiled_food"
+
 	inst:AddComponent("fuel")
 	inst.components.fuel.fueltype = FUELTYPE.ANIMALFOOD
 	inst.components.fuel.fuelvalue = TUNING.LARGE_FUEL
-	
+
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
-    return inst
+	return inst
 end
 
 local function spicefn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddNetwork()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "small", 0.05)
 
-    inst.AnimState:SetBank("quagmire_spotspice_ground")
-    inst.AnimState:SetBuild("quagmire_spotspice_ground")
-    inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:SetBank("quagmire_spotspice_ground")
+	inst.AnimState:SetBuild("quagmire_spotspice_ground")
+	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("gourmet_spotspice")
 	inst:AddTag("gourmet_ingredient")
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
-    inst:AddComponent("inspectable")
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
 
-    inst:AddComponent("inventoryitem")
+	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_spotspice"
-	
-    inst:AddComponent("stackable")
+
+	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
+
 	MakeHauntableLaunchAndPerish(inst)
 
-    return inst
+	return inst
 end
 
 local function baconfn()
@@ -490,12 +442,22 @@ local function baconfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("bait")
-	
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "SMALLMEAT"
-	
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_bacon"
+
+	inst:AddComponent("cookable")
+	inst.components.cookable.product = "kyno_bacon_cooked"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 1
 
@@ -510,16 +472,6 @@ local function baconfn()
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
-
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_bacon"
-
-	inst:AddComponent("cookable")
-	inst.components.cookable.product = "kyno_bacon_cooked"
 
 	MakeHauntableLaunchAndPerish(inst)
 
@@ -548,12 +500,19 @@ local function bacon_cookedfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("bait")
-	
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "COOKEDSMALLMEAT"
-	
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_bacon_cooked"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 1
 
@@ -568,13 +527,6 @@ local function bacon_cookedfn()
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
-
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_bacon_cooked"
 
 	MakeHauntableLaunchAndPerish(inst)
 
@@ -604,12 +556,22 @@ local function mushfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
-	
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "RED_CAP"
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_white_cap"
+
+	inst:AddComponent("cookable")
+	inst.components.cookable.product = "kyno_white_cap_cooked"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_WHITE_CAP_HEALTH
@@ -621,16 +583,6 @@ local function mushfn()
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
-
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_white_cap"
-
-	inst:AddComponent("cookable")
-	inst.components.cookable.product = "kyno_white_cap_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -661,12 +613,19 @@ local function mush_cookedfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
-	
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "RED_CAP_COOKED"
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_white_cap_cooked"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_WHITE_CAP_COOKED_HEALTH
@@ -679,15 +638,8 @@ local function mush_cookedfn()
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
 	inst:AddComponent("fuel")
 	inst.components.fuel.fuelvalue = TUNING.TINY_FUEL
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_white_cap_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -697,60 +649,60 @@ local function mush_cookedfn()
 end
 
 local function foliagefn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddNetwork()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-    inst.AnimState:SetBank("foliage")
-    inst.AnimState:SetBuild("foliage")
-    inst.AnimState:PlayAnimation("anim")
+	inst.AnimState:SetBank("foliage")
+	inst.AnimState:SetBuild("foliage")
+	inst.AnimState:PlayAnimation("anim")
 
-    inst:AddTag("cattoy")
+	inst:AddTag("cattoy")
 	inst:AddTag("cookable")
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
 	inst:AddComponent("bait")
-    inst:AddComponent("tradable")
+	inst:AddComponent("tradable")
 
-    inst:AddComponent("inspectable")
+	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "FOLIAGE"
 
-    inst:AddComponent("fuel")
-    inst.components.fuel.fuelvalue = TUNING.TINY_FUEL
-	
-	inst:AddComponent("stackable")
-    inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-    inst:AddComponent("inventoryitem")
+	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_foliage"
 
-    inst:AddComponent("edible")
-    inst.components.edible.healthvalue = TUNING.KYNO_FOLIAGE_HEALTH
-    inst.components.edible.hungervalue = TUNING.KYNO_FOLIAGE_HUNGER
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
+	inst:AddComponent("edible")
+	inst.components.edible.healthvalue = TUNING.KYNO_FOLIAGE_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_FOLIAGE_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_FOLIAGE_SANITY
-    inst.components.edible.foodtype = FOODTYPE.VEGGIE
+	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
-    inst:AddComponent("perishable")
-    inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
-    inst.components.perishable:StartPerishing()
-    inst.components.perishable.onperishreplacement = "spoiled_food"
-	
+	inst:AddComponent("perishable")
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
+	inst.components.perishable:StartPerishing()
+	inst.components.perishable.onperishreplacement = "spoiled_food"
+
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.TINY_FUEL
+
 	MakeSmallBurnable(inst)
-    MakeSmallPropagator(inst)
-    MakeHauntableLaunchAndIgnite(inst)
+	MakeSmallPropagator(inst)
+	MakeHauntableLaunchAndIgnite(inst)
 
-    return inst
+	return inst
 end
 
 local function foliage_cookedfn()
@@ -775,12 +727,19 @@ local function foliage_cookedfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
-	
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "FOLIAGE"
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_foliage_cooked"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_FOLIAGE_COOKED_HEALTH
@@ -793,15 +752,8 @@ local function foliage_cookedfn()
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
 	inst:AddComponent("fuel")
-    inst.components.fuel.fuelvalue = TUNING.TINY_FUEL
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_foliage_cooked"
+	inst.components.fuel.fuelvalue = TUNING.TINY_FUEL
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -811,43 +763,43 @@ local function foliage_cookedfn()
 end
 
 local function saltfn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
-    inst.entity:AddNetwork()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "small", 0.05)
 
-    inst.AnimState:SetBank("quagmire_salt")
-    inst.AnimState:SetBuild("quagmire_salt")
-    inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:SetBank("quagmire_salt")
+	inst.AnimState:SetBuild("quagmire_salt")
+	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("gourmet_salt")
 	inst:AddTag("gourmet_ingredient")
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
-    inst:AddComponent("inspectable")
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
 	inst:AddComponent("salter")
 
-    inst:AddComponent("inventoryitem")
+	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_salt"
-	
-    inst:AddComponent("stackable")
+
+	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
+
 	MakeHauntableLaunchAndPerish(inst)
 
-    return inst
+	return inst
 end
 
 local function crabmeatfn()
@@ -859,7 +811,7 @@ local function crabmeatfn()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
-	
+
 	inst.AnimState:SetScale(.85, .85, .85)
 
 	inst.AnimState:SetBank("quagmire_crabmeat")
@@ -876,17 +828,27 @@ local function crabmeatfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
-	
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_crabmeat"
+
+	inst:AddComponent("cookable")
+	inst.components.cookable.product = "kyno_crabmeat_cooked"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
-	
+
 	inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("kyno_crabmeat_dried")
-    inst.components.dryable:SetDryTime(TUNING.DRY_MED)
+	inst.components.dryable:SetDryTime(TUNING.DRY_MED)
 	inst.components.dryable:SetBuildFile("kyno_meatrack_crabmeat")
 	inst.components.dryable:SetDriedBuildFile("kyno_meatrack_crabmeat")
 
@@ -901,16 +863,6 @@ local function crabmeatfn()
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
-
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_crabmeat"
-
-	inst:AddComponent("cookable")
-	inst.components.cookable.product = "kyno_crabmeat_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -941,10 +893,17 @@ local function crabmeat_cookedfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
-	
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_crabmeat_cooked"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
@@ -961,13 +920,6 @@ local function crabmeat_cookedfn()
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_crabmeat_cooked"
-
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
@@ -982,7 +934,7 @@ local function crabkingmeatfn()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
-	
+
 	inst.AnimState:SetScale(1.2, 1.2, 1.2)
 
 	inst.AnimState:SetBank("kyno_crabkingmeat")
@@ -999,17 +951,27 @@ local function crabkingmeatfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
-	
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_crabkingmeat"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
+
+	inst:AddComponent("cookable")
+	inst.components.cookable.product = "kyno_crabkingmeat_cooked"
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD_RARE
-	
+
 	inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("kyno_crabkingmeat_dried")
-    inst.components.dryable:SetDryTime(TUNING.DRY_MED)
+	inst.components.dryable:SetDryTime(TUNING.DRY_MED)
 	inst.components.dryable:SetBuildFile("kyno_meatrack_crabkingmeat")
 	inst.components.dryable:SetDriedBuildFile("kyno_meatrack_crabkingmeat")
 
@@ -1025,16 +987,6 @@ local function crabkingmeatfn()
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_crabkingmeat"
-
-	inst:AddComponent("cookable")
-	inst.components.cookable.product = "kyno_crabkingmeat_cooked"
-	
 	inst:ListenForEvent("on_landed", WaterIdle)
 
 	MakeSmallBurnable(inst)
@@ -1066,10 +1018,17 @@ local function crabkingmeat_cookedfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
-	
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_crabkingmeat_cooked"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD_RARE
@@ -1086,169 +1045,161 @@ local function crabkingmeat_cookedfn()
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 
-	inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_crabkingmeat_cooked"
-
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
 end
 
 local function oilfn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddNetwork()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
-	
+
 	inst.AnimState:SetScale(.8, .8, .8)
 
-    inst.AnimState:SetBank("kyno_cookingoil")
-    inst.AnimState:SetBuild("kyno_cookingoil")
-    inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:SetBank("kyno_cookingoil")
+	inst.AnimState:SetBuild("kyno_cookingoil")
+	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("fooddrink")
 	inst:AddTag("gourmet_ingredient")
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
-    inst:AddComponent("inspectable")
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-	
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_oil"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_OIL_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_OIL_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_OIL_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
-    inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_oil"
-	
-    inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
 	inst:ListenForEvent("on_landed", WaterIdle)
-	
+
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
-    return inst
+	return inst
 end
 
 local function sugarfn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddNetwork()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-    inst.AnimState:SetBank("kyno_sugar")
-    inst.AnimState:SetBuild("kyno_sugar")
-    inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:SetBank("kyno_sugar")
+	inst.AnimState:SetBuild("kyno_sugar")
+	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("gourmet_ingredient")
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
-    inst:AddComponent("inspectable")
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
 
-    inst:AddComponent("inventoryitem")
+	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_sugar"
-	
-    inst:AddComponent("stackable")
+
+	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
+
 	MakeHauntableLaunchAndPerish(inst)
 
-    return inst
+	return inst
 end
 
 local function leaffn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddNetwork()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-    inst.AnimState:SetBank("kyno_tealeaf")
-    inst.AnimState:SetBuild("kyno_tealeaf")
-    inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:SetBank("kyno_tealeaf")
+	inst.AnimState:SetBuild("kyno_tealeaf")
+	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("gourmet_ingredient")
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
-    inst:AddComponent("inspectable")
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-	
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+	inst.components.inventoryitem.imagename = "kyno_tealeaf"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_TEALEAF_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_TEALEAF_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_TEALEAF_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
 
-    inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_tealeaf"
-	
-    inst:AddComponent("stackable")
-	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
-    return inst
+	return inst
 end
 
-return Prefab("kyno_wheat", wheatfn, assets, prefabs),
-Prefab("kyno_wheat_cooked", wheat_cookedfn, assets, prefabs),
-Prefab("kyno_flour", flourfn, assets, prefabs),
-Prefab("kyno_spotspice_leaf", sprigfn, assets, prefabs),
-Prefab("kyno_spotspice", spicefn, assets, prefabs),
+return Prefab("kyno_wheat", wheatfn, assets),
+Prefab("kyno_wheat_cooked", wheat_cookedfn, assets),
+Prefab("kyno_flour", flourfn, assets),
+Prefab("kyno_spotspice_leaf", sprigfn, assets),
+Prefab("kyno_spotspice", spicefn, assets),
 Prefab("kyno_sap", sapfn, assets, prefabs),
 Prefab("kyno_sap_spoiled", sap_ruinedfn, assets, prefabs),
--- Prefab("kyno_syrup", syrupfn, assets, prefabs), Its now a Crock Pot dish.
-Prefab("kyno_bacon", baconfn, assets, prefabs),
-Prefab("kyno_bacon_cooked", bacon_cookedfn, assets, prefabs),
-Prefab("kyno_white_cap", mushfn, assets, prefabs),
-Prefab("kyno_white_cap_cooked", mush_cookedfn, assets, prefabs),
-Prefab("kyno_foliage", foliagefn, assets, prefabs), -- False Foliage, just for mimic the Cookbook.
-Prefab("kyno_foliage_cooked", foliage_cookedfn, assets, prefabs),
-Prefab("kyno_salt", saltfn, assets, prefabs),
-Prefab("kyno_crabmeat", crabmeatfn, assets, prefabs),
-Prefab("kyno_crabmeat_cooked", crabmeat_cookedfn, assets, prefabs),
-Prefab("kyno_crabkingmeat", crabkingmeatfn, assets, prefabs),
-Prefab("kyno_crabkingmeat_cooked", crabkingmeat_cookedfn, assets, prefabs),
-Prefab("kyno_oil", oilfn, assets, prefabs),
-Prefab("kyno_sugar", sugarfn, assets, prefabs),
-Prefab("kyno_tealeaf", leaffn, assets, prefabs)
+Prefab("kyno_bacon", baconfn, assets),
+Prefab("kyno_bacon_cooked", bacon_cookedfn, assets),
+Prefab("kyno_white_cap", mushfn, assets),
+Prefab("kyno_white_cap_cooked", mush_cookedfn, assets),
+Prefab("kyno_foliage", foliagefn, assets), -- Just for mimic the Cookbook.
+Prefab("kyno_foliage_cooked", foliage_cookedfn, assets),
+Prefab("kyno_salt", saltfn, assets),
+Prefab("kyno_crabmeat", crabmeatfn, assets),
+Prefab("kyno_crabmeat_cooked", crabmeat_cookedfn, assets),
+Prefab("kyno_crabkingmeat", crabkingmeatfn, assets),
+Prefab("kyno_crabkingmeat_cooked", crabkingmeat_cookedfn, assets),
+Prefab("kyno_oil", oilfn, assets),
+Prefab("kyno_sugar", sugarfn, assets),
+Prefab("kyno_tealeaf", leaffn, assets)

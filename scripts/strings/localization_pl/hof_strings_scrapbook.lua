@@ -225,3 +225,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Pojemnik z dwoma slo
 STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Niektóre zwierzęta będą żywić się pokarmem umieszczonym w tym korycie.\n\nNasiona i ziarna mogą być wykorzystywane jako podstawowe źródło pożywienia."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "Schronisko dla kurczaków, w którym można produkować produkty drobiowe."
 STRINGS.SCRAPBOOK.SPECIALINFO.DAILYRECIPE_SIGN = "Śledzi codzienne przepisy i umożliwia ich krótki przegląd."
+STRINGS.SCRAPBOOK.SPECIALINFO.CAVETUBERTREE = "Wymaga solidnej siekiery, aby ją ściąć. Jeśli pień zostanie pozostawiony, po kilku dniach odrośnie, produkując więcej bulw.\n\nPodczas Wiosny zaczyna kwitnąć i dojrzewa."

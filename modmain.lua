@@ -46,12 +46,12 @@ local HOF_LANGUAGE = GetModConfigData("LANGUAGE")
 if HOF_LANGUAGE then
 	modimport("scripts/strings/localization_"..HOF_LANGUAGE.."/hof_strings_loadingtips")
 
-	for _, v in pairs(HOF_INIT_STRINGS) do
-		require("strings/localization_"..HOF_LANGUAGE.."/"..v)
+	for _, v in pairs(INIT_STRINGS) do
+		require("strings/localization_"..HOF_LANGUAGE.."/hof_"..v)
 	end
 	
-	for _, v in pairs(HOF_INIT_STRINGS_CHARACTERS) do
-		require("strings/localization_"..HOF_LANGUAGE.."/characters/"..v)
+	for _, v in pairs(INIT_STRINGS_CHARACTERS) do
+		require("strings/localization_"..HOF_LANGUAGE.."/characters/hof_speech_"..v)
 	end
 end
 

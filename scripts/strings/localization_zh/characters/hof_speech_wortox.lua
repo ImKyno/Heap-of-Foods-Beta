@@ -1241,3 +1241,18 @@ WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "他似乎还能容忍我。在房子修好前可不做交易！",
 	HOUSE_REPAIRED = "坚固的房屋和闪亮的货物！",
 }
+
+WORTOX.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "哦！一棵倔强的小树！",
+	CHOPPED = "终于倒下啦！",
+	BLOOMING = "它在地下开花了。真有趣！",
+	BURNING = "噼啪作响，hyuyu！",
+	BURNT = "如今只剩煤灰与悲伤。",
+}
+
+WORTOX.DESCRIBE.KYNO_CAVETUBER = "调皮的块茎！"
+WORTOX.DESCRIBE.KYNO_CAVETUBER_COOKED = "我觉得这吃起来不安全。"
+
+WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "开花的块茎！"
+WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "吃起来和其他凡人的食物没什么区别。"

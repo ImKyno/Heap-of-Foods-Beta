@@ -1241,3 +1241,18 @@ WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Guess repairs come before business.",
 	HOUSE_REPAIRED = "There we go. Let's make a deal.",
 }
+
+WINONA.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "That's gonna need more than a regular axe.",
+	CHOPPED = "Hard work pays off.",
+	BLOOMING = "Looks healthy enough.",
+	BURNING = "Well, there it goes.",
+	BURNT = "Nothing left worth salvaging.",
+}
+
+WINONA.DESCRIBE.KYNO_CAVETUBER = "Doesn't look like it's ripe."
+WINONA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Can I eat it now?"
+
+WINONA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "This is the season for tubers."
+WINONA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Oh. I was hoping for some fries."

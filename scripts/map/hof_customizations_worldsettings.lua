@@ -11,17 +11,18 @@ local customizations_worldsettings =
 	-- WORLDSETTING
 	aloes_setting            = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 0,   world = { "forest" }},
 	asparaguses_setting      = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 1,   world = { "forest", "cave" }},
-	coffeebushes_setting     = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 2,   world = { "forest", "cave" }},
-	fennels_setting          = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 3,   world = { "cave" }},
-	giantparznips_setting    = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 4,   world = { "cave" }},
-	mushstumps_setting       = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 5,   world = { "forest", "cave" }},
-	truffles_setting         = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 6,   world = { "forest" }},
-	parznips_setting         = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 7,   world = { "cave" }},
-	radishes_setting         = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 8,   world = { "forest" }},
-	rockflippables_setting   = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 9,   world = { "forest", "cave" }},
-	sweetpotatoes_setting    = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 10,  world = { "forest" }},
-	turnips_setting          = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 11,  world = { "forest", "cave" }},
-	wildwheats_setting       = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 12,  world = { "forest" }},
+	cavetubertrees_setting   = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 3,   world = { "cave" }},
+	coffeebushes_setting     = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 4,   world = { "forest", "cave" }},
+	fennels_setting          = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 5,   world = { "cave" }},
+	giantparznips_setting    = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 6,   world = { "cave" }},
+	mushstumps_setting       = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 7,   world = { "forest", "cave" }},
+	truffles_setting         = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 8,   world = { "forest" }},
+	parznips_setting         = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 9,   world = { "cave" }},
+	radishes_setting         = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 10,  world = { "forest" }},
+	rockflippables_setting   = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 11,  world = { "forest", "cave" }},
+	sweetpotatoes_setting    = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 12,  world = { "forest" }},
+	turnips_setting          = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 13,  world = { "forest", "cave" }},
+	wildwheats_setting       = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 14,  world = { "forest" }},
 
 	-- OCEANSETTING
 	brainrocks_setting       = { desc = "speed_descriptions",      group = "hof_ocean_r",     order = 7,   world = { "forest" }},
@@ -287,6 +288,43 @@ WSO.Pre.coffeebushes_setting = function(difficulty)
 		veryfast =
 		{
 			KYNO_COFFEEBUSH_GROWTIME = 480,
+		},
+	}
+
+	OverrideTuningVariables(tuning_vars[difficulty])
+end
+
+WSO.Pre.cavetubertrees_setting = function(difficulty)
+	local tuning_vars =
+	{
+		never =
+		{
+			KYNO_CAVETUBERTREE_GROWTIME = NEVER_TIME,
+			KYNO_CAVETUBERTREE_REGROWTH_TIME_MULT = 0,
+		},
+
+		veryslow =
+		{
+			KYNO_CAVETUBERTREE_GROWTIME = 3840,
+			KYNO_CAVETUBERTREE_REGROWTH_TIME_MULT = .25,
+		},
+
+		slow =
+		{
+			KYNO_CAVETUBERTREE_GROWTIME = 2880,
+			KYNO_CAVETUBERTREE_REGROWTH_TIME_MULT = .50,
+		},
+
+		fast =
+		{
+			KYNO_CAVETUBERTREE_GROWTIME = 1280,
+			KYNO_CAVETUBERTREE_REGROWTH_TIME_MULT = 1.5,
+		},
+
+		veryfast =
+		{
+			KYNO_CAVETUBERTREE_GROWTIME = 480,
+			KYNO_CAVETUBERTREE_REGROWTH_TIME_MULT = 3,
 		},
 	}
 

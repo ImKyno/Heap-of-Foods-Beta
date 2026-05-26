@@ -1241,3 +1241,18 @@ WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Ele não vai negociar comigo a menos que eu ajude a consertar a casa dele primeiro.",
 	HOUSE_REPAIRED = "Olá, senhor! O que tem para trocar?",
 }
+
+WILSON.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Um machado comum não vai dar conta.",
+	CHOPPED = "Acho que valeu o esforço.",
+	BLOOMING = "Está florescendo vigorosamente.",
+	BURNING = "Que pena!",
+	BURNT = "Mais uma árvore perdida para o fogo."
+}
+
+WILSON.DESCRIBE.KYNO_CAVETUBER = "Que pena, tubérculo."
+WILSON.DESCRIBE.KYNO_CAVETUBER_COOKED = "Será que ainda é venenoso?"
+
+WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "É um tubérculo florescendo!"
+WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Será que cozinhei a flor também?"

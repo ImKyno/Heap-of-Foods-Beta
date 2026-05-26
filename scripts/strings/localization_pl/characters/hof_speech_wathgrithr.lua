@@ -1241,3 +1241,18 @@ WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Kupiec żąda pomocy przed handlem!",
 	HOUSE_REPAIRED = "Witaj, handlarzu! Okaż swe skarby!",
 }
+
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "To drzewo nie padnie od zwykłej siekiery.",
+	CHOPPED = "Zwycięstwo nad drewnianą bestią!",
+	BLOOMING = "Rozkwita dziką siłą!",
+	BURNING = "Płomienie pochłaniają je chwalebnie!",
+	BURNT = "Jego saga kończy się w popiele.",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER = "To niedojrzałe nie-mięso."
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ogień nic nie robi, by uczynić to jadalnym!"
+
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "To dojrzałe nie-mięso."
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Nie obchodzi mnie, czy jest ugotowane."

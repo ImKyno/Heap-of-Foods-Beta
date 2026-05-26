@@ -1241,3 +1241,18 @@ WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Repairs first? What an inefficient delay.",
 	HOUSE_REPAIRED = "Finally. Let's not waste any more time.",
 }
+
+WANDA.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "This tree is wasting my time.",
+	CHOPPED = "Finally dealt with.",
+	BLOOMING = "At least something down here is productive.",
+	BURNING = "A predictable outcome.",
+	BURNT = "Another inevitable ending.",
+}
+
+WANDA.DESCRIBE.KYNO_CAVETUBER = "It needs more time to ripe."
+WANDA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Still undercooked and poisonous."
+
+WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Perfect timing!"
+WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Cooked it just in time."

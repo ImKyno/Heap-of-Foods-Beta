@@ -1241,3 +1241,18 @@ WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "His broken home mirrors a weary soul.",
 	HOUSE_REPAIRED = "Perhaps commerce eases loneliness.",
 }
+
+WENDY.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "A regular axe won't kill it.",
+	CHOPPED = "Everything falls eventually.",
+	BLOOMING = "Even underground life insists on persisting.",
+	BURNING = "A brief, beautiful tragedy.",
+	BURNT = "Reduced to silent remains.",
+}
+
+WENDY.DESCRIBE.KYNO_CAVETUBER = "Will I be dead before it ripens?"
+WENDY.DESCRIBE.KYNO_CAVETUBER_COOKED = "Perhaps I'm lucky and it's still poisoned."
+
+WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Pretty flower."
+WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Should I eat the flower too?"

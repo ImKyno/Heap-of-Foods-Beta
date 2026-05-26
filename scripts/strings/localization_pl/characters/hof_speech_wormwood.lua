@@ -1241,3 +1241,18 @@ WORMWOOD.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Dom Zraniony. Najpierw Chce Pomocy.",
 	HOUSE_REPAIRED = "Handel Teraz, Tak?",
 }
+
+WORMWOOD.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Dziwny Przyjaciel",
+	CHOPPED = "Przyjaciel Odszedł",
+	BLOOMING = "Szczęśliwy Przyjaciel!",
+	BURNING = "Nie! Ogień Zły!",
+	BURNT = "Przyjaciel boli...",
+}
+
+WORMWOOD.DESCRIBE.KYNO_CAVETUBER = "Nie Gotowe"
+WORMWOOD.DESCRIBE.KYNO_CAVETUBER_COOKED = "Teraz Dobre"
+
+WORMWOOD.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Gotowe!"
+WORMWOOD.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Witaj Kwiatowy Przyjacielu!"

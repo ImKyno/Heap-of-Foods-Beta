@@ -1241,3 +1241,18 @@ WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Ugh, fix his house first? What a bore.",
 	HOUSE_REPAIRED = "Alright, old man. Show me the goods.",
 }
+
+WILLOW.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "A regular axe won't destroy this but fire will.",
+	CHOPPED = "Heh. That showed it.",
+	BLOOMING = "It's weirdly alive-looking.",
+	BURNING = "Now that's more like it!",
+	BURNT = "Ashes are prettier anyway.",
+}
+
+WILLOW.DESCRIBE.KYNO_CAVETUBER = "Should be ripe before I burn it."
+WILLOW.DESCRIBE.KYNO_CAVETUBER_COOKED = "Fire: it always make things better."
+
+WILLOW.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "The flower means it's ripe."
+WILLOW.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Aw. The flower didn't even burn."

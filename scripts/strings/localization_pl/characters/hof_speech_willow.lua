@@ -1241,3 +1241,18 @@ WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Ugh, najpierw naprawić jego dom? Co za nuda.",
 	HOUSE_REPAIRED = "Dobra, staruszku. Pokaż towar.",
 }
+
+WILLOW.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Zwykła siekiera tego nie zniszczy, ale ogień owszem.",
+	CHOPPED = "Heh. Dobrze mu tak.",
+	BLOOMING = "Wygląda dziwnie żywo.",
+	BURNING = "No i to mi się podoba!",
+	BURNT = "Popiół i tak jest ładniejszy.",
+}
+
+WILLOW.DESCRIBE.KYNO_CAVETUBER = "Powinien dojrzeć, zanim go spalę."
+WILLOW.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ogień: zawsze poprawia wszystko."
+
+WILLOW.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Kwiat oznacza, że jest dojrzały."
+WILLOW.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Aw. Kwiat nawet się nie spalił."

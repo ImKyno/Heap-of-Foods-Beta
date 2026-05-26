@@ -96,6 +96,8 @@ AddBrewingValues({"kyno_sporecap"},             {veggie     = 0.5, mushrooms    
 AddBrewingValues({"kyno_sporecap_dark"},        {veggie     = 0.5, mushrooms     = 1, monster = 0.5})
 AddBrewingValues({"truffleoil"},                {oil        = 1})
 AddBrewingValues({"kyno_bottle_soul"},          {soul       = 1})
+AddBrewingValues({"kyno_cavetuber"},            {veggie     = 1,   tuber         = 1, monster = 1})
+AddBrewingValues({"kyno_cavetuber_blooming"},   {veggie     = 1,   tuber         = 1})
 
 local fishroes =
 {

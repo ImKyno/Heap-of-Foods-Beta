@@ -1241,3 +1241,18 @@ WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Wygląda na to, że nas toleruje i chce naszej pomocy!",
 	HOUSE_REPAIRED = "Cześć, panie! Chcesz teraz handlować?",
 }
+
+WEBBER.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Nie zetniemy tego zwykłą siekierą.",
+	CHOPPED = "W końcu udało nam się je powalić!",
+	BLOOMING = "Jest nawet całkiem ładne.",
+	BURNING = "Ogień szybko rozprzestrzenia się pod ziemią.",
+	BURNT = "Teraz jest całe chrupiące.",
+}
+
+WEBBER.DESCRIBE.KYNO_CAVETUBER = "Nie sądzimy, że jest jeszcze dojrzały."
+WEBBER.DESCRIBE.KYNO_CAVETUBER_COOKED = "Pycha."
+
+WEBBER.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Wygląda na dojrzały?"
+WEBBER.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Pamiętasz frytki?"

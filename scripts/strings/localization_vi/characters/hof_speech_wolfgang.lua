@@ -1,1237 +1,1258 @@
 local WOLFGANG = STRINGS.CHARACTERS.WOLFGANG
 
-WOLFGANG.ANNOUNCE_KYNO_COFFEEBUFF_START = "Wolfgang is faster!"
-WOLFGANG.ANNOUNCE_KYNO_COFFEEBUFF_END = "Wolfgang is slow now!"
+WOLFGANG.ANNOUNCE_KYNO_COFFEEBUFF_START = "Wolfgang nhanh hơn rồi!"
+WOLFGANG.ANNOUNCE_KYNO_COFFEEBUFF_END = "Giờ Wolfgang chậm rồi!"
 
-WOLFGANG.ANNOUNCE_KYNO_HASTEBUFF_START = "Quick hands!"
-WOLFGANG.ANNOUNCE_KYNO_HASTEBUFF_END = "Wolfgang hands feels dizzy."
+WOLFGANG.ANNOUNCE_KYNO_HASTEBUFF_START = "Tay nhanh!"
+WOLFGANG.ANNOUNCE_KYNO_HASTEBUFF_END = "Tay Wolfgang thấy chóng mặt."
 
-WOLFGANG.ANNOUNCE_KYNO_POPBUFF_START = "(buurp!) Wolfgang is sorry."
-WOLFGANG.ANNOUNCE_KYNO_POPBUFF_END = "Ha! Wolfgang is strong enough for funny drink!"
+WOLFGANG.ANNOUNCE_KYNO_POPBUFF_START = "(ợợ!) Wolfgang xin lỗi."
+WOLFGANG.ANNOUNCE_KYNO_POPBUFF_END = "Ha! Wolfgang đủ mạnh cho nước uống vui!"
 
-WOLFGANG.ANNOUNCE_KYNO_FROGBUFF_START = "Ha! Wolfgang will trick little creatures now!"
-WOLFGANG.ANNOUNCE_KYNO_FROGBUFF_END = "Wolfgang is no more frog."
+WOLFGANG.ANNOUNCE_KYNO_FROGBUFF_START = "Ha! Giờ Wolfgang lừa được mấy sinh vật nhỏ!"
+WOLFGANG.ANNOUNCE_KYNO_FROGBUFF_END = "Wolfgang không còn là ếch nữa."
 
-WOLFGANG.ANNOUNCE_KYNO_PIRATEBUFF_START = "(buurp!) The sea awaits!"
-WOLFGANG.ANNOUNCE_KYNO_PIRATEBUFF_END = "Ha! Wolfgang is strong enough for funny drink!"
+WOLFGANG.ANNOUNCE_KYNO_PIRATEBUFF_START = "(ợợ!) Biển cả đang chờ!"
+WOLFGANG.ANNOUNCE_KYNO_PIRATEBUFF_END = "Ha! Wolfgang đủ mạnh cho nước uống vui!"
 
-WOLFGANG.ANNOUNCE_KYNO_FREEZEBUFF_START = "Freeze will stop the badies!"
-WOLFGANG.ANNOUNCE_KYNO_FREEZEBUFF_END = "Freeze gone..."
+WOLFGANG.ANNOUNCE_KYNO_FREEZEBUFF_START = "Đóng băng sẽ chặn kẻ xấu!"
+WOLFGANG.ANNOUNCE_KYNO_FREEZEBUFF_END = "Băng giá biến mất..."
 
-WOLFGANG.ANNOUNCE_KYNO_FIREBUFF_START = "Smite and ignite!"
-WOLFGANG.ANNOUNCE_KYNO_FIREBUFF_END = "Flames gone..."
+WOLFGANG.ANNOUNCE_KYNO_FIREBUFF_START = "Đập mạnh rồi đốt cháy!"
+WOLFGANG.ANNOUNCE_KYNO_FIREBUFF_END = "Lửa biến mất..."
 
-WOLFGANG.ANNOUNCE_KYNO_FISHINGBUFF_START = "The takle is ready."
-WOLFGANG.ANNOUNCE_KYNO_FISHINGBUFF_END = "Wolfgang fishing power is down!"
+WOLFGANG.ANNOUNCE_KYNO_FISHINGBUFF_START = "Đồ câu đã sẵn sàng."
+WOLFGANG.ANNOUNCE_KYNO_FISHINGBUFF_END = "Sức câu cá của Wolfgang giảm rồi!"
 
-WOLFGANG.ANNOUNCE_KYNO_SANITYRATEBUFF_START = "Wolfgang will relax mind now..."
-WOLFGANG.ANNOUNCE_KYNO_SANITYRATEBUFF_END = "Wolfgang brain has relaxed enough."
+WOLFGANG.ANNOUNCE_KYNO_SANITYRATEBUFF_START = "Giờ Wolfgang sẽ thư giãn đầu óc..."
+WOLFGANG.ANNOUNCE_KYNO_SANITYRATEBUFF_END = "Não Wolfgang thư giãn đủ rồi."
 
-WOLFGANG.ANNOUNCE_KYNO_EATERBUFF_START = "Wolfgang mouth ready to take all in!"
-WOLFGANG.ANNOUNCE_KYNO_EATERBUFF_END = "Wolfgang mouth is tired."
+WOLFGANG.ANNOUNCE_KYNO_EATERBUFF_START = "Miệng Wolfgang sẵn sàng nuốt hết!"
+WOLFGANG.ANNOUNCE_KYNO_EATERBUFF_END = "Miệng Wolfgang mệt rồi."
 
-WOLFGANG.ANNOUNCE_KYNO_WORMBUFF_START = "Wolfgang is ready to beat up some worms!"
-WOLFGANG.ANNOUNCE_KYNO_WORMBUFF_END = "Wolfgang feeling tired after fighting worms."
+WOLFGANG.ANNOUNCE_KYNO_WORMBUFF_START = "Wolfgang sẵn sàng đập vài con sâu!"
+WOLFGANG.ANNOUNCE_KYNO_WORMBUFF_END = "Wolfgang thấy mệt sau khi đánh sâu."
 
-WOLFGANG.ANNOUNCE_KYNO_CRABBUFF_START = "Wolfgang is ready to beat up some crabs!"
-WOLFGANG.ANNOUNCE_KYNO_CRABBUFF_END = "Wolfgang feeling tired after fighting crabs."
+WOLFGANG.ANNOUNCE_KYNO_CRABBUFF_START = "Wolfgang sẵn sàng đập vài con cua!"
+WOLFGANG.ANNOUNCE_KYNO_CRABBUFF_END = "Wolfgang thấy mệt sau khi đánh cua."
 
-WOLFGANG.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(buurp!) Wolfgang is sorry."
-WOLFGANG.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "Ha! Wolfgang is strong enough for funny frog drink!"
+WOLFGANG.ANNOUNCE_KYNO_AMPHIBIANBUFF_START = "(ợợ!) Wolfgang xin lỗi."
+WOLFGANG.ANNOUNCE_KYNO_AMPHIBIANBUFF_END = "Ha! Wolfgang đủ mạnh cho nước uống ếch vui!"
 
-WOLFGANG.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START = "Wolfgang can feel it!"
-WOLFGANG.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_END = "Wolfgang weakens!"
+WOLFGANG.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_START = "Wolfgang cảm nhận được nó!"
+WOLFGANG.ANNOUNCE_KYNO_ENLIGHTENMENTBUFF_END = "Wolfgang yếu đi!"
 
-WOLFGANG.ANNOUNCE_KYNO_STEALTHBUFF_START = "Wolfgang going dark!"
-WOLFGANG.ANNOUNCE_KYNO_STEALTHBUFF_END = "Wolfgang no longer invisible!"
+WOLFGANG.ANNOUNCE_KYNO_STEALTHBUFF_START = "Wolfgang đi vào bóng tối!"
+WOLFGANG.ANNOUNCE_KYNO_STEALTHBUFF_END = "Wolfgang không còn vô hình nữa!"
 
-WOLFGANG.ANNOUNCE_KYNO_FEARBUFF_START = "Fear is for babies! Not for mighty Wolfgang!"
-WOLFGANG.ANNOUNCE_KYNO_FEARBUFF_END = "The coward's tremble returns! Bah!"
+WOLFGANG.ANNOUNCE_KYNO_FEARBUFF_START = "Sợ hãi là cho em bé! Không dành cho Wolfgang hùng mạnh!"
+WOLFGANG.ANNOUNCE_KYNO_FEARBUFF_END = "Cơn run của kẻ nhát gan quay lại! Bah!"
 
-WOLFGANG.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_START = "Wolfgang IS MIGHTY!"
-WOLFGANG.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_END = "Wolfgang mightness gone! Nooo!"
+WOLFGANG.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_START = "Wolfgang HÙNG MẠNH!"
+WOLFGANG.ANNOUNCE_KYNO_GOLDENAPPLEBUFF_END = "Sức mạnh Wolfgang mất rồi! Khônggg!"
 
-WOLFGANG.ANNOUNCE_KYNO_TRUFFLESBUFF_START = "Wolfgang strong! Pig friends follow!"
-WOLFGANG.ANNOUNCE_KYNO_TRUFFLESBUFF_END = "Wolfgang misses pig friends!"
+WOLFGANG.ANNOUNCE_KYNO_TRUFFLESBUFF_START = "Wolfgang mạnh! Bạn heo đi theo!"
+WOLFGANG.ANNOUNCE_KYNO_TRUFFLESBUFF_END = "Wolfgang nhớ bạn heo!"
 
-WOLFGANG.ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START = "Wolfgang strong! Acid weak!"
+WOLFGANG.ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_START = "Wolfgang mạnh! Axit yếu!"
 -- No ANNOUNCE_KYNO_ACIDIMMUNITYBUFF_END, because we are using default strings for that.
 
-WOLFGANG.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_START = "Wolfgang not afraid of tiny poison!"
-WOLFGANG.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_END = "Wolfgang feel weak again..."
+WOLFGANG.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_START = "Wolfgang không sợ độc bé tí!"
+WOLFGANG.ANNOUNCE_KYNO_POISONIMMUNITYBUFF_END = "Wolfgang lại thấy yếu..."
 
-WOLFGANG.ANNOUNCE_KYNO_CRAFTINGBUFF_START = "Wolfgang brain feels big! Craft all things now!"
-WOLFGANG.ANNOUNCE_KYNO_CRAFTINGBUFF_END = "Brain feel small again..."
+WOLFGANG.ANNOUNCE_KYNO_CRAFTINGBUFF_START = "Não Wolfgang thấy to! Giờ chế hết mọi thứ!"
+WOLFGANG.ANNOUNCE_KYNO_CRAFTINGBUFF_END = "Não lại thấy nhỏ..."
 
-WOLFGANG.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_START = "Little buzzy friends no longer want to sting Wolfgang!"
-WOLFGANG.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_END = "Bees angry again! Wolfgang must run!"
+WOLFGANG.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_START = "Bạn vo ve nhỏ không còn muốn chích Wolfgang!"
+WOLFGANG.ANNOUNCE_KYNO_BEEFRIENDLYBUFF_END = "Ong lại giận! Wolfgang phải chạy!"
 
-WOLFGANG.ANNOUNCE_KYNO_MAXHEALTHBUFF_START = "Wolfgang become even mightier!"
-WOLFGANG.ANNOUNCE_KYNO_MAXHEALTHBUFF_END = "Wolfgang feel less mighty now..."
+WOLFGANG.ANNOUNCE_KYNO_MAXHEALTHBUFF_START = "Wolfgang còn hùng mạnh hơn!"
+WOLFGANG.ANNOUNCE_KYNO_MAXHEALTHBUFF_END = "Giờ Wolfgang thấy bớt hùng mạnh..."
 
-WOLFGANG.ANNOUNCE_KYNO_MAXHUNGERBUFF_START = "Wolfgang stomach grow bigger!"
-WOLFGANG.ANNOUNCE_KYNO_MAXHUNGERBUFF_END = "Wolfgang stomach shrink!"
+WOLFGANG.ANNOUNCE_KYNO_MAXHUNGERBUFF_START = "Bao tử Wolfgang to hơn!"
+WOLFGANG.ANNOUNCE_KYNO_MAXHUNGERBUFF_END = "Bao tử Wolfgang nhỏ lại!"
 
-WOLFGANG.ANNOUNCE_KYNO_MAXSANITYBUFF_START = "Wolfgang brain feel strong!"
-WOLFGANG.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Wolfgang brain get fuzzy again!"
+WOLFGANG.ANNOUNCE_KYNO_MAXSANITYBUFF_START = "Não Wolfgang thấy mạnh!"
+WOLFGANG.ANNOUNCE_KYNO_MAXSANITYBUFF_END = "Não Wolfgang lại lơ mơ!"
 
-WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Wolfgang is protected by mighty power!"
-WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "The power leaves Wolfgang..."
+WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_START = "Wolfgang được sức mạnh hùng mạnh bảo vệ!"
+WOLFGANG.ANNOUNCE_KYNO_PLANARDEFENSEBUFF_END = "Sức mạnh rời khỏi Wolfgang..."
 
-WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Wolfgang is UNSTOPPABLE! Smash all things!"
-WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Wolfgang no longer feels mighty rage..."
+WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_START = "Wolfgang KHÔNG THỂ CẢN! Đập hết mọi thứ!"
+WOLFGANG.ANNOUNCE_KYNO_BERSERKERBUFF_END = "Wolfgang không còn thấy cơn giận hùng mạnh..."
 
-WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Wolfgang stays full longer!"
-WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Wolfgang is hungry again..."
+WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_START = "Wolfgang no lâu hơn!"
+WOLFGANG.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Wolfgang lại đói..."
 
-WOLFGANG.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Wolfgang is not afraid of dark now!"
-WOLFGANG.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Dark is scary again..."
+WOLFGANG.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Giờ Wolfgang không sợ bóng tối!"
+WOLFGANG.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Bóng tối lại đáng sợ..."
 
-WOLFGANG.ANNOUNCE_KYNO_LUCKBUFF_END = "Luck is gone. Wolfgang is still strong!"
+WOLFGANG.ANNOUNCE_KYNO_LUCKBUFF_END = "May mắn đi rồi. Wolfgang vẫn mạnh!"
 
-WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Is not the correct one."
+WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái đúng."
 
-WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mighty pig do not want this."
+WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Heo hùng mạnh không muốn cái này."
 
-WOLFGANG.ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL = "Little tree is not strong enough!"
+WOLFGANG.ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL = "Cây nhỏ chưa đủ mạnh!"
 
-WOLFGANG.ANNOUNCE_KYNO_FIREPITINSTALL_FAIL = "No use for this here."
+WOLFGANG.ANNOUNCE_KYNO_FIREPITINSTALL_FAIL = "Ở đây không dùng cái này được."
 
-WOLFGANG.ANNOUNCE_KYNO_POTHANGER_FAIL = "Nope, maybe a pot!"
+WOLFGANG.ANNOUNCE_KYNO_POTHANGER_FAIL = "Không, có lẽ cần nồi!"
 
-WOLFGANG.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Oven needs little pot!"
+WOLFGANG.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Lò cần nồi nhỏ!"
 
-WOLFGANG.ANNOUNCE_KYNO_SAPHEALER_USED = "Wolfgang uses medicine to help poor tree be mighty again!"
+WOLFGANG.ANNOUNCE_KYNO_SAPHEALER_USED = "Wolfgang dùng thuốc giúp cây tội nghiệp mạnh lại!"
 
-WOLFGANG.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Wolfgang will make meat strong and tasty!"
+WOLFGANG.ANNOUNCE_KYNO_SLAUGHTERTOOLS_USED = "Wolfgang sẽ làm thịt mạnh và ngon!"
 
-WOLFGANG.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Little wagon is empty."
+WOLFGANG.ANNOUNCE_KYNO_RUMMAGE_WAGON_EMPTY = "Xe nhỏ trống rỗng."
 
-WOLFGANG.ANNOUNCE_KYNO_HUNT_LOST_TRAIL = "Tiny bubbles gone! Wolfgang confused!"
-WOLFGANG.ANNOUNCE_KYNO_HUNT_LOST_TRAIL_RAIN = "Rain too strong! Wolfgang can't see!"
-WOLFGANG.ANNOUNCE_KYNO_HUNT_BEAST_NEARBY = "Big sea creature! Wolfgang ready for fight!"
+WOLFGANG.ANNOUNCE_KYNO_HUNT_LOST_TRAIL = "Bong bóng nhỏ biến mất! Wolfgang bối rối!"
+WOLFGANG.ANNOUNCE_KYNO_HUNT_LOST_TRAIL_RAIN = "Mưa quá mạnh! Wolfgang không thấy!"
+WOLFGANG.ANNOUNCE_KYNO_HUNT_BEAST_NEARBY = "Sinh vật biển to! Wolfgang sẵn sàng đánh!"
 
-WOLFGANG.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Mighty cake is complete! Wolfgang proud!"
+WOLFGANG.ANNOUNCE_KYNO_HOFBIRTHDAY_CAKECOMPLETE = "Bánh hùng mạnh hoàn thành! Wolfgang tự hào!"
 
-WOLFGANG.ANNOUNCE_KYNO_FISH_RESEARCHED = "Wolfgang now knows much about tiny water meat!"
-WOLFGANG.ANNOUNCE_KYNO_ROE_RESEARCHED = "Wolfgang understands tiny fish eggs now!"
+WOLFGANG.ANNOUNCE_KYNO_FISH_RESEARCHED = "Giờ Wolfgang biết nhiều về thịt nước nhỏ!"
+WOLFGANG.ANNOUNCE_KYNO_ROE_RESEARCHED = "Giờ Wolfgang hiểu trứng cá nhỏ!"
 
-WOLFGANG.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Wolfgang feels stronger already!"
+WOLFGANG.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Wolfgang đã thấy mạnh hơn rồi!"
 
-WOLFGANG.DESCRIBE.KYNO_ROE = "Is eggy."
-WOLFGANG.DESCRIBE.KYNO_ROE_COOKED = "Little eggs is stink less now."
+WOLFGANG.DESCRIBE.KYNO_ROE = "Nó giống trứng."
+WOLFGANG.DESCRIBE.KYNO_ROE_COOKED = "Trứng nhỏ giờ bớt hôi."
 
-WOLFGANG.DESCRIBE.KYNO_SHARK_FIN = "I lost rest of shark."
+WOLFGANG.DESCRIBE.KYNO_SHARK_FIN = "Wolfgang làm mất phần còn lại của cá mập."
 
-WOLFGANG.DESCRIBE.KYNO_BEANBUGS = "Is look like food with legs."
-WOLFGANG.DESCRIBE.KYNO_BEANBUGS_COOKED = "Wolfgang eat anything!"
+WOLFGANG.DESCRIBE.KYNO_BEANBUGS = "Trông như đồ ăn có chân."
+WOLFGANG.DESCRIBE.KYNO_BEANBUGS_COOKED = "Wolfgang ăn mọi thứ!"
 
-WOLFGANG.DESCRIBE.KYNO_GUMMYBUG = "Is slimy... but Wolfgang still eat it!"
-WOLFGANG.DESCRIBE.KYNO_GUMMYBUG_COOKED = "Is food? Wolfgang will eat anyway!"
+WOLFGANG.DESCRIBE.KYNO_GUMMYBUG = "Nó nhớt... nhưng Wolfgang vẫn ăn!"
+WOLFGANG.DESCRIBE.KYNO_GUMMYBUG_COOKED = "Là đồ ăn hả? Wolfgang vẫn ăn!"
 
-WOLFGANG.DESCRIBE.KYNO_WHEAT = "Flour! Wolfgang will grind with bare hands!"
-WOLFGANG.DESCRIBE.KYNO_WHEAT_COOKED = "Yammy!"
+WOLFGANG.DESCRIBE.KYNO_WHEAT = "Bột mì! Wolfgang sẽ nghiền bằng tay không!"
+WOLFGANG.DESCRIBE.KYNO_WHEAT_COOKED = "Ngonnn!"
 
-WOLFGANG.DESCRIBE.KYNO_FLOUR = "Is not proper food!"
+WOLFGANG.DESCRIBE.KYNO_FLOUR = "Không phải đồ ăn đúng nghĩa!"
 
-WOLFGANG.DESCRIBE.KYNO_SPOTSPICE = "Wolfgang will cook delicious things."
+WOLFGANG.DESCRIBE.KYNO_SPOTSPICE = "Wolfgang sẽ nấu món ngon."
 
-WOLFGANG.DESCRIBE.KYNO_SAP = "Is yummy tree goop!"
-WOLFGANG.DESCRIBE.KYNO_SAP_SPOILED = "Wolfgang cannot cook with yuck sludge."
+WOLFGANG.DESCRIBE.KYNO_SAP = "Là nhựa cây ngon!"
+WOLFGANG.DESCRIBE.KYNO_SAP_SPOILED = "Wolfgang không nấu bằng bùn gớm này."
 
-WOLFGANG.DESCRIBE.KYNO_SYRUP = "Yummy sugar goop!"
+WOLFGANG.DESCRIBE.KYNO_SYRUP = "Keo đường ngon!"
 
-WOLFGANG.DESCRIBE.KYNO_COFFEEBEANS = "Tiny beans give Wolfgang strength!"
-WOLFGANG.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Is bitter beans!"
+WOLFGANG.DESCRIBE.KYNO_COFFEEBEANS = "Hạt nhỏ cho Wolfgang sức mạnh!"
+WOLFGANG.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Là hạt đắng!"
 
-WOLFGANG.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Plant will grow again in better place!"
+WOLFGANG.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Cây sẽ mọc lại ở chỗ tốt hơn!"
 
 WOLFGANG.DESCRIBE.KYNO_COFFEEBUSH = 
 {
-	GENERIC = "Coffee bush is pround, strong.",
-	PICKED = "No beans for now.",
-	WITHERED = "Plant is weak.",
+	GENERIC = "Bụi cà phê kiêu hãnh, mạnh mẽ.",
+	PICKED = "Giờ chưa có hạt.",
+	WITHERED = "Cây yếu.",
 }
 
-WOLFGANG.DESCRIBE.DUG_KYNO_SPOTBUSH = "Bush needs ground!"
+WOLFGANG.DESCRIBE.DUG_KYNO_SPOTBUSH = "Bụi cây cần đất!"
 
 WOLFGANG.DESCRIBE.KYNO_SPOTBUSH = 
 {
-	GENERIC = "Is little shrub for eating.",
-	PICKED = "Bush empty.",
-	BURNING = "Fire eats bush!",
+	GENERIC = "Là bụi cây nhỏ để ăn.",
+	PICKED = "Bụi cây trống rỗng.",
+	BURNING = "Lửa ăn bụi cây!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Is nice little garnish."
+WOLFGANG.DESCRIBE.KYNO_SPOTSPICE_LEAF = "Là chút trang trí nhỏ ngon."
 
-WOLFGANG.DESCRIBE.KYNO_MUSSEL = "My muscles are much bigger!"
-WOLFGANG.DESCRIBE.KYNO_MUSSEL_COOKED = "Mussels become protein for muscles!"
+WOLFGANG.DESCRIBE.KYNO_MUSSEL = "Cơ bắp của Wolfgang to hơn nhiều!"
+WOLFGANG.DESCRIBE.KYNO_MUSSEL_COOKED = "Trai biến thành đạm cho cơ bắp!"
 
-WOLFGANG.DESCRIBE.KYNO_HUMANMEAT = "Better them than Wolfgang."
-WOLFGANG.DESCRIBE.KYNO_HUMANMEAT_COOKED = "Babcia's secret recipe!"
-WOLFGANG.DESCRIBE.KYNO_HUMANMEAT_DRIED = "Is like shoe, but better for belly!"
+WOLFGANG.DESCRIBE.KYNO_HUMANMEAT = "Họ còn hơn Wolfgang."
+WOLFGANG.DESCRIBE.KYNO_HUMANMEAT_COOKED = "Công thức bí mật của Babcia!"
+WOLFGANG.DESCRIBE.KYNO_HUMANMEAT_DRIED = "Giống giày, nhưng tốt hơn cho bao tử!"
 
-WOLFGANG.DESCRIBE.COFFEE = "Strong, like Wolfgang!"
+WOLFGANG.DESCRIBE.COFFEE = "Mạnh, như Wolfgang!"
 
-WOLFGANG.DESCRIBE.BISQUE = "It will fuel powerful punches!"
+WOLFGANG.DESCRIBE.BISQUE = "Nó sẽ tiếp sức cho cú đấm hùng mạnh!"
 
-WOLFGANG.DESCRIBE.JELLYOPOP = "Looks like candy, but tastes like meat!"
+WOLFGANG.DESCRIBE.JELLYOPOP = "Trông như kẹo, nhưng vị như thịt!"
 
-WOLFGANG.DESCRIBE.SHARKFINSOUP = "Is small shark inside?"
+WOLFGANG.DESCRIBE.SHARKFINSOUP = "Có cá mập nhỏ bên trong hả?"
 
-WOLFGANG.DESCRIBE.TROPICALBOUILLABAISSE = "Wolfgang does not know what to call this."
+WOLFGANG.DESCRIBE.TROPICALBOUILLABAISSE = "Wolfgang không biết gọi món này là gì."
 
-WOLFGANG.DESCRIBE.MUSSELBOUILLABAISE = "It belongs in Wolfgang's mouth."
+WOLFGANG.DESCRIBE.MUSSELBOUILLABAISE = "Nó thuộc về miệng Wolfgang."
 
-WOLFGANG.DESCRIBE.SWEETPOTATOSOUFFLE = "Wolfgang will eat!"
+WOLFGANG.DESCRIBE.SWEETPOTATOSOUFFLE = "Wolfgang sẽ ăn!"
 
-WOLFGANG.DESCRIBE.FEIJOADA = "Wolfgang eat everything."
+WOLFGANG.DESCRIBE.FEIJOADA = "Wolfgang ăn hết."
 
-WOLFGANG.DESCRIBE.GUMMY_CAKE = "Is chewy. Wolfgang like."
+WOLFGANG.DESCRIBE.GUMMY_CAKE = "Nó dai. Wolfgang thích."
 
-WOLFGANG.DESCRIBE.HARDSHELL_TACOS = "Is crunchy snail skins."
+WOLFGANG.DESCRIBE.HARDSHELL_TACOS = "Là vỏ ốc giòn."
 
-WOLFGANG.DESCRIBE.ICEDTEA = "Is cool. Like Wolfgang."
+WOLFGANG.DESCRIBE.ICEDTEA = "Nó mát. Như Wolfgang."
 
-WOLFGANG.DESCRIBE.NETTLELOSANGE = "Is strong smell. Like Wolfgang."
+WOLFGANG.DESCRIBE.NETTLELOSANGE = "Mùi mạnh. Như Wolfgang."
 
-WOLFGANG.DESCRIBE.SNAKEBONESOUP = "Is food little for Wolfgang."
+WOLFGANG.DESCRIBE.SNAKEBONESOUP = "Đồ ăn hơi ít cho Wolfgang."
 
-WOLFGANG.DESCRIBE.STEAMEDHAMSANDWICH = "Is mouthwatering hamburgers."
+WOLFGANG.DESCRIBE.STEAMEDHAMSANDWICH = "Là hamburger làm chảy nước miệng."
 
-WOLFGANG.DESCRIBE.TEA = "Wolfgang love tea time!"
+WOLFGANG.DESCRIBE.TEA = "Wolfgang thích giờ uống trà!"
 
-WOLFGANG.DESCRIBE.BUBBLETEA = "Is cool. Like Wolfgang."
+WOLFGANG.DESCRIBE.BUBBLETEA = "Nó mát. Như Wolfgang."
 
-WOLFGANG.DESCRIBE.FRENCHONIONSOUP = "Is food little for Wolfgang."
+WOLFGANG.DESCRIBE.FRENCHONIONSOUP = "Đồ ăn hơi ít cho Wolfgang."
 
-WOLFGANG.DESCRIBE.SLAW = "Is food. Sort of."
+WOLFGANG.DESCRIBE.SLAW = "Là đồ ăn. Đại khái."
 
-WOLFGANG.DESCRIBE.LOTUSBOWL = "Wolfgang eat you now."
+WOLFGANG.DESCRIBE.LOTUSBOWL = "Giờ Wolfgang ăn ngươi."
 
-WOLFGANG.DESCRIBE.POI = "Wolfgang don't know what is."
+WOLFGANG.DESCRIBE.POI = "Wolfgang không biết là gì."
 
-WOLFGANG.DESCRIBE.JELLYBEAN_HUNGER = "Little tiny taste beans."
-WOLFGANG.DESCRIBE.JELLYBEAN_SUPER = "Little tiny taste beans."
-WOLFGANG.DESCRIBE.JELLYBEAN_SANITY = "Little tiny taste beans."
+WOLFGANG.DESCRIBE.JELLYBEAN_HUNGER = "Hạt nhỏ xíu có vị."
+WOLFGANG.DESCRIBE.JELLYBEAN_SUPER = "Hạt nhỏ xíu có vị."
+WOLFGANG.DESCRIBE.JELLYBEAN_SANITY = "Hạt nhỏ xíu có vị."
 
-WOLFGANG.DESCRIBE.BOWLOFGEARS = "Is not food."
+WOLFGANG.DESCRIBE.BOWLOFGEARS = "Không phải đồ ăn."
 
-WOLFGANG.DESCRIBE.LONGPIGMEAL = "Is human... flesh..."
+WOLFGANG.DESCRIBE.LONGPIGMEAL = "Là... thịt người..."
 
-WOLFGANG.DESCRIBE.CUCUMBERSALAD = "Is not spinach, but maybe still work!"
+WOLFGANG.DESCRIBE.CUCUMBERSALAD = "Không phải rau chân vịt, nhưng chắc vẫn có ích!"
 
-WOLFGANG.DESCRIBE.DUG_KYNO_WILDWHEAT = "Plant needs ground!"
+WOLFGANG.DESCRIBE.DUG_KYNO_WILDWHEAT = "Cây cần đất!"
 
 WOLFGANG.DESCRIBE.KYNO_WILDWHEAT = 
 {
-	GENERIC = "Tall food grass!",
-	PICKED = "Food gone for now.",
-	WITHERED = "Plant is weak.",
-	BURNING = "Fire eats grain!",
+	GENERIC = "Cỏ đồ ăn cao!",
+	PICKED = "Đồ ăn tạm hết.",
+	WITHERED = "Cây yếu.",
+	BURNING = "Lửa ăn hạt!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_MEALGRINDER = "We must grind grain for bread!"
+WOLFGANG.DESCRIBE.KYNO_MEALGRINDER = "Ta phải nghiền hạt làm bánh mì!"
 
 WOLFGANG.DESCRIBE.KYNO_MUSHSTUMP =
 {
-	GENERIC = "Wolfgang could use in soups.",
-	PICKED = "Wolfgang must wait for more mushrooms.",
-	BURNING = "Fire eats mushrooms!",
+	GENERIC = "Wolfgang có thể dùng trong súp.",
+	PICKED = "Wolfgang phải chờ thêm nấm.",
+	BURNING = "Lửa ăn nấm!",
 }
 
-WOLFGANG.DESCRIBE.GORGE_BREAD = "Is bread."
-WOLFGANG.DESCRIBE.GORGE_SWEET_CHIPS = "Is little crunchy chips!"
-WOLFGANG.DESCRIBE.GORGE_VEGETABLE_SOUP = "Wolfgang likes veggies!"
-WOLFGANG.DESCRIBE.GORGE_JELLY_SANDWICH = "Is little sandwich with jam!"
-WOLFGANG.DESCRIBE.GORGE_FISH_STEW = "Very good."
-WOLFGANG.DESCRIBE.GORGE_MEAT_STEW = "Is stew full of strong meat."
-WOLFGANG.DESCRIBE.GORGE_ONION_CAKE = "Mighty veggie cake will make Wolfgang mightier!"
-WOLFGANG.DESCRIBE.GORGE_POTATO_PANCAKES = "Might breakfast for might Wolfgang!"
-WOLFGANG.DESCRIBE.GORGE_POTATO_SOUP = "It will fuel powerful punches!"
-WOLFGANG.DESCRIBE.GORGE_FISHBALL_SKEWERS = "Little fish skewer, ha ha!"
-WOLFGANG.DESCRIBE.GORGE_MEAT_SKEWERS = "Little meat skewer, ha ha!"
-WOLFGANG.DESCRIBE.GORGE_STONE_SOUP = "It will fuel powerful punches!"
-WOLFGANG.DESCRIBE.GORGE_CROQUETTE = "Is little balls of yummy."
-WOLFGANG.DESCRIBE.GORGE_ROAST_VEGETABLES = "Wolfgang will crush little veggies!"
-WOLFGANG.DESCRIBE.GORGE_MEATLOAF = "Good food!"
-WOLFGANG.DESCRIBE.GORGE_CARROT_SOUP = "It will fuel powerful punches!"
-WOLFGANG.DESCRIBE.GORGE_FISHPIE = "Little fish heads stuck in pie."
-WOLFGANG.DESCRIBE.GORGE_FISHCHIPS = "Tasty!"
-WOLFGANG.DESCRIBE.GORGE_MEATPIE = "Wolfgang will take care of this."
-WOLFGANG.DESCRIBE.GORGE_SLIDERS = "Little hamburgers, Wolfgang will crush them!"
-WOLFGANG.DESCRIBE.GORGE_JELLY_ROLL = "Slimy rolls."
-WOLFGANG.DESCRIBE.GORGE_CARROT_CAKE = "Wolfgang will crush this cake with his mouth!"
-WOLFGANG.DESCRIBE.GORGE_GARLICMASHED = "Tasty!"
-WOLFGANG.DESCRIBE.GORGE_GARLICBREAD = "Smell good."
-WOLFGANG.DESCRIBE.GORGE_TOMATO_SOUP = "It will fuel powerful punches!"
-WOLFGANG.DESCRIBE.GORGE_SAUSAGE = "Ha! Is little pig sausage."
-WOLFGANG.DESCRIBE.GORGE_CANDIEDFISH = "Little fish covered with syrup."
-WOLFGANG.DESCRIBE.GORGE_STUFFEDMUSHROOM = "Is nice little mushrooms."
-WOLFGANG.DESCRIBE.GORGE_BRUSCHETTA = "Is little bread with tomato topping!"
-WOLFGANG.DESCRIBE.GORGE_HAMBURGER = "Is little sandwich."
-WOLFGANG.DESCRIBE.GORGE_FISHBURGER = "Is little sandwich."
-WOLFGANG.DESCRIBE.GORGE_MUSHROOMBURGER = "Is little sandwich."
-WOLFGANG.DESCRIBE.GORGE_FISH_STEAK = "Very good."
-WOLFGANG.DESCRIBE.GORGE_CURRY = "Wolfgang likes it."
-WOLFGANG.DESCRIBE.GORGE_SPAGHETTI = "Ball of meat make me strong!"
-WOLFGANG.DESCRIBE.GORGE_POACHEDFISH = "Good fish!"
-WOLFGANG.DESCRIBE.GORGE_SHEPHERD_PIE = "Where are the little sheeps?"
-WOLFGANG.DESCRIBE.GORGE_CANDY = "Is candy for crushing!"
-WOLFGANG.DESCRIBE.GORGE_BREAD_PUDDING = "Giga pudding!"
-WOLFGANG.DESCRIBE.GORGE_BERRY_TART = "Little fruit slices and candy."
-WOLFGANG.DESCRIBE.GORGE_MACARONI = "Wolfgang like it."
-WOLFGANG.DESCRIBE.GORGE_BAGEL_AND_FISH = "Bread with fish is nice."
-WOLFGANG.DESCRIBE.GORGE_GRILLED_CHEESE = "Is nice breakfast option."
-WOLFGANG.DESCRIBE.GORGE_CREAMMUSHROOM = "Is little mushroom soup."
-WOLFGANG.DESCRIBE.GORGE_MANICOTTI = "Needs more cheese!"
-WOLFGANG.DESCRIBE.GORGE_CHEESEBURGER = "Is little sandwich."
-WOLFGANG.DESCRIBE.GORGE_FETTUCCINE = "Its making Wolfgang hungry."
-WOLFGANG.DESCRIBE.GORGE_ONION_SOUP = "Bad soup!"
-WOLFGANG.DESCRIBE.GORGE_BREADED_CUTLET = "Is little bread with meat."
-WOLFGANG.DESCRIBE.GORGE_CREAMY_FISH = "Smells good!"
-WOLFGANG.DESCRIBE.GORGE_PIZZA = "Pizza time!"
-WOLFGANG.DESCRIBE.GORGE_POT_ROAST = "Is big pile of meats!"
-WOLFGANG.DESCRIBE.GORGE_CRAB_CAKE = "Ha is little cake of crabby."
-WOLFGANG.DESCRIBE.GORGE_STEAK_FRITES = "Needs a bit of salt!"
-WOLFGANG.DESCRIBE.GORGE_SHOOTER_SANDWICH = "Nice sandwich!"
-WOLFGANG.DESCRIBE.GORGE_BACON_WRAPPED = "Tiny wrap of meat."
-WOLFGANG.DESCRIBE.GORGE_CRAB_ROLL = "Is little crab meat, Wolfgang will crush it!"
-WOLFGANG.DESCRIBE.GORGE_MEAT_WELLINGTON = "Delicious!"
-WOLFGANG.DESCRIBE.GORGE_CRAB_RAVIOLI = "Is little crab meat, Wolfgang will crush it!"
-WOLFGANG.DESCRIBE.GORGE_CARAMEL_CUBE = "Is good little cube, haha!"
-WOLFGANG.DESCRIBE.GORGE_SCONE = "Is little sweety bread."
-WOLFGANG.DESCRIBE.GORGE_TRIFLE = "Is little sweety cup."
-WOLFGANG.DESCRIBE.GORGE_CHEESECAKE = "Is puny little cake."
+WOLFGANG.DESCRIBE.GORGE_BREAD = "Là bánh mì."
+WOLFGANG.DESCRIBE.GORGE_SWEET_CHIPS = "Là lát giòn nhỏ!"
+WOLFGANG.DESCRIBE.GORGE_VEGETABLE_SOUP = "Wolfgang thích rau củ!"
+WOLFGANG.DESCRIBE.GORGE_JELLY_SANDWICH = "Là sandwich nhỏ có mứt!"
+WOLFGANG.DESCRIBE.GORGE_FISH_STEW = "Rất ngon."
+WOLFGANG.DESCRIBE.GORGE_MEAT_STEW = "Là món hầm đầy thịt mạnh."
+WOLFGANG.DESCRIBE.GORGE_ONION_CAKE = "Bánh rau hùng mạnh sẽ làm Wolfgang hùng mạnh hơn!"
+WOLFGANG.DESCRIBE.GORGE_POTATO_PANCAKES = "Bữa sáng hùng mạnh cho Wolfgang hùng mạnh!"
+WOLFGANG.DESCRIBE.GORGE_POTATO_SOUP = "Nó sẽ tiếp sức cho cú đấm hùng mạnh!"
+WOLFGANG.DESCRIBE.GORGE_FISHBALL_SKEWERS = "Xiên cá nhỏ, ha ha!"
+WOLFGANG.DESCRIBE.GORGE_MEAT_SKEWERS = "Xiên thịt nhỏ, ha ha!"
+WOLFGANG.DESCRIBE.GORGE_STONE_SOUP = "Nó sẽ tiếp sức cho cú đấm hùng mạnh!"
+WOLFGANG.DESCRIBE.GORGE_CROQUETTE = "Là viên ngon nhỏ."
+WOLFGANG.DESCRIBE.GORGE_ROAST_VEGETABLES = "Wolfgang sẽ nghiền nát rau nhỏ!"
+WOLFGANG.DESCRIBE.GORGE_MEATLOAF = "Đồ ăn ngon!"
+WOLFGANG.DESCRIBE.GORGE_CARROT_SOUP = "Nó sẽ tiếp sức cho cú đấm hùng mạnh!"
+WOLFGANG.DESCRIBE.GORGE_FISHPIE = "Đầu cá nhỏ kẹt trong bánh."
+WOLFGANG.DESCRIBE.GORGE_FISHCHIPS = "Ngon!"
+WOLFGANG.DESCRIBE.GORGE_MEATPIE = "Wolfgang sẽ xử lý món này."
+WOLFGANG.DESCRIBE.GORGE_SLIDERS = "Hamburger nhỏ, Wolfgang sẽ nghiền nát!"
+WOLFGANG.DESCRIBE.GORGE_JELLY_ROLL = "Cuộn nhớt."
+WOLFGANG.DESCRIBE.GORGE_CARROT_CAKE = "Wolfgang sẽ nghiền bánh này bằng miệng!"
+WOLFGANG.DESCRIBE.GORGE_GARLICMASHED = "Ngon!"
+WOLFGANG.DESCRIBE.GORGE_GARLICBREAD = "Mùi ngon."
+WOLFGANG.DESCRIBE.GORGE_TOMATO_SOUP = "Nó sẽ tiếp sức cho cú đấm hùng mạnh!"
+WOLFGANG.DESCRIBE.GORGE_SAUSAGE = "Ha! Là xúc xích heo nhỏ."
+WOLFGANG.DESCRIBE.GORGE_CANDIEDFISH = "Cá nhỏ phủ xi-rô."
+WOLFGANG.DESCRIBE.GORGE_STUFFEDMUSHROOM = "Là nấm nhỏ ngon."
+WOLFGANG.DESCRIBE.GORGE_BRUSCHETTA = "Là bánh mì nhỏ phủ cà chua Toma!"
+WOLFGANG.DESCRIBE.GORGE_HAMBURGER = "Là sandwich nhỏ."
+WOLFGANG.DESCRIBE.GORGE_FISHBURGER = "Là sandwich nhỏ."
+WOLFGANG.DESCRIBE.GORGE_MUSHROOMBURGER = "Là sandwich nhỏ."
+WOLFGANG.DESCRIBE.GORGE_FISH_STEAK = "Rất ngon."
+WOLFGANG.DESCRIBE.GORGE_CURRY = "Wolfgang thích nó."
+WOLFGANG.DESCRIBE.GORGE_SPAGHETTI = "Viên thịt làm Wolfgang mạnh!"
+WOLFGANG.DESCRIBE.GORGE_POACHEDFISH = "Cá ngon!"
+WOLFGANG.DESCRIBE.GORGE_SHEPHERD_PIE = "Mấy con cừu nhỏ đâu?"
+WOLFGANG.DESCRIBE.GORGE_CANDY = "Là kẹo để nghiền!"
+WOLFGANG.DESCRIBE.GORGE_BREAD_PUDDING = "Pudding khổng lồ!"
+WOLFGANG.DESCRIBE.GORGE_BERRY_TART = "Lát trái cây nhỏ và kẹo."
+WOLFGANG.DESCRIBE.GORGE_MACARONI = "Wolfgang thích nó."
+WOLFGANG.DESCRIBE.GORGE_BAGEL_AND_FISH = "Bánh mì với cá ngon."
+WOLFGANG.DESCRIBE.GORGE_GRILLED_CHEESE = "Là lựa chọn bữa sáng ngon."
+WOLFGANG.DESCRIBE.GORGE_CREAMMUSHROOM = "Là súp nấm nhỏ."
+WOLFGANG.DESCRIBE.GORGE_MANICOTTI = "Cần thêm phô mai!"
+WOLFGANG.DESCRIBE.GORGE_CHEESEBURGER = "Là sandwich nhỏ."
+WOLFGANG.DESCRIBE.GORGE_FETTUCCINE = "Nó làm Wolfgang đói."
+WOLFGANG.DESCRIBE.GORGE_ONION_SOUP = "Súp xấu!"
+WOLFGANG.DESCRIBE.GORGE_BREADED_CUTLET = "Là bánh mì nhỏ với thịt."
+WOLFGANG.DESCRIBE.GORGE_CREAMY_FISH = "Mùi ngon!"
+WOLFGANG.DESCRIBE.GORGE_PIZZA = "Tới giờ pizza!"
+WOLFGANG.DESCRIBE.GORGE_POT_ROAST = "Là đống thịt to!"
+WOLFGANG.DESCRIBE.GORGE_CRAB_CAKE = "Ha, là bánh nhỏ của cua."
+WOLFGANG.DESCRIBE.GORGE_STEAK_FRITES = "Cần chút muối!"
+WOLFGANG.DESCRIBE.GORGE_SHOOTER_SANDWICH = "Sandwich ngon!"
+WOLFGANG.DESCRIBE.GORGE_BACON_WRAPPED = "Gói thịt tí hon."
+WOLFGANG.DESCRIBE.GORGE_CRAB_ROLL = "Là thịt cua nhỏ, Wolfgang sẽ nghiền nát!"
+WOLFGANG.DESCRIBE.GORGE_MEAT_WELLINGTON = "Ngon tuyệt!"
+WOLFGANG.DESCRIBE.GORGE_CRAB_RAVIOLI = "Là thịt cua nhỏ, Wolfgang sẽ nghiền nát!"
+WOLFGANG.DESCRIBE.GORGE_CARAMEL_CUBE = "Là khối nhỏ ngon, haha!"
+WOLFGANG.DESCRIBE.GORGE_SCONE = "Là bánh mì ngọt nhỏ."
+WOLFGANG.DESCRIBE.GORGE_TRIFLE = "Là cốc ngọt nhỏ."
+WOLFGANG.DESCRIBE.GORGE_CHEESECAKE = "Là bánh nhỏ yếu ớt."
 
-WOLFGANG.DESCRIBE.DUCKYOUGLERMZ = "Bad smell food!"
+WOLFGANG.DESCRIBE.DUCKYOUGLERMZ = "Đồ ăn mùi xấu!"
 
-WOLFGANG.DESCRIBE.KYNO_ALOE = "Wolfgang eat everything."
-WOLFGANG.DESCRIBE.KYNO_ALOE_COOKED = "It make Wolfgang big and strong."
-WOLFGANG.DESCRIBE.KYNO_ALOE_DRIED = "Little aloe is dried enough."
-WOLFGANG.DESCRIBE.KYNO_ALOE_GROUND = "Wolfgang eat everything."
-WOLFGANG.DESCRIBE.KYNO_ALOE_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_ALOE = "Wolfgang eat everything."
-WOLFGANG.DESCRIBE.KYNO_ALOE_OVERSIZED = "Wolfgang eat everything."
-WOLFGANG.DESCRIBE.KYNO_ALOE_OVERSIZED_ROTTEN = "No use for Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_ALOE = "Wolfgang ăn mọi thứ."
+WOLFGANG.DESCRIBE.KYNO_ALOE_COOKED = "Nó làm Wolfgang to và mạnh."
+WOLFGANG.DESCRIBE.KYNO_ALOE_DRIED = "Lô hội nhỏ đã khô đủ."
+WOLFGANG.DESCRIBE.KYNO_ALOE_GROUND = "Wolfgang ăn mọi thứ."
+WOLFGANG.DESCRIBE.KYNO_ALOE_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_ALOE = "Wolfgang ăn mọi thứ."
+WOLFGANG.DESCRIBE.KYNO_ALOE_OVERSIZED = "Wolfgang ăn mọi thứ."
+WOLFGANG.DESCRIBE.KYNO_ALOE_OVERSIZED_ROTTEN = "Không dùng được cho Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_CUCUMBER = "Slimy sea cucumber!"
-WOLFGANG.DESCRIBE.KYNO_CUCUMBER_COOKED = "Sea cucumber make Wolfgang strong to the finish."
-WOLFGANG.DESCRIBE.KYNO_CUCUMBER_GROUND = "Slimy sea cucumber!"
-WOLFGANG.DESCRIBE.KYNO_CUCUMBER_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.KNOWN_KYNO_CUCUMBER_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_CUCUMBER = "Slimy sea cucumber!"
-WOLFGANG.DESCRIBE.KYNO_CUCUMBER_OVERSIZED = "Slimy sea cucumber!"
-WOLFGANG.DESCRIBE.KYNO_CUCUMBER_OVERSIZED_ROTTEN = "No use for Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_CUCUMBER = "Dưa chuột biển nhớt!"
+WOLFGANG.DESCRIBE.KYNO_CUCUMBER_COOKED = "Dưa chuột biển làm Wolfgang mạnh tới cùng."
+WOLFGANG.DESCRIBE.KYNO_CUCUMBER_GROUND = "Dưa chuột biển nhớt!"
+WOLFGANG.DESCRIBE.KYNO_CUCUMBER_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.KNOWN_KYNO_CUCUMBER_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_CUCUMBER = "Dưa chuột biển nhớt!"
+WOLFGANG.DESCRIBE.KYNO_CUCUMBER_OVERSIZED = "Dưa chuột biển nhớt!"
+WOLFGANG.DESCRIBE.KYNO_CUCUMBER_OVERSIZED_ROTTEN = "Không dùng được cho Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_RADISH = "Is spicy."
-WOLFGANG.DESCRIBE.KYNO_RADISH_COOKED = "Is make Wolfgang breath big and strong."
-WOLFGANG.DESCRIBE.KYNO_RADISH_GROUND = "Is spicy."
-WOLFGANG.DESCRIBE.KYNO_RADISH_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.KNOWN_KYNO_RADISH_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_RADISH = "Is spicy."
-WOLFGANG.DESCRIBE.KYNO_RADISH_OVERSIZED = "Is spicy."
-WOLFGANG.DESCRIBE.KYNO_RADISH_OVERSIZED_ROTTEN = "No use for Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_RADISH = "Nó cay."
+WOLFGANG.DESCRIBE.KYNO_RADISH_COOKED = "Nó làm hơi thở Wolfgang to và mạnh."
+WOLFGANG.DESCRIBE.KYNO_RADISH_GROUND = "Nó cay."
+WOLFGANG.DESCRIBE.KYNO_RADISH_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.KNOWN_KYNO_RADISH_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_RADISH = "Nó cay."
+WOLFGANG.DESCRIBE.KYNO_RADISH_OVERSIZED = "Nó cay."
+WOLFGANG.DESCRIBE.KYNO_RADISH_OVERSIZED_ROTTEN = "Không dùng được cho Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_FENNEL = "Is little planty."
-WOLFGANG.DESCRIBE.KYNO_FENNEL_COOKED = "I cook you, puny man! I am strongest Wolfgang"
-WOLFGANG.DESCRIBE.KYNO_FENNEL_GROUND = "Is little planty."
-WOLFGANG.DESCRIBE.KYNO_FENNEL_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.KNOWN_KYNO_FENNEL_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_FENNEL = "Is little planty."
-WOLFGANG.DESCRIBE.KYNO_FENNEL_OVERSIZED = "Is little planty."
-WOLFGANG.DESCRIBE.KYNO_FENNEL_OVERSIZED_ROTTEN = "No use for Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_FENNEL = "Là cây nhỏ nhỏ."
+WOLFGANG.DESCRIBE.KYNO_FENNEL_COOKED = "Ta nấu ngươi rồi, người bé nhỏ! Ta là Wolfgang mạnh nhất!"
+WOLFGANG.DESCRIBE.KYNO_FENNEL_GROUND = "Là cây nhỏ nhỏ."
+WOLFGANG.DESCRIBE.KYNO_FENNEL_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.KNOWN_KYNO_FENNEL_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_FENNEL = "Là cây nhỏ nhỏ."
+WOLFGANG.DESCRIBE.KYNO_FENNEL_OVERSIZED = "Là cây nhỏ nhỏ."
+WOLFGANG.DESCRIBE.KYNO_FENNEL_OVERSIZED_ROTTEN = "Không dùng được cho Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_SWEETPOTATO = "Very sweet!"
-WOLFGANG.DESCRIBE.KYNO_SWEETPOTATO_COOKED = "Is ready to eat!"
-WOLFGANG.DESCRIBE.KYNO_SWEETPOTATO_GROUND = "Very sweet!"
-WOLFGANG.DESCRIBE.KYNO_SWEETPOTATO_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.KNOWN_KYNO_SWEETPOTATO_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_SWEETPOTATO = "Very sweet!"
-WOLFGANG.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED = "Very sweet!"
-WOLFGANG.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED_ROTTEN = "No use for Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_SWEETPOTATO = "Rất ngọt!"
+WOLFGANG.DESCRIBE.KYNO_SWEETPOTATO_COOKED = "Sẵn sàng ăn!"
+WOLFGANG.DESCRIBE.KYNO_SWEETPOTATO_GROUND = "Rất ngọt!"
+WOLFGANG.DESCRIBE.KYNO_SWEETPOTATO_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.KNOWN_KYNO_SWEETPOTATO_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_SWEETPOTATO = "Rất ngọt!"
+WOLFGANG.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED = "Rất ngọt!"
+WOLFGANG.DESCRIBE.KYNO_SWEETPOTATO_OVERSIZED_ROTTEN = "Không dùng được cho Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_PARZNIP = "Is like carrot. Ha ha!"
-WOLFGANG.DESCRIBE.KYNO_PARZNIP_COOKED = "Is like carrot. Ha ha!"
-WOLFGANG.DESCRIBE.KYNO_PARZNIP_EATEN = "Is like carrot. Ha ha!"
-WOLFGANG.DESCRIBE.KYNO_PARZNIP_GROUND = "Is like carrot. Ha ha!"
-WOLFGANG.DESCRIBE.KYNO_PARZNIP_BIG = "Is big food!"
-WOLFGANG.DESCRIBE.KYNO_PARZNIP_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.KNOWN_KYNO_PARZNIP_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_PARZNIP = "Is like carrot. Ha ha!"
-WOLFGANG.DESCRIBE.KYNO_PARZNIP_OVERSIZED = "Is like carrot. Ha ha!"
-WOLFGANG.DESCRIBE.KYNO_PARZNIP_OVERSIZED_ROTTEN = "No use for Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_PARZNIP = "Giống cà rốt. Ha ha!"
+WOLFGANG.DESCRIBE.KYNO_PARZNIP_COOKED = "Giống cà rốt. Ha ha!"
+WOLFGANG.DESCRIBE.KYNO_PARZNIP_EATEN = "Giống cà rốt. Ha ha!"
+WOLFGANG.DESCRIBE.KYNO_PARZNIP_GROUND = "Giống cà rốt. Ha ha!"
+WOLFGANG.DESCRIBE.KYNO_PARZNIP_BIG = "Là đồ ăn to!"
+WOLFGANG.DESCRIBE.KYNO_PARZNIP_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.KNOWN_KYNO_PARZNIP_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_PARZNIP = "Giống cà rốt. Ha ha!"
+WOLFGANG.DESCRIBE.KYNO_PARZNIP_OVERSIZED = "Giống cà rốt. Ha ha!"
+WOLFGANG.DESCRIBE.KYNO_PARZNIP_OVERSIZED_ROTTEN = "Không dùng được cho Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_TURNIP = "I will use in many dishes! Yes!"
-WOLFGANG.DESCRIBE.KYNO_TURNIP_COOKED = "Smell is very good."
-WOLFGANG.DESCRIBE.KYNO_TURNIP_GROUND = "I will use in many dishes! Yes!"
-WOLFGANG.DESCRIBE.KYNO_TURNIP_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.KNOWN_KYNO_TURNIP_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_TURNIP = "I will use in many dishes! Yes!"
-WOLFGANG.DESCRIBE.KYNO_TURNIP_OVERSIZED = "I will use in many dishes! Yes!"
-WOLFGANG.DESCRIBE.KYNO_TURNIP_OVERSIZED_ROTTEN = "No use for Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_TURNIP = "Wolfgang sẽ dùng trong nhiều món! Đúng!"
+WOLFGANG.DESCRIBE.KYNO_TURNIP_COOKED = "Mùi rất ngon."
+WOLFGANG.DESCRIBE.KYNO_TURNIP_GROUND = "Wolfgang sẽ dùng trong nhiều món! Đúng!"
+WOLFGANG.DESCRIBE.KYNO_TURNIP_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.KNOWN_KYNO_TURNIP_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_TURNIP = "Wolfgang sẽ dùng trong nhiều món! Đúng!"
+WOLFGANG.DESCRIBE.KYNO_TURNIP_OVERSIZED = "Wolfgang sẽ dùng trong nhiều món! Đúng!"
+WOLFGANG.DESCRIBE.KYNO_TURNIP_OVERSIZED_ROTTEN = "Không dùng được cho Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_RICE = "Is tiny little sprouts."
-WOLFGANG.DESCRIBE.KYNO_RICE_COOKED = "Is tiny little cooked sprouts."
-WOLFGANG.DESCRIBE.KYNO_RICE_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.KNOWN_KYNO_RICE_SEEDS = "Seed is too small."
-WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_RICE = "I will use in many dishes! Yes!"
-WOLFGANG.DESCRIBE.KYNO_RICE_OVERSIZED = "I will use in many dishes! Yes!"
-WOLFGANG.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "No use for Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_RICE = "Là mầm nhỏ xíu."
+WOLFGANG.DESCRIBE.KYNO_RICE_COOKED = "Là mầm nhỏ xíu đã nấu."
+WOLFGANG.DESCRIBE.KYNO_RICE_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.KNOWN_KYNO_RICE_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.FARM_PLANT_KYNO_RICE = "Wolfgang sẽ dùng trong nhiều món! Đúng!"
+WOLFGANG.DESCRIBE.KYNO_RICE_OVERSIZED = "Wolfgang sẽ dùng trong nhiều món! Đúng!"
+WOLFGANG.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Không dùng được cho Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_SEEDS_KIT = "Tiny seeds inside."
+WOLFGANG.DESCRIBE.KYNO_SEEDS_KIT = "Bên trong có hạt nhỏ."
 
 WOLFGANG.DESCRIBE.KYNO_LIMPETROCK = 
 {
-	GENERIC = "Looks like tiny snails for eating!",
-	PICKED = "Tiny food is gone.",
-	WITHERED = "Nothing lives here.",
+	GENERIC = "Trông như ốc nhỏ để ăn!",
+	PICKED = "Đồ ăn nhỏ biến mất.",
+	WITHERED = "Không có gì sống ở đây.",
 }
 
-WOLFGANG.DESCRIBE.KYNO_LIMPETS = "Is snail? Maybe."
-WOLFGANG.DESCRIBE.KYNO_LIMPETS_COOKED = "It is slimy going down."
+WOLFGANG.DESCRIBE.KYNO_LIMPETS = "Là ốc? Có lẽ."
+WOLFGANG.DESCRIBE.KYNO_LIMPETS_COOKED = "Nó trượt nhớt xuống cổ."
 
 WOLFGANG.DESCRIBE.KYNO_LOTUS_OCEAN = 
 {
-	GENERIC = "Is puny pond plant.",
-	PICKED = "Plant needs rest.",
-	BURNING = "Bad fire!",
+	GENERIC = "Là cây ao yếu ớt.",
+	PICKED = "Cây cần nghỉ.",
+	BURNING = "Lửa xấu!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_LOTUS_ROOT = "Squishy."
-WOLFGANG.DESCRIBE.KYNO_LOTUS_FLOWER = "Is puny pond flower."
-WOLFGANG.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Wolfgang eat you now."
+WOLFGANG.DESCRIBE.KYNO_LOTUS_ROOT = "Mềm nhũn."
+WOLFGANG.DESCRIBE.KYNO_LOTUS_FLOWER = "Là hoa ao yếu ớt."
+WOLFGANG.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Giờ Wolfgang ăn ngươi."
 
 WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
 {
-	GENERIC = "Strange weeds from the seas.",
-	PICKED = "No more food now.",
-	BURNING = "Fire beat water weed!",
+	GENERIC = "Cỏ dại lạ từ biển.",
+	PICKED = "Giờ không còn đồ ăn.",
+	BURNING = "Lửa thắng cỏ nước!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_SEAWEEDS = "A weed, from the sea."
-WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Wolfgang's strong stomach will destroy this!"
-WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Is edible."
-WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Squishy."
+WOLFGANG.DESCRIBE.KYNO_SEAWEEDS = "Cỏ dại, từ biển."
+WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Bao tử mạnh của Wolfgang sẽ xử lý nó!"
+WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Ăn được."
+WOLFGANG.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Mềm nhũn."
 
 WOLFGANG.DESCRIBE.KYNO_TAROROOT_OCEAN = 
 {
-	GENERIC = "Is little purple plant! Ha ha!",
-	PICKED = "Water helps it grow.",
-	BURNING = "Root is gone!",
+	GENERIC = "Là cây tím nhỏ! Ha ha!",
+	PICKED = "Nước giúp nó lớn.",
+	BURNING = "Củ biến mất!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_TAROROOT_ROOT = "Squishy."
-WOLFGANG.DESCRIBE.KYNO_TAROROOT = "Is not pepper!"
-WOLFGANG.DESCRIBE.KYNO_TAROROOT_COOKED = "Has no yolk! Yolk is strongest part!"
+WOLFGANG.DESCRIBE.KYNO_TAROROOT_ROOT = "Mềm nhũn."
+WOLFGANG.DESCRIBE.KYNO_TAROROOT = "Không phải ớt!"
+WOLFGANG.DESCRIBE.KYNO_TAROROOT_COOKED = "Không có lòng đỏ! Lòng đỏ là phần mạnh nhất!"
 
 WOLFGANG.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
 {
-	GENERIC = "Is little wet vegetable.",
-	PICKED = "Will grow again.",
-	BURNING = "Fire beats water plant!",
+	GENERIC = "Là rau ướt nhỏ.",
+	PICKED = "Sẽ mọc lại.",
+	BURNING = "Lửa thắng cây nước!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Squishy."
-WOLFGANG.DESCRIBE.KYNO_WATERYCRESS = "Is little wet vegetable."
+WOLFGANG.DESCRIBE.KYNO_WATERYCRESS_ROOT = "Mềm nhũn."
+WOLFGANG.DESCRIBE.KYNO_WATERYCRESS = "Là rau ướt nhỏ."
 
-WOLFGANG.DESCRIBE.WATERYCRESSBOWL = "Is warm in Wolfgang's belly."
+WOLFGANG.DESCRIBE.WATERYCRESSBOWL = "Nó ấm trong bao tử Wolfgang."
 
-WOLFGANG.DESCRIBE.KYNO_SALT = "Is make food taste good."
+WOLFGANG.DESCRIBE.KYNO_SALT = "Nó làm đồ ăn ngon."
 
 WOLFGANG.DESCRIBE.KYNO_MUSSELSTICK =
 {
-	GENERIC = "Stick attracts tiny food!",
-	PICKED = "Tiny food gone, must wait.",
-	BURNING = "Fire eats food!",
+	GENERIC = "Que hút đồ ăn nhỏ!",
+	PICKED = "Đồ ăn nhỏ hết rồi, phải chờ.",
+	BURNING = "Lửa ăn đồ ăn!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Mussels love little stick."
+WOLFGANG.DESCRIBE.KYNO_MUSSELSTICK_ITEM = "Trai thích que nhỏ."
 
-WOLFGANG.DESCRIBE.CATFOOD = "Is food for little buddies!"
+WOLFGANG.DESCRIBE.CATFOOD = "Là đồ ăn cho bạn nhỏ!"
 
-WOLFGANG.DESCRIBE.KATFOOD = "Is food for little buddies!"
+WOLFGANG.DESCRIBE.KATFOOD = "Là đồ ăn cho bạn nhỏ!"
 
 WOLFGANG.DESCRIBE.KYNO_BANANATREE = 
 {
-	GENERIC = "Hello, upside-down tree.",
-	PICKED = "Tree needs rest.",
-	CHOPPED = "Tree is gone.",
-	BURNING = "Fire is eating banana tree!",
-	BURNT = "Tree is very gone.",
+	GENERIC = "Chào cây lộn ngược.",
+	PICKED = "Cây cần nghỉ.",
+	CHOPPED = "Cây biến mất.",
+	BURNING = "Lửa đang ăn cây chuối!",
+	BURNT = "Cây rất biến mất.",
 }
 
-WOLFGANG.DESCRIBE.KYNO_BANANA = "Is sweet!"
-WOLFGANG.DESCRIBE.KYNO_BANANA_COOKED = "Is warm and tasty!"
+WOLFGANG.DESCRIBE.KYNO_BANANA = "Nó ngọt!"
+WOLFGANG.DESCRIBE.KYNO_BANANA_COOKED = "Ấm và ngon!"
 
 WOLFGANG.DESCRIBE.KYNO_KOKONUTTREE =
 {
-	GENERIC = "Such jovial tree.",
-	PICKED = "Tree needs rest.",
-	CHOPPED = "Tree is gone.",
-	BURNING = "Fire eats coconut tree!",
-	BURNT = "Tree is very gone.",
+	GENERIC = "Cây thật vui vẻ.",
+	PICKED = "Cây cần nghỉ.",
+	CHOPPED = "Cây biến mất.",
+	BURNING = "Lửa ăn cây dừa!",
+	BURNT = "Cây rất biến mất.",
 }
 
-WOLFGANG.DESCRIBE.KYNO_KOKONUT = "Wolfgang will crush with bare hands."
-WOLFGANG.DESCRIBE.KYNO_KOKONUT_HALVED = "Wolfgang had no problem smacking hard shell apart."
-WOLFGANG.DESCRIBE.KYNO_KOKONUT_COOKED = "Coconut is cooked."
+WOLFGANG.DESCRIBE.KYNO_KOKONUT = "Wolfgang sẽ bóp nát bằng tay không."
+WOLFGANG.DESCRIBE.KYNO_KOKONUT_HALVED = "Wolfgang chẳng khó gì khi đập vỏ cứng ra."
+WOLFGANG.DESCRIBE.KYNO_KOKONUT_COOKED = "Dừa đã nấu chín."
 
-WOLFGANG.DESCRIBE.BOWLOFPOPCORN = "Pop pop pop!"
+WOLFGANG.DESCRIBE.BOWLOFPOPCORN = "Bụp bụp bụp!"
 
-WOLFGANG.DESCRIBE.FIGJUICE = "Is cool. Like Wolfgang."
+WOLFGANG.DESCRIBE.FIGJUICE = "Nó mát. Như Wolfgang."
 
-WOLFGANG.DESCRIBE.COCONUTWATER = "Water tastes funny, hehe."
+WOLFGANG.DESCRIBE.COCONUTWATER = "Nước vị lạ, hehe."
 
-WOLFGANG.DESCRIBE.EYEBALLSPAGHETTI = "Little eyeball is food now, haha!"
+WOLFGANG.DESCRIBE.EYEBALLSPAGHETTI = "Mắt nhỏ giờ là đồ ăn, haha!"
 
-WOLFGANG.DESCRIBE.FORGETMELOTS_SEEDS = "Seed is too small."
+WOLFGANG.DESCRIBE.FORGETMELOTS_SEEDS = "Hạt quá nhỏ."
 
-WOLFGANG.DESCRIBE.FIRENETTLES_SEEDS = "Seed is too small."
+WOLFGANG.DESCRIBE.FIRENETTLES_SEEDS = "Hạt quá nhỏ."
 
-WOLFGANG.DESCRIBE.TILLWEED_SEEDS = "Seed is too small."
+WOLFGANG.DESCRIBE.TILLWEED_SEEDS = "Hạt quá nhỏ."
 
-WOLFGANG.DESCRIBE.KYNO_FLOATILIZER = "Bucket full of smelly."
+WOLFGANG.DESCRIBE.KYNO_FLOATILIZER = "Xô đầy thứ hôi."
 
-WOLFGANG.DESCRIBE.KYNO_TWIGGYNUTS = "Is nittle nuts from tree."
+WOLFGANG.DESCRIBE.KYNO_TWIGGYNUTS = "Là hạt nhỏ từ cây."
 
-WOLFGANG.DESCRIBE.KYNO_REPAIRTOOL = "Restore mighty my things!"
+WOLFGANG.DESCRIBE.KYNO_REPAIRTOOL = "Khôi phục đồ hùng mạnh của Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_KOI = "Is mighty fish!"
-WOLFGANG.DESCRIBE.KYNO_KOI_COOKED = "Is mighty fish!"
+WOLFGANG.DESCRIBE.KYNO_KOI = "Là cá hùng mạnh!"
+WOLFGANG.DESCRIBE.KYNO_KOI_COOKED = "Là cá hùng mạnh!"
 
-WOLFGANG.DESCRIBE.KYNO_TROPICALFISH = "Is yummy looking."
-WOLFGANG.DESCRIBE.KYNO_TROPICALFISH_COOKED = "Is yummy."
+WOLFGANG.DESCRIBE.KYNO_TROPICALFISH = "Trông ngon."
+WOLFGANG.DESCRIBE.KYNO_TROPICALFISH_COOKED = "Ngon."
 
-WOLFGANG.DESCRIBE.KYNO_NEONFISH = "Ha ha! Scales is chilly!"
-WOLFGANG.DESCRIBE.KYNO_NEONFISH_COOKED = "Toasty fish is good muscle fuel."
+WOLFGANG.DESCRIBE.KYNO_NEONFISH = "Ha ha! Vảy lạnh ghê!"
+WOLFGANG.DESCRIBE.KYNO_NEONFISH_COOKED = "Cá nóng là nhiên liệu tốt cho cơ bắp."
 
-WOLFGANG.DESCRIBE.KYNO_GROUPER = "Wolfgang wish he swim like fish."
-WOLFGANG.DESCRIBE.KYNO_GROUPER_COOKED = "Wolfgang will eat tasty fish!"
+WOLFGANG.DESCRIBE.KYNO_GROUPER = "Wolfgang ước mình bơi như cá."
+WOLFGANG.DESCRIBE.KYNO_GROUPER_COOKED = "Wolfgang sẽ ăn cá ngon!"
  
-WOLFGANG.DESCRIBE.KYNO_PIERROTFISH = "Little fish is very dry!"
-WOLFGANG.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Little fish will make Wolfgang mighty!"
+WOLFGANG.DESCRIBE.KYNO_PIERROTFISH = "Cá nhỏ rất khô!"
+WOLFGANG.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Cá nhỏ sẽ làm Wolfgang hùng mạnh!"
 
-WOLFGANG.DESCRIBE.KYNO_SALMONFISH = "Is floppy, floppy fish."
-WOLFGANG.DESCRIBE.KYNO_SALMONFISH_COOKED = "Fish is cooked now."
+WOLFGANG.DESCRIBE.KYNO_SALMONFISH = "Là cá lật đật, lật đật."
+WOLFGANG.DESCRIBE.KYNO_SALMONFISH_COOKED = "Giờ cá đã chín."
 
-WOLFGANG.DESCRIBE.TURF_PINKPARK = "Is pinky."
-WOLFGANG.DESCRIBE.TURF_STONECITY = "Step stones."
-WOLFGANG.DESCRIBE.TURF_FIELDS = "Is just grass."
-WOLFGANG.DESCRIBE.TURF_TIDALMARSH = "Slimy."
+WOLFGANG.DESCRIBE.TURF_PINKPARK = "Nó hồng hồng."
+WOLFGANG.DESCRIBE.TURF_STONECITY = "Đá để bước."
+WOLFGANG.DESCRIBE.TURF_FIELDS = "Đá để bước."
+WOLFGANG.DESCRIBE.TURF_TIDALMARSH = "Đá để bước."
 
 WOLFGANG.DESCRIBE.KYNO_SALTRACK =
 {
-	GENERIC = "Is ready!",
-	PICKED = "Is not ready yet.",
+	GENERIC = "Sẵn sàng rồi!",
+	PICKED = "Chưa sẵn sàng.",
 }
 
-WOLFGANG.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Mighty hands make quick work."
+WOLFGANG.DESCRIBE.KYNO_SALTRACK_INSTALLER = "Tay hùng mạnh làm việc nhanh."
 
-WOLFGANG.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Is for get yummy tree goop."
+WOLFGANG.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Dùng để lấy nhựa cây ngon."
 
-WOLFGANG.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Is for catching tiny pinchers."
+WOLFGANG.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Dùng để bắt kẹp nhỏ."
 
 WOLFGANG.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
-	GENERIC = "He seems like good fellow!",
-	SLEEPING = "Boss is sleeping.",
+	GENERIC = "Ông ấy có vẻ là người tốt!",
+	SLEEPING = "Ông chủ đang ngủ.",
 }
 
 WOLFGANG.DESCRIBE.KYNO_SUGARTREE =
 {
-	GENERIC = "Is little tree of yummy goop.",
-	CHOPPED = "Tree has been cut down!",
-	SAPPED = "Little bucket is full!",
-	PICKED = "Little bucket needs to fill up.",
-	BURNING = "Fire eats tree!",
-	BURNT = "Tree is gone.",
+	GENERIC = "Là cây nhỏ có nhựa ngon.",
+	CHOPPED = "Cây đã bị chặt!",
+	SAPPED = "Xô nhỏ đầy rồi!",
+	PICKED = "Xô nhỏ cần đầy lại.",
+	BURNING = "Lửa ăn cây!",
+	BURNT = "Cây biến mất.",
 }
 
 WOLFGANG.DESCRIBE.KYNO_SUGARTREE_RUINED =
 {
-	GENERIC = "Little tree has boo-boo.",
-	CHOPPED = "Bad tree gone.",
-	SAPPED = "Sticky bad stuff.",
-	PICKED = "Wolfgang will crush tiny creatures.",
-	BURNING = "Fire fix!",
-	BURNT = "All gone!",
+	GENERIC = "Cây nhỏ bị đau.",
+	CHOPPED = "Cây xấu biến mất.",
+	SAPPED = "Thứ xấu dính dính.",
+	PICKED = "Wolfgang sẽ nghiền sinh vật nhỏ.",
+	BURNING = "Lửa sửa!",
+	BURNT = "Hết sạch!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_SUGARTREE_BUD = "Is little pink tree seed, ha ha!"
+WOLFGANG.DESCRIBE.KYNO_SUGARTREE_BUD = "Là hạt cây hồng nhỏ, ha ha!"
 
-WOLFGANG.DESCRIBE.KYNO_SUGARTREE_FLOWER = "They are very pretty."
-WOLFGANG.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "They are very pretty."
+WOLFGANG.DESCRIBE.KYNO_SUGARTREE_FLOWER = "Chúng rất đẹp."
+WOLFGANG.DESCRIBE.KYNO_SUGARTREE_FLOWER_PLANTED = "Chúng rất đẹp."
 
-WOLFGANG.DESCRIBE.KYNO_SUGARTREE_PETALS = "They are very pretty."
-WOLFGANG.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Not so pretty now."
+WOLFGANG.DESCRIBE.KYNO_SUGARTREE_PETALS = "Chúng rất đẹp."
+WOLFGANG.DESCRIBE.KYNO_SUGARTREE_PETALS_DRIED = "Giờ không đẹp lắm."
 
-WOLFGANG.DESCRIBE.KYNO_PEBBLECRAB = "Hello, itty bitty pincher!"
+WOLFGANG.DESCRIBE.KYNO_PEBBLECRAB = "Chào kẹp nhỏ bé tí!"
 
-WOLFGANG.DESCRIBE.KYNO_CRABMEAT = "Is meat of tiny pincher."
-WOLFGANG.DESCRIBE.KYNO_CRABMEAT_COOKED = "Yummy, yummy pincher."
-WOLFGANG.DESCRIBE.KYNO_CRABMEAT_DRIED = "Is meat of tiny pincher."
+WOLFGANG.DESCRIBE.KYNO_CRABMEAT = "Là thịt của kẹp nhỏ."
+WOLFGANG.DESCRIBE.KYNO_CRABMEAT_COOKED = "Ngon, ngon, kẹp nhỏ."
+WOLFGANG.DESCRIBE.KYNO_CRABMEAT_DRIED = "Là thịt của kẹp nhỏ."
 
-WOLFGANG.DESCRIBE.KYNO_CRABKINGMEAT = "Is meat of big pincher."
-WOLFGANG.DESCRIBE.KYNO_CRABKINGMEAT_COOKED = "Is meat of tiny pincher."
-WOLFGANG.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Is meat of tiny pincher."
+WOLFGANG.DESCRIBE.KYNO_CRABKINGMEAT = "Là thịt của kẹp lớn."
+WOLFGANG.DESCRIBE.KYNO_CRABKINGMEAT_COOKED = "Là thịt của kẹp nhỏ."
+WOLFGANG.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Là thịt của kẹp nhỏ."
 
-WOLFGANG.DESCRIBE.KYNO_SLAUGHTERTOOL = "Wolfgang use to kill things."
+WOLFGANG.DESCRIBE.KYNO_SLAUGHTERTOOL = "Wolfgang dùng để giết thứ."
 
 WOLFGANG.DESCRIBE.KYNO_CHICKEN2 = 
 {
-	GENERIC = "Little cluck bird.",
-	COOP = "Chicken belongs to Wolfgang!",
+	GENERIC = "Chim cục tác nhỏ.",
+	COOP = "Gà thuộc về Wolfgang!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG = "Is little chicken egg."
-WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Is egg for giant chicken, or egg for mighty Wolfgang?"
-WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Yum!"
+WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG = "Là trứng gà nhỏ."
+WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_LARGE = "Là trứng cho gà khổng lồ, hay trứng cho Wolfgang hùng mạnh?"
+WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_COOKED = "Ngon!"
 
 WOLFGANG.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 {
-	GENERIC = "Tiny bird still hiding in egg.",
-	HATCHING = "Ha! Baby bird comes out soon!",
+	GENERIC = "Chim nhỏ vẫn trốn trong trứng.",
+	HATCHING = "Ha! Chim con sắp chui ra!",
 }
 
 WOLFGANG.DESCRIBE.KYNO_CHICKENHOUSE = 
 {
-	GENERIC = "Little house for tiny chickens!",
-	FULL = "House is full of mighty eggs!",
-	BURNT = "Chickens were not strong enough.",
+	GENERIC = "Nhà nhỏ cho gà nhỏ!",
+	FULL = "Nhà đầy trứng hùng mạnh!",
+	BURNT = "Gà không đủ mạnh.",
 }
 
-WOLFGANG.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Is broken."
+WOLFGANG.DESCRIBE.KYNO_SERENITYISLAND_DECOR2 = "Nó bị vỡ."
 
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_KIT = "Is little kit for our kitchen."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_SYRUP = "Wolfgang put in sugar goop. New sugar goop come out."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_SYRUP_POT = "Wolfgang put in sugar goop. New sugar goop come out."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_BIG_POT = "Wolfgang brought most important ingredient: love."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_BIG = "Wolfgang brought most important ingredient: love."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_SMALL_POT = "Friends, do not look! Pot needs to boil."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_SMALL = "Friends, do not look! Pot needs to boil."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_GRILL = "Is put fire to food."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_GRILL_ITEM = "Where will Wolfgang put this?"
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL = "Is put fire on tiny food."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL_ITEM = "Wolfgang needs put this down some place."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_ELDER = "Wolfgang put in sugar goop. New sugar goop come out."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_OVEN_ITEM = "Is fire box bits."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_CASSEROLE = "Is shame Wolfgang forget cabbage casserole recipe."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_SMALL_CASSEROLE = "Is making of small foods."
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_OVEN = "Friends! Wolfgang will cook for you!"
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Friends! Wolfgang will cook for you!"
-WOLFGANG.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Friends! Wolfgang will cook for you!"
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_KIT = "Là bộ nhỏ cho bếp của ta."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_SYRUP = "Wolfgang bỏ keo đường vào. Keo đường mới đi ra."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_SYRUP_POT = "Wolfgang bỏ keo đường vào. Keo đường mới đi ra."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_BIG_POT = "Wolfgang mang nguyên liệu quan trọng nhất: tình yêu."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_BIG = "Wolfgang mang nguyên liệu quan trọng nhất: tình yêu."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_SMALL_POT = "Bạn bè, đừng nhìn! Nồi cần sôi."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_SMALL = "Bạn bè, đừng nhìn! Nồi cần sôi."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_GRILL = "Là bỏ lửa vào đồ ăn."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_GRILL_ITEM = "Wolfgang sẽ đặt cái này ở đâu?"
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL = "Là bỏ lửa lên đồ ăn nhỏ."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_SMALL_GRILL_ITEM = "Wolfgang cần đặt cái này xuống chỗ nào đó."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_ELDER = "Wolfgang bỏ keo đường vào. Keo đường mới đi ra."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_OVEN_ITEM = "Là mảnh của hộp lửa."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_CASSEROLE = "Thật xấu hổ Wolfgang quên công thức hầm bắp cải."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_SMALL_CASSEROLE = "Là để làm đồ ăn nhỏ."
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_OVEN = "Bạn bè! Wolfgang sẽ nấu cho mọi người!"
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Bạn bè! Wolfgang sẽ nấu cho mọi người!"
+WOLFGANG.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Bạn bè! Wolfgang sẽ nấu cho mọi người!"
 
 WOLFGANG.DESCRIBE.KYNO_ROCKFLIPPABLE = 
 {
-	GENERIC = "Wolfgang strong. Wolfgang flip.",
-	FLIPPED = "Tiny things were hiding!",
+	GENERIC = "Wolfgang mạnh. Wolfgang lật.",
+	FLIPPED = "Mấy thứ nhỏ đang trốn!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "I do not like this. Is creepy."
+WOLFGANG.DESCRIBE.KYNO_SERENITYISLAND_CRATE = "Wolfgang không thích cái này. Nó rợn rợn."
 
-WOLFGANG.DESCRIBE.KYNO_SUGARFLY = "Is pretty!"
-WOLFGANG.DESCRIBE.KYNO_SUGARFLYWINGS = "No flying without wings!"
+WOLFGANG.DESCRIBE.KYNO_SUGARFLY = "Đẹp quá!"
+WOLFGANG.DESCRIBE.KYNO_SUGARFLYWINGS = "Không có cánh thì không bay!"
 
-WOLFGANG.DESCRIBE.KYNO_WATERY_CRATE = "I do not like this. Is creepy."
+WOLFGANG.DESCRIBE.KYNO_WATERY_CRATE = "Wolfgang không thích cái này. Nó rợn rợn."
 
-WOLFGANG.DESCRIBE.KYNO_TUNACAN = "I will open with bare hands!"
-WOLFGANG.DESCRIBE.KYNO_TUNACAN_OPEN = "Now lets eat the steak."
+WOLFGANG.DESCRIBE.KYNO_TUNACAN = "Wolfgang sẽ mở bằng tay không!"
+WOLFGANG.DESCRIBE.KYNO_TUNACAN_OPEN = "Giờ ăn miếng bít tết thôi."
 
-WOLFGANG.DESCRIBE.KYNO_CANNEDFOOD = "I will open with bare hands!"
-WOLFGANG.DESCRIBE.KYNO_CANNEDFOOD_OPEN = "Lets eat now."
+WOLFGANG.DESCRIBE.KYNO_CANNEDFOOD = "Wolfgang sẽ mở bằng tay không!"
+WOLFGANG.DESCRIBE.KYNO_CANNEDFOOD_OPEN = "Giờ ăn thôi."
 
-WOLFGANG.DESCRIBE.KYNO_POP = "Wolfgang would not like to drink."
+WOLFGANG.DESCRIBE.KYNO_POP = "Wolfgang không muốn uống."
 
-WOLFGANG.DESCRIBE.KYNO_MYSTERYMEAT = "My mighty stomach can handle it!"
+WOLFGANG.DESCRIBE.KYNO_MYSTERYMEAT = "Bao tử hùng mạnh của Wolfgang chịu được!"
 
-WOLFGANG.DESCRIBE.KYNO_BOTTLE_SOUL = "Poor little soul, is trapped inside."
+WOLFGANG.DESCRIBE.KYNO_BOTTLE_SOUL = "Linh hồn nhỏ tội nghiệp, bị nhốt bên trong."
 
-WOLFGANG.DESCRIBE.SOULSTEW = "Poor little soul."
+WOLFGANG.DESCRIBE.SOULSTEW = "Linh hồn nhỏ tội nghiệp."
 
-WOLFGANG.DESCRIBE.FORTUNECOOKIE = "Little cookie with secrets."
+WOLFGANG.DESCRIBE.FORTUNECOOKIE = "Bánh quy nhỏ có bí mật."
 
-WOLFGANG.DESCRIBE.HORNOCUPIA = "Full of food for mighty Wolfgang!"
+WOLFGANG.DESCRIBE.HORNOCUPIA = "Đầy đồ ăn cho Wolfgang hùng mạnh!"
 
-WOLFGANG.DESCRIBE.CHEESE_YELLOW = "Is smelly!"
-WOLFGANG.DESCRIBE.CHEESE_WHITE = "Is smelly!"
-WOLFGANG.DESCRIBE.CHEESE_KOALEFANT = "Is smelly!"
+WOLFGANG.DESCRIBE.CHEESE_YELLOW = "Nó hôi!"
+WOLFGANG.DESCRIBE.CHEESE_WHITE = "Nó hôi!"
+WOLFGANG.DESCRIBE.CHEESE_KOALEFANT = "Nó hôi!"
 
-WOLFGANG.DESCRIBE.MILK_BOX = "Is very good!"
+WOLFGANG.DESCRIBE.MILK_BOX = "Rất tốt!"
 
-WOLFGANG.DESCRIBE.WATERCUP = "Is just water."
+WOLFGANG.DESCRIBE.WATERCUP = "Chỉ là nước."
 
-WOLFGANG.DESCRIBE.HONEYJAR = "Sticky."
+WOLFGANG.DESCRIBE.HONEYJAR = "Dính."
 
-WOLFGANG.DESCRIBE.CRAB_ARTICHOKE = "Little rock is delicious this way!"
+WOLFGANG.DESCRIBE.CRAB_ARTICHOKE = "Cục đá nhỏ nấu kiểu này ngon!"
 
-WOLFGANG.DESCRIBE.PEPPERROLLS = "Wolfgang likes a spicy challenge!"
+WOLFGANG.DESCRIBE.PEPPERROLLS = "Wolfgang thích thử thách cay!"
 
-WOLFGANG.DESCRIBE.KYNO_SAPHEALER = "Wolfgang will help out little trees!"
+WOLFGANG.DESCRIBE.KYNO_SAPHEALER = "Wolfgang sẽ giúp cây nhỏ!"
 
 WOLFGANG.DESCRIBE.KYNO_OCEAN_WRECK = 
 {
-	GENERIC = "Not mighty enough to float.",
-	PICKED = "No more tiny food.",
-	BURNING = "Boat is finished!",
+	GENERIC = "Không đủ hùng mạnh để nổi.",
+	PICKED = "Không còn đồ ăn nhỏ.",
+	BURNING = "Thuyền xong đời!",
 }
 
 WOLFGANG.DESCRIBE.KYNO_GHOST_PIRATE = "Aaaaaaaaaahrrrr!!"
 
-WOLFGANG.DESCRIBE.KYNO_BUCKET_EMPTY = "Tiny bucket helps Wolfgang do tasks."
-WOLFGANG.DESCRIBE.KYNO_BUCKET_METAL = "Tiny metal bucket helps Wolfgang do tasks."
-WOLFGANG.DESCRIBE.KYNO_BUCKET_WATER = "Is full of water! Wolfgang careful not to spill."
+WOLFGANG.DESCRIBE.KYNO_BUCKET_EMPTY = "Xô nhỏ giúp Wolfgang làm việc."
+WOLFGANG.DESCRIBE.KYNO_BUCKET_METAL = "Xô kim loại nhỏ giúp Wolfgang làm việc."
+WOLFGANG.DESCRIBE.KYNO_BUCKET_WATER = "Nó đầy nước! Wolfgang cẩn thận không làm đổ."
 
-WOLFGANG.DESCRIBE.KYNO_MILK_BEEFALO = "Milk for muscles!"
-WOLFGANG.DESCRIBE.KYNO_MILK_KOALEFANT = "Milk for muscles!"
+WOLFGANG.DESCRIBE.KYNO_MILK_BEEFALO = "Sữa cho cơ bắp!"
+WOLFGANG.DESCRIBE.KYNO_MILK_KOALEFANT = "Sữa cho cơ bắp!"
 
-WOLFGANG.DESCRIBE.KYNO_CAP_DRIED = "Little dried mushroom for Wolfgang belly!"
+WOLFGANG.DESCRIBE.KYNO_CAP_DRIED = "Nấm khô nhỏ cho bao tử Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Look like vegetable, tastes like meat."
+WOLFGANG.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Trông như rau, vị như thịt."
 
-WOLFGANG.DESCRIBE.KYNO_BREWBOOK = "Is book of things to fill Wolfgang's mighty belly!"
+WOLFGANG.DESCRIBE.KYNO_BREWBOOK = "Là sách về thứ lấp đầy bao tử hùng mạnh của Wolfgang!"
 
 WOLFGANG.DESCRIBE.KYNO_WOODENKEG = 
 {
-	EMPTY = "Little barrel makes good stuff for Wolfgang!",
-	BREWING_LONG = "Strong brew needs strong patience.",
-	BREWING_SHORT = "Brew almost ready!",
-	DONE = "Ha! Drink is done!",
-	BURNT = "No drink for Wolfgang.",
+	EMPTY = "Thùng nhỏ làm ra thứ ngon cho Wolfgang!",
+	BREWING_LONG = "Mẻ ủ mạnh cần kiên nhẫn mạnh.",
+	BREWING_SHORT = "Mẻ ủ gần xong!",
+	DONE = "Ha! Đồ uống xong rồi!",
+	BURNT = "Không có đồ uống cho Wolfgang.",
 }
 
 WOLFGANG.DESCRIBE.KYNO_PRESERVESJAR = 
 {
-	EMPTY = "Little cask helps Wolfgang make sweet stuff!",
-	BREWING_LONG = "Good food needs long time.",
-	BREWING_SHORT = "Almost ready!",
-	DONE = "Ha! Preserves are done!",
-	BURNT = "All gone.",
+	EMPTY = "Hũ nhỏ giúp Wolfgang làm đồ ngọt!",
+	BREWING_LONG = "Đồ ăn ngon cần thời gian dài.",
+	BREWING_SHORT = "Gần xong rồi!",
+	DONE = "Ha! Đồ bảo quản xong rồi!",
+	BURNT = "Hết sạch.",
 }
 
 WOLFGANG.DESCRIBE.KYNO_ANTCHEST = 
 {
-	GENERIC = "Sweet stuff for Wolfgang!",
-	HONEY = "Chest is full of sweet honey!",
-	NECTAR = "Bees work hard on nectar.",
-	BURNING = "Oh no! Sweet chest is burning!",
+	GENERIC = "Đồ ngọt cho Wolfgang!",
+	HONEY = "Rương đầy mật ong ngọt!",
+	NECTAR = "Ong chăm chỉ làm mật hoa.",
+	BURNING = "Ôi không! Rương ngọt đang cháy!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_NECTAR_POD = "Is sweet like honey."
+WOLFGANG.DESCRIBE.KYNO_NECTAR_POD = "Ngọt như mật ong."
 
-WOLFGANG.DESCRIBE.KYNO_OAKTREE_POD = "Is little tree seed."
-WOLFGANG.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Wolfgang eat tiny tree baby."
+WOLFGANG.DESCRIBE.KYNO_OAKTREE_POD = "Là hạt cây nhỏ."
+WOLFGANG.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Wolfgang ăn em bé cây nhỏ."
 
-WOLFGANG.DESCRIBE.KYNO_PIKO = "Tiny, weak fluff."
-WOLFGANG.DESCRIBE.KYNO_PIKO_ORANGE = "Tiny, weak orange fluff."
+WOLFGANG.DESCRIBE.KYNO_PIKO = "Cục lông nhỏ, yếu."
+WOLFGANG.DESCRIBE.KYNO_PIKO_ORANGE = "Cục lông cam nhỏ, yếu."
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
 {
-	GENERIC = "Is strong but not strong like Wolfgang.",
-	CHOPPED = "Wolfgang take all leaves!",
-	BURNING = "Fire bad!",
-	BURNT = "Tree is gone.",
+	GENERIC = "Nó mạnh nhưng không mạnh như Wolfgang.",
+	CHOPPED = "Wolfgang lấy hết lá!",
+	BURNING = "Lửa xấu!",
+	BURNT = "Cây biến mất.",
 }
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
 {
-	GENERIC = "Ha. It is infested with little guys!",
-	BURNING = "Fire chase them away!",
+	GENERIC = "Ha. Nó bị mấy tên nhỏ chiếm rồi!",
+	BURNING = "Lửa đuổi chúng đi!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "I could smash."
+WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Wolfgang có thể đập."
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
 {
-	GENERIC = "Weird-looking people house.",
-	BURNT = "The house was not strong enough.",
+	GENERIC = "Nhà của người trông kỳ lạ.",
+	BURNT = "Nhà không đủ mạnh.",
 }
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
 {
-	GENERIC = "Ugly house!",
-	CRAFTED = "House looks nicer now.",
-	BURNT = "Smell is very bad!",
+	GENERIC = "Nhà xấu!",
+	CRAFTED = "Nhà giờ đẹp hơn.",
+	BURNT = "Mùi rất tệ!",
 }
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
 {
-	GENERIC = "Fish buddy has many rare stuff in there.",
-	OCCUPIED = "Shop man is sleeping.",
+	GENERIC = "Bạn cá có nhiều đồ hiếm trong đó.",
+	OCCUPIED = "Người bán hàng đang ngủ.",
 }
 
 WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
 {
-	GENERIC = "Has many stuff selling.",
-	EMPTY = "Nothing left to rummage.",
+	GENERIC = "Có nhiều thứ để bán.",
+	EMPTY = "Không còn gì để lục.",
 }
 
-WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Great to see you, buddy."
-WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_POND = "Fishies nibble toes when I stick them in."
-WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Is plant."
-WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_SANDHILL = "Tiny, crushable hill!"
-WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_MERMFISHER = "Let us fight!"
+WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_SELLER = "Rất vui gặp bạn, anh bạn."
+WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_POND = "Cá nhỏ cắn ngón chân khi Wolfgang thò xuống."
+WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_PLANTY = "Là cây."
+WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_SANDHILL = "Đồi nhỏ, dễ nghiền!"
+WOLFGANG.DESCRIBE.KYNO_MEADOWISLAND_MERMFISHER = "Chiến đấu nào!"
 
-WOLFGANG.DESCRIBE.KYNO_SAMMYHAT = "Little cap to protect Wolfgang head."
+WOLFGANG.DESCRIBE.KYNO_SAMMYHAT = "Mũ nhỏ bảo vệ đầu Wolfgang."
 
-WOLFGANG.DESCRIBE.KINGFISHER = "Skinny bird is big beak."
+WOLFGANG.DESCRIBE.KINGFISHER = "Chim gầy có mỏ to."
 
-WOLFGANG.DESCRIBE.TOUCAN = "Why does bird fly away from Wolfgang?"
-WOLFGANG.DESCRIBE.TOUCAN_CHUBBY = "Why does bird fly away from Wolfgang?"
+WOLFGANG.DESCRIBE.TOUCAN = "Sao chim bay khỏi Wolfgang?"
+WOLFGANG.DESCRIBE.TOUCAN_CHUBBY = "Sao chim bay khỏi Wolfgang?"
 
-WOLFGANG.DESCRIBE.WETGOOP2 = "Wolfgang ruin food!"
+WOLFGANG.DESCRIBE.WETGOOP2 = "Wolfgang làm hỏng đồ ăn!"
 
-WOLFGANG.DESCRIBE.BEER = "So refreshing! Wolfgang likes it!"
+WOLFGANG.DESCRIBE.BEER = "Thật sảng khoái! Wolfgang thích!"
 
-WOLFGANG.DESCRIBE.PALEALE = "So refreshing! Wolfgang likes it!"
+WOLFGANG.DESCRIBE.PALEALE = "Thật sảng khoái! Wolfgang thích!"
 
-WOLFGANG.DESCRIBE.TEAGREEN = "Ahh... is nice."
+WOLFGANG.DESCRIBE.TEAGREEN = "Ahh... dễ chịu."
 
-WOLFGANG.DESCRIBE.TEARED = "Ahh... is nice."
+WOLFGANG.DESCRIBE.TEARED = "Ahh... dễ chịu."
 
-WOLFGANG.DESCRIBE.MEAD = "Is sweet alcohol drink!"
+WOLFGANG.DESCRIBE.MEAD = "Là đồ uống cồn ngọt!"
 
-WOLFGANG.DESCRIBE.KYNO_JELLY = "Oozes like tiny enemy I crush in hand."
+WOLFGANG.DESCRIBE.KYNO_JELLY = "Chảy nhão như kẻ địch nhỏ Wolfgang bóp trong tay."
 
-WOLFGANG.DESCRIBE.KYNO_MAYONNAISE = "Is tasty!"
+WOLFGANG.DESCRIBE.KYNO_MAYONNAISE = "Ngon!"
 
-WOLFGANG.DESCRIBE.TARTARSAUCE = "Tasty!"
+WOLFGANG.DESCRIBE.TARTARSAUCE = "Ngon!"
 
-WOLFGANG.DESCRIBE.KYNO_PICKLES = "Little pickles inside jar, ha ha."
+WOLFGANG.DESCRIBE.KYNO_PICKLES = "Đồ muối chua nhỏ trong hũ, ha ha."
 
-WOLFGANG.DESCRIBE.KYNO_WINE = "Is good wine for drinking!"
+WOLFGANG.DESCRIBE.KYNO_WINE = "Là rượu vang ngon để uống!"
 
-WOLFGANG.DESCRIBE.KYNO_JUICE = "Is good juice for drinking!"
+WOLFGANG.DESCRIBE.KYNO_JUICE = "Là nước ép ngon để uống!"
 
-WOLFGANG.DESCRIBE.KYNO_POISON_FROGLEGS = "Is danger froggy parts!"
-WOLFGANG.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "Even danger food makes Wolfgang strong."
+WOLFGANG.DESCRIBE.KYNO_POISON_FROGLEGS = "Là phần ếch nguy hiểm!"
+WOLFGANG.DESCRIBE.KYNO_POISON_FROGLEGS_COOKED = "Kể cả đồ ăn nguy hiểm cũng làm Wolfgang mạnh."
 
-WOLFGANG.DESCRIBE.POISONFROGGLEBUNWICH = "Is sandwich with tasty leg meat."
+WOLFGANG.DESCRIBE.POISONFROGGLEBUNWICH = "Là sandwich có thịt chân ngon."
 
-WOLFGANG.DESCRIBE.KYNO_BREWINGRECIPECARD = "Wolfgang can't read puny writing!"
+WOLFGANG.DESCRIBE.KYNO_BREWINGRECIPECARD = "Wolfgang không đọc được chữ nhỏ yếu!"
 
-WOLFGANG.DESCRIBE.KYNO_OIL = "Is ingredient for making food!"
+WOLFGANG.DESCRIBE.KYNO_OIL = "Là nguyên liệu để làm đồ ăn!"
 
-WOLFGANG.DESCRIBE.BERRYSUNDAE = "Well, is Sunday after all."
+WOLFGANG.DESCRIBE.BERRYSUNDAE = "Dù sao hôm nay cũng là Chủ Nhật."
 
-WOLFGANG.DESCRIBE.CHOCOLATE_BLACK = "Is tiny bar of chocolate!"
-WOLFGANG.DESCRIBE.CHOCOLATE_WHITE = "Is tiny bar of chocolate!"
+WOLFGANG.DESCRIBE.CHOCOLATE_BLACK = "Là thanh sô-cô-la nhỏ!"
+WOLFGANG.DESCRIBE.CHOCOLATE_WHITE = "Là thanh sô-cô-la nhỏ!"
 
-WOLFGANG.DESCRIBE.TRICOLORDANGO = "Is little ball of sweetness!"
+WOLFGANG.DESCRIBE.TRICOLORDANGO = "Là viên ngọt nhỏ!"
  
-WOLFGANG.DESCRIBE.FRIESFRENCH = "Tastes good and crunchy!"
+WOLFGANG.DESCRIBE.FRIESFRENCH = "Vị ngon và giòn!"
 
-WOLFGANG.DESCRIBE.PIRATERUM = "Is not safe drink!"
+WOLFGANG.DESCRIBE.PIRATERUM = "Không phải đồ uống an toàn!"
 
-WOLFGANG.DESCRIBE.TWISTEDTEQUILA = "Little drink is not mighty enough as Wolfgang!"
+WOLFGANG.DESCRIBE.TWISTEDTEQUILA = "Đồ uống nhỏ không hùng mạnh bằng Wolfgang!"
 
-WOLFGANG.DESCRIBE.ONIONRINGS = "Little onions washed in oil."
+WOLFGANG.DESCRIBE.ONIONRINGS = "Hành nhỏ tắm trong dầu."
 
-WOLFGANG.DESCRIBE.DONUTS = "Is little ball of sugar!"
-WOLFGANG.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Is little ball of sugar!"
-WOLFGANG.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Is little ball of sugar!"
+WOLFGANG.DESCRIBE.DONUTS = "Là vòng đường nhỏ!"
+WOLFGANG.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Là vòng đường nhỏ!"
+WOLFGANG.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Là vòng đường nhỏ!"
  
-WOLFGANG.DESCRIBE.CINNAMONROLL = "A very sugar little bun!"
+WOLFGANG.DESCRIBE.CINNAMONROLL = "Bánh nhỏ rất nhiều đường!"
 
-WOLFGANG.DESCRIBE.GUMMYBEARGERS = "Is little bear candy, haha!"
+WOLFGANG.DESCRIBE.GUMMYBEARGERS = "Là kẹo gấu nhỏ, haha!"
 
-WOLFGANG.DESCRIBE.PRETZEL = "Is little knot food!"
+WOLFGANG.DESCRIBE.PRETZEL = "Là đồ ăn thắt nút nhỏ!"
 
-WOLFGANG.DESCRIBE.CORNINCUP = "Bunch of corn little pieces in little cup."
+WOLFGANG.DESCRIBE.CORNINCUP = "Nhiều miếng bắp nhỏ trong cốc nhỏ."
 
-WOLFGANG.DESCRIBE.COTTONCANDY = "Is little fur of sugar!"
+WOLFGANG.DESCRIBE.COTTONCANDY = "Là lông đường nhỏ!"
 
-WOLFGANG.DESCRIBE.ROASTEDHAZELNUTS = "Hot, hot!"
+WOLFGANG.DESCRIBE.ROASTEDHAZELNUTS = "Nóng, nóng!"
 
-WOLFGANG.DESCRIBE.MONSTERMUFFIN = "Is scary little muffin!"
+WOLFGANG.DESCRIBE.MONSTERMUFFIN = "Là muffin nhỏ đáng sợ!"
 
-WOLFGANG.DESCRIBE.PINKCAKE = "Is mighty cake, like Wolfgang!"
+WOLFGANG.DESCRIBE.PINKCAKE = "Là bánh hùng mạnh, như Wolfgang!"
 
-WOLFGANG.DESCRIBE.CHIPSBAG = "Is even better now!"
+WOLFGANG.DESCRIBE.CHIPSBAG = "Giờ còn ngon hơn!"
 
-WOLFGANG.DESCRIBE.LITTLEBREAD = "Is bread."
+WOLFGANG.DESCRIBE.LITTLEBREAD = "Là bánh mì."
 
-WOLFGANG.DESCRIBE.HOTHOUND = "Is little bread with sausage and ketchup."
+WOLFGANG.DESCRIBE.HOTHOUND = "Là bánh mì nhỏ với xúc xích và xốt cà."
 
-WOLFGANG.DESCRIBE.MILKSHAKE = "Is mighty milky cup!"
-WOLFGANG.DESCRIBE.MILKSHAKE_PRISMATIC = "Is mighty milky cup!"
+WOLFGANG.DESCRIBE.MILKSHAKE = "Là cốc sữa hùng mạnh!"
+WOLFGANG.DESCRIBE.MILKSHAKE_PRISMATIC = "Là cốc sữa hùng mạnh!"
 
-WOLFGANG.DESCRIBE.NACHOS = "Wolfgang fingies are a mess!"
+WOLFGANG.DESCRIBE.NACHOS = "Ngón tay Wolfgang bẩn hết!"
 
-WOLFGANG.DESCRIBE.BANANA_PUDDING = "Is little bowl of pudding, ha ha!"
+WOLFGANG.DESCRIBE.BANANA_PUDDING = "Là bát pudding nhỏ, ha ha!"
 
-WOLFGANG.DESCRIBE.SEA_PUDDING = "Is little bowl of pudding, ha ha!"
+WOLFGANG.DESCRIBE.SEA_PUDDING = "Là bát pudding nhỏ, ha ha!"
 
-WOLFGANG.DESCRIBE.TOM_KHA_SOUP = "Mighty soup will make Wolfgang even mightier!"
+WOLFGANG.DESCRIBE.TOM_KHA_SOUP = "Súp hùng mạnh sẽ làm Wolfgang hùng mạnh hơn!"
 
-WOLFGANG.DESCRIBE.MINERTREAT = "Is little child treat."
+WOLFGANG.DESCRIBE.MINERTREAT = "Là món quà nhỏ cho trẻ con."
 
-WOLFGANG.DESCRIBE.RADISHSALAD = "Is not spinach, but maybe still work!"
+WOLFGANG.DESCRIBE.RADISHSALAD = "Không phải rau chân vịt, nhưng chắc vẫn có ích!"
 
-WOLFGANG.DESCRIBE.PUMPKIN_SOUP = "It will fuel powerful punches!"
+WOLFGANG.DESCRIBE.PUMPKIN_SOUP = "Nó sẽ tiếp sức cho cú đấm hùng mạnh!"
 
-WOLFGANG.DESCRIBE.ALGAE_SOUP = "It will fuel powerful punches!"
+WOLFGANG.DESCRIBE.ALGAE_SOUP = "Nó sẽ tiếp sức cho cú đấm hùng mạnh!"
 
-WOLFGANG.DESCRIBE.PARZNIP_SOUP = "It will fuel powerful punches!"
+WOLFGANG.DESCRIBE.PARZNIP_SOUP = "Nó sẽ tiếp sức cho cú đấm hùng mạnh!"
 
-WOLFGANG.DESCRIBE.NETTLEMEATED = "Meaty snack clears Wolfgang's mighty nostrils."
+WOLFGANG.DESCRIBE.NETTLEMEATED = "Đồ ăn vặt có thịt làm thông mũi hùng mạnh của Wolfgang."
 
-WOLFGANG.DESCRIBE.KYNO_SUGAR = "Is yum!"
+WOLFGANG.DESCRIBE.KYNO_SUGAR = "Ngon!"
 
-WOLFGANG.DESCRIBE.KYNO_BOTTLECAP = "Is from that drink!"
+WOLFGANG.DESCRIBE.KYNO_BOTTLECAP = "Là từ đồ uống đó!"
 
-WOLFGANG.DESCRIBE.NUKACOLA = "Ha ha, is funny fuzzy drink!"
-WOLFGANG.DESCRIBE.NUKACOLA_QUANTUM = "Ha ha, is funny fuzzy drink!"
+WOLFGANG.DESCRIBE.NUKACOLA = "Ha ha, là nước uống sủi vui!"
+WOLFGANG.DESCRIBE.NUKACOLA_QUANTUM = "Ha ha, là nước uống sủi vui!"
 
-WOLFGANG.DESCRIBE.LIVINGSANDWICH = "Unhealthy food!"
+WOLFGANG.DESCRIBE.LIVINGSANDWICH = "Đồ ăn không khỏe!"
 
-WOLFGANG.DESCRIBE.DURIANSPLIT = "Not bad at all."
+WOLFGANG.DESCRIBE.DURIANSPLIT = "Không tệ chút nào."
 
-WOLFGANG.DESCRIBE.DURIANSOUP = "Is food little for Wolfgang."
+WOLFGANG.DESCRIBE.DURIANSOUP = "Đồ ăn hơi ít cho Wolfgang."
 
-WOLFGANG.DESCRIBE.DURIANMEATED = "Spiky smelly meal!"
+WOLFGANG.DESCRIBE.DURIANMEATED = "Bữa ăn gai góc hôi hôi!"
 
-WOLFGANG.DESCRIBE.DURIANCHICKEN = "Is big veggie in turkey format."
+WOLFGANG.DESCRIBE.DURIANCHICKEN = "Là rau củ to trong hình dạng gà tây."
 
-WOLFGANG.DESCRIBE.LUNARSOUP = "Is smooth soup of moon shrooms!"
+WOLFGANG.DESCRIBE.LUNARSOUP = "Là súp mịn từ nấm mặt trăng!"
 
-WOLFGANG.DESCRIBE.PURPLEWOBSTERSOUP = "Is fancy soup of tiny wobster!"
+WOLFGANG.DESCRIBE.PURPLEWOBSTERSOUP = "Là súp sang chảnh từ Wobster nhỏ!"
 
-WOLFGANG.DESCRIBE.WOBSTERMONSTER = "Wolfgang will eat it anyway!"
+WOLFGANG.DESCRIBE.WOBSTERMONSTER = "Wolfgang vẫn sẽ ăn nó!"
 
-WOLFGANG.DESCRIBE.SPIDERCAKE = "Is cake of tiny spiders!"
+WOLFGANG.DESCRIBE.SPIDERCAKE = "Là bánh từ nhện nhỏ!"
 
-WOLFGANG.DESCRIBE.SUGARBOMBS = "Tiny bombs."
+WOLFGANG.DESCRIBE.SUGARBOMBS = "Bom nhỏ."
 
-WOLFGANG.DESCRIBE.BERRYBOMBS = "Oozes like tiny enemy I crush in hand."
+WOLFGANG.DESCRIBE.BERRYBOMBS = "Chảy nhão như kẻ địch nhỏ Wolfgang bóp trong tay."
 
-WOLFGANG.DESCRIBE.ONIGIRIS = "Is little triangles of rice!"
+WOLFGANG.DESCRIBE.ONIGIRIS = "Là tam giác cơm nhỏ!"
 
-WOLFGANG.DESCRIBE.OMURICE = "Crunchy."
+WOLFGANG.DESCRIBE.OMURICE = "Giòn."
 
-WOLFGANG.DESCRIBE.PAELLA = "Little fishies with rice."
+WOLFGANG.DESCRIBE.PAELLA = "Cá nhỏ với cơm."
 
-WOLFGANG.DESCRIBE.RISOTTO = "Little mushrooms with rice, Wolfgang likes it!"
+WOLFGANG.DESCRIBE.RISOTTO = "Nấm nhỏ với cơm, Wolfgang thích!"
 
 WOLFGANG.DESCRIBE.RICESAKE = "Oohh.."
 
-WOLFGANG.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Needs transplant!"
+WOLFGANG.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Cần trồng lại!"
 
 WOLFGANG.DESCRIBE.KYNO_PINEAPPLEBUSH = 
 {
-	GENERIC = "Spiky fruit!",
-	PICKED = "No fruit right now.",
-	WITHERED = "Bush is weak.",
-	BURNING = "Fire eats bush!",
+	GENERIC = "Trái cây gai góc!",
+	PICKED = "Giờ không có quả.",
+	WITHERED = "Bụi cây yếu.",
+	BURNING = "Lửa ăn bụi cây!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_PINEAPPLE = "Wolfgang will crush with bare hands."
-WOLFGANG.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Wolfgang likes it."
-WOLFGANG.DESCRIBE.KYNO_PINEAPPLE_COOKED = "Smells nice."
+WOLFGANG.DESCRIBE.KYNO_PINEAPPLE = "Wolfgang sẽ bóp nát bằng tay không."
+WOLFGANG.DESCRIBE.KYNO_PINEAPPLE_HALVED = "Wolfgang thích nó."
+WOLFGANG.DESCRIBE.KYNO_PINEAPPLE_COOKED = "Mùi thơm."
 
-WOLFGANG.DESCRIBE.PIZZA_TROPICAL = "Is little pizza with slice of pineapple!"
+WOLFGANG.DESCRIBE.PIZZA_TROPICAL = "Là pizza nhỏ có lát dứa!"
 
-WOLFGANG.DESCRIBE.PINACOLADA = "Cold!"
+WOLFGANG.DESCRIBE.PINACOLADA = "Lạnh!"
 
-WOLFGANG.DESCRIBE.CHIMAS = "Strange brew, but Wolfgang drink anyway!"
+WOLFGANG.DESCRIBE.CHIMAS = "Mẻ ủ kỳ lạ, nhưng Wolfgang vẫn uống!"
 
 WOLFGANG.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
 {
-	OFF = "Sprayer is sleeping.",
-	ON = "Weeee! Wolfgang play in sprinkler!",
+	OFF = "Máy phun đang ngủ.",
+	ON = "Weeee! Wolfgang chơi trong vòi phun!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_FOODSACK = "Wolfgang can carry even more things!"
+WOLFGANG.DESCRIBE.KYNO_FOODSACK = "Wolfgang có thể mang thêm nhiều thứ!"
 
-WOLFGANG.DESCRIBE.GUMMYWORMS = "Is little worms of sugar."
+WOLFGANG.DESCRIBE.GUMMYWORMS = "Là sâu nhỏ bằng đường."
 
-WOLFGANG.DESCRIBE.SMORES = "Is little marshmallow cookie."
+WOLFGANG.DESCRIBE.SMORES = "Là bánh quy kẹo dẻo nhỏ."
 
-WOLFGANG.DESCRIBE.NUKASHINE = "Strange drink makes Wolfgang mind go boom."
+WOLFGANG.DESCRIBE.NUKASHINE = "Đồ uống lạ làm đầu Wolfgang nổ bùm."
 
 WOLFGANG.DESCRIBE.ANTSLOG = "Eek!"
 
-WOLFGANG.DESCRIBE.KYNO_WORM_BONE = "Wolfgang win."
+WOLFGANG.DESCRIBE.KYNO_WORM_BONE = "Wolfgang thắng."
 
-WOLFGANG.DESCRIBE.SPOOKY_BRAIN_NOODLES = "Little brain muscles."
-WOLFGANG.DESCRIBE.SPOOKY_BURGERZILLA = "Is little monster burger, Wolfgang will crush!"
-WOLFGANG.DESCRIBE.SPOOKY_DEADBREAD = "Little scary bread."
-WOLFGANG.DESCRIBE.SPOOKY_JELLYBEANS = "Creepy!"
-WOLFGANG.DESCRIBE.SPOOKY_POPSICLE = "Tastes funny."
-WOLFGANG.DESCRIBE.SPOOKY_PUMPKINCREAM = "Is tasty little pumpkin with cream."
-WOLFGANG.DESCRIBE.SPOOKY_SKULLCANDY = "Is little spooky candy."
-WOLFGANG.DESCRIBE.SPOOKY_TACODILE = "is little taco monster, haha."
+WOLFGANG.DESCRIBE.SPOOKY_BRAIN_NOODLES = "Cơ bắp não nhỏ."
+WOLFGANG.DESCRIBE.SPOOKY_BURGERZILLA = "Là hamburger quái vật nhỏ, Wolfgang sẽ nghiền!"
+WOLFGANG.DESCRIBE.SPOOKY_DEADBREAD = "Bánh mì đáng sợ nhỏ."
+WOLFGANG.DESCRIBE.SPOOKY_JELLYBEANS = "Rợn quá!"
+WOLFGANG.DESCRIBE.SPOOKY_POPSICLE = "Vị lạ."
+WOLFGANG.DESCRIBE.SPOOKY_PUMPKINCREAM = "Là bí ngô nhỏ ngon với kem."
+WOLFGANG.DESCRIBE.SPOOKY_SKULLCANDY = "Là kẹo ma quái nhỏ."
+WOLFGANG.DESCRIBE.SPOOKY_TACODILE = "là quái vật taco nhỏ, haha."
 
-WOLFGANG.DESCRIBE.BUTTER_BEEFALO = "Salty little block of butter."
-WOLFGANG.DESCRIBE.BUTTER_GOAT = "Is butter from little goats, haha!"
-WOLFGANG.DESCRIBE.BUTTER_KOALEFANT = "Is little butter from koalefants."
+WOLFGANG.DESCRIBE.BUTTER_BEEFALO = "Khối bơ nhỏ mặn."
+WOLFGANG.DESCRIBE.BUTTER_GOAT = "Là bơ từ dê nhỏ, haha!"
+WOLFGANG.DESCRIBE.BUTTER_KOALEFANT = "Là bơ nhỏ từ Koalefant."
 
-WOLFGANG.DESCRIBE.SPICE_CURE = "Will help Wolfgang keep food safe!"
-WOLFGANG.DESCRIBE.SPICE_COLD = "Is cold!"
-WOLFGANG.DESCRIBE.SPICE_FIRE = "Is very hot!"
-WOLFGANG.DESCRIBE.SPICE_FED = "Will help Wolfgang achieve mightiness!"
-WOLFGANG.DESCRIBE.SPICE_MIND = "For soothing Wolfgang head!"
+WOLFGANG.DESCRIBE.SPICE_CURE = "Sẽ giúp Wolfgang giữ đồ ăn an toàn!"
+WOLFGANG.DESCRIBE.SPICE_COLD = "Lạnh!"
+WOLFGANG.DESCRIBE.SPICE_FIRE = "Rất nóng!"
+WOLFGANG.DESCRIBE.SPICE_FED = "Sẽ giúp Wolfgang đạt tới hùng mạnh!"
+WOLFGANG.DESCRIBE.SPICE_MIND = "Để xoa dịu đầu Wolfgang!"
 
-WOLFGANG.DESCRIBE.SUGARFLYMUFFIN = "Wolfgang did not know about bug muffin. I will taste."
+WOLFGANG.DESCRIBE.SUGARFLYMUFFIN = "Wolfgang không biết bánh muffin bọ. Wolfgang sẽ nếm thử."
 
-WOLFGANG.DESCRIBE.EELTACOS = "Wolfgang hope is not too spicy."
+WOLFGANG.DESCRIBE.EELTACOS = "Wolfgang hy vọng không quá cay."
 
-WOLFGANG.DESCRIBE.MEATSKILLET = "Too spicy!"
+WOLFGANG.DESCRIBE.MEATSKILLET = "Quá cay!"
 
-WOLFGANG.DESCRIBE.MEATWALTZ = "Is almost raw meat with bread."
+WOLFGANG.DESCRIBE.MEATWALTZ = "Là thịt gần sống với bánh mì."
 
-WOLFGANG.DESCRIBE.COMPLETEBREAKFAST = "The very least to start my mornings."
+WOLFGANG.DESCRIBE.COMPLETEBREAKFAST = "Ít nhất cũng đủ để bắt đầu buổi sáng của Wolfgang."
 
-WOLFGANG.DESCRIBE.DUMPLINGS = "Wolfgang loves dumplings."
+WOLFGANG.DESCRIBE.DUMPLINGS = "Wolfgang thích bánh bao."
 
-WOLFGANG.DESCRIBE.WARLYICEDTEA = "Is cool. Like Wolfgang."
+WOLFGANG.DESCRIBE.WARLYICEDTEA = "Nó mát. Như Wolfgang."
 
-WOLFGANG.DESCRIBE.WARLYTEA = "Wolfgang love tea time!"
+WOLFGANG.DESCRIBE.WARLYTEA = "Wolfgang thích giờ uống trà!"
 
-WOLFGANG.DESCRIBE.KYNO_TEALEAF = "Is little leaf for tea making."
+WOLFGANG.DESCRIBE.KYNO_TEALEAF = "Là lá nhỏ để pha trà."
 
-WOLFGANG.DESCRIBE.KYNO_ITEMSLICER = "Ah! Very good!"
-WOLFGANG.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Ah! Very good!"
+WOLFGANG.DESCRIBE.KYNO_ITEMSLICER = "Ah! Rất tốt!"
+WOLFGANG.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Ah! Rất tốt!"
 
-WOLFGANG.DESCRIBE.COXINHA = "Is little snack."
+WOLFGANG.DESCRIBE.COXINHA = "Là đồ ăn vặt nhỏ."
 
-WOLFGANG.DESCRIBE.LAZYDESSERT = "Rock candy."
+WOLFGANG.DESCRIBE.LAZYDESSERT = "Kẹo đá."
 
-WOLFGANG.DESCRIBE.CRABKINGFEAST = "Is huge!"
+WOLFGANG.DESCRIBE.CRABKINGFEAST = "Nó khổng lồ!"
 
-WOLFGANG.DESCRIBE.PIENAPPLE = "Strange! Wolfgang can't see any apples..."
+WOLFGANG.DESCRIBE.PIENAPPLE = "Lạ! Wolfgang không thấy quả táo nào..."
 
-WOLFGANG.DESCRIBE.JAWSBREAKER = "Is little treat for sharks."
+WOLFGANG.DESCRIBE.JAWSBREAKER = "Là món quà nhỏ cho cá mập."
 
-WOLFGANG.DESCRIBE.AVOCADOTOAST = "Is little toast."
+WOLFGANG.DESCRIBE.AVOCADOTOAST = "Là bánh mì nướng nhỏ."
 
-WOLFGANG.DESCRIBE.RICEPUDDING = "Wolfgang likes rice blend!"
+WOLFGANG.DESCRIBE.RICEPUDDING = "Wolfgang thích cơm trộn!"
 
-WOLFGANG.DESCRIBE.SHARKSUSHI = "Wolfgang cannot wait to eat!"
+WOLFGANG.DESCRIBE.SHARKSUSHI = "Wolfgang không chờ được để ăn!"
 
-WOLFGANG.DESCRIBE.WOBSTERBREADED = "No more pinching."
+WOLFGANG.DESCRIBE.WOBSTERBREADED = "Không còn kẹp nữa."
 
-WOLFGANG.DESCRIBE.LAZYPURRITO = "Is little kitten burrito."
+WOLFGANG.DESCRIBE.LAZYPURRITO = "Là burrito mèo nhỏ."
 
-WOLFGANG.DESCRIBE.HORCHATA = "Freezing!"
+WOLFGANG.DESCRIBE.HORCHATA = "Lạnh cóng!"
 
-WOLFGANG.DESCRIBE.WOBSTERCOCKTAIL = "Is bitter wobster drink."
+WOLFGANG.DESCRIBE.WOBSTERCOCKTAIL = "Là đồ uống Wobster đắng."
 
-WOLFGANG.DESCRIBE.LAVAEEGGBOILED = "Ouch, hot, hot!"
+WOLFGANG.DESCRIBE.LAVAEEGGBOILED = "Ouch, nóng, nóng!"
 
-WOLFGANG.DESCRIBE.POMEGRANATETEA = "Is cool. Like Wolfgang."
+WOLFGANG.DESCRIBE.POMEGRANATETEA = "Nó mát. Như Wolfgang."
 
-WOLFGANG.DESCRIBE.TIRAMISU = "Geese drink."
+WOLFGANG.DESCRIBE.TIRAMISU = "Đồ uống ngỗng."
 
-WOLFGANG.DESCRIBE.TOADSTOOLCOLA = "Wolfgang would not like to drink that."
+WOLFGANG.DESCRIBE.TOADSTOOLCOLA = "Wolfgang không muốn uống thứ đó."
 
-WOLFGANG.DESCRIBE.TEPACHE = "Is very sweet fruit drink."
+WOLFGANG.DESCRIBE.TEPACHE = "Là đồ uống trái cây rất ngọt."
 
-WOLFGANG.DESCRIBE.LUNARTEQUILA = "Is powerful drink!"
+WOLFGANG.DESCRIBE.LUNARTEQUILA = "Là đồ uống mạnh!"
 
-WOLFGANG.DESCRIBE.MIMICMOSA = "Is sneaky drink."
+WOLFGANG.DESCRIBE.MIMICMOSA = "Là đồ uống lén lút."
 
-WOLFGANG.DESCRIBE.POMEGRANATEPIE = "Is hearthy red pie!"
+WOLFGANG.DESCRIBE.POMEGRANATEPIE = "Là bánh đỏ bổ dưỡng!"
 
-WOLFGANG.DESCRIBE.PINEAPPLECAKE = "Is big pineapple cake."
+WOLFGANG.DESCRIBE.PINEAPPLECAKE = "Là bánh dứa to."
 
-WOLFGANG.DESCRIBE.PASTY_MEAT = "Is slippery."
-WOLFGANG.DESCRIBE.PASTY_CHEESE = "Is slippery."
+WOLFGANG.DESCRIBE.PASTY_MEAT = "Nó trơn."
+WOLFGANG.DESCRIBE.PASTY_CHEESE = "Nó trơn."
 
-WOLFGANG.DESCRIBE.BRIGADEIRO = "Is little ball of chocolate!"
+WOLFGANG.DESCRIBE.BRIGADEIRO = "Là viên sô-cô-la nhỏ!"
 
-WOLFGANG.DESCRIBE.REGULARLASAGNA = "Noodle and meat!"
+WOLFGANG.DESCRIBE.REGULARLASAGNA = "Mì và thịt!"
 
-WOLFGANG.DESCRIBE.FLTSANDWICH = "Frog sandwich, yum!"
+WOLFGANG.DESCRIBE.FLTSANDWICH = "Sandwich ếch, ngon!"
 
-WOLFGANG.DESCRIBE.RICEANDBEANS = "Is healthy cooked little beans!"
+WOLFGANG.DESCRIBE.RICEANDBEANS = "Là đậu nhỏ nấu chín khỏe mạnh!"
 
 WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 {
-	GENERIC = "Tiny house needs mighty repairs!",
-	REPAIRED = "Now is strong little house.",
-	OCCUPIED = "Wolfgang would not sleep in weak house.",
-	OCCUPIED_REPAIRED = "Pig man sleeps safely now.",
+	GENERIC = "Ngôi nhà nhỏ cần sửa chữa lớn!",
+	REPAIRED = "Giờ là ngôi nhà nhỏ mạnh mẽ.",
+	OCCUPIED = "Wolfgang sẽ không ngủ trong nhà yếu đuối.",
+	OCCUPIED_REPAIRED = "Người heo giờ ngủ an toàn.",
 }
 
 WOLFGANG.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
-	GENERIC = "Tiny mushrooms hiding in ground! Wolfgang found them!",
-	PICKED = "Wolfgang wants more!",
-	BURNING = "Fire ruin good food!",
+	GENERIC = "Nấm nhỏ trốn dưới đất! Wolfgang tìm thấy!",
+	PICKED = "Wolfgang muốn thêm!",
+	BURNING = "Lửa phá đồ ăn ngon!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_TRUFFLES = "Strong smell! Wolfgang hungry now."
-WOLFGANG.DESCRIBE.KYNO_TRUFFLES_COOKED = "Mmm! Strong smell and strong taste!"
+WOLFGANG.DESCRIBE.KYNO_TRUFFLES = "Mùi mạnh! Giờ Wolfgang đói."
+WOLFGANG.DESCRIBE.KYNO_TRUFFLES_COOKED = "Mmm! Mùi mạnh và vị mạnh!"
 
 WOLFGANG.DESCRIBE.KYNO_ITEMSHOWCASER = 
 {
-	EMPTY = "Wolfgang show food! Make Wolfgang proud and hungry!",
-	FULL = "Wolfgang made mighty meal!",
+	EMPTY = "Wolfgang trưng đồ ăn! Làm Wolfgang tự hào và đói!",
+	FULL = "Wolfgang làm bữa ăn hùng mạnh!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_SPORECAP = "Tiny mushroom looks sick!"
-WOLFGANG.DESCRIBE.KYNO_SPORECAP_COOKED = "Wolfgang make sick mushroom less sick!"
+WOLFGANG.DESCRIBE.KYNO_SPORECAP = "Nấm nhỏ trông bệnh!"
+WOLFGANG.DESCRIBE.KYNO_SPORECAP_COOKED = "Wolfgang làm nấm bệnh bớt bệnh!"
 
-WOLFGANG.DESCRIBE.KYNO_SPORECAP_DARK = "Bad mushroom! Make Wolfgang sick!"
-WOLFGANG.DESCRIBE.KYNO_SPORECAP_DARK_COOKED = "Wolfgang no eat this."
+WOLFGANG.DESCRIBE.KYNO_SPORECAP_DARK = "Nấm xấu! Làm Wolfgang bệnh!"
+WOLFGANG.DESCRIBE.KYNO_SPORECAP_DARK_COOKED = "Wolfgang không ăn cái này."
 
-WOLFGANG.DESCRIBE.KYNO_GOLDENAPPLE = "Mighty apple!"
+WOLFGANG.DESCRIBE.KYNO_GOLDENAPPLE = "Táo hùng mạnh!"
 
-WOLFGANG.DESCRIBE.TRUFFLESGRINDER = "Wolfgang feel strong after eating fancy dirt sandwich!"
+WOLFGANG.DESCRIBE.TRUFFLESGRINDER = "Wolfgang thấy mạnh sau khi ăn sandwich đất sang chảnh!"
 
-WOLFGANG.DESCRIBE.SPORECAPPIE = "Wolfgang not sure if food or poison..."
+WOLFGANG.DESCRIBE.SPORECAPPIE = "Wolfgang không chắc là đồ ăn hay độc..."
 
-WOLFGANG.DESCRIBE.SPORECAP_SKEWERS = "Wolfgang like mushroom on stick! Good snack!"
+WOLFGANG.DESCRIBE.SPORECAP_SKEWERS = "Wolfgang thích nấm trên que! Đồ ăn vặt ngon!"
 
-WOLFGANG.DESCRIBE.TRUFFLEOIL = "Tiny bottle make big smell! Wolfgang not sure if hungry or scared."
+WOLFGANG.DESCRIBE.TRUFFLEOIL = "Chai nhỏ tạo mùi lớn! Wolfgang không chắc đói hay sợ."
 
-WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "If Wolfgang build it, they will come."
-WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Wolfgang will make big pond for tiny fishes!"
+WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Nếu Wolfgang xây nó, chúng sẽ tới."
+WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Wolfgang sẽ làm ao to cho cá nhỏ!"
 
 WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT = 
 {
-	GENERIC = "Strong fish live here!",
-	FUEL_HIGH = "Fish are very full!",
-	FUEL_MED = "Fish eat good.",
-	FUEL_LOW = "Fish need more food.",
-	EMPTY = "No food for fish.",
+	GENERIC = "Cá mạnh sống ở đây!",
+	FUEL_HIGH = "Cá rất no!",
+	FUEL_MED = "Cá ăn tốt.",
+	FUEL_LOW = "Cá cần thêm đồ ăn.",
+	EMPTY = "Không có đồ ăn cho cá.",
 }
 
-WOLFGANG.DESCRIBE.AGEDROE = "Little eggs make Wolfgang feel like big, important man."
-WOLFGANG.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Tiny eggs make Wolfgang feel big and fancy!"
+WOLFGANG.DESCRIBE.AGEDROE = "Trứng nhỏ làm Wolfgang thấy mình là người to lớn, quan trọng."
+WOLFGANG.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Trứng nhỏ làm Wolfgang thấy to và sang!"
 
-WOLFGANG.DESCRIBE.KYNO_SWORDFISH_BLUE = "Fish has forgotten how to swim! Wolfgang feels bad for weak fish."
+WOLFGANG.DESCRIBE.KYNO_SWORDFISH_BLUE = "Cá quên cách bơi! Wolfgang thấy tội cá yếu."
 
-WOLFGANG.DESCRIBE.KYNO_JELLYFISH = "If I punch jelly, it will become jam."
-WOLFGANG.DESCRIBE.KYNO_JELLYFISH_DEAD = "It stood no chance against Wolfgang."
-WOLFGANG.DESCRIBE.KYNO_JELLYFISH_COOKED = "Jelly looks tasty now."
-WOLFGANG.DESCRIBE.KYNO_JELLYFISH_DRIED = "Jerky is tough, like Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_JELLYFISH = "Nếu Wolfgang đấm thạch, nó sẽ thành mứt."
+WOLFGANG.DESCRIBE.KYNO_JELLYFISH_DEAD = "Nó không có cơ hội trước Wolfgang."
+WOLFGANG.DESCRIBE.KYNO_JELLYFISH_COOKED = "Thạch giờ trông ngon."
+WOLFGANG.DESCRIBE.KYNO_JELLYFISH_DRIED = "Khô dai, như Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_JELLYFISH_RAINBOW = "Very pretty jelly!"
-WOLFGANG.DESCRIBE.KYNO_JELLYFISH_RAINBOW_DEAD = "Good looking jelly is no look so good."
-WOLFGANG.DESCRIBE.KYNO_JELLYFISH_RAINBOW_COOKED = "Food is many pretty colors!"
+WOLFGANG.DESCRIBE.KYNO_JELLYFISH_RAINBOW = "Thạch rất đẹp!"
+WOLFGANG.DESCRIBE.KYNO_JELLYFISH_RAINBOW_DEAD = "Thạch đẹp giờ không đẹp lắm."
+WOLFGANG.DESCRIBE.KYNO_JELLYFISH_RAINBOW_COOKED = "Đồ ăn có nhiều màu đẹp!"
 
-WOLFGANG.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Is just a bottle."
+WOLFGANG.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Chỉ là cái chai."
 
-WOLFGANG.DESCRIBE.KYNO_OCEANTRAP = "Little fish does not stand a chance."
+WOLFGANG.DESCRIBE.KYNO_OCEANTRAP = "Cá nhỏ không có cơ hội."
 
-WOLFGANG.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Tiny night fish. Wolfgang could eat many!"
-WOLFGANG.DESCRIBE.OCEANFISH_PUFFERFISH = "Is small fish, but very spiky! Wolfgang must be careful!"
-WOLFGANG.DESCRIBE.OCEANFISH_STURGEON = "Strong fish! Wolfgang respects strong fish!"
+WOLFGANG.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Cá đêm nhỏ. Wolfgang ăn được nhiều!"
+WOLFGANG.DESCRIBE.OCEANFISH_PUFFERFISH = "Là cá nhỏ, nhưng rất gai! Wolfgang phải cẩn thận!"
+WOLFGANG.DESCRIBE.OCEANFISH_STURGEON = "Cá mạnh! Wolfgang tôn trọng cá mạnh!"
 
-WOLFGANG.DESCRIBE.KYNO_SWORDFISH = "Wolfgang challenges you to duel!"
-WOLFGANG.DESCRIBE.KYNO_SWORDFISH_DEAD = "It was a good fight."
+WOLFGANG.DESCRIBE.KYNO_SWORDFISH = "Wolfgang thách ngươi đấu tay đôi!"
+WOLFGANG.DESCRIBE.KYNO_SWORDFISH_DEAD = "Đó là trận đấu hay."
 
-WOLFGANG.DESCRIBE.SWORDFISHFEAST = "Wolfgang feel mighty after eating mighty fish!"
+WOLFGANG.DESCRIBE.SWORDFISHFEAST = "Wolfgang thấy hùng mạnh sau khi ăn cá hùng mạnh!"
 
-WOLFGANG.DESCRIBE.KYNO_DOGFISH = "Face me, fish!"
-WOLFGANG.DESCRIBE.KYNO_DOGFISH_DEAD = "Is dead."
+WOLFGANG.DESCRIBE.KYNO_DOGFISH = "Đối mặt Wolfgang đi, cá!"
+WOLFGANG.DESCRIBE.KYNO_DOGFISH_DEAD = "Nó chết rồi."
 
-WOLFGANG.DESCRIBE.KYNO_SPOILED_FISH_LARGE = "Is good no more."
+WOLFGANG.DESCRIBE.KYNO_SPOILED_FISH_LARGE = "Không còn ngon nữa."
 
-WOLFGANG.DESCRIBE.WOBSTER_MONKEYISLAND = "Tiny gold shell creature! Wolfgang will eat you later."
-WOLFGANG.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD = "Is ready for pot now!"
-WOLFGANG.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD_COOKED = "Tiny sea bug is mighty tasty!"
+WOLFGANG.DESCRIBE.WOBSTER_MONKEYISLAND = "Sinh vật vỏ vàng nhỏ! Wolfgang sẽ ăn ngươi sau."
+WOLFGANG.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD = "Giờ sẵn sàng vào nồi!"
+WOLFGANG.DESCRIBE.WOBSTER_MONKEYISLAND_DEAD_COOKED = "Bọ biển nhỏ ngon hùng mạnh!"
 
-WOLFGANG.DESCRIBE.KYNO_PUFFERMONSTER = "Little fish so angry! Wolfgang show who is big fish!"
+WOLFGANG.DESCRIBE.KYNO_PUFFERMONSTER = "Cá nhỏ giận dữ! Wolfgang cho xem ai là cá lớn!"
 
-WOLFGANG.DESCRIBE.KYNO_WHALE_OCEAN_BUBBLES = "Large fishie is underneath."
-WOLFGANG.DESCRIBE.KYNO_WHALE_BLUE_OCEAN = "I will eat you!"
-WOLFGANG.DESCRIBE.KYNO_WHALE_WHITE_OCEAN = "Great white! Fight Wolfgang!"
-WOLFGANG.DESCRIBE.KYNO_WHALE_OCEAN_CARCASS = "Well fought, large fish!"
+WOLFGANG.DESCRIBE.KYNO_WHALE_OCEAN_BUBBLES = "Cá lớn ở bên dưới."
+WOLFGANG.DESCRIBE.KYNO_WHALE_BLUE_OCEAN = "Wolfgang sẽ ăn ngươi!"
+WOLFGANG.DESCRIBE.KYNO_WHALE_WHITE_OCEAN = "Trắng vĩ đại! Đánh Wolfgang đi!"
+WOLFGANG.DESCRIBE.KYNO_WHALE_OCEAN_CARCASS = "Đánh tốt lắm, cá lớn!"
 
-WOLFGANG.DESCRIBE.KYNO_BLUBBER = "Is not muscle."
+WOLFGANG.DESCRIBE.KYNO_BLUBBER = "Không phải cơ bắp."
 
-WOLFGANG.DESCRIBE.KYNO_FISHMEAT_SMALL_DRIED = "Tiny snack for mighty Wolfgang!"
-WOLFGANG.DESCRIBE.KYNO_FISHMEAT_DRIED = "Good food for strong muscles!"
+WOLFGANG.DESCRIBE.KYNO_FISHMEAT_SMALL_DRIED = "Đồ ăn vặt nhỏ cho Wolfgang hùng mạnh!"
+WOLFGANG.DESCRIBE.KYNO_FISHMEAT_DRIED = "Đồ ăn tốt cho cơ bắp mạnh!"
 
-WOLFGANG.DESCRIBE.MONKEYISLANDMEAL = "Strong food for weak monkey curse!"
+WOLFGANG.DESCRIBE.MONKEYISLANDMEAL = "Đồ ăn mạnh cho lời nguyền khỉ yếu!"
 
-WOLFGANG.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Is small and harmless."
-WOLFGANG.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Haha. Rock is bald."
-WOLFGANG.DESCRIBE.KYNO_BRAINROCK_CORAL = "Heh heh. It squish under Wolfgang's touch."
+WOLFGANG.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Nó nhỏ và vô hại."
+WOLFGANG.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Haha. Đá bị hói."
+WOLFGANG.DESCRIBE.KYNO_BRAINROCK_CORAL = "Heh heh. Nó mềm dưới tay Wolfgang."
 
 WOLFGANG.DESCRIBE.KYNO_BRAINROCK_ROCK = 
 {
-	GENERIC = "Wolfgang's brain will punch this brain.",
-	PICKED = "Rock is tired.",
+	GENERIC = "Não Wolfgang sẽ đấm não này.",
+	PICKED = "Đá mệt rồi.",
 }
 
-WOLFGANG.DESCRIBE.BRAINMETTERSOUP = "Soup has little alphabet, haha."
+WOLFGANG.DESCRIBE.BRAINMETTERSOUP = "Súp có chữ nhỏ, haha."
 
 WOLFGANG.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
 {
-	GENERIC = "Strong creature! Give Wolfgang many good things!",
-	SLEEPING = "King is sleeping.",
+	GENERIC = "Sinh vật mạnh! Cho Wolfgang nhiều đồ tốt!",
+	SLEEPING = "Vua đang ngủ.",
 }
 
-WOLFGANG.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Give Wolfgang your treasures!"
+WOLFGANG.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Đưa kho báu cho Wolfgang!"
 
 WOLFGANG.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
 {
-	GENERIC = "Is bone. I like it.",
-	WAITING = "Bone looking way skinny.",
+	GENERIC = "Là xương. Wolfgang thích.",
+	WAITING = "Xương trông gầy quá.",
 }
 
-WOLFGANG.DESCRIBE.KYNO_PACKIMBAGGIMS = "Hello, robust friend!"
+WOLFGANG.DESCRIBE.KYNO_PACKIMBAGGIMS = "Chào bạn khỏe mạnh!"
 
-WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Wolfgang will make the mightiest cake of all time!"
-WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_STAGE = "Wolfgang cake looking pretty strong."
-WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE = "Is mighty cake!"
-WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Tiny fire sticks for big cake!"
-WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Is making Wolfgang think of friends."
-WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Is tiny cake slice... but Wolfgang still happy!"
-WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Wolfgang like party balloons! They make happy!"
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_EMPTY_CONSTRUCTION = "Wolfgang sẽ làm cái bánh hùng mạnh nhất mọi thời đại!"
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_STAGE = "Bánh Wolfgang trông khá mạnh."
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE = "Là bánh hùng mạnh!"
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CANDLE = "Que lửa nhỏ cho bánh to!"
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Nó làm Wolfgang nghĩ tới bạn bè."
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Là lát bánh nhỏ... nhưng Wolfgang vẫn vui!"
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Wolfgang thích bóng tiệc! Chúng làm vui!"
 
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
 {
-	GENERIC = "Wolfgang likes big popcorn!",
-	FUEL_HIGH = "Plenty fuel for popcorn!",
-	FUEL_MED = "Still popping good.",
-	FUEL_LOW = "Fuel getting weak.",
-	EMPTY = "No fuel. No popcorn.",
+	GENERIC = "Wolfgang thích bắp rang to!",
+	FUEL_HIGH = "Nhiều nhiên liệu cho bắp rang!",
+	FUEL_MED = "Vẫn nổ tốt.",
+	FUEL_LOW = "Nhiên liệu đang yếu.",
+	EMPTY = "Không nhiên liệu. Không bắp rang.",
 }
 
-WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Tiny popping food for Wolfgang!"
-WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Hat of celebration for strong Wolfgang!"
-WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy must be mighty to wear special hat!"
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Đồ ăn nổ nhỏ cho Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Mũ ăn mừng cho Wolfgang mạnh!"
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy chắc hùng mạnh mới đội mũ đặc biệt!"
 
-WOLFGANG.DESCRIBE.KYNO_FISHREGISTRYHAT = "Hat makes Wolfgang smarter about tiny fishes!"
+WOLFGANG.DESCRIBE.KYNO_FISHREGISTRYHAT = "Mũ làm Wolfgang thông minh hơn về cá nhỏ!"
 
 WOLFGANG.DESCRIBE.KYNO_ANIMALFEEDER =
 {
-	GENERIC = "Animals eat from this.",
-	FUEL_HIGH = "Trough is very full!",
-	FUEL_MED = "Still strong with food.",
-	FUEL_LOW = "Food is getting weak.",
-	EMPTY = "No food for animals.",
-	BURNT = "Feeder is no more.",
+	GENERIC = "Động vật ăn từ đây.",
+	FUEL_HIGH = "Máng rất đầy!",
+	FUEL_MED = "Vẫn mạnh với đồ ăn.",
+	FUEL_LOW = "Đồ ăn đang yếu.",
+	EMPTY = "Không có đồ ăn cho động vật.",
+	BURNT = "Máng ăn không còn nữa.",
 }
 
-WOLFGANG.DESCRIBE.CHICKENNUGGETS = "Tiny chicken pieces make Wolfgang slightly strong."
+WOLFGANG.DESCRIBE.CHICKENNUGGETS = "Miếng gà nhỏ làm Wolfgang hơi mạnh."
 
-WOLFGANG.DESCRIBE.CHICKENWINGS = "Spicy wings make Wolfgang VERY STRONG!"
+WOLFGANG.DESCRIBE.CHICKENWINGS = "Cánh cay làm Wolfgang RẤT MẠNH!"
 
-WOLFGANG.DESCRIBE.CHICKENBURGER = "Chicken sandwich make Wolfgang strong!"
+WOLFGANG.DESCRIBE.CHICKENBURGER = "Sandwich gà làm Wolfgang mạnh!"
 
-WOLFGANG.DESCRIBE.CHICKENEGGSOUP = "Soup make Wolfgang feel strong and cozy!"
+WOLFGANG.DESCRIBE.CHICKENEGGSOUP = "Súp làm Wolfgang thấy mạnh và ấm!"
 
-WOLFGANG.DESCRIBE.CHICKENEGGSTEW = "Big stew make Wolfgang very full!"
+WOLFGANG.DESCRIBE.CHICKENEGGSTEW = "Món hầm to làm Wolfgang rất no!"
 
-WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Spinning chicken make Wolfgang very hungry!"
+WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Gà xoay làm Wolfgang rất đói!"
 
-WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Warm drink makes Wolfgang strong!"
-WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet drink for mighty Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Đồ uống ấm làm Wolfgang mạnh!"
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Đồ uống ngọt cho Wolfgang hùng mạnh!"
 
-WOLFGANG.DESCRIBE.SOULJUICE = "Tiny drink, but strong like Wolfgang!"
+WOLFGANG.DESCRIBE.SOULJUICE = "Đồ uống nhỏ, nhưng mạnh như Wolfgang!"
 
-WOLFGANG.DESCRIBE.KYNO_DAILYRECIPE = "No special food today?"
+WOLFGANG.DESCRIBE.KYNO_DAILYRECIPE = "Hôm nay không có đồ ăn đặc biệt?"
 WOLFGANG.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 {
-	GENERIC = "Wolfgang wants to eat %s!",
-	NONE = "No special food today?",
-	BURNING = "Fire cooks food faster!",
-	BURNT = "Now food is too cooked.",
+	GENERIC = "Wolfgang muốn ăn %s!",
+	NONE = "Hôm nay không có đồ ăn đặc biệt?",
+	BURNING = "Lửa nấu đồ ăn nhanh hơn!",
+	BURNT = "Giờ đồ ăn chín quá rồi.",
 }
+
+WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Người bán nhỏ muốn sửa nhà trước.",
+	HOUSE_REPAIRED = "Giờ chúng ta giao dịch như những người bạn mạnh mẽ!",
+}
+
+WOLFGANG.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Rìu yếu không tốt để chặt cái này.",
+	CHOPPED = "Wolfgang đánh bại cây hùng mạnh!",
+	BLOOMING = "Cây mạnh mọc hoa mạnh.",
+	BURNING = "Lửa mạnh hơn cây.",
+	BURNT = "Giờ cây chỉ là đống tro yếu đuối.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER = "Là đồ ăn?"
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER_COOKED = "Là đồ ăn ngon?"
+
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Wolfgang thích hoa nhỏ."
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Wolfgang ăn."

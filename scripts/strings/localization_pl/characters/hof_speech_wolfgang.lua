@@ -1241,3 +1241,18 @@ WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Mały handlarz chce najpierw naprawionego domu.",
 	HOUSE_REPAIRED = "Teraz handlujemy jak silni przyjaciele!",
 }
+
+WOLFGANG.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Słaba siekiera nie nadaje się do ścinania tego.",
+	CHOPPED = "Wolfgang pokonuje potężne drzewo!",
+	BLOOMING = "Silne drzewo rodzi silne kwiaty.",
+	BURNING = "Ogień jest silniejszy niż drzewo.",
+	BURNT = "Teraz drzewo jest słabą kupką popiołu.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER = "To jedzenie?"
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER_COOKED = "To dobre jedzenie?"
+
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Wolfgang lubi mały kwiatek."
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Wolfgang je."

@@ -1241,3 +1241,18 @@ WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Um lar apropriado antes de negócios apropriados, hm?",
 	HOUSE_REPAIRED = "Maravilhoso! Quais ingredientes você oferece?",
 }
+
+WARLY.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Eu gosto bastante de tubérculos.",
+	CHOPPED = "Um resultado satisfatório.",
+	BLOOMING = "Magnifique! Está prosperando.",
+	BURNING = "Tantos ingredientes desperdiçados!",
+	BURNT = "Queimado além do uso culinário.",
+}
+
+WARLY.DESCRIBE.KYNO_CAVETUBER = "Ah. Ainda não amadureceu."
+WARLY.DESCRIBE.KYNO_CAVETUBER_COOKED = "Não é meu melhor trabalho."
+
+WARLY.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "O amadurecimento perfeito."
+WARLY.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Algo que preparei rapidinho."

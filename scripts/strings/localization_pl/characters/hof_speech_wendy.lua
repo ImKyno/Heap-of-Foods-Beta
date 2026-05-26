@@ -1241,3 +1241,18 @@ WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
 	GENERIC = "Jego zniszczony dom odzwierciedla zmęczoną duszę.",
 	HOUSE_REPAIRED = "Być może handel łagodzi samotność.",
 }
+
+WENDY.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Zwykła siekiera go nie zabije.",
+	CHOPPED = "Wszystko kiedyś upada.",
+	BLOOMING = "Nawet podziemne życie uparcie trwa.",
+	BURNING = "Krótka, piękna tragedia.",
+	BURNT = "Zredukowane do cichych szczątków.",
+}
+
+WENDY.DESCRIBE.KYNO_CAVETUBER = "Czy umrę, zanim dojrzeje?"
+WENDY.DESCRIBE.KYNO_CAVETUBER_COOKED = "Może mam szczęście i nadal jest zatruty."
+
+WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Ładny kwiat."
+WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Czy powinnam zjeść też kwiat?"
