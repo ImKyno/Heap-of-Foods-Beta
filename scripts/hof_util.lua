@@ -39,19 +39,6 @@ function ChooseWeightedRandom(choices)
 	return last_choice
 end
 
-local function TogglePickable(pickable, isspring)
-	if isspring then
-		pickable:Pause()
-	else
-		pickable:Resume()
-	end
-end
-
-function MakeNoGrowInSpring(inst)
-	inst.components.pickable:WatchWorldState("isspring", TogglePickable)
-	TogglePickable(inst.components.pickable, TheWorld.state.isspring)
-end
-
 function IsSerenityBiome(inst)
 	if inst ~= nil and inst:IsValid() and TheWorld.Map:IsVisualGroundAtPoint(inst.Transform:GetWorldPosition()) then
 		local node = TheWorld.Map:FindNodeAtPoint(inst.Transform:GetWorldPosition())
@@ -451,4 +438,24 @@ function ReplaceLootTablePrefab(prefab, from, to)
 			tbl[1] = to
 		end
 	end
+end
+
+-- For Elder Mandrake.
+function HasVeggieInInventoryFor_Checker(item)
+	return item.components.edible ~= nil and item.components.edible.foodtype == FOODTYPE.VEGGIE
+	and not item:HasTag("smallcreature")
+end
+
+function HasVeggieInInventoryFor(inst)
+	local inventory = inst.components.inventory
+
+	if inventory == nil then
+		return false
+	end
+
+	if inventory:EquipHasTag("hidesveggies") then
+		return false
+	end
+
+	return inventory:FindItem(HasVeggieInInventoryFor_Checker) ~= nil
 end

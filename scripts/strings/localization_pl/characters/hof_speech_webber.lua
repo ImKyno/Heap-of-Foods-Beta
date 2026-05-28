@@ -1256,3 +1256,17 @@ WEBBER.DESCRIBE.KYNO_CAVETUBER_COOKED = "Pycha."
 
 WEBBER.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Wygląda na dojrzały?"
 WEBBER.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Pamiętasz frytki?"
+
+WEBBER.DESCRIBE.CAVETUBERTEA = "Jest zimne i całkiem smaczne!"
+
+WEBBER.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Myślimy, że mieszkają tam ci hałaśliwi goście.",
+	OCCUPIED = "Ciii! On śpi!",
+}
+
+WEBBER.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Hej tam, hałaśliwy koleś.",
+	GRUMPY = "Czemu taki smutny?",
+}

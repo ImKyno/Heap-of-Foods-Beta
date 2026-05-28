@@ -421,6 +421,104 @@ STRINGS.KYNO_WHALE_WHITE_OCEAN_NAMES =
 	"Baleia Terrível",
 }
 
+STRINGS.KYNO_ELDERMANDRAKE_NAMES =
+{
+	"Turnberto",
+	"Senhor Tubão",
+	"Terraldo",
+	"Raul Raiz",
+	"Rabugildo",
+	"Tubernardo",
+	"Pete Fedorento",
+	"Sujeiraldo",
+	"Velho Murph",
+	"Podrivaldo",
+	"Turnaldo",
+	"Bulbinho",
+	"Grubson",
+	"Lamecão",
+	"Raidrigo",
+	"Bogarte",
+	"Filberto",
+	"Nabinho",
+	"Mofaldo",
+	"Tatérnio Tristonho",
+	"Huberto Raiz",
+	"Resmungão",
+	"Fuçolino",
+	"Woberto",
+	"Tom Nabo",
+	"Scrunglo",
+	"Fétido",
+	"Lombrigford",
+	"Remexeraiz",
+	"Bartolotubérculo",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_GIVEUP =
+{
+	"O QUE FAZENDO?",
+	"CANSADO",
+	"COM SONO",
+	"GASTO",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_BATTLECRY =
+{
+	"PODRIDÃO!",
+	"TERRA!",
+	"ADUBO!",
+	"MOFO!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_MANDRAKE_BATTLECRY =
+{
+	"LADRÃO!",
+	"ROUBADOR!",
+	"BANDIDO!",
+	"TRAPACEIRO!",
+	"ASSASSINO!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_RETREAT =
+{
+	"LONGE!",
+	"MACHUCADO!",
+	"CASA!",
+	"CORRER!",
+	"FUGIR!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICBOSS =
+{
+	"MALVADO!",
+	"ASSUSTADOR!",
+	"AHH! AHH!",
+	"CORRE! CORRE!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICHAUNT =
+{
+	"OOH!",
+	"ASSUSTADOR!",
+	"AAAAH!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICFIRE =
+{
+	"FOGO! FOGO!",
+	"AHH! FOGO!",
+	"FOGO RUIM!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICELECTRICITY =
+{
+	"AI!",
+	"DÓI!",
+	"AHHH!",
+	"GLURGHH!!",
+}
+
 STRINGS.KYNO_GOLDENAPPLE_NAMES =
 {
 	-- Feel free to add more names.
@@ -2170,3 +2268,10 @@ STRINGS.NAMES.KYNO_CAVETUBER_COOKED = "Tubérculo das Cavernas Frito"
 
 STRINGS.NAMES.KYNO_CAVETUBER_BLOOMING = "Tubérculo das Cavernas Florescido"
 STRINGS.NAMES.KYNO_CAVETUBER_BLOOMING_COOKED = "Tubérculo das Cavernas Florescido Frito"
+
+STRINGS.NAMES.CAVETUBERTEA = "Chá de Tubérculo das Cavernas"
+
+STRINGS.NAMES.KYNO_ELDERMANDRAKEHOUSE = "Colina das Mandrágoras"
+STRINGS.RECIPE_DESC.KYNO_ELDERMANDRAKEHOUSE = "Abriga um tubérculo gigante."
+
+STRINGS.NAMES.KYNO_ELDERMANDRAKE = "Mandrágora Anciã"

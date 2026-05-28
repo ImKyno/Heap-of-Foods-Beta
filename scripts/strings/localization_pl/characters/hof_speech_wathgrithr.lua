@@ -1256,3 +1256,17 @@ WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ogień nic nie robi, by uczynić to
 
 WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "To dojrzałe nie-mięso."
 WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Nie obchodzi mnie, czy jest ugotowane."
+
+WATHGRITHR.DESCRIBE.CAVETUBERTEA = "Lodowaty napój z głębin!"
+
+WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Mam ich w potrzasku!",
+	OCCUPIED = "Krzykacz jest w środku tej chaty!",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Pokonam cię!",
+	GRUMPY = "Morale wroga spadło!",
+}

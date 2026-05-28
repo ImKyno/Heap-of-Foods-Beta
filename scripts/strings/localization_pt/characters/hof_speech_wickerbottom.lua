@@ -1256,3 +1256,17 @@ WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_COOKED = "Suspeito que o veneno não tenha 
 
 WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Ainda deve ser cozido."
 WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Tubérculos cozidos são básicos em muitas culturas."
+
+WICKERBOTTOM.DESCRIBE.CAVETUBERTEA = "Uma agradável infusão gelada de tubérculo."
+
+WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Uma casa subterrânea.",
+	OCCUPIED = "Acho que ele está dormindo agora.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "É Plantae ou Animalia?",
+	GRUMPY = "Ele não parece feliz hoje.",
+}

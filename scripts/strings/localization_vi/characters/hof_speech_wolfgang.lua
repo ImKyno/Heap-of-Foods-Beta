@@ -1256,3 +1256,17 @@ WOLFGANG.DESCRIBE.KYNO_CAVETUBER_COOKED = "Là đồ ăn ngon?"
 
 WOLFGANG.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Wolfgang thích hoa nhỏ."
 WOLFGANG.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Wolfgang ăn."
+
+WOLFGANG.DESCRIBE.CAVETUBERTEA = "Đồ uống nhỏ cho cơ bắp mạnh mẽ!"
+
+WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Đồi cho người cây.",
+	OCCUPIED = "Người cây đang ngủ.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Wolfgang mạnh hơn ngươi!",
+	GRUMPY = "Người cây không vui.",
+}

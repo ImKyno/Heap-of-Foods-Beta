@@ -1256,3 +1256,17 @@ WENDY.DESCRIBE.KYNO_CAVETUBER_COOKED = "Może mam szczęście i nadal jest zatru
 
 WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Ładny kwiat."
 WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Czy powinnam zjeść też kwiat?"
+
+WENDY.DESCRIBE.CAVETUBERTEA = "Chłodzące pocieszenie w świecie bez radości."
+
+WENDY.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Abigail też mieszka pod ziemią.",
+	OCCUPIED = "Teraz już nie taki hałaśliwy.",
+}
+
+WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Kolejna abominacja.",
+	GRUMPY = "Jego nastrój przypomina mój.",
+}

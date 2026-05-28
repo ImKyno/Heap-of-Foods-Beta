@@ -3424,6 +3424,24 @@ local kyno_foods =
 			eater:AddDebuff("kyno_hungerratebuff", "kyno_hungerratebuff")
 		end,
 	},
+
+	cavetubertea =
+	{
+		test = function(cooker, names, tags) return (names.kyno_cavetuber_blooming or names.kyno_cavetuber_blooming_cooked) 
+		and tags.tillweed and tags.frozen and not tags.inedible end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 60,
+		hunger = 30,
+		sanity = 15,
+		cooktime = 1,
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_cavetuber", 1}, {"tillweed", 1}, {"ice", 2}}},
+	},
 }
 
 for k, recipe in pairs(kyno_foods) do

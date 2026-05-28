@@ -88,6 +88,7 @@ local INIT_POSTINIT_PREFABS =
 	"lightninggoat",
 	"livingtree_halloween",
 	"malbatross",
+	"mandrake",
 	"marbleshrub",
 	"messagebottleempty",
 	"monkeyqueen",

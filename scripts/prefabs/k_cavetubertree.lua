@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
 	Asset("ANIM", "anim/kyno_tuber_tree.zip"),
@@ -448,6 +450,7 @@ local function GetStatus(inst, viewer)
 	return (inst:HasTag("stump") and "CHOPPED")
 	or (inst:HasTag("burnt") and "BURNT")
 	or (inst.components.burnable:IsBurning() and "BURNING")
+	or (inst.build == "blooming" and "BLOOMING")
 	or "GENERIC"
 end
 

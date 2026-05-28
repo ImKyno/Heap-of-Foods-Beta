@@ -1256,3 +1256,17 @@ WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_COOKED = "I suspect the poison has not been
 
 WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "It should still be cooked."
 WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Cooked tubers are a staple in many cultures."
+
+WICKERBOTTOM.DESCRIBE.CAVETUBERTEA = "A pleasantly cooled tuber infusion."
+
+WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "A subterranean home.",
+	OCCUPIED = "I think he's sleeping right now.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Is it Plantae or Animalia?",
+	GRUMPY = "He doesn't seem happy today.",
+}

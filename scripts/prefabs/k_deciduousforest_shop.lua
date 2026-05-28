@@ -47,6 +47,7 @@ end
 local function OnOcuppied(inst, child)
 	RefreshHouseState(inst)
 
+	inst.SoundEmitter:PlaySound("dontstarve/pig/pig_in_hut", "pigsound")
 	inst.SoundEmitter:PlaySound("dontstarve/common/pighouse_door")
 
 	if inst.doortask ~= nil then
@@ -66,6 +67,7 @@ end
 local function OnVacate(inst, child)
 	RefreshHouseState(inst)
 
+	inst.SoundEmitter:KillSound("pigsound")
 	inst.SoundEmitter:PlaySound("dontstarve/common/pighouse_door")
 
 	if inst.doortask ~= nil then
@@ -241,7 +243,7 @@ local function fn()
 	inst.Light:SetColour(180/255, 195/255, 50/255)
 
 	local minimap = inst.entity:AddMiniMapEntity()
-	minimap:SetIcon("pighouse.png")
+	minimap:SetIcon("kyno_deciduousforest_shop.tex")
 	minimap:SetPriority(2)
 
 	MakeObstaclePhysics(inst, 1)

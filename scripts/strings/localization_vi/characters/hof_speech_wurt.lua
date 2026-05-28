@@ -1258,3 +1258,17 @@ WURT.DESCRIBE.KYNO_CAVETUBER_COOKED = "Nghĩ vẫn chưa an toàn đâu, florp."
 
 WURT.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Có vẻ sẵn sàng rồi! flort."
 WURT.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Ngon!"
+
+WURT.DESCRIBE.CAVETUBERTEA = "Đồ uống rễ lạnh, florp!"
+
+WURT.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Nhà bạn ồn ào, flort.",
+	OCCUPIED = "Bạn ồn ào đang ngủ.",
+}
+
+WURT.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Xin chào, bạn ồn ào!",
+	GRUMPY = "Sao bạn cáu kỉnh vậy?",
+}

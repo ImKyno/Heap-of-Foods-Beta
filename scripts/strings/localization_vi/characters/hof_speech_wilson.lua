@@ -1256,3 +1256,17 @@ WILSON.DESCRIBE.KYNO_CAVETUBER_COOKED = "Không biết nó còn độc không nh
 
 WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Đó là một củ đang nở hoa!"
 WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Mình có nấu luôn cả bông hoa không nhỉ?"
+
+WILSON.DESCRIBE.CAVETUBERTEA = "Một thức uống mát lạnh với hương vị đất đặc trưng."
+
+WILSON.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Nó trông... rất la hét.",
+	OCCUPIED = "Có lẽ ông ấy đang ngủ.",
+}
+
+WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "To lớn và ồn ào.",
+	GRUMPY = "Ông ấy có vẻ không vui lắm.",
+}

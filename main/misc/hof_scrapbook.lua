@@ -9985,6 +9985,30 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -15,
 		specialinfo    = "FOODEFFECTS_HUNGERRATE",
 	},
+
+	cavetubertea       =
+	{
+		name           = "cavetubertea",
+		type           = "food",
+		tex            = "cavetubertea.tex",
+		prefab         = "cavetubertea",
+		healthvalue    = 60,
+		hungervalue    = 30,
+		sanityvalue    = 15,
+		perishable     = 4800,
+		foodtype       = "VEGGIE",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "kyno_foodrecipes",
+		build          = "kyno_foodrecipes_cookpot1",
+		overridesymbol = {"swap_food", "kyno_foodrecipes_cookpot1", "cavetubertea"},
+		anim           = "cavetubertea",
+		deps           = preparedfood_deps,
+		animoffsety    = 10,
+		animoffsetbgx  = -15,
+		animoffsetbgy  = -15,
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =
@@ -15621,6 +15645,21 @@ local HOF_SCRAPBOOK_CREATURES =
 		deps           = {"kyno_packimbaggims_fishbone"},
 		specialinfo    = "PACKIMBAGGIMS",
 	},
+
+	kyno_eldermandrake =
+	{
+		name           = "kyno_eldermandrake",
+		type           = "creature",
+		tex            = "kyno_eldermandrake.tex",
+		prefab         = "kyno_eldermandrake",
+		health         = 300,
+		damage         = 40,
+		bank           = "elderdrake",
+		build          = "elderdrake_build",
+		anim           = "idle_loop",
+		hide           = {"hat", "ARM_carry", "HAIR_HAT"},
+		deps           = {"plantmeat", "livinglog", "kyno_eldermandrakehouse"},
+	},
 }
 
 local HOF_SCRAPBOOK_THINGS =
@@ -17146,6 +17185,20 @@ local HOF_SCRAPBOOK_THINGS =
 		anim           = "idle_tall",
 		deps           = {"charcoal", "kyno_cavetuber", "kyno_cavetuber_blooming"},
 		specialinfo    = "CAVETUBERTREE",
+	},
+
+	kyno_eldermandrakehouse =
+	{
+		name           = "kyno_eldermandrakehouse",
+		type           = "thing",
+		subcat         = "structure",
+		tex            = "kyno_eldermandrakehouse.tex",
+		prefab         = "kyno_eldermandrakehouse",
+		workable       = "HAMMER",
+		bank           = "kyno_eldermandrakehouse",
+		build          = "kyno_eldermandrakehouse",
+		anim           = "idle",
+		deps           = {"kyno_eldermandrake", "boards", "cutreeds", "mandrake"},
 	},
 }
 

@@ -421,6 +421,104 @@ STRINGS.KYNO_WHALE_WHITE_OCEAN_NAMES =
 	"Dreadful Whale",
 }
 
+STRINGS.KYNO_ELDERMANDRAKE_NAMES =
+{
+	"Turnbert",
+	"Ngài Tubbs",
+	"Mudward",
+	"Rootney",
+	"Cáu Kỉnh",
+	"Tubernard",
+	"Pete Hôi Hám",
+	"Dirtwin",
+	"Ông Murph",
+	"Rotwald",
+	"Turnaldo",
+	"Bulby",
+	"Grubson",
+	"Muckins",
+	"Rootrick",
+	"Bogart",
+	"Filbert",
+	"Nubbins",
+	"Moldrick",
+	"Khoai Tây U Ám",
+	"Hubert Rễ",
+	"Càu Nhàu",
+	"Snoutley",
+	"Wobert",
+	"Củ Cải Tom",
+	"Scrungle",
+	"Fester",
+	"Lumpford",
+	"Rễ Ngoằn Ngoèo",
+	"Bartholotuber",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_GIVEUP =
+{
+	"LÀM GÌ ĐÓ?",
+	"MỆT",
+	"BUỒN NGỦ",
+	"KIỆT SỨC",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_BATTLECRY =
+{
+	"THỐI RỮA!",
+	"ĐẤT!",
+	"PHÂN Ủ!",
+	"NẤM MỐC!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_MANDRAKE_BATTLECRY =
+{
+	"KẺ TRỘM!",
+	"CƯỚP!",
+	"GIAN MANH!",
+	"LỪA ĐẢO!",
+	"GIẾT NGƯỜI!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_RETREAT =
+{
+	"TRÁNH RA!",
+	"ĐAU!",
+	"VỀ NHÀ!",
+	"CHẠY!",
+	"TRỐN!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICBOSS =
+{
+	"XẤU XA!",
+	"ĐÁNG SỢ!",
+	"AHH! AHH!",
+	"CHẠY! CHẠY!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICHAUNT =
+{
+	"OOH!",
+	"ĐÁNG SỢ!",
+	"AAAAH!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICFIRE =
+{
+	"LỬA! LỬA!",
+	"AHH! LỬA!",
+	"LỬA XẤU!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICELECTRICITY =
+{
+	"ÁI!",
+	"ĐAU!",
+	"AHHH!",
+	"GLURGHH!!",
+}
+
 STRINGS.KYNO_GOLDENAPPLE_NAMES =
 {
 	-- Feel free to add more names.
@@ -2170,3 +2268,10 @@ STRINGS.NAMES.KYNO_CAVETUBER_COOKED = "Củ Hang chiên"
 
 STRINGS.NAMES.KYNO_CAVETUBER_BLOOMING = "Củ Hang đang nở hoa"
 STRINGS.NAMES.KYNO_CAVETUBER_BLOOMING_COOKED = "Củ Hang đang nở hoa chiên"
+
+STRINGS.NAMES.CAVETUBERTEA = "Trà Củ Hang"
+
+STRINGS.NAMES.KYNO_ELDERMANDRAKEHOUSE = "Đồi Mandrake"
+STRINGS.RECIPE_DESC.KYNO_ELDERMANDRAKEHOUSE = "Nơi đây có một loại củ khổng lồ."
+
+STRINGS.NAMES.KYNO_ELDERMANDRAKE = "Mandrake Già"

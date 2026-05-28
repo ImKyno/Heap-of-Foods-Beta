@@ -415,10 +415,108 @@ STRINGS.KYNO_WHALE_WHITE_OCEAN_NAMES =
 	-- Feel free to add more names.
 	"Moby Dick",
 	"Doby Mick",
-	"The Devil",
-	"Vengeful Whale",
-	"White Whale",
-	"Dreadful Whale",
+	"Diabeł",
+	"Mściwy wieloryb",
+	"Biały wieloryb",
+	"Straszny wieloryb",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_NAMES =
+{
+	"Rzepbert",
+	"Sir Bulwek",
+	"Błotward",
+	"Korzeniusz",
+	"Marudek",
+	"Tubernard",
+	"Śmierdzący Piotrek",
+	"Brudzimir",
+	"Stary Murph",
+	"Zgnilwald",
+	"Turnaldo",
+	"Bulbek",
+	"Grubson",
+	"Błotkins",
+	"Korzenryk",
+	"Bogart",
+	"Filbert",
+	"Grudek",
+	"Pleśnioryk",
+	"Ponury Ziemniak",
+	"Hubert Korzeń",
+	"Zrzęda",
+	"Ryjcio",
+	"Wobert",
+	"Tomek Rzepa",
+	"Scrungel",
+	"Fester",
+	"Gulford",
+	"Wijokorzeń",
+	"Bartholobulwa",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_GIVEUP =
+{
+	"CO ROBISZ?",
+	"ZMĘCZONY",
+	"SENNY",
+	"WYCZERPANY",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_BATTLECRY =
+{
+	"GNICIE!",
+	"ZIEMIA!",
+	"KOMPOST!",
+	"PLEŚŃ!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_MANDRAKE_BATTLECRY =
+{
+	"ZŁODZIEJ!",
+	"RABUŚ!",
+	"BANDYTA!",
+	"OSZUST!",
+	"MORDERCA!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_RETREAT =
+{
+	"UCIEC!",
+	"BOLI!",
+	"DOM!",
+	"BIEC!",
+	"UCIEKAĆ!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICBOSS =
+{
+	"ZŁY!",
+	"STRASZNY!",
+	"AHH! AHH!",
+	"BIEGNIJ! BIEGNIJ!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICHAUNT =
+{
+	"OOH!",
+	"STRASZNE!",
+	"AAAAH!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICFIRE =
+{
+	"OGIEŃ! OGIEŃ!",
+	"AHH! OGIEŃ!",
+	"OGIEŃ ZŁY!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICELECTRICITY =
+{
+	"AUĆ!",
+	"BOLI!",
+	"AHHH!",
+	"GLURGHH!!",
 }
 
 STRINGS.KYNO_GOLDENAPPLE_NAMES =
@@ -2170,3 +2268,10 @@ STRINGS.NAMES.KYNO_CAVETUBER_COOKED = "Smażona bulwa jaskiniowa"
 
 STRINGS.NAMES.KYNO_CAVETUBER_BLOOMING = "Kwitnąca bulwa jaskiniowa"
 STRINGS.NAMES.KYNO_CAVETUBER_BLOOMING_COOKED = "Smażona zakwitnięta bulwa jaskiniowa"
+
+STRINGS.NAMES.CAVETUBERTEA = "Herbata Bulwa jaskiniowa"
+
+STRINGS.NAMES.KYNO_ELDERMANDRAKEHOUSE = "Wzgórze Mandragor"
+STRINGS.RECIPE_DESC.KYNO_ELDERMANDRAKEHOUSE = "Mieści gigantyczne warzywo korzeniowe."
+
+STRINGS.NAMES.KYNO_ELDERMANDRAKE = "Starsza Mandragora"

@@ -1256,3 +1256,17 @@ WILSON.DESCRIBE.KYNO_CAVETUBER_COOKED = "I wonder if it's still poisonous?"
 
 WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "It's a blooming tuber!"
 WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Did I cook the flower too?"
+
+WILSON.DESCRIBE.CAVETUBERTEA = "A refreshingly earthy brew."
+
+WILSON.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "It look... Screamy.",
+	OCCUPIED = "Maybe he's sleeping.",
+}
+
+WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Large and screamy.",
+	GRUMPY = "He doesn't seem to be very happy.",
+}

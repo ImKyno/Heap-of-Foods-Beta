@@ -1256,3 +1256,17 @@ WENDY.DESCRIBE.KYNO_CAVETUBER_COOKED = "Perhaps I'm lucky and it's still poisone
 
 WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Pretty flower."
 WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Should I eat the flower too?"
+
+WENDY.DESCRIBE.CAVETUBERTEA = "A chilled comfort in a joyless world."
+
+WENDY.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Abigail lives in the ground too.",
+	OCCUPIED = "Not so noisy now.",
+}
+
+WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Another abomination.",
+	GRUMPY = "His mood is similar to mine.",
+}

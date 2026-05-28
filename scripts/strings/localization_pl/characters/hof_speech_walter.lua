@@ -1256,3 +1256,17 @@ WALTER.DESCRIBE.KYNO_CAVETUBER_COOKED = "Lepiej tego nie jeść!"
 
 WALTER.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Hmph. Myślę, że teraz można to bezpiecznie zjeść, Woby."
 WALTER.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Smakuje jak słodkie ziemniaki!"
+
+WALTER.DESCRIBE.CAVETUBERTEA = "To byłoby świetne na wyprawę kempingową."
+
+WALTER.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Ten dom to wrzeszcząca roślinność.",
+	OCCUPIED = "Przynajmniej teraz nie krzyczy.",
+}
+
+WALTER.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "MÓGŁBYŚ MNIE NIE ZJADAĆ, ROŚLINNY CZŁOWIEKU?",
+	GRUMPY = "MOŻE MÓGŁBYŚ POPRAWIĆ MU HUMOR, WOBY?",
+}

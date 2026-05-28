@@ -421,6 +421,104 @@ STRINGS.KYNO_WHALE_WHITE_OCEAN_NAMES =
 	"Dreadful Whale",
 }
 
+STRINGS.KYNO_ELDERMANDRAKE_NAMES =
+{
+	"Turnbert",
+	"Sir Tubbs",
+	"Mudward",
+	"Rootney",
+	"Grumpkin",
+	"Tubernard",
+	"Stinky Pete",
+	"Dirtwin",
+	"Old Murph",
+	"Rotwald",
+	"Turnaldo",
+	"Bulby",
+	"Grubson",
+	"Muckins",
+	"Rootrick",
+	"Bogart",
+	"Filbert",
+	"Nubbins",
+	"Moldrick",
+	"Tatergloom",
+	"Hubert Root",
+	"Grumbles",
+	"Snoutley",
+	"Wobert",
+	"Turnip Tom",
+	"Scrungle",
+	"Fester",
+	"Lumpford",
+	"Wigglesroot",
+	"Bartholotuber",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_GIVEUP =
+{
+	"WHAT DOING?",
+	"TIRED",
+	"SLEEPY",
+	"WORN",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_BATTLECRY =
+{
+	"ROT!",
+	"SOIL!",
+	"COMPOST!",
+	"MOLD!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_MANDRAKE_BATTLECRY =
+{
+	"THIEF!",
+	"ROBBER!",
+	"CROOK!",
+	"CHEAT!",
+	"MURDER!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_RETREAT =
+{
+	"AWAY!",
+	"HURT!",
+	"HOME!",
+	"RUN!",
+	"FLEE!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICBOSS =
+{
+	"MEAN!",
+	"SCARY!",
+	"AHH! AHH!",
+	"RUN! RUN!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICHAUNT =
+{
+	"OOH!",
+	"SCARY!",
+	"AAAAH!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICFIRE =
+{
+	"FIRE! FIRE!",
+	"AHH! FIRE!",
+	"FIRE BAD!",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICELECTRICITY =
+{
+	"OUCH!",
+	"HURTS!",
+	"AHHH!",
+	"GLURGHH!!",
+}
+
 STRINGS.KYNO_GOLDENAPPLE_NAMES =
 {
 	-- Feel free to add more names.
@@ -2170,3 +2268,10 @@ STRINGS.NAMES.KYNO_CAVETUBER_COOKED = "Fried Cave Tuber"
 
 STRINGS.NAMES.KYNO_CAVETUBER_BLOOMING = "Blooming Cave Tuber"
 STRINGS.NAMES.KYNO_CAVETUBER_BLOOMING_COOKED = "Fried Blooming Cave Tuber"
+
+STRINGS.NAMES.CAVETUBERTEA = "Cave Tuber Tea"
+
+STRINGS.NAMES.KYNO_ELDERMANDRAKEHOUSE = "Mandrake Hill"
+STRINGS.RECIPE_DESC.KYNO_ELDERMANDRAKEHOUSE = "Houses a giant root vegetable."
+
+STRINGS.NAMES.KYNO_ELDERMANDRAKE = "Elder Mandrake"

@@ -1256,3 +1256,17 @@ WOODIE.DESCRIBE.KYNO_CAVETUBER_COOKED = "Nothing fancy, just some tubers."
 
 WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Well it's ripe now."
 WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Well that's fancy."
+
+WOODIE.DESCRIBE.CAVETUBERTEA = "Good fer coolin' off underground."
+
+WOODIE.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "It's where those little plant guys live.",
+	OCCUPIED = "Someone in there?",
+}
+
+WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "He's looking for a fight.",
+	GRUMPY = "What happened to you today, buddy?",
+}

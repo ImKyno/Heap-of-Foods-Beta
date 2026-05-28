@@ -1256,3 +1256,17 @@ WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_COOKED = "Lửa chẳng giúp nó ăn đượ
 
 WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Đây là thực vật đã chín."
 WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Ta chẳng bận tâm nó có được nấu hay không."
+
+WATHGRITHR.DESCRIBE.CAVETUBERTEA = "Một ngụm băng giá từ vực sâu!"
+
+WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Ta đã dồn chúng vào góc!",
+	OCCUPIED = "Kẻ la hét đang ở trong túp lều đó!",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Ta sẽ đánh bại ngươi!",
+	GRUMPY = "Tinh thần quân địch đang sa sút!",
+}

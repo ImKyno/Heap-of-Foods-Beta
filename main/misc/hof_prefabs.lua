@@ -45,6 +45,8 @@ PrefabFiles =
 	"k_deciduousforest_shop",
 	"k_deciduousforest_trader",
 	"k_dogfish",
+	"k_eldermandrake",
+	"k_eldermandrakehouse",
 	"k_fertilizer_nutrient_defs",
 	"k_fishes",
 	"k_fishfarmplot",

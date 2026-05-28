@@ -1256,3 +1256,17 @@ WANDA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Nadal niedogotowane i trujące."
 
 WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Idealne wyczucie czasu!"
 WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Ugotowane dokładnie na czas."
+
+WANDA.DESCRIBE.CAVETUBERTEA = "Zimne, szybkie, wydajne."
+
+WANDA.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Krzycz do mnie, roślino!",
+	OCCUPIED = "Zmęczył się krzyczeniem i poszedł spać.",
+}
+
+WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Przestań już wrzeszczeć!",
+	GRUMPY = "Czas dobrze ci zrobi.",
+}

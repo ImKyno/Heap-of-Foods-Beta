@@ -1256,3 +1256,17 @@ WANDA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Still undercooked and poisonous."
 
 WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Perfect timing!"
 WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Cooked it just in time."
+
+WANDA.DESCRIBE.CAVETUBERTEA = "Cold, quick, efficient."
+
+WANDA.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Scream to me, plant!",
+	OCCUPIED = "He got tired of screaming and went to sleep.",
+}
+
+WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Cease the screaming already!",
+	GRUMPY = "Time will do well for you.",
+}

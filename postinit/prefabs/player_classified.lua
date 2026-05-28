@@ -42,7 +42,7 @@ local function PlayerClassifiedPostInit(inst)
 
 	local function OnBottleCapEvent(inst)
 		if inst._parent ~= nil and TheFocalPoint.entity:GetParent() == inst._parent then
-			TheFocalPoint.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink1")
+			TheFocalPoint.SoundEmitter:PlaySound("hof_sounds/common/nukacola/drink")
 		end
 	end
 

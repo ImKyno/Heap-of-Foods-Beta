@@ -1256,3 +1256,17 @@ WAXWELL.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ugh. Czy ja w ogóle powinienem to je�
 
 WAXWELL.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Przynajmniej jest jadalny."
 WAXWELL.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Wygląda... jadalnie?"
+
+WAXWELL.DESCRIBE.CAVETUBERTEA = "Przynajmniej podawane jest na zimno."
+
+WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Ugh. Co za hałaśliwy dom.",
+	OCCUPIED = "O wiele lepiej bez tego całego wrzasku.",
+}
+
+WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Przestań już paplać!",
+	GRUMPY = "Hej, kolego, nie wyglądasz na szczęśliwego.",
+}

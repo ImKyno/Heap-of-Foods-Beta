@@ -1256,3 +1256,17 @@ WINONA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Giờ tôi ăn được chưa?"
 
 WINONA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Đây là mùa của củ."
 WINONA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Oh. Tôi còn hy vọng có khoai chiên cơ."
+
+WINONA.DESCRIBE.CAVETUBERTEA = "Không tệ với trà hang động."
+
+WINONA.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Tôi tự hỏi họ ngủ kiểu gì được.",
+	OCCUPIED = "Không thể ngủ nổi với đống tiếng ồn đó.",
+}
+
+WINONA.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Chào anh bạn ồn ào!",
+	GRUMPY = "Hôm nay xuống tinh thần à?",
+}

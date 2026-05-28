@@ -1256,3 +1256,17 @@ WILSON.DESCRIBE.KYNO_CAVETUBER_COOKED = "Será que ainda é venenoso?"
 
 WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "É um tubérculo florescendo!"
 WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Será que cozinhei a flor também?"
+
+WILSON.DESCRIBE.CAVETUBERTEA = "Uma bebida refrescante com sabor terroso."
+
+WILSON.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Parece... gritante.",
+	OCCUPIED = "Talvez ele esteja dormindo.",
+}
+
+WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Grande e gritona.",
+	GRUMPY = "Ele não parece muito feliz.",
+}

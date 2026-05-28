@@ -1256,3 +1256,17 @@ WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_COOKED = "Podejrzewam, że trucizna nie zos
 
 WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Nadal powinien zostać ugotowany."
 WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Gotowane bulwy są podstawą wielu kultur."
+
+WICKERBOTTOM.DESCRIBE.CAVETUBERTEA = "Przyjemnie schłodzony napar z bulwy."
+
+WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Podziemny dom.",
+	OCCUPIED = "Myślę, że teraz śpi.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Czy to Plantae czy Animalia?",
+	GRUMPY = "Nie wygląda dziś na szczęśliwego.",
+}

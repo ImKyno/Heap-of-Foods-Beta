@@ -1256,3 +1256,17 @@ WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_COOKED = "Fire does nothing to make it edible
 
 WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "'Tis ripe non-meat."
 WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "I care not if it is cooked."
+
+WATHGRITHR.DESCRIBE.CAVETUBERTEA = "A frosty draught from the depths!"
+
+WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "I have them cornered!",
+	OCCUPIED = "The screamer is inside that hut!",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "I shall vanquish thee!",
+	GRUMPY = "The enemy's morale is down!",
+}

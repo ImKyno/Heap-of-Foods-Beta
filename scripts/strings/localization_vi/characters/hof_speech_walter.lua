@@ -1256,3 +1256,17 @@ WALTER.DESCRIBE.KYNO_CAVETUBER_COOKED = "Tốt hơn là đừng ăn!"
 
 WALTER.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Hmph. Tớ nghĩ giờ ăn an toàn rồi đấy, Woby."
 WALTER.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Có vị giống khoai lang!"
+
+WALTER.DESCRIBE.CAVETUBERTEA = "Cái này sẽ rất tuyệt trong chuyến cắm trại."
+
+WALTER.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Ngôi nhà này toàn thực vật la hét.",
+	OCCUPIED = "Ít nhất giờ ông ấy không hét nữa.",
+}
+
+WALTER.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "ĐỪNG ĂN TÔI NHÉ, NGƯỜI CÂY?",
+	GRUMPY = "CÓ LẼ BẠN CÓ THỂ GIÚP ÔNG ẤY CẢI THIỆN TÂM TRẠNG, WOBY?",
+}

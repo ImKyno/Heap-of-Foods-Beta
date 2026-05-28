@@ -421,6 +421,104 @@ STRINGS.KYNO_WHALE_WHITE_OCEAN_NAMES =
 	"可怕的鲸鱼",
 }
 
+STRINGS.KYNO_ELDERMANDRAKE_NAMES =
+{
+	"特恩伯特",
+	"块茎爵士",
+	"泥德华",
+	"根尼",
+	"臭脾气",
+	"图伯纳德",
+	"臭皮特",
+	"泥双子",
+	"老墨菲",
+	"腐根德",
+	"特纳尔多",
+	"小球球",
+	"格鲁布森",
+	"泥巴金",
+	"根瑞克",
+	"博加特",
+	"菲尔伯特",
+	"小块块",
+	"霉根克",
+	"忧郁土豆",
+	"胡伯特根",
+	"抱怨王",
+	"猪鼻子",
+	"沃伯特",
+	"萝卜汤姆",
+	"史坤格",
+	"腐仔",
+	"福德",
+	"扭根根",
+	"巴索罗块茎",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_GIVEUP =
+{
+	"做什么？",
+	"累了",
+	"困了",
+	"疲惫",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_BATTLECRY =
+{
+	"腐烂！",
+	"泥土！",
+	"堆肥！",
+	"霉菌！",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_MANDRAKE_BATTLECRY =
+{
+	"小偷！",
+	"强盗！",
+	"坏蛋！",
+	"骗子！",
+	"杀人犯！",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_RETREAT =
+{
+	"走开！",
+	"疼！",
+	"回家！",
+	"跑！",
+	"逃！",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICBOSS =
+{
+	"坏蛋！",
+	"好可怕！",
+	"啊啊！啊啊！",
+	"跑！快跑！",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICHAUNT =
+{
+	"哦哦！",
+	"可怕！",
+	"啊啊啊！",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICFIRE =
+{
+	"火！火！",
+	"啊！火！",
+	"火不好！",
+}
+
+STRINGS.KYNO_ELDERMANDRAKE_PANICELECTRICITY =
+{
+	"哎哟！",
+	"好痛！",
+	"啊啊啊！",
+	"GLURGHH!!",
+}
+
 STRINGS.KYNO_GOLDENAPPLE_NAMES =
 {
 	-- Feel free to add more names.
@@ -2170,3 +2268,10 @@ STRINGS.NAMES.KYNO_CAVETUBER_COOKED = "油炸洞穴块茎"
 
 STRINGS.NAMES.KYNO_CAVETUBER_BLOOMING = "盛开的洞穴块茎"
 STRINGS.NAMES.KYNO_CAVETUBER_BLOOMING_COOKED = "油炸盛开的洞穴块茎"
+
+STRINGS.NAMES.CAVETUBERTEA = "洞穴块茎茶"
+
+STRINGS.NAMES.KYNO_ELDERMANDRAKEHOUSE = "曼德拉草丘"
+STRINGS.RECIPE_DESC.KYNO_ELDERMANDRAKEHOUSE = "里面住着一个巨大的根茎类蔬菜。"
+
+STRINGS.NAMES.KYNO_ELDERMANDRAKE = "老年曼德拉草"

@@ -53,17 +53,18 @@ local customizations_worldsettings =
 
 	-- CREATURESETTING
 	chickens_setting         = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 0,   world = { "forest" }},
-	dogfishes_setting        = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 9,   world = { "forest" }},
-	fishermerms_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 5,   world = { "forest" }},
-	hermitwobsters_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 8,   world = { "forest" }},
-	jellyfishes_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 6,   world = { "forest" }},
-	jellyfishes2_setting     = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 7,   world = { "forest" }},
-	pebblecrabs_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 1,   world = { "forest" }},
-	pikos_setting            = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 3,   world = { "forest" }},
-	pikosorange_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 4,   world = { "forest" }},
-	puffermonsters_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 11,  world = { "forest" }},
-	sugarflies_setting       = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 2,   world = { "forest" }},
-	swordfishes_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 10,  world = { "forest" }},
+	dogfishes_setting        = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 1,   world = { "forest" }},
+	eldermandrakes_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 2,   world = { "forest", "cave" }},
+	fishermerms_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 3,   world = { "forest" }},
+	hermitwobsters_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 4,   world = { "forest" }},
+	jellyfishes_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 5,   world = { "forest" }},
+	jellyfishes2_setting     = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 10,  world = { "forest" }},
+	pebblecrabs_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 7,   world = { "forest" }},
+	pikos_setting            = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 8,   world = { "forest" }},
+	pikosorange_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 6,   world = { "forest" }},
+	puffermonsters_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 9,   world = { "forest" }},
+	sugarflies_setting       = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 11,  world = { "forest" }},
+	swordfishes_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 12,  world = { "forest" }},
 }
 
 local function OverrideTuningVariables(tuning)
@@ -752,6 +753,33 @@ WSO.Pre.dogfishes_setting = function(difficulty)
 		always =
 		{
 			KYNO_DOGFISH_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 1,
+		},
+	}
+
+	OverrideTuningVariables(tuning_vars[difficulty])
+end
+
+WSO.Pre.eldermandrakes_setting = function(difficulty)
+	local tuning_vars =
+	{
+		never =
+		{
+			KYNO_ELDERMANDRAKE_ENABLED = false,
+		},
+
+		few =
+		{
+			KYNO_ELDERMANDRAKE_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 5,
+		},
+
+		many =
+		{
+			KYNO_ELDERMANDRAKE_SPAWN_TIME = TUNING.TOTAL_DAY_TIME / 2,
+		},
+
+		always =
+		{
+			KYNO_ELDERMANDRAKE_SPAWN_TIME = TUNING.TOTAL_DAY_TIME / 4,
 		},
 	}
 

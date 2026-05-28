@@ -1256,3 +1256,17 @@ WANDA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ainda malcozido e venenoso."
 
 WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Tempo perfeito!"
 WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Cozinhei bem na hora certa."
+
+WANDA.DESCRIBE.CAVETUBERTEA = "Gelado, rápido, eficiente."
+
+WANDA.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Grite para mim, planta!",
+	OCCUPIED = "Ele cansou de gritar e foi dormir.",
+}
+
+WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Pare de gritar logo!",
+	GRUMPY = "O tempo lhe fará bem.",
+}

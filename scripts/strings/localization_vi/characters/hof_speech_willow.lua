@@ -1256,3 +1256,17 @@ WILLOW.DESCRIBE.KYNO_CAVETUBER_COOKED = "Lửa: lúc nào cũng làm mọi thứ
 
 WILLOW.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Bông hoa nghĩa là nó đã chín."
 WILLOW.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Aw. Bông hoa còn chẳng cháy nữa."
+
+WILLOW.DESCRIBE.CAVETUBERTEA = "Trà lạnh à? Cần thêm lửa nữa."
+
+WILLOW.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Ghê thật.",
+	OCCUPIED = "Ít nhất giờ ông ta không tạo ra tiếng ồn ngu ngốc nữa.",
+}
+
+WILLOW.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Tuyệt. Một con còn to hơn. Đúng thứ mình cần.",
+	GRUMPY = "Ông ta nổi giận rồi!",
+}

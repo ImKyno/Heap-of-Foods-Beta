@@ -1256,3 +1256,17 @@ WAXWELL.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ugh. Mình có nên ăn cái này khô
 
 WAXWELL.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Ít nhất nó ăn được."
 WAXWELL.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Trông... ăn được?"
+
+WAXWELL.DESCRIBE.CAVETUBERTEA = "Ít nhất nó được phục vụ lạnh."
+
+WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Ugh. Đúng là một gia đình ồn ào.",
+	OCCUPIED = "Tốt hơn nhiều khi không còn tiếng hét đó.",
+}
+
+WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Im cái miệng đi!",
+	GRUMPY = "Này bạn, trông bạn chẳng vui vẻ gì.",
+}

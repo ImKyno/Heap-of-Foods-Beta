@@ -1256,3 +1256,17 @@ WEBBER.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ngon quá."
 
 WEBBER.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Nó trông chín chưa nhỉ?"
 WEBBER.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Nhớ khoai tây chiên không?"
+
+WEBBER.DESCRIBE.CAVETUBERTEA = "Nó lạnh và khá ngon!"
+
+WEBBER.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Bọn mình nghĩ mấy người ồn ào đó sống ở đây.",
+	OCCUPIED = "Suỵt! Ông ấy đang ngủ!",
+}
+
+WEBBER.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Chào nhé, anh bạn ồn ào.",
+	GRUMPY = "Sao buồn vậy?",
+}

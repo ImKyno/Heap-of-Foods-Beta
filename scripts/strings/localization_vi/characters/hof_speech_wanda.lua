@@ -1256,3 +1256,17 @@ WANDA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Vẫn chưa chín kỹ và còn độc."
 
 WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Đúng lúc hoàn hảo!"
 WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Nấu vừa kịp lúc."
+
+WANDA.DESCRIBE.CAVETUBERTEA = "Lạnh, nhanh, hiệu quả."
+
+WANDA.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Hét vào tôi đi, cây cối!",
+	OCCUPIED = "Ông ấy mệt vì hét rồi đi ngủ.",
+}
+
+WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Ngừng hét đi được rồi đấy!",
+	GRUMPY = "Thời gian sẽ giúp ích cho bạn.",
+}

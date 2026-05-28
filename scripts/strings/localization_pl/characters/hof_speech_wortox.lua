@@ -1256,3 +1256,17 @@ WORTOX.DESCRIBE.KYNO_CAVETUBER_COOKED = "Nie sądzę, żeby to było bezpieczne 
 
 WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Kwitnący bulw. Hyuyu!"
 WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Smakuje jak każde inne śmiertelne jedzenie."
+
+WORTOX.DESCRIBE.CAVETUBERTEA = "Chłodny łyk. Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Dom gadających warzyw. Hyuyu!",
+	OCCUPIED = "Ale oni są głośni!",
+}
+
+WORTOX.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Źródło krzyku!",
+	GRUMPY = "Jest trochę zrzędliwy.",
+}

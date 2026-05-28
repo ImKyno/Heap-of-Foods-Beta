@@ -34,6 +34,7 @@ local customizations_worldgen =
 	hermitwobsters  = { desc = "yesno_descriptions",              group = "hof_creatures", order = 6,  world = { "forest" }},
 	jellyfishes     = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 3,  world = { "forest" }},
 	jellyfishes2    = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 4,  world = { "forest" }},
+	eldermandrakes  = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 9,  world = { "cave"   }},
 	pebblecrabs     = { desc = "yesno_descriptions",              group = "hof_creatures", order = 1,  world = { "forest" }},
 	puffermonsters  = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 8,  world = { "forest" }},
 	swordfishes     = { desc = "yesno_descriptions",              group = "hof_creatures", order = 7,  world = { "forest" }},
@@ -85,6 +86,7 @@ map.TRANSLATE_TO_PREFABS["fishermerms"]     = { "kyno_meadowisland_mermfisher" }
 map.TRANSLATE_TO_PREFABS["hermitwobsters"]  = { "wobster_monkeyisland", "wobster_monkeyisland_land", "kyno_wobster_den_monkeyisland" }
 map.TRANSLATE_TO_PREFABS["jellyfishes"]     = { "kyno_jellyfish_ocean", "kyno_jellyfish_spawner" }
 map.TRANSLATE_TO_PREFABS["jellyfishes2"]    = { "kyno_jellyfish_rainbow_ocean", "kyno_jellyfish_rainbow_spawner" }
+map.TRANSLATE_TO_PREFABS["eldermandrakes"]  = { "kyno_eldermandrakehouse" }
 map.TRANSLATE_TO_PREFABS["pebblecrabs"]     = { "kyno_pebblecrab", "kyno_pebblecrab_spawner" }
 map.TRANSLATE_TO_PREFABS["pikos"]           = { "kyno_piko" }
 map.TRANSLATE_TO_PREFABS["pikosorange"]     = { "kyno_piko_orange" }

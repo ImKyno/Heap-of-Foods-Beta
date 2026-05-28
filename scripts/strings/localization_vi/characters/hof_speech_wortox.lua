@@ -1256,3 +1256,17 @@ WORTOX.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ta không nghĩ cái này an toàn đ�
 
 WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Một củ có hoa. Hyuyu!"
 WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Nó có vị như bất kỳ món ăn phàm trần nào khác."
+
+WORTOX.DESCRIBE.CAVETUBERTEA = "Một ngụm lạnh buốt. Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Ngôi nhà của những rau củ biết nói. Hyuyu!",
+	OCCUPIED = "Họ ồn ào quá!",
+}
+
+WORTOX.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Nguồn gốc của tiếng hét!",
+	GRUMPY = "Ông ấy hơi cáu kỉnh.",
+}

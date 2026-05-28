@@ -1256,3 +1256,17 @@ WILLOW.DESCRIBE.KYNO_CAVETUBER_COOKED = "Fogo: sempre deixa as coisas melhores."
 
 WILLOW.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "A flor significa que amadureceu."
 WILLOW.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Aw. A flor nem queimou."
+
+WILLOW.DESCRIBE.CAVETUBERTEA = "Chá gelado? Precisa de mais fogo."
+
+WILLOW.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Que nojo.",
+	OCCUPIED = "Pelo menos ele não está fazendo barulhos idiotas agora.",
+}
+
+WILLOW.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Ótimo. É um grandão. Justo o que eu precisava.",
+	GRUMPY = "Ele tá bravo!",
+}

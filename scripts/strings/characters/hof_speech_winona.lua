@@ -1256,3 +1256,17 @@ WINONA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Can I eat it now?"
 
 WINONA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "This is the season for tubers."
 WINONA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Oh. I was hoping for some fries."
+
+WINONA.DESCRIBE.CAVETUBERTEA = "Not bad for cave tea."
+
+WINONA.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "I wonder how they get any sleep.",
+	OCCUPIED = "Can't get enough sleep with all that noise.",
+}
+
+WINONA.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Hey there, noisy dude!",
+	GRUMPY = "Feeling a bit down today, aren't we?",
+}

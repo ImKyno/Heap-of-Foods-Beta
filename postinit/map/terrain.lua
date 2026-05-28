@@ -56,6 +56,7 @@ local TERRAIN_FILTER                =
 	kyno_truffles_ground            = OnlyAllow({ WORLD_TILES.DECIDUOUS }),
 	kyno_radish_ground              = { WORLD_TILES.ROAD, WORLD_TILES.WOODFLOOR, WORLD_TILES.CARPET, WORLD_TILES.CHECKER, WORLD_TILES.MONKEY_DOCK },
 	kyno_rockflippable              = { WORLD_TILES.ROAD, WORLD_TILES.WOODFLOOR, WORLD_TILES.CARPET, WORLD_TILES.CHECKER, WORLD_TILES.MONKEY_DOCK },
+	kyno_eldermandrakehouse         = { WORLD_TILES.ROAD, WORLD_TILES.UNDERROCK, WORLD_TILES.ROCKY },
 }
 
 for k, v in pairs(TERRAIN_FILTER) do

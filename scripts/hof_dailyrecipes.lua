@@ -133,13 +133,20 @@ local function GetDailyRecipeSeed(custom_seed, excluded)
 end
 
 local function GetDailyRecipe()
-	local shard = TheWorld.net
+	-- This is causing the daily recipes to not properly update after the server starts.
+	-- Added this security check in case if someone still wants to force a daily recipe.
+	if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
+		print("Heap of Foods Mod - WARNING! GetDailyRecipe() was changed to allow Forced Daily Recipes!")
+		print("Heap of Foods Mod - WARNING! Daily Recipes cannot properly update while this setting is enabled!")
 
-	if shard ~= nil and shard._dailyrecipe ~= nil then
-		local recipe = shard._dailyrecipe:value()
+		local shard = TheWorld.net
 
-		if recipe ~= nil and recipe ~= "" then
-			return recipe
+		if shard ~= nil and shard._dailyrecipe ~= nil then
+			local recipe = shard._dailyrecipe:value()
+
+			if recipe ~= nil and recipe ~= "" then
+				return recipe
+			end
 		end
 	end
 

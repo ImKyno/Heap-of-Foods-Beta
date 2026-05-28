@@ -1247,7 +1247,7 @@ WORTOX.DESCRIBE.KYNO_CAVETUBERTREE =
 	GENERIC = "Oh! A stubborn little tree!",
 	CHOPPED = "Down it goes at last!",
 	BLOOMING = "It blooms beneath the earth. Curious!",
-	BURNING = "Crackle and pop, hyuyu!",
+	BURNING = "Crackle and pop. Hyuyu!",
 	BURNT = "Now it's only soot and sorrow.",
 }
 
@@ -1256,3 +1256,17 @@ WORTOX.DESCRIBE.KYNO_CAVETUBER_COOKED = "I don't think this is safe to eat."
 
 WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "A flowery tuber. Hyuyu!"
 WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "It taste just like any other mortal food."
+
+WORTOX.DESCRIBE.CAVETUBERTEA = "A chilly sip. Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "The home of talking vegetables. Hyuyu!",
+	OCCUPIED = "They're too loud!",
+}
+
+WORTOX.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "The source of the scream!",
+	GRUMPY = "He's a bit grumpy.",
+}

@@ -1258,3 +1258,17 @@ WURT.DESCRIBE.KYNO_CAVETUBER_COOKED = "Chyba nadal niebezpieczne, florp."
 
 WURT.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Wygląda na gotowe! flort."
 WURT.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Mniam!"
+
+WURT.DESCRIBE.CAVETUBERTEA = "Zimny korzenny napój, florp!"
+
+WURT.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Dom hałaśliwego przyjaciela, flort.",
+	OCCUPIED = "Hałaśliwy przyjaciel śpi.",
+}
+
+WURT.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Cześć, hałaśliwy przyjacielu!",
+	GRUMPY = "Czemu jesteś taki marudny?",
+}

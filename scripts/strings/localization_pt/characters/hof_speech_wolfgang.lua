@@ -1256,3 +1256,17 @@ WOLFGANG.DESCRIBE.KYNO_CAVETUBER_COOKED = "É comida boa?"
 
 WOLFGANG.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Wolfgang gosta da pequena flor."
 WOLFGANG.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Wolfgang come."
+
+WOLFGANG.DESCRIBE.CAVETUBERTEA = "Bebidinha pequena para músculos poderosos!"
+
+WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Colina para homens planta.",
+	OCCUPIED = "Homem planta está dormindo.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Wolfgang mais forte que você!",
+	GRUMPY = "Homem planta não está feliz.",
+}

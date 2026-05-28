@@ -1256,3 +1256,17 @@ WENDY.DESCRIBE.KYNO_CAVETUBER_COOKED = "Có lẽ mình may mắn và nó vẫn c
 
 WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Hoa đẹp."
 WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Mình có nên ăn luôn cả hoa không?"
+
+WENDY.DESCRIBE.CAVETUBERTEA = "Một chút an ủi lạnh lẽo trong thế giới không niềm vui."
+
+WENDY.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Abigail cũng sống dưới lòng đất.",
+	OCCUPIED = "Giờ thì bớt ồn hơn rồi.",
+}
+
+WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Lại thêm một dị dạng khác.",
+	GRUMPY = "Tâm trạng của ông ấy giống tôi.",
+}

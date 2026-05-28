@@ -546,6 +546,17 @@ AddRecipe2("kyno_dailyrecipe_sign", {Ingredient("boards", 1), Ingredient("papyru
 	{"STRUCTURES", "COOKING"}
 )
 
+AddRecipe2("kyno_eldermandrakehouse", {Ingredient("boards", 4), Ingredient("cutreeds", 6), Ingredient("mandrake", 2)}, TECH.SCIENCE_TWO,
+	{
+		placer              = "kyno_eldermandrakehouse_placer",
+		min_spacing         = 4,
+		atlas               = ModAtlas,
+		image               = "kyno_eldermandrakehouse.tex",
+	},
+	{"STRUCTURES"}
+)
+SortAfter("kyno_eldermandrakehouse", "rabbithouse", "STRUCTURES")
+
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
 		builder_tag         = "strongman",

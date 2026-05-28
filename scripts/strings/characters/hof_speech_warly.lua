@@ -1256,3 +1256,17 @@ WARLY.DESCRIBE.KYNO_CAVETUBER_COOKED = "Not my best work."
 
 WARLY.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "The perfect ripeness."
 WARLY.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Something I just whipped up."
+
+WARLY.DESCRIBE.CAVETUBERTEA = "A delightfully refreshing infusion."
+
+WARLY.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Those deafening root vegetables live in there.",
+	OCCUPIED = "A house full of noise, I suppose.",
+}
+
+WARLY.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Loud root vegetable.",
+	GRUMPY = "He's not looking very happy today.",
+}

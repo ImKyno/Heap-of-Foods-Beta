@@ -140,6 +140,17 @@ local STRINGS_CUSTOMIZATION =
 		es  = "Montón de Alimentos - Regeneración de la Isla Costera",
 		vi  = "Kho thực phẩm - Sự tái sinh của đảo ven biển",
 	},
+
+	CREATURES_REGROW =
+	{
+		"Heap of Foods - Creatures",
+		zh  = "更多料理 - 生物",
+		zht = "食物堆積 - 生物",
+		pt  = "Amontoado de Comidas - Criaturas",
+		pl  = "Stos jedzenia - Stworzenia",
+		es  = "Montón de Alimentos - Criaturas",
+		vi  = "Kho thực phẩm - Sinh Vật",
+	},
 }
 
 -- Main Menu world customization.
@@ -154,7 +165,7 @@ AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_regrow_r",    ChooseTranslatio
 AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_ocean_r",     ChooseTranslationTable(STRINGS_CUSTOMIZATION.RESOURCES_OCEAN_REGROW), nil, nil, 13)
 AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_serenity_r",  ChooseTranslationTable(STRINGS_CUSTOMIZATION.SERENITYISLAND_REGROW),  nil, nil, 14)
 AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_meadow_r",    ChooseTranslationTable(STRINGS_CUSTOMIZATION.MEADOWISLAND_REGROW),    nil, nil, 15)
-AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_creatures_r", ChooseTranslationTable(STRINGS_CUSTOMIZATION.CREATURES),              nil, nil, 16)
+AddCustomizeGroup(_G.LEVELCATEGORY.SETTINGS, "hof_creatures_r", ChooseTranslationTable(STRINGS_CUSTOMIZATION.CREATURES_REGROW),       nil, nil, 16)
 
 local function ChooseTranslationTable2()
 	-- Try to load strings if we have the localization files.

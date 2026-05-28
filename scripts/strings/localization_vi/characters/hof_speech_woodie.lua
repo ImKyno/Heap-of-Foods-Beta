@@ -1256,3 +1256,17 @@ WOODIE.DESCRIBE.KYNO_CAVETUBER_COOKED = "Không có gì đặc biệt, chỉ là
 
 WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Ờ, giờ nó chín rồi."
 WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Ồ, trông sang đấy."
+
+WOODIE.DESCRIBE.CAVETUBERTEA = "Rất hợp để giải nhiệt dưới lòng đất."
+
+WOODIE.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Đó là nơi mấy anh chàng cây cối nhỏ bé sống.",
+	OCCUPIED = "Có ai trong đó không?",
+}
+
+WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Ông ta đang kiếm chuyện đánh nhau.",
+	GRUMPY = "Hôm nay có chuyện gì vậy, bạn hiền?",
+}

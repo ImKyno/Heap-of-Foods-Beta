@@ -1256,3 +1256,17 @@ WOODIE.DESCRIBE.KYNO_CAVETUBER_COOKED = "Nic wyszukanego, tylko trochę bulw."
 
 WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "No, teraz dojrzał."
 WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "No proszę, to już luksus."
+
+WOODIE.DESCRIBE.CAVETUBERTEA = "Dobre na ochłodę pod ziemią."
+
+WOODIE.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "To tutaj mieszkają te małe roślinne stworki.",
+	OCCUPIED = "Jest tam ktoś?",
+}
+
+WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Szukasz bójki, co?",
+	GRUMPY = "Co ci się dziś stało, kolego?",
+}
