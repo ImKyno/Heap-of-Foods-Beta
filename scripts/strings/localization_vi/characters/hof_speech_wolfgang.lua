@@ -89,6 +89,9 @@ WOLFGANG.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Bóng tối lại đáng sợ..."
 
 WOLFGANG.ANNOUNCE_KYNO_LUCKBUFF_END = "May mắn đi rồi. Wolfgang vẫn mạnh!"
 
+WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wolfgang thu hoạch như người khổng lồ mạnh mẽ!"
+WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Thời gian thu hoạch lớn đã hết."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái đúng."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Heo hùng mạnh không muốn cái này."

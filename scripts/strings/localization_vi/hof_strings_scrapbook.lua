@@ -121,6 +121,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHUNGER = "Tăng độ no tối đa 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXSANITY = "Tăng tinh thần tối đa thêm 30% trong một khoảng thời gian."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "Tăng máu tối đa thêm 30% trong một khoảng thời gian.\nTạm thời giảm nhiệt độ."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "Tăng máu, độ no và tinh thần tối đa thêm 15% trong một khoảng thời gian.\n\nTạm thời giảm nhiệt độ."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Tăng năng suất cây trồng trong một khoảng thời gian nhất định."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Tăng năng suất cây trồng trong một khoảng thời gian nhất định.\n\Tạm thời giảm nhiệt độ."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Có thể được thêm vào món Nồi Nấu bằng Trạm Nêm Gia Vị Di Động.\n\nĂn món được nêm Bột Bảo Quản sẽ giảm một nửa tốc độ hư hỏng và loại bỏ hình phạt từ thức ăn hỏng."
@@ -169,6 +171,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Một quả trứng quá khổ
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Có thể được ấp nở khi ở gần nguồn nhiệt."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "Chăm sóc vết thương và làm mát bản thân bằng món trà được Pearl pha đầy yêu thương này."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "Xoa dịu tâm trí và bảo vệ nó trước những kẻ thù đáng sợ bằng món trà được Pearl pha đầy yêu thương này."
+STRINGS.SCRAPBOOK.SPECIALINFO.SOUNDPROOF = "Cung cấp khả năng bảo vệ khỏi tiếng ồn lớn."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Khẩu phần của chúng chủ yếu gồm Hạt Giống, Lúa Mì hoặc Nhánh Đốm.\n\nGà tìm thấy ngoài hoang dã có 40% cơ hội đẻ Trứng sau khi ăn. Chúng có một cơ hội nhỏ đẻ Trứng Lớn.\n\nGà sống trong Chuồng có thể đẻ Trứng mỗi ngày sau khi ăn. Chúng có cơ hội đẻ Trứng Lớn cao hơn."

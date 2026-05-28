@@ -89,6 +89,9 @@ WANDA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "E a escuridão volta a ser perigosa."
 
 WANDA.ANNOUNCE_KYNO_LUCKBUFF_END = "E assim... acabou."
 
+WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Excelente. Mais rendimento em menos tempo."
+WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "O aumento de eficiência expirou."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não... Preciso de algo diferente."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Acho que tenho tempo de pegar uma lagosta para você."

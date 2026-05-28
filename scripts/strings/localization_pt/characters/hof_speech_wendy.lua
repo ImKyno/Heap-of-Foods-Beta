@@ -89,6 +89,9 @@ WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "A escuridão voltou a parecer hostil."
 
 WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Até a sorte passageira desaparece."
 
+WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "A terra oferece sua abundância passageira."
+WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "A generosidade da natureza desaparece mais uma vez."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."

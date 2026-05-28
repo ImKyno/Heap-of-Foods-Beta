@@ -89,6 +89,9 @@ WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Bóng tối lại khiến mình bất a
 
 WILSON.ANNOUNCE_KYNO_LUCKBUFF_END = "Có vẻ vận may của mình đã cạn."
 
+WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Tôi đã sẵn sàng cho một mùa bội thu!"
+WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Mùa thu hoạch kết thúc rồi!"
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái này."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ông ấy muốn thứ khác."

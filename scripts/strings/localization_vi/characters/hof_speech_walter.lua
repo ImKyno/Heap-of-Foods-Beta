@@ -89,6 +89,9 @@ WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Tớ vẫn chẳng sợ bóng tối."
 
 WALTER.ANNOUNCE_KYNO_LUCKBUFF_END = "Chắc chuỗi may mắn kết thúc rồi."
 
+WALTER.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Có vẻ mùa thu hoạch đến sớm rồi đó, Woby!"
+WALTER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Mùa thu hoạch lớn giờ kết thúc rồi."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai món rồi!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, không phải cái này."

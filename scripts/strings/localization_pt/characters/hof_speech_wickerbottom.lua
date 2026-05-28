@@ -89,6 +89,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Minha aversão à escuridão reto
 
 WICKERBOTTOM.ANNOUNCE_KYNO_LUCKBUFF_END = "A vantagem estatística expirou."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Ah, minha experiência em horticultura está florescendo."
+WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "O surto botânico parece ter diminuído."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Precisa de algo diferente."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não. Acho que ele mencionou wobsters."

@@ -121,6 +121,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHUNGER = "Zwiększa maksymalny gł�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXSANITY = "Zwiększa maksymalną poczytalność o 30% na pewien czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "Zwiększa maksymalne zdrowie o 30% na pewien czas.\nKrótko obniża temperaturę."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "Zwiększa maksymalne zdrowie, głód i zdrowie psychiczne o 15% na określony czas.\n\nKrótko obniża temperaturę."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Zwiększenie plonu roślin na określony czas."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Zwiększenie plonu roślin na określony czas.\n\Krótko obniża temperaturę."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Może być dodany do jedzenia w garnku za pomocą przenośnej stacji przypraw.\n\nJedzenie przyprawione Preserver Powder zmniejsza czas psucia się o połowę i neguje kary za zepsute jedzenie."
@@ -169,6 +171,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Ogromne jajko, którym można 
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Można wykluć się w pobliżu źródła ciepła."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "Zadbaj o swoje rany i ochłódź się dzięki tej z troską przygotowanej miksturze od Pearl."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "Ukoisz swój umysł i ochronisz go przed strasznymi wrogami dzięki tej z troską przygotowanej miksturze od Pearl."
+STRINGS.SCRAPBOOK.SPECIALINFO.SOUNDPROOF = "Zapewnia ochronę przed głośnymi dźwiękami."
 
 -- Stworzenia.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Ich dieta opiera się na nasionach, pszenicy lub gałązkach cętkowanych.\n\nKury żyjące na wolności mają 40% szans na zniesienie jaj po jedzeniu. Mają bardzo małe szanse na zniesienie dużego jaja.\n\nKury żyjące w kurniku mogą znosić jaja codziennie po jedzeniu. Mają większe szanse na zniesienie dużego jaja."

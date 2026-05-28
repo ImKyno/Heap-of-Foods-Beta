@@ -115,6 +115,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MAXHEALTH = "Zwiększa maksymalne zdrowie"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MAXHUNGER = "Zwiększa maksymalne poczucie głodu"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MAXSANITY = "Zwiększa maksymalne zdrowie psychiczne"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MAXOMNI = "Zwiększa maksymalne statystyki"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GREENTHUMB = "Zwiększa plony roślin"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Zielone warzywo, król łąk i lasów deszczowych. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Jeden z wielu darów morza, bardzo ceniony przez ludzi kultury. -W"

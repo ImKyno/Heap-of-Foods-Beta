@@ -89,6 +89,9 @@ WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Alright, now it's spooky again."
 
 WOODIE.ANNOUNCE_KYNO_LUCKBUFF_END = "Well, that was nice while it lasted."
 
+WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Now that's a proper harvest, eh?"
+WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Back to normal pickin'."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to pick it up?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. He wants something else."

@@ -89,6 +89,9 @@ WINONA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Welp, back to being scared of her again
 
 WINONA.ANNOUNCE_KYNO_LUCKBUFF_END = "Alright, back to real odds."
 
+WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Now this is efficient harvesting."
+WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Back to regular production."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nope."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope, something else, maybe."

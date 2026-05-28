@@ -89,6 +89,9 @@ WINONA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Bom, voltei a ter medo dela..."
 
 WINONA.ANNOUNCE_KYNO_LUCKBUFF_END = "Beleza, agora só na base da realidade."
 
+WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Agora isso é colheita eficiente."
+WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "De volta à produção normal."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, talvez outra coisa."

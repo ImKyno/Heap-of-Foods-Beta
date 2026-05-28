@@ -89,6 +89,9 @@ WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Thật không may. Bóng tối lại c
 
 WAXWELL.ANNOUNCE_KYNO_LUCKBUFF_END = "Dễ đoán thôi. Vận may chẳng bao giờ kéo dài."
 
+WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Cuối cùng cũng có thứ gì đó hiệu quả."
+WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Khoảnh khắc đó đã qua rồi."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cho việc này."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ngươi không dễ chiều chút nào, phải không?"

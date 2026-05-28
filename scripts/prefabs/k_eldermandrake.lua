@@ -1,4 +1,5 @@
 local brain = require("brains/eldermandrakebrain")
+local PLANT_DEFS = require("prefabs/farm_plant_defs").PLANT_DEFS
 
 local assets =
 {
@@ -19,6 +20,39 @@ local prefabs =
 
 local MAX_TARGET_SHARES = 5
 local SHARE_TARGET_DIST = 30
+
+local function OnPickRandomSeed()
+	local season = TheWorld.state.season
+	local weights = {}
+	local season_mod = TUNING.SEED_WEIGHT_SEASON_MOD
+
+	for k, v in pairs(VEGGIES) do
+		weights[k] = v.seed_weight * ((PLANT_DEFS[k] and PLANT_DEFS[k].good_seasons[season]) and season_mod or 1)
+	end
+
+	return weighted_random_choice(weights).."_seeds"
+end
+
+local function OnPickExtraLoot()
+	local choices =
+	{
+		twigs                = 1,
+		cutgrass             = 1,
+		succulent_picked     = 1,
+		[OnPickRandomSeed()] = 1,
+	}
+
+	return weighted_random_choice(choices)
+end
+
+-- Can drop a random seed based on the current season.
+local function OnSetLoot(lootdropper)
+	lootdropper.chanceloot = nil
+
+	lootdropper:AddChanceLoot("plantmeat",        1.00)
+	lootdropper:AddChanceLoot("livinglog",        1.00)
+	lootdropper:AddChanceLoot(OnPickExtraLoot(),  1.00)
+end
 
 local function OnTalk(inst, script)
 	inst.SoundEmitter:PlaySound("hof_sounds/creatures/eldermandrake/talk")
@@ -153,7 +187,7 @@ local function GetBattleCryString(combatcmp, target)
 	return STRINGS.KYNO_ELDERMANDRAKE_BATTLECRY[math.random(#STRINGS.KYNO_ELDERMANDRAKE_BATTLECRY)]
 end
 
-local SLEEPTARGETS_CANT_TAGS = { "eldermandrake", "playerghost", "FX", "DECOR", "INLIMBO" }
+local SLEEPTARGETS_CANT_TAGS = { "soundproof", "eldermandrake", "playerghost", "FX", "DECOR", "INLIMBO" }
 local SLEEPTARGETS_ONEOF_TAGS = { "sleeper", "player" }
 
 local function DoAreaEffect(inst, knockout)
@@ -189,6 +223,7 @@ local function DoAreaEffect(inst, knockout)
 end
 
 local function DeathScream(inst)
+	inst.SoundEmitter:PlaySound("dontstarve/creatures/mandrake/death")
 	DoAreaEffect(inst)
 end
 
@@ -322,7 +357,8 @@ local function fn()
 	inst.components.health:StartRegen(TUNING.KYNO_ELDERMANDRAKE_HEALTH_REGEN_AMOUNT, TUNING.KYNO_ELDERMANDRAKE_HEALTH_REGEN_PERIOD)
 
 	inst:AddComponent("lootdropper")
-	inst.components.lootdropper:SetLoot({"plantmeat", "livinglog"})
+	inst.components.lootdropper:SetLootSetupFn(OnSetLoot)
+    OnSetLoot(inst.components.lootdropper)
 
 	inst:AddComponent("sanityaura")
 	inst.components.sanityaura.aurafn = CalcSanityAura

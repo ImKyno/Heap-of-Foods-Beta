@@ -89,6 +89,9 @@ WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "O nie... ciemność znów jest straszna
 
 WEBBER.ANNOUNCE_KYNO_LUCKBUFF_END = "Och nie... nasze szczęście zniknęło."
 
+WEBBER.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wow! Dostajemy mnóstwo roślin!"
+WEBBER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Chyba dodatkowe rośliny już się skończyły."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie tego."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sądzimy, że to nie jest właściwy posiłek, jakiego potrzebuje."

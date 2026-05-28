@@ -89,6 +89,9 @@ WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Được rồi, giờ lại thấy rợ
 
 WOODIE.ANNOUNCE_KYNO_LUCKBUFF_END = "Chà, lúc còn hiệu lực thì cũng hay."
 
+WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Đó mới là một vụ mùa đúng nghĩa, eh?"
+WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Quay lại hái bình thường thôi."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để nhấc nó lên?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không. Ông ấy muốn thứ khác."

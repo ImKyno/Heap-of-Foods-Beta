@@ -89,6 +89,9 @@ WINONA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Chà, lại quay về sợ cô ta rồi
 
 WINONA.ANNOUNCE_KYNO_LUCKBUFF_END = "Được rồi, quay lại tỷ lệ thật."
 
+WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Đây mới gọi là thu hoạch hiệu quả."
+WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Trở lại sản xuất bình thường."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không, chắc phải thứ khác."

@@ -89,6 +89,9 @@ WANDA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "And the darkness becomes dangerous again
 
 WANDA.ANNOUNCE_KYNO_LUCKBUFF_END = "And just like that... it ends."
 
+WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Excellent. More yields in less time."
+WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The efficiency boost expired."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "No... I need something different."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I guess I have some time to get a wobster for you."

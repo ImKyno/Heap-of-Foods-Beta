@@ -89,6 +89,9 @@ WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "I still hold no fear of the darkness."
 
 WALTER.ANNOUNCE_KYNO_LUCKBUFF_END = "I Guess the lucky streak is over."
 
+WALTER.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Looks like harvest season came early, Woby!"
+WALTER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The big harvest's over now."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong thing!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, not this one."

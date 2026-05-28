@@ -89,6 +89,9 @@ WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Que pena. A escuridão voltou a morder
 
 WAXWELL.ANNOUNCE_KYNO_LUCKBUFF_END = "Previsível. A sorte nunca dura."
 
+WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Finalmente, algo produtivo."
+WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "O momento passou."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de algo diferente."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Você não é fácil, hein?"

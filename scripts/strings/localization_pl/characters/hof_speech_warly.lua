@@ -89,6 +89,9 @@ WARLY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Noc odzyskuje swój groźny charakter."
 
 WARLY.ANNOUNCE_KYNO_LUCKBUFF_END = "Czas się skończył. Szkoda."
 
+WARLY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Magnifique! Świeżych składników pod dostatkiem!"
+WARLY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Nadwyżka się wyczerpała."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Źle, źle..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Masz ochotę na coś jeszcze pyszniejszego?"

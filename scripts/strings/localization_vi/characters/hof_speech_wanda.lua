@@ -89,6 +89,9 @@ WANDA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Và bóng tối lại trở nên nguy hi
 
 WANDA.ANNOUNCE_KYNO_LUCKBUFF_END = "Và cứ thế... nó kết thúc."
 
+WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Tuyệt vời. Nhiều sản lượng hơn trong ít thời gian hơn."
+WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Tăng cường hiệu suất đã hết hiệu lực."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không... ta cần thứ khác."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Có lẽ ta vẫn còn chút thời gian để kiếm Wobster cho ngươi."

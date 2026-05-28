@@ -89,6 +89,9 @@ WILLOW.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ech, znowu jest strasznie ciemno."
 
 WILLOW.ANNOUNCE_KYNO_LUCKBUFF_END = "Świetnie. Z powrotem pech jak zwykle."
 
+WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Czas zgarnąć wszystkie rośliny, zanim spłoną!"
+WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Och, zabawa już się skończyła?"
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Muszę tu coś umieścić!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ech, nie to!"

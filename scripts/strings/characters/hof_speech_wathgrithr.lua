@@ -89,6 +89,9 @@ WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The shadows seek battle once more!"
 
 WATHGRITHR.ANNOUNCE_KYNO_LUCKBUFF_END = "Fate has withdrawn its favor!"
 
+WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "The fields shall yield plentiful bounty!"
+WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The fertile blessing hath faded!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wrong feast! Beast wants a more delightful food!"

@@ -121,6 +121,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHUNGER = "Aumenta a Fome Máxima em
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXSANITY = "Aumenta a Sanidade Máxima em 30% por um certo período de tempo."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "Aumenta a Vida Máxima em 30% por um certo período de tempo.\nReduz brevemente a temperatura."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "Aumenta a Vida, Fome e Sanidade Máxima em 15% por um certo período de tempo.\n\nReduz brevemente a temperatura."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Aumenta o rendimento de plants por um certo período de tempo."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Aumenta o rendimento de plants por um certo período de tempo.\n\Reduz brevemente a temperatura."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Pó Conservante reduz pela metade o tempo de deterioração e anula penalidades de comida estragada."
@@ -169,6 +171,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Um ovo gigante que pode ser ar
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Pode ser chocado se estiver próximo a uma fonte de calor."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "Cuide de seus ferimentos e refresque-se com esta mistura preparada com carinho por Pearl."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "Acalme sua mente e proteja-a contra inimigos assustadores com esta mistura preparada com carinho por Pearl."
+STRINGS.SCRAPBOOK.SPECIALINFO.SOUNDPROOF = "Oferece proteção contra ruídos altos."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "A dieta delas consiste basicamente em Sementes, Trigo ou Rebento Folhoso.\n\nGalinhas Selvagens têm 40% de chance de botar ovos após se alimentarem. Elas têm uma pequena chance de botar um Ovo Grande.\n\nGalinhas criadas no Galinheiro podem botar ovos todos os dias após se alimentarem. Elas têm uma chance maior de colocar um Ovo Grande."

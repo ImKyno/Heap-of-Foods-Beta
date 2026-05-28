@@ -89,6 +89,9 @@ WILLOW.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Bóng tối lại rợn rợn rồi..."
 
 WILLOW.ANNOUNCE_KYNO_LUCKBUFF_END = "Tuyệt. Lại xui như thường."
 
+WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Đến lúc gom hết cây cối trước khi chúng cháy!"
+WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Aw, vui vậy mà hết rồi sao?"
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Mình cần bỏ thứ gì đó vào đây!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, sai thứ rồi!"

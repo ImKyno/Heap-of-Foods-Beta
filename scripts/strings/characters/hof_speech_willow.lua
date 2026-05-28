@@ -89,6 +89,9 @@ WILLOW.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The dark is creepy again..."
 
 WILLOW.ANNOUNCE_KYNO_LUCKBUFF_END = "Great. Back to normal bad luck."
 
+WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Time to grab all the plants before they burn!"
+WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Aw, the fun's over already?"
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need to put something in here!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, wrong thing!"

@@ -89,6 +89,9 @@ WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Oh dear! The dark bites again!"
 
 WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Awww, the fun’s over!"
 
+WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Such plentiful pickings. Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The bounty has slipped away. Hyuyu!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I know this prank was good, but let's get the real thing."

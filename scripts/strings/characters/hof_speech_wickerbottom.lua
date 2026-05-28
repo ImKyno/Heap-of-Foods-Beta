@@ -89,6 +89,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_DARKNESSBUFF_END = "My aversion to darkness has retur
 
 WICKERBOTTOM.ANNOUNCE_KYNO_LUCKBUFF_END = "The statistical advantage has expired."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Ah, my horticultural expertise is flourishing."
+WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The botanical surge appears to have subsided."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It requires something else."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. I think he said something about wobsters."

@@ -74,7 +74,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_REVIVER = "Instantly revives a dead pl
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOCHA = "Increased movement speed, sleep resistance and decreased hunger loss rate for a certain amount of time.\n\nBriefly increases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSFREEZING = "Briefly increases temperature and becomes less susceptible to Freezing."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSOVERHEAT = "Briefly decreases temperature and becomes less susceptible to Overheating."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FISHING = "Increased fishing yields for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_FISHING = "Increased fishing yield for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIGHTINESS = "Slightly boosts mightiness."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_INSPIRATION = "Slightly boosts inspiration."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WARLYTEA = "Decreased sanity loss for a certain amount of time.\n\Briefly increases the temperature."
@@ -121,6 +121,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHUNGER = "Increases Max Hunger by 3
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXSANITY = "Increases Max Sanity by 30% for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "Increases Max Health by 30% for a certain amount of time.\nBriefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "Increases Max Health, Hunger and Sanity by 15% for a certain amount of time.\n\nBriefly decreases the temperature."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Increased plant yield for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Increased plant yield for a certain amount of time.\n\Briefly decreases the temperature."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
@@ -169,6 +171,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "An oversized egg that can be t
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Can be hatched when near a source of heat."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "Tend to your wounds and cool yourself with this lovingly brewed concoction from Pearl."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "Soothe your mind and protect it against scary foes with this lovingly brewed concoction from Pearl."
+STRINGS.SCRAPBOOK.SPECIALINFO.SOUNDPROOF = "Offers protection against loud noises."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 40% chance of laying Eggs after eating. They have a small chance of laying a Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying a Large Egg."

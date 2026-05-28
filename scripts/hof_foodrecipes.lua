@@ -3428,19 +3428,24 @@ local kyno_foods =
 	cavetubertea =
 	{
 		test = function(cooker, names, tags) return (names.kyno_cavetuber_blooming or names.kyno_cavetuber_blooming_cooked) 
-		and tags.tillweed and tags.frozen and not tags.inedible end,
+		and tags.tillweed and tags.sweetener and tags.frozen and not tags.inedible end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
-		health = 60,
+		health = 30,
 		hunger = 30,
 		sanity = 15,
 		cooktime = 1,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GREENTHUMB,
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		floater = TUNING.HOF_FLOATER,
-		card_def = {ingredients = {{"kyno_cavetuber", 1}, {"tillweed", 1}, {"ice", 2}}},
+		card_def = {ingredients = {{"kyno_cavetuber_blooming", 1}, {"tillweed", 1}, {"honey", 1}, {"ice", 1}}},
+		prefabs = { "kyno_greenthumbbuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_greenthumbbuff", "kyno_greenthumbbuff")
+		end,
 	},
 }
 

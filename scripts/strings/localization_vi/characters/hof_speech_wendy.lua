@@ -89,6 +89,9 @@ WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Bóng tối lại trở nên thù địc
 
 WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Ngay cả vận may thoáng qua rồi cũng tàn."
 
+WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Mặt đất ban tặng sự phong phú ngắn ngủi của nó."
+WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Sự hào phóng của thiên nhiên lại phai tàn."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để thu gom?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Tất nhiên đây không phải thứ sinh vật ngu ngốc đó muốn."

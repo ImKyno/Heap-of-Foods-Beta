@@ -41,10 +41,12 @@ HOF_NAUGHTY_VALUE                    =
 	["kyno_jellyfish_rainbow"]       = 2,
 	["kyno_pebblecrab"]              = 2,
 	["kyno_meadowisland_mermfisher"] = 3,
+	["kyno_eldermandrake"]           = 3,
 	["kyno_swordfish"]               = 4,
 	["kyno_whale_white_ocean"]       = 6,
 	["kyno_whale_blue_ocean"]        = 7,
 	["kyno_meadowisland_seller"]     = 50, -- Wait, how did you kill Sammy?
+	["kyno_deciduousforest_seller"]  = 50, -- Wait, how did you kill Partitio?
 }
 
 -- New PICKABLE for Woby foraging.

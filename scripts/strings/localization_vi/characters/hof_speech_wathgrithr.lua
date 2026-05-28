@@ -89,6 +89,9 @@ WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Bóng tối lại muốn giao chi�
 
 WATHGRITHR.ANNOUNCE_KYNO_LUCKBUFF_END = "Số mệnh đã rút lại ân huệ!"
 
+WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Những cánh đồng sẽ ban cho chiến lợi phẩm dồi dào!"
+WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Phước lành màu mỡ đã tan biến!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai rồi!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sai yến tiệc! Con thú muốn món khoái khẩu hơn!"

@@ -37,6 +37,7 @@ ScrapbookData.potatosack.craftingprefab = "wolfgang"
 ScrapbookData.potatosack.burnable = true
 ScrapbookData.potatosack.deps = {"cutgrass", "papyrus", "rope", "potato", "potato_cooked", "potato_seeds", "kyno_sweetpotato", "kyno_sweetpotato_cooked", "kyno_sweetpotato_seeds"}
 ScrapbookData.potatosack.specialinfo = "POTATOSACK"
+ScrapbookData.earmuffshat.specialinfo = "SOUNDPROOF"
 
 ScrapbookData.lobsterdinner.specialinfo = "FOODEFFECTS_EXQUISITE"
 ScrapbookData.monstertartare.healthvalue = -20
@@ -9992,7 +9993,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		type           = "food",
 		tex            = "cavetubertea.tex",
 		prefab         = "cavetubertea",
-		healthvalue    = 60,
+		healthvalue    = 30,
 		hungervalue    = 30,
 		sanityvalue    = 15,
 		perishable     = 4800,
@@ -10007,7 +10008,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsety    = 10,
 		animoffsetbgx  = -15,
 		animoffsetbgy  = -15,
-		specialinfo    = "FOODEFFECTS_DECREASETEMP",
+		specialinfo    = "FOODEFFECTS_GREENTHUMB2",
 	},
 }
 
@@ -15658,7 +15659,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		build          = "elderdrake_build",
 		anim           = "idle_loop",
 		hide           = {"hat", "ARM_carry", "HAIR_HAT"},
-		deps           = {"plantmeat", "livinglog", "kyno_eldermandrakehouse"},
+		deps           = {"plantmeat", "livinglog", "cutgrass", "twigs", "succulent_picked", "seeds", "kyno_eldermandrakehouse"},
 	},
 }
 

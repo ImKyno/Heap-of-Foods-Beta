@@ -28,6 +28,8 @@ local function fn()
     inst.AnimState:SetBuild("kyno_aspargos")
     inst.AnimState:PlayAnimation("planted")
     inst.AnimState:SetRayTestOnBB(true)
+
+    inst:AddTag("greenthumb_valid")
 	
 	inst:SetPrefabNameOverride("asparagus")
 

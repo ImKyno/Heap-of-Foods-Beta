@@ -59,6 +59,7 @@ local INIT_POSTINIT_PREFABS =
 	"beebox",
 	"beefalo",
 	"beequeen",
+	"berrybush_juicy",
 	"birdcage",
 	"catcoon",
 	"characters",
@@ -73,12 +74,14 @@ local INIT_POSTINIT_PREFABS =
 	"deer",
 	"dragonfly",
 	"dryables",
+	"earmuffs",
 	"firepit",
 	"fishfarm",
 	"foliage",
 	"foodbuffs",
 	"frog",
 	"grassgator",
+	"greenthumb",
 	"grotto_pool_big",
 	"hermitcrab_teashop",
 	"honeyed_items",
@@ -138,6 +141,7 @@ local INIT_POSTINIT_PREFABS =
 
 local INIT_POSTINIT_STATEGRAPHS =
 {
+	"SGbearger",
 	"SGbee",
 	"SGshark",
 	"SGwilson",

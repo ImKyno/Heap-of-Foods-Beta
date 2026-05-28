@@ -89,6 +89,9 @@ WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ciemność znów wydaje się wroga."
 
 WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Nawet ulotne szczęście przemija."
 
+WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Ziemia oferuje swoją ulotną obfitość."
+WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Hojność natury znów przeminęła."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może warto coś zebrać?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Oczywiście, że nie tego chce to głupie stworzenie."

@@ -89,6 +89,9 @@ WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Tthe darkness feels unsettling again."
 
 WILSON.ANNOUNCE_KYNO_LUCKBUFF_END = "It seems my luck has run out."
 
+WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "I'm ready for the bountiful harvest!"
+WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The harvesting season is over!"
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It's not this one."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "He wants something else."

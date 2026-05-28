@@ -89,6 +89,9 @@ WARLY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Màn đêm lại có cái cắn đáng s
 
 WARLY.ANNOUNCE_KYNO_LUCKBUFF_END = "Hết đúng lúc rồi. Tiếc thật."
 
+WARLY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Magnifique! Nguyên liệu tươi có khắp nơi!"
+WARLY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Phần dư thừa đã giảm đi."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai rồi, sai rồi..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ngươi muốn thứ gì đó ngon hơn sao?"

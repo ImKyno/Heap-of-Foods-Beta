@@ -115,6 +115,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MAXHEALTH = "Tăng máu tối đa"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MAXHUNGER = "Tăng độ no tối đa"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MAXSANITY = "Tăng tinh thần tối đa"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MAXOMNI = "Tăng chỉ số tối đa"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GREENTHUMB = "Tăng năng suất cây trồng"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Một loại rau xanh xanh, vua của đồng cỏ và rừng mưa. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Một trong nhiều món quà từ biển cả, rất được những kẻ biết thưởng thức trân trọng. -W"

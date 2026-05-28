@@ -89,6 +89,9 @@ WOLFGANG.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Escuro é assustador de novo..."
 
 WOLFGANG.ANNOUNCE_KYNO_LUCKBUFF_END = "Sorte acabou. Wolfgang ainda é forte!"
 
+WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wolfgang colhe como gigante poderoso!"
+WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Tempo de pequena colheita acabou."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é o correto."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Porco poderoso não quer isso."

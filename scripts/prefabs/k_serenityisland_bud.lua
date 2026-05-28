@@ -195,8 +195,9 @@ local function flowerfn()
     inst.AnimState:SetBuild("kyno_serenityisland_bud")
     inst.AnimState:SetRayTestOnBB(true)
 
+	inst:AddTag("cattoy")
 	inst:AddTag("sugarflower")
-    inst:AddTag("cattoy")
+	inst:AddTag("greenthumb_valid")
 
     inst.entity:SetPristine()
 

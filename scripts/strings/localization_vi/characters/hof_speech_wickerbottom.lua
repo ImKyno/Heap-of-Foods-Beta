@@ -89,6 +89,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Sự ác cảm với bóng tối 
 
 WICKERBOTTOM.ANNOUNCE_KYNO_LUCKBUFF_END = "Lợi thế thống kê đã hết hạn."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "À, chuyên môn làm vườn của ta đang phát triển mạnh."
+WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Đợt bùng nổ thực vật dường như đã lắng xuống."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nó cần thứ khác."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không. Ta nghĩ ông ấy có nhắc đến Wobster."

@@ -89,6 +89,9 @@ WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ôi trời! Bóng tối lại cắn r�
 
 WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Awww, cuộc vui hết rồi!"
 
+WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Một vụ thu hoạch thật dồi dào. Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Sự sung túc đã vụt mất rồi. Hyuyu."
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cơ."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ta biết trò đùa này hay lắm, nhưng lấy đồ thật đi nào."

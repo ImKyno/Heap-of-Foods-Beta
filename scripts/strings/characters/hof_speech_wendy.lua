@@ -89,6 +89,9 @@ WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The darkness feels hostile once more."
 
 WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Even fleeting fortune eventually fades."
 
+WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "The earth offers its fleeting abundance."
+WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Nature's generosity fades once more."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to gather?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Of course it's not what this stupid creature wants."

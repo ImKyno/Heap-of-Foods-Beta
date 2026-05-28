@@ -89,6 +89,9 @@ WURT.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Escuro assusta de novo!!"
 
 WURT.ANNOUNCE_KYNO_LUCKBUFF_END = "Sorte acabou, florp..."
 
+WURT.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Tantas plantas, florp!"
+WURT.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Agora não tem tantas plantas."
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Peixes bonitinhos sempre estão no pantano!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... errado..."

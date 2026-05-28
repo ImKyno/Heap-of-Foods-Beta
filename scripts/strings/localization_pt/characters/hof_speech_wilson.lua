@@ -89,6 +89,9 @@ WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ah... a escuridão voltou a ser perturb
 
 WILSON.ANNOUNCE_KYNO_LUCKBUFF_END = "Parece que minha sorte acabou."
 
+WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Estou pronto para uma colheita abundante!"
+WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "A temporada de colheita acabou!"
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ele quer outra coisa."
