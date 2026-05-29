@@ -506,7 +506,7 @@ local function GetStatus(inst, viewer)
 	or "GENERIC"
 end
 
-local function onsave(inst, data)
+local function OnSave(inst, data)
 	if inst:HasTag("burnt") or inst:HasTag("fire") then
 		data.burnt = true
 	end
@@ -526,9 +526,11 @@ local function onsave(inst, data)
 	if inst:HasTag("has_coconut") then
 		data.coconut = true
 	end
+
+	data.bonus_yield = inst._bonus_yield
 end
 
-local function onload(inst, data)
+local function OnLoad(inst, data)
 	if data then
 		if not data.build or builds[data.build] == nil then
 			inst.build = "normal"
@@ -596,6 +598,10 @@ local function onload(inst, data)
 			inst.components.workable:SetWorkLeft(1)
 
 			inst.coconut = false
+		end
+
+		if data.bonus_yield ~= nil then
+			inst._bonus_yield = data.bonus_yield
 		end
 	end
 end
@@ -673,6 +679,7 @@ local function makefn(build, stage, data, level, coconut)
 		inst:AddTag("tree")
 		inst:AddTag("kokonuttree")
 		inst:AddTag("pickable_tall")
+		inst:AddTag("plantboostable")
 
 		inst:SetPrefabNameOverride("kyno_kokonuttree")
 
@@ -687,7 +694,10 @@ local function makefn(build, stage, data, level, coconut)
 		inst.level = level
 		inst.coconut = coconut
 
+		inst._bonus_yield = false
+
 		inst:AddComponent("lootdropper")
+		inst:AddComponent("plantboostable")
 
 		inst:AddComponent("inspectable")
 		inst.components.inspectable.getstatus = GetStatus
@@ -721,8 +731,8 @@ local function makefn(build, stage, data, level, coconut)
 		-- PushSway(inst)
 		inst.AnimState:SetTime(math.random() * 2)
 
-		inst.OnSave = onsave
-		inst.OnLoad = onload
+		inst.OnSave = OnSave
+		inst.OnLoad = OnLoad
 
 		MakeSnowCovered(inst)
 
@@ -773,6 +783,8 @@ local function makefn(build, stage, data, level, coconut)
 
 		inst.OnEntitySleep = OnEntitySleep
 		inst.OnEntityWake = OnEntityWake
+
+		inst:ListenForEvent("picked", PlantBoosterBonusYield)
 
 		MakeLargeBurnable(inst)
 		inst.components.burnable:SetFXLevel(5)

@@ -1277,3 +1277,8 @@ WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
 WANDA.DESCRIBE.MANDRAKEBAOBUNS = "Đủ nhanh để ăn khi đang di chuyển."
 
 WANDA.DESCRIBE.MANDRAKEPIE = "Hy vọng nó không làm mình chậm lại."
+
+WANDA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một cách hữu ích để tiết kiệm thời gian."
+WANDA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Cây khỏe là cây hiệu quả."
+WANDA.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều sản lượng hơn với cùng mức đầu tư."
+WANDA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Tuyệt vời. Kết quả nhanh hơn."

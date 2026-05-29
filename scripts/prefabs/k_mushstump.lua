@@ -53,6 +53,18 @@ local function GetStatus(inst, viewer)
 	or "GENERIC"
 end
 
+local function OnSave(inst, data)
+	data.bonus_yield = inst._bonus_yield
+end
+
+local function OnLoad(inst, data)
+	if data ~= nil then
+		if data.bonus_yield ~= nil then
+			inst._bonus_yield = data.bonus_yield
+		end
+	end
+end
+
 local function fn()
 	local inst = CreateEntity()
     
@@ -78,14 +90,18 @@ local function fn()
 	inst:AddTag("plant")
 	inst:AddTag("renewable")
 	inst:AddTag("silviculture")
+	inst:AddTag("plantboostable")
 	
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
         return inst
     end
+
+	inst._bonus_yield = false
 	
 	inst:AddComponent("lootdropper")
+	inst:AddComponent("plantboostable")
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_MUSHSTUMP"
@@ -107,6 +123,10 @@ local function fn()
 	inst.components.workable:SetWorkLeft(TUNING.KYNO_MUSHSTUMP_WORKLEFT)
 	
 	inst:ListenForEvent("onbuilt", onbuilt)
+	inst:ListenForEvent("picked", PlantBoosterBonusYield)
+
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
 
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)

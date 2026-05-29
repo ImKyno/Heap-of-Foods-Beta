@@ -1277,3 +1277,8 @@ WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
 WALTER.DESCRIBE.MANDRAKEBAOBUNS = "Perfeito para a trilha."
 
 WANDA.DESCRIBE.MANDRAKEPIE = "Espero que isso não me atrase."
+
+WANDA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Uma forma útil de economizar tempo."
+WANDA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Plantas saudáveis são plantas eficientes."
+WANDA.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais produção pelo mesmo investimento."
+WANDA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Excelente. Resultados mais rápidos."

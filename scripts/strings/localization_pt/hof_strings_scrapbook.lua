@@ -7,6 +7,7 @@ STRINGS.SCRAPBOOK.DATA_MILKABLE = "PODE SER ORDENHADO"
 STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "PODE SER REPRODUZIDO"
 STRINGS.SCRAPBOOK.DATA_FISHFARM = "PODE REPRODUZIR PEIXES"
 STRINGS.SCRAPBOOK.DATA_ANIMALFEEDER = "PODE ALIMENTAR ANIMAIS"
+STRINGS.SCRAPBOOK.DATA_PLANTBOOSTER = "PODE POTENCIALIZAR PLANTAS"
 
 -- Foodtypes.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "HORRÍVEL"
@@ -31,6 +32,7 @@ STRINGS.SCRAPBOOK.SUBCATS.JAM = "Geleia"
 STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "Picles"
 STRINGS.SCRAPBOOK.SUBCATS.FISHROE = "Ovas de Peixe"
 STRINGS.SCRAPBOOK.SUBCATS.AGEDROE = "Ovas Maturadas"
+STRINGS.SCRAPBOOK.SUBCATS.PLANTBOOSTER = "Potencializante"
 
 -- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "Aumenta a velocidade de movimento por um determinado período."
@@ -172,6 +174,10 @@ STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Pode ser chocado se estiver 
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "Cuide de seus ferimentos e refresque-se com esta mistura preparada com carinho por Pearl."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "Acalme sua mente e proteja-a contra inimigos assustadores com esta mistura preparada com carinho por Pearl."
 STRINGS.SCRAPBOOK.SPECIALINFO.SOUNDPROOF = "Oferece proteção contra ruídos altos."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_GROWTH = "Pode ser usado para fertilizar e fazer crescer instantaneamente plantas que não sejam de fazenda.\n\nOs efeitos não são cumulativos e serão substituídos quando outro Impulsionador for usado na mesma planta.\n\nOs Impulsionadores são removidos quando a planta é desenterrada."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "Pode ser usado para fertilizar e fazer crescer instantaneamente qualquer planta.\n\nQuando usado em Plantas Comuns:\n\nNão precisa mais ser fertilizada e fica protegida contra ameaças.\n\nQuando usado em Plantas de Fazenda:\n\nAvança um estágio de crescimento e protege contra ameaças.\n\nOs efeitos não são cumulativos e serão substituídos quando outro Impulsionador for usado na mesma planta.\n\nOs Impulsionadores são removidos quando a planta é desenterrada."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Pode ser usado para fertilizar e fazer crescer instantaneamente qualquer planta.\n\nQuando usado em Plantas Comuns:\n\nProduz um item extra quando estiver totalmente crescida.\n\nQuando usado em Plantas de Fazenda:\n\nAvança um estágio de crescimento e produz um item extra quando estiver totalmente crescida.\n\nOs efeitos não são cumulativos e serão substituídos quando outro Impulsionador for usado na mesma planta.\n\nOs Impulsionadores são removidos quando a planta é desenterrada."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Pode ser usado para fertilizar e fazer crescer instantaneamente qualquer planta.\n\nQuando usado em Plantas de Fazenda:\n\nAvança o crescimento até o estágio final e possui 25% de chance de transformar a planta em sua forma Gigante.\n\nOs efeitos não são cumulativos e serão substituídos quando outro Impulsionador for usado na mesma planta.\n\nOs Impulsionadores são removidos quando a planta é desenterrada."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "A dieta delas consiste basicamente em Sementes, Trigo ou Rebento Folhoso.\n\nGalinhas Selvagens têm 40% de chance de botar ovos após se alimentarem. Elas têm uma pequena chance de botar um Ovo Grande.\n\nGalinhas criadas no Galinheiro podem botar ovos todos os dias após se alimentarem. Elas têm uma chance maior de colocar um Ovo Grande."

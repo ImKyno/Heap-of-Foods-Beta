@@ -41,6 +41,16 @@ local function dig_up(inst, chopper)
 	inst:Remove()
 end
 
+local function SetLunarThrallProtection(inst, protected)
+	inst._lunarthrall_protected = protected == true
+
+	if inst._lunarthrall_protected then
+		inst:RemoveTag("lunarplant_target")
+	else
+		inst:AddTag("lunarplant_target")
+	end
+end
+
 local function GetStatus(inst, viewer)
 	return (inst.components.burnable:IsBurning() and "BURNING")
 	or (not inst.components.pickable:CanBePicked() and "PICKED")
@@ -49,11 +59,32 @@ end
 
 local function OnSave(inst, data)
 	data.bonus_yield = inst._bonus_yield
+	data.lunarthrall_protected = inst._lunarthrall_protected
+	data.original_transplanted = inst._original_transplanted
+	data.vitality_active = inst._vitality_active
 end
 
 local function OnLoad(inst, data)
-	if data ~= nil and data.bonus_yield ~= nil then
-		inst._bonus_yield = data.bonus_yield
+	if data ~= nil then
+		if data.bonus_yield ~= nil then
+			inst._bonus_yield = data.bonus_yield
+		end
+
+		if data.lunarthrall_protected ~= nil then
+			SetLunarThrallProtection(inst, data.lunarthrall_protected)
+		end
+
+		if data.original_transplanted ~= nil then
+			inst._original_transplanted = data.original_transplanted
+		end
+
+		if data.vitality_active ~= nil then
+			inst._vitality_active = data.vitality_active
+
+			if inst._vitality_active and inst.components.pickable ~= nil then
+				inst.components.pickable.transplanted = false
+			end
+		end
 	end
 end
 
@@ -98,7 +129,12 @@ local function fn()
 		return inst
 	end
 
+	inst.SetLunarThrallProtection = SetLunarThrallProtection
+
 	inst._bonus_yield = false
+	inst._lunarthrall_protected = false
+	inst._original_transplanted = nil
+	inst._vitality_active = false
 
 	inst:AddComponent("lootdropper")
 	inst:AddComponent("plantboostable")

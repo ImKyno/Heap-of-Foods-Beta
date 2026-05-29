@@ -1277,3 +1277,8 @@ WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
 WENDY.DESCRIBE.MANDRAKEBAOBUNS = "A quiet meal for weary souls."
 
 WENDY.DESCRIBE.MANDRAKEPIE = "A comforting slice of exhaustion."
+
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A temporary gift to doomed plants."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "A futile attempt to preserve life."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "More bounty before inevitable decay."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Life hastened toward its conclusion."

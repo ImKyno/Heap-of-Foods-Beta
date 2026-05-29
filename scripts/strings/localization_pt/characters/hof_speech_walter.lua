@@ -1277,3 +1277,8 @@ WALTER.DESCRIBE.KYNO_ELDERMANDRAKE =
 WALTER.DESCRIBE.MANDRAKEBAOBUNS = "Perfeito para a trilha."
 
 WALTER.DESCRIBE.MANDRAKEPIE = "Torta sempre fica melhor ao ar livre."
+
+WALTER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Perfeito para cultivar suprimentos na natureza."
+WALTER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Mantém o jardim em ótima forma."
+WALTER.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais colheita com menos esforço."
+WALTER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Essa tecnologia de jardinagem é impressionante."

@@ -95,6 +95,18 @@ local function GetStatus(inst, viewer)
 	or "GENERIC"
 end
 
+local function OnSave(inst, data)
+	data.bonus_yield = inst._bonus_yield
+end
+
+local function OnLoad(inst, data)
+	if data ~= nil then
+		if data.bonus_yield ~= nil then
+			inst._bonus_yield = data.bonus_yield
+		end
+	end
+end
+
 local function OnPreLoad(inst, data)
     WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_LOTUS_GROWTIME)
 end
@@ -119,6 +131,7 @@ local function fn()
 	inst:AddTag("plant")
     inst:AddTag("blocker")
     inst:AddTag("lotus")
+	inst:AddTag("plantboostable")
 
     inst.entity:SetPristine()
 
@@ -131,7 +144,10 @@ local function fn()
     local color = 0.75 + math.random() * 0.25
     inst.AnimState:SetMultColour(color, color, color, 1)
 
+	inst._bonus_yield = false
+
 	inst:AddComponent("lootdropper")
+	inst:AddComponent("plantboostable")
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
@@ -159,11 +175,15 @@ local function fn()
 		inst:WatchWorldState("isdusk", Sleep)
 		Sleep(inst, TheWorld.state.isdusk)
 	end)
+
+	inst:ListenForEvent("picked", PlantBoosterBonusYield)
 	
 	MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
     MakeHauntableIgnite(inst)
 	
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
 	inst.OnPreLoad = OnPreLoad
 
     return inst

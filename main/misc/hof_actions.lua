@@ -858,7 +858,7 @@ AddAction("EATFROM", "Eat From", function(act)
 end)
 
 -- For boosting pickable plants and farm plants.
-AddAction("BOOSTPLANT", "Boost", function(act)
+AddAction("BOOSTPLANT", STRINGS.ACTIONS.BOOSTPLANT, function(act)
 	local booster = act.invobject
     local target = act.target
     local doer = act.doer

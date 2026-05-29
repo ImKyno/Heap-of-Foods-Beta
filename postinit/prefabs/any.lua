@@ -47,6 +47,16 @@ local function PigFriendlyPostInit(inst)
 end
 
 local function ApplyBoosterFarmPlantPostInit(inst)
+	local function SetLunarThrallProtection(inst, protected)
+		inst._lunarthrall_protected = protected == true
+
+		if inst._lunarthrall_protected then
+			inst:RemoveTag("lunarplant_target")
+		else
+			inst:AddTag("lunarplant_target")
+		end
+	end
+
 	if inst:HasTag("farm_plant") then
 		inst:AddTag("plantboostable")
 	end
@@ -55,8 +65,43 @@ local function ApplyBoosterFarmPlantPostInit(inst)
 		return inst
 	end
 
-	if inst.components.farmmplantable ~= nil then
+	if inst.components.farmplantable ~= nil or inst.components.farmplanttendable ~= nil then
+		inst.SetLunarThrallProtection = SetLunarThrallProtection
+
+		inst._bonus_yield = false
+		inst._lunarthrall_protected = false
+
 		inst:AddComponent("plantboostable")
+
+		inst:ListenForEvent("picked", _G.PlantBoosterBonusYield)
+
+		local _OnSave = inst.OnSave
+		local _OnLoad = inst.OnLoad
+
+		inst.OnSave = function(inst, data)
+			if _OnSave ~= nil then
+				_OnSave(inst, data)
+			end
+
+			data.bonus_yield = inst._bonus_yield
+			data.lunarthrall_protected = inst._lunarthrall_protected
+		end
+
+		inst.OnLoad = function(inst, data)
+			if _OnLoad ~= nil then
+				_OnLoad(inst, data)
+			end
+
+			if data ~= nil then
+				if data.bonus_yield ~= nil then
+					inst._bonus_yield = data.bonus_yield
+				end
+
+				if data.lunarthrall_protected ~= nil then
+					SetLunarThrallProtection(inst, data.lunarthrall_protected)
+				end
+			end
+		end
 	end
 end
 

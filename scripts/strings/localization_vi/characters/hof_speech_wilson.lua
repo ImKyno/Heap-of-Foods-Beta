@@ -1277,3 +1277,8 @@ WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
 WILSON.DESCRIBE.MANDRAKEBAOBUNS = "Một loại bánh mì khiến người ta buồn ngủ kỳ lạ."
 
 WILSON.DESCRIBE.MANDRAKEPIE = "Một chiếc bánh với nhân cực kỳ gây buồn ngủ."
+
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một loại phân bón nhân tạo có khả năng thúc đẩy tăng trưởng."
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giúp cây cối của tôi luôn khỏe mạnh và tươi tốt!"
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Với thứ này, bụi cây của tôi sẽ cho nhiều sản phẩm hơn nữa!"
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Thứ này sẽ giúp cây trồng của tôi phát triển tốt hơn."

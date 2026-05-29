@@ -7,6 +7,7 @@ STRINGS.SCRAPBOOK.DATA_MILKABLE = "CAN BE MILKED"
 STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "CAN BE BRED"
 STRINGS.SCRAPBOOK.DATA_FISHFARM = "CAN BREED FISH"
 STRINGS.SCRAPBOOK.DATA_ANIMALFEEDER = "CAN FEED ANIMALS"
+STRINGS.SCRAPBOOK.DATA_PLANTBOOSTER = "CAN BOOST PLANTS"
 
 -- Foodtypes.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "HORRIBLE"
@@ -31,6 +32,7 @@ STRINGS.SCRAPBOOK.SUBCATS.JAM = "Jam"
 STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "Pickles"
 STRINGS.SCRAPBOOK.SUBCATS.FISHROE = "Fish Roe"
 STRINGS.SCRAPBOOK.SUBCATS.AGEDROE = "Aged Roe"
+STRINGS.SCRAPBOOK.SUBCATS.PLANTBOOSTER = "Booster"
 
 -- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "Increased movement speed for a certain amount of time."
@@ -172,6 +174,10 @@ STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Can be hatched when near a s
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "Tend to your wounds and cool yourself with this lovingly brewed concoction from Pearl."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "Soothe your mind and protect it against scary foes with this lovingly brewed concoction from Pearl."
 STRINGS.SCRAPBOOK.SPECIALINFO.SOUNDPROOF = "Offers protection against loud noises."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_GROWTH = "Can be used to fertilize and instantly grow non farm plants.\n\nThey are not cumulative and are replaced when another Booster is used in the same plant.\n\nBoosters are removed when the plant is dug."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "Can be used to fertilize and instantly grow any plant.\n\nWhen used on Regular Plants:\n\No longer needs fertilizing and protects against targets.\n\nWhen used on Farm Plants:\n\Advances growing by one stage and protects against targets.\n\nThey are not cumulative and are replaced when another Booster is used on the same plant.\n\nBoosters are removed when the plant is dug."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Can be used to fertilize and instantly grow any plant.\n\nWhen used on Regular Plants:\n\Yield one extra product when fully grown.\n\nWhen used on Farm Plants:\n\Advances growing by one stage and yield one extra product when fully grown.\n\nThey are not cumulative and are replaced when another Booster is used on the same plant.\n\nBoosters are removed when the plant is dug."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Can be used to fertilize and instantly grow any plant.\n\nWhen used on Farm Plants:\n\Advances growing to its final stage and has 25% chance of turning farm plants into their Oversized form.\n\nThey are not cumulative and are replaced when another Booster is used on the same plant.\n\nBoosters are removed when the plant is dug."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 40% chance of laying Eggs after eating. They have a small chance of laying a Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying a Large Egg."

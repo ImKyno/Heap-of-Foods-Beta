@@ -1,3 +1,5 @@
+require("worldsettingsutil")
+
 local assets =
 {
 	Asset("ANIM", "anim/coffeebush.zip"),
@@ -169,10 +171,61 @@ local function OnTransplant(inst)
 	inst.components.pickable:MakeBarren()
 end
 
+local function SetLunarThrallProtection(inst, protected)
+	inst._lunarthrall_protected = protected == true
+
+	if inst._lunarthrall_protected then
+		inst:RemoveTag("lunarplant_target")
+	else
+		inst:AddTag("lunarplant_target")
+	end
+end
+
 local function GetStatus(inst, viewer)
 	return (inst.components.pickable:IsBarren() and "WITHERED")
 	or (not inst.components.pickable:CanBePicked() and "PICKED")
 	or "GENERIC"
+end
+
+local function OnSave(inst, data)
+	data.bonus_yield = inst._bonus_yield
+	data.lunarthrall_protected = inst._lunarthrall_protected
+	data.original_transplanted = inst._original_transplanted
+	data.vitality_active = inst._vitality_active
+end
+
+local function OnLoad(inst, data)
+	if data ~= nil then
+		if data.bonus_yield ~= nil then
+			inst._bonus_yield = data.bonus_yield
+		end
+
+		if data.lunarthrall_protected ~= nil then
+			SetLunarThrallProtection(inst, data.lunarthrall_protected)
+		end
+
+		if data.original_transplanted ~= nil then
+			inst._original_transplanted = data.original_transplanted
+		end
+
+		if data.vitality_active ~= nil then
+			inst._vitality_active = data.vitality_active
+
+			if inst._vitality_active and inst.components.pickable ~= nil then
+				inst.components.pickable.transplanted = false
+			end
+		end
+	end
+end
+
+local function OnPreLoad(inst, data)
+    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_COFFEEBUSH_GROWTIME)
+
+	if data and data.was_herd then
+		if TheWorld.components.lunarthrall_plantspawner then
+			TheWorld.components.lunarthrall_plantspawner:setHerdsOnPlantable(inst)
+		end
+	end
 end
 
 local function fn()
@@ -200,16 +253,25 @@ local function fn()
 	inst:AddTag("lunarplant_target")
 	inst:AddTag("kyno_coffeebush")
 	inst:AddTag("volcanicplant")
+	inst:AddTag("plantboostable")
 	
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
         return inst
     end
-	
+
+	inst.SetLunarThrallProtection = SetLunarThrallProtection
+
+	inst._bonus_yield = false
+	inst._lunarthrall_protected = false
+	inst._original_transplanted = nil
+	inst._vitality_active = false
+
 	inst.AnimState:SetTime(math.random() * inst.AnimState:GetCurrentAnimationLength())
 	
 	inst:AddComponent("lootdropper")
+	inst:AddComponent("plantboostable")
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
@@ -219,6 +281,7 @@ local function fn()
 
     inst:AddComponent("pickable")
     inst.components.pickable.picksound = "dontstarve/wilson/harvest_sticks"
+	WorldSettings_Pickable_RegenTime(inst, TUNING.KYNO_COFFEEBUSH_GROWTIME, true)
     inst.components.pickable:SetUp("kyno_coffeebeans", TUNING.KYNO_COFFEEBUSH_GROWTIME)
 	inst.components.pickable.max_cycles = TUNING.KYNO_COFFEEBUSH_CYCLES + math.random(2)
 	inst.components.pickable.cycles_left = inst.components.pickable.max_cycles
@@ -236,9 +299,15 @@ local function fn()
 	inst:WatchWorldState("season", OnSeasonChange)
 	OnSeasonChange(inst, TheWorld.state.season)
 
+	inst:ListenForEvent("picked", PlantBoosterBonusYield)
+
 	MakeSnowCovered(inst)
 	MakeNoGrowInWinter(inst)
 	MakeWaxablePlant(inst)
+
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
+	inst.OnPreLoad = OnPreLoad
 
 	return inst
 end

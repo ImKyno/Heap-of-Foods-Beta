@@ -7,6 +7,7 @@ STRINGS.SCRAPBOOK.DATA_MILKABLE = "CÓ THỂ VẮT SỮA"
 STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "CÓ THỂ NHÂN GIỐNG"
 STRINGS.SCRAPBOOK.DATA_FISHFARM = "CÓ THỂ NUÔI CÁ"
 STRINGS.SCRAPBOOK.DATA_ANIMALFEEDER = "CÓ THỂ CHO ĐỘNG VẬT ĂN"
+STRINGS.SCRAPBOOK.DATA_PLANTBOOSTER = "CÓ THỂ THÚC ĐẨY SỰ PHÁT TRIỂN CỦA CÂY TRỒNG"
 
 -- Foodtypes.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "KINH KHỦNG"
@@ -31,6 +32,7 @@ STRINGS.SCRAPBOOK.SUBCATS.JAM = "Mứt"
 STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "Đồ Muối Chua"
 STRINGS.SCRAPBOOK.SUBCATS.FISHROE = "Trứng Cá"
 STRINGS.SCRAPBOOK.SUBCATS.AGEDROE = "Trứng Cá Ủ"
+STRINGS.SCRAPBOOK.SUBCATS.PLANTBOOSTER = "Chất Thúc Đẩy"
 
 -- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "Tăng tốc độ di chuyển trong một khoảng thời gian."
@@ -172,6 +174,10 @@ STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Có thể được ấp nở
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "Chăm sóc vết thương và làm mát bản thân bằng món trà được Pearl pha đầy yêu thương này."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "Xoa dịu tâm trí và bảo vệ nó trước những kẻ thù đáng sợ bằng món trà được Pearl pha đầy yêu thương này."
 STRINGS.SCRAPBOOK.SPECIALINFO.SOUNDPROOF = "Cung cấp khả năng bảo vệ khỏi tiếng ồn lớn."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_GROWTH = "Có thể dùng để bón phân và làm cây không phải cây nông trại phát triển ngay lập tức.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "Có thể dùng để bón phân và làm bất kỳ loại cây nào phát triển ngay lập tức.\n\nKhi dùng cho Cây Thường:\n\nKhông cần bón phân nữa và được bảo vệ khỏi các mối đe dọa.\n\nKhi dùng cho Cây Nông Trại:\n\nTăng thêm một giai đoạn phát triển và được bảo vệ khỏi các mối đe dọa.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Có thể dùng để bón phân và làm bất kỳ loại cây nào phát triển ngay lập tức.\n\nKhi dùng cho Cây Thường:\n\nCho thêm một sản phẩm khi trưởng thành hoàn toàn.\n\nKhi dùng cho Cây Nông Trại:\n\nTăng thêm một giai đoạn phát triển và cho thêm một sản phẩm khi trưởng thành hoàn toàn.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Có thể dùng để bón phân và làm bất kỳ loại cây nào phát triển ngay lập tức.\n\nKhi dùng cho Cây Nông Trại:\n\nĐưa cây đến giai đoạn phát triển cuối cùng và có 25% cơ hội biến cây thành dạng Khổng Lồ.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Khẩu phần của chúng chủ yếu gồm Hạt Giống, Lúa Mì hoặc Nhánh Đốm.\n\nGà tìm thấy ngoài hoang dã có 40% cơ hội đẻ Trứng sau khi ăn. Chúng có một cơ hội nhỏ đẻ Trứng Lớn.\n\nGà sống trong Chuồng có thể đẻ Trứng mỗi ngày sau khi ăn. Chúng có cơ hội đẻ Trứng Lớn cao hơn."

@@ -1277,3 +1277,8 @@ WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
 WICKERBOTTOM.DESCRIBE.MANDRAKEBAOBUNS = "An unusual but filling culinary creation."
 
 WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "The mandrake adds a peculiar aroma."
+
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A fertilizer formulated to stimulate development."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Useful for maintaining healthy crops."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "It should increase productivity considerably."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "An impressive advancement in agriculture."

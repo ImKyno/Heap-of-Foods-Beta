@@ -466,22 +466,42 @@ function PlantBoosterBonusYield(inst, data)
 	end
 
 	local picker = data ~= nil and data.picker or nil
-	local product = nil
+	local pt = inst:GetPosition()
 
+	-- Farm Plants use lootdropper for picking.
 	if inst.components.pickable ~= nil then
-		product = inst.components.pickable.product
-	end
+		local use_lootdropper = inst.components.pickable.use_lootdropper_for_product
 
-	if product == nil then
+		if use_lootdropper ~= nil and inst.components.lootdropper ~= nil then
+			local loot = inst.components.lootdropper:GenerateLoot()
+
+			for _, prefab in ipairs(loot) do
+				local item = SpawnPrefab(prefab)
+
+				if item ~= nil then 
+					if picker ~= nil and picker.components.inventory ~= nil and item.components.inventoryitem ~= nil then
+						picker.components.inventory:GiveItem(item, nil, pt)
+					else
+						LaunchAt(item, inst, nil, 1, 1)
+					end
+				end
+			end
+		end
+
 		return
 	end
 
-	local pt = inst:GetPosition()
-	local item = SpawnPrefab(product)
+	local product = inst.components.pickable ~= nil and inst.components.pickable.product or nil
 
-	if picker ~= nil and picker.components.inventory ~= nil then
-		picker.components.inventory:GiveItem(item, nil, pt)
-	else
-		LaunchAt(item, inst, nil, 1, 1)
+	if product ~= nil then
+		local item = SpawnPrefab(product)
+
+		if item ~= nil then
+			if picker ~= nil and picker.components.inventory ~= nil and item.components.inventoryitem ~= nil then
+				picker.components.inventory:GiveItem(item, nil, pt)
+			else
+				LaunchAt(item, inst, nil, 1, 1)
+			end
+		end
 	end
 end

@@ -1277,3 +1277,8 @@ WINONA.DESCRIBE.KYNO_ELDERMANDRAKE =
 WINONA.DESCRIBE.MANDRAKEBAOBUNS = "Uma bela refeição portátil."
 
 WINONA.DESCRIBE.MANDRAKEPIE = "Isso sim é uma boa fornada."
+
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um estimulante de crescimento prático."
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Mantém as plantações funcionando bem."
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Maior produção. Não dá pra reclamar."
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Isso é agricultura de nível industrial."

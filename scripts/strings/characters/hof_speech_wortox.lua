@@ -1277,3 +1277,8 @@ WORTOX.DESCRIBE.KYNO_ELDERMANDRAKE =
 WORTOX.DESCRIBE.MANDRAKEBAOBUNS = "Sleepy snacks. Hyuyu!"
 
 WORTOX.DESCRIBE.MANDRAKEPIE = "One bite and off to dreamland!"
+
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A little boost for leafy friends. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps them lively and bright."
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "More goodies from every bush. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Quite the magical mixture!"

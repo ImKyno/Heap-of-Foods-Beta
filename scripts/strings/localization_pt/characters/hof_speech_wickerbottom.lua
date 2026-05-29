@@ -1277,3 +1277,8 @@ WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
 WICKERBOTTOM.DESCRIBE.MANDRAKEBAOBUNS = "Uma criação culinária incomum, mas satisfatória."
 
 WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "A mandrágora adiciona um aroma peculiar."
+
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um fertilizante formulado para estimular o desenvolvimento."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Útil para manter plantações saudáveis."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Deve aumentar consideravelmente a produtividade."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Um avanço impressionante na agricultura."

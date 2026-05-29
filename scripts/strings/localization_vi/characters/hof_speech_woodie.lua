@@ -1277,3 +1277,8 @@ WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
 WOODIE.DESCRIBE.MANDRAKEBAOBUNS = "Ngửi ngon phết đó, eh?"
 
 WOODIE.DESCRIBE.MANDRAKEPIE = "Không gì ngon hơn bánh pie mới nướng, eh?"
+
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Giúp cây lớn nhanh hơn, hả?"
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ chúng khỏe mạnh và vui vẻ."
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều thu hoạch hơn từ cùng một mảnh đất."
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Thứ này mạnh thật đấy."

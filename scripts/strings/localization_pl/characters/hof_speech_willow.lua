@@ -1277,3 +1277,8 @@ WILLOW.DESCRIBE.KYNO_ELDERMANDRAKE =
 WILLOW.DESCRIBE.MANDRAKEBAOBUNS = "Ciepłe bułeczki nadziewane wrzeszczącym korzeniem."
 
 WILLOW.DESCRIBE.MANDRAKEPIE = "Senny placek. Super."
+
+WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że rośliny rosną. Nuda."
+WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje rośliny przy życiu dłużej."
+WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej rzeczy do spalenia później!"
+WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Rośliny rosną szybko. Ogień rośnie szybciej."

@@ -79,6 +79,18 @@ local function GetStatus(inst, viewer)
 	or "GENERIC"
 end
 
+local function OnSave(inst, data)
+	data.bonus_yield = inst._bonus_yield
+end
+
+local function OnLoad(inst, data)
+	if data ~= nil then
+		if data.bonus_yield ~= nil then
+			inst._bonus_yield = data.bonus_yield
+		end
+	end
+end
+
 local function OnPreLoad(inst, data)
     WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_WATERYCRESS_GROWTIME)
 end
@@ -107,6 +119,7 @@ local function fn()
 	inst:AddTag("plant")
 	inst:AddTag("blocker")
 	inst:AddTag("waterycress")
+	inst:AddTag("plantboostable")
 
     inst.entity:SetPristine()
 
@@ -114,7 +127,10 @@ local function fn()
         return inst
     end
 
+	inst._bonus_yield = false
+
 	inst:AddComponent("lootdropper")
+	inst:AddComponent("plantboostable")
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
@@ -138,12 +154,16 @@ local function fn()
 	inst.Physics:SetCollisionCallback(OnCollide)
 	inst:DoTaskInTime(1 + math.random(), CheckBeached)
 
+	inst:ListenForEvent("picked", PlantBoosterBonusYield)
+
     MakeSmallBurnable(inst)
     MakeSmallPropagator(inst)
 
 	MakeHauntableIgnite(inst)
 	AddToRegrowthManager(inst)
 	
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
 	inst.OnPreLoad = OnPreLoad
 
     return inst

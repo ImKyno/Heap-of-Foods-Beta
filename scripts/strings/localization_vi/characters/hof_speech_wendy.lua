@@ -1277,3 +1277,8 @@ WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
 WENDY.DESCRIBE.MANDRAKEBAOBUNS = "Một bữa ăn yên tĩnh cho những tâm hồn mệt mỏi."
 
 WENDY.DESCRIBE.MANDRAKEPIE = "Một lát bánh đầy sự mệt mỏi dễ chịu."
+
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một món quà tạm thời cho những cây cối đã được định sẵn số phận."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Một nỗ lực vô ích để gìn giữ sự sống."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều thành quả hơn trước khi sự mục nát tất yếu đến."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Sự sống được đẩy nhanh đến hồi kết."

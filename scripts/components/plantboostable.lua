@@ -1,3 +1,7 @@
+local PLANT_DEFS          = require("prefabs/farm_plant_defs").PLANT_DEFS
+local WEED_DEFS           = require("prefabs/weed_defs").WEED_DEFS
+local WEIGHTED_SEED_TABLE = require("prefabs/weed_defs").weighted_seed_table
+
 -- For detailed information about boosters please check prefabs/k_plantbooster.lua
 local BOOSTER_DATA  =
 {
@@ -7,7 +11,7 @@ local BOOSTER_DATA  =
 		preserve    = false, -- Can un-transplant regular plants.
 		bonus_yield = false, -- Can have bonus yield when harvesting/picking.
 		supergrowth = false, -- Can skip all farm plant stages and make oversize crops.
-    },
+	},
 
 	VITALITY        =
 	{
@@ -23,7 +27,7 @@ local BOOSTER_DATA  =
 		preserve    = false,
 		bonus_yield = true,
 		supergrowth = false,
-    },
+	},
 
 	SUPERGROWTH     =
 	{
@@ -31,7 +35,7 @@ local BOOSTER_DATA  =
 		preserve    = false,
 		bonus_yield = false,
 		supergrowth = true,
-    },
+	},
 }
 
 local BOOSTER_NAMES            =
@@ -47,15 +51,15 @@ local function GetBoosterName(data)
 end
 
 local function GetBoosterData(booster)
-    if booster:HasTag("supergrowthbooster") then
-        return BOOSTER_DATA.SUPERGROWTH
-    elseif booster:HasTag("yieldbooster") then
-        return BOOSTER_DATA.YIELD
-    elseif booster:HasTag("vitalitybooster") then
-        return BOOSTER_DATA.VITALITY
-    end
+	if booster:HasTag("supergrowthbooster") then
+		return BOOSTER_DATA.SUPERGROWTH
+	elseif booster:HasTag("yieldbooster") then
+		return BOOSTER_DATA.YIELD
+	elseif booster:HasTag("vitalitybooster") then
+		return BOOSTER_DATA.VITALITY
+	end
 
-    return BOOSTER_DATA.GROWTH
+	return BOOSTER_DATA.GROWTH
 end
 
 local function SpawnGrowFX(inst)
@@ -64,19 +68,26 @@ local function SpawnGrowFX(inst)
 	if fx ~= nil then
 		fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
 	end
+end
 
-	if inst.SoundEmitter ~= nil and inst:HasTag("farm_plant") then
-		inst.SoundEmitter:PlaySound("farming/common/farm/grow_full")
-	end
+local function CanBeTransplanted(inst)
+	return inst.components.pickable ~= nil and inst.components.pickable.ontransplantfn ~= nil
 end
 
 local function ClearBoosterEffects(inst)
 	inst._bonus_yield = false
-	inst._lunarthrall_protected = false
+	
+	if inst.SetLunarThrallProtection ~= nil then
+		inst:SetLunarThrallProtection(false)
+	else
+		inst._lunarthrall_protected = false
+	end
 
-	if inst.components.pickable ~= nil then
+	if inst._vitality_active and inst.components.pickable ~= nil and inst._supports_transplanting then
 		inst.components.pickable.transplanted = inst._original_transplanted or false
 	end
+
+	inst._vitality_active = false
 end
 
 local function ReplacePlant(inst)
@@ -95,7 +106,15 @@ local function ReplacePlant(inst)
 	end
 
 	if replacement.components.pickable ~= nil then
-		replacement.components.pickable:Regen()
+		if replacement.prefab == "rock_avocado_bush" then
+			if replacement.components.growable ~= nil then
+				replacement.components.growable:SetStage(3)
+			end
+
+			replacement.components.pickable:Regen()
+		else
+			replacement.components.pickable:Regen()
+		end
 	end
 
 	replacement.Transform:SetPosition(x, y, z)
@@ -110,8 +129,44 @@ local function ReplacePlant(inst)
 	return replacement
 end
 
+local function PickFarmPlant()
+	if math.random() < TUNING.FARM_PLANT_RANDOMSEED_WEED_CHANCE then
+		return weighted_random_choice(WEIGHTED_SEED_TABLE)
+	else
+		local season = TheWorld.state.season
+		local weights = {}
+		local season_mod = TUNING.SEED_WEIGHT_SEASON_MOD
+
+		for k, v in pairs(VEGGIES) do
+			weights[k] = v.seed_weight * ((PLANT_DEFS[k] and PLANT_DEFS[k].good_seasons[season]) and season_mod or 1)
+		end
+
+		return "farm_plant_"..weighted_random_choice(weights)
+	end
+	
+	return "weed_forgetmelots"
+end
+
+local function ReplaceWithPlant(inst)
+	local plant_prefab = inst._identified_plant_type or PickFarmPlant()
+	local plant = SpawnPrefab(plant_prefab)
+	
+	plant.Transform:SetPosition(inst.Transform:GetWorldPosition())
+
+	if plant.plant_def ~= nil then
+		plant.long_life = inst.long_life
+		plant.components.farmsoildrinker:CopyFrom(inst.components.farmsoildrinker)
+		plant.components.farmplantstress:CopyFrom(inst.components.farmplantstress)
+		plant.components.growable:DoGrowth()
+		plant.AnimState:OverrideSymbol("veggie_seed", "farm_soil", "seed")
+	end
+
+	inst.grew_into = plant
+	inst:Remove()
+end
+
 local function GrowFarmPlant(inst, data)
-	if inst:IsAsleep() then
+	if not inst:IsValid() or inst:IsInLimbo() then
 		return false
 	end
 
@@ -121,51 +176,87 @@ local function GrowFarmPlant(inst, data)
 		return false
 	end
 
-	if inst:HasTag("weed") then
-		local loops = data.supergrowth and 999 or 2
-
-		for i = 1, loops do
-			growable:DoGrowth()
-		end
-
-		SpawnGrowFX(inst)
-
-		return true
-	end
-
-	if growable:GetStage() >= 5 or inst.is_oversized then
-		return false
-	end
-
-	local max_stage = #growable.stages
-
-	local growth_steps = 1
-
-	if data.supergrowth then
-		growth_steps = 999
-	else
-		growth_steps = 1
-	end
-
 	local grew = false
+	local start_stage = growable.stage
 
-	for i = 1, growth_steps do
-		if growable.stage >= max_stage then
-			break
-		end
+	local plant_def = inst.plant_def or (inst.prefab and PLANT_DEFS[inst.prefab])
+	local is_randomseed = plant_def and plant_def.is_randomseed
 
-		local next_stage = growable.stage + 1
-		local next_stage_data = growable.stages[next_stage]
+	if is_randomseed then
+		ReplaceWithPlant(inst)
 
-		if next_stage_data == nil or next_stage_data.name == "rotten" then
-			break
-		end
+		inst = inst.grew_into
+		growable = inst.components.growable
+		growable.stage = 1
 
-		growable:DoGrowth()
-		grew = true
+		plant_def = inst.plant_def or (inst.prefab and PLANT_DEFS[inst.prefab])
 	end
 
-	if data.supergrowth then
+	if inst:HasTag("weed") then
+		local current_stage = growable:GetStage()
+
+		if data.supergrowth then
+			if current_stage < 3 then
+				growable:SetStage(3)
+				grew = true
+			end
+		else
+			if current_stage < 3 then
+				growable:DoGrowth()
+
+				if growable:GetStage() > 3 then
+					growable:SetStage(3)
+				end
+
+				grew = true
+			end
+		end
+
+		if grew then
+			SpawnGrowFX(inst)
+		end
+
+		return grew
+	end
+
+	if not inst:HasTag("weed") then
+		if data.supergrowth then
+			local safe_max = growable.stage
+
+			for i = 1, #growable.stages do
+				local st = growable.stages[i]
+
+				if st ~= nil and st.name ~= "rotten" then
+					safe_max = i
+				else
+					break
+				end
+			end
+
+			while growable.stage < safe_max do
+				growable:DoGrowth()
+				grew = true
+			end
+		else
+			local steps = 1
+
+			while steps > 0 do
+				local next_stage = growable.stage + 1
+				local next_data = growable.stages[next_stage]
+
+				if not next_data or next_data.name == "rotten" then
+					break
+				end
+
+				growable:DoGrowth()
+				grew = true
+
+				steps = steps - 1
+			end
+		end
+	end
+
+	if data.supergrowth and not inst:HasTag("weed") then
 		if math.random() < TUNING.KYNO_PLANTBOOSTER_SUPERGROWTH_OVERSIZED_CHANCE then
 			inst.is_oversized = true
 		end
@@ -175,7 +266,14 @@ local function GrowFarmPlant(inst, data)
 
 	inst._last_booster = GetBoosterName(data)
 
-	-- Yield Booster does not apply to oversized farm plants.
+	if data.preserve then
+		if inst.SetLunarThrallProtection ~= nil then
+			inst:SetLunarThrallProtection(true)
+		else
+			inst._lunarthrall_protected = true
+		end
+	end
+
 	if data.bonus_yield and not inst.is_oversized then
 		inst._bonus_yield = true
 	end
@@ -183,11 +281,18 @@ local function GrowFarmPlant(inst, data)
 	if grew then
 		SpawnGrowFX(inst)
 
+		local end_stage = growable.stage
 		local anim = inst.is_oversized and "oversized" or "full"
 
-		if inst.AnimState ~= nil then
+		if inst.is_oversized then
 			inst.AnimState:PlayAnimation("grow_"..anim, false)
 			inst.AnimState:PushAnimation("crop_"..anim, true)
+		end
+
+		if plant_def and plant_def.sounds and plant_def.sounds["grow_"..anim] then
+			if inst.SoundEmitter ~= nil then
+				inst.SoundEmitter:PlaySound(plant_def.sounds["grow_"..anim])
+			end
 		end
 	end
 
@@ -203,8 +308,16 @@ local function GrowGeneric(inst, data)
 		return GrowFarmPlant(inst, data)
 	end
 
-	if inst._original_transplanted == nil then
+	if inst._supports_transplanting == nil then
+		inst._supports_transplanting = CanBeTransplanted(inst)
+	end
+
+	if inst._original_transplanted == nil and inst._supports_transplanting then
 		inst._original_transplanted = inst.components.pickable.transplanted
+	end
+
+	if inst._original_lunarplant_target == nil then
+		inst._original_lunarplant_target = inst:HasTag("lunarplant_target")
 	end
 
 	ClearBoosterEffects(inst)
@@ -212,9 +325,8 @@ local function GrowGeneric(inst, data)
 	-- Not saving this because it's only used for debug purposes.
 	inst._last_booster = GetBoosterName(data)
 
-	-- Vitality Booster replaces transplanted plants with fresh natural versions. And protects it against Brightshades.
 	if data.preserve and inst.components.pickable ~= nil then
-		if inst.components.pickable.transplanted then
+		if inst._supports_transplanting and inst.components.pickable.transplanted then
 			inst = ReplacePlant(inst)
 
 			if inst == nil then
@@ -222,38 +334,17 @@ local function GrowGeneric(inst, data)
 			end
 		end
 
-		inst.components.pickable.transplanted = false
-		inst._lunarthrall_protected = true
-	end
-
-	if inst.components.growable ~= nil then
-		local loops = 1
-
-		if data.supergrowth then
-			loops = 999
+		if inst.SetLunarThrallProtection ~= nil then
+			inst:SetLunarThrallProtection(true)
+		else
+			inst._lunarthrall_protected = true
 		end
+		
+		inst._vitality_active = true
 
-		local success = false
-
-		for i = 1, loops do
-			local result = inst.components.growable:DoGrowth()
-
-			if result then
-				success = true
-			else
-				break
-			end
+		if inst._supports_transplanting then
+			inst.components.pickable.transplanted = false
 		end
-
-		if success then
-			if data.bonus_yield then
-				inst._bonus_yield = true
-			end
-
-			SpawnGrowFX(inst)
-		end
-
-		return success
 	end
 
 	if inst.components.pickable ~= nil then
@@ -270,7 +361,6 @@ local function GrowGeneric(inst, data)
 			inst.components.pickable:Regen()
 		end
 
-		-- Yield Booster makes the plant produce +1 of its product when picked. But consumes 2 Cycles instead.
 		if inst.components.pickable:CanBePicked() then
 			success = true
 		else
@@ -279,57 +369,6 @@ local function GrowGeneric(inst, data)
 			for i = 1, loops do
 				if inst.components.pickable:FinishGrowing() then
 					inst.components.pickable:ConsumeCycles(1)
-					success = true
-				end
-			end
-		end
-
-		if success then
-			if data.bonus_yield then
-				inst._bonus_yield = true
-			end
-
-			SpawnGrowFX(inst)
-		end
-
-		return success
-	end
-
-	if inst.components.crop ~= nil then
-		if inst.components.crop:IsReadyForHarvest() then
-			return false
-		end
-
-		local amount = 1
-
-		if data.supergrowth then
-			amount = 9999
-		end
-
-		inst.components.crop:DoGrow(amount)
-
-		SpawnGrowFX(inst)
-
-		return true
-	end
-
-	if inst.components.harvestable ~= nil
-	and inst.components.harvestable:CanBeHarvested()
-	and inst:HasTag("mushroom_farm") then
-
-		local success = false
-
-		if inst.components.harvestable:IsMagicGrowable() then
-			success = inst.components.harvestable:DoMagicGrowth()
-		else
-			local loops = 1
-
-			if data.supergrowth then
-				loops = 999
-			end
-
-			for i = 1, loops do
-				if inst.components.harvestable:Grow() then
 					success = true
 				end
 			end
@@ -359,18 +398,19 @@ function PlantBoostable:ApplyBooster(booster, doer)
 
 	if self.inst:HasTag("farm_plant") then
 		if not data.can_farm then
-        	return false
-    	end
+			return false
+		end
+
+		if self.inst.components.pickable ~= nil and self.inst.components.pickable:CanBePicked() then
+			return false
+		end
 
 		GrowFarmPlant(self.inst, data)
 
 		return true
 	end
 
-	if self.inst.components.crop ~= nil
-	or self.inst.components.pickable ~= nil
-	or self.inst.components.growable ~= nil
-	or self.inst.components.harvestable ~= nil then
+	if self.inst.components.pickable ~= nil then
 		GrowGeneric(self.inst, data)
 
 		return true

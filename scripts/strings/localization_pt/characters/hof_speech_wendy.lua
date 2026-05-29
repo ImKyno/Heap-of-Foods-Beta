@@ -1277,3 +1277,8 @@ WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
 WENDY.DESCRIBE.MANDRAKEBAOBUNS = "Uma refeição silenciosa para almas cansadas."
 
 WENDY.DESCRIBE.MANDRAKEPIE = "Uma reconfortante fatia de exaustão."
+
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um presente temporário para plantas condenadas."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Uma tentativa inútil de preservar a vida."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais abundância antes da inevitável decadência."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "A vida acelerada rumo ao seu fim."

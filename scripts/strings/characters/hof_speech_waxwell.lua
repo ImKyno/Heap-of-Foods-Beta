@@ -1277,3 +1277,8 @@ WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKE =
 WAXWELL.DESCRIBE.MANDRAKEBAOBUNS = "At least it's presentable."
 
 WAXWELL.DESCRIBE.MANDRAKEPIE = "I suppose it passes for dessert."
+
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A shortcut for impatient gardeners."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeping plants alive requires effort, apparently."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "At least it improves results."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "An unusually effective formula."

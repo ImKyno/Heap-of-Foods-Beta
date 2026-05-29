@@ -1277,3 +1277,8 @@ WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKE =
 WAXWELL.DESCRIBE.MANDRAKEBAOBUNS = "Przynajmniej wygląda przyzwoicie."
 
 WAXWELL.DESCRIBE.MANDRAKEPIE = "Przypuszczam, że można to uznać za deser."
+
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Skrót dla niecierpliwych ogrodników."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymanie roślin przy życiu najwyraźniej wymaga wysiłku."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Przynajmniej poprawia wyniki."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Niezwykle skuteczna formuła."

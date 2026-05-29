@@ -1277,3 +1277,8 @@ WEBBER.DESCRIBE.KYNO_ELDERMANDRAKE =
 WEBBER.DESCRIBE.MANDRAKEBAOBUNS = "Są mięciutkie i smaczne!"
 
 WEBBER.DESCRIBE.MANDRAKEPIE = "Chcemy jeszcze jeden kawałek!"
+
+WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Pomaga roślinom rosnąć większymi!"
+WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Zdrowe rośliny to szczęśliwe rośliny."
+WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej jagód dla wszystkich!"
+WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Łał! To działa naprawdę szybko!"

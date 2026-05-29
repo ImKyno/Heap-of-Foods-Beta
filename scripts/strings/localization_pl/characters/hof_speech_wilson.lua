@@ -1277,3 +1277,8 @@ WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
 WILSON.DESCRIBE.MANDRAKEBAOBUNS = "Dziwnie usypiające pieczywo."
 
 WILSON.DESCRIBE.MANDRAKEPIE = "Placek z wyjątkowo sennym nadzieniem."
+
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Wyprodukowany nawóz o właściwościach przyspieszających wzrost."
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Pomaga utrzymać moje rośliny zdrowe i piękne!"
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Dzięki temu moje krzewy mogą dawać jeszcze więcej plonów!"
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "To powinno pomóc moim uprawom rosnąć lepiej."

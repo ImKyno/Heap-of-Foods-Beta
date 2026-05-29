@@ -1277,3 +1277,8 @@ WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKE =
 WAXWELL.DESCRIBE.MANDRAKEBAOBUNS = "Ít nhất thì nó cũng trông tử tế."
 
 WAXWELL.DESCRIBE.MANDRAKEPIE = "Ta đoán nó cũng tạm được xem là món tráng miệng."
+
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một lối tắt cho những người làm vườn thiếu kiên nhẫn."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ cây sống hóa ra cũng cần nỗ lực."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Ít nhất nó cải thiện kết quả."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Một công thức hiệu quả bất thường."

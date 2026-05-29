@@ -1277,3 +1277,8 @@ WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
 WOODIE.DESCRIBE.MANDRAKEBAOBUNS = "Cheira muito bem, hein?"
 
 WOODIE.DESCRIBE.MANDRAKEPIE = "Nada supera uma torta fresca, hein?"
+
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Faz as plantas crescerem mais rápido, hein?"
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Mantém elas saudáveis e felizes."
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais colheita no mesmo terreno."
+WODDIE.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Isso é coisa poderosa."

@@ -84,9 +84,9 @@ local function ontransplantfn(inst)
 end
 
 local function SetLunarThrallProtection(inst, protected)
-	inst._lunarthrall_protected = protected
+	inst._lunarthrall_protected = protected == true
 
-	if protected then
+	if inst._lunarthrall_protected then
 		inst:RemoveTag("lunarplant_target")
 	else
 		inst:AddTag("lunarplant_target")
@@ -105,6 +105,7 @@ local function OnSave(inst, data)
 	data.bonus_yield = inst._bonus_yield
 	data.lunarthrall_protected = inst._lunarthrall_protected
 	data.original_transplanted = inst._original_transplanted
+	data.vitality_active = inst._vitality_active
 end
 
 local function OnLoad(inst, data)
@@ -119,6 +120,14 @@ local function OnLoad(inst, data)
 
 		if data.original_transplanted ~= nil then
 			inst._original_transplanted = data.original_transplanted
+		end
+
+		if data.vitality_active ~= nil then
+			inst._vitality_active = data.vitality_active
+
+			if inst._vitality_active and inst.components.pickable ~= nil then
+				inst.components.pickable.transplanted = false
+			end
 		end
 	end
 end
@@ -163,9 +172,12 @@ local function grass(name, stage)
 			return inst
 		end
 
+		inst.SetLunarThrallProtection = SetLunarThrallProtection
+
 		inst._bonus_yield = false
 		inst._lunarthrall_protected = false
 		inst._original_transplanted = nil
+		inst._vitality_active = false
 
 		inst.AnimState:SetTime(math.random() * 2)
 		

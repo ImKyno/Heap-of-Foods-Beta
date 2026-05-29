@@ -7,6 +7,7 @@ STRINGS.SCRAPBOOK.DATA_MILKABLE = "可以挤奶"
 STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "可繁殖"
 STRINGS.SCRAPBOOK.DATA_FISHFARM = "可繁殖鱼类"
 STRINGS.SCRAPBOOK.DATA_ANIMALFEEDER = "可喂养动物"
+STRINGS.SCRAPBOOK.DATA_PLANTBOOSTER = "可以促进植物生长"
 
 -- Foodtypes.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "可怕"
@@ -31,6 +32,7 @@ STRINGS.SCRAPBOOK.SUBCATS.JAM = "果酱"
 STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "腌菜"
 STRINGS.SCRAPBOOK.SUBCATS.FISHROE = "鱼卵"
 STRINGS.SCRAPBOOK.SUBCATS.AGEDROE = "成熟鱼卵"
+STRINGS.SCRAPBOOK.SUBCATS.PLANTBOOSTER = "增强剂"
 
 -- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "在一定时间内提高移动速度。"
@@ -172,6 +174,10 @@ STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "靠近热源即可孵化。"
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "用这份由珀尔精心酿制的饮品疗愈伤口并让自己清凉下来。"
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "用这份由珀尔精心酿制的饮品安抚心神，并抵御可怕的敌人。"
 STRINGS.SCRAPBOOK.SPECIALINFO.SOUNDPROOF = "可防止高噪音伤害。"
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_GROWTH = "可用于施肥并立即使非农田植物生长。\n\n增效剂效果不会叠加，在同一株植物上使用其他增效剂时会被替换。\n\n当植物被挖起时，增效剂效果会被移除。"
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "可用于施肥并立即使任何植物生长。\n\n用于普通植物时：\n\n无需再施肥，并可防止受到威胁影响。\n\n用于农田作物时：\n\n生长推进一个阶段，并获得对威胁的保护。\n\n增效剂效果不会叠加，在同一株植物上使用其他增效剂时会被替换。\n\n当植物被挖起时，增效剂效果会被移除。"
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "可用于施肥并立即使任何植物生长。\n\n用于普通植物时：\n\n成熟后额外产出一个产品。\n\n用于农田作物时：\n\n生长推进一个阶段，并在成熟后额外产出一个产品。\n\n增效剂效果不会叠加，在同一株植物上使用其他增效剂时会被替换。\n\n当植物被挖起时，增效剂效果会被移除。"
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "可用于施肥并立即使任何植物生长。\n\n用于农田作物时：\n\n直接成长至最终阶段，并有25%的概率变成巨型作物。\n\n增效剂效果不会叠加，在同一株植物上使用其他增效剂时会被替换。\n\n当植物被挖起时，增效剂效果会被移除。"
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "它们的饮食以种子、小麦或斑点小枝为基础。\n\n在野外发现的鸡在进食后有40%的几率产下鸡蛋。它们产下更大的蛋的几率非常低。\n\n鸡舍里的鸡吃完食后每天都能下蛋，且产出更大的蛋的概率更高。"

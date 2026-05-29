@@ -1277,3 +1277,8 @@ WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
 WILSON.DESCRIBE.MANDRAKEBAOBUNS = "A strangely sleepy bread."
 
 WILSON.DESCRIBE.MANDRAKEPIE = "A pie with a rather drowsy filling."
+
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A manufactured fertilizer with growing capabilities."
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Helps keeping my plants healthy and nice!"
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "With this, I can make my bushes produce even more!"
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "This should help improve my farm plants grow."

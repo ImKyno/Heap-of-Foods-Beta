@@ -1277,3 +1277,8 @@ WARLY.DESCRIBE.KYNO_ELDERMANDRAKE =
 WARLY.DESCRIBE.MANDRAKEBAOBUNS = "Một sự hòa quyện hương vị đầy dễ chịu."
 
 WARLY.DESCRIBE.MANDRAKEPIE = "Một chiếc bánh mộc mạc với đặc tính thư giãn."
+
+WARLY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Tuyệt vời để trồng nguyên liệu tươi."
+WARLY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Nguyên liệu khỏe mạnh tạo nên món ăn hảo hạng."
+WARLY.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều thu hoạch hơn đồng nghĩa với nhiều khả năng hơn."
+WARLY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Loại phân bón trong mơ của mọi đầu bếp."

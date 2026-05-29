@@ -1,7 +1,6 @@
 local _G = GLOBAL
 
--- Make Banana Bushes give our Bananas instead.
-local function BananaBushPostInit(inst)
+local function GrassPostInit(inst)
 	local function SetLunarThrallProtection(inst, protected)
 		inst._lunarthrall_protected = protected == true
 
@@ -26,10 +25,6 @@ local function BananaBushPostInit(inst)
 	inst._vitality_active = false
 
 	inst:AddComponent("plantboostable")
-
-	if inst.components.pickable ~= nil then
-		inst.components.pickable:SetUp("kyno_banana")
-	end
 
 	inst:ListenForEvent("picked", _G.PlantBoosterBonusYield)
 
@@ -76,4 +71,4 @@ local function BananaBushPostInit(inst)
 	end
 end
 
-AddPrefabPostInit("bananabush", BananaBushPostInit)
+AddPrefabPostInit("grass", GrassPostInit)

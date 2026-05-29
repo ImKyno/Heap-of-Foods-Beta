@@ -1,35 +1,17 @@
 local _G = GLOBAL
 
--- Make Banana Bushes give our Bananas instead.
-local function BananaBushPostInit(inst)
-	local function SetLunarThrallProtection(inst, protected)
-		inst._lunarthrall_protected = protected == true
-
-		if inst._lunarthrall_protected then
-			inst:RemoveTag("lunarplant_target")
-		else
-			inst:AddTag("lunarplant_target")
-		end
-	end
-
+local function RockAvocadoBushPostInit(inst)
 	inst:AddTag("plantboostable")
 
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
 
-	inst.SetLunarThrallProtection = SetLunarThrallProtection
-
 	inst._bonus_yield = false
-	inst._lunarthrall_protected = false
 	inst._original_transplanted = nil
 	inst._vitality_active = false
 
 	inst:AddComponent("plantboostable")
-
-	if inst.components.pickable ~= nil then
-		inst.components.pickable:SetUp("kyno_banana")
-	end
 
 	inst:ListenForEvent("picked", _G.PlantBoosterBonusYield)
 
@@ -42,7 +24,6 @@ local function BananaBushPostInit(inst)
 		end
 
 		data.bonus_yield = inst._bonus_yield
-		data.lunarthrall_protected = inst._lunarthrall_protected
 		data.original_transplanted = inst._original_transplanted
 		data.vitality_active = inst._vitality_active
 	end
@@ -55,10 +36,6 @@ local function BananaBushPostInit(inst)
 		if data ~= nil then
 			if data.bonus_yield ~= nil then
 				inst._bonus_yield = data.bonus_yield
-			end
-
-			if data.lunarthrall_protected ~= nil then
-				SetLunarThrallProtection(inst, data.lunarthrall_protected)
 			end
 
 			if data.original_transplanted ~= nil then
@@ -74,6 +51,34 @@ local function BananaBushPostInit(inst)
 			end
 		end
 	end
+
+	if inst.components.pickable ~= nil then
+		local _OnPicked = inst.components.pickable.onpickedfn
+
+		inst.components.pickable.onpickedfn = function(inst, picker, ...)
+			inst._was_stage3 = inst.components.growable ~= nil and inst.components.growable.stage == 3
+
+			if _OnPicked ~= nil then
+				_OnPicked(inst, picker, ...)
+			end
+
+			if picker ~= nil then
+				if inst._bonus_yield and inst._was_stage3 then
+					for i = 1, 3 do
+						local extra = _G.SpawnPrefab("rock_avocado_fruit")
+
+						if extra ~= nil then
+							if picker.components.inventory ~= nil then
+								picker.components.inventory:GiveItem(extra, nil, inst:GetPosition())
+							else
+								_G.LaunchAt(extra, inst, nil, 1, 1)
+							end
+						end
+					end
+				end
+			end
+		end
+	end
 end
 
-AddPrefabPostInit("bananabush", BananaBushPostInit)
+AddPrefabPostInit("rock_avocado_bush", RockAvocadoBushPostInit)

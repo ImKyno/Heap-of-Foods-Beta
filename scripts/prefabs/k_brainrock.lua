@@ -4,22 +4,22 @@ local assets =
 	Asset("ANIM", "anim/kyno_brainrock_coral.zip"),
 	Asset("ANIM", "anim/kyno_brainrock_larvae.zip"),
 	Asset("ANIM", "anim/kyno_brainrock_nubbin.zip"),
-	
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
-local prefabs = 
+local prefabs =
 {
 	"kyno_brainrock_coral",
 	"kyno_brainrock_larvae",
 	"kyno_brainrock_nubbin",
-	
+
 	"rocks",
 }
 
-local CORAL_STATE = 
+local CORAL_STATE =
 {
 	FULL = "_full",
 	PICKED = "_picked",
@@ -38,7 +38,7 @@ local function PulseLight(inst)
 	local rad = Lerp(min_rad, max_rad, s)
 	local intentsity = Lerp(min_intensity, max_intensity, s)
 	local falloff = Lerp(min_falloff, max_falloff, s)
-	
+
 	inst.Light:SetFalloff(falloff)
 	inst.Light:SetIntensity(intentsity)
 	inst.Light:SetRadius(rad)
@@ -78,16 +78,16 @@ local function OnPhase(inst, phase)
 	if not picked then
 		if phase ~= "day" and inst.coralstate ~= CORAL_STATE.GLOW then
 			TurnOn(inst, 5)
-			
+
 			inst.coralstate = CORAL_STATE.GLOW
-            
+
 			inst.AnimState:PlayAnimation("glow_pre")
 			inst.AnimState:PushAnimation("idle"..inst.coralstate, true)
 		elseif phase == "day" and inst.coralstate == CORAL_STATE.GLOW then
 			TurnOff(inst, 5)
-			
+
 			inst.coralstate = CORAL_STATE.FULL
-			
+
 			inst.AnimState:PushAnimation("glow_pst", false)
 			inst.AnimState:PushAnimation("idle"..inst.coralstate, true)
 		end
@@ -102,17 +102,17 @@ end
 
 local function MakeFull(inst)
 	local picked = inst.coralstate == CORAL_STATE.PICKED
-	
+
 	inst.coralstate = CORAL_STATE.FULL
-	
+
 	inst.AnimState:PlayAnimation("regrow")
 	inst.AnimState:PushAnimation("idle"..inst.coralstate, true)
 
 	if not TheWorld.state.isday and not picked then
 		TurnOn(inst, 5)
-		
+
 		inst.coralstate = CORAL_STATE.GLOW
-		
+
 		inst.AnimState:PlayAnimation("glow_pre")
 		inst.AnimState:PushAnimation("idle"..inst.coralstate, true)
 	end
@@ -123,12 +123,12 @@ local function OnPicked(inst, picker)
 		if inst.coralstate == CORAL_STATE.GLOW then
 			TurnOff(inst, 1)
 		end
-		
+
 		inst.coralstate = CORAL_STATE.PICKED
 
 		inst.AnimState:PlayAnimation("picked")
 		inst.AnimState:PushAnimation("idle"..inst.coralstate, true)
-    end
+	end
 end
 
 local function MakeEmpty(inst)
@@ -142,13 +142,13 @@ end
 
 local function OnHammered(inst, worker)
 	SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
-	
+
 	inst.components.lootdropper:DropLoot()
-	
+
 	if inst.components.pickable ~= nil and inst.components.pickable:CanBePicked() then
 		inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product)
 	end
-	
+
 	inst:Remove()
 end
 
@@ -165,28 +165,11 @@ local function GrowSprout(inst)
 	local sprout = SpawnPrefab("kyno_brainrock_rock")
 	sprout.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant")
 	sprout.Transform:SetPosition(inst.Transform:GetWorldPosition())
-	
+
 	local fx = SpawnPrefab("ocean_splash_med1")
 	fx.Transform:SetPosition(sprout.Transform:GetWorldPosition())
-	
+
 	inst:Remove()
-end
-
-local function OnSave(inst, data)
-	data.coralstate = inst.coralstate
-end
-
-local function OnLoad(inst, data)
-	inst.coralstate = data and data.coralstate or CORAL_STATE.FULL
-
-	if inst.coralstate == CORAL_STATE.GLOW then
-		inst.AnimState:PlayAnimation("glow_pre")
-		inst.AnimState:PushAnimation("idle"..inst.coralstate, true)
-		
-		TurnOn(inst, 0)
-	elseif inst.coralstate == CORAL_STATE.PICKED then
-		inst.AnimState:PushAnimation("idle"..inst.coralstate, true)
-	end
 end
 
 local DAMAGE_SCALE = 0.5
@@ -195,7 +178,7 @@ local function OnCollide(inst, data)
 
 	if boat_physics ~= nil then
 		local hit_velocity = math.abs(boat_physics:GetVelocity() * data.hit_dot_velocity) * DAMAGE_SCALE / boat_physics.max_velocity + 0.5
-		
+
 		if hit_velocity >= 1.5 then
 			inst.components.workable:WorkedBy(data.other, math.floor(hit_velocity) * TUNING.KYNO_BRAINROCK_ROCK_MINE)
 		end
@@ -205,6 +188,31 @@ end
 local function GetStatus(inst, viewer)
 	return (not inst.components.pickable:CanBePicked() and "PICKED")
 	or "GENERIC"
+end
+
+local function OnSave(inst, data)
+	data.coralstate = inst.coralstate
+
+	data.bonus_yield = inst._bonus_yield
+end
+
+local function OnLoad(inst, data)
+	inst.coralstate = data and data.coralstate or CORAL_STATE.FULL
+
+	if inst.coralstate == CORAL_STATE.GLOW then
+		inst.AnimState:PlayAnimation("glow_pre")
+		inst.AnimState:PushAnimation("idle"..inst.coralstate, true)
+
+		TurnOn(inst, 0)
+	elseif inst.coralstate == CORAL_STATE.PICKED then
+		inst.AnimState:PushAnimation("idle"..inst.coralstate, true)
+	end
+
+	if data ~= nil then
+		if data.bonus_yield ~= nil then
+			inst._bonus_yield = data.bonus_yield
+		end
+	end
 end
 
 local function OnPreLoad(inst, data)
@@ -219,7 +227,7 @@ local function fn()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddLight()
 	inst.entity:AddNetwork()
-	
+
 	inst.Light:SetColour(210/255, 247/255, 228/255)
 	inst.Light:Enable(false)
 	inst.Light:SetIntensity(0)
@@ -237,7 +245,8 @@ local function fn()
 
 	inst:AddTag("plant")
 	inst:AddTag("donotautopick")
-	
+	inst:AddTag("plantboostable")
+
 	inst.no_wet_prefix = true
 
 	inst.entity:SetPristine()
@@ -246,17 +255,20 @@ local function fn()
 		return inst
 	end
 
+	inst._bonus_yield = false
+
 	inst:AddComponent("lighttweener")
-	
+	inst:AddComponent("plantboostable")
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
-	
+
 	inst:AddComponent("sanityaura")
-    inst.components.sanityaura.aurafn = SanityAura
-	
+	inst.components.sanityaura.aurafn = SanityAura
+
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"rocks", "rocks", "rocks", "kyno_brainrock_larvae"})
-	
+
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 
@@ -276,16 +288,18 @@ local function fn()
 	inst.components.workable:SetOnWorkCallback(OnHit)
 	inst.components.workable:SetWorkLeft(4)
 
-    inst.coralstate = CORAL_STATE.FULL
+	inst.coralstate = CORAL_STATE.FULL
 
 	inst:WatchWorldState("phase", OnPhase)
+
 	inst:ListenForEvent("on_collide", OnCollide)
+	inst:ListenForEvent("picked", PlantBoosterBonusYield)
 
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 	inst.OnPreLoad = OnPreLoad
 
-    return inst
+	return inst
 end
 
 local function metterfn()
@@ -304,7 +318,7 @@ local function metterfn()
 
 	inst:AddTag("meat")
 	inst:AddTag("brainmetter")
-	
+
 	inst.no_wet_prefix = true
 
 	inst.entity:SetPristine()
@@ -312,16 +326,16 @@ local function metterfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
-	
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_brainrock_coral"
-	
+
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_BRAINROCK_CORAL_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_BRAINROCK_CORAL_HUNGER
@@ -333,7 +347,10 @@ local function metterfn()
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_ONE_DAY)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
-	
+
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
+
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
@@ -357,7 +374,7 @@ local function larvaefn()
 	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("molebait")
-	
+
 	inst.no_wet_prefix = true
 
 	inst.entity:SetPristine()
@@ -368,10 +385,10 @@ local function larvaefn()
 
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
-	
+
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
-	
+
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_brainrock_larvae"
@@ -381,7 +398,7 @@ local function larvaefn()
 	inst.components.repairer.healthrepairvalue = TUNING.REPAIR_ROCKS_HEALTH
 
 	MakeHauntableLaunch(inst)
-	
+
 	return inst
 end
 
@@ -398,7 +415,7 @@ local function sproutfn()
 
 	MakeWaterObstaclePhysics(inst, 0.5, 1, 0.85)
 	inst:SetPhysicsRadiusOverride(3)
-	
+
 	MakeInventoryFloatable(inst, "med", 0.1, {1.2, 1, 1.2})
 	inst.components.floater:SetIsObstacle()
 	inst.components.floater.bob_percent = 0
@@ -409,9 +426,9 @@ local function sproutfn()
 
 	inst:AddTag("plant")
 	inst:AddTag("brainsprout")
-	
+
 	inst:SetPrefabNameOverride("KYNO_BRAINROCK_NUBBIN")
-	
+
 	inst.no_wet_prefix = true
 
 	inst.entity:SetPristine()
@@ -419,22 +436,22 @@ local function sproutfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	local land_time = (POPULATING and math.random() * 5 * FRAMES) or 0
-	
+
 	inst:DoTaskInTime(land_time, function(inst)
 		inst.components.floater:OnLandedServer()
 	end)
 
-    inst:AddComponent("inspectable")
-	
+	inst:AddComponent("inspectable")
+
 	inst:AddComponent("timer")
 	inst.components.timer:StartTimer("kyno_brainrock_sprout_timer", TUNING.KYNO_BRAINROCK_ROCK_SPROUT_GROWTIME)
-	
+
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"rocks", "rocks", "rocks", "kyno_brainrock_nubbin"})
 	inst.components.lootdropper.spawn_loot_inside_prefab = true
-	
+
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
 
@@ -444,14 +461,14 @@ local function sproutfn()
 	inst.components.workable:SetWorkLeft(TUNING.KYNO_BRAINROCK_ROCK_MINE)
 
 	inst:ListenForEvent("on_collide", OnCollide)
-	
+
 	inst:ListenForEvent("timerdone", function(inst, data)
 		if data.name == "kyno_brainrock_sprout_timer" then
 			GrowSprout(inst)
 		end
 	end)
 
-    return inst
+	return inst
 end
 
 return Prefab("kyno_brainrock_rock", fn, assets, prefabs),

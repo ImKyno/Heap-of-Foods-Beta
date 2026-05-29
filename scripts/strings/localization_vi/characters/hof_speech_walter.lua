@@ -1277,3 +1277,8 @@ WALTER.DESCRIBE.KYNO_ELDERMANDRAKE =
 WALTER.DESCRIBE.MANDRAKEBAOBUNS = "Hoàn hảo cho những chuyến đi đường dài."
 
 WALTER.DESCRIBE.MANDRAKEPIE = "Bánh pie lúc nào cũng ngon hơn ngoài trời."
+
+WALTER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Hoàn hảo để trồng thêm nguồn cung ngoài thiên nhiên."
+WALTER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ khu vườn luôn trong tình trạng tốt nhất."
+WALTER.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều thu hoạch hơn với ít công sức hơn."
+WALTER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Đúng là công nghệ làm vườn ấn tượng."

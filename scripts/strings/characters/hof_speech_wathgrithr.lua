@@ -1277,3 +1277,8 @@ WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
 WATHGRITHR.DESCRIBE.MANDRAKEBAOBUNS = "A warrior's bun of mystical roots!"
 
 WATHGRITHR.DESCRIBE.MANDRAKEPIE = "A heroic pastry of enchanted root!"
+
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A tonic for the growth of mighty crops!"
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "It fortifies the spirit of the plants!"
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "A greater bounty for the feast hall!"
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "The crops shall flourish with vigor!"

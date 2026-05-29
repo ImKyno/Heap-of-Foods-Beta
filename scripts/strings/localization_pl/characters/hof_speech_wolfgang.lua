@@ -1277,3 +1277,8 @@ WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKE =
 WOLFGANG.DESCRIBE.MANDRAKEBAOBUNS = "Miękkie bułeczki czynią Wolfganga silnym!"
 
 WOLFGANG.DESCRIBE.MANDRAKEPIE = "Placek usypia potężnego Wolfganga!"
+
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że małe roślinki stają się wielkie!"
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Silne jedzenie dla silnych roślin!"
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej zbiorów dla potężnego Wolfganga!"
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Rośliny stają się potężne bardzo szybko!"

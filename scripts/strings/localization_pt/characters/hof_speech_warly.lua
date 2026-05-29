@@ -1277,3 +1277,8 @@ WARLY.DESCRIBE.KYNO_ELDERMANDRAKE =
 WARLY.DESCRIBE.MANDRAKEBAOBUNS = "Uma reconfortante fusão de sabores."
 
 WARLY.DESCRIBE.MANDRAKEPIE = "Uma torta rústica com qualidades relaxantes."
+
+WARLY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Excelente para cultivar ingredientes frescos."
+WARLY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Ingredientes saudáveis produzem culinária superior."
+WARLY.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais colheita significa mais possibilidades."
+WARLY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "O fertilizante dos sonhos de qualquer chef."

@@ -1277,3 +1277,8 @@ WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
 WICKERBOTTOM.DESCRIBE.MANDRAKEBAOBUNS = "Một món ăn khác thường nhưng no bụng."
 
 WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "Mandrake tạo nên một mùi hương khá đặc biệt."
+
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một loại phân bón được điều chế để kích thích phát triển."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Rất hữu ích để duy trì cây trồng khỏe mạnh."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nó sẽ làm tăng năng suất đáng kể."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Một bước tiến ấn tượng trong nông nghiệp."

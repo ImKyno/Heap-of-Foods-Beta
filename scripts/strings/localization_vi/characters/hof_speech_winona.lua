@@ -1277,3 +1277,8 @@ WINONA.DESCRIBE.KYNO_ELDERMANDRAKE =
 WINONA.DESCRIBE.MANDRAKEBAOBUNS = "Một bữa ăn cầm tay khá tiện."
 
 WINONA.DESCRIBE.MANDRAKEPIE = "Đúng là tay nghề nướng bánh đỉnh cao."
+
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một chất kích thích tăng trưởng rất thực tế."
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ cây trồng hoạt động tốt."
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Sản lượng cao hơn. Không thể phàn nàn được."
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Đây đúng là nông nghiệp cấp công nghiệp."

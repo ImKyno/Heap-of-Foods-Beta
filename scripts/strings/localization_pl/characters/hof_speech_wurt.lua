@@ -1279,3 +1279,8 @@ WURT.DESCRIBE.KYNO_ELDERMANDRAKE =
 WURT.DESCRIBE.MANDRAKEBAOBUNS = "Miękka bułkowa przekąska, florp!"
 
 WURT.DESCRIBE.MANDRAKEPIE = "Ma mięso, glorp!"
+
+WURT.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że rośliny rosną, florp!"
+WURT.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Zdrowe rośliny to dobre rośliny."
+WURT.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej jedzenia dla wszystkich, florp!"
+WURT.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Rośliny rosną superszybko!"

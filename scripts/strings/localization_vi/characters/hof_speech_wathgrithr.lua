@@ -1277,3 +1277,8 @@ WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
 WATHGRITHR.DESCRIBE.MANDRAKEBAOBUNS = "Bánh chiến binh với rễ thần bí!"
 
 WATHGRITHR.DESCRIBE.MANDRAKEPIE = "Món bánh anh hùng từ rễ cây mê hoặc!"
+
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một loại thuốc bổ cho những mùa màng hùng mạnh!"
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Nó củng cố tinh thần của cây cối!"
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều chiến lợi phẩm hơn cho đại sảnh yến tiệc!"
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Mùa màng sẽ phát triển với sức sống mãnh liệt!"

@@ -1277,3 +1277,8 @@ WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
 WICKERBOTTOM.DESCRIBE.MANDRAKEBAOBUNS = "Nietypowe, lecz sycące dzieło kulinarne."
 
 WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "Mandragora dodaje osobliwego aromatu."
+
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Nawóz opracowany w celu stymulacji rozwoju."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Przydatny do utrzymywania zdrowych upraw."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Powinien znacznie zwiększyć produktywność."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Imponujący postęp w rolnictwie."

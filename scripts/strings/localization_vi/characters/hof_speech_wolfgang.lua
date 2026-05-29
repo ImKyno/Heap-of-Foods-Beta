@@ -1277,3 +1277,8 @@ WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKE =
 WOLFGANG.DESCRIBE.MANDRAKEBAOBUNS = "Bánh mềm làm Wolfgang mạnh mẽ!"
 
 WOLFGANG.DESCRIBE.MANDRAKEPIE = "Bánh làm Wolfgang mạnh mẽ buồn ngủ!"
+
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Làm cây nhỏ thành cây lớn!"
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Thức ăn mạnh mẽ cho cây mạnh mẽ!"
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều thu hoạch hơn cho Wolfgang hùng mạnh!"
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Cây trở nên mạnh mẽ rất nhanh!"

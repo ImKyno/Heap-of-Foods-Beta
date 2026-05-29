@@ -1277,3 +1277,8 @@ WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
 WOODIE.DESCRIBE.MANDRAKEBAOBUNS = "Całkiem nieźle pachnie, co nie?"
 
 WOODIE.DESCRIBE.MANDRAKEPIE = "Nic nie przebije świeżego placka, co nie?"
+
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że rośliny rosną szybciej, co nie?"
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje je zdrowe i szczęśliwe."
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej plonów z tego samego poletka."
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "To naprawdę mocny środek."

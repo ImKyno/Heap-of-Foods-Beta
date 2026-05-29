@@ -1277,3 +1277,8 @@ WORTOX.DESCRIBE.KYNO_ELDERMANDRAKE =
 WORTOX.DESCRIBE.MANDRAKEBAOBUNS = "Đồ ăn gây buồn ngủ. Hyuyu!"
 
 WORTOX.DESCRIBE.MANDRAKEPIE = "Một miếng là tới xứ sở mộng mơ ngay!"
+
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một chút trợ giúp cho những người bạn lá xanh. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ chúng tràn đầy sức sống và tươi sáng."
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều quà hơn từ mỗi bụi cây. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Đúng là một hỗn hợp kỳ diệu!"
