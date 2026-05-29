@@ -1273,3 +1273,7 @@ WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Wolfgang stronger than you!",
 	GRUMPY = "Plant man not happy.",
 }
+
+WOLFGANG.DESCRIBE.MANDRAKEBAOBUNS = "Soft buns make Wolfgang strong!"
+
+WOLFGANG.DESCRIBE.MANDRAKEPIE = "Pie makes mighty Wolfgang sleepy!"

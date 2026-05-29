@@ -1275,3 +1275,7 @@ WURT.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Cześć, hałaśliwy przyjacielu!",
 	GRUMPY = "Czemu jesteś taki marudny?",
 }
+
+WURT.DESCRIBE.MANDRAKEBAOBUNS = "Miękka bułkowa przekąska, florp!"
+
+WURT.DESCRIBE.MANDRAKEPIE = "Ma mięso, glorp!"

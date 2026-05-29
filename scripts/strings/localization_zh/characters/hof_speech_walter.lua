@@ -1273,3 +1273,7 @@ WALTER.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "别吃我，植物人，好吗？",
 	GRUMPY = "也许你可以帮他改善一下心情，沃比？",
 }
+
+WALTER.DESCRIBE.MANDRAKEBAOBUNS = "非常适合旅行时吃。"
+
+WALTER.DESCRIBE.MANDRAKEPIE = "派在户外总是更好吃。"

@@ -1273,3 +1273,7 @@ WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Pare de gritar logo!",
 	GRUMPY = "O tempo lhe fará bem.",
 }
+
+WALTER.DESCRIBE.MANDRAKEBAOBUNS = "Perfeito para a trilha."
+
+WANDA.DESCRIBE.MANDRAKEPIE = "Espero que isso não me atrase."

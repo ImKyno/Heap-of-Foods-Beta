@@ -3441,6 +3441,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GREENTHUMB,
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_cavetuber_blooming", 1}, {"tillweed", 1}, {"honey", 1}, {"ice", 1}}},
 		prefabs = { "kyno_greenthumbbuff" },
 		oneatenfn = function(inst, eater)

@@ -1273,3 +1273,7 @@ WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "He's looking for a fight.",
 	GRUMPY = "What happened to you today, buddy?",
 }
+
+WOODIE.DESCRIBE.MANDRAKEBAOBUNS = "Smells pretty good, eh?"
+
+WOODIE.DESCRIBE.MANDRAKEPIE = "Nothing beats fresh pie, eh?"

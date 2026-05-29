@@ -2,7 +2,9 @@ local _G                = GLOBAL
 local next              = _G.next
 local require           = _G.require
 local HOF_MAPUTIL       = require("map/hof_maputil")
+
 local HOF_FOREST_DATA   = require("map/hof_retrofit_forest")
+local HOF_CAVE_DATA     = require("map/hof_retrofit_cave")
 
 local _DoRetrofitting   = require("map/retrofit_savedata").DoRetrofitting
 
@@ -99,6 +101,16 @@ require("map/retrofit_savedata").DoRetrofitting = function(savedata, world_map, 
 
 		if HOF_MAPUTIL.RetrofitOceanLayouts() then
 			table.insert(applied, "Ocean Topology Tags")
+		end
+	end
+
+	if savedata.map ~= nil and savedata.map.prefab == "cave" then
+		if ApplyRetrofit("Cave Tuber Trees", "kyno_cavetubertree", HOF_CAVE_DATA.HofRetrofitting_CaveTuberTrees) then
+			table.insert(applied, "Cave Tuber Trees")
+		end
+
+		if ApplyRetrofit("Mandrake Hills", "kyno_eldermandrakehouse", HOF_CAVE_DATA.HofRetrofitting_ElderMandrakeHouses) then
+			table.insert(applied, "Mandrake Hills")
 		end
 	end
 

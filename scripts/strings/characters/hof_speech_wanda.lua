@@ -1273,3 +1273,7 @@ WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Cease the screaming already!",
 	GRUMPY = "Time will do well for you.",
 }
+
+WANDA.DESCRIBE.MANDRAKEBAOBUNS = "Quick enough to eat on the move."
+
+WANDA.DESCRIBE.MANDRAKEPIE = "Hopefully this doesn't slow me down."

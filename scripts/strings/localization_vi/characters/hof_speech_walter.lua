@@ -1273,3 +1273,7 @@ WALTER.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "ĐỪNG ĂN TÔI NHÉ, NGƯỜI CÂY?",
 	GRUMPY = "CÓ LẼ BẠN CÓ THỂ GIÚP ÔNG ẤY CẢI THIỆN TÂM TRẠNG, WOBY?",
 }
+
+WALTER.DESCRIBE.MANDRAKEBAOBUNS = "Hoàn hảo cho những chuyến đi đường dài."
+
+WALTER.DESCRIBE.MANDRAKEPIE = "Bánh pie lúc nào cũng ngon hơn ngoài trời."

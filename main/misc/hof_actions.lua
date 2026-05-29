@@ -857,6 +857,56 @@ AddAction("EATFROM", "Eat From", function(act)
 	return true
 end)
 
+-- For boosting pickable plants and farm plants.
+AddAction("BOOSTPLANT", "Boost", function(act)
+	local booster = act.invobject
+    local target = act.target
+    local doer = act.doer
+
+	if booster == nil or target == nil then
+		return false
+	end
+
+	if target.components.plantboostable ~= nil then
+		local success = target.components.plantboostable:ApplyBooster(booster, doer)
+
+		if success then
+			if booster.components.stackable ~= nil then
+				booster.components.stackable:Get():Remove()
+			else
+				booster:Remove()
+			end
+
+			if doer ~= nil and doer.SoundEmitter ~= nil then
+				doer.SoundEmitter:PlaySound("dontstarve/common/fertilize")
+			end
+
+			return true
+		else
+			if doer ~= nil then
+				doer:PushEvent("applyboosterfail")
+				return false
+			end
+		end
+	end
+
+	return false
+end)
+
+AddComponentAction("USEITEM", "plantbooster", function(inst, doer, target, actions, right)
+	if not target:HasTag("plantboostable") then
+		return
+	end
+
+	if target:HasTag("farm_plant") then
+		if inst:HasTag("growthbooster") and not inst:HasTag("farmplantbooster") then
+			return
+		end
+	end
+
+	table.insert(actions, ACTIONS.BOOSTPLANT)
+end)
+
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 -- Hope they don't smack and bonk my head...
 local _FISHfn = ACTIONS.FISH.fn

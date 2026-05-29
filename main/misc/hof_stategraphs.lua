@@ -618,3 +618,11 @@ end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.FISHREGISTRY_RESEARCH, function(inst, action)
 	return "dolongaction"
 end))
+
+-- Applying Plant Boosters.
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.BOOSTPLANT, function(inst, action)
+	return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
+end))
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.BOOSTPLANT, function(inst, action)
+	return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
+end))

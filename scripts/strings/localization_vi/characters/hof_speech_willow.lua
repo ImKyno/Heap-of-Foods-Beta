@@ -1273,3 +1273,7 @@ WILLOW.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Tuyệt. Một con còn to hơn. Đúng thứ mình cần.",
 	GRUMPY = "Ông ta nổi giận rồi!",
 }
+
+WILLOW.DESCRIBE.MANDRAKEBAOBUNS = "Bánh bao nóng nhồi đầy rễ cây la hét."
+
+WILLOW.DESCRIBE.MANDRAKEPIE = "Bánh gây buồn ngủ. Tuyệt thật."

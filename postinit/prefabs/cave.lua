@@ -5,7 +5,7 @@ local function CavePostInit(inst)
 		return inst
 	end
 
-	inst:AddComponent("retrofitforestmap_hof")
+	inst:AddComponent("retrofitcavemap_hof")
 end
 
 AddPrefabPostInit("cave", CavePostInit)

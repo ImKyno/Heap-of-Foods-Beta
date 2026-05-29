@@ -1273,3 +1273,7 @@ WALTER.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Pode evitar me comer, homem planta?",
 	GRUMPY = "Talvez você possa ajudar a melhorar o humor dele um pouco, Woby?",
 }
+
+WALTER.DESCRIBE.MANDRAKEBAOBUNS = "Perfeito para a trilha."
+
+WALTER.DESCRIBE.MANDRAKEPIE = "Torta sempre fica melhor ao ar livre."

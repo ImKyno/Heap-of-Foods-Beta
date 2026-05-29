@@ -1275,3 +1275,7 @@ WURT.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Xin chào, bạn ồn ào!",
 	GRUMPY = "Sao bạn cáu kỉnh vậy?",
 }
+
+WURT.DESCRIBE.MANDRAKEBAOBUNS = "Bánh mềm ngon ngon, florp!"
+
+WURT.DESCRIBE.MANDRAKEPIE = "Có thịt trong đó, glorp!"

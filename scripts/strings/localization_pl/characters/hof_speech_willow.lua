@@ -1273,3 +1273,7 @@ WILLOW.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Świetnie. Jeszcze większy. Tego właśnie potrzebowałam.",
 	GRUMPY = "On jest zły!",
 }
+
+WILLOW.DESCRIBE.MANDRAKEBAOBUNS = "Ciepłe bułeczki nadziewane wrzeszczącym korzeniem."
+
+WILLOW.DESCRIBE.MANDRAKEPIE = "Senny placek. Super."

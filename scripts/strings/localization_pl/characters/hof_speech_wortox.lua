@@ -1273,3 +1273,7 @@ WORTOX.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Źródło krzyku!",
 	GRUMPY = "Jest trochę zrzędliwy.",
 }
+
+WORTOX.DESCRIBE.MANDRAKEBAOBUNS = "Usypiające przekąski. Hyuyu!"
+
+WORTOX.DESCRIBE.MANDRAKEPIE = "Jeden kęs i prosto do krainy snów!"

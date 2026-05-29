@@ -1273,3 +1273,7 @@ WINONA.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Ei, cara barulhento!",
 	GRUMPY = "Tá meio pra baixo hoje, hein?",
 }
+
+WINONA.DESCRIBE.MANDRAKEBAOBUNS = "Uma bela refeição portátil."
+
+WINONA.DESCRIBE.MANDRAKEPIE = "Isso sim é uma boa fornada."

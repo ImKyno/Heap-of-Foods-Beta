@@ -1273,3 +1273,7 @@ WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Ông ta đang kiếm chuyện đánh nhau.",
 	GRUMPY = "Hôm nay có chuyện gì vậy, bạn hiền?",
 }
+
+WOODIE.DESCRIBE.MANDRAKEBAOBUNS = "Ngửi ngon phết đó, eh?"
+
+WOODIE.DESCRIBE.MANDRAKEPIE = "Không gì ngon hơn bánh pie mới nướng, eh?"

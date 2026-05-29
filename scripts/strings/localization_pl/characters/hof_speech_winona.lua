@@ -1273,3 +1273,7 @@ WINONA.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Hej, hałaśliwy gościu!",
 	GRUMPY = "Trochę dziś przygnębiony, co?",
 }
+
+WINONA.DESCRIBE.MANDRAKEBAOBUNS = "Porządny mały posiłek do ręki."
+
+WINONA.DESCRIBE.MANDRAKEPIE = "To porządne pieczenie."

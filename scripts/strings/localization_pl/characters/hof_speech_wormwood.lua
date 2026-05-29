@@ -1273,3 +1273,7 @@ WORMWOOD.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Krzykacz",
 	GRUMPY = "Zrzęda",
 }
+
+WORMWOOD.DESCRIBE.MANDRAKEBAOBUNS = "Hałaśliwy Przyjaciel W Chlebie"
+
+WORMWOOD.DESCRIBE.MANDRAKEPIE = "Placek Z Hałaśliwym Przyjacielem"

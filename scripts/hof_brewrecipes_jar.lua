@@ -899,6 +899,43 @@ local kyno_foods_jar =
 			eater:AddDebuff("kyno_acidimmunityaltbuff", "kyno_acidimmunityaltbuff")
 		end,
 	},
+
+	pickles_cavetuber =
+	{
+		test = function(brewer, names, tags) return names.kyno_cavetuber and (names.kyno_cavetuber == 2) and tags.spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = -20,
+		hunger = 100,
+		sanity = 10,
+		cooktime = 72,
+		scale = .90,
+		goldvalue = 10,
+		nameoverride = "KYNO_PICKLES",
+		overridebuild = "kyno_foodrecipes_jar",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_cavetuber", 2}, {"kyno_spotspice", 1}}},
+	},
+
+	pickles_cavetuber_blooming =
+	{
+		test = function(brewer, names, tags) return names.kyno_cavetuber_blooming 
+		and (names.kyno_cavetuber_blooming == 2) and tags.spotspice end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 60,
+		hunger = 75,
+		sanity = 25,
+		cooktime = 72,
+		scale = .90,
+		goldvalue = 10,
+		nameoverride = "KYNO_PICKLES",
+		overridebuild = "kyno_foodrecipes_jar",
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_cavetuber_blooming", 2}, {"kyno_spotspice", 1}}},
+	},
 	
 	mayonnaise = 
 	{

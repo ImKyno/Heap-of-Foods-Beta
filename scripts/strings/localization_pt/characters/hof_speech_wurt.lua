@@ -1275,3 +1275,7 @@ WURT.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Olá, amigo barulhento!",
 	GRUMPY = "Por que tão rabugento?",
 }
+
+WURT.DESCRIBE.MANDRAKEBAOBUNS = "Lanche de pão macio, florp!"
+
+WURT.DESCRIBE.MANDRAKEPIE = "Tem carne, glorp!"

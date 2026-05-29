@@ -1275,3 +1275,7 @@ WURT.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Hello, noisy friend!",
 	GRUMPY = "Why are you so grumpy?",
 }
+
+WURT.DESCRIBE.MANDRAKEBAOBUNS = "Soft bun snack, florp!"
+
+WURT.DESCRIBE.MANDRAKEPIE = "It has meat, glorp!"

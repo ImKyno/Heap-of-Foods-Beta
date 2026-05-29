@@ -1273,3 +1273,7 @@ WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "To lớn và ồn ào.",
 	GRUMPY = "Ông ấy có vẻ không vui lắm.",
 }
+
+WILSON.DESCRIBE.MANDRAKEBAOBUNS = "Một loại bánh mì khiến người ta buồn ngủ kỳ lạ."
+
+WILSON.DESCRIBE.MANDRAKEPIE = "Một chiếc bánh với nhân cực kỳ gây buồn ngủ."

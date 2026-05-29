@@ -1273,3 +1273,7 @@ WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Wolfgang mạnh hơn ngươi!",
 	GRUMPY = "Người cây không vui.",
 }
+
+WOLFGANG.DESCRIBE.MANDRAKEBAOBUNS = "Bánh mềm làm Wolfgang mạnh mẽ!"
+
+WOLFGANG.DESCRIBE.MANDRAKEPIE = "Bánh làm Wolfgang mạnh mẽ buồn ngủ!"

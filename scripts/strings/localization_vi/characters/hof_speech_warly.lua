@@ -1273,3 +1273,7 @@ WARLY.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Rau củ quá ồn ào.",
 	GRUMPY = "Hôm nay ông ấy trông chẳng vui vẻ gì.",
 }
+
+WARLY.DESCRIBE.MANDRAKEBAOBUNS = "Một sự hòa quyện hương vị đầy dễ chịu."
+
+WARLY.DESCRIBE.MANDRAKEPIE = "Một chiếc bánh mộc mạc với đặc tính thư giãn."

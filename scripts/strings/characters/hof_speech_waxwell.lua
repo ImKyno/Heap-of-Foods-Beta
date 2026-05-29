@@ -1273,3 +1273,7 @@ WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Cease your babbling!",
 	GRUMPY = "Say pal, you don't look so happy.",
 }
+
+WAXWELL.DESCRIBE.MANDRAKEBAOBUNS = "At least it's presentable."
+
+WAXWELL.DESCRIBE.MANDRAKEPIE = "I suppose it passes for dessert."

@@ -1273,3 +1273,7 @@ WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Szukasz bójki, co?",
 	GRUMPY = "Co ci się dziś stało, kolego?",
 }
+
+WOODIE.DESCRIBE.MANDRAKEBAOBUNS = "Całkiem nieźle pachnie, co nie?"
+
+WOODIE.DESCRIBE.MANDRAKEPIE = "Nic nie przebije świeżego placka, co nie?"

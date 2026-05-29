@@ -1273,3 +1273,7 @@ WARLY.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Głośne warzywo korzeniowe.",
 	GRUMPY = "Nie wygląda dziś na zbyt szczęśliwego.",
 }
+
+WARLY.DESCRIBE.MANDRAKEBAOBUNS = "Pocieszające połączenie smaków."
+
+WARLY.DESCRIBE.MANDRAKEPIE = "Rustykalny placek o uspokajających właściwościach."

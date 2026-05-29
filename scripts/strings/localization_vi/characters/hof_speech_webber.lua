@@ -1273,3 +1273,7 @@ WEBBER.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Chào nhé, anh bạn ồn ào.",
 	GRUMPY = "Sao buồn vậy?",
 }
+
+WEBBER.DESCRIBE.MANDRAKEBAOBUNS = "Chúng mềm mềm và ngon nữa!"
+
+WEBBER.DESCRIBE.MANDRAKEPIE = "Bọn tôi muốn thêm một miếng nữa!"

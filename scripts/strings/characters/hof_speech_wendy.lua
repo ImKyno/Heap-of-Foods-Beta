@@ -1273,3 +1273,7 @@ WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Another abomination.",
 	GRUMPY = "His mood is similar to mine.",
 }
+
+WENDY.DESCRIBE.MANDRAKEBAOBUNS = "A quiet meal for weary souls."
+
+WENDY.DESCRIBE.MANDRAKEPIE = "A comforting slice of exhaustion."

@@ -1273,3 +1273,7 @@ WINONA.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Hey there, noisy dude!",
 	GRUMPY = "Feeling a bit down today, aren't we?",
 }
+
+WINONA.DESCRIBE.MANDRAKEBAOBUNS = "Nice little handheld meal."
+
+WINONA.DESCRIBE.MANDRAKEPIE = "That's some solid baking."

@@ -1273,3 +1273,7 @@ WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Im cái miệng đi!",
 	GRUMPY = "Này bạn, trông bạn chẳng vui vẻ gì.",
 }
+
+WAXWELL.DESCRIBE.MANDRAKEBAOBUNS = "Ít nhất thì nó cũng trông tử tế."
+
+WAXWELL.DESCRIBE.MANDRAKEPIE = "Ta đoán nó cũng tạm được xem là món tráng miệng."

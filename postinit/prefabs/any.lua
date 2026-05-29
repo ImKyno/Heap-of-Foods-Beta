@@ -46,6 +46,21 @@ local function PigFriendlyPostInit(inst)
 	end
 end
 
+local function ApplyBoosterFarmPlantPostInit(inst)
+	if inst:HasTag("farm_plant") then
+		inst:AddTag("plantboostable")
+	end
+
+	if not _G.TheWorld.ismastersim then
+		return inst
+	end
+
+	if inst.components.farmmplantable ~= nil then
+		inst:AddComponent("plantboostable")
+	end
+end
+
 AddPrefabPostInitAny(SeedsPostInit)
 AddPrefabPostInitAny(DailyRecipePostInit)
 AddPrefabPostInitAny(PigFriendlyPostInit)
+AddPrefabPostInitAny(ApplyBoosterFarmPlantPostInit)

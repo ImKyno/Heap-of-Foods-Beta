@@ -953,6 +953,47 @@ local kyno_foods_keg =
 		end,
 	},
 
+	juice_cavetuber =
+	{
+		test = function(brewer, names, tags) return names.kyno_cavetuber and (names.kyno_cavetuber == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SLOW,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = -25,
+		hunger = 62.5,
+		sanity = 50,
+		cooktime = 72,
+		goldvalue = 10,
+		nameoverride = "KYNO_JUICE",
+		overridebuild = "kyno_foodrecipes_keg1",
+		floater = TUNING.HOF_FLOATER,
+		tags = {"fooddrink"},
+		card_def = {ingredients = {{"kyno_cavetuber", 2}, {"ice", 1}}},
+	},
+
+	juice_cavetuber_blooming =
+	{
+		test = function(brewer, names, tags) return names.kyno_cavetuber_blooming 
+		and (names.kyno_cavetuber_blooming == 2) and tags.frozen end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SLOW,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		health = 60,
+		hunger = 50,
+		sanity = 20,
+		cooktime = 72,
+		goldvalue = 10,
+		nameoverride = "KYNO_JUICE",
+		overridebuild = "kyno_foodrecipes_keg1",
+		floater = TUNING.HOF_FLOATER,
+		tags = {"fooddrink"},
+		card_def = {ingredients = {{"kyno_cavetuber_blooming", 2}, {"ice", 1}}},
+	},
+
 	beer =
 	{
 		test = function(brewer, names, tags) return names.kyno_wheat and (names.kyno_wheat == 2) and tags.frozen end,

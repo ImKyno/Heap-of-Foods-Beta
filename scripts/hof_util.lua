@@ -459,3 +459,29 @@ function HasVeggieInInventoryFor(inst)
 
 	return inventory:FindItem(HasVeggieInInventoryFor_Checker) ~= nil
 end
+
+function PlantBoosterBonusYield(inst, data)
+	if not inst._bonus_yield then
+		return
+	end
+
+	local picker = data ~= nil and data.picker or nil
+	local product = nil
+
+	if inst.components.pickable ~= nil then
+		product = inst.components.pickable.product
+	end
+
+	if product == nil then
+		return
+	end
+
+	local pt = inst:GetPosition()
+	local item = SpawnPrefab(product)
+
+	if picker ~= nil and picker.components.inventory ~= nil then
+		picker.components.inventory:GiveItem(item, nil, pt)
+	else
+		LaunchAt(item, inst, nil, 1, 1)
+	end
+end

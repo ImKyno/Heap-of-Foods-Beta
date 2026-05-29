@@ -1273,3 +1273,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Nó thuộc giới Plantae hay Animalia?",
 	GRUMPY = "Hôm nay ông ấy có vẻ không vui.",
 }
+
+WICKERBOTTOM.DESCRIBE.MANDRAKEBAOBUNS = "Một món ăn khác thường nhưng no bụng."
+
+WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "Mandrake tạo nên một mùi hương khá đặc biệt."

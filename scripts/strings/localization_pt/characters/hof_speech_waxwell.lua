@@ -1273,3 +1273,7 @@ WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Pare de tagarelar!",
 	GRUMPY = "Ei, amigo, você não parece muito feliz.",
 }
+
+WAXWELL.DESCRIBE.MANDRAKEBAOBUNS = "Pelo menos parece apresentável."
+
+WAXWELL.DESCRIBE.MANDRAKEPIE = "Suponho que isso sirva como sobremesa."

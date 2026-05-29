@@ -1273,3 +1273,7 @@ WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Grande e gritona.",
 	GRUMPY = "Ele não parece muito feliz.",
 }
+
+WILSON.DESCRIBE.MANDRAKEBAOBUNS = "Um pão estranhamente sonolento."
+
+WILSON.DESCRIBE.MANDRAKEPIE = "Uma torta com um recheio bastante sonolento."

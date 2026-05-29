@@ -1273,3 +1273,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "É Plantae ou Animalia?",
 	GRUMPY = "Ele não parece feliz hoje.",
 }
+
+WICKERBOTTOM.DESCRIBE.MANDRAKEBAOBUNS = "Uma criação culinária incomum, mas satisfatória."
+
+WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "A mandrágora adiciona um aroma peculiar."

@@ -1273,3 +1273,7 @@ WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "I shall vanquish thee!",
 	GRUMPY = "The enemy's morale is down!",
 }
+
+WATHGRITHR.DESCRIBE.MANDRAKEBAOBUNS = "A warrior's bun of mystical roots!"
+
+WATHGRITHR.DESCRIBE.MANDRAKEPIE = "A heroic pastry of enchanted root!"

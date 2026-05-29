@@ -1273,3 +1273,7 @@ WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Ngừng hét đi được rồi đấy!",
 	GRUMPY = "Thời gian sẽ giúp ích cho bạn.",
 }
+
+WANDA.DESCRIBE.MANDRAKEBAOBUNS = "Đủ nhanh để ăn khi đang di chuyển."
+
+WANDA.DESCRIBE.MANDRAKEPIE = "Hy vọng nó không làm mình chậm lại."

@@ -1273,3 +1273,7 @@ WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Ta sẽ đánh bại ngươi!",
 	GRUMPY = "Tinh thần quân địch đang sa sút!",
 }
+
+WATHGRITHR.DESCRIBE.MANDRAKEBAOBUNS = "Bánh chiến binh với rễ thần bí!"
+
+WATHGRITHR.DESCRIBE.MANDRAKEPIE = "Món bánh anh hùng từ rễ cây mê hoặc!"

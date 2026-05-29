@@ -1273,3 +1273,7 @@ WEBBER.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Hej tam, hałaśliwy koleś.",
 	GRUMPY = "Czemu taki smutny?",
 }
+
+WEBBER.DESCRIBE.MANDRAKEBAOBUNS = "Są mięciutkie i smaczne!"
+
+WEBBER.DESCRIBE.MANDRAKEPIE = "Chcemy jeszcze jeden kawałek!"

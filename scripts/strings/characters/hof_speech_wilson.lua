@@ -1273,3 +1273,7 @@ WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Large and screamy.",
 	GRUMPY = "He doesn't seem to be very happy.",
 }
+
+WILSON.DESCRIBE.MANDRAKEBAOBUNS = "A strangely sleepy bread."
+
+WILSON.DESCRIBE.MANDRAKEPIE = "A pie with a rather drowsy filling."

@@ -1273,3 +1273,7 @@ WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Lại thêm một dị dạng khác.",
 	GRUMPY = "Tâm trạng của ông ấy giống tôi.",
 }
+
+WENDY.DESCRIBE.MANDRAKEBAOBUNS = "Một bữa ăn yên tĩnh cho những tâm hồn mệt mỏi."
+
+WENDY.DESCRIBE.MANDRAKEPIE = "Một lát bánh đầy sự mệt mỏi dễ chịu."

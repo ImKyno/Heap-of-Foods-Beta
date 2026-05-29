@@ -1273,3 +1273,7 @@ WARLY.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Vegetal raiz barulhento.",
 	GRUMPY = "Ele não parece muito feliz hoje.",
 }
+
+WARLY.DESCRIBE.MANDRAKEBAOBUNS = "Uma reconfortante fusão de sabores."
+
+WARLY.DESCRIBE.MANDRAKEPIE = "Uma torta rústica com qualidades relaxantes."

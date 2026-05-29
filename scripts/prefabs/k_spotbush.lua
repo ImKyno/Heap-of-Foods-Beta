@@ -36,7 +36,7 @@ local function dig_up(inst, chopper)
 	if inst.components.pickable:CanBePicked() then
 		inst.components.lootdropper:SpawnLootPrefab(inst.components.pickable.product)
 	end
-	
+
 	inst.components.lootdropper:SpawnLootPrefab("dug_kyno_spotbush")
 	inst:Remove()
 end
@@ -47,13 +47,29 @@ local function GetStatus(inst, viewer)
 	or "GENERIC"
 end
 
+local function OnSave(inst, data)
+	data.bonus_yield = inst._bonus_yield
+end
+
+local function OnLoad(inst, data)
+	if data ~= nil and data.bonus_yield ~= nil then
+		inst._bonus_yield = data.bonus_yield
+	end
+end
+
 local function OnPreLoad(inst, data)
-    WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_SPOTBUSH_GROWTIME)
+	WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_SPOTBUSH_GROWTIME)
+
+	if data and data.was_herd then
+		if TheWorld.components.lunarthrall_plantspawner then
+			TheWorld.components.lunarthrall_plantspawner:setHerdsOnPlantable(inst)
+		end
+	end
 end
 
 local function fn()
 	local inst = CreateEntity()
-    
+
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
@@ -61,34 +77,38 @@ local function fn()
 
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("quagmire_spotspice_shrub.png")
-	
+
 	MakeSmallObstaclePhysics(inst, .01)
-	
+
 	inst.AnimState:SetBank("quagmire_spiceshrub")
 	inst.AnimState:SetBuild("quagmire_spiceshrub")
 	inst.AnimState:PlayAnimation("idle", true)
-	
+
 	inst:AddTag("plant")
 	inst:AddTag("bush")
 	inst:AddTag("renewable")
 	inst:AddTag("spotbush")
 	inst:AddTag("lunarplant_target")
+	inst:AddTag("plantboostable")
 	inst:AddTag("pickablechickenfood")
-	
+
 	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
+	inst._bonus_yield = false
+
 	inst:AddComponent("lootdropper")
-	
+	inst:AddComponent("plantboostable")
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
-	
+
 	inst:AddComponent("hauntable")
 	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
-    
+
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.DIG)
 	inst.components.workable:SetOnFinishCallback(dig_up)
@@ -103,11 +123,15 @@ local function fn()
 	inst.components.pickable.makeemptyfn = makeemptyfn
 	inst.components.pickable.ontransplantfn = ontransplantfn
 
+	inst:ListenForEvent("picked", PlantBoosterBonusYield)
+
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
 	inst.OnPreLoad = OnPreLoad
-	
+
 	MakeMediumBurnable(inst)
 	MakeSmallPropagator(inst)
-	
+
 	MakeNoGrowInWinter(inst)
 	MakeHauntableIgnite(inst)
 

@@ -1705,6 +1705,8 @@ STRINGS.NAMES.PICKLES_RICE = "Picles de Arroz"
 STRINGS.NAMES.PICKLES_TRUFFLES = "Picles de Trufas"
 STRINGS.NAMES.PICKLES_SPORECAP = "Picles de Cogumelo-praga"
 STRINGS.NAMES.PICKLES_SPORECAP_DARK = "Picles de Cogumelo Nocivo"
+STRINGS.NAMES.PICKLES_CAVETUBER = "Picles de Tubérculo das Cavernas"
+STRINGS.NAMES.PICKLES_CAVETUBER_BLOOMING = "Picles de Tubérculo das Cavernas Florescido"
 
 STRINGS.NAMES.KYNO_WINE = "Vinho"
 STRINGS.NAMES.WINE_BERRIES = "Vinho de Bagas"
@@ -1755,6 +1757,8 @@ STRINGS.NAMES.JUICE_FENNEL = "Suco de Funcho"
 STRINGS.NAMES.JUICE_TRUFFLES = "Suco de Trufas"
 STRINGS.NAMES.JUICE_SPORECAP = "Suco de Cogumelo-praga"
 STRINGS.NAMES.JUICE_SPORECAP_DARK = "Suco de Cogumelo Nocivo"
+STRINGS.NAMES.JUICE_CAVETUBER = "Suco de Tubérculo das Cavernas"
+STRINGS.NAMES.JUICE_CAVETUBER_BLOOMING = "Suco de Tubérculo das Cavernas Florescido"
 
 STRINGS.NAMES.KYNO_POISON_FROGLEGS = "Perna de Sapo Venenosa"
 STRINGS.RECIPE_DESC.KYNO_POISON_FROGLEGS_M = "Pode causar envenenamento."
@@ -2276,3 +2280,7 @@ STRINGS.NAMES.KYNO_ELDERMANDRAKEHOUSE = "Colina das Mandrágoras"
 STRINGS.RECIPE_DESC.KYNO_ELDERMANDRAKEHOUSE = "Abriga um tubérculo gigante."
 
 STRINGS.NAMES.KYNO_ELDERMANDRAKE = "Mandrágora Anciã"
+
+STRINGS.NAMES.MANDRAKEBAOBUNS = "Bao de Mandrágora no Vapor"
+
+STRINGS.NAMES.MANDRAKEPIE = "Torta de Mandrágora"

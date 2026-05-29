@@ -1273,3 +1273,7 @@ WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Pokonam cię!",
 	GRUMPY = "Morale wroga spadło!",
 }
+
+WATHGRITHR.DESCRIBE.MANDRAKEBAOBUNS = "Wojownicza bułka z mistycznych korzeni!"
+
+WATHGRITHR.DESCRIBE.MANDRAKEPIE = "Heroiczne ciasto z zaczarowanego korzenia!"

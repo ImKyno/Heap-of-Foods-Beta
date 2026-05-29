@@ -1273,3 +1273,7 @@ WORTOX.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Nguồn gốc của tiếng hét!",
 	GRUMPY = "Ông ấy hơi cáu kỉnh.",
 }
+
+WORTOX.DESCRIBE.MANDRAKEBAOBUNS = "Đồ ăn gây buồn ngủ. Hyuyu!"
+
+WORTOX.DESCRIBE.MANDRAKEPIE = "Một miếng là tới xứ sở mộng mơ ngay!"

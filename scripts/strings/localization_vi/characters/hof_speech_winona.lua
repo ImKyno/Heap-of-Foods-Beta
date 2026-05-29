@@ -1273,3 +1273,7 @@ WINONA.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GENERIC = "Chào anh bạn ồn ào!",
 	GRUMPY = "Hôm nay xuống tinh thần à?",
 }
+
+WINONA.DESCRIBE.MANDRAKEBAOBUNS = "Một bữa ăn cầm tay khá tiện."
+
+WINONA.DESCRIBE.MANDRAKEPIE = "Đúng là tay nghề nướng bánh đỉnh cao."
