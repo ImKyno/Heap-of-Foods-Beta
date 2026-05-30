@@ -1,5 +1,6 @@
-local _G      = GLOBAL
-local require = _G.require
+local _G               = GLOBAL
+local require          = _G.require
+local PIG_COIN_ECONOMY = require("hof_pigcoineconomy")
 
 require("hof_constants")
 require("hof_brewing")
@@ -164,3 +165,14 @@ for _, brewer in pairs(brewer_warly)  do for _, recipe in pairs(keg_recipes)   d
 for _, recipe in pairs(jar_recipes)   do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_preservesjar"})   end end
 for _, recipe in pairs(keg_recipes)   do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_woodenkeg"})      end end
 -- for _, recipe in pairs(warly_recipes) do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_portablebrewer"}) end end
+
+-- Pig King Coin Economy System.
+local all_recipes =
+{
+	jar_recipes,
+	keg_recipes,
+}
+
+for k, v in pairs(all_recipes) do
+	PIG_COIN_ECONOMY.RegisterRecipes(v)
+end

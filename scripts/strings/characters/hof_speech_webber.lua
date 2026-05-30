@@ -1282,3 +1282,7 @@ WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "It helps plants grow bigger!"
 WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Healthy plants are happy plants."
 WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "More berries for everybody!"
 WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Wow! This stuff works fast!"
+
+WEBBER.DESCRIBE.KYNO_PIGCOIN1 = "We could trade it for something else."
+WEBBER.DESCRIBE.KYNO_PIGCOIN2 = "What can we buy with this amount?"
+WEBBER.DESCRIBE.KYNO_PIGCOIN3 = "We can buy a whole bunch of stuff with this."

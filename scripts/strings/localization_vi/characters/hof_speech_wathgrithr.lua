@@ -1282,3 +1282,7 @@ WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một loại thuốc bổ cho nh
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Nó củng cố tinh thần của cây cối!"
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều chiến lợi phẩm hơn cho đại sảnh yến tiệc!"
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Mùa màng sẽ phát triển với sức sống mãnh liệt!"
+
+WATHGRITHR.DESCRIBE.KYNO_PIGCOIN1 = "Kho báu!"
+WATHGRITHR.DESCRIBE.KYNO_PIGCOIN2 = "Đồng tiền! Hãy sẵn sàng để được tiêu!"
+WATHGRITHR.DESCRIBE.KYNO_PIGCOIN3 = "Vận may thuộc về ta!"

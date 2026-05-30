@@ -33,6 +33,7 @@ STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "Đồ Muối Chua"
 STRINGS.SCRAPBOOK.SUBCATS.FISHROE = "Trứng Cá"
 STRINGS.SCRAPBOOK.SUBCATS.AGEDROE = "Trứng Cá Ủ"
 STRINGS.SCRAPBOOK.SUBCATS.PLANTBOOSTER = "Chất Thúc Đẩy"
+STRINGS.SCRAPBOOK.SUBCATS.PIGCOIN = "Koin"
 
 -- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "Tăng tốc độ di chuyển trong một khoảng thời gian."
@@ -125,6 +126,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "Tăng máu tối đa 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "Tăng máu, độ no và tinh thần tối đa thêm 15% trong một khoảng thời gian.\n\nTạm thời giảm nhiệt độ."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Tăng năng suất cây trồng trong một khoảng thời gian nhất định."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Tăng năng suất cây trồng trong một khoảng thời gian nhất định.\n\Tạm thời giảm nhiệt độ."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Trấn an các sinh vật xung quanh người sống sót."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Tăng 15% hiệu quả hồi máu trong một khoảng thời gian. Không áp dụng cho hồi máu hút máu."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Có thể được thêm vào món Nồi Nấu bằng Trạm Nêm Gia Vị Di Động.\n\nĂn món được nêm Bột Bảo Quản sẽ giảm một nửa tốc độ hư hỏng và loại bỏ hình phạt từ thức ăn hỏng."
@@ -178,6 +181,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_GROWTH = "Có thể dùng để bón 
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "Có thể dùng để bón phân và làm bất kỳ loại cây nào phát triển ngay lập tức.\n\nKhi dùng cho Cây Thường:\n\nKhông cần bón phân nữa và được bảo vệ khỏi các mối đe dọa.\n\nKhi dùng cho Cây Nông Trại:\n\nTăng thêm một giai đoạn phát triển và được bảo vệ khỏi các mối đe dọa.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Có thể dùng để bón phân và làm bất kỳ loại cây nào phát triển ngay lập tức.\n\nKhi dùng cho Cây Thường:\n\nCho thêm một sản phẩm khi trưởng thành hoàn toàn.\n\nKhi dùng cho Cây Nông Trại:\n\nTăng thêm một giai đoạn phát triển và cho thêm một sản phẩm khi trưởng thành hoàn toàn.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Có thể dùng để bón phân và làm bất kỳ loại cây nào phát triển ngay lập tức.\n\nKhi dùng cho Cây Nông Trại:\n\nĐưa cây đến giai đoạn phát triển cuối cùng và có 25% cơ hội biến cây thành dạng Khổng Lồ.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
+STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "Đơn vị tiền tệ chính của lũ heo địa phương."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Khẩu phần của chúng chủ yếu gồm Hạt Giống, Lúa Mì hoặc Nhánh Đốm.\n\nGà tìm thấy ngoài hoang dã có 40% cơ hội đẻ Trứng sau khi ăn. Chúng có một cơ hội nhỏ đẻ Trứng Lớn.\n\nGà sống trong Chuồng có thể đẻ Trứng mỗi ngày sau khi ăn. Chúng có cơ hội đẻ Trứng Lớn cao hơn."

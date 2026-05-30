@@ -882,11 +882,6 @@ AddAction("BOOSTPLANT", STRINGS.ACTIONS.BOOSTPLANT, function(act)
 			end
 
 			return true
-		else
-			if doer ~= nil then
-				doer:PushEvent("applyboosterfail")
-				return false
-			end
 		end
 	end
 

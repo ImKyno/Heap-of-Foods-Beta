@@ -33,6 +33,7 @@ STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "腌菜"
 STRINGS.SCRAPBOOK.SUBCATS.FISHROE = "鱼卵"
 STRINGS.SCRAPBOOK.SUBCATS.AGEDROE = "成熟鱼卵"
 STRINGS.SCRAPBOOK.SUBCATS.PLANTBOOSTER = "增强剂"
+STRINGS.SCRAPBOOK.SUBCATS.PIGCOIN = "硬币"
 
 -- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "在一定时间内提高移动速度。"
@@ -125,6 +126,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "在一定时间内将
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "在一定时间内，最大生命值、饥饿值和理智值提高 15%。\n\n短暂降低温度。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "在一定时间内提高植物产量。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "在一定时间内提高植物产量。\n\短暂降低温度。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "安抚幸存者周围的附近生物。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "在一段时间内提高15%的治疗效率。不适用于吸血治疗。"
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可通过便携调味站添加至烹饪锅料理中。\n\n食用含防腐粉末的料理可使腐败速率减半，并免除食用变质食物的惩罚。"
@@ -178,6 +181,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_GROWTH = "可用于施肥并立即使
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "可用于施肥并立即使任何植物生长。\n\n用于普通植物时：\n\n无需再施肥，并可防止受到威胁影响。\n\n用于农田作物时：\n\n生长推进一个阶段，并获得对威胁的保护。\n\n增效剂效果不会叠加，在同一株植物上使用其他增效剂时会被替换。\n\n当植物被挖起时，增效剂效果会被移除。"
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "可用于施肥并立即使任何植物生长。\n\n用于普通植物时：\n\n成熟后额外产出一个产品。\n\n用于农田作物时：\n\n生长推进一个阶段，并在成熟后额外产出一个产品。\n\n增效剂效果不会叠加，在同一株植物上使用其他增效剂时会被替换。\n\n当植物被挖起时，增效剂效果会被移除。"
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "可用于施肥并立即使任何植物生长。\n\n用于农田作物时：\n\n直接成长至最终阶段，并有25%的概率变成巨型作物。\n\n增效剂效果不会叠加，在同一株植物上使用其他增效剂时会被替换。\n\n当植物被挖起时，增效剂效果会被移除。"
+STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "当地猪的主要货币。"
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "它们的饮食以种子、小麦或斑点小枝为基础。\n\n在野外发现的鸡在进食后有40%的几率产下鸡蛋。它们产下更大的蛋的几率非常低。\n\n鸡舍里的鸡吃完食后每天都能下蛋，且产出更大的蛋的概率更高。"

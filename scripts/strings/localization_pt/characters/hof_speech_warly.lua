@@ -1282,3 +1282,7 @@ WARLY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Excelente para cultivar ingredientes 
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Ingredientes saudáveis produzem culinária superior."
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais colheita significa mais possibilidades."
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "O fertilizante dos sonhos de qualquer chef."
+
+WARLY.DESCRIBE.KYNO_PIGCOIN1 = "Eu poderia comprar muitos ingredientes frescos com isso!"
+WARLY.DESCRIBE.KYNO_PIGCOIN2 = "Ah! Eu poderia passar na loja e comprar mantimentos..."
+WARLY.DESCRIBE.KYNO_PIGCOIN3 = "Parece bem importante."

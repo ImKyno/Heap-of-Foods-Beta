@@ -48,6 +48,77 @@ local function SortAfter(a, b, filter_name)
 	SortRecipe(a, b, filter_name, 1)
 end
 
+-- Partitio The Merchant.
+AddRecipe2("deciduoustrader_kyno_plantbooster_growth", {Ingredient("kyno_pigcoin1", 5, ModAtlas)}, TECH.LOST,
+	{
+		limitedamount       = true,
+		nounlock            = true,
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSDECIDUOUSSHOP",
+		actionstr           = "DECIDUOUSSHOP",
+		numtogive           = 2,
+		description         = "kyno_plantbooster_growth_d",
+		sg_state            = "give",
+		product             = "kyno_plantbooster_growth",
+		atlas               = ModAtlas,
+		image               = "kyno_plantbooster_growth.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+AddRecipe2("deciduoustrader_kyno_plantbooster_vitality", {Ingredient("kyno_pigcoin1", 10, ModAtlas),
+Ingredient("kyno_pigcoin2", 5, ModAtlas)}, TECH.LOST,
+	{
+		limitedamount       = true,
+		nounlock            = true,
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSDECIDUOUSSHOP",
+		actionstr           = "DECIDUOUSSHOP",
+		numtogive           = 2,
+		description         = "kyno_plantbooster_vitality_d",
+		sg_state            = "give",
+		product             = "kyno_plantbooster_vitality",
+		atlas               = ModAtlas,
+		image               = "kyno_plantbooster_vitality.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+AddRecipe2("deciduoustrader_kyno_plantbooster_yield", {Ingredient("kyno_pigcoin3", 5, ModAtlas)}, TECH.LOST,
+	{
+		limitedamount       = true,
+		nounlock            = true,
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSDECIDUOUSSHOP",
+		actionstr           = "DECIDUOUSSHOP",
+		numtogive           = 2,
+		description         = "kyno_plantbooster_yield_d",
+		sg_state            = "give",
+		product             = "kyno_plantbooster_yield",
+		atlas               = ModAtlas,
+		image               = "kyno_plantbooster_yield.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+AddRecipe2("deciduoustrader_kyno_plantbooster_supergrowth", {Ingredient("kyno_pigcoin2", 10, ModAtlas),
+Ingredient("kyno_pigcoin3", 5, ModAtlas)}, TECH.LOST,
+	{
+		limitedamount       = true,
+		nounlock            = true,
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSDECIDUOUSSHOP",
+		actionstr           = "DECIDUOUSSHOP",
+		numtogive           = 2,
+		description         = "kyno_plantbooster_supergrowth_d",
+		sg_state            = "give",
+		product             = "kyno_plantbooster_supergrowth",
+		atlas               = ModAtlas,
+		image               = "kyno_plantbooster_supergrowth.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
 CONSTRUCTION_PLANS["kyno_deciduousforest_shop"] =
 {
 	Ingredient("kyno_truffles",          20, ModAtlas, nil),

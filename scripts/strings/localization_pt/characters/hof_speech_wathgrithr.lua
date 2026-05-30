@@ -1282,3 +1282,7 @@ WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um tônico para o crescimento de
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Fortalece o espírito das plantas!"
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Uma colheita ainda mais abundante para o salão de banquetes!"
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "As plantações florescerão com vigor!"
+
+WATHGRITHR.DESCRIBE.KYNO_PIGCOIN1 = "Tesouro!"
+WATHGRITHR.DESCRIBE.KYNO_PIGCOIN2 = "Moeda! Prepare-se para ser gasta!"
+WATHGRITHR.DESCRIBE.KYNO_PIGCOIN3 = "A fortuna é minha!"

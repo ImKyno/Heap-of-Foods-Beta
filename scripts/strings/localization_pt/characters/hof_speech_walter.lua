@@ -1282,3 +1282,7 @@ WALTER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Perfeito para cultivar suprimentos n
 WALTER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Mantém o jardim em ótima forma."
 WALTER.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais colheita com menos esforço."
 WALTER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Essa tecnologia de jardinagem é impressionante."
+
+WALTER.DESCRIBE.KYNO_PIGCOIN1 = "É uma moeda, Woby!"
+WALTER.DESCRIBE.KYNO_PIGCOIN2 = "Eu podia comprar um monte de lanches pra Woby com isso."
+WALTER.DESCRIBE.KYNO_PIGCOIN3 = "Parece importante, precisamos guardar em um lugar seguro."

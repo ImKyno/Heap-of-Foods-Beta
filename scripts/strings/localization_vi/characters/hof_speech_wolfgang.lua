@@ -1282,3 +1282,7 @@ WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Làm cây nhỏ thành cây lớn!
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Thức ăn mạnh mẽ cho cây mạnh mẽ!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều thu hoạch hơn cho Wolfgang hùng mạnh!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Cây trở nên mạnh mẽ rất nhanh!"
+
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN1 = "Thương nhân heo sẽ thích."
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN2 = "Là đồng tiền có giá trị để mua đồ tốt."
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN3 = "Đồng tiền hùng mạnh!"

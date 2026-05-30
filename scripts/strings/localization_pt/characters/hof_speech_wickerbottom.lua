@@ -1282,3 +1282,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um fertilizante formulado para
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Útil para manter plantações saudáveis."
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Deve aumentar consideravelmente a produtividade."
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Um avanço impressionante na agricultura."
+
+WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN1 = "Valor irrisório para os habitantes locais."
+WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN2 = "Uma moeda de certa denominação."
+WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN3 = "Uma moeda de grande valor."

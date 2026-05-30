@@ -1282,3 +1282,7 @@ WILSON.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một loại phân bón nhân tạo 
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giúp cây cối của tôi luôn khỏe mạnh và tươi tốt!"
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Với thứ này, bụi cây của tôi sẽ cho nhiều sản phẩm hơn nữa!"
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Thứ này sẽ giúp cây trồng của tôi phát triển tốt hơn."
+
+WILSON.DESCRIBE.KYNO_PIGCOIN1 = "Tôi muốn nhiều hơn một xu cho suy nghĩ của mình."
+WILSON.DESCRIBE.KYNO_PIGCOIN2 = "Một lượng tiền khá ổn."
+WILSON.DESCRIBE.KYNO_PIGCOIN3 = "Có vẻ có giá trị."

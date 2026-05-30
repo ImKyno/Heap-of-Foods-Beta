@@ -33,6 +33,7 @@ STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "Marynaty"
 STRINGS.SCRAPBOOK.SUBCATS.FISHROE = "Ikra Rybna"
 STRINGS.SCRAPBOOK.SUBCATS.AGEDROE = "Stara Ikra"
 STRINGS.SCRAPBOOK.SUBCATS.PLANTBOOSTER = "Wzmacniacz"
+STRINGS.SCRAPBOOK.SUBCATS.PIGCOIN = "Koin"
 
 -- Efekty jedzenia.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "Zwiększona prędkość ruchu przez określony czas."
@@ -125,6 +126,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "Zwiększa maksymalne 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "Zwiększa maksymalne zdrowie, głód i zdrowie psychiczne o 15% na określony czas.\n\nKrótko obniża temperaturę."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Zwiększenie plonu roślin na określony czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Zwiększenie plonu roślin na określony czas.\n\Krótko obniża temperaturę."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Uspokaja pobliskie stworzenia wokół ocalałego."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Zwiększa skuteczność leczenia o 15% na określony czas. Nie działa na leczenie z kradzieży życia."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Może być dodany do jedzenia w garnku za pomocą przenośnej stacji przypraw.\n\nJedzenie przyprawione Preserver Powder zmniejsza czas psucia się o połowę i neguje kary za zepsute jedzenie."
@@ -178,6 +181,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_GROWTH = "Może być użyty do nawoż
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "Może być użyty do nawożenia i natychmiastowego wzrostu dowolnej rośliny.\n\nPo użyciu na Zwykłych Roślinach:\n\nNie wymagają już nawożenia i są chronione przed zagrożeniami.\n\nPo użyciu na Roślinach Uprawnych:\n\nPrzyspiesza wzrost o jeden etap i zapewnia ochronę przed zagrożeniami.\n\nEfekty nie sumują się i zostaną zastąpione po użyciu innego Wzmacniacza na tej samej roślinie.\n\nWzmacniacze są usuwane po wykopaniu rośliny."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Może być użyty do nawożenia i natychmiastowego wzrostu dowolnej rośliny.\n\nPo użyciu na Zwykłych Roślinach:\n\nDają jeden dodatkowy plon po pełnym wzroście.\n\nPo użyciu na Roślinach Uprawnych:\n\nPrzyspiesza wzrost o jeden etap i daje jeden dodatkowy plon po pełnym wzroście.\n\nEfekty nie sumują się i zostaną zastąpione po użyciu innego Wzmacniacza na tej samej roślinie.\n\nWzmacniacze są usuwane po wykopaniu rośliny."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Może być użyty do nawożenia i natychmiastowego wzrostu dowolnej rośliny.\n\nPo użyciu na Roślinach Uprawnych:\n\nNatychmiast rozwija roślinę do ostatniego etapu wzrostu i daje 25% szans na przekształcenie jej w Gigantyczną formę.\n\nEfekty nie sumują się i zostaną zastąpione po użyciu innego Wzmacniacza na tej samej roślinie.\n\nWzmacniacze są usuwane po wykopaniu rośliny."
+STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "Główna waluta lokalnych świń."
 
 -- Stworzenia.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Ich dieta opiera się na nasionach, pszenicy lub gałązkach cętkowanych.\n\nKury żyjące na wolności mają 40% szans na zniesienie jaj po jedzeniu. Mają bardzo małe szanse na zniesienie dużego jaja.\n\nKury żyjące w kurniku mogą znosić jaja codziennie po jedzeniu. Mają większe szanse na zniesienie dużego jaja."

@@ -34,37 +34,41 @@ local sounds =
 
 local FORGETABLE_RECIPES = {} -- Recipes that do not have a limit flag will be forgot on rerolling.
 
-local WARES                             =
+local WARES                                   =
 {
 	-- Make sure there is at least one trade that has min = 1 in this table.
-	ALWAYS                              =
+	ALWAYS                                    =
 	{
 		{
-			["kyno_itemslicer_gold"]        = { recipe = "meadowislandtrader_kyno_itemslicer_gold",        min = 6,  max = 6,  limit = 6  },
+			["kyno_plantbooster_growth"]      = { recipe = "deciduoustrader_kyno_plantbooster_growth",      min = 5,  max = 20, limit = 20  },
+			["kyno_plantbooster_vitality"]    = { recipe = "deciduoustrader_kyno_plantbooster_vitality",    min = 5,  max = 15, limit = 15  },
+			["kyno_plantbooster_yield"]       = { recipe = "deciduoustrader_kyno_plantbooster_yield",       min = 5,  max = 10, limit = 10  },
+			["kyno_plantbooster_supergrowth"] = { recipe = "deciduoustrader_kyno_plantbooster_supergrowth", min = 5,  max = 10, limit = 10  },
 		},
 	},
 
 	-- Make sure to always have seasonal seeds available to trade.
-	SEASONAL                                =
+	-- PLACEHOLDERS!!!
+	SEASONAL                                  =
 	{
-		[SEASONS.AUTUMN]                    =
+		[SEASONS.AUTUMN]                      =
 		{
-			["kyno_energycan"]              = { recipe = "meadowislandtrader_kyno_energycan",              min = 3,  max = 5              },
+			["kyno_energycan"]                = { recipe = "meadowislandtrader_kyno_energycan",            min = 3,  max = 5                },
 		},
 
-		[SEASONS.WINTER]                    =
+		[SEASONS.WINTER]                      =
 		{
-			["kyno_cokecan"]                = { recipe = "meadowislandtrader_kyno_cokecan",                min = 3,  max = 5              },
+			["kyno_cokecan"]                  = { recipe = "meadowislandtrader_kyno_cokecan",              min = 3,  max = 5                },
 		},
 
-		[SEASONS.SPRING]                    =
+		[SEASONS.SPRING]                      =
 		{
-			["kyno_seeds_kit_rice"]         = { recipe = "meadowislandtrader_kyno_seeds_kit_rice",         min = 15, max = 15             },
+			["kyno_seeds_kit_rice"]           = { recipe = "meadowislandtrader_kyno_seeds_kit_rice",       min = 15, max = 15               },
 		},
 
-		[SEASONS.SUMMER]                    =
+		[SEASONS.SUMMER]                      =
 		{
-			["kyno_sodacan"]                = { recipe = "meadowislandtrader_kyno_sodacan",                min = 3,  max = 5              },
+			["kyno_sodacan"]                  = { recipe = "meadowislandtrader_kyno_sodacan",              min = 3,  max = 5                },
 		},
 	},
 }

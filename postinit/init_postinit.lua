@@ -7,6 +7,7 @@ local INIT_POSTINIT_MISC =
 	"modcompatibility",
 	"preparedfoods",
 	"preparedfoods_warly",
+	"preparednonfoods",
 }
 
 local INIT_POSTINIT_BRAINS =
@@ -107,6 +108,7 @@ local INIT_POSTINIT_PREFABS =
 	"oceanfish",
 	"parsnip",
 	"perd",
+	"pigking",
 	"pigking_trades",
 	"pigman",
 	"plant_normal",

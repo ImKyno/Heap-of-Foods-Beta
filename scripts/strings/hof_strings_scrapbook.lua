@@ -33,6 +33,7 @@ STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "Pickles"
 STRINGS.SCRAPBOOK.SUBCATS.FISHROE = "Fish Roe"
 STRINGS.SCRAPBOOK.SUBCATS.AGEDROE = "Aged Roe"
 STRINGS.SCRAPBOOK.SUBCATS.PLANTBOOSTER = "Booster"
+STRINGS.SCRAPBOOK.SUBCATS.PIGCOIN = "Koin"
 
 -- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "Increased movement speed for a certain amount of time."
@@ -125,6 +126,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "Increases Max Health 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "Increases Max Health, Hunger and Sanity by 15% for a certain amount of time.\n\nBriefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Increased plant yield for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Increased plant yield for a certain amount of time.\n\Briefly decreases the temperature."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Soothes nearby creatures around the survivor."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Increases healing efficiency by 15% for a certain amount of time. Does not work for lifesteal healing."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
@@ -178,6 +181,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_GROWTH = "Can be used to fertilize an
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "Can be used to fertilize and instantly grow any plant.\n\nWhen used on Regular Plants:\n\No longer needs fertilizing and protects against targets.\n\nWhen used on Farm Plants:\n\Advances growing by one stage and protects against targets.\n\nThey are not cumulative and are replaced when another Booster is used on the same plant.\n\nBoosters are removed when the plant is dug."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Can be used to fertilize and instantly grow any plant.\n\nWhen used on Regular Plants:\n\Yield one extra product when fully grown.\n\nWhen used on Farm Plants:\n\Advances growing by one stage and yield one extra product when fully grown.\n\nThey are not cumulative and are replaced when another Booster is used on the same plant.\n\nBoosters are removed when the plant is dug."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Can be used to fertilize and instantly grow any plant.\n\nWhen used on Farm Plants:\n\Advances growing to its final stage and has 25% chance of turning farm plants into their Oversized form.\n\nThey are not cumulative and are replaced when another Booster is used on the same plant.\n\nBoosters are removed when the plant is dug."
+STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "The primary currency of the local pig men."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 40% chance of laying Eggs after eating. They have a small chance of laying a Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying a Large Egg."

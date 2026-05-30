@@ -1282,3 +1282,7 @@ WARLY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Tuyệt vời để trồng nguyên l
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Nguyên liệu khỏe mạnh tạo nên món ăn hảo hạng."
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều thu hoạch hơn đồng nghĩa với nhiều khả năng hơn."
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Loại phân bón trong mơ của mọi đầu bếp."
+
+WARLY.DESCRIBE.KYNO_PIGCOIN1 = "Tôi có thể mua nhiều nguyên liệu tươi với nó!"
+WARLY.DESCRIBE.KYNO_PIGCOIN2 = "À! Có thể mua thực phẩm..."
+WARLY.DESCRIBE.KYNO_PIGCOIN3 = "Có vẻ rất quan trọng."

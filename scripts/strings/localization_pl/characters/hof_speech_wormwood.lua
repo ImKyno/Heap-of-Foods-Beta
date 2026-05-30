@@ -1282,3 +1282,7 @@ WORMWOOD.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Uszczęśliwia Przyjaciół"
 WORMWOOD.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje Przyjaciół Zdrowych"
 WORMWOOD.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Przyjaciele Dają Więcej Prezentów"
 WORMWOOD.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Mnóstwo, Mnóstwo Wzrostu!"
+
+WORMWOOD.DESCRIBE.KYNO_PIGCOIN1 = "Dysk do wydawania"
+WORMWOOD.DESCRIBE.KYNO_PIGCOIN2 = "Ogoniasty krążek mówi \"Dobra robota!\""
+WORMWOOD.DESCRIBE.KYNO_PIGCOIN3 = "Duży, elegancki dysk do wydawania!"

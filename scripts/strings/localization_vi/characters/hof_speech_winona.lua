@@ -1282,3 +1282,7 @@ WINONA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một chất kích thích tăng trư
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ cây trồng hoạt động tốt."
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Sản lượng cao hơn. Không thể phàn nàn được."
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Đây đúng là nông nghiệp cấp công nghiệp."
+
+WINONA.DESCRIBE.KYNO_PIGCOIN1 = "Một đồng xu may mắn."
+WINONA.DESCRIBE.KYNO_PIGCOIN2 = "Cất lại để phòng khi cần."
+WINONA.DESCRIBE.KYNO_PIGCOIN3 = "Phải cẩn thận đừng thành kẻ giàu ngốc nghếch."

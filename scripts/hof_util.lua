@@ -460,6 +460,39 @@ function HasVeggieInInventoryFor(inst)
 	return inventory:FindItem(HasVeggieInInventoryFor_Checker) ~= nil
 end
 
+local SLEEPTARGETS_CANT_TAGS = { "soundproof", "playerghost", "FX", "DECOR", "INLIMBO" }
+local SLEEPTARGETS_ONEOF_TAGS = { "sleeper" }
+
+function DoAreaSleepFromFood(inst, knockout)
+	local range = TUNING.KYNO_ELDERMANDRAKE_SLEEP_RANGE - 5
+	local duration = TUNING.KYNO_ELDERMANDRAKE_SLEEP_DURATION - 5
+
+	local x, y, z = inst.Transform:GetWorldPosition()
+	local ents = TheSim:FindEntities(x, y, z, range, nil, SLEEPTARGETS_CANT_TAGS, SLEEPTARGETS_ONEOF_TAGS)
+
+	for i, v in ipairs(ents) do
+		if not (v.components.freezable ~= nil and v.components.freezable:IsFrozen())
+		and not (v.components.pinnable ~= nil and v.components.pinnable:IsStuck())
+		and not (v.components.fossilizable ~= nil and v.components.fossilizable:IsFossilized()) then
+			local mount = v.components.rider ~= nil and v.components.rider:GetMount() or nil
+
+			if mount ~= nil then
+				mount:PushEvent("ridersleep", { sleepiness = 7, sleeptime = duration })
+			end
+
+			if v:HasTag("player") then
+				v:PushEvent("yawn", { grogginess = 4, knockoutduration = duration })
+			elseif v.components.sleeper ~= nil then
+				v.components.sleeper:AddSleepiness(7, duration)
+			elseif v.components.grogginess ~= nil then
+				v.components.grogginess:AddGrogginess(4, duration)
+			else
+				v:PushEvent("knockedout")
+			end
+		end
+	end
+end
+
 function PlantBoosterBonusYield(inst, data)
 	if not inst._bonus_yield then
 		return

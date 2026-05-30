@@ -1274,7 +1274,7 @@ WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
 	GRUMPY = "O tempo lhe fará bem.",
 }
 
-WALTER.DESCRIBE.MANDRAKEBAOBUNS = "Perfeito para a trilha."
+WANDA.DESCRIBE.MANDRAKEBAOBUNS = "Um lanche rápido e gostoso."
 
 WANDA.DESCRIBE.MANDRAKEPIE = "Espero que isso não me atrase."
 
@@ -1282,3 +1282,7 @@ WANDA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Uma forma útil de economizar tempo."
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Plantas saudáveis são plantas eficientes."
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais produção pelo mesmo investimento."
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Excelente. Resultados mais rápidos."
+
+WANDA.DESCRIBE.KYNO_PIGCOIN1 = "A única coisa que pode controlar tudo."
+WANDA.DESCRIBE.KYNO_PIGCOIN2 = "Um lembrete de que tempo é dinheiro."
+WANDA.DESCRIBE.KYNO_PIGCOIN3 = "É a primeira vez que vejo tanto dinheiro."

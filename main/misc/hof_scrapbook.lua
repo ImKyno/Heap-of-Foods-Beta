@@ -50,22 +50,22 @@ ScrapbookData.green_cap.deps = {"green_cap_cooked", "kyno_green_cap_dried", "mea
 ScrapbookData.blue_cap.deps = {"blue_cap_cooked", "kyno_blue_cap_dried", "meatrack", "meatrack_hermit", "spoiled_food"}
 ScrapbookData.moon_cap.deps = {"moon_cap_cooked", "kyno_moon_cap_dried", "meatrack", "meatrack_hermit", "spoiled_food"}
 ScrapbookData.plantmeat.deps = {"plantmeat_cooked", "kyno_plantmeat_dried", "meatrack", "meatrack_hermit", "spoiled_food"}
-ScrapbookData.firenettles.animoffsety = -15
-ScrapbookData.firenettles.animoffsetbgx = -15
-ScrapbookData.firenettles.animoffsetbgy = -25
-ScrapbookData.firenettles_dried.scale = 2
-ScrapbookData.firenettles_dried.animoffsetx = 10
-ScrapbookData.firenettles_dried.animoffsety = -10
-ScrapbookData.firenettles_dried.animoffsetbgx = -20
-ScrapbookData.firenettles_dried.animoffsetbgy = 20
+-- ScrapbookData.firenettles.animoffsety = -15
+-- ScrapbookData.firenettles.animoffsetbgx = -15
+-- ScrapbookData.firenettles.animoffsetbgy = -25
+-- ScrapbookData.firenettles_dried.scale = 2
+-- ScrapbookData.firenettles_dried.animoffsetx = 10
+-- ScrapbookData.firenettles_dried.animoffsety = -10
+-- ScrapbookData.firenettles_dried.animoffsetbgx = -20
+-- ScrapbookData.firenettles_dried.animoffsetbgy = 20
 ScrapbookData.forgetmelots.anim = "idle2"
 ScrapbookData.forgetmelots.animoffsety = -10
 ScrapbookData.forgetmelots.animoffsetbgy = -20
 ScrapbookData.forgetmelots_dried.animoffsetbgx = -10
 ScrapbookData.forgetmelots_dried.animoffsetbgy = -20
-ScrapbookData.tillweed.animoffsetx = 30
-ScrapbookData.tillweed.animoffsety = 50
-ScrapbookData.tillweed.animoffsetbgy = -100
+-- ScrapbookData.tillweed.animoffsetx = 30
+-- ScrapbookData.tillweed.animoffsety = 50
+-- ScrapbookData.tillweed.animoffsetbgy = -100
 ScrapbookData.tillweed_dried.animoffsetx = -5
 ScrapbookData.tillweed_dried.animoffsetbgx = -15
 ScrapbookData.fishmeat_small_dried.specialinfo = "DRYAGAIN"
@@ -1774,6 +1774,50 @@ local HOF_SCRAPBOOK_ITEMS =
 		animoffsetbgx  = -25,
 		animoffsetbgy  = -60,
 		specialinfo    = "PLANTBOOSTER_SUPERGROWTH",
+	},
+
+	kyno_pigcoin1      =
+	{
+		name           = "kyno_pigcoin1",
+		type           = "item",
+		tex            = "kyno_pigcoin1.tex",
+		prefab         = "kyno_pigcoin1",
+		stacksize      = 60,
+		bank           = "kyno_pigcoin",
+		build          = "kyno_pigcoin",
+		overridesymbol = {"coin01", "kyno_pigcoin", "coin01"},
+		anim           = "idle",
+		specialinfo    = "PIGCOIN",
+	},
+
+	kyno_pigcoin2      =
+	{
+		name           = "kyno_pigcoin2",
+		type           = "item",
+		subcat         = "pigcoin",
+		tex            = "kyno_pigcoin2.tex",
+		prefab         = "kyno_pigcoin2",
+		stacksize      = 60,
+		bank           = "kyno_pigcoin",
+		build          = "kyno_pigcoin",
+		overridesymbol = {"coin01", "kyno_pigcoin", "coin02"},
+		anim           = "idle",
+		specialinfo    = "PIGCOIN",
+	},
+
+	kyno_pigcoin3      =
+	{
+		name           = "kyno_pigcoin3",
+		type           = "item",
+		subcat         = "pigcoin",
+		tex            = "kyno_pigcoin3.tex",
+		prefab         = "kyno_pigcoin3",
+		stacksize      = 60,
+		bank           = "kyno_pigcoin",
+		build          = "kyno_pigcoin",
+		overridesymbol = {"coin01", "kyno_pigcoin", "coin03"},
+		anim           = "idle",
+		specialinfo    = "PIGCOIN",
 	},
 }
 
@@ -10068,10 +10112,10 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		build          = "kyno_foodrecipes_cookpot1",
 		overridesymbol = {"swap_food", "kyno_foodrecipes_cookpot1", "chickenrotisserie"},
 		anim           = "chickenrotisserie",
-		deps           = preparedfood_deps,
 		animoffsetx    = 20,
 		animoffsety    = -10,
 		animoffsetbgy  = -15,
+		deps           = preparedfood_deps,
 		specialinfo    = "FOODEFFECTS_HUNGERRATE",
 	},
 
@@ -10092,11 +10136,35 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		build          = "kyno_foodrecipes_cookpot1",
 		overridesymbol = {"swap_food", "kyno_foodrecipes_cookpot1", "cavetubertea"},
 		anim           = "cavetubertea",
-		deps           = preparedfood_deps,
 		animoffsety    = 10,
 		animoffsetbgx  = -15,
 		animoffsetbgy  = -100,
+		deps           = preparedfood_deps,
 		specialinfo    = "FOODEFFECTS_GREENTHUMB2",
+	},
+
+	mandrakepie        =
+	{
+		name           = "mandrakepie",
+		type           = "food",
+		tex            = "mandrakepie.tex",
+		prefab         = "mandrakepie",
+		healthvalue    = 120,
+		hungervalue    = 175,
+		sanityvalue    = 25,
+		perishable     = 19200,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "kyno_foodrecipes",
+		build          = "kyno_foodrecipes_cookpot1",
+		overridesymbol = {"swap_food", "kyno_foodrecipes_cookpot1", "mandrakepie"},
+		anim           = "mandrakepie",
+		animoffsety    = 20,
+		animoffsetbgx  = -15,
+		animoffsetbgy  = -140,
+		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_SOOTHING",
 	},
 }
 
@@ -10660,6 +10728,30 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =
 		animoffsetbgy  = -90,
 		deps           = {"portablecookpot", "spoiled_food"},
 		specialinfo    = "FOODEFFECTS_TIRAMISU",
+	},
+
+	mandrakebaobuns    =
+	{
+		name           = "mandrakebaobuns",
+		type           = "food",
+		tex            = "mandrakebaobuns.tex",
+		prefab         = "mandrakebaobuns",
+		healthvalue    = 25,
+		hungervalue    = 175,
+		sanityvalue    = 120,
+		perishable     = 19200,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "kyno_foodrecipes",
+		build          = "kyno_foodrecipes_warly",
+		overridesymbol = {"swap_food", "kyno_foodrecipes_warly", "mandrakebaobuns"},
+		anim           = "mandrakebaobuns",
+		animoffsety    = 10,
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -75,
+		deps           = {"portablecookpot", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_HEALINGBONUS",
 	},
 }
 

@@ -1282,3 +1282,7 @@ WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um pequeno impulso para os amigos fo
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Mantém eles vivos e vibrantes."
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais presentes de cada arbusto. Hyuyu!"
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Que mistura mágica!"
+
+WORTOX.DESCRIBE.KYNO_PIGCOIN1 = "Moedinhas insignificantes."
+WORTOX.DESCRIBE.KYNO_PIGCOIN2 = "Não entendo por que mortais são tão obcecados com isso."
+WORTOX.DESCRIBE.KYNO_PIGCOIN3 = "É um grande token de salto."

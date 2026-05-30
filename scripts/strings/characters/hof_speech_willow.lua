@@ -1282,3 +1282,7 @@ WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Makes plants grow. Boring."
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps plants alive longer."
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "More stuff to burn later!"
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Plants grow fast. Fire grows faster."
+
+WILLOW.DESCRIBE.KYNO_PIGCOIN1 = "Wow. A coin. Pfft."
+WILLOW.DESCRIBE.KYNO_PIGCOIN2 = "I can probably buy something good with this."
+WILLOW.DESCRIBE.KYNO_PIGCOIN3 = "I'm rich!"

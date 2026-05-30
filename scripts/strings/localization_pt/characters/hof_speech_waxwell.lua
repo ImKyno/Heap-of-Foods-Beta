@@ -1282,3 +1282,7 @@ WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um atalho para jardineiros impacien
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Manter plantas vivas exige esforço, aparentemente."
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Pelo menos melhora os resultados."
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Uma fórmula incomumente eficaz."
+
+WAXWELL.DESCRIBE.KYNO_PIGCOIN1 = "Ora, ora, ora..."
+WAXWELL.DESCRIBE.KYNO_PIGCOIN2 = "Terei utilidade para isso."
+WAXWELL.DESCRIBE.KYNO_PIGCOIN3 = "Subindo na vida."

@@ -15,6 +15,7 @@ local kyno_foods_items =
 		stacksize = 2,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_JAWSBREAKER,
 		potlevel = "low",
+		pigcoinvalue = {7, 1, 1},
 		luckitem = { luck = TUNING.KYNO_LUCK_MEDLARGE },
 		tags = {"nospice", "itemshowcaser_valid"},
 		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"kyno_sugar", 1}, {"honey", 2}}},

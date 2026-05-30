@@ -1282,3 +1282,7 @@ WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Makes tiny plants grow big!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Strong food for strong plants!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "More harvest for mighty Wolfgang!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Plants become mighty fast!"
+
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN1 = "Pig trader would like."
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN2 = "Is valuable coin for buying good stuff."
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN3 = "Mighty coin!"

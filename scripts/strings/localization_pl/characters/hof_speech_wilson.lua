@@ -1282,3 +1282,7 @@ WILSON.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Wyprodukowany nawóz o właściwośc
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Pomaga utrzymać moje rośliny zdrowe i piękne!"
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Dzięki temu moje krzewy mogą dawać jeszcze więcej plonów!"
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "To powinno pomóc moim uprawom rosnąć lepiej."
+
+WILSON.DESCRIBE.KYNO_PIGCOIN1 = "Chciałbym czegoś więcej niż pensa za moje myśli."
+WILSON.DESCRIBE.KYNO_PIGCOIN2 = "Całkiem przyzwoita ilość monet."
+WILSON.DESCRIBE.KYNO_PIGCOIN3 = "Wygląda na cenne."

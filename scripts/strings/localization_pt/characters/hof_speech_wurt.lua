@@ -1284,3 +1284,7 @@ WURT.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Faz plantas crescerem, florp!"
 WURT.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Plantas saudáveis são plantas boas."
 WURT.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais comida para todo mundo, florp!"
 WURT.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "As plantas crescem super rápido!"
+
+WURT.DESCRIBE.KYNO_PIGCOIN1 = "Não dá pra comer isso, florp!"
+WURT.DESCRIBE.KYNO_PIGCOIN2 = "Ooooh, brilhante!"
+WURT.DESCRIBE.KYNO_PIGCOIN3 = "Parece bem chique."

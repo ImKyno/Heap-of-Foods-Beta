@@ -1282,3 +1282,7 @@ WINONA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A practical growth enhancer."
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps crops in working order."
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Higher output. Can't argue with that."
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "That's industrial-grade farming."
+
+WINONA.DESCRIBE.KYNO_PIGCOIN1 = "A lucky coin."
+WINONA.DESCRIBE.KYNO_PIGCOIN2 = "Save this for a rainy day."
+WINONA.DESCRIBE.KYNO_PIGCOIN3 = "Gotta watch I don't turn into a rich dope."

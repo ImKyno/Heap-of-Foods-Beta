@@ -1,6 +1,9 @@
-local _G          = GLOBAL
-local require     = _G.require
-local VanillaFood = require("preparedfoods")
+local _G               = GLOBAL
+local require          = _G.require
+local VanillaFood      = require("preparedfoods")
+local SpicedFood       = require("spicedfoods")
+local HofSpicedFood    = require("hof_spicedfoods")
+local PIG_COIN_ECONOMY = require("hof_pigcoineconomy")
 
 -- Some changes for the Vanilla foods.
 VanillaFood.bananapop.test = function(cooker, names, tags)
@@ -70,6 +73,10 @@ VanillaFood.unagi.test = function(cooker, names, tags)
 	and not (names.corn or names.corn_cooked or names.oceanfish_small_5_inv or names.oceanfish_medium_5_inv)
 end
 
+VanillaFood.mandrakesoup.test = function(cooker, names, tags)
+	return names.mandrake and not tags.flour
+end
+
 -- For Preservation Powder Spice.
 for k, v in pairs(VanillaFood) do
 	AddPrefabPostInit(v, function(inst, data)
@@ -82,3 +89,99 @@ for k, v in pairs(VanillaFood) do
 		end
 	end)
 end
+
+-- Pig King Coin Economy System.
+local PIG_COIN_VALUES       =
+{
+	butterflymuffin         = {2, 0, 0},
+	frogglebunwich          = {4, 0, 0}, 
+	taffy                   = {4, 0, 0},
+	pumpkincookie           = {5, 0, 0},
+	stuffedeggplant         = {5, 0, 0},
+	fishsticks              = {4, 0, 0},
+	honeynuggets            = {3, 0, 0},
+	honeyham                = {7, 0, 0},
+	dragonpie               = {7, 1, 0},
+	kabobs                  = {4, 0, 0},
+	mandrakesoup            = {10, 5, 1},
+	baconeggs               = {6, 0, 0},
+	meatballs               = {4, 0, 0},
+	bonestew                = {7, 0, 0},
+	perogies                = {6, 1, 0},
+	turkeydinner            = {5, 0, 0},
+	ratatouille             = {3, 0, 0},
+	jammypreserves          = {2, 0, 0},
+	fruitmedley             = {4, 1, 0},
+	fishtacos               = {5, 0, 0},
+	waffles                 = {3, 1, 1},
+	monsterlasagna          = {2, 0, 0},
+	powcake                 = {1, 2, 0},
+	unagi                   = {2, 1, 0},
+	flowersalad             = {3, 2, 0},
+	icecream                = {5, 1, 0},
+	watermelonicle          = {3, 1, 0},
+	trailmix                = {3, 0, 0},
+	hotchili                = {5, 0, 0},
+	guacamole               = {5, 1, 0},
+	jellybean               = {6, 3, 1},
+	potatotornado           = {5, 0, 0},
+	mashedpotatoes          = {5, 0, 0},
+	asparagussoup           = {4, 0, 0},
+	vegstinger              = {4, 0, 0},
+	bananapop               = {4, 0, 0},
+	frozenbananadaiquiri    = {6, 0, 0},
+	bananajuice             = {4, 0, 0},
+	ceviche                 = {5, 1, 0},
+	salsa                   = {4, 1, 0},
+	pepperpopper            = {4, 0, 0},
+	californiaroll          = {6, 1, 0},
+	seafoodgumbo            = {3, 2, 0},
+	surfnturf               = {5, 3, 0},
+	lobsterbisque           = {6, 1, 0},
+	lobsterdinner           = {6, 1, 0},
+	barnaclepita            = {5, 0, 1},
+	barnaclesushi           = {5, 0, 1},
+	barnaclinguine          = {7, 0, 1},
+	barnaclestuffedfishhead = {7, 0, 1},
+	leafloaf                = {5, 0, 0},
+	leafymeatburger         = {6, 0, 0},
+	leafymeatsouffle        = {6, 0, 0},
+	meatysalad              = {5, 0, 0},
+	shroomcake              = {0, 1, 0},
+	sweettea                = {0, 3, 0},
+	koalefig_trunk          = {2, 2, 1},
+	figatoni                = {6, 2, 0},
+	figkabab                = {4, 0, 0},
+	frognewton              = {4, 1, 0},
+	bunnystew               = {3, 0, 0},
+	justeggs                = {2, 0, 0},
+	veggieomlet             = {3, 0, 0},
+	talleggs                = {8, 0, 0},
+	shroombait              = {5, 0, 0},
+}
+
+for prefab, value in pairs(PIG_COIN_VALUES) do
+	if VanillaFood[prefab] ~= nil then
+		VanillaFood[prefab].pigcoinvalue = value
+	end
+end
+
+for prefab, data in pairs(SpicedFood) do
+	local value = data.basename and PIG_COIN_VALUES[data.basename]
+
+	if value ~= nil then
+		data.pigcoinvalue = value
+	end
+end
+
+for prefab, data in pairs(HofSpicedFood) do
+	local value = data.basename and PIG_COIN_VALUES[data.basename]
+
+	if value ~= nil then
+		data.pigcoinvalue = value
+	end
+end
+
+PIG_COIN_ECONOMY.RegisterRecipes(VanillaFood)
+PIG_COIN_ECONOMY.RegisterRecipes(SpicedFood)
+PIG_COIN_ECONOMY.RegisterRecipes(HofSpicedFood)

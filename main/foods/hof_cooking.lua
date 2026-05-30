@@ -1,7 +1,8 @@
-local _G           = GLOBAL
-local require      = _G.require
-local cooking      = require("cooking")
-local CookbookData = require("cookbookdata")
+local _G               = GLOBAL
+local require          = _G.require
+local cooking          = require("cooking")
+local CookbookData     = require("cookbookdata")
+local PIG_COIN_ECONOMY = require("hof_pigcoineconomy")
 
 require("hof_constants")
 require("craftpot/ingredienttags")
@@ -252,6 +253,20 @@ for _, recipe in pairs(common_recipes)   do if recipe.card_def then table.insert
 for _, recipe in pairs(seasonal_recipes) do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, cooker_name = "cookpot"}) end end
 for _, recipe in pairs(item_recipes)     do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, cooker_name = "cookpot"}) end end
 for _, recipe in pairs(warly_recipes)    do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, cooker_name = "portablecookpot"}) end end
+
+-- Pig King Coin Economy System.
+local all_recipes =
+{
+	common_recipes,
+	seasonal_recipes,
+	warly_recipes,
+	item_recipes,
+	spiced_recipes,
+}
+
+for _, recipes in pairs(all_recipes) do
+	PIG_COIN_ECONOMY.RegisterRecipes(recipes)
+end
 
 -- Inject Warly recipes in Chef's Specials page instead of Mod Recipes page in the Cookbook.
 -- I'm not sure if this can lead to problems in the future, will leave it on for now.

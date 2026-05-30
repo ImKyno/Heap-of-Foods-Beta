@@ -1282,3 +1282,7 @@ WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że małe roślinki staj�
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Silne jedzenie dla silnych roślin!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej zbiorów dla potężnego Wolfganga!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Rośliny stają się potężne bardzo szybko!"
+
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN1 = "Świni handlarz by chciał."
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN2 = "Cenna moneta do kupowania dobrych rzeczy."
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN3 = "Potężna moneta!"

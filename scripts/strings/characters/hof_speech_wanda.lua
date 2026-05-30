@@ -1282,3 +1282,7 @@ WANDA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A useful way to save time."
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Healthy plants are efficient plants."
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "More output for the same investment."
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Excellent. Faster results."
+
+WANDA.DESCRIBE.KYNO_PIGCOIN1 = "The one thing that can control everything."
+WANDA.DESCRIBE.KYNO_PIGCOIN2 = "A reminder that time is money."
+WANDA.DESCRIBE.KYNO_PIGCOIN3 = "This is the first time I've seen so much money."

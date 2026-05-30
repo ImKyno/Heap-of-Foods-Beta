@@ -1282,3 +1282,7 @@ WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một chút trợ giúp cho những 
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ chúng tràn đầy sức sống và tươi sáng."
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều quà hơn từ mỗi bụi cây. Hyuyu!"
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Đúng là một hỗn hợp kỳ diệu!"
+
+WORTOX.DESCRIBE.KYNO_PIGCOIN1 = "Những đồng tiền nhỏ bé."
+WORTOX.DESCRIBE.KYNO_PIGCOIN2 = "Không hiểu vì sao phàm nhân lại ám ảnh với nó."
+WORTOX.DESCRIBE.KYNO_PIGCOIN3 = "Một đồng xu nhảy lớn."

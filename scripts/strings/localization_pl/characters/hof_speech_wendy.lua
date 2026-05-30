@@ -1282,3 +1282,7 @@ WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Tymczasowy dar dla skazanych roślin.
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Daremna próba zachowania życia."
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej obfitości przed nieuniknionym rozkładem."
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Życie przyspieszone ku swemu końcowi."
+
+WENDY.DESCRIBE.KYNO_PIGCOIN1 = "Położyłabym je na oczach, gdy umrę."
+WENDY.DESCRIBE.KYNO_PIGCOIN2 = "Pieniądze nie przywrócą Abigail."
+WENDY.DESCRIBE.KYNO_PIGCOIN3 = "Bogactwo nie kupi nieśmiertelności."

@@ -1282,3 +1282,7 @@ WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że rośliny rosną szybcie
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje je zdrowe i szczęśliwe."
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej plonów z tego samego poletka."
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "To naprawdę mocny środek."
+
+WOODIE.DESCRIBE.KYNO_PIGCOIN1 = "Kupię coś fajnego dla Lucy."
+WOODIE.DESCRIBE.KYNO_PIGCOIN2 = "Mogę za to kupić sporo rzeczy."
+WOODIE.DESCRIBE.KYNO_PIGCOIN3 = "To nie dolar, ale chyba się tu nada."

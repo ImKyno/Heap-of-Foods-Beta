@@ -298,10 +298,10 @@ local function OnSetStump(inst, push_anim)
 
 	inst:AddTag("stump")
 
-	inst:AddComponent("workable")
-	inst.components.workable:SetWorkAction(ACTIONS.DIG)
-	inst.components.workable:SetOnFinishCallback(OnDigUp)
-	inst.components.workable:SetWorkLeft(1)
+	-- inst:AddComponent("workable")
+	-- inst.components.workable:SetWorkAction(ACTIONS.DIG)
+	-- inst.components.workable:SetOnFinishCallback(OnDigUp)
+	-- inst.components.workable:SetWorkLeft(1)
 
 	inst:DoTaskInTime(TUNING.KYNO_CAVETUBERTREE_GROWTIME, OnRegen)
 end

@@ -1282,3 +1282,7 @@ WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Làm cây lớn lên. Chán ngắt."
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giúp cây sống lâu hơn."
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều thứ hơn để đốt sau này!"
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Cây lớn nhanh. Lửa còn nhanh hơn."
+
+WILLOW.DESCRIBE.KYNO_PIGCOIN1 = "Ồ. Một đồng xu. Hừ."
+WILLOW.DESCRIBE.KYNO_PIGCOIN2 = "Có lẽ tôi có thể mua được thứ gì đó tốt với nó."
+WILLOW.DESCRIBE.KYNO_PIGCOIN3 = "Tôi giàu rồi!"

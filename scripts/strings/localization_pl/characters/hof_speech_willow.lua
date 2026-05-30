@@ -1282,3 +1282,7 @@ WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że rośliny rosną. Nuda."
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje rośliny przy życiu dłużej."
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej rzeczy do spalenia później!"
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Rośliny rosną szybko. Ogień rośnie szybciej."
+
+WILLOW.DESCRIBE.KYNO_PIGCOIN1 = "O. Moneta. Phi."
+WILLOW.DESCRIBE.KYNO_PIGCOIN2 = "Pewnie mogę za to kupić coś dobrego."
+WILLOW.DESCRIBE.KYNO_PIGCOIN3 = "Jestem bogata!"

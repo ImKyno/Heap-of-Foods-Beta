@@ -1282,3 +1282,7 @@ WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Giúp cây lớn nhanh hơn, hả?"
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ chúng khỏe mạnh và vui vẻ."
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Nhiều thu hoạch hơn từ cùng một mảnh đất."
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Thứ này mạnh thật đấy."
+
+WOODIE.DESCRIBE.KYNO_PIGCOIN1 = "Tôi sẽ mua gì đó cho Lucy."
+WOODIE.DESCRIBE.KYNO_PIGCOIN2 = "Tôi có thể mua nhiều thứ với cái này."
+WOODIE.DESCRIBE.KYNO_PIGCOIN3 = "Không phải đô la nhưng chắc cũng dùng được ở đây."

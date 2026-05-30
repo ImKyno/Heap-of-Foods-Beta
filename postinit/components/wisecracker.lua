@@ -100,12 +100,6 @@ local function DailyRecipeEaten(inst, data)
 	end
 end
 
-local function ApplyBoosterFail(inst, data)
-	if inst.components.talker ~= nil then
-		inst.components.talker:Say(_G.GetString(inst, "ANNOUNCE_KYNO_APPLYBOOSTER_FAIL"))
-	end
-end
-
 AddComponentPostInit("wisecracker", function(self)
 	self.inst:ListenForEvent("firepitinstallfail",       FirepitInstallFail)
 	self.inst:ListenForEvent("cookwareinstallfail",      CookwareInstallFail)
@@ -123,5 +117,4 @@ AddComponentPostInit("wisecracker", function(self)
 	self.inst:ListenForEvent("fishregistryresearchfish", FishRegistryFishResearched)
 	self.inst:ListenForEvent("fishregistryresearchroe",  FishRegistryRoeResearched)
 	self.inst:ListenForEvent("dailyrecipeeaten",         DailyRecipeEaten)
-	self.inst:ListenForEvent("applyboosterfail",         ApplyBoosterFail)
 end)

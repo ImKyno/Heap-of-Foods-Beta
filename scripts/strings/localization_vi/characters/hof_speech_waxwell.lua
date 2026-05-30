@@ -1282,3 +1282,7 @@ WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một lối tắt cho những ngư�
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ cây sống hóa ra cũng cần nỗ lực."
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Ít nhất nó cải thiện kết quả."
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Một công thức hiệu quả bất thường."
+
+WAXWELL.DESCRIBE.KYNO_PIGCOIN1 = "Ồ, ồ, ồ..."
+WAXWELL.DESCRIBE.KYNO_PIGCOIN2 = "Tôi sẽ dùng được nó."
+WAXWELL.DESCRIBE.KYNO_PIGCOIN3 = "Một bước tiến trong đời tôi."

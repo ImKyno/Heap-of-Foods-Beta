@@ -1282,3 +1282,7 @@ WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um presente temporário para plantas 
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Uma tentativa inútil de preservar a vida."
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais abundância antes da inevitável decadência."
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "A vida acelerada rumo ao seu fim."
+
+WENDY.DESCRIBE.KYNO_PIGCOIN1 = "Eu as colocaria nos meus olhos quando eu morrer."
+WENDY.DESCRIBE.KYNO_PIGCOIN2 = "Dinheiro não trará Abigail de volta."
+WENDY.DESCRIBE.KYNO_PIGCOIN3 = "A riqueza não pode comprar imortalidade."
