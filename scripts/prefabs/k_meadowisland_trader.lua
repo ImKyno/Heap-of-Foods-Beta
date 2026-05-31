@@ -177,7 +177,7 @@ local function OnTurnOff(inst)
 end
 
 local function OnActivate(inst)
-	local no_stock = not inst:HasStock()
+	local no_stock = not inst:HasStock() and not inst:CanTrade()
 	
 	if no_stock then
 		inst:EnablePrototyper(false)
@@ -261,8 +261,8 @@ local function RerollWares(inst)
 		inst:AddWares(inst.WARES.SPECIAL["islunarhailing"])
 	end
 	
-	inst:EnablePrototyper(inst:HasTag("revealed"))
 	-- inst:EnablePrototyper(inst:HasStock())
+	inst:EnablePrototyper(inst:HasTag("revealed") and inst:CanTrade())
 end
 
 local function OnTimerDone(inst, data)
@@ -377,7 +377,8 @@ end
 local function SetRevealed(inst, revealed)
 	if revealed then
 		inst:AddTag("revealed")
-		inst:EnablePrototyper(inst:HasStock())
+		-- inst:EnablePrototyper(inst:HasStock())
+		inst:EnablePrototyper(inst:HasStock() and inst:CanTrade())
 	else
 		inst:RemoveTag("revealed")
 		inst:EnablePrototyper(false)
@@ -406,6 +407,14 @@ local function OnEntitySleep(inst)
 	end
 end
 
+local function IsBusinessHours(inst)
+	return not TheWorld.state.isday
+end
+
+local function CanTrade(inst)
+	return IsBusinessHours(inst) and inst:HasStock()
+end
+
 local function ShouldAcceptItem(inst, item)
     if item.components.inventoryitem ~= nil and item:HasAnyTag("sammyfood", "anniversaryfood") and not inst:HasTag("hatless") then
         return true
@@ -418,7 +427,7 @@ end
 
 -- Sammy gives his hat to the player when gifted.
 local function OnGetItemFromPlayer(inst, giver, item)
-	local no_stock = not inst:HasStock()
+	local no_stock = not inst:HasStock() and not inst:CanTrade()
 	local hat = SpawnPrefab(GetHatPrefab(inst))
 	
 	if hat ~= nil then
@@ -507,6 +516,7 @@ local function fn()
 	inst.SetIsFullMoon = SetIsFullMoon
 	inst.SetRevealed = SetRevealed
 	inst.SetHatless = SetHatless
+	inst.CanTrade = CanTrade
 	
 	inst:AddComponent("craftingstation")
 	inst:AddComponent("knownlocations")

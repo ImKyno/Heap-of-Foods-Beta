@@ -262,13 +262,17 @@ local function OnEntitySleep(inst)
 	end
 end
 
+local function IsBusinessHours(inst)
+	return TheWorld.state.isday or inst:AllNightTest()
+end
+
 local function IsHouseRepaired(inst)
 	local home = inst.components.homeseeker ~= nil and inst.components.homeseeker.home or nil
 	return home ~= nil and home:IsValid() and home.HouseRepaired
 end
 
 local function CanTrade(inst)
-	return IsHouseRepaired(inst) and inst:HasStock()
+	return IsBusinessHours(inst) and IsHouseRepaired(inst) and inst:HasStock()
 end
 
 local function IsNearMerm(inst)

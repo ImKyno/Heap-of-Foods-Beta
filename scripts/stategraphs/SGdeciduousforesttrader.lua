@@ -68,7 +68,7 @@ local states =
 				return
 			end
 
-			if inst.sg.mem.trading then
+			if inst.sg.mem.trading and inst:CanTrade() then
 				inst.sg:GoToState("trading_start")
 				return
 			end
@@ -130,7 +130,7 @@ local states =
 		{
 			EventHandler("animover", function(inst)
 				if inst.AnimState:IsCurrentAnimation("trade_start") then
-					if inst.sg.mem.trading then
+					if inst.sg.mem.trading and inst:CanTrade() then
 						inst.AnimState:PlayAnimation("trade_pre")
 					else
 						inst.AnimState:PlayAnimation("idle_loop")
@@ -138,7 +138,7 @@ local states =
 				elseif inst.AnimState:IsCurrentAnimation("trade_pre") then
 					inst.sg.statemem.keeprevealed = true
 
-					if inst.sg.mem.trading then
+					if inst.sg.mem.trading and inst:CanTrade() then
 						inst.sg:GoToState("trading")
 					else
 						inst.sg:GoToState("trading_stop")
@@ -185,8 +185,8 @@ local states =
 			EventHandler("animover", function(inst)
 				inst.sg.statemem.keeprevealed = true
 
-				if inst.sg.mem.trading then
-					inst.sg:GoToState("trading", {repeating = true,})
+				if inst.sg.mem.trading and inst:CanTrade() then
+					inst.sg:GoToState("trading", { repeating = true })
 				else
 					inst.sg:GoToState("trading_stop")
 				end
@@ -224,14 +224,14 @@ local states =
 		{
 			EventHandler("animover", function(inst)
 				if inst.AnimState:IsCurrentAnimation("trade_pst") then
-					if inst.sg.mem.trading then
+					if inst.sg.mem.trading and inst:CanTrade() then
 						inst.AnimState:PlayAnimation("trade_pre")
 					else
 						inst.AnimState:PlayAnimation("idle_loop")
 					end
 				elseif inst.AnimState:IsCurrentAnimation("trade_pre") then
 					inst.sg.statemem.keeprevealed = true
-					if inst.sg.mem.trading then
+					if inst.sg.mem.trading and inst:CanTrade() then
 						inst.sg:GoToState("trading")
 					else
 						inst.sg:GoToState("trading_stop")
