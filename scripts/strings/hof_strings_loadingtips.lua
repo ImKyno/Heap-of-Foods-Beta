@@ -124,6 +124,18 @@ local LOADINGTIPS   =
 	WEBSITE         = "Did you know Heap of Foods has an official Website? Well, now you do. Learn how to cook every recipe at: https://heap-of-foods.com",
 	DAILYRECIPES1   = "Daily Recipes are featured dishes selected everyday from the recipe pool. All players share the same recipe regardless of the world. Each day, one recipe will be randomly selected. Eating the daily recipe grants bonus Health, Hunger and Sanity, alongside the dish’s original stats. It also increases Luck for a certain period.",
 	DAILYRECIPES2   = "You can check the current Daily Recipe by building a Daily Recipe Board or through the Mod's official Website.",
+	CAVETUBERTREE1  = "Cave Tuber Trees are sturdy and won't go down so easily. Bring your best axe to chop them down!",
+	CAVETUBERTREE2  = "During the Spring Cave Tuber Trees will start blooming, producing another kind of Cave Tuber.",
+	ELDERMANDRAKE1  = "Elder Mandrakes when killed will put every creature around them to sleep for some seconds.",
+	ELDERMANDRAKE2  = "Beware! Elder Mandrakes don't like when you carry vegetables or its kind near them.",
+	ELDERMANDRAKE3  = "\"I heard that yesterday someone found weird looking leafy houses down in the caves near the mushroom forest, I wonder who is living in there...\" -W",
+	EARMUFFSHAT     = "Rabbit Earmuffs now offers protection against loud noises!",
+	PIGCOIN1        = "Prepared Foods can be traded to Pig King in exchange for Koins. Each food has its own value, rare and better food are worth more than common dishes.",
+	PIGCOIN2        = "The Pig King is hungry and demands food! He's offering Koins (His brand new attempt on currency or so his followers said.) in exchange for some delicious meals.",
+	PIGCOIN3        = "\"Looks like that stupid pig is looking for food in exchange for some pennies. Maybe I can make a bank off him!\" -W",
+	PARTITIO1       = "Partitio is a proud pig living in the Deciduous Forest. He only sells high quality stuff and is looking forward to meet new costumers.",
+	PARTITIO2       = "After some unfortunate past events, Partitio now refuses to do any business with the Mermfolk ever again!",
+	PARTITIO3       = "Partitio found out someone had broken his house and now he needs help to rebuild it back to its former glory in order to start doing business again.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

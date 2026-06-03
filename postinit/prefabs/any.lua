@@ -95,6 +95,12 @@ local function ApplyBoosterFarmPlantPostInit(inst)
 			if data ~= nil then
 				if data.bonus_yield ~= nil then
 					inst._bonus_yield = data.bonus_yield
+
+					if inst._bonus_yield then
+						inst:AddTag("plantboosted_yield")
+					else
+						inst:RemoveTag("plantboosted_yield")
+					end
 				end
 
 				if data.lunarthrall_protected ~= nil then

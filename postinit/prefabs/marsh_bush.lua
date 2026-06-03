@@ -34,6 +34,12 @@ local function MarshBushPostInit(inst)
 		if data ~= nil then
 			if data.bonus_yield ~= nil then
 				inst._bonus_yield = data.bonus_yield
+
+				if inst._bonus_yield then
+					inst:AddTag("plantboosted_yield")
+				else
+					inst:RemoveTag("plantboosted_yield")
+				end
 			end
 
 			if data.original_transplanted ~= nil then
@@ -43,8 +49,14 @@ local function MarshBushPostInit(inst)
 			if data.vitality_active ~= nil then
 				inst._vitality_active = data.vitality_active
 
-				if inst._vitality_active and inst.components.pickable ~= nil then
-					inst.components.pickable.transplanted = false
+				if inst._vitality_active then
+					inst:AddTag("plantboosted_vitality")
+
+					if inst.components.pickable ~= nil then
+						inst.components.pickable.transplanted = false
+					end
+				else
+					inst:RemoveTag("plantboosted_vitality")
 				end
 			end
 		end

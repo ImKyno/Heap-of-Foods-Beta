@@ -39,7 +39,7 @@ The Deciduous Forest is now home for a new face! Meet Partitio, the Pig Merchant
 
 Partitio is looking forward to meet new costumers, even if they are monsters and will tolerate them. But after some unfortunate past events, he now refuses to do any business with the Mermfolk!
 
-󰀌 Beta Branch Version: 1.7-B
+󰀌 Beta Branch Version: 1.8-B
 󰀧 Update: Branches & Business
 ]],
 		zh  =
@@ -54,7 +54,7 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 
 帕提提欧 期待结识新的顾客，即使他们是怪物，他也会包容他们。但在一些不幸的过往事件之后，他现在拒绝与鱼人族（Mermfolk）进行任何交易！
 
-󰀌 测试分支版本： 1.7-B
+󰀌 测试分支版本： 1.8-B
 󰀧 更新：分支与商业
 ]],	
 		zht =
@@ -69,7 +69,7 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 
 帕提提欧 期待結識新的顧客，即使他們是怪物，他也會包容他們。但在一些不幸的過往事件之後，他現在拒絕與魚人族（Mermfolk）進行任何交易！
 
-󰀌 測試分支版本： 1.7-B
+󰀌 測試分支版本： 1.8-B
 󰀧 更新：分支與商業
 ]],	
 		pt  = 
@@ -82,9 +82,9 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 󰀏 Apresentando a beta Galhos e Negócios:
 A Floresta Decídua agora abriga um novo rosto! Conheça Partitio, o Comerciante Porco. Como um porco orgulhoso, ele só vende itens de alta qualidade.
 
-Partitio está ansioso para conhecer novos clientes, mesmo que sejam monstros, e irá tolerá-los. Mas, após alguns eventos infelizes do passado, ele agora se recusa a fazer qualquer negócio com os Mermfolk!
+Partitio está ansioso para conhecer novos clientes, mesmo que sejam monstros, e irá tolerá-los. Mas, após alguns eventos infelizes do passado, ele agora se recusa a fazer qualquer negócio com Povo-peixe!
 
-󰀌 Versão da Beta: 1.7-B
+󰀌 Versão da Beta: 1.8-B
 󰀧 Atualização: Galhos e Negócios
 ]],
 		pl  =
@@ -99,7 +99,7 @@ Las liściasty ma teraz nową twarz! Poznaj Partitio, Świńskiego Handlarza. Ja
 
 Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli są potworami i będzie ich tolerował. Jednak po kilku niefortunnych wydarzeniach z przeszłości, obecnie odmawia prowadzenia interesów z Mermfolk!
 
-󰀌 Wersja gałęzi beta: 1.7-B
+󰀌 Wersja gałęzi beta: 1.8-B
 󰀧 Aktualizacja: Oddziały i biznes
 ]],
 		es  =
@@ -114,7 +114,7 @@ Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli 
 
 Partitio espera conocer nuevos clientes, incluso si son monstruos, y los tolerará. Pero tras algunos desafortunados eventos del pasado, ahora se niega a hacer negocios con los Mermfolk.
 
-󰀌 Versión de rama beta: 1.7-B
+󰀌 Versión de rama beta: 1.8-B
 󰀧 Actualización: Sucursales y negocios
 ]],
 		vi  =
@@ -129,7 +129,7 @@ Rừng rụng lá giờ đây có một gương mặt mới! Hãy gặp Partitio
 
 Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ là quái vật và sẽ chấp nhận họ. Nhưng sau một số sự kiện không may trong quá khứ, anh ta hiện từ chối kinh doanh với Mermfolk!
 
-󰀌 Phiên bản nhánh beta: 1.7-B
+󰀌 Phiên bản nhánh beta: 1.8-B
 󰀧 Cập nhật: Chi nhánh và doanh nghiệp
 ]],
 	},
@@ -1547,7 +1547,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME_BETA)
-version                      = "1.7-B"
+version                      = "1.8-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 

@@ -1152,6 +1152,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {15, 0, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"partitiofood"},
 		card_def = {ingredients = {{"meat", 2}, {"kyno_aloe", 1}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -3647,6 +3648,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {10, 3, 1},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"mandrake"},
 		card_def = {ingredients = {{"mandrake", 1}, {"kyno_flour", 1}, {"meat", 2}}},
 		oneatenfn = function(inst, eater)
 			if eater.SoundEmitter ~= nil then

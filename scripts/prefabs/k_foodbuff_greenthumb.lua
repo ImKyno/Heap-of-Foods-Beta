@@ -40,7 +40,8 @@ end
 
 local function IsValidPlant(target)
 	return target ~= nil and target:HasAnyTag("plant", "tree", "greenthumb_valid")
-	and not table.contains(TUNING.KYNO_GREENTHUMBUFF_BLOCKED_PREFABS, target.prefab)
+	and not table.contains(TUNING.KYNO_GREENTHUMBBUFF_BLOCKED_PREFABS, target.prefab) -- Blocked prefabs.
+	and not target.is_oversized -- Blocks Oversized crops.
 end
 
 local function OnPickSomething(inst, data)

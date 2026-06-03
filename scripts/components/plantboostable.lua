@@ -75,6 +75,10 @@ local function CanBeTransplanted(inst)
 end
 
 local function ClearBoosterEffects(inst)
+	if inst._bonus_yield then
+		inst:RemoveTag("plantboosted_yield")
+	end
+
 	inst._bonus_yield = false
 	
 	if inst.SetLunarThrallProtection ~= nil then
@@ -83,8 +87,12 @@ local function ClearBoosterEffects(inst)
 		inst._lunarthrall_protected = false
 	end
 
-	if inst._vitality_active and inst.components.pickable ~= nil and inst._supports_transplanting then
-		inst.components.pickable.transplanted = inst._original_transplanted or false
+	if inst._vitality_active then
+		inst:RemoveTag("plantboosted_vitality")
+
+		if inst.components.pickable ~= nil and inst._supports_transplanting then
+			inst.components.pickable.transplanted = inst._original_transplanted or false
+		end
 	end
 
 	inst._vitality_active = false
@@ -276,6 +284,7 @@ local function GrowFarmPlant(inst, data)
 
 	if data.bonus_yield and not inst.is_oversized then
 		inst._bonus_yield = true
+		inst:AddTag("plantboosted_yield")
 	end
 
 	if grew then
@@ -341,6 +350,7 @@ local function GrowGeneric(inst, data)
 		end
 		
 		inst._vitality_active = true
+		inst:AddTag("plantboosted_vitality")
 
 		if inst._supports_transplanting then
 			inst.components.pickable.transplanted = false
@@ -377,6 +387,7 @@ local function GrowGeneric(inst, data)
 		if success then
 			if data.bonus_yield then
 				inst._bonus_yield = true
+				inst:AddTag("plantboosted_yield")
 			end
 
 			SpawnGrowFX(inst)

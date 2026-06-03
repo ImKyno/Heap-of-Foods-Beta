@@ -551,7 +551,7 @@ local kyno_warly_foods =
 		overridebuild = "kyno_foodrecipes_warly",
 		pigcoinvalue = {15, 5, 1},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"masterfood"},
+		tags = {"masterfood", "mandrake"},
 		card_def = {ingredients = {{"mandrake", 1}, {"kyno_flour", 1}, {"kyno_cavetuber_blooming", 1}, {"meat", 1}}},
 		prefabs = { "kyno_healingbuff" },
 		oneatenfn = function(inst, eater)
