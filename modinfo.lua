@@ -34,12 +34,12 @@ local STRINGS =
 󰀠 Also features brand-new Biomes somewhere in the Ocean!
 󰀦 Learn how to cook every recipe at: https://heap-of-foods.com
 
-󰀏 Featuring the Branches & Business Beta:
+󰀏 Featuring the Branches & Business Update:
 The Deciduous Forest is now home for a new face! Meet Partitio, the Pig Merchant. As a proud pig, he only sells high quality stuff. 
 
 Partitio is looking forward to meet new costumers, even if they are monsters and will tolerate them. But after some unfortunate past events, he now refuses to do any business with the Mermfolk!
 
-󰀌 Beta Branch Version: 1.8-B
+󰀌 Mod Version: 5.3-B
 󰀧 Update: Branches & Business
 ]],
 		zh  =
@@ -49,13 +49,13 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 󰀠 还新增了海洋中的全新生物群系！
 󰀦 学习如何制作所有食谱：https://heap-of-foods.com
 
-󰀏 特色分支与商业测试版：
+󰀏 重点内容包括分支机构及业务最新动态：
 落叶林如今迎来了一位新面孔！欢迎 帕提提欧，猪商人。作为一只自豪的猪，他只出售高品质的商品。
 
 帕提提欧 期待结识新的顾客，即使他们是怪物，他也会包容他们。但在一些不幸的过往事件之后，他现在拒绝与鱼人族（Mermfolk）进行任何交易！
 
-󰀌 测试分支版本： 1.8-B
-󰀧 更新：分支与商业
+󰀌 Mod 版本： 5.3-B
+󰀧 更新内容：分支机构及业务
 ]],	
 		zht =
 [[
@@ -64,13 +64,13 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 󰀠 還新增了海洋中的全新生物群系！
 󰀦 學習如何製作所有食譜：https://heap-of-foods.com
 
-󰀏 特色分支與商業測試版：
+󰀏 重點內容包括分公司及業務最新動態：
 落葉林如今迎來了一位新面孔！歡迎 帕提提欧，豬商人。作為一隻自豪的豬，他只販售高品質的商品。
 
 帕提提欧 期待結識新的顧客，即使他們是怪物，他也會包容他們。但在一些不幸的過往事件之後，他現在拒絕與魚人族（Mermfolk）進行任何交易！
 
-󰀌 測試分支版本： 1.8-B
-󰀧 更新：分支與商業
+󰀌 Mod 版本： 5.3-B
+󰀧 更新內容： 分公司及業務
 ]],	
 		pt  = 
 [[
@@ -79,12 +79,12 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 󰀠 Também acrescenta novos biomas em algum lugar do alto mar!
 󰀦 Aprenda a cozinhar todas as receitas em: https://heap-of-foods.com
 
-󰀏 Apresentando a beta Galhos e Negócios:
+󰀏 Apresentando a Atualização Galhos e Negócios:
 A Floresta Decídua agora abriga um novo rosto! Conheça Partitio, o Comerciante Porco. Como um porco orgulhoso, ele só vende itens de alta qualidade.
 
 Partitio está ansioso para conhecer novos clientes, mesmo que sejam monstros, e irá tolerá-los. Mas, após alguns eventos infelizes do passado, ele agora se recusa a fazer qualquer negócio com Povo-peixe!
 
-󰀌 Versão da Beta: 1.8-B
+󰀌 Versão do Mod: 5.3-B
 󰀧 Atualização: Galhos e Negócios
 ]],
 		pl  =
@@ -94,12 +94,12 @@ Partitio está ansioso para conhecer novos clientes, mesmo que sejam monstros, e
 󰀠 Zawiera również zupełnie nowe biomasy gdzieś na Oceanie!
 󰀦 Naucz się gotować wszystkie przepisy na: https://heap-of-foods.com
 
-󰀏 Przedstawiamy betę Oddziały i biznes:
+󰀏 Przedstawiamy aktualizację Oddziały i biznes:
 Las liściasty ma teraz nową twarz! Poznaj Partitio, Świńskiego Handlarza. Jako dumny świnia sprzedaje tylko towary wysokiej jakości.
 
 Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli są potworami i będzie ich tolerował. Jednak po kilku niefortunnych wydarzeniach z przeszłości, obecnie odmawia prowadzenia interesów z Mermfolk!
 
-󰀌 Wersja gałęzi beta: 1.8-B
+󰀌 Wersja Moda: 5.3-B
 󰀧 Aktualizacja: Oddziały i biznes
 ]],
 		es  =
@@ -109,13 +109,13 @@ Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli 
 󰀠 ¡También incluye nuevos biomas en algún lugar del mar abierto!
 󰀦 Aprende a cocinar todas las recetas en: https://heap-of-foods.com
 
-󰀏 Presentando la beta de Sucursales y negocios:
+󰀏 Presentando la Actualización Ramas y Negocios:
 ¡El bosque caducifolio ahora tiene una nueva cara! Conoce a Partitio, el comerciante cerdo. Como un cerdo orgulloso, solo vende artículos de alta calidad.
 
 Partitio espera conocer nuevos clientes, incluso si son monstruos, y los tolerará. Pero tras algunos desafortunados eventos del pasado, ahora se niega a hacer negocios con los Mermfolk.
 
-󰀌 Versión de rama beta: 1.8-B
-󰀧 Actualización: Sucursales y negocios
+󰀌 Versión del Mod: 5.3-B
+󰀧 Actualización: Ramas y Negocios
 ]],
 		vi  =
 [[
@@ -124,13 +124,13 @@ Partitio espera conocer nuevos clientes, incluso si son monstruos, y los tolerar
 󰀠 Bổ sung thêm các Quần Xã sinh vật mới nằm ẩn mình đâu đó giữa Đại Dương!
 󰀦 Tham khảo công thức nấu ăn tại: https://heap-of-foods.com
 
-󰀏 Giới thiệu bản beta Chi nhánh và doanh nghiệp:
+󰀏 Giới thiệu Bản cập nhật Cành Nhánh & Kinh Doanh:
 Rừng rụng lá giờ đây có một gương mặt mới! Hãy gặp Partitio, thương nhân lợn. Là một chú lợn kiêu hãnh, anh ta chỉ bán những món hàng chất lượng cao.
 
 Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ là quái vật và sẽ chấp nhận họ. Nhưng sau một số sự kiện không may trong quá khứ, anh ta hiện từ chối kinh doanh với Mermfolk!
 
-󰀌 Phiên bản nhánh beta: 1.8-B
-󰀧 Cập nhật: Chi nhánh và doanh nghiệp
+󰀌 Phiên bản Mod: 5.3-B
+󰀧 Cập nhật: Cành Nhánh & Kinh Doanh
 ]],
 	},
 
@@ -1546,8 +1546,8 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 	},
 }
 
-name                         = ChooseTranslationTable(STRINGS.NAME_BETA)
-version                      = "1.8-B"
+name                         = ChooseTranslationTable(STRINGS.NAME)
+version                      = "5.3-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 
@@ -1561,8 +1561,8 @@ client_only_mod              = false
 
 server_filter_tags           = {"Heap of Foods", "HOF", "Cooking", "Entertainment", "Kyno"}
 
-icon                         = "ModiconHOFB.tex"
-icon_atlas                   = "ModiconHOFB.xml"
+icon                         = "ModiconHOF.tex"
+icon_atlas                   = "ModiconHOF.xml"
 
 local NONE_LABEL             = ""
 local NONE_OPTIONS           = 

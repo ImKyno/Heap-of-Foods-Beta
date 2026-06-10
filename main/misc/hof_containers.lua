@@ -463,6 +463,37 @@ function params.winter_tree_hof.itemtestfn(container, item, slot)
 	return item:HasTag("winter_ornament") and not container.inst:HasTag("burnt")
 end
 
+--[[
+-- Seed Bag
+params.seedsbag =
+{
+	widget =
+	{
+		slotpos =
+		{
+			Vector3(-37.5, 32 + 4,    0),
+			Vector3(37.5,  32 + 4,    0),
+			Vector3(-37.5, -(32 + 4), 0),
+			Vector3(37.5,  -(32 + 4), 0),
+		},
+
+		animbank = "ui_chest_2x2",
+		animbuild = "ui_chest_2x2",
+
+		pos = Vector3(0, 160, 0),
+		side_align_tip = 190,
+	},
+
+	type = "chest",
+}
+
+function params.seedsbag.itemtestfn(container, item, slot)
+	return item.prefab == "seeds" or string.match(item.prefab, "_seeds") or item:HasTag("treeseed")
+end
+
+params.seedsbag.priorityfn = params.seedsbag.itemtestfn
+]]--
+
 -- Tweaks for vanilla containers.
 -- Hack for portablespicer to not accept items with "nospice" tag.
 function containers.params.portablespicer.itemtestfn(container, item, slot)
