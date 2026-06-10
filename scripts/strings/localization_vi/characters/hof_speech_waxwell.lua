@@ -92,6 +92,9 @@ WAXWELL.ANNOUNCE_KYNO_LUCKBUFF_END = "Dễ đoán thôi. Vận may chẳng bao g
 WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Cuối cùng cũng có thứ gì đó hiệu quả."
 WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Khoảnh khắc đó đã qua rồi."
 
+WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_START = "Thời tiết hôm nay lạ mà tiếp thêm sinh lực."
+WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_END = "Cảm giác đó đã biến mất."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cho việc này."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ngươi không dễ chiều chút nào, phải không?"
@@ -1200,6 +1203,7 @@ WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Một món ăn đơn giản nhưng bất ngờ là khá dễ chịu."
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Ta thật sự phải đội thứ này sao? Ugh..."
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Ah, vậy là sinh vật nhỏ bé đó nghĩ mình đặc biệt sao?"
+WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Ah, vậy là sinh vật nhỏ bé đó nghĩ mình đặc biệt sao?"
 
 WAXWELL.DESCRIBE.KYNO_FISHREGISTRYHAT = "Tri thức là sức mạnh. Kể cả khi nó liên quan tới cá."
 
@@ -1277,6 +1281,10 @@ WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKE =
 WAXWELL.DESCRIBE.MANDRAKEBAOBUNS = "Ít nhất thì nó cũng trông tử tế."
 
 WAXWELL.DESCRIBE.MANDRAKEPIE = "Ta đoán nó cũng tạm được xem là món tráng miệng."
+
+WAXWELL.DESCRIBE.MANDRAKEBEER = "Ngạc nhiên thay, khá tao nhã."
+
+WAXWELL.DESCRIBE.RAINPARFAIT = "Ít nhất cơn mưa cũng có ích đôi chút."
 
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một lối tắt cho những người làm vườn thiếu kiên nhẫn."
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ cây sống hóa ra cũng cần nỗ lực."

@@ -92,6 +92,9 @@ WATHGRITHR.ANNOUNCE_KYNO_LUCKBUFF_END = "Los odebrał swoją łaskę!"
 WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Pola wydadzą obfite plony!"
 WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Płodne błogosławieństwo przeminęło!"
 
+WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_START = "Burza odnawia mego ducha!"
+WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_END = "Błogosławieństwo deszczu przeminęło!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zło!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie ta uczta! Bestia chce pyszniejszego jedzenia!"
@@ -1200,6 +1203,7 @@ WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Kukurydza walczy z gorącem i wybucha! Ha!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Kapelusz bez honoru wojownika... ale noszę go dumnie!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Hełm wojownika!"
+WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Hełm wojownika!"
 
 WATHGRITHR.DESCRIBE.KYNO_FISHREGISTRYHAT = "Myślący hełm dla tych, którzy stawiają czoła morskim bestiom!"
 
@@ -1277,6 +1281,10 @@ WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
 WATHGRITHR.DESCRIBE.MANDRAKEBAOBUNS = "Wojownicza bułka z mistycznych korzeni!"
 
 WATHGRITHR.DESCRIBE.MANDRAKEPIE = "Heroiczne ciasto z zaczarowanego korzenia!"
+
+WATHGRITHR.DESCRIBE.MANDRAKEBEER = "Pienisty napitek bez chwały miodu pitnego!"
+
+WATHGRITHR.DESCRIBE.RAINPARFAIT = "Schłodzona uczta pobłogosławiona przez burzę!"
 
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Tonik dla wzrostu potężnych plonów!"
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Wzmacnia ducha roślin!"

@@ -92,6 +92,9 @@ WURT.ANNOUNCE_KYNO_LUCKBUFF_END = "May mắn hết rồi, florp..."
 WURT.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Nhiều cây quá, florp!"
 WURT.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Giờ không còn nhiều cây nữa."
 
+WURT.ANNOUNCE_KYNO_WETNESSBUFF_START = "Mưa làm mình vui lắm, florp!"
+WURT.ANNOUNCE_KYNO_WETNESSBUFF_END = "Mưa không còn làm mình vui nữa, florp."
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Cá đẹp ở trong đầm lầy!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... sai rồi..."
@@ -1202,6 +1205,7 @@ WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Bắp nổ bốp! Đồ ăn vui ghê, florp!"
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Mũ sinh nhật cho mình hả? Florpt!"
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Chỉ Sammy được đội cái này hả? May mắn ghê, florp!"
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Sao heo xấu lại có mũ đẹp vậy?"
 
 WURT.DESCRIBE.KYNO_FISHREGISTRYHAT = "Mũ giúp học về bạn cá! florp!"
 
@@ -1279,6 +1283,10 @@ WURT.DESCRIBE.KYNO_ELDERMANDRAKE =
 WURT.DESCRIBE.MANDRAKEBAOBUNS = "Bánh mềm ngon ngon, florp!"
 
 WURT.DESCRIBE.MANDRAKEPIE = "Có thịt trong đó, glorp!"
+
+WURT.DESCRIBE.MANDRAKEBEER = "Nước uống có bọt, florp!"
+
+WURT.DESCRIBE.RAINPARFAIT = "Đồ ăn ngày mưa, florp!"
 
 WURT.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Làm cây lớn lên, florp!"
 WURT.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Cây khỏe là cây tốt."

@@ -92,6 +92,9 @@ WARLY.ANNOUNCE_KYNO_LUCKBUFF_END = "Hết đúng lúc rồi. Tiếc thật."
 WARLY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Magnifique! Nguyên liệu tươi có khắp nơi!"
 WARLY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Phần dư thừa đã giảm đi."
 
+WARLY.ANNOUNCE_KYNO_WETNESSBUFF_START = "Một cơn mưa nhẹ đầy sảng khoái cho cả cơ thể lẫn tâm trí."
+WARLY.ANNOUNCE_KYNO_WETNESSBUFF_END = "Cảm giác tươi mới ấy đã qua."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai rồi, sai rồi..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ngươi muốn thứ gì đó ngon hơn sao?"
@@ -1200,6 +1203,7 @@ WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "À, một món đơn giản mà thú vị!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Một vẻ ngoài sang trọng cho lễ mừng tinh tế!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Tres unique! Một chiếc mũ từ Sammy ngọt ngào của chúng ta!"
+WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Très unique! Một chiếc mũ từ Partitio đáng yêu của chúng ta!"
 
 WARLY.DESCRIBE.KYNO_FISHREGISTRYHAT = "Hiểu cá là bước đầu tiên để nấu chúng thật ngon."
 
@@ -1277,6 +1281,10 @@ WARLY.DESCRIBE.KYNO_ELDERMANDRAKE =
 WARLY.DESCRIBE.MANDRAKEBAOBUNS = "Một sự hòa quyện hương vị đầy dễ chịu."
 
 WARLY.DESCRIBE.MANDRAKEPIE = "Một chiếc bánh mộc mạc với đặc tính thư giãn."
+
+WARLY.DESCRIBE.MANDRAKEBEER = "Nguyên liệu đơn giản, kết quả tuyệt vời."
+
+WARLY.DESCRIBE.RAINPARFAIT = "Một món parfait tinh tế với hương vị tươi mát."
 
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Tuyệt vời để trồng nguyên liệu tươi."
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Nguyên liệu khỏe mạnh tạo nên món ăn hảo hạng."

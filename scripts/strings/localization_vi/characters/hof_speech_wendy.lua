@@ -92,6 +92,9 @@ WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Ngay cả vận may thoáng qua rồi cũng 
 WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Mặt đất ban tặng sự phong phú ngắn ngủi của nó."
 WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Sự hào phóng của thiên nhiên lại phai tàn."
 
+WENDY.ANNOUNCE_KYNO_WETNESSBUFF_START = "Cơn mưa cuốn trôi những phiền muộn của ta."
+WENDY.ANNOUNCE_KYNO_WETNESSBUFF_END = "Sự an ủi từ cơn mưa đã qua rồi."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để thu gom?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Tất nhiên đây không phải thứ sinh vật ngu ngốc đó muốn."
@@ -1200,6 +1203,7 @@ WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Nó nổ... rồi bị ăn... như mọi niềm vui thoáng qua."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Một biểu tượng của niềm vui ép buộc... hợp làm sao."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Dành cho Sammy... kẻ đứng tách biệt..."
+WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Dành cho Partitio... người luôn khác biệt..."
 
 WENDY.DESCRIBE.KYNO_FISHREGISTRYHAT = "Nó ghi lại những sự sống trôi lặng lẽ dưới làn sóng."
 
@@ -1277,6 +1281,10 @@ WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
 WENDY.DESCRIBE.MANDRAKEBAOBUNS = "Một bữa ăn yên tĩnh cho những tâm hồn mệt mỏi."
 
 WENDY.DESCRIBE.MANDRAKEPIE = "Một lát bánh đầy sự mệt mỏi dễ chịu."
+
+WENDY.DESCRIBE.MANDRAKEBEER = "Một chút ngọt ngào thoáng qua trong thế giới cay đắng."
+
+WENDY.DESCRIBE.RAINPARFAIT = "Một niềm an ủi nhỏ dưới bầu trời u ám."
 
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một món quà tạm thời cho những cây cối đã được định sẵn số phận."
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Một nỗ lực vô ích để gìn giữ sự sống."

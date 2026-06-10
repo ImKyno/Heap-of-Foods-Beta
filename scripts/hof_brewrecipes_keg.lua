@@ -1574,6 +1574,31 @@ local kyno_foods_keg =
 		end,
 	},
 
+	mandrakebeer =
+	{
+		test = function(brewer, names, tags) return names.mandrake and tags.sugar and tags.frozen end,
+		priority = 100,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = 150,
+		hunger = 150,
+		sanity = 150,
+		cooktime = 120,
+		overridebuild = "kyno_foodrecipes_keg1",
+		pigcoinvalue = {10, 10, 5},
+		floater = TUNING.HOF_FLOATER,
+		tags = {"fooddrink", "honeyed"},
+		card_def = {ingredients = {{"mandrake", 1}, {"kyno_sugar", 1}, {"ice", 1}}},
+		oneatenfn = function(inst, eater)
+			if eater ~= nil and eater:HasTag("player") 
+			and not (eater.components.health ~= nil and eater.components.health:IsDead()) then
+				eater:PushEvent("drankcannedrink")
+			end
+		end,
+	},
+
 	-- This recipe is for when brewing an invalid product, we need this to prevent a crash.
 	wetgoop2 =
 	{

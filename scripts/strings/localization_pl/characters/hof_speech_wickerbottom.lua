@@ -92,6 +92,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_LUCKBUFF_END = "Przewaga statystyczna wygasła."
 WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Ach, moja wiedza ogrodnicza rozkwita."
 WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Botaniczny przypływ wydaje się ustępować."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_START = "Deszcz jest niezwykle odświeżający."
+WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_END = "Jego regenerujące działanie ustało."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzeba czegoś jeszcze."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. Chyba mówił coś o homarach."
@@ -1200,6 +1203,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Ciepło powoduje gwałtowne rozszerzanie się wilgoci. Fascynujące!"
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Tradycyjny, stożkowy dodatek do świętowania."
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Przyjęciowy dodatek wykonany na zamówienie."
+WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Przyjęciowy dodatek wykonany na zamówienie."
 
 WICKERBOTTOM.DESCRIBE.KYNO_FISHREGISTRYHAT = "Użyteczne nakrycie głowy do systematycznego badania gatunków ryb."
 
@@ -1277,6 +1281,10 @@ WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
 WICKERBOTTOM.DESCRIBE.MANDRAKEBAOBUNS = "Nietypowe, lecz sycące dzieło kulinarne."
 
 WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "Mandragora dodaje osobliwego aromatu."
+
+WICKERBOTTOM.DESCRIBE.MANDRAKEBEER = "Przyjemnie musujący napój bezalkoholowy."
+
+WICKERBOTTOM.DESCRIBE.RAINPARFAIT = "Arbuz nadaje mu odświeżających właściwości."
 
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Nawóz opracowany w celu stymulacji rozwoju."
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Przydatny do utrzymywania zdrowych upraw."

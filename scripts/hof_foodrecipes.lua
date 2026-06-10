@@ -3356,7 +3356,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {4, 0, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"truffles"},
+		tags = {"truffles", "partitiofood"},
 		card_def = {ingredients = {{"kyno_truffles", 2}, {"kyno_flour", 1}, {"meat", 1}}},
 		prefabs = { "kyno_trufflesbuff" },
 		oneatenfn = function(inst, eater)
@@ -3656,6 +3656,30 @@ local kyno_foods =
 			end
 
 			DoAreaSleepFromFood(inst)
+		end,
+	},
+
+	rainparfait =
+	{
+		test = function(cooker, names, tags) return (names.watermelon or names.watermelon_cooked) and tags.berries
+		and tags.dairy and tags.sweetener end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_MED,
+		health = 10,
+		hunger = 25,
+		sanity = 33,
+		cooktime = 1.2,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RAINY,
+		potlevel = "low",
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		pigcoinvalue = {3, 4, 0},
+		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
+		card_def = {ingredients = {{"watermelon", 1}, {"berries", 1}, {"goatmilk", 1}, {"honey", 1}}},
+		prefabs = { "kyno_wetnessbuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_wetnessbuff", "kyno_wetnessbuff")
 		end,
 	},
 }

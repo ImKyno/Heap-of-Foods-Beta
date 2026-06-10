@@ -92,6 +92,9 @@ WOLFGANG.ANNOUNCE_KYNO_LUCKBUFF_END = "May mắn đi rồi. Wolfgang vẫn mạn
 WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wolfgang thu hoạch như người khổng lồ mạnh mẽ!"
 WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Thời gian thu hoạch lớn đã hết."
 
+WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_START = "Mưa làm Wolfgang cảm thấy tuyệt vời!"
+WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_END = "Phép màu của mưa đã biến mất."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái đúng."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Heo hùng mạnh không muốn cái này."
@@ -1200,6 +1203,7 @@ WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Đồ ăn nổ nhỏ cho Wolfgang!"
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Mũ ăn mừng cho Wolfgang mạnh!"
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy chắc hùng mạnh mới đội mũ đặc biệt!"
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Partitio hẳn rất mạnh mẽ mới đội được mũ đặc biệt!"
 
 WOLFGANG.DESCRIBE.KYNO_FISHREGISTRYHAT = "Mũ làm Wolfgang thông minh hơn về cá nhỏ!"
 
@@ -1277,6 +1281,10 @@ WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKE =
 WOLFGANG.DESCRIBE.MANDRAKEBAOBUNS = "Bánh mềm làm Wolfgang mạnh mẽ!"
 
 WOLFGANG.DESCRIBE.MANDRAKEPIE = "Bánh làm Wolfgang mạnh mẽ buồn ngủ!"
+
+WOLFGANG.DESCRIBE.MANDRAKEBEER = "Đồ uống ngọt cho Wolfgang hùng mạnh!"
+
+WOLFGANG.DESCRIBE.RAINPARFAIT = "Món ngon làm Wolfgang vui vẻ!"
 
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Làm cây nhỏ thành cây lớn!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Thức ăn mạnh mẽ cho cây mạnh mẽ!"

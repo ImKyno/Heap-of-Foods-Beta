@@ -92,6 +92,9 @@ WOODIE.ANNOUNCE_KYNO_LUCKBUFF_END = "No cóż, było miło póki trwało."
 WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "No, to są porządne zbiory, co nie?"
 WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Wracamy do zwykłego zbierania."
 
+WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_START = "Odrobina deszczu czyni cuda, co nie?"
+WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "Wszystko wróciło do normy."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może coś do podniesienia?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. On chce czegoś innego."
@@ -1200,6 +1203,7 @@ WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Idealny na świętowanie, co?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Cóż, wygląda całkiem imprezowo, co?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Całkiem miłe, co?"
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Całkiem miłe, co?"
 
 WOODIE.DESCRIBE.KYNO_FISHREGISTRYHAT = "Pomaga mi śledzić wszystkie różne rodzaje ryb."
 
@@ -1277,6 +1281,10 @@ WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
 WOODIE.DESCRIBE.MANDRAKEBAOBUNS = "Całkiem nieźle pachnie, co nie?"
 
 WOODIE.DESCRIBE.MANDRAKEPIE = "Nic nie przebije świeżego placka, co nie?"
+
+WOODIE.DESCRIBE.MANDRAKEBEER = "Smakuje dziczą, co nie?"
+
+WOODIE.DESCRIBE.RAINPARFAIT = "Dobry przysmak na mokrą pogodę, co nie?"
 
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że rośliny rosną szybciej, co nie?"
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje je zdrowe i szczęśliwe."

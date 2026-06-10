@@ -92,6 +92,9 @@ WOLFGANG.ANNOUNCE_KYNO_LUCKBUFF_END = "Szczęście się skończyło. Wolfgang na
 WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wolfgang zbiera plony jak potężny olbrzym!"
 WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Czas małych zbiorów skończony."
 
+WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_START = "Deszcz sprawia, że Wolfgang czuje się dobrze!"
+WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_END = "Deszczowa magia zniknęła."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "To nie jest potrzebne."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mocny świnia nie chce tego."
@@ -1200,6 +1203,7 @@ WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Małe wybuchające jedzonko dla Wolfganga!"
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Świąteczny kapelusz dla silnego Wolfganga!"
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy musi być silny, skoro nosi specjalny kapelusz!"
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Partitio musi być potężny, skoro nosi specjalny kapelusz!"
 
 WOLFGANG.DESCRIBE.KYNO_FISHREGISTRYHAT = "Kapelusz czyni Wolfganga mądrzejszym o małych rybkach!"
 
@@ -1277,6 +1281,10 @@ WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKE =
 WOLFGANG.DESCRIBE.MANDRAKEBAOBUNS = "Miękkie bułeczki czynią Wolfganga silnym!"
 
 WOLFGANG.DESCRIBE.MANDRAKEPIE = "Placek usypia potężnego Wolfganga!"
+
+WOLFGANG.DESCRIBE.MANDRAKEBEER = "Słodki napój dla potężnego Wolfganga!"
+
+WOLFGANG.DESCRIBE.RAINPARFAIT = "Przysmak uszczęśliwia Wolfganga!"
 
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że małe roślinki stają się wielkie!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Silne jedzenie dla silnych roślin!"

@@ -1628,6 +1628,25 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "HOFBIRTHDAY_SAMMYHAT",
 	},
 
+	kyno_hofbirthday_partitiohat =
+	{
+		name           = "kyno_hofbirthday_partitiohat",
+		type           = "item",
+		subcat         = "hat",
+		tex            = "kyno_hofbirthday_partitiohat.tex",
+		prefab         = "kyno_hofbirthday_partitiohat",
+		dapperness     = 0.022222222222222,
+		waterproofer   = 0.2,
+		snowmandecor   = true,
+		bank           = "hofbirthday_partitiohat",
+		build          = "hat_hofbirthday_partitio",
+		anim           = "anim",
+		animoffsety    = 20,
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -50,
+		specialinfo    = "HOFBIRTHDAY_PARTITIOHAT",
+	},
+
 	kyno_hofbirthday_5hat =
 	{
 		name           = "kyno_hofbirthday_5hat",
@@ -5744,6 +5763,8 @@ local HOF_SCRAPBOOK_FOODS =
 		perishable     = 2880,
 		stacksize      = 10,
 		foodtype       = "VEGGIE",
+		fueltype       = "BURNABLE",
+		fuelvalue      = 45,
 		burnable       = true,
 		bank           = "kyno_cavetuber",
 		build          = "kyno_cavetuber",
@@ -5782,6 +5803,8 @@ local HOF_SCRAPBOOK_FOODS =
 		perishable     = 2880,
 		stacksize      = 10,
 		foodtype       = "VEGGIE",
+		fueltype       = "BURNABLE",
+		fuelvalue      = 90,
 		burnable       = true,
 		bank           = "kyno_cavetuber_blooming",
 		build          = "kyno_cavetuber_blooming",
@@ -10166,6 +10189,30 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		deps           = preparedfood_deps,
 		specialinfo    = "FOODEFFECTS_SOOTHING",
 	},
+
+	rainparfait        =
+	{
+		name           = "rainparfait",
+		type           = "food",
+		tex            = "rainparfait.tex",
+		prefab         = "rainparfait",
+		healthvalue    = 10,
+		hungervalue    = 25,
+		sanityvalue    = 33,
+		perishable     = 4800,
+		foodtype       = "VEGGIE",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "kyno_foodrecipes",
+		build          = "kyno_foodrecipes_cookpot1",
+		overridesymbol = {"swap_food", "kyno_foodrecipes_cookpot1", "rainparfait"},
+		anim           = "rainparfait",
+		animoffsety    = 10,
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -70,
+		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_RAINY",
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =
@@ -13124,6 +13171,29 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgy  = -50,
 		deps           = {"kyno_woodenkeg", "spoiled_food"},
 		specialinfo    = "FOODEFFECTS_SOUL2",
+	},
+
+	mandrakebeer       =
+	{
+		name           = "mandrakebeer",
+		type           = "food",
+		subcat         = "artisangoods",
+		tex            = "mandrakebeer.tex",
+		prefab         = "mandrakebeer",
+		healthvalue    = 150,
+		hungervalue    = 150,
+		sanityvalue    = 150,
+		perishable     = 19200,
+		foodtype       = "GOODIES",
+		stacksize      = 40,
+		bank           = "kyno_foodrecipes",
+		build          = "kyno_foodrecipes_keg1",
+		overridesymbol = {"swap_food", "kyno_foodrecipes_keg1", "mandrakebeer"},
+		anim           = "mandrakebeer",
+		animoffsety    = 10,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -70,
+		deps           = {"kyno_woodenkeg", "spoiled_food"},
 	},
 }
 

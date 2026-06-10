@@ -44,6 +44,8 @@ local WARES                                   =
 			["kyno_plantbooster_vitality"]    = { recipe = "deciduoustrader_kyno_plantbooster_vitality",    min = 5,  max = 15, limit = 15  },
 			["kyno_plantbooster_yield"]       = { recipe = "deciduoustrader_kyno_plantbooster_yield",       min = 5,  max = 10, limit = 10  },
 			["kyno_plantbooster_supergrowth"] = { recipe = "deciduoustrader_kyno_plantbooster_supergrowth", min = 5,  max = 10, limit = 10  },
+			["kyno_white_cap"]                = { recipe = "deciduoustrader_kyno_white_cap",                min = 10, max = 20, limit = 20  },
+			["kyno_truffles"]                 = { recipe = "deciduoustrader_kyno_truffles",                 min = 10, max = 20, limit = 20  },
 		},
 	},
 

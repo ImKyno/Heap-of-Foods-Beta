@@ -128,6 +128,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Increased plant yield fo
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Increased plant yield for a certain amount of time.\n\Briefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Soothes nearby creatures around the survivor."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Increases healing efficiency by 15% for a certain amount of time. Does not work for lifesteal healing."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINY = "Restores sanity when it's raining or when Wetness is high."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
@@ -170,7 +171,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Once set on the ocean, it will trigge
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Leaving it to dry for longer periods will further enhance its quality."
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use it to light up the Anniversary Cake and start the party!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Allows the gathering of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
-STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Sammy's special anniversary hat.\nAllows the gain of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Sammy's special anniversary hat.\nAllows the gathering of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_PARTITIOHAT = "Partitio's special anniversary hat.\nAllows the gathering of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Researching fish and roes adds to the Fish Registry."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "An oversized egg that can be thrown or hatched.\n\nReduces target's damage and movement speed by 10% for 20 seconds. Effects stack up to 3 times for a total of 30%.\n\n\"Even eggs are weapons on the battlefield!\" - Wigfrid."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Can be hatched when near a source of heat."

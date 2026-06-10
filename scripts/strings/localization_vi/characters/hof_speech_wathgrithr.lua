@@ -92,6 +92,9 @@ WATHGRITHR.ANNOUNCE_KYNO_LUCKBUFF_END = "Số mệnh đã rút lại ân huệ!"
 WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Những cánh đồng sẽ ban cho chiến lợi phẩm dồi dào!"
 WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Phước lành màu mỡ đã tan biến!"
 
+WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_START = "Cơn bão làm mới tinh thần ta!"
+WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_END = "Phước lành của cơn mưa đã phai nhạt!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai rồi!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sai yến tiệc! Con thú muốn món khoái khẩu hơn!"
@@ -1200,6 +1203,7 @@ WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Bắp bung nổ vào chiến trận nhờ sức nóng! Ha!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Chiếc mũ này không mang danh dự chiến binh... nhưng ta sẽ đội nó đầy kiêu hãnh!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Mũ chiến binh!"
+WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Mũ chiến binh!"
 
 WATHGRITHR.DESCRIBE.KYNO_FISHREGISTRYHAT = "Mũ suy ngẫm cho những ai đối mặt sinh vật biển!"
 
@@ -1277,6 +1281,10 @@ WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
 WATHGRITHR.DESCRIBE.MANDRAKEBAOBUNS = "Bánh chiến binh với rễ thần bí!"
 
 WATHGRITHR.DESCRIBE.MANDRAKEPIE = "Món bánh anh hùng từ rễ cây mê hoặc!"
+
+WATHGRITHR.DESCRIBE.MANDRAKEBEER = "Một ly bọt sủi mà thiếu đi vinh quang của mật ong lên men!"
+
+WATHGRITHR.DESCRIBE.RAINPARFAIT = "Yến tiệc mát lạnh được cơn bão ban phước!"
 
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một loại thuốc bổ cho những mùa màng hùng mạnh!"
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Nó củng cố tinh thần của cây cối!"

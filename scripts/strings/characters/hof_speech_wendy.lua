@@ -92,6 +92,9 @@ WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Even fleeting fortune eventually fades."
 WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "The earth offers its fleeting abundance."
 WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Nature's generosity fades once more."
 
+WENDY.ANNOUNCE_KYNO_WETNESSBUFF_START = "The rain washes away my troubles."
+WENDY.ANNOUNCE_KYNO_WETNESSBUFF_END = "The comfort of the rain has passed."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to gather?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Of course it's not what this stupid creature wants."
@@ -1200,6 +1203,7 @@ WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "It pops... then gets eaten... like all fleeting joys."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "A symbol of forced joy... how fitting."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "For Sammy... the one who stands apart..."
+WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "For Partitio... the one who stands apart..."
 
 WENDY.DESCRIBE.KYNO_FISHREGISTRYHAT = "It records the lives that drift silently beneath the waves."
 
@@ -1277,6 +1281,10 @@ WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
 WENDY.DESCRIBE.MANDRAKEBAOBUNS = "A quiet meal for weary souls."
 
 WENDY.DESCRIBE.MANDRAKEPIE = "A comforting slice of exhaustion."
+
+WENDY.DESCRIBE.MANDRAKEBEER = "A fleeting sweetness in a bitter world."
+
+WENDY.DESCRIBE.RAINPARFAIT = "A small comfort beneath gloomy skies."
 
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A temporary gift to doomed plants."
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "A futile attempt to preserve life."

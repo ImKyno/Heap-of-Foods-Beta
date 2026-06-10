@@ -92,6 +92,9 @@ WOODIE.ANNOUNCE_KYNO_LUCKBUFF_END = "Well, that was nice while it lasted."
 WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Now that's a proper harvest, eh?"
 WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Back to normal pickin'."
 
+WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_START = "A little rain does wonders, eh?"
+WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "Back to normal now."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to pick it up?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. He wants something else."
@@ -1200,6 +1203,7 @@ WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Perfect for celebrating, eh?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Well, it sure looks festive, eh?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "That's kinda nice."
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "That's kinda nice."
 
 WOODIE.DESCRIBE.KYNO_FISHREGISTRYHAT = "Helps me keep track of all the different kinds of fish."
 
@@ -1277,6 +1281,10 @@ WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
 WOODIE.DESCRIBE.MANDRAKEBAOBUNS = "Smells pretty good, eh?"
 
 WOODIE.DESCRIBE.MANDRAKEPIE = "Nothing beats fresh pie, eh?"
+
+WOODIE.DESCRIBE.MANDRAKEBEER = "Tastes like the wilderness, eh?"
+
+WOODIE.DESCRIBE.RAINPARFAIT = "Good snack fer wet weather, eh?"
 
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Gets plants growin' quicker, eh?"
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps 'em healthy and happy."

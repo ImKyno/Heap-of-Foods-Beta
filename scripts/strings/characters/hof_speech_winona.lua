@@ -92,6 +92,9 @@ WINONA.ANNOUNCE_KYNO_LUCKBUFF_END = "Alright, back to real odds."
 WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Now this is efficient harvesting."
 WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Back to regular production."
 
+WINONA.ANNOUNCE_KYNO_WETNESSBUFF_START = "Guess the rain's helping me keep it together."
+WINONA.ANNOUNCE_KYNO_WETNESSBUFF_END = "There goes that nice feeling."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nope."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope, something else, maybe."
@@ -1200,6 +1203,7 @@ WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Now this is real party fuel!"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Time to get the party started!"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Custom-made! Sammy really is part of the team, huh?"
+WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Custom-made! Partitio really is part of the team, huh?"
 
 WINONA.DESCRIBE.KYNO_FISHREGISTRYHAT = "Good for learning patterns. Fish got plenty of 'em."
 
@@ -1277,6 +1281,10 @@ WINONA.DESCRIBE.KYNO_ELDERMANDRAKE =
 WINONA.DESCRIBE.MANDRAKEBAOBUNS = "Nice little handheld meal."
 
 WINONA.DESCRIBE.MANDRAKEPIE = "That's some solid baking."
+
+WINONA.DESCRIBE.MANDRAKEBEER = "Cold, fizzy, and gets the job done."
+
+WINONA.DESCRIBE.RAINPARFAIT = "Nice and refreshing."
 
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A practical growth enhancer."
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps crops in working order."

@@ -128,6 +128,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Aumenta o rendimento de 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Aumenta o rendimento de plants por um certo período de tempo.\n\Reduz brevemente a temperatura."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Acalma as criaturas próximas ao sobrevivente."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Aumenta a eficiência de cura em 15% por um certo período de tempo. Não funciona com cura por roubo de vida."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINY = "Restaura sanidade ao longo do tempo quando está chovendo ou quando a Umidade estiver alta o suficiente."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Pó Conservante reduz pela metade o tempo de deterioração e anula penalidades de comida estragada."
@@ -171,6 +172,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Deixar secar por períodos mais longos
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use para acender o Bolo de Aniversário e começar a festa!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Permite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Chapéu de aniversário especial do Sammy.\nPermite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_PARTITIOHAT = "Chapéu de aniversário especial do Partitio.\nPermite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Pesquisar peixes e ovas os adiciona ao Registro de Peixes."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Um ovo gigante que pode ser arremessado ou chocado.\n\nReduz o dano causado e a velocidade de movimento do alvo em 10% por 20 segundos. O efeito acumula até 3 vezes, totalizando 30%.\n\n\"Até ovos são armas no campo de batalha!\" - Wigfrid."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Pode ser chocado se estiver próximo a uma fonte de calor."

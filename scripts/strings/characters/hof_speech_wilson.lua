@@ -92,6 +92,9 @@ WILSON.ANNOUNCE_KYNO_LUCKBUFF_END = "It seems my luck has run out."
 WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "I'm ready for the bountiful harvest!"
 WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The harvesting season is over!"
 
+WILSON.ANNOUNCE_KYNO_WETNESSBUFF_START = "The rain is quite soothing."
+WILSON.ANNOUNCE_KYNO_WETNESSBUFF_END = "The calming feeling has faded."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It's not this one."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "He wants something else."
@@ -1200,6 +1203,7 @@ WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Popcorn for a big celebration!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Nothing says party like a pointy hat!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Wait. Why only him gets a special hat?"
+WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Wait. Why only him gets a special hat?"
 
 WILSON.DESCRIBE.KYNO_FISHREGISTRYHAT = "It's a practical hat for a dedicated fisherman."
 
@@ -1277,6 +1281,10 @@ WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
 WILSON.DESCRIBE.MANDRAKEBAOBUNS = "A strangely sleepy bread."
 
 WILSON.DESCRIBE.MANDRAKEPIE = "A pie with a rather drowsy filling."
+
+WILSON.DESCRIBE.MANDRAKEBEER = "A refreshing beverage brewed from roots."
+
+WILSON.DESCRIBE.RAINPARFAIT = "Today's weather is parfait."
 
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A manufactured fertilizer with growing capabilities."
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Helps keeping my plants healthy and nice!"

@@ -92,6 +92,9 @@ WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Och, zabawa się skończyła!"
 WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Jakże obfite zbiory. Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Obfitość uleciała. Hyuyu."
 
+WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_START = "Stukanie kropli podnosi mnie na duchu!"
+WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_END = "Koniec deszczowej radości."
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję czegoś jeszcze."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wiem, że ten żart był niezły, ale przejdźmy do konkretów."
@@ -1200,6 +1203,7 @@ WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Pop! Przegryzka z radosnym trzaskiem!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Ho ho! Kapelusz do świątecznych psikusów!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Oho! Kapelusz dla Sammy'ego, wyjątkowy i figlarny!"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Oho! Kapelusz stworzony specjalnie dla Partitio!"
 
 WORTOX.DESCRIBE.KYNO_FISHREGISTRYHAT = "Czapka pełna rybnych faktów! Hyuyu!"
 
@@ -1277,6 +1281,10 @@ WORTOX.DESCRIBE.KYNO_ELDERMANDRAKE =
 WORTOX.DESCRIBE.MANDRAKEBAOBUNS = "Usypiające przekąski. Hyuyu!"
 
 WORTOX.DESCRIBE.MANDRAKEPIE = "Jeden kęs i prosto do krainy snów!"
+
+WORTOX.DESCRIBE.MANDRAKEBEER = "Bąbelkowy napitek. Hyuyu!"
+
+WORTOX.DESCRIBE.RAINPARFAIT = "Rozkosz na deszczowy dzień."
 
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Małe wsparcie dla liściastych przyjaciół. Hyuyu!"
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje ich żywych i pełnych blasku."

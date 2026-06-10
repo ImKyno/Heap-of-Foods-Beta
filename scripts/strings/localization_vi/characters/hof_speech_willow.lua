@@ -92,6 +92,9 @@ WILLOW.ANNOUNCE_KYNO_LUCKBUFF_END = "Tuyệt. Lại xui như thường."
 WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Đến lúc gom hết cây cối trước khi chúng cháy!"
 WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Aw, vui vậy mà hết rồi sao?"
 
+WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_START = "Hừm. Lần này bị ướt cũng không tệ."
+WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_END = "Được rồi, giờ thì mình lại ghét bị ướt rồi."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Mình cần bỏ thứ gì đó vào đây!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, sai thứ rồi!"
@@ -1200,6 +1203,7 @@ WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Lửa làm chúng nổ bốp bốp! Đúng món ăn vặt của mình."
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Nó vui hơn nếu bắt lửa."
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy có mũ riêng hả? Hmph. Được thôi. Cũng dễ thương."
+WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Partitio có chiếc mũ riêng à? Hừm. Thôi được. Cũng dễ thương đấy."
 
 WILLOW.DESCRIBE.KYNO_FISHREGISTRYHAT = "Chắc phải biết cá của mình trước khi đốt chúng."
 
@@ -1277,6 +1281,10 @@ WILLOW.DESCRIBE.KYNO_ELDERMANDRAKE =
 WILLOW.DESCRIBE.MANDRAKEBAOBUNS = "Bánh bao nóng nhồi đầy rễ cây la hét."
 
 WILLOW.DESCRIBE.MANDRAKEPIE = "Bánh gây buồn ngủ. Tuyệt thật."
+
+WILLOW.DESCRIBE.MANDRAKEBEER = "Không phải bia thật, nhưng vẫn khá ngon."
+
+WILLOW.DESCRIBE.RAINPARFAIT = "Parfait dành cho ngày mưa. Kỳ lạ thật."
 
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Làm cây lớn lên. Chán ngắt."
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giúp cây sống lâu hơn."

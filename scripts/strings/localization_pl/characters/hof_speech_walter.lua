@@ -92,6 +92,9 @@ WALTER.ANNOUNCE_KYNO_LUCKBUFF_END = "Chyba szczęście się skończyło."
 WALTER.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wygląda na to, że sezon zbiorów przyszedł wcześniej, Woby!"
 WALTER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Wielkie zbiory już się skończyły."
 
+WALTER.ANNOUNCE_KYNO_WETNESSBUFF_START = "Ten deszcz naprawdę poprawia mi humor, Woby!"
+WALTER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Chyba to uczucie minęło."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zła rzecz!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmm, nie w tym przypadku."
@@ -1200,6 +1203,7 @@ WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Idealny na ogniska i imprezy!"
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Idealny na radosne spotkania!"
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Specjalny sprzęt dla naszego wyjątkowego kumpla!"
+WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Specjalny sprzęt dla naszego wyjątkowego kumpla!"
 
 WALTER.DESCRIBE.KYNO_FISHREGISTRYHAT = "Świetny do zapisywania, jakie ryby się znajdzie."
 
@@ -1277,6 +1281,10 @@ WALTER.DESCRIBE.KYNO_ELDERMANDRAKE =
 WALTER.DESCRIBE.MANDRAKEBAOBUNS = "Idealne na szlak."
 
 WALTER.DESCRIBE.MANDRAKEPIE = "Placek zawsze smakuje lepiej na świeżym powietrzu."
+
+WALTER.DESCRIBE.MANDRAKEBEER = "Idealne po długiej wędrówce."
+
+WALTER.DESCRIBE.RAINPARFAIT = "To byłoby świetne podczas burzy."
 
 WALTER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Idealny do hodowania zapasów na dziczyźnie."
 WALTER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje ogród w doskonałej formie."

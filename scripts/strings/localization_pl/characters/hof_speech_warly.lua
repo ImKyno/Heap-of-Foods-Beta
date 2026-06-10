@@ -92,6 +92,9 @@ WARLY.ANNOUNCE_KYNO_LUCKBUFF_END = "Czas się skończył. Szkoda."
 WARLY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Magnifique! Świeżych składników pod dostatkiem!"
 WARLY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Nadwyżka się wyczerpała."
 
+WARLY.ANNOUNCE_KYNO_WETNESSBUFF_START = "Orzeźwiająca mżawka dla ciała i umysłu."
+WARLY.ANNOUNCE_KYNO_WETNESSBUFF_END = "Orzeźwiające uczucie minęło."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Źle, źle..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Masz ochotę na coś jeszcze pyszniejszego?"
@@ -1200,6 +1203,7 @@ WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Ach, prosta, lecz urocza przekąska!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Elegancki wygląd na wyjątkową okazję!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Très unique! Kapelusz dla naszego słodkiego Sammy'ego!"
+WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Très unique! Kapelusz od naszego uroczego Partitio'ego!"
 
 WARLY.DESCRIBE.KYNO_FISHREGISTRYHAT = "Zrozumienie ryb to pierwszy krok do dobrego gotowania."
 
@@ -1277,6 +1281,10 @@ WARLY.DESCRIBE.KYNO_ELDERMANDRAKE =
 WARLY.DESCRIBE.MANDRAKEBAOBUNS = "Pocieszające połączenie smaków."
 
 WARLY.DESCRIBE.MANDRAKEPIE = "Rustykalny placek o uspokajających właściwościach."
+
+WARLY.DESCRIBE.MANDRAKEBEER = "Proste składniki, zachwycający rezultat."
+
+WARLY.DESCRIBE.RAINPARFAIT = "Wyrafinowany parfait o odświeżających nutach."
 
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Doskonały do uprawy świeżych składników."
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Zdrowe produkty tworzą lepszą kuchnię."

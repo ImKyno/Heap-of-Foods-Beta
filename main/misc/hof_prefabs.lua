@@ -91,6 +91,7 @@ PrefabFiles =
 	"k_foodbuff_super",
 	"k_foodbuff_temperature",
 	"k_foodbuff_truffles",
+	"k_foodbuff_wetness",
 	"k_foodsack",
 	"k_froglegs",
 	"k_garden_sprinkler",

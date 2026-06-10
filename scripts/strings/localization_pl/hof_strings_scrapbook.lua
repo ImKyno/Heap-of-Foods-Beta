@@ -128,6 +128,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Zwiększenie plonu rośl
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Zwiększenie plonu roślin na określony czas.\n\Krótko obniża temperaturę."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Uspokaja pobliskie stworzenia wokół ocalałego."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Zwiększa skuteczność leczenia o 15% na określony czas. Nie działa na leczenie z kradzieży życia."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINY = "Przywraca poczytalność z upływem czasu podczas deszczu lub gdy poziom wilgoci jest wystarczająco wysoki."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Może być dodany do jedzenia w garnku za pomocą przenośnej stacji przypraw.\n\nJedzenie przyprawione Preserver Powder zmniejsza czas psucia się o połowę i neguje kary za zepsute jedzenie."
@@ -171,6 +172,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Pozostawienie do wyschnięcia na dłu�
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Użyj, aby zapalić Tort Rocznicowy i rozpocząć imprezę!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Umożliwia gromadzenie się w celu świętowania rocznicy.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Specjalny kapelusz rocznicowy Sammy'ego.\nPozwala na zdobycie radości rocznicowej.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_PARTITIOHAT = "Specjalny kapelusz rocznicowy Partitio'ego.\nPozwala na zdobycie radości rocznicowej.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Badania ryb i ikry przyczyniają się do wzbogacenia Rejestru Ryb."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Ogromne jajko, którym można rzucać lub które można wykluć.\n\nZmniejsza obrażenia zadawane przez cel oraz jego prędkość ruchu o 10% na 20 sekund. Efekt kumuluje się do 3 razy, maksymalnie do 30%.\n\n\"Nawet jajka są bronią na polu bitwy!\" - Wigfrid."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Można wykluć się w pobliżu źródła ciepła."

@@ -92,6 +92,9 @@ WATHGRITHR.ANNOUNCE_KYNO_LUCKBUFF_END = "Fate has withdrawn its favor!"
 WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "The fields shall yield plentiful bounty!"
 WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The fertile blessing hath faded!"
 
+WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_START = "The storm reneweth my spirit!"
+WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_END = "The blessing of the rain hath faded!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wrong feast! Beast wants a more delightful food!"
@@ -1200,6 +1203,7 @@ WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Corn that bursts into battle with heat! Ha!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "This hat carries no warrior's honor... but I shall wear it proudly!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "A warrior's helm!"
+WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "A warrior's helm!"
 
 WATHGRITHR.DESCRIBE.KYNO_FISHREGISTRYHAT = "A thinking hat for those who face the creatures of the sea!"
 
@@ -1277,6 +1281,10 @@ WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
 WATHGRITHR.DESCRIBE.MANDRAKEBAOBUNS = "A warrior's bun of mystical roots!"
 
 WATHGRITHR.DESCRIBE.MANDRAKEPIE = "A heroic pastry of enchanted root!"
+
+WATHGRITHR.DESCRIBE.MANDRAKEBEER = "A frothy draught without the glory of mead!"
+
+WATHGRITHR.DESCRIBE.RAINPARFAIT = "A chilled feast blessed by the storm!"
 
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A tonic for the growth of mighty crops!"
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "It fortifies the spirit of the plants!"

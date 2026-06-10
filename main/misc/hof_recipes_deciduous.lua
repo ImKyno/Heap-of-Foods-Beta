@@ -119,6 +119,40 @@ Ingredient("kyno_pigcoin3", 5, ModAtlas)}, TECH.LOST,
 	{"CRAFTING_STATION"}
 )
 
+AddRecipe2("deciduoustrader_kyno_white_cap", {Ingredient("kyno_pigcoin1", 1, ModAtlas)}, TECH.LOST,
+	{
+		limitedamount       = true,
+		nounlock            = true,
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSDECIDUOUSSHOP",
+		actionstr           = "DECIDUOUSSHOP",
+		numtogive           = 2,
+		description         = "kyno_white_cap_d",
+		sg_state            = "give",
+		product             = "kyno_white_cap",
+		atlas               = ModAtlas,
+		image               = "kyno_white_cap.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
+AddRecipe2("deciduoustrader_kyno_truffles", {Ingredient("kyno_pigcoin2", 1, ModAtlas)}, TECH.LOST,
+	{
+		limitedamount       = true,
+		nounlock            = true,
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSDECIDUOUSSHOP",
+		actionstr           = "DECIDUOUSSHOP",
+		numtogive           = 2,
+		description         = "kyno_truffles_d",
+		sg_state            = "give",
+		product             = "kyno_truffles",
+		atlas               = ModAtlas,
+		image               = "kyno_truffles.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
 CONSTRUCTION_PLANS["kyno_deciduousforest_shop"] =
 {
 	Ingredient("kyno_truffles",          20, ModAtlas, nil),

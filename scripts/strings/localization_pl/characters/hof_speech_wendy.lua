@@ -92,6 +92,9 @@ WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Nawet ulotne szczęście przemija."
 WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Ziemia oferuje swoją ulotną obfitość."
 WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Hojność natury znów przeminęła."
 
+WENDY.ANNOUNCE_KYNO_WETNESSBUFF_START = "Deszcz zmywa moje troski."
+WENDY.ANNOUNCE_KYNO_WETNESSBUFF_END = "Pocieszenie deszczu przeminęło."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może warto coś zebrać?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Oczywiście, że nie tego chce to głupie stworzenie."
@@ -1200,6 +1203,7 @@ WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Wybucha... a potem znika... jak ulotne szczęście."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Symbol wymuszonej radości... jakże trafne."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Dla Sammy'ego... tego, który stoi ponad innymi..."
+WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Dla Partitio'ego... tego, który wyróżnia się spośród innych..."
 
 WENDY.DESCRIBE.KYNO_FISHREGISTRYHAT = "Zapisuje życie dryfujące cicho pod falami."
 
@@ -1277,6 +1281,10 @@ WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
 WENDY.DESCRIBE.MANDRAKEBAOBUNS = "Cichy posiłek dla zmęczonych dusz."
 
 WENDY.DESCRIBE.MANDRAKEPIE = "Pocieszający kawałek wyczerpania."
+
+WENDY.DESCRIBE.MANDRAKEBEER = "Przemijająca słodycz w gorzkim świecie."
+
+WENDY.DESCRIBE.RAINPARFAIT = "Mała pociecha pod ponurym niebem."
 
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Tymczasowy dar dla skazanych roślin."
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Daremna próba zachowania życia."

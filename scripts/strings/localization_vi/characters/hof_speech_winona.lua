@@ -92,6 +92,9 @@ WINONA.ANNOUNCE_KYNO_LUCKBUFF_END = "Được rồi, quay lại tỷ lệ thật
 WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Đây mới gọi là thu hoạch hiệu quả."
 WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Trở lại sản xuất bình thường."
 
+WINONA.ANNOUNCE_KYNO_WETNESSBUFF_START = "Có vẻ mưa đang giúp tôi giữ vững tinh thần."
+WINONA.ANNOUNCE_KYNO_WETNESSBUFF_END = "Cảm giác dễ chịu đó biến mất rồi."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không, chắc phải thứ khác."
@@ -1200,6 +1203,7 @@ WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Đây mới là nhiên liệu tiệc tùng thật sự!"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Tới lúc bắt đầu bữa tiệc rồi!"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Đặt làm riêng! Sammy đúng là một phần của đội rồi ha?"
+WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Được làm riêng! Partitio thực sự là một phần của đội nhỉ?"
 
 WINONA.DESCRIBE.KYNO_FISHREGISTRYHAT = "Tốt để học quy luật. Cá cũng có cả đống quy luật."
 
@@ -1277,6 +1281,10 @@ WINONA.DESCRIBE.KYNO_ELDERMANDRAKE =
 WINONA.DESCRIBE.MANDRAKEBAOBUNS = "Một bữa ăn cầm tay khá tiện."
 
 WINONA.DESCRIBE.MANDRAKEPIE = "Đúng là tay nghề nướng bánh đỉnh cao."
+
+WINONA.DESCRIBE.MANDRAKEBEER = "Lạnh, có ga và rất hiệu quả."
+
+WINONA.DESCRIBE.RAINPARFAIT = "Ngon và rất sảng khoái."
 
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một chất kích thích tăng trưởng rất thực tế."
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ cây trồng hoạt động tốt."

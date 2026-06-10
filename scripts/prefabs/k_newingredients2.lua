@@ -94,6 +94,9 @@ local function tuber_cookedfn()
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
 
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.MED_FUEL
+
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_CAVETUBER_COOKED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_CAVETUBER_COOKED_HUNGER
@@ -197,6 +200,9 @@ local function tuber_blooming_cookedfn()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
+
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.MED_LARGE_FUEL
 
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_CAVETUBER_BLOOMING_COOKED_HEALTH

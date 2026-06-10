@@ -92,6 +92,9 @@ WAXWELL.ANNOUNCE_KYNO_LUCKBUFF_END = "Previsível. A sorte nunca dura."
 WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Finalmente, algo produtivo."
 WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "O momento passou."
 
+WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_START = "O clima está estranhamente estimulante."
+WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_END = "A sensação desapareceu."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de algo diferente."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Você não é fácil, hein?"
@@ -1200,6 +1203,7 @@ WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Um agrado surpreendentemente bom para algo tão simples."
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Eu realmente preciso usar isso? Hmph..."
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Ah, então a criaturinha acha que é especial?"
+WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Ah, então a criaturinha acha que é especial?"
 
 WAXWELL.DESCRIBE.KYNO_FISHREGISTRYHAT = "Conhecimento é poder. Mesmo quando envolve peixes."
 
@@ -1277,6 +1281,10 @@ WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKE =
 WAXWELL.DESCRIBE.MANDRAKEBAOBUNS = "Pelo menos parece apresentável."
 
 WAXWELL.DESCRIBE.MANDRAKEPIE = "Suponho que isso sirva como sobremesa."
+
+WAXWELL.DESCRIBE.MANDRAKEBEER = "Surpreendentemente refinada."
+
+WAXWELL.DESCRIBE.RAINPARFAIT = "Pelo menos a chuva serve para alguma coisa."
 
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um atalho para jardineiros impacientes."
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Manter plantas vivas exige esforço, aparentemente."

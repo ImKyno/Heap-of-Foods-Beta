@@ -92,6 +92,9 @@ WILSON.ANNOUNCE_KYNO_LUCKBUFF_END = "Có vẻ vận may của mình đã cạn."
 WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Tôi đã sẵn sàng cho một mùa bội thu!"
 WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Mùa thu hoạch kết thúc rồi!"
 
+WILSON.ANNOUNCE_KYNO_WETNESSBUFF_START = "Cơn mưa thật dễ chịu."
+WILSON.ANNOUNCE_KYNO_WETNESSBUFF_END = "Cảm giác thư thái đã biến mất."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái này."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ông ấy muốn thứ khác."
@@ -1200,6 +1203,7 @@ WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Bắp rang cho một bữa tiệc lớn!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Không gì nói lên tiệc tùng bằng một cái mũ nhọn!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Khoan đã. Sao chỉ mình ông ấy có mũ đặc biệt?"
+WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Khoan đã. Sao chỉ mình ông ấy có mũ đặc biệt?"
 
 WILSON.DESCRIBE.KYNO_FISHREGISTRYHAT = "Một chiếc mũ thực dụng dành cho người câu cá tận tâm."
 
@@ -1277,6 +1281,10 @@ WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
 WILSON.DESCRIBE.MANDRAKEBAOBUNS = "Một loại bánh mì khiến người ta buồn ngủ kỳ lạ."
 
 WILSON.DESCRIBE.MANDRAKEPIE = "Một chiếc bánh với nhân cực kỳ gây buồn ngủ."
+
+WILSON.DESCRIBE.MANDRAKEBEER = "Một thức uống giải khát được ủ từ rễ cây."
+
+WILSON.DESCRIBE.RAINPARFAIT = "Thời tiết hôm nay thật parfait."
 
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một loại phân bón nhân tạo có khả năng thúc đẩy tăng trưởng."
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giúp cây cối của tôi luôn khỏe mạnh và tươi tốt!"

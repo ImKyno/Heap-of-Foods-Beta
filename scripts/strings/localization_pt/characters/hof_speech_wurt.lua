@@ -92,6 +92,9 @@ WURT.ANNOUNCE_KYNO_LUCKBUFF_END = "Sorte acabou, florp..."
 WURT.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Tantas plantas, florp!"
 WURT.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Agora não tem tantas plantas."
 
+WURT.ANNOUNCE_KYNO_WETNESSBUFF_START = "Chuva deixa eu feliz, florp!"
+WURT.ANNOUNCE_KYNO_WETNESSBUFF_END = "Chuva não deixa mais feliz, florp."
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Peixes bonitinhos sempre estão no pantano!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... errado..."
@@ -1202,6 +1205,7 @@ WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Milho faz pop! Comida engraçada, florpt!"
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Chapéu de aniversário pra mim? Florp!"
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Só Sammy usa isso? Sortudo, florp!"
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Por que porquinho ruim ganha chapéu chique?"
 
 WURT.DESCRIBE.KYNO_FISHREGISTRYHAT = "Chapéu ajuda a aprender sobre peixes-amigos! Florp!"
 
@@ -1279,6 +1283,10 @@ WURT.DESCRIBE.KYNO_ELDERMANDRAKE =
 WURT.DESCRIBE.MANDRAKEBAOBUNS = "Lanche de pão macio, florp!"
 
 WURT.DESCRIBE.MANDRAKEPIE = "Tem carne, glorp!"
+
+WURT.DESCRIBE.MANDRAKEBEER = "Bebida com bolhinhas, florp!"
+
+WURT.DESCRIBE.RAINPARFAIT = "Lanche chuvoso, florp!"
 
 WURT.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Faz plantas crescerem, florp!"
 WURT.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Plantas saudáveis são plantas boas."

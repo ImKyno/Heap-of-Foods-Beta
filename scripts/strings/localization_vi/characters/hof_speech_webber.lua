@@ -92,6 +92,9 @@ WEBBER.ANNOUNCE_KYNO_LUCKBUFF_END = "Aww... may mắn của tụi mình đi mấ
 WEBBER.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wow! Chúng ta đang thu được cả đống cây!"
 WEBBER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Chắc cây thêm giờ hết rồi."
 
+WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_START = "Hôm nay tụi mình thích mưa lắm!"
+WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Mưa không còn cảm giác đặc biệt nữa."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái này."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Tụi mình nghĩ đây không phải món ông ấy muốn."
@@ -1200,6 +1203,7 @@ WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Nó nổ lốp bốp trong miệng tụi mình! Vui ghê!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Tụi mình thích mũ tiệc!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Chỉ dành cho Sammy!"
+WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Chỉ dành cho Partitio thôi!"
 
 WEBBER.DESCRIBE.KYNO_FISHREGISTRYHAT = "Tụi mình có thể học mọi thứ về cá với cái này!"
 
@@ -1277,6 +1281,10 @@ WEBBER.DESCRIBE.KYNO_ELDERMANDRAKE =
 WEBBER.DESCRIBE.MANDRAKEBAOBUNS = "Chúng mềm mềm và ngon nữa!"
 
 WEBBER.DESCRIBE.MANDRAKEPIE = "Bọn tôi muốn thêm một miếng nữa!"
+
+WEBBER.DESCRIBE.MANDRAKEBEER = "Nó làm mũi tụi mình nhột nhột!"
+
+WEBBER.DESCRIBE.RAINPARFAIT = "Nó ngon hơn nhiều khi trời mưa!"
 
 WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Nó giúp cây lớn hơn!"
 WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Cây khỏe là cây vui."

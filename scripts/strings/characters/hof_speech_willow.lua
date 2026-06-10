@@ -92,6 +92,9 @@ WILLOW.ANNOUNCE_KYNO_LUCKBUFF_END = "Great. Back to normal bad luck."
 WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Time to grab all the plants before they burn!"
 WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Aw, the fun's over already?"
 
+WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_START = "Huh. Being wet isn't so bad this time."
+WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_END = "Okay, now I hate being wet again."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need to put something in here!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, wrong thing!"
@@ -1200,6 +1203,7 @@ WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Fire made these go pop! My kind of snack."
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "It's more fun if it catches fire."
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy gets his own hat? Hmph. Fine. It's cute."
+WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Partitio gets his own hat? Hmph. Fine. It's cute."
 
 WILLOW.DESCRIBE.KYNO_FISHREGISTRYHAT = "Guess I gotta know my fish before I burn them."
 
@@ -1277,6 +1281,10 @@ WILLOW.DESCRIBE.KYNO_ELDERMANDRAKE =
 WILLOW.DESCRIBE.MANDRAKEBAOBUNS = "Warm buns stuffed with screamy root."
 
 WILLOW.DESCRIBE.MANDRAKEPIE = "Sleepy pie. Great."
+
+WILLOW.DESCRIBE.MANDRAKEBEER = "No actual beer, but it's still pretty good."
+
+WILLOW.DESCRIBE.RAINPARFAIT = "A parfait for rainy days. Weird."
 
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Makes plants grow. Boring."
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps plants alive longer."

@@ -92,6 +92,9 @@ WANDA.ANNOUNCE_KYNO_LUCKBUFF_END = "I tak po prostu... koniec."
 WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Doskonale. Więcej plonów w krótszym czasie."
 WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Wzmocnienie wydajności wygasło."
 
+WANDA.ANNOUNCE_KYNO_WETNESSBUFF_START = "Interesujące. Ta wilgoć jest całkiem uspokajająca."
+WANDA.ANNOUNCE_KYNO_WETNESSBUFF_END = "Efekt dobiegł końca."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie... Potrzebuję czegoś innego."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Chyba mam trochę czasu, żeby kupić ci homara."
@@ -1200,6 +1203,7 @@ WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Lepiej zjeść, zanim stanie się nieświeży... jak czas."
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Cóż... nawet podróżnicy w czasie mogą świętować."
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Czas sprzyja tym z wyjątkowym stylem, jak Sammy."
+WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Czas sprzyja tym o wyjątkowym stylu, takim jak Partitio."
 
 WANDA.DESCRIBE.KYNO_FISHREGISTRYHAT = "Przynajmniej pomaga mi pamiętać, czego już się nauczyłam."
 
@@ -1277,6 +1281,10 @@ WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
 WANDA.DESCRIBE.MANDRAKEBAOBUNS = "Dość szybkie do zjedzenia w biegu."
 
 WANDA.DESCRIBE.MANDRAKEPIE = "Mam nadzieję, że mnie to nie spowolni."
+
+WANDA.DESCRIBE.MANDRAKEBEER = "Przynajmniej jest orzeźwiające."
+
+WANDA.DESCRIBE.RAINPARFAIT = "Przynajmniej deszcz coś poprawia."
 
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Przydatny sposób na oszczędzanie czasu."
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Zdrowe rośliny to wydajne rośliny."

@@ -92,6 +92,9 @@ WANDA.ANNOUNCE_KYNO_LUCKBUFF_END = "And just like that... it ends."
 WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Excellent. More yields in less time."
 WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The efficiency boost expired."
 
+WANDA.ANNOUNCE_KYNO_WETNESSBUFF_START = "Interesting. The moisture is quite calming."
+WANDA.ANNOUNCE_KYNO_WETNESSBUFF_END = "The effect has run its course."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "No... I need something different."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I guess I have some time to get a wobster for you."
@@ -1200,6 +1203,7 @@ WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "It's best eaten before it gets stale... like time itself."
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Well... I suppose even time travelers can celebrate."
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Time favors those with exclusive style, like Sammy."
+WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Time favors those with exclusive style, like Partitio."
 
 WANDA.DESCRIBE.KYNO_FISHREGISTRYHAT = "At least this helps me remember what I've already learned."
 
@@ -1277,6 +1281,10 @@ WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
 WANDA.DESCRIBE.MANDRAKEBAOBUNS = "Quick enough to eat on the move."
 
 WANDA.DESCRIBE.MANDRAKEPIE = "Hopefully this doesn't slow me down."
+
+WANDA.DESCRIBE.MANDRAKEBEER = "At least it's refreshing."
+
+WANDA.DESCRIBE.RAINPARFAIT = "At least rain improves something."
 
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A useful way to save time."
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Healthy plants are efficient plants."

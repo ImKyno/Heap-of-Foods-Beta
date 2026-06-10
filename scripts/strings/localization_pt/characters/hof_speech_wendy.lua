@@ -92,6 +92,9 @@ WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Até a sorte passageira desaparece."
 WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "A terra oferece sua abundância passageira."
 WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "A generosidade da natureza desaparece mais uma vez."
 
+WENDY.ANNOUNCE_KYNO_WETNESSBUFF_START = "A chuva leva embora minhas preocupações."
+WENDY.ANNOUNCE_KYNO_WETNESSBUFF_END = "O conforto da chuva passou."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."
@@ -1200,6 +1203,7 @@ WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Ela estoura... e depois é comida... como todas as alegrias passageiras."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Um símbolo de alegria forçada... que irônico."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Para Sammy... aquele que se destaca dos demais..."
+WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Para Partitio... aquele que se destaca dos demais..."
 
 WENDY.DESCRIBE.KYNO_FISHREGISTRYHAT = "Ele registra as vidas que deslizam silenciosas sob as ondas."
 
@@ -1277,6 +1281,10 @@ WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
 WENDY.DESCRIBE.MANDRAKEBAOBUNS = "Uma refeição silenciosa para almas cansadas."
 
 WENDY.DESCRIBE.MANDRAKEPIE = "Uma reconfortante fatia de exaustão."
+
+WENDY.DESCRIBE.MANDRAKEBEER = "Uma doçura passageira em um mundo amargo."
+
+WENDY.DESCRIBE.RAINPARFAIT = "Um pequeno conforto sob céus melancólicos."
 
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um presente temporário para plantas condenadas."
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Uma tentativa inútil de preservar a vida."

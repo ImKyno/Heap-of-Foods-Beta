@@ -92,6 +92,9 @@ WOODIE.ANNOUNCE_KYNO_LUCKBUFF_END = "Chà, lúc còn hiệu lực thì cũng hay
 WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Đó mới là một vụ mùa đúng nghĩa, eh?"
 WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Quay lại hái bình thường thôi."
 
+WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_START = "Một chút mưa làm nên điều kỳ diệu đấy, eh?"
+WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "Trở lại bình thường rồi."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để nhấc nó lên?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không. Ông ấy muốn thứ khác."
@@ -1200,6 +1203,7 @@ WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Hoàn hảo để ăn mừng, eh?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Chà, trông đúng là lễ hội đó, eh?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Cũng dễ thương đấy."
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Cũng dễ thương đấy."
 
 WOODIE.DESCRIBE.KYNO_FISHREGISTRYHAT = "Giúp mình nhớ đủ loại cá khác nhau."
 
@@ -1277,6 +1281,10 @@ WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
 WOODIE.DESCRIBE.MANDRAKEBAOBUNS = "Ngửi ngon phết đó, eh?"
 
 WOODIE.DESCRIBE.MANDRAKEPIE = "Không gì ngon hơn bánh pie mới nướng, eh?"
+
+WOODIE.DESCRIBE.MANDRAKEBEER = "Có vị như thiên nhiên hoang dã vậy, eh?"
+
+WOODIE.DESCRIBE.RAINPARFAIT = "Món ăn vặt tuyệt vời cho thời tiết ẩm ướt, eh?"
 
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Giúp cây lớn nhanh hơn, hả?"
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ chúng khỏe mạnh và vui vẻ."

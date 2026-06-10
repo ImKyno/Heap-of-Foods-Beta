@@ -21,7 +21,7 @@ function containers.widgetsetup(container, prefab, data, ...)
 
 	if t ~= nil then
 		for k, v in pairs(t) do
-			container[k]	= v
+			container[k] = v
 		end
 
 		container:SetNumSlots(container.widget.slotpos ~= nil and #container.widget.slotpos or 0)

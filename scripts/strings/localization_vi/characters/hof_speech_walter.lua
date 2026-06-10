@@ -92,6 +92,9 @@ WALTER.ANNOUNCE_KYNO_LUCKBUFF_END = "Chắc chuỗi may mắn kết thúc rồi.
 WALTER.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Có vẻ mùa thu hoạch đến sớm rồi đó, Woby!"
 WALTER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Mùa thu hoạch lớn giờ kết thúc rồi."
 
+WALTER.ANNOUNCE_KYNO_WETNESSBUFF_START = "Cơn mưa này thực sự nâng cao tinh thần của mình, Woby!"
+WALTER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Chắc cảm giác đó đã hết rồi."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai món rồi!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, không phải cái này."
@@ -1200,6 +1203,7 @@ WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Tuyệt cho chuyện lửa trại và tiệc tùng!"
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Hoàn hảo cho một buổi tụ họp vui vẻ!"
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Trang bị đặc biệt từ người bạn nhỏ đặc biệt của tụi mình!"
+WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Trang bị đặc biệt từ người bạn nhỏ đặc biệt của tụi mình!"
 
 WALTER.DESCRIBE.KYNO_FISHREGISTRYHAT = "Rất hợp để ghi lại những loài cá cậu tìm thấy."
 
@@ -1277,6 +1281,10 @@ WALTER.DESCRIBE.KYNO_ELDERMANDRAKE =
 WALTER.DESCRIBE.MANDRAKEBAOBUNS = "Hoàn hảo cho những chuyến đi đường dài."
 
 WALTER.DESCRIBE.MANDRAKEPIE = "Bánh pie lúc nào cũng ngon hơn ngoài trời."
+
+WALTER.DESCRIBE.MANDRAKEBEER = "Hoàn hảo sau một chuyến đi bộ dài."
+
+WALTER.DESCRIBE.RAINPARFAIT = "Món này sẽ tuyệt lắm trong một cơn bão."
 
 WALTER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Hoàn hảo để trồng thêm nguồn cung ngoài thiên nhiên."
 WALTER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ khu vườn luôn trong tình trạng tốt nhất."

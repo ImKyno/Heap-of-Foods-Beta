@@ -92,6 +92,9 @@ WEBBER.ANNOUNCE_KYNO_LUCKBUFF_END = "Aww... our luck went away."
 WEBBER.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wow! We're getting tons of plants!"
 WEBBER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Guess the extra plants are gone now."
 
+WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_START = "We like the rain today!"
+WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_END = "The rain doesn't feel special anymore."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Not this one."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "We think this isn't the correct meal he wants."
@@ -1200,6 +1203,7 @@ WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "It pops in our mouth! Fun!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "We love party hats!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Just for Sammy!"
+WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Just for Partitio!"
 
 WEBBER.DESCRIBE.KYNO_FISHREGISTRYHAT = "We can learn all about fish with this!"
 
@@ -1277,6 +1281,10 @@ WEBBER.DESCRIBE.KYNO_ELDERMANDRAKE =
 WEBBER.DESCRIBE.MANDRAKEBAOBUNS = "They're squishy and tasty!"
 
 WEBBER.DESCRIBE.MANDRAKEPIE = "We want another slice!"
+
+WEBBER.DESCRIBE.MANDRAKEBEER = "It tickles our noses!"
+
+WEBBER.DESCRIBE.RAINPARFAIT = "It's extra yummy when it's raining!"
 
 WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "It helps plants grow bigger!"
 WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Healthy plants are happy plants."

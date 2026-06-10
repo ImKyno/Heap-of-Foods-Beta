@@ -92,6 +92,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_LUCKBUFF_END = "The statistical advantage has expired
 WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Ah, my horticultural expertise is flourishing."
 WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The botanical surge appears to have subsided."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_START = "The rain is remarkably refreshing."
+WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_END = "Its restorative effects have ceased."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It requires something else."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. I think he said something about wobsters."
@@ -1200,6 +1203,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "The heat causes the moisture inside to rapidly expand. Fascinating!"
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "A traditional celebratory cone-shaped accessory."
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "A custom-made party accessory."
+WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "A custom-made party accessory."
 
 WICKERBOTTOM.DESCRIBE.KYNO_FISHREGISTRYHAT = "A useful headwear for the systematic study of fish species."
 
@@ -1277,6 +1281,10 @@ WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
 WICKERBOTTOM.DESCRIBE.MANDRAKEBAOBUNS = "An unusual but filling culinary creation."
 
 WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "The mandrake adds a peculiar aroma."
+
+WICKERBOTTOM.DESCRIBE.MANDRAKEBEER = "A pleasantly effervescent soft drink."
+
+WICKERBOTTOM.DESCRIBE.RAINPARFAIT = "The watermelon lends it a refreshing quality."
 
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A fertilizer formulated to stimulate development."
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Useful for maintaining healthy crops."

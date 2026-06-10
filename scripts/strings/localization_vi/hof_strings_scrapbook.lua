@@ -128,6 +128,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Tăng năng suất cây 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Tăng năng suất cây trồng trong một khoảng thời gian nhất định.\n\Tạm thời giảm nhiệt độ."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Trấn an các sinh vật xung quanh người sống sót."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Tăng 15% hiệu quả hồi máu trong một khoảng thời gian. Không áp dụng cho hồi máu hút máu."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINY = "Hồi phục tinh thần theo thời gian khi trời mưa hoặc khi độ ướt đủ cao."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Có thể được thêm vào món Nồi Nấu bằng Trạm Nêm Gia Vị Di Động.\n\nĂn món được nêm Bột Bảo Quản sẽ giảm một nửa tốc độ hư hỏng và loại bỏ hình phạt từ thức ăn hỏng."
@@ -171,6 +172,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Để nó phơi khô lâu hơn sẽ ti
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Dùng nó để thắp sáng Bánh Kỷ Niệm và bắt đầu bữa tiệc!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Cho phép thu thập Niềm Vui Kỷ Niệm.\n\nMừng Kỷ Niệm 5 Năm Vua Đầu Bếp!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Chiếc mũ kỷ niệm đặc biệt của Sammy.\nCho phép nhận Niềm Vui Kỷ Niệm.\n\nMừng Kỷ Niệm 5 Năm Vua Đầu Bếp!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_PARTITIOHAT = "Chiếc mũ kỷ niệm đặc biệt của Partitio.\nCho phép nhận Niềm Vui Kỷ Niệm.\n\nMừng Kỷ Niệm 5 Năm Vua Đầu Bếp!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Nghiên cứu cá và trứng cá sẽ thêm chúng vào Sổ Cá."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Một quả trứng quá khổ có thể ném hoặc ấp nở.\n\nGiảm sát thương và tốc độ di chuyển của mục tiêu 10% trong 20 giây. Hiệu ứng cộng dồn tối đa 3 lần, tổng cộng 30%.\n\n\"Ngay cả trứng cũng là vũ khí trên chiến trường!\" - Wigfrid."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Có thể được ấp nở khi ở gần nguồn nhiệt."

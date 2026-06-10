@@ -546,7 +546,7 @@ AddRecipe2("kyno_dailyrecipe_sign", {Ingredient("boards", 1), Ingredient("papyru
 	{"STRUCTURES", "COOKING"}
 )
 
-AddRecipe2("kyno_eldermandrakehouse", {Ingredient("boards", 4), Ingredient("cutreeds", 6), Ingredient("mandrake", 2)}, TECH.SCIENCE_TWO,
+AddRecipe2("kyno_eldermandrakehouse", {Ingredient("boards", 4), Ingredient("kyno_cavetuber", 6, ModAtlas), Ingredient("mandrake", 2)}, TECH.SCIENCE_TWO,
 	{
 		placer              = "kyno_eldermandrakehouse_placer",
 		min_spacing         = 4,
