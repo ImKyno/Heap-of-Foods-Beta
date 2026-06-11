@@ -320,7 +320,6 @@ function c_hoffishroes()
 		c_give("kyno_roe_jellyfish_rainbow",    40, true)
 		c_give("kyno_roe_salmonfish",           40, true)
 		c_give("kyno_roe_koi",                  40, true)
-		c_give("kyno_roe_antchovy",             40, true)
 		c_give("kyno_roe_oceanfish_small_1",    40, true)
 		c_give("kyno_roe_oceanfish_small_2",    40, true)
 		c_give("kyno_roe_oceanfish_small_3",    40, true)
@@ -469,7 +468,6 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"kyno_chicken2",
 		"kyno_chicken2_herd",
 		"kyno_cookware_elder",
-		"kyno_flup_spawner",
 		"kyno_koi",
 		"kyno_kokonuttree",
 		"kyno_limpetrock",
@@ -531,7 +529,6 @@ function c_hofremoveisland(layoutname, marker_tag, max_jump, floodagain)
 		"kyno_chicken2",
 		"kyno_chicken2_herd",
 		"kyno_cookware_elder",
-		"kyno_flup_spawner",
 		"kyno_koi",
 		"kyno_kokonuttree",
 		"kyno_limpetrock",

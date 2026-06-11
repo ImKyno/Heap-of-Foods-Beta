@@ -2,7 +2,7 @@ local map = require("map/forest_map")
 local WSO = require("worldsettings_overrides")
 
 local customizations_worldsettings =
-{	
+{
 	-- GLOBALSETTINGS
 	hofbirthday              = { desc = "extraevent_descriptions", group = "hof_world_r",     order = 0,   masteroption = true, master_controlled = true },
 	oceanhunts_setting       = { desc = "frequency_descriptions",  group = "hof_world_r",     order = 1,   world = { "forest" }},
@@ -11,18 +11,19 @@ local customizations_worldsettings =
 	-- WORLDSETTING
 	aloes_setting            = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 0,   world = { "forest" }},
 	asparaguses_setting      = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 1,   world = { "forest", "cave" }},
-	coffeebushes_setting     = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 2,   world = { "forest", "cave" }},
-	fennels_setting          = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 3,   world = { "cave" }},
-	giantparznips_setting    = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 4,   world = { "cave" }},
-	mushstumps_setting       = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 5,   world = { "forest", "cave" }},
-	truffles_setting         = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 6,   world = { "forest" }},
-	parznips_setting         = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 7,   world = { "cave" }},
-	radishes_setting         = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 8,   world = { "forest" }},
-	rockflippables_setting   = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 9,   world = { "forest", "cave" }},
-	sweetpotatoes_setting    = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 10,  world = { "forest" }},
-	turnips_setting          = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 11,  world = { "forest", "cave" }},
-	wildwheats_setting       = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 12,  world = { "forest" }},
-	
+	cavetubertrees_setting   = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 3,   world = { "cave" }},
+	coffeebushes_setting     = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 4,   world = { "forest", "cave" }},
+	fennels_setting          = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 5,   world = { "cave" }},
+	giantparznips_setting    = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 6,   world = { "cave" }},
+	mushstumps_setting       = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 7,   world = { "forest", "cave" }},
+	truffles_setting         = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 8,   world = { "forest" }},
+	parznips_setting         = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 9,   world = { "cave" }},
+	radishes_setting         = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 10,  world = { "forest" }},
+	rockflippables_setting   = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 11,  world = { "forest", "cave" }},
+	sweetpotatoes_setting    = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 12,  world = { "forest" }},
+	turnips_setting          = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 13,  world = { "forest", "cave" }},
+	wildwheats_setting       = { desc = "speed_descriptions",      group = "hof_regrow_r",    order = 14,  world = { "forest" }},
+
 	-- OCEANSETTING
 	brainrocks_setting       = { desc = "speed_descriptions",      group = "hof_ocean_r",     order = 7,   world = { "forest" }},
 	lotusplants_setting      = { desc = "speed_descriptions",      group = "hof_ocean_r",     order = 0,   world = { "forest" }},
@@ -32,37 +33,38 @@ local customizations_worldsettings =
 	taroroots_setting        = { desc = "speed_descriptions",      group = "hof_ocean_r",     order = 4,   world = { "forest" }},
 	waterycresses_setting    = { desc = "speed_descriptions",      group = "hof_ocean_r",     order = 5,   world = { "forest" }},
 	weedsea_setting          = { desc = "speed_descriptions",      group = "hof_ocean_r",     order = 6,   world = { "forest" }},
-	
+
 	-- SERENITYSETTING
-    saltponds_setting        = { desc = "speed_descriptions",      group = "hof_serenity_r",  order = 0,   world = { "forest" }},
+	saltponds_setting        = { desc = "speed_descriptions",      group = "hof_serenity_r",  order = 0,   world = { "forest" }},
 	spotbushes_setting       = { desc = "speed_descriptions",      group = "hof_serenity_r",  order = 1,   world = { "forest" }},
 	sugarflowers_setting     = { desc = "speed_descriptions",      group = "hof_serenity_r",  order = 2,   world = { "forest" }},
 	sugartrees_setting       = { desc = "speed_descriptions",      group = "hof_serenity_r",  order = 3,   world = { "forest" }},
 	sapsugartrees_setting    = { desc = "speed_descriptions",      group = "hof_serenity_r",  order = 4,   world = { "forest" }},
 	sap2sugartrees_setting   = { desc = "speed_descriptions",      group = "hof_serenity_r",  order = 5,   world = { "forest" }},
 	ruinedsugartrees_setting = { desc = "yesno_descriptions",      group = "hof_serenity_r",  order = 6,   world = { "forest" }},
-	
+
 	-- MEADOWSETTING
 	islandcrates_setting     = { desc = "speed_descriptions",      group = "hof_meadow_r",    order = 0,   world = { "forest" }},
 	kokonuttrees_setting     = { desc = "speed_descriptions",      group = "hof_meadow_r",    order = 2,   world = { "forest" }},
 	limpetrocks_setting      = { desc = "speed_descriptions",      group = "hof_meadow_r",    order = 1,   world = { "forest" }},
 	pineapplebushes_setting  = { desc = "speed_descriptions",      group = "hof_meadow_r",    order = 4,   world = { "forest" }},
-    sandhills_setting        = { desc = "speed_descriptions",      group = "hof_meadow_r",    order = 5,   world = { "forest" }},
+	sandhills_setting        = { desc = "speed_descriptions",      group = "hof_meadow_r",    order = 5,   world = { "forest" }},
 	teatrees_setting         = { desc = "speed_descriptions",      group = "hof_meadow_r",    order = 3,   world = { "forest" }},
-	
+
 	-- CREATURESETTING
 	chickens_setting         = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 0,   world = { "forest" }},
-	dogfishes_setting        = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 9,   world = { "forest" }},
-	fishermerms_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 5,   world = { "forest" }},
-	hermitwobsters_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 8,   world = { "forest" }},
-	jellyfishes_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 6,   world = { "forest" }},
-	jellyfishes2_setting     = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 7,   world = { "forest" }},
-	pebblecrabs_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 1,   world = { "forest" }},
-	pikos_setting            = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 3,   world = { "forest" }},
-	pikosorange_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 4,   world = { "forest" }},
-	puffermonsters_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 11,  world = { "forest" }},
-	sugarflies_setting       = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 2,   world = { "forest" }},
-	swordfishes_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 10,  world = { "forest" }},
+	dogfishes_setting        = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 1,   world = { "forest" }},
+	eldermandrakes_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 2,   world = { "forest", "cave" }},
+	fishermerms_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 3,   world = { "forest" }},
+	hermitwobsters_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 4,   world = { "forest" }},
+	jellyfishes_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 5,   world = { "forest" }},
+	jellyfishes2_setting     = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 10,  world = { "forest" }},
+	pebblecrabs_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 7,   world = { "forest" }},
+	pikos_setting            = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 8,   world = { "forest" }},
+	pikosorange_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 6,   world = { "forest" }},
+	puffermonsters_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 9,   world = { "forest" }},
+	sugarflies_setting       = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 11,  world = { "forest" }},
+	swordfishes_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 12,  world = { "forest" }},
 }
 
 local function OverrideTuningVariables(tuning)
@@ -85,14 +87,14 @@ local SPAWN_MODE_FN =
 local function SetSpawnMode(spawner, difficulty)
 	if spawner ~= nil then
 		local fn_name = SPAWN_MODE_FN[difficulty]
-		
+
 		if fn_name then
 			spawner[fn_name](spawner)
 		end
 	end
 end
 
-local MULTIPLY = 
+local MULTIPLY =
 {
 	["never"]    = 0,
 	["veryrare"] = 0.25,
@@ -104,7 +106,7 @@ local MULTIPLY =
 	["always"]   = 2,
 	["insane"]   = 4,
 }
-local MULTIPLY_COOLDOWNS = 
+local MULTIPLY_COOLDOWNS =
 {
 	["never"]    = 0,
 	["veryrare"] = 2,
@@ -122,7 +124,7 @@ WSO.Pre.hofbirthday = function(difficulty)
 	local tuning_vars =
 	{
 		enabled =
-		{ 
+		{
 			HOF_SPECIAL_EVENTS_BIRTHDAY = true,
 		},
 	}
@@ -134,1582 +136,1646 @@ end
 WSO.Pre.oceanhunts_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			WATERFOWLHUNT_COOLDOWN = -1,
 			WATERFOWLHUNT_COOLDOWN_DEVIATION = 0,
 			WATERFOWLHUNT_RESET_TIME = 0,
 		},
 
-		few = 
+		few =
 		{
 			WATERFOWLHUNT_COOLDOWN = TUNING.TOTAL_DAY_TIME * 2.5,
 			WATERFOWLHUNT_COOLDOWN_DEVIATION = TUNING.TOTAL_DAY_TIME * 0.4,
 			WATERFOWLHUNT_RESET_TIME = 5,
 		},
-		
-		many = 
+
+		many =
 		{
 			WATERFOWLHUNT_COOLDOWN = TUNING.TOTAL_DAY_TIME * 1.2,
 			WATERFOWLHUNT_COOLDOWN_DEVIATION = TUNING.TOTAL_DAY_TIME * 0.2,
 			WATERFOWLHUNT_RESET_TIME = 5,
 		},
-            
-		always = 
+
+		always =
 		{
 			WATERFOWLHUNT_COOLDOWN = TUNING.TOTAL_DAY_TIME * 1,
 			WATERFOWLHUNT_COOLDOWN_DEVIATION = TUNING.TOTAL_DAY_TIME * 0.1,
 			WATERFOWLHUNT_RESET_TIME = 5,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.oceanhuntalts_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			WATERFOWLHUNT_ALTERNATE_BEAST_CHANCE_MIN = 0,
 			WATERFOWLHUNT_ALTERNATE_BEAST_CHANCE_MAX = 0,
 		},
 
-		rare = 
+		rare =
 		{
 			WATERFOWLHUNT_ALTERNATE_BEAST_CHANCE_MIN = 0.0125,
 			WATERFOWLHUNT_ALTERNATE_BEAST_CHANCE_MAX = 0.0825,
 		},
-		
-		often = 
+
+		often =
 		{
 			WATERFOWLHUNT_ALTERNATE_BEAST_CHANCE_MIN = 0.10,
 			WATERFOWLHUNT_ALTERNATE_BEAST_CHANCE_MAX = 0.66,
 		},
-            
-		always = 
+
+		always =
 		{
 			WATERFOWLHUNT_ALTERNATE_BEAST_CHANCE_MIN = 0.70,
 			WATERFOWLHUNT_ALTERNATE_BEAST_CHANCE_MAX = 0.90,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.aloes_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_ALOE_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_ALOE_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_ALOE_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_ALOE_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_ALOE_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.asparaguses_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_ASPARGOS_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_ASPARGOS_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_ASPARGOS_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_ASPARGOS_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_ASPARGOS_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.coffeebushes_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_COFFEEBUSH_GROWTIME = NEVER_TIME,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_COFFEEBUSH_GROWTIME = 3840,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_COFFEEBUSH_GROWTIME = 2880,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_COFFEEBUSH_GROWTIME = 1280,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_COFFEEBUSH_GROWTIME = 480,
 		},
 	}
-	
+
+	OverrideTuningVariables(tuning_vars[difficulty])
+end
+
+WSO.Pre.cavetubertrees_setting = function(difficulty)
+	local tuning_vars =
+	{
+		never =
+		{
+			KYNO_CAVETUBERTREE_GROWTIME = NEVER_TIME,
+			KYNO_CAVETUBERTREE_REGROWTH_TIME_MULT = 0,
+		},
+
+		veryslow =
+		{
+			KYNO_CAVETUBERTREE_GROWTIME = 3840,
+			KYNO_CAVETUBERTREE_REGROWTH_TIME_MULT = .25,
+		},
+
+		slow =
+		{
+			KYNO_CAVETUBERTREE_GROWTIME = 2880,
+			KYNO_CAVETUBERTREE_REGROWTH_TIME_MULT = .50,
+		},
+
+		fast =
+		{
+			KYNO_CAVETUBERTREE_GROWTIME = 1280,
+			KYNO_CAVETUBERTREE_REGROWTH_TIME_MULT = 1.5,
+		},
+
+		veryfast =
+		{
+			KYNO_CAVETUBERTREE_GROWTIME = 480,
+			KYNO_CAVETUBERTREE_REGROWTH_TIME_MULT = 3,
+		},
+	}
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.fennels_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_FENNEL_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_FENNEL_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_FENNEL_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_FENNEL_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_FENNEL_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.giantparznips_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_PARZNIP_BIG_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_PARZNIP_BIG_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_PARZNIP_BIG_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_PARZNIP_BIG_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_PARZNIP_BIG_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.mushstumps_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_MUSHSTUMP_GROWTIME = NEVER_TIME,
 			KYNO_MUSHSTUMP_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_MUSHSTUMP_GROWTIME = 4800,
 			KYNO_MUSHSTUMP_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_MUSHSTUMP_GROWTIME = 3600,
 			KYNO_MUSHSTUMP_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_MUSHSTUMP_GROWTIME = 1600,
 			KYNO_MUSHSTUMP_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_MUSHSTUMP_GROWTIME = 960,
 			KYNO_MUSHSTUMP_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.truffles_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_TRUFFLES_GROWTIME = NEVER_TIME,
 			KYNO_TRUFFLES_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_TRUFFLES_GROWTIME = 9600,
 			KYNO_TRUFFLES_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_TRUFFLES_GROWTIME = 7200,
 			KYNO_TRUFFLES_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_TRUFFLES_GROWTIME = 3200,
 			KYNO_TRUFFLES_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_TRUFFLES_GROWTIME = 2400,
 			KYNO_TRUFFLES_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.parznips_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_PARZNIP_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_PARZNIP_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_PARZNIP_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_PARZNIP_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_PARZNIP_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.radishes_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_RADISH_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_RADISH_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_RADISH_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_RADISH_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_RADISH_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.rockflippables_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_FLIPPABLE_ROCK_REPOPULATE_TIME = NEVER_TIME,
 			KYNO_FLIPPABLE_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_FLIPPABLE_ROCK_REPOPULATE_TIME = 4800,
 			KYNO_FLIPPABLE_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_FLIPPABLE_ROCK_REPOPULATE_TIME = 3600,
 			KYNO_FLIPPABLE_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_FLIPPABLE_ROCK_REPOPULATE_TIME = 1600,
 			KYNO_FLIPPABLE_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_FLIPPABLE_ROCK_REPOPULATE_TIME = 960,
 			KYNO_FLIPPABLE_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.sweetpotatoes_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_SWEETPOTATO_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_SWEETPOTATO_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_SWEETPOTATO_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_SWEETPOTATO_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_SWEETPOTATO_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.turnips_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_TURNIP_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_TURNIP_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_TURNIP_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_TURNIP_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_TURNIP_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.wildwheats_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_WILDWHEAT_GROWTIME = NEVER_TIME,
 			KYNO_WILDWHEAT_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_WILDWHEAT_GROWTIME = 2880,
 			KYNO_WILDWHEAT_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_WILDWHEAT_GROWTIME = 2160,
 			KYNO_WILDWHEAT_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_WILDWHEAT_GROWTIME = 960,
 			KYNO_WILDWHEAT_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_WILDWHEAT_GROWTIME = 480,
 			KYNO_WILDWHEAT_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.jellyfishes_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_JELLYFISH_ENABLED = false,
 		},
 
-		few = 
+		few =
 		{
 			KYNO_JELLYFISH_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 8,
 			KYNO_JELLYFISH_AMOUNT = 3,
 		},
-		
-		many = 
+
+		many =
 		{
 			KYNO_JELLYFISH_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 2,
 			KYNO_JELLYFISH_AMOUNT = 5,
 		},
-            
-		always = 
+
+		always =
 		{
 			KYNO_JELLYFISH_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 1,
 			KYNO_JELLYFISH_AMOUNT = 6,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.jellyfishes2_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_JELLYFISH_RAINBOW_ENABLED = false,
 		},
 
-		few = 
+		few =
 		{
 			KYNO_JELLYFISH_RAINBOW_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 8,
 			KYNO_JELLYFISH_RAINBOW_AMOUNT = 3,
 		},
-		
-		many = 
+
+		many =
 		{
 			KYNO_JELLYFISH_RAINBOW_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 2,
 			KYNO_JELLYFISH_RAINBOW_AMOUNT = 4,
 		},
-            
-		always = 
+
+		always =
 		{
 			KYNO_JELLYFISH_RAINBOW_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 1,
 			KYNO_JELLYFISH_RAINBOW_AMOUNT = 5,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.dogfishes_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_DOGFISH_ENABLED = false,
 		},
 
-		few = 
+		few =
 		{
 			KYNO_DOGFISH_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 6,
 		},
-		
-		many = 
+
+		many =
 		{
 			KYNO_DOGFISH_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 2,
 		},
-            
-		always = 
+
+		always =
 		{
 			KYNO_DOGFISH_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 1,
 		},
 	}
-	
+
+	OverrideTuningVariables(tuning_vars[difficulty])
+end
+
+WSO.Pre.eldermandrakes_setting = function(difficulty)
+	local tuning_vars =
+	{
+		never =
+		{
+			KYNO_ELDERMANDRAKE_ENABLED = false,
+		},
+
+		few =
+		{
+			KYNO_ELDERMANDRAKE_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 5,
+		},
+
+		many =
+		{
+			KYNO_ELDERMANDRAKE_SPAWN_TIME = TUNING.TOTAL_DAY_TIME / 2,
+		},
+
+		always =
+		{
+			KYNO_ELDERMANDRAKE_SPAWN_TIME = TUNING.TOTAL_DAY_TIME / 4,
+		},
+	}
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.hermitwobsters_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_WOBSTER_MONKEYISLAND_DEN_ENABLED = false,
 		},
 
-		few = 
+		few =
 		{
 			KYNO_WOBSTER_MONKEYISLAND_DEN_SPAWN_TIME = 150,
 			KYNO_WOBSTER_MONKEYISLAND_DEN_REGEN_TIME = 200,
 			KYNO_WOBSTER_MONKEYISLAND_DEN_AMOUNT = 1,
 		},
-		
-		many = 
+
+		many =
 		{
 			KYNO_WOBSTER_MONKEYISLAND_DEN_SPAWN_TIME = 80,
 			KYNO_WOBSTER_MONKEYISLAND_DEN_REGEN_TIME = 100,
 			KYNO_WOBSTER_MONKEYISLAND_DEN_AMOUNT = 3,
 		},
-            
-		always = 
+
+		always =
 		{
 			KYNO_WOBSTER_MONKEYISLAND_DEN_SPAWN_TIME = 40,
 			KYNO_WOBSTER_MONKEYISLAND_DEN_REGEN_TIME = 80,
 			KYNO_WOBSTER_MONKEYISLAND_DEN_AMOUNT = 4,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.swordfishes_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_SWORDFISH_ENABLED = false,
 		},
 
-		few = 
+		few =
 		{
 			KYNO_SWORDFISH_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 2,
 		},
-		
-		many = 
+
+		many =
 		{
 			KYNO_SWORDFISH_SPAWN_TIME = TUNING.TOTAL_DAY_TIME / 2,
 		},
-            
-		always = 
+
+		always =
 		{
 			KYNO_SWORDFISH_SPAWN_TIME = TUNING.TOTAL_DAY_TIME / 4,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.brainrocks_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_BRAINROCK_ROCK_GROWTIME = NEVER_TIME,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_BRAINROCK_ROCK_GROWTIME = 480 * 20,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_BRAINROCK_ROCK_GROWTIME = 480 * 15,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_BRAINROCK_ROCK_GROWTIME = 480 * 5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_BRAINROCK_ROCK_GROWTIME = 480 * 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.lotusplants_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_LOTUS_GROWTIME = NEVER_TIME,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_LOTUS_GROWTIME = 2880,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_LOTUS_GROWTIME = 2160,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_LOTUS_GROWTIME = 960,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_LOTUS_GROWTIME = 480,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.oceancrates_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_CRATE_GROWTIME = NEVER_TIME,
 			KYNO_CRATE_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_CRATE_GROWTIME = 6720,
 			KYNO_CRATE_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_CRATE_GROWTIME = 5040,
 			KYNO_CRATE_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_CRATE_GROWTIME = 2240,
 			KYNO_CRATE_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_CRATE_GROWTIME = 1680,
 			KYNO_CRATE_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.oceanwrecks_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_OCEAN_WRECK_GROWTIME = NEVER_TIME,
 			KYNO_OCEAN_WRECK_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_OCEAN_WRECK_GROWTIME = 2880,
 			KYNO_OCEAN_WRECK_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_OCEAN_WRECK_GROWTIME = 2160,
 			KYNO_OCEAN_WRECK_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_OCEAN_WRECK_GROWTIME = 960,
 			KYNO_OCEAN_WRECK_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_OCEAN_WRECK_GROWTIME = 480,
 			KYNO_OCEAN_WRECK_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.seacucumbers_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_CUCUMBER_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_CUCUMBER_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_CUCUMBER_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_CUCUMBER_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_CUCUMBER_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.taroroots_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_TAROSEA_GROWTIME = NEVER_TIME,
 			KYNO_TAROROOT_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_TAROSEA_GROWTIME = 3840,
 			KYNO_TAROROOT_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_TAROSEA_GROWTIME = 2880,
 			KYNO_TAROROOT_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_TAROSEA_GROWTIME = 1280,
 			KYNO_TAROROOT_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_TAROSEA_GROWTIME = 480,
 			KYNO_TAROROOT_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.waterycresses_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_WATERYCRESS_GROWTIME = NEVER_TIME,
 			KYNO_WATERYCRESS_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_WATERYCRESS_GROWTIME = 4800,
 			KYNO_WATERYCRESS_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_WATERYCRESS_GROWTIME = 3600,
 			KYNO_WATERYCRESS_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_WATERYCRESS_GROWTIME = 1600,
 			KYNO_WATERYCRESS_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_WATERYCRESS_GROWTIME = 960,
 			KYNO_WATERYCRESS_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.weedsea_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_WEEDSEA_GROWTIME = NEVER_TIME,
 			KYNO_WEEDSEA_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_WEEDSEA_GROWTIME = 2880,
 			KYNO_WEEDSEA_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_WEEDSEA_GROWTIME = 2160,
 			KYNO_WEEDSEA_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_WEEDSEA_GROWTIME = 960,
 			KYNO_WEEDSEA_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_WEEDSEA_GROWTIME = 480,
 			KYNO_WEEDSEA_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.chickens_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_CHICKEN_ENABLED = false,
 		},
 
-		few = 
+		few =
 		{
 			KYNO_CHICKEN_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 8,
 			KYNO_CHICKEN_AMOUNT = 3,
 		},
-		
-		many = 
+
+		many =
 		{
 			KYNO_CHICKEN_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 2,
 			KYNO_CHICKEN_AMOUNT = 4,
 		},
-            
-		always = 
+
+		always =
 		{
 			KYNO_CHICKEN_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 1,
 			KYNO_CHICKEN_AMOUNT = 5,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.pebblecrabs_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_PEBBLECRAB_ENABLED = false,
 		},
 
-		few = 
+		few =
 		{
 			KYNO_PEBBLECRAB_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 8,
 			KYNO_PEBBLECRAB_AMOUNT = 2,
 		},
-		
-		many = 
+
+		many =
 		{
 			KYNO_PEBBLECRAB_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 2,
 			KYNO_PEBBLECRAB_AMOUNT = 3,
 		},
-            
-		always = 
+
+		always =
 		{
 			KYNO_PEBBLECRAB_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 1,
 			KYNO_PEBBLECRAB_AMOUNT = 4,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.saltponds_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_SALTRACK_REGROW_TIME = NEVER_TIME,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_SALTRACK_REGROW_TIME = 3840,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_SALTRACK_REGROW_TIME = 2880,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_SALTRACK_REGROW_TIME = 1280,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_SALTRACK_REGROW_TIME = 480,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.spotbushes_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_SPOTBUSH_GROWTIME = NEVER_TIME,
 			KYNO_SPOTBUSH_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_SPOTBUSH_GROWTIME = 2880,
 			KYNO_SPOTBUSH_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_SPOTBUSH_GROWTIME = 2160,
 			KYNO_SPOTBUSH_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_SPOTBUSH_GROWTIME = 960,
 			KYNO_SPOTBUSH_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_SPOTBUSH_GROWTIME = 480,
 			KYNO_SPOTBUSH_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.sugarflies_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			MAX_KYNO_SUGARFLIES = 0,
 		},
 
-		rare = 
+		rare =
 		{
 			MAX_KYNO_SUGARFLIES = 2,
 		},
-		
-		often = 
+
+		often =
 		{
 			MAX_KYNO_SUGARFLIES = 7,
 		},
-            
-		always = 
+
+		always =
 		{
 			MAX_KYNO_SUGARFLIES = 10,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.sugarflowers_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_SUGARFLOWER_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_SUGARFLOWER_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_SUGARFLOWER_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_SUGARFLOWER_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_SUGARFLOWER_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.sugartrees_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_SUGARTREE_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_SUGARTREE_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_SUGARTREE_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_SUGARTREE_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_SUGARTREE_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.sapsugartrees_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_SAP_GROWTIME = NEVER_TIME,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_SAP_GROWTIME = 2880,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_SAP_GROWTIME = 2160,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_SAP_GROWTIME = 960,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_SAP_GROWTIME = 480,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.sap2sugartrees_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_SAP_RUINED_GROWTIME = NEVER_TIME,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_SAP_RUINED_GROWTIME = 2880,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_SAP_RUINED_GROWTIME = 2160,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_SAP_RUINED_GROWTIME = 960,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_SAP_RUINED_GROWTIME = 480,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.ruinedsugartrees_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_SAP_SPOILS = false,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_SAP_SPOILTIME = 9600,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_SAP_SPOILTIME = 7200,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_SAP_SPOILTIME = 3200,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_SAP_SPOILTIME = 2400,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.fishermerms_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_MERMFISHER_ENABLED = false,
 		},
 
-		few = 
+		few =
 		{
 			KYNO_MERMFISHER_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 8,
 			KYNO_MERMFISHER_AMOUNT = 2,
 		},
-		
-		many = 
+
+		many =
 		{
 			KYNO_MERMFISHER_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 2,
 			KYNO_MERMFISHER_AMOUNT = 3,
 		},
-            
-		always = 
+
+		always =
 		{
 			KYNO_MERMFISHER_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 1,
 			KYNO_MERMFISHER_AMOUNT = 4,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.islandcrates_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_ISLANDCRATE_GROWTIME = NEVER_TIME,
 			KYNO_ISLANDCRATE_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_ISLANDCRATE_GROWTIME = 6720,
 			KYNO_ISLANDCRATE_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_ISLANDCRATE_GROWTIME = 5040,
 			KYNO_ISLANDCRATE_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_ISLANDCRATE_GROWTIME = 2240,
 			KYNO_ISLANDCRATE_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_ISLANDCRATE_GROWTIME = 1680,
 			KYNO_ISLANDCRATE_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.kokonuttrees_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_KOKONUTTREE_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_KOKONUTTREE_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_KOKONUTTREE_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_KOKONUTTREE_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_KOKONUTTREE_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.limpetrocks_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_LIMPETROCK_GROWTIME = NEVER_TIME,
 			KYNO_LIMPETROCK_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_LIMPETROCK_GROWTIME = 2880,
 			KYNO_LIMPETROCK_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_LIMPETROCK_GROWTIME = 2160,
 			KYNO_LIMPETROCK_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_LIMPETROCK_GROWTIME = 960,
 			KYNO_LIMPETROCK_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_LIMPETROCK_GROWTIME = 480,
 			KYNO_LIMPETROCK_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.pikos_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_PIKO_ENABLED = false,
 		},
 
-		few = 
+		few =
 		{
 			KYNO_PIKO_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 6,
 		},
-		
-		many = 
+
+		many =
 		{
 			KYNO_PIKO_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 2,
 		},
-            
-		always = 
+
+		always =
 		{
 			KYNO_PIKO_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 1,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.pikosorange_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_PIKO_ORANGE_ENABLED = false,
 		},
-		
-		few = 
+
+		few =
 		{
 			-- KYNO_PIKO_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 6,
 			KYNO_PIKO_ORANGE_CHANCE = .30,
 		},
-		
-		many = 
+
+		many =
 		{
 			-- KYNO_PIKO_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 2,
 			KYNO_PIKO_ORANGE_CHANCE = .60,
 		},
-            
-		always = 
+
+		always =
 		{
 			-- KYNO_PIKO_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 1,
 			KYNO_PIKO_ORANGE_CHANCE = .80,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.puffermonsters_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_PUFFERMONSTER_ENABLED = false,
 		},
 
-		few = 
+		few =
 		{
 			KYNO_PUFFERMONSTER_SPAWN_TIME = TUNING.TOTAL_DAY_TIME * 2,
 		},
-		
-		many = 
+
+		many =
 		{
 			KYNO_PUFFERMONSTER_SPAWN_TIME = TUNING.TOTAL_DAY_TIME / 2,
 		},
-            
-		always = 
+
+		always =
 		{
 			KYNO_PUFFERMONSTER_SPAWN_TIME = TUNING.TOTAL_DAY_TIME / 4,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.pineapplebushes_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_PINEAPPLEBUSH_GROWTIME = NEVER_TIME,
 			KYNO_PINEAPPLEBUSH_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_PINEAPPLEBUSH_GROWTIME = 5760,
 			KYNO_PINEAPPLEBUSH_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_PINEAPPLEBUSH_GROWTIME = 4320,
 			KYNO_PINEAPPLEBUSH_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_PINEAPPLEBUSH_GROWTIME = 1920,
 			KYNO_PINEAPPLEBUSH_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_PINEAPPLEBUSH_GROWTIME = 960,
 			KYNO_PINEAPPLEBUSH_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.sandhills_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_MEADOWISLAND_SAND_REGROW = NEVER_TIME,
 			KYNO_MEADOWISLAND_SAND_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_MEADOWISLAND_SAND_REGROW = 5760,
 			KYNO_MEADOWISLAND_SAND_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_MEADOWISLAND_SAND_REGROW = 4320,
 			KYNO_MEADOWISLAND_SAND_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_MEADOWISLAND_SAND_REGROW = 1920,
 			KYNO_MEADOWISLAND_SAND_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_MEADOWISLAND_SAND_REGROW = 960,
 			KYNO_MEADOWISLAND_SAND_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
 
 WSO.Pre.teatrees_setting = function(difficulty)
 	local tuning_vars =
 	{
-		never = 
+		never =
 		{
 			KYNO_MEADOWISLAND_TREE_REGROWTH_TIME_MULT = 0,
 		},
 
-		veryslow = 
+		veryslow =
 		{
 			KYNO_MEADOWISLAND_TREE_REGROWTH_TIME_MULT = .25,
 		},
-		
-		slow = 
+
+		slow =
 		{
 			KYNO_MEADOWISLAND_TREE_REGROWTH_TIME_MULT = .50,
 		},
-            
-		fast = 
+
+		fast =
 		{
 			KYNO_MEADOWISLAND_TREE_REGROWTH_TIME_MULT = 1.5,
 		},
-		
-		veryfast = 
+
+		veryfast =
 		{
 			KYNO_MEADOWISLAND_TREE_REGROWTH_TIME_MULT = 3,
 		},
 	}
-	
+
 	OverrideTuningVariables(tuning_vars[difficulty])
 end
-	
+
 for k, v in pairs(customizations_worldsettings) do
 	v.name     = k
-	
+
 	v.category = LEVELCATEGORY.SETTINGS
 	v.group    = v.group
 	v.order    = v.order
-	
+
 	v.value    = v.value or "default"
 	v.desc     = v.desc  or "frequency_descriptions"
 end

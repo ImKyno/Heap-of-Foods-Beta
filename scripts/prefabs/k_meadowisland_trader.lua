@@ -35,16 +35,15 @@ local sounds =
 
 local FORGETABLE_RECIPES = {} -- Recipes that do not have a limit flag will be forgot on rerolling.
 
-local WARES                             = 
+local WARES                                 = 
 {	
 	-- Make sure there is at least one trade that has min = 1 in this table.
-	ALWAYS                              = 
+	ALWAYS                                  = 
 	{
 		{
 			["kyno_itemslicer_gold"]        = { recipe = "meadowislandtrader_kyno_itemslicer_gold",        min = 6,  max = 6,  limit = 6  },
 			["kyno_bucket_metal"]           = { recipe = "meadowislandtrader_kyno_bucket_metal",           min = 6,  max = 6,  limit = 6  },
 			["kyno_pineapple"]              = { recipe = "meadowislandtrader_kyno_pineapple",              min = 6,  max = 20, limit = 20 },
-			["kyno_antchovycan"]            = { recipe = "meadowislandtrader_kyno_antchovycan",            min = 4,  max = 8,  limit = 8  },
 			["kyno_tunacan"]                = { recipe = "meadowislandtrader_kyno_tunacan",                min = 2,  max = 5,  limit = 5  },
 			["kyno_piko"]                   = { recipe = "meadowislandtrader_kyno_piko",                   min = 1,  max = 3,  limit = 3  },
 			["kyno_chicken2"]               = { recipe = "meadowislandtrader_kyno_chicken2",               min = 1,  max = 4,  limit = 4  },
@@ -178,14 +177,14 @@ local function OnTurnOff(inst)
 end
 
 local function OnActivate(inst)
-	local no_stock = not inst:HasStock()
+	local no_stock = not inst:HasStock() and not inst:CanTrade()
 	
 	if no_stock then
 		inst:EnablePrototyper(false)
 	end
 	
 	inst.sg.mem.didtrade = true
-	inst:PushEvent("dotrade", {no_stock = no_stock, })
+	inst:PushEvent("dotrade", { no_stock = no_stock })
 end
 
 local function HasStock(inst)
@@ -262,8 +261,8 @@ local function RerollWares(inst)
 		inst:AddWares(inst.WARES.SPECIAL["islunarhailing"])
 	end
 	
-	inst:EnablePrototyper(inst:HasTag("revealed"))
 	-- inst:EnablePrototyper(inst:HasStock())
+	inst:EnablePrototyper(inst:HasTag("revealed") and inst:CanTrade())
 end
 
 local function OnTimerDone(inst, data)
@@ -378,7 +377,8 @@ end
 local function SetRevealed(inst, revealed)
 	if revealed then
 		inst:AddTag("revealed")
-		inst:EnablePrototyper(inst:HasStock())
+		-- inst:EnablePrototyper(inst:HasStock())
+		inst:EnablePrototyper(inst:HasStock() and inst:CanTrade())
 	else
 		inst:RemoveTag("revealed")
 		inst:EnablePrototyper(false)
@@ -407,6 +407,14 @@ local function OnEntitySleep(inst)
 	end
 end
 
+local function IsBusinessHours(inst)
+	return not TheWorld.state.isday
+end
+
+local function CanTrade(inst)
+	return IsBusinessHours(inst) and inst:HasStock()
+end
+
 local function ShouldAcceptItem(inst, item)
     if item.components.inventoryitem ~= nil and item:HasAnyTag("sammyfood", "anniversaryfood") and not inst:HasTag("hatless") then
         return true
@@ -419,7 +427,7 @@ end
 
 -- Sammy gives his hat to the player when gifted.
 local function OnGetItemFromPlayer(inst, giver, item)
-	local no_stock = not inst:HasStock()
+	local no_stock = not inst:HasStock() and not inst:CanTrade()
 	local hat = SpawnPrefab(GetHatPrefab(inst))
 	
 	if hat ~= nil then
@@ -431,7 +439,7 @@ local function OnGetItemFromPlayer(inst, giver, item)
 	end
 
 	inst.sg:GoToState("dotradehat")
-	inst:PushEvent("dotrade", {no_stock = no_stock, })
+	inst:PushEvent("dotrade", { no_stock = no_stock })
 end
 
 local function OnRefuseItem(inst, item)
@@ -508,6 +516,7 @@ local function fn()
 	inst.SetIsFullMoon = SetIsFullMoon
 	inst.SetRevealed = SetRevealed
 	inst.SetHatless = SetHatless
+	inst.CanTrade = CanTrade
 	
 	inst:AddComponent("craftingstation")
 	inst:AddComponent("knownlocations")
@@ -555,7 +564,7 @@ local function fn()
 	-- We somehow got a Sammy without a home. Kill it! Kill it with fire!
 	--[[
 	inst:DoTaskInTime(2, function(inst)
-		print("Heap of Foods - Found a Sammy without a home. Removing it!")
+		print("Heap of Foods Mod - Found a Sammy without a home. Removing it!")
 		if inst.components.homeseeker == nil then
 			inst:Remove()
 		end

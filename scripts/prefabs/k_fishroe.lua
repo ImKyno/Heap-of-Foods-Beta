@@ -187,13 +187,7 @@ local fishroes =
 		stacksize           = TUNING.STACK_SIZE_MEDITEM,
 		goldvalue           = 2,
 	},
-	
-	{
-		name                = "antchovy",
-		stacksize           = TUNING.STACK_SIZE_TINYITEM,
-		goldvalue           = 1,
-	},
-	
+
 	{
 		name                = "swordfish_blue",
 		stacksize           = TUNING.STACK_SIZE_LARGEITEM,

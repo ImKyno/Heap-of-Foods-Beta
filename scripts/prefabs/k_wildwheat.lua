@@ -83,6 +83,16 @@ local function ontransplantfn(inst)
 	inst.components.pickable:MakeBarren()
 end
 
+local function SetLunarThrallProtection(inst, protected)
+	inst._lunarthrall_protected = protected == true
+
+	if inst._lunarthrall_protected then
+		inst:RemoveTag("lunarplant_target")
+	else
+		inst:AddTag("lunarplant_target")
+	end
+end
+
 local function GetStatus(inst, viewer)
 	return (inst.components.burnable:IsBurning() and "BURNING")
 	or (inst.components.pickable:IsBarren() and "WITHERED")
@@ -91,8 +101,57 @@ local function GetStatus(inst, viewer)
 	or "GENERIC"
 end
 
+local function OnSave(inst, data)
+	data.bonus_yield = inst._bonus_yield
+	data.lunarthrall_protected = inst._lunarthrall_protected
+	data.original_transplanted = inst._original_transplanted
+	data.vitality_active = inst._vitality_active
+end
+
+local function OnLoad(inst, data)
+	if data ~= nil then
+		if data.bonus_yield ~= nil then
+			inst._bonus_yield = data.bonus_yield
+
+			if inst._bonus_yield then
+				inst:AddTag("plantboosted_yield")
+			else
+				inst:RemoveTag("plantboosted_yield")
+			end
+		end
+
+		if data.lunarthrall_protected ~= nil then
+			SetLunarThrallProtection(inst, data.lunarthrall_protected)
+		end
+
+		if data.original_transplanted ~= nil then
+			inst._original_transplanted = data.original_transplanted
+		end
+
+		if data.vitality_active ~= nil then
+			inst._vitality_active = data.vitality_active
+
+			if inst._vitality_active then
+				inst:AddTag("plantboosted_vitality")
+
+				if inst.components.pickable ~= nil then
+					inst.components.pickable.transplanted = false
+				end
+			else
+				inst:RemoveTag("plantboosted_vitality")
+			end
+		end
+	end
+end
+
 local function OnPreLoad(inst, data)
     WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_WILDWHEAT_GROWTIME)
+
+	if data and data.was_herd then
+		if TheWorld.components.lunarthrall_plantspawner then
+			TheWorld.components.lunarthrall_plantspawner:setHerdsOnPlantable(inst)
+		end
+	end
 end
 
 local function grass(name, stage)
@@ -116,6 +175,7 @@ local function grass(name, stage)
 		inst:AddTag("renewable")
 		inst:AddTag("silviculture")
 		inst:AddTag("lunarplant_target")
+		inst:AddTag("plantboostable")
 		inst:AddTag("pickablechickenfood")
 
 		inst.entity:SetPristine()
@@ -124,12 +184,20 @@ local function grass(name, stage)
 			return inst
 		end
 
+		inst.SetLunarThrallProtection = SetLunarThrallProtection
+
+		inst._bonus_yield = false
+		inst._lunarthrall_protected = false
+		inst._original_transplanted = nil
+		inst._vitality_active = false
+
 		inst.AnimState:SetTime(math.random() * 2)
 		
 		local color = 0.75 + math.random() * 0.25
 		inst.AnimState:SetMultColour(color, color, color, 1)
 		
 		inst:AddComponent("lootdropper")
+		inst:AddComponent("plantboostable")
 		
 		inst:AddComponent("inspectable")
 		inst.components.inspectable.getstatus = GetStatus
@@ -155,6 +223,8 @@ local function grass(name, stage)
 		inst.components.workable:SetOnFinishCallback(dig_up)
 		inst.components.workable:SetWorkLeft(1)
 
+		inst:ListenForEvent("picked", PlantBoosterBonusYield)
+
 		MakeMediumBurnable(inst)
 		MakeSmallPropagator(inst)
 		
@@ -163,6 +233,8 @@ local function grass(name, stage)
 
 		MakeWaxablePlant(inst)
 		
+		inst.OnSave = OnSave
+		inst.OnLoad = OnLoad
 		inst.OnPreLoad = OnPreLoad
 
 		return inst

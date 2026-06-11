@@ -7,6 +7,7 @@ STRINGS.SCRAPBOOK.DATA_MILKABLE = "PODE SER ORDENHADO"
 STRINGS.SCRAPBOOK.DATA_FISHFARMABLE = "PODE SER REPRODUZIDO"
 STRINGS.SCRAPBOOK.DATA_FISHFARM = "PODE REPRODUZIR PEIXES"
 STRINGS.SCRAPBOOK.DATA_ANIMALFEEDER = "PODE ALIMENTAR ANIMAIS"
+STRINGS.SCRAPBOOK.DATA_PLANTBOOSTER = "PODE POTENCIALIZAR PLANTAS"
 
 -- Foodtypes.
 STRINGS.SCRAPBOOK.FOODTYPE.PREPAREDPOOP = "HORRÍVEL"
@@ -31,6 +32,8 @@ STRINGS.SCRAPBOOK.SUBCATS.JAM = "Geleia"
 STRINGS.SCRAPBOOK.SUBCATS.PICKLES = "Picles"
 STRINGS.SCRAPBOOK.SUBCATS.FISHROE = "Ovas de Peixe"
 STRINGS.SCRAPBOOK.SUBCATS.AGEDROE = "Ovas Maturadas"
+STRINGS.SCRAPBOOK.SUBCATS.PLANTBOOSTER = "Potencializante"
+STRINGS.SCRAPBOOK.SUBCATS.PIGCOIN = "Koin"
 
 -- Food Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SPEED = "Aumenta a velocidade de movimento por um determinado período."
@@ -121,6 +124,11 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHUNGER = "Aumenta a Fome Máxima em
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXSANITY = "Aumenta a Sanidade Máxima em 30% por um certo período de tempo."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "Aumenta a Vida Máxima em 30% por um certo período de tempo.\nReduz brevemente a temperatura."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "Aumenta a Vida, Fome e Sanidade Máxima em 15% por um certo período de tempo.\n\nReduz brevemente a temperatura."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Aumenta o rendimento de plants por um certo período de tempo."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Aumenta o rendimento de plants por um certo período de tempo.\n\Reduz brevemente a temperatura."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Acalma as criaturas próximas ao sobrevivente."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Aumenta a eficiência de cura em 15% por um certo período de tempo. Não funciona com cura por roubo de vida."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINY = "Restaura sanidade ao longo do tempo quando está chovendo ou quando a Umidade estiver alta o suficiente."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Pó Conservante reduz pela metade o tempo de deterioração e anula penalidades de comida estragada."
@@ -164,11 +172,18 @@ STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Deixar secar por períodos mais longos
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use para acender o Bolo de Aniversário e começar a festa!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Permite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Chapéu de aniversário especial do Sammy.\nPermite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_PARTITIOHAT = "Chapéu de aniversário especial do Partitio.\nPermite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Pesquisar peixes e ovas os adiciona ao Registro de Peixes."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Um ovo gigante que pode ser arremessado ou chocado.\n\nReduz o dano causado e a velocidade de movimento do alvo em 10% por 20 segundos. O efeito acumula até 3 vezes, totalizando 30%.\n\n\"Até ovos são armas no campo de batalha!\" - Wigfrid."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Pode ser chocado se estiver próximo a uma fonte de calor."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "Cuide de seus ferimentos e refresque-se com esta mistura preparada com carinho por Pearl."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "Acalme sua mente e proteja-a contra inimigos assustadores com esta mistura preparada com carinho por Pearl."
+STRINGS.SCRAPBOOK.SPECIALINFO.SOUNDPROOF = "Oferece proteção contra ruídos altos."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_GROWTH = "Pode ser usado para fertilizar e fazer crescer instantaneamente plantas que não sejam de fazenda.\n\nOs efeitos não são cumulativos e serão substituídos quando outro Impulsionador for usado na mesma planta.\n\nOs Impulsionadores são removidos quando a planta é desenterrada."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "Pode ser usado para fertilizar e fazer crescer instantaneamente qualquer planta.\n\nQuando usado em Plantas Comuns:\n\nNão precisa mais ser fertilizada e fica protegida contra ameaças.\n\nQuando usado em Plantas de Fazenda:\n\nAvança um estágio de crescimento e protege contra ameaças.\n\nOs efeitos não são cumulativos e serão substituídos quando outro Impulsionador for usado na mesma planta.\n\nOs Impulsionadores são removidos quando a planta é desenterrada."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Pode ser usado para fertilizar e fazer crescer instantaneamente qualquer planta.\n\nQuando usado em Plantas Comuns:\n\nProduz um item extra quando estiver totalmente crescida.\n\nQuando usado em Plantas de Fazenda:\n\nAvança um estágio de crescimento e produz um item extra quando estiver totalmente crescida.\n\nOs efeitos não são cumulativos e serão substituídos quando outro Impulsionador for usado na mesma planta.\n\nOs Impulsionadores são removidos quando a planta é desenterrada."
+STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Pode ser usado para fertilizar e fazer crescer instantaneamente qualquer planta.\n\nQuando usado em Plantas de Fazenda:\n\nAvança o crescimento até o estágio final e possui 25% de chance de transformar a planta em sua forma Gigante.\n\nOs efeitos não são cumulativos e serão substituídos quando outro Impulsionador for usado na mesma planta.\n\nOs Impulsionadores são removidos quando a planta é desenterrada."
+STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "A principal moeda dos porcos locais."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "A dieta delas consiste basicamente em Sementes, Trigo ou Rebento Folhoso.\n\nGalinhas Selvagens têm 40% de chance de botar ovos após se alimentarem. Elas têm uma pequena chance de botar um Ovo Grande.\n\nGalinhas criadas no Galinheiro podem botar ovos todos os dias após se alimentarem. Elas têm uma chance maior de colocar um Ovo Grande."
@@ -209,7 +224,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PINEAPPLEBUSH = "Os Arbustos de Abacaxi levam quas
 STRINGS.SCRAPBOOK.SPECIALINFO.GARDENSPRINKLER = "Pode ser ligado e desligado. Enquanto estiver abastecido e ligado, rega automaticamente as plantas da fazenda em seu alcance."
 STRINGS.SCRAPBOOK.SPECIALINFO.FARMPLOT = "Permite o plantio e crescimento de Sementes.\n\nSementes plantadas crescerão em uma colheita aleatória. Culturas específicas podem ser cultivadas usando Sementes de Cultivo.\n\nAs fazendas se esgotam após um número de colheitas, e precisam ser fertilizadas para produzir mais. As plantas em crescimento podem ser fertilizadas para acelerar seu crescimento.\n\nEsta fertilização afeta apenas as plantas e não altera o status de fertilização da Fazenda em si."
 STRINGS.SCRAPBOOK.SPECIALINFO.SURFACEBANANATREE = "Uma árvore exotica rara e elusiva, capaz de crescer fora dos ambientes subterrâneos.\n\nDizem que está extinta na natureza, restando apenas algumas sob os cuidados de especialistas."
-STRINGS.SCRAPBOOK.SPECIALINFO.DECIDUOUSSHOP = "Uma morada enigmática, silenciosa por muito tempo, cujas portas podem um dia se abrir... e revelar o que há dentro.\n\nVolte na próxima grande atualização de 2026!"
+STRINGS.SCRAPBOOK.SPECIALINFO.PARTITIO = "Um mercador porco orgulhoso que vive na Floresta Decídua, sempre ansioso para trocar suas mercadorias por itens valiosos.\n\nApesar de sua atitude arrogante e competitiva, ele valoriza clientes honestos e nunca perde a chance de fazer um bom negócio.\n\nPorém, após alguns acontecimentos infelizes no passado, ele se recusa a fazer negócios com Merms sob qualquer circunstância."
+STRINGS.SCRAPBOOK.SPECIALINFO.PARTITIOHOUSE = "O Armazém de Partitio vende uma variedade de produtos, principalmente mudas de árvores frutíferas e outros tipos de plantas."
 STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSHOWCASER = "Uma estrutura para expor comidas preparadas. Impede que os alimentos exibidos apodreçam."
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOT = "Um recipiente de 8 slots que receberá peixes para reprodução.\n\nColocar um peixe no primeiro slot e alimentá-lo permitirá a reprodução. Os peixes produzirão seus respectivos filhotes e ovas após certo tempo.\n\nOs peixes só podem se reproduzir quando todos os critérios forem atendidos. Cada peixe tem suas próprias preferências, como: fase do dia, fase da lua, estação e localização."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANHUNT = "Uma trilha borbulhante indicando atividade aquática.\nSeguir a trilha pode levar à criatura que a criou."
@@ -224,3 +240,4 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Um recipiente de 2 s
 STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Alguns animais se alimentarão da comida posta neste cocho.\n\Sementes e Grãos podem ser usados como fonte principal de comida."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "Um abrigo para Galinhas produzirem seus produtos."
 STRINGS.SCRAPBOOK.SPECIALINFO.DAILYRECIPE_SIGN = "Registra Receitas Diárias e permite uma breve visualização das mesmas."
+STRINGS.SCRAPBOOK.SPECIALINFO.CAVETUBERTREE = "Requer um machado resistente para ser derrubada. Se o toco for deixado para trás, ela crescerá novamente após alguns dias, produzindo mais Tubérculos.\n\nDurante a Primavera ela começa a florescer e amadurece."

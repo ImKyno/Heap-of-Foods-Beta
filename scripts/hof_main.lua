@@ -2,9 +2,9 @@ require("hof_constants")
 require("hof_behaviours")
 require("hof_brewing")
 require("hof_debugcommands")
-require("hof_luckutil")
 require("hof_rpc")
 require("hof_util")
+require("hof_util_luck")
 
 global("TheFishRegistry")
 TheFishRegistry = nil

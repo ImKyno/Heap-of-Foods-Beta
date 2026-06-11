@@ -89,6 +89,12 @@ WINONA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "No cóż, znowu boję się ciemności."
 
 WINONA.ANNOUNCE_KYNO_LUCKBUFF_END = "Dobra, teraz tylko rzeczywistość."
 
+WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "To się nazywa wydajne zbieranie."
+WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Powrót do normalnej produkcji."
+
+WINONA.ANNOUNCE_KYNO_WETNESSBUFF_START = "Chyba deszcz pomaga mi się trzymać."
+WINONA.ANNOUNCE_KYNO_WETNESSBUFF_END = "I po tym miłym uczuciu."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie, może coś innego."
@@ -1047,7 +1053,13 @@ WINONA.DESCRIBE.FLTSANDWICH = "Mhm, zdecydowanie wolę bekon od żabiego mięsa.
 
 WINONA.DESCRIBE.RICEANDBEANS = "Obiad."
 
-WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Przydałaby się porządna naprawa. Może zajmę się tym w 2026."
+WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "To miejsce potrzebuje poważnych napraw.",
+	REPAIRED = "To dopiero solidna robota.",
+	OCCUPIED = "Nie wygląda tam zbyt wygodnie.",
+	OCCUPIED_REPAIRED = "Wygląda na to, że facet ma wreszcie porządne miejsce do odpoczynku.",
+}
 
 WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1092,9 +1104,6 @@ WINONA.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Wkrótce trzeba uzupełnić.",
 	EMPTY = "Kompletnie wyschnięte.",
 }
-
-WINONA.DESCRIBE.KYNO_ANTCHOVY = "Ależ dziwaczne skrzyżowanie gatunków!"
-WINONA.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Wygląda jak ruszający się bałagan do naprawy!"
 
 WINONA.DESCRIBE.AGEDROE = "Wygląda luksusowo, ale to wciąż jajka ryb."
 WINONA.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Chyba tak wygląda kolacja dla bogaczy."
@@ -1194,6 +1203,7 @@ WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "No! To jest prawdziwe paliwo imprezowe!"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Czas rozpocząć zabawę!"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Na zamówienie! Sammy naprawdę należy do ekipy, co?"
+WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Wykonany na zamówienie! Partitio naprawdę należy do drużyny, co?"
 
 WINONA.DESCRIBE.KYNO_FISHREGISTRYHAT = "Dobry do nauki wzorców. Ryby mają ich mnóstwo."
 
@@ -1232,3 +1242,55 @@ WINONA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "No i po tablicy.",
 	BURNT = "Tego już się nie naprawi.",
 }
+
+WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Wygląda na to, że naprawy są ważniejsze niż interesy.",
+	HOUSE_REPAIRED = "No dobra. Zróbmy interes.",
+}
+
+WINONA.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "To będzie wymagało czegoś więcej niż zwykła siekiera.",
+	CHOPPED = "Ciężka praca się opłaca.",
+	BLOOMING = "Wygląda całkiem zdrowo.",
+	BURNING = "No cóż, i po wszystkim.",
+	BURNT = "Nie zostało nic wartego uratowania.",
+}
+
+WINONA.DESCRIBE.KYNO_CAVETUBER = "Nie wygląda na dojrzały."
+WINONA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Czy mogę to teraz zjeść?"
+
+WINONA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "To sezon na bulwy."
+WINONA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Och. Liczyłam na frytki."
+
+WINONA.DESCRIBE.CAVETUBERTEA = "Nie najgorsza herbata jaskiniowa."
+
+WINONA.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Ciekawe, jak oni tam śpią.",
+	OCCUPIED = "Nie da się spać przy takim hałasie.",
+}
+
+WINONA.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Hej, hałaśliwy gościu!",
+	GRUMPY = "Trochę dziś przygnębiony, co?",
+}
+
+WINONA.DESCRIBE.MANDRAKEBAOBUNS = "Porządny mały posiłek do ręki."
+
+WINONA.DESCRIBE.MANDRAKEPIE = "To porządne pieczenie."
+
+WINONA.DESCRIBE.MANDRAKEBEER = "Zimne, gazowane i spełnia swoje zadanie."
+
+WINONA.DESCRIBE.RAINPARFAIT = "Miłe i orzeźwiające."
+
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Praktyczny stymulator wzrostu."
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje uprawy w dobrej kondycji."
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Większa wydajność. Trudno się z tym spierać."
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "To już rolnictwo przemysłowe."
+
+WINONA.DESCRIBE.KYNO_PIGCOIN1 = "Szczęśliwa moneta."
+WINONA.DESCRIBE.KYNO_PIGCOIN2 = "Zachowaj to na czarną godzinę."
+WINONA.DESCRIBE.KYNO_PIGCOIN3 = "Muszę uważać, żeby nie stać się bogatą głupią osobą."

@@ -1,4 +1,4 @@
-local UpvalueHacker = require("hof_upvaluehacker")
+local UpvalueHacker = require("tools/hof_upvaluehacker")
 
 local assets =
 {

@@ -89,6 +89,12 @@ WILLOW.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The dark is creepy again..."
 
 WILLOW.ANNOUNCE_KYNO_LUCKBUFF_END = "Great. Back to normal bad luck."
 
+WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Time to grab all the plants before they burn!"
+WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Aw, the fun's over already?"
+
+WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_START = "Huh. Being wet isn't so bad this time."
+WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_END = "Okay, now I hate being wet again."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need to put something in here!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, wrong thing!"
@@ -1047,7 +1053,13 @@ WILLOW.DESCRIBE.FLTSANDWICH = "There's no lettuce in it."
 
 WILLOW.DESCRIBE.RICEANDBEANS = "Needs more burnt beans."
 
-WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Ugh, it's so old and dry... perfect for burning. Maybe I'll wait ‘til 2026."
+WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "That shack's about to fall apart.",
+	REPAIRED = "Boring. It stopped looking flammable.",
+	OCCUPIED = "How can anyone sleep in that dump?",
+	OCCUPIED_REPAIRED = "At least he has somewhere decent to sleep now.",
+}
 
 WILLOW.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WILLOW.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Almost outta food.",
 	EMPTY = "Nothing left for them.",
 }
-
-WILLOW.DESCRIBE.KYNO_ANTCHOVY = "Gross! It smells like burnt fish and bug guts!"
-WILLOW.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Ugh, bugs and fish all over the place!"
 
 WILLOW.DESCRIBE.AGEDROE = "Fish eggs in a jar. Great."
 WILLOW.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Ew, old fish eggs. Why do rich people eat this?"
@@ -1194,6 +1203,7 @@ WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Fire made these go pop! My kind of snack."
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "It's more fun if it catches fire."
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy gets his own hat? Hmph. Fine. It's cute."
+WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Partitio gets his own hat? Hmph. Fine. It's cute."
 
 WILLOW.DESCRIBE.KYNO_FISHREGISTRYHAT = "Guess I gotta know my fish before I burn them."
 
@@ -1232,3 +1242,55 @@ WILLOW.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Now THAT'S a special!",
 	BURNT = "Heh. Crispy.",
 }
+
+WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Ugh, fix his house first? What a bore.",
+	HOUSE_REPAIRED = "Alright, old man. Show me the goods.",
+}
+
+WILLOW.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "A regular axe won't destroy this but fire will.",
+	CHOPPED = "Heh. That showed it.",
+	BLOOMING = "It's weirdly alive-looking.",
+	BURNING = "Now that's more like it!",
+	BURNT = "Ashes are prettier anyway.",
+}
+
+WILLOW.DESCRIBE.KYNO_CAVETUBER = "Should be ripe before I burn it."
+WILLOW.DESCRIBE.KYNO_CAVETUBER_COOKED = "Fire: it always make things better."
+
+WILLOW.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "The flower means it's ripe."
+WILLOW.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Aw. The flower didn't even burn."
+
+WILLOW.DESCRIBE.CAVETUBERTEA = "Cold tea? Needs more fire."
+
+WILLOW.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Gross.",
+	OCCUPIED = "At least he's not making any stupid noise now.",
+}
+
+WILLOW.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Great. It's a big one. Just what I needed.",
+	GRUMPY = "He's mad!",
+}
+
+WILLOW.DESCRIBE.MANDRAKEBAOBUNS = "Warm buns stuffed with screamy root."
+
+WILLOW.DESCRIBE.MANDRAKEPIE = "Sleepy pie. Great."
+
+WILLOW.DESCRIBE.MANDRAKEBEER = "No actual beer, but it's still pretty good."
+
+WILLOW.DESCRIBE.RAINPARFAIT = "A parfait for rainy days. Weird."
+
+WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Makes plants grow. Boring."
+WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps plants alive longer."
+WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "More stuff to burn later!"
+WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Plants grow fast. Fire grows faster."
+
+WILLOW.DESCRIBE.KYNO_PIGCOIN1 = "Wow. A coin. Pfft."
+WILLOW.DESCRIBE.KYNO_PIGCOIN2 = "I can probably buy something good with this."
+WILLOW.DESCRIBE.KYNO_PIGCOIN3 = "I'm rich!"

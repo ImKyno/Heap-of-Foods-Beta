@@ -29,6 +29,8 @@ local function fn()
     inst.AnimState:SetBuild("kyno_turnip")
     inst.AnimState:PlayAnimation("planted")
     inst.AnimState:SetRayTestOnBB(true)
+
+    inst:AddTag("greenthumb_valid")
 	
 	inst:SetPrefabNameOverride("kyno_turnip_ground")
 

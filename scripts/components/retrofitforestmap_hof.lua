@@ -14,7 +14,6 @@ return Class(function(self, inst)
 		local no_jellyfish2 = TheSim:FindFirstEntityWithTag("jellyfishrainbowspawner") == nil -- kyno_jellyfish_rainbow_spawner
 		local no_dogfish    = TheSim:FindFirstEntityWithTag("dogfishspawner")          == nil -- kyno_dogfish_spawner
 		local no_puffer     = TheSim:FindFirstEntityWithTag("puffermonsterspawner")    == nil -- kyno_puffermonster_spawner
-		local no_antchovy   = TheSim:FindFirstEntityWithTag("antchovyspawner")         == nil -- kyno_antchovy_spawner
 		local no_octopus    = TheSim:FindFirstEntityWithTag("octopuskingtrader")       == nil -- kyno_octopusking_ocean
 		local no_packim     = TheSim:FindFirstEntityWithTag("packimbaggims_fishbone")  == nil -- kyno_packimbaggims_fishbone
 
@@ -32,7 +31,7 @@ return Class(function(self, inst)
 		end
 
 		return (no_serenity and no_meadow and no_oceanfish and no_jellyfish and no_jellyfish2
-		and no_dogfish and no_puffer and no_antchovy and no_octopus and no_packim) or has_old_ids
+		and no_dogfish and no_puffer and no_octopus and no_packim) or has_old_ids
 	end
 
 	function self:OnPostInit()

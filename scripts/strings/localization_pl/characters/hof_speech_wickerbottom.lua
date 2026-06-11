@@ -89,6 +89,12 @@ WICKERBOTTOM.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Moja niechęć do ciemności powr
 
 WICKERBOTTOM.ANNOUNCE_KYNO_LUCKBUFF_END = "Przewaga statystyczna wygasła."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Ach, moja wiedza ogrodnicza rozkwita."
+WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Botaniczny przypływ wydaje się ustępować."
+
+WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_START = "Deszcz jest niezwykle odświeżający."
+WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_END = "Jego regenerujące działanie ustało."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzeba czegoś jeszcze."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. Chyba mówił coś o homarach."
@@ -1047,7 +1053,13 @@ WICKERBOTTOM.DESCRIBE.FLTSANDWICH = "Żaba to dobry zamiennik bekonu."
 
 WICKERBOTTOM.DESCRIBE.RICEANDBEANS = "Bardzo zdrowy i pożywny obiad."
 
-WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Jego stan wskazuje na przyszłą renowację. Przewiduję ruch w 2026."
+WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Ta konstrukcja jest w opłakanym stanie.",
+	REPAIRED = "Teraz to znacznie bardziej zdatny do życia budynek.",
+	OCCUPIED = "Nie wyobrażam sobie spokojnego snu w takich warunkach.",
+	OCCUPIED_REPAIRED = "Wygląda na to, że kupiec odpoczywa.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1092,9 +1104,6 @@ WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Wkrótce konieczne będzie uzupełnienie.",
 	EMPTY = "Zapas paszy został wyczerpany.",
 }
-
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY = "Wyjątkowo osobliwy okaz łączący cechy ryby i stawonoga!"
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Rzadkie skupisko międzygatunkowego zachowania stadnego!"
 
 WICKERBOTTOM.DESCRIBE.AGEDROE = "Różni się od zwykłej ikry głównie słoikiem."
 WICKERBOTTOM.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Delikates z konserwowanej ikry jesiotra. Wyborne."
@@ -1194,6 +1203,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Ciepło powoduje gwałtowne rozszerzanie się wilgoci. Fascynujące!"
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Tradycyjny, stożkowy dodatek do świętowania."
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Przyjęciowy dodatek wykonany na zamówienie."
+WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Przyjęciowy dodatek wykonany na zamówienie."
 
 WICKERBOTTOM.DESCRIBE.KYNO_FISHREGISTRYHAT = "Użyteczne nakrycie głowy do systematycznego badania gatunków ryb."
 
@@ -1232,3 +1242,55 @@ WICKERBOTTOM.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "To wygląda niebezpiecznie.",
 	BURNT = "Niestety utracono informacje.",
 }
+
+WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Wygląda na to, że nie chce handlować, dopóki jego dom nie zostanie odrestaurowany.",
+	HOUSE_REPAIRED = "Dzień dobry. Omówmy twoje towary.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Jest zbyt twarde dla zwykłej siekiery.",
+	CHOPPED = "Wytrwałość się opłaciła.",
+	BLOOMING = "Wygląda na to, że dobrze się rozwija.",
+	BURNING = "Co za marnotrawstwo potencjału botanicznego.",
+	BURNT = "Nie zostało nic poza węglem.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER = "Jest dość trujący, gdy nie jest dojrzały."
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_COOKED = "Podejrzewam, że trucizna nie została wygotowana."
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Nadal powinien zostać ugotowany."
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Gotowane bulwy są podstawą wielu kultur."
+
+WICKERBOTTOM.DESCRIBE.CAVETUBERTEA = "Przyjemnie schłodzony napar z bulwy."
+
+WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Podziemny dom.",
+	OCCUPIED = "Myślę, że teraz śpi.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Czy to Plantae czy Animalia?",
+	GRUMPY = "Nie wygląda dziś na szczęśliwego.",
+}
+
+WICKERBOTTOM.DESCRIBE.MANDRAKEBAOBUNS = "Nietypowe, lecz sycące dzieło kulinarne."
+
+WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "Mandragora dodaje osobliwego aromatu."
+
+WICKERBOTTOM.DESCRIBE.MANDRAKEBEER = "Przyjemnie musujący napój bezalkoholowy."
+
+WICKERBOTTOM.DESCRIBE.RAINPARFAIT = "Arbuz nadaje mu odświeżających właściwości."
+
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Nawóz opracowany w celu stymulacji rozwoju."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Przydatny do utrzymywania zdrowych upraw."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Powinien znacznie zwiększyć produktywność."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Imponujący postęp w rolnictwie."
+
+WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN1 = "Mizerna wartość dla miejscowych."
+WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN2 = "Moneta o pewnym nominale."
+WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN3 = "Moneta o dużej wartości."

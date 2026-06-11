@@ -3,11 +3,6 @@
 -- that make playervision change areas, meaning Colour Cubes stop working
 -- even though you are still in the same place.
 
-local assets =
-{
-
-}
-
 local function commonfn(islandname, tag)
 	local inst = CreateEntity()
 
@@ -32,22 +27,22 @@ local function commonfn(islandname, tag)
 end
 
 local function serenity_marker()
-	return commonfn("SerenityIsland", "serenity_cc_marker")
+	return commonfn("SerenityIsland",       "serenity_cc_marker")
 end
 
 local function meadow_marker()
-	return commonfn("MeadowIsland", "meadow_cc_marker")
+	return commonfn("MeadowIsland",         "meadow_cc_marker")
 end
 
 local function dina_marker()
-	return commonfn("DinaMemorial", "dina_cc_marker")
+	return commonfn("DinaMemorial",         "dina_cc_marker")
 end
 
 local function packim_marker()
-	return commonfn("PackimBaggims", "packim_cc_marker")
+	return commonfn("PackimBaggims",        "packim_cc_marker")
 end
 
-return Prefab("kyno_serenity_cc_marker", serenity_marker, assets),
-Prefab("kyno_meadow_cc_marker", meadow_marker, assets),
-Prefab("kyno_dinamemorial_marker", dina_marker, assets),
-Prefab("kyno_packimbaggims_fishbone_marker", packim_marker, assets)
+return Prefab("kyno_serenity_cc_marker",     serenity_marker),
+Prefab("kyno_meadow_cc_marker",              meadow_marker),
+Prefab("kyno_dinamemorial_marker",           dina_marker),
+Prefab("kyno_packimbaggims_fishbone_marker", packim_marker)

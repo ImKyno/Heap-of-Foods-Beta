@@ -29,6 +29,8 @@ local function fn()
     inst.AnimState:PlayAnimation("idle_water", true)
     inst.AnimState:SetRayTestOnBB(true)
 
+    inst:AddTag("greenthumb_valid")
+
     inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then

@@ -36,6 +36,10 @@ end
 local function OnExtended(inst, target)
     inst.components.timer:StopTimer("kyno_beefriendlybuff")
     inst.components.timer:StartTimer("kyno_beefriendlybuff", TUNING.KYNO_BEEFRIENDLYBUFF_DURATION)
+
+    if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_BEEFRIENDLYBUFF_START"))
+	end
 	
 	if target:HasTag("beefriendly") then
 		target:RemoveTag("beefriendly")

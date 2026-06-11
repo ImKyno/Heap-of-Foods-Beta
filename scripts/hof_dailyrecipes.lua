@@ -7,11 +7,11 @@ local ROTATION_SECONDS = 24 * 60 * 60
 -- Seasonal Recipes can be disabled by players and this WILL lock out some recipes...
 local WEB_RECIPES_LIST =
 {
-	"recipes_cookpot",          -- 1
-	"recipes_cookpot_warly",    -- 2
-	"recipes_cookpot_seasonal", -- 3
-	"recipes_cookpot_jar",      -- 4
-	"recipes_cookpot_keg",      -- 5
+	"hof_recipes_cookpot",          -- 1
+	"hof_recipes_cookpot_warly",    -- 2
+	"hof_recipes_cookpot_seasonal", -- 3
+	"hof_recipes_cookpot_jar",      -- 4
+	"hof_recipes_cookpot_keg",      -- 5
 }
 
 local MOD_RECIPES_LIST =
@@ -52,7 +52,7 @@ local function CollectRecipes()
 	local list = {}
 
 	for _, modname in ipairs(WEB_RECIPES_LIST) do
-		local ok, recipes = pcall(require, "website/" .. modname)
+		local ok, recipes = pcall(require, "tools/website/" .. modname)
 
 		if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
 			print("Heap of Foods Mod - DailyRecipe: LOADING", modname, ok, recipes and "OK" or "NIL")
@@ -133,13 +133,20 @@ local function GetDailyRecipeSeed(custom_seed, excluded)
 end
 
 local function GetDailyRecipe()
-	local shard = TheWorld.net
+	-- This is causing the daily recipes to not properly update after the server starts.
+	-- Added this security check in case if someone still wants to force a daily recipe.
+	if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
+		print("Heap of Foods Mod - WARNING! GetDailyRecipe() was changed to allow Forced Daily Recipes!")
+		print("Heap of Foods Mod - WARNING! Daily Recipes cannot properly update while this setting is enabled!")
 
-	if shard ~= nil and shard._dailyrecipe ~= nil then
-		local recipe = shard._dailyrecipe:value()
+		local shard = TheWorld.net
 
-		if recipe ~= nil and recipe ~= "" then
-			return recipe
+		if shard ~= nil and shard._dailyrecipe ~= nil then
+			local recipe = shard._dailyrecipe:value()
+
+			if recipe ~= nil and recipe ~= "" then
+				return recipe
+			end
 		end
 	end
 

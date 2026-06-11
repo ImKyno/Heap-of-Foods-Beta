@@ -4,7 +4,14 @@ local cooking         = require("cooking")
 local brewing         = require("hof_brewing")
 local CookRobotCommon = require("prefabs/k_cook_robot_common")
 
-local ignorethese     = { }
+local IGNORE_THESE    = {}
+
+local PREFAB_ALIASES  =
+{
+	cookedsmallmeat   = "smallmeat_cooked",
+	cookedmonstermeat = "monstermeat_cooked",
+	cookedmeat        = "meat_cooked",
+}
 
 local CookRobotBrain = Class(Brain, function(self, inst)
 	Brain._ctor(self, inst)
@@ -19,13 +26,13 @@ function CookRobotBrain:IgnoreItem(item)
 		self:UnignoreItem()
 	end
 
-	ignorethese[item] = self.inst
+	IGNORE_THESE[item] = self.inst
 	item:ListenForEvent("onputininventory", self._targetitem_event_onputininventory)
 end
 
 function CookRobotBrain:UnignoreItem()
 	if self._targetitem then
-		ignorethese[self._targetitem] = nil
+		IGNORE_THESE[self._targetitem] = nil
 
 		if self._targetitem_event_onputininventory ~= nil then
 			if self._targetitem:IsValid() then
@@ -40,7 +47,27 @@ function CookRobotBrain:UnignoreItem()
 end
 
 function CookRobotBrain:ShouldIgnoreItem(item)
-	return ignorethese[item] ~= nil and ignorethese[item] ~= self.inst
+	return IGNORE_THESE[item] ~= nil and IGNORE_THESE[item] ~= self.inst
+end
+
+local function NormalizeIngredient(prefab)
+	return PREFAB_ALIASES[prefab] or prefab
+end
+
+local function GetCookingIngredientData(prefab)
+	return cooking.ingredients[NormalizeIngredient(prefab)]
+end
+
+local function GetBrewingIngredientData(prefab)
+	return brewing.ingredients[NormalizeIngredient(prefab)]
+end
+
+local function IsValidCookingIngredient(prefab)
+	return GetCookingIngredientData(prefab) ~= nil
+end
+
+local function IsValidBrewingIngredient(prefab)
+	return GetBrewingIngredientData(prefab) ~= nil
 end
 
 local function HasFoodOrder(inst)
@@ -179,6 +206,19 @@ local function IsCookerAvailable(inst, cooker)
 		return false
 	end
 
+	if cooker:HasTag("cook_robot_reserved") then
+		local owner = cooker._cook_robot_reserved_by
+
+		local invalid = owner == nil or not owner:IsValid() or owner._targetcooker ~= cooker
+		or (cooker._cook_robot_reserved_time ~= nil and GetTime() - cooker._cook_robot_reserved_time > 10)
+
+		if invalid then
+			cooker._cook_robot_reserved_by = nil
+			cooker._cook_robot_reserved_time = nil
+			cooker:RemoveTag("cook_robot_reserved")
+		end
+	end
+
 	local container = cooker.components.container
 
 	if cooker:HasTag("burnt") then
@@ -294,6 +334,8 @@ ReleaseCooker = function(inst)
 		UnbindCookingCallbacks(inst, inst._targetcooker)
 
 		inst._targetcooker._cook_robot_reserved_by = nil
+		inst._targetcooker._cook_robot_reserved_time = nil
+
 		inst._targetcooker:RemoveTag("cook_robot_reserved")
 	end
 
@@ -311,7 +353,7 @@ ReleaseCooker = function(inst)
 end
 
 local function EnsureTargetCooker(inst)
-	if inst._targetcooker ~= nil and IsCookerAvailable(inst, inst._targetcooker) then
+	if inst._targetcooker ~= nil and inst._targetcooker:IsValid() and IsCookerAvailable(inst, inst._targetcooker) then
 		if TUNING.HOF_DEBUG_MODE then
 			print("Heap of Foods Mod - Cook Robot: Reusing existing cooker.")
 		end
@@ -325,6 +367,8 @@ local function EnsureTargetCooker(inst)
 		inst._targetcooker = cooker
 
 		cooker._cook_robot_reserved_by = inst
+		cooker._cook_robot_reserved_time = GetTime()
+
 		cooker:AddTag("cook_robot_reserved")
 
 		if TUNING.HOF_DEBUG_MODE then
@@ -342,49 +386,71 @@ local function EnsureTargetCooker(inst)
 
 	inst._targetcooker = nil
 	inst._returning_items = true
+
+	ReleaseCooker(inst)
 	
 	return false
 end
 
 local function TestCombination(orderdata, combo)
+	local normalized = {}
+
+	for i, prefab in ipairs(combo) do
+		normalized[i] = NormalizeIngredient(prefab)
+	end
+
 	if orderdata.system == "cooking" then
-		return cooking.CalculateRecipe(orderdata.cooker_type, combo)
+		return cooking.CalculateRecipe(orderdata.cooker_type, normalized)
 	else
-		return brewing.CalculateBrewing(orderdata.cooker_type, combo)
+		return brewing.CalculateBrewing(orderdata.cooker_type, normalized)
 	end
 end
 
-local function FindValidIngredientsToCook(orderdata, ingredients)
+local function FindValidIngredientsToCook(orderdata, available)
+	local prefabs = {}
+
+	for prefab, count in pairs(available) do
+		table.insert(prefabs, prefab)
+	end
+
 	local maxslots = orderdata.maxslots
-	local n = #ingredients
 
-	local function testcombos(start, combo)
+	local function testcombo(combo)
 		local product = TestCombination(orderdata, combo)
-		
-		if product == orderdata.product then
-			return combo
-		end
+		return product == orderdata.product
+	end
 
-		if #combo == maxslots then
+	local function build(slot, combo)
+		if slot > maxslots then
+			if testcombo(combo) then
+				return shallowcopy(combo)
+			end
+
 			return nil
 		end
 
-		for i = start, n do
-			table.insert(combo, ingredients[i])
+		for _, prefab in ipairs(prefabs) do
+			if available[prefab] > 0 then
+				available[prefab] = available[prefab] - 1
 
-			local result = testcombos(i + 1, combo)
-			
-			if result ~= nil then
-				return result
+				table.insert(combo, prefab)
+
+				local result = build(slot + 1, combo)
+
+				if result then
+					return result
+				end
+
+				table.remove(combo)
+
+				available[prefab] = available[prefab] + 1
 			end
-
-			table.remove(combo)
 		end
 
 		return nil
 	end
 
-	return testcombos(1, {})
+	return build(1, {})
 end
 
 local function FindValidIngredientsToFill(orderdata, base, available)
@@ -422,37 +488,44 @@ end
 
 local function CollectAvailableIngredients(inst, orderdata)
 	local available = {}
-	
+
 	if TUNING.HOF_DEBUG_MODE then
 		print("Heap of Foods Mod - Cook Robot: Collecting ingredients for:", orderdata.product)
 	end
 
 	local x, y, z = CookRobotCommon.GetSpawnPoint(inst):Get()
 	local ents = TheSim:FindEntities(x, y, z, TUNING.KYNO_COOK_ROBOT_WORK_RADIUS, nil, CookRobotCommon.CONTAINER_CANT_TAGS, CookRobotCommon.CONTAINER_MUST_ONEOF_TAGS)
-	
+
 	if TUNING.HOF_DEBUG_MODE then
 		print("Heap of Foods Mod - Cook Robot: Containers found:", #ents)
 	end
 
 	for _, container in ipairs(ents) do
-		if container.components.container ~= nil -- and not container.components.container:IsOpenedByOthers(inst)
+		if container.components.container ~= nil
 		and container:GetCurrentPlatform() == inst:GetCurrentPlatform() then
+
 			for _, item in pairs(container.components.container.slots) do
-				if orderdata.system == "cooking" then
-					if cooking.IsCookingIngredient(item.prefab) then
-						table.insert(available, item.prefab)
-					end
-				else
-					if brewing.IsBrewingIngredient(item.prefab) then
-						table.insert(available, item.prefab)
-					end
+				local normalized = NormalizeIngredient(item.prefab)
+
+				local valid = (orderdata.system == "cooking" and IsValidCookingIngredient(normalized))
+				or (orderdata.system == "brewing" and IsValidBrewingIngredient(normalized))
+
+				if valid then
+					local stacksize = item.components.stackable ~= nil and item.components.stackable:StackSize() or 1
+					available[normalized] = (available[normalized] or 0) + stacksize
 				end
 			end
 		end
 	end
-	
+
 	if TUNING.HOF_DEBUG_MODE then
-		print("Heap of Foods Mod - Cook Robot: Available ingredients:", table.concat(available, ", "))
+		local debuglist = {}
+
+		for prefab, count in pairs(available) do
+			table.insert(debuglist, prefab .. " x" .. tostring(count))
+		end
+
+		print("Heap of Foods Mod - Cook Robot: Available ingredients:", table.concat(debuglist, ", "))
 	end
 
 	return available
@@ -461,10 +534,18 @@ end
 local function ResolveIngredientsForOrder(inst, orderdata)
 	if orderdata.system == "cooking" then
 		local available = CollectAvailableIngredients(inst, orderdata)
+
+		local function TableHasItems(t)
+			for _ in pairs(t) do
+				return true
+			end
+
+			return false
+		end
         
-		if available == nil or #available == 0 then
+		if available == nil or not TableHasItems(available) then
 			if TUNING.HOF_DEBUG_MODE then
-				print("Heap of Foods Mod - Cook Robot: No available ingredients,")
+				print("Heap of Foods Mod - Cook Robot: No available ingredients.")
 			end
 			
 			return nil
@@ -484,7 +565,7 @@ local function ResolveIngredientsForOrder(inst, orderdata)
 			print("Heap of Foods Mod - Cook Robot: Base combo:", table.concat(base, ", "))
 		end
 
-		return FindValidIngredientsToFill(orderdata, base, available)
+		return base
 	end
 
 	if orderdata.system == "brewing" then
@@ -613,6 +694,9 @@ local function InitCookTaskAction(inst)
 	
 	if ingredients == nil then
 		inst._returning_items = true
+
+		ReleaseCooker(inst)
+
 		return nil
 	end
 	
@@ -620,6 +704,9 @@ local function InitCookTaskAction(inst)
 
 	if queue == nil then
 		inst._returning_items = true
+
+		ReleaseCooker(inst)
+
 		return nil
 	end
 

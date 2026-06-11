@@ -89,6 +89,12 @@ WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Alright, now it's spooky again."
 
 WOODIE.ANNOUNCE_KYNO_LUCKBUFF_END = "Well, that was nice while it lasted."
 
+WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Now that's a proper harvest, eh?"
+WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Back to normal pickin'."
+
+WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_START = "A little rain does wonders, eh?"
+WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "Back to normal now."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to pick it up?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. He wants something else."
@@ -518,8 +524,8 @@ WOODIE.DESCRIBE.KYNO_SALMONFISH_COOKED = "Tastes like home."
 
 WOODIE.DESCRIBE.TURF_PINKPARK = "A beauty."
 WOODIE.DESCRIBE.TURF_STONECITY = "Just some ground, eh?"
-WOODIE.DESCRIBE.TURF_FIELDS = "Just some ground, eh?"
-WOODIE.DESCRIBE.TURF_TIDALMARSH = "Just some ground, eh?"
+WOODIE.DESCRIBE.TURF_FIELDS = "It's a nice path of grass."
+WOODIE.DESCRIBE.TURF_TIDALMARSH = "A bit too slimy."
 
 WOODIE.DESCRIBE.KYNO_SALTRACK =
 {
@@ -1047,7 +1053,13 @@ WOODIE.DESCRIBE.FLTSANDWICH = "BLT imitation!"
 
 WOODIE.DESCRIBE.RICEANDBEANS = "Its just missing some nice steak and fries."
 
-WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Seen better days, eh bud? Bet it's gonna get real busy come 2026."
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "That place needs fixin', eh?",
+	REPAIRED = "Now that's a proper little shop.",
+	OCCUPIED = "Hope the fella's sleepin' alright in there.",
+	OCCUPIED_REPAIRED = "Looks cozy enough for a nap now.",
+}
 
 WOODIE.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WOODIE.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Better toss some more food in.",
 	EMPTY = "All outta feed.",
 }
-
-WOODIE.DESCRIBE.KYNO_ANTCHOVY = "Now that's a catch, eh? Don't bite my logs though."
-WOODIE.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "That's a whole swarm, eh? Keep yer nets ready."
 
 WOODIE.DESCRIBE.AGEDROE = "Whew, that's salty."
 WOODIE.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Kinda slimy, but fancy folk love it, eh?"
@@ -1194,6 +1203,7 @@ WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Perfect for celebrating, eh?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Well, it sure looks festive, eh?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "That's kinda nice."
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "That's kinda nice."
 
 WOODIE.DESCRIBE.KYNO_FISHREGISTRYHAT = "Helps me keep track of all the different kinds of fish."
 
@@ -1232,3 +1242,55 @@ WOODIE.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Bit hot there, eh?",
 	BURNT = "That's done for.",
 }
+
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Can't blame him fer wantin' his house fixed first.",
+	HOUSE_REPAIRED = "Now that's better. Got anything useful, eh?",
+}
+
+WOODIE.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "I can't use you for these trees, Lucy.",
+	CHOPPED = "Took more effort than most.",
+	BLOOMING = "Look at'er bloom!",
+	BURNING = "That's a crying shame.",
+	BURNT = "Poor thing's done fer.",
+}
+
+WOODIE.DESCRIBE.KYNO_CAVETUBER = "Better not eat it until it's ripe."
+WOODIE.DESCRIBE.KYNO_CAVETUBER_COOKED = "Nothing fancy, just some tubers."
+
+WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Well it's ripe now."
+WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Well that's fancy."
+
+WOODIE.DESCRIBE.CAVETUBERTEA = "Good fer coolin' off underground."
+
+WOODIE.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "It's where those little plant guys live.",
+	OCCUPIED = "Someone in there?",
+}
+
+WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "He's looking for a fight.",
+	GRUMPY = "What happened to you today, buddy?",
+}
+
+WOODIE.DESCRIBE.MANDRAKEBAOBUNS = "Smells pretty good, eh?"
+
+WOODIE.DESCRIBE.MANDRAKEPIE = "Nothing beats fresh pie, eh?"
+
+WOODIE.DESCRIBE.MANDRAKEBEER = "Tastes like the wilderness, eh?"
+
+WOODIE.DESCRIBE.RAINPARFAIT = "Good snack fer wet weather, eh?"
+
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Gets plants growin' quicker, eh?"
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps 'em healthy and happy."
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "More harvest from the same patch."
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "That's some powerful stuff."
+
+WOODIE.DESCRIBE.KYNO_PIGCOIN1 = "I'm gonna buy something nice for Lucy."
+WOODIE.DESCRIBE.KYNO_PIGCOIN2 = "I can buy a lot of stuff with you."
+WOODIE.DESCRIBE.KYNO_PIGCOIN3 = "Not a Looney but I guess it works around here."

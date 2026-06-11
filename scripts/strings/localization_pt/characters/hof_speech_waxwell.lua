@@ -89,6 +89,12 @@ WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Que pena. A escuridão voltou a morder
 
 WAXWELL.ANNOUNCE_KYNO_LUCKBUFF_END = "Previsível. A sorte nunca dura."
 
+WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Finalmente, algo produtivo."
+WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "O momento passou."
+
+WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_START = "O clima está estranhamente estimulante."
+WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_END = "A sensação desapareceu."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de algo diferente."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Você não é fácil, hein?"
@@ -1047,7 +1053,13 @@ WAXWELL.DESCRIBE.FLTSANDWICH = "Esses sapos mereciam."
 
 WAXWELL.DESCRIBE.RICEANDBEANS = "Da próxima vez, algo melhor seria bom."
 
-WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Paciência... tudo retorna com o tempo. Talvez em 2026?"
+WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Que desculpa miserável para uma loja.",
+	REPAIRED = "Finalmente, algo apresentável.",
+	OCCUPIED = "Eu não dormiria aí voluntariamente.",
+	OCCUPIED_REPAIRED = "Pelo menos o mercador tem padrões agora.",
+}
 
 WAXWELL.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WAXWELL.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "A negligência começa a aparecer.",
 	EMPTY = "Completamente esgotado.",
 }
-
-WAXWELL.DESCRIBE.KYNO_ANTCHOVY = "Que experimento grotesco criou essa coisa?"
-WAXWELL.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "As pequenas abominações da natureza se reunindo novamente."
 
 WAXWELL.DESCRIBE.AGEDROE = "Uma refeição digna da minha posição."
 WAXWELL.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Ah, o sabor da sofisticação... finalmente."
@@ -1194,6 +1203,7 @@ WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Um agrado surpreendentemente bom para algo tão simples."
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Eu realmente preciso usar isso? Hmph..."
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Ah, então a criaturinha acha que é especial?"
+WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Ah, então a criaturinha acha que é especial?"
 
 WAXWELL.DESCRIBE.KYNO_FISHREGISTRYHAT = "Conhecimento é poder. Mesmo quando envolve peixes."
 
@@ -1232,3 +1242,55 @@ WAXWELL.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Que descuido absurdo.",
 	BURNT = "Reduzido a cinzas. Típico.",
 }
+
+WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Aparentemente preciso atender às preocupações domésticas dele primeiro.",
+	HOUSE_REPAIRED = "Muito melhor. Agora, mostre seu estoque.",
+}
+
+WAXWELL.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Um machado comum não vai resolver isso.",
+	CHOPPED = "Finalmente.",
+	BLOOMING = "Está prosperando apesar das cavernas.",
+	BURNING = "Pelo menos o fogo continua confiável.",
+	BURNT = "Arruinada além de qualquer utilidade.",
+}
+
+WAXWELL.DESCRIBE.KYNO_CAVETUBER = "Parece verde."
+WAXWELL.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ugh. Será que eu deveria comer isso?"
+
+WAXWELL.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Pelo menos é comestível."
+WAXWELL.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Parece... comestível?"
+
+WAXWELL.DESCRIBE.CAVETUBERTEA = "Pelo menos é servido gelado."
+
+WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Ugh. Que casa barulhenta.",
+	OCCUPIED = "Muito melhor sem toda aquela gritaria.",
+}
+
+WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Pare de tagarelar!",
+	GRUMPY = "Ei, amigo, você não parece muito feliz.",
+}
+
+WAXWELL.DESCRIBE.MANDRAKEBAOBUNS = "Pelo menos parece apresentável."
+
+WAXWELL.DESCRIBE.MANDRAKEPIE = "Suponho que isso sirva como sobremesa."
+
+WAXWELL.DESCRIBE.MANDRAKEBEER = "Surpreendentemente refinada."
+
+WAXWELL.DESCRIBE.RAINPARFAIT = "Pelo menos a chuva serve para alguma coisa."
+
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um atalho para jardineiros impacientes."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Manter plantas vivas exige esforço, aparentemente."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Pelo menos melhora os resultados."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Uma fórmula incomumente eficaz."
+
+WAXWELL.DESCRIBE.KYNO_PIGCOIN1 = "Ora, ora, ora..."
+WAXWELL.DESCRIBE.KYNO_PIGCOIN2 = "Terei utilidade para isso."
+WAXWELL.DESCRIBE.KYNO_PIGCOIN3 = "Subindo na vida."

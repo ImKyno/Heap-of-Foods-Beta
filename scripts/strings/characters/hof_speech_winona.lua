@@ -89,6 +89,12 @@ WINONA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Welp, back to being scared of her again
 
 WINONA.ANNOUNCE_KYNO_LUCKBUFF_END = "Alright, back to real odds."
 
+WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Now this is efficient harvesting."
+WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Back to regular production."
+
+WINONA.ANNOUNCE_KYNO_WETNESSBUFF_START = "Guess the rain's helping me keep it together."
+WINONA.ANNOUNCE_KYNO_WETNESSBUFF_END = "There goes that nice feeling."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nope."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope, something else, maybe."
@@ -1047,7 +1053,13 @@ WINONA.DESCRIBE.FLTSANDWICH = "Mhm, yep. I definetely prefer bacon over frog mea
 
 WINONA.DESCRIBE.RICEANDBEANS = "Lunch."
 
-WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Needs a real fixer-upper job. Maybe they'll put me on it in 2026."
+WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "This place needs some serious repair work.",
+	REPAIRED = "Now that's solid craftsmanship.",
+	OCCUPIED = "Doesn't look too comfortable in there.",
+	OCCUPIED_REPAIRED = "Looks like the guy finally has a decent place to rest.",
+}
 
 WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WINONA.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Needs topping up soon.",
 	EMPTY = "Bone dry.",
 }
-
-WINONA.DESCRIBE.KYNO_ANTCHOVY = "Now that's some weird cross-breeding!"
-WINONA.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Looks like a moving mess of work for me!"
 
 WINONA.DESCRIBE.AGEDROE = "I made them fancy, but they're still fish eggs."
 WINONA.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "I guess this is what fancy folks call dinner."
@@ -1194,6 +1203,7 @@ WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Now this is real party fuel!"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Time to get the party started!"
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Custom-made! Sammy really is part of the team, huh?"
+WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Custom-made! Partitio really is part of the team, huh?"
 
 WINONA.DESCRIBE.KYNO_FISHREGISTRYHAT = "Good for learning patterns. Fish got plenty of 'em."
 
@@ -1232,3 +1242,55 @@ WINONA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Welp, there goes the sign.",
 	BURNT = "Can't fix that anymore.",
 }
+
+WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Guess repairs come before business.",
+	HOUSE_REPAIRED = "There we go. Let's make a deal.",
+}
+
+WINONA.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "That's gonna need more than a regular axe.",
+	CHOPPED = "Hard work pays off.",
+	BLOOMING = "Looks healthy enough.",
+	BURNING = "Well, there it goes.",
+	BURNT = "Nothing left worth salvaging.",
+}
+
+WINONA.DESCRIBE.KYNO_CAVETUBER = "Doesn't look like it's ripe."
+WINONA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Can I eat it now?"
+
+WINONA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "This is the season for tubers."
+WINONA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Oh. I was hoping for some fries."
+
+WINONA.DESCRIBE.CAVETUBERTEA = "Not bad for cave tea."
+
+WINONA.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "I wonder how they get any sleep.",
+	OCCUPIED = "Can't get enough sleep with all that noise.",
+}
+
+WINONA.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Hey there, noisy dude!",
+	GRUMPY = "Feeling a bit down today, aren't we?",
+}
+
+WINONA.DESCRIBE.MANDRAKEBAOBUNS = "Nice little handheld meal."
+
+WINONA.DESCRIBE.MANDRAKEPIE = "That's some solid baking."
+
+WINONA.DESCRIBE.MANDRAKEBEER = "Cold, fizzy, and gets the job done."
+
+WINONA.DESCRIBE.RAINPARFAIT = "Nice and refreshing."
+
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A practical growth enhancer."
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps crops in working order."
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Higher output. Can't argue with that."
+WINONA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "That's industrial-grade farming."
+
+WINONA.DESCRIBE.KYNO_PIGCOIN1 = "A lucky coin."
+WINONA.DESCRIBE.KYNO_PIGCOIN2 = "Save this for a rainy day."
+WINONA.DESCRIBE.KYNO_PIGCOIN3 = "Gotta watch I don't turn into a rich dope."

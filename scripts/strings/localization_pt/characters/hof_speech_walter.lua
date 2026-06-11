@@ -89,6 +89,12 @@ WALTER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Eu ainda não possuo medo da escuridão
 
 WALTER.ANNOUNCE_KYNO_LUCKBUFF_END = "Acho que a sorte acabou."
 
+WALTER.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Parece que a temporada de colheita chegou cedo, Woby!"
+WALTER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "A grande colheita acabou agora."
+
+WALTER.ANNOUNCE_KYNO_WETNESSBUFF_START = "Essa chuva está realmente levantando meu astral, Woby!"
+WALTER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Acho que a sensação passou."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Coisa errada!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, não é este."
@@ -518,7 +524,7 @@ WALTER.DESCRIBE.KYNO_SALMONFISH_COOKED = "Você gosta de salmão também, Woby?"
 
 WALTER.DESCRIBE.TURF_PINKPARK = "Prefiro as azuis."
 WALTER.DESCRIBE.TURF_STONECITY = "Realmente preciso carregar essas pedras comigo?"
-WALTER.DESCRIBE.TURF_FIELDS = "Realmente preciso carregar essas terras comigo?"
+WALTER.DESCRIBE.TURF_FIELDS = "Realmente preciso carregar essa terra comigo?"
 WALTER.DESCRIBE.TURF_TIDALMARSH = "Realmente preciso carregar essa terra comigo?"
 
 WALTER.DESCRIBE.KYNO_SALTRACK =
@@ -1047,7 +1053,13 @@ WALTER.DESCRIBE.FLTSANDWICH = "Ah, ótimo! Mais sanduíches de sapo."
 
 WALTER.DESCRIBE.RICEANDBEANS = "Prato simples e equilibrado."
 
-WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Um lugar abandonado sempre tem uma história... talvez em 2026 a conheçamos!"
+WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Esse lugar realmente precisa de alguns reparos.",
+	REPAIRED = "Agora isso sim é um pequeno prédio respeitável.",
+	OCCUPIED = "Espero que ele esteja bem dormindo aí dentro.",
+	OCCUPIED_REPAIRED = "Parece que ele está descansando bem.",
+}
 
 WALTER.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WALTER.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Quase sem comida.",
 	EMPTY = "Acho que eles comeram tudo.",
 }
-
-WALTER.DESCRIBE.KYNO_ANTCHOVY = "Uma nova espécie! Espere até a Woby ver isso!"
-WALTER.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Ficam juntinhas... como formigas! Ou peixes!"
 
 WALTER.DESCRIBE.AGEDROE = "Ah, ovos de peixe..."
 WALTER.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Então é assim que o caviar tem gosto... legal!"
@@ -1194,6 +1203,7 @@ WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Ótima para festas e histórias na fogueira!"
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Perfeito para uma reunião animada!"
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Equipamento especial pro nosso amiguinho especial!"
+WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Equipamento especial pro nosso amiguinho especial!"
 
 WALTER.DESCRIBE.KYNO_FISHREGISTRYHAT = "Ótimo para anotar que tipo de peixe você encontra."
 
@@ -1232,3 +1242,55 @@ WALTER.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Opa! Isso não é bom!",
 	BURNT = "Parece que perdemos o jantar.",
 }
+
+WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Acho que deveríamos ajudar a consertar a casa dele primeiro, Woby.",
+	HOUSE_REPAIRED = "Sua casa ficou ótima agora, senhor!",
+}
+
+WALTER.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Parece mais resistente que árvores normais, Woby.",
+	CHOPPED = "Isso demorou uma eternidade!",
+	BLOOMING = "Acho que plantas das cavernas também florescem.",
+	BURNING = "Aw, que azar.",
+	BURNT = "Não sobrou nada agora.",
+}
+
+WALTER.DESCRIBE.KYNO_CAVETUBER = "Parece venenoso."
+WALTER.DESCRIBE.KYNO_CAVETUBER_COOKED = "Melhor não comer isso!"
+
+WALTER.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Hmph. Acho que agora é seguro comer, Woby."
+WALTER.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Tem gosto de batata-doce!"
+
+WALTER.DESCRIBE.CAVETUBERTEA = "Isso seria ótimo numa viagem de acampamento."
+
+WALTER.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Essa casa é vegetação gritante.",
+	OCCUPIED = "Pelo menos ele não está gritando agora.",
+}
+
+WALTER.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Pode evitar me comer, homem planta?",
+	GRUMPY = "Talvez você possa ajudar a melhorar o humor dele um pouco, Woby?",
+}
+
+WALTER.DESCRIBE.MANDRAKEBAOBUNS = "Perfeito para a trilha."
+
+WALTER.DESCRIBE.MANDRAKEPIE = "Torta sempre fica melhor ao ar livre."
+
+WALTER.DESCRIBE.MANDRAKEBEER = "Perfeita depois de uma longa caminhada."
+
+WALTER.DESCRIBE.RAINPARFAIT = "Seria ótimo durante uma tempestade."
+
+WALTER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Perfeito para cultivar suprimentos na natureza."
+WALTER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Mantém o jardim em ótima forma."
+WALTER.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais colheita com menos esforço."
+WALTER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Essa tecnologia de jardinagem é impressionante."
+
+WALTER.DESCRIBE.KYNO_PIGCOIN1 = "É uma moeda, Woby!"
+WALTER.DESCRIBE.KYNO_PIGCOIN2 = "Eu podia comprar um monte de lanches pra Woby com isso."
+WALTER.DESCRIBE.KYNO_PIGCOIN3 = "Parece importante, precisamos guardar em um lugar seguro."

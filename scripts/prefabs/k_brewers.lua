@@ -5,10 +5,7 @@ local TOTAL_BREWING_TIME = TUNING.TOTAL_DAY_TIME -- 480
 
 local assets =
 {
-	Asset("ANIM", "anim/cook_pot.zip"),
-	Asset("ANIM", "anim/cookpot_archive.zip"),
 	Asset("ANIM", "anim/cook_pot_food.zip"),
-
 	Asset("ANIM", "anim/ui_brewer_1x3.zip"),
 
 	Asset("ANIM", "anim/kyno_brewers_keg.zip"),
@@ -62,7 +59,7 @@ local function OnHammered(inst, worker)
 
 	local fx = SpawnPrefab("collapse_small")
 	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
-	
+
 	inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_destroy")
 
 	inst:Remove()
@@ -81,7 +78,7 @@ local function OnHit(inst, worker)
 				if inst.components.container ~= nil and inst.components.container:IsOpen() then
 					inst.components.container:Close()
 				end
-				
+
 				inst.AnimState:PlayAnimation("hit")
 				inst.AnimState:PushAnimation("idle", true)
 			end
@@ -97,17 +94,17 @@ local function StartCookFn(inst)
 		else
 			inst.AnimState:PushAnimation("brew_loop", true)
 		end
-		
+
 		inst.SoundEmitter:KillSound("brew_loop")
 		inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_loop", "brew_loop")
-    end
+	end
 end
 
 local function OnOpen(inst)
 	if not inst:HasTag("burnt") then
 		inst.AnimState:PlayAnimation("open")
 		inst.AnimState:PushAnimation("idle_open", true)
-		
+
 		inst.SoundEmitter:KillSound("brew_loop")
 		inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
 	end
@@ -119,7 +116,7 @@ local function OnClose(inst)
 			inst.AnimState:PlayAnimation("close")
 			inst.SoundEmitter:KillSound("brew_loop")
 		end
-		
+
 		inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
 	end
 end
@@ -127,7 +124,7 @@ end
 local function SetProductSymbol(inst, product, overridebuild)
 	local recipe = brewing.GetBrewing(inst.prefab, product)
 	local overridesymbol = (recipe ~= nil and recipe.overridesymbolname) or product
-	
+
 	inst.AnimState:ShowSymbol("product_sign")
 	inst.AnimState:ShowSymbol("product_image")
 	inst.AnimState:OverrideSymbol("product_image", resolvefilepath("images/inventoryimages/hof_inventoryimages.xml"), overridesymbol..".tex")
@@ -144,7 +141,7 @@ local function HideProductImage(inst)
 	inst.AnimState:HideSymbol("goop")
 	inst.AnimState:HideSymbol("product_sign")
 	inst.AnimState:HideSymbol("product_image")
-	
+
 	inst.AnimState:ClearOverrideSymbol("goop")
 	inst.AnimState:ClearOverrideSymbol("product_image")
 end
@@ -163,7 +160,7 @@ local function DoneCookFn(inst, product)
 		else
 			inst.AnimState:OverrideSymbol("goop", brewer, "goop")
 		end
-		
+
 		inst.AnimState:PlayAnimation("idle", true)
 
 		inst.SoundEmitter:KillSound("brew_loop")
@@ -176,7 +173,7 @@ local function ContinueDoneFn(inst, product)
 		ShowProductImage(inst)
 
 		inst.AnimState:ShowSymbol("goop")
-		
+
 		local brewer = (inst:HasTag("woodenkeg") and "kyno_brewers_keg") or "kyno_brewers_jar"
 		local recipe = inst.components.brewer ~= nil and inst.components.brewer.product
 
@@ -185,7 +182,7 @@ local function ContinueDoneFn(inst, product)
 		else
 			inst.AnimState:OverrideSymbol("goop", brewer, "goop")
 		end
-		
+
 		inst.AnimState:PlayAnimation("idle", true)
 	end
 end
@@ -193,7 +190,7 @@ end
 local function ContinueCookFn(inst)
 	if not inst:HasTag("burnt") then
 		inst.AnimState:PlayAnimation("brew_loop", true)
-		
+
 		inst.SoundEmitter:KillSound("brew_loop")
 		inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_loop", "brew_loop")
 	end
@@ -211,7 +208,7 @@ end
 local function OnBuilt(inst)
 	inst.AnimState:PlayAnimation("place")
 	inst.AnimState:PushAnimation("idle", true)
-	
+
 	inst.SoundEmitter:PlaySound("hof_sounds/common/brewers/brew_start")
 end
 
@@ -255,7 +252,7 @@ end
 
 local function commonfn(bank, build, minimapicon, tags, physics, scale)
 	local inst = CreateEntity()
-	
+
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
@@ -263,45 +260,45 @@ local function commonfn(bank, build, minimapicon, tags, physics, scale)
 
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon(minimapicon..".tex")
-	
+
 	MakeObstaclePhysics(inst, physics)
-	
+
 	inst.AnimState:SetScale(scale or 1, scale or 1, scale or 1)
-	
+
 	inst.AnimState:SetBank(bank)
 	inst.AnimState:SetBuild(build)
 	inst.AnimState:PlayAnimation("idle", true)
-	
+
 	inst:AddTag("structure")
 	inst:AddTag("brewer")
 	inst:AddTag("cook_robot_cooker_valid")
-	
+
 	if tags ~= nil then
 		for i, v in pairs(tags) do
 			inst:AddTag(v)
 		end
 	end
-	
+
 	HideProductImage(inst)
 	MakeSnowCoveredPristine(inst)
-	
+
 	inst.entity:SetPristine()
-	
-	if not TheWorld.ismastersim then	
+
+	if not TheWorld.ismastersim then
 		inst.OnEntityReplicated = function(inst)
 			if not inst:HasTag("burnt") then
 				inst.replica.container:WidgetSetup("brewer")
 			end
 		end
-		
+
 		return inst
 	end
-	
+
 	inst:AddComponent("lootdropper")
-	
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
-	
+
 	inst:AddComponent("brewer")
 	inst.components.brewer.onstartcooking = StartCookFn
 	inst.components.brewer.oncontinuecooking = ContinueCookFn
@@ -335,7 +332,7 @@ local function commonfn(bank, build, minimapicon, tags, physics, scale)
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 	inst.OnLoadPostPass = OnLoadPostPass
-	
+
 	return inst
 end
 

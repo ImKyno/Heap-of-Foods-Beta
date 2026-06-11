@@ -1,0 +1,179 @@
+local _G               = GLOBAL
+local require          = _G.require
+local PIG_COIN_ECONOMY = require("hof_pigcoineconomy")
+
+require("hof_constants")
+require("hof_brewing")
+require("craftpot/ingredienttags")
+
+-- Vanilla Wooden Keg and Preserves Jar Ingredients.
+AddBrewingValues({"honey"},                     {sweetener  = 1,   honey         = 1})
+AddBrewingValues({"honeycomb"},                 {sweetener  = 1,   honeycomb     = 1})
+AddBrewingValues({"pomegranate"},               {fruit      = 1,   pomegranate   = 1})
+AddBrewingValues({"dragonfruit"},               {fruit      = 1,   dragonfruit   = 1})
+AddBrewingValues({"cave_banana"},               {fruit      = 1,   cave_banana   = 1})
+AddBrewingValues({"durian"},                    {fruit      = 1,   durian        = 1})
+AddBrewingValues({"watermelon"},                {fruit      = 1,   watermelon    = 1})
+AddBrewingValues({"berries"},                   {fruit      = 0.5, berries       = 1})
+AddBrewingValues({"berries_juicy"},             {fruit      = 0.5, berries_juicy = 1})
+AddBrewingValues({"fig"},                       {fruit      = 1,   fig           = 1})
+AddBrewingValues({"wormlight"},                 {fruit      = 1,   wormlight     = 1})
+AddBrewingValues({"wormlight_lesser"},          {fruit      = 0.5, wormlight     = 1})
+AddBrewingValues({"carrot"},                    {veggie     = 1,   carrot        = 1})
+AddBrewingValues({"corn"},                      {veggie     = 1,   corn          = 1})
+AddBrewingValues({"eggplant"},                  {veggie     = 1,   eggplant      = 1})
+AddBrewingValues({"pumpkin"},                   {veggie     = 1,   pumpkin       = 1})
+AddBrewingValues({"foliage"},                   {veggie     = 0.5, foliage       = 1})
+AddBrewingValues({"succulent_picked"},          {veggie     = 0.5, succulent     = 1, foliage  = 1})
+AddBrewingValues({"cutlichen"},                 {veggie     = 0.5, cutlichen     = 1})
+AddBrewingValues({"cactus_meat"},               {veggie     = 1,   cactus_meat   = 1})
+AddBrewingValues({"cactus_flower"},             {veggie     = 1,   cactus_flower = 1})
+AddBrewingValues({"garlic"},                    {veggie     = 1,   garlic        = 1})
+AddBrewingValues({"asparagus"},                 {veggie     = 1,   asparagus     = 1})
+AddBrewingValues({"onion"},                     {veggie     = 1,   onion         = 1})
+AddBrewingValues({"tomato"},                    {veggie     = 1,   tomato        = 1})
+AddBrewingValues({"potato"},                    {veggie     = 1,   potato        = 1})
+AddBrewingValues({"pepper"},                    {veggie     = 1,   pepper        = 1})
+AddBrewingValues({"red_cap"},                   {veggie     = 0.5, mushrooms     = 1})
+AddBrewingValues({"green_cap"},                 {veggie     = 0.5, mushrooms     = 1})
+AddBrewingValues({"blue_cap"},                  {veggie     = 0.5, mushrooms     = 1})
+AddBrewingValues({"moon_cap"},                  {veggie     = 0.5, mushrooms     = 1})
+AddBrewingValues({"kelp"},                      {veggie     = 1,   kelp          = 1})
+AddBrewingValues({"rock_avocado_fruit_ripe"},   {veggie     = 1,   avocado       = 1})
+AddBrewingValues({"tallbirdegg"},               {egg        = 4,   tallbirdegg   = 1})
+AddBrewingValues({"bird_egg"},                  {egg        = 1})
+AddBrewingValues({"nightmarefuel"},             {inedible   = 1,   magic         = 1})
+AddBrewingValues({"ice"},                       {frozen     = 1})
+AddBrewingValues({"ancientfruit_nightvision"},  {fruit      = 1})
+AddBrewingValues({"goatmilk"},                  {dairy      = 1,   milk          = 1})
+AddBrewingValues({"moon_tree_blossom"},         {veggie     = 0.5})
+AddBrewingValues({"purebrilliance"},            {lunar      = 1})
+AddBrewingValues({"horrorfuel"},                {shadow     = 1})
+AddBrewingValues({"seeds"},                     {seeds      = 1})
+
+-- Mod Wooden Keg and Preserves Jar Ingredients.
+AddBrewingValues({"kyno_wheat"},                {veggie     = 1,   wheat         = 1})
+AddBrewingValues({"kyno_spotspice"},            {spotspice  = 1})
+AddBrewingValues({"kyno_spotspice_leaf"},       {spotspice  = 1})
+AddBrewingValues({"kyno_syrup"},                {syrup      = 1,   sweetener     = 1})
+AddBrewingValues({"kyno_banana"},               {fruit      = 1,   banana        = 1})
+AddBrewingValues({"kyno_kokonut_halved"},       {fruit      = 1,   kokonut       = 1})
+AddBrewingValues({"kyno_white_cap"},            {veggie     = 0.5, mushrooms     = 1})
+AddBrewingValues({"kyno_foliage"},              {veggie     = 0.5, foliage       = 1})
+AddBrewingValues({"kyno_aloe"},                 {veggie     = 1,   aloe          = 1})
+AddBrewingValues({"kyno_radish"},               {veggie     = 1,   radish        = 1})
+AddBrewingValues({"kyno_sweetpotato"},          {veggie     = 1,   sweetpotato   = 1})
+AddBrewingValues({"kyno_lotus_flower"},         {veggie     = 1,   lotus         = 1})
+AddBrewingValues({"kyno_seaweeds"},             {veggie     = 1,   seaweeds      = 1})
+AddBrewingValues({"kyno_taroroot"},             {veggie     = 1,   taroroot      = 1})
+AddBrewingValues({"kyno_waterycress"},          {veggie     = 1,   waterycress   = 1})
+AddBrewingValues({"kyno_cucumber"},             {veggie     = 1,   cucumber      = 1})
+AddBrewingValues({"kyno_parznip"},              {veggie     = 1,   parznip       = 1})
+AddBrewingValues({"kyno_parznip_eaten"},        {veggie     = 1,   parznip       = 1})
+AddBrewingValues({"kyno_turnip"},               {veggie     = 1,   turnip        = 1})
+AddBrewingValues({"kyno_fennel"},               {veggie     = 1,   fennel        = 1, foliage  = 1})
+AddBrewingValues({"kyno_sugartree_petals"},     {sweetener  = 1,   sugarflower   = 1})
+AddBrewingValues({"kyno_chicken_egg"},          {egg        = 1,   chickenegg    = 1})
+AddBrewingValues({"kyno_chicken_egg_large"},    {egg        = 2,   chickenegg    = 2})
+AddBrewingValues({"mayonnaise"},                {mayonnaise = 1})
+AddBrewingValues({"kyno_piko"},                 {piko       = 1})
+AddBrewingValues({"kyno_piko_orange"},          {piko       = 1})
+AddBrewingValues({"kyno_oil"},                  {oil        = 1})
+AddBrewingValues({"kyno_salt"},                 {salt       = 1})
+AddBrewingValues({"kyno_sugar"},                {sweetener  = 1,   sugar         = 1})
+AddBrewingValues({"kyno_rice"},                 {veggie     = 1})
+AddBrewingValues({"kyno_pineapple_halved"},     {fruit      = 1,   pineapple     = 1})
+AddBrewingValues({"nukacola"},                  {soda       = 1})
+AddBrewingValues({"nukacola_quantum"},          {soda       = 1,   quantum       = 1})
+AddBrewingValues({"kyno_milk_beefalo"},         {dairy      = 1,   milk          = 1})
+AddBrewingValues({"kyno_milk_koalefant"},       {dairy      = 1,   milk          = 1})
+AddBrewingValues({"kyno_coffeebeans_cooked"},   {seeds      = 1})
+AddBrewingValues({"chocolate_black"},           {sweetener  = 1,   chocolate     = 1})
+AddBrewingValues({"chocolate_white"},           {sweetener  = 1,   chocolate     = 1})
+AddBrewingValues({"kyno_tealeaf"},              {leaf       = 1})
+AddBrewingValues({"kyno_poison_froglegs"},      {froglegs   = 1})
+AddBrewingValues({"kyno_truffles"},             {veggie     = 1,   mushrooms     = 1})
+AddBrewingValues({"kyno_sporecap"},             {veggie     = 0.5, mushrooms     = 1, monster  = 0.5})
+AddBrewingValues({"kyno_sporecap_dark"},        {veggie     = 0.5, mushrooms     = 1, monster  = 0.5})
+AddBrewingValues({"truffleoil"},                {oil        = 1})
+AddBrewingValues({"kyno_bottle_soul"},          {soul       = 1})
+AddBrewingValues({"kyno_cavetuber"},            {veggie     = 1,   tuber         = 1, monster  = 1})
+AddBrewingValues({"kyno_cavetuber_blooming"},   {veggie     = 1,   tuber         = 1})
+AddBrewingValues({"mandrake"},                  {veggie     = 1,   magic         = 1, mandrake = 1})
+
+local fishroes =
+{
+	"kyno_roe_grouper",
+	"kyno_roe_jellyfish",
+	"kyno_roe_jellyfish_rainbow",
+	"kyno_roe_koi",
+	"kyno_roe_neonfish",
+	"kyno_roe_oceanfish_medium_1",
+	"kyno_roe_oceanfish_medium_2",
+	"kyno_roe_oceanfish_medium_3",
+	"kyno_roe_oceanfish_medium_4",
+	"kyno_roe_oceanfish_medium_5",
+	"kyno_roe_oceanfish_medium_6",
+	"kyno_roe_oceanfish_medium_7",
+	"kyno_roe_oceanfish_medium_8",
+	"kyno_roe_oceanfish_medium_9",
+	"kyno_roe_oceanfish_midnight_carp",
+	"kyno_roe_oceanfish_pufferfish",
+	"kyno_roe_oceanfish_small_1",
+	"kyno_roe_oceanfish_small_2",
+	"kyno_roe_oceanfish_small_3",
+	"kyno_roe_oceanfish_small_4",
+	"kyno_roe_oceanfish_small_5",
+	"kyno_roe_oceanfish_small_6",
+	"kyno_roe_oceanfish_small_7",
+	"kyno_roe_oceanfish_small_8",
+	"kyno_roe_oceanfish_small_9",
+	"kyno_roe_oceanfish_sturgeon",
+	"kyno_roe_pierrotfish",
+	"kyno_roe_pondeel",
+	"kyno_roe_pondfish",
+	"kyno_roe_salmonfish",
+	"kyno_roe_swordfish_blue",
+	"kyno_roe_tropicalfish",
+	"kyno_roe_wobster",
+	"kyno_roe_wobster_monkeyisland",
+	"kyno_roe_wobster_moonglass",
+}
+
+for k, v in pairs(fishroes) do
+	AddBrewingValues({v}, {roe = 1})
+end
+
+-- Import the Beverages.
+local brewer_jar    = {"kyno_preservesjar"}
+local brewer_keg    = {"kyno_woodenkeg"}
+local brewer_warly  = {"kyno_portablebrewer"}
+
+local jar_recipes   = require("hof_brewrecipes_jar")
+local keg_recipes   = require("hof_brewrecipes_keg")
+-- local warly_recipes = require("hof_brewrecipes_warly")
+local recipe_cards  = require("hof_brewing").recipe_cards
+
+for _, brewer in pairs(brewer_jar)    do for _, recipe in pairs(jar_recipes)   do AddBrewerRecipe(brewer, recipe) end end
+for _, brewer in pairs(brewer_keg)    do for _, recipe in pairs(keg_recipes)   do AddBrewerRecipe(brewer, recipe) end end
+
+-- Portable Brewer.
+-- for _, brewer in pairs(brewer_warly) do for _, recipe in pairs(warly_recipes) do AddBrewerRecipe(brewer, recipe) end end
+for _, brewer in pairs(brewer_warly)  do for _, recipe in pairs(jar_recipes)   do AddBrewerRecipe(brewer, recipe) end end
+for _, brewer in pairs(brewer_warly)  do for _, recipe in pairs(keg_recipes)   do AddBrewerRecipe(brewer, recipe) end end
+
+-- Brewing Recipe Cards.
+for _, recipe in pairs(jar_recipes)   do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_preservesjar"})   end end
+for _, recipe in pairs(keg_recipes)   do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_woodenkeg"})      end end
+-- for _, recipe in pairs(warly_recipes) do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_portablebrewer"}) end end
+
+-- Pig King Coin Economy System.
+local all_recipes =
+{
+	jar_recipes,
+	keg_recipes,
+}
+
+for k, v in pairs(all_recipes) do
+	PIG_COIN_ECONOMY.RegisterRecipes(v)
+end

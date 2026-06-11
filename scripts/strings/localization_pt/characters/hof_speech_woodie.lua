@@ -89,6 +89,12 @@ WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Certo, agora voltou a ficar assustador.
 
 WOODIE.ANNOUNCE_KYNO_LUCKBUFF_END = "Bom, foi legal enquanto durou."
 
+WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Agora isso sim é uma colheita decente, hein?"
+WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "De volta à colheita normal."
+
+WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_START = "Um pouco de chuva faz maravilhas, né?"
+WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "De volta ao normal."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo diferente se encaixe aqui"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, ele não quer isso."
@@ -518,8 +524,8 @@ WOODIE.DESCRIBE.KYNO_SALMONFISH_COOKED = "Sabe como casa."
 
 WOODIE.DESCRIBE.TURF_PINKPARK = "Que beleza."
 WOODIE.DESCRIBE.TURF_STONECITY = "Apenas um chão, hein?"
-WOODIE.DESCRIBE.TURF_FIELDS = "Apenas um chão, hein?"
-WOODIE.DESCRIBE.TURF_TIDALMARSH = "Apenas um chão, hein?"
+WOODIE.DESCRIBE.TURF_FIELDS = "É grama."
+WOODIE.DESCRIBE.TURF_TIDALMARSH = "Está bem molhado."
 
 WOODIE.DESCRIBE.KYNO_SALTRACK =
 {
@@ -1047,7 +1053,13 @@ WOODIE.DESCRIBE.FLTSANDWICH = "Imitação de BLT!"
 
 WOODIE.DESCRIBE.RICEANDBEANS = "Só falta um bom bife e batatas fritas."
 
-WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Já viu dias melhores, né? Aposto que em 2026 vai ficar agitada."
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Esse lugar precisa de uns consertos, hein?",
+	REPAIRED = "Agora sim é uma lojinha decente.",
+	OCCUPIED = "Espero que o sujeito esteja dormindo bem aí dentro.",
+	OCCUPIED_REPAIRED = "Agora parece aconchegante o bastante pra uma soneca.",
+}
 
 WOODIE.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WOODIE.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Melhor jogar mais comida aí.",
 	EMPTY = "Acabou a ração.",
 }
-
-WOODIE.DESCRIBE.KYNO_ANTCHOVY = "Agora esse sim é um bom peixe, hein? Só não morda meus troncos."
-WOODIE.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "É um enxame inteiro, hein? Melhor preparar as redes."
 
 WOODIE.DESCRIBE.AGEDROE = "Ufa, que salgado!"
 WOODIE.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Meio gosmento, mas o pessoal chique adora, né?"
@@ -1194,6 +1203,7 @@ WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Perfeita para comemorar, né?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Bom, com certeza parece festivo, né?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Isso é bem legal, né?"
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Isso é bem legal, né?"
 
 WOODIE.DESCRIBE.KYNO_FISHREGISTRYHAT = "Ajuda a acompanhar todos os tipos diferentes de peixe."
 
@@ -1232,3 +1242,55 @@ WOODIE.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Tá bem quente aí, hein?",
 	BURNT = "Isso aí já era.",
 }
+
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Não dá pra culpar ele por querer a casa arrumada primeiro.",
+	HOUSE_REPAIRED = "Agora sim tá melhor. Tem algo útil aí, hein?",
+}
+
+WOODIE.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Não posso te usar nessas árvores, Lucy.",
+	CHOPPED = "Deu mais trabalho que a maioria.",
+	BLOOMING = "Olha só ela florescendo!",
+	BURNING = "Isso é uma pena danada.",
+	BURNT = "Pobrezinha já era.",
+}
+
+WOODIE.DESCRIBE.KYNO_CAVETUBER = "Melhor não comer até amadurecer."
+WOODIE.DESCRIBE.KYNO_CAVETUBER_COOKED = "Nada sofisticado, só alguns tubérculos."
+
+WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Bom, agora amadureceu."
+WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Bom, isso ficou sofisticado."
+
+WOODIE.DESCRIBE.CAVETUBERTEA = "Bom pra se refrescar no subterrâneo."
+
+WOODIE.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "É onde aqueles carinhas planta vivem.",
+	OCCUPIED = "Tem alguém aí?",
+}
+
+WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Ele tá procurando briga.",
+	GRUMPY = "O que aconteceu contigo hoje, amigo?",
+}
+
+WOODIE.DESCRIBE.MANDRAKEBAOBUNS = "Cheira muito bem, hein?"
+
+WOODIE.DESCRIBE.MANDRAKEPIE = "Nada supera uma torta fresca, hein?"
+
+WOODIE.DESCRIBE.MANDRAKEBEER = "Tem gosto da natureza, né?"
+
+WOODIE.DESCRIBE.RAINPARFAIT = "Bom lanche pra tempo chuvoso, né?"
+
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Faz as plantas crescerem mais rápido, hein?"
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Mantém elas saudáveis e felizes."
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais colheita no mesmo terreno."
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Isso é coisa poderosa."
+
+WOODIE.DESCRIBE.KYNO_PIGCOIN1 = "Vou comprar algo legal pra Lucy."
+WOODIE.DESCRIBE.KYNO_PIGCOIN2 = "Dá pra comprar bastante coisa com isso."
+WOODIE.DESCRIBE.KYNO_PIGCOIN3 = "Não é um dólar, mas acho que serve por aqui."

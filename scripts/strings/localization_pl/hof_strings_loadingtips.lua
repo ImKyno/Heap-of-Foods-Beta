@@ -125,6 +125,18 @@ local LOADINGTIPS   =
 	WEBSITE         = "Czy wiesz, że Stos jedzenia ma oficjalną stronę internetową? Teraz już wiesz. Naucz się gotować wszystkie przepisy na: https://heap-of-foods.com",
 	DAILYRECIPES1   = "Codzienne Przepisy to wyróżnione dania wybierane każdego dnia z puli przepisów. Wszyscy gracze mają ten sam przepis, niezależnie od świata. Każdego dnia losowo wybierany jest jeden przepis. Zjedzenie przepisu dnia zapewnia bonus do Zdrowia, Głodu i Poczytalności, oprócz oryginalnych statystyk dania. Zwiększa także Szczęście na pewien czas.",
 	DAILYRECIPES2   = "Aktualny Codzienny Przepis możesz sprawdzić, budując Tablicę Codziennych Przepisów lub odwiedzając oficjalną stronę moda.",
+	CAVETUBERTREE1  = "Jaskiniowe Drzewa Bulwiaste są wytrzymałe i nie dadzą się łatwo ściąć. Weź swój najlepszy topór!",
+	CAVETUBERTREE2  = "Wiosną Jaskiniowe Drzewa Bulwiaste zaczynają kwitnąć, produkując inny rodzaj Jaskiniowej Bulwy.",
+	ELDERMANDRAKE1  = "Starsze Mandragory po zabiciu usypiają wszystkie stworzenia w pobliżu na kilka sekund.",
+	ELDERMANDRAKE2  = "Uważaj! Starsze Mandragory nie lubią, gdy nosisz w pobliżu warzywa lub inne mandragory.",
+	ELDERMANDRAKE3  = "\"Słyszałem, że wczoraj ktoś znalazł dziwnie wyglądające liściaste domy w jaskiniach niedaleko grzybowego lasu. Ciekawe, kto tam mieszka...\" -W",
+	EARMUFFSHAT     = "Królicze Nauszniki zapewniają teraz ochronę przed głośnymi dźwiękami!",
+	PIGCOIN1        = "Przygotowane Potrawy można wymieniać z Królem Świni na Monety. Każde jedzenie ma własną wartość; rzadsze i lepsze potrawy są warte więcej niż zwykłe dania.",
+	PIGCOIN2        = "Król Świni jest głodny i domaga się jedzenia! W zamian oferuje Monety (jego najnowszą próbę stworzenia waluty, przynajmniej według jego poddanych).",
+	PIGCOIN3        = "\"Wygląda na to, że ten głupi wieprz szuka jedzenia w zamian za kilka monet. Może dorobię się na nim fortuny!\" -W",
+	PARTITIO1       = "Partitio to dumny wieprz mieszkający w Lesie Liściastym. Sprzedaje wyłącznie towary najwyższej jakości i chętnie poznaje nowych klientów.",
+	PARTITIO2       = "Po pewnych niefortunnych wydarzeniach z przeszłości Partitio odmawia ponownego prowadzenia interesów z Mermami!",
+	PARTITIO3       = "Partitio odkrył, że ktoś zniszczył jego dom. Potrzebuje teraz pomocy, aby przywrócić go do dawnej świetności i ponownie rozpocząć handel.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

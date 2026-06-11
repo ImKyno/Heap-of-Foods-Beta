@@ -89,6 +89,12 @@ WOLFGANG.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Escuro é assustador de novo..."
 
 WOLFGANG.ANNOUNCE_KYNO_LUCKBUFF_END = "Sorte acabou. Wolfgang ainda é forte!"
 
+WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wolfgang colhe como gigante poderoso!"
+WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Tempo de pequena colheita acabou."
+
+WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_START = "Chuva faz Wolfgang se sentir bem!"
+WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_END = "A magia da chuva acabou."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é o correto."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Porco poderoso não quer isso."
@@ -518,8 +524,8 @@ WOLFGANG.DESCRIBE.KYNO_SALMONFISH_COOKED = "Peixe está cozido agora."
 
 WOLFGANG.DESCRIBE.TURF_PINKPARK = "É rosinha."
 WOLFGANG.DESCRIBE.TURF_STONECITY = "Pedras para pisar."
-WOLFGANG.DESCRIBE.TURF_FIELDS = "Pedras para pisar."
-WOLFGANG.DESCRIBE.TURF_TIDALMARSH = "Pedras para pisar."
+WOLFGANG.DESCRIBE.TURF_FIELDS = "Chão de grama."
+WOLFGANG.DESCRIBE.TURF_TIDALMARSH = "Chão molhado."
 
 WOLFGANG.DESCRIBE.KYNO_SALTRACK =
 {
@@ -1047,7 +1053,13 @@ WOLFGANG.DESCRIBE.FLTSANDWICH = "Sanduíche de sapo, yum!"
 
 WOLFGANG.DESCRIBE.RICEANDBEANS = "São feijões cozidos saudáveis!"
 
-WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Casinha fraca... talvez fique forte em 2026!"
+WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Casinha precisa de reparos poderosos!",
+	REPAIRED = "Agora é uma casinha forte.",
+	OCCUPIED = "Wolfgang não dormiria em casa fraca.",
+	OCCUPIED_REPAIRED = "Homem-porco dorme em segurança agora.",
+}
 
 WOLFGANG.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Peixes precisam de mais comida.",
 	EMPTY = "Sem comida para peixes.",
 }
-
-WOLFGANG.DESCRIBE.KYNO_ANTCHOVY = "Peixe-inseto pequenino! Wolfgang não sabe se come ou corre!"
-WOLFGANG.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Muitos peixinhos-insetos! Wolfgang deve esmagar?"
 
 WOLFGANG.DESCRIBE.AGEDROE = "Ovinhos pequenos fazem Wolfgang se sentir importante!"
 WOLFGANG.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Ovos minúsculos fazem Wolfgang se sentir grande e chique!"
@@ -1194,6 +1203,7 @@ WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNACHINE =
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Comida que estoura para Wolfgang!"
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Chapéu de festa para Wolfgang forte!"
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy deve ser forte para usar chapéu especial!"
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Partitio deve ser forte para usar chapéu especial!"
 
 WOLFGANG.DESCRIBE.KYNO_FISHREGISTRYHAT = "Chapéu deixa Wolfgang mais esperto sobre peixinhos!"
 
@@ -1232,3 +1242,55 @@ WOLFGANG.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Fogo cozinha mais rápido!",
 	BURNT = "Agora comida passou do ponto.",
 }
+
+WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Pequeno comerciante quer casa consertada primeiro.",
+	HOUSE_REPAIRED = "Agora negociamos como amigos fortes!",
+}
+
+WOLFGANG.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Machado fraco não serve para cortar isso.",
+	CHOPPED = "Wolfgang derrota árvore poderosa!",
+	BLOOMING = "Árvore forte cresce flores fortes.",
+	BURNING = "Fogo é mais forte que árvore.",
+	BURNT = "Agora árvore é pilha fraca de cinzas.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER = "É comida?"
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER_COOKED = "É comida boa?"
+
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Wolfgang gosta da pequena flor."
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Wolfgang come."
+
+WOLFGANG.DESCRIBE.CAVETUBERTEA = "Bebidinha pequena para músculos poderosos!"
+
+WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Colina para homens planta.",
+	OCCUPIED = "Homem planta está dormindo.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Wolfgang mais forte que você!",
+	GRUMPY = "Homem planta não está feliz.",
+}
+
+WOLFGANG.DESCRIBE.MANDRAKEBAOBUNS = "Pãezinhos macios deixam Wolfgang forte!"
+
+WOLFGANG.DESCRIBE.MANDRAKEPIE = "Torta deixa poderoso Wolfgang sonolento!"
+
+WOLFGANG.DESCRIBE.MANDRAKEBEER = "Bebida doce para o poderoso Wolfgang!"
+
+WOLFGANG.DESCRIBE.RAINPARFAIT = "Sobremesa deixa Wolfgang feliz!"
+
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Faz plantinhas ficarem grandes!"
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Comida forte para plantas fortes!"
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais colheita para o poderoso Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "As plantas ficam poderosas rapidamente!"
+
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN1 = "Comerciante porco iria gostar."
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN2 = "Moeda valiosa para comprar coisas boas."
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN3 = "Moeda poderosa!"

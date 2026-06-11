@@ -101,6 +101,24 @@ local function GetStatus(inst, viewer)
 	or "GENERIC"
 end
 
+local function OnSave(inst, data)
+	data.bonus_yield = inst._bonus_yield
+end
+
+local function OnLoad(inst, data)
+	if data ~= nil then
+		if data.bonus_yield ~= nil then
+			inst._bonus_yield = data.bonus_yield
+
+			if inst._bonus_yield then
+				inst:AddTag("plantboosted_yield")
+			else
+				inst:RemoveTag("plantboosted_yield")
+			end
+		end
+	end
+end
+
 local function OnPreLoad(inst, data)
     WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_PINEAPPLEBUSH_GROWTIME)
 end
@@ -129,14 +147,18 @@ local function fn()
 	inst:AddTag("thorny")
 	inst:AddTag("pineapplebush")
 	inst:AddTag("pickable_tall")
+	inst:AddTag("plantboostable")
 	
 	inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
         return inst
     end
+
+	inst._bonus_yield = false
 	
 	inst:AddComponent("lootdropper")
+	inst:AddComponent("plantboostable")
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
@@ -155,6 +177,10 @@ local function fn()
 	inst:WatchWorldState("season", OnSeasonChange)
 	OnSeasonChange(inst, TheWorld.state.season)
 
+	inst:ListenForEvent("picked", PlantBoosterBonusYield)
+
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
 	inst.OnPreLoad = OnPreLoad
 
 	MakeLargeBurnable(inst)

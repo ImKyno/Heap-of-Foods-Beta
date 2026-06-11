@@ -89,6 +89,12 @@ WANDA.ANNOUNCE_KYNO_DARKNESSBUFF_END = "E a escuridão volta a ser perigosa."
 
 WANDA.ANNOUNCE_KYNO_LUCKBUFF_END = "E assim... acabou."
 
+WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Excelente. Mais rendimento em menos tempo."
+WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "O aumento de eficiência expirou."
+
+WANDA.ANNOUNCE_KYNO_WETNESSBUFF_START = "Interessante. A umidade é bastante calmante."
+WANDA.ANNOUNCE_KYNO_WETNESSBUFF_END = "O efeito chegou ao fim."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não... Preciso de algo diferente."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Acho que tenho tempo de pegar uma lagosta para você."
@@ -1047,7 +1053,13 @@ WANDA.DESCRIBE.FLTSANDWICH = "Leve-me à lua com sapos."
 
 WANDA.DESCRIBE.RICEANDBEANS = "Entendi, é saudável, mas prefiro doces!"
 
-WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "O tempo dirá... e acho que falará alto em 2026."
+WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "O tempo não foi gentil com este prédio.",
+	REPAIRED = "Um uso muito melhor do tempo.",
+	OCCUPIED = "Ele está desperdiçando um tempo valioso dormindo aí dentro.",
+	OCCUPIED_REPAIRED = "Pelo menos ele está descansando em algum lugar estável.",
+}
 
 WANDA.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WANDA.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Precisará de mais suprimentos em breve.",
 	EMPTY = "Sem comida para os peixes.",
 }
-
-WANDA.DESCRIBE.KYNO_ANTCHOVY = "Não tenho tempo pra classificar híbridos peixe-inseto!"
-WANDA.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Mais uma estranheza que não tenho tempo pra estudar."
 
 WANDA.DESCRIBE.AGEDROE = "É a primeira vez que vejo isso."
 WANDA.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Envelhecido no ponto certo... uma bela recompensa pelo meu tempo."
@@ -1194,6 +1203,7 @@ WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Melhor comer antes de ficar velha... como o tempo."
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Bem... até viajantes do tempo podem comemorar."
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "O tempo favorece quem tem estilo exclusivo, como o Sammy."
+WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "O tempo favorece quem tem estilo exclusivo, como o Partitio."
 
 WANDA.DESCRIBE.KYNO_FISHREGISTRYHAT = "Pelo menos isso me ajuda a lembrar do que já aprendi."
 
@@ -1232,3 +1242,55 @@ WANDA.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Bem... péssimo timing.",
 	BURNT = "Tarde demais pra salvar isso.",
 }
+
+WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Reparos primeiro? Que atraso ineficiente.",
+	HOUSE_REPAIRED = "Finalmente. Não vamos perder mais tempo.",
+}
+
+WANDA.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Esta árvore está desperdiçando meu tempo.",
+	CHOPPED = "Finalmente resolvida.",
+	BLOOMING = "Pelo menos algo aqui embaixo é produtivo.",
+	BURNING = "Um resultado previsível.",
+	BURNT = "Mais um final inevitável.",
+}
+
+WANDA.DESCRIBE.KYNO_CAVETUBER = "Precisa de mais tempo para amadurecer."
+WANDA.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ainda malcozido e venenoso."
+
+WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Tempo perfeito!"
+WANDA.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Cozinhei bem na hora certa."
+
+WANDA.DESCRIBE.CAVETUBERTEA = "Gelado, rápido, eficiente."
+
+WANDA.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Grite para mim, planta!",
+	OCCUPIED = "Ele cansou de gritar e foi dormir.",
+}
+
+WANDA.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Pare de gritar logo!",
+	GRUMPY = "O tempo lhe fará bem.",
+}
+
+WANDA.DESCRIBE.MANDRAKEBAOBUNS = "Um lanche rápido e gostoso."
+
+WANDA.DESCRIBE.MANDRAKEPIE = "Espero que isso não me atrase."
+
+WANDA.DESCRIBE.MANDRAKEBEER = "Pelo menos é refrescante."
+
+WANDA.DESCRIBE.RAINPARFAIT = "Pelo menos a chuva melhora alguma coisa."
+
+WANDA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Uma forma útil de economizar tempo."
+WANDA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Plantas saudáveis são plantas eficientes."
+WANDA.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais produção pelo mesmo investimento."
+WANDA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Excelente. Resultados mais rápidos."
+
+WANDA.DESCRIBE.KYNO_PIGCOIN1 = "A única coisa que pode controlar tudo."
+WANDA.DESCRIBE.KYNO_PIGCOIN2 = "Um lembrete de que tempo é dinheiro."
+WANDA.DESCRIBE.KYNO_PIGCOIN3 = "É a primeira vez que vejo tanto dinheiro."

@@ -89,6 +89,12 @@ WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The darkness feels hostile once more."
 
 WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Even fleeting fortune eventually fades."
 
+WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "The earth offers its fleeting abundance."
+WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Nature's generosity fades once more."
+
+WENDY.ANNOUNCE_KYNO_WETNESSBUFF_START = "The rain washes away my troubles."
+WENDY.ANNOUNCE_KYNO_WETNESSBUFF_END = "The comfort of the rain has passed."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to gather?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Of course it's not what this stupid creature wants."
@@ -1047,7 +1053,13 @@ WENDY.DESCRIBE.FLTSANDWICH = "Too many green and froggy."
 
 WENDY.DESCRIBE.RICEANDBEANS = "It's a very simple meal, but it will do."
 
-WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Even ruins remember their purpose... perhaps it will awaken in 2026."
+WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "This place is falling apart, much like everything else.",
+	REPAIRED = "A temporary refuge from inevitable decay.",
+	OCCUPIED = "Even sleep cannot hide the misery of this place.",
+	OCCUPIED_REPAIRED = "At least he may rest peacefully for now.",
+}
 
 WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WENDY.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Hunger creeps in.",
 	EMPTY = "Only emptiness remains.",
 }
-
-WENDY.DESCRIBE.KYNO_ANTCHOVY = "Half fish, half ant... a life of confusion and suffering."
-WENDY.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "A buzzing, writhing mass of misery."
 
 WENDY.DESCRIBE.AGEDROE = "I took their life to sustain my own."
 WENDY.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Life from death... delicious irony."
@@ -1194,6 +1203,7 @@ WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "It pops... then gets eaten... like all fleeting joys."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "A symbol of forced joy... how fitting."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "For Sammy... the one who stands apart..."
+WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "For Partitio... the one who stands apart..."
 
 WENDY.DESCRIBE.KYNO_FISHREGISTRYHAT = "It records the lives that drift silently beneath the waves."
 
@@ -1232,3 +1242,55 @@ WENDY.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Like all things, it returns to ash.",
 	BURNT = "A ruined memory of a meal.",
 }
+
+WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "His broken home mirrors a weary soul.",
+	HOUSE_REPAIRED = "Perhaps commerce eases loneliness.",
+}
+
+WENDY.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "A regular axe won't kill it.",
+	CHOPPED = "Everything falls eventually.",
+	BLOOMING = "Even underground life insists on persisting.",
+	BURNING = "A brief, beautiful tragedy.",
+	BURNT = "Reduced to silent remains.",
+}
+
+WENDY.DESCRIBE.KYNO_CAVETUBER = "Will I be dead before it ripens?"
+WENDY.DESCRIBE.KYNO_CAVETUBER_COOKED = "Perhaps I'm lucky and it's still poisoned."
+
+WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Pretty flower."
+WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Should I eat the flower too?"
+
+WENDY.DESCRIBE.CAVETUBERTEA = "A chilled comfort in a joyless world."
+
+WENDY.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Abigail lives in the ground too.",
+	OCCUPIED = "Not so noisy now.",
+}
+
+WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Another abomination.",
+	GRUMPY = "His mood is similar to mine.",
+}
+
+WENDY.DESCRIBE.MANDRAKEBAOBUNS = "A quiet meal for weary souls."
+
+WENDY.DESCRIBE.MANDRAKEPIE = "A comforting slice of exhaustion."
+
+WENDY.DESCRIBE.MANDRAKEBEER = "A fleeting sweetness in a bitter world."
+
+WENDY.DESCRIBE.RAINPARFAIT = "A small comfort beneath gloomy skies."
+
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A temporary gift to doomed plants."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "A futile attempt to preserve life."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "More bounty before inevitable decay."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Life hastened toward its conclusion."
+
+WENDY.DESCRIBE.KYNO_PIGCOIN1 = "I shall put them on my eyes when I die."
+WENDY.DESCRIBE.KYNO_PIGCOIN2 = "Money will not bring back Abigail."
+WENDY.DESCRIBE.KYNO_PIGCOIN3 = "Wealth cannot buy immortality."

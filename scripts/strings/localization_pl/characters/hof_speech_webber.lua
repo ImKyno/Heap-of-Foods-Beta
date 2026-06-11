@@ -89,6 +89,12 @@ WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "O nie... ciemność znów jest straszna
 
 WEBBER.ANNOUNCE_KYNO_LUCKBUFF_END = "Och nie... nasze szczęście zniknęło."
 
+WEBBER.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wow! Dostajemy mnóstwo roślin!"
+WEBBER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Chyba dodatkowe rośliny już się skończyły."
+
+WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_START = "Lubimy dziś deszcz!"
+WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Deszcz już nie wydaje się taki wyjątkowy."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie tego."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sądzimy, że to nie jest właściwy posiłek, jakiego potrzebuje."
@@ -1047,7 +1053,13 @@ WEBBER.DESCRIBE.FLTSANDWICH = "Biedne żabki."
 
 WEBBER.DESCRIBE.RICEANDBEANS = "Mama zawsze mówiła: jedz warzywa!"
 
-WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Teraz wygląda na pusty... ale wrócimy tu w 2026!"
+WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Ten dom wygląda trochę na zepsuty.",
+	REPAIRED = "Teraz wygląda miło i przytulnie!",
+	OCCUPIED = "Mamy nadzieję, że jest mu tam wygodnie.",
+	OCCUPIED_REPAIRED = "Ciii... on śpi.",
+}
 
 WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1092,9 +1104,6 @@ WEBBER.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Prawie nie ma jedzenia!",
 	EMPTY = "O nie, nie ma już jedzenia.",
 }
-
-WEBBER.DESCRIBE.KYNO_ANTCHOVY = "Nie wiemy, czy należy do wody, czy do lądu!"
-WEBBER.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Są wszędzie! Takie wijące się!"
 
 WEBBER.DESCRIBE.AGEDROE = "Jakie eleganckie!"
 WEBBER.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Są takie maleńkie! Naprawdę mamy to jeść?"
@@ -1194,6 +1203,7 @@ WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Wybucha w naszych ustach! Super zabawa!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Uwielbiamy kapelusze imprezowe!!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Tylko dla Sammy'ego!"
+WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Tylko dla Partitio'ego!"
 
 WEBBER.DESCRIBE.KYNO_FISHREGISTRYHAT = "Możemy się z nim nauczyć wszystkiego o rybach!"
 
@@ -1232,3 +1242,55 @@ WEBBER.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Ale gorące!",
 	BURNT = "Och... zepsute.",
 }
+
+WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Wygląda na to, że nas toleruje i chce naszej pomocy!",
+	HOUSE_REPAIRED = "Cześć, panie! Chcesz teraz handlować?",
+}
+
+WEBBER.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Nie zetniemy tego zwykłą siekierą.",
+	CHOPPED = "W końcu udało nam się je powalić!",
+	BLOOMING = "Jest nawet całkiem ładne.",
+	BURNING = "Ogień szybko rozprzestrzenia się pod ziemią.",
+	BURNT = "Teraz jest całe chrupiące.",
+}
+
+WEBBER.DESCRIBE.KYNO_CAVETUBER = "Nie sądzimy, że jest jeszcze dojrzały."
+WEBBER.DESCRIBE.KYNO_CAVETUBER_COOKED = "Pycha."
+
+WEBBER.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Wygląda na dojrzały?"
+WEBBER.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Pamiętasz frytki?"
+
+WEBBER.DESCRIBE.CAVETUBERTEA = "Jest zimne i całkiem smaczne!"
+
+WEBBER.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Myślimy, że mieszkają tam ci hałaśliwi goście.",
+	OCCUPIED = "Ciii! On śpi!",
+}
+
+WEBBER.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Hej tam, hałaśliwy koleś.",
+	GRUMPY = "Czemu taki smutny?",
+}
+
+WEBBER.DESCRIBE.MANDRAKEBAOBUNS = "Są mięciutkie i smaczne!"
+
+WEBBER.DESCRIBE.MANDRAKEPIE = "Chcemy jeszcze jeden kawałek!"
+
+WEBBER.DESCRIBE.MANDRAKEBEER = "Łaskocze nas w nosy!"
+
+WEBBER.DESCRIBE.RAINPARFAIT = "Jest jeszcze smaczniejsze, kiedy pada!"
+
+WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Pomaga roślinom rosnąć większymi!"
+WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Zdrowe rośliny to szczęśliwe rośliny."
+WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej jagód dla wszystkich!"
+WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Łał! To działa naprawdę szybko!"
+
+WEBBER.DESCRIBE.KYNO_PIGCOIN1 = "Możemy to wymienić na coś innego."
+WEBBER.DESCRIBE.KYNO_PIGCOIN2 = "Co możemy za to kupić?"
+WEBBER.DESCRIBE.KYNO_PIGCOIN3 = "Możemy kupić tego naprawdę dużo rzeczy."

@@ -89,6 +89,12 @@ WOODIE.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Dobra, teraz znowu jest strasznie."
 
 WOODIE.ANNOUNCE_KYNO_LUCKBUFF_END = "No cóż, było miło póki trwało."
 
+WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "No, to są porządne zbiory, co nie?"
+WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Wracamy do zwykłego zbierania."
+
+WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_START = "Odrobina deszczu czyni cuda, co nie?"
+WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "Wszystko wróciło do normy."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może coś do podniesienia?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. On chce czegoś innego."
@@ -1047,7 +1053,13 @@ WOODIE.DESCRIBE.FLTSANDWICH = "BLT w wersji imitacyjnej!"
 
 WOODIE.DESCRIBE.RICEANDBEANS = "Brakuje tylko porządnego steka i frytek."
 
-WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Bywało lepiej, co? Założę się, że w 2026 będzie tu tłoczno."
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "To miejsce potrzebuje naprawy, co nie?",
+	REPAIRED = "No, teraz to porządny mały sklepik.",
+	OCCUPIED = "Mam nadzieję, że gość dobrze tam śpi.",
+	OCCUPIED_REPAIRED = "Teraz wygląda wystarczająco przytulnie na drzemkę.",
+}
 
 WOODIE.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1092,9 +1104,6 @@ WOODIE.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Lepiej dorzuć trochę jedzenia.",
 	EMPTY = "Brak karmy.",
 }
-
-WOODIE.DESCRIBE.KYNO_ANTCHOVY = "To dopiero połów, co? Byle nie gryzł moich bali."
-WOODIE.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Cały rój, co? Lepiej przygotuj sieć."
 
 WOODIE.DESCRIBE.AGEDROE = "Uff, ale słone!"
 WOODIE.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Trochę śliskie, ale eleganccy ludzie to lubią, co?"
@@ -1194,6 +1203,7 @@ WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Idealny na świętowanie, co?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Cóż, wygląda całkiem imprezowo, co?"
 WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Całkiem miłe, co?"
+WOODIE.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Całkiem miłe, co?"
 
 WOODIE.DESCRIBE.KYNO_FISHREGISTRYHAT = "Pomaga mi śledzić wszystkie różne rodzaje ryb."
 
@@ -1232,3 +1242,55 @@ WOODIE.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Trochę gorąco tam, co?",
 	BURNT = "No i po wszystkim.",
 }
+
+WOODIE.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Nie można go winić za to, że chce najpierw naprawionego domu, co nie?",
+	HOUSE_REPAIRED = "No, teraz lepiej. Masz coś przydatnego, co?",
+}
+
+WOODIE.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Nie mogę cię użyć do tych drzew, Lucy.",
+	CHOPPED = "Wymagało więcej wysiłku niż większość.",
+	BLOOMING = "Patrz, jak kwitnie!",
+	BURNING = "Aż serce boli.",
+	BURNT = "Biedactwo już skończone.",
+}
+
+WOODIE.DESCRIBE.KYNO_CAVETUBER = "Lepiej go nie jeść, dopóki nie dojrzeje."
+WOODIE.DESCRIBE.KYNO_CAVETUBER_COOKED = "Nic wyszukanego, tylko trochę bulw."
+
+WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "No, teraz dojrzał."
+WOODIE.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "No proszę, to już luksus."
+
+WOODIE.DESCRIBE.CAVETUBERTEA = "Dobre na ochłodę pod ziemią."
+
+WOODIE.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "To tutaj mieszkają te małe roślinne stworki.",
+	OCCUPIED = "Jest tam ktoś?",
+}
+
+WOODIE.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Szukasz bójki, co?",
+	GRUMPY = "Co ci się dziś stało, kolego?",
+}
+
+WOODIE.DESCRIBE.MANDRAKEBAOBUNS = "Całkiem nieźle pachnie, co nie?"
+
+WOODIE.DESCRIBE.MANDRAKEPIE = "Nic nie przebije świeżego placka, co nie?"
+
+WOODIE.DESCRIBE.MANDRAKEBEER = "Smakuje dziczą, co nie?"
+
+WOODIE.DESCRIBE.RAINPARFAIT = "Dobry przysmak na mokrą pogodę, co nie?"
+
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że rośliny rosną szybciej, co nie?"
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje je zdrowe i szczęśliwe."
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej plonów z tego samego poletka."
+WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "To naprawdę mocny środek."
+
+WOODIE.DESCRIBE.KYNO_PIGCOIN1 = "Kupię coś fajnego dla Lucy."
+WOODIE.DESCRIBE.KYNO_PIGCOIN2 = "Mogę za to kupić sporo rzeczy."
+WOODIE.DESCRIBE.KYNO_PIGCOIN3 = "To nie dolar, ale chyba się tu nada."

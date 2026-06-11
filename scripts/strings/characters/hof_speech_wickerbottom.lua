@@ -89,6 +89,12 @@ WICKERBOTTOM.ANNOUNCE_KYNO_DARKNESSBUFF_END = "My aversion to darkness has retur
 
 WICKERBOTTOM.ANNOUNCE_KYNO_LUCKBUFF_END = "The statistical advantage has expired."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Ah, my horticultural expertise is flourishing."
+WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The botanical surge appears to have subsided."
+
+WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_START = "The rain is remarkably refreshing."
+WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_END = "Its restorative effects have ceased."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It requires something else."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. I think he said something about wobsters."
@@ -1047,7 +1053,13 @@ WICKERBOTTOM.DESCRIBE.FLTSANDWICH = "Frog makes a nice substitute for bacon."
 
 WICKERBOTTOM.DESCRIBE.RICEANDBEANS = "A very healthy and nutritive lunch."
 
-WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Its dilapidated state suggests future restoration. I predict activity in 2026."
+WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "The structure is in a dreadful state of disrepair.",
+	REPAIRED = "A much more habitable establishment now.",
+	OCCUPIED = "I cannot imagine restful sleep in such conditions.",
+	OCCUPIED_REPAIRED = "It appears the merchant is resting.",
+}
 
 WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Replenishment will soon be required.",
 	EMPTY = "The feed supply is exhausted.",
 }
-
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY = "A most peculiar arthropod-piscine specimen!"
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "A rare congregation of cross-species schooling behavior!"
 
 WICKERBOTTOM.DESCRIBE.AGEDROE = "Differentiated from roe chiefly by the jar."
 WICKERBOTTOM.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "A delicacy of preserved sturgeon roe. Exquisite."
@@ -1194,6 +1203,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "The heat causes the moisture inside to rapidly expand. Fascinating!"
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "A traditional celebratory cone-shaped accessory."
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "A custom-made party accessory."
+WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "A custom-made party accessory."
 
 WICKERBOTTOM.DESCRIBE.KYNO_FISHREGISTRYHAT = "A useful headwear for the systematic study of fish species."
 
@@ -1232,3 +1242,55 @@ WICKERBOTTOM.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "That seems unsafe.",
 	BURNT = "A regrettable loss of information.",
 }
+
+WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "He seems unwilling to trade before his home is restored.",
+	HOUSE_REPAIRED = "Good day. Let us discuss your wares.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "It' too tough for a regular axe.",
+	CHOPPED = "Persistence has paid off.",
+	BLOOMING = "It seems to be flourishing.",
+	BURNING = "Such a waste of botanical potential.",
+	BURNT = "Nothing remains but charcoal.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER = "It's rather poisonous when it's not ripe."
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_COOKED = "I suspect the poison has not been cooked out."
+
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "It should still be cooked."
+WICKERBOTTOM.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Cooked tubers are a staple in many cultures."
+
+WICKERBOTTOM.DESCRIBE.CAVETUBERTEA = "A pleasantly cooled tuber infusion."
+
+WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "A subterranean home.",
+	OCCUPIED = "I think he's sleeping right now.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Is it Plantae or Animalia?",
+	GRUMPY = "He doesn't seem happy today.",
+}
+
+WICKERBOTTOM.DESCRIBE.MANDRAKEBAOBUNS = "An unusual but filling culinary creation."
+
+WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "The mandrake adds a peculiar aroma."
+
+WICKERBOTTOM.DESCRIBE.MANDRAKEBEER = "A pleasantly effervescent soft drink."
+
+WICKERBOTTOM.DESCRIBE.RAINPARFAIT = "The watermelon lends it a refreshing quality."
+
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A fertilizer formulated to stimulate development."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Useful for maintaining healthy crops."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "It should increase productivity considerably."
+WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "An impressive advancement in agriculture."
+
+WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN1 = "Worth a paltry sum to the locals."
+WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN2 = "A coin of some denomination."
+WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN3 = "A coin of big value."

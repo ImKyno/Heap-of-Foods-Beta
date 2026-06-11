@@ -89,6 +89,12 @@ WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ah... a escuridão voltou a ser perturb
 
 WILSON.ANNOUNCE_KYNO_LUCKBUFF_END = "Parece que minha sorte acabou."
 
+WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Estou pronto para uma colheita abundante!"
+WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "A temporada de colheita acabou!"
+
+WILSON.ANNOUNCE_KYNO_WETNESSBUFF_START = "A chuva é bastante relaxante."
+WILSON.ANNOUNCE_KYNO_WETNESSBUFF_END = "A sensação de tranquilidade desapareceu."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ele quer outra coisa."
@@ -1047,7 +1053,13 @@ WILSON.DESCRIBE.FLTSANDWICH = "É como um BLT. Mas com sapo!"
 
 WILSON.DESCRIBE.RICEANDBEANS = "Uma opção de refeição saudável."
 
-WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Que segredos se escondem ali? Talvez descobriremos em 2026."
+WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Este prédio precisa de reparos, urgentemente.",
+	REPAIRED = "Agora parece um lugar bem melhor para se viver.",
+	OCCUPIED = "Duvido que ele consiga dormir confortavelmente aí dentro.",
+	OCCUPIED_REPAIRED = "Ele deve estar dormindo agora.",
+}
 
 WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1092,9 +1104,6 @@ WILSON.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Vou precisar de comida para peixe em breve.",
 	EMPTY = "Toda a comida acabou.",
 }
-
-WILSON.DESCRIBE.KYNO_ANTCHOVY = "É... um peixe? Ou um inseto? A ciência está confusa."
-WILSON.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Elas estão se aglomerando! Fascinante!"
 
 WILSON.DESCRIBE.AGEDROE = "Nunca provei isso antes de vir pra cá."
 WILSON.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Caviar! Tem um gosto melhor do que parece."
@@ -1194,6 +1203,7 @@ WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Pipoca para uma grande celebração!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Nada diz festa como um chapéu pontudo!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Ei! Por que só ele ganha um chapéu especial?"
+WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Ei! Por que só ele ganha um chapéu especial?"
 
 WILSON.DESCRIBE.KYNO_FISHREGISTRYHAT = "É um chapéu prático para um pescador dedicado."
 
@@ -1232,3 +1242,55 @@ WILSON.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Está pegando fogo!",
 	BURNT = "Acho que o prato especial de hoje são cinzas.",
 }
+
+WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Ele não vai negociar comigo a menos que eu ajude a consertar a casa dele primeiro.",
+	HOUSE_REPAIRED = "Olá, senhor! O que tem para trocar?",
+}
+
+WILSON.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Um machado comum não vai dar conta.",
+	CHOPPED = "Acho que valeu o esforço.",
+	BLOOMING = "Está florescendo vigorosamente.",
+	BURNING = "Que pena!",
+	BURNT = "Mais uma árvore perdida para o fogo."
+}
+
+WILSON.DESCRIBE.KYNO_CAVETUBER = "Que pena, tubérculo."
+WILSON.DESCRIBE.KYNO_CAVETUBER_COOKED = "Será que ainda é venenoso?"
+
+WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "É um tubérculo florescendo!"
+WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Será que cozinhei a flor também?"
+
+WILSON.DESCRIBE.CAVETUBERTEA = "Uma bebida refrescante com sabor terroso."
+
+WILSON.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Parece... gritante.",
+	OCCUPIED = "Talvez ele esteja dormindo.",
+}
+
+WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Grande e gritona.",
+	GRUMPY = "Ele não parece muito feliz.",
+}
+
+WILSON.DESCRIBE.MANDRAKEBAOBUNS = "Um pão estranhamente sonolento."
+
+WILSON.DESCRIBE.MANDRAKEPIE = "Uma torta com um recheio bastante sonolento."
+
+WILSON.DESCRIBE.MANDRAKEBEER = "Uma bebida refrescante feita de raízes."
+
+WILSON.DESCRIBE.RAINPARFAIT = "O clima de hoje está parfaito."
+
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um fertilizante fabricado com propriedades de crescimento."
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Ajuda a manter minhas plantas saudáveis e bonitas!"
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Com isso, posso fazer meus arbustos produzirem ainda mais!"
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Isso deve ajudar minhas plantações a crescerem melhor."
+
+WILSON.DESCRIBE.KYNO_PIGCOIN1 = "Eu gostaria de mais do que um centavo pelos meus pensamentos."
+WILSON.DESCRIBE.KYNO_PIGCOIN2 = "Uma quantia razoável de moedas."
+WILSON.DESCRIBE.KYNO_PIGCOIN3 = "Parece valioso."

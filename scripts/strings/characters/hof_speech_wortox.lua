@@ -89,6 +89,12 @@ WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Oh dear! The dark bites again!"
 
 WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Awww, the fun’s over!"
 
+WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Such plentiful pickings. Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The bounty has slipped away. Hyuyu!"
+
+WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_START = "The pitter-patter lifts my spirits!"
+WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_END = "No more rainy cheer."
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I know this prank was good, but let's get the real thing."
@@ -1047,7 +1053,13 @@ WORTOX.DESCRIBE.FLTSANDWICH = "Its made with lunar frog meat."
 
 WORTOX.DESCRIBE.RICEANDBEANS = "Mortal food."
 
-WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Ho ho! A home asleep in time... let's peek again in 2026!"
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "A shop in shambles!",
+	REPAIRED = "All fixed up and dreadfully tidy!",
+	OCCUPIED = "The piggy snoozes in his little den.",
+	OCCUPIED_REPAIRED = "The merchant dreams while moonbeams gleam!",
+}
 
 WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WORTOX.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Food keeps getting low.",
 	EMPTY = "No more fish snacks, need to replenish it.",
 }
-
-WORTOX.DESCRIBE.KYNO_ANTCHOVY = "It wriggles and wiggles in two worlds! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "A merry swarm of mixy fishy bugs!"
 
 WORTOX.DESCRIBE.AGEDROE = "Snooty fish eggs!"
 WORTOX.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Little pearls of ocean delight, hyuyu!"
@@ -1194,6 +1203,7 @@ WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Pop! A snack of celebratory crack!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Oh ho! A hat for festive mischief!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Oh ho! A hat made for Sammy, unique and hammy!"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Oh ho! A hat made for Partitio!"
 
 WORTOX.DESCRIBE.KYNO_FISHREGISTRYHAT = "A thinking cap for fishy facts! Hyuyu!"
 
@@ -1232,3 +1242,55 @@ WORTOX.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Fiery fun! Hyuyu!",
 	BURNT = "Reduced to sooty bits!",
 }
+
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "He seems to tolerate myself. No trading till his home is patched!",
+	HOUSE_REPAIRED = "A sturdy house and shiny wares!",
+}
+
+WORTOX.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Oh! A stubborn little tree!",
+	CHOPPED = "Down it goes at last!",
+	BLOOMING = "It blooms beneath the earth. Curious!",
+	BURNING = "Crackle and pop. Hyuyu!",
+	BURNT = "Now it's only soot and sorrow.",
+}
+
+WORTOX.DESCRIBE.KYNO_CAVETUBER = "Naughty tuber!"
+WORTOX.DESCRIBE.KYNO_CAVETUBER_COOKED = "I don't think this is safe to eat."
+
+WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "A flowery tuber. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "It taste just like any other mortal food."
+
+WORTOX.DESCRIBE.CAVETUBERTEA = "A chilly sip. Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "The home of talking vegetables. Hyuyu!",
+	OCCUPIED = "They're too loud!",
+}
+
+WORTOX.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "The source of the scream!",
+	GRUMPY = "He's a bit grumpy.",
+}
+
+WORTOX.DESCRIBE.MANDRAKEBAOBUNS = "Sleepy snacks. Hyuyu!"
+
+WORTOX.DESCRIBE.MANDRAKEPIE = "One bite and off to dreamland!"
+
+WORTOX.DESCRIBE.MANDRAKEBEER = "A bubbly little brew. Hyuyu!"
+
+WORTOX.DESCRIBE.RAINPARFAIT = "A rainy-day delight."
+
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A little boost for leafy friends. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps them lively and bright."
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "More goodies from every bush. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Quite the magical mixture!"
+
+WORTOX.DESCRIBE.KYNO_PIGCOIN1 = "Pithy pennies."
+WORTOX.DESCRIBE.KYNO_PIGCOIN2 = "I don't get why mortals are so obssessed with this."
+WORTOX.DESCRIBE.KYNO_PIGCOIN3 = "It's a big hop token."

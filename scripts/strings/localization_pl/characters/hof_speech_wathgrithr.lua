@@ -89,6 +89,12 @@ WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Cienie znów wzywają do bitwy!"
 
 WATHGRITHR.ANNOUNCE_KYNO_LUCKBUFF_END = "Los odebrał swoją łaskę!"
 
+WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Pola wydadzą obfite plony!"
+WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Płodne błogosławieństwo przeminęło!"
+
+WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_START = "Burza odnawia mego ducha!"
+WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_END = "Błogosławieństwo deszczu przeminęło!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zło!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie ta uczta! Bestia chce pyszniejszego jedzenia!"
@@ -1047,7 +1053,13 @@ WATHGRITHR.DESCRIBE.FLTSANDWICH = "Mięsna kanapka!"
 
 WATHGRITHR.DESCRIBE.RICEANDBEANS = "Fuj!"
 
-WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Kiedyś dumny dom, teraz w ruinie. W 2026 roku powstanie na nowo!"
+WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Ta sala bardzo ucierpiała od okrucieństwa czasu!",
+	REPAIRED = "Znów godne schronienie!",
+	OCCUPIED = "Niech kupiec znajdzie odpoczynek w tych murach.",
+	OCCUPIED_REPAIRED = "Kupiec śpi spokojnie w swojej odnowionej hali.",
+}
 
 WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1092,9 +1104,6 @@ WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Uczta się kończy!",
 	EMPTY = "Nie ma już jedzenia!",
 }
-
-WATHGRITHR.DESCRIBE.KYNO_ANTCHOVY = "Pół owad, pół ryba! Podwójna uczta!"
-WATHGRITHR.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Ławica godna mojej włóczni!"
 
 WATHGRITHR.DESCRIBE.AGEDROE = "Wolałabym całą rybę!"
 WATHGRITHR.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Jajka potężnych bestii morskich! Przekąska wojowniczki!"
@@ -1194,6 +1203,7 @@ WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Kukurydza walczy z gorącem i wybucha! Ha!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Kapelusz bez honoru wojownika... ale noszę go dumnie!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Hełm wojownika!"
+WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Hełm wojownika!"
 
 WATHGRITHR.DESCRIBE.KYNO_FISHREGISTRYHAT = "Myślący hełm dla tych, którzy stawiają czoła morskim bestiom!"
 
@@ -1232,3 +1242,55 @@ WATHGRITHR.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Ogień pochłania ucztę!",
 	BURNT = "Pozostał jedynie popiół.",
 }
+
+WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Kupiec żąda pomocy przed handlem!",
+	HOUSE_REPAIRED = "Witaj, handlarzu! Okaż swe skarby!",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "To drzewo nie padnie od zwykłej siekiery.",
+	CHOPPED = "Zwycięstwo nad drewnianą bestią!",
+	BLOOMING = "Rozkwita dziką siłą!",
+	BURNING = "Płomienie pochłaniają je chwalebnie!",
+	BURNT = "Jego saga kończy się w popiele.",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER = "To niedojrzałe nie-mięso."
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ogień nic nie robi, by uczynić to jadalnym!"
+
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "To dojrzałe nie-mięso."
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Nie obchodzi mnie, czy jest ugotowane."
+
+WATHGRITHR.DESCRIBE.CAVETUBERTEA = "Lodowaty napój z głębin!"
+
+WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Mam ich w potrzasku!",
+	OCCUPIED = "Krzykacz jest w środku tej chaty!",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Pokonam cię!",
+	GRUMPY = "Morale wroga spadło!",
+}
+
+WATHGRITHR.DESCRIBE.MANDRAKEBAOBUNS = "Wojownicza bułka z mistycznych korzeni!"
+
+WATHGRITHR.DESCRIBE.MANDRAKEPIE = "Heroiczne ciasto z zaczarowanego korzenia!"
+
+WATHGRITHR.DESCRIBE.MANDRAKEBEER = "Pienisty napitek bez chwały miodu pitnego!"
+
+WATHGRITHR.DESCRIBE.RAINPARFAIT = "Schłodzona uczta pobłogosławiona przez burzę!"
+
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Tonik dla wzrostu potężnych plonów!"
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Wzmacnia ducha roślin!"
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Większa obfitość dla sali uczt!"
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Uprawy rozkwitną z wielką siłą!"
+
+WATHGRITHR.DESCRIBE.KYNO_PIGCOIN1 = "Skarb!"
+WATHGRITHR.DESCRIBE.KYNO_PIGCOIN2 = "Moneto! Przygotuj się na wydanie!"
+WATHGRITHR.DESCRIBE.KYNO_PIGCOIN3 = "Fortuna jest moja!"

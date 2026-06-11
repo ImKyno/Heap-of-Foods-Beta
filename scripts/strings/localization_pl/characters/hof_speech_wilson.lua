@@ -89,6 +89,12 @@ WILSON.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ach... ciemność znów jest niepokoją
 
 WILSON.ANNOUNCE_KYNO_LUCKBUFF_END = "Wygląda na to, że moja szczęście się skończyło."
 
+WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Jestem gotowy na obfite zbiory!"
+WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Sezon zbiorów dobiegł końca!"
+
+WILSON.ANNOUNCE_KYNO_WETNESSBUFF_START = "Deszcz działa wyjątkowo kojąco."
+WILSON.ANNOUNCE_KYNO_WETNESSBUFF_END = "To uspokajające uczucie minęło."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "To nie to."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "On chce coś innego."
@@ -1047,7 +1053,13 @@ WILSON.DESCRIBE.FLTSANDWICH = "Jak BLT, tylko z żabą zamiast bekonu!"
 
 WILSON.DESCRIBE.RICEANDBEANS = "Zdrowa opcja na posiłek."
 
-WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Jakie sekrety tam się kryją? Może dowiemy się w 2026."
+WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Ten budynek pilnie potrzebuje naprawy.",
+	REPAIRED = "Teraz wygląda o wiele lepiej do zamieszkania.",
+	OCCUPIED = "Wątpię, żeby spało mu się tam wygodnie.",
+	OCCUPIED_REPAIRED = "Pewnie właśnie śpi.",
+}
 
 WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1092,9 +1104,6 @@ WILSON.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Wkrótce będę potrzebował więcej karmy.",
 	EMPTY = "Cała karma została zjedzona.",
 }
-
-WILSON.DESCRIBE.KYNO_ANTCHOVY = "To... ryba? A może owad? Nauka jest zdezorientowana."
-WILSON.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Zbierają się razem! Fascynujące!"
 
 WILSON.DESCRIBE.AGEDROE = "Nigdy wcześniej tego nie próbowałem."
 WILSON.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Kawior! Smakuje lepiej niż brzmi."
@@ -1194,6 +1203,7 @@ WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Popcorn na wielką imprezę!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Nic tak nie mówi 'impreza' jak spiczasty kapelusz!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Zaraz... czemu tylko on ma specjalny kapelusz?"
+WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Zaraz... czemu tylko on ma specjalny kapelusz?"
 
 WILSON.DESCRIBE.KYNO_FISHREGISTRYHAT = "To praktyczny kapelusz dla oddanego rybaka."
 
@@ -1232,3 +1242,55 @@ WILSON.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Płonie!",
 	BURNT = "Myślę, że dzisiejsze danie specjalne to popioły.",
 }
+
+WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Nie będzie ze mną handlował, dopóki najpierw nie pomogę naprawić jego domu.",
+	HOUSE_REPAIRED = "Witam, sir! Co masz na wymianę?",
+}
+
+WILSON.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Zwykła siekiera sobie z tym nie poradzi.",
+	CHOPPED = "Chyba było warto się pomęczyć.",
+	BLOOMING = "Kwitnie wyjątkowo bujnie.",
+	BURNING = "Co za szkoda!",
+	BURNT = "Kolejne drzewo stracone w ogniu."
+}
+
+WILSON.DESCRIBE.KYNO_CAVETUBER = "Szkoda tego bulwa."
+WILSON.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ciekawe, czy nadal jest trujący?"
+
+WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "To kwitnący bulw!"
+WILSON.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Czy ugotowałem też kwiat?"
+
+WILSON.DESCRIBE.CAVETUBERTEA = "Orzeźwiający napar o ziemistym smaku."
+
+WILSON.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Wygląda... krzykliwie.",
+	OCCUPIED = "Może śpi.",
+}
+
+WILSON.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Duży i głośny.",
+	GRUMPY = "Nie wygląda na zbyt szczęśliwego.",
+}
+
+WILSON.DESCRIBE.MANDRAKEBAOBUNS = "Dziwnie usypiające pieczywo."
+
+WILSON.DESCRIBE.MANDRAKEPIE = "Placek z wyjątkowo sennym nadzieniem."
+
+WILSON.DESCRIBE.MANDRAKEBEER = "Orzeźwiający napój warzony z korzeni."
+
+WILSON.DESCRIBE.RAINPARFAIT = "Dzisiejsza pogoda jest parfait."
+
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Wyprodukowany nawóz o właściwościach przyspieszających wzrost."
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Pomaga utrzymać moje rośliny zdrowe i piękne!"
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Dzięki temu moje krzewy mogą dawać jeszcze więcej plonów!"
+WILSON.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "To powinno pomóc moim uprawom rosnąć lepiej."
+
+WILSON.DESCRIBE.KYNO_PIGCOIN1 = "Chciałbym czegoś więcej niż pensa za moje myśli."
+WILSON.DESCRIBE.KYNO_PIGCOIN2 = "Całkiem przyzwoita ilość monet."
+WILSON.DESCRIBE.KYNO_PIGCOIN3 = "Wygląda na cenne."

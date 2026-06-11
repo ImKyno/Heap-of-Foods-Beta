@@ -5,23 +5,69 @@ require("map/terrain")
 local HOF_MAPUTIL = require("map/hof_maputil")
 local obj_layout = require("map/object_layout")
 
+local FOREST_BLACKLIST          =
+{
+	pigking                     = true,
+	glommer                     = true,
+	glommerflower               = true,
+	statueglommer               = true,
+	klaussackkey                = true,
+	chester                     = true,
+	chester_eyebone             = true,
+	insanityrock                = true,
+	sanityrock                  = true,
+	lunarrift_portal            = true,
+	lunarrift_crystal_big       = true,
+	wormhole                    = true,
+	moonbase                    = true,
+	livingtree                  = true,
+	mandrake_planted            = true,
+	kyno_packimbaggims          = true,
+	kyno_packimbaggims_fishbone = true,
+}
+
+local OCEAN_BLACKLIST           =
+{
+	"boat",
+	"boat_ancient",
+	"chester",
+	"chester_eyebone",
+	"glommer",
+	"glommerflower",
+	"underwater_salvageable",
+	"oceantree_pillar",
+	"watertree_pillar",
+	"wormhole",
+	"crabking",
+	"crabking_spawner",
+	"oceanwhirlportal",
+	"oceanwhirlbigportal",
+	"hermithouse",
+	"meatrack_hermit",
+	"beebox_hermit",
+	"moon_fissure_plugged",
+	"kyno_octopusking_ocean",
+	"kyno_packimbaggims",
+	"kyno_packimbaggims_fishbone",
+}
+
 local function FindEntsInArea(entities, left, top, size, blocking_prefabs)
 	local right, bottom = left + size, top + size
-	
+
 	local ents_in_area = {}
-	
+
 	for prefab, ents in pairs(entities) do
 		for i, e in ipairs(ents) do
 			if e.x > left and e.x < right and e.z > top and e.z < bottom then
 				if table.contains(blocking_prefabs, prefab) then
 					return nil
 				end
-				
+
 				table.insert(ents_in_area, {prefab = prefab, index = i})
 			end
 		end
 	end
-	
+
 	return ents_in_area
 end
 
@@ -32,14 +78,14 @@ local function PointInPolygon(px, pz, poly)
 	for i = 1, #poly do
 		local xi, zi = poly[i][1], poly[i][2]
 		local xj, zj = poly[j][1], poly[j][2]
-		
+
 		if ((zi > pz) ~= (zj > pz)) and (px < (xj - xi) * (pz - zi) / (zj - zi) + xi) then
 			inside = not inside
 		end
-		
+
 		j = i
 	end
-	
+
 	return inside
 end
 
@@ -47,7 +93,7 @@ local function AddSquareTopology(topology, left, top, size, room_id, tags)
 	local index = #topology.ids + 1
 	topology.ids[index] = room_id
 	topology.story_depths[index] = 0
-	
+
 	local node = {}
 	node.area = size * size
 	node.c = 1
@@ -66,7 +112,7 @@ local function AddSquareTopology(topology, left, top, size, room_id, tags)
 	node.y = node.cent[2]
 	node.validedges = {}
 	topology.nodes[index] = node
-	
+
 	return index
 end
 
@@ -86,21 +132,21 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 	local map_height = savedata.map.height
 	local entities = savedata.ents
 
-	local add_fn = 
+	local add_fn =
 	{
 		fn = function(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
 			local x = (points_x[current_pos_idx] - width / 2.0) * TILE_SCALE
 			local y = (points_y[current_pos_idx] - height / 2.0) * TILE_SCALE
-				
+
 			x = math.floor(x * 100) / 100.0
 			y = math.floor(y * 100) / 100.0
-			
+
 			if entitiesOut[prefab] == nil then
 				entitiesOut[prefab] = {}
 			end
-			
+
 			local save_data = {x=x, z=y}
-			
+
 			if prefab_data then
 				if prefab_data.data then
 					if type(prefab_data.data) == "function" then
@@ -109,19 +155,19 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 						save_data["data"] = prefab_data.data
 					end
 				end
-				
+
 				if prefab_data.id then
 					save_data["id"] = prefab_data.id
 				end
-				
+
 				if prefab_data.scenario then
 					save_data["scenario"] = prefab_data.scenario
 				end
 			end
-			
+
 			table.insert(entitiesOut[prefab], save_data)
 		end,
-		
+
 		args = { entitiesOut = entities, width = map_width, height = map_height, rand_offset = false, debug_prefab_list = nil }
 	}
 
@@ -130,7 +176,7 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 		local tile_size = #layout.ground
 
 		topology_delta = topology_delta or 1
-		
+
 		local function isvalidareafn(_left, _top)
 			for x = 0, area_size do
 				for y = 0, area_size do
@@ -139,7 +185,7 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 					end
 				end
 			end
-			
+
 			return true
 		end
 
@@ -157,50 +203,45 @@ local function HofRetrofitting_SerenityIsland(map, savedata)
 				end
 			end
 		end
-		
+
 		print("   " ..tostring(#candidates) .. " candidtate locations")
 
 		if #candidates > 0 then
 			local world_size = tile_size * 4
-			
+
 			table.sort(candidates, function(a, b) return a.distsq < b.distsq end)
-			
+
 			for _, candidate in ipairs(candidates) do
 				local top, left = candidate.top, candidate.left
 				local world_top, world_left = left * 4 - (map_width * 0.5 * 4), top * 4 - (map_height * 0.5 * 4)
-				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
-				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", "wormhole", 
-					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
-					"hermithouse", "meatrack_hermit", "beebox_hermit", "moon_fissure_plugged",
-				})
-				
+				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, OCEAN_BLACKLIST)
+
 				if ents_to_remove ~= nil then
 					print("   Removed "..tostring(#ents_to_remove).." entities for static layout:")
-					
+
 					for i = #ents_to_remove, 1, -1 do
 						print ("   - "..tostring(ents_to_remove[i].prefab))
 						table.remove(savedata.ents[ents_to_remove[i].prefab], ents_to_remove[i].index)
 					end
-					
+
 					obj_layout.Place({left, top}, name, add_fn, nil, map)
-					
+
 					if layout.add_topology ~= nil then
 						AddSquareTopology(topology, world_top, world_left, world_size, "StaticLayoutIsland:DUMMY_SERENITY1", {"not_mainland"})
 						AddSquareTopology(topology, world_top, world_left, world_size, "StaticLayoutIsland:DUMMY_SERENITY2", {"not_mainland"})
 						AddSquareTopology(topology, world_top, world_left, world_size, layout.add_topology.room_id, layout.add_topology.tags)
 					end
-					
+
 					return true
 				end
 			end
 		end
-		
+
 		return false
 	end
-	
+
 	local success = TryToAddLayout("SerenityIsland", 53)
-	
+
 	if success then
 		print("Retrofitting for Heap of Foods Mod - Added the Serenity Archipelago to the world.")
 	else
@@ -216,21 +257,21 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 	local map_height = savedata.map.height
 	local entities = savedata.ents
 
-	local add_fn = 
+	local add_fn =
 	{
 		fn = function(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
 			local x = (points_x[current_pos_idx] - width / 2.0) * TILE_SCALE
 			local y = (points_y[current_pos_idx] - height / 2.0) * TILE_SCALE
-				
+
 			x = math.floor(x * 100) / 100.0
 			y = math.floor(y * 100) / 100.0
-			
+
 			if entitiesOut[prefab] == nil then
 				entitiesOut[prefab] = {}
 			end
-			
+
 			local save_data = {x=x, z=y}
-			
+
 			if prefab_data then
 				if prefab_data.data then
 					if type(prefab_data.data) == "function" then
@@ -239,28 +280,28 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 						save_data["data"] = prefab_data.data
 					end
 				end
-				
+
 				if prefab_data.id then
 					save_data["id"] = prefab_data.id
 				end
-				
+
 				if prefab_data.scenario then
 					save_data["scenario"] = prefab_data.scenario
 				end
 			end
-			
+
 			table.insert(entitiesOut[prefab], save_data)
 		end,
-		
+
 		args = { entitiesOut = entities, width = map_width, height = map_height, rand_offset = false, debug_prefab_list = nil }
 	}
-	
+
 	local function TryToAddLayout(name, area_size, topology_delta)
 		local layout = obj_layout.LayoutForDefinition(name)
 		local tile_size = #layout.ground
 
 		topology_delta = topology_delta or 1
-		
+
 		local function isvalidareafn(_left, _top)
 			for x = 0, area_size do
 				for y = 0, area_size do
@@ -269,7 +310,7 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 					end
 				end
 			end
-			
+
 			return true
 		end
 
@@ -287,50 +328,45 @@ local function HofRetrofitting_MeadowIsland(map, savedata)
 				end
 			end
 		end
-		
+
 		print("   " ..tostring(#candidates) .. " candidtate locations")
 
 		if #candidates > 0 then
 			local world_size = tile_size * 4
-			
+
 			table.sort(candidates, function(a, b) return a.distsq < b.distsq end)
-			
+
 			for _, candidate in ipairs(candidates) do
 				local top, left = candidate.top, candidate.left
 				local world_top, world_left = left * 4 - (map_width * 0.5 * 4), top * 4 - (map_height * 0.5 * 4)
-				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
-				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", "wormhole",
-					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
-					"hermithouse", "meatrack_hermit", "beebox_hermit", "moon_fissure_plugged",
-				})
-				
+				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, OCEAN_BLACKLIST)
+
 				if ents_to_remove ~= nil then
 					print("   Removed "..tostring(#ents_to_remove).." entities for static layout:")
-					
+
 					for i = #ents_to_remove, 1, -1 do
 						print ("   - "..tostring(ents_to_remove[i].prefab))
 						table.remove(savedata.ents[ents_to_remove[i].prefab], ents_to_remove[i].index)
 					end
-					
+
 					obj_layout.Place({left, top}, name, add_fn, nil, map)
-					
+
 					if layout.add_topology ~= nil then
 						AddSquareTopology(topology, world_top, world_left, world_size, "StaticLayoutIsland:DUMMY_MEADOW1", {"not_mainland"})
 						AddSquareTopology(topology, world_top, world_left, world_size, "StaticLayoutIsland:DUMMY_MEADOW2", {"not_mainland"})
 						AddSquareTopology(topology, world_top, world_left, world_size, layout.add_topology.room_id, layout.add_topology.tags)
 					end
-					
+
 					return true
 				end
 			end
 		end
-		
+
 		return false
 	end
-	
+
 	local success = TryToAddLayout("MeadowIsland", 53)
-	
+
 	if success then
 		print("Retrofitting for Heap of Foods Mod - Added the Seaside Island to the world.")
 	else
@@ -346,21 +382,21 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 	local map_height = savedata.map.height
 	local entities = savedata.ents
 
-	local add_fn = 
+	local add_fn =
 	{
 		fn = function(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
 			local x = (points_x[current_pos_idx] - width/2.0) * TILE_SCALE
 			local y = (points_y[current_pos_idx] - height/2.0) * TILE_SCALE
-				
+
 			x = math.floor(x * 100) / 100.0
 			y = math.floor(y * 100) / 100.0
-				
+
 			if entitiesOut[prefab] == nil then
 				entitiesOut[prefab] = {}
 			end
-				
+
 			local save_data = {x=x, z=y}
-				
+
 			if prefab_data then
 				if prefab_data.data then
 					if type(prefab_data.data) == "function" then
@@ -369,19 +405,19 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 						save_data["data"] = prefab_data.data
 					end
 				end
-					
+
 				if prefab_data.id then
 					save_data["id"] = prefab_data.id
 				end
-					
+
 				if prefab_data.scenario then
 					save_data["scenario"] = prefab_data.scenario
 				end
 			end
-				
+
 			table.insert(entitiesOut[prefab], save_data)
 		end,
-	
+
 		args = { entitiesOut = entities, width = map_width, height = map_height, rand_offset = false, debug_prefab_list = nil }
 	}
 
@@ -389,27 +425,27 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 		for x = 0, tile_size do
 			for y = 0, tile_size do
 				local tile = map:GetTile(_left + x, _top + y)
-				
+
 				if tile ~= WORLD_TILES.OCEAN_ROUGH and tile ~= WORLD_TILES.OCEAN_HAZARDOUS then
 					return false
 				end
 			end
 		end
-		
+
 		return true
 	end
-	
+
 	local function is_rough_or_swell_ocean(_left, _top, tile_size)
 		for x = 0, tile_size do
 			for y = 0, tile_size do
 				local tile = map:GetTile(_left + x, _top + y)
-				
+
 				if tile ~= WORLD_TILES.OCEAN_ROUGH and tile ~= WORLD_TILES.OCEAN_SWELL then
 					return false
 				end
 			end
 		end
-		
+
 		return true
 	end
 
@@ -422,46 +458,40 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 		local candidtates = {}
 		local foundarea = false
 		local num_steps = math.floor((map_width - tile_size) / tile_size)
-		
+
 		for x = 0, num_steps do
 			for y = 0, num_steps do
 				local left = 8 + (x > 0 and ((x * math.floor(map_width / num_steps)) - tile_size - 16) or 0)
 				local top  = 8 + (y > 0 and ((y * math.floor(map_height / num_steps)) - tile_size - 16) or 0)
-				
+
 				if isvalidareafn(left, top, tile_size) then
 					table.insert(candidtates, {top = top, left = left})
 				end
 			end
 		end
-		
+
 		print("   " ..tostring(#candidtates) .. " candidtate locations")
 
 		if #candidtates > 0 then
 			local world_size = (tile_size + (topology_delta*2))*4
 
 			shuffleArray(candidtates)
-			
+
 			for _, candidtate in ipairs(candidtates) do
 				local top, left = candidtates[1].top, candidtates[1].left
-				local world_top, world_left = (left-topology_delta)*4 - (map_width * 0.5 * 4), (top-topology_delta)*4 - (map_height * 0.5 * 4)
+				local world_top, world_left = (left-topology_delta) * 4 - (map_width * 0.5 * 4), (top-topology_delta) * 4 - (map_height * 0.5 * 4)
+				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, OCEAN_BLACKLIST)
 
-				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
-				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", "wormhole",
-					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
-					"hermithouse", "meatrack_hermit", "beebox_hermit", "moon_fissure_plugged",
-				})
-				
 				if ents_to_remove ~= nil then
 					print("   Removed " .. tostring(#ents_to_remove) .. " entities for static layout:")
-					
+
 					for i = #ents_to_remove, 1, -1 do
 						print ("   - " .. tostring(ents_to_remove[i].prefab) .. " " )
 						table.remove(savedata.ents[ents_to_remove[i].prefab], ents_to_remove[i].index)
 					end
 
 					obj_layout.Place({left, top}, name, add_fn, nil, map)
-					
+
 					if layout.add_topology ~= nil then
 						AddSquareTopology(topology, world_top, world_left, world_size, layout.add_topology.room_id, layout.add_topology.tags)
 					end
@@ -470,11 +500,11 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 				end
 			end
 		end
-		
+
 		return false
 	end
 
-	local ocean_sets = 
+	local ocean_sets =
 	{
 		rough_swell =
 		{
@@ -484,9 +514,9 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 			"hof_oceansetpiece_taroroot",
 			"hof_oceansetpiece_waterycress",
 		},
-		
-		rough_hazardous = 
-		{ 
+
+		rough_hazardous =
+		{
 			"hof_oceansetpiece_crates",
 			"hof_oceansetpiece_crates2",
 			"hof_oceansetpiece_graveyard1",
@@ -497,19 +527,19 @@ local function HofRetrofitting_OceanSetpieces(map, savedata, max_count)
 	for category, setlist in pairs(ocean_sets) do
 		for _, set in ipairs(setlist) do
 			local copies = math.random(1, max_count)
-			
+
 			for i = 1, copies do
 				local success
-                
+
 				if category == "rough_swell" then
 					success = TryToAddLayout(set, 0, is_rough_or_swell_ocean)
 				else
-                    success = TryToAddLayout(set, 0, is_rough_or_hazardous_ocean)
+					success = TryToAddLayout(set, 0, is_rough_or_hazardous_ocean)
 				end
-				
+
 				if success then
 					print("Retrofitting for Heap of Foods Mod - Added Ocean Setpiece: "..set.." In Ocean Type: "..category.." to the world.")
-                else
+				else
 					print("Retrofitting for Heap of Foods Mod - Failed to add Ocean Setpieces to the world!")
 				end
 			end
@@ -520,7 +550,7 @@ end
 local function HofRetrofitting_DeciduousForestShop(map, savedata)
 	local obj_layout = require("map/object_layout")
 
-	local VALID_ROOMS = 
+	local VALID_ROOMS =
 	{
 		"DeepDeciduous",
 		"MagicalDeciduous",
@@ -535,22 +565,22 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 	local map_width = savedata.map.width
 	local map_height = savedata.map.height
 	local entities = savedata.ents
-	
-	local add_fn = 
+
+	local add_fn =
 	{
 		fn = function(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
 			local x = (points_x[current_pos_idx] - width / 2) * TILE_SCALE
 			local y = (points_y[current_pos_idx] - height / 2) * TILE_SCALE
-				
+
 			x = math.floor(x * 100) / 100.0
 			y = math.floor(y * 100) / 100.0
-				
+
 			if entitiesOut[prefab] == nil then
 				entitiesOut[prefab] = {}
 			end
-				
+
 			local save_data = { x = x, z = y }
-				
+
 			if prefab_data then
 				if prefab_data.data then
 					if type(prefab_data.data) == "function" then
@@ -559,24 +589,24 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 						save_data["data"] = prefab_data.data
 					end
 				end
-					
+
 				if prefab_data.id then
 					save_data["id"] = prefab_data.id
 				end
-					
+
 				if prefab_data.scenario then
 					save_data["scenario"] = prefab_data.scenario
 				end
 			end
-				
+
 			table.insert(entitiesOut[prefab], save_data)
 		end,
-		
+
 		args = { entitiesOut = entities, width = map_width, height = map_height, rand_offset = false, debug_prefab_list = nil}
 	}
 
 	local shop_candidate_nodes = {}
-	
+
 	for node_index, id_string in ipairs(topology.ids) do
 		for _, bg_string in ipairs(VALID_ROOMS) do
 			if id_string:find(bg_string) then
@@ -599,7 +629,7 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 
 		local candidates = {}
 		local valid_candidates = {}
-		
+
 		for x = 0, num_steps do
 			for y = 0, num_steps do
 				local left = 8 + (x > 0 and ((x * math.floor(map_width / num_steps)) - area_size - 16) or 0)
@@ -608,11 +638,11 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 				table.insert(candidates, {left = left, top = top, distsq = VecUtil_LengthSq(left - map_width / 2, top - map_height / 2), })
 			end
 		end
-		
+
 		print("Retrofitting for Heap of Foods Mod - Found " .. tostring(#candidates) .. " candidate locations.")
 
 		local min_x, max_x, min_y, max_y = node.poly[1][1], node.poly[1][1], node.poly[1][2], node.poly[1][2]
-		
+
 		for _, point in ipairs(node.poly) do
 			min_x = math.min(min_x, point[1])
 			max_x = math.max(max_x, point[1])
@@ -639,13 +669,13 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 		table.sort(valid_candidates, function(a, b)
 			local da = VecUtil_LengthSq(a.left - node.x, a.top - node.y)
 			local db = VecUtil_LengthSq(b.left - node.x, b.top - node.y)
-		
+
 			return da < db
 		end)
 
 		local candidate = valid_candidates[1]
 		local left, top = candidate.left, candidate.top
-		
+
 		local function ClearLayoutArea(savedata, layout, pos)
 			local left, top = pos[1], pos[2]
 
@@ -658,21 +688,6 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 			local world_x = (left - map_width / 2) * TILE_SCALE + (layout_w * TILE_SCALE) / 2
 			local world_y = (top - map_height / 2) * TILE_SCALE + (layout_h * TILE_SCALE) / 2
 
-			local blacklist = 
-			{
-				pigking = true,
-				glommer = true,
-				glommerflower = true,
-				statueglommer = true,
-				klaussackkey = true,
-				chester_eyebone = true,
-				insanityrock = true,
-				sanityrock = true,
-				lunarrift_portal = true,
-				lunarrift_crystal_big = true,
-				wormhole = true,
-			}
-			
 			print(string.format("Retrofitting for Heap of Foods Mod - Clearing area: (%.2f, %.2f), radius %.2f", world_x, world_y, radius))
 			local ents_to_remove = FindEntsInArea(savedata.ents, world_x - radius, world_y - radius, radius * 2)
 
@@ -682,11 +697,11 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 			end
 
 			local removed = 0
-			
+
 			for i = #ents_to_remove, 1, -1 do
 				local ent = ents_to_remove[i]
-				
-				if not blacklist[ent.prefab] then
+
+				if not FOREST_BLACKLIST[ent.prefab] then
 					table.remove(savedata.ents[ent.prefab], ent.index)
 					removed = removed + 1
 					print("Retrofitting for Heap of Foods Mod - Removed: " .. tostring(ent.prefab))
@@ -700,7 +715,7 @@ local function HofRetrofitting_DeciduousForestShop(map, savedata)
 
 		ClearLayoutArea(savedata, layout, {left, top})
 		obj_layout.Place({left, top}, name, add_fn, nil, map)
-		
+
 		print("Retrofitting for Heap of Foods Mod - Added Deciduous Forest Shop to the world.")
 		return true
 	end
@@ -715,15 +730,15 @@ end
 local function HofRetrofitting_DinaMemorial(map, savedata)
 	local obj_layout = require("map/object_layout")
 
-	local VALID_ROOMS = 
+	local VALID_ROOMS =
 	{
-		"BGForest", 
-		"DeepForest", 
-		"Forest", 
-		"BGCrappyForest", 
-		"CrappyDeepForest", 
+		"BGForest",
+		"DeepForest",
+		"Forest",
+		"BGCrappyForest",
+		"CrappyDeepForest",
 		"CrappyForest",
-		"SpiderForest", 
+		"SpiderForest",
 		"MoonbaseOne",
 	}
 
@@ -731,22 +746,22 @@ local function HofRetrofitting_DinaMemorial(map, savedata)
 	local map_width = savedata.map.width
 	local map_height = savedata.map.height
 	local entities = savedata.ents
-	
-	local add_fn = 
+
+	local add_fn =
 	{
 		fn = function(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
 			local x = (points_x[current_pos_idx] - width / 2) * TILE_SCALE
 			local y = (points_y[current_pos_idx] - height / 2) * TILE_SCALE
-				
+
 			x = math.floor(x * 100) / 100.0
 			y = math.floor(y * 100) / 100.0
-				
+
 			if entitiesOut[prefab] == nil then
 				entitiesOut[prefab] = {}
 			end
-				
+
 			local save_data = { x = x, z = y }
-				
+
 			if prefab_data then
 				if prefab_data.data then
 					if type(prefab_data.data) == "function" then
@@ -755,24 +770,24 @@ local function HofRetrofitting_DinaMemorial(map, savedata)
 						save_data["data"] = prefab_data.data
 					end
 				end
-					
+
 				if prefab_data.id then
 					save_data["id"] = prefab_data.id
 				end
-					
+
 				if prefab_data.scenario then
 					save_data["scenario"] = prefab_data.scenario
 				end
 			end
-				
+
 			table.insert(entitiesOut[prefab], save_data)
 		end,
-		
+
 		args = { entitiesOut = entities, width = map_width, height = map_height, rand_offset = false, debug_prefab_list = nil}
 	}
 
 	local shop_candidate_nodes = {}
-	
+
 	for node_index, id_string in ipairs(topology.ids) do
 		for _, bg_string in ipairs(VALID_ROOMS) do
 			if id_string:find(bg_string) then
@@ -795,7 +810,7 @@ local function HofRetrofitting_DinaMemorial(map, savedata)
 
 		local candidates = {}
 		local valid_candidates = {}
-		
+
 		for x = 0, num_steps do
 			for y = 0, num_steps do
 				local left = 8 + (x > 0 and ((x * math.floor(map_width / num_steps)) - area_size - 16) or 0)
@@ -804,11 +819,11 @@ local function HofRetrofitting_DinaMemorial(map, savedata)
 				table.insert(candidates, {left = left, top = top, distsq = VecUtil_LengthSq(left - map_width / 2, top - map_height / 2), })
 			end
 		end
-		
+
 		print("Retrofitting for Heap of Foods Mod - Found " .. tostring(#candidates) .. " candidate locations.")
 
 		local min_x, max_x, min_y, max_y = node.poly[1][1], node.poly[1][1], node.poly[1][2], node.poly[1][2]
-		
+
 		for _, point in ipairs(node.poly) do
 			min_x = math.min(min_x, point[1])
 			max_x = math.max(max_x, point[1])
@@ -835,13 +850,13 @@ local function HofRetrofitting_DinaMemorial(map, savedata)
 		table.sort(valid_candidates, function(a, b)
 			local da = VecUtil_LengthSq(a.left - node.x, a.top - node.y)
 			local db = VecUtil_LengthSq(b.left - node.x, b.top - node.y)
-		
+
 			return da < db
 		end)
 
 		local candidate = valid_candidates[1]
 		local left, top = candidate.left, candidate.top
-		
+
 		local function ClearLayoutArea(savedata, layout, pos)
 			local left, top = pos[1], pos[2]
 
@@ -854,16 +869,6 @@ local function HofRetrofitting_DinaMemorial(map, savedata)
 			local world_x = (left - map_width / 2) * TILE_SCALE + (layout_w * TILE_SCALE) / 2
 			local world_y = (top - map_height / 2) * TILE_SCALE + (layout_h * TILE_SCALE) / 2
 
-			local blacklist = 
-			{
-				moonbase = true,
-				livingtree = true,
-				mandrake_planted = true,
-				lunarrift_portal = true,
-				lunarrift_crystal_big = true,
-				wormhole = true,
-			}
-			
 			print(string.format("Retrofitting for Heap of Foods Mod - Clearing area: (%.2f, %.2f), radius %.2f", world_x, world_y, radius))
 			local ents_to_remove = FindEntsInArea(savedata.ents, world_x - radius, world_y - radius, radius * 2)
 
@@ -873,11 +878,11 @@ local function HofRetrofitting_DinaMemorial(map, savedata)
 			end
 
 			local removed = 0
-			
+
 			for i = #ents_to_remove, 1, -1 do
 				local ent = ents_to_remove[i]
-				
-				if not blacklist[ent.prefab] then
+
+				if not FOREST_BLACKLIST[ent.prefab] then
 					table.remove(savedata.ents[ent.prefab], ent.index)
 					removed = removed + 1
 					print("Retrofitting for Heap of Foods Mod - Removed: " .. tostring(ent.prefab))
@@ -891,7 +896,7 @@ local function HofRetrofitting_DinaMemorial(map, savedata)
 
 		ClearLayoutArea(savedata, layout, {left, top})
 		obj_layout.Place({left, top}, name, add_fn, nil, map)
-		
+
 		print("Retrofitting for Heap of Foods Mod - Added Dina Memorial to the world.")
 		return true
 	end
@@ -909,21 +914,21 @@ local function HofRetrofitting_OctopusKingShop(map, savedata)
 	local map_height = savedata.map.height
 	local entities = savedata.ents
 
-	local add_fn = 
+	local add_fn =
 	{
 		fn = function(prefab, points_x, points_y, current_pos_idx, entitiesOut, width, height, prefab_list, prefab_data, rand_offset)
 			local x = (points_x[current_pos_idx] - width/2.0) * TILE_SCALE
 			local y = (points_y[current_pos_idx] - height/2.0) * TILE_SCALE
-				
+
 			x = math.floor(x * 100) / 100.0
 			y = math.floor(y * 100) / 100.0
-				
+
 			if entitiesOut[prefab] == nil then
 				entitiesOut[prefab] = {}
 			end
-				
+
 			local save_data = {x=x, z=y}
-				
+
 			if prefab_data then
 				if prefab_data.data then
 					if type(prefab_data.data) == "function" then
@@ -932,40 +937,40 @@ local function HofRetrofitting_OctopusKingShop(map, savedata)
 						save_data["data"] = prefab_data.data
 					end
 				end
-					
+
 				if prefab_data.id then
 					save_data["id"] = prefab_data.id
 				end
-					
+
 				if prefab_data.scenario then
 					save_data["scenario"] = prefab_data.scenario
 				end
 			end
-				
+
 			table.insert(entitiesOut[prefab], save_data)
 		end,
-	
+
 		args = { entitiesOut = entities, width = map_width, height = map_height, rand_offset = false, debug_prefab_list = nil }
 	}
 
-	local VALID_TILES = 
+	local VALID_TILES =
 	{
 		[WORLD_TILES.OCEAN_SWELL] = true,
 		[WORLD_TILES.OCEAN_ROUGH] = true,
 		[WORLD_TILES.OCEAN_HAZARDOUS] = true,
 	}
-	
+
 	local function is_valid_ocean(_left, _top, tile_size)
 		for x = 0, tile_size do
 			for y = 0, tile_size do
 				local tile = map:GetTile(_left + x, _top + y)
-				
+
 				if not VALID_TILES[tile] then
 					return false
 				end
 			end
 		end
-		
+
 		return true
 	end
 
@@ -978,46 +983,40 @@ local function HofRetrofitting_OctopusKingShop(map, savedata)
 		local candidtates = {}
 		local foundarea = false
 		local num_steps = math.floor((map_width - tile_size) / tile_size)
-		
+
 		for x = 0, num_steps do
 			for y = 0, num_steps do
 				local left = 8 + (x > 0 and ((x * math.floor(map_width / num_steps)) - tile_size - 16) or 0)
 				local top  = 8 + (y > 0 and ((y * math.floor(map_height / num_steps)) - tile_size - 16) or 0)
-				
+
 				if isvalidareafn(left, top, tile_size) then
 					table.insert(candidtates, {top = top, left = left})
 				end
 			end
 		end
-		
+
 		print("   " ..tostring(#candidtates) .. " candidtate locations")
 
 		if #candidtates > 0 then
 			local world_size = (tile_size + (topology_delta*2))*4
 
 			shuffleArray(candidtates)
-			
+
 			for _, candidtate in ipairs(candidtates) do
 				local top, left = candidtates[1].top, candidtates[1].left
-				local world_top, world_left = (left-topology_delta)*4 - (map_width * 0.5 * 4), (top-topology_delta)*4 - (map_height * 0.5 * 4)
+				local world_top, world_left = (left-topology_delta) * 4 - (map_width * 0.5 * 4), (top-topology_delta) * 4 - (map_height * 0.5 * 4)
+				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, OCEAN_BLACKLIST)
 
-				local ents_to_remove = FindEntsInArea(savedata.ents, world_top - 5, world_left - 5, world_size + 10, 
-				{
-					"boat", "boat_ancient", "chester_eyebone", "glommerflower", "underwater_salvageable", "oceantree_pillar", "wormhole",
-					"watertree_pillar", "crabking", "crabking_spawner", "oceanwhirlbigportal", "oceanwhirlportal", "kyno_octopusking_ocean",
-					"hermithouse", "meatrack_hermit", "beebox_hermit", "moon_fissure_plugged",
-				})
-				
 				if ents_to_remove ~= nil then
 					print("   Removed " .. tostring(#ents_to_remove) .. " entities for static layout:")
-					
+
 					for i = #ents_to_remove, 1, -1 do
 						print ("   - " .. tostring(ents_to_remove[i].prefab) .. " " )
 						table.remove(savedata.ents[ents_to_remove[i].prefab], ents_to_remove[i].index)
 					end
 
 					obj_layout.Place({left, top}, name, add_fn, nil, map)
-					
+
 					if layout.add_topology ~= nil then
 						AddSquareTopology(topology, world_top, world_left, world_size, layout.add_topology.room_id, layout.add_topology.tags)
 					end
@@ -1026,7 +1025,7 @@ local function HofRetrofitting_OctopusKingShop(map, savedata)
 				end
 			end
 		end
-		
+
 		return false
 	end
 
@@ -1040,14 +1039,14 @@ local function HofRetrofitting_OctopusKingShop(map, savedata)
 end
 
 local function HofRetrofitting_JellyfishSpawners(map, savedata)
-	local PREFABS_DATA = 
+	local PREFABS_DATA =
 	{
 		{
 			prefab = "kyno_jellyfish_spawner",
 			max_to_spawn = 25,
 			min_distance = 40,
-			
-			valid_tiles = 
+
+			valid_tiles =
 			{
 				WORLD_TILES.OCEAN_COASTAL,
 				WORLD_TILES.OCEAN_SWELL,
@@ -1058,8 +1057,8 @@ local function HofRetrofitting_JellyfishSpawners(map, savedata)
 			prefab = "kyno_jellyfish_rainbow_spawner",
 			max_to_spawn = 15,
 			min_distance = 40,
-			
-			valid_tiles = 
+
+			valid_tiles =
 			{
 				WORLD_TILES.OCEAN_SWELL,
 				WORLD_TILES.OCEAN_ROUGH,
@@ -1074,7 +1073,7 @@ local function HofRetrofitting_JellyfishSpawners(map, savedata)
 				return true
 			end
 		end
-		
+
 		return false
 	end
 
@@ -1084,7 +1083,7 @@ local function HofRetrofitting_JellyfishSpawners(map, savedata)
 				return false
 			end
 		end
-		
+
 		return true
 	end
 
@@ -1153,7 +1152,7 @@ local function HofRetrofitting_DogfishSpawners(map, savedata)
 				return true
 			end
 		end
-		
+
 		return false
 	end
 
@@ -1163,7 +1162,7 @@ local function HofRetrofitting_DogfishSpawners(map, savedata)
 				return false
 			end
 		end
-		
+
 		return true
 	end
 
@@ -1226,7 +1225,7 @@ local function HofRetrofitting_PufferSpawners(map, savedata)
 				return true
 			end
 		end
-		
+
 		return false
 	end
 
@@ -1236,7 +1235,7 @@ local function HofRetrofitting_PufferSpawners(map, savedata)
 				return false
 			end
 		end
-		
+
 		return true
 	end
 
@@ -1294,14 +1293,14 @@ local function HofRetrofitting_PackimBaggims(map, savedata)
 
 	local prefab_to_spawn = "kyno_packimbaggims_fishbone"
 	local marker_to_spawn = "kyno_packimbaggims_fishbone_marker"
-	
+
 	if entities[marker_to_spawn] ~= nil then
 		print("Retrofitting for Heap of Foods Mod - Packim Baggims Fishbone found. Skipping.")
 		return
 	end
 
 	local candidate_nodes = {}
-	
+
 	for node_index, id_string in ipairs(topology.ids) do
 		for _, bg_string in ipairs(VALID_ROOMS) do
 			if id_string:find(bg_string) then
@@ -1316,7 +1315,7 @@ local function HofRetrofitting_PackimBaggims(map, savedata)
 	end
 
 	local node = candidate_nodes[math.random(#candidate_nodes)]
-	
+
 	if not node then
 		print("Retrofitting for Heap of Foods Mod - Couldn't pick a valid node!")
 		return
@@ -1328,14 +1327,14 @@ local function HofRetrofitting_PackimBaggims(map, savedata)
 	if entities[prefab_to_spawn] == nil then
 		entities[prefab_to_spawn] = {}
 	end
-	
+
 	if entities[marker_to_spawn] == nil then
 		entities[marker_to_spawn] = {}
 	end
 
 	table.insert(entities[prefab_to_spawn], { x = wx, z = wy })
 	table.insert(entities[marker_to_spawn], { x = wx, z = wy })
-	
+
 	print(string.format("Retrofitting for Heap of Foods Mod - Spawned '%s' (Fishbone) at (%.2f, %.2f)", prefab_to_spawn, wx, wy))
 end
 
@@ -1346,8 +1345,8 @@ local function HofRetrofitting_WobsterMonkeyIsland(map, savedata)
 	local MAX_TO_SPAWN  = 5
 	local MAX_ATTEMPTS  = 50
 	local SAFE_DOCK_DIST = 8
-	
-	local VALID_TILES = 
+
+	local VALID_TILES =
 	{
 		WORLD_TILES.OCEAN_COASTAL,
 		WORLD_TILES.OCEAN_SWELL,
@@ -1361,17 +1360,17 @@ local function HofRetrofitting_WobsterMonkeyIsland(map, savedata)
 				return true
 			end
 		end
-		
+
 		return false
 	end
 
 	local width = savedata.map.width
 	local height = savedata.map.height
 	local entities = savedata.ents
-	
+
 	local dock_positions = {}
 	local step = 2
-	
+
 	for y = 1, height, step do
 		for x = 1, width, step do
 			if map:GetTile(x, y) == WORLD_TILES.MONKEY_DOCK then
@@ -1381,7 +1380,7 @@ local function HofRetrofitting_WobsterMonkeyIsland(map, savedata)
 			end
 		end
 	end
-	
+
 	print(string.format("Retrofitting for Heap of Foods Mod - Found %d MONKEY_DOCK tiles.", #dock_positions))
 
 	local function IsFarFromDocks(x, z)
@@ -1390,7 +1389,7 @@ local function HofRetrofitting_WobsterMonkeyIsland(map, savedata)
 				return false
 			end
 		end
-		
+
 		return true
 	end
 
@@ -1433,7 +1432,7 @@ local function HofRetrofitting_WobsterMonkeyIsland(map, savedata)
 			if IsValidTile(tile) and IsFarFromDocks(wx, wz) then
 				table.insert(entities[SPAWN_PREFAB], { x = wx, z = wz })
 				total_spawned = total_spawned + 1
-				
+
 				print(string.format("Retrofitting for Heap of Foods Mod - '%s' placed near '%s' (%.1f, %.1f)", SPAWN_PREFAB, TARGET_PREFAB, wx, wz))
 			end
 		end
@@ -1442,7 +1441,7 @@ local function HofRetrofitting_WobsterMonkeyIsland(map, savedata)
 	print(string.format("Retrofitting for Heap of Foods Mod - %d '%s' Added.", total_spawned, SPAWN_PREFAB))
 end
 
-return 
+return
 {
 	HofRetrofitting_SerenityIsland      = HofRetrofitting_SerenityIsland,
 	HofRetrofitting_MeadowIsland        = HofRetrofitting_MeadowIsland,

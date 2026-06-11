@@ -89,6 +89,12 @@ WAXWELL.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Jakże niefortunnie. Ciemność znów 
 
 WAXWELL.ANNOUNCE_KYNO_LUCKBUFF_END = "Przewidywalne. Szczęście nigdy nie trwa."
 
+WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wreszcie coś produktywnego."
+WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Ta chwila minęła."
+
+WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_START = "Pogoda jest dziwnie pokrzepiająca."
+WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_END = "To uczucie zniknęło."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję do tego czegoś innego."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie jesteś łatwy, prawda?"
@@ -1047,7 +1053,13 @@ WAXWELL.DESCRIBE.FLTSANDWICH = "Te żaby na to zasłużyły."
 
 WAXWELL.DESCRIBE.RICEANDBEANS = "Następnym razem przydałoby się coś lepszego."
 
-WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Cierpliwości... wszystko wraca z czasem. Może w 2026?"
+WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Co za żałosna wymówka sklepu.",
+	REPAIRED = "Wreszcie coś reprezentacyjnego.",
+	OCCUPIED = "Dobrowolnie bym tam nie spał.",
+	OCCUPIED_REPAIRED = "Przynajmniej kupiec ma teraz jakieś standardy.",
+}
 
 WAXWELL.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WAXWELL.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Zaniedbanie zaczyna być widoczne.",
 	EMPTY = "Całkowicie wyczerpane.",
 }
-
-WAXWELL.DESCRIBE.KYNO_ANTCHOVY = "Jakie groteskowe eksperymenty stworzyły to coś?"
-WAXWELL.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Małe potworki natury znów się zebrały."
 
 WAXWELL.DESCRIBE.AGEDROE = "Posiłek godny mojego statusu."
 WAXWELL.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Ach, smak wyrafinowania... nareszcie."
@@ -1194,6 +1203,7 @@ WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Zadziwiająco przyjemny smakołyk jak na tak prostą potrawę."
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Czy naprawdę muszę to nosić? Ech..."
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Myśli, że jest wyjątkowy, co?"
+WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Myśli, że jest wyjątkowy, co?"
 
 WAXWELL.DESCRIBE.KYNO_FISHREGISTRYHAT = "Wiedza to potęga. Nawet jeśli dotyczy ryb."
 
@@ -1232,3 +1242,55 @@ WAXWELL.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Cóż za niedbalstwo.",
 	BURNT = "Zamienione w popiół. Typowe.",
 }
+
+WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Najwyraźniej muszę najpierw zająć się jego domowymi problemami.",
+	HOUSE_REPAIRED = "Znacznie lepiej. Teraz pokaż mi swój asortyment.",
+}
+
+WAXWELL.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Zwykła siekiera tego nie zetnie.",
+	CHOPPED = "Wreszcie.",
+	BLOOMING = "Rozkwita mimo jaskiń.",
+	BURNING = "Przynajmniej ogień pozostaje niezawodny.",
+	BURNT = "Zrujnowane ponad wszelką użyteczność.",
+}
+
+WAXWELL.DESCRIBE.KYNO_CAVETUBER = "Wygląda na niedojrzały."
+WAXWELL.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ugh. Czy ja w ogóle powinienem to jeść?"
+
+WAXWELL.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Przynajmniej jest jadalny."
+WAXWELL.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Wygląda... jadalnie?"
+
+WAXWELL.DESCRIBE.CAVETUBERTEA = "Przynajmniej podawane jest na zimno."
+
+WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Ugh. Co za hałaśliwy dom.",
+	OCCUPIED = "O wiele lepiej bez tego całego wrzasku.",
+}
+
+WAXWELL.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Przestań już paplać!",
+	GRUMPY = "Hej, kolego, nie wyglądasz na szczęśliwego.",
+}
+
+WAXWELL.DESCRIBE.MANDRAKEBAOBUNS = "Przynajmniej wygląda przyzwoicie."
+
+WAXWELL.DESCRIBE.MANDRAKEPIE = "Przypuszczam, że można to uznać za deser."
+
+WAXWELL.DESCRIBE.MANDRAKEBEER = "Zaskakująco cywilizowane."
+
+WAXWELL.DESCRIBE.RAINPARFAIT = "Przynajmniej deszcz do czegoś się przydaje."
+
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Skrót dla niecierpliwych ogrodników."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymanie roślin przy życiu najwyraźniej wymaga wysiłku."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Przynajmniej poprawia wyniki."
+WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Niezwykle skuteczna formuła."
+
+WAXWELL.DESCRIBE.KYNO_PIGCOIN1 = "Cóż, cóż, cóż..."
+WAXWELL.DESCRIBE.KYNO_PIGCOIN2 = "Będę miał z tego użytek."
+WAXWELL.DESCRIBE.KYNO_PIGCOIN3 = "Wspinaczka po drabinie społecznej."

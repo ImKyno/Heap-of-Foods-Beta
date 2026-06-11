@@ -89,6 +89,12 @@ WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "A escuridão voltou a morder!"
 
 WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Ahh, a diversão acabou!"
 
+WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Que colheita abundante. Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "A fartura escapou. Hyuyu."
+
+WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_START = "O tamborilar da chuva anima meu espírito!"
+WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_END = "Chega de alegria chuvosa."
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de outra coisa."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sei que essa brincadeira foi boa, mas vou trazer o correto agora."
@@ -1047,7 +1053,13 @@ WORTOX.DESCRIBE.FLTSANDWICH = "É feito com carne de sapo lunar."
 
 WORTOX.DESCRIBE.RICEANDBEANS = "Comida mortal."
 
-WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Ho ho! Uma casa adormecida no tempo... vamos espiar de novo em 2026!"
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Uma loja em ruínas!",
+	REPAIRED = "Tudo consertado e terrivelmente arrumadinho!",
+	OCCUPIED = "O porquinho cochila em seu pequeno covil.",
+	OCCUPIED_REPAIRED = "O mercador sonha enquanto o luar brilha!",
+}
 
 WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WORTOX.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "A comida está acabando.",
 	EMPTY = "Sem petiscos de peixe, precisa reabastecer.",
 }
-
-WORTOX.DESCRIBE.KYNO_ANTCHOVY = "Ele se contorce entre dois mundos! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Um alegre enxame de peixes e insetos! Hyuyu!"
 
 WORTOX.DESCRIBE.AGEDROE = "Ovos de peixe metidos à besta! Hyuyu!"
 WORTOX.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Pequenas pérolas de prazer oceânico, hyuyu!"
@@ -1194,6 +1203,7 @@ WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Pop! Um lanchinho de estalo comemorativo!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Hoho! Um chapéu para travessuras festivas!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Ho ho! Um chapéu só do Sammy, tão especial quanto ele!"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Ho ho! Um chapéu só do Partitio, tão especial quanto ele!"
 
 WORTOX.DESCRIBE.KYNO_FISHREGISTRYHAT = "Um chapéu pensante cheio de fatos peixosos!"
 
@@ -1232,3 +1242,55 @@ WORTOX.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Diversão em chamas! Hyuyu!",
 	BURNT = "Virou cinzas e fuligem!",
 }
+
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Ele parece me tolerar. Nada de trocas até sua casa ser remendada!",
+	HOUSE_REPAIRED = "Uma casa firme e mercadorias reluzentes!",
+}
+
+WORTOX.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Oh! Uma arvorezinha teimosa!",
+	CHOPPED = "Finalmente caiu!",
+	BLOOMING = "Ela floresce sob a terra. Curioso!",
+	BURNING = "Crepita e estala, hyuyu!",
+	BURNT = "Agora só restam fuligem e tristeza.",
+}
+
+WORTOX.DESCRIBE.KYNO_CAVETUBER = "Tubérculo travesso!"
+WORTOX.DESCRIBE.KYNO_CAVETUBER_COOKED = "Não acho seguro comer isso."
+
+WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Um tubérculo florido. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Tem gosto igual a qualquer comida mortal."
+
+WORTOX.DESCRIBE.CAVETUBERTEA = "Um gole geladinho. Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "O lar dos vegetais falantes. Hyuyu!",
+	OCCUPIED = "Eles são barulhentos demais!",
+}
+
+WORTOX.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "A fonte do grito!",
+	GRUMPY = "Ele está um pouco rabugento.",
+}
+
+WORTOX.DESCRIBE.MANDRAKEBAOBUNS = "Lanchinhos sonolentos. Hyuyu!"
+
+WORTOX.DESCRIBE.MANDRAKEPIE = "Uma mordida e direto para o mundo dos sonhos!"
+
+WORTOX.DESCRIBE.MANDRAKEBEER = "Uma bebidinha borbulhante. Hyuyu!"
+
+WORTOX.DESCRIBE.RAINPARFAIT = "Uma delícia para dias de chuva."
+
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um pequeno impulso para os amigos folhosos. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Mantém eles vivos e vibrantes."
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais presentes de cada arbusto. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Que mistura mágica!"
+
+WORTOX.DESCRIBE.KYNO_PIGCOIN1 = "Moedinhas insignificantes."
+WORTOX.DESCRIBE.KYNO_PIGCOIN2 = "Não entendo por que mortais são tão obcecados com isso."
+WORTOX.DESCRIBE.KYNO_PIGCOIN3 = "É um grande token de salto."

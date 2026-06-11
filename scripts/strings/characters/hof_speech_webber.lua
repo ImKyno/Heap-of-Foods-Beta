@@ -89,6 +89,12 @@ WEBBER.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Uh oh! The dark is scary again."
 
 WEBBER.ANNOUNCE_KYNO_LUCKBUFF_END = "Aww... our luck went away."
 
+WEBBER.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wow! We're getting tons of plants!"
+WEBBER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Guess the extra plants are gone now."
+
+WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_START = "We like the rain today!"
+WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_END = "The rain doesn't feel special anymore."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Not this one."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "We think this isn't the correct meal he wants."
@@ -517,9 +523,9 @@ WEBBER.DESCRIBE.KYNO_SALMONFISH = "Mom said fish oil is good for our brain."
 WEBBER.DESCRIBE.KYNO_SALMONFISH_COOKED = "Smells good!"
 
 WEBBER.DESCRIBE.TURF_PINKPARK = "Adorable!"
-WEBBER.DESCRIBE.TURF_STONECITY = "Some ground that we dug up."
+WEBBER.DESCRIBE.TURF_STONECITY = "Hard stone flooring."
 WEBBER.DESCRIBE.TURF_FIELDS = "Some ground that we dug up."
-WEBBER.DESCRIBE.TURF_TIDALMARSH = "Some ground that we dug up."
+WEBBER.DESCRIBE.TURF_TIDALMARSH = "It's a bit slippery!"
 
 WEBBER.DESCRIBE.KYNO_SALTRACK =
 {
@@ -1047,7 +1053,13 @@ WEBBER.DESCRIBE.FLTSANDWICH = "Poor frogs."
 
 WEBBER.DESCRIBE.RICEANDBEANS = "Mum always say: Eat your veggies!"
 
-WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Looks empty now... but we'll come back and check again in 2026!"
+WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "This house looks kinda broken.",
+	REPAIRED = "Now it looks nice and cozy!",
+	OCCUPIED = "We hope he's comfy in there.",
+	OCCUPIED_REPAIRED = "Shh... he's sleeping.",
+}
 
 WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WEBBER.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Almost out of food!",
 	EMPTY = "Uh-oh, no more food.",
 }
-
-WEBBER.DESCRIBE.KYNO_ANTCHOVY = "We can't tell if it belongs on land or in water!"
-WEBBER.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "They're everywhere! So wiggly!"
 
 WEBBER.DESCRIBE.AGEDROE = "So fancy!"
 WEBBER.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "They're so tiny! Can we really eat these?"
@@ -1194,6 +1203,7 @@ WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "It pops in our mouth! Fun!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "We love party hats!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Just for Sammy!"
+WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Just for Partitio!"
 
 WEBBER.DESCRIBE.KYNO_FISHREGISTRYHAT = "We can learn all about fish with this!"
 
@@ -1232,3 +1242,55 @@ WEBBER.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "It's super hot!",
 	BURNT = "Aw... it's ruined.",
 }
+
+WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "He seems to tolerate us and wants our help!",
+	HOUSE_REPAIRED = "Hi mister! Wanna trade now?",
+}
+
+WEBBER.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "We can't cut that down with a regular axe.",
+	CHOPPED = "We finally got it down!",
+	BLOOMING = "It's kinda pretty.",
+	BURNING = "Fire spreads fast underground.",
+	BURNT = "Now it's all crispy.",
+}
+
+WEBBER.DESCRIBE.KYNO_CAVETUBER = "We don't think it's ripe yet."
+WEBBER.DESCRIBE.KYNO_CAVETUBER_COOKED = "Yummy."
+
+WEBBER.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Does this look ripe to you?"
+WEBBER.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Remember french fries?"
+
+WEBBER.DESCRIBE.CAVETUBERTEA = "It's cold and kinda yummy!"
+
+WEBBER.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "We think those noisy guys live there.",
+	OCCUPIED = "Shh! He's sleeping!",
+}
+
+WEBBER.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Hey there, noisy guy.",
+	GRUMPY = "Why so sad?",
+}
+
+WEBBER.DESCRIBE.MANDRAKEBAOBUNS = "They're squishy and tasty!"
+
+WEBBER.DESCRIBE.MANDRAKEPIE = "We want another slice!"
+
+WEBBER.DESCRIBE.MANDRAKEBEER = "It tickles our noses!"
+
+WEBBER.DESCRIBE.RAINPARFAIT = "It's extra yummy when it's raining!"
+
+WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "It helps plants grow bigger!"
+WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Healthy plants are happy plants."
+WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "More berries for everybody!"
+WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Wow! This stuff works fast!"
+
+WEBBER.DESCRIBE.KYNO_PIGCOIN1 = "We could trade it for something else."
+WEBBER.DESCRIBE.KYNO_PIGCOIN2 = "What can we buy with this amount?"
+WEBBER.DESCRIBE.KYNO_PIGCOIN3 = "We can buy a whole bunch of stuff with this."

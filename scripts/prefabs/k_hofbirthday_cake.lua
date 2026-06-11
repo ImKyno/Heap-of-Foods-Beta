@@ -6,6 +6,9 @@ local assets =
 	
 	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
+
+	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
+	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
 
 local prefabs =
@@ -162,7 +165,7 @@ end
 
 local function OnCakeSliced(inst)	
 	inst.components.finiteuses:Use(1)
-	inst.SoundEmitter:PlaySound("aqol/new_test/cloth")
+	inst.SoundEmitter:PlaySound("hof_sounds/common/anniversary/cake_slice")
 	
 	UpdateCakeAppearance(inst)
 end

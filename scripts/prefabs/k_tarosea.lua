@@ -81,6 +81,24 @@ local function GetStatus(inst, viewer)
 	or "GENERIC"
 end
 
+local function OnSave(inst, data)
+	data.bonus_yield = inst._bonus_yield
+end
+
+local function OnLoad(inst, data)
+	if data ~= nil then
+		if data.bonus_yield ~= nil then
+			inst._bonus_yield = data.bonus_yield
+
+			if inst._bonus_yield then
+				inst:AddTag("plantboosted_yield")
+			else
+				inst:RemoveTag("plantboosted_yield")
+			end
+		end
+	end
+end
+
 local function OnPreLoad(inst, data)
     WorldSettings_Pickable_PreLoad(inst, data, TUNING.KYNO_TAROSEA_GROWTIME)
 end
@@ -108,12 +126,15 @@ local function fn()
 	inst:AddTag("plant")
 	inst:AddTag("blocker")
     inst:AddTag("taroroot")
+	inst:AddTag("plantboostable")
 
     inst.entity:SetPristine()
 
     if not TheWorld.ismastersim then
         return inst
     end
+
+	inst._bonus_yield = false
 	
 	inst.AnimState:SetTime(math.random() * 2)
 
@@ -121,6 +142,7 @@ local function fn()
     inst.AnimState:SetMultColour(color, color, color, 1)
 
 	inst:AddComponent("lootdropper")
+	inst:AddComponent("plantboostable")
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
@@ -139,6 +161,10 @@ local function fn()
 	inst.Physics:SetCollisionCallback(OnCollide)
 	inst:DoTaskInTime(1 + math.random(), CheckBeached)
 
+	inst:ListenForEvent("picked", PlantBoosterBonusYield)
+
+	inst.OnSave = OnSave
+	inst.OnLoad = OnLoad
 	inst.OnPreLoad = OnPreLoad
 	
 	MakeSmallBurnable(inst)

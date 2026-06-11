@@ -5,17 +5,18 @@ local customizations_worldgen =
 	-- WORLDGEN
 	aloes           = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 0,  world = { "forest" }},
 	asparaguses     = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 1,  world = { "forest", "cave" }},
-	coffeebushes    = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 2,  world = { "cave" }},
-	fennels         = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 3,  world = { "cave" }},
-	giantparznips   = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 4,  world = { "cave" }},
-	mushstumps      = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 5,  world = { "forest", "cave" }},
-	truffles        = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 6,  world = { "forest" }},
-	parznips        = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 7,  world = { "cave" }},
-	radishes        = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 8,  world = { "forest" }},
-	rockflippables  = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 9,  world = { "forest", "cave" }},
-	sweetpotatoes   = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 10, world = { "forest" }},
-	turnips         = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 11, world = { "forest", "cave" }},
-	wildwheats      = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 12, world = { "forest" }},
+	cavetubertrees  = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 2,  world = { "cave" }},
+	coffeebushes    = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 3,  world = { "cave" }},
+	fennels         = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 4,  world = { "cave" }},
+	giantparznips   = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 5,  world = { "cave" }},
+	mushstumps      = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 6,  world = { "forest", "cave" }},
+	truffles        = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 7,  world = { "forest" }},
+	parznips        = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 8,  world = { "cave" }},
+	radishes        = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 9,  world = { "forest" }},
+	rockflippables  = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 10, world = { "forest", "cave" }},
+	sweetpotatoes   = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 11, world = { "forest" }},
+	turnips         = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 12, world = { "forest", "cave" }},
+	wildwheats      = { desc = "worldgen_frequency_descriptions", group = "hof_regrow",    order = 13, world = { "forest" }},
 	
 	-- OCEANGEN
 	brainrocks      = { desc = "yesno_descriptions",              group = "hof_ocean",     order = 7,  world = { "forest" }},
@@ -27,13 +28,13 @@ local customizations_worldgen =
 	waterycresses   = { desc = "worldgen_frequency_descriptions", group = "hof_ocean",     order = 5,  world = { "forest" }},
 	weedsea         = { desc = "worldgen_frequency_descriptions", group = "hof_ocean",     order = 6,  world = { "forest" }},
 	
-	-- OCEANCREATURES
-	antchovies      = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 2,  world = { "forest" }},
+	-- CREATURES
 	chickens        = { desc = "yesno_descriptions",              group = "hof_creatures", order = 0,  world = { "forest" }},
 	dogfishes       = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 5,  world = { "forest" }},
 	hermitwobsters  = { desc = "yesno_descriptions",              group = "hof_creatures", order = 6,  world = { "forest" }},
 	jellyfishes     = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 3,  world = { "forest" }},
 	jellyfishes2    = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 4,  world = { "forest" }},
+	eldermandrakes  = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 9,  world = { "cave"   }},
 	pebblecrabs     = { desc = "yesno_descriptions",              group = "hof_creatures", order = 1,  world = { "forest" }},
 	puffermonsters  = { desc = "worldgen_frequency_descriptions", group = "hof_creatures", order = 8,  world = { "forest" }},
 	swordfishes     = { desc = "yesno_descriptions",              group = "hof_creatures", order = 7,  world = { "forest" }},
@@ -59,6 +60,7 @@ local customizations_worldgen =
 
 map.TRANSLATE_TO_PREFABS["aloes"]           = { "kyno_aloe_ground" }
 map.TRANSLATE_TO_PREFABS["asparaguses"]     = { "kyno_aspargos_ground" }
+map.TRANSLATE_TO_PREFABS["cavetubertrees"]  = { "kyno_cavetubertrees" }
 map.TRANSLATE_TO_PREFABS["coffeebushes"]    = { "kyno_coffeebush" }
 map.TRANSLATE_TO_PREFABS["fennels"]         = { "kyno_fennel_ground" }
 map.TRANSLATE_TO_PREFABS["giantparznips"]   = { "kyno_parznip_big" }
@@ -78,13 +80,13 @@ map.TRANSLATE_TO_PREFABS["taroroots"]       = { "kyno_taroroot_ocean" }
 map.TRANSLATE_TO_PREFABS["waterycresses"]   = { "kyno_waterycress_ocean" }
 map.TRANSLATE_TO_PREFABS["weedsea"]         = { "kyno_seaweeds_ocean" }
 
-map.TRANSLATE_TO_PREFABS["antchovies"]      = { "kyno_antchovy_spawner" }
 map.TRANSLATE_TO_PREFABS["chickens"]        = { "kyno_chicken", "kyno_chicken2", "kyno_chicken2_herd" }
 map.TRANSLATE_TO_PREFABS["dogfishes"]       = { "kyno_dogfish", "kyno_dogfish_spawner" }
 map.TRANSLATE_TO_PREFABS["fishermerms"]     = { "kyno_meadowisland_mermfisher" }
 map.TRANSLATE_TO_PREFABS["hermitwobsters"]  = { "wobster_monkeyisland", "wobster_monkeyisland_land", "kyno_wobster_den_monkeyisland" }
 map.TRANSLATE_TO_PREFABS["jellyfishes"]     = { "kyno_jellyfish_ocean", "kyno_jellyfish_spawner" }
 map.TRANSLATE_TO_PREFABS["jellyfishes2"]    = { "kyno_jellyfish_rainbow_ocean", "kyno_jellyfish_rainbow_spawner" }
+map.TRANSLATE_TO_PREFABS["eldermandrakes"]  = { "kyno_eldermandrakehouse" }
 map.TRANSLATE_TO_PREFABS["pebblecrabs"]     = { "kyno_pebblecrab", "kyno_pebblecrab_spawner" }
 map.TRANSLATE_TO_PREFABS["pikos"]           = { "kyno_piko" }
 map.TRANSLATE_TO_PREFABS["pikosorange"]     = { "kyno_piko_orange" }

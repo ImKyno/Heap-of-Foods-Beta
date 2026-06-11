@@ -89,6 +89,12 @@ WATHGRITHR.ANNOUNCE_KYNO_DARKNESSBUFF_END = "The shadows seek battle once more!"
 
 WATHGRITHR.ANNOUNCE_KYNO_LUCKBUFF_END = "Fate has withdrawn its favor!"
 
+WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "The fields shall yield plentiful bounty!"
+WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The fertile blessing hath faded!"
+
+WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_START = "The storm reneweth my spirit!"
+WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_END = "The blessing of the rain hath faded!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wrong feast! Beast wants a more delightful food!"
@@ -518,8 +524,8 @@ WATHGRITHR.DESCRIBE.KYNO_SALMONFISH_COOKED = "A feast from the sea."
 
 WATHGRITHR.DESCRIBE.TURF_PINKPARK = "'Tis pink cannot beat me!"
 WATHGRITHR.DESCRIBE.TURF_STONECITY = "A piece of the battlefield."
-WATHGRITHR.DESCRIBE.TURF_FIELDS = "A piece of the battlefield."
-WATHGRITHR.DESCRIBE.TURF_TIDALMARSH = "A piece of the battlefield."
+WATHGRITHR.DESCRIBE.TURF_FIELDS = "A piece of greeny scenery."
+WATHGRITHR.DESCRIBE.TURF_TIDALMARSH = "Slimy battlegrounds!"
 
 WATHGRITHR.DESCRIBE.KYNO_SALTRACK =
 {
@@ -1047,7 +1053,13 @@ WATHGRITHR.DESCRIBE.FLTSANDWICH = "Meat sandwich!"
 
 WATHGRITHR.DESCRIBE.RICEANDBEANS = "Eww!"
 
-WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "A hall once proud, now fallen. It shall rise anew in the year of destiny: 2026!"
+WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "This hall has suffered greatly from time's cruelty!",
+	REPAIRED = "A worthy shelter once more!",
+	OCCUPIED = "May the merchant still find rest within these walls.",
+	OCCUPIED_REPAIRED = "The trader slumbers soundly in his restored hall.",
+}
 
 WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "The feast wanes!",
 	EMPTY = "No food remains!",
 }
-
-WATHGRITHR.DESCRIBE.KYNO_ANTCHOVY = "Tis half bug, half fish! Twice the feast!"
-WATHGRITHR.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "A school worthy of my spear!"
 
 WATHGRITHR.DESCRIBE.AGEDROE = "I would have rathered the fish."
 WATHGRITHR.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "The eggs of mighty sea beasts! A warrior's snack!"
@@ -1194,6 +1203,7 @@ WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Corn that bursts into battle with heat! Ha!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "This hat carries no warrior's honor... but I shall wear it proudly!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "A warrior's helm!"
+WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "A warrior's helm!"
 
 WATHGRITHR.DESCRIBE.KYNO_FISHREGISTRYHAT = "A thinking hat for those who face the creatures of the sea!"
 
@@ -1232,3 +1242,55 @@ WATHGRITHR.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "The flames consume the feast!",
 	BURNT = "Only ashes remain of the banquet.",
 }
+
+WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "The merchant demands aid before barter!",
+	HOUSE_REPAIRED = "Hail, trader! Reveal thy treasures!",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "This tree cannot be felled by a mere axe.",
+	CHOPPED = "Victory over the wooden beast!",
+	BLOOMING = "It blossoms with fierce vitality!",
+	BURNING = "The flames consume it gloriously!",
+	BURNT = "Its saga ends in ash.",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER = "'Tis unripe non-meat."
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_COOKED = "Fire does nothing to make it edible!"
+
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "'Tis ripe non-meat."
+WATHGRITHR.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "I care not if it is cooked."
+
+WATHGRITHR.DESCRIBE.CAVETUBERTEA = "A frosty draught from the depths!"
+
+WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "I have them cornered!",
+	OCCUPIED = "The screamer is inside that hut!",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "I shall vanquish thee!",
+	GRUMPY = "The enemy's morale is down!",
+}
+
+WATHGRITHR.DESCRIBE.MANDRAKEBAOBUNS = "A warrior's bun of mystical roots!"
+
+WATHGRITHR.DESCRIBE.MANDRAKEPIE = "A heroic pastry of enchanted root!"
+
+WATHGRITHR.DESCRIBE.MANDRAKEBEER = "A frothy draught without the glory of mead!"
+
+WATHGRITHR.DESCRIBE.RAINPARFAIT = "A chilled feast blessed by the storm!"
+
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A tonic for the growth of mighty crops!"
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "It fortifies the spirit of the plants!"
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "A greater bounty for the feast hall!"
+WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "The crops shall flourish with vigor!"
+
+WATHGRITHR.DESCRIBE.KYNO_PIGCOIN1 = "Treasure!"
+WATHGRITHR.DESCRIBE.KYNO_PIGCOIN2 = "Coin! Prepare to be spent!"
+WATHGRITHR.DESCRIBE.KYNO_PIGCOIN3 = "Fortune is mine!"

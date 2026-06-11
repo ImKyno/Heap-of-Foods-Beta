@@ -1,4 +1,3 @@
--- Common Dependencies.
 local _G            = GLOBAL
 local require       = _G.require
 local STRINGS       = _G.STRINGS
@@ -125,6 +124,18 @@ local LOADINGTIPS   =
 	WEBSITE         = "Você sabia que o Amontoado de Comidas tem um site oficial? Pois é, agora sabe. Aprenda a cozinhar todas as receitas em: https://heap-of-foods.com",
 	DAILYRECIPES1   = "Receitas Diárias são pratos especiais selecionados todos os dias a partir do conjunto de receitas. Todos os jogadores compartilham a mesma receita, independentemente do mundo. A cada dia, uma receita é escolhida aleatoriamente. Comer a receita do dia concede bônus de Vida, Fome e Sanidade, além dos atributos originais do prato. Também aumenta a Sorte por um certo período.",
 	DAILYRECIPES2   = "Você pode verificar a Receita Diária atual construindo um Quadro de Receitas Diária ou através do site oficial do Mod.",
+	CAVETUBERTREE1  = "As Árvores de Tubérculo das Cavernas são resistentes e não caem com facilidade. Traga seu melhor machado para derrubá-las!",
+	CAVETUBERTREE2  = "Durante a Primavera, as Árvores de Tubérculo das Cavernas começarão a florescer, produzindo outro tipo de Tubérculo das Cavernas.",
+	ELDERMANDRAKE1  = "Mandrágoras Anciãs, quando mortas, fazem todas as criaturas ao redor adormecerem por alguns segundos.",
+	ELDERMANDRAKE2  = "Cuidado! Mandrágoras Anciãs não gostam que você carregue vegetais ou outras mandrágoras perto delas.",
+	ELDERMANDRAKE3  = "\"Ouvi dizer que ontem alguém encontrou umas estranhas casas folhosas nas cavernas perto da floresta de cogumelos. Fico me perguntando quem mora lá...\" -W",
+	EARMUFFSHAT     = "Os Protetores Auriculares de Coelho agora oferecem proteção contra ruídos altos!",
+	PIGCOIN1        = "Comidas Preparadas podem ser trocadas com o Rei Porco por Koins. Cada comida tem seu próprio valor; pratos raros e melhores valem mais do que receitas comuns.",
+	PIGCOIN2        = "O Rei Porco está com fome e exige comida! Ele está oferecendo Koins (sua mais nova tentativa de criar uma moeda, ou assim dizem seus seguidores) em troca de refeições deliciosas.",
+	PIGCOIN3        = "\"Parece que aquele porco idiota está procurando comida em troca de algumas moedas. Talvez eu possa enriquecer às custas dele!\" -W",
+	PARTITIO1       = "Partitio é um porco orgulhoso que vive na Floresta Decídua. Ele vende apenas produtos de alta qualidade e está ansioso para conhecer novos clientes.",
+	PARTITIO2       = "Após alguns acontecimentos infelizes no passado, Partitio agora se recusa a fazer negócios com os Povo-peixe novamente!",
+	PARTITIO3       = "Partitio descobriu que alguém destruiu sua casa e agora precisa de ajuda para reconstruí-la ao seu antigo esplendor antes de voltar a fazer negócios.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

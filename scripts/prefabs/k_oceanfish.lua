@@ -644,7 +644,7 @@ local function MakeFish(data)
 end
 
 -- calling FISH_DATA.fish from MakeFish will recreate ALL fishes, we don't want that.
--- The game register our fish through hof_oceanfish_data.lua but it does not register it in the mod environment.
+-- The game register our fish through hof_main_oceanfish_data.lua but it does not register it in the mod environment.
 -- I am going to manually register them in here...
 local FISH_DATA_HOF = 
 {

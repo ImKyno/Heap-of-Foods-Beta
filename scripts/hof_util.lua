@@ -39,19 +39,6 @@ function ChooseWeightedRandom(choices)
 	return last_choice
 end
 
-local function TogglePickable(pickable, isspring)
-	if isspring then
-		pickable:Pause()
-	else
-		pickable:Resume()
-	end
-end
-
-function MakeNoGrowInSpring(inst)
-	inst.components.pickable:WatchWorldState("isspring", TogglePickable)
-	TogglePickable(inst.components.pickable, TheWorld.state.isspring)
-end
-
 function IsSerenityBiome(inst)
 	if inst ~= nil and inst:IsValid() and TheWorld.Map:IsVisualGroundAtPoint(inst.Transform:GetWorldPosition()) then
 		local node = TheWorld.Map:FindNodeAtPoint(inst.Transform:GetWorldPosition())
@@ -442,4 +429,112 @@ function SpawnDailyRecipeCard(recipe, giver, pos, inst)
 	end
 
 	return card
+end
+
+-- Use to replace loot prefabs in their LootTables.
+function ReplaceLootTablePrefab(prefab, from, to)
+	for i, tbl in ipairs(LootTables[prefab]) do
+		if tbl[1] == from then
+			tbl[1] = to
+		end
+	end
+end
+
+-- For Elder Mandrake.
+function HasVeggieInInventoryFor_Checker(item)
+	return item.components.edible ~= nil and item.components.edible.foodtype == FOODTYPE.VEGGIE
+	and not item:HasTag("smallcreature")
+end
+
+function HasVeggieInInventoryFor(inst)
+	local inventory = inst.components.inventory
+
+	if inventory == nil then
+		return false
+	end
+
+	if inventory:EquipHasTag("hidesveggies") then
+		return false
+	end
+
+	return inventory:FindItem(HasVeggieInInventoryFor_Checker) ~= nil
+end
+
+local SLEEPTARGETS_CANT_TAGS = { "soundproof", "playerghost", "FX", "DECOR", "INLIMBO" }
+local SLEEPTARGETS_ONEOF_TAGS = { "sleeper" }
+
+function DoAreaSleepFromFood(inst, knockout)
+	local range = TUNING.KYNO_ELDERMANDRAKE_SLEEP_RANGE - 5
+	local duration = TUNING.KYNO_ELDERMANDRAKE_SLEEP_DURATION - 5
+
+	local x, y, z = inst.Transform:GetWorldPosition()
+	local ents = TheSim:FindEntities(x, y, z, range, nil, SLEEPTARGETS_CANT_TAGS, SLEEPTARGETS_ONEOF_TAGS)
+
+	for i, v in ipairs(ents) do
+		if not (v.components.freezable ~= nil and v.components.freezable:IsFrozen())
+		and not (v.components.pinnable ~= nil and v.components.pinnable:IsStuck())
+		and not (v.components.fossilizable ~= nil and v.components.fossilizable:IsFossilized()) then
+			local mount = v.components.rider ~= nil and v.components.rider:GetMount() or nil
+
+			if mount ~= nil then
+				mount:PushEvent("ridersleep", { sleepiness = 7, sleeptime = duration })
+			end
+
+			if v:HasTag("player") then
+				v:PushEvent("yawn", { grogginess = 4, knockoutduration = duration })
+			elseif v.components.sleeper ~= nil then
+				v.components.sleeper:AddSleepiness(7, duration)
+			elseif v.components.grogginess ~= nil then
+				v.components.grogginess:AddGrogginess(4, duration)
+			else
+				v:PushEvent("knockedout")
+			end
+		end
+	end
+end
+
+function PlantBoosterBonusYield(inst, data)
+	if not inst._bonus_yield then
+		return
+	end
+
+	local picker = data ~= nil and data.picker or nil
+	local pt = inst:GetPosition()
+
+	-- Farm Plants use lootdropper for picking.
+	if inst.components.pickable ~= nil then
+		local use_lootdropper = inst.components.pickable.use_lootdropper_for_product
+
+		if use_lootdropper ~= nil and inst.components.lootdropper ~= nil then
+			local loot = inst.components.lootdropper:GenerateLoot()
+
+			for _, prefab in ipairs(loot) do
+				local item = SpawnPrefab(prefab)
+
+				if item ~= nil then 
+					if picker ~= nil and picker.components.inventory ~= nil and item.components.inventoryitem ~= nil then
+						picker.components.inventory:GiveItem(item, nil, pt)
+					else
+						LaunchAt(item, inst, nil, 1, 1)
+					end
+				end
+			end
+		end
+
+		return
+	end
+
+	local product = inst.components.pickable ~= nil and inst.components.pickable.product or nil
+
+	if product ~= nil then
+		local item = SpawnPrefab(product)
+
+		if item ~= nil then
+			if picker ~= nil and picker.components.inventory ~= nil and item.components.inventoryitem ~= nil then
+				picker.components.inventory:GiveItem(item, nil, pt)
+			else
+				LaunchAt(item, inst, nil, 1, 1)
+			end
+		end
+	end
 end

@@ -153,6 +153,11 @@ local function OnEntitySleep(inst)
 	UpdateRecipeSymbol(inst)
 end
 
+local function OnInit(inst)
+	UpdateState(inst)
+	UpdateRecipeSymbol(inst)
+end
+
 local function OnLoad(inst, data)
 	UpdateState(inst)
 	UpdateRecipeSymbol(inst)
@@ -211,8 +216,7 @@ local function fn()
 	inst.components.workable:SetOnWorkCallback(OnHit)
 	inst.components.workable:SetWorkLeft(3)
 
-	UpdateState(inst)
-	UpdateRecipeSymbol(inst)
+	inst:DoTaskInTime(0, OnInit)
 
 	inst:ListenForEvent("onbuilt", OnBuilt)
 	inst:ListenForEvent("dailyrecipechanged", function(_, data)
@@ -236,6 +240,7 @@ local function fn()
 
 	inst.OnEntityWake = OnEntityWake
 	inst.OnEntitySleep = OnEntitySleep
+
 	inst.OnLoad = OnLoad
 
 	MakeSnowCovered(inst)

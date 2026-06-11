@@ -46,7 +46,7 @@ local states =
 
         onupdate = function(inst)
 			if not inst:IsAsleep() then
-				if inst.sg.mem.trading then
+				if inst.sg.mem.trading and inst:CanTrade() then
 					inst.sg:GoToState("trading_start")
 				elseif inst:HasStock() and inst:IsNearPlayer(TUNING.RESEARCH_MACHINE_DIST, true) then
 					inst:EnablePrototyper(true)
@@ -70,7 +70,7 @@ local states =
 		{
 			EventHandler("animover", function(inst)
                 if inst.AnimState:IsCurrentAnimation("trade_start") then
-                    if inst.sg.mem.trading then
+                    if inst.sg.mem.trading and inst:CanTrade() then
                         inst.AnimState:PlayAnimation("trade_pre")
                     else
                         inst.AnimState:PlayAnimation("idle_loop")
@@ -78,7 +78,7 @@ local states =
                 elseif inst.AnimState:IsCurrentAnimation("trade_pre") then
 					inst.sg.statemem.keeprevealed = true
 					
-                    if inst.sg.mem.trading then
+                    if inst.sg.mem.trading and inst:CanTrade() then
                         inst.sg:GoToState("trading")
                     else
                         inst.sg:GoToState("trading_stop")
@@ -123,8 +123,8 @@ local states =
             EventHandler("animover", function(inst)
 				inst.sg.statemem.keeprevealed = true
 				
-                if inst.sg.mem.trading then
-                    inst.sg:GoToState("trading", {repeating = true,})
+                if inst.sg.mem.trading and inst:CanTrade() then
+                    inst.sg:GoToState("trading", { repeating = true })
                 else
                     inst.sg:GoToState("trading_stop")
                 end
@@ -162,14 +162,14 @@ local states =
 		{
             EventHandler("animover", function(inst)
                 if inst.AnimState:IsCurrentAnimation("trade_pst") then
-                    if inst.sg.mem.trading then
+                    if inst.sg.mem.trading and inst:CanTrade() then
                         inst.AnimState:PlayAnimation("trade_pre")
                     else
                         inst.AnimState:PlayAnimation("idle_loop") -- idle_creepy
                     end
                 elseif inst.AnimState:IsCurrentAnimation("trade_pre") then
 					inst.sg.statemem.keeprevealed = true
-                    if inst.sg.mem.trading then
+                    if inst.sg.mem.trading and inst:CanTrade() then
                         inst.sg:GoToState("trading")
                     else
                         inst.sg:GoToState("trading_stop")

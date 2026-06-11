@@ -89,6 +89,12 @@ WARLY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "A noite retoma sua terrível mordacidade
 
 WARLY.ANNOUNCE_KYNO_LUCKBUFF_END = "A sorte acabou. Que pena."
 
+WARLY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Magnifique! Ingredientes frescos em abundância!"
+WARLY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "O excedente diminuiu."
+
+WARLY.ANNOUNCE_KYNO_WETNESSBUFF_START = "Uma garoa refrescante para o corpo e a mente."
+WARLY.ANNOUNCE_KYNO_WETNESSBUFF_END = "A sensação refrescante passou."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado, errado..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Quer algo mais saboroso?"
@@ -1047,7 +1053,13 @@ WARLY.DESCRIBE.FLTSANDWICH = "Se não temos bacon, usamos carne de sapo!"
 
 WARLY.DESCRIBE.RICEANDBEANS = "Um simples prato de almoço."
 
-WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Hmm... cheira a potencial. Voltarei para provar em 2026."
+WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Este estabelecimento precisa desesperadamente de uma reforma.",
+	REPAIRED = "Ah, muito mais acolhedor agora.",
+	OCCUPIED = "Espero que o pobre sujeito consiga descansar direito.",
+	OCCUPIED_REPAIRED = "Um descanso merecido para o mercador.",
+}
 
 WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WARLY.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Precisarão de alimentação em breve.",
 	EMPTY = "Nada resta para os sustentar.",
 }
-
-WARLY.DESCRIBE.KYNO_ANTCHOVY = "Hmm... crocante e salgado, talvez? Très bizarre!"
-WARLY.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Um bufê de confusão, non?"
 
 WARLY.DESCRIBE.AGEDROE = "Coma com concha, senão o sabor se perde."
 WARLY.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Envelhecido à perfeição. Uma verdadeira iguaria!"
@@ -1194,6 +1203,7 @@ WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Ah, um petisco simples, mas delicioso!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Um visual elegante para uma celebração especial!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Très unique! Um chapéu para o nosso doce Sammy!"
+WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Très unique! Um chapéu para o nosso doce Partitio!"
 
 WARLY.DESCRIBE.KYNO_FISHREGISTRYHAT = "Entender os peixes é o primeiro passo para cozinhá-los bem."
 
@@ -1232,3 +1242,55 @@ WARLY.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Mon dieu! Está queimando!",
 	BURNT = "Uma tragédia culinária.",
 }
+
+WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Um lar apropriado antes de negócios apropriados, hm?",
+	HOUSE_REPAIRED = "Maravilhoso! Quais ingredientes você oferece?",
+}
+
+WARLY.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Eu gosto bastante de tubérculos.",
+	CHOPPED = "Um resultado satisfatório.",
+	BLOOMING = "Magnifique! Está prosperando.",
+	BURNING = "Tantos ingredientes desperdiçados!",
+	BURNT = "Queimado além do uso culinário.",
+}
+
+WARLY.DESCRIBE.KYNO_CAVETUBER = "Ah. Ainda não amadureceu."
+WARLY.DESCRIBE.KYNO_CAVETUBER_COOKED = "Não é meu melhor trabalho."
+
+WARLY.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "O amadurecimento perfeito."
+WARLY.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Algo que preparei rapidinho."
+
+WARLY.DESCRIBE.CAVETUBERTEA = "Uma infusão deliciosamente refrescante."
+
+WARLY.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Aquelas raízes ensurdecedoras vivem aí.",
+	OCCUPIED = "Uma casa cheia de barulho, imagino.",
+}
+
+WARLY.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Vegetal raiz barulhento.",
+	GRUMPY = "Ele não parece muito feliz hoje.",
+}
+
+WARLY.DESCRIBE.MANDRAKEBAOBUNS = "Uma reconfortante fusão de sabores."
+
+WARLY.DESCRIBE.MANDRAKEPIE = "Uma torta rústica com qualidades relaxantes."
+
+WARLY.DESCRIBE.MANDRAKEBEER = "Ingredientes simples, resultados deliciosos."
+
+WARLY.DESCRIBE.RAINPARFAIT = "Um sofisticado parfait com notas refrescantes."
+
+WARLY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Excelente para cultivar ingredientes frescos."
+WARLY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Ingredientes saudáveis produzem culinária superior."
+WARLY.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais colheita significa mais possibilidades."
+WARLY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "O fertilizante dos sonhos de qualquer chef."
+
+WARLY.DESCRIBE.KYNO_PIGCOIN1 = "Eu poderia comprar muitos ingredientes frescos com isso!"
+WARLY.DESCRIBE.KYNO_PIGCOIN2 = "Ah! Eu poderia passar na loja e comprar mantimentos..."
+WARLY.DESCRIBE.KYNO_PIGCOIN3 = "Parece bem importante."

@@ -1,9 +1,1 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Atlas>
-	<Texture filename="hof_tabimages.tex" />
-	<Elements>
-		<Element name="kyno_tab_meadow.tex" u1="0.001" u2="0.49509375" v2="0.999" v1="0.501" variant="" />
-		<Element name="kyno_tab_mealing.tex" u1="0.49709375" u2="0.9911875" v2="0.999" v1="0.501" variant="" />
-		<Element name="kyno_tab_serenity.tex" u1="0.001" u2="0.49509375" v2="0.499" v1="0.001" variant="" />
-	</Elements>
-</Atlas>
+<Atlas><Texture filename="hof_tabimages.tex" /><Elements><Element name="kyno_tab_serenity.tex" u1="0.00048828125" u2="0.24658203125" v1="0.5029296875" v2="0.9990234375" /><Element name="kyno_tab_deciduous.tex" u1="0.25048828125" u2="0.49658203125" v1="0.5029296875" v2="0.9990234375" /><Element name="kyno_tab_meadow.tex" u1="0.50048828125" u2="0.74658203125" v1="0.5029296875" v2="0.9990234375" /><Element name="kyno_tab_mealing.tex" u1="0.75048828125" u2="0.99658203125" v1="0.5029296875" v2="0.9990234375" /></Elements></Atlas>

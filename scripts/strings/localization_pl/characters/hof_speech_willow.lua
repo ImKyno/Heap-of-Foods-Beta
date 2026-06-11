@@ -89,6 +89,12 @@ WILLOW.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ech, znowu jest strasznie ciemno."
 
 WILLOW.ANNOUNCE_KYNO_LUCKBUFF_END = "Świetnie. Z powrotem pech jak zwykle."
 
+WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Czas zgarnąć wszystkie rośliny, zanim spłoną!"
+WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Och, zabawa już się skończyła?"
+
+WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_START = "Hm. Tym razem bycie mokrą nie jest takie złe."
+WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_END = "Dobra, znowu nienawidzę być mokra."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Muszę tu coś umieścić!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ech, nie to!"
@@ -1047,7 +1053,13 @@ WILLOW.DESCRIBE.FLTSANDWICH = "Brakuje sałaty."
 
 WILLOW.DESCRIBE.RICEANDBEANS = "Przydałoby się więcej przypalonej fasoli."
 
-WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Ble, takie stare i suche... idealne do spalenia. Może poczekam do 2026."
+WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Ta rudera zaraz się rozpadnie.",
+	REPAIRED = "Nuda. Przestało wyglądać na łatwopalne.",
+	OCCUPIED = "Jak można spać w takiej dziurze?",
+	OCCUPIED_REPAIRED = "Przynajmniej ma teraz porządne miejsce do spania.",
+}
 
 WILLOW.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1092,9 +1104,6 @@ WILLOW.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Prawie skończyło się jedzenie.",
 	EMPTY = "Nie ma już dla nich jedzenia.",
 }
-
-WILLOW.DESCRIBE.KYNO_ANTCHOVY = "Fuj! Pachnie jak spalona ryba i wnętrzności robaka!"
-WILLOW.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Ugh, wszędzie ryby i robaki!"
 
 WILLOW.DESCRIBE.AGEDROE = "Jaja ryb w słoiku. Super."
 WILLOW.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Fuj, stare rybie jajka. Dlaczego bogacze to jedzą?"
@@ -1194,6 +1203,7 @@ WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Ogień sprawił, że wybuchły! Idealna przekąska."
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Byłoby lepsze, gdyby się paliło."
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy ma własny kapelusz? Ech. No dobra... jest uroczy."
+WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Partitio ma własny kapelusz? Hmph. No dobrze. Jest uroczy."
 
 WILLOW.DESCRIBE.KYNO_FISHREGISTRYHAT = "Lepiej poznać ryby, zanim je spalę."
 
@@ -1232,3 +1242,55 @@ WILLOW.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Teraz TO jest specjalne!",
 	BURNT = "Heh. Zwęglone.",
 }
+
+WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Ugh, najpierw naprawić jego dom? Co za nuda.",
+	HOUSE_REPAIRED = "Dobra, staruszku. Pokaż towar.",
+}
+
+WILLOW.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Zwykła siekiera tego nie zniszczy, ale ogień owszem.",
+	CHOPPED = "Heh. Dobrze mu tak.",
+	BLOOMING = "Wygląda dziwnie żywo.",
+	BURNING = "No i to mi się podoba!",
+	BURNT = "Popiół i tak jest ładniejszy.",
+}
+
+WILLOW.DESCRIBE.KYNO_CAVETUBER = "Powinien dojrzeć, zanim go spalę."
+WILLOW.DESCRIBE.KYNO_CAVETUBER_COOKED = "Ogień: zawsze poprawia wszystko."
+
+WILLOW.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Kwiat oznacza, że jest dojrzały."
+WILLOW.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Aw. Kwiat nawet się nie spalił."
+
+WILLOW.DESCRIBE.CAVETUBERTEA = "Mrożona herbata? Potrzeba więcej ognia."
+
+WILLOW.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Obrzydliwe.",
+	OCCUPIED = "Przynajmniej teraz nie wydaje tych głupich dźwięków.",
+}
+
+WILLOW.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Świetnie. Jeszcze większy. Tego właśnie potrzebowałam.",
+	GRUMPY = "On jest zły!",
+}
+
+WILLOW.DESCRIBE.MANDRAKEBAOBUNS = "Ciepłe bułeczki nadziewane wrzeszczącym korzeniem."
+
+WILLOW.DESCRIBE.MANDRAKEPIE = "Senny placek. Super."
+
+WILLOW.DESCRIBE.MANDRAKEBEER = "To nie jest prawdziwe piwo, ale i tak jest całkiem dobre."
+
+WILLOW.DESCRIBE.RAINPARFAIT = "Parfait na deszczowe dni. Dziwne."
+
+WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że rośliny rosną. Nuda."
+WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje rośliny przy życiu dłużej."
+WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej rzeczy do spalenia później!"
+WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Rośliny rosną szybko. Ogień rośnie szybciej."
+
+WILLOW.DESCRIBE.KYNO_PIGCOIN1 = "O. Moneta. Phi."
+WILLOW.DESCRIBE.KYNO_PIGCOIN2 = "Pewnie mogę za to kupić coś dobrego."
+WILLOW.DESCRIBE.KYNO_PIGCOIN3 = "Jestem bogata!"

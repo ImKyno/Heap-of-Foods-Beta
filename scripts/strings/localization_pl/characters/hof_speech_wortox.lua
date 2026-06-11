@@ -89,6 +89,12 @@ WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Och nie! Ciemność znów gryzie!"
 
 WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Och, zabawa się skończyła!"
 
+WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Jakże obfite zbiory. Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Obfitość uleciała. Hyuyu."
+
+WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_START = "Stukanie kropli podnosi mnie na duchu!"
+WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_END = "Koniec deszczowej radości."
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję czegoś jeszcze."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wiem, że ten żart był niezły, ale przejdźmy do konkretów."
@@ -1047,7 +1053,13 @@ WORTOX.DESCRIBE.FLTSANDWICH = "Zrobione z księżycowego żabiego mięsa."
 
 WORTOX.DESCRIBE.RICEANDBEANS = "Jedzenie śmiertelników."
 
-WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Ho ho! Dom uśpiony w czasie... zobaczmy go znowu w 2026!"
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Sklep w ruinie!",
+	REPAIRED = "Naprawiony i straszliwie schludny!",
+	OCCUPIED = "Świnka drzemie w swojej małej norce.",
+	OCCUPIED_REPAIRED = "Kupiec śni, gdy księżyc lśni!",
+}
 
 WORTOX.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1092,9 +1104,6 @@ WORTOX.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Jedzenie się kończy.",
 	EMPTY = "Brak przekąsek dla rybek, trzeba uzupełnić.",
 }
-
-WORTOX.DESCRIBE.KYNO_ANTCHOVY = "Wije się między dwoma światami! Hyuyu!"
-WORTOX.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Wesoły rój rybo-robaków! Hyuyu!"
 
 WORTOX.DESCRIBE.AGEDROE = "Zadufane jajka ryb! Hyuyu!"
 WORTOX.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Małe perły morskiej rozkoszy, hyuyu!"
@@ -1194,6 +1203,7 @@ WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Pop! Przegryzka z radosnym trzaskiem!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Ho ho! Kapelusz do świątecznych psikusów!"
 WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Oho! Kapelusz dla Sammy'ego, wyjątkowy i figlarny!"
+WORTOX.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Oho! Kapelusz stworzony specjalnie dla Partitio!"
 
 WORTOX.DESCRIBE.KYNO_FISHREGISTRYHAT = "Czapka pełna rybnych faktów! Hyuyu!"
 
@@ -1232,3 +1242,55 @@ WORTOX.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Ognista zabawa! Hyuyu!",
 	BURNT = "Zamienione w popiół i sadzę!",
 }
+
+WORTOX.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Wygląda na to, że mnie toleruje. Żadnego handlu, dopóki jego dom nie zostanie załatany!",
+	HOUSE_REPAIRED = "Solidny dom i błyszczące towary!",
+}
+
+WORTOX.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Och! Uparte małe drzewko!",
+	CHOPPED = "W końcu padło!",
+	BLOOMING = "Kwitnie pod ziemią. Ciekawe!",
+	BURNING = "Trzask i huk, hyuyu!",
+	BURNT = "Teraz zostały tylko sadza i smutek.",
+}
+
+WORTOX.DESCRIBE.KYNO_CAVETUBER = "Niegrzeczny bulw!"
+WORTOX.DESCRIBE.KYNO_CAVETUBER_COOKED = "Nie sądzę, żeby to było bezpieczne do jedzenia."
+
+WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Kwitnący bulw. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Smakuje jak każde inne śmiertelne jedzenie."
+
+WORTOX.DESCRIBE.CAVETUBERTEA = "Chłodny łyk. Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Dom gadających warzyw. Hyuyu!",
+	OCCUPIED = "Ale oni są głośni!",
+}
+
+WORTOX.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Źródło krzyku!",
+	GRUMPY = "Jest trochę zrzędliwy.",
+}
+
+WORTOX.DESCRIBE.MANDRAKEBAOBUNS = "Usypiające przekąski. Hyuyu!"
+
+WORTOX.DESCRIBE.MANDRAKEPIE = "Jeden kęs i prosto do krainy snów!"
+
+WORTOX.DESCRIBE.MANDRAKEBEER = "Bąbelkowy napitek. Hyuyu!"
+
+WORTOX.DESCRIBE.RAINPARFAIT = "Rozkosz na deszczowy dzień."
+
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Małe wsparcie dla liściastych przyjaciół. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje ich żywych i pełnych blasku."
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Więcej dobroci z każdego krzewu. Hyuyu!"
+WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Całkiem magiczna mieszanka!"
+
+WORTOX.DESCRIBE.KYNO_PIGCOIN1 = "Drobniaki."
+WORTOX.DESCRIBE.KYNO_PIGCOIN2 = "Nie rozumiem, czemu śmiertelnicy są tym tak obsesyjnie zajęci."
+WORTOX.DESCRIBE.KYNO_PIGCOIN3 = "To duży żeton skoku."

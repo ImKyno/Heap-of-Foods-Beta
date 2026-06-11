@@ -89,6 +89,12 @@ WURT.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Escuro assusta de novo!!"
 
 WURT.ANNOUNCE_KYNO_LUCKBUFF_END = "Sorte acabou, florp..."
 
+WURT.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Tantas plantas, florp!"
+WURT.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Agora não tem tantas plantas."
+
+WURT.ANNOUNCE_KYNO_WETNESSBUFF_START = "Chuva deixa eu feliz, florp!"
+WURT.ANNOUNCE_KYNO_WETNESSBUFF_END = "Chuva não deixa mais feliz, florp."
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Peixes bonitinhos sempre estão no pantano!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... errado..."
@@ -1049,7 +1055,13 @@ WURT.DESCRIBE.FLTSANDWICH = "Blergh!"
 
 WURT.DESCRIBE.RICEANDBEANS = "Humm!"
 
-WURT.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Casa assustadora... mas talvez tenha algo gostoso depois, florp? 2026?"
+WURT.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Ha! Casa idiota de porco caindo aos pedaços!",
+	REPAIRED = "Glurgh... Porco consertou casa idiota!",
+	OCCUPIED = "Ele tá dormindo aí dentro, florp.",
+	OCCUPIED_REPAIRED = "Glurgh... tá melhor do que antes.",
+}
 
 WURT.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1094,9 +1106,6 @@ WURT.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Precisa de mais comida!",
 	EMPTY = "Peixes com fome!",
 }
-
-WURT.DESCRIBE.KYNO_ANTCHOVY = "Glurp! Cheiro de peixe-amigo... esquisito..."
-WURT.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Glurgh! Muitos peixes-amigos de uma vez!"
 
 WURT.DESCRIBE.AGEDROE = "Nããããããoooo!"
 WURT.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Por que come bebês de peixe, florp?!"
@@ -1196,6 +1205,7 @@ WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Milho faz pop! Comida engraçada, florpt!"
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Chapéu de aniversário pra mim? Florp!"
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Só Sammy usa isso? Sortudo, florp!"
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Por que porquinho ruim ganha chapéu chique?"
 
 WURT.DESCRIBE.KYNO_FISHREGISTRYHAT = "Chapéu ajuda a aprender sobre peixes-amigos! Florp!"
 
@@ -1234,3 +1244,55 @@ WURT.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Muito fogo, florp!",
 	BURNT = "Só cinzas agora, florp.",
 }
+
+WURT.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "GLORP! Não vou te ajudar!",
+	HOUSE_REPAIRED = "GLORP! ELE não vai negociar comigo!",
+}
+
+WURT.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Árvore forte demais, flort!",
+	CHOPPED = "Finalmente derrubada!",
+	BLOOMING = "Árvore de caverna bonita, florp.",
+	BURNING = "Ah não! Queimando!",
+	BURNT = "Árvore morta agora.",
+}
+
+WURT.DESCRIBE.KYNO_CAVETUBER = "Não pronto?"
+WURT.DESCRIBE.KYNO_CAVETUBER_COOKED = "Acho que ainda não seguro, florp."
+
+WURT.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Parece pronto! flort."
+WURT.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Yum!"
+
+WURT.DESCRIBE.CAVETUBERTEA = "Bebida gelada de raiz, florp!"
+
+WURT.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Casa do amigo barulhento, flort.",
+	OCCUPIED = "Amigo barulhento dormindo.",
+}
+
+WURT.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Olá, amigo barulhento!",
+	GRUMPY = "Por que tão rabugento?",
+}
+
+WURT.DESCRIBE.MANDRAKEBAOBUNS = "Lanche de pão macio, florp!"
+
+WURT.DESCRIBE.MANDRAKEPIE = "Tem carne, glorp!"
+
+WURT.DESCRIBE.MANDRAKEBEER = "Bebida com bolhinhas, florp!"
+
+WURT.DESCRIBE.RAINPARFAIT = "Lanche chuvoso, florp!"
+
+WURT.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Faz plantas crescerem, florp!"
+WURT.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Plantas saudáveis são plantas boas."
+WURT.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais comida para todo mundo, florp!"
+WURT.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "As plantas crescem super rápido!"
+
+WURT.DESCRIBE.KYNO_PIGCOIN1 = "Não dá pra comer isso, florp!"
+WURT.DESCRIBE.KYNO_PIGCOIN2 = "Ooooh, brilhante!"
+WURT.DESCRIBE.KYNO_PIGCOIN3 = "Parece bem chique."

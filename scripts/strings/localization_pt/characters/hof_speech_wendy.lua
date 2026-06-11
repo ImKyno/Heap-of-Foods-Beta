@@ -89,6 +89,12 @@ WENDY.ANNOUNCE_KYNO_DARKNESSBUFF_END = "A escuridão voltou a parecer hostil."
 
 WENDY.ANNOUNCE_KYNO_LUCKBUFF_END = "Até a sorte passageira desaparece."
 
+WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "A terra oferece sua abundância passageira."
+WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "A generosidade da natureza desaparece mais uma vez."
+
+WENDY.ANNOUNCE_KYNO_WETNESSBUFF_START = "A chuva leva embora minhas preocupações."
+WENDY.ANNOUNCE_KYNO_WETNESSBUFF_END = "O conforto da chuva passou."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."
@@ -1047,7 +1053,13 @@ WENDY.DESCRIBE.FLTSANDWICH = "Verde demais e muito sapo."
 
 WENDY.DESCRIBE.RICEANDBEANS = "É uma refeição simples, mas serve."
 
-WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Mesmo as ruínas lembram seu propósito... talvez desperte em 2026."
+WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Este lugar está desmoronando, assim como todo o resto.",
+	REPAIRED = "Um refúgio temporário da decadência inevitável.",
+	OCCUPIED = "Nem o sono consegue esconder a miséria deste lugar.",
+	OCCUPIED_REPAIRED = "Pelo menos ele pode descansar em paz por enquanto.",
+}
 
 WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
@@ -1092,9 +1104,6 @@ WENDY.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "A fome se aproxima.",
 	EMPTY = "Só o vazio permanece.",
 }
-
-WENDY.DESCRIBE.KYNO_ANTCHOVY = "Meio peixe, meio formiga... uma vida de confusão e sofrimento."
-WENDY.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Uma massa vibrante de miséria."
 
 WENDY.DESCRIBE.AGEDROE = "Tomei suas vidas para sustentar a minha."
 WENDY.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Vida vinda da morte... que ironia deliciosa."
@@ -1194,6 +1203,7 @@ WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Ela estoura... e depois é comida... como todas as alegrias passageiras."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Um símbolo de alegria forçada... que irônico."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Para Sammy... aquele que se destaca dos demais..."
+WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Para Partitio... aquele que se destaca dos demais..."
 
 WENDY.DESCRIBE.KYNO_FISHREGISTRYHAT = "Ele registra as vidas que deslizam silenciosas sob as ondas."
 
@@ -1232,3 +1242,55 @@ WENDY.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Como tudo, isso vira cinzas.",
 	BURNT = "Uma memória arruinada de uma refeição.",
 }
+
+WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Seu lar destruído reflete uma alma cansada.",
+	HOUSE_REPAIRED = "Talvez o comércio alivie a solidão.",
+}
+
+WENDY.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Um machado comum não consegue matá-la.",
+	CHOPPED = "Tudo cai eventualmente.",
+	BLOOMING = "Até a vida subterrânea insiste em persistir.",
+	BURNING = "Uma tragédia breve e bela.",
+	BURNT = "Reduzida a restos silenciosos.",
+}
+
+WENDY.DESCRIBE.KYNO_CAVETUBER = "Será que morrerei antes de amadurecer?"
+WENDY.DESCRIBE.KYNO_CAVETUBER_COOKED = "Talvez eu tenha sorte e ainda esteja envenenado."
+
+WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Flor bonita."
+WENDY.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Devo comer a flor também?"
+
+WENDY.DESCRIBE.CAVETUBERTEA = "Um conforto gelado em um mundo sem alegria."
+
+WENDY.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Abigail também vive no chão.",
+	OCCUPIED = "Não tão barulhento agora.",
+}
+
+WENDY.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Outra abominação.",
+	GRUMPY = "O humor dele é parecido com o meu.",
+}
+
+WENDY.DESCRIBE.MANDRAKEBAOBUNS = "Uma refeição silenciosa para almas cansadas."
+
+WENDY.DESCRIBE.MANDRAKEPIE = "Uma reconfortante fatia de exaustão."
+
+WENDY.DESCRIBE.MANDRAKEBEER = "Uma doçura passageira em um mundo amargo."
+
+WENDY.DESCRIBE.RAINPARFAIT = "Um pequeno conforto sob céus melancólicos."
+
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um presente temporário para plantas condenadas."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Uma tentativa inútil de preservar a vida."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "Mais abundância antes da inevitável decadência."
+WENDY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "A vida acelerada rumo ao seu fim."
+
+WENDY.DESCRIBE.KYNO_PIGCOIN1 = "Eu as colocaria nos meus olhos quando eu morrer."
+WENDY.DESCRIBE.KYNO_PIGCOIN2 = "Dinheiro não trará Abigail de volta."
+WENDY.DESCRIBE.KYNO_PIGCOIN3 = "A riqueza não pode comprar imortalidade."

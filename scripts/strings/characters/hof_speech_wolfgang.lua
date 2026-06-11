@@ -89,6 +89,12 @@ WOLFGANG.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Dark is scary again..."
 
 WOLFGANG.ANNOUNCE_KYNO_LUCKBUFF_END = "Luck is gone. Wolfgang is still strong!"
 
+WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Wolfgang harvests like mighty giant!"
+WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Tiny harvest time is over."
+
+WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_START = "Rain makes Wolfgang feel good!"
+WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_END = "Rain magic is gone."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Is not the correct one."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mighty pig do not want this."
@@ -518,8 +524,8 @@ WOLFGANG.DESCRIBE.KYNO_SALMONFISH_COOKED = "Fish is cooked now."
 
 WOLFGANG.DESCRIBE.TURF_PINKPARK = "Is pinky."
 WOLFGANG.DESCRIBE.TURF_STONECITY = "Step stones."
-WOLFGANG.DESCRIBE.TURF_FIELDS = "Step stones."
-WOLFGANG.DESCRIBE.TURF_TIDALMARSH = "Step stones."
+WOLFGANG.DESCRIBE.TURF_FIELDS = "Is just grass."
+WOLFGANG.DESCRIBE.TURF_TIDALMARSH = "Slimy."
 
 WOLFGANG.DESCRIBE.KYNO_SALTRACK =
 {
@@ -1047,7 +1053,13 @@ WOLFGANG.DESCRIBE.FLTSANDWICH = "Frog sandwich, yum!"
 
 WOLFGANG.DESCRIBE.RICEANDBEANS = "Is healthy cooked little beans!"
 
-WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP = "Little house looks weak... maybe become strong again next year!"
+WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
+{
+	GENERIC = "Tiny house needs mighty repairs!",
+	REPAIRED = "Now is strong little house.",
+	OCCUPIED = "Wolfgang would not sleep in weak house.",
+	OCCUPIED_REPAIRED = "Pig man sleeps safely now.",
+}
 
 WOLFGANG.DESCRIBE.KYNO_TRUFFLES_GROUND = 
 {
@@ -1092,9 +1104,6 @@ WOLFGANG.DESCRIBE.KYNO_FISHFARMPLOT =
 	FUEL_LOW = "Fish need more food.",
 	EMPTY = "No food for fish.",
 }
-
-WOLFGANG.DESCRIBE.KYNO_ANTCHOVY = "Tiny fish-bug! Wolfgang is not sure if tasty or scary."
-WOLFGANG.DESCRIBE.KYNO_ANTCHOVY_SPAWNER = "Many tiny fish-bugs! Wolfgang smash?"
 
 WOLFGANG.DESCRIBE.AGEDROE = "Little eggs make Wolfgang feel like big, important man."
 WOLFGANG.DESCRIBE.AGEDROE_OCEANFISH_STURGEON = "Tiny eggs make Wolfgang feel big and fancy!"
@@ -1194,6 +1203,7 @@ WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "Tiny popping food for Wolfgang!"
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Hat of celebration for strong Wolfgang!"
 WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy must be mighty to wear special hat!"
+WOLFGANG.DESCRIBE.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Partitio must be mighty to wear special hat!"
 
 WOLFGANG.DESCRIBE.KYNO_FISHREGISTRYHAT = "Hat makes Wolfgang smarter about tiny fishes!"
 
@@ -1232,3 +1242,55 @@ WOLFGANG.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
 	BURNING = "Fire cooks food faster!",
 	BURNT = "Now food is too cooked.",
 }
+
+WOLFGANG.DESCRIBE.KYNO_DECIDUOUSFOREST_SELLER =
+{
+	GENERIC = "Tiny trader wants house fixed first.",
+	HOUSE_REPAIRED = "Now we trade like strong friends!",
+}
+
+WOLFGANG.DESCRIBE.KYNO_CAVETUBERTREE =
+{
+	GENERIC = "Weak axe is not good for cutting this down.",
+	CHOPPED = "Wolfgang defeats mighty tree!",
+	BLOOMING = "Strong tree grows strong flowers.",
+	BURNING = "Fire is stronger than tree.",
+	BURNT = "Now tree is weak pile of ash.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER = "Is food?"
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER_COOKED = "Is good food?"
+
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER_BLOOMING = "Wolfgang like little flower."
+WOLFGANG.DESCRIBE.KYNO_CAVETUBER_BLOOMING_COOKED = "Wolfgang eat."
+
+WOLFGANG.DESCRIBE.CAVETUBERTEA = "Tiny drink for mighty muscles!"
+
+WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKEHOUSE =
+{
+	GENERIC = "Hill for plant mans.",
+	OCCUPIED = "Plant man is sleeping.",
+}
+
+WOLFGANG.DESCRIBE.KYNO_ELDERMANDRAKE =
+{
+	GENERIC = "Wolfgang stronger than you!",
+	GRUMPY = "Plant man not happy.",
+}
+
+WOLFGANG.DESCRIBE.MANDRAKEBAOBUNS = "Soft buns make Wolfgang strong!"
+
+WOLFGANG.DESCRIBE.MANDRAKEPIE = "Pie makes mighty Wolfgang sleepy!"
+
+WOLFGANG.DESCRIBE.MANDRAKEBEER = "Sweet drink for mighty Wolfgang!"
+
+WOLFGANG.DESCRIBE.RAINPARFAIT = "Treat makes Wolfgang happy!"
+
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Makes tiny plants grow big!"
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Strong food for strong plants!"
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_YIELD = "More harvest for mighty Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Plants become mighty fast!"
+
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN1 = "Pig trader would like."
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN2 = "Is valuable coin for buying good stuff."
+WOLFGANG.DESCRIBE.KYNO_PIGCOIN3 = "Mighty coin!"

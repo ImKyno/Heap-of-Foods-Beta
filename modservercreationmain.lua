@@ -4,7 +4,9 @@ local require = _G.require
 require("hof_util")
 
 modimport("scripts/strings/hof_strings_worldsettings")
-modimport("hof_init/misc/hof_tuning")
+
+modimport("main/misc/hof_assets")
+modimport("main/misc/hof_tuning")
 
 FrontEndAssets =
 {
