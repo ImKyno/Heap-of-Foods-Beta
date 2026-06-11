@@ -3,6 +3,7 @@ return {
     "beer",
     "paleale",
     "mead",
+    "mandrakebeer",
     "teagreen",
     "teared",
     "piraterum",
@@ -65,4 +66,6 @@ return {
     "juice_truffles",
     "juice_sporecap",
     "juice_sporecap_dark",
+    "juice_cavetuber",
+    "juice_cavetuber_blooming",
 }

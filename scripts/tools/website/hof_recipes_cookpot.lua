@@ -183,5 +183,8 @@ return {
     "chickeneggsoup",
     "chickeneggstew",
     "chickenrotisserie",
+    "cavetubertea",
+    "mandrakepie",
+    "rainparfait",
     "jawsbreaker",
 }

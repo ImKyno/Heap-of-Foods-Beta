@@ -24,4 +24,5 @@ return {
     "lazydessert",
     "lavaeeggboiled",
     "tiramisu",
+    "mandrakebaobuns",
 }

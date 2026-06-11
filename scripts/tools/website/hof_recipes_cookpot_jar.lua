@@ -57,6 +57,8 @@ return {
     "pickles_truffles",
     "pickles_sporecap",
     "pickles_sporecap_dark",
+    "pickles_cavetuber",
+    "pickles_cavetuber_blooming",
     "agedroe_pondfish",
     "agedroe_pondeel",
     "agedroe_wobster",
