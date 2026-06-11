@@ -95,6 +95,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Đợt bùng nổ thực vật 
 WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_START = "Cơn mưa thật đáng ngạc nhiên là rất sảng khoái."
 WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_END = "Hiệu quả phục hồi của nó đã chấm dứt."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Điều kiện ban đêm dường như tăng khả năng sát thương."
+WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Hiệu ứng tăng cường ban đêm đã biến mất."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nó cần thứ khác."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không. Ta nghĩ ông ấy có nhắc đến Wobster."
@@ -1285,6 +1288,8 @@ WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "Mandrake tạo nên một mùi hương khá
 WICKERBOTTOM.DESCRIBE.MANDRAKEBEER = "Một loại nước giải khát có ga dễ chịu."
 
 WICKERBOTTOM.DESCRIBE.RAINPARFAIT = "Dưa hấu mang lại cảm giác rất tươi mát."
+
+WICKERBOTTOM.DESCRIBE.MIDNIGHTFEAST = "Một khẩu phần đáng kể dành cho hoạt động ban đêm."
 
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một loại phân bón được điều chế để kích thích phát triển."
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Rất hữu ích để duy trì cây trồng khỏe mạnh."

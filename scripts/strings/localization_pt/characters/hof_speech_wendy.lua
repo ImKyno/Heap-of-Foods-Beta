@@ -95,6 +95,9 @@ WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "A generosidade da natureza desaparece 
 WENDY.ANNOUNCE_KYNO_WETNESSBUFF_START = "A chuva leva embora minhas preocupações."
 WENDY.ANNOUNCE_KYNO_WETNESSBUFF_END = "O conforto da chuva passou."
 
+WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "A noite sussurra força em minhas mãos."
+WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "O silêncio retorna... e com ele a fraqueza."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."
@@ -1285,6 +1288,8 @@ WENDY.DESCRIBE.MANDRAKEPIE = "Uma reconfortante fatia de exaustão."
 WENDY.DESCRIBE.MANDRAKEBEER = "Uma doçura passageira em um mundo amargo."
 
 WENDY.DESCRIBE.RAINPARFAIT = "Um pequeno conforto sob céus melancólicos."
+
+WENDY.DESCRIBE.MIDNIGHTFEAST = "Uma refeição consumida na escuridão para atos mais sombrios."
 
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um presente temporário para plantas condenadas."
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Uma tentativa inútil de preservar a vida."

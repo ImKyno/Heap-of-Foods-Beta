@@ -95,6 +95,9 @@ WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Tiny harvest time is over."
 WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_START = "Rain makes Wolfgang feel good!"
 WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_END = "Rain magic is gone."
 
+WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Wolfgang is strongest in night!"
+WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Night strength is gone."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Is not the correct one."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mighty pig do not want this."
@@ -1285,6 +1288,8 @@ WOLFGANG.DESCRIBE.MANDRAKEPIE = "Pie makes mighty Wolfgang sleepy!"
 WOLFGANG.DESCRIBE.MANDRAKEBEER = "Sweet drink for mighty Wolfgang!"
 
 WOLFGANG.DESCRIBE.RAINPARFAIT = "Treat makes Wolfgang happy!"
+
+WOLFGANG.DESCRIBE.MIDNIGHTFEAST = "Food makes Wolfgang strong for night fighting!"
 
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Makes tiny plants grow big!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Strong food for strong plants!"

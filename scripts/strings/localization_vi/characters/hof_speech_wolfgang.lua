@@ -95,6 +95,9 @@ WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Thời gian thu hoạch lớn đã 
 WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_START = "Mưa làm Wolfgang cảm thấy tuyệt vời!"
 WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_END = "Phép màu của mưa đã biến mất."
 
+WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Wolfgang mạnh nhất vào ban đêm!"
+WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Sức mạnh ban đêm đã biến mất."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái đúng."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Heo hùng mạnh không muốn cái này."
@@ -1285,6 +1288,8 @@ WOLFGANG.DESCRIBE.MANDRAKEPIE = "Bánh làm Wolfgang mạnh mẽ buồn ngủ!"
 WOLFGANG.DESCRIBE.MANDRAKEBEER = "Đồ uống ngọt cho Wolfgang hùng mạnh!"
 
 WOLFGANG.DESCRIBE.RAINPARFAIT = "Món ngon làm Wolfgang vui vẻ!"
+
+WOLFGANG.DESCRIBE.MIDNIGHTFEAST = "Thức ăn giúp Wolfgang mạnh hơn khi chiến đấu ban đêm!"
 
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Làm cây nhỏ thành cây lớn!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Thức ăn mạnh mẽ cho cây mạnh mẽ!"

@@ -95,6 +95,9 @@ WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The fertile blessing hath faded!"
 WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_START = "The storm reneweth my spirit!"
 WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_END = "The blessing of the rain hath faded!"
 
+WATHGRITHR.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "The night grants me deadly vigor!"
+WATHGRITHR.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "The blessing of darkness fades!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wrong feast! Beast wants a more delightful food!"
@@ -1285,6 +1288,8 @@ WATHGRITHR.DESCRIBE.MANDRAKEPIE = "A heroic pastry of enchanted root!"
 WATHGRITHR.DESCRIBE.MANDRAKEBEER = "A frothy draught without the glory of mead!"
 
 WATHGRITHR.DESCRIBE.RAINPARFAIT = "A chilled feast blessed by the storm!"
+
+WATHGRITHR.DESCRIBE.MIDNIGHTFEAST = "A feast worthy of night battles!"
 
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A tonic for the growth of mighty crops!"
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "It fortifies the spirit of the plants!"

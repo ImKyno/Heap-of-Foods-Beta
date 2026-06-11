@@ -119,6 +119,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GREENTHUMB = "Aumenta o ganho de plantas"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOOTHING = "Acalma criaturas próximas"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HEALINGBONUS = "Aumenta a eficiência de cura"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RAINY = "Restaura a sanidade quando molhado"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT = "Executa criaturas à noite"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Vegetal esverdeado, o rei das pastagens e florestas tropicais. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Um dos muitos presentes do mar, muito apreciado pelos homens de cultura. -W"
@@ -2297,6 +2298,8 @@ STRINGS.NAMES.MANDRAKEPIE = "Torta de Mandrágora"
 STRINGS.NAMES.MANDRAKEBEER = "Cerveja de Raiz"
 
 STRINGS.NAMES.RAINPARFAIT = "Delícia de Garoa"
+
+STRINGS.NAMES.MIDNIGHTFEAST = "Colhedor Noturno"
 
 STRINGS.NAMES.KYNO_PLANTBOOSTER_GROWTH = "Potencializador de Crescimento"
 STRINGS.RECIPE_DESC.KYNO_PLANTBOOSTER_GROWTH_D = "AJUDA AS PLANTAS A CRESCEREM!"

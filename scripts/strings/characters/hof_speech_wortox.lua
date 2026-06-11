@@ -95,6 +95,9 @@ WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The bounty has slipped away. Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_START = "The pitter-patter lifts my spirits!"
 WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_END = "No more rainy cheer."
 
+WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "The night makes everything sharper!"
+WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "And just like that, it slips away."
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I know this prank was good, but let's get the real thing."
@@ -1285,6 +1288,8 @@ WORTOX.DESCRIBE.MANDRAKEPIE = "One bite and off to dreamland!"
 WORTOX.DESCRIBE.MANDRAKEBEER = "A bubbly little brew. Hyuyu!"
 
 WORTOX.DESCRIBE.RAINPARFAIT = "A rainy-day delight."
+
+WORTOX.DESCRIBE.MIDNIGHTFEAST = "A feast for shadowy escapades!"
 
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A little boost for leafy friends. Hyuyu!"
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps them lively and bright."

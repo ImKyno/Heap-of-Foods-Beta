@@ -95,6 +95,9 @@ WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Khoảnh khắc đó đã qua rồi.
 WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_START = "Thời tiết hôm nay lạ mà tiếp thêm sinh lực."
 WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_END = "Cảm giác đó đã biến mất."
 
+WAXWELL.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Cuối cùng, màn đêm cũng nhớ chủ nhân của nó."
+WAXWELL.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Thật đáng thất vọng là nó quá ngắn ngủi."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cho việc này."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ngươi không dễ chiều chút nào, phải không?"
@@ -1285,6 +1288,8 @@ WAXWELL.DESCRIBE.MANDRAKEPIE = "Ta đoán nó cũng tạm được xem là món 
 WAXWELL.DESCRIBE.MANDRAKEBEER = "Ngạc nhiên thay, khá tao nhã."
 
 WAXWELL.DESCRIBE.RAINPARFAIT = "Ít nhất cơn mưa cũng có ích đôi chút."
+
+WAXWELL.DESCRIBE.MIDNIGHTFEAST = "Nhiên liệu phù hợp cho công việc ban đêm."
 
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một lối tắt cho những người làm vườn thiếu kiên nhẫn."
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ cây sống hóa ra cũng cần nỗ lực."

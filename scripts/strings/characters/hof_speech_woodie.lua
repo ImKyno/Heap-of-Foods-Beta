@@ -95,6 +95,9 @@ WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Back to normal pickin'."
 WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_START = "A little rain does wonders, eh?"
 WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "Back to normal now."
 
+WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Feels like the night’s on my side, eh?"
+WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Back to regular ol’ me."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to pick it up?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. He wants something else."
@@ -1285,6 +1288,8 @@ WOODIE.DESCRIBE.MANDRAKEPIE = "Nothing beats fresh pie, eh?"
 WOODIE.DESCRIBE.MANDRAKEBEER = "Tastes like the wilderness, eh?"
 
 WOODIE.DESCRIBE.RAINPARFAIT = "Good snack fer wet weather, eh?"
+
+WOODIE.DESCRIBE.MIDNIGHTFEAST = "That's a lotta food for a night out, eh?"
 
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Gets plants growin' quicker, eh?"
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps 'em healthy and happy."

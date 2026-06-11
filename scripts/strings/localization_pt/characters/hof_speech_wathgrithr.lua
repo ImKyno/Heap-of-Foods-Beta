@@ -95,6 +95,9 @@ WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "A bênção fértil desapareceu!"
 WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_START = "A tempestade renova meu espírito!"
 WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_END = "A bênção da chuva se desvaneceu!"
 
+WATHGRITHR.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "A noite me concede vigor mortal!"
+WATHGRITHR.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "A bênção da escuridão se desfaz!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Errado!"
@@ -1285,6 +1288,8 @@ WATHGRITHR.DESCRIBE.MANDRAKEPIE = "Uma massa heroica de raiz encantada!"
 WATHGRITHR.DESCRIBE.MANDRAKEBEER = "Uma bebida espumante sem a glória do hidromel!"
 
 WATHGRITHR.DESCRIBE.RAINPARFAIT = "Uma iguaria gelada abençoada pela tempestade!"
+
+WATHGRITHR.DESCRIBE.MIDNIGHTFEAST = "Um banquete digno de batalhas noturnas!"
 
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um tônico para o crescimento de colheitas poderosas!"
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Fortalece o espírito das plantas!"

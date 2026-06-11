@@ -95,6 +95,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Botaniczny przypływ wydaje si�
 WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_START = "Deszcz jest niezwykle odświeżający."
 WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_END = "Jego regenerujące działanie ustało."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Warunki nocne wydają się zwiększać skuteczność."
+WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Nocne wzmocnienie wygasło."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzeba czegoś jeszcze."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. Chyba mówił coś o homarach."
@@ -1285,6 +1288,8 @@ WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "Mandragora dodaje osobliwego aromatu."
 WICKERBOTTOM.DESCRIBE.MANDRAKEBEER = "Przyjemnie musujący napój bezalkoholowy."
 
 WICKERBOTTOM.DESCRIBE.RAINPARFAIT = "Arbuz nadaje mu odświeżających właściwości."
+
+WICKERBOTTOM.DESCRIBE.MIDNIGHTFEAST = "Solidna racja przeznaczona do nocnego wysiłku."
 
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Nawóz opracowany w celu stymulacji rozwoju."
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Przydatny do utrzymywania zdrowych upraw."

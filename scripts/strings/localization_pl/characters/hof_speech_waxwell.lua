@@ -95,6 +95,9 @@ WAXWELL.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Ta chwila minęła."
 WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_START = "Pogoda jest dziwnie pokrzepiająca."
 WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_END = "To uczucie zniknęło."
 
+WAXWELL.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Wreszcie noc pamięta swojego pana."
+WAXWELL.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Jakże żałośnie krótkotrwałe."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję do tego czegoś innego."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie jesteś łatwy, prawda?"
@@ -1285,6 +1288,8 @@ WAXWELL.DESCRIBE.MANDRAKEPIE = "Przypuszczam, że można to uznać za deser."
 WAXWELL.DESCRIBE.MANDRAKEBEER = "Zaskakująco cywilizowane."
 
 WAXWELL.DESCRIBE.RAINPARFAIT = "Przynajmniej deszcz do czegoś się przydaje."
+
+WAXWELL.DESCRIBE.MIDNIGHTFEAST = "Odpowiednie paliwo do nocnych spraw."
 
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Skrót dla niecierpliwych ogrodników."
 WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymanie roślin przy życiu najwyraźniej wymaga wysiłku."

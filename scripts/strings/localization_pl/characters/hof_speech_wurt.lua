@@ -95,6 +95,9 @@ WURT.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Teraz już nie ma tylu roślin."
 WURT.ANNOUNCE_KYNO_WETNESSBUFF_START = "Deszcz uszczęśliwia mnie, florp!"
 WURT.ANNOUNCE_KYNO_WETNESSBUFF_END = "Deszcz już nie uszczęśliwia, florp."
 
+WURT.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Noc daje mi siłę, florp!"
+WURT.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Nie ma już nocnej mocy, florp..."
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Ładne rybki w bagnie!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... źle..."
@@ -1287,6 +1290,8 @@ WURT.DESCRIBE.MANDRAKEPIE = "Ma mięso, glorp!"
 WURT.DESCRIBE.MANDRAKEBEER = "Bąbelkowy napój, florp!"
 
 WURT.DESCRIBE.RAINPARFAIT = "Deszczowa przekąska, florp!"
+
+WURT.DESCRIBE.MIDNIGHTFEAST = "Czemu robić to rybom, florp?"
 
 WURT.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że rośliny rosną, florp!"
 WURT.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Zdrowe rośliny to dobre rośliny."

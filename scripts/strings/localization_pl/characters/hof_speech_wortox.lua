@@ -95,6 +95,9 @@ WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Obfitość uleciała. Hyuyu."
 WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_START = "Stukanie kropli podnosi mnie na duchu!"
 WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_END = "Koniec deszczowej radości."
 
+WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Noc wszystko wyostrza!"
+WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "I tak po prostu znika."
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję czegoś jeszcze."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wiem, że ten żart był niezły, ale przejdźmy do konkretów."
@@ -1285,6 +1288,8 @@ WORTOX.DESCRIBE.MANDRAKEPIE = "Jeden kęs i prosto do krainy snów!"
 WORTOX.DESCRIBE.MANDRAKEBEER = "Bąbelkowy napitek. Hyuyu!"
 
 WORTOX.DESCRIBE.RAINPARFAIT = "Rozkosz na deszczowy dzień."
+
+WORTOX.DESCRIBE.MIDNIGHTFEAST = "Uczta do mrocznych wybryków!"
 
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Małe wsparcie dla liściastych przyjaciół. Hyuyu!"
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje ich żywych i pełnych blasku."

@@ -95,6 +95,9 @@ WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Czas małych zbiorów skończony."
 WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_START = "Deszcz sprawia, że Wolfgang czuje się dobrze!"
 WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_END = "Deszczowa magia zniknęła."
 
+WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Wolfgang najsilniejszy w nocy!"
+WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Siła nocy znikła."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "To nie jest potrzebne."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mocny świnia nie chce tego."
@@ -1285,6 +1288,8 @@ WOLFGANG.DESCRIBE.MANDRAKEPIE = "Placek usypia potężnego Wolfganga!"
 WOLFGANG.DESCRIBE.MANDRAKEBEER = "Słodki napój dla potężnego Wolfganga!"
 
 WOLFGANG.DESCRIBE.RAINPARFAIT = "Przysmak uszczęśliwia Wolfganga!"
+
+WOLFGANG.DESCRIBE.MIDNIGHTFEAST = "Jedzenie czyni Wolfganga silnym do nocnej walki!"
 
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że małe roślinki stają się wielkie!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Silne jedzenie dla silnych roślin!"

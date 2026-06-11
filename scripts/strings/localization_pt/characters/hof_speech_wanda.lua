@@ -95,6 +95,9 @@ WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "O aumento de eficiência expirou."
 WANDA.ANNOUNCE_KYNO_WETNESSBUFF_START = "Interessante. A umidade é bastante calmante."
 WANDA.ANNOUNCE_KYNO_WETNESSBUFF_END = "O efeito chegou ao fim."
 
+WANDA.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Perfeito. Eficiência noturna ativada."
+WANDA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "E acabou. Típico."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não... Preciso de algo diferente."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Acho que tenho tempo de pegar uma lagosta para você."
@@ -1285,6 +1288,8 @@ WANDA.DESCRIBE.MANDRAKEPIE = "Espero que isso não me atrase."
 WANDA.DESCRIBE.MANDRAKEBEER = "Pelo menos é refrescante."
 
 WANDA.DESCRIBE.RAINPARFAIT = "Pelo menos a chuva melhora alguma coisa."
+
+WANDA.DESCRIBE.MIDNIGHTFEAST = "Combustível eficiente para operações noturnas."
 
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Uma forma útil de economizar tempo."
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Plantas saudáveis são plantas eficientes."

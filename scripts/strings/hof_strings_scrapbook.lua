@@ -129,6 +129,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Increased plant yield f
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Soothes nearby creatures around the survivor."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Increases healing efficiency by 15% for a certain amount of time. Does not work for lifesteal healing."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINY = "Restores sanity when it's raining or when Wetness is high."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "Attacks have a small chance to execute targets during the night. Does not work against certain creatures."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."

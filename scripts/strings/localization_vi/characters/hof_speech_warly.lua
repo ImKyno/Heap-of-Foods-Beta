@@ -95,6 +95,9 @@ WARLY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Phần dư thừa đã giảm đi."
 WARLY.ANNOUNCE_KYNO_WETNESSBUFF_START = "Một cơn mưa nhẹ đầy sảng khoái cho cả cơ thể lẫn tâm trí."
 WARLY.ANNOUNCE_KYNO_WETNESSBUFF_END = "Cảm giác tươi mới ấy đã qua."
 
+WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Người đầu bếp cũng phải là thợ săn trong bóng tối."
+WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Lưỡi dao của đêm đã cùn đi."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai rồi, sai rồi..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ngươi muốn thứ gì đó ngon hơn sao?"
@@ -1285,6 +1288,8 @@ WARLY.DESCRIBE.MANDRAKEPIE = "Một chiếc bánh mộc mạc với đặc tính
 WARLY.DESCRIBE.MANDRAKEBEER = "Nguyên liệu đơn giản, kết quả tuyệt vời."
 
 WARLY.DESCRIBE.RAINPARFAIT = "Một món parfait tinh tế với hương vị tươi mát."
+
+WARLY.DESCRIBE.MIDNIGHTFEAST = "Một món ăn đậm đà, phù hợp cho tình huống khó khăn."
 
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Tuyệt vời để trồng nguyên liệu tươi."
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Nguyên liệu khỏe mạnh tạo nên món ăn hảo hạng."

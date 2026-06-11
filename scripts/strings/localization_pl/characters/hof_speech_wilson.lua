@@ -95,6 +95,9 @@ WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Sezon zbiorów dobiegł końca!"
 WILSON.ANNOUNCE_KYNO_WETNESSBUFF_START = "Deszcz działa wyjątkowo kojąco."
 WILSON.ANNOUNCE_KYNO_WETNESSBUFF_END = "To uspokajające uczucie minęło."
 
+WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Zapadająca noc wyostrza moją determinację."
+WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Moc nocy słabnie."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "To nie to."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "On chce coś innego."
@@ -1285,6 +1288,8 @@ WILSON.DESCRIBE.MANDRAKEPIE = "Placek z wyjątkowo sennym nadzieniem."
 WILSON.DESCRIBE.MANDRAKEBEER = "Orzeźwiający napój warzony z korzeni."
 
 WILSON.DESCRIBE.RAINPARFAIT = "Dzisiejsza pogoda jest parfait."
+
+WILSON.DESCRIBE.MIDNIGHTFEAST = "Obfity posiłek przeznaczony do nocnych bitew."
 
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Wyprodukowany nawóz o właściwościach przyspieszających wzrost."
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Pomaga utrzymać moje rośliny zdrowe i piękne!"

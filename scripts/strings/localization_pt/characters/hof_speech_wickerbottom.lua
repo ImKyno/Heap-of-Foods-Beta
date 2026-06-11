@@ -95,6 +95,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "O surto botânico parece ter di
 WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_START = "A chuva é notavelmente revigorante."
 WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_END = "Seus efeitos restauradores cessaram."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "As condições noturnas parecem aumentar a letalidade."
+WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "A melhoria noturna se dissipou."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Precisa de algo diferente."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não. Acho que ele mencionou wobsters."
@@ -1285,6 +1288,8 @@ WICKERBOTTOM.DESCRIBE.MANDRAKEPIE = "A mandrágora adiciona um aroma peculiar."
 WICKERBOTTOM.DESCRIBE.MANDRAKEBEER = "Um refrigerante agradavelmente efervescente."
 
 WICKERBOTTOM.DESCRIBE.RAINPARFAIT = "A melancia lhe confere uma qualidade refrescante."
+
+WICKERBOTTOM.DESCRIBE.MIDNIGHTFEAST = "Uma ração substancial projetada para esforços noturnos."
 
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um fertilizante formulado para estimular o desenvolvimento."
 WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Útil para manter plantações saudáveis."

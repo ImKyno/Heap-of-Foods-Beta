@@ -95,6 +95,9 @@ WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Aw, vui vậy mà hết rồi sao?"
 WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_START = "Hừm. Lần này bị ướt cũng không tệ."
 WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_END = "Được rồi, giờ thì mình lại ghét bị ướt rồi."
 
+WILLOW.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Cuối cùng. Đến lúc để bóng tối làm việc."
+WILLOW.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Hừ. Trở lại bình thường."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Mình cần bỏ thứ gì đó vào đây!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, sai thứ rồi!"
@@ -1285,6 +1288,8 @@ WILLOW.DESCRIBE.MANDRAKEPIE = "Bánh gây buồn ngủ. Tuyệt thật."
 WILLOW.DESCRIBE.MANDRAKEBEER = "Không phải bia thật, nhưng vẫn khá ngon."
 
 WILLOW.DESCRIBE.RAINPARFAIT = "Parfait dành cho ngày mưa. Kỳ lạ thật."
+
+WILLOW.DESCRIBE.MIDNIGHTFEAST = "Vị của sức mạnh... và có lẽ cả một chút nguy hiểm."
 
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Làm cây lớn lên. Chán ngắt."
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giúp cây sống lâu hơn."

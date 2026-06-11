@@ -95,6 +95,9 @@ WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Płodne błogosławieństwo przem
 WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_START = "Burza odnawia mego ducha!"
 WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_END = "Błogosławieństwo deszczu przeminęło!"
 
+WATHGRITHR.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Noc obdarza mnie śmiercionośną siłą!"
+WATHGRITHR.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Błogosławieństwo ciemności przemija!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zło!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie ta uczta! Bestia chce pyszniejszego jedzenia!"
@@ -1285,6 +1288,8 @@ WATHGRITHR.DESCRIBE.MANDRAKEPIE = "Heroiczne ciasto z zaczarowanego korzenia!"
 WATHGRITHR.DESCRIBE.MANDRAKEBEER = "Pienisty napitek bez chwały miodu pitnego!"
 
 WATHGRITHR.DESCRIBE.RAINPARFAIT = "Schłodzona uczta pobłogosławiona przez burzę!"
+
+WATHGRITHR.DESCRIBE.MIDNIGHTFEAST = "Uczta godna nocnych bitew!"
 
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Tonik dla wzrostu potężnych plonów!"
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Wzmacnia ducha roślin!"

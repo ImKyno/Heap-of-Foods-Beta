@@ -95,6 +95,9 @@ WOLFGANG.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Tempo de pequena colheita acabou."
 WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_START = "Chuva faz Wolfgang se sentir bem!"
 WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_END = "A magia da chuva acabou."
 
+WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Wolfgang é mais forte à noite!"
+WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Força da noite acabou."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é o correto."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Porco poderoso não quer isso."
@@ -1285,6 +1288,8 @@ WOLFGANG.DESCRIBE.MANDRAKEPIE = "Torta deixa poderoso Wolfgang sonolento!"
 WOLFGANG.DESCRIBE.MANDRAKEBEER = "Bebida doce para o poderoso Wolfgang!"
 
 WOLFGANG.DESCRIBE.RAINPARFAIT = "Sobremesa deixa Wolfgang feliz!"
+
+WOLFGANG.DESCRIBE.MIDNIGHTFEAST = "Comida deixa Wolfgang forte para lutar à noite!"
 
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Faz plantinhas ficarem grandes!"
 WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Comida forte para plantas fortes!"

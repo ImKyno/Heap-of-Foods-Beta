@@ -95,6 +95,9 @@ WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Wracamy do zwykłego zbierania."
 WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_START = "Odrobina deszczu czyni cuda, co nie?"
 WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "Wszystko wróciło do normy."
 
+WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Czuję, jakby noc była po mojej stronie, co?"
+WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Z powrotem do starego mnie."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może coś do podniesienia?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. On chce czegoś innego."
@@ -1285,6 +1288,8 @@ WOODIE.DESCRIBE.MANDRAKEPIE = "Nic nie przebije świeżego placka, co nie?"
 WOODIE.DESCRIBE.MANDRAKEBEER = "Smakuje dziczą, co nie?"
 
 WOODIE.DESCRIBE.RAINPARFAIT = "Dobry przysmak na mokrą pogodę, co nie?"
+
+WOODIE.DESCRIBE.MIDNIGHTFEAST = "To sporo jedzenia na nocną wyprawę, co?"
 
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Sprawia, że rośliny rosną szybciej, co nie?"
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje je zdrowe i szczęśliwe."

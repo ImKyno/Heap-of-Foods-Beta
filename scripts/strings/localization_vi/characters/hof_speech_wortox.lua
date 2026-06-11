@@ -95,6 +95,9 @@ WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Sự sung túc đã vụt mất rồi
 WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_START = "Tiếng mưa tí tách làm ta phấn chấn hơn!"
 WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_END = "Không còn niềm vui ngày mưa nữa."
 
+WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Đêm khiến mọi thứ sắc bén hơn!"
+WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Và rồi nó biến mất."
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cơ."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ta biết trò đùa này hay lắm, nhưng lấy đồ thật đi nào."
@@ -1285,6 +1288,8 @@ WORTOX.DESCRIBE.MANDRAKEPIE = "Một miếng là tới xứ sở mộng mơ ngay
 WORTOX.DESCRIBE.MANDRAKEBEER = "Một thức uống sủi bọt nho nhỏ. Hyuyu!"
 
 WORTOX.DESCRIBE.RAINPARFAIT = "Niềm vui của những ngày mưa."
+
+WORTOX.DESCRIBE.MIDNIGHTFEAST = "Một bữa tiệc cho những trò nghịch bóng đêm!"
 
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một chút trợ giúp cho những người bạn lá xanh. Hyuyu!"
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ chúng tràn đầy sức sống và tươi sáng."

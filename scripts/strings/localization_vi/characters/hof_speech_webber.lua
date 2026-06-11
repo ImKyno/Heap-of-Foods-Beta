@@ -95,6 +95,9 @@ WEBBER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Chắc cây thêm giờ hết rồi."
 WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_START = "Hôm nay tụi mình thích mưa lắm!"
 WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Mưa không còn cảm giác đặc biệt nữa."
 
+WEBBER.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Wow! Chúng tôi cảm thấy rất mạnh vào ban đêm!"
+WEBBER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Ôi... sức mạnh ban đêm hết rồi."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái này."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Tụi mình nghĩ đây không phải món ông ấy muốn."
@@ -1285,6 +1288,8 @@ WEBBER.DESCRIBE.MANDRAKEPIE = "Bọn tôi muốn thêm một miếng nữa!"
 WEBBER.DESCRIBE.MANDRAKEBEER = "Nó làm mũi tụi mình nhột nhột!"
 
 WEBBER.DESCRIBE.RAINPARFAIT = "Nó ngon hơn nhiều khi trời mưa!"
+
+WEBBER.DESCRIBE.MIDNIGHTFEAST = "Nó khiến chúng tôi sẵn sàng cho những cuộc phiêu lưu ban đêm!"
 
 WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Nó giúp cây lớn hơn!"
 WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Cây khỏe là cây vui."

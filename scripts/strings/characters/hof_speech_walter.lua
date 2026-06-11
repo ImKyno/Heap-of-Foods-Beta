@@ -95,6 +95,9 @@ WALTER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "The big harvest's over now."
 WALTER.ANNOUNCE_KYNO_WETNESSBUFF_START = "This rain's really lifting my spirits, Woby!"
 WALTER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Guess that feeling wore off."
 
+WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Night missions are the best missions!"
+WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Guess the night boost is over, Woby."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong thing!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, not this one."
@@ -1285,6 +1288,8 @@ WALTER.DESCRIBE.MANDRAKEPIE = "Pie always tastes better outdoors."
 WALTER.DESCRIBE.MANDRAKEBEER = "Perfect after a long hike."
 
 WALTER.DESCRIBE.RAINPARFAIT = "This would be great during a storm."
+
+WALTER.DESCRIBE.MIDNIGHTFEAST = "Perfect campfire meal for nighttime survival!"
 
 WALTER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Perfect for growing supplies out in the wild."
 WALTER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps the garden in top shape."

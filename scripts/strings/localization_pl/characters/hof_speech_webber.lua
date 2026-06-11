@@ -95,6 +95,9 @@ WEBBER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Chyba dodatkowe rośliny już się sk
 WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_START = "Lubimy dziś deszcz!"
 WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Deszcz już nie wydaje się taki wyjątkowy."
 
+WEBBER.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Łał! W nocy jesteśmy super silni!"
+WEBBER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Och... moc nocy znikła."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie tego."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sądzimy, że to nie jest właściwy posiłek, jakiego potrzebuje."
@@ -1285,6 +1288,8 @@ WEBBER.DESCRIBE.MANDRAKEPIE = "Chcemy jeszcze jeden kawałek!"
 WEBBER.DESCRIBE.MANDRAKEBEER = "Łaskocze nas w nosy!"
 
 WEBBER.DESCRIBE.RAINPARFAIT = "Jest jeszcze smaczniejsze, kiedy pada!"
+
+WEBBER.DESCRIBE.MIDNIGHTFEAST = "Sprawia, że czujemy się gotowi na nocne przygody!"
 
 WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Pomaga roślinom rosnąć większymi!"
 WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Zdrowe rośliny to szczęśliwe rośliny."

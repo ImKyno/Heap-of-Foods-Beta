@@ -1152,7 +1152,6 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {15, 0, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"partitiofood"},
 		card_def = {ingredients = {{"meat", 2}, {"kyno_aloe", 1}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -1206,6 +1205,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {4, 1, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"partitiofood"},
 		card_def = {ingredients = {{"meat", 2}, {"kyno_bacon", 2}}},
 	},
 	
@@ -3680,6 +3680,29 @@ local kyno_foods =
 		prefabs = { "kyno_wetnessbuff" },
 		oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_wetnessbuff", "kyno_wetnessbuff")
+		end,
+	},
+
+	midnightfeast =
+	{
+		test = function(cooker, names, tags) return names.oceanfish_midnight_carp_inv and tags.foliage
+		and (names.kyno_taroroot or names.kyno_taroroot_cooked) and tags.dairy end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FAST,
+		health = 30,
+		hunger = 75,
+		sanity = 15,
+		cooktime = 2,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT,
+		potlevel = "low",
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		pigcoinvalue = {8, 1, 1},
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"oceanfish_midnight_carp_inv", 1}, {"foliage", 1}, {"kyno_taroroot", 1}, {"goatmilk", 1}}},
+		prefabs = { "kyno_nightkillbuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_nightkillbuff", "kyno_nightkillbuff")
 		end,
 	},
 }

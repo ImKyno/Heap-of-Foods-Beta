@@ -95,6 +95,9 @@ WILLOW.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Ah, a diversão já acabou?"
 WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_START = "Hmm. Desta vez não é tão ruim ficar molhada."
 WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_END = "Tá bom, agora voltei a odiar ficar molhada."
 
+WILLOW.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Finalmente. Hora da escuridão fazer seu trabalho."
+WILLOW.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Ugh. De volta ao normal."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso colocar algo diferente aqui!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, coisa errada!"
@@ -1285,6 +1288,8 @@ WILLOW.DESCRIBE.MANDRAKEPIE = "Torta sonolenta. Ótimo."
 WILLOW.DESCRIBE.MANDRAKEBEER = "Não é cerveja de verdade, mas ainda é bem gostosa."
 
 WILLOW.DESCRIBE.RAINPARFAIT = "Um parfait para dias chuvosos. Estranho."
+
+WILLOW.DESCRIBE.MIDNIGHTFEAST = "Tem gosto de poder... e talvez um pouco de perigo."
 
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Faz as plantas crescerem. Que sem graça."
 WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Mantém as plantas vivas por mais tempo."

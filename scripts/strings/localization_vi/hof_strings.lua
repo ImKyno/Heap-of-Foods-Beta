@@ -119,6 +119,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GREENTHUMB = "Tăng năng suất cây trồng"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOOTHING = "Trấn an các sinh vật gần đó"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HEALINGBONUS = "Tăng hiệu quả hồi máu"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RAINY = "Khôi phục sự tỉnh táo khi bị ướt"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT = "Giết các sinh vật vào ban đêm"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Một loại rau xanh xanh, vua của đồng cỏ và rừng mưa. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Một trong nhiều món quà từ biển cả, rất được những kẻ biết thưởng thức trân trọng. -W"
@@ -2297,6 +2298,8 @@ STRINGS.NAMES.MANDRAKEPIE = "Bánh Pie Mandrake"
 STRINGS.NAMES.MANDRAKEBEER = "Bia Rễ Cây"
 
 STRINGS.NAMES.RAINPARFAIT = "Món Ngon Rưới Nước"
+
+STRINGS.NAMES.MIDNIGHTFEAST = "Người Gặt Đêm"
 
 STRINGS.NAMES.KYNO_PLANTBOOSTER_GROWTH = "Chất Thúc Đẩy Tăng Trưởng"
 STRINGS.RECIPE_DESC.KYNO_PLANTBOOSTER_GROWTH = "GIÚP CÂY CỐI PHÁT TRIỂN!"

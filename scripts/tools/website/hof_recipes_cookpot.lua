@@ -186,5 +186,6 @@ return {
     "cavetubertea",
     "mandrakepie",
     "rainparfait",
+    "midnightfeast",
     "jawsbreaker",
 }

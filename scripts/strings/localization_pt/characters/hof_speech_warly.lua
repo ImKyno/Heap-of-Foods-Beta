@@ -95,6 +95,9 @@ WARLY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "O excedente diminuiu."
 WARLY.ANNOUNCE_KYNO_WETNESSBUFF_START = "Uma garoa refrescante para o corpo e a mente."
 WARLY.ANNOUNCE_KYNO_WETNESSBUFF_END = "A sensação refrescante passou."
 
+WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Um chef também deve ser caçador na escuridão."
+WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "O corte da noite perdeu o fio."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado, errado..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Quer algo mais saboroso?"
@@ -1285,6 +1288,8 @@ WARLY.DESCRIBE.MANDRAKEPIE = "Uma torta rústica com qualidades relaxantes."
 WARLY.DESCRIBE.MANDRAKEBEER = "Ingredientes simples, resultados deliciosos."
 
 WARLY.DESCRIBE.RAINPARFAIT = "Um sofisticado parfait com notas refrescantes."
+
+WARLY.DESCRIBE.MIDNIGHTFEAST = "Um prato rico e reforçado para situações exigentes."
 
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Excelente para cultivar ingredientes frescos."
 WARLY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Ingredientes saudáveis produzem culinária superior."

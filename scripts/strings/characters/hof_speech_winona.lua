@@ -95,6 +95,9 @@ WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Back to regular production."
 WINONA.ANNOUNCE_KYNO_WETNESSBUFF_START = "Guess the rain's helping me keep it together."
 WINONA.ANNOUNCE_KYNO_WETNESSBUFF_END = "There goes that nice feeling."
 
+WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Alright, let’s get this done fast tonight."
+WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Clocked out of night mode."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nope."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope, something else, maybe."
@@ -1285,6 +1288,8 @@ WINONA.DESCRIBE.MANDRAKEPIE = "That's some solid baking."
 WINONA.DESCRIBE.MANDRAKEBEER = "Cold, fizzy, and gets the job done."
 
 WINONA.DESCRIBE.RAINPARFAIT = "Nice and refreshing."
+
+WINONA.DESCRIBE.MIDNIGHTFEAST = "Solid meal before a tough shift... or fight."
 
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "A practical growth enhancer."
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Keeps crops in working order."

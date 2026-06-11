@@ -95,6 +95,9 @@ WALTER.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Mùa thu hoạch lớn giờ kết th
 WALTER.ANNOUNCE_KYNO_WETNESSBUFF_START = "Cơn mưa này thực sự nâng cao tinh thần của mình, Woby!"
 WALTER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Chắc cảm giác đó đã hết rồi."
 
+WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Nhiệm vụ ban đêm là tuyệt nhất!"
+WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Có vẻ tăng cường ban đêm đã hết, Woby."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai món rồi!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, không phải cái này."
@@ -1285,6 +1288,8 @@ WALTER.DESCRIBE.MANDRAKEPIE = "Bánh pie lúc nào cũng ngon hơn ngoài trời
 WALTER.DESCRIBE.MANDRAKEBEER = "Hoàn hảo sau một chuyến đi bộ dài."
 
 WALTER.DESCRIBE.RAINPARFAIT = "Món này sẽ tuyệt lắm trong một cơn bão."
+
+WALTER.DESCRIBE.MIDNIGHTFEAST = "Bữa ăn hoàn hảo bên lửa trại cho sinh tồn ban đêm!"
 
 WALTER.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Hoàn hảo để trồng thêm nguồn cung ngoài thiên nhiên."
 WALTER.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ khu vườn luôn trong tình trạng tốt nhất."

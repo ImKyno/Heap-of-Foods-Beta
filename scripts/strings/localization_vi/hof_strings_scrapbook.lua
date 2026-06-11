@@ -129,6 +129,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Tăng năng suất cây
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Trấn an các sinh vật xung quanh người sống sót."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Tăng 15% hiệu quả hồi máu trong một khoảng thời gian. Không áp dụng cho hồi máu hút máu."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINY = "Hồi phục tinh thần theo thời gian khi trời mưa hoặc khi độ ướt đủ cao."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "Các đòn tấn công có một tỷ lệ nhỏ kết liễu mục tiêu ngay lập tức vào ban đêm. Không có tác dụng với một số sinh vật."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Có thể được thêm vào món Nồi Nấu bằng Trạm Nêm Gia Vị Di Động.\n\nĂn món được nêm Bột Bảo Quản sẽ giảm một nửa tốc độ hư hỏng và loại bỏ hình phạt từ thức ăn hỏng."

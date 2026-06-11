@@ -95,6 +95,9 @@ WINONA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Powrót do normalnej produkcji."
 WINONA.ANNOUNCE_KYNO_WETNESSBUFF_START = "Chyba deszcz pomaga mi się trzymać."
 WINONA.ANNOUNCE_KYNO_WETNESSBUFF_END = "I po tym miłym uczuciu."
 
+WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Dobra, zróbmy to dziś szybko w nocy."
+WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Koniec trybu nocnego."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie, może coś innego."
@@ -1285,6 +1288,8 @@ WINONA.DESCRIBE.MANDRAKEPIE = "To porządne pieczenie."
 WINONA.DESCRIBE.MANDRAKEBEER = "Zimne, gazowane i spełnia swoje zadanie."
 
 WINONA.DESCRIBE.RAINPARFAIT = "Miłe i orzeźwiające."
+
+WINONA.DESCRIBE.MIDNIGHTFEAST = "Porządny posiłek przed ciężką zmianą... albo walką."
 
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Praktyczny stymulator wzrostu."
 WINONA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Utrzymuje uprawy w dobrej kondycji."

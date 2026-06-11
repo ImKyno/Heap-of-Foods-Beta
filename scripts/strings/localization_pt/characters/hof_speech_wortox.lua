@@ -95,6 +95,9 @@ WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "A fartura escapou. Hyuyu."
 WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_START = "O tamborilar da chuva anima meu espírito!"
 WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_END = "Chega de alegria chuvosa."
 
+WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "A noite deixa tudo mais afiado!"
+WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "E assim, ela escapa."
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de outra coisa."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sei que essa brincadeira foi boa, mas vou trazer o correto agora."
@@ -1285,6 +1288,8 @@ WORTOX.DESCRIBE.MANDRAKEPIE = "Uma mordida e direto para o mundo dos sonhos!"
 WORTOX.DESCRIBE.MANDRAKEBEER = "Uma bebidinha borbulhante. Hyuyu!"
 
 WORTOX.DESCRIBE.RAINPARFAIT = "Uma delícia para dias de chuva."
+
+WORTOX.DESCRIBE.MIDNIGHTFEAST = "Um banquete para escapadas sombrias!"
 
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Um pequeno impulso para os amigos folhosos. Hyuyu!"
 WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Mantém eles vivos e vibrantes."

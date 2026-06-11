@@ -80,6 +80,7 @@ PrefabFiles =
 	"k_foodbuff_luck",
 	"k_foodbuff_maxstats",
 	"k_foodbuff_mobs",
+	"k_foodbuff_nightkill",
 	"k_foodbuff_nightvision",
 	"k_foodbuff_nukashine",
 	"k_foodbuff_planardefense",

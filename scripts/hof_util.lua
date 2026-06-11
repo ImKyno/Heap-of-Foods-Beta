@@ -538,3 +538,101 @@ function PlantBoosterBonusYield(inst, data)
 		end
 	end
 end
+
+function SetupInstakillOnHit(config)
+	-- chance          = 1.0 (100%)
+	-- blocked_tags    = {}
+	-- blocked_prefabs = {}
+	-- require_night   = false
+	-- fx_prefab       = nil
+
+	return function(attacker, data)
+		local target = (data ~= nil and (data.target or data.victim)) or nil
+
+		if target == nil or not target:IsValid() then
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Instakill: Target is nil.")
+			end
+
+			return
+		end
+
+		if attacker == nil or not attacker:IsValid() then
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Instakill: Attacker is nil.")
+			end
+
+			return
+		end
+
+		if target.components.health == nil or target.components.health:IsDead() then
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Instakill: Target does not have Health component.")
+			end
+
+			return
+		end
+
+		if config.blocked_tags ~= nil then
+			for _, tag in ipairs(config.blocked_tags) do
+				if target:HasTag(tag) then
+					if TUNING.HOF_DEBUG_MODE then
+						print("Heap of Foods Mod - Instakill: Blocked! Reason: Invalid Tag.")
+					end
+
+					return
+				end
+			end
+		end
+
+		if config.blocked_prefabs ~= nil then
+			for _, prefab in ipairs(config.blocked_prefabs) do
+				if target.prefab == prefab then
+					if TUNING.HOF_DEBUG_MODE then
+						print("Heap of Foods Mod - Instakill: Blocked! Reason: Invalid Prefab.")
+					end
+
+					return
+				end
+			end
+		end
+
+		if config.require_night and not TheWorld.state.isnight then
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Instakill: Blocked! Reason: Invalid Phase.")
+			end
+
+			return
+		end
+
+		local chance = config.chance or 1.0
+
+		if math.random() > chance then
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - Instakill: Blocked! Reason: Lower Chance.")
+			end
+
+			return
+		end
+
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Instakill: Target:", target, target.prefab)
+			print("Heap of Foods Mod - Instakill: Attacker:", attacker, attacker.prefab)
+			print("Heap of Foods Mod - Instakill: Is Night:", TheWorld.state.isnight)
+		end
+
+		if config.fx_prefab ~= nil then
+			local fx = SpawnPrefab(config.fx_prefab)
+
+			if fx ~= nil then
+				fx.Transform:SetPosition(target.Transform:GetWorldPosition())
+			end
+		end
+
+		target.components.health:Kill()
+
+		if TUNING.HOF_DEBUG_MODE then
+			print("Heap of Foods Mod - Instakill: Killed:", target.prefab)
+		end
+	end
+end

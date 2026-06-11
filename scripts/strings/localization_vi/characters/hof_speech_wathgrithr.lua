@@ -95,6 +95,9 @@ WATHGRITHR.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Phước lành màu mỡ đã tan
 WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_START = "Cơn bão làm mới tinh thần ta!"
 WATHGRITHR.ANNOUNCE_KYNO_WETNESSBUFF_END = "Phước lành của cơn mưa đã phai nhạt!"
 
+WATHGRITHR.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Đêm ban cho ta sức mạnh chết chóc!"
+WATHGRITHR.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Phước lành của bóng tối đã phai!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai rồi!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sai yến tiệc! Con thú muốn món khoái khẩu hơn!"
@@ -1285,6 +1288,8 @@ WATHGRITHR.DESCRIBE.MANDRAKEPIE = "Món bánh anh hùng từ rễ cây mê hoặ
 WATHGRITHR.DESCRIBE.MANDRAKEBEER = "Một ly bọt sủi mà thiếu đi vinh quang của mật ong lên men!"
 
 WATHGRITHR.DESCRIBE.RAINPARFAIT = "Yến tiệc mát lạnh được cơn bão ban phước!"
+
+WATHGRITHR.DESCRIBE.MIDNIGHTFEAST = "Một bữa tiệc xứng đáng cho những trận chiến ban đêm!"
 
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một loại thuốc bổ cho những mùa màng hùng mạnh!"
 WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Nó củng cố tinh thần của cây cối!"

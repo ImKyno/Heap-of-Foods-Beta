@@ -95,6 +95,9 @@ WENDY.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Hojność natury znów przeminęła."
 WENDY.ANNOUNCE_KYNO_WETNESSBUFF_START = "Deszcz zmywa moje troski."
 WENDY.ANNOUNCE_KYNO_WETNESSBUFF_END = "Pocieszenie deszczu przeminęło."
 
+WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Noc szepcze siłę w moje dłonie."
+WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Powraca cisza... i słabość."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może warto coś zebrać?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Oczywiście, że nie tego chce to głupie stworzenie."
@@ -1285,6 +1288,8 @@ WENDY.DESCRIBE.MANDRAKEPIE = "Pocieszający kawałek wyczerpania."
 WENDY.DESCRIBE.MANDRAKEBEER = "Przemijająca słodycz w gorzkim świecie."
 
 WENDY.DESCRIBE.RAINPARFAIT = "Mała pociecha pod ponurym niebem."
+
+WENDY.DESCRIBE.MIDNIGHTFEAST = "Posiłek spożywany w ciemności do jeszcze ciemniejszych czynów."
 
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Tymczasowy dar dla skazanych roślin."
 WENDY.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Daremna próba zachowania życia."

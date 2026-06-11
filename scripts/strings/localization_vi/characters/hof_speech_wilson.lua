@@ -95,6 +95,9 @@ WILSON.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Mùa thu hoạch kết thúc rồi!"
 WILSON.ANNOUNCE_KYNO_WETNESSBUFF_START = "Cơn mưa thật dễ chịu."
 WILSON.ANNOUNCE_KYNO_WETNESSBUFF_END = "Cảm giác thư thái đã biến mất."
 
+WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Bóng đêm khiến quyết tâm của tôi sắc bén hơn."
+WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Sức mạnh của màn đêm đã phai nhạt."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái này."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ông ấy muốn thứ khác."
@@ -1285,6 +1288,8 @@ WILSON.DESCRIBE.MANDRAKEPIE = "Một chiếc bánh với nhân cực kỳ gây b
 WILSON.DESCRIBE.MANDRAKEBEER = "Một thức uống giải khát được ủ từ rễ cây."
 
 WILSON.DESCRIBE.RAINPARFAIT = "Thời tiết hôm nay thật parfait."
+
+WILSON.DESCRIBE.MIDNIGHTFEAST = "Một bữa ăn thịnh soạn dành cho những trận chiến ban đêm."
 
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một loại phân bón nhân tạo có khả năng thúc đẩy tăng trưởng."
 WILSON.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giúp cây cối của tôi luôn khỏe mạnh và tươi tốt!"

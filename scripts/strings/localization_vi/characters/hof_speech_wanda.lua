@@ -95,6 +95,9 @@ WANDA.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Tăng cường hiệu suất đã hế
 WANDA.ANNOUNCE_KYNO_WETNESSBUFF_START = "Thú vị thật. Độ ẩm này khá thư giãn."
 WANDA.ANNOUNCE_KYNO_WETNESSBUFF_END = "Hiệu ứng đã kết thúc."
 
+WANDA.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Hoàn hảo. Hiệu suất ban đêm được kích hoạt."
+WANDA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Và nó biến mất. Điển hình."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không... ta cần thứ khác."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Có lẽ ta vẫn còn chút thời gian để kiếm Wobster cho ngươi."
@@ -1285,6 +1288,8 @@ WANDA.DESCRIBE.MANDRAKEPIE = "Hy vọng nó không làm mình chậm lại."
 WANDA.DESCRIBE.MANDRAKEBEER = "Ít nhất thì nó cũng rất sảng khoái."
 
 WANDA.DESCRIBE.RAINPARFAIT = "Ít nhất mưa cũng cải thiện được điều gì đó."
+
+WANDA.DESCRIBE.MIDNIGHTFEAST = "Nhiên liệu hiệu quả cho các hoạt động đêm khuya."
 
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Một cách hữu ích để tiết kiệm thời gian."
 WANDA.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Cây khỏe là cây hiệu quả."

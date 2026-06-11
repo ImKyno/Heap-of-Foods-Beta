@@ -129,6 +129,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Aumenta o rendimento de
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Acalma as criaturas próximas ao sobrevivente."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Aumenta a eficiência de cura em 15% por um certo período de tempo. Não funciona com cura por roubo de vida."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINY = "Restaura sanidade ao longo do tempo quando está chovendo ou quando a Umidade estiver alta o suficiente."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "Ataques têm uma pequena chance de executar alvos durante a noite. Não funciona contra certas criaturas."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado à comida da Panela usando uma Estação Portátil de Temperos.\n\nComer um prato temperado com Pó Conservante reduz pela metade o tempo de deterioração e anula penalidades de comida estragada."

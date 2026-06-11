@@ -95,6 +95,9 @@ WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "Quay lại hái bình thường thôi
 WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_START = "Một chút mưa làm nên điều kỳ diệu đấy, eh?"
 WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "Trở lại bình thường rồi."
 
+WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Cảm giác như đêm đang đứng về phía mình, hả?"
+WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Trở lại bình thường rồi."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để nhấc nó lên?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không. Ông ấy muốn thứ khác."
@@ -1285,6 +1288,8 @@ WOODIE.DESCRIBE.MANDRAKEPIE = "Không gì ngon hơn bánh pie mới nướng, eh
 WOODIE.DESCRIBE.MANDRAKEBEER = "Có vị như thiên nhiên hoang dã vậy, eh?"
 
 WOODIE.DESCRIBE.RAINPARFAIT = "Món ăn vặt tuyệt vời cho thời tiết ẩm ướt, eh?"
+
+WOODIE.DESCRIBE.MIDNIGHTFEAST = "Mang theo nhiều đồ ăn cho buổi tối vậy, hả?"
 
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Giúp cây lớn nhanh hơn, hả?"
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Giữ chúng khỏe mạnh và vui vẻ."

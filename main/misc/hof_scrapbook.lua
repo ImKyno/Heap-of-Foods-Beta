@@ -10213,6 +10213,30 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		deps           = preparedfood_deps,
 		specialinfo    = "FOODEFFECTS_RAINY",
 	},
+
+	midnightfeast      =
+	{
+		name           = "midnightfeast",
+		type           = "food",
+		tex            = "midnightfeast.tex",
+		prefab         = "midnightfeast",
+		healthvalue    = 30,
+		hungervalue    = 75,
+		sanityvalue    = 15,
+		perishable     = 2880,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "kyno_foodrecipes",
+		build          = "kyno_foodrecipes_cookpot1",
+		overridesymbol = {"swap_food", "kyno_foodrecipes_cookpot1", "midnightfeast"},
+		anim           = "midnightfeast",
+		animoffsety    = 10,
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -70,
+		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_MIDNIGHT",
+	},
 }
 
 local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =

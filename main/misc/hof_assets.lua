@@ -670,6 +670,7 @@ local HOF_ICONS =
 	"mead",
 	"meatskillet",
 	"meatwaltz",
+	"midnightfeast",
 	"milk_box",
 	"milkshake",
 	"milkshake_prismatic",

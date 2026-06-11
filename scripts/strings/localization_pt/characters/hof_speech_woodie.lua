@@ -95,6 +95,9 @@ WOODIE.ANNOUNCE_KYNO_GREENTHUMBBUFF_END = "De volta à colheita normal."
 WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_START = "Um pouco de chuva faz maravilhas, né?"
 WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "De volta ao normal."
 
+WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Parece que a noite tá do meu lado, hein?"
+WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "De volta ao normal."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo diferente se encaixe aqui"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, ele não quer isso."
@@ -1285,6 +1288,8 @@ WOODIE.DESCRIBE.MANDRAKEPIE = "Nada supera uma torta fresca, hein?"
 WOODIE.DESCRIBE.MANDRAKEBEER = "Tem gosto da natureza, né?"
 
 WOODIE.DESCRIBE.RAINPARFAIT = "Bom lanche pra tempo chuvoso, né?"
+
+WOODIE.DESCRIBE.MIDNIGHTFEAST = "Isso é muita comida pra uma noite fora, hein?"
 
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_GROWTH = "Faz as plantas crescerem mais rápido, hein?"
 WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_VITALITY = "Mantém elas saudáveis e felizes."
