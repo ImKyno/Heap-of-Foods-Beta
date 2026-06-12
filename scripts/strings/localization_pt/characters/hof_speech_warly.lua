@@ -98,6 +98,9 @@ WARLY.ANNOUNCE_KYNO_WETNESSBUFF_END = "A sensação refrescante passou."
 WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Um chef também deve ser caçador na escuridão."
 WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "O corte da noite perdeu o fio."
 
+WARLY.ANNOUNCE_KYNO_PANICBUFF_START = "Parece que me tornei bastante alarmante."
+WARLY.ANNOUNCE_KYNO_PANICBUFF_END = "Minha presença intimidadora diminuiu."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado, errado..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Quer algo mais saboroso?"

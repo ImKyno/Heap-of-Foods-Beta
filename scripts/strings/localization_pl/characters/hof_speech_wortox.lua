@@ -98,6 +98,9 @@ WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_END = "Koniec deszczowej radości."
 WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Noc wszystko wyostrza!"
 WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "I tak po prostu znika."
 
+WORTOX.ANNOUNCE_KYNO_PANICBUFF_START = "Jakże uroczy strach. Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_PANICBUFF_END = "Koniec strasznej zabawy!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję czegoś jeszcze."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wiem, że ten żart był niezły, ale przejdźmy do konkretów."

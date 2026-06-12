@@ -98,6 +98,9 @@ WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_END = "Deszczowa magia zniknęła."
 WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Wolfgang najsilniejszy w nocy!"
 WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Siła nocy znikła."
 
+WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_START = "Stworzenia boją się potężnego Wolfganga!"
+WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_END = "Stworzenia przestały bać się Wolfganga."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "To nie jest potrzebne."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mocny świnia nie chce tego."

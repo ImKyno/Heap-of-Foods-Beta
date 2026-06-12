@@ -98,6 +98,9 @@ WILSON.ANNOUNCE_KYNO_WETNESSBUFF_END = "Cảm giác thư thái đã biến mất
 WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Bóng đêm khiến quyết tâm của tôi sắc bén hơn."
 WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Sức mạnh của màn đêm đã phai nhạt."
 
+WILSON.ANNOUNCE_KYNO_PANICBUFF_START = "Sự hiện diện của tôi đang trở nên khá đáng sợ."
+WILSON.ANNOUNCE_KYNO_PANICBUFF_END = "Mọi thứ có vẻ bớt đáng sợ hơn rồi."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái này."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ông ấy muốn thứ khác."

@@ -98,6 +98,9 @@ WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "Trở lại bình thường rồi."
 WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Cảm giác như đêm đang đứng về phía mình, hả?"
 WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Trở lại bình thường rồi."
 
+WOODIE.ANNOUNCE_KYNO_PANICBUFF_START = "Có vẻ tôi trông hơi đáng sợ đấy nhỉ?"
+WOODIE.ANNOUNCE_KYNO_PANICBUFF_END = "Chắc giờ tôi bớt đáng sợ rồi, hả?"
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để nhấc nó lên?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không. Ông ấy muốn thứ khác."

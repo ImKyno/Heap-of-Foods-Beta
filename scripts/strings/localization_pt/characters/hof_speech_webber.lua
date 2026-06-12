@@ -98,6 +98,9 @@ WEBBER.ANNOUNCE_KYNO_WETNESSBUFF_END = "A chuva não parece mais tão especial."
 WEBBER.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Uau! Ficamos super fortes à noite!"
 WEBBER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Ah... o poder da noite acabou."
 
+WEBBER.ANNOUNCE_KYNO_PANICBUFF_START = "Uau! Tudo está com medo da gente!"
+WEBBER.ANNOUNCE_KYNO_PANICBUFF_END = "As coisas não estão mais com medo da gente."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Achamos que isso não é o que ele quer."

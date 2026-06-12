@@ -98,6 +98,9 @@ WINONA.ANNOUNCE_KYNO_WETNESSBUFF_END = "Lá se foi aquela sensação boa."
 WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Beleza, vamos terminar isso rápido hoje à noite."
 WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Saí do modo noturno."
 
+WINONA.ANNOUNCE_KYNO_PANICBUFF_START = "Parece que estou causando uma bela impressão."
+WINONA.ANNOUNCE_KYNO_PANICBUFF_END = "Lá se foi o fator intimidação."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, talvez outra coisa."

@@ -98,6 +98,9 @@ WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_END = "Phép màu của mưa đã biến mấ
 WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Wolfgang mạnh nhất vào ban đêm!"
 WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Sức mạnh ban đêm đã biến mất."
 
+WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_START = "Sinh vật phải sợ hãi Wolfgang hùng mạnh!"
+WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_END = "Sinh vật không còn sợ Wolfgang nữa."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái đúng."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Heo hùng mạnh không muốn cái này."

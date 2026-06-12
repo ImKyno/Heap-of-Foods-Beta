@@ -98,6 +98,9 @@ WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_END = "To uczucie zniknęło."
 WAXWELL.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Wreszcie noc pamięta swojego pana."
 WAXWELL.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Jakże żałośnie krótkotrwałe."
 
+WAXWELL.ANNOUNCE_KYNO_PANICBUFF_START = "Wreszcie właściwa reakcja."
+WAXWELL.ANNOUNCE_KYNO_PANICBUFF_END = "Jakże rozczarowujące."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję do tego czegoś innego."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie jesteś łatwy, prawda?"

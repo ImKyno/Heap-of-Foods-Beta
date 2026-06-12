@@ -98,6 +98,9 @@ WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "Back to normal now."
 WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Feels like the night’s on my side, eh?"
 WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Back to regular ol’ me."
 
+WOODIE.ANNOUNCE_KYNO_PANICBUFF_START = "Guess I'm lookin' a little intimidating, eh?"
+WOODIE.ANNOUNCE_KYNO_PANICBUFF_END = "Guess I'm less scary now, eh?"
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to pick it up?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. He wants something else."

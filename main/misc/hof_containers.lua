@@ -463,7 +463,6 @@ function params.winter_tree_hof.itemtestfn(container, item, slot)
 	return item:HasTag("winter_ornament") and not container.inst:HasTag("burnt")
 end
 
---[[
 -- Seed Bag
 params.seedsbag =
 {
@@ -492,7 +491,6 @@ function params.seedsbag.itemtestfn(container, item, slot)
 end
 
 params.seedsbag.priorityfn = params.seedsbag.itemtestfn
-]]--
 
 -- Tweaks for vanilla containers.
 -- Hack for portablespicer to not accept items with "nospice" tag.

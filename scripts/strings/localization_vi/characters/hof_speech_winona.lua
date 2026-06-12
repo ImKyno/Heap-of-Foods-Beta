@@ -98,6 +98,9 @@ WINONA.ANNOUNCE_KYNO_WETNESSBUFF_END = "Cảm giác dễ chịu đó biến mấ
 WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Được rồi, làm nhanh cho xong đêm nay."
 WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Hết ca chế độ ban đêm."
 
+WINONA.ANNOUNCE_KYNO_PANICBUFF_START = "Có vẻ tôi đang để lại ấn tượng khá mạnh."
+WINONA.ANNOUNCE_KYNO_PANICBUFF_END = "Thế là hết hiệu ứng hăm dọa."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không, chắc phải thứ khác."

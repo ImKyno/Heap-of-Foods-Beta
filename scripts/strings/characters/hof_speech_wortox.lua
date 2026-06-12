@@ -98,6 +98,9 @@ WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_END = "No more rainy cheer."
 WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "The night makes everything sharper!"
 WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "And just like that, it slips away."
 
+WORTOX.ANNOUNCE_KYNO_PANICBUFF_START = "Such delightful fright. Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_PANICBUFF_END = "No more frightful fun!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I know this prank was good, but let's get the real thing."

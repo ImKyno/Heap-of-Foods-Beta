@@ -98,6 +98,9 @@ WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_END = "Chega de alegria chuvosa."
 WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "A noite deixa tudo mais afiado!"
 WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "E assim, ela escapa."
 
+WORTOX.ANNOUNCE_KYNO_PANICBUFF_START = "Que medo delicioso. Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_PANICBUFF_END = "Chega de diversão assustadora!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de outra coisa."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sei que essa brincadeira foi boa, mas vou trazer o correto agora."

@@ -98,6 +98,9 @@ WALTER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Acho que a sensação passou."
 WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Missões noturnas são as melhores!"
 WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Acho que o reforço da noite acabou, Woby."
 
+WALTER.ANNOUNCE_KYNO_PANICBUFF_START = "Acho que pareço mais durão que o normal, Woby."
+WALTER.ANNOUNCE_KYNO_PANICBUFF_END = "Acho que voltei ao normal."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Coisa errada!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, não é este."

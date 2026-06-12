@@ -98,6 +98,9 @@ WENDY.ANNOUNCE_KYNO_WETNESSBUFF_END = "Sự an ủi từ cơn mưa đã qua rồ
 WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Đêm thì thầm sức mạnh vào đôi tay ta."
 WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Sự im lặng trở lại... và cả sự yếu đuối."
 
+WENDY.ANNOUNCE_KYNO_PANICBUFF_START = "Nỗi kinh hoàng theo sau từng bước chân ta."
+WENDY.ANNOUNCE_KYNO_PANICBUFF_END = "Nỗi sợ hãi đã lắng xuống."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để thu gom?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Tất nhiên đây không phải thứ sinh vật ngu ngốc đó muốn."

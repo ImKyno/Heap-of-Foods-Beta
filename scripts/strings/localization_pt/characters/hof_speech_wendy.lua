@@ -98,6 +98,9 @@ WENDY.ANNOUNCE_KYNO_WETNESSBUFF_END = "O conforto da chuva passou."
 WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "A noite sussurra força em minhas mãos."
 WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "O silêncio retorna... e com ele a fraqueza."
 
+WENDY.ANNOUNCE_KYNO_PANICBUFF_START = "O terror segue meus passos."
+WENDY.ANNOUNCE_KYNO_PANICBUFF_END = "O terror diminuiu."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."

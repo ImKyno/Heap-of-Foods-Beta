@@ -6694,6 +6694,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -90,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_BATILISK",
 	},
 
 	gorge_tomato_soup  =
@@ -13218,6 +13219,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgx  = -20,
 		animoffsetbgy  = -70,
 		deps           = {"kyno_woodenkeg", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_DECREASETEMP",
 	},
 }
 

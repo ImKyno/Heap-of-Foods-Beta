@@ -98,6 +98,9 @@ WOODIE.ANNOUNCE_KYNO_WETNESSBUFF_END = "Wszystko wróciło do normy."
 WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Czuję, jakby noc była po mojej stronie, co?"
 WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Z powrotem do starego mnie."
 
+WOODIE.ANNOUNCE_KYNO_PANICBUFF_START = "Chyba wyglądam trochę groźniej niż zwykle, co?"
+WOODIE.ANNOUNCE_KYNO_PANICBUFF_END = "Chyba jestem teraz mniej straszny, co?"
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może coś do podniesienia?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. On chce czegoś innego."

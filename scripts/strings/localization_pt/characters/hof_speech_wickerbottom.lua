@@ -98,6 +98,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_END = "Seus efeitos restauradores cessara
 WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "As condições noturnas parecem aumentar a letalidade."
 WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "A melhoria noturna se dissipou."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_START = "Parece que inspiro pânico irracional."
+WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_END = "Minha influência alarmante enfraqueceu."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Precisa de algo diferente."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não. Acho que ele mencionou wobsters."

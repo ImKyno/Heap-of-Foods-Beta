@@ -98,6 +98,9 @@ WOLFGANG.ANNOUNCE_KYNO_WETNESSBUFF_END = "Rain magic is gone."
 WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Wolfgang is strongest in night!"
 WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Night strength is gone."
 
+WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_START = "Creatures fear mighty Wolfgang!"
+WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_END = "Creatures stop fearing Wolfgang."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Is not the correct one."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mighty pig do not want this."

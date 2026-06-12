@@ -683,11 +683,16 @@ local kyno_foods =
 		hunger = 37.5,
 		sanity = 5,
 		cooktime = 1.5,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {0, 1, 0},
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"gorge_bread", 1}, {"garlic", 3}}},
+		prefabs = { "kyno_panicbuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_panicbuff", "kyno_panicbuff")
+		end,
 	},
 	
 	gorge_tomato_soup = 

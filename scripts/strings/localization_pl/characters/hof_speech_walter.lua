@@ -98,6 +98,9 @@ WALTER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Chyba to uczucie minęło."
 WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Misje nocne są najlepsze!"
 WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Chyba wzmocnienie nocy się skończyło, Woby."
 
+WALTER.ANNOUNCE_KYNO_PANICBUFF_START = "Chyba wyglądam groźniej niż zwykle, Woby."
+WALTER.ANNOUNCE_KYNO_PANICBUFF_END = "Chyba wróciłem do normy."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zła rzecz!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmm, nie w tym przypadku."

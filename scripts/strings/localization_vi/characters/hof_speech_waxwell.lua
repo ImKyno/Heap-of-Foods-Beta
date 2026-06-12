@@ -98,6 +98,9 @@ WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_END = "Cảm giác đó đã biến mất."
 WAXWELL.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Cuối cùng, màn đêm cũng nhớ chủ nhân của nó."
 WAXWELL.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Thật đáng thất vọng là nó quá ngắn ngủi."
 
+WAXWELL.ANNOUNCE_KYNO_PANICBUFF_START = "Cuối cùng cũng có phản ứng đúng đắn."
+WAXWELL.ANNOUNCE_KYNO_PANICBUFF_END = "Thật đáng thất vọng."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cho việc này."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ngươi không dễ chiều chút nào, phải không?"

@@ -120,6 +120,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOOTHING = "Soothes nearby creatures"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HEALINGBONUS = "Increases healing efficiency"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RAINY = "Restores sanity when wet"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT = "Executes creatures at night"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK = "Scares nearby batilisks"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Green-ish vegetable, the king of grasslands and rainforests. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "One of the many sea gifts, very appreciated by men of culture. -W"

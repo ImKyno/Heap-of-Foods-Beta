@@ -98,6 +98,9 @@ WALTER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Chắc cảm giác đó đã hết rồi
 WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Nhiệm vụ ban đêm là tuyệt nhất!"
 WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Có vẻ tăng cường ban đêm đã hết, Woby."
 
+WALTER.ANNOUNCE_KYNO_PANICBUFF_START = "Chắc tớ trông ngầu hơn bình thường rồi, Woby."
+WALTER.ANNOUNCE_KYNO_PANICBUFF_END = "Có vẻ tớ trở lại bình thường rồi."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai món rồi!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, không phải cái này."

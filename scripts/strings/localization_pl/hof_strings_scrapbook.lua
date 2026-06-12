@@ -130,6 +130,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Uspokaja pobliskie stworze
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Zwiększa skuteczność leczenia o 15% na określony czas. Nie działa na leczenie z kradzieży życia."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINY = "Przywraca poczytalność z upływem czasu podczas deszczu lub gdy poziom wilgoci jest wystarczająco wysoki."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "Ataki mają niewielką szansę na natychmiastowe zgładzenie celu w nocy. Nie działa na niektóre stworzenia."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BATILISK = "Odstrasza pobliskie batiliski przez pewien czas."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Może być dodany do jedzenia w garnku za pomocą przenośnej stacji przypraw.\n\nJedzenie przyprawione Preserver Powder zmniejsza czas psucia się o połowę i neguje kary za zepsute jedzenie."

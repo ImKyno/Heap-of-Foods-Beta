@@ -98,6 +98,9 @@ WARLY.ANNOUNCE_KYNO_WETNESSBUFF_END = "The refreshing sensation has passed."
 WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "A chef must also be a hunter in the dark."
 WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "The night’s edge has dulled."
 
+WARLY.ANNOUNCE_KYNO_PANICBUFF_START = "I appear to have become quite alarming."
+WARLY.ANNOUNCE_KYNO_PANICBUFF_END = "My alarming presence has diminished."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong, wrong..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You want something else more delicious?"

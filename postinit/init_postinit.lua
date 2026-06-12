@@ -57,6 +57,7 @@ local INIT_POSTINIT_PREFABS =
 	"antlion",
 	"ash",
 	"bananabush",
+	"bat",
 	"bee",
 	"beebox",
 	"beefalo",

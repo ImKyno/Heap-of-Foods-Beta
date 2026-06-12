@@ -98,6 +98,9 @@ WAXWELL.ANNOUNCE_KYNO_WETNESSBUFF_END = "The sensation has vanished."
 WAXWELL.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "At last, the night remembers its master."
 WAXWELL.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "How disappointingly temporary."
 
+WAXWELL.ANNOUNCE_KYNO_PANICBUFF_START = "At last, the proper reaction."
+WAXWELL.ANNOUNCE_KYNO_PANICBUFF_END = "How disappointing."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else for this."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You're not easy, aren't you?"

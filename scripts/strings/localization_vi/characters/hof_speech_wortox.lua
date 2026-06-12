@@ -98,6 +98,9 @@ WORTOX.ANNOUNCE_KYNO_WETNESSBUFF_END = "Không còn niềm vui ngày mưa nữa.
 WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Đêm khiến mọi thứ sắc bén hơn!"
 WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Và rồi nó biến mất."
 
+WORTOX.ANNOUNCE_KYNO_PANICBUFF_START = "Thật là một nỗi sợ thú vị. Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_PANICBUFF_END = "Hết trò vui đáng sợ rồi!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cơ."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ta biết trò đùa này hay lắm, nhưng lấy đồ thật đi nào."

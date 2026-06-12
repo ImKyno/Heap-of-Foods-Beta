@@ -98,6 +98,9 @@ WANDA.ANNOUNCE_KYNO_WETNESSBUFF_END = "Efekt dobiegł końca."
 WANDA.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Idealnie. Efektywność nocna aktywowana."
 WANDA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "I znikło. Typowe."
 
+WANDA.ANNOUNCE_KYNO_PANICBUFF_START = "Strach jest wyjątkowo skutecznym motywatorem."
+WANDA.ANNOUNCE_KYNO_PANICBUFF_END = "Efekt wygasł."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie... Potrzebuję czegoś innego."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Chyba mam trochę czasu, żeby kupić ci homara."

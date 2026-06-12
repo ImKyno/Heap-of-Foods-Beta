@@ -5,7 +5,8 @@
 
 -- Not Included:
 -- Berserker, Birthday, Crafting, Enlightenment, Fire, Freeze, Green Thumb, Healing,
--- Insanity, Max Stats, Night, Night Vision, Nukashine, Preserver, Sanity, Stealth, Wetness
+-- Insanity, Max Stats, Night, Night Vision, Nukashine, Preserver, Sanity, Stealth,
+-- Wetness, Panic
 local banddt = 1
 local FOLLOWER_ONEOF_TAGS = {"pig"}
 local FOLLOWER_CANT_TAGS = {"werepig", "merm", "player"}

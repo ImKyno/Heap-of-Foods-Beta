@@ -98,6 +98,9 @@ WILSON.ANNOUNCE_KYNO_WETNESSBUFF_END = "A sensação de tranquilidade desaparece
 WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "O cair da noite aguça minha determinação."
 WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "O poder da noite se esvai."
 
+WILSON.ANNOUNCE_KYNO_PANICBUFF_START = "Minha presença está se tornando bastante perturbadora."
+WILSON.ANNOUNCE_KYNO_PANICBUFF_END = "As coisas parecem menos intimidadoras agora."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ele quer outra coisa."

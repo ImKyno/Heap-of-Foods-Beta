@@ -98,6 +98,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_END = "Its restorative effects have cease
 WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Nighttime conditions appear to enhance lethality."
 WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "The nocturnal enhancement has dissipated."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_START = "I seem to inspire irrational panic."
+WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_END = "My alarming influence has waned."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It requires something else."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. I think he said something about wobsters."

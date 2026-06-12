@@ -31,7 +31,7 @@ local function TrinketCustomPostInit(inst)
 	end
 
 	if inst.components.tradable ~= nil then
-		entry = trinkets[inst.prefab]
+		entry = TRINKETS[inst.prefab]
 
 		if entry then
 			inst.components.tradable.octopusvalue = entry.octopusvalue

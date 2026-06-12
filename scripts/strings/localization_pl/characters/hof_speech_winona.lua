@@ -98,6 +98,9 @@ WINONA.ANNOUNCE_KYNO_WETNESSBUFF_END = "I po tym miłym uczuciu."
 WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Dobra, zróbmy to dziś szybko w nocy."
 WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Koniec trybu nocnego."
 
+WINONA.ANNOUNCE_KYNO_PANICBUFF_START = "Wygląda na to, że robię niezłe wrażenie."
+WINONA.ANNOUNCE_KYNO_PANICBUFF_END = "I po efekcie zastraszania."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie, może coś innego."

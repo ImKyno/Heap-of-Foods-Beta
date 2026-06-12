@@ -98,6 +98,9 @@ WANDA.ANNOUNCE_KYNO_WETNESSBUFF_END = "The effect has run its course."
 WANDA.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Perfect. Night efficiency activated."
 WANDA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "And it’s gone. Typical."
 
+WANDA.ANNOUNCE_KYNO_PANICBUFF_START = "Fear is such an efficient motivator."
+WANDA.ANNOUNCE_KYNO_PANICBUFF_END = "The effect has expired."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "No... I need something different."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I guess I have some time to get a wobster for you."

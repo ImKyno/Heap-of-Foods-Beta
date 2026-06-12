@@ -98,6 +98,9 @@ WILSON.ANNOUNCE_KYNO_WETNESSBUFF_END = "The calming feeling has faded."
 WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Nightfall sharpens my resolve."
 WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "The night’s power fades."
 
+WILSON.ANNOUNCE_KYNO_PANICBUFF_START = "My presence is becoming rather unsettling."
+WILSON.ANNOUNCE_KYNO_PANICBUFF_END = "Things seem less intimidating now."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It's not this one."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "He wants something else."

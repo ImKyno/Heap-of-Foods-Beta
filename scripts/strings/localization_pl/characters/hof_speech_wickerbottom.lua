@@ -98,6 +98,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_WETNESSBUFF_END = "Jego regenerujące działanie usta
 WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Warunki nocne wydają się zwiększać skuteczność."
 WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Nocne wzmocnienie wygasło."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_START = "Zdaje się, że wzbudzam irracjonalną panikę."
+WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_END = "Mój niepokojący wpływ osłabł."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzeba czegoś jeszcze."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. Chyba mówił coś o homarach."

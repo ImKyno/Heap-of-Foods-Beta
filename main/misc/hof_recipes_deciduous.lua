@@ -153,7 +153,7 @@ AddRecipe2("deciduoustrader_kyno_truffles", {Ingredient("kyno_pigcoin2", 1, ModA
 	{"CRAFTING_STATION"}
 )
 
--- AddDeconstructRecipe("kyno_seedsbag", {}) -- Needed for getting alterguardianhatshard back.
+AddDeconstructRecipe("kyno_seedsbag", {}) -- Needed for getting alterguardianhatshard back.
 
 CONSTRUCTION_PLANS["kyno_deciduousforest_shop"] =
 {

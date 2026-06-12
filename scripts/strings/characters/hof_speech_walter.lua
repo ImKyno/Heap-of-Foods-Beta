@@ -98,6 +98,9 @@ WALTER.ANNOUNCE_KYNO_WETNESSBUFF_END = "Guess that feeling wore off."
 WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Night missions are the best missions!"
 WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Guess the night boost is over, Woby."
 
+WALTER.ANNOUNCE_KYNO_PANICBUFF_START = "I guess I look tougher than usual, Woby."
+WALTER.ANNOUNCE_KYNO_PANICBUFF_END = "Guess I'm back to normal."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong thing!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, not this one."

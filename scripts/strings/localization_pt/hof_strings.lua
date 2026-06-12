@@ -120,6 +120,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SOOTHING = "Acalma criaturas próximas"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HEALINGBONUS = "Aumenta a eficiência de cura"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RAINY = "Restaura a sanidade quando molhado"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT = "Executa criaturas à noite"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK = "Assusta batiliscos próximos"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Vegetal esverdeado, o rei das pastagens e florestas tropicais. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Um dos muitos presentes do mar, muito apreciado pelos homens de cultura. -W"

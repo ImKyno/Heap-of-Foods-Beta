@@ -98,6 +98,9 @@ WURT.ANNOUNCE_KYNO_WETNESSBUFF_END = "Chuva não deixa mais feliz, florp."
 WURT.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "A noite me deixa forte, florp!"
 WURT.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Sem mais poder da noite, florp..."
 
+WURT.ANNOUNCE_KYNO_PANICBUFF_START = "Todo mundo assustado, florp!"
+WURT.ANNOUNCE_KYNO_PANICBUFF_END = "Ninguém assustado agora, florp."
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Peixes bonitinhos sempre estão no pantano!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... errado..."

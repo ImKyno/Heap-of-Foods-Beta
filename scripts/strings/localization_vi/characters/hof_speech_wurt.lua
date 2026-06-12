@@ -98,6 +98,9 @@ WURT.ANNOUNCE_KYNO_WETNESSBUFF_END = "Mưa không còn làm mình vui nữa, flo
 WURT.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Ban đêm làm ta mạnh hơn, florp!"
 WURT.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Không còn sức mạnh ban đêm nữa, florp..."
 
+WURT.ANNOUNCE_KYNO_PANICBUFF_START = "Mọi người đều sợ, florp!"
+WURT.ANNOUNCE_KYNO_PANICBUFF_END = "Không ai còn sợ nữa, florp."
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Cá đẹp ở trong đầm lầy!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... sai rồi..."

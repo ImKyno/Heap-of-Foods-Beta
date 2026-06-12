@@ -98,6 +98,9 @@ WILLOW.ANNOUNCE_KYNO_WETNESSBUFF_END = "Tá bom, agora voltei a odiar ficar molh
 WILLOW.ANNOUNCE_KYNO_NIGHTKILLBUFF_START = "Finalmente. Hora da escuridão fazer seu trabalho."
 WILLOW.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Ugh. De volta ao normal."
 
+WILLOW.ANNOUNCE_KYNO_PANICBUFF_START = "Heh. É melhor eles correrem."
+WILLOW.ANNOUNCE_KYNO_PANICBUFF_END = "Ah, eles não estão mais com medo."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso colocar algo diferente aqui!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, coisa errada!"
