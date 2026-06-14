@@ -68,6 +68,9 @@ if TUNING.HOF_IS_DHD_ENABLED then
 	print("Heap of Foods Mod - WARNING: Dehydrated Mod is enabled!")
 	print("Heap of Foods Mod - WARNING: Dehydrated Mod has incompatible patches for this mod.")
 
+	-- Unfortunately this doesn't update properly for Craft Pot Mods and still shows
+	-- incorrect recipes despite them being valid in the server-side.
+	-- The real fix lies on their side by correcting the ingredient tags, for now this will do.
 	AddSimPostInit(function()
 		print("Heap of Foods Mod - WARNING: Dehydrated Mod is overriding key ingredients.")
 		print("Heap of Foods Mod - WARNING: Trying to re-apply patches...")
