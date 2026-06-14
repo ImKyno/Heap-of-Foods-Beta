@@ -108,6 +108,7 @@ local INIT_POSTINIT_PREFABS =
 	"mushroomsprout",
 	"mushtrees",
 	"oceanfish",
+	"oceanvine",
 	"parsnip",
 	"perd",
 	"pigking",

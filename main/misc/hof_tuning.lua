@@ -30,6 +30,7 @@ TUNING.HOF_WARLYSPICES = GetModConfigData("WARLYSPICES")
 TUNING.HOF_IS_TAP_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2428854303") or _G.KnownModIndex:IsModEnabled("workshop-3631126354") -- Seppy's Architect Pack Mod.
 TUNING.HOF_IS_NET_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2528541304") -- Not Enough Turfs Mod.
 TUNING.HOF_IS_TCP_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2174681153") -- Apparels Overload Mod.
+TUNING.HOF_IS_DHD_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-3004639365") -- Dehydrated Mod.
 
 TUNING.PROTOTYPER_TREES.MEALING_ONE       = TechTree.Create({ MEALING       = 1 })
 TUNING.PROTOTYPER_TREES.MEALING_TWO       = TechTree.Create({ MEALING       = 2 })

@@ -113,18 +113,30 @@ AddStategraphState("wilson",
 		tags = { "doing", "busy", "nodangle" },
 
 		onenter = function(inst, timeout)
+			if timeout == nil then
+				timeout = 1
+			elseif timeout > 1 then
+				inst.sg:AddStateTag("slowaction")
+			end
+
+			inst.sg:SetTimeout(inst:HasTag("fasthands") and 0.3 or timeout)
 			inst.components.locomotor:Stop()
 			inst.SoundEmitter:PlaySound("dontstarve/wilson/make_trap", "make")
 
-			if timeout ~= nil then
-				inst.sg:SetTimeout(timeout)
-				inst.sg.statemem.delayed = true
-				inst.AnimState:PlayAnimation("build_pre")
-				inst.AnimState:PushAnimation("build_loop", true)
-			else
-				inst.sg:SetTimeout(.5)
-				inst.AnimState:PlayAnimation("construct_pre")
-				inst.AnimState:PushAnimation("construct_loop", true)
+			if inst.bufferedaction ~= nil and inst.bufferedaction.target ~= nil then
+				inst.sg.statemem.dohighaction = (inst.bufferedaction.target:HasTag("pickable_tall")
+				and not inst.components.rider:IsRiding()) or false
+			end
+
+			inst.AnimState:PlayAnimation(inst.sg.statemem.dohighaction and "construct_pre" or "build_pre")
+			inst.AnimState:PushAnimation(inst.sg.statemem.dohighaction and "construct_loop" or "build_loop", true)
+
+			if inst.bufferedaction ~= nil then
+				inst.sg.statemem.action = inst.bufferedaction
+
+				if inst.bufferedaction.target ~= nil and inst.bufferedaction.target:IsValid() then
+					inst.bufferedaction.target:PushEvent("startlongaction", inst)
+				end
 			end
 		end,
 
@@ -135,26 +147,14 @@ AddStategraphState("wilson",
 					inst.sg:RemoveStateTag("busy")
 				end
 			end),
-			TimeEvent(6 * FRAMES, function(inst)
-				if not (inst.sg.statemem.delayed or inst:PerformBufferedAction()) then
-					inst.sg:RemoveStateTag("busy")
-				end
-			end),
-			TimeEvent(9 * FRAMES, function(inst)
-				if not (inst.sg.statemem.delayed or inst:PerformBufferedAction()) then
-					inst.sg:RemoveStateTag("busy")
-				end
-			end),
 		},
 
 		ontimeout = function(inst)
-			if not inst.sg.statemem.delayed then
-				inst.SoundEmitter:KillSound("make")
-				inst.AnimState:PlayAnimation("construct_pst")
-			elseif not inst:PerformBufferedAction() then
-				inst.SoundEmitter:KillSound("make")
-				inst.AnimState:PlayAnimation("build_pst")
-			end
+			inst.SoundEmitter:KillSound("make")
+			inst.AnimState:PlayAnimation(inst.sg.statemem.dohighaction and "construct_pst" or "build_pst")
+
+			inst.sg:RemoveStateTag("busy")
+			inst:PerformBufferedAction()
 		end,
 
 		events =
@@ -167,8 +167,11 @@ AddStategraphState("wilson",
 		},
 
 		onexit = function(inst)
-			if not inst.sg.statemem.constructing then
-				inst.SoundEmitter:KillSound("make")
+			inst.SoundEmitter:KillSound("make")
+
+			if inst.bufferedaction == inst.sg.statemem.action
+			and (inst.components.playercontroller == nil or inst.components.playercontroller.lastheldaction ~= inst.bufferedaction) then
+				inst:ClearBufferedAction()
 			end
 		end,
 	}
@@ -179,64 +182,49 @@ AddStategraphState("wilson_client",
 		name = "pickable_tall",
 		tags = { "doing", "busy", "nodangle" },
 
-		onenter = function(inst, timeout)
+		onenter = function(inst)
 			inst.components.locomotor:Stop()
-			inst.SoundEmitter:PlaySound("dontstarve/wilson/make_trap", "make")
+			inst.SoundEmitter:PlaySound("dontstarve/wilson/make_trap", "make_preview")
 
-			if timeout ~= nil then
-				inst.sg:SetTimeout(timeout)
-				inst.sg.statemem.delayed = true
-				inst.AnimState:PlayAnimation("build_pre")
-				inst.AnimState:PushAnimation("build_loop", true)
-			else
-				inst.sg:SetTimeout(.5)
-				inst.AnimState:PlayAnimation("construct_pre")
-				inst.AnimState:PushAnimation("construct_loop", true)
-			end
+			if inst.bufferedaction ~= nil and inst.bufferedaction.target ~= nil then
+				local rider = inst.replica.rider
+				inst.sg.statemem.dohighaction = (inst.bufferedaction.target:HasTag("high_dolongaction") and (rider == nil or not rider:IsRiding())) or false
+            end
+
+			inst.AnimState:PlayAnimation(inst.sg.statemem.dohighaction and "construct_pre" or "build_pre")
+			inst.AnimState:PushAnimation(inst.sg.statemem.dohighaction and "construct_loop" or "build_loop", true)
+
+			inst:PerformPreviewBufferedAction()
+			inst.sg:SetTimeout(inst:HasTag("fasthands") and 0.3 or 1)
 		end,
 
 		timeline =
 		{
 			TimeEvent(3 * FRAMES, function(inst)
-				if inst.sg.statemem.delayed then
-					inst.sg:RemoveStateTag("busy")
-				end
-			end),
-			TimeEvent(6 * FRAMES, function(inst)
-				if not (inst.sg.statemem.delayed or inst:PerformBufferedAction()) then
-					inst.sg:RemoveStateTag("busy")
-				end
-			end),
-			TimeEvent(9 * FRAMES, function(inst)
-				if not (inst.sg.statemem.delayed or inst:PerformBufferedAction()) then
-					inst.sg:RemoveStateTag("busy")
-				end
+				inst.sg:RemoveStateTag("busy")
 			end),
 		},
 
-		ontimeout = function(inst)
-			if not inst.sg.statemem.delayed then
-				inst.SoundEmitter:KillSound("make")
-				inst.AnimState:PlayAnimation("construct_pst")
-			elseif not inst:PerformBufferedAction() then
-				inst.SoundEmitter:KillSound("make")
-				inst.AnimState:PlayAnimation("build_pst")
+		onupdate = function(inst)
+			if inst.sg:ServerStateMatches() then
+				if inst.entity:FlattenMovementPrediction() then
+					inst.sg:GoToState("idle", "noanim")
+				end
+			elseif inst.bufferedaction == nil then
+				inst.AnimState:PlayAnimation(inst.sg.statemem.dohighaction and "construct_pst" or "build_pst")
+				inst.sg:GoToState("idle", true)
 			end
 		end,
 
-		events =
-		{
-			EventHandler("animqueueover", function(inst)
-				if inst.AnimState:AnimDone() then
-					inst.sg:GoToState("idle")
-				end
-			end),
-		},
+		ontimeout = function(inst)
+			inst:ClearBufferedAction()
+
+			inst.AnimState:PlayAnimation(inst.sg.statemem.dohighaction and "construct_pst" or "build_pst")
+			inst.sg:GoToState("idle", true)
+		end,
 
 		onexit = function(inst)
-			if not inst.sg.statemem.constructing then
-				inst.SoundEmitter:KillSound("make")
-			end
+			inst.SoundEmitter:KillSound("make_preview")
 		end,
 	}
 )

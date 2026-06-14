@@ -1,7 +1,20 @@
-local _G      = GLOBAL
-local ACTIONS = _G.ACTIONS
+local _G         = GLOBAL
+local ACTIONS    = _G.ACTIONS
+local WX78Common = require("prefabs/wx78_common")
 
 require("stategraphs/commonstates")
+
+local function GetWX78SpinState(inst, target)
+	if target ~= nil and target.components.pickable ~= nil and inst.GetModuleTypeCount and inst:GetModuleTypeCount("spin") > 0
+	and not target.components.pickable.quickpick then
+		local item = inst.components.inventory:GetEquippedItem(_G.EQUIPSLOTS.HANDS)
+
+		if WX78Common.CanSpinUsingItem(item) then
+			return not inst.sg:HasStateTag("prespin")
+			and (inst.sg:HasStateTag("spinning") and "wx_spin" or "wx_spin_start") or nil
+		end
+	end
+end
 
 -- Change the animations of some things.
 AddStategraphPostInit("wilson", function(sg)
@@ -28,13 +41,27 @@ AddStategraphPostInit("wilson", function(sg)
 	-- Currently for Pineapple Bushes and Palm Trees.
 	sg.actionhandlers[ACTIONS.PICK].deststate = function(inst, action, ...)
 		local target = action.target or action.invobject
+		local spinstate = GetWX78SpinState(inst, target)
 
-		if target and target:HasTags({"plant", "pickable_tall"}) and inst.components.rider ~= nil and not inst.components.rider:IsRiding() then
-			return "pickable_tall" -- "construct"
+		if target and target:HasTags({"plant", "pickable_tall"}) and inst.components.rider ~= nil
+		and not inst.components.rider:IsRiding() then
+			if spinstate ~= nil then
+				return spinstate
+			end
+
+			return "pickable_tall"
 		end
 
 		-- Haste Buff.
 		if inst:HasTag("fasthands") then
+			if spinstate ~= nil then
+				return spinstate
+			end
+
+			if target and target:HasTag("pickable_tall") then
+				return "pickable_tall"
+			end
+
 			return "doshortaction"
 		end
 

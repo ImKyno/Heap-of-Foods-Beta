@@ -4,9 +4,9 @@ local assets_weeds =
 {
     Asset("ANIM", "anim/kyno_veggies.zip"),
 	
-    Asset("ANIM", "anim/firenettles.zip"),
-    Asset("ANIM", "anim/forgetmelots.zip"),
-    Asset("ANIM", "anim/tillweed.zip"),
+    Asset("ANIM", "anim/firenettles2.zip"),
+    Asset("ANIM", "anim/forgetmelots2.zip"),
+    Asset("ANIM", "anim/tillweed2.zip"),
 	
     Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
     Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
