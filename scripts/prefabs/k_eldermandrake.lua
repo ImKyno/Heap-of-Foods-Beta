@@ -20,6 +20,14 @@ local prefabs =
 
 local MAX_TARGET_SHARES = 5
 local SHARE_TARGET_DIST = 30
+local WEEDS_SEED_CHANCE = TUNING.KYNO_ELDERMANDRAKE_WEED_SEED_CHANCE
+
+local SPECIAL_SEEDS =
+{
+	firenettles_seeds  = WEEDS_SEED_CHANCE,
+	forgetmelots_seeds = WEEDS_SEED_CHANCE,
+	tillweed_seeds     = WEEDS_SEED_CHANCE,
+}
 
 local function OnPickRandomSeed()
 	local season = TheWorld.state.season
@@ -27,19 +35,24 @@ local function OnPickRandomSeed()
 	local season_mod = TUNING.SEED_WEIGHT_SEASON_MOD
 
 	for k, v in pairs(VEGGIES) do
-		weights[k] = v.seed_weight * ((PLANT_DEFS[k] and PLANT_DEFS[k].good_seasons[season]) and season_mod or 1)
+		weights[k.."_seeds"] = v.seed_weight * ((PLANT_DEFS[k] and PLANT_DEFS[k].good_seasons[season]) and season_mod or 1)
 	end
 
-	return weighted_random_choice(weights).."_seeds"
+	for seed, weight in pairs(SPECIAL_SEEDS) do
+        weights[seed] = weight
+    end
+
+	return weighted_random_choice(weights)
 end
 
 local function OnPickExtraLoot()
 	local choices =
 	{
-		twigs                = 1,
-		cutgrass             = 1,
-		succulent_picked     = 1,
-		[OnPickRandomSeed()] = 1,
+		twigs                = 15,
+		cutgrass             = 15,
+		succulent_picked     = 10,
+		mandrake             = 5,
+		[OnPickRandomSeed()] = 8,
 	}
 
 	return weighted_random_choice(choices)

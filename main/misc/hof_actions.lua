@@ -573,7 +573,7 @@ end)
 local function GetFirepit(inst)
 	if not inst.firepit or not inst.firepit:IsValid() or not inst.firepit.components.fueled then
 		local x, y, z = inst.Transform:GetWorldPosition()
-		local ents = _G.TheSim:FindEntities(x, y, z, 0.1, {"firepit"})
+		local ents = _G.TheSim:FindEntities(x, y, z, 0.01)
 
 		inst.firepit = nil
 
@@ -594,11 +594,15 @@ ACTIONS.STORE.fn = function(act, ...)
 	local item = act.invobject
 
 	if target ~= nil and target:HasTag("cookwarestewer") then
-		if target.components.container ~= nil and target.components.container:CanTakeItemInSlot(item) then
-			return _STOREfn(act, ...)
-		end
+		local container = target.components.container
 
-		if item ~= nil and target.components.container ~= nil and not target.components.container:CanTakeItemInSlot(item) then
+		if container ~= nil then
+			local canstore = container:CanTakeItemInSlot(item)
+
+			if canstore then
+				return _STOREfn(act, ...)
+			end
+
 			local firepit = GetFirepit(target)
 
 			if firepit ~= nil and firepit.components.fueled ~= nil then
@@ -1084,7 +1088,9 @@ ACTIONS.STORE.stroverridefn = function(act)
 		end
 
 		if isfuel then
-			return STRINGS.ACTIONS.ADDFUEL
+			-- return STRINGS.ACTIONS.ADDFUEL
+			return type(STRINGS.ACTIONS.ADDFUEL) == "table"
+			and STRINGS.ACTIONS.ADDFUEL.ADDFUEL or STRINGS.ACTIONS.ADDFUEL
 		end
 
 		if isfood or cancook then
@@ -1100,7 +1106,9 @@ ACTIONS.STORE.stroverridefn = function(act)
 		end
 
 		if isfuel and not cancook then
-			return STRINGS.ACTIONS.ADDFUEL
+			-- return STRINGS.ACTIONS.ADDFUEL
+			return type(STRINGS.ACTIONS.ADDFUEL) == "table"
+			and STRINGS.ACTIONS.ADDFUEL.ADDFUEL or STRINGS.ACTIONS.ADDFUEL
 		end
 
 		return STRINGS.ACTIONS.COOK
