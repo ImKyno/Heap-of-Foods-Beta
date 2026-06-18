@@ -519,21 +519,19 @@ function PlantBoosterBonusYield(inst, data)
 					end
 				end
 			end
-		end
+		else
+			local product = inst.components.pickable ~= nil and inst.components.pickable.product or nil
 
-		return
-	end
+			if product ~= nil then
+				local item = SpawnPrefab(product)
 
-	local product = inst.components.pickable ~= nil and inst.components.pickable.product or nil
-
-	if product ~= nil then
-		local item = SpawnPrefab(product)
-
-		if item ~= nil then
-			if picker ~= nil and picker.components.inventory ~= nil and item.components.inventoryitem ~= nil then
-				picker.components.inventory:GiveItem(item, nil, pt)
-			else
-				LaunchAt(item, inst, nil, 1, 1)
+				if item ~= nil then
+					if picker ~= nil and picker.components.inventory ~= nil and item.components.inventoryitem ~= nil then
+						picker.components.inventory:GiveItem(item, nil, pt)
+					else
+						LaunchAt(item, inst, nil, 1, 1)
+					end
+				end
 			end
 		end
 	end

@@ -17,43 +17,6 @@ local DefaultAtlas2        = "images/inventoryimages2.xml"
 local ModAtlas             = "images/inventoryimages/hof_inventoryimages.xml"
 local CraftingFilterAtlas  = "images/tabimages/hof_tabimages.xml"
 
--- For sorting recipe.
--- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
-local function SortRecipe(a, b, filter_name, offset)
-	local filter = _G.CRAFTING_FILTERS[filter_name]
-
-	if filter and filter.recipes then
-		for sortvalue, product in ipairs(filter.recipes) do
-			if product == a then
-				table.remove(filter.recipes, sortvalue)
-				break
-			end
-		end
-
-		local target_position = #filter.recipes + 1
-
-		for sortvalue, product in ipairs(filter.recipes) do
-			if product == b then
-				target_position = sortvalue + offset
-				break
-			end
-		end
-
-		table.insert(filter.recipes, target_position, a)
-	end
-end
-
-local function SortBefore(a, b, filter_name)
-	SortRecipe(a, b, filter_name, 0)
-end
-
-local function SortAfter(a, b, filter_name)
-	SortRecipe(a, b, filter_name, 1)
-end
-
--- Using Bananas instead of Cave Bananas.
-AllRecipes["wormwood_reeds"].ingredients = {Ingredient("kyno_banana", 1, ModAtlas)}
-
 -- Wurt can craft her structures on Tidal Marsh ground.
 -- Source: https://steamcommunity.com/sharedfiles/filedetails/?id=3435352667
 local _IsMarshLand = AllRecipes["mermhouse_crafted"].testfn
@@ -72,76 +35,47 @@ AllRecipes["merm_toolshed_upgraded"].testfn  = IsTidalMarshLand
 AllRecipes["merm_armory"].testfn             = IsTidalMarshLand
 AllRecipes["merm_armory_upgraded"].testfn    = IsTidalMarshLand
 
--- Custom TechTree for Stations.
+-- Using Bananas instead of Cave Bananas.
+AllRecipes["wormwood_reeds"].ingredients = {Ingredient("kyno_banana", 1, ModAtlas)}
+
+-- Custom TechTree for Crafting Stations and NPCs.
+TECH.MEALING            = { MEALING          = 1  }
+TECH.MEALING_ONE        = { MEALING          = 1  }
+TECH.MEALING_TWO        = { MEALING          = 2  }
+
+TECH.SERENITYSHOP       = { SERENITYSHOP     = 1  }
+TECH.SERENITYSHOP_ONE   = { SERENITYSHOP     = 1  }
+TECH.SERENITYSHOP_TWO   = { SERENITYSHOP     = 2  }
+
+TECH.MEADOWSHOP         = { MEADOWSHOP       = 1  }
+TECH.MEADOWSHOP_ONE     = { MEADOWSHOP       = 1  }
+TECH.MEADOWSHOP_TWO     = { MEADOWSHOP       = 2  }
+
+TECH.DECIDUOUSSHOP      = { DECIDUOUSSHOP    = 1  }
+TECH.DECIDUOUSSHOP_ONE  = { DECIDUOUSSHOP    = 1  }
+TECH.DECIDUOUSSHOP_TWO  = { DECIDUOUSSHOP    = 2  }
+
+TECH.HOFBIRTHDAY        = { SCIENCE          = 10 }
+
+local function ResetAllTech()
+	TECH.NONE = TechTree.Create()
+
+	for k, v in pairs(AllRecipes) do
+		AllRecipes[k].level = TechTree.Create(v.level)
+	end
+
+	for k, v in pairs(TUNING.PROTOTYPER_TREES) do
+		TUNING.PROTOTYPER_TREES[k] = TechTree.Create(v)
+	end
+end
+
 table.insert(TechTree.AVAILABLE_TECH, "MEALING")
 table.insert(TechTree.AVAILABLE_TECH, "SERENITYSHOP")
 table.insert(TechTree.AVAILABLE_TECH, "MEADOWSHOP")
 table.insert(TechTree.AVAILABLE_TECH, "DECIDUOUSSHOP")
 table.insert(TechTree.AVAILABLE_TECH, "HOFBIRTHDAY")
 
-TechTree.Create = function(t)
-	t = t or {}
-
-	for i, v in ipairs(TechTree.AVAILABLE_TECH) do
-		t[v] = t[v] or 0
-	end
-
-	return t
-end
-
--- Mealing Stone.
-_G.TECH.NONE.MEALING       = 0
-_G.TECH.MEALING_ONE        = { MEALING          = 1  }
-_G.TECH.MEALING_TWO        = { MEALING          = 2  }
-
--- Pig Elder.
-_G.TECH.NONE.SERENITYSHOP  = 0
-_G.TECH.SERENITYSHOP_ONE   = { SERENITYSHOP     = 1  }
-_G.TECH.SERENITYSHOP_TWO   = { SERENITYSHOP     = 2  }
-
--- Sammy The Trader.
-_G.TECH.NONE.MEADOWSHOP    = 0
-_G.TECH.MEADOWSHOP_ONE     = { MEADOWSHOP       = 1  }
-_G.TECH.MEADOWSHOP_TWO     = { MEADOWSHOP       = 2  }
-
--- Partitio The Trader.
-_G.TECH.NONE.DECIDUOUSSHOP = 0
-_G.TECH.DECIDUOUSSHOP_ONE  = { DECIDUOUSSHOP    = 1  }
-_G.TECH.DECIDUOUSSHOP_TWO  = { DECIDUOUSSHOP    = 2  }
-
--- HoF Anniversary.
-_G.TECH.NONE.HOFBIRTHDAY   = 0
-_G.TECH.HOFBIRTHDAY        = { SCIENCE          = 10 }
-
-for k, v in pairs(TUNING.PROTOTYPER_TREES) do
-	v.MEALING 		= 0
-	v.SERENITYSHOP 	= 0
-	v.MEADOWSHOP    = 0
-	v.DECIDUOUSSHOP = 0
-	v.HOFBIRTHDAY   = 0
-end
-
-for i, v in pairs(_G.AllRecipes) do
-	if v.level.MEALING == nil then
-		v.level.MEALING = 0
-	end
-
-	if v.level.SERENITYSHOP == nil then
-		v.level.SERENITYSHOP = 0
-	end
-
-	if v.level.MEADOWSHOP == nil then
-		v.level.MEADOWSHOP = 0
-	end
-
-	if v.level.DECIDUOUSSHOP == nil then
-		v.level.DECIDUOUSSHOP = 0
-	end
-
-	if v.level.HOFBIRTHDAY == nil then
-		v.level.HOFBIRTHDAY = 0
-	end
-end
+ResetAllTech()
 
 -- Custom Recipe Filters.
 local HOF_FILTERS  =
@@ -308,8 +242,6 @@ AddRecipe2("kyno_musselstick_item", {Ingredient("twigs", 3), Ingredient("rope", 
 	},
 	{"GARDENING", "FISHING"}
 )
-SortAfter("kyno_musselstick_item", "ocean_trawler_kit", "GARDENING")
-SortAfter("kyno_musselstick_item", "kyno_fishfarmplot_construction", "FISHING")
 
 AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2), Ingredient("flint", 2), Ingredient("marble", 2)}, TECH.SCIENCE_ONE,
 	{
@@ -320,7 +252,6 @@ AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2), Ingredient("flint", 2
 	},
 	{"COOKING"}
 )
-SortAfter("kyno_mealgrinder", "wintersfeastoven", "COOKING")
 
 AddRecipe2("kyno_mushstump", {Ingredient("spoiled_food", 4), Ingredient("poop", 3), Ingredient("livinglog", 2)}, TECH.SCIENCE_TWO,
 	{
@@ -331,7 +262,6 @@ AddRecipe2("kyno_mushstump", {Ingredient("spoiled_food", 4), Ingredient("poop", 
 	},
 	{"GARDENING"}
 )
-SortAfter("kyno_mushstump", "mushroom_farm", "GARDENING")
 
 AddRecipe2("kyno_floatilizer", {Ingredient("poop", 3), Ingredient("kelp", 2), Ingredient("rocks", 4)}, TECH.SCIENCE_TWO,
 	{
@@ -340,7 +270,6 @@ AddRecipe2("kyno_floatilizer", {Ingredient("poop", 3), Ingredient("kelp", 2), In
 	},
 	{"GARDENING"}
 )
-SortAfter("kyno_floatilizer", "fertilizer", "GARDENING")
 
 AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1), Ingredient("boards", 1), Ingredient("rope", 1)}, TECH.SCIENCE_ONE,
 	{
@@ -349,7 +278,6 @@ AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1), Ingredient("boards"
 	},
 	{"TOOLS"}
 )
-SortAfter("kyno_bucket_empty", "goldenpitchfork", "TOOLS")
 
 AddRecipe2("kyno_itemslicer", {Ingredient("flint", 3), Ingredient("twigs", 2)}, TECH.SCIENCE_ONE,
 	{
@@ -358,7 +286,6 @@ AddRecipe2("kyno_itemslicer", {Ingredient("flint", 3), Ingredient("twigs", 2)}, 
 	},
 	{"TOOLS"}
 )
-SortAfter("kyno_itemslicer", "razor", "TOOLS")
 
 AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ingredient("kyno_wheat", 1, ModAtlas)}, TECH.SCIENCE_ONE,
 	{
@@ -367,7 +294,6 @@ AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ingredient("kyno_wheat", 
 	},
 	{"COOKING"}
 )
-SortAfter("kyno_brewbook", "cookbook", "COOKING")
 
 AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 3)}, TECH.SCIENCE_ONE,
 	{
@@ -378,8 +304,6 @@ AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 3), Ingredient("rope", 2), In
 	},
 	{"COOKING", "STRUCTURES"}
 )
-SortAfter("kyno_woodenkeg", "cookpot", "COOKING")
-SortAfter("kyno_woodenkeg", "cookpot", "STRUCTURES")
 
 AddRecipe2("kyno_preservesjar", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 3)}, TECH.SCIENCE_ONE,
 	{
@@ -390,8 +314,6 @@ AddRecipe2("kyno_preservesjar", {Ingredient("boards", 3), Ingredient("rope", 2),
 	},
 	{"COOKING", "STRUCTURES"}
 )
-SortAfter("kyno_preservesjar", "kyno_woodenkeg", "COOKING")
-SortAfter("kyno_preservesjar", "kyno_woodenkeg", "STRUCTURES")
 
 AddRecipe2("kyno_antchest", {Ingredient("honeycomb", 1), Ingredient("honey", 12), Ingredient("boards", 3)}, TECH.LOST,
 	{
@@ -402,9 +324,6 @@ AddRecipe2("kyno_antchest", {Ingredient("honeycomb", 1), Ingredient("honey", 12)
 	},
 	{"COOKING", "CONTAINERS", "STRUCTURES"}
 )
-SortAfter("kyno_antchest", "saltbox", "CONTAINERS")
-SortAfter("kyno_antchest", "saltbox", "STRUCTURES")
-SortAfter("kyno_antchest", "saltbox", "COOKING")
 
 AddRecipe2("kyno_garden_sprinkler", {Ingredient("gears", 3), Ingredient("ice", 15), Ingredient("trinket_6", 3)}, TECH.LOST,
 	{
@@ -415,8 +334,6 @@ AddRecipe2("kyno_garden_sprinkler", {Ingredient("gears", 3), Ingredient("ice", 1
 	},
 	{"GARDENING", "STRUCTURES"}
 )
-SortAfter("kyno_garden_sprinkler", "firesuppressor", "STRUCTURES")
-SortAfter("kyno_garden_sprinkler", "compostwrap", "GARDENING")
 
 AddRecipe2("kyno_foodsack", {Ingredient("saltrock", 10), Ingredient("malbatross_feathered_weave", 4), Ingredient("bluegem", 1)}, TECH.LOST,
 	{
@@ -425,8 +342,6 @@ AddRecipe2("kyno_foodsack", {Ingredient("saltrock", 10), Ingredient("malbatross_
 	},
 	{"COOKING", "CONTAINERS"}
 )
-SortAfter("kyno_foodsack", "icepack", "COOKING")
-SortAfter("kyno_foodsack", "icepack", "CONTAINERS")
 
 AddRecipe2("slow_farmplot", {Ingredient("cutgrass", 8), Ingredient("poop", 4), Ingredient("log", 4)}, TECH.LOST,
 	{
@@ -438,8 +353,6 @@ AddRecipe2("slow_farmplot", {Ingredient("cutgrass", 8), Ingredient("poop", 4), I
 	},
 	{"GARDENING", "STRUCTURES"}
 )
-SortAfter("slow_farmplot", "farm_plow_item", "GARDENING")
-SortAfter("slow_farmplot", "meatrack", "STRUCTURES")
 
 AddRecipe2("fast_farmplot", {Ingredient("cutgrass", 10), Ingredient("poop", 6), Ingredient("rocks", 4)}, TECH.LOST,
 	{
@@ -451,8 +364,6 @@ AddRecipe2("fast_farmplot", {Ingredient("cutgrass", 10), Ingredient("poop", 6), 
 	},
 	{"GARDENING", "STRUCTURES"}
 )
-SortAfter("fast_farmplot", "slow_farmplot", "GARDENING")
-SortAfter("fast_farmplot", "slow_farmplot", "STRUCTURES")
 
 AddRecipe2("kyno_itemshowcaser", {Ingredient("boards", 3), Ingredient("rope", 3), Ingredient("moonglass", 5)}, TECH.CARPENTRY_THREE,
 	{
@@ -464,7 +375,6 @@ AddRecipe2("kyno_itemshowcaser", {Ingredient("boards", 3), Ingredient("rope", 3)
 	},
 	{"CRAFTING_STATION", "STRUCTURES"}
 )
-SortAfter("kyno_itemshowcaser", "endtable", "STRUCTURES")
 
 AddRecipe2("kyno_messagebottle_empty", {Ingredient("moonglass", 3)}, TECH.SCIENCE_ONE,
 	{
@@ -481,7 +391,6 @@ AddRecipe2("kyno_malbatrossfood", {Ingredient("chum", 1), Ingredient("oceanfish_
 	},
 	{"FISHING"}
 )
-SortAfter("kyno_malbatrossfood", "chum", "FISHING")
 
 AddRecipe2("kyno_oceantrap", {Ingredient("kyno_seaweeds", 4, ModAtlas), Ingredient("kyno_messagebottle_empty", 2, ModAtlas), Ingredient("kyno_jellyfish", 1, ModAtlas)}, TECH.FISHING_ONE,
 	{
@@ -490,8 +399,6 @@ AddRecipe2("kyno_oceantrap", {Ingredient("kyno_seaweeds", 4, ModAtlas), Ingredie
 	},
 	{"TOOLS", "GARDENING", "FISHING"}
 )
-SortAfter("kyno_oceantrap", "trap", "TOOLS")
-SortAfter("kyno_oceantrap", "trap", "GARDENING")
 
 AddRecipe2("kyno_brainrock_nubbin", {Ingredient("rocks", 6), Ingredient("kyno_brainrock_larvae", 1, ModAtlas)}, TECH.SEAFARING_ONE,
 	{
@@ -500,7 +407,6 @@ AddRecipe2("kyno_brainrock_nubbin", {Ingredient("rocks", 6), Ingredient("kyno_br
 	},
 	{"REFINE", "SEAFARING"}
 )
-SortAfter("kyno_brainrock_nubbin", "dock_woodposts_item", "SEAFARING")
 
 AddRecipe2("kyno_fishregistryhat", {Ingredient("strawhat", 1), Ingredient("oceanfishinglure_spinner_red", 3), Ingredient("kyno_seaweeds", 1, ModAtlas)}, TECH.FISHING_ONE,
 	{
@@ -509,8 +415,6 @@ AddRecipe2("kyno_fishregistryhat", {Ingredient("strawhat", 1), Ingredient("ocean
 	},
 	{"FISHING", "GARDENING"}
 )
-SortAfter("kyno_fishregistryhat", "tacklestation", "FISHING")
-SortAfter("kyno_fishregistryhat", "plantregistryhat", "GARDENING")
 
 AddRecipe2("kyno_animalfeeder", {Ingredient("seeds", 3), Ingredient("kyno_wheat", 3, ModAtlas), Ingredient("boards", 3)}, TECH.SCIENCE_ONE,
 	{
@@ -521,7 +425,6 @@ AddRecipe2("kyno_animalfeeder", {Ingredient("seeds", 3), Ingredient("kyno_wheat"
 	},
 	{"GARDENING"}
 )
-SortAfter("kyno_animalfeeder", "kyno_mushstump", "GARDENING")
 
 AddRecipe2("kyno_chickenhouse", {Ingredient("kyno_chicken2", 3, ModAtlas, true), Ingredient("cutgrass", 3), Ingredient("boards", 3)}, TECH.SCIENCE_TWO,
 	{
@@ -532,7 +435,6 @@ AddRecipe2("kyno_chickenhouse", {Ingredient("kyno_chicken2", 3, ModAtlas, true),
 	},
 	{"GARDENING"}
 )
-SortAfter("kyno_chickenhouse", "beebox", "GARDENING")
 
 AddDeconstructRecipe("kyno_chicken2", {}, { no_deconstruction = true })
 
@@ -555,7 +457,6 @@ AddRecipe2("kyno_eldermandrakehouse", {Ingredient("boards", 4), Ingredient("kyno
 	},
 	{"STRUCTURES"}
 )
-SortAfter("kyno_eldermandrakehouse", "rabbithouse", "STRUCTURES")
 
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
@@ -566,9 +467,6 @@ AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyru
 	},
 	{"CONTAINERS", "COOKING"}
 )
-SortAfter("potatosack2", "mighty_gym", "CHARACTER")
-SortBefore("potatosack2", "icebox", "CONTAINERS")
-SortBefore("potatosack2", "icebox", "COOKING")
 
 AddDeconstructRecipe("potatosack", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)})
 
@@ -594,8 +492,6 @@ AddCharacterRecipe("kyno_fishermermhut_wurt", {Ingredient("boards", 4), Ingredie
 	},
 	{"STRUCTURES"}
 )
-SortAfter("kyno_fishermermhut_wurt", "mermhouse_crafted", "CHARACTER")
-SortAfter("kyno_fishermermhut_wurt", "mermhouse_crafted", "STRUCTURES")
 
 AddCharacterRecipe("wurt_turf_tidalmarsh", {Ingredient("cutreeds", 1), Ingredient("ice", 2)}, TECH.NONE,
 	{
@@ -608,8 +504,6 @@ AddCharacterRecipe("wurt_turf_tidalmarsh", {Ingredient("cutreeds", 1), Ingredien
 	},
 	{"DECOR"}
 )
-SortAfter("wurt_turf_tidalmarsh", "wurt_turf_marsh", "CHARACTER")
-SortAfter("wurt_turf_tidalmarsh", "turf_marsh", "DECOR")
 
 -- Holy shit... he's back.
 AddCharacterRecipe("kyno_book_gardening", {Ingredient("book_horticulture_upgraded", 1), Ingredient("fertilizer", 1), Ingredient("papyrus", 2)}, TECH.BOOKCRAFT_ONE,
@@ -621,7 +515,6 @@ AddCharacterRecipe("kyno_book_gardening", {Ingredient("book_horticulture_upgrade
 		image               = "book_gardening.tex",
 	}
 )
-SortAfter("kyno_book_gardening", "book_horticulture_upgraded", "CHARACTER")
 
 -- New transmutations for Wilson.
 AddCharacterRecipe("transmute_red_cap", {Ingredient("green_cap", 1)}, TECH.NONE,
@@ -634,7 +527,6 @@ AddCharacterRecipe("transmute_red_cap", {Ingredient("green_cap", 1)}, TECH.NONE,
 		image               = "red_cap.tex",
 	}
 )
-SortBefore("transmute_red_cap", "transmute_meat", "CHARACTER")
 
 AddCharacterRecipe("transmute_green_cap", {Ingredient("red_cap", 3)}, TECH.NONE,
 	{
@@ -645,7 +537,6 @@ AddCharacterRecipe("transmute_green_cap", {Ingredient("red_cap", 3)}, TECH.NONE,
 		image               = "green_cap.tex",
 	}
 )
-SortAfter("transmute_green_cap", "transmute_red_cap", "CHARACTER")
 
 AddCharacterRecipe("transmute_succulent", {Ingredient("foliage", 1)}, TECH.NONE,
 	{
@@ -656,7 +547,6 @@ AddCharacterRecipe("transmute_succulent", {Ingredient("foliage", 1)}, TECH.NONE,
 		image               = "succulent_picked.tex",
 	}
 )
-SortAfter("transmute_succulent", "transmute_green_cap", "CHARACTER")
 
 AddCharacterRecipe("transmute_foliage", {Ingredient("succulent_picked", 1)}, TECH.NONE,
 	{
@@ -667,7 +557,6 @@ AddCharacterRecipe("transmute_foliage", {Ingredient("succulent_picked", 1)}, TEC
 		image               = "foliage.tex",
 	}
 )
-SortAfter("transmute_foliage", "transmute_succulent", "CHARACTER")
 
 AddCharacterRecipe("transmute_blue_cap", {Ingredient("moon_cap", 1)}, TECH.NONE,
 	{
@@ -679,7 +568,6 @@ AddCharacterRecipe("transmute_blue_cap", {Ingredient("moon_cap", 1)}, TECH.NONE,
 		image               = "blue_cap.tex",
 	}
 )
-SortAfter("transmute_blue_cap", "transmute_green_cap", "CHARACTER")
 
 AddCharacterRecipe("transmute_moon_cap", {Ingredient("blue_cap", 3)}, TECH.NONE,
 	{
@@ -690,7 +578,6 @@ AddCharacterRecipe("transmute_moon_cap", {Ingredient("blue_cap", 3)}, TECH.NONE,
 		image               = "moon_cap.tex",
 	}
 )
-SortAfter("transmute_moon_cap", "transmute_blue_cap", "CHARACTER")
 
 AddCharacterRecipe("transmute_kyno_white_cap", {Ingredient("kyno_truffles", 1, ModAtlas)}, TECH.NONE,
 	{
@@ -702,7 +589,6 @@ AddCharacterRecipe("transmute_kyno_white_cap", {Ingredient("kyno_truffles", 1, M
 		image               = "kyno_white_cap.tex",
 	}
 )
-SortAfter("transmute_kyno_white_cap", "transmute_moon_cap", "CHARACTER")
 
 AddCharacterRecipe("transmute_kyno_sporecap", {Ingredient("red_cap", 1), Ingredient("green_cap", 1), Ingredient("blue_cap", 1), Ingredient("moon_cap", 1),
 Ingredient("kyno_white_cap", 1, ModAtlas)}, TECH.NONE,
@@ -714,7 +600,17 @@ Ingredient("kyno_white_cap", 1, ModAtlas)}, TECH.NONE,
 		image               = "kyno_sporecap.tex",
 	}
 )
-SortAfter("transmute_kyno_sporecap", "transmute_kyno_white_cap", "CHARACTER")
+
+AddCharacterRecipe("transmute_kyno_sporecap_dark", {Ingredient("red_cap", 1), Ingredient("green_cap", 1), Ingredient("blue_cap", 1), Ingredient("moon_cap", 1),
+Ingredient("kyno_white_cap", 1, ModAtlas)}, TECH.NONE,
+	{
+		product             = "kyno_sporecap_dark",
+		description         = "transmute_kyno_sporecap_dark",
+		builder_skill       = "wilson_alchemy_10",
+		atlas               = ModAtlas,
+		image               = "kyno_sporecap_dark.tex",
+	}
+)
 
 AddCharacterRecipe("transmute_kyno_truffles", {Ingredient("kyno_white_cap", 3, ModAtlas)}, TECH.NONE,
 	{
@@ -725,7 +621,6 @@ AddCharacterRecipe("transmute_kyno_truffles", {Ingredient("kyno_white_cap", 3, M
 		image               = "kyno_truffles.tex",
 	}
 )
-SortAfter("transmute_kyno_truffles", "transmute_kyno_sporecap", "CHARACTER")
 
 AddCharacterRecipe("transmute_berries", {Ingredient("berries_juicy", 1)}, TECH.NONE,
 	{
@@ -737,7 +632,6 @@ AddCharacterRecipe("transmute_berries", {Ingredient("berries_juicy", 1)}, TECH.N
 		image               = "berries.tex",
 	}
 )
-SortAfter("transmute_berries", "transmute_kyno_truffles", "CHARACTER")
 
 AddCharacterRecipe("transmute_berries_juicy", {Ingredient("berries", 3)}, TECH.NONE,
 	{
@@ -748,7 +642,6 @@ AddCharacterRecipe("transmute_berries_juicy", {Ingredient("berries", 3)}, TECH.N
 		image               = "berries_juicy.tex",
 	}
 )
-SortAfter("transmute_berries_juicy", "transmute_berries", "CHARACTER")
 
 AddCharacterRecipe("transmute_fishmeat", {Ingredient("fishmeat_small", 3)}, TECH.NONE,
 	{
@@ -759,7 +652,6 @@ AddCharacterRecipe("transmute_fishmeat", {Ingredient("fishmeat_small", 3)}, TECH
 		image               = "fishmeat.tex",
 	}
 )
-SortAfter("transmute_fishmeat", "transmute_smallmeat", "CHARACTER")
 
 AddCharacterRecipe("transmute_fishmeat_small", {Ingredient("fishmeat", 1)}, TECH.NONE,
 	{
@@ -771,7 +663,6 @@ AddCharacterRecipe("transmute_fishmeat_small", {Ingredient("fishmeat", 1)}, TECH
 		image               = "fishmeat_small.tex",
 	}
 )
-SortAfter("transmute_fishmeat_small", "transmute_fishmeat", "CHARACTER")
 
 AddCharacterRecipe("transmute_fossil_piece", {Ingredient("kyno_worm_bone", 3, ModAtlas)}, TECH.NONE,
 	{
@@ -782,7 +673,6 @@ AddCharacterRecipe("transmute_fossil_piece", {Ingredient("kyno_worm_bone", 3, Mo
 		image               = "fossil_piece.tex",
 	}
 )
-SortAfter("transmute_fossil_piece", "transmute_houndstooth", "CHARACTER")
 
 AddCharacterRecipe("transmute_kyno_worm_bone", {Ingredient("fossil_piece", 1)}, TECH.NONE,
 	{
@@ -794,7 +684,6 @@ AddCharacterRecipe("transmute_kyno_worm_bone", {Ingredient("fossil_piece", 1)}, 
 		image               = "kyno_worm_bone.tex",
 	}
 )
-SortAfter("transmute_kyno_worm_bone", "transmute_fossil_piece", "CHARACTER")
 
 AddRecipe2("hermitshop_kyno_malbatrossfood_blueprint", {Ingredient("messagebottleempty", 10)}, TECH.HERMITCRABSHOP_SEVEN,
 	{
@@ -809,7 +698,6 @@ AddRecipe2("hermitshop_kyno_malbatrossfood_blueprint", {Ingredient("messagebottl
 	},
 	{"CRAFTING_STATION"}
 )
-SortAfter("hermitshop_kyno_malbatrossfood_blueprint", "hermitshop_chum_blueprint", "CRAFTING_STATION")
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 if HOF_WARLYMEALGRINDER then
@@ -941,14 +829,6 @@ for i = 1, NUM_TEASHOP_LEVELS do
 	)
 end
 
-SortAfter("kyno_hermitcrabtea_aloe_1", "hermitcrabtea_succulent_picked_1", "CRAFTING_STATION")
-SortAfter("kyno_hermitcrabtea_aloe_2", "hermitcrabtea_succulent_picked_2", "CRAFTING_STATION")
-SortAfter("kyno_hermitcrabtea_aloe_3", "hermitcrabtea_succulent_picked_3", "CRAFTING_STATION")
-
-SortAfter("kyno_hermitcrabtea_sugartree_petals_1", "hermitcrabtea_petals_evil_1", "CRAFTING_STATION")
-SortAfter("kyno_hermitcrabtea_sugartree_petals_2", "hermitcrabtea_petals_evil_2", "CRAFTING_STATION")
-SortAfter("kyno_hermitcrabtea_sugartree_petals_3", "hermitcrabtea_petals_evil_3", "CRAFTING_STATION")
-
 -- Construction Plans.
 AddRecipe2("kyno_fishfarmplot_construction", {}, TECH.LOST,
 	{
@@ -962,7 +842,6 @@ AddRecipe2("kyno_fishfarmplot_construction", {}, TECH.LOST,
 	},
 	{"GARDENING", "FISHING"}
 )
-SortAfter("kyno_fishfarmplot_construction", "trophyscale_fish", "FISHING")
 
 CONSTRUCTION_PLANS["kyno_fishfarmplot_construction"] =
 {

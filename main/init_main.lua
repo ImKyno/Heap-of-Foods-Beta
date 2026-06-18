@@ -11,6 +11,7 @@ local INIT_MAIN_MISC =
 	"recipes_hofbirthday",
 	"recipes_serenity",
 	"recipes_meadow",
+	"recipes_sorting",
 	"popups",
 	"actions",
 	"stategraphs",

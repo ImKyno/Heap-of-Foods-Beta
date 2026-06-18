@@ -11,40 +11,6 @@ local DefaultAtlas        = "images/inventoryimages.xml"
 local DefaultAtlas1       = "images/inventoryimages1.xml"
 local ModAtlas            = "images/inventoryimages/hof_inventoryimages.xml"
 
--- For sorting recipe.
--- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
-local function SortRecipe(a, b, filter_name, offset)
-	local filter = _G.CRAFTING_FILTERS[filter_name]
-
-	if filter and filter.recipes then
-		for sortvalue, product in ipairs(filter.recipes) do
-			if product == a then
-				table.remove(filter.recipes, sortvalue)
-				break
-			end
-		end
-
-		local target_position = #filter.recipes + 1
-
-		for sortvalue, product in ipairs(filter.recipes) do
-			if product == b then
-				target_position = sortvalue + offset
-				break
-			end
-		end
-
-		table.insert(filter.recipes, target_position, a)
-	end
-end
-
-local function SortBefore(a, b, filter_name)
-	SortRecipe(a, b, filter_name, 0)
-end
-
-local function SortAfter(a, b, filter_name)
-	SortRecipe(a, b, filter_name, 1)
-end
-
 -- Pig Elder Shop.
 AddRecipe2("kyno_saltrack_installer_p", {Ingredient("kyno_salmonfish", 2, ModAtlas)}, TECH.SERENITYSHOP_ONE,
 	{

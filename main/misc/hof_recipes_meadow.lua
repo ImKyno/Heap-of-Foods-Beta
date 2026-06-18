@@ -13,40 +13,6 @@ local DefaultAtlas2    = "images/inventoryimages2.xml"
 local DefaultAtlas3    = "images/inventoryimages3.xml"
 local ModAtlas         = "images/inventoryimages/hof_inventoryimages.xml"
 
--- For sorting recipe.
--- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
-local function SortRecipe(a, b, filter_name, offset)
-	local filter = _G.CRAFTING_FILTERS[filter_name]
-
-	if filter and filter.recipes then
-		for sortvalue, product in ipairs(filter.recipes) do
-			if product == a then
-				table.remove(filter.recipes, sortvalue)
-				break
-			end
-		end
-
-		local target_position = #filter.recipes + 1
-
-		for sortvalue, product in ipairs(filter.recipes) do
-			if product == b then
-				target_position = sortvalue + offset
-				break
-			end
-		end
-
-		table.insert(filter.recipes, target_position, a)
-	end
-end
-
-local function SortBefore(a, b, filter_name)
-	SortRecipe(a, b, filter_name, 0)
-end
-
-local function SortAfter(a, b, filter_name)
-	SortRecipe(a, b, filter_name, 1)
-end
-
 -- Sammy The Merchant.
 AddRecipe2("meadowislandtrader_kyno_itemslicer_gold", {Ingredient("goldnugget", 20)}, TECH.LOST,
 	{

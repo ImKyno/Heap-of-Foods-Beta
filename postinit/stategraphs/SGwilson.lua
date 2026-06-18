@@ -4,6 +4,22 @@ local WX78Common = require("prefabs/wx78_common")
 
 require("stategraphs/commonstates")
 
+-- This blocks the Haste Buff.
+local RECIPE_STATES_BLACKLIST =
+{
+	give                   = true,
+	carvewood              = true,
+	carvewood_boards       = true,
+	form_log               = true,
+	form_moon              = true,
+	form_bush              = true,
+	form_bush2             = true,
+	form_juicy             = true,
+	form_monkey            = true,
+	form_bulb              = true,
+	spawn_mutated_creature = true,
+}
+
 local function GetWX78SpinState(inst, target)
 	if target ~= nil and target.components.pickable ~= nil and inst.GetModuleTypeCount and inst:GetModuleTypeCount("spin") > 0
 	and not target.components.pickable.quickpick then
@@ -80,8 +96,9 @@ AddStategraphPostInit("wilson", function(sg)
 
 	sg.actionhandlers[ACTIONS.BUILD].deststate = function(inst, action, ...)
 		local target = action.target or action.invobject
+		local recipe = _G.GetValidRecipe(action.recipe)
 
-		if inst:HasTag("fasthands") then
+		if recipe ~= nil and not RECIPE_STATES_BLACKLIST[recipe.sg_state] and inst:HasTag("fasthands") then
 			return "domediumaction" -- doshortaction is too fast, ruins the mood.
 		end
 

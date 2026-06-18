@@ -7,10 +7,10 @@ local AMBIENT_TILES =
 {
 	[WORLD_TILES.QUAGMIRE_CITYSTONE] =
 	{
-		sound       = "dontstarve/AMB/rocky",
-		wintersound = "dontstarve/AMB/rocky_winter",
-		springsound = "dontstarve/AMB/rocky",
-		summersound = "dontstarve_DLC001/AMB/rocky_summer",
+		sound       = "dontstarve/AMB/quagmire/city_stone",
+		wintersound = "dontstarve/AMB/quagmire/city_stone",
+		springsound = "dontstarve/AMB/quagmire/city_stone",
+		summersound = "dontstarve/AMB/quagmire/city_stone",
 		rainsound   = "dontstarve/AMB/rocky_rain",
 	},
 
@@ -40,44 +40,6 @@ local AMBIENT_TILES =
 		summersound = "dontstarve_DLC001/AMB/marsh_summer",
 		rainsound   = "dontstarve/AMB/marsh_rain"
 	},
-
-	--[[
-	[WORLD_TILES.HOF_DESERT_ROCK] =
-	{
-		sound       = "dontstarve/AMB/badland",
-		wintersound = "dontstarve/AMB/badland_winter",
-		springsound = "dontstarve/AMB/badland",
-		summersound = "dontstarve_DLC001/AMB/badland_summer",
-		rainsound   = "dontstarve/AMB/badland_rain",
-	},
-
-	[WORLD_TILES.HOF_SINKHOLE_YELLOW] =
-	{
-		sound       = "dontstarve/AMB/badland",
-		wintersound = "dontstarve/AMB/badland_winter",
-		springsound = "dontstarve/AMB/badland",
-		summersound = "dontstarve_DLC001/AMB/badland_summer",
-		rainsound   = "dontstarve/AMB/badland_rain",
-	},
-
-	[WORLD_TILES.HOF_GRASS_ARID] =
-	{
-		sound       = "dontstarve/AMB/badland",
-		wintersound = "dontstarve/AMB/badland_winter",
-		springsound = "dontstarve/AMB/badland",
-		summersound = "dontstarve_DLC001/AMB/badland_summer",
-		rainsound   = "dontstarve/AMB/badland_rain",
-	},
-
-	[WORLD_TILES.HOF_GRASS_IVY] =
-	{
-		sound       = "dontstarve/AMB/badland",
-		wintersound = "dontstarve/AMB/badland_winter",
-		springsound = "dontstarve/AMB/badland",
-		summersound = "dontstarve_DLC001/AMB/badland_summer",
-		rainsound   = "dontstarve/AMB/badland_rain",
-	},
-	]]--
 }
 
 -- This runs in client-side only.

@@ -650,6 +650,7 @@ local HOF_ICONS =
 	"kyno_wheat_cooked",
 	"kyno_white_cap",
 	"kyno_white_cap_cooked",
+	"kyno_woodenkeg",
 	"kyno_worm_bone",
 	"lavaeeggboiled",
 	"lazydessert",

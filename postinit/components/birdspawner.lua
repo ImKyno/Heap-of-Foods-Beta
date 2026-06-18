@@ -1,5 +1,6 @@
 local _G            = GLOBAL
 local require       = _G.require
+local WORLD_TILES   = _G.WORLD_TILES
 local UpvalueHacker = require("tools/hof_upvaluehacker")
 
 -- New birds will spawn when landing on these turfs.

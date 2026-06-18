@@ -2203,6 +2203,7 @@ STRINGS.RECIPE_DESC.TRANSMUTE_GREEN_CAP = "Chuyển hóa Nấm Đỏ thành Nấ
 STRINGS.RECIPE_DESC.TRANSMUTE_BLUE_CAP = "Chuyển hóa Nấm Mặt Trăng thành Nấm Xanh Dương."
 STRINGS.RECIPE_DESC.TRANSMUTE_MOON_CAP = "Chuyển hóa Nấm Xanh Dương thành Nấm Mặt Trăng."
 STRINGS.RECIPE_DESC.TRANSMUTE_KYNO_SPORECAP = "Chuyển hóa Nhiều Loại Nấm thành Nấm Tàn Lụi."
+STRINGS.RECIPE_DESC.TRANSMUTE_KYNO_SPORECAP_DARK = "Biến đổi nhiều loại nấm thành một Mũ Nấm Độc Hại."
 STRINGS.RECIPE_DESC.TRANSMUTE_BERRIES = "Chuyển hóa Quả Mọng Nước thành Quả Mọng."
 STRINGS.RECIPE_DESC.TRANSMUTE_BERRIES_JUICY = "Chuyển hóa Quả Mọng thành Quả Mọng Nước."
 STRINGS.RECIPE_DESC.TRANSMUTE_FISHMEAT_SMALL = "Chuyển hóa Cá Sống thành Mẩu Cá."

@@ -2203,6 +2203,7 @@ STRINGS.RECIPE_DESC.TRANSMUTE_GREEN_CAP = "Transmute Cogumelos Vermelhos em um C
 STRINGS.RECIPE_DESC.TRANSMUTE_BLUE_CAP = "Transmute um Cogumelo Lunar em um Cogumelo Azul."
 STRINGS.RECIPE_DESC.TRANSMUTE_MOON_CAP = "Transmute Cogumelos Azuis em um Cogumelo Lunar."
 STRINGS.RECIPE_DESC.TRANSMUTE_KYNO_SPORECAP = "Transmute vários Cogumelos em um Cogumelo-praga."
+STRINGS.RECIPE_DESC.TRANSMUTE_KYNO_SPORECAP_DARK = "Transmute vários Cogumelos em um Cogumelo Nocivo."
 STRINGS.RECIPE_DESC.TRANSMUTE_BERRIES = "Transmute Bagas Suculentas em Bagas."
 STRINGS.RECIPE_DESC.TRANSMUTE_BERRIES_JUICY = "Transmute Bagas em Bagas Suculentas."
 STRINGS.RECIPE_DESC.TRANSMUTE_FISHMEAT_SMALL = "Transmute Peixe Cru em Peixe Pequeno."

@@ -77,11 +77,6 @@ local function AncientTreeSimPostInit()
 	if WORLD_TILES.QUAGMIRE_CITYSTONE ~= nil then
 		TREE_DEFS.gem.GROW_CONSTRAINT.TILE[WORLD_TILES.QUAGMIRE_CITYSTONE] = true
 	end
-
-	-- Not Enough Turfs support.
-	if WORLD_TILES.TIDALMARSH ~= nil then
-		TREE_DEFS.nightvision.GROW_CONSTRAINT.TILE[WORLD_TILES.TIDALMARSH] = true
-	end
 end
 
 AddSimPostInit(WorldSimPostInit)
