@@ -892,7 +892,7 @@ if TUNING.HOF_WARLYSPICES then
 		{"CRAFTING_STATION"}
 	)
 
-	AddRecipe2("spice_cold", {Ingredient("oceanfish_medium_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
+	AddRecipe2("spice_cold", {Ingredient("ice", 3)}, TECH.FOODPROCESSING_ONE,
 		{
 			nounlock            = true,
 			builder_tag         = "spicemaker",
@@ -903,7 +903,7 @@ if TUNING.HOF_WARLYSPICES then
 		{"CRAFTING_STATION"}
 	)
 
-	AddRecipe2("spice_fire", {Ingredient("oceanfish_small_8_inv", 1)}, TECH.FOODPROCESSING_ONE,
+	AddRecipe2("spice_fire", {Ingredient("firenettles", 3)}, TECH.FOODPROCESSING_ONE,
 		{
 			nounlock            = true,
 			builder_tag         = "spicemaker",

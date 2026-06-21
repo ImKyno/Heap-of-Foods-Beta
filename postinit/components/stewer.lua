@@ -66,6 +66,13 @@ AddComponentPostInit("stewer", function(self)
 						end
 					end
 				end
+
+				-- Preserver Powder spice refreshes spoilage time.
+				if loot_captured and loot_captured.components.perishable ~= nil
+				and loot_captured.prefab:find("_spice_cure$") then
+					loot_captured.components.perishable:SetPercent(1)
+					loot_captured.components.perishable:StartPerishing()
+				end
 			end
 
 			return result

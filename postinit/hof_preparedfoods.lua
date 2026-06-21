@@ -77,6 +77,20 @@ VanillaFood.mandrakesoup.test = function(cooker, names, tags)
 	return names.mandrake and not tags.flour
 end
 
+local _shroombait_oneatenfn = VanillaFood.shroombait.oneatenfn
+VanillaFood.shroombait.oneatenfn = function(inst, eater)
+	if _shroombait_oneatenfn ~= nil then
+		_shroombait_oneatenfn(inst, eater)
+	end
+
+	if eater ~= nil and eater:HasTag("playermonster") and
+	not (eater.components.health ~= nil and eater.components.health:IsDead()) and
+	not eater:HasTag("playerghost") then
+		eater.components.health:DoDelta(20)
+		eater.components.sanity:DoDelta(20)
+	end
+end
+
 -- For Preservation Powder Spice.
 for k, v in pairs(VanillaFood) do
 	AddPrefabPostInit(v, function(inst, data)

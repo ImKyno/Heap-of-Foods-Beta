@@ -296,7 +296,7 @@ local function ShouldAcceptItem(inst, item, giver)
 	end
 
 	if IsSpecialEventActive(SPECIAL_EVENTS.HOFBIRTHDAY) then
-		if item.components.inventoryitem ~= nil and item:HasAnyTag("partitiofood", "anniversaryfood") 
+		if item.components.inventoryitem ~= nil and item:HasAnyTag("partitiofood", "anniversaryfood")
 		and not inst:HasTag("hatless") and not giver:HasTag("playermerm") then -- We don't take gifts from mermfolk!
 			return true
 		end
@@ -368,6 +368,7 @@ local function fn()
 
 	inst.AnimState:Hide("ARM_carry_up")
 
+	inst:AddTag("nomagic") -- No teleporting!
 	inst:AddTag("character")
 	inst:AddTag("pig")
 	inst:AddTag("trader")
@@ -418,7 +419,7 @@ local function fn()
 
 	inst:AddComponent("craftingstation")
 	inst:AddComponent("knownlocations")
-	
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
 

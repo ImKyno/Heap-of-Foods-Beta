@@ -8,9 +8,9 @@
 -- Insanity, Max Stats, Night, Night Vision, Nukashine, Preserver, Sanity, Stealth,
 -- Wetness, Panic
 local banddt = 1
-local FOLLOWER_ONEOF_TAGS = {"pig"}
-local FOLLOWER_CANT_TAGS = {"werepig", "merm", "player"}
-local HAUNTEDFOLLOWER_MUST_TAGS = {"pig"}
+local FOLLOWER_ONEOF_TAGS       = { "pig" }
+local FOLLOWER_CANT_TAGS        = { "werepig", "merm", "player" }
+local HAUNTEDFOLLOWER_MUST_TAGS = { "pig" }
 
 local function DisableBand(inst)
 	if inst.updatetask then
@@ -86,23 +86,23 @@ local function RemoveDappernessResistance(owner, equippable)
 	end
 end
 
-local function ApplyPirateBonusDamage(inst, target, damage, weapon)
+local function GetPirateBonusDamage(inst, target)
 	return (target:HasTag("pirate") and TUNING.KYNO_PIRATEBUFF_EXTRADAMAGE) or 0
 end
 
-local function ApplyWormBonusDamage(inst, target, damage, weapon)
+local function GetWormBonusDamage(inst, target)
 	local WORM_TAGS = {"worm", "worm_boss_piece"}
 
 	return (target:HasOneOfTags(WORM_TAGS) and TUNING.KYNO_WORMBUFF_EXTRADAMAGE) or 0
 end
 
-local function ApplyCrabBonusDamage(inst, target, damage, weapon)
+local function GetCrabBonusDamage(inst, target)
 	local CRAB_TAGS = {"crabking", "crabking_ally", "crab_mob"}
 
 	return (target:HasOneOfTags(CRAB_TAGS) and TUNING.KYNO_CRABBUFF_EXTRADAMAGE) or 0
 end
 
-local function ApplyAmphibianBonusDamage(inst, target, damage, weapon)
+local function GetAmphibianBonusDamage(inst, target)
 	local AMPHIBIAN_TAGS = {"merm", "frog", "toadstool"}
 
 	return (target:HasOneOfTags(AMPHIBIAN_TAGS) and TUNING.KYNO_AMPHIBIANBUFF_EXTRADAMAGE) or 0
@@ -204,11 +204,11 @@ local function OnAttached(inst, target)
 	end
 
 	-- Pirate, Worm, Crab, Amphibian
-	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.bonusdamagefn = ApplyPirateBonusDamage
-		target.components.combat.bonusdamagefn = ApplyWormBonusDamage
-		target.components.combat.bonusdamagefn = ApplyCrabBonusDamage
-		target.components.combat.bonusdamagefn = ApplyAmphibianBonusDamage
+	if target.components.damagetypebonus ~= nil then
+		target.components.damagetypebonus:AddBonusCallback(GetPirateBonusDamage)
+		target.components.damagetypebonus:AddBonusCallback(GetWormBonusDamage)
+		target.components.damagetypebonus:AddBonusCallback(GetCrabBonusDamage)
+		target.components.damagetypebonus:RemoveBonusCallback(GetAmphibianBonusDamage)
 	end
 
 	-- Planar Defense
@@ -342,8 +342,11 @@ local function OnDetached(inst, target)
 	end
 
 	-- Pirate, Worm, Crab, Amphibian
-	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.bonusdamagefn = nil
+	if target.components.damagetypebonus ~= nil then
+		target.components.damagetypebonus:RemoveBonusCallback(GetPirateBonusDamage)
+		target.components.damagetypebonus:RemoveBonusCallback(GetWormBonusDamage)
+		target.components.damagetypebonus:RemoveBonusCallback(GetCrabBonusDamage)
+		target.components.damagetypebonus:RemoveBonusCallback(GetAmphibianBonusDamage)
 	end
 
 	-- Planar Defense
@@ -532,11 +535,11 @@ local function OnExtended(inst, target)
 	end
 
 	-- Pirate, Worm, Crab, Amphibian
-	if target.components.combat ~= nil and target:HasTag("player") then
-		target.components.combat.bonusdamagefn = ApplyPirateBonusDamage
-		target.components.combat.bonusdamagefn = ApplyWormBonusDamage
-		target.components.combat.bonusdamagefn = ApplyCrabBonusDamage
-		target.components.combat.bonusdamagefn = ApplyAmphibianBonusDamage
+	if target.components.damagetypebonus ~= nil then
+		target.components.damagetypebonus:AddBonusCallback(GetPirateBonusDamage)
+		target.components.damagetypebonus:AddBonusCallback(GetWormBonusDamage)
+		target.components.damagetypebonus:AddBonusCallback(GetCrabBonusDamage)
+		target.components.damagetypebonus:RemoveBonusCallback(GetAmphibianBonusDamage)
 	end
 
 	-- Planar Defense

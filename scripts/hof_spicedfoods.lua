@@ -14,21 +14,33 @@ if TUNING.HOF_WARLYSPICES then
 
 	local hof_spicedfoods = {}
 
+	local function oneaten_cure(inst, eater)
+		eater:AddDebuff("kyno_spice_curebuff", "kyno_spice_curebuff")
+	end
+
 	local function oneaten_cold(inst, eater)
-		eater:AddDebuff("kyno_freezebuff", "kyno_freezebuff")
+		eater:AddDebuff("kyno_spice_coldbuff", "kyno_spice_coldbuff")
 	end
 
 	local function oneaten_fire(inst, eater)
-		eater:AddDebuff("kyno_firebuff", "kyno_firebuff")
+		eater:AddDebuff("kyno_spice_firebuff", "kyno_spice_firebuff")
+	end
+
+	local function oneaten_mind(inst, eater)
+		eater:AddDebuff("kyno_spice_mindbuff", "kyno_spice_mindbuff")
+	end
+
+	local function oneaten_fed(inst, eater)
+		eater:AddDebuff("kyno_spice_fedbuff", "kyno_spice_fedbuff")
 	end
 
 	local HOF_SPICES =
-	{	
-		SPICE_CURE   = {},
-		SPICE_COLD   = { oneatenfn = oneaten_cold, prefabs = { "kyno_freezebuff" } },
-		SPICE_FIRE   = { oneatenfn = oneaten_fire, prefabs = { "kyno_firebuff"   } },
-		SPICE_MIND   = {},
-		SPICE_FED    = {},
+	{
+		SPICE_CURE   = { oneatenfn = oneaten_cure, prefabs = { "kyno_spice_curebuff" }},
+		SPICE_COLD   = { oneatenfn = oneaten_cold, prefabs = { "kyno_spice_coldbuff" }},
+		SPICE_FIRE   = { oneatenfn = oneaten_fire, prefabs = { "kyno_spice_firebuff" }},
+		SPICE_MIND   = { oneatenfn = oneaten_mind, prefabs = { "kyno_spice_mindbuff" }},
+		SPICE_FED    = { oneatenfn = oneaten_fed,  prefabs = { "kyno_spice_fedbuff"  }},
 	}
 
 	local anim_state_override_symbol = AnimState.OverrideSymbol
@@ -36,7 +48,7 @@ if TUNING.HOF_WARLYSPICES then
 		if symbol == "swap_garnish" and override_build == "spices" and HOF_SPICES[override_symbol:upper()] then
 			override_build = "kyno_spices"
 		end
-	
+
 		return anim_state_override_symbol(self, symbol, override_build, override_symbol, ...)
 	end
 
@@ -45,7 +57,7 @@ if TUNING.HOF_WARLYSPICES then
 			for spicenameupper, spicedata in pairs(HOF_SPICES) do
 				local newdata = shallowcopy(fooddata)
 				local spicename = string.lower(spicenameupper)
-			
+
 				if foodname == "wetgoop" then
 					newdata.test = function(cooker, names, tags) return names[spicename] end
 					newdata.priority = -10
@@ -53,7 +65,7 @@ if TUNING.HOF_WARLYSPICES then
 					newdata.test = function(cooker, names, tags) return names[foodname] and names[spicename] end
 					newdata.priority = 100
 				end
-			
+
 				newdata.cooktime = .12
 				newdata.stacksize = nil
 				newdata.spice = spicenameupper
@@ -64,30 +76,37 @@ if TUNING.HOF_WARLYSPICES then
 				newdata.cookbook_category = fooddata.cookbook_category ~= nil and ("spiced_"..fooddata.cookbook_category) or nil
 
 				hof_spicedfoods[newdata.name] = newdata
-			
+
 				if spicename == "spice_cure" then
 					if newdata.perishtime then
-						newdata.perishtime = newdata.perishtime * 2.5 or 0 -- TUNING.KYNO_PRESERVERBUFF_PERISHTIME
+						newdata.perishtime = newdata.perishtime * TUNING.KYNO_SPICE_CUREBUFF_PERISHTIME_RATE or 0
+					end
+
+					--[[
+					if newdata.degrades_with_spoilage then
 						newdata.degrades_with_spoilage = false
 					end
+					]]--
 				end
-			
+
 				if spicename == "spice_cold" then
 					if newdata.temperature == nil then
 						newdata.temperature = TUNING.COLD_FOOD_BONUS_TEMP
-						newdata.temperatureduration = TUNING.FOOD_TEMP_LONG
+						newdata.temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION
 					elseif newdata.temperature > 0 then
-						newdata.temperatureduration = math.max(newdata.temperatureduration, TUNING.FOOD_TEMP_LONG)
+						-- newdata.temperature = TUNING.COLD_FOOD_BONUS_TEMP
+						newdata.temperatureduration = math.max(newdata.temperatureduration, TUNING.BUFF_FOOD_TEMP_DURATION)
 					end
 				end
-			
+
 				if spicename == "spice_fire" then
 					if newdata.temperature == nil then
 						newdata.temperature = TUNING.HOT_FOOD_BONUS_TEMP
-						newdata.temperatureduration = TUNING.FOOD_TEMP_LONG
+						newdata.temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION
 						newdata.nochill = true
 					elseif newdata.temperature > 0 then
-						newdata.temperatureduration = math.max(newdata.temperatureduration, TUNING.FOOD_TEMP_LONG)
+						-- newdata.temperature = TUNING.HOT_FOOD_BONUS_TEMP
+						newdata.temperatureduration = math.max(newdata.temperatureduration, TUNING.BUFF_FOOD_TEMP_DURATION)
 						newdata.nochill = true
 					end
 				end
@@ -95,11 +114,11 @@ if TUNING.HOF_WARLYSPICES then
 				if spicedata.prefabs ~= nil then
 					newdata.prefabs = newdata.prefabs ~= nil and ArrayUnion(newdata.prefabs, spicedata.prefabs) or spicedata.prefabs
 				end
-			
+
 				if spicedata.oneatenfn ~= nil then
 					if newdata.oneatenfn ~= nil then
 						local oneatenfn_old = newdata.oneatenfn
-						
+
 						newdata.oneatenfn = function(inst, eater)
 							spicedata.oneatenfn(inst, eater)
 							oneatenfn_old(inst, eater)
@@ -131,7 +150,7 @@ else
 	if TUNING.HOF_DEBUG_MODE then
 		print("Heap of Foods Mod - Loading Spiced Foods with vanilla spices only.")
 	end
-	
+
 	local spicedfoods   = {}
 	local foods         = require("hof_foodrecipes")
 	local foods_w       = require("hof_foodrecipes_warly")

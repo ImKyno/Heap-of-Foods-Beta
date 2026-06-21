@@ -52,6 +52,8 @@ local function EatFoodAction(inst)
     end
 end
 
+local ITEM_CANT_TAGS = { "INLIMBO", "trap", "irreplaceable", "heavy", "outofreach", "mineactive", "spider", "fire", "catchable", "_container" }
+
 local function PickupAction(inst)
     if inst.components.inventory:NumItems() < 1 then
         local target = FindEntity(inst, SEE_STOLEN_ITEM_DIST,
@@ -64,9 +66,7 @@ local function PickupAction(inst)
                     not item.components.inventoryitem:IsHeld() and
                     item.components.inventoryitem.canbepickedup and
                     item.components.container == nil and
-                    item:IsOnValidGround() and
-                    not item:HasTag("trap") and 
-                    not item:HasTag("irreplaceable")
+                    item:IsOnValidGround() and not item:HasAnyTag(ITEM_CANT_TAGS)
                 return isValidPickupItem
             end)
 

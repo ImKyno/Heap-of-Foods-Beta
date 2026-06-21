@@ -24,6 +24,7 @@ local INIT_POSTINIT_COMPONENTS =
 {
 	"ambientsound",
 	"birdspawner",
+	"burnable",
 	"combat",
 	"container",
 	"debuffable",
@@ -103,6 +104,7 @@ local INIT_POSTINIT_PREFABS =
 	"messagebottleempty",
 	"monkeyqueen",
 	"monkeytail",
+	"monsterfoods",
 	"mushroom_farm",
 	"mushrooms",
 	"mushroomsprout",
