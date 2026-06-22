@@ -498,11 +498,7 @@ WEBBER.DESCRIBE.COCONUTWATER = "Delicious!"
 
 WEBBER.DESCRIBE.EYEBALLSPAGHETTI = "Oh eww!"
 
-WEBBER.DESCRIBE.FORGETMELOTS_SEEDS = "We could grow something with these."
-
-WEBBER.DESCRIBE.FIRENETTLES_SEEDS = "We could grow something with these."
-
-WEBBER.DESCRIBE.TILLWEED_SEEDS = "We could grow something with these."
+WEBBER.DESCRIBE.WEED_SEEDS = "We could grow weeds with these."
 
 WEBBER.DESCRIBE.KYNO_FLOATILIZER = "I saw mum use this in her gardens."
 

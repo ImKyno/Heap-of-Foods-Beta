@@ -498,11 +498,7 @@ WALTER.DESCRIBE.COCONUTWATER = "Relaxing and refreshing."
 
 WALTER.DESCRIBE.EYEBALLSPAGHETTI = "Hahaha, this food is hilarious!"
 
-WALTER.DESCRIBE.FORGETMELOTS_SEEDS = "Yep, those are seeds!"
-
-WALTER.DESCRIBE.FIRENETTLES_SEEDS = "Yep, those are seeds!"
-
-WALTER.DESCRIBE.TILLWEED_SEEDS = "Yep, those are seeds!"
+WALTER.DESCRIBE.WEED_SEEDS = "Yep, those are seeds!"
 
 WALTER.DESCRIBE.KYNO_FLOATILIZER = "Plants love poop."
 

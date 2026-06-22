@@ -498,11 +498,7 @@ WAXWELL.DESCRIBE.COCONUTWATER = "Refreshing."
 
 WAXWELL.DESCRIBE.EYEBALLSPAGHETTI = "Why I have done this?"
 
-WAXWELL.DESCRIBE.FORGETMELOTS_SEEDS = "Such labor is beneath me."
-
-WAXWELL.DESCRIBE.FIRENETTLES_SEEDS = "Such labor is beneath me."
-
-WAXWELL.DESCRIBE.TILLWEED_SEEDS = "Such labor is beneath me."
+WAXWELL.DESCRIBE.WEED_SEEDS = "Such labor is beneath me."
 
 WAXWELL.DESCRIBE.KYNO_FLOATILIZER = "It's not gentlemanly to carry manure in one's hands."
 

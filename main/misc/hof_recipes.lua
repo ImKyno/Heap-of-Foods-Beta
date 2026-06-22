@@ -827,6 +827,21 @@ for i = 1, NUM_TEASHOP_LEVELS do
 		},
 		{"CRAFTING_STATION"}
 	)
+
+	AddRecipe2("kyno_hermitcrabtea_icenettles_"..i, {Ingredient("messagebottleempty", 1),
+	Ingredient("kyno_icenettles_dried", num_rare_petals, ModAtlas)}, TECH.LOST,
+		{
+			nounlock            = true,
+			manufactured        = true,
+			actionstr           = "HERMITCRABSHOP",
+			hint_msg            = "NEEDSHERMITCRAB_TEASHOP",
+			product             = "kyno_hermitcrabtea_icenettles",
+			sg_state            = "give",
+			atlas               = ModAtlas,
+			image               = "kyno_hermitcrabtea_icenettles.tex",
+		},
+		{"CRAFTING_STATION"}
+	)
 end
 
 -- Construction Plans.
@@ -892,7 +907,7 @@ if TUNING.HOF_WARLYSPICES then
 		{"CRAFTING_STATION"}
 	)
 
-	AddRecipe2("spice_cold", {Ingredient("ice", 3)}, TECH.FOODPROCESSING_ONE,
+	AddRecipe2("spice_cold", {Ingredient("kyno_icenettles", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
 		{
 			nounlock            = true,
 			builder_tag         = "spicemaker",

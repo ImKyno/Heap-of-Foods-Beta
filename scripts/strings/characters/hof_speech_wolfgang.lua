@@ -498,11 +498,7 @@ WOLFGANG.DESCRIBE.COCONUTWATER = "Water tastes funny, hehe."
 
 WOLFGANG.DESCRIBE.EYEBALLSPAGHETTI = "Little eyeball is food now, haha!"
 
-WOLFGANG.DESCRIBE.FORGETMELOTS_SEEDS = "Seed is too small."
-
-WOLFGANG.DESCRIBE.FIRENETTLES_SEEDS = "Seed is too small."
-
-WOLFGANG.DESCRIBE.TILLWEED_SEEDS = "Seed is too small."
+WOLFGANG.DESCRIBE.WEED_SEEDS = "Seed is too small."
 
 WOLFGANG.DESCRIBE.KYNO_FLOATILIZER = "Bucket full of smelly."
 

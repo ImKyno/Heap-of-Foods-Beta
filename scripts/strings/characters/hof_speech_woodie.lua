@@ -498,11 +498,7 @@ WOODIE.DESCRIBE.COCONUTWATER = "Nice and refreshing."
 
 WOODIE.DESCRIBE.EYEBALLSPAGHETTI = "Don't look at me, food!"
 
-WOODIE.DESCRIBE.FORGETMELOTS_SEEDS = "Tiny seeds."
-
-WOODIE.DESCRIBE.FIRENETTLES_SEEDS = "Tiny seeds."
-
-WOODIE.DESCRIBE.TILLWEED_SEEDS = "Tiny seeds."
+WOODIE.DESCRIBE.WEED_SEEDS = "Tiny weed seeds."
 
 WOODIE.DESCRIBE.KYNO_FLOATILIZER = "Poop belongs in a bucket, not on the ground."
 

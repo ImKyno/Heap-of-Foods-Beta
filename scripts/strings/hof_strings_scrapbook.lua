@@ -133,11 +133,11 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "Attacks have a small chanc
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BATILISK = "Scares nearby batilisks for a certain amount of time."
 
 -- Spice Effects.
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder halves the spoilage time and negates spoiled food penalties."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_MIND = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Soothing Sugar grants 25% more sanity."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FED = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Stuffed Starch grants 25% more hunger."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FIRE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Blaze Crystals causes your attacks to ignite targets.\n\nDuration 4 minutes.\n\nAlso raises temperature 15 degrees for 15 seconds."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_COLD = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Frozen Flakes causes your attacks to freeze targets.\n\nDuration 4 minutes.\n\nAlso lowers temperature 15 degrees for 15 seconds."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder fully restores its spoilage time.\n\nDecreases the spoilage rate of items inside the inventory by 25%.\n\nIncreases the duration of other side effects by 25%.\n\nDuration 4 minutes."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_MIND = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Soothing Sugar grants 25% more sanity.\n\nPrevents sanity drain from Darkness and from Magic Staves.\n\nIt also grants 25% resistance against negative sanity auras.\n\nDuration 4 minutes."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FED = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Stuffed Starch grants 25% more hunger.\n\nDecreases hunger rate by 15%.\n\nIt also grants 25% more health and 25% less hunger drain while Sleeping.\n\nDuration 4 minutes."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FIRE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Blaze Crystals causes your attacks to ignite targets.\n\nGrants +25% damage against burning targets.\n\nIt also raises the temperature by 40 degrees.\n\nDuration 4 minutes."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_COLD = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Frozen Flakes causes your attacks to freeze targets.\n\nGrants +25% damage against targets affected by coldness.\n\nIt also lowers temperature by 40 degrees.\n\nDuration 4 minutes."
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "Using a pinch of salt on a crock pot food will refresh its spoilage time by 30%. Don't worry about eating stale dishes again!"
@@ -180,12 +180,14 @@ STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "An oversized egg that can be t
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Can be hatched when near a source of heat."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "Tend to your wounds and cool yourself with this lovingly brewed concoction from Pearl."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "Soothe your mind and protect it against scary foes with this lovingly brewed concoction from Pearl."
+STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ICENETTLES = "Cool down yourself and your enemies with this frosty brewed cocotion from Pearl."
 STRINGS.SCRAPBOOK.SPECIALINFO.SOUNDPROOF = "Offers protection against loud noises."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_GROWTH = "Can be used to fertilize and instantly grow non farm plants.\n\nThey are not cumulative and are replaced when another Booster is used in the same plant.\n\nBoosters are removed when the plant is dug."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "Can be used to fertilize and instantly grow any plant.\n\nWhen used on Regular Plants:\n\No longer needs fertilizing and protects against targets.\n\nWhen used on Farm Plants:\n\Advances growing by one stage and protects against targets.\n\nThey are not cumulative and are replaced when another Booster is used on the same plant.\n\nBoosters are removed when the plant is dug."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Can be used to fertilize and instantly grow any plant.\n\nWhen used on Regular Plants:\n\Yield one extra product when fully grown.\n\nWhen used on Farm Plants:\n\Advances growing by one stage and yield one extra product when fully grown.\n\nThey are not cumulative and are replaced when another Booster is used on the same plant.\n\nBoosters are removed when the plant is dug."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Can be used to fertilize and instantly grow any plant.\n\nWhen used on Farm Plants:\n\Advances growing to its final stage and has 25% chance of turning farm plants into their Oversized form.\n\nThey are not cumulative and are replaced when another Booster is used on the same plant.\n\nBoosters are removed when the plant is dug."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "The primary currency of the local pig men."
+STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "A carryable container with 4 slots that will only hold seeds.\n\nSpoilage is slowed by 50%.\n\nCan be further upgraded with an Elastispacer to enhance its storage and preserving capabilities.\n\nFeather Pencil can be used to write the seed name onto it."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 40% chance of laying Eggs after eating. They have a small chance of laying a Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying a Large Egg."

@@ -634,3 +634,12 @@ function SetupInstakillOnHit(config)
 		end
 	end
 end
+
+-- This event is pushed in the world but saved in the listener.
+function PushOversizedGrownEvent(inst)
+	TheWorld:PushEvent("ms_oversizedcropgrown", { plant = inst })
+
+	if TUNING.HOF_DEBUG_MODE then
+		print("Heap of Foods Mod - Growable: Oversized Crop grown:", inst)
+	end
+end

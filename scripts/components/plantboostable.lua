@@ -267,6 +267,7 @@ local function GrowFarmPlant(inst, data)
 	if data.supergrowth and not inst:HasTag("weed") then
 		if math.random() < TUNING.KYNO_PLANTBOOSTER_SUPERGROWTH_OVERSIZED_CHANCE then
 			inst.is_oversized = true
+			PushOversizedGrownEvent(inst)
 		end
 	end
 

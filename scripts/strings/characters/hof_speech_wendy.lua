@@ -498,11 +498,7 @@ WENDY.DESCRIBE.COCONUTWATER = "Refreshing, but it is still water."
 
 WENDY.DESCRIBE.EYEBALLSPAGHETTI = "Dangerous and mortal."
 
-WENDY.DESCRIBE.FORGETMELOTS_SEEDS = "It's a plant that's waiting to be."
-
-WENDY.DESCRIBE.FIRENETTLES_SEEDS = "It's a plant that's waiting to be."
-
-WENDY.DESCRIBE.TILLWEED_SEEDS = "It's a plant that's waiting to be."
+WENDY.DESCRIBE.WEED_SEEDS = "It's a weed that's waiting to be."
 
 WENDY.DESCRIBE.KYNO_FLOATILIZER = "A bucket of grime."
 

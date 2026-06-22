@@ -15,6 +15,7 @@ local assets =
 	Asset("ANIM", "anim/kyno_meatrack_jellyfish.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_fishmeat.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_aloe.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_icenettles.zip"),
 	
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -474,6 +475,25 @@ local function fn_sugartree_petals()
 	return inst
 end
 
+local function fn_icenettles()
+	local inst = veggie_fn("kyno_meatrack_icenettles", "kyno_meatrack_icenettles", "kyno_icenettles_idle", "kyno_icenettles_dried", false)
+	
+	inst.pickupsound = "vegetation_grassy"
+	
+	if not TheWorld.ismastersim then
+        return inst
+    end
+	
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL
+	
+	inst.components.edible.healthvalue = TUNING.KYNO_ICENETTLES_DRIED_HEALTH
+	inst.components.edible.hungervalue = TUNING.KYNO_ICENETTLES_DRIED_HUNGER
+	inst.components.edible.sanityvalue = TUNING.KYNO_ICENETTLES_DRIED_SANITY
+	
+	return inst
+end
+
 return Prefab("kyno_red_cap_dried", fn_red, assets),
 Prefab("kyno_green_cap_dried", fn_green, assets),
 Prefab("kyno_blue_cap_dried", fn_blue, assets),
@@ -487,4 +507,5 @@ Prefab("kyno_jellyfish_dried", fn_jellyfish, assets),
 Prefab("kyno_fishmeat_small_dried", fn_fishmeat_small, assets),
 Prefab("kyno_fishmeat_dried", fn_fishmeat, assets),
 Prefab("kyno_aloe_dried", fn_aloe, assets),
-Prefab("kyno_sugartree_petals_dried", fn_sugartree_petals, assets)
+Prefab("kyno_sugartree_petals_dried", fn_sugartree_petals, assets),
+Prefab("kyno_icenettles_dried", fn_icenettles, assets)

@@ -2,6 +2,13 @@ local assets =
 {
 	Asset("ANIM", "anim/kyno_seedsbag.zip"),
 	Asset("ANIM", "anim/ui_chest_2x2.zip"),
+
+	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
+
+	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
+	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
+	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
 local prefabs =
@@ -9,8 +16,38 @@ local prefabs =
 	"alterguardianhatshard",
 }
 
+local function HasSeedsInside(inst)
+	if inst.components.container ~= nil then
+		for k, v in pairs(inst.components.container.slots) do
+			if v ~= nil then
+				return true
+			end
+		end
+
+		return false
+	end
+end
+
+local function UpdateAnimation(inst)
+	if HasSeedsInside(inst) then
+		inst.AnimState:PlayAnimation("full")
+
+		if inst.components.inventoryitem ~= nil then
+			inst.components.inventoryitem:ChangeImageName("kyno_seedsbag_full")
+		end
+	else
+		inst.AnimState:PlayAnimation("empty")
+
+		if inst.components.inventoryitem ~= nil then
+			inst.components.inventoryitem:ChangeImageName("kyno_seedsbag_empty")
+		end
+	end
+end
+
 local function OnOpen(inst)
-	-- inst.AnimState:PlayAnimation("open")
+	if HasSeedsInside(inst) then
+		inst.AnimState:PlayAnimation("interact")
+	end
 
 	local SoundEmitter = (inst.components.inventoryitem:GetGrandOwner() or inst).SoundEmitter
 
@@ -21,10 +58,9 @@ end
 
 local function OnClose(inst)
 	if not inst.components.inventoryitem:IsHeld() then
-		-- inst.AnimState:PlayAnimation("close")
-		-- inst.AnimState:PushAnimation("closed", false)
+		UpdateAnimation(inst)
 	else
-		-- inst.AnimState:PlayAnimation("closed", false)
+		UpdateAnimation(inst)
 	end
 
 	local SoundEmitter = (inst.components.inventoryitem:GetGrandOwner() or inst).SoundEmitter
@@ -36,7 +72,28 @@ end
 
 local function OnPutInInventory(inst)
 	inst.components.container:Close()
-	-- inst.AnimState:PlayAnimation("closed", false)
+	UpdateAnimation(inst)
+end
+
+local function OnItemGet(inst, data)
+	if HasSeedsInside(inst) then
+		inst.AnimState:PlayAnimation("interact")
+	end
+
+	UpdateAnimation(inst)
+end
+
+local function OnItemLose(inst, data)
+	if HasSeedsInside(inst) then
+		inst.AnimState:PlayAnimation("interact")
+	end
+
+	UpdateAnimation(inst)
+end
+
+local function GetStatus(inst, viewer)
+	return (HasSeedsInside(inst) and "FULL")
+	or "GENERIC"
 end
 
 local function OnUpgrade(inst, performer, upgraded_from_item)
@@ -62,7 +119,15 @@ local function OnUpgrade(inst, performer, upgraded_from_item)
 		inst.components.lootdropper:SetLoot({"alterguardianhatshard"})
 	end
 
+	if inst.components.preserver ~= nil then
+		inst.components.preserver:SetPerishRateMultiplier(TUNING.KYNO_SEEDSBAG_PRESERVER_RATE_UPGRADED)
+	end
+
 	inst.components.upgradeable.upgradetype = nil
+
+	if inst.Transform ~= nil then
+		inst.Transform:SetScale(1.3, 1.3, 1.3)
+	end
 end
 
 local function OnDecontruct(inst, caster)
@@ -77,15 +142,66 @@ local function OnDecontruct(inst, caster)
 	end
 end
 
+local function OnDisplayName(inst)
+	local seedname = inst._seedname:value()
+
+	if seedname ~= "" then
+		return subfmt(STRINGS.NAMES.KYNO_SEEDSBAG_NAMED, { item = seedname })
+	end
+
+	return STRINGS.NAMES.KYNO_SEEDSBAG
+end
+
+local function OnDrawn(inst, image, src, atlas, bgimage, bgatlas)
+	if src ~= nil then
+		-- Yeah whatever, always show the known seed name.
+		local name = STRINGS.NAMES["KNOWN_"..string.upper(src.prefab)] or src:GetBasicDisplayName() -- nil?
+
+		inst._savedseedname = name
+		inst._seedname:set(name)
+
+		inst.SoundEmitter:PlaySound("dontstarve/common/together/draw")
+
+		if HasSeedsInside(inst) then
+			inst.AnimState:PlayAnimation("interact")
+		end
+	end
+end
+
+local function OnIgnite(inst)
+	DefaultBurnFn(inst)
+
+	if inst.components.drawable ~= nil then
+		inst.components.drawable:SetCanDraw(false)
+	end
+end
+
+local function OnExtinguish(inst)
+	DefaultExtinguishFn(inst)
+
+	if inst.components.drawable ~= nil then
+		inst.components.drawable:SetCanDraw(true)
+	end
+end
+
 local function OnSave(inst, data)
 	if inst:HasTag("burnt") or inst:HasTag("fire") then
 		data.burnt = true
 	end
+
+	data.seedname = inst._savedseedname
 end
 
 local function OnLoad(inst, data)
-	if data and data.burnt then
-		inst.components.burnable.onburnt(inst)
+	if data ~= nil then
+		if data.burnt ~= nil then
+			inst.components.burnable.onburnt(inst)
+		end
+
+		if data.seedname ~= nil then
+			inst._savedseedname = data.seedname
+			inst._seedname:set(data.seedname)
+		end
 	end
 end
 
@@ -111,9 +227,16 @@ local function fn()
 
 	inst.AnimState:SetBank("kyno_seedsbag")
 	inst.AnimState:SetBuild("kyno_seedsbag")
-	inst.AnimState:PlayAnimation("idle")
+	UpdateAnimation(inst)
 
+	inst:AddTag("seedsbag")
+	inst:AddTag("drawable")
 	inst:AddTag("portablestorage")
+
+	inst.pickupsound = "cloth"
+
+	inst.displaynamefn = OnDisplayName
+	inst._seedname = net_string(inst.GUID, "kyno_seedsbag._seedname")
 
 	inst.entity:SetPristine()
 
@@ -128,12 +251,14 @@ local function fn()
 	inst:AddComponent("lootdropper")
 
 	inst:AddComponent("inspectable")
-	inst.components.inspectable.nameoverride = "SEEDPOUCH"
+	inst.components.inspectable.getstatus = GetStatus
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_seedsbag"
+
+	inst:AddComponent("drawable")
+	inst.components.drawable:SetOnDrawnFn(OnDrawn)
 
 	inst:AddComponent("preserver")
 	inst.components.preserver:SetPerishRateMultiplier(TUNING.KYNO_SEEDSBAG_PRESERVER_RATE)
@@ -150,15 +275,20 @@ local function fn()
 	inst.components.upgradeable.upgradetype = UPGRADETYPES.CHEST
 	inst.components.upgradeable:SetOnUpgradeFn(OnUpgrade)
 
+	inst:ListenForEvent("itemget", OnItemGet)
+	inst:ListenForEvent("itemlose", OnItemLose)
 	inst:ListenForEvent("ondeconstructstructure", OnDecontruct)
+
+	MakeSmallBurnable(inst)
+	MakeSmallPropagator(inst)
+	inst.components.burnable:SetOnIgniteFn(OnIgnite)
+	inst.components.burnable:SetOnExtinguishFn(OnExtinguish)
+
+	MakeHauntableLaunchAndDropFirstItem(inst)
 
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
 	inst.OnLoadPostPass = OnLoadPostPass
-
-	MakeMediumBurnable(inst)
-	MakeLargePropagator(inst)
-	MakeHauntableLaunchAndDropFirstItem(inst)
 
 	return inst
 end

@@ -1,14 +1,14 @@
 local assets =
 {
 	Asset("ANIM", "anim/kyno_seeds_kit.zip"),
-		
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
 local prefabs =
-{	
+{
 	"kyno_aloe_seeds",
 	"kyno_cucumber_seeds",
 	"kyno_fennel_seeds",
@@ -16,10 +16,11 @@ local prefabs =
 	"kyno_radish_seeds",
 	"kyno_sweetpotato_seeds",
 	"kyno_turnip_seeds",
-	
+
 	-- Exotic Seeds.
 	"firenettles_seeds",
 	"forgetmelots_seeds",
+	"icenettles_seeds",
 	"tillweed_seeds",
 	"kyno_rice_seeds",
 }
@@ -32,81 +33,87 @@ local KIT_LOOT =
 		"kyno_aloe_seeds",
 		"kyno_aloe_seeds",
 	},
-	
+
 	[2]  =
 	{
 		"kyno_cucumber_seeds",
 		"kyno_cucumber_seeds",
 		"kyno_cucumber_seeds",
 	},
-	
+
 	[3]  =
 	{
 		"kyno_fennel_seeds",
 		"kyno_fennel_seeds",
 		"kyno_fennel_seeds",
 	},
-	
+
 	[4]  =
 	{
 		"kyno_parznip_seeds",
 		"kyno_parznip_seeds",
 		"kyno_parznip_seeds",
 	},
-	
+
 	[5]  =
 	{
 		"kyno_radish_seeds",
 		"kyno_radish_seeds",
 		"kyno_radish_seeds",
 	},
-	
+
 	[6]  =
 	{
 		"kyno_sweetpotato_seeds",
 		"kyno_sweetpotato_seeds",
 		"kyno_sweetpotato_seeds",
 	},
-	
+
 	[7]  =
 	{
 		"kyno_turnip_seeds",
 		"kyno_turnip_seeds",
 		"kyno_turnip_seeds",
 	},
-	
+
 	[8]  =
 	{
 		"kyno_rice_seeds",
 		"kyno_rice_seeds",
 		"kyno_rice_seeds",
 	},
-	
+
 	[9]  =
 	{
 		"firenettles_seeds",
 		"firenettles_seeds",
 		"firenettles_seeds",
 	},
-	
+
 	[10] =
 	{
 		"forgetmelots_seeds",
 		"forgetmelots_seeds",
 		"forgetmelots_seeds",
 	},
-	
+
 	[11] =
 	{
 		"tillweed_seeds",
 		"tillweed_seeds",
 		"tillweed_seeds",
 	},
+	[12] =
+	{
+		"icenettles_seeds",
+		"icenettles_seeds",
+		"icenettles_seeds",
+	},
 }
 
 local function GetItemData(id, KIT_LOOT)
 	local data = {}
-	
+
 	for _, itemprefab in ipairs(KIT_LOOT[id]) do
 		local item = SpawnPrefab(itemprefab)
 		if item then
@@ -115,7 +122,7 @@ local function GetItemData(id, KIT_LOOT)
 			item:Remove()
 		end
 	end
-	
+
 	return data
 end
 
@@ -127,7 +134,7 @@ local function OnUnwrapped(inst, pos, doer)
 
 	inst.components.inventoryitem.canbepickedup = false
 	inst.components.unwrappable.canbeunwrapped = false
-	
+
 	inst.AnimState:PlayAnimation("unwrap")
 
 	if doer ~= nil and doer.SoundEmitter ~= nil then
@@ -160,13 +167,13 @@ local function kitfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-		
+
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	
+
 	inst:AddComponent("unwrappable")
 	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
 
@@ -220,7 +227,7 @@ end
 
 local function parznipkitfn()
 	local inst = kitfn()
-	
+
 	inst.AnimState:PlayAnimation("parznip")
 
 	if not TheWorld.ismastersim then
@@ -235,7 +242,7 @@ end
 
 local function radishkitfn()
 	local inst = kitfn()
-	
+
 	inst.AnimState:PlayAnimation("radish")
 
 	if not TheWorld.ismastersim then
@@ -256,7 +263,7 @@ local function sweetpotatokitfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst.components.inventoryitem.imagename = "kyno_seeds_kit_sweetpotato"
 	inst.components.unwrappable.itemdata = GetItemData(6, KIT_LOOT)
 
@@ -265,7 +272,7 @@ end
 
 local function turnipkitfn()
 	local inst = kitfn()
-	
+
 	inst.AnimState:PlayAnimation("turnip")
 
 	if not TheWorld.ismastersim then
@@ -280,7 +287,7 @@ end
 
 local function ricekitfn()
 	local inst = kitfn()
-	
+
 	inst.AnimState:PlayAnimation("rice")
 
 	if not TheWorld.ismastersim then
@@ -295,7 +302,7 @@ end
 
 local function firenettleskitfn()
 	local inst = kitfn()
-	
+
 	inst.AnimState:PlayAnimation("firenettles")
 
 	if not TheWorld.ismastersim then
@@ -310,7 +317,7 @@ end
 
 local function forgetmelotskitfn()
 	local inst = kitfn()
-	
+
 	inst.AnimState:PlayAnimation("forgetmelots")
 
 	if not TheWorld.ismastersim then
@@ -325,7 +332,7 @@ end
 
 local function tillweedkitfn()
 	local inst = kitfn()
-	
+
 	inst.AnimState:PlayAnimation("tillweed")
 
 	if not TheWorld.ismastersim then
@@ -334,6 +341,21 @@ local function tillweedkitfn()
 
 	inst.components.inventoryitem.imagename = "kyno_seeds_kit_tillweed"
 	inst.components.unwrappable.itemdata = GetItemData(11, KIT_LOOT)
+
+	return inst
+end
+
+local function icenettleskitfn()
+	local inst = kitfn()
+
+	inst.AnimState:PlayAnimation("icenettles")
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst.components.inventoryitem.imagename = "kyno_seeds_kit_icenettles"
+	inst.components.unwrappable.itemdata = GetItemData(12, KIT_LOOT)
 
 	return inst
 end
@@ -348,4 +370,5 @@ Prefab("kyno_seeds_kit_turnip", turnipkitfn, assets, prefabs),
 Prefab("kyno_seeds_kit_rice", ricekitfn, assets, prefabs),
 Prefab("kyno_seeds_kit_firenettles", firenettleskitfn, assets, prefabs),
 Prefab("kyno_seeds_kit_forgetmelots", forgetmelotskitfn, assets, prefabs),
-Prefab("kyno_seeds_kit_tillweed", tillweedkitfn, assets, prefabs)
+Prefab("kyno_seeds_kit_tillweed", tillweedkitfn, assets, prefabs),
+Prefab("kyno_seeds_kit_icenettles", icenettleskitfn, assets, prefabs)

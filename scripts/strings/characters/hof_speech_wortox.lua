@@ -498,11 +498,7 @@ WORTOX.DESCRIBE.COCONUTWATER = "Relief to be sure."
 
 WORTOX.DESCRIBE.EYEBALLSPAGHETTI = "I know this will not end good."
 
-WORTOX.DESCRIBE.FORGETMELOTS_SEEDS = "Grow a seed and you shall feed!"
-
-WORTOX.DESCRIBE.FIRENETTLES_SEEDS = "Grow a seed and you shall feed!"
-
-WORTOX.DESCRIBE.TILLWEED_SEEDS = "Grow a seed and you shall feed!"
+WORTOX.DESCRIBE.WEED_SEEDS = "Grow a seed and you shall feed!"
 
 WORTOX.DESCRIBE.KYNO_FLOATILIZER = "That's some poo! Hyuyu!"
 

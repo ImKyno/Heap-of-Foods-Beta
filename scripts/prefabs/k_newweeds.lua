@@ -7,6 +7,8 @@ local assets_weeds =
     Asset("ANIM", "anim/firenettles2.zip"),
     Asset("ANIM", "anim/forgetmelots2.zip"),
     Asset("ANIM", "anim/tillweed2.zip"),
+
+    Asset("ANIM", "anim/weed_kyno_icenettle.zip"),
 	
     Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
     Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
@@ -76,8 +78,10 @@ local function seeds_common(name)
 		
 		inst:AddComponent("bait")
 		inst:AddComponent("tradable")
-        inst:AddComponent("inspectable")
 		inst:AddComponent("inventoryitem")
+
+        inst:AddComponent("inspectable")
+        inst.components.inspectable.nameoverride = "WEED_SEEDS"
 		
 		inst:AddComponent("stackable")
         inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -98,6 +102,8 @@ local function seeds_common(name)
         inst:AddComponent("farmplantable")
 		if name == "firenettles" then
 			inst.components.farmplantable.plant = "weed_firenettle"
+        elseif name == "icenettles" then
+            inst.components.farmplantable.plant = "weed_icenettle"
 		else
 			inst.components.farmplantable.plant = "weed_" .. name
 		end
@@ -129,5 +135,5 @@ end
 
 return MakeWeedSeed("firenettles"),
 MakeWeedSeed("forgetmelots"),
-MakeWeedSeed("tillweed")
--- MakeWeedSeed("ivy") -- Not sure...
+MakeWeedSeed("tillweed"),
+MakeWeedSeed("icenettles")

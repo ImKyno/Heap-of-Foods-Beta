@@ -498,11 +498,7 @@ WICKERBOTTOM.DESCRIBE.COCONUTWATER = "Invigorating."
 
 WICKERBOTTOM.DESCRIBE.EYEBALLSPAGHETTI = "I don't think this food is safe."
 
-WICKERBOTTOM.DESCRIBE.FORGETMELOTS_SEEDS = "It can't begin growing until it's been planted, dear."
-
-WICKERBOTTOM.DESCRIBE.FIRENETTLES_SEEDS = "It can't begin growing until it's been planted, dear."
-
-WICKERBOTTOM.DESCRIBE.TILLWEED_SEEDS = "It can't begin growing until it's been planted, dear."
+WICKERBOTTOM.DESCRIBE.WEED_SEEDS = "It can't begin growing until it's been planted, dear."
 
 WICKERBOTTOM.DESCRIBE.KYNO_FLOATILIZER = "A bucket of sea animal feces. Punget."
 

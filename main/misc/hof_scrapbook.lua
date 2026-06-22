@@ -1806,6 +1806,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		build          = "kyno_pigcoin",
 		overridesymbol = {"coin01", "kyno_pigcoin", "coin01"},
 		anim           = "idle",
+		deps           = {"pigking", "kyno_deciduousforest_seller"},
 		specialinfo    = "PIGCOIN",
 	},
 
@@ -1821,6 +1822,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		build          = "kyno_pigcoin",
 		overridesymbol = {"coin01", "kyno_pigcoin", "coin02"},
 		anim           = "idle",
+		deps           = {"pigking", "kyno_deciduousforest_seller"},
 		specialinfo    = "PIGCOIN",
 	},
 
@@ -1836,7 +1838,21 @@ local HOF_SCRAPBOOK_ITEMS =
 		build          = "kyno_pigcoin",
 		overridesymbol = {"coin01", "kyno_pigcoin", "coin03"},
 		anim           = "idle",
+		deps           = {"pigking", "kyno_deciduousforest_seller"},
 		specialinfo    = "PIGCOIN",
+	},
+
+	kyno_seedsbag      =
+	{
+		name           = "kyno_seedsbag",
+		type           = "item",
+		tex            = "kyno_seedsbag_full.tex",
+		prefab         = "kyno_seedsbag",
+		bank           = "kyno_seedsbag",
+		build          = "kyno_seedsbag",
+		anim           = "full",
+		deps           = {"seeds", "chestupgrade_stacksize", "featherpencil"},
+		specialinfo    = "SEEDSBAG",
 	},
 }
 
@@ -5726,6 +5742,25 @@ local HOF_SCRAPBOOK_FOODS =
 		anim           = "idle1",
 		deps           = {"messagebottleempty", "hermitcrab_teashop"},
 		specialinfo    = "HERMITCRABTEA_SUGARTREE_PETALS",
+	},
+
+	kyno_hermitcrabtea_icenettles =
+	{
+		name           = "kyno_hermitcrabtea_icenettles",
+		type           = "food",
+		tex            = "kyno_hermitcrabtea_icenettles.tex",
+		prefab         = "kyno_hermitcrabtea_icenettles",
+		healthvalue    = 0,
+		hungervalue    = 0,
+		sanityvalue    = 5,
+		foodtype       = "GOODIES",
+		finiteuses     = 10,
+		bank           = "hermitcrab_tea",
+		build          = "kyno_hermitcrab_tea",
+		overridesymbol = {"tea_bottle", "kyno_hermitcrab_tea", "tea_bottle_icenettles"},
+		anim           = "idle1",
+		deps           = {"messagebottleempty", "hermitcrab_teashop"},
+		specialinfo    = "HERMITCRABTEA_ICENETTLES",
 	},
 
 	kyno_cavetuber     =
@@ -17645,7 +17680,7 @@ local HOF_SCRAPBOOK_SPICES =
 		build          = "kyno_spices",
 		anim           = "idle",
 		overridesymbol = {"swap_spice", "kyno_spices", "spice_fire"},
-		deps           = {"portableblender", "oceanfish_small_8_inv"},
+		deps           = {"portableblender", "firenettles"},
 		specialinfo    = "SPICEEFFECTS_FIRE",
 	},
 

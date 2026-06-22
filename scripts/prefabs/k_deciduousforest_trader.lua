@@ -32,6 +32,8 @@ local sounds =
 	buff   = "dontstarve/pig/grunt",
 }
 
+local OVERSIZED_CROPS_AMOUNT = TUNING.KYNO_DECIDUOUSFORESTTRADER_OVERSIZED_CROP_AMOUNT
+
 local FORGETABLE_RECIPES = {} -- Recipes that do not have a limit flag will be forgot on rerolling.
 
 local WARES                                   =
@@ -209,6 +211,12 @@ end
 
 local function OnSave(inst, data)
 	data.hatless = inst.hatless
+
+	if not inst.oversizedcropsgrown then
+		data.oversizedcropscount = inst.oversizedcropscount
+	else
+		data.oversizedcropsgrown = true
+	end
 end
 
 local function OnLoad(inst, data)
@@ -222,6 +230,26 @@ local function OnLoad(inst, data)
 	end
 
 	inst.hatless = data.hatless
+	inst.oversizedcropsgrown = data.oversizedcropsgrown or false
+
+	if inst.oversizedcropsgrown then
+		inst.oversizedcropscount = OVERSIZED_CROPS_AMOUNT
+	else
+		inst.oversizedcropscount = data.oversizedcropscount or 0
+	end
+end
+
+local function SetOversizedCropsGrown(inst, active)
+	if inst.oversizedcropsgrown ~= active then
+		inst.oversizedcropsgrown = active
+
+		if inst.oversizedcropsgrown then
+			inst.WARES.ALWAYS[1]["kyno_seedsbag"] = { recipe = "deciduoustrader_kyno_seedsbag", min = 2, max = 5 }
+			inst.FORGETABLE_RECIPES["deciduoustrader_kyno_seedsbag"] = true
+
+			inst:AddWares({ ["kyno_seedsbag"] = { recipe = "deciduoustrader_kyno_seedsbag", min = 2, max = 5 } })
+		end
+	end
 end
 
 local function OnWorldInit(inst)
@@ -417,6 +445,9 @@ local function fn()
 	inst.CanTrade = CanTrade
 	inst.IsNearMerm = IsNearMerm
 
+	inst.oversizedcropscount = 0
+	inst.oversizedcropsgrown = false
+
 	inst:AddComponent("craftingstation")
 	inst:AddComponent("knownlocations")
 
@@ -447,6 +478,19 @@ local function fn()
 
 	inst:ListenForEvent("clocksegschanged", function(world, data)
 		inst.segs = data
+	end, TheWorld)
+
+	inst.OversizedCropGrown = inst:ListenForEvent("ms_oversizedcropgrown", function()
+		if inst.oversizedcropsgrown then
+			return
+		end
+
+		inst.oversizedcropscount = inst.oversizedcropscount + 1
+
+		if inst.oversizedcropscount >= OVERSIZED_CROPS_AMOUNT then
+			SetOversizedCropsGrown(inst, true)
+			inst.oversizedcropsgrown = true
+		end
 	end, TheWorld)
 
 	inst.inittask = inst:DoTaskInTime(0, Initialize)

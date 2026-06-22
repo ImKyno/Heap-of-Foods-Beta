@@ -487,7 +487,7 @@ params.seedsbag =
 }
 
 function params.seedsbag.itemtestfn(container, item, slot)
-	return item.prefab == "seeds" or string.match(item.prefab, "_seeds") or item:HasTag("treeseed")
+	return item.prefab == "seeds" or string.match(item.prefab, "_seeds")
 end
 
 params.seedsbag.priorityfn = params.seedsbag.itemtestfn

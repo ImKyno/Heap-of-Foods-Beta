@@ -498,11 +498,7 @@ WARLY.DESCRIBE.COCONUTWATER = "Ah. Refreshing."
 
 WARLY.DESCRIBE.EYEBALLSPAGHETTI = "This is not food!"
 
-WARLY.DESCRIBE.FORGETMELOTS_SEEDS = "Future ingredients, just waiting to be grown!"
-
-WARLY.DESCRIBE.FIRENETTLES_SEEDS = "Future ingredients, just waiting to be grown!"
-
-WARLY.DESCRIBE.TILLWEED_SEEDS = "Future ingredients, just waiting to be grown!"
+WARLY.DESCRIBE.WEED_SEEDS = "Future ingredients, just waiting to be grown!"
 
 WARLY.DESCRIBE.KYNO_FLOATILIZER = "Sauce for my garden!"
 

@@ -164,12 +164,14 @@ local function TryGrowth(inst, maximize, reader)
 						if reader ~= nil and reader.components.luckuser ~= nil and good_seasons[current_season] 
 						and TryLuckRoll(reader, TUNING.KYNO_GROWTH_OVERSIZED_CHANCE, HofLuckFormulas.HorticultureOversizedCrop) then
 							inst.is_oversized = true
+							PushOversizedGrownEvent(inst)
 						end
 					else
 						-- if math.random() < TUNING.KYNO_GROWTH_OVERSIZED_CHANCE then
 						if reader ~= nil and reader.components.luckuser ~= nil
 						and TryLuckRoll(reader, TUNING.KYNO_GROWTH_OVERSIZED_CHANCE, HofLuckFormulas.HorticultureOversizedCrop) then
 							inst.is_oversized = true
+							PushOversizedGrownEvent(inst)
 						end
 					end
 				end

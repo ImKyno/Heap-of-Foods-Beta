@@ -54,7 +54,7 @@ local function CollectRecipes()
 	for _, modname in ipairs(WEB_RECIPES_LIST) do
 		local ok, recipes = pcall(require, "tools/website/" .. modname)
 
-		if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
+		if TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
 			print("Heap of Foods Mod - DailyRecipe: LOADING", modname, ok, recipes and "OK" or "NIL")
 		end
 
@@ -135,7 +135,7 @@ end
 local function GetDailyRecipe()
 	-- This is causing the daily recipes to not properly update after the server starts.
 	-- Added this security check in case if someone still wants to force a daily recipe.
-	if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
+	if TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
 		print("Heap of Foods Mod - WARNING! GetDailyRecipe() was changed to allow Forced Daily Recipes!")
 		print("Heap of Foods Mod - WARNING! Daily Recipes cannot properly update while this setting is enabled!")
 

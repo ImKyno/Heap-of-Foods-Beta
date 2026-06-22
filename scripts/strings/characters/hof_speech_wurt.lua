@@ -500,11 +500,7 @@ WURT.DESCRIBE.COCONUTWATER = "It tastes sweet, florp."
 
 WURT.DESCRIBE.EYEBALLSPAGHETTI = "Glurgh..."
 
-WURT.DESCRIBE.FORGETMELOTS_SEEDS = "Make more tasty snacks!"
-
-WURT.DESCRIBE.FIRENETTLES_SEEDS = "Make more tasty snacks!"
-
-WURT.DESCRIBE.TILLWEED_SEEDS = "Make more tasty snacks!"
+WURT.DESCRIBE.WEED_SEEDS = "Make more tasty snacks!"
 
 WURT.DESCRIBE.KYNO_FLOATILIZER = "What? It just some poop."
 

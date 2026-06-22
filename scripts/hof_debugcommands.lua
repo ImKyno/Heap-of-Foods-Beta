@@ -344,7 +344,7 @@ function c_hoffishroes()
 end
 
 -- In case someone needs to spawn Sammy's Wagon.
-function c_hofsammywagon()
+function c_hofspawnmermcart()
 	local player = ConsoleCommandPlayer()
 
 	local house = TheSim:FindFirstEntityWithTag("sammyhouse")

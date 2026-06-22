@@ -653,6 +653,22 @@ AddRecipe2("meadowislandtrader_kyno_seeds_kit_firenettles", {Ingredient("kyno_ra
 	{"CRAFTING_STATION"}
 )
 
+AddRecipe2("meadowislandtrader_kyno_seeds_kit_icenettles", {Ingredient("kyno_cucumber_seeds", 3, ModAtlas)}, TECH.LOST,
+	{
+		limitedamount       = true,
+		nounlock            = true,
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSMEADOWSHOP",
+		actionstr           = "MEADOWSHOP",
+		description         = "kyno_seeds_kit_icenettles_m",
+		sg_state            = "give",
+		product             = "kyno_seeds_kit_icenettles",
+		atlas               = ModAtlas,
+		image               = "kyno_seeds_kit_icenettles.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
 AddRecipe2("meadowislandtrader_kyno_seeds_kit_forgetmelots", {Ingredient("kyno_turnip_seeds", 3, ModAtlas)}, TECH.LOST,
 	{
 		limitedamount       = true,

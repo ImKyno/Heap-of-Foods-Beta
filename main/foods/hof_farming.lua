@@ -168,6 +168,7 @@ AddNewVeggie("kyno_turnip",
 	nil
 )
 
+-- Custom Farm Plants.
 local PLANT_DEFS        = require("prefabs/farm_plant_defs").PLANT_DEFS
 local FRAMES            = _G.FRAMES
 
@@ -883,3 +884,102 @@ PLANT_DEFS.kyno_turnip.plantregistryinfo           =
 		hidden          = true,
 	},
 }
+
+-- Custom Weeds.
+local WEED_DEFS         = require("prefabs/weed_defs").WEED_DEFS
+
+-- Grow Time of the Weeds.
+local function MakeGrowTimesWeed(full_grow_min, full_grow_max, bolting)
+	local grow_time     = {}
+
+	if bolting then
+		grow_time.small = {full_grow_min * 0.3, full_grow_max * 0.3}
+		grow_time.med   = {full_grow_min * 0.3, full_grow_max * 0.3}
+		grow_time.full  = {full_grow_min * 0.4, full_grow_max * 0.4}
+	else
+		grow_time.small = {full_grow_min * 0.6, full_grow_max * 0.6}
+		grow_time.med   = {full_grow_min * 0.4, full_grow_max * 0.4}
+	end
+
+	return grow_time
+end
+
+-- Chilled Nettle.
+WEED_DEFS.weed_icenettle                           = {build = "weed_kyno_icenettle", bank = "weed_kyno_icenettle"}
+WEED_DEFS.weed_icenettle.prefab                    = "weed_icenettle"
+WEED_DEFS.weed_icenettle.product                   = "kyno_icenettles"
+WEED_DEFS.weed_icenettle.seed_weight               = TUNING.SEED_CHANCE_RARE
+WEED_DEFS.weed_icenettle.grow_time                 = MakeGrowTimesWeed(2 * TUNING.TOTAL_DAY_TIME, 3 * TUNING.TOTAL_DAY_TIME, false)
+WEED_DEFS.weed_icenettle.moisture                  = {drink_rate = DRINK_MED}
+WEED_DEFS.weed_icenettle.nutrient_consumption      = {NUTRIENT_LOW, NUTRIENT_LOW, NUTRIENT_LOW}
+WEED_DEFS.weed_icenettle.spread                    = {stage = "full", time_min = 6.0 * TUNING.TOTAL_DAY_TIME, time_var = 2.0 * TUNING.TOTAL_DAY_TIME, tilled_dist = 10, ground_dist = 5, ground_dist_var = 5, tooclose_dist = 5}
+WEED_DEFS.weed_icenettle.sameweedtags              = {"icenettle"}
+WEED_DEFS.weed_icenettle.extra_tags                = {"trapdamage"}
+WEED_DEFS.weed_icenettle.prefab_deps               = {"kyno_icenettle_toxin"}
+
+WEED_DEFS.weed_icenettle.plantregistrywidget       = "widgets/redux/weedplantpage"
+WEED_DEFS.weed_icenettle.plantregistryinfo         =
+{
+	{
+		text            = "small",
+		anim            = "crop_small",
+		grow_anim       = "seedless_to_small",
+		growing         = true,
+	},
+	{
+		text            = "medium",
+		anim            = "crop_med",
+		grow_anim       = "grow_med",
+		growing         = true,
+	},
+	{
+		text            = "grown",
+		anim            = "crop_full",
+		grow_anim       = "grow_full",
+		revealplantname = true,
+		fullgrown       = true,
+	},
+	{
+		text            = "picked",
+		anim            = "crop_picked",
+		grow_anim       = "grow_picked",
+		stagepriority   = -100
+	},
+}
+
+-- Custom Behaviour for Chilled Nettle.
+local function WeedIceNettleBumped(inst, target)
+	if (inst.components.burnable == nil or not inst.components.burnable.burning)
+	and target ~= nil and not target:HasTag("plantkin") then
+		inst.AnimState:PlayAnimation("crop_full_atk", false)
+		inst.AnimState:PushAnimation("crop_full", true)
+
+		if target.components.health ~= nil and not target.components.health:IsDead() then
+			local apply_toxin_debuff = false
+
+			if target.components.combat ~= nil then
+				apply_toxin_debuff = target.components.combat:GetAttacked(inst, TUNING.KYNO_WEED_ICENETTLE_DAMAGE)
+			end
+
+			if apply_toxin_debuff then
+				target:AddDebuff("kyno_icenettle_toxin", "kyno_icenettle_toxin")
+			end
+		end
+
+		if inst.components.growable ~= nil then
+			inst.components.growable:SetStage(1)
+			inst.components.growable:StartGrowing()
+		end
+	end
+end
+
+WEED_DEFS.weed_icenettle.OnMakeFullFn = function(inst, isfull)
+	if isfull and inst.components.playerprox == nil then
+		inst:AddComponent("playerprox")
+		inst.components.playerprox:SetDist(0.5, 2.5)
+		inst.components.playerprox:SetOnPlayerNear(WeedIceNettleBumped)
+		inst.components.playerprox:Schedule(5 * FRAMES)
+	elseif not isfull and inst.components.playerprox ~= nil then
+		inst:RemoveComponent("playerprox")
+	end
+end

@@ -498,11 +498,7 @@ WILSON.DESCRIBE.COCONUTWATER = "Water, but from the coconut."
 
 WILSON.DESCRIBE.EYEBALLSPAGHETTI = "This is wrong."
 
-WILSON.DESCRIBE.FORGETMELOTS_SEEDS = "It's a seed."
-
-WILSON.DESCRIBE.FIRENETTLES_SEEDS = "It's a seed."
-
-WILSON.DESCRIBE.TILLWEED_SEEDS = "It's a seed."
+WILSON.DESCRIBE.WEED_SEEDS = "It's a weed seed."
 
 WILSON.DESCRIBE.KYNO_FLOATILIZER = "That is definitely a bucket full of sea poop."
 

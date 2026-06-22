@@ -498,11 +498,7 @@ WANDA.DESCRIBE.COCONUTWATER = "Refreshing."
 
 WANDA.DESCRIBE.EYEBALLSPAGHETTI = "It is not time for that."
 
-WANDA.DESCRIBE.FORGETMELOTS_SEEDS = "Just seeds."
-
-WANDA.DESCRIBE.FIRENETTLES_SEEDS = "Just seeds."
-
-WANDA.DESCRIBE.TILLWEED_SEEDS = "Just seeds."
+WANDA.DESCRIBE.WEED_SEEDS = "Just weed seeds."
 
 WANDA.DESCRIBE.KYNO_FLOATILIZER = "Manure, conveniently stored in a bucket."
 

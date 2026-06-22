@@ -498,11 +498,7 @@ WINONA.DESCRIBE.COCONUTWATER = "Ah... hits the spot."
 
 WINONA.DESCRIBE.EYEBALLSPAGHETTI = "I guess, it's better than starving."
 
-WINONA.DESCRIBE.FORGETMELOTS_SEEDS = "A handful of seeds."
-
-WINONA.DESCRIBE.FIRENETTLES_SEEDS = "A handful of seeds."
-
-WINONA.DESCRIBE.TILLWEED_SEEDS = "A handful of seeds."
+WINONA.DESCRIBE.WEED_SEEDS = "A handful of weed seeds."
 
 WINONA.DESCRIBE.KYNO_FLOATILIZER = "Food for ground."
 

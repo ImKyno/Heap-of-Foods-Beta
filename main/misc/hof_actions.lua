@@ -48,6 +48,12 @@ AddComponentAction("USEITEM", "inventoryitem", function(inst, doer, target, acti
 			_G.RemoveByValue(actions, ACTIONS.STORE)
 		end
 	end
+
+	if target:HasTag("seedsbag") then
+		if inst:HasTag("drawingpencil") and target:HasTag("drawable") then
+			_G.RemoveByValue(actions, ACTIONS.STORE)
+		end
+	end
 end)
 
 -- Action for the Salt.
@@ -957,6 +963,25 @@ function USEITEM.fillable(inst, doer, target, ...)
 	else
 		return _USEITEMfillable(inst, doer, target, ...)
 	end
+end
+
+local function IsValidSeed(item)
+	return item ~= nil and (item.prefab == "seeds" or string.match(item.prefab, "_seeds"))
+end
+
+-- Can only draw seeds on Seeds Sack.
+local _DRAWfn = ACTIONS.DRAW.fn
+ACTIONS.DRAW.fn = function(act)
+	if act.target ~= nil and act.target.prefab == "kyno_seedsbag"
+	and act.invobject ~= nil and act.invobject.components.drawingtool ~= nil then
+		local image, src, atlas, bgimage, bgatlas = act.invobject.components.drawingtool:GetImageToDraw(act.target, act.doer)
+
+		if not IsValidSeed(src) then
+			return false, "NOIMAGE"
+		end
+	end
+
+	return _DRAWfn(act)
 end
 
 -- Action String overrides.

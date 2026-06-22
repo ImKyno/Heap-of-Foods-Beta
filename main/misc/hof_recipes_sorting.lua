@@ -98,4 +98,7 @@ SortAfter("kyno_hermitcrabtea_aloe_3",                "hermitcrabtea_succulent_p
 SortAfter("kyno_hermitcrabtea_sugartree_petals_1",    "hermitcrabtea_petals_evil_1",      "CRAFTING_STATION")
 SortAfter("kyno_hermitcrabtea_sugartree_petals_2",    "hermitcrabtea_petals_evil_2",      "CRAFTING_STATION")
 SortAfter("kyno_hermitcrabtea_sugartree_petals_3",    "hermitcrabtea_petals_evil_3",      "CRAFTING_STATION")
+SortAfter("kyno_hermitcrabtea_icenettles_1",          "hermitcrabtea_firenettles_1",      "CRAFTING_STATION")
+SortAfter("kyno_hermitcrabtea_icenettles_2",          "hermitcrabtea_firenettles_2",      "CRAFTING_STATION")
+SortAfter("kyno_hermitcrabtea_icenettles_3",          "hermitcrabtea_firenettles_3",      "CRAFTING_STATION")
 SortAfter("kyno_fishfarmplot_construction",           "trophyscale_fish",                 "FISHING")

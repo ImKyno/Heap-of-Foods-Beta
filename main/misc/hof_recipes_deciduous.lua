@@ -119,6 +119,22 @@ AddRecipe2("deciduoustrader_kyno_truffles", {Ingredient("kyno_pigcoin2", 1, ModA
 	{"CRAFTING_STATION"}
 )
 
+AddRecipe2("deciduoustrader_kyno_seedsbag", {Ingredient("kyno_pigcoin1", 15, ModAtlas), Ingredient("kyno_pigcoin2", 10, ModAtlas)}, TECH.LOST,
+	{
+		limitedamount       = true,
+		nounlock            = true,
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSDECIDUOUSSHOP",
+		actionstr           = "DECIDUOUSSHOP",
+		description         = "kyno_seedsbag_d",
+		sg_state            = "give",
+		product             = "kyno_seedsbag",
+		atlas               = ModAtlas,
+		image               = "kyno_seedsbag_full.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
 AddDeconstructRecipe("kyno_seedsbag", {}) -- Needed for getting alterguardianhatshard back.
 
 CONSTRUCTION_PLANS["kyno_deciduousforest_shop"] =
