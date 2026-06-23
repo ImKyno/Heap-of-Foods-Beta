@@ -1179,14 +1179,15 @@ local kyno_foods =
 	
 	gorge_shooter_sandwich =
 	{
-		test = function(cooker, names, tags) return tags.meat and tags.bread and tags.spotspice and not tags.fish 
-		and not (names.tomato or names.tomato_cooked) end, 
+		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 1)
+		and tags.bread and tags.spotspice and not tags.fish and not (names.tomato or names.tomato_cooked)
+		and not (tags.monster and tags.monster > 1) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,
-		health = 5,
+		health = 20,
 		hunger = 100,
-		sanity = 15,
+		sanity = 20,
 		cooktime = 1,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_gorge",

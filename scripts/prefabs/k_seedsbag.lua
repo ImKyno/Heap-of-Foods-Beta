@@ -9,6 +9,8 @@ local assets =
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
+
+	Asset("INV_IMAGE", "seedsbag_unknown_seeds"),
 }
 
 local prefabs =
@@ -16,38 +18,109 @@ local prefabs =
 	"alterguardianhatshard",
 }
 
-local function HasSeedsInside(inst)
-	if inst.components.container ~= nil then
-		for k, v in pairs(inst.components.container.slots) do
-			if v ~= nil then
-				return true
-			end
-		end
-
-		return false
+local function SafeRegisterInventoryImages(image)
+	if type(image) == "string" and image ~= "" then
+		table.insert(assets, Asset("INV_IMAGE", image))
 	end
+end
+
+for _, seed in ipairs(HOF_SEEDSBAG_SEEDS) do
+	local imagekey = SeedsBagGetSeedImageKey(seed)
+
+	if imagekey ~= nil then
+		SafeRegisterInventoryImages("seedsbag_" .. imagekey .. "_seeds")
+	end
+end
+
+local function HasSeedsInside(inst)
+	return inst.replica.container ~= nil and not inst.replica.container:IsEmpty()
 end
 
 local function UpdateAnimation(inst)
 	if HasSeedsInside(inst) then
-		inst.AnimState:PlayAnimation("full")
-
-		if inst.components.inventoryitem ~= nil then
-			inst.components.inventoryitem:ChangeImageName("kyno_seedsbag_full")
-		end
+		inst.AnimState:PushAnimation("full")
 	else
-		inst.AnimState:PlayAnimation("empty")
+		inst.AnimState:PushAnimation("empty")
+	end
+end
 
-		if inst.components.inventoryitem ~= nil then
-			inst.components.inventoryitem:ChangeImageName("kyno_seedsbag_empty")
+local function BuildInventoryLayers(inst)
+	local layers = {}
+
+	local hasseed = inst._hasseeds:value()
+	local bg = hasseed and "kyno_seedsbag_full" or "kyno_seedsbag_empty"
+
+	table.insert(layers, { image = bg .. ".tex" })
+
+	local seed = inst._seedimage ~= nil and inst._seedimage:value() or ""
+
+	if seed ~= "" then
+		local imagekey = SeedsBagGetSeedImageKey(seed)
+		table.insert(layers,
+		{
+			image = (imagekey ~= nil and ("seedsbag_" .. imagekey .. "_seeds")
+			or "seedsbag_unknown_seeds") .. ".tex"
+		})
+	end
+
+	return layers
+end
+
+local function CLIENT_LayeredInventoryImageFn(inst)
+	if inst._layers == nil then
+		inst._layers = BuildInventoryLayers(inst)
+	end
+
+	return inst._layers
+end
+
+local function UpdateInventoryImage(inst)
+	inst._layers = BuildInventoryLayers(inst)
+	inst:PushEvent("imagechange")
+end
+
+local function OnTransition(inst)
+	if inst.components.container ~= nil and inst.components.inventoryitem ~= nil then
+		local SoundEmitter = (inst.components.inventoryitem:GetGrandOwner() or inst).SoundEmitter
+		local isempty = inst.components.container:IsEmpty()
+
+		if inst._wasempty and not isempty then
+			inst._wasempty = false
+
+			inst.AnimState:PlayAnimation("empty_to_full")
+			inst.AnimState:PushAnimation("full", true)
+
+			if SoundEmitter then
+				SoundEmitter:PlaySound("dontstarve/wilson/use_bedroll")
+			end
+
+			return true
+		elseif not inst._wasempty and isempty then
+			inst._wasempty = true
+
+			inst.AnimState:PlayAnimation("full_to_empty")
+			inst.AnimState:PushAnimation("empty", true)
+
+			if SoundEmitter then
+				SoundEmitter:PlaySound("dontstarve/wilson/use_bedroll")
+			end
+
+			return true
 		end
+
+		inst._wasempty = isempty
+		return false
 	end
 end
 
 local function OnOpen(inst)
 	if HasSeedsInside(inst) then
-		inst.AnimState:PlayAnimation("interact")
+		inst.AnimState:PlayAnimation("interact_full")
+	else
+		inst.AnimState:PlayAnimation("interact_empty")
 	end
+
+	UpdateAnimation(inst)
 
 	local SoundEmitter = (inst.components.inventoryitem:GetGrandOwner() or inst).SoundEmitter
 
@@ -57,11 +130,13 @@ local function OnOpen(inst)
 end
 
 local function OnClose(inst)
-	if not inst.components.inventoryitem:IsHeld() then
-		UpdateAnimation(inst)
+	if HasSeedsInside(inst) then
+		inst.AnimState:PlayAnimation("interact_full")
 	else
-		UpdateAnimation(inst)
+		inst.AnimState:PlayAnimation("interact_empty")
 	end
+
+	UpdateAnimation(inst)
 
 	local SoundEmitter = (inst.components.inventoryitem:GetGrandOwner() or inst).SoundEmitter
 
@@ -71,24 +146,47 @@ local function OnClose(inst)
 end
 
 local function OnPutInInventory(inst)
-	inst.components.container:Close()
+	if inst.components.container ~= nil then
+		inst.components.container:Close()
+	end
+
 	UpdateAnimation(inst)
 end
 
 local function OnItemGet(inst, data)
-	if HasSeedsInside(inst) then
-		inst.AnimState:PlayAnimation("interact")
+	local transitioned = OnTransition(inst)
+
+	if not transitioned then
+		if HasSeedsInside(inst) then
+			inst.AnimState:PlayAnimation("interact_full", false)
+		else
+			inst.AnimState:PlayAnimation("interact_empty", false)
+		end
+
+		UpdateAnimation(inst)
 	end
 
-	UpdateAnimation(inst)
+	UpdateInventoryImage(inst)
+
+	inst._hasseeds:set(not inst.components.container:IsEmpty())
 end
 
 local function OnItemLose(inst, data)
-	if HasSeedsInside(inst) then
-		inst.AnimState:PlayAnimation("interact")
+	local transitioned = OnTransition(inst)
+
+	if not transitioned then
+		if HasSeedsInside(inst) then
+			inst.AnimState:PlayAnimation("interact_full", false)
+		else
+			inst.AnimState:PlayAnimation("interact_empty", false)
+		end
+
+		UpdateAnimation(inst)
 	end
 
-	UpdateAnimation(inst)
+	UpdateInventoryImage(inst)
+
+	inst._hasseeds:set(not inst.components.container:IsEmpty())
 end
 
 local function GetStatus(inst, viewer)
@@ -154,11 +252,16 @@ end
 
 local function OnDrawn(inst, image, src, atlas, bgimage, bgatlas)
 	if src ~= nil then
-		-- Yeah whatever, always show the known seed name.
-		local name = STRINGS.NAMES["KNOWN_"..string.upper(src.prefab)] or src:GetBasicDisplayName() -- nil?
+		local name = STRINGS.NAMES[string.upper(src.prefab)] or src:GetBasicDisplayName() -- nil?
+		local seedimage = src.prefab
 
 		inst._savedseedname = name
+		inst._savedseedimage = seedimage
+
 		inst._seedname:set(name)
+		inst._seedimage:set(seedimage)
+
+		UpdateInventoryImage(inst)
 
 		inst.SoundEmitter:PlaySound("dontstarve/common/together/draw")
 
@@ -190,6 +293,7 @@ local function OnSave(inst, data)
 	end
 
 	data.seedname = inst._savedseedname
+	data.seedimage = inst._savedseedimage
 end
 
 local function OnLoad(inst, data)
@@ -202,6 +306,15 @@ local function OnLoad(inst, data)
 			inst._savedseedname = data.seedname
 			inst._seedname:set(data.seedname)
 		end
+
+		if data.seedimage ~= nil then
+			inst._savedseedimage = data.seedimage
+			inst._seedimage:set(data.seedimage)
+		end
+	end
+
+	if inst.components.container ~= nil then
+		inst._wasempty = inst.components.container:IsEmpty()
 	end
 end
 
@@ -236,7 +349,14 @@ local function fn()
 	inst.pickupsound = "cloth"
 
 	inst.displaynamefn = OnDisplayName
+
 	inst._seedname = net_string(inst.GUID, "kyno_seedsbag._seedname")
+	inst._seedimage = net_string(inst.GUID, "kyno_seedsbag._seedimage", "invimagechanged")
+	inst._hasseeds = net_bool(inst.GUID, "kyno_seedsbag._hasseeds", "invimagechanged")
+	
+	inst.layeredinvimagefn = CLIENT_LayeredInventoryImageFn
+
+	UpdateInventoryImage(inst)
 
 	inst.entity:SetPristine()
 
@@ -244,6 +364,10 @@ local function fn()
 		inst.OnEntityReplicated = function(inst)
 			inst.replica.container:WidgetSetup("seedsbag")
 		end
+
+		inst:ListenForEvent("invimagechanged", function(inst)
+			UpdateInventoryImage(inst)
+		end)
 
 		return inst
 	end
@@ -270,6 +394,8 @@ local function fn()
 	inst.components.container.skipclosesnd = true
 	inst.components.container.skipopensnd = true
 	inst.components.container.droponopen = true
+
+	inst._wasempty = inst.components.container:IsEmpty()
 
 	inst:AddComponent("upgradeable")
 	inst.components.upgradeable.upgradetype = UPGRADETYPES.CHEST

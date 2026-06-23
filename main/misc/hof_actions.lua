@@ -1209,3 +1209,18 @@ ACTIONS.STOPCONSTRUCTION.stroverridefn = function(act)
 		return STRINGS.KYNO_BAKE_CAKE_STOP
 	end
 end
+
+local _stroverridefn = ACTIONS.DRAW.stroverridefn
+ACTIONS.DRAW.stroverridefn = function(act)
+	if act.target ~= nil and act.target:HasTag("seedsbag") then
+		local item = _G.FindEntityToDraw(act.target, act.invobject)
+
+		if item ~= nil then
+			return subfmt(STRINGS.ACTIONS.WRITEITEM, { item = item:GetBasicDisplayName() })
+		end
+
+		return STRINGS.ACTIONS.WRITE
+	end
+
+	return _stroverridefn ~= nil and _stroverridefn(act) or nil
+end

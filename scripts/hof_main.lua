@@ -3,6 +3,7 @@ require("hof_behaviours")
 require("hof_brewing")
 require("hof_debugcommands")
 require("hof_rpc")
+require("hof_seedsbagapi")
 require("hof_util")
 require("hof_util_luck")
 

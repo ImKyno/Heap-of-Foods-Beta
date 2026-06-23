@@ -209,6 +209,21 @@ local function Initialize(inst)
 	inst:RerollWares()
 end
 
+local function SetOversizedCropsGrown(inst, active, load)
+	if inst.oversizedcropsgrown ~= active then
+		inst.oversizedcropsgrown = active
+
+		if inst.oversizedcropsgrown then
+			inst.WARES.ALWAYS[1]["kyno_seedsbag"] = { recipe = "deciduoustrader_kyno_seedsbag", min = 2, max = 5 }
+			inst.FORGETABLE_RECIPES["deciduoustrader_kyno_seedsbag"] = true
+
+			if not load then
+				inst:AddWares({ ["kyno_seedsbag"] = { recipe = "deciduoustrader_kyno_seedsbag", min = 2, max = 5 } })
+			end
+		end
+	end
+end
+
 local function OnSave(inst, data)
 	data.hatless = inst.hatless
 
@@ -230,25 +245,15 @@ local function OnLoad(inst, data)
 	end
 
 	inst.hatless = data.hatless
-	inst.oversizedcropsgrown = data.oversizedcropsgrown or false
-
-	if inst.oversizedcropsgrown then
+	
+	if data and data.oversizedcropsgrown then
 		inst.oversizedcropscount = OVERSIZED_CROPS_AMOUNT
+
+		inst.oversizedcropsgrown = false
+		SetOversizedCropsGrown(inst, true, true)
 	else
-		inst.oversizedcropscount = data.oversizedcropscount or 0
-	end
-end
-
-local function SetOversizedCropsGrown(inst, active)
-	if inst.oversizedcropsgrown ~= active then
-		inst.oversizedcropsgrown = active
-
-		if inst.oversizedcropsgrown then
-			inst.WARES.ALWAYS[1]["kyno_seedsbag"] = { recipe = "deciduoustrader_kyno_seedsbag", min = 2, max = 5 }
-			inst.FORGETABLE_RECIPES["deciduoustrader_kyno_seedsbag"] = true
-
-			inst:AddWares({ ["kyno_seedsbag"] = { recipe = "deciduoustrader_kyno_seedsbag", min = 2, max = 5 } })
-		end
+		inst.oversizedcropsgrown = false
+		inst.oversizedcropscount = data and data.oversizedcropscount or 0
 	end
 end
 
@@ -488,7 +493,7 @@ local function fn()
 		inst.oversizedcropscount = inst.oversizedcropscount + 1
 
 		if inst.oversizedcropscount >= OVERSIZED_CROPS_AMOUNT then
-			SetOversizedCropsGrown(inst, true)
+			SetOversizedCropsGrown(inst, true, false)
 			inst.oversizedcropsgrown = true
 		end
 	end, TheWorld)
