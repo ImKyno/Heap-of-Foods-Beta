@@ -247,7 +247,40 @@ function BrewbookPage:PopulateRecipeDetailPanel(data)
 		portrait_root:SetPosition(frame:GetPosition())
 
 		local food_img = portrait_root:AddChild(Image(data.food_atlas, not data.unlocked and "cookbook_unknown.tex" or data.food_tex))
-		food_img:ScaleToSize(icon_size, icon_size)
+		food_img:ScaleToSize(icon_size - 10, icon_size - 10)
+
+		local value = data.recipe_def.pigcoinvalue or {0, 0, 0}
+		local coin_root = portrait_root:AddChild(Widget("coin_root"))
+		coin_root:SetPosition(-28, -50)
+
+		for i = 1, 3 do
+    		local x = (i - 1) * 24
+
+			local coin_offsets =
+			{ 
+				{ textx = 0, texty = -0.5 },
+    			{ textx = 0, texty = -0.5 },
+    			{ textx = 0, texty = -0.5 },
+			}
+
+			local pos = coin_offsets[i]
+
+    		local icon = coin_root:AddChild(Image("images/hof_pigcoinvalue_icons.xml", "kyno_pigcoin"..i..".tex"))
+    		icon:SetScale(0.55)
+    		icon:SetPosition(x + 4, 0)
+
+			local str = tostring(value[i] or 0)
+    		local text = coin_root:AddChild(Text(BODYTEXTFONT, 16, str))
+
+			local offset = 5.5
+
+			if #str == 2 then
+    			offset = 5.7
+			end
+
+			text:SetHAlign(ANCHOR_MIDDLE)
+			text:SetPosition(pos.textx + x + offset, pos.texty)
+		end
 
 		local details_x = 60
 		if data.has_eaten then
@@ -454,6 +487,7 @@ function BrewbookPage:BuildRecipeBook()
 				end
 			else
 				widget.recipie_root:Hide()
+				widget.coin_root:Hide()
 				widget.cell_root:SetTextures("images/quagmire_recipebook.xml", "cookbook_unknown.tex", "cookbook_unknown_selected.tex")
 			end
 			widget:Enable()
@@ -479,6 +513,7 @@ function BrewbookPage:BuildRecipeBook()
 			defaultsortkey = hash(prefab),
 			food_atlas = "images/quagmire_recipebook.xml",
 			food_tex = "cookbook_unknown.tex",
+			pigcoinvalue = recipe_def.pigcoinvalue or {0, 0, 0},
 		}
 
 		local known_data = known_recipe_list[prefab]

@@ -107,7 +107,10 @@ end
 -- Pig King Coin Economy System.
 local PIG_COIN_VALUES       =
 {
+	beefalofeed             = {0, 0, 0},
+	beefalotreat            = {0, 0, 0},
 	butterflymuffin         = {2, 0, 0},
+	dustmeringue            = {0, 0, 0},
 	frogglebunwich          = {4, 0, 0}, 
 	taffy                   = {4, 0, 0},
 	pumpkincookie           = {5, 0, 0},
@@ -117,7 +120,7 @@ local PIG_COIN_VALUES       =
 	honeyham                = {7, 0, 0},
 	dragonpie               = {7, 1, 0},
 	kabobs                  = {4, 0, 0},
-	mandrakesoup            = {10, 5, 1},
+	mandrakesoup            = {10, 5, 2},
 	baconeggs               = {6, 0, 0},
 	meatballs               = {4, 0, 0},
 	bonestew                = {7, 0, 0},
@@ -172,6 +175,7 @@ local PIG_COIN_VALUES       =
 	veggieomlet             = {3, 0, 0},
 	talleggs                = {8, 0, 0},
 	shroombait              = {5, 0, 0},
+	wetgoop                 = {0, 0, 0},
 }
 
 for prefab, value in pairs(PIG_COIN_VALUES) do
