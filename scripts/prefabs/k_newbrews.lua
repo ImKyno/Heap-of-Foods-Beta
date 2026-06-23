@@ -48,6 +48,26 @@ local function NightVision_OnEntitySleep(inst)
 	end
 end
 
+local function OnPutOnFurniture(inst)
+	if TUNING.HOF_KEEPFOOD then
+		if inst.components.perishable ~= nil then
+			inst.components.perishable:StopPerishing()
+		end
+	end
+
+	inst:AddTag("outofreach")
+end
+
+local function OnTakeOffFurniture(inst)
+	if TUNING.HOF_KEEPFOOD then
+		if inst.components.perishable ~= nil then
+			inst.components.perishable:StartPerishing()
+		end
+	end
+
+	inst:RemoveTag("outofreach")
+end
+
 local function CreateCore()
 	local inst = CreateEntity()
 
@@ -92,6 +112,7 @@ local function MakePreparedBrew(data)
 		inst.entity:AddTransform()
 		inst.entity:AddAnimState()
 		inst.entity:AddSoundEmitter()
+		inst.entity:AddFollower()
 		inst.entity:AddNetwork()
 
 		MakeInventoryPhysics(inst)
@@ -117,9 +138,10 @@ local function MakePreparedBrew(data)
 			inst.lightcolour = data.bloomlight
 		end
 
+		inst:AddTag("nospice")
 		inst:AddTag("preparedfood")
 		inst:AddTag("preparedbrew")
-		inst:AddTag("nospice")
+		inst:AddTag("furnituredecor")
 		
 		if data.fireproof ~= nil then
 			inst:AddTag("fireprooffood")
@@ -250,6 +272,10 @@ local function MakePreparedBrew(data)
 		inst.components.edible.nochill = data.nochill or nil
 		inst.components.edible:SetOnEatenFn(data.oneatenfn)
 		inst.components.edible.degrades_with_spoilage = data.degrades_with_spoilage == nil or data.degrades_with_spoilage
+
+		inst:AddComponent("furnituredecor")
+		inst.components.furnituredecor.onputonfurniture = OnPutOnFurniture
+		inst.components.furnituredecor.ontakeofffurniture = OnTakeOffFurniture
 		
 		if data.nightvision ~= nil then
 			inst.PlayBeatingSound = NightVision_PlayBeatingSound

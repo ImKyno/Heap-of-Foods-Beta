@@ -463,11 +463,12 @@ function params.winter_tree_hof.itemtestfn(container, item, slot)
 	return item:HasTag("winter_ornament") and not container.inst:HasTag("burnt")
 end
 
--- Seed Bag
+-- Seed Sack.
 params.seedsbag =
 {
 	widget =
 	{
+		slotbg = {},
 		slotpos =
 		{
 			Vector3(-37.5, 32 + 4,    0),
@@ -478,6 +479,8 @@ params.seedsbag =
 
 		animbank = "ui_chest_2x2",
 		animbuild = "ui_chest_2x2",
+		animbank_upgraded = "ui_seedsbag_upgraded_2x2",
+		animbuild_upgraded = "ui_seedsbag_upgraded_2x2",
 
 		pos = Vector3(0, 160, 0),
 		side_align_tip = 190,
@@ -486,30 +489,45 @@ params.seedsbag =
 	type = "chest",
 }
 
+for i = 1, #params.seedsbag.widget.slotpos do
+	table.insert(params.seedsbag.widget.slotbg,
+	{
+		image = "seedsbag_slot_seed.tex",
+		atlas = "images/inventoryimages/hof_hudimages.xml",
+	})
+end
+
 function params.seedsbag.itemtestfn(container, item, slot)
 	return item.prefab == "seeds" or string.match(item.prefab, "_seeds")
 end
 
 params.seedsbag.priorityfn = params.seedsbag.itemtestfn
 
+
+
 -- Tweaks for vanilla containers.
--- Hack for portablespicer to not accept items with "nospice" tag.
-function containers.params.portablespicer.itemtestfn(container, item, slot)
-	return item.prefab ~= "wetgoop"
-	and (
-			(slot == 1 and item:HasTag("preparedfood") and not item:HasTag("spicedfood") and not item:HasTag("nospice")) or
-			(slot == 2 and item:HasTag("spice")) or
-			(slot == nil and (item:HasTag("spice") or (item:HasTag("preparedfood") and not item:HasTag("spicedfood") and not item:HasTag("nospice"))))
-		)
-	and not container.inst:HasTag("burnt")
+-- Portable Seasoning Station does not accept items with nospice tag.
+local _portablespicer_itemtestfn = containers.params.portablespicer.itemtestfn
+containers.params.portablespicer.itemtestfn = function(container, item, slot)
+	if item:HasTag("nospice") then
+		return false
+	end
+
+	return _portablespicer_itemtestfn(container, item, slot)
 end
 
 -- Tin Fishin' Bin accepts more kinds of fish.
-function containers.params.fish_box.itemtestfn(container, item, slot)
-	return item:HasAnyTag("smalloceancreature", "fish_box_valid")
+local _fish_box_itemtestfn = containers.params.fish_box.itemtestfn
+containers.params.fish_box.itemtestfn = function(container, item, slot)
+	if item:HasAnyTag("smalloceancreature", "fish_box_valid") then
+		return true
+	end
+
+	return _fish_box_itemtestfn(container, item, slot)
 end
 
-local sisturn_itemtestfn = containers.params.sisturn.itemtestfn
+-- Sisturn accepts Sweet Flower.
+local _sisturn_itemtestfn = containers.params.sisturn.itemtestfn
 containers.params.sisturn.itemtestfn = function(container, item, slot)
 	if item.prefab == "kyno_sugartree_petals" then
 		local owner
@@ -520,12 +538,13 @@ containers.params.sisturn.itemtestfn = function(container, item, slot)
 			owner = ThePlayer
 		end
 
-		if not owner or (owner.components.skilltreeupdater and owner.components.skilltreeupdater:IsActivated("wendy_sisturn_3")) then
+		if not owner or (owner.components.skilltreeupdater
+		and owner.components.skilltreeupdater:IsActivated("wendy_sisturn_3")) then
 			return true
 		end
 
 		return true
 	end
 
-	return sisturn_itemtestfn(container, item, slot)
+	return _sisturn_itemtestfn(container, item, slot)
 end

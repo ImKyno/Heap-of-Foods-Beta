@@ -2,6 +2,7 @@ local assets =
 {
 	Asset("ANIM", "anim/kyno_seedsbag.zip"),
 	Asset("ANIM", "anim/ui_chest_2x2.zip"),
+	Asset("ANIM", "anim/ui_seedsbag_upgraded_2x2.zip"),
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),

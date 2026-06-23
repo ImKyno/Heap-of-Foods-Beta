@@ -22,6 +22,7 @@ TUNING.HOF_SPECIAL_EVENTS_BIRTHDAY = false -- Anniversary Event | Period: Decemb
 TUNING.HOF_COFFEEBUFF_DURATION = GetModConfigData("COFFEEDURATION") or 480
 TUNING.HOF_LANGUAGE_CODE = GetModConfigData("LANGUAGE") or "en"
 TUNING.HOF_AUTORETROFIT = GetModConfigData("AUTORETROFIT")
+TUNING.HOF_KEEPFOOD = GetModConfigData("KEEPFOOD")
 TUNING.HOF_SEASONALFOOD = GetModConfigData("SEASONALFOOD")
 TUNING.HOF_SCRAPBOOK = GetModConfigData("SCRAPBOOK")
 TUNING.HOF_SCRAPBOOK_EXTRAS = GetModConfigData("SCRAPBOOK2")
@@ -31,6 +32,7 @@ TUNING.HOF_IS_TAP_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2428854303")
 TUNING.HOF_IS_NET_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2528541304") -- Not Enough Turfs Mod.
 TUNING.HOF_IS_TCP_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2174681153") -- Apparels Overload Mod.
 TUNING.HOF_IS_DHD_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-3004639365") -- Dehydrated Mod.
+TUNING.HOF_IS_OTT_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-3282278569") -- On To Table Mod.
 
 TUNING.PROTOTYPER_TREES.MEALING           = TechTree.Create({ MEALING       = 1 })
 TUNING.PROTOTYPER_TREES.MEALING_ONE       = TechTree.Create({ MEALING       = 1 })
@@ -1674,3 +1676,21 @@ TUNING.KYNO_ICENETTLES_SANITY = -3
 TUNING.KYNO_ICENETTLES_DRIED_HEALTH = -5
 TUNING.KYNO_ICENETTLES_DRIED_HUNGER = 0
 TUNING.KYNO_ICENETTLES_DRIED_SANITY = -3
+
+-- These are the swaps for Sweet Flower in decor vases.
+TUNING.VASE_FLOWER_SWAPS = TUNING.VASE_FLOWER_SWAPS or {}
+TUNING.VASE_FLOWER_SWAPS[150] =
+{
+	lightsource = false,
+	sanityboost = 5,
+}
+
+TUNING.VASE_FLOWER_SWAPS[151] =
+{
+	lightsource = false,
+	sanityboost = 5,
+}
+
+-- Index for Sweet Flower for the table above.
+TUNING.VASE_FLOWER_MAP = TUNING.VASE_FLOWER_MAP or {}
+TUNING.VASE_FLOWER_MAP.kyno_sugartree_petals = { 150, 151 }

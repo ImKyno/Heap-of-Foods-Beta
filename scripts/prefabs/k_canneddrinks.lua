@@ -35,12 +35,33 @@ local function OnDrink(inst, eater)
 	end
 end
 
+local function OnPutOnFurniture(inst)
+	if TUNING.HOF_KEEPFOOD then
+		if inst.components.perishable ~= nil then
+			inst.components.perishable:StopPerishing()
+		end
+	end
+
+	inst:AddTag("outofreach")
+end
+
+local function OnTakeOffFurniture(inst)
+	if TUNING.HOF_KEEPFOOD then
+		if inst.components.perishable ~= nil then
+			inst.components.perishable:StartPerishing()
+		end
+	end
+
+	inst:RemoveTag("outofreach")
+end
+
 local function fn(bank, build, anim)
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
+	inst.entity:AddFollower()
 	inst.entity:AddNetwork()
 
 	MakeInventoryPhysics(inst)
@@ -52,8 +73,9 @@ local function fn(bank, build, anim)
 	inst.AnimState:SetBuild(build)
 	inst.AnimState:PlayAnimation(anim)
 
-	inst:AddTag("foodsack_valid")
 	inst:AddTag("fooddrink")
+	inst:AddTag("furnituredecor")
+	inst:AddTag("foodsack_valid")
 	inst:AddTag("pre-preparedfood") -- So warly can drink them.
 
 	inst.pickupsound = "metal"
@@ -81,6 +103,10 @@ local function fn(bank, build, anim)
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERSLOW)
 	inst.components.perishable:StartPerishing()
+
+	inst:AddComponent("furnituredecor")
+	inst.components.furnituredecor.onputonfurniture = OnPutOnFurniture
+	inst.components.furnituredecor.ontakeofffurniture = OnTakeOffFurniture
 
 	return inst
 end

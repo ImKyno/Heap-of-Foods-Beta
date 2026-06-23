@@ -1,6 +1,6 @@
 local _G = GLOBAL
 
-local HOF_KEEPFOOD = GetModConfigData("KEEPFOOD")
+local HOF_KEEPFOOD = TUNING.HOF_KEEPFOOD
 
 -- Prevent food from spoiling in stations.
 if HOF_KEEPFOOD then

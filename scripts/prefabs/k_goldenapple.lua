@@ -1,13 +1,13 @@
 local assets =
 {
-    Asset("ANIM", "anim/kyno_goldenapple.zip"),
-	
+	Asset("ANIM", "anim/kyno_goldenapple.zip"),
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
-local prefabs = 
+local prefabs =
 {
 	"kyno_goldenapple_fx",
 	"kyno_goldenapplebuff",
@@ -20,7 +20,7 @@ local function OnEaten(inst, eater)
 			eater.components.health:DoDelta(100)
 		end
 	end
-	
+
 	eater:AddDebuff("kyno_goldenapplebuff", "kyno_goldenapplebuff")
 	eater:PushEvent("playgoldenapple")
 end
@@ -29,23 +29,44 @@ local function OnDropped(inst)
 	inst.SoundEmitter:PlaySound("dontstarve/wilson/equip_item_gold")
 end
 
+local function OnPutOnFurniture(inst)
+	if TUNING.HOF_KEEPFOOD then
+		if inst.components.perishable ~= nil then
+			inst.components.perishable:StopPerishing()
+		end
+	end
+
+	inst:AddTag("outofreach")
+end
+
+local function OnTakeOffFurniture(inst)
+	if TUNING.HOF_KEEPFOOD then
+		if inst.components.perishable ~= nil then
+			inst.components.perishable:StartPerishing()
+		end
+	end
+
+	inst:RemoveTag("outofreach")
+end
+
 local function fn()
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
+	inst.entity:AddFollower()
 	inst.entity:AddNetwork()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
-	
+
 	inst.AnimState:SetScale(1.1, 1.1, 1.1)
 
 	inst.AnimState:SetBank("kyno_goldenapple")
 	inst.AnimState:SetBuild("kyno_goldenapple")
 	inst.AnimState:PlayAnimation("idle", true)
-	
+
 	inst.AnimState:HideSymbol("glowpulse")
 
 	inst:AddTag("fruit")
@@ -53,15 +74,16 @@ local function fn()
 	inst:AddTag("masterfood")
 	inst:AddTag("goldenapple")
 	inst:AddTag("warly_caneat")
+	inst:AddTag("furnituredecor")
 	inst:AddTag("saltbox_valid")
 	inst:AddTag("foodsack_valid")
 	inst:AddTag("itemshowcaser_valid")
 	inst:AddTag("beargerfur_sack_valid")
 	inst:AddTag("_named")
-	
+
 	inst._goldenapplefx = SpawnPrefab("kyno_goldenapple_fx")
 	inst._goldenapplefx:AttachTo(inst)
-	
+
 	inst.pickupsound = "item_gold"
 
 	inst.entity:SetPristine()
@@ -69,28 +91,32 @@ local function fn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:RemoveTag("_named")
-	
+
 	inst:AddComponent("inspectable")
-	
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 100
-	
+
 	inst:AddComponent("named")
-    inst.components.named.possiblenames = STRINGS.KYNO_GOLDENAPPLE_NAMES
-    inst.components.named:PickNewName()
+	inst.components.named.possiblenames = STRINGS.KYNO_GOLDENAPPLE_NAMES
+	inst.components.named:PickNewName()
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_goldenapple"
-	
-    inst:AddComponent("stackable")
+
+	inst:AddComponent("furnituredecor")
+	inst.components.furnituredecor.onputonfurniture = OnPutOnFurniture
+	inst.components.furnituredecor.ontakeofffurniture = OnTakeOffFurniture
+
+	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
-	
+
 	inst:AddComponent("edible")
 	inst.components.edible:SetOnEatenFn(OnEaten)
-    inst.components.edible.healthvalue = TUNING.KYNO_GOLDENAPPLE_HEALTH
+	inst.components.edible.healthvalue = TUNING.KYNO_GOLDENAPPLE_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_GOLDENAPPLE_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_GOLDENAPPLE_SANITY
 	inst.components.edible.foodtype = FOODTYPE.GOODIES
@@ -99,7 +125,7 @@ local function fn()
 	inst.components.perishable:SetPerishTime(9999999)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
-	
+
 	inst:ListenForEvent("ondropped", OnDropped)
 
 	return inst

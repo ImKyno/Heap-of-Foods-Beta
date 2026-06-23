@@ -1,11 +1,11 @@
 local assets =
 {
 	Asset("ANIM", "anim/kyno_tuna.zip"),
-	
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
-	
+
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
@@ -14,7 +14,7 @@ local prefabs =
 {
 	"fishmeat_cooked",
 	"kyno_tunacan_open",
-}    
+}
 
 local function OnOpenCan(inst, pos, doer)
 	if doer ~= nil and doer.SoundEmitter ~= nil then
@@ -24,17 +24,17 @@ local function OnOpenCan(inst, pos, doer)
 	end
 
 	local tunacan = SpawnPrefab("kyno_tunacan_open")
-	if doer.components.inventory and doer:HasTag("player") and not doer.components.health:IsDead() 
-	and not doer:HasTag("playerghost") then 
-		doer.components.inventory:GiveItem(tunacan) 
+	if doer.components.inventory and doer:HasTag("player") and not doer.components.health:IsDead()
+	and not doer:HasTag("playerghost") then
+		doer.components.inventory:GiveItem(tunacan)
 	else
 		tunacan.Transform:SetPosition(pos:Get())
 		tunacan.components.inventoryitem:OnDropped(false, .5)
 	end
-	
+
 	if inst.components.stackable ~= nil then
 		inst.components.stackable:Get():Remove()
-        
+
 		if inst.components.stackable:StackSize() <= 0 then
 			inst:Remove()
 		end
@@ -43,49 +43,75 @@ local function OnOpenCan(inst, pos, doer)
 	end
 end
 
+local function OnPutOnFurniture(inst)
+	if TUNING.HOF_KEEPFOOD then
+		if inst.components.perishable ~= nil then
+			inst.components.perishable:StopPerishing()
+		end
+	end
+
+	inst:AddTag("outofreach")
+end
+
+local function OnTakeOffFurniture(inst)
+	if TUNING.HOF_KEEPFOOD then
+		if inst.components.perishable ~= nil then
+			inst.components.perishable:StartPerishing()
+		end
+	end
+
+	inst:RemoveTag("outofreach")
+end
+
 local function closed_fn()
 	local inst = CreateEntity()
 
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
+	inst.entity:AddFollower()
 	inst.entity:AddNetwork()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-    inst.AnimState:SetBank("kyno_tuna")
-    inst.AnimState:SetBuild("kyno_tuna")
-    inst.AnimState:PlayAnimation("idle")
-	
-	inst:AddTag("canned_food")
+	inst.AnimState:SetBank("kyno_tuna")
+	inst.AnimState:SetBuild("kyno_tuna")
+	inst.AnimState:PlayAnimation("idle")
+
 	inst:AddTag("cattoy")
-	
+	inst:AddTag("canned_food")
+	inst:AddTag("furnituredecor")
+
 	inst.pickupsound = "metal"
-    
-    inst.entity:SetPristine()
+
+	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
 		return inst
 	end
-        
-    inst:AddComponent("inspectable")
-    
-    inst:AddComponent("inventoryitem")
-    inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+
+	inst:AddComponent("inspectable")
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_tunacan"
-	
+
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
-    
-    inst:AddComponent("tradable")
-    inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+
+	inst:AddComponent("tradable")
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 
-    inst:AddComponent("unwrappable")
+	inst:AddComponent("unwrappable")
 	inst.components.unwrappable:SetOnUnwrappedFn(OnOpenCan)
 
-    return inst
+	inst:AddComponent("furnituredecor")
+	inst.components.furnituredecor.onputonfurniture = OnPutOnFurniture
+	inst.components.furnituredecor.ontakeofffurniture = OnTakeOffFurniture
+
+	return inst
 end
 
 local function opened_fn()
@@ -94,41 +120,43 @@ local function opened_fn()
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
+	inst.entity:AddFollower()
 	inst.entity:AddNetwork()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-    inst.AnimState:SetBank("kyno_tuna")
-    inst.AnimState:SetBuild("kyno_tuna")
-    inst.AnimState:PlayAnimation("opened")
-	
+	inst.AnimState:SetBank("kyno_tuna")
+	inst.AnimState:SetBuild("kyno_tuna")
+	inst.AnimState:PlayAnimation("opened")
+
+	inst:AddTag("furnituredecor")
 	inst:AddTag("canned_food_open")
 	inst:AddTag("pre-preparedfood") -- So warly can eat them.
-	
+
 	inst.pickupsound = "metal"
-    
-    inst.entity:SetPristine()
+
+	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
 		return inst
 	end
-        
-    inst:AddComponent("inspectable")
+
+	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
-    
-    inst:AddComponent("inventoryitem")
-    inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
+
+	inst:AddComponent("inventoryitem")
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.imagename = "kyno_tunacan_open"
-    
-    inst:AddComponent("tradable")
-    inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
+
+	inst:AddComponent("tradable")
+	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
-	
+
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
 
-    inst:AddComponent("edible")
+	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_TUNACAN_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_TUNACAN_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_TUNACAN_SANITY
@@ -140,7 +168,11 @@ local function opened_fn()
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_fish"
 
-    return inst
+	inst:AddComponent("furnituredecor")
+	inst.components.furnituredecor.onputonfurniture = OnPutOnFurniture
+	inst.components.furnituredecor.ontakeofffurniture = OnTakeOffFurniture
+
+	return inst
 end
 
 return Prefab("kyno_tunacan", closed_fn, assets, prefabs),

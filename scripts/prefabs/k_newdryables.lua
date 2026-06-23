@@ -14,6 +14,7 @@ local assets =
 	Asset("ANIM", "anim/kyno_meatrack_moon_froglegs.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_jellyfish.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_fishmeat.zip"),
+	Asset("ANIM", "anim/kyno_meatrack_sweetflower.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_aloe.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_icenettles.zip"),
 	
