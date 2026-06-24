@@ -42,6 +42,7 @@ PrefabFiles =
 	"k_crop_turnip",
 	"k_cucumber",
 	"k_dailyrecipe_sign",
+	"k_dailyrecipe_sign_decor",
 	"k_deciduousforest_shop",
 	"k_deciduousforest_trader",
 	"k_dogfish",

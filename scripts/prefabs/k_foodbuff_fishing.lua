@@ -43,6 +43,10 @@ local function OnExtended(inst, target)
 	else
 		target:AddTag("skilledfisherman")
 	end
+
+	if target.components.talker and target:HasTag("player") then 
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FISHINGBUFF_START"))
+	end
 end
 
 local function fn()

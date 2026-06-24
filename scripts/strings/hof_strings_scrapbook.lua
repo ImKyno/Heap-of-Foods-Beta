@@ -243,5 +243,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Increases sanity of the su
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "A 2 slot container that will receive corn for making popcorn.\n\nPlacing corn in the first slot will allow producing 5 popcorns.\n\nDuring the Heap of Foods Anniversary it will produce Anniversary Popcorn instead.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Some animals will feed from the contents stocked in this trough.\n\Seeds and Grains can be used as a primary food source."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "A shelter for Chickens that can produce poultry products."
-STRINGS.SCRAPBOOK.SPECIALINFO.DAILYRECIPE_SIGN = "Keeps track of Daily Recipes and allows a brief review of them."
+STRINGS.SCRAPBOOK.SPECIALINFO.DAILYRECIPE_SIGN = "Keeps track of Daily Recipes and allows a brief review of them.\n\nCan be converted to Recipe Board using a Feather Pencil.\n\nRecipe Board is a decorative variant that allows the survivor to draw any prepared dish. Does not affect Daily Recipes."
 STRINGS.SCRAPBOOK.SPECIALINFO.CAVETUBERTREE = "Requires a sturdy axe to be chopped down. If the stump is left behind it will grow back after some days, producing more Tuber.\n\nDuring the Spring it starts blooming and becomes ripe."

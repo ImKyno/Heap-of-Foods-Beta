@@ -969,15 +969,29 @@ local function IsValidSeed(item)
 	return item ~= nil and (item.prefab == "seeds" or string.match(item.prefab, "_seeds"))
 end
 
--- Can only draw seeds on Seeds Sack.
+local function IsValidPreparedFood(item)
+	return item ~= nil and (item:HasAnyTag("preparedfood", "preparedbrew", "dailyrecipe_sign_valid"))
+end
+
 local _DRAWfn = ACTIONS.DRAW.fn
 ACTIONS.DRAW.fn = function(act)
+	-- Can only draw seeds on Seeds Sack.
 	if act.target ~= nil and act.target.prefab == "kyno_seedsbag"
 	and act.invobject ~= nil and act.invobject.components.drawingtool ~= nil then
 		local image, src, atlas, bgimage, bgatlas = act.invobject.components.drawingtool:GetImageToDraw(act.target, act.doer)
 
 		if not IsValidSeed(src) then
-			return false, "NOIMAGE"
+			return false, "WRONGITEM" -- This will actually return generic action fail, anyways no new strings needed.
+		end
+	end
+
+	-- Can only draw dishes on Recipe Board.
+	if act.target ~= nil and act.target.prefab == "kyno_dailyrecipe_sign_decor"
+	and act.invobject ~= nil and act.invobject.components.drawingtool ~= nil then
+		local image, src, atlas, bgimage, bgatlas = act.invobject.components.drawingtool:GetImageToDraw(act.target, act.doer)
+
+		if not IsValidPreparedFood(src) then
+			return false, "WRONGITEM"
 		end
 	end
 

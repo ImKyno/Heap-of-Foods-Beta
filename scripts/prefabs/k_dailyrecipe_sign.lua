@@ -14,11 +14,7 @@ local prefabs =
 	"collapse_small",
 }
 
-local function OnHammered(inst, worker)
-	if inst.components.lootdropper ~= nil then
-		inst.components.lootdropper:DropLoot()
-	end
-
+local function OnSpawnRecipeCard(inst)
 	if inst.components.pickable ~= nil and inst.components.pickable:CanBePicked() then
 		local dailyrecipe = TheWorld.net.components.dailyrecipe
 
@@ -30,6 +26,14 @@ local function OnHammered(inst, worker)
 			end
 		end
 	end
+end
+
+local function OnHammered(inst, worker)
+	if inst.components.lootdropper ~= nil then
+		inst.components.lootdropper:DropLoot()
+	end
+
+	OnSpawnRecipeCard(inst)
 
 	local fx = SpawnPrefab("collapse_small")
 	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
@@ -122,6 +126,25 @@ local function OnBuilt(inst, data)
 	inst.SoundEmitter:PlaySound("dontstarve/common/sign_craft")
 end
 
+local function OnDrawn(inst, image, src, atlas, bgimage, bgatlas)
+	if image == nil then
+		return
+	end
+
+	local x, y, z = inst.Transform:GetWorldPosition()
+
+	local newsign = SpawnPrefab("kyno_dailyrecipe_sign_decor")
+	newsign.Transform:SetPosition(x, y, z)
+
+	if newsign.components.drawable ~= nil then
+		newsign.components.drawable:OnDrawn(image, src, atlas, bgimage, bgatlas)
+	end
+
+	OnSpawnRecipeCard(inst)
+
+    inst:Remove()
+end
+
 local function GetVerb()
 	return "DAILYRECIPE"
 end
@@ -174,12 +197,13 @@ local function fn()
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_dailyrecipe_sign.tex")
 
-	MakeObstaclePhysics(inst, .5)
+	MakeObstaclePhysics(inst, .4)
 
 	inst.AnimState:SetBank("kyno_dailyrecipe_sign")
 	inst.AnimState:SetBuild("kyno_dailyrecipe_sign")
 	inst.AnimState:PlayAnimation("idle", true)
 
+	inst:AddTag("drawable")
 	inst:AddTag("structure")
 	inst:AddTag("dailyrecipe_sign")
 
@@ -197,6 +221,9 @@ local function fn()
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.descriptionfn = GetDescription
+
+	inst:AddComponent("drawable")
+	inst.components.drawable:SetOnDrawnFn(OnDrawn)
 
 	inst:AddComponent("activatable")
 	inst.components.activatable.OnActivate = OnActivate
@@ -223,7 +250,7 @@ local function fn()
 		local recipe_old = data ~= nil and data.old or nil
 		local recipe_new = data ~= nil and data.new or nil
 
-		if TUNING.HOF_DEBUG_MODE or TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
+		if TUNING.HOF_DAILYRECIPES_DEBUG_ENABLED then
 			print("Heap of Foods Mod - Daily Recipe Board: Old Recipe", recipe_old)
 			print("Heap of Foods Mod - Daily Recipe Board: New Recipe", recipe_new)
 		end

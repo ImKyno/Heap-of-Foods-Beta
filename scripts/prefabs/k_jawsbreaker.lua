@@ -136,6 +136,7 @@ local function fn()
 	inst:AddTag("jawsbreaker")
 	inst:AddTag("allow_action_on_impassable")
 	inst:AddTag("itemshowcaser_valid")
+	inst:AddTag("dailyrecipe_sign_valid")
 	
 	inst.entity:SetPristine()
 	

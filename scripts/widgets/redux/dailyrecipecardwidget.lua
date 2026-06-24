@@ -247,6 +247,41 @@ function DailyRecipeCardWidget:BuildDailyRecipeCard(data)
 		food_img:ScaleToSize(icon_size, icon_size)
 
 		----------------------------------------------------------------
+		-- KOIN VALUES
+		local value = data.recipe_def.pigcoinvalue or {0, 0, 0}
+		local coin_root = portrait_root:AddChild(Widget("coin_root"))
+		coin_root:SetPosition(-28, -50)
+
+		for i = 1, 3 do
+			local x = (i - 1) * 24
+
+			local coin_offsets =
+			{
+				{ textx = 0, texty = -0.5 },
+				{ textx = 0, texty = -0.5 },
+				{ textx = 0, texty = -0.5 },
+			}
+
+			local pos = coin_offsets[i]
+
+			local icon = coin_root:AddChild(Image("images/hof_pigcoinvalue_icons.xml", "kyno_pigcoin"..i..".tex"))
+			icon:SetScale(0.55)
+			icon:SetPosition(x + 4, 0)
+
+			local str = tostring(value[i] or 0)
+			local text = coin_root:AddChild(Text(BODYTEXTFONT, 16, str))
+
+			local offset = 5.5
+
+			if #str == 2 then
+				offset = 5.7
+			end
+
+			text:SetHAlign(ANCHOR_MIDDLE)
+			text:SetPosition(pos.textx + x + offset, pos.texty)
+		end
+
+		----------------------------------------------------------------
 		-- RECIPE STATS
 		local details_x = 60
 		local details_y = y + 85
@@ -401,7 +436,7 @@ end
 
 function DailyRecipeCardWidget:RefreshDailyRecipe()
 	local recipe = DAILY_RECIPES.GetDailyRecipe()
-	
+
 	if recipe == nil then
 		return
 	end

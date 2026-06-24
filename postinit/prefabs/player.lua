@@ -28,6 +28,51 @@ local function OnLearnRoe(inst, data)
 	end
 end
 
+local function OnFishCaught(inst, data)
+	if not inst:HasTag("skilledfisherman") then
+		return
+	end
+
+	local baseFish = data.fish
+
+	if baseFish ~= nil then
+		local prefab = baseFish.prefab
+
+		if prefab == nil then
+    		return
+		end
+
+		local fishprefab = TUNING.HOF_OCEANTRAP_PREFAB_INDEX[prefab] or (prefab .. "_inv")
+		local extraFish = _G.SpawnPrefab(fishprefab)
+
+		if extraFish ~= nil then
+			if extraFish.components.weighable ~= nil then
+				extraFish.components.weighable:SetPlayerAsOwner(inst)
+			end
+
+			if inst.components.inventory ~= nil then
+				inst.components.inventory:GiveItem(extraFish, nil, inst:GetPosition())
+			end
+		end
+
+		local luck = _G.TryLuckRoll(inst, TUNING.KYNO_FISHINGBUFF_EXTRA_FISH_CHANCE, HofLuckFormulas.SkilledFisherman)
+
+		if luck then
+			local extraFish2 = _G.SpawnPrefab(fishprefab)
+
+			if extraFish2 ~= nil then
+				if extraFish2.components.weighable ~= nil then
+					extraFish2.components.weighable:SetPlayerAsOwner(inst)
+				end
+
+				if inst.components.inventory ~= nil then
+					inst.components.inventory:GiveItem(extraFish2, nil, inst:GetPosition())
+				end
+			end
+		end
+	end
+end
+
 local function PlayerPostInit(inst)
 	inst:AddComponent("fishregistryupdater")
 
@@ -76,9 +121,11 @@ local function PlayerPostInit(inst)
 
 	inst.OnLearnFish = OnLearnFish
 	inst.OnLearnRoe = OnLearnRoe
+	inst.OnFishCaught = OnFishCaught
 
 	inst:ListenForEvent("learnfish", inst.OnLearnFish)
 	inst:ListenForEvent("learnroe", inst.OnLearnRoe)
+	inst:ListenForEvent("fishcaught", inst.OnFishCaught)
 end
 
 AddPlayerPostInit(PlayerPostInit)

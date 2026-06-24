@@ -254,28 +254,28 @@ function BrewbookPage:PopulateRecipeDetailPanel(data)
 		coin_root:SetPosition(-28, -50)
 
 		for i = 1, 3 do
-    		local x = (i - 1) * 24
+			local x = (i - 1) * 24
 
 			local coin_offsets =
-			{ 
+			{
 				{ textx = 0, texty = -0.5 },
-    			{ textx = 0, texty = -0.5 },
-    			{ textx = 0, texty = -0.5 },
+				{ textx = 0, texty = -0.5 },
+				{ textx = 0, texty = -0.5 },
 			}
 
 			local pos = coin_offsets[i]
 
-    		local icon = coin_root:AddChild(Image("images/hof_pigcoinvalue_icons.xml", "kyno_pigcoin"..i..".tex"))
-    		icon:SetScale(0.55)
-    		icon:SetPosition(x + 4, 0)
+			local icon = coin_root:AddChild(Image("images/hof_pigcoinvalue_icons.xml", "kyno_pigcoin"..i..".tex"))
+			icon:SetScale(0.55)
+			icon:SetPosition(x + 4, 0)
 
 			local str = tostring(value[i] or 0)
-    		local text = coin_root:AddChild(Text(BODYTEXTFONT, 16, str))
+			local text = coin_root:AddChild(Text(BODYTEXTFONT, 16, str))
 
 			local offset = 5.5
 
 			if #str == 2 then
-    			offset = 5.7
+				offset = 5.7
 			end
 
 			text:SetHAlign(ANCHOR_MIDDLE)
