@@ -713,7 +713,7 @@ WURT.DESCRIBE.KYNO_WOODENKEG =
 
 WURT.DESCRIBE.KYNO_PRESERVESJAR = 
 {
-	EMPTY = "Its smelly, florp.",
+	EMPTY = "It's smelly, florp.",
 	BREWING_LONG = "Taking long time.",
 	BREWING_SHORT = "Almost mine!",
 	DONE = "Sweet stuff!",

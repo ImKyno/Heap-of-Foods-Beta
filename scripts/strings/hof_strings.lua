@@ -11,7 +11,7 @@ Eating the Daily Recipe grants bonus stats:
 It also grants +2 Luck for a certain period.
 ]]
 
-STRINGS.UI.CRAFTING_FILTERS.MEALING = "Food Ingredients"
+STRINGS.UI.CRAFTING_FILTERS.MEALING = "Basic Ingredients"
 STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP = "Elder's Supplies"
 STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP = "Sammy's Emporium"
 STRINGS.UI.CRAFTING_FILTERS.DECIDUOUSSHOP = "Partitio's Warehouse"
@@ -967,7 +967,7 @@ STRINGS.NAMES.HARDSHELL_TACOS = "Hard Shell Tacos"
 
 STRINGS.NAMES.ICEDTEA = "Iced Tea"
 
-STRINGS.NAMES.NETTLELOSANGE = "Fire Nettle Fronds Rolls"
+STRINGS.NAMES.NETTLELOSANGE = "Fire Nettle Rolls"
 
 STRINGS.NAMES.SNAKEBONESOUP = "Worm Bone Soup"
 
@@ -1853,7 +1853,7 @@ STRINGS.NAMES.ALGAE_SOUP = "Algae Soup"
 
 STRINGS.NAMES.PARZNIP_SOUP = "Parsnip Soup"
 
-STRINGS.NAMES.NETTLEMEATED = "Meated Fire Nettle Fronds"
+STRINGS.NAMES.NETTLEMEATED = "Meated Fire Nettle"
 
 STRINGS.NAMES.KYNO_SUGAR = "Sugar"
 STRINGS.RECIPE_DESC.KYNO_SUGAR = "Adds sweetness to pastries and candies. Too much can be unhealthy."
@@ -2092,7 +2092,7 @@ STRINGS.NAMES.KYNO_MALBATROSSFOOD_BLUEPRINT = "Bewitching Fish Food Blueprint"
 STRINGS.RECIPE_DESC.KYNO_MALBATROSSFOOD_BLUEPRINT = "Get chummy with this special fish food!"
 
 STRINGS.NAMES.KYNO_FISHFARMPLOT_KIT = "Fish Hatchery Foundation Kit"
-STRINGS.RECIPE_DESC.KYNO_FISHFARMPLOT_KIT = "Raise your own fish to produce offspring and roe."
+STRINGS.RECIPE_DESC.KYNO_FISHFARMPLOT_KIT = "Raise your own fish to produce offspring and roe. Water not included!"
 
 STRINGS.NAMES.KYNO_FISHFARMPLOT_CONSTRUCTION = "Fish Hatchery Foundation"
 

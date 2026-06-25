@@ -243,7 +243,7 @@ WENDY.DESCRIBE.KYNO_WILDWHEAT =
 	BURNING = "Its end is swift.",
 }
 
-WENDY.DESCRIBE.KYNO_MEALGRINDER = "I'am ground down the mealing stone of life."
+WENDY.DESCRIBE.KYNO_MEALGRINDER = "I am ground down the mealing stone of life."
 
 WENDY.DESCRIBE.KYNO_MUSHSTUMP =
 {

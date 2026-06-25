@@ -216,7 +216,7 @@ function params.potatosack.itemtestfn(container, item, slot)
 	return item:HasTag("potatosack_valid") and not container.inst:HasTag("burnt")
 end
 
--- Food Sack.
+-- Salt Pack.
 params.foodsack =
 {
 	widget =
@@ -224,10 +224,10 @@ params.foodsack =
 		slotbg = {},
 		slotpos = {},
 
-		animbank = "ui_backpack_2x4",
-		animbuild = "ui_backpack_2x4",
+		animbank = "ui_piggyback_2x6",
+		animbuild = "ui_piggyback_2x6",
 
-		pos = Vector3(-5, -80, 0),
+		pos = Vector3(-5, -90, 0),
 	},
 
 	issidewidget = true,
@@ -235,17 +235,16 @@ params.foodsack =
 	openlimit = 1,
 }
 
-local foodsack_slotbg = { atlas = "images/hud.xml", image = "inv_slot_morsel.tex" }
-for y = 0, 3 do
-	table.insert(params.foodsack.widget.slotpos, Vector3(-162, -75 * y + 114, 0))
-	table.insert(params.foodsack.widget.slotpos, Vector3(-162 + 75, -75 * y + 114, 0))
-	table.insert(params.foodsack.widget.slotbg, foodsack_slotbg)
-	table.insert(params.foodsack.widget.slotbg, foodsack_slotbg)
+-- local foodsack_slotbg = { atlas = "images/hud.xml", image = "inv_slot_morsel.tex" }
+for y = 5, 0, -1 do
+	table.insert(params.foodsack.widget.slotpos, Vector3(-162, -75 * y + 170, 0))
+	table.insert(params.foodsack.widget.slotpos, Vector3(-162 + 75, -75 * y + 170, 0))
+	-- table.insert(params.foodsack.widget.slotbg, foodsack_slotbg)
 end
-foodsack_slotbg = nil
+-- foodsack_slotbg = nil
 
 function params.foodsack.itemtestfn(container, item, slot)
-	if item:HasTag("preparedfood") then
+	if item:HasAnyTag("preparedfood", "preparedbrew") then
 		return false
 	end
 
@@ -254,6 +253,8 @@ function params.foodsack.itemtestfn(container, item, slot)
 			return true
 		end
 	end
+
+	return true
 end
 
 params.popcornmachine =
