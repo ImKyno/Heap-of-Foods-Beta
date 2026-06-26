@@ -130,6 +130,14 @@ WALTER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Guess I know more about fish eggs now."
 
 WALTER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "That was a solid camp meal!"
 
+WALTER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Ah! Ow! It's cold!!",
+	"Aaaah, it got me! It got me!",
+}
+
+WALTER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew... I-I think I'm okay now."
+
 WALTER.DESCRIBE.KYNO_ROE = "My first time seeing one of them."
 WALTER.DESCRIBE.KYNO_ROE_COOKED = "I cooked them. Hehe."
 
@@ -1233,6 +1241,7 @@ WALTER.DESCRIBE.CHICKENROTISSERIE = "That'd make a great camp dinner!"
 
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Perfect for a quiet campfire evening."
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Tastes like a meadow adventure."
+WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Perfect for keeping cool outdoors."
 
 WALTER.DESCRIBE.SOULJUICE = "I’m not sure if this counts as juice..."
 
@@ -1298,3 +1307,12 @@ WALTER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "That's some impressive gardenin
 WALTER.DESCRIBE.KYNO_PIGCOIN1 = "It's a coin, Woby!" 
 WALTER.DESCRIBE.KYNO_PIGCOIN2 = "I could buy a bunch of snacks for Woby with this."
 WALTER.DESCRIBE.KYNO_PIGCOIN3 = "Looks important, we must keep it somewhere safe."
+
+WALTER.DESCRIBE.KYNO_ICENETTLES = "Oh! this one i haven't seen it before!"
+WALTER.DESCRIBE.KYNO_ICENETTLES_DRIED = "These could be a good summer snack."
+
+WALTER.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Every gardener needs one of these.",
+	FULL = "Looks like it's full up.",
+}

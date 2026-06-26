@@ -130,6 +130,14 @@ WAXWELL.ANNOUNCE_KYNO_ROE_RESEARCHED = "Potencjał zmarnowany w tak kruchej form
 
 WAXWELL.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Zadowalające, jak sądzę."
 
+WAXWELL.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Ack, those stupid nettles!",
+	"The nettle's poison is freezing in my veins!",
+}
+
+WAXWELL.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "The worst has passed." -- NEEDS TRANSLATION
+
 WAXWELL.DESCRIBE.KYNO_ROE = "Surowe rybie jajka. Fantastycznie."
 WAXWELL.DESCRIBE.KYNO_ROE_COOKED = "Rybie jajka są teraz ugotowane."
 
@@ -498,11 +506,7 @@ WAXWELL.DESCRIBE.COCONUTWATER = "Orzeźwiająca."
 
 WAXWELL.DESCRIBE.EYEBALLSPAGHETTI = "Dlaczego to zrobiłem?"
 
-WAXWELL.DESCRIBE.FORGETMELOTS_SEEDS = "Taki trud jest poniżej mnie."
-
-WAXWELL.DESCRIBE.FIRENETTLES_SEEDS = "Taki trud jest poniżej mnie."
-
-WAXWELL.DESCRIBE.TILLWEED_SEEDS = "Taki trud jest poniżej mnie."
+WAXWELL.DESCRIBE.WEED_SEEDS = "Taki trud jest poniżej mnie."
 
 WAXWELL.DESCRIBE.KYNO_FLOATILIZER = "To nieelegancko nosić obornik w rękach."
 
@@ -1237,6 +1241,7 @@ WAXWELL.DESCRIBE.CHICKENROTISSERIE = "Dekadenckie, lecz niezaprzeczalnie praktyc
 
 WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Przynajmniej jest wyrafinowane."
 WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Zaskakująco gustowne."
+WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "At least it's served cold." -- NEEDS TRANSLATION
 
 WAXWELL.DESCRIBE.SOULJUICE = "Wyrafinowany napój... z nieco złowieszczym akcentem."
 
@@ -1302,3 +1307,12 @@ WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Niezwykle skuteczna formuła."
 WAXWELL.DESCRIBE.KYNO_PIGCOIN1 = "Cóż, cóż, cóż..."
 WAXWELL.DESCRIBE.KYNO_PIGCOIN2 = "Będę miał z tego użytek."
 WAXWELL.DESCRIBE.KYNO_PIGCOIN3 = "Wspinaczka po drabinie społecznej."
+
+WAXWELL.DESCRIBE.KYNO_ICENETTLES = "Blast it! There's more of these?" -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.KYNO_ICENETTLES_DRIED = "I heard that Higgsbury..." -- NEEDS TRANSLATION
+
+WAXWELL.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "A humble sack for humble seeds.",
+	FULL = "It's completely full.",
+}

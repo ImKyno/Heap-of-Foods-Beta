@@ -130,6 +130,14 @@ WINONA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Nieładne, ale użyteczne. Wiedza to wied
 
 WINONA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Spełnia swoje zadanie."
 
+WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Yeesh, I feel hotter than a ice block!",
+	"Ugh, I'm freezin' up...",
+}
+
+WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm not keen to try that again." -- NEEDS TRANSLATION
+
 WINONA.DESCRIBE.KYNO_ROE = "Ikra, ikra, ikra rybka... Chyba wariuję."
 WINONA.DESCRIBE.KYNO_ROE_COOKED = "Przynajmniej nie miały twarzy."
 
@@ -498,11 +506,7 @@ WINONA.DESCRIBE.COCONUTWATER = "Ah... trafia w punkt."
 
 WINONA.DESCRIBE.EYEBALLSPAGHETTI = "Chyba lepsze to niż głodowanie."
 
-WINONA.DESCRIBE.FORGETMELOTS_SEEDS = "Garść nasion."
-
-WINONA.DESCRIBE.FIRENETTLES_SEEDS = "Garść nasion."
-
-WINONA.DESCRIBE.TILLWEED_SEEDS = "Garść nasion."
+WINONA.DESCRIBE.WEED_SEEDS = "Garść nasion."
 
 WINONA.DESCRIBE.KYNO_FLOATILIZER = "Jedzenie dla ziemi."
 
@@ -1237,6 +1241,7 @@ WINONA.DESCRIBE.CHICKENROTISSERIE = "Powolny obrót, równe pieczenie. Szanuję 
 
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Dobre na krótką przerwę."
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Wcale nie takie złe."
+WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Now that's refreshing." -- NEEDS TRANSLATION
 
 WINONA.DESCRIBE.SOULJUICE = "To dopiero dziwny napój energetyczny."
 
@@ -1302,3 +1307,12 @@ WINONA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "To już rolnictwo przemysłowe.
 WINONA.DESCRIBE.KYNO_PIGCOIN1 = "Szczęśliwa moneta."
 WINONA.DESCRIBE.KYNO_PIGCOIN2 = "Zachowaj to na czarną godzinę."
 WINONA.DESCRIBE.KYNO_PIGCOIN3 = "Muszę uważać, żeby nie stać się bogatą głupią osobą."
+
+WINONA.DESCRIBE.KYNO_ICENETTLES = "I mean, they could be a good coolant for the machinery." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_ICENETTLES_DRIED = "These look more efficient, and colder." -- NEEDS TRANSLATION
+
+WINONA.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "Good organizational tool.",
+	FULL = "Storage capacity reached.",
+}

@@ -130,6 +130,14 @@ WORTOX.ANNOUNCE_KYNO_ROE_RESEARCHED = "Jajeczne sekreciki! Hyuyu!"
 
 WORTOX.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Smakołyk dla śmiertelników!"
 
+WORTOX.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Such nasty nettles!",
+	"Ouch! Ouch!",
+}
+
+WORTOX.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "It seems I've beat the cold!" -- NEEDS TRANSLATION
+
 WORTOX.DESCRIBE.KYNO_ROE = "Rybie jajka."
 WORTOX.DESCRIBE.KYNO_ROE_COOKED = "Pieczone rybie jajka."
 
@@ -498,11 +506,7 @@ WORTOX.DESCRIBE.COCONUTWATER = "Na pewno przynosi ulgę."
 
 WORTOX.DESCRIBE.EYEBALLSPAGHETTI = "Wiem, że to nie skończy się dobrze."
 
-WORTOX.DESCRIBE.FORGETMELOTS_SEEDS = "Posadź nasiono, a nakarmisz się!"
-
-WORTOX.DESCRIBE.FIRENETTLES_SEEDS = "Posadź nasiono, a nakarmisz się!"
-
-WORTOX.DESCRIBE.TILLWEED_SEEDS = "Posadź nasiono, a nakarmisz się!"
+WORTOX.DESCRIBE.WEED_SEEDS = "Posadź nasiono, a nakarmisz się!"
 
 WORTOX.DESCRIBE.KYNO_FLOATILIZER = "Hyuyu! To jakieś łajno!"
 
@@ -1237,6 +1241,7 @@ WORTOX.DESCRIBE.CHICKENROTISSERIE = "W kółko kręci się ptaszek! Hyuyu!"
 
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Listna psota w filiżance!"
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodkie łyczki i figlarne podskoki!"
+WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A chilly little sip, hyuyu!" -- NEEDS TRANSLATION
 
 WORTOX.DESCRIBE.SOULJUICE = "Dusze i owoce! Co za uczta!"
 
@@ -1302,3 +1307,12 @@ WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Całkiem magiczna mieszanka!"
 WORTOX.DESCRIBE.KYNO_PIGCOIN1 = "Drobniaki."
 WORTOX.DESCRIBE.KYNO_PIGCOIN2 = "Nie rozumiem, czemu śmiertelnicy są tym tak obsesyjnie zajęci."
 WORTOX.DESCRIBE.KYNO_PIGCOIN3 = "To duży żeton skoku."
+
+WORTOX.DESCRIBE.KYNO_ICENETTLES = "Oh ho ho, So cold it burns!" -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.KYNO_ICENETTLES_DRIED = "Bone chilling dry." -- NEEDS TRANSLATION
+
+WORTOX.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "A sack of future greenery!",
+	FULL = "Not a seed more will fit, hyuyu!",
+}

@@ -130,6 +130,14 @@ WINONA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Não é bonito, mas é útil. Conheciment
 
 WINONA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Resolve o problema."
 
+WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Credo, tô me sentindo mais fria que um bloco de gelo!",
+	"Aff, tô congelando...",
+}
+
+WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Ufa, não quero repetir essa experiência."
+
 WINONA.DESCRIBE.KYNO_ROE = "Ovas, ovas, ovas meus peixes... Estou pirando aqui."
 WINONA.DESCRIBE.KYNO_ROE_COOKED = "Pelo menos não tinham rostos."
 
@@ -498,11 +506,7 @@ WINONA.DESCRIBE.COCONUTWATER = "Ah... caiu bem."
 
 WINONA.DESCRIBE.EYEBALLSPAGHETTI = "Acho que é melhor do que passar fome."
 
-WINONA.DESCRIBE.FORGETMELOTS_SEEDS = "Um punhado de sementes."
-
-WINONA.DESCRIBE.FIRENETTLES_SEEDS = "Um punhado de sementes."
-
-WINONA.DESCRIBE.TILLWEED_SEEDS = "Um punhado de sementes."
+WINONA.DESCRIBE.WEED_SEEDS = "Um punhado de sementes."
 
 WINONA.DESCRIBE.KYNO_FLOATILIZER = "Comida para a terra."
 
@@ -1237,6 +1241,7 @@ WINONA.DESCRIBE.CHICKENROTISSERIE = "Giro lento, cozimento constante. Respeito i
 
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Bom pra uma pausa rápida."
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Nada mal."
+WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Isso sim é refrescante."
 
 WINONA.DESCRIBE.SOULJUICE = "Isso é um tipo bem estranho de bebida energética."
 
@@ -1302,3 +1307,12 @@ WINONA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Isso é agricultura de nível i
 WINONA.DESCRIBE.KYNO_PIGCOIN1 = "Uma moeda da sorte."
 WINONA.DESCRIBE.KYNO_PIGCOIN2 = "Guarde isso para uma emergência."
 WINONA.DESCRIBE.KYNO_PIGCOIN3 = "Preciso tomar cuidado pra não virar uma rica tola."
+
+WINONA.DESCRIBE.KYNO_ICENETTLES = "Quer dizer, elas poderiam ser um bom refrigerante para máquinas."
+WINONA.DESCRIBE.KYNO_ICENETTLES_DRIED = "Parecem mais eficientes e mais frias."
+
+WINONA.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Boa ferramenta de organização.",
+	FULL = "Capacidade de armazenamento atingida.",
+}

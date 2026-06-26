@@ -130,6 +130,14 @@ WARLY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Ah! Que potencial delicado nestes ovos."
 
 WARLY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... nada mal."
 
+WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Mon Dieu, sinto como se minhas entranhas estivessem esfriando!",
+	"Esse frio estranho... Será que é assim que a carne se sente quando congela?",
+}
+
+WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Ufa, fico muito feliz que isso tenha acabado."
+
 WARLY.DESCRIBE.KYNO_ROE = "Posso fazer caviar com canapés!"
 WARLY.DESCRIBE.KYNO_ROE_COOKED = "Podia usar um pouco de limão fresco."
 
@@ -498,11 +506,7 @@ WARLY.DESCRIBE.COCONUTWATER = "Ah. Refrescante."
 
 WARLY.DESCRIBE.EYEBALLSPAGHETTI = "Isso não é comida!"
 
-WARLY.DESCRIBE.FORGETMELOTS_SEEDS = "Ingredientes futuros, esperando para crescer!"
-
-WARLY.DESCRIBE.FIRENETTLES_SEEDS = "Ingredientes futuros, esperando para crescer!"
-
-WARLY.DESCRIBE.TILLWEED_SEEDS = "Ingredientes futuros, esperando para crescer!"
+WARLY.DESCRIBE.WEED_SEEDS = "Ingredientes futuros, esperando para crescer!"
 
 WARLY.DESCRIBE.KYNO_FLOATILIZER = "Molho para o meu jardim!"
 
@@ -1237,6 +1241,7 @@ WARLY.DESCRIBE.CHICKENROTISSERIE = "Ah! O assado lento rende uma recompensa sucu
 
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Delicadamente infusionado à perfeição."
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Um buquê docemente encantador numa xícara."
+WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Uma infusão deliciosamente refrescante."
 
 WARLY.DESCRIBE.SOULJUICE = "Ah! Uma mistura incomum e deliciosa!"
 
@@ -1302,3 +1307,12 @@ WARLY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "O fertilizante dos sonhos de qua
 WARLY.DESCRIBE.KYNO_PIGCOIN1 = "Eu poderia comprar muitos ingredientes frescos com isso!"
 WARLY.DESCRIBE.KYNO_PIGCOIN2 = "Ah! Eu poderia passar na loja e comprar mantimentos..."
 WARLY.DESCRIBE.KYNO_PIGCOIN3 = "Parece bem importante."
+
+WARLY.DESCRIBE.KYNO_ICENETTLES = "Mon Dieu! Elas vão congelar minhas belas plantações!"
+WARLY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Será que poderiam ser usadas como uma caixa de gelo rudimentar?"
+
+WARLY.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Um cozinheiro aprecia uma boa organização.",
+	FULL = "Está completamente cheio.",
+}

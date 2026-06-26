@@ -130,6 +130,14 @@ WILLOW.ANNOUNCE_KYNO_ROE_RESEARCHED = "Fish eggs, huh? Still learned something."
 
 WILLOW.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Not bad. Could use fire though."
 
+WILLOW.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Argh, it TOO COLD!!",
+	"There's ice in my veins!",
+}
+
+WILLOW.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "I HATE that plant!"
+
 WILLOW.DESCRIBE.KYNO_ROE = "Ughh! That's nasty!!"
 WILLOW.DESCRIBE.KYNO_ROE_COOKED = "I cooked them, but they're still nasty."
 
@@ -1233,6 +1241,7 @@ WILLOW.DESCRIBE.CHICKENROTISSERIE = "Now that's a proper use of fire."
 
 WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Hmph. I prefer it boiling."
 WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Too sweet. Needs smoke."
+WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "I'll look so lame drinking this crap."
 
 WILLOW.DESCRIBE.SOULJUICE = "Looks spooky. I like it."
 
@@ -1298,3 +1307,12 @@ WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Plants grow fast. Fire grows fa
 WILLOW.DESCRIBE.KYNO_PIGCOIN1 = "Wow. A coin. Pfft."
 WILLOW.DESCRIBE.KYNO_PIGCOIN2 = "I can probably buy something good with this."
 WILLOW.DESCRIBE.KYNO_PIGCOIN3 = "I'm rich!"
+
+WILLOW.DESCRIBE.KYNO_ICENETTLES = "I prefer the fire version..."
+WILLOW.DESCRIBE.KYNO_ICENETTLES_DRIED = "Doubt this one can burn even if i tried."
+
+WILLOW.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "A bag full of future plants.",
+	FULL = "No room for more seeds.",
+}

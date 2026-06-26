@@ -130,6 +130,14 @@ WILSON.ANNOUNCE_KYNO_ROE_RESEARCHED = "Nauczyłem się czegoś nowego o tej ikrz
 
 WILSON.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "To był dość interesujący przepis."
 
+WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"My insides are freezing!",
+	"Ouch, that's cold!",
+}
+
+WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Note to self: no more experiments with Ice Nettle toxin." -- NEEDS TRANSLATION
+
 WILSON.DESCRIBE.KYNO_ROE = "Rybie dzieci."
 WILSON.DESCRIBE.KYNO_ROE_COOKED = "Ikra, podana na ciepło."
 
@@ -498,11 +506,7 @@ WILSON.DESCRIBE.COCONUTWATER = "Woda, ale z kokosa."
 
 WILSON.DESCRIBE.EYEBALLSPAGHETTI = "To jest złe."
 
-WILSON.DESCRIBE.FORGETMELOTS_SEEDS = "To nasiono."
-
-WILSON.DESCRIBE.FIRENETTLES_SEEDS = "To nasiono."
-
-WILSON.DESCRIBE.TILLWEED_SEEDS = "To nasiono."
+WILSON.DESCRIBE.WEED_SEEDS = "To nasiono."
 
 WILSON.DESCRIBE.KYNO_FLOATILIZER = "To na pewno wiadro pełne morskiego łajna."
 
@@ -1237,6 +1241,7 @@ WILSON.DESCRIBE.CHICKENROTISSERIE = "Obrotowe ciepło zapewnia równomierne piec
 
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Kojąca filiżanka herbaty z aloesu."
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Zachwycająco słodka herbata kwiatowa."
+WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "I'll look really cool drinking my tea." -- NEEDS TRANSLATION
 
 WILSON.DESCRIBE.SOULJUICE = "Ciekawa mieszanka energii duszy i granatu."
 
@@ -1302,3 +1307,12 @@ WILSON.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "To powinno pomóc moim uprawom 
 WILSON.DESCRIBE.KYNO_PIGCOIN1 = "Chciałbym czegoś więcej niż pensa za moje myśli."
 WILSON.DESCRIBE.KYNO_PIGCOIN2 = "Całkiem przyzwoita ilość monet."
 WILSON.DESCRIBE.KYNO_PIGCOIN3 = "Wygląda na cenne."
+
+WILSON.DESCRIBE.KYNO_ICENETTLES = "The Garden is giving us a cold reception." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_ICENETTLES_DRIED = "Colder than maxwell's personality." -- NEEDS TRANSLATION
+
+WILSON.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "A handy place to store seeds.",
+	FULL = "It's packed with seeds.",
+}

@@ -18,6 +18,14 @@ local prefabs =
 	"kyno_foodsack_fx",
 }
 
+local function IsValidFood(item)
+	return item ~= nil
+	and item.components.perishable ~= nil
+	and item.components.edible ~= nil
+	and (item.components.edible.foodtype == FOODTYPE.MEAT
+	or item.components.edible.foodtype == FOODTYPE.VEGGIE)
+end
+
 local function UpdateFoodCount(inst)
 	if inst.components.container == nil then
 		inst._foodcount = 0
@@ -28,18 +36,7 @@ local function UpdateFoodCount(inst)
 
 	for _, item in pairs(inst.components.container.slots) do
 		if item ~= nil then
-			local isfood = item:HasTag("foodsack_valid")
-
-			if not isfood then
-				for _, v in pairs(FOODGROUP.OMNI.types) do
-					if item:HasTag("edible_" .. v) and item.components.perishable then
-						isfood = true
-						break
-					end
-				end
-			end
-
-			if isfood then
+			if IsValidFood(item) then
 				if item.components.stackable ~= nil then
 					count = count + item.components.stackable:StackSize()
 				else
@@ -54,32 +51,26 @@ end
 
 local function GetSaltAmount(inst)
 	local foodcount = inst._foodcount or 0
+
+	if foodcount <= 0 then
+		return 0
+	end
+
 	return math.floor((foodcount - 1) / 10) + 1
 end
 
 local function HasIngredients(inst)
-	if inst.components.container ~= nil then
-		for _, item in pairs(inst.components.container.slots) do
-			if item ~= nil then
-				local isingredient = item:HasTag("foodsack_valid")
-
-				if not isingredient then
-					for _, v in pairs(FOODGROUP.OMNI.types) do
-						if item:HasTag("edible_" .. v) and item.components.perishable then
-							isingredient = true
-							break
-						end
-					end
-				end
-
-				if isingredient then
-					return true
-				end
-			end
-		end
-
+	if inst.components.container == nil then
 		return false
 	end
+
+	for _, item in pairs(inst.components.container.slots) do
+		if IsValidFood(item) then
+			return true
+		end
+	end
+
+	return false
 end
 
 local function IsValidSaltState(inst, owner)

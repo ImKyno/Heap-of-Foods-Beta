@@ -130,6 +130,14 @@ WARLY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Ach! Jaki delikatny potencjał w tych jaja
 
 WARLY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... nieźle."
 
+WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Mon dieu, I feel as though my insides are cooling!",
+	"This strange cold... I wonder if this is how meat feel when they're frozen.",
+}
+
+WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm very glad that's over." -- NEEDS TRANSLATION
+
 WARLY.DESCRIBE.KYNO_ROE = "Mogę zrobić kawior z kanapkami!"
 WARLY.DESCRIBE.KYNO_ROE_COOKED = "Przydałoby się trochę świeżej cytryny."
 
@@ -498,11 +506,7 @@ WARLY.DESCRIBE.COCONUTWATER = "Ah. Orzeźwiająca."
 
 WARLY.DESCRIBE.EYEBALLSPAGHETTI = "To nie jedzenie!"
 
-WARLY.DESCRIBE.FORGETMELOTS_SEEDS = "Przyszłe składniki, czekające na wykiełkowanie!"
-
-WARLY.DESCRIBE.FIRENETTLES_SEEDS = "Przyszłe składniki, czekające na wykiełkowanie!"
-
-WARLY.DESCRIBE.TILLWEED_SEEDS = "Przyszłe składniki, czekające na wykiełkowanie!"
+WARLY.DESCRIBE.WEED_SEEDS = "Przyszłe składniki, czekające na wykiełkowanie!"
 
 WARLY.DESCRIBE.KYNO_FLOATILIZER = "Sos do mojego ogrodu!"
 
@@ -1237,6 +1241,7 @@ WARLY.DESCRIBE.CHICKENROTISSERIE = "Ach! Powolne pieczenie daje soczystą nagrod
 
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Delikatnie zaparzone do perfekcji."
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Uroczy, słodki bukiet w filiżance."
+WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A delightfully cooling infusion." -- NEEDS TRANSLATION
 
 WARLY.DESCRIBE.SOULJUICE = "Ach! Niezwykła, lecz zachwycająca mikstura!"
 
@@ -1302,3 +1307,12 @@ WARLY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Nawóz marzeń każdego szefa ku
 WARLY.DESCRIBE.KYNO_PIGCOIN1 = "Mógłbym kupić za to mnóstwo świeżych składników!"
 WARLY.DESCRIBE.KYNO_PIGCOIN2 = "Ah! Mógłbym wstąpić po zakupy..."
 WARLY.DESCRIBE.KYNO_PIGCOIN3 = "Wygląda na dość ważną."
+
+WARLY.DESCRIBE.KYNO_ICENETTLES = "Mon Dieu! They'll freeze my beautiful crops!" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Could these be used for a rudimentary ice box?" -- NEEDS TRANSLATION
+
+WARLY.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "A cook appreciates good organization.",
+	FULL = "It is entirely full.",
+}

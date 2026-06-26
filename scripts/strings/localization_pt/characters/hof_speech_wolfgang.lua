@@ -130,6 +130,14 @@ WOLFGANG.ANNOUNCE_KYNO_ROE_RESEARCHED = "Wolfgang agora entende pequenos ovos de
 
 WOLFGANG.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Wolfgang se sente mais forte!"
 
+WOLFGANG.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Gelado! Wolfgang não gosta!",
+	"Plantinha fracote envenenou Wolfgang!",
+}
+
+WOLFGANG.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Ha! Veneno de planta fracote não dura muito no corpo poderoso de Wolfgang!"
+
 WOLFGANG.DESCRIBE.KYNO_ROE = "Tem gosto de ovo."
 WOLFGANG.DESCRIBE.KYNO_ROE_COOKED = "Os ovinhos agora cheiram menos mal."
 
@@ -498,11 +506,7 @@ WOLFGANG.DESCRIBE.COCONUTWATER = "A água tem um gosto engraçado, hehe."
 
 WOLFGANG.DESCRIBE.EYEBALLSPAGHETTI = "Olho pequeno virou comida agora, haha!"
 
-WOLFGANG.DESCRIBE.FORGETMELOTS_SEEDS = "Semente muito pequena."
-
-WOLFGANG.DESCRIBE.FIRENETTLES_SEEDS = "Semente muito pequena."
-
-WOLFGANG.DESCRIBE.TILLWEED_SEEDS = "Semente muito pequena."
+WOLFGANG.DESCRIBE.WEED_SEEDS = "Semente muito pequena."
 
 WOLFGANG.DESCRIBE.KYNO_FLOATILIZER = "Balde cheio de fedentina."
 
@@ -1237,6 +1241,7 @@ WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Galinha girando deixa Wolfgang com muita 
 
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Bebida quente deixa Wolfgang forte!"
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Bebida doce para poderoso Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Chá faz Wolfgang se sentir forte e refrescado!"
 
 WOLFGANG.DESCRIBE.SOULJUICE = "Bebida pequena, mas forte como Wolfgang!"
 
@@ -1302,3 +1307,12 @@ WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "As plantas ficam poderosas ra
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN1 = "Comerciante porco iria gostar."
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN2 = "Moeda valiosa para comprar coisas boas."
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN3 = "Moeda poderosa!"
+
+WOLFGANG.DESCRIBE.KYNO_ICENETTLES = "Frio e forte, igual a Wolfgang."
+WOLFGANG.DESCRIBE.KYNO_ICENETTLES_DRIED = "Gelado e áspero, lembra minha terra natal."
+
+WOLFGANG.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Bolsa para bebês plantinhas!",
+	FULL = "Bolsa cheia de bebês plantinhas!",
+}

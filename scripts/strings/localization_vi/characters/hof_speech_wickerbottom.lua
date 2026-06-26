@@ -130,6 +130,14 @@ WICKERBOTTOM.ANNOUNCE_KYNO_ROE_RESEARCHED = "Trứng cá chứa những đặc t
 
 WICKERBOTTOM.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Một bữa ăn cân bằng đến bất ngờ."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Oh dear... I seem to be afflicted by the plant's toxin.",
+	"The toxin from those nettles carries a rather unpleasant freezing sensation.",
+}
+
+WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Thankfully, the toxin's effects seem to be temporary." -- NEEDS TRANSLATION
+
 WICKERBOTTOM.DESCRIBE.KYNO_ROE = "Giai đoạn đầu tiên trong vòng đời của cá."
 WICKERBOTTOM.DESCRIBE.KYNO_ROE_COOKED = "Giai đoạn đầu và cuối của vòng đời này."
 
@@ -498,11 +506,7 @@ WICKERBOTTOM.DESCRIBE.COCONUTWATER = "Tiếp thêm sinh lực."
 
 WICKERBOTTOM.DESCRIBE.EYEBALLSPAGHETTI = "Ta không nghĩ món này an toàn."
 
-WICKERBOTTOM.DESCRIBE.FORGETMELOTS_SEEDS = "Nó chưa thể bắt đầu lớn nếu chưa được gieo xuống, cháu à."
-
-WICKERBOTTOM.DESCRIBE.FIRENETTLES_SEEDS = "Nó chưa thể bắt đầu lớn nếu chưa được gieo xuống, cháu à."
-
-WICKERBOTTOM.DESCRIBE.TILLWEED_SEEDS = "Nó chưa thể bắt đầu lớn nếu chưa được gieo xuống, cháu à."
+WICKERBOTTOM.DESCRIBE.WEED_SEEDS = "Nó chưa thể bắt đầu lớn nếu chưa được gieo xuống, cháu à."
 
 WICKERBOTTOM.DESCRIBE.KYNO_FLOATILIZER = "Một xô phân động vật biển. Hăng thật."
 
@@ -1237,6 +1241,7 @@ WICKERBOTTOM.DESCRIBE.CHICKENROTISSERIE = "Một phương pháp quay gia cầm r
 
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Một loại trà thảo mộc được hãm đúng cách."
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Một loại trà hãm có hương thơm dễ chịu."
+WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A pleasantly refreshing herbal infusion." -- NEEDS TRANSLATION
 
 WICKERBOTTOM.DESCRIBE.SOULJUICE = "Một hỗn hợp thú vị giữa tinh chất linh hồn và trái cây."
 
@@ -1302,3 +1307,12 @@ WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Một bước tiến ấn
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN1 = "Giá trị nhỏ đối với người địa phương."
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN2 = "Một đồng tiền thuộc một mệnh giá nào đó."
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN3 = "Một đồng tiền có giá trị lớn."
+
+WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES = "Prickling sensation followed by a cold feeling." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES_DRIED = "Fascinating. Their below freezing properties remain even after drying." -- NEEDS TRANSLATION
+
+WICKERBOTTOM.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "A practical container for seeds.",
+	FULL = "It can hold no additional seeds.",
+}

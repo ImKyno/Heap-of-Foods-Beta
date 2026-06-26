@@ -130,6 +130,14 @@ WANDA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Tyle przyszłości naraz."
 
 WANDA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... wystarczająco efektywne."
 
+WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Oooh, I don't feel well at all...",
+	"Help! I've been poisoned!",
+}
+
+WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew... it looks like the effects aren't permanent." -- NEEDS TRANSLATION
+
 WANDA.DESCRIBE.KYNO_ROE = "Pierwszy raz widzę coś takiego."
 WANDA.DESCRIBE.KYNO_ROE_COOKED = "Całkiem ładnie pachnie."
 
@@ -498,11 +506,7 @@ WANDA.DESCRIBE.COCONUTWATER = "Orzeźwiająca."
 
 WANDA.DESCRIBE.EYEBALLSPAGHETTI = "Nie pora na to."
 
-WANDA.DESCRIBE.FORGETMELOTS_SEEDS = "Po prostu nasiona."
-
-WANDA.DESCRIBE.FIRENETTLES_SEEDS = "Po prostu nasiona."
-
-WANDA.DESCRIBE.TILLWEED_SEEDS = "Po prostu nasiona."
+WANDA.DESCRIBE.WEED_SEEDS = "Po prostu nasiona."
 
 WANDA.DESCRIBE.KYNO_FLOATILIZER = "Obornik, wygodnie przechowywany w wiadrze."
 
@@ -1237,6 +1241,7 @@ WANDA.DESCRIBE.CHICKENROTISSERIE = "Przynajmniej czekanie się opłaca."
 
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Krótka chwila komfortu."
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodkie, ale ulotne."
+WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A brief respite from the heat." -- NEEDS TRANSLATION
 
 WANDA.DESCRIBE.SOULJUICE = "Czas i dusze w płynnej formie."
 
@@ -1302,3 +1307,12 @@ WANDA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Doskonale. Szybsze rezultaty."
 WANDA.DESCRIBE.KYNO_PIGCOIN1 = "Jedyna rzecz, która może kontrolować wszystko."
 WANDA.DESCRIBE.KYNO_PIGCOIN2 = "Przypomnienie, że czas to pieniądz."
 WANDA.DESCRIBE.KYNO_PIGCOIN3 = "Pierwszy raz widzę tyle pieniędzy."
+
+WANDA.DESCRIBE.KYNO_ICENETTLES = " I'm having a Deja Vu with this one." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_ICENETTLES_DRIED = "Worth the time, now this heat won't kill me." -- NEEDS TRANSLATION
+
+WANDA.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "A sensible way to store seeds.",
+	FULL = "No more room left.",
+}

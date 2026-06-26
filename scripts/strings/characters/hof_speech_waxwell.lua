@@ -130,6 +130,14 @@ WAXWELL.ANNOUNCE_KYNO_ROE_RESEARCHED = "Potential, wasted in such a fragile form
 
 WAXWELL.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Acceptable, I suppose."
 
+WAXWELL.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Ack, those stupid nettles!",
+	"The nettle's poison is freezing in my veins!",
+}
+
+WAXWELL.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "The worst has passed."
+
 WAXWELL.DESCRIBE.KYNO_ROE = "Raw fish eggs. Fantastic."
 WAXWELL.DESCRIBE.KYNO_ROE_COOKED = "The fish eggs are cooked now."
 
@@ -1233,6 +1241,7 @@ WAXWELL.DESCRIBE.CHICKENROTISSERIE = "Decadent, yet undeniably practical."
 
 WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "At least it's refined."
 WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Surprisingly tasteful."
+WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "At least it's served cold."
 
 WAXWELL.DESCRIBE.SOULJUICE = "A refined beverage... with a sinister touch."
 
@@ -1298,3 +1307,12 @@ WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "An unusually effective formula
 WAXWELL.DESCRIBE.KYNO_PIGCOIN1 = "Well, well, well..."
 WAXWELL.DESCRIBE.KYNO_PIGCOIN2 = "I'll have use for this."
 WAXWELL.DESCRIBE.KYNO_PIGCOIN3 = "On my way up in the world."
+
+WAXWELL.DESCRIBE.KYNO_ICENETTLES = "Blast it! There's more of these?"
+WAXWELL.DESCRIBE.KYNO_ICENETTLES_DRIED = "I heard that Higgsbury..."
+
+WAXWELL.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "A humble sack for humble seeds.",
+	FULL = "It's completely full.",
+}

@@ -130,6 +130,14 @@ WAXWELL.ANNOUNCE_KYNO_ROE_RESEARCHED = "Potencial desperdiçado em uma forma tã
 
 WAXWELL.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Aceitável, suponho."
 
+WAXWELL.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Argh, essas urtigas malditas!",
+	"O veneno da urtiga está congelando minhas veias!",
+}
+
+WAXWELL.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "O pior já passou."
+
 WAXWELL.DESCRIBE.KYNO_ROE = "Ovos de peixe crus. Fantástico."
 WAXWELL.DESCRIBE.KYNO_ROE_COOKED = "Os ovos de peixe estão cozidos agora."
 
@@ -498,11 +506,7 @@ WAXWELL.DESCRIBE.COCONUTWATER = "Refrescante."
 
 WAXWELL.DESCRIBE.EYEBALLSPAGHETTI = "Por que eu fiz isso?"
 
-WAXWELL.DESCRIBE.FORGETMELOTS_SEEDS = "Trabalho assim está abaixo de mim."
-
-WAXWELL.DESCRIBE.FIRENETTLES_SEEDS = "Trabalho assim está abaixo de mim."
-
-WAXWELL.DESCRIBE.TILLWEED_SEEDS = "Trabalho assim está abaixo de mim."
+WAXWELL.DESCRIBE.WEED_SEEDS = "Trabalho assim está abaixo de mim."
 
 WAXWELL.DESCRIBE.KYNO_FLOATILIZER = "Não é gentleman carregar esterco nas mãos."
 
@@ -1237,6 +1241,7 @@ WAXWELL.DESCRIBE.CHICKENROTISSERIE = "Decadente, porém inegavelmente prático."
 
 WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Ao menos é refinado."
 WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Surpreendentemente elegante."
+WAXWELL.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Pelo menos é servido gelado."
 
 WAXWELL.DESCRIBE.SOULJUICE = "Uma bebida refinada... com um toque sinistro."
 
@@ -1302,3 +1307,12 @@ WAXWELL.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Uma fórmula incomumente efica
 WAXWELL.DESCRIBE.KYNO_PIGCOIN1 = "Ora, ora, ora..."
 WAXWELL.DESCRIBE.KYNO_PIGCOIN2 = "Terei utilidade para isso."
 WAXWELL.DESCRIBE.KYNO_PIGCOIN3 = "Subindo na vida."
+
+WAXWELL.DESCRIBE.KYNO_ICENETTLES = "Maldição! Tem mais dessas coisas?"
+WAXWELL.DESCRIBE.KYNO_ICENETTLES_DRIED = "Ouvi dizer que Higgsbury..."
+
+WAXWELL.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Um humilde saco para humildes sementes.",
+	FULL = "Está completamente cheio.",
+}

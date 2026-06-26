@@ -130,6 +130,14 @@ WOLFGANG.ANNOUNCE_KYNO_ROE_RESEARCHED = "Wolfgang teraz rozumie małe rybie jajk
 
 WOLFGANG.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Wolfgang czuje się silniejszy!"
 
+WOLFGANG.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Frosty! Wolfgang not like!",
+	"Puny plant has poisoned Wolfgang!",
+}
+
+WOLFGANG.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Ha! Puny plant poison could not last long in Wolfgang's mighty body!" -- NEEDS TRANSLATION
+
 WOLFGANG.DESCRIBE.KYNO_ROE = "Jest jajkowe."
 WOLFGANG.DESCRIBE.KYNO_ROE_COOKED = "Małe jajka mniej śmierdzą teraz."
 
@@ -498,11 +506,7 @@ WOLFGANG.DESCRIBE.COCONUTWATER = "Woda smakuje dziwnie, hehe."
 
 WOLFGANG.DESCRIBE.EYEBALLSPAGHETTI = "Mała oczko to jedzenie teraz, haha!"
 
-WOLFGANG.DESCRIBE.FORGETMELOTS_SEEDS = "Nasiono za małe."
-
-WOLFGANG.DESCRIBE.FIRENETTLES_SEEDS = "Nasiono za małe."
-
-WOLFGANG.DESCRIBE.TILLWEED_SEEDS = "Nasiono za małe."
+WOLFGANG.DESCRIBE.WEED_SEEDS = "Nasiono za małe."
 
 WOLFGANG.DESCRIBE.KYNO_FLOATILIZER = "Wiadro pełne smrodu."
 
@@ -1237,6 +1241,7 @@ WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Kręcący się kurczak bardzo głodzi Wol
 
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Ciepły napój czyni Wolfganga silnym!"
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodki napój dla potężnego Wolfganga!"
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Tea makes Wolfgang feel cool and strong!" -- NEEDS TRANSLATION
 
 WOLFGANG.DESCRIBE.SOULJUICE = "Mały napój, ale silny jak Wolfgang!"
 
@@ -1302,3 +1307,12 @@ WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Rośliny stają się potężn
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN1 = "Świni handlarz by chciał."
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN2 = "Cenna moneta do kupowania dobrych rzeczy."
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN3 = "Potężna moneta!"
+
+WOLFGANG.DESCRIBE.KYNO_ICENETTLES = "Cold strong, just like Wolfgang." -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.KYNO_ICENETTLES_DRIED = "Chilly and rough, reminds me of homeland." -- NEEDS TRANSLATION
+
+WOLFGANG.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "Bag for tiny plant babies!",
+	FULL = "Bag is full of tiny plant babies!",
+}

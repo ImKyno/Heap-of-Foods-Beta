@@ -130,6 +130,14 @@ WANDA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Quá nhiều tương lai trong cùng một
 
 WANDA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... đủ hiệu quả."
 
+WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Oooh, I don't feel well at all...",
+	"Help! I've been poisoned!",
+}
+
+WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew... it looks like the effects aren't permanent." -- NEEDS TRANSLATION
+
 WANDA.DESCRIBE.KYNO_ROE = "Lần đầu ta thấy thứ này."
 WANDA.DESCRIBE.KYNO_ROE_COOKED = "Mùi thơm đấy."
 
@@ -498,11 +506,7 @@ WANDA.DESCRIBE.COCONUTWATER = "Sảng khoái."
 
 WANDA.DESCRIBE.EYEBALLSPAGHETTI = "Chưa tới lúc cho thứ đó."
 
-WANDA.DESCRIBE.FORGETMELOTS_SEEDS = "Chỉ là hạt giống."
-
-WANDA.DESCRIBE.FIRENETTLES_SEEDS = "Chỉ là hạt giống."
-
-WANDA.DESCRIBE.TILLWEED_SEEDS = "Chỉ là hạt giống."
+WANDA.DESCRIBE.WEED_SEEDS = "Chỉ là hạt giống."
 
 WANDA.DESCRIBE.KYNO_FLOATILIZER = "Phân, được đựng sẵn tiện lợi trong xô."
 
@@ -1237,6 +1241,7 @@ WANDA.DESCRIBE.CHICKENROTISSERIE = "Ít nhất thì chờ đợi cũng đáng."
 
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Một khoảnh khắc dễ chịu ngắn ngủi."
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Ngọt ngào, nhưng thoáng qua."
+WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A brief respite from the heat." -- NEEDS TRANSLATION
 
 WANDA.DESCRIBE.SOULJUICE = "Thời gian và linh hồn ở dạng chất lỏng."
 
@@ -1302,3 +1307,12 @@ WANDA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Tuyệt vời. Kết quả nhanh
 WANDA.DESCRIBE.KYNO_PIGCOIN1 = "Thứ duy nhất có thể điều khiển mọi thứ."
 WANDA.DESCRIBE.KYNO_PIGCOIN2 = "Một lời nhắc rằng thời gian là tiền bạc."
 WANDA.DESCRIBE.KYNO_PIGCOIN3 = "Đây là lần đầu tôi thấy nhiều tiền như vậy."
+
+WANDA.DESCRIBE.KYNO_ICENETTLES = " I'm having a Deja Vu with this one." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_ICENETTLES_DRIED = "Worth the time, now this heat won't kill me." -- NEEDS TRANSLATION
+
+WANDA.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "A sensible way to store seeds.",
+	FULL = "No more room left.",
+}

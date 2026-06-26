@@ -130,6 +130,14 @@ WANDA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Tanto futuro, tudo de uma vez."
 
 WANDA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... eficiente o suficiente."
 
+WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Oooh, não estou me sentindo nada bem...",
+	"Socorro! Fui envenenada!",
+}
+
+WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Ufa... parece que os efeitos não são permanentes."
+
 WANDA.DESCRIBE.KYNO_ROE = "É minha primeira vez vendo isso."
 WANDA.DESCRIBE.KYNO_ROE_COOKED = "Cheiro agradável."
 
@@ -498,11 +506,7 @@ WANDA.DESCRIBE.COCONUTWATER = "Refrescante."
 
 WANDA.DESCRIBE.EYEBALLSPAGHETTI = "Não é hora para isso."
 
-WANDA.DESCRIBE.FORGETMELOTS_SEEDS = "Apenas sementes."
-
-WANDA.DESCRIBE.FIRENETTLES_SEEDS = "Apenas sementes."
-
-WANDA.DESCRIBE.TILLWEED_SEEDS = "Apenas sementes."
+WANDA.DESCRIBE.WEED_SEEDS = "Apenas sementes."
 
 WANDA.DESCRIBE.KYNO_FLOATILIZER = "Esterco, convenientemente armazenado em um balde."
 
@@ -1237,6 +1241,7 @@ WANDA.DESCRIBE.CHICKENROTISSERIE = "Pelo menos a espera vale a pena."
 
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Um breve momento de conforto."
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Doce, mas passageiro."
+WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Um breve alívio do calor."
 
 WANDA.DESCRIBE.SOULJUICE = "Tempo e almas em forma líquida."
 
@@ -1302,3 +1307,12 @@ WANDA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Excelente. Resultados mais rápi
 WANDA.DESCRIBE.KYNO_PIGCOIN1 = "A única coisa que pode controlar tudo."
 WANDA.DESCRIBE.KYNO_PIGCOIN2 = "Um lembrete de que tempo é dinheiro."
 WANDA.DESCRIBE.KYNO_PIGCOIN3 = "É a primeira vez que vejo tanto dinheiro."
+
+WANDA.DESCRIBE.KYNO_ICENETTLES = "Estou tendo um déjà vu com essa."
+WANDA.DESCRIBE.KYNO_ICENETTLES_DRIED = "Valeu o tempo investido, agora esse calor não vai me matar."
+
+WANDA.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Uma maneira sensata de armazenar sementes.",
+	FULL = "Não há mais espaço.",
+}

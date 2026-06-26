@@ -130,6 +130,14 @@ WINONA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Không đẹp đẽ gì, nhưng hữu íc
 
 WINONA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Làm được việc đấy."
 
+WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Yeesh, I feel hotter than a ice block!",
+	"Ugh, I'm freezin' up...",
+}
+
+WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm not keen to try that again." -- NEEDS TRANSLATION
+
 WINONA.DESCRIBE.KYNO_ROE = "Trứng cá trôi, trôi, trôi... Mình sắp phát điên ngoài này rồi."
 WINONA.DESCRIBE.KYNO_ROE_COOKED = "Ít nhất chúng không có mặt."
 
@@ -498,11 +506,7 @@ WINONA.DESCRIBE.COCONUTWATER = "Ah... đúng thứ mình cần."
 
 WINONA.DESCRIBE.EYEBALLSPAGHETTI = "Chắc vẫn tốt hơn chết đói."
 
-WINONA.DESCRIBE.FORGETMELOTS_SEEDS = "Một nắm hạt giống."
-
-WINONA.DESCRIBE.FIRENETTLES_SEEDS = "Một nắm hạt giống."
-
-WINONA.DESCRIBE.TILLWEED_SEEDS = "Một nắm hạt giống."
+WINONA.DESCRIBE.WEED_SEEDS = "Một nắm hạt giống."
 
 WINONA.DESCRIBE.KYNO_FLOATILIZER = "Thức ăn cho đất."
 
@@ -1237,6 +1241,7 @@ WINONA.DESCRIBE.CHICKENROTISSERIE = "Quay chậm, chín đều. Mình tôn trọ
 
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Tốt cho một giờ nghỉ nhanh."
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Không tệ chút nào."
+WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Now that's refreshing." -- NEEDS TRANSLATION
 
 WINONA.DESCRIBE.SOULJUICE = "Đúng là một loại nước tăng lực kỳ lạ."
 
@@ -1302,3 +1307,12 @@ WINONA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Đây đúng là nông nghiệp
 WINONA.DESCRIBE.KYNO_PIGCOIN1 = "Một đồng xu may mắn."
 WINONA.DESCRIBE.KYNO_PIGCOIN2 = "Cất lại để phòng khi cần."
 WINONA.DESCRIBE.KYNO_PIGCOIN3 = "Phải cẩn thận đừng thành kẻ giàu ngốc nghếch."
+
+WINONA.DESCRIBE.KYNO_ICENETTLES = "I mean, they could be a good coolant for the machinery." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_ICENETTLES_DRIED = "These look more efficient, and colder." -- NEEDS TRANSLATION
+
+WINONA.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "Good organizational tool.",
+	FULL = "Storage capacity reached.",
+}

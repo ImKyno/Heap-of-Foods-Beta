@@ -130,6 +130,14 @@ WILLOW.ANNOUNCE_KYNO_ROE_RESEARCHED = "Jaja ryb, co? I tak czegoś się nauczył
 
 WILLOW.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Niezłe. Ale mogłoby się palić."
 
+WILLOW.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Argh, it TOO COLD!!",
+	"There's ice in my veins!",
+}
+
+WILLOW.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "I HATE that plant!" -- NEEDS TRANSLATION
+
 WILLOW.DESCRIBE.KYNO_ROE = "Ughh! Okropne!!"
 WILLOW.DESCRIBE.KYNO_ROE_COOKED = "Upiekłam je, ale wciąż są obrzydliwe."
 
@@ -498,11 +506,7 @@ WILLOW.DESCRIBE.COCONUTWATER = "Wolę gorące rzeczy."
 
 WILLOW.DESCRIBE.EYEBALLSPAGHETTI = "Nie zamierzam tego jeść."
 
-WILLOW.DESCRIBE.FORGETMELOTS_SEEDS = "Kilka nasion."
-
-WILLOW.DESCRIBE.FIRENETTLES_SEEDS = "Kilka nasion."
-
-WILLOW.DESCRIBE.TILLWEED_SEEDS = "Kilka nasion."
+WILLOW.DESCRIBE.WEED_SEEDS = "Kilka nasion."
 
 WILLOW.DESCRIBE.KYNO_FLOATILIZER = "Wiadro pełne obrzydliwości."
 
@@ -1237,6 +1241,7 @@ WILLOW.DESCRIBE.CHICKENROTISSERIE = "To dopiero właściwe użycie ognia."
 
 WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Hm. Wolę, gdy wrze."
 WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Za słodkie. Potrzeba dymu."
+WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "I'll look so lame drinking this crap." -- NEEDS TRANSLATION
 
 WILLOW.DESCRIBE.SOULJUICE = "Wygląda upiornie. Podoba mi się."
 
@@ -1302,3 +1307,12 @@ WILLOW.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Rośliny rosną szybko. Ogień 
 WILLOW.DESCRIBE.KYNO_PIGCOIN1 = "O. Moneta. Phi."
 WILLOW.DESCRIBE.KYNO_PIGCOIN2 = "Pewnie mogę za to kupić coś dobrego."
 WILLOW.DESCRIBE.KYNO_PIGCOIN3 = "Jestem bogata!"
+
+WILLOW.DESCRIBE.KYNO_ICENETTLES = "I prefer the fire version..." -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.KYNO_ICENETTLES_DRIED = "Doubt this one can burn even if i tried." -- NEEDS TRANSLATION
+
+WILLOW.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "A bag full of future plants.",
+	FULL = "No room for more seeds.",
+}

@@ -130,6 +130,14 @@ WANDA.ANNOUNCE_KYNO_ROE_RESEARCHED = "So much future, all at once."
 
 WANDA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... efficient enough."
 
+WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Oooh, I don't feel well at all...",
+	"Help! I've been poisoned!",
+}
+
+WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew... it looks like the effects aren't permanent."
+
 WANDA.DESCRIBE.KYNO_ROE = "It's my first time seeing this."
 WANDA.DESCRIBE.KYNO_ROE_COOKED = "Smells nice."
 
@@ -1233,6 +1241,7 @@ WANDA.DESCRIBE.CHICKENROTISSERIE = "At least the wait is worth it."
 
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A brief moment of comfort."
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet, but fleeting."
+WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A brief respite from the heat."
 
 WANDA.DESCRIBE.SOULJUICE = "Time and souls in liquid form."
 
@@ -1298,3 +1307,12 @@ WANDA.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Excellent. Faster results."
 WANDA.DESCRIBE.KYNO_PIGCOIN1 = "The one thing that can control everything."
 WANDA.DESCRIBE.KYNO_PIGCOIN2 = "A reminder that time is money."
 WANDA.DESCRIBE.KYNO_PIGCOIN3 = "This is the first time I've seen so much money."
+
+WANDA.DESCRIBE.KYNO_ICENETTLES = " I'm having a Deja Vu with this one."
+WANDA.DESCRIBE.KYNO_ICENETTLES_DRIED = "Worth the time, now this heat won't kill me."
+
+WANDA.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "A sensible way to store seeds.",
+	FULL = "No more room left.",
+}

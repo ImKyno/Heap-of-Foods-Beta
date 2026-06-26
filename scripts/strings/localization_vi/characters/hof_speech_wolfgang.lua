@@ -130,6 +130,14 @@ WOLFGANG.ANNOUNCE_KYNO_ROE_RESEARCHED = "Giờ Wolfgang hiểu trứng cá nhỏ
 
 WOLFGANG.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Wolfgang đã thấy mạnh hơn rồi!"
 
+WOLFGANG.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Frosty! Wolfgang not like!",
+	"Puny plant has poisoned Wolfgang!",
+}
+
+WOLFGANG.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Ha! Puny plant poison could not last long in Wolfgang's mighty body!" -- NEEDS TRANSLATION
+
 WOLFGANG.DESCRIBE.KYNO_ROE = "Nó giống trứng."
 WOLFGANG.DESCRIBE.KYNO_ROE_COOKED = "Trứng nhỏ giờ bớt hôi."
 
@@ -498,11 +506,7 @@ WOLFGANG.DESCRIBE.COCONUTWATER = "Nước vị lạ, hehe."
 
 WOLFGANG.DESCRIBE.EYEBALLSPAGHETTI = "Mắt nhỏ giờ là đồ ăn, haha!"
 
-WOLFGANG.DESCRIBE.FORGETMELOTS_SEEDS = "Hạt quá nhỏ."
-
-WOLFGANG.DESCRIBE.FIRENETTLES_SEEDS = "Hạt quá nhỏ."
-
-WOLFGANG.DESCRIBE.TILLWEED_SEEDS = "Hạt quá nhỏ."
+WOLFGANG.DESCRIBE.WEED_SEEDS = "Hạt quá nhỏ."
 
 WOLFGANG.DESCRIBE.KYNO_FLOATILIZER = "Xô đầy thứ hôi."
 
@@ -1237,6 +1241,7 @@ WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Gà xoay làm Wolfgang rất đói!"
 
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Đồ uống ấm làm Wolfgang mạnh!"
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Đồ uống ngọt cho Wolfgang hùng mạnh!"
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Tea makes Wolfgang feel cool and strong!" -- NEEDS TRANSLATION
 
 WOLFGANG.DESCRIBE.SOULJUICE = "Đồ uống nhỏ, nhưng mạnh như Wolfgang!"
 
@@ -1302,3 +1307,12 @@ WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Cây trở nên mạnh mẽ r
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN1 = "Thương nhân heo sẽ thích."
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN2 = "Là đồng tiền có giá trị để mua đồ tốt."
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN3 = "Đồng tiền hùng mạnh!"
+
+WOLFGANG.DESCRIBE.KYNO_ICENETTLES = "Cold strong, just like Wolfgang." -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.KYNO_ICENETTLES_DRIED = "Chilly and rough, reminds me of homeland." -- NEEDS TRANSLATION
+
+WOLFGANG.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "Bag for tiny plant babies!",
+	FULL = "Bag is full of tiny plant babies!",
+}

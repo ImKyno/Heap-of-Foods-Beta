@@ -130,6 +130,14 @@ WOODIE.ANNOUNCE_KYNO_ROE_RESEARCHED = "Chyba nawet rybie jajka mają coś do nau
 
 WOODIE.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Nieźle, co?"
 
+WOODIE.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Whew, I feel colder than a lake during the winter",
+	"Guess I shouldn't have touched that plant, eh?",
+}
+
+WOODIE.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Glad that's over with." -- NEEDS TRANSLATION
+
 WOODIE.DESCRIBE.KYNO_ROE = "Garść przyszłych ryb, co?"
 WOODIE.DESCRIBE.KYNO_ROE_COOKED = "Lepiej zjeść, zanim się zepsują."
 
@@ -498,11 +506,7 @@ WOODIE.DESCRIBE.COCONUTWATER = "Miła i orzeźwiająca."
 
 WOODIE.DESCRIBE.EYEBALLSPAGHETTI = "Nie patrz na mnie, jedzenie!"
 
-WOODIE.DESCRIBE.FORGETMELOTS_SEEDS = "Maleńkie nasionka."
-
-WOODIE.DESCRIBE.FIRENETTLES_SEEDS = "Maleńkie nasionka."
-
-WOODIE.DESCRIBE.TILLWEED_SEEDS = "Maleńkie nasionka."
+WOODIE.DESCRIBE.WEED_SEEDS = "Maleńkie nasionka."
 
 WOODIE.DESCRIBE.KYNO_FLOATILIZER = "Łajno powinno być w wiadrze, a nie na ziemi."
 
@@ -1237,6 +1241,7 @@ WOODIE.DESCRIBE.CHICKENROTISSERIE = "Pachnie jak niedzielny obiad, co nie?"
 
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Całkiem uspokajające, co?"
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Pachnie wiosną, co?"
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Nice drink for a hot day, eh?" -- NEEDS TRANSLATION
 
 WOODIE.DESCRIBE.SOULJUICE = "To dość dziwny sok, co?"
 
@@ -1302,3 +1307,12 @@ WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "To naprawdę mocny środek."
 WOODIE.DESCRIBE.KYNO_PIGCOIN1 = "Kupię coś fajnego dla Lucy."
 WOODIE.DESCRIBE.KYNO_PIGCOIN2 = "Mogę za to kupić sporo rzeczy."
 WOODIE.DESCRIBE.KYNO_PIGCOIN3 = "To nie dolar, ale chyba się tu nada."
+
+WOODIE.DESCRIBE.KYNO_ICENETTLES = " I won't touch this one either." -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.KYNO_ICENETTLES_DRIED = "It almost feels colder." -- NEEDS TRANSLATION
+
+WOODIE.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "Keeps all my seeds together, eh?",
+	FULL = "Can't squeeze another seed in there.",
+}

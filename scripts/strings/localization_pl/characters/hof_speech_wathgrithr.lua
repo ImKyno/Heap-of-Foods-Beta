@@ -130,6 +130,14 @@ WATHGRITHR.ANNOUNCE_KYNO_ROE_RESEARCHED = "Nienarodzeni wojownicy mórz, dobrze 
 
 WATHGRITHR.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Uczta godna wojownika!"
 
+WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"I feel as though my body's freezing!",
+	"Accursed plant with your frosty barbs! Fight me properly!",
+}
+
+WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "The frosty curse has passed." -- NEEDS TRANSLATION
+
 WATHGRITHR.DESCRIBE.KYNO_ROE = "Może pewnego dnia staniecie się prawdziwym mięsem."
 WATHGRITHR.DESCRIBE.KYNO_ROE_COOKED = "Już nigdy nie staniecie się prawdziwym mięsem."
 
@@ -498,11 +506,7 @@ WATHGRITHR.DESCRIBE.COCONUTWATER = "To nie prawdziwa woda!"
 
 WATHGRITHR.DESCRIBE.EYEBALLSPAGHETTI = "Mięso to mięso..."
 
-WATHGRITHR.DESCRIBE.FORGETMELOTS_SEEDS = "Maleńkie kawałki natury."
-
-WATHGRITHR.DESCRIBE.FIRENETTLES_SEEDS = "Maleńkie kawałki natury."
-
-WATHGRITHR.DESCRIBE.TILLWEED_SEEDS = "Maleńkie kawałki natury."
+WATHGRITHR.DESCRIBE.WEED_SEEDS = "Maleńkie kawałki natury."
 
 WATHGRITHR.DESCRIBE.KYNO_FLOATILIZER = "Jego smród mógłby wskrzeszać martwych."
 
@@ -1237,6 +1241,7 @@ WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "Godna pieczeń, odpowiednia na wojownic
 
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Wojowniczka woli miód pitny, lecz to wystarczy!"
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodkie jak pieśń dziewicy!"
+WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A frosty brew worthy of northern warriors!" -- NEEDS TRANSLATION
 
 WATHGRITHR.DESCRIBE.SOULJUICE = "Napój wojownika dotknięty przez błądzące dusze!"
 
@@ -1302,3 +1307,12 @@ WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Uprawy rozkwitną z wielką
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN1 = "Skarb!"
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN2 = "Moneto! Przygotuj się na wydanie!"
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN3 = "Fortuna jest moja!"
+
+WATHGRITHR.DESCRIBE.KYNO_ICENETTLES = "Cöward and cöld." -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_ICENETTLES_DRIED = "Still nöt wörhty för me. " -- NEEDS TRANSLATION
+
+WATHGRITHR.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "A pouch for the seeds of future harvests!",
+	FULL = "The harvest pouch overflows!",
+}

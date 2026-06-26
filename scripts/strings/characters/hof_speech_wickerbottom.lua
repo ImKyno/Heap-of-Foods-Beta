@@ -130,6 +130,14 @@ WICKERBOTTOM.ANNOUNCE_KYNO_ROE_RESEARCHED = "Roe contains remarkable biological 
 
 WICKERBOTTOM.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "A surprisingly well-balanced meal."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Oh dear... I seem to be afflicted by the plant's toxin.",
+	"The toxin from those nettles carries a rather unpleasant freezing sensation.",
+}
+
+WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Thankfully, the toxin's effects seem to be temporary."
+
 WICKERBOTTOM.DESCRIBE.KYNO_ROE = "The first stage in the fish life cycle."
 WICKERBOTTOM.DESCRIBE.KYNO_ROE_COOKED = "The first and last stages of this life cycle."
 
@@ -1233,6 +1241,7 @@ WICKERBOTTOM.DESCRIBE.CHICKENROTISSERIE = "A most efficient method of roasting p
 
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A properly infused herbal tisane."
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A pleasantly aromatic infusion."
+WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A pleasantly refreshing herbal infusion."
 
 WICKERBOTTOM.DESCRIBE.SOULJUICE = "An intriguing infusion of soul essence and fruit."
 
@@ -1298,3 +1307,12 @@ WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "An impressive advancement
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN1 = "Worth a paltry sum to the locals."
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN2 = "A coin of some denomination."
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN3 = "A coin of big value."
+
+WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES = "Prickling sensation followed by a cold feeling."
+WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES_DRIED = "Fascinating. Their below freezing properties remain even after drying."
+
+WICKERBOTTOM.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "A practical container for seeds.",
+	FULL = "It can hold no additional seeds.",
+}

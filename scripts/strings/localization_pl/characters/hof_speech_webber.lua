@@ -130,6 +130,14 @@ WEBBER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Dowiedzieliśmy się o rybich maluchach!"
 
 WEBBER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Smaczne! Podobało nam się!"
 
+WEBBER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Owie, that was not a nice plant!",
+	"Eek, we feel all frosty inside!",
+}
+
+WEBBER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, we'll be more careful not to touch strange weeds." -- NEEDS TRANSLATION
+
 WEBBER.DESCRIBE.KYNO_ROE = "To nie są jaja pająków."
 WEBBER.DESCRIBE.KYNO_ROE_COOKED = "Nie takie jajka, do jakich jesteśmy przyzwyczajeni."
 
@@ -498,11 +506,7 @@ WEBBER.DESCRIBE.COCONUTWATER = "Pyszna!"
 
 WEBBER.DESCRIBE.EYEBALLSPAGHETTI = "O bleh!"
 
-WEBBER.DESCRIBE.FORGETMELOTS_SEEDS = "Możemy coś wyhodować z tych nasion."
-
-WEBBER.DESCRIBE.FIRENETTLES_SEEDS = "Możemy coś wyhodować z tych nasion."
-
-WEBBER.DESCRIBE.TILLWEED_SEEDS = "Możemy coś wyhodować z tych nasion."
+WEBBER.DESCRIBE.WEED_SEEDS = "Możemy coś wyhodować z tych nasion."
 
 WEBBER.DESCRIBE.KYNO_FLOATILIZER = "Widziałem, jak mama używała tego w jej ogrodzie."
 
@@ -1237,6 +1241,7 @@ WEBBER.DESCRIBE.CHICKENROTISSERIE = "Kręci się! I pachnie niesamowicie!"
 
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Całkiem ładnie pachnie!"
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Smakuje jak kwiatki!"
+WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Brr! It tickles our tongue!" -- NEEDS TRANSLATION
 
 WEBBER.DESCRIBE.SOULJUICE = "Łał! Pachnie trochę strasznie!"
 
@@ -1302,3 +1307,12 @@ WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Łał! To działa naprawdę szy
 WEBBER.DESCRIBE.KYNO_PIGCOIN1 = "Możemy to wymienić na coś innego."
 WEBBER.DESCRIBE.KYNO_PIGCOIN2 = "Co możemy za to kupić?"
 WEBBER.DESCRIBE.KYNO_PIGCOIN3 = "Możemy kupić tego naprawdę dużo rzeczy."
+
+WEBBER.DESCRIBE.KYNO_ICENETTLES = "Brrrrr...It stings!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_ICENETTLES_DRIED = "We don't like icy plant." -- NEEDS TRANSLATION
+
+WEBBER.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "A special bag just for seeds!",
+	FULL = "Wow, that's a lot of seeds!",
+}

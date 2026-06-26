@@ -130,6 +130,14 @@ WALTER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Acho que sei mais sobre ovos de peixe ago
 
 WALTER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Essa foi uma boa refeição de acampamento!"
 
+WALTER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Ah! Ai! Tá gelado!!",
+	"Aaaah, me pegou! Me pegou!",
+}
+
+WALTER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Ufa... E-eu acho que estou bem agora."
+
 WALTER.DESCRIBE.KYNO_ROE = "Minha primeira vez vendo um deles."
 WALTER.DESCRIBE.KYNO_ROE_COOKED = "Cozinhei eles. Hehe."
 
@@ -498,11 +506,7 @@ WALTER.DESCRIBE.COCONUTWATER = "Relaxante e refrescante."
 
 WALTER.DESCRIBE.EYEBALLSPAGHETTI = "Hahaha, essa comida é hilária!"
 
-WALTER.DESCRIBE.FORGETMELOTS_SEEDS = "Sim, são sementes!"
-
-WALTER.DESCRIBE.FIRENETTLES_SEEDS = "Sim, são sementes!"
-
-WALTER.DESCRIBE.TILLWEED_SEEDS = "Sim, são sementes!"
+WALTER.DESCRIBE.WEED_SEEDS = "Sim, são sementes!"
 
 WALTER.DESCRIBE.KYNO_FLOATILIZER = "Plantas adoram cocô."
 
@@ -1237,6 +1241,7 @@ WALTER.DESCRIBE.CHICKENROTISSERIE = "Isso daria um ótimo jantar de acampamento!
 
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Perfeito pra uma noite tranquila na fogueira."
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Tem gosto de aventura no campo."
+WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Perfeito para se refrescar ao ar livre."
 
 WALTER.DESCRIBE.SOULJUICE = "Não tenho certeza se isso conta como suco..."
 
@@ -1302,3 +1307,12 @@ WALTER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Essa tecnologia de jardinagem �
 WALTER.DESCRIBE.KYNO_PIGCOIN1 = "É uma moeda, Woby!"
 WALTER.DESCRIBE.KYNO_PIGCOIN2 = "Eu podia comprar um monte de lanches pra Woby com isso."
 WALTER.DESCRIBE.KYNO_PIGCOIN3 = "Parece importante, precisamos guardar em um lugar seguro."
+
+WALTER.DESCRIBE.KYNO_ICENETTLES = "Oh! Essa eu nunca tinha visto antes!"
+WALTER.DESCRIBE.KYNO_ICENETTLES_DRIED = "Isso daria um ótimo lanche de verão."
+
+WALTER.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Todo jardineiro precisa de uma dessas.",
+	FULL = "Parece que está cheia.",
+}

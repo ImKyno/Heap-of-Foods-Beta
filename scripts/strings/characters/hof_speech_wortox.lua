@@ -130,6 +130,14 @@ WORTOX.ANNOUNCE_KYNO_ROE_RESEARCHED = "Eggy secrets! Hyuyu!"
 
 WORTOX.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "A tasty little mortal treat!"
 
+WORTOX.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Such nasty nettles!",
+	"Ouch! Ouch!",
+}
+
+WORTOX.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "It seems I've beat the cold!"
+
 WORTOX.DESCRIBE.KYNO_ROE = "Fish eggs."
 WORTOX.DESCRIBE.KYNO_ROE_COOKED = "Roasted fish eggs."
 
@@ -1233,6 +1241,7 @@ WORTOX.DESCRIBE.CHICKENROTISSERIE = "Rounded!"
 
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Steeped in leafy mischief!"
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet sips!"
+WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A chilly little sip, hyuyu!"
 
 WORTOX.DESCRIBE.SOULJUICE = "Souls and fruit! What a treat!"
 
@@ -1298,3 +1307,12 @@ WORTOX.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Quite the magical mixture!"
 WORTOX.DESCRIBE.KYNO_PIGCOIN1 = "Pithy pennies."
 WORTOX.DESCRIBE.KYNO_PIGCOIN2 = "I don't get why mortals are so obssessed with this."
 WORTOX.DESCRIBE.KYNO_PIGCOIN3 = "It's a big hop token."
+
+WORTOX.DESCRIBE.KYNO_ICENETTLES = "Oh ho ho, So cold it burns!"
+WORTOX.DESCRIBE.KYNO_ICENETTLES_DRIED = "Bone chilling dry."
+
+WORTOX.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "A sack of future greenery!",
+	FULL = "Not a seed more will fit, hyuyu!",
+}

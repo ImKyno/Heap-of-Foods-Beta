@@ -121,6 +121,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HEALINGBONUS = "Aumenta a eficiência de cura"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RAINY = "Restaura a sanidade quando molhado"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT = "Executa criaturas à noite"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK = "Assusta batiliscos próximos"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX = "Status são baseados na inclinação"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Vegetal esverdeado, o rei das pastagens e florestas tropicais. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Um dos muitos presentes do mar, muito apreciado pelos homens de cultura. -W"
@@ -130,6 +131,8 @@ STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_SWEETPOTATO = "Dez vezes mais doces q
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_PARZNIP = "Um vegetal de raiz, intimamente relacionado com a cenoura, porém mais doce. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_TURNIP = "Virado e arredondado, roxo e delicioso! -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_RICE = "Um popular grão usado em várias refeições saudáveis! -W"
+
+STRINGS.UI.PLANTREGISTRY.EFFECTS.WEED_ICENETTLE = "Essas Urtigas podem causar uma sensação bem gelada."
 
 STRINGS_INGREDIENTS_PIKO = "Esquilos"
 STRINGS_INGREDIENTS_SPOTSPICE = "Temperos"
@@ -211,6 +214,8 @@ STRINGS.ACTIONS.BREEDFISH = "Procriar"
 STRINGS.ACTIONS.MAKEPOPCORN = "Fazer Pipoca"
 STRINGS.ACTIONS.FISHREGISTRY_RESEARCH = "Pesquisar"
 STRINGS.ACTIONS.BOOSTPLANT = "Aplicar Potencializador"
+STRINGS.ACTIONS.WRITEITEM = "Escrever {item}"
+STRINGS.ACTIONS.ACTIVATE.READBOOK = "Ler"
 STRINGS.ACTIONS.SLAUGHTER2 =
 {
 	DISEMBOWEL = "Estripar Gentilmente",
@@ -1206,6 +1211,9 @@ STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_RICE_M = "Um monte de sementes de arroz embru
 STRINGS.NAMES.KYNO_SEEDS_KIT_FIRENETTLES = "Pacote de Sementes de Urtigas Flamejantes"
 STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_FIRENETTLES_M = "Cuidado! Essas sementes queimam."
 
+STRINGS.NAMES.KYNO_SEEDS_KIT_ICENETTLES = "Pacote de Sementes de Urtigas Gélidas"
+STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_ICENETTLES_M = "Essas sementes têm uma atmosfera gelada."
+
 STRINGS.NAMES.KYNO_SEEDS_KIT_FORGETMELOTS = "Pacote de Sementes de Nome-Esquecido"
 STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_FORGETMELOTS_M = "Não se esqueça de plantá-las enquanto pode!"
 
@@ -1297,6 +1305,8 @@ STRINGS.NAMES.EYEBALLSPAGHETTI = "Olhopaguete"
 STRINGS.NAMES.FORGETMELOTS_SEEDS = "Sementes de Nome-Esquecido"
 
 STRINGS.NAMES.FIRENETTLES_SEEDS = "Sementes de Urtigas Flamejantes"
+
+STRINGS.NAMES.ICENETTLES_SEEDS = "Sementes de Urtigas Gélidas"
 
 STRINGS.NAMES.TILLWEED_SEEDS = "Sementes de Tillweed"
 
@@ -2269,9 +2279,13 @@ STRINGS.RECIPE_DESC.KYNO_HERMITCRABTEA_ALOE = "Beba isto se não estiver se sent
 STRINGS.NAMES.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Chá de Flor Doce"
 STRINGS.RECIPE_DESC.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Uma bebida para acalmar a mente de forças perturbadoras."
 
+STRINGS.NAMES.KYNO_HERMITCRABTEA_ICENETTLES = "Chá de Urtigas Gélidas"
+STRINGS.RECIPE_DESC.KYNO_HERMITCRABTEA_ICENETTLES = "Vai colocar um frio na sua barriga, ou pelo menos te esfriar."
+
 STRINGS.NAMES.SOULJUICE = "Alma de Veludo"
 
 STRINGS.NAMES.KYNO_DAILYRECIPE_SIGN = "Quadro de Receita Diária"
+STRINGS.NAMES.KYNO_DAILYRECIPE_SIGN_DECOR = "Quadro de Receita"
 STRINGS.RECIPE_DESC.KYNO_DAILYRECIPE_SIGN = "A maneira clássica de dizer às pessoas o que comer."
 
 STRINGS.NAMES.KYNO_DECIDUOUSFOREST_SELLER = "Partitio\nO Mercante" -- Placeholder.
@@ -2320,3 +2334,12 @@ STRINGS.RECIPE_DESC.KYNO_PLANTBOOSTER_SUPERGROWTH_D = "AJUDA AS PLANTAS A CRESCE
 STRINGS.NAMES.KYNO_PIGCOIN1 = "Koin"
 STRINGS.NAMES.KYNO_PIGCOIN2 = "Medalhão Esmeralda"
 STRINGS.NAMES.KYNO_PIGCOIN3 = "Marca Cerúlea"
+
+STRINGS.NAMES.WEED_ICENETTLE = "Urtiga Gélida"
+
+STRINGS.NAMES.KYNO_ICENETTLES = "Urtiga Gélida"
+STRINGS.NAMES.KYNO_ICENETTLES_DRIED = "Urtiga Gélida Seca"
+
+STRINGS.NAMES.KYNO_SEEDSBAG = "Saco de Sementes"
+STRINGS.NAMES.KYNO_SEEDSBAG_NAMED = "Saco de {item}"
+STRINGS.RECIPE_DESC.KYNO_SEEDSBAG_D = "DEIXA SUAS SEMENTES FRESCA E SEGURA!"

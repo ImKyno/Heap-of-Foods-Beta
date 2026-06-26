@@ -130,6 +130,14 @@ WENDY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Tyle życia, które nigdy nie miało się 
 
 WENDY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Przelotny komfort... szybko zapomniany."
 
+WENDY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Why should my life be anything other than pain...",
+	"What a terrible poison... I feel as though I might freeze up.",
+}
+
+WENDY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Alas, I still live." -- NEEDS TRANSLATION
+
 WENDY.DESCRIBE.KYNO_ROE = "Początek życia..."
 WENDY.DESCRIBE.KYNO_ROE_COOKED = "Oszczędziłam im bólu wyklucia."
 
@@ -498,11 +506,7 @@ WENDY.DESCRIBE.COCONUTWATER = "Orzeźwiająca, ale wciąż to woda."
 
 WENDY.DESCRIBE.EYEBALLSPAGHETTI = "Niebezpieczne i śmiertelne."
 
-WENDY.DESCRIBE.FORGETMELOTS_SEEDS = "To roślina, która czeka, by wyrosnąć."
-
-WENDY.DESCRIBE.FIRENETTLES_SEEDS = "To roślina, która czeka, by wyrosnąć."
-
-WENDY.DESCRIBE.TILLWEED_SEEDS = "To roślina, która czeka, by wyrosnąć."
+WENDY.DESCRIBE.WEED_SEEDS = "To roślina, która czeka, by wyrosnąć."
 
 WENDY.DESCRIBE.KYNO_FLOATILIZER = "Wiadro brudu."
 
@@ -1237,6 +1241,7 @@ WENDY.DESCRIBE.CHICKENROTISSERIE = "Kręci się bez końca, jak wszystko."
 
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Gorzka ciepłota dla gorzkiego świata."
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodycz przemija, jak wszystko."
+WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A fleeting chill in a warm world." -- NEEDS TRANSLATION
 
 WENDY.DESCRIBE.SOULJUICE = "Gorzko-słodki smak życia i śmierci."
 
@@ -1302,3 +1307,12 @@ WENDY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Życie przyspieszone ku swemu ko
 WENDY.DESCRIBE.KYNO_PIGCOIN1 = "Położyłabym je na oczach, gdy umrę."
 WENDY.DESCRIBE.KYNO_PIGCOIN2 = "Pieniądze nie przywrócą Abigail."
 WENDY.DESCRIBE.KYNO_PIGCOIN3 = "Bogactwo nie kupi nieśmiertelności."
+
+WENDY.DESCRIBE.KYNO_ICENETTLES = "Colder than my shoulder." -- NEEDS TRANSLATION	
+WENDY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Cold and dry, like death itself" -- NEEDS TRANSLATION
+
+WENDY.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "A sack of dormant possibilities.",
+	FULL = "It's brimming with futures yet to bloom.",
+}

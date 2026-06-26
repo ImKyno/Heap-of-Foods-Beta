@@ -130,6 +130,14 @@ WILSON.ANNOUNCE_KYNO_ROE_RESEARCHED = "I've learned something new about this roe
 
 WILSON.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "That was quite an interesting recipe."
 
+WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"My insides are freezing!",
+	"Ouch, that's cold!",
+}
+
+WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Note to self: no more experiments with Ice Nettle toxin."
+
 WILSON.DESCRIBE.KYNO_ROE = "Fish babies."
 WILSON.DESCRIBE.KYNO_ROE_COOKED = "Roe, sunny side up."
 
@@ -1233,6 +1241,7 @@ WILSON.DESCRIBE.CHICKENROTISSERIE = "Winner, winner! Chicken dinner!"
 
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A soothing cup of aloe tea."
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A delightfully sweet floral tea."
+WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "I'll look really cool drinking my tea."
 
 WILSON.DESCRIBE.SOULJUICE = "A curious blend of soul energy and pomegranate."
 
@@ -1298,3 +1307,12 @@ WILSON.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "This should help improve my far
 WILSON.DESCRIBE.KYNO_PIGCOIN1 = "I'd like more than a penny for my thoughts."
 WILSON.DESCRIBE.KYNO_PIGCOIN2 = "A decent amount of coin."
 WILSON.DESCRIBE.KYNO_PIGCOIN3 = "Seems valuable."
+
+WILSON.DESCRIBE.KYNO_ICENETTLES = "The Garden is giving us a cold reception."
+WILSON.DESCRIBE.KYNO_ICENETTLES_DRIED = "Colder than maxwell's personality."
+
+WILSON.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "A handy place to store seeds.",
+	FULL = "It's packed with seeds.",
+}

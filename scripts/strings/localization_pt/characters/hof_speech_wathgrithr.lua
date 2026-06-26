@@ -130,6 +130,14 @@ WATHGRITHR.ANNOUNCE_KYNO_ROE_RESEARCHED = "Guerreiros não nascidos do mar, bem 
 
 WATHGRITHR.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Um banquete digno de um guerreiro!"
 
+WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Sinto como se meu corpo estivesse congelando!",
+	"Maldita planta com seus espinhos gelados! Lute comigo de forma honrada!",
+}
+
+WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "A maldição congelante passou."
+
 WATHGRITHR.DESCRIBE.KYNO_ROE = "Um dia você será carne de verdade."
 WATHGRITHR.DESCRIBE.KYNO_ROE_COOKED = "Agora você nunca será carne de verdade."
 
@@ -498,11 +506,7 @@ WATHGRITHR.DESCRIBE.COCONUTWATER = "Não é água de verdade!"
 
 WATHGRITHR.DESCRIBE.EYEBALLSPAGHETTI = "Carne é carne..."
 
-WATHGRITHR.DESCRIBE.FORGETMELOTS_SEEDS = "Pequenos pedaços da natureza."
-
-WATHGRITHR.DESCRIBE.FIRENETTLES_SEEDS = "Pequenos pedaços da natureza."
-
-WATHGRITHR.DESCRIBE.TILLWEED_SEEDS = "Pequenos pedaços da natureza."
+WATHGRITHR.DESCRIBE.WEED_SEEDS = "Pequenos pedaços da natureza."
 
 WATHGRITHR.DESCRIBE.KYNO_FLOATILIZER = "Seu fedor poderia levantar os mortos."
 
@@ -1237,6 +1241,7 @@ WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "Um assado digno, adequado a um banquete
 
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Uma guerreira prefere hidromel, mas isto serve!"
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Doce como o canto de uma donzela!"
+WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Uma bebida gelada digna dos guerreiros do norte!"
 
 WATHGRITHR.DESCRIBE.SOULJUICE = "Uma bebida de guerreiro tocada por almas errantes!"
 
@@ -1302,3 +1307,12 @@ WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "As plantações florescerã
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN1 = "Tesouro!"
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN2 = "Moeda! Prepare-se para ser gasta!"
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN3 = "A fortuna é minha!"
+
+WATHGRITHR.DESCRIBE.KYNO_ICENETTLES = "Covarde e fria."
+WATHGRITHR.DESCRIBE.KYNO_ICENETTLES_DRIED = "Ainda não é digna de mim."
+
+WATHGRITHR.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Uma bolsa para as sementes das colheitas futuras!",
+	FULL = "A bolsa da colheita está transbordando!",
+}

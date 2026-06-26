@@ -130,6 +130,14 @@ WOODIE.ANNOUNCE_KYNO_ROE_RESEARCHED = "Acho que até ovos de peixe têm algo a e
 
 WOODIE.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Nada mal, hein?"
 
+WOODIE.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Ufa, tô me sentindo mais frio que um lago no inverno.",
+	"Acho que eu não devia ter tocado naquela planta, né?",
+}
+
+WOODIE.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Ainda bem que acabou."
+
 WOODIE.DESCRIBE.KYNO_ROE = "Um punhado de peixes do futuro, hein?"
 WOODIE.DESCRIBE.KYNO_ROE_COOKED = "Melhor comer antes que estraguem."
 
@@ -498,11 +506,7 @@ WOODIE.DESCRIBE.COCONUTWATER = "Bom e refrescante."
 
 WOODIE.DESCRIBE.EYEBALLSPAGHETTI = "Não me olhe, comida!"
 
-WOODIE.DESCRIBE.FORGETMELOTS_SEEDS = "Sementinhas."
-
-WOODIE.DESCRIBE.FIRENETTLES_SEEDS = "Sementinhas."
-
-WOODIE.DESCRIBE.TILLWEED_SEEDS = "Sementinhas."
+WOODIE.DESCRIBE.WEED_SEEDS = "Sementinhas."
 
 WOODIE.DESCRIBE.KYNO_FLOATILIZER = "Cocô pertence a um balde, não no chão."
 
@@ -1237,6 +1241,7 @@ WOODIE.DESCRIBE.CHICKENROTISSERIE = "Cheira a almoço de domingo, hein?"
 
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Bem calmante, né?"
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Cheira a primavera, né?"
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Uma boa bebida pra um dia quente, né?"
 
 WOODIE.DESCRIBE.SOULJUICE = "Esse é um tipo estranho de suco, hein?"
 
@@ -1302,3 +1307,12 @@ WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Isso é coisa poderosa."
 WOODIE.DESCRIBE.KYNO_PIGCOIN1 = "Vou comprar algo legal pra Lucy."
 WOODIE.DESCRIBE.KYNO_PIGCOIN2 = "Dá pra comprar bastante coisa com isso."
 WOODIE.DESCRIBE.KYNO_PIGCOIN3 = "Não é um dólar, mas acho que serve por aqui."
+
+WOODIE.DESCRIBE.KYNO_ICENETTLES = "Não vou tocar nessa também."
+WOODIE.DESCRIBE.KYNO_ICENETTLES_DRIED = "Parece até mais fria."
+
+WOODIE.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Mantém todas as minhas sementes juntas, hein?",
+	FULL = "Não cabe mais nenhuma semente aí dentro.",
+}

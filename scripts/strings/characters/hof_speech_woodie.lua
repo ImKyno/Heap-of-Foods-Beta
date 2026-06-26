@@ -130,6 +130,14 @@ WOODIE.ANNOUNCE_KYNO_ROE_RESEARCHED = "Guess even fish eggs got somethin' to tea
 
 WOODIE.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Not too shabby, eh?"
 
+WOODIE.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Whew, I feel colder than a lake during the winter",
+	"Guess I shouldn't have touched that plant, eh?",
+}
+
+WOODIE.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Glad that's over with."
+
 WOODIE.DESCRIBE.KYNO_ROE = "A handful of future fish, eh?"
 WOODIE.DESCRIBE.KYNO_ROE_COOKED = "Better eat'em before they go bad."
 
@@ -1233,6 +1241,7 @@ WOODIE.DESCRIBE.CHICKENROTISSERIE = "Smells like a Sunday supper, eh?"
 
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Nice and calming, eh?"
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Smells like spring, eh?"
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Nice drink for a hot day, eh?"
 
 WOODIE.DESCRIBE.SOULJUICE = "That's a strange kind of juice, eh?"
 
@@ -1298,3 +1307,12 @@ WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "That's some powerful stuff."
 WOODIE.DESCRIBE.KYNO_PIGCOIN1 = "I'm gonna buy something nice for Lucy."
 WOODIE.DESCRIBE.KYNO_PIGCOIN2 = "I can buy a lot of stuff with you."
 WOODIE.DESCRIBE.KYNO_PIGCOIN3 = "Not a Looney but I guess it works around here."
+
+WOODIE.DESCRIBE.KYNO_ICENETTLES = " I won't touch this one either."
+WOODIE.DESCRIBE.KYNO_ICENETTLES_DRIED = "It almost feels colder."
+
+WOODIE.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Keeps all my seeds together, eh?",
+	FULL = "Can't squeeze another seed in there.",
+}

@@ -133,11 +133,11 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "Các đòn tấn công có
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BATILISK = "Làm các Batilisk gần đó hoảng sợ trong một khoảng thời gian."
 
 -- Spice Effects.
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Có thể được thêm vào món Nồi Nấu bằng Trạm Nêm Gia Vị Di Động.\n\nĂn món được nêm Bột Bảo Quản sẽ giảm một nửa tốc độ hư hỏng và loại bỏ hình phạt từ thức ăn hỏng."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_MIND = "Có thể được thêm vào món Nồi Nấu bằng Trạm Nêm Gia Vị Di Động.\n\nĂn món được nêm Đường Xoa Dịu sẽ cho thêm 25% tinh thần."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FED = "Có thể được thêm vào món Nồi Nấu bằng Trạm Nêm Gia Vị Di Động.\n\nĂn món được nêm Tinh Bột No Nê sẽ cho thêm 25% độ no."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FIRE = "Có thể được thêm vào món Nồi Nấu bằng Trạm Nêm Gia Vị Di Động.\n\nĂn món được nêm Tinh Thể Lửa sẽ khiến đòn tấn công của ngươi đốt cháy mục tiêu.\n\nKéo dài 4 phút.\n\nĐồng thời tăng nhiệt độ thêm 15 độ trong 15 giây."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_COLD = "Có thể được thêm vào món Nồi Nấu bằng Trạm Nêm Gia Vị Di Động.\n\nĂn món được nêm Vảy Băng sẽ khiến đòn tấn công của ngươi đóng băng mục tiêu.\n\nKéo dài 4 phút.\n\nĐồng thời giảm nhiệt độ 15 độ trong 15 giây."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Có thể thêm vào món ăn trong Nồi Hầm bằng Trạm Gia Vị Di Động.\n\nĂn món được tẩm Bột Bảo Quản sẽ khôi phục hoàn toàn độ tươi của nó.\n\nGiảm tốc độ hư hỏng của vật phẩm trong túi đồ đi 25%.\n\nTăng thời gian tồn tại của các hiệu ứng phụ khác thêm 25%.\n\nThời lượng: 4 phút."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_MIND = "Có thể thêm vào món ăn trong Nồi Hầm bằng Trạm Gia Vị Di Động.\n\nĂn món được tẩm Đường Xoa Dịu sẽ nhận thêm 25% Tỉnh Táo.\n\nNgăn mất Tỉnh Táo do Bóng Tối và Gậy Phép.\n\nĐồng thời nhận 25% kháng các hào quang Tỉnh Táo tiêu cực.\n\nThời lượng: 4 phút."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FED = "Có thể thêm vào món ăn trong Nồi Hầm bằng Trạm Gia Vị Di Động.\n\nĂn món được tẩm Tinh Bột No Nê sẽ nhận thêm 25% Đói.\n\nGiảm tốc độ mất Đói đi 15%.\n\nĐồng thời nhận thêm 25% Máu và giảm 25% tiêu hao Đói khi Ngủ.\n\nThời lượng: 4 phút."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FIRE = "Có thể thêm vào món ăn trong Nồi Hầm bằng Trạm Gia Vị Di Động.\n\nĂn món được tẩm Tinh Thể Rực Cháy sẽ khiến các đòn tấn công thiêu đốt mục tiêu.\n\nGây thêm 25% sát thương lên mục tiêu đang cháy.\n\nĐồng thời tăng nhiệt độ cơ thể thêm 40 độ.\n\nThời lượng: 4 phút."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_COLD = "Có thể thêm vào món ăn trong Nồi Hầm bằng Trạm Gia Vị Di Động.\n\nĂn món được tẩm Mảnh Băng Giá sẽ khiến các đòn tấn công đóng băng mục tiêu.\n\nGây thêm 25% sát thương lên mục tiêu bị ảnh hưởng bởi lạnh giá.\n\nĐồng thời giảm nhiệt độ cơ thể 40 độ.\n\nThời lượng: 4 phút."
 
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "Dùng một nhúm muối lên món Nồi Nấu sẽ làm mới thời gian hư hỏng của nó thêm 30%. Đừng lo phải ăn lại mấy món ôi nữa!"
@@ -180,12 +180,14 @@ STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_LARGE = "Một quả trứng quá khổ
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENEGG_CRACKED = "Có thể được ấp nở khi ở gần nguồn nhiệt."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ALOE = "Chăm sóc vết thương và làm mát bản thân bằng món trà được Pearl pha đầy yêu thương này."
 STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_SUGARTREE_PETALS = "Xoa dịu tâm trí và bảo vệ nó trước những kẻ thù đáng sợ bằng món trà được Pearl pha đầy yêu thương này."
+STRINGS.SCRAPBOOK.SPECIALINFO.HERMITCRABTEA_ICENETTLES = "Làm mát bản thân và cả kẻ địch với thức uống băng giá do Pearl pha chế."
 STRINGS.SCRAPBOOK.SPECIALINFO.SOUNDPROOF = "Cung cấp khả năng bảo vệ khỏi tiếng ồn lớn."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_GROWTH = "Có thể dùng để bón phân và làm cây không phải cây nông trại phát triển ngay lập tức.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "Có thể dùng để bón phân và làm bất kỳ loại cây nào phát triển ngay lập tức.\n\nKhi dùng cho Cây Thường:\n\nKhông cần bón phân nữa và được bảo vệ khỏi các mối đe dọa.\n\nKhi dùng cho Cây Nông Trại:\n\nTăng thêm một giai đoạn phát triển và được bảo vệ khỏi các mối đe dọa.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Có thể dùng để bón phân và làm bất kỳ loại cây nào phát triển ngay lập tức.\n\nKhi dùng cho Cây Thường:\n\nCho thêm một sản phẩm khi trưởng thành hoàn toàn.\n\nKhi dùng cho Cây Nông Trại:\n\nTăng thêm một giai đoạn phát triển và cho thêm một sản phẩm khi trưởng thành hoàn toàn.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Có thể dùng để bón phân và làm bất kỳ loại cây nào phát triển ngay lập tức.\n\nKhi dùng cho Cây Nông Trại:\n\nĐưa cây đến giai đoạn phát triển cuối cùng và có 25% cơ hội biến cây thành dạng Khổng Lồ.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "Đơn vị tiền tệ chính của lũ heo địa phương."
+STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "Một vật chứa di động với 4 ô chỉ dùng để đựng hạt giống.\n\nTốc độ hư hỏng giảm 50%.\n\nCó thể nâng cấp bằng Elastispacer để tăng khả năng lưu trữ và bảo quản.\n\nCó thể dùng Bút Lông để ghi tên hạt giống lên túi."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Khẩu phần của chúng chủ yếu gồm Hạt Giống, Lúa Mì hoặc Nhánh Đốm.\n\nGà tìm thấy ngoài hoang dã có 40% cơ hội đẻ Trứng sau khi ăn. Chúng có một cơ hội nhỏ đẻ Trứng Lớn.\n\nGà sống trong Chuồng có thể đẻ Trứng mỗi ngày sau khi ăn. Chúng có cơ hội đẻ Trứng Lớn cao hơn."
@@ -241,5 +243,5 @@ STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_BALLOONS = "Tăng tinh thần của nh
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_POPCORNMACHINE = "Một vật chứa 2 ô dùng để nhận bắp nhằm làm bắp rang.\n\nĐặt bắp vào ô đầu tiên sẽ cho phép tạo ra 5 phần bắp rang.\n\nTrong Dịp Kỷ Niệm Vua Đầu Bếp, nó sẽ tạo ra Bắp Rang Kỷ Niệm thay vào đó.\n\nMừng Kỷ Niệm 5 Năm Vua Đầu Bếp!"
 STRINGS.SCRAPBOOK.SPECIALINFO.ANIMALFEEDER = "Một số động vật sẽ ăn từ lượng thức ăn được tích trữ trong máng này.\n\nHạt Giống và Ngũ Cốc có thể được dùng làm nguồn thức ăn chính."
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKENHOUSE = "Một nơi trú ẩn cho Gà, có thể tạo ra các sản phẩm gia cầm."
-STRINGS.SCRAPBOOK.SPECIALINFO.DAILYRECIPE_SIGN = "Theo dõi Công Thức Hôm Nay và cho phép xem lại nhanh chúng."
+STRINGS.SCRAPBOOK.SPECIALINFO.DAILYRECIPE_SIGN = "Theo dõi các Công Thức Hằng Ngày và cho phép xem nhanh chúng.\n\nCó thể chuyển đổi thành Bảng Công Thức bằng Bút Lông.\n\nBảng Công Thức là phiên bản trang trí cho phép người sống sót vẽ bất kỳ món ăn đã chế biến nào. Không ảnh hưởng đến Công Thức Hằng Ngày."
 STRINGS.SCRAPBOOK.SPECIALINFO.CAVETUBERTREE = "Cần một chiếc rìu chắc chắn để chặt hạ. Nếu gốc cây được giữ lại, nó sẽ mọc lại sau vài ngày và tạo ra thêm nhiều củ.\n\nTrong mùa Xuân, nó sẽ bắt đầu nở hoa và chín."

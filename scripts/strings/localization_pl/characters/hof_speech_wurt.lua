@@ -132,6 +132,14 @@ WURT.ANNOUNCE_KYNO_ROE_RESEARCHED = "Sekrety rybich dzieci! Glurp!"
 
 WURT.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Smaczne, florp!"
 
+WURT.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Ouchie! It cold! Don't like it, florp!",
+	"It a bad plant! Makes insides frosty!",
+}
+
+WURT.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Glurgh... feel bit better now." -- NEEDS TRANSLATION
+
 WURT.DESCRIBE.KYNO_ROE = "Mali przyjaciele!"
 WURT.DESCRIBE.KYNO_ROE_COOKED = "Nieeeeeee!"
 
@@ -500,11 +508,7 @@ WURT.DESCRIBE.COCONUTWATER = "Smakuje słodko, florp."
 
 WURT.DESCRIBE.EYEBALLSPAGHETTI = "Glurgh..."
 
-WURT.DESCRIBE.FORGETMELOTS_SEEDS = "Zrób więcej smacznych przekąsek!"
-
-WURT.DESCRIBE.FIRENETTLES_SEEDS = "Zrób więcej smacznych przekąsek!"
-
-WURT.DESCRIBE.TILLWEED_SEEDS = "Zrób więcej smacznych przekąsek!"
+WURT.DESCRIBE.WEED_SEEDS = "Zrób więcej smacznych przekąsek!"
 
 WURT.DESCRIBE.KYNO_FLOATILIZER = "Co? To tylko trochę łajna."
 
@@ -1239,6 +1243,7 @@ WURT.DESCRIBE.CHICKENROTISSERIE = "Nieee! Biedny ptak! To nie jedzenie, florp!"
 
 WURT.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Ciepły napój z rośliny, flort."
 WURT.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodki napój z kwiatka, florp."
+WURT.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Cold tea, florp." -- NEEDS TRANSLATION
 
 WURT.DESCRIBE.SOULJUICE = "Dziwny czerwony napój! florp."
 
@@ -1304,3 +1309,12 @@ WURT.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Rośliny rosną superszybko!"
 WURT.DESCRIBE.KYNO_PIGCOIN1 = "Nie da się tego zjeść, florp!"
 WURT.DESCRIBE.KYNO_PIGCOIN2 = "Ooooh, błyszczące!"
 WURT.DESCRIBE.KYNO_PIGCOIN3 = "Bardzo eleganckie."
+
+WURT.DESCRIBE.KYNO_ICENETTLES = "Glrugh, too cold." -- NEEDS TRANSLATION
+WURT.DESCRIBE.KYNO_ICENETTLES_DRIED = "Dry stick made it colder?" -- NEEDS TRANSLATION
+
+WURT.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "Bag for seeds, florp.",
+	FULL = "Bag all full, florp!",
+}

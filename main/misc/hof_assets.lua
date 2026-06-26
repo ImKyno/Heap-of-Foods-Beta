@@ -1017,7 +1017,6 @@ local HOF_SCRAPBOOK_ICONS =
 	"kyno_serenityisland_decor2",
 	"kyno_serenityisland_shop",
 	"kyno_spotbush",
-	"kyno_spotbush",
 	"kyno_sugarfly",
 	"kyno_sugartree",
 	"kyno_sugartree_flower",
@@ -1045,6 +1044,7 @@ local HOF_SCRAPBOOK_ICONS =
 	"slow_farmplot",
 	"toucan",
 	"toucan_chubby",
+	"weed_icenettle",
 	"wobster_monkeyisland_land",
 }
 

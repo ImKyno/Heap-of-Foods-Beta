@@ -130,6 +130,14 @@ WENDY.ANNOUNCE_KYNO_ROE_RESEARCHED = "So much life, never meant to be."
 
 WENDY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "A fleeting comfort... soon forgotten."
 
+WENDY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Why should my life be anything other than pain...",
+	"What a terrible poison... I feel as though I might freeze up.",
+}
+
+WENDY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Alas, I still live."
+
 WENDY.DESCRIBE.KYNO_ROE = "The beginnings of life..."
 WENDY.DESCRIBE.KYNO_ROE_COOKED = "I spared them in the pain of hatching."
 
@@ -1233,6 +1241,7 @@ WENDY.DESCRIBE.CHICKENROTISSERIE = "Turning endlessly, as all things do."
 
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A bitter warmth for a bitter world."
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweetness fades, like all things."
+WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A fleeting chill in a warm world."
 
 WENDY.DESCRIBE.SOULJUICE = "A bittersweet taste of life and death."
 
@@ -1298,3 +1307,12 @@ WENDY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Life hastened toward its conclus
 WENDY.DESCRIBE.KYNO_PIGCOIN1 = "I shall put them on my eyes when I die."
 WENDY.DESCRIBE.KYNO_PIGCOIN2 = "Money will not bring back Abigail."
 WENDY.DESCRIBE.KYNO_PIGCOIN3 = "Wealth cannot buy immortality."
+
+WENDY.DESCRIBE.KYNO_ICENETTLES = "Colder than my shoulder."
+WENDY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Cold and dry, like death itself"
+
+WENDY.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "A sack of dormant possibilities.",
+	FULL = "It's brimming with futures yet to bloom.",
+}

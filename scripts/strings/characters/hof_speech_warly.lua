@@ -130,6 +130,14 @@ WARLY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Ah! Such delicate potential in these eggs.
 
 WARLY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... not bad at all."
 
+WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Mon dieu, I feel as though my insides are cooling!",
+	"This strange cold... I wonder if this is how meat feel when they're frozen.",
+}
+
+WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm very glad that's over."
+
 WARLY.DESCRIBE.KYNO_ROE = "I can make caviar with canapes!"
 WARLY.DESCRIBE.KYNO_ROE_COOKED = "Could use a squeeze of fresh lemon."
 
@@ -1233,6 +1241,7 @@ WARLY.DESCRIBE.CHICKENROTISSERIE = "Ah! Even roasting yields such succulent rewa
 
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Delicately steeped to perfection."
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A charmingly sweet bouquet in a cup."
+WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A delightfully cooling infusion."
 
 WARLY.DESCRIBE.SOULJUICE = "Ah! A most unusual concoction!"
 
@@ -1298,3 +1307,12 @@ WARLY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "A chef's dream fertilizer."
 WARLY.DESCRIBE.KYNO_PIGCOIN1 = "I could buy a lot of fresh ingredients with this!"
 WARLY.DESCRIBE.KYNO_PIGCOIN2 = "Ah! I could stop by to buy some groceries..."
 WARLY.DESCRIBE.KYNO_PIGCOIN3 = "Seems quite important."
+
+WARLY.DESCRIBE.KYNO_ICENETTLES = "Mon Dieu! They'll freeze my beautiful crops!"
+WARLY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Could these be used for a rudimentary ice box?"
+
+WARLY.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "A cook appreciates good organization.",
+	FULL = "It is entirely full.",
+}

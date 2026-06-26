@@ -130,6 +130,14 @@ WILSON.ANNOUNCE_KYNO_ROE_RESEARCHED = "Aprendi algo novo sobre essas ovas."
 
 WILSON.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Essa foi uma receita bem interessante."
 
+WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Minhas entranhas estão congelando!",
+	"Ai, isso é gelado!",
+}
+
+WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Lembrete para mim mesmo: sem mais experimentos com toxina de Urtiga Gélida."
+
 WILSON.DESCRIBE.KYNO_ROE = "Filhotes de peixe."
 WILSON.DESCRIBE.KYNO_ROE_COOKED = "Ovas, fritas do lado certo."
 
@@ -498,11 +506,7 @@ WILSON.DESCRIBE.COCONUTWATER = "Água, mas do coco."
 
 WILSON.DESCRIBE.EYEBALLSPAGHETTI = "Isso está errado."
 
-WILSON.DESCRIBE.FORGETMELOTS_SEEDS = "É uma semente."
-
-WILSON.DESCRIBE.FIRENETTLES_SEEDS = "É uma semente."
-
-WILSON.DESCRIBE.TILLWEED_SEEDS = "É uma semente."
+WILSON.DESCRIBE.WEED_SEEDS = "É uma semente."
 
 WILSON.DESCRIBE.KYNO_FLOATILIZER = "Definitivamente é um balde cheio de cocô do mar."
 
@@ -1237,6 +1241,7 @@ WILSON.DESCRIBE.CHICKENROTISSERIE = "O calor rotacional garante um cozimento uni
 
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Uma reconfortante xícara de chá de aloe."
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Um chá floral deliciosamente doce."
+WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Vou parecer muito descolado tomando este chá."
 
 WILSON.DESCRIBE.SOULJUICE = "Uma curiosa mistura de energia de alma e romã."
 
@@ -1302,3 +1307,12 @@ WILSON.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Isso deve ajudar minhas planta�
 WILSON.DESCRIBE.KYNO_PIGCOIN1 = "Eu gostaria de mais do que um centavo pelos meus pensamentos."
 WILSON.DESCRIBE.KYNO_PIGCOIN2 = "Uma quantia razoável de moedas."
 WILSON.DESCRIBE.KYNO_PIGCOIN3 = "Parece valioso."
+
+WILSON.DESCRIBE.KYNO_ICENETTLES = "O Jardim está nos dando uma recepção gelada."
+WILSON.DESCRIBE.KYNO_ICENETTLES_DRIED = "Mais frio que a personalidade do Maxwell."
+
+WILSON.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Um lugar prático para guardar sementes.",
+	FULL = "Está cheio de sementes.",
+}

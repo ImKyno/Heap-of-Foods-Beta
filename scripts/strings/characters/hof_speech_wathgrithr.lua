@@ -130,6 +130,14 @@ WATHGRITHR.ANNOUNCE_KYNO_ROE_RESEARCHED = "Unborn warriors of the sea, studied w
 
 WATHGRITHR.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "A feast worthy of a warrior!"
 
+WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"I feel as though my body's freezing!",
+	"Accursed plant with your frosty barbs! Fight me properly!",
+}
+
+WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "The frosty curse has passed."
+
 WATHGRITHR.DESCRIBE.KYNO_ROE = "One day you may be true meat."
 WATHGRITHR.DESCRIBE.KYNO_ROE_COOKED = "You shall never be true meat now."
 
@@ -1233,6 +1241,7 @@ WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "A worthy roast, fit for a warrior's fea
 
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "A warrior prefers mead, but this shall do!"
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet as a maiden's song!"
+WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A frosty brew worthy of northern warriors!"
 
 WATHGRITHR.DESCRIBE.SOULJUICE = "A warrior's draught touched by wandering souls!"
 
@@ -1298,3 +1307,12 @@ WATHGRITHR.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "The crops shall flourish wi
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN1 = "Treasure!"
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN2 = "Coin! Prepare to be spent!"
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN3 = "Fortune is mine!"
+
+WATHGRITHR.DESCRIBE.KYNO_ICENETTLES = "Cöward and cöld."
+WATHGRITHR.DESCRIBE.KYNO_ICENETTLES_DRIED = "Still nöt wörhty för me. "
+
+WATHGRITHR.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "A pouch for the seeds of future harvests!",
+	FULL = "The harvest pouch overflows!",
+}

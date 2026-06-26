@@ -1447,6 +1447,8 @@ local HOF_SCRAPBOOK_ITEMS =
 		tex            = "kyno_foodsack.tex",
 		prefab         = "kyno_foodsack",
 		waterproofer   = 1,
+		insulator      = 120,
+		insulator_type = "summer",
 		bank           = "kyno_foodsack",
 		build          = "swap_foodsack",
 		anim           = "anim",
@@ -5142,6 +5144,7 @@ local HOF_SCRAPBOOK_FOODS =
 	forgetmelots_seeds  =
 	{
 		name            = "forgetmelots_seeds",
+		speechname      = "weed_seeds",
 		type            = "food",
 		subcat          = "tackle",
 		tex             = "forgetmelots_seeds.tex",
@@ -5167,6 +5170,7 @@ local HOF_SCRAPBOOK_FOODS =
 	firenettles_seeds   =
 	{
 		name            = "firenettles_seeds",
+		speechname      = "weed_seeds",
 		type            = "food",
 		subcat          = "tackle",
 		tex             = "firenettles_seeds.tex",
@@ -5189,9 +5193,36 @@ local HOF_SCRAPBOOK_FOODS =
 		deps            = {"weed_firenettle", "firenettles", "seeds_cooked", "spoiled_food"},
 	},
 
+	icenettles_seeds    =
+	{
+		name            = "icenettles_seeds",
+		speechname      = "weed_seeds",
+		type            = "food",
+		subcat          = "tackle",
+		tex             = "icenettles_seeds.tex",
+		prefab          = "icenettles_seeds",
+		healthvalue     = 0.5,
+		hungervalue     = 9.375,
+		sanityvalue     = 0,
+		perishable      = 19200,
+		stacksize       = 40,
+		lure_charm      = 0.2,
+		lure_dist       = 1,
+		lure_radius     = 3,
+		burnable        = true,
+		foodtype        = "SEEDS",
+		fueltype        = "ANIMALFOOD",
+		fuelvalue       = 15,
+		bank            = "kyno_veggies",
+		build           = "kyno_veggies",
+		anim            = "kyno_icenettles_seeds",
+		deps            = {"weed_icenettle", "kyno_icenettles", "seeds_cooked", "spoiled_food"},
+	},
+
 	tillweed_seeds      =
 	{
 		name            = "tillweed_seeds",
+		speechname      = "weed_seeds",
 		type            = "food",
 		subcat          = "tackle",
 		tex             = "tillweed_seeds.tex",
@@ -5845,6 +5876,47 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_cavetuber_blooming",
 		anim           = "cooked",
 		deps           = {"kyno_cavetuber_blooming"},
+	},
+
+	kyno_icenettles    =
+	{
+		name           = "kyno_icenettles",
+		type           = "food", 
+		tex            = "kyno_icenettles.tex", 
+		prefab         = "kyno_icenettles",
+		healthvalue    = -5,
+		hungervalue    = 0,
+		sanityvalue    = -3,
+		stacksize      = 40,
+		perishable     = 1440,
+		foodtype       = "VEGGIE",
+		fueltype       = "BURNABLE",
+		fuelvalue      = 15,
+		burnable       = true,
+		bank           = "kyno_icenettles",
+		build          = "kyno_icenettles",
+		anim           = "idle",
+		deps           = {"kyno_icenettles_dried", "weed_icenettle", "spoiled_food"},
+	},
+
+	kyno_icenettles_dried =
+	{
+		name           = "kyno_icenettles_dried",
+		type           = "food", 
+		tex            = "kyno_icenettles_dried.tex", 
+		prefab         = "kyno_icenettles_dried",
+		healthvalue    = -5,
+		hungervalue    = 0,
+		sanityvalue    = -3,
+		stacksize      = 40,
+		foodtype       = "VEGGIE",
+		fueltype       = "BURNABLE",
+		fuelvalue      = 15,
+		burnable       = true,
+		bank           = "kyno_icenettles",
+		build          = "kyno_icenettles",
+		anim           = "dried",
+		deps           = {"kyno_icenettles"},
 	},
 }
 
@@ -17341,6 +17413,25 @@ local HOF_SCRAPBOOK_THINGS =
 		overridesymbol = {"soil01", "farm_soil", "soil01"},
 		anim           = "crop_full",
 		deps           = {"kyno_turnip", "kyno_turnip_oversized", "kyno_turnip_seeds", "seeds", "spoiled_food"},
+	},
+
+	weed_icenettle     =
+	{
+		name           = "weed_icenettle",
+		speechname     = "farm_plant",
+		type           = "thing",
+		subcat         = "farmplant",
+		tex            = "weed_icenettle.tex",
+		prefab         = "weed_icenettle",
+		workable       = "DIG",
+		burnable       = true,
+		bank           = "weed_kyno_icenettle",
+		build          = "weed_kyno_icenettle",
+		overridesymbol = {"soil01", "farm_soil", "soil01"},
+		anim           = "crop_full",
+		animoffsety    = 35,
+		animoffsetbgy  = -70,
+		deps           = {"kyno_icenettles", "icenettles_seeds", "seeds"},
 	},
 
 	kyno_garden_sprinkler =

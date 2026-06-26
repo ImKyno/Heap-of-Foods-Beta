@@ -130,6 +130,14 @@ WOODIE.ANNOUNCE_KYNO_ROE_RESEARCHED = "Chắc ngay cả trứng cá cũng có th
 
 WOODIE.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Không tệ chút nào, eh?"
 
+WOODIE.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Whew, I feel colder than a lake during the winter",
+	"Guess I shouldn't have touched that plant, eh?",
+}
+
+WOODIE.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Glad that's over with." -- NEEDS TRANSLATION
+
 WOODIE.DESCRIBE.KYNO_ROE = "Một nắm cá tương lai, eh?"
 WOODIE.DESCRIBE.KYNO_ROE_COOKED = "Ăn trước khi chúng hỏng thôi."
 
@@ -498,11 +506,7 @@ WOODIE.DESCRIBE.COCONUTWATER = "Mát và đã khát."
 
 WOODIE.DESCRIBE.EYEBALLSPAGHETTI = "Đừng nhìn mình nữa, đồ ăn!"
 
-WOODIE.DESCRIBE.FORGETMELOTS_SEEDS = "Hạt nhỏ xíu."
-
-WOODIE.DESCRIBE.FIRENETTLES_SEEDS = "Hạt nhỏ xíu."
-
-WOODIE.DESCRIBE.TILLWEED_SEEDS = "Hạt nhỏ xíu."
+WOODIE.DESCRIBE.WEED_SEEDS = "Hạt nhỏ xíu."
 
 WOODIE.DESCRIBE.KYNO_FLOATILIZER = "Phân nên ở trong xô, không phải trên đất."
 
@@ -1237,6 +1241,7 @@ WOODIE.DESCRIBE.CHICKENROTISSERIE = "Mùi như bữa tối Chủ Nhật, eh?"
 
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Dịu nhẹ và dễ chịu, eh?"
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Mùi như mùa xuân, eh?"
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Nice drink for a hot day, eh?" -- NEEDS TRANSLATION
 
 WOODIE.DESCRIBE.SOULJUICE = "Đúng là loại nước ép kỳ lạ, eh?"
 
@@ -1302,3 +1307,12 @@ WOODIE.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Thứ này mạnh thật đấy
 WOODIE.DESCRIBE.KYNO_PIGCOIN1 = "Tôi sẽ mua gì đó cho Lucy."
 WOODIE.DESCRIBE.KYNO_PIGCOIN2 = "Tôi có thể mua nhiều thứ với cái này."
 WOODIE.DESCRIBE.KYNO_PIGCOIN3 = "Không phải đô la nhưng chắc cũng dùng được ở đây."
+
+WOODIE.DESCRIBE.KYNO_ICENETTLES = " I won't touch this one either." -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.KYNO_ICENETTLES_DRIED = "It almost feels colder." -- NEEDS TRANSLATION
+
+WOODIE.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "Keeps all my seeds together, eh?",
+	FULL = "Can't squeeze another seed in there.",
+}

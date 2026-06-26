@@ -130,6 +130,14 @@ WEBBER.ANNOUNCE_KYNO_ROE_RESEARCHED = "We learned about the baby fish stuff!"
 
 WEBBER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Yummy! We liked it!"
 
+WEBBER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Owie, that was not a nice plant!",
+	"Eek, we feel all frosty inside!",
+}
+
+WEBBER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, we'll be more careful not to touch strange weeds."
+
 WEBBER.DESCRIBE.KYNO_ROE = "The aren't spider eggs."
 WEBBER.DESCRIBE.KYNO_ROE_COOKED = "Not the kind of eggs we're used to."
 
@@ -1233,6 +1241,7 @@ WEBBER.DESCRIBE.CHICKENROTISSERIE = "It's spinning! And it smells amazing!"
 
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "It smells kinda nice!"
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "It tastes like flowers!"
+WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Brr! It tickles our tongue!"
 
 WEBBER.DESCRIBE.SOULJUICE = "Whoa! It smells kinda spooky!"
 
@@ -1298,3 +1307,12 @@ WEBBER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Wow! This stuff works fast!"
 WEBBER.DESCRIBE.KYNO_PIGCOIN1 = "We could trade it for something else."
 WEBBER.DESCRIBE.KYNO_PIGCOIN2 = "What can we buy with this amount?"
 WEBBER.DESCRIBE.KYNO_PIGCOIN3 = "We can buy a whole bunch of stuff with this."
+
+WEBBER.DESCRIBE.KYNO_ICENETTLES = "Brrrrr...It stings!"
+WEBBER.DESCRIBE.KYNO_ICENETTLES_DRIED = "We don't like icy plant."
+
+WEBBER.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "A special bag just for seeds!",
+	FULL = "Wow, that's a lot of seeds!",
+}

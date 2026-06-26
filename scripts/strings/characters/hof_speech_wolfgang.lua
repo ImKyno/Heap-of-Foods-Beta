@@ -130,6 +130,14 @@ WOLFGANG.ANNOUNCE_KYNO_ROE_RESEARCHED = "Wolfgang understands tiny fish eggs now
 
 WOLFGANG.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Wolfgang feels stronger already!"
 
+WOLFGANG.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Frosty! Wolfgang not like!",
+	"Puny plant has poisoned Wolfgang!",
+}
+
+WOLFGANG.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Ha! Puny plant poison could not last long in Wolfgang's mighty body!"
+
 WOLFGANG.DESCRIBE.KYNO_ROE = "Is eggy."
 WOLFGANG.DESCRIBE.KYNO_ROE_COOKED = "Little eggs is stink less now."
 
@@ -1233,6 +1241,7 @@ WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Spinning chicken make Wolfgang very hungr
 
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Warm drink makes Wolfgang strong!"
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Sweet drink for mighty Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Tea makes Wolfgang feel cool and strong!"
 
 WOLFGANG.DESCRIBE.SOULJUICE = "Tiny drink, but strong like Wolfgang!"
 
@@ -1298,3 +1307,12 @@ WOLFGANG.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Plants become mighty fast!"
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN1 = "Pig trader would like."
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN2 = "Is valuable coin for buying good stuff."
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN3 = "Mighty coin!"
+
+WOLFGANG.DESCRIBE.KYNO_ICENETTLES = "Cold strong, just like Wolfgang."
+WOLFGANG.DESCRIBE.KYNO_ICENETTLES_DRIED = "Chilly and rough, reminds me of homeland."
+
+WOLFGANG.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Bag for tiny plant babies!",
+	FULL = "Bag is full of tiny plant babies!",
+}

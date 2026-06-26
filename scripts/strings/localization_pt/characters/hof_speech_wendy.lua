@@ -130,6 +130,14 @@ WENDY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Tanta vida, nunca destinada a existir."
 
 WENDY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Um conforto passageiro... logo esquecido."
 
+WENDY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Por que minha vida seria algo além de sofrimento...",
+	"Que veneno horrível... Sinto como se pudesse congelar completamente.",
+}
+
+WENDY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Infelizmente, ainda estou viva."
+
 WENDY.DESCRIBE.KYNO_ROE = "O começo da vida..."
 WENDY.DESCRIBE.KYNO_ROE_COOKED = "Poupei-os da dor de nascer."
 
@@ -498,11 +506,7 @@ WENDY.DESCRIBE.COCONUTWATER = "Refrescante, mas ainda é água."
 
 WENDY.DESCRIBE.EYEBALLSPAGHETTI = "Perigoso e mortal."
 
-WENDY.DESCRIBE.FORGETMELOTS_SEEDS = "É uma planta esperando para nascer."
-
-WENDY.DESCRIBE.FIRENETTLES_SEEDS = "É uma planta esperando para nascer."
-
-WENDY.DESCRIBE.TILLWEED_SEEDS = "É uma planta esperando para nascer."
+WENDY.DESCRIBE.WEED_SEEDS = "É uma planta esperando para nascer."
 
 WENDY.DESCRIBE.KYNO_FLOATILIZER = "Um balde de sujeira."
 
@@ -1237,6 +1241,7 @@ WENDY.DESCRIBE.CHICKENROTISSERIE = "Girando sem parar, como todas as coisas."
 
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Um calor amargo para um mundo amargo."
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "A doçura desaparece, como tudo."
+WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Um frio passageiro em um mundo quente."
 
 WENDY.DESCRIBE.SOULJUICE = "Um gosto agridoce de vida e morte."
 
@@ -1302,3 +1307,12 @@ WENDY.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "A vida acelerada rumo ao seu fim
 WENDY.DESCRIBE.KYNO_PIGCOIN1 = "Eu as colocaria nos meus olhos quando eu morrer."
 WENDY.DESCRIBE.KYNO_PIGCOIN2 = "Dinheiro não trará Abigail de volta."
 WENDY.DESCRIBE.KYNO_PIGCOIN3 = "A riqueza não pode comprar imortalidade."
+
+WENDY.DESCRIBE.KYNO_ICENETTLES = "Mais frio que meu ombro."
+WENDY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Frio e seco, como a própria morte."
+
+WENDY.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Um saco de possibilidades adormecidas.",
+	FULL = "Está transbordando de futuros que ainda irão florescer.",
+}

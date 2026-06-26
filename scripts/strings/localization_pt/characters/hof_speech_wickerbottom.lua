@@ -130,6 +130,14 @@ WICKERBOTTOM.ANNOUNCE_KYNO_ROE_RESEARCHED = "As ovas possuem propriedades bioló
 
 WICKERBOTTOM.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Uma refeição surpreendentemente equilibrada."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
+{
+	"Oh céus... Parece que fui afetada pela toxina da planta.",
+	"A toxina dessas urtigas causa uma desagradável sensação de congelamento.",
+}
+
+WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Felizmente, os efeitos da toxina parecem ser temporários."
+
 WICKERBOTTOM.DESCRIBE.KYNO_ROE = "O primeiro estágio do ciclo de vida do peixe."
 WICKERBOTTOM.DESCRIBE.KYNO_ROE_COOKED = "O primeiro e o último estágio deste ciclo de vida."
 
@@ -498,11 +506,7 @@ WICKERBOTTOM.DESCRIBE.COCONUTWATER = "Revigorante."
 
 WICKERBOTTOM.DESCRIBE.EYEBALLSPAGHETTI = "Não acho que esta comida seja segura."
 
-WICKERBOTTOM.DESCRIBE.FORGETMELOTS_SEEDS = "Não pode começar a crescer até ser plantada, querido."
-
-WICKERBOTTOM.DESCRIBE.FIRENETTLES_SEEDS = "Não pode começar a crescer até ser plantada, querido."
-
-WICKERBOTTOM.DESCRIBE.TILLWEED_SEEDS = "Não pode começar a crescer até ser plantada, querido."
+WICKERBOTTOM.DESCRIBE.WEED_SEEDS = "Não pode começar a crescer até ser plantada, querido."
 
 WICKERBOTTOM.DESCRIBE.KYNO_FLOATILIZER = "Um balde de fezes de animais marinhos. Fétido."
 
@@ -1237,6 +1241,7 @@ WICKERBOTTOM.DESCRIBE.CHICKENROTISSERIE = "Um método extremamente eficiente de 
 
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Uma infusão herbal devidamente preparada."
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Uma infusão agradavelmente aromática."
+WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Uma infusão de ervas agradavelmente refrescante."
 
 WICKERBOTTOM.DESCRIBE.SOULJUICE = "Uma intrigante infusão de essência de alma e fruta."
 
@@ -1302,3 +1307,12 @@ WICKERBOTTOM.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Um avanço impressionante
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN1 = "Valor irrisório para os habitantes locais."
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN2 = "Uma moeda de certa denominação."
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN3 = "Uma moeda de grande valor."
+
+WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES = "Uma sensação de ardência seguida por uma sensação de frio."
+WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES_DRIED = "Fascinante. Suas propriedades abaixo de zero permanecem mesmo após secarem."
+
+WICKERBOTTOM.DESCRIBE.KYNO_SEEDSBAG =
+{
+	GENERIC = "Um recipiente prático para sementes.",
+	FULL = "Não pode armazenar mais sementes.",
+}

@@ -130,6 +130,14 @@ WALTER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Chyba wiem teraz więcej o rybich jajach.
 
 WALTER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Dobra posiłek biwakowy!"
 
+WALTER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Ah! Ow! It's cold!!",
+	"Aaaah, it got me! It got me!",
+}
+
+WALTER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew... I-I think I'm okay now." -- NEEDS TRANSLATION
+
 WALTER.DESCRIBE.KYNO_ROE = "Pierwszy raz to widzę."
 WALTER.DESCRIBE.KYNO_ROE_COOKED = "Usmażyłem je. Hehe."
 
@@ -498,11 +506,7 @@ WALTER.DESCRIBE.COCONUTWATER = "Relaksująca i orzeźwiająca."
 
 WALTER.DESCRIBE.EYEBALLSPAGHETTI = "Hahaha, to jedzenie jest zabawne!"
 
-WALTER.DESCRIBE.FORGETMELOTS_SEEDS = "Tak, to nasiona!"
-
-WALTER.DESCRIBE.FIRENETTLES_SEEDS = "Tak, to nasiona!"
-
-WALTER.DESCRIBE.TILLWEED_SEEDS = "Tak, to nasiona!"
+WALTER.DESCRIBE.WEED_SEEDS = "Tak, to nasiona!"
 
 WALTER.DESCRIBE.KYNO_FLOATILIZER = "Rośliny kochają łajno."
 
@@ -1237,6 +1241,7 @@ WALTER.DESCRIBE.CHICKENROTISSERIE = "Byłoby świetne na obozową kolację!"
 
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Idealne na spokojny wieczór przy ognisku."
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Smakuje jak przygoda na łące."
+WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Perfect for keeping cool outdoors." -- NEEDS TRANSLATION
 
 WALTER.DESCRIBE.SOULJUICE = "Nie jestem pewien, czy to można nazwać sokiem..."
 
@@ -1302,3 +1307,12 @@ WALTER.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "To imponująca technologia ogro
 WALTER.DESCRIBE.KYNO_PIGCOIN1 = "To moneta, Woby!"
 WALTER.DESCRIBE.KYNO_PIGCOIN2 = "Mógłbym za to kupić dużo przekąsek dla Woby."
 WALTER.DESCRIBE.KYNO_PIGCOIN3 = "Wygląda na ważne, musimy to dobrze schować."
+
+WALTER.DESCRIBE.KYNO_ICENETTLES = "Oh! this one i haven't seen it before!" -- NEEDS TRANSLATION
+WALTER.DESCRIBE.KYNO_ICENETTLES_DRIED = "These could be a good summer snack." -- NEEDS TRANSLATION
+
+WALTER.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "Every gardener needs one of these.",
+	FULL = "Looks like it's full up.",
+}

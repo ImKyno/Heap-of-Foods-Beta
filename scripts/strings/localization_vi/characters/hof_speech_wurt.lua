@@ -132,6 +132,14 @@ WURT.ANNOUNCE_KYNO_ROE_RESEARCHED = "Bí mật em bé cá! Glurp!"
 
 WURT.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Ngon, florp!"
 
+WURT.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+{
+	"Ouchie! It cold! Don't like it, florp!",
+	"It a bad plant! Makes insides frosty!",
+}
+
+WURT.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Glurgh... feel bit better now." -- NEEDS TRANSLATION
+
 WURT.DESCRIBE.KYNO_ROE = "Bạn nhỏ!"
 WURT.DESCRIBE.KYNO_ROE_COOKED = "Khôngggggggg!"
 
@@ -500,11 +508,7 @@ WURT.DESCRIBE.COCONUTWATER = "Vị ngọt, florp."
 
 WURT.DESCRIBE.EYEBALLSPAGHETTI = "Glurgh..."
 
-WURT.DESCRIBE.FORGETMELOTS_SEEDS = "Làm thêm đồ ăn ngon!"
-
-WURT.DESCRIBE.FIRENETTLES_SEEDS = "Làm thêm đồ ăn ngon!"
-
-WURT.DESCRIBE.TILLWEED_SEEDS = "Làm thêm đồ ăn ngon!"
+WURT.DESCRIBE.WEED_SEEDS = "Làm thêm đồ ăn ngon!"
 
 WURT.DESCRIBE.KYNO_FLOATILIZER = "Gì? Chỉ là phân thôi mà."
 
@@ -1239,6 +1243,7 @@ WURT.DESCRIBE.CHICKENROTISSERIE = "Khônggg! Chim tội nghiệp!"
 
 WURT.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Đồ uống cây ấm, flort."
 WURT.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Đồ uống hoa ngọt, florp!"
+WURT.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Cold tea, florp." -- NEEDS TRANSLATION
 
 WURT.DESCRIBE.SOULJUICE = "Đồ uống đỏ kỳ lạ! florp."
 
@@ -1304,3 +1309,12 @@ WURT.DESCRIBE.KYNO_PLANTBOOSTER_SUPERGROWTH = "Cây lớn siêu nhanh!"
 WURT.DESCRIBE.KYNO_PIGCOIN1 = "Không ăn được cái này, florp!"
 WURT.DESCRIBE.KYNO_PIGCOIN2 = "Ooooh, sáng bóng!"
 WURT.DESCRIBE.KYNO_PIGCOIN3 = "Nhìn rất lấp lánh."
+
+WURT.DESCRIBE.KYNO_ICENETTLES = "Glrugh, too cold." -- NEEDS TRANSLATION
+WURT.DESCRIBE.KYNO_ICENETTLES_DRIED = "Dry stick made it colder?" -- NEEDS TRANSLATION
+
+WURT.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+{
+	GENERIC = "Bag for seeds, florp.",
+	FULL = "Bag all full, florp!",
+}
