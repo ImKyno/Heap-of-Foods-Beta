@@ -11505,8 +11505,8 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_SEASONAL =
 		build          = "kyno_foodrecipes_seasonal_spooky",
 		overridesymbol = {"swap_food", "kyno_foodrecipes_seasonal_spooky", "spooky_popsicle"},
 		anim           = "spooky_popsicle",
-		animoffsetx    = -15,
-		animoffsety    = 30,
+		animoffsetx    = 5,
+		animoffsety    = 10,
 		animoffsetbgx  = -20,
 		animoffsetbgy  = -80,
 		deps           = preparedfood_deps,
@@ -11553,10 +11553,11 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_SEASONAL =
 		build          = "kyno_foodrecipes_seasonal_spooky",
 		overridesymbol = {"swap_food", "kyno_foodrecipes_seasonal_spooky", "spooky_skullcandy"},
 		anim           = "spooky_skullcandy",
-		animoffsety    = 10,
+		animoffsetx    = 10,
 		animoffsetbgx  = -20,
 		animoffsetbgy  = -80,
 		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_REVIVER",
 	},
 
 	spooky_tacodile    =

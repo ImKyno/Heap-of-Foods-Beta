@@ -10,8 +10,14 @@ local _PopulateRecipeDetailPanel = CookbookPageCrockPot.PopulateRecipeDetailPane
 CookbookPageCrockPot.PopulateRecipeDetailPanel = function(self, data, ...)
 	local result = _PopulateRecipeDetailPanel(self, data, ...)
 
-	if data and data.recipe_def then
+	-- Remember: locked recipes does not have portrait_root
+	if data and data.unlocked and data.recipe_def then
 		local portrait_root
+
+		if TUNING.HOF_DEBUG_MODE then
+			print("RESULT:", result)
+			print("TYPE:", type(result))
+		end
 
 		for _, child in pairs(result.children or {}) do
 			if child.name == "portrait_root" then
@@ -20,7 +26,40 @@ CookbookPageCrockPot.PopulateRecipeDetailPanel = function(self, data, ...)
 			end
 		end
 
-		if data.recipe_def.pigcoinvalue then
+		if TUNING.HOF_DEBUG_MODE then
+			if result and result.children then
+				print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel: Children:")
+
+				for i, child in pairs(result.children) do
+					print(i, child.name, child)
+				end
+			else
+				print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel: No children found.")
+			end
+		end
+
+		if not portrait_root then
+			if TUNING.HOF_DEBUG_MODE then
+				print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel: PORTRAIT_ROOT Not found!")
+				print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel:Recipe:", data.recipe_name)
+				print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel:Prefab:", data.recipe_def.name)
+				print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel:Recipe Def:", data.recipe_def)
+
+				if result and result.children then
+					print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel: Children:")
+				
+					for _, child in pairs(result.children) do
+						print(child.name)
+					end
+				else
+					print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel: Result has no children.")
+				end
+			end
+
+			return result
+		end
+
+		if portrait_root ~= nil and data.recipe_def.pigcoinvalue then
 			local value = data.recipe_def.pigcoinvalue or {0, 0, 0}
 
 			for _, child in pairs(portrait_root.children or {}) do

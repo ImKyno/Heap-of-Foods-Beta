@@ -73,7 +73,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUGARBOMBS = "A pack of sugary cereal 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE = "Nukashine was created by Lewis of the Eta Psi fraternity at Vault-Tec University in November 2076. The spirit itself is incredibly potent, causes blackouts, severe hangovers, and is potentially lethal, as the fellow Pi Mu fraternity found out during their \"eviction party.\"\n\nA sugar-free version also existed, with the lack of sugar allowing the beverage to be consumed without any risk of blackouts."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE2 = "Now without any risk of blackouts! Enjoy the party!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BONESOUP = "Increased damage against worms for a certain amount of time."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_REVIVER = "Instantly revives a dead player when haunted."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_REVIVER = "Can be used to reviver other survivors."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOCHA = "Increased movement speed, sleep resistance and decreased hunger loss rate for a certain amount of time.\n\nBriefly increases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSFREEZING = "Briefly increases temperature and becomes less susceptible to Freezing."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSOVERHEAT = "Briefly decreases temperature and becomes less susceptible to Overheating."
@@ -187,7 +187,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "Can be used to fertilize 
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Can be used to fertilize and instantly grow any plant.\n\nWhen used on Regular Plants:\n\Yield one extra product when fully grown.\n\nWhen used on Farm Plants:\n\Advances growing by one stage and yield one extra product when fully grown.\n\nThey are not cumulative and are replaced when another Booster is used on the same plant.\n\nBoosters are removed when the plant is dug."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Can be used to fertilize and instantly grow any plant.\n\nWhen used on Farm Plants:\n\Advances growing to its final stage and has 25% chance of turning farm plants into their Oversized form.\n\nThey are not cumulative and are replaced when another Booster is used on the same plant.\n\nBoosters are removed when the plant is dug."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "The primary currency of the local pig men."
-STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "A carryable container with 4 slots that will only hold seeds.\n\nSpoilage is slowed by 50%.\n\nCan be further upgraded with an Elastispacer to enhance its storage and preserving capabilities.\n\nFeather Pencil can be used to write the seed name onto it."
+STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "A carryable container with 4 slots that will only hold seeds.\n\nSpoilage is slowed by 60%.\n\nCan be further upgraded with an Elastispacer to enhance its storage and preserving capabilities.\n\nFeather Pencil can be used to write the seed name onto it."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Their diet consists in a basis of Seeds, Wheats or Spotty Sprigs.\n\nChickens found in the wild have a 40% chance of laying Eggs after eating. They have a small chance of laying a Large Egg.\n\nChickens living in a Coop can lay Eggs everyday after eating. They have a higher chance of laying a Large Egg."

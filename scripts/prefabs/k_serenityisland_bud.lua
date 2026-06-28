@@ -143,8 +143,9 @@ local function budfn()
 	inst.AnimState:SetBuild("kyno_serenityisland_bud")
 	inst.AnimState:PlayAnimation("idle_nut")
 
-	inst:AddTag("deployedplant")
 	inst:AddTag("cattoy")
+	inst:AddTag("treeseed")
+	inst:AddTag("deployedplant")
 
 	inst.entity:SetPristine()
 

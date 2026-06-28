@@ -123,6 +123,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT = "Giết các sinh vật vào ban đ�
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK = "Làm các Batilisk gần đó hoảng sợ"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX = "Stats are based on inclination" -- NEEDS TRANSLATION
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL = "Increases Soul yield" -- NEEDS TRANSLATION
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REVIVER = "Revives dead survivors" -- NEEDS TRANSLATION
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Một loại rau xanh xanh, vua của đồng cỏ và rừng mưa. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Một trong nhiều món quà từ biển cả, rất được những kẻ biết thưởng thức trân trọng. -W"

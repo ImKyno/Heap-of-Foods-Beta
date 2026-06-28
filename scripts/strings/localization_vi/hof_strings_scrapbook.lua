@@ -73,7 +73,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SUGARBOMBS = "Một gói ngũ cốc ng
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE = "Nukashine được Lewis của hội Eta Psi tại Đại học Vault-Tec tạo ra vào tháng 11 năm 2076. Loại rượu này cực kỳ mạnh, gây mất trí nhớ tạm thời, say bí tỉ nặng nề và có khả năng gây chết người, như hội Pi Mu đáng thương đã phát hiện ra trong \"bữa tiệc đuổi nhà\" của họ.\n\nMột phiên bản không đường cũng từng tồn tại, nhờ thiếu đường nên thức uống này có thể được dùng mà không có nguy cơ mất trí nhớ tạm thời."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKASHINE2 = "Giờ không còn nguy cơ mất trí nhớ tạm thời! Tận hưởng bữa tiệc đi!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BONESOUP = "Tăng sát thương lên sâu trong một khoảng thời gian."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_REVIVER = "Hồi sinh ngay lập tức một người chơi đã chết khi bị ám."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_REVIVER = "Có thể được sử dụng để hồi sinh những người sống sót khác."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MOCHA = "Tăng tốc độ di chuyển, khả năng kháng buồn ngủ và giảm tốc độ mất độ no trong một khoảng thời gian.\n\nTạm thời tăng nhiệt độ."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSFREEZING = "Tạm thời tăng nhiệt độ và ít bị Đóng Băng hơn."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_LESSOVERHEAT = "Tạm thời giảm nhiệt độ và ít bị Quá Nhiệt hơn."
@@ -187,7 +187,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_VITALITY = "Có thể dùng để bó
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Có thể dùng để bón phân và làm bất kỳ loại cây nào phát triển ngay lập tức.\n\nKhi dùng cho Cây Thường:\n\nCho thêm một sản phẩm khi trưởng thành hoàn toàn.\n\nKhi dùng cho Cây Nông Trại:\n\nTăng thêm một giai đoạn phát triển và cho thêm một sản phẩm khi trưởng thành hoàn toàn.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Có thể dùng để bón phân và làm bất kỳ loại cây nào phát triển ngay lập tức.\n\nKhi dùng cho Cây Nông Trại:\n\nĐưa cây đến giai đoạn phát triển cuối cùng và có 25% cơ hội biến cây thành dạng Khổng Lồ.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "Đơn vị tiền tệ chính của lũ heo địa phương."
-STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "Một vật chứa di động với 4 ô chỉ dùng để đựng hạt giống.\n\nTốc độ hư hỏng giảm 50%.\n\nCó thể nâng cấp bằng Elastispacer để tăng khả năng lưu trữ và bảo quản.\n\nCó thể dùng Bút Lông để ghi tên hạt giống lên túi."
+STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "Một vật chứa di động với 4 ô chỉ dùng để đựng hạt giống.\n\nTốc độ hư hỏng giảm 60%.\n\nCó thể nâng cấp bằng Elastispacer để tăng khả năng lưu trữ và bảo quản.\n\nCó thể dùng Bút Lông để ghi tên hạt giống lên túi."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Khẩu phần của chúng chủ yếu gồm Hạt Giống, Lúa Mì hoặc Nhánh Đốm.\n\nGà tìm thấy ngoài hoang dã có 40% cơ hội đẻ Trứng sau khi ăn. Chúng có một cơ hội nhỏ đẻ Trứng Lớn.\n\nGà sống trong Chuồng có thể đẻ Trứng mỗi ngày sau khi ăn. Chúng có cơ hội đẻ Trứng Lớn cao hơn."

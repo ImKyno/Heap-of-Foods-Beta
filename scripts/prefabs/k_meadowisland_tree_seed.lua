@@ -70,12 +70,13 @@ local function fn()
 	inst.AnimState:SetBuild("kyno_meadowisland_tree_sapling")
 	inst.AnimState:PlayAnimation("idle")
 	
+	inst:AddTag("cattoy")
+	inst:AddTag("cookable")
+	inst:AddTag("treeseed")
 	inst:AddTag("show_spoilage")
 	inst:AddTag("deployedplant")
 	inst:AddTag("icebox_valid")
 	inst:AddTag("foodsack_valid")
-	inst:AddTag("cattoy")
-	inst:AddTag("cookable")
 
 	inst.entity:SetPristine()
 

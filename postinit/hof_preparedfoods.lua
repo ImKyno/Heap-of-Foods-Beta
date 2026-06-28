@@ -110,7 +110,6 @@ local PIG_COIN_VALUES       =
 	beefalofeed             = {0, 0, 0},
 	beefalotreat            = {0, 0, 0},
 	butterflymuffin         = {2, 0, 0},
-	dustmeringue            = {0, 0, 0},
 	frogglebunwich          = {4, 0, 0}, 
 	taffy                   = {4, 0, 0},
 	pumpkincookie           = {5, 0, 0},

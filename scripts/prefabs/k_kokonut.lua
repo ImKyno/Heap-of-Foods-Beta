@@ -73,13 +73,14 @@ local function kokonut()
 	inst.AnimState:PlayAnimation("idle")
 	
 	inst:AddTag("fruit")
+	inst:AddTag("cattoy")
+	inst:AddTag("kokonut") -- For CoconutChecker.
+	inst:AddTag("treeseed")
+	inst:AddTag("sliceable")
 	inst:AddTag("show_spoilage")
 	inst:AddTag("deployedplant")
-	inst:AddTag("cattoy")
-	inst:AddTag("sliceable")
 	inst:AddTag("icebox_valid")
 	inst:AddTag("foodsack_valid")
-	inst:AddTag("kokonut") -- For CoconutChecker.
 
 	inst.entity:SetPristine()
 
@@ -137,8 +138,8 @@ local function kokonut_halved()
 	inst.AnimState:SetBuild("kyno_kokonut")
 	inst.AnimState:PlayAnimation("halved")
 	
-	inst:AddTag("veggie")
 	inst:AddTag("fruit")
+	inst:AddTag("veggie")
 	inst:AddTag("cookable")
 
 	inst.entity:SetPristine()

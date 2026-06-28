@@ -123,6 +123,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT = "Executes creatures at night"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK = "Scares nearby batilisks"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX = "Stats are based on inclination"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL = "Increases Soul yield"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REVIVER = "Revives the dead"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Green-ish vegetable, the king of grasslands and rainforests. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "One of the many sea gifts, very appreciated by men of culture. -W"
