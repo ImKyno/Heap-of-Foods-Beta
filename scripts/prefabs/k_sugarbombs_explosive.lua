@@ -78,6 +78,8 @@ local function fn()
     inst:AddComponent("explosive")
     inst.components.explosive:SetOnExplodeFn(OnExplodeFn)
     inst.components.explosive.explosivedamage = TUNING.KYNO_SUGARBOMBS_DAMAGE
+    inst.components.explosive.explosiverange = TUNING.KYNO_SUGARBOMBS_RANGE
+	inst.components.explosive.lightonexplode = false -- Don't burn anything afterwards.
 
     inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

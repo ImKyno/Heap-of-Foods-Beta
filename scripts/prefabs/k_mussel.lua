@@ -29,6 +29,7 @@ local function fn()
 	
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
+	inst:AddTag("marinefood")
 
 	inst.entity:SetPristine()
 
@@ -87,6 +88,7 @@ local function fn_cooked()
 	inst.AnimState:PlayAnimation("cooked")
 	
 	inst:AddTag("meat")
+	inst:AddTag("marinefood")
 
 	inst.entity:SetPristine()
 

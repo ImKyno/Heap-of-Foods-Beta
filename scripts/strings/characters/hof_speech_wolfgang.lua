@@ -101,6 +101,9 @@ WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Night strength is gone."
 WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_START = "Creatures fear mighty Wolfgang!"
 WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_END = "Creatures stop fearing Wolfgang."
 
+WOLFGANG.ANNOUNCE_KYNO_CUREBUFF_START = "Food stays fresh for mighty Wolfgang!"
+WOLFGANG.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness goes away."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Is not the correct one."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mighty pig do not want this."

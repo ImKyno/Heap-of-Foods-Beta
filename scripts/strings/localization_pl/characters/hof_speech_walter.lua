@@ -101,6 +101,9 @@ WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Chyba wzmocnienie nocy się skończył
 WALTER.ANNOUNCE_KYNO_PANICBUFF_START = "Chyba wyglądam groźniej niż zwykle, Woby."
 WALTER.ANNOUNCE_KYNO_PANICBUFF_END = "Chyba wróciłem do normy."
 
+WALTER.ANNOUNCE_KYNO_CUREBUFF_START = "This'll really stretch our supplies." -- NEEDS TRANSLATION
+WALTER.ANNOUNCE_KYNO_CUREBUFF_END = "Better use things before they spoil." -- NEEDS TRANSLATION 
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zła rzecz!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmm, nie w tym przypadku."

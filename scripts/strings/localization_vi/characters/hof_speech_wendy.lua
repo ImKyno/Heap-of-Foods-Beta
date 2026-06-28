@@ -101,6 +101,9 @@ WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Sự im lặng trở lại... và cả 
 WENDY.ANNOUNCE_KYNO_PANICBUFF_START = "Nỗi kinh hoàng theo sau từng bước chân ta."
 WENDY.ANNOUNCE_KYNO_PANICBUFF_END = "Nỗi sợ hãi đã lắng xuống."
 
+WENDY.ANNOUNCE_KYNO_CUREBUFF_START = "Time loosens its grip on decay." -- NEEDS TRANSLATION
+WENDY.ANNOUNCE_KYNO_CUREBUFF_END = "Decay resumes its patient work." -- NEEDS TRANSLATION
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để thu gom?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Tất nhiên đây không phải thứ sinh vật ngu ngốc đó muốn."

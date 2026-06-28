@@ -275,6 +275,7 @@ local function jellyfish()
 	inst:AddTag("smalloceancreature")
 	inst:AddTag("jellyfish")
 	inst:AddTag("fishresearchable")
+	inst:AddTag("marinefood")
 	
 	inst.scrapbook_proxy = "kyno_jellyfish_ocean"
 	
@@ -359,6 +360,7 @@ local function jellyfish_dead()
 	inst:AddTag("dryable")
 	inst:AddTag("cookable")
 	inst:AddTag("jellyfish")
+	inst:AddTag("marinefood")
 
 	inst.entity:SetPristine()
 
@@ -427,6 +429,7 @@ local function jellyfish_cooked()
 	inst:AddTag("fishmeat")
 	inst:AddTag("catfood")
 	inst:AddTag("jellyfish")
+	inst:AddTag("marinefood")
 
 	inst.entity:SetPristine()
 

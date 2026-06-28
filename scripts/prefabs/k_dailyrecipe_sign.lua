@@ -202,6 +202,7 @@ local function fn()
 	inst.AnimState:SetBank("kyno_dailyrecipe_sign")
 	inst.AnimState:SetBuild("kyno_dailyrecipe_sign")
 	inst.AnimState:PlayAnimation("idle", true)
+	inst.AnimState:Hide("recipebg")
 
 	inst:AddTag("drawable")
 	inst:AddTag("structure")

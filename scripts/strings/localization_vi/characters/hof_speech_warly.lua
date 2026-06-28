@@ -101,6 +101,9 @@ WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Lưỡi dao của đêm đã cùn đi."
 WARLY.ANNOUNCE_KYNO_PANICBUFF_START = "Có vẻ tôi đã trở nên khá đáng sợ."
 WARLY.ANNOUNCE_KYNO_PANICBUFF_END = "Sự hiện diện đáng ngại của tôi đã giảm bớt."
 
+WARLY.ANNOUNCE_KYNO_CUREBUFF_START = "Excellent! My ingredients will keep." -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness fades once more." -- NEEDS TRANSLATION
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai rồi, sai rồi..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ngươi muốn thứ gì đó ngon hơn sao?"

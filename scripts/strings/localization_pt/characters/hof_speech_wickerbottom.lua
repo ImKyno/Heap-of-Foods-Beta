@@ -101,6 +101,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "A melhoria noturna se dissipou."
 WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_START = "Parece que inspiro pânico irracional."
 WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_END = "Minha influência alarmante enfraqueceu."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_START = "Os efeitos do tempo foram temporariamente reduzidos."
+WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_END = "A estabilidade temporal voltou ao normal."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Precisa de algo diferente."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não. Acho que ele mencionou wobsters."

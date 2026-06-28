@@ -87,6 +87,9 @@ WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Brzuszek znów burczy!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność raczej łaskocze niż gryzie!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Och nie! Ciemność znów gryzie!"
 
+WORTOX.ANNOUNCE_KYNO_SOULBUFF_START = "The souls abound, hyuyu!" -- NEEDS TRANSLATION
+WORTOX.ANNOUNCE_KYNO_SOULBUFF_END = "The soul-filled breeze has left me." -- NEEDS TRANSLATION
+
 WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Och, zabawa się skończyła!"
 
 WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Jakże obfite zbiory. Hyuyu!"
@@ -100,6 +103,9 @@ WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "I tak po prostu znika."
 
 WORTOX.ANNOUNCE_KYNO_PANICBUFF_START = "Jakże uroczy strach. Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_PANICBUFF_END = "Koniec strasznej zabawy!"
+
+WORTOX.ANNOUNCE_KYNO_CUREBUFF_START = "A little trick on time itself, hyuyu!" -- NEEDS TRANSLATION
+WORTOX.ANNOUNCE_KYNO_CUREBUFF_END = "Time's caught up again, hyuyu!" -- NEEDS TRANSLATION
 
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję czegoś jeszcze."
 

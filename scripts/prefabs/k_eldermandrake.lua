@@ -429,7 +429,7 @@ local function fn()
 	inst.OnEntitySleep = OnEntitySleep
 
 	MakeHauntablePanic(inst)
-	MakeMediumBurnableCharacter(inst, "elderdrake_torso")
+	MakeMediumBurnableCharacter(inst, "torso")
 	MakeMediumFreezableCharacter(inst, "pig_torso")
 
 	return inst

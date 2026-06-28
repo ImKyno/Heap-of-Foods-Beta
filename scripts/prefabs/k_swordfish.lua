@@ -241,6 +241,7 @@ local function swordfish_dead()
 	inst:AddTag("catfood")
 	inst:AddTag("cookable")
 	inst:AddTag("dryable")
+	inst:AddTag("marinefood")
 	inst:AddTag("icebox_valid")
 	inst:AddTag("saltbox_valid")
 

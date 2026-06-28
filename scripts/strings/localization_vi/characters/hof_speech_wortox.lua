@@ -87,6 +87,9 @@ WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Bao tử lại réo nữa rồi!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Bóng tối chỉ cù lét chứ không cắn nữa!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Ôi trời! Bóng tối lại cắn rồi!"
 
+WORTOX.ANNOUNCE_KYNO_SOULBUFF_START = "The souls abound, hyuyu!" -- NEEDS TRANSLATION
+WORTOX.ANNOUNCE_KYNO_SOULBUFF_END = "The soul-filled breeze has left me." -- NEEDS TRANSLATION
+
 WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Awww, cuộc vui hết rồi!"
 
 WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Một vụ thu hoạch thật dồi dào. Hyuyu!"
@@ -100,6 +103,9 @@ WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Và rồi nó biến mất."
 
 WORTOX.ANNOUNCE_KYNO_PANICBUFF_START = "Thật là một nỗi sợ thú vị. Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_PANICBUFF_END = "Hết trò vui đáng sợ rồi!"
+
+WORTOX.ANNOUNCE_KYNO_CUREBUFF_START = "A little trick on time itself, hyuyu!" -- NEEDS TRANSLATION
+WORTOX.ANNOUNCE_KYNO_CUREBUFF_END = "Time's caught up again, hyuyu!" -- NEEDS TRANSLATION
 
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cơ."
 

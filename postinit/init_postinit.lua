@@ -156,6 +156,7 @@ local INIT_POSTINIT_PREFABS =
 	"woby_rack_swap_fx",
 	"worm",
 	"worm_boss_segment",
+	"wortox_soul_common",
 }
 
 local INIT_POSTINIT_STATEGRAPHS =

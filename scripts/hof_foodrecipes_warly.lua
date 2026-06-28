@@ -15,7 +15,7 @@ local kyno_warly_foods =
 		overridebuild = "kyno_foodrecipes_warly",
 		pigcoinvalue = {6, 3, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"masterfood"},
+		tags = {"masterfood", "marinefood"},
 		card_def = {ingredients = {{"kyno_mussel", 3}, {"carrot", 1}}},
 	},
 	
@@ -35,7 +35,7 @@ local kyno_warly_foods =
 		overridebuild = "kyno_foodrecipes_warly",
 		pigcoinvalue = {6, 3, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"masterfood"},
+		tags = {"masterfood", "eggfood"},
 		card_def = {ingredients = {{"kyno_sweetpotato", 2}, {"bird_egg", 2}}},
 	},
 	
@@ -314,7 +314,7 @@ local kyno_warly_foods =
 		overridebuild = "kyno_foodrecipes_warly",
 		pigcoinvalue = {3, 7, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"masterfood", "honeyed"},
+		tags = {"masterfood", "honeyed", "marinefood"},
 		prefabs = { "kyno_jellyfish_rainbow_light_greater" },
 		card_def = {ingredients = {{"kyno_jellyfish_rainbow_dead", 1}, {"goatmilk", 1}, {"ice", 1}, {"kyno_syrup", 1}}},
 		oneatenfn = function(inst, eater)
@@ -369,7 +369,7 @@ local kyno_warly_foods =
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 5,
-		hunger = 40,
+		hunger = 56.25,
 		sanity = 33,
 		cooktime = 2,
 		potlevel = "low",

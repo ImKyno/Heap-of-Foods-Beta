@@ -101,6 +101,9 @@ WILLOW.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Ugh. Back to being normal."
 WILLOW.ANNOUNCE_KYNO_PANICBUFF_START = "Heh. They'd better run."
 WILLOW.ANNOUNCE_KYNO_PANICBUFF_END = "Aw, they're not scared anymore."
 
+WILLOW.ANNOUNCE_KYNO_CUREBUFF_START = "Nothing's going bad anytime soon!"
+WILLOW.ANNOUNCE_KYNO_CUREBUFF_END = "Back to everything rotting."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need to put something in here!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, wrong thing!"

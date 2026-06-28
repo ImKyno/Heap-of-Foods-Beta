@@ -87,6 +87,9 @@ WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "The tummy grumbles once more!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "The darkness tickles rather than bites!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Oh dear! The dark bites again!"
 
+WORTOX.ANNOUNCE_KYNO_SOULBUFF_START = "The souls abound, hyuyu!"
+WORTOX.ANNOUNCE_KYNO_SOULBUFF_END = "The soul-filled breeze has left me."
+
 WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Awww, the fun’s over!"
 
 WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Such plentiful pickings. Hyuyu!"
@@ -100,6 +103,9 @@ WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "And just like that, it slips away."
 
 WORTOX.ANNOUNCE_KYNO_PANICBUFF_START = "Such delightful fright. Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_PANICBUFF_END = "No more frightful fun!"
+
+WORTOX.ANNOUNCE_KYNO_CUREBUFF_START = "A little trick on time itself, hyuyu!"
+WORTOX.ANNOUNCE_KYNO_CUREBUFF_END = "Time's caught up again, hyuyu!"
 
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else."
 
@@ -955,7 +961,7 @@ WORTOX.DESCRIBE.CHIMAS = "A strange drink! Hyuyu!"
 WORTOX.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
 {
 	OFF = "Relief for the plants.",
-	ON = "Its working nicely.",
+	ON = "It's working nicely.",
 }
 
 WORTOX.DESCRIBE.KYNO_FOODSACK = "For storing foods only."

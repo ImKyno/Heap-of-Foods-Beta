@@ -36,14 +36,24 @@ local function GetCookerForFood(foodname)
 		
 	return nil
 end
-	
+
 local function GetBrewerForFood(foodname)
-	for brewer, recipes in pairs(brewing.recipes) do
-		if recipes[foodname] ~= nil then
-			return brewer
-		end
+	if brewing.recipes.kyno_woodenkeg
+	and brewing.recipes.kyno_woodenkeg[foodname] then
+		return "kyno_woodenkeg"
 	end
-		
+
+	if brewing.recipes.kyno_preservesjar
+	and brewing.recipes.kyno_preservesjar[foodname] then
+		return "kyno_preservesjar"
+	end
+
+	-- This is never going to be implemented!!!!
+	if brewing.recipes.kyno_portablebrewer
+	and brewing.recipes.kyno_portablebrewer[foodname] then
+		return "kyno_portablebrewer"
+	end
+
 	return nil
 end
 
@@ -104,6 +114,11 @@ local function OnFoodGiven(inst, item, giver)
 	local basefood = GetBaseFoodPrefab(item)
 	local cooker = GetCookerForFood(basefood) -- Spiced Foods relies on base prefab.
 	local brewer = GetBrewerForFood(item.prefab)
+
+	print("ITEM:", item.prefab)
+	print("BASE:", basefood)
+	print("COOKER:", tostring(cooker))
+	print("BREWER:", tostring(brewer))
 		
 	inst.AnimState:ShowSymbol("cooker_overlay")
 

@@ -101,6 +101,9 @@ WANDA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "I znikło. Typowe."
 WANDA.ANNOUNCE_KYNO_PANICBUFF_START = "Strach jest wyjątkowo skutecznym motywatorem."
 WANDA.ANNOUNCE_KYNO_PANICBUFF_END = "Efekt wygasł."
 
+WANDA.ANNOUNCE_KYNO_CUREBUFF_START = "I've borrowed a little extra time." -- NEEDS TRANSLATION
+WANDA.ANNOUNCE_KYNO_CUREBUFF_END = "Time has reclaimed what was borrowed." -- NEEDS TRANSLATION
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie... Potrzebuję czegoś innego."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Chyba mam trochę czasu, żeby kupić ci homara."

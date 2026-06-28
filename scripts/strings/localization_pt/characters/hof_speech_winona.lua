@@ -101,6 +101,9 @@ WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Saí do modo noturno."
 WINONA.ANNOUNCE_KYNO_PANICBUFF_START = "Parece que estou causando uma bela impressão."
 WINONA.ANNOUNCE_KYNO_PANICBUFF_END = "Lá se foi o fator intimidação."
 
+WINONA.ANNOUNCE_KYNO_CUREBUFF_START = "Isso vai fazer os suprimentos renderem mais."
+WINONA.ANNOUNCE_KYNO_CUREBUFF_END = "De volta ao desgaste normal."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, talvez outra coisa."

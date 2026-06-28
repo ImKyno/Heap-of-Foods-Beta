@@ -101,6 +101,9 @@ WANDA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Và nó biến mất. Điển hình."
 WANDA.ANNOUNCE_KYNO_PANICBUFF_START = "Nỗi sợ là một động lực cực kỳ hiệu quả."
 WANDA.ANNOUNCE_KYNO_PANICBUFF_END = "Hiệu ứng đã hết hạn."
 
+WANDA.ANNOUNCE_KYNO_CUREBUFF_START = "I've borrowed a little extra time." -- NEEDS TRANSLATION
+WANDA.ANNOUNCE_KYNO_CUREBUFF_END = "Time has reclaimed what was borrowed." -- NEEDS TRANSLATION
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không... ta cần thứ khác."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Có lẽ ta vẫn còn chút thời gian để kiếm Wobster cho ngươi."

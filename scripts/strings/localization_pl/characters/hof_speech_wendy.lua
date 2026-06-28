@@ -101,6 +101,9 @@ WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Powraca cisza... i słabość."
 WENDY.ANNOUNCE_KYNO_PANICBUFF_START = "Terror podąża moim śladem."
 WENDY.ANNOUNCE_KYNO_PANICBUFF_END = "Strach ustąpił."
 
+WENDY.ANNOUNCE_KYNO_CUREBUFF_START = "Time loosens its grip on decay." -- NEEDS TRANSLATION
+WENDY.ANNOUNCE_KYNO_CUREBUFF_END = "Decay resumes its patient work." -- NEEDS TRANSLATION
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może warto coś zebrać?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Oczywiście, że nie tego chce to głupie stworzenie."

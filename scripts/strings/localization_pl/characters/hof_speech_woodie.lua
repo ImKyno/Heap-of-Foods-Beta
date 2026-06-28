@@ -101,6 +101,9 @@ WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Z powrotem do starego mnie."
 WOODIE.ANNOUNCE_KYNO_PANICBUFF_START = "Chyba wyglądam trochę groźniej niż zwykle, co?"
 WOODIE.ANNOUNCE_KYNO_PANICBUFF_END = "Chyba jestem teraz mniej straszny, co?"
 
+WOODIE.ANNOUNCE_KYNO_CUREBUFF_START = "This'll keep things fresh a while longer, eh?" -- NEEDS TRANSLATION
+WOODIE.ANNOUNCE_KYNO_CUREBUFF_END = "Can't stop nature forever, eh?" -- NEEDS TRANSLATION
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może coś do podniesienia?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. On chce czegoś innego."

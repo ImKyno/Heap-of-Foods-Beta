@@ -2,8 +2,12 @@ local FIRE_DAMAGE    = TUNING.KYNO_SPICE_FIREBUFF_DAMAGE_MULT
 local SPICE_DURATION = TUNING.KYNO_SPICE_FIREBUFF_DURATION
 
 local function GetFireDamageMult(inst, target)
-	if target ~= nil and target.components.burnable ~= nil and target.components.burnable:IsBurning() then
-		return FIRE_DAMAGE
+	if target ~= nil then
+		if target.components.burnable ~= nil then
+			if target.components.burnable:IsBurning() then
+				return FIRE_DAMAGE
+			end
+		end
 	end
 end
 

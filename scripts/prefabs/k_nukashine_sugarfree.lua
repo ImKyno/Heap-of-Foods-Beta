@@ -107,6 +107,8 @@ local function fn()
     inst.components.edible.healthvalue = 100
 	inst.components.edible.hungervalue = 150
 	inst.components.edible.sanityvalue = -100
+	inst.components.edible.temperaturedelta = TUNING.COLD_FOOD_BONUS_TEMP
+	inst.components.edible.temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION
 	inst.components.edible.foodtype = FOODTYPE.GOODIES
 	inst.components.edible:SetOnEatenFn(OnDrink)
 	

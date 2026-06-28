@@ -101,6 +101,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Nocne wzmocnienie wygasło."
 WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_START = "Zdaje się, że wzbudzam irracjonalną panikę."
 WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_END = "Mój niepokojący wpływ osłabł."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_START = "The effects of time have been temporarily diminished." -- NEEDS TRANSLATION
+WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_END = "Temporal stability has returned to normal." -- NEEDS TRANSLATION
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzeba czegoś jeszcze."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. Chyba mówił coś o homarach."

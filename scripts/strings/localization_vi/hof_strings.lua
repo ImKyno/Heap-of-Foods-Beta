@@ -122,6 +122,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RAINY = "Khôi phục sự tỉnh táo khi bị
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT = "Giết các sinh vật vào ban đêm"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK = "Làm các Batilisk gần đó hoảng sợ"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX = "Stats are based on inclination" -- NEEDS TRANSLATION
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL = "Increases Soul yield" -- NEEDS TRANSLATION
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Một loại rau xanh xanh, vua của đồng cỏ và rừng mưa. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Một trong nhiều món quà từ biển cả, rất được những kẻ biết thưởng thức trân trọng. -W"
@@ -335,27 +336,49 @@ STRINGS.FORTUNE_COOKIE_BAD =
 }
 
 STRINGS.NAMES.KYNO_WRECK_OF = "Xác Tàu %s"
-STRINGS.KYNO_WRECK_NAMES =
+STRINGS.KYNO_WRECK_NAMES = -- DO NOT CHANGE THIS LIST WITHOUT PERMISSION.
 {
-    "Nautilus",
-    "Mackay-Bennett",
-    "Mary Celeste",
-    "Beagle",
-    "Monitor",
-    "Santa Maria",
-    "Blackadder",
-    "Hispaniola",
-    "Pelican",
-    "Golden Hind",
-    "Resolution",
+	"Nautilus",
 	"Wasp",
 	"Leonidas",
-	"reD",
+	"Red",
 	"Francierton",
 	"Parmie",
 	"Dmitry",
 	"Straluz",
 	"Pep",
+	"Nicky",
+	"Raccoon",
+	"Glooms",
+	"Feliphe",
+	"Eventide",
+	"Alison",
+	"Jazzy",
+	"Glermz",
+	"Demon",
+	"Jelly",
+	"Milanjorim",
+	"Malthy",
+	"Nana",
+	"Mina",
+	"Sir Eugene",
+	"Rodra",
+	"Saikuno",
+	"Lotic",
+	"Francierton",
+	"Ratta",
+	"Felucia",
+	"Wali",
+	"Fanblade",
+	"Adai",
+	"Thalz",
+	"Gangplank",
+	"Vespertine",
+	"Brzeszczot",
+	"Dawnbringer",
+	"Nightbringer",
+	"Stargazer",
+	"Bombobbit",
 }
 
 STRINGS.KYNO_SUGARFLY_NAMES =
@@ -1306,7 +1329,7 @@ STRINGS.NAMES.FORGETMELOTS_SEEDS = "Hạt Hoa Lưu Ly"
 
 STRINGS.NAMES.FIRENETTLES_SEEDS = "Hạt Tầm Ma Lửa"
 
-STRINGS.NAMES.ICENETTLES_SEEDS = "Chilled Nettle Seeds" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_ICENETTLES_SEEDS = "Chilled Nettle Seeds" -- NEEDS TRANSLATION
 
 STRINGS.NAMES.TILLWEED_SEEDS = "Hạt Cỏ Dại"
 
@@ -2331,7 +2354,7 @@ STRINGS.KYNO_PLANTBOOSTED_YIELD = "Sai Quả"
 STRINGS.NAMES.KYNO_PLANTBOOSTER_SUPERGROWTH = "Chất Siêu Thúc Đẩy Tăng Trưởng"
 STRINGS.RECIPE_DESC.KYNO_PLANTBOOSTER_SUPERGROWTH = "GIÚP CÂY PHÁT TRIỂN THẬT TO!"
 
-STRINGS.NAMES.KYNO_PIGCOIN1 = "Koin"
+STRINGS.NAMES.KYNO_PIGCOIN1 = "Bạc"
 STRINGS.NAMES.KYNO_PIGCOIN2 = "Huy chương Ngọc lục bảo"
 STRINGS.NAMES.KYNO_PIGCOIN3 = "Dấu ấn Lam ngọc"
 

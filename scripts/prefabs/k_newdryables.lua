@@ -313,6 +313,8 @@ local function fn_crabmeat()
 	local inst = meat_fn("kyno_meatrack_crabmeat", "kyno_meatrack_crabmeat", "kyno_crabmeat_idle", "kyno_crabmeat_dried")
 	
 	inst.AnimState:SetScale(1.1, 1.1, 1.1)
+
+	inst:AddTag("marinefood")
 	
 	if not TheWorld.ismastersim then
         return inst
@@ -335,6 +337,8 @@ local function fn_crabkingmeat()
 	local inst = meat_fn("kyno_meatrack_crabkingmeat", "kyno_meatrack_crabkingmeat", "kyno_crabkingmeat_idle", "kyno_crabkingmeat_dried")
 	
 	inst.AnimState:SetScale(1.1, 1.1, 1.1)
+
+	inst:AddTag("marinefood")
 	
 	if not TheWorld.ismastersim then
         return inst
@@ -359,6 +363,7 @@ local function fn_jellyfish()
 	inst:AddTag("fish")
 	inst:AddTag("fishmeat")
 	inst:AddTag("catfood")
+	inst:AddTag("marinefood")
 	
 	if not TheWorld.ismastersim then
         return inst
@@ -384,6 +389,7 @@ local function fn_fishmeat_small()
 	inst:AddTag("fish")
 	inst:AddTag("fishmeat")
 	inst:AddTag("catfood")
+	inst:AddTag("marinefood")
 
 	inst:AddComponent("driedsalticon")
 	inst.components.driedsalticon:SetCollectsOnDried(true)
@@ -414,6 +420,7 @@ local function fn_fishmeat()
 	inst:AddTag("fishmeat")
 	inst:AddTag("catfood")
 	inst:AddTag("sliceable")
+	inst:AddTag("marinefood")
 
 	inst:AddComponent("driedsalticon")
 	inst.components.driedsalticon:SetCollectsOnDried(true)

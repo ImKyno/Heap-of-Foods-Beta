@@ -184,7 +184,7 @@ local kyno_foods_keg =
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 20,
-		hunger = 40,
+		hunger = 56.25,
 		sanity = -10,
 		cooktime = 72,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_GLOW,
@@ -420,7 +420,7 @@ local kyno_foods_keg =
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 40,
-		hunger = 40,
+		hunger = 56.25,
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
@@ -560,7 +560,7 @@ local kyno_foods_keg =
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
 		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 30,
-		hunger = 40,
+		hunger = 56.25,
 		sanity = 10,
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
@@ -736,6 +736,7 @@ local kyno_foods_keg =
 		cooktime = 72,
 		nameoverride = "KYNO_JUICE",
 		overridebuild = "kyno_foodrecipes_keg",
+		pigcoinvalue = {5, 3, 0},
 		floater = TUNING.HOF_FLOATER,
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_radish", 2}, {"ice", 1}}},
@@ -1372,6 +1373,8 @@ local kyno_foods_keg =
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 100,
 		hunger = 150,
 		sanity = -100,
@@ -1454,7 +1457,7 @@ local kyno_foods_keg =
 		floater = TUNING.HOF_FLOATER,
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_poison_froglegs", 1}, {"kyno_sugar", 1}, {"ice", 1}}},
-		prefab = { "kyno_amphibianbuff" },
+		prefabs = { "kyno_amphibianbuff" },
 		oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_amphibianbuff", "kyno_amphibianbuff")
 		end,
@@ -1540,18 +1543,20 @@ local kyno_foods_keg =
 		perishtime = nil,
 		fireproof = true,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 0,
-		hunger = 100,
+		hunger = 0,
+		hunger2 = 100,
 		sanity = 0,
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX,
-		cooktime = 48,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL,
+		cooktime = 72,
 		bottlesize = 1,
 		overridebuild = "kyno_foodrecipes_keg",
 		pigcoinvalue = {6, 2, 0},
 		floater = TUNING.HOF_FLOATER,
 		tags = {"fooddrink", "preparedsoul", "bottled"},
 		card_def = {ingredients = {{"kyno_bottle_soul", 1}, {"pomegranate", 1}, {"ice", 1}}},
+		prefabs = { "kyno_soulbuff" },
 		oneatenfn = function(inst, eater)
 			if eater:HasTag("soulstealer") and eater.components.health ~= nil and not eater.components.health:IsDead() and
 			not eater:HasTag("playerghost") and eater.components.hunger ~= nil and eater.components.sanity ~= nil then
@@ -1568,6 +1573,8 @@ local kyno_foods_keg =
 					eater.components.health:DoDelta(TUNING.SOULJUICE_HEALTH)
 					eater.components.sanity:DoDelta(TUNING.SOULJUICE_SANITY)
 				end
+
+				eater:AddDebuff("kyno_soulbuff", "kyno_soulbuff")
 			end
 		end,
 	},

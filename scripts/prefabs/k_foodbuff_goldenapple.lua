@@ -354,6 +354,11 @@ local function OnDetached(inst, target)
 		target.components.planardefense:RemoveBonus(target, "kyno_planardefensebuff")
 	end
 
+	-- Super Jellybeans
+	if inst.task ~= nil then
+		inst.task:Cancel()
+	end
+
 	-- Moisture
 	if target.components.moistureimmunity ~= nil then
 		target.components.moistureimmunity:RemoveSource(target)

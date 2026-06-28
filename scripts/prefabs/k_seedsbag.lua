@@ -191,7 +191,8 @@ local function OnItemLose(inst, data)
 end
 
 local function GetStatus(inst, viewer)
-	return (HasSeedsInside(inst) and "FULL")
+	return (inst.components.container ~= nil
+	and inst.components.container:IsFull() and "FULL")
 	or "GENERIC"
 end
 

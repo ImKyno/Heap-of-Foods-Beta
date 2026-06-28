@@ -39,6 +39,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_sw",
 		pigcoinvalue = {7, 1, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_limpets", 3}, {"ice", 1}}},
 	},
 	
@@ -58,6 +59,7 @@ local kyno_foods =
 		pigcoinvalue = {5, 1, 0},
 		overridebuild = "kyno_foodrecipes_sw",
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_jellyfish", 1}, {"ice", 1}, {"twigs", 1}}},
 	},
 	
@@ -76,6 +78,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_sw",
 		pigcoinvalue = {3, 1, 1},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		luckitem = { luck = -TUNING.KYNO_LUCK_MEDLARGE },
 		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"twigs", 3}}},
 		oneatenfn = function(inst, eater)
@@ -101,6 +104,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_sw",
 		pigcoinvalue = {10, 5, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondfish", 1}, {"pondeel", 1}, {"wobster_sheller_land", 1}, {"barnacle", 1}}},
 	},
 	
@@ -193,7 +197,7 @@ local kyno_foods =
 		potlevel = "low",
 		-- oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_SPEED,
 		overridebuild = "kyno_foodrecipes_ham",
-		pigcoinvalue = {6, 0, 0},
+		pigcoinvalue = {0, 6, 0},
 		floater = TUNING.HOF_FLOATER,
 		tags = {"honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_tealeaf", 2}, {"honey", 2}}},
@@ -288,7 +292,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		health = 1,
-		hunger = 6.375,
+		hunger = 4.6875,
 		sanity = 0,
 		cooktime = 1,
 		stacksize = 3,
@@ -325,7 +329,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SLOW,
 		health = 8,
-		hunger = 25,
+		hunger = 56.25,
 		sanity = 10,
 		cooktime = 1,
 		potlevel = "med",
@@ -343,7 +347,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
 		health = 3,
-		hunger = 37.5,
+		hunger = 45,
 		sanity = 15,
 		cooktime = .5,
 		potlevel = "med",
@@ -361,13 +365,14 @@ local kyno_foods =
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FASTISH,
 		health = 20,
-		hunger = 100,
-		sanity = 5,
+		hunger = 75,
+		sanity = 15,
 		cooktime = 2,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {6, 1, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_salmonfish", 2}, {"asparagus", 1}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -386,6 +391,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {8, 0, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"eggfood"},
 		card_def = {ingredients = {{"kyno_turnip", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 	},
 	
@@ -396,7 +402,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_MED,
 		health = 40,
-		hunger = 40,
+		hunger = 56.25,
 		sanity = 40,
 		cooktime = 1.5,
 		potlevel = "med",
@@ -428,15 +434,16 @@ local kyno_foods =
 		test = function(cooker, names, tags) return tags.fish and names.twigs and tags.spotspice end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
-		perishtime = TUNING.PERISH_FAST,
-		health = 25,
+		perishtime = TUNING.PERISH_MED,
+		health = 50,
 		hunger = 37.5,
-		sanity = 20,
+		sanity = 5,
 		cooktime = 2,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {6, 0, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondfish", 2}, {"twigs", 1}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -491,6 +498,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {6, 0, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"eggfood"},
 		card_def = {ingredients = {{"potato", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 	},
 	
@@ -501,7 +509,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
 		health = 25,
-		hunger = 40,
+		hunger = 62.5,
 		sanity = 20,
 		cooktime = 1,
 		potlevel = "med",
@@ -561,6 +569,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {6, 1, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_salmonfish", 1}, {"kyno_flour", 1}, {"kyno_radish", 2}}},
 	},
 
@@ -578,6 +587,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {4, 1, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondfish", 1}, {"kyno_flour", 1}, {"potato", 2}}},
 	},
 	
@@ -607,7 +617,7 @@ local kyno_foods =
 		perishtime = TUNING.PERISH_MED,
 		health = 5,
 		hunger = 12.5,
-		sanity = 25,
+		sanity = 33,
 		cooktime = 0.5,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_gorge",
@@ -650,7 +660,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {7, 0, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"sammyfood"},
+		tags = {"sammyfood", "eggfood"},
 		card_def = {ingredients = {{"carrot", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 	},
 	
@@ -745,7 +755,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {6, 1, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"honeyed"},
+		tags = {"honeyed", "marinefood"},
 		card_def = {ingredients = {{"kyno_salmonfish", 2}, {"kyno_syrup", 2}}},
 	},
 	
@@ -816,6 +826,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {10, 0, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"gorge_bread", 1}, {"kyno_salmonfish", 1}, {"foliage", 2}}},
 	},
 	
@@ -851,6 +862,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {3, 1, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_salmonfish_cooked", 1}, {"foliage", 1}, {"kyno_spotspice", 2}}},
 	},
 	
@@ -903,6 +915,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {7, 0, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_salmonfish", 1}, {"foliage", 2}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -955,7 +968,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SLOW,
 		health = 15,
-		hunger = 40,
+		hunger = 56.25,
 		sanity = 40,
 		cooktime = 1.2,
 		potlevel = "med",
@@ -1017,6 +1030,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {5, 1, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"gorge_bread", 1}, {"goatmilk", 1}, {"kyno_salmonfish", 1}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -1139,6 +1153,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {4, 0, 1},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_salmonfish", 1}, {"goatmilk", 1}, {"carrot", 1}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -1230,6 +1245,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {5, 0, 1},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_crabmeat", 1}, {"succulent_picked", 1}, {"kyno_flour", 1}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -1247,6 +1263,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {5, 2, 1},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_crabmeat", 1}, {"foliage", 1}, {"kyno_white_cap", 1}, {"kyno_flour", 1}}},
 	},
 	
@@ -1257,13 +1274,14 @@ local kyno_foods =
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_FAST,
 		health = 60,
-		hunger = 40,
+		hunger = 56.25,
 		sanity = 50,
 		cooktime = 1.5,
 		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {5, 2, 1},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_crabmeat", 1}, {"kyno_flour", 1}, {"goatmilk", 1}, {"asparagus", 1}}},
 	},
 	
@@ -1336,7 +1354,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {3, 2, 1},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"honeyed"},
+		tags = {"honeyed", "eggfood"},
 		card_def = {ingredients = {{"butter", 1}, {"bird_egg", 1}, {"kyno_syrup", 2}}},
 	},
 	
@@ -1542,6 +1560,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot",
 		pigcoinvalue = {5, 0, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondfish", 1}, {"kyno_flour", 1}, {"kyno_spotspice", 2}}},
 	},
 	
@@ -1644,14 +1663,16 @@ local kyno_foods =
 	
 	soulstew = 
 	{
-		test = function(cooker, names, tags) return (names.kyno_bottle_soul and names.kyno_bottle_soul >= 2) and names.boneshard end,
+		test = function(cooker, names, tags) return (names.kyno_bottle_soul and names.kyno_bottle_soul >= 2)
+		and (names.tomato or names.tomato_cooked) and (names.red_cap or names.red_cap_cooked or names.kyno_red_cap_dried) end,
 		priority = 10,
 		foodtype = FOODTYPE.PREPAREDSOUL,
 		perishtime = nil,
 		fireproof = true,
-		health = nil,
-		hunger = 75,
-		sanity = nil,
+		health = 0,
+		hunger = 0,
+		hunger2 = 150,
+		sanity = 0,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX,
 		cooktime = 1.2,
 		bottlesize = 2,
@@ -1660,7 +1681,7 @@ local kyno_foods =
 		pigcoinvalue = {6, 0, 0},
 		floater = TUNING.HOF_FLOATER,
 		tags = {"preparedsoul", "bottled"},
-		card_def = {ingredients = {{"kyno_bottle_soul", 2}, {"boneshard", 1}, {"twigs", 1}}},
+		card_def = {ingredients = {{"kyno_bottle_soul", 2}, {"tomato", 1}, {"red_cap", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater:HasTag("soulstealer") and eater.components.health ~= nil and not eater.components.health:IsDead() and
 			not eater:HasTag("playerghost") and eater.components.hunger ~= nil and eater.components.sanity ~= nil then
@@ -1868,6 +1889,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot",
 		pigcoinvalue = {5, 2, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_crabmeat", 2}, {"kyno_seaweeds", 1}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -2210,6 +2232,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot",
 		pigcoinvalue = {4, 2, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"eggfood"},
 		card_def = {ingredients = {{"kyno_sugar", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 	},
 	
@@ -2320,6 +2343,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot",
 		pigcoinvalue = {6, 1, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondeel", 1}, {"kyno_mussel", 1}, {"kyno_grouper", 1}, {"kelp", 1}}},
 		prefabs = { "kyno_fishingbuff" },
 		oneatenfn = function(inst, eater)
@@ -2601,6 +2625,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot",
 		pigcoinvalue = {4, 1, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondeel", 1}, {"corn", 1}, {"cutlichen", 2}}},
 	},
 	
@@ -2614,7 +2639,7 @@ local kyno_foods =
 		secondaryfoodtype = FOODTYPE.MONSTER,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		health = 10,
-		hunger = 40,
+		hunger = 56.25,
 		sanity = -5,
 		cooktime = 1,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CURSE,
@@ -2689,7 +2714,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {6, 0, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"monstermeat"},
+		tags = {"monstermeat", "marinefood"},
 		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"kyno_grouper", 1}, {"kyno_turnip", 2}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
@@ -2718,7 +2743,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {6, 1, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"monstermeat"},
+		tags = {"monstermeat", "marinefood"},
 		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"monstermeat", 1}, {"carrot", 1}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
@@ -2745,7 +2770,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {0, 8, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"monstermeat"},
+		tags = {"monstermeat", "eggfood"},
 		card_def = {ingredients = {{"spider", 1}, {"monstermeat", 1}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
@@ -2811,6 +2836,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {7, 0, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"eggfood"},
 		card_def = {ingredients = {{"kyno_rice", 2}, {"bird_egg", 1}, {"tomato", 1}}},
 	},
 	
@@ -2831,6 +2857,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {6, 1, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_rice", 1}, {"kyno_mussel", 1}, {"pondfish", 1}, {"kyno_spotspice", 1}}},
 	},
 	
@@ -2849,6 +2876,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {3, 2, 1},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondfish", 1}, {"kyno_flour", 1}, {"goatmilk", 1}, {"kyno_pineapple_halved", 1}}},
 	},
 	
@@ -3024,7 +3052,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {0, 5, 2},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"masterfood"},
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_crabkingmeat", 1}, {"kyno_spotspice", 1}, {"corn", 1}, {"onion", 1}}},
 		prefabs = { "kyno_crabbuff" },
 		oneatenfn = function(inst, eater)
@@ -3090,13 +3118,14 @@ local kyno_foods =
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
 		health = 20,
-		hunger = 40,
+		hunger = 56.25,
 		sanity = -10,
 		cooktime = 0.5,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_NAUGHTINESS,
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {7, 0, 1},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		luckitem = { luck = -TUNING.KYNO_LUCK_MEDLARGE },
 		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"kyno_rice", 3}}},
 		oneatenfn = function(inst, eater)
@@ -3117,6 +3146,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {6, 1, 0},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"kyno_spotspice", 1}, {"kyno_flour", 1}, {"kyno_oil", 1}}},
 	},
 	
@@ -3179,7 +3209,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {3, 2, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"fooddrink"},
+		tags = {"fooddrink", "marinefood"},
 		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"tomato", 1}, {"pepper", 2}}},
 	},
 	
@@ -3234,7 +3264,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {7, 0, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"honeyed"},
+		tags = {"honeyed", "eggfood"},
 		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"bird_egg", 1}, {"kyno_flour", 1}, {"honey", 1}}},
 	},
 	
@@ -3445,7 +3475,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {10, 2, 1},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"honeyed", "sharkboifood", "exquisite"},
+		tags = {"honeyed", "sharkboifood", "exquisite", "marinefood"},
 		card_def = {ingredients = {{"kyno_swordfish_dead", 1}, {"cheese_yellow", 1}, {"fig", 1}, {"honey", 1}}},
 	},
 	
@@ -3463,7 +3493,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {0, 0, 1},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"monkeyqueenbribe"},
+		tags = {"monkeyqueenbribe", "marinefood"},
 		card_def = {ingredients = {{"wobster_monkeyisland_land", 1}, {"cave_banana", 1}, {"twigs", 2}}},
 		oneatenfn = function(inst, eater)
 			if eater.components.inventory ~= nil and eater.components.cursable ~= nil
@@ -3493,6 +3523,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {3, 5, 1},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		prefabs = { "kyno_craftingbuff" },
 		card_def = {ingredients = {{"kyno_brainrock_coral", 1}, {"kyno_jellyfish", 1}, {"kyno_seaweeds", 2}}},
 		oneatenfn = function(inst, eater)
@@ -3705,6 +3736,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {3, 10, 1},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
 		card_def = {ingredients = {{"oceanfish_midnight_carp_inv", 1}, {"foliage", 1}, {"kyno_taroroot", 1}, {"goatmilk", 1}}},
 		prefabs = { "kyno_nightkillbuff" },
 		oneatenfn = function(inst, eater)

@@ -101,6 +101,9 @@ WEBBER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Aw... the night power is gone."
 WEBBER.ANNOUNCE_KYNO_PANICBUFF_START = "Whoa! Everything's scared of us!"
 WEBBER.ANNOUNCE_KYNO_PANICBUFF_END = "Things aren't scared of us anymore."
 
+WEBBER.ANNOUNCE_KYNO_CUREBUFF_START = "Our snacks will stay good longer!"
+WEBBER.ANNOUNCE_KYNO_CUREBUFF_END = "Aw, they're going bad again."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Not this one."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "We think this isn't the correct meal he wants."
@@ -326,14 +329,14 @@ WEBBER.DESCRIBE.GORGE_CHEESECAKE = "It looks good. We wonder if it tastes good a
 
 WEBBER.DESCRIBE.DUCKYOUGLERMZ = "Eeewww!"
 
-WEBBER.DESCRIBE.KYNO_ALOE = "I bet this is good for us!"
-WEBBER.DESCRIBE.KYNO_ALOE_COOKED = "I cooked it!"
+WEBBER.DESCRIBE.KYNO_ALOE = "We bet this is good for us!"
+WEBBER.DESCRIBE.KYNO_ALOE_COOKED = "We cooked it!"
 WEBBER.DESCRIBE.KYNO_ALOE_DRIED = "Looks dried enough for us."
-WEBBER.DESCRIBE.KYNO_ALOE_GROUND = "I bet this is good for us!"
+WEBBER.DESCRIBE.KYNO_ALOE_GROUND = "We bet this is good for us!"
 WEBBER.DESCRIBE.KYNO_ALOE_SEEDS = "We could grow something with these."
 WEBBER.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "We could grow something with these."
-WEBBER.DESCRIBE.FARM_PLANT_KYNO_ALOE = "I bet this is good for us!"
-WEBBER.DESCRIBE.KYNO_ALOE_OVERSIZED = "I bet this is good for us!"
+WEBBER.DESCRIBE.FARM_PLANT_KYNO_ALOE = "We bet this is good for us!"
+WEBBER.DESCRIBE.KYNO_ALOE_OVERSIZED = "We bet this is good for us!"
 WEBBER.DESCRIBE.KYNO_ALOE_OVERSIZED_ROTTEN = "Wow!"
 
 WEBBER.DESCRIBE.KYNO_CUCUMBER = "Slimy, yet satisfying."

@@ -101,6 +101,9 @@ WILLOW.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Hừ. Trở lại bình thường."
 WILLOW.ANNOUNCE_KYNO_PANICBUFF_START = "Heh. Tốt nhất là chúng nên chạy đi."
 WILLOW.ANNOUNCE_KYNO_PANICBUFF_END = "Aw, chúng chẳng còn sợ nữa."
 
+WILLOW.ANNOUNCE_KYNO_CUREBUFF_START = "Nothing's going bad anytime soon!" -- NEEDS TRANSLATION
+WILLOW.ANNOUNCE_KYNO_CUREBUFF_END = "Back to everything rotting." -- NEEDS TRANSLATION
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Mình cần bỏ thứ gì đó vào đây!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, sai thứ rồi!"

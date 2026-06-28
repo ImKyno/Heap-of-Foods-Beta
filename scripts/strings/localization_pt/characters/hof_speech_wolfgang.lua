@@ -101,6 +101,9 @@ WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Força da noite acabou."
 WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_START = "Criaturas temem o poderoso Wolfgang!"
 WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_END = "Criaturas não temem mais Wolfgang."
 
+WOLFGANG.ANNOUNCE_KYNO_CUREBUFF_START = "Comida fica fresca por mais tempo para o poderoso Wolfgang!"
+WOLFGANG.ANNOUNCE_KYNO_CUREBUFF_END = "O frescor acabou."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é o correto."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Porco poderoso não quer isso."

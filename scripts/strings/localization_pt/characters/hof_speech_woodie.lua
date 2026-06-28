@@ -101,6 +101,9 @@ WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "De volta ao normal."
 WOODIE.ANNOUNCE_KYNO_PANICBUFF_START = "Acho que estou parecendo um pouco intimidador, hein?"
 WOODIE.ANNOUNCE_KYNO_PANICBUFF_END = "Acho que estou menos assustador agora, hein?"
 
+WOODIE.ANNOUNCE_KYNO_CUREBUFF_START = "Isso vai manter tudo fresco por mais um tempo, hein?"
+WOODIE.ANNOUNCE_KYNO_CUREBUFF_END = "Não dá pra impedir a natureza pra sempre, hein?"
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo diferente se encaixe aqui"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, ele não quer isso."

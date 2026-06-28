@@ -101,6 +101,9 @@ WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Có vẻ tăng cường ban đêm đã
 WALTER.ANNOUNCE_KYNO_PANICBUFF_START = "Chắc tớ trông ngầu hơn bình thường rồi, Woby."
 WALTER.ANNOUNCE_KYNO_PANICBUFF_END = "Có vẻ tớ trở lại bình thường rồi."
 
+WALTER.ANNOUNCE_KYNO_CUREBUFF_START = "This'll really stretch our supplies." -- NEEDS TRANSLATION
+WALTER.ANNOUNCE_KYNO_CUREBUFF_END = "Better use things before they spoil." -- NEEDS TRANSLATION 
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai món rồi!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, không phải cái này."

@@ -115,6 +115,7 @@ local function commonfn(bank, build, char_anim_build, data)
 	inst:AddTag("pondfish")
     inst:AddTag("meat")
     inst:AddTag("catfood")
+	inst:AddTag("marinefood")
 	inst:AddTag("smalloceancreature")
 	inst:AddTag("fishresearchable")
 	
@@ -216,6 +217,7 @@ local function cookedfn(bank, build, anim, data)
 	inst:AddTag("fish")
     inst:AddTag("meat")
     inst:AddTag("catfood")
+	inst:AddTag("marinefood")
 
     inst.entity:SetPristine()
 

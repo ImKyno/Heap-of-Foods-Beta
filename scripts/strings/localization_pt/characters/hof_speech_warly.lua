@@ -101,6 +101,9 @@ WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "O corte da noite perdeu o fio."
 WARLY.ANNOUNCE_KYNO_PANICBUFF_START = "Parece que me tornei bastante alarmante."
 WARLY.ANNOUNCE_KYNO_PANICBUFF_END = "Minha presença intimidadora diminuiu."
 
+WARLY.ANNOUNCE_KYNO_CUREBUFF_START = "Excelente! Meus ingredientes durarão mais."
+WARLY.ANNOUNCE_KYNO_CUREBUFF_END = "O frescor voltou a desaparecer."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado, errado..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Quer algo mais saboroso?"

@@ -101,6 +101,9 @@ WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Sức mạnh của màn đêm đã pha
 WILSON.ANNOUNCE_KYNO_PANICBUFF_START = "Sự hiện diện của tôi đang trở nên khá đáng sợ."
 WILSON.ANNOUNCE_KYNO_PANICBUFF_END = "Mọi thứ có vẻ bớt đáng sợ hơn rồi."
 
+WILSON.ANNOUNCE_KYNO_CUREBUFF_START = "Everything seems to last a little longer!" -- NEEDS TRANSLATION
+WILSON.ANNOUNCE_KYNO_CUREBUFF_END = "Things are spoiling normally again." -- NEEDS TRANSLATION
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái này."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ông ấy muốn thứ khác."
@@ -328,7 +331,7 @@ WILSON.DESCRIBE.DUCKYOUGLERMZ = "Nó hôi quá, ugh."
 
 WILSON.DESCRIBE.KYNO_ALOE = "Vừa khoa học vừa bổ dưỡng."
 WILSON.DESCRIBE.KYNO_ALOE_COOKED = "Mình nấu nó rồi!"
-WILSON.DESCRIBE.KYNO_ALOE_DIRED = "Mình sấy nó rồi!"
+WILSON.DESCRIBE.KYNO_ALOE_DRIED = "Mình sấy nó rồi!"
 WILSON.DESCRIBE.KYNO_ALOE_GROUND = "Vừa khoa học vừa bổ dưỡng."
 WILSON.DESCRIBE.KYNO_ALOE_SEEDS = "Đó là một hạt giống."
 WILSON.DESCRIBE.KNOWN_KYNO_ALOE_SEEDS = "Đó là một hạt giống."

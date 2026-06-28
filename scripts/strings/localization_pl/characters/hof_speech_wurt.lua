@@ -101,6 +101,9 @@ WURT.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Nie ma już nocnej mocy, florp..."
 WURT.ANNOUNCE_KYNO_PANICBUFF_START = "Wszyscy przestraszeni, florp!"
 WURT.ANNOUNCE_KYNO_PANICBUFF_END = "Nikt już nie jest przestraszony, florp."
 
+WURT.ANNOUNCE_KYNO_CUREBUFF_START = "Food stay good longer, florp!" -- NEEDS TRANSLATION
+WURT.ANNOUNCE_KYNO_CUREBUFF_END = "Food getting old again, florp." -- NEEDS TRANSLATION
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Ładne rybki w bagnie!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... źle..."

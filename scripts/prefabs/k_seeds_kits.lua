@@ -20,9 +20,9 @@ local prefabs =
 	-- Exotic Seeds.
 	"firenettles_seeds",
 	"forgetmelots_seeds",
-	"icenettles_seeds",
 	"tillweed_seeds",
 	"kyno_rice_seeds",
+	"kyno_icenettles_seeds",
 }
 
 local KIT_LOOT =
@@ -105,9 +105,9 @@ local KIT_LOOT =
 	},
 	[12] =
 	{
-		"icenettles_seeds",
-		"icenettles_seeds",
-		"icenettles_seeds",
+		"kyno_icenettles_seeds",
+		"kyno_icenettles_seeds",
+		"kyno_icenettles_seeds",
 	},
 }
 

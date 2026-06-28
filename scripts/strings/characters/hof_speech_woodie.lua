@@ -101,6 +101,9 @@ WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Back to regular ol’ me."
 WOODIE.ANNOUNCE_KYNO_PANICBUFF_START = "Guess I'm lookin' a little intimidating, eh?"
 WOODIE.ANNOUNCE_KYNO_PANICBUFF_END = "Guess I'm less scary now, eh?"
 
+WOODIE.ANNOUNCE_KYNO_CUREBUFF_START = "This'll keep things fresh a while longer, eh?"
+WOODIE.ANNOUNCE_KYNO_CUREBUFF_END = "Can't stop nature forever, eh?"
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to pick it up?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. He wants something else."

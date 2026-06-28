@@ -101,6 +101,9 @@ WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Moc nocy słabnie."
 WILSON.ANNOUNCE_KYNO_PANICBUFF_START = "Moja obecność staje się dość niepokojąca."
 WILSON.ANNOUNCE_KYNO_PANICBUFF_END = "Wszystko wydaje się teraz mniej przerażające."
 
+WILSON.ANNOUNCE_KYNO_CUREBUFF_START = "Everything seems to last a little longer!" -- NEEDS TRANSLATION
+WILSON.ANNOUNCE_KYNO_CUREBUFF_END = "Things are spoiling normally again." -- NEEDS TRANSLATION
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "To nie to."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "On chce coś innego."

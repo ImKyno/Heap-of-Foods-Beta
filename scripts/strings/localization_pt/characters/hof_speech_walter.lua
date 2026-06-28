@@ -101,6 +101,9 @@ WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Acho que o reforço da noite acabou, W
 WALTER.ANNOUNCE_KYNO_PANICBUFF_START = "Acho que pareço mais durão que o normal, Woby."
 WALTER.ANNOUNCE_KYNO_PANICBUFF_END = "Acho que voltei ao normal."
 
+WALTER.ANNOUNCE_KYNO_CUREBUFF_START = "Isso vai fazer nossos suprimentos durarem bem mais."
+WALTER.ANNOUNCE_KYNO_CUREBUFF_END = "Melhor usar tudo antes que estrague."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Coisa errada!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, não é este."

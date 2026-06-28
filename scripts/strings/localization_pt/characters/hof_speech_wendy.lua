@@ -101,6 +101,9 @@ WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "O silêncio retorna... e com ele a fraq
 WENDY.ANNOUNCE_KYNO_PANICBUFF_START = "O terror segue meus passos."
 WENDY.ANNOUNCE_KYNO_PANICBUFF_END = "O terror diminuiu."
 
+WENDY.ANNOUNCE_KYNO_CUREBUFF_START = "O tempo afrouxou seu domínio sobre a decadência."
+WENDY.ANNOUNCE_KYNO_CUREBUFF_END = "A decadência retomou seu lento trabalho."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."

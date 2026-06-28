@@ -38,7 +38,7 @@ local function Seed_GetDisplayName(inst)
 	and STRINGS.NAMES["KNOWN_"..string.upper(inst.prefab)] or nil
 end
 
-local function seeds_common(name)
+local function seeds_common(name, anim)
     local function fn_seeds(weed_def)
         local inst = CreateEntity()
 
@@ -53,7 +53,7 @@ local function seeds_common(name)
 
         inst.AnimState:SetBank("kyno_veggies")
         inst.AnimState:SetBuild("kyno_veggies")
-        inst.AnimState:PlayAnimation("kyno_" .. name .. "_seeds", false)
+        inst.AnimState:PlayAnimation(anim .. "_seeds", false)
         inst.AnimState:SetRayTestOnBB(true)
 
         inst:AddTag("cookable")
@@ -102,7 +102,7 @@ local function seeds_common(name)
         inst:AddComponent("farmplantable")
 		if name == "firenettles" then
 			inst.components.farmplantable.plant = "weed_firenettle"
-        elseif name == "icenettles" then
+        elseif name == "kyno_icenettles" then
             inst.components.farmplantable.plant = "weed_icenettle"
 		else
 			inst.components.farmplantable.plant = "weed_" .. name
@@ -126,14 +126,15 @@ local function seeds_common(name)
 
         return inst
     end
+
 	return fn_seeds
 end
 
-local function MakeWeedSeed(name)   
-    return Prefab(name .. "_seeds", seeds_common(name), assets_weeds, prefabs)  
+local function MakeWeedSeed(name, anim)   
+    return Prefab(name .. "_seeds", seeds_common(name, anim), assets_weeds, prefabs)  
 end
 
-return MakeWeedSeed("firenettles"),
-MakeWeedSeed("forgetmelots"),
-MakeWeedSeed("tillweed"),
-MakeWeedSeed("icenettles")
+return MakeWeedSeed("firenettles", "kyno_firenettles"),
+MakeWeedSeed("forgetmelots",       "kyno_forgetmelots"),
+MakeWeedSeed("tillweed",           "kyno_tillweed"),
+MakeWeedSeed("kyno_icenettles",    "kyno_icenettles")

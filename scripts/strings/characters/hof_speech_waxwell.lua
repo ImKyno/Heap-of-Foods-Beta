@@ -101,6 +101,9 @@ WAXWELL.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "How disappointingly temporary."
 WAXWELL.ANNOUNCE_KYNO_PANICBUFF_START = "At last, the proper reaction."
 WAXWELL.ANNOUNCE_KYNO_PANICBUFF_END = "How disappointing."
 
+WAXWELL.ANNOUNCE_KYNO_CUREBUFF_START = "Time is behaving itself for once."
+WAXWELL.ANNOUNCE_KYNO_CUREBUFF_END = "Back to the usual deterioration."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else for this."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You're not easy, aren't you?"

@@ -122,6 +122,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RAINY = "湿润时可恢复神智"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT = "夜间处决生物"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK = "惊吓附近的蝙蝠蜥蜴"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX = "Stats are based on inclination" -- NEEDS TRANSLATION
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL = "Increases Soul yield" -- NEEDS TRANSLATION
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "绿色蔬菜，草原之王"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "许多海洋礼物之一，深受有文化的人喜爱。-W"
@@ -335,27 +336,49 @@ STRINGS.FORTUNE_COOKIE_BAD =
 }
 
 STRINGS.NAMES.KYNO_WRECK_OF = " %s 的残骸"
-STRINGS.KYNO_WRECK_NAMES =
+STRINGS.KYNO_WRECK_NAMES = -- DO NOT CHANGE THIS LIST WITHOUT PERMISSION.
 {
-	"鹦鹉螺",
-	"麦凯-贝内特",
-	"玛丽·塞莱斯特",
-	"比格犬",
-	"监视器",
-	"圣玛丽亚",
-	"黑爵士",
-	"伊斯帕尼奥拉",
-	"鹈",
-	"金后",
-	"弗兰希尔顿",
-	"帕米尔",
-	"列奥尼达",
-	"若德",
-	"弗朗西顿",
-	"帕米",
-	"德米特里",
-	"斯特拉卢兹",
-	"佩普",
+	"Nautilus",
+	"Wasp",
+	"Leonidas",
+	"Red",
+	"Francierton",
+	"Parmie",
+	"Dmitry",
+	"Straluz",
+	"Pep",
+	"Nicky",
+	"Raccoon",
+	"Glooms",
+	"Feliphe",
+	"Eventide",
+	"Alison",
+	"Jazzy",
+	"Glermz",
+	"Demon",
+	"Jelly",
+	"Milanjorim",
+	"Malthy",
+	"Nana",
+	"Mina",
+	"Sir Eugene",
+	"Rodra",
+	"Saikuno",
+	"Lotic",
+	"Francierton",
+	"Ratta",
+	"Felucia",
+	"Wali",
+	"Fanblade",
+	"Adai",
+	"Thalz",
+	"Gangplank",
+	"Vespertine",
+	"Brzeszczot",
+	"Dawnbringer",
+	"Nightbringer",
+	"Stargazer",
+	"Bombobbit",
 }
 
 STRINGS.KYNO_SUGARFLY_NAMES =
@@ -1306,7 +1329,7 @@ STRINGS.NAMES.FORGETMELOTS_SEEDS = "必忘我种子"
 
 STRINGS.NAMES.FIRENETTLES_SEEDS = "火荨麻种子"
 
-STRINGS.NAMES.ICENETTLES_SEEDS = "Chilled Nettle Seeds" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_ICENETTLES_SEEDS = "Chilled Nettle Seeds" -- NEEDS TRANSLATION
 
 STRINGS.NAMES.TILLWEED_SEEDS = "犁地草种子"
 

@@ -103,6 +103,10 @@ local function OnAttached(inst, target)
 		end
 	end
 
+	if target.components.talker and target:HasTag("player") then
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_CUREBUFF_START"))
+	end
+
 	inst:ListenForEvent("death", function()
 		inst.components.debuff:Stop()
 	end, target)
@@ -121,6 +125,10 @@ local function OnDetached(inst, target)
 		end
 	end
 
+	if target.components.talker and target:HasTag("player") then
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_CUREBUFF_END"))
+	end
+
 	inst:Remove()
 end
 
@@ -130,6 +138,10 @@ local function OnExtended(inst, target)
 
 	if target ~= nil then
 		target._spice_cure_debuff_duration_mult = DEBUFF_DURATION
+	end
+
+	if target.components.talker and target:HasTag("player") then
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_CUREBUFF_START"))
 	end
 end
 

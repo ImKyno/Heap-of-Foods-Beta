@@ -101,6 +101,9 @@ WEBBER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Och... moc nocy znikła."
 WEBBER.ANNOUNCE_KYNO_PANICBUFF_START = "Łał! Wszystko się nas boi!"
 WEBBER.ANNOUNCE_KYNO_PANICBUFF_END = "Już nic się nas nie boi."
 
+WEBBER.ANNOUNCE_KYNO_CUREBUFF_START = "Our snacks will stay good longer!" -- NEEDS TRANSLATION
+WEBBER.ANNOUNCE_KYNO_CUREBUFF_END = "Aw, they're going bad again." -- NEEDS TRANSLATION
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie tego."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sądzimy, że to nie jest właściwy posiłek, jakiego potrzebuje."

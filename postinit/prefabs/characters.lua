@@ -1,4 +1,6 @@
-local _G = GLOBAL
+local _G               = GLOBAL
+local require          = _G.require
+local WortoxSoulCommon = require("prefabs/wortox_soul_common")
 
 local HOF_HUMANMEAT = GetModConfigData("HUMANMEAT")
 local HOF_ALCOHOLICDRINKS = GetModConfigData("ALCOHOLICDRINKS")
@@ -149,6 +151,12 @@ local function WortoxPostInit(inst)
 	if inst.components.eater ~= nil then
 		inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODTYPE.PREPAREDSOUL, FOODGROUP.OMNI })
 	end
+
+	inst:ListenForEvent("murdered", function(inst, data)
+		if inst:HasTag("soulharvester") then
+			WortoxSoulCommon.GiveSouls(inst, data.stackmult or 1, inst:GetPosition())
+		end
+	end)
 end
 
 local function WormwoodPostInit(inst)

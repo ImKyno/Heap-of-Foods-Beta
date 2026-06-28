@@ -29,6 +29,7 @@ local function fn()
     inst:AddTag("meat")
 	inst:AddTag("catfood")
 	inst:AddTag("shark_fin")
+	inst:AddTag("marinefood")
 	inst:AddTag("unluckyitem")
 
     inst.entity:SetPristine()

@@ -35,6 +35,7 @@ local function fn()
 	inst.AnimState:PlayAnimation("idle")
 
 	inst:AddTag("blubber")
+	inst:AddTag("marinefood")
 	inst:AddTag("waterproofer")
 	inst:AddTag("saltbox_valid")
 

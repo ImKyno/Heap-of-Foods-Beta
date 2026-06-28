@@ -87,6 +87,9 @@ WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "A barriga volta a roncar!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "A escuridão faz cócegas em vez de morder!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "A escuridão voltou a morder!"
 
+WORTOX.ANNOUNCE_KYNO_SOULBUFF_START = "Muitas almas para, hyuyu!"
+WORTOX.ANNOUNCE_KYNO_SOULBUFF_END = "A brisa cheia de almas me deixou."
+
 WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Ahh, a diversão acabou!"
 
 WORTOX.ANNOUNCE_KYNO_GREENTHUMBBUFF_START = "Que colheita abundante. Hyuyu!"
@@ -100,6 +103,9 @@ WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "E assim, ela escapa."
 
 WORTOX.ANNOUNCE_KYNO_PANICBUFF_START = "Que medo delicioso. Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_PANICBUFF_END = "Chega de diversão assustadora!"
+
+WORTOX.ANNOUNCE_KYNO_CUREBUFF_START = "Uma pequena travessura com o tempo, hihihi!"
+WORTOX.ANNOUNCE_KYNO_CUREBUFF_END = "O tempo voltou a me alcançar, hihihi!"
 
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de outra coisa."
 

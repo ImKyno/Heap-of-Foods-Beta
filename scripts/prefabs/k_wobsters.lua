@@ -264,6 +264,7 @@ local function land_wobster(bank_name, build_name, nameoverride, fish_def, fadeo
 	inst:AddTag("animal")
 	inst:AddTag("canbetrapped")
 	inst:AddTag("whackable")
+	inst:AddTag("marinefood")
 	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
 	inst:AddTag("stunnedbybomb")
@@ -367,6 +368,7 @@ local function dead_wobster()
 	inst:AddTag("fishmeat")
 	inst:AddTag("catfood")
 	inst:AddTag("cookable")
+	inst:AddTag("marinefood")
 	inst:AddTag("wobster_monkeyisland")
 
 	inst.entity:SetPristine()
@@ -422,6 +424,7 @@ local function cooked_wobster()
 
 	inst:AddTag("fishmeat")
 	inst:AddTag("catfood")
+	inst:AddTag("marinefood")
 	inst:AddTag("wobster_monkeyisland")
 
 	inst.entity:SetPristine()

@@ -101,6 +101,9 @@ WAXWELL.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Thật đáng thất vọng là nó q
 WAXWELL.ANNOUNCE_KYNO_PANICBUFF_START = "Cuối cùng cũng có phản ứng đúng đắn."
 WAXWELL.ANNOUNCE_KYNO_PANICBUFF_END = "Thật đáng thất vọng."
 
+WAXWELL.ANNOUNCE_KYNO_CUREBUFF_START = "Time is behaving itself for once." -- NEEDS TRANSLATION
+WAXWELL.ANNOUNCE_KYNO_CUREBUFF_END = "Back to the usual deterioration." -- NEEDS TRANSLATION
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cho việc này."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ngươi không dễ chiều chút nào, phải không?"

@@ -101,6 +101,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Hiệu ứng tăng cường ban 
 WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_START = "Có vẻ như tôi đang gây ra sự hoảng loạn phi lý."
 WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_END = "Ảnh hưởng đáng báo động của tôi đã suy giảm."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_START = "The effects of time have been temporarily diminished." -- NEEDS TRANSLATION
+WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_END = "Temporal stability has returned to normal." -- NEEDS TRANSLATION
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nó cần thứ khác."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không. Ta nghĩ ông ấy có nhắc đến Wobster."

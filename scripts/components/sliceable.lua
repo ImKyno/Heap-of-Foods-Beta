@@ -1,9 +1,9 @@
 local function onsliceable(self)
-    if self.canbesliced then
-        self.inst:AddTag("sliceable")
-    else
-        self.inst:RemoveTag("sliceable")
-    end
+	if self.canbesliced then
+		self.inst:AddTag("sliceable")
+	else
+		self.inst:RemoveTag("sliceable")
+	end
 end
 
 local function onslicestack(self)
@@ -28,10 +28,10 @@ local Sliceable = Class(function(self, inst)
 	self.productfn = nil -- Custom function for the sliced product.
 	self.slicesize = 1 -- The size of your sliced item, if it can be 1,2,3,4 slices etc.
 	self.slicestack = false -- If Cleaver can slice the entire stack of your item. (Unused)
-	
+
 	self.onslicefn = nil
 	self.onslicestackfn = nil
-	
+
 	self.onsliceworld = false
 	self.onsliceworldfn = nil
 end,
@@ -43,7 +43,7 @@ nil,
 })
 
 function Sliceable:SetOnSliceFn(fn)
-    self.onslicefn = fn
+	self.onslicefn = fn
 end
 
 function Sliceable:SetOnSliceStackFn(fn)
@@ -73,76 +73,81 @@ end
 function Sliceable:OnSlice(inst)
 	local item = self.inst
 	local position = self.inst:GetPosition()
-	
+
 	if self.inst.components.stackable ~= nil and self.inst.components.stackable.stacksize > 1 then
 		item = self.inst.components.stackable:Get()
 	end
-		
-	if self.inst.components.inventoryitem ~= nil then 
+
+	if self.inst.components.inventoryitem ~= nil then
 		local owner = self.inst.components.inventoryitem.owner
 		local slice = SpawnPrefab(self.product)
-			
+
 		if slice.components.stackable ~= nil then
 			slice.components.stackable.stacksize = self.slicesize
 		end
-		
+
 		if owner ~= nil then
 			local container = owner.components.inventory or owner.components.container
 			local ownerpos = owner:GetPosition()
-			
-			if container ~= nil then 
+
+			if container ~= nil then
 				container:GiveItem(slice, nil, ownerpos)
 			end
 		else
 			LaunchAt(slice, self.inst, nil, 0.5, 0.5)
 		end
 	end
-	
+
 	item:Remove()
 end
 
 function Sliceable:OnSliceStack(inst)
 	local item = self.inst
-	local position = self.inst:GetPosition()
-	local stacksize = 1 
-	
-	if self.inst.components.stackable ~= nil then
+
+	local stacksize = 1
+	if item.components.stackable ~= nil then
 		stacksize = item.components.stackable:StackSize()
 	end
-		
-	if self.inst.components.inventoryitem ~= nil then 
-		local owner = self.inst.components.inventoryitem.owner
-		local slice = SpawnPrefab(self.product)
-		local stackslice = self.slicesize * stacksize
-		
-		if slice.components.stackable ~= nil then
-			slice.components.stackable:SetStackSize(stackslice)
-		end
-		
-		if owner ~= nil then
-			local container = owner.components.inventory or owner.components.container
-			local ownerpos = owner:GetPosition()
-			
-			if container ~= nil then 
-				container:GiveItem(slice, nil, ownerpos)
+
+	local total = self.slicesize * stacksize
+
+	if item.components.inventoryitem ~= nil then
+		local owner = item.components.inventoryitem.owner
+
+		while total > 0 do
+			local slice = SpawnPrefab(self.product)
+
+			if slice.components.stackable ~= nil then
+				local amount = math.min(total, slice.components.stackable.maxsize)
+				slice.components.stackable:SetStackSize(amount)
+				total = total - amount
+			else
+				total = total - 1
 			end
-		else
-			LaunchAt(slice, self.inst, nil, 0.5, 0.5)
+
+			if owner ~= nil then
+				local container = owner.components.inventory or owner.components.container
+				if container ~= nil then
+					container:GiveItem(slice, nil, owner:GetPosition())
+				end
+			else
+				LaunchAt(slice, item, nil, 0.5, 0.5)
+			end
 		end
 	end
-	
+
 	item:Remove()
 end
 
 function Sliceable:OnSliceWorld(doer)
 	local inst = self.inst
 	local item = nil
-	
+
 	if self.productfn ~= nil then
 		item = self.productfn(inst)
 	elseif self.product ~= nil then
 		item = self.product
-    end
+	end
 
 	if item == nil then
 		return
@@ -158,7 +163,7 @@ function Sliceable:OnSliceWorld(doer)
 		end
 	end
 
-    if self.onsliceworldfn ~= nil then
+	if self.onsliceworldfn ~= nil then
 		self.onsliceworldfn(inst)
 	end
 end

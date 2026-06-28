@@ -101,6 +101,9 @@ WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Hết ca chế độ ban đêm."
 WINONA.ANNOUNCE_KYNO_PANICBUFF_START = "Có vẻ tôi đang để lại ấn tượng khá mạnh."
 WINONA.ANNOUNCE_KYNO_PANICBUFF_END = "Thế là hết hiệu ứng hăm dọa."
 
+WINONA.ANNOUNCE_KYNO_CUREBUFF_START = "That's gonna make supplies last." -- NEEDS TRANSLATION
+WINONA.ANNOUNCE_KYNO_CUREBUFF_END = "Back to regular wear and tear." -- NEEDS TRANSLATION
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không, chắc phải thứ khác."

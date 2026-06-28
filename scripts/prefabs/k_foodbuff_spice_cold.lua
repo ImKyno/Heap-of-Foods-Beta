@@ -4,9 +4,12 @@ local COLDNESS_DURATION = TUNING.KYNO_SPICE_COLDBUFF_COLDNESS_DURATION
 local SPICE_DURATION    = TUNING.KYNO_SPICE_COLDBUFF_DURATION
 
 local function GetColdDamageMult(inst, target)
-	if target ~= nil and target.components.freezable ~= nil
-	and target.components.freezable.coldness > 0 or target.components.freezable:IsFrozen() then
-		return COLDNESS_DAMAGE
+	if target ~= nil then
+		if target.components.freezable ~= nil then
+			if target.components.freezable.coldness > 0 or target.components.freezable:IsFrozen() then
+				return COLDNESS_DAMAGE
+			end
+		end
 	end
 end
 

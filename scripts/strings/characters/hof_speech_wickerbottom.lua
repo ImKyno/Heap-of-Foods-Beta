@@ -101,6 +101,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "The nocturnal enhancement has di
 WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_START = "I seem to inspire irrational panic."
 WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_END = "My alarming influence has waned."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_START = "The effects of time have been temporarily diminished."
+WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_END = "Temporal stability has returned to normal."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It requires something else."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. I think he said something about wobsters."

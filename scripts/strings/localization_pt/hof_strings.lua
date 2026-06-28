@@ -122,6 +122,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RAINY = "Restaura a sanidade quando molhado"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT = "Executa criaturas à noite"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK = "Assusta batiliscos próximos"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX = "Status são baseados na inclinação"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL = "Aumenta ganho de Alma"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Vegetal esverdeado, o rei das pastagens e florestas tropicais. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Um dos muitos presentes do mar, muito apreciado pelos homens de cultura. -W"
@@ -335,27 +336,49 @@ STRINGS.FORTUNE_COOKIE_BAD =
 }
 
 STRINGS.NAMES.KYNO_WRECK_OF = "Naufrágio de %s"
-STRINGS.KYNO_WRECK_NAMES =
+STRINGS.KYNO_WRECK_NAMES = -- DO NOT CHANGE THIS LIST WITHOUT PERMISSION.
 {
-    "Nautilus",
-    "Mackay-Bennett",
-    "Mary Celeste",
-    "Beagle",
-    "Monitor",
-    "Santa Maria",
-    "Blackadder",
-    "Hispaniola",
-    "Pelican",
-    "Golden Hind",
-    "Resolution",
+	"Nautilus",
 	"Wasp",
 	"Leonidas",
-	"reD",
+	"Red",
 	"Francierton",
 	"Parmie",
 	"Dmitry",
 	"Straluz",
 	"Pep",
+	"Nicky",
+	"Raccoon",
+	"Glooms",
+	"Feliphe",
+	"Eventide",
+	"Alison",
+	"Jazzy",
+	"Glermz",
+	"Demon",
+	"Jelly",
+	"Milanjorim",
+	"Malthy",
+	"Nana",
+	"Mina",
+	"Sir Eugene",
+	"Rodra",
+	"Saikuno",
+	"Lotic",
+	"Francierton",
+	"Ratta",
+	"Felucia",
+	"Wali",
+	"Fanblade",
+	"Adai",
+	"Thalz",
+	"Gangplank",
+	"Vespertine",
+	"Brzeszczot",
+	"Dawnbringer",
+	"Nightbringer",
+	"Stargazer",
+	"Bombobbit",
 }
 
 STRINGS.KYNO_SUGARFLY_NAMES =
@@ -1306,7 +1329,7 @@ STRINGS.NAMES.FORGETMELOTS_SEEDS = "Sementes de Nome-Esquecido"
 
 STRINGS.NAMES.FIRENETTLES_SEEDS = "Sementes de Urtigas Flamejantes"
 
-STRINGS.NAMES.ICENETTLES_SEEDS = "Sementes de Urtigas Gélidas"
+STRINGS.NAMES.KYNO_ICENETTLES_SEEDS = "Sementes de Urtigas Gélidas"
 
 STRINGS.NAMES.TILLWEED_SEEDS = "Sementes de Tillweed"
 
@@ -2331,8 +2354,8 @@ STRINGS.KYNO_PLANTBOOSTED_YIELD = "Abundante"
 STRINGS.NAMES.KYNO_PLANTBOOSTER_SUPERGROWTH = "Hiper Potencializador de Crescimento"
 STRINGS.RECIPE_DESC.KYNO_PLANTBOOSTER_SUPERGROWTH_D = "AJUDA AS PLANTAS A CRESCEREM ENORMES!"
 
-STRINGS.NAMES.KYNO_PIGCOIN1 = "Koin"
-STRINGS.NAMES.KYNO_PIGCOIN2 = "Medalhão Esmeralda"
+STRINGS.NAMES.KYNO_PIGCOIN1 = "Prata"
+STRINGS.NAMES.KYNO_PIGCOIN2 = "Medalhão de Esmeralda"
 STRINGS.NAMES.KYNO_PIGCOIN3 = "Marca Cerúlea"
 
 STRINGS.NAMES.WEED_ICENETTLE = "Urtiga Gélida"

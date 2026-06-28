@@ -122,6 +122,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RAINY = "Restores sanity when wet"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT = "Executes creatures at night"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK = "Scares nearby batilisks"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX = "Stats are based on inclination"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL = "Increases Soul yield"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Green-ish vegetable, the king of grasslands and rainforests. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "One of the many sea gifts, very appreciated by men of culture. -W"
@@ -335,27 +336,49 @@ STRINGS.FORTUNE_COOKIE_BAD =
 }
 
 STRINGS.NAMES.KYNO_WRECK_OF = "Wreck of the %s"
-STRINGS.KYNO_WRECK_NAMES =
+STRINGS.KYNO_WRECK_NAMES = -- DO NOT CHANGE THIS LIST WITHOUT PERMISSION.
 {
-    "Nautilus",
-    "Mackay-Bennett",
-    "Mary Celeste",
-    "Beagle",
-    "Monitor",
-    "Santa Maria",
-    "Blackadder",
-    "Hispaniola",
-    "Pelican",
-    "Golden Hind",
-    "Resolution",
+	"Nautilus",
 	"Wasp",
 	"Leonidas",
-	"reD",
+	"Red",
 	"Francierton",
 	"Parmie",
 	"Dmitry",
 	"Straluz",
 	"Pep",
+	"Nicky",
+	"Raccoon",
+	"Glooms",
+	"Feliphe",
+	"Eventide",
+	"Alison",
+	"Jazzy",
+	"Glermz",
+	"Demon",
+	"Jelly",
+	"Milanjorim",
+	"Malthy",
+	"Nana",
+	"Mina",
+	"Sir Eugene",
+	"Rodra",
+	"Saikuno",
+	"Lotic",
+	"Francierton",
+	"Ratta",
+	"Felucia",
+	"Wali",
+	"Fanblade",
+	"Adai",
+	"Thalz",
+	"Gangplank",
+	"Vespertine",
+	"Brzeszczot",
+	"Dawnbringer",
+	"Nightbringer",
+	"Stargazer",
+	"Bombobbit",
 }
 
 STRINGS.KYNO_SUGARFLY_NAMES =
@@ -1306,7 +1329,7 @@ STRINGS.NAMES.FORGETMELOTS_SEEDS = "Forget-Me-Lots Seeds"
 
 STRINGS.NAMES.FIRENETTLES_SEEDS = "Fire Nettles Seeds"
 
-STRINGS.NAMES.ICENETTLES_SEEDS = "Chilled Nettles Seeds"
+STRINGS.NAMES.KYNO_ICENETTLES_SEEDS = "Chilled Nettles Seeds"
 
 STRINGS.NAMES.TILLWEED_SEEDS = "Tillweeds Seeds"
 

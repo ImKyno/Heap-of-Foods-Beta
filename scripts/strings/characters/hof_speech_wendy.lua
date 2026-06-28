@@ -101,6 +101,9 @@ WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Silence returns... and so does weakness
 WENDY.ANNOUNCE_KYNO_PANICBUFF_START = "Terror follows in my wake."
 WENDY.ANNOUNCE_KYNO_PANICBUFF_END = "The terror has subsided."
 
+WENDY.ANNOUNCE_KYNO_CUREBUFF_START = "Time loosens its grip on decay."
+WENDY.ANNOUNCE_KYNO_CUREBUFF_END = "Decay resumes its patient work."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to gather?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Of course it's not what this stupid creature wants."
@@ -327,7 +330,7 @@ WENDY.DESCRIBE.GORGE_CHEESECAKE = "It's okay. Nothing more than that."
 WENDY.DESCRIBE.DUCKYOUGLERMZ = "Disgusting and horrible."
 
 WENDY.DESCRIBE.KYNO_ALOE = "It dies so that others may live."
-WENDY.DESCRIBE.KYNO_ALOE_COOKED = "Cooked cactus."
+WENDY.DESCRIBE.KYNO_ALOE_COOKED = "Cooked succulent."
 WENDY.DESCRIBE.KYNO_ALOE_DRIED = "As dried as my life."
 WENDY.DESCRIBE.KYNO_ALOE_GROUND = "It dies so that others may live."
 WENDY.DESCRIBE.KYNO_ALOE_SEEDS = "It's a plant that's waiting to be."
