@@ -1609,7 +1609,7 @@ local kyno_foods_keg =
 	{
 		test = function(brewer, names, tags) return true end,
 		priority = -2,
-		perishtime = TUNING.PERISH_FAST,
+		perishtime = nil,
 		health = 0,
 		hunger = 0,
 		sanity = 0,

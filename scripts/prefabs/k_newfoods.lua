@@ -64,6 +64,31 @@ local function OnTakeOffFurniture(inst)
 	inst:RemoveTag("outofreach")
 end
 
+local function OnHaunt(inst, haunter)
+	local x, y, z = inst.Transform:GetWorldPosition()
+	SpawnPrefab("shadow_puff").Transform:SetPosition(x, y, z)
+
+	TheWorld:PushEvent("ms_sendlightningstrike", inst:GetPosition())
+
+	if inst.components.stackable ~= nil then
+		inst.components.stackable:Get():Remove()
+
+		LaunchAtRandomly(inst, nil, TUNING.LAUNCH_SPEED_SMALL)
+
+		if inst.components.inventoryitem ~= nil and inst.components.inventoryitem.is_landed then
+			inst.components.inventoryitem:SetLanded(false, true)
+		end
+
+		if inst.components.stackable:StackSize() <= 0 then
+			inst:Remove()
+		end
+	else
+		inst:Remove()
+	end
+
+	return true
+end
+
 local function MakePreparedFood(data)	
 	local foodassets =
 	{
@@ -205,11 +230,6 @@ local function MakePreparedFood(data)
 			inst.components.fuel:SetOnTakenFn(FuelTaken)
 		end
 		
-		if data.reviver ~= nil then
-			inst:AddComponent("hauntable")
-			inst.components.hauntable:SetHauntValue(TUNING.HAUNT_INSTANT_REZ)
-		end
-		
 		inst:AddComponent("inventoryitem")
 		if spicename ~= nil then
 			inst.components.inventoryitem:ChangeImageName(spicename.."_over")
@@ -271,7 +291,14 @@ local function MakePreparedFood(data)
 			MakeSmallPropagator(inst)
 		end
 		
-		MakeHauntableLaunchAndPerish(inst)
+		if data.reviver ~= nil then
+			inst:AddComponent("hauntable")
+			inst.components.hauntable:SetHauntValue(TUNING.HAUNT_INSTANT_REZ)
+
+			inst:ListenForEvent("activateresurrection", OnHaunt)
+		else
+			MakeHauntableLaunchAndPerish(inst)
+		end
 
 		return inst
 	end

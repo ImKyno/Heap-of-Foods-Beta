@@ -237,13 +237,14 @@ local function WandaPostInit(inst)
 	end
 end
 
-local function WonkeyPostInit(isnt)
+local function WonkeyPostInit(inst)
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
 
 	if inst.components.foodaffinity ~= nil then
 		inst.components.foodaffinity:AddPrefabAffinity("kyno_banana",       TUNING.AFFINITY_15_CALORIES_SMALL)
+
 		inst.components.foodaffinity:AddPrefabAffinity("banana_pudding",    TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_banana",      TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("jelly_cave_banana", TUNING.AFFINITY_15_CALORIES_HUGE)

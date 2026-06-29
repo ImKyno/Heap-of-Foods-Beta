@@ -95,4 +95,30 @@ function UpvalueHacker.SetUpvalue(start_fn, new_fn, ...)
 	debug.setupvalue(scope_fn, _fn_i, new_fn)
 end
 
+local hidden_fns = rawget(_G, "UpvalueHackerHiddenFns")
+
+if not hidden_fns then
+	hidden_fns = {}
+	UpvalueHackerHiddenFns = hidden_fns
+
+	local _debug_getupvalue = debug.getupvalue
+	local _debug_setupvalue = debug.setupvalue
+	local _debug_getfenv = debug.getfenv
+	local _debug_setfenv = debug.setfenv
+
+	function debug.getupvalue(fn, ...) return _debug_getupvalue(hidden_fns[fn] or fn, ...) end
+	function debug.setupvalue(fn, ...) return _debug_setupvalue(hidden_fns[fn] or fn, ...) end
+	function debug.getfenv(fn, ...) return _debug_getfenv(hidden_fns[fn] or fn, ...) end
+	function debug.setfenv(fn, ...) return _debug_setfenv(hidden_fns[fn] or fn, ...) end
+
+	hidden_fns[debug.getupvalue] = _debug_getupvalue
+	hidden_fns[debug.setupvalue] = _debug_setupvalue
+	hidden_fns[debug.getfenv] = _debug_getfenv
+	hidden_fns[debug.setfenv] = _debug_setfenv
+end
+
+function UpvalueHacker.HideFn(hidden_fn, real_fn)
+	hidden_fns[hidden_fn] = real_fn
+end
+
 return UpvalueHacker

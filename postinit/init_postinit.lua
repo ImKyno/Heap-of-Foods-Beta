@@ -123,6 +123,7 @@ local INIT_POSTINIT_PREFABS =
 	"plant_normal",
 	"player",
 	"player_classified",
+	"player_common_extensions",
 	"pond_mos",
 	"pondeel",
 	"pondfish",

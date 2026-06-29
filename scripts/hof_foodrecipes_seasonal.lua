@@ -539,11 +539,12 @@ local kyno_foods_seasonal =
 		stacksize = 2,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REVIVER,
 		potlevel = "low",
+		reviver = true,
 		fireproof = true,
 		overridebuild = "kyno_foodrecipes_seasonal_spooky",
 		pigcoinvalue = {4, 1, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"halloween", "reviver"},
+		tags = {"halloween", "reviver", "foodreviver", "noreviverhealthpenalty"},
 		card_def = {ingredients = {{"boneshard", 1}, {"kyno_sugar", 2}, {"nightmarefuel", 1}}},
 	},
 	
