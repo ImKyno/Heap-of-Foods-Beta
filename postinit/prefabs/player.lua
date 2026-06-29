@@ -119,6 +119,48 @@ local function PlayerPostInit(inst)
 		end)
 	end
 
+	if inst.components.trader ~= nil then
+		local _test = inst.components.trader.test
+
+		inst.components.trader:SetAcceptTest(function(inst, item, giver, ...)
+			if inst:HasTag("playerghost") then
+				return item:HasTag("foodreviver") and inst:IsOnPassablePoint()
+			end
+
+			return _test ~= nil and _test(inst, item, giver, ...) or false
+		end)
+
+		local _onaccept = inst.components.trader.onaccept
+
+		inst.components.trader.onaccept = function(inst, giver, item, ...)
+			if item ~= nil and item:HasTag("foodreviver") and inst:HasTag("playerghost") then
+				local x, y, z = item.Transform:GetWorldPosition()
+
+				-- Using a proxy item since the original item goes to the ghost's inventory (LIMBO)
+				-- and does not trigger the ressurrection functions.
+				local proxy = _G.SpawnPrefab("kyno_foodreviver_proxy")
+				proxy.Transform:SetPosition(x, y, z)
+
+				item:Remove()
+
+				inst:PushEvent("respawnfromghost", { source = proxy, user = giver })
+
+				inst:DoTaskInTime(0.2, function()
+					local fx = _G.SpawnPrefab("halloween_firepuff_cold_3")
+					fx.Transform:SetPosition(x, y, z)
+				end)
+
+				if giver.components.sanity ~= nil then
+					giver.components.sanity:DoDelta(TUNING.REVIVE_OTHER_SANITY_BONUS)
+				end
+
+				return
+			end
+
+			return _onaccept ~= nil and _onaccept(inst, giver, item, ...)
+		end
+	end
+
 	inst.OnLearnFish = OnLearnFish
 	inst.OnLearnRoe = OnLearnRoe
 	inst.OnFishCaught = OnFishCaught

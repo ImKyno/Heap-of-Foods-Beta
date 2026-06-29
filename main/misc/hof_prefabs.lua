@@ -100,6 +100,7 @@ PrefabFiles =
 	"k_foodbuff_spice_fire",
 	"k_foodbuff_spice_mind",
 	"k_foodsack",
+	"k_foodreviver_proxy",
 	"k_froglegs",
 	"k_garden_sprinkler",
 	"k_ghost_pirate",

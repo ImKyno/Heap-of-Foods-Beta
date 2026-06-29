@@ -93,11 +93,7 @@ function ex_fns.OnRespawnFromGhost(inst, data, ...)
 	end
 
 	inst.sg:AddStateTag("busy")
-    inst:DoTaskInTime(9 * FRAMES, DoMoveToRezSource, data.source, 51 * FRAMES)
-
-	-- inst.rezsource = data ~= nil and (
-	-- (data.source ~= nil and not data.source:HasTag("reviver") and data.source:GetBasicDisplayName())
-	-- or (data.user ~= nil and data.user:GetDisplayName()) ) or STRINGS.NAMES.SHENANIGANS
+	inst:DoTaskInTime(9 * FRAMES, DoMoveToRezSource, data.source, 51 * FRAMES)
 
 	local source = data.source
 	inst.rezsource = (source ~= nil and source:GetBasicDisplayName()) or STRINGS.NAMES.SHENANIGANS

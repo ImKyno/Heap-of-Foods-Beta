@@ -54,6 +54,12 @@ AddComponentAction("USEITEM", "inventoryitem", function(inst, doer, target, acti
 			_G.RemoveByValue(actions, ACTIONS.STORE)
 		end
 	end
+
+	if target:HasTag("playerghost") then
+		if inst:HasTag("foodreviver") then
+			table.insert(actions, ACTIONS.GIVETOPLAYER)
+		end
+	end
 end)
 
 -- Action for the Salt.

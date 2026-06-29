@@ -544,7 +544,7 @@ local kyno_foods_seasonal =
 		overridebuild = "kyno_foodrecipes_seasonal_spooky",
 		pigcoinvalue = {4, 1, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"halloween", "reviver", "foodreviver", "noreviverhealthpenalty"},
+		tags = {"halloween", "foodreviver", "noreviverhealthpenalty"},
 		card_def = {ingredients = {{"boneshard", 1}, {"kyno_sugar", 2}, {"nightmarefuel", 1}}},
 	},
 	
