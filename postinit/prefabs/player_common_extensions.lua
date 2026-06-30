@@ -57,6 +57,7 @@ local function DoActualRez(inst, source, item, ...)
 	inst.Light:Enable(false)
 
 	MakeCharacterPhysics(inst, 75, .5)
+	inst.Physics:Stop()
 
 	CommonActualRez(inst)
 

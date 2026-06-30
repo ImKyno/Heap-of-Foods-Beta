@@ -63,7 +63,7 @@ local function MakeCoin(data)
 		inst:AddComponent("tradable")
 	
 		inst:AddComponent("stackable")
-		inst.components.stackable.maxsize = TUNING.STACK_SIZE_TINYITEM
+		inst.components.stackable.maxsize = TUNING.STACK_SIZE_PELLET -- 120
 
 		inst:AddComponent("inventoryitem")
 		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"

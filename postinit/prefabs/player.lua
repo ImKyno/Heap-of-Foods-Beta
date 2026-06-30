@@ -123,8 +123,8 @@ local function PlayerPostInit(inst)
 		local _test = inst.components.trader.test
 
 		inst.components.trader:SetAcceptTest(function(inst, item, giver, ...)
-			if inst:HasTag("playerghost") then
-				return item:HasTag("foodreviver") and inst:IsOnPassablePoint()
+			if item ~= nil and item:HasTag("foodreviver") and inst:HasTag("playerghost") then
+				return inst:IsOnPassablePoint()
 			end
 
 			return _test ~= nil and _test(inst, item, giver, ...) or false
@@ -153,11 +153,11 @@ local function PlayerPostInit(inst)
 				if giver.components.sanity ~= nil then
 					giver.components.sanity:DoDelta(TUNING.REVIVE_OTHER_SANITY_BONUS)
 				end
-
-				return
 			end
 
-			return _onaccept ~= nil and _onaccept(inst, giver, item, ...)
+			if _onaccept ~= nil then
+				return _onaccept(inst, giver, item, ...)
+			end
 		end
 	end
 

@@ -4,7 +4,7 @@ local function OnActivate(inst, player)
 
 	TheWorld:PushEvent("ms_sendlightningstrike", inst:GetPosition())
 
-	inst:DoTaskInTime(0, inst.Remove)
+	inst:DoTaskInTime(30, inst.Remove)
 end
 
 local function fn()
@@ -20,8 +20,6 @@ local function fn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-
-	inst.persists = false
 
 	inst:ListenForEvent("activateresurrection", OnActivate)
 
