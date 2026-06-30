@@ -1493,6 +1493,13 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		tags = {"preparedgears"},
 		card_def = {ingredients = {{"gears", 2}, {"wagpunk_bits", 2}}},
+		oneatenfn = function(inst, eater)
+			if eater.prefab == "wx78" then
+				if eater ~= nil and eater.components.upgrademoduleowner ~= nil then
+					eater.components.upgrademoduleowner:AddCharge(TUNING.KYNO_BOWLOFGEARS_CHARGE)
+				end
+			end
+		end,
 	},
 	
 	longpigmeal = 
