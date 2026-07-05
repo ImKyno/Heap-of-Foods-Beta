@@ -2,9 +2,9 @@ local function ChooseTranslationTable(tbl)
     return tbl[locale] or tbl[1]
 end
 
-local STRINGS = 
+local STRINGS =
 {
-	NAME = 
+	NAME =
 	{
 		"Heap of Foods",
 		zh  = "更多料理 (Heap of Foods)",
@@ -15,7 +15,7 @@ local STRINGS =
 		vi  = "Vua Đầu Bếp (Heap of Foods)",
 	},
 
-	NAME_BETA = 
+	NAME_BETA =
 	{
 		"Heap of Foods - Beta Branch",
 		zh  = "更多料理 - 测试版分支 (Heap of Foods - Beta Branch)",
@@ -25,7 +25,7 @@ local STRINGS =
 		es  = "Montón de Alimentos - Rama Beta (Heap of Foods - Beta Branch)",
 		vi  = "Vua Đầu Bếp - Nhánh Beta (Heap of Foods - Beta Branch)",
 	},
-	
+
 	DESCRIPTION =
 	{
 [[
@@ -35,11 +35,11 @@ local STRINGS =
 󰀦 Learn how to cook every recipe at: https://heap-of-foods.com
 
 󰀏 Featuring the Branches & Business Update:
-The Deciduous Forest is now home for a new face! Meet Partitio, the Pig Merchant. As a proud pig, he only sells high quality stuff. 
+The Deciduous Forest is now home for a new face! Meet Partitio, the Pig Merchant. As a proud pig, he only sells high quality stuff.
 
 Partitio is looking forward to meet new costumers, even if they are monsters and will tolerate them. But after some unfortunate past events, he now refuses to do any business with the Mermfolk!
 
-󰀌 Mod Version: 6.0-B
+󰀌 Mod Version: 6.1-B
 󰀧 Update: Branches & Business (Part I)
 ]],
 		zh  =
@@ -54,9 +54,9 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 
 帕提提欧 期待结识新的顾客，即使他们是怪物，他也会包容他们。但在一些不幸的过往事件之后，他现在拒绝与鱼人族（Mermfolk）进行任何交易！
 
-󰀌 Mod 版本： 6.0-B
+󰀌 Mod 版本： 6.1-B
 󰀧 更新内容：分支机构及业务 (第一部分)
-]],	
+]],
 		zht =
 [[
 󰀄 新增超過 +200 道全新慢燉鍋菜餚，以及可使用的新食材。快樂烹飪！
@@ -69,10 +69,10 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 
 帕提提欧 期待結識新的顧客，即使他們是怪物，他也會包容他們。但在一些不幸的過往事件之後，他現在拒絕與魚人族（Mermfolk）進行任何交易！
 
-󰀌 Mod 版本： 6.0-B
+󰀌 Mod 版本： 6.1-B
 󰀧 更新內容： 分公司及業務 (第一部分)
-]],	
-		pt  = 
+]],
+		pt  =
 [[
 󰀄 Adiciona mais de 200 novas comidas para a Panela, além de ingredientes novos para cozinhar!
 
@@ -84,7 +84,7 @@ A Floresta Decídua agora abriga um novo rosto! Conheça Partitio, o Comerciante
 
 Partitio está ansioso para conhecer novos clientes, mesmo que sejam monstros, e irá tolerá-los. Mas, após alguns eventos infelizes do passado, ele agora se recusa a fazer qualquer negócio com Povo-peixe!
 
-󰀌 Versão do Mod: 6.0-B
+󰀌 Versão do Mod: 6.1-B
 󰀧 Atualização: Galhos e Negócios (Parte I)
 ]],
 		pl  =
@@ -99,7 +99,7 @@ Las liściasty ma teraz nową twarz! Poznaj Partitio, Świńskiego Handlarza. Ja
 
 Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli są potworami i będzie ich tolerował. Jednak po kilku niefortunnych wydarzeniach z przeszłości, obecnie odmawia prowadzenia interesów z Mermfolk!
 
-󰀌 Wersja Moda: 6.0-B
+󰀌 Wersja Moda: 6.1-B
 󰀧 Aktualizacja: Oddziały i biznes (Część I)
 ]],
 		es  =
@@ -114,7 +114,7 @@ Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli 
 
 Partitio espera conocer nuevos clientes, incluso si son monstruos, y los tolerará. Pero tras algunos desafortunados eventos del pasado, ahora se niega a hacer negocios con los Mermfolk.
 
-󰀌 Versión del Mod: 6.0-B
+󰀌 Versión del Mod: 6.1-B
 󰀧 Actualización: Ramas y Negocios (Parte I)
 ]],
 		vi  =
@@ -129,12 +129,12 @@ Rừng rụng lá giờ đây có một gương mặt mới! Hãy gặp Partitio
 
 Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ là quái vật và sẽ chấp nhận họ. Nhưng sau một số sự kiện không may trong quá khứ, anh ta hiện từ chối kinh doanh với Mermfolk!
 
-󰀌 Phiên bản Mod: 6.0-B
+󰀌 Phiên bản Mod: 6.1-B
 󰀧 Cập nhật: Cành Nhánh & Kinh Doanh (Phần I)
 ]],
 	},
 
-	SETTINGS = 
+	SETTINGS =
 	{
 		DISABLED =
 		{
@@ -146,7 +146,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 			es  = "Desactivada",
 			vi  = "Tắt",
 		},
-		
+
 		ENABLED =
 		{
 			"Enabled",
@@ -170,7 +170,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Opciones generales",
 				vi  = "Tùy Chọn Cơ Bản",
 			},
-			
+
 			HOVER =
 			{
 				"General options for the entire mod.",
@@ -182,7 +182,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				vi  = "Các tùy chọn cơ bản cho toàn bộ mod.",
 			},
 		},
-		
+
 		EXTRAS =
 		{
 			NAME =
@@ -195,7 +195,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Opciones varias",
 				vi  = "Tùy Chọn Khác",
 			},
-			
+
 			HOVER =
 			{
 				"Miscellaneous options for the mod.",
@@ -207,7 +207,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				vi  = "Các tùy chọn linh tinh cho mod.",
 			},
 		},
-		
+
 		EXPERIMENTAL =
 		{
 			NAME =
@@ -220,7 +220,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Opciones Experimentales",
 				vi  = "Tùy Chọn Thử Nghiệm",
 			},
-			
+
 			HOVER =
 			{
 				"Experimental options for the Mod. Under testing!",
@@ -232,7 +232,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				vi  = "Các tùy chọn thử nghiệm cho Mod. Vẫn đang trong quá trình phát triển và kiểm tra!",
 			},
 		},
-		
+
 		RETROCOMPAT =
 		{
 			NAME =
@@ -245,7 +245,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Opciones de Retrofit",
 				vi  = "Tùy Chọn Cải Tạo",
 			},
-			
+
 			HOVER =
 			{
 				"Retrofitting options for old worlds.",
@@ -257,7 +257,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				vi  = "Các tùy chọn cải tạo dành cho thế giới cũ.",
 			},
 		},
-		
+
 		LANGUAGE =
 		{
 			NAME =
@@ -291,7 +291,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Polski",
 				es  = "Español",
 				vi  = "Tiếng Việt",
-				
+
 				DESCRIPTION =
 				{
 					en  = "Default Localization",
@@ -304,7 +304,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		SEASONALFOOD =
 		{
 			NAME =
@@ -317,7 +317,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Recetas de temporada",
 				vi  = "Công Thức Theo Mùa",
 			},
-			
+
 			HOVER =
 			{
 				"Should Seasonal Recipes only be cooked during Special Events?",
@@ -328,7 +328,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Las recetas de temporada solo pueden cocinarse durante eventos especiales?",
 				vi  = "Công thức theo mùa có nên chỉ nấu được trong các Sự Kiện Đặc Biệt?",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -341,7 +341,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Las recetas de temporada se pueden cocinar sin restricciones.",
 					vi  = "Có thể nấu các món ăn theo mùa mà không có bất kỳ giới hạn nào.",
 				},
-				
+
 				ENABLED =
 				{
 					"Seasonal Recipes can only be cooked when Special Events are active.",
@@ -354,7 +354,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		HUMANMEAT =
 		{
 			NAME =
@@ -367,7 +367,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Recetas de Cerdo Largo",
 				vi  = "Công Thức Thịt Người",
 			},
-			
+
 			HOVER =
 			{
 				"Should players drop Long Pigs upon death?\nNote: If disabled, this will cause some Recipes to be uncookable.",
@@ -378,7 +378,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Deberían los jugadores soltar cerdo largo al morir?\nNota: Si se desactiva, algunas recetas no podrán cocinarse.",
 				vi  = "Người chơi có rơi ra Thịt Người khi tử trận không?\nLưu ý: Nếu tắt, một số Công Thức sẽ không thể nấu được.",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -391,7 +391,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Los jugadores no soltarán cerdo largo al morir.",
 					vi  = "Người chơi sẽ không rơi ra Thịt Người khi tử trận.",
 				},
-				
+
 				ENABLED =
 				{
 					"Players may have a chance to drop Long Pigs upon death.",
@@ -404,7 +404,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		COFFEEDROP =
 		{
 			NAME =
@@ -417,7 +417,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Tasa de caída de plantas de café",
 				vi  = "Tỷ Lệ Rơi Cây Cà Phê",
 			},
-			
+
 			HOVER =
 			{
 				"How many Coffee Plants should Dragonfly drop?",
@@ -428,7 +428,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Cuántas plantas de café debería soltar la Libélula?",
 				vi  = "Dragonfly sẽ rơi ra bao nhiêu Cây Cà Phê?",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				AMOUNT0 =
@@ -441,7 +441,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "La Libélula no soltará plantas de café.",
 					vi  = "Dragonfly sẽ không đánh rơi Cây Cà Phê.",
 				},
-				
+
 				AMOUNT4 =
 				{
 					"Dragonfly will drop 4 Coffee Plants.",
@@ -452,7 +452,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "La Libélula soltará 4 plantas de café.",
 					vi  = "Dragonfly sẽ đánh rơi 4 Cây Cà Phê.",
 				},
-				
+
 				AMOUNT8 =
 				{
 					"Dragonfly will drop 8 Coffee Plants.",
@@ -463,7 +463,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "La Libélula soltará 8 plantas de café.",
 					vi  = "Dragonfly sẽ đánh rơi 8 Cây Cà Phê.",
 				},
-				
+
 				AMOUNT12 =
 				{
 					"Dragonfly will drop 12 Coffee Plants.",
@@ -474,7 +474,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "La Libélula soltará 12 plantas de café.",
 					vi  = "Dragonfly sẽ đánh rơi 12 Cây Cà Phê.",
 				},
-				
+
 				AMOUNT16 =
 				{
 					"Dragonfly will drop 16 Coffee Plants.",
@@ -487,7 +487,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		ALCOHOLICDRINKS =
 		{
 			NAME =
@@ -500,7 +500,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Restricción alcohólica",
 				vi  = "Giới Hạn Đồ Uống Có Cồn",
 			},
-			
+
 			HOVER =
 			{
 				"Should some characters be unable to drink Alcoholic-like drinks?",
@@ -511,7 +511,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Deberían algunos personajes no poder beber bebidas alcohólicas?",
 				vi  = "Một số nhân vật có nên bị cấm uống các loại đồ uống có cồn không?",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -524,7 +524,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Todos los personajes pueden beber bebidas alcohólicas.",
 					vi  = "Tất cả nhân vật đều có thể uống các loại đồ uống có cồn.",
 				},
-				
+
 				ENABLED =
 				{
 					"Some characters like Webber, Wendy, etc. can't drink Alcoholic-like drinks.",
@@ -537,7 +537,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		GIANTSPAWNING =
 		{
 			NAME =
@@ -550,7 +550,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Gigantes de la comida",
 				vi  = "Triệu Hồi Giants Từ Thức Ăn",
 			},
-			
+
 			HOVER =
 			{
 				"Should Players spawn Giants when eating their special food?",
@@ -561,7 +561,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Deberían aparecer gigantes cuando los jugadores coman sus comidas especiales?",
 				vi  = "Người chơi có triệu hồi Giants khi ăn thức ăn đặc biệt không?",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -574,7 +574,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Los jugadores no invocarán gigantes al comer sus comidas especiales.",
 					vi  = "Người chơi sẽ không triệu hồi Giants khi ăn thức ăn đặc biệt.",
 				},
-				
+
 				ENABLED =
 				{
 					"Players will spawn Giants when eating their special foods.",
@@ -587,7 +587,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		ICEBOXSTACKSIZE =
 		{
 			NAME =
@@ -600,7 +600,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Elastiespaciador para refrigeradores",
 				vi  = "Bộ Mở Rộng Không Gian Cho Tủ Lạnh",
 			},
-			
+
 			HOVER =
 			{
 				"Should Elastispacer be able to upgrade Ice Box and Salt Box?\nNote: If disabled afterwards, may cause visual glitches.",
@@ -611,7 +611,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Debería el Elastiespaciador poder mejorar las neveras y las cajas de sal?\nNota: Si se desactiva posteriormente, puede causar errores visuales.",
 				vi  = "Bộ Mở Rộng Không Gian có thể nâng cấp Tủ Lạnh và Hộp Muối không?\nLưu ý: Nếu sau này tắt đi, có thể gây ra lỗi hiển thị.",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -624,7 +624,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "El Elastiespaciador no mejorará las neveras ni las cajas de sal.",
 					vi  = "Bộ Mở Rộng Không Gian sẽ không thể nâng cấp Tủ Lạnh và Hộp Muối.",
 				},
-				
+
 				ENABLED =
 				{
 					"Elastispacer will upgrade Ice Box and Salt Box for infinite item stacks.",
@@ -637,7 +637,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		COFFEESPEED =
 		{
 			NAME =
@@ -650,7 +650,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Efecto de velocidad",
 				vi  = "Hiệu Ứng Tăng Tốc Từ Thức Ăn",
 			},
-			
+
 			HOVER =
 			{
 				"Should the foods give the Speed Effect when eaten?\n\This option only applies to certain foods.",
@@ -661,7 +661,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Deberían los alimentos otorgar el efecto de velocidad al consumirse?\nEsta opción solo se aplica a ciertos alimentos.",
 				vi  = "Món ăn có nên gia tăng tốc độ di chuyển khi ăn không?\nTùy chọn này chỉ áp dụng cho một số món ăn nhất định.",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -674,7 +674,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Los alimentos no otorgarán el efecto de velocidad al consumirse.",
 					vi  = "Món ăn sẽ không cho hiệu ứng Tăng Tốc khi ăn.",
 				},
-				
+
 				ENABLED =
 				{
 					"Foods will give the Speed Effect when eaten.",
@@ -687,7 +687,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		COFFEEDURATION =
 		{
 			NAME =
@@ -700,7 +700,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Duración del efecto de velocidad",
 				vi  = "Thời Gian Hiệu Ứng Tăng Tốc",
 			},
-			
+
 			HOVER =
 			{
 				"How long should the Speed Effect from foods last?",
@@ -711,7 +711,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Cuánto debería durar el efecto de velocidad otorgado por los alimentos?",
 				vi  = "Hiệu ứng Tăng Tốc từ món ăn sẽ kéo dài bao lâu?",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				SUPERSHORT =
@@ -726,7 +726,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						es  = "Muy corto",
 						vi  = "Cực Ngắn",
 					},
-					
+
 					HOVER =
 					{
 						"Speed Effect will last for 2 Minutes.",
@@ -738,7 +738,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 2 Phút.",
 					},
 				},
-				
+
 				SHORT =
 				{
 					NAME =
@@ -751,7 +751,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						es  = "Corto",
 						vi  = "Ngắn",
 					},
-					
+
 					HOVER =
 					{
 						"Speed Effect will last for a Half Day.",
@@ -763,7 +763,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong Nửa Ngày.",
 					},
 				},
-				
+
 				NORMAL =
 				{
 					NAME =
@@ -776,7 +776,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						es  = "Predeterminado",
 						vi  = "Mặc Định",
 					},
-					
+
 					HOVER =
 					{
 						"Speed Effect will last for 1 Day.",
@@ -788,7 +788,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 1 Ngày.",
 					},
 				},
-				
+
 				AVERAGE =
 				{
 					NAME =
@@ -801,7 +801,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						es  = "Promedio",
 						vi  = "Trung Bình",
 					},
-					
+
 					HOVER =
 					{
 						"Speed Effect will last for 1.5 Days.",
@@ -813,7 +813,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 1.5 Ngày.",
 					},
 				},
-				
+
 				LONG =
 				{
 					NAME =
@@ -826,7 +826,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						es  = "Largo",
 						vi  = "Dài",
 					},
-					
+
 					HOVER =
 					{
 						"Speed Effect will last for 2 Days.",
@@ -838,7 +838,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 2 Ngày.",
 					},
 				},
-				
+
 				SUPERLONG =
 				{
 					NAME =
@@ -851,7 +851,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						es  = "Muy largo",
 						vi  = "Cực Dài",
 					},
-					
+
 					HOVER =
 					{
 						"Speed Effect will last for 4 Days.",
@@ -865,7 +865,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		SCRAPBOOK =
 		{
 			NAME =
@@ -878,7 +878,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Scrapbook del Mod",
 				vi  = "Sổ Tay Mod",
 			},
-			
+
 			HOVER =
 			{
 				"Should the Mod's contents be added to the Scrapbook?",
@@ -889,7 +889,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Deberían añadirse los contenidos del mod al Scrapbook?",
 				vi  = "Có nên thêm nội dung của Mod vào Sổ Tay không?",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -902,7 +902,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Scrapbook predeterminado.",
 					vi  = "Sổ Tay mặc định.",
 				},
-				
+
 				ENABLED =
 				{
 					"Mod's contents will be added to the Scrapbook.",
@@ -915,7 +915,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		WARLYRECIPES =
 		{
 			NAME =
@@ -928,7 +928,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Página de Especialidades del Chef",
 				vi  = "Trang Món Đặc Biệt Của Đầu Bếp",
 			},
-			
+
 			HOVER =
 			{
 				"Should Warly's Recipes appear on \"Chef's Specials\" instead of \"Mod Recipes\" in the Cookbook?",
@@ -939,7 +939,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Deberían las recetas de Warly aparecer en la página \"Especialidades del Chef\" en lugar de en \"Recetas del Mod\" en el libro de cocina?",
 				vi  = "Công thức của Warly có nên xuất hiện ở trang \"Món Đặc Biệt\" thay vì \"Công Thức Mod\" trong Sách Nấu Ăn không?",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -952,7 +952,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Las recetas de Warly aparecerán en la página \"Recetas del Mod\" del libro de cocina.",
 					vi  = "Công thức của Warly không xuất hiện ở trang \"Công Thức Mod\" trong Sách Nấu Ăn.",
 				},
-				
+
 				ENABLED =
 				{
 					"Warly's Recipes will appear on \"Chef's Specials\" page of the Cookbook.",
@@ -965,7 +965,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		WARLYSPICES =
 		{
 			NAME =
@@ -978,7 +978,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Especias Complementarias del Chef",
 				vi  = "Gia Vị Đặc Biệt Của Đầu Bếp",
 			},
-			
+
 			HOVER =
 			{
 				"Should Warly be able to craft and use an array of new Mod Spices?\nNot recommended to be disabled afterwards.",
@@ -989,7 +989,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Debería Warly poder fabricar y usar una variedad de nuevas Especias de Mods?\nNo se recomienda desactivarlo posteriormente.",
 				vi  = "Warly có thể chế biến và sử dụng thêm các loại Gia Vị mới từ Mod không?\nKhông khuyến khích tắt tính năng này sau khi đã bật.",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -1002,7 +1002,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Warly solo podrá fabricar y usar Especias Vanilla.",
 					vi  = "Warly sẽ chỉ có thể chế biến và sử dụng Gia Vị mặc định.",
 				},
-				
+
 				ENABLED =
 				{
 					"Warly will be able to craft and use Vanilla and Mod Spices.",
@@ -1015,7 +1015,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		WARLYGRINDER =
 		{
 			NAME =
@@ -1028,7 +1028,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Recetas del Molino Portátil",
 				vi  = "Công Thức Máy Nghiền Di Động",
 			},
-			
+
 			HOVER =
 			{
 				"Should Warly's Portable Grinding Mill have the recipes from Mealing Stone?",
@@ -1039,7 +1039,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Debería el Molino Portátil de Warly tener las recetas de la Piedra de Molienda?",
 				vi  = "Máy Nghiền Di Động của Warly có nên sở hữu các công thức của Cối Nghiền không?",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -1052,7 +1052,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "El Molino Portátil de Warly no tendrá las recetas de la Piedra de Molienda.",
 					vi  = "Máy Nghiền Di Động của Warly không có các công thức của Cối Nghiền.",
 				},
-				
+
 				ENABLED =
 				{
 					"Warly's Portable Grinding Mill will have the recipes from Mealing Stone.",
@@ -1065,7 +1065,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		KEEPFOOD =
 		{
 			NAME =
@@ -1078,7 +1078,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Detener la descomposición de alimentos",
 				vi  = "Ngăn Chặn Thực Phẩm Hỏng",
 			},
-			
+
 			HOVER =
 			{
 				"Should food spoil if it's inside the Crock Pot?",
@@ -1089,7 +1089,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Debería la comida echarse a perder si está dentro de la Olla?",
 				vi  = "Món ăn có bị hỏng khi đang nằm trong Nồi Hầm không?",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -1102,7 +1102,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "La comida se echará a perder dentro de la Olla, Olla portátil, etc.",
 					vi  = "Món ăn sẽ bị thiu hỏng khi nằm trong Nồi Hầm, Nồi Hầm Di Động, v.v.",
 				},
-				
+
 				ENABLED =
 				{
 					"Food will not spoil inside Crock Pot, Portable Crock Pot, etc.",
@@ -1115,7 +1115,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		FERTILIZERTWEAK =
 		{
 			NAME =
@@ -1128,7 +1128,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Receta del Cubo de Caca",
 				vi  = "Công Thức Thùng Phân",
 			},
-			
+
 			HOVER =
 			{
 				"Should Bucket-o-Poop use the Bucket instead of its default recipe?",
@@ -1139,7 +1139,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Debería el Cubo de Caca usar el Cubo en lugar de su receta predeterminada?",
 				vi  = "Thùng Phân có nên yêu cầu sử dụng Xô (Bucket) để chế tạo thay vì công thức mặc định không?",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -1152,7 +1152,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "El Cubo de Caca no usará el Cubo. (Receta predeterminada).",
 					vi  = "Thùng Phân không cần Xô (Bucket) để chế tạo. (Công thức mặc định).",
 				},
-				
+
 				ENABLED =
 				{
 					"Bucket-o-Poop will use the Bucket as its crafting ingredient.",
@@ -1165,7 +1165,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		SCRAPBOOK2 =
 		{
 			NAME =
@@ -1178,7 +1178,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Extras para Scrapbook del Mod",
 				vi  = "Thông Tin Bổ Sung Sổ Tay Mod",
 			},
-			
+
 			HOVER =
 			{
 				"Should additional information about Mod Contents be shown in the Scrapbook?\n\Requires Mod Scrapbook to be enabled.",
@@ -1189,7 +1189,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Debería mostrarse información adicional sobre el contenido del Mod en el Scrapbook?\n\Requiere que Scrapbook del Mod esté habilitado.",
 				vi  = "Có nên hiển thị thêm thông tin chi tiết về các vật phẩm của Mod trong Sổ Tay không?\n\Yêu cầu phải Bật tính năng Sổ Tay Mod trước.",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -1202,7 +1202,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Original Scrapbook del Mod sin información adicional.",
 					vi  = "Sổ Tay Mod nguyên bản, không có thông tin bổ sung.",
 				},
-				
+
 				ENABLED =
 				{
 					"Mod Scrapbook with additional information.",
@@ -1215,7 +1215,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		SERENITY_CC =
 		{
 			NAME =
@@ -1228,10 +1228,10 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "CC del Archipiélago de la Serenidad",
 				vi  = "Bộ Lọc Màu Quần Đảo Thanh Bình",
 			},
-			
+
 			HOVER =
 			{
-				"This option is experimental and it's under testing.\n\Should the Serenity Archipelago have special Colour Cubes?", 
+				"This option is experimental and it's under testing.\n\Should the Serenity Archipelago have special Colour Cubes?",
 				zh  = "此选项为实验性功能，正在测试中。\n是否应为宁静群岛启用特殊 色块？",
 				zht = "此選項為實驗性功能，正在測試中。\n是否應為寧靜群島啟用特殊 色塊？",
 				pt  = "Esta opção é experimental e está em teste.\nO Arquipélago da Serenidade deve ter Colour Cubes especiais?",
@@ -1239,7 +1239,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Esta opción es experimental y está en pruebas.\n¿Debería el Archipiélago de la Serenidad tener Colour Cubes especiales?",
 				vi  = "Đây là tính năng thử nghiệm.\nQuần Đảo Thanh Bình có nên sở hữu Bộ lọc màu sắc riêng biệt không?",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -1252,10 +1252,10 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Colour Cubes predeterminados para el Archipiélago de la Serenidad.",
 					vi  = "Sử dụng Bộ lọc màu sắc mặc định cho Quần Đảo Thanh Bình.",
 				},
-				
+
 				MARKER =
 				{
-					NAME = 
+					NAME =
 					{
 						"Marker Mode",
 						zh  = "标记模式",
@@ -1265,7 +1265,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						es  = "Modo Marcador",
 						vi  = "Chế Độ Đánh Dấu",
 					},
-					
+
 					HOVER =
 					{
 						"Marker Mode only works for New/Retrofitted Worlds.",
@@ -1277,7 +1277,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						vi  = "Chế độ Đánh Dấu chỉ hoạt động với Thế Giới Mới hoặc Thế Giới Đã Cải Tạo.",
 					},
 				},
-				
+
 				STATIC =
 				{
 					NAME =
@@ -1304,7 +1304,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		MEADOW_CC =
 		{
 			NAME =
@@ -1317,10 +1317,10 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "CC de la Isla Costera",
 				vi  = "Bộ Lọc Màu Đảo Ven Biển",
 			},
-			
+
 			HOVER =
 			{
-				"This option is experimental and it's under testing.\n\Should the Seaside Island have special Colour Cubes?", 
+				"This option is experimental and it's under testing.\n\Should the Seaside Island have special Colour Cubes?",
 				zh  = "此选项为实验性功能，正在测试中。\n是否应为海滨岛启用特殊 色块？",
 				zht = "此選項為實驗性功能，正在測試中。\n是否應為海濱島啟用特殊 色塊？",
 				pt  = "Esta opção é experimental e está em teste.\nA Ilha Beira-mar deve ter Colour Cubes especiais?",
@@ -1328,7 +1328,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Esta opción es experimental y está en pruebas.\n¿Debería la Isla Costera tener Colour Cubes especiales?",
 				vi  = "Đây là tính năng thử nghiệm.\nĐảo Ven Biển có nên sở hữu Bộ lọc màu sắc riêng biệt không?",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -1341,10 +1341,10 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Colour Cubes predeterminados para la Isla Costera.",
 					vi  = "Sử dụng Bộ lọc màu sắc mặc định cho Đảo Ven Biển.",
 				},
-				
+
 				MARKER =
 				{
-					NAME = 
+					NAME =
 					{
 						"Marker Mode",
 						zh  = "标记模式",
@@ -1354,7 +1354,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						es  = "Modo Marcador",
 						vi  = "Chế Độ Đánh Dấu",
 					},
-					
+
 					HOVER =
 					{
 						"Marker Mode only works for New/Retrofitted Worlds.",
@@ -1366,7 +1366,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						vi  = "Chế độ Đánh Dấu chỉ hoạt động với Thế Giới Mới hoặc Thế Giới Đã Cải Tạo.",
 					},
 				},
-				
+
 				STATIC =
 				{
 					NAME =
@@ -1393,7 +1393,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		FULLMOON =
 		{
 			NAME =
@@ -1406,7 +1406,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Transformaciones de la Luna Llena",
 				vi  = "Biến Đổi Trăng Tròn",
 			},
-			
+
 			HOVER =
 			{
 				"Should some things transform during Full Moon Nights?\nCurrently it affects: Mushrooms.",
@@ -1417,7 +1417,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Deberían transformarse algunas cosas durante las noches de luna llena?\nActualmente afecta a: los hongos.",
 				vi  = "Một số vật thể có nên biến đổi vào Đêm Trăng Tròn không?\nHiện tại chỉ ảnh hưởng đến: Nấm.",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -1430,7 +1430,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Algunas cosas no se transformarán durante las noches de luna llena.",
 					vi  = "Một số vật thể không biến đổi vào Đêm Trăng Tròn.",
 				},
-				
+
 				ENABLED =
 				{
 					"Some things will transform during Full Moon Nights.",
@@ -1443,7 +1443,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		AUTORETROFIT =
 		{
 			NAME =
@@ -1456,7 +1456,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Retrofit Automático",
 				vi  = "Tự Động Cải Tạo",
 			},
-			
+
 			HOVER =
 			{
 				"Should the server check during initialization whether the world needs any retrofits? This option does not auto-disable afterwards.",
@@ -1467,7 +1467,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Debe el Servidor comprobar cada vez si el Mundo necesita algún Retrofit durante la inicialización? Esta opción no se desactivará automáticamente después.",
 				vi  = "Server có nên tự động kiểm tra xem thế giới có cần cải tạo mỗi khi khởi động không? Tùy chọn này sẽ không tự động tắt sau đó.",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -1480,7 +1480,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "El Servidor no comprobará los Retrofits durante la inicialización.",
 					vi  = "Server không tự kiểm tra Cải Tạo khi khởi động.",
 				},
-				
+
 				ENABLED =
 				{
 					"Server will check for Retrofits during initialization.",
@@ -1493,7 +1493,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
-		
+
 		MODTRADES =
 		{
 			NAME =
@@ -1506,7 +1506,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "Intercambios Retrofitados",
 				vi  = "Cải Tạo Giao Dịch",
 			},
-			
+
 			HOVER =
 			{
 				"Should Pig King be able to trade items in exchange for Mod items?\nThis also applies to Pig Elder in Lights Out worlds.",
@@ -1517,7 +1517,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				es  = "¿Debería el Rey Cerdo poder intercambiar objetos por objetos del mod?\nEsto también se aplica al Anciano Cerdo en mundos Lights Out.",
 				vi  = "Vua Heo có thể trao đổi vật phẩm lấy vật phẩm từ Mod không?\nĐiều này cũng áp dụng cho Trưởng Lão Heo trong thế giới Lights Out.",
 			},
-			
+
 			HOVER_OPTIONS =
 			{
 				DISABLED =
@@ -1530,7 +1530,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "Ciertos objetos no se pueden intercambiar por objetos del mod.",
 					vi  = "Không thể trao đổi vật phẩm lấy vật phẩm từ Mod.",
 				},
-				
+
 				ENABLED =
 				{
 					"Certain items can be traded in exchange for Mod items.",
@@ -1547,7 +1547,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "6.0-B"
+version                      = "6.1-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 
@@ -1565,10 +1565,10 @@ icon                         = "ModiconHOF.tex"
 icon_atlas                   = "ModiconHOF.xml"
 
 local NONE_LABEL             = ""
-local NONE_OPTIONS           = 
+local NONE_OPTIONS           =
 {
 	{
-		description          = "", 
+		description          = "",
 		data                 = false
 	}
 }
@@ -1576,11 +1576,11 @@ local NONE_OPTIONS           =
 local TOGGLE_OPTIONS         =
 {
 	{
-		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED), 
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
 		data                 = false
-	}, 
+	},
 	{
-		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED), 
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		data                 = true
 	},
 }
@@ -2020,7 +2020,7 @@ configuration_options        =
 	{ name                   = "SERENITY_CC",      label = SERENITY_CC_LABEL,   hover = SERENITY_CC_HOVER,   options = SERENITY_CC_OPTIONS,   default = 0     },
 	{ name                   = "MEADOW_CC",        label = MEADOW_CC_LABEL,     hover = MEADOW_CC_HOVER,     options = MEADOW_CC_OPTIONS,     default = 0     },
 	{ name                   = "FULLMOONTRANS",    label = FULLMOON_LABEL,      hover = FULLMOON_HOVER,      options = FULLMOON_OPTIONS,      default = false },
-	
+
 	-- Retrofitting Options.
 	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false },
 	{ name                   = "AUTORETROFIT",     label = AUTORETROFIT_LABEL,  hover = AUTORETROFIT_HOVER,  options = AUTORETROFIT_OPTIONS,  default = false },

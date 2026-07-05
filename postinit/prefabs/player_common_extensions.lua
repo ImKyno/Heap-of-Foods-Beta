@@ -65,6 +65,10 @@ local function DoActualRez(inst, source, item, ...)
 	inst.Network:RemoveUserFlag(USERFLAGS.IS_GHOST)
 
 	inst:PushEvent("ms_respawnedfromghost")
+
+	inst:DoTaskInTime(1, function()
+		inst:AddDebuff("kyno_reviveprotectionbuff", "kyno_reviveprotectionbuff")
+	end)
 end
 
 UpvalueHacker.SetUpvalue(DoMoveToRezPosition, DoActualRez, "DoActualRez")

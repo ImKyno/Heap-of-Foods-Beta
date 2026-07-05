@@ -358,7 +358,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_RADISH_OVERSIZED = "Of the Brassicaceae family, I bel
 WICKERBOTTOM.DESCRIBE.KYNO_RADISH_OVERSIZED_ROTTEN = "What a terrible outcome."
 
 WICKERBOTTOM.DESCRIBE.KYNO_FENNEL = "Foeniculum vulgare."
-WICKERBOTTOM.DESCRIBE.KYNO_FENNEL_COOKED = "Foeniculum vulgare."
+WICKERBOTTOM.DESCRIBE.KYNO_FENNEL_COOKED = "Cooked Foeniculum vulgare."
 WICKERBOTTOM.DESCRIBE.KYNO_FENNEL_GROUND = "Foeniculum vulgare."
 WICKERBOTTOM.DESCRIBE.KYNO_FENNEL_SEEDS = "It can't begin growing until it's been planted, dear."
 WICKERBOTTOM.DESCRIBE.KNOWN_KYNO_FENNEL_SEEDS = "It can't begin growing until it's been planted, dear."

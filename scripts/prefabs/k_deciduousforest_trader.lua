@@ -7,6 +7,8 @@ local assets =
 	Asset("ANIM", "anim/ds_pig_attacks.zip"),
 	Asset("ANIM", "anim/quagmire_swampig_build.zip"),
 	Asset("ANIM", "anim/quagmire_swampig_extras.zip"),
+
+	Asset("ANIM", "anim/kyno_deciduousforest_trader.zip"),
 	Asset("ANIM", "anim/kyno_deciduousforest_trader_build.zip"),
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
@@ -390,14 +392,15 @@ local function fn()
 	inst.sounds = sounds
 
 	inst.AnimState:SetBank("pigman")
-	inst.AnimState:SetBuild("quagmire_swampig_build")
+	-- inst.AnimState:SetBuild("quagmire_swampig_build")
+	inst.AnimState:SetBuild("kyno_deciduousforest_trader")
 	inst.AnimState:AddOverrideBuild("kyno_deciduousforest_trader_build")
 	inst.AnimState:PlayAnimation("idle_loop")
 
-	inst.AnimState:OverrideSymbol("pig_arm",   "quagmire_swampig_build", "pig_arm2")
-	inst.AnimState:OverrideSymbol("pig_head",  "quagmire_swampig_build", "pig_head1")
-	inst.AnimState:OverrideSymbol("pig_torso", "quagmire_swampig_build", "pig_torso4")
-	inst.AnimState:OverrideSymbol("swap_hat",  "quagmire_swampig_build", "swap_hat2")
+	-- inst.AnimState:OverrideSymbol("pig_arm",   "quagmire_swampig_build", "pig_arm2")
+	-- inst.AnimState:OverrideSymbol("pig_head",  "quagmire_swampig_build", "pig_head1")
+	-- inst.AnimState:OverrideSymbol("pig_torso", "quagmire_swampig_build", "pig_torso4")
+	-- inst.AnimState:OverrideSymbol("swap_hat",  "quagmire_swampig_build", "swap_hat2")
 
 	inst.AnimState:Hide("ARM_carry_up")
 

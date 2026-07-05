@@ -155,7 +155,7 @@ WENDY.DESCRIBE.KYNO_GUMMYBUG_COOKED = "It tastes how it looks."
 WENDY.DESCRIBE.KYNO_WHEAT = "We can grind it down into flour."
 WENDY.DESCRIBE.KYNO_WHEAT_COOKED = "We can't grind it down into flour now."
 
-WENDY.DESCRIBE.KYNO_FLOUR = "Flour, flour flour... floor."
+WENDY.DESCRIBE.KYNO_FLOUR = "Flour, flour, flour... floor."
 
 WENDY.DESCRIBE.KYNO_SPOTSPICE = "Just a dash."
 

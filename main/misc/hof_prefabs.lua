@@ -85,6 +85,7 @@ PrefabFiles =
 	"k_foodbuff_panic",
 	"k_foodbuff_planardefense",
 	"k_foodbuff_poisonimmunity",
+	"k_foodbuff_reviveprotection",
 	"k_foodbuff_sanity",
 	"k_foodbuff_soul",
 	"k_foodbuff_stealth",

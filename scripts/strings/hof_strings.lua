@@ -130,7 +130,7 @@ STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "One of the many sea gifts
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_RADISH = "Red as blood and delicious as nothing else. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_FENNEL = "A classic bitter tuber from the underground. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_SWEETPOTATO = "Ten times sweeter than regular potatoes. -W"
-STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_PARZNIP = "A root vegetable, closely related to carrots, but sweeter. -W"
+STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_PARZNIP = "A root vegetable closely related to carrots, but sweeter. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_TURNIP = "Turned and rounded, purple-ish delicious! -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_RICE = "A popular grain used by many healthy dishes! -W"
 

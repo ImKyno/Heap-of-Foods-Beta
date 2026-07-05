@@ -141,8 +141,6 @@ local function PlayerPostInit(inst)
 				local proxy = _G.SpawnPrefab("kyno_foodreviver_proxy")
 				proxy.Transform:SetPosition(x, y, z)
 
-				item:Remove()
-
 				inst:PushEvent("respawnfromghost", { source = proxy, user = giver })
 
 				inst:DoTaskInTime(0.2, function()
@@ -153,6 +151,10 @@ local function PlayerPostInit(inst)
 				if giver.components.sanity ~= nil then
 					giver.components.sanity:DoDelta(TUNING.REVIVE_OTHER_SANITY_BONUS)
 				end
+
+				item:DoTaskInTime(1, function()
+					item:Remove()
+				end)
 			end
 
 			if _onaccept ~= nil then

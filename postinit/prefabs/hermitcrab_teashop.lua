@@ -6,6 +6,7 @@ local PEARL_TEAS =
 {
 	"kyno_hermitcrabtea_aloe",
 	"kyno_hermitcrabtea_sugartree_petals",
+	"kyno_hermitcrabtea_icenettles",
 }
 
 local function HermitCrabTeaShopPostInit(inst)

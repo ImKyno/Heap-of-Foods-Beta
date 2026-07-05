@@ -2,9 +2,10 @@ local _G = GLOBAL
 
 local WEEDS =
 {
-	firenettles  = true,
-	forgetmelots = true,
-	tillweed     = true,
+	firenettles     = { build = "firenettles2",    symbol = "firenettles01"  },
+	forgetmelots    = { build = "forgetmelots2",   symbol = "forgetmelots01" },
+	tillweed        = { build = "tillweed2",       symbol = "tillweed01"     },
+	kyno_icenettles = { build = "kyno_icenettles", symbol = "icenettles01"   },
 }
 
 -- Allows Wickerbottom's book to grow some plants.
@@ -28,9 +29,10 @@ local function PlantNormalPostInit(inst)
 			end
 
 			local product = inst.components.crop.product_prefab
+			local weed = product ~= nil and WEEDS[product]
 
-			if WEEDS[product] then
-				inst.AnimState:OverrideSymbol("swap_grown", product.."2", product.."01")
+			if weed then
+				inst.AnimState:OverrideSymbol("swap_grown", weed.build, weed.symbol)
 			end
 		end)
 	end

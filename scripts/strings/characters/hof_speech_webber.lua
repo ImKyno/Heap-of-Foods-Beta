@@ -1013,7 +1013,7 @@ WEBBER.DESCRIBE.KYNO_TEALEAF = "A cup of tea, please!"
 WEBBER.DESCRIBE.KYNO_ITEMSLICER = "Hyah, Hyah!"
 WEBBER.DESCRIBE.KYNO_ITEMSLICER_GOLD = "Hyah, Hyah!"
 
-WEBBER.DESCRIBE.COXINHA = "Its tasty!"
+WEBBER.DESCRIBE.COXINHA = "It's tasty!"
 
 WEBBER.DESCRIBE.LAZYDESSERT = "Oh, oh, oohh! Maybe we should try giving it to the ant."
 

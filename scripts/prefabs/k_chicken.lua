@@ -30,15 +30,13 @@ local ChickenSounds =
 SetSharedLootTable("kyno_chicken2",
 {
 	{ "drumstick",     1.00 },
-	{ "drumstick",     0.50 },
 	{ "goose_feather", 1.00 },
-	{ "goose_feather", 0.33 },
 })
 
 SetSharedLootTable("kyno_chicken_coop",
 {
 	{ "drumstick",     1.00 },
-	{ "drumstick",     1.00 },
+	{ "drumstick",     0.50 },
 	{ "goose_feather", 1.00 },
 	{ "goose_feather", 0.50 },
 })

@@ -1746,13 +1746,13 @@ local kyno_foods =
 		pigcoinvalue = {5, 0, 0},
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 1}, {"carrot", 1}, {"berries", 1}, {"horn", 1}}},
-		prefabs = { "boneshard" },
+		prefabs = { "horn" },
 		oneatenfn = function(inst, eater)
-			local bones = SpawnPrefab("boneshard")
-			bones.components.stackable.stacksize = 2
-			if eater.components.inventory ~= nil and eater:HasTag("player") and not eater.components.health:IsDead() 
+			local horn = SpawnPrefab("horn")
+			if eater.components.inventory ~= nil and eater:HasTag("player")
+			and eater.components.health ~= nil and not eater.components.health:IsDead()
 			and not eater:HasTag("playerghost") then 
-				eater.components.inventory:GiveItem(bones)
+				eater.components.inventory:GiveItem(horn, nil, eater:GetPosition())
 			end
 		end,
 	},
