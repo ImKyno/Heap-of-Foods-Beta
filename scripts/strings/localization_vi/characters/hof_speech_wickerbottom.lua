@@ -1319,3 +1319,5 @@ WICKERBOTTOM.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 	GENERIC = "A practical container for seeds.",
 	FULL = "It can hold no additional seeds.",
 }
+
+WICKERBOTTOM.DESCRIBE.KYNO_FOODAMMO_TOMATO = "What a waste of Solanum Lycopersicum." -- NEEDS TRANSLATION

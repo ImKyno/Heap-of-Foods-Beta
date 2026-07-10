@@ -1319,3 +1319,5 @@ WARLY.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "A cook appreciates good organization.",
 	FULL = "It is entirely full.",
 }
+
+WARLY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "That's one juicy tomato wasted..."

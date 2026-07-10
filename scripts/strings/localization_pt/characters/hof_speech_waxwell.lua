@@ -1319,3 +1319,5 @@ WAXWELL.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Um humilde saco para humildes sementes.",
 	FULL = "Está completamente cheio.",
 }
+
+WAXWELL.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Fruta fétida. É melhor que não seja jogada em mim."

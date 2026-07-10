@@ -1319,3 +1319,5 @@ WENDY.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Um saco de possibilidades adormecidas.",
 	FULL = "Está transbordando de futuros que ainda irão florescer.",
 }
+
+WENDY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Cresceu para ser jogado fora, o cruel ciclo da vida."

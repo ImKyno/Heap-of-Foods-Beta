@@ -1322,3 +1322,5 @@ WORTOX.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "A sack of future greenery!",
 	FULL = "Not a seed more will fit, hyuyu!",
 }
+
+WORTOX.DESCRIBE.KYNO_FOODAMMO_TOMATO = "We do a little silly tomfoolery."

@@ -1319,3 +1319,5 @@ WALTER.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Todo jardineiro precisa de uma dessas.",
 	FULL = "Parece que está cheia.",
 }
+
+WALTER.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Guerra de comida!"

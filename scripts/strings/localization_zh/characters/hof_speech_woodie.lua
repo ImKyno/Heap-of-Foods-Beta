@@ -1319,3 +1319,5 @@ WOODIE.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 	GENERIC = "Keeps all my seeds together, eh?",
 	FULL = "Can't squeeze another seed in there.",
 }
+
+WOODIE.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Careful where you aim at!" -- NEEDS TRANSLATION

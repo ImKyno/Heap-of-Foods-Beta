@@ -1319,3 +1319,5 @@ WEBBER.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 	GENERIC = "A special bag just for seeds!",
 	FULL = "Wow, that's a lot of seeds!",
 }
+
+WEBBER.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Not the face!" -- NEEDS TRANSLATION

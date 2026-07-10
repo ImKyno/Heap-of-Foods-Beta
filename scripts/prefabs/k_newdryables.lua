@@ -447,7 +447,7 @@ local function fn_fishmeat()
 end
 
 local function fn_aloe()
-	local inst = veggie_fn("kyno_meatrack_aloe", "kyno_meatrack_aloe", "kyno_aloe_idle", "kyno_aloe_dried", true)
+	local inst = veggie_fn("kyno_meatrack_aloe", "kyno_meatrack_aloe", "kyno_aloe_idle", "kyno_aloe_dried", false)
 	
 	inst.pickupsound = "vegetation_firm"
 	

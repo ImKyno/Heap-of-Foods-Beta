@@ -434,6 +434,7 @@ local HOF_ICONS =
 	"kyno_foliage",
 	"kyno_foliage_cooked",
 	"kyno_garden_sprinkler",
+	"kyno_foodammo_tomato",
 	"kyno_foodsack",
 	"kyno_goldenapple",
 	"kyno_green_cap_dried",

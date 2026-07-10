@@ -1319,3 +1319,5 @@ WILLOW.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 	GENERIC = "A bag full of future plants.",
 	FULL = "No room for more seeds.",
 }
+
+WILLOW.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Boo! You stink!" -- NEEDS TRANSLATION

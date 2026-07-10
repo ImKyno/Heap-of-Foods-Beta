@@ -1311,11 +1311,13 @@ WATHGRITHR.DESCRIBE.KYNO_PIGCOIN1 = "Treasure!"
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN2 = "Coin! Prepare to be spent!"
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN3 = "Fortune is mine!"
 
-WATHGRITHR.DESCRIBE.KYNO_ICENETTLES = "Cöward and cöld."
-WATHGRITHR.DESCRIBE.KYNO_ICENETTLES_DRIED = "Still nöt wörhty för me. "
+WATHGRITHR.DESCRIBE.KYNO_ICENETTLES = "Coward and cold."
+WATHGRITHR.DESCRIBE.KYNO_ICENETTLES_DRIED = "Still not worhty for me. "
 
 WATHGRITHR.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A pouch for the seeds of future harvests!",
 	FULL = "The harvest pouch overflows!",
 }
+
+WATHGRITHR.DESCRIBE.KYNO_FOODAMMO_TOMATO = "I'll smite you, if you even dare!"

@@ -1319,3 +1319,5 @@ WENDY.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 	GENERIC = "A sack of dormant possibilities.",
 	FULL = "It's brimming with futures yet to bloom.",
 }
+
+WENDY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Grown to be thrown away, the cruel cycle of life." -- NEEDS TRANSLATION

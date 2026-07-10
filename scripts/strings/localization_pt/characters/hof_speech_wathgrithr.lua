@@ -1319,3 +1319,5 @@ WATHGRITHR.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Uma bolsa para as sementes das colheitas futuras!",
 	FULL = "A bolsa da colheita está transbordando!",
 }
+
+WATHGRITHR.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Eu vou te golpear, se você duvidar!"

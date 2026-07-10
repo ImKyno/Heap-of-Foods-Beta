@@ -1319,3 +1319,5 @@ WANDA.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 	GENERIC = "A sensible way to store seeds.",
 	FULL = "No more room left.",
 }
+
+WANDA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "A waste of food, and time." -- NEED TRANSLATION

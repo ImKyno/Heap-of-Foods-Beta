@@ -461,6 +461,16 @@ AddRecipe2("kyno_eldermandrakehouse", {Ingredient("boards", 4), Ingredient("kyno
 	{"STRUCTURES"}
 )
 
+AddRecipe2("kyno_foodammo_tomato", {Ingredient("tomato", 1, nil, nil, "quagmire_tomato.tex"), Ingredient("slurtleslime", 1)}, TECH.SCIENCE_ONE,
+	{
+		no_deconstruction   = true,
+		numtogive           = 4,
+		atlas               = ModAtlas,
+		image               = "kyno_foodammo_tomato.tex",
+	},
+	{"WEAPONS"}
+)
+
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
 		builder_tag         = "strongman",

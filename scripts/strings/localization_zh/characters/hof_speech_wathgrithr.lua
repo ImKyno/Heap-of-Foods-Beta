@@ -1319,3 +1319,5 @@ WATHGRITHR.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 	GENERIC = "A pouch for the seeds of future harvests!",
 	FULL = "The harvest pouch overflows!",
 }
+
+WATHGRITHR.DESCRIBE.KYNO_FOODAMMO_TOMATO = "I'll smite you, if you even dare!" -- NEEDS TRANSLATION

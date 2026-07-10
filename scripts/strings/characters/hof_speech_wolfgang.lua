@@ -1319,3 +1319,5 @@ WOLFGANG.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Bag for tiny plant babies!",
 	FULL = "Bag is full of tiny plant babies!",
 }
+
+WOLFGANG.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Wolfgang hated those back at the circus."

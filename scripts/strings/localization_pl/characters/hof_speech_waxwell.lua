@@ -1319,3 +1319,5 @@ WAXWELL.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 	GENERIC = "A humble sack for humble seeds.",
 	FULL = "It's completely full.",
 }
+
+WAXWELL.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Wretched fruit better not be thrown at me..." -- NEEDS TRANSLATION

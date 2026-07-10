@@ -1321,3 +1321,5 @@ WURT.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 	GENERIC = "Bag for seeds, florp.",
 	FULL = "Bag all full, florp!",
 }
+
+WURT.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Throw it at me, I'll eat!" -- NEEDS TRANSLATION

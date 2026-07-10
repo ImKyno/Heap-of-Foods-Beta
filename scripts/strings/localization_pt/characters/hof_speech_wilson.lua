@@ -1319,3 +1319,5 @@ WILSON.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Um lugar prático para guardar sementes.",
 	FULL = "Está cheio de sementes.",
 }
+
+WILSON.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Não se pode contra uma multidão quando você vê isso por perto."

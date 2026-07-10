@@ -1321,3 +1321,5 @@ WURT.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Bolsa para sementes, florp.",
 	FULL = "Bolsa cheia, florp!",
 }
+
+WURT.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Jogue em mim, eu vou comer!"

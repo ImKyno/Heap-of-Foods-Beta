@@ -1319,3 +1319,5 @@ WORMWOOD.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Casa das Sementes",
 	FULL = "Sementes Enchem Casa",
 }
+
+WORMWOOD.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Amigo Voador?"

@@ -1319,3 +1319,5 @@ WEBBER.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Uma bolsa especial só para sementes!",
 	FULL = "Uau, isso é muita semente!",
 }
+
+WEBBER.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Na cara não!"

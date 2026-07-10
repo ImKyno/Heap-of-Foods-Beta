@@ -188,6 +188,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Có thể dùng để bón p
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Có thể dùng để bón phân và làm bất kỳ loại cây nào phát triển ngay lập tức.\n\nKhi dùng cho Cây Nông Trại:\n\nĐưa cây đến giai đoạn phát triển cuối cùng và có 25% cơ hội biến cây thành dạng Khổng Lồ.\n\nHiệu ứng không cộng dồn và sẽ bị thay thế khi sử dụng một Chất Tăng Trưởng khác lên cùng một cây.\n\nCác Chất Tăng Trưởng sẽ bị loại bỏ khi cây bị đào lên."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "Đơn vị tiền tệ chính của lũ heo địa phương."
 STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "Một vật chứa di động với 4 ô chỉ dùng để đựng hạt giống.\n\nTốc độ hư hỏng giảm 60%.\n\nCó thể nâng cấp bằng Elastispacer để tăng khả năng lưu trữ và bảo quản.\n\nCó thể dùng Bút Lông để ghi tên hạt giống lên túi."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODAMMO_TOMATO = "Làm chậm các mục tiêu trên mặt đất trong 5 giây."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Khẩu phần của chúng chủ yếu gồm Hạt Giống, Lúa Mì hoặc Nhánh Đốm.\n\nGà tìm thấy ngoài hoang dã có 40% cơ hội đẻ Trứng sau khi ăn. Chúng có một cơ hội nhỏ đẻ Trứng Lớn.\n\nGà sống trong Chuồng có thể đẻ Trứng mỗi ngày sau khi ăn. Chúng có cơ hội đẻ Trứng Lớn cao hơn."

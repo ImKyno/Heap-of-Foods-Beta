@@ -887,6 +887,7 @@ PLANT_DEFS.kyno_turnip.plantregistryinfo           =
 
 -- Custom Weeds.
 local WEED_DEFS         = require("prefabs/weed_defs").WEED_DEFS
+local WEED_SEED_TABLE   = require("prefabs/weed_defs").weighted_seed_table
 
 -- Grow Time of the Weeds.
 local function MakeGrowTimesWeed(full_grow_min, full_grow_max, bolting)
@@ -983,3 +984,5 @@ WEED_DEFS.weed_icenettle.OnMakeFullFn = function(inst, isfull)
 		inst:RemoveComponent("playerprox")
 	end
 end
+
+WEED_SEED_TABLE["weed_icenettle"] = TUNING.SEED_CHANCE_RARE

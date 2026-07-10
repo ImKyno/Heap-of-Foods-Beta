@@ -1319,3 +1319,5 @@ WANDA.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Uma maneira sensata de armazenar sementes.",
 	FULL = "Não há mais espaço.",
 }
+
+WANDA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Um desperdício de comida e de tempo."

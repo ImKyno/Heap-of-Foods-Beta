@@ -1319,3 +1319,5 @@ WILLOW.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Uma bolsa cheia de futuras plantas.",
 	FULL = "Não cabe mais nenhuma semente.",
 }
+
+WILLOW.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Boo! Você fede!"

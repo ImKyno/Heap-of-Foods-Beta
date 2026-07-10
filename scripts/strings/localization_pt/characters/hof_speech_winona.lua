@@ -1319,3 +1319,5 @@ WINONA.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Boa ferramenta de organização.",
 	FULL = "Capacidade de armazenamento atingida.",
 }
+
+WINONA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Mantenha isso longe de minhas máquinas!"

@@ -188,6 +188,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_YIELD = "Może być użyty do nawoże
 STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Może być użyty do nawożenia i natychmiastowego wzrostu dowolnej rośliny.\n\nPo użyciu na Roślinach Uprawnych:\n\nNatychmiast rozwija roślinę do ostatniego etapu wzrostu i daje 25% szans na przekształcenie jej w Gigantyczną formę.\n\nEfekty nie sumują się i zostaną zastąpione po użyciu innego Wzmacniacza na tej samej roślinie.\n\nWzmacniacze są usuwane po wykopaniu rośliny."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "Główna waluta lokalnych świń."
 STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "Przenośny pojemnik z 4 miejscami, który przechowuje wyłącznie nasiona.\n\nTempo psucia jest zmniejszone o 60%.\n\nMoże zostać ulepszony za pomocą Elastispacera, aby zwiększyć pojemność i możliwości konserwacji.\n\nPióro może zostać użyte do zapisania nazwy nasion na torbie."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODAMMO_TOMATO = "Spowalnia cele naziemne na 5 sekund."
 
 -- Stworzenia.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Ich dieta opiera się na nasionach, pszenicy lub gałązkach cętkowanych.\n\nKury żyjące na wolności mają 40% szans na zniesienie jaj po jedzeniu. Mają bardzo małe szanse na zniesienie dużego jaja.\n\nKury żyjące w kurniku mogą znosić jaja codziennie po jedzeniu. Mają większe szanse na zniesienie dużego jaja."

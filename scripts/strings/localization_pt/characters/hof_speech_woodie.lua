@@ -1319,3 +1319,5 @@ WOODIE.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Mantém todas as minhas sementes juntas, hein?",
 	FULL = "Não cabe mais nenhuma semente aí dentro.",
 }
+
+WOODIE.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Cuidado para onde você mira isso!"

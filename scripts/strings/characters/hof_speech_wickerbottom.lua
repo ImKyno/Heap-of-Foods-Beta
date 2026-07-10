@@ -1029,7 +1029,7 @@ WICKERBOTTOM.DESCRIBE.RICEPUDDING = "Not my first option, but it'll do."
 
 WICKERBOTTOM.DESCRIBE.SHARKSUSHI = "Such precious food!"
 
-WICKERBOTTOM.DESCRIBE.WOBSTERBREADED = "It shoul do the trick."
+WICKERBOTTOM.DESCRIBE.WOBSTERBREADED = "It should do the trick."
 
 WICKERBOTTOM.DESCRIBE.LAZYPURRITO = "I really hope the tail is just an ornament."
 
@@ -1319,3 +1319,5 @@ WICKERBOTTOM.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "A practical container for seeds.",
 	FULL = "It can hold no additional seeds.",
 }
+
+WICKERBOTTOM.DESCRIBE.KYNO_FOODAMMO_TOMATO = "What a waste of Solanum Lycopersicum."

@@ -1319,3 +1319,5 @@ WICKERBOTTOM.DESCRIBE.KYNO_SEEDSBAG =
 	GENERIC = "Um recipiente prático para sementes.",
 	FULL = "Não pode armazenar mais sementes.",
 }
+
+WICKERBOTTOM.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Que desperdício de Solanum Lycopersicum."
