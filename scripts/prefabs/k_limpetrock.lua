@@ -214,6 +214,7 @@ local function limpets()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -230,10 +231,6 @@ local function limpets()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_limpets"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_limpets_cooked"
@@ -268,6 +265,7 @@ local function limpets_cooked()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -284,10 +282,6 @@ local function limpets_cooked()
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_limpets_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

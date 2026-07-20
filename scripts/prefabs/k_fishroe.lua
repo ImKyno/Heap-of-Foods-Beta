@@ -64,6 +64,7 @@ local function MakeRoe(data)
 	
 		inst:AddComponent("bait")
 		inst:AddComponent("selfstacker")
+		inst:AddComponent("inventoryitem")
 		
 		inst:AddComponent("roeresearchable")
 		inst.components.roeresearchable:SetResearchFn(roeresearchfn)
@@ -95,10 +96,6 @@ local function MakeRoe(data)
 		inst.components.perishable:SetPerishTime(data.perishtime or TUNING.PERISH_FAST)
 		inst.components.perishable:StartPerishing()
 		inst.components.perishable.onperishreplacement = "spoiled_food"
-	
-		inst:AddComponent("inventoryitem")
-		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-		inst.components.inventoryitem.imagename = "kyno_roe_"..data.name
 	
 		if data.fireproof ~= nil then
 			MakeHauntableLaunch(inst)

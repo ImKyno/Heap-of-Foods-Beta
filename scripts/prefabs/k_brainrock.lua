@@ -334,13 +334,10 @@ local function metterfn()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_brainrock_coral"
 
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_BRAINROCK_CORAL_HEALTH
@@ -391,13 +388,10 @@ local function larvaefn()
 
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_brainrock_larvae"
 
 	inst:AddComponent("repairer")
 	inst.components.repairer.repairmaterial = MATERIALS.STONE

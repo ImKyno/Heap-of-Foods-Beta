@@ -70,6 +70,8 @@ local function MakePlantable(data)
 		if not TheWorld.ismastersim then
 			return inst
 		end
+
+		inst:AddComponent("inventoryitem")
 	
 		inst:AddComponent("inspectable")
 		inst.components.inspectable.nameoverride = data.nameoverride or "dug_"..data.name
@@ -81,10 +83,6 @@ local function MakePlantable(data)
 			inst:AddComponent("fuel")
 			inst.components.fuel.fuelvalue = TUNING.LARGE_FUEL
 		end
-	
-		inst:AddComponent("inventoryitem")
-		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-		inst.components.inventoryitem.imagename = data.inventoryimage
 	
 		inst:AddComponent("deployable")
 		inst.components.deployable:SetDeployMode(data.deploymode)
@@ -174,6 +172,8 @@ local function MakeWaterPlantable(data)
 		if not TheWorld.ismastersim then
 			return inst
 		end
+
+		inst:AddComponent("inventoryitem")
 	
 		inst:AddComponent("inspectable")
 		inst.components.inspectable.nameoverride = data.nameoverride or data.name
@@ -185,10 +185,6 @@ local function MakeWaterPlantable(data)
 			inst:AddComponent("fuel")
 			inst.components.fuel.fuelvalue = TUNING.LARGE_FUEL
 		end
-	
-		inst:AddComponent("inventoryitem")
-		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-		inst.components.inventoryitem.imagename = data.inventoryimage
 		
 		if data.perishable ~= nil then
 			inst:AddComponent("perishable")

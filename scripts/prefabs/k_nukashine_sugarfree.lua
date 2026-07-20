@@ -1,16 +1,16 @@
 local assets =
 {
-    Asset("ANIM", "anim/kyno_foodrecipes_keg.zip"),
-	
+	Asset("ANIM", "anim/kyno_foodrecipes_keg.zip"),
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
-	
+
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
 
-local prefabs = 
+local prefabs =
 {
 	"kyno_nukashinesugarfreebuff",
 }
@@ -58,72 +58,70 @@ local function OnDrink(inst, eater)
 		inst.SoundEmitter:PlaySound("hof_sounds/common/nukashine/drink")
 	end
 
-    if eater.components.playervision ~= nil and eater.components.combat ~= nil then
-        eater:AddDebuff("kyno_nukashinesugarfreebuff", "kyno_nukashinesugarfreebuff")
-    end
+	if eater.components.playervision ~= nil and eater.components.combat ~= nil then
+		eater:AddDebuff("kyno_nukashinesugarfreebuff", "kyno_nukashinesugarfreebuff")
+	end
 end
 
 local function fn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
-    inst.entity:AddNetwork()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "med", 0.65)
 
-    inst.AnimState:SetBank("kyno_foodrecipes")
-    inst.AnimState:SetBuild("kyno_foodrecipes_keg")
-    inst.AnimState:PlayAnimation("nukashine")
+	inst.AnimState:SetBank("kyno_foodrecipes")
+	inst.AnimState:SetBuild("kyno_foodrecipes_keg")
+	inst.AnimState:PlayAnimation("nukashine")
 
-    inst:AddTag("preparedfood")
+	inst:AddTag("preparedfood")
 	inst:AddTag("preparedbrew")
 	inst:AddTag("fooddrink")
 	inst:AddTag("alcoholic_drink")
 	inst:AddTag("nukashine")
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
-    inst:AddComponent("inspectable")
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("inventoryitem")
+
+	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "NUKASHINE"
-	
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 20
 
-    inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "nukashine_sugarfree"
-	
-    inst:AddComponent("stackable")
+	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
+
 	inst:AddComponent("edible")
-    inst.components.edible.healthvalue = 100
+	inst.components.edible.healthvalue = 100
 	inst.components.edible.hungervalue = 150
 	inst.components.edible.sanityvalue = -100
 	inst.components.edible.temperaturedelta = TUNING.COLD_FOOD_BONUS_TEMP
 	inst.components.edible.temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION
 	inst.components.edible.foodtype = FOODTYPE.GOODIES
 	inst.components.edible:SetOnEatenFn(OnDrink)
-	
+
 	inst.PlayBeatingSound = NightVision_PlayBeatingSound
 	inst.OnEntityWake = NightVision_OnEntityWake
 	inst.OnEntitySleep = NightVision_OnEntitySleep
-	
+
 	inst:ListenForEvent("exitlimbo", inst.OnEntityWake)
 	inst:ListenForEvent("enterlimbo", inst.OnEntitySleep)
-	
+
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
 	MakeHauntableLaunchAndPerish(inst)
 
-    return inst
+	return inst
 end
 
 return Prefab("nukashine_sugarfree", fn, assets, prefabs)

@@ -61,13 +61,10 @@ local function MakeCoin(data)
 		inst:AddComponent("bait")
 		inst:AddComponent("inspectable")
 		inst:AddComponent("tradable")
+		inst:AddComponent("inventoryitem")
 	
 		inst:AddComponent("stackable")
 		inst.components.stackable.maxsize = TUNING.STACK_SIZE_PELLET -- 120
-
-		inst:AddComponent("inventoryitem")
-		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-		inst.components.inventoryitem.imagename = data.inventoryimage
 
 		inst:ListenForEvent("oncointossed", OnCoinTossed)
 		inst:ListenForEvent("ondropped", OnDropped)

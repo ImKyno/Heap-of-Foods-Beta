@@ -56,6 +56,10 @@ local function OnPutOnFurniture(inst)
 		end
 	end
 
+	if inst.components.inventoryitem ~= nil then
+		inst.components.inventoryitem:OnDropped(0, 1)
+	end
+
 	inst:AddTag("outofreach")
 end
 
@@ -105,8 +109,6 @@ local function closed_fn(bank, build, anim)
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
 
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = inst.closed_name
 	inst.components.inventoryitem:SetSinks(true)
 
 	inst:AddComponent("tradable")
@@ -156,16 +158,13 @@ local function opened_fn(bank, build, anim)
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	inst:AddComponent("edible")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_CANNEDFOOD_OPEN"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = inst.opened_name
 
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)

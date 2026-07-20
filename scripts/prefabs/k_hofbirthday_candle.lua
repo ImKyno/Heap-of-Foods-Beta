@@ -32,13 +32,10 @@ local function fn()
 	
 	inst:AddComponent("inspectable")
 	inst:AddComponent("selfstacker")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_hofbirthday_candle"
 
 	MakeSmallBurnable(inst, TUNING.SMALL_BURNTIME)
 	MakeSmallPropagator(inst)

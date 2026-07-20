@@ -31,13 +31,10 @@ local function fn()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_hofbirthday_cheer"
 	
 	inst:AddComponent("luckitem")
 	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_SUPERTINY)

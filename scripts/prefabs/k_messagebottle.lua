@@ -30,11 +30,8 @@ local function fn()
 	end
 
 	inst:AddComponent("inspectable")
-	inst:AddComponent("tradable")
-	
+	inst:AddComponent("tradable")	
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_messagebottle_empty"
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM

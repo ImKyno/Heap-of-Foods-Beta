@@ -38,13 +38,10 @@ local function MakeCakeSlice(data)
 		end
 		
 		inst:AddComponent("tradable")
+		inst:AddComponent("inventoryitem")
 	
 		inst:AddComponent("inspectable")
 		inst.components.inspectable.nameoverride = "KYNO_HOFBIRTHDAY_CAKE_SLICE"
-
-		inst:AddComponent("inventoryitem")
-		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-		inst.components.inventoryitem.imagename = data.imagename
 	
 		inst:AddComponent("stackable")
 		inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM

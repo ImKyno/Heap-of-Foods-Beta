@@ -36,6 +36,10 @@ local function OnPutOnFurniture(inst)
 		end
 	end
 
+	if inst.components.inventoryitem ~= nil then
+		inst.components.inventoryitem:OnDropped(0, 1)
+	end
+
 	inst:AddTag("outofreach")
 end
 
@@ -95,6 +99,7 @@ local function fn()
 	inst:RemoveTag("_named")
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 100
@@ -102,10 +107,6 @@ local function fn()
 	inst:AddComponent("named")
 	inst.components.named.possiblenames = STRINGS.KYNO_GOLDENAPPLE_NAMES
 	inst.components.named:PickNewName()
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_goldenapple"
 
 	inst:AddComponent("furnituredecor")
 	inst.components.furnituredecor.onputonfurniture = OnPutOnFurniture

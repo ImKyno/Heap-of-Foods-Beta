@@ -127,6 +127,7 @@ local function MakeHat(data)
 
 		inst:AddComponent("tradable")
 		inst:AddComponent("snowmandecor")
+		inst:AddComponent("inventoryitem")
 
 		inst:AddComponent("inspectable")
 		if data.nameoverride then
@@ -135,10 +136,6 @@ local function MakeHat(data)
 
 		inst:AddComponent("waterproofer")
 		inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_SMALL)
-
-		inst:AddComponent("inventoryitem")
-		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-		inst.components.inventoryitem.imagename = data.imagename
 
 		inst:AddComponent("equippable")
 		inst.components.equippable.equipslot = EQUIPSLOTS.HEAD

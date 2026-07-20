@@ -153,6 +153,7 @@ local function truffles()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	
 	inst:AddComponent("tradable")
@@ -172,10 +173,6 @@ local function truffles()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_truffles"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_truffles_cooked"
@@ -214,6 +211,7 @@ local function truffles_cooked()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	
 	inst:AddComponent("tradable")
@@ -233,10 +231,6 @@ local function truffles_cooked()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_truffles_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

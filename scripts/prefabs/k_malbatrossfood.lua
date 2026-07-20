@@ -112,16 +112,13 @@ local function fn()
 	end
 
 	inst:AddComponent("locomotor")
+	inst:AddComponent("inventoryitem")
 	
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "CHUM"
 
 	inst:AddComponent("oceanthrowable")
 	inst.components.oceanthrowable:SetOnAddProjectileFn(OnAddProjectile)
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_malbatrossfood"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM

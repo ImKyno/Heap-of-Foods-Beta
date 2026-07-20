@@ -15,45 +15,45 @@ local prefabs =
 }
 
 local function plant(inst, growtime)
-    local sapling = SpawnPrefab("kyno_bananatree_sapling")
-    sapling:StartGrowing()
-    sapling.Transform:SetPosition(inst.Transform:GetWorldPosition())
-    sapling.SoundEmitter:PlaySound("dontstarve/wilson/plant_tree")
-    inst:Remove()
+	local sapling = SpawnPrefab("kyno_bananatree_sapling")
+	sapling:StartGrowing()
+	sapling.Transform:SetPosition(inst.Transform:GetWorldPosition())
+	sapling.SoundEmitter:PlaySound("dontstarve/wilson/plant_tree")
+	inst:Remove()
 end
 
 local LEIF_TAGS = { "leif" }
 local function ondeploy(inst, pt, deployer)
-    inst = inst.components.stackable:Get()
-    inst.Physics:Teleport(pt:Get())
-    local timeToGrow = GetRandomWithVariance(TUNING.PINECONE_GROWTIME.base, TUNING.PINECONE_GROWTIME.random)
+	inst = inst.components.stackable:Get()
+	inst.Physics:Teleport(pt:Get())
+	local timeToGrow = GetRandomWithVariance(TUNING.PINECONE_GROWTIME.base, TUNING.PINECONE_GROWTIME.random)
 	plant(inst, timeToGrow)
 
-    local ents = TheSim:FindEntities(pt.x, pt.y, pt.z, TUNING.LEIF_PINECONE_CHILL_RADIUS, LEIF_TAGS)
+	local ents = TheSim:FindEntities(pt.x, pt.y, pt.z, TUNING.LEIF_PINECONE_CHILL_RADIUS, LEIF_TAGS)
 
-    local played_sound = false
-    for i, v in ipairs(ents) do
-        local chill_chance =
-            v:GetDistanceSqToPoint(pt:Get()) < TUNING.LEIF_PINECONE_CHILL_CLOSE_RADIUS * TUNING.LEIF_PINECONE_CHILL_CLOSE_RADIUS and
-            TUNING.LEIF_PINECONE_CHILL_CHANCE_CLOSE or
-            TUNING.LEIF_PINECONE_CHILL_CHANCE_FAR
+	local played_sound = false
+	for i, v in ipairs(ents) do
+		local chill_chance =
+			v:GetDistanceSqToPoint(pt:Get()) < TUNING.LEIF_PINECONE_CHILL_CLOSE_RADIUS * TUNING.LEIF_PINECONE_CHILL_CLOSE_RADIUS and
+			TUNING.LEIF_PINECONE_CHILL_CHANCE_CLOSE or
+			TUNING.LEIF_PINECONE_CHILL_CHANCE_FAR
 
-        if math.random() < chill_chance then
-            if v.components.sleeper ~= nil then
-                v.components.sleeper:GoToSleep(1000)
-                AwardPlayerAchievement( "pacify_forest", deployer )
-            end
-        elseif not played_sound then
-            v.SoundEmitter:PlaySound("dontstarve/creatures/leif/taunt_VO")
-            played_sound = true
-        end
-    end
+		if math.random() < chill_chance then
+			if v.components.sleeper ~= nil then
+				v.components.sleeper:GoToSleep(1000)
+				AwardPlayerAchievement( "pacify_forest", deployer )
+			end
+		elseif not played_sound then
+			v.SoundEmitter:PlaySound("dontstarve/creatures/leif/taunt_VO")
+			played_sound = true
+		end
+	end
 end
 
 local function OnLoad(inst, data)
-    if data ~= nil and data.growtime ~= nil then
-        plant(inst, data.growtime)
-    end
+	if data ~= nil and data.growtime ~= nil then
+		plant(inst, data.growtime)
+	end
 end
 
 local bananas = {}
@@ -89,8 +89,9 @@ local function banana()
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
+	inst:AddComponent("inventoryitem")
 
-   	inst:AddComponent("edible")
+	   inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_BANANA_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_BANANA_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_BANANA_SANITY
@@ -103,10 +104,6 @@ local function banana()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_banana"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_banana_cooked"
@@ -151,6 +148,7 @@ local function banana_cooked()
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_BANANA_COOKED_HEALTH
@@ -165,10 +163,6 @@ local function banana_cooked()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_banana_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

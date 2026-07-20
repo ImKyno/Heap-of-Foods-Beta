@@ -1,5 +1,5 @@
 local function ChooseTranslationTable(tbl)
-    return tbl[locale] or tbl[1]
+	return tbl[locale] or tbl[1]
 end
 
 local STRINGS =
@@ -13,6 +13,7 @@ local STRINGS =
 		pl  = "Stos jedzenia (Heap of Foods)",
 		es  = "Montón de Alimentos (Heap of Foods)",
 		vi  = "Vua Đầu Bếp (Heap of Foods)",
+		kr  = "풍족한 요리 (Heap of Foods)",
 	},
 
 	NAME_BETA =
@@ -24,6 +25,7 @@ local STRINGS =
 		pl  = "Stos jedzenia - Gałąź Beta (Heap of Foods - Beta Branch)",
 		es  = "Montón de Alimentos - Rama Beta (Heap of Foods - Beta Branch)",
 		vi  = "Vua Đầu Bếp - Nhánh Beta (Heap of Foods - Beta Branch)",
+		kr  = "풍족한 요리 - 베타(Heap of Foods - Beta Branch)",
 	},
 
 	DESCRIPTION =
@@ -39,7 +41,7 @@ The Deciduous Forest is now home for a new face! Meet Partitio, the Pig Merchant
 
 Partitio is looking forward to meet new costumers, even if they are monsters and will tolerate them. But after some unfortunate past events, he now refuses to do any business with the Mermfolk!
 
-󰀌 Mod Version: 6.2-B
+󰀌 Mod Version: 6.3-B
 󰀧 Update: Branches & Business (Part I)
 ]],
 		zh  =
@@ -54,7 +56,7 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 
 帕提提欧 期待结识新的顾客，即使他们是怪物，他也会包容他们。但在一些不幸的过往事件之后，他现在拒绝与鱼人族（Mermfolk）进行任何交易！
 
-󰀌 Mod 版本： 6.2-B
+󰀌 Mod 版本： 6.3-B
 󰀧 更新内容：分支机构及业务 (第一部分)
 ]],
 		zht =
@@ -69,7 +71,7 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 
 帕提提欧 期待結識新的顧客，即使他們是怪物，他也會包容他們。但在一些不幸的過往事件之後，他現在拒絕與魚人族（Mermfolk）進行任何交易！
 
-󰀌 Mod 版本： 6.2-B
+󰀌 Mod 版本： 6.3-B
 󰀧 更新內容： 分公司及業務 (第一部分)
 ]],
 		pt  =
@@ -84,7 +86,7 @@ A Floresta Decídua agora abriga um novo rosto! Conheça Partitio, o Comerciante
 
 Partitio está ansioso para conhecer novos clientes, mesmo que sejam monstros, e irá tolerá-los. Mas, após alguns eventos infelizes do passado, ele agora se recusa a fazer qualquer negócio com Povo-peixe!
 
-󰀌 Versão do Mod: 6.2-B
+󰀌 Versão do Mod: 6.3-B
 󰀧 Atualização: Galhos e Negócios (Parte I)
 ]],
 		pl  =
@@ -99,7 +101,7 @@ Las liściasty ma teraz nową twarz! Poznaj Partitio, Świńskiego Handlarza. Ja
 
 Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli są potworami i będzie ich tolerował. Jednak po kilku niefortunnych wydarzeniach z przeszłości, obecnie odmawia prowadzenia interesów z Mermfolk!
 
-󰀌 Wersja Moda: 6.2-B
+󰀌 Wersja Moda: 6.3-B
 󰀧 Aktualizacja: Oddziały i biznes (Część I)
 ]],
 		es  =
@@ -114,7 +116,7 @@ Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli 
 
 Partitio espera conocer nuevos clientes, incluso si son monstruos, y los tolerará. Pero tras algunos desafortunados eventos del pasado, ahora se niega a hacer negocios con los Mermfolk.
 
-󰀌 Versión del Mod: 6.2-B
+󰀌 Versión del Mod: 6.3-B
 󰀧 Actualización: Ramas y Negocios (Parte I)
 ]],
 		vi  =
@@ -129,8 +131,22 @@ Rừng rụng lá giờ đây có một gương mặt mới! Hãy gặp Partitio
 
 Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ là quái vật và sẽ chấp nhận họ. Nhưng sau một số sự kiện không may trong quá khứ, anh ta hiện từ chối kinh doanh với Mermfolk!
 
-󰀌 Phiên bản Mod: 6.2-B
+󰀌 Phiên bản Mod: 6.3-B
 󰀧 Cập nhật: Cành Nhánh & Kinh Doanh (Phần I)
+]],
+		kr =
+[[
+󰀄 새로운 재료들과 함께 200가지가 넘는 신개념 요리 레시피가 추가됩니다. 즐거운 요리 되세요!
+
+󰀠 바다 어딘가에 생성되는 완전히 새로운 바이옴도 만나볼 수 있습니다!
+󰀦 모든 레시피 요리법 알아보기: https://heap-of-foods.com
+
+󰀏 Branches & Business 업데이트 포함:
+활엽수림에 새로운 상인이 등장했습니다! 돼지 상인 파르티티오를 만나보세요. 자부심 넘치는 돼지인 그는 오직 고품질의 물품만을 판매합니다.
+
+파르티티오는 새로운 고객들을 맞이하길 기대하고 있으며, 괴물일지라도 거래를 허용합니다. 다만 과거의 불미스러운 사건들로 인해, 현재 어인족과의 거래는 일절 거부하고 있습니다!
+󰀌 Mod Version: 6.3-B
+󰀧 Update: Branches & Business (Part I)
 ]],
 	},
 
@@ -145,6 +161,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 			pl  = "Wyłączony",
 			es  = "Desactivada",
 			vi  = "Tắt",
+			kr  = "비활성화",
 		},
 
 		ENABLED =
@@ -156,6 +173,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 			pl  = "Włączony",
 			es  = "Activada",
 			vi  = "Bật",
+			kr  = "활성화",
 		},
 
 		GENERAL =
@@ -169,6 +187,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Opcje ogólne",
 				es  = "Opciones generales",
 				vi  = "Tùy Chọn Cơ Bản",
+				kr  = "일반 설정",
 			},
 
 			HOVER =
@@ -180,6 +199,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Ogólne opcje dla całego moda.",
 				es  = "Opciones generales para todo el mod.",
 				vi  = "Các tùy chọn cơ bản cho toàn bộ mod.",
+				kr  = "모드 전체에 적용되는 일반 설정입니다.",
 			},
 		},
 
@@ -194,6 +214,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Różne opcje",
 				es  = "Opciones varias",
 				vi  = "Tùy Chọn Khác",
+				kr  = "기타 설정",
 			},
 
 			HOVER =
@@ -205,6 +226,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Różne opcje dla moda.",
 				es  = "Opciones varias para el mod.",
 				vi  = "Các tùy chọn linh tinh cho mod.",
+				kr  = "이 모드의 기타 설정입니다.",
 			},
 		},
 
@@ -219,6 +241,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Opcje Eksperymentalne",
 				es  = "Opciones Experimentales",
 				vi  = "Tùy Chọn Thử Nghiệm",
+				kr  = "실험적 설정",
 			},
 
 			HOVER =
@@ -230,6 +253,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Eksperymentalne opcje moda. W fazie testów!",
 				es  = "Opciones experimentales del mod. ¡En fase de prueba!",
 				vi  = "Các tùy chọn thử nghiệm cho Mod. Vẫn đang trong quá trình phát triển và kiểm tra!",
+				kr  = "모드 실험적 설정. 테스트 중!",
 			},
 		},
 
@@ -244,6 +268,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Opcje modernizacji",
 				es  = "Opciones de Retrofit",
 				vi  = "Tùy Chọn Cải Tạo",
+				kr  = "기존 맵 적용 설정",
 			},
 
 			HOVER =
@@ -255,6 +280,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Opcje modernizacji starych światów.",
 				es  = "Opciones de retrofitting para mundos antiguos.",
 				vi  = "Các tùy chọn cải tạo dành cho thế giới cũ.",
+				kr  = "오래된 세계에 모드 콘텐츠를 추가하는 설정입니다.",
 			},
 		},
 
@@ -269,6 +295,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Język",
 				es  = "Idioma",
 				vi  = "Ngôn Ngữ",
+				kr  = "언어",
 			},
 
 			HOVER =
@@ -280,6 +307,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Wybierz język moda.\nMożesz przesłać swoje tłumaczenie na naszym Discordzie.",
 				es  = "Elige el idioma para el mod.\nPuedes enviar tu traducción en nuestro Discord.",
 				vi  = "Chọn ngôn ngữ cho mod.\nBạn có thể đóng góp bản dịch tại Discord của chúng tôi.",
+				kr  = "모드에 적용할 언어를 선택하세요.\n작성하신 번역은 저희 디스코드(Discord)를 통해 제출하실 수 있습니다.",
 			},
 
 			HOVER_OPTIONS =
@@ -291,6 +319,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Polski",
 				es  = "Español",
 				vi  = "Tiếng Việt",
+				kr  = "한국어",
 
 				DESCRIPTION =
 				{
@@ -301,6 +330,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Autor: Dr_Brzeszczot",
 					es  = "Autor: Desconocido",
 					vi  = "Người dịch: Saikuno",
+					kr  = "번역: 김헤모",
 				},
 			},
 		},
@@ -316,6 +346,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Przepisy sezonowe",
 				es  = "Recetas de temporada",
 				vi  = "Công Thức Theo Mùa",
+				kr  = "시즌 레시피",
 			},
 
 			HOVER =
@@ -327,6 +358,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy sezonowe przepisy mogą być gotowane tylko podczas specjalnych wydarzeń?",
 				es  = "¿Las recetas de temporada solo pueden cocinarse durante eventos especiales?",
 				vi  = "Công thức theo mùa có nên chỉ nấu được trong các Sự Kiện Đặc Biệt?",
+				kr  = "시즌 레시피를 특별 이벤트 기간에만 허용할까요?",
 			},
 
 			HOVER_OPTIONS =
@@ -340,6 +372,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Sezonowe przepisy można gotować bez żadnych ograniczeń.",
 					es  = "Las recetas de temporada se pueden cocinar sin restricciones.",
 					vi  = "Có thể nấu các món ăn theo mùa mà không có bất kỳ giới hạn nào.",
+					kr  = "언제나 시즌 레시피를 요리할 수 있습니다.",
 				},
 
 				ENABLED =
@@ -351,6 +384,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Sezonowe przepisy można gotować tylko wtedy, gdy aktywne są specjalne wydarzenia.",
 					es  = "Las recetas de temporada solo se pueden cocinar cuando los eventos especiales están activos.",
 					vi  = "Chỉ có thể nấu các món ăn theo mùa khi các Sự Kiện Đặc Biệt đang diễn ra.",
+					kr  = "특별 이벤트 기간에만 시즌 레시피를 요리할 수 있습니다.",
 				},
 			},
 		},
@@ -366,6 +400,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Przepisy z długiego wieprza",
 				es  = "Recetas de Cerdo Largo",
 				vi  = "Công Thức Thịt Người",
+				kr  = "인육 레시피",
 			},
 
 			HOVER =
@@ -377,6 +412,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy gracze powinni upuszczać długiego wieprza po śmierci?\nUwaga: Jeśli ta opcja jest wyłączona, niektóre przepisy staną się niemożliwe do ugotowania.",
 				es  = "¿Deberían los jugadores soltar cerdo largo al morir?\nNota: Si se desactiva, algunas recetas no podrán cocinarse.",
 				vi  = "Người chơi có rơi ra Thịt Người khi tử trận không?\nLưu ý: Nếu tắt, một số Công Thức sẽ không thể nấu được.",
+				kr  = "사망한 플레이어가 인육을 드롭하도록 설정합니다.\n주의: 이 옵션을 끄면 일부 요리법을 사용할 수 없습니다.",
 			},
 
 			HOVER_OPTIONS =
@@ -390,6 +426,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Gracze nie upuszczą długiego wieprza po śmierci.",
 					es  = "Los jugadores no soltarán cerdo largo al morir.",
 					vi  = "Người chơi sẽ không rơi ra Thịt Người khi tử trận.",
+					kr  = "플레이어가 사망해도 인육이 생성되지 않습니다.",
 				},
 
 				ENABLED =
@@ -401,6 +438,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Gracze mogą mieć szansę upuścić długiego wieprza po śmierci.",
 					es  = "Los jugadores pueden tener la posibilidad de soltar cerdo largo al morir.",
 					vi  = "Người chơi sẽ có tỷ lệ rơi ra Thịt Người khi tử trận.",
+					kr  = "플레이어가 사망하면 가끔 인육이 생성됩니다.",
 				},
 			},
 		},
@@ -416,6 +454,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Wskaźnik wypadania roślin kawy",
 				es  = "Tasa de caída de plantas de café",
 				vi  = "Tỷ Lệ Rơi Cây Cà Phê",
+				kr  = "커피나무 드롭 확률",
 			},
 
 			HOVER =
@@ -427,6 +466,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Ile roślin kawy powinna upuścić Smocza Mucha?",
 				es  = "¿Cuántas plantas de café debería soltar la Libélula?",
 				vi  = "Dragonfly sẽ rơi ra bao nhiêu Cây Cà Phê?",
+				kr  = "용파리가 얼마나 많은 커피나무를 드롭하나요?",
 			},
 
 			HOVER_OPTIONS =
@@ -440,6 +480,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Smocza Mucha nie upuści roślin kawy.",
 					es  = "La Libélula no soltará plantas de café.",
 					vi  = "Dragonfly sẽ không đánh rơi Cây Cà Phê.",
+					kr  = "용파리가 커피나무를 드롭하지 않습니다.",
 				},
 
 				AMOUNT4 =
@@ -451,6 +492,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Smocza Mucha upuści 4 roślin kawy.",
 					es  = "La Libélula soltará 4 plantas de café.",
 					vi  = "Dragonfly sẽ đánh rơi 4 Cây Cà Phê.",
+					kr  = "용파리가 커피나무를 4개 드롭합니다.",
 				},
 
 				AMOUNT8 =
@@ -462,6 +504,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Smocza Mucha upuści 8 roślin kawy.",
 					es  = "La Libélula soltará 8 plantas de café.",
 					vi  = "Dragonfly sẽ đánh rơi 8 Cây Cà Phê.",
+					kr  = "용파리가 커피나무를 8개 드롭합니다.",
 				},
 
 				AMOUNT12 =
@@ -473,6 +516,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Smocza Mucha upuści 12 roślin kawy.",
 					es  = "La Libélula soltará 12 plantas de café.",
 					vi  = "Dragonfly sẽ đánh rơi 12 Cây Cà Phê.",
+					kr  = "용파리가 커피나무를 12개 드롭합니다.",
 				},
 
 				AMOUNT16 =
@@ -484,6 +528,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Smocza Mucha upuści 16 roślin kawy.",
 					es  = "La Libélula soltará 16 plantas de café.",
 					vi  = "Dragonfly sẽ đánh rơi 16 Cây Cà Phê.",
+					kr  = "용파리가 커피나무를 16개 드롭합니다.",
 				},
 			},
 		},
@@ -499,6 +544,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Ograniczenie alkoholu",
 				es  = "Restricción alcohólica",
 				vi  = "Giới Hạn Đồ Uống Có Cồn",
+				kr  = "알코올 제한",
 			},
 
 			HOVER =
@@ -510,6 +556,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy niektórzy bohaterowie powinni być niezdolni do picia napojów alkoholowych?",
 				es  = "¿Deberían algunos personajes no poder beber bebidas alcohólicas?",
 				vi  = "Một số nhân vật có nên bị cấm uống các loại đồ uống có cồn không?",
+				kr  = "일부 캐릭터가 알코올성 음료를 마실 수 없도록 제한할까요?",
 			},
 
 			HOVER_OPTIONS =
@@ -523,6 +570,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Wszyscy bohaterowie mogą pić napoje alkoholowe.",
 					es  = "Todos los personajes pueden beber bebidas alcohólicas.",
 					vi  = "Tất cả nhân vật đều có thể uống các loại đồ uống có cồn.",
+					kr  = "모든 캐릭터가 알코올성 음료를 마실 수 있습니다.",
 				},
 
 				ENABLED =
@@ -534,6 +582,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Niektórzy bohaterowie, tacy jak Webber, Wendy itp. nie mogą pić napojów alkoholowych.",
 					es  = "Algunos personajes como Webber, Wendy, etc. no podrán beber bebidas alcohólicas.",
 					vi  = "Một số nhân vật như Webber, Wendy, v.v. sẽ không thể uống các loại đồ uống có cồn.",
+					kr  = "웨버, 웬디를 포함한 몇 캐릭터가 알코올성 음료를 마실 수 없습니다.",
 				},
 			},
 		},
@@ -549,6 +598,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Giganci z jedzenia",
 				es  = "Gigantes de la comida",
 				vi  = "Triệu Hồi Giants Từ Thức Ăn",
+				kr  = "거대 보스 소환 설정",
 			},
 
 			HOVER =
@@ -560,6 +610,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy giganci powinni się pojawiać, gdy gracze jedzą swoje specjalne potrawy?",
 				es  = "¿Deberían aparecer gigantes cuando los jugadores coman sus comidas especiales?",
 				vi  = "Người chơi có triệu hồi Giants khi ăn thức ăn đặc biệt không?",
+				kr  = "플레이어가 전용 음식을 먹었을 때 거대 보스를 소환하게 할까요?",
 			},
 
 			HOVER_OPTIONS =
@@ -573,6 +624,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Gracze nie przywołają gigantów po zjedzeniu swoich specjalnych potraw.",
 					es  = "Los jugadores no invocarán gigantes al comer sus comidas especiales.",
 					vi  = "Người chơi sẽ không triệu hồi Giants khi ăn thức ăn đặc biệt.",
+					kr  = "전용 음식을 먹어도 거대 보스가 소환되지 않습니다.",
 				},
 
 				ENABLED =
@@ -584,6 +636,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Gracze przywołają gigantów po zjedzeniu swoich specjalnych potraw.",
 					es  = "Los jugadores invocarán gigantes al comer sus comidas especiales.",
 					vi  = "Người chơi sẽ triệu hồi Giants khi ăn thức ăn đặc biệt.",
+					kr  = "전용 음식을 먹으면 거대 보스가 소환됩니다.",
 				},
 			},
 		},
@@ -599,6 +652,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Elastispacer do lodówek",
 				es  = "Elastiespaciador para refrigeradores",
 				vi  = "Bộ Mở Rộng Không Gian Cho Tủ Lạnh",
+				kr  = "공간신축기 냉장고 설정",
 			},
 
 			HOVER =
@@ -610,6 +664,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy Elastispacer powinien móc ulepszać lodówki i solne skrzynie?\nUwaga: Wyłączenie później może powodować błędy wizualne.",
 				es  = "¿Debería el Elastiespaciador poder mejorar las neveras y las cajas de sal?\nNota: Si se desactiva posteriormente, puede causar errores visuales.",
 				vi  = "Bộ Mở Rộng Không Gian có thể nâng cấp Tủ Lạnh và Hộp Muối không?\nLưu ý: Nếu sau này tắt đi, có thể gây ra lỗi hiển thị.",
+				kr  = "공간신축기로 냉장고와 소금항아리를 업그레이드할 수 있게 할까요?\n주의: 기능 적용 후 이 옵션을 다시 비활성화하면 그래픽 오류가 발생할 수 있습니다.",
 			},
 
 			HOVER_OPTIONS =
@@ -623,6 +678,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Elastispacer nie będzie ulepszał lodówek ani solnych skrzyń.",
 					es  = "El Elastiespaciador no mejorará las neveras ni las cajas de sal.",
 					vi  = "Bộ Mở Rộng Không Gian sẽ không thể nâng cấp Tủ Lạnh và Hộp Muối.",
+					kr  = "공간신축기는 냉장고와 소금항아리에 적용되지 않습니다.",
 				},
 
 				ENABLED =
@@ -634,6 +690,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Elastispacer ulepszy lodówki i solne skrzynie, umożliwiając nieskończone stosy przedmiotów.",
 					es  = "El Elastiespaciador mejorará las neveras y las cajas de sal, permitiendo pilas infinitas de objetos.",
 					vi  = "Bộ Mở Rộng Không Gian sẽ nâng cấp Tủ Lạnh và Hộp Muối, cho phép xếp chồng vật phẩm vô hạn.",
+					kr  = "공간신축기로 냉장고와 소금항아리를 업그레이드 할 수 있습니다.",
 				},
 			},
 		},
@@ -649,6 +706,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Efekt prędkości",
 				es  = "Efecto de velocidad",
 				vi  = "Hiệu Ứng Tăng Tốc Từ Thức Ăn",
+				kr  = "음식의 속도 효과",
 			},
 
 			HOVER =
@@ -660,6 +718,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy jedzenie powinno dawać efekt prędkości po spożyciu?\nTa opcja dotyczy tylko niektórych potraw.",
 				es  = "¿Deberían los alimentos otorgar el efecto de velocidad al consumirse?\nEsta opción solo se aplica a ciertos alimentos.",
 				vi  = "Món ăn có nên gia tăng tốc độ di chuyển khi ăn không?\nTùy chọn này chỉ áp dụng cho một số món ăn nhất định.",
+				kr  = "음식의 속도 효과를 유지할까요?\n이 설정은 일부 특정 음식에만 적용됩니다.",
 			},
 
 			HOVER_OPTIONS =
@@ -673,6 +732,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Jedzenie nie będzie dawało efektu prędkości po spożyciu.",
 					es  = "Los alimentos no otorgarán el efecto de velocidad al consumirse.",
 					vi  = "Món ăn sẽ không cho hiệu ứng Tăng Tốc khi ăn.",
+					kr  = "특정 요리를 먹어도 속도 효과가 적용되지 않습니다.",
 				},
 
 				ENABLED =
@@ -684,6 +744,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Jedzenie będzie dawało efekt prędkości po spożyciu.",
 					es  = "Los alimentos otorgarán el efecto de velocidad al consumirse.",
 					vi  = "Món ăn sẽ ban cho hiệu ứng Tăng Tốc khi ăn.",
+					kr  = "특정 요리를 먹으면 속도 효과가 적용됩니다.",
 				},
 			},
 		},
@@ -699,6 +760,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czas trwania efektu prędkości",
 				es  = "Duración del efecto de velocidad",
 				vi  = "Thời Gian Hiệu Ứng Tăng Tốc",
+				kr  = "속도 효과 지속시간",
 			},
 
 			HOVER =
@@ -710,6 +772,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Jak długo powinien trwać efekt prędkości z jedzenia?",
 				es  = "¿Cuánto debería durar el efecto de velocidad otorgado por los alimentos?",
 				vi  = "Hiệu ứng Tăng Tốc từ món ăn sẽ kéo dài bao lâu?",
+				kr  = "속도 효과를 얼마나 오래 지속할까요?",
 			},
 
 			HOVER_OPTIONS =
@@ -725,6 +788,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Bardzo krótki",
 						es  = "Muy corto",
 						vi  = "Cực Ngắn",
+						kr  = "매우 짧음",
 					},
 
 					HOVER =
@@ -736,6 +800,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Efekt prędkości będzie trwał 2 minuty.",
 						es  = "El efecto de velocidad durará 2 minutos.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 2 Phút.",
+						kr  = "속도 효과가 2분 지속됩니다.",
 					},
 				},
 
@@ -750,6 +815,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Krótki",
 						es  = "Corto",
 						vi  = "Ngắn",
+						kr  = "짧음",
 					},
 
 					HOVER =
@@ -761,6 +827,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Efekt prędkości będzie trwał przez pół dnia.",
 						es  = "El efecto de velocidad durará medio día.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong Nửa Ngày.",
+						kr  = "속도 효과가 4분 지속됩니다.",
 					},
 				},
 
@@ -775,6 +842,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Domyślny",
 						es  = "Predeterminado",
 						vi  = "Mặc Định",
+						kr  = "기본",
 					},
 
 					HOVER =
@@ -786,6 +854,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Efekt prędkości będzie trwał 1 dzień.",
 						es  = "El efecto de velocidad durará 1 día.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 1 Ngày.",
+						kr  = "속도 효과가 하루동안 지속됩니다.",
 					},
 				},
 
@@ -800,6 +869,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Średni",
 						es  = "Promedio",
 						vi  = "Trung Bình",
+						kr  = "약간 길어짐",
 					},
 
 					HOVER =
@@ -811,6 +881,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Efekt prędkości będzie trwał 1.5 dnia.",
 						es  = "El efecto de velocidad durará 1.5 días.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 1.5 Ngày.",
+						kr  = "속도 효과가 하루 반동안 지속됩니다.",
 					},
 				},
 
@@ -825,6 +896,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Długi",
 						es  = "Largo",
 						vi  = "Dài",
+						kr  = "길어짐",
 					},
 
 					HOVER =
@@ -836,6 +908,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Efekt prędkości będzie trwał 2 dni.",
 						es  = "El efecto de velocidad durará 2 días.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 2 Ngày.",
+						kr  = "속도 효과가 2일동안 지속됩니다.",
 					},
 				},
 
@@ -850,6 +923,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Bardzo długi",
 						es  = "Muy largo",
 						vi  = "Cực Dài",
+						kr  = "매우 길어짐", 
 					},
 
 					HOVER =
@@ -861,6 +935,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Efekt prędkości będzie trwał 4 dni.",
 						es  = "El efecto de velocidad durará 4 días.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 4 Ngày.",
+						kr  = "속도 효과가 4일동안 지속됩니다.", 
 					},
 				},
 			},
@@ -877,6 +952,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Księga modyfikacji",
 				es  = "Scrapbook del Mod",
 				vi  = "Sổ Tay Mod",
+				kr  = "모드 스크랩북",
 			},
 
 			HOVER =
@@ -888,6 +964,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy zawartość moda powinna być dodana do księgi?",
 				es  = "¿Deberían añadirse los contenidos del mod al Scrapbook?",
 				vi  = "Có nên thêm nội dung của Mod vào Sổ Tay không?",
+				kr  = "모드 컨텐츠를 스크랩북에 추가할까요?",
 			},
 
 			HOVER_OPTIONS =
@@ -901,6 +978,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Domyślna księga.",
 					es  = "Scrapbook predeterminado.",
 					vi  = "Sổ Tay mặc định.",
+					kr  = "원본 스크랩북을 유지합니다.",
 				},
 
 				ENABLED =
@@ -912,6 +990,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Zawartość moda zostanie dodana do księgi.",
 					es  = "Los contenidos del mod se añadirán al Scrapbook.",
 					vi  = "Nội dung của Mod sẽ được thêm vào Sổ Tay.",
+					kr  = "모드 컨텐츠를 스크랩북에 추가합니다.",
 				},
 			},
 		},
@@ -927,6 +1006,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Strona Kuchnia Specjalności Warly'ego",
 				es  = "Página de Especialidades del Chef",
 				vi  = "Trang Món Đặc Biệt Của Đầu Bếp",
+				kr  = "셰프의 스페셜 요리책 페이지",
 			},
 
 			HOVER =
@@ -938,6 +1018,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy przepisy Warly'ego powinny pojawiać się na stronie \"Specjalności Szefa\" zamiast w \"Przepisach Moda\" w książce kucharskiej?",
 				es  = "¿Deberían las recetas de Warly aparecer en la página \"Especialidades del Chef\" en lugar de en \"Recetas del Mod\" en el libro de cocina?",
 				vi  = "Công thức của Warly có nên xuất hiện ở trang \"Món Đặc Biệt\" thay vì \"Công Thức Mod\" trong Sách Nấu Ăn không?",
+				kr  = "요리책에서 왈리의 레시피를 \"모드 레시피\" 대신 \"셰프의 스페셜 요리\" 탭에 표시할까요?",
 			},
 
 			HOVER_OPTIONS =
@@ -951,6 +1032,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Przepisy Warly'ego pojawią się na stronie \"Przepisy Moda\" w książce kucharskiej.",
 					es  = "Las recetas de Warly aparecerán en la página \"Recetas del Mod\" del libro de cocina.",
 					vi  = "Công thức của Warly không xuất hiện ở trang \"Công Thức Mod\" trong Sách Nấu Ăn.",
+					kr  = "왈리의 레시피를 \"모드 레시피\" 에 표시합니다.",
 				},
 
 				ENABLED =
@@ -962,6 +1044,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Przepisy Warly'ego pojawią się na stronie \"Specjalności Szefa\" w książce kucharskiej.",
 					es  = "Las recetas de Warly aparecerán en la página \"Especialidades del Chef\" del libro de cocina.",
 					vi  = "Công thức của Warly có xuất hiện ở trang \"Món Đặc Biệt\" trong Sách Nấu Ăn.",
+					kr  = "왈리의 레시피를 \"셰프의 스페셜 요리\"에 표시합니다.",
 				},
 			},
 		},
@@ -977,6 +1060,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Zonunkhira Zowonjezera za Chef",
 				es  = "Especias Complementarias del Chef",
 				vi  = "Gia Vị Đặc Biệt Của Đầu Bếp",
+				kr  = "셰프의 완벽한 향신료",
 			},
 
 			HOVER =
@@ -988,6 +1072,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy Warly powinien mieć możliwość tworzenia i używania nowych przypraw z modów?\nNie zaleca się wyłączania tej opcji później.",
 				es  = "¿Debería Warly poder fabricar y usar una variedad de nuevas Especias de Mods?\nNo se recomienda desactivarlo posteriormente.",
 				vi  = "Warly có thể chế biến và sử dụng thêm các loại Gia Vị mới từ Mod không?\nKhông khuyến khích tắt tính năng này sau khi đã bật.",
+				kr  = "왈리가 새로운 모드 향신료를 만들고 사용하게 할까요?\n활성화 후 다시 비활성화 하는 것은 추천하지 않습니다.",
 			},
 
 			HOVER_OPTIONS =
@@ -1001,6 +1086,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Warly będzie mógł tworzyć i używać wyłącznie domyślnych przypraw.",
 					es  = "Warly solo podrá fabricar y usar Especias Vanilla.",
 					vi  = "Warly sẽ chỉ có thể chế biến và sử dụng Gia Vị mặc định.",
+					kr  = "왈리가 기존의 향신료만 만들고 사용하게 합니다.",
 				},
 
 				ENABLED =
@@ -1012,6 +1098,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Warly będzie mógł tworzyć i używać zarówno domyślnych, jak i modowanych przypraw.",
 					es  = "Warly podrá fabricar y usar Especias Vanilla y del Mod.",
 					vi  = "Warly có thể chế biến và sử dụng cả Gia Vị mặc định lẫn Gia Vị từ Mod.",
+					kr  = "왈리가 기존의 향신료와 모드 향신료를 사용하게 합니다.",
 				},
 			},
 		},
@@ -1027,6 +1114,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Przepisy przenośnego młyna Warly'ego",
 				es  = "Recetas del Molino Portátil",
 				vi  = "Công Thức Máy Nghiền Di Động",
+				kr  = "휴대용 제분기 레시피",
 			},
 
 			HOVER =
@@ -1038,6 +1126,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy przenośny młyn Warly'ego powinien mieć przepisy z Kamienia Mielenia?",
 				es  = "¿Debería el Molino Portátil de Warly tener las recetas de la Piedra de Molienda?",
 				vi  = "Máy Nghiền Di Động của Warly có nên sở hữu các công thức của Cối Nghiền không?",
+				kr  = "왈리의 휴대용 제분기에서 갈림돌 레시피를 사용할 수 있게 할까요?",
 			},
 
 			HOVER_OPTIONS =
@@ -1051,6 +1140,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Przenośny młyn Warly'ego nie będzie miał przepisów z Kamienia Mielenia.",
 					es  = "El Molino Portátil de Warly no tendrá las recetas de la Piedra de Molienda.",
 					vi  = "Máy Nghiền Di Động của Warly không có các công thức của Cối Nghiền.",
+					kr  = "왈리의 휴대용 제분기에서 갈림돌 레시피를 사용할 수 없습니다.",
 				},
 
 				ENABLED =
@@ -1062,6 +1152,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Przenośny młyn Warly'ego będzie miał przepisy z Kamienia Mielenia.",
 					es  = "El Molino Portátil de Warly tendrá las recetas de la Piedra de Molienda.",
 					vi  = "Máy Nghiền Di Động của Warly có toàn bộ công thức của Cối Nghiền.",
+					kr  = "왈리의 휴대용 제분기에서 갈림돌 레시피를 사용할 수 있습니다.",
 				},
 			},
 		},
@@ -1077,6 +1168,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Zatrzymaj psucie się jedzenia",
 				es  = "Detener la descomposición de alimentos",
 				vi  = "Ngăn Chặn Thực Phẩm Hỏng",
+				kr  = "요리 신선도 유지",
 			},
 
 			HOVER =
@@ -1088,6 +1180,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy jedzenie powinno się psuć, jeśli jest w garnku Crock Pot?",
 				es  = "¿Debería la comida echarse a perder si está dentro de la Olla?",
 				vi  = "Món ăn có bị hỏng khi đang nằm trong Nồi Hầm không?",
+				kr  = "요리솥에 있는 요리를 상하지 않게 할까요?",
 			},
 
 			HOVER_OPTIONS =
@@ -1101,6 +1194,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Jedzenie będzie się psuć w garnku Crock Pot, przenośnym Crock Pot itp.",
 					es  = "La comida se echará a perder dentro de la Olla, Olla portátil, etc.",
 					vi  = "Món ăn sẽ bị thiu hỏng khi nằm trong Nồi Hầm, Nồi Hầm Di Động, v.v.",
+					kr  = "요리솥에 있어도 요리가 상합니다. 휴대용 요리솥 포함.",
 				},
 
 				ENABLED =
@@ -1112,6 +1206,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Jedzenie nie będzie się psuć w garnku Crock Pot, przenośnym Crock Pot itp.",
 					es  = "La comida no se echará a perder dentro de la Olla, Olla portátil, etc.",
 					vi  = "Món ăn sẽ giữ được độ tươi ngon vĩnh viễn khi nằm trong Nồi Hầm, Nồi Hầm Di Động, v.v.",
+					kr  = "요리솥에 있으면 요리가 상하지 않습니다. 휴대용 요리솥 포함.",
 				},
 			},
 		},
@@ -1127,6 +1222,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Przepis na Wiadro Kupu",
 				es  = "Receta del Cubo de Caca",
 				vi  = "Công Thức Thùng Phân",
+				kr  = "거름통 레시피",
 			},
 
 			HOVER =
@@ -1138,6 +1234,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy Wiadro Kupu powinno używać Wiadra zamiast swojej domyślnej receptury?",
 				es  = "¿Debería el Cubo de Caca usar el Cubo en lugar de su receta predeterminada?",
 				vi  = "Thùng Phân có nên yêu cầu sử dụng Xô (Bucket) để chế tạo thay vì công thức mặc định không?",
+				kr  = "거름통을 만들 때 양동이를 사용할까요?",
 			},
 
 			HOVER_OPTIONS =
@@ -1151,6 +1248,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Wiadro Kupu nie będzie używać Wiadra. (Domyślna receptura).",
 					es  = "El Cubo de Caca no usará el Cubo. (Receta predeterminada).",
 					vi  = "Thùng Phân không cần Xô (Bucket) để chế tạo. (Công thức mặc định).",
+					kr  = "거름통을 만들 때 양동이를 사용하지 않습니다. (기존 레시피)",
 				},
 
 				ENABLED =
@@ -1162,6 +1260,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Wiadro Kupu będzie używać Wiadra jako składnika w przepisie.",
 					es  = "El Cubo de Caca usará el Cubo como ingrediente de su receta.",
 					vi  = "Thùng Phân có dùng Xô (Bucket) làm nguyên liệu chế tạo chính.",
+					kr  = "거름통을 만들 때 양동이를 사용합니다.",
 				},
 			},
 		},
@@ -1177,6 +1276,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Scrapbook Mod Extras",
 				es  = "Extras para Scrapbook del Mod",
 				vi  = "Thông Tin Bổ Sung Sổ Tay Mod",
+				kr  = "추가 모드 도감 정보",
 			},
 
 			HOVER =
@@ -1188,6 +1288,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy w albumie powinny być wyświetlane dodatkowe informacje dotyczące zawartości modyfikacji?\n\Wymagana jest włączona funkcja Mod Scrapbook.",
 				es  = "¿Debería mostrarse información adicional sobre el contenido del Mod en el Scrapbook?\n\Requiere que Scrapbook del Mod esté habilitado.",
 				vi  = "Có nên hiển thị thêm thông tin chi tiết về các vật phẩm của Mod trong Sổ Tay không?\n\Yêu cầu phải Bật tính năng Sổ Tay Mod trước.",
+				kr  = "도감에 모드 콘텐츠에 대한 추가 정보를 표시할까요?\n모드 도감(Mod Scrapbook) 설정이 활성화되어 있어야 합니다.",
 			},
 
 			HOVER_OPTIONS =
@@ -1201,6 +1302,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Oryginalny Mod Scrapbook bez dodatkowych informacji.",
 					es  = "Original Scrapbook del Mod sin información adicional.",
 					vi  = "Sổ Tay Mod nguyên bản, không có thông tin bổ sung.",
+					kr  = "원본 스크랩북의 정보만 표시합니다.",
 				},
 
 				ENABLED =
@@ -1212,6 +1314,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Mod Scrapbook z dodatkowymi informacjami.",
 					es  = "Scrapbook del Mod con información adicional.",
 					vi  = "Sổ Tay Mod kèm theo thông tin chi tiết bổ sung.",
+					kr  = "모드 스크랩북의 정보도 표시합니다.",
 				},
 			},
 		},
@@ -1227,6 +1330,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "CC Archipelagu Spokoju",
 				es  = "CC del Archipiélago de la Serenidad",
 				vi  = "Bộ Lọc Màu Quần Đảo Thanh Bình",
+				kr  = "세레니티 군도 CC",
 			},
 
 			HOVER =
@@ -1238,6 +1342,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Ta opcja jest eksperymentalna i w fazie testów.\nCzy Archipelag Spokoju powinien mieć specjalne Colour Cubes?",
 				es  = "Esta opción es experimental y está en pruebas.\n¿Debería el Archipiélago de la Serenidad tener Colour Cubes especiales?",
 				vi  = "Đây là tính năng thử nghiệm.\nQuần Đảo Thanh Bình có nên sở hữu Bộ lọc màu sắc riêng biệt không?",
+				kr  = "이 옵션은 현재 테스트 중인 실험적 기능입니다.\n세레니티 군도에 전용 화면 색감 필터를 적용할까요?",
 			},
 
 			HOVER_OPTIONS =
@@ -1251,6 +1356,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Domyślny Colour Cubes dla Archipelagu Spokoju.",
 					es  = "Colour Cubes predeterminados para el Archipiélago de la Serenidad.",
 					vi  = "Sử dụng Bộ lọc màu sắc mặc định cho Quần Đảo Thanh Bình.",
+					kr  = "세레니티 군도에 기존 색감 필터를 적용합니다.",
 				},
 
 				MARKER =
@@ -1264,6 +1370,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Tryb Marker",
 						es  = "Modo Marcador",
 						vi  = "Chế Độ Đánh Dấu",
+						kr  = "마커 모드",
 					},
 
 					HOVER =
@@ -1275,6 +1382,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Tryb Marker działa tylko w nowych lub poddanych retrofitowi światach.",
 						es  = "El Modo Marcador solo funciona en Mundos Nuevos o Retroadaptados.",
 						vi  = "Chế độ Đánh Dấu chỉ hoạt động với Thế Giới Mới hoặc Thế Giới Đã Cải Tạo.",
+						kr  = "마커 모드는 새로 만든 월드나 콘텐츠가 추가된 월드에서만 작동합니다.",
 					},
 				},
 
@@ -1289,6 +1397,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Tryb Statyczny",
 						es  = "Modo Estático",
 						vi  = "Chế Độ Tĩnh",
+						kr  = "스태틱 모드",
 					},
 
 					HOVER =
@@ -1300,6 +1409,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Tryb Statyczny powinien działać w obu scenariuszach. Wymaga ponownego uruchomienia serwera.",
 						es  = "El Modo Estático debería funcionar en ambos escenarios. Requiere reiniciar el servidor.",
 						vi  = "Chế độ Tĩnh hoạt động trong mọi trường hợp. Yêu cầu khởi động lại Server.",
+						kr  = "스태틱 모드는 신규 및 콘텐츠 추가 월드 모두에서 작동합니다.\n적용하려면 서버를 재시작해야 합니다.",
 					},
 				},
 			},
@@ -1316,6 +1426,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "CC Wyspy Nadmorskiej",
 				es  = "CC de la Isla Costera",
 				vi  = "Bộ Lọc Màu Đảo Ven Biển",
+				kr  = "해안 섬 CC",
 			},
 
 			HOVER =
@@ -1327,6 +1438,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Ta opcja jest eksperymentalna i w fazie testów.\nCzy Wyspa Nadmorska powinna mieć specjalny Colour Cubes?",
 				es  = "Esta opción es experimental y está en pruebas.\n¿Debería la Isla Costera tener Colour Cubes especiales?",
 				vi  = "Đây là tính năng thử nghiệm.\nĐảo Ven Biển có nên sở hữu Bộ lọc màu sắc riêng biệt không?",
+				kr  = "이 옵션은 현재 테스트 중인 실험적 기능입니다.\n해안 섬에 전용 화면 색감 필터를 적용할까요?",
 			},
 
 			HOVER_OPTIONS =
@@ -1340,6 +1452,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Domyślny Colour Cubes dla Wyspy Nadmorskiej.",
 					es  = "Colour Cubes predeterminados para la Isla Costera.",
 					vi  = "Sử dụng Bộ lọc màu sắc mặc định cho Đảo Ven Biển.",
+					kr  = "해안 섬에 기존 색감 필터를 적용합니다.",
 				},
 
 				MARKER =
@@ -1353,6 +1466,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Tryb Marker",
 						es  = "Modo Marcador",
 						vi  = "Chế Độ Đánh Dấu",
+						kr  = "마커 모드",
 					},
 
 					HOVER =
@@ -1364,6 +1478,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Tryb Marker działa tylko w nowych lub poddanych retrofitowi światach.",
 						es  = "El Modo Marcador solo funciona en Mundos Nuevos o Retroadaptados.",
 						vi  = "Chế độ Đánh Dấu chỉ hoạt động với Thế Giới Mới hoặc Thế Giới Đã Cải Tạo.",
+						kr  = "마커 모드는 새로 만든 월드나 콘텐츠가 추가된 월드에서만 작동합니다.",
 					},
 				},
 
@@ -1378,6 +1493,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Tryb Statyczny",
 						es  = "Modo Estático",
 						vi  = "Chế Độ Tĩnh",
+						kr  = "스태틱 모드",
 					},
 
 					HOVER =
@@ -1389,6 +1505,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 						pl  = "Tryb Statyczny powinien działać w obu scenariuszach. Wymaga ponownego uruchomienia serwera.",
 						es  = "El Modo Estático debería funcionar en ambos escenarios. Requiere reiniciar el servidor.",
 						vi  = "Chế độ Tĩnh hoạt động trong mọi trường hợp. Yêu cầu khởi động lại Server.",
+						kr  = "스태틱 모드는 신규 및 콘텐츠 추가 월드 모두에서 작동합니다.\n적용하려면 서버를 재시작해야 합니다.",
 					},
 				},
 			},
@@ -1405,6 +1522,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Transformacje Pełni Księżyca",
 				es  = "Transformaciones de la Luna Llena",
 				vi  = "Biến Đổi Trăng Tròn",
+				kr  = "보름달 변화",
 			},
 
 			HOVER =
@@ -1416,6 +1534,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy niektóre rzeczy powinny ulegać przemianie podczas nocy pełni księżyca?\nAktualnie dotyczy to: Grzybów.",
 				es  = "¿Deberían transformarse algunas cosas durante las noches de luna llena?\nActualmente afecta a: los hongos.",
 				vi  = "Một số vật thể có nên biến đổi vào Đêm Trăng Tròn không?\nHiện tại chỉ ảnh hưởng đến: Nấm.",
+				kr  = "보름달 밤 동안 일부 오브젝트의 변화 여부를 결정합니다.\n현재 적용 대상: 버섯",
 			},
 
 			HOVER_OPTIONS =
@@ -1429,6 +1548,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Niektóre rzeczy nie ulegną zmianie podczas nocy pełni księżyca.",
 					es  = "Algunas cosas no se transformarán durante las noches de luna llena.",
 					vi  = "Một số vật thể không biến đổi vào Đêm Trăng Tròn.",
+					kr  = "보름달 밤이 되어도 일부 오브젝트가 변화하지 않습니다.",
 				},
 
 				ENABLED =
@@ -1440,6 +1560,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Podczas nocy pełni księżyca pewne rzeczy ulegają zmianie.",
 					es  = "Algunas cosas se transformarán durante las noches de luna llena.",
 					vi  = "Một số vật thể có biến đổi vào Đêm Trăng Tròn.",
+					kr  = "보름달 밤이 되면 일부 오브젝트가 변화합니다.",
 				},
 			},
 		},
@@ -1455,6 +1576,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Automatyczna Modernizacja",
 				es  = "Retrofit Automático",
 				vi  = "Tự Động Cải Tạo",
+				kr  = "자동 컨텐츠 추가",
 			},
 
 			HOVER =
@@ -1466,6 +1588,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy serwer powinien sprawdzać za każdym razem, czy świat wymaga modernizacji podczas inicjalizacji? Ta opcja nie zostanie automatycznie wyłączona później.",
 				es  = "¿Debe el Servidor comprobar cada vez si el Mundo necesita algún Retrofit durante la inicialización? Esta opción no se desactivará automáticamente después.",
 				vi  = "Server có nên tự động kiểm tra xem thế giới có cần cải tạo mỗi khi khởi động không? Tùy chọn này sẽ không tự động tắt sau đó.",
+				kr  = "서버가 켜질 때 월드에 콘텐츠 추가가 필요한지 검사하도록 설정할까요?\n이 옵션은 검사가 끝난 후에도 자동으로 비활성화되지 않습니다.",
 			},
 
 			HOVER_OPTIONS =
@@ -1479,6 +1602,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Serwer nie będzie sprawdzał modernizacji podczas inicjalizacji.",
 					es  = "El Servidor no comprobará los Retrofits durante la inicialización.",
 					vi  = "Server không tự kiểm tra Cải Tạo khi khởi động.",
+					kr  = "서버가 켜질 때 월드에 콘텐츠 추가가 필요한지 검사하지 않습니다.",
 				},
 
 				ENABLED =
@@ -1490,6 +1614,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Serwer będzie sprawdzał modernizacje podczas inicjalizacji.",
 					es  = "El Servidor comprobará los Retrofits durante la inicialización.",
 					vi  = "Server có tự động kiểm tra Cải Tạo mỗi khi khởi động.",
+					kr  = "서버가 켜질 때 월드에 콘텐츠 추가가 필요한지 검사합니다.",
 				},
 			},
 		},
@@ -1505,6 +1630,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Handel Retrofitowany",
 				es  = "Intercambios Retrofitados",
 				vi  = "Cải Tạo Giao Dịch",
+				kr  = "거래 컨텐츠 추가",
 			},
 
 			HOVER =
@@ -1516,6 +1642,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				pl  = "Czy Król Świń powinien móc wymieniać przedmioty na przedmioty z moda?\nDotyczy to również Starszego Świni w światach Lights Out.",
 				es  = "¿Debería el Rey Cerdo poder intercambiar objetos por objetos del mod?\nEsto también se aplica al Anciano Cerdo en mundos Lights Out.",
 				vi  = "Vua Heo có thể trao đổi vật phẩm lấy vật phẩm từ Mod không?\nĐiều này cũng áp dụng cho Trưởng Lão Heo trong thế giới Lights Out.",
+				kr  = "돼지왕과 거래할 때 모드 전용 아이템을 보상으로 받을 수 있게 할까요?\n이 설정은 라이트 아웃 세계의 장로 돼지에게도 적용됩니다.",
 			},
 
 			HOVER_OPTIONS =
@@ -1529,6 +1656,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Niektóre przedmioty nie mogą być wymienione na przedmioty z moda.",
 					es  = "Ciertos objetos no se pueden intercambiar por objetos del mod.",
 					vi  = "Không thể trao đổi vật phẩm lấy vật phẩm từ Mod.",
+					kr  = "특정 품목은 모드 아이템 교환 거래 대상에서 제외됩니다.",
 				},
 
 				ENABLED =
@@ -1540,6 +1668,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					pl  = "Niektóre przedmioty można wymienić na przedmioty z moda.",
 					es  = "Ciertos objetos se pueden intercambiar por objetos del mod.",
 					vi  = "Có thể trao đổi vật phẩm lấy vật phẩm từ Mod.",
+					kr  = "일부 특정 품목에 한해 모드 아이템 교환 거래가 가능합니다.",
 				},
 			},
 		},
@@ -1547,7 +1676,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "6.2-B"
+version                      = "6.3-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 
@@ -1625,6 +1754,11 @@ local LANGUAGE_OPTIONS       =
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.vi,
 		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.vi,
 		data                 = "vi"
+	},
+	{
+		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.kr,
+		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.kr,
+		data                 = "kr"
 	}
 }
 

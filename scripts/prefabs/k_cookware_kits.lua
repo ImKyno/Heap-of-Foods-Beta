@@ -1,37 +1,37 @@
 local assets =
 {
 	Asset("ANIM", "anim/quagmire_crate.zip"),
-		
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
 local prefabs =
-{	
+{
 	"kyno_cookware_hanger_item",
 	"kyno_cookware_big_pot",
 	"kyno_cookware_small_pot",
 	"kyno_cookware_syrup_pot",
-	
+
 	"kyno_cookware_grill_item",
 	"kyno_cookware_small_grill_item",
 }
 
 local KIT_LOOT =
 {
-    [1] =
-    {
-        "kyno_cookware_hanger_item",
+	[1] =
+	{
 		"kyno_cookware_hanger_item",
-        "kyno_cookware_small_pot",
+		"kyno_cookware_hanger_item",
+		"kyno_cookware_small_pot",
 		"kyno_cookware_big_pot",
-    },
-    [2] =
-    {
-        "kyno_cookware_hanger_item",
-        "kyno_cookware_syrup_pot",
-    },
+	},
+	[2] =
+	{
+		"kyno_cookware_hanger_item",
+		"kyno_cookware_syrup_pot",
+	},
 	[3] =
 	{
 		"kyno_cookware_oven_item",
@@ -70,7 +70,7 @@ local function OnUnwrapped(inst, pos, doer)
 
 	inst.components.inventoryitem.canbepickedup = false
 	inst.components.unwrappable.canbeunwrapped = false
-	
+
 	inst.AnimState:PlayAnimation("unwrap")
 
 	if doer ~= nil and doer.SoundEmitter ~= nil then
@@ -94,7 +94,7 @@ local function cookingpotkitfn()
 	inst.AnimState:SetBank("quagmire_crate")
 	inst.AnimState:SetBuild("quagmire_crate")
 	inst.AnimState:PlayAnimation("idle")
-	
+
 	inst.AnimState:OverrideSymbol("swap_logo", "quagmire_crate", "logo_pot_hanger")
 
 	inst:AddTag("cookingpot_kit")
@@ -106,14 +106,12 @@ local function cookingpotkitfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
+	inst:AddComponent("inventoryitem")
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_COOKWARE_KIT"
-		
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_cookware_kit_hanger"
-	
+
 	inst:AddComponent("unwrappable")
 	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
 	inst.components.unwrappable.itemdata = GetItemData(1, KIT_LOOT)
@@ -135,7 +133,7 @@ local function syruppotkitfn()
 	inst.AnimState:SetBank("quagmire_crate")
 	inst.AnimState:SetBuild("quagmire_crate")
 	inst.AnimState:PlayAnimation("idle")
-	
+
 	inst.AnimState:OverrideSymbol("swap_logo", "quagmire_crate", "logo_pot_hanger")
 
 	inst:AddTag("syruppot_kit")
@@ -147,14 +145,12 @@ local function syruppotkitfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
+	inst:AddComponent("inventoryitem")
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_COOKWARE_KIT"
-		
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_cookware_kit_syrup"
-	
+
 	inst:AddComponent("unwrappable")
 	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
 	inst.components.unwrappable.itemdata = GetItemData(2, KIT_LOOT)
@@ -176,7 +172,7 @@ local function ovenkitfn()
 	inst.AnimState:SetBank("quagmire_crate")
 	inst.AnimState:SetBuild("quagmire_crate")
 	inst.AnimState:PlayAnimation("idle")
-	
+
 	inst.AnimState:OverrideSymbol("swap_logo", "quagmire_crate", "logo_oven")
 
 	inst:AddTag("oven_kit")
@@ -188,14 +184,12 @@ local function ovenkitfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
+	inst:AddComponent("inventoryitem")
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_COOKWARE_KIT"
-		
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_cookware_kit_oven"
-	
+
 	inst:AddComponent("unwrappable")
 	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
 	inst.components.unwrappable.itemdata = GetItemData(3, KIT_LOOT)
@@ -217,7 +211,7 @@ local function grillsmallkitfn()
 	inst.AnimState:SetBank("quagmire_crate")
 	inst.AnimState:SetBuild("quagmire_crate")
 	inst.AnimState:PlayAnimation("idle")
-	
+
 	inst.AnimState:OverrideSymbol("swap_logo", "quagmire_crate", "logo_grill_small")
 
 	inst:AddTag("small_grill_kit")
@@ -229,14 +223,12 @@ local function grillsmallkitfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
+	inst:AddComponent("inventoryitem")
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_COOKWARE_KIT"
-		
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_cookware_kit_small_grill"
-	
+
 	inst:AddComponent("unwrappable")
 	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
 	inst.components.unwrappable.itemdata = GetItemData(4, KIT_LOOT)
@@ -258,7 +250,7 @@ local function grillkitfn()
 	inst.AnimState:SetBank("quagmire_crate")
 	inst.AnimState:SetBuild("quagmire_crate")
 	inst.AnimState:PlayAnimation("idle")
-	
+
 	inst.AnimState:OverrideSymbol("swap_logo", "quagmire_crate", "logo_grill")
 
 	inst:AddTag("grill_kit")
@@ -270,14 +262,12 @@ local function grillkitfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
+	inst:AddComponent("inventoryitem")
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_COOKWARE_KIT"
-		
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_cookware_kit_grill"
-	
+
 	inst:AddComponent("unwrappable")
 	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)
 	inst.components.unwrappable.itemdata = GetItemData(5, KIT_LOOT)

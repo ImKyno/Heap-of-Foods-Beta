@@ -200,6 +200,7 @@ local function waterycress()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -216,10 +217,6 @@ local function waterycress()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_waterycress"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -251,6 +248,7 @@ local function waterycress_cooked()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -267,10 +265,6 @@ local function waterycress_cooked()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_waterycress_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -302,6 +296,7 @@ local function waterycress_root()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	
@@ -312,10 +307,6 @@ local function waterycress_root()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_waterycress_root"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

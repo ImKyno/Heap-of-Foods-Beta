@@ -252,6 +252,7 @@ local function swordfish_dead()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
@@ -264,10 +265,6 @@ local function swordfish_dead()
     inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
     inst.components.perishable.onperishreplacement = "kyno_spoiled_fish_large"
     inst.components.perishable:StartPerishing()
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_swordfish_dead"
 	
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_SWORDFISH_DEAD_HEALTH

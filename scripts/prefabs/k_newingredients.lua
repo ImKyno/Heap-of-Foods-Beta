@@ -79,10 +79,7 @@ local function wheatfn()
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	inst:AddComponent("inspectable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_wheat"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_wheat_cooked"
@@ -139,10 +136,7 @@ local function wheat_cookedfn()
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	inst:AddComponent("inspectable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_wheat_cooked"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -194,10 +188,7 @@ local function flourfn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_flour"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -236,10 +227,7 @@ local function sapfn()
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_sap"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -294,10 +282,7 @@ local function sap_ruinedfn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_sap_spoiled"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -350,10 +335,7 @@ local function sprigfn()
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_spotspice_leaf"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -405,10 +387,7 @@ local function spicefn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_spotspice"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -444,13 +423,10 @@ local function baconfn()
 	end
 
 	inst:AddComponent("bait")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "SMALLMEAT"
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_bacon"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_bacon_cooked"
@@ -502,13 +478,10 @@ local function bacon_cookedfn()
 	end
 
 	inst:AddComponent("bait")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "COOKEDSMALLMEAT"
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_bacon_cooked"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -559,13 +532,10 @@ local function mushfn()
 
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "RED_CAP"
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_white_cap"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_white_cap_cooked"
@@ -616,13 +586,10 @@ local function mush_cookedfn()
 
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "RED_CAP_COOKED"
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_white_cap_cooked"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -673,13 +640,10 @@ local function foliagefn()
 
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "FOLIAGE"
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_foliage"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -730,13 +694,10 @@ local function foliage_cookedfn()
 
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "FOLIAGE"
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_foliage_cooked"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -787,12 +748,9 @@ local function saltfn()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("tradable")
 	inst:AddComponent("salter")
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_salt"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -831,10 +789,7 @@ local function crabmeatfn()
 
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_crabmeat"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_crabmeat_cooked"
@@ -896,10 +851,7 @@ local function crabmeat_cookedfn()
 
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_crabmeat_cooked"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -954,10 +906,7 @@ local function crabkingmeatfn()
 
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_crabkingmeat"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
@@ -1021,10 +970,7 @@ local function crabkingmeat_cookedfn()
 
 	inst:AddComponent("bait")
 	inst:AddComponent("inspectable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_crabkingmeat_cooked"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -1077,10 +1023,7 @@ local function oilfn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_oil"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -1124,10 +1067,7 @@ local function sugarfn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_sugar"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -1161,10 +1101,7 @@ local function leaffn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_tealeaf"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM

@@ -42,6 +42,10 @@ local function OnPutOnFurniture(inst)
 		end
 	end
 
+	if inst.components.inventoryitem ~= nil then
+		inst.components.inventoryitem:OnDropped(0, 1)
+	end
+
 	inst:AddTag("outofreach")
 end
 
@@ -97,7 +101,6 @@ local function fn(bank, build, anim)
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
 
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem:SetSinks(true)
 
 	inst:AddComponent("perishable")

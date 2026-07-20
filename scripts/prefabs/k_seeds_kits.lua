@@ -168,11 +168,10 @@ local function kitfn()
 		return inst
 	end
 
+	inst:AddComponent("inventoryitem")
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "KYNO_SEEDS_KIT"
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 
 	inst:AddComponent("unwrappable")
 	inst.components.unwrappable:SetOnUnwrappedFn(OnUnwrapped)

@@ -154,13 +154,10 @@ local function budfn()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	inst:AddComponent("lootdropper")
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_sugartree_bud"
 
 	inst:AddComponent("fuel")
 	inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL
@@ -264,6 +261,7 @@ local function petalsfn()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	inst:AddComponent("lootdropper")
@@ -271,10 +269,6 @@ local function petalsfn()
 
 	inst:AddComponent("upgrader")
 	inst.components.upgrader.upgradetype = UPGRADETYPES.GRAVESTONE
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_sugartree_petals"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM

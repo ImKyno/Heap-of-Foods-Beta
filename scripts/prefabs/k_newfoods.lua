@@ -51,6 +51,10 @@ local function OnPutOnFurniture(inst)
 		end
 	end
 
+	if inst.components.inventoryitem ~= nil then
+		inst.components.inventoryitem:OnDropped(0, 1)
+	end
+
 	inst:AddTag("outofreach")
 end
 
@@ -235,9 +239,6 @@ local function MakePreparedFood(data)
 			inst.components.inventoryitem:ChangeImageName(spicename.."_over")
 		elseif data.basename ~= nil then
 			inst.components.inventoryitem:ChangeImageName(data.basename)
-		else
-			inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-			inst.components.inventoryitem.imagename = data.name
 		end
 		
 		if data.luckitem ~= nil then

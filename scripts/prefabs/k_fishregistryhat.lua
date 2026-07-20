@@ -113,6 +113,7 @@ local function fn()
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
 	inst:AddComponent("snowmandecor")
+	inst:AddComponent("inventoryitem")
 	
 	inst:AddComponent("useableitem")
 	inst.components.useableitem:SetOnUseFn(OnUseFishRegistry)
@@ -123,10 +124,6 @@ local function fn()
 	inst:AddComponent("insulator")
 	inst.components.insulator:SetSummer()
 	inst.components.insulator:SetInsulation(TUNING.INSULATION_SMALL)
-	
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_fishregistryhat"
 	
 	inst:AddComponent("equippable")
 	inst.components.equippable.equipslot = EQUIPSLOTS.HEAD

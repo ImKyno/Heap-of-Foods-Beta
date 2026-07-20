@@ -83,8 +83,6 @@ local function MakePlantBooster(data)
 
 		inst:AddComponent("inventoryitem")
 		inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
-		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-		inst.components.inventoryitem.imagename = data.inventoryimage
 
 		inst:AddComponent("explosive")
 		inst.components.explosive:SetOnExplodeFn(OnExplode)

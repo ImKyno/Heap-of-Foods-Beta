@@ -120,10 +120,7 @@ local function MakeTea(data)
 
 		inst:AddComponent("inspectable")
 		inst:AddComponent("tradable")
-		
 		inst:AddComponent("inventoryitem")
-		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-		inst.components.inventoryitem.imagename = "kyno_hermitcrabtea_"..data.name
 
 		inst:AddComponent("finiteuses")
 		inst.components.finiteuses:SetOnFinished(OnFinishTea)

@@ -44,6 +44,7 @@ local function fn(bank, build, anim)
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	inst:AddComponent("cookable")
@@ -62,9 +63,6 @@ local function fn(bank, build, anim)
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -139,6 +137,7 @@ local function fn_cooked(bank, build, anim)
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -151,9 +150,6 @@ local function fn_cooked(bank, build, anim)
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

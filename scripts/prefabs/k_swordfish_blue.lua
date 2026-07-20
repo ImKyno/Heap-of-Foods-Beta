@@ -154,8 +154,6 @@ local function fn()
 	inst.components.inventoryitem:SetSinks(true)
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPickup)
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_swordfish_blue"
 	
 	inst:AddComponent("luckitem")
 	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_HUGE)

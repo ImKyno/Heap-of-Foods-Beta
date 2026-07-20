@@ -201,6 +201,7 @@ local function taroroot()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -217,10 +218,6 @@ local function taroroot()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_taroroot"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_taroroot_cooked"
@@ -255,6 +252,7 @@ local function taroroot_cooked()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -271,10 +269,6 @@ local function taroroot_cooked()
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_taroroot_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -306,6 +300,7 @@ local function taroroot_root()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	
@@ -316,10 +311,6 @@ local function taroroot_root()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_taroroot_root"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

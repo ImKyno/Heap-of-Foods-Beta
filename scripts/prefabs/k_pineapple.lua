@@ -45,6 +45,7 @@ local function pineapple()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -59,10 +60,6 @@ local function pineapple()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_pineapple"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -96,6 +93,7 @@ local function pineapple_halved()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -112,10 +110,6 @@ local function pineapple_halved()
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_pineapple_halved"
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_pineapple_cooked"
@@ -151,6 +145,7 @@ local function pineapple_cooked()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -167,10 +162,6 @@ local function pineapple_cooked()
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_pineapple_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

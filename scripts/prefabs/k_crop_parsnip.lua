@@ -83,6 +83,7 @@ local function parznip_eaten()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -99,10 +100,6 @@ local function parznip_eaten()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_parznip_eaten"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_parznip_cooked"

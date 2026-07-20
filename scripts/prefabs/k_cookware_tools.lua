@@ -52,15 +52,13 @@ local function hangerfn()
 	end
 
 	inst:AddComponent("cookwareinstallable")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.nameoverride = "QUAGMIRE_POT_HANGER_ITEM"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 
 	return inst
 end
@@ -94,9 +92,7 @@ local function potsyrupfn()
 	inst:AddComponent("inspectable")
 	inst:AddComponent("furnituredecor")
 	inst:AddComponent("cookwareinstallable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 
 	return inst
 end
@@ -140,9 +136,7 @@ local function potfn(small)
 	inst:AddComponent("inspectable")
 	inst:AddComponent("furnituredecor")
 	inst:AddComponent("cookwareinstallable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 
 	return inst
 end
@@ -193,9 +187,7 @@ local function grillfn(small)
 
 	inst:AddComponent("cookwareinstallable")
 	inst:AddComponent("inspectable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 
 	return inst
 end
@@ -237,12 +229,10 @@ local function ovenfn()
 
 	inst:AddComponent("cookwareinstallable")
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 
 	return inst
 end
@@ -286,9 +276,7 @@ local function casserolefn(small)
 	inst:AddComponent("inspectable")
 	inst:AddComponent("furnituredecor")
 	inst:AddComponent("cookwareinstallable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 
 	return inst
 end

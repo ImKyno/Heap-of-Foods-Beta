@@ -317,8 +317,6 @@ local function land_wobster(bank_name, build_name, nameoverride, fish_def, fadeo
 	inst.components.inventoryitem.nobounce = true
 	inst.components.inventoryitem.canbepickedup = false
 	inst.components.inventoryitem.canbepickedupalive = true
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = fish_def.prefab.."_land"
 
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot(inst.fish_def.loot)
@@ -378,6 +376,7 @@ local function dead_wobster()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
@@ -393,10 +392,6 @@ local function dead_wobster()
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_fish"
-
-    inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "wobster_monkeyisland_dead"
 
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_WOBSTER_MONKEYISLAND_DEAD_HEALTH
@@ -434,6 +429,7 @@ local function cooked_wobster()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
@@ -446,10 +442,6 @@ local function cooked_wobster()
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_fish"
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "wobster_monkeyisland_dead_cooked"
 
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_WOBSTER_MONKEYISLAND_DEAD_HEALTH

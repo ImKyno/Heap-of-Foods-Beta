@@ -139,6 +139,7 @@ local function emptyfn()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("milker")
 	
 	inst:AddComponent("fuel")
@@ -148,10 +149,6 @@ local function emptyfn()
 	inst.components.finiteuses:SetMaxUses(TUNING.KYNO_BUCKET_EMPTY_USES)
 	inst.components.finiteuses:SetUses(TUNING.KYNO_BUCKET_EMPTY_USES)
 	inst.components.finiteuses:SetOnFinished(inst.Remove)
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_bucket_empty"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -201,8 +198,6 @@ local function metalfn()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_bucket_metal"
 	
 	inst:WatchWorldState("israining", OnIsRaining)
 	
@@ -246,6 +241,7 @@ local function waterfn()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	
 	inst:AddComponent("watersource")
 	inst.components.watersource.onusefn = OnUse
@@ -258,10 +254,6 @@ local function waterfn()
 	inst.components.wateryprotection.protection_dist = TUNING.KYNO_BUCKET_WATER_PROTECTION_DIST
 	inst.components.wateryprotection:AddIgnoreTag("player")
 	inst.components.wateryprotection.onspreadprotectionfn = OnUse
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_bucket_water"
 
 	return inst
 end

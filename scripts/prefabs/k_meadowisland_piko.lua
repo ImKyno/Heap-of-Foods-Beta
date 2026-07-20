@@ -212,8 +212,6 @@ local function fn()
     inst.components.inventoryitem.canbepickedup = false
     inst.components.inventoryitem.canbepickedupalive = true
     inst.components.inventoryitem:SetSinks(true)
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_piko"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "cookedsmallmeat"
@@ -321,8 +319,6 @@ local function orangefn()
     inst.components.inventoryitem.canbepickedup = false
     inst.components.inventoryitem.canbepickedupalive = true
     inst.components.inventoryitem:SetSinks(true)
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_piko_orange"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "cookedsmallmeat"

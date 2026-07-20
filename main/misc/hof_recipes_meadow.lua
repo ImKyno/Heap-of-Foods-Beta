@@ -11,7 +11,6 @@ local DefaultAtlas     = "images/inventoryimages.xml"
 local DefaultAtlas1    = "images/inventoryimages1.xml"
 local DefaultAtlas2    = "images/inventoryimages2.xml"
 local DefaultAtlas3    = "images/inventoryimages3.xml"
-local ModAtlas         = "images/inventoryimages/hof_inventoryimages.xml"
 
 -- Sammy The Merchant.
 AddRecipe2("meadowislandtrader_kyno_itemslicer_gold", {Ingredient("goldnugget", 20)}, TECH.LOST,
@@ -24,8 +23,6 @@ AddRecipe2("meadowislandtrader_kyno_itemslicer_gold", {Ingredient("goldnugget", 
 		description         = "kyno_itemslicer_gold_m",
 		sg_state            = "give",
 		product             = "kyno_itemslicer_gold",
-		atlas               = ModAtlas,
-		image               = "kyno_itemslicer_gold.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -40,13 +37,11 @@ AddRecipe2("meadowislandtrader_kyno_bucket_metal", {Ingredient("antliontrinket",
 		description         = "kyno_bucket_metal_m",
 		sg_state            = "give",
 		product             = "kyno_bucket_metal",
-		atlas               = ModAtlas,
-		image               = "kyno_bucket_metal.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_slow_farmplot_blueprint", {Ingredient("kyno_turnip", 10, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_slow_farmplot_blueprint", {Ingredient("kyno_turnip", 10)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -61,7 +56,7 @@ AddRecipe2("meadowislandtrader_slow_farmplot_blueprint", {Ingredient("kyno_turni
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_fast_farmplot_blueprint", {Ingredient("kyno_radish", 20, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_fast_farmplot_blueprint", {Ingredient("kyno_radish", 20)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -86,14 +81,12 @@ AddRecipe2("meadowislandtrader_kyno_goldenapple", {Ingredient("coolant", 1)}, TE
 		description         = "kyno_goldenapple_m",
 		sg_state            = "give",
 		product             = "kyno_goldenapple",
-		atlas               = ModAtlas,
-		image               = "kyno_goldenapple.tex",
 		fxover              = { bank = "inventory_fx_enchanted", build = "inventory_fx_enchanted", anim = "idle" },
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_foliage", {Ingredient("kyno_wheat", 1, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_foliage", {Ingredient("kyno_wheat", 1)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -173,7 +166,7 @@ AddRecipe2("meadowislandtrader_trinket_13", {Ingredient("goldnugget", 5)}, TECH.
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_tallbirdegg", {Ingredient("kyno_chicken_egg", 1, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_tallbirdegg", {Ingredient("kyno_chicken_egg", 1)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -221,7 +214,7 @@ AddRecipe2("meadowislandtrader_mandrake", {Ingredient("glommerwings", 1)}, TECH.
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_moon_cap", {Ingredient("kyno_white_cap", 1, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_moon_cap", {Ingredient("kyno_white_cap", 1)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -247,8 +240,6 @@ AddRecipe2("meadowislandtrader_kyno_pineapple", {Ingredient("durian", 1)}, TECH.
 		description         = "kyno_pineapple_m",
 		sg_state            = "give",
 		product             = "kyno_pineapple",
-		atlas               = ModAtlas,
-		image               = "kyno_pineapple.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -263,8 +254,6 @@ AddRecipe2("meadowislandtrader_kyno_roe_pondfish", {Ingredient("bird_egg", 1)}, 
 		description         = "kyno_roe_m",
 		sg_state            = "give",
 		product             = "kyno_roe_pondfish",
-		atlas               = ModAtlas,
-		image               = "kyno_roe_pondfish.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -279,8 +268,6 @@ AddRecipe2("meadowislandtrader_kyno_shark_fin", {Ingredient("trunk_summer", 1)},
 		description         = "kyno_shark_fin_m",
 		sg_state            = "give",
 		product             = "kyno_shark_fin",
-		atlas               = ModAtlas,
-		image               = "kyno_shark_fin.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -295,8 +282,6 @@ AddRecipe2("meadowislandtrader_kyno_poison_froglegs", {Ingredient("froglegs", 5)
 		description         = "kyno_poison_froglegs_m",
 		sg_state            = "give",
 		product             = "kyno_poison_froglegs",
-		atlas               = ModAtlas,
-		image               = "kyno_poison_froglegs.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -311,13 +296,11 @@ AddRecipe2("meadowislandtrader_kyno_moon_froglegs", {Ingredient("moonglass_charg
 		description         = "kyno_moon_froglegs_m",
 		sg_state            = "give",
 		product             = "kyno_moon_froglegs",
-		atlas               = ModAtlas,
-		image               = "kyno_moon_froglegs.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_kyno_crabkingmeat", {Ingredient("kyno_crabmeat", 5, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_kyno_crabkingmeat", {Ingredient("kyno_crabmeat", 5)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -327,8 +310,6 @@ AddRecipe2("meadowislandtrader_kyno_crabkingmeat", {Ingredient("kyno_crabmeat", 
 		description         = "kyno_crabkingmeat_m",
 		sg_state            = "give",
 		product             = "kyno_crabkingmeat",
-		atlas               = ModAtlas,
-		image               = "kyno_crabkingmeat.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -343,8 +324,6 @@ AddRecipe2("meadowislandtrader_kyno_worm_bone", {Ingredient("boneshard", 5)}, TE
 		description         = "kyno_worm_bone_m",
 		sg_state            = "give",
 		product             = "kyno_worm_bone",
-		atlas               = ModAtlas,
-		image               = "kyno_worm_bone.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -359,13 +338,11 @@ AddRecipe2("meadowislandtrader_dug_kyno_coffeebush", {Ingredient("dug_berrybush"
 		description         = "dug_kyno_coffeebush_m",
 		sg_state            = "give",
 		product             = "dug_kyno_coffeebush",
-		atlas               = ModAtlas,
-		image               = "dug_kyno_coffeebush.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_nukashine_sugarfree", {Ingredient("nukashine", 1, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_nukashine_sugarfree", {Ingredient("nukashine", 1)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -375,8 +352,6 @@ AddRecipe2("meadowislandtrader_nukashine_sugarfree", {Ingredient("nukashine", 1,
 		description         = "nukashine_sugarfree_m",
 		sg_state            = "give",
 		product             = "nukashine_sugarfree",
-		atlas               = ModAtlas,
-		image               = "nukashine.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -391,8 +366,6 @@ AddRecipe2("meadowislandtrader_kyno_bottlecap", {Ingredient("gears", 1)}, TECH.L
 		description         = "kyno_bottlecap_m",
 		sg_state            = "give",
 		product             = "kyno_bottlecap",
-		atlas               = ModAtlas,
-		image               = "kyno_bottlecap.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -407,8 +380,6 @@ AddRecipe2("meadowislandtrader_kyno_tunacan", {Ingredient("meat", 1)}, TECH.LOST
 		description         = "kyno_tunacan_m",
 		sg_state            = "give",
 		product             = "kyno_tunacan",
-		atlas               = ModAtlas,
-		image               = "kyno_tunacan.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -423,13 +394,11 @@ AddRecipe2("meadowislandtrader_kyno_meatcan", {Ingredient("fishmeat", 1)}, TECH.
 		description         = "kyno_meatcan_m",
 		sg_state            = "give",
 		product             = "kyno_meatcan",
-		atlas               = ModAtlas,
-		image               = "kyno_meatcan.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_kyno_tomatocan", {Ingredient("kyno_seaweeds", 1, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_kyno_tomatocan", {Ingredient("kyno_seaweeds", 1)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -439,8 +408,6 @@ AddRecipe2("meadowislandtrader_kyno_tomatocan", {Ingredient("kyno_seaweeds", 1, 
 		description         = "kyno_tomatocan_m",
 		sg_state            = "give",
 		product             = "kyno_tomatocan",
-		atlas               = ModAtlas,
-		image               = "kyno_tomatocan.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -455,8 +422,6 @@ AddRecipe2("meadowislandtrader_kyno_beancan", {Ingredient("corn", 1)}, TECH.LOST
 		description         = "kyno_beancan_m",
 		sg_state            = "give",
 		product             = "kyno_beancan",
-		atlas               = ModAtlas,
-		image               = "kyno_beancan.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -471,8 +436,6 @@ AddRecipe2("meadowislandtrader_kyno_energycan", {Ingredient("cutlichen", 3)}, TE
 		description         = "kyno_energycan_m",
 		sg_state            = "give",
 		product             = "kyno_energycan",
-		atlas               = ModAtlas,
-		image               = "kyno_energycan.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -487,8 +450,6 @@ AddRecipe2("meadowislandtrader_kyno_cokecan", {Ingredient("kyno_coffeebeans_cook
 		description         = "kyno_cokecan_m",
 		sg_state            = "give",
 		product             = "kyno_cokecan",
-		atlas               = ModAtlas,
-		image               = "kyno_cokecan.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -503,8 +464,6 @@ AddRecipe2("meadowislandtrader_kyno_sodacan", {Ingredient("fig", 3)}, TECH.LOST,
 		description         = "kyno_sodacan_m",
 		sg_state            = "give",
 		product             = "kyno_sodacan",
-		atlas               = ModAtlas,
-		image               = "kyno_sodacan.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -583,8 +542,6 @@ AddRecipe2("meadowislandtrader_kyno_piko", {Ingredient("rabbit", 1)}, TECH.LOST,
 		description         = "kyno_piko_m",
 		sg_state            = "give",
 		product             = "kyno_piko",
-		atlas               = ModAtlas,
-		image               = "kyno_piko.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -599,8 +556,6 @@ AddRecipe2("meadowislandtrader_kyno_piko_orange", {Ingredient("rabbit", 1)}, TEC
 		description         = "kyno_piko_orange_m",
 		sg_state            = "give",
 		product             = "kyno_piko_orange",
-		atlas               = ModAtlas,
-		image               = "kyno_piko_orange.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -615,13 +570,11 @@ AddRecipe2("meadowislandtrader_kyno_chicken2", {Ingredient("crow", 1)}, TECH.LOS
 		description         = "kyno_chicken_m",
 		sg_state            = "give",
 		product             = "kyno_chicken2",
-		atlas               = ModAtlas,
-		image               = "kyno_chicken2.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_kyno_seeds_kit_rice", {Ingredient("kyno_aloe_seeds", 3, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_kyno_seeds_kit_rice", {Ingredient("kyno_aloe_seeds", 3)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -631,13 +584,11 @@ AddRecipe2("meadowislandtrader_kyno_seeds_kit_rice", {Ingredient("kyno_aloe_seed
 		description         = "kyno_seeds_kit_rice_m",
 		sg_state            = "give",
 		product             = "kyno_seeds_kit_rice",
-		atlas               = ModAtlas,
-		image               = "kyno_seeds_kit_rice.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_kyno_seeds_kit_firenettles", {Ingredient("kyno_radish_seeds", 3, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_kyno_seeds_kit_firenettles", {Ingredient("kyno_radish_seeds", 3)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -647,13 +598,11 @@ AddRecipe2("meadowislandtrader_kyno_seeds_kit_firenettles", {Ingredient("kyno_ra
 		description         = "kyno_seeds_kit_firenettles_m",
 		sg_state            = "give",
 		product             = "kyno_seeds_kit_firenettles",
-		atlas               = ModAtlas,
-		image               = "kyno_seeds_kit_firenettles.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_kyno_seeds_kit_icenettles", {Ingredient("kyno_cucumber_seeds", 3, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_kyno_seeds_kit_icenettles", {Ingredient("kyno_cucumber_seeds", 3)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -663,13 +612,11 @@ AddRecipe2("meadowislandtrader_kyno_seeds_kit_icenettles", {Ingredient("kyno_cuc
 		description         = "kyno_seeds_kit_icenettles_m",
 		sg_state            = "give",
 		product             = "kyno_seeds_kit_icenettles",
-		atlas               = ModAtlas,
-		image               = "kyno_seeds_kit_icenettles.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_kyno_seeds_kit_forgetmelots", {Ingredient("kyno_turnip_seeds", 3, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_kyno_seeds_kit_forgetmelots", {Ingredient("kyno_turnip_seeds", 3)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -679,13 +626,11 @@ AddRecipe2("meadowislandtrader_kyno_seeds_kit_forgetmelots", {Ingredient("kyno_t
 		description         = "kyno_seeds_kit_forgetmelots_m",
 		sg_state            = "give",
 		product             = "kyno_seeds_kit_forgetmelots",
-		atlas               = ModAtlas,
-		image               = "kyno_seeds_kit_forgetmelots.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("meadowislandtrader_kyno_seeds_kit_tillweed", {Ingredient("kyno_fennel_seeds", 3, ModAtlas)}, TECH.LOST,
+AddRecipe2("meadowislandtrader_kyno_seeds_kit_tillweed", {Ingredient("kyno_fennel_seeds", 3)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -695,8 +640,6 @@ AddRecipe2("meadowislandtrader_kyno_seeds_kit_tillweed", {Ingredient("kyno_fenne
 		description         = "kyno_seeds_kit_tillweed_m",
 		sg_state            = "give",
 		product             = "kyno_seeds_kit_tillweed",
-		atlas               = ModAtlas,
-		image               = "kyno_seeds_kit_tillweed.tex",
 	},
 	{"CRAFTING_STATION"}
 )

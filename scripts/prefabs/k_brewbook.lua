@@ -69,14 +69,11 @@ local function fn()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("furnituredecor")
 	inst.components.furnituredecor.onputonfurniture = OnPutOnFurniture
 	inst.components.furnituredecor.ontakeofffurniture = OnTakeOffFurniture
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_brewbook"
 
 	inst:AddComponent("brewbook")
 	inst.components.brewbook.onreadfn = OnReadBook

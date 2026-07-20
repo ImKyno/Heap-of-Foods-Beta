@@ -89,6 +89,7 @@ local function kokonut()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -106,10 +107,6 @@ local function kokonut()
 	
 	inst:AddComponent("winter_treeseed")
 	inst.components.winter_treeseed:SetTree("kyno_winter_kokonuttree")
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_kokonut"
 	
 	inst:AddComponent("deployable")
 	inst.components.deployable:SetDeployMode(DEPLOYMODE.PLANT)
@@ -149,6 +146,7 @@ local function kokonut_halved()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -165,10 +163,6 @@ local function kokonut_halved()
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_kokonut_halved"
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_kokonut_cooked"
@@ -204,6 +198,7 @@ local function kokonut_cooked()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -220,10 +215,6 @@ local function kokonut_cooked()
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_kokonut_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

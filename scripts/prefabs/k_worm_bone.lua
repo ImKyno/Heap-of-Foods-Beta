@@ -76,8 +76,6 @@ local function fn()
     inst.components.lootdropper:SetLoot({"boneshard", "boneshard"})
 
     inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_worm_bone"
     inst.components.inventoryitem:SetSinks(true)
 	
 	inst:AddComponent("workable")

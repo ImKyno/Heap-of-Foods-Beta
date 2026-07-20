@@ -43,6 +43,7 @@ local function fn()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("selfstacker")
 	
@@ -63,10 +64,6 @@ local function fn()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_humanmeat"
 	
 	inst:AddComponent("luckitem")
 	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_LARGE)
@@ -110,6 +107,7 @@ local function fn_cooked()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	
 	inst:AddComponent("tradable")
@@ -129,10 +127,6 @@ local function fn_cooked()
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_humanmeat_cooked"
 	
 	inst:AddComponent("luckitem")
 	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_LARGE)

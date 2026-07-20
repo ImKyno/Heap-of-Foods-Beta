@@ -53,6 +53,7 @@ local function MakeSporecap(data)
 		end
 
 		inst:AddComponent("inspectable")
+		inst:AddComponent("inventoryitem")
 		inst:AddComponent("bait")
 		inst:AddComponent("tradable")
 
@@ -73,10 +74,6 @@ local function MakeSporecap(data)
 
 		inst:AddComponent("stackable")
 		inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-		inst:AddComponent("inventoryitem")
-		inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-		inst.components.inventoryitem.imagename = data.inventoryimage
 		
 		if data.fuel then
 			inst:AddComponent("fuel")

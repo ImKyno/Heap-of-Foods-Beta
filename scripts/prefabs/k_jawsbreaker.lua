@@ -147,14 +147,11 @@ local function fn()
 	
 	inst:AddComponent("locomotor")
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	
 	inst:AddComponent("oceanthrowable")
 	inst.components.oceanthrowable:SetOnAddProjectileFn(OnAddProjectile)
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "jawsbreaker"
 	
 	inst:AddComponent("luckitem")
 	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_MEDLARGE)

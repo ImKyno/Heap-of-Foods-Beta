@@ -39,6 +39,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Zasoby",
 		es  = "Montón de Alimentos - Recursos",
 		vi  = "Kho thực phẩm - Tài nguyên",
+		kr  = "풍족한 요리 - 자원",
 	},
 
 	RESOURCES_OCEAN =
@@ -50,6 +51,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Zasoby oceaniczne",
 		es  = "Montón de Alimentos - Recursos oceánicos",
 		vi  = "Kho thực phẩm - Tài nguyên đại dương",
+		kr  = "풍족한 요리 - 바다 자원",
 	},
 
 	SERENITYISLAND =
@@ -61,6 +63,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Archipelag Spokoju",
 		es  = "Montón de Alimentos - Archipiélago de Serenidad",
 		vi  = "Kho thực phẩm - Quần đảo Serenity",
+		kr  = "풍족한 요리 - 세레니티 군도",
 	},
 
 	MEADOWISLAND =
@@ -72,6 +75,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Wyspa Nadmorska",
 		es  = "Montón de Alimentos - Isla Costera",
 		vi  = "Kho thực phẩm - Đảo ven biển",
+		kr  = "풍족한 요리 - 해안 섬",
 	},
 
 	CREATURES =
@@ -83,6 +87,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Stworzenia",
 		es  = "Montón de Alimentos - Criaturas",
 		vi  = "Kho thực phẩm - Sinh vật và điểm sinh sản",
+		kr  = "풍족한 요리 - 생물과 생성",
 	},
 
 	-- WORLDSETTINGS
@@ -95,6 +100,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Świat",
 		es  = "Montón de Alimentos - Mundo",
 		vi  = "Kho thực phẩm - Thế giới",
+		kr  = "풍족한 요리 - 세계",
 	},
 
 	RESOURCES_REGROW =
@@ -106,6 +112,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Odnowa zasobów",
 		es  = "Montón de Alimentos - Regeneración de recursos",
 		vi  = "Kho thực phẩm - Tái tạo nguồn lực",
+		kr  = "풍족한 요리 - 자원 재생성",
 	},
 
 	RESOURCES_OCEAN_REGROW =
@@ -117,6 +124,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Odnowa zasobów oceanicznych",
 		es  = "Montón de Alimentos - Regeneración de recursos oceánicos",
 		vi  = "Kho thực phẩm - Sự phục hồi tài nguyên đại dương",
+		kr  = "풍족한 요리 - 바다 자원 재생성",
 	},
 
 	SERENITYISLAND_REGROW =
@@ -128,6 +136,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Odnowa Archipelagu Spokoju",
 		es  = "Montón de Alimentos - Regeneración del Archipiélago de Serenidad",
 		vi  = "Kho thực phẩm - Sự tái sinh của quần đảo Serenity",
+		kr  = "풍족한 요리 - 세레니티 군도 자원 재생성",
 	},
 
 	MEADOWISLAND_REGROW =
@@ -139,6 +148,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Odnowa Wyspy Nadmorskiej",
 		es  = "Montón de Alimentos - Regeneración de la Isla Costera",
 		vi  = "Kho thực phẩm - Sự tái sinh của đảo ven biển",
+		kr  = "풍족한 요리 - 해안 섬 자원 재생성",
 	},
 
 	CREATURES_REGROW =
@@ -150,6 +160,7 @@ local STRINGS_CUSTOMIZATION =
 		pl  = "Stos jedzenia - Stworzenia",
 		es  = "Montón de Alimentos - Criaturas",
 		vi  = "Kho thực phẩm - Sinh Vật",
+		kr  = "풍족한 요리 - 생물",
 	},
 }
 

@@ -14,7 +14,6 @@ local HOF_FERTILIZERTWEAK  = GetModConfigData("FERTILIZERTWEAK")
 local DefaultAtlas         = "images/inventoryimages.xml"
 local DefaultAtlas1        = "images/inventoryimages1.xml"
 local DefaultAtlas2        = "images/inventoryimages2.xml"
-local ModAtlas             = "images/inventoryimages/hof_inventoryimages.xml"
 local CraftingFilterAtlas  = "images/tabimages/hof_tabimages.xml"
 
 -- Wurt can craft her structures on Tidal Marsh ground.
@@ -36,7 +35,7 @@ AllRecipes["merm_armory"].testfn             = IsTidalMarshLand
 AllRecipes["merm_armory_upgraded"].testfn    = IsTidalMarshLand
 
 -- Using Bananas instead of Cave Bananas.
-AllRecipes["wormwood_reeds"].ingredients = {Ingredient("kyno_banana", 1, ModAtlas)}
+AllRecipes["wormwood_reeds"].ingredients = {Ingredient("kyno_banana", 1)}
 
 -- Custom TechTree for Crafting Stations and NPCs.
 TECH.MEALING            = { MEALING          = 1  }
@@ -162,7 +161,7 @@ for k, prototyper in pairs(HOF_PROTOTYPERS) do
 end
 
 -- Mod Recipes.
-AddRecipe2("kyno_flour", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.MEALING_ONE,
+AddRecipe2("kyno_flour", {Ingredient("kyno_wheat", 2)}, TECH.MEALING_ONE,
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
@@ -174,7 +173,7 @@ AddRecipe2("kyno_flour", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.MEALING_O
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("kyno_spotspice", {Ingredient("kyno_spotspice_leaf", 2, ModAtlas)}, TECH.MEALING_ONE,
+AddRecipe2("kyno_spotspice", {Ingredient("kyno_spotspice_leaf", 2)}, TECH.MEALING_ONE,
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
@@ -217,28 +216,22 @@ AddRecipe2("kyno_oil", {Ingredient("corn", 1), Ingredient("seeds", 1), Ingredien
 		no_deconstruction   = true,
 		actionstr			= "MEALGRINDER",
 		numtogive			= 3,
-		atlas				= ModAtlas,
-		image				= "kyno_oil.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("kyno_sugar", {Ingredient("kyno_sugartree_petals", 1, ModAtlas)}, TECH.MEALING_ONE,
+AddRecipe2("kyno_sugar", {Ingredient("kyno_sugartree_petals", 1)}, TECH.MEALING_ONE,
 	{
 		nounlock 			= true,
 		no_deconstruction   = true,
 		actionstr 			= "MEALGRINDER",
 		numtogive 			= 3,
-		atlas 				= ModAtlas,
-		image 				= "kyno_sugar.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
 AddRecipe2("kyno_musselstick_item", {Ingredient("twigs", 3), Ingredient("rope", 1), Ingredient("boards", 1)}, TECH.FISHING_ONE,
 	{
-		atlas 				= ModAtlas,
-		image 				= "kyno_musselstick_item.tex",
 	},
 	{"GARDENING", "FISHING"}
 )
@@ -247,8 +240,6 @@ AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2), Ingredient("flint", 2
 	{
 		placer 				= "kyno_mealgrinder_placer",
 		min_spacing 		= 1.75,
-		atlas 				= ModAtlas,
-		image 				= "kyno_mealgrinder.tex",
 	},
 	{"COOKING"}
 )
@@ -257,7 +248,6 @@ AddRecipe2("kyno_mushstump", {Ingredient("spoiled_food", 4), Ingredient("poop", 
 	{
 		placer 				= "kyno_mushstump_placer",
 		min_spacing			= 1.75,
-		atlas 				= ModAtlas,
 		image 				= "kyno_mushroomstump.tex",
 	},
 	{"GARDENING"}
@@ -265,32 +255,24 @@ AddRecipe2("kyno_mushstump", {Ingredient("spoiled_food", 4), Ingredient("poop", 
 
 AddRecipe2("kyno_floatilizer", {Ingredient("poop", 3), Ingredient("kelp", 2), Ingredient("rocks", 4)}, TECH.SCIENCE_TWO,
 	{
-		atlas 				= ModAtlas,
-		image       		= "kyno_floatilizer.tex",
 	},
 	{"GARDENING"}
 )
 
 AddRecipe2("kyno_bucket_empty", {Ingredient("boneshard", 1), Ingredient("boards", 1), Ingredient("rope", 1)}, TECH.SCIENCE_ONE,
 	{
-		atlas				= ModAtlas,
-		image				= "kyno_bucket_empty.tex",
 	},
 	{"TOOLS"}
 )
 
 AddRecipe2("kyno_itemslicer", {Ingredient("flint", 3), Ingredient("twigs", 2)}, TECH.SCIENCE_ONE,
 	{
-		atlas				= ModAtlas,
-		image				= "kyno_itemslicer.tex",
 	},
 	{"TOOLS"}
 )
 
-AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ingredient("kyno_wheat", 1, ModAtlas)}, TECH.SCIENCE_ONE,
+AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ingredient("kyno_wheat", 1)}, TECH.SCIENCE_ONE,
 	{
-		atlas 				= ModAtlas,
-		image				= "kyno_brewbook.tex",
 	},
 	{"COOKING"}
 )
@@ -299,8 +281,6 @@ AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 3), Ingredient("rope", 2), In
 	{
 		placer 				= "kyno_woodenkeg_placer",
 		min_spacing			= 2.5,
-		atlas 				= ModAtlas,
-		image 				= "kyno_woodenkeg.tex",
 	},
 	{"COOKING", "STRUCTURES"}
 )
@@ -309,8 +289,6 @@ AddRecipe2("kyno_preservesjar", {Ingredient("boards", 3), Ingredient("rope", 2),
 	{
 		placer 				= "kyno_preservesjar_placer",
 		min_spacing			= 1.75,
-		atlas 				= ModAtlas,
-		image 				= "kyno_preservesjar.tex",
 	},
 	{"COOKING", "STRUCTURES"}
 )
@@ -319,8 +297,6 @@ AddRecipe2("kyno_antchest", {Ingredient("honeycomb", 1), Ingredient("honey", 12)
 	{
 		placer				= "kyno_antchest_placer",
 		min_spacing			= 1.75,
-		atlas				= ModAtlas,
-		image				= "kyno_antchest_honey.tex",
 	},
 	{"COOKING", "CONTAINERS", "STRUCTURES"}
 )
@@ -329,16 +305,12 @@ AddRecipe2("kyno_garden_sprinkler", {Ingredient("gears", 3), Ingredient("ice", 1
 	{
 		placer              = "kyno_garden_sprinkler_placer",
 		min_spacing         = 3,
-		atlas               = ModAtlas,
-		image               = "kyno_garden_sprinkler.tex",
 	},
 	{"GARDENING", "STRUCTURES"}
 )
 
 AddRecipe2("kyno_foodsack", {Ingredient("saltrock", 10), Ingredient("malbatross_feathered_weave", 4), Ingredient("bluegem", 1)}, TECH.LOST,
 	{
-		atlas               = ModAtlas,
-		image               = "kyno_foodsack.tex",
 	},
 	{"COOKING", "CONTAINERS"}
 )
@@ -370,68 +342,52 @@ AddRecipe2("kyno_itemshowcaser", {Ingredient("boards", 3), Ingredient("rope", 3)
 		placer              = "kyno_itemshowcaser_placer",
 		min_spacing         = 1.75,
 		station_tag         = "carpentry_station",
-		atlas               = ModAtlas,
-		image               = "kyno_itemshowcaser.tex",
 	},
 	{"CRAFTING_STATION", "STRUCTURES"}
 )
 
 AddRecipe2("kyno_messagebottle_empty", {Ingredient("moonglass", 3)}, TECH.SCIENCE_ONE,
 	{
-		atlas               = ModAtlas,
-		image               = "kyno_messagebottle_empty.tex",
 	},
 	{"REFINE"}
 )
 
-AddRecipe2("kyno_malbatrossfood", {Ingredient("chum", 1), Ingredient("oceanfish_medium_2_inv", 2), Ingredient("kyno_mysterymeat", 1, ModAtlas)}, TECH.LOST,
+AddRecipe2("kyno_malbatrossfood", {Ingredient("chum", 1), Ingredient("oceanfish_medium_2_inv", 2), Ingredient("kyno_mysterymeat", 1)}, TECH.LOST,
 	{
-		atlas 				= ModAtlas,
-		image 				= "kyno_malbatrossfood.tex",
 	},
 	{"FISHING"}
 )
 
-AddRecipe2("kyno_oceantrap", {Ingredient("kyno_seaweeds", 4, ModAtlas), Ingredient("kyno_messagebottle_empty", 2, ModAtlas), Ingredient("kyno_jellyfish", 1, ModAtlas)}, TECH.FISHING_ONE,
+AddRecipe2("kyno_oceantrap", {Ingredient("kyno_seaweeds", 4), Ingredient("kyno_messagebottle_empty", 2), Ingredient("kyno_jellyfish", 1)}, TECH.FISHING_ONE,
 	{
-		atlas               = ModAtlas,
-		image               = "kyno_oceantrap.tex",
 	},
 	{"TOOLS", "GARDENING", "FISHING"}
 )
 
-AddRecipe2("kyno_brainrock_nubbin", {Ingredient("rocks", 6), Ingredient("kyno_brainrock_larvae", 1, ModAtlas)}, TECH.SEAFARING_ONE,
+AddRecipe2("kyno_brainrock_nubbin", {Ingredient("rocks", 6), Ingredient("kyno_brainrock_larvae", 1)}, TECH.SEAFARING_ONE,
 	{
-		atlas               = ModAtlas,
-		image               = "kyno_brainrock_nubbin.tex",
 	},
 	{"REFINE", "SEAFARING"}
 )
 
-AddRecipe2("kyno_fishregistryhat", {Ingredient("strawhat", 1), Ingredient("oceanfishinglure_spinner_red", 3), Ingredient("kyno_seaweeds", 1, ModAtlas)}, TECH.FISHING_ONE,
+AddRecipe2("kyno_fishregistryhat", {Ingredient("strawhat", 1), Ingredient("oceanfishinglure_spinner_red", 3), Ingredient("kyno_seaweeds", 1)}, TECH.FISHING_ONE,
 	{
-		atlas               = ModAtlas,
-		image               = "kyno_fishregistryhat.tex",
 	},
 	{"FISHING", "GARDENING"}
 )
 
-AddRecipe2("kyno_animalfeeder", {Ingredient("seeds", 3), Ingredient("kyno_wheat", 3, ModAtlas), Ingredient("boards", 3)}, TECH.SCIENCE_ONE,
+AddRecipe2("kyno_animalfeeder", {Ingredient("seeds", 3), Ingredient("kyno_wheat", 3), Ingredient("boards", 3)}, TECH.SCIENCE_ONE,
 	{
 		placer              = "kyno_animalfeeder_placer",
 		min_spacing         = 3,
-		atlas               = ModAtlas,
-		image               = "kyno_animalfeeder.tex",
 	},
 	{"GARDENING"}
 )
 
-AddRecipe2("kyno_chickenhouse", {Ingredient("kyno_chicken2", 3, ModAtlas, true), Ingredient("cutgrass", 3), Ingredient("boards", 3)}, TECH.SCIENCE_TWO,
+AddRecipe2("kyno_chickenhouse", {Ingredient("kyno_chicken2", 3, nil, true), Ingredient("cutgrass", 3), Ingredient("boards", 3)}, TECH.SCIENCE_TWO,
 	{
 		placer              = "kyno_chickenhouse_placer",
 		min_spacing         = 3,
-		atlas               = ModAtlas,
-		image               = "kyno_chickenhouse.tex",
 	},
 	{"GARDENING"}
 )
@@ -442,8 +398,6 @@ AddRecipe2("kyno_dailyrecipe_sign", {Ingredient("boards", 1), Ingredient("papyru
 	{
 		placer              = "kyno_dailyrecipe_sign_placer",
 		min_spacing         = 2,
-		atlas               = ModAtlas,
-		image               = "kyno_dailyrecipe_sign.tex",
 	},
 	{"STRUCTURES", "COOKING"}
 )
@@ -451,12 +405,10 @@ AddRecipe2("kyno_dailyrecipe_sign", {Ingredient("boards", 1), Ingredient("papyru
 -- For the decorative sign.
 AddDeconstructRecipe("kyno_dailyrecipe_sign_decor", {Ingredient("boards", 1), Ingredient("papyrus", 1), Ingredient("featherpencil", 1)})
 
-AddRecipe2("kyno_eldermandrakehouse", {Ingredient("boards", 4), Ingredient("kyno_cavetuber", 6, ModAtlas), Ingredient("mandrake", 2)}, TECH.SCIENCE_TWO,
+AddRecipe2("kyno_eldermandrakehouse", {Ingredient("boards", 4), Ingredient("kyno_cavetuber", 6), Ingredient("mandrake", 2)}, TECH.SCIENCE_TWO,
 	{
 		placer              = "kyno_eldermandrakehouse_placer",
 		min_spacing         = 4,
-		atlas               = ModAtlas,
-		image               = "kyno_eldermandrakehouse.tex",
 	},
 	{"STRUCTURES"}
 )
@@ -465,8 +417,6 @@ AddRecipe2("kyno_foodammo_tomato", {Ingredient("tomato", 1, nil, nil, "quagmire_
 	{
 		no_deconstruction   = true,
 		numtogive           = 4,
-		atlas               = ModAtlas,
-		image               = "kyno_foodammo_tomato.tex",
 	},
 	{"WEAPONS"}
 )
@@ -475,8 +425,6 @@ AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyru
 	{
 		builder_tag         = "strongman",
 		product             = "potatosack",
-		atlas               = DefaultAtlas2,
-		image               = "potato_sack_full.tex",
 	},
 	{"CONTAINERS", "COOKING"}
 )
@@ -489,19 +437,15 @@ AddCharacterRecipe("wendy_sugarfly", {Ingredient("ghostflower", 3), Ingredient("
 		product             = "kyno_sugarfly",
 		description         = "kyno_sugarfly",
 		builder_skill       = "wendy_ghostflower_butterfly",
-		atlas               = ModAtlas,
-		image               = "kyno_sugarfly.tex",
 	}
 )
 
-AddCharacterRecipe("kyno_fishermermhut_wurt", {Ingredient("boards", 4), Ingredient("cutreeds", 3), Ingredient("kyno_tropicalfish", 2, ModAtlas)}, TECH.SCIENCE_ONE,
+AddCharacterRecipe("kyno_fishermermhut_wurt", {Ingredient("boards", 4), Ingredient("cutreeds", 3), Ingredient("kyno_tropicalfish", 2)}, TECH.SCIENCE_ONE,
 	{
 		placer              = "kyno_fishermermhut_wurt_placer",
 		min_spacing         = 1.75,
 		testfn              = IsTidalMarshLand,
 		builder_tag         = "merm_builder",
-		atlas               = ModAtlas,
-		image               = "kyno_fishermermhut_wurt.tex",
 	},
 	{"STRUCTURES"}
 )
@@ -512,8 +456,6 @@ AddCharacterRecipe("wurt_turf_tidalmarsh", {Ingredient("cutreeds", 1), Ingredien
 		description         = "turf_tidalmarsh",
 		builder_tag         = "merm_builder",
 		numtogive           = 4,
-		atlas               = ModAtlas,
-		image               = "turf_tidalmarsh.tex",
 	},
 	{"DECOR"}
 )
@@ -592,46 +534,38 @@ AddCharacterRecipe("transmute_moon_cap", {Ingredient("blue_cap", 3)}, TECH.NONE,
 	}
 )
 
-AddCharacterRecipe("transmute_kyno_white_cap", {Ingredient("kyno_truffles", 1, ModAtlas)}, TECH.NONE,
+AddCharacterRecipe("transmute_kyno_white_cap", {Ingredient("kyno_truffles", 1)}, TECH.NONE,
 	{
 		product             = "kyno_white_cap",
 		numtogive           = 2,
 		description         = "transmute_kyno_white_cap",
 		builder_skill       = "wilson_alchemy_9",
-		atlas               = ModAtlas,
-		image               = "kyno_white_cap.tex",
 	}
 )
 
 AddCharacterRecipe("transmute_kyno_sporecap", {Ingredient("red_cap", 1), Ingredient("green_cap", 1), Ingredient("blue_cap", 1), Ingredient("moon_cap", 1),
-Ingredient("kyno_white_cap", 1, ModAtlas)}, TECH.NONE,
+Ingredient("kyno_white_cap", 1)}, TECH.NONE,
 	{
 		product             = "kyno_sporecap",
 		description         = "transmute_kyno_sporecap",
 		builder_skill       = "wilson_alchemy_10",
-		atlas               = ModAtlas,
-		image               = "kyno_sporecap.tex",
 	}
 )
 
 AddCharacterRecipe("transmute_kyno_sporecap_dark", {Ingredient("red_cap", 1), Ingredient("green_cap", 1), Ingredient("blue_cap", 1), Ingredient("moon_cap", 1),
-Ingredient("kyno_white_cap", 1, ModAtlas)}, TECH.NONE,
+Ingredient("kyno_white_cap", 1)}, TECH.NONE,
 	{
 		product             = "kyno_sporecap_dark",
 		description         = "transmute_kyno_sporecap_dark",
 		builder_skill       = "wilson_alchemy_10",
-		atlas               = ModAtlas,
-		image               = "kyno_sporecap_dark.tex",
 	}
 )
 
-AddCharacterRecipe("transmute_kyno_truffles", {Ingredient("kyno_white_cap", 3, ModAtlas)}, TECH.NONE,
+AddCharacterRecipe("transmute_kyno_truffles", {Ingredient("kyno_white_cap", 3)}, TECH.NONE,
 	{
 		product             = "kyno_truffles",
 		description         = "transmute_kyno_truffles",
 		builder_skill       = "wilson_alchemy_9",
-		atlas               = ModAtlas,
-		image               = "kyno_truffles.tex",
 	}
 )
 
@@ -677,7 +611,7 @@ AddCharacterRecipe("transmute_fishmeat_small", {Ingredient("fishmeat", 1)}, TECH
 	}
 )
 
-AddCharacterRecipe("transmute_fossil_piece", {Ingredient("kyno_worm_bone", 3, ModAtlas)}, TECH.NONE,
+AddCharacterRecipe("transmute_fossil_piece", {Ingredient("kyno_worm_bone", 3)}, TECH.NONE,
 	{
 		product             = "fossil_piece",
 		description         = "transmute_fossil_piece",
@@ -693,8 +627,6 @@ AddCharacterRecipe("transmute_kyno_worm_bone", {Ingredient("fossil_piece", 1)}, 
 		numtogive           = 2,
 		description         = "transmute_kyno_worm_bone",
 		builder_skill       = "wilson_alchemy_10",
-		atlas               = ModAtlas,
-		image               = "kyno_worm_bone.tex",
 	}
 )
 
@@ -714,7 +646,7 @@ AddRecipe2("hermitshop_kyno_malbatrossfood_blueprint", {Ingredient("messagebottl
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 if HOF_WARLYMEALGRINDER then
-	AddRecipe2("kyno_flour_w", {Ingredient("kyno_wheat", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+	AddRecipe2("kyno_flour_w", {Ingredient("kyno_wheat", 2)}, TECH.FOODPROCESSING_ONE,
 		{
 			nounlock 			= true,
 			no_deconstruction   = true,
@@ -728,7 +660,7 @@ if HOF_WARLYMEALGRINDER then
 		{"CRAFTING_STATION"}
 	)
 
-	AddRecipe2("kyno_spotspice_w", {Ingredient("kyno_spotspice_leaf", 2, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+	AddRecipe2("kyno_spotspice_w", {Ingredient("kyno_spotspice_leaf", 2)}, TECH.FOODPROCESSING_ONE,
 		{
 			nounlock 			= true,
 			no_deconstruction   = true,
@@ -778,13 +710,11 @@ if HOF_WARLYMEALGRINDER then
 			product				= "kyno_oil",
 			builder_tag			= "professionalchef",
 			numtogive			= 3,
-			atlas				= ModAtlas,
-			image				= "kyno_oil.tex",
 		},
 	{"CRAFTING_STATION"}
 	)
 
-	AddRecipe2("kyno_sugar_w", {Ingredient("kyno_sugartree_petals", 1, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+	AddRecipe2("kyno_sugar_w", {Ingredient("kyno_sugartree_petals", 1)}, TECH.FOODPROCESSING_ONE,
 		{
 			nounlock 			= true,
 			no_deconstruction   = true,
@@ -792,7 +722,6 @@ if HOF_WARLYMEALGRINDER then
 			product				= "kyno_sugar",
 			builder_tag         = "professionalchef",
 			numtogive 			= 3,
-			atlas 				= ModAtlas,
 			image 				= "kyno_sugar.tex",
 		},
 		{"CRAFTING_STATION"}
@@ -801,7 +730,7 @@ end
 
 -- Replace the Bucket-o-Poop recipe with ours.
 if HOF_FERTILIZERTWEAK then
-	AllRecipes["fertilizer"].ingredients = {Ingredient("poop", 3), Ingredient("kyno_bucket_empty", 1, ModAtlas)}
+	AllRecipes["fertilizer"].ingredients = {Ingredient("poop", 3), Ingredient("kyno_bucket_empty", 1)}
 end
 
 -- Pearl Tea Shop.
@@ -812,7 +741,7 @@ for i = 1, NUM_TEASHOP_LEVELS do
 	local num_common_petals = NUM_COMMON_PETALS_FOR_TEASHOP_LEVEL[i]
 	local num_rare_petals = NUM_RARE_PETALS_FOR_TEASHOP_LEVEL[i]
 
-	AddRecipe2("kyno_hermitcrabtea_aloe_"..i, {Ingredient("messagebottleempty", 1), Ingredient("kyno_aloe_dried", num_rare_petals, ModAtlas)}, TECH.LOST,
+	AddRecipe2("kyno_hermitcrabtea_aloe_"..i, {Ingredient("messagebottleempty", 1), Ingredient("kyno_aloe_dried", num_rare_petals)}, TECH.LOST,
 		{
 			nounlock            = true,
 			manufactured        = true,
@@ -820,14 +749,12 @@ for i = 1, NUM_TEASHOP_LEVELS do
 			hint_msg            = "NEEDSHERMITCRAB_TEASHOP",
 			product             = "kyno_hermitcrabtea_aloe",
 			sg_state            = "give",
-			atlas               = ModAtlas,
-			image               = "kyno_hermitcrabtea_aloe.tex",
 		},
 		{"CRAFTING_STATION"}
 	)
 
 	AddRecipe2("kyno_hermitcrabtea_sugartree_petals_"..i, {Ingredient("messagebottleempty", 1),
-	Ingredient("kyno_sugartree_petals_dried", num_common_petals, ModAtlas)}, TECH.LOST,
+	Ingredient("kyno_sugartree_petals_dried", num_common_petals)}, TECH.LOST,
 		{
 			nounlock            = true,
 			manufactured        = true,
@@ -835,14 +762,12 @@ for i = 1, NUM_TEASHOP_LEVELS do
 			hint_msg            = "NEEDSHERMITCRAB_TEASHOP",
 			product             = "kyno_hermitcrabtea_sugartree_petals",
 			sg_state            = "give",
-			atlas               = ModAtlas,
-			image               = "kyno_hermitcrabtea_sugartree_petals.tex",
 		},
 		{"CRAFTING_STATION"}
 	)
 
 	AddRecipe2("kyno_hermitcrabtea_icenettles_"..i, {Ingredient("messagebottleempty", 1),
-	Ingredient("kyno_icenettles_dried", num_rare_petals, ModAtlas)}, TECH.LOST,
+	Ingredient("kyno_icenettles_dried", num_rare_petals)}, TECH.LOST,
 		{
 			nounlock            = true,
 			manufactured        = true,
@@ -850,8 +775,6 @@ for i = 1, NUM_TEASHOP_LEVELS do
 			hint_msg            = "NEEDSHERMITCRAB_TEASHOP",
 			product             = "kyno_hermitcrabtea_icenettles",
 			sg_state            = "give",
-			atlas               = ModAtlas,
-			image               = "kyno_hermitcrabtea_icenettles.tex",
 		},
 		{"CRAFTING_STATION"}
 	)
@@ -865,8 +788,6 @@ AddRecipe2("kyno_fishfarmplot_construction", {}, TECH.LOST,
 		testfn              = function(pt) return TheWorld.Map:GetPlatformAtPoint(pt.x, 0, pt.z, 0.5) == nil end,
 		nameoverride        = "kyno_fishfarmplot",
 		description         = "kyno_fishfarmplot_kit",
-		atlas               = ModAtlas,
-		image               = "kyno_fishfarmplot_construction.tex",
 	},
 	{"GARDENING", "FISHING"}
 )
@@ -874,7 +795,7 @@ AddRecipe2("kyno_fishfarmplot_construction", {}, TECH.LOST,
 CONSTRUCTION_PLANS["kyno_fishfarmplot_construction"] =
 {
 	Ingredient("shovel",            1, nil,      nil),
-	Ingredient("kyno_bucket_water", 1, ModAtlas, nil),
+	Ingredient("kyno_bucket_water", 1, nil),
 	Ingredient("rocks",            20, nil,      nil),
 	Ingredient("chum",              5, nil,      nil),
 }
@@ -892,41 +813,33 @@ if TUNING.HOF_WARLYSPICES then
 			nounlock			= true,
 			builder_tag			= "spicemaker",
 			numtogive			= 2,
-			atlas				= ModAtlas,
-			image				= "spice_fed.tex",
 		},
 		{"CRAFTING_STATION"}
 	)
 
-	AddRecipe2("spice_cure", {Ingredient("kyno_spotspice", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+	AddRecipe2("spice_cure", {Ingredient("kyno_spotspice", 3)}, TECH.FOODPROCESSING_ONE,
 		{
 			nounlock			= true,
 			builder_tag			= "spicemaker",
 			numtogive			= 2,
-			atlas				= ModAtlas,
-			image				= "spice_cure.tex",
 		},
 		{"CRAFTING_STATION"}
 	)
 
-	AddRecipe2("spice_mind", {Ingredient("kyno_sugartree_petals", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+	AddRecipe2("spice_mind", {Ingredient("kyno_sugartree_petals", 3)}, TECH.FOODPROCESSING_ONE,
 		{
 			nounlock            = true,
 			builder_tag         = "spicemaker",
 			numtogive           = 2,
-			atlas               = ModAtlas,
-			image               = "spice_mind.tex",
 		},
 		{"CRAFTING_STATION"}
 	)
 
-	AddRecipe2("spice_cold", {Ingredient("kyno_icenettles", 3, ModAtlas)}, TECH.FOODPROCESSING_ONE,
+	AddRecipe2("spice_cold", {Ingredient("kyno_icenettles", 3)}, TECH.FOODPROCESSING_ONE,
 		{
 			nounlock            = true,
 			builder_tag         = "spicemaker",
 			numtogive           = 2,
-			atlas               = ModAtlas,
-			image               = "spice_cold.tex",
 		},
 		{"CRAFTING_STATION"}
 	)
@@ -936,8 +849,6 @@ if TUNING.HOF_WARLYSPICES then
 			nounlock            = true,
 			builder_tag         = "spicemaker",
 			numtogive           = 2,
-			atlas               = ModAtlas,
-			image               = "spice_fire.tex",
 		},
 		{"CRAFTING_STATION"}
 	)

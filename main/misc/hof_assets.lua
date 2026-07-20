@@ -1,5 +1,5 @@
-local _G      = GLOBAL
-local require = _G.require
+local _G              = GLOBAL
+local resolvefilepath = _G.resolvefilepath
 
 PreloadAssets =
 {
@@ -907,24 +907,9 @@ local HOF_ICONS =
 	-- "succulent_picked",
 }
 
--- Dirty fix for icons not appearing on Mini Signs.
 for k, v in pairs(HOF_ICONS) do
-	if _G.TheNet:GetIsMasterSimulation() then
-		local icon_atlas = MODROOT.."images/inventoryimages/hof_inventoryimages.xml"
-
-		for _, icon in pairs({v}) do
-			local icon_name = icon
-
-			AddPrefabPostInit(icon_name, function(inst)
-				if inst.components.inventoryitem ~= nil then
-					inst.components.inventoryitem.imagename = icon_name
-					inst.components.inventoryitem.atlasname = icon_atlas
-				end
-			end)
-		end
-	end
-
-	RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", v..".tex")
+	RegisterInventoryItemAtlas(resolvefilepath("images/inventoryimages/hof_inventoryimages.xml"), v..".tex")
+	RegisterInventoryItemAtlas(resolvefilepath("images/inventoryimages/hof_inventoryimages.xml"), _G.hash(v..".tex"))
 end
 
 -- Icons for the Scrapbook.
@@ -1051,43 +1036,4 @@ local HOF_SCRAPBOOK_ICONS =
 
 for i, v in ipairs(HOF_SCRAPBOOK_ICONS) do
 	RegisterScrapbookIconAtlas("images/scrapbookimages/hof_scrapbookimages.xml", v..".tex")
-end
-
--- Modded Skins Assets.
-local HOF_SKIN_ICONS =
-{
-	"ms_kyno_itemshowcaser_cakestand",
-	"ms_kyno_itemshowcaser_fridge",
-	"ms_kyno_itemshowcaser_icebox",
-	"ms_kyno_itemshowcaser_marble",
-	"ms_kyno_itemshowcaser_marbledome",
-	"ms_kyno_itemshowcaser_quagmire",
-	"ms_kyno_itemshowcaser_traystand",
-	"ms_kyno_itemshowcaser_yotp",
-}
-
-for k, v in pairs(HOF_SKIN_ICONS) do
-	RegisterInventoryItemAtlas("images/inventoryimages/hof_inventoryimages.xml", v..".tex")
-end
-
-local _GetInventoryItemAtlas = _G.GetInventoryItemAtlas
-_G.GetInventoryItemAtlas = function(name, ...)
-	local myatlas = _G.resolvefilepath("images/inventoryimages/hof_inventoryimages.xml")
-
-	if _G.TheSim:AtlasContains(myatlas, name) then
-		return myatlas
-	end
-
-	return _GetInventoryItemAtlas(name, ...)
-end
-
-local _GetScrapbookIconAtlas_Internal = _G.GetScrapbookIconAtlas_Internal
-_G.GetScrapbookIconAtlas_Internal = function(name, ...)
-	local myatlas = _G.resolvefilepath("images/scrapbookimages/hof_scrapbookimages.xml")
-
-	if _G.TheSim:AtlasContains(myatlas, name) then
-		return myatlas
-	end
-
-	return _GetScrapbookIconAtlas_Internal(name, ...)
 end

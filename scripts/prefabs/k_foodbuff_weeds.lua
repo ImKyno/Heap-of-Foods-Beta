@@ -28,7 +28,7 @@ end
 
 local function OnDetached(inst, target)
 	if target ~= nil and target:IsValid() and target.components.temperature ~= nil then
-		target.components.temperature:RemoveModifier("firenettle_toxin")
+		target.components.temperature:RemoveModifier("kyno_icenettle_toxin")
 
 		if target.components.talker and target:HasTag("player") then
 			target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_ICENETTLE_TOXIN_END"))

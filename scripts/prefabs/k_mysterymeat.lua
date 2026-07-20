@@ -56,16 +56,13 @@ local function fn()
 	end
 
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	
 	inst:AddComponent("stackable")
     inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
 	
 	inst:AddComponent("fertilizerresearchable")
 	inst.components.fertilizerresearchable:SetResearchFn(fertilizerresearchfn)
-		
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_mysterymeat"
 	
 	inst:AddComponent("fertilizer")
 	inst.components.fertilizer.fertilizervalue = TUNING.POOP_FERTILIZE

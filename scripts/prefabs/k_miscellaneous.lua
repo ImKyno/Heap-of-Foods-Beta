@@ -53,8 +53,6 @@ local function peachfn()
 	inst:AddComponent("inspectable")
 
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_goldenapple" -- Not wasting an icon slot for this...
 	inst.components.inventoryitem:SetSinks(true)
 
 	inst:AddComponent("stackable")

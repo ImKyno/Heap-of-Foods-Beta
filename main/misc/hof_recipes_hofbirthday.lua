@@ -11,7 +11,6 @@ local RecipeFilter         = require("recipes_filter")
 local DefaultAtlas         = "images/inventoryimages.xml"
 local DefaultAtlas1        = "images/inventoryimages1.xml"
 local DefaultAtlas2        = "images/inventoryimages2.xml"
-local ModAtlas             = "images/inventoryimages/hof_inventoryimages.xml"
 local CraftingFilterAtlas  = "images/tabimages/hof_tabimages.xml"
 
 -- Anniversary Event.
@@ -19,8 +18,6 @@ AddRecipe2("kyno_hofbirthday_5hat", {}, TECH.HOFBIRTHDAY,
 	{
 		hint_msg           = "NEEDSHOFBIRTHDAY",
 		description        = "kyno_hofbirthday_hat",
-		atlas              = ModAtlas,
-		image              = "kyno_hofbirthday_5hat.tex",
 	},
 	{"SPECIAL_EVENT", "CLOTHING"}
 )
@@ -29,8 +26,6 @@ AddRecipe2("kyno_hofbirthday_candle", {Ingredient("kyno_hofbirthday_cheer", 1), 
 	{
 		numtogive           = 5,
 		hint_msg            = "NEEDSHOFBIRTHDAY",
-		atlas               = ModAtlas,
-		image               = "kyno_hofbirthday_candle.tex",
 	},
 	{"SPECIAL_EVENT", "LIGHT"}
 )
@@ -40,8 +35,6 @@ AddRecipe2("kyno_hofbirthday_cake_empty_construction", {Ingredient("kyno_hofbirt
 		min_spacing         = 2,
 		placer              = "kyno_hofbirthday_cake_placer",
 		hint_msg            = "NEEDSHOFBIRTHDAY",
-		atlas               = ModAtlas,
-		image               = "kyno_hofbirthday_cake.tex",
 	},
 	{"SPECIAL_EVENT", "COOKING"}
 )
@@ -51,8 +44,6 @@ AddRecipe2("kyno_hofbirthday_balloons", {Ingredient("kyno_hofbirthday_cheer", 3)
 		min_spacing         = 1,
 		placer              = "kyno_hofbirthday_balloons_placer",
 		hint_msg            = "NEEDSHOFBIRTHDAY",
-		atlas               = ModAtlas,
-		image               = "kyno_hofbirthday_balloons.tex",
 	},
 	{"SPECIAL_EVENT", "STRUCTURES", "DECOR"}
 )
@@ -61,8 +52,6 @@ AddRecipe2("kyno_hofbirthday_popcornmachine", {Ingredient("kyno_hofbirthday_chee
 Ingredient("boards", 3)}, TECH.HOFBIRTHDAY,
 	{
 		hint_msg            = "NEEDSHOFBIRTHDAY",
-		atlas               = ModAtlas,
-		image               = "kyno_hofbirthday_popcornmachine.tex",
 	},
 	{"SPECIAL_EVENT", "COOKING", "STRUCTURES"}
 )
@@ -71,18 +60,18 @@ Ingredient("boards", 3)}, TECH.HOFBIRTHDAY,
 -- but well, Klei doesn't have a proper system for it. 🤡🤡
 CONSTRUCTION_PLANS["kyno_hofbirthday_cake_empty_construction"] =
 {
-	Ingredient("kyno_flour",              5, ModAtlas, nil),
-	Ingredient("bird_egg",                5, nil,      nil),
-	Ingredient("kyno_milk_beefalo",       2, ModAtlas, nil),
-	Ingredient("butter_beefalo",          1, ModAtlas, nil),
+	Ingredient("kyno_flour",              5, nil),
+	Ingredient("bird_egg",                5, nil, nil),
+	Ingredient("kyno_milk_beefalo",       2, nil),
+	Ingredient("butter_beefalo",          1, nil),
 }
 
 CONSTRUCTION_PLANS["kyno_hofbirthday_cake_construction"] =
 {
-	Ingredient("kyno_flour",              5, ModAtlas, nil),
-	Ingredient("bird_egg",                5, nil,      nil),
-	Ingredient("kyno_milk_beefalo",       3, ModAtlas, nil),
-	Ingredient("kyno_hofbirthday_cheer",  1, ModAtlas, nil),
+	Ingredient("kyno_flour",              5, nil),
+	Ingredient("bird_egg",                5, nil, nil),
+	Ingredient("kyno_milk_beefalo",       3, nil),
+	Ingredient("kyno_hofbirthday_cheer",  1, nil),
 }
 
 AddDeconstructRecipe("kyno_hofbirthday_cake_construction", {Ingredient("kyno_flour", 5),
@@ -90,10 +79,10 @@ Ingredient("bird_egg", 5), Ingredient("kyno_milk_beefalo", 2), Ingredient("butte
 
 CONSTRUCTION_PLANS["kyno_hofbirthday_cake_stage1_construction"] =
 {
-	Ingredient("kyno_sugar",              5, ModAtlas, nil),
-	Ingredient("kyno_lotus_flower",       5, ModAtlas, nil),
-	Ingredient("kyno_salt",               5, ModAtlas, nil),
-	Ingredient("kyno_hofbirthday_cheer",  1, ModAtlas, nil),
+	Ingredient("kyno_sugar",              5, nil),
+	Ingredient("kyno_lotus_flower",       5, nil),
+	Ingredient("kyno_salt",               5, nil),
+	Ingredient("kyno_hofbirthday_cheer",  1, nil),
 }
 
 AddDeconstructRecipe("kyno_hofbirthday_cake_stage1_construction", {Ingredient("kyno_flour", 5),
@@ -101,10 +90,10 @@ Ingredient("bird_egg", 5), Ingredient("kyno_milk_beefalo", 3), Ingredient("kyno_
 
 CONSTRUCTION_PLANS["kyno_hofbirthday_cake_stage2_construction"] =
 {
-	Ingredient("kyno_flour",              5, ModAtlas, nil),
-	Ingredient("bird_egg",                5, nil,      nil),
-	Ingredient("kyno_milk_beefalo",       2, ModAtlas, nil),
-	Ingredient("butter_beefalo",          1, ModAtlas, nil),
+	Ingredient("kyno_flour",              5, nil),
+	Ingredient("bird_egg",                5, nil, nil),
+	Ingredient("kyno_milk_beefalo",       2, nil),
+	Ingredient("butter_beefalo",          1, nil),
 }
 
 AddDeconstructRecipe("kyno_hofbirthday_cake_stage2_construction", {Ingredient("kyno_sugar", 5),
@@ -112,10 +101,10 @@ Ingredient("kyno_lotus_flower", 5), Ingredient("kyno_salt", 5), Ingredient("kyno
 
 CONSTRUCTION_PLANS["kyno_hofbirthday_cake_stage3_construction"] =
 {
-	Ingredient("kyno_sugar",              5, ModAtlas, nil),
-	Ingredient("kyno_pineapple",          5, ModAtlas, nil),
-	Ingredient("kyno_salt",               5, ModAtlas, nil),
-	Ingredient("kyno_hofbirthday_cheer",  1, ModAtlas, nil),
+	Ingredient("kyno_sugar",              5, nil),
+	Ingredient("kyno_pineapple",          5, nil),
+	Ingredient("kyno_salt",               5, nil),
+	Ingredient("kyno_hofbirthday_cheer",  1, nil),
 }
 
 AddDeconstructRecipe("kyno_hofbirthday_cake_stage3_construction", {Ingredient("kyno_flour", 5),
@@ -123,10 +112,10 @@ Ingredient("bird_egg", 5), Ingredient("kyno_milk_beefalo", 2), Ingredient("butte
 
 CONSTRUCTION_PLANS["kyno_hofbirthday_cake_stage4_construction"] =
 {
-	Ingredient("kyno_flour",              5, ModAtlas, nil),
-	Ingredient("bird_egg",                5, nil,      nil),
-	Ingredient("kyno_milk_beefalo",       2, ModAtlas, nil),
-	Ingredient("butter_beefalo",          1, ModAtlas, nil),
+	Ingredient("kyno_flour",              5, nil),
+	Ingredient("bird_egg",                5, nil, nil),
+	Ingredient("kyno_milk_beefalo",       2, nil),
+	Ingredient("butter_beefalo",          1, nil),
 }
 
 AddDeconstructRecipe("kyno_hofbirthday_cake_stage4_construction", {Ingredient("kyno_sugar", 5),
@@ -134,10 +123,10 @@ Ingredient("kyno_pineapple", 5), Ingredient("kyno_salt", 5), Ingredient("kyno_ho
 
 CONSTRUCTION_PLANS["kyno_hofbirthday_cake_stage5_construction"] =
 {
-	Ingredient("kyno_sugar",              5, ModAtlas, nil),
-	Ingredient("chocolate_black",         5, ModAtlas, nil),
-	Ingredient("kyno_salt",               5, ModAtlas, nil),
-	Ingredient("kyno_hofbirthday_candle", 5, ModAtlas, nil),
+	Ingredient("kyno_sugar",              5, nil),
+	Ingredient("chocolate_black",         5, nil),
+	Ingredient("kyno_salt",               5, nil),
+	Ingredient("kyno_hofbirthday_candle", 5, nil),
 }
 
 AddDeconstructRecipe("kyno_hofbirthday_cake_stage5_construction", {Ingredient("kyno_flour", 5),

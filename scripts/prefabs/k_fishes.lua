@@ -156,7 +156,6 @@ local function commonfn(bank, build, char_anim_build, data)
 	inst.components.lootdropper:SetLoot(data.loot)
 
     inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
     inst.components.inventoryitem:SetOnDroppedFn(ondropped)
     inst.components.inventoryitem:SetOnPutInInventoryFn(onpickup)
 	inst.components.inventoryitem:SetSinks(true)
@@ -237,7 +236,6 @@ local function cookedfn(bank, build, anim, data)
     inst.components.perishable.onperishreplacement = data.perish_product
 
     inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem:SetSinks(true)
 
     inst:AddComponent("edible")

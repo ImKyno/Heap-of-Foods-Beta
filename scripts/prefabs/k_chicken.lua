@@ -344,7 +344,6 @@ local function commonfn(bank, build, loottable)
 	inst.components.slaughterable:MakeFearable()
 	
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.nobounce = true
 	inst.components.inventoryitem.longpickup = true
 	inst.components.inventoryitem.canbepickedup = false

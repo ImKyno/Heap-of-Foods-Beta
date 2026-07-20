@@ -438,8 +438,6 @@ local function fn(food_def)
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetSinks(food_def.sinks)
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = food_def.name
 
 	if food_def.throwable ~= nil then
 		inst:AddComponent("weapon")

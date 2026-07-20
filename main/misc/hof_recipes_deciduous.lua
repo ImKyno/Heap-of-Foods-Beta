@@ -11,11 +11,10 @@ local RecipeFilter         = require("recipes_filter")
 local DefaultAtlas         = "images/inventoryimages.xml"
 local DefaultAtlas1        = "images/inventoryimages1.xml"
 local DefaultAtlas2        = "images/inventoryimages2.xml"
-local ModAtlas             = "images/inventoryimages/hof_inventoryimages.xml"
 local CraftingFilterAtlas  = "images/tabimages/hof_tabimages.xml"
 
 -- Partitio The Merchant.
-AddRecipe2("deciduoustrader_kyno_plantbooster_growth", {Ingredient("kyno_pigcoin1", 5, ModAtlas)}, TECH.LOST,
+AddRecipe2("deciduoustrader_kyno_plantbooster_growth", {Ingredient("kyno_pigcoin1", 5)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -26,14 +25,12 @@ AddRecipe2("deciduoustrader_kyno_plantbooster_growth", {Ingredient("kyno_pigcoin
 		description         = "kyno_plantbooster_growth_d",
 		sg_state            = "give",
 		product             = "kyno_plantbooster_growth",
-		atlas               = ModAtlas,
-		image               = "kyno_plantbooster_growth.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("deciduoustrader_kyno_plantbooster_vitality", {Ingredient("kyno_pigcoin1", 10, ModAtlas),
-Ingredient("kyno_pigcoin2", 5, ModAtlas)}, TECH.LOST,
+AddRecipe2("deciduoustrader_kyno_plantbooster_vitality", {Ingredient("kyno_pigcoin1", 10),
+Ingredient("kyno_pigcoin2", 5)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -44,13 +41,11 @@ Ingredient("kyno_pigcoin2", 5, ModAtlas)}, TECH.LOST,
 		description         = "kyno_plantbooster_vitality_d",
 		sg_state            = "give",
 		product             = "kyno_plantbooster_vitality",
-		atlas               = ModAtlas,
-		image               = "kyno_plantbooster_vitality.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("deciduoustrader_kyno_plantbooster_yield", {Ingredient("kyno_pigcoin3", 5, ModAtlas)}, TECH.LOST,
+AddRecipe2("deciduoustrader_kyno_plantbooster_yield", {Ingredient("kyno_pigcoin3", 5)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -61,14 +56,12 @@ AddRecipe2("deciduoustrader_kyno_plantbooster_yield", {Ingredient("kyno_pigcoin3
 		description         = "kyno_plantbooster_yield_d",
 		sg_state            = "give",
 		product             = "kyno_plantbooster_yield",
-		atlas               = ModAtlas,
-		image               = "kyno_plantbooster_yield.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("deciduoustrader_kyno_plantbooster_supergrowth", {Ingredient("kyno_pigcoin2", 10, ModAtlas),
-Ingredient("kyno_pigcoin3", 5, ModAtlas)}, TECH.LOST,
+AddRecipe2("deciduoustrader_kyno_plantbooster_supergrowth", {Ingredient("kyno_pigcoin2", 10),
+Ingredient("kyno_pigcoin3", 5)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -79,13 +72,11 @@ Ingredient("kyno_pigcoin3", 5, ModAtlas)}, TECH.LOST,
 		description         = "kyno_plantbooster_supergrowth_d",
 		sg_state            = "give",
 		product             = "kyno_plantbooster_supergrowth",
-		atlas               = ModAtlas,
-		image               = "kyno_plantbooster_supergrowth.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("deciduoustrader_kyno_white_cap", {Ingredient("kyno_pigcoin1", 1, ModAtlas)}, TECH.LOST,
+AddRecipe2("deciduoustrader_kyno_white_cap", {Ingredient("kyno_pigcoin1", 1)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -96,13 +87,11 @@ AddRecipe2("deciduoustrader_kyno_white_cap", {Ingredient("kyno_pigcoin1", 1, Mod
 		description         = "kyno_white_cap_d",
 		sg_state            = "give",
 		product             = "kyno_white_cap",
-		atlas               = ModAtlas,
-		image               = "kyno_white_cap.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("deciduoustrader_kyno_truffles", {Ingredient("kyno_pigcoin2", 1, ModAtlas)}, TECH.LOST,
+AddRecipe2("deciduoustrader_kyno_truffles", {Ingredient("kyno_pigcoin2", 1)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -113,13 +102,11 @@ AddRecipe2("deciduoustrader_kyno_truffles", {Ingredient("kyno_pigcoin2", 1, ModA
 		description         = "kyno_truffles_d",
 		sg_state            = "give",
 		product             = "kyno_truffles",
-		atlas               = ModAtlas,
-		image               = "kyno_truffles.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("deciduoustrader_kyno_seedsbag", {Ingredient("kyno_pigcoin1", 15, ModAtlas), Ingredient("kyno_pigcoin2", 10, ModAtlas)}, TECH.LOST,
+AddRecipe2("deciduoustrader_kyno_seedsbag", {Ingredient("kyno_pigcoin1", 15), Ingredient("kyno_pigcoin2", 10)}, TECH.LOST,
 	{
 		limitedamount       = true,
 		nounlock            = true,
@@ -129,8 +116,6 @@ AddRecipe2("deciduoustrader_kyno_seedsbag", {Ingredient("kyno_pigcoin1", 15, Mod
 		description         = "kyno_seedsbag_d",
 		sg_state            = "give",
 		product             = "kyno_seedsbag",
-		atlas               = ModAtlas,
-		image               = "kyno_seedsbag_full.tex",
 	},
 	{"CRAFTING_STATION"}
 )
@@ -139,8 +124,8 @@ AddDeconstructRecipe("kyno_seedsbag", {}) -- Needed for getting alterguardianhat
 
 CONSTRUCTION_PLANS["kyno_deciduousforest_shop"] =
 {
-	Ingredient("kyno_truffles",          20, ModAtlas, nil),
-	Ingredient("cutstone",               10, nil,      nil),
-	Ingredient("boards",                  5, nil,      nil),
-	Ingredient("lantern",                 1, nil,      nil),
+	Ingredient("kyno_truffles", 20, nil),
+	Ingredient("cutstone",      10, nil, nil),
+	Ingredient("boards",        5,  nil, nil),
+	Ingredient("lantern",       1,  nil, nil),
 }

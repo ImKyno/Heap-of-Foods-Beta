@@ -2,16 +2,16 @@ local assets =
 {
 	Asset("ANIM", "anim/jellybug.zip"),
 	Asset("ANIM", "anim/jellybug_cooked.zip"),
-	
+
 	Asset("ANIM", "anim/slugbug.zip"),
-	Asset("ANIM", "anim/slugbug_cooked.zip"), 
-	
+	Asset("ANIM", "anim/slugbug_cooked.zip"),
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
-local prefabs = 
+local prefabs =
 {
 	"kyno_beanbugs_cooked",
 	"kyno_gummybug_cooked",
@@ -30,7 +30,7 @@ local function fn()
 	inst.AnimState:SetBank("jellybug")
 	inst.AnimState:SetBuild("jellybug")
 	inst.AnimState:PlayAnimation("idle", true)
-	
+
 	inst:AddTag("veggie")
 	inst:AddTag("cookable")
 	inst:AddTag("slugbug_fishfarmbait")
@@ -40,11 +40,12 @@ local function fn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
-	
+
 	inst:AddComponent("tradable")
+	inst:AddComponent("inventoryitem")
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_BEANBUGS_HEALTH
@@ -59,10 +60,6 @@ local function fn()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_beanbugs"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_beanbugs_cooked"
@@ -87,7 +84,7 @@ local function fn_cooked()
 	inst.AnimState:SetBank("jellybug_cooked")
 	inst.AnimState:SetBuild("jellybug_cooked")
 	inst.AnimState:PlayAnimation("cooked", true)
-	
+
 	inst:AddTag("veggie")
 
 	inst.entity:SetPristine()
@@ -95,8 +92,9 @@ local function fn_cooked()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -105,18 +103,14 @@ local function fn_cooked()
 	inst.components.edible.hungervalue = TUNING.KYNO_BEANBUGS_COOKED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_BEANBUGS_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
-	
+
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
-	
+
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_beanbugs_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
@@ -148,10 +142,11 @@ local function gumfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
-	
+
 	inst:AddComponent("tradable")
 
    	inst:AddComponent("edible")
@@ -167,10 +162,6 @@ local function gumfn()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_gummybug"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_gummybug_cooked"
@@ -195,7 +186,7 @@ local function gumfn_cooked()
 	inst.AnimState:SetBank("slugbug_cooked")
 	inst.AnimState:SetBuild("slugbug_cooked")
 	inst.AnimState:PlayAnimation("cooked", true)
-	
+
 	inst:AddTag("veggie")
 
 	inst.entity:SetPristine()
@@ -203,8 +194,9 @@ local function gumfn_cooked()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -213,18 +205,14 @@ local function gumfn_cooked()
 	inst.components.edible.hungervalue = TUNING.KYNO_BEANBUGS_COOKED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_BEANBUGS_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.VEGGIE
-	
+
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
-	
+
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_gummybug_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

@@ -125,8 +125,6 @@ local function fn()
 	
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnRainImmunity)
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_spoiled_fish_large"
 	
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.SPOILED_HEALTH

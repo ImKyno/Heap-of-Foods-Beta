@@ -43,9 +43,7 @@ local function main()
 	
 	inst:AddComponent("slicer")
     inst:AddComponent("inspectable")
-
     inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	
 	inst:ListenForEvent("on_landed", OnLanded)
 

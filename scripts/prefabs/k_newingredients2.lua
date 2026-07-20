@@ -33,10 +33,7 @@ local function tuberfn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_cavetuber"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_cavetuber_cooked"
@@ -86,10 +83,7 @@ local function tuber_cookedfn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_cavetuber_cooked"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
@@ -140,10 +134,7 @@ local function tuber_bloomingfn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_cavetuber_blooming"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_cavetuber_blooming_cooked"
@@ -193,10 +184,7 @@ local function tuber_blooming_cookedfn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_cavetuber_blooming_cooked"
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM

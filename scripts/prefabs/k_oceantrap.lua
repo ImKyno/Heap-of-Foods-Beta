@@ -145,8 +145,6 @@ local function fn()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.nobounce = true
 	inst.components.inventoryitem:SetOnPickupFn(OnPickup)
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_oceantrap"
 	
 	inst:AddComponent("finiteuses")
 	inst.components.finiteuses:SetMaxUses(TUNING.KYNO_OCEANTRAP_USES)

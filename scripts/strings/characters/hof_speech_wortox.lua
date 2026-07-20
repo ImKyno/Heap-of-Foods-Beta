@@ -27,7 +27,7 @@ WORTOX.ANNOUNCE_KYNO_FISHINGBUFF_END = "Fishing powers wears off."
 WORTOX.ANNOUNCE_KYNO_SANITYRATEBUFF_START = "Mind goes numb!"
 WORTOX.ANNOUNCE_KYNO_SANITYRATEBUFF_END = "Soothing has ended."
 
-WORTOX.ANNOUNCE_KYNO_EATERBUFF_START = "Mortal food is very soft to eat now1"
+WORTOX.ANNOUNCE_KYNO_EATERBUFF_START = "Mortal food is very soft to eat now!"
 WORTOX.ANNOUNCE_KYNO_EATERBUFF_END = "Back to normal plans of eating. Hyuyu!"
 
 WORTOX.ANNOUNCE_KYNO_WORMBUFF_START = "They won't see it coming!"

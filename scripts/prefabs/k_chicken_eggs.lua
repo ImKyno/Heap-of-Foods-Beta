@@ -421,6 +421,7 @@ local function chicken_eggfn()
 	inst._eggstyle = nil
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	
 	inst:AddComponent("tradable")
@@ -441,10 +442,6 @@ local function chicken_eggfn()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_chicken_egg"
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_chicken_egg_cooked"
@@ -525,8 +522,6 @@ local function chicken_egg_giantfn()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_chicken_egg_large"
 	
 	inst:AddComponent("luckitem")
 	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_TINY)
@@ -622,8 +617,6 @@ local function chicken_egg_crackedfn()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_chicken_egg_large_cracked"
 	
 	inst:AddComponent("luckitem")
 	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_TINY)
@@ -670,6 +663,7 @@ local function chicken_egg_cookedfn()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	
 	inst:AddComponent("tradable")
@@ -689,10 +683,6 @@ local function chicken_egg_cookedfn()
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_chicken_egg_cooked"
 
 	MakeHauntableLaunchAndPerish(inst)
 

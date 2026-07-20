@@ -46,6 +46,7 @@ local function beefalofn()
 	
 	inst:AddComponent("tradable")
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_MILK_BEEFALO_HEALTH
@@ -60,10 +61,6 @@ local function beefalofn()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_milk_beefalo"
 
 	MakeHauntableLaunchAndPerish(inst)
 
@@ -99,6 +96,7 @@ local function koalefantfn()
 	
 	inst:AddComponent("tradable")
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 
    	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_MILK_KOALEFANT_HEALTH
@@ -113,10 +111,6 @@ local function koalefantfn()
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_milk_koalefant"
 
 	MakeHauntableLaunchAndPerish(inst)
 

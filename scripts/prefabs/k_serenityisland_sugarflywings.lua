@@ -38,6 +38,7 @@ local function fn()
 	inst:RemoveTag("_named")
 	
 	inst:AddComponent("inspectable")
+    inst:AddComponent("inventoryitem")
     inst:AddComponent("tradable")
 	
 	inst:AddComponent("named")
@@ -52,10 +53,6 @@ local function fn()
 
     inst:AddComponent("stackable")
     inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-	
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_sugarflywings"
 
     inst:AddComponent("perishable")
     inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)

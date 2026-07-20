@@ -133,6 +133,7 @@ local function fn()
 	inst.onunequipvanity = OnUnequipVanity
 		
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("tradable")
 	inst:AddComponent("snowmandecor")
 	
@@ -148,10 +149,6 @@ local function fn()
 	inst.components.fueled:InitializeFuelLevel(TUNING.KYNO_SAMMYHAT_PERISHTIME)
 	inst.components.fueled:SetDepletedFn(inst.Remove)
 	inst.components.fueled.no_sewing = false
-	
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_sammyhat"
 	
 	inst:AddComponent("equippable")
 	inst.components.equippable.equipslot = EQUIPSLOTS.HEAD

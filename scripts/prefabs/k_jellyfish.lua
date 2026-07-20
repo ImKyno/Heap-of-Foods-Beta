@@ -319,8 +319,6 @@ local function jellyfish()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_jellyfish"
 	
 	inst:AddComponent("fishfarmable")
 	inst.components.fishfarmable:SetTimes(TUNING.JELLYFISH_ROETIME, TUNING.JELLYFISH_BABYTIME)
@@ -401,8 +399,6 @@ local function jellyfish_dead()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnDroppedFn(OnDroppedDead)
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_jellyfish_dead"
 
 	MakeHauntableLaunchAndPerish(inst)
 
@@ -438,6 +434,7 @@ local function jellyfish_cooked()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
@@ -457,10 +454,6 @@ local function jellyfish_cooked()
 	
 	inst:AddComponent("stackable")
     inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_jellyfish_cooked"
 
 	MakeHauntableLaunchAndPerish(inst)
 

@@ -85,6 +85,7 @@ local function fn()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 	inst:AddComponent("lootdropper")
@@ -99,10 +100,6 @@ local function fn()
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_oaktree_pod_cooked"
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_oaktree_pod"
 	
 	inst:AddComponent("deployable")
 	inst.components.deployable:SetDeployMode(DEPLOYMODE.PLANT)
@@ -141,6 +138,7 @@ local function fn_cooked()
 	end
 	
 	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
 	inst:AddComponent("tradable")
 
@@ -157,10 +155,6 @@ local function fn_cooked()
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_oaktree_pod_cooked"
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)

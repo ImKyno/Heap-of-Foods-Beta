@@ -42,7 +42,6 @@ local function MakeSpice(name, spicedata)
         inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 
         inst:AddComponent("inventoryitem")
-        inst.components.inventoryitem.atlasname = spicedata.imageatlas..".xml"
         inst.components.inventoryitem:ChangeImageName(spicedata.imagename)
 
         MakeHauntableLaunch(inst)

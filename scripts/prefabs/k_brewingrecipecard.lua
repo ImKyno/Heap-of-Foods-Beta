@@ -79,13 +79,10 @@ local function fn()
 	inst:AddComponent("erasablepaper")
 	inst:AddComponent("tradable")
 	inst:AddComponent("learnablerecipecard")
+	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getspecialdescription = GetDesc
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_brewingrecipecard"
 
 	inst:AddComponent("fuel")
 	inst.components.fuel.fuelvalue = TUNING.SMALL_FUEL

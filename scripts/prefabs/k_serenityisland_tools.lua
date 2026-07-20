@@ -6,13 +6,13 @@ local assets =
 	Asset("ANIM", "anim/quagmire_sapbucket.zip"),
 	Asset("ANIM", "anim/quagmire_crab_trap.zip"),
 	Asset("ANIM", "anim/quagmire_slaughtertool.zip"),
-	
+
 	Asset("ANIM", "anim/kyno_repairkit.zip"),
-		
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
-	
+
 	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 }
@@ -22,32 +22,32 @@ local prefabs =
 	"kyno_saltrack_installer",
 	"kyno_sapbucket_installer",
 	"kyno_crabtrap_installer",
-	
+
 	"kyno_slaughtertool",
 }
 
 local sounds =
 {
-    close = "dontstarve/common/trap_close",
-    rustle = "dontstarve/common/trap_rustle",
+	close = "dontstarve/common/trap_close",
+	rustle = "dontstarve/common/trap_rustle",
 }
 
 local function OnHarvested(inst)
-    if inst.components.finiteuses then
-        inst.components.finiteuses:Use(1)
-    end
+	if inst.components.finiteuses then
+		inst.components.finiteuses:Use(1)
+	end
 end
 
 local function GetSlaughterActionString(inst, target)
-    local t = GetTime()
-	
-    if target ~= inst._lasttarget or inst._lastactionstr == nil or inst._actionresettime < t then
-        inst._lastactionstr = GetRandomItem(STRINGS.ACTIONS.SLAUGHTER2)
-        inst._lasttarget = target
-    end
-	
-    inst._actionresettime = t + .1
-    return inst._lastactionstr
+	local t = GetTime()
+
+	if target ~= inst._lasttarget or inst._lastactionstr == nil or inst._actionresettime < t then
+		inst._lastactionstr = GetRandomItem(STRINGS.ACTIONS.SLAUGHTER2)
+		inst._lasttarget = target
+	end
+
+	inst._actionresettime = t + .1
+	return inst._lastactionstr
 end
 
 local function rackfn()
@@ -76,20 +76,17 @@ local function rackfn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("cookwareinstallable")
-		
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_saltrack_installer"
-	
-	inst:AddComponent("stackable")
-    inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
 
-    inst:AddComponent("fuel")
-    inst.components.fuel.fuelvalue = TUNING.MED_FUEL
-	
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
+
+	inst:AddComponent("fuel")
+	inst.components.fuel.fuelvalue = TUNING.MED_FUEL
+
 	MakeSmallBurnable(inst, TUNING.LARGE_BURNTIME)
-    MakeSmallPropagator(inst)
-    MakeHauntableLaunchAndIgnite(inst)
+	MakeSmallPropagator(inst)
+	MakeHauntableLaunchAndIgnite(inst)
 
 	return inst
 end
@@ -120,13 +117,10 @@ local function bucketfn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("cookwareinstallable")
-	
-	inst:AddComponent("stackable")
-    inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
-		
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_sapbucket_installer"
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
 
 	return inst
 end
@@ -138,7 +132,7 @@ local function trapfn()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
-	
+
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_crabtrap_installer.tex")
 
@@ -148,7 +142,7 @@ local function trapfn()
 	inst.AnimState:SetBank("quagmire_crab_trap")
 	inst.AnimState:SetBuild("quagmire_crab_trap")
 	inst.AnimState:PlayAnimation("idle")
-	
+
 	inst.AnimState:OverrideSymbol("shell", "quagmire_pebble_crab", "shell")
 
 	inst:AddTag("trap")
@@ -159,31 +153,28 @@ local function trapfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst.sounds = sounds
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("tradable")
-		
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_crabtrap_installer"
-	
+
 	inst:AddComponent("finiteuses")
-    inst.components.finiteuses:SetMaxUses(TUNING.KYNO_CRABTRAP_USES)
-    inst.components.finiteuses:SetUses(TUNING.KYNO_CRABTRAP_USES)
-    inst.components.finiteuses:SetOnFinished(inst.Remove)
-	
+	inst.components.finiteuses:SetMaxUses(TUNING.KYNO_CRABTRAP_USES)
+	inst.components.finiteuses:SetUses(TUNING.KYNO_CRABTRAP_USES)
+	inst.components.finiteuses:SetOnFinished(inst.Remove)
+
 	inst:AddComponent("trap")
-    inst.components.trap.targettag = "serenitycrab"
-    inst.components.trap:SetOnHarvestFn(OnHarvested)
-    inst.components.trap.baitsortorder = 1
-	
+	inst.components.trap.targettag = "serenitycrab"
+	inst.components.trap:SetOnHarvestFn(OnHarvested)
+	inst.components.trap.baitsortorder = 1
+
 	inst:SetStateGraph("SGpebblecrabtrap")
-	
+
 	MakeSmallBurnable(inst, TUNING.LARGE_BURNTIME)
-    MakeSmallPropagator(inst)
-    MakeHauntableLaunchAndIgnite(inst)
+	MakeSmallPropagator(inst)
+	MakeHauntableLaunchAndIgnite(inst)
 
 	return inst
 end
@@ -206,7 +197,7 @@ local function slaughterfn()
 	inst:AddTag("sharp")
 	inst:AddTag("unluckyitem")
 	inst:AddTag("slaughter_tool")
-	
+
 	inst.GetSlaughterActionString = GetSlaughterActionString
 
 	inst.entity:SetPristine()
@@ -217,62 +208,56 @@ local function slaughterfn()
 
 	inst:AddComponent("inspectable")
 	inst:AddComponent("slaughteritem")
-		
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_slaughtertool"
-	
+
 	inst:AddComponent("luckitem")
 	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_MED)
-	
+
 	inst:AddComponent("finiteuses")
-    inst.components.finiteuses:SetMaxUses(TUNING.KYNO_SLAUGHTERTOOLS_USES)
-    inst.components.finiteuses:SetUses(TUNING.KYNO_SLAUGHTERTOOLS_USES)
-    inst.components.finiteuses:SetOnFinished(inst.Remove)
-	
+	inst.components.finiteuses:SetMaxUses(TUNING.KYNO_SLAUGHTERTOOLS_USES)
+	inst.components.finiteuses:SetUses(TUNING.KYNO_SLAUGHTERTOOLS_USES)
+	inst.components.finiteuses:SetOnFinished(inst.Remove)
+
 	MakeHauntableLaunch(inst)
 
 	return inst
 end
 
 local function repairtoolfn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddSoundEmitter()
-    inst.entity:AddNetwork()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
 
-    MakeInventoryPhysics(inst)
+	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
-    inst.AnimState:SetBank("kyno_repairkit")
-    inst.AnimState:SetBuild("kyno_repairkit")
-    inst.AnimState:PlayAnimation("idle")
+	inst.AnimState:SetBank("kyno_repairkit")
+	inst.AnimState:SetBuild("kyno_repairkit")
+	inst.AnimState:PlayAnimation("idle")
 
-    inst:AddTag("irreplaceable")
-    inst:AddTag("nonpotatable")
+	inst:AddTag("irreplaceable")
+	inst:AddTag("nonpotatable")
 	inst:AddTag("serenity_repairtool")
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
-	
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
 	inst:AddComponent("cookwareinstallable")
-    inst:AddComponent("inspectable")
-	
-    inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_repairtool"
+	inst:AddComponent("inspectable")
+	inst:AddComponent("inventoryitem")
 
-    inst:ListenForEvent("floater_startfloating", function(inst) inst.AnimState:PlayAnimation("idle") end)
-    inst:ListenForEvent("floater_stopfloating", function(inst) inst.AnimState:PlayAnimation("idle") end)
+	inst:ListenForEvent("floater_startfloating", function(inst) inst.AnimState:PlayAnimation("idle") end)
+	inst:ListenForEvent("floater_stopfloating", function(inst) inst.AnimState:PlayAnimation("idle") end)
 
-    MakeHauntableLaunch(inst)
+	MakeHauntableLaunch(inst)
 
-    return inst
+	return inst
 end
 
 return Prefab("kyno_saltrack_installer", rackfn, assets, prefabs),

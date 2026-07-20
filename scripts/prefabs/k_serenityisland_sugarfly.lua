@@ -157,8 +157,6 @@ local function fn()
 	inst.components.inventoryitem.canbepickedupalive = true
 	inst.components.inventoryitem.nobounce = true
 	inst.components.inventoryitem.pushlandedevents = false
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_sugarfly"
 
 	inst:AddComponent("health")
 	inst.components.health:SetMaxHealth(TUNING.KYNO_SUGARFLY_HEALTH)

@@ -115,7 +115,6 @@ local function fn()
 	inst:AddComponent("murderable")
 	
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
 	inst.components.inventoryitem.nobounce = true
 	inst.components.inventoryitem.canbepickedup = false
 	inst.components.inventoryitem.canbepickedupalive = true

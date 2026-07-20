@@ -1,7 +1,7 @@
 local assets =
 {
 	Asset("ANIM", "anim/kyno_blubber.zip"),
-	
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -26,7 +26,7 @@ local function fn()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
-	
+
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
 
@@ -46,10 +46,11 @@ local function fn()
 	end
 
 	inst:AddComponent("inspectable")
-	
+	inst:AddComponent("inventoryitem")
+
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_LARGEITEM
-	
+
 	inst:AddComponent("fuel")
 	inst.components.fuel.fuelvalue = TUNING.LARGE_FUEL
 
@@ -60,15 +61,11 @@ local function fn()
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
 
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "kyno_blubber"
-
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food"
-	
+
 	inst:AddComponent("edible")
 	inst.components.edible:SetOnEatenFn(OnEaten)
 	inst.components.edible.healthvalue = TUNING.KYNO_BLUBBLER_HEALTH
@@ -79,9 +76,9 @@ local function fn()
 
 	MakeSmallBurnable(inst)
 	MakeSmallPropagator(inst)
-    MakeHauntableLaunchAndPerish(inst)
+	MakeHauntableLaunchAndPerish(inst)
 
-    return inst
+	return inst
 end
 
 return Prefab("kyno_blubber", fn, assets, prefabs)

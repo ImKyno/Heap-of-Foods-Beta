@@ -82,8 +82,7 @@ local function fn()
 	inst.components.explosive.lightonexplode = false -- Don't burn anything afterwards.
 
     inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = "sugarbombs_explosive"
+	inst.components.inventoryitem:ChangeImageName("sugarbombs_explosive")
 	
 	inst:AddComponent("luckitem")
 	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_SUPERTINY)

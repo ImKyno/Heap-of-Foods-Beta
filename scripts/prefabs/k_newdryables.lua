@@ -50,10 +50,7 @@ local function cap_fn(bank, build, anim, cap_name)
 	
 	inst:AddComponent("tradable")
 	inst:AddComponent("inspectable")
-
     inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = cap_name
 	
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
@@ -99,10 +96,7 @@ local function meat_fn(bank, build, anim, meat_name)
 	
 	inst:AddComponent("tradable")
 	inst:AddComponent("inspectable")
-
     inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = meat_name
 	
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
@@ -146,10 +140,7 @@ local function veggie_fn(bank, build, anim, veggie_name, perishable)
 	
 	inst:AddComponent("tradable")
 	inst:AddComponent("inspectable")
-
     inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/hof_inventoryimages.xml"
-	inst.components.inventoryitem.imagename = veggie_name
 	
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
