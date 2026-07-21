@@ -41,7 +41,7 @@ The Deciduous Forest is now home for a new face! Meet Partitio, the Pig Merchant
 
 Partitio is looking forward to meet new costumers, even if they are monsters and will tolerate them. But after some unfortunate past events, he now refuses to do any business with the Mermfolk!
 
-󰀌 Mod Version: 6.3-B
+󰀌 Mod Version: 6.4-B
 󰀧 Update: Branches & Business (Part I)
 ]],
 		zh  =
@@ -56,7 +56,7 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 
 帕提提欧 期待结识新的顾客，即使他们是怪物，他也会包容他们。但在一些不幸的过往事件之后，他现在拒绝与鱼人族（Mermfolk）进行任何交易！
 
-󰀌 Mod 版本： 6.3-B
+󰀌 Mod 版本： 6.4-B
 󰀧 更新内容：分支机构及业务 (第一部分)
 ]],
 		zht =
@@ -71,7 +71,7 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 
 帕提提欧 期待結識新的顧客，即使他們是怪物，他也會包容他們。但在一些不幸的過往事件之後，他現在拒絕與魚人族（Mermfolk）進行任何交易！
 
-󰀌 Mod 版本： 6.3-B
+󰀌 Mod 版本： 6.4-B
 󰀧 更新內容： 分公司及業務 (第一部分)
 ]],
 		pt  =
@@ -86,7 +86,7 @@ A Floresta Decídua agora abriga um novo rosto! Conheça Partitio, o Comerciante
 
 Partitio está ansioso para conhecer novos clientes, mesmo que sejam monstros, e irá tolerá-los. Mas, após alguns eventos infelizes do passado, ele agora se recusa a fazer qualquer negócio com Povo-peixe!
 
-󰀌 Versão do Mod: 6.3-B
+󰀌 Versão do Mod: 6.4-B
 󰀧 Atualização: Galhos e Negócios (Parte I)
 ]],
 		pl  =
@@ -101,7 +101,7 @@ Las liściasty ma teraz nową twarz! Poznaj Partitio, Świńskiego Handlarza. Ja
 
 Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli są potworami i będzie ich tolerował. Jednak po kilku niefortunnych wydarzeniach z przeszłości, obecnie odmawia prowadzenia interesów z Mermfolk!
 
-󰀌 Wersja Moda: 6.3-B
+󰀌 Wersja Moda: 6.4-B
 󰀧 Aktualizacja: Oddziały i biznes (Część I)
 ]],
 		es  =
@@ -116,7 +116,7 @@ Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli 
 
 Partitio espera conocer nuevos clientes, incluso si son monstruos, y los tolerará. Pero tras algunos desafortunados eventos del pasado, ahora se niega a hacer negocios con los Mermfolk.
 
-󰀌 Versión del Mod: 6.3-B
+󰀌 Versión del Mod: 6.4-B
 󰀧 Actualización: Ramas y Negocios (Parte I)
 ]],
 		vi  =
@@ -131,7 +131,7 @@ Rừng rụng lá giờ đây có một gương mặt mới! Hãy gặp Partitio
 
 Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ là quái vật và sẽ chấp nhận họ. Nhưng sau một số sự kiện không may trong quá khứ, anh ta hiện từ chối kinh doanh với Mermfolk!
 
-󰀌 Phiên bản Mod: 6.3-B
+󰀌 Phiên bản Mod: 6.4-B
 󰀧 Cập nhật: Cành Nhánh & Kinh Doanh (Phần I)
 ]],
 		kr =
@@ -145,7 +145,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 활엽수림에 새로운 상인이 등장했습니다! 돼지 상인 파르티티오를 만나보세요. 자부심 넘치는 돼지인 그는 오직 고품질의 물품만을 판매합니다.
 
 파르티티오는 새로운 고객들을 맞이하길 기대하고 있으며, 괴물일지라도 거래를 허용합니다. 다만 과거의 불미스러운 사건들로 인해, 현재 어인족과의 거래는 일절 거부하고 있습니다!
-󰀌 Mod Version: 6.3-B
+󰀌 Mod Version: 6.4-B
 󰀧 Update: Branches & Business (Part I)
 ]],
 	},
@@ -1676,7 +1676,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "6.3-B"
+version                      = "6.4-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 

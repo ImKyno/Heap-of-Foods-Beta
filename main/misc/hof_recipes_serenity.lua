@@ -91,6 +91,7 @@ AddRecipe2("kyno_kit_syrup_p", {Ingredient("taffy", 1), Ingredient("gorge_berry_
 		sg_state			= "give",
 		product				= "kyno_cookware_kit_syrup",
 		numtogive			= 1,
+		image				= "kyno_cookware_kit_hanger.tex",
 	},
 	{"CRAFTING_STATION"}
 )

@@ -352,6 +352,7 @@ AddRecipe2("meadowislandtrader_nukashine_sugarfree", {Ingredient("nukashine", 1)
 		description         = "nukashine_sugarfree_m",
 		sg_state            = "give",
 		product             = "nukashine_sugarfree",
+		image               = "nukashine.tex",
 	},
 	{"CRAFTING_STATION"}
 )

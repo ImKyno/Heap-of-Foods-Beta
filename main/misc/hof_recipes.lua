@@ -297,6 +297,7 @@ AddRecipe2("kyno_antchest", {Ingredient("honeycomb", 1), Ingredient("honey", 12)
 	{
 		placer				= "kyno_antchest_placer",
 		min_spacing			= 1.75,
+		image				= "kyno_antchest_honey.tex",
 	},
 	{"COOKING", "CONTAINERS", "STRUCTURES"}
 )
@@ -425,6 +426,8 @@ AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyru
 	{
 		builder_tag         = "strongman",
 		product             = "potatosack",
+		atlas               = DefaultAtlas2,
+		image               = "potato_sack_full.tex",
 	},
 	{"CONTAINERS", "COOKING"}
 )
