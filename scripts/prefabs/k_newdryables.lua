@@ -39,8 +39,6 @@ local function cap_fn(bank, build, anim, cap_name)
 
 	inst:AddTag("veggie")
 	inst:AddTag("dried_cap")
-	inst:AddTag("saltbox_valid")
-	inst:AddTag("beargerfur_sack_valid")
 
     inst.entity:SetPristine()
 
@@ -85,8 +83,6 @@ local function meat_fn(bank, build, anim, meat_name)
 
     inst:AddTag("meat")
 	inst:AddTag("lureplant_bait")
-	inst:AddTag("saltbox_valid")
-	inst:AddTag("beargerfur_sack_valid")
 
     inst.entity:SetPristine()
 
@@ -129,8 +125,6 @@ local function veggie_fn(bank, build, anim, veggie_name, perishable)
 	inst.AnimState:PlayAnimation(anim)
 	
 	inst:AddTag("veggie")
-	inst:AddTag("saltbox_valid")
-	inst:AddTag("beargerfur_sack_valid")
 
 	inst.entity:SetPristine()
 

@@ -549,3 +549,30 @@ containers.params.sisturn.itemtestfn = function(container, item, slot)
 
 	return _sisturn_itemtestfn(container, item, slot)
 end
+
+-- Salt Box and Polar Bearger Bin accepts dried food.
+local _saltbox_itemtestfn = containers.params.saltbox.itemtestfn
+containers.params.saltbox.itemtestfn = function(container, item, slot)
+	local PERISHABLE_TAGS = item:HasAnyTag("fresh", "stale", "spoiled")
+
+	for k, v in pairs(FOODGROUP.OMNI.types) do
+		if PERISHABLE_TAGS and item:HasTag("edible_"..v) and item.prefab:find("_dried", 1, true) then
+			return true
+		end
+	end
+
+	return _saltbox_itemtestfn(container, item, slot)
+end
+
+local _beargerfur_sack_itemtestfn = containers.params.beargerfur_sack.itemtestfn
+containers.params.beargerfur_sack.itemtestfn = function(container, item, slot)
+	local PERISHABLE_TAGS = item:HasAnyTag("fresh", "stale", "spoiled")
+
+	for k, v in pairs(FOODGROUP.OMNI.types) do
+		if PERISHABLE_TAGS and item:HasTag("edible_"..v) and item.prefab:find("_dried", 1, true) then
+			return true
+		end
+	end
+
+	return _beargerfur_sack_itemtestfn(container, item, slot)
+end

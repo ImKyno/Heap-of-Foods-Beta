@@ -82,18 +82,6 @@ local DRYABLES           =
 	},
 }
 
--- Make dried foods valid for Salt Box and Polar Bearger Bin.
-local DRIED_FOODS =
-{
-	"smallmeat_dried",
-	"meat_dried",
-	"monstermeat_dried",
-	"kelp_dried",
-	"humanmeat_dried",
-	"fishmeat_small_dried",
-	"fishmeat_dried",
-}
-
 local function DryablePostInit(inst)
 	inst:AddTag("dryable")
 
@@ -116,13 +104,4 @@ end
 
 for k, v in pairs(DRYABLES) do
 	AddPrefabPostInit(k, DryablePostInit)
-end
-
-local function DriedPostInit(inst)
-	inst:AddTag("saltbox_valid")
-	inst:AddTag("beargerfur_sack_valid")
-end
-
-for k, v in pairs(DRIED_FOODS) do
-	AddPrefabPostInit(v, DriedPostInit)
 end

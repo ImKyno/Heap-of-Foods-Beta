@@ -35,7 +35,6 @@ local function MakeRoe(data)
 	
 		inst:AddTag("roe")
 		inst:AddTag("cookable")
-		inst:AddTag("saltbox_valid")
 		inst:AddTag("roeresearchable")
 		
 		if data.veggie ~= nil then

@@ -211,7 +211,6 @@ local function lotus()
 	
 	inst:AddTag("veggie")
 	inst:AddTag("cookable")
-	inst:AddTag("saltbox_valid")
 
 	inst.entity:SetPristine()
 

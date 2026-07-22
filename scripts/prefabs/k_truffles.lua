@@ -141,10 +141,9 @@ local function truffles()
 	inst.AnimState:SetBuild("kyno_truffles")
 	inst.AnimState:PlayAnimation("idle")
 
-	inst:AddTag("truffles")
 	inst:AddTag("veggie")
 	inst:AddTag("cookable")
-	inst:AddTag("saltbox_valid")
+	inst:AddTag("truffles")
 
 	inst.entity:SetPristine()
 

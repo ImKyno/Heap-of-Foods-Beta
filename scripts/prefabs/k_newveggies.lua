@@ -285,7 +285,6 @@ local function MakeVeggie(name)
 		inst.pickupsound = "vegetation_firm"
 		
 		inst:AddTag("cookable")
-		inst:AddTag("saltbox_valid")
 			
         local can_dry = KYNO_VEGGIES[name].can_dry
 		if can_dry then

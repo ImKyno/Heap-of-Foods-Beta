@@ -407,7 +407,6 @@ local function chicken_eggfn()
 	
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
-	inst:AddTag("saltbox_valid")
 	inst:AddTag("catfood")
 	inst:AddTag("eggfood")
 	inst:AddTag("chicken_egg")
