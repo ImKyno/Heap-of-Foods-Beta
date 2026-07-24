@@ -139,7 +139,7 @@ AddStategraphPostInit("wilson", function(sg)
 	sg.actionhandlers[ACTIONS.EAT].deststate = function(inst, action, ...)
 		local target = action.target or action.invobject
 
-		if inst:HasTag("fasteater") then
+		if inst:HasAnyTag("fasteater", "gourmand_fasteater") then
 			return "quickeat"
 		end
 

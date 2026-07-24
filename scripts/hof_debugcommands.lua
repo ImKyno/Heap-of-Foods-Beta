@@ -988,3 +988,16 @@ function c_hofforcedailyrecipe(recipe)
 		end
 	end
 end
+
+function c_hofwxcircuits()
+	local player = ConsoleCommandPlayer()
+
+	if player ~= nil then
+		c_select(player)
+
+		c_give("wx78module_cooker",   nil, true)
+		c_give("wx78module_dryer",    nil, true)
+		c_give("wx78module_dryer2",   nil, true)
+		c_give("wx78module_gourmand", nil, true)
+	end
+end

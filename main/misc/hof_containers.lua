@@ -504,7 +504,302 @@ end
 
 params.seedsbag.priorityfn = params.seedsbag.itemtestfn
 
+local WX78_BACKUPBODY_POS = Vector3(0, 280, 0)
+local WX78_BACKUPBODY_POS_ALT = Vector3(0, 185, 0)
 
+local WX78_INVENTORY_COOKER_OFFSET = Vector3(0, 185, 0)
+local WX78_INVENTORY_COOKER_SLOTPOS = {}
+
+for x = 0, 4 do
+	table.insert(WX78_INVENTORY_COOKER_SLOTPOS, { Vector3(60 * x - 60 * 2, -320, 0), Vector3(60 * x - 60 * 2, -380, 0) })
+end
+
+local function wx78_isinbackupbody(container, doer)
+	local inventoryitem = container.replica.inventoryitem
+	return not (inventoryitem and inventoryitem:IsHeldBy(doer))
+end
+
+local function wx78_getcolumn(container)
+	local parent = container.entity:GetParent()
+	local _container = parent and parent.replica.container
+
+	if _container then
+		for slot, v in pairs(_container:GetItems()) do
+			if v == container then
+				return ((slot - 1) % 5) + 1
+			end
+		end
+	end
+
+	return 5
+end
+
+params.wx78_inventorycooker =
+{
+	widget =
+	{
+		slotbg =
+		{
+			{ image = "wx78_inventorycooker_slot_cook.tex", atlas = "images/inventoryimages/hof_hudimages.xml" },
+		},
+
+		slotpos =
+		{ 
+			Vector3(-3, -15, 0),
+			Vector3(-2, -150, 0),
+		},
+
+		slotposfn = function(container, doer)
+			return wx78_isinbackupbody(container, doer)
+			and WX78_INVENTORY_COOKER_SLOTPOS[wx78_getcolumn(container)] or nil
+		end,
+
+		slotscalefn = function(container, doer)
+			return wx78_isinbackupbody(container, doer) and 0.85 or nil
+		end,
+
+		slothighlightscalefn = function(container, doer)
+			return wx78_isinbackupbody(container, doer) and 1.08 or nil
+		end,
+
+		animbank = "ui_wx78_inventorycooker_1x2",
+		animbuild = "ui_wx78_inventorycooker_1x2",
+		animfn = function(container, doer, anim)
+			return wx78_isinbackupbody(container, doer)
+			and (anim..tostring(wx78_getcolumn(container))) or nil
+		end,
+
+		pos = WX78_INVENTORY_COOKER_OFFSET,
+		posfn = function(container, doer)
+			if wx78_isinbackupbody(container, doer) then
+				return WX78_BACKUPBODY_POS_ALT
+			end
+
+			for k, v in pairs(doer.HUD.controls.inv.inv) do
+				if v.tile and v.tile.item == container then
+					return v:GetPosition() + WX78_INVENTORY_COOKER_OFFSET
+				end
+			end
+		end,
+
+		opensound = "balatro/balatro_cabinet/cards_flip_HUD",
+		closesound = "balatro/balatro_cabinet/cards_flip_HUD",
+
+		bottom_align_tip_fn = function(container, doer)
+			return wx78_isinbackupbody(container, doer) and -90 or nil
+		end,
+
+		top_align_tip_fn = function(container, doer)
+			return not wx78_isinbackupbody(container, doer) and 70 or nil
+		end,
+
+		top_align_tip = 70,
+	},
+
+	type = "inv",
+	typefn = function(container, doer)
+		return wx78_isinbackupbody(container, doer) and "chest_addon" or nil
+	end,
+}
+
+function params.wx78_inventorycooker.itemtestfn(container, item, slot)
+	local owner
+
+	if TheWorld.ismastersim then
+		owner = container.inst.components.container:GetOpeners()[1]
+	elseif ThePlayer and container:IsOpenedBy(ThePlayer) then
+		owner = ThePlayer
+	end
+
+	-- Can have no owner when loading.
+	local beta2 = not owner or (owner.components.skilltreeupdater
+	and owner.components.skilltreeupdater:IsActivated("wx78_circuitry_betabuffs_2"))
+
+	if slot == 1 then
+		if beta2 then
+			return item:HasTag("cookable") or item:HasTag("canlight")
+		end
+
+		return item:HasTag("cookable")
+	elseif slot == 2 then
+		return item:GetTimeAlive() <= 0
+	end
+
+	if slot == nil then
+		if container:GetItemInSlot(1) == nil then
+			if beta2 then
+				return item:HasTag("cookable") or item:HasTag("canlight")
+			end
+
+			return item:HasTag("cookable")
+		end
+	end
+
+	return false
+end
+
+function params.wx78_inventorycooker.priorityfn(container, item)
+	local existingitem = container:GetItemInSlot(1)
+	local stackable = existingitem and existingitem.replica.stackable
+
+	return stackable ~= nil and stackable:CanStackWith(item)
+end
+
+local WX78_INVENTORY_DRYER_OFFSET = Vector3(0, 100, 0)
+local WX78_INVENTORY_DRYER_SLOTPOS = {}
+
+for x = 0, 4, 1 do
+	table.insert(WX78_INVENTORY_DRYER_SLOTPOS, { Vector3(80 * x - 80 * 2, -340, 0) })
+end
+
+params.wx78_inventorydryer =
+{
+	widget =
+	{
+		slotbg =
+		{
+			{ image = "inv_slot_morsel.tex" },
+		},
+	
+		slotpos =
+		{
+			Vector3(0, 0, 0)
+		},
+
+		slotposfn = function(container, doer)
+			return wx78_isinbackupbody(container, doer)
+			and WX78_INVENTORY_DRYER_SLOTPOS[wx78__getcolumn(container)] or nil
+		end,
+
+		slotscalefn = function(container, doer)
+			return wx78_isinbackupbody(container, doer) and 0.85 or nil
+		end,
+
+		slothighlightscalefn = function(container, doer)
+			return wx78_isinbackupbody(container, doer) and 1.08 or nil
+		end,
+
+		animbank = "ui_wx78_inventorydryer_1x1",
+		animbuild = "ui_wx78_inventorydryer_1x1",
+		animfn = function(container, doer, anim)
+			return wx78_isinbackupbody(container, doer)
+			and (anim..tostring(wx78_getcolumn(container))) or nil
+		end,
+
+		pos = WX78_INVENTORY_DRYER_OFFSET,
+		posfn = function(container, doer)
+			if wx78_isinbackupbody(container, doer) then
+				return WX78_BACKUPBODY_POS
+			end
+
+			for k, v in pairs(doer.HUD.controls.inv.inv) do
+				if v.tile and v.tile.item == container then
+					return v:GetPosition() + WX78_INVENTORY_DRYER_OFFSET
+				end
+			end
+		end,
+
+		opensound = "balatro/balatro_cabinet/cards_flip_HUD",
+		closesound = "balatro/balatro_cabinet/cards_flip_HUD",
+
+		bottom_align_tip_fn = function(container, doer)
+			return wx78_isinbackupbody(container, doer) and -90 or nil
+		end,
+
+		top_align_tip_fn = function(container, doer)
+			return not wx78_isinbackupbody(container, doer) and 70 or nil
+		end,
+
+		top_align_tip = 70,
+	},
+
+	type = "inv",
+	typefn = function(container, doer)
+		return wx78_isinbackupbody(container, doer) and "chest_addon" or nil
+	end,
+}
+
+function params.wx78_inventorydryer.itemtestfn(container, item, slot)
+	return item:HasTag("dryable")
+	or (TheWorld.ismastersim and (item:GetTimeAlive() == 0
+	or (item.dryingrack_lastinfo and item.dryingrack_lastinfo.container == container and item.dryingrack_lastinfo.slot == slot)))
+end
+
+local WX78_INVENTORY_DRYER2_OFFSET = Vector3(0, 100, 0)
+local WX78_INVENTORY_DRYER2_SLOTPOS = {}
+
+for x = 0, 4, 1 do
+	table.insert(WX78_INVENTORY_DRYER2_SLOTPOS, { Vector3(80 * x - 80 * 2, -340, 0) })
+end
+
+params.wx78_inventorydryer2 =
+{
+	widget =
+	{
+		slotbg =
+		{
+			{ image = "inv_slot_morsel.tex" },
+		},
+	
+		slotpos =
+		{
+			Vector3(0, 0, 0)
+		},
+
+		slotposfn = function(container, doer)
+			return wx78_isinbackupbody(container, doer)
+			and WX78_INVENTORY_DRYER2_SLOTPOS[wx78_getcolumn(container)] or nil
+		end,
+
+		slotscalefn = function(container, doer)
+			return wx78_isinbackupbody(container, doer) and 0.85 or nil
+		end,
+
+		slothighlightscalefn = function(container, doer)
+			return wx78_isinbackupbody(container, doer) and 1.08 or nil
+		end,
+
+		animbank = "ui_wx78_inventorydryer2_1x1",
+		animbuild = "ui_wx78_inventorydryer2_1x1",
+		animfn = function(container, doer, anim)
+			return wx78_isinbackupbody(container, doer)
+			and (anim..tostring(wx78_getcolumn(container))) or nil
+		end,
+
+		pos = WX78_INVENTORY_DRYER2_OFFSET,
+		posfn = function(container, doer)
+			if wx78_isinbackupbody(container, doer) then
+				return WX78_BACKUPBODY_POS
+			end
+
+			for k, v in pairs(doer.HUD.controls.inv.inv) do
+				if v.tile and v.tile.item == container then
+					return v:GetPosition() + WX78_INVENTORY_DRYER2_OFFSET
+				end
+			end
+		end,
+
+		opensound = "balatro/balatro_cabinet/cards_flip_HUD",
+		closesound = "balatro/balatro_cabinet/cards_flip_HUD",
+
+		bottom_align_tip_fn = function(container, doer)
+			return wx78_isinbackupbody(container, doer) and -90 or nil
+		end,
+
+		top_align_tip_fn = function(container, doer)
+			return not wx78_isinbackupbody(container, doer) and 70 or nil
+		end,
+
+		top_align_tip = 70,
+	},
+
+	type = "inv",
+	typefn = function(container, doer)
+		return wx78_isinbackupbody(container, doer) and "chest_addon" or nil
+	end,
+}
+
+params.wx78_inventorydryer2.itemtestfn = params.wx78_inventorydryer.itemtestfn
 
 -- Tweaks for vanilla containers.
 -- Portable Seasoning Station does not accept items with nospice tag.

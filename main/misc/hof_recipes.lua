@@ -422,6 +422,20 @@ AddRecipe2("kyno_foodammo_tomato", {Ingredient("tomato", 1, nil, nil, "quagmire_
 	{"WEAPONS"}
 )
 
+AddRecipe2("hermitshop_kyno_malbatrossfood_blueprint", {Ingredient("messagebottleempty", 10)}, TECH.HERMITCRABSHOP_SEVEN,
+	{
+		nounlock            = true,
+		no_deconstruction   = true,
+		actionstr           = "HERMITCRABSHOP",
+		description         = "kyno_malbatrossfood_blueprint",
+		sg_state            = "give",
+		product             = "kyno_malbatrossfood_blueprint",
+		atlas               = DefaultAtlas,
+		image               = "blueprint_rare.tex",
+	},
+	{"CRAFTING_STATION"}
+)
+
 AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyrus", 1), Ingredient("rope", 2)}, TECH.SCIENCE_ONE,
 	{
 		builder_tag         = "strongman",
@@ -633,18 +647,28 @@ AddCharacterRecipe("transmute_kyno_worm_bone", {Ingredient("fossil_piece", 1)}, 
 	}
 )
 
-AddRecipe2("hermitshop_kyno_malbatrossfood_blueprint", {Ingredient("messagebottleempty", 10)}, TECH.HERMITCRABSHOP_SEVEN,
+AddCharacterRecipe("wx78module_cooker", {Ingredient("scandata", 3), Ingredient("charcoal", 1)}, TECH.ROBOTMODULECRAFT_ONE,
 	{
-		nounlock            = true,
-		no_deconstruction   = true,
-		actionstr           = "HERMITCRABSHOP",
-		description         = "kyno_malbatrossfood_blueprint",
-		sg_state            = "give",
-		product             = "kyno_malbatrossfood_blueprint",
-		atlas               = DefaultAtlas,
-		image               = "blueprint_rare.tex",
-	},
-	{"CRAFTING_STATION"}
+		builder_tag         = "upgrademoduleowner",
+	}
+)
+
+AddCharacterRecipe("wx78module_dryer", {Ingredient("scandata", 4), Ingredient("saltrock", 1)}, TECH.ROBOTMODULECRAFT_ONE,
+	{
+		builder_tag         = "upgrademoduleowner",
+	}
+)
+
+AddCharacterRecipe("wx78module_dryer2", {Ingredient("scandata", 6), Ingredient("desiccantboosted", 1), Ingredient("wx78module_dryer", 1)}, TECH.ROBOTMODULECRAFT_ONE,
+	{
+		builder_tag         = "upgrademoduleowner",
+	}
+)
+
+AddCharacterRecipe("wx78module_gourmand", {Ingredient("scandata", 6), Ingredient("gorge_hamburger", 1)}, TECH.ROBOTMODULECRAFT_ONE,
+	{
+		builder_tag         = "upgrademoduleowner",
+	}
 )
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.

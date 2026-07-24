@@ -14,6 +14,10 @@ Assets =
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 
+	Asset("ANIM", "anim/kyno_wx78_chips.zip"),
+	Asset("ANIM", "anim/kyno_wx78_status.zip"),
+	Asset("ANIM", "anim/kyno_wx78_status_chest.zip"),
+
 	Asset("IMAGE", "images/hof_dailyrecipecard.tex"),
 	Asset("ATLAS", "images/hof_dailyrecipecard.xml"),
 
@@ -663,6 +667,15 @@ local HOF_ICONS =
 	"kyno_white_cap_cooked",
 	"kyno_woodenkeg",
 	"kyno_worm_bone",
+	"kyno_wx78_inventorycooker",
+	"kyno_wx78_inventorycooker_open",
+	"kyno_wx78_inventorycooker_powered",
+	"kyno_wx78_inventorydryer",
+	"kyno_wx78_inventorydryer_open",
+	"kyno_wx78_inventorydryer_powered",
+	"kyno_wx78_inventorydryer2",
+	"kyno_wx78_inventorydryer2_open",
+	"kyno_wx78_inventorydryer2_powered",
 	"lavaeeggboiled",
 	"lazydessert",
 	"lazypurrito",
@@ -884,6 +897,10 @@ local HOF_ICONS =
 	"wobsterbreaded",
 	"wobstercocktail",
 	"wobstermonster",
+	"wx78module_cooker",
+	"wx78module_dryer",
+	"wx78module_dryer2",
+	"wx78module_gourmand",
 
 	-- "beard_monster",
 	-- "bearger_fur",
