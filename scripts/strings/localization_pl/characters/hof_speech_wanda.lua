@@ -1321,3 +1321,29 @@ WANDA.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 }
 
 WANDA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "A waste of food, and time." -- NEED TRANSLATION
+
+WANDA.DESCRIBE.WX78MODULE_GOURMAND = "Aha! I was wondering when they'd started making these." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.WX78MODULE_COOKER = "Aha! I was wondering when they'd started making these." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.WX78MODULE_DRYER = "Aha! I was wondering when they'd started making these." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.WX78MODULE_DRYER2 = "Aha! I was wondering when they'd started making these." -- NEEDS TRANSLATION
+
+WANDA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "What's in there?", -- NEEDS TRANSLATION
+}
+
+WANDA.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "What's in there?", -- NEEDS TRANSLATION
+}
+
+WANDA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "What's in there?", -- NEEDS TRANSLATION
+}

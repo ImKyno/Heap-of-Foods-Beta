@@ -1321,3 +1321,29 @@ WARLY.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 }
 
 WARLY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "That's one juicy tomato wasted..." -- NEEDS TRANSLATION
+
+WARLY.DESCRIBE.WX78MODULE_GOURMAND = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.WX78MODULE_COOKER = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.WX78MODULE_DRYER = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.WX78MODULE_DRYER2 = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
+
+WARLY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "What did our metal friend leave here?", -- NEEDS TRANSLATION
+}
+
+WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "What did our metal friend leave here?", -- NEEDS TRANSLATION
+}
+
+WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "What did our metal friend leave here?", -- NEEDS TRANSLATION
+}

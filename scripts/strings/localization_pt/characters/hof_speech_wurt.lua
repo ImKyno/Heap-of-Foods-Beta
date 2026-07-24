@@ -1323,3 +1323,29 @@ WURT.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WURT.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Jogue em mim, eu vou comer!"
+
+WURT.DESCRIBE.WX78MODULE_GOURMAND = "Crocante."
+WURT.DESCRIBE.WX78MODULE_COOKER = "Crocante."
+WURT.DESCRIBE.WX78MODULE_DRYER = "Crocante."
+WURT.DESCRIBE.WX78MODULE_DRYER2 = "Crocante."
+
+WURT.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Coisas dentro da caixa de metal?",
+}
+
+WURT.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Coisas dentro da caixa de metal?",
+}
+
+WURT.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Coisas dentro da caixa de metal?",
+}

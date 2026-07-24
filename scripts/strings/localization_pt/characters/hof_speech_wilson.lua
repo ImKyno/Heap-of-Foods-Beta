@@ -1321,3 +1321,29 @@ WILSON.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WILSON.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Não se pode contra uma multidão quando você vê isso por perto."
+
+WILSON.DESCRIBE.WX78MODULE_GOURMAND = "Tanta ciência concentrada em um dispositivo minúsculo."
+WILSON.DESCRIBE.WX78MODULE_COOKER = "Tanta ciência concentrada em um dispositivo minúsculo."
+WILSON.DESCRIBE.WX78MODULE_DRYER = "Tanta ciência concentrada em um dispositivo minúsculo."
+WILSON.DESCRIBE.WX78MODULE_DRYER2 = "Tanta ciência concentrada em um dispositivo minúsculo."
+
+WILSON.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Um armazém esquisito.",
+}
+
+WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Um armazém esquisito.",
+}
+
+WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Um armazém esquisito.",
+}

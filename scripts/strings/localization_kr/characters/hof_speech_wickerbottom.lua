@@ -1321,3 +1321,29 @@ WICKERBOTTOM.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WICKERBOTTOM.DESCRIBE.KYNO_FOODAMMO_TOMATO = "What a waste of Solanum Lycopersicum."
+
+WICKERBOTTOM.DESCRIBE.WX78MODULE_GOURMAND = "They dislike organics, but don't seem opposed to taking inspiration from them." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.WX78MODULE_COOKER = "They dislike organics, but don't seem opposed to taking inspiration from them." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER = "They dislike organics, but don't seem opposed to taking inspiration from them." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER2 = "They dislike organics, but don't seem opposed to taking inspiration from them." -- NEEDS TRANSLATION
+
+WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Once a repository, now just the remains of it.", -- NEEDS TRANSLATION
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Once a repository, now just the remains of it.", -- NEEDS TRANSLATION
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Once a repository, now just the remains of it.", -- NEEDS TRANSLATION
+}

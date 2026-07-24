@@ -1321,3 +1321,29 @@ WAXWELL.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WAXWELL.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Fruta fétida. É melhor que não seja jogada em mim."
+
+WAXWELL.DESCRIBE.WX78MODULE_GOURMAND = "Aquele robô precisa se recompor."
+WAXWELL.DESCRIBE.WX78MODULE_COOKER = "Aquele robô precisa se recompor."
+WAXWELL.DESCRIBE.WX78MODULE_DRYER = "Aquele robô precisa se recompor."
+WAXWELL.DESCRIBE.WX78MODULE_DRYER2 = "Aquele robô precisa se recompor."
+
+WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Restos daquele robô.",
+}
+
+WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Restos daquele robô.",
+}
+
+WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Restos daquele robô.",
+}

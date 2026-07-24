@@ -1321,3 +1321,29 @@ WOODIE.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WOODIE.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Careful where you aim at!"
+
+WOODIE.DESCRIBE.WX78MODULE_GOURMAND = "Some fancy robot bits."
+WOODIE.DESCRIBE.WX78MODULE_COOKER = "Some fancy robot bits."
+WOODIE.DESCRIBE.WX78MODULE_DRYER = "Some fancy robot bits."
+WOODIE.DESCRIBE.WX78MODULE_DRYER2 = "Some fancy robot bits."
+
+WOODIE.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Anything good in there, Lucy?",
+}
+
+WOODIE.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Anything good in there, Lucy?",
+}
+
+WOODIE.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Anything good in there, Lucy?",
+}

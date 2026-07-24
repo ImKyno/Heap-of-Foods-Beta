@@ -1321,3 +1321,29 @@ WATHGRITHR.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WATHGRITHR.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Eu vou te golpear, se você duvidar!"
+
+WATHGRITHR.DESCRIBE.WX78MODULE_GOURMAND = "Estas dádivas fortalecerão o nosso guerreiro de metal."
+WATHGRITHR.DESCRIBE.WX78MODULE_COOKER = "Estas dádivas fortalecerão o nosso guerreiro de metal."
+WATHGRITHR.DESCRIBE.WX78MODULE_DRYER = "Estas dádivas fortalecerão o nosso guerreiro de metal."
+WATHGRITHR.DESCRIBE.WX78MODULE_DRYER2 = "Estas dádivas fortalecerão o nosso guerreiro de metal."
+
+WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Que despojos o nosso guerreiro de metal concedeu?",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Que despojos o nosso guerreiro de metal concedeu?",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Que despojos o nosso guerreiro de metal concedeu?",
+}

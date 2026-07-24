@@ -2372,3 +2372,24 @@ STRINGS.NAMES.KYNO_FOODREVIVER_PROXY = "Caveira Doce"
 
 STRINGS.NAMES.KYNO_FOODAMMO_TOMATO = "Tomate Volátil"
 STRINGS.RECIPE_DESC.KYNO_FOODAMMO_TOMATO = "A arma perfeita contra performances ruins."
+
+STRINGS.NAMES.WX78MODULE_GOURMAND = "Circuito de Comilão"
+STRINGS.RECIPE_DESC.WX78MODULE_GOURMAND = "Refeições prontas processadas com eficiência máxima."
+
+STRINGS.NAMES.WX78MODULE_COOKER = "Circuito de Combustão"
+STRINGS.RECIPE_DESC.WX78MODULE_COOKER = "Aplicação controlada de calor para cozimento e refino."
+
+STRINGS.NAMES.WX78MODULE_DRYER = "Circuito de Dessecante"
+STRINGS.RECIPE_DESC.WX78MODULE_DRYER = "Um sistema rudimentar de controle de umidade."
+
+STRINGS.NAMES.WX78MODULE_DRYER2 = "Circuito de Super-Dessecante"
+STRINGS.RECIPE_DESC.WX78MODULE_DRYER2 = "Um regulador de umidade aperfeiçoado."
+
+STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER_HELD = "Unidade de Combustão Portátil"
+STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER = "Unidade de Combustão Colapsada"
+
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER_HELD = "Unidade de Secagem Portátil"
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER = "Unidade de Secagem Portátil Colapsada"
+
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2_HELD = "Unidade de Super Secagem Portátil"
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2 = "Unidade de Super Secagem Portátil Colapsada"

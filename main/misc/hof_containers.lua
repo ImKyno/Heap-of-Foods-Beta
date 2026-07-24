@@ -505,13 +505,24 @@ end
 params.seedsbag.priorityfn = params.seedsbag.itemtestfn
 
 local WX78_BACKUPBODY_POS = Vector3(0, 280, 0)
-local WX78_BACKUPBODY_POS_ALT = Vector3(0, 185, 0)
+local WX78_BACKUPBODY_POS_ALT = Vector3(0, 280, 0)
 
 local WX78_INVENTORY_COOKER_OFFSET = Vector3(0, 185, 0)
 local WX78_INVENTORY_COOKER_SLOTPOS = {}
+local WX78_INVENTORY_COOKER_BACKUP_SLOTPOS = {}
 
 for x = 0, 4 do
 	table.insert(WX78_INVENTORY_COOKER_SLOTPOS, { Vector3(60 * x - 60 * 2, -320, 0), Vector3(60 * x - 60 * 2, -380, 0) })
+end
+
+for x = 0, 4 do
+	local offset = (x - 2) * 80
+
+	table.insert(WX78_INVENTORY_COOKER_BACKUP_SLOTPOS,
+	{
+		Vector3(-4 + offset, -354, 0),
+		Vector3(-2 + offset, -458, 0)
+	})
 end
 
 local function wx78_isinbackupbody(container, doer)
@@ -545,13 +556,18 @@ params.wx78_inventorycooker =
 
 		slotpos =
 		{ 
-			Vector3(-3, -15, 0),
-			Vector3(-2, -150, 0),
+			Vector3(-3, -16, 0),
+			Vector3(-2, -149, 0),
 		},
 
 		slotposfn = function(container, doer)
-			return wx78_isinbackupbody(container, doer)
-			and WX78_INVENTORY_COOKER_SLOTPOS[wx78_getcolumn(container)] or nil
+			local column = wx78_getcolumn(container)
+
+			if wx78_isinbackupbody(container, doer) then
+				return WX78_INVENTORY_COOKER_BACKUP_SLOTPOS[column]
+			end
+
+			return nil
 		end,
 
 		slotscalefn = function(container, doer)
@@ -668,7 +684,7 @@ params.wx78_inventorydryer =
 
 		slotposfn = function(container, doer)
 			return wx78_isinbackupbody(container, doer)
-			and WX78_INVENTORY_DRYER_SLOTPOS[wx78__getcolumn(container)] or nil
+			and WX78_INVENTORY_DRYER_SLOTPOS[wx78_getcolumn(container)] or nil
 		end,
 
 		slotscalefn = function(container, doer)
@@ -738,7 +754,7 @@ params.wx78_inventorydryer2 =
 	{
 		slotbg =
 		{
-			{ image = "inv_slot_morsel.tex" },
+			{ image = "inv_slot_kelp.tex", atlas = "images/hud2.xml" },
 		},
 	
 		slotpos =

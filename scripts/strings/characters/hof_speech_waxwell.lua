@@ -1321,3 +1321,29 @@ WAXWELL.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WAXWELL.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Wretched fruit better not be thrown at me..."
+
+WAXWELL.DESCRIBE.WX78MODULE_GOURMAND = "That robot needs to pull themselves together."
+WAXWELL.DESCRIBE.WX78MODULE_COOKER = "That robot needs to pull themselves together."
+WAXWELL.DESCRIBE.WX78MODULE_DRYER = "That robot needs to pull themselves together."
+WAXWELL.DESCRIBE.WX78MODULE_DRYER2 = "That robot needs to pull themselves together."
+
+WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Remains from that robot.",
+}
+
+WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Remains from that robot.",
+}
+
+WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Remains from that robot.",
+}

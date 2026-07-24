@@ -339,7 +339,6 @@ local function fn()
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
-	inst.components.inspectable.nameoverride = "WX78_INVENTORYCONTAINER"
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)

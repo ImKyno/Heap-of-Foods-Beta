@@ -1321,3 +1321,29 @@ WILLOW.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WILLOW.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Boo! Você fede!"
+
+WILLOW.DESCRIBE.WX78MODULE_GOURMAND = "Ei WX, quando é que você vai instalar um lança-chamas?"
+WILLOW.DESCRIBE.WX78MODULE_COOKER = "Ei WX, quando é que você vai instalar um lança-chamas?"
+WILLOW.DESCRIBE.WX78MODULE_DRYER = "Ei WX, quando é que você vai instalar um lança-chamas?"
+WILLOW.DESCRIBE.WX78MODULE_DRYER2 = "Ei WX, quando é que você vai instalar um lança-chamas?"
+
+WILLOW.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Por que eu ligaria para as coisas velhas do WX?",
+}
+
+WILLOW.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Por que eu ligaria para as coisas velhas do WX?",
+}
+
+WILLOW.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Por que eu ligaria para as coisas velhas do WX?",
+}

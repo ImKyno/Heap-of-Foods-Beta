@@ -1321,3 +1321,29 @@ WENDY.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WENDY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Grown to be thrown away, the cruel cycle of life."
+
+WENDY.DESCRIBE.WX78MODULE_GOURMAND = "It looks so fragile... hopefully no tragic accidents befall it."
+WENDY.DESCRIBE.WX78MODULE_COOKER = "It looks so fragile... hopefully no tragic accidents befall it."
+WENDY.DESCRIBE.WX78MODULE_DRYER = "It looks so fragile... hopefully no tragic accidents befall it."
+WENDY.DESCRIBE.WX78MODULE_DRYER2 = "It looks so fragile... hopefully no tragic accidents befall it."
+
+WENDY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "I wonder what remains.",
+}
+
+WENDY.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "I wonder what remains.",
+}
+
+WENDY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "I wonder what remains.",
+}

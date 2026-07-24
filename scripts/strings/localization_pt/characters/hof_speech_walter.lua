@@ -1321,3 +1321,29 @@ WALTER.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WALTER.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Guerra de comida!"
+
+WALTER.DESCRIBE.WX78MODULE_GOURMAND = "Tripas de robô! Legal!"
+WALTER.DESCRIBE.WX78MODULE_COOKER = "Tripas de robô! Legal!"
+WALTER.DESCRIBE.WX78MODULE_DRYER = "Tripas de robô! Legal!"
+WALTER.DESCRIBE.WX78MODULE_DRYER2 = "Tripas de robô! Legal!"
+
+WALTER.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Me pergunto se o WX vai querer todas essas coisas de volta.",
+}
+
+WALTER.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Me pergunto se o WX vai querer todas essas coisas de volta.",
+}
+
+WALTER.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Me pergunto se o WX vai querer todas essas coisas de volta.",
+}

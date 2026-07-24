@@ -1321,3 +1321,29 @@ WICKERBOTTOM.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WICKERBOTTOM.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Que desperdício de Solanum Lycopersicum."
+
+WICKERBOTTOM.DESCRIBE.WX78MODULE_GOURMAND = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
+WICKERBOTTOM.DESCRIBE.WX78MODULE_COOKER = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
+WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
+WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER2 = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
+
+WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Outrora um repositório, agora apenas os seus vestígios.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Outrora um repositório, agora apenas os seus vestígios.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Outrora um repositório, agora apenas os seus vestígios.",
+}

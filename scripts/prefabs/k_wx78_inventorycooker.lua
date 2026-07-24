@@ -56,6 +56,7 @@ local function AddCookingRecharge(item, time)
 		item:AddComponent("rechargeable")
 	end
 
+	item:AddTag("cookrechargeable")
 	item.components.rechargeable:SetMaxCharge(1)
 	item.components.rechargeable:Discharge(time)
 	item.rechargeable_temp = true
@@ -68,6 +69,7 @@ local function RemoveCookingRecharge(item)
 
 	if item.components.rechargeable ~= nil and item.rechargeable_temp then
 		item:RemoveComponent("rechargeable")
+		item:RemoveTag("cookrechargeable")
 		item:RemoveTag("rechargeable")
 		item.rechargeable_temp = nil
 	end
@@ -111,7 +113,7 @@ local function StopCooking(inst)
 		inst._cooktask = nil
 	end
 
-	-- RemoveCookingRecharge(inst.components.container:GetItemInSlot(1))
+	RemoveCookingRecharge(inst.components.container:GetItemInSlot(1))
 end
 
 local function StartCooking(inst)
@@ -123,7 +125,7 @@ local function StartCooking(inst)
 	local item = inst.components.container:GetItemInSlot(1)
 
 	if item ~= nil then
-		-- AddCookingRecharge(item, cooktime)
+		AddCookingRecharge(item, cooktime)
 	end
 
 	inst._cooktask = inst:DoTaskInTime(cooktime, function()
@@ -144,9 +146,31 @@ UpdateCooking = function(inst)
 		return
 	end
 
-	if inst.components.container:GetItemInSlot(1) == nil then
+	local input = inst.components.container:GetItemInSlot(1)
+
+	if input == nil then
 		StopCooking(inst)
 		return
+	end
+
+	local output = inst.components.container:GetItemInSlot(2)
+
+	if output ~= nil then
+		local product
+
+		if input.components.cookable ~= nil then
+			product = input.components.cookable.product
+		elseif input:HasTag("charcoal_source") then
+			product = "charcoal"
+		elseif input.components.burnable ~= nil then
+			product = "ash"
+		end
+
+		if product ~= nil and output.prefab ~= product then
+			if inst._cooktask == nil then
+				AddCookingRecharge(input, GetCookTime(inst))
+			end
+		end
 	end
 
 	if inst._cooktask == nil and CanCook(inst) then
@@ -169,7 +193,7 @@ DoCook = function(inst)
 	local owner = inst.components.inventoryitem.owner
 	local item = inst.components.container:GetItemInSlot(1)
 
-	-- RemoveCookingRecharge(item)
+	RemoveCookingRecharge(item)
 
 	if item == nil then
 		inst._cooking = false
@@ -297,12 +321,22 @@ local function OnClose(inst)
 end
 
 local function OnItemGet(inst, data)
+	if inst._cooktask ~= nil then
+		inst._cooktask:Cancel()
+		inst._cooktask = nil
+	end
+
 	UpdateCooking(inst)
 end
 
 local function OnItemLose(inst, data)
 	if data.slot == 1 and data.prev_item ~= nil then
-		-- RemoveCookingRecharge(data.prev_item)
+		RemoveCookingRecharge(data.prev_item)
+	end
+
+	if inst._cooktask ~= nil then
+		inst._cooktask:Cancel()
+		inst._cooktask = nil
 	end
 
 	UpdateCooking(inst)
@@ -410,7 +444,6 @@ local function fn()
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
-	inst.components.inspectable.nameoverride = "WX78_INVENTORYCONTAINER"
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)

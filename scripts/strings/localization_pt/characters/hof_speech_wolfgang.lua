@@ -1321,3 +1321,29 @@ WOLFGANG.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WOLFGANG.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Wolfgang odiava esses lá no circo antigamente."
+
+WOLFGANG.DESCRIBE.WX78MODULE_GOURMAND = "É lanche de robô, sim?"
+WOLFGANG.DESCRIBE.WX78MODULE_COOKER = "É lanche de robô, sim?"
+WOLFGANG.DESCRIBE.WX78MODULE_DRYER = "É lanche de robô, sim?"
+WOLFGANG.DESCRIBE.WX78MODULE_DRYER2 = "É lanche de robô, sim?"
+
+WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Algo de bom para o Wolfgang?",
+}
+
+WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Algo de bom para o Wolfgang?",
+}
+
+WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Algo de bom para o Wolfgang?",
+}
