@@ -12,6 +12,7 @@ TUNING.HOF_DAILYRECIPES_BONUS = 15
 
 TUNING.HOF_RESOURCES = .06
 TUNING.HOF_FLOATER = { "med", nil, 0.65 }
+TUNING.HOF_RESURRECTION = false -- Res system can cause crashes when people use those chinese mods that are encrypted.
 
 TUNING.HOF_MIN_OCEANSETPIECES = 1
 TUNING.HOF_MAX_OCEANSETPIECES = 3
