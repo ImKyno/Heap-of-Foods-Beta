@@ -104,11 +104,11 @@ local function WesPostInit(inst)
 end
 
 local function WathgrithrPostInit(inst)
-	inst:AddTag("animal_butcher")
-
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
+
+	inst.tagvar_animal_butcher = true
 
 	if inst.components.foodaffinity ~= nil then
 		inst.components.foodaffinity:AddPrefabAffinity("gorge_pot_roast", TUNING.AFFINITY_15_CALORIES_HUGE)
@@ -153,14 +153,14 @@ local function WortoxPostInit(inst)
 	end
 
 	inst:ListenForEvent("murdered", function(inst, data)
-		if inst:HasTag("soulharvester") then
+		if inst.tagvar_soulharvester then
 			WortoxSoulCommon.GiveSouls(inst, data.stackmult or 1, inst:GetPosition())
 		end
 	end)
 end
 
 local function WormwoodPostInit(inst)
-	inst:AddTag("PREPAREDPOOP_eater")
+	-- inst:AddTag("PREPAREDPOOP_eater")
 
 	if not _G.TheWorld.ismastersim then
 		return inst
@@ -334,7 +334,11 @@ if HOF_ALCOHOLICDRINKS then
 	}
 
 	local function AlcoholicDrinkerPostInit(inst)
-		inst:AddTag("no_alcoholic_drinker")
+		if not _G.TheWorld.ismastersim then
+			return inst
+		end
+
+		inst.tagvar_no_alcoholic_drinker = true
 	end
 
 	for k, v in pairs(RESTRICTED_CHARACTERS) do

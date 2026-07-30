@@ -5,6 +5,7 @@ local PLANT_WEEDS =
 {
 	"weed_firenettle",
 	"weed_forgetmelots",
+	"weed_icenettle",
 	"weed_tillweed",
 }
 

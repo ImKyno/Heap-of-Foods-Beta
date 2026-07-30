@@ -9,7 +9,7 @@ local INIT_POSTINIT_MISC =
 	"preparedfoods",
 	"preparedfoods_warly",
 	"preparednonfoods",
-	"wx78moduledefs",
+	-- "wx78moduledefs",
 }
 
 local INIT_POSTINIT_BRAINS =

@@ -1,13 +1,7 @@
 local _G = GLOBAL
 
 local function SaddleShadowFXPostInit(inst)
-	local CS =
-	{
-		r = 0.4,
-		g = 0.4,
-		b = 0.6,
-		a = 0.5,
-	}
+	local CS = { r = 0.4, g = 0.4, b = 0.6, a = 0.5 }
 
 	local function StealthMultColour(inst)
 		if inst.fx then
@@ -32,7 +26,7 @@ local function SaddleShadowFXPostInit(inst)
 	local function SaddleStealth(inst)
 		local parent = inst.entity:GetParent()
 
-		if parent:HasTag("mimicmosa_stealthed") then
+		if parent and parent:HasTag("foodbuff_stealth") then
 			StealthMultColour(inst)
 		else
 			DefaultMultColour(inst)

@@ -5,7 +5,7 @@ AddComponentPostInit("combat", function(self)
 	local _SetTarget = self.SetTarget
 
 	function self:SetTarget(target)
-		if target ~= nil and target:HasTag("player") and target:HasTag("stealthed") then
+		if target ~= nil and target:HasTag("player") and target.tagvar_stealth then
 			return false
 		end
 

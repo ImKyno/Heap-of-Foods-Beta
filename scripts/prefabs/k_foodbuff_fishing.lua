@@ -1,15 +1,15 @@
 local function OnAttached(inst, target)
 	inst.entity:SetParent(target.entity)
-	inst.Transform:SetPosition(0, 0, 0) 
-	
-	if not target:HasTag("skilledfisherman") then
-		target:AddTag("skilledfisherman")
+	inst.Transform:SetPosition(0, 0, 0)
+
+	if target ~= nil and target:HasTag("player") then
+		target.tagvar_skilledfisherman = true
 	end
-	
-	if target.components.talker and target:HasTag("player") then 
+
+	if target.components.talker and target:HasTag("player") then
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FISHINGBUFF_START"))
 	end
-	
+
 	inst:ListenForEvent("death", function()
 		inst.components.debuff:Stop()
 	end, target)
@@ -22,29 +22,26 @@ local function OnTimerDone(inst, data)
 end
 
 local function OnDetached(inst, target)
-	if target:HasTag("skilledfisherman") then
-		target:RemoveTag("skilledfisherman")
+	if target.tagvar_skilledfisherman ~= nil then
+		target.tagvar_skilledfisherman = false
 	end
-	
-	if target.components.talker and target:HasTag("player") then 
+
+	if target.components.talker and target:HasTag("player") then
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FISHINGBUFF_END"))
 	end
-	
+
 	inst:Remove()
 end
 
 local function OnExtended(inst, target)
 	inst.components.timer:StopTimer("kyno_fishingbuff")
 	inst.components.timer:StartTimer("kyno_fishingbuff", TUNING.KYNO_FISHINGBUFF_DURATION)
-	
-	if target:HasTag("skilledfisherman") then
-		target:RemoveTag("skilledfisherman")
-		target:AddTag("skilledfisherman")
-	else
-		target:AddTag("skilledfisherman")
+
+	if target ~= nil and target:HasTag("player") then
+		target.tagvar_skilledfisherman = true
 	end
 
-	if target.components.talker and target:HasTag("player") then 
+	if target.components.talker and target:HasTag("player") then
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FISHINGBUFF_START"))
 	end
 end
@@ -71,7 +68,7 @@ local function fn()
 
 	inst:AddComponent("timer")
 	inst.components.timer:StartTimer("kyno_fishingbuff", TUNING.KYNO_FISHINGBUFF_DURATION)
-	
+
 	inst:ListenForEvent("timerdone", OnTimerDone)
 
 	return inst

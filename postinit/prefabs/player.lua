@@ -29,7 +29,7 @@ local function OnLearnRoe(inst, data)
 end
 
 local function OnFishCaught(inst, data)
-	if not inst:HasTag("skilledfisherman") then
+	if not inst.tagvar_skilledfisherman then
 		return
 	end
 

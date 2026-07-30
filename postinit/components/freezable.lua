@@ -5,7 +5,7 @@ AddComponentPostInit("freezable", function(self)
 	local _AddColdness = self.AddColdness
 
 	function self:AddColdness(coldness, freezetime, nofreeze, ...)
-		if self.inst:HasTag("freezeimmune") then
+		if self.inst.tagvar_freezeimmune then
 			return
 		end
 

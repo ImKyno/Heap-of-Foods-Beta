@@ -173,8 +173,8 @@ local function OnAttached(inst, target)
 	end
 
 	-- Fishing
-	if not target:HasTag("skilledfisherman") then
-		target:AddTag("skilledfisherman")
+	if target ~= nil and target:HasTag("player") then
+		target.tagvar_skilledfisherman = true
 	end
 
 	-- Frog
@@ -315,8 +315,8 @@ local function OnDetached(inst, target)
 	end
 
 	-- Fishing
-	if target:HasTag("skilledfisherman") then
-		target:RemoveTag("skilledfisherman")
+	if target.tagvar_skilledfisherman ~= nil then
+		target.tagvar_skilledfisherman = false
 	end
 
 	-- Frog
@@ -497,11 +497,8 @@ local function OnExtended(inst, target)
 	end
 
 	-- Fishing
-	if target:HasTag("skilledfisherman") then
-		target:RemoveTag("skilledfisherman")
-		target:AddTag("skilledfisherman")
-	else
-		target:AddTag("skilledfisherman")
+	if target ~= nil and target:HasTag("player") then
+		target.tagvar_skilledfisherman = true
 	end
 
 	-- Frog

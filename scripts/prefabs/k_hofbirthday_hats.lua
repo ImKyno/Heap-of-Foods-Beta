@@ -25,7 +25,7 @@ local function MakeHat(data)
 				owner.AnimState:Hide("HEAD")
 			end
 
-			owner:AddTag("cheer_rewardable")
+			owner.tagvar_anniversary_cheermaker = true
 
 			if owner.components.luckuser ~= nil then
 				owner.components.luckuser:SetLuckSource(TUNING.KYNO_LUCK_MED, inst)
@@ -48,7 +48,7 @@ local function MakeHat(data)
 				owner.AnimState:Hide("HEAD_HAT")
 			end
 
-			owner:RemoveTag("cheer_rewardable")
+			owner.tagvar_anniversary_cheermaker = false
 
 			if owner.components.luckuser ~= nil then
 				owner.components.luckuser:RemoveLuckSource(inst)
@@ -58,7 +58,7 @@ local function MakeHat(data)
 
 	local function OnEquipToModel(inst, owner, from_ground)
 		if owner ~= nil then
-			owner:RemoveTag("cheer_rewardable")
+			owner.tagvar_anniversary_cheermaker = false
 		end
 
 		if owner.components.luckuser ~= nil then
@@ -68,7 +68,7 @@ local function MakeHat(data)
 
 	local function OnEquipVanity(inst, owner, from_ground)
 		if owner ~= nil then
-			owner:RemoveTag("cheer_rewardable")
+			owner.tagvar_anniversary_cheermaker = false
 
 			if owner.components.luckuser ~= nil then
 				owner.components.luckuser:RemoveLuckSource(inst)
@@ -83,7 +83,7 @@ local function MakeHat(data)
 			end
 
 			if inst.components.equippable:IsEquipped() then
-				owner:AddTag("cheer_rewardable")
+				owner.tagvar_anniversary_cheermaker = true
 
 				if owner.components.luckuser ~= nil then
 					owner.components.luckuser:SetLuckSource(TUNING.KYNO_LUCK_MED, inst)

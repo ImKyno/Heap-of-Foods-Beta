@@ -4,7 +4,7 @@ local assets =
 }
 
 local SLOWDOWN_MUST_TAGS = { "locomotor" }
-local SLOWDOWN_CANT_TAGS = { "flying", "player", "playerghost", "INLIMBO", "kyno_tomato_afflicted", "vigorbuff" }
+local SLOWDOWN_CANT_TAGS = { "flying", "player", "playerghost", "INLIMBO", "tomato_afflicted", "vigorbuff" }
 
 local function OnUpdate(inst, x, y, z, rad)
 	for i, v in ipairs(TheSim:FindEntities(x, y, z, rad, SLOWDOWN_MUST_TAGS, SLOWDOWN_CANT_TAGS)) do

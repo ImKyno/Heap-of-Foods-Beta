@@ -6,8 +6,8 @@ AddComponentPostInit("burnable", function(self)
 
 	function self:Ignite(immediate, source, doer, ...)
 		local burner =
-			(doer ~= nil and doer:HasTag("kyno_controlled_burner"))
-			or (source ~= nil and source:HasTag("kyno_controlled_burner"))
+			(doer ~= nil and doer.tagvar_controlled_burner)
+			or (source ~= nil and source.tagvar_controlled_burner)
 
 		if burner and not self.burning and not self.inst:HasTag("fireimmune") then
 			local old = self.controlled_burn

@@ -1,13 +1,7 @@
 local _G = GLOBAL
 
 local function WobyRackSwapFXPostInit(inst)
-	local CS =
-	{
-		r = 0.4,
-		g = 0.4,
-		b = 0.6,
-		a = 0.5,
-	}
+	local CS = { r = 0.4, g = 0.4, b = 0.6, a = 0.5 }
 
 	local function ApplyColourToSlot(slotfx, r, g, b, a)
 		if slotfx and slotfx.AnimState then
@@ -47,7 +41,7 @@ local function WobyRackSwapFXPostInit(inst)
 	local function RackStealth(inst)
 		local parent = inst.entity:GetParent()
 
-		if parent and parent:HasTag("mimicmosa_stealthed") then
+		if parent and parent:HasTag("foodbuff_stealth") then
 			StealthMultColour(inst)
 		else
 			DefaultMultColour(inst)

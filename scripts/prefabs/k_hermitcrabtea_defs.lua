@@ -67,7 +67,7 @@ local HOF_BUFF_DEFS =
 		duration = TUNING.KYNO_HERMITCRAB_ICENETTLESTEA_DURATION,
 
 		onattachedfn = function(inst, target)
-			target:AddTag("freezeimmune")
+			target.tagvar_freezeimmune = true
 
 			if inst._attacked == nil then
 				inst._attacked = function(attacked, data)
@@ -84,7 +84,7 @@ local HOF_BUFF_DEFS =
 		end,
 
 		onextendedfn = function(inst, target)
-			target:AddTag("freezeimmune")
+			target.tagvar_freezeimmune = true
 
 			if inst._attacked ~= nil then
 				inst:RemoveEventCallback("attacked", inst._attacked, target)
@@ -106,7 +106,7 @@ local HOF_BUFF_DEFS =
 		end,
 
 		ondetachedfn = function(inst, target)
-			target:RemoveTag("freezeimmune")
+			target.tagvar_freezeimmune = false
 
 			if inst._attacked ~= nil then
 				inst:RemoveEventCallback("attacked", inst._attacked, target)
