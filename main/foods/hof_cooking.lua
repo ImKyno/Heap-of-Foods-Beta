@@ -347,3 +347,12 @@ if HOF_WARLYRECIPES then
 		recipe.cookbook_category = "portablecookpot" -- Need this here so it can properly register the recipes.
 	end
 end
+
+-- Removes spiced prefabs from foods that cannot be spiced.
+for i = #cooking.recipes.portablespicer, 1, -1 do
+	local recipe = cooking.recipes.portablespicer[i]
+
+	if recipe.basename and table.contains(TUNING.HOF_NOSPICE_FOODS, recipe.basename) then
+		table.remove(cooking.recipes.portablespicer, i)
+	end
+end

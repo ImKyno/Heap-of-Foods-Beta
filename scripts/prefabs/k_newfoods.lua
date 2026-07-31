@@ -68,11 +68,22 @@ local function OnTakeOffFurniture(inst)
 	inst:RemoveTag("outofreach")
 end
 
+local function OnRespawned(inst)
+	inst:AddDebuff("kyno_reviveprotectionbuff", "kyno_reviveprotectionbuff")
+	inst:RemoveEventCallback("ms_respawnedfromghost", OnRespawned)
+end
+
 local function OnHaunt(inst, haunter)
 	local x, y, z = inst.Transform:GetWorldPosition()
 	SpawnPrefab("shadow_puff").Transform:SetPosition(x, y, z)
 
 	TheWorld:PushEvent("ms_sendlightningstrike", inst:GetPosition())
+
+	if haunter ~= nil then
+		if not TUNING.HOF_RESURRECTION then
+			haunter:ListenForEvent("ms_respawnedfromghost", OnRespawned)
+		end
+	end
 
 	if inst.components.stackable ~= nil then
 		inst.components.stackable:Get():Remove()
@@ -296,7 +307,11 @@ local function MakePreparedFood(data)
 			inst:AddComponent("hauntable")
 			inst.components.hauntable:SetHauntValue(TUNING.HAUNT_INSTANT_REZ)
 
-			inst:ListenForEvent("activateresurrection", OnHaunt)
+			if TUNING.HOF_RESURRECTION then
+				inst:ListenForEvent("activateresurrection", OnHaunt)
+			else
+				AddHauntableCustomReaction(inst, OnHaunt, true, false, true)
+			end
 		else
 			MakeHauntableLaunchAndPerish(inst)
 		end

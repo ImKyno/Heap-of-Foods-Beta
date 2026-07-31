@@ -73,6 +73,11 @@ local function OnFishCaught(inst, data)
 	end
 end
 
+local function OnRespawned(inst)
+	inst:AddDebuff("kyno_reviveprotectionbuff", "kyno_reviveprotectionbuff")
+	inst:RemoveEventCallback("ms_respawnedfromghost", OnRespawned)
+end
+
 local function PlayerPostInit(inst)
 	inst:AddComponent("fishregistryupdater")
 
@@ -119,48 +124,50 @@ local function PlayerPostInit(inst)
 		end)
 	end
 
-	if TUNING.HOF_RESURRECTION then
-		if inst.components.trader ~= nil then
-			local _test = inst.components.trader.test
+	if inst.components.trader ~= nil then
+		local _test = inst.components.trader.test
 
-			inst.components.trader:SetAcceptTest(function(inst, item, giver, ...)
-				if item ~= nil and item:HasTag("foodreviver") and inst:HasTag("playerghost") then
-					return inst:IsOnPassablePoint()
-				end
+		inst.components.trader:SetAcceptTest(function(inst, item, giver, ...)
+			if item ~= nil and item:HasTag("foodreviver") and inst:HasTag("playerghost") then
+				return inst:IsOnPassablePoint()
+			end
 
-				return _test ~= nil and _test(inst, item, giver, ...) or false
-			end)
+			return _test ~= nil and _test(inst, item, giver, ...) or false
+		end)
 
-			local _onaccept = inst.components.trader.onaccept
+		local _onaccept = inst.components.trader.onaccept
 
-			inst.components.trader.onaccept = function(inst, giver, item, ...)
-				if item ~= nil and item:HasTag("foodreviver") and inst:HasTag("playerghost") then
-					local x, y, z = item.Transform:GetWorldPosition()
+		inst.components.trader.onaccept = function(inst, giver, item, ...)
+			if item ~= nil and item:HasTag("foodreviver") and inst:HasTag("playerghost") then
+				local x, y, z = item.Transform:GetWorldPosition()
 
-					-- Using a proxy item since the original item goes to the ghost's inventory (LIMBO)
-					-- and does not trigger the ressurrection functions.
-					local proxy = _G.SpawnPrefab("kyno_foodreviver_proxy")
-					proxy.Transform:SetPosition(x, y, z)
+				-- Using a proxy item since the original item goes to the ghost's inventory (LIMBO)
+				-- and does not trigger the ressurrection functions.
+				local proxy = _G.SpawnPrefab("kyno_foodreviver_proxy")
+				proxy.Transform:SetPosition(x, y, z)
 
-					inst:PushEvent("respawnfromghost", { source = proxy, user = giver })
+				inst:PushEvent("respawnfromghost", { source = proxy, user = giver })
 
+				if TUNING.HOF_RESURRECTION then
 					inst:DoTaskInTime(0.2, function()
 						local fx = _G.SpawnPrefab("halloween_firepuff_cold_3")
 						fx.Transform:SetPosition(x, y, z)
 					end)
-
-					if giver.components.sanity ~= nil then
-						giver.components.sanity:DoDelta(TUNING.REVIVE_OTHER_SANITY_BONUS)
-					end
-
-					item:DoTaskInTime(1, function()
-						item:Remove()
-					end)
+				else
+					inst:ListenForEvent("ms_respawnedfromghost", OnRespawned)
 				end
 
-				if _onaccept ~= nil then
-					return _onaccept(inst, giver, item, ...)
+				if giver.components.sanity ~= nil then
+					giver.components.sanity:DoDelta(TUNING.REVIVE_OTHER_SANITY_BONUS)
 				end
+
+				item:DoTaskInTime(1, function()
+					item:Remove()
+				end)
+			end
+
+			if _onaccept ~= nil then
+				return _onaccept(inst, giver, item, ...)
 			end
 		end
 	end
