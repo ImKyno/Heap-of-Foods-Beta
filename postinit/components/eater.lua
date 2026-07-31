@@ -22,11 +22,6 @@ AddComponentPostInit("eater", function(self)
 			return true
 		end
 
-		-- All characters can eat permanent foods.
-		if food.components.edible ~= nil and food.components.edible.foodtype == _G.FOODTYPE.FOODUPGRADE then
-			return true
-		end
-
 		return _PrefersToEat(self, food, ...)
 	end
 end)

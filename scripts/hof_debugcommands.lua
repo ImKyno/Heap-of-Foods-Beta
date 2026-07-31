@@ -887,7 +887,6 @@ function c_hofrecipe(recipename)
 		"hof_foodrecipes_warly",
 		"hof_foodrecipes_item",
 		"hof_foodrecipes_seasonal",
-		"hof_foodrecipes_ancient",
 		"hof_brewrecipes_keg",
 		"hof_brewrecipes_jar",
 	}
@@ -1016,6 +1015,5 @@ function c_hoftestdiets()
 		c_give("moonglass",          40, true) -- LUNAR_SHARDS
 		c_give("duckyouglermz",      40, true) -- PREPAREDPOOP
 		c_give("soulstew",           40, true) -- PREPAREDSOUL
-		c_give("foodupgrade_health", 40, true) -- FOODUPGRADE
 	end
 end

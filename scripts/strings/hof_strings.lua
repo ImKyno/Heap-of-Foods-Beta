@@ -16,6 +16,7 @@ STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP = "Elder's Supplies"
 STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP = "Sammy's Emporium"
 STRINGS.UI.CRAFTING_FILTERS.DECIDUOUSSHOP = "Partitio's Warehouse"
 
+STRINGS.UI.CRAFTING.NEEDSMEALING = "Use a Mealing Stone to grind this ingredient!"
 STRINGS.UI.CRAFTING.NEEDSMEALING_ONE = "Use a Mealing Stone to grind this ingredient!"
 STRINGS.UI.CRAFTING.NEEDSMEALING_TWO = "Use a Mealing Stone to grind this ingredient!"
 

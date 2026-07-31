@@ -32,6 +32,10 @@ local function PigKingPostInit(inst)
 
 		inst.components.trader.onaccept = function(inst, giver, item, ...)
 			if PIG_COIN_ECONOMY.PrefabHasValue(item) then
+				if _onaccept ~= nil then
+					_onaccept(inst, giver, item, ...)
+				end
+
 				inst.sg:GoToState("cointoss")
 
 				inst:DoTaskInTime(2 / 3, function()
