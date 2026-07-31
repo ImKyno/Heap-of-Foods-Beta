@@ -1,35 +1,32 @@
-local _G = GLOBAL
-
+local _G                  = GLOBAL
 local HOF_ALCOHOLICDRINKS = GetModConfigData("ALCOHOLICDRINKS")
 
--- This will prevent some characters from drinking Alcoholic-like drinks.
-if HOF_ALCOHOLICDRINKS then
-	AddComponentPostInit("eater", function(self)
-		local _PrefersToEat = self.PrefersToEat
+AddComponentPostInit("eater", function(self)
+	local _PrefersToEat = self.PrefersToEat
 
-		function self:PrefersToEat(inst)
-			_PrefersToEat(self, inst)
-
-			if inst.prefab == "winter_food4" and self.inst:HasTag("player") then
-				return false
-			elseif inst:HasTag("alcoholic_drink") and self.inst.tagvar_no_alcoholic_drinker then
-				return false
-			elseif self.preferseatingtags ~= nil then
-				local preferred = false
-
-				for i, v in ipairs(self.preferseatingtags) do
-					if inst:HasTag(v) then
-						preferred = true
-						break
-					end
-				end
-
-				if not preferred then
-					return false
-				end
-			end
-
-			return self:TestFood(inst, self.preferseating)
+	function self:PrefersToEat(food, ...)
+		-- This will prevent some characters from drinking Alcoholic-like drinks.
+		if HOF_ALCOHOLICDRINKS and food:HasTag("alcoholic_drink") and self.inst.tagvar_no_alcoholic_drinker then
+			return false
 		end
-	end)
-end
+
+		-- Wormwood can eat prepared foods made with fertilizers.
+		if self.inst:HasTag("plantkin") and food.components.edible ~= nil 
+		and food.components.edible.foodtype == _G.FOODTYPE.PREPAREDPOOP then
+			return true
+		end
+
+		-- Wortox can eat prepared foods made with souls.
+		if self.inst:HasTag("souleater") and food.components.edible ~= nil
+		and food.components.edible.foodtype == _G.FOODTYPE.PREPAREDSOUL then
+			return true
+		end
+
+		-- All characters can eat permanent foods.
+		if food.components.edible ~= nil and food.components.edible.foodtype == _G.FOODTYPE.FOODUPGRADE then
+			return true
+		end
+
+		return _PrefersToEat(self, food, ...)
+	end
+end)

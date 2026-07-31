@@ -147,35 +147,26 @@ function c_hoftestcoffee()
 end
 
 -- Quick command for testing foods on Crock Pots.
-function c_hofcrockpots()
+function c_hofcookpots(cookpottype)
 	local player = ConsoleCommandPlayer()
 
 	local x, y, z = player.Transform:GetWorldPosition()
 	local n = 12
-	local sector = 2*math.pi/n
+	local sector = 2 * math.pi / n
 
-	for i = 1, n, 1 do
-		local crockpot = SpawnPrefab("cookpot")
+	local cookpots =
+	{
+		warly   = "portablecookpot",
+		spicer  = "portablespicer",
+		ancient = "archive_cookpot",
+	}
 
-		if crockpot then
-			crockpot.Transform:SetPosition(x + 5 * math.cos(i * sector), y, z + 5 * math.sin(i * sector))
-		end
-	end
-end
+	for i = 1, n do
+		local prefab = cookpots[cookpottype] or "cookpot"
+		local cookpot = SpawnPrefab(prefab)
 
--- Quick command for testing foods on Warly's Crock Pots.
-function c_hofwarlycrockpots()
-	local player = ConsoleCommandPlayer()
-
-	local x, y, z = player.Transform:GetWorldPosition()
-	local n = 12
-	local sector = 2*math.pi/n
-
-	for i = 1, n, 1 do
-		local crockpot = SpawnPrefab("portablecookpot")
-
-		if crockpot then
-			crockpot.Transform:SetPosition(x + 4 * math.cos(i * sector), y, z + 4 * math.sin(i * sector))
+		if cookpot then
+			cookpot.Transform:SetPosition(x + 5 * math.cos(i * sector), y, z + 5 * math.sin(i * sector))
 		end
 	end
 end
@@ -896,6 +887,7 @@ function c_hofrecipe(recipename)
 		"hof_foodrecipes_warly",
 		"hof_foodrecipes_item",
 		"hof_foodrecipes_seasonal",
+		"hof_foodrecipes_ancient",
 		"hof_brewrecipes_keg",
 		"hof_brewrecipes_jar",
 	}
@@ -999,5 +991,31 @@ function c_hofwxcircuits()
 		c_give("wx78module_dryer",    nil, true)
 		c_give("wx78module_dryer2",   nil, true)
 		c_give("wx78module_gourmand", nil, true)
+	end
+end
+
+function c_hoftestdiets()
+	local player = ConsoleCommandPlayer()
+
+	if player ~= nil then
+		c_select(player)
+
+		player.components.inventory:Equip(c_spawn("krampus_sack", nil, true))
+		c_give("phlegm",             40, true) -- GENERIC
+		c_give("meatballs",          40, true) -- MEAT
+		c_give("asparagussoup",      40, true) -- VEGGIE
+		c_give("rocks",              40, true) -- ELEMENTAL
+		c_give("gears",              40, true) -- GEARS
+		c_give("pigskin",            40, true) -- HORRIBLE
+		c_give("seeds",              40, true) -- SEEDS
+		c_give("acorn",              40, true) -- RAW
+		c_give("ash",                40, true) -- BURNT
+		c_give("cutreeds",           40, true) -- ROUGHAGE
+		c_give("log",                20, true) -- WOOD
+		c_give("taffy",              40, true) -- GOODIES
+		c_give("moonglass",          40, true) -- LUNAR_SHARDS
+		c_give("duckyouglermz",      40, true) -- PREPAREDPOOP
+		c_give("soulstew",           40, true) -- PREPAREDSOUL
+		c_give("foodupgrade_health", 40, true) -- FOODUPGRADE
 	end
 end
