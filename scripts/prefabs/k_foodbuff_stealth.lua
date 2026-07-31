@@ -1,36 +1,30 @@
-local CS = 
-{
-	r = 0.4, 
-	g = 0.4, 
-	b = 0.6, 
-	a = 0.5,
-}
+local CS = { r = 0.4, g = 0.4, b = 0.6, a = 0.5 }
 
 local function MountedStealth(inst, data)
 	local rider = inst.components.rider
 	local mount = rider:GetMount()
 	local saddle = mount.components.rideable.saddle
-	
-	if rider ~= nil and inst:HasTag("mimicmosa_stealthed") then
+
+	if rider ~= nil and inst:HasTag("foodbuff_stealth") then
 		if mount ~= nil and mount:HasTag("woby") then
-			mount:AddTag("mimicmosa_stealthed")
+			mount.tagvar_stealth = true
 		end
-		
+
 		if mount ~= nil and mount:HasTag("beefalo") then
-			mount:AddTag("mimicmosa_stealthed")
+			mount.tagvar_stealth = true
 		end
 	end
 end
 
 local function DismountedStealth(inst, data)
 	local mount = data ~= nil and data.target or nil
-	
+
 	if mount ~= nil and mount:HasTag("woby") then
-		mount:RemoveTag("mimicmosa_stealthed")
+		mount.tagvar_stealth = false
 	end
-	
+
 	if mount ~= nil and mount:HasTag("beefalo") then
-		mount:RemoveTag("mimicmosa_stealthed")
+		mount.tagvar_stealth = false
 	end
 end
 
@@ -45,37 +39,37 @@ local function DisableStealth(inst)
 		inst.stealthtask:Cancel()
 		inst.stealthtask = nil
 	end
-	
+
 	inst.AnimState:SetMultColour(1, 1, 1, 1)
-	
+
 	inst:RemoveEventCallback("mounted", MountedStealth)
 	inst:RemoveEventCallback("dismounted", DismountedStealth)
 end
 
 local function EnableStealth(inst)
 	inst.stealthtask = inst:DoPeriodicTask(0, UpdateStealth)
-	
+
 	local fx = SpawnPrefab("shadow_puff_large_front")
 	fx.entity:SetParent(inst.entity)
-	
+
 	inst:ListenForEvent("mounted", MountedStealth)
 	inst:ListenForEvent("dismounted", DismountedStealth)
-	
+
 	ForceCombatGiveUp(inst)
 end
 
 local function BreakStealth(inst)
-	if inst:HasTag("stealthed") then
-		inst:RemoveTag("stealthed")
+	if inst.tagvar_stealth then
+		inst.tagvar_stealth = false
 	end
-	
+
 	if not inst.stealthbroken then
 		local fx = SpawnPrefab("shadow_puff_large_front")
 		fx.entity:SetParent(inst.entity)
 	end
-	
+
 	inst.stealthbroken = true
-	
+
 	DisableStealth(inst)
 
 	if inst._stealth_restore_task ~= nil then
@@ -85,8 +79,8 @@ local function BreakStealth(inst)
 
 	inst._stealth_restore_task = inst:DoTaskInTime(TUNING.KYNO_STEALTHBUFF_COOLDOWN, function(inst)
 		if inst:IsValid() and inst.components.debuffable ~= nil and inst.components.debuffable:HasDebuff("kyno_stealthbuff") then
-			inst:AddTag("stealthed")
-			
+			inst.tagvar_stealth = true
+
 			EnableStealth(inst)
 			inst.stealthbroken = false
 		end
@@ -94,40 +88,40 @@ local function BreakStealth(inst)
 end
 
 local function OnAttached(inst, target)
-    inst.entity:SetParent(target.entity)
-    inst.Transform:SetPosition(0, 0, 0)
-	
+	inst.entity:SetParent(target.entity)
+	inst.Transform:SetPosition(0, 0, 0)
+
 	local fx = SpawnPrefab("beeswax_spray_fx")
 	fx.entity:SetParent(target.entity)
-    
+
 	-- Not good idea apply this to mobs...
 	if target:HasTag("player") then
-		target:AddTag("stealthed")
+		target.tagvar_stealth = true
 		target:AddTag("mimicmosa_stealthed")
 
 		target:AddTag("notraptrigger")
 		target:RemoveTag("scarytoprey")
-		
+
 		EnableStealth(target)
-		
+
 		target:ListenForEvent("doattack", BreakStealth)
 		target:ListenForEvent("onattackother", BreakStealth)
 		target:ListenForEvent("onthrown", BreakStealth)
 	end
-	
-	if target.components.talker and target:HasTag("player") then 
+
+	if target.components.talker and target:HasTag("player") then
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_STEALTHBUFF_START"))
 	end
-	
-    inst:ListenForEvent("death", function()
-        inst.components.debuff:Stop()
-    end, target)
+
+	inst:ListenForEvent("death", function()
+		inst.components.debuff:Stop()
+	end, target)
 end
 
 local function OnTimerDone(inst, data)
-    if data.name == "kyno_stealthbuff" then
-        inst.components.debuff:Stop()
-    end
+	if data.name == "kyno_stealthbuff" then
+		inst.components.debuff:Stop()
+	end
 end
 
 local function OnDetached(inst, target)
@@ -135,115 +129,116 @@ local function OnDetached(inst, target)
 	fx.entity:SetParent(target.entity)
 
 	if target:HasTag("player") then
-		target:RemoveTag("stealthed")
-		target:RemoveTag("mimicmosa_stealthed")
+		target.tagvar_stealth = false
 
+		target:RemoveTag("mimicmosa_stealthed")
 		target:RemoveTag("notraptrigger")
+
 		target:AddTag("scarytoprey")
-		
+
 		DisableStealth(target)
-		
+
 		target:RemoveEventCallback("doattack", BreakStealth)
 		target:RemoveEventCallback("onattackother", BreakStealth)
 		target:RemoveEventCallback("onthrown", BreakStealth)
-		
+
 		if target._stealth_restore_task ~= nil then
 			target._stealth_restore_task:Cancel()
 			target._stealth_restore_task = nil
 		end
 	end
-	
-	if target.components.talker and target:HasTag("player") then 
+
+	if target.components.talker and target:HasTag("player") then
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_STEALTHBUFF_END"))
 	end
-	
-    inst:Remove()
+
+	inst:Remove()
 end
 
 local function OnExtended(inst, target)
-    inst.components.timer:StopTimer("kyno_stealthbuff")
-    inst.components.timer:StartTimer("kyno_stealthbuff", TUNING.KYNO_STEALTHBUFF_DURATION)
-	
+	inst.components.timer:StopTimer("kyno_stealthbuff")
+	inst.components.timer:StartTimer("kyno_stealthbuff", TUNING.KYNO_STEALTHBUFF_DURATION)
+
 	local fx = SpawnPrefab("beeswax_spray_fx")
 	fx.entity:SetParent(target.entity)
-	
-	if target:HasTag("player") then
-		target:RemoveTag("stealthed")
-		target:RemoveTag("mimicmosa_stealthed")
 
+	if target:HasTag("player") then
+		target.tagvar_stealth = false
+
+		target:RemoveTag("mimicmosa_stealthed")
 		target:RemoveTag("notraptrigger")
+
 		target:AddTag("scarytoprey")
-		
+
 		DisableStealth(target)
-		
+
 		target:RemoveEventCallback("doattack", BreakStealth)
 		target:RemoveEventCallback("onattackother", BreakStealth)
 		target:RemoveEventCallback("onthrown", BreakStealth)
-		
+
 		if target._stealth_restore_task ~= nil then
 			target._stealth_restore_task:Cancel()
 			target._stealth_restore_task = nil
 		end
 	end
-	
+
 	if target:HasTag("player") then
-		target:RemoveTag("stealthed")
-		target:AddTag("stealthed")
-		
+		target.tagvar_stealth = true
+
 		target:RemoveTag("mimicmosa_stealthed")
 		target:AddTag("mimicmosa_stealthed")
-	
-		target:RemoveTag("notraptrigger")
 
+		target:RemoveTag("notraptrigger")
 		target:AddTag("notraptrigger")
+
 		target:RemoveTag("scarytoprey")
-		
+
 		EnableStealth(target)
-		
+
 		target:RemoveEventCallback("doattack", BreakStealth)
 		target:RemoveEventCallback("onattackother", BreakStealth)
 		target:RemoveEventCallback("onthrown", BreakStealth)
-		
+
 		target:ListenForEvent("doattack", BreakStealth)
 		target:ListenForEvent("onattackother", BreakStealth)
 		target:ListenForEvent("onthrown", BreakStealth)
 	end
-	
-	if target.components.talker and target:HasTag("player") then 
+
+	if target.components.talker and target:HasTag("player") then
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_STEALTHBUFF_START"))
 	end
 end
 
 local function fn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    if not TheWorld.ismastersim then
-        inst:DoTaskInTime(0, inst.Remove)
-        return inst
-    end
+	if not TheWorld.ismastersim then
+		inst:DoTaskInTime(0, inst.Remove)
+		return inst
+	end
 
-    inst.entity:AddTransform()
-    inst.entity:Hide()
-    inst.persists = false
+	inst.entity:AddTransform()
+	inst.entity:Hide()
+	inst.persists = false
 
-    inst:AddTag("CLASSIFIED")
+	inst:AddTag("CLASSIFIED")
 
-    inst:AddComponent("debuff")
-    inst.components.debuff:SetAttachedFn(OnAttached)
-    inst.components.debuff:SetDetachedFn(OnDetached)
-    inst.components.debuff:SetExtendedFn(OnExtended)
-    inst.components.debuff.keepondespawn = true
+	inst:AddComponent("debuff")
+	inst.components.debuff:SetAttachedFn(OnAttached)
+	inst.components.debuff:SetDetachedFn(OnDetached)
+	inst.components.debuff:SetExtendedFn(OnExtended)
+	inst.components.debuff.keepondespawn = true
 
-    inst:AddComponent("timer")
-    inst.components.timer:StartTimer("kyno_stealthbuff", TUNING.KYNO_STEALTHBUFF_DURATION)
-	
-    inst:ListenForEvent("timerdone", OnTimerDone)
-	
+	inst:AddComponent("timer")
+	inst.components.timer:StartTimer("kyno_stealthbuff", TUNING.KYNO_STEALTHBUFF_DURATION)
+
+	inst:ListenForEvent("timerdone", OnTimerDone)
+
 	-- Mods.
 	inst.MountedStealth = MountedStealth
 	inst.DismountedStealth = DismountedStealth
 
-    return inst
+	return inst
 end
 
 return Prefab("kyno_stealthbuff", fn)

@@ -15,6 +15,10 @@ local function OnAttached(inst, target)
 	inst.entity:SetParent(target.entity)
 	inst.Transform:SetPosition(0, 0, 0)
 
+	if target ~= nil and target:HasTag("player") then
+		target.tagvar_controlled_burner = true
+	end
+
 	if target.components.talker and target:HasTag("player") then
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FIREBUFF_START"))
 	end
@@ -41,6 +45,10 @@ local function OnAttached(inst, target)
 end
 
 local function OnDetached(inst, target)
+	if target ~= nil and target.tagvar_controlled_burner ~= nil then
+		target.tagvar_controlled_burner = false
+	end
+
 	if target ~= nil and target.components.damagetypebonus ~= nil then
 		target.components.damagetypebonus:RemoveBonusCallback(GetFireDamageMult)
 	end
@@ -60,6 +68,10 @@ end
 local function OnExtended(inst, target)
 	inst.components.timer:StopTimer("kyno_spice_firebuff")
 	inst.components.timer:StartTimer("kyno_spice_firebuff", SPICE_DURATION)
+
+	if target ~= nil and target:HasTag("player") then
+		target.tagvar_controlled_burner = true
+	end
 
 	if target ~= nil and target.components.damagetypebonus ~= nil then
 		target.components.damagetypebonus:AddBonusCallback(GetFireDamageMult)
@@ -99,9 +111,9 @@ local function fn()
 	inst.entity:Hide()
 
 	inst.persists = false
+	inst.tagvar_controlled_burner = true -- For burnable component.
 
 	inst:AddTag("CLASSIFIED")
-	inst:AddTag("kyno_controlled_burner") -- For burnable component.
 
 	inst:AddComponent("debuff")
 	inst.components.debuff:SetAttachedFn(OnAttached)

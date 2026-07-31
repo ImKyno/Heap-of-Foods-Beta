@@ -8,8 +8,8 @@ local function OnAttached(inst, target)
 	inst.entity:SetParent(target.entity)
     inst.Transform:SetPosition(0, 0, 0)
 	
-	if not target:HasTag("bigbrain") then
-		target:AddTag("bigbrain")
+	if target ~= nil and target:HasTag("player") then
+		target.tagvar_bigbrain = true
 	end
 	
 	if target.components.builder ~= nil then
@@ -72,8 +72,8 @@ local function OnAttached(inst, target)
 end
 
 local function OnDetached(inst, target)
-	if target:HasTag("bigbrain") then
-		target:RemoveTag("bigbrain")
+	if target ~= nil and target.tagvar_bigbrain ~= nil then
+		target.tagvar_bigbrain = false
 	end
 	
 	if target.components.builder ~= nil and inst._added_bonuses ~= nil then
@@ -100,11 +100,8 @@ local function OnExtended(inst, target)
 	inst.components.timer:StopTimer("kyno_craftingbuff")
     inst.components.timer:StartTimer("kyno_craftingbuff", TUNING.KYNO_CRAFTINGBUFF_DURATION)
 	
-	if target:HasTag("bigbrain") then
-		target:RemoveTag("bigbrain")
-		target:AddTag("bigbrain")
-	else
-		target:AddTag("bigbrain")
+	if target ~= nil and target:HasTag("player") then
+		target.tagvar_bigbrain = true
 	end
 	
 	if target.components.talker and target:HasTag("player") then 

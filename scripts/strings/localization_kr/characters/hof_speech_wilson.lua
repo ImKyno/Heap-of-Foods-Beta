@@ -1321,3 +1321,29 @@ WILSON.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WILSON.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Can't get saucy with the crowd if you see this around."
+
+WILSON.DESCRIBE.WX78MODULE_GOURMAND = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.WX78MODULE_COOKER = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.WX78MODULE_DRYER = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.WX78MODULE_DRYER2 = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
+
+WILSON.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "An odd container.", -- NEEDS TRANSLATION
+}
+
+WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "An odd container.", -- NEEDS TRANSLATION
+}
+
+WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "An odd container.", -- NEEDS TRANSLATION
+}

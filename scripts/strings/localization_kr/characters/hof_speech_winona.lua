@@ -1321,3 +1321,29 @@ WINONA.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WINONA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Don't get those juices near my machines!"
+
+WINONA.DESCRIBE.WX78MODULE_GOURMAND = "WX, you gotta stop leavin' this stuff lying around!" -- NEEDS TRANSLATION
+WINONA.DESCRIBE.WX78MODULE_COOKER = "WX, you gotta stop leavin' this stuff lying around!" -- NEEDS TRANSLATION
+WINONA.DESCRIBE.WX78MODULE_DRYER = "WX, you gotta stop leavin' this stuff lying around!" -- NEEDS TRANSLATION
+WINONA.DESCRIBE.WX78MODULE_DRYER2 = "WX, you gotta stop leavin' this stuff lying around!" -- NEEDS TRANSLATION
+
+WINONA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Wonder what WX left behind.", -- NEEDS TRANSLATION
+}
+
+WINONA.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Wonder what WX left behind.", -- NEEDS TRANSLATION
+}
+
+WINONA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Wonder what WX left behind.", -- NEEDS TRANSLATION
+}

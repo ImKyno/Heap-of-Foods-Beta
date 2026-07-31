@@ -8,8 +8,7 @@ WortoxSoulCommon.GetNumSouls = function(victim)
 	local source = victim ~= nil and victim._soulsource or nil
 
 	if source ~= nil
-		and source.prefab == "wortox"
-		and source:HasTag("soulharvester") then
+		and source.prefab == "wortox" and source.tagvar_soulharvester then
 		num = num + 1
 	end
 

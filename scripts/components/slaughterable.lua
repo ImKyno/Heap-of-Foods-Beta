@@ -117,7 +117,7 @@ function Slaughterable:SetExtraLootFn(fn)
 end
 
 function Slaughterable:DropExtraLoot(doer)
-	if not (self.extra_loot and doer and doer:HasTag("animal_butcher")) then
+	if not (self.extra_loot and doer and doer.tagvar_animal_butcher) then
 		return
 	end
 	

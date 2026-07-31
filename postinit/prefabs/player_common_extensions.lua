@@ -5,12 +5,42 @@ GLOBAL.setfenv(1, GLOBAL)
 
 local UpvalueHacker = require("tools/hof_upvaluehacker")
 local ex_fns        = require("prefabs/player_common_extensions")
+local ok
 
-local CommonActualRez     = UpvalueHacker.GetUpvalue(ex_fns.OnRespawnFromGhost, "DoActualRez", "CommonActualRez")
-local DoMoveToRezSource   = UpvalueHacker.GetUpvalue(ex_fns.OnRespawnFromGhost, "DoMoveToRezSource")
-local DoMoveToRezPosition = UpvalueHacker.GetUpvalue(ex_fns.OnRespawnFromGhost, "DoMoveToRezPosition")
+-- I hate doing this shit but if I don't, chinese dudes will keep complaining about their mods crashing and bla bla bla.
+-- If you know how to solve this issue please reach me out.
+ok, _DoActualRez = pcall(UpvalueHacker.GetUpvalue, ex_fns.OnRespawnFromGhost, "DoActualRez")
+if not ok or _DoActualRez == nil then
+	TUNING.HOF_RESURRECTION = false -- Disable our resurrection flags.
+	print("Heap of Foods Mod - Some other mod has modified the resurrection functions. DoActualRez is nil.")
+	print("Heap of Foods Mod - Disabling our custom resurrection functions to avoid crashes.")
+	return
+end
 
-local _DoActualRez = UpvalueHacker.GetUpvalue(ex_fns.OnRespawnFromGhost, "DoActualRez")
+ok, CommonActualRez = pcall(UpvalueHacker.GetUpvalue, ex_fns.OnRespawnFromGhost, "DoActualRez", "CommonActualRez")
+if not ok or CommonActualRez == nil then
+	TUNING.HOF_RESURRECTION = false
+	print("Heap of Foods Mod - Some other mod has modified the resurrection functions. CommonActualRez is nil.")
+	print("Heap of Foods Mod - Disabling our custom resurrection functions to avoid crashes.")
+	return
+end
+
+ok, DoMoveToRezSource = pcall(UpvalueHacker.GetUpvalue, ex_fns.OnRespawnFromGhost, "DoMoveToRezSource")
+if not ok or DoMoveToRezSource == nil then
+	TUNING.HOF_RESURRECTION = false
+	print("Heap of Foods Mod - Some other mod has modified the resurrection functions. DoMoveToRezSource is nil.")
+	print("Heap of Foods Mod - Disabling our custom resurrection functions to avoid crashes.")
+	return
+end
+
+ok, DoMoveToRezPosition = pcall(UpvalueHacker.GetUpvalue, ex_fns.OnRespawnFromGhost, "DoMoveToRezPosition")
+if not ok or DoMoveToRezPosition == nil then
+	TUNING.HOF_RESURRECTION = false
+	print("Heap of Foods Mod - Some other mod has modified the resurrection functions. DoMoveToRezPosition is nil.")
+	print("Heap of Foods Mod - Disabling our custom resurrection functions to avoid crashes.")
+	return
+end
+
 local function DoActualRez(inst, source, item, ...)
 	if source == nil or not source:HasTag("foodreviver") then
 		return _DoActualRez(inst, source, item, ...)
@@ -75,6 +105,7 @@ UpvalueHacker.SetUpvalue(DoMoveToRezPosition, DoActualRez, "DoActualRez")
 UpvalueHacker.HideFn(DoActualRez, _DoActualRez)
 
 local _OnRespawnFromGhost = ex_fns.OnRespawnFromGhost
+
 function ex_fns.OnRespawnFromGhost(inst, data, ...)
 	if not inst:HasTag("playerghost") or data == nil or data.source == nil or not data.source:HasTag("foodreviver") then
 		return _OnRespawnFromGhost(inst, data, ...)

@@ -1321,3 +1321,29 @@ WATHGRITHR.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WATHGRITHR.DESCRIBE.KYNO_FOODAMMO_TOMATO = "I'll smite you, if you even dare!"
+
+WATHGRITHR.DESCRIBE.WX78MODULE_GOURMAND = "These boons shall empower our metal warrior." -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.WX78MODULE_COOKER = "These boons shall empower our metal warrior." -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.WX78MODULE_DRYER = "These boons shall empower our metal warrior." -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.WX78MODULE_DRYER2 = "These boons shall empower our metal warrior." -- NEEDS TRANSLATION
+
+WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "What spoils hath our metal warrior bestowed?", -- NEEDS TRANSLATION
+}
+
+WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "What spoils hath our metal warrior bestowed?", -- NEEDS TRANSLATION
+}
+
+WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "What spoils hath our metal warrior bestowed?", -- NEEDS TRANSLATION
+}

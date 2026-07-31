@@ -17,7 +17,8 @@ local function OnFill(inst, from_object)
 	local owner = inst.components.inventoryitem.owner or inst.components.inventoryitem:GetGrandOwner()
 	local waterbucket = SpawnPrefab("kyno_bucket_water")
 	
-	if from_object ~= nil and from_object.components.watersource ~= nil and from_object.components.watersource.override_fill_uses ~= nil then
+	if from_object ~= nil and from_object.components.watersource ~= nil
+	and from_object.components.watersource.override_fill_uses ~= nil then
 		return false -- Will not fill from objects.
 	end
 		
@@ -25,7 +26,7 @@ local function OnFill(inst, from_object)
 		if owner ~= nil and owner.components.inventory ~= nil then
 			owner.components.inventory:GiveItem(waterbucket, nil, owner:GetPosition())
 		else
-			inst.components.inventory:DropItem(waterbucket)
+			LaunchAtRandomly(waterbucket, nil, 1)
 		end
 	end
 	
@@ -98,6 +99,7 @@ local function OnPutInInventory(inst)
 end
 
 local function OnUse(inst)
+	local x, y, z = inst.Transform:GetWorldPosition()
     local owner = inst.components.inventoryitem:GetGrandOwner() or inst.components.inventoryitem.owner
 	local bucket = SpawnPrefab("kyno_bucket_metal")
 	
@@ -105,6 +107,8 @@ local function OnUse(inst)
 		if owner.components.inventory ~= nil then
 			owner.components.inventory:GiveItem(bucket, nil, owner:GetPosition())
 		end
+	else
+		bucket.Transform:SetPosition(x, y, z)
 	end
 
 	inst:Remove()

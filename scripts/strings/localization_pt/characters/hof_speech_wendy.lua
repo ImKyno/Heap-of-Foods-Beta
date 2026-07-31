@@ -1321,3 +1321,29 @@ WENDY.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WENDY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Cresceu para ser jogado fora, o cruel ciclo da vida."
+
+WENDY.DESCRIBE.WX78MODULE_GOURMAND = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
+WENDY.DESCRIBE.WX78MODULE_COOKER = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
+WENDY.DESCRIBE.WX78MODULE_DRYER = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
+WENDY.DESCRIBE.WX78MODULE_DRYER2 = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
+
+WENDY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Me pergunto o que sobrou dentro.",
+}
+
+WENDY.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Me pergunto o que sobrou dentro.",
+}
+
+WENDY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Me pergunto o que sobrou dentro.",
+}

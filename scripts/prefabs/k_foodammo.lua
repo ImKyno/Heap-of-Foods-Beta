@@ -124,13 +124,13 @@ local function OnUpdateSauce(target, t0)
 		target._tomatotrailtask:Cancel()
 		target._tomatotrailtask = nil
 
-		target:RemoveTag("kyno_tomato_afflicted")
+		target:RemoveTag("tomato_afflicted")
 
 		if target.components.locomotor ~= nil then
-			target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_tomato_afflicted")
+			target.components.locomotor:RemoveExternalSpeedMultiplier(target, "tomato_afflicted")
 		end
 
-		target:PushEvent("kyno_tomato_afflicted")
+		target:PushEvent("tomato_afflicted")
 	end
 end
 
@@ -141,10 +141,10 @@ local function OnHitTomato(inst, attacker, target)
 		if target._tomatotrailtask then
 			target._tomatotrailtask:Cancel()
 		else
-			target:AddTag("kyno_tomato_afflicted")
+			target:AddTag("tomato_afflicted")
 
 			if target.components.locomotor ~= nil and not target:HasAnyTag("flying", "playerghost") then
-				target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_tomato_afflicted", TUNING.KYNO_TOMATO_TRAIL_SPEED)
+				target.components.locomotor:SetExternalSpeedMultiplier(target, "tomato_afflicted", TUNING.KYNO_TOMATO_TRAIL_SPEED)
 			end
 
 			pushstartevent = true
@@ -157,7 +157,7 @@ local function OnHitTomato(inst, attacker, target)
 		end
 
 		if pushstartevent then
-			target:PushEvent("kyno_tomato_afflicted")
+			target:PushEvent("tomato_afflicted")
 		end
 	end
 end

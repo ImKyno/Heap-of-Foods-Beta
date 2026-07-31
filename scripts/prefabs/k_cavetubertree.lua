@@ -306,7 +306,16 @@ local function OnSetStump(inst, push_anim)
 	inst:DoTaskInTime(TUNING.KYNO_CAVETUBERTREE_GROWTIME, OnRegen)
 end
 
-local function OnWork(inst, worker, workleft)
+local function OnShouldRecoil(inst, worker, tool, numworks)
+	local ismighty = worker ~= nil and worker.components.mightiness ~= nil
+	and worker.components.mightiness:GetState() == "mighty"
+
+	if ismighty then
+		return false, numworks
+	end
+end
+
+local function OnWork(inst, worker, workleft, numworks)
 	if inst:HasTag("burnt") or inst:HasTag("stump") then
 		return
 	end
@@ -322,17 +331,19 @@ local function OnWork(inst, worker, workleft)
 	if worker ~= nil then
 		local tool = worker.components.inventory ~= nil and worker.components.inventory:GetEquippedItem(EQUIPSLOTS.HANDS) or nil
 		local toughtool = tool ~= nil and tool.components.tool ~= nil and tool.components.tool:CanDoToughWork()
+		local ismighty = worker.components.mightiness ~= nil and worker.components.mightiness:GetState() == "mighty"
 
-		if worker:HasTag("toughworker") or toughtool then
-			inst.currentchops = inst.currentchops + 1
+		if worker:HasTag("toughworker") or toughtool or ismighty then
+			inst.currentchops = inst.currentchops + (numworks or 1)
 
-			if inst.currentchops >= inst.nexttuberchop and inst.tubers > 0 then
+			while inst.currentchops >= inst.nexttuberchop and inst.tubers > 0 do
 				inst.tubers = inst.tubers - 1
 				inst.nexttuberchop = inst.nexttuberchop + inst.chopspertuber
 
 				OnDropTuber(inst)
-				OnUpdateArt(inst)
 			end
+
+			OnUpdateArt(inst)
 		end
 	end
 end
@@ -600,6 +611,7 @@ local function makefn(build, stage, data)
 		inst.components.workable:SetOnWorkCallback(OnWork)
 		inst.components.workable:SetOnFinishCallback(OnWorked)
 		inst.components.workable:SetRequiresToughWork(true)
+		inst.components.workable:SetShouldRecoilFn(OnShouldRecoil)
     	inst.components.workable.savestate = true
 
 		inst:AddComponent("growable")

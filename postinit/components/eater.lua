@@ -12,7 +12,7 @@ if HOF_ALCOHOLICDRINKS then
 
 			if inst.prefab == "winter_food4" and self.inst:HasTag("player") then
 				return false
-			elseif inst:HasTag("alcoholic_drink") and self.inst:HasTag("no_alcoholic_drinker") then
+			elseif inst:HasTag("alcoholic_drink") and self.inst.tagvar_no_alcoholic_drinker then
 				return false
 			elseif self.preferseatingtags ~= nil then
 				local preferred = false

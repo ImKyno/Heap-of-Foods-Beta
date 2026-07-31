@@ -8,5 +8,6 @@
         <Element name="popcornmachine_slot_corn.tex" u1="0.267578125" v1="0.470703125" u2="0.529296875" v2="0.732421875" />
         <Element name="popcornmachine_slot_popcorn.tex" u1="0.533203125" v1="0.470703125" u2="0.794921875" v2="0.732421875" />
         <Element name="seedsbag_slot_seed.tex" u1="0.001953125" v1="0.205078125" u2="0.263671875" v2="0.466796875" />
+        <Element name="wx78_inventorycooker_slot_cook.tex" u1="0.267578125" v1="0.205078125" u2="0.529296875" v2="0.466796875" />
     </Elements>
 </Atlas>

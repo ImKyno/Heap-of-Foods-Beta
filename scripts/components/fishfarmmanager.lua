@@ -5,8 +5,8 @@ local FishFarmManager = Class(function(self, inst)
 	self._roe_task = nil
 	self._baby_task = nil
 
-	self.roe_time_left = 0
-	self.baby_time_left = 0
+	self.roe_time_left = nil
+	self.baby_time_left = nil
 
 	self.onstartfn = nil
 	self.onstopfn = nil
@@ -77,7 +77,29 @@ function FishFarmManager:StopWorking()
 	]]--
 end
 
-function FishFarmManager:ProduceRoe()
+-- Pause working saves the timer instead of erasing it.
+function FishFarmManager:PauseWorking()
+	if self._time_left_task then
+		self._time_left_task:Cancel()
+		self._time_left_task = nil
+	end
+
+	if self._roe_task then
+		self._roe_task:Cancel()
+		self._roe_task = nil
+	end
+
+	if self._baby_task then
+		self._baby_task:Cancel()
+		self._baby_task = nil
+	end
+
+	if self.onstopfn then
+		self.onstopfn(self.inst)
+	end
+end
+
+function FishFarmManager:ProduceRoe(skiptask)
 	local inst = self.inst
 	local fueled = inst.components.fueled
 	local container = inst.components.container
@@ -139,9 +161,15 @@ function FishFarmManager:ProduceRoe()
 	end
 
 	self.roe_time_left = fishfarmable:GetRoeTime()
+
+	if not skiptask then
+		self._roe_task = self.inst:DoTaskInTime(self.roe_time_left, function()
+			self:ProduceRoe()
+		end)
+	end
 end
 
-function FishFarmManager:ProduceBaby()
+function FishFarmManager:ProduceBaby(skiptask)
 	local inst = self.inst
 	local fueled = inst.components.fueled
 	local container = inst.components.container
@@ -197,6 +225,12 @@ function FishFarmManager:ProduceBaby()
 	end
 
 	self.baby_time_left = fishfarmable:GetBabyTime()
+
+	if not skiptask then
+		self._baby_task = self.inst:DoTaskInTime(self.baby_time_left, function()
+			self:ProduceBaby()
+		end)
+	end
 end
 
 function FishFarmManager:StartWorking()
@@ -210,10 +244,10 @@ function FishFarmManager:StartWorking()
 		return
 	end
 
-	self:StopWorking()
+	self:PauseWorking()
 
-	self.roe_time_left = fishfarmable:GetRoeTime()
-	self.baby_time_left = fishfarmable:GetBabyTime()
+	self.roe_time_left = self.roe_time_left or fishfarmable:GetRoeTime()
+	self.baby_time_left = self.baby_time_left or fishfarmable:GetBabyTime()
 
 	if self._time_left_task then
 		self._time_left_task:Cancel()
@@ -229,11 +263,11 @@ function FishFarmManager:StartWorking()
 		end
 	end)
 
-	self._roe_task = inst:DoPeriodicTask(fishfarmable:GetRoeTime(), function()
+	self._roe_task = self.inst:DoTaskInTime(self.roe_time_left, function()
 		self:ProduceRoe()
 	end)
 
-	self._baby_task = inst:DoPeriodicTask(fishfarmable:GetBabyTime(), function()
+	self._baby_task = inst:DoTaskInTime(self.baby_time_left, function()
 		self:ProduceBaby()
 	end)
 
@@ -296,46 +330,69 @@ function FishFarmManager:WatchWorldStates()
 end
 
 function FishFarmManager:LongUpdate(dt)
-	local inst = self.inst
-	local container = inst.components.container
-	local fueled = inst.components.fueled
+	if self._roe_task then
+		self._roe_task:Cancel()
+		self._roe_task = nil
+	end
 
-	if not container or not fueled or fueled:IsEmpty() then
+	if self._baby_task then
+		self._baby_task:Cancel()
+		self._baby_task = nil
+	end
+
+	if self._time_left_task then
+		self._time_left_task:Cancel()
+		self._time_left_task = nil
+	end
+
+	local container = self.inst.components.container
+	local fueled = self.inst.components.fueled
+
+	if container == nil or fueled == nil or fueled:IsEmpty() then
 		return
 	end
 
-	local fish_parent = container:GetItemInSlot(1)
-	local fishfarmable = fish_parent and fish_parent.components.fishfarmable
+	local fish = container:GetItemInSlot(1)
+	local farmable = fish and fish.components.fishfarmable
 
-	if not fish_parent or not fishfarmable then
+	if farmable == nil then
 		return
 	end
 
-	local roe_interval = fishfarmable:GetRoeTime()
-	local baby_interval = fishfarmable:GetBabyTime()
+	self.roe_time_left = self.roe_time_left or farmable:GetRoeTime()
 
-	if roe_interval > 0 then
-		local roe_cycles = math.floor(dt / roe_interval)
-
-		for i = 1, roe_cycles do
-			if fueled:IsEmpty() then
-				break
-			end
-
-			self:ProduceRoe()
-		end
+	if dt >= self.roe_time_left and not fueled:IsEmpty() then
+		self:ProduceRoe(true)
+		self.roe_time_left = farmable:GetRoeTime()
+	else
+		self.roe_time_left = math.max(0, self.roe_time_left - dt)
 	end
 
-	if baby_interval > 0 then
-		local baby_cycles = math.floor(dt / baby_interval)
+	self.baby_time_left = self.baby_time_left or farmable:GetBabyTime()
 
-		for i = 1, baby_cycles do
-			if fueled:IsEmpty() then
-				break
-			end
+	if dt >= self.baby_time_left and not fueled:IsEmpty() then
+		self:ProduceBaby(true)
+		self.baby_time_left = farmable:GetBabyTime()
+	else
+		self.baby_time_left = math.max(0, self.baby_time_left - dt)
+	end
 
-			self:ProduceBaby()
-		end
+	if farmable:IsPhaseValid()
+	and farmable:IsMoonPhaseValid()
+	and farmable:IsSeasonValid()
+	and farmable:IsWorldValid() then
+		self:StartWorking()
+	end
+end
+
+function FishFarmManager:OnSave()
+	return { roe_time_left = self.roe_time_left, baby_time_left = self.baby_time_left }
+end
+
+function FishFarmManager:OnLoad(data)
+	if data then
+		self.roe_time_left = data.roe_time_left
+		self.baby_time_left = data.baby_time_left
 	end
 end
 

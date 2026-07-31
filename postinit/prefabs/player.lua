@@ -29,7 +29,7 @@ local function OnLearnRoe(inst, data)
 end
 
 local function OnFishCaught(inst, data)
-	if not inst:HasTag("skilledfisherman") then
+	if not inst.tagvar_skilledfisherman then
 		return
 	end
 
@@ -71,6 +71,11 @@ local function OnFishCaught(inst, data)
 			end
 		end
 	end
+end
+
+local function OnRespawned(inst)
+	inst:AddDebuff("kyno_reviveprotectionbuff", "kyno_reviveprotectionbuff")
+	inst:RemoveEventCallback("ms_respawnedfromghost", OnRespawned)
 end
 
 local function PlayerPostInit(inst)
@@ -143,10 +148,14 @@ local function PlayerPostInit(inst)
 
 				inst:PushEvent("respawnfromghost", { source = proxy, user = giver })
 
-				inst:DoTaskInTime(0.2, function()
-					local fx = _G.SpawnPrefab("halloween_firepuff_cold_3")
-					fx.Transform:SetPosition(x, y, z)
-				end)
+				if TUNING.HOF_RESURRECTION then
+					inst:DoTaskInTime(0.2, function()
+						local fx = _G.SpawnPrefab("halloween_firepuff_cold_3")
+						fx.Transform:SetPosition(x, y, z)
+					end)
+				else
+					inst:ListenForEvent("ms_respawnedfromghost", OnRespawned)
+				end
 
 				if giver.components.sanity ~= nil then
 					giver.components.sanity:DoDelta(TUNING.REVIVE_OTHER_SANITY_BONUS)

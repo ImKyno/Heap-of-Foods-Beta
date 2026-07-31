@@ -1321,3 +1321,29 @@ WILLOW.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 }
 
 WILLOW.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Boo! You stink!" -- NEEDS TRANSLATION
+
+WILLOW.DESCRIBE.WX78MODULE_GOURMAND = "Hey WX, when are you gonna install a flamethrower?" -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.WX78MODULE_COOKER = "Hey WX, when are you gonna install a flamethrower?" -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.WX78MODULE_DRYER = "Hey WX, when are you gonna install a flamethrower?" -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.WX78MODULE_DRYER2 = "Hey WX, when are you gonna install a flamethrower?" -- NEEDS TRANSLATION
+
+WILLOW.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "What do I care about WX's old stuff?", -- NEEDS TRANSLATION
+}
+
+WILLOW.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "What do I care about WX's old stuff?", -- NEEDS TRANSLATION
+}
+
+WILLOW.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "What do I care about WX's old stuff?", -- NEEDS TRANSLATION
+}

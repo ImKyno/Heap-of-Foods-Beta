@@ -7,7 +7,7 @@ AddComponentPostInit("fishingrod", function(self)
 	function self:Reel(...)
 		local ret = {oldReel(self, ...)}
 
-		if self.target ~= nil and self.caughtfish ~= nil and self.fisherman ~= nil and self.fisherman:HasTag("skilledfisherman") then
+		if self.target ~= nil and self.caughtfish ~= nil and self.fisherman ~= nil and self.fisherman.tagvar_skilledfisherman then
 			local extraFish = _G.SpawnPrefab(self.caughtfish.prefab)
 
 			if self.fisherman ~= nil and extraFish.components.weighable ~= nil then

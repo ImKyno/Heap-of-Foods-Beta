@@ -2372,3 +2372,24 @@ STRINGS.NAMES.KYNO_FOODREVIVER_PROXY = "Skull Candy"
 
 STRINGS.NAMES.KYNO_FOODAMMO_TOMATO = "Volatile Toma Root"
 STRINGS.RECIPE_DESC.KYNO_FOODAMMO_TOMATO = "The perfect weapon against bad performances."
+
+STRINGS.NAMES.WX78MODULE_GOURMAND = "Gourmand Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_GOURMAND = "Prepared meals processed at peak efficiency."
+
+STRINGS.NAMES.WX78MODULE_COOKER = "Combustion Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_COOKER = "Controlled heat application for cooking and refinement."
+
+STRINGS.NAMES.WX78MODULE_DRYER = "Desiccant Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_DRYER = "A rudimentary humidity control system."
+
+STRINGS.NAMES.WX78MODULE_DRYER2 = "Super-Desiccant Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_DRYER2 = "A perfected humidity regulator."
+
+STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER_HELD = "Portable Combustion Unit"
+STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER = "Collapsed Combustion Unit"
+
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER_HELD = "Portable Desiccant Unit"
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER = "Collapsed Desiccant Unit"
+
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2_HELD = "Portable Super-Desiccant Unit"
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2 = "Collapsed Super-Desiccant Unit"

@@ -1324,3 +1324,29 @@ WORTOX.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 }
 
 WORTOX.DESCRIBE.KYNO_FOODAMMO_TOMATO = "We do a little silly tomfoolery." -- NEEDS TRANSLATION
+
+WORTOX.DESCRIBE.WX78MODULE_GOURMAND = "Are you the brightest bulb of the bunch?" -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.WX78MODULE_COOKER = "Are you the brightest bulb of the bunch?" -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.WX78MODULE_DRYER = "Are you the brightest bulb of the bunch?" -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.WX78MODULE_DRYER2 = "Are you the brightest bulb of the bunch?" -- NEEDS TRANSLATION
+
+WORTOX.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Once a case, dropped by ol' metal face!", -- NEEDS TRANSLATION
+}
+
+WORTOX.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Once a case, dropped by ol' metal face!", -- NEEDS TRANSLATION
+}
+
+WORTOX.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Once a case, dropped by ol' metal face!", -- NEEDS TRANSLATION
+}

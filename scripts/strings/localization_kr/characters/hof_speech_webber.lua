@@ -1321,3 +1321,29 @@ WEBBER.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WEBBER.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Not the face!"
+
+WEBBER.DESCRIBE.WX78MODULE_GOURMAND = "Huh. Is that what robot insides look like?" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.WX78MODULE_COOKER = "Huh. Is that what robot insides look like?" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.WX78MODULE_DRYER = "Huh. Is that what robot insides look like?" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.WX78MODULE_DRYER2 = "Huh. Is that what robot insides look like?" -- NEEDS TRANSLATION
+
+WEBBER.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "It was forever in there.", -- NEEDS TRANSLATION
+}
+
+WEBBER.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "It was forever in there.", -- NEEDS TRANSLATION
+}
+
+WEBBER.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "It was forever in there.", -- NEEDS TRANSLATION
+}

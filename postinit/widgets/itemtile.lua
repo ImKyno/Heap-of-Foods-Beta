@@ -1,7 +1,21 @@
 local _G      = GLOBAL
+local next    = _G.next
 local require = _G.require
 
--- Cool effect for enchanted items.
+local function ApplyCookColour(self)
+	if self.item ~= nil and self.item:HasTag("cookrechargeable") then
+		local r, g, b, a = 0.35, 0, 0, 0.64
+
+		if self.rechargeframe ~= nil then
+			self.rechargeframe:GetAnimState():SetMultColour(r, g, b, a)
+		end
+
+		if self.recharge ~= nil then
+			self.recharge:GetAnimState():SetMultColour(r, g, b, a)
+		end
+	end
+end
+
 AddClassPostConstruct("widgets/itemtile", function(self)
 	local UIAnim = require("widgets/uianim")
 
@@ -156,4 +170,14 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 
 	self:ToggleEnchantedFX()
 	self:ToggleShadow2FX()
+
+	local _SetChargePercent = self.SetChargePercent
+
+	function self:SetChargePercent(percent)
+		if _SetChargePercent then
+        	_SetChargePercent(self, percent)
+		end
+
+        ApplyCookColour(self)
+    end
 end)

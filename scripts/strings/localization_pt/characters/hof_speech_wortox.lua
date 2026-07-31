@@ -1324,3 +1324,29 @@ WORTOX.DESCRIBE.KYNO_SEEDSBAG =
 }
 
 WORTOX.DESCRIBE.KYNO_FOODAMMO_TOMATO = "A gente faz uma pequena pegadinha..."
+
+WORTOX.DESCRIBE.WX78MODULE_GOURMAND = "Você é o mais brilhante da turma?"
+WORTOX.DESCRIBE.WX78MODULE_COOKER = "Você é o mais brilhante da turma?"
+WORTOX.DESCRIBE.WX78MODULE_DRYER = "Você é o mais brilhante da turma?"
+WORTOX.DESCRIBE.WX78MODULE_DRYER2 = "Você é o mais brilhante da turma?"
+
+WORTOX.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Mais um caso encerrado pelo bom e velho Cara de Metal!",
+}
+
+WORTOX.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Mais um caso encerrado pelo bom e velho Cara de Metal!",
+}
+
+WORTOX.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
+{
+	HELD = "...",
+	NOPOWER = "...",
+	GENERIC = "Mais um caso encerrado pelo bom e velho Cara de Metal!",
+}
