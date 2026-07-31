@@ -16,6 +16,7 @@ STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP = "Vật tư của Trưởng Lão"
 STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP = "Cửa Hiệu Của Sammy"
 STRINGS.UI.CRAFTING_FILTERS.DECIDUOUSSHOP = "Kho hàng của Partitio"
 
+STRINGS.UI.CRAFTING.NEEDSMEALING = "Dùng Cối Nghiền để nghiền nguyên liệu này!"
 STRINGS.UI.CRAFTING.NEEDSMEALING_ONE = "Dùng Cối Nghiền để nghiền nguyên liệu này!"
 STRINGS.UI.CRAFTING.NEEDSMEALING_TWO = "Dùng Cối Nghiền để nghiền nguyên liệu này!"
 

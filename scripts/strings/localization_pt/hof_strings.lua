@@ -16,6 +16,7 @@ STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP = "Suprimentos do Ancião"
 STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP = "Empório do Sammy"
 STRINGS.UI.CRAFTING_FILTERS.DECIDUOUSSHOP = "Armazém do Partitio"
 
+STRINGS.UI.CRAFTING.NEEDSMEALING = "Use a Pedra de Preparação para produzir este ingrediente!"
 STRINGS.UI.CRAFTING.NEEDSMEALING_ONE = "Use a Pedra de Preparação para produzir este ingrediente!"
 STRINGS.UI.CRAFTING.NEEDSMEALING_TWO = "Use a Pedra de Preparação para produzir este ingrediente!"
 

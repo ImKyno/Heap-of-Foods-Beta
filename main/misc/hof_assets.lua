@@ -206,6 +206,7 @@ local HOF_ICONS =
 	"figjuice",
 	"firenettles_seeds",
 	"fltsandwich",
+	"foodupgrade_health",
 	"forgetmelots_seeds",
 	"fortunecookie",
 	"frenchonionsoup",

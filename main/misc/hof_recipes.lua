@@ -166,6 +166,7 @@ AddRecipe2("kyno_flour", {Ingredient("kyno_wheat", 2)}, TECH.MEALING_ONE,
 		nounlock 			= true,
 		no_deconstruction   = true,
 		actionstr 			= "MEALGRINDER",
+		hint_msg            = "NEEDSMEALING",
 		numtogive 			= 3,
 		atlas 				= DefaultAtlas,
 		image 				= "quagmire_flour.tex",
@@ -178,6 +179,7 @@ AddRecipe2("kyno_spotspice", {Ingredient("kyno_spotspice_leaf", 2)}, TECH.MEALIN
 		nounlock 			= true,
 		no_deconstruction   = true,
 		actionstr 			= "MEALGRINDER",
+		hint_msg            = "NEEDSMEALING",
 		numtogive 			= 3,
 		atlas 				= DefaultAtlas,
 		image 				= "quagmire_spotspice_ground.tex",
@@ -190,6 +192,7 @@ AddRecipe2("kyno_salt", {Ingredient("saltrock", 2)}, TECH.MEALING_ONE,
 		nounlock 			= true,
 		no_deconstruction   = true,
 		actionstr 			= "MEALGRINDER",
+		hint_msg            = "NEEDSMEALING",
 		numtogive 			= 3,
 		atlas 				= DefaultAtlas,
 		image 				= "quagmire_salt.tex",
@@ -202,7 +205,7 @@ AddRecipe2("kyno_bacon", {Ingredient("smallmeat", 1)}, TECH.MEALING_ONE,
 		nounlock 			= true,
 		no_deconstruction   = true,
 		actionstr 			= "MEALGRINDER",
-		product				= "kyno_bacon",
+		hint_msg            = "NEEDSMEALING",
 		numtogive 			= 2,
 		atlas 				= DefaultAtlas,
 		image 				= "quagmire_smallmeat.tex",
@@ -210,11 +213,12 @@ AddRecipe2("kyno_bacon", {Ingredient("smallmeat", 1)}, TECH.MEALING_ONE,
 	{"CRAFTING_STATION"}
 )
 
-AddRecipe2("kyno_oil", {Ingredient("corn", 1), Ingredient("seeds", 1), Ingredient("petals", 2)}, TECH.MEALING_ONE,
+AddRecipe2("kyno_oil", {Ingredient("corn", 1), Ingredient("seeds", 1), Ingredient("petals", 1)}, TECH.MEALING_ONE,
 	{
 		nounlock			= true,
 		no_deconstruction   = true,
 		actionstr			= "MEALGRINDER",
+		hint_msg            = "NEEDSMEALING",
 		numtogive			= 3,
 	},
 	{"CRAFTING_STATION"}
@@ -225,6 +229,7 @@ AddRecipe2("kyno_sugar", {Ingredient("kyno_sugartree_petals", 1)}, TECH.MEALING_
 		nounlock 			= true,
 		no_deconstruction   = true,
 		actionstr 			= "MEALGRINDER",
+		hint_msg            = "NEEDSMEALING",
 		numtogive 			= 3,
 	},
 	{"CRAFTING_STATION"}
@@ -731,7 +736,7 @@ if HOF_WARLYMEALGRINDER then
 		{"CRAFTING_STATION"}
 	)
 
-	AddRecipe2("kyno_oil_w", {Ingredient("corn", 1), Ingredient("seeds", 1), Ingredient("petals", 2)}, TECH.FOODPROCESSING_ONE,
+	AddRecipe2("kyno_oil_w", {Ingredient("corn", 1), Ingredient("seeds", 1), Ingredient("petals", 1)}, TECH.FOODPROCESSING_ONE,
 		{
 			nounlock			= true,
 			no_deconstruction   = true,

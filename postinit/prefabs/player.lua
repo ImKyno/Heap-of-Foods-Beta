@@ -79,13 +79,14 @@ local function OnRespawned(inst)
 end
 
 local function PlayerPostInit(inst)
+	inst:AddTag("FOODUPGRADE_eater") -- Can eat Permanent Foods, unfortunately eater component uses tags.
+
 	inst:AddComponent("fishregistryupdater")
 
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
 
-	-- Daily Recipes.
 	if inst.components.eater ~= nil then
 		local _oneatfn = inst.components.eater.oneatfn
 
@@ -122,6 +123,9 @@ local function PlayerPostInit(inst)
 				end
 			end
 		end)
+
+		table.insert(inst.components.eater.caneat, _G.FOODTYPE.FOODUPGRADE)
+		table.insert(inst.components.eater.preferseating, _G.FOODTYPE.FOODUPGRADE)
 	end
 
 	if inst.components.trader ~= nil then

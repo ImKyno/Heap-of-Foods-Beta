@@ -114,6 +114,7 @@ ModifyIngredientValues({"townportaltalisman"},       {boss       = 1,    element
 ModifyIngredientValues({"lavae_egg"},                {boss       = 1,    lavaegg    = 1,    egg       = 2},  false, false, false)
 ModifyIngredientValues({"wobster_sheller_land"},     {meat       = 1,    fish       = 1,    wobster   = 1},  false, false, false)
 ModifyIngredientValues({"potato"},                   {veggie     = 1,    potato     = 1},                    true,  false, false)
+ModifyIngredientValues({"minotaurhorn"},             {boss       = 1})
 
 -- New Mod Crock Pot Ingredients.
 AddIngredientValues({"kyno_coffeebeans"},            {seeds      = 1},                                                      true)
@@ -301,13 +302,16 @@ local cookpots =
 	"kyno_cookware_elder",
 }
 
-local cookpots_master  = {"portablecookpot"}
-local cookpots_spicer  = {"portablespicer"}
+local cookpots_master  = { "portablecookpot" }
+local cookpots_ancient = { "archive_cookpot" }
+local cookpots_spicer  = { "portablespicer"  }
 
 local common_recipes   = require("hof_foodrecipes")
 local seasonal_recipes = require("hof_foodrecipes_seasonal")
 local warly_recipes    = require("hof_foodrecipes_warly")
 local item_recipes     = require("hof_foodrecipes_items")
+local ancient_recipes  = require("hof_foodrecipes_ancient")
+
 local spiced_recipes   = require("hof_spicedfoods")
 local recipe_cards     = cooking.recipe_cards
 
@@ -315,6 +319,7 @@ for _, cooker in pairs(cookpots)         do for _, recipe in pairs(common_recipe
 for _, cooker in pairs(cookpots)         do for _, recipe in pairs(seasonal_recipes) do AddCookerRecipe(cooker, recipe) end end
 for _, cooker in pairs(cookpots)         do for _, recipe in pairs(item_recipes)     do AddCookerRecipe(cooker, recipe) end end
 for _, cooker in pairs(cookpots_master)  do for _, recipe in pairs(warly_recipes)    do AddCookerRecipe(cooker, recipe) end end
+for _, cooker in pairs(cookpots_ancient) do for _, recipe in pairs(ancient_recipes)  do AddCookerRecipe(cooker, recipe) end end
 for _, cooker in pairs(cookpots_spicer)  do for _, recipe in pairs(spiced_recipes)   do AddCookerRecipe(cooker, recipe) end end
 
 for _, recipe in pairs(common_recipes)   do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, cooker_name = "cookpot"}) end end

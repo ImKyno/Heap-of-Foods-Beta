@@ -16,6 +16,7 @@ STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP = "Elder's Supplies"
 STRINGS.UI.CRAFTING_FILTERS.MEADOWSHOP = "Sammy's Emporium"
 STRINGS.UI.CRAFTING_FILTERS.DECIDUOUSSHOP = "Partitio's Warehouse"
 
+STRINGS.UI.CRAFTING.NEEDSMEALING = "Use a Mealing Stone to grind this ingredient!"
 STRINGS.UI.CRAFTING.NEEDSMEALING_ONE = "Use a Mealing Stone to grind this ingredient!"
 STRINGS.UI.CRAFTING.NEEDSMEALING_TWO = "Use a Mealing Stone to grind this ingredient!"
 
@@ -43,6 +44,7 @@ STRINGS.UI.SPECIAL_EVENT_NAMES.HOFBIRTHDAY = "Heap of Foods Anniversary"
 STRINGS.UI.FOOD_TYPES.PREPAREDSOUL = "Soul"
 STRINGS.UI.FOOD_TYPES.PREPAREDPOOP = "Horrible" -- Use horrible just to mimic the cookbook.
 STRINGS.UI.FOOD_TYPES.ALCOHOLIC = "Goodies" -- Mimic for brewbook.
+STRINGS.UI.FOOD_TYPES.FOODUPGRADE = "Ancient Goods"
 
 STRINGS.UI.COOKBOOK.TAB_TITLE_MOD_WARLY = "Mod Chef's Specials"
 STRINGS.UI.COOKBOOK.TAB_TITLE_KEG = "Wooden Keg Recipes"
@@ -2393,3 +2395,5 @@ STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER = "Collapsed Desiccant Unit"
 
 STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2_HELD = "Portable Super-Desiccant Unit"
 STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2 = "Collapsed Super-Desiccant Unit"
+
+STRINGS.NAMES.FOODUPGRADE_HEALTH = "Essence of the Ancients"

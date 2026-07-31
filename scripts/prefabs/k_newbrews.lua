@@ -219,10 +219,6 @@ local function MakePreparedBrew(data)
 			inst.components.tradable.goldvalue = data.goldvalue
 		end
 
-		if inst:HasTag("preparedsoul") then
-			inst:AddComponent("soul")
-		end
-		
 		if data.isfuel ~= nil then
 			inst:AddComponent("fuel")
 			inst.components.fuel.fuelvalue = TUNING.MED_FUEL
