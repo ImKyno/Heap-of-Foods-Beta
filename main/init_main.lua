@@ -3,6 +3,7 @@ local _G = GLOBAL
 local INIT_MAIN_MISC =
 {
 	"tuning",
+	"constants",
 	"assets",
 	"prefabs",
 	"skins",

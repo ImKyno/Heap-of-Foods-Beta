@@ -3,7 +3,6 @@ local _G = GLOBAL
 local INIT_POSTINIT_MISC =
 {
 	"sim",
-	"constants",
 	"modcompatibility",
 	"entityscript",
 	"preparedfoods",

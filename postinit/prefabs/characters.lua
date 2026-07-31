@@ -139,6 +139,8 @@ local function WinonaPostInit(inst)
 end
 
 local function WortoxPostInit(inst)
+	inst:AddTag("PREPAREDSOUL_eater")
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
@@ -149,7 +151,8 @@ local function WortoxPostInit(inst)
 	end
 
 	if inst.components.eater ~= nil then
-		inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODTYPE.PREPAREDSOUL, FOODGROUP.OMNI })
+		table.insert(inst.components.eater.caneat, _G.FOODTYPE.PREPAREDSOUL)
+		table.insert(inst.components.eater.preferseating, _G.FOODTYPE.PREPAREDSOUL)
 	end
 
 	inst:ListenForEvent("murdered", function(inst, data)
@@ -160,7 +163,7 @@ local function WortoxPostInit(inst)
 end
 
 local function WormwoodPostInit(inst)
-	-- inst:AddTag("PREPAREDPOOP_eater")
+	inst:AddTag("PREPAREDPOOP_eater")
 
 	if not _G.TheWorld.ismastersim then
 		return inst
@@ -172,7 +175,8 @@ local function WormwoodPostInit(inst)
 	end
 
 	if inst.components.eater ~= nil then
-		inst.components.eater:SetDiet({ FOODGROUP.OMNI }, { FOODGROUP.OMNI, FOODTYPE.PREPAREDPOOP })
+		table.insert(inst.components.eater.caneat, _G.FOODTYPE.PREPAREDPOOP)
+		table.insert(inst.components.eater.preferseating, _G.FOODTYPE.PREPAREDPOOP)
 	end
 end
 

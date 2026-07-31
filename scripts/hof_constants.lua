@@ -1,20 +1,11 @@
 require("constants")
 require("componentutil")
 
-local HOF_FOODTYPES      = {}
 local HOF_FUELTYPES      = {}
 local HOF_NAUGHTY_VALUE  = {}
 local HOF_PICKABLE_FOODS = {}
 local HOF_PICKUP_SOUNDS  = {}
 local HOF_SPECIAL_EVENTS = {}
-
--- New FOODTYPE just for showing the correct string on Cookbook.
-HOF_FOODTYPES    =
-{
-	PREPAREDSOUL = "PREPAREDSOUL",
-	PREPAREDPOOP = "PREPAREDPOOP",
-	ALCOHOLIC    = "ALCOHOLIC",
-}
 
 -- New FUELTYPE for Fish Hatchery.
 HOF_FUELTYPES  =
@@ -72,10 +63,6 @@ HOF_SPECIAL_EVENTS =
 {
 	HOFBIRTHDAY    = "hofbirthday",
 }
-
-for k, v in pairs(HOF_FOODTYPES) do
-	FOODTYPE[k] = v
-end
 
 for k, v in pairs(HOF_FUELTYPES) do
 	FUELTYPE[k] = v
