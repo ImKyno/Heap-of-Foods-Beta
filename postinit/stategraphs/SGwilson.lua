@@ -153,8 +153,11 @@ AddStategraphPostInit("wilson", function(sg)
 		local target = inst.sg.statemem.action ~= nil and inst.sg.statemem.action:IsValid()
 		and inst.sg.statemem.action.target ~= nil and inst.sg.statemem.action.target:HasTag("cavetubertree")
 
-		if target ~= nil and invobj ~= nil and invobj.components.tool ~= nil
-		and not invobj.components.tool:CanDoToughWork() then
+		local canchop = (invobj ~= nil and invobj.components.tool ~= nil and invobj.components.tool:CanDoToughWork())
+		or (inst.components.mightiness ~= nil and inst.components.mightiness:GetState() == "mighty")
+		or inst:HasTag("toughworker")
+
+		if target ~= nil and not canchop then
 			inst.sg.statemem.recoilstate = "attack_recoil"
 			inst:PerformBufferedAction()
 		else
