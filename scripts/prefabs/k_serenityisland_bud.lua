@@ -268,9 +268,6 @@ local function petalsfn()
 	inst:AddComponent("lootdropper")
 	inst:AddComponent("vasedecoration")
 
-	inst:AddComponent("upgrader")
-	inst.components.upgrader.upgradetype = UPGRADETYPES.GRAVESTONE
-
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 
