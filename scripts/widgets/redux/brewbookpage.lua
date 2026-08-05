@@ -1,6 +1,7 @@
 local Widget = require("widgets/widget")
 local Image = require("widgets/image")
 local ImageButton = require("widgets/imagebutton")
+local TextButton = require("widgets/textbutton")
 local UIAnim = require("widgets/uianim")
 local Text = require("widgets/text")
 local Grid = require("widgets/grid")
@@ -249,6 +250,7 @@ function BrewbookPage:PopulateRecipeDetailPanel(data)
 		local food_img = portrait_root:AddChild(Image(data.food_atlas, not data.unlocked and "cookbook_unknown.tex" or data.food_tex))
 		food_img:ScaleToSize(icon_size - 10, icon_size - 10)
 
+		--[[
 		if data.unlocked then
 			local value = data.recipe_def.pigcoinvalue or {0, 0, 0}
 			local coin_root = portrait_root:AddChild(Widget("coin_root"))
@@ -283,6 +285,7 @@ function BrewbookPage:PopulateRecipeDetailPanel(data)
 				text:SetPosition(pos.textx + x + offset, pos.texty)
 			end
 		end
+		]]--
 
 		local details_x = 60
 		if data.has_eaten then
@@ -489,10 +492,12 @@ function BrewbookPage:BuildRecipeBook()
 				end
 			else
 				widget.recipie_root:Hide()
-				
+
+				--[[
 				if widget.coin_root then
 					widget.coin_root:Hide()
 				end
+				]]--
 
 				widget.cell_root:SetTextures("images/quagmire_recipebook.xml", "cookbook_unknown.tex", "cookbook_unknown_selected.tex")
 			end
@@ -522,7 +527,7 @@ function BrewbookPage:BuildRecipeBook()
 			defaultsortkey = hash(prefab),
 			food_atlas = "images/quagmire_recipebook.xml",
 			food_tex = "cookbook_unknown.tex",
-			pigcoinvalue = recipe_def.pigcoinvalue or {0, 0, 0},
+			-- pigcoinvalue = recipe_def.pigcoinvalue or {0, 0, 0},
 		}
 
 		local known_data = known_recipe_list[prefab]

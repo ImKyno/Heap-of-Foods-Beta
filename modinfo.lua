@@ -1672,6 +1672,141 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 				},
 			},
 		},
+
+		CLIENT =
+		{
+			NAME =
+			{
+				"Client Options",
+				zh  = "客户端选项",
+				zht = "客戶端選項",
+				pt  = "Opções Cliente",
+				pl  = "Opcje klienta",
+				es  = "Opciones del cliente",
+				vi  = "Tùy Chọn Của Khách Hàng",
+				kr  = "클라이언트 옵션",
+			},
+
+			HOVER =
+			{
+				"Client options for the entire mod.",
+				zh  = "针对整个模组的客户端选项。",
+				zht = "針對整個模組的客戶端選項。",
+				pt  = "Opções de cliente para o Mod inteiro.",
+				pl  = "Opcje klienta dla całego moda.",
+				es  = "Opciones de cliente para todo el mod.",
+				vi  = "Các tùy chọn phía người dùng cho toàn bộ bản mod.",
+				kr  = "전체 모드에 대한 클라이언트 옵션입니다.",
+			},
+		},
+
+		PIGCOINVALUES =
+		{
+			NAME =
+			{
+				"Show Koin Values",
+				zh  = "显示硬币价值",
+				zht = "顯示硬幣價值",
+				pt  = "Mostrar Valores das Moedas",
+				pl  = "Pokaż Wartości Monet",
+				es  = "Mostras Valores de las Monedas",
+				vi  = "Hiển Thị Giá Trị Tiền Xu",
+				kr  = "동전 가치 표시",
+			},
+
+			HOVER =
+			{
+				"Should the Cookbook and the Brewbook show the Koin values for the selected recipe?",
+				zh  = "烹饪书和发酵书是否应显示所选配方的硬币价值？",
+				zht = "烹飪書和發酵書是否應顯示所選配方的硬幣價值？",
+				pt  = "O Livro de Receitas e o Livro de Fermentação devem mostrar os valores das moedas da receita selecionada?",
+				pl  = "Czy Książka Kucharska i Książka Fermentacji powinny wyświetlać wartości monet dla wybranego przepisu?",
+				es  = "¿El Libro de Cocina y el Libro de Fermentación deberían mostrar los valores de las monedas de la receta seleccionada?",
+				vi  = "Sổ Nấu Ăn và Sổ Lên Men có nên hiển thị giá trị đồng xu của công thức đã chọn không?",
+				kr  = "요리책과 발효책에 선택한 레시피의 동전 가치를 표시하시겠습니까?",
+			},
+
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Default Cookbook and Brewbook.",
+					zh  = "默认的烹饪书和发酵书。",
+					zht = "預設的烹飪書和發酵書。",
+					pt  = "Livro de Receitas e Livro de Fermentação padrão.",
+					pl  = "Domyślna Książka Kucharska i Książka Fermentacji.",
+					es  = "Libro de Cocina y Libro de Fermentación predeterminados.",
+					vi  = "Sổ Nấu Ăn và Sổ Lên Men mặc định.",
+					kr  = "기본 요리책과 발효책.",
+				},
+
+				ENABLED =
+				{
+					"Both books will have show the Koin values for the selected recipe.",
+					zh  = "两本书都会显示所选配方的硬币价值。",
+					zht = "兩本書都會顯示所選配方的硬幣價值。",
+					pt  = "Ambos os livros mostrarão os valores das moedas da receita selecionada.",
+					pl  = "Obie książki będą wyświetlać wartości monet dla wybranego przepisu.",
+					es  = "Ambos libros mostrarán los valores de las monedas de la receta seleccionada.",
+					vi  = "Cả hai cuốn sách sẽ hiển thị giá trị đồng xu của công thức đã chọn.",
+					kr  = "두 책 모두 선택한 레시피의 동전 가치를 표시합니다.",
+				},
+			},
+		},
+
+		VIEWRECIPE =
+		{
+			NAME =
+			{
+				"Show Website Button",
+				zh  = "显示网站按钮",
+				zht = "顯示網站按鈕",
+				pt  = "Mostrar Botão do Website",
+				pl  = "Pokaż Przycisk Witryny",
+				es  = "Mostrar Botón del sitio web",
+				vi  = "Nút Hiển Thị Trang Web",
+				kr  = "웹사이트 표시 버튼",
+			},
+
+			HOVER =
+			{
+				"Should the Cookbook and the Brewbook have a button that opens the selected recipe on the Mod's Website?",
+				zh  = "烹饪书和发酵书是否应添加一个按钮，用于在模组网站上打开选中的配方？",
+				zht = "烹飪書和發酵書是否應該新增一個按鈕，用於在模組網站上開啟選擇的配方？",
+				pt  = "O Livro de Receitas e o Livro de Fermentação devem ter um botão para abrir a receita selecionada no Website do Mod?",
+				pl  = "Czy Książka Kucharska i Książka Fermentacji powinny mieć przycisk otwierający wybrany przepis na stronie internetowej moda?",
+				es  = "¿El Libro de Cocina y el Libro de Fermentación deberían tener un botón para abrir la receta seleccionada en el sitio web del mod?",
+				vi  = "Sổ Nấu Ăn và Sổ Lên Men có nên có nút mở công thức đã chọn trên trang web của mod không?",
+				kr  = "요리책과 발효책에 선택한 레시피를 모드 웹사이트에서 열 수 있는 버튼을 추가하시겠습니까?",
+			},
+
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Default Cookbook and Brewbook.",
+					zh  = "默认的烹饪书和发酵书。",
+					zht = "預設的烹飪書和發酵書。",
+					pt  = "Livro de Receitas e Livro de Fermentação padrão.",
+					pl  = "Domyślna Książka Kucharska i Książka Fermentacji.",
+					es  = "Libro de Cocina y Libro de Fermentación predeterminados.",
+					vi  = "Sổ Nấu Ăn và Sổ Lên Men mặc định.",
+					kr  = "기본 요리책과 발효책.",
+				},
+
+				ENABLED =
+				{
+					"Both books will have the button to open the selected recipe.",
+					zh  = "两本书都会有一个按钮，用于打开选中的配方。",
+					zht = "兩本書都會有一個按鈕，用於開啟選擇的配方。",
+					pt  = "Ambos os livros terão o botão para abrir a receita selecionada.",
+					pl  = "Obie książki będą miały przycisk otwierający wybrany przepis.",
+					es  = "Ambos libros tendrán el botón para abrir la receta seleccionada.",
+					vi  = "Cả hai cuốn sách sẽ có nút để mở công thức đã chọn.",
+					kr  = "두 책 모두 선택한 레시피를 열 수 있는 버튼이 추가됩니다.",
+				},
+			},
+		},
 	},
 }
 
@@ -2127,36 +2262,76 @@ local MODTRADES_OPTIONS      =
 	}
 }
 
+local CLIENT_LABEL           = ChooseTranslationTable(STRINGS.SETTINGS.CLIENT.NAME)
+local CLIENT_HOVER           = ChooseTranslationTable(STRINGS.SETTINGS.CLIENT.HOVER)
+
+local PIGCOINVALUES_LABEL    = ChooseTranslationTable(STRINGS.SETTINGS.PIGCOINVALUES.NAME)
+local PIGCOINVALUES_HOVER    = ChooseTranslationTable(STRINGS.SETTINGS.PIGCOINVALUES.HOVER)
+local PIGCOINVALUES_OPTIONS  =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.PIGCOINVALUES.HOVER_OPTIONS.DISABLED),
+		data                 = false
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.PIGCOINVALUES.HOVER_OPTIONS.ENABLED),
+		data                 = true
+	}
+}
+
+local VIEWRECIPE_LABEL       = ChooseTranslationTable(STRINGS.SETTINGS.VIEWRECIPE.NAME)
+local VIEWRECIPE_HOVER       = ChooseTranslationTable(STRINGS.SETTINGS.VIEWRECIPE.HOVER)
+local VIEWRECIPE_OPTIONS     =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.VIEWRECIPE.HOVER_OPTIONS.DISABLED),
+		data                 = false
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.VIEWRECIPE.HOVER_OPTIONS.ENABLED),
+		data                 = true
+	}
+}
+
 configuration_options        =
 {
-	{ name                   = "LANGUAGE",         label = LANGUAGE_LABEL,      hover = LANGUAGE_HOVER,      options = LANGUAGE_OPTIONS,      default = false },
+	{ name                   = "LANGUAGE",         label = LANGUAGE_LABEL,      hover = LANGUAGE_HOVER,      options = LANGUAGE_OPTIONS,      default = false, client = false },
 	-- General Options.
-	{ name                   = "GENERAL",          label = GENERAL_LABEL,       hover = GENERAL_HOVER,       options = NONE_OPTIONS,          default = false },
-	{ name                   = "SEASONALFOOD",     label = SEASONALFOOD_LABEL,  hover = SEASONALFOOD_HOVER,  options = SEASONALFOOD_OPTIONS,  default = false },
-	{ name                   = "HUMANMEAT",        label = HUMANMEAT_LABEL,     hover = HUMANMEAT_HOVER,     options = HUMANMEAT_OPTIONS,     default = true  },
-	{ name                   = "GIANTSPAWNING",    label = GIANTSPAWN_LABEL,    hover = GIANTSPAWN_HOVER,    options = GIANTSPAWN_OPTIONS,    default = true  },
-	{ name                   = "ALCOHOLICDRINKS",  label = ALCOHOL_LABEL,       hover = ALCOHOL_HOVER,       options = ALCOHOL_OPTIONS,       default = true  },
-	{ name                   = "ICEBOXSTACKSIZE",  label = ICEBOX_LABEL,        hover = ICEBOX_HOVER,        options = ICEBOX_OPTIONS,        default = false },
-	{ name                   = "COFFEESPEED",      label = COFFEESPEED_LABEL,   hover = COFFEESPEED_HOVER,   options = COFFEESPEED_OPTIONS,   default = true  },
-	{ name                   = "COFFEEDURATION",   label = COFFEETIMER_LABEL,   hover = COFFEETIMER_HOVER,   options = COFFEETIMER_OPTIONS,   default = 480   },
-	{ name                   = "COFFEEDROPRATE",   label = COFFEEDROP_LABEL,    hover = COFFEEDROP_HOVER,    options = COFFEEDROP_OPTIONS,    default = 4     },
+	{ name                   = "GENERAL",          label = GENERAL_LABEL,       hover = GENERAL_HOVER,       options = NONE_OPTIONS,          default = false, client = false },
+	{ name                   = "SEASONALFOOD",     label = SEASONALFOOD_LABEL,  hover = SEASONALFOOD_HOVER,  options = SEASONALFOOD_OPTIONS,  default = false, client = false },
+	{ name                   = "HUMANMEAT",        label = HUMANMEAT_LABEL,     hover = HUMANMEAT_HOVER,     options = HUMANMEAT_OPTIONS,     default = true,  client = false },
+	{ name                   = "GIANTSPAWNING",    label = GIANTSPAWN_LABEL,    hover = GIANTSPAWN_HOVER,    options = GIANTSPAWN_OPTIONS,    default = true,  client = false },
+	{ name                   = "ALCOHOLICDRINKS",  label = ALCOHOL_LABEL,       hover = ALCOHOL_HOVER,       options = ALCOHOL_OPTIONS,       default = true,  client = false },
+	{ name                   = "ICEBOXSTACKSIZE",  label = ICEBOX_LABEL,        hover = ICEBOX_HOVER,        options = ICEBOX_OPTIONS,        default = false, client = false },
+	{ name                   = "COFFEESPEED",      label = COFFEESPEED_LABEL,   hover = COFFEESPEED_HOVER,   options = COFFEESPEED_OPTIONS,   default = true,  client = false },
+	{ name                   = "COFFEEDURATION",   label = COFFEETIMER_LABEL,   hover = COFFEETIMER_HOVER,   options = COFFEETIMER_OPTIONS,   default = 480,   client = false },
+	{ name                   = "COFFEEDROPRATE",   label = COFFEEDROP_LABEL,    hover = COFFEEDROP_HOVER,    options = COFFEEDROP_OPTIONS,    default = 4,     client = false },
 	-- Miscellaneous Options.
-	{ name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,        options = NONE_OPTIONS,          default = false },
-	{ name                   = "SCRAPBOOK",        label = SCRAPBOOK_LABEL,     hover = SCRAPBOOK_HOVER,     options = SCRAPBOOK_OPTIONS,     default = true  },
-	{ name                   = "WARLYRECIPES",     label = WARLYRECIPES_LABEL,  hover = WARLYRECIPES_HOVER,  options = WARLYRECIPES_OPTIONS,  default = true  },
-	{ name                   = "WARLYSPICES",      label = WARLYSPICES_LABEL,   hover = WARLYSPICES_HOVER,   options = WARLYSPICES_OPTIONS,   default = false },
-	{ name                   = "WARLYMEALGRINDER", label = WARLYGRINDER_LABEL,  hover = WARLYGRINDER_HOVER,  options = WARLYGRINDER_OPTIONS,  default = false },
-	{ name                   = "KEEPFOOD",         label = KEEPFOOD_LABEL,      hover = KEEPFOOD_HOVER,      options = KEEPFOOD_OPTIONS,      default = false },
-	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,    options = FERTILIZER_OPTIONS,    default = false },
+	{ name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,        options = NONE_OPTIONS,          default = false, client = false },
+	{ name                   = "SCRAPBOOK",        label = SCRAPBOOK_LABEL,     hover = SCRAPBOOK_HOVER,     options = SCRAPBOOK_OPTIONS,     default = true,  client = false },
+	{ name                   = "WARLYRECIPES",     label = WARLYRECIPES_LABEL,  hover = WARLYRECIPES_HOVER,  options = WARLYRECIPES_OPTIONS,  default = true,  client = false },
+	{ name                   = "WARLYSPICES",      label = WARLYSPICES_LABEL,   hover = WARLYSPICES_HOVER,   options = WARLYSPICES_OPTIONS,   default = false, client = false },
+	{ name                   = "WARLYMEALGRINDER", label = WARLYGRINDER_LABEL,  hover = WARLYGRINDER_HOVER,  options = WARLYGRINDER_OPTIONS,  default = false, client = false },
+	{ name                   = "KEEPFOOD",         label = KEEPFOOD_LABEL,      hover = KEEPFOOD_HOVER,      options = KEEPFOOD_OPTIONS,      default = false, client = false },
+	{ name                   = "FERTILIZERTWEAK",  label = FERTILIZER_LABEL,    hover = FERTILIZER_HOVER,    options = FERTILIZER_OPTIONS,    default = false, client = false },
 	-- Experimental Options.
-	{ name                   = "EXPERIMENTAL",     label = EXPERIMENTAL_LABEL,  hover = EXPERIMENTAL_HOVER,  options = NONE_OPTIONS,          default = false },
-	{ name                   = "SCRAPBOOK2",       label = SCRAPBOOK2_LABEL,    hover = SCRAPBOOK2_HOVER,    options = SCRAPBOOK2_OPTIONS,    default = false },
-	{ name                   = "SERENITY_CC",      label = SERENITY_CC_LABEL,   hover = SERENITY_CC_HOVER,   options = SERENITY_CC_OPTIONS,   default = 0     },
-	{ name                   = "MEADOW_CC",        label = MEADOW_CC_LABEL,     hover = MEADOW_CC_HOVER,     options = MEADOW_CC_OPTIONS,     default = 0     },
-	{ name                   = "FULLMOONTRANS",    label = FULLMOON_LABEL,      hover = FULLMOON_HOVER,      options = FULLMOON_OPTIONS,      default = false },
+	{ name                   = "EXPERIMENTAL",     label = EXPERIMENTAL_LABEL,  hover = EXPERIMENTAL_HOVER,  options = NONE_OPTIONS,          default = false, client = false },
+	{ name                   = "SCRAPBOOK2",       label = SCRAPBOOK2_LABEL,    hover = SCRAPBOOK2_HOVER,    options = SCRAPBOOK2_OPTIONS,    default = false, client = false },
+	{ name                   = "SERENITY_CC",      label = SERENITY_CC_LABEL,   hover = SERENITY_CC_HOVER,   options = SERENITY_CC_OPTIONS,   default = 0,     client = false },
+	{ name                   = "MEADOW_CC",        label = MEADOW_CC_LABEL,     hover = MEADOW_CC_HOVER,     options = MEADOW_CC_OPTIONS,     default = 0,     client = false },
+	{ name                   = "FULLMOONTRANS",    label = FULLMOON_LABEL,      hover = FULLMOON_HOVER,      options = FULLMOON_OPTIONS,      default = false, client = false },
 
 	-- Retrofitting Options.
-	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false },
-	{ name                   = "AUTORETROFIT",     label = AUTORETROFIT_LABEL,  hover = AUTORETROFIT_HOVER,  options = AUTORETROFIT_OPTIONS,  default = false },
-	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,     options = MODTRADES_OPTIONS,     default = true  },
+	{ name                   = "RETROCOMPAT",      label = RETROCOMPAT_LABEL,   hover = RETROCOMPAT_HOVER,   options = NONE_OPTIONS,          default = false, client = false },
+	{ name                   = "AUTORETROFIT",     label = AUTORETROFIT_LABEL,  hover = AUTORETROFIT_HOVER,  options = AUTORETROFIT_OPTIONS,  default = false, client = false },
+	{ name                   = "MODTRADES",        label = MODTRADES_LABEL,     hover = MODTRADES_HOVER,     options = MODTRADES_OPTIONS,     default = true,  client = false },
+
+	-- Client Options.
+	{ name                   = "CLIENT",           label = CLIENT_LABEL,        hover = CLIENT_HOVER,        options = NONE_OPTIONS,          default = false, client = true  },
+	{ name                   = "PIGCOINVALUES",    label = PIGCOINVALUES_LABEL, hover = PIGCOINVALUES_HOVER, options = PIGCOINVALUES_OPTIONS, default = true,  client = true  },
+	{ name                   = "VIEWRECIPE",       label = VIEWRECIPE_LABEL,    hover = VIEWRECIPE_HOVER,    options = VIEWRECIPE_OPTIONS,    default = true,  client = true  },
 }

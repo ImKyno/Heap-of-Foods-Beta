@@ -951,6 +951,7 @@ WEED_DEFS.weed_icenettle.plantregistryinfo         =
 -- Custom Behaviour for Chilled Nettle.
 local function WeedIceNettleBumped(inst, target)
 	if (inst.components.burnable == nil or not inst.components.burnable.burning)
+	and TheWorld.state.snowlevel ~= nil and TheWorld.state.snowlevel > 0
 	and target ~= nil and not target:HasTag("plantkin") then
 		inst.AnimState:PlayAnimation("crop_full_atk", false)
 		inst.AnimState:PushAnimation("crop_full", true)

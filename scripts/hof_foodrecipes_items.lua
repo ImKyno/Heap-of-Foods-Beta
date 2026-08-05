@@ -28,6 +28,7 @@ for k, recipe in pairs(kyno_foods_items) do
 	recipe.overridebuild = k
 	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages.xml"
 	recipe.cookbook_tex = k..".tex"
+	recipe.website_page = "recipes_cookpot"
 end
 
 return kyno_foods_items

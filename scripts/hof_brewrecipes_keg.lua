@@ -1628,6 +1628,7 @@ for k, recipe in pairs(kyno_foods_keg) do
 	recipe.brewbook_category = "keg"
 	recipe.cookbook_atlas = "images/cookbookimages/hof_brewbookimages.xml"
 	recipe.cookbook_tex = k..".tex"
+	recipe.website_page = "recipes_keg"
 end
 
 return kyno_foods_keg

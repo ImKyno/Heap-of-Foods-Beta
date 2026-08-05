@@ -46,6 +46,7 @@ STRINGS.UI.FOOD_TYPES.PREPAREDPOOP = "Horrible" -- Use horrible just to mimic th
 STRINGS.UI.FOOD_TYPES.ALCOHOLIC = "Goodies" -- Mimic for brewbook.
 STRINGS.UI.FOOD_TYPES.FOODUPGRADE = "Ancient Goods"
 
+STRINGS.UI.COOKBOOK.VIEW_RECIPE_WEBSITE = "View Recipe on the Website"
 STRINGS.UI.COOKBOOK.TAB_TITLE_MOD_WARLY = "Mod Chef's Specials"
 STRINGS.UI.COOKBOOK.TAB_TITLE_KEG = "Wooden Keg Recipes"
 STRINGS.UI.COOKBOOK.TAB_TITLE_JAR = "Preserves Jar Recipes"

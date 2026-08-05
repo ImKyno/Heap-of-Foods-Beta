@@ -225,6 +225,7 @@ local function flowerfn()
 	MakeSmallBurnable(inst)
 	inst.components.burnable:SetOnBurntFn(OnBurnt)
 	MakeSmallPropagator(inst)
+
 	AddToRegrowthManager(inst)
 
 	return inst

@@ -570,6 +570,7 @@ for k, recipe in pairs(kyno_warly_foods) do
 	-- recipe.cookbook_category = "portablecookpot" -- check "hof_cooking.lua" for details.
 	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages_warly.xml"
 	recipe.cookbook_tex = k..".tex"
+	recipe.website_page = "recipes_warly"
 end
 
 return kyno_warly_foods

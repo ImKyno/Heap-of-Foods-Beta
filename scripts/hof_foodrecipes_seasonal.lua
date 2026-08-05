@@ -582,6 +582,7 @@ for k, recipe in pairs(kyno_foods_seasonal) do
 	recipe.weight = 1
 	recipe.cookbook_atlas = "images/cookbookimages/hof_cookbookimages_seasonal.xml"
 	recipe.cookbook_tex = k..".tex"
+	recipe.website_page = "recipes_seasonal"
 end
 
 return kyno_foods_seasonal

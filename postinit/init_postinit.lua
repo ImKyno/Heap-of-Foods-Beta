@@ -171,6 +171,7 @@ local INIT_POSTINIT_STATEGRAPHS =
 
 local INIT_POSTINIT_WIDGETS =
 {
+	"brewbookpage",
 	"cookbookpage_crockpot",
 	"invslot",
 	"itemtile",
