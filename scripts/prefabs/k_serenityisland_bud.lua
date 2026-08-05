@@ -225,7 +225,7 @@ local function flowerfn()
 	MakeSmallBurnable(inst)
 	inst.components.burnable:SetOnBurntFn(OnBurnt)
 	MakeSmallPropagator(inst)
-	-- AddToRegrowthManager(inst)
+	AddToRegrowthManager(inst)
 
 	return inst
 end
@@ -266,9 +266,6 @@ local function petalsfn()
 	inst:AddComponent("tradable")
 	inst:AddComponent("lootdropper")
 	inst:AddComponent("vasedecoration")
-
-	inst:AddComponent("upgrader")
-	inst.components.upgrader.upgradetype = UPGRADETYPES.GRAVESTONE
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM

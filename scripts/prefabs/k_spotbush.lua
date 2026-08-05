@@ -183,6 +183,7 @@ local function fn()
 	MakeNoGrowInWinter(inst)
 	MakeHauntableIgnite(inst)
 
+	AddToRegrowthManager(inst)
 	MakeWaxablePlant(inst)
 
 	return inst
