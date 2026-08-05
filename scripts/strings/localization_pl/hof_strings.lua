@@ -45,6 +45,7 @@ STRINGS.UI.FOOD_TYPES.PREPAREDSOUL = "Dusza"
 STRINGS.UI.FOOD_TYPES.PREPAREDPOOP = "Okropne" -- Zachowane dla imitacji książki kucharskiej.
 STRINGS.UI.FOOD_TYPES.ALCOHOLIC = "Rarytasy" -- Zachowane dla imitacji Brewbooka.
 
+STRINGS.UI.COOKBOOK.VIEW_RECIPE_WEBSITE = "Zobacz Na Stronie Internetowej"
 STRINGS.UI.COOKBOOK.TAB_TITLE_MOD_WARLY = "Specjały Szefa Kuchni (mod)"
 STRINGS.UI.COOKBOOK.TAB_TITLE_KEG = "Przepisy na drewnianą beczkę"
 STRINGS.UI.COOKBOOK.TAB_TITLE_JAR = "Przepisy na słoik przetworów"

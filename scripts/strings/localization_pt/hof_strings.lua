@@ -45,6 +45,7 @@ STRINGS.UI.FOOD_TYPES.PREPAREDSOUL = "Alma"
 STRINGS.UI.FOOD_TYPES.PREPAREDPOOP = "Horrível" -- Use horrible just to mimic the cookbook.
 STRINGS.UI.FOOD_TYPES.ALCOHOLIC = "Guloseima"
 
+STRINGS.UI.COOKBOOK.VIEW_RECIPE_WEBSITE = "Ver Receita no Website"
 STRINGS.UI.COOKBOOK.TAB_TITLE_MOD_WARLY = "Especiais do Chefe do Mod"
 STRINGS.UI.COOKBOOK.TAB_TITLE_KEG = "Receitas do Barril de Madeira"
 STRINGS.UI.COOKBOOK.TAB_TITLE_JAR = "Receitas da Jarra de Conservas"

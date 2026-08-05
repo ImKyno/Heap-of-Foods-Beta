@@ -231,6 +231,7 @@ local function grass(name, stage)
 		MakeNoGrowInWinter(inst)
 		MakeHauntableIgnite(inst)
 
+		AddToRegrowthManager(inst)
 		MakeWaxablePlant(inst)
 		
 		inst.OnSave = OnSave

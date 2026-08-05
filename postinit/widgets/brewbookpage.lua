@@ -8,10 +8,10 @@ local TextButton        = require("widgets/textbutton")
 local HOF_PIGCOINVALUES = GetModConfigData("PIGCOINVALUES", true)
 local HOF_VIEWRECIPE    = GetModConfigData("VIEWRECIPE", true)
 
-local CookbookPageCrockPot = require("widgets/redux/cookbookpage_crockpot")
-local _PopulateRecipeDetailPanel = CookbookPageCrockPot.PopulateRecipeDetailPanel
+local BrewbookPage = require("widgets/redux/brewbookpage")
+local _PopulateRecipeDetailPanel = BrewbookPage.PopulateRecipeDetailPanel
 
-CookbookPageCrockPot.PopulateRecipeDetailPanel = function(self, data, ...)
+BrewbookPage.PopulateRecipeDetailPanel = function(self, data, ...)
 	local result = _PopulateRecipeDetailPanel(self, data, ...)
 
 	-- Remember: locked recipes does not have portrait_root
@@ -32,31 +32,31 @@ CookbookPageCrockPot.PopulateRecipeDetailPanel = function(self, data, ...)
 
 		if TUNING.HOF_DEBUG_MODE then
 			if result and result.children then
-				print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel: Children:")
+				print("Heap of Foods Mod - BrewbookPage.PopulateRecipeDetailPanel: Children:")
 
 				for i, child in pairs(result.children) do
 					print(i, child.name, child)
 				end
 			else
-				print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel: No children found.")
+				print("Heap of Foods Mod - BrewbookPage.PopulateRecipeDetailPanel: No children found.")
 			end
 		end
 
 		if not portrait_root then
 			if TUNING.HOF_DEBUG_MODE then
-				print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel: PORTRAIT_ROOT Not found!")
-				print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel:Recipe:", data.recipe_name)
-				print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel:Prefab:", data.recipe_def.name)
-				print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel:Recipe Def:", data.recipe_def)
+				print("Heap of Foods Mod - BrewbookPage.PopulateRecipeDetailPanel: PORTRAIT_ROOT Not found!")
+				print("Heap of Foods Mod - BrewbookPage.PopulateRecipeDetailPanel:Recipe:", data.recipe_name)
+				print("Heap of Foods Mod - BrewbookPage.PopulateRecipeDetailPanel:Prefab:", data.recipe_def.name)
+				print("Heap of Foods Mod - BrewbookPage.PopulateRecipeDetailPanel:Recipe Def:", data.recipe_def)
 
 				if result and result.children then
-					print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel: Children:")
+					print("Heap of Foods Mod - BrewbookPage.PopulateRecipeDetailPanel: Children:")
 				
 					for _, child in pairs(result.children) do
 						print(child.name)
 					end
 				else
-					print("Heap of Foods Mod - CookbookPageCrockPot.PopulateRecipeDetailPanel: Result has no children.")
+					print("Heap of Foods Mod - BrewbookPage.PopulateRecipeDetailPanel: Result has no children.")
 				end
 			end
 
@@ -131,24 +131,3 @@ CookbookPageCrockPot.PopulateRecipeDetailPanel = function(self, data, ...)
 
 	return result
 end
-
--- Fake stats for showing nice values on Cookbook.
--- i.e: Wortox loses sanity if he's Nice inclined, but will show as positive values.
-AddClassPostConstruct("widgets/redux/cookbookpage_crockpot", function(self)
-	local _PopulateRecipeDetailPanel = self.PopulateRecipeDetailPanel
-
-	function self:PopulateRecipeDetailPanel(data)
-		if data and data.recipe_def then
-			data.recipe_def.health = data.recipe_def.health2 or
-			(data.recipe_def.health ~= nil and math.floor(10 * data.recipe_def.health) / 10) or nil
-
-			data.recipe_def.hunger = data.recipe_def.hunger2 or
-			(data.recipe_def.hunger ~= nil and math.floor(10 * data.recipe_def.hunger) / 10) or nil
-
-			data.recipe_def.sanity = data.recipe_def.sanity2 or
-			(data.recipe_def.sanity ~= nil and math.floor(10 * data.recipe_def.sanity) / 10) or nil
-		end
-
-		return _PopulateRecipeDetailPanel(self, data)
-	end
-end)
