@@ -185,6 +185,7 @@ local function dogfish_dead()
 	inst:AddTag("catfood")
 	inst:AddTag("cookable")
 	inst:AddTag("dryable")
+	inst:AddTag("sliceable")
 	inst:AddTag("marinefood")
 	inst:AddTag("icebox_valid")
 	inst:AddTag("saltbox_valid")
@@ -204,6 +205,10 @@ local function dogfish_dead()
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "fishmeat_cooked"
+
+	inst:AddComponent("sliceable")
+	inst.components.sliceable:SetProduct("fishmeat")
+	inst.components.sliceable:SetSliceSize(2)
 
    	inst:AddComponent("perishable")
     inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)

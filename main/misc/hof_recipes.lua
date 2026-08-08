@@ -37,6 +37,11 @@ AllRecipes["merm_armory_upgraded"].testfn    = IsTidalMarshLand
 -- Using Bananas instead of Cave Bananas.
 AllRecipes["wormwood_reeds"].ingredients = {Ingredient("kyno_banana", 1)}
 
+-- Chef Pouch Rework increases the crafting cost.
+if TUNING.HOF_SPICEPACKREWORK then
+	AllRecipes["spicepack"].ingredients = {Ingredient("silk", 4), Ingredient("saltrock", 6), Ingredient("rope", 2)}
+end
+
 -- Custom TechTree for Crafting Stations and NPCs.
 TECH.MEALING            = { MEALING          = 1  }
 TECH.MEALING_ONE        = { MEALING          = 1  }

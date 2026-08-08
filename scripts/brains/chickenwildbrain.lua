@@ -57,16 +57,15 @@ end
 
 local RUN_AWAY_PARAMS =
 {
-	tags = { "_combat", "_health" },
+	tags = { "_combat", "_health", },
 	notags = { "chicken", "playerghost", "notarget", "INLIMBO" },
 	
 	fn = function(guy)
 		return not guy.components.health:IsDead()
-		and (guy.components.combat.target ~= nil 
-		and guy.components.combat.target:HasTag("chicken"))
+		and ((guy.components.combat.target ~= nil and guy.components.combat.target:HasTag("chicken"))
+		or guy.tagvar_recent_butcher == true)
 	end,
 }
-
 
 function ChickenWildBrain:OnStart()
 	local root = PriorityNode(
@@ -79,7 +78,7 @@ function ChickenWildBrain:OnStart()
 			-- RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST)),	
 			
 		WhileNode(function() return GetTime() - self.inst.components.combat:GetLastAttackedTime() <= RUN_TIME_OUT end, "Attacked",
-			RunAway(self.inst, "scarytoprey", SEE_PLAYER_DIST, STOP_RUN_DIST)),
+			RunAway(self.inst, RUN_AWAY_PARAMS, SEE_PLAYER_DIST, STOP_RUN_DIST)),
 			
 		RunAway(self.inst, RUN_AWAY_PARAMS, SEE_PLAYER_DIST, STOP_RUN_DIST),
 		RunAway(self.inst, "OnFire", SEE_PLAYER_DIST, STOP_RUN_DIST),

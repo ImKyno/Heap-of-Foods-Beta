@@ -241,6 +241,7 @@ local function swordfish_dead()
 	inst:AddTag("catfood")
 	inst:AddTag("cookable")
 	inst:AddTag("dryable")
+	inst:AddTag("sliceable")
 	inst:AddTag("marinefood")
 	inst:AddTag("icebox_valid")
 	inst:AddTag("saltbox_valid")
@@ -253,6 +254,10 @@ local function swordfish_dead()
 	
 	inst:AddComponent("inspectable")
 	inst:AddComponent("inventoryitem")
+
+	inst:AddComponent("sliceable")
+	inst.components.sliceable:SetProduct("fishmeat")
+	inst.components.sliceable:SetSliceSize(2)
 	
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT

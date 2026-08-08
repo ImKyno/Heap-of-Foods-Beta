@@ -16,6 +16,7 @@ local INIT_POSTINIT_BRAINS =
 	"beefalobrain",
 	"deerbrain",
 	"gnarwailbrain",
+	"lightninggoatbrain",
 	"oceanfishbrain",
 	"sharkbrain",
 }

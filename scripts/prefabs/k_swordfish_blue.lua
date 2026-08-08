@@ -98,6 +98,7 @@ local function fn()
 	inst:AddTag("pondfish")
 	inst:AddTag("meat")
 	inst:AddTag("catfood")
+	inst:AddTag("sliceable")
 	inst:AddTag("marinefood")
 	inst:AddTag("unluckyitem")
 	inst:AddTag("largecreature")
@@ -137,6 +138,10 @@ local function fn()
 	
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"fishmeat", "fishmeat", "ice"})
+
+	inst:AddComponent("sliceable")
+	inst.components.sliceable:SetProduct("fishmeat")
+	inst.components.sliceable:SetSliceSize(2)
 	
 	-- I forgor live fishes can't be dried.
 	-- inst:AddComponent("dryable")

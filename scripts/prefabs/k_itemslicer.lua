@@ -8,6 +8,14 @@ local assets =
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
+local function OnSetModifyUseConsumption(uses, action, doer, target, item)
+	if doer ~= nil and doer.prefab == "warly" then -- I only want Warly to do this, not using his tags.
+		return uses * TUNING.KYNO_ITEMSLICER_USES_MULT
+	end
+
+	return uses
+end
+
 local function OnLanded(inst)
 	local x, y, z = inst.Transform:GetWorldPosition()
 	
@@ -70,6 +78,7 @@ local function fn()
 	inst.components.finiteuses:SetUses(TUNING.KYNO_ITEMSLICER_USES)
 	inst.components.finiteuses:SetConsumption(ACTIONS.SLICE, 2)
 	inst.components.finiteuses:SetConsumption(ACTIONS.SLICESTACK, 2)
+	inst.components.finiteuses:SetModifyUseConsumption(OnSetModifyUseConsumption)
 	inst.components.finiteuses:SetOnFinished(inst.Remove)
 	
 	return inst

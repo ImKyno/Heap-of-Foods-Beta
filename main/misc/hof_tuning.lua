@@ -28,6 +28,7 @@ TUNING.HOF_SEASONALFOOD = GetModConfigData("SEASONALFOOD")
 TUNING.HOF_SCRAPBOOK = GetModConfigData("SCRAPBOOK")
 TUNING.HOF_SCRAPBOOK_EXTRAS = GetModConfigData("SCRAPBOOK2")
 TUNING.HOF_WARLYSPICES = GetModConfigData("WARLYSPICES")
+TUNING.HOF_SPICEPACKREWORK = GetModConfigData("SPICEPACK")
 
 TUNING.HOF_IS_TAP_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2428854303") or _G.KnownModIndex:IsModEnabled("workshop-3631126354") -- Seppy's Architect Pack Mod.
 TUNING.HOF_IS_NET_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2528541304") -- Not Enough Turfs Mod.
@@ -275,11 +276,11 @@ TUNING.KYNO_SPOTSPICE_LEAF_HUNGER = 2.6875
 TUNING.KYNO_SPOTSPICE_LEAF_SANITY = 0 
 
 TUNING.KYNO_BACON_HEALTH = 0
-TUNING.KYNO_BACON_HUNGER = 12.5
+TUNING.KYNO_BACON_HUNGER = 6.25
 TUNING.KYNO_BACON_SANITY = -10
 TUNING.KYNO_BACON_COOKED_HEALTH = 1
-TUNING.KYNO_BACON_COOKED_HUNGER = 18.5
-TUNING.KYNO_BACON_COOKED_SANITY = 0
+TUNING.KYNO_BACON_COOKED_HUNGER = 6.25
+TUNING.KYNO_BACON_COOKED_SANITY = 1
 
 TUNING.KYNO_WHITE_CAP_HEALTH = -10
 TUNING.KYNO_WHITE_CAP_HUNGER = 9.375
@@ -859,7 +860,10 @@ TUNING.KYNO_TEALEAF_HEALTH = 0
 TUNING.KYNO_TEALEAF_HUNGER = 4.6875
 TUNING.KYNO_TEALEAF_SANITY = 1
 
+TUNING.KYNO_SLICEABLE_PERISHABLE_BONUS = 0.70
+
 TUNING.KYNO_ITEMSLICER_USES = 200
+TUNING.KYNO_ITEMSLICER_USES_MULT = 0.5
 
 TUNING.KYNO_EATERBUFF_DURATION = 480 * 1.5
 
@@ -1357,28 +1361,28 @@ TUNING.OCTOPUSKING_OCEAN_LOOT =
 	{
 		agedroe_oceanfish_sturgeon = { prefab = "messagebottle",         amount = 2 },
 		barnaclepita               = { prefab = "waterplant_planter",    amount = 1 },
-		barnaclestuffedfishhead    = { prefab = "bullkelp_root",         amount = 2 },
+		barnaclestuffedfishhead    = { prefab = "bullkelp_root",         amount = 1 },
 		barnaclesushi              = { prefab = "dug_trap_starfish",     amount = 1 },
 		barnaclinguine             = { prefab = "megaflare",             amount = 1 },
 		bisque                     = { prefab = "boatpatch",             amount = 5 },
-		californiaroll             = { prefab = "kyno_seaweeds_root",    amount = 3 },
+		californiaroll             = { prefab = "kyno_seaweeds_root",    amount = 1 },
 		ceviche                    = { prefab = "flotationcushion",      amount = 1 },
 		crabkingfeast              = { prefab = "nukashine_sugarfree",   amount = 1 },
 		eeltacos                   = { prefab = "monkey_mediumhat",      amount = 1 },
 		festive_pickledherring     = { prefab = "telestaff",             amount = 1 },
 		fishsticks                 = { prefab = "kyno_beancan",          amount = 3 },
 		fishtacos                  = { prefab = "raincoat",              amount = 1 },
-		gorge_candiedfish          = { prefab = "kyno_lotus_root",       amount = 3 },
+		gorge_candiedfish          = { prefab = "kyno_lotus_root",       amount = 1 },
 		gorge_crab_cake            = { prefab = "molehat",               amount = 1 },
 		gorge_crab_ravioli         = { prefab = "saddle_race",           amount = 1 },
 		gorge_crab_roll            = { prefab = "treegrowthsolution",    amount = 3 },
 		gorge_creamy_fish          = { prefab = "kyno_cokecan",          amount = 3 },
 		gorge_fish_steak           = { prefab = "purpleamulet",          amount = 1 },
 		gorge_fish_stew            = { prefab = "kyno_energycan",        amount = 3 },
-		gorge_fishchips            = { prefab = "kyno_taroroot_root",    amount = 2 },
+		gorge_fishchips            = { prefab = "kyno_taroroot_root",    amount = 1 },
 		gorge_fishpie              = { prefab = "kyno_sodacan",          amount = 3 },
 		gorge_poachedfish          = { prefab = "kyno_meatcan",          amount = 3 },
-		jellyopop                  = { prefab = "kyno_waterycress_root", amount = 3 },
+		jellyopop                  = { prefab = "kyno_waterycress_root", amount = 1 },
 		lobsterbisque              = { prefab = "kyno_brainrock_larvae", amount = 1 },
 		lobsterdinner              = { prefab = "boat_bumper_shell_kit", amount = 8 },
 		musselbouillabaise         = { prefab = "panflute",              amount = 1 },
@@ -1758,3 +1762,15 @@ TUNING.KYNO_WX78_MODULES_DRYER_DATA_AMOUNT = 3
 TUNING.KYNO_WX78_MODULES_DRYER2_SLOTS = 2
 TUNING.KYNO_WX78_MODULES_DRYER2_WATERPROOFNESS = 0.50
 TUNING.KYNO_WX78_MODULES_DRYER2_DATA_AMOUNT = 6
+
+TUNING.KYNO_CUTLASSBLUE_HEAT = -10
+TUNING.KYNO_CUTLASSBLUE_MIN_DAMAGE = 51.5
+TUNING.KYNO_CUTLASSBLUE_MAX_DAMAGE = 68.75
+TUNING.KYNO_CUTLASSBLUE_WINTER_DAMAGE_MULT = 1.10
+TUNING.KYNO_CUTLASSBLUE_FLOCK_RANGE = 0.75
+TUNING.KYNO_CUTLASSBLUE_FLOCK_DAMAGE = 15
+TUNING.KYNO_CUTLASSBLUE_FLOCK_DAMAGE_PLANAR = 5
+TUNING.KYNO_CUTLASSBLUE_HIT_THRESHOLD = 3
+TUNING.KYNO_CUTLASSBLUE_HIT_RESET_THRESHOLD = 4
+
+TUNING.KYNO_SPICEPACK_PRESERVER_RATE = 0.50

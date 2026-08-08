@@ -220,6 +220,7 @@ STRINGS.ACTIONS.MAKEPOPCORN = "Make Popcorn"
 STRINGS.ACTIONS.FISHREGISTRY_RESEARCH = "Research"
 STRINGS.ACTIONS.BOOSTPLANT = "Apply Booster"
 STRINGS.ACTIONS.WRITEITEM = "Write {item}"
+STRINGS.ACTIONS.DUMPWATER = "Dump Water"
 STRINGS.ACTIONS.SLAUGHTER2 =
 {
 	DISEMBOWEL = "Gently Disembowel",
@@ -883,6 +884,10 @@ STRINGS.FISHERMERM_TALK_FISH = "Blu flort."
 
 -- Edited strings for skill trees.
 STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Mushrooms planted in a Mushroom Planter grow much faster.\nLearn how to plant new kinds of mushrooms in Mushroom Planters."
+
+-- Edited strings for character selection.
+STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr = STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr.." \n*Is a skilled butcher"
+STRINGS.CHARACTER_DESCRIPTIONS.warly = STRINGS.CHARACTER_DESCRIPTIONS.warly.." \n*Is a skilled butcher"
 
 STRINGS.NAMES.KYNO_ROE = "Roe" -- Deprecated, but kept for old worlds.
 STRINGS.NAMES.KYNO_ROE_PONDFISH = "Freshwater Fish Roe"

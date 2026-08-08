@@ -193,8 +193,15 @@ local function WarlyPostInit(inst)
 		return inst
 	end
 
+	inst.tagvar_goatfriendly = true
+	inst.tagvar_animal_butcher = true
+
 	if inst.components.eater ~= nil then
 		inst.components.eater:SetPrefersEatingTag("warly_caneat") -- New tag that allows Warly to eat stuff.
+	end
+
+	if inst.components.builder ~= nil then
+		inst.components.builder:UnlockRecipe("kyno_itemslicer", true)
 	end
 end
 
@@ -349,3 +356,6 @@ if HOF_ALCOHOLICDRINKS then
 		AddPrefabPostInit(v, AlcoholicDrinkerPostInit)
 	end
 end
+
+-- Warly starts with Cleaver.
+table.insert(TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.WARLY, 1, "kyno_itemslicer")

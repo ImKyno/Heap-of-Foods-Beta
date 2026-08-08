@@ -918,6 +918,47 @@ AddComponentAction("USEITEM", "plantbooster", function(inst, doer, target, actio
 	table.insert(actions, ACTIONS.BOOSTPLANT)
 end)
 
+AddAction("DUMPWATER", STRINGS.ACTIONS.DUMPWATER, function(act)
+	local doer = act.doer
+	local bucket = act.invobject or act.target
+	local x, y, z = bucket.Transform:GetWorldPosition()
+
+	if doer ~= nil then
+		bucket:Remove()
+
+		if doer.SoundEmitter ~= nil then
+			doer.SoundEmitter:PlaySound("turnoftides/common/together/water/emerge/small")
+		end
+
+		local empty = SpawnPrefab("kyno_bucket_metal")
+
+		if empty ~= nil then
+			if doer.components.inventory ~= nil then
+				doer.components.inventory:GiveItem(empty, nil, doer:GetPosition())
+			else
+				empty.Transform:SetPosition(x, y, z)
+			end
+		end
+	end
+
+	return true
+end)
+
+ACTIONS.DUMPWATER.priority = 5
+ACTIONS.DUMPWATER.mount_valid = true
+
+AddComponentAction("INVENTORY", "watersource", function(inst, doer, actions, right)
+	if inst:HasTag("bucket_water") and inst:HasTag("watersource") then
+		table.insert(actions, ACTIONS.DUMPWATER)
+	end
+end)
+
+AddComponentAction("SCENE", "watersource", function(inst, doer, actions, right)
+	if right and inst:HasTag("bucket_water") and inst:HasTag("watersource") then
+		table.insert(actions, ACTIONS.DUMPWATER)
+	end
+end)
+
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 -- Hope they don't smack and bonk my head...
 local _FISHfn = ACTIONS.FISH.fn

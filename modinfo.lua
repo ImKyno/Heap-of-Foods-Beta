@@ -41,7 +41,7 @@ The Deciduous Forest is now home for a new face! Meet Partitio, the Pig Merchant
 
 Partitio is looking forward to meet new costumers, even if they are monsters and will tolerate them. But after some unfortunate past events, he now refuses to do any business with the Mermfolk!
 
-󰀌 Mod Version: 6.7-B
+󰀌 Mod Version: 6.8-B
 󰀧 Update: Branches & Business (Part I)
 ]],
 		zh  =
@@ -56,7 +56,7 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 
 帕提提欧 期待结识新的顾客，即使他们是怪物，他也会包容他们。但在一些不幸的过往事件之后，他现在拒绝与鱼人族（Mermfolk）进行任何交易！
 
-󰀌 Mod 版本： 6.7-B
+󰀌 Mod 版本： 6.8-B
 󰀧 更新内容：分支机构及业务 (第一部分)
 ]],
 		zht =
@@ -71,7 +71,7 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 
 帕提提欧 期待結識新的顧客，即使他們是怪物，他也會包容他們。但在一些不幸的過往事件之後，他現在拒絕與魚人族（Mermfolk）進行任何交易！
 
-󰀌 Mod 版本： 6.7-B
+󰀌 Mod 版本： 6.8-B
 󰀧 更新內容： 分公司及業務 (第一部分)
 ]],
 		pt  =
@@ -86,7 +86,7 @@ A Floresta Decídua agora abriga um novo rosto! Conheça Partitio, o Comerciante
 
 Partitio está ansioso para conhecer novos clientes, mesmo que sejam monstros, e irá tolerá-los. Mas, após alguns eventos infelizes do passado, ele agora se recusa a fazer qualquer negócio com Povo-peixe!
 
-󰀌 Versão do Mod: 6.7-B
+󰀌 Versão do Mod: 6.8-B
 󰀧 Atualização: Galhos e Negócios (Parte I)
 ]],
 		pl  =
@@ -101,7 +101,7 @@ Las liściasty ma teraz nową twarz! Poznaj Partitio, Świńskiego Handlarza. Ja
 
 Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli są potworami i będzie ich tolerował. Jednak po kilku niefortunnych wydarzeniach z przeszłości, obecnie odmawia prowadzenia interesów z Mermfolk!
 
-󰀌 Wersja Moda: 6.7-B
+󰀌 Wersja Moda: 6.8-B
 󰀧 Aktualizacja: Oddziały i biznes (Część I)
 ]],
 		es  =
@@ -116,7 +116,7 @@ Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli 
 
 Partitio espera conocer nuevos clientes, incluso si son monstruos, y los tolerará. Pero tras algunos desafortunados eventos del pasado, ahora se niega a hacer negocios con los Mermfolk.
 
-󰀌 Versión del Mod: 6.7-B
+󰀌 Versión del Mod: 6.8-B
 󰀧 Actualización: Ramas y Negocios (Parte I)
 ]],
 		vi  =
@@ -131,7 +131,7 @@ Rừng rụng lá giờ đây có một gương mặt mới! Hãy gặp Partitio
 
 Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ là quái vật và sẽ chấp nhận họ. Nhưng sau một số sự kiện không may trong quá khứ, anh ta hiện từ chối kinh doanh với Mermfolk!
 
-󰀌 Phiên bản Mod: 6.7-B
+󰀌 Phiên bản Mod: 6.8-B
 󰀧 Cập nhật: Cành Nhánh & Kinh Doanh (Phần I)
 ]],
 		kr =
@@ -145,7 +145,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 활엽수림에 새로운 상인이 등장했습니다! 돼지 상인 파르티티오를 만나보세요. 자부심 넘치는 돼지인 그는 오직 고품질의 물품만을 판매합니다.
 
 파르티티오는 새로운 고객들을 맞이하길 기대하고 있으며, 괴물일지라도 거래를 허용합니다. 다만 과거의 불미스러운 사건들로 인해, 현재 어인족과의 거래는 일절 거부하고 있습니다!
-󰀌 Mod Version: 6.7-B
+󰀌 Mod Version: 6.8-B
 󰀧 Update: Branches & Business (Part I)
 ]],
 	},
@@ -691,6 +691,60 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 					es  = "El Elastiespaciador mejorará las neveras y las cajas de sal, permitiendo pilas infinitas de objetos.",
 					vi  = "Bộ Mở Rộng Không Gian sẽ nâng cấp Tủ Lạnh và Hộp Muối, cho phép xếp chồng vật phẩm vô hạn.",
 					kr  = "공간신축기로 냉장고와 소금항아리를 업그레이드 할 수 있습니다.",
+				},
+			},
+		},
+
+		SPICEPACK =
+		{
+			NAME =
+			{
+				"Chef Pouch Rework",
+				zh = "厨师袋重制版",
+				zht = "廚師袋重製版",
+				pt = "Rework da Bolsa do Chef",
+				pl = "Przeróbka Sakiewki Szefa Kuchni",
+				es = "Rework de la Bolsa del Chef",
+				vi = "Cải tiến Túi Đầu Bếp",
+				kr = "요리사의 주머니 개편",
+			},
+
+			HOVER =
+			{
+				"Should the Chef Pouch be reworked? Modifies and adds new features to it. It can no longer be equipped and instead becomes a Portable Storage.",
+				zh  = "是否重制厨师袋？将对其进行全面修改并添加新功能。",
+				zht = "是否重製廚師袋？將對其進行全面修改並添加新功能。",
+				pt  = "Permitir que a Bolsa do Chef seja reworkada? Modifica completamente e adiciona novos recursos para ela.",
+				pl  = "Czy Sakiewka Szefa Kuchni powinna zostać przerobiona? Całkowicie ją modyfikuje i dodaje nowe funkcje.",
+				es  = "¿Debería rehacerse la Bolsa del Chef? La modifica por completo y añade nuevas funciones.",
+				vi  = "Có nên cải tiến Túi Đầu Bếp không? Thay đổi hoàn toàn và thêm các tính năng mới cho nó.",
+				kr  = "요리사의 주머니를 개편할까요? 주머니를 전면적으로 변경하고 새로운 기능을 추가합니다.",
+			},
+
+			HOVER_OPTIONS =
+			{
+				DISABLED =
+				{
+					"Default Chef Pouch.",
+					zh = "默认厨师袋。",
+					zht = "預設廚師袋。",
+					pt = "Bolsa do Chef padrão.",
+					pl = "Domyślna Sakiewka Szefa Kuchni.",
+					es = "Bolsa del Chef predeterminada.",
+					vi = "Túi Đầu Bếp mặc định.",
+					kr = "기본 요리사의 주머니.",
+				},
+
+				ENABLED =
+				{
+					"Chef Pouch will be reworked and have new features added to it.",
+					zh = "厨师袋将被重制并添加新功能。",
+					zht = "廚師袋將被重製並添加新功能。",
+					pt = "A Bolsa do Chef será reworkada e terá novos recursos adicionados a ela.",
+					pl = "Sakiewka Szefa Kuchni zostanie przerobiona i otrzyma nowe funkcje.",
+					es = "La Bolsa del Chef será rediseñada y recibirá nuevas funciones.",
+					vi = "Túi Đầu Bếp sẽ được cải tiến và bổ sung các tính năng mới.",
+					kr = "요리사의 주머니가 개편되고 새로운 기능이 추가됩니다.",
 				},
 			},
 		},
@@ -1811,7 +1865,7 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "6.7-B"
+version                      = "6.8-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 
@@ -2004,6 +2058,22 @@ local ICEBOX_OPTIONS         =
 	{
 		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
 		hover                = ChooseTranslationTable(STRINGS.SETTINGS.ICEBOXSTACKSIZE.HOVER_OPTIONS.ENABLED),
+		data                 = true
+	}
+}
+
+local SPICEPACK_LABEL        = ChooseTranslationTable(STRINGS.SETTINGS.SPICEPACK.NAME)
+local SPICEPACK_HOVER        = ChooseTranslationTable(STRINGS.SETTINGS.SPICEPACK.HOVER)
+local SPICEPACK_OPTIONS      =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SPICEPACK.HOVER_OPTIONS.DISABLED),
+		data                 = false
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SPICEPACK.HOVER_OPTIONS.ENABLED),
 		data                 = true
 	}
 }
@@ -2307,6 +2377,7 @@ configuration_options        =
 	{ name                   = "GIANTSPAWNING",    label = GIANTSPAWN_LABEL,    hover = GIANTSPAWN_HOVER,    options = GIANTSPAWN_OPTIONS,    default = true,  client = false },
 	{ name                   = "ALCOHOLICDRINKS",  label = ALCOHOL_LABEL,       hover = ALCOHOL_HOVER,       options = ALCOHOL_OPTIONS,       default = true,  client = false },
 	{ name                   = "ICEBOXSTACKSIZE",  label = ICEBOX_LABEL,        hover = ICEBOX_HOVER,        options = ICEBOX_OPTIONS,        default = false, client = false },
+	{ name                   = "SPICEPACK",        label = SPICEPACK_LABEL,     hover = SPICEPACK_HOVER,     options = SPICEPACK_OPTIONS,     default = false, client = false },
 	{ name                   = "COFFEESPEED",      label = COFFEESPEED_LABEL,   hover = COFFEESPEED_HOVER,   options = COFFEESPEED_OPTIONS,   default = true,  client = false },
 	{ name                   = "COFFEEDURATION",   label = COFFEETIMER_LABEL,   hover = COFFEETIMER_HOVER,   options = COFFEETIMER_OPTIONS,   default = 480,   client = false },
 	{ name                   = "COFFEEDROPRATE",   label = COFFEEDROP_LABEL,    hover = COFFEEDROP_HOVER,    options = COFFEEDROP_OPTIONS,    default = 4,     client = false },
@@ -2333,5 +2404,5 @@ configuration_options        =
 	-- Client Options.
 	{ name                   = "CLIENT",           label = CLIENT_LABEL,        hover = CLIENT_HOVER,        options = NONE_OPTIONS,          default = false, client = true  },
 	{ name                   = "PIGCOINVALUES",    label = PIGCOINVALUES_LABEL, hover = PIGCOINVALUES_HOVER, options = PIGCOINVALUES_OPTIONS, default = true,  client = true  },
-	{ name                   = "VIEWRECIPE",       label = VIEWRECIPE_LABEL,    hover = VIEWRECIPE_HOVER,    options = VIEWRECIPE_OPTIONS,    default = true,  client = true  },
+	{ name                   = "VIEWRECIPE",       label = VIEWRECIPE_LABEL,    hover = VIEWRECIPE_HOVER,    options = VIEWRECIPE_OPTIONS,    default = false, client = true  },
 }

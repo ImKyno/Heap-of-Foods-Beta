@@ -8,7 +8,7 @@ local function SpatPostInit(inst)
 	end
 
 	inst:AddComponent("slaughterable")
-	inst.components.slaughterable:SetExtraLoot({"meat", "meat"})
+	inst.components.slaughterable:SetExtraLoot({"meat", "meat", "steelwool"})
 	inst.components.slaughterable:MakeAggressive()
 
 	inst:ListenForEvent("slaughtered_extraloot", function(inst, data)

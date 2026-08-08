@@ -1017,3 +1017,26 @@ function c_hoftestdiets()
 		c_give("soulstew",           40, true) -- PREPAREDSOUL
 	end
 end
+
+function c_hofunlockpartitio()
+	local player = ConsoleCommandPlayer()
+	local house = TheSim:FindFirstEntityWithTag("deciduousforestshop")
+	local partitio = TheSim:FindFirstEntityWithTag("deciduousforesttrader")
+
+	if player ~= nil then
+		if house ~= nil then
+			house:SetRepaired(true)
+			house:PushEvent("onbuilt")
+		end
+
+		for i = 1, TUNING.KYNO_DECIDUOUSFORESTTRADER_OVERSIZED_CROP_AMOUNT do
+			TheWorld:PushEvent("ms_oversizedcropgrown", { plant = "farm_plant_carrot" })
+		end
+
+		if partitio ~= nil then
+			partitio:RerollWares()
+		end
+
+		TheNet:Announce("Repaired Partitio's Warehouse and unlocked all trades!")
+	end
+end

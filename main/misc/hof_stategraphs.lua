@@ -614,3 +614,11 @@ end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.BOOSTPLANT, function(inst, action)
 	return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
 end))
+
+-- Dumping Water.
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.DUMPWATER, function(inst, action)
+	return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
+end))
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.DUMPWATER, function(inst, action)
+	return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
+end))

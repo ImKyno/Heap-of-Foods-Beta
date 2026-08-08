@@ -201,6 +201,7 @@ STRINGS.KYNO_REFILL = "Wkład"
 STRINGS.ACTIONS.OPEN_CRAFTING.MEALING = "Miel w"
 STRINGS.ACTIONS.ACTIVATE.DESTROY = "Zniszcz"
 STRINGS.ACTIONS.ACTIVATE.DAILYRECIPE = "Widzieć"
+STRINGS.ACTIONS.ACTIVATE.READBOOK = "Read" -- NEEDS TRANSLATION
 STRINGS.ACTIONS.SALT = "Dodaj Sól"
 STRINGS.ACTIONS.STORESOUL = "Przechowaj Duszę"
 STRINGS.ACTIONS.FLAY = "Obłup" -- To nie ma znaczenia, ACTIONS.SLAUGHTER2 nadpisuje to. Ale jest potrzebne dla AddAction.
@@ -218,7 +219,7 @@ STRINGS.ACTIONS.MAKEPOPCORN = "Zrób popcorn"
 STRINGS.ACTIONS.FISHREGISTRY_RESEARCH = "Badaj"
 STRINGS.ACTIONS.BOOSTPLANT = "Zwiększyć"
 STRINGS.ACTIONS.WRITEITEM = "Write {item}" -- NEEDS TRANSLATION
-STRINGS.ACTIONS.ACTIVATE.READBOOK = "Read" -- NEEDS TRANSLATION
+STRINGS.ACTIONS.DUMPWATER = "Dump Water" -- NEEDS TRANSLATION
 STRINGS.ACTIONS.SLAUGHTER2 =
 {
 	DISEMBOWEL = "Delikatnie Wypatrosz",
@@ -882,6 +883,10 @@ STRINGS.FISHERMERM_TALK_FISH = "Blu flort."
 
 -- Edited strings for skill trees.
 STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Grzyby posadzone w Sadzarce Grzybów rosną znacznie szybciej.\nDowiedz się, jak sadzić nowe rodzaje grzybów w Sadzarce Grzybów."
+
+-- Edited strings for character selection.
+STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr = STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr.." \n*Is a skilled butcher" -- NEEDS TRANSLATION
+STRINGS.CHARACTER_DESCRIPTIONS.warly = STRINGS.CHARACTER_DESCRIPTIONS.warly.." \n*Is a skilled butcher" -- NEEDS TRANSLATION
 
 STRINGS.NAMES.KYNO_ROE = "Ikra" -- Deprecated but kept for old worlds.
 STRINGS.NAMES.KYNO_ROE_PONDFISH = "Ikra Ryb Słodkowodnych"

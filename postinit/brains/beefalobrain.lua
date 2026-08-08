@@ -8,10 +8,17 @@ require("behaviours/runaway")
 local AVOID_BUTCHER_DIST = TUNING.KYNO_SLAUGHTERTOOLS_AVOID_DIST
 local AVOID_BUTCHER_STOP = TUNING.KYNO_SLAUGHTERTOOLS_AVOID_STOP
 
+local RUN_AWAY_PARAMS =
+{
+	fn = function(guy)
+		return guy.tagvar_recent_butcher == true
+	end,
+}
+
 local function BeefaloBrainPostInit(self)
 	local inst = self.inst
 
-	local runaway = RunAway(inst, "recent_butcher", AVOID_BUTCHER_DIST, AVOID_BUTCHER_STOP)
+	local runaway = RunAway(inst, RUN_AWAY_PARAMS, AVOID_BUTCHER_DIST, AVOID_BUTCHER_STOP)
 	local conditional = WhileNode(function() return inst:HasTag("butcher_fearable") and not inst:HasTag("domesticated") end, "Fear Butcher", runaway)
 
 	conditional.parent = self.bt.root

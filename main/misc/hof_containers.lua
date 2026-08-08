@@ -887,3 +887,11 @@ containers.params.beargerfur_sack.itemtestfn = function(container, item, slot)
 
 	return _beargerfur_sack_itemtestfn(container, item, slot)
 end
+
+-- Chef's Pouch Rework, acts like the Polar Bearger Bin if the rework option is enabled.
+-- Otherwise it now have the same amount of slots as the Backpack.
+if TUNING.HOF_SPICEPACKREWORK then
+	containers.params.spicepack = containers.params.beargerfur_sack
+else
+	containers.params.spicepack = containers.params.backpack
+end

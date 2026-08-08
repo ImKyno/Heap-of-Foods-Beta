@@ -68,7 +68,7 @@ function Slaughterable:MakeAggressive(doer)
 	self.inst:RemoveTag("butcher_fearable")
 	self.inst:AddTag("butcher_aggressive")
 
-	if doer ~= nil and doer:IsValid() and doer:HasTag("recent_butcher") then
+	if doer ~= nil and doer:IsValid() and doer.tagvar_recent_butcher then
 		if self.inst.components.combat ~= nil then
 			self.inst.components.combat:SetTarget(doer)
 			self.inst.components.combat:ShareTarget(doer, 30, function(dude)

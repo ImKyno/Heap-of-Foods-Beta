@@ -72,7 +72,7 @@ local function BeefaloPostInit(inst)
 	inst.components.milkableanimal.onmilkedfn = OnMilked
 
 	inst:AddComponent("slaughterable")
-	inst.components.slaughterable:SetExtraLoot({"meat", "meat"})
+	inst.components.slaughterable:SetExtraLoot({"meat", "meat", "horn"})
 	inst.components.slaughterable:MakeFearable()
 
 	inst:ListenForEvent("slaughtered_extraloot", function(inst, data)

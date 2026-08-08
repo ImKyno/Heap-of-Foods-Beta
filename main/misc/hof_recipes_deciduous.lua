@@ -116,6 +116,7 @@ AddRecipe2("deciduoustrader_kyno_seedsbag", {Ingredient("kyno_pigcoin1", 15), In
 		description         = "kyno_seedsbag_d",
 		sg_state            = "give",
 		product             = "kyno_seedsbag",
+		image               = "kyno_seedsbag_full.tex",
 	},
 	{"CRAFTING_STATION"}
 )

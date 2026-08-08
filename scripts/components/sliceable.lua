@@ -86,6 +86,11 @@ function Sliceable:OnSlice(inst)
 			slice.components.stackable.stacksize = self.slicesize
 		end
 
+		if self.inst.components.perishable ~= nil and slice.components.perishable ~= nil then
+			local new_percent = 1 - (1 - self.inst.components.perishable:GetPercent()) * TUNING.KYNO_SLICEABLE_PERISHABLE_BONUS
+			slice.components.perishable:SetPercent(new_percent)
+		end
+
 		if owner ~= nil then
 			local container = owner.components.inventory or owner.components.container
 			local ownerpos = owner:GetPosition()
@@ -103,8 +108,8 @@ end
 
 function Sliceable:OnSliceStack(inst)
 	local item = self.inst
-
 	local stacksize = 1
+
 	if item.components.stackable ~= nil then
 		stacksize = item.components.stackable:StackSize()
 	end
@@ -119,14 +124,21 @@ function Sliceable:OnSliceStack(inst)
 
 			if slice.components.stackable ~= nil then
 				local amount = math.min(total, slice.components.stackable.maxsize)
+
 				slice.components.stackable:SetStackSize(amount)
 				total = total - amount
 			else
 				total = total - 1
 			end
 
+			if self.inst.components.perishable ~= nil and slice.components.perishable ~= nil then
+				local new_percent = 1 - (1 - self.inst.components.perishable:GetPercent()) * TUNING.KYNO_SLICEABLE_PERISHABLE_BONUS
+				slice.components.perishable:SetPercent(new_percent)
+			end
+
 			if owner ~= nil then
 				local container = owner.components.inventory or owner.components.container
+
 				if container ~= nil then
 					container:GiveItem(slice, nil, owner:GetPosition())
 				end
@@ -156,6 +168,11 @@ function Sliceable:OnSliceWorld(doer)
 	local slice = SpawnPrefab(item)
 
 	if slice ~= nil then
+		if self.inst.components.perishable ~= nil and slice.components.perishable ~= nil then
+			local new_percent = 1 - (1 - self.inst.components.perishable:GetPercent()) * TUNING.KYNO_SLICEABLE_PERISHABLE_BONUS
+			slice.components.perishable:SetPercent(new_percent)
+		end
+
 		if doer ~= nil and doer.components.inventory ~= nil then
 			doer.components.inventory:GiveItem(slice, nil, self.inst:GetPosition())
 		else

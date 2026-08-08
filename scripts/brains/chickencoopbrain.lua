@@ -86,8 +86,8 @@ local RUN_AWAY_PARAMS =
 	
 	fn = function(guy)
 		return not guy.components.health:IsDead()
-		and (guy.components.combat.target ~= nil 
-		and guy.components.combat.target:HasTag("chicken"))
+		and ((guy.components.combat.target ~= nil and guy.components.combat.target:HasTag("chicken"))
+		or guy.tagvar_recent_butcher == true)
 	end,
 }
 
@@ -156,7 +156,7 @@ function ChickenCoopBrain:OnStart()
 			DoAction(self.inst, GoHomeAction, "Go Home", true)),
 			
 		WhileNode(function() return self.inst:HasTag("butcher_fearable") end, "Fear Butcher", 
-			RunAway(self.inst, "recent_butcher", SEE_PLAYER_DIST, STOP_RUN_DIST)),
+			RunAway(self.inst, RUN_AWAY_PARAMS, SEE_PLAYER_DIST, STOP_RUN_DIST)),
 			
 		WhileNode(function() return GetTime() - self.inst.components.combat:GetLastAttackedTime() <= RUN_TIME_OUT end, "Attacked",
 			RunAway(self.inst, RUN_AWAY_PARAMS, SEE_PLAYER_DIST, STOP_RUN_DIST)),

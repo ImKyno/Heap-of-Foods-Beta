@@ -41,6 +41,8 @@ PrefabFiles =
 	"k_crop_sweetpotato",
 	"k_crop_turnip",
 	"k_cucumber",
+	-- "k_cutlassblue",
+	-- "k_cutlassblue_fx",
 	"k_dailyrecipe_sign",
 	"k_dailyrecipe_sign_decor",
 	"k_deciduousforest_shop",
@@ -242,4 +244,13 @@ if TUNING.HOF_WARLYSPICES then
 	end
 
 	table.insert(PrefabFiles, "k_newspices")
+end
+
+-- Chef Pouch Rework.
+if TUNING.HOF_SPICEPACKREWORK then
+	if TUNING.HOF_DEBUG_MODE then
+		print("Heap of Foods Mod - Added Reworked Chef Pouch prefab.")
+	end
+
+	table.insert(PrefabFiles, "k_spicepack")
 end

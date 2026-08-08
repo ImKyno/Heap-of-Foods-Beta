@@ -202,6 +202,7 @@ STRINGS.KYNO_REFILL = "Reabastecer"
 STRINGS.ACTIONS.OPEN_CRAFTING.MEALING = "Produzir em"
 STRINGS.ACTIONS.ACTIVATE.DESTROY = "Destruir"
 STRINGS.ACTIONS.ACTIVATE.DAILYRECIPE = "Ver"
+STRINGS.ACTIONS.ACTIVATE.READBOOK = "Ler"
 STRINGS.ACTIONS.SALT = "Adicionar Sal"
 STRINGS.ACTIONS.STORESOUL = "Guardar Alma"
 STRINGS.ACTIONS.FLAY = "Abater" -- This doesn't matter, ACTIONS.SLAUGHTER2 overrides it. But it's necessary for the AddAction.
@@ -219,7 +220,7 @@ STRINGS.ACTIONS.MAKEPOPCORN = "Fazer Pipoca"
 STRINGS.ACTIONS.FISHREGISTRY_RESEARCH = "Pesquisar"
 STRINGS.ACTIONS.BOOSTPLANT = "Aplicar Potencializador"
 STRINGS.ACTIONS.WRITEITEM = "Escrever {item}"
-STRINGS.ACTIONS.ACTIVATE.READBOOK = "Ler"
+STRINGS.ACTIONS.DUMPWATER = "Esvaziar"
 STRINGS.ACTIONS.SLAUGHTER2 =
 {
 	DISEMBOWEL = "Estripar Gentilmente",
@@ -883,6 +884,10 @@ STRINGS.FISHERMERM_TALK_FISH = "Blu flort."
 
 -- Edited strings for skill trees.
 STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Cogumelos plantados em um Plantador de Cogumelos crescem muito mais rápido.\nAprenda a plantar novos tipos de cogumelos nos Plantadores de Cogumelos."
+
+-- Edited strings for character selection.
+STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr = STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr.." \n*É uma abatedora habilidosa"
+STRINGS.CHARACTER_DESCRIPTIONS.warly = STRINGS.CHARACTER_DESCRIPTIONS.warly.." \n*É um abatedor habilidoso"
 
 STRINGS.NAMES.KYNO_ROE = "Ovas" -- Deprecated but kept for old worlds.
 STRINGS.NAMES.KYNO_ROE_PONDFISH = "Ovas de Peixe de Lago"
