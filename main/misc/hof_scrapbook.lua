@@ -147,6 +147,12 @@ for _, v in pairs(animalfoods) do
 	end
 end
 
+if TUNING.HOF_SPICEPACKREWORK then
+	ScrapbookData.spicepack.subcat = nil
+	ScrapbookData.spicepack.deps = {"ash", "saltrock", "silk", "rope"}
+	ScrapbookData.spicepack.specialinfo = "SPICEPACK_REWORK"
+end
+
 -- Sample deps for preparedfoods. Some special foods are likely to use their own deps though.
 local preparedfood_deps =
 {

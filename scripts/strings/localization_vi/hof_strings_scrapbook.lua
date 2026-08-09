@@ -189,6 +189,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Có thể dùng để 
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "Đơn vị tiền tệ chính của lũ heo địa phương."
 STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "Một vật chứa di động với 4 ô chỉ dùng để đựng hạt giống.\n\nTốc độ hư hỏng giảm 60%.\n\nCó thể nâng cấp bằng Elastispacer để tăng khả năng lưu trữ và bảo quản.\n\nCó thể dùng Bút Lông để ghi tên hạt giống lên túi."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODAMMO_TOMATO = "Làm chậm các mục tiêu trên mặt đất trong 5 giây."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "Một vật chứa có thể mang theo với 4 ngăn để đựng thức ăn đã chế biến. Thức ăn bên trong sẽ được bảo quản lâu hơn."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "Khẩu phần của chúng chủ yếu gồm Hạt Giống, Lúa Mì hoặc Nhánh Đốm.\n\nGà tìm thấy ngoài hoang dã có 40% cơ hội đẻ Trứng sau khi ăn. Chúng có một cơ hội nhỏ đẻ Trứng Lớn.\n\nGà sống trong Chuồng có thể đẻ Trứng mỗi ngày sau khi ăn. Chúng có cơ hội đẻ Trứng Lớn cao hơn."

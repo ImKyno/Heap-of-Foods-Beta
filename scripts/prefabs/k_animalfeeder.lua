@@ -3,6 +3,9 @@ require("prefabutil")
 local assets =
 {
 	Asset("ANIM", "anim/kyno_animalfeeder.zip"),
+
+	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
+	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
 }
 
 local prefabs =

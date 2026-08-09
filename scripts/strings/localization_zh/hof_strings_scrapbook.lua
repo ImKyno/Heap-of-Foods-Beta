@@ -189,6 +189,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "可用于施肥并立�
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "当地猪的主要货币。"
 STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "一个拥有4个格子的便携容器，只能存放种子。\n\n腐烂速度降低60%。\n\n可使用弹性扩容器进一步升级，以提升存储和保鲜能力。\n\n可使用羽毛笔在上面写下种子名称。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODAMMO_TOMATO = "它能使地面目标减速 5 秒。"
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "一种带有4个格位的便携式容器，可用于存放烹饪好的食物。存放在其中的食物能保存更长时间。"
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "它们的饮食以种子、小麦或斑点小枝为基础。\n\n在野外发现的鸡在进食后有40%的几率产下鸡蛋。它们产下更大的蛋的几率非常低。\n\n鸡舍里的鸡吃完食后每天都能下蛋，且产出更大的蛋的概率更高。"

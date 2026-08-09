@@ -432,6 +432,12 @@ AddRecipe2("kyno_foodammo_tomato", {Ingredient("tomato", 1, nil, nil, "quagmire_
 	{"WEAPONS"}
 )
 
+AddRecipe2("kyno_piggybank", {Ingredient("batnose", 1), Ingredient("marble", 6), Ingredient("pigskin", 1)}, TECH.SCIENCE_TWO,
+	{
+	},
+	{"CONTAINERS"}
+)
+
 AddRecipe2("hermitshop_kyno_malbatrossfood_blueprint", {Ingredient("messagebottleempty", 10)}, TECH.HERMITCRABSHOP_SEVEN,
 	{
 		nounlock            = true,

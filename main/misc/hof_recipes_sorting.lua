@@ -67,6 +67,7 @@ SortAfter("kyno_fishregistryhat",                     "plantregistryhat",       
 SortAfter("kyno_animalfeeder",                        "kyno_mushstump",                   "GARDENING")
 SortAfter("kyno_chickenhouse",                        "beebox",                           "GARDENING")
 SortAfter("kyno_eldermandrakehouse",                  "rabbithouse",                      "STRUCTURES")
+SortAfter("kyno_piggybank",                           "candybag",                         "CONTAINERS")
 SortAfter("hermitshop_kyno_malbatrossfood_blueprint", "hermitshop_chum_blueprint",        "CRAFTING_STATION")
 SortAfter("potatosack2",                              "mighty_gym",                       "CHARACTER")
 SortBefore("potatosack2",                             "icebox",                           "CONTAINERS")

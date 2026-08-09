@@ -817,6 +817,43 @@ params.wx78_inventorydryer2 =
 
 params.wx78_inventorydryer2.itemtestfn = params.wx78_inventorydryer.itemtestfn
 
+params.piggybank =
+{
+	widget =
+	{
+		slotpos = {},
+		slotbg = {},
+
+		animbank = "ui_chest_3x2",
+		animbuild = "ui_chest_3x2",
+
+		pos = Vector3(0, 200, 0),
+		side_align_tip = 160,
+	},
+
+	type = "chest",
+}
+
+for y = 1, 0, -1 do
+	for x = 0, 2 do
+		table.insert(params.piggybank.widget.slotpos, Vector3(80 * x - 80 * 2 + 80, 80 * y - 80 * 2 + 120, 0))
+		table.insert(params.piggybank.widget.slotbg, { image = "piggybank_pigcoin_slot.tex", atlas = "images/inventoryimages/hof_hudimages.xml" })
+	end
+end
+
+function params.piggybank.itemtestfn(container, item, slot)
+	local VALID_PREFABS =
+	{
+		pig_coin             = true,
+		goldnugget           = true,
+		lucky_goldnugget     = true,
+		carnival_prizeticket = true,
+		carnival_gametoken   = true,
+	}
+
+	return VALID_PREFABS[item.prefab] or item:HasAnyTag("pigcoin", "piggybank_valid")
+end
+
 -- Tweaks for vanilla containers.
 -- Portable Seasoning Station does not accept items with nospice tag.
 local _portablespicer_itemtestfn = containers.params.portablespicer.itemtestfn
@@ -890,8 +927,36 @@ end
 
 -- Chef's Pouch Rework, acts like the Polar Bearger Bin if the rework option is enabled.
 -- Otherwise it now have the same amount of slots as the Backpack.
+params.spicepackrework =
+{
+	widget =
+	{
+		slotpos = {},
+		slotbg  = {},
+
+		animbank  = "ui_chest_2x2",
+		animbuild = "ui_chest_2x2",
+
+		pos = Vector3(0, 175, 0),
+		side_align_tip = 160,
+	},
+
+	type = "chest",
+}
+
+for y = 0, 1 do
+	for x = 0, 1 do
+		table.insert(params.spicepackrework.widget.slotpos, Vector3(-37.5 + (75 * x), 36 - (68 * y), 0))
+		table.insert(params.spicepackrework.widget.slotbg, { image = "preparedfood_slot.tex", atlas = "images/hud2.xml" })
+	end
+end
+
+function params.spicepackrework.itemtestfn(container, item, slot)
+	return item:HasAnyTag("beargerfur_sack_valid", "preparedfood")
+end
+
 if TUNING.HOF_SPICEPACKREWORK then
-	containers.params.spicepack = containers.params.beargerfur_sack
+	containers.params.spicepack = params.spicepackrework
 else
 	containers.params.spicepack = containers.params.backpack
 end

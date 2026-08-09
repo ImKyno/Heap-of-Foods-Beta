@@ -64,6 +64,7 @@ local ITEM_CANT_TAGS =
 	"spider",
 	"fire",
 	"catchable",
+	"nosteal",
 	"_container"
 }
 

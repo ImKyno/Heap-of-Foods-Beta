@@ -1,4 +1,4 @@
-local brain = require("brains/mermfisherbrain")
+local brain = require("brains/meadowmermfisherbrain")
 
 local assets =
 {
@@ -298,7 +298,7 @@ local function fn()
 	inst:AddComponent("embarker")
     inst:AddComponent("drownable")
 
-    inst:SetStateGraph("SGmermfisher")
+    inst:SetStateGraph("SGmeadowmermfisher")
 	inst:SetBrain(brain)
 
     inst:AddComponent("eater")
