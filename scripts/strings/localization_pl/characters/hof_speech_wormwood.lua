@@ -1347,3 +1347,10 @@ WORMWOOD.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Robot Friend Dropped", -- NEEDS TRANSLATION
 }
+
+WORMWOOD.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+{
+	FULL = "Oink Oink Is Full",
+	UPGRADED = "Oink Belly Can Hold Lots Of Shiny Stuff!",
+	GENERIC = "Likes Shiny Stuff",
+}

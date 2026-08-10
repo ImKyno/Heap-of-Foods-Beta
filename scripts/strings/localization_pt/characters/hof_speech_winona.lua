@@ -1347,3 +1347,10 @@ WINONA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Me pergunto o que o WX deixou para trás.",
 }
+
+WINONA.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "Esse porco chegou ao limite.",
+	UPGRADED = "Agora isso sim é o que eu chamo de uma solução de armazenamento adequada.",
+	GENERIC = "Uma maneira simples de manter o troco todo junto.",
+}

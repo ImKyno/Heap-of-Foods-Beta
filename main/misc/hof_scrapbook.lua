@@ -1879,6 +1879,20 @@ local HOF_SCRAPBOOK_ITEMS =
 		deps           = {"tomato", "slurtleslime"},
 		specialinfo    = "FOODAMMO_TOMATO",
 	},
+
+	kyno_piggybank     =
+	{
+		name           = "kyno_piggybank",
+		type           = "item",
+		tex            = "kyno_piggybank.tex",
+		prefab         = "kyno_piggybank",
+		bank           = "kyno_piggybank",
+		build          = "kyno_piggybank",
+		anim           = "idle",
+		deps           = {"batnose", "marble", "pigskin", "researchlab2", "kyno_pigcoin1", "kyno_pigcoin2", "kyno_pigcoin3",
+		"pig_coin", "goldnugget", "lucky_goldnugget"},
+		specialinfo    = "PIGGYBANK",
+	},
 }
 
 local HOF_SCRAPBOOK_FOODS =

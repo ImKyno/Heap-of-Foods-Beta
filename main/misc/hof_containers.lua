@@ -826,6 +826,8 @@ params.piggybank =
 
 		animbank = "ui_chest_3x2",
 		animbuild = "ui_chest_3x2",
+		animbank_upgraded = "ui_piggybank_upgraded_3x2",
+		animbuild_upgraded = "ui_piggybank_upgraded_3x2",
 
 		pos = Vector3(0, 200, 0),
 		side_align_tip = 160,

@@ -1347,3 +1347,10 @@ WILLOW.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Por que eu ligaria para as coisas velhas do WX?",
 }
+
+WILLOW.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "Está lotado de moedas!",
+	UPGRADED = "Isso consegue guardar TODAS as moedas!",
+	GENERIC = "Um pequeno cofrinho. Que fofo.",
+}

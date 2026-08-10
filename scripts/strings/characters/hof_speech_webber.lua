@@ -1347,3 +1347,10 @@ WEBBER.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "It was forever in there.",
 }
+
+WEBBER.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "The piggy is all filled up!",
+	UPGRADED = "Wow! The piggy can hold tons and tons of coins!",
+	GENERIC = "We can put our coins in here!",
+}

@@ -1347,3 +1347,10 @@ WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Remains from that robot.",
 }
+
+WAXWELL.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "Even a pig has its limits.",
+	UPGRADED = "Now that's a vessel worthy of a gentleman's fortune.",
+	GENERIC = "A rather humble place for one's wealth.",
+}

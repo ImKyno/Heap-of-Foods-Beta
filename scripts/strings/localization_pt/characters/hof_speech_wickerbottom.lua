@@ -1347,3 +1347,10 @@ WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Outrora um repositório, agora apenas os seus vestígios.",
 }
+
+WICKERBOTTOM.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "Sua capacidade para armazenar moedas foi atingida.",
+	UPGRADED = "Um recipiente extraordinariamente espaçoso para moedas.",
+	GENERIC = "Um recipiente cerâmico comum para guardar economias.",
+}

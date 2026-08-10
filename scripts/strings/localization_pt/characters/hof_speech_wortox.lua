@@ -1350,3 +1350,10 @@ WORTOX.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Mais um caso encerrado pelo bom e velho Cara de Metal!",
 }
+
+WORTOX.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "Não cabe mais nenhuma alma brilhante nesse suíno!",
+	UPGRADED = "A barriga desse porquinho não tem fim! Hyuyu!",
+	GENERIC = "Um porquinho para moedas brilhantes, que gracinha!",
+}

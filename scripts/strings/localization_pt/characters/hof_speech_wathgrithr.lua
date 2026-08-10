@@ -1347,3 +1347,10 @@ WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Que despojos o nosso guerreiro de metal concedeu?",
 }
+
+WATHGRITHR.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "O suíno está carregado de espólios!",
+	UPGRADED = "Um poderoso cofre para os espólios de batalha!",
+	GENERIC = "Um pequeno suíno para guardar minhas moedas.",
+}

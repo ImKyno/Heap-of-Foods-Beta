@@ -2400,3 +2400,7 @@ STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER = "Unidade de Secagem Portátil Colapsada
 
 STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2_HELD = "Unidade de Super Secagem Portátil"
 STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2 = "Unidade de Super Secagem Portátil Colapsada"
+
+STRINGS.NAMES.KYNO_PIGGYBANK = "Cofrinho"
+STRINGS.NAMES.KYNO_PIGGYBANK_UPGRADED = "Cofrinho Sem Fundo"
+STRINGS.RECIPE_DESC.KYNO_PIGGYBANK = "Uma pequena casa para sua fortuna em constante crescimento."

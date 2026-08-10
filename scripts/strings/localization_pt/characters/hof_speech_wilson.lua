@@ -1347,3 +1347,10 @@ WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 	NOPOWER = "...",
 	GENERIC = "Um armazém esquisito.",
 }
+
+WILSON.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "Atingiu sua capacidade máxima de moedas.",
+	UPGRADED = "Um reservatório de riquezas sem fundo!",
+	GENERIC = "Um lugar conveniente para guardar minhas economias.",
+}

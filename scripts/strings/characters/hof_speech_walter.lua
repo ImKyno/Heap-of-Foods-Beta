@@ -1347,3 +1347,10 @@ WALTER.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Wonder if WX wants all this stuff back.",
 }
+
+WALTER.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "I don't think we can fit another coin in there!",
+	UPGRADED = "Wow! This piggy can hold more coins than my Scout badges!",
+	GENERIC = "It's a piggy bank! We can save our money in it!",
+}

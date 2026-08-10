@@ -1347,3 +1347,10 @@ WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Algo de bom para o Wolfgang?",
 }
+
+WOLFGANG.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "Porquinho está cheio de moedas brilhantes!",
+	UPGRADED = "Porquinho é forte!",
+	GENERIC = "É porquinho pequeno para moedas.",
+}

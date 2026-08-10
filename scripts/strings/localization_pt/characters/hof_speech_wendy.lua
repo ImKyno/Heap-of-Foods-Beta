@@ -1347,3 +1347,10 @@ WENDY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Me pergunto o que sobrou dentro.",
 }
+
+WENDY.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "Até o porco está sobrecarregado pela ganância.",
+	UPGRADED = "Sua fome por riquezas não tem fim.",
+	GENERIC = "Um pequeno recipiente para riquezas terrenas.",
+}

@@ -1347,3 +1347,10 @@ WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "What did our metal friend leave here?",
 }
+
+WARLY.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "The little pig has quite the appetite for coin.",
+	UPGRADED = "A bottomless piggy bank? Magnifique!",
+	GENERIC = "A charming little place for one's savings.",
+}

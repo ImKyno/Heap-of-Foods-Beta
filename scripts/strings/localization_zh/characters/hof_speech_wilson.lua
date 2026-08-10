@@ -1347,3 +1347,10 @@ WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 	NOPOWER = "...",
 	GENERIC = "An odd container.", -- NEEDS TRANSLATION
 }
+
+WILSON.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+{
+	FULL = "It's reached its monetary capacity.",
+	UPGRADED = "A bottomless repository of wealth!",
+	GENERIC = "A convenient place to store my earned savings.",
+}

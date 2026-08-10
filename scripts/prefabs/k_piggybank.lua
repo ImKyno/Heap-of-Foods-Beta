@@ -1,6 +1,7 @@
 local assets =
 {
 	Asset("ANIM", "anim/ui_chest_3x2.zip"),
+	Asset("ANIM", "anim/ui_piggybank_upgraded_3x2.zip"),
 
 	Asset("ANIM", "anim/kyno_piggybank.zip"),
 	Asset("ANIM", "anim/kyno_piggybank_upgraded.zip"),
@@ -11,6 +12,9 @@ local assets =
 
 	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
+
+	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
+	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
 
 local prefabs =
@@ -21,7 +25,7 @@ local prefabs =
 
 local SOUNDS =
 {
-	open = "meta5/wendy/basket_open",
+	open = "hof_sounds/common/piggybank/interact",
 	close = "meta5/wendy/basket_close",
 }
 
@@ -92,36 +96,28 @@ local function OnItemLose(inst)
 end
 
 local function GetStatus(inst, viewer)
-	return (inst.components.container ~= nil
-	and inst.components.container:IsFull() and "FULL")
+	return (inst.components.upgradeable ~= nil and inst.components.upgradeable.numupgrades > 0 and "UPGRADED")
+	or (inst.components.container ~= nil and inst.components.container:IsFull() and "FULL")
 	or "GENERIC"
 end
 
-local function OnUpgrade(inst, performer, upgraded_from_item)
-	local numupgrades = inst.components.upgradeable.numupgrades
-
-	if numupgrades == 1 then
-		inst._chestupgrade_stacksize = true
-
-		if inst.components.container ~= nil then
-			inst.components.container:Close()
-			inst.components.container:EnableInfiniteStackSize(true)
-			inst.components.inspectable.getstatus = GetStatus
-		end
-
-		if upgraded_from_item then
-			local x, y, z = inst.Transform:GetWorldPosition()
-			local fx = SpawnPrefab("chestupgrade_stacksize_fx")
-			fx.Transform:SetPosition(x, y, z)
-		end
+local function OnUpgraded(inst)
+	if inst.components.upgradeable ~= nil and inst.components.upgradeable.numupgrades <= 0 then
+		return
 	end
 
-	if inst.components.lootdropper ~= nil then
-		inst.components.lootdropper:SetLoot({"alterguardianhatshard"})
+	inst._chestupgrade_stacksize = true
+
+	if inst.components.container ~= nil then
+		inst.components.container:EnableInfiniteStackSize(true)
 	end
 
 	if inst.components.upgradeable ~= nil then
 		inst.components.upgradeable.upgradetype = nil
+	end
+
+	if inst.components.lootdropper ~= nil then
+		inst.components.lootdropper:SetLoot({"alterguardianhatshard"})
 	end
 
 	if inst.components.inventoryitem ~= nil then
@@ -136,9 +132,30 @@ local function OnUpgrade(inst, performer, upgraded_from_item)
 		inst.MiniMapEntity:SetIcon("kyno_piggybank_upgraded.tex")
 	end
 
-	if inst.AnimState ~= nil then
-		inst.AnimState:SetBank("kyno_piggybank_upgraded")
-		inst.AnimState:SetBuild("kyno_piggybank_upgraded")
+	inst.AnimState:SetBank("kyno_piggybank_upgraded")
+	inst.AnimState:SetBuild("kyno_piggybank_upgraded")
+end
+
+local function OnUpgrade(inst, performer, upgraded_from_item)
+	if inst.components.upgradeable ~= nil then
+		local numupgrades = inst.components.upgradeable.numupgrades
+
+		if numupgrades == 1 then
+			inst._chestupgrade_stacksize = true
+
+			if inst.components.container ~= nil then
+				inst.components.container:Close()
+				inst.components.container:EnableInfiniteStackSize(true)
+			end
+
+			if upgraded_from_item then
+				local x, y, z = inst.Transform:GetWorldPosition()
+				local fx = SpawnPrefab("chestupgrade_stacksize_fx")
+				fx.Transform:SetPosition(x, y, z)
+			end
+		end
+
+		OnUpgraded(inst)
 	end
 end
 
@@ -151,6 +168,12 @@ local function OnDecontruct(inst, caster)
 		if inst.components.lootdropper ~= nil then
 			inst.components.lootdropper:SpawnLootPrefab("alterguardianhatshard")
 		end
+	end
+end
+
+local function OnLoad(inst, data)
+	if inst.components.upgradeable ~= nil and inst.components.upgradeable.numupgrades > 0 then
+		OnUpgraded(inst)
 	end
 end
 
@@ -212,7 +235,7 @@ local function fn()
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
 
 	inst:AddComponent("workable")
-    inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
+	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammered)
 	inst.components.workable:SetWorkLeft(1)
 
@@ -234,6 +257,7 @@ local function fn()
 	inst:ListenForEvent("ondropped", OnDropped)
 	inst:ListenForEvent("ondeconstructstructure", OnDecontruct)
 
+	inst.OnLoad = OnLoad
 	inst.OnLoadPostPass = OnLoadPostPass
 
 	AddHauntableDropItemOrWork(inst)

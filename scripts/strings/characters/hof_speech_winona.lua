@@ -1347,3 +1347,10 @@ WINONA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Wonder what WX left behind.",
 }
+
+WINONA.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "This pig's at capacity.",
+	UPGRADED = "Now that's what I call a proper storage solution.",
+	GENERIC = "A simple way to keep the change together.",
+}

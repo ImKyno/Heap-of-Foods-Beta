@@ -1347,3 +1347,10 @@ WANDA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "What's in there?",
 }
+
+WANDA.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "It's completely full. I should have seen that coming.",
+	UPGRADED = "Its capacity appears to have no limit.",
+	GENERIC = "A piggy bank. Simple, but useful.",
+}

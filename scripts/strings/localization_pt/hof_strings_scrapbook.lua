@@ -190,6 +190,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "A principal moeda dos porcos locais."
 STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "Um recipiente portátil com 4 espaços que só pode armazenar sementes.\n\nA deterioração é reduzida em 60%.\n\nPode ser aprimorado com um Elastispacer para aumentar sua capacidade de armazenamento e conservação.\n\nUma Feather Pencil pode ser usado para escrever o nome da semente nele."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODAMMO_TOMATO = "Desacelera alvos terrestres por 5 segundos."
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "Um recipiente portátil com 4 espaços que armazena comidas preparadas.\n\nA comida dentro dele será preservada por mais tempo."
+STRINGS.SCRAPBOOK.SPECIALINFO.PIGGYBANK = "Um recipiente portátil com 6 espaços que só pode armazenar Pratas e outros tipos de moeda.\n\nPode ser aprimorado com um Elastispacer para aumentar sua capacidade de armazenamento."
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "A dieta delas consiste basicamente em Sementes, Trigo ou Rebento Folhoso.\n\nGalinhas Selvagens têm 40% de chance de botar ovos após se alimentarem. Elas têm uma pequena chance de botar um Ovo Grande.\n\nGalinhas criadas no Galinheiro podem botar ovos todos os dias após se alimentarem. Elas têm uma chance maior de colocar um Ovo Grande."

@@ -1347,3 +1347,10 @@ WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "What spoils hath our metal warrior bestowed?", -- NEEDS TRANSLATION
 }
+
+WATHGRITHR.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+{
+	FULL = "The swine is laden with spoils!",
+	UPGRADED = "A mighty vault for the spoils of battle!",
+	GENERIC = "A little swine to guard mine coin.",
+}

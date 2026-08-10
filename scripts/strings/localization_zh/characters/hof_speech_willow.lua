@@ -1347,3 +1347,10 @@ WILLOW.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "What do I care about WX's old stuff?", -- NEEDS TRANSLATION
 }
+
+WILLOW.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+{
+	FULL = "It's stuffed with shiny stuff!",
+	UPGRADED = "This thing can hold ALL the shiny stuff!",
+	GENERIC = "A little piggy bank. Cute.",
+}

@@ -1347,3 +1347,10 @@ WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Once a repository, now just the remains of it.", -- NEEDS TRANSLATION
 }
+
+WICKERBOTTOM.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+{
+	FULL = "Its capacity for currency has been reached.",
+	UPGRADED = "An remarkably capacious receptacle for coinage.",
+	GENERIC = "A common ceramic repository for one's savings.",
+}

@@ -1349,3 +1349,10 @@ WURT.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Coisas dentro da caixa de metal?",
 }
+
+WURT.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "Porquinho está cheio de brilhantes!",
+	UPGRADED = "Porquinho consegue guardar todas as moedas brilhantes, florp!",
+	GENERIC = "Porquinho mantém coisas brilhantes seguras, flort.",
+}

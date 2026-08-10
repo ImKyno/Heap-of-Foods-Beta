@@ -1349,3 +1349,10 @@ WURT.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Stuff inside Ironfolk box?", -- NEEDS TRANSLATION
 }
+
+WURT.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+{
+	FULL = "Piggy is full of shiny!",
+	UPGRADED = "Piggy can hold all shiny coins, florp!",
+	GENERIC = "Piggy keeps shiny things safe, flort.",
+}

@@ -1350,3 +1350,10 @@ WORTOX.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Once a case, dropped by ol' metal face!",
 }
+
+WORTOX.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "No more shiny souls can fit in this swine!",
+	UPGRADED = "This piggy's belly has no end! Hyuyu!",
+	GENERIC = "A piggy for shiny coins, how quaint!",
+}

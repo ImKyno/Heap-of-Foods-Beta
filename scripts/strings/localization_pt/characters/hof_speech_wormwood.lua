@@ -1347,3 +1347,10 @@ WORMWOOD.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Robô Amigo Deixou Cair",
 }
+
+WORMWOOD.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "Oink Oink Está Cheio!",
+	UPGRADED = "Barriguinha Do Porquinho Cabe Muitas Coisas Brilhantes!",
+	GENERIC = "Porquinho Gosta De Coisas Brilhantes",
+}

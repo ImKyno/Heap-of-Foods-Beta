@@ -1347,3 +1347,10 @@ WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Any goodie for Wolfgang?", -- NEEDS TRANSLATION
 }
+
+WOLFGANG.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+{
+	FULL = "Piggy is full of shiny coins!",
+	UPGRADED = "Is strong piggy!",
+	GENERIC = "Is little pig for coins.",
+}

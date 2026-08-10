@@ -1347,3 +1347,10 @@ WOODIE.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "Tem alguma coisa boa aí, Lucy?",
 }
+
+WOODIE.DESCRIBE.KYNO_PIGGYBANK =
+{
+	FULL = "Parece que o bichinho já teve o bastante.",
+	UPGRADED = "Esse porco tem espaço pra uma bela quantidade de moedas.",
+	GENERIC = "Um lugarzinho útil pra guardar umas moedas.",
+}

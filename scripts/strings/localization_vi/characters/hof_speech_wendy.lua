@@ -1347,3 +1347,10 @@ WENDY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 	NOPOWER = "...",
 	GENERIC = "I wonder what remains.", -- NEEDS TRANSLATION
 }
+
+WENDY.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+{
+	FULL = "Even the pig is burdened by greed.",
+	UPGRADED = "Its hunger for wealth has no end.",
+	GENERIC = "A little vessel for earthly riches.",
+}
