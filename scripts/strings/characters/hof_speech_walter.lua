@@ -104,6 +104,9 @@ WALTER.ANNOUNCE_KYNO_PANICBUFF_END = "Guess I'm back to normal."
 WALTER.ANNOUNCE_KYNO_CUREBUFF_START = "This'll really stretch our supplies."
 WALTER.ANNOUNCE_KYNO_CUREBUFF_END = "Better use things before they spoil."
 
+WALTER.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm staying right here!"
+WALTER.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Guess I can be pushed around again."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong thing!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, not this one."
@@ -1354,3 +1357,15 @@ WALTER.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Wow! This piggy can hold more coins than my Scout badges!",
 	GENERIC = "It's a piggy bank! We can save our money in it!",
 }
+
+WALTER.DESCRIBE.MARSHMALLOWS = "Hey, these would be great around a campfire!"
+
+WALTER.DESCRIBE.KOKONUTCOOKIES = "These would make a great trail snack!"
+
+WALTER.DESCRIBE.BBQRIBS = "Now that's campfire food!"
+
+WALTER.DESCRIBE.BROWNIE = "These are perfect for sharing around the fire."
+
+WALTER.DESCRIBE.CHOCOLATE_CAKE = "Whoa! That's one serious cake!"
+
+WALTER.DESCRIBE.SWORDFISHBLUEDINNER = "A packed lunch! Perfect for an adventure around the woods."

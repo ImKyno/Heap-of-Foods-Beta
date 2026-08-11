@@ -102,7 +102,10 @@ WALTER.ANNOUNCE_KYNO_PANICBUFF_START = "Chyba wyglądam groźniej niż zwykle, W
 WALTER.ANNOUNCE_KYNO_PANICBUFF_END = "Chyba wróciłem do normy."
 
 WALTER.ANNOUNCE_KYNO_CUREBUFF_START = "This'll really stretch our supplies." -- NEEDS TRANSLATION
-WALTER.ANNOUNCE_KYNO_CUREBUFF_END = "Better use things before they spoil." -- NEEDS TRANSLATION 
+WALTER.ANNOUNCE_KYNO_CUREBUFF_END = "Better use things before they spoil." -- NEEDS TRANSLATION
+
+WALTER.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm staying right here!" -- NEEDS TRANSLATION
+WALTER.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Guess I can be pushed around again." -- NEEDS TRANSLATION
 
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zła rzecz!"
 
@@ -1354,3 +1357,15 @@ WALTER.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
 	UPGRADED = "Wow! This piggy can hold more coins than my Scout badges!",
 	GENERIC = "It's a piggy bank! We can save our money in it!",
 }
+
+WALTER.DESCRIBE.MARSHMALLOWS = "Hey, these would be great around a campfire!" -- NEEDS TRANSLATION
+
+WALTER.DESCRIBE.KOKONUTCOOKIES = "These would make a great trail snack!" -- NEEDS TRANSLATION
+
+WALTER.DESCRIBE.BBQRIBS = "Now that's campfire food!" -- NEEDS TRANSLATION
+
+WALTER.DESCRIBE.BROWNIE = "These are perfect for sharing around the fire." -- NEEDS TRANSLATION
+
+WALTER.DESCRIBE.CHOCOLATE_CAKE = "Whoa! That's one serious cake!" -- NEEDS TRANSLATION
+
+WALTER.DESCRIBE.SWORDFISHBLUEDINNER = "A packed lunch! Perfect for an adventure around the woods." -- NEEDS TRANSLATION

@@ -104,6 +104,9 @@ WARLY.ANNOUNCE_KYNO_PANICBUFF_END = "My alarming presence has diminished."
 WARLY.ANNOUNCE_KYNO_CUREBUFF_START = "Excellent! My ingredients will keep."
 WARLY.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness fades once more."
 
+WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ah, a touch of stability!"
+WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And my stability has evaporated."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong, wrong..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You want something else more delicious?"
@@ -1354,3 +1357,15 @@ WARLY.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "A bottomless piggy bank? Magnifique!",
 	GENERIC = "A charming little place for one's savings.",
 }
+
+WARLY.DESCRIBE.MARSHMALLOWS = "Ah, such a delicate sweetness!"
+
+WARLY.DESCRIBE.KOKONUTCOOKIES = "I've followed a top secret recipe to cook them!"
+
+WARLY.DESCRIBE.BBQRIBS = "Ah, beautifully charred and wonderfully seasoned."
+
+WARLY.DESCRIBE.BROWNIE = "Rich, fudgy, and wonderfully indulgent."
+
+WARLY.DESCRIBE.CHOCOLATE_CAKE = "Magnifique! Rich, velvety, and deeply chocolatey."
+
+WARLY.DESCRIBE.SWORDFISHBLUEDINNER = "Ah, such fine dinner! Simple, elegant and delightful."

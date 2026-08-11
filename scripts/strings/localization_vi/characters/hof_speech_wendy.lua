@@ -104,6 +104,9 @@ WENDY.ANNOUNCE_KYNO_PANICBUFF_END = "Nỗi sợ hãi đã lắng xuống."
 WENDY.ANNOUNCE_KYNO_CUREBUFF_START = "Time loosens its grip on decay." -- NEEDS TRANSLATION
 WENDY.ANNOUNCE_KYNO_CUREBUFF_END = "Decay resumes its patient work." -- NEEDS TRANSLATION
 
+WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I am anchored to this wretched world." -- NEEDS TRANSLATION
+WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "The world may toss me about again." -- NEEDS TRANSLATION
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để thu gom?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Tất nhiên đây không phải thứ sinh vật ngu ngốc đó muốn."
@@ -1354,3 +1357,15 @@ WENDY.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
 	UPGRADED = "Its hunger for wealth has no end.",
 	GENERIC = "A little vessel for earthly riches.",
 }
+
+WENDY.DESCRIBE.MARSHMALLOWS = "They are almost like little clouds." -- NEEDS TRANSLATION
+
+WENDY.DESCRIBE.KOKONUTCOOKIES = "A cookie with a tropical melancholy." -- NEEDS TRANSLATION
+
+WENDY.DESCRIBE.BBQRIBS = "The meat is quite... hauntingly tender." -- NEEDS TRANSLATION
+
+WENDY.DESCRIBE.BROWNIE = "Dark and sweet." -- NEEDS TRANSLATION
+
+WENDY.DESCRIBE.CHOCOLATE_CAKE = "A cake as dark as my mood." -- NEEDS TRANSLATION
+
+WENDY.DESCRIBE.SWORDFISHBLUEDINNER = "A cold meal for a cold world." -- NEEDS TRANSLATION

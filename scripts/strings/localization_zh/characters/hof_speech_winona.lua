@@ -104,6 +104,9 @@ WINONA.ANNOUNCE_KYNO_PANICBUFF_END = "威慑效果消失了。"
 WINONA.ANNOUNCE_KYNO_CUREBUFF_START = "That's gonna make supplies last." -- NEEDS TRANSLATION
 WINONA.ANNOUNCE_KYNO_CUREBUFF_END = "Back to regular wear and tear." -- NEEDS TRANSLATION
 
+WINONA.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Got my feet planted nice and firm." -- NEEDS TRANSLATION
+WINONA.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Back to being easy to shove." -- NEEDS TRANSLATION
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "不行。"
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "不行，或许需要别的。"
@@ -1354,3 +1357,15 @@ WINONA.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
 	UPGRADED = "Now that's what I call a proper storage solution.",
 	GENERIC = "A simple way to keep the change together.",
 }
+
+WINONA.DESCRIBE.MARSHMALLOWS = "A sweet little pick-me-up." -- NEEDS TRANSLATION
+
+WINONA.DESCRIBE.KOKONUTCOOKIES = "A good snack for the road." -- NEEDS TRANSLATION
+
+WINONA.DESCRIBE.BBQRIBS = "Now that's what I call a good lunch." -- NEEDS TRANSLATION
+
+WINONA.DESCRIBE.BROWNIE = "A little chocolate makes a long day better." -- NEEDS TRANSLATION
+
+WINONA.DESCRIBE.CHOCOLATE_CAKE = "That's a cake worth taking a break for." -- NEEDS TRANSLATION
+
+WINONA.DESCRIBE.SWORDFISHBLUEDINNER = "That's some fancy dinner." -- NEEDS TRANSLATION

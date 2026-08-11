@@ -164,4 +164,18 @@ AddStategraphPostInit("wilson", function(sg)
 			_chop1(inst, ...)
 		end
 	end
+
+	-- Knockback Resistance through food.
+	local _knockback_handler = sg.events.knockback.fn
+	sg.events.knockback.fn = function(inst, data, ...)
+		if inst.tagvar_knockbackresistance then
+			if inst.components.health ~= nil and not inst.components.health:IsDead() then
+				inst.sg:GoToState("smallknockbacklanded", data)
+			end
+
+			return
+		end
+
+		_knockback_handler(inst, data, ...)
+	end
 end)

@@ -104,6 +104,9 @@ WANDA.ANNOUNCE_KYNO_PANICBUFF_END = "效果已经结束。"
 WANDA.ANNOUNCE_KYNO_CUREBUFF_START = "I've borrowed a little extra time." -- NEEDS TRANSLATION
 WANDA.ANNOUNCE_KYNO_CUREBUFF_END = "Time has reclaimed what was borrowed." -- NEEDS TRANSLATION
 
+WANDA.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm not going anywhere." -- NEEDS TRANSLATION
+WANDA.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Well, that stability didn't last." -- NEEDS TRANSLATION
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "不……我需要别的。"
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "我想我还有时间给你弄只龙虾。"
@@ -1354,3 +1357,15 @@ WANDA.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
 	UPGRADED = "Its capacity appears to have no limit.",
 	GENERIC = "A piggy bank. Simple, but useful.",
 }
+
+WANDA.DESCRIBE.MARSHMALLOWS = "A little sweetness never hurts." -- NEEDS TRANSLATION
+
+WANDA.DESCRIBE.KOKONUTCOOKIES = "A pleasant little taste of the tropics." -- NEEDS TRANSLATION
+
+WANDA.DESCRIBE.BBQRIBS = "A hearty meal worth spending time on." -- NEEDS TRANSLATION
+
+WANDA.DESCRIBE.BROWNIE = "Rich chocolate never goes out of style." -- NEEDS TRANSLATION
+
+WANDA.DESCRIBE.CHOCOLATE_CAKE = "A decadent cake for a special occasion." -- NEEDS TRANSLATION
+
+WANDA.DESCRIBE.SWORDFISHBLUEDINNER = "A convenient meal for when time is of the essence." -- NEEDS TRANSLATION

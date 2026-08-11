@@ -6,7 +6,7 @@
 -- Not Included:
 -- Berserker, Birthday, Crafting, Enlightenment, Fire, Freeze, Green Thumb, Healing,
 -- Insanity, Max Stats, Night, Night Vision, Nukashine, Preserver, Sanity, Stealth,
--- Wetness, Panic
+-- Wetness, Panic, Knockback
 local banddt = 1
 local FOLLOWER_ONEOF_TAGS       = { "pig" }
 local FOLLOWER_CANT_TAGS        = { "werepig", "merm", "player" }
@@ -267,6 +267,11 @@ local function OnAttached(inst, target)
 		target.components.luckuser:SetLuckSource(TUNING.KYNO_LUCKBUFF_AMOUNT, "kyno_luckbuff")
 	end
 
+	-- Knockback
+	if target ~= nil and target:HasTag("player") then
+		target.tagvar_knockbackresistance = true
+	end
+
 	inst:ListenForEvent("death", function()
 		inst.components.debuff:Stop()
 	end, target)
@@ -402,6 +407,11 @@ local function OnDetached(inst, target)
 	-- Luck
 	if target.components.luckuser ~= nil then
 		target.components.luckuser:RemoveLuckSource("kyno_luckbuff")
+	end
+
+	-- Knockback
+	if target.tagvar_knockbackresistance ~= nil then
+		target.tagvar_knockbackresistance = false
 	end
 
 	-- Slow down for a bit after using it.
@@ -608,6 +618,11 @@ local function OnExtended(inst, target)
 	-- Luck
 	if target.components.luckuser ~= nil then
 		target.components.luckuser:SetLuckSource(TUNING.KYNO_LUCKBUFF_AMOUNT, "kyno_luckbuff")
+	end
+
+	-- Knockback
+	if target ~= nil and target:HasTag("player") then
+		target.tagvar_knockbackresistance = true
 	end
 end
 

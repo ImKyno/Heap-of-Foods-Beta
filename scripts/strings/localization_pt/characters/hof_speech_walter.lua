@@ -104,6 +104,9 @@ WALTER.ANNOUNCE_KYNO_PANICBUFF_END = "Acho que voltei ao normal."
 WALTER.ANNOUNCE_KYNO_CUREBUFF_START = "Isso vai fazer nossos suprimentos durarem bem mais."
 WALTER.ANNOUNCE_KYNO_CUREBUFF_END = "Melhor usar tudo antes que estrague."
 
+WALTER.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Vou ficar bem aqui!"
+WALTER.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Acho que posso ser empurrado de novo."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Coisa errada!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, não é este."
@@ -1354,3 +1357,15 @@ WALTER.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Uau! Esse porquinho consegue guardar mais moedas do que meus distintivos de escoteiro!",
 	GENERIC = "É um cofrinho! Podemos guardar nosso dinheiro nele!",
 }
+
+WALTER.DESCRIBE.MARSHMALLOWS = "Ei, isso seria ótimo perto de uma fogueira!"
+
+WALTER.DESCRIBE.KOKONUTCOOKIES = "Isso seria um ótimo lanche para a trilha!"
+
+WALTER.DESCRIBE.BBQRIBS = "Agora isso sim é comida de fogueira!"
+
+WALTER.DESCRIBE.BROWNIE = "São perfeitos para compartilhar ao redor da fogueira."
+
+WALTER.DESCRIBE.CHOCOLATE_CAKE = "Uau! Esse é um bolo de respeito!"
+
+WALTER.DESCRIBE.SWORDFISHBLUEDINNER = "Um almoço embalado! Perfeito para uma aventura."

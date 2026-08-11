@@ -104,8 +104,11 @@ WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "E assim, ela escapa."
 WORTOX.ANNOUNCE_KYNO_PANICBUFF_START = "Que medo delicioso. Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_PANICBUFF_END = "Chega de diversão assustadora!"
 
-WORTOX.ANNOUNCE_KYNO_CUREBUFF_START = "Uma pequena travessura com o tempo, hihihi!"
-WORTOX.ANNOUNCE_KYNO_CUREBUFF_END = "O tempo voltou a me alcançar, hihihi!"
+WORTOX.ANNOUNCE_KYNO_CUREBUFF_START = "Uma pequena travessura com o tempo, hyuyu!"
+WORTOX.ANNOUNCE_KYNO_CUREBUFF_END = "O tempo voltou a me alcançar, hyuyu!"
+
+WORTOX.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ha! Boa sorte tentando me empurrar!"
+WORTOX.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Ora bolas, posso ser empurrado de novo!"
 
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de outra coisa."
 
@@ -1357,3 +1360,15 @@ WORTOX.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "A barriga desse porquinho não tem fim! Hyuyu!",
 	GENERIC = "Um porquinho para moedas brilhantes, que gracinha!",
 }
+
+WORTOX.DESCRIBE.MARSHMALLOWS = "Macio e doce."
+
+WORTOX.DESCRIBE.KOKONUTCOOKIES = "Uma pequena delícia crocante de coco!"
+
+WORTOX.DESCRIBE.BBQRIBS = "Eu já vi um mundo em que mortais matariam por estes."
+
+WORTOX.DESCRIBE.BROWNIE = "Um pequeno quadrado de travessura achocolatada!"
+
+WORTOX.DESCRIBE.CHOCOLATE_CAKE = "Uma tentação de chocolate que chega aos céus!"
+
+WORTOX.DESCRIBE.SWORDFISHBLUEDINNER = "Revenge is a dish best served cold. Hyuyu!" -- NEEDS TRANSLATION

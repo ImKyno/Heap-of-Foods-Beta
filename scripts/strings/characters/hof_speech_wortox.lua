@@ -107,6 +107,9 @@ WORTOX.ANNOUNCE_KYNO_PANICBUFF_END = "No more frightful fun!"
 WORTOX.ANNOUNCE_KYNO_CUREBUFF_START = "A little trick on time itself, hyuyu!"
 WORTOX.ANNOUNCE_KYNO_CUREBUFF_END = "Time's caught up again, hyuyu!"
 
+WORTOX.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ha! Good luck shovin' me!"
+WORTOX.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Oh fiddlesticks, I'm pushable again!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I know this prank was good, but let's get the real thing."
@@ -1357,3 +1360,15 @@ WORTOX.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "This piggy's belly has no end! Hyuyu!",
 	GENERIC = "A piggy for shiny coins, how quaint!",
 }
+
+WORTOX.DESCRIBE.MARSHMALLOWS = "Soft and sweet."
+
+WORTOX.DESCRIBE.KOKONUTCOOKIES = "Crunchy little coconut delight!"
+
+WORTOX.DESCRIBE.BBQRIBS = "I've seen a world where mortals would kill for these."
+
+WORTOX.DESCRIBE.BROWNIE = "A little square of chocolatey mischief!"
+
+WORTOX.DESCRIBE.CHOCOLATE_CAKE = "A towering temptation of chocolate!"
+
+WORTOX.DESCRIBE.SWORDFISHBLUEDINNER = "Revenge is a dish best served cold. Hyuyu!"

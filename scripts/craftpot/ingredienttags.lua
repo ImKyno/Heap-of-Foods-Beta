@@ -49,3 +49,4 @@ AddFoodTag("chicken",           { name = STRINGS_INGREDIENTS_CHICKEN,    atlas =
 AddFoodTag("chickenegg",        { name = STRINGS_INGREDIENTS_CHICKENEGG, atlas = "images/ingredientimages/hof_ingredientimages.xml" })
 AddFoodTag("potato",            { name = STRINGS_INGREDIENTS_POTATO,     atlas = "images/ingredientimages/hof_ingredientimages.xml" })
 AddFoodTag("tuber",             { name = STRINGS_INGREDIENTS_TUBER,      atlas = "images/ingredientimages/hof_ingredientimages.xml" })
+AddFoodTag("iceweed",           { name = STRINGS_INGREDIENTS_ICEWEED,    atlas = "images/ingredientimages/hof_ingredientimages.xml" })

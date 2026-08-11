@@ -104,6 +104,9 @@ WOODIE.ANNOUNCE_KYNO_PANICBUFF_END = "看来我没那么可怕了，是吧？"
 WOODIE.ANNOUNCE_KYNO_CUREBUFF_START = "This'll keep things fresh a while longer, eh?" -- NEEDS TRANSLATION
 WOODIE.ANNOUNCE_KYNO_CUREBUFF_END = "Can't stop nature forever, eh?" -- NEEDS TRANSLATION
 
+WOODIE.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm rooted pretty good now." -- NEEDS TRANSLATION
+WOODIE.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Guess I'm not rooted anymore." -- NEEDS TRANSLATION
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "或许可以找个东西把它捡起来？"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "不，他想要别的。"
@@ -1354,3 +1357,15 @@ WOODIE.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
 	UPGRADED = "This pig's got room for a whole lotta loonies.",
 	GENERIC = "A handy little place to stash some coins.",
 }
+
+WOODIE.DESCRIBE.MARSHMALLOWS = "These are pretty sweet, eh?" -- NEEDS TRANSLATION
+
+WOODIE.DESCRIBE.KOKONUTCOOKIES = "Tastes like summer!" -- NEEDS TRANSLATION
+
+WOODIE.DESCRIBE.BBQRIBS = "Now that's some good eatin'!" -- NEEDS TRANSLATION
+
+WOODIE.DESCRIBE.BROWNIE = "That's a mighty fine brownie." -- NEEDS TRANSLATION
+
+WOODIE.DESCRIBE.CHOCOLATE_CAKE = "That's one heck of a chocolate cake." -- NEEDS TRANSLATION
+
+WOODIE.DESCRIBE.SWORDFISHBLUEDINNER = "I'm chilled to the bones!" -- NEEDS TRANSLATION

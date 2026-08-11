@@ -104,6 +104,9 @@ WINONA.ANNOUNCE_KYNO_PANICBUFF_END = "Lá se foi o fator intimidação."
 WINONA.ANNOUNCE_KYNO_CUREBUFF_START = "Isso vai fazer os suprimentos renderem mais."
 WINONA.ANNOUNCE_KYNO_CUREBUFF_END = "De volta ao desgaste normal."
 
+WINONA.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Pés bem firmes no chão."
+WINONA.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "De volta a ser fácil de empurrar."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, talvez outra coisa."
@@ -1354,3 +1357,15 @@ WINONA.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Agora isso sim é o que eu chamo de uma solução de armazenamento adequada.",
 	GENERIC = "Uma maneira simples de manter o troco todo junto.",
 }
+
+WINONA.DESCRIBE.MARSHMALLOWS = "Um docinho para dar um ânimo."
+
+WINONA.DESCRIBE.KOKONUTCOOKIES = "Um bom lanche para a estrada."
+
+WINONA.DESCRIBE.BBQRIBS = "Agora sim, isso é o que eu chamo de um bom almoço."
+
+WINONA.DESCRIBE.BROWNIE = "Um pouco de chocolate torna um dia longo melhor."
+
+WINONA.DESCRIBE.CHOCOLATE_CAKE = "Esse é um bolo pelo qual vale a pena fazer uma pausa."
+
+WINONA.DESCRIBE.SWORDFISHBLUEDINNER = "Isso é um jantar refinado."

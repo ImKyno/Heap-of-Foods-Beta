@@ -7,11 +7,32 @@ local EventHandler  = _G.EventHandler
 local FRAMES        = _G.FRAMES
 local State         = _G.State
 local TimeEvent     = _G.TimeEvent
+local FrameEvent    = _G.FrameEvent
 local POPUPS        = _G.POPUPS
 local PlayFootstep  = _G.PlayFootstep
 local UpvalueHacker = require("tools/hof_upvaluehacker")
 
 require("stategraphs/commonstates")
+
+local function ClearStatusAilments(inst)
+	if inst.components.freezable ~= nil and inst.components.freezable:IsFrozen() then
+		inst.components.freezable:Unfreeze()
+	end
+
+	if inst.components.pinnable ~= nil and inst.components.pinnable:IsStuck() then
+		inst.components.pinnable:Unstick()
+	end
+end
+
+local function ForceStopHeavyLifting(inst)
+	if inst.components.inventory:IsHeavyLifting() then
+		inst.components.inventory:DropItem(inst.components.inventory:Unequip(EQUIPSLOTS.BODY), true, true)
+	end
+end
+
+local function IsMinigameItem(inst)
+	return inst:HasTag("minigameitem")
+end
 
 -- New Stategraphs.
 AddStategraphState("wilson",
@@ -431,6 +452,178 @@ AddStategraphState("catcoon",
 				inst.sg:GoToState("idle")
 			end),
 		},
+	}
+)
+
+AddStategraphState("wilson",
+	State{
+		name = "smallknockbacklanded",
+		tags = { "knockback", "busy", "nopredict", "nomorph", "nointerrupt", "jumping" },
+
+		onenter = function(inst, data)
+			ClearStatusAilments(inst)
+			ForceStopHeavyLifting(inst)
+
+			if inst.components.locomotor ~= nil then
+				inst.components.locomotor:Stop()
+			end
+
+			inst:ClearBufferedAction()
+
+			if inst.components.rider ~= nil and not inst.components.rider:IsRiding() then
+				inst.AnimState:PlayAnimation("hit_spike_heavy")
+			end
+
+			if data ~= nil then
+				if data.propsmashed then
+					local item = inst.components.inventory:GetEquippedItem(EQUIPSLOTS.HANDS)
+					local pos
+
+					if item ~= nil then
+						pos = inst:GetPosition()
+						pos.y = TUNING.KNOCKBACK_DROP_ITEM_HEIGHT_LOW
+
+						local dropped = inst.components.inventory:DropItem(item, true, true, pos)
+
+						if dropped ~= nil then
+							dropped:PushEvent("knockbackdropped", { owner = inst, knocker = data.knocker, delayinteraction = TUNING.KNOCKBACK_DELAY_INTERACTION_LOW, delayplayerinteraction = TUNING.KNOCKBACK_DELAY_PLAYER_INTERACTION_LOW })
+						end
+					end
+
+					if item == nil or not item:HasTag("propweapon") then
+						item = inst.components.inventory:FindItem(IsMinigameItem)
+
+						if item ~= nil then
+							if pos == nil then
+								pos = inst:GetPosition()
+								pos.y = TUNING.KNOCKBACK_DROP_ITEM_HEIGHT_LOW
+							end
+
+							item = inst.components.inventory:DropItem(item, false, true, pos)
+
+							if item ~= nil then
+								item:PushEvent("knockbackdropped", { owner = inst, knocker = data.knocker, delayinteraction = TUNING.KNOCKBACK_DELAY_INTERACTION_LOW, delayplayerinteraction = TUNING.KNOCKBACK_DELAY_PLAYER_INTERACTION_LOW })
+							end
+						end
+					end
+				end
+
+				if data.radius ~= nil and data.knocker ~= nil and data.knocker:IsValid() then
+					local x, y, z = data.knocker.Transform:GetWorldPosition()
+					local distsq = inst:GetDistanceSqToPoint(x, y, z)
+					local rangesq = data.radius * data.radius
+					local rot = inst.Transform:GetRotation()
+					local rot1 = distsq > 0 and inst:GetAngleToPoint(x, y, z) or data.knocker.Transform:GetRotation() + 180
+					local drot = math.abs(rot - rot1)
+
+					while drot > 180 do
+						drot = math.abs(drot - 360)
+					end
+
+					local k = distsq < rangesq and .3 * distsq / rangesq - 1 or -.7
+					inst.sg.statemem.speed = (data.strengthmult or 1) * 8 * k
+					inst.sg.statemem.dspeed = 0
+
+					if drot > 90 then
+						inst.sg.statemem.reverse = true
+						inst.Transform:SetRotation(rot1 + 180)
+						inst.Physics:SetMotorVel(-inst.sg.statemem.speed, 0, 0)
+					else
+						inst.Transform:SetRotation(rot1)
+						inst.Physics:SetMotorVel(inst.sg.statemem.speed, 0, 0)
+					end
+				end
+			end
+
+			local x, y, z = inst.Transform:GetWorldPosition()
+			inst.sg.statemem.ispassableatpt = GetActionPassableTestFnAt(x, y, z)
+
+			if inst.sg.statemem.ispassableatpt(x, y, z, true) then
+				inst.sg.statemem.safepos = Vector3(x, y, z)
+			elseif data ~= nil and data.knocker ~= nil and data.knocker:IsValid() and data.knocker:IsOnPassablePoint(true) then
+				local x1, y1, z1 = data.knocker.Transform:GetWorldPosition()
+				local radius = data.knocker:GetPhysicsRadius(0) - inst:GetPhysicsRadius(0)
+
+				if radius > 0 then
+					local dx = x - x1
+					local dz = z - z1
+					local dist = radius / math.sqrt(dx * dx + dz * dz)
+
+					x = x1 + dx * dist
+					z = z1 + dz * dist
+
+					if inst.sg.statemem.ispassableatpt(x, y, z, true) then
+						x1, z1 = x, z
+					end
+				end
+
+				inst.sg.statemem.safepos = Vector3(x1, 0, z1)
+			end
+
+			inst.sg:SetTimeout(11 * FRAMES)
+		end,
+
+		onupdate = function(inst)
+			if inst.sg.statemem.speed ~= nil then
+				inst.sg.statemem.speed = inst.sg.statemem.speed + inst.sg.statemem.dspeed
+
+				if inst.sg.statemem.speed < 0 then
+					inst.sg.statemem.dspeed = inst.sg.statemem.dspeed + .075
+					inst.Physics:SetMotorVel(inst.sg.statemem.reverse and -inst.sg.statemem.speed or inst.sg.statemem.speed, 0, 0)
+				else
+					inst.sg.statemem.speed = nil
+					inst.sg.statemem.dspeed = nil
+					inst.Physics:Stop()
+				end
+			end
+
+			local safepos = inst.sg.statemem.safepos
+
+			if safepos ~= nil then
+				local x, y, z = inst.Transform:GetWorldPosition()
+
+				if inst.sg.statemem.ispassableatpt(x, y, z, true) then
+					safepos.x, safepos.y, safepos.z = x, y, z
+				elseif inst.sg.statemem.landed then
+					local mass = inst.Physics:GetMass()
+
+					if mass > 0 then
+						inst.sg.statemem.restoremass = mass
+						inst.Physics:SetMass(99999)
+					end
+
+					inst.Physics:Teleport(safepos.x, 0, safepos.z)
+					inst.sg.statemem.safepos = nil
+				end
+			end
+		end,
+
+		timeline =
+		{
+			TimeEvent(9 * FRAMES, function(inst)
+				inst.SoundEmitter:PlaySound("dontstarve/movement/bodyfall_dirt")
+			end),
+
+			FrameEvent(10, function(inst)
+				inst.sg.statemem.landed = true
+				inst.sg:RemoveStateTag("nointerrupt")
+				inst.sg:RemoveStateTag("jumping")
+			end),
+		},
+
+		ontimeout = function(inst)
+			inst.sg:GoToState("idle", true)
+		end,
+
+		onexit = function(inst)
+			if inst.sg.statemem.restoremass ~= nil then
+				inst.Physics:SetMass(inst.sg.statemem.restoremass)
+			end
+
+			if inst.sg.statemem.speed ~= nil then
+				inst.Physics:Stop()
+			end
+		end,
 	}
 )
 

@@ -104,6 +104,9 @@ WURT.ANNOUNCE_KYNO_PANICBUFF_END = "Nobody scared now, florp."
 WURT.ANNOUNCE_KYNO_CUREBUFF_START = "Food stay good longer, florp!"
 WURT.ANNOUNCE_KYNO_CUREBUFF_END = "Food getting old again, florp."
 
+WURT.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Must stay still!"
+WURT.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "A bit slippery, florp."
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Pretty fishes are in swamp!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... wrong..."
@@ -1356,3 +1359,15 @@ WURT.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Piggy can hold all shiny coins, florp!",
 	GENERIC = "Piggy keeps shiny things safe, flort.",
 }
+
+WURT.DESCRIBE.MARSHMALLOWS = "Fluffy sweets!"
+
+WURT.DESCRIBE.KOKONUTCOOKIES = "Coconut crunchies, florp!"
+
+WURT.DESCRIBE.BBQRIBS = "Blergh."
+
+WURT.DESCRIBE.BROWNIE = "Chocolate treat!"
+
+WURT.DESCRIBE.CHOCOLATE_CAKE = "Big sweet cake, florp!"
+
+WURT.DESCRIBE.SWORDFISHBLUEDINNER = "Why do this to poor fishies?"

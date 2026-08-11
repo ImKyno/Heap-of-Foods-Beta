@@ -3754,6 +3754,60 @@ local kyno_foods =
 			eater:AddDebuff("kyno_nightkillbuff", "kyno_nightkillbuff")
 		end,
 	},
+
+	marshmallows =
+	{
+		test = function(cooker, names, tags) return (tags.fruit and tags.fruit >= 2) and tags.sugar and names.boneshard end,
+		priority = 30,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_SUPERSLOW,
+		health = 5,
+		hunger = 18.75,
+		sanity = 25,
+		cooktime = 1.3,
+		stacksize = 2,
+		potlevel = "low",
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		pigcoinvalue = {5, 5, 0},
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"pomegranate", 2}, {"kyno_sugar", 1}, {"boneshard", 1}}},
+	},
+
+	kokonutcookies =
+	{
+		test = function(cooker, names, tags) return names.kyno_kokonut_halved and tags.flour and tags.sugar and tags.sweetener end,
+		priority = 35,
+		foodtype = FOODTYPE.VEGGIE,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 20,
+		hunger = 18.75,
+		sanity = 5,
+		cooktime = 1.5,
+		stacksize = 2,
+		potlevel = "low",
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		pigcoinvalue = {4, 0, 1},
+		floater = TUNING.HOF_FLOATER,
+		card_def = {ingredients = {{"kyno_kokonut_halved", 1}, {"kyno_flour", 1}, {"kyno_sugar", 1}, {"honey", 1}}},
+	},
+
+	chocolate_cake =
+	{
+		test = function(cooker, names, tags) return names.chocolate_black and tags.dairy and tags.flour and tags.egg end,
+		priority = 30,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_SLOW,
+		health = -10,
+		hunger = 62.5,
+		sanity = 50,
+		cooktime = 2,
+		potlevel = "med",
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		pigcoinvalue = {6, 4, 1},
+		floater = TUNING.HOF_FLOATER,
+		tags = {"eggfood"},
+		card_def = {ingredients = {{"chocolate_black", 1}, {"goatmilk", 1}, {"kyno_flour", 1}, {"bird_egg", 1}}},
+	},
 }
 
 for k, recipe in pairs(kyno_foods) do

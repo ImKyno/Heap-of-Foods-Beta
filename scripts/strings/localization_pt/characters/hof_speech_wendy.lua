@@ -104,6 +104,9 @@ WENDY.ANNOUNCE_KYNO_PANICBUFF_END = "O terror diminuiu."
 WENDY.ANNOUNCE_KYNO_CUREBUFF_START = "O tempo afrouxou seu domínio sobre a decadência."
 WENDY.ANNOUNCE_KYNO_CUREBUFF_END = "A decadência retomou seu lento trabalho."
 
+WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Estou ancorada a este mundo miserável."
+WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "O mundo pode me lançar de um lado para o outro novamente."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."
@@ -1354,3 +1357,15 @@ WENDY.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Sua fome por riquezas não tem fim.",
 	GENERIC = "Um pequeno recipiente para riquezas terrenas.",
 }
+
+WENDY.DESCRIBE.MARSHMALLOWS = "Eles são quase como pequenas nuvens..."
+
+WENDY.DESCRIBE.KOKONUTCOOKIES = "Um biscoito com uma melancolia tropical."
+
+WENDY.DESCRIBE.BBQRIBS = "A carne está... assustadoramente macia."
+
+WENDY.DESCRIBE.BROWNIE = "Escuro e doce."
+
+WENDY.DESCRIBE.CHOCOLATE_CAKE = "Um bolo tão escuro quanto meu humor."
+
+WENDY.DESCRIBE.SWORDFISHBLUEDINNER = "Uma comida gélida para um mundo gélido."

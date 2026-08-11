@@ -104,6 +104,9 @@ WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_END = "Creatures stop fearing Wolfgang."
 WOLFGANG.ANNOUNCE_KYNO_CUREBUFF_START = "Food stays fresh for mighty Wolfgang!"
 WOLFGANG.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness goes away."
 
+WOLFGANG.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Wolfgang is very hard to knock over!" -- NEEDS TRANSLATION
+WOLFGANG.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Wolfgang is pushy again." -- NEEDS TRANSLATION
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Is not the correct one."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Mighty pig do not want this."
@@ -1354,3 +1357,15 @@ WOLFGANG.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
 	UPGRADED = "Is strong piggy!",
 	GENERIC = "Is little pig for coins.",
 }
+
+WOLFGANG.DESCRIBE.MARSHMALLOWS = "Tiny fluffy food is good!" -- NEEDS TRANSLATION
+
+WOLFGANG.DESCRIBE.KOKONUTCOOKIES = "Wolfgang likes coconut cookies!" -- NEEDS TRANSLATION
+
+WOLFGANG.DESCRIBE.BBQRIBS = "These ribs make Wolfgang very hungry!" -- NEEDS TRANSLATION
+
+WOLFGANG.DESCRIBE.BROWNIE = "Chocolate square is very good!" -- NEEDS TRANSLATION
+
+WOLFGANG.DESCRIBE.CHOCOLATE_CAKE = "Wolfgang loves giant chocolate cake!" -- NEEDS TRANSLATION
+
+WOLFGANG.DESCRIBE.SWORDFISHBLUEDINNER = "Cold food still good!" -- NEEDS TRANSLATION

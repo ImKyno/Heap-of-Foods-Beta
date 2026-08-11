@@ -104,6 +104,9 @@ WARLY.ANNOUNCE_KYNO_PANICBUFF_END = "Moja niepokojąca obecność osłabła."
 WARLY.ANNOUNCE_KYNO_CUREBUFF_START = "Excellent! My ingredients will keep." -- NEEDS TRANSLATION
 WARLY.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness fades once more." -- NEEDS TRANSLATION
 
+WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ah, a touch of stability!" -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And my stability has evaporated." -- NEEDS TRANSLATION
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Źle, źle..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Masz ochotę na coś jeszcze pyszniejszego?"
@@ -1354,3 +1357,15 @@ WARLY.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
 	UPGRADED = "A bottomless piggy bank? Magnifique!",
 	GENERIC = "A charming little place for one's savings.",
 }
+
+WARLY.DESCRIBE.MARSHMALLOWS = "Ah, such a delicate sweetness!" -- NEEDS TRANSLATION
+
+WARLY.DESCRIBE.KOKONUTCOOKIES = "I've followed a top secret recipe to cook them!" -- NEEDS TRANSLATION
+
+WARLY.DESCRIBE.BBQRIBS = "Ah, beautifully charred and wonderfully seasoned." -- NEEDS TRANSLATION
+
+WARLY.DESCRIBE.BROWNIE = "Rich, fudgy, and wonderfully indulgent." -- NEEDS TRANSLATION
+
+WARLY.DESCRIBE.CHOCOLATE_CAKE = "Magnifique! Rich, velvety, and deeply chocolatey." -- NEEDS TRANSLATION
+
+WARLY.DESCRIBE.SWORDFISHBLUEDINNER = "Ah, such fine dinner! Simple, elegant and delightful." -- NEEDS TRANSLATION

@@ -104,6 +104,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_END = "Minha influência alarmante enfraque
 WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_START = "Os efeitos do tempo foram temporariamente reduzidos."
 WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_END = "A estabilidade temporal voltou ao normal."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Sinto-me consideravelmente mais estável."
+WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Minha estabilidade voltou ao normal."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Precisa de algo diferente."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não. Acho que ele mencionou wobsters."
@@ -1354,3 +1357,15 @@ WICKERBOTTOM.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Um recipiente extraordinariamente espaçoso para moedas.",
 	GENERIC = "Um recipiente cerâmico comum para guardar economias.",
 }
+
+WICKERBOTTOM.DESCRIBE.MARSHMALLOWS = "Uma guloseima feita de açúcar batido e gelatina."
+
+WICKERBOTTOM.DESCRIBE.KOKONUTCOOKIES = "Um biscoito preparado com coco e açúcar."
+
+WICKERBOTTOM.DESCRIBE.BBQRIBS = "Costelas assadas, preparadas com calor considerável."
+
+WICKERBOTTOM.DESCRIBE.BROWNIE = "Uma densa sobremesa de chocolate."
+
+WICKERBOTTOM.DESCRIBE.CHOCOLATE_CAKE = "Um rico bolo preparado com cacau e açúcar."
+
+WICKERBOTTOM.DESCRIBE.SWORDFISHBLUEDINNER = "Uma refeição gelada cuidadosamente preparada, bastante adequada para viagens."

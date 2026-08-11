@@ -104,6 +104,9 @@ WEBBER.ANNOUNCE_KYNO_PANICBUFF_END = "Things aren't scared of us anymore."
 WEBBER.ANNOUNCE_KYNO_CUREBUFF_START = "Our snacks will stay good longer!"
 WEBBER.ANNOUNCE_KYNO_CUREBUFF_END = "Aw, they're going bad again."
 
+WEBBER.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "We're super sturdy now!"
+WEBBER.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Uh-oh, we're pushable again."
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Not this one."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "We think this isn't the correct meal he wants."
@@ -1354,3 +1357,15 @@ WEBBER.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Wow! The piggy can hold tons and tons of coins!",
 	GENERIC = "We can put our coins in here!",
 }
+
+WEBBER.DESCRIBE.MARSHMALLOWS = "We like how squishy they are!"
+
+WEBBER.DESCRIBE.KOKONUTCOOKIES = "We love coconut cookies!"
+
+WEBBER.DESCRIBE.BBQRIBS = "These ribs are super tasty!"
+
+WEBBER.DESCRIBE.BROWNIE = "We could eat a whole batch!"
+
+WEBBER.DESCRIBE.CHOCOLATE_CAKE = "We love chocolate cake!"
+
+WEBBER.DESCRIBE.SWORDFISHBLUEDINNER = "We like little packed meals!"

@@ -104,6 +104,9 @@ WAXWELL.ANNOUNCE_KYNO_PANICBUFF_END = "真令人失望。"
 WAXWELL.ANNOUNCE_KYNO_CUREBUFF_START = "Time is behaving itself for once." -- NEEDS TRANSLATION
 WAXWELL.ANNOUNCE_KYNO_CUREBUFF_END = "Back to the usual deterioration." -- NEEDS TRANSLATION
 
+WAXWELL.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I refuse to be pushed around." -- NEEDS TRANSLATION
+WAXWELL.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "How irritating. I'm vulnerable again." -- NEEDS TRANSLATION
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "我还需要别的东西。"
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "你可真不好对付，是不是？"
@@ -1354,3 +1357,15 @@ WAXWELL.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
 	UPGRADED = "Now that's a vessel worthy of a gentleman's fortune.",
 	GENERIC = "A rather humble place for one's wealth.",
 }
+
+WAXWELL.DESCRIBE.MARSHMALLOWS = "How utterly saccharine." -- NEEDS TRANSLATION
+
+WAXWELL.DESCRIBE.KOKONUTCOOKIES = "A rather quaint little biscuit." -- NEEDS TRANSLATION
+
+WAXWELL.DESCRIBE.BBQRIBS = "Finally, something with a little substance." -- NEEDS TRANSLATION
+
+WAXWELL.DESCRIBE.BROWNIE = "Decadent, but acceptable." -- NEEDS TRANSLATION
+
+WAXWELL.DESCRIBE.CHOCOLATE_CAKE = "Now this is suitably indulgent." -- NEEDS TRANSLATION
+
+WAXWELL.DESCRIBE.SWORDFISHBLUEDINNER = "Homemade, but served with surprising refinement." -- NEEDS TRANSLATION

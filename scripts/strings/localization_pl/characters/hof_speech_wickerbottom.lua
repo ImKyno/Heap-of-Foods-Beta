@@ -104,6 +104,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_END = "Mój niepokojący wpływ osłabł."
 WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_START = "The effects of time have been temporarily diminished." -- NEEDS TRANSLATION
 WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_END = "Temporal stability has returned to normal." -- NEEDS TRANSLATION
 
+WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I feel considerably more stable." -- NEEDS TRANSLATION
+WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "My stability has returned to normal." -- NEEDS TRANSLATION
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzeba czegoś jeszcze."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. Chyba mówił coś o homarach."
@@ -1354,3 +1357,15 @@ WICKERBOTTOM.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
 	UPGRADED = "An remarkably capacious receptacle for coinage.",
 	GENERIC = "A common ceramic repository for one's savings.",
 }
+
+WICKERBOTTOM.DESCRIBE.MARSHMALLOWS = "A confection of whipped sugar and gelatin." -- NEEDS TRANSLATION
+
+WICKERBOTTOM.DESCRIBE.KOKONUTCOOKIES = "A biscuit prepared with coconut and sugar." -- NEEDS TRANSLATION
+
+WICKERBOTTOM.DESCRIBE.BBQRIBS = "Barbecued ribs, prepared with considerable heat." -- NEEDS TRANSLATION
+
+WICKERBOTTOM.DESCRIBE.BROWNIE = "A dense chocolate confection." -- NEEDS TRANSLATION
+
+WICKERBOTTOM.DESCRIBE.CHOCOLATE_CAKE = "A rich cake prepared with cocoa and sugar." -- NEEDS TRANSLATION
+
+WICKERBOTTOM.DESCRIBE.SWORDFISHBLUEDINNER = "A neatly prepared meal, quite suitable for travel." -- NEEDS TRANSLATION

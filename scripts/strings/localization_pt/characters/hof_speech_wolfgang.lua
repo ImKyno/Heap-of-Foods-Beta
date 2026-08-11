@@ -104,6 +104,9 @@ WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_END = "Criaturas não temem mais Wolfgang."
 WOLFGANG.ANNOUNCE_KYNO_CUREBUFF_START = "Comida fica fresca por mais tempo para o poderoso Wolfgang!"
 WOLFGANG.ANNOUNCE_KYNO_CUREBUFF_END = "O frescor acabou."
 
+WOLFGANG.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Muito difícil derrubar Wolfgang agora!"
+WOLFGANG.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Wolfgang está fácil de empurrar de novo."
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é o correto."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Porco poderoso não quer isso."
@@ -1354,3 +1357,15 @@ WOLFGANG.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Porquinho é forte!",
 	GENERIC = "É porquinho pequeno para moedas.",
 }
+
+WOLFGANG.DESCRIBE.MARSHMALLOWS = "Comidinha fofinha é boa!"
+
+WOLFGANG.DESCRIBE.KOKONUTCOOKIES = "Wolfgang gosta de biscoitos de coco!"
+
+WOLFGANG.DESCRIBE.BBQRIBS = "Essas costelas deixam Wolfgang com muita fome!"
+
+WOLFGANG.DESCRIBE.BROWNIE = "Quadradinho de chocolate é muito bom!"
+
+WOLFGANG.DESCRIBE.CHOCOLATE_CAKE = "Wolfgang ama bolo gigante de chocolate!"
+
+WOLFGANG.DESCRIBE.SWORDFISHBLUEDINNER = "Comida gelada ainda é comida boa!"

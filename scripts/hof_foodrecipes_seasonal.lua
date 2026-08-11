@@ -244,7 +244,7 @@ local kyno_foods_seasonal =
 	festive_polishcookies = 
 	{ 
 		test = function(cooker, names, tags) return tags.flour and tags.dairy and (tags.sweetener and tags.sweetener >= 2) 
-		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
+		and not tags.chocolate and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,

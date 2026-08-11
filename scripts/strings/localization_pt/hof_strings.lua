@@ -126,6 +126,8 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK = "Assusta batiliscos próximos"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX = "Status são baseados na inclinação"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL = "Aumenta ganho de Alma"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REVIVER = "Revive os mortos"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KNOCKBACK = "Diminui a repulsão"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CHILLEDATTACK = "Garante ataques gélidos"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Vegetal esverdeado, o rei das pastagens e florestas tropicais. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Um dos muitos presentes do mar, muito apreciado pelos homens de cultura. -W"
@@ -174,6 +176,7 @@ STRINGS_INGREDIENTS_CHICKEN = "Galinhas"
 STRINGS_INGREDIENTS_CHICKENEGG = "Ovos de Galinha"
 STRINGS_INGREDIENTS_POTATO = "Batatas"
 STRINGS_INGREDIENTS_TUBER = "Tubérculos"
+STRINGS_INGREDIENTS_ICEWEED = "Urtigas Gélidas"
 
 STRINGS.KYNO_HARVEST_POTSMALL = "Retirar Panela"
 STRINGS.KYNO_HARVEST_POTLARGE = "Retirar Panela Grande"
@@ -2404,3 +2407,17 @@ STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2 = "Unidade de Super Secagem Portátil Co
 STRINGS.NAMES.KYNO_PIGGYBANK = "Cofrinho"
 STRINGS.NAMES.KYNO_PIGGYBANK_UPGRADED = "Cofrinho Sem Fundo"
 STRINGS.RECIPE_DESC.KYNO_PIGGYBANK = "Uma pequena casa para sua fortuna em constante crescimento."
+
+STRINGS.NAMES.MARSHMALLOWS = "Marshmallows"
+
+STRINGS.NAMES.KOKONUTCOOKIES = "Biscoitos de Coco"
+
+STRINGS.NAMES.BBQRIBS = "Costelinha de Porco Defumada"
+
+STRINGS.NAMES.BROWNIE = "Brownie"
+
+STRINGS.NAMES.CHOCOLATE_CAKE = "Bolo de Chocolate"
+
+STRINGS.NAMES.SWORDFISHBLUEDINNER = "Bento Gélido"
+
+STRINGS.NAMES.KYNO_CHILLED_SHARD = "Estilhaços Gélidos"

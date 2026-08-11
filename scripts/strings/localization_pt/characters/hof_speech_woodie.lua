@@ -104,6 +104,9 @@ WOODIE.ANNOUNCE_KYNO_PANICBUFF_END = "Acho que estou menos assustador agora, hei
 WOODIE.ANNOUNCE_KYNO_CUREBUFF_START = "Isso vai manter tudo fresco por mais um tempo, hein?"
 WOODIE.ANNOUNCE_KYNO_CUREBUFF_END = "Não dá pra impedir a natureza pra sempre, hein?"
 
+WOODIE.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Estou bem enraizado agora."
+WOODIE.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Acho que não estou mais enraizado."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo diferente se encaixe aqui"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, ele não quer isso."
@@ -1354,3 +1357,15 @@ WOODIE.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Esse porco tem espaço pra uma bela quantidade de moedas.",
 	GENERIC = "Um lugarzinho útil pra guardar umas moedas.",
 }
+
+WOODIE.DESCRIBE.MARSHMALLOWS = "São bem docinhos, hein?"
+
+WOODIE.DESCRIBE.KOKONUTCOOKIES = "Tem gosto de verão!"
+
+WOODIE.DESCRIBE.BBQRIBS = "Isso sim é comida boa!"
+
+WOODIE.DESCRIBE.BROWNIE = "Esse brownie está muito bom."
+
+WOODIE.DESCRIBE.CHOCOLATE_CAKE = "Esse é um baita bolo de chocolate."
+
+WOODIE.DESCRIBE.SWORDFISHBLUEDINNER = "Estou congelando até os ossos!"

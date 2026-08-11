@@ -131,6 +131,8 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_HEALINGBONUS = "Increases healing effi
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINY = "Restores sanity when it's raining or when Wetness is high."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "Attacks have a small chance to execute targets during the night. Does not work against certain creatures."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BATILISK = "Scares nearby batilisks for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_KNOCKBACK = "Decreases knockback for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CHILLEDATTACK = "Every 3 consecutive attack against the same target causes Chilled Shards to appear.\n\nChilled Shards deals damage in a small area around the target."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder fully restores its spoilage time.\n\nDecreases the spoilage rate of items inside the inventory by 25%.\n\nIncreases the duration of other side effects by 25%.\n\nDuration 4 minutes."

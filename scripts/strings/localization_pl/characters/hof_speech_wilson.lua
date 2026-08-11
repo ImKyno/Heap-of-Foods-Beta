@@ -104,6 +104,9 @@ WILSON.ANNOUNCE_KYNO_PANICBUFF_END = "Wszystko wydaje się teraz mniej przeraża
 WILSON.ANNOUNCE_KYNO_CUREBUFF_START = "Everything seems to last a little longer!" -- NEEDS TRANSLATION
 WILSON.ANNOUNCE_KYNO_CUREBUFF_END = "Things are spoiling normally again." -- NEEDS TRANSLATION
 
+WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I feel firmly grounded." -- NEEDS TRANSLATION
+WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And there goes my stability." -- NEEDS TRANSLATION
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "To nie to."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "On chce coś innego."
@@ -1354,3 +1357,15 @@ WILSON.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
 	UPGRADED = "A bottomless repository of wealth!",
 	GENERIC = "A convenient place to store my earned savings.",
 }
+
+WILSON.DESCRIBE.MARSHMALLOWS = "A delightful little confection." -- NEEDS TRANSLATION
+
+WILSON.DESCRIBE.KOKONUTCOOKIES = "You can't flee from the brand." -- NEEDS TRANSLATION
+
+WILSON.DESCRIBE.BBQRIBS = "Now that's a proper rack of ribs!" -- NEEDS TRANSLATION
+
+WILSON.DESCRIBE.BROWNIE = "A wonderfully dense chocolate confection." -- NEEDS TRANSLATION
+
+WILSON.DESCRIBE.CHOCOLATE_CAKE = "Now that's a cake!" -- NEEDS TRANSLATION
+
+WILSON.DESCRIBE.SWORDFISHBLUEDINNER = "A chilled bento! Perfect for a quick meal." -- NEEDS TRANSLATION

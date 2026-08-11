@@ -104,6 +104,9 @@ WANDA.ANNOUNCE_KYNO_PANICBUFF_END = "O efeito expirou."
 WANDA.ANNOUNCE_KYNO_CUREBUFF_START = "Peguei um tempinho emprestado."
 WANDA.ANNOUNCE_KYNO_CUREBUFF_END = "O tempo tomou de volta o que era dele."
 
+WANDA.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Não vou a lugar algum."
+WANDA.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Bem, essa estabilidade não durou."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não... Preciso de algo diferente."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Acho que tenho tempo de pegar uma lagosta para você."
@@ -1354,3 +1357,15 @@ WANDA.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Sua capacidade parece não ter limite.",
 	GENERIC = "Um cofrinho. Simples, mas útil.",
 }
+
+WANDA.DESCRIBE.MARSHMALLOWS = "Um pouco de doçura nunca faz mal."
+
+WANDA.DESCRIBE.KOKONUTCOOKIES = "Um agradável gostinho dos trópicos."
+
+WANDA.DESCRIBE.BBQRIBS = "Uma refeição substanciosa que vale a pena saborear."
+
+WANDA.DESCRIBE.BROWNIE = "Chocolate rico nunca sai de moda."
+
+WANDA.DESCRIBE.CHOCOLATE_CAKE = "Um bolo decadente para uma ocasião especial."
+
+WANDA.DESCRIBE.SWORDFISHBLUEDINNER = "Uma refeição conveniente para quando o tempo é essencial."

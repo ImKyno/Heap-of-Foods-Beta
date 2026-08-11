@@ -104,6 +104,9 @@ WILLOW.ANNOUNCE_KYNO_PANICBUFF_END = "Aw, they're not scared anymore."
 WILLOW.ANNOUNCE_KYNO_CUREBUFF_START = "Nothing's going bad anytime soon!"
 WILLOW.ANNOUNCE_KYNO_CUREBUFF_END = "Back to everything rotting."
 
+WILLOW.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Try knocking me around now!" -- NEEDS TRANSLATION
+WILLOW.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Guess I'm easy to push again." -- NEEDS TRANSLATION
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need to put something in here!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, wrong thing!"
@@ -1354,3 +1357,15 @@ WILLOW.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
 	UPGRADED = "This thing can hold ALL the shiny stuff!",
 	GENERIC = "A little piggy bank. Cute.",
 }
+
+WILLOW.DESCRIBE.MARSHMALLOWS = "Mmm, soft and flammable." -- NEEDS TRANSLATION
+
+WILLOW.DESCRIBE.KOKONUTCOOKIES = "Crunchy and toasty." -- NEEDS TRANSLATION
+
+WILLOW.DESCRIBE.BBQRIBS = "Fire makes everything delicious!" -- NEEDS TRANSLATION
+
+WILLOW.DESCRIBE.BROWNIE = "Finally, something good." -- NEEDS TRANSLATION
+
+WILLOW.DESCRIBE.CHOCOLATE_CAKE = "My favorite kind of cake." -- NEEDS TRANSLATION
+
+WILLOW.DESCRIBE.SWORDFISHBLUEDINNER = "Cold food? Boooooring." -- NEEDS TRANSLATION

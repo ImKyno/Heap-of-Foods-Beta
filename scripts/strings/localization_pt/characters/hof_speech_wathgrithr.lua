@@ -104,6 +104,9 @@ WATHGRITHR.ANNOUNCE_KYNO_PANICBUFF_END = "Minha aura de pavor desvaneceu!"
 WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_START = "O banquete durará por mais tempo!"
 WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_END = "Até o maior dos banquetes um dia se acaba!"
 
+WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ninguém me moverá!"
+WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "A batalha poderá me mover novamente!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Errado!"
@@ -1354,3 +1357,15 @@ WATHGRITHR.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Um poderoso cofre para os espólios de batalha!",
 	GENERIC = "Um pequeno suíno para guardar minhas moedas.",
 }
+
+WATHGRITHR.DESCRIBE.MARSHMALLOWS = "Isto não é comida de guerreiro!"
+
+WATHGRITHR.DESCRIBE.KOKONUTCOOKIES = "Um biscoito de coco? Onde está a carne?"
+
+WATHGRITHR.DESCRIBE.BBQRIBS = "Um banquete digno de um guerreiro!"
+
+WATHGRITHR.DESCRIBE.BROWNIE = "Um banquete de chocolate!"
+
+WATHGRITHR.DESCRIBE.CHOCOLATE_CAKE = "Um grandioso banquete de chocolate!"
+
+WATHGRITHR.DESCRIBE.SWORDFISHBLUEDINNER = "O ar está começando a ficar frio em volta de mim!"

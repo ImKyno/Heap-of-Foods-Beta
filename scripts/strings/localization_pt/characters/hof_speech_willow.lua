@@ -104,6 +104,9 @@ WILLOW.ANNOUNCE_KYNO_PANICBUFF_END = "Ah, eles não estão mais com medo."
 WILLOW.ANNOUNCE_KYNO_CUREBUFF_START = "Nada vai estragar tão cedo!"
 WILLOW.ANNOUNCE_KYNO_CUREBUFF_END = "Tudo voltou a apodrecer."
 
+WILLOW.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Tenta me empurrar agora!"
+WILLOW.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Acho que agora é fácil me empurrar."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso colocar algo diferente aqui!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, coisa errada!"
@@ -1354,3 +1357,15 @@ WILLOW.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Isso consegue guardar TODAS as moedas!",
 	GENERIC = "Um pequeno cofrinho. Que fofo.",
 }
+
+WILLOW.DESCRIBE.MARSHMALLOWS = "Mmm, macio e inflamável."
+
+WILLOW.DESCRIBE.KOKONUTCOOKIES = "Crocante e tostado."
+
+WILLOW.DESCRIBE.BBQRIBS = "O fogo deixa tudo mais gostoso!"
+
+WILLOW.DESCRIBE.BROWNIE = "Finalmente, algo bom."
+
+WILLOW.DESCRIBE.CHOCOLATE_CAKE = "Meu tipo favorito de bolo."
+
+WILLOW.DESCRIBE.SWORDFISHBLUEDINNER = "Comida gelada? Chaaaaato."

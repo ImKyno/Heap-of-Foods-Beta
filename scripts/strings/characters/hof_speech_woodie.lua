@@ -104,6 +104,9 @@ WOODIE.ANNOUNCE_KYNO_PANICBUFF_END = "Guess I'm less scary now, eh?"
 WOODIE.ANNOUNCE_KYNO_CUREBUFF_START = "This'll keep things fresh a while longer, eh?"
 WOODIE.ANNOUNCE_KYNO_CUREBUFF_END = "Can't stop nature forever, eh?"
 
+WOODIE.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm rooted pretty good now."
+WOODIE.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Guess I'm not rooted anymore."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to pick it up?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope. He wants something else."
@@ -1354,3 +1357,15 @@ WOODIE.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "This pig's got room for a whole lotta loonies.",
 	GENERIC = "A handy little place to stash some coins.",
 }
+
+WOODIE.DESCRIBE.MARSHMALLOWS = "These are pretty sweet, eh?"
+
+WOODIE.DESCRIBE.KOKONUTCOOKIES = "Tastes like summer!"
+
+WOODIE.DESCRIBE.BBQRIBS = "Now that's some good eatin'!"
+
+WOODIE.DESCRIBE.BROWNIE = "That's a mighty fine brownie."
+
+WOODIE.DESCRIBE.CHOCOLATE_CAKE = "That's one heck of a chocolate cake."
+
+WOODIE.DESCRIBE.SWORDFISHBLUEDINNER = "I'm chilled to the bones!"

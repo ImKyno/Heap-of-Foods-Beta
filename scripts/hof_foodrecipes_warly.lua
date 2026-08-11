@@ -562,6 +562,72 @@ local kyno_warly_foods =
 			eater:AddDebuff("kyno_healingbuff", "kyno_healingbuff")
 		end,
 	},
+
+	brownie =
+	{
+		test = function(cooker, names, tags) return tags.chocolate and tags.sugar and tags.flour and tags.dairy end,
+		priority = 35,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_MED,
+		health = -10,
+		hunger = 32.5,
+		sanity = 100,
+		cooktime = 2,
+		overridebuild = "kyno_foodrecipes_warly",
+		pigcoinvalue = {6, 4, 2},
+		floater = TUNING.HOF_FLOATER,
+		tags = {"masterfood", "eggfood"},
+		card_def = {ingredients = {{"chocolate_black", 1}, {"kyno_sugar", 1}, {"kyno_flour", 1}, {"goatmilk", 1}}},
+	},
+
+	bbqribs =
+	{
+		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and tags.spotspice and tags.syrup
+		and not (tags.monster and tags.monster > 1) and not tags.fish end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 60,
+		hunger = 75,
+		sanity = 33,
+		cooktime = 2,
+		potlevel = "low",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KNOCKBACK,
+		overridebuild = "kyno_foodrecipes_warly",
+		pigcoinvalue = {10, 3, 1},
+		floater = TUNING.HOF_FLOATER,
+		tags = {"masterfood"},
+		card_def = {ingredients = {{"meat", 2}, {"kyno_spotspice", 1}, {"kyno_syrup", 1}}},
+		prefabs = { "kyno_knockbackbuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_knockbackbuff", "kyno_knockbackbuff")
+		end,
+	},
+
+	swordfishbluedinner =
+	{
+		test = function(cooker, names, tags) return names.kyno_swordfish_blue and tags.iceweed and tags.flour
+		and (names.kyno_rice or names.kyno_rice_cooked) end,
+		priority = 35,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FASTISH,
+		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		health = 40,
+		hunger = 75,
+		sanity = 25,
+		cooktime = 2,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CHILLEDATTACK,
+		overridebuild = "kyno_foodrecipes_warly",
+		pigcoinvalue = {2, 10, 1},
+		floater = TUNING.HOF_FLOATER,
+		tags = {"masterfood", "sharkboifood", "exquisite", "marinefood"},
+		card_def = {ingredients = {{"kyno_swordfish_blue", 1}, {"kyno_icenettles", 1}, {"kyno_flour", 1}, {"kyno_rice", 1}}},
+		prefabs = { "kyno_chilledbuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_chilledbuff", "kyno_chilledbuff")
+		end,
+	},
 }
 
 for k, recipe in pairs(kyno_warly_foods) do

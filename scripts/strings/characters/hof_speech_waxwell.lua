@@ -104,6 +104,9 @@ WAXWELL.ANNOUNCE_KYNO_PANICBUFF_END = "How disappointing."
 WAXWELL.ANNOUNCE_KYNO_CUREBUFF_START = "Time is behaving itself for once."
 WAXWELL.ANNOUNCE_KYNO_CUREBUFF_END = "Back to the usual deterioration."
 
+WAXWELL.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I refuse to be pushed around."
+WAXWELL.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "How irritating. I'm vulnerable again."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else for this."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "You're not easy, aren't you?"
@@ -1354,3 +1357,15 @@ WAXWELL.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Now that's a vessel worthy of a gentleman's fortune.",
 	GENERIC = "A rather humble place for one's wealth.",
 }
+
+WAXWELL.DESCRIBE.MARSHMALLOWS = "How utterly saccharine."
+
+WAXWELL.DESCRIBE.KOKONUTCOOKIES = "A rather quaint little biscuit."
+
+WAXWELL.DESCRIBE.BBQRIBS = "Finally, something with a little substance."
+
+WAXWELL.DESCRIBE.BROWNIE = "Decadent, but acceptable."
+
+WAXWELL.DESCRIBE.CHOCOLATE_CAKE = "Now this is suitably indulgent."
+
+WAXWELL.DESCRIBE.SWORDFISHBLUEDINNER = "Homemade, but served with surprising refinement."

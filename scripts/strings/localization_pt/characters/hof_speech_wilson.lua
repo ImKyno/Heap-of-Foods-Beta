@@ -104,6 +104,9 @@ WILSON.ANNOUNCE_KYNO_PANICBUFF_END = "As coisas parecem menos intimidadoras agor
 WILSON.ANNOUNCE_KYNO_CUREBUFF_START = "Tudo parece durar um pouco mais!"
 WILSON.ANNOUNCE_KYNO_CUREBUFF_END = "As coisas voltaram a estragar normalmente."
 
+WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Sinto-me bem firme no chão."
+WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "E lá se vai minha estabilidade."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ele quer outra coisa."
@@ -1354,3 +1357,15 @@ WILSON.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Um reservatório de riquezas sem fundo!",
 	GENERIC = "Um lugar conveniente para guardar minhas economias.",
 }
+
+WILSON.DESCRIBE.MARSHMALLOWS = "Uma deliciosa guloseima."
+
+WILSON.DESCRIBE.KOKONUTCOOKIES = "Você não pode fugir da marca."
+
+WILSON.DESCRIBE.BBQRIBS = "Agora sim, uma bela costela!"
+
+WILSON.DESCRIBE.BROWNIE = "Uma deliciosa e densa sobremesa de chocolate."
+
+WILSON.DESCRIBE.CHOCOLATE_CAKE = "Agora isso sim é um bolo!"
+
+WILSON.DESCRIBE.SWORDFISHBLUEDINNER = "Um bento gelado! Perfeito para uma refeição rápida."

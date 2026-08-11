@@ -104,6 +104,9 @@ WENDY.ANNOUNCE_KYNO_PANICBUFF_END = "The terror has subsided."
 WENDY.ANNOUNCE_KYNO_CUREBUFF_START = "Time loosens its grip on decay."
 WENDY.ANNOUNCE_KYNO_CUREBUFF_END = "Decay resumes its patient work."
 
+WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I am anchored to this wretched world."
+WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "The world may toss me about again."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to gather?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Of course it's not what this stupid creature wants."
@@ -1354,3 +1357,15 @@ WENDY.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "Its hunger for wealth has no end.",
 	GENERIC = "A little vessel for earthly riches.",
 }
+
+WENDY.DESCRIBE.MARSHMALLOWS = "They are almost like little clouds."
+
+WENDY.DESCRIBE.KOKONUTCOOKIES = "A cookie with a tropical melancholy."
+
+WENDY.DESCRIBE.BBQRIBS = "The meat is quite... hauntingly tender."
+
+WENDY.DESCRIBE.BROWNIE = "Dark and sweet."
+
+WENDY.DESCRIBE.CHOCOLATE_CAKE = "A cake as dark as my mood."
+
+WENDY.DESCRIBE.SWORDFISHBLUEDINNER = "A cold meal for a cold world."

@@ -104,6 +104,9 @@ WATHGRITHR.ANNOUNCE_KYNO_PANICBUFF_END = "My aura of dread hath faded!"
 WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_START = "The feast shall endure!"
 WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_END = "Even the finest feast must fade!"
 
+WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I shall not be moved!"
+WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "The battle may move me once more!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wrong feast! Beast wants a more delightful food!"
@@ -1354,3 +1357,15 @@ WATHGRITHR.DESCRIBE.KYNO_PIGGYBANK =
 	UPGRADED = "A mighty vault for the spoils of battle!",
 	GENERIC = "A little swine to guard mine coin.",
 }
+
+WATHGRITHR.DESCRIBE.MARSHMALLOWS = "These are no warrior's fare!"
+
+WATHGRITHR.DESCRIBE.KOKONUTCOOKIES = "A coconut cookie? Where is the meat?"
+
+WATHGRITHR.DESCRIBE.BBQRIBS = "A feast fit for a warrior!"
+
+WATHGRITHR.DESCRIBE.BROWNIE = "A chocolate feast!"
+
+WATHGRITHR.DESCRIBE.CHOCOLATE_CAKE = "A grand feast of chocolate!"
+
+WATHGRITHR.DESCRIBE.SWORDFISHBLUEDINNER = "The air is getting cold around me!"
