@@ -187,5 +187,8 @@ return {
     "mandrakepie",
     "rainparfait",
     "midnightfeast",
+    "marshmallows",
+    "kokonutcookies",
+    "chocolate_cake",
     "jawsbreaker",
 }

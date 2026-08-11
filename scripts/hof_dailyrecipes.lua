@@ -9,16 +9,14 @@ local WEB_RECIPES_LIST =
 {
 	"hof_recipes_cookpot",          -- 1
 	"hof_recipes_cookpot_warly",    -- 2
-	"hof_recipes_cookpot_seasonal", -- 3
-	"hof_recipes_cookpot_jar",      -- 4
-	"hof_recipes_cookpot_keg",      -- 5
+	"hof_recipes_cookpot_jar",      -- 3
+	"hof_recipes_cookpot_keg",      -- 4
 }
 
 local MOD_RECIPES_LIST =
 {
 	"hof_foodrecipes",
 	"hof_foodrecipes_warly",
-	"hof_foodrecipes_seasonal",
 	"hof_brewrecipes_jar",
 	"hof_brewrecipes_keg",
 }
@@ -31,6 +29,7 @@ local RECIPES_BLACKLIST =
 	["kyno_syrup"]    = true,
 	["littlebread"]   = true,
 	["watercup"]      = true,
+	["wetgoop2"]      = true,
 }
 
 -- Hash convertion for Lua <> JavaScript so we can use the same Seed.

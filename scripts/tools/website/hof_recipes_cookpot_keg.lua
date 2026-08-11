@@ -68,4 +68,5 @@ return {
     "juice_sporecap_dark",
     "juice_cavetuber",
     "juice_cavetuber_blooming",
+    "wetgoop2",
 }

@@ -25,4 +25,7 @@ return {
     "lavaeeggboiled",
     "tiramisu",
     "mandrakebaobuns",
+    "brownie",
+    "bbqribs",
+    "swordfishbluedinner",
 }

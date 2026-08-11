@@ -910,6 +910,15 @@ AddComponentAction("USEITEM", "plantbooster", function(inst, doer, target, actio
 	end
 
 	if target:HasTag("farm_plant") then
+		if target:HasTag("pickable") then
+			return
+		end
+
+		if target.AnimState ~= nil and target.AnimState:IsCurrentAnimation("crop_bloomed")
+		or target.AnimState:IsCurrentAnimation("grow_bloomed") then
+			return
+		end
+
 		if inst:HasTag("growthbooster") and not inst:HasTag("farmplantbooster") then
 			return
 		end

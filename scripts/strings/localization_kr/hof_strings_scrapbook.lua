@@ -132,7 +132,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RAINY = "비가 내리거나 축축할
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "밤 시간에 공격 시 낮은 확률로 대상을 즉사시킵니다. 일부 생물에게는 효과가 없습니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BATILISK = "일정 시간 동안 주변의 박쥐리스크를 겁주어 쫓아냅니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_KNOCKBACK = "일정 시간 동안 넉백을 감소시킵니다."
-STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CHILLEDATTACK = "동일한 대상을 상대로 3회 연속 공격할 때마다 얼음 파편이 생성됩니다.\n\n얼음 파편은 대상 주변의 좁은 범위에 피해를 입힙니다.
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CHILLEDATTACK = "동일한 대상을 상대로 3회 연속 공격할 때마다 얼음 파편이 생성됩니다.\n\n얼음 파편은 대상 주변의 좁은 범위에 피해를 입힙니다."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "휴대용 양념기를 사용하여 요리 냄비 음식에 추가할 수 있습니다.\n\n보존 가루를 첨가한 음식을 먹으면 해당 요리의 신선도가 완전히 회복됩니다.\n\n인벤토리에 있는 아이템의 부패 속도가 25% 감소합니다.\n\n다른 음식 부작용의 지속 시간이 25% 증가합니다.\n\n지속 시간 4분."

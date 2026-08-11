@@ -36,13 +36,13 @@ local STRINGS =
 󰀠 Also features brand-new Biomes somewhere in the Ocean!
 󰀦 Learn how to cook every recipe at: https://heap-of-foods.com
 
-󰀏 Featuring the Branches & Business Update:
-The Deciduous Forest is now home for a new face! Meet Partitio, the Pig Merchant. As a proud pig, he only sells high quality stuff.
+󰀏 Featuring the Setting the Table Update:
+This is an intermission update that brings some new content, quality of life improvements and tweaks to existing features.
 
-Partitio is looking forward to meet new costumers, even if they are monsters and will tolerate them. But after some unfortunate past events, he now refuses to do any business with the Mermfolk!
+Nocturnal birds can now be found during the night and will fly away at dawn. When caged they will sleep during the day and dusk.
 
 󰀌 Mod Version: 6.8-B
-󰀧 Update: Branches & Business (Part I)
+󰀧 Update: Setting the Table
 ]],
 		zh  =
 [[
@@ -51,13 +51,13 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 󰀠 还新增了海洋中的全新生物群系！
 󰀦 学习如何制作所有食谱：https://heap-of-foods.com
 
-󰀏 重点内容包括分支机构及业务最新动态：
-落叶林如今迎来了一位新面孔！欢迎 帕提提欧，猪商人。作为一只自豪的猪，他只出售高品质的商品。
+󰀏 介绍「摆好餐桌」更新：
+这是一次间歇性更新，带来了一些新内容、生活质量改进，以及对现有功能的调整。
 
-帕提提欧 期待结识新的顾客，即使他们是怪物，他也会包容他们。但在一些不幸的过往事件之后，他现在拒绝与鱼人族（Mermfolk）进行任何交易！
+夜行鸟现在可以在夜间找到，并会在黎明时飞走。被关在鸟笼中时，它们会在白天和黄昏时睡觉。
 
 󰀌 Mod 版本： 6.8-B
-󰀧 更新内容：分支机构及业务 (第一部分)
+󰀧 更新内容： 摆好餐桌
 ]],
 		zht =
 [[
@@ -66,13 +66,13 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 󰀠 還新增了海洋中的全新生物群系！
 󰀦 學習如何製作所有食譜：https://heap-of-foods.com
 
-󰀏 重點內容包括分公司及業務最新動態：
-落葉林如今迎來了一位新面孔！歡迎 帕提提欧，豬商人。作為一隻自豪的豬，他只販售高品質的商品。
+󰀏 介紹「擺好餐桌」更新：
+這是一次間歇性更新，帶來了一些新內容、生活品質改進，以及對現有功能的調整。
 
-帕提提欧 期待結識新的顧客，即使他們是怪物，他也會包容他們。但在一些不幸的過往事件之後，他現在拒絕與魚人族（Mermfolk）進行任何交易！
+夜行鳥現在可以在夜間找到，並會在黎明時飛走。被關在鳥籠中時，牠們會在白天和黃昏時睡覺。
 
 󰀌 Mod 版本： 6.8-B
-󰀧 更新內容： 分公司及業務 (第一部分)
+󰀧 更新內容： 擺好餐桌
 ]],
 		pt  =
 [[
@@ -81,13 +81,13 @@ Partitio is looking forward to meet new costumers, even if they are monsters and
 󰀠 Também acrescenta novos biomas em algum lugar do alto mar!
 󰀦 Aprenda a cozinhar todas as receitas em: https://heap-of-foods.com
 
-󰀏 Apresentando a Atualização Galhos e Negócios:
-A Floresta Decídua agora abriga um novo rosto! Conheça Partitio, o Comerciante Porco. Como um porco orgulhoso, ele só vende itens de alta qualidade.
+󰀏 Apresentando a Atualização Arrumando a Mesa:
+Esta é uma atualização de intermissão que traz novos conteúdos, melhorias de qualidade de vida e ajustes em recursos existentes.
 
-Partitio está ansioso para conhecer novos clientes, mesmo que sejam monstros, e irá tolerá-los. Mas, após alguns eventos infelizes do passado, ele agora se recusa a fazer qualquer negócio com Povo-peixe!
+Pássaros noturnos agora podem ser encontrados durante a noite e voarão para longe ao amanhecer. Quando estiverem em gaiolas, eles dormirão durante o dia e ao anoitecer.
 
 󰀌 Versão do Mod: 6.8-B
-󰀧 Atualização: Galhos e Negócios (Parte I)
+󰀧 Atualização: Arrumando a Mesa
 ]],
 		pl  =
 [[
@@ -96,13 +96,13 @@ Partitio está ansioso para conhecer novos clientes, mesmo que sejam monstros, e
 󰀠 Zawiera również zupełnie nowe biomasy gdzieś na Oceanie!
 󰀦 Naucz się gotować wszystkie przepisy na: https://heap-of-foods.com
 
-󰀏 Przedstawiamy aktualizację Oddziały i biznes:
-Las liściasty ma teraz nową twarz! Poznaj Partitio, Świńskiego Handlarza. Jako dumny świnia sprzedaje tylko towary wysokiej jakości.
+󰀏 Przedstawiamy aktualizację Nakrywając do Stołu:
+Jest to aktualizacja przejściowa, która wprowadza nową zawartość, usprawnienia poprawiające komfort rozgrywki oraz zmiany w istniejących funkcjach.
 
-Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli są potworami i będzie ich tolerował. Jednak po kilku niefortunnych wydarzeniach z przeszłości, obecnie odmawia prowadzenia interesów z Mermfolk!
+Nocne ptaki można teraz spotkać w nocy i odlatują one o świcie. Zamknięte w klatkach będą spać w ciągu dnia oraz o zmierzchu.
 
 󰀌 Wersja Moda: 6.8-B
-󰀧 Aktualizacja: Oddziały i biznes (Część I)
+󰀧 Aktualizacja: Nakrywając do Stołu
 ]],
 		es  =
 [[
@@ -111,13 +111,13 @@ Partitio z niecierpliwością czeka na spotkanie nowych klientów, nawet jeśli 
 󰀠 ¡También incluye nuevos biomas en algún lugar del mar abierto!
 󰀦 Aprende a cocinar todas las recetas en: https://heap-of-foods.com
 
-󰀏 Presentando la Actualización Ramas y Negocios:
-¡El bosque caducifolio ahora tiene una nueva cara! Conoce a Partitio, el comerciante cerdo. Como un cerdo orgulloso, solo vende artículos de alta calidad.
+󰀏 Presentando la Actualización Poniendo la Mesa:
+Esta es una actualización de transición que trae nuevo contenido, mejoras de calidad de vida y ajustes a las funciones existentes.
 
-Partitio espera conocer nuevos clientes, incluso si son monstruos, y los tolerará. Pero tras algunos desafortunados eventos del pasado, ahora se niega a hacer negocios con los Mermfolk.
+Ahora se pueden encontrar aves nocturnas durante la noche, y volarán al amanecer. Cuando estén enjauladas, dormirán durante el día y al anochecer.
 
 󰀌 Versión del Mod: 6.8-B
-󰀧 Actualización: Ramas y Negocios (Parte I)
+󰀧 Actualización: Poniendo la Mesa
 ]],
 		vi  =
 [[
@@ -126,13 +126,13 @@ Partitio espera conocer nuevos clientes, incluso si son monstruos, y los tolerar
 󰀠 Bổ sung thêm các Quần Xã sinh vật mới nằm ẩn mình đâu đó giữa Đại Dương!
 󰀦 Tham khảo công thức nấu ăn tại: https://heap-of-foods.com
 
-󰀏 Giới thiệu Bản cập nhật Cành Nhánh & Kinh Doanh:
-Rừng rụng lá giờ đây có một gương mặt mới! Hãy gặp Partitio, thương nhân lợn. Là một chú lợn kiêu hãnh, anh ta chỉ bán những món hàng chất lượng cao.
+󰀏 Giới thiệu bản cập nhật Dọn Bàn Ăn:
+Đây là một bản cập nhật xen kẽ, mang đến một số nội dung mới, các cải tiến về chất lượng trải nghiệm và điều chỉnh cho những tính năng hiện có.
 
-Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ là quái vật và sẽ chấp nhận họ. Nhưng sau một số sự kiện không may trong quá khứ, anh ta hiện từ chối kinh doanh với Mermfolk!
+Các loài chim sống về đêm giờ đây có thể được tìm thấy vào ban đêm và sẽ bay đi khi bình minh. Khi được nhốt trong lồng, chúng sẽ ngủ vào ban ngày và lúc chạng vạng.
 
 󰀌 Phiên bản Mod: 6.8-B
-󰀧 Cập nhật: Cành Nhánh & Kinh Doanh (Phần I)
+󰀧 Cập nhật: Dọn Bàn Ăn
 ]],
 		kr =
 [[
@@ -141,12 +141,13 @@ Partitio mong muốn gặp gỡ những khách hàng mới, ngay cả khi họ l
 󰀠 바다 어딘가에 생성되는 완전히 새로운 바이옴도 만나볼 수 있습니다!
 󰀦 모든 레시피 요리법 알아보기: https://heap-of-foods.com
 
-󰀏 Branches & Business 업데이트 포함:
-활엽수림에 새로운 상인이 등장했습니다! 돼지 상인 파르티티오를 만나보세요. 자부심 넘치는 돼지인 그는 오직 고품질의 물품만을 판매합니다.
+󰀏 「식탁 차리기」업데이트를 소개합니다:
+이번 업데이트는 새로운 콘텐츠와 편의성 개선 사항을 추가하고 기존 기능을 일부 조정하는 중간 업데이트입니다.
 
-파르티티오는 새로운 고객들을 맞이하길 기대하고 있으며, 괴물일지라도 거래를 허용합니다. 다만 과거의 불미스러운 사건들로 인해, 현재 어인족과의 거래는 일절 거부하고 있습니다!
+이제 밤에 야행성 새를 만날 수 있으며, 새벽이 되면 날아가 버립니다. 새장에 가두면 낮과 해질녘에 잠을 잡니다.
+
 󰀌 Mod Version: 6.8-B
-󰀧 Update: Branches & Business (Part I)
+󰀧 Update: 식탁 차리기
 ]],
 	},
 

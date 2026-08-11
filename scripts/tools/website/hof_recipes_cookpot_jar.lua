@@ -93,4 +93,5 @@ return {
     "agedroe_jellyfish",
     "agedroe_jellyfish_rainbow",
     "agedroe_swordfish_blue",
+    "wetgoop2",
 }

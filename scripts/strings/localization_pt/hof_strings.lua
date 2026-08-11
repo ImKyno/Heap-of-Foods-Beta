@@ -2412,7 +2412,7 @@ STRINGS.NAMES.MARSHMALLOWS = "Marshmallows"
 
 STRINGS.NAMES.KOKONUTCOOKIES = "Biscoitos de Coco"
 
-STRINGS.NAMES.BBQRIBS = "Costelinha de Porco Defumada"
+STRINGS.NAMES.BBQRIBS = "Costelinhas de Porco"
 
 STRINGS.NAMES.BROWNIE = "Brownie"
 
