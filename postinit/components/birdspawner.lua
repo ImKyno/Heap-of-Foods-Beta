@@ -14,6 +14,20 @@ local DANGER_RANGE           = 8
 local SCARYTOPREY_TAGS       = { "scarytoprey" }
 local NIGHTBIRD_TAGS         = { "nightbird" }
 
+local function GetNightBirdPrefab()
+	local available = {}
+
+	for _, data in ipairs(NIGHTBIRDS) do
+		if not data.winter or _G.TheWorld.state.iswinter then
+			table.insert(available, data.prefab)
+		end
+	end
+
+	if #available > 0 then
+		return available[math.random(#available)]
+	end
+end
+
 local function CanNightBirdSpawn()
 	return _G.TheWorld.state.isnight and #NIGHTBIRDS > 0
 end
@@ -82,8 +96,11 @@ local function SpawnNightBirdForPlayer(spawner, player)
 		return
 	end
 
-	local prefab = NIGHTBIRDS[math.random(#NIGHTBIRDS)]
-	SpawnNightBird(spawner, prefab, spawnpoint)
+	local prefab = GetNightBirdPrefab()
+
+	if prefab ~= nil then
+		SpawnNightBird(spawner, prefab, spawnpoint)
+	end
 end
 
 local function ScheduleNightBirdSpawn(spawner, player)
@@ -129,7 +146,7 @@ local function ToggleNightBirdSpawn(spawner)
 	end
 end
 
-AddClassPostConstruct("components/birdspawner", function(self)
+AddComponentPostInit("birdspawner", function(self)
 	-- New birds will spawn when landing on these turfs.
 	local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
 

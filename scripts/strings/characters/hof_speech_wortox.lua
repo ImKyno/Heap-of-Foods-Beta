@@ -1373,4 +1373,14 @@ WORTOX.DESCRIBE.CHOCOLATE_CAKE = "A towering temptation of chocolate!"
 
 WORTOX.DESCRIBE.SWORDFISHBLUEDINNER = "Revenge is a dish best served cold. Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "A creature of the twilight!"
+WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "A creature of the twilight!",
+	HELD = "A bird in my pocket! Hyuyu!",
+}
+
+WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "A frosty little hunter!",
+	HELD = "A feisty little bird in my pouch!",
+}

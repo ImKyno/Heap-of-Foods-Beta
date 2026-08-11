@@ -1370,4 +1370,14 @@ WANDA.DESCRIBE.CHOCOLATE_CAKE = "A decadent cake for a special occasion."
 
 WANDA.DESCRIBE.SWORDFISHBLUEDINNER = "A convenient meal for when time is of the essence."
 
-WANDA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "Always watching, never sleeping."
+WANDA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Always watching, never sleeping.",
+	HELD = "It's remarkably restless in there.",
+}
+
+WANDA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "A creature that seems perfectly at home in the cold.",
+	HELD = "It seems rather unhappy about being carried.",
+}

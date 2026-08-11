@@ -1369,3 +1369,15 @@ WICKERBOTTOM.DESCRIBE.BROWNIE = "A dense chocolate confection." -- NEEDS TRANSLA
 WICKERBOTTOM.DESCRIBE.CHOCOLATE_CAKE = "A rich cake prepared with cocoa and sugar." -- NEEDS TRANSLATION
 
 WICKERBOTTOM.DESCRIBE.SWORDFISHBLUEDINNER = "A neatly prepared meal, quite suitable for travel." -- NEEDS TRANSLATION
+
+WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "A nocturnal bird with remarkably keen eyes.",
+	HELD = "It seems rather restless in there.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "A northern raptor well adapted to frigid climates.",
+	HELD = "It seems determined to peck its way out.",
+}

@@ -1369,3 +1369,15 @@ WARLY.DESCRIBE.BROWNIE = "Rich, fudgy, and wonderfully indulgent." -- NEEDS TRAN
 WARLY.DESCRIBE.CHOCOLATE_CAKE = "Magnifique! Rich, velvety, and deeply chocolatey." -- NEEDS TRANSLATION
 
 WARLY.DESCRIBE.SWORDFISHBLUEDINNER = "Ah, such fine dinner! Simple, elegant and delightful." -- NEEDS TRANSLATION
+
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "A charming creature of the night.",
+	HELD = "I can feel the little thing moving around.",
+}
+
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "A magnificent bird of the northern wilderness.",
+	HELD = "I believe it objects to being carried this way.",
+}

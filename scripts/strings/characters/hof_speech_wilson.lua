@@ -1370,4 +1370,14 @@ WILSON.DESCRIBE.CHOCOLATE_CAKE = "Now that's a cake!"
 
 WILSON.DESCRIBE.SWORDFISHBLUEDINNER = "A chilled bento! Perfect for a quick meal."
 
-WILSON.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "A curious nocturnal bird."
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "A curious nocturnal bird.",
+	HELD = "I can feel it moving in my pocket.",
+}
+
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "A formidable bird from the frozen north.",
+	HELD = "I can feel its beak poking my pocket.",
+}

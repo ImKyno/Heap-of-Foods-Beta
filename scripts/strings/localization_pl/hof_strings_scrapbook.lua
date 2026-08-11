@@ -201,6 +201,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Zimorodki często upuszczają Tropik
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emituje kolorowe, zdrowe światło o zmierzchu i w nocy."
 STRINGS.SCRAPBOOK.SPECIALINFO.HULLBREAKER_CREATURE = "Może uszkodzić kadłub łodzi podczas udanych ataków."
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS = "W Packim Baggims można przechowywać rzeczy podobnie jak w skrzyniach.\n\nUwielbia jeść wszelkiego rodzaju ryby."
+STRINGS.SCRAPBOOK.SPECIALINFO.NIGHTBIRD = "Ptak, który pojawia się tylko nocą i odlatuje o świcie."
 
 -- Struktury, Różne i Miejsca Zainteresowania.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "Kupiec z odległego archipelagu. Chce wymieniać swoje najlepsze narzędzia kuchenne i inne przydatne przedmioty na pyszne posiłki.\n\nStarszy pragnie posiłku o ekstremalnej słodyczy lub masła zmieszanego z owocami morza. Nagrodzi cię odpowiednio.\n\nPrzyniesienie ulubionego posiłku Starszego odblokuje nowe oferty handlowe."

@@ -1370,4 +1370,14 @@ WOODIE.DESCRIBE.CHOCOLATE_CAKE = "That's one heck of a chocolate cake."
 
 WOODIE.DESCRIBE.SWORDFISHBLUEDINNER = "I'm chilled to the bones!"
 
-WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "I don't like the way he stares at me!"
+WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "I don't like the way he stares at me!",
+	HELD = "He gives me the creeps!",
+}
+
+WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "How can they still survive in this cold?",
+	HELD = "He doesn't seem too happy in my pockets!",
+}

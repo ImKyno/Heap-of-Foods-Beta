@@ -69,6 +69,7 @@ local INIT_POSTINIT_PREFABS =
 	"berrybush",
 	"berrybush_juicy",
 	"birdcage",
+	"birdtrap",
 	"bullkelp_plant",
 	"catcoon",
 	"characters",

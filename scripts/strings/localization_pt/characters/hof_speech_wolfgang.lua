@@ -1369,3 +1369,15 @@ WOLFGANG.DESCRIBE.BROWNIE = "Quadradinho de chocolate é muito bom!"
 WOLFGANG.DESCRIBE.CHOCOLATE_CAKE = "Wolfgang ama bolo gigante de chocolate!"
 
 WOLFGANG.DESCRIBE.SWORDFISHBLUEDINNER = "Comida gelada ainda é comida boa!"
+
+WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Passarinho está observando Wolfgang!",
+	HELD = "Passarinho está se mexendo no bolso de Wolfgang!",
+}
+
+WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Pássaro frio tem olhos muito afiados!",
+	HELD = "Pássaro afiado está atacando o bolso de Wolfgang!",
+}

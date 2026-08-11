@@ -1369,3 +1369,15 @@ WENDY.DESCRIBE.BROWNIE = "Dark and sweet." -- NEEDS TRANSLATION
 WENDY.DESCRIBE.CHOCOLATE_CAKE = "A cake as dark as my mood." -- NEEDS TRANSLATION
 
 WENDY.DESCRIBE.SWORDFISHBLUEDINNER = "A cold meal for a cold world." -- NEEDS TRANSLATION
+
+WENDY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "It watches from the darkness...",
+	HELD = "I wonder if it can see from inside my pocket...",
+}
+
+WENDY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "It watches the frozen darkness.",
+	HELD = "Its little beak keeps prodding me...",
+}

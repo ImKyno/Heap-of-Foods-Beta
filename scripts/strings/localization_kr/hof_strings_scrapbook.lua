@@ -140,6 +140,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_MIND = "휴대용 양념기를 사용
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FED = "휴대용 양념기를 사용하여 요리 냄비 음식에 추가할 수 있습니다.\n\n든든 전분을 첨가한 음식을 먹으면 허기가 25% 더 많이 회복됩니다.\n\n허기 감소율이 15% 감소합니다.\n\n또한 수면 중 체력 회복량이 25% 증가하고 허기 소모량이 25% 감소합니다.\n\n지속 시간 4분."
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_FIRE = "휴대용 양념기를 사용하여 요리 냄비 음식에 추가할 수 있습니다.\n\n화염 결정을 첨가한 음식을 먹으면 공격 시 대상을 불태웁니다.\n\n불타는 대상을 상대로 주는 피해량이 25% 증가합니다.\n\n또한 체온이 40도 상승합니다.\n\n지속 시간 4분."
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_COLD = "휴대용 양념기를 사용하여 요리 냄비 음식에 추가할 수 있습니다.\n\n서리 박편을 첨가한 음식을 먹으면 공격 시 대상을 얼립니다.\n\n추위(얼어붙음)에 영향을 받는 대상을 상대로 주는 피해량이 25% 증가합니다.\n\n또한 체온이 40도 하락합니다.\n\n지속 시간 4분."
+
 -- Items & Foods.
 STRINGS.SCRAPBOOK.SPECIALINFO.SALT = "요리 냄비 음식에 소금을 한 꼬집 치면 신선도가 30% 회복됩니다. 이제 음식이 상할까 봐 걱정하지 마세요!"
 STRINGS.SCRAPBOOK.SPECIALINFO.SALTRACK = "이 건조대는 며칠마다 소금 바위 조각을 하나씩 수집합니다."
@@ -200,6 +201,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "물새는 종종 하늘에서 열대
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "저녁과 밤 시간 동안 알록달록하고 건강한 빛을 발산합니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.HULLBREAKER_CREATURE = "공격을 성공시키면 배의 선체에 피해를 줄 수 있습니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS = "상자처럼 패킴 배김스의 내부에 물건을 보관할 수 있습니다.\n\n온갖 종류의 물고기를 먹는 것을 아주 좋아합니다."
+STRINGS.SCRAPBOOK.SPECIALINFO.NIGHTBIRD = "밤에만 나타났다가 새벽에 날아가 버리는 새."
 
 -- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "먼 제도에서 온 상인입니다. 그는 자신이 가진 최고의 조리 도구 및 유용한 아이템들을 맛있는 요리와 교환하고 싶어 합니다.\n\n돼지 장로는 극도로 달콤한 요리나 해산물에 버터를 곁들인 요리를 갈망하고 있습니다. 요리를 가져다주면 그에 걸맞은 보상을 줄 것입니다.\n\n장로가 가장 좋아하는 요리를 가져다주면 더 많은 거래 항목이 잠금 해제됩니다."

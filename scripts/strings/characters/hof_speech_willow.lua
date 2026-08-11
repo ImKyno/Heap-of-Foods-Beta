@@ -1370,4 +1370,14 @@ WILLOW.DESCRIBE.CHOCOLATE_CAKE = "My favorite kind of cake."
 
 WILLOW.DESCRIBE.SWORDFISHBLUEDINNER = "Cold food? Boooooring."
 
-WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "It only comes out when the sun goes down."
+WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = 
+{
+	GENERIC = "It only comes out when the sun goes down.",
+	HELD = "It's scratching around in my pocket.",
+}
+
+WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Even the birds are freezing up here.",
+	HELD = "That bird is poking holes in my pocket!",
+}

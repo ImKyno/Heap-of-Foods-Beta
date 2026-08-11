@@ -1370,4 +1370,14 @@ WOLFGANG.DESCRIBE.CHOCOLATE_CAKE = "Wolfgang loves giant chocolate cake!"
 
 WOLFGANG.DESCRIBE.SWORDFISHBLUEDINNER = "Cold food still good!"
 
-WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "Little bird is watching Wolfgang!"
+WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Little bird is watching Wolfgang!",
+	HELD = "Little bird is moving in Wolfgang's pocket!",
+}
+
+WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Cold bird has very sharp eyes!",
+	HELD = "Sharp bird is attacking Wolfgang's pocket!",
+}

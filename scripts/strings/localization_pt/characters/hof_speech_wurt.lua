@@ -1371,3 +1371,15 @@ WURT.DESCRIBE.BROWNIE = "Docinho de chocolate!"
 WURT.DESCRIBE.CHOCOLATE_CAKE = "Bolo grandão, florp!"
 
 WURT.DESCRIBE.SWORDFISHBLUEDINNER = "Por que fazer isso com os pobres peixinhos?"
+
+WURT.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Passarinho acordado à noite!",
+	HELD = "Ele gosta de mim.",
+}
+
+WURT.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Pássaro frio.",
+	HELD = "Ele está me mordendo! GLORP!",
+}

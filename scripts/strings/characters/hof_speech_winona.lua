@@ -1370,4 +1370,14 @@ WINONA.DESCRIBE.CHOCOLATE_CAKE = "That's a cake worth taking a break for."
 
 WINONA.DESCRIBE.SWORDFISHBLUEDINNER = "That's some fancy dinner."
 
-WINONA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "Looks like it works the night shift."
+WINONA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Looks like it works the night shift.",
+	HELD = "It's keeping itself busy in there.",
+}
+
+WINONA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Looks like this one's built for the cold.",
+	HELD = "That bird's gonna tear up my pocket.",
+}

@@ -1370,4 +1370,14 @@ WATHGRITHR.DESCRIBE.CHOCOLATE_CAKE = "A grand feast of chocolate!"
 
 WATHGRITHR.DESCRIBE.SWORDFISHBLUEDINNER = "The air is getting cold around me!"
 
-WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "A bird that hunts beneath the moon!"
+WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "A bird that hunts beneath the moon!",
+	HELD = "The night bird struggles within my pouch!",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "A mighty hunter of the frozen wilds!",
+	HELD = "The fierce bird challenges its confinement!",
+}

@@ -1368,4 +1368,16 @@ WEBBER.DESCRIBE.BROWNIE = "Nós poderíamos comer uma fornada inteira!"
 
 WEBBER.DESCRIBE.CHOCOLATE_CAKE = "Nós adoramos bolo de chocolate!"
 
-WEBBER.DESCRIBE.SWORDFISHBLUEDINNER = "Nós adoramos comidinhas embaladas!""
+WEBBER.DESCRIBE.SWORDFISHBLUEDINNER = "Nós adoramos comidinhas embaladas!"
+
+WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Ele está acordado quando deveria estar dormindo!",
+	HELD = "Ele está fazendo cócegas no nosso bolso!",
+}
+
+WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "É um pássaro de inverno muito noturno!",
+	HELD = "Ele está cutucando nosso bolso!",
+}

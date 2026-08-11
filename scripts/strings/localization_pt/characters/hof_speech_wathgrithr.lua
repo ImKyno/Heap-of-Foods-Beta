@@ -1369,3 +1369,15 @@ WATHGRITHR.DESCRIBE.BROWNIE = "Um banquete de chocolate!"
 WATHGRITHR.DESCRIBE.CHOCOLATE_CAKE = "Um grandioso banquete de chocolate!"
 
 WATHGRITHR.DESCRIBE.SWORDFISHBLUEDINNER = "O ar está começando a ficar frio em volta de mim!"
+
+WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Um pássaro que caça sob a lua!",
+	HELD = "O pássaro noturno se debate dentro da minha bolsa!",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Um poderoso caçador das terras congeladas!",
+	HELD = "O pássaro feroz desafia seu confinamento!",
+}

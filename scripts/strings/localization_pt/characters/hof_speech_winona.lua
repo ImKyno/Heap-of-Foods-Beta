@@ -1369,3 +1369,15 @@ WINONA.DESCRIBE.BROWNIE = "Um pouco de chocolate torna um dia longo melhor."
 WINONA.DESCRIBE.CHOCOLATE_CAKE = "Esse é um bolo pelo qual vale a pena fazer uma pausa."
 
 WINONA.DESCRIBE.SWORDFISHBLUEDINNER = "Isso é um jantar refinado."
+
+WINONA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Parece que ele trabalha no turno da noite.",
+	HELD = "Está se mantendo ocupado aí dentro.",
+}
+
+WINONA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Parece que esse aqui foi feito para o frio.",
+	HELD = "Esse pássaro vai acabar com meu bolso.",
+}

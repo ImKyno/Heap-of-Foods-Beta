@@ -1370,4 +1370,14 @@ WARLY.DESCRIBE.CHOCOLATE_CAKE = "Magnifique! Rich, velvety, and deeply chocolate
 
 WARLY.DESCRIBE.SWORDFISHBLUEDINNER = "Ah, such fine dinner! Simple, elegant and delightful."
 
-WARLY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "A charming creature of the night."
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "A charming creature of the night.",
+	HELD = "I can feel the little thing moving around.",
+}
+
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "A magnificent bird of the northern wilderness.",
+	HELD = "I believe it objects to being carried this way.",
+}

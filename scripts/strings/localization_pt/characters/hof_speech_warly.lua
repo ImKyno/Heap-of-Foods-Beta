@@ -1369,3 +1369,15 @@ WARLY.DESCRIBE.BROWNIE = "Rico, cremoso e maravilhosamente indulgente."
 WARLY.DESCRIBE.CHOCOLATE_CAKE = "Magnifique! Rico, aveludado e profundamente achocolatado."
 
 WARLY.DESCRIBE.SWORDFISHBLUEDINNER = "Ah, um belo jantar! Simples, elegante e satisfatório."
+
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Uma criatura encantadora da noite.",
+	HELD = "Consigo sentir a criaturinha se mexendo.",
+}
+
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Um pássaro magnífico das terras selvagens do norte.",
+	HELD = "Acredito que ele não goste de ser carregado dessa maneira.",
+}

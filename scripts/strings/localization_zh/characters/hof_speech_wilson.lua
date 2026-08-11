@@ -1369,3 +1369,15 @@ WILSON.DESCRIBE.BROWNIE = "A wonderfully dense chocolate confection." -- NEEDS T
 WILSON.DESCRIBE.CHOCOLATE_CAKE = "Now that's a cake!" -- NEEDS TRANSLATION
 
 WILSON.DESCRIBE.SWORDFISHBLUEDINNER = "A chilled bento! Perfect for a quick meal." -- NEEDS TRANSLATION
+
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "A curious nocturnal bird.",
+	HELD = "I can feel it moving in my pocket.",
+}
+
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "A formidable bird from the frozen north.",
+	HELD = "I can feel its beak poking my pocket.",
+}

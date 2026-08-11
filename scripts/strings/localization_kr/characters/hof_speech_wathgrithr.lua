@@ -1369,3 +1369,15 @@ WATHGRITHR.DESCRIBE.BROWNIE = "A chocolate feast!" -- NEEDS TRANSLATION
 WATHGRITHR.DESCRIBE.CHOCOLATE_CAKE = "A grand feast of chocolate!" -- NEEDS TRANSLATION
 
 WATHGRITHR.DESCRIBE.SWORDFISHBLUEDINNER = "The air is getting cold around me!" -- NEEDS TRANSLATION
+
+WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "A bird that hunts beneath the moon!",
+	HELD = "The night bird struggles within my pouch!",
+}
+
+WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "A mighty hunter of the frozen wilds!",
+	HELD = "The fierce bird challenges its confinement!",
+}

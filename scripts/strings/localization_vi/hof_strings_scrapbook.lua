@@ -201,6 +201,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Chim Bói Cá thường sẽ thả C
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Phát ra ánh sáng khỏe khoắn đầy màu sắc vào hoàng hôn và ban đêm."
 STRINGS.SCRAPBOOK.SPECIALINFO.HULLBREAKER_CREATURE = "Có thể làm hỏng thân Thuyền khi tấn công trúng."
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS = "Có thể cất đồ trong Packim Baggims giống như một chiếc rương.\n\nNó thích ăn đủ loại cá."
+STRINGS.SCRAPBOOK.SPECIALINFO.NIGHTBIRD = "Một loài chim chỉ xuất hiện vào ban đêm và bay đi lúc bình minh."
 
 -- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "Một thương nhân đến từ quần đảo xa xôi. Ông ấy sẵn lòng trao đổi những dụng cụ nấu ăn tốt nhất và các vật phẩm hữu ích khác để lấy những bữa ăn ngon.\n\nTrưởng Lão đang thèm một món cực kỳ ngọt hoặc Bơ trộn với hải sản. Ông ấy sẽ thưởng cho ngươi xứng đáng.\n\nMang đến món khoái khẩu của Trưởng Lão sẽ mở khóa thêm nhiều giao dịch hơn."

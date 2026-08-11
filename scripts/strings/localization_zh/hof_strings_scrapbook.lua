@@ -201,6 +201,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "翠鸟经常会从上空投下热带
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "在黄昏和夜晚会发出色彩鲜艳的健康光芒。"
 STRINGS.SCRAPBOOK.SPECIALINFO.HULLBREAKER_CREATURE = "成功发动攻击时可能会损坏船体。"
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS = "物品可以像箱子一样存放在帕克白克斯里。\n\n他喜欢吃各种各样的鱼。"
+STRINGS.SCRAPBOOK.SPECIALINFO.NIGHTBIRD = "一种只在夜间出现、于黎明时分飞离的鸟。"
 
 -- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "来自遥远群岛的商人。他愿意用最好的炊具和其他有用的物品换取美味佳肴。\n\n长老想吃极甜的食物或黄油海鲜。他会给你相应的奖励。\n\n把长老最喜欢的食物带过来会解锁更多交易"

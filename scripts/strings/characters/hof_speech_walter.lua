@@ -1370,4 +1370,14 @@ WALTER.DESCRIBE.CHOCOLATE_CAKE = "Whoa! That's one serious cake!"
 
 WALTER.DESCRIBE.SWORDFISHBLUEDINNER = "A packed lunch! Perfect for an adventure around the woods."
 
-WALTER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "Hey, it's a night bird!"
+WALTER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Hey, it's a night bird!",
+	HELD = "I can feel it fluttering in my pocket.",
+}
+
+WALTER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Whoa! I've never seen that bird before!",
+	HELD = "Careful with that beak!",
+}

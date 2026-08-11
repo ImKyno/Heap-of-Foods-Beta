@@ -1372,3 +1372,15 @@ WORTOX.DESCRIBE.BROWNIE = "A little square of chocolatey mischief!" -- NEEDS TRA
 WORTOX.DESCRIBE.CHOCOLATE_CAKE = "A towering temptation of chocolate!" -- NEEDS TRANSLATION
 
 WORTOX.DESCRIBE.SWORDFISHBLUEDINNER = "Revenge is a dish best served cold. Hyuyu!" -- NEEDS TRANSLATION
+
+WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "A creature of the twilight!",
+	HELD = "A bird in my pocket! Hyuyu!",
+}
+
+WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "A frosty little hunter!",
+	HELD = "A feisty little bird in my pouch!",
+}

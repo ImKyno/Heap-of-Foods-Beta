@@ -1372,4 +1372,14 @@ WURT.DESCRIBE.CHOCOLATE_CAKE = "Big sweet cake, florp!"
 
 WURT.DESCRIBE.SWORDFISHBLUEDINNER = "Why do this to poor fishies?"
 
-WURT.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "Birdie awake at night!"
+WURT.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Birdie awake at night!",
+	HELD = "It likes me.",
+}
+
+WURT.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Cold bird.",
+	HELD = "He is biting me! GLORP!"
+}

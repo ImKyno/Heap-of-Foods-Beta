@@ -1369,3 +1369,15 @@ WAXWELL.DESCRIBE.BROWNIE = "Decadent, but acceptable." -- NEEDS TRANSLATION
 WAXWELL.DESCRIBE.CHOCOLATE_CAKE = "Now this is suitably indulgent." -- NEEDS TRANSLATION
 
 WAXWELL.DESCRIBE.SWORDFISHBLUEDINNER = "Homemade, but served with surprising refinement." -- NEEDS TRANSLATION
+
+WAXWELL.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "An unsettling little creature.",
+	HELD = "Stay quiet now, would you?",
+}
+
+WAXWELL.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "A remarkably nocturnal winter bird.",
+	HELD = "I can feel the wretched thing squirming.",
+}

@@ -1369,3 +1369,15 @@ WALTER.DESCRIBE.BROWNIE = "São perfeitos para compartilhar ao redor da fogueira
 WALTER.DESCRIBE.CHOCOLATE_CAKE = "Uau! Esse é um bolo de respeito!"
 
 WALTER.DESCRIBE.SWORDFISHBLUEDINNER = "Um almoço embalado! Perfeito para uma aventura."
+
+WALTER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Ei, é um pássaro noturno!",
+	HELD = "Consigo senti-lo batendo as asas no meu bolso.",
+}
+
+WALTER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Uau! Nunca vi esse pássaro antes!",
+	HELD = "Cuidado com esse bico!",
+}

@@ -1369,3 +1369,15 @@ WOODIE.DESCRIBE.BROWNIE = "Esse brownie está muito bom."
 WOODIE.DESCRIBE.CHOCOLATE_CAKE = "Esse é um baita bolo de chocolate."
 
 WOODIE.DESCRIBE.SWORDFISHBLUEDINNER = "Estou congelando até os ossos!"
+
+WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Não gosto do jeito que ele fica me encarando!",
+	HELD = "Ele me dá arrepios!",
+}
+
+WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Como é que eles conseguem sobreviver nesse frio?",
+	HELD = "Ele não parece muito feliz no meu bolso!",
+}

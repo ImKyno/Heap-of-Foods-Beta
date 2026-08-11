@@ -1369,3 +1369,15 @@ WAXWELL.DESCRIBE.BROWNIE = "Decadente, mas aceitável."
 WAXWELL.DESCRIBE.CHOCOLATE_CAKE = "Agora isto é devidamente indulgente."
 
 WAXWELL.DESCRIBE.SWORDFISHBLUEDINNER = "Caseiro, mas servida com surpreendente requinte."
+
+WAXWELL.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Uma criaturinha inquietante.",
+	HELD = "Fique quieto agora, está bem?",
+}
+
+WAXWELL.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Um pássaro de inverno excepcionalmente noturno.",
+	HELD = "Consigo sentir essa coisa miserável se contorcendo.",
+}

@@ -354,8 +354,8 @@ local birds =
 		nightbird       = true,
 		sounds          =
 		{
-			takeoff     = "hof_sounds/creatures/robin_night/take_off",
-			chirp       = "hof_sounds/creatures/robin_night/chirp",
+			takeoff     = "hof_sounds/creatures/robin_winter_night/take_off",
+			chirp       = "hof_sounds/creatures/robin_winter_night/chirp",
 			flyin       = "dontstarve/birds/flyin",
 		},
 	},

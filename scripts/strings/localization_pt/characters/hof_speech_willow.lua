@@ -1369,3 +1369,15 @@ WILLOW.DESCRIBE.BROWNIE = "Finalmente, algo bom."
 WILLOW.DESCRIBE.CHOCOLATE_CAKE = "Meu tipo favorito de bolo."
 
 WILLOW.DESCRIBE.SWORDFISHBLUEDINNER = "Comida gelada? Chaaaaato."
+
+WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Ele só aparece quando o sol se põe.",
+	HELD = "Ele está se mexendo dentro do meu bolso.",
+}
+
+WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Até os pássaros estão congelando por aqui.",
+	HELD = "Esse pássaro está furando meu bolso!",
+}

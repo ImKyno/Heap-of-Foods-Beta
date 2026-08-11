@@ -1369,3 +1369,15 @@ WICKERBOTTOM.DESCRIBE.BROWNIE = "Uma densa sobremesa de chocolate."
 WICKERBOTTOM.DESCRIBE.CHOCOLATE_CAKE = "Um rico bolo preparado com cacau e açúcar."
 
 WICKERBOTTOM.DESCRIBE.SWORDFISHBLUEDINNER = "Uma refeição gelada cuidadosamente preparada, bastante adequada para viagens."
+
+WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Um pássaro noturno com olhos excepcionalmente aguçados.",
+	HELD = "Parece bastante inquieto aí dentro.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Uma ave de rapina do norte bem adaptada a climas gélidos.",
+	HELD = "Parece determinado a abrir caminho bicando para fora.",
+}

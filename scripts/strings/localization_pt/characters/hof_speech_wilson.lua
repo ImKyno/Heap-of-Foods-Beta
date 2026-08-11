@@ -1369,3 +1369,15 @@ WILSON.DESCRIBE.BROWNIE = "Uma deliciosa e densa sobremesa de chocolate."
 WILSON.DESCRIBE.CHOCOLATE_CAKE = "Agora isso sim é um bolo!"
 
 WILSON.DESCRIBE.SWORDFISHBLUEDINNER = "Um bento gelado! Perfeito para uma refeição rápida."
+
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Um curioso pássaro noturno.",
+	HELD = "Consigo senti-lo se mexendo no meu bolso.",
+}
+
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Um pássaro formidável do norte congelado.",
+	HELD = "Consigo sentir seu bico cutucando meu bolso.",
+}

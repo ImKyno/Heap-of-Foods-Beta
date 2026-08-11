@@ -1370,4 +1370,14 @@ WEBBER.DESCRIBE.CHOCOLATE_CAKE = "We love chocolate cake!"
 
 WEBBER.DESCRIBE.SWORDFISHBLUEDINNER = "We like little packed meals!"
 
-WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "It's awake when it's supposed to be sleeping!"
+WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "It's awake when it's supposed to be sleeping!",
+	HELD = "It's tickling our pocket!",
+}
+
+WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "It's a really night winter bird!",
+	HELD = "It's poking our pocket!",
+}

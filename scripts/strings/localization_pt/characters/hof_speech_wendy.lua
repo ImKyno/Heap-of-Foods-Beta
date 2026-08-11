@@ -1369,3 +1369,15 @@ WENDY.DESCRIBE.BROWNIE = "Escuro e doce."
 WENDY.DESCRIBE.CHOCOLATE_CAKE = "Um bolo tão escuro quanto meu humor."
 
 WENDY.DESCRIBE.SWORDFISHBLUEDINNER = "Uma comida gélida para um mundo gélido."
+
+WENDY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Ele observa das trevas...",
+	HELD = "Será que ele consegue enxergar de dentro do meu bolso?",
+}
+
+WENDY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Ele observa a escuridão congelada.",
+	HELD = "Seu pequeno bico não para de me cutucar.",
+}

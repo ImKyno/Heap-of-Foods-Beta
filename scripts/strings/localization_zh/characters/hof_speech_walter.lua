@@ -1369,3 +1369,15 @@ WALTER.DESCRIBE.BROWNIE = "These are perfect for sharing around the fire." -- NE
 WALTER.DESCRIBE.CHOCOLATE_CAKE = "Whoa! That's one serious cake!" -- NEEDS TRANSLATION
 
 WALTER.DESCRIBE.SWORDFISHBLUEDINNER = "A packed lunch! Perfect for an adventure around the woods." -- NEEDS TRANSLATION
+
+WALTER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "Hey, it's a night bird!",
+	HELD = "I can feel it fluttering in my pocket.",
+}
+
+WALTER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "Whoa! I've never seen that bird before!",
+	HELD = "Careful with that beak!",
+}

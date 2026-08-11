@@ -201,6 +201,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Martins-pescadores frequentemente de
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emite um brilho saudável e colorido ao entardecer e à noite."
 STRINGS.SCRAPBOOK.SPECIALINFO.HULLBREAKER_CREATURE = "Pode danificar o casco do barco ao executar ataques bem-sucedidos."
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS = "As coisas podem ser armazenadas em Packim Baggims como se fossem um baú.\n\nEle adora comer todos os tipos de peixe."
+STRINGS.SCRAPBOOK.SPECIALINFO.NIGHTBIRD = "Um pássaro que só aparece durante a noite e vai embora ao amanhecer."
 
 -- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "Um comerciante de um arquipélago distante. Ele está disposto a trocar seus melhores utensílios de cozinha e outros itens úteis por refeições deliciosas.\n\nO Elder deseja uma refeição extremamente doce ou manteiga misturada com frutos do mar. Ele recompensará de acordo.\n\nLevar a refeição favorita do Elder desbloqueará mais opções de comércio."

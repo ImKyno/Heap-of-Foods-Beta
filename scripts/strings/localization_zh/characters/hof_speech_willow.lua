@@ -1369,3 +1369,15 @@ WILLOW.DESCRIBE.BROWNIE = "Finally, something good." -- NEEDS TRANSLATION
 WILLOW.DESCRIBE.CHOCOLATE_CAKE = "My favorite kind of cake." -- NEEDS TRANSLATION
 
 WILLOW.DESCRIBE.SWORDFISHBLUEDINNER = "Cold food? Boooooring." -- NEEDS TRANSLATION
+
+WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "It only comes out when the sun goes down.",
+	HELD = "It's scratching around in my pocket.",
+}
+
+WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "Even the birds are freezing up here.",
+	HELD = "That bird is poking holes in my pocket!",
+}

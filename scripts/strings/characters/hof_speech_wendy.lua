@@ -1370,4 +1370,14 @@ WENDY.DESCRIBE.CHOCOLATE_CAKE = "A cake as dark as my mood."
 
 WENDY.DESCRIBE.SWORDFISHBLUEDINNER = "A cold meal for a cold world."
 
-WENDY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "It watches from the darkness..."
+WENDY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "It watches from the darkness...",
+	HELD = "I wonder if it can see from inside my pocket...",
+}
+
+WENDY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "It watches the frozen darkness.",
+	HELD = "Its little beak keeps prodding me...",
+}

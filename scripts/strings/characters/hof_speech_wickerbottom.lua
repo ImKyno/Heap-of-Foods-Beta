@@ -1370,4 +1370,14 @@ WICKERBOTTOM.DESCRIBE.CHOCOLATE_CAKE = "A rich cake prepared with cocoa and suga
 
 WICKERBOTTOM.DESCRIBE.SWORDFISHBLUEDINNER = "A neatly prepared meal, quite suitable for travel."
 
-WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "A nocturnal bird with remarkably keen eyes."
+WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "A nocturnal bird with remarkably keen eyes.",
+	HELD = "It seems rather restless in there.",
+}
+
+WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "A northern raptor well adapted to frigid climates.",
+	HELD = "It seems determined to peck its way out.",
+}

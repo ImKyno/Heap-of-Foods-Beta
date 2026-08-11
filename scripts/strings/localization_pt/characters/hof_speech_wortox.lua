@@ -1371,4 +1371,16 @@ WORTOX.DESCRIBE.BROWNIE = "Um pequeno quadrado de travessura achocolatada!"
 
 WORTOX.DESCRIBE.CHOCOLATE_CAKE = "Uma tentação de chocolate que chega aos céus!"
 
-WORTOX.DESCRIBE.SWORDFISHBLUEDINNER = "Revenge is a dish best served cold. Hyuyu!" -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.SWORDFISHBLUEDINNER = "Vingança é um prato que se serve frio. Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Uma criatura do crepúsculo!",
+	HELD = "Um pássaro no meu bolso! Hyuyu!",
+}
+
+WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Um pequeno caçador congelante!",
+	HELD = "Um passarinho bem atrevido na minha bolsa!",
+}

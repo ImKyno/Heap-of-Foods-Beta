@@ -1369,3 +1369,15 @@ WEBBER.DESCRIBE.BROWNIE = "We could eat a whole batch!" -- NEEDS TRANSLATION
 WEBBER.DESCRIBE.CHOCOLATE_CAKE = "We love chocolate cake!" -- NEEDS TRANSLATION
 
 WEBBER.DESCRIBE.SWORDFISHBLUEDINNER = "We like little packed meals!" -- NEEDS TRANSLATION
+
+WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "It's awake when it's supposed to be sleeping!",
+	HELD = "It's tickling our pocket!",
+}
+
+WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "It's a really night winter bird!",
+	HELD = "It's poking our pocket!",
+}

@@ -1369,3 +1369,15 @@ WINONA.DESCRIBE.BROWNIE = "A little chocolate makes a long day better." -- NEEDS
 WINONA.DESCRIBE.CHOCOLATE_CAKE = "That's a cake worth taking a break for." -- NEEDS TRANSLATION
 
 WINONA.DESCRIBE.SWORDFISHBLUEDINNER = "That's some fancy dinner." -- NEEDS TRANSLATION
+
+WINONA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "Looks like it works the night shift.",
+	HELD = "It's keeping itself busy in there.",
+}
+
+WINONA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "Looks like this one's built for the cold.",
+	HELD = "That bird's gonna tear up my pocket.",
+}

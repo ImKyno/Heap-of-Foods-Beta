@@ -1369,3 +1369,15 @@ WOLFGANG.DESCRIBE.BROWNIE = "Chocolate square is very good!" -- NEEDS TRANSLATIO
 WOLFGANG.DESCRIBE.CHOCOLATE_CAKE = "Wolfgang loves giant chocolate cake!" -- NEEDS TRANSLATION
 
 WOLFGANG.DESCRIBE.SWORDFISHBLUEDINNER = "Cold food still good!" -- NEEDS TRANSLATION
+
+WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "Little bird is watching Wolfgang!",
+	HELD = "Little bird is moving in Wolfgang's pocket!",
+}
+
+WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "Cold bird has very sharp eyes!",
+	HELD = "Sharp bird is attacking Wolfgang's pocket!",
+}

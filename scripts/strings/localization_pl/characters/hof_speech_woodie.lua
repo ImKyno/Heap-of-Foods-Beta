@@ -1369,3 +1369,15 @@ WOODIE.DESCRIBE.BROWNIE = "That's a mighty fine brownie." -- NEEDS TRANSLATION
 WOODIE.DESCRIBE.CHOCOLATE_CAKE = "That's one heck of a chocolate cake." -- NEEDS TRANSLATION
 
 WOODIE.DESCRIBE.SWORDFISHBLUEDINNER = "I'm chilled to the bones!" -- NEEDS TRANSLATION
+
+WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "I don't like the way he stares at me!",
+	HELD = "He gives me the creeps!",
+}
+
+WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+{
+	GENERIC = "How can they still survive in this cold?",
+	HELD = "He doesn't seem too happy in my pockets!",
+}

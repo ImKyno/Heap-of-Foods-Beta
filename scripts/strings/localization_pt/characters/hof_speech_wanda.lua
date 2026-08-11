@@ -1369,3 +1369,15 @@ WANDA.DESCRIBE.BROWNIE = "Chocolate rico nunca sai de moda."
 WANDA.DESCRIBE.CHOCOLATE_CAKE = "Um bolo decadente para uma ocasião especial."
 
 WANDA.DESCRIBE.SWORDFISHBLUEDINNER = "Uma refeição conveniente para quando o tempo é essencial."
+
+WANDA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
+{
+	GENERIC = "Sempre observando, nunca dormindo.",
+	HELD = "Está excepcionalmente inquieto aí dentro.",
+}
+
+WANDA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
+{
+	GENERIC = "Uma criatura que parece perfeitamente à vontade no frio.",
+	HELD = "Parece bastante infeliz por estar sendo carregado.",
+}

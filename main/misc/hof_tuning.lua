@@ -102,8 +102,13 @@ TUNING.HOF_NOSPICE_FOODS =
 
 TUNING.HOF_NIGHTBIRDS =
 {
-	"kyno_bird_robin_night",
-	"kyno_bird_robin_winter_night",
+	{
+		prefab = "kyno_bird_robin_night",
+	},
+	{
+		prefab = "kyno_bird_robin_winter_night",
+		winter = true,
+	},
 }
 
 TUNING.KYNO_LUCK_HUGE = 0.25
