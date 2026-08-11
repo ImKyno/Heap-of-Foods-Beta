@@ -1369,3 +1369,5 @@ WINONA.DESCRIBE.BROWNIE = "A little chocolate makes a long day better."
 WINONA.DESCRIBE.CHOCOLATE_CAKE = "That's a cake worth taking a break for."
 
 WINONA.DESCRIBE.SWORDFISHBLUEDINNER = "That's some fancy dinner."
+
+WINONA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "Looks like it works the night shift."

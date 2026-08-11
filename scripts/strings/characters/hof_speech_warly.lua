@@ -1369,3 +1369,5 @@ WARLY.DESCRIBE.BROWNIE = "Rich, fudgy, and wonderfully indulgent."
 WARLY.DESCRIBE.CHOCOLATE_CAKE = "Magnifique! Rich, velvety, and deeply chocolatey."
 
 WARLY.DESCRIBE.SWORDFISHBLUEDINNER = "Ah, such fine dinner! Simple, elegant and delightful."
+
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "A charming creature of the night."

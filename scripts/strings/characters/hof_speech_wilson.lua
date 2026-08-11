@@ -1369,3 +1369,5 @@ WILSON.DESCRIBE.BROWNIE = "A wonderfully dense chocolate confection."
 WILSON.DESCRIBE.CHOCOLATE_CAKE = "Now that's a cake!"
 
 WILSON.DESCRIBE.SWORDFISHBLUEDINNER = "A chilled bento! Perfect for a quick meal."
+
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "A curious nocturnal bird."

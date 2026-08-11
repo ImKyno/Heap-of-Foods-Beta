@@ -1369,3 +1369,5 @@ WOLFGANG.DESCRIBE.BROWNIE = "Chocolate square is very good!"
 WOLFGANG.DESCRIBE.CHOCOLATE_CAKE = "Wolfgang loves giant chocolate cake!"
 
 WOLFGANG.DESCRIBE.SWORDFISHBLUEDINNER = "Cold food still good!"
+
+WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "Little bird is watching Wolfgang!"

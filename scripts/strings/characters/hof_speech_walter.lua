@@ -1369,3 +1369,5 @@ WALTER.DESCRIBE.BROWNIE = "These are perfect for sharing around the fire."
 WALTER.DESCRIBE.CHOCOLATE_CAKE = "Whoa! That's one serious cake!"
 
 WALTER.DESCRIBE.SWORDFISHBLUEDINNER = "A packed lunch! Perfect for an adventure around the woods."
+
+WALTER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "Hey, it's a night bird!"

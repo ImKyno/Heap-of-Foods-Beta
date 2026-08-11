@@ -1369,3 +1369,5 @@ WEBBER.DESCRIBE.BROWNIE = "We could eat a whole batch!"
 WEBBER.DESCRIBE.CHOCOLATE_CAKE = "We love chocolate cake!"
 
 WEBBER.DESCRIBE.SWORDFISHBLUEDINNER = "We like little packed meals!"
+
+WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "It's awake when it's supposed to be sleeping!"

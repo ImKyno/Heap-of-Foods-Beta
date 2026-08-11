@@ -1372,3 +1372,5 @@ WORTOX.DESCRIBE.BROWNIE = "A little square of chocolatey mischief!"
 WORTOX.DESCRIBE.CHOCOLATE_CAKE = "A towering temptation of chocolate!"
 
 WORTOX.DESCRIBE.SWORDFISHBLUEDINNER = "Revenge is a dish best served cold. Hyuyu!"
+
+WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "A creature of the twilight!"

@@ -15950,7 +15950,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		anim           = "idle",
 		scale          = .85,
 		animoffsetx    = -10,
-		deps           = {"cutgrass", "twigs", "feather_robin_winter", "kyno_bacon", "kyno_bacon_cooked", "kyno_koi"},
+		deps           = {"cutgrass", "twigs", "flint", "feather_robin_winter", "smallmeat", "cookedsmallmeat", "kyno_koi"},
 		specialinfo    = "KINGFISHER",
 	},
 
@@ -15968,7 +15968,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		anim           = "idle",
 		animoffsetx    = -20,
 		animoffsety    = 20,
-		deps           = {"cutgrass", "twigs", "feather_crow", "smallmeat", "cookedsmallmeat"},
+		deps           = {"cutgrass", "twigs", "flint", "feather_crow", "smallmeat", "cookedsmallmeat"},
 	},
 
 	toucan_chubby      =
@@ -15985,7 +15985,7 @@ local HOF_SCRAPBOOK_CREATURES =
 		anim           = "idle",
 		animoffsetx    = -5,
 		animoffsety    = 10,
-		deps           = {"cutgrass", "twigs", "feather_crow", "smallmeat", "cookedsmallmeat"},
+		deps           = {"cutgrass", "twigs", "flint", "feather_crow", "smallmeat", "cookedsmallmeat"},
 	},
 
 	quagmire_pigeon    =
@@ -16000,7 +16000,39 @@ local HOF_SCRAPBOOK_CREATURES =
 		bank           = "crow",
 		build          = "quagmire_pigeon_build",
 		anim           = "idle",
-		deps           = {"cutgrass", "twigs", "feather_robin_winter", "kyno_bacon", "kyno_bacon_cooked"},
+		deps           = {"cutgrass", "twigs", "flint", "feather_robin_winter", "kyno_bacon", "kyno_bacon_cooked"},
+	},
+
+	kyno_bird_robin_night =
+	{
+		name           = "kyno_bird_robin_night",
+		type           = "creature",
+		subcat         = "bird",
+		tex            = "kyno_bird_robin_night.tex",
+		prefab         = "kyno_bird_robin_night",
+		health         = 25,
+		perishable     = 2400,
+		bank           = "crow",
+		build          = "kyno_bird_robin_night_build",
+		anim           = "idle",
+		deps           = {"cutgrass", "twigs", "flint", "feather_crow", "smallmeat", "cookedsmallmeat"},
+		specialinfo    = "NIGHTBIRD",
+	},
+
+	kyno_bird_robin_winter_night =
+	{
+		name           = "kyno_bird_robin_winter_night",
+		type           = "creature",
+		subcat         = "bird",
+		tex            = "kyno_bird_robin_winter_night.tex",
+		prefab         = "kyno_bird_robin_winter_night",
+		health         = 25,
+		perishable     = 2400,
+		bank           = "crow",
+		build          = "kyno_bird_robin_winter_night_build",
+		anim           = "idle",
+		deps           = {"cutgrass", "twigs", "flint", "feather_crow", "smallmeat", "cookedsmallmeat"},
+		specialinfo    = "NIGHTBIRD",
 	},
 
 	kyno_sugarfly      =

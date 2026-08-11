@@ -1369,3 +1369,5 @@ WATHGRITHR.DESCRIBE.BROWNIE = "A chocolate feast!"
 WATHGRITHR.DESCRIBE.CHOCOLATE_CAKE = "A grand feast of chocolate!"
 
 WATHGRITHR.DESCRIBE.SWORDFISHBLUEDINNER = "The air is getting cold around me!"
+
+WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "A bird that hunts beneath the moon!"

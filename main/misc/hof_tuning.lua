@@ -100,6 +100,12 @@ TUNING.HOF_NOSPICE_FOODS =
 	"watercup",
 }
 
+TUNING.HOF_NIGHTBIRDS =
+{
+	"kyno_bird_robin_night",
+	"kyno_bird_robin_winter_night",
+}
+
 TUNING.KYNO_LUCK_HUGE = 0.25
 TUNING.KYNO_LUCK_LARGE = 0.20
 TUNING.KYNO_LUCK_MEDLARGE = 0.15

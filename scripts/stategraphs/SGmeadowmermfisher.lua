@@ -237,6 +237,7 @@ CommonStates.AddCombatStates(states,
 })
 
 CommonStates.AddIdle(states)
+CommonStates.AddSimpleState(states, "refuse", "pig_reject", { "busy" })
 CommonStates.AddSimpleActionState(states, "gohome", "pig_pickup", 4 * FRAMES, {"busy"})
 -- CommonStates.AddSimpleActionState(states, "eat", "eat", 10 * FRAMES, {"busy"})
 CommonStates.AddSimpleActionState(states, "fish", "fishing", 10 * FRAMES, {"busy"})

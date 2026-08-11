@@ -1369,3 +1369,5 @@ WICKERBOTTOM.DESCRIBE.BROWNIE = "A dense chocolate confection."
 WICKERBOTTOM.DESCRIBE.CHOCOLATE_CAKE = "A rich cake prepared with cocoa and sugar."
 
 WICKERBOTTOM.DESCRIBE.SWORDFISHBLUEDINNER = "A neatly prepared meal, quite suitable for travel."
+
+WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "A nocturnal bird with remarkably keen eyes."

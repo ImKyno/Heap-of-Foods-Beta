@@ -1369,3 +1369,5 @@ WAXWELL.DESCRIBE.BROWNIE = "Decadent, but acceptable."
 WAXWELL.DESCRIBE.CHOCOLATE_CAKE = "Now this is suitably indulgent."
 
 WAXWELL.DESCRIBE.SWORDFISHBLUEDINNER = "Homemade, but served with surprising refinement."
+
+WAXWELL.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "An unsettling little creature."

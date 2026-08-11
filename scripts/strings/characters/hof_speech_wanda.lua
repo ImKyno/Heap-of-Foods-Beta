@@ -1369,3 +1369,5 @@ WANDA.DESCRIBE.BROWNIE = "Rich chocolate never goes out of style."
 WANDA.DESCRIBE.CHOCOLATE_CAKE = "A decadent cake for a special occasion."
 
 WANDA.DESCRIBE.SWORDFISHBLUEDINNER = "A convenient meal for when time is of the essence."
+
+WANDA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "Always watching, never sleeping."

@@ -201,6 +201,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Kingfishers will often drop Tropical
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emits a colorful healthy glow during dusk and night."
 STRINGS.SCRAPBOOK.SPECIALINFO.HULLBREAKER_CREATURE = "Can damage the boat's hull when landing successful attacks."
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS = "Things can be stored in Packim Baggims much like a chest.\n\nHe loves eating all kinds of fish."
+STRINGS.SCRAPBOOK.SPECIALINFO.NIGHTBIRD = "A bird that only appears during the night and flies away at dawn."
 
 -- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "A Merchant from a distant archipelago. He's willing to trade his best cooking utensils and other useful items for delicious meals.\n\nThe Elder is craving a meal with extreme sweetness or Butter mixed with seafood. He will reward you accordingly.\n\nBringing Elder's favourite meal will unlock more trade deals."

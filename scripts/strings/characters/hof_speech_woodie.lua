@@ -1369,3 +1369,5 @@ WOODIE.DESCRIBE.BROWNIE = "That's a mighty fine brownie."
 WOODIE.DESCRIBE.CHOCOLATE_CAKE = "That's one heck of a chocolate cake."
 
 WOODIE.DESCRIBE.SWORDFISHBLUEDINNER = "I'm chilled to the bones!"
+
+WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "I don't like the way he stares at me!"

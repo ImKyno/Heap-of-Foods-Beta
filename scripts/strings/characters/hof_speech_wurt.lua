@@ -1371,3 +1371,5 @@ WURT.DESCRIBE.BROWNIE = "Chocolate treat!"
 WURT.DESCRIBE.CHOCOLATE_CAKE = "Big sweet cake, florp!"
 
 WURT.DESCRIBE.SWORDFISHBLUEDINNER = "Why do this to poor fishies?"
+
+WURT.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "Birdie awake at night!"

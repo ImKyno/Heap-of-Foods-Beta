@@ -1369,3 +1369,5 @@ WILLOW.DESCRIBE.BROWNIE = "Finally, something good."
 WILLOW.DESCRIBE.CHOCOLATE_CAKE = "My favorite kind of cake."
 
 WILLOW.DESCRIBE.SWORDFISHBLUEDINNER = "Cold food? Boooooring."
+
+WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = "It only comes out when the sun goes down."
