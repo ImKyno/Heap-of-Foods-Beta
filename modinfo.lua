@@ -36,13 +36,13 @@ local STRINGS =
 󰀠 Also features brand-new Biomes somewhere in the Ocean!
 󰀦 Learn how to cook every recipe at: https://heap-of-foods.com
 
-󰀏 Featuring the Setting the Table Update:
+󰀏 Featuring the Between Courses Update:
 This is an intermission update that brings some new content, quality of life improvements and tweaks to existing features.
 
 Nocturnal birds can now be found during the night and will fly away at dawn. When caged they will sleep during the day and dusk.
 
-󰀌 Mod Version: 6.8-B
-󰀧 Update: Setting the Table
+󰀌 Mod Version: 6.9-B
+󰀧 Update: Between Courses
 ]],
 		zh  =
 [[
@@ -51,13 +51,13 @@ Nocturnal birds can now be found during the night and will fly away at dawn. Whe
 󰀠 还新增了海洋中的全新生物群系！
 󰀦 学习如何制作所有食谱：https://heap-of-foods.com
 
-󰀏 介绍「摆好餐桌」更新：
+󰀏 介绍「餐间时光」更新：
 这是一次间歇性更新，带来了一些新内容、生活质量改进，以及对现有功能的调整。
 
 夜行鸟现在可以在夜间找到，并会在黎明时飞走。被关在鸟笼中时，它们会在白天和黄昏时睡觉。
 
-󰀌 Mod 版本： 6.8-B
-󰀧 更新内容： 摆好餐桌
+󰀌 Mod 版本： 6.9-B
+󰀧 更新内容： 餐间时光
 ]],
 		zht =
 [[
@@ -66,13 +66,13 @@ Nocturnal birds can now be found during the night and will fly away at dawn. Whe
 󰀠 還新增了海洋中的全新生物群系！
 󰀦 學習如何製作所有食譜：https://heap-of-foods.com
 
-󰀏 介紹「擺好餐桌」更新：
+󰀏 介紹「餐間時光」更新：
 這是一次間歇性更新，帶來了一些新內容、生活品質改進，以及對現有功能的調整。
 
 夜行鳥現在可以在夜間找到，並會在黎明時飛走。被關在鳥籠中時，牠們會在白天和黃昏時睡覺。
 
-󰀌 Mod 版本： 6.8-B
-󰀧 更新內容： 擺好餐桌
+󰀌 Mod 版本： 6.9-B
+󰀧 更新內容： 餐間時光
 ]],
 		pt  =
 [[
@@ -81,13 +81,13 @@ Nocturnal birds can now be found during the night and will fly away at dawn. Whe
 󰀠 Também acrescenta novos biomas em algum lugar do alto mar!
 󰀦 Aprenda a cozinhar todas as receitas em: https://heap-of-foods.com
 
-󰀏 Apresentando a Atualização Arrumando a Mesa:
+󰀏 Apresentando a Atualização Entre os Pratos:
 Esta é uma atualização de intermissão que traz novos conteúdos, melhorias de qualidade de vida e ajustes em recursos existentes.
 
 Pássaros noturnos agora podem ser encontrados durante a noite e voarão para longe ao amanhecer. Quando estiverem em gaiolas, eles dormirão durante o dia e ao anoitecer.
 
-󰀌 Versão do Mod: 6.8-B
-󰀧 Atualização: Arrumando a Mesa
+󰀌 Versão do Mod: 6.9-B
+󰀧 Atualização: Entre os Pratos
 ]],
 		pl  =
 [[
@@ -96,13 +96,13 @@ Pássaros noturnos agora podem ser encontrados durante a noite e voarão para lo
 󰀠 Zawiera również zupełnie nowe biomasy gdzieś na Oceanie!
 󰀦 Naucz się gotować wszystkie przepisy na: https://heap-of-foods.com
 
-󰀏 Przedstawiamy aktualizację Nakrywając do Stołu:
+󰀏 Przedstawiamy Aktualizację Między Danami:
 Jest to aktualizacja przejściowa, która wprowadza nową zawartość, usprawnienia poprawiające komfort rozgrywki oraz zmiany w istniejących funkcjach.
 
 Nocne ptaki można teraz spotkać w nocy i odlatują one o świcie. Zamknięte w klatkach będą spać w ciągu dnia oraz o zmierzchu.
 
-󰀌 Wersja Moda: 6.8-B
-󰀧 Aktualizacja: Nakrywając do Stołu
+󰀌 Wersja Moda: 6.9-B
+󰀧 Aktualizacja: Między Danami
 ]],
 		es  =
 [[
@@ -111,13 +111,13 @@ Nocne ptaki można teraz spotkać w nocy i odlatują one o świcie. Zamknięte w
 󰀠 ¡También incluye nuevos biomas en algún lugar del mar abierto!
 󰀦 Aprende a cocinar todas las recetas en: https://heap-of-foods.com
 
-󰀏 Presentando la Actualización Poniendo la Mesa:
+󰀏 Presentando la Actualización Entre Platos:
 Esta es una actualización de transición que trae nuevo contenido, mejoras de calidad de vida y ajustes a las funciones existentes.
 
 Ahora se pueden encontrar aves nocturnas durante la noche, y volarán al amanecer. Cuando estén enjauladas, dormirán durante el día y al anochecer.
 
-󰀌 Versión del Mod: 6.8-B
-󰀧 Actualización: Poniendo la Mesa
+󰀌 Versión del Mod: 6.9-B
+󰀧 Actualización: Entre Platos
 ]],
 		vi  =
 [[
@@ -126,13 +126,13 @@ Ahora se pueden encontrar aves nocturnas durante la noche, y volarán al amanece
 󰀠 Bổ sung thêm các Quần Xã sinh vật mới nằm ẩn mình đâu đó giữa Đại Dương!
 󰀦 Tham khảo công thức nấu ăn tại: https://heap-of-foods.com
 
-󰀏 Giới thiệu bản cập nhật Dọn Bàn Ăn:
+󰀏 Giới thiệu bản cập nhật Giữa Các Món Ăn:
 Đây là một bản cập nhật xen kẽ, mang đến một số nội dung mới, các cải tiến về chất lượng trải nghiệm và điều chỉnh cho những tính năng hiện có.
 
 Các loài chim sống về đêm giờ đây có thể được tìm thấy vào ban đêm và sẽ bay đi khi bình minh. Khi được nhốt trong lồng, chúng sẽ ngủ vào ban ngày và lúc chạng vạng.
 
-󰀌 Phiên bản Mod: 6.8-B
-󰀧 Cập nhật: Dọn Bàn Ăn
+󰀌 Phiên bản Mod: 6.9-B
+󰀧 Cập nhật: Giữa Các Món Ăn
 ]],
 		kr =
 [[
@@ -141,13 +141,13 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 󰀠 바다 어딘가에 생성되는 완전히 새로운 바이옴도 만나볼 수 있습니다!
 󰀦 모든 레시피 요리법 알아보기: https://heap-of-foods.com
 
-󰀏 「식탁 차리기」업데이트를 소개합니다:
+󰀏 「식사 사이」 업데이트를 소개합니다:
 이번 업데이트는 새로운 콘텐츠와 편의성 개선 사항을 추가하고 기존 기능을 일부 조정하는 중간 업데이트입니다.
 
 이제 밤에 야행성 새를 만날 수 있으며, 새벽이 되면 날아가 버립니다. 새장에 가두면 낮과 해질녘에 잠을 잡니다.
 
-󰀌 Mod Version: 6.8-B
-󰀧 Update: 식탁 차리기
+󰀌 Mod Version: 6.9-B
+󰀧 Update: 식사 사이
 ]],
 	},
 
@@ -1866,7 +1866,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "6.8-B"
+version                      = "6.9-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 

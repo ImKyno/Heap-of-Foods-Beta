@@ -5,9 +5,11 @@ local UpvalueHacker = require("tools/hof_upvaluehacker")
 
 -- Night Birds spawning logic.
 local NIGHTBIRDS             = TUNING.HOF_NIGHTBIRDS
+local NIGHTBIRDS_DELAY_MIN   = (TUNING.BIRD_SPAWN_DELAY.min or 5) + 5
+local NIGHTBIRDS_DELAY_MAX   = (TUNING.BIRD_SPAWN_DELAY.max or 15) + 5
 local NIGHTBIRDS_TASKS       = {}
-local NIGHTBIRDS_SPAWN_MAX   = TUNING.BIRD_SPAWN_MAX
-local NIGHTBIRDS_SPAWN_DELAY = { MIN = TUNING.BIRD_SPAWN_DELAY.min, MAX = TUNING.BIRD_SPAWN_DELAY.max }
+local NIGHTBIRDS_SPAWN_MAX   = TUNING.BIRD_SPAWN_MAX or 4
+local NIGHTBIRDS_SPAWN_DELAY = { MIN = NIGHTBIRDS_DELAY_MIN, MAX = NIGHTBIRDS_DELAY_MAX }
 
 local BAIT_CANT_TAGS         = { "INLIMBO", "outofreach" }
 local DANGER_RANGE           = 8
@@ -28,11 +30,86 @@ local function GetNightBirdPrefab()
 	end
 end
 
+local function GetNightBirdSpawnPoint(spawner, pt)
+	local function TestSpawnPoint(offset)
+		local spawnpoint_x, spawnpoint_y, spawnpoint_z = (pt + offset):Get()
+
+		if _G.IsOceanTile(spawnpoint_x, spawnpoint_y, spawnpoint_z) then
+			return false
+		end
+
+		if _G.TheWorld.Map:IsPointInWagPunkArenaAndBarrierIsUp(spawnpoint_x, spawnpoint_y, spawnpoint_z) then
+			return false
+		end
+
+		local allow_water = false
+
+		local in_moonstorm = _G.TheWorld.net.components.moonstorms
+		and _G.TheWorld.net.components.moonstorms:IsXZInMoonstorm(spawnpoint_x, spawnpoint_z)
+
+		return _G.TheWorld.Map:IsPassableAtPoint(spawnpoint_x, spawnpoint_y, spawnpoint_z, allow_water)
+		and #_G.TheSim:FindEntities(spawnpoint_x, 0, spawnpoint_z, 4, { "birdblocker" }) == 0
+		and not in_moonstorm and not _G.TheWorld.GroundCreep:OnCreep(spawnpoint_x, spawnpoint_y, spawnpoint_z)
+	end
+
+	local theta = math.random() * _G.TWOPI
+	local radius = 6 + math.random() * 6
+
+	local resultoffset = _G.FindValidPositionByFan(theta, radius, 12, TestSpawnPoint)
+
+	if resultoffset ~= nil then
+		return pt + resultoffset
+	end
+
+	return nil
+end
+
 local function CanNightBirdSpawn()
 	return _G.TheWorld.state.isnight and #NIGHTBIRDS > 0
 end
 
 local function SpawnNightBird(spawner, prefab, spawnpoint)
+	if spawnpoint == nil then
+		return
+	end
+
+	local x, y, z = spawnpoint:Get()
+
+	if _G.IsOceanTile(x, y, z) then
+		return
+	end
+
+	local final_x = x
+	local final_z = z
+	local bufferedaction = nil
+
+	if TUNING.BIRD_TRAP_CHANCE ~= nil then
+		local bait = _G.TheSim:FindEntities(x, 0, z, 15, nil, BAIT_CANT_TAGS)
+
+		for _, v in pairs(bait) do
+			local vx, vy, vz = v.Transform:GetWorldPosition()
+			local danger_nearby = _G.TheSim:CountEntities(vx, vy, vz, DANGER_RANGE, SCARYTOPREY_TAGS) > 0
+
+			if v.components.bait and not v:IsInLimbo() and not (v.components.inventoryitem and v.components.inventoryitem:IsHeld())
+			and not danger_nearby and _G.TheWorld.Map:IsPassableAtPoint(vx, vy, vz) and not _G.IsOceanTile(vx, vy, vz) then
+				final_x = vx
+				final_z = vz
+				bufferedaction = v
+				break
+			elseif v.components.trap and v.components.trap.isset
+			and (not v.components.trap.targettag or prefab == v.components.trap.targettag) and not v.components.trap.issprung
+			and math.random() < TUNING.BIRD_TRAP_CHANCE and not danger_nearby and not _G.IsOceanTile(vx, vy, vz) then
+				final_x = vx
+				final_z = vz
+				break
+			end
+		end
+	end
+
+	if _G.IsOceanTile(final_x, 0, final_z) then
+		return
+	end
+
 	local bird = _G.SpawnPrefab(prefab)
 
 	if bird == nil then
@@ -44,35 +121,16 @@ local function SpawnNightBird(spawner, prefab, spawnpoint)
 	end
 
 	if bird:HasTag("bird") then
-		spawnpoint.y = 15
+		y = 15
+	else
+		y = 0
 	end
 
-	if bird.components.eater ~= nil then
-		local bait = _G.TheSim:FindEntities(spawnpoint.x, 0, spawnpoint.z, 15, nil, BAIT_CANT_TAGS)
-
-		for _, v in pairs(bait) do
-			local x, y, z = v.Transform:GetWorldPosition()
-			local danger_nearby = _G.TheSim:CountEntities(x, y, z, DANGER_RANGE, SCARYTOPREY_TAGS) > 0
-
-			if bird.components.eater:CanEat(v) and not v:IsInLimbo() and v.components.bait
-			and not (v.components.inventoryitem and v.components.inventoryitem:IsHeld()) and not danger_nearby
-			and (_G.TheWorld.Map:IsPassableAtPoint(x, y, z) or bird.components.floater ~= nil) then
-				spawnpoint.x = x
-				spawnpoint.z = z
-
-				bird.bufferedaction = _G.BufferedAction(bird, v, _G.ACTIONS.EAT)
-				break
-			elseif v.components.trap and v.components.trap.isset
-			and (not v.components.trap.targettag or bird:HasTag(v.components.trap.targettag))
-			and not v.components.trap.issprung and math.random() < TUNING.BIRD_TRAP_CHANCE and not danger_nearby then
-				spawnpoint.x = x
-				spawnpoint.z = z
-				break
-			end
-		end
+	if bufferedaction ~= nil then
+		bird.bufferedaction = _G.BufferedAction(bird, bufferedaction, _G.ACTIONS.EAT)
 	end
 
-	bird.Physics:Teleport(spawnpoint:Get())
+	bird.Physics:Teleport(final_x, y, final_z)
 	spawner:StartTracking(bird)
 
 	return bird
@@ -90,7 +148,7 @@ local function SpawnNightBirdForPlayer(spawner, player)
 		return
 	end
 
-	local spawnpoint = spawner:GetSpawnPoint(pt)
+	local spawnpoint = GetNightBirdSpawnPoint(spawner, pt)
 
 	if spawnpoint == nil then
 		return
@@ -146,16 +204,22 @@ local function ToggleNightBirdSpawn(spawner)
 	end
 end
 
-AddComponentPostInit("birdspawner", function(self)
+AddClassPostConstruct("components/birdspawner", function(self)
 	-- New birds will spawn when landing on these turfs.
 	local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
 
-	BIRD_TYPES[WORLD_TILES.QUAGMIRE_PARKFIELD] = { "quagmire_pigeon" }
-	BIRD_TYPES[WORLD_TILES.QUAGMIRE_CITYSTONE] = { "quagmire_pigeon" }
+	if TUNING.HOF_DEBUG_MODE then
+		print("Heap of Foods Mod - Birdspawner Component: BIRD_TYPES function:", BIRD_TYPES)
+	end
 
-	BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = { "toucan", "toucan_chubby" }
-	BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = { "toucan", "toucan_chubby" }
-	BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = { "kingfisher" }
+	if BIRD_TYPES ~= nil then
+		BIRD_TYPES[WORLD_TILES.QUAGMIRE_PARKFIELD] = { "quagmire_pigeon" }
+		BIRD_TYPES[WORLD_TILES.QUAGMIRE_CITYSTONE] = { "quagmire_pigeon" }
+
+		BIRD_TYPES[WORLD_TILES.MONKEY_GROUND]      = { "toucan", "toucan_chubby" }
+		BIRD_TYPES[WORLD_TILES.HOF_TIDALMARSH]     = { "toucan", "toucan_chubby" }
+		BIRD_TYPES[WORLD_TILES.HOF_FIELDS]         = { "kingfisher" }
+	end
 
 	self.inst:WatchWorldState("isnight", function()
 		ToggleNightBirdSpawn(self)

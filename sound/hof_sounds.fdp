@@ -13306,7 +13306,7 @@
 <guid>{c0027a58-5541-4460-b00f-22f8f0b010dd}</guid>
 <eventgroup_nextid>0</eventgroup_nextid>
 <event_nextid>0</event_nextid>
-<open>0</open>
+<open>1</open>
 <notes></notes>
 <simpleevent>
 <event>
@@ -13740,7 +13740,7 @@
 <car_rpmsmooth>0.075</car_rpmsmooth>
 <car_loadsmooth>0.05</car_loadsmooth>
 <car_loadscale>6</car_loadscale>
-<volume_db>-12</volume_db>
+<volume_db>-20</volume_db>
 <pitch>-1</pitch>
 <pitch_units>Octaves</pitch_units>
 <pitch_randomization>0</pitch_randomization>
@@ -13929,7 +13929,7 @@
 <car_rpmsmooth>0.075</car_rpmsmooth>
 <car_loadsmooth>0.05</car_loadsmooth>
 <car_loadscale>6</car_loadscale>
-<volume_db>-12</volume_db>
+<volume_db>-20</volume_db>
 <pitch>-0.5</pitch>
 <pitch_units>Octaves</pitch_units>
 <pitch_randomization>0</pitch_randomization>
@@ -14126,7 +14126,7 @@
 <car_rpmsmooth>0.075</car_rpmsmooth>
 <car_loadsmooth>0.05</car_loadsmooth>
 <car_loadscale>6</car_loadscale>
-<volume_db>-12</volume_db>
+<volume_db>-20</volume_db>
 <pitch>-1</pitch>
 <pitch_units>Octaves</pitch_units>
 <pitch_randomization>0</pitch_randomization>
@@ -14315,7 +14315,7 @@
 <car_rpmsmooth>0.075</car_rpmsmooth>
 <car_loadsmooth>0.05</car_loadsmooth>
 <car_loadscale>6</car_loadscale>
-<volume_db>-12</volume_db>
+<volume_db>-20</volume_db>
 <pitch>-0.5</pitch>
 <pitch_units>Octaves</pitch_units>
 <pitch_randomization>0</pitch_randomization>
