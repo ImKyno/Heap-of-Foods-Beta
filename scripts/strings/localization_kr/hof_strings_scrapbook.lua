@@ -191,7 +191,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "어떤 식물이든 �
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "현지 돼지들의 주요 화폐입니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "씨앗만 보관할 수 있는 휴대용 4칸 보관함입니다.\n\n부패 속도가 60% 느려집니다.\n\n신축성 스페이서(Elastispacer)로 한 단계 업그레이드하여 저장 용량과 보존 성능을 더욱 강화할 수 있습니다.\n\n깃털 펜을 사용해 가방 위에 씨앗 이름을 적어둘 수 있습니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODAMMO_TOMATO = "5초 동안 지상에 있는 대상의 속도를 늦춥니다."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "조리된 음식을 담을 수 있는 4칸짜리 휴대용 용기입니다. 안에 보관된 음식은 더 오랫동안 보존됩니다."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "요리 재료와 조리된 음식을 보관할 수 있는 6칸짜리 휴대용 용기입니다.\n\n안에 보관된 내용물은 더 오랫동안 보존됩니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGGYBANK = "동전 및 기타 화폐만 보관할 수 있는 6칸짜리 휴대용 보관함입니다.\n\n'엘라스티스페이서(Elastispacer)'를 사용해 보관 능력을 더욱 강화할 수 있습니다."
 
 -- Creatures.

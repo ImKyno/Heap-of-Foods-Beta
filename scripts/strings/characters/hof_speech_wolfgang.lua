@@ -1360,7 +1360,7 @@ WOLFGANG.DESCRIBE.KYNO_PIGGYBANK =
 
 WOLFGANG.DESCRIBE.MARSHMALLOWS = "Tiny fluffy food is good!"
 
-WOLFGANG.DESCRIBE.KOKONUTCOOKIES = "Wolfgang likes coconut cookies!"
+WOLFGANG.DESCRIBE.KOKONUTCOOKIES = "Wolfgang likes cookies!"
 
 WOLFGANG.DESCRIBE.BBQRIBS = "These ribs make Wolfgang very hungry!"
 

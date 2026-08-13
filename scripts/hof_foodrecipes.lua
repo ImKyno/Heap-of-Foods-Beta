@@ -1996,6 +1996,7 @@ local kyno_foods =
 		card_def = {ingredients = {{"goatmilk", 1}, {"kyno_flour", 1}, {"kyno_sugar", 1}, {"twigs", 1}}},
 	},
 	
+	--[[
 	friesfrench =
 	{
 		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 2) and tags.oil and names.kyno_salt end,
@@ -2012,6 +2013,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"potato", 2}, {"kyno_oil", 1}, {"kyno_salt", 1}}},
 	},
+	]]--
 	
 	onionrings =
 	{
@@ -3279,6 +3281,7 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"bird_egg", 1}, {"kyno_flour", 1}, {"honey", 1}}},
 	},
 	
+	--[[
 	pasty_meat =
 	{
 		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 1) and tags.flour 
@@ -3344,6 +3347,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 1}, {"tomato", 2}, {"kyno_flour", 1}}},
 	},
+	]]--
 	
 	fltsandwich =
 	{
@@ -3367,6 +3371,7 @@ local kyno_foods =
 		end,
 	},
 	
+	--[[
 	riceandbeans =
 	{
 		test = function(cooker, names, tags) return (names.kyno_rice or names.kyno_rice_cooked) and (tags.beanbug and tags.beanbug >= 2) end,
@@ -3385,6 +3390,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_rice", 1}, {"kyno_beanbugs", 2}, {"twigs", 1}}},
 	},
+	]]--
 
 	trufflesgrinder =
 	{
@@ -3784,7 +3790,7 @@ local kyno_foods =
 		sanity = 5,
 		cooktime = 1.5,
 		stacksize = 2,
-		potlevel = "low",
+		potlevel = "med",
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {4, 0, 1},
 		floater = TUNING.HOF_FLOATER,

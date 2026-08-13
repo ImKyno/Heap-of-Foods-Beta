@@ -1360,7 +1360,7 @@ WEBBER.DESCRIBE.KYNO_PIGGYBANK =
 
 WEBBER.DESCRIBE.MARSHMALLOWS = "We like how squishy they are!"
 
-WEBBER.DESCRIBE.KOKONUTCOOKIES = "We love coconut cookies!"
+WEBBER.DESCRIBE.KOKONUTCOOKIES = "We love cookies!"
 
 WEBBER.DESCRIBE.BBQRIBS = "These ribs are super tasty!"
 

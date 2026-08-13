@@ -936,25 +936,44 @@ params.spicepackrework =
 		slotpos = {},
 		slotbg  = {},
 
-		animbank  = "ui_chest_2x2",
-		animbuild = "ui_chest_2x2",
+		animbank  = "ui_icepack_2x3",
+		animbuild = "ui_icepack_2x3",
 
-		pos = Vector3(0, 175, 0),
+		pos = Vector3(75, 175, 0),
 		side_align_tip = 160,
 	},
 
 	type = "chest",
 }
 
+--[[
 for y = 0, 1 do
 	for x = 0, 1 do
 		table.insert(params.spicepackrework.widget.slotpos, Vector3(-37.5 + (75 * x), 36 - (68 * y), 0))
 		table.insert(params.spicepackrework.widget.slotbg, { image = "preparedfood_slot.tex", atlas = "images/hud2.xml" })
 	end
 end
+]]--
+
+for y = 0, 2 do
+	for x = 0, 1 do
+		table.insert(params.spicepackrework.widget.slotpos, Vector3(-163 + (75 * x),   -75 * y + 73,   0))
+		table.insert(params.spicepackrework.widget.slotbg, { atlas = "images/hud.xml", image = "inv_slot_morsel.tex" })
+	end
+end
 
 function params.spicepackrework.itemtestfn(container, item, slot)
-	return item:HasAnyTag("beargerfur_sack_valid", "preparedfood")
+	for k, v in pairs(FOODGROUP.OMNI.types) do
+		if item:HasTag("edible_"..v) then
+			return true
+		end
+	end
+
+	if item:HasAnyTag("beargerfur_sack_valid", "preparedfood") then
+		return true
+	end
+
+	return false
 end
 
 if TUNING.HOF_SPICEPACKREWORK then

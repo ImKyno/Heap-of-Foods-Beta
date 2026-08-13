@@ -213,6 +213,7 @@ local function WurtPostInit(inst)
 	if inst.components.foodaffinity ~= nil then
 		-- Wurt had too many favorite foods. This is to keep her in line with others.
 		-- These will now only negate the negative stats...
+		inst.components.foodaffinity:AddPrefabAffinity("kyno_seaweeds", 1.33)
 		inst.components.foodaffinity:AddPrefabAffinity("duriansplit",   1.33)
 		inst.components.foodaffinity:AddPrefabAffinity("duriansoup",    1.33)
 		inst.components.foodaffinity:AddPrefabAffinity("wine_durian",   1.33)

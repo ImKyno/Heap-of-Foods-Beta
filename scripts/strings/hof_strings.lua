@@ -2410,7 +2410,7 @@ STRINGS.RECIPE_DESC.KYNO_PIGGYBANK = "A tiny home for your ever growing fortune.
 
 STRINGS.NAMES.MARSHMALLOWS = "Marshmallows"
 
-STRINGS.NAMES.KOKONUTCOOKIES = "Coconut Cookies"
+STRINGS.NAMES.KOKONUTCOOKIES = "Starveos"
 
 STRINGS.NAMES.BBQRIBS = "Pork Ribs"
 

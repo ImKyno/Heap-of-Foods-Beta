@@ -4,6 +4,7 @@ local assets =
 	Asset("ANIM", "anim/swap_chefpack.zip"),
 
 	Asset("ANIM", "anim/ui_chest_2x2.zip"),
+	Asset("ANIM", "anim/ui_icepack_2x3.zip"),
 }
 
 local prefabs =

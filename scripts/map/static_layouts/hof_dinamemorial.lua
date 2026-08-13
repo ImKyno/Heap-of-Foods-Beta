@@ -635,7 +635,7 @@ return {
           visible = true,
           properties = {
             ["data.c"] = "cookpot",
-            ["data.r"] = "brigadeiro"
+            ["data.r"] = "chocolate_cake"
           }
         }
       }

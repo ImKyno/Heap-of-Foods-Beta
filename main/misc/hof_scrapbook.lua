@@ -8364,6 +8364,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		deps           = preparedfood_deps,
 	},
 
+	--[[
 	friesfrench        =
 	{
 		name           = "friesfrench",
@@ -8386,6 +8387,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -90,
 		deps           = preparedfood_deps,
 	},
+	]]--
 
 	onionrings         =
 	{
@@ -9860,6 +9862,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		deps           = preparedfood_deps,
 	},
 
+	--[[
 	pasty_meat         =
 	{
 		name           = "pasty_meat",
@@ -9951,6 +9954,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -90,
 		deps           = preparedfood_deps,
 	},
+	]]--
 
 	fltsandwich        =
 	{
@@ -9976,6 +9980,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		specialinfo    = "FOODEFFECTS_PLANARDEFENSE",
 	},
 
+	--[[
 	riceandbeans       =
 	{
 		name           = "riceandbeans",
@@ -9999,6 +10004,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		deps           = preparedfood_deps,
 		specialinfo    = "FOODEFFECTS_INCREASETEMP",
 	},
+	]]--
 
 	trufflesgrinder    =
 	{

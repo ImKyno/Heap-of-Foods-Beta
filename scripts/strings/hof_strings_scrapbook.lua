@@ -191,7 +191,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Can be used to fertili
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "The primary currency of the local pig men."
 STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "A carryable container with 4 slots that will only hold seeds.\n\nSpoilage is slowed by 60%.\n\nCan be further upgraded with an Elastispacer to enhance its storage and preserving capabilities.\n\nFeather Pencil can be used to write the seed name onto it."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODAMMO_TOMATO = "It slows down ground targets for 5 seconds."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "A carryable container with 4 slots that can hold prepared food.\n\nThe food stored in it will be preserved for longer."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "A carryable container with 6 slots that can hold cooking ingredients prepared food.\n\nThe contents stored in it will be preserved for longer."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGGYBANK = "A carryable container with 6 slots that will only hold Koins and other types of currency.\n\nCan be further upgraded with an Elastispacer to enhance its storage capabilities."
 
 -- Creatures.

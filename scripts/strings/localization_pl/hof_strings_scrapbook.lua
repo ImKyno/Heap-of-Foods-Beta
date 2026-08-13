@@ -191,7 +191,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.PLANTBOOSTER_SUPERGROWTH = "Może być użyty do n
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGCOIN = "Główna waluta lokalnych świń."
 STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "Przenośny pojemnik z 4 miejscami, który przechowuje wyłącznie nasiona.\n\nTempo psucia jest zmniejszone o 60%.\n\nMoże zostać ulepszony za pomocą Elastispacera, aby zwiększyć pojemność i możliwości konserwacji.\n\nPióro może zostać użyte do zapisania nazwy nasion na torbie."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODAMMO_TOMATO = "Spowalnia cele naziemne na 5 sekund."
-STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "Przenośny pojemnik z 4 przegródkami na gotowe jedzenie. Przechowywana w nim żywność dłużej zachowuje świeżość."
+STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "Przenośny pojemnik z 6 miejscami, który może przechowywać składniki do gotowania i przygotowane potrawy.\n\nPrzechowywana w nim zawartość będzie dłużej zachowywać świeżość."
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGGYBANK = "Przenośny pojemnik z 6 przegródkami, mieszczący wyłącznie monety i inne rodzaje waluty.\n\nMożna go dodatkowo ulepszyć za pomocą Elastispacera, aby zwiększyć jego pojemność."
 
 -- Stworzenia.
