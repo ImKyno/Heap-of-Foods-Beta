@@ -203,7 +203,7 @@ local function OnConstructed(inst, doer)
 
 	if concluded then
 		local construction = ReplacePrefab(inst, "kyno_fishfarmplot")
-		construction:PushEvent("onbuilt")
+		construction:PushEvent("onbuilt", { builder = doer })
 	end
 end
 

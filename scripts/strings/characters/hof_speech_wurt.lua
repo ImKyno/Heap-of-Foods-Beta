@@ -1383,3 +1383,7 @@ WURT.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Cold bird.",
 	HELD = "He is biting me! GLORP!"
 }
+
+WURT.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Not ready yet, florp."
+
+WURT.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Glorp! Little fishies don't like it!"

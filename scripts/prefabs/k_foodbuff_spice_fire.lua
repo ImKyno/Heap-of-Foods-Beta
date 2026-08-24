@@ -9,6 +9,8 @@ local function GetFireDamageMult(inst, target)
 			end
 		end
 	end
+
+	return 1
 end
 
 local function OnAttached(inst, target)

@@ -68,6 +68,7 @@ SortAfter("kyno_animalfeeder",                        "kyno_mushstump",         
 SortAfter("kyno_chickenhouse",                        "beebox",                           "GARDENING")
 SortAfter("kyno_eldermandrakehouse",                  "rabbithouse",                      "STRUCTURES")
 SortAfter("kyno_piggybank",                           "candybag",                         "CONTAINERS")
+SortAfter("kyno_fishingrod_thulecite",                "fishingrod",                       "TOOLS")
 SortAfter("hermitshop_kyno_malbatrossfood_blueprint", "hermitshop_chum_blueprint",        "CRAFTING_STATION")
 SortAfter("potatosack2",                              "mighty_gym",                       "CHARACTER")
 SortBefore("potatosack2",                             "icebox",                           "CONTAINERS")
@@ -107,3 +108,9 @@ SortAfter("kyno_hermitcrabtea_icenettles_1",          "hermitcrabtea_firenettles
 SortAfter("kyno_hermitcrabtea_icenettles_2",          "hermitcrabtea_firenettles_2",      "CRAFTING_STATION")
 SortAfter("kyno_hermitcrabtea_icenettles_3",          "hermitcrabtea_firenettles_3",      "CRAFTING_STATION")
 SortAfter("kyno_fishfarmplot_construction",           "trophyscale_fish",                 "FISHING")
+
+if not _G.ModdedRecipeExists("turf_swirlgrass", "turf_clovertiles") and not TUNING.HOF_IS_NET_ENABLED then
+	SortAfter("turf_stonecity", "turf_fungus_green", "DECOR")
+	SortAfter("turf_pinkpark",  "turf_stonecity",    "DECOR")
+	SortAfter("turf_fields",    "turf_pinkpark",     "DECOR")
+end

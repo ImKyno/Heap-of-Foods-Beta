@@ -1,6 +1,6 @@
 require("stategraphs/commonstates")
 
-local actionhandlers = 
+local actionhandlers =
 {
 	ActionHandler(ACTIONS.EAT, "eat_pre"),
 	ActionHandler(ACTIONS.GOHOME, "gohome"),
@@ -9,33 +9,34 @@ local actionhandlers =
 local events =
 {
 	CommonHandlers.OnSleep(),
-	CommonHandlers.OnHop(),		
+	CommonHandlers.OnHop(),
 	CommonHandlers.OnFreeze(),
 	CommonHandlers.OnElectrocute(),
-	
-	EventHandler("attacked", function(inst) 
-		if inst.components.health ~= nil and inst.components.health:GetPercent() > 0 then 
+	CommonHandlers.OnCorpseChomped(),
+
+	EventHandler("attacked", function(inst)
+		if inst.components.health ~= nil and inst.components.health:GetPercent() > 0 then
 			inst.sg:GoToState("hit")
 		end
 	end),
-	
+
 	EventHandler("death", function(inst)
 		inst.sg:GoToState("death")
 	end),
-	
+
 	EventHandler("trapped", function(inst)
 		inst.sg:GoToState("trapped")
 	end),
-	
+
 	EventHandler("lay_egg", function(inst)
 		inst.sg:GoToState("lay_egg")
 	end),
-	
-	EventHandler("locomote", function(inst) 
-		if not inst.sg:HasStateTag("idle") and not inst.sg:HasStateTag("moving") then 
+
+	EventHandler("locomote", function(inst)
+		if not inst.sg:HasStateTag("idle") and not inst.sg:HasStateTag("moving") then
 			return
 		end
-            
+
 		if not inst.components.locomotor:WantsToMoveForward() then
 			if not inst.sg:HasStateTag("idle") then
 				if not inst.sg:HasStateTag("running") then
@@ -79,12 +80,12 @@ local states =
 	{
 		name = "run",
 		tags = { "moving", "running", "canrotate" },
-        
+
 		onenter = function(inst)
 			inst.components.locomotor:RunForward()
 			inst.AnimState:PlayAnimation("glide", true)
-			
-			inst.flapSound = inst:DoPeriodicTask(6 * FRAMES, function(inst) 
+
+			inst.flapSound = inst:DoPeriodicTask(6 * FRAMES, function(inst)
 				inst.SoundEmitter:PlaySound("dontstarve/birds/flyin")
 			end)
 		end,
@@ -101,7 +102,7 @@ local states =
 			end
 		end,
 	},
-    
+
 	State
 	{
 		name = "honk",
@@ -109,7 +110,7 @@ local states =
 
 		onenter = function(inst)
 			inst.Physics:Stop()
-			
+
 			inst.AnimState:PlayAnimation("honk")
 			inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/buzzard/hurt")
 		end,
@@ -129,7 +130,7 @@ local states =
 
 		onenter = function(inst)
 			inst.Physics:Stop()
-			
+
 			inst.AnimState:PlayAnimation("peck", false)
 		end,
 
@@ -151,17 +152,17 @@ local states =
 		name = "eat",
 		tags = { "busy", "eating" },
 
-        onenter = function(inst)
-            inst.Physics:Stop()
-			
-            inst.AnimState:PlayAnimation("eat", true)
-            inst.sg:SetTimeout(2 + math.random() * 4)
-        end,
+		onenter = function(inst)
+			inst.Physics:Stop()
 
-        ontimeout = function(inst)
-            inst.sg:GoToState("eat_pst")
-        end,
-    },
+			inst.AnimState:PlayAnimation("eat", true)
+			inst.sg:SetTimeout(2 + math.random() * 4)
+		end,
+
+		ontimeout = function(inst)
+			inst.sg:GoToState("eat_pst")
+		end,
+	},
 
 	State
 	{
@@ -170,7 +171,7 @@ local states =
 
 		onenter = function(inst)
 			inst.Physics:Stop()
-			
+
 			inst.AnimState:PushAnimation("eat_pst")
 		end,
 
@@ -181,32 +182,32 @@ local states =
 			end),
 		},
 	},
-	
+
 	State
 	{
 		name = "hop",
 		tags = { "moving", "canrotate", "hopping" },
-        
-		onenter = function(inst) 
+
+		onenter = function(inst)
 			inst.AnimState:PlayAnimation("hop")
-			
+
 			inst.components.locomotor:WalkForward()
 			inst.sg:SetTimeout(2 * math.random() + 0.5)
 		end,
-        
+
 		onupdate = function(inst)
 			if not inst.components.locomotor:WantsToMoveForward() then
 				inst.sg:GoToState("idle")
 			end
-		end,        
-        
+		end,
+
 		ontimeout = function(inst)
 			inst.sg:GoToState("hop")
 		end,
-		
+
 		timeline =
 		{
-			TimeEvent(5 * FRAMES, function(inst) 
+			TimeEvent(5 * FRAMES, function(inst)
 				inst.Physics:Stop()
 				inst.SoundEmitter:PlaySound("dontstarve/rabbit/hop")
 			end),
@@ -217,26 +218,32 @@ local states =
 	{
 		name = "death",
 		tags = { "busy" },
-        
+
 		onenter = function(inst)
 			inst.Physics:Stop()
 			RemovePhysicsColliders(inst)
-			
+
 			inst.AnimState:PlayAnimation("death")
 			inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/buzzard/hurt")
-			
-			inst.components.lootdropper:DropLoot(Vector3(inst.Transform:GetWorldPosition()))
+
+			-- inst.components.lootdropper:DropLoot(Vector3(inst.Transform:GetWorldPosition()))
+			inst:DropDeathLoot()
 		end,
+
+		events =
+		{
+			CommonHandlers.OnCorpseDeathAnimOver(),
+		},
 	},
 
 	State
 	{
 		name = "hit",
 		tags = { "busy" },
-        
+
 		onenter = function(inst)
 			inst.Physics:Stop()
-			
+
 			inst.AnimState:PlayAnimation("hit")
 			inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/buzzard/hurt")
 		end,
@@ -248,7 +255,7 @@ local states =
 			end),
 		},
 	},
-	
+
 	State{
 		name = "trapped",
 		tags = { "busy", "trapped" },
@@ -256,8 +263,8 @@ local states =
 		onenter = function(inst)
 			inst.Physics:Stop()
 			inst:ClearBufferedAction()
-			
-			inst.AnimState:PlayAnimation("idle", true)	
+
+			inst.AnimState:PlayAnimation("idle", true)
 			inst.sg:SetTimeout(1)
 		end,
 
@@ -265,7 +272,7 @@ local states =
 			inst.sg:GoToState("idle")
 		end,
 	},
-	
+
 	State
 	{
 		name = "lay_egg",
@@ -273,17 +280,17 @@ local states =
 
 		onenter = function(inst)
 			inst.Physics:Stop()
-			
+
 			inst.AnimState:PlayAnimation("honk")
 			inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/buzzard/hurt")
 		end,
-		
+
 		timeline =
 		{
-			TimeEvent(18 * FRAMES, function(inst) 
+			TimeEvent(18 * FRAMES, function(inst)
 				inst.Physics:Stop()
 				inst.SoundEmitter:PlaySound("summerevent/cannon/fire3")
-				
+
 				if inst.components.playerprox ~= nil and inst.components.playerprox:IsPlayerClose() then
 					local egg_to_spawn = math.random() < TUNING.KYNO_CHICKEN_GIANT_EGG_CHANCE and "kyno_chicken_egg_large" or "kyno_chicken_egg"
 					local egg = SpawnPrefab(egg_to_spawn)
@@ -303,8 +310,16 @@ local states =
 
 CommonStates.AddSleepStates(states)
 CommonStates.AddFrozenStates(states)
-CommonStates.AddElectrocuteStates(states, nil, { pre = "hit", loop = "hit", pst = "hit"})
-CommonStates.AddHopStates(states, true, { pre = "hop", loop = "hop", pst = "hop"})
-CommonStates.AddSimpleActionState(states, "gohome", "hop", 4 * FRAMES, {"busy"})
+CommonStates.AddElectrocuteStates(states, nil, { pre = "hit", loop = "hit", pst = "hit" })
+CommonStates.AddHopStates(states, true, { pre = "hop", loop = "hop", pst = "hop" })
+CommonStates.AddSimpleActionState(states, "gohome", "hop", 4 * FRAMES, { "busy" })
 
-return StateGraph("chickenwild", states, events, "idle", actionhandlers)
+CommonStates.AddInitState(states, "idle")
+CommonStates.AddCorpseStates(states, nil,
+{
+	corpseoncreate = function(inst, corpse)
+		corpse.AnimState:SetScale(.9, .9, .9)
+	end,
+})
+
+return StateGraph("kyno_chicken2", states, events, "init", actionhandlers)

@@ -3,7 +3,7 @@ local HOF_MAPUTIL = require("map/hof_maputil")
 local assets =
 {
 	Asset("ANIM", "anim/quagmire_elderswampig.zip"),
-	
+
 	-- Anniversary Event.
 	Asset("ANIM", "anim/kyno_hofbirthday_serenityisland_shop.zip"),
 
@@ -19,8 +19,8 @@ local prefabs =
 	"lobsterdinner",
 	"turf_road",
 	"turf_deciduous",
-    "splash_sink",
-	
+	"splash_sink",
+
 	"kyno_sugartree_bud",
 	"kyno_sugartree_petals",
 	"kyno_brewingrecipecard",
@@ -32,7 +32,7 @@ local prefabs =
 }
 
 local function ontalk(inst, script)
-    inst.SoundEmitter:PlaySound("dontstarve/quagmire/creature/swamppig_elder/talk")
+	inst.SoundEmitter:PlaySound("dontstarve/quagmire/creature/swamppig_elder/talk")
 end
 
 local function Say(inst, str)
@@ -52,11 +52,11 @@ local function SayFar(inst)
 end
 
 local function SayNear(inst)
-	if not inst:HasTag("pigelder_gifted") then
+	if not inst:HasAnyTag("pigelder_gifted", "pigelder_gifted2") then
 		Say(inst, "PIGELDER_TALK_NEAR1")
 	else
 		Say(inst, "PIGELDER_TALK_NEAR2")
-    end
+	end
 end
 
 local function OnFar(inst, isnight)
@@ -66,8 +66,8 @@ local function OnFar(inst, isnight)
 end
 
 local function OnTurnOff(inst)
-    inst.components.prototyper.on = false
-	
+	inst.components.prototyper.on = false
+
 	if not inst.AnimState:IsCurrentAnimation("sleep_loop", true) then
 		inst.AnimState:PlayAnimation("sleep_pre")
 		inst.AnimState:PushAnimation("sleep_loop", true)
@@ -76,14 +76,14 @@ local function OnTurnOff(inst)
 end
 
 local function OnTurnOn(inst)
-    inst.components.prototyper.on = true
-	
+	inst.components.prototyper.on = true
+
 	if not inst.AnimState:IsCurrentAnimation("idle", true) then
 		inst.AnimState:PlayAnimation("sleep_pst")
 		inst.AnimState:PushAnimation("idle", true)
 		inst.SoundEmitter:PlaySound("dontstarve/quagmire/creature/swamppig_elder/sleep_out")
 	end
-	
+
 	inst:DoTaskInTime(.5, function() SayNear(inst) end)
 end
 
@@ -93,111 +93,128 @@ local function OnActivate(inst)
 end
 
 local function OnIsNight(inst, isnight)
-    if isnight then
+	if isnight then
 		inst.AnimState:PlayAnimation("sleep_pre")
 		inst.AnimState:PushAnimation("sleep_loop", true)
 		inst.components.prototyper.restrictedtag = "can_wakeup_elder" -- Just to prevent players from shopping at night.
 		inst.components.trader.enabled = false
 		inst.components.talker:ShutUp()
-    else
+	else
 		inst.AnimState:PlayAnimation("sleep_pst")
 		inst.AnimState:PushAnimation("idle", true)
 		inst.components.prototyper.restrictedtag = nil
 		inst.components.trader.enabled = true
-    end
-end
-
-local function TestItem(inst, item, giver)
-	if not inst:HasTag("pigelder_gifted") then
-		if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" then
-			return true -- Accept the Item.
-		else
-			giver:PushEvent("serenityislandshopfail")
-		end
-	end
-	
-	if item.components.inventoryitem ~= nil and item.prefab == "turf_road" or item.prefab == "turf_deciduous" then
-		return true
-	elseif item.components.inventoryitem ~= nil and item.prefab == "cookingrecipecard" then
-		return true
-	elseif inst:HasTag("pigelder_nighttrader") and item.components.tradable.goldvalue > 0 then -- Lights Out worlds.
-		return true
-	else
-		giver:PushEvent("serenityislandshopfail")
 	end
 end
 
 local function LaunchItem(item, angle)
-    local speed = math.random() * 4 + 2
-    angle = (angle + math.random() * 60 - 30) * DEGREES
-    item.Physics:SetVel(speed * math.cos(angle), math.random() * 2 + 8, speed * math.sin(angle))
+	local speed = math.random() * 4 + 2
+	angle = (angle + math.random() * 60 - 30) * DEGREES
+	item.Physics:SetVel(speed * math.cos(angle), math.random() * 2 + 8, speed * math.sin(angle))
 end
 
 local function PlayThrowSound(inst)
 	inst.SoundEmitter:PlaySound("dontstarve/pig/PigKingThrowGold")
 end
 
+local function TestItem(inst, item, giver)
+	if item.components.inventoryitem ~= nil and (item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube") then
+		if inst:HasTag("pigelder_gifted") then
+			giver:PushEvent("serenityislandshopfail")
+			return false
+		end
+
+		return true
+	end
+
+	if item.components.inventoryitem ~= nil and (item.prefab == "gorge_crab_roll" or item.prefab == "gorge_crab_ravioli") then
+		if inst:HasTag("pigelder_gifted2") then
+			giver:PushEvent("serenityislandshopfail")
+			return false
+		end
+
+		return true
+	end
+
+	if inst:HasTag("pigelder_nighttrader") and item.components.tradable ~= nil and item.components.tradable.goldvalue > 0 then
+		return true
+	end
+
+	giver:PushEvent("serenityislandshopfail")
+	return false
+end
+
 local function OnGetItemFromPlayer(inst, giver, item, isnight)
 	if not inst:HasTag("pigelder_gifted") then
-		if item.components.inventoryitem ~= nil and item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube" then
+		if item.components.inventoryitem ~= nil and (item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube") then
 			inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/friendship_music/10")
-		
+
 			inst:DoTaskInTime(1, function()
 				SayThanks(inst)
 			end)
-		
+
 			-- New Recipes available in the shop!
-			inst.components.craftingstation:LearnItem("dug_kyno_spotbush",     "dug_kyno_spotbush_p")
-			inst.components.craftingstation:LearnItem("dug_kyno_wildwheat",    "dug_kyno_wildwheat_p")
-			inst.components.craftingstation:LearnItem("kyno_sugartree_petals", "kyno_sugartree_petals_p")
-			inst.components.craftingstation:LearnItem("kyno_sugartree_bud",    "kyno_sugartree_bud_p")
+			if inst.components.craftingstation ~= nil then
+				inst.components.craftingstation:LearnItem("dug_kyno_spotbush",     "dug_kyno_spotbush_p")
+				inst.components.craftingstation:LearnItem("dug_kyno_wildwheat",    "dug_kyno_wildwheat_p")
+				inst.components.craftingstation:LearnItem("kyno_sugartree_petals", "kyno_sugartree_petals_p")
+				inst.components.craftingstation:LearnItem("kyno_sugartree_bud",    "kyno_sugartree_bud_p")
+			end
 
 			inst:AddTag("pigelder_gifted")
 			inst.foodgift = true
 		end
 	end
-	
-	local x, y, z = inst.Transform:GetWorldPosition()
-    y = 4.5
 
-    local angle
-    if giver ~= nil and giver:IsValid() then
-        angle = 180 - giver:GetAngleToPoint(x, 0, z)
-    else
-        local down = TheCamera:GetDownVec()
-        angle = math.atan2(down.z, down.x) / DEGREES
-        giver = nil
-    end
-	
-	if item.components.inventoryitem ~= nil and item.prefab == "turf_road" then
-		local turf = SpawnPrefab("turf_stonecity")
-		turf.Transform:SetPosition(x, y, z)
-		LaunchItem(turf, angle)
-		PlayThrowSound(inst)
-	end 
-	
-	if item.components.inventoryitem ~= nil and item.prefab == "turf_deciduous" then
-		local turf = SpawnPrefab("turf_pinkpark")
-		turf.Transform:SetPosition(x, y, z)
-		LaunchItem(turf, angle)
-		PlayThrowSound(inst)
+	if not inst:HasTag("pigelder_gifted2") then
+		if item.components.inventoryitem ~= nil and (item.prefab == "gorge_crab_roll" or item.prefab == "gorge_crab_ravioli") then
+			inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/friendship_music/10")
+
+			inst:DoTaskInTime(1, function()
+				SayThanks(inst)
+			end)
+
+			-- New Recipes available in the shop!
+			if inst.components.craftingstation ~= nil then
+				local blueprint = "kyno_pond_salt2_construction_blueprint"
+				inst.components.craftingstation:LearnItem(blueprint, blueprint.."_p")
+			end
+
+			inst:AddTag("pigelder_gifted2")
+			inst.foodgift2 = true
+		end
+	end
+
+	local x, y, z = inst.Transform:GetWorldPosition()
+	y = 4.5
+
+	local angle
+
+	if giver ~= nil and giver:IsValid() then
+		angle = 180 - giver:GetAngleToPoint(x, 0, z)
+	else
+		local down = TheCamera:GetDownVec()
+		angle = math.atan2(down.z, down.x) / DEGREES
+		giver = nil
 	end
 
 	if item.components.inventoryitem ~= nil and item.prefab == "cookingrecipecard" then
 		local card = SpawnPrefab("kyno_brewingrecipecard")
 		card.Transform:SetPosition(x, y, z)
+
 		LaunchItem(card, angle)
 		PlayThrowSound(inst)
 	end
-	
+
 	-- For "Lights Out" worlds.
 	if inst:HasTag("pigelder_nighttrader") then
 		if item.components.tradable.tradefor ~= nil then
 			for _, v in pairs(item.components.tradable.tradefor) do
 				local item = SpawnPrefab(v)
-				
+
 				if item ~= nil then
 					item.Transform:SetPosition(x, y, z)
+
 					LaunchItem(item, angle)
 					PlayThrowSound(inst)
 				end
@@ -213,13 +230,20 @@ end
 
 local function OnSave(inst, data)
 	data.foodgift = inst.foodgift
+	data.foodgift2 = inst.foodgift2
 	data.potrepaired = inst.potrepaired
 end
 
 local function OnLoad(inst, data)
-    if data ~= nil and data.foodgift then
-        inst:AddTag("pigelder_gifted")
-    end
+	if data ~= nil then
+		if data.foodgift then
+			inst:AddTag("pigelder_gifted")
+		end
+
+		if data.foodgift2 then
+			inst:AddTag("pigelder_gifted2")
+		end
+	end
 end
 
 local function RetrofitMapTags(inst)
@@ -230,8 +254,8 @@ local function RetrofitMapTags(inst)
 		print("Layout Center:", info.center.x, info.center.z)
 		print("Prefab Origin:", info.prefab.x, info.prefab.z)
 	end
-	
-	HOF_MAPUTIL.AddPrefabTopologyNode(inst, 640, 1344, 53, 53, "StaticLayoutIsland:NewSerenityIsland", 
+
+	HOF_MAPUTIL.AddPrefabTopologyNode(inst, 640, 1344, 53, 53, "StaticLayoutIsland:NewSerenityIsland",
 	{ "RoadPoison", "not_mainland", "nohasslers", "nohunt", "SerenityArea" })
 end
 
@@ -243,23 +267,23 @@ local function OnWorldInit(inst)
 end
 
 local function fn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddSoundEmitter()
-    inst.entity:AddNetwork()
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
 
 	local shadow = inst.entity:AddDynamicShadow()
 	shadow:SetSize(1.5, .75)
 
 	local minimap = inst.entity:AddMiniMapEntity()
-    minimap:SetIcon("kyno_serenityisland_shop.tex")
+	minimap:SetIcon("kyno_serenityisland_shop.tex")
 	minimap:SetPriority(5)
 
-    MakeObstaclePhysics(inst, 2, .5)
+	MakeObstaclePhysics(inst, 2, .5)
 
-    inst.AnimState:SetBank("quagmire_elderswampig")
+	inst.AnimState:SetBank("quagmire_elderswampig")
 	inst.AnimState:SetBuild("quagmire_elderswampig")
 	inst.AnimState:PlayAnimation("idle", true)
 
@@ -278,26 +302,26 @@ local function fn()
 	-- inst.components.talker.chaticon = "npcchatflair_pigelder"
 	inst.components.talker:MakeChatter()
 	inst.components.talker.lineduration = TUNING.HERMITCRAB.SPEAKTIME - 0.5
-	
+
 	if LOC.GetTextScale() == 1 then
 		inst.components.talker.fontsize = 35
 	end
-	
+
 	if not TheNet:IsDedicated() then
 		inst:AddComponent("pointofinterest")
 		inst.components.pointofinterest:SetHeight(60)
 	end
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
+	if not TheWorld.ismastersim then
+		return inst
+	end
 
 	inst.components.talker.ontalk = ontalk
 
 	inst:AddComponent("craftingstation")
-	
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
 
@@ -305,22 +329,22 @@ local function fn()
 	inst.components.playerprox:SetDist(4, 7)
 	inst.components.playerprox:SetOnPlayerFar(OnFar)
 
-    inst:AddComponent("prototyper")
-    inst.components.prototyper.onactivate = OnActivate
-    inst.components.prototyper.onturnon = OnTurnOn
-    inst.components.prototyper.onturnoff = OnTurnOff
+	inst:AddComponent("prototyper")
+	inst.components.prototyper.onactivate = OnActivate
+	inst.components.prototyper.onturnon = OnTurnOn
+	inst.components.prototyper.onturnoff = OnTurnOff
 	inst.components.prototyper.trees = TUNING.PROTOTYPER_TREES.SERENITYSHOP_TWO
 
 	inst:AddComponent("trader")
 	inst.components.trader:SetAcceptTest(TestItem)
-    inst.components.trader.onaccept = OnGetItemFromPlayer
+	inst.components.trader.onaccept = OnGetItemFromPlayer
 
 	inst:WatchWorldState("isnight", OnIsNight)
-    OnIsNight(inst, TheWorld.state.isnight)
-	
+	OnIsNight(inst, TheWorld.state.isnight)
+
 	inst:DoTaskInTime(0, OnWorldInit)
 	-- inst:DoTaskInTime(1, RetrofitMapTags)
-	
+
 	-- Pig Elder will wake up regardless in "Lights Out" worlds.
 	inst:ListenForEvent("clocksegschanged", function(world, data)
 		inst.segs = data
@@ -328,7 +352,7 @@ local function fn()
 		if inst.segs["night"] + inst.segs["dusk"] >= 16 then
 			inst.components.prototyper.restrictedtag = nil
 			inst.components.trader.enabled = true
-			
+
 			inst:AddTag("pigelder_nighttrader")
 		end
 	end, TheWorld)
@@ -336,7 +360,7 @@ local function fn()
 	inst.OnSave	= OnSave
 	inst.OnLoad = OnLoad
 
-    return inst
+	return inst
 end
 
 return Prefab("kyno_serenityisland_shop", fn, assets, prefabs)

@@ -402,6 +402,19 @@ local function OnBuilt(inst, data)
 	inst.AnimState:PushAnimation("idle", true)
 	
 	inst.SoundEmitter:PlaySound("turnoftides/common/together/water/emerge/large")
+
+	if data ~= nil and data.builder ~= nil then
+		local player = data.builder
+		local bucket = SpawnPrefab("kyno_bucket_metal")
+
+		if bucket ~= nil then
+			if player.components.inventory ~= nil then
+				player.components.inventory:GiveItem(bucket, nil, player:GetPosition())
+			else
+				LaunchAtRandomly(bucket, nil, 1)
+			end
+		end
+	end
 end
 
 local function OnDeploy(inst, pt, deployer)

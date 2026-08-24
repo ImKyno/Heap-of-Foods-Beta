@@ -1381,3 +1381,7 @@ WALTER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Whoa! I've never seen that bird before!",
 	HELD = "Careful with that beak!",
 }
+
+WALTER.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Just waiting to be finished."
+
+WALTER.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Shall we go on a fishing trip, Woby?"

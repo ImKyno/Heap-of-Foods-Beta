@@ -303,7 +303,7 @@ local function orangefn()
 	inst:AddComponent("locomotor")
 	inst.components.locomotor.runspeed = TUNING.KYNO_PIKO_RUN_SPEED
 
-	inst:SetStateGraph("SGmeadowsquirrel")
+	inst:SetStateGraph("SGmeadowsquirrel2")
 	inst:SetBrain(squirrelbrain)
 
 	inst:AddComponent("eater")

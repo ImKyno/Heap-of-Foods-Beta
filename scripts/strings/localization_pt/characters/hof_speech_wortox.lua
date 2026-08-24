@@ -1384,3 +1384,7 @@ WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Um pequeno caçador congelante!",
 	HELD = "Um passarinho bem atrevido na minha bolsa!",
 }
+
+WORTOX.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Não está finalizado ainda!"
+
+WORTOX.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Nenhum peixe poderá escapar de mim agora."

@@ -1381,3 +1381,7 @@ WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "É um pássaro de inverno muito noturno!",
 	HELD = "Ele está cutucando nosso bolso!",
 }
+
+WEBBER.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Não está pronto ainda!"
+
+WEBBER.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Ajuda a pescar um monte de peixes!"

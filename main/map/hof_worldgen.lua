@@ -369,9 +369,7 @@ AddTaskSetPreInitAny(function(tasksetdata)
 		return
 	end
 
-	if not tasksetdata.ocean_prefill_setpieces then
-		tasksetdata.ocean_prefill_setpieces = {}
-	end
+	tasksetdata.ocean_prefill_setpieces = tasksetdata.ocean_prefill_setpieces or {}
 
 	-- Islands are too big to generated, using this instead.
 	tasksetdata.ocean_prefill_setpieces["SerenityIsland"]  = { count = 1 }
@@ -385,10 +383,39 @@ AddTaskSetPreInitAny(function(tasksetdata)
 		}
 	end
 
-	if not tasksetdata.required_prefabs then
-		tasksetdata.required_prefabs = {}
-	end
+	tasksetdata.required_prefabs = tasksetdata.required_prefabs or {}
 
 	table.insert(tasksetdata.required_prefabs, "kyno_dinamemorial_marker")
 	table.insert(tasksetdata.required_prefabs, "kyno_deciduousforest_shop")
+end)
+
+-- Caves Worldgen.
+AddTaskSetPreInitAny(function(tasksetdata)
+	if tasksetdata.location ~= "cave" then
+		return
+	end
+
+	tasksetdata.tasks = tasksetdata.tasks or {}
+
+	local fungaltask = false
+
+	-- I should probably include "FungalNoiseMeadow", but this will do for now.
+	for _, task in ipairs(tasksetdata.tasks) do
+		if task == "FungalNoiseForest" then
+			fungaltask = true
+			break
+		end
+	end
+
+	if not fungaltask then
+		table.insert(tasksetdata.tasks, "FungalNoiseForest")
+	end
+
+	if tasksetdata.optionaltasks then
+		for i = #tasksetdata.optionaltasks, 1, -1 do
+			if tasksetdata.optionaltasks[i] == "FungalNoiseForest" then
+				table.remove(tasksetdata.optionaltasks, i)
+			end
+		end
+	end
 end)

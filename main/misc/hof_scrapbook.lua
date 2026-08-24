@@ -1893,6 +1893,22 @@ local HOF_SCRAPBOOK_ITEMS =
 		"pig_coin", "goldnugget", "lucky_goldnugget"},
 		specialinfo    = "PIGGYBANK",
 	},
+
+	kyno_fishingrod_thulecite =
+	{
+		name           = "kyno_fishingrod_thulecite",
+		type           = "item",
+		subcat         = "tool",
+		tex            = "kyno_fishingrod_thulecite.tex",
+		prefab         = "kyno_fishingrod_thulecite",
+		weapondamage   = 4.25,
+		finiteuses     = 90,
+		bank           = "kyno_fishingrod_thulecite",
+		build          = "kyno_fishingrod_thulecite",
+		anim           = "idle",
+		deps           = {"refined_dust", "thulecite", "silk"},
+		specialinfo    = "FISHINGROD",
+	},
 }
 
 local HOF_SCRAPBOOK_FOODS =
@@ -9861,7 +9877,6 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -60,
 		deps           = preparedfood_deps,
 	},
-
 	--[[
 	pasty_meat         =
 	{
@@ -9915,9 +9930,9 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		type           = "food",
 		tex            = "brigadeiro.tex",
 		prefab         = "brigadeiro",
-		healthvalue    = 25,
+		healthvalue    = 8,
 		hungervalue    = 32.5,
-		sanityvalue    = 50,
+		sanityvalue    = 60,
 		perishable     = 3840,
 		foodtype       = "GOODIES",
 		burnable       = true,
@@ -9955,7 +9970,6 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		deps           = preparedfood_deps,
 	},
 	]]--
-
 	fltsandwich        =
 	{
 		name           = "fltsandwich",

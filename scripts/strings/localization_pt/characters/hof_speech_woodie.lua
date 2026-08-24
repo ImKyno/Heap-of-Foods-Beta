@@ -1381,3 +1381,7 @@ WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Como é que eles conseguem sobreviver nesse frio?",
 	HELD = "Ele não parece muito feliz no meu bolso!",
 }
+
+WOODIE.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Parece que alguém está construindo um varal de sal."
+
+WOODIE.DESCRIBE.KYNO_FISHINGROD_THULECITE = "A velha e confiável."

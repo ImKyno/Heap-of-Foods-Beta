@@ -1381,3 +1381,7 @@ WILSON.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
 	GENERIC = "A formidable bird from the frozen north.",
 	HELD = "I can feel its beak poking my pocket.",
 }
+
+WILSON.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like the start of a construction." -- NEEDS TRANSLATION
+
+WILSON.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Anyone down for a round of fishing?" -- NEEDS TRANSLATION

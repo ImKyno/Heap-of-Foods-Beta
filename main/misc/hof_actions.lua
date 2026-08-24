@@ -609,10 +609,12 @@ ACTIONS.STORE.fn = function(act, ...)
 		local container = target.components.container
 
 		if container ~= nil then
-			local canstore = container:CanTakeItemInSlot(item)
+			if cooking.IsCookingIngredient(item.prefab) then
+				if container:CanTakeItemInSlot(item) then
+					return _STOREfn(act, ...)
+				end
 
-			if canstore then
-				return _STOREfn(act, ...)
+				return false, "NOTALLOWED"
 			end
 
 			local firepit = GetFirepit(target)
@@ -621,14 +623,16 @@ ACTIONS.STORE.fn = function(act, ...)
 				local fuel_item = item
 
 				if item.components.fuel ~= nil then
-					if item.components.stackable ~= nil and item.components.stackable:StackSize() > 1 then
-						fuel_item = item.components.stackable:Get(1)
-					end
-
 					if fuel_item ~= nil and firepit.components.fueled:CanAcceptFuelItem(fuel_item) then
+						if item.components.stackable ~= nil and item.components.stackable:StackSize() > 1 then
+							fuel_item = item.components.stackable:Get(1)
+						end
+
 						firepit.components.fueled:TakeFuelItem(fuel_item, act.doer)
 						return true
 					end
+				else
+					return false, "NOTALLOWED"		
 				end
 			end
 
@@ -1169,7 +1173,7 @@ ACTIONS.STORE.stroverridefn = function(act)
 		end
 	end
 
-	if target.replica.container ~= nil and target.replica.container:CanTakeItemInSlot(obj) then
+	if cooking.IsCookingIngredient(obj.prefab) then
 		cancook = true
 	end
 
@@ -1192,7 +1196,7 @@ ACTIONS.STORE.stroverridefn = function(act)
 			return STRINGS.ACTIONS.COOK
 		end
 
-		return STRINGS.ACTIONS.COOK
+		return STRINGS.ACTIONS.STORE.GENERIC
 	end
 
 	if target:HasTag("cookwarestewer") then
@@ -1206,7 +1210,7 @@ ACTIONS.STORE.stroverridefn = function(act)
 			and STRINGS.ACTIONS.ADDFUEL.ADDFUEL or STRINGS.ACTIONS.ADDFUEL
 		end
 
-		return STRINGS.ACTIONS.COOK
+		return STRINGS.ACTIONS.STORE.GENERIC
 	end
 
 	if target:HasTag("brewer") then

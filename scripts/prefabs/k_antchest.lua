@@ -6,28 +6,29 @@ local assets =
 	Asset("ANIM", "anim/ant_chest_nectar_build.zip"),
 	Asset("ANIM", "anim/ant_chest_honey_build.zip"),
 	Asset("ANIM", "anim/ui_antchest_honeycomb.zip"),
-	
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
-	
+
 	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
-	
+
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
 
-local prefabs = 
+local prefabs =
 {
 	"honey",
 	"kyno_nectar_pod",
+	"chestupgrade_stacksize_fx",
 }
 
 local function TestItemInside(inst, item, slot)
 	return item.prefab == "honey" or item.prefab == "kyno_nectar_pod"
 end
 
-local function OnOpen(inst) 
+local function OnOpen(inst)
 	if not inst:HasTag("burnt") then
 		inst.AnimState:PlayAnimation("open")
 		inst.SoundEmitter:PlaySound("waterlogged1/common/use_figjam")
@@ -42,16 +43,24 @@ local function OnClose(inst, doer)
 end
 
 local function OnHammered(inst, worker)
-    if inst:HasTag("fire") and inst.components.burnable then
-        inst.components.burnable:Extinguish()
-    end
-	
-	if inst.components.container then 
-		inst.components.container:DropEverything() 
+	if inst:HasTag("fire") and inst.components.burnable then
+		inst.components.burnable:Extinguish()
 	end
-	
-	inst.components.lootdropper:DropLoot()
-	
+
+	if inst.components.container ~= nil then
+		inst.components.container:DropEverything()
+	end
+
+	if inst.components.lootdropper ~= nil then
+		inst.components.lootdropper:DropLoot()
+	end
+
+	if inst.components.upgradeable ~= nil and inst.components.upgradeable.numupgrades > 0 then
+		if inst.components.lootdropper ~= nil then
+			inst.components.lootdropper:SpawnLootPrefab("alterguardianhatshard")
+		end
+	end
+
 	SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_wood")
 	inst:Remove()
@@ -62,9 +71,9 @@ local function OnHit(inst, worker)
 		inst.AnimState:PlayAnimation("hit")
 		inst.AnimState:PushAnimation("closed", true)
 		inst.SoundEmitter:PlaySound("waterlogged1/common/use_figjam")
-		
-		if inst.components.container then 
-			inst.components.container:DropEverything() 
+
+		if inst.components.container ~= nil then
+			inst.components.container:DropEverything()
 			inst.components.container:Close()
 		end
 	end
@@ -82,30 +91,72 @@ local function OnBurnt(inst)
 end
 
 local function RefreshAntChestBuild(inst, minimap)
-    local containsHoney = inst.components.container:Has("honey", 1)
+	local containsHoney = inst.components.container:Has("honey", 1)
 	local containsNectar = inst.components.container:Has("kyno_nectar_pod", 1)
 	local containsHoneyItem = inst.components.container:HasItemWithTag("honeyed", 1)
-	
-    if containsHoney then
-        inst.AnimState:SetBuild("ant_chest_honey_build")
-        minimap:SetIcon("kyno_antchest_honey.tex")
+
+	if containsHoney then
+		inst.AnimState:SetBuild("ant_chest_honey_build")
+		minimap:SetIcon("kyno_antchest_honey.tex")
 		inst.Light:Enable(true)
-		
-    elseif containsNectar then
+
+	elseif containsNectar then
 		inst.AnimState:SetBuild("ant_chest_nectar_build")
 		minimap:SetIcon("kyno_antchest_nectar.tex")
 		inst.Light:Enable(false)
-	
+
 	elseif containsHoneyItem then
 		inst.AnimState:SetBuild("ant_chest_honey_build")
-        minimap:SetIcon("kyno_antchest_honey.tex")
+		minimap:SetIcon("kyno_antchest_honey.tex")
 		inst.Light:Enable(true)
-		
-	else 
-        inst.AnimState:SetBuild("ant_chest")
-        minimap:SetIcon("kyno_antchest_empty.tex")
+
+	else
+		inst.AnimState:SetBuild("ant_chest")
+		minimap:SetIcon("kyno_antchest_empty.tex")
 		inst.Light:Enable(false)
-    end
+	end
+end
+
+local function OnUpgrade(inst, performer, upgraded_from_item)
+	local numupgrades = inst.components.upgradeable.numupgrades
+
+	if numupgrades == 1 then
+		inst._chestupgrade_stacksize = true
+		if inst.components.container ~= nil then
+			inst.components.container:Close()
+			inst.components.container:EnableInfiniteStackSize(true)
+		end
+
+		if upgraded_from_item then
+			local x, y, z = inst.Transform:GetWorldPosition()
+			local fx = SpawnPrefab("chestupgrade_stacksize_fx")
+			fx.Transform:SetPosition(x, y, z)
+		end
+	end
+
+	inst.components.upgradeable.upgradetype = nil
+
+	if inst.components.lootdropper ~= nil then
+		inst.components.lootdropper:SetLoot({ "alterguardianhatshard" })
+	end
+
+	inst.Transform:SetScale(1.1, 1.1, 1.1)
+
+	if inst.Light ~= nil then
+		inst.Light:SetRadius(1.2)
+	end
+end
+
+local function OnDecontruct(inst, caster)
+	if inst.components.container ~= nil then
+		inst.components.container:DropEverything()
+	end
+
+	if inst.components.upgradeable ~= nil and inst.components.upgradeable.numupgrades > 0 then
+		if inst.components.lootdropper ~= nil then
+			inst.components.lootdropper:SpawnLootPrefab("alterguardianhatshard")
+		end
+	end
 end
 
 local function GetStatus(inst, viewer)
@@ -120,7 +171,7 @@ local function OnSave(inst, data)
 	if inst.components.burnable ~= nil and inst.components.burnable:IsBurning() then
 		data.burnt = true
 	end
-	
+
 	if inst.honeyWasLoaded then
 		data.honeyWasLoaded = inst.honeyWasLoaded
 	end
@@ -132,12 +183,18 @@ local function OnLoad(inst, data)
 	end
 end
 
+local function OnLoadPostPass(inst, newents, data)
+	if inst.components.upgradeable ~= nil and inst.components.upgradeable.numupgrades > 0 then
+		OnUpgrade(inst)
+	end
+end
+
 local function fn()
 	local inst = CreateEntity()
-    
+
 	inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-    inst.entity:AddSoundEmitter()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
 
 	local light = inst.entity:AddLight()
@@ -149,63 +206,69 @@ local function fn()
 
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon("kyno_antchest_empty.tex")
-	
+
 	inst.AnimState:SetBank("ant_chest")
 	inst.AnimState:SetBuild("ant_chest")
 	inst.AnimState:PlayAnimation("closed", true)
-	
+
 	inst:AddTag("chest")
 	inst:AddTag("structure")
 	inst:AddTag("antchest")
 	inst:AddTag("cook_robot_storage_valid")
-	
+
 	inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-		inst.OnEntityReplicated = function(inst) 
+	if not TheWorld.ismastersim then
+		inst.OnEntityReplicated = function(inst)
 			if not inst:HasTag("burnt") then
-				inst.replica.container:WidgetSetup("honeydeposit") 
+				inst.replica.container:WidgetSetup("honeydeposit")
 			end
 		end
-        return inst
-    end
-	
+		return inst
+	end
+
 	inst:AddComponent("lootdropper")
-	
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
-	
+
 	inst:AddComponent("preserver")
 	inst.components.preserver:SetPerishRateMultiplier(TUNING.KYNO_ANTCHEST_PERISH_MULT)
-	
+
 	inst:AddComponent("container")
-    inst.components.container:WidgetSetup("honeydeposit")
-    inst.components.container.onopenfn = OnOpen
-    inst.components.container.onclosefn = OnClose
+	inst.components.container:WidgetSetup("honeydeposit")
+	inst.components.container.onopenfn = OnOpen
+	inst.components.container.onclosefn = OnClose
 	inst.components.container.skipclosesnd = true
 	inst.components.container.skipopensnd = true
-	
-    inst:AddComponent("workable")
-    inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
+
+	inst:AddComponent("workable")
+	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetOnFinishCallback(OnHammered)
 	inst.components.workable:SetOnWorkCallback(OnHit)
 	inst.components.workable:SetWorkLeft(3)
-	
+
 	inst:AddComponent("hauntable")
-    inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
-	
+	inst.components.hauntable:SetHauntValue(TUNING.HAUNT_TINY)
+
+	inst:AddComponent("upgradeable")
+	inst.components.upgradeable.upgradetype = UPGRADETYPES.CHEST
+	inst.components.upgradeable:SetOnUpgradeFn(OnUpgrade)
+
 	MakeMediumBurnable(inst, nil, nil, true)
 	inst.components.burnable.onburnt = OnBurnt
-    MakeLargePropagator(inst)
-	
+	MakeLargePropagator(inst)
+
 	AddHauntableDropItemOrWork(inst)
-   
+
 	inst:ListenForEvent("onbuilt", OnBuilt)
-    inst:ListenForEvent("itemget", function() RefreshAntChestBuild(inst, minimap) end)
+	inst:ListenForEvent("ondeconstructstructure", OnDecontruct)
+	inst:ListenForEvent("itemget", function() RefreshAntChestBuild(inst, minimap) end)
 	inst:ListenForEvent("itemlose", function() RefreshAntChestBuild(inst, minimap) end)
-	
+
 	inst.OnSave = OnSave
-    inst.OnLoad = OnLoad
+	inst.OnLoad = OnLoad
+	inst.OnLoadPostPass = OnLoadPostPass
 
 	return inst
 end

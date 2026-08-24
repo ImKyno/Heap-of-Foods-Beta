@@ -24,9 +24,10 @@ local WEEDS_SEED_CHANCE = TUNING.KYNO_ELDERMANDRAKE_WEED_SEED_CHANCE
 
 local SPECIAL_SEEDS =
 {
-	firenettles_seeds  = WEEDS_SEED_CHANCE,
-	forgetmelots_seeds = WEEDS_SEED_CHANCE,
-	tillweed_seeds     = WEEDS_SEED_CHANCE,
+	firenettles_seeds     = WEEDS_SEED_CHANCE,
+	forgetmelots_seeds    = WEEDS_SEED_CHANCE,
+	tillweed_seeds        = WEEDS_SEED_CHANCE,
+	kyno_icenettles_seeds = WEEDS_SEED_CHANCE,
 }
 
 local function OnPickRandomSeed()
@@ -79,16 +80,14 @@ local function CalcSanityAura(inst, observer)
 	return 0
 end
 
--- I'm going to invert the papers here because the ones from hamlet are booooooring as hell.
--- Elder Mandrakes will now attack anyone holding veggie based items! Muhahahaha!
 local function ShouldAcceptItem(inst, item)
 	if inst:HasTag("grumpy") then
 		return false
 	end
 
-	return(item.components.equippable ~= nil and item.components.equippable.equipslot == EQUIPSLOTS.HEAD) or
-	(inst.components.eater:CanEat(item) and ((item.components.edible.foodtype == FOODTYPE.ROUGHAGE) or
-	inst.components.follower:GetLeader() == nil or inst.components.follower:GetLoyaltyPercent() <= 0.90))
+	return (item.components.equippable ~= nil and item.components.equippable.equipslot == EQUIPSLOTS.HEAD)
+	or (inst.components.eater:CanEat(item) and ((item.components.edible.foodtype == FOODTYPE.ROUGHAGE)
+	or inst.components.follower:GetLeader() == nil or inst.components.follower:GetLoyaltyPercent() <= 0.90))
 end
 
 local function OnGetItemFromPlayer(inst, giver, item)
@@ -168,6 +167,8 @@ end
 local RETARGET_MUST_TAGS = { "_combat", "_health" }
 local RETARGET_ONEOF_TAGS = { "monster", "player" }
 
+-- I'm going to invert the papers here because the ones from hamlet are booooooring as hell.
+-- Elder Mandrakes will now attack anyone holding veggie based items! Muhahahaha!
 local function NormalRetargetFn(inst)
 	return not inst:IsInLimbo() and FindEntity(inst, TUNING.PIG_TARGET_DIST, function(guy)
 	return inst.components.combat:CanTarget(guy)
@@ -215,7 +216,8 @@ local function DoAreaEffect(inst, knockout)
 	for i, v in ipairs(ents) do
 		if not (v.components.freezable ~= nil and v.components.freezable:IsFrozen())
 		and not (v.components.pinnable ~= nil and v.components.pinnable:IsStuck())
-		and not (v.components.fossilizable ~= nil and v.components.fossilizable:IsFossilized()) then
+		and not (v.components.fossilizable ~= nil and v.components.fossilizable:IsFossilized())
+		and not (v.components.sleeper ~= nil and v.components.sleeper:IsAsleep()) then
 			local mount = v.components.rider ~= nil and v.components.rider:GetMount() or nil
 
 			if mount ~= nil then
@@ -236,7 +238,7 @@ local function DoAreaEffect(inst, knockout)
 end
 
 local function DeathScream(inst)
-	inst.SoundEmitter:PlaySound("dontstarve/creatures/mandrake/death")
+	-- inst.SoundEmitter:PlaySound("dontstarve/creatures/mandrake/death")
 	DoAreaEffect(inst)
 end
 

@@ -1381,3 +1381,7 @@ WAXWELL.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Um pássaro de inverno excepcionalmente noturno.",
 	HELD = "Consigo sentir essa coisa miserável se contorcendo.",
 }
+
+WAXWELL.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Não se parece com uma estrutura. Ainda."
+
+WAXWELL.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Estou feliz que eu não seja um peixe."

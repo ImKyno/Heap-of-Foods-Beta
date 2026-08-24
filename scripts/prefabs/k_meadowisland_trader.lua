@@ -465,8 +465,6 @@ local function fn()
 	inst.Transform:SetFourFaced()
 	MakeCharacterPhysics(inst, 50, .5)
 
-	inst.sounds = sounds
-
 	inst.AnimState:SetBank("pigman")
 	inst.AnimState:SetBuild("merm_trader1_build")
 	inst.AnimState:AddOverrideBuild("kyno_meadowisland_trader_build")
@@ -496,6 +494,7 @@ local function fn()
 
 	inst:RemoveTag("_named")
 
+	inst.sounds = sounds
 	inst.WARES = WARES
 	inst.FORGETABLE_RECIPES = FORGETABLE_RECIPES
 

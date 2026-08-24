@@ -283,8 +283,8 @@ local birds =
 		cookable        = "kyno_bacon_cooked",
 		sounds          =
 		{
-			takeoff     = "dontstarve//birds/takeoff_quagmire_pigeon",
-			chirp       = "dontstarve//birds/chirp_quagmire_pigeon",
+			takeoff     = "dontstarve/birds/takeoff_junco",
+			chirp       = "dontstarve/birds/chirp_junco",
 			flyin       = "dontstarve/birds/flyin",
 		},
 	},

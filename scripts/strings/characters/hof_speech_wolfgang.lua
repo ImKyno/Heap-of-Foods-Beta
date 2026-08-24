@@ -1381,3 +1381,7 @@ WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Cold bird has very sharp eyes!",
 	HELD = "Sharp bird is attacking Wolfgang's pocket!",
 }
+
+WOLFGANG.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Is very unfinished thing."
+
+WOLFGANG.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Is mighty fishing rod!"

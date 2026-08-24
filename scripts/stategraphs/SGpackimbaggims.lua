@@ -6,6 +6,7 @@ local events =
 	CommonHandlers.OnSleep(),
 	CommonHandlers.OnElectrocute(),
 	CommonHandlers.OnLocomote(false, true),
+	CommonHandlers.OnCorpseChomped(),
 	
 	EventHandler("attacked", function(inst, data)
 		if not inst.components.health:IsDead() then
@@ -97,6 +98,11 @@ local states =
 					inst.SoundEmitter:PlaySound(inst.sounds.fat_death_spin)
 				end
 			end),
+		},
+
+		events =
+		{
+			CommonHandlers.OnCorpseDeathAnimOver(),
 		},
 	},
 
@@ -362,4 +368,7 @@ CommonStates.AddElectrocuteStates(states, nil, { pre = "hit", loop = "hit", pst 
 	end,
 })
 
-return StateGraph("packimbaggims", states, events, "idle")
+CommonStates.AddInitState(states, "idle")
+CommonStates.AddCorpseStates(states)
+
+return StateGraph("kyno_packimbaggims", states, events, "init")

@@ -1381,3 +1381,7 @@ WILSON.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Um pássaro formidável do norte congelado.",
 	HELD = "Consigo sentir seu bico cutucando meu bolso.",
 }
+
+WILSON.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Parece o início de uma construção."
+
+WILSON.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Alguém para uma rodada de pescaria?"

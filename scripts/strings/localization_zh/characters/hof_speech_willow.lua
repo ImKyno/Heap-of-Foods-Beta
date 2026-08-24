@@ -1381,3 +1381,7 @@ WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
 	GENERIC = "Even the birds are freezing up here.",
 	HELD = "That bird is poking holes in my pocket!",
 }
+
+WILLOW.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "It's not on fire yet." -- NEEDS TRANSLATION
+
+WILLOW.DESCRIBE.KYNO_FISHINGROD_THULECITE = "I should try this one on Wurt." -- NEEDS TRANSLATION

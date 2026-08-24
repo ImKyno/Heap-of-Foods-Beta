@@ -17,6 +17,7 @@ local INIT_MAIN_MISC =
 	"actions",
 	"stategraphs",
 	"containers",
+	"corpses",
 }
 
 local INIT_MAIN_WORLD =

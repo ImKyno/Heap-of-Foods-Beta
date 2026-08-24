@@ -24,6 +24,18 @@ local FOREST_BLACKLIST          =
 	mandrake_planted            = true,
 	kyno_packimbaggims          = true,
 	kyno_packimbaggims_fishbone = true,
+	hermithouse                 = true,
+	hermithouse2                = true,
+	hermitcrab_teashop          = true,
+	hermithotspring             = true,
+	hermitcrab_lightpost        = true,
+	hermithouse_construction1   = true,
+	hermithouse_construction2   = true,
+	hermithouse_construction3   = true,
+	meatrack_hermit             = true,
+	meatrack_hermit_multi       = true,
+	shellweaver                 = true,
+	underwater_salvageable      = true,
 }
 
 local OCEAN_BLACKLIST           =
@@ -43,12 +55,25 @@ local OCEAN_BLACKLIST           =
 	"oceanwhirlportal",
 	"oceanwhirlbigportal",
 	"hermithouse",
+	"hermithouse2",
+	"hermitcrab_teashop",
+	"hermithotspring",
+	"hermitcrab_lightpost",
+	"hermithouse_construction1",
+	"hermithouse_construction2",
+	"hermithouse_construction3",
 	"meatrack_hermit",
+	"meatrack_hermit_multi",
 	"beebox_hermit",
 	"moon_fissure_plugged",
+	"shellweaver",
+	"monkeyqueen",
+	"monkeypillar",
+	"monkeyisland_portal",
 	"kyno_octopusking_ocean",
 	"kyno_packimbaggims",
 	"kyno_packimbaggims_fishbone",
+	"kyno_wobster_den_monkeyisland"
 }
 
 local function FindEntsInArea(entities, left, top, size, blocking_prefabs)

@@ -671,3 +671,14 @@ function LaunchAtRandomly(inst, launcher, basespeed)
 		inst.Physics:SetVel(math.cos(angle) * spd, 10, math.sin(angle) * spd)
 	end
 end
+
+-- Checking if another Mod is enabled through their crafting recipes. (client-side).
+function ModdedRecipeExists(...)
+	for _, recipe in ipairs({...}) do
+		if AllRecipes[recipe] ~= nil then
+			return true
+		end
+	end
+
+	return false
+end

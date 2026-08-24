@@ -87,25 +87,25 @@ local function RemoveDappernessResistance(owner, equippable)
 end
 
 local function GetPirateBonusDamage(inst, target)
-	return (target:HasTag("pirate") and TUNING.KYNO_PIRATEBUFF_EXTRADAMAGE) or 0
+	return (target:HasTag("pirate") and TUNING.KYNO_PIRATEBUFF_EXTRADAMAGE) or 1
 end
 
 local function GetWormBonusDamage(inst, target)
 	local WORM_TAGS = {"worm", "worm_boss_piece"}
 
-	return (target:HasOneOfTags(WORM_TAGS) and TUNING.KYNO_WORMBUFF_EXTRADAMAGE) or 0
+	return (target:HasOneOfTags(WORM_TAGS) and TUNING.KYNO_WORMBUFF_EXTRADAMAGE) or 1
 end
 
 local function GetCrabBonusDamage(inst, target)
 	local CRAB_TAGS = {"crabking", "crabking_ally", "crab_mob"}
 
-	return (target:HasOneOfTags(CRAB_TAGS) and TUNING.KYNO_CRABBUFF_EXTRADAMAGE) or 0
+	return (target:HasOneOfTags(CRAB_TAGS) and TUNING.KYNO_CRABBUFF_EXTRADAMAGE) or 1
 end
 
 local function GetAmphibianBonusDamage(inst, target)
 	local AMPHIBIAN_TAGS = {"merm", "frog", "toadstool"}
 
-	return (target:HasOneOfTags(AMPHIBIAN_TAGS) and TUNING.KYNO_AMPHIBIANBUFF_EXTRADAMAGE) or 0
+	return (target:HasOneOfTags(AMPHIBIAN_TAGS) and TUNING.KYNO_AMPHIBIANBUFF_EXTRADAMAGE) or 1
 end
 
 local function OnTick(inst, target)

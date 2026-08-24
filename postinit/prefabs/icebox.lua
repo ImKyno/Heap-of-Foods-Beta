@@ -35,7 +35,11 @@ if HOF_ICEBOXSTACKSIZE then
 			end
 		end
 
-		local function OnDecontructStructure(inst, caster)
+		local function OnDecontruct(inst, caster)
+			if inst.components.container ~= nil then
+				inst.components.container:DropEverything()
+			end
+
 			if inst.components.upgradeable ~= nil and inst.components.upgradeable.numupgrades > 0 then
 				if inst.components.lootdropper ~= nil then
 					inst.components.lootdropper:SpawnLootPrefab("alterguardianhatshard")
@@ -50,6 +54,8 @@ if HOF_ICEBOXSTACKSIZE then
 		inst:AddComponent("upgradeable")
 		inst.components.upgradeable.upgradetype = UPGRADETYPES.CHEST
 		inst.components.upgradeable:SetOnUpgradeFn(OnUpgrade)
+
+		inst:ListenForEvent("ondeconstructstructure", OnDecontruct)
 
 		inst.OnLoadPostPass = OnLoadPostPass
 	end

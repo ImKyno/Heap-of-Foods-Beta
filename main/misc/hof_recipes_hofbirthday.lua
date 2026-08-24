@@ -35,6 +35,7 @@ AddRecipe2("kyno_hofbirthday_cake_empty_construction", {Ingredient("kyno_hofbirt
 		min_spacing         = 2,
 		placer              = "kyno_hofbirthday_cake_placer",
 		hint_msg            = "NEEDSHOFBIRTHDAY",
+		image               = "kyno_hofbirthday_cake.tex",
 	},
 	{"SPECIAL_EVENT", "COOKING"}
 )

@@ -389,8 +389,6 @@ local function fn()
 	inst.Transform:SetFourFaced()
 	MakeCharacterPhysics(inst, 50, .5)
 
-	inst.sounds = sounds
-
 	inst.AnimState:SetBank("pigman")
 	-- inst.AnimState:SetBuild("quagmire_swampig_build")
 	inst.AnimState:SetBuild("kyno_deciduousforest_trader")
@@ -427,6 +425,7 @@ local function fn()
 
 	inst:RemoveTag("_named")
 
+	inst.sounds = sounds
 	inst.WARES = WARES
 	inst.FORGETABLE_RECIPES = FORGETABLE_RECIPES
 

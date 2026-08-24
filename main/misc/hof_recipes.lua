@@ -7,6 +7,8 @@ local CONSTRUCTION_PLANS   = _G.CONSTRUCTION_PLANS
 local TechTree             = require("techtree")
 local RecipeFilter         = require("recipes_filter")
 
+require("hof_util")
+
 local HOF_WARLYMEALGRINDER = GetModConfigData("WARLYMEALGRINDER")
 local HOF_FERTILIZERTWEAK  = GetModConfigData("FERTILIZERTWEAK")
 
@@ -33,6 +35,23 @@ AllRecipes["merm_toolshed"].testfn           = IsTidalMarshLand
 AllRecipes["merm_toolshed_upgraded"].testfn  = IsTidalMarshLand
 AllRecipes["merm_armory"].testfn             = IsTidalMarshLand
 AllRecipes["merm_armory_upgraded"].testfn    = IsTidalMarshLand
+
+-- Salt Pond can only be placed at "salt" grounds.
+local function IsSaltLand(pt, rot)
+	local tile = _G.TheWorld.Map:GetTileAtPoint(pt.x, pt.y, pt.z)
+	local platform = _G.TheWorld.Map:GetPlatformAtPoint(pt.x, 0, pt.z, 0.5)
+
+	local valid_tile = false
+
+	for _, valid in pairs(TUNING.KYNO_SALTRACK_VALID_TILES) do
+		if valid ~= nil and tile == valid then
+			valid_tile = true
+			break
+		end
+	end
+
+	return valid_tile and platform == nil
+end
 
 -- Using Bananas instead of Cave Bananas.
 AllRecipes["wormwood_reeds"].ingredients = {Ingredient("kyno_banana", 1)}
@@ -438,6 +457,12 @@ AddRecipe2("kyno_piggybank", {Ingredient("batnose", 1), Ingredient("marble", 6),
 	{"CONTAINERS"}
 )
 
+AddRecipe2("kyno_fishingrod_thulecite", {Ingredient("thulecite", 2), Ingredient("refined_dust", 1), Ingredient("silk", 1)}, TECH.LOST,
+	{
+	},
+	{"TOOLS"}
+)
+
 AddRecipe2("hermitshop_kyno_malbatrossfood_blueprint", {Ingredient("messagebottleempty", 10)}, TECH.HERMITCRABSHOP_SEVEN,
 	{
 		nounlock            = true,
@@ -826,10 +851,33 @@ for i = 1, NUM_TEASHOP_LEVELS do
 end
 
 -- Construction Plans.
+AddRecipe2("kyno_pond_salt2_construction", {}, TECH.LOST,
+	{
+		placer              = "kyno_pond_salt2_construction_placer",
+		min_spacing         = 3,
+		hint_msg            = "NEEDSFISHING",
+		testfn              = IsSaltLand,
+		nameoverride        = "kyno_pond_salt2",
+		description         = "kyno_pond_salt2",
+	},
+	{"GARDENING"}
+)
+
+CONSTRUCTION_PLANS["kyno_pond_salt2_construction"] =
+{
+	Ingredient("shovel",                  1,  nil, nil),
+	Ingredient("kyno_bucket_water",       1,  nil),
+	Ingredient("kyno_saltrack_installer", 1,  nil),
+	Ingredient("saltrock",                10, nil, nil),
+}
+
+AddDeconstructRecipe("kyno_pond_salt2", {Ingredient("kyno_saltrack_installer", 1), Ingredient("saltrock", 10)})
+
 AddRecipe2("kyno_fishfarmplot_construction", {}, TECH.LOST,
 	{
 		placer              = "kyno_fishfarmplot_construction_placer",
 		min_spacing         = 5,
+		hint_msg            = "NEEDSSHARKBOI",
 		testfn              = function(pt) return TheWorld.Map:GetPlatformAtPoint(pt.x, 0, pt.z, 0.5) == nil end,
 		nameoverride        = "kyno_fishfarmplot",
 		description         = "kyno_fishfarmplot_kit",
@@ -839,10 +887,10 @@ AddRecipe2("kyno_fishfarmplot_construction", {}, TECH.LOST,
 
 CONSTRUCTION_PLANS["kyno_fishfarmplot_construction"] =
 {
-	Ingredient("shovel",            1, nil,      nil),
+	Ingredient("shovel",            1, nil,  nil),
 	Ingredient("kyno_bucket_water", 1, nil),
-	Ingredient("rocks",            20, nil,      nil),
-	Ingredient("chum",              5, nil,      nil),
+	Ingredient("rocks",            20, nil,  nil),
+	Ingredient("chum",              5, nil,  nil),
 }
 
 AddDeconstructRecipe("kyno_fishfarmplot", {Ingredient("rocks", 20)})
@@ -896,5 +944,32 @@ if TUNING.HOF_WARLYSPICES then
 			numtogive           = 2,
 		},
 		{"CRAFTING_STATION"}
+	)
+end
+
+-- Only add the turfs recipes if Not Enough Turfs Mod isn't enabled.
+if not _G.ModdedRecipeExists("turf_swirlgrass", "turf_clovertiles") and not TUNING.HOF_IS_NET_ENABLED then
+	AddRecipe2("turf_stonecity", {Ingredient("cutstone", 1), Ingredient("flint", 2)}, TECH.TURFCRAFTING_TWO,
+		{
+			hint_msg            = "NEEDSTURFCRAFTING",
+			numtogive           = 4,
+		},
+		{"DECOR"}
+	)
+
+	AddRecipe2("turf_pinkpark", {Ingredient("cutgrass", 1), Ingredient("petals", 1)}, TECH.TURFCRAFTING_TWO,
+		{
+			hint_msg            = "NEEDSTURFCRAFTING",
+			numtogive           = 4,
+		},
+		{"DECOR"}
+	)
+
+	AddRecipe2("turf_fields", {Ingredient("cutgrass", 1), Ingredient("ash", 1)}, TECH.TURFCRAFTING_TWO,
+		{
+			hint_msg            = "NEEDSTURFCRAFTING",
+			numtogive           = 4,
+		},
+		{"DECOR"}
 	)
 end

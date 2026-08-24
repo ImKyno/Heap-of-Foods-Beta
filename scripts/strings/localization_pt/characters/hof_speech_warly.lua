@@ -1381,3 +1381,7 @@ WARLY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Um pássaro magnífico das terras selvagens do norte.",
 	HELD = "Acredito que ele não goste de ser carregado dessa maneira.",
 }
+
+WARLY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Ah, um lugar para coletar cristais de sal, ainda em construção."
+
+WARLY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Ah, uma ótima vara de pesca."

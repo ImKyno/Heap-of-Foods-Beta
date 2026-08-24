@@ -1381,3 +1381,7 @@ WARLY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "A magnificent bird of the northern wilderness.",
 	HELD = "I believe it objects to being carried this way.",
 }
+
+WARLY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Ah, a place for collecting salt crystals under construction."
+
+WARLY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Ah, a fine fishing rod."

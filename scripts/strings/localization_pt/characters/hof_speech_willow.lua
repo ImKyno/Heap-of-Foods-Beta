@@ -1381,3 +1381,7 @@ WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Até os pássaros estão congelando por aqui.",
 	HELD = "Esse pássaro está furando meu bolso!",
 }
+
+WILLOW.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Não está pegando fogo ainda."
+
+WILLOW.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Eu deveria tentar usar isso na Wurt."

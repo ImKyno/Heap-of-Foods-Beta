@@ -1381,3 +1381,7 @@ WINONA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Parece que esse aqui foi feito para o frio.",
 	HELD = "Esse pássaro vai acabar com meu bolso.",
 }
+
+WINONA.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Parece a fundação para um extrator de sal."
+
+WINONA.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Coisas antigas são sempre mais duráveis!"

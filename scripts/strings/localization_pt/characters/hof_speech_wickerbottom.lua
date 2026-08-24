@@ -1381,3 +1381,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Uma ave de rapina do norte bem adaptada a climas gélidos.",
 	HELD = "Parece determinado a abrir caminho bicando para fora.",
 }
+
+WICKERBOTTOM.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Um lugar para extrair sal, ainda incompleto."
+
+WICKERBOTTOM.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Uma vara de pesca antiga e robusta."

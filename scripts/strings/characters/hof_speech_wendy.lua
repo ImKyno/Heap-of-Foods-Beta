@@ -1381,3 +1381,7 @@ WENDY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "It watches the frozen darkness.",
 	HELD = "Its little beak keeps prodding me...",
 }
+
+WENDY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Even unfinished, it has a certain bleakness."
+
+WENDY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Hook, line and sinker."

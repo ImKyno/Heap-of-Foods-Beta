@@ -22,6 +22,7 @@ local events =
 	CommonHandlers.OnHop(),
 	CommonHandlers.OnSink(),
 	CommonHandlers.OnFallInVoid(),
+	CommonHandlers.OnCorpseChomped(),
 }
 
 local states =
@@ -282,4 +283,4 @@ CommonStates.AddParasiteReviveState(states)
 CommonStates.AddInitState(states, "idle")
 CommonStates.AddCorpseStates(states)
 
-return StateGraph("eldermandrake", states, events, "init", actionhandlers)
+return StateGraph("kyno_eldermandrake", states, events, "init", actionhandlers)

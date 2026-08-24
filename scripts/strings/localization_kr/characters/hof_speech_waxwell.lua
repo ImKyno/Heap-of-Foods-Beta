@@ -1381,3 +1381,7 @@ WAXWELL.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
 	GENERIC = "A remarkably nocturnal winter bird.",
 	HELD = "I can feel the wretched thing squirming.",
 }
+
+WAXWELL.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Hardly an impressive structure. Yet." -- NEEDS TRANSLATION
+
+WAXWELL.DESCRIBE.KYNO_FISHINGROD_THULECITE = "I'm glad I'm not a fish." -- NEEDS TRANSLATION

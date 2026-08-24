@@ -1381,3 +1381,7 @@ WENDY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Ele observa a escuridão congelada.",
 	HELD = "Seu pequeno bico não para de me cutucar.",
 }
+
+WENDY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Mesmo não finalizada, possui uma certa frieza."
+
+WENDY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Anzol, linha e chumbo."

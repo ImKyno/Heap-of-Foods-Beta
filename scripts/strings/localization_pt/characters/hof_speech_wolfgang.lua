@@ -1381,3 +1381,7 @@ WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "Pássaro frio tem olhos muito afiados!",
 	HELD = "Pássaro afiado está atacando o bolso de Wolfgang!",
 }
+
+WOLFGANG.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "É uma coisa ainda não finalizada."
+
+WOLFGANG.DESCRIBE.KYNO_FISHINGROD_THULECITE = "É vara de pesca poderosa!"

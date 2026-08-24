@@ -1381,3 +1381,7 @@ WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "A mighty hunter of the frozen wilds!",
 	HELD = "The fierce bird challenges its confinement!",
 }
+
+WATHGRITHR.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "A saltwork in the making!"
+
+WATHGRITHR.DESCRIBE.KYNO_FISHINGROD_THULECITE = "A fine fishing rod fit for a sea warrior."

@@ -1381,3 +1381,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 	GENERIC = "A northern raptor well adapted to frigid climates.",
 	HELD = "It seems determined to peck its way out.",
 }
+
+WICKERBOTTOM.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "An unfinished place for salt extraction."
+
+WICKERBOTTOM.DESCRIBE.KYNO_FISHINGROD_THULECITE = "A very old and sturdy fishing rod."

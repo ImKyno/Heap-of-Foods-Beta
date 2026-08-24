@@ -3314,19 +3314,21 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"cheese_yellow", 1}, {"kyno_flour", 1}, {"kyno_spotspice", 1}, {"kyno_oil", 1}}},
 	},
-	
+
 	brigadeiro =
 	{
-		test = function(cooker, names, tags) return names.chocolate_black and tags.sugar and names.kyno_twiggynuts end,
+		test = function(cooker, names, tags) return names.chocolate_black and tags.sugar
+		and (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2) end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FASTISH,
-		health = 25,
+		health = 8,
 		hunger = 32.5,
-		sanity = 50,
+		sanity = 60,
 		cooktime = 1,
+		potlevel = "low",
 		overridebuild = "kyno_foodrecipes_cookpot1",
-		pigcoinvalue = {6, 0, 0},
+		pigcoinvalue = {6, 2, 0},
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"chocolate_black", 1}, {"kyno_sugar", 1}, {"kyno_twiggynuts", 2}}},
 	},

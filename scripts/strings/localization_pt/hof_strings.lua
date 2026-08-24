@@ -34,6 +34,9 @@ STRINGS.UI.CRAFTING.NEEDSDECIDUOUSSHOP_TWO = "Procure o mercante excêntrico par
 
 STRINGS.UI.CRAFTING.NEEDSHOFBIRTHDAY = "Disponível durante o Aniversário do Mod Amontoado de Comidas!"
 
+STRINGS.UI.CRAFTING.NEEDSSHARKBOI = "Procure por uma criatura do mar amigável o suficiênte\npara fazer esta troca!"
+STRINGS.UI.CRAFTING.NEEDSFISHING = "Pesque vezes o suficiênte para descobrir mais sobre isto!"
+
 STRINGS.UI.CRAFTING.RECIPEACTION.SERENITYSHOP = "Trocar"
 STRINGS.UI.CRAFTING.RECIPEACTION.MEALGRINDER = "Produzir"
 STRINGS.UI.CRAFTING.RECIPEACTION.MEADOWSHOP = "Negociar"
@@ -1379,11 +1382,14 @@ STRINGS.RECIPE_DESC.KYNO_SALTRACK_INSTALLER_P = "PARA COLOCAR NAS POÇAS, PEQUEN
 
 STRINGS.NAMES.TURF_PINKPARK = "Grama de Parque Rosa"
 STRINGS.NAMES.TURF_PINKPARK_P = "Grama de Parque Rosa"
+STRINGS.RECIPE_DESC.TURF_PINKPARK = "Uma grama rosa para mentes vibrantes."
 
 STRINGS.NAMES.TURF_STONECITY = "Rua de Pedra Branca"
 STRINGS.NAMES.TURF_STONECITY_P = "Diagrama de Rua de Pedra Branca"
+STRINGS.RECIPE_DESC.TURF_STONECITY = "Pedras brancas para uma cidade de pedras."
 
 STRINGS.NAMES.TURF_FIELDS = "Chão Cultivado"
+STRINGS.RECIPE_DESC.TURF_FIELDS = "Um pedaço de terra civilizado."
 
 STRINGS.NAMES.TURF_TIDALMARSH = "Chão de Maré"
 STRINGS.NAMES.WURT_TURF_TIDALMARSH = "Chão de Maré"
@@ -2425,3 +2431,11 @@ STRINGS.NAMES.KYNO_CHILLED_SHARD = "Estilhaços Gélidos"
 STRINGS.NAMES.KYNO_BIRD_ROBIN_NIGHT = "Vigilante Noturno"
 
 STRINGS.NAMES.KYNO_BIRD_ROBIN_WINTER_NIGHT = "Grito-do-Norte"
+
+STRINGS.NAMES.KYNO_POND_SALT2 = "Poça de Sal Artificial"
+STRINGS.RECIPE_DESC.KYNO_POND_SALT2 = "Extraia e colete cristais de sal com o mínimo de esforço."
+
+STRINGS.NAMES.KYNO_POND_SALT2_CONSTRUCTION = "Fundação da Poça de Sal Artificial"
+
+STRINGS.NAMES.KYNO_FISHINGROD_THULECITE = "Vara de Pesca de Thulecite"
+STRINGS.RECIPE_DESC.KYNO_FISHINGROD_THULECITE = "Fisgue peixes da maneira anciã."

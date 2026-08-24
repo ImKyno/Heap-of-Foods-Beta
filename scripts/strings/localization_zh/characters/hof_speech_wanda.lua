@@ -1381,3 +1381,7 @@ WANDA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
 	GENERIC = "A creature that seems perfectly at home in the cold.",
 	HELD = "It seems rather unhappy about being carried.",
 }
+
+WANDA.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "It'll be useful once it's finished." -- NEEDS TRANSLATION
+
+WANDA.DESCRIBE.KYNO_FISHINGROD_THULECITE = "This has stood the test of time." -- NEEDS TRANSLATION

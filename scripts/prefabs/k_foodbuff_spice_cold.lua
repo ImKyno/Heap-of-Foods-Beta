@@ -11,6 +11,8 @@ local function GetColdDamageMult(inst, target)
 			end
 		end
 	end
+
+	return 1
 end
 
 local function OnAttached(inst, target)
