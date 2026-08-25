@@ -78,6 +78,32 @@ local function OnRespawned(inst)
 	inst:RemoveEventCallback("ms_respawnedfromghost", OnRespawned)
 end
 
+-- Cannot heal by eating food while under the effect of Food Healing Sickness.
+local function OnHealingSickness(inst)
+	if inst.components.eater ~= nil and inst.components.debuffable ~= nil then
+		local _custom_stats_mod_fn = inst.components.eater.custom_stats_mod_fn
+
+		inst.components.eater.custom_stats_mod_fn = function(inst, health_delta, hunger_delta, sanity_delta, food, feeder, ...)
+			if _custom_stats_mod_fn ~= nil then
+				health_delta, hunger_delta, sanity_delta =
+				_custom_stats_mod_fn(inst, health_delta, hunger_delta, sanity_delta, food, feeder, ...)
+			end
+
+			if inst.components.debuffable ~= nil
+			and inst.components.debuffable:HasDebuff("kyno_healingsicknessbuff") and health_delta > 0 then
+				health_delta = 0
+			end
+
+			if inst.components.debuffable ~= nil
+			and inst.components.debuffable:HasDebuff("kyno_healingsicknessbuff") and sanity_delta > 0 then
+				sanity_delta = 0
+			end
+
+			return health_delta, hunger_delta, sanity_delta
+		end
+	end
+end
+
 local function PlayerPostInit(inst)
 	inst:AddComponent("fishregistryupdater")
 
@@ -85,7 +111,9 @@ local function PlayerPostInit(inst)
 		return inst
 	end
 
-	-- Daily Recipes.
+	-- Food Healing Sickness from Enchanted Shimmer Apple.
+	OnHealingSickness(inst)
+
 	if inst.components.eater ~= nil then
 		local _oneatfn = inst.components.eater.oneatfn
 
@@ -98,6 +126,7 @@ local function PlayerPostInit(inst)
 				return
 			end
 
+			-- Daily Recipes.
 			local bonus = TUNING.HOF_DAILYRECIPES_BONUS
 			local base_recipe = GetBaseFoodPrefab(food.prefab)
 
@@ -106,7 +135,10 @@ local function PlayerPostInit(inst)
 
 				if base_recipe == recipe then
 					if inst.components.health ~= nil then
-						inst.components.health:DoDelta(bonus)
+						if inst.components.debuffable ~= nil
+						and not inst.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+							inst.components.health:DoDelta(bonus)
+						end
 					end
 
 					if inst.components.hunger ~= nil then
@@ -114,7 +146,10 @@ local function PlayerPostInit(inst)
 					end
 
 					if inst.components.sanity ~= nil then
-						inst.components.sanity:DoDelta(bonus)
+						if inst.components.debuffable ~= nil
+						and not inst.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+							inst.components.sanity:DoDelta(bonus)
+						end
 					end
 
 					inst:AddDebuff("kyno_luckbuff", "kyno_luckbuff")

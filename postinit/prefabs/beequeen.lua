@@ -12,6 +12,7 @@ local function BeeQueenPostInit(inst)
 		inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod",         1.00)
 		inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod",         0.33)
 		inst.components.lootdropper:AddChanceLoot("kyno_nectar_pod",         0.33)
+		inst.components.lootdropper:AddChanceLoot("kyno_opalpreciousapple",  0.05)
 	end
 end
 

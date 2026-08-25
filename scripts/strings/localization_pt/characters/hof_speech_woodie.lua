@@ -113,6 +113,11 @@ WOODIE.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Parece que voltei à minha força nor
 WOODIE.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Sinto que a má sorte está chegando."
 WOODIE.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Parece que a maré de azar finalmente virou."
 
+WOODIE.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Parece que nada pode me machucar agora."
+WOODIE.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Voltei a ser vulnerável."
+
+WOODIE.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Bom, lá se foi uma doença daquelas."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo diferente se encaixe aqui"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, ele não quer isso."
@@ -1399,3 +1404,5 @@ WOODIE.DESCRIBE.OPALPRECIOUSCREAM = "Nunca vi creme brilhar assim antes."
 WOODIE.DESCRIBE.CATFISHSTICK = "Coitado do peixe. Pelo menos está bem cozido."
 
 WOODIE.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Parece chique. Espero que não faça nada muito estranho."
+
+WOODIE.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Nunca vi uma maçã como esta."

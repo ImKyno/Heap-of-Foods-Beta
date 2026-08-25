@@ -54,9 +54,11 @@ if TUNING.HOF_IS_NET_ENABLED then
 	AddClassPostConstruct("components/birdspawner", function(self)
 		local BIRD_TYPES = UpvalueHacker.GetUpvalue(self.SpawnBird, "PickBird", "BIRD_TYPES")
 
-		BIRD_TYPES[WORLD_TILES.BEACH]          = { "toucan", "toucan_chubby" }
-		BIRD_TYPES[WORLD_TILES.TIDALMARSH]     = { "toucan", "toucan_chubby" }
-		BIRD_TYPES[WORLD_TILES.FIELDS]         = { "kingfisher" }
+		if BIRD_TYPES ~= nil then
+			BIRD_TYPES[WORLD_TILES.BEACH]      = { "toucan", "toucan_chubby" }
+			BIRD_TYPES[WORLD_TILES.TIDALMARSH] = { "toucan", "toucan_chubby" }
+			BIRD_TYPES[WORLD_TILES.FIELDS]     = { "kingfisher" }
+		end
 	end)
 end
 

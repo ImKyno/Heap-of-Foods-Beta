@@ -113,6 +113,11 @@ WURT.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Wurt não é mais forte..."
 WURT.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Algo ruim está prestes a acontecer!"
 WURT.ANNOUNCE_KYNO_BADLUCKBUFF_END = "A má sorte acabou!"
 
+WURT.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Wurt não se machuca mais!"
+WURT.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "A proteção brilhante desapareceu!!"
+
+WURT.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Já estou melhor, florp!"
+
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Peixes bonitinhos sempre estão no pantano!"
 
 WURT.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Glurgh... errado..."
@@ -1401,3 +1406,5 @@ WURT.DESCRIBE.OPALPRECIOUSCREAM = "Creme bonito! Parece nuvem de arco-íris, flo
 WURT.DESCRIBE.CATFISHSTICK = "Nãooo! Por que machucar o peixe?!"
 
 WURT.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Doce lindo e brilhante! O que acontece quando eu como?"
+
+WURT.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Ooo! Fruta brilhante!"

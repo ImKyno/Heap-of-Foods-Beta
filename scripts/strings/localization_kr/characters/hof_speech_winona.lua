@@ -113,6 +113,11 @@ WINONA.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Guess we're back to standard output."
 WINONA.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Looks like trouble's coming MY way."
 WINONA.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Looks like I'm finally catching a break."
 
+WINONA.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Now that's what I call protective equipment!"
+WINONA.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Back to wearing protective hats."
+
+WINONA.ANNOUNCE_KYNO_SICKNESSBUFF_END = "That's better. Back on my feet."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nope."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nope, something else, maybe."
@@ -1399,3 +1404,5 @@ WINONA.DESCRIBE.OPALPRECIOUSCREAM = "Fancy cream. Must be expensive."
 WINONA.DESCRIBE.CATFISHSTICK = "Not fancy, but it'll fill you up."
 
 WINONA.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Shiny candy with unpredictable results. Sounds about right."
+
+WINONA.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "That's an unusual kind of apple."

@@ -468,11 +468,13 @@ AddRecipe2("kyno_piggybank", {Ingredient("batnose", 1), Ingredient("marble", 6),
 	{"CONTAINERS"}
 )
 
+--[[
 AddRecipe2("kyno_fishingrod_thulecite", {Ingredient("thulecite", 2), Ingredient("refined_dust", 1), Ingredient("silk", 1)}, TECH.LOST,
 	{
 	},
 	{"TOOLS"}
 )
+]]--
 
 AddRecipe2("hermitshop_kyno_malbatrossfood_blueprint", {Ingredient("messagebottleempty", 10)}, TECH.HERMITCRABSHOP_SEVEN,
 	{

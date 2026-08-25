@@ -15,7 +15,7 @@ local function ApplyRandomEffect(inst, target)
 		inst:DoTaskInTime(0, function()
 			if target ~= nil and target:IsValid() and target.components.health ~= nil then
 				local currenthealth = target.components.health.currenthealth
-				target.components.health:DoDelta(-currenthealth, nil, "opalpreciouslollipop_curse", true, nil, true)
+				target.components.health:DoDelta(-currenthealth, nil, "opalpreciouslollipop_curse", false, nil, true)
 			end
 		end)
 	end

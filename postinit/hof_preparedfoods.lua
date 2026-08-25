@@ -45,9 +45,10 @@ VanillaFood.icecream.test = function(cooker, names, tags)
 end
 
 VanillaFood.monsterlasagna.oneatenfn = function(inst, eater)
-	if eater ~= nil and eater:HasTag("playermonster") and
-	not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-	not eater:HasTag("playerghost") then
+	if eater ~= nil and eater:HasTag("playermonster")
+	and not (eater.components.health ~= nil and eater.components.health:IsDead())
+	and not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+	and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 		eater.components.health:DoDelta(20)
 		eater.components.sanity:DoDelta(20)
 	end
@@ -83,11 +84,20 @@ VanillaFood.shroombait.oneatenfn = function(inst, eater)
 		_shroombait_oneatenfn(inst, eater)
 	end
 
-	if eater ~= nil and eater:HasTag("playermonster") and
-	not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-	not eater:HasTag("playerghost") then
+	if eater ~= nil and eater:HasTag("playermonster")
+	and not (eater.components.health ~= nil and eater.components.health:IsDead())
+	and not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+	and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 		eater.components.health:DoDelta(20)
 		eater.components.sanity:DoDelta(20)
+	end
+end
+
+-- Jellybeans will not heal while under the effects of Food Healing Sickness.
+VanillaFood.jellybean.oneatenfn = function(inst, eater)
+	if eater ~= nil and eater.components.debuffable ~= nil
+	and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+		eater:AddDebuff("healthregenbuff", "healthregenbuff")
 	end
 end
 

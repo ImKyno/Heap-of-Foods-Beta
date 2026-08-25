@@ -1,7 +1,9 @@
 local function OnTick(inst, target)
-	if target.components.sanity ~= nil then
-		if target.components.health ~= nil and not target.components.health:IsDead() and not target:HasTag("playerghost") then
-			target.components.sanity:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
+	if target.components.sanity ~= nil and target.components.health ~= nil then
+		if not target.components.health:IsDead() and not target:HasTag("playerghost") then
+            if target.components.debuffable ~= nil and not target.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+			    target.components.sanity:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
+            end
 		else
 			inst.components.debuff:Stop()
 		end

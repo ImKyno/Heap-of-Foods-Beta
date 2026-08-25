@@ -22,6 +22,12 @@ AddComponentPostInit("eater", function(self)
 			return true
 		end
 
+		-- Cannot eat Shimmer/Enchanted Foods while under the effects of Food Healing Sickness.
+		if self.inst.components.debuffable ~= nil and self.inst.components.debuffable:HasDebuff("kyno_healingsicknessbuff")
+		and food:HasAnyTag("shimmerfood", "enchantedfood") then
+			return false
+		end
+
 		return _PrefersToEat(self, food, ...)
 	end
 end)

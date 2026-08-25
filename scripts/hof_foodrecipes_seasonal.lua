@@ -432,7 +432,8 @@ local kyno_foods_seasonal =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(20)
 				eater.components.sanity:DoDelta(20)
 			end

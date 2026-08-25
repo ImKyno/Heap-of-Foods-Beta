@@ -270,6 +270,7 @@ function OnFoodRollFortune(inst, eater)
 			good_luck = math.random() < TUNING.KYNO_FORTUNECOOKIEBUFF_GOODLUCK_CHANCE
 		end
 
+		-- This bypasses the Food Healing Sickness.
 		if good_luck then
 			if eater.components.health ~= nil then
 				eater.components.health:DoDelta(9999)

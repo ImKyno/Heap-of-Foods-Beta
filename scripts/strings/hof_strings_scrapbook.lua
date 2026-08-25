@@ -136,6 +136,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CHILLEDATTACK = "Every 3 consecutive a
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRITDAMAGE = "Attacks have a small chance to critical strike for 150% damage."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "Decreases luck for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "Gives off a random side effect.\n\n\"LET'S GO GAMBLING!\" - Someone, probably."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_OPALAPPLE = "Renders the survivor immune from all incoming damage sources for 30 seconds and causes Food Healing Sickness.\n\n\"A fruit touched by eternity, its radiant sweetness conceals a power no mortal was meant to wield. For a moment, flesh becomes unyielding, and even death itself is forced to look away while a radiant force is bestowed.\" - Unknown Author."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder fully restores its spoilage time.\n\nDecreases the spoilage rate of items inside the inventory by 25%.\n\nIncreases the duration of other side effects by 25%.\n\nDuration 4 minutes."

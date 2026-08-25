@@ -1894,6 +1894,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "PIGGYBANK",
 	},
 
+	--[[
 	kyno_fishingrod_thulecite =
 	{
 		name           = "kyno_fishingrod_thulecite",
@@ -1909,6 +1910,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		deps           = {"refined_dust", "thulecite", "silk"},
 		specialinfo    = "FISHINGROD",
 	},
+	]]--
 }
 
 local HOF_SCRAPBOOK_FOODS =
@@ -5969,6 +5971,29 @@ local HOF_SCRAPBOOK_FOODS =
 		build          = "kyno_icenettles",
 		anim           = "dried",
 		deps           = {"kyno_icenettles"},
+	},
+
+	kyno_opalpreciousapple =
+	{
+		name            = "kyno_opalpreciousapple",
+		type            = "food",
+		tex             = "kyno_opalpreciousapple.tex",
+		prefab          = "kyno_opalpreciousapple",
+		healthvalue     = 150,
+		hungervalue     = 150,
+		sanityvalue     = 150,
+		perishable      = 9999999,
+		stacksize       = 20,
+		foodtype        = "GOODIES",
+		bank            = "kyno_opalpreciousapple",
+		build           = "kyno_opalpreciousapple",
+		anim            = "idle",
+		animoffsety     = 45,
+		animoffsetbgx   = -15,
+		animoffsetbgy   = -110,
+		deps            = {"stalker_atrium", "beequeen", "dragonfly", "klaus", "toadstool", "toadstool_dark", "wagboss_robot",
+		"crabking", "alterguardian_phase1", "alterguardian_phase4_lunarrift", "spoiled_food"},
+		specialinfo     = "FOODEFFECTS_OPALAPPLE",
 	},
 }
 

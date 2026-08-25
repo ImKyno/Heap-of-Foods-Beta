@@ -113,6 +113,11 @@ WOLFGANG.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Wolfgang está se sentindo fraco."
 WOLFGANG.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Ih... Wolfgang não gosta dessa sensação."
 WOLFGANG.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Ah! A sensação ruim passou."
 
+WOLFGANG.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Wolfgang NÃO PODE SER FERIDO!"
+WOLFGANG.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Wolfgang se sente fraco novamente!"
+
+WOLFGANG.ANNOUNCE_KYNO_SICKNESSBUFF_END = "A doença passou! Wolfgang se sente forte novamente!"
+
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é o correto."
 
 WOLFGANG.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Porco poderoso não quer isso."
@@ -1399,3 +1404,5 @@ WOLFGANG.DESCRIBE.OPALPRECIOUSCREAM = "Creme brilhante! Wolfgang gosta de coisas
 WOLFGANG.DESCRIBE.CATFISHSTICK = "Peixe grande vira lanche grande!"
 
 WOLFGANG.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Doces bonitos podem deixar Wolfgang forte!"
+
+WOLFGANG.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "A maçã mágica deixa Wolfgang forte e seguro!"

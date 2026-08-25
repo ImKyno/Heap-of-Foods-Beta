@@ -113,6 +113,11 @@ WEBBER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Aww... we're not as strong anymore."
 WEBBER.ANNOUNCE_KYNO_BADLUCKBUFF_START = "something bad is definitely going to happen."
 WEBBER.ANNOUNCE_KYNO_BADLUCKBUFF_END = "I think our bad luck is gone!"
 
+WEBBER.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "We're invincible!"
+WEBBER.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Aww... we're not that invincible anymore."
+
+WEBBER.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Yay! We don't feel sick anymore!"
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Not this one."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "We think this isn't the correct meal he wants."
@@ -1399,3 +1404,5 @@ WEBBER.DESCRIBE.OPALPRECIOUSCREAM = "It looks like a rainbow cloud!"
 WEBBER.DESCRIBE.CATFISHSTICK = "It's a whole fish on a stick!"
 
 WEBBER.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Ooh! It's so pretty! Hope we get something good!"
+
+WEBBER.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "It's so sparkly and bright!"

@@ -356,7 +356,11 @@ local function SetCelestialScionKilled(inst, active)
 			inst.WARES.RANDOM_ULTRARARES[1]["kyno_goldenapple"] = { recipe = "meadowislandtrader_kyno_goldenapple", min = 1, max = 3 }
 			inst.FORGETABLE_RECIPES["meadowislandtrader_kyno_goldenapple"] = true
 
+			inst.WARES.RANDOM_ULTRARARES[1]["kyno_opalpreciousapple"] = { recipe = "meadowislandtrader_kyno_opalpreciousapple", min = 1, max = 3 }
+			inst.FORGETABLE_RECIPES["meadowislandtrader_kyno_opalpreciousapple"] = true
+
 			inst:AddWares({ ["kyno_goldenapple"] = { recipe = "meadowislandtrader_kyno_goldenapple", min = 1, max = 3 } })
+			inst:AddWares({ ["kyno_opalpreciousapple"] = { recipe = "meadowislandtrader_kyno_opalpreciousapple", min = 1, max = 3 } })
 		end
 	end
 end

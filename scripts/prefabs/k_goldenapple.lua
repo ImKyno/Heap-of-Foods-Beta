@@ -17,7 +17,9 @@ local prefabs =
 local function OnEaten(inst, eater)
 	if eater:HasTag("plantkin") then
 		if eater.components.health ~= nil and not eater.components.health:IsDead() then
-			eater.components.health:DoDelta(100)
+			if eater.components.debuffable ~= nil and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+				eater.components.health:DoDelta(TUNING.KYNO_GOLDENAPPLE_HEALTH)
+			end
 		end
 	end
 
@@ -62,10 +64,10 @@ local function fn()
 	inst.entity:AddFollower()
 	inst.entity:AddNetwork()
 
+	inst.Transform:SetScale(1.1, 1.1, 1.1)
+
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
-
-	inst.AnimState:SetScale(1.1, 1.1, 1.1)
 
 	inst.AnimState:SetBank("kyno_goldenapple")
 	inst.AnimState:SetBuild("kyno_goldenapple")
@@ -73,9 +75,8 @@ local function fn()
 
 	inst.AnimState:HideSymbol("glowpulse")
 
-	inst:AddTag("fruit")
 	inst:AddTag("nosteal")
-	inst:AddTag("masterfood")
+	inst:AddTag("enchantedfood")
 	inst:AddTag("goldenapple")
 	inst:AddTag("warly_caneat")
 	inst:AddTag("furnituredecor")
@@ -102,7 +103,7 @@ local function fn()
 	inst:AddComponent("inventoryitem")
 
 	inst:AddComponent("tradable")
-	inst.components.tradable.goldvalue = 100
+	inst.components.tradable.goldvalue = TUNING.KYNO_GOLDENAPPLE_GOLD_VALUE
 
 	inst:AddComponent("named")
 	inst.components.named.possiblenames = STRINGS.KYNO_GOLDENAPPLE_NAMES

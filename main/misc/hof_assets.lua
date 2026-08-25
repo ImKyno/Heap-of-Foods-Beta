@@ -518,6 +518,7 @@ local HOF_ICONS =
 	"kyno_oaktree_pod_cooked",
 	"kyno_oceantrap",
 	"kyno_oil",
+	"kyno_opalpreciousapple",
 	"kyno_opalpreciouspowder",
 	"kyno_packimbaggims_fishbone",
 	"kyno_packimbaggims_fishbone_dead",

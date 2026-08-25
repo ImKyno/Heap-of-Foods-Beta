@@ -1546,8 +1546,12 @@ local kyno_foods =
 			if eater.components.bloomness ~= nil and eater:HasTag("plantkin")
 			and not (eater.components.health ~= nil and eater.components.health:IsDead()) and not eater:HasTag("playerghost") then
 				if eater.components.bloomness ~= nil then
-					eater.components.health:DoDelta(60) -- Since Wormwood can't heal from foods.
 					eater.components.bloomness:Fertilize(3)
+				end
+
+				if eater.components.debuffable ~= nil
+				and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+					eater.components.health:DoDelta(60) -- Since Wormwood can't heal from foods.
 				end
 			end
 		end,
@@ -1697,14 +1701,23 @@ local kyno_foods =
 
 				-- Nice inclination makes you lose sanity. Naughty inclination heals for less.
 				if eater.wortox_inclination == "nice" then
-					eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH_NICE)
-					eater.components.sanity:DoDelta(TUNING.SOULSTEW_SANITY_NICE)
+					if eater.components.debuffable ~= nil
+					and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+						eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH_NICE)
+						eater.components.sanity:DoDelta(TUNING.SOULSTEW_SANITY_NICE)
+					end
 				elseif eater.wortox_inclination == "naughty" then
-					eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH_NAUGHTY)
-					eater.components.sanity:DoDelta(TUNING.SOULSTEW_SANITY_NAUGHTY)
+					if eater.components.debuffable ~= nil
+					and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+						eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH_NAUGHTY)
+						eater.components.sanity:DoDelta(TUNING.SOULSTEW_SANITY_NAUGHTY)
+					end
 				else
-					eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH)
-					eater.components.sanity:DoDelta(TUNING.SOULSTEW_SANITY)
+					if eater.components.debuffable ~= nil
+					and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+						eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH)
+						eater.components.sanity:DoDelta(TUNING.SOULSTEW_SANITY)
+					end
 				end
 			end
 		end,
@@ -2221,7 +2234,8 @@ local kyno_foods =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster")
 			and not (eater.components.health ~= nil and eater.components.health:IsDead())
-			and not eater:HasTag("playerghost") then
+			and not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(10)
 				eater.components.sanity:DoDelta(15)
 			end
@@ -2475,7 +2489,8 @@ local kyno_foods =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster")
 			and not (eater.components.health ~= nil and eater.components.health:IsDead())
-			and not eater:HasTag("playerghost") then
+			and not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(5)
 				eater.components.sanity:DoDelta(15)
 			end
@@ -2503,7 +2518,8 @@ local kyno_foods =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster")
 			and not (eater.components.health ~= nil and eater.components.health:IsDead())
-			and not eater:HasTag("playerghost") then
+			and not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(15)
 			end
 		end,
@@ -2528,7 +2544,8 @@ local kyno_foods =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster")
 			and not (eater.components.health ~= nil and eater.components.health:IsDead())
-			and not eater:HasTag("playerghost") then
+			and not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(20)
 				eater.components.sanity:DoDelta(5)
 			end
@@ -2555,7 +2572,8 @@ local kyno_foods =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(10)
 				eater.components.sanity:DoDelta(30)
 			end
@@ -2730,7 +2748,8 @@ local kyno_foods =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(60)
 				eater.components.sanity:DoDelta(5)
 			end
@@ -2759,7 +2778,8 @@ local kyno_foods =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(60)
 				eater.components.sanity:DoDelta(20)
 			end
@@ -2786,7 +2806,8 @@ local kyno_foods =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(20)
 				eater.components.sanity:DoDelta(20)
 			end
@@ -3442,7 +3463,8 @@ local kyno_foods =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(20)
 				eater.components.sanity:DoDelta(10)
 			end
@@ -3471,7 +3493,8 @@ local kyno_foods =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(30)
 				eater.components.sanity:DoDelta(20)
 			end
@@ -3837,7 +3860,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRITDAMAGE,
 		pigcoinvalue = {8, 4, 2},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"critfood", "nospice"},
+		tags = {"critfood", "shimmerfood", "nospice"},
 		card_def = {ingredients = {{"kyno_opalpreciouspowder", 1}, {"milkywhites", 1}, {"honey", 2}}},
 		prefabs = { "kyno_critdamagebuff" },
 		oneatenfn = function(inst, eater)

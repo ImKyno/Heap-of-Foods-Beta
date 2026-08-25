@@ -127,7 +127,8 @@ local kyno_foods_keg =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster")
 			and not (eater.components.health ~= nil and eater.components.health:IsDead())
-			and not eater:HasTag("playerghost") then
+			and not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(5)
 				eater.components.sanity:DoDelta(40)
 			end
@@ -964,7 +965,8 @@ local kyno_foods_keg =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(10)
 				eater.components.sanity:DoDelta(10)
 			end
@@ -992,7 +994,8 @@ local kyno_foods_keg =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(20)
 				eater.components.sanity:DoDelta(20)
 			end
@@ -1564,14 +1567,23 @@ local kyno_foods_keg =
 
 				-- Nice inclination makes you lose sanity. Naughty inclination heals for less.
 				if eater.wortox_inclination == "nice" then
-					eater.components.health:DoDelta(TUNING.SOULJUICE_HEALTH_NICE)
-					eater.components.sanity:DoDelta(TUNING.SOULJUICE_SANITY_NICE)
+					if eater.components.debuffable ~= nil
+					and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+						eater.components.health:DoDelta(TUNING.SOULJUICE_HEALTH_NICE)
+						eater.components.sanity:DoDelta(TUNING.SOULJUICE_SANITY_NICE)
+					end
 				elseif eater.wortox_inclination == "naughty" then
-					eater.components.health:DoDelta(TUNING.SOULJUICE_HEALTH_NAUGHTY)
-					eater.components.sanity:DoDelta(TUNING.SOULJUICE_SANITY_NAUGHTY)
+					if eater.components.debuffable ~= nil
+					and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+						eater.components.health:DoDelta(TUNING.SOULJUICE_HEALTH_NAUGHTY)
+						eater.components.sanity:DoDelta(TUNING.SOULJUICE_SANITY_NAUGHTY)
+					end
 				else
-					eater.components.health:DoDelta(TUNING.SOULJUICE_HEALTH)
-					eater.components.sanity:DoDelta(TUNING.SOULJUICE_SANITY)
+					if eater.components.debuffable ~= nil
+					and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+						eater.components.health:DoDelta(TUNING.SOULJUICE_HEALTH)
+						eater.components.sanity:DoDelta(TUNING.SOULJUICE_SANITY)
+					end
 				end
 
 				eater:AddDebuff("kyno_soulbuff", "kyno_soulbuff")

@@ -113,6 +113,11 @@ WAXWELL.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "E, num instante, o poder se foi."
 WAXWELL.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Ah, esplêndido. Como se as coisas já não fossem problemáticas o suficiente."
 WAXWELL.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Finalmente. A sorte parou de zombar de mim."
 
+WAXWELL.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Por uma vez, até a morte precisa esperar."
+WAXWELL.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Minha trégua acabou."
+
+WAXWELL.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Finalmente. Posso respirar aliviado novamente."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de algo diferente."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Você não é fácil, hein?"
@@ -1399,3 +1404,5 @@ WAXWELL.DESCRIBE.OPALPRECIOUSCREAM = "Excessivamente ornamentado para algo tão 
 WAXWELL.DESCRIBE.CATFISHSTICK = "Uma maneira bem rústica de preparar um bagre."
 
 WAXWELL.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Um doce com propriedades mágicas questionáveis."
+
+WAXWELL.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Um poder como este sempre cobra um preço."

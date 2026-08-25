@@ -1,9 +1,13 @@
 local function OnTick(inst, target)
-	if target.components.hunger ~= nil and target.components.sanity ~= nil then
-		if target.components.health ~= nil and not target.components.health:IsDead() and not target:HasTag("playerghost") then
+	if target.components.hunger ~= nil and target.components.sanity ~= nil and target.components.health ~= nil then
+		if not target.components.health:IsDead() and not target:HasTag("playerghost") then
 			target.components.hunger:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
-			target.components.health:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
-			target.components.sanity:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
+
+			-- Lusty Jellybeans will not heal while under the effects of Food Healing Sickness.
+			if target.components.debuffable ~= nil and not target.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+				target.components.health:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
+				target.components.sanity:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
+			end
 		else
 			inst.components.debuff:Stop()
 		end
@@ -11,56 +15,56 @@ local function OnTick(inst, target)
 end
 
 local function OnAttached(inst, target)
-    inst.entity:SetParent(target.entity)
-    inst.Transform:SetPosition(0, 0, 0) 
-	
-    inst.task = inst:DoPeriodicTask(TUNING.JELLYBEAN_TICK_RATE, OnTick, nil, target)
-	
-    inst:ListenForEvent("death", function()
-        inst.components.debuff:Stop()
-    end, target)
+	inst.entity:SetParent(target.entity)
+	inst.Transform:SetPosition(0, 0, 0)
+
+	inst.task = inst:DoPeriodicTask(TUNING.JELLYBEAN_TICK_RATE, OnTick, nil, target)
+
+	inst:ListenForEvent("death", function()
+		inst.components.debuff:Stop()
+	end, target)
 end
 
 local function OnTimerDone(inst, data)
-    if data.name == "regenover" then
-        inst.components.debuff:Stop()
-    end
+	if data.name == "regenover" then
+		inst.components.debuff:Stop()
+	end
 end
 
 local function OnExtended(inst, target)
-    inst.components.timer:StopTimer("regenover")
-    inst.components.timer:StartTimer("regenover", TUNING.JELLYBEAN_DURATION)
-	
-    inst.task:Cancel()
-    inst.task = inst:DoPeriodicTask(TUNING.JELLYBEAN_TICK_RATE, OnTick, nil, target)
+	inst.components.timer:StopTimer("regenover")
+	inst.components.timer:StartTimer("regenover", TUNING.JELLYBEAN_DURATION)
+
+	inst.task:Cancel()
+	inst.task = inst:DoPeriodicTask(TUNING.JELLYBEAN_TICK_RATE, OnTick, nil, target)
 end
 
 local function fn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    if not TheWorld.ismastersim then
-        inst:DoTaskInTime(0, inst.Remove)
-        return inst
-    end
+	if not TheWorld.ismastersim then
+		inst:DoTaskInTime(0, inst.Remove)
+		return inst
+	end
 
-    inst.entity:AddTransform()
-    inst.entity:Hide()
-    inst.persists = false
+	inst.entity:AddTransform()
+	inst.entity:Hide()
+	inst.persists = false
 
-    inst:AddTag("CLASSIFIED")
+	inst:AddTag("CLASSIFIED")
 
-    inst:AddComponent("debuff")
-    inst.components.debuff:SetAttachedFn(OnAttached)
-    inst.components.debuff:SetDetachedFn(inst.Remove)
-    inst.components.debuff:SetExtendedFn(OnExtended)
-    inst.components.debuff.keepondespawn = true
+	inst:AddComponent("debuff")
+	inst.components.debuff:SetAttachedFn(OnAttached)
+	inst.components.debuff:SetDetachedFn(inst.Remove)
+	inst.components.debuff:SetExtendedFn(OnExtended)
+	inst.components.debuff.keepondespawn = true
 
-    inst:AddComponent("timer")
-    inst.components.timer:StartTimer("regenover", TUNING.JELLYBEAN_DURATION)
-	
-    inst:ListenForEvent("timerdone", OnTimerDone)
+	inst:AddComponent("timer")
+	inst.components.timer:StartTimer("regenover", TUNING.JELLYBEAN_DURATION)
 
-    return inst
+	inst:ListenForEvent("timerdone", OnTimerDone)
+
+	return inst
 end
 
 return Prefab("kyno_superregenbuff", fn)

@@ -140,6 +140,7 @@ local LOADINGTIPS   =
 	PARTITIO3       = "Partitio descobriu que alguém destruiu sua casa e agora precisa de ajuda para reconstruí-la ao seu antigo esplendor antes de voltar a fazer negócios.",
 	CRITDAMAGE      = "O Chantilly Cintilante permite que seus ataques causem acertos críticos com um impressionante bônus de 150% de dano!",
 	RANDOMBUFF      = "O Pirulito Cintilante concede um efeito aleatório ao ser comido. Está se sentindo com sorte hoje?",
+	OPALAPPLE       = "Maçãs Cintilantes Encantadas são itens raros que podem ser obtidos ao derrotar chefes poderosos. Concedem invencibilidade por um período limitado.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

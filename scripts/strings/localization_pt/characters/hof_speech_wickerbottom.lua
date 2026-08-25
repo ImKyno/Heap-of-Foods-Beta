@@ -113,6 +113,11 @@ WICKERBOTTOM.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Minhas capacidades ofensivas vo
 WICKERBOTTOM.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Uma série de eventos infelizes parece iminente."
 WICKERBOTTOM.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Parece que a influência desfavorável diminuiu."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Pareço estar imune a danos."
+WICKERBOTTOM.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "As medidas de proteção expiraram."
+
+WICKERBOTTOM.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Excelente. A doença parece ter passado."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Precisa de algo diferente."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não. Acho que ele mencionou wobsters."
@@ -1399,3 +1404,5 @@ WICKERBOTTOM.DESCRIBE.OPALPRECIOUSCREAM = "Chantilly que apresenta um brilho iri
 WICKERBOTTOM.DESCRIBE.CATFISHSTICK = "Um bagre negro, grelhado até ficar bastante apetitoso."
 
 WICKERBOTTOM.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Um doce incomum com efeitos bastante imprevisíveis."
+
+WICKERBOTTOM.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Uma fruta extraordinária que apresenta propriedades taumatúrgicas altamente incomuns."

@@ -113,6 +113,11 @@ WATHGRITHR.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Minha força retornou ao seu nív
 WATHGRITHR.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Um presságio sombrio paira sobre mim!"
 WATHGRITHR.ANNOUNCE_KYNO_BADLUCKBUFF_END = "O mau presságio foi banido!"
 
+WATHGRITHR.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Nenhuma lâmina me atravessará!"
+WATHGRITHR.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "A bênção dos deuses se dissipou!"
+
+WATHGRITHR.ANNOUNCE_KYNO_SICKNESSBUFF_END = "A doença foi vencida!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Errado!"
@@ -1399,3 +1404,5 @@ WATHGRITHR.DESCRIBE.OPALPRECIOUSCREAM = "Uma cobertura cintilante para um banque
 WATHGRITHR.DESCRIBE.CATFISHSTICK = "Uma bela pescaria, assada sobre as chamas!"
 
 WATHGRITHR.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Um doce misterioso! Que dádiva os deuses me concederão?"
+
+WATHGRITHR.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Uma fruta abençoada pelos deuses!"

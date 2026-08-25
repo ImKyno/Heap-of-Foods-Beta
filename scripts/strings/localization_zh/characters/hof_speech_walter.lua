@@ -113,6 +113,11 @@ WALTER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "That extra strength didn't last."
 WALTER.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Something tells me we're in for a rough time."
 WALTER.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Phew! Looks like our luck's getting better, Woby."
 
+WALTER.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Nothing can hurt me now!"
+WALTER.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Aww, the enchantment wore off."
+
+WALTER.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Phew! I'm feeling better already. What about you, girl?"
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "做错了！"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "嗯，不是这个。"
@@ -1399,3 +1404,5 @@ WALTER.DESCRIBE.OPALPRECIOUSCREAM = "Whoa! It's like a cloud made of rainbows!"
 WALTER.DESCRIBE.CATFISHSTICK = "A fish on a stick! Classic camp food."
 
 WALTER.DESCRIBE.OPALPRECIOUSLOLLIPOP = "It's like a surprise adventure, but edible!"
+
+WALTER.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Whoa! Does this make me invincible?"

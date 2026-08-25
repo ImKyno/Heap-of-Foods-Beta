@@ -121,7 +121,8 @@ local kyno_foods_jar =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") or eater:HasTag("playermerm")
 			and not (eater.components.health ~= nil and eater.components.health:IsDead())
-			and not eater:HasTag("playerghost") then
+			and not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(5)
 				eater.components.sanity:DoDelta(20)
 			end
@@ -908,7 +909,8 @@ local kyno_foods_jar =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(20)
 				eater.components.sanity:DoDelta(20)
 			end
@@ -938,7 +940,8 @@ local kyno_foods_jar =
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster") and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
+			not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(30)
 				eater.components.sanity:DoDelta(30)
 			end
@@ -1823,7 +1826,7 @@ local kyno_foods_jar =
 			and not eater:HasTag("playerghost") then
 				if TryLuckRoll(eater, TUNING.KYNO_PUFFERFISH_KILL_CHANCE, HofLuckFormulas.PufferfishPoison) then -- Chance to die eating this, haha.
 					local currenthealth = eater.components.health.currenthealth
-					eater.components.health:DoDelta(-currenthealth, nil, "agedroe_oceanfish_pufferfish", true, nil, true)
+					eater.components.health:DoDelta(-currenthealth, nil, "agedroe_oceanfish_pufferfish", false, nil, true)
 				end
 			end
 		end,

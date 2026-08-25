@@ -2,6 +2,7 @@ local function IsValidHeal(cause)
     return cause ~= nil and not TUNING.KYNO_HEALINGBUFF_BLACKLIST[cause]
 end
 
+-- This bypasses the Food Healing Sickness.
 local function OnHeal(inst, data)
 	if inst.components.health ~= nil then
 		if data and data.amount > 0 and IsValidHeal(data.cause) then

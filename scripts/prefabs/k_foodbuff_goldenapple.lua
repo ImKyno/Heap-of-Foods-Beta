@@ -109,11 +109,15 @@ local function GetAmphibianBonusDamage(inst, target)
 end
 
 local function OnTick(inst, target)
-	if target.components.hunger ~= nil and target.components.sanity ~= nil and target.components.health ~= nil
-	and not target.components.health:IsDead() and not target:HasTag("playerghost") then
-		target.components.hunger:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
-		target.components.health:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
-		target.components.sanity:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
+	if target.components.hunger ~= nil and target.components.sanity ~= nil and target.components.health ~= nil then
+		if not target.components.health:IsDead() and not target:HasTag("playerghost") then
+			target.components.hunger:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
+
+			if target.components.debuffable ~= nil and not target.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+				target.components.health:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
+				target.components.sanity:DoDelta(TUNING.JELLYBEAN_TICK_VALUE, nil, "jellybean")
+			end
+		end
 	else
 		inst.components.debuff:Stop()
 	end
@@ -414,6 +418,10 @@ local function OnDetached(inst, target)
 		target.tagvar_knockbackresistance = false
 	end
 
+	if target.components.debuffable ~= nil and target.components.debuffable:HasDebuff("kyno_coffeealtbuff") then
+		target.components.debuffable:RemoveDebuff("kyno_coffeealtbuff")
+	end
+
 	-- Slow down for a bit after using it.
 	if target.components.locomotor ~= nil and target:HasTag("player") then
 		target:AddTag("groggy")
@@ -444,6 +452,7 @@ local function OnDetached(inst, target)
 		end
 
 		target:PushEvent("stopgoldenapple")
+		target:AddDebuff("kyno_healingsicknessbuff", "kyno_healingsicknessbuff")
 	end)
 
 	inst:Remove()
@@ -633,13 +642,27 @@ local function OnTimerDone(inst, data)
 end
 
 local function fn()
-	if not TheWorld.ismastersim then
-		return
-	end
-
 	local inst = CreateEntity()
+
 	inst.entity:AddTransform()
-	inst.entity:Hide()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
+
+	inst.AnimState:SetBank("kyno_amplified_fx")
+	inst.AnimState:SetBuild("kyno_amplified_fx")
+	inst.AnimState:PlayAnimation("level1_pre")
+	inst.AnimState:PushAnimation("level1_loop", true)
+	inst.AnimState:SetBloomEffectHandle("shaders/anim.ksh")
+	inst.AnimState:SetMultColour(1, 1, 1, 0.50)
+
+	inst:AddTag("DECOR")
+	inst:AddTag("NOCLICK")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
 
 	inst.persists = false
 

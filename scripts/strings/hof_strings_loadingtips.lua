@@ -140,6 +140,7 @@ local LOADINGTIPS   =
 	PARTITIO3       = "Partitio found out someone had broken his house and now he needs help to rebuild it back to its former glory in order to start doing business again.",
 	CRITDAMAGE      = "The Shimmer Whipped Cream allows your attacks to critical strike for a whopping total of 150% bonus damage!",
 	RANDOMBUFF      = "The Shimmer Lollipop grants a random Side Effect when eaten. Are you feeling lucky today?",
+	OPALAPPLE       = "Enchanted Shimmer Apples are rare items that can be obtained by defeating powerful bosses. They grant invincibility for a limited duration.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

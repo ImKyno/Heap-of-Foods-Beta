@@ -113,6 +113,11 @@ WENDY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "A força se dissipou."
 WENDY.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Sinto o infortúnio se aproximando."
 WENDY.ANNOUNCE_KYNO_BADLUCKBUFF_END = "A escuridão passou... por enquanto."
 
+WENDY.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "A morte não pode me levar... ainda não."
+WENDY.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "A morte está à espreita novamente..."
+
+WENDY.ANNOUNCE_KYNO_SICKNESSBUFF_END = "A doença passou... por enquanto."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."
@@ -1399,3 +1404,5 @@ WENDY.DESCRIBE.OPALPRECIOUSCREAM = "Uma doçura linda, destinada a derreter."
 WENDY.DESCRIBE.CATFISHSTICK = "Até as criaturas do rio acabam na grelha."
 
 WENDY.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Uma doçura encantadora que esconde um destino incerto."
+
+WENDY.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Ela me protege com uma luz radiante, capaz de afastar qualquer inimigo."

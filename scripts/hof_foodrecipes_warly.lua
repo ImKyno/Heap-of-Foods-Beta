@@ -648,7 +648,7 @@ local kyno_warly_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RANDOM,
 		pigcoinvalue = {10, 7, 3},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"masterfood", "nospice"},
+		tags = {"masterfood", "shimmerfood", "nospice"},
 		card_def = {ingredients = {{"kyno_opalpreciouspowder", 1}, {"nightmarefuel", 1}, {"honey", 1}, {"twigs", 1}}},
 		prefabs = { "kyno_randombuff" },
 		oneatenfn = function(inst, eater)

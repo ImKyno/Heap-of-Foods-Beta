@@ -1,4 +1,3 @@
-
 local assets =
 {
 	Asset("ANIM", "anim/spawnprotectionbuff.zip"),

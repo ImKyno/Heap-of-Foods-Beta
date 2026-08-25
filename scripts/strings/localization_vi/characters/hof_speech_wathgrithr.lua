@@ -113,6 +113,11 @@ WATHGRITHR.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "My strength has returned to its u
 WATHGRITHR.ANNOUNCE_KYNO_BADLUCKBUFF_START = "A dark omen hangs above me!"
 WATHGRITHR.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The ill omen has been banished!"
 
+WATHGRITHR.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "No blade shall pierce me!"
+WATHGRITHR.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "The gods' blessing has faded away!"
+
+WATHGRITHR.ANNOUNCE_KYNO_SICKNESSBUFF_END = "The illness has been vanquished!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai rồi!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Sai yến tiệc! Con thú muốn món khoái khẩu hơn!"
@@ -1399,3 +1404,5 @@ WATHGRITHR.DESCRIBE.OPALPRECIOUSCREAM = "A shimmering topping for a feast worthy
 WATHGRITHR.DESCRIBE.CATFISHSTICK = "A hearty catch, roasted over the flames!"
 
 WATHGRITHR.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A mysterious sweet! What boon shall the gods bestow upon me?"
+
+WATHGRITHR.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "A fruit blessed by the gods!"

@@ -12,10 +12,11 @@ local function ToadstoolPostInit(inst)
 	end
 
 	if inst.components.lootdropper ~= nil then
-		inst.components.lootdropper:AddChanceLoot("kyno_sporecap", 1.00)
-		inst.components.lootdropper:AddChanceLoot("kyno_sporecap", 1.00)
-		inst.components.lootdropper:AddChanceLoot("kyno_sporecap", 0.50)
-		inst.components.lootdropper:AddChanceLoot("kyno_sporecap", 0.25)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap",          1.00)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap",          1.00)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap",          0.50)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap",          0.25)
+		inst.components.lootdropper:AddChanceLoot("kyno_opalpreciousapple", 0.05)
 	end
 end
 
@@ -27,10 +28,11 @@ local function ToadstoolDarkPostInit(inst)
 	end
 
 	if inst.components.lootdropper ~= nil then
-		inst.components.lootdropper:AddChanceLoot("kyno_sporecap_dark", 1.00)
-		inst.components.lootdropper:AddChanceLoot("kyno_sporecap_dark", 1.00)
-		inst.components.lootdropper:AddChanceLoot("kyno_sporecap_dark", 0.50)
-		inst.components.lootdropper:AddChanceLoot("kyno_sporecap_dark", 0.25)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap_dark",      1.00)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap_dark",      1.00)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap_dark",      0.50)
+		inst.components.lootdropper:AddChanceLoot("kyno_sporecap_dark",      0.25)
+		inst.components.lootdropper:AddChanceLoot("kyno_opalpreciousapple",  1.00) -- Guaranteed for Misery Toadstool.
 	end
 end
 

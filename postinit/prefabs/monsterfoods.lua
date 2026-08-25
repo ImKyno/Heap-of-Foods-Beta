@@ -23,7 +23,8 @@ local function MonsterFoodPostInit(inst, data)
 
 			if eater ~= nil and eater:HasTag("playermonster")
 			and not (eater.components.health ~= nil and eater.components.health:IsDead())
-			and not eater:HasTag("playerghost") then
+			and not eater:HasTag("playerghost") and eater.components.debuffable ~= nil
+			and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
 				eater.components.health:DoDelta(data.health)
 				eater.components.sanity:DoDelta(data.sanity)
 			end

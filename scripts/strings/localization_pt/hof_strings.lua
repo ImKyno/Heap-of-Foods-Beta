@@ -578,6 +578,16 @@ STRINGS.KYNO_GOLDENAPPLE_NAMES =
 	"Maçã de Leonidas",
 }
 
+STRINGS.KYNO_OPALPRECIOUSAPPLE_NAMES =
+{
+	"Maçã Cintilante Encantada",
+	"Fruto da Fortitude Eterna",
+	"Maçã Cósmica",
+	"Maçã da Vidente das Estrelas",
+	"Fruto de Poeira Estelar",
+	"Fruto da Luz Estelar",
+}
+
 STRINGS.KYNO_OPALPRECIOUSLOLLIPOP_NAMES =
 {
 	"Piruleta",
@@ -2460,3 +2470,6 @@ STRINGS.NAMES.CATFISHSTICK = "Bagre Negro Grelhado"
 
 STRINGS.NAMES.OPALPRECIOUSLOLLIPOP = "Pirulito Cintilante"
 STRINGS.NAMES.OPALPRECIOUSLOLLIPOP_CURSE = "Apostar Excessivamente"
+
+STRINGS.NAMES.KYNO_OPALPRECIOUSAPPLE = "Maçã Cintilante Encantada"
+STRINGS.RECIPE_DESC.KYNO_OPALPRECIOUSAPPLE_M = "Transborda com um poder místico e inigualável."

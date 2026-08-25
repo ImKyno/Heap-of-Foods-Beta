@@ -1,3 +1,4 @@
+-- This bypasses the Food Healing Sickness.
 local function OnKilled(target, data)
 	local victim = data ~= nil and data.victim or nil
 

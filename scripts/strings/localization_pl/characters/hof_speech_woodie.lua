@@ -113,6 +113,11 @@ WOODIE.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Looks like I'm back to my usual stren
 WOODIE.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Feels like I'm due for some bad luck."
 WOODIE.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Looks like my luck's finally turned around."
 
+WOODIE.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Looks like nothin' can hurt me now."
+WOODIE.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "I'm back to bein' breakable."
+
+WOODIE.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Well, that's one nasty sickness outta the way."
+
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może coś do podniesienia?"
 
 WOODIE.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Nie. On chce czegoś innego."
@@ -1399,3 +1404,5 @@ WOODIE.DESCRIBE.OPALPRECIOUSCREAM = "Never seen cream sparkle like that before."
 WOODIE.DESCRIBE.CATFISHSTICK = "Poor fish. Least it's cooked proper."
 
 WOODIE.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Looks fancy. Hope it doesn't do anything too weird."
+
+WOODIE.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Never seen an apple quite like this one."

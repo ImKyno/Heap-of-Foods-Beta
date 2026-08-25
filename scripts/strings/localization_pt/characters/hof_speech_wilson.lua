@@ -113,6 +113,11 @@ WILSON.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Meus ataques perderam a força."
 WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Sinto um tremendo azar no ar..."
 WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Acho que minha sorte voltou ao normal."
 
+WILSON.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Sinto-me completamente invencível!"
+WILSON.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Minha invencibilidade acabou!"
+
+WILSON.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ah, muito melhor. Aquela doença passou."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ele quer outra coisa."
@@ -1399,3 +1404,5 @@ WILSON.DESCRIBE.OPALPRECIOUSCREAM = "Um chantilly de iridescência esplêndida."
 WILSON.DESCRIBE.CATFISHSTICK = "Um bagre negro grelhado no espeto."
 
 WILSON.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Um doce com consequências imprevisíveis."
+
+WILSON.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "A ciência ainda não explicou esse brilho cintilante."

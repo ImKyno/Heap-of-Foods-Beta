@@ -86,6 +86,21 @@ AddRecipe2("meadowislandtrader_kyno_goldenapple", {Ingredient("coolant", 1)}, TE
 	{"CRAFTING_STATION"}
 )
 
+AddRecipe2("meadowislandtrader_kyno_opalpreciousapple", {Ingredient("coolant", 1)}, TECH.LOST,
+	{
+		limitedamount       = true,
+		nounlock            = true,
+		no_deconstruction   = true,
+		hint_msg            = "NEEDSMEADOWSHOP",
+		actionstr           = "MEADOWSHOP",
+		description         = "kyno_opalpreciousapple_m",
+		sg_state            = "give",
+		product             = "kyno_opalpreciousapple",
+		fxover              = { bank = "inventory_fx_enchanted", build = "inventory_fx_enchanted", anim = "idle" },
+	},
+	{"CRAFTING_STATION"}
+)
+
 AddRecipe2("meadowislandtrader_foliage", {Ingredient("kyno_wheat", 1)}, TECH.LOST,
 	{
 		limitedamount       = true,

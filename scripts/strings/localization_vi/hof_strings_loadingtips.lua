@@ -140,6 +140,7 @@ local LOADINGTIPS   =
 	PARTITIO3       = "Partitio phát hiện có kẻ đã phá hỏng ngôi nhà của mình. Giờ anh ta cần giúp đỡ để khôi phục nó về thời kỳ huy hoàng trước khi có thể tiếp tục kinh doanh.",
 	CRITDAMAGE      = "Kem Bông Óng Ánh cho phép các đòn tấn công của bạn gây sát thương chí mạng với mức cộng thêm lên tới 150%!",
 	RANDOMBUFF      = "Kẹo mút lấp lánh khi ăn sẽ gây ra một tác dụng phụ ngẫu nhiên. Hôm nay bạn có cảm thấy may mắn không?",
+	OPALAPPLE       = "Táo Lấp Lánh Phù Phép là những vật phẩm quý hiếm có thể nhận được khi đánh bại các boss hùng mạnh. Chúng ban cho khả năng bất khả xâm phạm trong một khoảng thời gian giới hạn.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

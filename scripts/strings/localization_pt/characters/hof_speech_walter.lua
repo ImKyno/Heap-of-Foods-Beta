@@ -113,6 +113,11 @@ WALTER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Aquela força extra não durou."
 WALTER.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Algo me diz que vamos passar por um aperto."
 WALTER.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Ufa! Parece que a nossa sorte está melhorando, Woby."
 
+WALTER.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Nada pode me ferir agora!"
+WALTER.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Ah, o encantamento passou."
+
+WALTER.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ufa! Já estou me sentindo melhor. E você, garota?"
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Coisa errada!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, não é este."
@@ -1399,3 +1404,5 @@ WALTER.DESCRIBE.OPALPRECIOUSCREAM = "Caramba! É como uma nuvem feita de arco-í
 WALTER.DESCRIBE.CATFISHSTICK = "Um peixe no espeto! Comida clássica de acampamento."
 
 WALTER.DESCRIBE.OPALPRECIOUSLOLLIPOP = "É como uma aventura surpresa, só que comestível!"
+
+WALTER.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Uau! Isso me deixa invencível?"

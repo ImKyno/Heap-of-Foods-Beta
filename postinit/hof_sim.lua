@@ -60,11 +60,12 @@ end
 -- increase the drop by +1 each time the entity spawns.
 local function LootTableSimPostInit()
 	if _G.LootTables and _G.LootTables.lordfruitfly then
-		table.insert(_G.LootTables.lordfruitfly, {"kyno_garden_sprinkler_blueprint", 1.00})
+		table.insert(_G.LootTables.lordfruitfly, { "kyno_garden_sprinkler_blueprint", 1.00 })
 	end
 
 	if _G.LootTables and _G.LootTables.alterguardian_phase4_lunarrift then
-		table.insert(_G.LootTables.alterguardian_phase4_lunarrift, {"kyno_goldenapple", 1.00})
+		table.insert(_G.LootTables.alterguardian_phase4_lunarrift, { "kyno_goldenapple",       1.00 })
+		table.insert(_G.LootTables.alterguardian_phase4_lunarrift, { "kyno_opalpreciousapple", 1.00 })
 	end
 end
 

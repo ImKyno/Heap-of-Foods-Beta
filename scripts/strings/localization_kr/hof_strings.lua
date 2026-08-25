@@ -578,6 +578,16 @@ STRINGS.KYNO_GOLDENAPPLE_NAMES =
 	"레오니다스의 사과",
 }
 
+STRINGS.KYNO_OPALPRECIOUSAPPLE_NAMES =
+{
+	"Enchanted Shimmer Apple",
+	"Fruit of Eternal Fortitude",
+	"Cosmic Apple",
+	"Starseer's Apple",
+	"Stardust Fruit",
+	"Starlight Fruit",
+}
+
 STRINGS.KYNO_OPALPRECIOUSLOLLIPOP_NAMES =
 {
 	"Roulettepop",
@@ -2460,3 +2470,6 @@ STRINGS.NAMES.CATFISHSTICK = "Grilled Black Catfish"
 
 STRINGS.NAMES.OPALPRECIOUSLOLLIPOP = "Shimmer Lollipop"
 STRINGS.NAMES.OPALPRECIOUSLOLLIPOP_CURSE = "Excessive Gambling"
+
+STRINGS.NAMES.KYNO_OPALPRECIOUSAPPLE = "Enchanted Shimmer Apple"
+STRINGS.RECIPE_DESC.KYNO_OPALPRECIOUSAPPLE_M = "It overflows with a mystic and unparalleled power."

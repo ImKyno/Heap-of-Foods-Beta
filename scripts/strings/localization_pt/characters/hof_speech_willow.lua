@@ -113,6 +113,11 @@ WILLOW.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Hã. Meu aumento de poder acabou!"
 WILLOW.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Aff. Estou com um pressentimento muito ruim sobre isso."
 WILLOW.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Finalmente. As coisas parecem menos terríveis!"
 
+WILLOW.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Ha! Tente me machucar agora!"
+WILLOW.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Ah! A diversão acabou."
+
+WILLOW.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Finalmente! Não me sinto mais doente."
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso colocar algo diferente aqui!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, coisa errada!"
@@ -1399,3 +1404,5 @@ WILLOW.DESCRIBE.OPALPRECIOUSCREAM = "É como fogo batido... mas bonito!"
 WILLOW.DESCRIBE.CATFISHSTICK = "Peixe no espeto. Legal."
 
 WILLOW.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Ooh, brilhante! Será que ele faz alguma coisa?"
+
+WILLOW.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Ooh, brilhante! E, pelo visto, impossível de queimar."

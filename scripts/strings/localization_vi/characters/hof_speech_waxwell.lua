@@ -113,6 +113,11 @@ WAXWELL.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "And just like that, the power is gon
 WAXWELL.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Oh, splendid. As if things weren't troublesome enough."
 WAXWELL.ANNOUNCE_KYNO_BADLUCKBUFF_END = "At last. Fortune has ceased its mockery."
 
+WAXWELL.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "For once, even death must wait."
+WAXWELL.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "My reprieve is over."
+
+WAXWELL.ANNOUNCE_KYNO_SICKNESSBUFF_END = "At last. I can breathe easily again."
+
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cho việc này."
 
 WAXWELL.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ngươi không dễ chiều chút nào, phải không?"
@@ -1399,3 +1404,5 @@ WAXWELL.DESCRIBE.OPALPRECIOUSCREAM = "Excessively ornate for something as simple
 WAXWELL.DESCRIBE.CATFISHSTICK = "A rather rustic way to prepare a catfish."
 
 WAXWELL.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A confection of questionable magical properties."
+
+WAXWELL.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Power like this always comes with a price."

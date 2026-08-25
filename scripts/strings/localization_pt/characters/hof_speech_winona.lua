@@ -113,6 +113,11 @@ WINONA.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Acho que voltamos ao desempenho padr�
 WINONA.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Parece que a encrenca está vindo na minha direção."
 WINONA.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Parece que finalmente estou tendo uma folga."
 
+WINONA.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Isso sim é que é equipamento de proteção!"
+WINONA.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "De volta aos capacetes de proteção."
+
+WINONA.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Assim está melhor. De pé novamente."
+
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não."
 
 WINONA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não, talvez outra coisa."
@@ -1399,3 +1404,5 @@ WINONA.DESCRIBE.OPALPRECIOUSCREAM = "Creme sofisticado. Deve ser caro."
 WINONA.DESCRIBE.CATFISHSTICK = "Nada sofisticado, mas mata a fome."
 
 WINONA.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Doce brilhante com resultados imprevisíveis. Parece bem apropriado."
+
+WINONA.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Esse é um tipo de maçã incomum."

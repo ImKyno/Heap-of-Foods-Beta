@@ -113,6 +113,11 @@ WILSON.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "My attacks have lost their power."
 WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Something feels terribly unlucky..."
 WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_END = "I think my luck is back to normal."
 
+WILSON.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "I feel completely invincible!"
+WILSON.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "My invincibility is gone!"
+
+WILSON.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ahh, much better. That sickness is gone."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "不是这个。"
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "他想要别的东西。"
@@ -1399,3 +1404,5 @@ WILSON.DESCRIBE.OPALPRECIOUSCREAM = "A rather splendidly iridescent whipped crea
 WILSON.DESCRIBE.CATFISHSTICK = "A grilled black catfish on a stick."
 
 WILSON.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A sweet treat with unpredictable consequences."
+
+WILSON.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Science has yet to explain this shimmer."

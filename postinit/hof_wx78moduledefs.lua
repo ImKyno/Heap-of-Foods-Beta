@@ -161,8 +161,10 @@ local function GourmandOnEat(wx, data)
 	local health = food.components.edible:GetHealth(wx)
 
 	if health > 0 then
-		if wx.components.health ~= nil then
-			wx.components.health:DoDelta(bonus, nil, food.prefab)
+		if wx.components.health ~= nil and wx.components.debuffable ~= nil then
+			if not wx.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+				wx.components.health:DoDelta(bonus, nil, food.prefab)
+			end
 		end
 	elseif health < 0 then
 		if wx.components.health ~= nil then
@@ -185,8 +187,10 @@ local function GourmandOnEat(wx, data)
 	local sanity = food.components.edible:GetSanity(wx)
 
 	if sanity > 0 then
-		if wx.components.sanity ~= nil then
-			wx.components.sanity:DoDelta(bonus)
+		if wx.components.sanity ~= nil and wx.components.debuffable ~= nil then
+			if not wx.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+				wx.components.sanity:DoDelta(bonus)
+			end
 		end
 	elseif sanity < 0 then
 		if wx.components.sanity ~= nil then

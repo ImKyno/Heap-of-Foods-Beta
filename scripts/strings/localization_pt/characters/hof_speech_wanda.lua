@@ -113,6 +113,11 @@ WANDA.ANNOUNCE_THIS_CRITDAMAGEBUFF_END = "A força extra chegou ao fim."
 WANDA.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Não tenho certeza se vou conseguir fazer isso."
 WANDA.ANNOUNCE_THIS_BADLUCKBUFF_END = "O mau agouro finalmente passou."
 
+WANDA.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "O próprio tempo não pode me tocar."
+WANDA.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "E o tempo me alcançou novamente."
+
+WANDA.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ótimo. Não tenho tempo para ficar doente."
+
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não... Preciso de algo diferente."
 
 WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Acho que tenho tempo de pegar uma lagosta para você."
@@ -1399,3 +1404,5 @@ WANDA.DESCRIBE.OPALPRECIOUSCREAM = "Coisas lindas nunca parecem durar."
 WANDA.DESCRIBE.CATFISHSTICK = "Recém-pescado, recém-grelhado. Uma vida tão curta."
 
 WANDA.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Espero que essa pequena aposta dê certo."
+
+WANDA.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Alguns segundos de liberdade da realidade... Eu aceito."

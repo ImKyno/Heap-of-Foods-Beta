@@ -47,7 +47,10 @@ if HOF_COFFEEBUFF_ENABLED then
 		local function OnEaten(inst, eater)
 			if eater:HasTag("plantkin") then
 				if eater.components.health ~= nil and not eater.components.health:IsDead() then
-					eater.components.health:DoDelta(100)
+					if eater.components.debuffable ~= nil
+					and not eater.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+						eater.components.health:DoDelta(TUNING.KYNO_GOLDENAPPLE_HEALTH)
+					end
 				end
 			end
 

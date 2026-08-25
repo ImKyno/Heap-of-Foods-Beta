@@ -141,6 +141,7 @@ local LOADINGTIPS   =
 	PARTITIO3       = "Partitio odkrył, że ktoś zniszczył jego dom. Potrzebuje teraz pomocy, aby przywrócić go do dawnej świetności i ponownie rozpocząć handel.",
 	CRITDAMAGE      = "Dzięki Rozświetlająca Bita śmietana twoje ataki mogą zadawać trafienia krytyczne, zapewniając łącznie aż 150% dodatkowych obrażeń!",
 	RANDOMBUFF      = "Lizak Shimmer Lollipop po zjedzeniu wywołuje losowy efekt uboczny. Czujesz się dziś szczęśliwy?",
+	OPALAPPLE       = "Zaczarowane Lśniące Jabłka to rzadkie przedmioty, które można zdobyć, pokonując potężnych bossów. Zapewniają nieśmiertelność na ograniczony czas.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

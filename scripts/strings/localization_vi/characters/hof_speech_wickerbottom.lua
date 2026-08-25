@@ -113,6 +113,11 @@ WICKERBOTTOM.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "My offensive capabilities have 
 WICKERBOTTOM.ANNOUNCE_KYNO_BADLUCKBUFF_START = "An unfortunate series of events appears imminent."
 WICKERBOTTOM.ANNOUNCE_KYNO_BADLUCKBUFF_END = "It seems the unfavorable influence has subsided."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "I appear to be impervious to harm."
+WICKERBOTTOM.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "The protective measures have expired."
+
+WICKERBOTTOM.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Excellent. The illness appears to have passed."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nó cần thứ khác."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Không. Ta nghĩ ông ấy có nhắc đến Wobster."
@@ -1399,3 +1404,5 @@ WICKERBOTTOM.DESCRIBE.OPALPRECIOUSCREAM = "Whipped cream exhibiting an unusual i
 WICKERBOTTOM.DESCRIBE.CATFISHSTICK = "A black catfish, grilled to a rather appetizing degree."
 
 WICKERBOTTOM.DESCRIBE.OPALPRECIOUSLOLLIPOP = "An unusual confection with rather unpredictable effects."
+
+WICKERBOTTOM.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "An extraordinary fruit exhibiting highly unusual thaumaturgical properties."

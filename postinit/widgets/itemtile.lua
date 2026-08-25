@@ -84,7 +84,7 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 	end
 
 	function self:CheckEnchantedFX()
-		if self.item:HasTag("goldenapple") then
+		if self.item:HasAnyTag("goldenapple", "opalpreciousapple") then
 			self.enchantedfx:Show()
 		else
 			self.enchantedfx:Hide()
@@ -100,7 +100,7 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 	end
 
 	function self:ToggleEnchantedFX()
-		if self.showequipenchantedfx or (self.item and self.item:HasTag("goldenapple")) then
+		if self.showequipenchantedfx or (self.item and self.item:HasAnyTag("goldenapple", "opalpreciousapple")) then
 			if self.enchantedfx == nil then
 				self.enchantedfx = self.image:AddChild(UIAnim())
 				self.enchantedfx:GetAnimState():SetBank("inventory_fx_enchanted")
@@ -112,7 +112,7 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 				self.enchantedfx:SetClickable(false)
 			end
 
-			if self.item:HasTag("goldenapple") then
+			if self.item:HasAnyTag("goldenapple", "opalpreciousapple") then
 				self:CheckEnchantedFX()
 				self:StartUpdatingEnchanted()
 			else
@@ -152,7 +152,7 @@ AddClassPostConstruct("widgets/itemtile", function(self)
 	local _SetIsEquip = self.SetIsEquip
 
 	function self:SetIsEquip(isequip)
-		local enchantedfx = isequip and self.item:HasTag("goldenapple")
+		local enchantedfx = isequip and self.item:HasAnyTag("goldenapple", "opalpreciousapple")
 		local shadow2fx = isequip and self.item:HasTag("shadow_fooditem")
 
 		if not self.showequipenchantedfx == enchantedfx then

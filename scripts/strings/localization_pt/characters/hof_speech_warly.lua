@@ -113,6 +113,11 @@ WARLY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "E a força extra saiu do cardápio."
 WARLY.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Receio que a sorte tenha deixado a cozinha."
 WARLY.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Ah, excelente. A sorte voltou à mesa."
 
+WARLY.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Ah, um gosto fugaz de imortalidade!"
+WARLY.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "O encantamento desapareceu!"
+
+WARLY.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ah, que alívio. Sinto-me eu mesmo novamente."
+
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado, errado..."
 
 WARLY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Quer algo mais saboroso?"
@@ -1399,3 +1404,5 @@ WARLY.DESCRIBE.OPALPRECIOUSCREAM = "Magnífico! Um toque de brilho para uma sobr
 WARLY.DESCRIBE.CATFISHSTICK = "Simples, defumado e maravilhosamente rústico."
 
 WARLY.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Um doce deslumbrante com uma surpresa escondida dentro."
+
+WARLY.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "Magnífico! Embora eu suspeite que esse brilho seja mais do que mera decoração."

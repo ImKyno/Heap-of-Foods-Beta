@@ -1,46 +1,46 @@
 local function OnAttached(inst, target)
-    inst.entity:SetParent(target.entity)
-    inst.Transform:SetPosition(0, 0, 0) 
-	
-	if not target:HasTag("frogimmunity") then 
+	inst.entity:SetParent(target.entity)
+	inst.Transform:SetPosition(0, 0, 0)
+
+	if not target:HasTag("frogimmunity") then
 		target:AddTag("frogimmunity")
 	end
-		
-	if target.components.talker and target:HasTag("player") then 
+
+	if target.components.talker and target:HasTag("player") then
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FROGBUFF_START"))
 	end
-	
-    inst:ListenForEvent("death", function()
-        inst.components.debuff:Stop()
-    end, target)
+
+	inst:ListenForEvent("death", function()
+		inst.components.debuff:Stop()
+	end, target)
 end
 
 local function OnTimerDone(inst, data)
-    if data.name == "kyno_frogbuff" then
-        inst.components.debuff:Stop()
-    end
+	if data.name == "kyno_frogbuff" then
+		inst.components.debuff:Stop()
+	end
 end
 
 local function OnDetached(inst, target)
-	if target:HasTag("frogimmunity") then 
+	if target:HasTag("frogimmunity") then
 		target:RemoveTag("frogimmunity")
 	end
-	
-	if target.components.talker and target:HasTag("player") then 
+
+	if target.components.talker and target:HasTag("player") then
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FROGBUFF_END"))
 	end
-	
-    inst:Remove()
+
+	inst:Remove()
 end
 
 local function OnExtended(inst, target)
-    inst.components.timer:StopTimer("kyno_frogbuff")
-    inst.components.timer:StartTimer("kyno_frogbuff", TUNING.KYNO_FROGBUFF_DURATION)
-	
-	if target.components.talker and target:HasTag("player") then 
+	inst.components.timer:StopTimer("kyno_frogbuff")
+	inst.components.timer:StartTimer("kyno_frogbuff", TUNING.KYNO_FROGBUFF_DURATION)
+
+	if target.components.talker and target:HasTag("player") then
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FROGBUFF_START"))
 	end
-	
+
 	if target:HasTag("frogimmunity") then
 		target:RemoveTag("frogimmunity")
 		target:AddTag("frogimmunity")
@@ -50,31 +50,31 @@ local function OnExtended(inst, target)
 end
 
 local function fn()
-    local inst = CreateEntity()
+	local inst = CreateEntity()
 
-    if not TheWorld.ismastersim then
-        inst:DoTaskInTime(0, inst.Remove)
-        return inst
-    end
+	if not TheWorld.ismastersim then
+		inst:DoTaskInTime(0, inst.Remove)
+		return inst
+	end
 
-    inst.entity:AddTransform()
-    inst.entity:Hide()
-    inst.persists = false
+	inst.entity:AddTransform()
+	inst.entity:Hide()
+	inst.persists = false
 
-    inst:AddTag("CLASSIFIED")
+	inst:AddTag("CLASSIFIED")
 
-    inst:AddComponent("debuff")
-    inst.components.debuff:SetAttachedFn(OnAttached)
-    inst.components.debuff:SetDetachedFn(OnDetached)
-    inst.components.debuff:SetExtendedFn(OnExtended)
-    inst.components.debuff.keepondespawn = true
+	inst:AddComponent("debuff")
+	inst.components.debuff:SetAttachedFn(OnAttached)
+	inst.components.debuff:SetDetachedFn(OnDetached)
+	inst.components.debuff:SetExtendedFn(OnExtended)
+	inst.components.debuff.keepondespawn = true
 
-    inst:AddComponent("timer")
-    inst.components.timer:StartTimer("kyno_frogbuff", TUNING.KYNO_FROGBUFF_DURATION)
-	
-    inst:ListenForEvent("timerdone", OnTimerDone)
+	inst:AddComponent("timer")
+	inst.components.timer:StartTimer("kyno_frogbuff", TUNING.KYNO_FROGBUFF_DURATION)
 
-    return inst
+	inst:ListenForEvent("timerdone", OnTimerDone)
+
+	return inst
 end
 
 return Prefab("kyno_frogbuff", fn)

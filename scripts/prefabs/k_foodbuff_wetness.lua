@@ -18,7 +18,10 @@ local function OnAttached(inst, target)
 	inst._wetnesstask = inst:DoPeriodicTask(TUNING.KYNO_WETNESSBUFF_TICK_PERIOD, function()
 		if OnCheckWetness(inst, target) then
 			if target.components.sanity ~= nil then
-				target.components.sanity:DoDelta(TUNING.KYNO_WETNESSBUFF_AMOUNT, false, "kyno_wetnessbuff")
+				if target.components.debuffable ~= nil
+				and not target.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+					target.components.sanity:DoDelta(TUNING.KYNO_WETNESSBUFF_AMOUNT, false, "kyno_wetnessbuff")
+				end
 			end
 		end
 	end)
@@ -63,7 +66,10 @@ local function OnExtended(inst, target)
 	inst._wetnesstask = inst:DoPeriodicTask(TUNING.KYNO_WETNESSBUFF_TICK_PERIOD, function()
 		if OnCheckWetness(inst, target) then
 			if target.components.sanity ~= nil then
-				target.components.sanity:DoDelta(TUNING.KYNO_WETNESSBUFF_AMOUNT, false, "kyno_wetnessbuff")
+				if target.components.debuffable ~= nil
+				and not target.components.debuffable:HasDebuff("kyno_healingsicknessbuff") then
+					target.components.sanity:DoDelta(TUNING.KYNO_WETNESSBUFF_AMOUNT, false, "kyno_wetnessbuff")
+				end
 			end
 		end
 	end)

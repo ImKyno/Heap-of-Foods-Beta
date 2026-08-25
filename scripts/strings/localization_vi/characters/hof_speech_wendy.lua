@@ -113,6 +113,11 @@ WENDY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "The strength has faded away."
 WENDY.ANNOUNCE_KYNO_BADLUCKBUFF_START = "I can feel misfortune closing in."
 WENDY.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The darkness has passed... for now."
 
+WENDY.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Death cannot claim me... not yet."
+WENDY.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Death is just around the corner again..."
+
+WENDY.ANNOUNCE_KYNO_SICKNESSBUFF_END = "The sickness has left me... for now."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để thu gom?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Tất nhiên đây không phải thứ sinh vật ngu ngốc đó muốn."
@@ -1399,3 +1404,5 @@ WENDY.DESCRIBE.OPALPRECIOUSCREAM = "A beautiful sweetness, doomed to melt away."
 WENDY.DESCRIBE.CATFISHSTICK = "Even the river's creatures end up on the grill."
 
 WENDY.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A beautiful sweetness hiding an uncertain fate."
+
+WENDY.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "It shields me with a radiant light capable of fending off every enemy."

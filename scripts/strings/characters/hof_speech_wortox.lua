@@ -116,6 +116,11 @@ WORTOX.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "The extra punch has flown away."
 WORTOX.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Misfortune is knocking at the door! Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The bad luck has scampered away!"
 
+WORTOX.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Death can't catch up to me! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "It appears that my protective powers have faded away."
+
+WORTOX.ANNOUNCE_KYNO_SICKNESSBUFF_END = "The nasty sickness is gone!"
+
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else."
 
 WORTOX.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "I know this prank was good, but let's get the real thing."
@@ -1402,3 +1407,5 @@ WORTOX.DESCRIBE.OPALPRECIOUSCREAM = "A fluffy cloud of sweet, shiny goodness!"
 WORTOX.DESCRIBE.CATFISHSTICK = "A fishy feast on a stick! How delightfully grisly!"
 
 WORTOX.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A shiny sweet with tricks up its sleeve!"
+
+WORTOX.DESCRIBE.KYNO_OPALPRECIOUSAPPLE = "A shiny little fruit that makes death lose its grip!"
