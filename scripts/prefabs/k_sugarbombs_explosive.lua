@@ -85,7 +85,7 @@ local function fn()
 	inst.components.inventoryitem:ChangeImageName("sugarbombs_explosive")
 	
 	inst:AddComponent("luckitem")
-	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_SUPERTINY)
+	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_MED)
 	
     inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM

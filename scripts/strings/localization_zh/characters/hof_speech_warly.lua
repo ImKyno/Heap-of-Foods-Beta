@@ -101,11 +101,17 @@ WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "夜晚的锋芒已经变钝。"
 WARLY.ANNOUNCE_KYNO_PANICBUFF_START = "看来我变得相当吓人了。"
 WARLY.ANNOUNCE_KYNO_PANICBUFF_END = "我那令人不安的气场减弱了。"
 
-WARLY.ANNOUNCE_KYNO_CUREBUFF_START = "Excellent! My ingredients will keep." -- NEEDS TRANSLATION
-WARLY.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness fades once more." -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_CUREBUFF_START = "Excellent! My ingredients will keep."
+WARLY.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness fades once more."
 
-WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ah, a touch of stability!" -- NEEDS TRANSLATION
-WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And my stability has evaporated." -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ah, a touch of stability!"
+WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And my stability has evaporated."
+
+WARLY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Ah! I can feel the extra force behind every strike!"
+WARLY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "And the extra strength has left the menu."
+
+WARLY.ANNOUNCE_KYNO_BADLUCKBUFF_START = "I fear fortune has left the kitchen."
+WARLY.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Ah, excellent. Fortune has returned to the table."
 
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "错了，错了……"
 
@@ -136,13 +142,13 @@ WARLY.ANNOUNCE_KYNO_ROE_RESEARCHED = "啊！这些鱼卵蕴含着如此精致的
 
 WARLY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "嗯……还不错。"
 
-WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Mon dieu, I feel as though my insides are cooling!",
 	"This strange cold... I wonder if this is how meat feel when they're frozen.",
 }
 
-WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm very glad that's over." -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm very glad that's over."
 
 WARLY.DESCRIBE.KYNO_ROE = "我可以用小点心做鱼子酱！"
 WARLY.DESCRIBE.KYNO_ROE_COOKED = "可以加一点新鲜柠檬。"
@@ -172,7 +178,7 @@ WARLY.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "可以用热水...！"
 
 WARLY.DESCRIBE.DUG_KYNO_COFFEEBUSH = "这灌木上该不会长着……咖啡豆吧？！"
 
-WARLY.DESCRIBE.KYNO_COFFEEBUSH = 
+WARLY.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "啊！灵感的源泉！",
 	PICKED = "耐心能酝酿出更醇厚的风味。",
@@ -181,7 +187,7 @@ WARLY.DESCRIBE.KYNO_COFFEEBUSH =
 
 WARLY.DESCRIBE.DUG_KYNO_SPOTBUSH = "它值得一片沃土来生长。"
 
-WARLY.DESCRIBE.KYNO_SPOTBUSH = 
+WARLY.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "哦！一株香料灌木。",
 	PICKED = "假以时日，它会恢复元气的。",
@@ -249,7 +255,7 @@ WARLY.DESCRIBE.CUCUMBERSALAD = "可食用的艺术品！"
 
 WARLY.DESCRIBE.DUG_KYNO_WILDWHEAT = "需得小心地重新栽种。"
 
-WARLY.DESCRIBE.KYNO_WILDWHEAT = 
+WARLY.DESCRIBE.KYNO_WILDWHEAT =
 {
 	GENERIC = "在这地界，成功的基本原料。",
 	PICKED = "耐心能提升风味层次。",
@@ -408,7 +414,7 @@ WARLY.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "噢 不。"
 
 WARLY.DESCRIBE.KYNO_SEEDS_KIT = "烹饪食材的初始阶段。"
 
-WARLY.DESCRIBE.KYNO_LIMPETROCK = 
+WARLY.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "一座小小的蜗牛农场！",
 	PICKED = "假以时日，它们自会归来。",
@@ -418,7 +424,7 @@ WARLY.DESCRIBE.KYNO_LIMPETROCK =
 WARLY.DESCRIBE.KYNO_LIMPETS = "它们散发着咸味。"
 WARLY.DESCRIBE.KYNO_LIMPETS_COOKED = "光滑、咸味、美味。"
 
-WARLY.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WARLY.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "嗯，莲藕……",
 	PICKED = "耐心能提升风味。",
@@ -429,7 +435,7 @@ WARLY.DESCRIBE.KYNO_LOTUS_ROOT = "我能种植它，作为可持续的莲花来�
 WARLY.DESCRIBE.KYNO_LOTUS_FLOWER = "我应该用这个做点什么。"
 WARLY.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "美味佳肴！"
 
-WARLY.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WARLY.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "我对这种食材的烹饪经验不多。",
 	PICKED = "耐心会给予我们回报。",
@@ -441,7 +447,7 @@ WARLY.DESCRIBE.KYNO_SEAWEEDS_COOKED = "要是撒点熟芝麻就好了……"
 WARLY.DESCRIBE.KYNO_SEAWEEDS_DRIED = "要是淋点酱油就好了……"
 WARLY.DESCRIBE.KYNO_SEAWEEDS_ROOT = "把它种下去，就能可持续地收获海带了。"
 
-WARLY.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WARLY.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "嗯……配鱼吃一定很棒！",
 	PICKED = "靠着水气滋养，它很快就会长回来的。",
@@ -452,7 +458,7 @@ WARLY.DESCRIBE.KYNO_TAROROOT_ROOT = "我能种植它作为可持续的芋头根�
 WARLY.DESCRIBE.KYNO_TAROROOT = "茄子！"
 WARLY.DESCRIBE.KYNO_TAROROOT_COOKED = "可以用辣椒酱和帕尔马干酪......"
 
-WARLY.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WARLY.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "这可以做一道上好的沙拉！",
 	PICKED = "值得等待。",
@@ -479,7 +485,7 @@ WARLY.DESCRIBE.CATFOOD = "猫的美食。"
 
 WARLY.DESCRIBE.KATFOOD = "猫的美食。"
 
-WARLY.DESCRIBE.KYNO_BANANATREE = 
+WARLY.DESCRIBE.KYNO_BANANATREE =
 {
 	GENERIC = "这下猴子们够不着啦，哈！",
 	PICKED = "耐心能带来更好的风味。",
@@ -491,7 +497,7 @@ WARLY.DESCRIBE.KYNO_BANANATREE =
 WARLY.DESCRIBE.KYNO_BANANA = "正是我需要的味道！"
 WARLY.DESCRIBE.KYNO_BANANA_COOKED = "可以用一些燕麦和一些巧克力片..."
 
-WARLY.DESCRIBE.KYNO_KOKONUTTREE = 
+WARLY.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "一棵长势不错的歪脖子树。",
 	PICKED = "耐心能提升风味。",
@@ -531,7 +537,7 @@ WARLY.DESCRIBE.KYNO_NEONFISH_COOKED = "叹气。它甚至没有经过调味。"
 
 WARLY.DESCRIBE.KYNO_GROUPER = "再新鲜不过了！"
 WARLY.DESCRIBE.KYNO_GROUPER_COOKED = "木豆煎石斑鱼！好吃！"
- 
+
 WARLY.DESCRIBE.KYNO_PIERROTFISH = "你想成为一个美味的杂烩吗？"
 WARLY.DESCRIBE.KYNO_PIERROTFISH_COOKED = "啊，我应该把头留给汤喝！"
 
@@ -555,7 +561,7 @@ WARLY.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "用来收集树上糖果的桶。"
 
 WARLY.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "是时候抓一些好螃蟹了！"
 
-WARLY.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WARLY.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "有什么好货要给我？",
 	SLEEPING = "我待会儿再来吧。",
@@ -601,7 +607,7 @@ WARLY.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "啊！海鲜！"
 
 WARLY.DESCRIBE.KYNO_SLAUGHTERTOOL = "最好的屠宰工具。"
 
-WARLY.DESCRIBE.KYNO_CHICKEN2 = 
+WARLY.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "我美味的，美味的朋友！",
 	COOP = "从现在起，我会把你留在身边。",
@@ -617,7 +623,7 @@ WARLY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "啊！新鲜的食材——呃，我是说伙伴！",
 }
 
-WARLY.DESCRIBE.KYNO_CHICKENHOUSE = 
+WARLY.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "啊！一个可靠的新鲜食材来源。",
 	FULL = "如此美妙的食材在等着我呢！",
@@ -645,7 +651,7 @@ WARLY.DESCRIBE.KYNO_COOKWARE_OVEN = "啊，完美！"
 WARLY.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "啊，完美！"
 WARLY.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "啊，完美！"
 
-WARLY.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WARLY.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "底下说不定藏着什么蛋白质。",
 	FLIPPED = "啊，隐藏的宝藏！",
@@ -692,7 +698,7 @@ WARLY.DESCRIBE.PEPPERROLLS = "我喜欢辣的菜！"
 
 WARLY.DESCRIBE.KYNO_SAPHEALER = "可以派上用场。"
 
-WARLY.DESCRIBE.KYNO_OCEAN_WRECK = 
+WARLY.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "它已不再航行。",
 	PICKED = "大海会再次馈赠。",
@@ -714,7 +720,7 @@ WARLY.DESCRIBE.KYNO_PLANTMEAT_DRIED = "可以使用墨西哥辣椒..."
 
 WARLY.DESCRIBE.KYNO_BREWBOOK = "啊，精美的葡萄酒目录。"
 
-WARLY.DESCRIBE.KYNO_WOODENKEG = 
+WARLY.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "等不及要酿些淡色艾尔啤酒了！",
 	BREWING_LONG = "耐心能酿出最上乘的美酒。",
@@ -723,7 +729,7 @@ WARLY.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "一场彻头彻尾的厨艺灾难！",
 }
 
-WARLY.DESCRIBE.KYNO_PRESERVESJAR = 
+WARLY.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "我都拿不定主意先做什么好了！",
 	BREWING_LONG = "保鲜是一门需要耐心的艺术。",
@@ -732,7 +738,7 @@ WARLY.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "一场厨艺界的伤心事！",
 }
 
-WARLY.DESCRIBE.KYNO_ANTCHEST = 
+WARLY.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "一个产蜜的家伙！",
 	HONEY = "绝赞的蜂蜜储备！",
@@ -748,7 +754,7 @@ WARLY.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "不是最好的食物。"
 WARLY.DESCRIBE.KYNO_PIKO = "你好，朋友。"
 WARLY.DESCRIBE.KYNO_PIKO_ORANGE = "我更喜欢英式早餐。"
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "有了茶树叶子，我能做的事情可就多了。",
 	CHOPPED = "上好的食材，已收获。",
@@ -756,7 +762,7 @@ WARLY.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 	BURNT = "毁了。",
 }
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
 	GENERIC = "有了茶树叶子，我能做的事情可就多了。",
 	BURNING = "一个令人扼腕的结局。",
@@ -764,26 +770,26 @@ WARLY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WARLY.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "我希望口粮在里面。"
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "渔夫住在这儿。我闻得出来。",
 	BURNT = "彻底毁了。",
 }
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "渔夫住在这儿。我闻得出来。",
 	CRAFTED = "啊！这下体面多了！",
 	BURNT = "这气味，难闻至极！",
 }
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "那里面准有数不清的烹饪食材。",
 	OCCUPIED = "啊，暂时打烊了。",
 }
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "或许我该看看他卖些什么。",
 	EMPTY = "唉，没剩下什么可以尝鲜的了。",
@@ -841,7 +847,7 @@ WARLY.DESCRIBE.CHOCOLATE_BLACK = "没有什么比巧克力更甜的了。"
 WARLY.DESCRIBE.CHOCOLATE_WHITE = "没有什么比巧克力更甜的了。"
 
 WARLY.DESCRIBE.TRICOLORDANGO = "我应该经常尝试日本料理......"
- 
+
 WARLY.DESCRIBE.FRIESFRENCH = "盐使它变得更好！"
 
 WARLY.DESCRIBE.PIRATERUM = "朗姆酒，海盗们喝的。"
@@ -853,7 +859,7 @@ WARLY.DESCRIBE.ONIONRINGS = "完美的油洋葱。"
 WARLY.DESCRIBE.DONUTS = "啊，美妙！来一些甜甜圈来开始新的一天。"
 WARLY.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "啊，太美妙了！来点甜甜圈来开始新的一天。"
 WARLY.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "啊，精彩的！来点甜甜圈来开始新的一天。"
- 
+
 WARLY.DESCRIBE.CINNAMONROLL = "烘焙食品！温暖的肉桂和糖的催眠漩涡。"
 
 WARLY.DESCRIBE.GUMMYBEARGERS = "用动物形状制作糖果是一门艺术！"
@@ -940,7 +946,7 @@ WARLY.DESCRIBE.RICESAKE = "啊！米饭的适度用途。非常适合小型团�
 
 WARLY.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "热带的美味，得找个地方种下。"
 
-WARLY.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WARLY.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "热带的美味。",
 	PICKED = "耐心能提升风味。",
@@ -958,7 +964,7 @@ WARLY.DESCRIBE.PINACOLADA = "神清气爽。"
 
 WARLY.DESCRIBE.CHIMAS = "完美的马黛茶！"
 
-WARLY.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WARLY.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "它为植物点缀以甘露。",
 	ON = "我的食材正享受着完美的滋润！",
@@ -1077,7 +1083,7 @@ WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "这是商人应得的休息。",
 }
 
-WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "啊，新鲜松露的香气……大有可为！",
 	PICKED = "这需要何等的耐心。",
@@ -1087,7 +1093,7 @@ WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WARLY.DESCRIBE.KYNO_TRUFFLES = "太棒了！光是香气就让我灵感大开！"
 WARLY.DESCRIBE.KYNO_TRUFFLES_COOKED = "完美！大地的香气现在可口了。"
 
-WARLY.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WARLY.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "这舞台，静候着真正的佳肴！",
 	FULL = "啊，太棒了！每一件杰作都理应被欣赏。",
@@ -1112,7 +1118,7 @@ WARLY.DESCRIBE.TRUFFLEOIL = "啊，太棒了！用来轻轻淋在烤蔬菜上再
 WARLY.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "这是建造的秘诀！"
 WARLY.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "很快，新鲜的鱼就来啦，准备做我最拿手的菜肴！"
 
-WARLY.DESCRIBE.KYNO_FISHFARMPLOT = 
+WARLY.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "为鲜活鱼获准备的一处好场所。",
 	FUEL_HIGH = "鱼儿们正茁壮成长！",
@@ -1133,7 +1139,7 @@ WARLY.DESCRIBE.KYNO_JELLYFISH_DRIED = "可以加点大蒜..."
 
 WARLY.DESCRIBE.KYNO_JELLYFISH_RAINBOW = "我看不出有什么理由去招惹它。"
 WARLY.DESCRIBE.KYNO_JELLYFISH_RAINBOW_DEAD = "没必要让它白白浪费掉。"
-WARLY.DESCRIBE.KYNO_JELLYFISH_RAINBOW_COOKED = "你真的能尝到 \"彩虹\"。" 
+WARLY.DESCRIBE.KYNO_JELLYFISH_RAINBOW_COOKED = "你真的能尝到 \"彩虹\"。"
 
 WARLY.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "真想知道这瓶子里曾经装过什么年份的酒……"
 
@@ -1175,7 +1181,7 @@ WARLY.DESCRIBE.KYNO_BRAINROCK_LARVAE = "你好，我的小可爱。"
 WARLY.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "眼下没东西。或许稍后。"
 WARLY.DESCRIBE.KYNO_BRAINROCK_CORAL = "这些真的是脑组织碎片吗？"
 
-WARLY.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WARLY.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "有嚼劲的岩石，后味很巧妙。",
 	PICKED = "它得重新集中精神才行。",
@@ -1183,7 +1189,7 @@ WARLY.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WARLY.DESCRIBE.BRAINMETTERSOUP = "这有助于你记住许多事情。"
 
-WARLY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WARLY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "尽量别去想他那美味的触须……",
 	SLEEPING = "最好别打扰他。",
@@ -1191,7 +1197,7 @@ WARLY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WARLY.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "里面有冷饮吗？"
 
-WARLY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WARLY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "啃得干干净净……",
 	WAITING = "他正思念着自己的另一半……",
@@ -1207,7 +1213,7 @@ WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "为我的食物注入庆典精神。"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "一道可爱的甜点，为这个特别时刻增添甜蜜！"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "至少，这真是赏心悦目！"
 
-WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "啊，一台美食级爆裂装置。",
 	FUEL_HIGH = "完美的火候掌控！",
@@ -1247,7 +1253,7 @@ WARLY.DESCRIBE.CHICKENROTISSERIE = "啊！质朴、醇厚，令人心满意足�
 
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "细心浸泡，恰到好处。"
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "一杯迷人的甜美花香。"
-WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A delightfully cooling infusion." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A delightfully cooling infusion."
 
 WARLY.DESCRIBE.SOULJUICE = "啊！一种奇特却美妙的调配！"
 
@@ -1314,74 +1320,82 @@ WARLY.DESCRIBE.KYNO_PIGCOIN1 = "我可以用它买很多新鲜食材！"
 WARLY.DESCRIBE.KYNO_PIGCOIN2 = "啊！我可以去买些杂货……"
 WARLY.DESCRIBE.KYNO_PIGCOIN3 = "看起来很重要。"
 
-WARLY.DESCRIBE.KYNO_ICENETTLES = "Mon Dieu! They'll freeze my beautiful crops!" -- NEEDS TRANSLATION
-WARLY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Could these be used for a rudimentary ice box?" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_ICENETTLES = "Mon Dieu! They'll freeze my beautiful crops!"
+WARLY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Could these be used for a rudimentary ice box?"
 
-WARLY.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A cook appreciates good organization.",
 	FULL = "It is entirely full.",
 }
 
-WARLY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "That's one juicy tomato wasted..." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "That's one juicy tomato wasted..."
 
-WARLY.DESCRIBE.WX78MODULE_GOURMAND = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
-WARLY.DESCRIBE.WX78MODULE_COOKER = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
-WARLY.DESCRIBE.WX78MODULE_DRYER = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
-WARLY.DESCRIBE.WX78MODULE_DRYER2 = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.WX78MODULE_GOURMAND = "They give our metal friend a little extra zest, non?"
+WARLY.DESCRIBE.WX78MODULE_COOKER = "They give our metal friend a little extra zest, non?"
+WARLY.DESCRIBE.WX78MODULE_DRYER = "They give our metal friend a little extra zest, non?"
+WARLY.DESCRIBE.WX78MODULE_DRYER2 = "They give our metal friend a little extra zest, non?"
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What did our metal friend leave here?", -- NEEDS TRANSLATION
+	GENERIC = "What did our metal friend leave here?",
 }
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What did our metal friend leave here?", -- NEEDS TRANSLATION
+	GENERIC = "What did our metal friend leave here?",
 }
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What did our metal friend leave here?", -- NEEDS TRANSLATION
+	GENERIC = "What did our metal friend leave here?",
 }
 
-WARLY.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "The little pig has quite the appetite for coin.",
 	UPGRADED = "A bottomless piggy bank? Magnifique!",
 	GENERIC = "A charming little place for one's savings.",
 }
 
-WARLY.DESCRIBE.MARSHMALLOWS = "Ah, such a delicate sweetness!" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.MARSHMALLOWS = "Ah, such a delicate sweetness!"
 
-WARLY.DESCRIBE.KOKONUTCOOKIES = "I've followed a top secret recipe to cook them!" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KOKONUTCOOKIES = "I've followed a top secret recipe to cook them!"
 
-WARLY.DESCRIBE.BBQRIBS = "Ah, beautifully charred and wonderfully seasoned." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.BBQRIBS = "Ah, beautifully charred and wonderfully seasoned."
 
-WARLY.DESCRIBE.BROWNIE = "Rich, fudgy, and wonderfully indulgent." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.BROWNIE = "Rich, fudgy, and wonderfully indulgent."
 
-WARLY.DESCRIBE.CHOCOLATE_CAKE = "Magnifique! Rich, velvety, and deeply chocolatey." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.CHOCOLATE_CAKE = "Magnifique! Rich, velvety, and deeply chocolatey."
 
-WARLY.DESCRIBE.SWORDFISHBLUEDINNER = "Ah, such fine dinner! Simple, elegant and delightful." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.SWORDFISHBLUEDINNER = "Ah, such fine dinner! Simple, elegant and delightful."
 
-WARLY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "A charming creature of the night.",
 	HELD = "I can feel the little thing moving around.",
 }
 
-WARLY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A magnificent bird of the northern wilderness.",
 	HELD = "I believe it objects to being carried this way.",
 }
 
-WARLY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Ah, a place for collecting salt crystals under construction." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Ah, a place for collecting salt crystals under construction."
 
-WARLY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Ah, a fine fishing rod." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Ah, a fine fishing rod."
+
+WARLY.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "A treasure among confectioner's ingredients!"
+
+WARLY.DESCRIBE.OPALPRECIOUSCREAM = "Magnifique! A little shimmer for an exquisite dessert."
+
+WARLY.DESCRIBE.CATFISHSTICK = "Simple, smoky, and wonderfully rustic."
+
+WARLY.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A dazzling confection with a surprise hidden within."

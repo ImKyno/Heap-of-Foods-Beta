@@ -104,6 +104,25 @@ local function OnHaunt(inst, haunter)
 	return true
 end
 
+local function OnShine(inst)
+	inst.shinetask = nil
+
+	if not inst.AnimState:IsCurrentAnimation("sparkle") then
+		inst.AnimState:PlayAnimation("sparkle")
+		inst.AnimState:PushAnimation("idle", false)
+	end
+
+	if not inst:IsAsleep() then
+		inst.shinetask = inst:DoTaskInTime(5 + math.random() * 5, OnShine)
+	end
+end
+
+local function OnEntityWake(inst)
+	if inst.shinetask == nil then
+		inst.shinetask = inst:DoTaskInTime(5 + math.random() * 5, OnShine)
+	end
+end
+
 local function MakePreparedFood(data)	
 	local foodassets =
 	{
@@ -166,12 +185,16 @@ local function MakePreparedFood(data)
 			
 			food_symbol_build = data.overridebuild or "cook_pot_food"
 		else
-			inst.AnimState:SetBank("kyno_foodrecipes")
+			inst.AnimState:SetBank(data.bank or "kyno_foodrecipes")
 			inst.AnimState:SetBuild(data.overridebuild or "cook_pot_food")
-			inst.AnimState:PlayAnimation(data.anim or data.name, false)
+			inst.AnimState:PlayAnimation(data.anim or data.name, data.loopanim or false)
 		end
 
 		inst.AnimState:OverrideSymbol("swap_food", data.overridebuild or "cook_pot_food", data.basename or data.name)
+
+		if data.bloom ~= nil then
+			inst.AnimState:SetBloomEffectHandle("shaders/anim.ksh")
+		end
 
 		inst:AddTag("preparedfood")
 		inst:AddTag("preparedfood_hof")
@@ -183,6 +206,10 @@ local function MakePreparedFood(data)
 		
 		if data.luckitem ~= nil then
 			inst:AddTag(data.luckitem.luck > 0 and "luckyitem" or "unluckyitem")
+		end
+
+		if data.named ~= nil then
+			inst:AddTag("_named")
 		end
 
 		if data.tags ~= nil then
@@ -207,6 +234,10 @@ local function MakePreparedFood(data)
 
 		if not TheWorld.ismastersim then
 			return inst
+		end
+
+		if data.named ~= nil then
+			inst:RemoveTag("_named")
 		end
 
 		inst.food_symbol_build = food_symbol_build or data.overridebuild
@@ -292,6 +323,12 @@ local function MakePreparedFood(data)
 			inst:ListenForEvent("enterlimbo", inst.OnEntitySleep)
 		end
 
+		if data.named ~= nil then
+			inst:AddComponent("named")
+			inst.components.named.possiblenames = data.named
+			inst.components.named:PickNewName()
+		end
+
 		if data.fireproof ~= nil then
 
 		else
@@ -310,6 +347,11 @@ local function MakePreparedFood(data)
 			end
 		else
 			MakeHauntableLaunchAndPerish(inst)
+		end
+
+		if data.shine ~= nil then
+			OnShine(inst)
+			inst.OnEntityWake = OnEntityWake
 		end
 
 		return inst

@@ -101,11 +101,17 @@ WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Moc nocy słabnie."
 WILSON.ANNOUNCE_KYNO_PANICBUFF_START = "Moja obecność staje się dość niepokojąca."
 WILSON.ANNOUNCE_KYNO_PANICBUFF_END = "Wszystko wydaje się teraz mniej przerażające."
 
-WILSON.ANNOUNCE_KYNO_CUREBUFF_START = "Everything seems to last a little longer!" -- NEEDS TRANSLATION
-WILSON.ANNOUNCE_KYNO_CUREBUFF_END = "Things are spoiling normally again." -- NEEDS TRANSLATION
+WILSON.ANNOUNCE_KYNO_CUREBUFF_START = "Everything seems to last a little longer!"
+WILSON.ANNOUNCE_KYNO_CUREBUFF_END = "Things are spoiling normally again."
 
-WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I feel firmly grounded." -- NEEDS TRANSLATION
-WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And there goes my stability." -- NEEDS TRANSLATION
+WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I feel firmly grounded."
+WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And there goes my stability."
+
+WILSON.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "My attacks feel more powerful!"
+WILSON.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "My attacks have lost their power."
+
+WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Something feels terribly unlucky..."
+WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_END = "I think my luck is back to normal."
 
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "To nie to."
 
@@ -136,13 +142,13 @@ WILSON.ANNOUNCE_KYNO_ROE_RESEARCHED = "Nauczyłem się czegoś nowego o tej ikrz
 
 WILSON.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "To był dość interesujący przepis."
 
-WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"My insides are freezing!",
 	"Ouch, that's cold!",
 }
 
-WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Note to self: no more experiments with Ice Nettle toxin." -- NEEDS TRANSLATION
+WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Note to self: no more experiments with Ice Nettle toxin."
 
 WILSON.DESCRIBE.KYNO_ROE = "Rybie dzieci."
 WILSON.DESCRIBE.KYNO_ROE_COOKED = "Ikra, podana na ciepło."
@@ -531,7 +537,7 @@ WILSON.DESCRIBE.KYNO_NEONFISH_COOKED = "Smażona smażonka."
 
 WILSON.DESCRIBE.KYNO_GROUPER = "Tylko surf, bez turf."
 WILSON.DESCRIBE.KYNO_GROUPER_COOKED = "Ta ryba jest już skończona."
- 
+
 WILSON.DESCRIBE.KYNO_PIERROTFISH = "Ta jest wyjątkowo wodoodporna."
 WILSON.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Upieczona na medal."
 
@@ -841,7 +847,7 @@ WILSON.DESCRIBE.CHOCOLATE_BLACK = "W końcu trochę słodkiej czekolady!"
 WILSON.DESCRIBE.CHOCOLATE_WHITE = "W końcu trochę słodkiej czekolady!"
 
 WILSON.DESCRIBE.TRICOLORDANGO = "Co to takiego? Nieważne, są pyszne!"
- 
+
 WILSON.DESCRIBE.FRIESFRENCH = "Najlepszy sposób na ziemniaka."
 
 WILSON.DESCRIBE.PIRATERUM = "Wygląda niebezpiecznie."
@@ -853,7 +859,7 @@ WILSON.DESCRIBE.ONIONRINGS = "Nie przepadam za tłustym jedzeniem, ale muszę pr
 WILSON.DESCRIBE.DONUTS = "To pączki!"
 WILSON.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "To są donuty!"
 WILSON.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "To są donuty!"
- 
+
 WILSON.DESCRIBE.CINNAMONROLL = "Lubię sposób, w jaki \"kręci się\" w moich ustach."
 
 WILSON.DESCRIBE.GUMMYBEARGERS = "Urocze, ale także niebezpieczne."
@@ -1247,7 +1253,7 @@ WILSON.DESCRIBE.CHICKENROTISSERIE = "Obrotowe ciepło zapewnia równomierne piec
 
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Kojąca filiżanka herbaty z aloesu."
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Zachwycająco słodka herbata kwiatowa."
-WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "I'll look really cool drinking my tea." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "I'll look really cool drinking my tea."
 
 WILSON.DESCRIBE.SOULJUICE = "Ciekawa mieszanka energii duszy i granatu."
 
@@ -1314,74 +1320,82 @@ WILSON.DESCRIBE.KYNO_PIGCOIN1 = "Chciałbym czegoś więcej niż pensa za moje m
 WILSON.DESCRIBE.KYNO_PIGCOIN2 = "Całkiem przyzwoita ilość monet."
 WILSON.DESCRIBE.KYNO_PIGCOIN3 = "Wygląda na cenne."
 
-WILSON.DESCRIBE.KYNO_ICENETTLES = "The Garden is giving us a cold reception." -- NEEDS TRANSLATION
-WILSON.DESCRIBE.KYNO_ICENETTLES_DRIED = "Colder than maxwell's personality." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_ICENETTLES = "The Garden is giving us a cold reception."
+WILSON.DESCRIBE.KYNO_ICENETTLES_DRIED = "Colder than maxwell's personality."
 
-WILSON.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A handy place to store seeds.",
 	FULL = "It's packed with seeds.",
 }
 
-WILSON.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Can't get saucy with the crowd if you see this around." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Can't get saucy with the crowd if you see this around."
 
-WILSON.DESCRIBE.WX78MODULE_GOURMAND = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
-WILSON.DESCRIBE.WX78MODULE_COOKER = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
-WILSON.DESCRIBE.WX78MODULE_DRYER = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
-WILSON.DESCRIBE.WX78MODULE_DRYER2 = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.WX78MODULE_GOURMAND = "So much science packed into one tiny gizmo."
+WILSON.DESCRIBE.WX78MODULE_COOKER = "So much science packed into one tiny gizmo."
+WILSON.DESCRIBE.WX78MODULE_DRYER = "So much science packed into one tiny gizmo."
+WILSON.DESCRIBE.WX78MODULE_DRYER2 = "So much science packed into one tiny gizmo."
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "An odd container.", -- NEEDS TRANSLATION
+	GENERIC = "An odd container.",
 }
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "An odd container.", -- NEEDS TRANSLATION
+	GENERIC = "An odd container.",
 }
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "An odd container.", -- NEEDS TRANSLATION
+	GENERIC = "An odd container.",
 }
 
-WILSON.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "It's reached its monetary capacity.",
 	UPGRADED = "A bottomless repository of wealth!",
 	GENERIC = "A convenient place to store my earned savings.",
 }
 
-WILSON.DESCRIBE.MARSHMALLOWS = "A delightful little confection." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.MARSHMALLOWS = "A delightful little confection."
 
-WILSON.DESCRIBE.KOKONUTCOOKIES = "You can't flee from the brand." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KOKONUTCOOKIES = "You can't flee from the brand."
 
-WILSON.DESCRIBE.BBQRIBS = "Now that's a proper rack of ribs!" -- NEEDS TRANSLATION
+WILSON.DESCRIBE.BBQRIBS = "Now that's a proper rack of ribs!"
 
-WILSON.DESCRIBE.BROWNIE = "A wonderfully dense chocolate confection." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.BROWNIE = "A wonderfully dense chocolate confection."
 
-WILSON.DESCRIBE.CHOCOLATE_CAKE = "Now that's a cake!" -- NEEDS TRANSLATION
+WILSON.DESCRIBE.CHOCOLATE_CAKE = "Now that's a cake!"
 
-WILSON.DESCRIBE.SWORDFISHBLUEDINNER = "A chilled bento! Perfect for a quick meal." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.SWORDFISHBLUEDINNER = "A chilled bento! Perfect for a quick meal."
 
-WILSON.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "A curious nocturnal bird.",
 	HELD = "I can feel it moving in my pocket.",
 }
 
-WILSON.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A formidable bird from the frozen north.",
 	HELD = "I can feel its beak poking my pocket.",
 }
 
-WILSON.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like the start of a construction." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like the start of a construction."
 
-WILSON.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Anyone down for a round of fishing?" -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Anyone down for a round of fishing?"
+
+WILSON.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "A remarkably fine sugar with an unusual crystalline structure."
+
+WILSON.DESCRIBE.OPALPRECIOUSCREAM = "A rather splendidly iridescent whipped cream."
+
+WILSON.DESCRIBE.CATFISHSTICK = "A grilled black catfish on a stick."
+
+WILSON.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A sweet treat with unpredictable consequences."

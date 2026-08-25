@@ -3,7 +3,7 @@ local kyno_foods_seasonal =
 	-- Winter's Feast Foods.
 	festive_berrysauce =
 	{
-		test = function(cooker, names, tags) return (tags.berries and tags.berries >= 2) and tags.sweetener == 2 
+		test = function(cooker, names, tags) return (tags.berries and tags.berries >= 2) and tags.sweetener == 2
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -22,10 +22,10 @@ local kyno_foods_seasonal =
 		tags = {"honeyed", "xmas"},
 		card_def = {ingredients = {{"berries", 2}, {"honey", 2}}},
 	},
-	
+
 	festive_bibingka =
 	{
-		test = function(cooker, names, tags) return (tags.succulent and tags.succulent >= 2) and tags.foliage and tags.veggie 
+		test = function(cooker, names, tags) return (tags.succulent and tags.succulent >= 2) and tags.foliage and tags.veggie
 		and not tags.meat and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) and not tags.fish end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -43,10 +43,10 @@ local kyno_foods_seasonal =
 		tags = {"xmas"},
 		card_def = {ingredients = {{"succulent_picked", 2}, {"foliage", 1}, {"carrot", 1}}},
 	},
-	
+
 	festive_cabbagerolls =
 	{
-		test = function(cooker, names, tags) return (names.kyno_waterycress and names.kyno_waterycress >= 2) and tags.syrup and not tags.flour 
+		test = function(cooker, names, tags) return (names.kyno_waterycress and names.kyno_waterycress >= 2) and tags.syrup and not tags.flour
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -64,7 +64,7 @@ local kyno_foods_seasonal =
 		tags = {"xmas"},
 		card_def = {ingredients = {{"kyno_waterycress", 2}, {"kyno_syrup", 2}}},
 	},
-	
+
 	festive_fishdish =
 	{
 		test = function(cooker, names, tags) return tags.fish and tags.succulent and not tags.sweetener and not tags.wobster
@@ -85,16 +85,16 @@ local kyno_foods_seasonal =
 		tags = {"xmas", "marinefood"},
 		card_def = {ingredients = {{"pondfish", 2}, {"succulent_picked", 2}}},
 	},
-	
+
 	festive_goodgravy =
 	{
-		test = function(cooker, names, tags) return tags.syrup and tags.flour and tags.meat 
+		test = function(cooker, names, tags) return tags.syrup and tags.flour and tags.meat
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_SLOW,
 		temperature = TUNING.HOT_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 5,
 		hunger = 32.5,
 		sanity = 15,
@@ -109,10 +109,10 @@ local kyno_foods_seasonal =
 		tags = {"honeyed", "xmas"},
 		card_def = {ingredients = {{"kyno_syrup", 2}, {"kyno_flour", 1}, {"meat", 1}}},
 	},
-	
+
 	festive_latkes =
 	{
-		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 2) and tags.dairy 
+		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 2) and tags.dairy
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -130,10 +130,10 @@ local kyno_foods_seasonal =
 		tags = {"xmas"},
 		card_def = {ingredients = {{"potato", 3}, {"goatmilk", 1}}},
 	},
-	
+
 	festive_lutefisk =
 	{
-		test = function(cooker, names, tags) return (tags.fish and tags.fish >= 2) and (names.pepper or names.pepper_cooked) and tags.foliage 
+		test = function(cooker, names, tags) return (tags.fish and tags.fish >= 2) and (names.pepper or names.pepper_cooked) and tags.foliage
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
@@ -153,11 +153,11 @@ local kyno_foods_seasonal =
 		tags = {"xmas", "marinefood"},
 		card_def = {ingredients = {{"pondeel", 2}, {"pepper", 1}, {"foliage", 1}}},
 	},
-	
-	festive_mulledpunch = 
+
+	festive_mulledpunch =
 	{
 		test = function(cooker, names, tags) return tags.syrup and tags.sweetener and tags.frozen and not tags.forgetweed
-		and not tags.meat and not tags.berries and not tags.fruit and not tags.jellyfish and not names.cutlichen 
+		and not tags.meat and not tags.berries and not tags.fruit and not tags.jellyfish and not names.cutlichen
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
@@ -177,10 +177,10 @@ local kyno_foods_seasonal =
 		tags = {"honeyed", "xmas"},
 		card_def = {ingredients = {{"kyno_syrup", 1}, {"honey", 2}, {"ice", 1}}},
 	},
-	
-	festive_panettone = 
+
+	festive_panettone =
 	{
-		test = function(cooker, names, tags) return (tags.flour and tags.flour >= 2) and (tags.fruit and tags.fruit >= 2) 
+		test = function(cooker, names, tags) return (tags.flour and tags.flour >= 2) and (tags.fruit and tags.fruit >= 2)
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -198,10 +198,10 @@ local kyno_foods_seasonal =
 		tags = {"xmas"},
 		card_def = {ingredients = {{"kyno_flour", 2}, {"pomegranate", 2}}},
 	},
-	
+
 	festive_pavlova =
 	{
-		test = function(cooker, names, tags) return tags.flour and (tags.fruit and tags.fruit >= 2) and tags.sweetener 
+		test = function(cooker, names, tags) return tags.flour and (tags.fruit and tags.fruit >= 2) and tags.sweetener
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -219,7 +219,7 @@ local kyno_foods_seasonal =
 		tags = {"honeyed", "xmas"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"honey", 1}, {"cave_banana", 2}}},
 	},
-	
+
 	festive_pickledherring =
 	{
 		test = function(cooker, names, tags) return tags.fish and (tags.spotspice and tags.spotspice >= 2)
@@ -240,10 +240,10 @@ local kyno_foods_seasonal =
 		tags = {"xmas", "marinefood"},
 		card_def = {ingredients = {{"pondfish", 1}, {"foliage", 1}, {"kyno_spotspice", 2}}},
 	},
-	
-	festive_polishcookies = 
-	{ 
-		test = function(cooker, names, tags) return tags.flour and tags.dairy and (tags.sweetener and tags.sweetener >= 2) 
+
+	festive_polishcookies =
+	{
+		test = function(cooker, names, tags) return tags.flour and tags.dairy and (tags.sweetener and tags.sweetener >= 2)
 		and not tags.chocolate and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
@@ -262,7 +262,7 @@ local kyno_foods_seasonal =
 		tags = {"honeyed", "xmas"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"goatmilk", 1}, {"honey", 2}}},
 	},
-	
+
 	festive_pumpkinpie =
 	{
 		test = function(cooker, names, tags) return ((names.pumpkin or 0) + (names.pumpkin_cooked or 0) >= 2)
@@ -283,10 +283,10 @@ local kyno_foods_seasonal =
 		tags = {"honeyed", "xmas"},
 		card_def = {ingredients = {{"pumpkin", 2}, {"kyno_flour", 1}, {"honey", 1}}},
 	},
-	
+
 	festive_roastedturkey =
 	{
-		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) 
+		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked)
 		and tags.spotspice and (tags.succulent and tags.succulent >= 2) and not tags.fruit
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
@@ -305,7 +305,7 @@ local kyno_foods_seasonal =
 		tags = {"xmas"},
 		card_def = {ingredients = {{"drumstick", 1}, {"succulent_picked", 2}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	festive_stuffing =
 	{
 		test = function(cooker, names, tags) return tags.flour and (names.pumpkin or names.pumpkin_cooked)
@@ -327,7 +327,7 @@ local kyno_foods_seasonal =
 		tags = {"xmas"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"pumpkin", 1}, {"kyno_radish", 1}, {"kyno_pineapple_halved", 1}}},
 	},
-	
+
 	festive_sweetpotato =
 	{
 		test = function(cooker, names, tags) return tags.flour and ((names.kyno_sweetpotato or 0) + (names.kyno_sweetpotato_cooked or 0) >= 2)
@@ -348,10 +348,10 @@ local kyno_foods_seasonal =
 		tags = {"xmas"},
 		card_def = {ingredients = {{"kyno_flour", 2}, {"kyno_sweetpotato", 2}}},
 	},
-	
+
 	festive_tamales =
 	{
-		test = function(cooker, names, tags) return tags.flour and ((names.corn or 0) + (names.corn_cooked or 0) >= 2) and tags.dairy 
+		test = function(cooker, names, tags) return tags.flour and ((names.corn or 0) + (names.corn_cooked or 0) >= 2) and tags.dairy
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -369,10 +369,10 @@ local kyno_foods_seasonal =
 		tags = {"xmas"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"goatmilk", 1}, {"corn", 2}}},
 	},
-	
+
 	festive_tourtiere =
 	{
-		test = function(cooker, names, tags) return tags.meat and tags.flour and (names.kyno_bacon or names.kyno_bacon_cooked) 
+		test = function(cooker, names, tags) return tags.meat and tags.flour and (names.kyno_bacon or names.kyno_bacon_cooked)
 		and (names.potato or names.potato_cooked) and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.WINTERS_FEAST)) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -390,11 +390,11 @@ local kyno_foods_seasonal =
 		tags = {"xmas"},
 		card_def = {ingredients = {{"meat", 1}, {"kyno_flour", 1}, {"kyno_bacon", 1}, {"potato", 1}}},
 	},
-	
+
 	-- Hallowed Nights Foods.
 	spooky_brain_noodles =
 	{
-		test = function(cooker, names, tags) return tags.flour and tags.spotspice and tags.beanbug and tags.meat 
+		test = function(cooker, names, tags) return tags.flour and tags.spotspice and tags.beanbug and tags.meat
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -410,11 +410,11 @@ local kyno_foods_seasonal =
 		tags = {"halloween"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_spotspice", 1}, {"kyno_beanbugs", 1}, {"meat", 1}}},
 	},
-	
+
 	spooky_burgerzilla =
 	{
 		test = function(cooker, names, tags) return tags.bread and (names.monstermeat or names.monstermeat_cooked) and
-		(names.onion or names.onion_cooked) and (names.kyno_cucumber or names.kyno_cucumber_cooked) and not tags.foliage and not tags.bacon 
+		(names.onion or names.onion_cooked) and (names.kyno_cucumber or names.kyno_cucumber_cooked) and not tags.foliage and not tags.bacon
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
@@ -438,10 +438,10 @@ local kyno_foods_seasonal =
 			end
 		end,
 	},
-	
+
 	spooky_deadbread =
 	{
-		test = function(cooker, names, tags) return names.boneshard and names.kyno_sugar and tags.flour and tags.butter 
+		test = function(cooker, names, tags) return names.boneshard and names.kyno_sugar and tags.flour and tags.butter
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -457,11 +457,11 @@ local kyno_foods_seasonal =
 		tags = {"halloween"},
 		card_def = {ingredients = {{"boneshard", 1}, {"kyno_sugar", 1}, {"kyno_flour", 1}, {"butter", 1}}},
 	},
-	
+
 	spooky_jellybeans =
 	{
-		test = function(cooker, names, tags) return names.royal_jelly and tags.sugar and 
-		(names.nightmarefuel and names.nightmarefuel >= 2) and not tags.monster 
+		test = function(cooker, names, tags) return names.royal_jelly and tags.sugar and
+		(names.nightmarefuel and names.nightmarefuel >= 2) and not tags.monster
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
@@ -479,20 +479,20 @@ local kyno_foods_seasonal =
 		tags = {"halloween", "honeyed"},
 		card_def = {ingredients = {{"royal_jelly", 1}, {"kyno_sugar", 1}, {"nightmarefuel", 2}}},
 		prefabs = { "kyno_insanitybuff" },
-        oneatenfn = function(inst, eater)
-            eater:AddDebuff("kyno_insanitybuff", "kyno_insanitybuff")
-        end,
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_insanitybuff", "kyno_insanitybuff")
+		end,
 	},
-	
+
 	spooky_popsicle =
 	{
-		test = function(cooker, names, tags) return names.livinglog and tags.dairy and tags.frozen and tags.sugar 
+		test = function(cooker, names, tags) return names.livinglog and tags.dairy and tags.frozen and tags.sugar
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FAST,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 40,
 		hunger = 12.5,
 		sanity = -20,
@@ -511,11 +511,11 @@ local kyno_foods_seasonal =
 			end
 		end,
 	},
-	
+
 	spooky_pumpkincream =
 	{
 		test = function(cooker, names, tags) return names.pumpkin and (names.kyno_pineapple_halved or names.kyno_pineapple_cooked)
-		and (names.pomegranate or names.pomegranate_cooked) and tags.dairy and not names.pumpkin_cooked 
+		and (names.pomegranate or names.pomegranate_cooked) and tags.dairy and not names.pumpkin_cooked
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -531,10 +531,10 @@ local kyno_foods_seasonal =
 		tags = {"halloween"},
 		card_def = {ingredients = {{"pumpkin", 1}, {"kyno_pineapple_halved", 1}, {"pomegranate", 1}, {"goatmilk", 1}}},
 	},
-	
+
 	spooky_skullcandy =
 	{
-		test = function(cooker, names, tags) return names.boneshard and (names.kyno_sugar and names.kyno_sugar >= 2) and names.nightmarefuel 
+		test = function(cooker, names, tags) return names.boneshard and (names.kyno_sugar and names.kyno_sugar >= 2) and names.nightmarefuel
 		and (TUNING.HOF_SEASONALFOOD or IsSpecialEventActive(SPECIAL_EVENTS.HALLOWED_NIGHTS)) end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
@@ -554,7 +554,7 @@ local kyno_foods_seasonal =
 		tags = {"halloween", "foodreviver", "noreviverhealthpenalty", "nospice"},
 		card_def = {ingredients = {{"boneshard", 1}, {"kyno_sugar", 2}, {"nightmarefuel", 1}}},
 	},
-	
+
 	spooky_tacodile =
 	{
 		test = function(cooker, names, tags) return tags.flour and (names.pepper or names.pepper_cooked) and

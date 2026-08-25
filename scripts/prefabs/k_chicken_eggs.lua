@@ -523,7 +523,7 @@ local function chicken_egg_giantfn()
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
 	
 	inst:AddComponent("luckitem")
-	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_TINY)
+	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_SUPERTINY)
 	
 	inst:AddComponent("complexprojectile")
 	inst.components.complexprojectile:SetHorizontalSpeed(15)

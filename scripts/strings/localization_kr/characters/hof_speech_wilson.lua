@@ -104,8 +104,14 @@ WILSON.ANNOUNCE_KYNO_PANICBUFF_END = "Things seem less intimidating now."
 WILSON.ANNOUNCE_KYNO_CUREBUFF_START = "Everything seems to last a little longer!"
 WILSON.ANNOUNCE_KYNO_CUREBUFF_END = "Things are spoiling normally again."
 
-WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I feel firmly grounded." -- NEEDS TRANSLATION
-WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And there goes my stability." -- NEEDS TRANSLATION
+WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I feel firmly grounded."
+WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And there goes my stability."
+
+WILSON.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "My attacks feel more powerful!"
+WILSON.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "My attacks have lost their power."
+
+WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Something feels terribly unlucky..."
+WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_END = "I think my luck is back to normal."
 
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It's not this one."
 
@@ -172,7 +178,7 @@ WILSON.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Heat definitely improved them."
 
 WILSON.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Now it can grow somewhere better."
 
-WILSON.DESCRIBE.KYNO_COFFEEBUSH = 
+WILSON.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "This is a plant I could learn to love.",
 	PICKED = "I'll need to wait for the beans to grow back.",
@@ -181,7 +187,7 @@ WILSON.DESCRIBE.KYNO_COFFEEBUSH =
 
 WILSON.DESCRIBE.DUG_KYNO_SPOTBUSH = "I should plant it somewhere suitable."
 
-WILSON.DESCRIBE.KYNO_SPOTBUSH = 
+WILSON.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "It reminds me of those tentacle monsters.",
 	PICKED = "It needs time to recover.",
@@ -408,7 +414,7 @@ WILSON.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Ruined."
 
 WILSON.DESCRIBE.KYNO_SEEDS_KIT = "A packet full of seeds."
 
-WILSON.DESCRIBE.KYNO_LIMPETROCK = 
+WILSON.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "I could fill a pail with all those snails.",
 	PICKED = "Will need to wait until the snails crawl back.",
@@ -418,7 +424,7 @@ WILSON.DESCRIBE.KYNO_LIMPETROCK =
 WILSON.DESCRIBE.KYNO_LIMPETS = "Maybe starving wouldn't be so bad."
 WILSON.DESCRIBE.KYNO_LIMPETS_COOKED = "Escargotcha!"
 
-WILSON.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WILSON.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "The science is blooming well this season.",
 	PICKED = "Needs some time to regrow its flower.",
@@ -429,7 +435,7 @@ WILSON.DESCRIBE.KYNO_LOTUS_ROOT = "Some wet plant I can plant to make more wet p
 WILSON.DESCRIBE.KYNO_LOTUS_FLOWER = "A lovely science flower."
 WILSON.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "A delicacy."
 
-WILSON.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WILSON.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "Is that what passes for food around here?",
 	PICKED = "They'll grow back. I hope.",
@@ -441,7 +447,7 @@ WILSON.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Crispy."
 WILSON.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Salty!"
 WILSON.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Some wet goop I can plant to make more wet goop."
 
-WILSON.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WILSON.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "So purple.",
 	PICKED = "These waters will help it grow back faster.",
@@ -452,7 +458,7 @@ WILSON.DESCRIBE.KYNO_TAROROOT_ROOT = "Some wet bulb I can plant to make more wet
 WILSON.DESCRIBE.KYNO_TAROROOT = "Looks like a purple pepper."
 WILSON.DESCRIBE.KYNO_TAROROOT_COOKED = "It's even less purple."
 
-WILSON.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WILSON.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "That's new.",
 	PICKED = "I hope this grows back soon enough.",
@@ -479,7 +485,7 @@ WILSON.DESCRIBE.CATFOOD = "A snack for my cat!"
 
 WILSON.DESCRIBE.KATFOOD = "A snack for my cat!"
 
-WILSON.DESCRIBE.KYNO_BANANATREE = 
+WILSON.DESCRIBE.KYNO_BANANATREE =
 {
 	GENERIC = "It's a rare banana tree.",
 	PICKED = "Needs some time to regrow its product.",
@@ -487,7 +493,7 @@ WILSON.DESCRIBE.KYNO_BANANATREE =
 	BURNING = "Too bad we lost another rare tree.",
 	BURNT = "Nothing but ashes left.",
 }
-	
+
 WILSON.DESCRIBE.KYNO_BANANA = "It's mushy."
 WILSON.DESCRIBE.KYNO_BANANA_COOKED = "Yum!"
 
@@ -555,7 +561,7 @@ WILSON.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "We can use it to gather sap from the
 
 WILSON.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "A crabby trap."
 
-WILSON.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WILSON.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "I guess you're in charge around here?",
 	SLEEPING = "Can't really wake up him right now.",
@@ -601,7 +607,7 @@ WILSON.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "No imitations here."
 
 WILSON.DESCRIBE.KYNO_SLAUGHTERTOOL = "Laboratory tools for surgical butchery."
 
-WILSON.DESCRIBE.KYNO_CHICKEN2 = 
+WILSON.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "It's a little chicken.",
 	COOP = "My very own chicken!",
@@ -617,7 +623,7 @@ WILSON.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "I think it will hatch very soon!",
 }
 
-WILSON.DESCRIBE.KYNO_CHICKENHOUSE = 
+WILSON.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "A proper home for chickens.",
 	FULL = "The eggs are ready for harvest!",
@@ -645,7 +651,7 @@ WILSON.DESCRIBE.KYNO_COOKWARE_OVEN = "It needs ingredients to make the science w
 WILSON.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "It needs ingredients to make the science work."
 WILSON.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "It needs ingredients to make the science work."
 
-WILSON.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WILSON.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "You never know what you'll find under a rock.",
 	FLIPPED = "There was some stuff underneath it.",
@@ -692,7 +698,7 @@ WILSON.DESCRIBE.PEPPERROLLS = "What a mouth full!"
 
 WILSON.DESCRIBE.KYNO_SAPHEALER = "I'm not drinking that."
 
-WILSON.DESCRIBE.KYNO_OCEAN_WRECK = 
+WILSON.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Poor little boat.",
 	PICKED = "The snails will eventually grow back by the crashed vessel.",
@@ -714,7 +720,7 @@ WILSON.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Just jerky enough."
 
 WILSON.DESCRIBE.KYNO_BREWBOOK = "I've always been hungry for knowledge."
 
-WILSON.DESCRIBE.KYNO_WOODENKEG = 
+WILSON.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "I wonder what I can make using this.",
 	BREWING_LONG = "This will take some days to brew.",
@@ -723,7 +729,7 @@ WILSON.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "Looks like I'm not going to see that brew anymore.",
 }
 
-WILSON.DESCRIBE.KYNO_PRESERVESJAR = 
+WILSON.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "For the making of jams.",
 	BREWING_LONG = "Cured goodies sure takes a long time to make.",
@@ -732,7 +738,7 @@ WILSON.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "That's a sad end.",
 }
 
-WILSON.DESCRIBE.KYNO_ANTCHEST = 
+WILSON.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Take its sweet time making honey.",
 	HONEY = "Looks like it's full of honeyed goods.",
@@ -748,7 +754,7 @@ WILSON.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Take that, tiny tree!"
 WILSON.DESCRIBE.KYNO_PIKO = "He's a bit of a nut job."
 WILSON.DESCRIBE.KYNO_PIKO_ORANGE = "For some reason I'm craving tea."
 
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "What a lovely tree.",
 	CHOPPED = "All the tea leaves are mine now!",
@@ -764,26 +770,26 @@ WILSON.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WILSON.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "There must be a way to open it."
 
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "Who would live here?",
 	BURNT = "Crispy.",
 }
 
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "Doesn't smell very good.",
 	CRAFTED = "It's actually kind of cute.",
 	BURNT = "Ugh, the smell!",
 }
 
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "These are some quite rare items in your display.",
 	OCCUPIED = "Seems like the shop is closed for now.",
 }
 
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "What are you selling today?",
 	EMPTY = "Its all empty. I'll come back later, Sammy.",
@@ -940,7 +946,7 @@ WILSON.DESCRIBE.RICESAKE = "Another cup for me! *hic*"
 
 WILSON.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "I uprooted the whole thing."
 
-WILSON.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WILSON.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Spiky!",
 	PICKED = "It needs time to grow another pineapple.",
@@ -958,7 +964,7 @@ WILSON.DESCRIBE.PINACOLADA = "Icy."
 
 WILSON.DESCRIBE.CHIMAS = "A refreshing herb drink."
 
-WILSON.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WILSON.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Water you think it's for?",
 	ON = "Keeps my farm plants watered and healthy.",
@@ -1077,7 +1083,7 @@ WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "He must be sleeping right now.",
 }
 
-WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Wild truffles! Someone must have sniffed this out.",
 	PICKED = "I hope I can get more of them soon!",
@@ -1087,7 +1093,7 @@ WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WILSON.DESCRIBE.KYNO_TRUFFLES = "A rare and fragrant delicacy."
 WILSON.DESCRIBE.KYNO_TRUFFLES_COOKED = "The aroma is irresistible!"
 
-WILSON.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WILSON.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "A perfect place to show my culinary triumphs!",
 	FULL = "I'm very proud of myself for cooking such a magnificent dish.",
@@ -1112,7 +1118,7 @@ WILSON.DESCRIBE.TRUFFLEOIL = "Refined and aromatic! I wonder what I can cook wit
 WILSON.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Stuff for fishing!"
 WILSON.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Looks like the start of a fine fish hatchery."
 
-WILSON.DESCRIBE.KYNO_FISHFARMPLOT = 
+WILSON.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "A place for fish to multiply.",
 	FUEL_HIGH = "They are well fed!",
@@ -1175,7 +1181,7 @@ WILSON.DESCRIBE.KYNO_BRAINROCK_LARVAE = "That's a baby brain!"
 WILSON.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "I want nubbin to do with that."
 WILSON.DESCRIBE.KYNO_BRAINROCK_CORAL = "Food for thought."
 
-WILSON.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WILSON.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "I wonder what it's plotting...",
 	PICKED = "It needs to rest its brain.",
@@ -1183,15 +1189,15 @@ WILSON.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WILSON.DESCRIBE.BRAINMETTERSOUP = "I'm feeling clever today."
 
-WILSON.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WILSON.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "I'm a sucker for this guy.",
 	SLEEPING = "He's sleeping now. Won't be able to do any trades.",
 }
-	
+
 WILSON.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "I hope that thing is waterproof."
 
-WILSON.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WILSON.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "This seems something I should carry around.",
 	WAITING = "Hmm, he must be around here somewhere...",
@@ -1207,7 +1213,7 @@ WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "The spirit of a good party!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "A slice of celebration!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "A festive touch for celebrations!"
 
-WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "It pops corn magically!",
 	FUEL_HIGH = "Fuel supply running smoothly.",
@@ -1253,7 +1259,7 @@ WILSON.DESCRIBE.SOULJUICE = "A curious blend of soul energy and pomegranate."
 
 WILSON.DESCRIBE.KYNO_DAILYRECIPE = "No special dishes for today."
 WILSON.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
-{ 
+{
 	GENERIC = "Today's special is %s.",
 	NONE = "No special dishes for today.",
 	BURNING = "It's on fire!",
@@ -1325,63 +1331,71 @@ WILSON.DESCRIBE.KYNO_SEEDSBAG =
 
 WILSON.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Can't get saucy with the crowd if you see this around."
 
-WILSON.DESCRIBE.WX78MODULE_GOURMAND = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
-WILSON.DESCRIBE.WX78MODULE_COOKER = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
-WILSON.DESCRIBE.WX78MODULE_DRYER = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
-WILSON.DESCRIBE.WX78MODULE_DRYER2 = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.WX78MODULE_GOURMAND = "So much science packed into one tiny gizmo."
+WILSON.DESCRIBE.WX78MODULE_COOKER = "So much science packed into one tiny gizmo."
+WILSON.DESCRIBE.WX78MODULE_DRYER = "So much science packed into one tiny gizmo."
+WILSON.DESCRIBE.WX78MODULE_DRYER2 = "So much science packed into one tiny gizmo."
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "An odd container.", -- NEEDS TRANSLATION
+	GENERIC = "An odd container.",
 }
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "An odd container.", -- NEEDS TRANSLATION
+	GENERIC = "An odd container.",
 }
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "An odd container.", -- NEEDS TRANSLATION
+	GENERIC = "An odd container.",
 }
 
-WILSON.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "It's reached its monetary capacity.",
 	UPGRADED = "A bottomless repository of wealth!",
 	GENERIC = "A convenient place to store my earned savings.",
 }
 
-WILSON.DESCRIBE.MARSHMALLOWS = "A delightful little confection." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.MARSHMALLOWS = "A delightful little confection."
 
-WILSON.DESCRIBE.KOKONUTCOOKIES = "You can't flee from the brand." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KOKONUTCOOKIES = "You can't flee from the brand."
 
-WILSON.DESCRIBE.BBQRIBS = "Now that's a proper rack of ribs!" -- NEEDS TRANSLATION
+WILSON.DESCRIBE.BBQRIBS = "Now that's a proper rack of ribs!"
 
-WILSON.DESCRIBE.BROWNIE = "A wonderfully dense chocolate confection." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.BROWNIE = "A wonderfully dense chocolate confection."
 
-WILSON.DESCRIBE.CHOCOLATE_CAKE = "Now that's a cake!" -- NEEDS TRANSLATION
+WILSON.DESCRIBE.CHOCOLATE_CAKE = "Now that's a cake!"
 
-WILSON.DESCRIBE.SWORDFISHBLUEDINNER = "A chilled bento! Perfect for a quick meal." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.SWORDFISHBLUEDINNER = "A chilled bento! Perfect for a quick meal."
 
-WILSON.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "A curious nocturnal bird.",
 	HELD = "I can feel it moving in my pocket.",
 }
 
-WILSON.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A formidable bird from the frozen north.",
 	HELD = "I can feel its beak poking my pocket.",
 }
 
-WILSON.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like the start of a construction." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like the start of a construction."
 
-WILSON.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Anyone down for a round of fishing?" -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Anyone down for a round of fishing?"
+
+WILSON.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "A remarkably fine sugar with an unusual crystalline structure."
+
+WILSON.DESCRIBE.OPALPRECIOUSCREAM = "A rather splendidly iridescent whipped cream."
+
+WILSON.DESCRIBE.CATFISHSTICK = "A grilled black catfish on a stick."
+
+WILSON.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A sweet treat with unpredictable consequences."

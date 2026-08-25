@@ -185,7 +185,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		bank           = "kyno_turfs_hof",
 		build          = "kyno_turfs_hof",
 		anim           = "pinkpark",
-		deps           = {"kyno_serenityisland_shop", "turf_deciduous"},
+		deps           = {"turfcraftingstation"},
 		specialinfo    = "TURF",
 	},
 
@@ -203,7 +203,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		bank           = "kyno_turfs_hof",
 		build          = "kyno_turfs_hof",
 		anim           = "stonecity",
-		deps           = {"kyno_serenityisland_shop", "turf_road"},
+		deps           = {"turfcraftingstation"},
 		specialinfo    = "TURF",
 	},
 
@@ -221,7 +221,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		bank           = "kyno_turfs_hof",
 		build          = "kyno_turfs_hof",
 		anim           = "fields",
-		deps           = {"pigking", "turf_grass"},
+		deps           = {"turfcraftingstation"},
 		specialinfo    = "TURF",
 	},
 
@@ -241,7 +241,7 @@ local HOF_SCRAPBOOK_ITEMS =
 		bank           = "kyno_turfs_hof",
 		build          = "kyno_turfs_hof",
 		anim           = "tidalmarsh",
-		deps           = {"pigking", "cutreeds", "ice"},
+		deps           = {"cutreeds", "ice"},
 		specialinfo    = "TURF",
 	},
 
@@ -9877,6 +9877,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -60,
 		deps           = preparedfood_deps,
 	},
+
 	--[[
 	pasty_meat         =
 	{
@@ -9923,6 +9924,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgy  = -90,
 		deps           = preparedfood_deps,
 	},
+	]]--
 
 	brigadeiro         =
 	{
@@ -9947,6 +9949,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		deps           = preparedfood_deps,
 	},
 
+	--[[
 	regularlasagna     =
 	{
 		name           = "regularlasagna",
@@ -9970,6 +9973,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		deps           = preparedfood_deps,
 	},
 	]]--
+
 	fltsandwich        =
 	{
 		name           = "fltsandwich",
@@ -10470,6 +10474,55 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsetbgx  = -10,
 		animoffsetbgy  = -80,
 		deps           = preparedfood_deps,
+	},
+
+	opalpreciouscream  =
+	{
+		name           = "opalpreciouscream",
+		type           = "food",
+		tex            = "opalpreciouscream.tex",
+		prefab         = "opalpreciouscream",
+		healthvalue    = 15,
+		hungervalue    = 32.5,
+		sanityvalue    = 33,
+		perishable     = 9600,
+		foodtype       = "GOODIES",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "opalpreciouscream",
+		build          = "opalpreciouscream",
+		anim           = "idle",
+		animoffsetx    = 3,
+		animoffsety    = 30,
+		animoffsetbgx  = -10,
+		animoffsetbgy  = -80,
+		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_CRITDAMAGE",
+	},
+
+	catfishstick       =
+	{
+		name           = "catfishstick",
+		type           = "food",
+		tex            = "catfishstick.tex",
+		prefab         = "catfishstick",
+		healthvalue    = 25,
+		hungervalue    = 32.5,
+		sanityvalue    = 5,
+		perishable     = 3840,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "kyno_foodrecipes",
+		build          = "kyno_foodrecipes_cookpot1",
+		overridesymbol = {"swap_food", "kyno_foodrecipes_cookpot1", "catfishstick"},
+		anim           = "catfishstick",
+		animoffsetx    = 3,
+		animoffsety    = 10,
+		animoffsetbgx  = -10,
+		animoffsetbgy  = -80,
+		deps           = preparedfood_deps,
+		specialinfo    = "FOODEFFECTS_BADLUCK",
 	},
 }
 
@@ -11128,6 +11181,29 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_WARLY =
 		animoffsetbgy  = -75,
 		deps           = {"portablecookpot", "spoiled_food"},
 		specialinfo    = "FOODEFFECTS_CHILLEDATTACK",
+	},
+
+	opalpreciouslollipop =
+	{
+		name           = "opalpreciouslollipop",
+		type           = "food",
+		tex            = "opalpreciouslollipop.tex",
+		prefab         = "opalpreciouslollipop",
+		healthvalue    = 40,
+		hungervalue    = 32.5,
+		sanityvalue    = 15,
+		perishable     = 9600,
+		foodtype       = "GOODIES",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "opalpreciouslollipop",
+		build          = "opalpreciouslollipop",
+		anim           = "idle",
+		animoffsetx    = 3,
+		animoffsetbgx  = -10,
+		animoffsetbgy  = -10,
+		deps           = {"portablecookpot", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_RANDOM",
 	},
 }
 
@@ -16424,7 +16500,7 @@ local HOF_SCRAPBOOK_THINGS =
 		bank           = "quagmire_elderswampig",
 		build          = "quagmire_elderswampig",
 		anim           = "idle",
-		deps           = {"lobsterdinner", "gorge_caramel_cube", "turf_stonecity", "turf_pinkpark", "kyno_brewingrecipecard", "kyno_saltrack_installer",
+		deps           = {"lobsterdinner", "gorge_caramel_cube", "kyno_brewingrecipecard", "kyno_saltrack_installer",
 		"kyno_crabtrap_installer", "kyno_sapbucket_installer", "kyno_slaughtertool", "kyno_sugartree_petals", "dug_kyno_spotbush", "dug_kyno_wildwheat",
 		"kyno_cookware_kit_hanger", "kyno_cookware_kit_syrup", "kyno_cookware_kit_oven", "kyno_cookware_kit_small_grill", "kyno_cookware_kit_grill",
 		"kyno_seeds_kit_aloe", "kyno_seeds_kit_cucumber", "kyno_seeds_kit_fennel", "kyno_seeds_kit_parznip", "kyno_seeds_kit_radish", "kyno_seeds_kit_sweetpotato",

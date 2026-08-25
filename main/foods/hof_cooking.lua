@@ -212,6 +212,7 @@ AddIngredientValues({"kyno_fishmeat_dried"},         {meat       = 1,    fish   
 AddIngredientValues({"kyno_cavetuber"},              {veggie     = 1,    tuber      = 1,    monster   = 1},                 true)
 AddIngredientValues({"kyno_cavetuber_blooming"},     {veggie     = 1,    tuber      = 1},                                   true)
 AddIngredientValues({"kyno_icenettles"},             {iceweed    = 1,    decoration = 1},                            false, true)
+AddIngredientValues({"kyno_opalpreciouspowder"},     {precious   = 1,    sugar      = 2})
 
 local fishroes_meat =
 {

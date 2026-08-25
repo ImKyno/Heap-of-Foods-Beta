@@ -34,8 +34,8 @@ STRINGS.UI.CRAFTING.NEEDSDECIDUOUSSHOP_TWO = "Hãy tìm người thương nhân 
 
 STRINGS.UI.CRAFTING.NEEDSHOFBIRTHDAY = "Có trong Dịp Kỷ Niệm Vua Đầu Bếp!"
 
-STRINGS.UI.CRAFTING.NEEDSSHARKBOI = "Find a sea creature friendly enough to make this trade!" -- NEEDS TRANSLATION
-STRINGS.UI.CRAFTING.NEEDSFISHING = "Fish enough times to discover more about this!" -- NEEDS TRANSLATION
+STRINGS.UI.CRAFTING.NEEDSSHARKBOI = "Find a sea creature friendly enough to make this trade!"
+STRINGS.UI.CRAFTING.NEEDSFISHING = "Fish enough times to discover more about this!"
 
 STRINGS.UI.CRAFTING.RECIPEACTION.MEALGRINDER = "Nghiền"
 STRINGS.UI.CRAFTING.RECIPEACTION.SERENITYSHOP = "Trao Đổi"
@@ -126,11 +126,14 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_HEALINGBONUS = "Tăng hiệu quả hồi máu"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RAINY = "Khôi phục sự tỉnh táo khi bị ướt"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_MIDNIGHT = "Giết các sinh vật vào ban đêm"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK = "Làm các Batilisk gần đó hoảng sợ"
-STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX = "Stats are based on inclination" -- NEEDS TRANSLATION
-STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL = "Increases Soul yield" -- NEEDS TRANSLATION
-STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REVIVER = "Revives dead survivors" -- NEEDS TRANSLATION
-STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KNOCKBACK = "Decreases knockback" -- NEEDS TRANSLATION
-STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CHILLEDATTACK = "Grants chilled attacks" -- NEEDS TRANSLATION
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX = "Stats are based on inclination"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL = "Increases Soul yield"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REVIVER = "Revives dead survivors"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KNOCKBACK = "Decreases knockback"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CHILLEDATTACK = "Grants chilled attacks"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRITDAMAGE = "Grants critical attacks"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BADLUCK = "Decreases luck"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RANDOM = "Grants a random side effect"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Một loại rau xanh xanh, vua của đồng cỏ và rừng mưa. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Một trong nhiều món quà từ biển cả, rất được những kẻ biết thưởng thức trân trọng. -W"
@@ -141,7 +144,7 @@ STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_PARZNIP = "Một loại rau củ, h�
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_TURNIP = "Tròn trịa xoay xoay, tím tím mà ngon! -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_RICE = "Một loại ngũ cốc phổ biến dùng trong nhiều món ăn lành mạnh! -W"
 
-STRINGS.UI.PLANTREGISTRY.EFFECTS.WEED_ICENETTLE = "These nettles can cause quite the freezing sensation." -- NEEDS TRANSLATION
+STRINGS.UI.PLANTREGISTRY.EFFECTS.WEED_ICENETTLE = "These nettles can cause quite the freezing sensation."
 
 STRINGS_INGREDIENTS_PIKO = "Sóc Piko"
 STRINGS_INGREDIENTS_SPOTSPICE = "Gia Vị Đốm"
@@ -179,7 +182,7 @@ STRINGS_INGREDIENTS_CHICKEN = "Gà"
 STRINGS_INGREDIENTS_CHICKENEGG = "Trứng Gà"
 STRINGS_INGREDIENTS_POTATO = "Khoai Tây"
 STRINGS_INGREDIENTS_TUBER = "Củ hang động"
-STRINGS_INGREDIENTS_ICEWEED = "Chilled Nettle Fronds" -- NEEDS TRANSLATION
+STRINGS_INGREDIENTS_ICEWEED = "Chilled Nettle Fronds"
 
 STRINGS.KYNO_HARVEST_POTSMALL = "Lấy Nồi Nấu"
 STRINGS.KYNO_HARVEST_POTLARGE = "Lấy Nồi Nấu Lớn"
@@ -208,7 +211,7 @@ STRINGS.KYNO_REFILL = "Đổ Đầy"
 STRINGS.ACTIONS.OPEN_CRAFTING.MEALING = "Nghiền tại"
 STRINGS.ACTIONS.ACTIVATE.DESTROY = "Phá Hủy"
 STRINGS.ACTIONS.ACTIVATE.DAILYRECIPE = "Xem"
-STRINGS.ACTIONS.ACTIVATE.READBOOK = "Read" -- NEEDS TRANSLATION
+STRINGS.ACTIONS.ACTIVATE.READBOOK = "Read"
 STRINGS.ACTIONS.SALT = "Thêm Muối"
 STRINGS.ACTIONS.STORESOUL = "Cất Linh Hồn"
 STRINGS.ACTIONS.FLAY = "Lột Da"
@@ -225,8 +228,8 @@ STRINGS.ACTIONS.BREEDFISH = "Nhân Giống"
 STRINGS.ACTIONS.MAKEPOPCORN = "Làm Bắp Rang"
 STRINGS.ACTIONS.FISHREGISTRY_RESEARCH = "Nghiên Cứu"
 STRINGS.ACTIONS.BOOSTPLANT = "Tăng"
-STRINGS.ACTIONS.WRITEITEM = "Write {item}" -- NEEDS TRANSLATION
-STRINGS.ACTIONS.DUMPWATER = "Dump Water" -- NEEDS TRANSLATION
+STRINGS.ACTIONS.WRITEITEM = "Write {item}"
+STRINGS.ACTIONS.DUMPWATER = "Dump Water"
 STRINGS.ACTIONS.SLAUGHTER2 =
 {
 	DISEMBOWEL = "Mổ Bụng Nhẹ Nhàng",
@@ -417,41 +420,41 @@ STRINGS.KYNO_SUGARFLYWINGS_NAMES =
 
 STRINGS.KYNO_CHICKEN_NAMES =
 {
-	"Drumstick", 
-	"Daisy", 
-	"Cah", 
-	"Noodles", 
+	"Drumstick",
+	"Daisy",
+	"Cah",
+	"Noodles",
 	"Potato",
-	"Curry", 
-	"Dinner", 
-	"Garibalda", 
-	"Marta", 
+	"Curry",
+	"Dinner",
+	"Garibalda",
+	"Marta",
 	"Marina",
-	"Carrot", 
-	"Emilha", 
-	"Pintadinha", 
-	"Galinha", 
+	"Carrot",
+	"Emilha",
+	"Pintadinha",
+	"Galinha",
 	"Pipoca",
-	"Ruiva", 
-	"Canjica", 
-	"Magricela", 
-	"Isolda", 
+	"Ruiva",
+	"Canjica",
+	"Magricela",
+	"Isolda",
 	"Pedrita",
-	"Isadora", 
-	"Ruivinha", 
-	"Karen", 
-	"Penosa", 
+	"Isadora",
+	"Ruivinha",
+	"Karen",
+	"Penosa",
 	"Bicuda",
-	"Mel", 
-	"Sol", 
-	"Lua", 
-	"Outono", 
-	"Milharina", 
+	"Mel",
+	"Sol",
+	"Lua",
+	"Outono",
+	"Milharina",
 	"Lunch",
-	"Clementina", 
-	"Rejane", 
-	"Morena", 
-	"Flor", 
+	"Clementina",
+	"Rejane",
+	"Morena",
+	"Flor",
 	"Girasol",
 }
 
@@ -575,12 +578,20 @@ STRINGS.KYNO_GOLDENAPPLE_NAMES =
 	"Táo Leonidas",
 }
 
-STRINGS.MEADOWISLANDTRADER = "Sammy\n%s"
-STRINGS.MEADOWISLANDTRADER_TITLES = 
+STRINGS.KYNO_OPALPRECIOUSLOLLIPOP_NAMES =
 {
-	"Thương Nhân", 
-	"Người Cá Đầm Lầy Sáng Suốt", 
-	"Thương Nhân Lão Luyện", 
+	"Roulettepop",
+	"Gambler's Lollipop",
+	"Shimmer Lollipop",
+	"Gamblinpop",
+}
+
+STRINGS.MEADOWISLANDTRADER = "Sammy\n%s"
+STRINGS.MEADOWISLANDTRADER_TITLES =
+{
+	"Thương Nhân",
+	"Người Cá Đầm Lầy Sáng Suốt",
+	"Thương Nhân Lão Luyện",
 	"Thương Nhân Ngoại Lai",
 	"Kẻ Bán Hàng Đầm Lầy",
 }
@@ -592,15 +603,15 @@ STRINGS.MEADOWISLANDTRADER_OUTOFSTOCK =
 	"Này anh bạn, ta cần chút thời gian để nhập hàng.",
 }
 
-STRINGS.MEADOWISLANDTRADER_OUTOFSTOCKTRADES = 
+STRINGS.MEADOWISLANDTRADER_OUTOFSTOCKTRADES =
 {
 	"Ngươi vét sạch hàng của ta rồi! Cần thời gian nhập thêm.",
 	"Ta có nhiêu đó thôi! Quay lại sau nhé",
 	"Này cậu, cậu vừa dọn sạch kho hàng tốt cũ kỹ của ta rồi. Giờ ta cần chút thời gian.",
 	"Quay lại sau để đổi chác thêm.",
 }
-    
-STRINGS.MEADOWISLANDTRADER_STARTTRADING = 
+
+STRINGS.MEADOWISLANDTRADER_STARTTRADING =
 {
 	"Sao ngươi còn chưa mua gì?",
 	"Này, anh bạn, cần gì nào?",
@@ -612,7 +623,7 @@ STRINGS.MEADOWISLANDTRADER_STARTTRADING =
 	"Ta hơi nhớ thị trấn và mọi người ở đó...",
 }
 
-STRINGS.MEADOWISLANDTRADER_ENDTRADING_NOTRADES = 
+STRINGS.MEADOWISLANDTRADER_ENDTRADING_NOTRADES =
 {
 	"Ta đang làm gì nhỉ? ...Ồ HẠT GIỐNG ĐÂY!",
 	"Có lẽ lần sau vậy.",
@@ -623,7 +634,7 @@ STRINGS.MEADOWISLANDTRADER_ENDTRADING_NOTRADES =
 	"Ngươi nên thử gặp bạn ta Pipton xem!",
 }
 
-STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE = 
+STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE =
 {
 	"Nhớ quay lại đấy, nghe chưa?",
 	"Cảm ơn, người lạ.",
@@ -634,7 +645,7 @@ STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE =
 	"Nhớ quay lại nhé! Ta hơi cô đơn! Hì, hơi cô đơn thôi.",
 }
 
-STRINGS.MEADOWISLANDTRADER_DOTRADE = 
+STRINGS.MEADOWISLANDTRADER_DOTRADE =
 {
 	"À, lựa chọn tuyệt đấy! Còn gì làm ngươi thích nữa không?",
 	"Có ngay đây! Ngươi còn cần gì nữa?",
@@ -676,7 +687,7 @@ STRINGS.MEADOWISLANDTRADER_GOHOME =
 	"Ngươi biết phải tìm ta ở đâu rồi đấy.",
 }
 
-STRINGS.MEADOWISLANDTRADER_STARTDANCING = 
+STRINGS.MEADOWISLANDTRADER_STARTDANCING =
 {
 	"Tuyệt! Tiệc tùng thôi!",
 	"Hoo-hoo! Nhảy nào, bạn hiền!",
@@ -686,11 +697,11 @@ STRINGS.MEADOWISLANDTRADER_STARTDANCING =
 }
 
 STRINGS.DECIDUOUSFORESTTRADER = "Partitio\nThe %s"
-STRINGS.DECIDUOUSFORESTTRADER_TITLES = 
+STRINGS.DECIDUOUSFORESTTRADER_TITLES =
 {
-	"Thương Gia Kiêu Hãnh", 
-	"Heo Thủ Công Bậc Thầy", 
-	"Đại Thương Gia", 
+	"Thương Gia Kiêu Hãnh",
+	"Heo Thủ Công Bậc Thầy",
+	"Đại Thương Gia",
 	"Heo Bán Hàng",
 	"Người Bán Hàng Rừng Rụng Lá",
 }
@@ -702,15 +713,15 @@ STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCK =
 	"TÔI CẦN THỜI GIAN ĐỂ NHẬP HÀNG",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCKTRADES = 
+STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCKTRADES =
 {
 	"CẬU MUA HẾT SẠCH RỒI! CẦN THỜI GIAN ĐỂ LẤY THÊM ĐỒ!",
 	"HIỆN GIỜ CHỈ CÓ THẾ THÔI, QUAY LẠI SAU NHÉ!",
 	"QUAY LẠI SAU ĐỂ XEM THÊM HÀNG, ĐƯỢC CHỨ?",
 	"GIỜ TÔI KHÔNG CÓ ĐỒ TỐT ĐÂU, ĐI ĐI",
 }
-    
-STRINGS.DECIDUOUSFORESTTRADER_STARTTRADING = 
+
+STRINGS.DECIDUOUSFORESTTRADER_STARTTRADING =
 {
 	"MUA GÌ ĐI!",
 	"XIN CHÀO, AMIGO! CÙNG TRAO ĐỔI NÀO",
@@ -722,7 +733,7 @@ STRINGS.DECIDUOUSFORESTTRADER_STARTTRADING =
 	"TÔI CÓ ĐỒ TỐT ĐẤY, AMIGO!",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_NOTRADES = 
+STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_NOTRADES =
 {
 	"CÓ LẼ LẦN SAU",
 	"KHÔNG CÓ GÌ LÀM BẠN THÍCH SAO, AMIGO?",
@@ -733,7 +744,7 @@ STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_NOTRADES =
 	"VẬY THÌ ĐỪNG LÃNG PHÍ THỜI GIAN CỦA TÔI",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_MADETRADE = 
+STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_MADETRADE =
 {
 	"CẢM ƠN",
 	"BẠN TỐT ĐẤY!",
@@ -744,7 +755,7 @@ STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_MADETRADE =
 	"CẢM ƠN, ÔNG CHỦ!",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_DOTRADE = 
+STRINGS.DECIDUOUSFORESTTRADER_DOTRADE =
 {
 	"LỰA CHỌN TỐT ĐẤY, AMIGO!",
 	"CÓ NGAY ĐÂY, BẠN CÒN CẦN GÌ NỮA?",
@@ -806,7 +817,7 @@ STRINGS.DECIDUOUSFORESTTRADER_GOHOME =
 	"BẠN BIẾT TÌM TÔI Ở ĐÂU RỒI ĐẤY!",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_STARTDANCING = 
+STRINGS.DECIDUOUSFORESTTRADER_STARTDANCING =
 {
 	"NHẢY NÀO!",
 	"MỞ TIỆC THÔI, AMIGO!",
@@ -830,48 +841,48 @@ STRINGS.FISHREGISTRY =
 {
 	TAB_FISH = "Cá",
 	TAB_ROE = "Trứng Cá",
-	
+
 	MYSTERY_FISH = "Cá Chưa Biết",
 	MISSING_FISH = "Thiếu Cá",
-	
+
 	MYSTERY_ROE = "Trứng Cá Chưa Biết",
 	MISSING_ROE = "Thiếu Trứng Cá",
-	
+
 	MYSTERY_BABY = "Cá Con Chưa Biết",
 	MISSING_BABY = "Thiếu Cá Con",
-	
+
 	MISSING_ROE_TIME = "Chưa Rõ Thời Gian Có Trứng",
 	MISSING_BABY_TIME = "Chưa Rõ Thời Gian Có Cá Con",
-	
+
 	PHASE_DAY = "Ngày",
 	PHASE_DUSK = "Hoàng Hôn",
 	PHASE_NIGHT = "Đêm",
-	
+
 	MOONPHASE_NEW = "Trăng Non",
 	MOONPHASE_QUARTER = "Trăng Khuyết",
 	MOONPHASE_HALF = "Bán Nguyệt",
 	MOONPHASE_THREEQUARTER = "Trăng Khuyết Lớn",
 	MOONPHASE_FULL = "Trăng Tròn",
 	MOONPHASE_GLASSED = "Bão Trăng",
-	
+
 	SEASON_AUTUMN = "Mùa Thu",
 	SEASON_WINTER = "Mùa Đông",
 	SEASON_SPRING = "Mùa Xuân",
 	SEASON_SUMMER = "Mùa Hè",
-	
+
 	WORLD_FOREST = "Rừng",
 	WORLD_CAVE = "Hang Động",
-	
+
 	ROE_TIME = "Thời Gian Có Trứng",
 	BABY_TIME = "Thời Gian Có Cá Con",
-	
+
 	ROE_TIME_HALF_DAY = "Khoảng nửa ngày",
 	ROE_TIME_ONE_DAY = "Khoảng một ngày",
 	ROE_TIME_ONE_HALF_DAY = "Hơn một ngày",
 	ROE_TIME_TWO_DAY = "Khoảng 2 ngày",
 	ROE_TIME_THREE_DAY = "Khoảng 3 ngày",
 	ROE_TIME_MORE_DAY = "Hơn 3 ngày",
-	
+
 	BABY_TIME_HALF_DAY = "Khoảng nửa ngày",
 	BABY_TIME_ONE_DAY = "Khoảng một ngày",
 	BABY_TIME_ONE_HALF_DAY = "Hơn một ngày",
@@ -892,8 +903,8 @@ STRINGS.FISHERMERM_TALK_FISH = "Blu flort."
 STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "Nấm trồng trong Chậu Trồng Nấm sẽ lớn nhanh hơn nhiều.\nHọc cách trồng thêm nhiều loại nấm mới trong Chậu Trồng Nấm."
 
 -- Edited strings for character selection.
-STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr = STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr.." \n*Is a skilled butcher" -- NEEDS TRANSLATION
-STRINGS.CHARACTER_DESCRIPTIONS.warly = STRINGS.CHARACTER_DESCRIPTIONS.warly.." \n*Is a skilled butcher" -- NEEDS TRANSLATION
+STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr = STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr.." \n*Is a skilled butcher"
+STRINGS.CHARACTER_DESCRIPTIONS.warly = STRINGS.CHARACTER_DESCRIPTIONS.warly.." \n*Is a skilled butcher"
 
 STRINGS.NAMES.KYNO_ROE = "Trứng Cá"
 STRINGS.NAMES.KYNO_ROE_PONDFISH = "Trứng Cá Nước Ngọt"
@@ -1248,8 +1259,8 @@ STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_RICE_M = "Một bó hạt lúa được đón
 STRINGS.NAMES.KYNO_SEEDS_KIT_FIRENETTLES = "Gói Hạt Tầm Ma Lửa"
 STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_FIRENETTLES_M = "Cẩn thận! Những hạt này cháy đấy."
 
-STRINGS.NAMES.KYNO_SEEDS_KIT_ICENETTLES = "Chilled Nettle Seeds Packet" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_ICENETTLES_M = "These seeds gives off a cooling atmosphere." -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_SEEDS_KIT_ICENETTLES = "Chilled Nettle Seeds Packet"
+STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_ICENETTLES_M = "These seeds gives off a cooling atmosphere."
 
 STRINGS.NAMES.KYNO_SEEDS_KIT_FORGETMELOTS = "Gói Hạt Hoa Lưu Ly"
 STRINGS.RECIPE_DESC.KYNO_SEEDS_KIT_FORGETMELOTS_M = "Đừng quên trồng chúng khi còn có thể!"
@@ -1343,7 +1354,7 @@ STRINGS.NAMES.FORGETMELOTS_SEEDS = "Hạt Hoa Lưu Ly"
 
 STRINGS.NAMES.FIRENETTLES_SEEDS = "Hạt Tầm Ma Lửa"
 
-STRINGS.NAMES.KYNO_ICENETTLES_SEEDS = "Chilled Nettle Seeds" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_ICENETTLES_SEEDS = "Chilled Nettle Seeds"
 
 STRINGS.NAMES.TILLWEED_SEEDS = "Hạt Cỏ Dại"
 
@@ -1382,14 +1393,14 @@ STRINGS.RECIPE_DESC.KYNO_SALTRACK_INSTALLER_P = "ĐỂ ĐẶT TRONG AO, DÊ CON!
 
 STRINGS.NAMES.TURF_PINKPARK = "Cỏ Công Viên Hồng"
 STRINGS.NAMES.TURF_PINKPARK_P = "Cỏ Công Viên Hồng"
-STRINGS.RECIPE_DESC.TURF_PINKPARK = "A pink-ish grass for vibrant minds." -- NEEDS TRANSLATION
+STRINGS.RECIPE_DESC.TURF_PINKPARK = "A pink-ish grass for vibrant minds."
 
 STRINGS.NAMES.TURF_STONECITY = "Đường Đá Trắng"
 STRINGS.NAMES.TURF_STONECITY_P = "Đường Đá Trắng"
-STRINGS.RECIPE_DESC.TURF_STONECITY = "White stones for a stone city." -- NEEDS TRANSLATION
+STRINGS.RECIPE_DESC.TURF_STONECITY = "White stones for a stone city."
 
 STRINGS.NAMES.TURF_FIELDS = "Nền Đất Canh Tác"
-STRINGS.RECIPE_DESC.TURF_FIELDS = "A civilized patch of dirt." -- NEEDS TRANSLATION
+STRINGS.RECIPE_DESC.TURF_FIELDS = "A civilized patch of dirt."
 
 STRINGS.NAMES.TURF_TIDALMARSH = "Nền Đầm Lầy Thủy Triều"
 STRINGS.NAMES.WURT_TURF_TIDALMARSH = "Nền Đầm Lầy Thủy Triều"
@@ -2242,7 +2253,7 @@ STRINGS.NAMES.KYNO_BRAINROCK_ROCK = "Chồi Não"
 
 STRINGS.NAMES.BRAINMETTERSOUP = "Súp Bảng Chữ Cái"
 
-STRINGS.NAMES.KYNO_OCTOPUSKING_OCEAN = "Yaarctopus" 
+STRINGS.NAMES.KYNO_OCTOPUSKING_OCEAN = "Yaarctopus"
 STRINGS.NAMES.KYNO_OCTOPUSKING_TREASURECHEST = "Rương Ướt"
 
 STRINGS.NAMES.KYNO_PACKIMBAGGIMS_FISHBONE = "Xương Cá"
@@ -2319,13 +2330,13 @@ STRINGS.RECIPE_DESC.KYNO_HERMITCRABTEA_ALOE = "Uống thứ này nếu ngươi t
 STRINGS.NAMES.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Trà Hoa Ngọt"
 STRINGS.RECIPE_DESC.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Một thức uống giúp tâm trí nhẹ nhõm khỏi những sức mạnh quấy nhiễu."
 
-STRINGS.NAMES.KYNO_HERMITCRABTEA_ICENETTLES = "Chilled Nettle Tea" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.KYNO_HERMITCRABTEA_ICENETTLES = "It'll put some cold in your belly, or at least cool you down." -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_HERMITCRABTEA_ICENETTLES = "Chilled Nettle Tea"
+STRINGS.RECIPE_DESC.KYNO_HERMITCRABTEA_ICENETTLES = "It'll put some cold in your belly, or at least cool you down."
 
 STRINGS.NAMES.SOULJUICE = "Linh Hồn Nhung"
 
 STRINGS.NAMES.KYNO_DAILYRECIPE_SIGN = "Bảng Công Thức Hôm Nay"
-STRINGS.NAMES.KYNO_DAILYRECIPE_SIGN_DECOR = "Recipe Board" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_DAILYRECIPE_SIGN_DECOR = "Recipe Board"
 STRINGS.RECIPE_DESC.KYNO_DAILYRECIPE_SIGN = "Cách cổ điển để bảo người khác nên ăn gì."
 
 STRINGS.NAMES.KYNO_DECIDUOUSFOREST_SELLER = "Partitio\nNgười Thương Nhân" -- Placeholder.
@@ -2375,67 +2386,77 @@ STRINGS.NAMES.KYNO_PIGCOIN1 = "Bạc"
 STRINGS.NAMES.KYNO_PIGCOIN2 = "Huy chương Ngọc lục bảo"
 STRINGS.NAMES.KYNO_PIGCOIN3 = "Dấu ấn Lam ngọc"
 
-STRINGS.NAMES.WEED_ICENETTLE = "Chilled Nettle" -- NEEDS TRANSLATION
+STRINGS.NAMES.WEED_ICENETTLE = "Chilled Nettle"
 
-STRINGS.NAMES.KYNO_ICENETTLES = "Chilled Nettle Fronds" -- NEEDS TRANSLATION
-STRINGS.NAMES.KYNO_ICENETTLES_DRIED = "Dried Chilled Nettle Fronds" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_ICENETTLES = "Chilled Nettle Fronds"
+STRINGS.NAMES.KYNO_ICENETTLES_DRIED = "Dried Chilled Nettle Fronds"
 
-STRINGS.NAMES.KYNO_SEEDSBAG = "Seeds Sack" -- NEEDS TRANSLATION
-STRINGS.NAMES.KYNO_SEEDSBAG_NAMED = "{item} Sack" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.KYNO_SEEDSBAG_D = "KEEPS YER SEEDS FRESH AND SAFE!" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_SEEDSBAG = "Seeds Sack"
+STRINGS.NAMES.KYNO_SEEDSBAG_NAMED = "{item} Sack"
+STRINGS.RECIPE_DESC.KYNO_SEEDSBAG_D = "KEEPS YER SEEDS FRESH AND SAFE!"
 
 STRINGS.NAMES.KYNO_FOODREVIVER_PROXY = "Kẹo Đầu Lâu"
 
-STRINGS.NAMES.KYNO_FOODAMMO_TOMATO = "Volatile Toma Root" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.KYNO_FOODAMMO_TOMATO = "The perfect weapon against bad performances." -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_FOODAMMO_TOMATO = "Volatile Toma Root"
+STRINGS.RECIPE_DESC.KYNO_FOODAMMO_TOMATO = "The perfect weapon against bad performances."
 
-STRINGS.NAMES.WX78MODULE_GOURMAND = "Gourmand Circuit" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.WX78MODULE_GOURMAND = "Prepared meals processed at peak efficiency." -- NEEDS TRANSLATION
+STRINGS.NAMES.WX78MODULE_GOURMAND = "Gourmand Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_GOURMAND = "Prepared meals processed at peak efficiency."
 
-STRINGS.NAMES.WX78MODULE_COOKER = "Combustion Circuit" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.WX78MODULE_COOKER = "Controlled heat application for cooking and refinement." -- NEEDS TRANSLATION
+STRINGS.NAMES.WX78MODULE_COOKER = "Combustion Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_COOKER = "Controlled heat application for cooking and refinement."
 
-STRINGS.NAMES.WX78MODULE_DRYER = "Desiccant Circuit" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.WX78MODULE_DRYER = "A rudimentary humidity control system." -- NEEDS TRANSLATION
+STRINGS.NAMES.WX78MODULE_DRYER = "Desiccant Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_DRYER = "A rudimentary humidity control system."
 
-STRINGS.NAMES.WX78MODULE_DRYER2 = "Super-Desiccant Circuit" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.WX78MODULE_DRYER2 = "A perfected humidity regulator." -- NEEDS TRANSLATION
+STRINGS.NAMES.WX78MODULE_DRYER2 = "Super-Desiccant Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_DRYER2 = "A perfected humidity regulator."
 
-STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER_HELD = "Portable Combustion Unit" -- NEEDS TRANSLATION
-STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER = "Collapsed Combustion Unit" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER_HELD = "Portable Combustion Unit"
+STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER = "Collapsed Combustion Unit"
 
-STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER_HELD = "Portable Desiccant Unit" -- NEEDS TRANSLATION
-STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER = "Collapsed Desiccant Unit" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER_HELD = "Portable Desiccant Unit"
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER = "Collapsed Desiccant Unit"
 
-STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2_HELD = "Portable Super-Desiccant Unit" -- NEEDS TRANSLATION
-STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2 = "Collapsed Super-Desiccant Unit" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2_HELD = "Portable Super-Desiccant Unit"
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2 = "Collapsed Super-Desiccant Unit"
 
-STRINGS.NAMES.KYNO_PIGGYBANK = "Piggy Bank" -- NEEDS TRANSLATION
-STRINGS.NAMES.KYNO_PIGGYBANK_UPGRADED = "Bottomless Piggy Bank" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.KYNO_PIGGYBANK = "A tiny home for your ever growing fortune." -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_PIGGYBANK = "Piggy Bank"
+STRINGS.NAMES.KYNO_PIGGYBANK_UPGRADED = "Bottomless Piggy Bank"
+STRINGS.RECIPE_DESC.KYNO_PIGGYBANK = "A tiny home for your ever growing fortune."
 
-STRINGS.NAMES.MARSHMALLOWS = "Marshmallows" -- NEEDS TRANSLATION
+STRINGS.NAMES.MARSHMALLOWS = "Marshmallows"
 
-STRINGS.NAMES.KOKONUTCOOKIES = "Starveos" -- NEEDS TRANSLATION
+STRINGS.NAMES.KOKONUTCOOKIES = "Starveos"
 
-STRINGS.NAMES.BBQRIBS = "Pork Ribs" -- NEEDS TRANSLATION
+STRINGS.NAMES.BBQRIBS = "Pork Ribs"
 
-STRINGS.NAMES.BROWNIE = "Brownie" -- NEEDS TRANSLATION
+STRINGS.NAMES.BROWNIE = "Brownie"
 
-STRINGS.NAMES.CHOCOLATE_CAKE = "Chocolate Cake" -- NEEDS TRANSLATION
+STRINGS.NAMES.CHOCOLATE_CAKE = "Chocolate Cake"
 
-STRINGS.NAMES.SWORDFISHBLUEDINNER = "Chilled Bento" -- NEEDS TRANSLATION
+STRINGS.NAMES.SWORDFISHBLUEDINNER = "Chilled Bento"
 
-STRINGS.NAMES.KYNO_CHILLED_SHARD = "Chilled Shards" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_CHILLED_SHARD = "Chilled Shards"
 
-STRINGS.NAMES.KYNO_BIRD_ROBIN_NIGHT = "Nightwatcher" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_BIRD_ROBIN_NIGHT = "Nightwatcher"
 
-STRINGS.NAMES.KYNO_BIRD_ROBIN_WINTER_NIGHT = "Northern Shrieker" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_BIRD_ROBIN_WINTER_NIGHT = "Northern Shrieker"
 
-STRINGS.NAMES.KYNO_POND_SALT2 = "Artificial Salt Pond" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.KYNO_POND_SALT2 = "Extract and collect salt crystals with minimal effort." -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_POND_SALT2 = "Artificial Salt Pond"
+STRINGS.RECIPE_DESC.KYNO_POND_SALT2 = "Extract and collect salt crystals with minimal effort."
 
-STRINGS.NAMES.KYNO_POND_SALT2_CONSTRUCTION = "Artificial Salt Pond Foundation" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_POND_SALT2_CONSTRUCTION = "Artificial Salt Pond Foundation"
 
-STRINGS.NAMES.KYNO_FISHINGROD_THULECITE = "Thulecite Freshwater Fishing Rod" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.KYNO_FISHINGROD_THULECITE = "Hook fish the ancient way." -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_FISHINGROD_THULECITE = "Thulecite Freshwater Fishing Rod"
+STRINGS.RECIPE_DESC.KYNO_FISHINGROD_THULECITE = "Hook fish the ancient way."
+
+STRINGS.NAMES.KYNO_OPALPRECIOUSPOWDER = "Iridescent Powdered Sugar"
+STRINGS.RECIPE_DESC.KYNO_OPALPRECIOUSPOWDER = "An otherworldly and powerful ingredient."
+
+STRINGS.NAMES.OPALPRECIOUSCREAM = "Shimmer Whipped Cream"
+
+STRINGS.NAMES.CATFISHSTICK = "Grilled Black Catfish"
+
+STRINGS.NAMES.OPALPRECIOUSLOLLIPOP = "Shimmer Lollipop"
+STRINGS.NAMES.OPALPRECIOUSLOLLIPOP_CURSE = "Excessive Gambling"

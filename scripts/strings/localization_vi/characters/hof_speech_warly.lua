@@ -101,11 +101,17 @@ WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Lưỡi dao của đêm đã cùn đi."
 WARLY.ANNOUNCE_KYNO_PANICBUFF_START = "Có vẻ tôi đã trở nên khá đáng sợ."
 WARLY.ANNOUNCE_KYNO_PANICBUFF_END = "Sự hiện diện đáng ngại của tôi đã giảm bớt."
 
-WARLY.ANNOUNCE_KYNO_CUREBUFF_START = "Excellent! My ingredients will keep." -- NEEDS TRANSLATION
-WARLY.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness fades once more." -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_CUREBUFF_START = "Excellent! My ingredients will keep."
+WARLY.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness fades once more."
 
-WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ah, a touch of stability!" -- NEEDS TRANSLATION
-WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And my stability has evaporated." -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ah, a touch of stability!"
+WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And my stability has evaporated."
+
+WARLY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Ah! I can feel the extra force behind every strike!"
+WARLY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "And the extra strength has left the menu."
+
+WARLY.ANNOUNCE_KYNO_BADLUCKBUFF_START = "I fear fortune has left the kitchen."
+WARLY.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Ah, excellent. Fortune has returned to the table."
 
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai rồi, sai rồi..."
 
@@ -136,13 +142,13 @@ WARLY.ANNOUNCE_KYNO_ROE_RESEARCHED = "À! Tiềm năng thật tinh tế trong nh
 
 WARLY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... không tệ chút nào."
 
-WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Mon dieu, I feel as though my insides are cooling!",
 	"This strange cold... I wonder if this is how meat feel when they're frozen.",
 }
 
-WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm very glad that's over." -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm very glad that's over."
 
 WARLY.DESCRIBE.KYNO_ROE = "Ta có thể làm trứng cá muối với canapé!"
 WARLY.DESCRIBE.KYNO_ROE_COOKED = "Thêm chút chanh tươi là tuyệt."
@@ -172,7 +178,7 @@ WARLY.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Có nước nóng thì hay quá...!"
 
 WARLY.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Bụi cây đó mọc ra... hạt cà phê sao?!"
 
-WARLY.DESCRIBE.KYNO_COFFEEBUSH = 
+WARLY.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "À! Nền tảng của cảm hứng!",
 	PICKED = "Kiên nhẫn sẽ mang lại hương vị đậm đà hơn.",
@@ -181,7 +187,7 @@ WARLY.DESCRIBE.KYNO_COFFEEBUSH =
 
 WARLY.DESCRIBE.DUG_KYNO_SPOTBUSH = "Nó xứng đáng có một chỗ tốt để lớn lên."
 
-WARLY.DESCRIBE.KYNO_SPOTBUSH = 
+WARLY.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Ồ! Một bụi cây tạo gia vị.",
 	PICKED = "Nó sẽ hồi phục theo thời gian.",
@@ -249,7 +255,7 @@ WARLY.DESCRIBE.CUCUMBERSALAD = "Nghệ thuật có thể ăn được!"
 
 WARLY.DESCRIBE.DUG_KYNO_WILDWHEAT = "Cần được trồng lại thật cẩn thận."
 
-WARLY.DESCRIBE.KYNO_WILDWHEAT = 
+WARLY.DESCRIBE.KYNO_WILDWHEAT =
 {
 	GENERIC = "Một nguyên liệu quen thuộc cho thành công ở nơi này.",
 	PICKED = "Kiên nhẫn sẽ tinh luyện hương vị.",
@@ -408,7 +414,7 @@ WARLY.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Ôi không."
 
 WARLY.DESCRIBE.KYNO_SEEDS_KIT = "Nguyên liệu nấu ăn ở giai đoạn đầu tiên."
 
-WARLY.DESCRIBE.KYNO_LIMPETROCK = 
+WARLY.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "Một trang trại ốc nhỏ xinh!",
 	PICKED = "Chúng sẽ quay lại theo thời gian.",
@@ -418,7 +424,7 @@ WARLY.DESCRIBE.KYNO_LIMPETROCK =
 WARLY.DESCRIBE.KYNO_LIMPETS = "Chúng có hương mặn rất hấp dẫn."
 WARLY.DESCRIBE.KYNO_LIMPETS_COOKED = "Mềm, mặn, ngon tuyệt."
 
-WARLY.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WARLY.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "Mmm, củ sen...",
 	PICKED = "Kiên nhẫn sẽ làm hương vị ngon hơn.",
@@ -429,7 +435,7 @@ WARLY.DESCRIBE.KYNO_LOTUS_ROOT = "Ta có thể trồng nó để có nguồn hoa
 WARLY.DESCRIBE.KYNO_LOTUS_FLOWER = "Ta nên nấu món gì đó với thứ này."
 WARLY.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Một món cao lương mỹ vị!"
 
-WARLY.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WARLY.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "Ta chưa có nhiều kinh nghiệm với nguyên liệu này.",
 	PICKED = "Kiên nhẫn sẽ được đền đáp.",
@@ -441,7 +447,7 @@ WARLY.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Thêm chút mè rang thì hợp..."
 WARLY.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Thêm Tamari thì được..."
 WARLY.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Ta có thể trồng nó để có nguồn rong biển bền vững."
 
-WARLY.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WARLY.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "Mmm... Món này sẽ hợp với cá lắm!",
 	PICKED = "Nhờ có nước, nó sẽ quay lại nhanh thôi.",
@@ -452,7 +458,7 @@ WARLY.DESCRIBE.KYNO_TAROROOT_ROOT = "Ta có thể trồng nó để có nguồn 
 WARLY.DESCRIBE.KYNO_TAROROOT = "Aubergine!"
 WARLY.DESCRIBE.KYNO_TAROROOT_COOKED = "Thêm xốt tiêu và Parmesan thì tuyệt..."
 
-WARLY.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WARLY.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "Thứ này làm salad thì tuyệt!",
 	PICKED = "Rất đáng để chờ đợi.",
@@ -479,7 +485,7 @@ WARLY.DESCRIBE.CATFOOD = "Một món ăn thượng hạng cho mèo."
 
 WARLY.DESCRIBE.KATFOOD = "Một món ăn thượng hạng cho mèo."
 
-WARLY.DESCRIBE.KYNO_BANANATREE = 
+WARLY.DESCRIBE.KYNO_BANANATREE =
 {
 	GENERIC = "Lũ khỉ không với tới đây đâu, ha!",
 	PICKED = "Kiên nhẫn mang lại hương vị ngon hơn.",
@@ -491,7 +497,7 @@ WARLY.DESCRIBE.KYNO_BANANATREE =
 WARLY.DESCRIBE.KYNO_BANANA = "Đúng hương vị ta đang cần!"
 WARLY.DESCRIBE.KYNO_BANANA_COOKED = "Thêm yến mạch và vài vụn sô-cô-la thì tuyệt..."
 
-WARLY.DESCRIBE.KYNO_KOKONUTTREE = 
+WARLY.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "Một cái cây nghiêng rất đẹp.",
 	PICKED = "Kiên nhẫn làm hương vị đậm hơn.",
@@ -531,7 +537,7 @@ WARLY.DESCRIBE.KYNO_NEONFISH_COOKED = "Haiz. Thậm chí còn chưa được nê
 
 WARLY.DESCRIBE.KYNO_GROUPER = "Không thể tươi hơn được nữa!"
 WARLY.DESCRIBE.KYNO_GROUPER_COOKED = "Cá mú áp chảo với đậu bồ câu! Ngon tuyệt!"
- 
+
 WARLY.DESCRIBE.KYNO_PIERROTFISH = "Ngươi có muốn thành một nồi chowder ngon lành không?"
 WARLY.DESCRIBE.KYNO_PIERROTFISH_COOKED = "À, đáng lẽ ta nên để dành cái đầu nấu súp!"
 
@@ -555,7 +561,7 @@ WARLY.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Một cái xô để hứng vị ng�
 
 WARLY.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Đến lúc bắt vài con cua ngon rồi!"
 
-WARLY.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WARLY.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "Ngươi có gì cho ta nào?",
 	SLEEPING = "Ta sẽ quay lại sau.",
@@ -601,7 +607,7 @@ WARLY.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "À! Thịt biển thượng hạng!"
 
 WARLY.DESCRIBE.KYNO_SLAUGHTERTOOL = "Công cụ tốt nhất để sơ chế thịt."
 
-WARLY.DESCRIBE.KYNO_CHICKEN2 = 
+WARLY.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Người bạn ngon lành, thật ngon lành của ta!",
 	COOP = "Từ giờ ta sẽ giữ ngươi ở quanh đây.",
@@ -617,7 +623,7 @@ WARLY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "À! Một nguyên liệu tươi... ý ta là, bạn đồng hành!",
 }
 
-WARLY.DESCRIBE.KYNO_CHICKENHOUSE = 
+WARLY.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "À! Một nguồn nguyên liệu tươi đáng tin cậy.",
 	FULL = "Những nguyên liệu tuyệt vời đang chờ!",
@@ -645,7 +651,7 @@ WARLY.DESCRIBE.KYNO_COOKWARE_OVEN = "À, hoàn hảo!"
 WARLY.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "À, hoàn hảo!"
 WARLY.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "À, hoàn hảo!"
 
-WARLY.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WARLY.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Có thể có chút protein bên dưới đấy.",
 	FLIPPED = "À, kho báu ẩn giấu!",
@@ -692,7 +698,7 @@ WARLY.DESCRIBE.PEPPERROLLS = "Ta thích món ăn của mình phải cay!"
 
 WARLY.DESCRIBE.KYNO_SAPHEALER = "Thứ này có thể rất hữu ích."
 
-WARLY.DESCRIBE.KYNO_OCEAN_WRECK = 
+WARLY.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Nó không còn ra khơi nữa.",
 	PICKED = "Biển cả rồi sẽ ban tặng lần nữa.",
@@ -714,7 +720,7 @@ WARLY.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Thêm chipotle thì hợp..."
 
 WARLY.DESCRIBE.KYNO_BREWBOOK = "À, một danh mục rượu vang tuyệt vời."
 
-WARLY.DESCRIBE.KYNO_WOODENKEG = 
+WARLY.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "Ta nóng lòng muốn ủ vài mẻ Pale Ale!",
 	BREWING_LONG = "Kiên nhẫn tạo nên thức uống tinh tế nhất.",
@@ -723,7 +729,7 @@ WARLY.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "Một thảm họa ẩm thực toàn diện!",
 }
 
-WARLY.DESCRIBE.KYNO_PRESERVESJAR = 
+WARLY.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "Ta không biết nên làm món gì trước nữa!",
 	BREWING_LONG = "Bảo quản là nghệ thuật của sự kiên nhẫn.",
@@ -732,7 +738,7 @@ WARLY.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Một nỗi đau ẩm thực!",
 }
 
-WARLY.DESCRIBE.KYNO_ANTCHEST = 
+WARLY.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Một cỗ máy làm mật!",
 	HONEY = "Kho mật tuyệt hảo!",
@@ -748,7 +754,7 @@ WARLY.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Không phải món ngon hảo hạng g
 WARLY.DESCRIBE.KYNO_PIKO = "Bonjour, mon amie."
 WARLY.DESCRIBE.KYNO_PIKO_ORANGE = "Ta thích english breakfast hơn."
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "Ta có thể làm bao nhiêu món với lá trà đây.",
 	CHOPPED = "Nguyên liệu tuyệt vời, đã thu hoạch.",
@@ -756,7 +762,7 @@ WARLY.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 	BURNT = "Hỏng rồi.",
 }
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
 	GENERIC = "Ta có thể làm bao nhiêu món với lá trà đây.",
 	BURNING = "Một kết cục thật đáng tiếc.",
@@ -764,26 +770,26 @@ WARLY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WARLY.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Mong là có lô khẩu phần bên trong."
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "Dân chài sống ở đây. Ta ngửi thấy được.",
 	BURNT = "Hỏng hoàn toàn.",
 }
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "Dân chài sống ở đây. Ta ngửi thấy được.",
 	CRAFTED = "À! Trông chỉn chu hơn nhiều!",
 	BURNT = "Thơm theo cách tệ nhất!",
 }
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "Chắc bên trong có cả đống nguyên liệu nấu ăn.",
 	OCCUPIED = "À, tạm thời đóng cửa.",
 }
 
-WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WARLY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "Có lẽ ta nên xem qua hàng hóa của ông ấy.",
 	EMPTY = "Than ôi, chẳng còn gì để nếm thử.",
@@ -841,7 +847,7 @@ WARLY.DESCRIBE.CHOCOLATE_BLACK = "Không gì ngọt ngào hơn sô-cô-la."
 WARLY.DESCRIBE.CHOCOLATE_WHITE = "Không gì ngọt ngào hơn sô-cô-la."
 
 WARLY.DESCRIBE.TRICOLORDANGO = "Ta nên thử ẩm thực Nhật thường xuyên hơn..."
- 
+
 WARLY.DESCRIBE.FRIESFRENCH = "Muối làm nó ngon hơn hẳn!"
 
 WARLY.DESCRIBE.PIRATERUM = "Rum, thức uống của hải tặc."
@@ -853,7 +859,7 @@ WARLY.DESCRIBE.ONIONRINGS = "Hành chiên ngập dầu hoàn hảo."
 WARLY.DESCRIBE.DONUTS = "À, merveilleux! Vài chiếc donut để bắt đầu ngày mới."
 WARLY.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "À, merveilleux! Vài chiếc donut để bắt đầu ngày mới."
 WARLY.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "À, merveilleux! Vài chiếc donut để bắt đầu ngày mới."
- 
+
 WARLY.DESCRIBE.CINNAMONROLL = "Một món bánh nướng! Những vòng xoáy quế và đường ấm áp đầy mê hoặc."
 
 WARLY.DESCRIBE.GUMMYBEARGERS = "Làm kẹo hình động vật cũng là nghệ thuật!"
@@ -940,7 +946,7 @@ WARLY.DESCRIBE.RICESAKE = "À! Một cách dùng gạo khiêm tốn. Hoàn hảo
 
 WARLY.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Một món ngon nhiệt đới, ta nên trồng nó ở đâu đó."
 
-WARLY.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WARLY.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Một món ngon nhiệt đới.",
 	PICKED = "Kiên nhẫn làm hương vị ngon hơn.",
@@ -958,7 +964,7 @@ WARLY.DESCRIBE.PINACOLADA = "Sảng khoái."
 
 WARLY.DESCRIBE.CHIMAS = "Một ly mate hoàn hảo."
 
-WARLY.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WARLY.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Nó điểm xuyết nước cho cây trồng.",
 	ON = "Độ ẩm hoàn hảo cho nguyên liệu của ta!",
@@ -1077,7 +1083,7 @@ WARLY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "Một giấc nghỉ xứng đáng cho người bán hàng.",
 }
 
-WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Ahh, hương nấm truffle tươi... đầy hứa hẹn!",
 	PICKED = "Cần phải kiên nhẫn lắm đây.",
@@ -1087,7 +1093,7 @@ WARLY.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WARLY.DESCRIBE.KYNO_TRUFFLES = "Magnifique! Chỉ riêng mùi hương đã gợi ra bao công thức!"
 WARLY.DESCRIBE.KYNO_TRUFFLES_COOKED = "Hoàn hảo! Hương đất giờ đã có thể ăn được."
 
-WARLY.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WARLY.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Sân khấu đang chờ một món ăn thật sự!",
 	FULL = "À, magnifique! Mọi kiệt tác đều xứng đáng được chiêm ngưỡng.",
@@ -1112,7 +1118,7 @@ WARLY.DESCRIBE.TRUFFLEOIL = "À, magnifique! Hoàn hảo để rưới nhẹ lê
 WARLY.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Đây là công thức để xây dựng!"
 WARLY.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Chẳng bao lâu nữa sẽ có cá tươi cho những công thức tuyệt nhất của ta!"
 
-WARLY.DESCRIBE.KYNO_FISHFARMPLOT = 
+WARLY.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "Một bố trí tuyệt vời cho nguồn cá tươi.",
 	FUEL_HIGH = "Lũ cá đang phát triển rất tốt!",
@@ -1175,7 +1181,7 @@ WARLY.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Bonjour, mon petit amie."
 WARLY.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Chưa thấy bộ não nào cả. Có lẽ để sau."
 WARLY.DESCRIBE.KYNO_BRAINROCK_CORAL = "Đây thật sự là mảnh não sao?"
 
-WARLY.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WARLY.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "Đá dai, hậu vị thông minh.",
 	PICKED = "Nó phải lấy lại sự tập trung.",
@@ -1183,7 +1189,7 @@ WARLY.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WARLY.DESCRIBE.BRAINMETTERSOUP = "Món này giúp ngươi ghi nhớ được rất nhiều thứ."
 
-WARLY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WARLY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "Đừng nghĩ tới mấy xúc tu ngon lành của ông ta...",
 	SLEEPING = "Tốt nhất là đừng làm phiền ông ấy.",
@@ -1191,7 +1197,7 @@ WARLY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WARLY.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Trong đó có đồ uống lạnh nào không?"
 
-WARLY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WARLY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "Bị gặm sạch rồi...",
 	WAITING = "Nó đang thiếu nửa còn lại...",
@@ -1207,7 +1213,7 @@ WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Để truyền tinh thần ăn mừng v
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Một món tráng miệng dễ thương cho dịp đặc biệt!"
 WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Ít nhất cũng là một bữa tiệc cho đôi mắt!"
 
-WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WARLY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "À, một thiết bị nổ bắp thượng hạng.",
 	FUEL_HIGH = "Kiểm soát nhiệt hoàn hảo!",
@@ -1247,7 +1253,7 @@ WARLY.DESCRIBE.CHICKENROTISSERIE = "À! Ngay cả quay nướng cũng cho phần
 
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Được hãm tinh tế tới độ hoàn hảo."
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Một bó hoa ngọt ngào quyến rũ trong chiếc cốc."
-WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A delightfully cooling infusion." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A delightfully cooling infusion."
 
 WARLY.DESCRIBE.SOULJUICE = "À! Một hỗn hợp thật khác thường!"
 
@@ -1314,74 +1320,82 @@ WARLY.DESCRIBE.KYNO_PIGCOIN1 = "Tôi có thể mua nhiều nguyên liệu tươi
 WARLY.DESCRIBE.KYNO_PIGCOIN2 = "À! Có thể mua thực phẩm..."
 WARLY.DESCRIBE.KYNO_PIGCOIN3 = "Có vẻ rất quan trọng."
 
-WARLY.DESCRIBE.KYNO_ICENETTLES = "Mon Dieu! They'll freeze my beautiful crops!" -- NEEDS TRANSLATION
-WARLY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Could these be used for a rudimentary ice box?" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_ICENETTLES = "Mon Dieu! They'll freeze my beautiful crops!"
+WARLY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Could these be used for a rudimentary ice box?"
 
-WARLY.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A cook appreciates good organization.",
 	FULL = "It is entirely full.",
 }
 
-WARLY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "That's one juicy tomato wasted..." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "That's one juicy tomato wasted..."
 
-WARLY.DESCRIBE.WX78MODULE_GOURMAND = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
-WARLY.DESCRIBE.WX78MODULE_COOKER = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
-WARLY.DESCRIBE.WX78MODULE_DRYER = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
-WARLY.DESCRIBE.WX78MODULE_DRYER2 = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.WX78MODULE_GOURMAND = "They give our metal friend a little extra zest, non?"
+WARLY.DESCRIBE.WX78MODULE_COOKER = "They give our metal friend a little extra zest, non?"
+WARLY.DESCRIBE.WX78MODULE_DRYER = "They give our metal friend a little extra zest, non?"
+WARLY.DESCRIBE.WX78MODULE_DRYER2 = "They give our metal friend a little extra zest, non?"
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What did our metal friend leave here?", -- NEEDS TRANSLATION
+	GENERIC = "What did our metal friend leave here?",
 }
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What did our metal friend leave here?", -- NEEDS TRANSLATION
+	GENERIC = "What did our metal friend leave here?",
 }
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What did our metal friend leave here?", -- NEEDS TRANSLATION
+	GENERIC = "What did our metal friend leave here?",
 }
 
-WARLY.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "The little pig has quite the appetite for coin.",
 	UPGRADED = "A bottomless piggy bank? Magnifique!",
 	GENERIC = "A charming little place for one's savings.",
 }
 
-WARLY.DESCRIBE.MARSHMALLOWS = "Ah, such a delicate sweetness!" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.MARSHMALLOWS = "Ah, such a delicate sweetness!"
 
-WARLY.DESCRIBE.KOKONUTCOOKIES = "I've followed a top secret recipe to cook them!" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KOKONUTCOOKIES = "I've followed a top secret recipe to cook them!"
 
-WARLY.DESCRIBE.BBQRIBS = "Ah, beautifully charred and wonderfully seasoned." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.BBQRIBS = "Ah, beautifully charred and wonderfully seasoned."
 
-WARLY.DESCRIBE.BROWNIE = "Rich, fudgy, and wonderfully indulgent." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.BROWNIE = "Rich, fudgy, and wonderfully indulgent."
 
-WARLY.DESCRIBE.CHOCOLATE_CAKE = "Magnifique! Rich, velvety, and deeply chocolatey." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.CHOCOLATE_CAKE = "Magnifique! Rich, velvety, and deeply chocolatey."
 
-WARLY.DESCRIBE.SWORDFISHBLUEDINNER = "Ah, such fine dinner! Simple, elegant and delightful." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.SWORDFISHBLUEDINNER = "Ah, such fine dinner! Simple, elegant and delightful."
 
-WARLY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "A charming creature of the night.",
 	HELD = "I can feel the little thing moving around.",
 }
 
-WARLY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A magnificent bird of the northern wilderness.",
 	HELD = "I believe it objects to being carried this way.",
 }
 
-WARLY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Ah, a place for collecting salt crystals under construction." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Ah, a place for collecting salt crystals under construction."
 
-WARLY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Ah, a fine fishing rod." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Ah, a fine fishing rod."
+
+WARLY.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "A treasure among confectioner's ingredients!"
+
+WARLY.DESCRIBE.OPALPRECIOUSCREAM = "Magnifique! A little shimmer for an exquisite dessert."
+
+WARLY.DESCRIBE.CATFISHSTICK = "Simple, smoky, and wonderfully rustic."
+
+WARLY.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A dazzling confection with a surprise hidden within."

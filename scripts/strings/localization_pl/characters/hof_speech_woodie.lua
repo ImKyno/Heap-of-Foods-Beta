@@ -101,11 +101,17 @@ WOODIE.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Z powrotem do starego mnie."
 WOODIE.ANNOUNCE_KYNO_PANICBUFF_START = "Chyba wyglądam trochę groźniej niż zwykle, co?"
 WOODIE.ANNOUNCE_KYNO_PANICBUFF_END = "Chyba jestem teraz mniej straszny, co?"
 
-WOODIE.ANNOUNCE_KYNO_CUREBUFF_START = "This'll keep things fresh a while longer, eh?" -- NEEDS TRANSLATION
-WOODIE.ANNOUNCE_KYNO_CUREBUFF_END = "Can't stop nature forever, eh?" -- NEEDS TRANSLATION
+WOODIE.ANNOUNCE_KYNO_CUREBUFF_START = "This'll keep things fresh a while longer, eh?"
+WOODIE.ANNOUNCE_KYNO_CUREBUFF_END = "Can't stop nature forever, eh?"
 
-WOODIE.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm rooted pretty good now." -- NEEDS TRANSLATION
-WOODIE.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Guess I'm not rooted anymore." -- NEEDS TRANSLATION
+WOODIE.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm rooted pretty good now."
+WOODIE.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Guess I'm not rooted anymore."
+
+WOODIE.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "I've got a bit more bite to my swing!"
+WOODIE.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Looks like I'm back to my usual strength."
+
+WOODIE.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Feels like I'm due for some bad luck."
+WOODIE.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Looks like my luck's finally turned around."
 
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Może coś do podniesienia?"
 
@@ -136,13 +142,13 @@ WOODIE.ANNOUNCE_KYNO_ROE_RESEARCHED = "Chyba nawet rybie jajka mają coś do nau
 
 WOODIE.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Nieźle, co?"
 
-WOODIE.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WOODIE.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Whew, I feel colder than a lake during the winter",
 	"Guess I shouldn't have touched that plant, eh?",
 }
 
-WOODIE.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Glad that's over with." -- NEEDS TRANSLATION
+WOODIE.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Glad that's over with."
 
 WOODIE.DESCRIBE.KYNO_ROE = "Garść przyszłych ryb, co?"
 WOODIE.DESCRIBE.KYNO_ROE_COOKED = "Lepiej zjeść, zanim się zepsują."
@@ -531,7 +537,7 @@ WOODIE.DESCRIBE.KYNO_NEONFISH_COOKED = "Wygląda na to, że mam jedzenie na cał
 
 WOODIE.DESCRIBE.KYNO_GROUPER = "Wygląda jak kolacja."
 WOODIE.DESCRIBE.KYNO_GROUPER_COOKED = "Sam złowiłem i upiekłem."
- 
+
 WOODIE.DESCRIBE.KYNO_PIERROTFISH = "Zawsze lubiłem łowić ryby."
 WOODIE.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Mmm... pieczona ryba."
 
@@ -841,7 +847,7 @@ WOODIE.DESCRIBE.CHOCOLATE_BLACK = "Czasem miło jest zjeść kawałek czekolady,
 WOODIE.DESCRIBE.CHOCOLATE_WHITE = "Czasem miło jest zjeść kawałek czekolady, co nie?"
 
 WOODIE.DESCRIBE.TRICOLORDANGO = "Nigdy o tym nie słyszałem, ale są świetne!"
- 
+
 WOODIE.DESCRIBE.FRIESFRENCH = "Śmieciowe jedzenie, co?"
 
 WOODIE.DESCRIBE.PIRATERUM = "Niebezpieczne!"
@@ -853,7 +859,7 @@ WOODIE.DESCRIBE.ONIONRINGS = "Nigdy bym nie pomyślał, że cebula może być ta
 WOODIE.DESCRIBE.DONUTS = "Od razu do buzi!"
 WOODIE.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Prosto do ust!"
 WOODIE.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Prosto do ust!"
- 
+
 WOODIE.DESCRIBE.CINNAMONROLL = "To ciężka bułka."
 
 WOODIE.DESCRIBE.GUMMYBEARGERS = "Jest coś dziwnego w tych małych misiach."
@@ -1247,7 +1253,7 @@ WOODIE.DESCRIBE.CHICKENROTISSERIE = "Pachnie jak niedzielny obiad, co nie?"
 
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Całkiem uspokajające, co?"
 WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Pachnie wiosną, co?"
-WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Nice drink for a hot day, eh?" -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Nice drink for a hot day, eh?"
 
 WOODIE.DESCRIBE.SOULJUICE = "To dość dziwny sok, co?"
 
@@ -1314,74 +1320,82 @@ WOODIE.DESCRIBE.KYNO_PIGCOIN1 = "Kupię coś fajnego dla Lucy."
 WOODIE.DESCRIBE.KYNO_PIGCOIN2 = "Mogę za to kupić sporo rzeczy."
 WOODIE.DESCRIBE.KYNO_PIGCOIN3 = "To nie dolar, ale chyba się tu nada."
 
-WOODIE.DESCRIBE.KYNO_ICENETTLES = " I won't touch this one either." -- NEEDS TRANSLATION
-WOODIE.DESCRIBE.KYNO_ICENETTLES_DRIED = "It almost feels colder." -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.KYNO_ICENETTLES = " I won't touch this one either."
+WOODIE.DESCRIBE.KYNO_ICENETTLES_DRIED = "It almost feels colder."
 
-WOODIE.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "Keeps all my seeds together, eh?",
 	FULL = "Can't squeeze another seed in there.",
 }
 
-WOODIE.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Careful where you aim at!" -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Careful where you aim at!"
 
-WOODIE.DESCRIBE.WX78MODULE_GOURMAND = "Some fancy robot bits." -- NEEDS TRANSLATION
-WOODIE.DESCRIBE.WX78MODULE_COOKER = "Some fancy robot bits." -- NEEDS TRANSLATION
-WOODIE.DESCRIBE.WX78MODULE_DRYER = "Some fancy robot bits." -- NEEDS TRANSLATION
-WOODIE.DESCRIBE.WX78MODULE_DRYER2 = "Some fancy robot bits." -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.WX78MODULE_GOURMAND = "Some fancy robot bits."
+WOODIE.DESCRIBE.WX78MODULE_COOKER = "Some fancy robot bits."
+WOODIE.DESCRIBE.WX78MODULE_DRYER = "Some fancy robot bits."
+WOODIE.DESCRIBE.WX78MODULE_DRYER2 = "Some fancy robot bits."
 
 WOODIE.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Anything good in there, Lucy?", -- NEEDS TRANSLATION
+	GENERIC = "Anything good in there, Lucy?",
 }
 
 WOODIE.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Anything good in there, Lucy?", -- NEEDS TRANSLATION
+	GENERIC = "Anything good in there, Lucy?",
 }
 
 WOODIE.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Anything good in there, Lucy?", -- NEEDS TRANSLATION
+	GENERIC = "Anything good in there, Lucy?",
 }
 
-WOODIE.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "Looks like the little fella's had enough.",
 	UPGRADED = "This pig's got room for a whole lotta loonies.",
 	GENERIC = "A handy little place to stash some coins.",
 }
 
-WOODIE.DESCRIBE.MARSHMALLOWS = "These are pretty sweet, eh?" -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.MARSHMALLOWS = "These are pretty sweet, eh?"
 
-WOODIE.DESCRIBE.KOKONUTCOOKIES = "Tastes like summer!" -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.KOKONUTCOOKIES = "Tastes like summer!"
 
-WOODIE.DESCRIBE.BBQRIBS = "Now that's some good eatin'!" -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.BBQRIBS = "Now that's some good eatin'!"
 
-WOODIE.DESCRIBE.BROWNIE = "That's a mighty fine brownie." -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.BROWNIE = "That's a mighty fine brownie."
 
-WOODIE.DESCRIBE.CHOCOLATE_CAKE = "That's one heck of a chocolate cake." -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.CHOCOLATE_CAKE = "That's one heck of a chocolate cake."
 
-WOODIE.DESCRIBE.SWORDFISHBLUEDINNER = "I'm chilled to the bones!" -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.SWORDFISHBLUEDINNER = "I'm chilled to the bones!"
 
-WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "I don't like the way he stares at me!",
 	HELD = "He gives me the creeps!",
 }
 
-WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "How can they still survive in this cold?",
 	HELD = "He doesn't seem too happy in my pockets!",
 }
 
-WOODIE.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like someone's buildin' a salt rack." -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like someone's buildin' a salt rack."
 
-WOODIE.DESCRIBE.KYNO_FISHINGROD_THULECITE = "The good ol' reliable." -- NEEDS TRANSLATION
+WOODIE.DESCRIBE.KYNO_FISHINGROD_THULECITE = "The good ol' reliable."
+
+WOODIE.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Looks too fancy to be sugar."
+
+WOODIE.DESCRIBE.OPALPRECIOUSCREAM = "Never seen cream sparkle like that before."
+
+WOODIE.DESCRIBE.CATFISHSTICK = "Poor fish. Least it's cooked proper."
+
+WOODIE.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Looks fancy. Hope it doesn't do anything too weird."

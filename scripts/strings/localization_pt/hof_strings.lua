@@ -131,6 +131,9 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL = "Aumenta ganho de Alma"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REVIVER = "Revive os mortos"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KNOCKBACK = "Diminui a repulsão"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CHILLEDATTACK = "Garante ataques gélidos"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRITDAMAGE = "Garante ataques críticos"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BADLUCK = "Diminui a sorte"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RANDOM = "Garante um efeito aleatório"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Vegetal esverdeado, o rei das pastagens e florestas tropicais. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Um dos muitos presentes do mar, muito apreciado pelos homens de cultura. -W"
@@ -417,41 +420,41 @@ STRINGS.KYNO_SUGARFLYWINGS_NAMES =
 
 STRINGS.KYNO_CHICKEN_NAMES =
 {
-	"Drumstick", 
-	"Daisy", 
-	"Cah", 
-	"Noodles", 
+	"Drumstick",
+	"Daisy",
+	"Cah",
+	"Noodles",
 	"Potato",
-	"Curry", 
-	"Dinner", 
-	"Garibalda", 
-	"Marta", 
+	"Curry",
+	"Dinner",
+	"Garibalda",
+	"Marta",
 	"Marina",
-	"Carrot", 
-	"Emilha", 
-	"Pintadinha", 
-	"Galinha", 
+	"Carrot",
+	"Emilha",
+	"Pintadinha",
+	"Galinha",
 	"Pipoca",
-	"Ruiva", 
-	"Canjica", 
-	"Magricela", 
-	"Isolda", 
+	"Ruiva",
+	"Canjica",
+	"Magricela",
+	"Isolda",
 	"Pedrita",
-	"Isadora", 
-	"Ruivinha", 
-	"Karen", 
-	"Penosa", 
+	"Isadora",
+	"Ruivinha",
+	"Karen",
+	"Penosa",
 	"Bicuda",
-	"Mel", 
-	"Sol", 
-	"Lua", 
-	"Outono", 
-	"Milharina", 
+	"Mel",
+	"Sol",
+	"Lua",
+	"Outono",
+	"Milharina",
 	"Lunch",
-	"Clementina", 
-	"Rejane", 
-	"Morena", 
-	"Flor", 
+	"Clementina",
+	"Rejane",
+	"Morena",
+	"Flor",
 	"Girasol",
 }
 
@@ -575,12 +578,20 @@ STRINGS.KYNO_GOLDENAPPLE_NAMES =
 	"Maçã de Leonidas",
 }
 
-STRINGS.MEADOWISLANDTRADER = "Sammy\nO %s"
-STRINGS.MEADOWISLANDTRADER_TITLES = 
+STRINGS.KYNO_OPALPRECIOUSLOLLIPOP_NAMES =
 {
-	"Mercador", 
-	"Merm do Pântano Lúcido", 
-	"Mercador Experiente", 
+	"Piruleta",
+	"Pirulito do Apostador,
+	"Pirulito Cintilante",
+	"Apostalito",
+}
+
+STRINGS.MEADOWISLANDTRADER = "Sammy\nO %s"
+STRINGS.MEADOWISLANDTRADER_TITLES =
+{
+	"Mercador",
+	"Merm do Pântano Lúcido",
+	"Mercador Experiente",
 	"Mercador Exótico",
 	"Vendedor do Pântano",
 }
@@ -592,15 +603,15 @@ STRINGS.MEADOWISLANDTRADER_OUTOFSTOCK =
 	"Ei, amigo, preciso de um tempo para repor o estoque.",
 }
 
-STRINGS.MEADOWISLANDTRADER_OUTOFSTOCKTRADES = 
+STRINGS.MEADOWISLANDTRADER_OUTOFSTOCKTRADES =
 {
 	"Você esvaziou tudo! Preciso de tempo para repor.",
 	"Isso é tudo que tenho! Volte mais tarde.",
 	"Você, rapaz, acabou com meu bom estoque. Preciso de um tempo agora.",
 	"Volte depois para mais trocas.",
 }
-    
-STRINGS.MEADOWISLANDTRADER_STARTTRADING = 
+
+STRINGS.MEADOWISLANDTRADER_STARTTRADING =
 {
 	"Por que ainda não comprou nada?",
 	"Ei, parceiro, o que precisa?",
@@ -612,7 +623,7 @@ STRINGS.MEADOWISLANDTRADER_STARTTRADING =
 	"Sinto falta da minha cidade e do meu povo...",
 }
 
-STRINGS.MEADOWISLANDTRADER_ENDTRADING_NOTRADES = 
+STRINGS.MEADOWISLANDTRADER_ENDTRADING_NOTRADES =
 {
 	"O que eu estava fazendo? ...Ah, SEMENTES AQUI!",
 	"Talvez na próxima vez.",
@@ -623,7 +634,7 @@ STRINGS.MEADOWISLANDTRADER_ENDTRADING_NOTRADES =
 	"Você devia tentar meu amigo Pipton então!",
 }
 
-STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE = 
+STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE =
 {
 	"Volte logo, ouviu?",
 	"Obrigado, estranho.",
@@ -634,7 +645,7 @@ STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE =
 	"Volte logo! Fico meio solitário! Hehe, meio solitário.",
 }
 
-STRINGS.MEADOWISLANDTRADER_DOTRADE = 
+STRINGS.MEADOWISLANDTRADER_DOTRADE =
 {
 	"Ahh, ótima escolha! Algo mais te interessa?",
 	"Saindo agora mesmo! O que mais precisa?",
@@ -676,7 +687,7 @@ STRINGS.MEADOWISLANDTRADER_GOHOME =
 	"Você sabe onde me encontrar.",
 }
 
-STRINGS.MEADOWISLANDTRADER_STARTDANCING = 
+STRINGS.MEADOWISLANDTRADER_STARTDANCING =
 {
 	"Vamos festejar! Uhul!",
 	"Hoo-hoo! Vamos dançar, amigo!",
@@ -686,11 +697,11 @@ STRINGS.MEADOWISLANDTRADER_STARTDANCING =
 }
 
 STRINGS.DECIDUOUSFORESTTRADER = "Partitio\nO %s"
-STRINGS.DECIDUOUSFORESTTRADER_TITLES = 
+STRINGS.DECIDUOUSFORESTTRADER_TITLES =
 {
-	"Mercador Orgulhoso", 
-	"Porco Artesão Mestre", 
-	"Grande Mercador", 
+	"Mercador Orgulhoso",
+	"Porco Artesão Mestre",
+	"Grande Mercador",
 	"Porco Vendedor",
 	"Vendedor da Floresta Decídua",
 }
@@ -702,15 +713,15 @@ STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCK =
 	"EU PRECISO DE TEMPO PRA REABASTECER",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCKTRADES = 
+STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCKTRADES =
 {
 	"VOCÊ LIMPOU MEU ESTOQUE! PRECISO DE TEMPO PRA CONSEGUIR MAIS COISAS!",
 	"ISSO É TUDO POR AGORA, VOLTE MAIS TARDE!",
 	"VOLTE MAIS TARDE PRA MAIS MERCADORIAS, SIM?",
 	"EU NÃO TENHO COISAS BOAS AGORA, VAI EMBORA",
 }
-    
-STRINGS.DECIDUOUSFORESTTRADER_STARTTRADING = 
+
+STRINGS.DECIDUOUSFORESTTRADER_STARTTRADING =
 {
 	"COMPRE ALGUMA COISA!",
 	"OLÁ, AMIGO! VAMOS NEGOCIAR",
@@ -722,7 +733,7 @@ STRINGS.DECIDUOUSFORESTTRADER_STARTTRADING =
 	"EU TENHO COISAS BOAS, AMIGO!",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_NOTRADES = 
+STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_NOTRADES =
 {
 	"TALVEZ NA PRÓXIMA",
 	"NADA TE INTERESSA, AMIGO?",
@@ -733,7 +744,7 @@ STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_NOTRADES =
 	"ENTÃO NÃO DESPERDICE MEU TEMPO",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_MADETRADE = 
+STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_MADETRADE =
 {
 	"OBRIGADO",
 	"VOCÊ É BOM!",
@@ -744,7 +755,7 @@ STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_MADETRADE =
 	"VALEU, CHEFE!",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_DOTRADE = 
+STRINGS.DECIDUOUSFORESTTRADER_DOTRADE =
 {
 	"BOA ESCOLHA, AMIGO!",
 	"JÁ VAI, O QUE MAIS VOCÊ PRECISA?",
@@ -806,7 +817,7 @@ STRINGS.DECIDUOUSFORESTTRADER_GOHOME =
 	"VOCÊ SABE ONDE ME ENCONTRAR!",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_STARTDANCING = 
+STRINGS.DECIDUOUSFORESTTRADER_STARTDANCING =
 {
 	"VAMOS DANÇAR!",
 	"VAMOS FESTEJAR, AMIGO!",
@@ -830,48 +841,48 @@ STRINGS.FISHREGISTRY =
 {
 	TAB_FISH = "Peixes",
 	TAB_ROE = "Ovas",
-	
+
 	MYSTERY_FISH = "Peixe Desconhecido",
 	MISSING_FISH = "Peixe Ausente",
-	
+
 	MYSTERY_ROE = "Ova Desconhecida",
 	MISSING_ROE = "Ova Ausente",
-	
+
 	MYSTERY_BABY = "Filhote Desconhecido",
 	MISSING_BABY = "Filhote Ausente",
-	
+
 	MISSING_ROE_TIME = "Tempo da Ova Desconhecido",
 	MISSING_BABY_TIME = "Tempo do Filhote Desconhecido",
-	
+
 	PHASE_DAY = "Dia",
 	PHASE_DUSK = "Entardecer",
 	PHASE_NIGHT = "Noite",
-	
+
 	MOONPHASE_NEW = "Lua Nova",
 	MOONPHASE_QUARTER = "Quarto Crescente",
 	MOONPHASE_HALF = "Lua Crescente",
 	MOONPHASE_THREEQUARTER = "Quarto Minguante",
 	MOONPHASE_FULL = "Lua Cheia",
 	MOONPHASE_GLASSED = "Tempestade Lunar",
-	
+
 	SEASON_AUTUMN = "Outono",
 	SEASON_WINTER = "Inverno",
 	SEASON_SPRING = "Primavera",
 	SEASON_SUMMER = "Verão",
-	
+
 	WORLD_FOREST = "Floresta",
 	WORLD_CAVE = "Cavernas",
-	
+
 	ROE_TIME = "Tempo da Ova",
 	BABY_TIME = "Tempo do Filhote",
-	
+
 	ROE_TIME_HALF_DAY = "Cerca de meio dia",
 	ROE_TIME_ONE_DAY = "Cerca de um dia",
 	ROE_TIME_ONE_HALF_DAY = "Mais de um dia",
 	ROE_TIME_TWO_DAY = "Cerca de 2 dias",
 	ROE_TIME_THREE_DAY = "Cerca de 3 dias",
 	ROE_TIME_MORE_DAY = "Mais de 3 dias",
-	
+
 	BABY_TIME_HALF_DAY = "Cerca de meio dia",
 	BABY_TIME_ONE_DAY = "Cerca de um dia",
 	BABY_TIME_ONE_HALF_DAY = "Mais de um dia",
@@ -1212,7 +1223,7 @@ STRINGS.NAMES.KYNO_TURNIP_OVERSIZED_ROTTEN = "Nabo Gigante Apodrecido"
 STRINGS.NAMES.KYNO_RICE = "Arroz"
 STRINGS.NAMES.KYNO_RICE_COOKED = "Arroz Tostado"
 STRINGS.NAMES.KYNO_RICE_SEEDS = "Sementes de Oryza"
-STRINGS.NAMES.KYNO_RICE_SEEDS_P = "Pacote de Sementes de Oryza" 
+STRINGS.NAMES.KYNO_RICE_SEEDS_P = "Pacote de Sementes de Oryza"
 STRINGS.NAMES.KNOWN_KYNO_RICE_SEEDS = "Sementes de Arroz"
 STRINGS.NAMES.FARM_PLANT_KYNO_RICE = "Broto de Arroz"
 STRINGS.NAMES.KYNO_RICE_OVERSIZED = "Arroz Gigante"
@@ -2439,3 +2450,13 @@ STRINGS.NAMES.KYNO_POND_SALT2_CONSTRUCTION = "Fundação da Poça de Sal Artific
 
 STRINGS.NAMES.KYNO_FISHINGROD_THULECITE = "Vara de Pesca de Thulecite"
 STRINGS.RECIPE_DESC.KYNO_FISHINGROD_THULECITE = "Fisgue peixes da maneira anciã."
+
+STRINGS.NAMES.KYNO_OPALPRECIOUSPOWDER = "Açúcar Iridescente"
+STRINGS.RECIPE_DESC.KYNO_OPALPRECIOUSPOWDER = "Um ingrediente poderoso de outro mundo."
+
+STRINGS.NAMES.OPALPRECIOUSCREAM = "Chantilly Cintilante"
+
+STRINGS.NAMES.CATFISHSTICK = "Bagre Negro Grelhado"
+
+STRINGS.NAMES.OPALPRECIOUSLOLLIPOP = "Pirulito Cintilante"
+STRINGS.NAMES.OPALPRECIOUSLOLLIPOP_CURSE = "Apostar Excessivamente"

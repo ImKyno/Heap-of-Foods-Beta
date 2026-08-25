@@ -104,8 +104,14 @@ WAXWELL.ANNOUNCE_KYNO_PANICBUFF_END = "How disappointing."
 WAXWELL.ANNOUNCE_KYNO_CUREBUFF_START = "Time is behaving itself for once."
 WAXWELL.ANNOUNCE_KYNO_CUREBUFF_END = "Back to the usual deterioration."
 
-WAXWELL.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I refuse to be pushed around." -- NEEDS TRANSLATION
-WAXWELL.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "How irritating. I'm vulnerable again." -- NEEDS TRANSLATION
+WAXWELL.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I refuse to be pushed around."
+WAXWELL.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "How irritating. I'm vulnerable again."
+
+WAXWELL.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Ah, now this is more like it. Such power."
+WAXWELL.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "And just like that, the power is gone."
+
+WAXWELL.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Oh, splendid. As if things weren't troublesome enough."
+WAXWELL.ANNOUNCE_KYNO_BADLUCKBUFF_END = "At last. Fortune has ceased its mockery."
 
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need something else for this."
 
@@ -172,7 +178,7 @@ WAXWELL.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Better than raw, but perhaps there's
 
 WAXWELL.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Hm. I'm unable to get a reading."
 
-WAXWELL.DESCRIBE.KYNO_COFFEEBUSH = 
+WAXWELL.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "A plant with purpose.",
 	PICKED = "Temporarily exhausted.",
@@ -181,7 +187,7 @@ WAXWELL.DESCRIBE.KYNO_COFFEEBUSH =
 
 WAXWELL.DESCRIBE.DUG_KYNO_SPOTBUSH = "What an aromatic bush."
 
-WAXWELL.DESCRIBE.KYNO_SPOTBUSH = 
+WAXWELL.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Aromatic.",
 	PICKED = "Depleted.",
@@ -408,7 +414,7 @@ WAXWELL.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Shame."
 
 WAXWELL.DESCRIBE.KYNO_SEEDS_KIT = "Farming can be messy work."
 
-WAXWELL.DESCRIBE.KYNO_LIMPETROCK = 
+WAXWELL.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "Could be used as a food source in a pinch.",
 	PICKED = "They've withdrawn.",
@@ -418,7 +424,7 @@ WAXWELL.DESCRIBE.KYNO_LIMPETROCK =
 WAXWELL.DESCRIBE.KYNO_LIMPETS = "Slimy and vaguely ingestible."
 WAXWELL.DESCRIBE.KYNO_LIMPETS_COOKED = "A delicacy? Really?"
 
-WAXWELL.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WAXWELL.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "How dainty.",
 	PICKED = "Temporarily depleted.",
@@ -429,7 +435,7 @@ WAXWELL.DESCRIBE.KYNO_LOTUS_ROOT = "So much work for some wet plants."
 WAXWELL.DESCRIBE.KYNO_LOTUS_FLOWER = "I prefer blooms of a darker shade."
 WAXWELL.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "One makes due."
 
-WAXWELL.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WAXWELL.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "Sea garbage.",
 	PICKED = "Temporarily depleted.",
@@ -441,7 +447,7 @@ WAXWELL.DESCRIBE.KYNO_SEAWEEDS_COOKED = "I'm loathe to eat this."
 WAXWELL.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Ugh."
 WAXWELL.DESCRIBE.KYNO_SEAWEEDS_ROOT = "So much work for some wet weeds."
 
-WAXWELL.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WAXWELL.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "I don't enjoy them.",
 	PICKED = "It will recover.",
@@ -452,7 +458,7 @@ WAXWELL.DESCRIBE.KYNO_TAROROOT_ROOT = "So much work for some wet plants."
 WAXWELL.DESCRIBE.KYNO_TAROROOT = "Just another boring plant."
 WAXWELL.DESCRIBE.KYNO_TAROROOT_COOKED = "A little more refined, at least."
 
-WAXWELL.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WAXWELL.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "Interesting, at least.",
 	PICKED = "Temporarily depleted.",
@@ -479,8 +485,8 @@ WAXWELL.DESCRIBE.CATFOOD = "Food for the cats."
 
 WAXWELL.DESCRIBE.KATFOOD = "Food for the cats."
 
-WAXWELL.DESCRIBE.KYNO_BANANATREE = 
-{ 
+WAXWELL.DESCRIBE.KYNO_BANANATREE =
+{
 	GENERIC = "Hmph. I know it's different from that one, but I'm not buying it yet.",
 	PICKED = "Depleted, for now.",
 	CHOPPED = "Disposed of.",
@@ -491,7 +497,7 @@ WAXWELL.DESCRIBE.KYNO_BANANATREE =
 WAXWELL.DESCRIBE.KYNO_BANANA = "Hmph. Tastes like banana."
 WAXWELL.DESCRIBE.KYNO_BANANA_COOKED = "Better now."
 
-WAXWELL.DESCRIBE.KYNO_KOKONUTTREE = 
+WAXWELL.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "How luxurious.",
 	PICKED = "Depleted.",
@@ -531,7 +537,7 @@ WAXWELL.DESCRIBE.KYNO_NEONFISH_COOKED = "Don't worry, there's plenty of them in 
 
 WAXWELL.DESCRIBE.KYNO_GROUPER = "Truly an ugly creature."
 WAXWELL.DESCRIBE.KYNO_GROUPER_COOKED = "Purple on the outside, pink in the middle."
- 
+
 WAXWELL.DESCRIBE.KYNO_PIERROTFISH = "Delightfully pinstriped."
 WAXWELL.DESCRIBE.KYNO_PIERROTFISH_COOKED = "I'll be picking bones out of my teeth for weeks."
 
@@ -555,7 +561,7 @@ WAXWELL.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "It's already sticky."
 
 WAXWELL.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Dinner should be arriving any moment."
 
-WAXWELL.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WAXWELL.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "Charmed, I'm sure.",
 	SLEEPING = "Business is closed for today.",
@@ -601,7 +607,7 @@ WAXWELL.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Ah, how refined."
 
 WAXWELL.DESCRIBE.KYNO_SLAUGHTERTOOL = "I don't mind getting my hands dirty with this."
 
-WAXWELL.DESCRIBE.KYNO_CHICKEN2 = 
+WAXWELL.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Foul fowl.",
 	COOP = "At least it's productive.",
@@ -617,7 +623,7 @@ WAXWELL.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "Finally. Do hurry up.",
 }
 
-WAXWELL.DESCRIBE.KYNO_CHICKENHOUSE = 
+WAXWELL.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "A humble shelter, but quite productive.",
 	FULL = "They've been quite productive.",
@@ -645,7 +651,7 @@ WAXWELL.DESCRIBE.KYNO_COOKWARE_OVEN = "This makes things much more convenient."
 WAXWELL.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "This makes things much more convenient."
 WAXWELL.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "This makes things much more convenient."
 
-WAXWELL.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WAXWELL.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "What will this unearth?",
 	FLIPPED = "Predictable.",
@@ -692,7 +698,7 @@ WAXWELL.DESCRIBE.PEPPERROLLS = "Pop right into my mouth!"
 
 WAXWELL.DESCRIBE.KYNO_SAPHEALER = "A cure that ails trees."
 
-WAXWELL.DESCRIBE.KYNO_OCEAN_WRECK = 
+WAXWELL.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "It stood no chance.",
 	PICKED = "Stripped clean.",
@@ -714,7 +720,7 @@ WAXWELL.DESCRIBE.KYNO_PLANTMEAT_DRIED = "My teeth are getting too old for this."
 
 WAXWELL.DESCRIBE.KYNO_BREWBOOK = "Very well. If I can master the dark arts, how hard could brewing be?"
 
-WAXWELL.DESCRIBE.KYNO_WOODENKEG = 
+WAXWELL.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "Sure, some wine will go nice around here.",
 	BREWING_LONG = "A slow, tedious process.",
@@ -723,7 +729,7 @@ WAXWELL.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "A predictable failure.",
 }
 
-WAXWELL.DESCRIBE.KYNO_PRESERVESJAR = 
+WAXWELL.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "Quality of ingredients makes no difference to the finished product.",
 	BREWING_LONG = "This process drags on.",
@@ -732,7 +738,7 @@ WAXWELL.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Ruined.",
 }
 
-WAXWELL.DESCRIBE.KYNO_ANTCHEST = 
+WAXWELL.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Endless labor for a bit of sweetness.",
 	HONEY = "At least their efforts pay off.",
@@ -748,7 +754,7 @@ WAXWELL.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "I'll eat it. But I don't like it."
 WAXWELL.DESCRIBE.KYNO_PIKO = "Shoo, vermin."
 WAXWELL.DESCRIBE.KYNO_PIKO_ORANGE = "How amusing."
 
-WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "It's a tree. What did I expect.",
 	CHOPPED = "Useful, at least.",
@@ -764,26 +770,26 @@ WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Perhaps I could pry it open."
 
-WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "They copied the pigs, but they're even less intelligent.",
 	BURNT = "Utterly destroyed.",
 }
 
-WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "I suppose everyone needs to live somewhere...",
 	CRAFTED = "An improvement, at least.",
 	BURNT = "Disgusting, even now.",
 }
 
-WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "How did he acquire all of those items?",
 	OCCUPIED = "Business is closed, it seems.",
 }
 
-WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WAXWELL.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "He sure knows how to make a proper showcase.",
 	EMPTY = "Utterly depleted.",
@@ -841,7 +847,7 @@ WAXWELL.DESCRIBE.CHOCOLATE_BLACK = "I prefer the sour ones."
 WAXWELL.DESCRIBE.CHOCOLATE_WHITE = "I prefer the sour ones."
 
 WAXWELL.DESCRIBE.TRICOLORDANGO = "They seem to be somewhat good."
- 
+
 WAXWELL.DESCRIBE.FRIESFRENCH = "Is there a soul who don't like this?"
 
 WAXWELL.DESCRIBE.PIRATERUM = "I shouldn't drink that."
@@ -853,7 +859,7 @@ WAXWELL.DESCRIBE.ONIONRINGS = "It's fast food..."
 WAXWELL.DESCRIBE.DONUTS = "Hmph. Don't mind if I pick one."
 WAXWELL.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Hmph. Don't mind if I pick one."
 WAXWELL.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Hmph. Don't mind if I pick one."
- 
+
 WAXWELL.DESCRIBE.CINNAMONROLL = "Proper food, at least!"
 
 WAXWELL.DESCRIBE.GUMMYBEARGERS = "I hope it does not summon a monster or something like that."
@@ -940,7 +946,7 @@ WAXWELL.DESCRIBE.RICESAKE = "It's going down well... *hic*"
 
 WAXWELL.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "I could plant some of them near my camping site."
 
-WAXWELL.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WAXWELL.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "A fitting throne for the king of the fruits.",
 	PICKED = "Depleted.",
@@ -958,7 +964,7 @@ WAXWELL.DESCRIBE.PINACOLADA = "A fitting drink for a ruler."
 
 WAXWELL.DESCRIBE.CHIMAS = "Bittersweet."
 
-WAXWELL.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WAXWELL.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Good. Now I don't have to water by hand.",
 	ON = "Efficient, at least.",
@@ -1077,7 +1083,7 @@ WAXWELL.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "At least the merchant has standards now.",
 }
 
-WAXWELL.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WAXWELL.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "A delicacy fit for refined tastes, even here.",
 	PICKED = "Gone for now.",
@@ -1087,7 +1093,7 @@ WAXWELL.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WAXWELL.DESCRIBE.KYNO_TRUFFLES = "The finer things in life, even here."
 WAXWELL.DESCRIBE.KYNO_TRUFFLES_COOKED = "Ah, properly prepared sophistication."
 
-WAXWELL.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WAXWELL.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Acceptable craftsmanship.",
 	FULL = "A touch of sophistication for my culinary art.",
@@ -1112,7 +1118,7 @@ WAXWELL.DESCRIBE.TRUFFLEOIL = "A touch of luxury, even out here in the wildernes
 WAXWELL.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "I suppose I should build this."
 WAXWELL.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "A humble beginning for a rather... slimy endeavor."
 
-WAXWELL.DESCRIBE.KYNO_FISHFARMPLOT = 
+WAXWELL.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "How tedious... yet practical.",
 	FUEL_HIGH = "An abundance of feed.",
@@ -1175,7 +1181,7 @@ WAXWELL.DESCRIBE.KYNO_BRAINROCK_LARVAE = "You're not cute."
 WAXWELL.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "It's not bald! It's distinguished!"
 WAXWELL.DESCRIBE.KYNO_BRAINROCK_CORAL = "Now I can harness its thoughtpower for myself."
 
-WAXWELL.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WAXWELL.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "I wonder what's thinking?",
 	PICKED = "Its thoughts have gone quiet.",
@@ -1183,7 +1189,7 @@ WAXWELL.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WAXWELL.DESCRIBE.BRAINMETTERSOUP = "Not a meal fit for a king, but it will do."
 
-WAXWELL.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WAXWELL.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "I could use his generosity to my advantage.",
 	SLEEPING = "Not interested in business right now.",
@@ -1191,7 +1197,7 @@ WAXWELL.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WAXWELL.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "It looks... rotten."
 
-WAXWELL.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WAXWELL.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "I think I should hold onto it.",
 	WAITING = "His spirit is free now.",
@@ -1207,7 +1213,7 @@ WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "I prefer my fuel more nightmarish."
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "I suppose even I deserve a treat... occasionally."
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "How utterly childish... *sigh*"
 
-WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "Popcorn, delightful and convenient.",
 	FUEL_HIGH = "It performs adequately.",
@@ -1215,7 +1221,7 @@ WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 	FUEL_LOW = "Efficiency is declining.",
 	EMPTY = "Completely inert.",
 }
-	
+
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORN = "A surprisingly enjoyable treat for such a simple food."
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_HAT = "Must I really wear this? Ugh..."
 WAXWELL.DESCRIBE.KYNO_HOFBIRTHDAY_SAMMYHAT = "Ah, so the little creature thinks he's special?"
@@ -1325,63 +1331,71 @@ WAXWELL.DESCRIBE.KYNO_SEEDSBAG =
 
 WAXWELL.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Wretched fruit better not be thrown at me..."
 
-WAXWELL.DESCRIBE.WX78MODULE_GOURMAND = "That robot needs to pull themselves together." -- NEEDS TRANSLATION
-WAXWELL.DESCRIBE.WX78MODULE_COOKER = "That robot needs to pull themselves together." -- NEEDS TRANSLATION
-WAXWELL.DESCRIBE.WX78MODULE_DRYER = "That robot needs to pull themselves together." -- NEEDS TRANSLATION
-WAXWELL.DESCRIBE.WX78MODULE_DRYER2 = "That robot needs to pull themselves together." -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.WX78MODULE_GOURMAND = "That robot needs to pull themselves together."
+WAXWELL.DESCRIBE.WX78MODULE_COOKER = "That robot needs to pull themselves together."
+WAXWELL.DESCRIBE.WX78MODULE_DRYER = "That robot needs to pull themselves together."
+WAXWELL.DESCRIBE.WX78MODULE_DRYER2 = "That robot needs to pull themselves together."
 
 WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Remains from that robot.", -- NEEDS TRANSLATION
+	GENERIC = "Remains from that robot.",
 }
 
 WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Remains from that robot.", -- NEEDS TRANSLATION
+	GENERIC = "Remains from that robot.",
 }
 
 WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Remains from that robot.", -- NEEDS TRANSLATION
+	GENERIC = "Remains from that robot.",
 }
 
-WAXWELL.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "Even a pig has its limits.",
 	UPGRADED = "Now that's a vessel worthy of a gentleman's fortune.",
 	GENERIC = "A rather humble place for one's wealth.",
 }
 
-WAXWELL.DESCRIBE.MARSHMALLOWS = "How utterly saccharine." -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.MARSHMALLOWS = "How utterly saccharine."
 
-WAXWELL.DESCRIBE.KOKONUTCOOKIES = "A rather quaint little biscuit." -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.KOKONUTCOOKIES = "A rather quaint little biscuit."
 
-WAXWELL.DESCRIBE.BBQRIBS = "Finally, something with a little substance." -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.BBQRIBS = "Finally, something with a little substance."
 
-WAXWELL.DESCRIBE.BROWNIE = "Decadent, but acceptable." -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.BROWNIE = "Decadent, but acceptable."
 
-WAXWELL.DESCRIBE.CHOCOLATE_CAKE = "Now this is suitably indulgent." -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.CHOCOLATE_CAKE = "Now this is suitably indulgent."
 
-WAXWELL.DESCRIBE.SWORDFISHBLUEDINNER = "Homemade, but served with surprising refinement." -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.SWORDFISHBLUEDINNER = "Homemade, but served with surprising refinement."
 
-WAXWELL.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "An unsettling little creature.",
 	HELD = "Stay quiet now, would you?",
 }
 
-WAXWELL.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A remarkably nocturnal winter bird.",
 	HELD = "I can feel the wretched thing squirming.",
 }
 
-WAXWELL.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Hardly an impressive structure. Yet." -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Hardly an impressive structure. Yet."
 
-WAXWELL.DESCRIBE.KYNO_FISHINGROD_THULECITE = "I'm glad I'm not a fish." -- NEEDS TRANSLATION
+WAXWELL.DESCRIBE.KYNO_FISHINGROD_THULECITE = "I'm glad I'm not a fish."
+
+WAXWELL.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Even I must admit, it is rather exquisite."
+
+WAXWELL.DESCRIBE.OPALPRECIOUSCREAM = "Excessively ornate for something as simple as cream."
+
+WAXWELL.DESCRIBE.CATFISHSTICK = "A rather rustic way to prepare a catfish."
+
+WAXWELL.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A confection of questionable magical properties."

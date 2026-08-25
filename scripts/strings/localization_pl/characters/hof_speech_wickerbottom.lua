@@ -101,11 +101,17 @@ WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Nocne wzmocnienie wygasło."
 WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_START = "Zdaje się, że wzbudzam irracjonalną panikę."
 WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_END = "Mój niepokojący wpływ osłabł."
 
-WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_START = "The effects of time have been temporarily diminished." -- NEEDS TRANSLATION
-WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_END = "Temporal stability has returned to normal." -- NEEDS TRANSLATION
+WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_START = "The effects of time have been temporarily diminished."
+WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_END = "Temporal stability has returned to normal."
 
-WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I feel considerably more stable." -- NEEDS TRANSLATION
-WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "My stability has returned to normal." -- NEEDS TRANSLATION
+WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I feel considerably more stable."
+WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "My stability has returned to normal."
+
+WICKERBOTTOM.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "My offensive capabilities appear to have increased."
+WICKERBOTTOM.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "My offensive capabilities have returned to normal."
+
+WICKERBOTTOM.ANNOUNCE_KYNO_BADLUCKBUFF_START = "An unfortunate series of events appears imminent."
+WICKERBOTTOM.ANNOUNCE_KYNO_BADLUCKBUFF_END = "It seems the unfavorable influence has subsided."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzeba czegoś jeszcze."
 
@@ -136,13 +142,13 @@ WICKERBOTTOM.ANNOUNCE_KYNO_ROE_RESEARCHED = "Ikra zawiera niezwykłe właściwo�
 
 WICKERBOTTOM.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Zaskakująco zrównoważony posiłek."
 
-WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Oh dear... I seem to be afflicted by the plant's toxin.",
 	"The toxin from those nettles carries a rather unpleasant freezing sensation.",
 }
 
-WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Thankfully, the toxin's effects seem to be temporary." -- NEEDS TRANSLATION
+WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Thankfully, the toxin's effects seem to be temporary."
 
 WICKERBOTTOM.DESCRIBE.KYNO_ROE = "Pierwszy etap cyklu życia ryb."
 WICKERBOTTOM.DESCRIBE.KYNO_ROE_COOKED = "Pierwszy i ostatni etap tego cyklu życia."
@@ -531,7 +537,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_NEONFISH_COOKED = "Kuzyn Paracheirodon innesi, gotowy
 
 WICKERBOTTOM.DESCRIBE.KYNO_GROUPER = "Część rodziny Epinephelinae."
 WICKERBOTTOM.DESCRIBE.KYNO_GROUPER_COOKED = "Jedzenie surowej ryby mogłoby być niebezpieczne."
- 
+
 WICKERBOTTOM.DESCRIBE.KYNO_PIERROTFISH = "Hmm... Nie mogę zidentyfikować tego gatunku."
 WICKERBOTTOM.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Ryby są nosicielami wszelkiego rodzaju pasożytów, wiesz?"
 
@@ -841,7 +847,7 @@ WICKERBOTTOM.DESCRIBE.CHOCOLATE_BLACK = "Dziwne, brakuje w niej kakao."
 WICKERBOTTOM.DESCRIBE.CHOCOLATE_WHITE = "Dziwne, brakuje w niej kakao."
 
 WICKERBOTTOM.DESCRIBE.TRICOLORDANGO = "Miękka, kleista przekąska."
- 
+
 WICKERBOTTOM.DESCRIBE.FRIESFRENCH = "Klasyczne danie typu fast food. Szybkie i całkiem smaczne."
 
 WICKERBOTTOM.DESCRIBE.PIRATERUM = "To rum, ale dlaczego czuję się przy nim tak niepewnie?"
@@ -853,7 +859,7 @@ WICKERBOTTOM.DESCRIBE.ONIONRINGS = "Pokrojone cebule smażone w oleju. Całkiem 
 WICKERBOTTOM.DESCRIBE.DONUTS = "Słodkie wypieki. Klasyk w Ameryce."
 WICKERBOTTOM.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Ciasto. Klasyka w Ameryce."
 WICKERBOTTOM.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Ciasto. Klasyka w Ameryce."
- 
+
 WICKERBOTTOM.DESCRIBE.CINNAMONROLL = "Ciasto posypane cienką warstwą masła."
 
 WICKERBOTTOM.DESCRIBE.GUMMYBEARGERS = "Dziecięce cukierki w formie misiów."
@@ -1247,7 +1253,7 @@ WICKERBOTTOM.DESCRIBE.CHICKENROTISSERIE = "Wysoce efektywna metoda pieczenia dro
 
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Właściwie zaparzony napar ziołowy."
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Przyjemnie aromatyczny napar."
-WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A pleasantly refreshing herbal infusion." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A pleasantly refreshing herbal infusion."
 
 WICKERBOTTOM.DESCRIBE.SOULJUICE = "Intrygujący napar z esencji duszy i owocu."
 
@@ -1314,74 +1320,82 @@ WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN1 = "Mizerna wartość dla miejscowych."
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN2 = "Moneta o pewnym nominale."
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN3 = "Moneta o dużej wartości."
 
-WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES = "Prickling sensation followed by a cold feeling." -- NEEDS TRANSLATION
-WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES_DRIED = "Fascinating. Their below freezing properties remain even after drying." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES = "Prickling sensation followed by a cold feeling."
+WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES_DRIED = "Fascinating. Their below freezing properties remain even after drying."
 
-WICKERBOTTOM.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A practical container for seeds.",
 	FULL = "It can hold no additional seeds.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_FOODAMMO_TOMATO = "What a waste of Solanum Lycopersicum." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_FOODAMMO_TOMATO = "What a waste of Solanum Lycopersicum."
 
-WICKERBOTTOM.DESCRIBE.WX78MODULE_GOURMAND = "They dislike organics, but don't seem opposed to taking inspiration from them." -- NEEDS TRANSLATION
-WICKERBOTTOM.DESCRIBE.WX78MODULE_COOKER = "They dislike organics, but don't seem opposed to taking inspiration from them." -- NEEDS TRANSLATION
-WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER = "They dislike organics, but don't seem opposed to taking inspiration from them." -- NEEDS TRANSLATION
-WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER2 = "They dislike organics, but don't seem opposed to taking inspiration from them." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.WX78MODULE_GOURMAND = "They dislike organics, but don't seem opposed to taking inspiration from them."
+WICKERBOTTOM.DESCRIBE.WX78MODULE_COOKER = "They dislike organics, but don't seem opposed to taking inspiration from them."
+WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER = "They dislike organics, but don't seem opposed to taking inspiration from them."
+WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER2 = "They dislike organics, but don't seem opposed to taking inspiration from them."
 
 WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Once a repository, now just the remains of it.", -- NEEDS TRANSLATION
+	GENERIC = "Once a repository, now just the remains of it.",
 }
 
 WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Once a repository, now just the remains of it.", -- NEEDS TRANSLATION
+	GENERIC = "Once a repository, now just the remains of it.",
 }
 
 WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Once a repository, now just the remains of it.", -- NEEDS TRANSLATION
+	GENERIC = "Once a repository, now just the remains of it.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "Its capacity for currency has been reached.",
 	UPGRADED = "An remarkably capacious receptacle for coinage.",
 	GENERIC = "A common ceramic repository for one's savings.",
 }
 
-WICKERBOTTOM.DESCRIBE.MARSHMALLOWS = "A confection of whipped sugar and gelatin." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.MARSHMALLOWS = "A confection of whipped sugar and gelatin."
 
-WICKERBOTTOM.DESCRIBE.KOKONUTCOOKIES = "A biscuit prepared with coconut and sugar." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KOKONUTCOOKIES = "A biscuit prepared with coconut and sugar."
 
-WICKERBOTTOM.DESCRIBE.BBQRIBS = "Barbecued ribs, prepared with considerable heat." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.BBQRIBS = "Barbecued ribs, prepared with considerable heat."
 
-WICKERBOTTOM.DESCRIBE.BROWNIE = "A dense chocolate confection." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.BROWNIE = "A dense chocolate confection."
 
-WICKERBOTTOM.DESCRIBE.CHOCOLATE_CAKE = "A rich cake prepared with cocoa and sugar." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.CHOCOLATE_CAKE = "A rich cake prepared with cocoa and sugar."
 
-WICKERBOTTOM.DESCRIBE.SWORDFISHBLUEDINNER = "A neatly prepared meal, quite suitable for travel." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.SWORDFISHBLUEDINNER = "A neatly prepared meal, quite suitable for travel."
 
-WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "A nocturnal bird with remarkably keen eyes.",
 	HELD = "It seems rather restless in there.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A northern raptor well adapted to frigid climates.",
 	HELD = "It seems determined to peck its way out.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "An unfinished place for salt extraction." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "An unfinished place for salt extraction."
 
-WICKERBOTTOM.DESCRIBE.KYNO_FISHINGROD_THULECITE = "A very old and sturdy fishing rod." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_FISHINGROD_THULECITE = "A very old and sturdy fishing rod."
+
+WICKERBOTTOM.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "An exceptionally rare confectionery ingredient with remarkable iridescence."
+
+WICKERBOTTOM.DESCRIBE.OPALPRECIOUSCREAM = "Whipped cream exhibiting an unusual iridescent sheen."
+
+WICKERBOTTOM.DESCRIBE.CATFISHSTICK = "A black catfish, grilled to a rather appetizing degree."
+
+WICKERBOTTOM.DESCRIBE.OPALPRECIOUSLOLLIPOP = "An unusual confection with rather unpredictable effects."

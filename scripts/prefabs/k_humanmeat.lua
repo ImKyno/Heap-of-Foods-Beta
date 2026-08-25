@@ -66,7 +66,7 @@ local function fn()
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
 	
 	inst:AddComponent("luckitem")
-	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_LARGE)
+	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_SUPERTINY)
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_humanmeat_cooked"

@@ -73,7 +73,7 @@ local function MakeRoe(data)
 	
 		inst:AddComponent("stackable")
 		inst.components.stackable.maxsize = data.stacksize or TUNING.STACK_SIZE_SMALLITEM
-		
+
 		inst:AddComponent("tradable")
 		inst.components.tradable.goldvalue = data.goldvalue or TUNING.GOLD_VALUES.MEAT
 		inst.components.tradable.octopusvalue = data.octopusvalue or TUNING.OCTOPUS_VALUES.SEAFOOD

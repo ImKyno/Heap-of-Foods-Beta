@@ -139,7 +139,7 @@ local function MakePreparedBrew(data)
 		if data.bloom ~= nil then
 			inst.AnimState:SetBloomEffectHandle("shaders/anim.ksh")
 			inst.AnimState:SetLightOverride(.1)
-			inst.lightcolour = data.bloomlight
+			inst.lightcolour = data.bloomlight or nil
 		end
 
 		inst:AddTag("nospice")

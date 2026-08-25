@@ -32,6 +32,7 @@ local LOADINGTIPS   =
 	RUINEDSAPTREE   = "Uważaj, jeśli Drzewa Sugarwood są nasycone sokiem, a nie zbierasz go, może zepsuć się, wytwarzając Zniszczony Sok!",
 	PIGELDERFOODS   = "\"Słyszałem, że ten dziwny Świniak na różowej wyspie, chce jakiegoś jedzenia... Coś z karmelami lub wobstami.\" -W",
 	SALTPOND        = "Możesz łowić inny rodzaj ryb w Słonych Stawach Archipelagu Spokoju. Spróbuj!",
+	SALTPOND2       = "Sztuczne zbiorniki solne wytwarzają kryształy soli wolniej niż naturalne i można je budować wyłącznie na skalistym podłożu.",
 	SALTRACK        = "Sólna Półka może być zainstalowana na Słonym Stawie, aby produkować Kryształy Sólne co cztery dni.",
 	SPOTTYSHRUB     = "Krzewy Plamy można znaleźć na całym Archipelagu Spokoju. Można je zabrać do domu za pomocą Łopaty.",
 	SWEETFLOWER     = "Słodki Kwiat może być użyty w Crock Pocie jako opcja słodzenia.",
@@ -130,6 +131,7 @@ local LOADINGTIPS   =
 	ELDERMANDRAKE1  = "Starsze Mandragory po zabiciu usypiają wszystkie stworzenia w pobliżu na kilka sekund.",
 	ELDERMANDRAKE2  = "Uważaj! Starsze Mandragory nie lubią, gdy nosisz w pobliżu warzywa lub inne mandragory.",
 	ELDERMANDRAKE3  = "\"Słyszałem, że wczoraj ktoś znalazł dziwnie wyglądające liściaste domy w jaskiniach niedaleko grzybowego lasu. Ciekawe, kto tam mieszka...\" -W",
+	ELDERMANDRAKE4  = "Starsze Mandragory mają szansę upuścić nasiona roślin uprawnych lub chwastów, w zależności od pory roku.",
 	EARMUFFSHAT     = "Królicze Nauszniki zapewniają teraz ochronę przed głośnymi dźwiękami!",
 	PIGCOIN1        = "Przygotowane Potrawy można wymieniać z Królem Świni na Monety. Każde jedzenie ma własną wartość; rzadsze i lepsze potrawy są warte więcej niż zwykłe dania.",
 	PIGCOIN2        = "Król Świni jest głodny i domaga się jedzenia! W zamian oferuje Monety (jego najnowszą próbę stworzenia waluty, przynajmniej według jego poddanych).",
@@ -137,6 +139,8 @@ local LOADINGTIPS   =
 	PARTITIO1       = "Partitio to dumny wieprz mieszkający w Lesie Liściastym. Sprzedaje wyłącznie towary najwyższej jakości i chętnie poznaje nowych klientów.",
 	PARTITIO2       = "Po pewnych niefortunnych wydarzeniach z przeszłości Partitio odmawia ponownego prowadzenia interesów z Mermami!",
 	PARTITIO3       = "Partitio odkrył, że ktoś zniszczył jego dom. Potrzebuje teraz pomocy, aby przywrócić go do dawnej świetności i ponownie rozpocząć handel.",
+	CRITDAMAGE      = "Dzięki Rozświetlająca Bita śmietana twoje ataki mogą zadawać trafienia krytyczne, zapewniając łącznie aż 150% dodatkowych obrażeń!",
+	RANDOMBUFF      = "Lizak Shimmer Lollipop po zjedzeniu wywołuje losowy efekt uboczny. Czujesz się dziś szczęśliwy?",
 }
 
 for k, v in pairs(LOADINGTIPS) do

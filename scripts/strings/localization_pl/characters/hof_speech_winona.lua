@@ -101,11 +101,17 @@ WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Koniec trybu nocnego."
 WINONA.ANNOUNCE_KYNO_PANICBUFF_START = "Wygląda na to, że robię niezłe wrażenie."
 WINONA.ANNOUNCE_KYNO_PANICBUFF_END = "I po efekcie zastraszania."
 
-WINONA.ANNOUNCE_KYNO_CUREBUFF_START = "That's gonna make supplies last." -- NEEDS TRANSLATION
-WINONA.ANNOUNCE_KYNO_CUREBUFF_END = "Back to regular wear and tear." -- NEEDS TRANSLATION
+WINONA.ANNOUNCE_KYNO_CUREBUFF_START = "That's gonna make supplies last."
+WINONA.ANNOUNCE_KYNO_CUREBUFF_END = "Back to regular wear and tear."
 
-WINONA.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Got my feet planted nice and firm." -- NEEDS TRANSLATION
-WINONA.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Back to being easy to shove." -- NEEDS TRANSLATION
+WINONA.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Got my feet planted nice and firm."
+WINONA.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Back to being easy to shove."
+
+WINONA.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Now that's what I call some extra horsepower!"
+WINONA.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Guess we're back to standard output."
+
+WINONA.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Looks like trouble's coming MY way."
+WINONA.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Looks like I'm finally catching a break."
 
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie."
 
@@ -136,13 +142,13 @@ WINONA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Nieładne, ale użyteczne. Wiedza to wied
 
 WINONA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Spełnia swoje zadanie."
 
-WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Yeesh, I feel hotter than a ice block!",
 	"Ugh, I'm freezin' up...",
 }
 
-WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm not keen to try that again." -- NEEDS TRANSLATION
+WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm not keen to try that again."
 
 WINONA.DESCRIBE.KYNO_ROE = "Ikra, ikra, ikra rybka... Chyba wariuję."
 WINONA.DESCRIBE.KYNO_ROE_COOKED = "Przynajmniej nie miały twarzy."
@@ -531,7 +537,7 @@ WINONA.DESCRIBE.KYNO_NEONFISH_COOKED = "Przykro mi. Muszę coś jeść."
 
 WINONA.DESCRIBE.KYNO_GROUPER = "Jego głupkowatość jest trochę urocza."
 WINONA.DESCRIBE.KYNO_GROUPER_COOKED = "Przykro mi, kolego. To było albo ty, albo ja."
- 
+
 WINONA.DESCRIBE.KYNO_PIERROTFISH = "Nie mogę jej zabić! Patrz, jaka urocza!"
 WINONA.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Pyszne, pyszne wyrzuty sumienia."
 
@@ -841,7 +847,7 @@ WINONA.DESCRIBE.CHOCOLATE_BLACK = "Mogę to nazwać przerwą od pracy."
 WINONA.DESCRIBE.CHOCOLATE_WHITE = "Mogę to nazwać przerwą od pracy."
 
 WINONA.DESCRIBE.TRICOLORDANGO = "Co to? Jakiś deser?"
- 
+
 WINONA.DESCRIBE.FRIESFRENCH = "Mhmm... Smakują dobrze."
 
 WINONA.DESCRIBE.PIRATERUM = "O rany, to na pewno niebezpieczny napój."
@@ -853,7 +859,7 @@ WINONA.DESCRIBE.ONIONRINGS = "Szybka przekąska, akurat by dalej pracować."
 WINONA.DESCRIBE.DONUTS = "Jakby co, mamy pączki na przekupienie gliniarzy!"
 WINONA.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Cóż, jeśli przyjdą policjanci, nie martw się. Mamy donuty!"
 WINONA.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Cóż, jeśli przyjdą policjanci, nie martw się. Mamy donuty!"
- 
+
 WINONA.DESCRIBE.CINNAMONROLL = "Cukrowa bułka, hę?"
 
 WINONA.DESCRIBE.GUMMYBEARGERS = "Charlie zawsze lubiła te cukierki, gdy była młodsza."
@@ -1247,7 +1253,7 @@ WINONA.DESCRIBE.CHICKENROTISSERIE = "Powolny obrót, równe pieczenie. Szanuję 
 
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Dobre na krótką przerwę."
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Wcale nie takie złe."
-WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Now that's refreshing." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Now that's refreshing."
 
 WINONA.DESCRIBE.SOULJUICE = "To dopiero dziwny napój energetyczny."
 
@@ -1314,74 +1320,82 @@ WINONA.DESCRIBE.KYNO_PIGCOIN1 = "Szczęśliwa moneta."
 WINONA.DESCRIBE.KYNO_PIGCOIN2 = "Zachowaj to na czarną godzinę."
 WINONA.DESCRIBE.KYNO_PIGCOIN3 = "Muszę uważać, żeby nie stać się bogatą głupią osobą."
 
-WINONA.DESCRIBE.KYNO_ICENETTLES = "I mean, they could be a good coolant for the machinery." -- NEEDS TRANSLATION
-WINONA.DESCRIBE.KYNO_ICENETTLES_DRIED = "These look more efficient, and colder." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_ICENETTLES = "I mean, they could be a good coolant for the machinery."
+WINONA.DESCRIBE.KYNO_ICENETTLES_DRIED = "These look more efficient, and colder."
 
-WINONA.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "Good organizational tool.",
 	FULL = "Storage capacity reached.",
 }
 
-WINONA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Don't get those juices near my machines!" -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Don't get those juices near my machines!"
 
-WINONA.DESCRIBE.WX78MODULE_GOURMAND = "WX, you gotta stop leavin' this stuff lying around!" -- NEEDS TRANSLATION
-WINONA.DESCRIBE.WX78MODULE_COOKER = "WX, you gotta stop leavin' this stuff lying around!" -- NEEDS TRANSLATION
-WINONA.DESCRIBE.WX78MODULE_DRYER = "WX, you gotta stop leavin' this stuff lying around!" -- NEEDS TRANSLATION
-WINONA.DESCRIBE.WX78MODULE_DRYER2 = "WX, you gotta stop leavin' this stuff lying around!" -- NEEDS TRANSLATION
+WINONA.DESCRIBE.WX78MODULE_GOURMAND = "WX, you gotta stop leavin' this stuff lying around!"
+WINONA.DESCRIBE.WX78MODULE_COOKER = "WX, you gotta stop leavin' this stuff lying around!"
+WINONA.DESCRIBE.WX78MODULE_DRYER = "WX, you gotta stop leavin' this stuff lying around!"
+WINONA.DESCRIBE.WX78MODULE_DRYER2 = "WX, you gotta stop leavin' this stuff lying around!"
 
 WINONA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Wonder what WX left behind.", -- NEEDS TRANSLATION
+	GENERIC = "Wonder what WX left behind.",
 }
 
 WINONA.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Wonder what WX left behind.", -- NEEDS TRANSLATION
+	GENERIC = "Wonder what WX left behind.",
 }
 
 WINONA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Wonder what WX left behind.", -- NEEDS TRANSLATION
+	GENERIC = "Wonder what WX left behind.",
 }
 
-WINONA.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "This pig's at capacity.",
 	UPGRADED = "Now that's what I call a proper storage solution.",
 	GENERIC = "A simple way to keep the change together.",
 }
 
-WINONA.DESCRIBE.MARSHMALLOWS = "A sweet little pick-me-up." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.MARSHMALLOWS = "A sweet little pick-me-up."
 
-WINONA.DESCRIBE.KOKONUTCOOKIES = "A good snack for the road." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KOKONUTCOOKIES = "A good snack for the road."
 
-WINONA.DESCRIBE.BBQRIBS = "Now that's what I call a good lunch." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.BBQRIBS = "Now that's what I call a good lunch."
 
-WINONA.DESCRIBE.BROWNIE = "A little chocolate makes a long day better." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.BROWNIE = "A little chocolate makes a long day better."
 
-WINONA.DESCRIBE.CHOCOLATE_CAKE = "That's a cake worth taking a break for." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.CHOCOLATE_CAKE = "That's a cake worth taking a break for."
 
-WINONA.DESCRIBE.SWORDFISHBLUEDINNER = "That's some fancy dinner." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.SWORDFISHBLUEDINNER = "That's some fancy dinner."
 
-WINONA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "Looks like it works the night shift.",
 	HELD = "It's keeping itself busy in there.",
 }
 
-WINONA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "Looks like this one's built for the cold.",
 	HELD = "That bird's gonna tear up my pocket.",
 }
 
-WINONA.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like the foundation for a salt extractor." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like the foundation for a salt extractor."
 
-WINONA.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Old stuff is always more durable!" -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Old stuff is always more durable!"
+
+WINONA.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Pretty fancy stuff for a kitchen ingredient."
+
+WINONA.DESCRIBE.OPALPRECIOUSCREAM = "Fancy cream. Must be expensive."
+
+WINONA.DESCRIBE.CATFISHSTICK = "Not fancy, but it'll fill you up."
+
+WINONA.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Shiny candy with unpredictable results. Sounds about right."

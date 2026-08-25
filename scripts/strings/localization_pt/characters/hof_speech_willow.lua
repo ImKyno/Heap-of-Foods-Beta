@@ -107,6 +107,12 @@ WILLOW.ANNOUNCE_KYNO_CUREBUFF_END = "Tudo voltou a apodrecer."
 WILLOW.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Tenta me empurrar agora!"
 WILLOW.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Acho que agora é fácil me empurrar."
 
+WILLOW.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Isso sim é um poder de fogo de verdade!"
+WILLOW.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Hã. Meu aumento de poder acabou!"
+
+WILLOW.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Aff. Estou com um pressentimento muito ruim sobre isso."
+WILLOW.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Finalmente. As coisas parecem menos terríveis!"
+
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso colocar algo diferente aqui!"
 
 WILLOW.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ugh, coisa errada!"
@@ -531,7 +537,7 @@ WILLOW.DESCRIBE.KYNO_NEONFISH_COOKED = "O fogo tirou a maior parte do cheiro de 
 
 WILLOW.DESCRIBE.KYNO_GROUPER = "Você parece meio bobo."
 WILLOW.DESCRIBE.KYNO_GROUPER_COOKED = "O fogo queimou as partes mais nojentas."
- 
+
 WILLOW.DESCRIBE.KYNO_PIERROTFISH = "Achei você!"
 WILLOW.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Queimei na medida certa."
 
@@ -841,7 +847,7 @@ WILLOW.DESCRIBE.CHOCOLATE_BLACK = "Ahh, eu realmente sinto falta desses!"
 WILLOW.DESCRIBE.CHOCOLATE_WHITE = "Ahh, eu realmente sinto falta desses!"
 
 WILLOW.DESCRIBE.TRICOLORDANGO = "Lanchinho bem doce."
- 
+
 WILLOW.DESCRIBE.FRIESFRENCH = "Fogo e óleo fazem tudo ficar bom!"
 
 WILLOW.DESCRIBE.PIRATERUM = "Não devo beber isso."
@@ -853,7 +859,7 @@ WILLOW.DESCRIBE.ONIONRINGS = "Óleo e fogo deixam tudo melhor!"
 WILLOW.DESCRIBE.DONUTS = "Oh, uau. Estava me perguntando quando apareceriam."
 WILLOW.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Oh, uau. Estava me perguntando quando apareceriam."
 WILLOW.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Oh, uau. Estava me perguntando quando apareceriam."
- 
+
 WILLOW.DESCRIBE.CINNAMONROLL = "Um pãozinho!"
 
 WILLOW.DESCRIBE.GUMMYBEARGERS = "Pequenos ursinhos de doce!"
@@ -1077,7 +1083,7 @@ WILLOW.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "Pelo menos agora ele tem um lugar decente pra dormir.",
 }
 
-WILLOW.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WILLOW.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Só cogumelos... ficam melhores quando pegam fogo.",
 	PICKED = "Tudo acabado por enquanto.",
@@ -1087,7 +1093,7 @@ WILLOW.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WILLOW.DESCRIBE.KYNO_TRUFFLES = "Será que queimam bem? Só há uma forma de saber."
 WILLOW.DESCRIBE.KYNO_TRUFFLES_COOKED = "Muito melhor depois de passar pelo fogo!"
 
-WILLOW.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WILLOW.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Finalmente algo que não vai queimar... a menos que eu faça.",
 	FULL = "Hmm, nada mal.",
@@ -1112,7 +1118,7 @@ WILLOW.DESCRIBE.TRUFFLEOIL = "Ugh, cheira a coisa chique... mas aposto que queim
 WILLOW.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Prefiro queimar as coisas do que construí-las."
 WILLOW.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Argh, tanta água... não dá pra queimar em vez disso?"
 
-WILLOW.DESCRIBE.KYNO_FISHFARMPLOT = 
+WILLOW.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "Ooh, peixinhos nadando por aí!",
 	FUEL_HIGH = "Bem alimentados.",
@@ -1175,7 +1181,7 @@ WILLOW.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Haha, nojento."
 WILLOW.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Que careca bonita, pedra."
 WILLOW.DESCRIBE.KYNO_BRAINROCK_CORAL = "Acho que posso aprender a gostar do sabor..."
 
-WILLOW.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WILLOW.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "Ideia genial se esconder entre essas pedras burras.",
 	PICKED = "Acho que ficou sem pensamentos.",
@@ -1183,7 +1189,7 @@ WILLOW.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WILLOW.DESCRIBE.BRAINMETTERSOUP = "Sopa para crianças."
 
-WILLOW.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WILLOW.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "Ele parece meio sonolento.",
 	SLEEPING = "Ótimo. Agora ele tá quieto.",
@@ -1191,7 +1197,7 @@ WILLOW.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WILLOW.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Está cheio de delícias do mar!"
 
-WILLOW.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WILLOW.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "Isso parece importante.",
 	WAITING = "Ainda está molhado demais pra queimar.",
@@ -1207,7 +1213,7 @@ WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Me lembra da minha infância."
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Bolo! O melhor amigo do fogo!"
 WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Queria que estourassem com fogo!"
 
-WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WILLOW.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "Pipoca, fogo, combinação perfeita!",
 	FUEL_HIGH = "Queimando bem e constante.",
@@ -1385,3 +1391,11 @@ WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 WILLOW.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Não está pegando fogo ainda."
 
 WILLOW.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Eu deveria tentar usar isso na Wurt."
+
+WILLOW.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Ooooh, açúcar brilhante!"
+
+WILLOW.DESCRIBE.OPALPRECIOUSCREAM = "É como fogo batido... mas bonito!"
+
+WILLOW.DESCRIBE.CATFISHSTICK = "Peixe no espeto. Legal."
+
+WILLOW.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Ooh, brilhante! Será que ele faz alguma coisa?"

@@ -107,6 +107,12 @@ WEBBER.ANNOUNCE_KYNO_CUREBUFF_END = "Ah... eles voltaram a estragar."
 WEBBER.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Estamos super fortes agora!"
 WEBBER.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Ah, não! Podemos ser empurrados de novo."
 
+WEBBER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Uau! Agora a gente bate muito mais forte!"
+WEBBER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Ah... não somos mais tão fortes."
+
+WEBBER.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Com certeza algo ruim vai acontecer."
+WEBBER.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Acho que nossa má sorte acabou!"
+
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WEBBER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Achamos que isso não é o que ele quer."
@@ -531,7 +537,7 @@ WEBBER.DESCRIBE.KYNO_NEONFISH_COOKED = "Mmm, cheira bem!"
 
 WEBBER.DESCRIBE.KYNO_GROUPER = "Haha! Que carinha engraçada."
 WEBBER.DESCRIBE.KYNO_GROUPER_COOKED = "Ele gosta da cabeça do peixe. Eu não."
- 
+
 WEBBER.DESCRIBE.KYNO_PIERROTFISH = "É escorregadio!"
 WEBBER.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Não é mais tão fofo."
 
@@ -645,7 +651,7 @@ WEBBER.DESCRIBE.KYNO_COOKWARE_OVEN = "Mamãe disse para eu ter cuidado perto do 
 WEBBER.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Mamãe disse para eu ter cuidado perto do forno."
 WEBBER.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Mamãe disse para eu ter cuidado perto do forno."
 
-WEBBER.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WEBBER.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "O que será que tem aqui embaixo?",
 	FLIPPED = "Whoa! Olha isso!",
@@ -841,7 +847,7 @@ WEBBER.DESCRIBE.CHOCOLATE_BLACK = "Uma barra de chocolate! Nós adoramos!"
 WEBBER.DESCRIBE.CHOCOLATE_WHITE = "Uma barra de chocolate! Nós adoramos!"
 
 WEBBER.DESCRIBE.TRICOLORDANGO = "Oh! É nossa primeira vez vendo esse tipo de doce."
- 
+
 WEBBER.DESCRIBE.FRIESFRENCH = "Crocante!"
 
 WEBBER.DESCRIBE.PIRATERUM = "Não devemos beber isso."
@@ -853,7 +859,7 @@ WEBBER.DESCRIBE.ONIONRINGS = "Cheiro bom. Gostamos!"
 WEBBER.DESCRIBE.DONUTS = "Delícia! Rosquinhas!"
 WEBBER.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Delícia! Rosquinhas!"
 WEBBER.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Delícia! Rosquinhas!"
- 
+
 WEBBER.DESCRIBE.CINNAMONROLL = "Tem um sabor ótimo, gostamos!"
 
 WEBBER.DESCRIBE.GUMMYBEARGERS = "Oba, ursinhos de goma!"
@@ -1385,3 +1391,11 @@ WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 WEBBER.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Não está pronto ainda!"
 
 WEBBER.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Ajuda a pescar um monte de peixes!"
+
+WEBBER.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "É como comer arco-íris minúsculos!"
+
+WEBBER.DESCRIBE.OPALPRECIOUSCREAM = "Parece uma nuvem de arco-íris!"
+
+WEBBER.DESCRIBE.CATFISHSTICK = "É um peixe inteiro no espeto!"
+
+WEBBER.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Ooh! É tão lindo! Espero que a gente consiga algo bom!"

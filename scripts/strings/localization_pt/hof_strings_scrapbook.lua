@@ -133,6 +133,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "Ataques têm uma pequena c
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BATILISK = "Assusta batiliscos próximos por um certo período de tempo."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_KNOCKBACK = "Diminui a repulsão por um certo período de tempo."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CHILLEDATTACK = "A cada 3 ataques consecutivos contra o mesmo alvo faz com que Estilhaços Gélido apareçam. Estilhaços Gélido causam dano em uma pequena are ao redor do alvo."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRITDAMAGE = "Ataques têm uma pequena chance de causar um acerto crítico com 150% de dano."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "Diminui a sorte por um certo período de tempo."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "Concede um efeito aleatório.\n\n\"VAMOS APOSTAR!\" - Alguém, provavelmente."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado a comidas da Panela usando uma Estação Portátil de Temperos.\n\nConsumir um prato temperado com Pó Conservante restaura completamente seu tempo de deterioração.\n\nReduz a taxa de deterioração dos itens no inventário em 25%.\n\nAumenta a duração de outros efeitos secundários em 25%.\n\nDuração: 4 minutos."

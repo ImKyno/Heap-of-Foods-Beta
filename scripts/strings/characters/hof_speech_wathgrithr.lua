@@ -107,6 +107,12 @@ WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_END = "Even the finest feast must fade!"
 WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I shall not be moved!"
 WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "The battle may move me once more!"
 
+WATHGRITHR.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "My blows shall shake the battlefield!"
+WATHGRITHR.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "My strength has returned to its usual measure."
+
+WATHGRITHR.ANNOUNCE_KYNO_BADLUCKBUFF_START = "A dark omen hangs above me!"
+WATHGRITHR.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The ill omen has been banished!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Wrong feast! Beast wants a more delightful food!"
@@ -172,7 +178,7 @@ WATHGRITHR.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "It smells energizing."
 
 WATHGRITHR.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Needs hot soil."
 
-WATHGRITHR.DESCRIBE.KYNO_COFFEEBUSH = 
+WATHGRITHR.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "Just add water?",
 	PICKED = "Its bounty sleeps!",
@@ -181,7 +187,7 @@ WATHGRITHR.DESCRIBE.KYNO_COFFEEBUSH =
 
 WATHGRITHR.DESCRIBE.DUG_KYNO_SPOTBUSH = "Needs proper planting."
 
-WATHGRITHR.DESCRIBE.KYNO_SPOTBUSH = 
+WATHGRITHR.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Spice for the fanciest of foods.",
 	PICKED = "Its bounty sleeps!",
@@ -249,7 +255,7 @@ WATHGRITHR.DESCRIBE.CUCUMBERSALAD = "Vegetables are for animals. Animals are for
 
 WATHGRITHR.DESCRIBE.DUG_KYNO_WILDWHEAT = "Better plant it already!"
 
-WATHGRITHR.DESCRIBE.KYNO_WILDWHEAT = 
+WATHGRITHR.DESCRIBE.KYNO_WILDWHEAT =
 {
 	GENERIC = "That could be useful.",
 	PICKED = "Its bounty sleeps!",
@@ -408,7 +414,7 @@ WATHGRITHR.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Ha!"
 
 WATHGRITHR.DESCRIBE.KYNO_SEEDS_KIT = "Ewww."
 
-WATHGRITHR.DESCRIBE.KYNO_LIMPETROCK = 
+WATHGRITHR.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "The meat stone!",
 	PICKED = "They flee from harvest!",
@@ -418,7 +424,7 @@ WATHGRITHR.DESCRIBE.KYNO_LIMPETROCK =
 WATHGRITHR.DESCRIBE.KYNO_LIMPETS = "Rock meat!"
 WATHGRITHR.DESCRIBE.KYNO_LIMPETS_COOKED = "Let us feast!"
 
-WATHGRITHR.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WATHGRITHR.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "Freya looks down upon this.",
 	PICKED = "It gathers strength!",
@@ -429,7 +435,7 @@ WATHGRITHR.DESCRIBE.KYNO_LOTUS_ROOT = "I have no use for it!"
 WATHGRITHR.DESCRIBE.KYNO_LOTUS_FLOWER = "It possesses Freya's great beauty."
 WATHGRITHR.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "I care not to consume this."
 
-WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "A weed I cannot crush under my boot.",
 	PICKED = "They retreat!",
@@ -441,7 +447,7 @@ WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Sea snack."
 WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS_DRIED = "It is chewy..."
 WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS_ROOT = "I have no use for it!"
 
-WATHGRITHR.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WATHGRITHR.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "'Tis be a water vegetable, how can this be possible!",
 	PICKED = "It gathers strength!",
@@ -452,7 +458,7 @@ WATHGRITHR.DESCRIBE.KYNO_TAROROOT_ROOT = "I have no use for it!"
 WATHGRITHR.DESCRIBE.KYNO_TAROROOT = "Purpley and bulbous."
 WATHGRITHR.DESCRIBE.KYNO_TAROROOT_COOKED = "Food for the weak."
 
-WATHGRITHR.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WATHGRITHR.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "I hate it.",
 	PICKED = "It shall rise again!",
@@ -479,7 +485,7 @@ WATHGRITHR.DESCRIBE.CATFOOD = "Tis' be for brave cats!"
 
 WATHGRITHR.DESCRIBE.KATFOOD = "Tis' be for brave cats!"
 
-WATHGRITHR.DESCRIBE.KYNO_BANANATREE = 
+WATHGRITHR.DESCRIBE.KYNO_BANANATREE =
 {
 	GENERIC = "A flimsy monkey tree.",
 	PICKED = "It must gather strength!",
@@ -491,7 +497,7 @@ WATHGRITHR.DESCRIBE.KYNO_BANANATREE =
 WATHGRITHR.DESCRIBE.KYNO_BANANA = "Monkey food."
 WATHGRITHR.DESCRIBE.KYNO_BANANA_COOKED = "Warmed monkey food."
 
-WATHGRITHR.DESCRIBE.KYNO_KOKONUTTREE = 
+WATHGRITHR.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "Do you forsake branches, tree?",
 	PICKED = "It must gather strength!",
@@ -531,7 +537,7 @@ WATHGRITHR.DESCRIBE.KYNO_NEONFISH_COOKED = "Njord gives me my fill this day."
 
 WATHGRITHR.DESCRIBE.KYNO_GROUPER = "Aegir shall not save you this day."
 WATHGRITHR.DESCRIBE.KYNO_GROUPER_COOKED = "Thank Njord for this gift!"
- 
+
 WATHGRITHR.DESCRIBE.KYNO_PIERROTFISH = "I wish this meat did not have such large eyes."
 WATHGRITHR.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Thank you, fish, for the gift of thy meat."
 
@@ -555,7 +561,7 @@ WATHGRITHR.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "For pillaging from the trees."
 
 WATHGRITHR.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "It doth trap sea-meat."
 
-WATHGRITHR.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WATHGRITHR.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "Your liege.",
 	SLEEPING =  "He slumbers!",
@@ -601,7 +607,7 @@ WATHGRITHR.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "T'would be an honor to be eaten b
 
 WATHGRITHR.DESCRIBE.KYNO_SLAUGHTERTOOL = "Tis a weapon of beastly slaughter!"
 
-WATHGRITHR.DESCRIBE.KYNO_CHICKEN2 = 
+WATHGRITHR.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Tis walking meat.",
 	COOP = "The beast is claimed!",
@@ -617,7 +623,7 @@ WATHGRITHR.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "Break forth, tiny champion!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_CHICKENHOUSE = 
+WATHGRITHR.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "A hall for egg-laying beasts!",
 	FULL = "The eggs await their glorious fate!",
@@ -645,7 +651,7 @@ WATHGRITHR.DESCRIBE.KYNO_COOKWARE_OVEN = "I shall cook things in thee!"
 WATHGRITHR.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "I shall cook things in thee!"
 WATHGRITHR.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "I shall cook things in thee!"
 
-WATHGRITHR.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WATHGRITHR.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Stone! Reveal to me thine secrets!",
 	FLIPPED = "They scatter before me!",
@@ -692,7 +698,7 @@ WATHGRITHR.DESCRIBE.PEPPERROLLS = "Stay at bay, vegetables!"
 
 WATHGRITHR.DESCRIBE.KYNO_SAPHEALER = "The source of the trees sickness."
 
-WATHGRITHR.DESCRIBE.KYNO_OCEAN_WRECK = 
+WATHGRITHR.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Longships litter the path to Valhalla.",
 	PICKED = "The spoils have fled!",
@@ -714,7 +720,7 @@ WATHGRITHR.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Excellent battle provisions."
 
 WATHGRITHR.DESCRIBE.KYNO_BREWBOOK = "'Tis filled with too many non-meat dishes if you ask me."
 
-WATHGRITHR.DESCRIBE.KYNO_WOODENKEG = 
+WATHGRITHR.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "The gods liquor-maker!",
 	BREWING_LONG = "The drink must age with honor!",
@@ -723,7 +729,7 @@ WATHGRITHR.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "Destroyed by flames!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_PRESERVESJAR = 
+WATHGRITHR.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "It's not my kind...",
 	BREWING_LONG = "The feast must wait!",
@@ -732,7 +738,7 @@ WATHGRITHR.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Destroyed by flames!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_ANTCHEST = 
+WATHGRITHR.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "A shieldmaiden has no use for a honey maker!",
 	HONEY = "I have no use for all that honey.",
@@ -748,7 +754,7 @@ WATHGRITHR.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Even touched by fire, I'll not co
 WATHGRITHR.DESCRIBE.KYNO_PIKO = "Dost thou crave battle?"
 WATHGRITHR.DESCRIBE.KYNO_PIKO_ORANGE = "I hath no use for it."
 
-WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "'Tis an adequate tree.",
 	CHOPPED = "Its bounty is claimed!",
@@ -756,7 +762,7 @@ WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 	BURNT = "Felled by flames!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
 	GENERIC = "'Tis an adequate tree.",
 	BURNING = "Their hall falls to flames!",
@@ -764,26 +770,26 @@ WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Yield your secrets, box!"
 
-WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "Is this dwelling made of fish?",
 	BURNT = "Laid low by flame!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "The fisherfolk dwell here.",
 	CRAFTED = "A hall worthy of its dweller!",
 	BURNT = "The stench of defeat!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "The hanging sausages looks tasty!",
 	OCCUPIED = "The merchant slumbers!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "Blergh, where are all the meats?",
 	EMPTY = "Sammy's wagon is barren!",
@@ -841,7 +847,7 @@ WATHGRITHR.DESCRIBE.CHOCOLATE_BLACK = "It is not meat but..."
 WATHGRITHR.DESCRIBE.CHOCOLATE_WHITE = "It is not meat but..."
 
 WATHGRITHR.DESCRIBE.TRICOLORDANGO = "It doesn't seem to be meat."
- 
+
 WATHGRITHR.DESCRIBE.FRIESFRENCH = "It's not meat!"
 
 WATHGRITHR.DESCRIBE.PIRATERUM = "Smells weird and emits an evil aura."
@@ -853,7 +859,7 @@ WATHGRITHR.DESCRIBE.ONIONRINGS = "Roasted veggies, yuck!"
 WATHGRITHR.DESCRIBE.DONUTS = "Why is it so sweet? I can't understand!"
 WATHGRITHR.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Why is it so sweet? I can't understand!"
 WATHGRITHR.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Why is it so sweet? I can't understand!"
- 
+
 WATHGRITHR.DESCRIBE.CINNAMONROLL = "Pillow-y spirals of bun."
 
 WATHGRITHR.DESCRIBE.GUMMYBEARGERS = "A few candy won't hurt."
@@ -940,7 +946,7 @@ WATHGRITHR.DESCRIBE.RICESAKE = "God's drink!"
 
 WATHGRITHR.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Torn from the ground!"
 
-WATHGRITHR.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WATHGRITHR.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Argh! Its surrounded by spikes.",
 	PICKED = "Its bounty is spent!",
@@ -958,7 +964,7 @@ WATHGRITHR.DESCRIBE.PINACOLADA = "Ewww."
 
 WATHGRITHR.DESCRIBE.CHIMAS = "Chá!"
 
-WATHGRITHR.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WATHGRITHR.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Rain comes from within it's workings.",
 	ON = "Rain without thunder!",
@@ -1077,7 +1083,7 @@ WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "The trader slumbers soundly in his restored hall.",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Not meat, but maybe worthy of a feast!",
 	PICKED = "Claimed!",
@@ -1087,7 +1093,7 @@ WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WATHGRITHR.DESCRIBE.KYNO_TRUFFLES = "Mushrooms again... but maybe they belong in a feast."
 WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_COOKED = "Still not meat... but smells worthy of battle!"
 
-WATHGRITHR.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WATHGRITHR.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Bah! I need no showcase for my glorious feasts!",
 	FULL = "A glorious offering!",
@@ -1112,7 +1118,7 @@ WATHGRITHR.DESCRIBE.TRUFFLEOIL = "Bah! I prefer the scent of battle over fungus 
 WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Lake! Prepare to be built!"
 WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "A pond for battle-fish! I approve."
 
-WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT = 
+WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "A pond to raise new warriors of the water!",
 	FUEL_HIGH = "They feast well!",
@@ -1175,7 +1181,7 @@ WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Be you meat?"
 WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "No Excalibur juts from its center."
 WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_CORAL = "If I eat of it will I gain its knowledge?"
 
-WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "A mystical, all-knowing water rock!",
 	PICKED = "Its mind slumbers!",
@@ -1183,7 +1189,7 @@ WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WATHGRITHR.DESCRIBE.BRAINMETTERSOUP = "Bah! Meal for kids!"
 
-WATHGRITHR.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WATHGRITHR.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "He seems open to bartering.",
 	SLEEPING = "The sea-king slumbers!",
@@ -1191,7 +1197,7 @@ WATHGRITHR.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WATHGRITHR.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "The chest hold offerings."
 
-WATHGRITHR.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WATHGRITHR.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "A curious bauble.",
 	WAITING = "An unfortunate casualty of battle.",
@@ -1207,7 +1213,7 @@ WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "The essence of Jol!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Tis not meat... but 'tis battle fuel!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Warriors do not fight with balloons!"
 
-WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "A worthy popcorn contraption!",
 	FUEL_HIGH = "It roars with power!",
@@ -1385,3 +1391,11 @@ WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 WATHGRITHR.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "A saltwork in the making!"
 
 WATHGRITHR.DESCRIBE.KYNO_FISHINGROD_THULECITE = "A fine fishing rod fit for a sea warrior."
+
+WATHGRITHR.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Glittering sugar! Fit for a feast worthy of the gods!"
+
+WATHGRITHR.DESCRIBE.OPALPRECIOUSCREAM = "A shimmering topping for a feast worthy of Valhalla!"
+
+WATHGRITHR.DESCRIBE.CATFISHSTICK = "A hearty catch, roasted over the flames!"
+
+WATHGRITHR.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A mysterious sweet! What boon shall the gods bestow upon me?"

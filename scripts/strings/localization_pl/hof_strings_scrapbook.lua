@@ -133,6 +133,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "Ataki mają niewielką sza
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BATILISK = "Odstrasza pobliskie batiliski przez pewien czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_KNOCKBACK = "Zmniejsza odrzut przez określony czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CHILLEDATTACK = "Każdy trzeci kolejny atak wymierzony w ten sam cel powoduje pojawienie się Lodowych Odłamków. \n\nLodowe Odłamki zadają obrażenia na niewielkim obszarze wokół celu."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRITDAMAGE = "Ataki mają niewielką szansę na zadanie trafienia krytycznego, zadającego 150% obrażeń."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "Zmniejsza szczęście na określony czas."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "Powoduje losowy efekt uboczny.\n\n\"CHODŹMY ZAGRAĆ!\" – Pewnie ktoś."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Może zostać dodane do potraw z Garnka za pomocą Przenośnej Stacji Przypraw.\n\nZjedzenie potrawy doprawionej Proszkiem Konserwującym całkowicie odnawia jej czas świeżości.\n\nZmniejsza tempo psucia się przedmiotów w ekwipunku o 25%.\n\nZwiększa czas trwania innych efektów dodatkowych o 25%.\n\nCzas trwania: 4 minuty."

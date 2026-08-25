@@ -41,8 +41,8 @@ STRINGS.UI.CRAFTING.RECIPEACTION.DECIDUOUSSHOP = "물물교환"
 
 STRINGS.UI.SPECIAL_EVENT_NAMES.HOFBIRTHDAY = "풍요로운 음식 기념일"
 
-STRINGS.UI.CRAFTING.NEEDSSHARKBOI = "Find a sea creature friendly enough to make this trade!" -- NEEDS TRANSLATION
-STRINGS.UI.CRAFTING.NEEDSFISHING = "Fish enough times to discover more about this!" -- NEEDS TRANSLATION
+STRINGS.UI.CRAFTING.NEEDSSHARKBOI = "Find a sea creature friendly enough to make this trade!"
+STRINGS.UI.CRAFTING.NEEDSFISHING = "Fish enough times to discover more about this!"
 
 STRINGS.UI.FOOD_TYPES.PREPAREDSOUL = "영혼"
 STRINGS.UI.FOOD_TYPES.PREPAREDPOOP = "끔찍함"
@@ -129,8 +129,11 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BATILISK = "주변의 바틸리스크들을 겁
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WORTOX = "능력치가 성향에 따라 달라집니다"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL = "영혼 획득량이 증가합니다"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REVIVER = "죽은 자를 부활시킵니다"
-STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KNOCKBACK = "Decreases knockback" -- NEEDS TRANSLATION
-STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CHILLEDATTACK = "Grants chilled attacks" -- NEEDS TRANSLATION
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KNOCKBACK = "Decreases knockback"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CHILLEDATTACK = "Grants chilled attacks"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRITDAMAGE = "Grants critical attacks"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BADLUCK = "Decreases luck"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RANDOM = "Grants a random side effect"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "초원과 열대우림의 왕이라 불리는 초록빛 채소다. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "바다가 준 수많은 선물 중 하나로, 교양 있는 이들에게 아주 환영받는다. -W"
@@ -179,7 +182,7 @@ STRINGS_INGREDIENTS_CHICKEN = "닭고기"
 STRINGS_INGREDIENTS_CHICKENEGG = "달걀"
 STRINGS_INGREDIENTS_POTATO = "감자"
 STRINGS_INGREDIENTS_TUBER = "동굴 덩이줄기"
-STRINGS_INGREDIENTS_ICEWEED = "Chilled Nettle Fronds" -- NEEDS TRANSLATION
+STRINGS_INGREDIENTS_ICEWEED = "Chilled Nettle Fronds"
 
 STRINGS.KYNO_HARVEST_POTSMALL = "냄비 수확하기"
 STRINGS.KYNO_HARVEST_POTLARGE = "큰 냄비 수확하기"
@@ -226,181 +229,181 @@ STRINGS.ACTIONS.MAKEPOPCORN = "팝콘 만들기"
 STRINGS.ACTIONS.FISHREGISTRY_RESEARCH = "연구하기"
 STRINGS.ACTIONS.BOOSTPLANT = "촉진제 투여"
 STRINGS.ACTIONS.WRITEITEM = "{item} 작성하기"
-STRINGS.ACTIONS.DUMPWATER = "Dump Water" -- NEEDS TRANSLATION
+STRINGS.ACTIONS.DUMPWATER = "Dump Water"
 STRINGS.ACTIONS.SLAUGHTER2 =
 {
-    DISEMBOWEL = "조심스레 내장 적출하기",
-    MURDER = "품격 있게 살해하기",
-    BUTCHER = "정중하게 도축하기",
-    KILL = "섬세하게 죽이기",
-    EVISCERATE = "부드럽게 적출하기",
-    SLAUGHTER = "조심조심 도살하기",
+	DISEMBOWEL = "조심스레 내장 적출하기",
+	MURDER = "품격 있게 살해하기",
+	BUTCHER = "정중하게 도축하기",
+	KILL = "섬세하게 죽이기",
+	EVISCERATE = "부드럽게 적출하기",
+	SLAUGHTER = "조심조심 도살하기",
 }
 
 STRINGS.PIGELDER_TALK_FAR =
 {
-    "..흐으음냐..",
-    "(꿀꿀) ...비...비늘...",
-    "...쿨쿨ZZ쿨쿨...",
-    "...하-하늘...",
-    "...그...그나우...",
-    "...역...역병...",
+	"..흐으음냐..",
+	"(꿀꿀) ...비...비늘...",
+	"...쿨쿨ZZ쿨쿨...",
+	"...하-하늘...",
+	"...그...그나우...",
+	"...역...역병...",
 }
 
 STRINGS.PIGELDER_TALK_NEAR1 =
 {
-    "장로의 눈꺼풀이 무겁구려",
-    "흐릅? 거래하겠소? 보급품 말이오?",
-    "흐릅! 그나우가 돼지들에게 화가 났소",
-    "흐릅? 잠에 들면... 장로에게 악몽이 찾아온다오",
-    "작은 염소야, 원한다면 내 낡은 냄비를 써도 좋소!",
-    "흐릅! 대부분의 염소들은 돼지들에게 도움이 안 된다오",
-    "흐릅! 장로는 왑스터에... 노란 게 올라간 게 먹고 싶소!",
-    "...캐-캐러멜...",
+	"장로의 눈꺼풀이 무겁구려",
+	"흐릅? 거래하겠소? 보급품 말이오?",
+	"흐릅! 그나우가 돼지들에게 화가 났소",
+	"흐릅? 잠에 들면... 장로에게 악몽이 찾아온다오",
+	"작은 염소야, 원한다면 내 낡은 냄비를 써도 좋소!",
+	"흐릅! 대부분의 염소들은 돼지들에게 도움이 안 된다오",
+	"흐릅! 장로는 왑스터에... 노란 게 올라간 게 먹고 싶소!",
+	"...캐-캐러멜...",
 }
 
 STRINGS.PIGELDER_TALK_NEAR2 =
 {
-    "장로의 눈꺼풀이 무겁구려",
-    "흐릅? 거래하겠소? 보급품 말이오?",
-    "흐릅! 그나우가 돼지들에게 화가 났소",
-    "흐릅? 잠에 들면... 장로에게 악몽이 찾아온다오",
-    "작은 염소야, 원한다면 내 낡은 냄비를 써도 좋소!",
-    "흐릅! 대부분의 염소들은 돼지들에게 도움이 안 된다오",
-    "선물 고맙소, 작은 염소야",
-    "장로는 작은 염소가 마음에 드는구려, 선물 고맙소!",
+	"장로의 눈꺼풀이 무겁구려",
+	"흐릅? 거래하겠소? 보급품 말이오?",
+	"흐릅! 그나우가 돼지들에게 화가 났소",
+	"흐릅? 잠에 들면... 장로에게 악몽이 찾아온다오",
+	"작은 염소야, 원한다면 내 낡은 냄비를 써도 좋소!",
+	"흐릅! 대부분의 염소들은 돼지들에게 도움이 안 된다오",
+	"선물 고맙소, 작은 염소야",
+	"장로는 작은 염소가 마음에 드는구려, 선물 고맙소!",
 }
 
 STRINGS.PIGELDER_TALK_BUY =
 {
-    "고맙소",
-    "그렇소. 그대는 착한 염소구려",
-    "고맙소. 이제 장로를 좀 쉬게 해 주시오",
-    "고맙소, 작은 염소야",
-    "흐릅! 고맙소!",
-    "장로의 눈꺼풀이 무겁구려",
+	"고맙소",
+	"그렇소. 그대는 착한 염소구려",
+	"고맙소. 이제 장로를 좀 쉬게 해 주시오",
+	"고맙소, 작은 염소야",
+	"흐릅! 고맙소!",
+	"장로의 눈꺼풀이 무겁구려",
 }
 
 STRINGS.PIGELDER_TALK_THANK =
 {
-    "고맙소",
-    "그렇소. 그대는 착한 염소구려",
-    "고맙소. 이제 장로를 좀 쉬게 해 주시오",
-    "고맙소, 작은 염소야",
-    "흐릅! 고맙소!",
+	"고맙소",
+	"그렇소. 그대는 착한 염소구려",
+	"고맙소. 이제 장로를 좀 쉬게 해 주시오",
+	"고맙소, 작은 염소야",
+	"흐릅! 고맙소!",
 }
 
 STRINGS.PIGELDER_TALK_REPAIRPOT =
 {
-    "내 낡은 냄비를 고쳐줘서 고맙소, 작은 염소야!",
-    "고맙소 작은 염소야!",
-    "정말 고맙소, 내게 큰 도움이 될 거요!",
-    "흐릅! 작은 염소가 장로의 낡은 냄비를 고쳐줬구려, 고맙소!",
+	"내 낡은 냄비를 고쳐줘서 고맙소, 작은 염소야!",
+	"고맙소 작은 염소야!",
+	"정말 고맙소, 내게 큰 도움이 될 거요!",
+	"흐릅! 작은 염소가 장로의 낡은 냄비를 고쳐줬구려, 고맙소!",
 }
 
 STRINGS.FORTUNE_COOKIE_QUOTES =
 {
-    "종이에 적혀있다: \"당신이 찾는 행운은 다른 쿠키에 있습니다.\"",
-    "종이에 적혀있다: \"입을 다물고 있으면 똥 밟을 일도 없다.\"",
-    "종이에 적혀있다: \"어리석은 자는 마음의 소리를 듣고, 현명한 자는 쿠키의 소리를 듣는다.\"",
-    "종이에 적혀있다: \"뒤를 돌아보면, 곧 그 길로 다시 가게 될 것이다.\"",
-    "종이에 적혀있다: \"당신은 앞으로도 수많은 포춘 쿠키를 열어볼 만큼 오래 살 것입니다.\"",
-    "종이에 적혀있다: \"모두 완다나 볼프강 대신 위그프리드를 플레이해야 합니다.\"",
-    "종이에 적혀있다: \"스스로를 비웃을 줄 아는 자는 웃을 일이 끊이지 않는다.\"",
-    "종이에 적혀있다: \"포럼은 비웃어주기에 가장 좋은 장소이다.\"",
-    "종이에 적혀있다: \"남에게 진흙을 던지는 자는 자신의 발판을 잃는 법이다.\"",
-    "종이에 적혀있다: \"당신은 한 시간 뒤에 다시 배가 고파질 것입니다.\"",
-    "종이에 적혀있다: \"금요일의 업무 중에는 언제나 행복을 찾을 수 있습니다.\"",
-    "종이에 적혀있다: \"행운을 찾을 수 없습니까? 중단(A), 재시도(R), 무시(I).\"",
-    "종이에 적혀있다: \"도와주세요! 저는 지금 포춘 쿠키 공장에 갇혀 포로로 잡혀있습니다.\"",
-    "종이에 적혀있다: \"드디어 그 답답한 쿠키 속에서 탈출할 시간이 되었군.\"",
-    "종이에 적혀있다: \"친구를 절대 잊지 마세요. 특히 당신에게 빚을 진 친구라면 더더욱.\"",
-    "종이에 적혀있다: \"나는 한 밑천의 가치가 있다.\"",
-    "종이에 적혀있다: \"당신은 포춘 쿠키를 받게 될 것입니다.\"",
-    "종이에 적혀있다: \"어떤 포춘 쿠키에는 아무런 점괘도 들어있지 않습니다.\"",
-    "종이에 적혀있다: \"불필요한 도박은 피하세요. 행운의 숫자: 12, 15, 23, 28, 37.\"",
-    "종이에 적혀있다: \"이 쿠키의 열량은 117칼로리입니다.\"",
-    "종이에 적혀있다: \"쿠키 대신 어머니께 여쭤보세요.\"",
-    "종이에 적혀있다: \"노력의 대가는 미래에 찾아오고, 게으름의 대가는 지금 찾아온다.\"",
-    "종이에 적혀있다: \"종이는 먹지 마세요.\"",
-    "종이에 적혀있다: \"거북이에게 등껍질이 없다면, 알몸인 걸까 집이 없는 걸까?\"",
-    "종이에 적혀있다: \"죽음을 피하려면 Alt+F4를 누르세요.\"",
-    "종이에 적혀있다: \"󰀅󰀆󰀅\"",
-    "종이에 적혀있다: \"살아있는 나무 12그루가 사라졌습니다, 찾아주실래요?\"",
-    "종이에 적혀있다: \"난 네가 아는 걸 알고 있어, 내게 숨길 순 없지.\"",
-    "종이에 적혀있다: \"이 쿠키에는 또 다른 비밀이 숨겨져 있습니다.\"",
+	"종이에 적혀있다: \"당신이 찾는 행운은 다른 쿠키에 있습니다.\"",
+	"종이에 적혀있다: \"입을 다물고 있으면 똥 밟을 일도 없다.\"",
+	"종이에 적혀있다: \"어리석은 자는 마음의 소리를 듣고, 현명한 자는 쿠키의 소리를 듣는다.\"",
+	"종이에 적혀있다: \"뒤를 돌아보면, 곧 그 길로 다시 가게 될 것이다.\"",
+	"종이에 적혀있다: \"당신은 앞으로도 수많은 포춘 쿠키를 열어볼 만큼 오래 살 것입니다.\"",
+	"종이에 적혀있다: \"모두 완다나 볼프강 대신 위그프리드를 플레이해야 합니다.\"",
+	"종이에 적혀있다: \"스스로를 비웃을 줄 아는 자는 웃을 일이 끊이지 않는다.\"",
+	"종이에 적혀있다: \"포럼은 비웃어주기에 가장 좋은 장소이다.\"",
+	"종이에 적혀있다: \"남에게 진흙을 던지는 자는 자신의 발판을 잃는 법이다.\"",
+	"종이에 적혀있다: \"당신은 한 시간 뒤에 다시 배가 고파질 것입니다.\"",
+	"종이에 적혀있다: \"금요일의 업무 중에는 언제나 행복을 찾을 수 있습니다.\"",
+	"종이에 적혀있다: \"행운을 찾을 수 없습니까? 중단(A), 재시도(R), 무시(I).\"",
+	"종이에 적혀있다: \"도와주세요! 저는 지금 포춘 쿠키 공장에 갇혀 포로로 잡혀있습니다.\"",
+	"종이에 적혀있다: \"드디어 그 답답한 쿠키 속에서 탈출할 시간이 되었군.\"",
+	"종이에 적혀있다: \"친구를 절대 잊지 마세요. 특히 당신에게 빚을 진 친구라면 더더욱.\"",
+	"종이에 적혀있다: \"나는 한 밑천의 가치가 있다.\"",
+	"종이에 적혀있다: \"당신은 포춘 쿠키를 받게 될 것입니다.\"",
+	"종이에 적혀있다: \"어떤 포춘 쿠키에는 아무런 점괘도 들어있지 않습니다.\"",
+	"종이에 적혀있다: \"불필요한 도박은 피하세요. 행운의 숫자: 12, 15, 23, 28, 37.\"",
+	"종이에 적혀있다: \"이 쿠키의 열량은 117칼로리입니다.\"",
+	"종이에 적혀있다: \"쿠키 대신 어머니께 여쭤보세요.\"",
+	"종이에 적혀있다: \"노력의 대가는 미래에 찾아오고, 게으름의 대가는 지금 찾아온다.\"",
+	"종이에 적혀있다: \"종이는 먹지 마세요.\"",
+	"종이에 적혀있다: \"거북이에게 등껍질이 없다면, 알몸인 걸까 집이 없는 걸까?\"",
+	"종이에 적혀있다: \"죽음을 피하려면 Alt+F4를 누르세요.\"",
+	"종이에 적혀있다: \"󰀅󰀆󰀅\"",
+	"종이에 적혀있다: \"살아있는 나무 12그루가 사라졌습니다, 찾아주실래요?\"",
+	"종이에 적혀있다: \"난 네가 아는 걸 알고 있어, 내게 숨길 순 없지.\"",
+	"종이에 적혀있다: \"이 쿠키에는 또 다른 비밀이 숨겨져 있습니다.\"",
 }
 
 STRINGS.FORTUNE_COOKIE_GOOD =
 {
-    "종이에 적혀있다: \"오늘 당신은 운이 너무 좋군요, 나이스!\"",
-    "종이에 적혀있다: \"오늘은 당신의 운수 좋은 날!\"",
-    "종이에 적혀있다: \"오늘 복권을 사보셔야겠어요. 행운의 숫자: 1, 2, 3, 4, 5.\"",
+	"종이에 적혀있다: \"오늘 당신은 운이 너무 좋군요, 나이스!\"",
+	"종이에 적혀있다: \"오늘은 당신의 운수 좋은 날!\"",
+	"종이에 적혀있다: \"오늘 복권을 사보셔야겠어요. 행운의 숫자: 1, 2, 3, 4, 5.\"",
 }
 
 STRINGS.FORTUNE_COOKIE_BAD =
 {
-    "종이에 적혀있다: \"피할 수 없는 파멸이 다가옵니다...\"",
-    "종이에 적혀있다: \"넌 나쁜 아이야.\"",
-    "종이에 적혀있다: \"파멸했군.\"",
+	"종이에 적혀있다: \"피할 수 없는 파멸이 다가옵니다...\"",
+	"종이에 적혀있다: \"넌 나쁜 아이야.\"",
+	"종이에 적혀있다: \"파멸했군.\"",
 }
 
 STRINGS.NAMES.KYNO_WRECK_OF = "%s의 잔해"
-STRINGS.KYNO_WRECK_NAMES = 
+STRINGS.KYNO_WRECK_NAMES =
 {
-    "노틸러스 호",
-    "말벌 호",
-    "레오니다스 호",
-    "레드 호",
-    "프란시어튼 호",
-    "파미 호",
-    "드미트리 호",
-    "스트랄루즈 호",
-    "펩 호",
-    "니키 호",
-    "라쿤 호",
-    "글룸스 호",
-    "펠리페 호",
-    "해질녘 호",
-    "앨리슨 호",
-    "재지 호",
-    "글렘즈 호",
-    "데몬 호",
-    "젤리 호",
-    "밀란조림 호",
-    "말티 호",
-    "나나 호",
-    "미나 호",
-    "유진 경 호",
-    "로드라 호",
-    "사이쿠노 호",
-    "로틱 호",
-    "프란시어튼 호",
-    "라타 호",
-    "펠루시아 호",
-    "왈리 호",
-    "팬블레이드 호",
-    "아다이 호",
-    "탈즈 호",
-    "갱플랭크 호",
-    "베스퍼타인 호",
-    "브제슈초트 호",
-    "새벽인도자 호",
-    "밤인도자 호",
-    "별바라기 호",
-    "밤바빗 호",
+	"노틸러스 호",
+	"말벌 호",
+	"레오니다스 호",
+	"레드 호",
+	"프란시어튼 호",
+	"파미 호",
+	"드미트리 호",
+	"스트랄루즈 호",
+	"펩 호",
+	"니키 호",
+	"라쿤 호",
+	"글룸스 호",
+	"펠리페 호",
+	"해질녘 호",
+	"앨리슨 호",
+	"재지 호",
+	"글렘즈 호",
+	"데몬 호",
+	"젤리 호",
+	"밀란조림 호",
+	"말티 호",
+	"나나 호",
+	"미나 호",
+	"유진 경 호",
+	"로드라 호",
+	"사이쿠노 호",
+	"로틱 호",
+	"프란시어튼 호",
+	"라타 호",
+	"펠루시아 호",
+	"왈리 호",
+	"팬블레이드 호",
+	"아다이 호",
+	"탈즈 호",
+	"갱플랭크 호",
+	"베스퍼타인 호",
+	"브제슈초트 호",
+	"새벽인도자 호",
+	"밤인도자 호",
+	"별바라기 호",
+	"밤바빗 호",
 }
 
 STRINGS.KYNO_SUGARFLY_NAMES =
 {
-    "설탕나비",
-    "설탕나방",
-    "단나비",
-    "단나방",
-    "설탕 나비",
-    "설탕 나방",
-    "단 나비",
-    "단 나방",
+	"설탕나비",
+	"설탕나방",
+	"단나비",
+	"단나방",
+	"설탕 나비",
+	"설탕 나방",
+	"단 나비",
+	"단 나방",
 }
 
 STRINGS.KYNO_SUGARFLYWINGS_NAMES =
@@ -417,470 +420,478 @@ STRINGS.KYNO_SUGARFLYWINGS_NAMES =
 
 STRINGS.KYNO_CHICKEN_NAMES =
 {
-	"닭다리", 
-	"데이지", 
-    "카", 
-    "국수", 
-    "감자",
-    "카레", 
-    "저녁식사", 
-    "가리발다", 
-    "마르타", 
-    "마리나",
-    "당근", 
-    "에밀리아", 
-    "핀타디냐", 
-    "갈리냐", 
-    "팝콘",
-    "루이바", 
-    "칸지카", 
-    "마그리셀라", 
-    "이솔다", 
-    "페드리타",
-    "이사도라", 
-    "루이비냐", 
-    "카렌", 
-    "페노사", 
-    "비쿠다",
-    "꿀이", 
-    "햇님이", 
-    "달님이", 
-    "가을이", 
-    "밀하리나", 
-    "점심식사",
-    "클레멘티나", 
-    "레자네", 
-    "모레나", 
-    "꽃순이", 
-    "해바라기",
+	"닭다리",
+	"데이지",
+	"카",
+	"국수",
+	"감자",
+	"카레",
+	"저녁식사",
+	"가리발다",
+	"마르타",
+	"마리나",
+	"당근",
+	"에밀리아",
+	"핀타디냐",
+	"갈리냐",
+	"팝콘",
+	"루이바",
+	"칸지카",
+	"마그리셀라",
+	"이솔다",
+	"페드리타",
+	"이사도라",
+	"루이비냐",
+	"카렌",
+	"페노사",
+	"비쿠다",
+	"꿀이",
+	"햇님이",
+	"달님이",
+	"가을이",
+	"밀하리나",
+	"점심식사",
+	"클레멘티나",
+	"레자네",
+	"모레나",
+	"꽃순이",
+	"해바라기",
 }
 
 STRINGS.KYNO_WHALE_WHITE_OCEAN_NAMES =
 {
-    -- 자유롭게 이름을 추가하세요.
-    "모비 딕",
-    "도비 믹",
-    "악마",
-    "복수심에 불타는 고래",
-    "흰고래",
-    "무시무시한 고래",
+	-- 자유롭게 이름을 추가하세요.
+	"모비 딕",
+	"도비 믹",
+	"악마",
+	"복수심에 불타는 고래",
+	"흰고래",
+	"무시무시한 고래",
 }
 
 STRINGS.KYNO_ELDERMANDRAKE_NAMES =
 {
-    "턴버트",
-    "텁스 경",
-    "머드워드",
-    "루트니",
-    "그럼킨",
-    "튜버나드",
-    "고약한 피트",
-    "더트윈",
-    "늙은 머프",
-    "로트발트",
-    "터날도",
-    "벌비",
-    "그럽슨",
-    "머킨스",
-    "루트릭",
-    "보가트",
-    "필버트",
-    "누빈스",
-    "몰드릭",
-    "테이터글룸",
-    "휴버트 루트",
-    "그럼블스",
-    "스나웃레이",
-    "워버트",
-    "순무 톰",
-    "스크렁글",
-    "페스터",
-    "럼프포드",
-    "위글스루트",
-    "바르톨로튜버",
+	"턴버트",
+	"텁스 경",
+	"머드워드",
+	"루트니",
+	"그럼킨",
+	"튜버나드",
+	"고약한 피트",
+	"더트윈",
+	"늙은 머프",
+	"로트발트",
+	"터날도",
+	"벌비",
+	"그럽슨",
+	"머킨스",
+	"루트릭",
+	"보가트",
+	"필버트",
+	"누빈스",
+	"몰드릭",
+	"테이터글룸",
+	"휴버트 루트",
+	"그럼블스",
+	"스나웃레이",
+	"워버트",
+	"순무 톰",
+	"스크렁글",
+	"페스터",
+	"럼프포드",
+	"위글스루트",
+	"바르톨로튜버",
 }
 
 STRINGS.KYNO_ELDERMANDRAKE_GIVEUP =
 {
-    "뭐 하는 게냐?",
-    "지쳤다",
-    "졸립구나",
-    "기운이 없어",
+	"뭐 하는 게냐?",
+	"지쳤다",
+	"졸립구나",
+	"기운이 없어",
 }
 
 STRINGS.KYNO_ELDERMANDRAKE_BATTLECRY =
 {
-    "부패해라!",
-    "흙으로 돌아가라!",
-    "퇴비가 되어라!",
-    "곰팡이가 피어라!",
+	"부패해라!",
+	"흙으로 돌아가라!",
+	"퇴비가 되어라!",
+	"곰팡이가 피어라!",
 }
 
 STRINGS.KYNO_ELDERMANDRAKE_MANDRAKE_BATTLECRY =
 {
-    "도둑놈!",
-    "강도야!",
-    "사기꾼!",
-    "배신자!",
-    "살인마!",
+	"도둑놈!",
+	"강도야!",
+	"사기꾼!",
+	"배신자!",
+	"살인마!",
 }
 
 STRINGS.KYNO_ELDERMANDRAKE_RETREAT =
 {
-    "저리 가라!",
-    "아프구나!",
-    "집으로!",
-    "도망쳐라!",
-    "달아나자!",
+	"저리 가라!",
+	"아프구나!",
+	"집으로!",
+	"도망쳐라!",
+	"달아나자!",
 }
 
 STRINGS.KYNO_ELDERMANDRAKE_PANICBOSS =
 {
-    "못됐다!",
-    "무섭구나!",
-    "으악! 으악!",
-    "도망쳐! 도망쳐!",
+	"못됐다!",
+	"무섭구나!",
+	"으악! 으악!",
+	"도망쳐! 도망쳐!",
 }
 
 STRINGS.KYNO_ELDERMANDRAKE_PANICHAUNT =
 {
-    "우우!",
-    "무서워!",
-    "으아아악!",
+	"우우!",
+	"무서워!",
+	"으아아악!",
 }
 
 STRINGS.KYNO_ELDERMANDRAKE_PANICFIRE =
 {
-    "불이야! 불이야!",
-    "으악! 불이다!",
-    "불은 나빠!",
+	"불이야! 불이야!",
+	"으악! 불이다!",
+	"불은 나빠!",
 }
 
 STRINGS.KYNO_ELDERMANDRAKE_PANICELECTRICITY =
 {
-    "아야!",
-    "아프구나!",
-    "으아아!",
-    "구어어억!!",
+	"아야!",
+	"아프구나!",
+	"으아아!",
+	"구어어억!!",
 }
 
 STRINGS.KYNO_GOLDENAPPLE_NAMES =
 {
-    -- 자유롭게 이름을 추가하세요.
-    "마법에 걸린 황금 사과",
-    "영원한 지식의 열매",
-    "금단의 열매",
-    "저주받은 열매",
-    "키노의 사과",
-    "레오니다스의 사과",
+	-- 자유롭게 이름을 추가하세요.
+	"마법에 걸린 황금 사과",
+	"영원한 지식의 열매",
+	"금단의 열매",
+	"저주받은 열매",
+	"키노의 사과",
+	"레오니다스의 사과",
+}
+
+STRINGS.KYNO_OPALPRECIOUSLOLLIPOP_NAMES =
+{
+	"Roulettepop",
+	"Gambler's Lollipop",
+	"Shimmer Lollipop",
+	"Gamblinpop",
 }
 
 STRINGS.MEADOWISLANDTRADER = "새미\n%s"
-STRINGS.MEADOWISLANDTRADER_TITLES = 
+STRINGS.MEADOWISLANDTRADER_TITLES =
 {
-    "상인", 
-    "총명한 늪지 어인", 
-    "노련한 상인", 
-    "이국적인 상인",
-    "늪지대 노점상",
+	"상인",
+	"총명한 늪지 어인",
+	"노련한 상인",
+	"이국적인 상인",
+	"늪지대 노점상",
 }
 
 STRINGS.MEADOWISLANDTRADER_OUTOFSTOCK =
 {
-    "지금은 거래할 만한 게 아무것도 없네!",
-    "아직은 없으니 나중에 다시 오라구, 친구.",
-    "이보게 친구, 물건을 다시 채워 넣을 시간이 좀 필요하네.",
+	"지금은 거래할 만한 게 아무것도 없네!",
+	"아직은 없으니 나중에 다시 오라구, 친구.",
+	"이보게 친구, 물건을 다시 채워 넣을 시간이 좀 필요하네.",
 }
 
-STRINGS.MEADOWISLANDTRADER_OUTOFSTOCKTRADES = 
+STRINGS.MEADOWISLANDTRADER_OUTOFSTOCKTRADES =
 {
-    "내 물건을 아주 다 털어갔구만! 다시 채워 넣을 시간이 필요하네.",
-    "가진 건 그게 전부라네! 나중에 다시 오게나.",
-    "이봐 젊은이, 내 아끼는 재고를 싹 쓸어갔군 그래. 시간이 좀 필요하겠어.",
-    "나중에 물물교환하러 다시 오시게.",
-}
-    
-STRINGS.MEADOWISLANDTRADER_STARTTRADING = 
-{
-    "왜 아직도 아무것도 안 사고 있는 건가?",
-    "어이, 친구, 뭐가 필요한가?",
-    "자네가 뭘 사든 상관없으니 아무거나 좀 사게나!",
-    "거기 자네, 쇼핑 좀 해볼 텐가?",
-    "골라보게! 내 시간은 소중하다고! ...아마도 말이지.",
-    "원하는 게 뭔가?",
-    "지금 당장 먹을 게 좀 있으면 좋겠는데 말이야, 뭔 말인지 알지?",
-    "내가 살던 마을과 사람들이 조금 그리워지는군..."
+	"내 물건을 아주 다 털어갔구만! 다시 채워 넣을 시간이 필요하네.",
+	"가진 건 그게 전부라네! 나중에 다시 오게나.",
+	"이봐 젊은이, 내 아끼는 재고를 싹 쓸어갔군 그래. 시간이 좀 필요하겠어.",
+	"나중에 물물교환하러 다시 오시게.",
 }
 
-STRINGS.MEADOWISLANDTRADER_ENDTRADING_NOTRADES = 
+STRINGS.MEADOWISLANDTRADER_STARTTRADING =
 {
-    "내가 뭘 하고 있었더라? ...오, 여기 씨앗이 있네!",
-    "다음 기회에 보세나.",
-    "흥미로운 게 전혀 없나 보군? 나중에 내 물건 보러 다시 오시게.",
-    "내 시간 뺏지 말라고, 알겠나?",
-    "어쩌겠나, 모두를 만족시킬 순 없는 노릇이지!",
-    "그으으리고, 다신 오지 마시게!",
-    "그렇다면 내 동료인 핍톤을 찾아가 보게나!",
+	"왜 아직도 아무것도 안 사고 있는 건가?",
+	"어이, 친구, 뭐가 필요한가?",
+	"자네가 뭘 사든 상관없으니 아무거나 좀 사게나!",
+	"거기 자네, 쇼핑 좀 해볼 텐가?",
+	"골라보게! 내 시간은 소중하다고! ...아마도 말이지.",
+	"원하는 게 뭔가?",
+	"지금 당장 먹을 게 좀 있으면 좋겠는데 말이야, 뭔 말인지 알지?",
+	"내가 살던 마을과 사람들이 조금 그리워지는군..."
 }
 
-STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE = 
+STRINGS.MEADOWISLANDTRADER_ENDTRADING_NOTRADES =
 {
-    "꼭 다시 오라구, 알겠지?",
-    "고맙네, 낯선 이여.",
-    "즐거웠네!",
-    "자네 이름이 뭐라고 했었지?",
-    "자네들은 언제나 뭐가 그리 급한지 원.",
-    "알겠네, 알겠어, 어서 가보게나.",
-    "꼭 다시 오게! 내가 외로움을 좀 타서 말이야! 헤헷, 아주 쪼오금 외롭거든.",
+	"내가 뭘 하고 있었더라? ...오, 여기 씨앗이 있네!",
+	"다음 기회에 보세나.",
+	"흥미로운 게 전혀 없나 보군? 나중에 내 물건 보러 다시 오시게.",
+	"내 시간 뺏지 말라고, 알겠나?",
+	"어쩌겠나, 모두를 만족시킬 순 없는 노릇이지!",
+	"그으으리고, 다신 오지 마시게!",
+	"그렇다면 내 동료인 핍톤을 찾아가 보게나!",
 }
 
-STRINGS.MEADOWISLANDTRADER_DOTRADE = 
+STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE =
 {
-    "아, 아주 탁월한 선택이네! 또 마음에 드는 게 있으신가?",
-    "바로 대령하지! 또 뭐가 필요한가?",
-    "좋아, 좋아! 계속 가보자구!",
-    "고급스러운 물건을 보는 눈이 아주 훌륭하구만.",
-    "와우, 누가 진짜로 이걸 '돈' 주고 살 줄이야?",
-    "하하, 이건 핍톤의 비축품에서 슬쩍 가져온 거라네.",
-    "유용하게 쓰이길 바라네.",
-    "자 자, 계속해서 사보라구!",
-    "현금은 멍청이들이나 쓰는 거지, 안 그래 친구!",
+	"꼭 다시 오라구, 알겠지?",
+	"고맙네, 낯선 이여.",
+	"즐거웠네!",
+	"자네 이름이 뭐라고 했었지?",
+	"자네들은 언제나 뭐가 그리 급한지 원.",
+	"알겠네, 알겠어, 어서 가보게나.",
+	"꼭 다시 오게! 내가 외로움을 좀 타서 말이야! 헤헷, 아주 쪼오금 외롭거든.",
+}
+
+STRINGS.MEADOWISLANDTRADER_DOTRADE =
+{
+	"아, 아주 탁월한 선택이네! 또 마음에 드는 게 있으신가?",
+	"바로 대령하지! 또 뭐가 필요한가?",
+	"좋아, 좋아! 계속 가보자구!",
+	"고급스러운 물건을 보는 눈이 아주 훌륭하구만.",
+	"와우, 누가 진짜로 이걸 '돈' 주고 살 줄이야?",
+	"하하, 이건 핍톤의 비축품에서 슬쩍 가져온 거라네.",
+	"유용하게 쓰이길 바라네.",
+	"자 자, 계속해서 사보라구!",
+	"현금은 멍청이들이나 쓰는 거지, 안 그래 친구!",
 }
 
 STRINGS.MEADOWISLANDTRADER_DOTRADEHAT =
 {
-    "내 모자를 원하나? 에잉 뭐, 원한다면 가져가게나.",
-    "내 낡은 모자 말인가? 음음, 가져가시게.",
-    "여기 내 모자 받게나, 걱정 말게나 나한테는 이런 게 수천 개는 있으니.",
-    "집에 쌓여있는 재고에서 언제든 다른 걸 꺼내 쓰면 된다네.",
-    "내 모자를 가져가도 좋네. 더 원한다면 나중에 다시 오게나!",
-    "고맙네. 이 모자는 고향을 떠올리게 하는데, 대신 이걸 가져가도 좋네.",
+	"내 모자를 원하나? 에잉 뭐, 원한다면 가져가게나.",
+	"내 낡은 모자 말인가? 음음, 가져가시게.",
+	"여기 내 모자 받게나, 걱정 말게나 나한테는 이런 게 수천 개는 있으니.",
+	"집에 쌓여있는 재고에서 언제든 다른 걸 꺼내 쓰면 된다네.",
+	"내 모자를 가져가도 좋네. 더 원한다면 나중에 다시 오게나!",
+	"고맙네. 이 모자는 고향을 떠올리게 하는데, 대신 이걸 가져가도 좋네.",
 }
 
 STRINGS.MEADOWISLANDTRADER_REFUSE =
 {
-    "그건 원치 않네!",
-    "됐네, 난 괜찮아.",
-    "그거 말고 다른 걸 가져오게나!",
-    "그걸론 안 되겠어, 친구!",
-    "관심 없으니, 저리 가시게.",
+	"그건 원치 않네!",
+	"됐네, 난 괜찮아.",
+	"그거 말고 다른 걸 가져오게나!",
+	"그걸론 안 되겠어, 친구!",
+	"관심 없으니, 저리 가시게.",
 }
 
 STRINGS.MEADOWISLANDTRADER_GOHOME =
 {
-    "이제 집에 가서 쉴 시간이군.",
-    "나중에 보세, 지금은 좀 쉬어야겠네.",
-    "내 교대 시간은 끝났네!",
-    "나중에 보세나!",
-    "난 초과 근무는 안 하네!",
-    "내가 어디 있는지 알지 않나.",
+	"이제 집에 가서 쉴 시간이군.",
+	"나중에 보세, 지금은 좀 쉬어야겠네.",
+	"내 교대 시간은 끝났네!",
+	"나중에 보세나!",
+	"난 초과 근무는 안 하네!",
+	"내가 어디 있는지 알지 않나.",
 }
 
-STRINGS.MEADOWISLANDTRADER_STARTDANCING = 
+STRINGS.MEADOWISLANDTRADER_STARTDANCING =
 {
-    "야호! 파티를 시작하자구!",
-    "후후! 함께 춤추세, 친구!",
-    "내 기분을 띄울 줄 아는구만, 낯선 이여!",
-    "춤추자, 춤춰, 친구!",
-    "파티 시간이라구!",
+	"야호! 파티를 시작하자구!",
+	"후후! 함께 춤추세, 친구!",
+	"내 기분을 띄울 줄 아는구만, 낯선 이여!",
+	"춤추자, 춤춰, 친구!",
+	"파티 시간이라구!",
 }
 
 STRINGS.DECIDUOUSFORESTTRADER = "파르티티오\n%s"
-STRINGS.DECIDUOUSFORESTTRADER_TITLES = 
+STRINGS.DECIDUOUSFORESTTRADER_TITLES =
 {
-    "자랑스러운 상인", 
-    "장인 돼지", 
-    "위대한 상인", 
-    "영업사원 돼지",
-    "활엽수림 노점상",
+	"자랑스러운 상인",
+	"장인 돼지",
+	"위대한 상인",
+	"영업사원 돼지",
+	"활엽수림 노점상",
 }
 
 STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCK =
 {
-    "나 거래할 물건 더 없다!",
-    "나중에 다시 와라, 친구.",
-    "나 물건 다시 채울 시간 필요하다",
+	"나 거래할 물건 더 없다!",
+	"나중에 다시 와라, 친구.",
+	"나 물건 다시 채울 시간 필요하다",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCKTRADES = 
+STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCKTRADES =
 {
-    "너 나 싹 쓸어갔다! 물건 더 가져올 시간 필요하다!",
-    "지금은 그게 전부다, 나중에 다시 와라!",
-    "나중에 물건 더 사러 다시 와라, 알겠지?",
-    "나 지금 좋은 물건 없다, 어서 가라",
+	"너 나 싹 쓸어갔다! 물건 더 가져올 시간 필요하다!",
+	"지금은 그게 전부다, 나중에 다시 와라!",
+	"나중에 물건 더 사러 다시 와라, 알겠지?",
+	"나 지금 좋은 물건 없다, 어서 가라",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_STARTTRADING = 
+STRINGS.DECIDUOUSFORESTTRADER_STARTTRADING =
 {
-    "물건 좀 사라!",
-    "안녕, 친구! 나랑 거래하자",
-    "어이 거기, 물건 거래할 생각 있나?",
-    "원하는 게 뭐냐?",
-    "아무거나 골라라! 시간 낭비할 수 없다!",
-    "나한테 줄 맛있는 거라도 가지고 있나?",
-    "저 어인 녀석 말고 나랑 거래해라!",
-    "나 좋은 물건 가지고 있다, 친구!",
+	"물건 좀 사라!",
+	"안녕, 친구! 나랑 거래하자",
+	"어이 거기, 물건 거래할 생각 있나?",
+	"원하는 게 뭐냐?",
+	"아무거나 골라라! 시간 낭비할 수 없다!",
+	"나한테 줄 맛있는 거라도 가지고 있나?",
+	"저 어인 녀석 말고 나랑 거래해라!",
+	"나 좋은 물건 가지고 있다, 친구!",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_NOTRADES = 
+STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_NOTRADES =
 {
-    "다음 기회에 보자",
-    "흥미로운 게 아무것도 없나, 친구?",
-    "나중에 똑같은 물건 또 물어보러 오지 마라!",
-    "다신 오지 마라!",
-    "차라리 장로님이 널 도와줄 수 있을 거다",
-    "아마 다음 기회에 보자, 친구",
-    "그럼 내 시간 낭비하지 마라",
+	"다음 기회에 보자",
+	"흥미로운 게 아무것도 없나, 친구?",
+	"나중에 똑같은 물건 또 물어보러 오지 마라!",
+	"다신 오지 마라!",
+	"차라리 장로님이 널 도와줄 수 있을 거다",
+	"아마 다음 기회에 보자, 친구",
+	"그럼 내 시간 낭비하지 마라",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_MADETRADE = 
+STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_MADETRADE =
 {
-    "고맙다",
-    "너 아주 좋다!",
-    "잘했다, 친구",
-    "좋아, 좋아! 그걸로 아주 충분하다",
-    "너랑 거래해서 즐거웠다",
-    "꼭 다시 와라, 알았지?",
-    "고맙다, 대장!"
+	"고맙다",
+	"너 아주 좋다!",
+	"잘했다, 친구",
+	"좋아, 좋아! 그걸로 아주 충분하다",
+	"너랑 거래해서 즐거웠다",
+	"꼭 다시 와라, 알았지?",
+	"고맙다, 대장!"
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_DOTRADE = 
+STRINGS.DECIDUOUSFORESTTRADER_DOTRADE =
 {
-    "좋은 선택이다, 친구!",
-    "바로 대령하겠다, 또 필요한 게 뭐냐?",
-    "좋아, 좋아, 그거 아주 좋은 거다",
-    "물건 사는 안목이 아주 훌륭하다!",
-    "이게 너한테 도움이 되길 바란다!",
-    "계속해서 사라!",
-    "이게 여러 방면으로 너한테 도움이 될 거다!",
-    "탁월한 선택이다! 다른 건 더 없나?",
-    "누가 진짜로 이걸 돈 주고 샀단 말이냐?"
+	"좋은 선택이다, 친구!",
+	"바로 대령하겠다, 또 필요한 게 뭐냐?",
+	"좋아, 좋아, 그거 아주 좋은 거다",
+	"물건 사는 안목이 아주 훌륭하다!",
+	"이게 너한테 도움이 되길 바란다!",
+	"계속해서 사라!",
+	"이게 여러 방면으로 너한테 도움이 될 거다!",
+	"탁월한 선택이다! 다른 건 더 없나?",
+	"누가 진짜로 이걸 돈 주고 샀단 말이냐?"
 }
 
 STRINGS.DECIDUOUSFORESTTRADER_DOTRADEHAT =
 {
-    "내 모자를 원하나? 알겠다 그럼 가져라",
-    "여기 있다, 친구! 우정의 징표로 내 모자를 주겠다",
-    "나한테는 언제든 다른 모자를 새로 만들 수 있는 능력이 있다!",
-    "모자가 또 필요하면 나중에 다시 와라, 친구!",
-    "고맙다! 이건 내 어린 시절을 떠올리게 하니, 대신 이걸 가져라",
-    "내 낡은 모자 말이냐? 알겠다 가져가라",
+	"내 모자를 원하나? 알겠다 그럼 가져라",
+	"여기 있다, 친구! 우정의 징표로 내 모자를 주겠다",
+	"나한테는 언제든 다른 모자를 새로 만들 수 있는 능력이 있다!",
+	"모자가 또 필요하면 나중에 다시 와라, 친구!",
+	"고맙다! 이건 내 어린 시절을 떠올리게 하니, 대신 이걸 가져라",
+	"내 낡은 모자 말이냐? 알겠다 가져가라",
 }
 
 STRINGS.DECIDUOUSFORESTTRADER_REFUSE =
 {
-    "그건 필요 없다!",
-    "나 원하지 않는다!",
-    "난 괜찮다, 고맙다",
-    "다른 걸로 가져와라!",
-    "그걸론 안 된다, 친구!",
-    "관심 없다!",
+	"그건 필요 없다!",
+	"나 원하지 않는다!",
+	"난 괜찮다, 고맙다",
+	"다른 걸로 가져와라!",
+	"그걸론 안 된다, 친구!",
+	"관심 없다!",
 }
 
 STRINGS.DECIDUOUSFORESTTRADER_REFUSE_RUNDOWN =
 {
-    "나를 도와라, 친구!",
-    "나 집 수리하는 데 도움이 필요하다!",
-    "너 도와줄 건가? 맞나?",
-    "나 아직 장사할 수 없다!",
-    "도움이 먼저다! 거래는 나중에 해라, 친구!",
+	"나를 도와라, 친구!",
+	"나 집 수리하는 데 도움이 필요하다!",
+	"너 도와줄 건가? 맞나?",
+	"나 아직 장사할 수 없다!",
+	"도움이 먼저다! 거래는 나중에 해라, 친구!",
 }
 
 STRINGS.DECIDUOUSFORESTTRADER_REFUSE_MERM =
 {
-    "어인 족속과는 거래 안 한다!",
-    "내 물건에서 당장 떨어져라!",
-    "나 너희 같은 놈들과는 장사 안 한다!",
-    "내 가게는 착한 사람 전용이다!",
-    "어인 족속은 여기 출입 금지다!",
-    "크아아악! 물러서라!",
+	"어인 족속과는 거래 안 한다!",
+	"내 물건에서 당장 떨어져라!",
+	"나 너희 같은 놈들과는 장사 안 한다!",
+	"내 가게는 착한 사람 전용이다!",
+	"어인 족속은 여기 출입 금지다!",
+	"크아아악! 물러서라!",
 }
 
 STRINGS.DECIDUOUSFORESTTRADER_GOHOME =
 {
-    "낮잠 시간이다!",
-    "취침 시간이다!",
-    "나 교대 시간 끝났다!",
-    "나중에 보자, 친구. 지금은 쉬어야 한다",
-    "나중에 보자!",
-    "나 어디 있는지 너 알 거다!",
+	"낮잠 시간이다!",
+	"취침 시간이다!",
+	"나 교대 시간 끝났다!",
+	"나중에 보자, 친구. 지금은 쉬어야 한다",
+	"나중에 보자!",
+	"나 어디 있는지 너 알 거다!",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_STARTDANCING = 
+STRINGS.DECIDUOUSFORESTTRADER_STARTDANCING =
 {
-    "춤추자!",
-    "파티를 시작하자, 친구!",
-    "춤추자, 춤춰, 친구!",
-    "분위기를 띄울 줄 아는구나, 친구!",
-    "파티 시간이다!",
+	"춤추자!",
+	"파티를 시작하자, 친구!",
+	"춤추자, 춤춰, 친구!",
+	"분위기를 띄울 줄 아는구나, 친구!",
+	"파티 시간이다!",
 }
 
 STRINGS.DECIDUOUSFORESTTRADER_APPRECIATE =
 {
-    "도와줘서 고맙다, 친구!",
-    "정말 고맙다!",
-    "나 이제 장사 시작할 수 있다!",
-    "오옷! 오옷! 고맙다!",
-    "장사할 시간이다!",
-    "너 아주 좋다, 친구",
-    "나 너의 도움에 감사한다!",
+	"도와줘서 고맙다, 친구!",
+	"정말 고맙다!",
+	"나 이제 장사 시작할 수 있다!",
+	"오옷! 오옷! 고맙다!",
+	"장사할 시간이다!",
+	"너 아주 좋다, 친구",
+	"나 너의 도움에 감사한다!",
 }
 
 STRINGS.FISHREGISTRY =
 {
-    TAB_FISH = "물고기",
-    TAB_ROE = "물고기 알",
-    
-    MYSTERY_FISH = "알 수 없는 물고기",
-    MISSING_FISH = "발견되지 않은 물고기",
-    
-    MYSTERY_ROE = "알 수 없는 알",
-    MISSING_ROE = "발견되지 않은 알",
-    
-    MYSTERY_BABY = "알 수 없는 치어",
-    MISSING_BABY = "발견되지 않은 치어",
-    
-    MISSING_ROE_TIME = "알 부화 시간 미정",
-    MISSING_BABY_TIME = "치어 성장 시간 미정",
-    
-    PHASE_DAY = "낮",
-    PHASE_DUSK = "저녁",
-    PHASE_NIGHT = "밤",
-    
-    MOONPHASE_NEW = "초승달/그믐달",
-    MOONPHASE_QUARTER = "반달",
-    MOONPHASE_HALF = "상현달/하현달",
-    MOONPHASE_THREEQUARTER = "보름달 직전",
-    MOONPHASE_FULL = "보름달",
-    MOONPHASE_GLASSED = "달빛 폭풍",
-    
-    SEASON_AUTUMN = "가을",
-    SEASON_WINTER = "겨울",
-    SEASON_SPRING = "봄",
-    SEASON_SUMMER = "여름",
-    
-    WORLD_FOREST = "지상",
-    WORLD_CAVE = "동굴",
-    
-    ROE_TIME = "알 부화 시간",
-    BABY_TIME = "치어 성장 시간",
-    
-    ROE_TIME_HALF_DAY = "약 반나절",
-    ROE_TIME_ONE_DAY = "약 하루",
-    ROE_TIME_ONE_HALF_DAY = "약 하루 반",
-    ROE_TIME_TWO_DAY = "약 2일",
-    ROE_TIME_THREE_DAY = "약 3일",
-    ROE_TIME_MORE_DAY = "3일 이상",
-    
-    BABY_TIME_HALF_DAY = "약 반나절",
-    BABY_TIME_ONE_DAY = "약 하루",
-    BABY_TIME_ONE_HALF_DAY = "약 하루 반",
-    BABY_TIME_TWO_DAY = "약 2일",
-    BABY_TIME_THREE_DAY = "약 3일",
-    BABY_TIME_FOUR_DAY = "약 4일",
-    BABY_TIME_FIVE_DAY = "약 5일",
-    BABY_TIME_SIX_DAY = "약 6일",
-    BABY_TIME_MORE_DAY = "6일 이상",
+	TAB_FISH = "물고기",
+	TAB_ROE = "물고기 알",
+
+	MYSTERY_FISH = "알 수 없는 물고기",
+	MISSING_FISH = "발견되지 않은 물고기",
+
+	MYSTERY_ROE = "알 수 없는 알",
+	MISSING_ROE = "발견되지 않은 알",
+
+	MYSTERY_BABY = "알 수 없는 치어",
+	MISSING_BABY = "발견되지 않은 치어",
+
+	MISSING_ROE_TIME = "알 부화 시간 미정",
+	MISSING_BABY_TIME = "치어 성장 시간 미정",
+
+	PHASE_DAY = "낮",
+	PHASE_DUSK = "저녁",
+	PHASE_NIGHT = "밤",
+
+	MOONPHASE_NEW = "초승달/그믐달",
+	MOONPHASE_QUARTER = "반달",
+	MOONPHASE_HALF = "상현달/하현달",
+	MOONPHASE_THREEQUARTER = "보름달 직전",
+	MOONPHASE_FULL = "보름달",
+	MOONPHASE_GLASSED = "달빛 폭풍",
+
+	SEASON_AUTUMN = "가을",
+	SEASON_WINTER = "겨울",
+	SEASON_SPRING = "봄",
+	SEASON_SUMMER = "여름",
+
+	WORLD_FOREST = "지상",
+	WORLD_CAVE = "동굴",
+
+	ROE_TIME = "알 부화 시간",
+	BABY_TIME = "치어 성장 시간",
+
+	ROE_TIME_HALF_DAY = "약 반나절",
+	ROE_TIME_ONE_DAY = "약 하루",
+	ROE_TIME_ONE_HALF_DAY = "약 하루 반",
+	ROE_TIME_TWO_DAY = "약 2일",
+	ROE_TIME_THREE_DAY = "약 3일",
+	ROE_TIME_MORE_DAY = "3일 이상",
+
+	BABY_TIME_HALF_DAY = "약 반나절",
+	BABY_TIME_ONE_DAY = "약 하루",
+	BABY_TIME_ONE_HALF_DAY = "약 하루 반",
+	BABY_TIME_TWO_DAY = "약 2일",
+	BABY_TIME_THREE_DAY = "약 3일",
+	BABY_TIME_FOUR_DAY = "약 4일",
+	BABY_TIME_FIVE_DAY = "약 5일",
+	BABY_TIME_SIX_DAY = "약 6일",
+	BABY_TIME_MORE_DAY = "6일 이상",
 }
 
 STRINGS.FISHERMERM_TALK_RUNAWAY = "플로피 글로프 글롭!"
@@ -892,8 +903,8 @@ STRINGS.FISHERMERM_TALK_FISH = "블루 플로트."
 STRINGS.SKILLTREE_WORMWOOD_MUSHROOMPLANTER_RATEBONUS_2_DESC = "버섯 농장에 심은 버섯이 훨씬 빠르게 자랍니다.\n버섯 농장에 새로운 종류의 버섯을 심는 방법을 배웁니다."
 
 -- Edited strings for character selection.
-STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr = STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr.." \n*Is a skilled butcher" -- NEEDS TRANSLATION
-STRINGS.CHARACTER_DESCRIPTIONS.warly = STRINGS.CHARACTER_DESCRIPTIONS.warly.." \n*Is a skilled butcher" -- NEEDS TRANSLATION
+STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr = STRINGS.CHARACTER_DESCRIPTIONS.wathgrithr.." \n*Is a skilled butcher"
+STRINGS.CHARACTER_DESCRIPTIONS.warly = STRINGS.CHARACTER_DESCRIPTIONS.warly.." \n*Is a skilled butcher"
 
 STRINGS.NAMES.KYNO_ROE = "물고기 알"
 STRINGS.NAMES.KYNO_ROE_PONDFISH = "민물고기 알"
@@ -1382,14 +1393,14 @@ STRINGS.RECIPE_DESC.KYNO_SALTRACK_INSTALLER_P = "흐릅! 연못에 놓는다, �
 
 STRINGS.NAMES.TURF_PINKPARK = "분홍 공원 잔디"
 STRINGS.NAMES.TURF_PINKPARK_P = "분홍 공원 잔디"
-STRINGS.RECIPE_DESC.TURF_PINKPARK = "A pink-ish grass for vibrant minds." -- NEEDS TRANSLATION
+STRINGS.RECIPE_DESC.TURF_PINKPARK = "A pink-ish grass for vibrant minds."
 
 STRINGS.NAMES.TURF_STONECITY = "흰 돌길"
 STRINGS.NAMES.TURF_STONECITY_P = "흰 돌길"
-STRINGS.RECIPE_DESC.TURF_STONECITY = "White stones for a stone city." -- NEEDS TRANSLATION
+STRINGS.RECIPE_DESC.TURF_STONECITY = "White stones for a stone city."
 
 STRINGS.NAMES.TURF_FIELDS = "경작된 타일"
-STRINGS.RECIPE_DESC.TURF_FIELDS = "A civilized patch of dirt." -- NEEDS TRANSLATION
+STRINGS.RECIPE_DESC.TURF_FIELDS = "A civilized patch of dirt."
 
 STRINGS.NAMES.TURF_TIDALMARSH = "조수 습지 타일"
 STRINGS.NAMES.WURT_TURF_TIDALMARSH = "조수 습지 타일"
@@ -2242,7 +2253,7 @@ STRINGS.NAMES.KYNO_BRAINROCK_ROCK = "뇌 싹"
 
 STRINGS.NAMES.BRAINMETTERSOUP = "알파벳 수프"
 
-STRINGS.NAMES.KYNO_OCTOPUSKING_OCEAN = "해적문어 왕" 
+STRINGS.NAMES.KYNO_OCTOPUSKING_OCEAN = "해적문어 왕"
 STRINGS.NAMES.KYNO_OCTOPUSKING_TREASURECHEST = "침수된 상자"
 
 STRINGS.NAMES.KYNO_PACKIMBAGGIMS_FISHBONE = "물고기 뼈"
@@ -2389,53 +2400,63 @@ STRINGS.NAMES.KYNO_FOODREVIVER_PROXY = "해골 사탕"
 STRINGS.NAMES.KYNO_FOODAMMO_TOMATO = "불안정한 토마토란"
 STRINGS.RECIPE_DESC.KYNO_FOODAMMO_TOMATO = "형편없는 공연을 심판하기에 안성맞춤인 무기입니다."
 
-STRINGS.NAMES.WX78MODULE_GOURMAND = "Gourmand Circuit" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.WX78MODULE_GOURMAND = "Prepared meals processed at peak efficiency." -- NEEDS TRANSLATION
+STRINGS.NAMES.WX78MODULE_GOURMAND = "Gourmand Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_GOURMAND = "Prepared meals processed at peak efficiency."
 
-STRINGS.NAMES.WX78MODULE_COOKER = "Combustion Circuit" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.WX78MODULE_COOKER = "Controlled heat application for cooking and refinement." -- NEEDS TRANSLATION
+STRINGS.NAMES.WX78MODULE_COOKER = "Combustion Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_COOKER = "Controlled heat application for cooking and refinement."
 
-STRINGS.NAMES.WX78MODULE_DRYER = "Desiccant Circuit" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.WX78MODULE_DRYER = "A rudimentary humidity control system." -- NEEDS TRANSLATION
+STRINGS.NAMES.WX78MODULE_DRYER = "Desiccant Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_DRYER = "A rudimentary humidity control system."
 
-STRINGS.NAMES.WX78MODULE_DRYER2 = "Super-Desiccant Circuit" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.WX78MODULE_DRYER2 = "A perfected humidity regulator." -- NEEDS TRANSLATION
+STRINGS.NAMES.WX78MODULE_DRYER2 = "Super-Desiccant Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_DRYER2 = "A perfected humidity regulator."
 
-STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER_HELD = "Portable Combustion Unit" -- NEEDS TRANSLATION
-STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER = "Collapsed Combustion Unit" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER_HELD = "Portable Combustion Unit"
+STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER = "Collapsed Combustion Unit"
 
-STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER_HELD = "Portable Desiccant Unit" -- NEEDS TRANSLATION
-STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER = "Collapsed Desiccant Unit" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER_HELD = "Portable Desiccant Unit"
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER = "Collapsed Desiccant Unit"
 
-STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2_HELD = "Portable Super-Desiccant Unit" -- NEEDS TRANSLATION
-STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2 = "Collapsed Super-Desiccant Unit" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2_HELD = "Portable Super-Desiccant Unit"
+STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2 = "Collapsed Super-Desiccant Unit"
 
-STRINGS.NAMES.KYNO_PIGGYBANK = "Piggy Bank" -- NEEDS TRANSLATION
-STRINGS.NAMES.KYNO_PIGGYBANK_UPGRADED = "Bottomless Piggy Bank" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_PIGGYBANK = "Piggy Bank"
+STRINGS.NAMES.KYNO_PIGGYBANK_UPGRADED = "Bottomless Piggy Bank"
 STRINGS.RECIPE_DESC.KYNO_PIGGYBANK = "A tiny home for your ever growing fortune."
 
-STRINGS.NAMES.MARSHMALLOWS = "Marshmallows" -- NEEDS TRANSLATION
+STRINGS.NAMES.MARSHMALLOWS = "Marshmallows"
 
-STRINGS.NAMES.KOKONUTCOOKIES = "Starveos" -- NEEDS TRANSLATION
+STRINGS.NAMES.KOKONUTCOOKIES = "Starveos"
 
-STRINGS.NAMES.BBQRIBS = "Pork Ribs" -- NEEDS TRANSLATION
+STRINGS.NAMES.BBQRIBS = "Pork Ribs"
 
-STRINGS.NAMES.BROWNIE = "Brownie" -- NEEDS TRANSLATION
+STRINGS.NAMES.BROWNIE = "Brownie"
 
-STRINGS.NAMES.CHOCOLATE_CAKE = "Chocolate Cake" -- NEEDS TRANSLATION
+STRINGS.NAMES.CHOCOLATE_CAKE = "Chocolate Cake"
 
-STRINGS.NAMES.SWORDFISHBLUEDINNER = "Chilled Bento" -- NEEDS TRANSLATION
+STRINGS.NAMES.SWORDFISHBLUEDINNER = "Chilled Bento"
 
-STRINGS.NAMES.KYNO_CHILLED_SHARD = "Chilled Shards" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_CHILLED_SHARD = "Chilled Shards"
 
-STRINGS.NAMES.KYNO_BIRD_ROBIN_NIGHT = "Nightwatcher" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_BIRD_ROBIN_NIGHT = "Nightwatcher"
 
-STRINGS.NAMES.KYNO_BIRD_ROBIN_WINTER_NIGHT = "Northern Shrieker" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_BIRD_ROBIN_WINTER_NIGHT = "Northern Shrieker"
 
-STRINGS.NAMES.KYNO_POND_SALT2 = "Artificial Salt Pond" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.KYNO_POND_SALT2 = "Extract and collect salt crystals with minimal effort." -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_POND_SALT2 = "Artificial Salt Pond"
+STRINGS.RECIPE_DESC.KYNO_POND_SALT2 = "Extract and collect salt crystals with minimal effort."
 
-STRINGS.NAMES.KYNO_POND_SALT2_CONSTRUCTION = "Artificial Salt Pond Foundation" -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_POND_SALT2_CONSTRUCTION = "Artificial Salt Pond Foundation"
 
-STRINGS.NAMES.KYNO_FISHINGROD_THULECITE = "Thulecite Freshwater Fishing Rod" -- NEEDS TRANSLATION
-STRINGS.RECIPE_DESC.KYNO_FISHINGROD_THULECITE = "Hook fish the ancient way." -- NEEDS TRANSLATION
+STRINGS.NAMES.KYNO_FISHINGROD_THULECITE = "Thulecite Freshwater Fishing Rod"
+STRINGS.RECIPE_DESC.KYNO_FISHINGROD_THULECITE = "Hook fish the ancient way."
+
+STRINGS.NAMES.KYNO_OPALPRECIOUSPOWDER = "Iridescent Powdered Sugar"
+STRINGS.RECIPE_DESC.KYNO_OPALPRECIOUSPOWDER = "An otherworldly and powerful ingredient."
+
+STRINGS.NAMES.OPALPRECIOUSCREAM = "Shimmer Whipped Cream"
+
+STRINGS.NAMES.CATFISHSTICK = "Grilled Black Catfish"
+
+STRINGS.NAMES.OPALPRECIOUSLOLLIPOP = "Shimmer Lollipop"
+STRINGS.NAMES.OPALPRECIOUSLOLLIPOP_CURSE = "Excessive Gambling"

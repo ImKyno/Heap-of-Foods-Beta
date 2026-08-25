@@ -101,11 +101,17 @@ WOLFGANG.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Siła nocy znikła."
 WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_START = "Stworzenia boją się potężnego Wolfganga!"
 WOLFGANG.ANNOUNCE_KYNO_PANICBUFF_END = "Stworzenia przestały bać się Wolfganga."
 
-WOLFGANG.ANNOUNCE_KYNO_CUREBUFF_START = "Food stays fresh for mighty Wolfgang!" -- NEEDS TRANSLATION
-WOLFGANG.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness goes away." -- NEEDS TRANSLATION
+WOLFGANG.ANNOUNCE_KYNO_CUREBUFF_START = "Food stays fresh for mighty Wolfgang!"
+WOLFGANG.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness goes away."
 
-WOLFGANG.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Wolfgang is very hard to knock over!" -- NEEDS TRANSLATION
-WOLFGANG.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Wolfgang is pushy again." -- NEEDS TRANSLATION
+WOLFGANG.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Wolfgang is very hard to knock over!"
+WOLFGANG.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Wolfgang is pushy again."
+
+WOLFGANG.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Wolfgang feels MIGHTY!"
+WOLFGANG.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Wolfgang is feeling weak."
+
+WOLFGANG.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Uh oh... Wolfgang does not like this feeling."
+WOLFGANG.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Ah! Bad feeling is gone now."
 
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "To nie jest potrzebne."
 
@@ -136,13 +142,13 @@ WOLFGANG.ANNOUNCE_KYNO_ROE_RESEARCHED = "Wolfgang teraz rozumie małe rybie jajk
 
 WOLFGANG.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Wolfgang czuje się silniejszy!"
 
-WOLFGANG.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WOLFGANG.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Frosty! Wolfgang not like!",
 	"Puny plant has poisoned Wolfgang!",
 }
 
-WOLFGANG.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Ha! Puny plant poison could not last long in Wolfgang's mighty body!" -- NEEDS TRANSLATION
+WOLFGANG.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Ha! Puny plant poison could not last long in Wolfgang's mighty body!"
 
 WOLFGANG.DESCRIBE.KYNO_ROE = "Jest jajkowe."
 WOLFGANG.DESCRIBE.KYNO_ROE_COOKED = "Małe jajka mniej śmierdzą teraz."
@@ -531,7 +537,7 @@ WOLFGANG.DESCRIBE.KYNO_NEONFISH_COOKED = "Pieczona ryba to dobre paliwo dla mię
 
 WOLFGANG.DESCRIBE.KYNO_GROUPER = "Wolfgang chciałby pływać jak ryba."
 WOLFGANG.DESCRIBE.KYNO_GROUPER_COOKED = "Wolfgang zje pyszną rybę!"
- 
+
 WOLFGANG.DESCRIBE.KYNO_PIERROTFISH = "Mała rybka jest bardzo sucha!"
 WOLFGANG.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Mała rybka uczyni Wolfganga potężnym!"
 
@@ -841,7 +847,7 @@ WOLFGANG.DESCRIBE.CHOCOLATE_BLACK = "To mała tabliczka czekolady!"
 WOLFGANG.DESCRIBE.CHOCOLATE_WHITE = "To mała tabliczka czekolady!"
 
 WOLFGANG.DESCRIBE.TRICOLORDANGO = "Małe kuleczki słodkości!"
- 
+
 WOLFGANG.DESCRIBE.FRIESFRENCH = "Smakują dobrze i są chrupiące!"
 
 WOLFGANG.DESCRIBE.PIRATERUM = "To niebezpieczny napój!"
@@ -853,7 +859,7 @@ WOLFGANG.DESCRIBE.ONIONRINGS = "Małe cebulki kąpane w oleju."
 WOLFGANG.DESCRIBE.DONUTS = "Małe kuleczki cukru!"
 WOLFGANG.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "To mała kulka cukru!"
 WOLFGANG.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "To mała kulka cukru!"
- 
+
 WOLFGANG.DESCRIBE.CINNAMONROLL = "Bardzo słodka bułka!"
 
 WOLFGANG.DESCRIBE.GUMMYBEARGERS = "To małe cukierki misie, haha!"
@@ -1247,7 +1253,7 @@ WOLFGANG.DESCRIBE.CHICKENROTISSERIE = "Kręcący się kurczak bardzo głodzi Wol
 
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Ciepły napój czyni Wolfganga silnym!"
 WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodki napój dla potężnego Wolfganga!"
-WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Tea makes Wolfgang feel cool and strong!" -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Tea makes Wolfgang feel cool and strong!"
 
 WOLFGANG.DESCRIBE.SOULJUICE = "Mały napój, ale silny jak Wolfgang!"
 
@@ -1314,74 +1320,82 @@ WOLFGANG.DESCRIBE.KYNO_PIGCOIN1 = "Świni handlarz by chciał."
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN2 = "Cenna moneta do kupowania dobrych rzeczy."
 WOLFGANG.DESCRIBE.KYNO_PIGCOIN3 = "Potężna moneta!"
 
-WOLFGANG.DESCRIBE.KYNO_ICENETTLES = "Cold strong, just like Wolfgang." -- NEEDS TRANSLATION
-WOLFGANG.DESCRIBE.KYNO_ICENETTLES_DRIED = "Chilly and rough, reminds me of homeland." -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.KYNO_ICENETTLES = "Cold strong, just like Wolfgang."
+WOLFGANG.DESCRIBE.KYNO_ICENETTLES_DRIED = "Chilly and rough, reminds me of homeland."
 
-WOLFGANG.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "Bag for tiny plant babies!",
 	FULL = "Bag is full of tiny plant babies!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Wolfgang hated those back at the circus." -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Wolfgang hated those back at the circus."
 
-WOLFGANG.DESCRIBE.WX78MODULE_GOURMAND = "Is robot snacks, yes?" -- NEEDS TRANSLATION
-WOLFGANG.DESCRIBE.WX78MODULE_COOKER = "Is robot snacks, yes?" -- NEEDS TRANSLATION
-WOLFGANG.DESCRIBE.WX78MODULE_DRYER = "Is robot snacks, yes?" -- NEEDS TRANSLATION
-WOLFGANG.DESCRIBE.WX78MODULE_DRYER2 = "Is robot snacks, yes?" -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.WX78MODULE_GOURMAND = "Is robot snacks, yes?"
+WOLFGANG.DESCRIBE.WX78MODULE_COOKER = "Is robot snacks, yes?"
+WOLFGANG.DESCRIBE.WX78MODULE_DRYER = "Is robot snacks, yes?"
+WOLFGANG.DESCRIBE.WX78MODULE_DRYER2 = "Is robot snacks, yes?"
 
 WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Any goodie for Wolfgang?", -- NEEDS TRANSLATION
+	GENERIC = "Any goodie for Wolfgang?",
 }
 
 WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Any goodie for Wolfgang?", -- NEEDS TRANSLATION
+	GENERIC = "Any goodie for Wolfgang?",
 }
 
 WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Any goodie for Wolfgang?", -- NEEDS TRANSLATION
+	GENERIC = "Any goodie for Wolfgang?",
 }
 
-WOLFGANG.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "Piggy is full of shiny coins!",
 	UPGRADED = "Is strong piggy!",
 	GENERIC = "Is little pig for coins.",
 }
 
-WOLFGANG.DESCRIBE.MARSHMALLOWS = "Tiny fluffy food is good!" -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.MARSHMALLOWS = "Tiny fluffy food is good!"
 
-WOLFGANG.DESCRIBE.KOKONUTCOOKIES = "Wolfgang likes cookies!" -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.KOKONUTCOOKIES = "Wolfgang likes cookies!"
 
-WOLFGANG.DESCRIBE.BBQRIBS = "These ribs make Wolfgang very hungry!" -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.BBQRIBS = "These ribs make Wolfgang very hungry!"
 
-WOLFGANG.DESCRIBE.BROWNIE = "Chocolate square is very good!" -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.BROWNIE = "Chocolate square is very good!"
 
-WOLFGANG.DESCRIBE.CHOCOLATE_CAKE = "Wolfgang loves giant chocolate cake!" -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.CHOCOLATE_CAKE = "Wolfgang loves giant chocolate cake!"
 
-WOLFGANG.DESCRIBE.SWORDFISHBLUEDINNER = "Cold food still good!" -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.SWORDFISHBLUEDINNER = "Cold food still good!"
 
-WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "Little bird is watching Wolfgang!",
 	HELD = "Little bird is moving in Wolfgang's pocket!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "Cold bird has very sharp eyes!",
 	HELD = "Sharp bird is attacking Wolfgang's pocket!",
 }
 
-WOLFGANG.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Is very unfinished thing." -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Is very unfinished thing."
 
-WOLFGANG.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Is mighty fishing rod!" -- NEEDS TRANSLATION
+WOLFGANG.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Is mighty fishing rod!"
+
+WOLFGANG.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Is tiny shiny sugar! Wolfgang will eat!"
+
+WOLFGANG.DESCRIBE.OPALPRECIOUSCREAM = "Shiny cream! Wolfgang likes shinies!"
+
+WOLFGANG.DESCRIBE.CATFISHSTICK = "Big fish makes big snack!"
+
+WOLFGANG.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Pretty candy may make Wolfgang strong!"

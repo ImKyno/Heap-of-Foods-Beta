@@ -133,6 +133,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "Attacks have a small chanc
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BATILISK = "Scares nearby batilisks for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_KNOCKBACK = "Decreases knockback for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CHILLEDATTACK = "Every 3 consecutive attack against the same target causes Chilled Shards to appear.\n\nChilled Shards deals damage in a small area around the target."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRITDAMAGE = "Attacks have a small chance to critical strike for 150% damage."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "Decreases luck for a certain amount of time."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "Gives off a random side effect.\n\n\"LET'S GO GAMBLING!\" - Someone, probably."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder fully restores its spoilage time.\n\nDecreases the spoilage rate of items inside the inventory by 25%.\n\nIncreases the duration of other side effects by 25%.\n\nDuration 4 minutes."
@@ -240,7 +243,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSHOWCASER = "A structure for displaying prepar
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOT = "An 8 slot container that will receive fish for breeding.\n\nPlacing a fish in the first slot and feeding it will allow breeding. Fish will produce their respective offspring and roe after certain amounts of time have passed.\n\nFish can only breed when all their criteria is met, each fish has its own preferences, such as: Day Phase, Moon Phase, Season and Location."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANHUNT = "A bubbling trail indicating aquatic activity.\nFollowing the trail may lead to the creature behind them."
 STRINGS.SCRAPBOOK.SPECIALINFO.WHALEOCEANCARCASS = "A whale carcass that has begun to spoil.\n\nIt will grow bigger and bigger each day until it explodes and release everything inside.\n\nThe sound of the explosion might attract unwanted attention."
-STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTRADER = "A lonely octopus living in the vast ocean.\n\nYaarctopus offers rewards in exchange for Fish, Trinkets and certain Fish Prepared Foods." 
+STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTRADER = "A lonely octopus living in the vast ocean.\n\nYaarctopus offers rewards in exchange for Fish, Trinkets and certain Fish Prepared Foods."
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTREASURE = "Yaarctopus' chest given to survivors during their exchanges."
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS_FISHBONE = "Summons Packim Baggims when picked up.\n\nPackim Baggims will follow the holder. While Packim Baggims is alive, the fish color will be orange."
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "Celebrating the 5th Anniversary of Heap of Foods!"

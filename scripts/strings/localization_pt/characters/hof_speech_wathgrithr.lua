@@ -107,6 +107,12 @@ WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_END = "Até o maior dos banquetes um dia se ac
 WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ninguém me moverá!"
 WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "A batalha poderá me mover novamente!"
 
+WATHGRITHR.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Meus golpes farão o campo de batalha tremer!"
+WATHGRITHR.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Minha força retornou ao seu nível habitual."
+
+WATHGRITHR.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Um presságio sombrio paira sobre mim!"
+WATHGRITHR.ANNOUNCE_KYNO_BADLUCKBUFF_END = "O mau presságio foi banido!"
+
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado!"
 
 WATHGRITHR.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Errado!"
@@ -172,7 +178,7 @@ WATHGRITHR.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "O cheiro é energizante."
 
 WATHGRITHR.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Needs hot soil."
 
-WATHGRITHR.DESCRIBE.KYNO_COFFEEBUSH = 
+WATHGRITHR.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "Basta adicionar água?",
 	PICKED = "Sua abundância está adormecida!",
@@ -181,7 +187,7 @@ WATHGRITHR.DESCRIBE.KYNO_COFFEEBUSH =
 
 WATHGRITHR.DESCRIBE.DUG_KYNO_SPOTBUSH = "Needs proper planting."
 
-WATHGRITHR.DESCRIBE.KYNO_SPOTBUSH = 
+WATHGRITHR.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Tempero para os pratos mais sofisticados.",
 	PICKED = "Sua abundância está adormecida!",
@@ -531,7 +537,7 @@ WATHGRITHR.DESCRIBE.KYNO_NEONFISH_COOKED = "Njord me saciou neste dia."
 
 WATHGRITHR.DESCRIBE.KYNO_GROUPER = "Aegir não te salvará hoje."
 WATHGRITHR.DESCRIBE.KYNO_GROUPER_COOKED = "Obrigado Njord por este presente!"
- 
+
 WATHGRITHR.DESCRIBE.KYNO_PIERROTFISH = "Gostaria que esta carne não tivesse olhos tão grandes."
 WATHGRITHR.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Obrigado, peixe, pelo presente de tua carne."
 
@@ -841,7 +847,7 @@ WATHGRITHR.DESCRIBE.CHOCOLATE_BLACK = "Não é carne, mas..."
 WATHGRITHR.DESCRIBE.CHOCOLATE_WHITE = "Não é carne, mas..."
 
 WATHGRITHR.DESCRIBE.TRICOLORDANGO = "Não parece carne."
- 
+
 WATHGRITHR.DESCRIBE.FRIESFRENCH = "Não é carne!"
 
 WATHGRITHR.DESCRIBE.PIRATERUM = "Cheira estranho e emite uma aura maligna."
@@ -853,7 +859,7 @@ WATHGRITHR.DESCRIBE.ONIONRINGS = "Legumes assados, argh!"
 WATHGRITHR.DESCRIBE.DONUTS = "Por que é tão doce? Não consigo entender!"
 WATHGRITHR.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Por que é tão doce? Não consigo entender!"
 WATHGRITHR.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Por que é tão doce? Não consigo entender!"
- 
+
 WATHGRITHR.DESCRIBE.CINNAMONROLL = "Espirais macias de pão."
 
 WATHGRITHR.DESCRIBE.GUMMYBEARGERS = "Alguns doces não farão mal."
@@ -1385,3 +1391,11 @@ WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 WATHGRITHR.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Um colhedor de sal em construção!"
 
 WATHGRITHR.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Uma vara de pesca digna de um guerreiro do mar!"
+
+WATHGRITHR.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Açúcar cintilante! Perfeito para um banquete digno dos deuses!"
+
+WATHGRITHR.DESCRIBE.OPALPRECIOUSCREAM = "Uma cobertura cintilante para um banquete digno de Valhalla!"
+
+WATHGRITHR.DESCRIBE.CATFISHSTICK = "Uma bela pescaria, assada sobre as chamas!"
+
+WATHGRITHR.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Um doce misterioso! Que dádiva os deuses me concederão?"

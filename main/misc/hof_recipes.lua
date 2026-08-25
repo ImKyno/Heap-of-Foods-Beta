@@ -154,11 +154,11 @@ local HOF_PROTOTYPERS           =
 
 	kyno_serenityisland_shop    =
 	{
-		icon_atlas			    = CraftingFilterAtlas,
-		icon_image			    = "kyno_tab_serenity.tex",
+		icon_atlas              = CraftingFilterAtlas,
+		icon_image              = "kyno_tab_serenity.tex",
 		is_crafting_station	    = true,
-		action_str			    = "TRADE",
-		filter_text			    = _G.STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP,
+		action_str              = "TRADE",
+		filter_text             = _G.STRINGS.UI.CRAFTING_FILTERS.SERENITYSHOP,
 	},
 
 	kyno_meadowisland_seller    =
@@ -187,74 +187,85 @@ end
 -- Mod Recipes.
 AddRecipe2("kyno_flour", {Ingredient("kyno_wheat", 2)}, TECH.MEALING_ONE,
 	{
-		nounlock 			= true,
+		nounlock            = true,
 		no_deconstruction   = true,
-		actionstr 			= "MEALGRINDER",
+		actionstr           = "MEALGRINDER",
 		hint_msg            = "NEEDSMEALING",
-		numtogive 			= 3,
-		atlas 				= DefaultAtlas,
-		image 				= "quagmire_flour.tex",
+		numtogive           = 3,
+		atlas               = DefaultAtlas,
+		image               = "quagmire_flour.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
 AddRecipe2("kyno_spotspice", {Ingredient("kyno_spotspice_leaf", 2)}, TECH.MEALING_ONE,
 	{
-		nounlock 			= true,
+		nounlock            = true,
 		no_deconstruction   = true,
-		actionstr 			= "MEALGRINDER",
+		actionstr           = "MEALGRINDER",
 		hint_msg            = "NEEDSMEALING",
-		numtogive 			= 3,
-		atlas 				= DefaultAtlas,
-		image 				= "quagmire_spotspice_ground.tex",
+		numtogive           = 3,
+		atlas               = DefaultAtlas,
+		image               = "quagmire_spotspice_ground.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
 AddRecipe2("kyno_salt", {Ingredient("saltrock", 2)}, TECH.MEALING_ONE,
 	{
-		nounlock 			= true,
+		nounlock            = true,
 		no_deconstruction   = true,
-		actionstr 			= "MEALGRINDER",
+		actionstr           = "MEALGRINDER",
 		hint_msg            = "NEEDSMEALING",
-		numtogive 			= 3,
-		atlas 				= DefaultAtlas,
-		image 				= "quagmire_salt.tex",
+		numtogive           = 3,
+		atlas               = DefaultAtlas,
+		image               = "quagmire_salt.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
 AddRecipe2("kyno_bacon", {Ingredient("smallmeat", 1)}, TECH.MEALING_ONE,
 	{
-		nounlock 			= true,
+		nounlock            = true,
 		no_deconstruction   = true,
-		actionstr 			= "MEALGRINDER",
+		actionstr           = "MEALGRINDER",
 		hint_msg            = "NEEDSMEALING",
-		numtogive 			= 2,
-		atlas 				= DefaultAtlas,
-		image 				= "quagmire_smallmeat.tex",
+		numtogive           = 2,
+		atlas               = DefaultAtlas,
+		image               = "quagmire_smallmeat.tex",
 	},
 	{"CRAFTING_STATION"}
 )
 
 AddRecipe2("kyno_oil", {Ingredient("corn", 1), Ingredient("seeds", 1), Ingredient("petals", 1)}, TECH.MEALING_ONE,
 	{
-		nounlock			= true,
+		nounlock            = true,
 		no_deconstruction   = true,
-		actionstr			= "MEALGRINDER",
+		actionstr           = "MEALGRINDER",
 		hint_msg            = "NEEDSMEALING",
-		numtogive			= 3,
+		numtogive           = 3,
 	},
 	{"CRAFTING_STATION"}
 )
 
 AddRecipe2("kyno_sugar", {Ingredient("kyno_sugartree_petals", 1)}, TECH.MEALING_ONE,
 	{
-		nounlock 			= true,
+		nounlock            = true,
 		no_deconstruction   = true,
-		actionstr 			= "MEALGRINDER",
+		actionstr           = "MEALGRINDER",
 		hint_msg            = "NEEDSMEALING",
-		numtogive 			= 3,
+		numtogive           = 3,
+	},
+	{"CRAFTING_STATION"}
+)
+
+AddRecipe2("kyno_opalpreciouspowder", {Ingredient("opalpreciousgem", 1), Ingredient("kyno_sugar", 1)}, TECH.MEALING_ONE,
+	{
+		nounlock            = true,
+		no_deconstruction   = true,
+		actionstr           = "MEALGRINDER",
+		hint_msg            = "NEEDSMEALING",
+		numtogive           = 3,
 	},
 	{"CRAFTING_STATION"}
 )
@@ -267,17 +278,17 @@ AddRecipe2("kyno_musselstick_item", {Ingredient("twigs", 3), Ingredient("rope", 
 
 AddRecipe2("kyno_mealgrinder", {Ingredient("cutstone", 2), Ingredient("flint", 2), Ingredient("marble", 2)}, TECH.SCIENCE_ONE,
 	{
-		placer 				= "kyno_mealgrinder_placer",
-		min_spacing 		= 1.75,
+		placer              = "kyno_mealgrinder_placer",
+		min_spacing         = 1.75,
 	},
 	{"COOKING"}
 )
 
 AddRecipe2("kyno_mushstump", {Ingredient("spoiled_food", 4), Ingredient("poop", 3), Ingredient("livinglog", 2)}, TECH.SCIENCE_TWO,
 	{
-		placer 				= "kyno_mushstump_placer",
-		min_spacing			= 1.75,
-		image 				= "kyno_mushroomstump.tex",
+		placer              = "kyno_mushstump_placer",
+		min_spacing         = 1.75,
+		image               = "kyno_mushroomstump.tex",
 	},
 	{"GARDENING"}
 )
@@ -308,25 +319,25 @@ AddRecipe2("kyno_brewbook", {Ingredient("papyrus", 1), Ingredient("kyno_wheat", 
 
 AddRecipe2("kyno_woodenkeg", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 3)}, TECH.SCIENCE_ONE,
 	{
-		placer 				= "kyno_woodenkeg_placer",
-		min_spacing			= 2.5,
+		placer              = "kyno_woodenkeg_placer",
+		min_spacing         = 2.5,
 	},
 	{"COOKING", "STRUCTURES"}
 )
 
 AddRecipe2("kyno_preservesjar", {Ingredient("boards", 3), Ingredient("rope", 2), Ingredient("nitre", 3)}, TECH.SCIENCE_ONE,
 	{
-		placer 				= "kyno_preservesjar_placer",
-		min_spacing			= 1.75,
+		placer              = "kyno_preservesjar_placer",
+		min_spacing         = 1.75,
 	},
 	{"COOKING", "STRUCTURES"}
 )
 
 AddRecipe2("kyno_antchest", {Ingredient("honeycomb", 1), Ingredient("honey", 12), Ingredient("boards", 3)}, TECH.LOST,
 	{
-		placer				= "kyno_antchest_placer",
-		min_spacing			= 1.75,
-		image				= "kyno_antchest_honey.tex",
+		placer              = "kyno_antchest_placer",
+		min_spacing         = 1.75,
+		image               = "kyno_antchest_honey.tex",
 	},
 	{"COOKING", "CONTAINERS", "STRUCTURES"}
 )
@@ -718,81 +729,92 @@ AddCharacterRecipe("wx78module_gourmand", {Ingredient("scandata", 6), Ingredient
 if HOF_WARLYMEALGRINDER then
 	AddRecipe2("kyno_flour_w", {Ingredient("kyno_wheat", 2)}, TECH.FOODPROCESSING_ONE,
 		{
-			nounlock 			= true,
+			nounlock            = true,
 			no_deconstruction   = true,
-			actionstr 			= "MEALGRINDER",
-			product				= "kyno_flour",
+			actionstr           = "MEALGRINDER",
+			product             = "kyno_flour",
 			builder_tag         = "professionalchef",
-			numtogive 			= 3,
-			atlas 				= DefaultAtlas,
-			image 				= "quagmire_flour.tex",
+			numtogive           = 3,
+			atlas               = DefaultAtlas,
+			image               = "quagmire_flour.tex",
 		},
 		{"CRAFTING_STATION"}
 	)
 
 	AddRecipe2("kyno_spotspice_w", {Ingredient("kyno_spotspice_leaf", 2)}, TECH.FOODPROCESSING_ONE,
 		{
-			nounlock 			= true,
+			nounlock            = true,
 			no_deconstruction   = true,
-			actionstr 			= "MEALGRINDER",
-			product				= "kyno_spotspice",
+			actionstr           = "MEALGRINDER",
+			product             = "kyno_spotspice",
 			builder_tag         = "professionalchef",
-			numtogive 			= 3,
-			atlas 				= DefaultAtlas,
-			image 				= "quagmire_spotspice_ground.tex",
+			numtogive           = 3,
+			atlas               = DefaultAtlas,
+			image               = "quagmire_spotspice_ground.tex",
 		},
 		{"CRAFTING_STATION"}
 	)
 
 	AddRecipe2("kyno_salt_w", {Ingredient("saltrock", 2)}, TECH.FOODPROCESSING_ONE,
 		{
-			nounlock 			= true,
+			nounlock            = true,
 			no_deconstruction   = true,
-			actionstr 			= "MEALGRINDER",
-			product				= "kyno_salt",
+			actionstr           = "MEALGRINDER",
+			product             = "kyno_salt",
 			builder_tag         = "professionalchef",
-			numtogive 			= 3,
-			atlas 				= DefaultAtlas,
-			image 				= "quagmire_salt.tex",
+			numtogive           = 3,
+			atlas               = DefaultAtlas,
+			image               = "quagmire_salt.tex",
 		},
 		{"CRAFTING_STATION"}
 	)
 
 	AddRecipe2("kyno_bacon_w", {Ingredient("smallmeat", 1)}, TECH.FOODPROCESSING_ONE,
 		{
-			nounlock 			= true,
+			nounlock            = true,
 			no_deconstruction   = true,
-			actionstr 			= "MEALGRINDER",
-			product				= "kyno_bacon",
+			actionstr           = "MEALGRINDER",
+			product             = "kyno_bacon",
 			builder_tag         = "professionalchef",
-			numtogive 			= 2,
-			atlas 				= DefaultAtlas,
-			image 				= "quagmire_smallmeat.tex",
+			numtogive           = 2,
+			atlas               = DefaultAtlas,
+			image               = "quagmire_smallmeat.tex",
 		},
 		{"CRAFTING_STATION"}
 	)
 
 	AddRecipe2("kyno_oil_w", {Ingredient("corn", 1), Ingredient("seeds", 1), Ingredient("petals", 1)}, TECH.FOODPROCESSING_ONE,
 		{
-			nounlock			= true,
+			nounlock            = true,
 			no_deconstruction   = true,
-			actionstr			= "MEALGRINDER",
-			product				= "kyno_oil",
-			builder_tag			= "professionalchef",
-			numtogive			= 3,
+			actionstr           = "MEALGRINDER",
+			product             = "kyno_oil",
+			builder_tag         = "professionalchef",
+			numtogive           = 3,
 		},
 	{"CRAFTING_STATION"}
 	)
 
 	AddRecipe2("kyno_sugar_w", {Ingredient("kyno_sugartree_petals", 1)}, TECH.FOODPROCESSING_ONE,
 		{
-			nounlock 			= true,
+			nounlock            = true,
 			no_deconstruction   = true,
-			actionstr 			= "MEALGRINDER",
-			product				= "kyno_sugar",
+			actionstr           = "MEALGRINDER",
+			product             = "kyno_sugar",
 			builder_tag         = "professionalchef",
-			numtogive 			= 3,
-			image 				= "kyno_sugar.tex",
+			numtogive           = 3,
+		},
+		{"CRAFTING_STATION"}
+	)
+
+	AddRecipe2("kyno_opalpreciouspwoder_w", {Ingredient("opalpreciousgem", 1), Ingredient("kyno_sugar", 1)}, TECH.FOODPROCESSING_ONE,
+		{
+			nounlock            = true,
+			no_deconstruction   = true,
+			actionstr           = "MEALGRINDER",
+			product             = "kyno_opalpreciouspwoder",
+			builder_tag         = "professionalchef",
+			numtogive           = 3,
 		},
 		{"CRAFTING_STATION"}
 	)
@@ -903,18 +925,18 @@ if TUNING.HOF_WARLYSPICES then
 
 	AddRecipe2("spice_fed", {Ingredient("corn", 3)}, TECH.FOODPROCESSING_ONE,
 		{
-			nounlock			= true,
-			builder_tag			= "spicemaker",
-			numtogive			= 2,
+			nounlock            = true,
+			builder_tag         = "spicemaker",
+			numtogive           = 2,
 		},
 		{"CRAFTING_STATION"}
 	)
 
 	AddRecipe2("spice_cure", {Ingredient("kyno_spotspice", 3)}, TECH.FOODPROCESSING_ONE,
 		{
-			nounlock			= true,
-			builder_tag			= "spicemaker",
-			numtogive			= 2,
+			nounlock            = true,
+			builder_tag         = "spicemaker",
+			numtogive           = 2,
 		},
 		{"CRAFTING_STATION"}
 	)

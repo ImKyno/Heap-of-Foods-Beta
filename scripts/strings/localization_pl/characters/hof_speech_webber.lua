@@ -101,11 +101,17 @@ WEBBER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Och... moc nocy znikła."
 WEBBER.ANNOUNCE_KYNO_PANICBUFF_START = "Łał! Wszystko się nas boi!"
 WEBBER.ANNOUNCE_KYNO_PANICBUFF_END = "Już nic się nas nie boi."
 
-WEBBER.ANNOUNCE_KYNO_CUREBUFF_START = "Our snacks will stay good longer!" -- NEEDS TRANSLATION
-WEBBER.ANNOUNCE_KYNO_CUREBUFF_END = "Aw, they're going bad again." -- NEEDS TRANSLATION
+WEBBER.ANNOUNCE_KYNO_CUREBUFF_START = "Our snacks will stay good longer!"
+WEBBER.ANNOUNCE_KYNO_CUREBUFF_END = "Aw, they're going bad again."
 
-WEBBER.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "We're super sturdy now!" -- NEEDS TRANSLATION
-WEBBER.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Uh-oh, we're pushable again." -- NEEDS TRANSLATION
+WEBBER.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "We're super sturdy now!"
+WEBBER.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Uh-oh, we're pushable again."
+
+WEBBER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Whoa! We hit way harder now!"
+WEBBER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Aww... we're not as strong anymore."
+
+WEBBER.ANNOUNCE_KYNO_BADLUCKBUFF_START = "something bad is definitely going to happen."
+WEBBER.ANNOUNCE_KYNO_BADLUCKBUFF_END = "I think our bad luck is gone!"
 
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nie tego."
 
@@ -136,13 +142,13 @@ WEBBER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Dowiedzieliśmy się o rybich maluchach!"
 
 WEBBER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Smaczne! Podobało nam się!"
 
-WEBBER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WEBBER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Owie, that was not a nice plant!",
 	"Eek, we feel all frosty inside!",
 }
 
-WEBBER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, we'll be more careful not to touch strange weeds." -- NEEDS TRANSLATION
+WEBBER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, we'll be more careful not to touch strange weeds."
 
 WEBBER.DESCRIBE.KYNO_ROE = "To nie są jaja pająków."
 WEBBER.DESCRIBE.KYNO_ROE_COOKED = "Nie takie jajka, do jakich jesteśmy przyzwyczajeni."
@@ -172,7 +178,7 @@ WEBBER.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Dziwnie się po nich czujemy."
 
 WEBBER.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Możemy je posadzić gdzie indziej!"
 
-WEBBER.DESCRIBE.KYNO_COFFEEBUSH = 
+WEBBER.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "Nie wyglądają zbyt apetycznie.",
 	PICKED = "Na razie brak ziaren.",
@@ -181,7 +187,7 @@ WEBBER.DESCRIBE.KYNO_COFFEEBUSH =
 
 WEBBER.DESCRIBE.DUG_KYNO_SPOTBUSH = "Powinniśmy to gdzieś zasadzić!"
 
-WEBBER.DESCRIBE.KYNO_SPOTBUSH = 
+WEBBER.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Ale fajny fioletowy krzew.",
 	PICKED = "Teraz nie ma nic do zebrania.",
@@ -531,7 +537,7 @@ WEBBER.DESCRIBE.KYNO_NEONFISH_COOKED = "Mmm, pachnie dobrze!"
 
 WEBBER.DESCRIBE.KYNO_GROUPER = "Haha! Co za zabawna twarz."
 WEBBER.DESCRIBE.KYNO_GROUPER_COOKED = "On lubi rybie głowy. Ja nie."
- 
+
 WEBBER.DESCRIBE.KYNO_PIERROTFISH = "Ale śliska!"
 WEBBER.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Już nie jest taka urocza."
 
@@ -841,7 +847,7 @@ WEBBER.DESCRIBE.CHOCOLATE_BLACK = "Tabliczka czekolady! Uwielbiamy ją!"
 WEBBER.DESCRIBE.CHOCOLATE_WHITE = "Tabliczka czekolady! Uwielbiamy ją!"
 
 WEBBER.DESCRIBE.TRICOLORDANGO = "Och! To nasza pierwsza taka przekąska!"
- 
+
 WEBBER.DESCRIBE.FRIESFRENCH = "Chrupiące!"
 
 WEBBER.DESCRIBE.PIRATERUM = "Nie powinniśmy tego pić."
@@ -853,7 +859,7 @@ WEBBER.DESCRIBE.ONIONRINGS = "Pachnie dobrze. Podoba nam się!"
 WEBBER.DESCRIBE.DONUTS = "Mniam! Pączki!"
 WEBBER.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Mniam! Donuty!"
 WEBBER.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Mniam! Donuty!"
- 
+
 WEBBER.DESCRIBE.CINNAMONROLL = "Bardzo smakuje, lubimy to!"
 
 WEBBER.DESCRIBE.GUMMYBEARGERS = "Yay, żelki misie!"
@@ -1247,7 +1253,7 @@ WEBBER.DESCRIBE.CHICKENROTISSERIE = "Kręci się! I pachnie niesamowicie!"
 
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Całkiem ładnie pachnie!"
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Smakuje jak kwiatki!"
-WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Brr! It tickles our tongue!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Brr! It tickles our tongue!"
 
 WEBBER.DESCRIBE.SOULJUICE = "Łał! Pachnie trochę strasznie!"
 
@@ -1314,74 +1320,82 @@ WEBBER.DESCRIBE.KYNO_PIGCOIN1 = "Możemy to wymienić na coś innego."
 WEBBER.DESCRIBE.KYNO_PIGCOIN2 = "Co możemy za to kupić?"
 WEBBER.DESCRIBE.KYNO_PIGCOIN3 = "Możemy kupić tego naprawdę dużo rzeczy."
 
-WEBBER.DESCRIBE.KYNO_ICENETTLES = "Brrrrr...It stings!" -- NEEDS TRANSLATION
-WEBBER.DESCRIBE.KYNO_ICENETTLES_DRIED = "We don't like icy plant." -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_ICENETTLES = "Brrrrr...It stings!"
+WEBBER.DESCRIBE.KYNO_ICENETTLES_DRIED = "We don't like icy plant."
 
-WEBBER.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A special bag just for seeds!",
 	FULL = "Wow, that's a lot of seeds!",
 }
 
-WEBBER.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Not the face!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Not the face!"
 
-WEBBER.DESCRIBE.WX78MODULE_GOURMAND = "Huh. Is that what robot insides look like?" -- NEEDS TRANSLATION
-WEBBER.DESCRIBE.WX78MODULE_COOKER = "Huh. Is that what robot insides look like?" -- NEEDS TRANSLATION
-WEBBER.DESCRIBE.WX78MODULE_DRYER = "Huh. Is that what robot insides look like?" -- NEEDS TRANSLATION
-WEBBER.DESCRIBE.WX78MODULE_DRYER2 = "Huh. Is that what robot insides look like?" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.WX78MODULE_GOURMAND = "Huh. Is that what robot insides look like?"
+WEBBER.DESCRIBE.WX78MODULE_COOKER = "Huh. Is that what robot insides look like?"
+WEBBER.DESCRIBE.WX78MODULE_DRYER = "Huh. Is that what robot insides look like?"
+WEBBER.DESCRIBE.WX78MODULE_DRYER2 = "Huh. Is that what robot insides look like?"
 
 WEBBER.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "It was forever in there.", -- NEEDS TRANSLATION
+	GENERIC = "It was forever in there.",
 }
 
 WEBBER.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "It was forever in there.", -- NEEDS TRANSLATION
+	GENERIC = "It was forever in there.",
 }
 
 WEBBER.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "It was forever in there.", -- NEEDS TRANSLATION
+	GENERIC = "It was forever in there.",
 }
 
-WEBBER.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "The piggy is all filled up!",
 	UPGRADED = "Wow! The piggy can hold tons and tons of coins!",
 	GENERIC = "We can put our coins in here!",
 }
 
-WEBBER.DESCRIBE.MARSHMALLOWS = "We like how squishy they are!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.MARSHMALLOWS = "We like how squishy they are!"
 
-WEBBER.DESCRIBE.KOKONUTCOOKIES = "We love cookies!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KOKONUTCOOKIES = "We love cookies!"
 
-WEBBER.DESCRIBE.BBQRIBS = "These ribs are super tasty!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.BBQRIBS = "These ribs are super tasty!"
 
-WEBBER.DESCRIBE.BROWNIE = "We could eat a whole batch!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.BROWNIE = "We could eat a whole batch!"
 
-WEBBER.DESCRIBE.CHOCOLATE_CAKE = "We love chocolate cake!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.CHOCOLATE_CAKE = "We love chocolate cake!"
 
-WEBBER.DESCRIBE.SWORDFISHBLUEDINNER = "We like little packed meals!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.SWORDFISHBLUEDINNER = "We like little packed meals!"
 
-WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "It's awake when it's supposed to be sleeping!",
 	HELD = "It's tickling our pocket!",
 }
 
-WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "It's a really night winter bird!",
 	HELD = "It's poking our pocket!",
 }
 
-WEBBER.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "It's not finished yet!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "It's not finished yet!"
 
-WEBBER.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Helps catch a lot of fish!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Helps catch a lot of fish!"
+
+WEBBER.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "It's like eating tiny rainbows!"
+
+WEBBER.DESCRIBE.OPALPRECIOUSCREAM = "It looks like a rainbow cloud!"
+
+WEBBER.DESCRIBE.CATFISHSTICK = "It's a whole fish on a stick!"
+
+WEBBER.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Ooh! It's so pretty! Hope we get something good!"

@@ -87,8 +87,8 @@ WORTOX.ANNOUNCE_KYNO_HUNGERRATEBUFF_END = "Brzuszek znów burczy!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_START = "Ciemność raczej łaskocze niż gryzie!"
 WORTOX.ANNOUNCE_KYNO_DARKNESSBUFF_END = "Och nie! Ciemność znów gryzie!"
 
-WORTOX.ANNOUNCE_KYNO_SOULBUFF_START = "The souls abound, hyuyu!" -- NEEDS TRANSLATION
-WORTOX.ANNOUNCE_KYNO_SOULBUFF_END = "The soul-filled breeze has left me." -- NEEDS TRANSLATION
+WORTOX.ANNOUNCE_KYNO_SOULBUFF_START = "The souls abound, hyuyu!"
+WORTOX.ANNOUNCE_KYNO_SOULBUFF_END = "The soul-filled breeze has left me."
 
 WORTOX.ANNOUNCE_KYNO_LUCKBUFF_END = "Och, zabawa się skończyła!"
 
@@ -104,11 +104,17 @@ WORTOX.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "I tak po prostu znika."
 WORTOX.ANNOUNCE_KYNO_PANICBUFF_START = "Jakże uroczy strach. Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_PANICBUFF_END = "Koniec strasznej zabawy!"
 
-WORTOX.ANNOUNCE_KYNO_CUREBUFF_START = "A little trick on time itself, hyuyu!" -- NEEDS TRANSLATION
-WORTOX.ANNOUNCE_KYNO_CUREBUFF_END = "Time's caught up again, hyuyu!" -- NEEDS TRANSLATION
+WORTOX.ANNOUNCE_KYNO_CUREBUFF_START = "A little trick on time itself, hyuyu!"
+WORTOX.ANNOUNCE_KYNO_CUREBUFF_END = "Time's caught up again, hyuyu!"
 
-WORTOX.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ha! Good luck shovin' me!" -- NEEDS TRANSLATION
-WORTOX.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Oh fiddlesticks, I'm pushable again!" -- NEEDS TRANSLATION
+WORTOX.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ha! Good luck shovin' me!"
+WORTOX.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Oh fiddlesticks, I'm pushable again!"
+
+WORTOX.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "My blows have gained quite a bite!"
+WORTOX.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "The extra punch has flown away."
+
+WORTOX.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Misfortune is knocking at the door! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The bad luck has scampered away!"
 
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję czegoś jeszcze."
 
@@ -139,13 +145,13 @@ WORTOX.ANNOUNCE_KYNO_ROE_RESEARCHED = "Jajeczne sekreciki! Hyuyu!"
 
 WORTOX.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Smakołyk dla śmiertelników!"
 
-WORTOX.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WORTOX.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Such nasty nettles!",
 	"Ouch! Ouch!",
 }
 
-WORTOX.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "It seems I've beat the cold!" -- NEEDS TRANSLATION
+WORTOX.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "It seems I've beat the cold!"
 
 WORTOX.DESCRIBE.KYNO_ROE = "Rybie jajka."
 WORTOX.DESCRIBE.KYNO_ROE_COOKED = "Pieczone rybie jajka."
@@ -534,7 +540,7 @@ WORTOX.DESCRIBE.KYNO_NEONFISH_COOKED = "Dobrze upieczona rybka!"
 
 WORTOX.DESCRIBE.KYNO_GROUPER = "Masz ciekawy wygląd."
 WORTOX.DESCRIBE.KYNO_GROUPER_COOKED = "Gotowe do zjedzenia!"
- 
+
 WORTOX.DESCRIBE.KYNO_PIERROTFISH = "Pasiasta rybka."
 WORTOX.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Prosto do brzucha!"
 
@@ -844,7 +850,7 @@ WORTOX.DESCRIBE.CHOCOLATE_BLACK = "Typowy śmiertelny deser. Hyuyu!"
 WORTOX.DESCRIBE.CHOCOLATE_WHITE = "Typowy śmiertelny deser. Hyuyu!"
 
 WORTOX.DESCRIBE.TRICOLORDANGO = "Wygląda na deser."
- 
+
 WORTOX.DESCRIBE.FRIESFRENCH = "Śmiertelne śmieciowe jedzenie. Hyuyu!"
 
 WORTOX.DESCRIBE.PIRATERUM = "Żaden śmiertelnik nie oprze się ciekawości, co jest w środku! Hyuyu!"
@@ -856,7 +862,7 @@ WORTOX.DESCRIBE.ONIONRINGS = "Ciekawe, czy naprawdę są tak dobre, jak mówią.
 WORTOX.DESCRIBE.DONUTS = "Śmiertelnicy zdają się wyjątkowo je lubić."
 WORTOX.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Mortalom szczególnie podobają się te."
 WORTOX.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Mortalom szczególnie podobają się te."
- 
+
 WORTOX.DESCRIBE.CINNAMONROLL = "Słodka bułka. Hyuyu!"
 
 WORTOX.DESCRIBE.GUMMYBEARGERS = "Ciekawe, czy mają jakiegoś psikusa?"
@@ -1250,7 +1256,7 @@ WORTOX.DESCRIBE.CHICKENROTISSERIE = "W kółko kręci się ptaszek! Hyuyu!"
 
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Listna psota w filiżance!"
 WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodkie łyczki i figlarne podskoki!"
-WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A chilly little sip, hyuyu!" -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A chilly little sip, hyuyu!"
 
 WORTOX.DESCRIBE.SOULJUICE = "Dusze i owoce! Co za uczta!"
 
@@ -1317,74 +1323,82 @@ WORTOX.DESCRIBE.KYNO_PIGCOIN1 = "Drobniaki."
 WORTOX.DESCRIBE.KYNO_PIGCOIN2 = "Nie rozumiem, czemu śmiertelnicy są tym tak obsesyjnie zajęci."
 WORTOX.DESCRIBE.KYNO_PIGCOIN3 = "To duży żeton skoku."
 
-WORTOX.DESCRIBE.KYNO_ICENETTLES = "Oh ho ho, So cold it burns!" -- NEEDS TRANSLATION
-WORTOX.DESCRIBE.KYNO_ICENETTLES_DRIED = "Bone chilling dry." -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.KYNO_ICENETTLES = "Oh ho ho, So cold it burns!"
+WORTOX.DESCRIBE.KYNO_ICENETTLES_DRIED = "Bone chilling dry."
 
-WORTOX.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A sack of future greenery!",
 	FULL = "Not a seed more will fit, hyuyu!",
 }
 
-WORTOX.DESCRIBE.KYNO_FOODAMMO_TOMATO = "We do a little silly tomfoolery." -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.KYNO_FOODAMMO_TOMATO = "We do a little silly tomfoolery."
 
-WORTOX.DESCRIBE.WX78MODULE_GOURMAND = "Are you the brightest bulb of the bunch?" -- NEEDS TRANSLATION
-WORTOX.DESCRIBE.WX78MODULE_COOKER = "Are you the brightest bulb of the bunch?" -- NEEDS TRANSLATION
-WORTOX.DESCRIBE.WX78MODULE_DRYER = "Are you the brightest bulb of the bunch?" -- NEEDS TRANSLATION
-WORTOX.DESCRIBE.WX78MODULE_DRYER2 = "Are you the brightest bulb of the bunch?" -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.WX78MODULE_GOURMAND = "Are you the brightest bulb of the bunch?"
+WORTOX.DESCRIBE.WX78MODULE_COOKER = "Are you the brightest bulb of the bunch?"
+WORTOX.DESCRIBE.WX78MODULE_DRYER = "Are you the brightest bulb of the bunch?"
+WORTOX.DESCRIBE.WX78MODULE_DRYER2 = "Are you the brightest bulb of the bunch?"
 
 WORTOX.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Once a case, dropped by ol' metal face!", -- NEEDS TRANSLATION
+	GENERIC = "Once a case, dropped by ol' metal face!",
 }
 
 WORTOX.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Once a case, dropped by ol' metal face!", -- NEEDS TRANSLATION
+	GENERIC = "Once a case, dropped by ol' metal face!",
 }
 
 WORTOX.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Once a case, dropped by ol' metal face!", -- NEEDS TRANSLATION
+	GENERIC = "Once a case, dropped by ol' metal face!",
 }
 
-WORTOX.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "No more shiny souls can fit in this swine!",
 	UPGRADED = "This piggy's belly has no end! Hyuyu!",
 	GENERIC = "A piggy for shiny coins, how quaint!",
 }
 
-WORTOX.DESCRIBE.MARSHMALLOWS = "Soft and sweet." -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.MARSHMALLOWS = "Soft and sweet."
 
-WORTOX.DESCRIBE.KOKONUTCOOKIES = "Crunchy little coconut delight!" -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.KOKONUTCOOKIES = "Crunchy little coconut delight!"
 
-WORTOX.DESCRIBE.BBQRIBS = "I've seen a world where mortals would kill for these." -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.BBQRIBS = "I've seen a world where mortals would kill for these."
 
-WORTOX.DESCRIBE.BROWNIE = "A little square of chocolatey mischief!" -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.BROWNIE = "A little square of chocolatey mischief!"
 
-WORTOX.DESCRIBE.CHOCOLATE_CAKE = "A towering temptation of chocolate!" -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.CHOCOLATE_CAKE = "A towering temptation of chocolate!"
 
-WORTOX.DESCRIBE.SWORDFISHBLUEDINNER = "Revenge is a dish best served cold. Hyuyu!" -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.SWORDFISHBLUEDINNER = "Revenge is a dish best served cold. Hyuyu!"
 
-WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "A creature of the twilight!",
 	HELD = "A bird in my pocket! Hyuyu!",
 }
 
-WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A frosty little hunter!",
 	HELD = "A feisty little bird in my pouch!",
 }
 
-WORTOX.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Not finished yet!" -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Not finished yet!"
 
-WORTOX.DESCRIBE.KYNO_FISHINGROD_THULECITE = "No fish shall escape from me now." -- NEEDS TRANSLATION
+WORTOX.DESCRIBE.KYNO_FISHINGROD_THULECITE = "No fish shall escape from me now."
+
+WORTOX.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Sweet little sparkles for a sweet little soul!"
+
+WORTOX.DESCRIBE.OPALPRECIOUSCREAM = "A fluffy cloud of sweet, shiny goodness!"
+
+WORTOX.DESCRIBE.CATFISHSTICK = "A fishy feast on a stick! How delightfully grisly!"
+
+WORTOX.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A shiny sweet with tricks up its sleeve!"

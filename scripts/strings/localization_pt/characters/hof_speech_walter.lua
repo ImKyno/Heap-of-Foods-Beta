@@ -107,6 +107,12 @@ WALTER.ANNOUNCE_KYNO_CUREBUFF_END = "Melhor usar tudo antes que estrague."
 WALTER.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Vou ficar bem aqui!"
 WALTER.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Acho que posso ser empurrado de novo."
 
+WALTER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Uau! Meus ataques estão muito mais fortes agora!"
+WALTER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Aquela força extra não durou."
+
+WALTER.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Algo me diz que vamos passar por um aperto."
+WALTER.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Ufa! Parece que a nossa sorte está melhorando, Woby."
+
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Coisa errada!"
 
 WALTER.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Hmmm, não é este."
@@ -172,7 +178,7 @@ WALTER.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Vamos preparar, Woby!"
 
 WALTER.DESCRIBE.DUG_KYNO_COFFEEBUSH = "É um arbusto de café, não acredito!"
 
-WALTER.DESCRIBE.KYNO_COFFEEBUSH = 
+WALTER.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "Tem um cheiro meio forte.",
 	PICKED = "Eles vão crescer de novo em breve.",
@@ -181,7 +187,7 @@ WALTER.DESCRIBE.KYNO_COFFEEBUSH =
 
 WALTER.DESCRIBE.DUG_KYNO_SPOTBUSH = "Devemos plantá-lo de novo, né Woby?"
 
-WALTER.DESCRIBE.KYNO_SPOTBUSH = 
+WALTER.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Apenas um arbusto.",
 	PICKED = "Acho que vai crescer de novo.",
@@ -249,7 +255,7 @@ WALTER.DESCRIBE.CUCUMBERSALAD = "Até pepinos recolhidos podem ser comida na nat
 
 WALTER.DESCRIBE.DUG_KYNO_WILDWHEAT = "Eu poderia plantar isso em um lugar melhor."
 
-WALTER.DESCRIBE.KYNO_WILDWHEAT = 
+WALTER.DESCRIBE.KYNO_WILDWHEAT =
 {
 	GENERIC = "Um canteiro de trigo.",
 	PICKED = "Vai dar grãos de novo, eventualmente.",
@@ -408,7 +414,7 @@ WALTER.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Não é mais comestível."
 
 WALTER.DESCRIBE.KYNO_SEEDS_KIT = "Abra!"
 
-WALTER.DESCRIBE.KYNO_LIMPETROCK = 
+WALTER.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "Tem criaturas marinhas grudadas naquela rocha. E elas são comestíveis!",
 	PICKED = "Elas vão voltar depois.",
@@ -418,7 +424,7 @@ WALTER.DESCRIBE.KYNO_LIMPETROCK =
 WALTER.DESCRIBE.KYNO_LIMPETS = "Humm... comida da pedra. Alta gastronomia."
 WALTER.DESCRIBE.KYNO_LIMPETS_COOKED = "Ouvi dizer que a melhor comida vem de uma pedra."
 
-WALTER.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WALTER.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "Uma flor aquática, parece bonita.",
 	PICKED = "Acho que vai crescer de novo.",
@@ -429,7 +435,7 @@ WALTER.DESCRIBE.KYNO_LOTUS_ROOT = "Isso precisa ser plantado."
 WALTER.DESCRIBE.KYNO_LOTUS_FLOWER = "Humm!"
 WALTER.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Legal!"
 
-WALTER.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WALTER.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "Alga úmida e encharcada.",
 	PICKED = "Elas vão voltar, eu acho.",
@@ -441,7 +447,7 @@ WALTER.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Uma boa pilha de... comida?"
 WALTER.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Talvez eu faça um avião de papel com isso."
 WALTER.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Isso precisa ser plantado."
 
-WALTER.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WALTER.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "Talvez eu possa comer isso...",
 	PICKED = "A água ajuda a crescer mais rápido.",
@@ -452,7 +458,7 @@ WALTER.DESCRIBE.KYNO_TAROROOT_ROOT = "Isso precisa ser plantado."
 WALTER.DESCRIBE.KYNO_TAROROOT = "Mesmo na natureza, você deve comer seus vegetais."
 WALTER.DESCRIBE.KYNO_TAROROOT_COOKED = "Ah, fica muito melhor cozido!"
 
-WALTER.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WALTER.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "Uma planta crescendo aqui no oceano?",
 	PICKED = "Espero que volte rápido.",
@@ -479,7 +485,7 @@ WALTER.DESCRIBE.CATFOOD = "Será que o Woby também gosta?"
 
 WALTER.DESCRIBE.KATFOOD = "Será que o Woby também gosta?"
 
-WALTER.DESCRIBE.KYNO_BANANATREE = 
+WALTER.DESCRIBE.KYNO_BANANATREE =
 {
 	GENERIC = "Você fica muito mais bonita no sol!",
 	PICKED = "Acho que vai crescer de novo depois.",
@@ -491,7 +497,7 @@ WALTER.DESCRIBE.KYNO_BANANATREE =
 WALTER.DESCRIBE.KYNO_BANANA = "Não me importaria de parar para um lanche."
 WALTER.DESCRIBE.KYNO_BANANA_COOKED = "Bem... é uma banana quente."
 
-WALTER.DESCRIBE.KYNO_KOKONUTTREE = 
+WALTER.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "Estas árvores parecem diferentes do alto.",
 	PICKED = "Acho que tenho que esperar.",
@@ -531,7 +537,7 @@ WALTER.DESCRIBE.KYNO_NEONFISH_COOKED = "Ao menos a cauda foi retirada!"
 
 WALTER.DESCRIBE.KYNO_GROUPER = "Um peixe roxo!"
 WALTER.DESCRIBE.KYNO_GROUPER_COOKED = "As nadadeiras ainda estão presas."
- 
+
 WALTER.DESCRIBE.KYNO_PIERROTFISH = "Um peixe amarelo!"
 WALTER.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Saboroso!"
 
@@ -555,7 +561,7 @@ WALTER.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Para coletar seiva das árvores, sei
 
 WALTER.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Quer uns caranguejos para o jantar, Woby?"
 
-WALTER.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WALTER.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "Ele é tão diferente comparado aos outros porcos!",
 	SLEEPING = "Vamos lá, Woby. Devemos deixar os anciãos dormirem.",
@@ -601,7 +607,7 @@ WALTER.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Uma carne branca? Curioso, não é, W
 
 WALTER.DESCRIBE.KYNO_SLAUGHTERTOOL = "Você não deve olhar, Woby!"
 
-WALTER.DESCRIBE.KYNO_CHICKEN2 = 
+WALTER.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Não consegue voar. Mas nem eu consigo.",
 	COOP = "Acho que agora é minha!",
@@ -617,7 +623,7 @@ WALTER.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "Uau! Tá prestes a chocar, Woby!",
 }
 
-WALTER.DESCRIBE.KYNO_CHICKENHOUSE = 
+WALTER.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Parece seguro o suficiente para as galinhas. Provavelmente.",
 	FULL = "São muitos ovos! Que legal!",
@@ -645,7 +651,7 @@ WALTER.DESCRIBE.KYNO_COOKWARE_OVEN = "O que devo cozinhar, Woby?"
 WALTER.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "O que devo cozinhar, Woby?"
 WALTER.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "O que devo cozinhar, Woby?"
 
-WALTER.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WALTER.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Minha avó me ensinou a sempre olhar debaixo das pedras.",
 	FLIPPED = "Isso responde à pergunta.",
@@ -692,7 +698,7 @@ WALTER.DESCRIBE.PEPPERROLLS = "Por que tem gosto de menta...?"
 
 WALTER.DESCRIBE.KYNO_SAPHEALER = "Uma cura para o excesso de doçura."
 
-WALTER.DESCRIBE.KYNO_OCEAN_WRECK = 
+WALTER.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Um barco encalhado. Eu sei como é isso.",
 	PICKED = "Não sobrou nada aqui.",
@@ -714,7 +720,7 @@ WALTER.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Que jerky saboroso!"
 
 WALTER.DESCRIBE.KYNO_BREWBOOK = "Parece que tenho um novo guia para memorizar!"
 
-WALTER.DESCRIBE.KYNO_WOODENKEG = 
+WALTER.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "Qual sabor de suco você quer, Woby?",
 	BREWING_LONG = "Acho que vou ter que esperar.",
@@ -723,7 +729,7 @@ WALTER.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "Bem... isso não funcionou.",
 }
 
-WALTER.DESCRIBE.KYNO_PRESERVESJAR = 
+WALTER.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "Que tal um pouco de geleia, Woby?",
 	BREWING_LONG = "Acho que vou ter que esperar.",
@@ -732,7 +738,7 @@ WALTER.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Que pena.",
 }
 
-WALTER.DESCRIBE.KYNO_ANTCHEST = 
+WALTER.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Eu preciso do espaço de armazenamento, mas eu quero o mel.",
 	HONEY = "Isso é muito mel!",
@@ -748,7 +754,7 @@ WALTER.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Para mastigar..."
 WALTER.DESCRIBE.KYNO_PIKO = "Guarda mais coisas nas bochechas do que Woby."
 WALTER.DESCRIBE.KYNO_PIKO_ORANGE = "Huh. Tem um cheiro estranho de cafeína..."
 
-WALTER.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WALTER.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "É uma árvore, Woby. Não tem nada lá, a menos que...",
 	CHOPPED = "Suas folhas serão muito úteis.",
@@ -756,7 +762,7 @@ WALTER.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 	BURNT = "Não restou nada além de cinzas.",
 }
 
-WALTER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+WALTER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
 	GENERIC = "É uma árvore, Woby. Não tem nada lá, a menos que...",
 	BURNING = "Eita, isso está bem ruim!",
@@ -764,26 +770,26 @@ WALTER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WALTER.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Não é um típico baú do tesouro, mas serve."
 
-WALTER.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WALTER.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "Aposto que essa madeira está cheia de cupins.",
 	BURNT = "Bem... aconteceu.",
 }
 
-WALTER.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WALTER.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "Aposto que essa madeira está cheia de cupins.",
 	CRAFTED = "Ei, na verdade parece bom!",
 	BURNT = "Fedorento!",
 }
 
-WALTER.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WALTER.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "Deveríamos perguntar se ele tem algum petisco especial para você, Woby.",
 	OCCUPIED = "A loja dele não está aberta agora.",
 }
 
-WALTER.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WALTER.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "Acho que vi óleo de cobra ali.",
 	EMPTY = "Já vendeu tudo.",
@@ -841,7 +847,7 @@ WALTER.DESCRIBE.CHOCOLATE_BLACK = "Desculpe garota, você não pode comer, infel
 WALTER.DESCRIBE.CHOCOLATE_WHITE = "Desculpe garota, você não pode comer, infelizmente."
 
 WALTER.DESCRIBE.TRICOLORDANGO = "É bem melhor do que parece."
- 
+
 WALTER.DESCRIBE.FRIESFRENCH = "Quer um pouco, garota?"
 
 WALTER.DESCRIBE.PIRATERUM = "Devo ter cautela com isso."
@@ -853,7 +859,7 @@ WALTER.DESCRIBE.ONIONRINGS = "Cebolas mergulhadas em óleo, interessante!"
 WALTER.DESCRIBE.DONUTS = "Não esperava ver isso por aqui."
 WALTER.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Não esperava ver isso por aqui."
 WALTER.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Não esperava ver isso por aqui."
- 
+
 WALTER.DESCRIBE.CINNAMONROLL = "Palavras não descrevem o quão doce é este pão."
 
 WALTER.DESCRIBE.GUMMYBEARGERS = "Sinto um perigo nesse alimento!"
@@ -940,7 +946,7 @@ WALTER.DESCRIBE.RICESAKE = "Não tenho certeza sobre este. Talvez eu deva passar
 
 WALTER.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Não toque nisso, garota. Deixa que eu cuido disso."
 
-WALTER.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WALTER.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Não toque nisso, garota. Deixa que eu cuido disso.",
 	PICKED = "Vai crescer de novo, eventualmente.",
@@ -958,7 +964,7 @@ WALTER.DESCRIBE.PINACOLADA = "Exatamente na medida."
 
 WALTER.DESCRIBE.CHIMAS = "Engraçado de certa forma."
 
-WALTER.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WALTER.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Vou ser sincero, eu provavelmente vou sair correndo por ele.",
 	ON = "Mantendo o jardim saudável!",
@@ -1077,7 +1083,7 @@ WALTER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "Parece que ele está descansando bem.",
 }
 
-WALTER.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WALTER.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "A natureza sempre esconde surpresas... até debaixo da terra!",
 	PICKED = "Espero que apareçam mais depois.",
@@ -1087,7 +1093,7 @@ WALTER.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WALTER.DESCRIBE.KYNO_TRUFFLES = "Encontros inesperados da natureza... e comestíveis!"
 WALTER.DESCRIBE.KYNO_TRUFFLES_COOKED = "Nada como uma refeição quente depois de uma aventura."
 
-WALTER.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WALTER.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Ótimo para exibir as refeições do acampamento! Parece profissional!",
 	FULL = "Ei, isso é bem legal na verdade!",
@@ -1112,7 +1118,7 @@ WALTER.DESCRIBE.TRUFFLEOIL = "Isso daria um ótimo experimento de cozinha de aca
 WALTER.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Sou bom em seguir instruções! Tenho até um distintivo pra isso!"
 WALTER.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "É como montar um acampamento... mas para peixes!"
 
-WALTER.DESCRIBE.KYNO_FISHFARMPLOT = 
+WALTER.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "Parece um berçário de peixes de verdade!",
 	FUEL_HIGH = "Eles estão indo muito bem!",
@@ -1175,7 +1181,7 @@ WALTER.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Um cérebro bebê, logo será um broto.
 WALTER.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Ainda precisa de água para crescer, não é?"
 WALTER.DESCRIBE.KYNO_BRAINROCK_CORAL = "Ei, garota, no que está pensando?"
 
-WALTER.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WALTER.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "Com certeza tem um cérebro maior que o da Woby na forma pequena dela.",
 	PICKED = "Acho que ele precisa de um cochilo.",
@@ -1183,7 +1189,7 @@ WALTER.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WALTER.DESCRIBE.BRAINMETTERSOUP = "Acho que ajuda a pensar em soluções melhores de sobrevivência!"
 
-WALTER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WALTER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "Uau! Nunca vi um polvo tão de perto antes.",
 	SLEEPING = "Eu voltarei mais tarde.",
@@ -1191,7 +1197,7 @@ WALTER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WALTER.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Como ele consegue colocar coisas aí dentro?"
 
-WALTER.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WALTER.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "Um peixe morto. Exatamente o que eu preciso.",
 	WAITING = "Talvez um curativo dê um jeito nele?",
@@ -1207,7 +1213,7 @@ WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Parece tão mágico!"
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Nada diz aniversário como bolo! Né, Woby?"
 WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Balões deixam qualquer festa mais divertida!"
 
-WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WALTER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "Pipoca pronta para comer!",
 	FUEL_HIGH = "Tem combustível de sobra.",
@@ -1385,3 +1391,11 @@ WALTER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 WALTER.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Só esperando para ser finalizado."
 
 WALTER.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Devemos sair em uma aventura de pesca, Woby?"
+
+WALTER.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Uau! Parece um tesouro em pó!"
+
+WALTER.DESCRIBE.OPALPRECIOUSCREAM = "Caramba! É como uma nuvem feita de arco-íris!"
+
+WALTER.DESCRIBE.CATFISHSTICK = "Um peixe no espeto! Comida clássica de acampamento."
+
+WALTER.DESCRIBE.OPALPRECIOUSLOLLIPOP = "É como uma aventura surpresa, só que comestível!"

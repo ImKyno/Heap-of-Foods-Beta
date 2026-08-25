@@ -133,6 +133,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "Các đòn tấn công có
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BATILISK = "Làm các Batilisk gần đó hoảng sợ trong một khoảng thời gian."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_KNOCKBACK = "Giảm khả năng bị đẩy lùi trong một khoảng thời gian nhất định."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CHILLEDATTACK = "Mỗi 3 đòn tấn công liên tiếp vào cùng một mục tiêu sẽ khiến các Mảnh Băng xuất hiện.\n\nCác Mảnh Băng gây sát thương trong một phạm vi nhỏ xung quanh mục tiêu."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRITDAMAGE = "Các đòn tấn công có một tỷ lệ nhỏ gây sát thương chí mạng bằng 150% sát thương thường."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "Làm giảm may mắn trong một khoảng thời gian nhất định."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "Gây ra một tác dụng phụ ngẫu nhiên.\n\n\"CÙNG ĐI ĐÁNH BẠC NÀO!\" - Có lẽ là ai đó."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Có thể thêm vào món ăn trong Nồi Hầm bằng Trạm Gia Vị Di Động.\n\nĂn món được tẩm Bột Bảo Quản sẽ khôi phục hoàn toàn độ tươi của nó.\n\nGiảm tốc độ hư hỏng của vật phẩm trong túi đồ đi 25%.\n\nTăng thời gian tồn tại của các hiệu ứng phụ khác thêm 25%.\n\nThời lượng: 4 phút."

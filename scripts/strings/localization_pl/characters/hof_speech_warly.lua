@@ -101,11 +101,17 @@ WARLY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Ostrze nocy stępiało się."
 WARLY.ANNOUNCE_KYNO_PANICBUFF_START = "Wygląda na to, że stałem się dość przerażający."
 WARLY.ANNOUNCE_KYNO_PANICBUFF_END = "Moja niepokojąca obecność osłabła."
 
-WARLY.ANNOUNCE_KYNO_CUREBUFF_START = "Excellent! My ingredients will keep." -- NEEDS TRANSLATION
-WARLY.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness fades once more." -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_CUREBUFF_START = "Excellent! My ingredients will keep."
+WARLY.ANNOUNCE_KYNO_CUREBUFF_END = "Freshness fades once more."
 
-WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ah, a touch of stability!" -- NEEDS TRANSLATION
-WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And my stability has evaporated." -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Ah, a touch of stability!"
+WARLY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And my stability has evaporated."
+
+WARLY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Ah! I can feel the extra force behind every strike!"
+WARLY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "And the extra strength has left the menu."
+
+WARLY.ANNOUNCE_KYNO_BADLUCKBUFF_START = "I fear fortune has left the kitchen."
+WARLY.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Ah, excellent. Fortune has returned to the table."
 
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Źle, źle..."
 
@@ -136,13 +142,13 @@ WARLY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Ach! Jaki delikatny potencjał w tych jaja
 
 WARLY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... nieźle."
 
-WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Mon dieu, I feel as though my insides are cooling!",
 	"This strange cold... I wonder if this is how meat feel when they're frozen.",
 }
 
-WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm very glad that's over." -- NEEDS TRANSLATION
+WARLY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm very glad that's over."
 
 WARLY.DESCRIBE.KYNO_ROE = "Mogę zrobić kawior z kanapkami!"
 WARLY.DESCRIBE.KYNO_ROE_COOKED = "Przydałoby się trochę świeżej cytryny."
@@ -531,7 +537,7 @@ WARLY.DESCRIBE.KYNO_NEONFISH_COOKED = "Ech. Nawet nie jest przyprawiona."
 
 WARLY.DESCRIBE.KYNO_GROUPER = "Świeższa już nie będzie!"
 WARLY.DESCRIBE.KYNO_GROUPER_COOKED = "Smażony granik z groszkiem gołębim! Wyborne!"
- 
+
 WARLY.DESCRIBE.KYNO_PIERROTFISH = "Co powiesz na smaczną zupę rybną?"
 WARLY.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Ach, powinienem był zostawić głowę na zupę!"
 
@@ -841,7 +847,7 @@ WARLY.DESCRIBE.CHOCOLATE_BLACK = "Nic nie smakuje słodziej niż czekolada."
 WARLY.DESCRIBE.CHOCOLATE_WHITE = "Nic nie smakuje słodziej niż czekolada."
 
 WARLY.DESCRIBE.TRICOLORDANGO = "Powinienem częściej próbować japońskiej kuchni..."
- 
+
 WARLY.DESCRIBE.FRIESFRENCH = "Sól sprawia, że smakują jeszcze lepiej!"
 
 WARLY.DESCRIBE.PIRATERUM = "Rum, napój piratów."
@@ -853,7 +859,7 @@ WARLY.DESCRIBE.ONIONRINGS = "Idealnie usmażone krążki cebulowe."
 WARLY.DESCRIBE.DONUTS = "Ah, merveilleux! Idealne na początek dnia."
 WARLY.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Ah, merveilleux! Donuty na początek dnia."
 WARLY.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Ah, merveilleux! Donuty na początek dnia."
- 
+
 WARLY.DESCRIBE.CINNAMONROLL = "Upieczone dobro! Hipnotyzujące ślimaki ciepłego cynamonu i cukru."
 
 WARLY.DESCRIBE.GUMMYBEARGERS = "Robienie cukierków w formie zwierząt to sztuka!"
@@ -1247,7 +1253,7 @@ WARLY.DESCRIBE.CHICKENROTISSERIE = "Ach! Powolne pieczenie daje soczystą nagrod
 
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Delikatnie zaparzone do perfekcji."
 WARLY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Uroczy, słodki bukiet w filiżance."
-WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A delightfully cooling infusion." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A delightfully cooling infusion."
 
 WARLY.DESCRIBE.SOULJUICE = "Ach! Niezwykła, lecz zachwycająca mikstura!"
 
@@ -1314,74 +1320,82 @@ WARLY.DESCRIBE.KYNO_PIGCOIN1 = "Mógłbym kupić za to mnóstwo świeżych skła
 WARLY.DESCRIBE.KYNO_PIGCOIN2 = "Ah! Mógłbym wstąpić po zakupy..."
 WARLY.DESCRIBE.KYNO_PIGCOIN3 = "Wygląda na dość ważną."
 
-WARLY.DESCRIBE.KYNO_ICENETTLES = "Mon Dieu! They'll freeze my beautiful crops!" -- NEEDS TRANSLATION
-WARLY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Could these be used for a rudimentary ice box?" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_ICENETTLES = "Mon Dieu! They'll freeze my beautiful crops!"
+WARLY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Could these be used for a rudimentary ice box?"
 
-WARLY.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A cook appreciates good organization.",
 	FULL = "It is entirely full.",
 }
 
-WARLY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "That's one juicy tomato wasted..." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "That's one juicy tomato wasted..."
 
-WARLY.DESCRIBE.WX78MODULE_GOURMAND = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
-WARLY.DESCRIBE.WX78MODULE_COOKER = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
-WARLY.DESCRIBE.WX78MODULE_DRYER = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
-WARLY.DESCRIBE.WX78MODULE_DRYER2 = "They give our metal friend a little extra zest, non?" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.WX78MODULE_GOURMAND = "They give our metal friend a little extra zest, non?"
+WARLY.DESCRIBE.WX78MODULE_COOKER = "They give our metal friend a little extra zest, non?"
+WARLY.DESCRIBE.WX78MODULE_DRYER = "They give our metal friend a little extra zest, non?"
+WARLY.DESCRIBE.WX78MODULE_DRYER2 = "They give our metal friend a little extra zest, non?"
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What did our metal friend leave here?", -- NEEDS TRANSLATION
+	GENERIC = "What did our metal friend leave here?",
 }
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What did our metal friend leave here?", -- NEEDS TRANSLATION
+	GENERIC = "What did our metal friend leave here?",
 }
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What did our metal friend leave here?", -- NEEDS TRANSLATION
+	GENERIC = "What did our metal friend leave here?",
 }
 
-WARLY.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "The little pig has quite the appetite for coin.",
 	UPGRADED = "A bottomless piggy bank? Magnifique!",
 	GENERIC = "A charming little place for one's savings.",
 }
 
-WARLY.DESCRIBE.MARSHMALLOWS = "Ah, such a delicate sweetness!" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.MARSHMALLOWS = "Ah, such a delicate sweetness!"
 
-WARLY.DESCRIBE.KOKONUTCOOKIES = "I've followed a top secret recipe to cook them!" -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KOKONUTCOOKIES = "I've followed a top secret recipe to cook them!"
 
-WARLY.DESCRIBE.BBQRIBS = "Ah, beautifully charred and wonderfully seasoned." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.BBQRIBS = "Ah, beautifully charred and wonderfully seasoned."
 
-WARLY.DESCRIBE.BROWNIE = "Rich, fudgy, and wonderfully indulgent." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.BROWNIE = "Rich, fudgy, and wonderfully indulgent."
 
-WARLY.DESCRIBE.CHOCOLATE_CAKE = "Magnifique! Rich, velvety, and deeply chocolatey." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.CHOCOLATE_CAKE = "Magnifique! Rich, velvety, and deeply chocolatey."
 
-WARLY.DESCRIBE.SWORDFISHBLUEDINNER = "Ah, such fine dinner! Simple, elegant and delightful." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.SWORDFISHBLUEDINNER = "Ah, such fine dinner! Simple, elegant and delightful."
 
-WARLY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "A charming creature of the night.",
 	HELD = "I can feel the little thing moving around.",
 }
 
-WARLY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A magnificent bird of the northern wilderness.",
 	HELD = "I believe it objects to being carried this way.",
 }
 
-WARLY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Ah, a place for collecting salt crystals under construction." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Ah, a place for collecting salt crystals under construction."
 
-WARLY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Ah, a fine fishing rod." -- NEEDS TRANSLATION
+WARLY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Ah, a fine fishing rod."
+
+WARLY.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "A treasure among confectioner's ingredients!"
+
+WARLY.DESCRIBE.OPALPRECIOUSCREAM = "Magnifique! A little shimmer for an exquisite dessert."
+
+WARLY.DESCRIBE.CATFISHSTICK = "Simple, smoky, and wonderfully rustic."
+
+WARLY.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A dazzling confection with a surprise hidden within."

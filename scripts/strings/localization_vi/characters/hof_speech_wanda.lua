@@ -101,11 +101,17 @@ WANDA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Và nó biến mất. Điển hình."
 WANDA.ANNOUNCE_KYNO_PANICBUFF_START = "Nỗi sợ là một động lực cực kỳ hiệu quả."
 WANDA.ANNOUNCE_KYNO_PANICBUFF_END = "Hiệu ứng đã hết hạn."
 
-WANDA.ANNOUNCE_KYNO_CUREBUFF_START = "I've borrowed a little extra time." -- NEEDS TRANSLATION
-WANDA.ANNOUNCE_KYNO_CUREBUFF_END = "Time has reclaimed what was borrowed." -- NEEDS TRANSLATION
+WANDA.ANNOUNCE_KYNO_CUREBUFF_START = "I've borrowed a little extra time."
+WANDA.ANNOUNCE_KYNO_CUREBUFF_END = "Time has reclaimed what was borrowed."
 
-WANDA.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm not going anywhere." -- NEEDS TRANSLATION
-WANDA.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Well, that stability didn't last." -- NEEDS TRANSLATION
+WANDA.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm not going anywhere."
+WANDA.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Well, that stability didn't last."
+
+WANDA.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "I feel considerably more powerful."
+WANDA.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "The extra strength has run its course."
+
+WANDA.ANNOUNCE_KYNO_BADLUCKBUFF_START = "I have a feeling things are about to go terribly wrong."
+WANDA.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The bad omen has finally passed."
 
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không... ta cần thứ khác."
 
@@ -113,7 +119,7 @@ WANDA.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Có lẽ ta vẫn còn chút th�
 
 WANDA.ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL = "Cái này sẽ tốn thời gian đây, haiz..."
 
-WANDA.ANNOUNCE_KYNO_FIREPITINSTALL_FAIL = "Sai rồi!" 
+WANDA.ANNOUNCE_KYNO_FIREPITINSTALL_FAIL = "Sai rồi!"
 
 WANDA.ANNOUNCE_KYNO_POTHANGER_FAIL = "Tới lúc tìm một cái nồi nấu cho thứ đó rồi."
 
@@ -136,13 +142,13 @@ WANDA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Quá nhiều tương lai trong cùng một
 
 WANDA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Hmm... đủ hiệu quả."
 
-WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Oooh, I don't feel well at all...",
 	"Help! I've been poisoned!",
 }
 
-WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew... it looks like the effects aren't permanent." -- NEEDS TRANSLATION
+WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew... it looks like the effects aren't permanent."
 
 WANDA.DESCRIBE.KYNO_ROE = "Lần đầu ta thấy thứ này."
 WANDA.DESCRIBE.KYNO_ROE_COOKED = "Mùi thơm đấy."
@@ -172,7 +178,7 @@ WANDA.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Giờ ta có thể pha cà phê rồi.
 
 WANDA.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Đó là bụi cà phê sao?!"
 
-WANDA.DESCRIBE.KYNO_COFFEEBUSH = 
+WANDA.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "Một loài cây mà con người phụ thuộc vào.",
 	PICKED = "Nó cần thời gian.",
@@ -181,7 +187,7 @@ WANDA.DESCRIBE.KYNO_COFFEEBUSH =
 
 WANDA.DESCRIBE.DUG_KYNO_SPOTBUSH = "Tương lai của nó phụ thuộc vào nơi được trồng."
 
-WANDA.DESCRIBE.KYNO_SPOTBUSH = 
+WANDA.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Một bụi cây.",
 	PICKED = "Thời gian sẽ phục hồi nó.",
@@ -249,7 +255,7 @@ WANDA.DESCRIBE.CUCUMBERSALAD = "Một món salad biển."
 
 WANDA.DESCRIBE.DUG_KYNO_WILDWHEAT = "Cần được trồng ở nơi tốt hơn."
 
-WANDA.DESCRIBE.KYNO_WILDWHEAT = 
+WANDA.DESCRIBE.KYNO_WILDWHEAT =
 {
 	GENERIC = "Ở quanh đây thường thấy khá nhiều thứ này.",
 	PICKED = "Nó cần thời gian.",
@@ -408,7 +414,7 @@ WANDA.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Tiếc thật."
 
 WANDA.DESCRIBE.KYNO_SEEDS_KIT = "Hạt giống."
 
-WANDA.DESCRIBE.KYNO_LIMPETROCK = 
+WANDA.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "Một tảng đá tạo ra thức ăn sao?!",
 	PICKED = "Chỉ là chuyện chờ đợi thôi.",
@@ -418,7 +424,7 @@ WANDA.DESCRIBE.KYNO_LIMPETROCK =
 WANDA.DESCRIBE.KYNO_LIMPETS = "Ốc."
 WANDA.DESCRIBE.KYNO_LIMPETS_COOKED = "Tạm biệt nhé, ốc."
 
-WANDA.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WANDA.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "Một bông hoa ăn được.",
 	PICKED = "Nó sẽ trở lại theo thời gian.",
@@ -429,7 +435,7 @@ WANDA.DESCRIBE.KYNO_LOTUS_ROOT = "Rễ cây, có thể trồng ở đâu đó."
 WANDA.DESCRIBE.KYNO_LOTUS_FLOWER = "Một bông hoa ăn được."
 WANDA.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Ngon!"
 
-WANDA.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WANDA.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "Cỏ dại.",
 	PICKED = "Nó sẽ trở lại, nếu đủ thời gian.",
@@ -441,7 +447,7 @@ WANDA.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Cỏ dại nấu chín."
 WANDA.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Cỏ dại khô từ biển."
 WANDA.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Rễ cỏ dại, có thể trồng ở đâu đó."
 
-WANDA.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WANDA.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "Cây kỳ lạ.",
 	PICKED = "Nó sẽ trở lại sớm hơn dự kiến.",
@@ -452,7 +458,7 @@ WANDA.DESCRIBE.KYNO_TAROROOT_ROOT = "Rễ cây, có thể trồng ở đâu đó
 WANDA.DESCRIBE.KYNO_TAROROOT = "Hmm..."
 WANDA.DESCRIBE.KYNO_TAROROOT_COOKED = "Mùi thơm đấy..."
 
-WANDA.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WANDA.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "Một khoảnh khắc mới lạ ngắn ngủi.",
 	PICKED = "Nó sẽ sớm trở lại thôi.",
@@ -479,7 +485,7 @@ WANDA.DESCRIBE.CATFOOD = "Tới giờ cho mèo ăn rồi."
 
 WANDA.DESCRIBE.KATFOOD = "Tới giờ cho mèo ăn rồi."
 
-WANDA.DESCRIBE.KYNO_BANANATREE = 
+WANDA.DESCRIBE.KYNO_BANANATREE =
 {
 	GENERIC = "Những thứ hiếm hoi chẳng bao giờ tồn tại lâu.",
 	PICKED = "Chỉ là vấn đề thời gian.",
@@ -491,7 +497,7 @@ WANDA.DESCRIBE.KYNO_BANANATREE =
 WANDA.DESCRIBE.KYNO_BANANA = "Ta thích món ăn vặt nhanh gọn, không rườm rà."
 WANDA.DESCRIBE.KYNO_BANANA_COOKED = "Sao ta lại tốn thời gian nấu nó nhỉ?"
 
-WANDA.DESCRIBE.KYNO_KOKONUTTREE = 
+WANDA.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "Một cây cọ.",
 	PICKED = "Chỉ là chuyện chờ đợi thôi.",
@@ -531,7 +537,7 @@ WANDA.DESCRIBE.KYNO_NEONFISH_COOKED = "Tinh tế hơn một chút, chắc vậy.
 
 WANDA.DESCRIBE.KYNO_GROUPER = "Được rồi, lại thêm một con cá."
 WANDA.DESCRIBE.KYNO_GROUPER_COOKED = "Từng miếng một thôi."
- 
+
 WANDA.DESCRIBE.KYNO_PIERROTFISH = "Được rồi, lại thêm một con cá."
 WANDA.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Ngon!"
 
@@ -555,7 +561,7 @@ WANDA.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Lấy nhựa cây từ cây cũng c�
 
 WANDA.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Thời khắc của chúng đã tới."
 
-WANDA.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WANDA.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "Ta thấy thời gian đã làm gì với ngươi rồi.",
 	SLEEPING = "Một ngày nào đó ngươi sẽ ngủ mãi mãi.",
@@ -601,7 +607,7 @@ WANDA.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Thịt cua, hoàn hảo cho những m�
 
 WANDA.DESCRIBE.KYNO_SLAUGHTERTOOL = "Hy vọng ta không rảnh tới mức phải dùng thứ này."
 
-WANDA.DESCRIBE.KYNO_CHICKEN2 = 
+WANDA.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Awww. Một chú gà nhỏ!",
 	COOP = "Được giữ an toàn trong khoảnh khắc này.",
@@ -617,7 +623,7 @@ WANDA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "Rồi, rồi, ra đi trước khi ta già thêm vì chờ đợi.",
 }
 
-WANDA.DESCRIBE.KYNO_CHICKENHOUSE = 
+WANDA.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Một giải pháp đúng lúc để có nguồn trứng ổn định.",
 	FULL = "Đúng lịch.",
@@ -645,7 +651,7 @@ WANDA.DESCRIBE.KYNO_COOKWARE_OVEN = "Một cái lò cũ bình thường."
 WANDA.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Một cái lò cũ bình thường."
 WANDA.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Một cái lò cũ bình thường."
 
-WANDA.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WANDA.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Chắc có gì đó ở bên dưới.",
 	FLIPPED = "Thời gian sẽ phơi bày mọi thứ.",
@@ -692,7 +698,7 @@ WANDA.DESCRIBE.PEPPERROLLS = "Làm chúng tốn quá nhiều thời gian... như
 
 WANDA.DESCRIBE.KYNO_SAPHEALER = "Theo thời gian, thứ này sẽ chữa được cây."
 
-WANDA.DESCRIBE.KYNO_OCEAN_WRECK = 
+WANDA.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Họ đã không có đủ thời gian để thoát.",
 	PICKED = "Thời gian sẽ phục hồi thứ gì đó ở đây.",
@@ -714,7 +720,7 @@ WANDA.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Một miếng thịt cũ, dai nhách."
 
 WANDA.DESCRIBE.KYNO_BREWBOOK = "Ủ rượu tốn thời gian thật, nhìn đống nguyên liệu và phương pháp này xem!"
 
-WANDA.DESCRIBE.KYNO_WOODENKEG = 
+WANDA.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "Cái này chắc chắn sẽ mất lâu để làm ra thành phẩm.",
 	BREWING_LONG = "Dòng thời gian này cần kiên nhẫn.",
@@ -723,7 +729,7 @@ WANDA.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "Quá muộn để thay đổi rồi.",
 }
 
-WANDA.DESCRIBE.KYNO_PRESERVESJAR = 
+WANDA.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "Cái này chắc chắn sẽ mất lâu để làm ra thành phẩm.",
 	BREWING_LONG = "Dòng thời gian này cần kiên nhẫn.",
@@ -732,7 +738,7 @@ WANDA.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Không có cơ hội thứ hai đâu.",
 }
 
-WANDA.DESCRIBE.KYNO_ANTCHEST = 
+WANDA.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Như thể thời gian bị đóng băng bên trong nó.",
 	HONEY = "Vừa đúng lúc.",
@@ -748,7 +754,7 @@ WANDA.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Nướng vừa kịp lúc!"
 WANDA.DESCRIBE.KYNO_PIKO = "Ngươi là một nhóc dễ thương đấy."
 WANDA.DESCRIBE.KYNO_PIKO_ORANGE = "Ngươi không còn nhiều thời gian đâu, vì ta sẽ pha trà bằng ngươi!"
 
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "Chỉ là một cái cây.",
 	CHOPPED = "Mục đích của nó đã qua rồi.",
@@ -756,7 +762,7 @@ WANDA.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 	BURNT = "Giờ thì quá muộn.",
 }
 
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
 	GENERIC = "Chỉ là một cây trà, có sóc.",
 	BURNING = "Chuyện này đâu cần phải xảy ra.",
@@ -764,26 +770,26 @@ WANDA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WANDA.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Chỉ là một cái thùng gỗ."
 
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "Ta không có thời gian phí phạm với họ.",
 	BURNT = "Quá muộn để cứu rồi.",
 }
 
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "Có lẽ ngày nào đó ta nên học câu cá.",
 	CRAFTED = "Một cải thiện rõ rệt.",
 	BURNT = "Có những thứ lưu lại quá lâu.",
 }
 
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "Ta biết mà, vài món trong này không thuộc về mặt tồn tại này.",
 	OCCUPIED = "Không phải thời điểm thích hợp.",
 }
 
-WANDA.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WANDA.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "Ông ta đang bán đủ thứ linh tinh.",
 	EMPTY = "Lần này chẳng còn gì.",
@@ -841,7 +847,7 @@ WANDA.DESCRIBE.CHOCOLATE_BLACK = "Được rồi, có lẽ chỉ một hai miế
 WANDA.DESCRIBE.CHOCOLATE_WHITE = "Được rồi, có lẽ chỉ một hai miếng thôi."
 
 WANDA.DESCRIBE.TRICOLORDANGO = "Chà, chúng ngon thật!"
- 
+
 WANDA.DESCRIBE.FRIESFRENCH = "Ta phải thừa nhận, chúng rất ngon."
 
 WANDA.DESCRIBE.PIRATERUM = "Một ngụm thôi cũng có thể lấy mạng ta."
@@ -853,7 +859,7 @@ WANDA.DESCRIBE.ONIONRINGS = "Ta không chắc lắm, nhưng cứ thử xem."
 WANDA.DESCRIBE.DONUTS = "Aaah! Hôm qua ta vừa mơ thấy ngươi!"
 WANDA.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Aaah! Hôm qua ta vừa mơ thấy ngươi!"
 WANDA.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Aaah! Hôm qua ta vừa mơ thấy ngươi!"
- 
+
 WANDA.DESCRIBE.CINNAMONROLL = "Ta rất muốn ăn nó. Rất muốn."
 
 WANDA.DESCRIBE.GUMMYBEARGERS = "Ta mê kẹo gấu dẻo!"
@@ -940,7 +946,7 @@ WANDA.DESCRIBE.RICESAKE = "Không hẳn là gu của ta."
 
 WANDA.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Ta hiểu rồi. Toàn gai là gai."
 
-WANDA.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WANDA.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Ta hiểu rồi. Toàn gai là gai.",
 	PICKED = "Nó sẽ trở lại theo thời gian.",
@@ -958,7 +964,7 @@ WANDA.DESCRIBE.PINACOLADA = "Àhh, đúng thứ ta đang cần."
 
 WANDA.DESCRIBE.CHIMAS = "Không phải tiệc trà ta mong đợi!"
 
-WANDA.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WANDA.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Nó tưới cây cho ta, và tiết kiệm cho ta chút thời gian.",
 	ON = "Hoạt động đúng như mong đợi.",
@@ -1077,7 +1083,7 @@ WANDA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "Ít nhất giờ ông ấy đang nghỉ ở nơi ổn định.",
 }
 
-WANDA.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WANDA.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Thời gian trôi qua, và chúng tự lớn lên. Ấn tượng đấy.",
 	PICKED = "Ta sẽ phải chờ cơ hội tiếp theo.",
@@ -1087,7 +1093,7 @@ WANDA.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WANDA.DESCRIBE.KYNO_TRUFFLES = "Điều tốt đẹp sẽ đến với người biết chờ... như chúng đây."
 WANDA.DESCRIBE.KYNO_TRUFFLES_COOKED = "Một hương vị đáng để chờ."
 
-WANDA.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WANDA.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Một khoảnh khắc trống rỗng.",
 	FULL = "Một lời nhắc rằng ngay cả vẻ đẹp cũng hư hỏng theo thời gian.",
@@ -1112,7 +1118,7 @@ WANDA.DESCRIBE.TRUFFLEOIL = "Một món tinh tế vượt thời gian... nếu c
 WANDA.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Can thiệp thêm một chút thì có hại gì chứ?"
 WANDA.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Nó sẽ xong sớm thôi... ta cảm nhận được."
 
-WANDA.DESCRIBE.KYNO_FISHFARMPLOT = 
+WANDA.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "Nơi tương lai của cá bắt đầu.",
 	FUEL_HIGH = "Chưa cần can thiệp.",
@@ -1175,7 +1181,7 @@ WANDA.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Ta không có thời gian trông trẻ."
 WANDA.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Trông trẻ không phải thú tiêu khiển yêu thích của ta."
 WANDA.DESCRIBE.KYNO_BRAINROCK_CORAL = "Bớt nghĩ đi, hành động nhiều hơn."
 
-WANDA.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WANDA.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "Ngươi có nhiều thời gian để suy nghĩ lắm nhỉ?",
 	PICKED = "Suy nghĩ của nó đang tạm dừng.",
@@ -1183,7 +1189,7 @@ WANDA.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WANDA.DESCRIBE.BRAINMETTERSOUP = "Giảm một nửa thời gian ta cần để suy nghĩ."
 
-WANDA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WANDA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "Trao đổi thôi. Ta không có thời gian rảnh để phí.",
 	SLEEPING = "Không phải thời điểm thích hợp.",
@@ -1191,7 +1197,7 @@ WANDA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WANDA.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Một phần thưởng đáng thời gian của ta!"
 
-WANDA.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WANDA.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "Mong là thứ này đáng thời gian của ta.",
 	WAITING = "Thời gian của nó đã cạn.",
@@ -1207,7 +1213,7 @@ WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Ta không chắc mình tin thứ đó."
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Một lát chắc không phí quá nhiều thời gian... hy vọng vậy."
 WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Lễ mừng cũng vui, khi thời gian còn cho phép..."
 
-WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WANDA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "Dịch vụ bắp rang đúng lúc.",
 	FUEL_HIGH = "Chưa cần can thiệp.",
@@ -1247,7 +1253,7 @@ WANDA.DESCRIBE.CHICKENROTISSERIE = "Ít nhất thì chờ đợi cũng đáng."
 
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Một khoảnh khắc dễ chịu ngắn ngủi."
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Ngọt ngào, nhưng thoáng qua."
-WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A brief respite from the heat." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A brief respite from the heat."
 
 WANDA.DESCRIBE.SOULJUICE = "Thời gian và linh hồn ở dạng chất lỏng."
 
@@ -1314,10 +1320,10 @@ WANDA.DESCRIBE.KYNO_PIGCOIN1 = "Thứ duy nhất có thể điều khiển mọi
 WANDA.DESCRIBE.KYNO_PIGCOIN2 = "Một lời nhắc rằng thời gian là tiền bạc."
 WANDA.DESCRIBE.KYNO_PIGCOIN3 = "Đây là lần đầu tôi thấy nhiều tiền như vậy."
 
-WANDA.DESCRIBE.KYNO_ICENETTLES = " I'm having a Deja Vu with this one." -- NEEDS TRANSLATION
-WANDA.DESCRIBE.KYNO_ICENETTLES_DRIED = "Worth the time, now this heat won't kill me." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_ICENETTLES = " I'm having a Deja Vu with this one."
+WANDA.DESCRIBE.KYNO_ICENETTLES_DRIED = "Worth the time, now this heat won't kill me."
 
-WANDA.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A sensible way to store seeds.",
 	FULL = "No more room left.",
@@ -1325,63 +1331,71 @@ WANDA.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 
 WANDA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "A waste of food, and time." -- NEED TRANSLATION
 
-WANDA.DESCRIBE.WX78MODULE_GOURMAND = "Aha! I was wondering when they'd started making these." -- NEEDS TRANSLATION
-WANDA.DESCRIBE.WX78MODULE_COOKER = "Aha! I was wondering when they'd started making these." -- NEEDS TRANSLATION
-WANDA.DESCRIBE.WX78MODULE_DRYER = "Aha! I was wondering when they'd started making these." -- NEEDS TRANSLATION
-WANDA.DESCRIBE.WX78MODULE_DRYER2 = "Aha! I was wondering when they'd started making these." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.WX78MODULE_GOURMAND = "Aha! I was wondering when they'd started making these."
+WANDA.DESCRIBE.WX78MODULE_COOKER = "Aha! I was wondering when they'd started making these."
+WANDA.DESCRIBE.WX78MODULE_DRYER = "Aha! I was wondering when they'd started making these."
+WANDA.DESCRIBE.WX78MODULE_DRYER2 = "Aha! I was wondering when they'd started making these."
 
 WANDA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What's in there?", -- NEEDS TRANSLATION
+	GENERIC = "What's in there?",
 }
 
 WANDA.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What's in there?", -- NEEDS TRANSLATION
+	GENERIC = "What's in there?",
 }
 
 WANDA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What's in there?", -- NEEDS TRANSLATION
+	GENERIC = "What's in there?",
 }
 
-WANDA.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "It's completely full. I should have seen that coming.",
 	UPGRADED = "Its capacity appears to have no limit.",
 	GENERIC = "A piggy bank. Simple, but useful.",
 }
 
-WANDA.DESCRIBE.MARSHMALLOWS = "A little sweetness never hurts." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.MARSHMALLOWS = "A little sweetness never hurts."
 
-WANDA.DESCRIBE.KOKONUTCOOKIES = "A pleasant little taste of the tropics." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KOKONUTCOOKIES = "A pleasant little taste of the tropics."
 
-WANDA.DESCRIBE.BBQRIBS = "A hearty meal worth spending time on." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.BBQRIBS = "A hearty meal worth spending time on."
 
-WANDA.DESCRIBE.BROWNIE = "Rich chocolate never goes out of style." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.BROWNIE = "Rich chocolate never goes out of style."
 
-WANDA.DESCRIBE.CHOCOLATE_CAKE = "A decadent cake for a special occasion." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.CHOCOLATE_CAKE = "A decadent cake for a special occasion."
 
-WANDA.DESCRIBE.SWORDFISHBLUEDINNER = "A convenient meal for when time is of the essence." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.SWORDFISHBLUEDINNER = "A convenient meal for when time is of the essence."
 
-WANDA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "Always watching, never sleeping.",
 	HELD = "It's remarkably restless in there.",
 }
 
-WANDA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A creature that seems perfectly at home in the cold.",
 	HELD = "It seems rather unhappy about being carried.",
 }
 
-WANDA.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "It'll be useful once it's finished." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "It'll be useful once it's finished."
 
-WANDA.DESCRIBE.KYNO_FISHINGROD_THULECITE = "This has stood the test of time." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_FISHINGROD_THULECITE = "This has stood the test of time."
+
+WANDA.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Some things are worth waiting a lifetime for."
+
+WANDA.DESCRIBE.OPALPRECIOUSCREAM = "Beautiful things never seem to last."
+
+WANDA.DESCRIBE.CATFISHSTICK = "Freshly caught, freshly grilled. Such a short life."
+
+WANDA.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Hopefully this little gamble pays off."

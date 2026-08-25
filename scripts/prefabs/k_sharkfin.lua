@@ -46,7 +46,7 @@ local function fn()
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD_RARE
 
 	inst:AddComponent("luckitem")
-	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_MED)
+	inst.components.luckitem:SetLuck(-TUNING.KYNO_LUCK_SUPERTINY)
 
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM

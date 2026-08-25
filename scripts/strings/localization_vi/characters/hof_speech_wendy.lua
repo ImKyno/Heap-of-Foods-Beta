@@ -101,11 +101,17 @@ WENDY.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Sự im lặng trở lại... và cả 
 WENDY.ANNOUNCE_KYNO_PANICBUFF_START = "Nỗi kinh hoàng theo sau từng bước chân ta."
 WENDY.ANNOUNCE_KYNO_PANICBUFF_END = "Nỗi sợ hãi đã lắng xuống."
 
-WENDY.ANNOUNCE_KYNO_CUREBUFF_START = "Time loosens its grip on decay." -- NEEDS TRANSLATION
-WENDY.ANNOUNCE_KYNO_CUREBUFF_END = "Decay resumes its patient work." -- NEEDS TRANSLATION
+WENDY.ANNOUNCE_KYNO_CUREBUFF_START = "Time loosens its grip on decay."
+WENDY.ANNOUNCE_KYNO_CUREBUFF_END = "Decay resumes its patient work."
 
-WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I am anchored to this wretched world." -- NEEDS TRANSLATION
-WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "The world may toss me about again." -- NEEDS TRANSLATION
+WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I am anchored to this wretched world."
+WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "The world may toss me about again."
+
+WENDY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "My strikes feel almost alive."
+WENDY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "The strength has faded away."
+
+WENDY.ANNOUNCE_KYNO_BADLUCKBUFF_START = "I can feel misfortune closing in."
+WENDY.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The darkness has passed... for now."
 
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để thu gom?"
 
@@ -136,13 +142,13 @@ WENDY.ANNOUNCE_KYNO_ROE_RESEARCHED = "Quá nhiều sự sống, vốn chẳng đ
 
 WENDY.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Một niềm an ủi thoáng qua... rồi sẽ sớm bị lãng quên."
 
-WENDY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WENDY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Why should my life be anything other than pain...",
 	"What a terrible poison... I feel as though I might freeze up.",
 }
 
-WENDY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Alas, I still live." -- NEEDS TRANSLATION
+WENDY.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Alas, I still live."
 
 WENDY.DESCRIBE.KYNO_ROE = "Khởi đầu của sự sống..."
 WENDY.DESCRIBE.KYNO_ROE_COOKED = "Ta đã tha cho chúng khỏi nỗi đau khi nở ra."
@@ -172,7 +178,7 @@ WENDY.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Ai mà biết ý chí sống lại n�
 
 WENDY.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Bị bật rễ, nhưng chưa bị kết án."
 
-WENDY.DESCRIBE.KYNO_COFFEEBUSH = 
+WENDY.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "Cái cây này hút dưỡng chất từ cái chết rực lửa.",
 	PICKED = "Nó chẳng còn gì để cho.",
@@ -181,7 +187,7 @@ WENDY.DESCRIBE.KYNO_COFFEEBUSH =
 
 WENDY.DESCRIBE.DUG_KYNO_SPOTBUSH = "Bị dời đi, nhưng chưa biến mất."
 
-WENDY.DESCRIBE.KYNO_SPOTBUSH = 
+WENDY.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Ta cho là nó có thể ăn được.",
 	PICKED = "Nó chẳng còn gì để cho nữa.",
@@ -249,7 +255,7 @@ WENDY.DESCRIBE.CUCUMBERSALAD = "Ugh, lại thêm rau củ."
 
 WENDY.DESCRIBE.DUG_KYNO_WILDWHEAT = "Bị dời đi, nhưng vẫn còn hy vọng."
 
-WENDY.DESCRIBE.KYNO_WILDWHEAT = 
+WENDY.DESCRIBE.KYNO_WILDWHEAT =
 {
 	GENERIC = "Một phiên bản tốt hơn của cỏ.",
 	PICKED = "Giờ nó chẳng dâng gì nữa.",
@@ -408,7 +414,7 @@ WENDY.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Chết rồi."
 
 WENDY.DESCRIBE.KYNO_SEEDS_KIT = "Hạt giống bình thường."
 
-WENDY.DESCRIBE.KYNO_LIMPETROCK = 
+WENDY.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "Chúng trông có vẻ ăn được... đại khái vậy.",
 	PICKED = "Chúng đã rút lui.",
@@ -418,7 +424,7 @@ WENDY.DESCRIBE.KYNO_LIMPETROCK =
 WENDY.DESCRIBE.KYNO_LIMPETS = "Chúng ăn đá. Ta ăn chúng."
 WENDY.DESCRIBE.KYNO_LIMPETS_COOKED = "Thật ảm đạm."
 
-WENDY.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WENDY.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "Nó nở rộ trên những con sóng u sầu.",
 	PICKED = "Nó phải chờ để nở lại.",
@@ -429,7 +435,7 @@ WENDY.DESCRIBE.KYNO_LOTUS_ROOT = "Chúng khao khát một nấm mồ nước."
 WENDY.DESCRIBE.KYNO_LOTUS_FLOWER = "Vẻ đẹp này rồi cũng sẽ chết."
 WENDY.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Cái chết của nó thật ngon."
 
-WENDY.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WENDY.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "Một loài cỏ dại cứng cỏi.",
 	PICKED = "Nó sẽ trở lại, cuối cùng thôi.",
@@ -441,7 +447,7 @@ WENDY.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Khá hơn, nhưng vẫn là cỏ dại."
 WENDY.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Làm vậy giữ được lâu hơn. Vị cũng ngon hơn."
 WENDY.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Chúng khao khát một nấm mồ nước."
 
-WENDY.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WENDY.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "Chỉ là một loại rau nước bình thường.",
 	PICKED = "Nó sẽ trở lại đúng lúc.",
@@ -452,7 +458,7 @@ WENDY.DESCRIBE.KYNO_TAROROOT_ROOT = "Chúng khao khát một nấm mồ nước.
 WENDY.DESCRIBE.KYNO_TAROROOT = "Gần giống cà độc dược chết người. Chỉ là gần thôi."
 WENDY.DESCRIBE.KYNO_TAROROOT_COOKED = "Nấu thứ cà độc dược này khiến nó bớt chết chóc hơn."
 
-WENDY.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WENDY.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "Cần nước để sống.",
 	PICKED = "Nó sẽ trở lại, ngắn ngủi thôi.",
@@ -479,8 +485,8 @@ WENDY.DESCRIBE.CATFOOD = "Đồ ăn cho mèo."
 
 WENDY.DESCRIBE.KATFOOD = "Đồ ăn cho mèo."
 
-WENDY.DESCRIBE.KYNO_BANANATREE = 
-{ 
+WENDY.DESCRIBE.KYNO_BANANATREE =
+{
 	GENERIC = "Ngươi có cảm thấy mặt trời không, cái cây tội nghiệp?",
 	PICKED = "Nó phải chờ để cho đi lần nữa.",
 	CHOPPED = "Đời nó đã bị cắt ngắn.",
@@ -491,7 +497,7 @@ WENDY.DESCRIBE.KYNO_BANANATREE =
 WENDY.DESCRIBE.KYNO_BANANA = "Vỏ của nó trông nguy hiểm."
 WENDY.DESCRIBE.KYNO_BANANA_COOKED = "Chuối mềm ấm tốt hơn nhiều."
 
-WENDY.DESCRIBE.KYNO_KOKONUTTREE = 
+WENDY.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "Quả của nó ban sự sống, nhưng chỉ khi ta giết nó.",
 	PICKED = "Nó giữ lại những món quà của mình.",
@@ -531,7 +537,7 @@ WENDY.DESCRIBE.KYNO_NEONFISH_COOKED = "Ta đã... ăn thứ tệ hơn..."
 
 WENDY.DESCRIBE.KYNO_GROUPER = "Một sinh vật đáng thương."
 WENDY.DESCRIBE.KYNO_GROUPER_COOKED = "Nghỉ ngơi đi, linh hồn cá."
- 
+
 WENDY.DESCRIBE.KYNO_PIERROTFISH = "Những sọc vằn tượng trưng cho sự giam cầm cảm xúc của nó."
 WENDY.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Đừng để mất đầu."
 
@@ -555,7 +561,7 @@ WENDY.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Để hứng máu cây."
 
 WENDY.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Sự sống là một cái bẫy."
 
-WENDY.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WENDY.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "Ngài khỏe chứ?",
 	SLEEPING = "Ngay cả quyền uy cũng phải nghỉ ngơi.",
@@ -601,7 +607,7 @@ WENDY.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Bên trong nó cũng kinh tởm như b
 
 WENDY.DESCRIBE.KYNO_SLAUGHTERTOOL = "Chẳng phải toàn bộ sự sống đều là một cuộc tàn sát sao?"
 
-WENDY.DESCRIBE.KYNO_CHICKEN2 = 
+WENDY.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Gia cầm xấu xí.",
 	COOP = "Ít nhất giờ nó cũng có nơi trú.",
@@ -617,7 +623,7 @@ WENDY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "Nó chui ra, chưa biết số phận bi thảm của mình.",
 }
 
-WENDY.DESCRIBE.KYNO_CHICKENHOUSE = 
+WENDY.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Chúng đẻ trứng, rồi quay về nơi trú yên lặng.",
 	FULL = "Thêm nhiều quả trứng được sinh ra trong thế giới tàn nhẫn này.",
@@ -645,7 +651,7 @@ WENDY.DESCRIBE.KYNO_COOKWARE_OVEN = "Trông cũng được."
 WENDY.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Trông cũng được."
 WENDY.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Trông cũng được."
 
-WENDY.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WENDY.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Giá mà ta cũng có thể trốn dưới một tảng đá.",
 	FLIPPED = "Bị phơi bày, nhưng chẳng ấn tượng gì.",
@@ -692,7 +698,7 @@ WENDY.DESCRIBE.PEPPERROLLS = "Ngon đến mức ta suýt quên mất nỗi buồ
 
 WENDY.DESCRIBE.KYNO_SAPHEALER = "Một liều thuốc để chống lại bệnh tật."
 
-WENDY.DESCRIBE.KYNO_OCEAN_WRECK = 
+WENDY.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Thủy thủ đoàn của nó có lẽ đã chết hết rồi...",
 	PICKED = "Chỉ còn lại sự chờ đợi.",
@@ -714,7 +720,7 @@ WENDY.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Thịt trở nên khô và ngon."
 
 WENDY.DESCRIBE.KYNO_BREWBOOK = "Lấp đầy bao tử thì có nghĩa gì khi tim ta vẫn trống rỗng..."
 
-WENDY.DESCRIBE.KYNO_WOODENKEG = 
+WENDY.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "Một cái thùng để làm rượu hoặc mấy thứ ngon lành khác.",
 	BREWING_LONG = "Thời gian lê thê mãi không dứt.",
@@ -723,7 +729,7 @@ WENDY.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "Bao công sức, hóa hư không.",
 }
 
-WENDY.DESCRIBE.KYNO_PRESERVESJAR = 
+WENDY.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "Một cái hũ để làm đồ bảo quản.",
 	BREWING_LONG = "Thời gian bảo quản mọi thứ... trong chốc lát.",
@@ -732,7 +738,7 @@ WENDY.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Bị giảm thành hư vô.",
 }
 
-WENDY.DESCRIBE.KYNO_ANTCHEST = 
+WENDY.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Vẫn không ngọt bằng Abigail.",
 	HONEY = "Tất cả chỗ mật ong này... để làm gì chứ?",
@@ -748,7 +754,7 @@ WENDY.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Ta đã giết nó để kéo dài s�
 WENDY.DESCRIBE.KYNO_PIKO = "Quá ngây thơ để hiểu nỗi đau."
 WENDY.DESCRIBE.KYNO_PIKO_ORANGE = "Ngươi tồn tại để mua vui cho kẻ khác."
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "Ta có thể ngồi dưới nó và suy ngẫm sự vô nghĩa của đời.",
 	CHOPPED = "Bị tước đi mục đích của mình.",
@@ -756,7 +762,7 @@ WENDY.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 	BURNT = "Chẳng còn lại gì.",
 }
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
 	GENERIC = "Nó sẽ tốt hơn nếu không có lũ piko đó.",
 	BURNING = "Mất nhà bởi ngọn lửa.",
@@ -764,26 +770,26 @@ WENDY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Chỉ là một cái hộp."
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "Một nơi trú cô độc cho những sinh vật cô độc.",
 	BURNT = "Lại thêm một mái nhà hóa hư không.",
 }
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "Mộc mạc làm sao.",
 	CRAFTED = "Một cải thiện khiêm tốn.",
 	BURNT = "Mùi hôi vẫn còn vương lại.",
 }
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "Ta hơi muốn cái ba lô đang trưng bày kia.",
 	OCCUPIED = "Ngay cả thương nhân cũng phải nghỉ ngơi.",
 }
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "Nó đầy những món hay ho.",
 	EMPTY = "Chẳng còn gì để lấy.",
@@ -841,7 +847,7 @@ WENDY.DESCRIBE.CHOCOLATE_BLACK = "Ngay cả viên kẹo ngọt nhất cũng khô
 WENDY.DESCRIBE.CHOCOLATE_WHITE = "Ngay cả viên kẹo ngọt nhất cũng không làm tim ta tan chảy."
 
 WENDY.DESCRIBE.TRICOLORDANGO = "Một món ngọt khác thường, cổ điển làm sao."
- 
+
 WENDY.DESCRIBE.FRIESFRENCH = "Hơi giòn."
 
 WENDY.DESCRIBE.PIRATERUM = "Cái chết đang chờ ta."
@@ -853,7 +859,7 @@ WENDY.DESCRIBE.ONIONRINGS = "Hmm. Nó hơi giòn và hơi nhũn."
 WENDY.DESCRIBE.DONUTS = "Vị rất ngọt. Nhưng vẫn chưa ngọt như ta muốn."
 WENDY.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Vị rất ngọt. Nhưng vẫn chưa ngọt như ta muốn."
 WENDY.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Vị rất ngọt. Nhưng vẫn chưa ngọt như ta muốn."
- 
+
 WENDY.DESCRIBE.CINNAMONROLL = "Hỗn hợp đường trông cũng tạm."
 
 WENDY.DESCRIBE.GUMMYBEARGERS = "Những chú gấu tí hon để miệng ta nghiền nát."
@@ -940,7 +946,7 @@ WENDY.DESCRIBE.RICESAKE = "Đồ uống có cồn từ rau củ sao? Bleh."
 
 WENDY.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Bị nhổ khỏi mặt đất."
 
-WENDY.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WENDY.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Một bụi trái cây nhiệt đới.",
 	PICKED = "Nó chẳng còn gì để cho.",
@@ -958,7 +964,7 @@ WENDY.DESCRIBE.PINACOLADA = "Lạnh và sảng khoái."
 
 WENDY.DESCRIBE.CHIMAS = "Nó trông như một đồng bằng."
 
-WENDY.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WENDY.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Nó không thể tưới ướt linh hồn khô cằn của ta.",
 	ON = "Ít nhất cây cối cũng được chăm sóc.",
@@ -1077,7 +1083,7 @@ WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "Ít nhất giờ ông ấy có thể nghỉ ngơi yên bình.",
 }
 
-WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Ngay cả trong bóng tối, chúng vẫn lớn lên...",
 	PICKED = "Biến mất, như hầu hết những điều tốt đẹp.",
@@ -1087,7 +1093,7 @@ WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WENDY.DESCRIBE.KYNO_TRUFFLES = "Cao lương mỹ vị sinh ra từ bóng tối."
 WENDY.DESCRIBE.KYNO_TRUFFLES_COOKED = "Bóng tối hóa thành hơi ấm và hương vị."
 
-WENDY.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WENDY.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Một nơi trưng bày vẻ đẹp thoáng qua. Thức ăn rồi cũng phân hủy... cuối cùng thôi.",
 	FULL = "Nó cũng sẽ sớm biến mất.",
@@ -1112,7 +1118,7 @@ WENDY.DESCRIBE.TRUFFLEOIL = "Tinh chất của sự mục nát, được đóng 
 WENDY.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Ta có nên bận tâm dựng thứ này không?"
 WENDY.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Một nấm mồ nước... thật nên thơ."
 
-WENDY.DESCRIBE.KYNO_FISHFARMPLOT = 
+WENDY.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "Ngay cả trong trại ươm, sự sống cũng bắt đầu thật lặng lẽ.",
 	FUEL_HIGH = "Cơn đói của chúng đã được thỏa mãn.",
@@ -1175,7 +1181,7 @@ WENDY.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Một con sâu hôi hám."
 WENDY.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Trơ trụi và hoàn toàn không có sự sống."
 WENDY.DESCRIBE.KYNO_BRAINROCK_CORAL = "Bên trong ta cũng trông như thế sao?"
 
-WENDY.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WENDY.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "Đó là một cái cây trông khá thông minh.",
 	PICKED = "Nó nghỉ ngơi, như mọi tâm trí đều phải vậy.",
@@ -1183,7 +1189,7 @@ WENDY.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WENDY.DESCRIBE.BRAINMETTERSOUP = "Món này dành cho trẻ con."
 
-WENDY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WENDY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "Ta ghen tị với sự mãn nguyện của ông ta.",
 	SLEEPING = "Ngay cả vua cũng phải nghỉ ngơi.",
@@ -1191,7 +1197,7 @@ WENDY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WENDY.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Trông không giống một nơi đáng tin để cất đồ."
 
-WENDY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WENDY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "Một thứ cá chết. Trông có vẻ quan trọng.",
 	WAITING = "Nó đã đạt tới trạng thái tự nhiên của mình.",
@@ -1207,7 +1213,7 @@ WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Khiến ta nhớ tới những bữa ti
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Vị ngọt không thể lấp đầy khoảng trống bên trong..."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Một niềm vui tạm bợ... định mệnh là phải xẹp đi."
 
-WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "Tiếng nổ lách tách lặng lẽ cho những suy nghĩ lặng lẽ.",
 	FUEL_HIGH = "Nó vẫn còn mục đích.",
@@ -1247,7 +1253,7 @@ WENDY.DESCRIBE.CHICKENROTISSERIE = "Xoay mãi không dừng, như mọi thứ."
 
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Một hơi ấm đắng cho một thế giới đắng cay."
 WENDY.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Vị ngọt phai đi, như mọi thứ."
-WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A fleeting chill in a warm world." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A fleeting chill in a warm world."
 
 WENDY.DESCRIBE.SOULJUICE = "Một hương vị vừa đắng vừa ngọt của sự sống và cái chết."
 
@@ -1314,74 +1320,82 @@ WENDY.DESCRIBE.KYNO_PIGCOIN1 = "Ta sẽ đặt chúng lên mắt mình khi chế
 WENDY.DESCRIBE.KYNO_PIGCOIN2 = "Tiền cũng không thể mang Abigail trở lại."
 WENDY.DESCRIBE.KYNO_PIGCOIN3 = "Sự giàu có không thể mua sự bất tử."
 
-WENDY.DESCRIBE.KYNO_ICENETTLES = "Colder than my shoulder." -- NEEDS TRANSLATION	
-WENDY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Cold and dry, like death itself" -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_ICENETTLES = "Colder than my shoulder."
+WENDY.DESCRIBE.KYNO_ICENETTLES_DRIED = "Cold and dry, like death itself"
 
-WENDY.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A sack of dormant possibilities.",
 	FULL = "It's brimming with futures yet to bloom.",
 }
 
-WENDY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Grown to be thrown away, the cruel cycle of life." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Grown to be thrown away, the cruel cycle of life."
 
-WENDY.DESCRIBE.WX78MODULE_GOURMAND = "It looks so fragile... hopefully no tragic accidents befall it." -- NEEDS TRANSLATION
-WENDY.DESCRIBE.WX78MODULE_COOKER = "It looks so fragile... hopefully no tragic accidents befall it." -- NEEDS TRANSLATION
-WENDY.DESCRIBE.WX78MODULE_DRYER = "It looks so fragile... hopefully no tragic accidents befall it." -- NEEDS TRANSLATION
-WENDY.DESCRIBE.WX78MODULE_DRYER2 = "It looks so fragile... hopefully no tragic accidents befall it." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.WX78MODULE_GOURMAND = "It looks so fragile... hopefully no tragic accidents befall it."
+WENDY.DESCRIBE.WX78MODULE_COOKER = "It looks so fragile... hopefully no tragic accidents befall it."
+WENDY.DESCRIBE.WX78MODULE_DRYER = "It looks so fragile... hopefully no tragic accidents befall it."
+WENDY.DESCRIBE.WX78MODULE_DRYER2 = "It looks so fragile... hopefully no tragic accidents befall it."
 
 WENDY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "I wonder what remains.", -- NEEDS TRANSLATION
+	GENERIC = "I wonder what remains.",
 }
 
 WENDY.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "I wonder what remains.", -- NEEDS TRANSLATION
+	GENERIC = "I wonder what remains.",
 }
 
 WENDY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "I wonder what remains.", -- NEEDS TRANSLATION
+	GENERIC = "I wonder what remains.",
 }
 
-WENDY.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "Even the pig is burdened by greed.",
 	UPGRADED = "Its hunger for wealth has no end.",
 	GENERIC = "A little vessel for earthly riches.",
 }
 
-WENDY.DESCRIBE.MARSHMALLOWS = "They are almost like little clouds." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.MARSHMALLOWS = "They are almost like little clouds."
 
-WENDY.DESCRIBE.KOKONUTCOOKIES = "A cookie with a tropical melancholy." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KOKONUTCOOKIES = "A cookie with a tropical melancholy."
 
-WENDY.DESCRIBE.BBQRIBS = "The meat is quite... hauntingly tender." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.BBQRIBS = "The meat is quite... hauntingly tender."
 
-WENDY.DESCRIBE.BROWNIE = "Dark and sweet." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.BROWNIE = "Dark and sweet."
 
-WENDY.DESCRIBE.CHOCOLATE_CAKE = "A cake as dark as my mood." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.CHOCOLATE_CAKE = "A cake as dark as my mood."
 
-WENDY.DESCRIBE.SWORDFISHBLUEDINNER = "A cold meal for a cold world." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.SWORDFISHBLUEDINNER = "A cold meal for a cold world."
 
-WENDY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "It watches from the darkness...",
 	HELD = "I wonder if it can see from inside my pocket...",
 }
 
-WENDY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "It watches the frozen darkness.",
 	HELD = "Its little beak keeps prodding me...",
 }
 
-WENDY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Even unfinished, it has a certain bleakness." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Even unfinished, it has a certain bleakness."
 
-WENDY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Hook, line and sinker." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Hook, line and sinker."
+
+WENDY.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Even sugar can sparkle in the darkness."
+
+WENDY.DESCRIBE.OPALPRECIOUSCREAM = "A beautiful sweetness, doomed to melt away."
+
+WENDY.DESCRIBE.CATFISHSTICK = "Even the river's creatures end up on the grill."
+
+WENDY.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A beautiful sweetness hiding an uncertain fate."

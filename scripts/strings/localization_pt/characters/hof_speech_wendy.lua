@@ -107,6 +107,12 @@ WENDY.ANNOUNCE_KYNO_CUREBUFF_END = "A decadência retomou seu lento trabalho."
 WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Estou ancorada a este mundo miserável."
 WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "O mundo pode me lançar de um lado para o outro novamente."
 
+WENDY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Meus golpes parecem quase vivos."
+WENDY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "A força se dissipou."
+
+WENDY.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Sinto o infortúnio se aproximando."
+WENDY.ANNOUNCE_KYNO_BADLUCKBUFF_END = "A escuridão passou... por enquanto."
+
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
 
 WENDY.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Claro que não é isso, essa criatura estúpida quer outra coisa."
@@ -531,7 +537,7 @@ WENDY.DESCRIBE.KYNO_NEONFISH_COOKED = "Já comi coisas piores..."
 
 WENDY.DESCRIBE.KYNO_GROUPER = "Uma criatura patética."
 WENDY.DESCRIBE.KYNO_GROUPER_COOKED = "Descanse agora, espírito do peixe."
- 
+
 WENDY.DESCRIBE.KYNO_PIERROTFISH = "As listras simbolizam seu aprisionamento emocional."
 WENDY.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Não perca a cabeça."
 
@@ -645,7 +651,7 @@ WENDY.DESCRIBE.KYNO_COOKWARE_OVEN = "Parece ok."
 WENDY.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Parece ok."
 WENDY.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Parece ok."
 
-WENDY.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WENDY.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Quem dera eu pudesse me esconder debaixo de uma pedra.",
 	FLIPPED = "Revelado, mas não tão impressionante.",
@@ -841,7 +847,7 @@ WENDY.DESCRIBE.CHOCOLATE_BLACK = "Nem o doce mais doce pode derreter meu coraç�
 WENDY.DESCRIBE.CHOCOLATE_WHITE = "Nem o doce mais doce pode derreter meu coração."
 
 WENDY.DESCRIBE.TRICOLORDANGO = "Um doce não comum, que clássico."
- 
+
 WENDY.DESCRIBE.FRIESFRENCH = "Um pouco crocante."
 
 WENDY.DESCRIBE.PIRATERUM = "A morte me espera."
@@ -853,7 +859,7 @@ WENDY.DESCRIBE.ONIONRINGS = "Hmm. Está um pouco crocante e encharcada."
 WENDY.DESCRIBE.DONUTS = "O sabor é muito doce. Mas não tanto quanto eu gostaria."
 WENDY.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "O sabor é muito doce. Mas não tanto quanto eu gostaria."
 WENDY.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "O sabor é muito doce. Mas não tanto quanto eu gostaria."
- 
+
 WENDY.DESCRIBE.CINNAMONROLL = "A mistura de açúcar parece decente."
 
 WENDY.DESCRIBE.GUMMYBEARGERS = "Pequenos ursos que minha boca pode esmagar."
@@ -1385,3 +1391,11 @@ WENDY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 WENDY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Mesmo não finalizada, possui uma certa frieza."
 
 WENDY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Anzol, linha e chumbo."
+
+WENDY.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Até o açúcar pode brilhar na escuridão."
+
+WENDY.DESCRIBE.OPALPRECIOUSCREAM = "Uma doçura linda, destinada a derreter."
+
+WENDY.DESCRIBE.CATFISHSTICK = "Até as criaturas do rio acabam na grelha."
+
+WENDY.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Uma doçura encantadora que esconde um destino incerto."

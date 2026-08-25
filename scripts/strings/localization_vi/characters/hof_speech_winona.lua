@@ -101,11 +101,17 @@ WINONA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Hết ca chế độ ban đêm."
 WINONA.ANNOUNCE_KYNO_PANICBUFF_START = "Có vẻ tôi đang để lại ấn tượng khá mạnh."
 WINONA.ANNOUNCE_KYNO_PANICBUFF_END = "Thế là hết hiệu ứng hăm dọa."
 
-WINONA.ANNOUNCE_KYNO_CUREBUFF_START = "That's gonna make supplies last." -- NEEDS TRANSLATION
-WINONA.ANNOUNCE_KYNO_CUREBUFF_END = "Back to regular wear and tear." -- NEEDS TRANSLATION
+WINONA.ANNOUNCE_KYNO_CUREBUFF_START = "That's gonna make supplies last."
+WINONA.ANNOUNCE_KYNO_CUREBUFF_END = "Back to regular wear and tear."
 
-WINONA.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Got my feet planted nice and firm." -- NEEDS TRANSLATION
-WINONA.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Back to being easy to shove." -- NEEDS TRANSLATION
+WINONA.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Got my feet planted nice and firm."
+WINONA.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Back to being easy to shove."
+
+WINONA.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Now that's what I call some extra horsepower!"
+WINONA.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Guess we're back to standard output."
+
+WINONA.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Looks like trouble's coming MY way."
+WINONA.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Looks like I'm finally catching a break."
 
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không."
 
@@ -136,13 +142,13 @@ WINONA.ANNOUNCE_KYNO_ROE_RESEARCHED = "Không đẹp đẽ gì, nhưng hữu íc
 
 WINONA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Làm được việc đấy."
 
-WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Yeesh, I feel hotter than a ice block!",
 	"Ugh, I'm freezin' up...",
 }
 
-WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm not keen to try that again." -- NEEDS TRANSLATION
+WINONA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, I'm not keen to try that again."
 
 WINONA.DESCRIBE.KYNO_ROE = "Trứng cá trôi, trôi, trôi... Mình sắp phát điên ngoài này rồi."
 WINONA.DESCRIBE.KYNO_ROE_COOKED = "Ít nhất chúng không có mặt."
@@ -172,7 +178,7 @@ WINONA.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Tỉnh cả người!"
 
 WINONA.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Một bụi cà phê, khó tin thật!"
 
-WINONA.DESCRIBE.KYNO_COFFEEBUSH = 
+WINONA.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "Cà phê!",
 	PICKED = "Cần thời gian để đầy lại.",
@@ -181,7 +187,7 @@ WINONA.DESCRIBE.KYNO_COFFEEBUSH =
 
 WINONA.DESCRIBE.DUG_KYNO_SPOTBUSH = "Cần một chỗ tử tế."
 
-WINONA.DESCRIBE.KYNO_SPOTBUSH = 
+WINONA.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Ừ, chắc mình ăn được thứ đó.",
 	PICKED = "Cần thời gian để hồi lại.",
@@ -249,7 +255,7 @@ WINONA.DESCRIBE.CUCUMBERSALAD = "Đây mới gọi là đồ ăn lành mạnh."
 
 WINONA.DESCRIBE.DUG_KYNO_WILDWHEAT = "Sẵn sàng trồng lại."
 
-WINONA.DESCRIBE.KYNO_WILDWHEAT = 
+WINONA.DESCRIBE.KYNO_WILDWHEAT =
 {
 	GENERIC = "Có thể hữu dụng.",
 	PICKED = "Cần thời gian để hồi lại.",
@@ -408,7 +414,7 @@ WINONA.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Ôi chết!"
 
 WINONA.DESCRIBE.KYNO_SEEDS_KIT = "Hạt giống rau củ."
 
-WINONA.DESCRIBE.KYNO_LIMPETROCK = 
+WINONA.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "Nhìn đống Barney này kìa.",
 	PICKED = "Cần thời gian để hồi lại.",
@@ -418,7 +424,7 @@ WINONA.DESCRIBE.KYNO_LIMPETROCK =
 WINONA.DESCRIBE.KYNO_LIMPETS = "Chúng thoát khỏi bộn bề nhộn nhịp của đời sống hằng ngày rồi."
 WINONA.DESCRIBE.KYNO_LIMPETS_COOKED = "Vẫn còn hơi nhớt."
 
-WINONA.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WINONA.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "Mấy cái đó làm bữa trưa ngon lắm đây!",
 	PICKED = "Cần thời gian để quay lại.",
@@ -429,7 +435,7 @@ WINONA.DESCRIBE.KYNO_LOTUS_ROOT = "Giờ mình có thể trồng nó ở chỗ m
 WINONA.DESCRIBE.KYNO_LOTUS_FLOWER = "Đẹp đó!"
 WINONA.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Mmm... Ngon."
 
-WINONA.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WINONA.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "Tên nói hết rồi.",
 	PICKED = "Cần thời gian để đầy lại.",
@@ -441,18 +447,18 @@ WINONA.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Đỡ hơn chút, chắc vậy..."
 WINONA.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Giòn một chút thì ngon hơn."
 WINONA.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Giờ mình có thể trồng nó ở chỗ mình muốn."
 
-WINONA.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WINONA.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "Mình có thể ăn thứ này vào bữa trưa.",
 	PICKED = "Nước giúp mọi thứ nhanh hơn.",
 	BURNING = "Thế là đi đời.",
 }
-	
+
 WINONA.DESCRIBE.KYNO_TAROROOT_ROOT = "Giờ mình có thể trồng nó ở chỗ mình muốn."
 WINONA.DESCRIBE.KYNO_TAROROOT = "Nhìn nó kỳ cục chưa kìa! Ha!"
 WINONA.DESCRIBE.KYNO_TAROROOT_COOKED = "Làm vậy có ngon hơn không? Mình không biết."
 
-WINONA.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WINONA.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "Trông ngon đó.",
 	PICKED = "Chắc sẽ sớm đầy lại thôi.",
@@ -479,7 +485,7 @@ WINONA.DESCRIBE.CATFOOD = "Đồ ăn vặt cho anh bạn nhỏ."
 
 WINONA.DESCRIBE.KATFOOD = "Đồ ăn vặt cho anh bạn nhỏ."
 
-WINONA.DESCRIBE.KYNO_BANANATREE = 
+WINONA.DESCRIBE.KYNO_BANANATREE =
 {
 	GENERIC = "Đó là, ờ, cây chuối.",
 	PICKED = "Cần chút thời gian để hồi lại.",
@@ -491,7 +497,7 @@ WINONA.DESCRIBE.KYNO_BANANATREE =
 WINONA.DESCRIBE.KYNO_BANANA = "Kali!"
 WINONA.DESCRIBE.KYNO_BANANA_COOKED = "Kali nấu chín!"
 
-WINONA.DESCRIBE.KYNO_KOKONUTTREE = 
+WINONA.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "Tóc đẹp đó, cây à.",
 	PICKED = "Cần thời gian để hồi lại.",
@@ -531,7 +537,7 @@ WINONA.DESCRIBE.KYNO_NEONFISH_COOKED = "Xin lỗi nhé. Mình vẫn phải ăn."
 
 WINONA.DESCRIBE.KYNO_GROUPER = "Cái vẻ ngốc nghếch của nó cũng đáng yêu đó."
 WINONA.DESCRIBE.KYNO_GROUPER_COOKED = "Xin lỗi anh bạn. Hoặc ngươi hoặc ta thôi."
- 
+
 WINONA.DESCRIBE.KYNO_PIERROTFISH = "Mình không thể giết nó! Nhìn nó dễ thương chưa kìa!"
 WINONA.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Cảm giác tội lỗi ngon lành, ngon lành."
 
@@ -555,7 +561,7 @@ WINONA.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Xô. Công nghệ nông nghiệp t�
 
 WINONA.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Lại đây cua nhỏ cua xinh."
 
-WINONA.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WINONA.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "Ông to con đó, ha?",
 	SLEEPING = "Mình sẽ quay lại sau.",
@@ -576,7 +582,7 @@ WINONA.DESCRIBE.KYNO_SUGARTREE_RUINED =
 	GENERIC = "Nó mất bớt màu rồi.",
 	CHOPPED = "Cái đó thì khỏi sửa.",
 	SAPPED = "Chắc vẫn dùng được.",
-	PICKED = "Hơi nhiều bọ đó.", 
+	PICKED = "Hơi nhiều bọ đó.",
 	BURNING = "Bỏ phế thôi.",
 	BURNT = "Xong đời.",
 }
@@ -601,7 +607,7 @@ WINONA.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Đói quá là mình cáu cua ngay. H
 
 WINONA.DESCRIBE.KYNO_SLAUGHTERTOOL = "Không phải kiểu dụng cụ của mình."
 
-WINONA.DESCRIBE.KYNO_CHICKEN2 = 
+WINONA.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Nhìn ổn đó, gà nhỏ.",
 	COOP = "Sắp xếp xong xuôi rồi.",
@@ -617,7 +623,7 @@ WINONA.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "Có vẻ nó sắp lăn khỏi dây chuyền rồi!",
 }
 
-WINONA.DESCRIBE.KYNO_CHICKENHOUSE = 
+WINONA.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Xây đủ chắc để giữ lũ gà vào khuôn phép.",
 	FULL = "Có vẻ tới giờ thu hoạch rồi.",
@@ -645,7 +651,7 @@ WINONA.DESCRIBE.KYNO_COOKWARE_OVEN = "Một cái lò nướng bình thường th
 WINONA.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Một cái lò nướng bình thường thôi."
 WINONA.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Một cái lò nướng bình thường thôi."
 
-WINONA.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WINONA.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Không biết dưới tảng đá này có gì nhỉ?",
 	FLIPPED = "Ừ. Nó đây rồi.",
@@ -692,7 +698,7 @@ WINONA.DESCRIBE.PEPPERROLLS = "Trong miệng mình đang mở tiệc luôn!"
 
 WINONA.DESCRIBE.KYNO_SAPHEALER = "Cái này sẽ làm bệnh biến mất."
 
-WINONA.DESCRIBE.KYNO_OCEAN_WRECK = 
+WINONA.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Chắc con này không ra khơi lại sớm đâu.",
 	PICKED = "Chẳng còn gì để lấy.",
@@ -714,7 +720,7 @@ WINONA.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Cô em à, miếng thịt này khô dai 
 
 WINONA.DESCRIBE.KYNO_BREWBOOK = "Có bản vẽ thì ủ đồ dễ hơn hẳn!"
 
-WINONA.DESCRIBE.KYNO_WOODENKEG = 
+WINONA.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "Ahh, mình nhớ mấy cái này.",
 	BREWING_LONG = "Mẻ này sẽ mất thời gian đây.",
@@ -723,7 +729,7 @@ WINONA.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "Cái này coi như bỏ.",
 }
 
-WINONA.DESCRIBE.KYNO_PRESERVESJAR = 
+WINONA.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "Giờ chỉ cần nguyên liệu để bắt đầu ủ thôi.",
 	BREWING_LONG = "Mấy thứ này cần thời gian.",
@@ -732,7 +738,7 @@ WINONA.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Mất trắng.",
 }
 
-WINONA.DESCRIBE.KYNO_ANTCHEST = 
+WINONA.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Nó làm toàn bộ mật ong cho mình!",
 	HONEY = "Sản lượng trông ổn đó.",
@@ -748,7 +754,7 @@ WINONA.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Ít công mà có bữa ngon."
 WINONA.DESCRIBE.KYNO_PIKO = "Một anh bạn nhỏ!"
 WINONA.DESCRIBE.KYNO_PIKO_ORANGE = "Ồ, mình hiểu rồi."
 
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "Chào cây nhỏ!",
 	CHOPPED = "Đã được tận dụng tốt.",
@@ -756,7 +762,7 @@ WINONA.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 	BURNT = "Mình không cứu được nó.",
 }
 
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
 	GENERIC = "Hy vọng chúng không trộm dụng cụ của mình.",
 	BURNING = "Vậy là dọn sạch chúng rồi.",
@@ -764,20 +770,20 @@ WINONA.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WINONA.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Không biết bên trong có gì."
 
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "Mình có thể tháo rời cái đó.",
 	BURNT = "Mất trắng.",
 }
 
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "Nơi công nhân nghỉ năm phút.",
 	CRAFTED = "Ừ, vậy khá hơn rồi.",
 	BURNT = "Giờ mùi còn tệ hơn nữa.",
 }
 
-WINONA.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WINONA.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "Đó là chìa khóa tới Cổng Rêu sao?",
 	OCCUPIED = "Chắc Sammy đang ngủ lúc này.",
@@ -841,7 +847,7 @@ WINONA.DESCRIBE.CHOCOLATE_BLACK = "Mình gọi đây là giờ nghỉ làm cũng
 WINONA.DESCRIBE.CHOCOLATE_WHITE = "Mình gọi đây là giờ nghỉ làm cũng được."
 
 WINONA.DESCRIBE.TRICOLORDANGO = "Cái gì đây? Một kiểu tráng miệng à?"
- 
+
 WINONA.DESCRIBE.FRIESFRENCH = "Mhmm... Vị ngon đó."
 
 WINONA.DESCRIBE.PIRATERUM = "Whoa, thứ đó chắc chắn là đồ uống nguy hiểm."
@@ -853,7 +859,7 @@ WINONA.DESCRIBE.ONIONRINGS = "Một món ăn vặt nhanh là thứ mình cần �
 WINONA.DESCRIBE.DONUTS = "Chà, nếu cảnh sát có tới thì khỏi lo. Mình có donut rồi!"
 WINONA.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Chà, nếu cảnh sát có tới thì khỏi lo. Mình có donut rồi!"
 WINONA.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Chà, nếu cảnh sát có tới thì khỏi lo. Mình có donut rồi!"
- 
+
 WINONA.DESCRIBE.CINNAMONROLL = "Bánh cuộn đường hả."
 
 WINONA.DESCRIBE.GUMMYBEARGERS = "Charlie hồi nhỏ luôn thích mấy loại kẹo này."
@@ -940,7 +946,7 @@ WINONA.DESCRIBE.RICESAKE = "Nó khá êm. Mình có thể uống thêm thứ nà
 
 WINONA.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Giờ mình có thể trồng ngươi ở bất cứ đâu mình muốn."
 
-WINONA.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WINONA.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Mình sẽ lấy quả đó, bằng mọi giá.",
 	PICKED = "Tất cả đều đáng công.",
@@ -958,7 +964,7 @@ WINONA.DESCRIBE.PINACOLADA = "Cảm giác ngồi xuống nghỉ ngơi..."
 
 WINONA.DESCRIBE.CHIMAS = "Không phải lựa chọn đầu tiên của mình, nhưng vẫn ngon."
 
-WINONA.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WINONA.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Nó tưới hết thay mình.",
 	ON = "Chạy mượt đó.",
@@ -1077,7 +1083,7 @@ WINONA.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "Có vẻ cuối cùng ông ấy cũng có chỗ tử tế để nghỉ ngơi.",
 }
 
-WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Kho báu dưới đất sẵn sàng để thu hoạch.",
 	PICKED = "Dọn sạch rồi.",
@@ -1087,7 +1093,7 @@ WINONA.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WINONA.DESCRIBE.KYNO_TRUFFLES = "Một phát hiện hiếm — món ngon hảo hạng của tự nhiên."
 WINONA.DESCRIBE.KYNO_TRUFFLES_COOKED = "Nấu lên đúng là làm chúng ngon nhất."
 
-WINONA.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WINONA.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Cái giá nhỏ gọn ghê. Chắc không dành cho việc thật đâu.",
 	FULL = "Ừ, món đó làm ra tốt đấy.",
@@ -1112,7 +1118,7 @@ WINONA.DESCRIBE.TRUFFLEOIL = "Huh. Chắc đây là thứ người giàu dùng �
 WINONA.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Bắt tay xây thôi."
 WINONA.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Khởi đầu chắc chắn đó. Chỉ cần thêm chút sức cùi chỏ."
 
-WINONA.DESCRIBE.KYNO_FISHFARMPLOT = 
+WINONA.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "Trại ươm này giữ cho cá cứ ra đều.",
 	FUEL_HIGH = "Chạy mượt.",
@@ -1175,7 +1181,7 @@ WINONA.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Anh bạn nhớt nhỏ!"
 WINONA.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Heh. \"Nubbin\"."
 WINONA.DESCRIBE.KYNO_BRAINROCK_CORAL = "Có khi mình nghĩ ra được máy móc tốt hơn?"
 
-WINONA.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WINONA.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "Đúng là bộ não to đấy!",
 	PICKED = "Chắc nó tự tắt máy rồi.",
@@ -1183,7 +1189,7 @@ WINONA.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WINONA.DESCRIBE.BRAINMETTERSOUP = "Món cho tụi nhỏ."
 
-WINONA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WINONA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "Ông trông khá thư thái đó.",
 	SLEEPING = "Có vẻ ông ấy chưa tỉnh lại sớm đâu.",
@@ -1191,7 +1197,7 @@ WINONA.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WINONA.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Aha! Kho báu cho mình."
 
-WINONA.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WINONA.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "Mình sẽ giữ cái này.",
 	WAITING = "Trời ạ...",
@@ -1207,7 +1213,7 @@ WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Làm mình nhớ tới Charlie."
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Phần thưởng xứng đáng sau một ngày làm việc vất vả."
 WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Làm nơi làm việc sáng sủa hẳn lên!"
 
-WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WINONA.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "Bắp rang theo yêu cầu, tiện thật.",
 	FUEL_HIGH = "Đang chạy ở hiệu suất tối đa.",
@@ -1247,7 +1253,7 @@ WINONA.DESCRIBE.CHICKENROTISSERIE = "Quay chậm, chín đều. Mình tôn trọ
 
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Tốt cho một giờ nghỉ nhanh."
 WINONA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Không tệ chút nào."
-WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Now that's refreshing." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Now that's refreshing."
 
 WINONA.DESCRIBE.SOULJUICE = "Đúng là một loại nước tăng lực kỳ lạ."
 
@@ -1314,74 +1320,82 @@ WINONA.DESCRIBE.KYNO_PIGCOIN1 = "Một đồng xu may mắn."
 WINONA.DESCRIBE.KYNO_PIGCOIN2 = "Cất lại để phòng khi cần."
 WINONA.DESCRIBE.KYNO_PIGCOIN3 = "Phải cẩn thận đừng thành kẻ giàu ngốc nghếch."
 
-WINONA.DESCRIBE.KYNO_ICENETTLES = "I mean, they could be a good coolant for the machinery." -- NEEDS TRANSLATION
-WINONA.DESCRIBE.KYNO_ICENETTLES_DRIED = "These look more efficient, and colder." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_ICENETTLES = "I mean, they could be a good coolant for the machinery."
+WINONA.DESCRIBE.KYNO_ICENETTLES_DRIED = "These look more efficient, and colder."
 
-WINONA.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "Good organizational tool.",
 	FULL = "Storage capacity reached.",
 }
 
-WINONA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Don't get those juices near my machines!" -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Don't get those juices near my machines!"
 
-WINONA.DESCRIBE.WX78MODULE_GOURMAND = "WX, you gotta stop leavin' this stuff lying around!" -- NEEDS TRANSLATION
-WINONA.DESCRIBE.WX78MODULE_COOKER = "WX, you gotta stop leavin' this stuff lying around!" -- NEEDS TRANSLATION
-WINONA.DESCRIBE.WX78MODULE_DRYER = "WX, you gotta stop leavin' this stuff lying around!" -- NEEDS TRANSLATION
-WINONA.DESCRIBE.WX78MODULE_DRYER2 = "WX, you gotta stop leavin' this stuff lying around!" -- NEEDS TRANSLATION
+WINONA.DESCRIBE.WX78MODULE_GOURMAND = "WX, you gotta stop leavin' this stuff lying around!"
+WINONA.DESCRIBE.WX78MODULE_COOKER = "WX, you gotta stop leavin' this stuff lying around!"
+WINONA.DESCRIBE.WX78MODULE_DRYER = "WX, you gotta stop leavin' this stuff lying around!"
+WINONA.DESCRIBE.WX78MODULE_DRYER2 = "WX, you gotta stop leavin' this stuff lying around!"
 
 WINONA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Wonder what WX left behind.", -- NEEDS TRANSLATION
+	GENERIC = "Wonder what WX left behind.",
 }
 
 WINONA.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Wonder what WX left behind.", -- NEEDS TRANSLATION
+	GENERIC = "Wonder what WX left behind.",
 }
 
 WINONA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Wonder what WX left behind.", -- NEEDS TRANSLATION
+	GENERIC = "Wonder what WX left behind.",
 }
 
-WINONA.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "This pig's at capacity.",
 	UPGRADED = "Now that's what I call a proper storage solution.",
 	GENERIC = "A simple way to keep the change together.",
 }
 
-WINONA.DESCRIBE.MARSHMALLOWS = "A sweet little pick-me-up." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.MARSHMALLOWS = "A sweet little pick-me-up."
 
-WINONA.DESCRIBE.KOKONUTCOOKIES = "A good snack for the road." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KOKONUTCOOKIES = "A good snack for the road."
 
-WINONA.DESCRIBE.BBQRIBS = "Now that's what I call a good lunch." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.BBQRIBS = "Now that's what I call a good lunch."
 
-WINONA.DESCRIBE.BROWNIE = "A little chocolate makes a long day better." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.BROWNIE = "A little chocolate makes a long day better."
 
-WINONA.DESCRIBE.CHOCOLATE_CAKE = "That's a cake worth taking a break for." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.CHOCOLATE_CAKE = "That's a cake worth taking a break for."
 
-WINONA.DESCRIBE.SWORDFISHBLUEDINNER = "That's some fancy dinner." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.SWORDFISHBLUEDINNER = "That's some fancy dinner."
 
-WINONA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "Looks like it works the night shift.",
 	HELD = "It's keeping itself busy in there.",
 }
 
-WINONA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "Looks like this one's built for the cold.",
 	HELD = "That bird's gonna tear up my pocket.",
 }
 
-WINONA.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like the foundation for a salt extractor." -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like the foundation for a salt extractor."
 
-WINONA.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Old stuff is always more durable!" -- NEEDS TRANSLATION
+WINONA.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Old stuff is always more durable!"
+
+WINONA.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Pretty fancy stuff for a kitchen ingredient."
+
+WINONA.DESCRIBE.OPALPRECIOUSCREAM = "Fancy cream. Must be expensive."
+
+WINONA.DESCRIBE.CATFISHSTICK = "Not fancy, but it'll fill you up."
+
+WINONA.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Shiny candy with unpredictable results. Sounds about right."

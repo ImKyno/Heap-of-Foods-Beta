@@ -1,9 +1,9 @@
 --[[-------------------------------------------------------------------------------------------------------------------------------------------------
 
 	[ Some content of the Mod are now affected by the Player's Luck ]
-	
+
 	[ Good Luck ]
-	
+
 	* Increased Chance for Sammy to sell rare items.
 	* Increased Chance to get rare items from Sammy's Wagon.
 	* Increased Chance to get good fortune from Fortune Cookies.
@@ -12,7 +12,7 @@
 	* Increased Chance to get Oversized Crops from Wickerbottom's Horticulture, Mastered.
 
 	[ Bad Luck ]
-	
+
 	* Increased Chance to die by eating Pufferfish.
 	* Increased Chance to get kicked when milking animals.
 	* Increased Chance to get bad fortune from Fortune Cookies.
@@ -23,30 +23,31 @@
 	* Increased Chance for Sugar Bombs? to explode when eaten. -- People aren't supposed to know this is an actual thing...
 
 	[ Good Luck Items ]
-	
-	* Sturgeon           | +0.25
-	* Rainbow Jellyfish  | +0.25
-	* Caramel Cube       | +0.15
-	* Jawsbreaker        | +0.15
-	* Anniversary Hat    | +0.10
-	* Rice Sake          | +0.10
-	* Bottle Cap         | +0.05
-	* Large Chicken Egg  | +0.03
-	* Anniversary Cheer  | +0.01
-	* Sugar Bombs        | +0.01
+
+	* Sturgeon               | +0.25
+	* Rainbow Jellyfish      | +0.25
+	* Anniversary Hat        | +0.10
+	* Bottle Cap             | +0.05
+	* Caramel Cube           | +0.01
+	* Jawsbreaker            | +0.01
+	* Rice Sake              | +0.01
+	* Large Chicken Egg      | +0.01
+	* Anniversary Cheer      | +0.01
+	* Sugar Bombs            | +0.01
 
 	[ Unlucky Items ]
-	
-	* Chilled Swordfish  | -0.25
-	* Deadly Feast       | -0.25
-	* Long Pig           | -0.20
-	* Shark Nigiri       | -0.15
-	* Shark Fin Soup     | -0.15
-	* Shark Fin          | -0.10
-	* Slaughter Tools    | -0.10
-	* Pirate Rum         | -0.10
-	* Tartar Sauce       | -0.10
-	* Sugar Bombs?       | -0.01
+
+	* Chilled Swordfish      | -0.25
+	* Slaughter Tools        | -0.10
+	* Sugar Bombs?           | -0.10
+	* Deadly Feast           | -0.01
+	* Long Pig               | -0.01
+	* Shark Nigiri           | -0.01
+	* Shark Fin Soup         | -0.01
+	* Grilled Black Catfish  | -0.01
+	* Shark Fin              | -0.01
+	* Pirate Rum             | -0.01
+	* Tartar Sauce           | -0.01
 
 --]]-------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -58,9 +59,15 @@ local function CommonChanceLuckAdditive(mult)
 	end
 end
 
+local function CommonChanceLuckAdditiveCapped(mult, maxchance)
+	return function(inst, chance, luck)
+		return luck > 0 and math.min(chance + (luck * mult), maxchance) or chance
+	end
+end
+
 local function CommonChanceUnluckMultAndLuckHyperbolic(reciprocal, mult)
 	mult = mult or 1
-	
+
 	return function(inst, chance, luck)
 		return luck < 0 and chance * (1 + math.abs(luck) * mult)
 		or luck > 0 and chance * (reciprocal / (reciprocal + luck) + .5) * TWOTHIRDS
@@ -69,7 +76,7 @@ end
 
 local function CommonChanceLuckHyperbolic(mult_max, asymptote, subtract)
 	subtract = subtract or 0
-	
+
 	return function(inst, chance, luck)
 		return luck > 0 and chance * (mult_max - asymptote / ( asymptote + (luck - subtract) ))
 	end
@@ -77,7 +84,7 @@ end
 
 local function CommonChanceUnluckHyperbolicAndLuckMult(reciprocal, mult)
 	mult = mult or 1
-	
+
 	return function(inst, chance, luck)
 		return luck < 0 and chance * (reciprocal / (reciprocal - luck) + .5) * TWOTHIRDS
 		or luck > 0 and chance * (1 + math.abs(luck) * mult)
@@ -86,7 +93,7 @@ end
 
 local function CommonChanceUnluckHyperbolicAndLuckAdditive(reciprocal, mult)
 	mult = mult or 1
-	
+
 	return function(inst, chance, luck)
 		return luck < 0 and chance * (reciprocal / (reciprocal - luck) + .5) * TWOTHIRDS
 		or luck > 0 and chance + ( luck * mult )
@@ -95,7 +102,7 @@ end
 
 local function CommonChanceUnluckHyperbolicAndLuckHyperbolic(mult_max, asymptote, subtract, reciprocal)
 	subtract = subtract or 0
-	
+
 	return function(inst, chance, luck)
 		return luck < 0 and chance * (mult_max - asymptote / ( asymptote + (luck - subtract) ))
 		or luck > 0 and chance * (reciprocal / (reciprocal + luck) + .5) * TWOTHIRDS
@@ -122,4 +129,6 @@ HofLuckFormulas =
 	DropCoconutFromTree = CommonChanceUnluckMultAndLuckHyperbolic(6, 2),
 	OceanWreckPirateGhost = CommonChanceUnluckMultAndLuckHyperbolic(5),
 	SugarBombsExplosion = CommonChanceUnluckMultAndLuckHyperbolic(3, 5),
+	CriticalDamage = CommonChanceLuckAdditiveCapped(0.1, 0.40), -- Caps at 40% chance.
+	RandomBuffDeath = CommonChanceUnluckMultAndLuckHyperbolic(8, 0.15),
 }

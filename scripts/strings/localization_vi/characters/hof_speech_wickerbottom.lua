@@ -101,11 +101,17 @@ WICKERBOTTOM.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Hiệu ứng tăng cường ban 
 WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_START = "Có vẻ như tôi đang gây ra sự hoảng loạn phi lý."
 WICKERBOTTOM.ANNOUNCE_KYNO_PANICBUFF_END = "Ảnh hưởng đáng báo động của tôi đã suy giảm."
 
-WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_START = "The effects of time have been temporarily diminished." -- NEEDS TRANSLATION
-WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_END = "Temporal stability has returned to normal." -- NEEDS TRANSLATION
+WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_START = "The effects of time have been temporarily diminished."
+WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_END = "Temporal stability has returned to normal."
 
-WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I feel considerably more stable." -- NEEDS TRANSLATION
-WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "My stability has returned to normal." -- NEEDS TRANSLATION
+WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I feel considerably more stable."
+WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "My stability has returned to normal."
+
+WICKERBOTTOM.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "My offensive capabilities appear to have increased."
+WICKERBOTTOM.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "My offensive capabilities have returned to normal."
+
+WICKERBOTTOM.ANNOUNCE_KYNO_BADLUCKBUFF_START = "An unfortunate series of events appears imminent."
+WICKERBOTTOM.ANNOUNCE_KYNO_BADLUCKBUFF_END = "It seems the unfavorable influence has subsided."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nó cần thứ khác."
 
@@ -136,13 +142,13 @@ WICKERBOTTOM.ANNOUNCE_KYNO_ROE_RESEARCHED = "Trứng cá chứa những đặc t
 
 WICKERBOTTOM.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Một bữa ăn cân bằng đến bất ngờ."
 
-WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Oh dear... I seem to be afflicted by the plant's toxin.",
 	"The toxin from those nettles carries a rather unpleasant freezing sensation.",
 }
 
-WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Thankfully, the toxin's effects seem to be temporary." -- NEEDS TRANSLATION
+WICKERBOTTOM.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Thankfully, the toxin's effects seem to be temporary."
 
 WICKERBOTTOM.DESCRIBE.KYNO_ROE = "Giai đoạn đầu tiên trong vòng đời của cá."
 WICKERBOTTOM.DESCRIBE.KYNO_ROE_COOKED = "Giai đoạn đầu và cuối của vòng đời này."
@@ -172,7 +178,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "À, mùi rang thật dễ chị
 
 WICKERBOTTOM.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Việc cấy trồng lại hẳn sẽ có lợi."
 
-WICKERBOTTOM.DESCRIBE.KYNO_COFFEEBUSH = 
+WICKERBOTTOM.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "Chi Coffea.",
 	PICKED = "Nó sẽ tái sinh đúng lúc.",
@@ -181,7 +187,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_COFFEEBUSH =
 
 WICKERBOTTOM.DESCRIBE.DUG_KYNO_SPOTBUSH = "Nó nên được trồng lại ngay."
 
-WICKERBOTTOM.DESCRIBE.KYNO_SPOTBUSH = 
+WICKERBOTTOM.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Ta chưa quen với loài thực vật này.",
 	PICKED = "Nó sẽ tái sinh theo thời gian.",
@@ -249,7 +255,7 @@ WICKERBOTTOM.DESCRIBE.CUCUMBERSALAD = "Rất nhiều dưỡng chất!"
 
 WICKERBOTTOM.DESCRIBE.DUG_KYNO_WILDWHEAT = "Nó sẽ phát triển tốt hơn nếu được canh tác đúng cách."
 
-WICKERBOTTOM.DESCRIBE.KYNO_WILDWHEAT = 
+WICKERBOTTOM.DESCRIBE.KYNO_WILDWHEAT =
 {
 	GENERIC = "Một cụm thân cây họ Hòa thảo.",
 	PICKED = "Nó sẽ tái sinh tự nhiên.",
@@ -408,7 +414,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Một kết cục thật t�
 
 WICKERBOTTOM.DESCRIBE.KYNO_SEEDS_KIT = "Một gói hạt giống rau củ rất tiện."
 
-WICKERBOTTOM.DESCRIBE.KYNO_LIMPETROCK = 
+WICKERBOTTOM.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "Tảng đá này là nơi cư trú của nhiều loài chân bụng.",
 	PICKED = "Chúng sẽ quay lại theo thời gian.",
@@ -418,7 +424,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_LIMPETROCK =
 WICKERBOTTOM.DESCRIBE.KYNO_LIMPETS = "Patella vulgata."
 WICKERBOTTOM.DESCRIBE.KYNO_LIMPETS_COOKED = "Patella vulgata đã nấu chín."
 
-WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "Nelumbo nucifera, khá đẹp.",
 	PICKED = "Nó sẽ tái sinh theo thời gian.",
@@ -429,7 +435,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_ROOT = "Ta luôn muốn trở thành một nhà
 WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_FLOWER = "Hoa của Nelumbo nucifera. Khá truyền cảm hứng."
 WICKERBOTTOM.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Lợi ích sức khỏe của nó rất nhiều."
 
-WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "Tảo biển.",
 	PICKED = "Nó sẽ tái sinh theo thời gian.",
@@ -441,7 +447,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Hàm lượng protein rất cao."
 WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Ta đã sấy khô tảo."
 WICKERBOTTOM.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Ta luôn muốn trở thành một nhà làm vườn thủy sinh."
 
-WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "Colocasia esculenta!",
 	PICKED = "Môi trường này sẽ thúc đẩy quá trình mọc lại của nó.",
@@ -452,7 +458,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT_ROOT = "Ta luôn muốn trở thành một n
 WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT = "Colocasia esculenta!"
 WICKERBOTTOM.DESCRIBE.KYNO_TAROROOT_COOKED = "Xin giới thiệu: Colocasia esculenta nấu chín."
 
-WICKERBOTTOM.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WICKERBOTTOM.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "Nasturtium officinale!",
 	PICKED = "Nó hẳn sẽ tái sinh nhanh chóng.",
@@ -479,7 +485,7 @@ WICKERBOTTOM.DESCRIBE.CATFOOD = "Một món ăn vặt cho mèo."
 
 WICKERBOTTOM.DESCRIBE.KATFOOD = "Một món ăn vặt cho mèo."
 
-WICKERBOTTOM.DESCRIBE.KYNO_BANANATREE = 
+WICKERBOTTOM.DESCRIBE.KYNO_BANANATREE =
 {
 	GENERIC = "Ánh nắng sẽ giúp quả phát triển tốt hơn.",
 	PICKED = "Nó sẽ cần thời gian để tái sinh.",
@@ -491,7 +497,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_BANANATREE =
 WICKERBOTTOM.DESCRIBE.KYNO_BANANA = "Một Musa paradisiaca Linn!"
 WICKERBOTTOM.DESCRIBE.KYNO_BANANA_COOKED = "Có phần khá hơn."
 
-WICKERBOTTOM.DESCRIBE.KYNO_KOKONUTTREE = 
+WICKERBOTTOM.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "Ta muốn ngồi dưới nó với một quyển sách hay.",
 	PICKED = "Nó cần thời gian để tái sinh.",
@@ -531,7 +537,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_NEONFISH_COOKED = "Một họ hàng của Paracheirod
 
 WICKERBOTTOM.DESCRIBE.KYNO_GROUPER = "Thuộc phân họ Epinephelinae."
 WICKERBOTTOM.DESCRIBE.KYNO_GROUPER_COOKED = "Ăn cá chưa sơ chế kỹ sẽ không an toàn đâu."
- 
+
 WICKERBOTTOM.DESCRIBE.KYNO_PIERROTFISH = "Hmm... Ta có vẻ không xác định được loài này."
 WICKERBOTTOM.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Cá là vật chủ của đủ loại ký sinh trùng, cháu biết đấy."
 
@@ -555,7 +561,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Một dụng cụ đơn giản
 
 WICKERBOTTOM.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Dùng để bẫy sinh vật biển."
 
-WICKERBOTTOM.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WICKERBOTTOM.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "Xã hội của họ có vai trò giai cấp khá rõ rệt.",
 	SLEEPING = "Hiện tại ông ấy đang bận ngủ.",
@@ -601,7 +607,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Thịt Paralithodes sống."
 
 WICKERBOTTOM.DESCRIBE.KYNO_SLAUGHTERTOOL = "Rùng rợn."
 
-WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN2 = 
+WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Một con Gallus gallus hoang dã.",
 	COOP = "Được nuôi giữ an toàn và quản lý đúng cách.",
@@ -617,7 +623,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "À, gà con sắp mổ vỏ rồi.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_CHICKENHOUSE = 
+WICKERBOTTOM.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Một chuồng đơn giản phù hợp cho gia cầm đã thuần hóa.",
 	FULL = "Chu kỳ sản xuất trứng đã hoàn tất.",
@@ -645,7 +651,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_COOKWARE_OVEN = "Nó phù hợp nhất để nướng
 WICKERBOTTOM.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Nó phù hợp nhất để nướng đồ ngọt."
 WICKERBOTTOM.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Nó phù hợp nhất để nướng đồ ngọt."
 
-WICKERBOTTOM.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WICKERBOTTOM.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Những loài côn trùng thú vị nhất thường nằm dưới đá.",
 	FLIPPED = "Đúng như dự đoán, các sinh vật nhỏ.",
@@ -692,7 +698,7 @@ WICKERBOTTOM.DESCRIBE.PEPPERROLLS = "Hơi cay một chút so với ta!"
 
 WICKERBOTTOM.DESCRIBE.KYNO_SAPHEALER = "Thành phần bên trong hẳn sẽ tạo nên một liều giải độc rất hữu dụng."
 
-WICKERBOTTOM.DESCRIBE.KYNO_OCEAN_WRECK = 
+WICKERBOTTOM.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Con tàu này đã mắc kẹt trong bão. Giờ nó thuộc về biển cả.",
 	PICKED = "Sinh vật biển sẽ tái chiếm nơi này theo thời gian.",
@@ -714,7 +720,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Mặn mà nhưng thỏa mãn."
 
 WICKERBOTTOM.DESCRIBE.KYNO_BREWBOOK = "Một bộ sưu tập ghi chép về ủ rượu."
 
-WICKERBOTTOM.DESCRIBE.KYNO_WOODENKEG = 
+WICKERBOTTOM.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "Một chiếc thùng hoàn hảo để làm đồ uống.",
 	BREWING_LONG = "Quá trình ủ vừa mới bắt đầu.",
@@ -723,7 +729,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "Hỏng hoàn toàn.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_PRESERVESJAR = 
+WICKERBOTTOM.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "Nó có nhiều công dụng, không chỉ để làm đồ muối chua hay mứt.",
 	BREWING_LONG = "Quá trình bảo quản đang diễn ra chậm rãi.",
@@ -732,7 +738,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Một mất mát đáng tiếc.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_ANTCHEST = 
+WICKERBOTTOM.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Một công cụ hỗ trợ tạo mật ong khá dính nhớp.",
 	HONEY = "Lượng mật ong dự trữ có vẻ đã đủ.",
@@ -748,7 +754,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Ta vẫn thích một tách tr�
 WICKERBOTTOM.DESCRIBE.KYNO_PIKO = "Một cục lông thú có vú đáng yêu."
 WICKERBOTTOM.DESCRIBE.KYNO_PIKO_ORANGE = "Một cục lông thú có vú với cái tên khá thú vị."
 
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "Một ví dụ tuyệt vời của Camellia sinensis.",
 	CHOPPED = "Tất cả vật liệu sử dụng được đã được thu gom.",
@@ -756,7 +762,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 	BURNT = "Mất hoàn toàn.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
 	GENERIC = "Nó bị sóc chiếm cứ.",
 	BURNING = "Một sự gián đoạn sinh thái đáng tiếc.",
@@ -764,26 +770,26 @@ WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Bên trong có gì nhỉ?"
 
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "Một nơi ở thô sơ nhưng có chức năng.",
 	BURNT = "Một mất mát đáng tiếc về chỗ trú.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "Một túp lều lưỡng cư.",
 	CRAFTED = "Phù hợp để cư trú hơn nhiều.",
 	BURNT = "Mùi hôi thật khó chịu.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "Ta đoán đó là nơi ông ấy cất toàn bộ hàng hóa.",
 	OCCUPIED = "Người bán hàng có vẻ đang nghỉ ngơi.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WICKERBOTTOM.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "Một xe hàng đầy vật phẩm.",
 	EMPTY = "Có vẻ đã hết hàng.",
@@ -841,7 +847,7 @@ WICKERBOTTOM.DESCRIBE.CHOCOLATE_BLACK = "Lạ thật, nó thiếu cacao."
 WICKERBOTTOM.DESCRIBE.CHOCOLATE_WHITE = "Lạ thật, nó thiếu cacao."
 
 WICKERBOTTOM.DESCRIBE.TRICOLORDANGO = "Một món ăn vặt mềm và dẻo."
- 
+
 WICKERBOTTOM.DESCRIBE.FRIESFRENCH = "Một món ăn nhanh kinh điển. Nhanh gọn và cũng khá ngon."
 
 WICKERBOTTOM.DESCRIBE.PIRATERUM = "Là rượu Rum, nhưng vì sao ta lại thấy bất an về nó nhỉ?"
@@ -853,7 +859,7 @@ WICKERBOTTOM.DESCRIBE.ONIONRINGS = "Hành tây cắt khoanh ngập trong dầu, 
 WICKERBOTTOM.DESCRIBE.DONUTS = "Món bánh bột chiên. Một món kinh điển ở Mỹ."
 WICKERBOTTOM.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Món bánh bột chiên. Một món kinh điển ở Mỹ."
 WICKERBOTTOM.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Món bánh bột chiên. Một món kinh điển ở Mỹ."
- 
+
 WICKERBOTTOM.DESCRIBE.CINNAMONROLL = "Bột bánh được rắc lên một lớp bơ mỏng."
 
 WICKERBOTTOM.DESCRIBE.GUMMYBEARGERS = "Kẹo trẻ em được tạo hình gấu."
@@ -940,7 +946,7 @@ WICKERBOTTOM.DESCRIBE.RICESAKE = "Hãy uống điều độ."
 
 WICKERBOTTOM.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Ta cần trồng nó ở đâu đó."
 
-WICKERBOTTOM.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WICKERBOTTOM.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Một bụi Ananas comosus. Thật đáng kinh ngạc.",
 	PICKED = "Nó sẽ cần thời gian để tái sinh.",
@@ -958,7 +964,7 @@ WICKERBOTTOM.DESCRIBE.PINACOLADA = "Một thức uống ngon làm từ Ananas co
 
 WICKERBOTTOM.DESCRIBE.CHIMAS = "Đây là một loại đồ ủ kinh điển từ phương Nam."
 
-WICKERBOTTOM.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WICKERBOTTOM.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Một lượng nước cần thiết.",
 	ON = "Nó cung cấp nước đều đặn.",
@@ -1077,7 +1083,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "Có vẻ như người bán hàng đang nghỉ ngơi.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Tuber melanosporum! Một cao lương mỹ vị quý giá mọc dưới đất.",
 	PICKED = "Sẽ mất thời gian để có thêm mọc lên.",
@@ -1087,7 +1093,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES = "Nấm truffle thật, rất được coi trọng trong ẩm thực."
 WICKERBOTTOM.DESCRIBE.KYNO_TRUFFLES_COOKED = "Nấu chín làm hương thơm độc đáo của chúng nổi bật hơn."
 
-WICKERBOTTOM.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WICKERBOTTOM.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Một cách thích hợp để trưng bày tinh hoa ẩm thực.",
 	FULL = "Một ví dụ tuyệt vời của kỹ thuật ẩm thực.",
@@ -1112,7 +1118,7 @@ WICKERBOTTOM.DESCRIBE.TRUFFLEOIL = "Một nguyên liệu ẩm thực cao cấp c
 WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Ồ, ta khá thích dáng vẻ của thứ này."
 WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Một khởi đầu tốt cho môi trường nuôi trồng thủy sản có kiểm soát."
 
-WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT = 
+WICKERBOTTOM.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "Một môi trường nhân tạo phục vụ sinh sản trong nuôi trồng thủy sản.",
 	FUEL_HIGH = "Cá được nuôi dưỡng đầy đủ.",
@@ -1175,7 +1181,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Dạng polyp của một loài đ
 WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Nền móng của một bông não tương lai."
 WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_CORAL = "Tài tình thật!"
 
-WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "Mussidae Brainus.",
 	PICKED = "Có vẻ nó cần hồi phục.",
@@ -1183,7 +1189,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WICKERBOTTOM.DESCRIBE.BRAINMETTERSOUP = "À, đây là một món kinh điển dành cho trẻ em."
 
-WICKERBOTTOM.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WICKERBOTTOM.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "Ông ấy là trung tâm của hệ sinh thái này.",
 	SLEEPING = "Có vẻ đang ở trạng thái ngủ nghỉ.",
@@ -1191,7 +1197,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WICKERBOTTOM.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Trông như thể nó đã nằm dưới đáy biển rất lâu."
 
-WICKERBOTTOM.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WICKERBOTTOM.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "Đây từng là loại cá gì vậy?",
 	WAITING = "Ta nghĩ nó cần thêm chút thời gian.",
@@ -1207,7 +1213,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Nó làm ta nhớ tới những 
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Một món bánh mừng lễ truyền thống."
 WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Bóng bay cao su. Mang tính lễ hội và có thể phân hủy sinh học... hy vọng là vậy."
 
-WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WICKERBOTTOM.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "Một cỗ máy biến bắp thành món ăn phồng ăn được.",
 	FUEL_HIGH = "Dự trữ nhiên liệu còn đủ.",
@@ -1247,7 +1253,7 @@ WICKERBOTTOM.DESCRIBE.CHICKENROTISSERIE = "Một phương pháp quay gia cầm r
 
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Một loại trà thảo mộc được hãm đúng cách."
 WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Một loại trà hãm có hương thơm dễ chịu."
-WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A pleasantly refreshing herbal infusion." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A pleasantly refreshing herbal infusion."
 
 WICKERBOTTOM.DESCRIBE.SOULJUICE = "Một hỗn hợp thú vị giữa tinh chất linh hồn và trái cây."
 
@@ -1314,74 +1320,82 @@ WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN1 = "Giá trị nhỏ đối với người đ
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN2 = "Một đồng tiền thuộc một mệnh giá nào đó."
 WICKERBOTTOM.DESCRIBE.KYNO_PIGCOIN3 = "Một đồng tiền có giá trị lớn."
 
-WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES = "Prickling sensation followed by a cold feeling." -- NEEDS TRANSLATION
-WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES_DRIED = "Fascinating. Their below freezing properties remain even after drying." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES = "Prickling sensation followed by a cold feeling."
+WICKERBOTTOM.DESCRIBE.KYNO_ICENETTLES_DRIED = "Fascinating. Their below freezing properties remain even after drying."
 
-WICKERBOTTOM.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A practical container for seeds.",
 	FULL = "It can hold no additional seeds.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_FOODAMMO_TOMATO = "What a waste of Solanum Lycopersicum." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_FOODAMMO_TOMATO = "What a waste of Solanum Lycopersicum."
 
-WICKERBOTTOM.DESCRIBE.WX78MODULE_GOURMAND = "They dislike organics, but don't seem opposed to taking inspiration from them." -- NEEDS TRANSLATION
-WICKERBOTTOM.DESCRIBE.WX78MODULE_COOKER = "They dislike organics, but don't seem opposed to taking inspiration from them." -- NEEDS TRANSLATION
-WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER = "They dislike organics, but don't seem opposed to taking inspiration from them." -- NEEDS TRANSLATION
-WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER2 = "They dislike organics, but don't seem opposed to taking inspiration from them." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.WX78MODULE_GOURMAND = "They dislike organics, but don't seem opposed to taking inspiration from them."
+WICKERBOTTOM.DESCRIBE.WX78MODULE_COOKER = "They dislike organics, but don't seem opposed to taking inspiration from them."
+WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER = "They dislike organics, but don't seem opposed to taking inspiration from them."
+WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER2 = "They dislike organics, but don't seem opposed to taking inspiration from them."
 
 WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Once a repository, now just the remains of it.", -- NEEDS TRANSLATION
+	GENERIC = "Once a repository, now just the remains of it.",
 }
 
 WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Once a repository, now just the remains of it.", -- NEEDS TRANSLATION
+	GENERIC = "Once a repository, now just the remains of it.",
 }
 
 WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Once a repository, now just the remains of it.", -- NEEDS TRANSLATION
+	GENERIC = "Once a repository, now just the remains of it.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "Its capacity for currency has been reached.",
 	UPGRADED = "An remarkably capacious receptacle for coinage.",
 	GENERIC = "A common ceramic repository for one's savings.",
 }
 
-WICKERBOTTOM.DESCRIBE.MARSHMALLOWS = "A confection of whipped sugar and gelatin." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.MARSHMALLOWS = "A confection of whipped sugar and gelatin."
 
-WICKERBOTTOM.DESCRIBE.KOKONUTCOOKIES = "A biscuit prepared with coconut and sugar." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KOKONUTCOOKIES = "A biscuit prepared with coconut and sugar."
 
-WICKERBOTTOM.DESCRIBE.BBQRIBS = "Barbecued ribs, prepared with considerable heat." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.BBQRIBS = "Barbecued ribs, prepared with considerable heat."
 
-WICKERBOTTOM.DESCRIBE.BROWNIE = "A dense chocolate confection." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.BROWNIE = "A dense chocolate confection."
 
-WICKERBOTTOM.DESCRIBE.CHOCOLATE_CAKE = "A rich cake prepared with cocoa and sugar." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.CHOCOLATE_CAKE = "A rich cake prepared with cocoa and sugar."
 
-WICKERBOTTOM.DESCRIBE.SWORDFISHBLUEDINNER = "A neatly prepared meal, quite suitable for travel." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.SWORDFISHBLUEDINNER = "A neatly prepared meal, quite suitable for travel."
 
-WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "A nocturnal bird with remarkably keen eyes.",
 	HELD = "It seems rather restless in there.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A northern raptor well adapted to frigid climates.",
 	HELD = "It seems determined to peck its way out.",
 }
 
-WICKERBOTTOM.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "An unfinished place for salt extraction." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "An unfinished place for salt extraction."
 
-WICKERBOTTOM.DESCRIBE.KYNO_FISHINGROD_THULECITE = "A very old and sturdy fishing rod." -- NEEDS TRANSLATION
+WICKERBOTTOM.DESCRIBE.KYNO_FISHINGROD_THULECITE = "A very old and sturdy fishing rod."
+
+WICKERBOTTOM.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "An exceptionally rare confectionery ingredient with remarkable iridescence."
+
+WICKERBOTTOM.DESCRIBE.OPALPRECIOUSCREAM = "Whipped cream exhibiting an unusual iridescent sheen."
+
+WICKERBOTTOM.DESCRIBE.CATFISHSTICK = "A black catfish, grilled to a rather appetizing degree."
+
+WICKERBOTTOM.DESCRIBE.OPALPRECIOUSLOLLIPOP = "An unusual confection with rather unpredictable effects."

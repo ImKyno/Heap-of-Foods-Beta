@@ -101,11 +101,17 @@ WATHGRITHR.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Phước lành của bóng tối �
 WATHGRITHR.ANNOUNCE_KYNO_PANICBUFF_START = "HÃY ĐỂ KẺ THÙ RUN RẨY TRƯỚC TA!"
 WATHGRITHR.ANNOUNCE_KYNO_PANICBUFF_END = "HÀO QUANG KINH HOÀNG CỦA TA ĐÃ TAN BIẾN!"
 
-WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_START = "The feast shall endure!" -- NEEDS TRANSLATION
-WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_END = "Even the finest feast must fade!" -- NEEDS TRANSLATION
+WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_START = "The feast shall endure!"
+WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_END = "Even the finest feast must fade!"
 
-WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I shall not be moved!" -- NEEDS TRANSLATION
-WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "The battle may move me once more!" -- NEEDS TRANSLATION
+WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I shall not be moved!"
+WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "The battle may move me once more!"
+
+WATHGRITHR.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "My blows shall shake the battlefield!"
+WATHGRITHR.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "My strength has returned to its usual measure."
+
+WATHGRITHR.ANNOUNCE_KYNO_BADLUCKBUFF_START = "A dark omen hangs above me!"
+WATHGRITHR.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The ill omen has been banished!"
 
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai rồi!"
 
@@ -136,13 +142,13 @@ WATHGRITHR.ANNOUNCE_KYNO_ROE_RESEARCHED = "Những chiến binh biển chưa ch�
 
 WATHGRITHR.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Một yến tiệc xứng tầm chiến binh!"
 
-WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"I feel as though my body's freezing!",
 	"Accursed plant with your frosty barbs! Fight me properly!",
 }
 
-WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "The frosty curse has passed." -- NEEDS TRANSLATION
+WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "The frosty curse has passed."
 
 WATHGRITHR.DESCRIBE.KYNO_ROE = "Một ngày nào đó, ngươi có thể thành thịt thật."
 WATHGRITHR.DESCRIBE.KYNO_ROE_COOKED = "Giờ ngươi sẽ chẳng bao giờ thành thịt thật nữa."
@@ -172,7 +178,7 @@ WATHGRITHR.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Mùi của nó làm tinh thần s
 
 WATHGRITHR.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Cần đất nóng."
 
-WATHGRITHR.DESCRIBE.KYNO_COFFEEBUSH = 
+WATHGRITHR.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "Chỉ cần thêm nước?",
 	PICKED = "Phần thưởng của nó đang ngủ!",
@@ -181,7 +187,7 @@ WATHGRITHR.DESCRIBE.KYNO_COFFEEBUSH =
 
 WATHGRITHR.DESCRIBE.DUG_KYNO_SPOTBUSH = "Cần được trồng cho đúng."
 
-WATHGRITHR.DESCRIBE.KYNO_SPOTBUSH = 
+WATHGRITHR.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Gia vị cho những món ăn cầu kỳ nhất.",
 	PICKED = "Phần thưởng của nó đang ngủ!",
@@ -249,7 +255,7 @@ WATHGRITHR.DESCRIBE.CUCUMBERSALAD = "Rau củ dành cho thú vật. Thú vật t
 
 WATHGRITHR.DESCRIBE.DUG_KYNO_WILDWHEAT = "Trồng nó ngay đi!"
 
-WATHGRITHR.DESCRIBE.KYNO_WILDWHEAT = 
+WATHGRITHR.DESCRIBE.KYNO_WILDWHEAT =
 {
 	GENERIC = "Thứ đó có thể hữu dụng.",
 	PICKED = "Phần thưởng của nó đang ngủ!",
@@ -408,7 +414,7 @@ WATHGRITHR.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Ha!"
 
 WATHGRITHR.DESCRIBE.KYNO_SEEDS_KIT = "Ewww."
 
-WATHGRITHR.DESCRIBE.KYNO_LIMPETROCK = 
+WATHGRITHR.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "Tảng đá thịt!",
 	PICKED = "Chúng trốn khỏi vụ thu hoạch!",
@@ -418,7 +424,7 @@ WATHGRITHR.DESCRIBE.KYNO_LIMPETROCK =
 WATHGRITHR.DESCRIBE.KYNO_LIMPETS = "Thịt đá!"
 WATHGRITHR.DESCRIBE.KYNO_LIMPETS_COOKED = "Hãy mở tiệc!"
 
-WATHGRITHR.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WATHGRITHR.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "Freya đang nhìn xuống thứ này.",
 	PICKED = "Nó đang gom sức mạnh!",
@@ -429,7 +435,7 @@ WATHGRITHR.DESCRIBE.KYNO_LOTUS_ROOT = "Ta không có việc gì dùng tới nó!
 WATHGRITHR.DESCRIBE.KYNO_LOTUS_FLOWER = "Nó sở hữu vẻ đẹp vĩ đại của Freya."
 WATHGRITHR.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Ta không muốn ăn thứ này."
 
-WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "Một loài cỏ dại ta không thể nghiền dưới ủng.",
 	PICKED = "Chúng rút lui!",
@@ -441,7 +447,7 @@ WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Món ăn vặt biển."
 WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Nó dai..."
 WATHGRITHR.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Ta không có việc gì dùng tới nó!"
 
-WATHGRITHR.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WATHGRITHR.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "Đây là rau nước sao, chuyện đó có thể thế nào được!",
 	PICKED = "Nó đang gom sức mạnh!",
@@ -452,7 +458,7 @@ WATHGRITHR.DESCRIBE.KYNO_TAROROOT_ROOT = "Ta không có việc gì dùng tới n
 WATHGRITHR.DESCRIBE.KYNO_TAROROOT = "Tím tím và tròn ụ."
 WATHGRITHR.DESCRIBE.KYNO_TAROROOT_COOKED = "Thức ăn cho kẻ yếu."
 
-WATHGRITHR.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WATHGRITHR.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "Ta ghét nó.",
 	PICKED = "Nó sẽ trỗi dậy lần nữa!",
@@ -479,7 +485,7 @@ WATHGRITHR.DESCRIBE.CATFOOD = "Đây là đồ ăn cho những con mèo dũng c�
 
 WATHGRITHR.DESCRIBE.KATFOOD = "Đây là đồ ăn cho những con mèo dũng cảm!"
 
-WATHGRITHR.DESCRIBE.KYNO_BANANATREE = 
+WATHGRITHR.DESCRIBE.KYNO_BANANATREE =
 {
 	GENERIC = "Một cây khỉ yếu ớt.",
 	PICKED = "Nó phải gom lại sức mạnh!",
@@ -491,7 +497,7 @@ WATHGRITHR.DESCRIBE.KYNO_BANANATREE =
 WATHGRITHR.DESCRIBE.KYNO_BANANA = "Đồ ăn của khỉ."
 WATHGRITHR.DESCRIBE.KYNO_BANANA_COOKED = "Đồ ăn khỉ được hâm nóng."
 
-WATHGRITHR.DESCRIBE.KYNO_KOKONUTTREE = 
+WATHGRITHR.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "Ngươi ruồng bỏ cành lá sao, cây kia?",
 	PICKED = "Nó phải gom lại sức mạnh!",
@@ -531,7 +537,7 @@ WATHGRITHR.DESCRIBE.KYNO_NEONFISH_COOKED = "Hôm nay Njord cho ta được no b�
 
 WATHGRITHR.DESCRIBE.KYNO_GROUPER = "Aegir sẽ không cứu ngươi hôm nay đâu."
 WATHGRITHR.DESCRIBE.KYNO_GROUPER_COOKED = "Cảm tạ Njord vì món quà này!"
- 
+
 WATHGRITHR.DESCRIBE.KYNO_PIERROTFISH = "Ước gì miếng thịt này không có đôi mắt to thế."
 WATHGRITHR.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Cảm ơn ngươi, cá, vì món quà thịt của ngươi."
 
@@ -555,7 +561,7 @@ WATHGRITHR.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Để cướp lấy từ cây."
 
 WATHGRITHR.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Nó bẫy thịt biển."
 
-WATHGRITHR.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WATHGRITHR.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "Lãnh chúa của ngươi.",
 	SLEEPING =  "Ông ấy đang say ngủ!",
@@ -601,7 +607,7 @@ WATHGRITHR.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Được ta ăn là vinh dự c�
 
 WATHGRITHR.DESCRIBE.KYNO_SLAUGHTERTOOL = "Đây là vũ khí để hạ sát dã thú!"
 
-WATHGRITHR.DESCRIBE.KYNO_CHICKEN2 = 
+WATHGRITHR.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Đây là thịt biết đi.",
 	COOP = "Con thú đã bị chiếm lấy!",
@@ -617,7 +623,7 @@ WATHGRITHR.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "Phá vỏ ra đi, nhà vô địch bé nhỏ!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_CHICKENHOUSE = 
+WATHGRITHR.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Một đại sảnh cho dã thú đẻ trứng!",
 	FULL = "Những quả trứng đang chờ số phận vinh quang của chúng!",
@@ -645,7 +651,7 @@ WATHGRITHR.DESCRIBE.KYNO_COOKWARE_OVEN = "Ta sẽ nấu mọi thứ trong ngươ
 WATHGRITHR.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Ta sẽ nấu mọi thứ trong ngươi!"
 WATHGRITHR.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Ta sẽ nấu mọi thứ trong ngươi!"
 
-WATHGRITHR.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WATHGRITHR.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Đá kia! Hãy hé lộ bí mật của ngươi cho ta!",
 	FLIPPED = "Chúng tan tác trước mặt ta!",
@@ -692,7 +698,7 @@ WATHGRITHR.DESCRIBE.PEPPERROLLS = "Lùi lại, lũ rau củ!"
 
 WATHGRITHR.DESCRIBE.KYNO_SAPHEALER = "Cội nguồn bệnh tật của cây."
 
-WATHGRITHR.DESCRIBE.KYNO_OCEAN_WRECK = 
+WATHGRITHR.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Thuyền dài rải đầy trên đường tới Valhalla.",
 	PICKED = "Chiến lợi phẩm đã trốn mất!",
@@ -714,7 +720,7 @@ WATHGRITHR.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Lương khô chiến trận tuyệt 
 
 WATHGRITHR.DESCRIBE.KYNO_BREWBOOK = "Theo ta thấy, nó đầy quá nhiều món không-thịt."
 
-WATHGRITHR.DESCRIBE.KYNO_WOODENKEG = 
+WATHGRITHR.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "Máy làm rượu của chư thần!",
 	BREWING_LONG = "Thức uống phải được ủ già trong danh dự!",
@@ -723,7 +729,7 @@ WATHGRITHR.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "Bị lửa hủy diệt!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_PRESERVESJAR = 
+WATHGRITHR.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "Không phải kiểu của ta...",
 	BREWING_LONG = "Yến tiệc phải chờ!",
@@ -732,7 +738,7 @@ WATHGRITHR.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Bị lửa hủy diệt!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_ANTCHEST = 
+WATHGRITHR.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Một nữ chiến binh khiên chẳng cần máy làm mật ong!",
 	HONEY = "Ta không có việc gì dùng tới đống mật đó.",
@@ -748,7 +754,7 @@ WATHGRITHR.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Dù được lửa chạm tới, 
 WATHGRITHR.DESCRIBE.KYNO_PIKO = "Ngươi khát khao chiến trận sao?"
 WATHGRITHR.DESCRIBE.KYNO_PIKO_ORANGE = "Ta không có việc gì dùng tới nó."
 
-WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "Đây là một cái cây tạm được.",
 	CHOPPED = "Phần thưởng của nó đã bị đoạt lấy!",
@@ -756,7 +762,7 @@ WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 	BURNT = "Bị lửa quật ngã!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
 	GENERIC = "Đây là một cái cây tạm được.",
 	BURNING = "Đại sảnh của chúng sụp đổ trong lửa!",
@@ -764,26 +770,26 @@ WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Hộp kia, giao nộp bí mật của ngươi!"
 
-WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "Căn nhà này làm từ cá sao?",
 	BURNT = "Bị lửa hạ thấp!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "Dân chài trú ngụ ở đây.",
 	CRAFTED = "Một đại sảnh xứng với cư dân của nó!",
 	BURNT = "Mùi hôi của bại trận!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "Mấy cây xúc xích treo kia trông ngon đấy!",
 	OCCUPIED = "Thương nhân đang say ngủ!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WATHGRITHR.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "Blergh, thịt đâu hết rồi?",
 	EMPTY = "Xe hàng của Sammy đã trống trơn!",
@@ -841,7 +847,7 @@ WATHGRITHR.DESCRIBE.CHOCOLATE_BLACK = "Nó không phải thịt nhưng..."
 WATHGRITHR.DESCRIBE.CHOCOLATE_WHITE = "Nó không phải thịt nhưng..."
 
 WATHGRITHR.DESCRIBE.TRICOLORDANGO = "Trông chẳng giống thịt."
- 
+
 WATHGRITHR.DESCRIBE.FRIESFRENCH = "Nó không phải thịt!"
 
 WATHGRITHR.DESCRIBE.PIRATERUM = "Mùi kỳ lạ và tỏa ra tà khí."
@@ -853,7 +859,7 @@ WATHGRITHR.DESCRIBE.ONIONRINGS = "Rau củ nướng, kinh!"
 WATHGRITHR.DESCRIBE.DONUTS = "Sao nó lại ngọt đến vậy? Ta không hiểu nổi!"
 WATHGRITHR.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Sao nó lại ngọt đến vậy? Ta không hiểu nổi!"
 WATHGRITHR.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Sao nó lại ngọt đến vậy? Ta không hiểu nổi!"
- 
+
 WATHGRITHR.DESCRIBE.CINNAMONROLL = "Những vòng bánh mềm như gối."
 
 WATHGRITHR.DESCRIBE.GUMMYBEARGERS = "Vài viên kẹo chắc chẳng hại gì."
@@ -940,7 +946,7 @@ WATHGRITHR.DESCRIBE.RICESAKE = "Thức uống của chư thần!"
 
 WATHGRITHR.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Bị giật khỏi mặt đất!"
 
-WATHGRITHR.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WATHGRITHR.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Argh! Nó được bao quanh bởi gai.",
 	PICKED = "Phần thưởng của nó đã cạn!",
@@ -958,7 +964,7 @@ WATHGRITHR.DESCRIBE.PINACOLADA = "Ewww."
 
 WATHGRITHR.DESCRIBE.CHIMAS = "Chá!"
 
-WATHGRITHR.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WATHGRITHR.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Mưa đến từ bên trong bộ máy của nó.",
 	ON = "Mưa không sấm!",
@@ -1077,7 +1083,7 @@ WATHGRITHR.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "Người buôn bán ngủ say trong đại sảnh đã được khôi phục.",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Không phải thịt, nhưng có lẽ xứng đáng vào yến tiệc!",
 	PICKED = "Đã đoạt lấy!",
@@ -1087,7 +1093,7 @@ WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WATHGRITHR.DESCRIBE.KYNO_TRUFFLES = "Lại là nấm... nhưng có lẽ chúng thuộc về yến tiệc."
 WATHGRITHR.DESCRIBE.KYNO_TRUFFLES_COOKED = "Vẫn không phải thịt... nhưng mùi xứng với chiến trận!"
 
-WATHGRITHR.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WATHGRITHR.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Bah! Ta không cần chỗ trưng bày cho những yến tiệc vinh quang của mình!",
 	FULL = "Một lễ vật vinh quang!",
@@ -1112,7 +1118,7 @@ WATHGRITHR.DESCRIBE.TRUFFLEOIL = "Bah! Ta thích mùi chiến trận hơn nướ
 WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Hồ nước! Chuẩn bị được dựng lên!"
 WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Một cái ao cho cá chiến trận! Ta chấp thuận."
 
-WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT = 
+WATHGRITHR.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "Một cái ao để nuôi những chiến binh mới của nước!",
 	FUEL_HIGH = "Chúng ăn uống rất tốt!",
@@ -1175,7 +1181,7 @@ WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Ngươi có phải thịt không?"
 WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Không có Excalibur nào nhô ra từ giữa nó."
 WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_CORAL = "Nếu ta ăn nó, ta có nhận được tri thức của nó không?"
 
-WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "Một tảng đá nước huyền bí, thông thái!",
 	PICKED = "Tâm trí của nó đang ngủ!",
@@ -1183,7 +1189,7 @@ WATHGRITHR.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WATHGRITHR.DESCRIBE.BRAINMETTERSOUP = "Bah! Bữa ăn cho trẻ con!"
 
-WATHGRITHR.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WATHGRITHR.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "Ông ta có vẻ sẵn lòng trao đổi.",
 	SLEEPING = "Vua biển đang say ngủ!",
@@ -1191,7 +1197,7 @@ WATHGRITHR.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WATHGRITHR.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Chiếc rương chứa lễ vật."
 
-WATHGRITHR.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WATHGRITHR.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "Một món đồ lạ mắt.",
 	WAITING = "Một thương vong đáng tiếc của chiến trận.",
@@ -1207,7 +1213,7 @@ WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Tinh hoa của Jól!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Không phải thịt... nhưng là nhiên liệu chiến trận!"
 WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Chiến binh không chiến đấu bằng bóng bay!"
 
-WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WATHGRITHR.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "Một cỗ máy bắp rang xứng đáng!",
 	FUEL_HIGH = "Nó gầm vang đầy sức mạnh!",
@@ -1247,7 +1253,7 @@ WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "Một món quay xứng đáng, hợp v�
 
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Chiến binh thích rượu mật hơn, nhưng thứ này tạm được!"
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Ngọt như khúc ca của thiếu nữ!"
-WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A frosty brew worthy of northern warriors!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A frosty brew worthy of northern warriors!"
 
 WATHGRITHR.DESCRIBE.SOULJUICE = "Thức uống của chiến binh, được linh hồn lang thang chạm tới!"
 
@@ -1314,74 +1320,82 @@ WATHGRITHR.DESCRIBE.KYNO_PIGCOIN1 = "Kho báu!"
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN2 = "Đồng tiền! Hãy sẵn sàng để được tiêu!"
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN3 = "Vận may thuộc về ta!"
 
-WATHGRITHR.DESCRIBE.KYNO_ICENETTLES = "Cöward and cöld." -- NEEDS TRANSLATION
-WATHGRITHR.DESCRIBE.KYNO_ICENETTLES_DRIED = "Still nöt wörhty för me. " -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_ICENETTLES = "Cöward and cöld."
+WATHGRITHR.DESCRIBE.KYNO_ICENETTLES_DRIED = "Still nöt wörhty för me. "
 
-WATHGRITHR.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A pouch for the seeds of future harvests!",
 	FULL = "The harvest pouch overflows!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_FOODAMMO_TOMATO = "I'll smite you, if you even dare!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_FOODAMMO_TOMATO = "I'll smite you, if you even dare!"
 
-WATHGRITHR.DESCRIBE.WX78MODULE_GOURMAND = "These boons shall empower our metal warrior." -- NEEDS TRANSLATION
-WATHGRITHR.DESCRIBE.WX78MODULE_COOKER = "These boons shall empower our metal warrior." -- NEEDS TRANSLATION
-WATHGRITHR.DESCRIBE.WX78MODULE_DRYER = "These boons shall empower our metal warrior." -- NEEDS TRANSLATION
-WATHGRITHR.DESCRIBE.WX78MODULE_DRYER2 = "These boons shall empower our metal warrior." -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.WX78MODULE_GOURMAND = "These boons shall empower our metal warrior."
+WATHGRITHR.DESCRIBE.WX78MODULE_COOKER = "These boons shall empower our metal warrior."
+WATHGRITHR.DESCRIBE.WX78MODULE_DRYER = "These boons shall empower our metal warrior."
+WATHGRITHR.DESCRIBE.WX78MODULE_DRYER2 = "These boons shall empower our metal warrior."
 
 WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What spoils hath our metal warrior bestowed?", -- NEEDS TRANSLATION
+	GENERIC = "What spoils hath our metal warrior bestowed?",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What spoils hath our metal warrior bestowed?", -- NEEDS TRANSLATION
+	GENERIC = "What spoils hath our metal warrior bestowed?",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What spoils hath our metal warrior bestowed?", -- NEEDS TRANSLATION
+	GENERIC = "What spoils hath our metal warrior bestowed?",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "The swine is laden with spoils!",
 	UPGRADED = "A mighty vault for the spoils of battle!",
 	GENERIC = "A little swine to guard mine coin.",
 }
 
-WATHGRITHR.DESCRIBE.MARSHMALLOWS = "These are no warrior's fare!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.MARSHMALLOWS = "These are no warrior's fare!"
 
-WATHGRITHR.DESCRIBE.KOKONUTCOOKIES = "A coconut cookie? Where is the meat?" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KOKONUTCOOKIES = "A coconut cookie? Where is the meat?"
 
-WATHGRITHR.DESCRIBE.BBQRIBS = "A feast fit for a warrior!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.BBQRIBS = "A feast fit for a warrior!"
 
-WATHGRITHR.DESCRIBE.BROWNIE = "A chocolate feast!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.BROWNIE = "A chocolate feast!"
 
-WATHGRITHR.DESCRIBE.CHOCOLATE_CAKE = "A grand feast of chocolate!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.CHOCOLATE_CAKE = "A grand feast of chocolate!"
 
-WATHGRITHR.DESCRIBE.SWORDFISHBLUEDINNER = "The air is getting cold around me!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.SWORDFISHBLUEDINNER = "The air is getting cold around me!"
 
-WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "A bird that hunts beneath the moon!",
 	HELD = "The night bird struggles within my pouch!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A mighty hunter of the frozen wilds!",
 	HELD = "The fierce bird challenges its confinement!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "A saltwork in the making!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "A saltwork in the making!"
 
-WATHGRITHR.DESCRIBE.KYNO_FISHINGROD_THULECITE = "A fine fishing rod fit for a sea warrior." -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_FISHINGROD_THULECITE = "A fine fishing rod fit for a sea warrior."
+
+WATHGRITHR.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Glittering sugar! Fit for a feast worthy of the gods!"
+
+WATHGRITHR.DESCRIBE.OPALPRECIOUSCREAM = "A shimmering topping for a feast worthy of Valhalla!"
+
+WATHGRITHR.DESCRIBE.CATFISHSTICK = "A hearty catch, roasted over the flames!"
+
+WATHGRITHR.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A mysterious sweet! What boon shall the gods bestow upon me?"

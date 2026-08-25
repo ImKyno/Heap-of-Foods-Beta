@@ -101,11 +101,17 @@ WALTER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Chyba wzmocnienie nocy się skończył
 WALTER.ANNOUNCE_KYNO_PANICBUFF_START = "Chyba wyglądam groźniej niż zwykle, Woby."
 WALTER.ANNOUNCE_KYNO_PANICBUFF_END = "Chyba wróciłem do normy."
 
-WALTER.ANNOUNCE_KYNO_CUREBUFF_START = "This'll really stretch our supplies." -- NEEDS TRANSLATION
-WALTER.ANNOUNCE_KYNO_CUREBUFF_END = "Better use things before they spoil." -- NEEDS TRANSLATION
+WALTER.ANNOUNCE_KYNO_CUREBUFF_START = "This'll really stretch our supplies."
+WALTER.ANNOUNCE_KYNO_CUREBUFF_END = "Better use things before they spoil."
 
-WALTER.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm staying right here!" -- NEEDS TRANSLATION
-WALTER.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Guess I can be pushed around again." -- NEEDS TRANSLATION
+WALTER.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm staying right here!"
+WALTER.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Guess I can be pushed around again."
+
+WALTER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Whoa! My attacks are way stronger now!"
+WALTER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "That extra strength didn't last."
+
+WALTER.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Something tells me we're in for a rough time."
+WALTER.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Phew! Looks like our luck's getting better, Woby."
 
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zła rzecz!"
 
@@ -136,13 +142,13 @@ WALTER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Chyba wiem teraz więcej o rybich jajach.
 
 WALTER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Dobra posiłek biwakowy!"
 
-WALTER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WALTER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Ah! Ow! It's cold!!",
 	"Aaaah, it got me! It got me!",
 }
 
-WALTER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew... I-I think I'm okay now." -- NEEDS TRANSLATION
+WALTER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew... I-I think I'm okay now."
 
 WALTER.DESCRIBE.KYNO_ROE = "Pierwszy raz to widzę."
 WALTER.DESCRIBE.KYNO_ROE_COOKED = "Usmażyłem je. Hehe."
@@ -531,7 +537,7 @@ WALTER.DESCRIBE.KYNO_NEONFISH_COOKED = "Przynajmniej nie ma już ogona!"
 
 WALTER.DESCRIBE.KYNO_GROUPER = "Fioletowa ryba!"
 WALTER.DESCRIBE.KYNO_GROUPER_COOKED = "Płetwy wciąż są na miejscu."
- 
+
 WALTER.DESCRIBE.KYNO_PIERROTFISH = "Żółta ryba!"
 WALTER.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Dobre!"
 
@@ -841,7 +847,7 @@ WALTER.DESCRIBE.CHOCOLATE_BLACK = "Przykro mi, dziewczyno, ale nie możesz tego 
 WALTER.DESCRIBE.CHOCOLATE_WHITE = "Przykro mi, dziewczyno, ale nie możesz tego zjeść."
 
 WALTER.DESCRIBE.TRICOLORDANGO = "Smakuje o wiele lepiej, niż wygląda."
- 
+
 WALTER.DESCRIBE.FRIESFRENCH = "Chcesz trochę, dziewczyno?"
 
 WALTER.DESCRIBE.PIRATERUM = "Muszę być ostrożny."
@@ -853,7 +859,7 @@ WALTER.DESCRIBE.ONIONRINGS = "Cebula smażona w oleju? Ciekawe!"
 WALTER.DESCRIBE.DONUTS = "Nie spodziewałem się ich tutaj zobaczyć."
 WALTER.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Nie spodziewałem się ich tutaj zobaczyć."
 WALTER.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Nie spodziewałem się ich tutaj zobaczyć."
- 
+
 WALTER.DESCRIBE.CINNAMONROLL = "Nie ma słów, by opisać, jak ta bułka jest słodka."
 
 WALTER.DESCRIBE.GUMMYBEARGERS = "Czuję w tym jedzeniu jakieś niebezpieczeństwo!"
@@ -1247,7 +1253,7 @@ WALTER.DESCRIBE.CHICKENROTISSERIE = "Byłoby świetne na obozową kolację!"
 
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Idealne na spokojny wieczór przy ognisku."
 WALTER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Smakuje jak przygoda na łące."
-WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Perfect for keeping cool outdoors." -- NEEDS TRANSLATION
+WALTER.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Perfect for keeping cool outdoors."
 
 WALTER.DESCRIBE.SOULJUICE = "Nie jestem pewien, czy to można nazwać sokiem..."
 
@@ -1314,10 +1320,10 @@ WALTER.DESCRIBE.KYNO_PIGCOIN1 = "To moneta, Woby!"
 WALTER.DESCRIBE.KYNO_PIGCOIN2 = "Mógłbym za to kupić dużo przekąsek dla Woby."
 WALTER.DESCRIBE.KYNO_PIGCOIN3 = "Wygląda na ważne, musimy to dobrze schować."
 
-WALTER.DESCRIBE.KYNO_ICENETTLES = "Oh! this one i haven't seen it before!" -- NEEDS TRANSLATION
-WALTER.DESCRIBE.KYNO_ICENETTLES_DRIED = "These could be a good summer snack." -- NEEDS TRANSLATION
+WALTER.DESCRIBE.KYNO_ICENETTLES = "Oh! this one i haven't seen it before!"
+WALTER.DESCRIBE.KYNO_ICENETTLES_DRIED = "These could be a good summer snack."
 
-WALTER.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WALTER.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "Every gardener needs one of these.",
 	FULL = "Looks like it's full up.",
@@ -1325,63 +1331,71 @@ WALTER.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 
 WALTER.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Food fight!" -- NEED TRANSLATION
 
-WALTER.DESCRIBE.WX78MODULE_GOURMAND = "Robot guts! Neat!" -- NEEDS TRANSLATION
-WALTER.DESCRIBE.WX78MODULE_COOKER = "Robot guts! Neat!" -- NEEDS TRANSLATION
-WALTER.DESCRIBE.WX78MODULE_DRYER = "Robot guts! Neat!" -- NEEDS TRANSLATION
-WALTER.DESCRIBE.WX78MODULE_DRYER2 = "Robot guts! Neat!" -- NEEDS TRANSLATION
+WALTER.DESCRIBE.WX78MODULE_GOURMAND = "Robot guts! Neat!"
+WALTER.DESCRIBE.WX78MODULE_COOKER = "Robot guts! Neat!"
+WALTER.DESCRIBE.WX78MODULE_DRYER = "Robot guts! Neat!"
+WALTER.DESCRIBE.WX78MODULE_DRYER2 = "Robot guts! Neat!"
 
 WALTER.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Wonder if WX wants all this stuff back.", -- NEEDS TRANSLATION
+	GENERIC = "Wonder if WX wants all this stuff back.",
 }
 
 WALTER.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Wonder if WX wants all this stuff back.", -- NEEDS TRANSLATION
+	GENERIC = "Wonder if WX wants all this stuff back.",
 }
 
 WALTER.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Wonder if WX wants all this stuff back.", -- NEEDS TRANSLATION
+	GENERIC = "Wonder if WX wants all this stuff back.",
 }
 
-WALTER.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WALTER.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "I don't think we can fit another coin in there!",
 	UPGRADED = "Wow! This piggy can hold more coins than my Scout badges!",
 	GENERIC = "It's a piggy bank! We can save our money in it!",
 }
 
-WALTER.DESCRIBE.MARSHMALLOWS = "Hey, these would be great around a campfire!" -- NEEDS TRANSLATION
+WALTER.DESCRIBE.MARSHMALLOWS = "Hey, these would be great around a campfire!"
 
-WALTER.DESCRIBE.KOKONUTCOOKIES = "These would make a great trail snack!" -- NEEDS TRANSLATION
+WALTER.DESCRIBE.KOKONUTCOOKIES = "These would make a great trail snack!"
 
-WALTER.DESCRIBE.BBQRIBS = "Now that's campfire food!" -- NEEDS TRANSLATION
+WALTER.DESCRIBE.BBQRIBS = "Now that's campfire food!"
 
-WALTER.DESCRIBE.BROWNIE = "These are perfect for sharing around the fire." -- NEEDS TRANSLATION
+WALTER.DESCRIBE.BROWNIE = "These are perfect for sharing around the fire."
 
-WALTER.DESCRIBE.CHOCOLATE_CAKE = "Whoa! That's one serious cake!" -- NEEDS TRANSLATION
+WALTER.DESCRIBE.CHOCOLATE_CAKE = "Whoa! That's one serious cake!"
 
-WALTER.DESCRIBE.SWORDFISHBLUEDINNER = "A packed lunch! Perfect for an adventure around the woods." -- NEEDS TRANSLATION
+WALTER.DESCRIBE.SWORDFISHBLUEDINNER = "A packed lunch! Perfect for an adventure around the woods."
 
-WALTER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WALTER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "Hey, it's a night bird!",
 	HELD = "I can feel it fluttering in my pocket.",
 }
 
-WALTER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WALTER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "Whoa! I've never seen that bird before!",
 	HELD = "Careful with that beak!",
 }
 
-WALTER.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Just waiting to be finished." -- NEEDS TRANSLATION
+WALTER.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Just waiting to be finished."
 
-WALTER.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Shall we go on a fishing trip, Woby?" -- NEEDS TRANSLATION
+WALTER.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Shall we go on a fishing trip, Woby?"
+
+WALTER.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Wow! It looks like powdered treasure!"
+
+WALTER.DESCRIBE.OPALPRECIOUSCREAM = "Whoa! It's like a cloud made of rainbows!"
+
+WALTER.DESCRIBE.CATFISHSTICK = "A fish on a stick! Classic camp food."
+
+WALTER.DESCRIBE.OPALPRECIOUSLOLLIPOP = "It's like a surprise adventure, but edible!"

@@ -107,6 +107,12 @@ WICKERBOTTOM.ANNOUNCE_KYNO_CUREBUFF_END = "A estabilidade temporal voltou ao nor
 WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Sinto-me consideravelmente mais estável."
 WICKERBOTTOM.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Minha estabilidade voltou ao normal."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Minhas capacidades ofensivas parecem ter aumentado."
+WICKERBOTTOM.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Minhas capacidades ofensivas voltaram ao normal."
+
+WICKERBOTTOM.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Uma série de eventos infelizes parece iminente."
+WICKERBOTTOM.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Parece que a influência desfavorável diminuiu."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Precisa de algo diferente."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Não. Acho que ele mencionou wobsters."
@@ -531,7 +537,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_NEONFISH_COOKED = "Um primo do Paracheirodon innesi, 
 
 WICKERBOTTOM.DESCRIBE.KYNO_GROUPER = "Parte da família Epinephelinae."
 WICKERBOTTOM.DESCRIBE.KYNO_GROUPER_COOKED = "Comer peixe cru não seria seguro."
- 
+
 WICKERBOTTOM.DESCRIBE.KYNO_PIERROTFISH = "Hmm... Não consigo identificar esta espécie."
 WICKERBOTTOM.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Peixes hospedam todo tipo de parasitas, sabia?"
 
@@ -645,7 +651,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_COOKWARE_OVEN = "É melhor para assar doces."
 WICKERBOTTOM.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "É melhor para assar doces."
 WICKERBOTTOM.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "É melhor para assar doces."
 
-WICKERBOTTOM.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WICKERBOTTOM.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Os insetos mais interessantes estão debaixo das pedras.",
 	FLIPPED = "Como esperado. Pequenos organismos.",
@@ -841,7 +847,7 @@ WICKERBOTTOM.DESCRIBE.CHOCOLATE_BLACK = "Estranho, parece que falta cacau."
 WICKERBOTTOM.DESCRIBE.CHOCOLATE_WHITE = "Estranho, parece que falta cacau."
 
 WICKERBOTTOM.DESCRIBE.TRICOLORDANGO = "Um lanchinho macio e pegajoso."
- 
+
 WICKERBOTTOM.DESCRIBE.FRIESFRENCH = "Um prato clássico de fast food. Rápido e relativamente delicioso."
 
 WICKERBOTTOM.DESCRIBE.PIRATERUM = "É Rum, mas por que me sinto tão insegura com ele?"
@@ -853,7 +859,7 @@ WICKERBOTTOM.DESCRIBE.ONIONRINGS = "Cebolas fatiadas banhadas em óleo, um ótim
 WICKERBOTTOM.DESCRIBE.DONUTS = "Comida de massa. Um clássico na América."
 WICKERBOTTOM.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Comida de massa. Um clássico na América."
 WICKERBOTTOM.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Comida de massa. Um clássico na América."
- 
+
 WICKERBOTTOM.DESCRIBE.CINNAMONROLL = "Massa polvilhada sobre uma fina camada de manteiga."
 
 WICKERBOTTOM.DESCRIBE.GUMMYBEARGERS = "Doce infantil em formato de urso."
@@ -1385,3 +1391,11 @@ WICKERBOTTOM.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 WICKERBOTTOM.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Um lugar para extrair sal, ainda incompleto."
 
 WICKERBOTTOM.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Uma vara de pesca antiga e robusta."
+
+WICKERBOTTOM.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Um ingrediente de confeitaria excepcionalmente raro, com uma iridescência notável."
+
+WICKERBOTTOM.DESCRIBE.OPALPRECIOUSCREAM = "Chantilly que apresenta um brilho iridescente incomum."
+
+WICKERBOTTOM.DESCRIBE.CATFISHSTICK = "Um bagre negro, grelhado até ficar bastante apetitoso."
+
+WICKERBOTTOM.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Um doce incomum com efeitos bastante imprevisíveis."

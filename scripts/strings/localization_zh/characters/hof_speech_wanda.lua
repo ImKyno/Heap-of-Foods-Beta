@@ -101,11 +101,17 @@ WANDA.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "然后就没了。真典型。"
 WANDA.ANNOUNCE_KYNO_PANICBUFF_START = "恐惧真是一种高效的驱动力。"
 WANDA.ANNOUNCE_KYNO_PANICBUFF_END = "效果已经结束。"
 
-WANDA.ANNOUNCE_KYNO_CUREBUFF_START = "I've borrowed a little extra time." -- NEEDS TRANSLATION
-WANDA.ANNOUNCE_KYNO_CUREBUFF_END = "Time has reclaimed what was borrowed." -- NEEDS TRANSLATION
+WANDA.ANNOUNCE_KYNO_CUREBUFF_START = "I've borrowed a little extra time."
+WANDA.ANNOUNCE_KYNO_CUREBUFF_END = "Time has reclaimed what was borrowed."
 
-WANDA.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm not going anywhere." -- NEEDS TRANSLATION
-WANDA.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Well, that stability didn't last." -- NEEDS TRANSLATION
+WANDA.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I'm not going anywhere."
+WANDA.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Well, that stability didn't last."
+
+WANDA.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "I feel considerably more powerful."
+WANDA.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "The extra strength has run its course."
+
+WANDA.ANNOUNCE_KYNO_BADLUCKBUFF_START = "I have a feeling things are about to go terribly wrong."
+WANDA.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The bad omen has finally passed."
 
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "不……我需要别的。"
 
@@ -136,13 +142,13 @@ WANDA.ANNOUNCE_KYNO_ROE_RESEARCHED = "如此多的未来，一次性展现。"
 
 WANDA.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "嗯……够高效。"
 
-WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Oooh, I don't feel well at all...",
 	"Help! I've been poisoned!",
 }
 
-WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew... it looks like the effects aren't permanent." -- NEEDS TRANSLATION
+WANDA.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew... it looks like the effects aren't permanent."
 
 WANDA.DESCRIBE.KYNO_ROE = "这是我第一次看到这个。"
 WANDA.DESCRIBE.KYNO_ROE_COOKED = "闻起来很香。"
@@ -1247,7 +1253,7 @@ WANDA.DESCRIBE.CHICKENROTISSERIE = "至少等待是值得的。"
 
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "短暂的舒适时光。"
 WANDA.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "甜美，却短暂。"
-WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A brief respite from the heat." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A brief respite from the heat."
 
 WANDA.DESCRIBE.SOULJUICE = "时间与灵魂化作液体。"
 
@@ -1314,10 +1320,10 @@ WANDA.DESCRIBE.KYNO_PIGCOIN1 = "唯一能控制一切的东西。"
 WANDA.DESCRIBE.KYNO_PIGCOIN2 = "时间就是金钱的提醒。"
 WANDA.DESCRIBE.KYNO_PIGCOIN3 = "这是我第一次见到这么多钱。"
 
-WANDA.DESCRIBE.KYNO_ICENETTLES = " I'm having a Deja Vu with this one." -- NEEDS TRANSLATION
-WANDA.DESCRIBE.KYNO_ICENETTLES_DRIED = "Worth the time, now this heat won't kill me." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_ICENETTLES = " I'm having a Deja Vu with this one."
+WANDA.DESCRIBE.KYNO_ICENETTLES_DRIED = "Worth the time, now this heat won't kill me."
 
-WANDA.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A sensible way to store seeds.",
 	FULL = "No more room left.",
@@ -1325,63 +1331,71 @@ WANDA.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
 
 WANDA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "A waste of food, and time." -- NEED TRANSLATION
 
-WANDA.DESCRIBE.WX78MODULE_GOURMAND = "Aha! I was wondering when they'd started making these." -- NEEDS TRANSLATION
-WANDA.DESCRIBE.WX78MODULE_COOKER = "Aha! I was wondering when they'd started making these." -- NEEDS TRANSLATION
-WANDA.DESCRIBE.WX78MODULE_DRYER = "Aha! I was wondering when they'd started making these." -- NEEDS TRANSLATION
-WANDA.DESCRIBE.WX78MODULE_DRYER2 = "Aha! I was wondering when they'd started making these." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.WX78MODULE_GOURMAND = "Aha! I was wondering when they'd started making these."
+WANDA.DESCRIBE.WX78MODULE_COOKER = "Aha! I was wondering when they'd started making these."
+WANDA.DESCRIBE.WX78MODULE_DRYER = "Aha! I was wondering when they'd started making these."
+WANDA.DESCRIBE.WX78MODULE_DRYER2 = "Aha! I was wondering when they'd started making these."
 
 WANDA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What's in there?", -- NEEDS TRANSLATION
+	GENERIC = "What's in there?",
 }
 
 WANDA.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What's in there?", -- NEEDS TRANSLATION
+	GENERIC = "What's in there?",
 }
 
 WANDA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What's in there?", -- NEEDS TRANSLATION
+	GENERIC = "What's in there?",
 }
 
-WANDA.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "It's completely full. I should have seen that coming.",
 	UPGRADED = "Its capacity appears to have no limit.",
 	GENERIC = "A piggy bank. Simple, but useful.",
 }
 
-WANDA.DESCRIBE.MARSHMALLOWS = "A little sweetness never hurts." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.MARSHMALLOWS = "A little sweetness never hurts."
 
-WANDA.DESCRIBE.KOKONUTCOOKIES = "A pleasant little taste of the tropics." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KOKONUTCOOKIES = "A pleasant little taste of the tropics."
 
-WANDA.DESCRIBE.BBQRIBS = "A hearty meal worth spending time on." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.BBQRIBS = "A hearty meal worth spending time on."
 
-WANDA.DESCRIBE.BROWNIE = "Rich chocolate never goes out of style." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.BROWNIE = "Rich chocolate never goes out of style."
 
-WANDA.DESCRIBE.CHOCOLATE_CAKE = "A decadent cake for a special occasion." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.CHOCOLATE_CAKE = "A decadent cake for a special occasion."
 
-WANDA.DESCRIBE.SWORDFISHBLUEDINNER = "A convenient meal for when time is of the essence." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.SWORDFISHBLUEDINNER = "A convenient meal for when time is of the essence."
 
-WANDA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "Always watching, never sleeping.",
 	HELD = "It's remarkably restless in there.",
 }
 
-WANDA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A creature that seems perfectly at home in the cold.",
 	HELD = "It seems rather unhappy about being carried.",
 }
 
-WANDA.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "It'll be useful once it's finished." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "It'll be useful once it's finished."
 
-WANDA.DESCRIBE.KYNO_FISHINGROD_THULECITE = "This has stood the test of time." -- NEEDS TRANSLATION
+WANDA.DESCRIBE.KYNO_FISHINGROD_THULECITE = "This has stood the test of time."
+
+WANDA.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Some things are worth waiting a lifetime for."
+
+WANDA.DESCRIBE.OPALPRECIOUSCREAM = "Beautiful things never seem to last."
+
+WANDA.DESCRIBE.CATFISHSTICK = "Freshly caught, freshly grilled. Such a short life."
+
+WANDA.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Hopefully this little gamble pays off."

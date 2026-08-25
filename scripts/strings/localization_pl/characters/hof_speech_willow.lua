@@ -101,11 +101,17 @@ WILLOW.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Ech. Z powrotem do normalności."
 WILLOW.ANNOUNCE_KYNO_PANICBUFF_START = "Heh. Lepiej niech uciekają."
 WILLOW.ANNOUNCE_KYNO_PANICBUFF_END = "Och, już się nie boją."
 
-WILLOW.ANNOUNCE_KYNO_CUREBUFF_START = "Nothing's going bad anytime soon!" -- NEEDS TRANSLATION
-WILLOW.ANNOUNCE_KYNO_CUREBUFF_END = "Back to everything rotting." -- NEEDS TRANSLATION
+WILLOW.ANNOUNCE_KYNO_CUREBUFF_START = "Nothing's going bad anytime soon!"
+WILLOW.ANNOUNCE_KYNO_CUREBUFF_END = "Back to everything rotting."
 
-WILLOW.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Try knocking me around now!" -- NEEDS TRANSLATION
-WILLOW.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Guess I'm easy to push again." -- NEEDS TRANSLATION
+WILLOW.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Try knocking me around now!"
+WILLOW.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Guess I'm easy to push again."
+
+WILLOW.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Now that's some serious firepower!"
+WILLOW.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Huh. My power surge is gone!"
+
+WILLOW.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Ugh. I have a really bad feeling about this."
+WILLOW.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Finally. Things are looking less terrible!"
 
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Muszę tu coś umieścić!"
 
@@ -136,13 +142,13 @@ WILLOW.ANNOUNCE_KYNO_ROE_RESEARCHED = "Jaja ryb, co? I tak czegoś się nauczył
 
 WILLOW.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Niezłe. Ale mogłoby się palić."
 
-WILLOW.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WILLOW.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Argh, it TOO COLD!!",
 	"There's ice in my veins!",
 }
 
-WILLOW.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "I HATE that plant!" -- NEEDS TRANSLATION
+WILLOW.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "I HATE that plant!"
 
 WILLOW.DESCRIBE.KYNO_ROE = "Ughh! Okropne!!"
 WILLOW.DESCRIBE.KYNO_ROE_COOKED = "Upiekłam je, ale wciąż są obrzydliwe."
@@ -531,7 +537,7 @@ WILLOW.DESCRIBE.KYNO_NEONFISH_COOKED = "Ogień pozbył się większości rybiego
 
 WILLOW.DESCRIBE.KYNO_GROUPER = "Wyglądasz trochę głupkowato."
 WILLOW.DESCRIBE.KYNO_GROUPER_COOKED = "Ogień spalił te najgorsze kawałki."
- 
+
 WILLOW.DESCRIBE.KYNO_PIERROTFISH = "Mam cię!"
 WILLOW.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Spaliłam ją idealnie."
 
@@ -841,7 +847,7 @@ WILLOW.DESCRIBE.CHOCOLATE_BLACK = "Ach, naprawdę za tym tęskniłam!"
 WILLOW.DESCRIBE.CHOCOLATE_WHITE = "Ach, naprawdę za tym tęskniłam!"
 
 WILLOW.DESCRIBE.TRICOLORDANGO = "Całkiem słodka przekąska."
- 
+
 WILLOW.DESCRIBE.FRIESFRENCH = "Olej i ogień sprawiają, że wszystko smakuje lepiej!"
 
 WILLOW.DESCRIBE.PIRATERUM = "Nie powinnam tego pić."
@@ -853,7 +859,7 @@ WILLOW.DESCRIBE.ONIONRINGS = "Olej i ogień sprawiają, że wszystko smakuje lep
 WILLOW.DESCRIBE.DONUTS = "Ooo, no proszę. W końcu się pojawiły!"
 WILLOW.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "O, wow. Zastanawiałam się, kiedy się pojawią."
 WILLOW.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "O, wow. Zastanawiałam się, kiedy się pojawią."
- 
+
 WILLOW.DESCRIBE.CINNAMONROLL = "Bułka!"
 
 WILLOW.DESCRIBE.GUMMYBEARGERS = "Malutkie cukierki misie!"
@@ -1247,7 +1253,7 @@ WILLOW.DESCRIBE.CHICKENROTISSERIE = "To dopiero właściwe użycie ognia."
 
 WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Hm. Wolę, gdy wrze."
 WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Za słodkie. Potrzeba dymu."
-WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "I'll look so lame drinking this crap." -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "I'll look so lame drinking this crap."
 
 WILLOW.DESCRIBE.SOULJUICE = "Wygląda upiornie. Podoba mi się."
 
@@ -1314,74 +1320,82 @@ WILLOW.DESCRIBE.KYNO_PIGCOIN1 = "O. Moneta. Phi."
 WILLOW.DESCRIBE.KYNO_PIGCOIN2 = "Pewnie mogę za to kupić coś dobrego."
 WILLOW.DESCRIBE.KYNO_PIGCOIN3 = "Jestem bogata!"
 
-WILLOW.DESCRIBE.KYNO_ICENETTLES = "I prefer the fire version..." -- NEEDS TRANSLATION
-WILLOW.DESCRIBE.KYNO_ICENETTLES_DRIED = "Doubt this one can burn even if i tried." -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.KYNO_ICENETTLES = "I prefer the fire version..."
+WILLOW.DESCRIBE.KYNO_ICENETTLES_DRIED = "Doubt this one can burn even if i tried."
 
-WILLOW.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A bag full of future plants.",
 	FULL = "No room for more seeds.",
 }
 
-WILLOW.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Boo! You stink!" -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Boo! You stink!"
 
-WILLOW.DESCRIBE.WX78MODULE_GOURMAND = "Hey WX, when are you gonna install a flamethrower?" -- NEEDS TRANSLATION
-WILLOW.DESCRIBE.WX78MODULE_COOKER = "Hey WX, when are you gonna install a flamethrower?" -- NEEDS TRANSLATION
-WILLOW.DESCRIBE.WX78MODULE_DRYER = "Hey WX, when are you gonna install a flamethrower?" -- NEEDS TRANSLATION
-WILLOW.DESCRIBE.WX78MODULE_DRYER2 = "Hey WX, when are you gonna install a flamethrower?" -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.WX78MODULE_GOURMAND = "Hey WX, when are you gonna install a flamethrower?"
+WILLOW.DESCRIBE.WX78MODULE_COOKER = "Hey WX, when are you gonna install a flamethrower?"
+WILLOW.DESCRIBE.WX78MODULE_DRYER = "Hey WX, when are you gonna install a flamethrower?"
+WILLOW.DESCRIBE.WX78MODULE_DRYER2 = "Hey WX, when are you gonna install a flamethrower?"
 
 WILLOW.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What do I care about WX's old stuff?", -- NEEDS TRANSLATION
+	GENERIC = "What do I care about WX's old stuff?",
 }
 
 WILLOW.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What do I care about WX's old stuff?", -- NEEDS TRANSLATION
+	GENERIC = "What do I care about WX's old stuff?",
 }
 
 WILLOW.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What do I care about WX's old stuff?", -- NEEDS TRANSLATION
+	GENERIC = "What do I care about WX's old stuff?",
 }
 
-WILLOW.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "It's stuffed with shiny stuff!",
 	UPGRADED = "This thing can hold ALL the shiny stuff!",
 	GENERIC = "A little piggy bank. Cute.",
 }
 
-WILLOW.DESCRIBE.MARSHMALLOWS = "Mmm, soft and flammable." -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.MARSHMALLOWS = "Mmm, soft and flammable."
 
-WILLOW.DESCRIBE.KOKONUTCOOKIES = "Crunchy and toasty." -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.KOKONUTCOOKIES = "Crunchy and toasty."
 
-WILLOW.DESCRIBE.BBQRIBS = "Fire makes everything delicious!" -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.BBQRIBS = "Fire makes everything delicious!"
 
-WILLOW.DESCRIBE.BROWNIE = "Finally, something good." -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.BROWNIE = "Finally, something good."
 
-WILLOW.DESCRIBE.CHOCOLATE_CAKE = "My favorite kind of cake." -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.CHOCOLATE_CAKE = "My favorite kind of cake."
 
-WILLOW.DESCRIBE.SWORDFISHBLUEDINNER = "Cold food? Boooooring." -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.SWORDFISHBLUEDINNER = "Cold food? Boooooring."
 
-WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "It only comes out when the sun goes down.",
 	HELD = "It's scratching around in my pocket.",
 }
 
-WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "Even the birds are freezing up here.",
 	HELD = "That bird is poking holes in my pocket!",
 }
 
-WILLOW.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "It's not on fire yet." -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "It's not on fire yet."
 
-WILLOW.DESCRIBE.KYNO_FISHINGROD_THULECITE = "I should try this one on Wurt." -- NEEDS TRANSLATION
+WILLOW.DESCRIBE.KYNO_FISHINGROD_THULECITE = "I should try this one on Wurt."
+
+WILLOW.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Ooooh, sparkly sugar!"
+
+WILLOW.DESCRIBE.OPALPRECIOUSCREAM = "It's like whipped fire... but pretty!"
+
+WILLOW.DESCRIBE.CATFISHSTICK = "Fish on a stick. Nice."
+
+WILLOW.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Ooooh, shiny! I wonder what it'll do."

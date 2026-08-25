@@ -125,8 +125,8 @@ local kyno_foods_keg =
 		tags = {"fooddrink", "alcoholic_drink", "monstermeat"},
 		card_def = {ingredients = {{"durian", 2}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
-			if eater ~= nil and eater:HasTag("playermonster") 
-			and not (eater.components.health ~= nil and eater.components.health:IsDead()) 
+			if eater ~= nil and eater:HasTag("playermonster")
+			and not (eater.components.health ~= nil and eater.components.health:IsDead())
 			and not eater:HasTag("playerghost") then
 				eater.components.health:DoDelta(5)
 				eater.components.sanity:DoDelta(40)
@@ -195,27 +195,27 @@ local kyno_foods_keg =
 		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"wormlight_lesser", 2}, {"ice", 1}}},
 		prefabs = { "wormlight_light_greater" },
-        oneatenfn = function(inst, eater)
-            if eater.wormlight ~= nil then
-                if eater.wormlight.prefab == "wormlight_light_greater" then
-                    eater.wormlight.components.spell.lifetime = 0
-                    eater.wormlight.components.spell:ResumeSpell()
-                    return
-                else
-                    eater.wormlight.components.spell:OnFinish()
-                end
-            end
+		oneatenfn = function(inst, eater)
+			if eater.wormlight ~= nil then
+				if eater.wormlight.prefab == "wormlight_light_greater" then
+					eater.wormlight.components.spell.lifetime = 0
+					eater.wormlight.components.spell:ResumeSpell()
+					return
+				else
+					eater.wormlight.components.spell:OnFinish()
+				end
+			end
 
-            local light = SpawnPrefab("wormlight_light_greater")
-            light.components.spell:SetTarget(eater)
-            if light:IsValid() then
-                if light.components.spell.target == nil then
-                    light:Remove()
-                else
-                    light.components.spell:StartSpell()
-                end
-            end
-        end,
+			local light = SpawnPrefab("wormlight_light_greater")
+			light.components.spell:SetTarget(eater)
+			if light:IsValid() then
+				if light.components.spell.target == nil then
+					light:Remove()
+				else
+					light.components.spell:StartSpell()
+				end
+			end
+		end,
 	},
 
 	wine_banana =
@@ -302,13 +302,13 @@ local kyno_foods_keg =
 		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"ancientfruit_nightvision", 2}, {"ice", 1}}},
 		prefabs = { "kyno_nightvisionbuff" },
-        oneatenfn = function(inst, eater)
-            eater:AddDebuff("kyno_nightvisionbuff", "kyno_nightvisionbuff")
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_nightvisionbuff", "kyno_nightvisionbuff")
 
 			if eater.components.grogginess ~= nil then
 				eater.components.grogginess:MakeGrogginessAtLeast(1.5)
 			end
-        end,
+		end,
 	},
 
 	juice_carrot =
@@ -631,15 +631,15 @@ local kyno_foods_keg =
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"moon_cap", 2}, {"ice", 1}}},
 		prefabs = { "buff_sleepresistance" },
-        oneatenfn = function(inst, eater)
-            if eater.components.grogginess ~= nil and
+		oneatenfn = function(inst, eater)
+			if eater.components.grogginess ~= nil and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
 			not eater:HasTag("playerghost") then
 				eater.components.grogginess:ResetGrogginess()
-            end
+			end
 
 			eater:AddDebuff("shroomsleepresist", "buff_sleepresistance")
-        end,
+		end,
 	},
 
 	juice_kelp =
@@ -921,7 +921,7 @@ local kyno_foods_keg =
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_fennel", 2}, {"ice", 1}}},
 	},
-	
+
 	juice_truffles =
 	{
 		test = function(brewer, names, tags) return names.kyno_truffles and (names.kyno_truffles == 2) and tags.frozen end,
@@ -942,7 +942,7 @@ local kyno_foods_keg =
 		tags = {"fooddrink", "truffles"},
 		card_def = {ingredients = {{"kyno_truffles", 2}, {"ice", 1}}},
 	},
-	
+
 	juice_sporecap =
 	{
 		test = function(brewer, names, tags) return names.kyno_sporecap and (names.kyno_sporecap == 2) and tags.frozen end,
@@ -970,7 +970,7 @@ local kyno_foods_keg =
 			end
 		end,
 	},
-	
+
 	juice_sporecap_dark =
 	{
 		test = function(brewer, names, tags) return names.kyno_sporecap_dark and (names.kyno_sporecap_dark == 2) and tags.frozen end,
@@ -1022,7 +1022,7 @@ local kyno_foods_keg =
 
 	juice_cavetuber_blooming =
 	{
-		test = function(brewer, names, tags) return names.kyno_cavetuber_blooming 
+		test = function(brewer, names, tags) return names.kyno_cavetuber_blooming
 		and (names.kyno_cavetuber_blooming == 2) and tags.frozen end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -1132,9 +1132,9 @@ local kyno_foods_keg =
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_piko_orange", 1}, {"green_cap", 1}, {"kyno_tealeaf", 1}}},
 		prefabs = { "kyno_sanityregenbuff" },
-        oneatenfn = function(inst, eater)
+		oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_sanityregenbuff", "kyno_sanityregenbuff")
-        end,
+		end,
 	},
 
 	teared =
@@ -1154,9 +1154,9 @@ local kyno_foods_keg =
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_piko", 1}, {"red_cap", 1}, {"kyno_tealeaf", 1}}},
 		prefabs = { "healthregenbuff" },
-        oneatenfn = function(inst, eater)
+		oneatenfn = function(inst, eater)
 			eater:AddDebuff("healthregenbuff", "healthregenbuff")
-        end,
+		end,
 	},
 
 	piraterum =
@@ -1175,14 +1175,14 @@ local kyno_foods_keg =
 		pigcoinvalue = {5, 3, 1},
 		overridebuild = "kyno_foodrecipes_keg",
 		floater = TUNING.HOF_FLOATER,
-		luckitem = { luck = -TUNING.KYNO_LUCK_MED },
+		luckitem = { luck = -TUNING.KYNO_LUCK_SUPERTINY },
 		tags = {"fooddrink", "alcoholic_drink", "honeyed", "monkeyqueenbribe"},
 		card_def = {ingredients = {{"durian", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
 		prefabs = { "kyno_piratebuff" },
 		oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_piratebuff", "kyno_piratebuff")
 			eater:PushEvent("piraterum")
-			
+
 			--[[
 			if eater ~= nil and eater.SoundEmitter ~= nil then
 				eater.SoundEmitter:PlaySound("hof_sounds/common/piraterum/laugh", "piraterum", 0.5)
@@ -1213,7 +1213,7 @@ local kyno_foods_keg =
 		card_def = {ingredients = {{"kyno_aloe", 1}, {"kyno_spotspice_leaf", 1}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
 			OnFoodTeleport(inst, eater)
-			
+
 			if eater.components.grogginess ~= nil then
 				eater.components.grogginess:MakeGrogginessAtLeast(1.5)
 			end
@@ -1228,7 +1228,7 @@ local kyno_foods_keg =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = -5,
 		hunger = 12.5,
 		sanity = 60,
@@ -1257,7 +1257,7 @@ local kyno_foods_keg =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = -10,
 		hunger = 20,
 		sanity = 60,
@@ -1269,7 +1269,7 @@ local kyno_foods_keg =
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_sugar", 1}, {"wormlight_lesser", 1}, {"ice", 1}}},
 		prefabs = { "wormlight_light_greater" },
-        oneatenfn = function(inst, eater)
+		oneatenfn = function(inst, eater)
 			eater:PushEvent("bottlecap")
 
 			if TryLuckRoll(eater, TUNING.KYNO_NUKACOLA_BOTTLECAP_CHANCE, HofLuckFormulas.NukaColaBottleCap) then
@@ -1279,28 +1279,28 @@ local kyno_foods_keg =
 				end
 			end
 
-            if eater.wormlight ~= nil then
-                if eater.wormlight.prefab == "wormlight_light_greater" then
-                    eater.wormlight.components.spell.lifetime = 0
-                    eater.wormlight.components.spell:ResumeSpell()
-                    return
-                else
-                    eater.wormlight.components.spell:OnFinish()
-                end
-            end
+			if eater.wormlight ~= nil then
+				if eater.wormlight.prefab == "wormlight_light_greater" then
+					eater.wormlight.components.spell.lifetime = 0
+					eater.wormlight.components.spell:ResumeSpell()
+					return
+				else
+					eater.wormlight.components.spell:OnFinish()
+				end
+			end
 
-            local light = SpawnPrefab("wormlight_light_greater")
-            light.components.spell:SetTarget(eater)
-            if light:IsValid() then
-                if light.components.spell.target == nil then
-                    light:Remove()
-                else
-                    light.components.spell:StartSpell()
-                end
-            end
-        end,
+			local light = SpawnPrefab("wormlight_light_greater")
+			light.components.spell:SetTarget(eater)
+			if light:IsValid() then
+				if light.components.spell.target == nil then
+					light:Remove()
+				else
+					light.components.spell:StartSpell()
+				end
+			end
+		end,
 	},
-	
+
 	nukacola_dark =
 	{
 		test = function(cooker, names, tags) return names.nukacola and names.horrorfuel and tags.frozen end,
@@ -1308,7 +1308,7 @@ local kyno_foods_keg =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 30,
 		hunger = 62.5,
 		sanity = -30,
@@ -1333,7 +1333,7 @@ local kyno_foods_keg =
 			end
 		end,
 	},
-	
+
 	nukacola_twist =
 	{
 		test = function(cooker, names, tags) return names.nukacola and names.cactus_flower and tags.frozen end,
@@ -1341,7 +1341,7 @@ local kyno_foods_keg =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 30,
 		hunger = 30,
 		sanity = 30,
@@ -1366,7 +1366,7 @@ local kyno_foods_keg =
 			end
 		end,
 	},
-	
+
 	nukashine =
 	{
 		test = function(brewer, names, tags) return names.ancientfruit_nightvision and names.kyno_sugar and names.nukacola_quantum end,
@@ -1408,7 +1408,7 @@ local kyno_foods_keg =
 		overridebuild = "kyno_foodrecipes_keg",
 		pigcoinvalue = {7, 3, 0},
 		floater = TUNING.HOF_FLOATER,
-		luckitem = { luck = TUNING.KYNO_LUCK_MED },
+		luckitem = { luck = TUNING.KYNO_LUCK_SUPERTINY },
 		tags = {"fooddrink", "alcoholic_drink"},
 		card_def = {ingredients = {{"kyno_rice", 2}, {"ice", 1}}},
 		prefabs = { "kyno_dmgreductionbuff" },
@@ -1416,7 +1416,7 @@ local kyno_foods_keg =
 			eater:AddDebuff("kyno_dmgreductionbuff", "kyno_dmgreductionbuff")
 		end,
 	},
-	
+
 	coffee_mocha =
 	{
 		test = function(brewer, names, tags) return names.kyno_coffeebeans_cooked and (names.kyno_coffeebeans_cooked == 2) and tags.chocolate end,
@@ -1427,7 +1427,7 @@ local kyno_foods_keg =
 		temperatureduration = TUNING.FOOD_TEMP_BRIEF,
 		health = -10,
 		hunger = 33,
-		sanity = 33, 
+		sanity = 33,
 		cooktime = 72,
 		scale = 1,
 		nameoverride = "COFFEE",
@@ -1438,7 +1438,7 @@ local kyno_foods_keg =
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 2}, {"chocolate_black", 1}}},
 	},
-	
+
 	toadstoolcola = -- Oh well, good luck having to farm Toadstool for this. OR just buy his legs from Sammy!
 	{
 		test = function(brewer, names, tags) return names.kyno_poison_froglegs and tags.sugar and tags.frozen end,
@@ -1446,7 +1446,7 @@ local kyno_foods_keg =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = -30,
 		hunger = 12.5,
 		sanity = 80,
@@ -1462,7 +1462,7 @@ local kyno_foods_keg =
 			eater:AddDebuff("kyno_amphibianbuff", "kyno_amphibianbuff")
 		end,
 	},
-	
+
 	tepache =
 	{
 		test = function(brewer, names, tags) return names.kyno_pineapple_halved and tags.sugar and tags.frozen end,
@@ -1470,7 +1470,7 @@ local kyno_foods_keg =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 20,
 		hunger = 12.5,
 		sanity = 33,
@@ -1481,7 +1481,7 @@ local kyno_foods_keg =
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"kyno_sugar", 1}, {"ice", 1}}},
 	},
-	
+
 	lunartequila =
 	{
 		test = function(brewer, names, tags) return names.moon_tree_blossom and names.purebrilliance and tags.frozen end,
@@ -1489,7 +1489,7 @@ local kyno_foods_keg =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		loopanim = true,
 		health = 5,
 		hunger = 12.5,
@@ -1508,7 +1508,7 @@ local kyno_foods_keg =
 			eater:AddDebuff("kyno_enlightenmentbuff", "kyno_enlightenmentbuff")
 		end,
 	},
-	
+
 	mimicmosa =
 	{
 		test = function(brewer, names, tags) return names.kyno_pineapple_halved and names.horrorfuel and tags.frozen end,
@@ -1516,7 +1516,7 @@ local kyno_foods_keg =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		horrorfx = true,
 		health = 5,
 		hunger = 12.5,
@@ -1534,7 +1534,7 @@ local kyno_foods_keg =
 			eater:AddDebuff("kyno_stealthbuff", "kyno_stealthbuff")
 		end,
 	},
-	
+
 	souljuice =
 	{
 		test = function(brewer, names, tags) return names.kyno_bottle_soul and names.pomegranate and tags.frozen end,
@@ -1543,7 +1543,7 @@ local kyno_foods_keg =
 		perishtime = nil,
 		fireproof = true,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 0,
 		hunger = 0,
 		hunger2 = 100,
@@ -1561,7 +1561,7 @@ local kyno_foods_keg =
 			if eater:HasTag("soulstealer") and eater.components.health ~= nil and not eater.components.health:IsDead() and
 			not eater:HasTag("playerghost") and eater.components.hunger ~= nil and eater.components.sanity ~= nil then
 				eater.components.hunger:DoDelta(TUNING.SOULJUICE_HUNGER)
-				
+
 				-- Nice inclination makes you lose sanity. Naughty inclination heals for less.
 				if eater.wortox_inclination == "nice" then
 					eater.components.health:DoDelta(TUNING.SOULJUICE_HEALTH_NICE)
@@ -1586,7 +1586,7 @@ local kyno_foods_keg =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
+		temperatureduration = TUNING.BUFF_FOOD_TEMP_DURATION,
 		health = 150,
 		hunger = 150,
 		sanity = 150,
@@ -1597,7 +1597,7 @@ local kyno_foods_keg =
 		tags = {"fooddrink", "honeyed"},
 		card_def = {ingredients = {{"mandrake", 1}, {"kyno_sugar", 1}, {"ice", 1}}},
 		oneatenfn = function(inst, eater)
-			if eater ~= nil and eater:HasTag("player") 
+			if eater ~= nil and eater:HasTag("player")
 			and not (eater.components.health ~= nil and eater.components.health:IsDead()) then
 				eater:PushEvent("drankcannedrink")
 			end
@@ -1617,7 +1617,7 @@ local kyno_foods_keg =
 		isfertilizer = true,
 		nutrients = {32, 8, 8},
 		-- no_brewbook = true,
-        floater = {"small", nil, nil},
+		floater = {"small", nil, nil},
 	},
 }
 

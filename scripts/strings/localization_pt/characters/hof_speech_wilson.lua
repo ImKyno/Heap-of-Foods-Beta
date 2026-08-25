@@ -107,6 +107,12 @@ WILSON.ANNOUNCE_KYNO_CUREBUFF_END = "As coisas voltaram a estragar normalmente."
 WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Sinto-me bem firme no chão."
 WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "E lá se vai minha estabilidade."
 
+WILSON.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Meus ataques parecem mais poderosos!"
+WILSON.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Meus ataques perderam a força."
+
+WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Sinto um tremendo azar no ar..."
+WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Acho que minha sorte voltou ao normal."
+
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
 
 WILSON.ANNOUNCE_KYNO_SERENITYISLAND_SHOP_FAIL = "Ele quer outra coisa."
@@ -531,7 +537,7 @@ WILSON.DESCRIBE.KYNO_NEONFISH_COOKED = "Frito, fritinho."
 
 WILSON.DESCRIBE.KYNO_GROUPER = "Mar e terra, sem a terra."
 WILSON.DESCRIBE.KYNO_GROUPER_COOKED = "Esse peixe chegou ao fim."
- 
+
 WILSON.DESCRIBE.KYNO_PIERROTFISH = "Este é extra repelente à água."
 WILSON.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Grelhado à perfeição."
 
@@ -841,7 +847,7 @@ WILSON.DESCRIBE.CHOCOLATE_BLACK = "Finalmente um chocolate doce!"
 WILSON.DESCRIBE.CHOCOLATE_WHITE = "Finalmente um chocolate doce!"
 
 WILSON.DESCRIBE.TRICOLORDANGO = "O que é isso? De qualquer forma, é delicioso!"
- 
+
 WILSON.DESCRIBE.FRIESFRENCH = "A melhor forma de cozinhar uma batata."
 
 WILSON.DESCRIBE.PIRATERUM = "Parece perigoso."
@@ -853,7 +859,7 @@ WILSON.DESCRIBE.ONIONRINGS = "Pessoalmente não gosto de comidas com óleo. Mas 
 WILSON.DESCRIBE.DONUTS = "São rosquinhas!"
 WILSON.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "São rosquinhas!"
 WILSON.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "São rosquinhas!"
- 
+
 WILSON.DESCRIBE.CINNAMONROLL = "Gosto de como ele 'rola' na minha boca."
 
 WILSON.DESCRIBE.GUMMYBEARGERS = "Fofos, mas também perigosos."
@@ -940,7 +946,7 @@ WILSON.DESCRIBE.RICESAKE = "Mais um copo para mim! *hic*"
 
 WILSON.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Preciso ter cuidado ao replantá-la."
 
-WILSON.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WILSON.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Espinhoso!",
 	PICKED = "Precisa de tempo para crescer outro abacaxi.",
@@ -958,7 +964,7 @@ WILSON.DESCRIBE.PINACOLADA = "Gelada."
 
 WILSON.DESCRIBE.CHIMAS = "Uma bebida de erva refrescante."
 
-WILSON.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WILSON.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Para o que você acha que serve a água?",
 	ON = "Mantém minhas plantas hidratadas e saudáveis.",
@@ -1385,3 +1391,11 @@ WILSON.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 WILSON.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Parece o início de uma construção."
 
 WILSON.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Alguém para uma rodada de pescaria?"
+
+WILSON.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Um açúcar notavelmente fino, com uma estrutura cristalina incomum."
+
+WILSON.DESCRIBE.OPALPRECIOUSCREAM = "Um chantilly de iridescência esplêndida."
+
+WILSON.DESCRIBE.CATFISHSTICK = "Um bagre negro grelhado no espeto."
+
+WILSON.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Um doce com consequências imprevisíveis."

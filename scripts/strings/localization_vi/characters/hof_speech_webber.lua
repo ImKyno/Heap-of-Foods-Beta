@@ -101,11 +101,17 @@ WEBBER.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Ôi... sức mạnh ban đêm hết r�
 WEBBER.ANNOUNCE_KYNO_PANICBUFF_START = "Whoa! Mọi thứ đều sợ bọn mình!"
 WEBBER.ANNOUNCE_KYNO_PANICBUFF_END = "Chúng không còn sợ bọn mình nữa."
 
-WEBBER.ANNOUNCE_KYNO_CUREBUFF_START = "Our snacks will stay good longer!" -- NEEDS TRANSLATION
-WEBBER.ANNOUNCE_KYNO_CUREBUFF_END = "Aw, they're going bad again." -- NEEDS TRANSLATION
+WEBBER.ANNOUNCE_KYNO_CUREBUFF_START = "Our snacks will stay good longer!"
+WEBBER.ANNOUNCE_KYNO_CUREBUFF_END = "Aw, they're going bad again."
 
-WEBBER.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "We're super sturdy now!" -- NEEDS TRANSLATION
-WEBBER.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Uh-oh, we're pushable again." -- NEEDS TRANSLATION
+WEBBER.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "We're super sturdy now!"
+WEBBER.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "Uh-oh, we're pushable again."
+
+WEBBER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Whoa! We hit way harder now!"
+WEBBER.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Aww... we're not as strong anymore."
+
+WEBBER.ANNOUNCE_KYNO_BADLUCKBUFF_START = "something bad is definitely going to happen."
+WEBBER.ANNOUNCE_KYNO_BADLUCKBUFF_END = "I think our bad luck is gone!"
 
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái này."
 
@@ -136,13 +142,13 @@ WEBBER.ANNOUNCE_KYNO_ROE_RESEARCHED = "Tụi mình học được về mấy th�
 
 WEBBER.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Ngon quá! Tụi mình thích món này!"
 
-WEBBER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WEBBER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Owie, that was not a nice plant!",
 	"Eek, we feel all frosty inside!",
 }
 
-WEBBER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, we'll be more careful not to touch strange weeds." -- NEEDS TRANSLATION
+WEBBER.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Whew, we'll be more careful not to touch strange weeds."
 
 WEBBER.DESCRIBE.KYNO_ROE = "Đó không phải trứng nhện."
 WEBBER.DESCRIBE.KYNO_ROE_COOKED = "Không phải loại trứng tụi mình quen."
@@ -172,7 +178,7 @@ WEBBER.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Mấy hạt này làm tụi mình th�
 
 WEBBER.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Tụi mình có thể trồng nó ở chỗ khác!"
 
-WEBBER.DESCRIBE.KYNO_COFFEEBUSH = 
+WEBBER.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "Mấy hạt này nhìn không ngon lắm.",
 	PICKED = "Giờ chưa có hạt.",
@@ -181,7 +187,7 @@ WEBBER.DESCRIBE.KYNO_COFFEEBUSH =
 
 WEBBER.DESCRIBE.DUG_KYNO_SPOTBUSH = "Tụi mình nên trồng nó ở đâu đó!"
 
-WEBBER.DESCRIBE.KYNO_SPOTBUSH = 
+WEBBER.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Một bụi cây tím ngầu ghê.",
 	PICKED = "Giờ không có gì để hái.",
@@ -249,7 +255,7 @@ WEBBER.DESCRIBE.CUCUMBERSALAD = "Mỗi ngày năm phần rau."
 
 WEBBER.DESCRIBE.DUG_KYNO_WILDWHEAT = "Tụi mình có thể trồng lại nó!"
 
-WEBBER.DESCRIBE.KYNO_WILDWHEAT = 
+WEBBER.DESCRIBE.KYNO_WILDWHEAT =
 {
 	GENERIC = "Một nguồn thức ăn cơ bản!",
 	PICKED = "Giờ chẳng còn gì.",
@@ -408,7 +414,7 @@ WEBBER.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Wow!"
 
 WEBBER.DESCRIBE.KYNO_SEEDS_KIT = "Tụi mình cần trồng chúng!"
 
-WEBBER.DESCRIBE.KYNO_LIMPETROCK = 
+WEBBER.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "Tảng đá này phủ đầy đồ ăn!",
 	PICKED = "Chúng cần thời gian để quay lại.",
@@ -418,7 +424,7 @@ WEBBER.DESCRIBE.KYNO_LIMPETROCK =
 WEBBER.DESCRIBE.KYNO_LIMPETS = "Tụi mình phải ăn mấy thứ này thật sao?"
 WEBBER.DESCRIBE.KYNO_LIMPETS_COOKED = "Có vị như đại dương."
 
-WEBBER.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WEBBER.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "Wow, hồng quá!",
 	PICKED = "Giờ chưa có hoa.",
@@ -429,7 +435,7 @@ WEBBER.DESCRIBE.KYNO_LOTUS_ROOT = "Tụi mình nên trồng nó ở đâu đó n
 WEBBER.DESCRIBE.KYNO_LOTUS_FLOWER = "Trời ơi, đẹp quá."
 WEBBER.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Món này nhìn ngon quá."
 
-WEBBER.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WEBBER.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "Salad của biển...",
 	PICKED = "Chúng sẽ mọc lại, đúng không?",
@@ -441,7 +447,7 @@ WEBBER.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Mặn lắm."
 WEBBER.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Nó dính lên vòm miệng tụi mình!"
 WEBBER.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Tụi mình nên trồng nó ở đâu đó ngoài biển."
 
-WEBBER.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WEBBER.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "Tụi mình muốn ăn nó!",
 	PICKED = "Nó sẽ sớm mọc lại.",
@@ -452,7 +458,7 @@ WEBBER.DESCRIBE.KYNO_TAROROOT_ROOT = "Tụi mình nên trồng nó ở đâu đ�
 WEBBER.DESCRIBE.KYNO_TAROROOT = "Blech, khoai môn."
 WEBBER.DESCRIBE.KYNO_TAROROOT_COOKED = "Mẹ biết mình thích nó khi nấu chín."
 
-WEBBER.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WEBBER.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "Là bắp cải nước!",
 	PICKED = "Mong nó sớm mọc lại.",
@@ -479,7 +485,7 @@ WEBBER.DESCRIBE.CATFOOD = "Đồ ăn ngon nhất cho bạn bè của tụi mình
 
 WEBBER.DESCRIBE.KATFOOD = "Đồ ăn ngon nhất cho bạn bè của tụi mình!"
 
-WEBBER.DESCRIBE.KYNO_BANANATREE = 
+WEBBER.DESCRIBE.KYNO_BANANATREE =
 {
 	GENERIC = "Là cây nhiệt đới! Đầy chuối luôn!",
 	PICKED = "Chưa có chuối.",
@@ -491,7 +497,7 @@ WEBBER.DESCRIBE.KYNO_BANANATREE =
 WEBBER.DESCRIBE.KYNO_BANANA = "Một nải chuối."
 WEBBER.DESCRIBE.KYNO_BANANA_COOKED = "Chuối nóng!"
 
-WEBBER.DESCRIBE.KYNO_KOKONUTTREE = 
+WEBBER.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "Cái cây này có quà!",
 	PICKED = "Chưa có dừa.",
@@ -531,7 +537,7 @@ WEBBER.DESCRIBE.KYNO_NEONFISH_COOKED = "Mmm, thơm quá!"
 
 WEBBER.DESCRIBE.KYNO_GROUPER = "Haha! Mặt ngốc ghê."
 WEBBER.DESCRIBE.KYNO_GROUPER_COOKED = "Cậu ấy thích đầu cá. Mình thì không."
- 
+
 WEBBER.DESCRIBE.KYNO_PIERROTFISH = "Nó trơn quá!"
 WEBBER.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Giờ nó không còn dễ thương bằng nữa."
 
@@ -555,7 +561,7 @@ WEBBER.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Một cái xô to đùng."
 
 WEBBER.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Tụi mình có thể bẫy mấy con cua nhỏ bằng cái này."
 
-WEBBER.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WEBBER.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "Chào ông Heo!",
 	SLEEPING = "Mình nghĩ ông ấy đang ngủ.",
@@ -601,7 +607,7 @@ WEBBER.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Cua nhìn hơi giống nhện."
 
 WEBBER.DESCRIBE.KYNO_SLAUGHTERTOOL = "Mình không muốn dùng cái này."
 
-WEBBER.DESCRIBE.KYNO_CHICKEN2 = 
+WEBBER.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Haha! Tụi mình thích gà lắm!",
 	COOP = "Tụi mình được giữ nó rồi!",
@@ -617,7 +623,7 @@ WEBBER.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "Chào gà con! Ra ngoài đi nào!",
 }
 
-WEBBER.DESCRIBE.KYNO_CHICKENHOUSE = 
+WEBBER.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Heh, giống như một ngôi nhà chỉ dành cho gà!",
 	FULL = "Wow! Nhiều trứng quá!",
@@ -645,7 +651,7 @@ WEBBER.DESCRIBE.KYNO_COOKWARE_OVEN = "Mẹ bảo mình phải cẩn thận khi �
 WEBBER.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Mẹ bảo mình phải cẩn thận khi ở gần lò nướng."
 WEBBER.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Mẹ bảo mình phải cẩn thận khi ở gần lò nướng."
 
-WEBBER.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WEBBER.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Có gì dưới này vậy?",
 	FLIPPED = "Whoa! Nhìn kìa!",
@@ -692,7 +698,7 @@ WEBBER.DESCRIBE.PEPPERROLLS = "Nóng quá với tụi mình!"
 
 WEBBER.DESCRIBE.KYNO_SAPHEALER = "Đây là thuốc sao?"
 
-WEBBER.DESCRIBE.KYNO_OCEAN_WRECK = 
+WEBBER.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Một lời nhắc phải tôn trọng biển cả.",
 	PICKED = "Sau này chúng sẽ quay lại.",
@@ -714,7 +720,7 @@ WEBBER.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Hiệu quả hơn tụi mình tưởng."
 
 WEBBER.DESCRIBE.KYNO_BREWBOOK = "Giờ tụi mình sẽ không bao giờ quên công thức nữa!"
 
-WEBBER.DESCRIBE.KYNO_WOODENKEG = 
+WEBBER.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "Nó có làm được nước ép không?",
 	BREWING_LONG = "Nó vẫn đang làm.",
@@ -723,7 +729,7 @@ WEBBER.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "Aww, nó mất rồi.",
 }
 
-WEBBER.DESCRIBE.KYNO_PRESERVESJAR = 
+WEBBER.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "Dùng nó làm đồ muối chua thôi!",
 	BREWING_LONG = "Nó vẫn đang làm.",
@@ -732,7 +738,7 @@ WEBBER.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Aw... nó hỏng mất rồi.",
 }
 
-WEBBER.DESCRIBE.KYNO_ANTCHEST = 
+WEBBER.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Wow! Nhìn nó chứa được nhiều mật ong chưa kìa.",
 	HONEY = "Wow! Nhiều mật ong quá!",
@@ -748,7 +754,7 @@ WEBBER.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Ngon."
 WEBBER.DESCRIBE.KYNO_PIKO = "Bạn ấy bận rộn ghê."
 WEBBER.DESCRIBE.KYNO_PIKO_ORANGE = "Không biết bạn ấy có thích tiệc trà không."
 
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "Chào cây nhé.",
 	CHOPPED = "Tụi mình lấy hết lá rồi!",
@@ -756,7 +762,7 @@ WEBBER.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 	BURNT = "Nó mất rồi...",
 }
 
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
 	GENERIC = "Chào mấy bạn sóc!",
 	BURNING = "Nhà của chúng đang cháy!",
@@ -764,26 +770,26 @@ WEBBER.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WEBBER.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Wow, một cái thùng."
 
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "Mùi tanh tanh.",
 	BURNT = "Nhà của họ cháy mất rồi.",
 }
 
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "Mình vào được không?",
 	CRAFTED = "Này, giờ trông đẹp đó!",
 	BURNT = "Eo! Mùi còn tệ hơn nữa!",
 }
 
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "Có vẻ Sammy giờ giữ chìa khóa tới cánh cổng đó.",
 	OCCUPIED = "Mình nghĩ Sammy đang ngủ.",
 }
 
-WEBBER.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WEBBER.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "Sammy thích bày hàng hóa của mình ra.",
 	EMPTY = "Aw, chẳng còn gì.",
@@ -841,7 +847,7 @@ WEBBER.DESCRIBE.CHOCOLATE_BLACK = "Một thanh sô-cô-la! Tụi mình thích l�
 WEBBER.DESCRIBE.CHOCOLATE_WHITE = "Một thanh sô-cô-la! Tụi mình thích lắm!"
 
 WEBBER.DESCRIBE.TRICOLORDANGO = "Ồ! Lần đầu tụi mình thấy loại đồ ăn vặt này."
- 
+
 WEBBER.DESCRIBE.FRIESFRENCH = "Giòn rụm!"
 
 WEBBER.DESCRIBE.PIRATERUM = "Tụi mình không nên uống cái đó."
@@ -853,7 +859,7 @@ WEBBER.DESCRIBE.ONIONRINGS = "Thơm quá. Tụi mình thích!"
 WEBBER.DESCRIBE.DONUTS = "Yum! Bánh donut!"
 WEBBER.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Yum! Bánh donut!"
 WEBBER.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Yum! Bánh donut!"
- 
+
 WEBBER.DESCRIBE.CINNAMONROLL = "Vị ngon lắm, tụi mình thích!"
 
 WEBBER.DESCRIBE.GUMMYBEARGERS = "Yay, kẹo gấu dẻo!"
@@ -940,7 +946,7 @@ WEBBER.DESCRIBE.RICESAKE = "Bleh."
 
 WEBBER.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Một bụi dứa!"
 
-WEBBER.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WEBBER.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Dứa!",
 	PICKED = "Giờ chưa có dứa.",
@@ -958,7 +964,7 @@ WEBBER.DESCRIBE.PINACOLADA = "Tụi mình đã cảm thấy sóng biển rồi!"
 
 WEBBER.DESCRIBE.CHIMAS = "Nó ngon!"
 
-WEBBER.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WEBBER.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Chạy xuyên qua nó thôi.",
 	ON = "Nó đang tưới mọi thứ!",
@@ -1077,7 +1083,7 @@ WEBBER.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "Suỵt... ông ấy đang ngủ.",
 }
 
-WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Tụi mình tìm thấy nấm đang trốn! Hái được không?",
 	PICKED = "Tụi mình muốn thêm nữa!",
@@ -1087,7 +1093,7 @@ WEBBER.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WEBBER.DESCRIBE.KYNO_TRUFFLES = "Nhìn ngon đó! Tụi mình ăn được không?"
 WEBBER.DESCRIBE.KYNO_TRUFFLES_COOKED = "Nướng thơm và ngon!"
 
-WEBBER.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WEBBER.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Tụi mình có thể khoe đồ ăn vặt cho mọi người xem!",
 	FULL = "Wow! Nhìn món tụi mình làm nè!",
@@ -1112,7 +1118,7 @@ WEBBER.DESCRIBE.TRUFFLEOIL = "Mùi kỳ kỳ... nhưng cũng hơi ngon!"
 WEBBER.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Tụi mình nên dựng cái này."
 WEBBER.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Tụi mình sẽ nuôi thật nhiều bạn cá nhỏ!"
 
-WEBBER.DESCRIBE.KYNO_FISHFARMPLOT = 
+WEBBER.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "Nhìn kìa! Tụi mình có thể giữ cá trong đây!",
 	FUEL_HIGH = "Chúng no căng rồi!",
@@ -1175,7 +1181,7 @@ WEBBER.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Aw, chào bạn."
 WEBBER.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Rồi nó sẽ mọc tóc sớm thôi."
 WEBBER.DESCRIBE.KYNO_BRAINROCK_CORAL = "Thịt đầu ngon ngon!"
 
-WEBBER.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WEBBER.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "Mình muốn chọc nó, nhưng sợ tay tụi mình bị kẹt.",
 	PICKED = "Giờ nó buồn ngủ rồi.",
@@ -1183,7 +1189,7 @@ WEBBER.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WEBBER.DESCRIBE.BRAINMETTERSOUP = "Giống món mẹ từng nấu cho tụi mình!"
 
-WEBBER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WEBBER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "Trông ông ấy thân thiện.",
 	SLEEPING = "Chắc tụi mình không nên đánh thức ông ấy.",
@@ -1191,7 +1197,7 @@ WEBBER.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WEBBER.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Nhìn vào trong thôi!"
 
-WEBBER.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WEBBER.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "Tụi mình thắc mắc đây là gì?",
 	WAITING = "Bạn ấy từng là bạn mới của tụi mình.",
@@ -1207,7 +1213,7 @@ WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Nó làm tụi mình thấy bình yên
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Yay! Tụi mình thích bánh ngọt!"
 WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Tụi mình thích bóng bay!"
 
-WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WEBBER.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "Yum, cùng làm bắp rang nào!",
 	FUEL_HIGH = "Còn nhiều bắp rang nữa!",
@@ -1247,7 +1253,7 @@ WEBBER.DESCRIBE.CHICKENROTISSERIE = "Nó đang quay! Và thơm tuyệt luôn!"
 
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Mùi cũng dễ chịu đó!"
 WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Vị như hoa vậy!"
-WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Brr! It tickles our tongue!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Brr! It tickles our tongue!"
 
 WEBBER.DESCRIBE.SOULJUICE = "Whoa! Mùi hơi rợn rợn!"
 
@@ -1314,74 +1320,82 @@ WEBBER.DESCRIBE.KYNO_PIGCOIN1 = "Chúng ta có thể đổi nó lấy thứ khá
 WEBBER.DESCRIBE.KYNO_PIGCOIN2 = "Chúng ta mua được gì với số này?"
 WEBBER.DESCRIBE.KYNO_PIGCOIN3 = "Chúng ta có thể mua rất nhiều thứ với nó."
 
-WEBBER.DESCRIBE.KYNO_ICENETTLES = "Brrrrr...It stings!" -- NEEDS TRANSLATION
-WEBBER.DESCRIBE.KYNO_ICENETTLES_DRIED = "We don't like icy plant." -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_ICENETTLES = "Brrrrr...It stings!"
+WEBBER.DESCRIBE.KYNO_ICENETTLES_DRIED = "We don't like icy plant."
 
-WEBBER.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A special bag just for seeds!",
 	FULL = "Wow, that's a lot of seeds!",
 }
 
-WEBBER.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Not the face!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Not the face!"
 
-WEBBER.DESCRIBE.WX78MODULE_GOURMAND = "Huh. Is that what robot insides look like?" -- NEEDS TRANSLATION
-WEBBER.DESCRIBE.WX78MODULE_COOKER = "Huh. Is that what robot insides look like?" -- NEEDS TRANSLATION
-WEBBER.DESCRIBE.WX78MODULE_DRYER = "Huh. Is that what robot insides look like?" -- NEEDS TRANSLATION
-WEBBER.DESCRIBE.WX78MODULE_DRYER2 = "Huh. Is that what robot insides look like?" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.WX78MODULE_GOURMAND = "Huh. Is that what robot insides look like?"
+WEBBER.DESCRIBE.WX78MODULE_COOKER = "Huh. Is that what robot insides look like?"
+WEBBER.DESCRIBE.WX78MODULE_DRYER = "Huh. Is that what robot insides look like?"
+WEBBER.DESCRIBE.WX78MODULE_DRYER2 = "Huh. Is that what robot insides look like?"
 
 WEBBER.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "It was forever in there.", -- NEEDS TRANSLATION
+	GENERIC = "It was forever in there.",
 }
 
 WEBBER.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "It was forever in there.", -- NEEDS TRANSLATION
+	GENERIC = "It was forever in there.",
 }
 
 WEBBER.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "It was forever in there.", -- NEEDS TRANSLATION
+	GENERIC = "It was forever in there.",
 }
 
-WEBBER.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "The piggy is all filled up!",
 	UPGRADED = "Wow! The piggy can hold tons and tons of coins!",
 	GENERIC = "We can put our coins in here!",
 }
 
-WEBBER.DESCRIBE.MARSHMALLOWS = "We like how squishy they are!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.MARSHMALLOWS = "We like how squishy they are!"
 
-WEBBER.DESCRIBE.KOKONUTCOOKIES = "We love cookies!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KOKONUTCOOKIES = "We love cookies!"
 
-WEBBER.DESCRIBE.BBQRIBS = "These ribs are super tasty!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.BBQRIBS = "These ribs are super tasty!"
 
-WEBBER.DESCRIBE.BROWNIE = "We could eat a whole batch!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.BROWNIE = "We could eat a whole batch!"
 
-WEBBER.DESCRIBE.CHOCOLATE_CAKE = "We love chocolate cake!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.CHOCOLATE_CAKE = "We love chocolate cake!"
 
-WEBBER.DESCRIBE.SWORDFISHBLUEDINNER = "We like little packed meals!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.SWORDFISHBLUEDINNER = "We like little packed meals!"
 
-WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "It's awake when it's supposed to be sleeping!",
 	HELD = "It's tickling our pocket!",
 }
 
-WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "It's a really night winter bird!",
 	HELD = "It's poking our pocket!",
 }
 
-WEBBER.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "It's not finished yet!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "It's not finished yet!"
 
-WEBBER.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Helps catch a lot of fish!" -- NEEDS TRANSLATION
+WEBBER.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Helps catch a lot of fish!"
+
+WEBBER.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "It's like eating tiny rainbows!"
+
+WEBBER.DESCRIBE.OPALPRECIOUSCREAM = "It looks like a rainbow cloud!"
+
+WEBBER.DESCRIBE.CATFISHSTICK = "It's a whole fish on a stick!"
+
+WEBBER.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Ooh! It's so pretty! Hope we get something good!"

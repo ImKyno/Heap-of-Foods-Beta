@@ -104,8 +104,14 @@ WENDY.ANNOUNCE_KYNO_PANICBUFF_END = "The terror has subsided."
 WENDY.ANNOUNCE_KYNO_CUREBUFF_START = "Time loosens its grip on decay."
 WENDY.ANNOUNCE_KYNO_CUREBUFF_END = "Decay resumes its patient work."
 
-WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I am anchored to this wretched world." -- NEEDS TRANSLATION
-WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "The world may toss me about again." -- NEEDS TRANSLATION
+WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I am anchored to this wretched world."
+WENDY.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "The world may toss me about again."
+
+WENDY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "My strikes feel almost alive."
+WENDY.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "The strength has faded away."
+
+WENDY.ANNOUNCE_KYNO_BADLUCKBUFF_START = "I can feel misfortune closing in."
+WENDY.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The darkness has passed... for now."
 
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Maybe something to gather?"
 
@@ -172,7 +178,7 @@ WENDY.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Who knew the will to live came in bean
 
 WENDY.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Uprooted, yet not doomed."
 
-WENDY.DESCRIBE.KYNO_COFFEEBUSH = 
+WENDY.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "This plant takes nourishment from fiery death.",
 	PICKED = "It has nothing left to give.",
@@ -181,7 +187,7 @@ WENDY.DESCRIBE.KYNO_COFFEEBUSH =
 
 WENDY.DESCRIBE.DUG_KYNO_SPOTBUSH = "Displaced, but not gone."
 
-WENDY.DESCRIBE.KYNO_SPOTBUSH = 
+WENDY.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "I suppose it could be edible.",
 	PICKED = "It has nothing more to give.",
@@ -249,7 +255,7 @@ WENDY.DESCRIBE.CUCUMBERSALAD = "Ugh, more vegetables."
 
 WENDY.DESCRIBE.DUG_KYNO_WILDWHEAT = "Displaced, yet hopeful."
 
-WENDY.DESCRIBE.KYNO_WILDWHEAT = 
+WENDY.DESCRIBE.KYNO_WILDWHEAT =
 {
 	GENERIC = "A better version of grass.",
 	PICKED = "It offers nothing now.",
@@ -408,7 +414,7 @@ WENDY.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Dead."
 
 WENDY.DESCRIBE.KYNO_SEEDS_KIT = "Ordinary seeds."
 
-WENDY.DESCRIBE.KYNO_LIMPETROCK = 
+WENDY.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "Those look edible... sort of.",
 	PICKED = "They have retreated.",
@@ -418,7 +424,7 @@ WENDY.DESCRIBE.KYNO_LIMPETROCK =
 WENDY.DESCRIBE.KYNO_LIMPETS = "They eat of the rock. I eat of them."
 WENDY.DESCRIBE.KYNO_LIMPETS_COOKED = "Depressing."
 
-WENDY.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WENDY.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "It flourishes on the waves of sorrow.",
 	PICKED = "It must wait to bloom again.",
@@ -429,7 +435,7 @@ WENDY.DESCRIBE.KYNO_LOTUS_ROOT = "They desire a watery grave."
 WENDY.DESCRIBE.KYNO_LOTUS_FLOWER = "This beauty will also die."
 WENDY.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Its death was tasty."
 
-WENDY.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WENDY.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "A hearty weed.",
 	PICKED = "It will return, eventually.",
@@ -441,7 +447,7 @@ WENDY.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Better, but it's still a weed."
 WENDY.DESCRIBE.KYNO_SEAWEEDS_DRIED = "It keeps longer like this. Tastes better too."
 WENDY.DESCRIBE.KYNO_SEAWEEDS_ROOT = "They desire a watery grave."
 
-WENDY.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WENDY.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "Just an ordinary water vegetable.",
 	PICKED = "It will return in time.",
@@ -452,7 +458,7 @@ WENDY.DESCRIBE.KYNO_TAROROOT_ROOT = "They desire a watery grave."
 WENDY.DESCRIBE.KYNO_TAROROOT = "Almost a deadly nightshade. Almost."
 WENDY.DESCRIBE.KYNO_TAROROOT_COOKED = "Cooking this nightshade made it even less deadly."
 
-WENDY.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WENDY.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "Requires water in order to live.",
 	PICKED = "It will return, briefly.",
@@ -479,8 +485,8 @@ WENDY.DESCRIBE.CATFOOD = "Food for cats."
 
 WENDY.DESCRIBE.KATFOOD = "Food for cats."
 
-WENDY.DESCRIBE.KYNO_BANANATREE = 
-{ 
+WENDY.DESCRIBE.KYNO_BANANATREE =
+{
 	GENERIC = "Do you feel the sun now, poor plant?",
 	PICKED = "It must wait to give again.",
 	CHOPPED = "Its life was cut short.",
@@ -491,7 +497,7 @@ WENDY.DESCRIBE.KYNO_BANANATREE =
 WENDY.DESCRIBE.KYNO_BANANA = "The peel looks dangerous."
 WENDY.DESCRIBE.KYNO_BANANA_COOKED = "Warmed banana mush is so much better."
 
-WENDY.DESCRIBE.KYNO_KOKONUTTREE = 
+WENDY.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "Its fruit bestows life, but only if I kill it.",
 	PICKED = "It withholds its gifts.",
@@ -531,7 +537,7 @@ WENDY.DESCRIBE.KYNO_NEONFISH_COOKED = "I've... eaten worse..."
 
 WENDY.DESCRIBE.KYNO_GROUPER = "A pitiful creature."
 WENDY.DESCRIBE.KYNO_GROUPER_COOKED = "Rest now, fish spirit."
- 
+
 WENDY.DESCRIBE.KYNO_PIERROTFISH = "The stripes symbolize its emotional imprisionment."
 WENDY.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Don't lose your head."
 
@@ -555,7 +561,7 @@ WENDY.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "For collecting tree blood."
 
 WENDY.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Life is a trap."
 
-WENDY.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WENDY.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "How do you do, sir?",
 	SLEEPING = "Even authority must rest.",
@@ -601,7 +607,7 @@ WENDY.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Its insides are as horrid as its outsi
 
 WENDY.DESCRIBE.KYNO_SLAUGHTERTOOL = "Is all of life not a slaughter?"
 
-WENDY.DESCRIBE.KYNO_CHICKEN2 = 
+WENDY.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Hideous poultry.",
 	COOP = "At least it has shelter now.",
@@ -617,7 +623,7 @@ WENDY.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "It emerges, unaware of its tragic fate.",
 }
 
-WENDY.DESCRIBE.KYNO_CHICKENHOUSE = 
+WENDY.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "They lay eggs, then return to their quiet shelter.",
 	FULL = "More eggs born into this cruel world.",
@@ -645,7 +651,7 @@ WENDY.DESCRIBE.KYNO_COOKWARE_OVEN = "It looks okay."
 WENDY.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "It looks okay."
 WENDY.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "It looks okay."
 
-WENDY.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WENDY.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "If only I could hide under a rock.",
 	FLIPPED = "Revealed, but unimpressive.",
@@ -692,7 +698,7 @@ WENDY.DESCRIBE.PEPPERROLLS = "They're so good I almost forgot my crushing grief.
 
 WENDY.DESCRIBE.KYNO_SAPHEALER = "A potion to stave off the sickness."
 
-WENDY.DESCRIBE.KYNO_OCEAN_WRECK = 
+WENDY.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Its crew is probably dead...",
 	PICKED = "Only patience remains.",
@@ -714,7 +720,7 @@ WENDY.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Meat turned dry and delicious."
 
 WENDY.DESCRIBE.KYNO_BREWBOOK = "What's the point of filling my stomach when my heart remains empty..."
 
-WENDY.DESCRIBE.KYNO_WOODENKEG = 
+WENDY.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "A barrel for making wine or other goodies.",
 	BREWING_LONG = "Time drags on endlessly.",
@@ -723,7 +729,7 @@ WENDY.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "All effort, wasted.",
 }
 
-WENDY.DESCRIBE.KYNO_PRESERVESJAR = 
+WENDY.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "A cask for making preserved products.",
 	BREWING_LONG = "Time preserves all things... briefly.",
@@ -732,7 +738,7 @@ WENDY.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Reduced to nothing.",
 }
 
-WENDY.DESCRIBE.KYNO_ANTCHEST = 
+WENDY.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Still not as sweet as Abigail.",
 	HONEY = "All this honey... for what purpose?",
@@ -748,7 +754,7 @@ WENDY.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "I killed it to prolong my own life."
 WENDY.DESCRIBE.KYNO_PIKO = "Too naive to know pain."
 WENDY.DESCRIBE.KYNO_PIKO_ORANGE = "You exist to amuse others."
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "I can sit under it and contemplate life's futility.",
 	CHOPPED = "Stripped of its purpose.",
@@ -756,7 +762,7 @@ WENDY.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 	BURNT = "Nothing remains.",
 }
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
 	GENERIC = "It would be better if wasn't for all the pikos.",
 	BURNING = "Homelessness by flame.",
@@ -764,26 +770,26 @@ WENDY.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WENDY.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "It's just a box."
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "A lonely shelter for lonely creatures.",
 	BURNT = "Another home reduced to nothing.",
 }
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "How quaint.",
 	CRAFTED = "A modest improvement.",
 	BURNT = "The stench lingers even now.",
 }
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "I kinda want that backpack on the display.",
 	OCCUPIED = "Even merchants must rest.",
 }
 
-WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WENDY.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "Its full of goodies.",
 	EMPTY = "There is nothing left to take.",
@@ -841,7 +847,7 @@ WENDY.DESCRIBE.CHOCOLATE_BLACK = "Even the sweetest of candies can't make my hea
 WENDY.DESCRIBE.CHOCOLATE_WHITE = "Even the sweetest of candies can't make my heart melt."
 
 WENDY.DESCRIBE.TRICOLORDANGO = "A unordinary sweet snack, how classic."
- 
+
 WENDY.DESCRIBE.FRIESFRENCH = "A bit crunchy."
 
 WENDY.DESCRIBE.PIRATERUM = "Death awaits me."
@@ -853,7 +859,7 @@ WENDY.DESCRIBE.ONIONRINGS = "Hmm. It's a bit crunch and soggy."
 WENDY.DESCRIBE.DONUTS = "The taste is very sweet. But not as much as I would like."
 WENDY.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "The taste is very sweet. But not as much as I would like."
 WENDY.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "The taste is very sweet. But not as much as I would like."
- 
+
 WENDY.DESCRIBE.CINNAMONROLL = "The sugar mixture looks decent."
 
 WENDY.DESCRIBE.GUMMYBEARGERS = "Tiny bears that my mouth can crush."
@@ -940,7 +946,7 @@ WENDY.DESCRIBE.RICESAKE = "Vegetable alcoholic drink? Bleh."
 
 WENDY.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Removed from the earth."
 
-WENDY.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WENDY.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "A tropical fruit bush.",
 	PICKED = "It has nothing more to give.",
@@ -958,7 +964,7 @@ WENDY.DESCRIBE.PINACOLADA = "Cold and refreshing."
 
 WENDY.DESCRIBE.CHIMAS = "It looks like a plain."
 
-WENDY.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WENDY.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "It cannot water my parched soul.",
 	ON = "At least the plants are cared for.",
@@ -1077,7 +1083,7 @@ WENDY.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "At least he may rest peacefully for now.",
 }
 
-WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Even in darkness, they grow...",
 	PICKED = "Gone, like most good things.",
@@ -1087,7 +1093,7 @@ WENDY.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WENDY.DESCRIBE.KYNO_TRUFFLES = "Delicacies born from darkness."
 WENDY.DESCRIBE.KYNO_TRUFFLES_COOKED = "Darkness turned into warmth and flavor."
 
-WENDY.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WENDY.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "A display of fleeting beauty. All food decays... eventually.",
 	FULL = "It will be gone soon enough.",
@@ -1112,7 +1118,7 @@ WENDY.DESCRIBE.TRUFFLEOIL = "The essence of decay, bottled for indulgence."
 WENDY.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Shall I even bother building this?"
 WENDY.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "A watery grave... how poetic."
 
-WENDY.DESCRIBE.KYNO_FISHFARMPLOT = 
+WENDY.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "Even in a hatchery, life begins quietly.",
 	FUEL_HIGH = "Their hunger is satisfied.",
@@ -1175,7 +1181,7 @@ WENDY.DESCRIBE.KYNO_BRAINROCK_LARVAE = "What a foul worm."
 WENDY.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Bare and completely devoid of life."
 WENDY.DESCRIBE.KYNO_BRAINROCK_CORAL = "Is that what I look like inside?"
 
-WENDY.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WENDY.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "That's one smart-looking plant.",
 	PICKED = "It rests, as all minds must.",
@@ -1183,7 +1189,7 @@ WENDY.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WENDY.DESCRIBE.BRAINMETTERSOUP = "Its for kids."
 
-WENDY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WENDY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "I envy his contentment.",
 	SLEEPING = "Even kings must rest.",
@@ -1191,7 +1197,7 @@ WENDY.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WENDY.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "That doesn't look like a reliable place to store things."
 
-WENDY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WENDY.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "A dead fish thingy. Looks important.",
 	WAITING = "It's reached its natural state.",
@@ -1207,7 +1213,7 @@ WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Makes me think oh birthday parties with
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Sweetness can't fill the void within..."
 WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "A temporary joy... destined to deflate."
 
-WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WENDY.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "Quiet popping for quiet thoughts.",
 	FUEL_HIGH = "It still has purpose.",
@@ -1325,63 +1331,71 @@ WENDY.DESCRIBE.KYNO_SEEDSBAG =
 
 WENDY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Grown to be thrown away, the cruel cycle of life."
 
-WENDY.DESCRIBE.WX78MODULE_GOURMAND = "It looks so fragile... hopefully no tragic accidents befall it." -- NEEDS TRANSLATION
-WENDY.DESCRIBE.WX78MODULE_COOKER = "It looks so fragile... hopefully no tragic accidents befall it." -- NEEDS TRANSLATION
-WENDY.DESCRIBE.WX78MODULE_DRYER = "It looks so fragile... hopefully no tragic accidents befall it." -- NEEDS TRANSLATION
-WENDY.DESCRIBE.WX78MODULE_DRYER2 = "It looks so fragile... hopefully no tragic accidents befall it." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.WX78MODULE_GOURMAND = "It looks so fragile... hopefully no tragic accidents befall it."
+WENDY.DESCRIBE.WX78MODULE_COOKER = "It looks so fragile... hopefully no tragic accidents befall it."
+WENDY.DESCRIBE.WX78MODULE_DRYER = "It looks so fragile... hopefully no tragic accidents befall it."
+WENDY.DESCRIBE.WX78MODULE_DRYER2 = "It looks so fragile... hopefully no tragic accidents befall it."
 
 WENDY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "I wonder what remains.", -- NEEDS TRANSLATION
+	GENERIC = "I wonder what remains.",
 }
 
 WENDY.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "I wonder what remains.", -- NEEDS TRANSLATION
+	GENERIC = "I wonder what remains.",
 }
 
 WENDY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "I wonder what remains.", -- NEEDS TRANSLATION
+	GENERIC = "I wonder what remains.",
 }
 
-WENDY.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "Even the pig is burdened by greed.",
 	UPGRADED = "Its hunger for wealth has no end.",
 	GENERIC = "A little vessel for earthly riches.",
 }
 
-WENDY.DESCRIBE.MARSHMALLOWS = "They are almost like little clouds." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.MARSHMALLOWS = "They are almost like little clouds."
 
-WENDY.DESCRIBE.KOKONUTCOOKIES = "A cookie with a tropical melancholy." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KOKONUTCOOKIES = "A cookie with a tropical melancholy."
 
-WENDY.DESCRIBE.BBQRIBS = "The meat is quite... hauntingly tender." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.BBQRIBS = "The meat is quite... hauntingly tender."
 
-WENDY.DESCRIBE.BROWNIE = "Dark and sweet." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.BROWNIE = "Dark and sweet."
 
-WENDY.DESCRIBE.CHOCOLATE_CAKE = "A cake as dark as my mood." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.CHOCOLATE_CAKE = "A cake as dark as my mood."
 
-WENDY.DESCRIBE.SWORDFISHBLUEDINNER = "A cold meal for a cold world." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.SWORDFISHBLUEDINNER = "A cold meal for a cold world."
 
-WENDY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "It watches from the darkness...",
 	HELD = "I wonder if it can see from inside my pocket...",
 }
 
-WENDY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "It watches the frozen darkness.",
 	HELD = "Its little beak keeps prodding me...",
 }
 
-WENDY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Even unfinished, it has a certain bleakness." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Even unfinished, it has a certain bleakness."
 
-WENDY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Hook, line and sinker." -- NEEDS TRANSLATION
+WENDY.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Hook, line and sinker."
+
+WENDY.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Even sugar can sparkle in the darkness."
+
+WENDY.DESCRIBE.OPALPRECIOUSCREAM = "A beautiful sweetness, doomed to melt away."
+
+WENDY.DESCRIBE.CATFISHSTICK = "Even the river's creatures end up on the grill."
+
+WENDY.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A beautiful sweetness hiding an uncertain fate."

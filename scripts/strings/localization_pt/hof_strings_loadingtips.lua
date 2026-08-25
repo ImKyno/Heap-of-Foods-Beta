@@ -31,6 +31,7 @@ local LOADINGTIPS   =
 	RUINEDSAPTREE   = "Cuidado! Árvores Açucaradsa Extraídas com Seiva transbordando e não colhidas podem estragar. Produzindo Seiva Arruinada em vez disso!",
 	PIGELDERFOODS   = "\"Ouvi dizer que aquele porco estranho na ilha rosada quer algum tipo de comida... Algo relacionado a Caramelos ou Lagostas.\" -W",
 	SALTPOND        = "Você pode pescar diferentes tipos de peixes nas Poças de Sal do Arquipélago da Serenidade. Experimente!",
+	SALTPOND2       = "Poças de Sal artificiais produzem Cristais de Sal mais devagar que Poças de Sal naturais e só podem ser construídas em terrenos rochosos.",
 	SALTRACK        = "O Varal de Sal pode ser instalado na Poça de Sal para produzir Cristais de Sal a cada quatro dias.",
 	SPOTTYSHRUB     = "Arbustos Folhosos podem ser encontrados por todo o Arquipélago da Serenidade. E podem ser levados para casa usando uma Pá.",
 	SWEETFLOWER     = "A Flor Doce pode ser usada na Panela de Barro como opção de adoçante.",
@@ -129,6 +130,7 @@ local LOADINGTIPS   =
 	ELDERMANDRAKE1  = "Mandrágoras Anciãs, quando mortas, fazem todas as criaturas ao redor adormecerem por alguns segundos.",
 	ELDERMANDRAKE2  = "Cuidado! Mandrágoras Anciãs não gostam que você carregue vegetais ou outras mandrágoras perto delas.",
 	ELDERMANDRAKE3  = "\"Ouvi dizer que ontem alguém encontrou umas estranhas casas folhosas nas cavernas perto da floresta de cogumelos. Fico me perguntando quem mora lá...\" -W",
+	ELDERMANDRAKE4  = "Mandrágoras Anciãs possuem chance de dropar Sementes de plantas e ervas daninhas dependendo da estação.",
 	EARMUFFSHAT     = "Os Protetores Auriculares de Coelho agora oferecem proteção contra ruídos altos!",
 	PIGCOIN1        = "Comidas Preparadas podem ser trocadas com o Rei Porco por Koins. Cada comida tem seu próprio valor; pratos raros e melhores valem mais do que receitas comuns.",
 	PIGCOIN2        = "O Rei Porco está com fome e exige comida! Ele está oferecendo Koins (sua mais nova tentativa de criar uma moeda, ou assim dizem seus seguidores) em troca de refeições deliciosas.",
@@ -136,6 +138,8 @@ local LOADINGTIPS   =
 	PARTITIO1       = "Partitio é um porco orgulhoso que vive na Floresta Decídua. Ele vende apenas produtos de alta qualidade e está ansioso para conhecer novos clientes.",
 	PARTITIO2       = "Após alguns acontecimentos infelizes no passado, Partitio agora se recusa a fazer negócios com os Povo-peixe novamente!",
 	PARTITIO3       = "Partitio descobriu que alguém destruiu sua casa e agora precisa de ajuda para reconstruí-la ao seu antigo esplendor antes de voltar a fazer negócios.",
+	CRITDAMAGE      = "O Chantilly Cintilante permite que seus ataques causem acertos críticos com um impressionante bônus de 150% de dano!",
+	RANDOMBUFF      = "O Pirulito Cintilante concede um efeito aleatório ao ser comido. Está se sentindo com sorte hoje?",
 }
 
 for k, v in pairs(LOADINGTIPS) do

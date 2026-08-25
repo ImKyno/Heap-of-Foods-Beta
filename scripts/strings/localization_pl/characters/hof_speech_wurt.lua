@@ -101,11 +101,17 @@ WURT.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Nie ma już nocnej mocy, florp..."
 WURT.ANNOUNCE_KYNO_PANICBUFF_START = "Wszyscy przestraszeni, florp!"
 WURT.ANNOUNCE_KYNO_PANICBUFF_END = "Nikt już nie jest przestraszony, florp."
 
-WURT.ANNOUNCE_KYNO_CUREBUFF_START = "Food stay good longer, florp!" -- NEEDS TRANSLATION
-WURT.ANNOUNCE_KYNO_CUREBUFF_END = "Food getting old again, florp." -- NEEDS TRANSLATION
+WURT.ANNOUNCE_KYNO_CUREBUFF_START = "Food stay good longer, florp!"
+WURT.ANNOUNCE_KYNO_CUREBUFF_END = "Food getting old again, florp."
 
-WURT.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Must stay still!" -- NEEDS TRANSLATION
-WURT.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "A bit slippery, florp." -- NEEDS TRANSLATION
+WURT.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "Must stay still!"
+WURT.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "A bit slippery, florp."
+
+WURT.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "Wurt feels strong! Hit things harder, florp!"
+WURT.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "Wurt not strong anymore..."
+
+WURT.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Something bad about to happen!"
+WURT.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Bad luck gone!"
 
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Ładne rybki w bagnie!"
 
@@ -117,7 +123,7 @@ WURT.ANNOUNCE_KYNO_TREE_TOOSMALL_FAIL = "Jeszcze nie? Dobrze..."
 
 WURT.ANNOUNCE_KYNO_FIREPITINSTALL_FAIL = "Nie? Dobrze."
 
-WURT.ANNOUNCE_KYNO_POTHANGER_FAIL = "Ugh, nie chcesz tego?" 
+WURT.ANNOUNCE_KYNO_POTHANGER_FAIL = "Ugh, nie chcesz tego?"
 
 WURT.ANNOUNCE_KYNO_CASSEROLE_FAIL = "Glurgh... tylko nie to..."
 
@@ -138,13 +144,13 @@ WURT.ANNOUNCE_KYNO_ROE_RESEARCHED = "Sekrety rybich dzieci! Glurp!"
 
 WURT.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Smaczne, florp!"
 
-WURT.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WURT.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"Ouchie! It cold! Don't like it, florp!",
 	"It a bad plant! Makes insides frosty!",
 }
 
-WURT.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Glurgh... feel bit better now." -- NEEDS TRANSLATION
+WURT.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Glurgh... feel bit better now."
 
 WURT.DESCRIBE.KYNO_ROE = "Mali przyjaciele!"
 WURT.DESCRIBE.KYNO_ROE_COOKED = "Nieeeeeee!"
@@ -174,7 +180,7 @@ WURT.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Czegoś brakuje..."
 
 WURT.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Potrzebuje ziemi!"
 
-WURT.DESCRIBE.KYNO_COFFEEBUSH = 
+WURT.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "Gorące ziarenka!",
 	PICKED = "Teraz brak ziaren.",
@@ -183,7 +189,7 @@ WURT.DESCRIBE.KYNO_COFFEEBUSH =
 
 WURT.DESCRIBE.DUG_KYNO_SPOTBUSH = "Roślina potrzebuje ziemi!"
 
-WURT.DESCRIBE.KYNO_SPOTBUSH = 
+WURT.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Różowy krzew, florp.",
 	PICKED = "Teraz nic nie ma.",
@@ -251,7 +257,7 @@ WURT.DESCRIBE.CUCUMBERSALAD = "Ładne, ale smakują okej."
 
 WURT.DESCRIBE.DUG_KYNO_WILDWHEAT = "Kępka trawy, flort."
 
-WURT.DESCRIBE.KYNO_WILDWHEAT = 
+WURT.DESCRIBE.KYNO_WILDWHEAT =
 {
 	GENERIC = "Trawa, flort.",
 	PICKED = "Teraz brak jedzenia.",
@@ -261,7 +267,7 @@ WURT.DESCRIBE.KYNO_WILDWHEAT =
 
 WURT.DESCRIBE.KYNO_MEALGRINDER = "Glurp... Jak to używać?"
 
-WURT.DESCRIBE.KYNO_MUSHSTUMP = 
+WURT.DESCRIBE.KYNO_MUSHSTUMP =
 {
 	GENERIC = "Ooooh, tu rosną grzyby!",
 	PICKED = "Już nie ma grzybów..?",
@@ -410,7 +416,7 @@ WURT.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Awww!"
 
 WURT.DESCRIBE.KYNO_SEEDS_KIT = "Małe kawałki."
 
-WURT.DESCRIBE.KYNO_LIMPETROCK = 
+WURT.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "Rosnie mięso... Glurgh.",
 	PICKED = "Mięso się chowa!",
@@ -420,7 +426,7 @@ WURT.DESCRIBE.KYNO_LIMPETROCK =
 WURT.DESCRIBE.KYNO_LIMPETS = "Ślimaki..."
 WURT.DESCRIBE.KYNO_LIMPETS_COOKED = "Gotowane ślimaki, florp."
 
-WURT.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WURT.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "Aww...",
 	PICKED = "Teraz brak kwiatu, florp.",
@@ -431,7 +437,7 @@ WURT.DESCRIBE.KYNO_LOTUS_ROOT = "Muszę to zasadzić w wodzie, florp."
 WURT.DESCRIBE.KYNO_LOTUS_FLOWER = "Aww... Kocham to!"
 WURT.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Chcę to zjeść."
 
-WURT.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WURT.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "Wodorosty.",
 	PICKED = "Odrosną później.",
@@ -443,7 +449,7 @@ WURT.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Mniam mniam!"
 WURT.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Dłużej się trzyma..."
 WURT.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Muszę je posadzić w wodzie, florp."
 
-WURT.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WURT.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "Ładnie!",
 	PICKED = "Woda pomoże mu rosnąć, florp!",
@@ -454,7 +460,7 @@ WURT.DESCRIBE.KYNO_TAROROOT_ROOT = "Muszę to zasadzić w wodzie, florp."
 WURT.DESCRIBE.KYNO_TAROROOT = "Duże purpurowe smaczne!"
 WURT.DESCRIBE.KYNO_TAROROOT_COOKED = "Podkreśla purpurowy smak, florp."
 
-WURT.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WURT.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "Chcę to!",
 	PICKED = "Wkrótce odrośnie!",
@@ -468,7 +474,7 @@ WURT.DESCRIBE.WATERYCRESSBOWL = "Śmierdząca woda, flort."
 
 WURT.DESCRIBE.KYNO_SALT = "Dziwny mały garnek."
 
-WURT.DESCRIBE.KYNO_MUSSELSTICK = 
+WURT.DESCRIBE.KYNO_MUSSELSTICK =
 {
 	GENERIC = "Przyjaciele są uwięzieni!",
 	PICKED = "Teraz brak małży!",
@@ -481,7 +487,7 @@ WURT.DESCRIBE.CATFOOD = "Jedzenie dla kociaków, glurp."
 
 WURT.DESCRIBE.KATFOOD = "Jedzenie dla kociaków, glurp."
 
-WURT.DESCRIBE.KYNO_BANANATREE = 
+WURT.DESCRIBE.KYNO_BANANATREE =
 {
 	GENERIC = "Patrz owoce tam na górze!!",
 	PICKED = "Teraz brak żółtego jedzenia.",
@@ -493,7 +499,7 @@ WURT.DESCRIBE.KYNO_BANANATREE =
 WURT.DESCRIBE.KYNO_BANANA = "Mmm... dobre owoce, florp."
 WURT.DESCRIBE.KYNO_BANANA_COOKED = "Pycha!"
 
-WURT.DESCRIBE.KYNO_KOKONUTTREE = 
+WURT.DESCRIBE.KYNO_KOKONUTTREE =
 {
 	GENERIC = "Duże liście!",
 	PICKED = "Teraz brak kokosów, florp.",
@@ -533,7 +539,7 @@ WURT.DESCRIBE.KYNO_NEONFISH_COOKED = "(Pociąga nosem)"
 
 WURT.DESCRIBE.KYNO_GROUPER = "Cześć, fioletowy przyjacielu!"
 WURT.DESCRIBE.KYNO_GROUPER_COOKED = "(Pociąga nosem) biedna rybka..."
- 
+
 WURT.DESCRIBE.KYNO_PIERROTFISH = "Witaj, żółty przyjacielu!"
 WURT.DESCRIBE.KYNO_PIERROTFISH_COOKED = "(Sniff) biedna mała rybka..."
 
@@ -557,7 +563,7 @@ WURT.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Trzyma słodką drzewną ciecz!"
 
 WURT.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Wygląda jak mały domek!"
 
-WURT.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WURT.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "Coś dziwnego w tym Pigfolku!",
 	SLEEPING = "Ciii! Pigfolk śpi.",
@@ -603,7 +609,7 @@ WURT.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "(Wącha) biedny krab..."
 
 WURT.DESCRIBE.KYNO_SLAUGHTERTOOL = "Huh? Co to?"
 
-WURT.DESCRIBE.KYNO_CHICKEN2 = 
+WURT.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Kurczak!",
 	COOP = "Kurczak mieszka tutaj.",
@@ -619,7 +625,7 @@ WURT.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "Mały ptaszek wychodzi!!",
 }
 
-WURT.DESCRIBE.KYNO_CHICKENHOUSE = 
+WURT.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Dom dla kur! Może jajka w środku, florp.",
 	FULL = "Sterta jajek!",
@@ -647,7 +653,7 @@ WURT.DESCRIBE.KYNO_COOKWARE_OVEN = "Co by tu upichcić..."
 WURT.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Co by tu upichcić..."
 WURT.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Co by tu upichcić..."
 
-WURT.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WURT.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Przewróć! Przewróć!",
 	FLIPPED = "Coś znalezione!",
@@ -694,7 +700,7 @@ WURT.DESCRIBE.PEPPERROLLS = "Glurgh... ostre!"
 
 WURT.DESCRIBE.KYNO_SAPHEALER = "Dobre na słodkie drzewa, florp."
 
-WURT.DESCRIBE.KYNO_OCEAN_WRECK = 
+WURT.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Złamane statki...",
 	PICKED = "Ślimaki zniknęły.",
@@ -716,7 +722,7 @@ WURT.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Śmierdzi."
 
 WURT.DESCRIBE.KYNO_BREWBOOK = "Taki jak ten, ma obrazki jedzenia!"
 
-WURT.DESCRIBE.KYNO_WOODENKEG = 
+WURT.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "Dziwne.",
 	BREWING_LONG = "Trwa długo, flort.",
@@ -725,7 +731,7 @@ WURT.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "Ogień zniszczył...",
 }
 
-WURT.DESCRIBE.KYNO_PRESERVESJAR = 
+WURT.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "Śmierdzi, florp.",
 	BREWING_LONG = "Trwa długo.",
@@ -734,7 +740,7 @@ WURT.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Ogień zniszczył.",
 }
 
-WURT.DESCRIBE.KYNO_ANTCHEST = 
+WURT.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Tworzy słodkości!",
 	HONEY = "Pełne smakołyków, florp.",
@@ -750,7 +756,7 @@ WURT.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Fffiuu!"
 WURT.DESCRIBE.KYNO_PIKO = "Kradnie rzeczy!!"
 WURT.DESCRIBE.KYNO_PIKO_ORANGE = "Ooo! Fajne ogonki!"
 
-WURT.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WURT.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "Ładnie wyglądające drzewo!",
 	CHOPPED = "Liście moje teraz, flort.",
@@ -758,7 +764,7 @@ WURT.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 	BURNT = "Wszystko zniknęło, florp.",
 }
 
-WURT.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE = 
+WURT.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 {
 	GENERIC = "Pełne wiewiórek, glurrp...",
 	BURNING = "Zły ogień! Zły!",
@@ -766,26 +772,26 @@ WURT.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WURT.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Skrzynia."
 
-WURT.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WURT.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "Dom tam, gdzie bagno jest, flort.",
 	BURNT = "Dom zniknął...",
 }
 
-WURT.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WURT.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "Dom tam, gdzie bagno jest, flort.",
 	CRAFTED = "Dom teraz wygląda ładnie!",
 	BURNT = "Śmierdzi..!",
 }
 
-WURT.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WURT.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "Przyjaciel ma dużo rzeczy w domu!",
 	OCCUPIED = "Przyjaciel chyba śpi, florp.",
 }
 
-WURT.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WURT.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "Rzeczy przyjaciela!",
 	EMPTY = "Wszystko znikło, florp.",
@@ -843,7 +849,7 @@ WURT.DESCRIBE.CHOCOLATE_BLACK = "Pyszne!"
 WURT.DESCRIBE.CHOCOLATE_WHITE = "Pyszne!"
 
 WURT.DESCRIBE.TRICOLORDANGO = "Takie słodkie!"
- 
+
 WURT.DESCRIBE.FRIESFRENCH = "Mniam!"
 
 WURT.DESCRIBE.PIRATERUM = "Glurgh... nie pić tego!"
@@ -855,7 +861,7 @@ WURT.DESCRIBE.ONIONRINGS = "Glorp!! Chrupiące warzywko, pyszne!"
 WURT.DESCRIBE.DONUTS = "Słodkie!"
 WURT.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Słodkie!"
 WURT.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Słodkie!"
- 
+
 WURT.DESCRIBE.CINNAMONROLL = "Słodkie!"
 
 WURT.DESCRIBE.GUMMYBEARGERS = "Słodkie małe misie!!"
@@ -942,7 +948,7 @@ WURT.DESCRIBE.RICESAKE = "Glurgh..."
 
 WURT.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Glorp!! Kolczaste!!"
 
-WURT.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WURT.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Glorp!! Kolczaste!!",
 	PICKED = "Teraz brak owoców, florp.",
@@ -960,7 +966,7 @@ WURT.DESCRIBE.PINACOLADA = "Mniam!"
 
 WURT.DESCRIBE.CHIMAS = "Mniammm!"
 
-WURT.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WURT.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Pomaga roślinom, florp.",
 	ON = "Woda dobra!",
@@ -1079,7 +1085,7 @@ WURT.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "Glurgh... lepiej niż wcześniej.",
 }
 
-WURT.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WURT.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Grzyby! Glorp! Lubię je!",
 	PICKED = "Nie ma już jedzenia.",
@@ -1089,7 +1095,7 @@ WURT.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WURT.DESCRIBE.KYNO_TRUFFLES = "Glorp! Mocno pachnie... ale smaczne!"
 WURT.DESCRIBE.KYNO_TRUFFLES_COOKED = "Glorp! Teraz pachną pysznie!"
 
-WURT.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WURT.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Do pokazywania jedzenia, florp! Ale... mogę zjeść potem?",
 	FULL = "Jedzenie wygląda ładnie, florp.",
@@ -1114,7 +1120,7 @@ WURT.DESCRIBE.TRUFFLEOIL = "Dziwnie pachnie, florp... ale może smaczne?"
 WURT.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Wygląda łatwo do zbudowania! Glurp!"
 WURT.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Miejsce dla rybich przyjaciół, florp!"
 
-WURT.DESCRIBE.KYNO_FISHFARMPLOT = 
+WURT.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "Dom dla rybkowych przyjaciół! Yay~",
 	FUEL_HIGH = "Rybki jedzą dobrze!",
@@ -1177,7 +1183,7 @@ WURT.DESCRIBE.KYNO_BRAINROCK_LARVAE = "To mały robaczek, florp."
 WURT.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Jajo kamienia wodnego mózgowego."
 WURT.DESCRIBE.KYNO_BRAINROCK_CORAL = "Glurgh! Zła karma dla mózgu!"
 
-WURT.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WURT.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "Mądry kamień!",
 	PICKED = "Kamień teraz cicho.",
@@ -1185,7 +1191,7 @@ WURT.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WURT.DESCRIBE.BRAINMETTERSOUP = "Zupa pomaga myśleć, florp?"
 
-WURT.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WURT.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "Czego chcesz?",
 	SLEEPING = "Król mórz śpi teraz, florp.",
@@ -1193,7 +1199,7 @@ WURT.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 
 WURT.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Ma wiele rzeczy w środku!!"
 
-WURT.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WURT.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "Biedna rybka!",
 	WAITING = "Drzemka?",
@@ -1209,7 +1215,7 @@ WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Wygląda smacznie."
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Mmm! Więcej słodkości!"
 WURT.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Ładne, latające rzeczy, florp!"
 
-WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WURT.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "Popcorn, dobry dla Wurt!",
 	FUEL_HIGH = "Wciąż działa, florp!",
@@ -1249,7 +1255,7 @@ WURT.DESCRIBE.CHICKENROTISSERIE = "Nieee! Biedny ptak! To nie jedzenie, florp!"
 
 WURT.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Ciepły napój z rośliny, flort."
 WURT.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodki napój z kwiatka, florp."
-WURT.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Cold tea, florp." -- NEEDS TRANSLATION
+WURT.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "Cold tea, florp."
 
 WURT.DESCRIBE.SOULJUICE = "Dziwny czerwony napój! florp."
 
@@ -1316,74 +1322,82 @@ WURT.DESCRIBE.KYNO_PIGCOIN1 = "Nie da się tego zjeść, florp!"
 WURT.DESCRIBE.KYNO_PIGCOIN2 = "Ooooh, błyszczące!"
 WURT.DESCRIBE.KYNO_PIGCOIN3 = "Bardzo eleganckie."
 
-WURT.DESCRIBE.KYNO_ICENETTLES = "Glrugh, too cold." -- NEEDS TRANSLATION
-WURT.DESCRIBE.KYNO_ICENETTLES_DRIED = "Dry stick made it colder?" -- NEEDS TRANSLATION
+WURT.DESCRIBE.KYNO_ICENETTLES = "Glrugh, too cold."
+WURT.DESCRIBE.KYNO_ICENETTLES_DRIED = "Dry stick made it colder?"
 
-WURT.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WURT.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "Bag for seeds, florp.",
 	FULL = "Bag all full, florp!",
 }
 
-WURT.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Throw it at me, I'll eat!" -- NEEDS TRANSLATION
+WURT.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Throw it at me, I'll eat!"
 
-WURT.DESCRIBE.WX78MODULE_GOURMAND = "Crunchy." -- NEEDS TRANSLATION
-WURT.DESCRIBE.WX78MODULE_COOKER = "Crunchy." -- NEEDS TRANSLATION
-WURT.DESCRIBE.WX78MODULE_DRYER = "Crunchy." -- NEEDS TRANSLATION
-WURT.DESCRIBE.WX78MODULE_DRYER2 = "Crunchy." -- NEEDS TRANSLATION
+WURT.DESCRIBE.WX78MODULE_GOURMAND = "Crunchy."
+WURT.DESCRIBE.WX78MODULE_COOKER = "Crunchy."
+WURT.DESCRIBE.WX78MODULE_DRYER = "Crunchy."
+WURT.DESCRIBE.WX78MODULE_DRYER2 = "Crunchy."
 
 WURT.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Stuff inside Ironfolk box?", -- NEEDS TRANSLATION
+	GENERIC = "Stuff inside Ironfolk box?",
 }
 
 WURT.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Stuff inside Ironfolk box?", -- NEEDS TRANSLATION
+	GENERIC = "Stuff inside Ironfolk box?",
 }
 
 WURT.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "Stuff inside Ironfolk box?", -- NEEDS TRANSLATION
+	GENERIC = "Stuff inside Ironfolk box?",
 }
 
-WURT.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WURT.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "Piggy is full of shiny!",
 	UPGRADED = "Piggy can hold all shiny coins, florp!",
 	GENERIC = "Piggy keeps shiny things safe, flort.",
 }
 
-WURT.DESCRIBE.MARSHMALLOWS = "Fluffy sweets!" -- NEEDS TRANSLATION
+WURT.DESCRIBE.MARSHMALLOWS = "Fluffy sweets!"
 
-WURT.DESCRIBE.KOKONUTCOOKIES = "What is an \"Oh Ree Oh\"?" -- NEEDS TRANSLATION
+WURT.DESCRIBE.KOKONUTCOOKIES = "What is an \"Oh Ree Oh\"?"
 
-WURT.DESCRIBE.BBQRIBS = "Blergh." -- NEEDS TRANSLATION
+WURT.DESCRIBE.BBQRIBS = "Blergh."
 
-WURT.DESCRIBE.BROWNIE = "Chocolate treat!" -- NEEDS TRANSLATION
+WURT.DESCRIBE.BROWNIE = "Chocolate treat!"
 
-WURT.DESCRIBE.CHOCOLATE_CAKE = "Big sweet cake, florp!" -- NEEDS TRANSLATION
+WURT.DESCRIBE.CHOCOLATE_CAKE = "Big sweet cake, florp!"
 
-WURT.DESCRIBE.SWORDFISHBLUEDINNER = "Why do this to poor fishies?" -- NEEDS TRANSLATION
+WURT.DESCRIBE.SWORDFISHBLUEDINNER = "Why do this to poor fishies?"
 
-WURT.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WURT.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "Birdie awake at night!",
 	HELD = "It likes me.",
 }
 
-WURT.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WURT.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "Cold bird.",
 	HELD = "He is biting me! GLORP!"
 }
 
-WURT.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Not ready yet, florp." -- NEEDS TRANSLATION
+WURT.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Not ready yet, florp."
 
-WURT.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Glorp! Little fishies don't like it!" -- NEEDS TRANSLATION
+WURT.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Glorp! Little fishies don't like it!"
+
+WURT.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Pretty shiny sugar, florp!"
+
+WURT.DESCRIBE.OPALPRECIOUSCREAM = "Pretty cream! Like rainbow cloud, florp!"
+
+WURT.DESCRIBE.CATFISHSTICK = "Nooo! Why hurt fish?!"
+
+WURT.DESCRIBE.OPALPRECIOUSLOLLIPOP = "Pretty shiny candy! What happen when eat?"

@@ -54,6 +54,9 @@ local function WX78PostInit(inst)
 		return inst
 	end
 
+	-- WX-78 Cannot die from excessive gambling!
+	inst.tagvar_gambling_addicted = true
+
 	if inst.components.foodaffinity ~= nil then
 		inst.components.foodaffinity:AddPrefabAffinity("bowlofgears", TUNING.AFFINITY_15_CALORIES_HUGE)
 	end

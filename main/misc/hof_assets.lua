@@ -12,6 +12,7 @@ ReloadPreloadAssets()
 Assets =
 {
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
+	Asset("SOUND", "sound/hof_music.fsb"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 
 	Asset("ANIM", "anim/kyno_wx78_chips.zip"),
@@ -145,6 +146,7 @@ local HOF_ICONS =
 	"butter_beefalo",
 	"butter_goat",
 	"butter_koalefant",
+	"catfishstick",
 	"catfood",
 	"cavetubertea",
 	"cheese_koalefant",
@@ -516,6 +518,7 @@ local HOF_ICONS =
 	"kyno_oaktree_pod_cooked",
 	"kyno_oceantrap",
 	"kyno_oil",
+	"kyno_opalpreciouspowder",
 	"kyno_packimbaggims_fishbone",
 	"kyno_packimbaggims_fishbone_dead",
 	"kyno_parznip",
@@ -739,6 +742,8 @@ local HOF_ICONS =
 	"omurice",
 	"onigiris",
 	"onionrings",
+	"opalpreciouscream",
+	"opalpreciouslollipop",
 	"paella",
 	"paleale",
 	"parznip_soup",

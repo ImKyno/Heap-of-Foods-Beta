@@ -101,11 +101,17 @@ WATHGRITHR.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Błogosławieństwo ciemności prz
 WATHGRITHR.ANNOUNCE_KYNO_PANICBUFF_START = "NIECH MOI WROGOWIE DRŻĄ PRZEDE MNĄ!"
 WATHGRITHR.ANNOUNCE_KYNO_PANICBUFF_END = "MOJA AURA GROZY PRZEMINĘŁA!"
 
-WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_START = "The feast shall endure!" -- NEEDS TRANSLATION
-WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_END = "Even the finest feast must fade!" -- NEEDS TRANSLATION
+WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_START = "The feast shall endure!"
+WATHGRITHR.ANNOUNCE_KYNO_CUREBUFF_END = "Even the finest feast must fade!"
 
-WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I shall not be moved!" -- NEEDS TRANSLATION
-WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "The battle may move me once more!" -- NEEDS TRANSLATION
+WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I shall not be moved!"
+WATHGRITHR.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "The battle may move me once more!"
+
+WATHGRITHR.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "My blows shall shake the battlefield!"
+WATHGRITHR.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "My strength has returned to its usual measure."
+
+WATHGRITHR.ANNOUNCE_KYNO_BADLUCKBUFF_START = "A dark omen hangs above me!"
+WATHGRITHR.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The ill omen has been banished!"
 
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zło!"
 
@@ -136,13 +142,13 @@ WATHGRITHR.ANNOUNCE_KYNO_ROE_RESEARCHED = "Nienarodzeni wojownicy mórz, dobrze 
 
 WATHGRITHR.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Uczta godna wojownika!"
 
-WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"I feel as though my body's freezing!",
 	"Accursed plant with your frosty barbs! Fight me properly!",
 }
 
-WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "The frosty curse has passed." -- NEEDS TRANSLATION
+WATHGRITHR.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "The frosty curse has passed."
 
 WATHGRITHR.DESCRIBE.KYNO_ROE = "Może pewnego dnia staniecie się prawdziwym mięsem."
 WATHGRITHR.DESCRIBE.KYNO_ROE_COOKED = "Już nigdy nie staniecie się prawdziwym mięsem."
@@ -531,7 +537,7 @@ WATHGRITHR.DESCRIBE.KYNO_NEONFISH_COOKED = "Njord hojnie mnie obdarzył tego dni
 
 WATHGRITHR.DESCRIBE.KYNO_GROUPER = "Aegir cię dziś nie ocali."
 WATHGRITHR.DESCRIBE.KYNO_GROUPER_COOKED = "Dziękujmy Njordowi za ten dar!"
- 
+
 WATHGRITHR.DESCRIBE.KYNO_PIERROTFISH = "Oby tylko to mięso nie miało tak wielkich oczu."
 WATHGRITHR.DESCRIBE.KYNO_PIERROTFISH_COOKED = "Dziękuję ci, rybo, za dar twego mięsa."
 
@@ -841,7 +847,7 @@ WATHGRITHR.DESCRIBE.CHOCOLATE_BLACK = "To nie mięso, ale..."
 WATHGRITHR.DESCRIBE.CHOCOLATE_WHITE = "To nie mięso, ale..."
 
 WATHGRITHR.DESCRIBE.TRICOLORDANGO = "Nie wygląda na mięso."
- 
+
 WATHGRITHR.DESCRIBE.FRIESFRENCH = "To nie jest mięso!"
 
 WATHGRITHR.DESCRIBE.PIRATERUM = "Pachnie dziwnie i emanuje złowrogą aurą."
@@ -853,7 +859,7 @@ WATHGRITHR.DESCRIBE.ONIONRINGS = "Pieczone warzywa, ble!"
 WATHGRITHR.DESCRIBE.DONUTS = "Dlaczego to takie słodkie? Nie pojmuję!"
 WATHGRITHR.DESCRIBE.DONUTS_CHOCOLATE_BLACK = "Czemu to takie słodkie? Nie rozumiem!"
 WATHGRITHR.DESCRIBE.DONUTS_CHOCOLATE_WHITE = "Czemu to takie słodkie? Nie rozumiem!"
- 
+
 WATHGRITHR.DESCRIBE.CINNAMONROLL = "Poduszkowate spirale bułki."
 
 WATHGRITHR.DESCRIBE.GUMMYBEARGERS = "Kilka cukierków nie zaszkodzi."
@@ -1247,7 +1253,7 @@ WATHGRITHR.DESCRIBE.CHICKENROTISSERIE = "Godna pieczeń, odpowiednia na wojownic
 
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Wojowniczka woli miód pitny, lecz to wystarczy!"
 WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Słodkie jak pieśń dziewicy!"
-WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A frosty brew worthy of northern warriors!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "A frosty brew worthy of northern warriors!"
 
 WATHGRITHR.DESCRIBE.SOULJUICE = "Napój wojownika dotknięty przez błądzące dusze!"
 
@@ -1314,74 +1320,82 @@ WATHGRITHR.DESCRIBE.KYNO_PIGCOIN1 = "Skarb!"
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN2 = "Moneto! Przygotuj się na wydanie!"
 WATHGRITHR.DESCRIBE.KYNO_PIGCOIN3 = "Fortuna jest moja!"
 
-WATHGRITHR.DESCRIBE.KYNO_ICENETTLES = "Cöward and cöld." -- NEEDS TRANSLATION
-WATHGRITHR.DESCRIBE.KYNO_ICENETTLES_DRIED = "Still nöt wörhty för me. " -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_ICENETTLES = "Cöward and cöld."
+WATHGRITHR.DESCRIBE.KYNO_ICENETTLES_DRIED = "Still nöt wörhty för me. "
 
-WATHGRITHR.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A pouch for the seeds of future harvests!",
 	FULL = "The harvest pouch overflows!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_FOODAMMO_TOMATO = "I'll smite you, if you even dare!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_FOODAMMO_TOMATO = "I'll smite you, if you even dare!"
 
-WATHGRITHR.DESCRIBE.WX78MODULE_GOURMAND = "These boons shall empower our metal warrior." -- NEEDS TRANSLATION
-WATHGRITHR.DESCRIBE.WX78MODULE_COOKER = "These boons shall empower our metal warrior." -- NEEDS TRANSLATION
-WATHGRITHR.DESCRIBE.WX78MODULE_DRYER = "These boons shall empower our metal warrior." -- NEEDS TRANSLATION
-WATHGRITHR.DESCRIBE.WX78MODULE_DRYER2 = "These boons shall empower our metal warrior." -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.WX78MODULE_GOURMAND = "These boons shall empower our metal warrior."
+WATHGRITHR.DESCRIBE.WX78MODULE_COOKER = "These boons shall empower our metal warrior."
+WATHGRITHR.DESCRIBE.WX78MODULE_DRYER = "These boons shall empower our metal warrior."
+WATHGRITHR.DESCRIBE.WX78MODULE_DRYER2 = "These boons shall empower our metal warrior."
 
 WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What spoils hath our metal warrior bestowed?", -- NEEDS TRANSLATION
+	GENERIC = "What spoils hath our metal warrior bestowed?",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What spoils hath our metal warrior bestowed?", -- NEEDS TRANSLATION
+	GENERIC = "What spoils hath our metal warrior bestowed?",
 }
 
 WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "What spoils hath our metal warrior bestowed?", -- NEEDS TRANSLATION
+	GENERIC = "What spoils hath our metal warrior bestowed?",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "The swine is laden with spoils!",
 	UPGRADED = "A mighty vault for the spoils of battle!",
 	GENERIC = "A little swine to guard mine coin.",
 }
 
-WATHGRITHR.DESCRIBE.MARSHMALLOWS = "These are no warrior's fare!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.MARSHMALLOWS = "These are no warrior's fare!"
 
-WATHGRITHR.DESCRIBE.KOKONUTCOOKIES = "A coconut cookie? Where is the meat?" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KOKONUTCOOKIES = "A coconut cookie? Where is the meat?"
 
-WATHGRITHR.DESCRIBE.BBQRIBS = "A feast fit for a warrior!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.BBQRIBS = "A feast fit for a warrior!"
 
-WATHGRITHR.DESCRIBE.BROWNIE = "A chocolate feast!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.BROWNIE = "A chocolate feast!"
 
-WATHGRITHR.DESCRIBE.CHOCOLATE_CAKE = "A grand feast of chocolate!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.CHOCOLATE_CAKE = "A grand feast of chocolate!"
 
-WATHGRITHR.DESCRIBE.SWORDFISHBLUEDINNER = "The air is getting cold around me!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.SWORDFISHBLUEDINNER = "The air is getting cold around me!"
 
-WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "A bird that hunts beneath the moon!",
 	HELD = "The night bird struggles within my pouch!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A mighty hunter of the frozen wilds!",
 	HELD = "The fierce bird challenges its confinement!",
 }
 
-WATHGRITHR.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "A saltwork in the making!" -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "A saltwork in the making!"
 
-WATHGRITHR.DESCRIBE.KYNO_FISHINGROD_THULECITE = "A fine fishing rod fit for a sea warrior." -- NEEDS TRANSLATION
+WATHGRITHR.DESCRIBE.KYNO_FISHINGROD_THULECITE = "A fine fishing rod fit for a sea warrior."
+
+WATHGRITHR.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "Glittering sugar! Fit for a feast worthy of the gods!"
+
+WATHGRITHR.DESCRIBE.OPALPRECIOUSCREAM = "A shimmering topping for a feast worthy of Valhalla!"
+
+WATHGRITHR.DESCRIBE.CATFISHSTICK = "A hearty catch, roasted over the flames!"
+
+WATHGRITHR.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A mysterious sweet! What boon shall the gods bestow upon me?"

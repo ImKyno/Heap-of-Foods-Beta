@@ -131,6 +131,9 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_EXTRASOUL = "Increases Soul yield"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_REVIVER = "Revives the dead"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_KNOCKBACK = "Decreases knockback"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CHILLEDATTACK = "Grants chilled attacks"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRITDAMAGE = "Grants critical attacks"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BADLUCK = "Decreases luck"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RANDOM = "Grants a random side effect"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Green-ish vegetable, the king of grasslands and rainforests. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "One of the many sea gifts, very appreciated by men of culture. -W"
@@ -417,41 +420,41 @@ STRINGS.KYNO_SUGARFLYWINGS_NAMES =
 
 STRINGS.KYNO_CHICKEN_NAMES =
 {
-	"Drumstick", 
-	"Daisy", 
-	"Cah", 
-	"Noodles", 
+	"Drumstick",
+	"Daisy",
+	"Cah",
+	"Noodles",
 	"Potato",
-	"Curry", 
-	"Dinner", 
-	"Garibalda", 
-	"Marta", 
+	"Curry",
+	"Dinner",
+	"Garibalda",
+	"Marta",
 	"Marina",
-	"Carrot", 
-	"Emilha", 
-	"Pintadinha", 
-	"Galinha", 
+	"Carrot",
+	"Emilha",
+	"Pintadinha",
+	"Galinha",
 	"Pipoca",
-	"Ruiva", 
-	"Canjica", 
-	"Magricela", 
-	"Isolda", 
+	"Ruiva",
+	"Canjica",
+	"Magricela",
+	"Isolda",
 	"Pedrita",
-	"Isadora", 
-	"Ruivinha", 
-	"Karen", 
-	"Penosa", 
+	"Isadora",
+	"Ruivinha",
+	"Karen",
+	"Penosa",
 	"Bicuda",
-	"Mel", 
-	"Sol", 
-	"Lua", 
-	"Outono", 
-	"Milharina", 
+	"Mel",
+	"Sol",
+	"Lua",
+	"Outono",
+	"Milharina",
 	"Lunch",
-	"Clementina", 
-	"Rejane", 
-	"Morena", 
-	"Flor", 
+	"Clementina",
+	"Rejane",
+	"Morena",
+	"Flor",
 	"Girasol",
 }
 
@@ -575,12 +578,20 @@ STRINGS.KYNO_GOLDENAPPLE_NAMES =
 	"Leonidas Apple",
 }
 
-STRINGS.MEADOWISLANDTRADER = "Sammy\nThe %s"
-STRINGS.MEADOWISLANDTRADER_TITLES = 
+STRINGS.KYNO_OPALPRECIOUSLOLLIPOP_NAMES =
 {
-	"Merchant", 
-	"Lucid Bog Merm", 
-	"Seasoned Merchant", 
+	"Roulettepop",
+	"Gambler's Lollipop",
+	"Shimmer Lollipop",
+	"Gamblinpop",
+}
+
+STRINGS.MEADOWISLANDTRADER = "Sammy\nThe %s"
+STRINGS.MEADOWISLANDTRADER_TITLES =
+{
+	"Merchant",
+	"Lucid Bog Merm",
+	"Seasoned Merchant",
 	"Exotic Merchant",
 	"Swamp Vendor",
 }
@@ -592,15 +603,15 @@ STRINGS.MEADOWISLANDTRADER_OUTOFSTOCK =
 	"Say pal, I need some time to restock.",
 }
 
-STRINGS.MEADOWISLANDTRADER_OUTOFSTOCKTRADES = 
+STRINGS.MEADOWISLANDTRADER_OUTOFSTOCKTRADES =
 {
 	"Ya cleaned me out! Need time to restock.",
 	"That's all I got! Come back later",
 	"You lad, just cleared my good ol' stock. I need some time now.",
 	"Come back later for more bartering.",
 }
-    
-STRINGS.MEADOWISLANDTRADER_STARTTRADING = 
+
+STRINGS.MEADOWISLANDTRADER_STARTTRADING =
 {
 	"Why ain't you bought somethin' yet?",
 	"Hey, buddy, whatcha need?",
@@ -612,7 +623,7 @@ STRINGS.MEADOWISLANDTRADER_STARTTRADING =
 	"I kinda miss my town and its people...",
 }
 
-STRINGS.MEADOWISLANDTRADER_ENDTRADING_NOTRADES = 
+STRINGS.MEADOWISLANDTRADER_ENDTRADING_NOTRADES =
 {
 	"What was I doing? ...Oh SEEDS HERE!",
 	"Maybe next time.",
@@ -623,7 +634,7 @@ STRINGS.MEADOWISLANDTRADER_ENDTRADING_NOTRADES =
 	"You should try my mate Pipton then!",
 }
 
-STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE = 
+STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE =
 {
 	"Come back now, y'hear?",
 	"Thanks, stranger.",
@@ -634,7 +645,7 @@ STRINGS.MEADOWISLANDTRADER_ENDTRADING_MADETRADE =
 	"Come back now! I get a little lonely! Heh, a lil' lonely.",
 }
 
-STRINGS.MEADOWISLANDTRADER_DOTRADE = 
+STRINGS.MEADOWISLANDTRADER_DOTRADE =
 {
 	"Ahh, a great choice! Anythin' else tickle yer fancy?",
 	"Comin' right up! What else you need?",
@@ -676,7 +687,7 @@ STRINGS.MEADOWISLANDTRADER_GOHOME =
 	"You know where to find me.",
 }
 
-STRINGS.MEADOWISLANDTRADER_STARTDANCING = 
+STRINGS.MEADOWISLANDTRADER_STARTDANCING =
 {
 	"Yay! Let's party!",
 	"Hoo-hoo! Let's dance, friend!",
@@ -686,11 +697,11 @@ STRINGS.MEADOWISLANDTRADER_STARTDANCING =
 }
 
 STRINGS.DECIDUOUSFORESTTRADER = "Partitio\nThe %s"
-STRINGS.DECIDUOUSFORESTTRADER_TITLES = 
+STRINGS.DECIDUOUSFORESTTRADER_TITLES =
 {
-	"Proud Merchant", 
-	"Masterwork Pig", 
-	"Great Merchant", 
+	"Proud Merchant",
+	"Masterwork Pig",
+	"Great Merchant",
 	"Salespig",
 	"Deciduous Forest Vendor",
 }
@@ -702,15 +713,15 @@ STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCK =
 	"ME NEED SOME TIME TO RESTOCK",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCKTRADES = 
+STRINGS.DECIDUOUSFORESTTRADER_OUTOFSTOCKTRADES =
 {
 	"YOU HAS CLEANED ME! NEED TIME TO GET MORE STUFF!",
 	"THAT IS ALL FOR NOW, COME BACK LATER!",
 	"COME BACK LATER FOR MORE GOODS, YES?",
 	"ME HAS NO GOOD STUFF NOW, GET GOING",
 }
-    
-STRINGS.DECIDUOUSFORESTTRADER_STARTTRADING = 
+
+STRINGS.DECIDUOUSFORESTTRADER_STARTTRADING =
 {
 	"BUY SOMETHING!",
 	"HELLO, AMIGO! LET'S TRADE",
@@ -722,7 +733,7 @@ STRINGS.DECIDUOUSFORESTTRADER_STARTTRADING =
 	"ME HAVE GOOD STUFF, AMIGO!",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_NOTRADES = 
+STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_NOTRADES =
 {
 	"PERHAPS NEXT TIME",
 	"NOTHING INTERESTS YOU, AMIGO?",
@@ -733,7 +744,7 @@ STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_NOTRADES =
 	"DON'T WASTE MY TIME THEN",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_MADETRADE = 
+STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_MADETRADE =
 {
 	"THANK YOU",
 	"YOU GOOD!",
@@ -744,7 +755,7 @@ STRINGS.DECIDUOUSFORESTTRADER_ENDTRADING_MADETRADE =
 	"THANKS, BOSS!"
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_DOTRADE = 
+STRINGS.DECIDUOUSFORESTTRADER_DOTRADE =
 {
 	"GOOD CHOICE, AMIGO!",
 	"COMING RIGHT UP, WHAT ELSE DO YA NEED?",
@@ -806,7 +817,7 @@ STRINGS.DECIDUOUSFORESTTRADER_GOHOME =
 	"YOU KNOW WHERE FIND ME!",
 }
 
-STRINGS.DECIDUOUSFORESTTRADER_STARTDANCING = 
+STRINGS.DECIDUOUSFORESTTRADER_STARTDANCING =
 {
 	"LET'S DANCE!",
 	"LET'S PARTY, AMIGO!",
@@ -830,48 +841,48 @@ STRINGS.FISHREGISTRY =
 {
 	TAB_FISH = "Fishes",
 	TAB_ROE = "Roes",
-	
+
 	MYSTERY_FISH = "Unknown Fish",
 	MISSING_FISH = "Missing Fish",
-	
+
 	MYSTERY_ROE = "Unknown Roe",
 	MISSING_ROE = "Missing Roe",
-	
+
 	MYSTERY_BABY = "Unknown Offspring",
 	MISSING_BABY = "Missing Offspring",
-	
+
 	MISSING_ROE_TIME = "Missing Roe Time",
 	MISSING_BABY_TIME = "Missing Offspring Time",
-	
+
 	PHASE_DAY = "Day",
 	PHASE_DUSK = "Dusk",
 	PHASE_NIGHT = "Night",
-	
+
 	MOONPHASE_NEW = "New Moon",
 	MOONPHASE_QUARTER = "Quarter Moon",
 	MOONPHASE_HALF = "Half Moon",
 	MOONPHASE_THREEQUARTER = "Three Quarter Moon",
 	MOONPHASE_FULL = "Full Moon",
 	MOONPHASE_GLASSED = "Moonstorm",
-	
+
 	SEASON_AUTUMN = "Autumn",
 	SEASON_WINTER = "Winter",
 	SEASON_SPRING = "Spring",
 	SEASON_SUMMER = "Summer",
-	
+
 	WORLD_FOREST = "Forest",
 	WORLD_CAVE = "Caves",
-	
+
 	ROE_TIME = "Roe Time",
 	BABY_TIME = "Offspring Time",
-	
+
 	ROE_TIME_HALF_DAY = "About half a day",
 	ROE_TIME_ONE_DAY = "About a day",
 	ROE_TIME_ONE_HALF_DAY = "More than a day",
 	ROE_TIME_TWO_DAY = "About 2 days",
 	ROE_TIME_THREE_DAY = "About 3 days",
 	ROE_TIME_MORE_DAY = "More than 3 days",
-	
+
 	BABY_TIME_HALF_DAY = "About half a day",
 	BABY_TIME_ONE_DAY = "About a day",
 	BABY_TIME_ONE_HALF_DAY = "More than a day",
@@ -2242,7 +2253,7 @@ STRINGS.NAMES.KYNO_BRAINROCK_ROCK = "Brainy Sprout"
 
 STRINGS.NAMES.BRAINMETTERSOUP = "Alphabet Soup"
 
-STRINGS.NAMES.KYNO_OCTOPUSKING_OCEAN = "Yaarctopus" 
+STRINGS.NAMES.KYNO_OCTOPUSKING_OCEAN = "Yaarctopus"
 STRINGS.NAMES.KYNO_OCTOPUSKING_TREASURECHEST = "Watery Chest"
 
 STRINGS.NAMES.KYNO_PACKIMBAGGIMS_FISHBONE = "Fishbone"
@@ -2439,3 +2450,13 @@ STRINGS.NAMES.KYNO_POND_SALT2_CONSTRUCTION = "Artificial Salt Pond Foundation"
 
 STRINGS.NAMES.KYNO_FISHINGROD_THULECITE = "Thulecite Freshwater Fishing Rod"
 STRINGS.RECIPE_DESC.KYNO_FISHINGROD_THULECITE = "Hook fish the ancient way."
+
+STRINGS.NAMES.KYNO_OPALPRECIOUSPOWDER = "Iridescent Powdered Sugar"
+STRINGS.RECIPE_DESC.KYNO_OPALPRECIOUSPOWDER = "An otherworldly and powerful ingredient."
+
+STRINGS.NAMES.OPALPRECIOUSCREAM = "Shimmer Whipped Cream"
+
+STRINGS.NAMES.CATFISHSTICK = "Grilled Black Catfish"
+
+STRINGS.NAMES.OPALPRECIOUSLOLLIPOP = "Shimmer Lollipop"
+STRINGS.NAMES.OPALPRECIOUSLOLLIPOP_CURSE = "Excessive Gambling"

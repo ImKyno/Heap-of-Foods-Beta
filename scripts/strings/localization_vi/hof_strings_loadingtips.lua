@@ -31,6 +31,7 @@ local LOADINGTIPS   =
 	RUINEDSAPTREE   = "Cẩn thận, Cây Gỗ Đường đã gắn vòi nếu tràn đầy Nhựa Cây mà không được thu hoạch thì có thể bị hỏng. Khi đó chúng sẽ tạo ra Nhựa Cây Hỏng!",
 	PIGELDERFOODS   = "\"Ta nghe nói con Heo kỳ lạ trên hòn đảo hồng hồng kia muốn một loại thức ăn nào đó... Hình như có liên quan đến Caramel hoặc Wobster.\" -W",
 	SALTPOND        = "Bạn có thể câu một loại cá khác trong Ao Muối của Quần Đảo Thanh Bình. Thử xem nào!",
+	SALTPOND2       = "Các hồ muối nhân tạo sản xuất tinh thể muối chậm hơn so với hồ muối tự nhiên và chỉ có thể được xây dựng trên nền đất đá.",
 	SALTRACK        = "Giá Muối có thể được lắp trên Ao Muối để tạo ra Tinh Thể Muối mỗi bốn ngày.",
 	SPOTTYSHRUB     = "Bụi Đốm có thể được tìm thấy khắp Quần Đảo Thanh Bình. Và chúng có thể được mang về nhà bằng Xẻng.",
 	SWEETFLOWER     = "Hoa Ngọt có thể được dùng trong Nồi Nấu như một lựa chọn chất tạo ngọt.",
@@ -129,6 +130,7 @@ local LOADINGTIPS   =
 	ELDERMANDRAKE1  = "Khi bị tiêu diệt, Mandrake Cổ Thụ sẽ khiến mọi sinh vật xung quanh ngủ say trong vài giây.",
 	ELDERMANDRAKE2  = "Cẩn thận! Mandrake Cổ Thụ không thích bạn mang rau củ hoặc đồng loại của chúng đến gần.",
 	ELDERMANDRAKE3  = "\"Tôi nghe nói hôm qua có người phát hiện những ngôi nhà bằng lá trông kỳ lạ trong hang động gần khu rừng nấm. Không biết ai đang sống ở đó nhỉ...\" -W",
+	ELDERMANDRAKE4  = "Mandrake Cổ Thụ trưởng thành có cơ hội rơi ra Hạt giống Cây trồng và Hạt giống Cỏ dại tùy theo mùa.",
 	EARMUFFSHAT     = "Bịt Tai Thỏ giờ đây có thể bảo vệ bạn khỏi những tiếng động lớn!",
 	PIGCOIN1        = "Các món ăn đã chế biến có thể được trao đổi với Vua Heo để lấy Đồng Xu Heo. Mỗi món ăn có giá trị riêng; những món hiếm và chất lượng cao sẽ đáng giá hơn các món thông thường.",
 	PIGCOIN2        = "Vua Heo đang đói và đòi hỏi thức ăn! Ông ta sẵn sàng đổi Đồng Xu Heo (nỗ lực mới nhất của ông ta trong việc tạo ra tiền tệ, theo lời các tín đồ) để lấy những bữa ăn ngon.",
@@ -136,6 +138,8 @@ local LOADINGTIPS   =
 	PARTITIO1       = "Partitio là một chú heo đầy tự hào sống trong Khu Rừng Rụng Lá. Anh ta chỉ bán những mặt hàng chất lượng cao và luôn mong được gặp gỡ khách hàng mới.",
 	PARTITIO2       = "Sau một số sự kiện không may trong quá khứ, Partitio giờ đây từ chối làm ăn với Người Cá thêm lần nào nữa!",
 	PARTITIO3       = "Partitio phát hiện có kẻ đã phá hỏng ngôi nhà của mình. Giờ anh ta cần giúp đỡ để khôi phục nó về thời kỳ huy hoàng trước khi có thể tiếp tục kinh doanh.",
+	CRITDAMAGE      = "Kem Bông Óng Ánh cho phép các đòn tấn công của bạn gây sát thương chí mạng với mức cộng thêm lên tới 150%!",
+	RANDOMBUFF      = "Kẹo mút lấp lánh khi ăn sẽ gây ra một tác dụng phụ ngẫu nhiên. Hôm nay bạn có cảm thấy may mắn không?",
 }
 
 for k, v in pairs(LOADINGTIPS) do

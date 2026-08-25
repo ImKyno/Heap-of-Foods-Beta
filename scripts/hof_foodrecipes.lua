@@ -3,7 +3,7 @@ local kyno_foods =
 	-- Shipwrecked Foods.
 	coffee =
 	{
-		test = function(cooker, names, tags) return names.kyno_coffeebeans_cooked and (names.kyno_coffeebeans_cooked == 4 or 
+		test = function(cooker, names, tags) return names.kyno_coffeebeans_cooked and (names.kyno_coffeebeans_cooked == 4 or
 		(names.kyno_coffeebeans_cooked == 3 and (tags.dairy or tags.sweetener or tags.sugar))) and not names.kyno_coffeebeans end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
@@ -22,7 +22,7 @@ local kyno_foods =
 		tags = {"honeyed", "fooddrink", "nospice"},
 		card_def = {ingredients = {{"kyno_coffeebeans_cooked", 3}, {"honey", 1}}},
 	},
-	
+
 	bisque =
 	{
 		test = function(cooker, names, tags) return (tags.limpet and tags.limpet >= 3) and tags.frozen end,
@@ -42,8 +42,8 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_limpets", 3}, {"ice", 1}}},
 	},
-	
-	jellyopop = 
+
+	jellyopop =
 	{
 		test = function(cooker, names, tags) return tags.jellyfish and tags.frozen and names.twigs end,
 		priority = 20,
@@ -62,8 +62,8 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_jellyfish", 1}, {"ice", 1}, {"twigs", 1}}},
 	},
-	
-	sharkfinsoup = 
+
+	sharkfinsoup =
 	{
 		test = function(cooker, names, tags) return names.kyno_shark_fin end,
 		priority = 20,
@@ -79,16 +79,16 @@ local kyno_foods =
 		pigcoinvalue = {3, 1, 1},
 		floater = TUNING.HOF_FLOATER,
 		tags = {"marinefood"},
-		luckitem = { luck = -TUNING.KYNO_LUCK_MEDLARGE },
+		luckitem = { luck = -TUNING.KYNO_LUCK_SUPERTINY },
 		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"twigs", 3}}},
 		oneatenfn = function(inst, eater)
 			OnFoodNaughtiness(inst, eater)
 		end,
 	},
-	
+
 	tropicalbouillabaisse =
 	{
-		test = function(cooker, names, tags) return tags.fish and (names.eel or names.eel_cooked or names.pondeel) and (tags.wobster) 
+		test = function(cooker, names, tags) return tags.fish and (names.eel or names.eel_cooked or names.pondeel) and (tags.wobster)
 		and (names.barnacle or names.barnacle_cooked) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -107,7 +107,7 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondfish", 1}, {"pondeel", 1}, {"wobster_sheller_land", 1}, {"barnacle", 1}}},
 	},
-	
+
 	-- Hamlet Foods.
 	feijoada =
 	{
@@ -125,7 +125,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_beanbugs", 3}, {"monstermeat", 1}}},
 	},
-	
+
 	gummy_cake =
 	{
 		test = function(cooker, names, tags) return (tags.gummybug and tags.gummybug >= 2)
@@ -144,7 +144,7 @@ local kyno_foods =
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_gummybug", 2}, {"honey", 2}}},
 	},
-	
+
 	hardshell_tacos =
 	{
 		test = function(cooker, names, tags) return (names.slurtle_shellpieces and names.slurtle_shellpieces >= 2) and tags.veggie end,
@@ -161,8 +161,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"slurtle_shellpieces", 2}, {"tomato", 2}}},
 	},
-	
-	icedtea = 
+
+	icedtea =
 	{
 		test = function(cooker, names, tags) return (names.kyno_tealeaf and names.kyno_tealeaf >= 2) and tags.sweetener and tags.frozen end,
 		priority = 30,
@@ -181,8 +181,8 @@ local kyno_foods =
 		tags = {"honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_tealeaf", 2}, {"honey", 1}, {"ice", 1}}},
 	},
-	
-	tea = 
+
+	tea =
 	{
 		test = function(cooker, names, tags) return (names.kyno_tealeaf and names.kyno_tealeaf >= 2) and tags.sweetener and not tags.frozen end,
 		priority = 25,
@@ -203,8 +203,8 @@ local kyno_foods =
 		tags = {"honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_tealeaf", 2}, {"honey", 2}}},
 	},
-	
-	nettlelosange = 
+
+	nettlelosange =
 	{
 		test = function(cooker, names, tags) return tags.fireweed and not tags.meat end,
 		priority = 1,
@@ -223,10 +223,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"firenettles", 1}, {"twigs", 3}}},
 	},
-	
+
 	nettlemeated =
 	{
-		test = function(cooker, names, tags) return (tags.fireweed and tags.fireweed >= 2) and (tags.meat and tags.meat >= 1) 
+		test = function(cooker, names, tags) return (tags.fireweed and tags.fireweed >= 2) and (tags.meat and tags.meat >= 1)
 		and (not tags.monster or tags.monster <= 1) and not tags.inedible end,
 		priority = 1,
 		foodtype = FOODTYPE.MEAT,
@@ -244,10 +244,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"firenettles", 2}, {"smallmeat", 2}}},
 	},
-	
-	snakebonesoup = 
+
+	snakebonesoup =
 	{
-		test = function(cooker, names, tags) return (names.kyno_worm_bone and names.kyno_worm_bone >= 2) and (tags.meat and tags.meat >= 2) 
+		test = function(cooker, names, tags) return (names.kyno_worm_bone and names.kyno_worm_bone >= 2) and (tags.meat and tags.meat >= 2)
 		and not (names.kyno_humanmeat or names.kyno_humanmeat_cooked or names.kyno_humanmeat_dried) end,
 		priority = 20,
 		foodtype = FOODTYPE.MEAT,
@@ -267,8 +267,8 @@ local kyno_foods =
 			eater:AddDebuff("kyno_wormbuff", "kyno_wormbuff")
 		end,
 	},
-	
-	steamedhamsandwich = 
+
+	steamedhamsandwich =
 	{
 		test = function(cooker, names, tags) return ((names.meat or 0) + (names.meat_cooked or 0) >= 2) and tags.foliage and (tags.veggie and tags.veggie >= 1) end,
 		priority = 15,
@@ -284,9 +284,9 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 2}, {"foliage", 1}, {"garlic", 1}}},
 	},
-	
+
 	-- The Gorge Foods.
-	gorge_bread = 
+	gorge_bread =
 	{
 		test = function(cooker, names, tags) return (tags.flour and tags.flour >= 3) and not tags.spotspice end,
 		priority = 1,
@@ -303,10 +303,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_flour", 4}}},
 	},
-	
-	gorge_sweet_chips = 
+
+	gorge_sweet_chips =
 	{
-		test = function(cooker, names, tags) return ((names.kyno_sweetpotato or 0) + (names.kyno_sweetpotato_cooked or 0) >= 2) 
+		test = function(cooker, names, tags) return ((names.kyno_sweetpotato or 0) + (names.kyno_sweetpotato_cooked or 0) >= 2)
 		and tags.oil and tags.spotspice end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -321,7 +321,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_sweetpotato", 2}, {"kyno_oil", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_vegetable_soup =
 	{
 		test = function(cooker, names, tags) return (names.carrot or names.carrot_cooked) and (names.onion or names.onion_cooked) and
@@ -339,10 +339,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"carrot", 1}, {"onion", 1}, {"corn", 1}, {"foliage", 1}}},
 	},
-	
-	gorge_jelly_sandwich = 
+
+	gorge_jelly_sandwich =
 	{
-		test = function(cooker, names, tags) return tags.bread and tags.berries 
+		test = function(cooker, names, tags) return tags.bread and tags.berries
 		and not tags.inedible and not tags.veggie and not tags.meat and not tags.fish end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -357,10 +357,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"gorge_bread", 1}, {"berries", 3}}},
 	},
-	
+
 	gorge_fish_stew =
 	{
-		test = function(cooker, names, tags) return (tags.salmon and tags.salmon >= 2) and (names.asparagus or names.asparagus_cooked) 
+		test = function(cooker, names, tags) return (tags.salmon and tags.salmon >= 2) and (names.asparagus or names.asparagus_cooked)
 		and tags.spotspice and not names.twigs and not tags.bread end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
@@ -376,7 +376,7 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_salmonfish", 2}, {"asparagus", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_onion_cake =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_turnip or 0) + (names.kyno_turnip_cooked or 0) >= 2) and tags.egg
@@ -395,8 +395,8 @@ local kyno_foods =
 		tags = {"eggfood"},
 		card_def = {ingredients = {{"kyno_turnip", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 	},
-	
-	gorge_potato_pancakes = 
+
+	gorge_potato_pancakes =
 	{
 		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 3) and tags.flour and not tags.egg and not tags.fish end,
 		priority = 35,
@@ -412,8 +412,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"potato", 3}, {"kyno_flour", 1}}},
 	},
-	
-	gorge_potato_soup = 
+
+	gorge_potato_soup =
 	{
 		test = function(cooker, names, tags) return (tags.potato and tags.potato >= 3) and tags.succulent end,
 		priority = 35,
@@ -429,8 +429,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"potato", 3}, {"succulent_picked", 1}}},
 	},
-	
-	gorge_fishball_skewers = 
+
+	gorge_fishball_skewers =
 	{
 		test = function(cooker, names, tags) return tags.fish and names.twigs and tags.spotspice end,
 		priority = 35,
@@ -447,7 +447,7 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondfish", 2}, {"twigs", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_meat_skewers =
 	{
 		test = function(cooker, names, tags) return (tags.bacon and tags.bacon >= 2) and names.twigs and tags.spotspice end,
@@ -464,8 +464,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_bacon", 2}, {"twigs", 1}, {"kyno_spotspice", 1}}},
 	},
-	
-	gorge_stone_soup = 
+
+	gorge_stone_soup =
 	{
 		test = function(cooker, names, tags) return names.rocks and tags.veggie end,
 		priority = 1,
@@ -482,8 +482,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"rocks", 1}, {"carrot", 3}}},
 	},
-	
-	gorge_croquette = 
+
+	gorge_croquette =
 	{
 		test = function(cooker, names, tags) return (tags.potato and tags.potato >= 2) and tags.egg and tags.flour
 		and not names.potato_cooked and not names.kyno_sweetpotato_cooked end,
@@ -502,8 +502,8 @@ local kyno_foods =
 		tags = {"eggfood"},
 		card_def = {ingredients = {{"potato", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 	},
-	
-	gorge_roast_vegetables = 
+
+	gorge_roast_vegetables =
 	{
 		test = function(cooker, names, tags) return names.onion_cooked and names.asparagus_cooked and names.garlic_cooked and names.carrot_cooked end,
 		priority = 30,
@@ -519,7 +519,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"onion_cooked", 1}, {"asparagus_cooked", 1}, {"garlic_cooked", 1}, {"carrot_cooked", 1}}},
 	},
-	
+
 	gorge_meatloaf =
 	{
 		test = function(cooker, names, tags) return (tags.bacon and tags.bacon >= 2) and tags.flour and tags.veggie and not tags.foliage end,
@@ -536,7 +536,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_bacon", 2}, {"kyno_flour", 1}, {"onion", 1}}},
 	},
-	
+
 	gorge_carrot_soup =
 	{
 		test = function(cooker, names, tags) return ((names.carrot or 0) + (names.carrot_cooked or 0) >= 3) and tags.spotspice end,
@@ -554,10 +554,10 @@ local kyno_foods =
 		tags = {"sammyfood"},
 		card_def = {ingredients = {{"carrot", 3}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_fishpie =
 	{
-		test = function(cooker, names, tags) return tags.salmon and tags.flour and tags.veggie 
+		test = function(cooker, names, tags) return tags.salmon and tags.flour and tags.veggie
 		and not tags.bread end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
@@ -591,10 +591,10 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondfish", 1}, {"kyno_flour", 1}, {"potato", 2}}},
 	},
-	
-	gorge_meatpie = 
+
+	gorge_meatpie =
 	{
-		test = function(cooker, names, tags) return tags.meat and (tags.flour and tags.flour >= 2) and tags.veggie and not (names.potato or names.potato_cooked) 
+		test = function(cooker, names, tags) return tags.meat and (tags.flour and tags.flour >= 2) and tags.veggie and not (names.potato or names.potato_cooked)
 		and not (names.onion or names.onion_cooked) and not tags.bacon end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -609,8 +609,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 1}, {"kyno_flour", 2}, {"carrot", 1}}},
 	},
-	
-	gorge_sliders = 
+
+	gorge_sliders =
 	{
 		test = function(cooker, names, tags) return (tags.bacon and tags.bacon >= 2) and names.littlebread and tags.foliage end,
 		priority = 35,
@@ -626,10 +626,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_bacon", 2}, {"littlebread", 1}, {"foliage", 1}}},
 	},
-	
-	gorge_jelly_roll = 
+
+	gorge_jelly_roll =
 	{
-		test = function(cooker, names, tags) return (tags.berries and tags.berries >= 3) and tags.flour 
+		test = function(cooker, names, tags) return (tags.berries and tags.berries >= 3) and tags.flour
 		and not tags.syrup and not tags.sweetener and not tags.dairy and not tags.meat end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -644,10 +644,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"berries", 3}, {"kyno_flour", 1}}},
 	},
-	
+
 	gorge_carrot_cake =
 	{
-		test = function(cooker, names, tags) return (names.carrot and names.carrot >= 2) and tags.egg and tags.flour 
+		test = function(cooker, names, tags) return (names.carrot and names.carrot >= 2) and tags.egg and tags.flour
 		and not tags.spotspice and not names.carrot_cooked end,
 		priority = 20,
 		foodtype = FOODTYPE.VEGGIE,
@@ -664,10 +664,10 @@ local kyno_foods =
 		tags = {"sammyfood", "eggfood"},
 		card_def = {ingredients = {{"carrot", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 	},
-	
+
 	gorge_garlicmashed =
 	{
-		test = function(cooker, names, tags) return ((names.garlic or 0) + (names.garlic_cooked or 0) >= 2) and 
+		test = function(cooker, names, tags) return ((names.garlic or 0) + (names.garlic_cooked or 0) >= 2) and
 		tags.potato and tags.spotspice and not tags.bread and not tags.meat and not tags.fish end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -682,10 +682,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"garlic", 2}, {"potato", 1}, {"kyno_spotspice", 1}}},
 	},
-	
-	gorge_garlicbread = 
+
+	gorge_garlicbread =
 	{
-		test = function(cooker, names, tags) return tags.bread and ((names.garlic or 0) + (names.garlic_cooked or 0) >= 2) 
+		test = function(cooker, names, tags) return tags.bread and ((names.garlic or 0) + (names.garlic_cooked or 0) >= 2)
 		and not tags.meat and not tags.fish end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -705,10 +705,10 @@ local kyno_foods =
 			eater:AddDebuff("kyno_panicbuff", "kyno_panicbuff")
 		end,
 	},
-	
-	gorge_tomato_soup = 
+
+	gorge_tomato_soup =
 	{
-		test = function(cooker, names, tags) return ((names.tomato or 0) + (names.tomato_cooked or 0) >= 3) and tags.spotspice 
+		test = function(cooker, names, tags) return ((names.tomato or 0) + (names.tomato_cooked or 0) >= 3) and tags.spotspice
 		and not tags.bread and not tags.meat and not tags.dairy end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -723,10 +723,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"tomato", 3}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_sausage =
 	{
-		test = function(cooker, names, tags) return (tags.bacon and tags.bacon >= 3) 
+		test = function(cooker, names, tags) return (tags.bacon and tags.bacon >= 3)
 		and tags.spotspice and not tags.inedible end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -741,7 +741,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_bacon", 3}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_candiedfish =
 	{
 		test = function(cooker, names, tags) return tags.salmon and tags.syrup end,
@@ -759,10 +759,10 @@ local kyno_foods =
 		tags = {"honeyed", "marinefood"},
 		card_def = {ingredients = {{"kyno_salmonfish", 2}, {"kyno_syrup", 2}}},
 	},
-	
+
 	gorge_stuffedmushroom =
 	{
-		test = function(cooker, names, tags) return ((names.kyno_white_cap or 0) + (names.kyno_white_cap_cooked or 0) >= 3) 
+		test = function(cooker, names, tags) return ((names.kyno_white_cap or 0) + (names.kyno_white_cap_cooked or 0) >= 3)
 		and not tags.foliage and not tags.succulent and not tags.dairy and not names.royal_jelly end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -777,8 +777,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_white_cap", 3}, {"carrot", 1}}},
 	},
-	
-	gorge_bruschetta = 
+
+	gorge_bruschetta =
 	{
 		test = function(cooker, names, tags) return tags.bread and tags.spotspice and ((names.tomato or 0) + (names.tomato_cooked or 0) >= 2) end,
 		priority = 35,
@@ -794,10 +794,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"gorge_bread", 1}, {"kyno_spotspice", 1}, {"tomato", 2}}},
 	},
-	
+
 	gorge_hamburger =
 	{
-		test = function(cooker, names, tags) return tags.bread and tags.meat and tags.bacon and 
+		test = function(cooker, names, tags) return tags.bread and tags.meat and tags.bacon and
 		tags.foliage and not tags.fish and not tags.dairy and not (tags.bacon and tags.bacon > 1) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -812,7 +812,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"gorge_bread", 1}, {"meat", 1}, {"kyno_bacon", 1}, {"foliage", 1}}},
 	},
-	
+
 	gorge_fishburger =
 	{
 		test = function(cooker, names, tags) return tags.bread and tags.salmon and tags.foliage end,
@@ -830,10 +830,10 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"gorge_bread", 1}, {"kyno_salmonfish", 1}, {"foliage", 2}}},
 	},
-	
+
 	gorge_mushroomburger =
 	{
-		test = function(cooker, names, tags) return tags.bread and 
+		test = function(cooker, names, tags) return tags.bread and
 		((names.kyno_white_cap or 0) + (names.kyno_white_cap_cooked or 0) >= 2) and tags.foliage end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -848,7 +848,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"gorge_bread", 1}, {"foliage", 1}, {"kyno_white_cap", 2}}},
 	},
-	
+
 	gorge_fish_steak =
 	{
 		test = function(cooker, names, tags) return names.kyno_salmonfish_cooked and tags.foliage and tags.spotspice and not names.kyno_salmonfish end,
@@ -866,8 +866,8 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_salmonfish_cooked", 1}, {"foliage", 1}, {"kyno_spotspice", 2}}},
 	},
-	
-	gorge_curry = 
+
+	gorge_curry =
 	{
 		test = function(cooker, names, tags) return tags.meat and tags.veggie and (tags.spotspice and tags.spotspice >= 2) end,
 		priority = 15,
@@ -884,7 +884,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 1}, {"carrot", 1}, {"kyno_spotspice", 2}}},
 	},
-	
+
 	gorge_spaghetti =
 	{
 		test = function(cooker, names, tags) return tags.meat and tags.flour and tags.spotspice and (names.tomato or names.tomato_cooked) end,
@@ -901,7 +901,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 1}, {"kyno_flour", 1}, {"kyno_spotspice", 1}, {"tomato", 1}}},
 	},
-	
+
 	gorge_poachedfish =
 	{
 		test = function(cooker, names, tags) return tags.salmon and (tags.foliage and tags.foliage >= 2) and tags.spotspice and not names.twigs end,
@@ -919,10 +919,10 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_salmonfish", 1}, {"foliage", 2}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_shepherd_pie =
 	{
-		test = function(cooker, names, tags) return tags.meat and (names.onion or names.onion_cooked) 
+		test = function(cooker, names, tags) return tags.meat and (names.onion or names.onion_cooked)
 		and (names.garlic or names.garlic_cooked) and tags.spotspice end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -937,7 +937,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 1}, {"onion", 1}, {"garlic", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_candy =
 	{
 		test = function(cooker, names, tags) return tags.syrup and (tags.sweetener and tags.sweetener >= 4) end,
@@ -956,12 +956,12 @@ local kyno_foods =
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_syrup", 1}, {"honey", 3}}},
 		prefabs = { "kyno_hastebuff" },
-        oneatenfn = function(inst, eater)
-            eater:AddDebuff("kyno_hastebuff", "kyno_hastebuff")
-        end,
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_hastebuff", "kyno_hastebuff")
+		end,
 	},
-	
-	gorge_bread_pudding = 
+
+	gorge_bread_pudding =
 	{
 		test = function(cooker, names, tags) return tags.berries and (tags.flour and tags.flour >= 2)
 		and tags.syrup end,
@@ -979,7 +979,7 @@ local kyno_foods =
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"berries", 1}, {"kyno_syrup", 1}, {"kyno_flour", 2}}},
 	},
-	
+
 	gorge_berry_tart =
 	{
 		test = function(cooker, names, tags) return (tags.berries and tags.berries >= 2) and tags.flour
@@ -998,10 +998,10 @@ local kyno_foods =
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"berries", 2}, {"kyno_flour", 1}, {"honey", 1}}},
 	},
-	
+
 	gorge_macaroni =
 	{
-		test = function(cooker, names, tags) return (tags.flour and tags.flour >= 2) and tags.milk and not tags.fish and not tags.meat 
+		test = function(cooker, names, tags) return (tags.flour and tags.flour >= 2) and tags.milk and not tags.fish and not tags.meat
 		and not tags.bread and not tags.fruit and not tags.syrup end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -1016,8 +1016,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_flour", 2}, {"goatmilk", 2}}},
 	},
-	
-	gorge_bagel_and_fish = 
+
+	gorge_bagel_and_fish =
 	{
 		test = function(cooker, names, tags) return tags.bread and tags.milk and tags.salmon and tags.spotspice end,
 		priority = 35,
@@ -1034,10 +1034,10 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"gorge_bread", 1}, {"goatmilk", 1}, {"kyno_salmonfish", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_grilled_cheese =
 	{
-		test = function(cooker, names, tags) return tags.bread and (tags.dairy or tags.cheese) and not tags.fish and not tags.meat 
+		test = function(cooker, names, tags) return tags.bread and (tags.dairy or tags.cheese) and not tags.fish and not tags.meat
 		and not tags.spotspice and not (tags.inedible and tags.inedible > 1) end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -1052,10 +1052,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"gorge_bread", 2}, {"cheese_yellow", 1}, {"twigs", 1}}},
 	},
-	
-	gorge_creammushroom = 
+
+	gorge_creammushroom =
 	{
-		test = function(cooker, names, tags) return tags.milk and ((names.kyno_white_cap or 0) + (names.kyno_white_cap_cooked or 0) >= 2) 
+		test = function(cooker, names, tags) return tags.milk and ((names.kyno_white_cap or 0) + (names.kyno_white_cap_cooked or 0) >= 2)
 		and tags.succulent and not tags.meat and not tags.fish end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -1070,7 +1070,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"goatmilk", 1}, {"succulent_picked", 1}, {"kyno_white_cap", 2}}},
 	},
-	
+
 	gorge_manicotti =
 	{
 		test = function(cooker, names, tags) return tags.flour and tags.milk and tags.spotspice and (names.tomato or names.tomato_cooked) end,
@@ -1087,8 +1087,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_flour", 1}, {"goatmilk", 1}, {"kyno_spotspice", 1}, {"tomato", 1}}},
 	},
-	
-	gorge_fettuccine = 
+
+	gorge_fettuccine =
 	{
 		test = function(cooker, names, tags) return tags.flour and (names.garlic or names.garlic_cooked) and tags.succulent and tags.dairy end,
 		priority = 35,
@@ -1104,7 +1104,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_flour", 1}, {"garlic", 1}, {"succulent_picked", 1}, {"goatmilk", 1}}},
 	},
-	
+
 	gorge_onion_soup =
 	{
 		test = function(cooker, names, tags) return tags.flour and tags.dairy and ((names.onion or 0) + (names.onion_cooked or 0) >= 2) end,
@@ -1121,10 +1121,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_flour", 1}, {"goatmilk", 1}, {"onion", 2}}},
 	},
-	
+
 	gorge_breaded_cutlet =
 	{
-		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and (tags.flour and tags.flour >= 2) 
+		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and (tags.flour and tags.flour >= 2)
 		and not (tags.monster and tags.monster > 1) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -1139,7 +1139,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 2}, {"kyno_flour", 2}}},
 	},
-	
+
 	gorge_creamy_fish =
 	{
 		test = function(cooker, names, tags) return tags.milk and tags.veggie and tags.salmon and tags.spotspice and not tags.bread end,
@@ -1157,10 +1157,10 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_salmonfish", 1}, {"goatmilk", 1}, {"carrot", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_pot_roast =
 	{
-		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and tags.veggie and tags.spotspice and not tags.fish 
+		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and tags.veggie and tags.spotspice and not tags.fish
 		and not tags.monster and not tags.chicken end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -1175,7 +1175,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 2}, {"kyno_aloe", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_steak_frites =
 	{
 		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 2) and tags.potato end,
@@ -1192,7 +1192,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 2}, {"potato", 2}}},
 	},
-	
+
 	gorge_shooter_sandwich =
 	{
 		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 1)
@@ -1211,10 +1211,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 2}, {"gorge_bread", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_bacon_wrapped =
 	{
-		test = function(cooker, names, tags) return (tags.meat and tags.meat > 1) and (tags.bacon and tags.bacon >= 2) 
+		test = function(cooker, names, tags) return (tags.meat and tags.meat > 1) and (tags.bacon and tags.bacon >= 2)
 		and not tags.inedible and not tags.bread and not tags.spotspice end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -1230,10 +1230,10 @@ local kyno_foods =
 		tags = {"partitiofood"},
 		card_def = {ingredients = {{"meat", 2}, {"kyno_bacon", 2}}},
 	},
-	
-	gorge_crab_cake = 
+
+	gorge_crab_cake =
 	{
-		test = function(cooker, names, tags) return tags.crab and tags.succulent and tags.flour 
+		test = function(cooker, names, tags) return tags.crab and tags.succulent and tags.flour
 		and tags.spotspice end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -1249,7 +1249,7 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_crabmeat", 1}, {"succulent_picked", 1}, {"kyno_flour", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	gorge_crab_roll =
 	{
 		test = function(cooker, names, tags) return tags.crab and tags.foliage and (names.kyno_white_cap or names.kyno_white_cap_cooked) and tags.flour end,
@@ -1267,7 +1267,7 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_crabmeat", 1}, {"foliage", 1}, {"kyno_white_cap", 1}, {"kyno_flour", 1}}},
 	},
-	
+
 	gorge_crab_ravioli =
 	{
 		test = function(cooker, names, tags) return tags.crab and tags.flour and tags.dairy and tags.veggie end,
@@ -1285,7 +1285,7 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_crabmeat", 1}, {"kyno_flour", 1}, {"goatmilk", 1}, {"asparagus", 1}}},
 	},
-	
+
 	gorge_caramel_cube =
 	{
 		test = function(cooker, names, tags) return tags.syrup and tags.sugar and (tags.dairy and tags.dairy >= 2) end,
@@ -1301,11 +1301,11 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_gorge",
 		pigcoinvalue = {3, 1, 1},
 		floater = TUNING.HOF_FLOATER,
-		luckitem = { luck = TUNING.KYNO_LUCK_MEDLARGE },
+		luckitem = { luck = TUNING.KYNO_LUCK_SUPERTINY },
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_syrup", 1}, {"kyno_sugar", 1}, {"goatmilk", 2}}},
 	},
-	
+
 	gorge_scone =
 	{
 		test = function(cooker, names, tags) return tags.fruit and (tags.flour and tags.flour >= 2) and tags.dairy end,
@@ -1322,7 +1322,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"berries", 1}, {"kyno_flour", 2}, {"goatmilk", 1}}},
 	},
-	
+
 	gorge_cheesecake =
 	{
 		test = function(cooker, names, tags) return (tags.berries and tags.berries >= 2) and tags.flour and tags.dairy end,
@@ -1339,7 +1339,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"berries", 2}, {"kyno_flour", 1}, {"goatmilk", 1}}},
 	},
-	
+
 	gorge_waffles =
 	{
 		test = function(cooker, names, tags) return tags.butter and tags.egg and tags.syrup end,
@@ -1358,10 +1358,10 @@ local kyno_foods =
 		tags = {"honeyed", "eggfood"},
 		card_def = {ingredients = {{"butter", 1}, {"bird_egg", 1}, {"kyno_syrup", 2}}},
 	},
-	
+
 	kyno_syrup =
 	{
-		test = function(cooker, names, tags) return names.kyno_sap and (names.kyno_sap == 4 or 
+		test = function(cooker, names, tags) return names.kyno_sap and (names.kyno_sap == 4 or
 		(names.kyno_sap == 3 and (tags.dairy or tags.sweetener))) and not tags.monster end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
@@ -1377,11 +1377,11 @@ local kyno_foods =
 		tags = {"honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_sap", 4}}},
 	},
-	
-	-- Unimplemented Foods. 
-	slaw = 
+
+	-- Unimplemented Foods.
+	slaw =
 	{
-		test = function(cooker, names, tags) return ((names.kyno_fennel or 0) + (names.kyno_fennel_cooked or 0) >= 2) 
+		test = function(cooker, names, tags) return ((names.kyno_fennel or 0) + (names.kyno_fennel_cooked or 0) >= 2)
 		and (names.kyno_radish or names.kyno_radish_cooked) end,
 		priority = 20,
 		foodtype = FOODTYPE.VEGGIE,
@@ -1396,8 +1396,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_fennel", 2}, {"kyno_radish", 2}}},
 	},
-	
-	lotusbowl = 
+
+	lotusbowl =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_lotus_flower or 0) + (names.kyno_lotus_flower_cooked or 0) >= 3) end,
 		priority = 30,
@@ -1413,8 +1413,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_lotus_flower", 3}, {"twigs", 1}}},
 	},
-	
-	poi = 
+
+	poi =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_taroroot or 0) + (names.kyno_taroroot_cooked or 0) >= 3) and not tags.inedible end,
 		priority = 30,
@@ -1430,7 +1430,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_taroroot", 3}, {"carrot", 1}}},
 	},
-	
+
 	cucumbersalad =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_cucumber or 0) + (names.kyno_cucumber_cooked or 0) >= 3)
@@ -1449,11 +1449,11 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_cucumber", 3}, {"kelp", 1}}},
 		prefabs = { "buff_moistureimmunity" },
-        oneatenfn = function(inst, eater)
-            eater:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
-       	end,
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("buff_moistureimmunity", "buff_moistureimmunity")
+	   	end,
 	},
-	
+
 	waterycressbowl =
 	{
 		test = function(cooker, names, tags) return (names.kyno_waterycress and names.kyno_waterycress >= 2) and tags.succulent and
@@ -1473,9 +1473,9 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_waterycress", 2}, {"succulent_picked", 1}, {"carrot", 1}}},
 	},
-	
-	-- Secret / Custom Foods. Why are you here by the way?	
-	bowlofgears = 
+
+	-- Secret / Custom Foods. Why are you here by the way?
+	bowlofgears =
 	{
 		test = function(cooker, names, tags) return (names.gears and names.gears >= 2) and (names.wagpunk_bits and names.wagpunk_bits >= 2) end,
 		priority = 1,
@@ -1502,8 +1502,8 @@ local kyno_foods =
 			end
 		end,
 	},
-	
-	longpigmeal = 
+
+	longpigmeal =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_humanmeat or 0) + (names.kyno_humanmeat_cooked or 0) + (names.kyno_humanmeat_dried or 0) >= 3)
 		and names.boneshard end,
@@ -1520,7 +1520,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot",
 		pigcoinvalue = {3, 0, 0},
 		floater = TUNING.HOF_FLOATER,
-		luckitem = { luck = -TUNING.KYNO_LUCK_HUGE },
+		luckitem = { luck = -TUNING.KYNO_LUCK_SUPERTINY },
 		card_def = {ingredients = {{"kyno_humanmeat", 3}, {"boneshard", 1}}},
 	},
 
@@ -1543,16 +1543,16 @@ local kyno_foods =
 		card_def = {ingredients = {{"poop", 1}, {"guano", 1}, {"glommerfuel", 1}, {"kyno_salt", 1}}},
 		tags = {"preparedpoop"},
 		oneatenfn = function(inst, eater)
-            if eater.components.bloomness ~= nil and eater:HasTag("plantkin")
+			if eater.components.bloomness ~= nil and eater:HasTag("plantkin")
 			and not (eater.components.health ~= nil and eater.components.health:IsDead()) and not eater:HasTag("playerghost") then
-                if eater.components.bloomness ~= nil then
+				if eater.components.bloomness ~= nil then
 					eater.components.health:DoDelta(60) -- Since Wormwood can't heal from foods.
-                    eater.components.bloomness:Fertilize(3)
-                end
-            end
-        end,
+					eater.components.bloomness:Fertilize(3)
+				end
+			end
+		end,
 	},
-	
+
 	catfood =
 	{
 		test = function(cooker, names, tags) return tags.fish and tags.flour and (tags.spotspice and tags.spotspice >= 2) end,
@@ -1571,7 +1571,7 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondfish", 1}, {"kyno_flour", 1}, {"kyno_spotspice", 2}}},
 	},
-	
+
 	katfood =
 	{
 		test = function(cooker, names, tags) return tags.dairy and tags.syrup and (tags.flour and tags.flour >= 2) and not tags.fish end,
@@ -1590,7 +1590,7 @@ local kyno_foods =
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"goatmilk", 1}, {"kyno_syrup", 1}, {"kyno_flour", 2}}},
 	},
-	
+
 	bowlofpopcorn =
 	{
 		test = function(cooker, names, tags) return (names.corn and names.corn == 3) and names.kyno_salt and not names.corn_cooked end,
@@ -1608,16 +1608,16 @@ local kyno_foods =
 		tags = {"popcorn"},
 		card_def = {ingredients = {{"corn", 3}, {"kyno_salt", 1}}},
 	},
-	
+
 	figjuice =
 	{
-		test = function(cooker, names, tags) return (names.fig or names.fig_cooked) and (tags.frozen and tags.frozen >= 2) and not tags.meat 
+		test = function(cooker, names, tags) return (names.fig or names.fig_cooked) and (tags.frozen and tags.frozen >= 2) and not tags.meat
 		and not tags.fish and not tags.inedible end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FAST,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 0,
 		hunger = 18.75,
 		sanity = 50,
@@ -1629,16 +1629,16 @@ local kyno_foods =
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"fig", 2}, {"ice", 2}}},
 	},
-	
+
 	coconutwater =
 	{
-		test = function(cooker, names, tags) return (names.kyno_kokonut_halved and names.kyno_kokonut_halved == 1) and (tags.frozen and tags.frozen >= 2) 
+		test = function(cooker, names, tags) return (names.kyno_kokonut_halved and names.kyno_kokonut_halved == 1) and (tags.frozen and tags.frozen >= 2)
 		and names.twigs and not names.kyno_kokonut_cooked and not tags.meat and not tags.fish end,
 		priority = 20,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SLOW,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 20,
 		hunger = 4.6875,
 		sanity = 3,
@@ -1650,7 +1650,7 @@ local kyno_foods =
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"kyno_kokonut_halved", 1}, {"ice", 2}, {"twigs", 1}}},
 	},
-	
+
 	eyeballspaghetti =
 	{
 		test = function(cooker, names, tags) return names.deerclops_eyeball and (names.tomato or names.tomato_cooked) and tags.flour end,
@@ -1668,8 +1668,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"deerclops_eyeball", 1}, {"kyno_flour", 1}, {"tomato", 2}}},
 	},
-	
-	soulstew = 
+
+	soulstew =
 	{
 		test = function(cooker, names, tags) return (names.kyno_bottle_soul and names.kyno_bottle_soul >= 2)
 		and (names.tomato or names.tomato_cooked) and (names.red_cap or names.red_cap_cooked or names.kyno_red_cap_dried) end,
@@ -1694,7 +1694,7 @@ local kyno_foods =
 			if eater:HasTag("soulstealer") and eater.components.health ~= nil and not eater.components.health:IsDead() and
 			not eater:HasTag("playerghost") and eater.components.hunger ~= nil and eater.components.sanity ~= nil then
 				eater.components.hunger:DoDelta(TUNING.SOULSTEW_HUNGER)
-				
+
 				-- Nice inclination makes you lose sanity. Naughty inclination heals for less.
 				if eater.wortox_inclination == "nice" then
 					eater.components.health:DoDelta(TUNING.SOULSTEW_HEALTH_NICE)
@@ -1709,14 +1709,14 @@ local kyno_foods =
 			end
 		end,
 	},
-	
+
 	fortunecookie =
 	{
 		test = function(cooker, names, tags) return tags.flour and tags.sweetener and names.papyrus end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
-		health = 3, 
+		health = 3,
 		hunger = 20,
 		sanity = 5,
 		cooktime = 1,
@@ -1731,7 +1731,7 @@ local kyno_foods =
 			OnFoodRollFortune(inst, eater)
 		end,
 	},
-	
+
 	hornocupia =
 	{
 		test = function(cooker, names, tags) return tags.meat and tags.veggie and tags.fruit and names.horn end,
@@ -1752,15 +1752,15 @@ local kyno_foods =
 			local horn = SpawnPrefab("horn")
 			if eater.components.inventory ~= nil and eater:HasTag("player")
 			and eater.components.health ~= nil and not eater.components.health:IsDead()
-			and not eater:HasTag("playerghost") then 
+			and not eater:HasTag("playerghost") then
 				eater.components.inventory:GiveItem(horn, nil, eater:GetPosition())
 			end
 		end,
 	},
-	
-	cheese_yellow = 
+
+	cheese_yellow =
 	{
-		test = function(cooker, names, tags) return (tags.milk and tags.milk == 2) and tags.spotspice and not tags.meat 
+		test = function(cooker, names, tags) return (tags.milk and tags.milk == 2) and tags.spotspice and not tags.meat
 		and not (names.garlic or names.garlic_cooked) and not names.kyno_milk_koalefant and not tags.cheese end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -1775,8 +1775,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"goatmilk", 2}, {"kyno_spotspice", 2}}},
 	},
-	
-	cheese_white = 
+
+	cheese_white =
 	{
 		test = function(cooker, names, tags) return (tags.milk and tags.milk == 2) and tags.spotspice and (names.garlic or names.garlic_cooked)
 		and not tags.meat and not tags.cheese end,
@@ -1793,7 +1793,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"goatmilk", 2}, {"kyno_spotspice", 1}, {"garlic", 1}}},
 	},
-	
+
 	cheese_koalefant =
 	{
 		test = function(cooker, names, tags) return (names.kyno_milk_koalefant and names.kyno_milk_koalefant == 2) and tags.spotspice
@@ -1812,7 +1812,7 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_milk_koalefant", 2}, {"kyno_spotspice", 2}}},
 	},
 
-	milk_box = 
+	milk_box =
 	{
 		test = function(cooker, names, tags) return (tags.frozen and tags.frozen >= 2) and (tags.milk and tags.milk >= 2) and not names.milk_box end,
 		priority = 1,
@@ -1831,7 +1831,7 @@ local kyno_foods =
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"ice", 2}, {"goatmilk", 2}}},
 	},
-	
+
 	honeyjar =
 	{
 		test = function(cooker, names, tags) return (names.honey and names.honey >= 2) and tags.sugar end,
@@ -1850,14 +1850,14 @@ local kyno_foods =
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"honey", 2}, {"kyno_sugar", 2}}},
 		prefabs = { "kyno_beefriendlybuff" },
-        oneatenfn = function(inst, eater)
+		oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_beefriendlybuff", "kyno_beefriendlybuff")
-       	end,
+	   	end,
 	},
-	
+
 	watercup =
 	{
-		test = function(cooker, names, tags) return (tags.frozen and tags.frozen >= 2) and not tags.meat and not tags.fish and not tags.veggie 
+		test = function(cooker, names, tags) return (tags.frozen and tags.frozen >= 2) and not tags.meat and not tags.fish and not tags.veggie
 		and not tags.fruit and not tags.milk and not tags.sweetener end,
 		priority = -5,
 		foodtype = FOODTYPE.GOODIES,
@@ -1877,12 +1877,12 @@ local kyno_foods =
 		tags = {"fooddrink", "nospice"},
 		card_def = {ingredients = {{"ice", 4}}},
 		oneatenfn = function(inst, eater)
-			if eater.components.debuffable ~= nil then 
-				eater.components.debuffable:RemoveAllDebuffs()	
+			if eater.components.debuffable ~= nil then
+				eater.components.debuffable:RemoveAllDebuffs()
 			end
 		end
 	},
-	
+
 	crab_artichoke =
 	{
 		test = function(cooker, names, tags) return (tags.crab and tags.crab >= 2) and (tags.algae and tags.algae >= 1) and tags.spotspice end,
@@ -1900,10 +1900,10 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_crabmeat", 2}, {"kyno_seaweeds", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	poisonfrogglebunwich =
 	{
-		test = function(cooker, names, tags) return (names.kyno_poison_froglegs or names.kyno_poison_froglegs_cooked) and tags.veggie and tags.veggie >= 0.5 
+		test = function(cooker, names, tags) return (names.kyno_poison_froglegs or names.kyno_poison_froglegs_cooked) and tags.veggie and tags.veggie >= 0.5
 		and not (names.froglegs or names.froglegs_cooked) end,
 		priority = 1,
 		foodtype = FOODTYPE.MEAT,
@@ -1913,18 +1913,18 @@ local kyno_foods =
 		sanity = 10,
 		cooktime = 2,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_FROG,
-        potlevel = "low",
+		potlevel = "low",
 		overridebuild = "kyno_foodrecipes_cookpot",
 		pigcoinvalue = {8, 2, 1},
-        floater = TUNING.HOF_FLOATER,
+		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_poison_froglegs", 1}, {"kelp", 1}, {"twigs", 2}}},
 		prefabs = { "kyno_frogbuff" },
-        oneatenfn = function(inst, eater)
+		oneatenfn = function(inst, eater)
 			eater:AddDebuff("kyno_frogbuff", "kyno_frogbuff")
-       	end,
+	   	end,
 	},
-	
-	pepperrolls = 
+
+	pepperrolls =
 	{
 		test = function(cooker, names, tags) return tags.flour and tags.spotspice and ((names.pepper or 0) + (names.pepper_cooked or 0) >= 2) end,
 		priority = 30,
@@ -1942,7 +1942,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_spotspice", 1}, {"pepper", 2}}},
 	},
-	
+
 	chocolate_black =
 	{
 		test = function(cooker, names, tags) return tags.milk and tags.sugar and (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2)
@@ -1960,7 +1960,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"goatmilk", 1}, {"kyno_sugar", 1}, {"kyno_twiggynuts", 2}}},
 	},
-	
+
 	chocolate_white =
 	{
 		test = function(cooker, names, tags) return names.kyno_milk_beefalo and tags.sugar and (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2)
@@ -1978,7 +1978,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_milk_beefalo", 1}, {"kyno_sugar", 1}, {"kyno_twiggynuts", 2}}},
 	},
-	
+
 	tricolordango =
 	{
 		test = function(cooker, names, tags) return tags.milk and tags.sugar and tags.flour and names.twigs end,
@@ -1995,7 +1995,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"goatmilk", 1}, {"kyno_flour", 1}, {"kyno_sugar", 1}, {"twigs", 1}}},
 	},
-	
+
 	--[[
 	friesfrench =
 	{
@@ -2014,10 +2014,10 @@ local kyno_foods =
 		card_def = {ingredients = {{"potato", 2}, {"kyno_oil", 1}, {"kyno_salt", 1}}},
 	},
 	]]--
-	
+
 	onionrings =
 	{
-		test = function(cooker, names, tags) return ((names.onion or 0) + (names.onion_cooked or 0) >= 2) and tags.oil and tags.flour 
+		test = function(cooker, names, tags) return ((names.onion or 0) + (names.onion_cooked or 0) >= 2) and tags.oil and tags.flour
 		and not names.twigs and not tags.frozen and not tags.sweetener end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -2032,7 +2032,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"onion", 2}, {"kyno_flour", 1}, {"kyno_oil", 1}}},
 	},
-	
+
 	donuts =
 	{
 		test = function(cooker, names, tags) return (tags.flour and tags.flour >= 2) and names.kyno_sugar and tags.oil end,
@@ -2049,7 +2049,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_flour", 2}, {"kyno_sugar", 1}, {"kyno_oil", 1}}},
 	},
-	
+
 	donuts_chocolate_black =
 	{
 		test = function(cooker, names, tags) return tags.flour and names.kyno_sugar and tags.oil and names.chocolate_black end,
@@ -2066,7 +2066,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"chocolate_black", 1}, {"kyno_flour", 1}, {"kyno_sugar", 1}, {"kyno_oil", 1}}},
 	},
-	
+
 	donuts_chocolate_white =
 	{
 		test = function(cooker, names, tags) return tags.flour and names.kyno_sugar and tags.oil and names.chocolate_white end,
@@ -2083,7 +2083,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"chocolate_white", 1}, {"kyno_flour", 1}, {"kyno_sugar", 1}, {"kyno_oil", 1}}},
 	},
-	
+
 	gummybeargers =
 	{
 		test = function(cooker, names, tags) return names.bearger_fur and tags.gummybug and (tags.sweetener and tags.sweetener >= 2) end,
@@ -2102,7 +2102,7 @@ local kyno_foods =
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"bearger_fur", 1}, {"kyno_gummybug", 1}, {"honey", 2}}},
 	},
-	
+
 	gummyworms =
 	{
 		test = function(cooker, names, tags) return tags.gummybug and names.kyno_sugar and names.ancientfruit_nightvision end,
@@ -2121,15 +2121,15 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"ancientfruit_nightvision", 1}, {"kyno_gummybug", 1}, {"kyno_sugar", 2}}},
 		prefabs = { "kyno_nightvisionbuff" },
-        oneatenfn = function(inst, eater)
-            eater:AddDebuff("kyno_nightvisionbuff", "kyno_nightvisionbuff")
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_nightvisionbuff", "kyno_nightvisionbuff")
 
 			if eater.components.grogginess ~= nil then
 				eater.components.grogginess:MakeGrogginessAtLeast(1.5)
 			end
-        end,
+		end,
 	},
-	
+
 	pretzel =
 	{
 		test = function(cooker, names, tags) return tags.butter and names.kyno_salt and (tags.flour and tags.flour >= 2) end,
@@ -2146,7 +2146,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"butter", 1}, {"kyno_salt", 1}, {"kyno_flour", 2}}},
 	},
-	
+
 	cornincup =
 	{
 		test = function(cooker, names, tags) return names.kyno_salt and (tags.butter or tags.cheese) and (names.pepper or names.pepper_cooked) and
@@ -2166,7 +2166,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"corn", 1}, {"pepper", 1}, {"kyno_salt", 1}, {"butter", 1}}},
 	},
-	
+
 	cottoncandy =
 	{
 		test = function(cooker, names, tags) return (tags.sugar and tags.sugar >= 3) and names.twigs end,
@@ -2183,10 +2183,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_sugar", 3}, {"twigs", 1}}},
 	},
-	
+
 	roastedhazelnuts =
 	{
-		test = function(cooker, names, tags) return (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2) 
+		test = function(cooker, names, tags) return (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2)
 		and (names.acorn_cooked and names.acorn_cooked >= 2) end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -2201,7 +2201,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_twiggynuts", 2}, {"acorn_cooked", 2}}},
 	},
-	
+
 	monstermuffin =
 	{
 		test = function(cooker, names, tags) return tags.flour and names.nightmarefuel and (tags.sweetener and tags.sweetener >= 2) end,
@@ -2219,15 +2219,15 @@ local kyno_foods =
 		tags = {"honeyed", "monstermeat"},
 		card_def = {ingredients = {{"kyno_flour", 1}, {"nightmarefuel", 1}, {"honey", 2}}},
 		oneatenfn = function(inst, eater)
-			if eater ~= nil and eater:HasTag("playermonster") 
-			and not (eater.components.health ~= nil and eater.components.health:IsDead()) 
+			if eater ~= nil and eater:HasTag("playermonster")
+			and not (eater.components.health ~= nil and eater.components.health:IsDead())
 			and not eater:HasTag("playerghost") then
 				eater.components.health:DoDelta(10)
 				eater.components.sanity:DoDelta(15)
 			end
 		end,
 	},
-	
+
 	pinkcake =
 	{
 		test = function(cooker, names, tags) return (tags.sugar and tags.sugar >= 2) and tags.flour and tags.egg end,
@@ -2245,7 +2245,7 @@ local kyno_foods =
 		tags = {"eggfood"},
 		card_def = {ingredients = {{"kyno_sugar", 2}, {"bird_egg", 1}, {"kyno_flour", 1}}},
 	},
-	
+
 	chipsbag =
 	{
 		test = function(cooker, names, tags) return ((names.potato or 0) + (names.potato_cooked or 0) >= 2) and tags.oil and tags.spotspice end,
@@ -2262,7 +2262,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"potato", 2}, {"kyno_oil", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	littlebread =
 	{
 		test = function(cooker, names, tags) return (tags.flour and tags.flour == 3) and tags.spotspice end,
@@ -2280,10 +2280,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_flour", 3}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	hothound =
 	{
-		test = function(cooker, names, tags) return names.littlebread and tags.meat and (names.tomato or names.tomato_cooked) and 
+		test = function(cooker, names, tags) return names.littlebread and tags.meat and (names.tomato or names.tomato_cooked) and
 		tags.spotspice and not tags.fish end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
@@ -2298,7 +2298,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"littlebread", 1}, {"meat", 1}, {"tomato", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	milkshake =
 	{
 		test = function(cooker, names, tags) return tags.milk and tags.berries and tags.sweetener and tags.frozen and not tags.syrup end,
@@ -2306,7 +2306,7 @@ local kyno_foods =
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FAST,
 		temperature = TUNING.COLD_FOOD_BONUS_TEMP,
-        temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
+		temperatureduration = TUNING.FOOD_TEMP_AVERAGE,
 		health = 30,
 		hunger = 12.5,
 		sanity = 30,
@@ -2318,7 +2318,7 @@ local kyno_foods =
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"goatmilk", 1}, {"berries", 1}, {"honey", 1}, {"ice", 1}}},
 	},
-	
+
 	banana_pudding =
 	{
 		test = function(cooker, names, tags) return (tags.banana and tags.banana >= 2) and tags.milk and tags.sweetener end,
@@ -2336,7 +2336,7 @@ local kyno_foods =
 		tags = {"honeyed", "monkeyqueenbribe"},
 		card_def = {ingredients = {{"cave_banana", 2}, {"goatmilk", 1}, {"honey", 1}}},
 	},
-	
+
 	sea_pudding =
 	{
 		test = function(cooker, names, tags) return (names.eel or names.eel_cooked or names.pondeel) and tags.mussel
@@ -2360,7 +2360,7 @@ local kyno_foods =
 			eater:AddDebuff("kyno_fishingbuff", "kyno_fishingbuff")
 		end,
 	},
-	
+
 	minertreat =
 	{
 		test = function(cooker, names, tags) return tags.fruit and (tags.sweetener and tags.sweetener >= 2) and names.twigs end,
@@ -2379,7 +2379,7 @@ local kyno_foods =
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"honey", 2}, {"pomegranate", 1}, {"twigs", 1}}},
 	},
-	
+
 	radishsalad =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_radish or 0) + (names.kyno_radish_cooked or 0) >= 3) and tags.spotspice end,
@@ -2396,7 +2396,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_radish", 3}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	pumpkin_soup =
 	{
 		test = function(cooker, names, tags) return ((names.pumpkin or 0) + (names.pumpkin_cooked or 0) >= 2) and tags.butter and tags.spotspice end,
@@ -2413,7 +2413,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"pumpkin", 2}, {"butter", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	parznip_soup =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_parznip or 0) + (names.kyno_parznip_cooked or 0) + (names.kyno_parznip_eaten or 0) >= 3) and
@@ -2433,10 +2433,10 @@ local kyno_foods =
 		card_def = {ingredients = {{"kyno_parznip", 3}, {"succulent_picked", 1}}},
 		oneatenfn = function(inst, eater)
 		prefabs = { "kyno_eaterbuff" },
-            eater:AddDebuff("kyno_eaterbuff", "kyno_eaterbuff")
-        end,
+			eater:AddDebuff("kyno_eaterbuff", "kyno_eaterbuff")
+		end,
 	},
-	
+
 	algae_soup =
 	{
 		test = function(cooker, names, tags) return (tags.algae and tags.algae >= 3) and not tags.meat and not tags.fish end,
@@ -2453,7 +2453,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kelp", 2}, {"kyno_waterycress", 1}, {"kyno_seaweeds", 1}}},
 	},
-	
+
 	duriansplit =
 	{
 		test = function(cooker, names, tags) return (names.durian or names.durian_cooked) and tags.banana and tags.frozen and tags.fruit end,
@@ -2474,14 +2474,14 @@ local kyno_foods =
 		card_def = {ingredients = {{"durian", 1}, {"ice", 1}, {"cave_banana", 2}}},
 		oneatenfn = function(inst, eater)
 			if eater ~= nil and eater:HasTag("playermonster")
-			and not (eater.components.health ~= nil and eater.components.health:IsDead()) 
+			and not (eater.components.health ~= nil and eater.components.health:IsDead())
 			and not eater:HasTag("playerghost") then
 				eater.components.health:DoDelta(5)
 				eater.components.sanity:DoDelta(15)
 			end
 		end,
 	},
-	
+
 	duriansoup =
 	{
 		test = function(cooker, names, tags) return (names.durian or names.durian_cooked) and (tags.veggie and tags.veggie >= 3) and not tags.inedible end,
@@ -2501,17 +2501,17 @@ local kyno_foods =
 		tags = {"monstermeat"},
 		card_def = {ingredients = {{"durian", 1}, {"carrot", 3}}},
 		oneatenfn = function(inst, eater)
-			if eater ~= nil and eater:HasTag("playermonster") 
-			and not (eater.components.health ~= nil and eater.components.health:IsDead()) 
+			if eater ~= nil and eater:HasTag("playermonster")
+			and not (eater.components.health ~= nil and eater.components.health:IsDead())
 			and not eater:HasTag("playerghost") then
 				eater.components.health:DoDelta(15)
 			end
 		end,
 	},
-	
+
 	durianmeated =
 	{
-		test = function(cooker, names, tags) return (names.monstermeat or names.monstermeat_cooked or names.monstermeat_dried) 
+		test = function(cooker, names, tags) return (names.monstermeat or names.monstermeat_cooked or names.monstermeat_dried)
 		and (names.durian or names.durian_cooked) end,
 		priority = 40,
 		foodtype = FOODTYPE.MEAT,
@@ -2526,18 +2526,18 @@ local kyno_foods =
 		tags = {"monstermeat"},
 		card_def = {ingredients = {{"monstermeat", 1}, {"durian", 1}, {"twigs", 2}}},
 		oneatenfn = function(inst, eater)
-			if eater ~= nil and eater:HasTag("playermonster") 
-			and not (eater.components.health ~= nil and eater.components.health:IsDead()) 
+			if eater ~= nil and eater:HasTag("playermonster")
+			and not (eater.components.health ~= nil and eater.components.health:IsDead())
 			and not eater:HasTag("playerghost") then
 				eater.components.health:DoDelta(20)
 				eater.components.sanity:DoDelta(5)
 			end
 		end,
 	},
-	
+
 	durianchicken =
 	{
-		test = function(cooker, names, tags) return names.durian and (names.cactus_meat and names.cactus_meat >= 2) 
+		test = function(cooker, names, tags) return names.durian and (names.cactus_meat and names.cactus_meat >= 2)
 		and names.cactus_flower and not names.durian_cooked and not names.cactus_meat_cooked end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -2561,7 +2561,7 @@ local kyno_foods =
 			end
 		end,
 	},
-	
+
 	berrybombs =
 	{
 		test = function(cooker, names, tags) return (tags.berries and tags.berries >= 2) and names.twigs end,
@@ -2577,7 +2577,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"berries", 3}, {"twigs", 1}}},
 	},
-	
+
 	chimas =
 	{
 		test = function(cooker, names, tags) return (tags.tillweed and tags.tillweed >= 2) and tags.frozen end,
@@ -2596,7 +2596,7 @@ local kyno_foods =
 		tags = {"fooddrink"},
 		card_def = {ingredients = {{"tillweed", 2}, {"ice", 2}}},
 	},
-	
+
 	antslog =
 	{
 		test = function(cooker, names, tags) return names.livinglog and (names.kyno_twiggynuts and names.kyno_twiggynuts >= 2) and
@@ -2621,10 +2621,10 @@ local kyno_foods =
 			end
 		end,
 	},
-	
+
 	eeltacos =
 	{
-		test = function(cooker, names, tags) return (names.eel or names.pondeel or names.eel_cooked) and 
+		test = function(cooker, names, tags) return (names.eel or names.pondeel or names.eel_cooked) and
 		(names.corn or names.corn_cooked or names.oceanfish_small_5_inv or names.oceanfish_medium_5_inv) and names.cutlichen end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
@@ -2639,10 +2639,10 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondeel", 1}, {"corn", 1}, {"cutlichen", 2}}},
 	},
-	
+
 	livingsandwich =
 	{
-		test = function(cooker, names, tags) return (names.livinglog and names.livinglog >= 2) and 
+		test = function(cooker, names, tags) return (names.livinglog and names.livinglog >= 2) and
 		((names.monstermeat or 0) + (names.monstermeat_cooked or 0) >= 2) end,
 		priority = 1,
 		isfuel = true,
@@ -2668,12 +2668,12 @@ local kyno_foods =
 				"moose",
 				"goose",
 			}
-			
-			if eater ~= nil and eater.components.wereeater ~= nil 
+
+			if eater ~= nil and eater.components.wereeater ~= nil
 			and not (eater.components.health ~= nil and eater.components.health:IsDead()) and not eater:HasTag("playerghost") then
 				eater.components.wereeater:ForceTransformToWere(math.random(#WEREMODE_NAMES))
 			end
-				
+
 			if eater ~= nil and eater.SoundEmitter ~= nil then
 				eater.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
 			else
@@ -2681,11 +2681,11 @@ local kyno_foods =
 			end
 		end,
 	},
-	
+
 	lunarsoup =
 	{
-		test = function(cooker, names, tags) return (names.carrot or names.carrot_cooked) and (names.moon_cap or names.moon_cap_cooked 
-		or names.kyno_moon_cap_dried) and ((names.rock_avocado_fruit_ripe or 0) + (names.rock_avocado_fruit_ripe_cooked or 0) >= 2) 
+		test = function(cooker, names, tags) return (names.carrot or names.carrot_cooked) and (names.moon_cap or names.moon_cap_cooked
+		or names.kyno_moon_cap_dried) and ((names.rock_avocado_fruit_ripe or 0) + (names.rock_avocado_fruit_ripe_cooked or 0) >= 2)
 		and not tags.meat end,
 		priority = 35,
 		foodtype = FOODTYPE.VEGGIE,
@@ -2701,17 +2701,17 @@ local kyno_foods =
 		card_def = {ingredients = {{"moon_cap", 1}, {"carrot", 1}, {"rock_avocado_fruit_ripe", 2}}},
 		prefabs = { "buff_sleepresistance", "kyno_fearbuff" },
 		oneatenfn = function(inst, eater)
-            if eater.components.grogginess ~= nil and
+			if eater.components.grogginess ~= nil and
 			not (eater.components.health ~= nil and eater.components.health:IsDead()) and
 			not eater:HasTag("playerghost") then
 				eater.components.grogginess:ResetGrogginess()
-            end
+			end
 
 			eater:AddDebuff("shroomsleepresist", "buff_sleepresistance")
 			eater:AddDebuff("kyno_fearbuff", "kyno_fearbuff")
-        end,
+		end,
 	},
-	
+
 	purplewobstersoup =
 	{
 		test = function(cooker, names, tags) return tags.wobster and names.kyno_grouper and (names.kyno_turnip or names.kyno_turnip_cooked) end,
@@ -2736,7 +2736,7 @@ local kyno_foods =
 			end
 		end,
 	},
-	
+
 	wobstermonster =
 	{
 		test = function(cooker, names, tags) return tags.wobster and (names.monstermeat or names.monstermeat_cooked
@@ -2765,7 +2765,7 @@ local kyno_foods =
 			end
 		end,
 	},
-	
+
 	spidercake =
 	{
 		test = function(cooker, names, tags) return names.spider and (names.monstermeat or names.monstermeat_cooked) and tags.egg and tags.flour end,
@@ -2790,11 +2790,11 @@ local kyno_foods =
 				eater.components.health:DoDelta(20)
 				eater.components.sanity:DoDelta(20)
 			end
-			
+
 			-- eater:AddDebuff("kyno_spiderbuff", "kyno_spiderbuff") -- Do we really want this?
 		end,
 	},
-	
+
 	sugarbombs =
 	{
 		test = function(cooker, names, tags) return (tags.sugar and tags.sugar >= 2) and ((names.kyno_wheat or 0) + (names.kyno_wheat_cooked or 0) >= 2) end,
@@ -2813,7 +2813,7 @@ local kyno_foods =
 		luckitem = { luck = TUNING.KYNO_LUCK_SUPERTINY },
 		card_def = {ingredients = {{"kyno_sugar", 2}, {"kyno_wheat", 2}}},
 	},
-	
+
 	onigiris =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_rice or 0) + (names.kyno_rice_cooked or 0) >= 2) and tags.spotspice and tags.algae end,
@@ -2831,10 +2831,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_rice", 2}, {"kyno_seaweeds", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	omurice =
 	{
-		test = function(cooker, names, tags) return tags.egg and ((names.kyno_rice or 0) + (names.kyno_rice_cooked or 0) >= 2) 
+		test = function(cooker, names, tags) return tags.egg and ((names.kyno_rice or 0) + (names.kyno_rice_cooked or 0) >= 2)
 		and (names.tomato or names.tomato_cooked) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -2850,7 +2850,7 @@ local kyno_foods =
 		tags = {"eggfood"},
 		card_def = {ingredients = {{"kyno_rice", 2}, {"bird_egg", 1}, {"tomato", 1}}},
 	},
-	
+
 	paella =
 	{
 		test = function(cooker, names, tags) return (names.kyno_rice or names.kyno_rice_cooked) and (names.kyno_mussel or names.kyno_mussel_cooked)
@@ -2871,10 +2871,10 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"kyno_rice", 1}, {"kyno_mussel", 1}, {"pondfish", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	pizza_tropical =
 	{
-		test = function(cooker, names, tags) return tags.fish and tags.flour and tags.dairy and 
+		test = function(cooker, names, tags) return tags.fish and tags.flour and tags.dairy and
 		(names.kyno_pineapple_halved or names.kyno_pineapple_cooked) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -2890,8 +2890,8 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"pondfish", 1}, {"kyno_flour", 1}, {"goatmilk", 1}, {"kyno_pineapple_halved", 1}}},
 	},
-	
-	pinacolada = 
+
+	pinacolada =
 	{
 		test = function(cooker, names, tags) return names.kyno_pineapple_halved and names.kyno_kokonut_halved and tags.sweetener and tags.frozen
 		and not names.kyno_pineapple_cooked and not names.kyno_kokonut_cooked end,
@@ -2911,7 +2911,7 @@ local kyno_foods =
 		tags = {"honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"kyno_kokonut_halved", 1}, {"honey", 1}, {"ice", 1}}},
 	},
-	
+
 	smores =
 	{
 		test = function(cooker, names, tags) return (names.kyno_sugar and names.kyno_sugar  >= 2) and tags.flour and tags.chocolate end,
@@ -2928,7 +2928,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_flour", 1}, {"kyno_sugar", 2}, {"chocolate_black", 1}}},
 	},
-	
+
 	moonbutterflymuffin =
 	{
 		test = function(cooker, names, tags) return names.moonbutterflywings and not tags.meat and (tags.veggie and tags.veggie >= 0.5) end,
@@ -2946,7 +2946,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"moonbutterflywings", 1}, {"carrot", 1}, {"twigs", 2}}},
 	},
-	
+
 	sugarflymuffin =
 	{
 		test = function(cooker, names, tags) return names.kyno_sugarflywings and not tags.meat and (tags.veggie and tags.veggie >= 0.5) end,
@@ -2963,10 +2963,10 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_sugarflywings", 1}, {"carrot", 1}, {"twigs", 2}}},
 	},
-	
+
 	meatwaltz =
 	{
-		test = function(cooker, names, tags) return tags.meat and tags.bread and 
+		test = function(cooker, names, tags) return tags.meat and tags.bread and
 		(names.tomato or names.tomato_cooked) and (names.onion or names.onion_cooked) end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -2986,8 +2986,8 @@ local kyno_foods =
 			end
 		end,
 	},
-	
-	completebreakfast = 
+
+	completebreakfast =
 	{
 		test = function(cooker, names, tags) return names.baconeggs and tags.flour and tags.butter and tags.syrup end,
 		priority = 30,
@@ -3012,7 +3012,7 @@ local kyno_foods =
 			end
 		end,
 	},
-	
+
 	dumplings =
 	{
 		test = function(cooker, names, tags) return tags.flour and (tags.veggie and tags.veggie >= 1) and (tags.meat and tags.meat < 1) and tags.oil end,
@@ -3029,7 +3029,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_flour", 1}, {"smallmeat", 1}, {"carrot", 1}, {"kyno_oil", 1}}},
 	},
-	
+
 	coxinha =
 	{
 		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) and tags.flour and tags.oil
@@ -3046,7 +3046,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"drumstick", 1}, {"kyno_flour", 1}, {"kyno_oil", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	crabkingfeast =
 	{
 		test = function(cooker, names, tags) return (names.kyno_crabkingmeat or names.kyno_crabkingmeat_cooked or names.kyno_crabkingmeat_dried)
@@ -3070,7 +3070,7 @@ local kyno_foods =
 			eater:AddDebuff("kyno_crabbuff", "kyno_crabbuff")
 		end,
 	},
-	
+
 	pienapple =
 	{
 		test = function(cooker, names, tags) return (names.kyno_pineapple_halved or names.kyno_pineapple_cooked)
@@ -3088,7 +3088,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"twigs", 3}}},
 	},
-	
+
 	avocadotoast =
 	{
 		test = function(cooker, names, tags) return ((names.rock_avocado_fruit_ripe or 0) + (names.rock_avocado_fruit_ripe_cooked or 0) >= 2)
@@ -3105,16 +3105,16 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"rock_avocado_fruit_ripe", 2}, {"gorge_bread", 1}, {"twigs", 1}}},
 	},
-	
+
 	ricepudding =
 	{
-		test = function(cooker, names, tags) return ((names.kyno_rice or 0) + (names.kyno_rice_cooked or 0) >= 2) 
+		test = function(cooker, names, tags) return ((names.kyno_rice or 0) + (names.kyno_rice_cooked or 0) >= 2)
 		and tags.dairy and tags.spotspice end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_FASTISH,
 		health = 10,
-		hunger = 18.75, 
+		hunger = 18.75,
 		sanity = 15,
 		cooktime = 0.8,
 		stacksize = 2,
@@ -3123,7 +3123,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_rice", 2}, {"goatmilk", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	sharksushi =
 	{
 		test = function(cooker, names, tags) return names.kyno_shark_fin and ((names.kyno_rice or 0) + (names.kyno_rice_cooked or 0) >= 2) end,
@@ -3139,13 +3139,13 @@ local kyno_foods =
 		pigcoinvalue = {7, 0, 1},
 		floater = TUNING.HOF_FLOATER,
 		tags = {"marinefood"},
-		luckitem = { luck = -TUNING.KYNO_LUCK_MEDLARGE },
+		luckitem = { luck = -TUNING.KYNO_LUCK_SUPERTINY },
 		card_def = {ingredients = {{"kyno_shark_fin", 1}, {"kyno_rice", 3}}},
 		oneatenfn = function(inst, eater)
 			OnFoodNaughtiness(inst, eater)
 		end,
 	},
-	
+
 	wobsterbreaded =
 	{
 		test = function(cooker, names, tags) return tags.wobster and tags.spotspice and tags.flour and tags.oil end,
@@ -3162,7 +3162,7 @@ local kyno_foods =
 		tags = {"marinefood"},
 		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"kyno_spotspice", 1}, {"kyno_flour", 1}, {"kyno_oil", 1}}},
 	},
-	
+
 	lazypurrito =
 	{
 		test = function(cooker, names, tags) return tags.beanbug and (names.kyno_rice or names.kyno_rice_cooked) and tags.flour end,
@@ -3185,8 +3185,8 @@ local kyno_foods =
 			end
 		end,
 	},
-	
-	horchata = 
+
+	horchata =
 	{
 		test = function(cooker, names, tags) return (names.kyno_rice or names.kyno_rice_cooked) and tags.dairy and tags.sweetener
 		and tags.frozen end,
@@ -3205,7 +3205,7 @@ local kyno_foods =
 		tags = {"honeyed", "fooddrink"},
 		card_def = {ingredients = {{"kyno_rice", 1}, {"goatmilk", 1}, {"honey", 1}, {"ice", 1}}},
 	},
-	
+
 	wobstercocktail =
 	{
 		test = function(cooker, names, tags) return tags.wobster and (names.tomato or names.tomato_cooked) and
@@ -3225,7 +3225,7 @@ local kyno_foods =
 		tags = {"fooddrink", "marinefood"},
 		card_def = {ingredients = {{"wobster_sheller_land", 1}, {"tomato", 1}, {"pepper", 2}}},
 	},
-	
+
 	pomegranatetea =
 	{
 		test = function(cooker, names, tags) return (names.pomegranate or names.pomegranate_cooked) and tags.frozen and tags.sweetener end,
@@ -3244,7 +3244,7 @@ local kyno_foods =
 		tags = {"honeyed", "fooddrink"},
 		card_def = {ingredients = {{"pomegranate", 1}, {"ice", 1}, {"honey", 2}}},
 	},
-	
+
 	pomegranatepie =
 	{
 		test = function(cooker, names, tags) return (names.pomegranate or names.pomegranate_cooked) and tags.sweetener and tags.flour end,
@@ -3262,7 +3262,7 @@ local kyno_foods =
 		tags = {"honeyed"},
 		card_def = {ingredients = {{"pomegranate", 1}, {"twigs", 1}, {"kyno_flour", 1}, {"honey", 1}}},
 	},
-	
+
 	pineapplecake =
 	{
 		test = function(cooker, names, tags) return (names.kyno_pineapple_halved or names.kyno_pineapple_cooked) and tags.egg
@@ -3280,11 +3280,11 @@ local kyno_foods =
 		tags = {"honeyed", "eggfood"},
 		card_def = {ingredients = {{"kyno_pineapple_halved", 1}, {"bird_egg", 1}, {"kyno_flour", 1}, {"honey", 1}}},
 	},
-	
+
 	--[[
 	pasty_meat =
 	{
-		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 1) and tags.flour 
+		test = function(cooker, names, tags) return (tags.meat and tags.meat >= 1) and tags.flour
 		and tags.veggie and tags.oil and not tags.wobster end,
 		priority = 35,
 		foodtype = FOODTYPE.MEAT,
@@ -3298,7 +3298,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"meat", 1}, {"kyno_flour", 1}, {"carrot", 1}, {"kyno_oil", 1}}},
 	},
-	
+
 	pasty_cheese =
 	{
 		test = function(cooker, names, tags) return tags.cheese and tags.flour and tags.spotspice and tags.oil end,
@@ -3314,6 +3314,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"cheese_yellow", 1}, {"kyno_flour", 1}, {"kyno_spotspice", 1}, {"kyno_oil", 1}}},
 	},
+	]]--
 
 	brigadeiro =
 	{
@@ -3332,7 +3333,8 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"chocolate_black", 1}, {"kyno_sugar", 1}, {"kyno_twiggynuts", 2}}},
 	},
-	
+
+	--[[
 	regularlasagna =
 	{
 		test = function(cooker, names, tags) return tags.meat and (names.tomato or names.tomato_cooked) and tags.flour
@@ -3350,16 +3352,16 @@ local kyno_foods =
 		card_def = {ingredients = {{"meat", 1}, {"tomato", 2}, {"kyno_flour", 1}}},
 	},
 	]]--
-	
+
 	fltsandwich =
 	{
-		test = function(cooker, names, tags) return (names.kyno_moon_froglegs or names.kyno_moon_froglegs_cooked) and 
+		test = function(cooker, names, tags) return (names.kyno_moon_froglegs or names.kyno_moon_froglegs_cooked) and
 		(names.tomato or names.tomato_cooked) and tags.algae and tags.foliage end,
 		priority = 30,
 		foodtype = FOODTYPE.MEAT,
 		perishtime = TUNING.PERISH_MED,
 		health = 15,
-		hunger = 32.5, 
+		hunger = 32.5,
 		sanity = 33,
 		cooktime = 1.3,
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_PLANARDEFENSE,
@@ -3372,7 +3374,7 @@ local kyno_foods =
 			eater:AddDebuff("kyno_planardefensebuff", "kyno_planardefensebuff")
 		end,
 	},
-	
+
 	--[[
 	riceandbeans =
 	{
@@ -3418,7 +3420,7 @@ local kyno_foods =
 			eater:AddDebuff("kyno_trufflesbuff", "kyno_trufflesbuff")
 		end,
 	},
-	
+
 	sporecappie =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_sporecap or 0) + (names.kyno_sporecap_cooked or 0) >= 2) and
@@ -3444,11 +3446,11 @@ local kyno_foods =
 				eater.components.health:DoDelta(20)
 				eater.components.sanity:DoDelta(10)
 			end
-			
+
 			eater:AddDebuff("kyno_poisonimmunitybuff", "kyno_poisonimmunitybuff")
 		end,
 	},
-	
+
 	sporecap_skewers =
 	{
 		test = function(cooker, names, tags) return ((names.kyno_sporecap_dark or 0) + (names.kyno_sporecap_dark_cooked or 0) >= 2) and
@@ -3473,11 +3475,11 @@ local kyno_foods =
 				eater.components.health:DoDelta(30)
 				eater.components.sanity:DoDelta(20)
 			end
-			
+
 			eater:AddDebuff("kyno_acidimmunitybuff", "kyno_acidimmunitybuff")
 		end,
 	},
-	
+
 	-- Mandrake Soup but with meat instead.
 	swordfishfeast =
 	{
@@ -3497,7 +3499,7 @@ local kyno_foods =
 		tags = {"honeyed", "sharkboifood", "exquisite", "marinefood"},
 		card_def = {ingredients = {{"kyno_swordfish_dead", 1}, {"cheese_yellow", 1}, {"fig", 1}, {"honey", 1}}},
 	},
-	
+
 	monkeyislandmeal =
 	{
 		test = function(cooker, names, tags) return names.wobster_monkeyisland_land and tags.banana end,
@@ -3516,17 +3518,17 @@ local kyno_foods =
 		card_def = {ingredients = {{"wobster_monkeyisland_land", 1}, {"cave_banana", 1}, {"twigs", 2}}},
 		oneatenfn = function(inst, eater)
 			if eater.components.inventory ~= nil and eater.components.cursable ~= nil
-			and not (eater.components.health ~= nil and eater.components.health:IsDead()) and 
+			and not (eater.components.health ~= nil and eater.components.health:IsDead()) and
 			not eater:HasTag("playerghost") then
 				local prop = eater.components.inventory:FindItem(function(item) return item.prefab == "cursed_monkey_token" end)
-				
+
 				if prop ~= nil then
 					eater.components.cursable:RemoveCurse("MONKEY", 10)
 				end
 			end
 		end,
 	},
-	
+
 	brainmettersoup =
 	{
 		test = function(cooker, names, tags) return names.kyno_brainrock_coral and tags.jellyfish and tags.algae and not tags.inedible end,
@@ -3549,7 +3551,7 @@ local kyno_foods =
 			eater:AddDebuff("kyno_craftingbuff", "kyno_craftingbuff")
 		end,
 	},
-	
+
 	chickennuggets =
 	{
 		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) and tags.flour and tags.oil and tags.spotspice end,
@@ -3566,7 +3568,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"drumstick", 1}, {"kyno_flour", 1}, {"kyno_oil", 1}, {"kyno_spotspice", 1}}},
 	},
-	
+
 	chickenwings =
 	{
 		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) and tags.oil and tags.spotspice and tags.fireweed end,
@@ -3590,7 +3592,7 @@ local kyno_foods =
 			eater:AddDebuff("kyno_berserkerbuff", "kyno_berserkerbuff")
 		end,
 	},
-	
+
 	chickenburger =
 	{
 		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) and tags.foliage and tags.chickenegg and tags.bread end,
@@ -3606,7 +3608,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"drumstick", 1}, {"foliage", 1}, {"kyno_chicken_egg", 1}, {"gorge_bread", 1}}},
 	},
-	
+
 	chickeneggsoup =
 	{
 		test = function(cooker, names, tags) return tags.chickenegg and tags.succulent and tags.spotspice and (names.onion or names.onion_cooked) end,
@@ -3624,7 +3626,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"kyno_chicken_egg", 1}, {"succulent_picked", 1}, {"kyno_spotspice", 1}, {"onion", 1}}},
 	},
-	
+
 	chickeneggstew =
 	{
 		test = function(cooker, names, tags) return (names.drumstick or names.drumstick_cooked) and tags.chickenegg and tags.spotspice
@@ -3641,7 +3643,7 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		card_def = {ingredients = {{"drumstick", 1}, {"kyno_chicken_egg", 1}, {"kyno_spotspice", 1}, {"kyno_aloe", 1}}},
 	},
-	
+
 	chickenrotisserie =
 	{
 		test = function(cooker, names, tags) return tags.chicken and tags.spotspice and tags.veggie and not tags.inedible end,
@@ -3665,7 +3667,7 @@ local kyno_foods =
 
 	cavetubertea =
 	{
-		test = function(cooker, names, tags) return (names.kyno_cavetuber_blooming or names.kyno_cavetuber_blooming_cooked) 
+		test = function(cooker, names, tags) return (names.kyno_cavetuber_blooming or names.kyno_cavetuber_blooming_cooked)
 		and tags.tillweed and tags.sweetener and tags.frozen and not tags.inedible end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
@@ -3815,6 +3817,56 @@ local kyno_foods =
 		floater = TUNING.HOF_FLOATER,
 		tags = {"eggfood"},
 		card_def = {ingredients = {{"chocolate_black", 1}, {"goatmilk", 1}, {"kyno_flour", 1}, {"bird_egg", 1}}},
+	},
+
+	opalpreciouscream =
+	{
+		test = function(cooker, names, tags) return names.kyno_opalpreciouspowder and names.milkywhites
+		and (tags.sweetener and tags.sweetener >= 2) end,
+		priority = 35,
+		foodtype = FOODTYPE.GOODIES,
+		perishtime = TUNING.PERISH_PRESERVED,
+		health = 15,
+		hunger = 32.5,
+		sanity = 33,
+		cooktime = 1.5,
+		bank = "opalpreciouscream",
+		anim = "idle",
+		bloom = true,
+		shine = true,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRITDAMAGE,
+		pigcoinvalue = {8, 4, 2},
+		floater = TUNING.HOF_FLOATER,
+		tags = {"critfood", "nospice"},
+		card_def = {ingredients = {{"kyno_opalpreciouspowder", 1}, {"milkywhites", 1}, {"honey", 2}}},
+		prefabs = { "kyno_critdamagebuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_critdamagebuff", "kyno_critdamagebuff")
+		end,
+	},
+
+	catfishstick =
+	{
+		test = function(cooker, names, tags) return names.oceanfish_medium_4_inv and tags.veggie and names.twigs end,
+		priority = 30,
+		foodtype = FOODTYPE.MEAT,
+		perishtime = TUNING.PERISH_FASTISH,
+		health = 25,
+		hunger = 32.5,
+		sanity = 5,
+		cooktime = 1,
+		potlevel = "low",
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BADLUCK,
+		overridebuild = "kyno_foodrecipes_cookpot1",
+		pigcoinvalue = {5, 1, 0},
+		floater = TUNING.HOF_FLOATER,
+		tags = {"marinefood"},
+		luckitem = { luck = -TUNING.KYNO_LUCK_SUPERTINY },
+		card_def = {ingredients = {{"oceanfish_medium_4_inv", 1}, {"carrot", 1}, {"twigs", 2}}},
+		prefabs = { "kyno_badluckbuff" },
+		oneatenfn = function(inst, eater)
+			eater:AddDebuff("kyno_badluckbuff", "kyno_badluckbuff")
+		end,
 	},
 }
 

@@ -101,11 +101,17 @@ WILSON.ANNOUNCE_KYNO_NIGHTKILLBUFF_END = "Sức mạnh của màn đêm đã pha
 WILSON.ANNOUNCE_KYNO_PANICBUFF_START = "Sự hiện diện của tôi đang trở nên khá đáng sợ."
 WILSON.ANNOUNCE_KYNO_PANICBUFF_END = "Mọi thứ có vẻ bớt đáng sợ hơn rồi."
 
-WILSON.ANNOUNCE_KYNO_CUREBUFF_START = "Everything seems to last a little longer!" -- NEEDS TRANSLATION
-WILSON.ANNOUNCE_KYNO_CUREBUFF_END = "Things are spoiling normally again." -- NEEDS TRANSLATION
+WILSON.ANNOUNCE_KYNO_CUREBUFF_START = "Everything seems to last a little longer!"
+WILSON.ANNOUNCE_KYNO_CUREBUFF_END = "Things are spoiling normally again."
 
-WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I feel firmly grounded." -- NEEDS TRANSLATION
-WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And there goes my stability." -- NEEDS TRANSLATION
+WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_START = "I feel firmly grounded."
+WILSON.ANNOUNCE_KYNO_KNOCKBACKBUFF_END = "And there goes my stability."
+
+WILSON.ANNOUNCE_KYNO_CRITDAMAGEBUFF_START = "My attacks feel more powerful!"
+WILSON.ANNOUNCE_KYNO_CRITDAMAGEBUFF_END = "My attacks have lost their power."
+
+WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_START = "Something feels terribly unlucky..."
+WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_END = "I think my luck is back to normal."
 
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái này."
 
@@ -136,13 +142,13 @@ WILSON.ANNOUNCE_KYNO_ROE_RESEARCHED = "Mình đã học được điều mới v
 
 WILSON.ANNOUNCE_KYNO_DAILYRECIPE_EATEN = "Công thức đó khá thú vị."
 
-WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START = -- NEEDS TRANSLATION
+WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 {
 	"My insides are freezing!",
 	"Ouch, that's cold!",
 }
 
-WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Note to self: no more experiments with Ice Nettle toxin." -- NEEDS TRANSLATION
+WILSON.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "Note to self: no more experiments with Ice Nettle toxin."
 
 WILSON.DESCRIBE.KYNO_ROE = "Cá con."
 WILSON.DESCRIBE.KYNO_ROE_COOKED = "Trứng cá ốp la."
@@ -172,7 +178,7 @@ WILSON.DESCRIBE.KYNO_COFFEEBEANS_COOKED = "Nhiệt chắc chắn đã cải thi�
 
 WILSON.DESCRIBE.DUG_KYNO_COFFEEBUSH = "Giờ nó có thể mọc ở chỗ tốt hơn."
 
-WILSON.DESCRIBE.KYNO_COFFEEBUSH = 
+WILSON.DESCRIBE.KYNO_COFFEEBUSH =
 {
 	GENERIC = "Đây là loài cây mình có thể học cách yêu thích.",
 	PICKED = "Mình sẽ phải chờ hạt mọc lại.",
@@ -181,7 +187,7 @@ WILSON.DESCRIBE.KYNO_COFFEEBUSH =
 
 WILSON.DESCRIBE.DUG_KYNO_SPOTBUSH = "Mình nên trồng nó ở chỗ phù hợp."
 
-WILSON.DESCRIBE.KYNO_SPOTBUSH = 
+WILSON.DESCRIBE.KYNO_SPOTBUSH =
 {
 	GENERIC = "Nó làm mình nhớ tới mấy con quái xúc tu đó.",
 	PICKED = "Nó cần thời gian để hồi phục.",
@@ -408,7 +414,7 @@ WILSON.DESCRIBE.KYNO_RICE_OVERSIZED_ROTTEN = "Hỏng rồi."
 
 WILSON.DESCRIBE.KYNO_SEEDS_KIT = "Một gói đầy hạt giống."
 
-WILSON.DESCRIBE.KYNO_LIMPETROCK = 
+WILSON.DESCRIBE.KYNO_LIMPETROCK =
 {
 	GENERIC = "Mình có thể hốt đầy cả xô với đống ốc đó.",
 	PICKED = "Sẽ phải chờ tới khi ốc bò lại.",
@@ -418,7 +424,7 @@ WILSON.DESCRIBE.KYNO_LIMPETROCK =
 WILSON.DESCRIBE.KYNO_LIMPETS = "Có lẽ chết đói cũng không tệ đến thế."
 WILSON.DESCRIBE.KYNO_LIMPETS_COOKED = "Escargotcha!"
 
-WILSON.DESCRIBE.KYNO_LOTUS_OCEAN = 
+WILSON.DESCRIBE.KYNO_LOTUS_OCEAN =
 {
 	GENERIC = "Khoa học đang nở rộ rất tốt mùa này.",
 	PICKED = "Nó cần thời gian để mọc lại hoa.",
@@ -429,7 +435,7 @@ WILSON.DESCRIBE.KYNO_LOTUS_ROOT = "Một loại cây ướt mình có thể tr�
 WILSON.DESCRIBE.KYNO_LOTUS_FLOWER = "Một bông hoa khoa học đáng yêu."
 WILSON.DESCRIBE.KYNO_LOTUS_FLOWER_COOKED = "Một món ngon."
 
-WILSON.DESCRIBE.KYNO_SEAWEEDS_OCEAN = 
+WILSON.DESCRIBE.KYNO_SEAWEEDS_OCEAN =
 {
 	GENERIC = "Thứ đó được tính là thức ăn quanh đây sao?",
 	PICKED = "Chúng sẽ mọc lại. Mình hy vọng vậy.",
@@ -441,7 +447,7 @@ WILSON.DESCRIBE.KYNO_SEAWEEDS_COOKED = "Giòn."
 WILSON.DESCRIBE.KYNO_SEAWEEDS_DRIED = "Mặn!"
 WILSON.DESCRIBE.KYNO_SEAWEEDS_ROOT = "Một đống nhão ướt mình có thể trồng để tạo thêm đống nhão ướt."
 
-WILSON.DESCRIBE.KYNO_TAROROOT_OCEAN = 
+WILSON.DESCRIBE.KYNO_TAROROOT_OCEAN =
 {
 	GENERIC = "Tím quá.",
 	PICKED = "Nước ở đây sẽ giúp nó mọc lại nhanh hơn.",
@@ -452,7 +458,7 @@ WILSON.DESCRIBE.KYNO_TAROROOT_ROOT = "Một củ ướt mình có thể trồng 
 WILSON.DESCRIBE.KYNO_TAROROOT = "Trông như một quả ớt tím."
 WILSON.DESCRIBE.KYNO_TAROROOT_COOKED = "Nó còn ít tím hơn."
 
-WILSON.DESCRIBE.KYNO_WATERYCRESS_OCEAN = 
+WILSON.DESCRIBE.KYNO_WATERYCRESS_OCEAN =
 {
 	GENERIC = "Cái này mới đó.",
 	PICKED = "Hy vọng nó mọc lại đủ sớm.",
@@ -479,7 +485,7 @@ WILSON.DESCRIBE.CATFOOD = "Một món ăn vặt cho mèo của mình!"
 
 WILSON.DESCRIBE.KATFOOD = "Một món ăn vặt cho mèo của mình!"
 
-WILSON.DESCRIBE.KYNO_BANANATREE = 
+WILSON.DESCRIBE.KYNO_BANANATREE =
 {
 	GENERIC = "Đó là một cây chuối hiếm.",
 	PICKED = "Nó cần thời gian để ra lại sản phẩm.",
@@ -487,7 +493,7 @@ WILSON.DESCRIBE.KYNO_BANANATREE =
 	BURNING = "Tiếc là chúng ta lại mất thêm một cái cây hiếm.",
 	BURNT = "Chẳng còn gì ngoài tro.",
 }
-	
+
 WILSON.DESCRIBE.KYNO_BANANA = "Nó mềm nhũn."
 WILSON.DESCRIBE.KYNO_BANANA_COOKED = "Ngon!"
 
@@ -555,7 +561,7 @@ WILSON.DESCRIBE.KYNO_SAPBUCKET_INSTALLER = "Chúng ta có thể dùng nó để 
 
 WILSON.DESCRIBE.KYNO_CRABTRAP_INSTALLER = "Một cái bẫy đầy tính cua."
 
-WILSON.DESCRIBE.KYNO_SERENITYISLAND_SHOP = 
+WILSON.DESCRIBE.KYNO_SERENITYISLAND_SHOP =
 {
 	GENERIC = "Chắc ông là người phụ trách quanh đây?",
 	SLEEPING = "Giờ không thật sự đánh thức ông ấy được.",
@@ -601,7 +607,7 @@ WILSON.DESCRIBE.KYNO_CRABKINGMEAT_DRIED = "Không phải hàng giả đâu."
 
 WILSON.DESCRIBE.KYNO_SLAUGHTERTOOL = "Dụng cụ phòng thí nghiệm cho việc xẻ thịt phẫu thuật."
 
-WILSON.DESCRIBE.KYNO_CHICKEN2 = 
+WILSON.DESCRIBE.KYNO_CHICKEN2 =
 {
 	GENERIC = "Một con gà nhỏ.",
 	COOP = "Con gà của riêng mình!",
@@ -617,7 +623,7 @@ WILSON.DESCRIBE.KYNO_CHICKEN_EGG_LARGE_CRACKED =
 	HATCHING = "Mình nghĩ nó sắp nở rồi!",
 }
 
-WILSON.DESCRIBE.KYNO_CHICKENHOUSE = 
+WILSON.DESCRIBE.KYNO_CHICKENHOUSE =
 {
 	GENERIC = "Một căn nhà đúng chuẩn cho gà.",
 	FULL = "Trứng đã sẵn sàng để thu hoạch!",
@@ -645,7 +651,7 @@ WILSON.DESCRIBE.KYNO_COOKWARE_OVEN = "Nó cần nguyên liệu để khoa học 
 WILSON.DESCRIBE.KYNO_COOKWARE_OVEN_CASSEROLE = "Nó cần nguyên liệu để khoa học hoạt động."
 WILSON.DESCRIBE.KYNO_COOKWARE_OVEN_SMALL_CASSEROLE = "Nó cần nguyên liệu để khoa học hoạt động."
 
-WILSON.DESCRIBE.KYNO_ROCKFLIPPABLE = 
+WILSON.DESCRIBE.KYNO_ROCKFLIPPABLE =
 {
 	GENERIC = "Không bao giờ biết dưới một tảng đá có gì đâu.",
 	FLIPPED = "Có vài thứ nằm bên dưới nó.",
@@ -692,7 +698,7 @@ WILSON.DESCRIBE.PEPPERROLLS = "Đầy miệng thật!"
 
 WILSON.DESCRIBE.KYNO_SAPHEALER = "Mình sẽ không uống thứ đó đâu."
 
-WILSON.DESCRIBE.KYNO_OCEAN_WRECK = 
+WILSON.DESCRIBE.KYNO_OCEAN_WRECK =
 {
 	GENERIC = "Con thuyền nhỏ tội nghiệp.",
 	PICKED = "Lũ ốc cuối cùng cũng sẽ mọc lại quanh xác thuyền.",
@@ -714,7 +720,7 @@ WILSON.DESCRIBE.KYNO_PLANTMEAT_DRIED = "Vừa đủ độ khô dai."
 
 WILSON.DESCRIBE.KYNO_BREWBOOK = "Mình luôn đói khát tri thức."
 
-WILSON.DESCRIBE.KYNO_WOODENKEG = 
+WILSON.DESCRIBE.KYNO_WOODENKEG =
 {
 	EMPTY = "Không biết mình có thể làm gì bằng cái này.",
 	BREWING_LONG = "Mẻ này sẽ mất vài ngày để ủ.",
@@ -723,7 +729,7 @@ WILSON.DESCRIBE.KYNO_WOODENKEG =
 	BURNT = "Có vẻ mình sẽ không còn được thấy mẻ ủ đó nữa.",
 }
 
-WILSON.DESCRIBE.KYNO_PRESERVESJAR = 
+WILSON.DESCRIBE.KYNO_PRESERVESJAR =
 {
 	EMPTY = "Dùng để làm mứt.",
 	BREWING_LONG = "Đồ bảo quản đúng là mất nhiều thời gian để làm.",
@@ -732,7 +738,7 @@ WILSON.DESCRIBE.KYNO_PRESERVESJAR =
 	BURNT = "Một kết cục buồn thật.",
 }
 
-WILSON.DESCRIBE.KYNO_ANTCHEST = 
+WILSON.DESCRIBE.KYNO_ANTCHEST =
 {
 	GENERIC = "Nó cứ thong thả ngọt ngào làm mật ong.",
 	HONEY = "Có vẻ nó đầy ắp đồ ngọt mật ong rồi.",
@@ -748,7 +754,7 @@ WILSON.DESCRIBE.KYNO_OAKTREE_POD_COOKED = "Nhận lấy này, cây tí hon!"
 WILSON.DESCRIBE.KYNO_PIKO = "Nó đúng là hơi khùng hạt."
 WILSON.DESCRIBE.KYNO_PIKO_ORANGE = "Không hiểu sao mình lại thèm trà."
 
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_TREE = 
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_TREE =
 {
 	GENERIC = "Đúng là một cái cây đáng yêu.",
 	CHOPPED = "Tất cả lá trà giờ là của mình!",
@@ -764,26 +770,26 @@ WILSON.DESCRIBE.KYNO_MEADOWISLAND_PIKOTREE =
 
 WILSON.DESCRIBE.KYNO_MEADOWISLAND_CRATE = "Chắc chắn có cách mở nó."
 
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT = 
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMHUT =
 {
 	GENERIC = "Ai lại sống ở đây nhỉ?",
 	BURNT = "Giòn rụm.",
 }
 
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT = 
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_FISHERMERMHUT =
 {
 	GENERIC = "Mùi chẳng dễ chịu lắm.",
 	CRAFTED = "Thật ra cũng hơi dễ thương.",
 	BURNT = "Ugh, cái mùi!",
 }
 
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_SHOP = 
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_SHOP =
 {
 	GENERIC = "Ông trưng bày vài món khá hiếm đấy.",
 	OCCUPIED = "Có vẻ cửa hàng tạm đóng rồi.",
 }
 
-WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMCART = 
+WILSON.DESCRIBE.KYNO_MEADOWISLAND_MERMCART =
 {
 	GENERIC = "Hôm nay ông bán gì vậy?",
 	EMPTY = "Trống trơn rồi. Mình sẽ quay lại sau, Sammy.",
@@ -940,7 +946,7 @@ WILSON.DESCRIBE.RICESAKE = "Cho mình thêm một ly nữa! *nấc*"
 
 WILSON.DESCRIBE.DUG_KYNO_PINEAPPLEBUSH = "Mình nhổ cả bụi lên rồi."
 
-WILSON.DESCRIBE.KYNO_PINEAPPLEBUSH = 
+WILSON.DESCRIBE.KYNO_PINEAPPLEBUSH =
 {
 	GENERIC = "Gai góc!",
 	PICKED = "Nó cần thời gian để mọc thêm quả dứa khác.",
@@ -958,7 +964,7 @@ WILSON.DESCRIBE.PINACOLADA = "Lạnh buốt."
 
 WILSON.DESCRIBE.CHIMAS = "Một thức uống thảo mộc sảng khoái."
 
-WILSON.DESCRIBE.KYNO_GARDEN_SPRINKLER = 
+WILSON.DESCRIBE.KYNO_GARDEN_SPRINKLER =
 {
 	OFF = "Nước nghĩ nó dùng để làm gì?",
 	ON = "Giữ cho cây trồng của mình được tưới nước và khỏe mạnh.",
@@ -1077,7 +1083,7 @@ WILSON.DESCRIBE.KYNO_DECIDUOUSFOREST_SHOP =
 	OCCUPIED_REPAIRED = "Chắc giờ ông ấy đang ngủ rồi.",
 }
 
-WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND = 
+WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND =
 {
 	GENERIC = "Nấm truffle hoang! Chắc có ai đó đã đánh hơi ra chỗ này.",
 	PICKED = "Hy vọng mình sớm kiếm thêm được!",
@@ -1087,7 +1093,7 @@ WILSON.DESCRIBE.KYNO_TRUFFLES_GROUND =
 WILSON.DESCRIBE.KYNO_TRUFFLES = "Một cao lương mỹ vị hiếm và thơm nức."
 WILSON.DESCRIBE.KYNO_TRUFFLES_COOKED = "Mùi thơm không cưỡng lại được!"
 
-WILSON.DESCRIBE.KYNO_ITEMSHOWCASER = 
+WILSON.DESCRIBE.KYNO_ITEMSHOWCASER =
 {
 	EMPTY = "Một nơi hoàn hảo để trưng bày chiến thắng ẩm thực của mình!",
 	FULL = "Mình rất tự hào vì đã nấu được một món lộng lẫy như thế.",
@@ -1112,7 +1118,7 @@ WILSON.DESCRIBE.TRUFFLEOIL = "Tinh tế và thơm nức! Không biết mình có
 WILSON.DESCRIBE.KYNO_FISHFARMPLOT_KIT = "Đồ để nuôi cá!"
 WILSON.DESCRIBE.KYNO_FISHFARMPLOT_CONSTRUCTION = "Trông như khởi đầu của một trại ươm cá tốt đấy."
 
-WILSON.DESCRIBE.KYNO_FISHFARMPLOT = 
+WILSON.DESCRIBE.KYNO_FISHFARMPLOT =
 {
 	GENERIC = "Một nơi để cá sinh sôi.",
 	FUEL_HIGH = "Chúng được cho ăn đầy đủ!",
@@ -1175,7 +1181,7 @@ WILSON.DESCRIBE.KYNO_BRAINROCK_LARVAE = "Đó là một bộ não con!"
 WILSON.DESCRIBE.KYNO_BRAINROCK_NUBBIN = "Mình chẳng muốn dính dáng gì tới cái mầm này."
 WILSON.DESCRIBE.KYNO_BRAINROCK_CORAL = "Thức ăn cho suy nghĩ."
 
-WILSON.DESCRIBE.KYNO_BRAINROCK_ROCK = 
+WILSON.DESCRIBE.KYNO_BRAINROCK_ROCK =
 {
 	GENERIC = "Không biết nó đang âm mưu gì...",
 	PICKED = "Nó cần nghỉ não.",
@@ -1183,15 +1189,15 @@ WILSON.DESCRIBE.KYNO_BRAINROCK_ROCK =
 
 WILSON.DESCRIBE.BRAINMETTERSOUP = "Hôm nay mình thấy thông minh ghê."
 
-WILSON.DESCRIBE.KYNO_OCTOPUSKING_OCEAN = 
+WILSON.DESCRIBE.KYNO_OCTOPUSKING_OCEAN =
 {
 	GENERIC = "Mình khá thích ông này.",
 	SLEEPING = "Ông ấy đang ngủ. Không giao dịch được rồi.",
 }
-	
+
 WILSON.DESCRIBE.KYNO_OCTOPUSKING_TREASURECHEST = "Hy vọng thứ đó chống nước."
 
-WILSON.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE = 
+WILSON.DESCRIBE.KYNO_PACKIMBAGGIMS_FISHBONE =
 {
 	GENERIC = "Có vẻ đây là thứ mình nên mang theo.",
 	WAITING = "Hmm, chắc nó đang ở đâu đó quanh đây...",
@@ -1207,7 +1213,7 @@ WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_CHEER = "Tinh thần của một bữa tiệc v
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_CAKE_SLICE = "Một lát ăn mừng!"
 WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_BALLOONS = "Một điểm nhấn lễ hội cho các dịp ăn mừng!"
 
-WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE = 
+WILSON.DESCRIBE.KYNO_HOFBIRTHDAY_POPCORNMACHINE =
 {
 	GENERIC = "Nó biến bắp thành bắp rang một cách kỳ diệu!",
 	FUEL_HIGH = "Nguồn nhiên liệu đang chạy ổn định.",
@@ -1247,13 +1253,13 @@ WILSON.DESCRIBE.CHICKENROTISSERIE = "Thắng lợi rồi! Bữa tối gà quay!"
 
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ALOE = "Một tách trà lô hội dịu nhẹ."
 WILSON.DESCRIBE.KYNO_HERMITCRABTEA_SUGARTREE_PETALS = "Một tách trà hoa ngọt dễ chịu."
-WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "I'll look really cool drinking my tea." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_HERMITCRABTEA_ICENETTLES = "I'll look really cool drinking my tea."
 
 WILSON.DESCRIBE.SOULJUICE = "Một hỗn hợp kỳ lạ giữa năng lượng linh hồn và lựu."
 
 WILSON.DESCRIBE.KYNO_DAILYRECIPE = "Hôm nay không có món đặc biệt."
 WILSON.DESCRIBE.KYNO_DAILYRECIPE_SIGN =
-{ 
+{
 	GENERIC = "Món đặc biệt hôm nay là %s.",
 	NONE = "Hôm nay không có món đặc biệt.",
 	BURNING = "Nó đang cháy!",
@@ -1314,74 +1320,82 @@ WILSON.DESCRIBE.KYNO_PIGCOIN1 = "Tôi muốn nhiều hơn một xu cho suy nghĩ
 WILSON.DESCRIBE.KYNO_PIGCOIN2 = "Một lượng tiền khá ổn."
 WILSON.DESCRIBE.KYNO_PIGCOIN3 = "Có vẻ có giá trị."
 
-WILSON.DESCRIBE.KYNO_ICENETTLES = "The Garden is giving us a cold reception." -- NEEDS TRANSLATION
-WILSON.DESCRIBE.KYNO_ICENETTLES_DRIED = "Colder than maxwell's personality." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_ICENETTLES = "The Garden is giving us a cold reception."
+WILSON.DESCRIBE.KYNO_ICENETTLES_DRIED = "Colder than maxwell's personality."
 
-WILSON.DESCRIBE.KYNO_SEEDSBAG = -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_SEEDSBAG =
 {
 	GENERIC = "A handy place to store seeds.",
 	FULL = "It's packed with seeds.",
 }
 
-WILSON.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Can't get saucy with the crowd if you see this around." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Can't get saucy with the crowd if you see this around."
 
-WILSON.DESCRIBE.WX78MODULE_GOURMAND = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
-WILSON.DESCRIBE.WX78MODULE_COOKER = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
-WILSON.DESCRIBE.WX78MODULE_DRYER = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
-WILSON.DESCRIBE.WX78MODULE_DRYER2 = "So much science packed into one tiny gizmo." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.WX78MODULE_GOURMAND = "So much science packed into one tiny gizmo."
+WILSON.DESCRIBE.WX78MODULE_COOKER = "So much science packed into one tiny gizmo."
+WILSON.DESCRIBE.WX78MODULE_DRYER = "So much science packed into one tiny gizmo."
+WILSON.DESCRIBE.WX78MODULE_DRYER2 = "So much science packed into one tiny gizmo."
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "An odd container.", -- NEEDS TRANSLATION
+	GENERIC = "An odd container.",
 }
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "An odd container.", -- NEEDS TRANSLATION
+	GENERIC = "An odd container.",
 }
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",
-	GENERIC = "An odd container.", -- NEEDS TRANSLATION
+	GENERIC = "An odd container.",
 }
 
-WILSON.DESCRIBE.KYNO_PIGGYBANK = -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_PIGGYBANK =
 {
 	FULL = "It's reached its monetary capacity.",
 	UPGRADED = "A bottomless repository of wealth!",
 	GENERIC = "A convenient place to store my earned savings.",
 }
 
-WILSON.DESCRIBE.MARSHMALLOWS = "A delightful little confection." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.MARSHMALLOWS = "A delightful little confection."
 
-WILSON.DESCRIBE.KOKONUTCOOKIES = "You can't flee from the brand." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KOKONUTCOOKIES = "You can't flee from the brand."
 
-WILSON.DESCRIBE.BBQRIBS = "Now that's a proper rack of ribs!" -- NEEDS TRANSLATION
+WILSON.DESCRIBE.BBQRIBS = "Now that's a proper rack of ribs!"
 
-WILSON.DESCRIBE.BROWNIE = "A wonderfully dense chocolate confection." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.BROWNIE = "A wonderfully dense chocolate confection."
 
-WILSON.DESCRIBE.CHOCOLATE_CAKE = "Now that's a cake!" -- NEEDS TRANSLATION
+WILSON.DESCRIBE.CHOCOLATE_CAKE = "Now that's a cake!"
 
-WILSON.DESCRIBE.SWORDFISHBLUEDINNER = "A chilled bento! Perfect for a quick meal." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.SWORDFISHBLUEDINNER = "A chilled bento! Perfect for a quick meal."
 
-WILSON.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT = -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_NIGHT =
 {
 	GENERIC = "A curious nocturnal bird.",
 	HELD = "I can feel it moving in my pocket.",
 }
 
-WILSON.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT = -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_BIRD_ROBIN_WINTER_NIGHT =
 {
 	GENERIC = "A formidable bird from the frozen north.",
 	HELD = "I can feel its beak poking my pocket.",
 }
 
-WILSON.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like the start of a construction." -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_POND_SALT2_CONSTRUCTION = "Looks like the start of a construction."
 
-WILSON.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Anyone down for a round of fishing?" -- NEEDS TRANSLATION
+WILSON.DESCRIBE.KYNO_FISHINGROD_THULECITE = "Anyone down for a round of fishing?"
+
+WILSON.DESCRIBE.KYNO_OPALPRECIOUSPOWDER = "A remarkably fine sugar with an unusual crystalline structure."
+
+WILSON.DESCRIBE.OPALPRECIOUSCREAM = "A rather splendidly iridescent whipped cream."
+
+WILSON.DESCRIBE.CATFISHSTICK = "A grilled black catfish on a stick."
+
+WILSON.DESCRIBE.OPALPRECIOUSLOLLIPOP = "A sweet treat with unpredictable consequences."

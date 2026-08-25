@@ -3,6 +3,8 @@ local assets =
 	Asset("ANIM", "anim/kyno_cavetuber.zip"),
 	Asset("ANIM", "anim/kyno_cavetuber_blooming.zip"),
 
+	Asset("ANIM", "anim/kyno_opalpreciouspowder.zip"),
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -210,7 +212,40 @@ local function tuber_blooming_cookedfn()
 	return inst
 end
 
+local function opalpowderfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
+
+	MakeInventoryPhysics(inst)
+	MakeInventoryFloatable(inst)
+
+	inst.AnimState:SetBank("kyno_opalpreciouspowder")
+	inst.AnimState:SetBuild("kyno_opalpreciouspowder")
+	inst.AnimState:PlayAnimation("idle")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst:AddComponent("inspectable")
+	inst:AddComponent("tradable")
+	inst:AddComponent("inventoryitem")
+
+	inst:AddComponent("stackable")
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
+
+	MakeHauntableLaunchAndPerish(inst)
+
+	return inst
+end
+
 return Prefab("kyno_cavetuber", tuberfn, assets),
 Prefab("kyno_cavetuber_cooked", tuber_cookedfn, assets),
 Prefab("kyno_cavetuber_blooming", tuber_bloomingfn, assets),
-Prefab("kyno_cavetuber_blooming_cooked", tuber_blooming_cookedfn, assets)
+Prefab("kyno_cavetuber_blooming_cooked", tuber_blooming_cookedfn, assets),
+Prefab("kyno_opalpreciouspowder", opalpowderfn, assets)

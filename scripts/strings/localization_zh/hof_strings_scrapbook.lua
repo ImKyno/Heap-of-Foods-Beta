@@ -133,6 +133,9 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MIDNIGHT = "夜间攻击有较小概�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BATILISK = "使附近的蝙蝠蜥蜴在一段时间内受到惊吓。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_KNOCKBACK = "在一段时间内降低击退效果。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CHILLEDATTACK = "连续3次攻击同一目标会引发冰晶碎片。\n\n冰晶碎片会对目标周围小范围内的敌人造成伤害。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRITDAMAGE = "攻击有几率造成150%伤害的暴击。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "在一段时间内降低幸运值。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "会产生随机副作用。\n\n\"我们去赌博吧！\"——大概是某个人会这么说。"
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可使用便携调味台添加到烹饪锅料理中。\n\n食用添加了保鲜粉的料理后，将完全恢复其新鲜度时间。\n\n使背包内物品的腐烂速度降低25%。\n\n使其他增益效果持续时间提高25%。\n\n持续时间：4分钟。"
@@ -240,7 +243,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.ITEMSHOWCASER = "用于展示熟食的结构。放
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHFARMPLOT = "一个8格容器，用于放置需要繁殖的鱼类。\n\n将鱼放入第一个格子并投喂食物即可进行繁殖。经过一定时间后，鱼类将产出对应的后代及鱼卵。\n\n鱼类只有在所有条件都满足时才能繁殖，每种鱼都有其偏好，例如：昼夜周期、月相周期、季节和地点。"
 STRINGS.SCRAPBOOK.SPECIALINFO.OCEANHUNT = "一条冒泡的痕迹，表明水生生物活动。\n循着踪迹追踪，或许能找到他们身后的生物。"
 STRINGS.SCRAPBOOK.SPECIALINFO.WHALEOCEANCARCASS = "一具开始腐烂的鲸鱼尸体。\n\n它将日渐膨胀，直至最终爆裂，释放出内部的一切。\n\n爆炸声可能会引起不必要的注意。"
-STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTRADER = "一只孤独的章鱼栖息在浩瀚的海洋中。\n\n海盗章鱼提供奖励以换取鱼类、饰品及特定鱼类加工食品。" 
+STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTRADER = "一只孤独的章鱼栖息在浩瀚的海洋中。\n\n海盗章鱼提供奖励以换取鱼类、饰品及特定鱼类加工食品。"
 STRINGS.SCRAPBOOK.SPECIALINFO.OCTOPUSKINGTREASURE = "海盗章鱼的宝箱在冒险家们交换时赠予他们。"
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS_FISHBONE = "拾取时召唤帕克白克斯。\n\n帕克白克斯会跟随拥有者. 只要帕克白克斯还活着，鱼的新鲜度就会是黄色的。"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY = "庆祝更多料理五周年！"

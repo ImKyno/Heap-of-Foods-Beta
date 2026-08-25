@@ -98,6 +98,8 @@ TUNING.HOF_NOSPICE_FOODS =
 	"spooky_skullcandy",
 	"tiramisu",
 	"watercup",
+	"opalpreciouscream",
+	"opalpreciouslollipop",
 }
 
 TUNING.HOF_NIGHTBIRDS =
@@ -1611,7 +1613,7 @@ TUNING.KYNO_MAXHEALTHBUFF_DURATION = 480
 TUNING.KYNO_MAXHUNGERBUFF_BONUS = 30
 TUNING.KYNO_MAXHUNGERBUFF_DURATION = 480
 
-TUNING.KYNO_MAXHUNGERBUFF_BONUS = 30
+TUNING.KYNO_MAXSANITYBUFF_BONUS = 30
 TUNING.KYNO_MAXSANITYBUFF_DURATION = 480
 
 TUNING.KYNO_MAXOMNIBUFF_BONUS = 15
@@ -1619,6 +1621,9 @@ TUNING.KYNO_MAXOMNIBUFF_DURATION = 480
 
 TUNING.KYNO_LUCKBUFF_AMOUNT = 2
 TUNING.KYNO_LUCKBUFF_DURATION = 480
+
+TUNING.KYNO_BADLUCKBUFF_AMOUNT = -2
+TUNING.KYNO_BADLUCKBUFF_DURATION = 480
 
 TUNING.KYNO_FULLMOONTRANSFORMER_CHANCE_HIGH = 0.30
 TUNING.KYNO_FULLMOONTRANSFORMER_CHANCE_MED = 0.20
@@ -1804,3 +1809,67 @@ TUNING.KYNO_FISHINGROD_THULECITE_WAIT_MIN = 2
 TUNING.KYNO_FISHINGROD_THULECITE_WAIT_MAX = 20
 TUNING.KYNO_FISHINGROD_THULECITE_USES = 90 -- Well shit, the regular one is 9 uses...
 TUNING.KYNO_FISHINGROD_THULECITE_DAMAGE = 4.25
+
+TUNING.KYNO_CRITDAMAGEBUFF_CHANCE = 0.10
+TUNING.KYNO_CRITDAMAGEBUFF_MULT = 150 -- 150%
+TUNING.KYNO_CRITDAMAGEBUFF_DURATION = 480
+
+-- The random buff isn't actually a buff, it just applies an existing one.
+-- string will be used as AddDebuff(string, string), same string for name and prefab.
+-- where tables will be used as AddDebuff(name, prefab)
+TUNING.KYNO_RANDOMBUFF_DEATH_CHANCE = 0.01
+TUNING.KYNO_RANDOMBUFF_BUFFS =
+{
+	-- Vanilla Buffs.
+	"buff_electricattack",
+	"buff_moistureimmunity",
+	"healthregenbuff",
+	{ "shroomsleepresist", "buff_sleepresistance" },
+	{ "shroomsleepimmunity", "buff_sleepimmunity" },
+	"sweettea_buff",
+
+	-- Modded Buffs.
+	"kyno_acidimmunitybuff",
+	"kyno_badluckbuff",
+	"kyno_beefriendlybuff",
+	"kyno_berserkerbuff",
+	"kyno_chilledbuff",
+	"kyno_coldbuff",
+	"kyno_craftingbuff",
+	"kyno_darknessbuff",
+	"kyno_dmgreductionbuff",
+	"kyno_eaterbuff",
+	"kyno_fearbuff",
+	"kyno_fireimmunitybuff",
+	"kyno_fishingbuff",
+	"kyno_frogbuff",
+	"kyno_greenthumbbuff",
+	"kyno_hastebuff",
+	"kyno_healingbuff",
+	"kyno_heatbuff",
+	"kyno_hungerregenbuff",
+	"kyno_hungerratebuff",
+	"kyno_insanitybuff",
+	"kyno_knockbackbuff",
+	"kyno_luckbuff",
+	"kyno_maxhealthbuff",
+	"kyno_maxhungerbuff",
+	"kyno_maxsanitybuff",
+	"kyno_maxomnibuff",
+	"kyno_piratebuff",
+	"kyno_wormbuff",
+	"kyno_crabbuff",
+	"kyno_amphibianbuff",
+	"kyno_nightkillbuff",
+	"kyno_nightvisionbuff",
+	"kyno_panicbuff",
+	"kyno_planardefensebuff",
+	"kyno_poisonimmunitybuff",
+	"kyno_poisonimmunityaltbuff",
+	"kyno_sanityregenbuff",
+	"kyno_sanityratebuff",
+	"kyno_strengthbuff",
+	"kyno_superregenbuff",
+	"kyno_trufflesbuff",
+	"kyno_wetnessbuff",
+}
