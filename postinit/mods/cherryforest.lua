@@ -10,7 +10,7 @@ if TUNING.HOF_IS_CRF_ENABLED then
 		if inst.components.workable ~= nil and inst.components.lootdropper ~= nil then
 			local _onfinish = inst.components.workable.onfinish
 
-			workable:SetOnFinishCallback(function(inst, worker)
+			inst.components.workable:SetOnFinishCallback(function(inst, worker)
 				if worker ~= nil and worker.tagvar_luckywoodcutter then
 					local log_bonus = TUNING.KYNO_WOODCUTTERBUFF_BONUS[inst.prefab]
 

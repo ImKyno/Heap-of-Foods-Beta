@@ -596,7 +596,7 @@ local kyno_warly_foods =
 		overridebuild = "kyno_foodrecipes_warly",
 		pigcoinvalue = {10, 3, 1},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"masterfood"},
+		tags = {"masterfood", "honeyed"},
 		card_def = {ingredients = {{"meat", 2}, {"kyno_spotspice", 1}, {"kyno_syrup", 1}}},
 		prefabs = { "kyno_knockbackbuff" },
 		oneatenfn = function(inst, eater)
@@ -648,7 +648,7 @@ local kyno_warly_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RANDOM,
 		pigcoinvalue = {10, 7, 3},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"masterfood", "shimmerfood", "nospice"},
+		tags = {"masterfood", "shimmerfood", "honeyed", "nospice"},
 		card_def = {ingredients = {{"kyno_opalpreciouspowder", 1}, {"nightmarefuel", 1}, {"honey", 1}, {"twigs", 1}}},
 		prefabs = { "kyno_randombuff" },
 		oneatenfn = function(inst, eater)

@@ -3813,6 +3813,7 @@ local kyno_foods =
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {4, 0, 1},
 		floater = TUNING.HOF_FLOATER,
+		tags = {"honeyed"},
 		card_def = {ingredients = {{"kyno_kokonut_halved", 1}, {"kyno_flour", 1}, {"kyno_sugar", 1}, {"honey", 1}}},
 	},
 
@@ -3852,7 +3853,7 @@ local kyno_foods =
 		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRITDAMAGE,
 		pigcoinvalue = {8, 4, 2},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"critfood", "shimmerfood", "nospice"},
+		tags = {"critfood", "shimmerfood", "honeyed", "nospice"},
 		card_def = {ingredients = {{"kyno_opalpreciouspowder", 1}, {"milkywhites", 1}, {"honey", 2}}},
 		prefabs = { "kyno_critdamagebuff" },
 		oneatenfn = function(inst, eater)

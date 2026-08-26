@@ -37,6 +37,7 @@ local INIT_POSTINIT_COMPONENTS =
 	"foodaffinity",
 	"freezable",
 	"growable",
+	"health",
 	"playervision",
 	"pollinator",
 	"regrowthmanager",

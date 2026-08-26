@@ -5,10 +5,16 @@ local CURE_DEBUFF_BLACKLIST = TUNING.KYNO_SPICE_CUREBUFF_DEBUFF_BLACKLIST
 -- inst.components.debuffable:RemoveAllDebuffs()
 AddComponentPostInit("debuffable", function(self)
 	function self:RemoveAllDebuffs()
+		local removelist = {}
+
 		for name, _ in pairs(self.debuffs) do
 			if not DEBUFF_BLACKLIST[name] then -- Any debuff in the blacklist will be kept.
-				self:RemoveDebuff(name)
+				table.insert(removelist, name)
 			end
+		end
+
+		for _, name in ipairs(removelist) do
+			self:RemoveDebuff(name)
 		end
 	end
 

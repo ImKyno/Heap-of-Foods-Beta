@@ -452,7 +452,10 @@ local function OnDetached(inst, target)
 		end
 
 		target:PushEvent("stopgoldenapple")
-		target:AddDebuff("kyno_healingsicknessbuff", "kyno_healingsicknessbuff")
+		
+		target:DoTaskInTime(0, function()
+			target:AddDebuff("kyno_healingsicknessbuff", "kyno_healingsicknessbuff")
+		end)
 	end)
 
 	inst:Remove()

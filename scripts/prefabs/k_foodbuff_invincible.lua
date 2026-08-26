@@ -66,7 +66,10 @@ end
 local function OnDetached(inst, target)
 	if target:HasTag("player") then
 		inst:OnEnableProtectionFn(target, false)
-		target:AddDebuff("kyno_healingsicknessbuff", "kyno_healingsicknessbuff")
+
+		target:DoTaskInTime(0, function()
+			target:AddDebuff("kyno_healingsicknessbuff", "kyno_healingsicknessbuff")
+		end)
 	end
 
 	if target.components.talker and target:HasTag("player") then
