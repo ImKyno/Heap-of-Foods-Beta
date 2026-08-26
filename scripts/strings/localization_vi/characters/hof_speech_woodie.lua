@@ -116,6 +116,9 @@ WOODIE.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Looks like my luck's finally turned arou
 WOODIE.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Looks like nothin' can hurt me now."
 WOODIE.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "I'm back to bein' breakable."
 
+WOODIE.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Now that's what I call a good haul!"
+WOODIE.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Well, back to the usual amount of wood."
+
 WOODIE.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Well, that's one nasty sickness outta the way."
 
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để nhấc nó lên?"

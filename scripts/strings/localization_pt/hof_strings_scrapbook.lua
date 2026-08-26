@@ -137,6 +137,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRITDAMAGE = "Ataques têm uma pequena
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "Diminui a sorte por um certo período de tempo."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "Concede um efeito aleatório.\n\n\"VAMOS APOSTAR!\" - Alguém, provavelmente."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_OPALAPPLE = "Torna o sobrevivente imune a todas as fontes de dano recebido por 30 segundos e causa Doença de Cura Alimentar.\n\n\"Uma fruta tocada pela eternidade, cuja doçura radiante esconde um poder que nenhum mortal deveria possuir. Por um instante, a carne se torna inabalável, e até a própria morte é forçada a desviar o olhar enquanto uma força radiante lhe é concedida.\" - Autor Desconhecido."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WOODCUTTER = "Aumenta a eficiência de cortar árvores por um certo período de tempo. As árvores derrubadas deixam cair mais troncos."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Pode ser adicionado a comidas da Panela usando uma Estação Portátil de Temperos.\n\nConsumir um prato temperado com Pó Conservante restaura completamente seu tempo de deterioração.\n\nReduz a taxa de deterioração dos itens no inventário em 25%.\n\nAumenta a duração de outros efeitos secundários em 25%.\n\nDuração: 4 minutos."

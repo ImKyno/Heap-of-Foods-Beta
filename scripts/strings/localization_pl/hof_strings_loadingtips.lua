@@ -142,6 +142,7 @@ local LOADINGTIPS   =
 	CRITDAMAGE      = "Dzięki Rozświetlająca Bita śmietana twoje ataki mogą zadawać trafienia krytyczne, zapewniając łącznie aż 150% dodatkowych obrażeń!",
 	RANDOMBUFF      = "Lizak Shimmer Lollipop po zjedzeniu wywołuje losowy efekt uboczny. Czujesz się dziś szczęśliwy?",
 	OPALAPPLE       = "Zaczarowane Lśniące Jabłka to rzadkie przedmioty, które można zdobyć, pokonując potężnych bossów. Zapewniają nieśmiertelność na ograniczony czas.",
+	WOODCUTTER      = "Żywa Kanapka zwiększa wydajność ścinania, sprawiając, że z powalonych drzew wypada więcej kłód. Woodie może korzystać z tej zalety dłużej niż pozostali ocaleni.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

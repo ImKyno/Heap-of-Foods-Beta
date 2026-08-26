@@ -116,6 +116,9 @@ WAXWELL.ANNOUNCE_KYNO_BADLUCKBUFF_END = "At last. Fortune has ceased its mockery
 WAXWELL.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "For once, even death must wait."
 WAXWELL.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "My reprieve is over."
 
+WAXWELL.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "A little extra timber never hurts."
+WAXWELL.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "The trees have stopped being so generous."
+
 WAXWELL.ANNOUNCE_KYNO_SICKNESSBUFF_END = "At last. I can breathe easily again."
 
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję do tego czegoś innego."

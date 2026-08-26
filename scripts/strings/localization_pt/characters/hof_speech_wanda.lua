@@ -116,6 +116,9 @@ WANDA.ANNOUNCE_THIS_BADLUCKBUFF_END = "O mau agouro finalmente passou."
 WANDA.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "O próprio tempo não pode me tocar."
 WANDA.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "E o tempo me alcançou novamente."
 
+WANDA.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Mais madeira, menos trabalho. Perfeito."
+WANDA.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "O rendimento extra chegou ao fim."
+
 WANDA.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ótimo. Não tenho tempo para ficar doente."
 
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não... Preciso de algo diferente."

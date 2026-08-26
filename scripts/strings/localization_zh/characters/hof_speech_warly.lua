@@ -116,6 +116,9 @@ WARLY.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Ah, excellent. Fortune has returned to th
 WARLY.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Ah, a fleeting taste of immortality!"
 WARLY.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "The enchantment has vanished!"
 
+WARLY.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Ah, the forest is being particularly generous today."
+WARLY.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "And the forest's generosity has come to an end."
+
 WARLY.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ahh, what a relief. I feel like myself again."
 
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "错了，错了……"

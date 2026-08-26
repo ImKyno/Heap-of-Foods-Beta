@@ -116,6 +116,9 @@ WURT.ANNOUNCE_KYNO_BADLUCKBUFF_END = "A má sorte acabou!"
 WURT.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Wurt não se machuca mais!"
 WURT.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "A proteção brilhante desapareceu!!"
 
+WURT.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Árvores dão mais gravetos, florp!"
+WURT.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Acho que as árvores voltaram ao normal."
+
 WURT.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Já estou melhor, florp!"
 
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Peixes bonitinhos sempre estão no pantano!"

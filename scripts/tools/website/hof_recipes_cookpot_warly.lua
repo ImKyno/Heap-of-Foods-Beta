@@ -28,4 +28,5 @@ return {
     "brownie",
     "bbqribs",
     "swordfishbluedinner",
+    "opalpreciouslollipop",
 }

@@ -116,6 +116,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_BADLUCKBUFF_END = "It seems the unfavorable influence
 WICKERBOTTOM.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "I appear to be impervious to harm."
 WICKERBOTTOM.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "The protective measures have expired."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "The trees appear to be yielding considerably more timber."
+WICKERBOTTOM.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "The increased timber yield has ceased."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Excellent. The illness appears to have passed."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Nó cần thứ khác."

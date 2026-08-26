@@ -116,6 +116,9 @@ WALTER.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Ufa! Parece que a nossa sorte está melh
 WALTER.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Nada pode me ferir agora!"
 WALTER.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Ah, o encantamento passou."
 
+WALTER.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Uau! Estamos conseguindo muito mais lenha!"
+WALTER.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "A floresta precisa descansar um pouco."
+
 WALTER.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ufa! Já estou me sentindo melhor. E você, garota?"
 
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Coisa errada!"

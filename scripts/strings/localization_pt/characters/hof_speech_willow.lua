@@ -116,6 +116,9 @@ WILLOW.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Finalmente. As coisas parecem menos terr
 WILLOW.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Ha! Tente me machucar agora!"
 WILLOW.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Ah! A diversão acabou."
 
+WILLOW.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Mais lenha para a fogueira!"
+WILLOW.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Vou ter que cortar mais árvores agora."
+
 WILLOW.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Finalmente! Não me sinto mais doente."
 
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso colocar algo diferente aqui!"

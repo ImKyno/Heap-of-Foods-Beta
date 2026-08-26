@@ -116,6 +116,9 @@ WEBBER.ANNOUNCE_KYNO_BADLUCKBUFF_END = "I think our bad luck is gone!"
 WEBBER.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "We're invincible!"
 WEBBER.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Aww... we're not that invincible anymore."
 
+WEBBER.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "The trees are giving us more wood!"
+WEBBER.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Aww, the trees aren't giving us extra wood anymore."
+
 WEBBER.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Yay! We don't feel sick anymore!"
 
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không phải cái này."

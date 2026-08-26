@@ -134,6 +134,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CHILLEDATTACK = "Grants chilled attacks"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRITDAMAGE = "Grants critical attacks"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BADLUCK = "Decreases luck"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RANDOM = "Grants a random side effect"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WOODCUTTER = "Increases chopping efficiency"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Một loại rau xanh xanh, vua của đồng cỏ và rừng mưa. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Một trong nhiều món quà từ biển cả, rất được những kẻ biết thưởng thức trân trọng. -W"

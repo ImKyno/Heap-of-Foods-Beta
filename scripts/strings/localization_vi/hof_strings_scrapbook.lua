@@ -137,6 +137,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRITDAMAGE = "Các đòn tấn công c
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "Làm giảm may mắn trong một khoảng thời gian nhất định."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "Gây ra một tác dụng phụ ngẫu nhiên.\n\n\"CÙNG ĐI ĐÁNH BẠC NÀO!\" - Có lẽ là ai đó."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_OPALAPPLE = "Khiến người sống sót miễn nhiễm với mọi nguồn sát thương nhận vào trong 30 giây, nhưng gây ra Bệnh Suy Nhược Chữa Lành Bằng Thức Ăn.\n\n\"Một loại quả được chạm đến bởi vĩnh hằng, vị ngọt rực rỡ của nó che giấu một sức mạnh mà không phàm nhân nào đáng được nắm giữ. Trong khoảnh khắc, thân xác trở nên bất khuất, và ngay cả cái chết cũng buộc phải ngoảnh mặt khi một nguồn sức mạnh rực rỡ được ban tặng.\" - Tác giả vô danh."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WOODCUTTER = "Tăng hiệu suất chặt cây trong một khoảng thời gian nhất định. Cây sẽ cho nhiều gỗ hơn khi bị chặt hạ."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Có thể thêm vào món ăn trong Nồi Hầm bằng Trạm Gia Vị Di Động.\n\nĂn món được tẩm Bột Bảo Quản sẽ khôi phục hoàn toàn độ tươi của nó.\n\nGiảm tốc độ hư hỏng của vật phẩm trong túi đồ đi 25%.\n\nTăng thời gian tồn tại của các hiệu ứng phụ khác thêm 25%.\n\nThời lượng: 4 phút."

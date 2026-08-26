@@ -116,6 +116,9 @@ WINONA.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Looks like I'm finally catching a break.
 WINONA.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Now that's what I call protective equipment!"
 WINONA.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Back to wearing protective hats."
 
+WINONA.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Now that's efficient!"
+WINONA.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Back to the usual output."
+
 WINONA.ANNOUNCE_KYNO_SICKNESSBUFF_END = "That's better. Back on my feet."
 
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không."

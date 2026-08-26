@@ -104,6 +104,7 @@ PrefabFiles =
 	"k_foodbuff_truffles",
 	"k_foodbuff_weeds",
 	"k_foodbuff_wetness",
+	"k_foodbuff_woodcutter",
 	"k_foodbuff_spice_cold",
 	"k_foodbuff_spice_cure",
 	"k_foodbuff_spice_fed",

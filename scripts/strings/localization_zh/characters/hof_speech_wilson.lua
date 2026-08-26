@@ -116,6 +116,9 @@ WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_END = "I think my luck is back to normal."
 WILSON.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "I feel completely invincible!"
 WILSON.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "My invincibility is gone!"
 
+WILSON.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Looks like these trees are giving me extra wood!"
+WILSON.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "The trees are back to normal."
+
 WILSON.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ahh, much better. That sickness is gone."
 
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "不是这个。"

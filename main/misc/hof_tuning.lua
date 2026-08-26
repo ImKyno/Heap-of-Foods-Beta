@@ -35,6 +35,9 @@ TUNING.HOF_IS_NET_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2528541304")
 TUNING.HOF_IS_TCP_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-2174681153") -- Apparels Overload Mod.
 TUNING.HOF_IS_DHD_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-3004639365") -- Dehydrated Mod.
 TUNING.HOF_IS_OTT_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-3282278569") -- On To Table Mod.
+TUNING.HOF_IS_CRF_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-1289779251") -- Cherry Forest Mod.
+TUNING.HOF_IS_IAM_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-1467214795") -- Island Adventures Mod.
+TUNING.HOF_IS_IAC_ENABLED = _G.KnownModIndex:IsModEnabled("workshop-3435352667") -- Island Adventures Core Mod.
 
 TUNING.PROTOTYPER_TREES.MEALING           = TechTree.Create({ MEALING       = 1 })
 TUNING.PROTOTYPER_TREES.MEALING_ONE       = TechTree.Create({ MEALING       = 1 })
@@ -1877,6 +1880,10 @@ TUNING.KYNO_RANDOMBUFF_BUFFS =
 	"kyno_wetnessbuff",
 }
 
+if GetModConfigData("COFFEESPEED") then
+	table.insert(TUNING.KYNO_RANDOMBUFF_BUFFS, "kyno_coffeebuff")
+end
+
 TUNING.KYNO_OPALPRECIOUSAPPLE_HEALTH = 150
 TUNING.KYNO_OPALPRECIOUSAPPLE_HUNGER = 150
 TUNING.KYNO_OPALPRECIOUSAPPLE_SANITY = 150
@@ -1886,3 +1893,60 @@ TUNING.KYNO_OPALPRECIOUSAPPLE_GOLD_VALUE = 100
 TUNING.KYNO_INVINCIBLEBUFF_DURATION = 30
 
 TUNING.KYNO_HEALINGSICKNESSBUFF_DURATION = 480 / 2
+
+-- Drop more logs and charcoal based on each tree type and its current stage.
+-- NOTE: Does not work for Stumps, Old Stages and Festive Tree Planters.
+TUNING.KYNO_WOODCUTTERBUFF_DURATION = 480
+TUNING.KYNO_WOODCUTTERBUFF_BONUS =
+{
+	-- 1 Stage.
+	livingtree_halloween        = { 1 },
+	livingtree                  = { 2 },
+	marsh_tree                  = { 2 },
+	mushtree_small              = { 2 },
+	mushtree_medium             = { 2 },
+	mushtree_tall               = { 2 },
+	mushtree_tall_webbed        = { 2 },
+	mushtree_moon               = { 2 },
+	cave_banana_tree            = { 2 },
+	ancienttree_nightvision     = { 2 },
+	oceantree_pillar            = { 9 },
+	watertree_root              = { 2 },
+	driftwood_small1            = { 2 },
+	driftwood_small2            = { 2 },
+	driftwood_tall              = { 3 },
+
+	-- 3 Stages.
+	evergreen                   = { 1, 2, 3 },
+	evergreen_sparse            = { 1, 2, 3 },
+	deciduoustree               = { 1, 2, 3 },
+	twiggytree                  = { 1, 2, 3 },
+	moon_tree                   = { 2, 3, 4 },
+	palmconetree                = { 2, 3, 4 },
+	oceantree                   = { 4, 6, 8 },
+
+	-- Treeguards.
+	leif                        = { 3 },
+	leif_sparse                 = { 3 },
+
+	kyno_bananatree             = { 2 },
+	kyno_sugartree_short        = { 1 },
+	kyno_sugartree_normal       = { 2 },
+	kyno_sugartree              = { 3 },
+	kyno_sugartree_ruined2      = { 3 },
+	kyno_meadowisland_pikotree  = { 3 },
+	kyno_meadowisland_tree      = { 1, 2, 3 },
+	kyno_kokonuttree            = { 1, 2, 3 },
+
+	-- Island Adventures Mod.
+	palmtree                    = { 1, 2, 3 },
+	jungletree                  = { 1, 2, 3 },
+	mangrovetree                = { 1, 2, 3 },
+	livingjungletree_halloween  = { 1 },
+	livingjungletree            = { 2 },
+	leif_palm                   = { 3 },
+
+	-- Cherry Forest Mod.
+	cherry_tree                 = { 2, 3, 4 },
+	cherry_tree_white           = { 2, 3, 4 },
+}

@@ -141,6 +141,7 @@ local LOADINGTIPS   =
 	CRITDAMAGE      = "O Chantilly Cintilante permite que seus ataques causem acertos críticos com um impressionante bônus de 150% de dano!",
 	RANDOMBUFF      = "O Pirulito Cintilante concede um efeito aleatório ao ser comido. Está se sentindo com sorte hoje?",
 	OPALAPPLE       = "Maçãs Cintilantes Encantadas são itens raros que podem ser obtidos ao derrotar chefes poderosos. Concedem invencibilidade por um período limitado.",
+	WOODCUTTER      = "O Sanduíche Vivo aumenta a eficiência de cortar árvores, fazendo com que elas deixem cair mais troncos quando derrubadas. Woodie pode aproveitar esse efeito por ainda mais tempo que os outros sobreviventes.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

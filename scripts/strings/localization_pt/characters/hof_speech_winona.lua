@@ -116,6 +116,9 @@ WINONA.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Parece que finalmente estou tendo uma fo
 WINONA.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Isso sim é que é equipamento de proteção!"
 WINONA.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "De volta aos capacetes de proteção."
 
+WINONA.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Isso sim é eficiência!"
+WINONA.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "De volta ao ritmo de sempre."
+
 WINONA.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Assim está melhor. De pé novamente."
 
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não."

@@ -116,6 +116,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Parece que a influência desfavor�
 WICKERBOTTOM.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Pareço estar imune a danos."
 WICKERBOTTOM.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "As medidas de proteção expiraram."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "As árvores parecem estar produzindo consideravelmente mais madeira."
+WICKERBOTTOM.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "A produção aumentada de madeira cessou."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Excelente. A doença parece ter passado."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Precisa de algo diferente."

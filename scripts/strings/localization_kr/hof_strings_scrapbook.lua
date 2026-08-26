@@ -137,6 +137,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRITDAMAGE = "공격 시 낮은 확률
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "일정 시간 동안 행운을 감소시킵니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "무작위 부작용을 일으킵니다.\n\n\"도박하러 가자!\" - 아마도 누군가."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_OPALAPPLE = "30초 동안 생존자가 모든 피해에 면역이 되지만, 음식 치유 중독을 일으킵니다.\n\n\"영원의 손길이 닿은 과일. 눈부신 달콤함 속에는 어떤 필멸자도 다루어서는 안 될 힘이 숨겨져 있다. 잠시 동안 육신은 굴하지 않으며, 찬란한 힘이 부여되는 동안 죽음조차도 시선을 돌릴 수밖에 없다.\" - 작자 미상."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WOODCUTTER = "일정 시간 동안 벌목 효율을 높입니다. 나무를 베었을 때 더 많은 통나무를 얻을 수 있습니다."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "휴대용 양념기를 사용하여 요리 냄비 음식에 추가할 수 있습니다.\n\n보존 가루를 첨가한 음식을 먹으면 해당 요리의 신선도가 완전히 회복됩니다.\n\n인벤토리에 있는 아이템의 부패 속도가 25% 감소합니다.\n\n다른 음식 부작용의 지속 시간이 25% 증가합니다.\n\n지속 시간 4분."

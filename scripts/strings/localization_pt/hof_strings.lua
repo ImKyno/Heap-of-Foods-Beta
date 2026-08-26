@@ -134,6 +134,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CHILLEDATTACK = "Garante ataques gélidos"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRITDAMAGE = "Garante ataques críticos"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BADLUCK = "Diminui a sorte"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RANDOM = "Garante um efeito aleatório"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WOODCUTTER = "Aumenta a eficiência de cortar árvores"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Vegetal esverdeado, o rei das pastagens e florestas tropicais. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Um dos muitos presentes do mar, muito apreciado pelos homens de cultura. -W"
@@ -591,7 +592,7 @@ STRINGS.KYNO_OPALPRECIOUSAPPLE_NAMES =
 STRINGS.KYNO_OPALPRECIOUSLOLLIPOP_NAMES =
 {
 	"Piruleta",
-	"Pirulito do Apostador,
+	"Pirulito do Apostador",
 	"Pirulito Cintilante",
 	"Apostalito",
 }

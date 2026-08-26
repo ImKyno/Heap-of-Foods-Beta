@@ -64,14 +64,37 @@ local function tree_chopped(inst, chopper)
 	inst.components.lootdropper:SpawnLootPrefab("log")
 	inst.components.lootdropper:SpawnLootPrefab("twigs")
 	inst.components.lootdropper:SpawnLootPrefab("twigs")
+
 	inst.AnimState:Hide("BANANA")
+
 	if inst.components.pickable ~= nil and inst.components.pickable.canbepicked then
 		inst.components.lootdropper:SpawnLootPrefab("kyno_banana")
 	end
+
 	inst.components.pickable.caninteractwith = false
 	inst.components.workable:SetWorkable(false)
+
 	inst.AnimState:PlayAnimation("fall")
 	inst:ListenForEvent("animover", setupstump)
+
+	if chopper ~= nil and chopper.tagvar_luckywoodcutter then
+		local log_bonus = TUNING.KYNO_WOODCUTTERBUFF_BONUS[inst.prefab]
+
+		if log_bonus ~= nil and not inst:HasTag("burnt") then
+			local amount = 0
+
+			if type(log_bonus) == "table" then
+				local stage = inst.components.growable ~= nil and inst.components.growable.stage or 1
+				amount = log_bonus[stage] or 0
+			else
+				amount = log_bonus or 0
+			end
+
+			for i = 1, amount do
+				inst.components.lootdropper:SpawnLootPrefab("log")
+			end
+		end
+	end
 end
 
 local function tree_chop(inst, chopper)
@@ -276,11 +299,14 @@ local function stump_fn()
 	return inst
 end
 
-local function burnt_chopped(inst)
+local function burnt_chopped(inst, chopper)
 	inst.components.workable:SetWorkable(false)
+
 	inst.SoundEmitter:PlaySound("dontstarve/forest/treeCrumble")
 	inst.AnimState:PlayAnimation("chop_burnt")
+
 	inst.components.lootdropper:SpawnLootPrefab("charcoal")
+
 	inst.persists = false
 	inst:DoTaskInTime(50 * FRAMES, inst.Remove)
 end

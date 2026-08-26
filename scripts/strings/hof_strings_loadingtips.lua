@@ -141,6 +141,7 @@ local LOADINGTIPS   =
 	CRITDAMAGE      = "The Shimmer Whipped Cream allows your attacks to critical strike for a whopping total of 150% bonus damage!",
 	RANDOMBUFF      = "The Shimmer Lollipop grants a random Side Effect when eaten. Are you feeling lucky today?",
 	OPALAPPLE       = "Enchanted Shimmer Apples are rare items that can be obtained by defeating powerful bosses. They grant invincibility for a limited duration.",
+	WOODCUTTER      = "The Living Sandwich increases the chopping efficiency, making trees drop more logs when chopped down. Woodie gets to enjoy this for even longer than other survivors."
 }
 
 for k, v in pairs(LOADINGTIPS) do

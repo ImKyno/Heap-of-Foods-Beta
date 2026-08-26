@@ -137,6 +137,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRITDAMAGE = "攻击有几率造成150
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "在一段时间内降低幸运值。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "会产生随机副作用。\n\n\"我们去赌博吧！\"——大概是某个人会这么说。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_OPALAPPLE = "使幸存者在30秒内免疫所有伤害来源，但会导致食物治疗疾病。\n\n\"一颗被永恒触碰过的果实，其耀眼的甘甜之中隐藏着凡人本不应掌握的力量。刹那间，血肉变得坚不可摧，就连死亡本身也不得不移开目光，而一股璀璨的力量也随之降临。\" - 作者不详。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WOODCUTTER = "在一段时间内提高砍伐效率。砍倒树木时会掉落更多原木。"
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可使用便携调味台添加到烹饪锅料理中。\n\n食用添加了保鲜粉的料理后，将完全恢复其新鲜度时间。\n\n使背包内物品的腐烂速度降低25%。\n\n使其他增益效果持续时间提高25%。\n\n持续时间：4分钟。"

@@ -137,6 +137,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_CRITDAMAGE = "Ataki mają niewielką s
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "Zmniejsza szczęście na określony czas."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "Powoduje losowy efekt uboczny.\n\n\"CHODŹMY ZAGRAĆ!\" – Pewnie ktoś."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_OPALAPPLE = "Zapewnia ocalałemu odporność na wszelkie źródła obrażeń przez 30 sekund, ale powoduje Chorobę Leczenia Żywnością.\n\n\"Owoc dotknięty przez wieczność, którego promienna słodycz skrywa moc, jakiej żaden śmiertelnik nie powinien władać. Przez chwilę ciało staje się niezłomne, a nawet sama śmierć zmuszona jest odwrócić wzrok, gdy zostaje mu nadana promienna moc.\" - Autor nieznany."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WOODCUTTER = "Zwiększa wydajność ścinania przez określony czas. Ścinane drzewa dają więcej kłód."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Może zostać dodane do potraw z Garnka za pomocą Przenośnej Stacji Przypraw.\n\nZjedzenie potrawy doprawionej Proszkiem Konserwującym całkowicie odnawia jej czas świeżości.\n\nZmniejsza tempo psucia się przedmiotów w ekwipunku o 25%.\n\nZwiększa czas trwania innych efektów dodatkowych o 25%.\n\nCzas trwania: 4 minuty."

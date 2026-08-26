@@ -119,6 +119,9 @@ WORTOX.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The bad luck has scampered away!"
 WORTOX.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Death can't catch up to me! Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "It appears that my protective powers have faded away."
 
+WORTOX.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "More logs for the chopping! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "No more extra logs, what a bore!"
+
 WORTOX.ANNOUNCE_KYNO_SICKNESSBUFF_END = "The nasty sickness is gone!"
 
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cơ."

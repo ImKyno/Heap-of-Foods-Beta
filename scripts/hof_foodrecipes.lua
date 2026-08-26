@@ -2667,30 +2667,22 @@ local kyno_foods =
 		foodtype = FOODTYPE.MEAT,
 		secondaryfoodtype = FOODTYPE.MONSTER,
 		perishtime = TUNING.PERISH_SUPERSLOW,
-		health = 10,
+		health = -20,
 		hunger = 56.25,
-		sanity = -5,
+		sanity = -33,
 		cooktime = 1,
-		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CURSE,
+		oneat_desc = STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WOODCUTTER,
 		potlevel = "low",
 		pickupsound = "wood",
+		were_mode = "beaver", -- Always transform into the Werebeaver.
 		overridebuild = "kyno_foodrecipes_cookpot1",
 		pigcoinvalue = {6, 0, 0},
 		floater = TUNING.HOF_FLOATER,
-		tags = {"wereitem"},
 		card_def = {ingredients = {{"livinglog", 2}, {"monstermeat", 2}}},
 		oneatenfn = function(inst, eater)
-			local WEREMODE_NAMES =
-			{
-				"beaver",
-				"moose",
-				"goose",
-			}
-
-			if eater ~= nil and eater.components.wereeater ~= nil
-			and not (eater.components.health ~= nil and eater.components.health:IsDead()) and not eater:HasTag("playerghost") then
-				eater.components.wereeater:ForceTransformToWere(math.random(#WEREMODE_NAMES))
-			end
+			eater:DoTaskInTime(1, function()
+				eater:AddDebuff("kyno_woodcutterbuff", "kyno_woodcutterbuff")
+			end)
 
 			if eater ~= nil and eater.SoundEmitter ~= nil then
 				eater.SoundEmitter:PlaySound("dontstarve/creatures/leif/livinglog_burn")
@@ -3344,7 +3336,7 @@ local kyno_foods =
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_FASTISH,
-		health = 8,
+		health = 20,
 		hunger = 32.5,
 		sanity = 60,
 		cooktime = 1,

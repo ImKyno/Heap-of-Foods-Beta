@@ -116,6 +116,9 @@ WOODIE.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Parece que a maré de azar finalmente vi
 WOODIE.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Parece que nada pode me machucar agora."
 WOODIE.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Voltei a ser vulnerável."
 
+WOODIE.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Isso sim é que é uma boa colheita!"
+WOODIE.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Bom, de volta à quantidade habitual de madeira."
+
 WOODIE.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Bom, lá se foi uma doença daquelas."
 
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo diferente se encaixe aqui"

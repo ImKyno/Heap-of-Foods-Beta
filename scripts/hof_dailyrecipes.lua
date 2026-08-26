@@ -25,6 +25,7 @@ local CARD_DEFS = {}
 
 local RECIPES_BLACKLIST =
 {
+	["catfishstick"]  = true, -- Because this gives bad luck.
 	["gorge_bread"]   = true,
 	["kyno_syrup"]    = true,
 	["littlebread"]   = true,

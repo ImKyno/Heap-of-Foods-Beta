@@ -116,6 +116,9 @@ WARLY.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Ah, excelente. A sorte voltou à mesa."
 WARLY.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Ah, um gosto fugaz de imortalidade!"
 WARLY.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "O encantamento desapareceu!"
 
+WARLY.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Ah, a floresta está sendo particularmente generosa hoje."
+WARLY.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "E a generosidade da floresta chegou ao fim."
+
 WARLY.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ah, que alívio. Sinto-me eu mesmo novamente."
 
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado, errado..."

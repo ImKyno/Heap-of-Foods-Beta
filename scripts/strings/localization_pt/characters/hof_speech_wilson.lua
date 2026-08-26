@@ -116,6 +116,9 @@ WILSON.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Acho que minha sorte voltou ao normal."
 WILSON.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Sinto-me completamente invencível!"
 WILSON.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Minha invencibilidade acabou!"
 
+WILSON.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Parece que estas árvores estão me dando madeira extra!"
+WILSON.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "As árvores voltaram ao normal."
+
 WILSON.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ah, muito melhor. Aquela doença passou."
 
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."

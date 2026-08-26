@@ -116,6 +116,9 @@ WENDY.ANNOUNCE_KYNO_BADLUCKBUFF_END = "A escuridão passou... por enquanto."
 WENDY.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "A morte não pode me levar... ainda não."
 WENDY.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "A morte está à espreita novamente..."
 
+WENDY.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "A floresta dá mais do que deveria."
+WENDY.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "A floresta voltou à sua generosidade habitual."
+
 WENDY.ANNOUNCE_KYNO_SICKNESSBUFF_END = "A doença passou... por enquanto."
 
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"

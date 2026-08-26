@@ -134,6 +134,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CHILLEDATTACK = "Grants chilled attacks"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRITDAMAGE = "Grants critical attacks"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BADLUCK = "Decreases luck"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RANDOM = "Grants a random side effect"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WOODCUTTER = "Increases chopping efficiency"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Green-ish vegetable, the king of grasslands and rainforests. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "One of the many sea gifts, very appreciated by men of culture. -W"

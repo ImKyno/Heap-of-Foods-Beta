@@ -208,6 +208,12 @@ local function MakePreparedFood(data)
 			inst:AddTag(data.luckitem.luck > 0 and "luckyitem" or "unluckyitem")
 		end
 
+		if data.were_mode ~= nil then
+			inst:AddTag("wereitem")
+			inst:AddTag("monstermeat")
+			inst:AddTag("unsafefood")
+		end
+
 		if data.named ~= nil then
 			inst:AddTag("_named")
 		end
@@ -327,6 +333,10 @@ local function MakePreparedFood(data)
 			inst:AddComponent("named")
 			inst.components.named.possiblenames = data.named
 			inst.components.named:PickNewName()
+		end
+
+		if data.were_mode ~= nil then
+			inst.were_mode = data.were_mode
 		end
 
 		if data.fireproof ~= nil then

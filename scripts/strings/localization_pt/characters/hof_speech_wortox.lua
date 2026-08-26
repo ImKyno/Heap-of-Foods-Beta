@@ -119,6 +119,9 @@ WORTOX.ANNOUNCE_KYNO_BADLUCKBUFF_END = "O azar fugiu rapidinho!"
 WORTOX.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "A morte não consegue me alcançar! Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Parece que meus poderes de proteção se dissiparam."
 
+WORTOX.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Mais troncos para cortar! Hyuyu!"
+WORTOX.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Chega de troncos extras, que tédio!"
+
 WORTOX.ANNOUNCE_KYNO_SICKNESSBUFF_END = "A doença desagradável passou!"
 
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de outra coisa."

@@ -406,6 +406,10 @@ local function chop_down_tree(inst, chopper)
 		inst.components.lootdropper:DropLoot(pt + TheCamera:GetRightVec())
 	end
 
+	if inst:HasTag("has_coconut") then
+		inst.components.lootdropper:SpawnLootPrefab("kyno_kokonut")
+	end
+
 	RemovePhysicsColliders(inst)
 
 	inst.AnimState:PushAnimation(inst.anims.stump)
@@ -422,6 +426,25 @@ local function chop_down_tree(inst, chopper)
 	end
 
 	inst:DoTaskInTime(14 * FRAMES, ChopTreeShake)
+
+	if chopper ~= nil and chopper.tagvar_luckywoodcutter then
+		local log_bonus = TUNING.KYNO_WOODCUTTERBUFF_BONUS[inst.prefab]
+
+		if log_bonus ~= nil and not inst:HasTag("burnt") then
+			local amount = 0
+
+			if type(log_bonus) == "table" then
+				local stage = inst.components.growable ~= nil and inst.components.growable.stage or 1
+				amount = log_bonus[stage] or 0
+			else
+				amount = log_bonus or 0
+			end
+
+			for i = 1, amount do
+				inst.components.lootdropper:SpawnLootPrefab("log")
+			end
+		end
+	end
 end
 
 local function tree_burnt(inst)

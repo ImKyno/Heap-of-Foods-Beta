@@ -116,6 +116,9 @@ WOLFGANG.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Ah! A sensação ruim passou."
 WOLFGANG.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Wolfgang NÃO PODE SER FERIDO!"
 WOLFGANG.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Wolfgang se sente fraco novamente!"
 
+WOLFGANG.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "As árvores dão muito mais madeira ao Wolfgang!"
+WOLFGANG.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "As árvores voltaram ao normal."
+
 WOLFGANG.ANNOUNCE_KYNO_SICKNESSBUFF_END = "A doença passou! Wolfgang se sente forte novamente!"
 
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é o correto."

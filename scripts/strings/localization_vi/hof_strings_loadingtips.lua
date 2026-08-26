@@ -141,6 +141,7 @@ local LOADINGTIPS   =
 	CRITDAMAGE      = "Kem Bông Óng Ánh cho phép các đòn tấn công của bạn gây sát thương chí mạng với mức cộng thêm lên tới 150%!",
 	RANDOMBUFF      = "Kẹo mút lấp lánh khi ăn sẽ gây ra một tác dụng phụ ngẫu nhiên. Hôm nay bạn có cảm thấy may mắn không?",
 	OPALAPPLE       = "Táo Lấp Lánh Phù Phép là những vật phẩm quý hiếm có thể nhận được khi đánh bại các boss hùng mạnh. Chúng ban cho khả năng bất khả xâm phạm trong một khoảng thời gian giới hạn.",
+	WOODCUTTER      = "Sandwich Sống giúp tăng hiệu suất chặt cây, khiến cây rơi ra nhiều khúc gỗ hơn khi bị đốn hạ. Woodie có thể tận hưởng lợi ích này lâu hơn so với các nhân vật sống sót khác.",
 }
 
 for k, v in pairs(LOADINGTIPS) do

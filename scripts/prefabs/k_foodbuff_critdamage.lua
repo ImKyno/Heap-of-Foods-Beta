@@ -69,6 +69,10 @@ local function OnAttached(inst, target)
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_CRITDAMAGEBUFF_START"))
 	end
 
+	if target.SoundEmitter ~= nil then
+		target.SoundEmitter:PlaySound("dontstarve/characters/walter/slingshot/poop")
+	end
+
 	if target.components.combat ~= nil then
 		if target.components.combat.customdamagemultfn ~= ApplyCritDamageMult then
 			inst._customdamagemultfn = target.components.combat.customdamagemultfn
@@ -105,6 +109,10 @@ local function OnExtended(inst, target)
 
 	if target.components.talker and target:HasTag("player") then
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_CRITDAMAGEBUFF_START"))
+	end
+
+	if target.SoundEmitter ~= nil then
+		target.SoundEmitter:PlaySound("dontstarve/characters/walter/slingshot/poop")
 	end
 
 	if target ~= nil and target.entity:IsVisible() then

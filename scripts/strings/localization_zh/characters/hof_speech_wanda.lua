@@ -116,6 +116,9 @@ WANDA.ANNOUNCE_KYNO_BADLUCKBUFF_END = "The bad omen has finally passed."
 WANDA.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Time itself can't touch me."
 WANDA.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "And time has caught up with me again."
 
+WANDA.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "More wood, less work. Perfect."
+WANDA.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "The extra yield has run its course."
+
 WANDA.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Good. I don't have time to be sick."
 
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "不……我需要别的。"

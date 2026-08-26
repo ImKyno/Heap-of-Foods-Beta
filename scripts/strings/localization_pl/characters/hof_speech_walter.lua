@@ -116,6 +116,9 @@ WALTER.ANNOUNCE_KYNO_BADLUCKBUFF_END = "Phew! Looks like our luck's getting bett
 WALTER.ANNOUNCE_KYNO_INVINCIBLEBUFF_START = "Nothing can hurt me now!"
 WALTER.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Aww, the enchantment wore off."
 
+WALTER.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Wow! We're getting a lot more wood for kindling!"
+WALTER.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "The forest must rest for a while."
+
 WALTER.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Phew! I'm feeling better already. What about you, girl?"
 
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zła rzecz!"

@@ -164,6 +164,7 @@ return {
     "pomegranatetea",
     "pomegranatepie",
     "pineapplecake",
+    "brigadeiro",
     "fltsandwich",
     "trufflesgrinder",
     "sporecappie",
@@ -184,5 +185,7 @@ return {
     "marshmallows",
     "kokonutcookies",
     "chocolate_cake",
+    "opalpreciouscream",
+    "catfishstick",
     "jawsbreaker",
 }
