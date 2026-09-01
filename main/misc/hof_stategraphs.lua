@@ -34,6 +34,33 @@ local function IsMinigameItem(inst)
 	return inst:HasTag("minigameitem")
 end
 
+local function IsSkillActivated(inst, skill)
+	return inst.components.skilltreeupdater and inst.components.skilltreeupdater:IsActivated(skill)
+end
+
+local function ClearPendingBrew(inst)
+	local container = inst._brewer_container
+
+	if container ~= nil and container.components.wxbrewer ~= nil then
+		container.components.wxbrewer:ClearPendingBrew()
+	end
+end
+
+local function DeductBrewHunger(inst, food)
+	if food ~= nil and inst.components.hunger ~= nil then
+		local hunger = food.components.edible:GetHunger()
+		local hunger_percent = TUNING.KYNO_WX78_MODULES_BREWER_HUNGER_PERCENT
+
+		if IsSkillActivated(inst, "wx78_circuitry_gammabuffs_2") then
+			hunger_percent = TUNING.KYNO_WX78_MODULES_BREWER_HUNGER_PERCENT_BUFFED
+		end
+
+		local hunger_cost = hunger * hunger_percent
+
+		inst.components.hunger:DoDelta(-hunger_cost)
+	end
+end
+
 -- New Stategraphs.
 AddStategraphState("wilson",
 	State{
@@ -627,6 +654,145 @@ AddStategraphState("wilson",
 	}
 )
 
+-- This should be redone in the future.
+-- Currently this SG handles everything brewer component is supposed to.
+-- That means any change to brewer component needs to be mirror in here too.
+local function CreateWXBrewState()
+	return State{
+		name = "wx_brew",
+		tags = { "busy", "brewing" },
+
+		onenter = function(inst, data)
+			inst.components.locomotor:Stop()
+			inst.AnimState:PlayAnimation("wx_bake")
+
+			inst.sg.statemem.product = data ~= nil and data.product or nil
+			inst.sg.statemem.harvester = data ~= nil and data.harvester or nil
+			inst.sg.statemem.recipe = data ~= nil and data.recipe or nil
+			inst.sg.statemem.chef_id = data ~= nil and data.chef_id or nil
+			inst.sg.statemem.ingredient_prefabs = data ~= nil and data.ingredient_prefabs or nil
+		end,
+
+		timeline =
+		{
+			FrameEvent(32, function(inst) inst.SoundEmitter:PlaySound("dontstarve/common/researchmachine_lvl1_ding", nil, 0.2) end),
+			FrameEvent(41, function(inst) inst.SoundEmitter:PlaySound("WX_rework/module_tray/open") end),
+			FrameEvent(47, function(inst) inst.SoundEmitter:PlaySound("moonstorm/characters/wagstaff/thumper/steam", nil, 0.4) end),
+			FrameEvent(68, function(inst) inst.SoundEmitter:PlaySound("WX_rework/module_tray/close") end),
+			FrameEvent(13, function(inst) inst.SoundEmitter:PlaySound("dontstarve/creatures/egg/egg_hot_steam_LP", "wx_brewing") end),
+			FrameEvent(32, function(inst) inst.SoundEmitter:KillSound("wx_brewing") end),
+
+			FrameEvent(46, function(inst)
+				local product = inst.sg.statemem.product
+				local harvester = inst.sg.statemem.harvester
+				local recipe = inst.sg.statemem.recipe
+				local chef_id = inst.sg.statemem.chef_id
+				local ingredient_prefabs = inst.sg.statemem.ingredient_prefabs
+
+				local container = inst._brewer_container
+
+				if product == nil then
+					ClearPendingBrew(inst)
+
+					return
+				end
+
+				local loot = SpawnPrefab(product)
+
+				if loot == nil then
+					ClearPendingBrew(inst)
+
+					return
+				end
+
+				if loot ~= nil and harvester ~= nil then
+					local stacksize = recipe ~= nil and recipe.stacksize or 1
+
+					if stacksize > 1 and loot.components.stackable ~= nil then
+						loot.components.stackable:SetStackSize(stacksize)
+					end
+
+					if loot.components.perishable ~= nil then
+						loot.components.perishable:StartPerishing()
+					end
+
+					DeductBrewHunger(harvester, loot)					
+
+					if harvester.userid ~= nil and chef_id == harvester.userid and recipe ~= nil then
+						harvester:PushEvent("learncookbookrecipe", { product = product, ingredients = ingredient_prefabs })
+						harvester:PushEvent("learnbrewbookrecipe", { product = product, ingredients = ingredient_prefabs })
+					end
+
+					if harvester.components.inventory ~= nil and harvester.prefab == "wx78" then
+						harvester.components.inventory:GiveItem(loot, nil, inst:GetPosition())
+					else
+						_G.LaunchAt(loot, inst, nil, 1, 1)
+					end
+
+					if not TUNING.HOFBIRTHDAY_BLOCKED_RECIPES[loot.prefab] and _G.IsSpecialEventActive(SPECIAL_EVENTS.HOFBIRTHDAY)
+					and harvester.tagvar_anniversary_cheermaker then
+						local cheer = _G.SpawnPrefab("kyno_hofbirthday_cheer")
+
+						if cheer ~= nil then
+							if harvester.components.inventory ~= nil and harvester.prefab == "wx78" then
+								harvester.components.inventory:GiveItem(cheer, nil, inst:GetPosition())
+							else
+								_G.LaunchAt(cheer, inst, nil, 1, 1)
+							end
+						end
+					end
+
+					if loot:HasTag("bottled") then
+						local amount = loot.bottlesize or 1
+
+						for i = 1, amount do
+							local bottle = _G.SpawnPrefab("messagebottleempty")
+
+							if bottle ~= nil then
+								if harvester.components.inventory ~= nil and harvester.prefab == "wx78" then
+									harvester.components.inventory:GiveItem(bottle, nil, inst:GetPosition())
+								else
+									_G.LaunchAt(bottle, inst, nil, 1, 1)
+								end
+							end
+						end
+					end
+				end
+
+				ClearPendingBrew(inst)
+			end),
+
+			FrameEvent(70, function(inst)
+				inst.sg:RemoveStateTag("busy")
+			end),
+		},
+
+		events =
+		{
+			EventHandler("animover", function(inst)
+				if inst.AnimState:AnimDone() then
+					inst.sg:GoToState("idle")
+				end
+			end),
+		},
+
+		onexit = function(inst)
+			inst.SoundEmitter:KillSound("wx_brewing")
+
+			inst.sg.statemem.product = nil
+			inst.sg.statemem.harvester = nil
+			inst.sg.statemem.recipe = nil
+			inst.sg.statemem.chef_id = nil
+			inst.sg.statemem.ingredient_prefabs = nil
+
+			inst:RemoveTag("wx_brewing")
+		end,
+	}
+end
+
+AddStategraphState("wilson", CreateWXBrewState())
+AddStategraphState("wx78_possessedbody", CreateWXBrewState())
+
 -- Brewbook Action Stategraph.
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.READBREWBOOK, function(inst, action)
 	-- return (action.invobject ~= nil and action.invobject.components.brewbook ~= nil and "brewbook_open")
@@ -814,4 +980,12 @@ AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.DUMPWATER, function(i
 end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.DUMPWATER, function(inst, action)
 	return inst:HasTag("fasthands") and "doshortaction" or "domediumaction"
+end))
+
+-- Opening WX-78 Brewer.
+AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.OPENWXBREWER, function(inst, action)
+	return "doshortaction"
+end))
+AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.OPENWXBREWER, function(inst, action)
+	return "doshortaction"
 end))

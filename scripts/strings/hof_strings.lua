@@ -2423,6 +2423,9 @@ STRINGS.RECIPE_DESC.WX78MODULE_DRYER = "A rudimentary humidity control system."
 STRINGS.NAMES.WX78MODULE_DRYER2 = "Super-Desiccant Circuit"
 STRINGS.RECIPE_DESC.WX78MODULE_DRYER2 = "A perfected humidity regulator."
 
+STRINGS.NAMES.WX78MODULE_BREWER = "Brewmaster Circuit"
+STRINGS.RECIPE_DESC.WX78MODULE_BREWER = "Proccess organic matter into refined brews."
+
 STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER_HELD = "Portable Combustion Unit"
 STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER = "Collapsed Combustion Unit"
 

@@ -701,7 +701,6 @@ AddCharacterRecipe("transmute_kyno_worm_bone", {Ingredient("fossil_piece", 1)}, 
 	}
 )
 
---[[
 AddCharacterRecipe("wx78module_cooker", {Ingredient("scandata", 3), Ingredient("charcoal", 1)}, TECH.ROBOTMODULECRAFT_ONE,
 	{
 		builder_tag         = "upgrademoduleowner",
@@ -709,6 +708,12 @@ AddCharacterRecipe("wx78module_cooker", {Ingredient("scandata", 3), Ingredient("
 )
 
 AddCharacterRecipe("wx78module_dryer", {Ingredient("scandata", 4), Ingredient("saltrock", 1)}, TECH.ROBOTMODULECRAFT_ONE,
+	{
+		builder_tag         = "upgrademoduleowner",
+	}
+)
+
+AddCharacterRecipe("wx78module_brewer", {Ingredient("scandata", 4), Ingredient("beer", 1)}, TECH.ROBOTMODULECRAFT_ONE,
 	{
 		builder_tag         = "upgrademoduleowner",
 	}
@@ -725,7 +730,6 @@ AddCharacterRecipe("wx78module_gourmand", {Ingredient("scandata", 6), Ingredient
 		builder_tag         = "upgrademoduleowner",
 	}
 )
-]]--
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.
 if HOF_WARLYMEALGRINDER then

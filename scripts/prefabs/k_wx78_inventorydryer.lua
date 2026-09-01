@@ -5,6 +5,7 @@ local assets =
 
 	Asset("ANIM", "anim/kyno_wx78_inventorydryer2.zip"),
 	Asset("ANIM", "anim/ui_wx78_inventorydryer2_1x1.zip"),
+	Asset("ANIM", "anim/ui_wx78_inventorydryer2_1x2.zip"),
 
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),

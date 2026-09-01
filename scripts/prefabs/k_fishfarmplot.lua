@@ -307,7 +307,6 @@ local function OnAddFuel(inst)
 	StopHungryTask(inst)
 	
 	inst.components.fishfarmmanager:OnAddFuel()
-	inst.components.fishfarmmanager:StartWorking()
 end
 
 local function OnFuelEmpty(inst)

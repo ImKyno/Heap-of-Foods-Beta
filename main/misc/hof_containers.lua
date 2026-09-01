@@ -137,7 +137,7 @@ params.brewer =
 	},
 
 	acceptsstacks = false,
-	type = "brewer",
+	type = "cooker",
 }
 
 function params.brewer.itemtestfn(container, item, slot)
@@ -729,7 +729,9 @@ params.wx78_inventorydryer =
 		top_align_tip = 70,
 	},
 
+	acceptsstacks = false,
 	type = "inv",
+
 	typefn = function(container, doer)
 		return wx78_isinbackupbody(container, doer) and "chest_addon" or nil
 	end,
@@ -741,11 +743,22 @@ function params.wx78_inventorydryer.itemtestfn(container, item, slot)
 	or (item.dryingrack_lastinfo and item.dryingrack_lastinfo.container == container and item.dryingrack_lastinfo.slot == slot)))
 end
 
-local WX78_INVENTORY_DRYER2_OFFSET = Vector3(0, 100, 0)
+local WX78_INVENTORY_DRYER2_OFFSET = Vector3(0, 185, 0)
 local WX78_INVENTORY_DRYER2_SLOTPOS = {}
+local WX78_INVENTORY_DRYER2_BACKUP_SLOTPOS = {}
 
-for x = 0, 4, 1 do
-	table.insert(WX78_INVENTORY_DRYER2_SLOTPOS, { Vector3(80 * x - 80 * 2, -340, 0) })
+for x = 0, 4 do
+	table.insert(WX78_INVENTORY_DRYER2_SLOTPOS, { Vector3(60 * x - 60 * 2, -320, 0), Vector3(60 * x - 60 * 2, -380, 0) })
+end
+
+for x = 0, 4 do
+	local offset = (x - 2) * 80
+
+	table.insert(WX78_INVENTORY_DRYER2_BACKUP_SLOTPOS,
+	{
+		Vector3(-4 + offset, -354, 0),
+		Vector3(-2 + offset, -458, 0)
+	})
 end
 
 params.wx78_inventorydryer2 =
@@ -755,16 +768,23 @@ params.wx78_inventorydryer2 =
 		slotbg =
 		{
 			{ image = "inv_slot_kelp.tex", atlas = "images/hud2.xml" },
+			{ image = "inv_slot_kelp.tex", atlas = "images/hud2.xml" },
 		},
-	
+
 		slotpos =
-		{
-			Vector3(0, 0, 0)
+		{ 
+			Vector3(-3, -16, 0),
+			Vector3(-2, -149, 0),
 		},
 
 		slotposfn = function(container, doer)
-			return wx78_isinbackupbody(container, doer)
-			and WX78_INVENTORY_DRYER2_SLOTPOS[wx78_getcolumn(container)] or nil
+			local column = wx78_getcolumn(container)
+
+			if wx78_isinbackupbody(container, doer) then
+				return WX78_INVENTORY_DRYER2_BACKUP_SLOTPOS[column]
+			end
+
+			return nil
 		end,
 
 		slotscalefn = function(container, doer)
@@ -775,8 +795,8 @@ params.wx78_inventorydryer2 =
 			return wx78_isinbackupbody(container, doer) and 1.08 or nil
 		end,
 
-		animbank = "ui_wx78_inventorydryer2_1x1",
-		animbuild = "ui_wx78_inventorydryer2_1x1",
+		animbank = "ui_wx78_inventorydryer2_1x2",
+		animbuild = "ui_wx78_inventorydryer2_1x2",
 		animfn = function(container, doer, anim)
 			return wx78_isinbackupbody(container, doer)
 			and (anim..tostring(wx78_getcolumn(container))) or nil
@@ -785,7 +805,7 @@ params.wx78_inventorydryer2 =
 		pos = WX78_INVENTORY_DRYER2_OFFSET,
 		posfn = function(container, doer)
 			if wx78_isinbackupbody(container, doer) then
-				return WX78_BACKUPBODY_POS
+				return WX78_BACKUPBODY_POS_ALT
 			end
 
 			for k, v in pairs(doer.HUD.controls.inv.inv) do
@@ -809,13 +829,61 @@ params.wx78_inventorydryer2 =
 		top_align_tip = 70,
 	},
 
+	acceptsstacks = false,
 	type = "inv",
+
 	typefn = function(container, doer)
 		return wx78_isinbackupbody(container, doer) and "chest_addon" or nil
 	end,
 }
 
 params.wx78_inventorydryer2.itemtestfn = params.wx78_inventorydryer.itemtestfn
+
+params.wx78_brewer =
+{
+	widget =
+	{
+		slotpos =
+		{
+			Vector3(-1, 32 + 4, 0			 ),
+			Vector3(-1, -(32 + 4), 0		 ),
+			Vector3(-1, -(64 + 32 + 8 + 4), 0),
+		},
+
+		animbank = "ui_brewer_1x3",
+		animbuild = "ui_brewer_1x3",
+
+		opensound = "balatro/balatro_cabinet/cards_flip_HUD",
+		closesound = "balatro/balatro_cabinet/cards_flip_HUD",
+
+		pos = Vector3(160, 30, 0),
+		side_align_tip = 100,
+		buttoninfo =
+		{
+			text = STRINGS.ACTIONS.BREWER,
+			position = Vector3(0, -170, 0),
+		}
+	},
+
+	acceptsstacks = false,
+	type = "cooker",
+}
+
+function params.wx78_brewer.itemtestfn(container, item, slot)
+	return brewing.IsBrewingIngredient(item.prefab) and not container.inst:HasTag("burnt")
+end
+
+function params.wx78_brewer.widget.buttoninfo.fn(inst, doer)
+	if inst.components.container ~= nil then
+		_G.BufferedAction(doer, inst, ACTIONS.BREWER):Do()
+	elseif inst.replica.container ~= nil and not inst.replica.container:IsBusy() then
+		_G.SendRPCToServer(RPC.DoWidgetButtonAction, ACTIONS.BREWER.code, inst, ACTIONS.BREWER.mod_name)
+	end
+end
+
+function params.wx78_brewer.widget.buttoninfo.validfn(inst)
+	return inst.replica.container ~= nil and inst.replica.container:IsFull()
+end
 
 params.piggybank =
 {

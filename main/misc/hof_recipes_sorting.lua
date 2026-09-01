@@ -98,6 +98,7 @@ SortAfter("wx78module_cooker",                        "wx78module_stacksize",   
 SortAfter("wx78module_dryer",                         "wx78module_cooker",                "CHARACTER")
 SortAfter("wx78module_dryer2",                        "wx78module_dryer",                 "CHARACTER")
 SortAfter("wx78module_gourmand",                      "wx78module_dryer2",                "CHARACTER")
+SortAfter("wx78module_brewer",                        "wx78module_chess",                 "CHARACTER")
 SortAfter("kyno_hermitcrabtea_aloe_1",                "hermitcrabtea_succulent_picked_1", "CRAFTING_STATION")
 SortAfter("kyno_hermitcrabtea_aloe_2",                "hermitcrabtea_succulent_picked_2", "CRAFTING_STATION")
 SortAfter("kyno_hermitcrabtea_aloe_3",                "hermitcrabtea_succulent_picked_3", "CRAFTING_STATION")

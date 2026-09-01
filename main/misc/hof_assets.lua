@@ -911,6 +911,7 @@ local HOF_ICONS =
 	"wobsterbreaded",
 	"wobstercocktail",
 	"wobstermonster",
+	"wx78module_brewer",
 	"wx78module_cooker",
 	"wx78module_dryer",
 	"wx78module_dryer2",

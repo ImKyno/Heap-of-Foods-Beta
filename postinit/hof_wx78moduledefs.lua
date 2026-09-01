@@ -685,6 +685,215 @@ local DRYER2_MODULE_DATA =
 
 table.insert(hof_module_definitions, DRYER2_MODULE_DATA)
 
+-- Brewmaster Circuit
+-- Grants a portable brewing container that is both Wooden Keg and Preserves Jar.
+-- The container will continuosly brew the food unless there's no power left or unplugged.
+-- Brews made using the circuit reduces hunger by 50% equal to the brew's hunger points.
+-- Gamma Circuits Tinkering II decreases the brewing time and hunger loss by 25%.
+local function BrewerOnUpdate(wx)
+	local chips = wx._brewerchips or 0
+	local container = wx._brewer_container
+
+	if container ~= nil and container.components.wxbrewer ~= nil then
+		container.components.wxbrewer.brewtimemult = IsSkillActivated(wx, "wx78_circuitry_gammabuffs_2")
+		and TUNING.KYNO_WX78_MODULES_BREWER_BREWTIMEMULT or 1
+	end
+end
+
+local function BrewerSkillActivate(inst, wx)
+	BrewerOnUpdate(wx)
+end
+
+local function BrewerSkillDeactivate(inst, wx)
+	BrewerOnUpdate(wx)
+end
+
+local function BrewerOnIsInspecting(wx, data)
+	local container = wx._brewer_container
+
+	if container ~= nil then
+		if wx.components.upgrademoduleowner ~= nil and wx.components.upgrademoduleowner.inspecting then
+			if container.components.container ~= nil and container.components.container:IsOpen() then
+				container.components.container:Close()
+			end
+		end
+	end
+end
+
+local function BrewerOnEnergyUpdate(wx, data)
+	local container = wx._brewer_container
+
+	if container ~= nil then
+		if data ~= nil and data.new_level ~= nil and data.new_level <= 0 then
+			if container.components.container ~= nil and container.components.container:IsOpen() then
+				container.components.container:Close()
+			end
+		end
+	end
+end
+
+local POSSESSED_BREWER_TRANSFER = TUNING.KYNO_WX78_MODULES_BREWER_TRANSFER
+
+local function BrewerAddedToOwner(inst, wx, isloading)
+	if wx._brewer_container == nil then
+		local container = SpawnPrefab("kyno_wx78_inventorybrewer")
+
+		if container ~= nil then
+			wx._brewer_container = container
+			container._brewer_owner = wx
+
+			container.entity:SetParent(wx.entity)
+			container.Transform:SetPosition(0, 0, 0)
+
+			wx:ListenForEvent("newstate", BrewerOnIsInspecting)
+			wx:ListenForEvent("energylevelupdate", BrewerOnEnergyUpdate)
+
+			if wx.prefab == "wx78_possessedbody" then
+				wx:AddTag("wx_possessed_brewer")
+			end
+
+			local key = GetBrewerModuleTransferKey(wx)
+
+			if key ~= nil then
+				local savedata = POSSESSED_BREWER_TRANSFER[key]
+
+				if savedata ~= nil then
+					if container.components.wxbrewer ~= nil then
+						container.components.wxbrewer:OnLoadData(savedata)
+					end
+
+					POSSESSED_BREWER_TRANSFER[key] = nil
+				end
+			end
+		end
+	end
+end
+
+local function BrewerRemovedFromOwner(inst, wx)
+	local container = wx._brewer_container
+
+	if container ~= nil then
+		local brewer = container.components.wxbrewer
+
+		local ispossessed = wx.prefab == "wx78_possessedbody"
+		local isbackup = wx.prefab == "wx78_backupbody"
+
+		if ispossessed or isbackup then
+			local key = GetBrewerModuleTransferKey(wx)
+			local isbrewing = brewer ~= nil and (brewer:IsBrewing() or brewer:IsPaused())
+
+			if isbrewing then
+				if key ~= nil then
+					local savedata = brewer:OnSave()
+
+					if savedata ~= nil and savedata.product ~= nil then
+						POSSESSED_BREWER_TRANSFER[key] = savedata
+					end
+				end
+			else
+				if container.components.container ~= nil and not container.components.container:IsEmpty() then
+					container.components.container:Close()
+					container.components.container:DropEverything()
+				end
+
+				if key ~= nil then
+					POSSESSED_BREWER_TRANSFER[key] = nil
+				end
+			end
+		else
+			if container.components.container ~= nil then
+				container.components.container:Close()
+				container.components.container:DropEverything()
+			end
+
+			if container.components.wxbrewer ~= nil then
+				container.components.wxbrewer:CancelBrewing()
+			end
+
+			container:Remove()
+
+			wx._brewer_container = nil
+		end
+	end
+
+	wx:RemoveEventCallback("newstate", BrewerOnIsInspecting)
+	wx:RemoveEventCallback("energylevelupdate", BrewerOnEnergyUpdate)
+end
+
+local function BrewerActivate(inst, wx, isloading)
+	wx._brewerchips = (wx._brewerchips or 0) + 1
+
+	BrewerOnUpdate(wx)
+
+	if wx._brewerchips == 1 then
+		Circuit_SetUpSkillCb(inst, wx, "wx78_circuitry_gammabuffs_2", BrewerSkillActivate, BrewerSkillDeactivate)
+	end
+
+	if wx.wx78_classified ~= nil and wx._brewerchips == 1 then
+		wx.wx78_classified:AddInherentAction(ACTIONS.OPENWXBREWER)
+	end
+
+	if wx._brewerchips == 1 then
+		local container = wx._brewer_container
+
+		if container ~= nil and container.components.wxbrewer ~= nil then
+			container.components.wxbrewer:ResumeBrewing()
+		end
+	end
+
+	if wx.prefab == "wx78_possessedbody" then
+		wx:AddTag("wx_possessed_brewer_active")
+	end
+end
+
+local function BrewerDeactivate(inst, wx)
+	wx._brewerchips = math.max(0, (wx._brewerchips or 1) - 1)
+
+	BrewerOnUpdate(wx)
+
+	if wx._brewerchips <= 0 then
+		Circuit_DestroySkillCb(inst, wx)
+		
+		if wx.wx78_classified ~= nil then
+			wx.wx78_classified:RemoveInherentAction(ACTIONS.OPENWXBREWER)
+		end
+	
+		local container = wx._brewer_container
+
+		if container ~= nil and container.components.wxbrewer ~= nil then
+			container.components.wxbrewer:PauseBrewing()
+		end
+
+		if wx.prefab == "wx78_possessedbody" then
+			wx:RemoveTag("wx_possessed_brewer_active")
+		end
+	end
+end
+
+local BREWER_MODULE_DATA =
+{
+	name                = "brewer",
+	slots               = 4,
+	type                = CIRCUIT_BARS.GAMMA,
+
+	activatefn          = BrewerActivate,
+	deactivatefn        = BrewerDeactivate,
+	addedtoownerfn      = BrewerAddedToOwner,
+	removedfromownerfn  = BrewerRemovedFromOwner,
+
+	overridebank        = "kyno_wx78_chips",
+	overridebuild       = "kyno_wx78_chips",
+	overrideminiuibuild = "kyno_wx78_status",
+	overrideuibuild     = "kyno_wx78_status_chest",
+
+	extra_prefabs       =
+	{
+		"kyno_wx78_inventorybrewer",
+	},
+}
+
+table.insert(hof_module_definitions, BREWER_MODULE_DATA)
+
 -- New scannable creatures.
 local WX78_HOF_CREATURES_SCAN =
 {
@@ -712,6 +921,10 @@ local WX78_HOF_CREATURES_SCAN =
 
 	-- Super-Desiccant Circuit
 	salty_dog                = { module = "dryer2",   maxdata = 4 },
+
+	-- Brewmaster Circuit
+	kyno_piko                = { module = "brewer",   maxdata = 4 },
+	kyno_piko_orange         = { module = "brewer",   maxdata = 4 },
 }
 
 -- Register the new circuits and scannable creatures.
@@ -724,4 +937,32 @@ for i, definition in ipairs(hof_module_definitions) do
 
 	WX78_MODULES_DEF.AddNewModuleDefinition(definition)
 	table.insert(WX78_MODULES_DEF.module_definitions, module_def)
+end
+
+-- Modded Birds are also valid for the Rangebooster Circuit.
+local function GetIsBirdFn(cage_or_trap, scanid)
+	local birdprefab
+
+	if cage_or_trap.components.occupiable ~= nil then
+		local bird = cage_or_trap.components.occupiable:GetOccupant()
+		birdprefab = bird ~= nil and bird.prefab or nil
+	elseif cage_or_trap.components.trap ~= nil and cage_or_trap.components.trap.lootprefabs ~= nil then
+		birdprefab = cage_or_trap.components.trap.lootprefabs[1]
+	end
+
+	return birdprefab == scanid
+end
+
+local WX78_HOF_BIRDS_SCAN =
+{
+	{ "toucan",                       GetIsBirdFn, "radar", 2 },
+	{ "toucan_chubby",                GetIsBirdFn, "radar", 3 }, -- Gives one extra because he's fat!
+	{ "kingfisher",                   GetIsBirdFn, "radar", 2 },
+	{ "quagmire_pigeon",              GetIsBirdFn, "radar", 2 },
+	{ "kyno_bird_robin_night",        GetIsBirdFn, "radar", 2 },
+	{ "kyno_bird_robin_winter_night", GetIsBirdFn, "radar", 2 },
+}
+
+for i, definition in ipairs(WX78_HOF_BIRDS_SCAN) do
+	WX78_MODULES_DEF.AddSpecialCreatureScanDataDefinition(definition[1], definition[2], definition[3], definition[4])
 end

@@ -148,6 +148,7 @@ end
 local brewer_jar    = {"kyno_preservesjar"}
 local brewer_keg    = {"kyno_woodenkeg"}
 local brewer_warly  = {"kyno_portablebrewer"}
+local brewer_wx78   = {"kyno_wx78_inventorybrewer"}
 
 local jar_recipes   = require("hof_brewrecipes_jar")
 local keg_recipes   = require("hof_brewrecipes_keg")
@@ -161,6 +162,10 @@ for _, brewer in pairs(brewer_keg)    do for _, recipe in pairs(keg_recipes)   d
 -- for _, brewer in pairs(brewer_warly) do for _, recipe in pairs(warly_recipes) do AddBrewerRecipe(brewer, recipe) end end
 for _, brewer in pairs(brewer_warly)  do for _, recipe in pairs(jar_recipes)   do AddBrewerRecipe(brewer, recipe) end end
 for _, brewer in pairs(brewer_warly)  do for _, recipe in pairs(keg_recipes)   do AddBrewerRecipe(brewer, recipe) end end
+
+-- WX-78 Brewmaster Circuit.
+for _, brewer in pairs(brewer_wx78)   do for _, recipe in pairs(jar_recipes)   do AddBrewerRecipe(brewer, recipe) end end
+for _, brewer in pairs(brewer_wx78)   do for _, recipe in pairs(keg_recipes)   do AddBrewerRecipe(brewer, recipe) end end
 
 -- Brewing Recipe Cards.
 for _, recipe in pairs(jar_recipes)   do if recipe.card_def then table.insert(recipe_cards, {recipe_name = recipe.name, brewer_name = "kyno_preservesjar"})   end end

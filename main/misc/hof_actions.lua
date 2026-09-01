@@ -299,6 +299,29 @@ AddAction("BREWER", STRINGS.ACTIONS.BREWER, function(act)
 		act.target.components.brewer:StartCooking(act.doer)
 
 		return true
+	elseif act.target.components.wxbrewer ~= nil then
+		local wxbrewer = act.target.components.wxbrewer
+		local container = act.target.components.container
+
+		if wxbrewer:IsBrewing() then
+			return true
+		end
+
+		if wxbrewer:IsPaused() then
+			return false
+		end
+
+		if container ~= nil and container:IsOpenedByOthers(act.doer) then
+			return false, "INUSE"
+		end
+
+		if not wxbrewer:CanBrew() then
+			return false
+		end
+
+		wxbrewer:StartBrewing(act.doer)
+
+		return true
 	elseif act.target.components.cookable ~= nil
 		and act.invobject ~= nil
 		and act.invobject.components.cooker ~= nil then
@@ -972,6 +995,57 @@ AddComponentAction("SCENE", "watersource", function(inst, doer, actions, right)
 	end
 end)
 
+AddAction("OPENWXBREWER", STRINGS.ACTIONS.BREWER, function(act)
+	local wx = act.target
+
+	if wx == nil then
+		return false
+	end
+
+	if wx._brewer_container == nil or not wx._brewer_container:IsValid() then
+		return false
+	end
+
+	if wx._brewer_container.components.wxbrewer ~= nil and wx._brewer_container.components.wxbrewer:IsBrewing() then
+		return false
+	end
+
+	if wx._brewer_container.components.container == nil then
+		return false
+	end
+
+	if wx._brewer_container.components.container:IsOpenedBy(act.doer) then
+		wx._brewer_container.components.container:Close(act.doer)
+	elseif wx._brewer_container.components.container.canbeopened then
+		wx._brewer_container.components.container:Open(act.doer)
+	else
+		return false
+	end
+
+	return true
+end)
+
+ACTIONS.OPENWXBREWER.invalid_hold_action = true
+
+-- For opening Possessed WX-78's Brewmaster Circuit container.
+AddComponentAction("SCENE", "upgrademoduleowner", function(inst, doer, actions, right)
+	if doer.replica.rider ~= nil and doer.replica.rider:IsRiding() then
+		return
+	end
+
+	-- Only its original WX-78 leader can open its brewer.
+	if right then
+		if inst.prefab == "wx78_possessedbody" then
+			local leader = inst.replica.follower ~= nil and inst.replica.follower:GetLeader() or nil
+
+			if doer == leader and inst:HasTag("wx_possessed_brewer") and inst:HasTag("wx_possessed_brewer_active")
+			and not inst:HasTag("wx_brewing") then
+				table.insert(actions, ACTIONS.OPENWXBREWER)
+			end
+		end
+	end
+end)
+
 -- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795
 -- Hope they don't smack and bonk my head...
 local _FISHfn = ACTIONS.FISH.fn
@@ -1129,7 +1203,7 @@ ACTIONS.EAT.stroverridefn = function(act)
 		return STRINGS.KYNO_DRINK_FOOD
 	end
 
-	if obj:HasTag("goldenapple") then
+	if obj:HasAnyTag("goldenapple", "opalpreciousapple") then
 		return STRINGS.KYNO_CONSUME_FOOD
 	end
 end
@@ -1297,4 +1371,16 @@ ACTIONS.DRAW.stroverridefn = function(act)
 	end
 
 	return _stroverridefn ~= nil and _stroverridefn(act) or nil
+end
+
+ACTIONS.OPENWXBREWER.stroverridefn = function(act)
+	local wx = act.target
+
+	if wx ~= nil and wx._brewer_container ~= nil and wx._brewer_container:IsValid()
+	and wx._brewer_container.components.container ~= nil
+	and wx._brewer_container.components.container:IsOpenedBy(act.doer) then
+		return STRINGS.ACTIONS.RUMMAGE.CLOSE
+	end
+
+	return STRINGS.ACTIONS.BREWER
 end

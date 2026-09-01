@@ -683,3 +683,20 @@ function ModdedRecipeExists(...)
 
 	return false
 end
+
+-- Used by Possessed Body to transfer data.
+function GetBrewerModuleTransferKey(wx)
+	if wx == nil or not wx:IsValid() then
+		return nil
+	end
+
+	if wx.components.linkeditem ~= nil then
+		local userid = wx.components.linkeditem:GetOwnerUserID()
+
+		if userid ~= nil then
+			return userid
+		end
+	end
+
+	return nil
+end

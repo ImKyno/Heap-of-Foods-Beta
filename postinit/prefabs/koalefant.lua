@@ -22,11 +22,11 @@ local function KoalefantPostInit(inst)
 		local kick_chance
 
 		if inst:HasTag("domesticated") then
-			kick_chance = TUNING.MILKABLE_KICK_CHANCE_DOMESTICATED
+			kick_chance = TUNING.KYNO_MILKABLE_KICK_CHANCE_DOMESTICATED
 		elseif milker:HasTag("beefalo") then
-			kick_chance = TUNING.MILKABLE_KICK_CHANCE_BEEFALOHAT
+			kick_chance = TUNING.KYNO_MILKABLE_KICK_CHANCE_BEEFALOHAT
 		else
-			kick_chance = TUNING.MILKABLE_KICK_CHANCE_NORMAL
+			kick_chance = TUNING.KYNO_MILKABLE_KICK_CHANCE_NORMAL
 		end
 
 		local should_kick = false
@@ -45,7 +45,7 @@ local function KoalefantPostInit(inst)
 			inst.AnimState:PlayAnimation("atk", false)
 			inst.SoundEmitter:PlaySound("dontstarve/creatures/koalefant/angry")
 
-			milker.components.combat:GetAttacked(inst, TUNING.MILKABLE_KOALEFANT_DAMAGE)
+			milker.components.combat:GetAttacked(inst, TUNING.KYNO_MILKABLE_KOALEFANT_DAMAGE)
 			milker:PushEvent("kick")
 		else
 			if inst.components.sleeper ~= nil and not inst.components.sleeper:IsAsleep() then

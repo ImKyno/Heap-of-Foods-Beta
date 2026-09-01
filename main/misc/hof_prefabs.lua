@@ -245,8 +245,9 @@ PrefabFiles =
 	"k_wobsters",
 	"k_wobster_den_monkeyisland",
 	"k_worm_bone",
-	-- "k_wx78_inventorycooker",
-	-- "k_wx78_inventorydryer",
+	"k_wx78_inventorybrewer",
+	"k_wx78_inventorycooker",
+	"k_wx78_inventorydryer",
 }
 
 -- Complementary Mod Spices for Warly.

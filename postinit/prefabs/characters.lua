@@ -60,6 +60,39 @@ local function WX78PostInit(inst)
 	if inst.components.foodaffinity ~= nil then
 		inst.components.foodaffinity:AddPrefabAffinity("bowlofgears", TUNING.AFFINITY_15_CALORIES_HUGE)
 	end
+
+	-- Saving data from wxbrewer component here because upgrademoduleowner has some issues...?
+	local _OnSave = inst.OnSave
+
+	inst.OnSave = function(inst, data, ...)
+		if _OnSave ~= nil then
+			_OnSave(inst, data, ...)
+		end
+
+		local container = inst._brewer_container
+
+		if container ~= nil and container.components.wxbrewer ~= nil then
+			local brewer = container.components.wxbrewer
+			data.wxbrewer = brewer:OnSave()
+		end
+
+		return data, references
+	end
+
+	local _OnLoad = inst.OnLoad
+
+	inst.OnLoad = function(inst, data, newents, ...)
+		if _OnLoad ~= nil then
+			_OnLoad(inst, data, newents, ...)
+		end
+
+		local container = inst._brewer_container
+
+		if container ~= nil and container.components.wxbrewer ~= nil and data ~= nil and data.wxbrewer ~= nil then
+			local brewer = container.components.wxbrewer
+			brewer:OnLoadData(data.wxbrewer)
+		end
+	end
 end
 
 local function WickerbottomPostInit(inst)

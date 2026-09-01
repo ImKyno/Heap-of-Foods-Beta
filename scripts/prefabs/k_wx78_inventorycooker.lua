@@ -1,5 +1,6 @@
 local assets =
 {
+	Asset("ANIM", "anim/kyno_steam_parts_fx.zip"),
 	Asset("ANIM", "anim/kyno_wx78_inventorycooker.zip"),
 	Asset("ANIM", "anim/ui_wx78_inventorycooker_1x2.zip"),
 	
@@ -231,6 +232,11 @@ DoCook = function(inst)
 		if inst.components.container ~= nil and inst.components.container:IsOpen() then
 			inst.SoundEmitter:PlaySound("dontstarve/wilson/cook")
 		end
+
+		local fx = SpawnPrefab("kyno_steam_parts_fx")
+		owner:AddChild(fx)
+
+		fx.SoundEmitter:PlaySound("moonstorm/characters/wagstaff/thumper/steam", nil, 0.5)
 	else
 		item:Remove()
 	end
@@ -474,4 +480,33 @@ local function fn()
 	return inst
 end
 
-return Prefab("kyno_wx78_inventorycooker", fn, assets)
+local function fxfn()
+	local inst = CreateEntity()
+
+	inst.entity:AddTransform()
+	inst.entity:AddAnimState()
+	inst.entity:AddSoundEmitter()
+	inst.entity:AddNetwork()
+
+	inst.AnimState:SetBank("kyno_steam_parts_fx")
+	inst.AnimState:SetBuild("kyno_steam_parts_fx")
+	inst.AnimState:PlayAnimation("idle")
+
+	inst:AddTag("FX")
+	inst:AddTag("NOCLICK")
+
+	inst.entity:SetPristine()
+
+	if not TheWorld.ismastersim then
+		return inst
+	end
+
+	inst.persists = false
+
+	inst:ListenForEvent("animover", inst.Remove)
+	
+	return inst
+end
+
+return Prefab("kyno_wx78_inventorycooker", fn, assets),
+Prefab("kyno_steam_parts_fx", fxfn, assets)

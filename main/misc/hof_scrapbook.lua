@@ -9663,7 +9663,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		bank           = "jawsbreaker",
 		build          = "jawsbreaker",
 		anim           = "idle",
-		animoffsetbgy  = -40,
+		animoffsetbgy  = -10,
 		deps           = {"cookpot", "archive_cookpot", "portablecookpot", "kyno_cookware_small", "kyno_cookware_big", "kyno_cookware_small_grill",
 		"kyno_cookware_grill", "kyno_cookware_oven_small_casserole", "kyno_cookware_oven_casserole", "shark", "gnarwail"},
 		specialinfo    = "FOODEFFECTS_JAWSBREAKER",

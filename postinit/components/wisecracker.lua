@@ -1,4 +1,5 @@
-local _G = GLOBAL
+local _G      = GLOBAL
+local STRINGS = _G.STRINGS
 
 local function FirepitInstallFail(inst, data)
 	if inst.components.talker ~= nil then
@@ -106,6 +107,36 @@ local function WX78MoistureImmune(inst, data)
 	end
 end
 
+local function WX78BrewerStart(inst, data)
+	if inst.components.talker ~= nil and inst.prefab == "wx78" then
+		inst.components.talker:Say(_G.GetString(inst, "ANNOUNCE_KYNO_WX78_BREWER_START"))
+	end
+end
+
+local function WX78BrewerPause(inst, data)
+	if inst.components.talker ~= nil and inst.prefab == "wx78" then
+		inst.components.talker:Say(_G.GetString(inst, "ANNOUNCE_KYNO_WX78_BREWER_PAUSE"))
+	end
+end
+
+local function WX78BrewerResume(inst, data)
+	if inst.components.talker ~= nil and inst.prefab == "wx78" then
+		inst.components.talker:Say(_G.GetString(inst, "ANNOUNCE_KYNO_WX78_BREWER_RESUME"))
+	end
+end
+
+local function WX78BrewerCancel(inst, data)
+	if inst.components.talker ~= nil and inst.prefab == "wx78" then
+		inst.components.talker:Say(_G.GetString(inst, "ANNOUNCE_KYNO_WX78_BREWER_CANCEL"))
+	end
+end
+
+local function WX78BrewerDone(inst, data)
+	if inst.components.talker ~= nil and inst.prefab == "wx78" then
+		inst.components.talker:Say(_G.GetString(inst, "ANNOUNCE_KYNO_WX78_BREWER_DONE"))
+	end
+end
+
 AddComponentPostInit("wisecracker", function(self)
 	self.inst:ListenForEvent("firepitinstallfail",       FirepitInstallFail)
 	self.inst:ListenForEvent("cookwareinstallfail",      CookwareInstallFail)
@@ -124,4 +155,9 @@ AddComponentPostInit("wisecracker", function(self)
 	self.inst:ListenForEvent("fishregistryresearchroe",  FishRegistryRoeResearched)
 	self.inst:ListenForEvent("dailyrecipeeaten",         DailyRecipeEaten)
 	self.inst:ListenForEvent("wx78moistureimmune",       WX78MoistureImmune)
+	self.inst:ListenForEvent("wx78brewer_start",         WX78BrewerStart)
+	self.inst:ListenForEvent("wx78brewer_pause",         WX78BrewerPause)
+	self.inst:ListenForEvent("wx78brewer_resume",        WX78BrewerResume)
+	self.inst:ListenForEvent("wx78brewer_cancel",        WX78BrewerCancel)
+	self.inst:ListenForEvent("wx78brewer_done",          WX78BrewerDone)
 end)

@@ -1,11 +1,11 @@
 local function SetupRegenTime(self)
 	if TheWorld.state.isspring then
-		self.regentime     = TUNING.MILKABLE_SPRING_TIME
-		self.baseregentime = TUNING.MILKABLE_SPRING_TIME * 0.5
+		self.regentime     = TUNING.KYNO_MILKABLE_SPRING_TIME
+		self.baseregentime = TUNING.KYNO_MILKABLE_SPRING_TIME * 0.5
 		self.canbemilked   = true
 	else
-		self.regentime     = TUNING.MILKABLE_NORMAL_TIME
-		self.baseregentime = TUNING.MILKABLE_NORMAL_TIME * 0.5
+		self.regentime     = TUNING.KYNO_MILKABLE_NORMAL_TIME
+		self.baseregentime = TUNING.KYNO_MILKABLE_NORMAL_TIME * 0.5
 		self.canbemilked   = true
 	end	
 end
@@ -25,7 +25,7 @@ local MilkableAnimal = Class(function(self, inst)
 	self.baseregentime = nil
     self.product = nil
     self.numtoharvest = 1
-	self.damage = TUNING.MILKABLE_NORMAL_DAMAGE
+	self.damage = TUNING.KYNO_MILKABLE_NORMAL_DAMAGE
 	self.caninteractwith = true
     self.targettime = nil
     self.task = nil
@@ -47,11 +47,11 @@ function MilkableAnimal:SetUp(product, regen, number)
 	self.numtoharvest = number or 1
 
 	if TheWorld.state.isspring then
-		self.regentime     = TUNING.MILKABLE_SPRING_TIME
-		self.baseregentime = TUNING.MILKABLE_SPRING_TIME * 0.5
+		self.regentime     = TUNING.KYNO_MILKABLE_SPRING_TIME
+		self.baseregentime = TUNING.KYNO_MILKABLE_SPRING_TIME * 0.5
 	else
-		self.regentime     = TUNING.MILKABLE_NORMAL_TIME
-		self.baseregentime = TUNING.MILKABLE_NORMAL_TIME * 0.5
+		self.regentime     = TUNING.KYNO_MILKABLE_NORMAL_TIME
+		self.baseregentime = TUNING.KYNO_MILKABLE_NORMAL_TIME * 0.5
 	end		
 end
 

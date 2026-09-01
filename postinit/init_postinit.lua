@@ -8,7 +8,7 @@ local INIT_POSTINIT_MISC =
 	"preparedfoods",
 	"preparedfoods_warly",
 	"preparednonfoods",
-	-- "wx78moduledefs",
+	"wx78moduledefs",
 }
 
 local INIT_POSTINIT_BRAINS =
@@ -178,6 +178,8 @@ local INIT_POSTINIT_PREFABS =
 	"worm",
 	"worm_boss_segment",
 	"wortox_soul_common",
+	"wx78_common",
+	"wx78_possessedbody",
 	"wx78_scanner",
 }
 
@@ -187,6 +189,7 @@ local INIT_POSTINIT_STATEGRAPHS =
 	"SGbee",
 	"SGshark",
 	"SGwilson",
+	"SGwx78_possessedbody",
 }
 
 local INIT_POSTINIT_WIDGETS =

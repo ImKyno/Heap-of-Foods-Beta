@@ -19,7 +19,7 @@ local function LightningGoatPostInit(inst)
 	end
 
 	local function OnMilked(inst, milker)
-		local kick_chance = TUNING.MILKABLE_KICK_CHANCE_NORMAL
+		local kick_chance = TUNING.KYNO_MILKABLE_KICK_CHANCE_NORMAL
 
 		local should_kick = false
 
@@ -37,7 +37,7 @@ local function LightningGoatPostInit(inst)
 			inst.AnimState:PlayAnimation("taunt", false)
 			inst.SoundEmitter:PlaySound("dontstarve_DLC001/creatures/lightninggoat/taunt")
 
-			milker.components.combat:GetAttacked(inst, TUNING.MILKABLE_LIGHTNINGGOAT_DAMAGE)
+			milker.components.combat:GetAttacked(inst, TUNING.KYNO_MILKABLE_LIGHTNINGGOAT_DAMAGE)
 			milker:PushEvent("kick")
 		else
 			if inst.components.sleeper ~= nil and not inst.components.sleeper:IsAsleep() then

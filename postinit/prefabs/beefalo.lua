@@ -23,11 +23,11 @@ local function BeefaloPostInit(inst)
 		local kick_chance
 
 		if inst:HasTag("domesticated") then
-			kick_chance = TUNING.MILKABLE_KICK_CHANCE_DOMESTICATED
+			kick_chance = TUNING.KYNO_MILKABLE_KICK_CHANCE_DOMESTICATED
 		elseif milker:HasTag("beefalo") then
-			kick_chance = TUNING.MILKABLE_KICK_CHANCE_BEEFALOHAT
+			kick_chance = TUNING.KYNO_MILKABLE_KICK_CHANCE_BEEFALOHAT
 		else
-			kick_chance = TUNING.MILKABLE_KICK_CHANCE_NORMAL
+			kick_chance = TUNING.KYNO_MILKABLE_KICK_CHANCE_NORMAL
 		end
 
 		local should_kick = false
@@ -46,7 +46,7 @@ local function BeefaloPostInit(inst)
 			inst.AnimState:PlayAnimation("atk", false)
 			inst.SoundEmitter:PlaySound("dontstarve/beefalo/angry")
 
-			milker.components.combat:GetAttacked(inst, TUNING.MILKABLE_NORMAL_DAMAGE)
+			milker.components.combat:GetAttacked(inst, TUNING.KYNO_MILKABLE_NORMAL_DAMAGE)
 			milker:PushEvent("kick")
 		else
 			if inst.components.sleeper ~= nil and not inst.components.sleeper:IsAsleep() then
