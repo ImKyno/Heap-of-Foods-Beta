@@ -1343,6 +1343,7 @@ WENDY.DESCRIBE.WX78MODULE_GOURMAND = "Parece tão frágil... Tomara que nenhum a
 WENDY.DESCRIBE.WX78MODULE_COOKER = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
 WENDY.DESCRIBE.WX78MODULE_DRYER = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
 WENDY.DESCRIBE.WX78MODULE_DRYER2 = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
+WENDY.DESCRIBE.WX78MODULE_BREWER = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
 
 WENDY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

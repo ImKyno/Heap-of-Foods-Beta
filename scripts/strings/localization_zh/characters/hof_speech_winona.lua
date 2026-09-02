@@ -1343,6 +1343,7 @@ WINONA.DESCRIBE.WX78MODULE_GOURMAND = "WX, you gotta stop leavin' this stuff lyi
 WINONA.DESCRIBE.WX78MODULE_COOKER = "WX, you gotta stop leavin' this stuff lying around!"
 WINONA.DESCRIBE.WX78MODULE_DRYER = "WX, you gotta stop leavin' this stuff lying around!"
 WINONA.DESCRIBE.WX78MODULE_DRYER2 = "WX, you gotta stop leavin' this stuff lying around!"
+WINONA.DESCRIBE.WX78MODULE_BREWER = "WX, you gotta stop leavin' this stuff lying around!"
 
 WINONA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

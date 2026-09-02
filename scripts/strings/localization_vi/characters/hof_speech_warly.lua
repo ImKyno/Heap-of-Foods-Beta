@@ -1343,6 +1343,7 @@ WARLY.DESCRIBE.WX78MODULE_GOURMAND = "They give our metal friend a little extra 
 WARLY.DESCRIBE.WX78MODULE_COOKER = "They give our metal friend a little extra zest, non?"
 WARLY.DESCRIBE.WX78MODULE_DRYER = "They give our metal friend a little extra zest, non?"
 WARLY.DESCRIBE.WX78MODULE_DRYER2 = "They give our metal friend a little extra zest, non?"
+WARLY.DESCRIBE.WX78MODULE_BREWER = "They give our metal friend a little extra zest, non?"
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

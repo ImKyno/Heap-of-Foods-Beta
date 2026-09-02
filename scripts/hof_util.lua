@@ -684,19 +684,37 @@ function ModdedRecipeExists(...)
 	return false
 end
 
--- Used by Possessed Body to transfer data.
-function GetBrewerModuleTransferKey(wx)
+function IsPlayerSkillActivated(inst, skill)
+	return inst.components.skilltreeupdater ~= nil and inst.components.skilltreeupdater:IsActivated(skill)
+end
+
+function IsWX78PossessedBody(wx)
+	return wx ~= nil and wx.prefab == "wx78_possessedbody"
+end
+
+function IsWX78PossessedBackupBody(wx)
+	return wx ~= nil and wx.prefab == "wx78_backupbody" and wx.is_possessed == true
+end
+
+function WX78UsesBrewerTransfer(wx)
+	return IsWX78PossessedBody(wx) or IsWX78PossessedBackupBody(wx)
+end
+
+-- Used by Backup/Possessed Body to transfer data.
+function GetWX78TransferKey(wx, inst)
 	if wx == nil or not wx:IsValid() then
 		return nil
 	end
 
-	if wx.components.linkeditem ~= nil then
-		local userid = wx.components.linkeditem:GetOwnerUserID()
-
-		if userid ~= nil then
-			return userid
+	-- Possessed Body transfer keeps the same key on the chip.
+	-- While the original body is reconstructed through wx78_backupbody.
+	if WX78UsesBrewerTransfer(wx) then
+		if inst ~= nil and inst._brewer_transfer_key ~= nil then
+			return inst._brewer_transfer_key
 		end
+
+		return tostring(wx.GUID)
 	end
 
-	return nil
+	return tostring(wx.GUID)
 end

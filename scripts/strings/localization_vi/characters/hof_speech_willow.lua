@@ -1343,6 +1343,7 @@ WILLOW.DESCRIBE.WX78MODULE_GOURMAND = "Hey WX, when are you gonna install a flam
 WILLOW.DESCRIBE.WX78MODULE_COOKER = "Hey WX, when are you gonna install a flamethrower?"
 WILLOW.DESCRIBE.WX78MODULE_DRYER = "Hey WX, when are you gonna install a flamethrower?"
 WILLOW.DESCRIBE.WX78MODULE_DRYER2 = "Hey WX, when are you gonna install a flamethrower?"
+WILLOW.DESCRIBE.WX78MODULE_BREWER = "Hey WX, when are you gonna install a flamethrower?"
 
 WILLOW.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

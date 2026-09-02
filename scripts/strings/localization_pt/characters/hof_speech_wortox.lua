@@ -1346,6 +1346,7 @@ WORTOX.DESCRIBE.WX78MODULE_GOURMAND = "Você é o mais brilhante da turma?"
 WORTOX.DESCRIBE.WX78MODULE_COOKER = "Você é o mais brilhante da turma?"
 WORTOX.DESCRIBE.WX78MODULE_DRYER = "Você é o mais brilhante da turma?"
 WORTOX.DESCRIBE.WX78MODULE_DRYER2 = "Você é o mais brilhante da turma?"
+WORTOX.DESCRIBE.WX78MODULE_BREWER = "Você é o mais brilhante da turma?"
 
 WORTOX.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

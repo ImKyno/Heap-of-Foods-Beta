@@ -198,6 +198,11 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SEEDSBAG = "一个拥有4个格子的便携容器�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODAMMO_TOMATO = "它能使地面目标减速 5 秒。"
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "一个拥有6个格子的便携容器，可以存放烹饪食材和料理好的食物。\n\n存放在其中的物品将得到更长时间的保鲜。"
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGGYBANK = "一种拥有6个格位的便携式容器，仅能存放硬币及其他类型的货币。\n\n可使用“弹性间隔器”进行升级，以增强其存储能力。"
+STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_GOURMAND = "安装于 WX-78 的 Beta 电路板。可从任意小动物或猪长老身上扫描获得制作配方。\n\n需要 2 个插槽。熟食提供的正面属性增加 5 点，负面属性减少 5 点。\n\nBeta 电路调校 II 可强化该电路，使正面属性额外增加 5 点、负面属性额外减少 5 点，并让 WX-78 能够快速进食。"
+STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_COOKER = "安装于 WX-78 的 Beta 电路板。可从熔岩幼虫或超可爱熔岩幼虫身上扫描获得制作配方。\n\n需要 1 个插槽。会在 WX-78 背包最右侧的栏位安装一个烹饪容器，每 5 秒自动烹饪第一个栏位中的食物。\n\nBeta 电路调校 II 可强化该电路，使其能够放入任何可燃物品。木制相关物品会变成木炭，其他物品则会变成灰烬。"
+STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER = "安装于 WX-78 的 Beta 电路板。可从饼干切割者身上扫描获得制作配方。\n\n需要 3 个插槽。会在 WX-78 背包最右侧的栏位安装一个拥有 1 个栏位的干燥容器。\n\nBeta 电路调校 II 可强化该电路，为 WX-78 提供 25% 防水能力。"
+STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER2 = "安装于 WX-78 的 Beta 电路板。可从咸狗身上扫描获得制作配方。\n\n需要 2 个插槽。会在 WX-78 背包最右侧的栏位安装一个拥有 2 个栏位的干燥容器。\n\nBeta 电路调校 II 可强化该电路，为 WX-78 提供 50% 防水能力，并允许生产盐晶。"
+STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_BREWER = "安装于 WX-78 的 Gamma 电路板。可从异食松鼠或橙色异食松鼠身上扫描获得制作配方。\n\n需要 4 个插槽。允许 WX-78 使用安装在体内的木制酒桶和蜜饯罐酿造手工制品。每次酿造会消耗相当于成品饥饿值 50% 的饥饿值。\n\nGamma 电路调校 II 可强化该电路，使酿造时间和酿造过程中消耗的饥饿值减少 25%。"
 
 -- Creatures.
 STRINGS.SCRAPBOOK.SPECIALINFO.CHICKEN = "它们的饮食以种子、小麦或斑点小枝为基础。\n\n在野外发现的鸡在进食后有40%的几率产下鸡蛋。它们产下更大的蛋的几率非常低。\n\n鸡舍里的鸡吃完食后每天都能下蛋，且产出更大的蛋的概率更高。"

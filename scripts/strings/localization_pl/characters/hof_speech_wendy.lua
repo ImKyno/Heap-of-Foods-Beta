@@ -1343,6 +1343,7 @@ WENDY.DESCRIBE.WX78MODULE_GOURMAND = "It looks so fragile... hopefully no tragic
 WENDY.DESCRIBE.WX78MODULE_COOKER = "It looks so fragile... hopefully no tragic accidents befall it."
 WENDY.DESCRIBE.WX78MODULE_DRYER = "It looks so fragile... hopefully no tragic accidents befall it."
 WENDY.DESCRIBE.WX78MODULE_DRYER2 = "It looks so fragile... hopefully no tragic accidents befall it."
+WENDY.DESCRIBE.WX78MODULE_BREWER = "It looks so fragile... hopefully no tragic accidents befall it."
 
 WENDY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

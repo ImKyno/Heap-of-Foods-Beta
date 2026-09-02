@@ -1,15 +1,12 @@
-local _G                   = GLOBAL
-local WX78_BREWER_TRANSFER = TUNING.KYNO_WX78_MODULES_BREWER_TRANSFER
+local _G                    = GLOBAL
+local WX78_BREWER_TRANSFER  = TUNING.KYNO_WX78_MODULES_BREWER_TRANSFER
 
-local function WX78PossessedBodyPostInit(inst)
+local function WX78BackupBodyPostInit(inst)
 	inst._brewer_container_net = net_entity(inst.GUID, "wx78._brewer_container")
 
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
-
-	-- WX-78 Cannot die from excessive gambling!
-	inst.tagvar_gambling_addicted = true
 
 	local _OnSave = inst.OnSave
 
@@ -53,4 +50,4 @@ local function WX78PossessedBodyPostInit(inst)
 	end
 end
 
-AddPrefabPostInit("wx78_possessedbody", WX78PossessedBodyPostInit)
+AddPrefabPostInit("wx78_backupbody", WX78BackupBodyPostInit)

@@ -34,10 +34,6 @@ local function IsMinigameItem(inst)
 	return inst:HasTag("minigameitem")
 end
 
-local function IsSkillActivated(inst, skill)
-	return inst.components.skilltreeupdater and inst.components.skilltreeupdater:IsActivated(skill)
-end
-
 local function ClearPendingBrew(inst)
 	local container = inst._brewer_container
 
@@ -51,7 +47,7 @@ local function DeductBrewHunger(inst, food)
 		local hunger = food.components.edible:GetHunger()
 		local hunger_percent = TUNING.KYNO_WX78_MODULES_BREWER_HUNGER_PERCENT
 
-		if IsSkillActivated(inst, "wx78_circuitry_gammabuffs_2") then
+		if _G.IsPlayerSkillActivated(inst, "wx78_circuitry_gammabuffs_2") then
 			hunger_percent = TUNING.KYNO_WX78_MODULES_BREWER_HUNGER_PERCENT_BUFFED
 		end
 

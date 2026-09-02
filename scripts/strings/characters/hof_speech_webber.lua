@@ -1343,6 +1343,7 @@ WEBBER.DESCRIBE.WX78MODULE_GOURMAND = "Huh. Is that what robot insides look like
 WEBBER.DESCRIBE.WX78MODULE_COOKER = "Huh. Is that what robot insides look like?"
 WEBBER.DESCRIBE.WX78MODULE_DRYER = "Huh. Is that what robot insides look like?"
 WEBBER.DESCRIBE.WX78MODULE_DRYER2 = "Huh. Is that what robot insides look like?"
+WEBBER.DESCRIBE.WX78MODULE_BREWER = "Huh. Is that what robot insides look like?"
 
 WEBBER.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

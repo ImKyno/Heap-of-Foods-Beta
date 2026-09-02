@@ -12,10 +12,6 @@ local assets =
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
 }
 
-local function IsSkillActivated(owner, skill)
-	return owner.components.skilltreeupdater and owner.components.skilltreeupdater:IsActivated(skill)
-end
-
 local function UpdateDrying(inst)
 	if not inst.components.dryingrack then
 		return
@@ -74,7 +70,7 @@ local function OnItemGet(inst, data)
 
 	local owner = inst.components.inventoryitem.owner
 
-	if owner ~= nil and IsSkillActivated(owner, "wx78_circuitry_betabuffs_2") then
+	if owner ~= nil and IsPlayerSkillActivated(owner, "wx78_circuitry_betabuffs_2") then
 		if data and data.item and inst.components.dryingracksaltcollector then
 			if data.item.components.driedsalticon and data.slot then
 				if data.item.components.driedsalticon.collects then
@@ -98,7 +94,7 @@ end
 local function DoItemTaken(inst, slot)
 	local owner = inst.components.inventoryitem.owner
 
-	if owner ~= nil and IsSkillActivated(owner, "wx78_circuitry_betabuffs_2") then
+	if owner ~= nil and IsPlayerSkillActivated(owner, "wx78_circuitry_betabuffs_2") then
 		if inst.components.container and inst.components.dryingracksaltcollector then
 			local other = inst.components.container:GetItemInSlot(slot)
 
@@ -122,7 +118,7 @@ local function OnItemLose(inst, data)
 
 	local owner = inst.components.inventoryitem.owner
 
-	if owner ~= nil and IsSkillActivated(owner, "wx78_circuitry_betabuffs_2") then
+	if owner ~= nil and IsPlayerSkillActivated(owner, "wx78_circuitry_betabuffs_2") then
 		if data and inst.components.dryingracksaltcollector then
 			if data.slot and inst.components.dryingracksaltcollector:HasSalt(data.slot) then
 				if data.prev_item and data.prev_item:IsValid() then

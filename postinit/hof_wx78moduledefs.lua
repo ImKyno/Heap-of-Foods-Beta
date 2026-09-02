@@ -7,10 +7,6 @@ local WX78_MODULES_DEF       = require("wx78_moduledefs")
 local module_definitions     = WX78_MODULES_DEF.module_definitions
 local hof_module_definitions = {}
 
-local function IsSkillActivated(wx, skill)
-	return wx.components.skilltreeupdater and wx.components.skilltreeupdater:IsActivated(skill)
-end
-
 local function Circuit_SetUpSkillCb(inst, wx, skillnames, activatecb, deactivatecb, isloading)
 	local is_one_skill = type(skillnames) == "string"
 	local skilltreeupdater = wx.components.skilltreeupdater
@@ -116,7 +112,7 @@ end
 local function GourmandOnUpdate(wx)
 	local chips = wx._gourmandchips or 0
 
-	if chips > 0 and IsSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
+	if chips > 0 and IsPlayerSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
 		wx:AddTag("gourmand_fasteater")
 	else
 		wx:RemoveTag("gourmand_fasteater")
@@ -154,7 +150,7 @@ local function GourmandOnEat(wx, data)
 	local bonus = TUNING.KYNO_WX78_MODULES_GOURMAND_BONUS * chips
 	local penalty = 5 * chips
 
-	if IsSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
+	if IsPlayerSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
 		penalty = penalty + 5
 	end
 
@@ -372,7 +368,7 @@ table.insert(hof_module_definitions, COOKER_MODULE_DATA)
 local function DryerOnUpdate(wx)
 	local chips = wx._dryerchips or 0
 
-	if IsSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
+	if IsPlayerSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
 		if wx.components.moisture ~= nil then
 			wx.components.moisture.waterproofnessmodifiers:SetModifier(inst, TUNING.KYNO_WX78_MODULES_DRYER_WATERPROOFNESS)
 		end
@@ -529,7 +525,7 @@ end
 local function Dryer2OnUpdate(wx)
 	local chips = wx._dryer2chips or 0
 
-	if IsSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
+	if IsPlayerSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
 		if wx.components.moisture ~= nil then
 			wx.components.moisture.waterproofnessmodifiers:SetModifier(inst, TUNING.KYNO_WX78_MODULES_DRYER2_WATERPROOFNESS)
 		end
@@ -690,12 +686,39 @@ table.insert(hof_module_definitions, DRYER2_MODULE_DATA)
 -- The container will continuosly brew the food unless there's no power left or unplugged.
 -- Brews made using the circuit reduces hunger by 50% equal to the brew's hunger points.
 -- Gamma Circuits Tinkering II decreases the brewing time and hunger loss by 25%.
+local WX78_BREWER_TRANSFER = TUNING.KYNO_WX78_MODULES_BREWER_TRANSFER
+
+local function GetBrewerSavedata(inst)
+	return inst._brewer_savedata
+end
+
+local function SetBrewerSavedata(inst, savedata)
+	inst._brewer_savedata = savedata
+end
+
+local function ClearBrewerSavedata(inst)
+	inst._brewer_savedata = nil
+end
+
+local function UpdateBrewingTag(wx)
+	if wx ~= nil then
+		local container = wx._brewer_container
+		local brewer = container ~= nil and container.components.wxbrewer or nil
+
+		if brewer ~= nil and (brewer:IsBrewing() or brewer:IsPaused()) then
+			wx:AddTag("wx_brewing")
+		else
+			wx:RemoveTag("wx_brewing")
+		end
+	end
+end
+
 local function BrewerOnUpdate(wx)
 	local chips = wx._brewerchips or 0
 	local container = wx._brewer_container
 
 	if container ~= nil and container.components.wxbrewer ~= nil then
-		container.components.wxbrewer.brewtimemult = IsSkillActivated(wx, "wx78_circuitry_gammabuffs_2")
+		container.components.wxbrewer.brewtimemult = IsPlayerSkillActivated(wx, "wx78_circuitry_gammabuffs_2")
 		and TUNING.KYNO_WX78_MODULES_BREWER_BREWTIMEMULT or 1
 	end
 end
@@ -732,14 +755,28 @@ local function BrewerOnEnergyUpdate(wx, data)
 	end
 end
 
-local POSSESSED_BREWER_TRANSFER = TUNING.KYNO_WX78_MODULES_BREWER_TRANSFER
-
 local function BrewerAddedToOwner(inst, wx, isloading)
+	local istransfer = WX78UsesBrewerTransfer(wx)
+
+	-- Transfer key is stored on the chip.
+	local key = nil
+
+	if istransfer then
+		key = inst._brewer_transfer_key
+	end
+
+	local transfersavedata = key ~= nil and WX78_BREWER_TRANSFER[key] or nil
+
 	if wx._brewer_container == nil then
 		local container = SpawnPrefab("kyno_wx78_inventorybrewer")
 
 		if container ~= nil then
 			wx._brewer_container = container
+
+			if wx._brewer_container_net ~= nil then
+				wx._brewer_container_net:set(container)
+			end
+
 			container._brewer_owner = wx
 
 			container.entity:SetParent(wx.entity)
@@ -752,17 +789,25 @@ local function BrewerAddedToOwner(inst, wx, isloading)
 				wx:AddTag("wx_possessed_brewer")
 			end
 
-			local key = GetBrewerModuleTransferKey(wx)
+			local brewer = container.components.wxbrewer
 
-			if key ~= nil then
-				local savedata = POSSESSED_BREWER_TRANSFER[key]
+			if brewer ~= nil then
+				if istransfer then
+					local key = inst._brewer_transfer_key -- Always use the key stored on the chip.
+					local savedata = key ~= nil and WX78_BREWER_TRANSFER[key] or nil
 
-				if savedata ~= nil then
-					if container.components.wxbrewer ~= nil then
-						container.components.wxbrewer:OnLoadData(savedata)
+					if savedata ~= nil then
+						brewer:OnLoadData(savedata)
+
+						WX78_BREWER_TRANSFER[key] = nil
 					end
+				else
+					local savedata = GetBrewerSavedata(inst)
 
-					POSSESSED_BREWER_TRANSFER[key] = nil
+					if savedata ~= nil then
+						brewer:OnLoadData(savedata)
+						ClearBrewerSavedata(inst)
+					end
 				end
 			end
 		end
@@ -770,16 +815,26 @@ local function BrewerAddedToOwner(inst, wx, isloading)
 end
 
 local function BrewerRemovedFromOwner(inst, wx)
+	local istransfer = WX78UsesBrewerTransfer(wx)
 	local container = wx._brewer_container
 
 	if container ~= nil then
 		local brewer = container.components.wxbrewer
 
-		local ispossessed = wx.prefab == "wx78_possessedbody"
-		local isbackup = wx.prefab == "wx78_backupbody"
+		if istransfer then
+			local key
 
-		if ispossessed or isbackup then
-			local key = GetBrewerModuleTransferKey(wx)
+			if wx.prefab == "wx78_possessedbody" then
+				-- wx78_possessedbody starts/restarts the transfer cycle.
+				-- Store its identity on the chip, because the body itself will be replaced by another entity.
+				inst._brewer_transfer_key = tostring(wx.GUID)
+				key = inst._brewer_transfer_key
+			elseif wx.prefab == "wx78_backupbody" and wx.is_possessed then
+				-- This wx78_backupbody belongs to the same wx78_possessedbody.
+				-- Transfer cycle. Keep the original key from the chip.
+				key = inst._brewer_transfer_key
+			end
+
 			local isbrewing = brewer ~= nil and (brewer:IsBrewing() or brewer:IsPaused())
 
 			if isbrewing then
@@ -787,32 +842,69 @@ local function BrewerRemovedFromOwner(inst, wx)
 					local savedata = brewer:OnSave()
 
 					if savedata ~= nil and savedata.product ~= nil then
-						POSSESSED_BREWER_TRANSFER[key] = savedata
+						WX78_BREWER_TRANSFER[key] = savedata
+					else
+						if TUNING.HOF_DEBUG_MODE then
+							print("Heap of Foods Mod - Brewer chip transfer failed.")
+							print("chip:", inst.GUID, "wx:", wx.GUID, "key:", tostring(key))
+						end
+					end
+				else
+					if TUNING.HOF_DEBUG_MODE then
+						print("Heap of Foods Mod - Brewer chip transfer failed, no key.")
+						print("chip:", inst.GUID, "wx:", wx.GUID, "prefab:", wx.prefab)
 					end
 				end
 			else
-				if container.components.container ~= nil and not container.components.container:IsEmpty() then
-					container.components.container:Close()
-					container.components.container:DropEverything()
-				end
+				if wx.prefab == "wx78_backupbody" and wx.is_possessed then
+					-- The possessed wx78_backupbody is only a temporary bridge.
+					-- Its own brewer container is expected to be empty.
+					-- NEVER clear the transfer state here, because the brew
+					-- is still stored under the original wx78_possessedbody key.
+				else
+					-- Only the actual wx78_possessedbody is allowed to clear a transfer.
+					-- Clear only happens if it has nothing to brew.
+					if container.components.container ~= nil and not container.components.container:IsEmpty() then
+						container.components.container:Close()
+						container.components.container:DropEverything()
+					end
 
-				if key ~= nil then
-					POSSESSED_BREWER_TRANSFER[key] = nil
+					if key ~= nil then
+						WX78_BREWER_TRANSFER[key] = nil
+					end
 				end
 			end
 		else
+			if brewer ~= nil then
+				local isbrewing = brewer:IsBrewing() or brewer:IsPaused()
+
+				if isbrewing then
+					local savedata = brewer:OnSave()
+
+					if savedata ~= nil and savedata.product ~= nil then
+						SetBrewerSavedata(inst, savedata)
+					else
+						ClearBrewerSavedata(inst)
+					end
+				else
+					ClearBrewerSavedata(inst)
+				end
+			end
+
 			if container.components.container ~= nil then
 				container.components.container:Close()
 				container.components.container:DropEverything()
 			end
 
-			if container.components.wxbrewer ~= nil then
-				container.components.wxbrewer:CancelBrewing()
-			end
+			wx:RemoveTag("wx_brewing")
 
 			container:Remove()
 
 			wx._brewer_container = nil
+
+			if wx._brewer_container_net ~= nil then
+				wx._brewer_container_net:set(nil)
+			end
 		end
 	end
 
@@ -839,6 +931,8 @@ local function BrewerActivate(inst, wx, isloading)
 		if container ~= nil and container.components.wxbrewer ~= nil then
 			container.components.wxbrewer:ResumeBrewing()
 		end
+
+		UpdateBrewingTag(wx)
 	end
 
 	if wx.prefab == "wx78_possessedbody" then
@@ -863,6 +957,8 @@ local function BrewerDeactivate(inst, wx)
 		if container ~= nil and container.components.wxbrewer ~= nil then
 			container.components.wxbrewer:PauseBrewing()
 		end
+
+		UpdateBrewingTag(wx)
 
 		if wx.prefab == "wx78_possessedbody" then
 			wx:RemoveTag("wx_possessed_brewer_active")
@@ -897,7 +993,6 @@ table.insert(hof_module_definitions, BREWER_MODULE_DATA)
 -- New scannable creatures.
 local WX78_HOF_CREATURES_SCAN =
 {
-	-- Gourmand Circuit
 	-- I'm going to use critters for the gourmand circuit since the little shits keep asking for food.
 	critter_kitten           = { module = "gourmand", maxdata = 3 },
 	critter_puppy            = { module = "gourmand", maxdata = 3 },
@@ -912,17 +1007,12 @@ local WX78_HOF_CREATURES_SCAN =
 	wobysmall                = { module = "gourmand", maxdata = 4 }, -- Woby because she's cute.
 	kyno_serenityisland_shop = { module = "gourmand", maxdata = 5 },
 
-	-- Combustion Circuit
 	lavae                    = { module = "cooker",   maxdata = 5 },
 	lavae_pet                = { module = "cooker",   maxdata = 3 },
 
-	-- Desiccant Circuit
 	cookiecutter             = { module = "dryer",    maxdata = 3 },
-
-	-- Super-Desiccant Circuit
 	salty_dog                = { module = "dryer2",   maxdata = 4 },
 
-	-- Brewmaster Circuit
 	kyno_piko                = { module = "brewer",   maxdata = 4 },
 	kyno_piko_orange         = { module = "brewer",   maxdata = 4 },
 }

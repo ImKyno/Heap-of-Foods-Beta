@@ -850,8 +850,8 @@ params.wx78_brewer =
 			Vector3(-1, -(64 + 32 + 8 + 4), 0),
 		},
 
-		animbank = "ui_brewer_1x3",
-		animbuild = "ui_brewer_1x3",
+		animbank = "ui_wx78_brewer_1x3",
+		animbuild = "ui_wx78_brewer_1x3",
 
 		opensound = "balatro/balatro_cabinet/cards_flip_HUD",
 		closesound = "balatro/balatro_cabinet/cards_flip_HUD",

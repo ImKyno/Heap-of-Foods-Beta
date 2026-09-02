@@ -1911,6 +1911,88 @@ local HOF_SCRAPBOOK_ITEMS =
 		specialinfo    = "FISHINGROD",
 	},
 	]]--
+
+	wx78module_gourmand =
+	{
+		name           = "wx78module_gourmand",
+		type           = "item",
+		subcat         = "upgrademodule",
+		tex            = "wx78module_gourmand.tex",
+		prefab         = "wx78module_gourmand",
+		craftingprefab = "wx78",
+		finiteuses     = 4,
+		bank           = "kyno_wx78_chips",
+		build          = "kyno_wx78_chips",
+		anim           = "gourmand",
+		deps           = {"scandata", "gorge_hamburger"},
+		specialinfo    = "WX78MODULE_GOURMAND",
+	},
+
+	wx78module_cooker  =
+	{
+		name           = "wx78module_cooker",
+		type           = "item",
+		subcat         = "upgrademodule",
+		tex            = "wx78module_cooker.tex",
+		prefab         = "wx78module_cooker",
+		craftingprefab = "wx78",
+		finiteuses     = 4,
+		bank           = "kyno_wx78_chips",
+		build          = "kyno_wx78_chips",
+		anim           = "cooker",
+		animoffsetx    = -20,
+		animoffsety    = 15,
+		deps           = {"scandata", "charcoal"},
+		specialinfo    = "WX78MODULE_COOKER",
+	},
+
+	wx78module_dryer   =
+	{
+		name           = "wx78module_dryer",
+		type           = "item",
+		subcat         = "upgrademodule",
+		tex            = "wx78module_dryer.tex",
+		prefab         = "wx78module_dryer",
+		craftingprefab = "wx78",
+		finiteuses     = 4,
+		bank           = "kyno_wx78_chips",
+		build          = "kyno_wx78_chips",
+		anim           = "dryer",
+		deps           = {"scandata", "saltrock"},
+		specialinfo    = "WX78MODULE_DRYER",
+	},
+
+	wx78module_dryer2  =
+	{
+		name           = "wx78module_dryer2",
+		type           = "item",
+		subcat         = "upgrademodule",
+		tex            = "wx78module_dryer2.tex",
+		prefab         = "wx78module_dryer2",
+		craftingprefab = "wx78",
+		finiteuses     = 4,
+		bank           = "kyno_wx78_chips",
+		build          = "kyno_wx78_chips",
+		anim           = "dryer2",
+		deps           = {"scandata", "desiccantboosted", "wx78module_dryer"},
+		specialinfo    = "WX78MODULE_DRYER2",
+	},
+
+	wx78module_brewer  =
+	{
+		name           = "wx78module_brewer",
+		type           = "item",
+		subcat         = "upgrademodule",
+		tex            = "wx78module_brewer.tex",
+		prefab         = "wx78module_brewer",
+		craftingprefab = "wx78",
+		finiteuses     = 4,
+		bank           = "kyno_wx78_chips",
+		build          = "kyno_wx78_chips",
+		anim           = "brewer",
+		deps           = {"scandata", "beer"},
+		specialinfo    = "WX78MODULE_BREWER",
+	},
 }
 
 local HOF_SCRAPBOOK_FOODS =
@@ -7015,7 +7097,8 @@ local HOF_SCRAPBOOK_PREPAREDFOODS =
 		animoffsety    = 10,
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -90,
-		deps           = preparedfood_deps,
+		deps           = {"cookpot", "portablecookpot", "archive_cookpot", "kyno_cookware_small", "kyno_cookware_big", "kyno_cookware_small_grill",
+		"kyno_cookware_grill", "kyno_cookware_oven_small_casserole", "kyno_cookware_oven_casserole", "wx78module_gourmand", "spoiled_food"},
 	},
 
 	gorge_mushroomburger =

@@ -1343,6 +1343,7 @@ WOODIE.DESCRIBE.WX78MODULE_GOURMAND = "Algumas peças robóticas sofisticadas."
 WOODIE.DESCRIBE.WX78MODULE_COOKER = "Algumas peças robóticas sofisticadas."
 WOODIE.DESCRIBE.WX78MODULE_DRYER = "Algumas peças robóticas sofisticadas."
 WOODIE.DESCRIBE.WX78MODULE_DRYER2 = "Algumas peças robóticas sofisticadas."
+WOODIE.DESCRIBE.WX78MODULE_BREWER = "Algumas peças robóticas sofisticadas."
 
 WOODIE.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

@@ -1343,6 +1343,7 @@ WICKERBOTTOM.DESCRIBE.WX78MODULE_GOURMAND = "They dislike organics, but don't se
 WICKERBOTTOM.DESCRIBE.WX78MODULE_COOKER = "They dislike organics, but don't seem opposed to taking inspiration from them."
 WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER = "They dislike organics, but don't seem opposed to taking inspiration from them."
 WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER2 = "They dislike organics, but don't seem opposed to taking inspiration from them."
+WICKERBOTTOM.DESCRIBE.WX78MODULE_BREWER = "They dislike organics, but don't seem opposed to taking inspiration from them."
 
 WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

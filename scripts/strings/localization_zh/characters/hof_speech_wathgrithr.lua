@@ -1343,6 +1343,7 @@ WATHGRITHR.DESCRIBE.WX78MODULE_GOURMAND = "These boons shall empower our metal w
 WATHGRITHR.DESCRIBE.WX78MODULE_COOKER = "These boons shall empower our metal warrior."
 WATHGRITHR.DESCRIBE.WX78MODULE_DRYER = "These boons shall empower our metal warrior."
 WATHGRITHR.DESCRIBE.WX78MODULE_DRYER2 = "These boons shall empower our metal warrior."
+WATHGRITHR.DESCRIBE.WX78MODULE_BREWER = "These boons shall empower our metal warrior."
 
 WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

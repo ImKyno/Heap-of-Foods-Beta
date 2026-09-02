@@ -1346,6 +1346,7 @@ WORTOX.DESCRIBE.WX78MODULE_GOURMAND = "Are you the brightest bulb of the bunch?"
 WORTOX.DESCRIBE.WX78MODULE_COOKER = "Are you the brightest bulb of the bunch?"
 WORTOX.DESCRIBE.WX78MODULE_DRYER = "Are you the brightest bulb of the bunch?"
 WORTOX.DESCRIBE.WX78MODULE_DRYER2 = "Are you the brightest bulb of the bunch?"
+WORTOX.DESCRIBE.WX78MODULE_BREWER = "Are you the brightest bulb of the bunch?"
 
 WORTOX.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

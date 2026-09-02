@@ -1343,6 +1343,7 @@ WILSON.DESCRIBE.WX78MODULE_GOURMAND = "Tanta ciência concentrada em um disposit
 WILSON.DESCRIBE.WX78MODULE_COOKER = "Tanta ciência concentrada em um dispositivo minúsculo."
 WILSON.DESCRIBE.WX78MODULE_DRYER = "Tanta ciência concentrada em um dispositivo minúsculo."
 WILSON.DESCRIBE.WX78MODULE_DRYER2 = "Tanta ciência concentrada em um dispositivo minúsculo."
+WILSON.DESCRIBE.WX78MODULE_BREWER = "Tanta ciência concentrada em um dispositivo minúsculo."
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

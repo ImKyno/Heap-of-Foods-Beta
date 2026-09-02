@@ -1,5 +1,43 @@
 local brewing = require("hof_brewing")
 
+local function SpawnBrewingFX(self)
+	if self.brewing_fx ~= nil then
+		return
+	end
+
+	if not self:IsBrewing() then
+		return
+	end
+
+	local fx = SpawnPrefab("kyno_brewingbubbles_fx")
+
+	if fx ~= nil then
+		self.brewing_fx = fx
+		local target = self.inst._brewer_owner
+
+		if target ~= nil then
+			fx.entity:SetParent(target.entity)
+			fx.Transform:SetPosition(0, 0, 0)
+			fx.AnimState:SetFinalOffset(5)
+		end
+	end
+end
+
+local function RemoveBrewingFX(self)
+	local fx = self.brewing_fx
+
+	if fx ~= nil then
+		self.brewing_fx = nil
+
+		if fx:IsValid() then
+			fx.AnimState:PlayAnimation("level1_pst")
+			fx:ListenForEvent("animover", fx.Remove)
+		else
+			fx:Remove()
+		end
+	end
+end
+
 local function OnDone(self, done)
 	if done then
 		self.inst:AddTag("donebrewing")
@@ -28,7 +66,9 @@ local function DoBrew(inst, self)
 	self.paused = false
 	self.done = true
 
-	local wx = inst._brewer_owner
+	local wx = self.inst._brewer_owner
+
+	RemoveBrewingFX(self)
 
 	local product = self.product
 	local harvester = self.harvester
@@ -61,17 +101,20 @@ local function DoBrew(inst, self)
 			chef_id            = chef_id,
 			ingredient_prefabs = ingredient_prefabs,
 		})
-	else
-		if TUNING.HOF_DEBUG_MODE then
-			print("Heap of Foods Mod - WXBrewer: ERROR - Invalid data when finishing brew!")
-			print("Product:", tostring(product))
-			print("Harvester:", tostring(harvester))
-		end
 	end
 
 	if wx ~= nil and wx.components.health ~= nil and not wx.components.health:IsDead() then
 		wx:PushEvent("wx78brewer_done")
 	end
+end
+
+local function CreateBrewTask(self, remainingtime)
+	if self.task ~= nil then
+		self.task:Cancel()
+		self.task = nil
+	end
+
+	self.task = self.inst:DoTaskInTime(remainingtime, DoBrew, self)
 end
 
 local WXBrewer = Class(function(self, inst)
@@ -109,6 +152,8 @@ nil,
 })
 
 function WXBrewer:OnRemoveFromEntity()
+	local wx = self.inst._brewer_owner
+
 	if self.task ~= nil then
 		self.task:Cancel()
 		self.task = nil
@@ -118,7 +163,7 @@ function WXBrewer:OnRemoveFromEntity()
 	self.inst:RemoveTag("donebrewing")
 	self.inst:RemoveTag("readytobrew")
 
-	local wx = self.inst._brewer_owner
+	RemoveBrewingFX(self)
 
 	if wx ~= nil then
 		wx:RemoveTag("wx_brewing")
@@ -154,6 +199,8 @@ function WXBrewer:GetRecipeForProduct()
 end
 
 function WXBrewer:StartBrewing(doer)
+	local wx = self.inst._brewer_owner
+
 	if self.targettime ~= nil or self.paused then
 		return false
 	end
@@ -165,8 +212,6 @@ function WXBrewer:StartBrewing(doer)
 	if not self.inst.components.container:IsFull() then
 		return false
 	end
-
-	local wx = self.inst._brewer_owner
 
 	if wx == nil or not wx:IsValid() then
 		return false
@@ -220,16 +265,20 @@ function WXBrewer:StartBrewing(doer)
 		self.task:Cancel()
 	end
 
-	self.task = self.inst:DoTaskInTime(brewtime, DoBrew, self)
+	CreateBrewTask(self, brewtime)
 
 	if wx ~= nil and wx.components.health ~= nil and not wx.components.health:IsDead() then
 		wx:PushEvent("wx78brewer_start")
 	end
 
+	SpawnBrewingFX(self)
+
 	return true
 end
 
 function WXBrewer:PauseBrewing()
+	local wx = self.inst._brewer_owner
+
 	if self.done or self.product == nil then
 		return false
 	end
@@ -251,11 +300,7 @@ function WXBrewer:PauseBrewing()
 		self.task = nil
 	end
 
-	if TUNING.HOF_DEBUG_MODE then
-		print("Heap of Foods Mod - WXBrewer: PAUSED - Remaining:", self.remainingtime)
-	end
-
-	local wx = self.inst._brewer_owner
+	RemoveBrewingFX(self)
 
 	if wx ~= nil and wx.components.health ~= nil and not wx.components.health:IsDead() then
 		wx:PushEvent("wx78brewer_pause")
@@ -265,6 +310,8 @@ function WXBrewer:PauseBrewing()
 end
 
 function WXBrewer:ResumeBrewing()
+	local wx = self.inst._brewer_owner
+
 	if self.done or self.product == nil then
 		return false
 	end
@@ -273,14 +320,11 @@ function WXBrewer:ResumeBrewing()
 		return false
 	end
 
-	local wx = self.inst._brewer_owner
-
 	if wx == nil or not wx:IsValid() then
 		return false
 	end
 
-	if wx.components.upgrademoduleowner ~= nil
-		and wx.components.upgrademoduleowner:IsChargeEmpty() then
+	if wx.components.upgrademoduleowner ~= nil and wx.components.upgrademoduleowner:IsChargeEmpty() then
 		return false
 	end
 
@@ -293,7 +337,7 @@ function WXBrewer:ResumeBrewing()
 		self.task:Cancel()
 	end
 
-	self.task = self.inst:DoTaskInTime(remainingtime, DoBrew, self)
+	CreateBrewTask(self, remainingtime)
 
 	wx:AddTag("wx_brewing")
 
@@ -301,22 +345,24 @@ function WXBrewer:ResumeBrewing()
 		self.oncontinuebrewing(self.inst)
 	end
 
-	if TUNING.HOF_DEBUG_MODE then
-		print("Heap of Foods Mod - WXBrewer: RESUMED - Remaining:", remainingtime)
-	end
-
 	if wx ~= nil and wx.components.health ~= nil and not wx.components.health:IsDead() then
 		wx:PushEvent("wx78brewer_resume")
 	end
+
+	SpawnBrewingFX(self)
 
 	return true
 end
 
 function WXBrewer:CancelBrewing()
+	local wx = self.inst._brewer_owner
+
 	if self.task ~= nil then
 		self.task:Cancel()
 		self.task = nil
 	end
+
+	RemoveBrewingFX(self)
 
 	self.targettime = nil
 	self.remainingtime = nil
@@ -328,8 +374,6 @@ function WXBrewer:CancelBrewing()
 	self.ingredient_prefabs = nil
 	self.harvester = nil
 
-	local wx = self.inst._brewer_owner
-
 	if wx ~= nil then
 		wx:RemoveTag("wx_brewing")
 	end
@@ -340,10 +384,6 @@ function WXBrewer:CancelBrewing()
 
 	self.inst:RemoveTag("donebrewing")
 	self.inst:RemoveTag("readytobrew")
-
-	if TUNING.HOF_DEBUG_MODE then
-		print("Heap of Foods Mod - WXBrewer: CANCELED!")
-	end
 
 	if wx ~= nil and wx.components.health ~= nil and not wx.components.health:IsDead() then
 		wx:PushEvent("wx78brewer_cancel")
@@ -382,11 +422,9 @@ function WXBrewer:OnSave()
 end
 
 function WXBrewer:OnLoadData(data)
-	if data == nil or data.product == nil then
-		if TUNING.HOF_DEBUG_MODE then
-			print("Heap of Foods Mod - WXBrewer: LoadSavedBrew - No data to load.")
-		end
+	local wx = self.inst._brewer_owner
 
+	if data == nil or data.product == nil then
 		return
 	end
 
@@ -402,22 +440,20 @@ function WXBrewer:OnLoadData(data)
 
 	self.chef_id = data.chef_id
 	self.ingredient_prefabs = data.ingredient_prefabs
-
 	self.harvester = self.inst._brewer_owner
 
 	self.targettime = nil
-
-	local wx = self.inst._brewer_owner
 
 	if self.done then
 		return
 	end
 
 	if self.paused then
-
 		if wx ~= nil then
 			wx:AddTag("wx_brewing")
 		end
+
+		RemoveBrewingFX(self)
 
 		if self.inst.components.container ~= nil then
 			self.inst.components.container.canbeopened = false
@@ -437,20 +473,18 @@ function WXBrewer:OnLoadData(data)
 			self.inst.components.container.canbeopened = false
 		end
 
-		self.task = self.inst:DoTaskInTime(math.max(0, self.remainingtime), DoBrew, self)
+		CreateBrewTask(self, math.max(0, self.remainingtime))
 
 		if self.oncontinuebrewing ~= nil then
 			self.oncontinuebrewing(self.inst)
 		end
+
+		SpawnBrewingFX(self)
 	end
 end
 
 function WXBrewer:OnLoad(data)
 	if data == nil or data.product == nil then
-		if TUNING.HOF_DEBUG_MODE then
-			print("Heap of Foods Mod - WXBrewer: No data to load.")
-		end
-
 		return
 	end
 
@@ -462,18 +496,11 @@ function WXBrewer:LongUpdate(dt)
 		return
 	end
 
-	if self.task ~= nil then
-		self.task:Cancel()
-		self.task = nil
-	end
-
-	local remaining = self.targettime - GetTime()
+	local remaining = math.max(0, self.targettime - GetTime())
 
 	if remaining > dt then
-		self.targettime = self.targettime - dt
-		self.remainingtime = self.targettime - GetTime()
-
-		self.task = self.inst:DoTaskInTime(self.remainingtime, DoBrew, self)
+		self.remainingtime = remaining
+		CreateBrewTask(self, remaining)
 	else
 		DoBrew(self.inst, self)
 	end

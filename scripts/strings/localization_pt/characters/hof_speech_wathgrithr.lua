@@ -1343,6 +1343,7 @@ WATHGRITHR.DESCRIBE.WX78MODULE_GOURMAND = "Estas dádivas fortalecerão o nosso 
 WATHGRITHR.DESCRIBE.WX78MODULE_COOKER = "Estas dádivas fortalecerão o nosso guerreiro de metal."
 WATHGRITHR.DESCRIBE.WX78MODULE_DRYER = "Estas dádivas fortalecerão o nosso guerreiro de metal."
 WATHGRITHR.DESCRIBE.WX78MODULE_DRYER2 = "Estas dádivas fortalecerão o nosso guerreiro de metal."
+WATHGRITHR.DESCRIBE.WX78MODULE_BREWER = "Estas dádivas fortalecerão o nosso guerreiro de metal."
 
 WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

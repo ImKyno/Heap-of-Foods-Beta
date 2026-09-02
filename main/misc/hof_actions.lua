@@ -1190,10 +1190,8 @@ ACTIONS.PICK.stroverridefn = function(act)
 end
 
 ACTIONS.FLAY.stroverridefn = function(act)
-	return act.invobject ~= nil
-	and act.invobject.GetSlaughterActionString ~= nil
-	and act.invobject:GetSlaughterActionString(act.target)
-	or nil
+	return act.invobject ~= nil and act.invobject.GetSlaughterActionString ~= nil
+	and act.invobject:GetSlaughterActionString(act.target) or nil
 end
 
 ACTIONS.EAT.stroverridefn = function(act)
@@ -1376,11 +1374,11 @@ end
 ACTIONS.OPENWXBREWER.stroverridefn = function(act)
 	local wx = act.target
 
-	if wx ~= nil and wx._brewer_container ~= nil and wx._brewer_container:IsValid()
-	and wx._brewer_container.components.container ~= nil
-	and wx._brewer_container.components.container:IsOpenedBy(act.doer) then
-		return STRINGS.ACTIONS.RUMMAGE.CLOSE
-	end
+	if wx ~= nil and wx._brewer_container_net ~= nil then
+		local container = wx._brewer_container_net:value()
 
-	return STRINGS.ACTIONS.BREWER
+		if container ~= nil and container.GetBrewerActionString ~= nil then
+			return container:GetBrewerActionString()
+		end
+	end
 end

@@ -50,6 +50,8 @@ local function WendyPostInit(inst)
 end
 
 local function WX78PostInit(inst)
+	inst._brewer_container_net = net_entity(inst.GUID, "wx78._brewer_container")
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
@@ -76,7 +78,7 @@ local function WX78PostInit(inst)
 			data.wxbrewer = brewer:OnSave()
 		end
 
-		return data, references
+		return data
 	end
 
 	local _OnLoad = inst.OnLoad

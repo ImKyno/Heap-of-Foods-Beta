@@ -1343,6 +1343,7 @@ WICKERBOTTOM.DESCRIBE.WX78MODULE_GOURMAND = "Eles não gostam de formas orgânic
 WICKERBOTTOM.DESCRIBE.WX78MODULE_COOKER = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
 WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
 WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER2 = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
+WICKERBOTTOM.DESCRIBE.WX78MODULE_BREWER = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
 
 WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

@@ -1343,6 +1343,7 @@ WANDA.DESCRIBE.WX78MODULE_GOURMAND = "Aha! Estava me perguntando quando iriam co
 WANDA.DESCRIBE.WX78MODULE_COOKER = "Aha! Estava me perguntando quando iriam começar a fazer esses."
 WANDA.DESCRIBE.WX78MODULE_DRYER = "Aha! Estava me perguntando quando iriam começar a fazer esses."
 WANDA.DESCRIBE.WX78MODULE_DRYER2 = "Aha! Estava me perguntando quando iriam começar a fazer esses."
+WANDA.DESCRIBE.WX78MODULE_BREWER = "Aha! Estava me perguntando quando iriam começar a fazer esses."
 
 WANDA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

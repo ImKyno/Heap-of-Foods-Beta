@@ -2423,6 +2423,9 @@ STRINGS.RECIPE_DESC.WX78MODULE_DRYER = "Um sistema rudimentar de controle de umi
 STRINGS.NAMES.WX78MODULE_DRYER2 = "Circuito de Super-Dessecante"
 STRINGS.RECIPE_DESC.WX78MODULE_DRYER2 = "Um regulador de umidade aperfeiçoado."
 
+STRINGS.NAMES.WX78MODULE_BREWER = "Circuito de Fermentação"
+STRINGS.RECIPE_DESC.WX78MODULE_BREWER = "Processe materia orgânica em fermentações refinadas."
+
 STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER_HELD = "Unidade de Combustão Portátil"
 STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER = "Unidade de Combustão Colapsada"
 

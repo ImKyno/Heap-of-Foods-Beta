@@ -178,7 +178,9 @@ local INIT_POSTINIT_PREFABS =
 	"worm",
 	"worm_boss_segment",
 	"wortox_soul_common",
+	"wx78_backupbody",
 	"wx78_common",
+	"wx78_modules",
 	"wx78_possessedbody",
 	"wx78_scanner",
 }

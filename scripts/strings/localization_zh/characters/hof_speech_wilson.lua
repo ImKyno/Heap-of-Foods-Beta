@@ -1343,6 +1343,7 @@ WILSON.DESCRIBE.WX78MODULE_GOURMAND = "So much science packed into one tiny gizm
 WILSON.DESCRIBE.WX78MODULE_COOKER = "So much science packed into one tiny gizmo."
 WILSON.DESCRIBE.WX78MODULE_DRYER = "So much science packed into one tiny gizmo."
 WILSON.DESCRIBE.WX78MODULE_DRYER2 = "So much science packed into one tiny gizmo."
+WILSON.DESCRIBE.WX78MODULE_BREWER = "So much science packed into one tiny gizmo."
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 {

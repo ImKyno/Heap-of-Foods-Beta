@@ -41,7 +41,7 @@ local function GetCookTime(inst)
 	local owner = inst.components.inventoryitem.owner
 
 	if owner and owner.prefab == "wx78" or owner.prefab == "wx78_possessedbody" then
-		if owner._cookerchips and owner._cookerchips > 0 and IsSkillActivated(owner, "wx78_circuitry_betabuffs_1") then
+		if owner._cookerchips and owner._cookerchips > 0 and IsPlayerSkillActivated(owner, "wx78_circuitry_betabuffs_1") then
 			time = TUNING.KYNO_WX78_MODULES_COOKER_TIME - 5 or 5
 		end
 	end
